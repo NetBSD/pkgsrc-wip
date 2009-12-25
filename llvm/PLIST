@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2009/12/15 08:25:55 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.11 2009/12/25 23:00:44 thomasklausner Exp $
 bin/bugpoint
 bin/llc
 bin/lli
@@ -331,6 +331,7 @@ include/llvm/Support/TargetFolder.h
 include/llvm/Support/Timer.h
 include/llvm/Support/TypeBuilder.h
 include/llvm/Support/ValueHandle.h
+include/llvm/Support/circular_raw_ostream.h
 include/llvm/Support/raw_os_ostream.h
 include/llvm/Support/raw_ostream.h
 include/llvm/Support/type_traits.h
