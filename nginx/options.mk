@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.4 2008/05/24 15:34:12 tnn2 Exp $
+# $NetBSD: options.mk,v 1.5 2009/12/26 20:32:03 anielski Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.nginx
-PKG_SUPPORTED_OPTIONS=	ssl pcre dav flv sub gtools
+PKG_SUPPORTED_OPTIONS=	ssl pcre dav flv sub gtools mail-proxy memcache
 PKG_SUGGESTED_OPTIONS=	ssl pcre
 
 .include "../../mk/bsd.options.mk"
@@ -33,4 +33,12 @@ CONFIGURE_ARGS+=	--with-http_sub_module
 
 .if !empty(PKG_OPTIONS:Mgtools)
 CONFIGURE_ARGS+=	--with-google_perftools_module
+.endif
+
+.if !empty(PKG_OPTIONS:Mmail-proxy)
+CONFIGURE_ARGS+=	--with-mail
+.endif
+
+.if empty(PKG_OPTIONS:Mmemcache)
+CONFIGURE_ARGS+=	--without-http_memcached_module
 .endif
