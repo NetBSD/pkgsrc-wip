@@ -1,0 +1,277 @@
+diff -Naurp grub2_2009-12-27/util/getroot.c grub2/util/getroot.c
+--- grub2_2009-12-27/util/getroot.c	2009-12-27 16:04:32.000000000 +0100
++++ grub2/util/getroot.c	2009-12-27 17:51:46.000000000 +0100
+@@ -266,8 +266,14 @@ find_root_device (const char *dir, dev_t
+ 	  char *cwd;
+ 
+ 	  cwd = xgetcwd ();
++#if defined(__NetBSD__)
++	  /* Convert this block device to its character (raw) device */
++	  res = xmalloc (strlen (cwd) + strlen (ent->d_name) + 3);
++	  sprintf (res, "%s/r%s", cwd, ent->d_name);
++#else
+ 	  res = xmalloc (strlen (cwd) + strlen (ent->d_name) + 2);
+ 	  sprintf (res, "%s/%s", cwd, ent->d_name);
++#endif
+ 	  strip_extra_slashes (res);
+ 	  free (cwd);
+ 
+diff -Naurp grub2_2009-12-27/util/grub-probe.c grub2/util/grub-probe.c
+--- grub2_2009-12-27/util/grub-probe.c	2009-12-27 16:04:32.000000000 +0100
++++ grub2/util/grub-probe.c	2009-12-27 17:49:02.000000000 +0100
+@@ -111,7 +111,7 @@ probe (const char *path, char *device_na
+ 
+   if (path == NULL)
+     {
+-#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__)
++#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__NetBSD__)
+       if (! grub_util_check_char_device (device_name))
+         grub_util_error ("%s is not a character device.\n", device_name);
+ #else
+diff -Naurp grub2_2009-12-27/util/hostdisk.c grub2/util/hostdisk.c
+--- grub2_2009-12-27/util/hostdisk.c	2009-12-27 16:04:32.000000000 +0100
++++ grub2/util/hostdisk.c	2009-12-27 18:21:15.000000000 +0100
+@@ -97,6 +97,12 @@ struct hd_geometry
+ # include <sys/disk.h>
+ #endif
+ 
++#if defined(__NetBSD__)
++# include <sys/ioctl.h>
++# include <sys/disklabel.h>    /* struct disklabel */
++# include <util.h>    /* getrawpartition */
++#endif
++
+ struct
+ {
+   char *drive;
+@@ -191,16 +197,20 @@ grub_util_biosdisk_open (const char *nam
+     return GRUB_ERR_NONE;
+   }
+ #elif defined(__linux__) || defined(__CYGWIN__) || defined(__FreeBSD__) || \
+-      defined(__FreeBSD_kernel__) || defined(__APPLE__)
++      defined(__FreeBSD_kernel__) || defined(__APPLE__) || defined(__NetBSD__)
+   {
++# if defined(__NetBSD__)
++    struct disklabel label;
++# else
+     unsigned long long nr;
++# endif
+     int fd;
+ 
+     fd = open (map[drive].device, O_RDONLY);
+     if (fd == -1)
+       return grub_error (GRUB_ERR_BAD_DEVICE, "cannot open `%s' while attempting to get disk size", map[drive].device);
+ 
+-# if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__APPLE__)
++# if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__APPLE__) || defined(__NetBSD__)
+     if (fstat (fd, &st) < 0 || ! S_ISCHR (st.st_mode))
+ # else
+     if (fstat (fd, &st) < 0 || ! S_ISBLK (st.st_mode))
+@@ -214,6 +224,8 @@ grub_util_biosdisk_open (const char *nam
+     if (ioctl (fd, DIOCGMEDIASIZE, &nr))
+ # elif defined(__APPLE__)
+     if (ioctl (fd, DKIOCGETBLOCKCOUNT, &nr))
++# elif defined(__NetBSD__)
++    if (ioctl (fd, DIOCGDINFO, &label))
+ # else
+     if (ioctl (fd, BLKGETSIZE64, &nr))
+ # endif
+@@ -224,14 +236,16 @@ grub_util_biosdisk_open (const char *nam
+ 
+     close (fd);
+ 
+-#if defined (__APPLE__)
++# if defined (__APPLE__)
+     disk->total_sectors = nr;
+-#else
++# elif defined(__NetBSD__)
++    disk->total_sectors = label.d_secperunit;
++# else
+     disk->total_sectors = nr / 512;
+ 
+     if (nr % 512)
+       grub_util_error ("unaligned device size");
+-#endif
++# endif
+ 
+     grub_util_info ("the size of %s is %llu", name, disk->total_sectors);
+ 
+@@ -683,7 +697,7 @@ make_device_name (int drive, int dos_par
+     dos_part_str = xasprintf (",%d", dos_part + 1);
+ 
+   if (bsd_part >= 0)
+-    bsd_part_str = xasprintf (",%c", dos_part + 'a');
++    bsd_part_str = xasprintf (",%c", bsd_part + 'a');
+ 
+   ret = xasprintf ("%s%s%s", map[drive].drive,
+                    dos_part_str ? : "",
+@@ -853,6 +867,26 @@ convert_system_partition_to_system_disk 
+     }
+   return path;
+ 
++#elif defined(__NetBSD__)
++  /* NetBSD uses "/dev/r[wsc]d[0-9]+[a-z]".  */
++  char *path = xstrdup (os_dev);
++  if (strncmp ("/dev/rwd", path, 8) == 0 ||
++      strncmp ("/dev/rsd", path, 8) == 0 ||
++      strncmp ("/dev/rcd", path, 8) == 0)
++    {
++      char *q;
++      q = path + strlen(path) - 1;    /* last character */
++      if (grub_isalpha(*q) && grub_isdigit(*(q-1)))
++        {
++          int rawpart;
++          rawpart = getrawpartition();
++          if (rawpart < 0)
++            rawpart = 3;    /* default on i386 */
++          *q = 'a' + rawpart;
++        }
++    }
++  return path;
++
+ #else
+ # warning "The function `convert_system_partition_to_system_disk' might not work on your OS correctly."
+   return xstrdup (os_dev);
+@@ -923,7 +957,7 @@ grub_util_biosdisk_get_grub_dev (const c
+       == 0)
+     return make_device_name (drive, -1, -1);
+ 
+-#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__APPLE__)
++#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__APPLE__) || defined(__NetBSD__)
+   if (! S_ISCHR (st.st_mode))
+ #else
+   if (! S_ISBLK (st.st_mode))
+@@ -1107,6 +1141,133 @@ grub_util_biosdisk_get_grub_dev (const c
+     return make_device_name (drive, dos_part, bsd_part);
+   }
+ 
++#elif defined(__NetBSD__)
++  /* NetBSD uses "/dev/r[wsc]d[0-9]+[a-z]".  */
++  /* Adaptation of the Linux code above.
++     Here, get the start sector of a partition from the disklabel, and
++     compare it with each partition GRUB recognizes.  */
++  {
++    char *name;
++    grub_disk_t disk;
++    int fd;
++    struct disklabel label;
++    int index;
++    u_int32_t p_offset;
++    int dos_part = -1;
++    int bsd_part = -1;
++    auto int find_partition (grub_disk_t disk,
++			     const grub_partition_t partition);
++
++    int find_partition (grub_disk_t disk __attribute__ ((unused)),
++			const grub_partition_t partition)
++      {
++ 	struct grub_msdos_partition *pcdata = NULL;
++
++	if (strcmp (partition->partmap->name, "part_msdos") == 0)
++	  pcdata = partition->data;
++
++	if (pcdata)
++	  {
++	    if (pcdata->bsd_part < 0)
++	      grub_util_info ("DOS partition %d starts from %lu",
++			      pcdata->dos_part, partition->start);
++	    else
++	      grub_util_info ("BSD partition %d,%c starts from %lu",
++			      pcdata->dos_part, pcdata->bsd_part + 'a',
++			      partition->start);
++	  }
++	else
++	  {
++	      grub_util_info ("Partition %d starts from %lu",
++			      partition->index, partition->start);
++	  }
++
++	if (p_offset == partition->start)
++	  {
++	    if (pcdata)
++	      {
++		dos_part = pcdata->dos_part;
++		bsd_part = pcdata->bsd_part;
++	      }
++	    else
++	      {
++		dos_part = partition->index;
++		bsd_part = -1;
++	      }
++	    return 1;
++	  }
++
++	return 0;
++      }
++
++    name = make_device_name (drive, -1, -1);
++
++    /*
++     * Since os_dev and convert_system_partition_to_system_disk (os_dev) are
++     * different, we know that os_dev is of the form /dev/[wsc]d[0-9]+[a-z].
++     */
++
++    index = os_dev[strlen(os_dev) - 1] - 'a';
++
++    fd = open (os_dev, O_RDONLY);
++    if (fd == -1)
++      {
++	grub_error (GRUB_ERR_BAD_DEVICE, "cannot open `%s' while attempting to get disk label", os_dev);
++	free (name);
++	return 0;
++      }
++
++    if (ioctl (fd, DIOCGDINFO, &label))
++      {
++	grub_error (GRUB_ERR_BAD_DEVICE,
++		    "cannot get disk label of `%s'", os_dev);
++	close (fd);
++	free (name);
++	return 0;
++      }
++
++    close (fd);
++
++    if (index >= label.d_npartitions)
++      {
++	grub_error (GRUB_ERR_BAD_DEVICE,
++		    "no disk label entry for `%s'", os_dev);
++	close (fd);
++	free (name);
++	return 0;
++      }
++
++    p_offset = label.d_partitions[index].p_offset;
++    grub_util_info ("%s starts from %lu", os_dev, p_offset);
++
++    if (p_offset == 0)
++      return name;    /* use whole disk */
++
++    grub_util_info ("opening the device %s", name);
++    disk = grub_disk_open (name);
++    free (name);
++
++    if (! disk)
++      return 0;
++
++    grub_partition_iterate (disk, find_partition);
++    if (grub_errno != GRUB_ERR_NONE)
++      {
++	grub_disk_close (disk);
++	return 0;
++      }
++
++    if (dos_part < 0)
++      {
++	grub_disk_close (disk);
++	grub_error (GRUB_ERR_BAD_DEVICE,
++		    "cannot find the partition of `%s'", os_dev);
++	return 0;
++      }
++
++    return make_device_name (drive, dos_part, bsd_part);
++  }
++
+ #else
+ # warning "The function `grub_util_biosdisk_get_grub_dev' might not work on your OS correctly."
+   return make_device_name (drive, -1, -1);
