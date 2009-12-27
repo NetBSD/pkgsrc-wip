@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.8 2009/11/12 22:52:48 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.9 2009/12/27 15:46:33 cheusov Exp $
 bin/mkc_check_common.sh
+bin/mkc_check_compiler
 bin/mkc_check_custom
 bin/mkc_check_decl
 bin/mkc_check_funclib
@@ -7,8 +8,11 @@ bin/mkc_check_header
 bin/mkc_check_prog
 bin/mkc_check_sizeof
 bin/mkc_check_version
+bin/mkc_install
 bin/mkc_test_helper
 bin/mkc_which
+bin/mkcmake
+man/man1/mkc_check_custom.1
 man/man1/mkc_check_decl.1
 man/man1/mkc_check_funclib.1
 man/man1/mkc_check_header.1
@@ -30,6 +34,9 @@ share/examples/mk-configure/hello_compilers/test.mk
 share/examples/mk-configure/hello_customtests/Makefile
 share/examples/mk-configure/hello_customtests/custom_tests/alloca_in_alloca_h.c
 share/examples/mk-configure/hello_customtests/custom_tests/alloca_in_stdlib_h.c
+share/examples/mk-configure/hello_customtests/custom_tests/cxx_with_templates.cc
+share/examples/mk-configure/hello_customtests/custom_tests/shtest
+share/examples/mk-configure/hello_customtests/custom_tests/true_is_available
 share/examples/mk-configure/hello_customtests/expect.out
 share/examples/mk-configure/hello_customtests/hello_customtests.c
 share/examples/mk-configure/hello_customtests/test.mk
@@ -37,6 +44,24 @@ share/examples/mk-configure/hello_customtests2/Makefile
 share/examples/mk-configure/hello_customtests2/expect.out
 share/examples/mk-configure/hello_customtests2/hello_customtests2.c
 share/examples/mk-configure/hello_customtests2/test.mk
+share/examples/mk-configure/hello_cxx/Makefile
+share/examples/mk-configure/hello_cxx/expect.out
+share/examples/mk-configure/hello_cxx/hello_msg.cc
+share/examples/mk-configure/hello_cxx/hello_msg.h
+share/examples/mk-configure/hello_cxx/main.cc
+share/examples/mk-configure/hello_cxx/test.mk
+share/examples/mk-configure/hello_cxxlib/Makefile
+share/examples/mk-configure/hello_cxxlib/cxxapp/Makefile
+share/examples/mk-configure/hello_cxxlib/cxxapp/cxxapp.cc
+share/examples/mk-configure/hello_cxxlib/cxxlib/Makefile
+share/examples/mk-configure/hello_cxxlib/cxxlib/hello_msg1.cpp
+share/examples/mk-configure/hello_cxxlib/cxxlib/hello_msg2.cpp
+share/examples/mk-configure/hello_cxxlib/cxxlib/include/hello_msg.h
+share/examples/mk-configure/hello_cxxlib/cxxlib/include/impl/hello_msg1.h
+share/examples/mk-configure/hello_cxxlib/cxxlib/include/impl/hello_msg2.h
+share/examples/mk-configure/hello_cxxlib/cxxlib/linkme.mk
+share/examples/mk-configure/hello_cxxlib/expect.out
+share/examples/mk-configure/hello_cxxlib/test.mk
 share/examples/mk-configure/hello_dlopen/Makefile
 share/examples/mk-configure/hello_dlopen/dlopen_test.c
 share/examples/mk-configure/hello_dlopen/expect.out
@@ -54,10 +79,17 @@ share/examples/mk-configure/hello_glib2/Makefile
 share/examples/mk-configure/hello_glib2/expect.out
 share/examples/mk-configure/hello_glib2/hello_glib2.c
 share/examples/mk-configure/hello_glib2/test.mk
+share/examples/mk-configure/hello_lex/Makefile
+share/examples/mk-configure/hello_lex/expect.out
+share/examples/mk-configure/hello_lex/hello_lex.l
+share/examples/mk-configure/hello_lex/input.txt
+share/examples/mk-configure/hello_lex/test.mk
 share/examples/mk-configure/hello_reqd/Makefile
 share/examples/mk-configure/hello_reqd/expect.out
 share/examples/mk-configure/hello_reqd/hello
 share/examples/mk-configure/hello_reqd/test.mk
+share/examples/mk-configure/hello_require_tools/Makefile
+share/examples/mk-configure/hello_require_tools/fake
 share/examples/mk-configure/hello_requirements/Makefile
 share/examples/mk-configure/hello_requirements/custom_check1.c
 share/examples/mk-configure/hello_requirements/custom_check2.c
@@ -70,6 +102,9 @@ share/examples/mk-configure/hello_scripts/hello_world.1
 share/examples/mk-configure/hello_scripts/hello_world2
 share/examples/mk-configure/hello_scripts/hello_world3
 share/examples/mk-configure/hello_scripts/main.c
+share/examples/mk-configure/hello_scripts/more_scripts/script1
+share/examples/mk-configure/hello_scripts/more_scripts/script2
+share/examples/mk-configure/hello_scripts/more_scripts/script3
 share/examples/mk-configure/hello_scripts/msg.c
 share/examples/mk-configure/hello_scripts/test.mk
 share/examples/mk-configure/hello_sizeof/Makefile
@@ -99,6 +134,11 @@ share/examples/mk-configure/hello_world/README
 share/examples/mk-configure/hello_world/expect.out
 share/examples/mk-configure/hello_world/hello_world.c
 share/examples/mk-configure/hello_world/test.mk
+share/examples/mk-configure/hello_yacc/Makefile
+share/examples/mk-configure/hello_yacc/calc.y
+share/examples/mk-configure/hello_yacc/expect.out
+share/examples/mk-configure/hello_yacc/input.txt
+share/examples/mk-configure/hello_yacc/test.mk
 share/examples/mk-configure/subprojects/Makefile
 share/examples/mk-configure/subprojects/expect.out
 share/examples/mk-configure/subprojects/hello/Makefile
@@ -117,6 +157,11 @@ share/examples/mk-configure/subprojects/libhello2/include/hello2.h
 share/examples/mk-configure/subprojects/libhello2/linkme.mk
 share/examples/mk-configure/subprojects/test.mk
 share/examples/mk-configure/subprojects/version.mk
+share/mk-configure/custom/endianess
+share/mk-configure/custom/prog_bison
+share/mk-configure/custom/prog_flex
+share/mk-configure/custom/prog_gawk
+share/mk-configure/custom/prog_gm4
 share/mk/configure.mk
 share/mk/mkc.configure.mk
 share/mk/mkc.files.mk
@@ -129,6 +174,7 @@ share/mk/mkc.prog.mk
 share/mk/mkc.subdir.mk
 share/mk/mkc.ver.mk
 share/mk/mkc_imp.files.mk
+share/mk/mkc_imp.final.mk
 share/mk/mkc_imp.inc.mk
 share/mk/mkc_imp.info.mk
 share/mk/mkc_imp.init.mk
