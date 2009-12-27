@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/12/27 04:01:37 cetrox Exp $
+bin/obm-dir
+bin/obm-moz
+bin/obm-nav
+bin/obm-xdg
+bin/obmenu
+share/obmenu/obmenu.glade
+share/obmenu/mnu16.png
+share/obmenu/mnu48.png
+${PYSITELIB}/obxml.pyc
+${PYSITELIB}/obxml.pyo
