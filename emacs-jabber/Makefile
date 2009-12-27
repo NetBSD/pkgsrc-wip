@@ -1,29 +1,26 @@
-# $NetBSD: Makefile,v 1.11 2009/07/31 22:18:50 minskim Exp $
+# $NetBSD: Makefile,v 1.12 2009/12/27 14:13:37 jihbed Exp $
+#
 
-DISTNAME=	emacs-jabber-0.7.1
+DISTNAME=	emacs-jabber-0.8.0
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
 CATEGORIES=	chat
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=emacs-jabber/}
+MASTER_SITES=	http://garr.dl.sourceforge.net/project/emacs-jabber/emacs-jabber/0.8.0/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tonio@NetBSD.org
 HOMEPAGE=	http://emacs-jabber.sourceforge.net/
 COMMENT=	Minimal jabber client for emacs
+#LICENSE=	# TODO: (see mk/license.mk)
 
-#DEPENDS+=	${EMACS_PKGNAME_PREFIX}gnus>=5.10:../../mail/gnus
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+GNU_CONFIGURE=	yes
+USE_LANGUAGES=	# none
 USE_TOOLS+=	makeinfo
 INFO_FILES=	yes
 
-NO_CONFIGURE=		yes
-PKG_DESTDIR_SUPPORT=	user-destdir
-
-INSTALLATION_DIRS=	${EMACS_LISPPREFIX}/emacs-jabber ${EMACS_INFOPREFIX}
-
-do-build:
-	cd ${WRKSRC} && makeinfo jabber.texi
-
-do-install:
-	${INSTALL_DATA} ${WRKSRC}/*.el* ${DESTDIR}${EMACS_LISPPREFIX}/emacs-jabber
-	${INSTALL_DATA} ${WRKSRC}/jabber.info ${DESTDIR}${EMACS_INFOPREFIX}
+GCONF_SCHEMAS+=	gconf/emacs-jabber.schemas
 
 .include "../../editors/emacs/modules.mk"
+.include "../../devel/GConf/schemas.mk"
 .include "../../mk/bsd.pkg.mk"
