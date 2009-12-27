@@ -1,0 +1,22 @@
+--- include/grub/misc.h.orig	2009-12-27 12:58:34.000000000 +0100
++++ include/grub/misc.h	2009-12-27 12:58:54.000000000 +0100
+@@ -191,7 +191,7 @@
+ grub_uint64_t EXPORT_FUNC(grub_divmod64) (grub_uint64_t n,
+ 					  grub_uint32_t d, grub_uint32_t *r);
+ 
+-#ifdef NEED_ENABLE_EXECUTE_STACK
++#if defined(NEED_ENABLE_EXECUTE_STACK) && !defined(GRUB_UTIL)
+ void EXPORT_FUNC(__enable_execute_stack) (void *addr);
+ #endif
+ 
+--- kern/misc.c.orig	2009-12-27 12:58:02.000000000 +0100
++++ kern/misc.c	2009-12-27 12:58:20.000000000 +0100
+@@ -987,7 +987,7 @@
+ void abort (void) __attribute__ ((alias ("grub_abort")));
+ #endif
+ 
+-#ifdef NEED_ENABLE_EXECUTE_STACK
++#if defined(NEED_ENABLE_EXECUTE_STACK) && !defined(GRUB_UTIL)
+ /* Some gcc versions generate a call to this function
+    in trampolines for nested functions.  */
+ void __enable_execute_stack (void *addr __attribute__ ((unused)))

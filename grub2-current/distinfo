@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/12/21 17:41:00 gregoire Exp $
+$NetBSD: distinfo,v 1.2 2009/12/27 12:18:30 gregoire Exp $
 
+SHA1 (patch-__enable_execute_stack) = 7fde8c41c0cbd2f718bc4cab219b8e5dc1e99c4f
 SHA1 (patch-aa) = a864ac2b3850603392bc9ea52746045dd263da15
 SHA1 (patch-ab) = b8af0f7ee12ac44a6246786b2239efd21fd2e63a
 SHA1 (patch-ac) = c7f76b4b87f0ac623daa0b344f67de1f800751d5
