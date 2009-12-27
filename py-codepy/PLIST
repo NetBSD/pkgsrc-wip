@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/12/27 20:58:43 jihbed Exp $
+${PYSITELIB}/codepy-0.90-py2.5.egg-info/PKG-INFO
+${PYSITELIB}/codepy-0.90-py2.5.egg-info/SOURCES.txt
+${PYSITELIB}/codepy-0.90-py2.5.egg-info/dependency_links.txt
+${PYSITELIB}/codepy-0.90-py2.5.egg-info/not-zip-safe
+${PYSITELIB}/codepy-0.90-py2.5.egg-info/top_level.txt
+${PYSITELIB}/codepy/__init__.py
+${PYSITELIB}/codepy/__init__.pyc
+${PYSITELIB}/codepy/__init__.pyo
+${PYSITELIB}/codepy/bpl.py
+${PYSITELIB}/codepy/bpl.pyc
+${PYSITELIB}/codepy/bpl.pyo
+${PYSITELIB}/codepy/cgen/__init__.py
+${PYSITELIB}/codepy/cgen/__init__.pyc
+${PYSITELIB}/codepy/cgen/__init__.pyo
+${PYSITELIB}/codepy/cgen/cuda.py
+${PYSITELIB}/codepy/cgen/cuda.pyc
+${PYSITELIB}/codepy/cgen/cuda.pyo
+${PYSITELIB}/codepy/jit.py
+${PYSITELIB}/codepy/jit.pyc
+${PYSITELIB}/codepy/jit.pyo
+${PYSITELIB}/codepy/libraries.py
+${PYSITELIB}/codepy/libraries.pyc
+${PYSITELIB}/codepy/libraries.pyo

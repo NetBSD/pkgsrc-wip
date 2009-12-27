@@ -1,0 +1,5 @@
+CodePy is a C metaprogramming toolkit for Python. It handles two aspects of
+metaprogramming:
+* Generating C source code.
+* Compiling this source code and dynamically loading it into the
+Python interpreter.
