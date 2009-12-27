@@ -1,33 +1,39 @@
-# $NetBSD: Makefile,v 1.12 2009/07/22 09:53:14 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.13 2009/12/27 16:09:47 jihbed Exp $
 #
 
-DISTNAME=		quodlibet-0.24
-PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=		2
-CATEGORIES=		audio
-MASTER_SITES=		http://www.sacredchao.net/~piman/software/
+DISTNAME=	quodlibet-2.1
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+CATEGORIES=	audio
+MASTER_SITES=	http://quodlibet.googlecode.com/files/
 
-MAINTAINER=		shattered@users.sourceforge.net
-HOMEPAGE=		http://code.google.com/p/quodlibet/
-COMMENT=		Finally a good alternative to iTunes
+MAINTAINER=	shattered@users.sourceforge.net
+HOMEPAGE=	http://code.google.com/p/quodlibet/
+COMMENT=	Finally a good alternative to iTunes
+LICENSE=	gnu-gpl-v2
 
-DEPENDS+=		${PYPKGPREFIX}-mutagen>=1.8:../../audio/py-mutagen
 DEPENDS+=		gst-plugins0.10-mad>=0.10.0:../../audio/gst-plugins0.10-mad
-DEPENDS+=		gst-plugins0.10-vorbis>=0.10.0:../../audio/gst-plugins0.10-vorbis
-DEPENDS+=		gst-plugins0.10-ogg>=0.10.0:../../multimedia/gst-plugins0.10-ogg
+DEPENDS+=	${PYPKGPREFIX}-mutagen>=1.8:../../audio/py-mutagen
+DEPENDS+=	gst-plugins0.10-vorbis>=0.10.0:../../audio/gst-plugins0.10-vorbis
+DEPENDS+=	gst-plugins0.10-ogg>=0.10.0:../../multimedia/gst-plugins0.10-ogg
 
-PYTHON_VERSIONS_INCOMPATIBLE=\
-			15 20 21 22 23
-PYTHON_PATCH_SCRIPTS=	*.py */*.py
-USE_TOOLS+=		gmake intltool pkg-config
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+USE_TOOLS+=		msgfmt intltool
 USE_PKGLOCALEDIR=	yes
 BUILD_TARGET=		_trayicon.so _mmkeys.so
 
-.include "../../lang/python/application.mk"
-# complains about importing missing dbus during startup, but
-# works fine without it. With py-dbus installed however, it
-# fails loading hal and exits.
-#.include "../../sysutils/py-dbus/buildlink3.mk"
+PYTHON_VERSIONS_INCOMPATIBLE=\
+			15 20 21 22 23
+PYDISTUTILSPKG= yes
+
+.include "../../devel/py-ctypes/buildlink3.mk"
+.include "../../devel/py-gobject/buildlink3.mk"
+.include "../../devel/pango/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../multimedia/py-gstreamer0.10/buildlink3.mk"
+.include "../../multimedia/xine-lib/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../sysutils/py-dbus/buildlink3.mk"
 .include "../../x11/py-gtk2/buildlink3.mk"
+.include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

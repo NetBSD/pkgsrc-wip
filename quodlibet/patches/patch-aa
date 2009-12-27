@@ -1,48 +1,12 @@
-$NetBSD: patch-aa,v 1.4 2007/01/26 00:38:18 thomasklausner Exp $
-
---- Makefile.orig	2006-10-05 13:03:59.000000000 +0000
-+++ Makefile
-@@ -8,18 +8,17 @@ TO = share/quodlibet
- TODEP = lib/quodlibet
+$NetBSD: patch-aa,v 1.5 2009/12/27 16:09:47 jihbed Exp $
+--- ./gdist/man.py.orig	2009-12-27 16:43:58.000000000 +0000
++++ ./gdist/man.py	2009-12-27 16:46:12.000000000 +0000
+@@ -36,7 +36,7 @@
+                 raise SystemExit("%r has no section" % man_page)
  
- all:
--	@/bin/echo -n "Checking for Python... "
--	@which python || ( echo "Not found." && /bin/false )
- 	@./check.py $(DESTDIR)$(PREFIX)/$(TO)
- 
- make-install-dirs:
--	mkdir -p $(DESTDIR)$(PREFIX)/share/man/man1
-+	mkdir -p $(DESTDIR)$(PREFIX)/man/man1
- 	mkdir -p $(DESTDIR)$(PREFIX)/bin
- 	mkdir -p $(DESTDIR)$(PREFIX)/$(TO)
-+	mkdir -p $(DESTDIR)$(PREFIX)/$(TODEP)
- 
- install: make-install-dirs install-dirs install-programs
--	install -m 644 $(MODULES) audio-*.png media-*.png device-*.png $(DESTDIR)$(PREFIX)/$(TO)
--	for E in $(EXTENSIONS); do (test -e $$E && install -m 755 -D $$E $(DESTDIR)$(PREFIX)/$(TODEP)/$$E); done
-+	${BSD_INSTALL_DATA} $(MODULES) audio-*.png media-*.png device-*.png $(DESTDIR)$(PREFIX)/$(TO)
-+	for E in $(EXTENSIONS); do (test -e $$E && ${BSD_INSTALL_LIB} $$E $(DESTDIR)$(PREFIX)/$(TODEP)/$$E); done
- 	cd po && make install-po DESTDIR=$(DESTDIR)
- 
- install-dirs: $(addprefix dir-install-, $(MODULE_DIRS))
-@@ -28,14 +27,14 @@ install-programs: $(addprefix app-instal
- 
- dir-install-%: make-install-dirs
- 	mkdir -p $(DESTDIR)$(PREFIX)/$(TO)/$*
--	install -m 644 $*/*.py $(DESTDIR)$(PREFIX)/$(TO)/$*
-+	$(BSD_INSTALL_DATA) $*/*.py $(DESTDIR)$(PREFIX)/$(TO)/$*
- 
- app-install-%: make-install-dirs %.desktop
--	install -m 755 $*.py $(DESTDIR)$(PREFIX)/$(TO)
--	install -m 644 $*.1 $(DESTDIR)$(PREFIX)/share/man/man1/$*.1
--	install -D -m 644 $*.png $(DESTDIR)$(PREFIX)/share/pixmaps/$*.png
--	install -m 644 $*.svg $*.png $(DESTDIR)$(PREFIX)/$(TO)
--	-install -D -m 644 $*.desktop $(DESTDIR)$(PREFIX)/share/applications/$*.desktop
-+	$(BSD_INSTALL_SCRIPT) $*.py $(DESTDIR)$(PREFIX)/$(TO)
-+	$(BSD_INSTALL_DATA) $*.1 $(DESTDIR)$(PREFIX)/man/man1/$*.1
-+	$(BSD_INSTALL_DATA) $*.png $(DESTDIR)$(PREFIX)/share/pixmaps/$*.png
-+	$(BSD_INSTALL_DATA) $*.svg $*.png $(DESTDIR)$(PREFIX)/$(TO)
-+	-$(BSD_INSTALL_DATA) $*.desktop $(DESTDIR)$(PREFIX)/share/applications/$*.desktop
- 	ln -sf ../$(TO)/$*.py $(DESTDIR)$(PREFIX)/bin/$*
- 
- clean:
+     def run(self):
+-        basepath = os.path.join(self.prefix, 'share', 'man')
++        basepath = os.path.join(self.prefix,'man')
+         if self.root != None:
+           basepath = change_root(self.root, basepath)
+         self.mkpath(basepath)
