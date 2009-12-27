@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3736 2009/12/27 04:03:55 cetrox Exp $
+# $Id: Makefile,v 1.3737 2009/12/27 21:10:32 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -448,6 +448,7 @@ SUBDIR+=	freej
 SUBDIR+=	freevo
 SUBDIR+=	freevrrpd
 SUBDIR+=	fricas
+SUBDIR+=	frobby
 SUBDIR+=	froggymicroblog
 SUBDIR+=	frozen-bubble
 SUBDIR+=	fs2open
@@ -1780,6 +1781,7 @@ SUBDIR+=	py-cElementTree
 SUBDIR+=	py-chm
 SUBDIR+=	py-clonedigger
 SUBDIR+=	py-clutter
+SUBDIR+=	py-codepy
 SUBDIR+=	py-configobj
 SUBDIR+=	py-couchdb
 SUBDIR+=	py-coverage
