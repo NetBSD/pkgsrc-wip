@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.1.1.1 2009/12/21 17:41:00 gregoire Exp $
+$NetBSD: patch-ad,v 1.2 2009/12/27 22:37:40 gregoire Exp $
 
---- conf/common.rmk.orig	2009-12-21 12:02:48.000000000 +0100
+--- conf/common.rmk.orig	2009-12-27 20:56:03.000000000 +0100
 +++ conf/common.rmk
 @@ -177,9 +177,9 @@ CLEANFILES += grub-gettext_lib
  	./config.status --file=$@:$<
@@ -15,7 +15,7 @@ $NetBSD: patch-ad,v 1.1.1.1 2009/12/21 17:41:00 gregoire Exp $
  
  CLEANFILES += $(grub-mkconfig_SCRIPTS)
  
-@@ -639,6 +639,19 @@ setjmp_mod_SOURCES = lib/$(target_cpu)/s
+@@ -646,6 +646,19 @@ setjmp_mod_SOURCES = lib/$(target_cpu)/s
  setjmp_mod_ASFLAGS = $(COMMON_ASFLAGS)
  setjmp_mod_LDFLAGS = $(COMMON_LDFLAGS)
  
@@ -28,9 +28,9 @@ $NetBSD: patch-ad,v 1.1.1.1 2009/12/21 17:41:00 gregoire Exp $
 +grub_mkfont_LDFLAGS += $(LIBINTL)
 +grub_mkrelpath_LDFLAGS += $(LIBINTL)
 +grub_editenv_LDFLAGS += $(LIBINTL)
-+grub_setup_LDFLAGS += $(LIBINTL)
++grub_setup_LDFLAGS += $(LIBINTL) $(LIBUTIL)
 +grub_mkdevicemap_LDFLAGS += $(LIBINTL) $(LIBUTIL)
-+grub_probe_LDFLAGS += $(LIBINTL)
++grub_probe_LDFLAGS += $(LIBINTL) $(LIBUTIL)
 +
  pkglib_MODULES += charset.mod
  charset_mod_SOURCES = lib/charset.c
