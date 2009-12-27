@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/12/22 14:59:42 gregoire Exp $
+# $NetBSD: Makefile,v 1.4 2009/12/27 00:14:01 gregoire Exp $
 #
 
 DISTNAME=		grub-bazaar-snapshot
@@ -11,6 +11,9 @@ COMMENT=		GRand Unified Bootloader, version 2 (development snapshot)
 LICENSE=		gnu-gpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+# Helper file for access to the bazaar repository and for autogen.sh.
+.include "bzr.mk"
 
 #
 # XXX: Linux-*-powerpc and others?
@@ -90,7 +93,6 @@ SUBST_MESSAGE.fix-paths-2=	Fixing configuration and library paths in scripts.
 SUBST_FILES.fix-paths-2=	util/grub-mkconfig.in util/update-grub_lib.in
 SUBST_FILES.fix-paths-2+=	util/grub.d/[0-3]*
 SUBST_FILES.fix-paths-2+=	util/grub-install.in
-SUBST_FILES.fix-paths-2+=	util/sparc64/ieee1275/grub-install.in
 SUBST_SED.fix-paths-2=		-e 's,\$${sysconfdir}/grub.d,\$${sysconfdir},g'
 SUBST_SED.fix-paths-2+=		-e 's,\$${sysconfdir}/default/grub,\$${sysconfdir}/default.conf,g'
 SUBST_SED.fix-paths-2+=		-e 's,\$${libdir}/grub,\$${libdir}/grub2,g'
@@ -103,7 +105,6 @@ BUILD_DEPENDS+=		help2man>=1.36:../../converters/help2man
 USE_TOOLS+=		gsed
 TOOLS_PLATFORM.gsed=	# empty   (to trick pkgsrc into the real gsed)
 
-.include "bzr.mk"
 .include "options.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
