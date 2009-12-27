@@ -1,6 +1,6 @@
-diff -Naurp grub2_2009-12-27/util/getroot.c grub2/util/getroot.c
---- grub2_2009-12-27/util/getroot.c	2009-12-27 16:04:32.000000000 +0100
-+++ grub2/util/getroot.c	2009-12-27 17:51:46.000000000 +0100
+diff -Naurp util/getroot.c.orig util/getroot.c
+--- util/getroot.c.orig	2009-12-27 16:04:32.000000000 +0100
++++ util/getroot.c
 @@ -266,8 +266,14 @@ find_root_device (const char *dir, dev_t
  	  char *cwd;
  
@@ -16,9 +16,9 @@ diff -Naurp grub2_2009-12-27/util/getroot.c grub2/util/getroot.c
  	  strip_extra_slashes (res);
  	  free (cwd);
  
-diff -Naurp grub2_2009-12-27/util/grub-probe.c grub2/util/grub-probe.c
---- grub2_2009-12-27/util/grub-probe.c	2009-12-27 16:04:32.000000000 +0100
-+++ grub2/util/grub-probe.c	2009-12-27 17:49:02.000000000 +0100
+diff -Naurp util/grub-probe.c.orig util/grub-probe.c
+--- util/grub-probe.c.orig	2009-12-27 16:04:32.000000000 +0100
++++ util/grub-probe.c
 @@ -111,7 +111,7 @@ probe (const char *path, char *device_na
  
    if (path == NULL)
@@ -28,9 +28,9 @@ diff -Naurp grub2_2009-12-27/util/grub-probe.c grub2/util/grub-probe.c
        if (! grub_util_check_char_device (device_name))
          grub_util_error ("%s is not a character device.\n", device_name);
  #else
-diff -Naurp grub2_2009-12-27/util/hostdisk.c grub2/util/hostdisk.c
---- grub2_2009-12-27/util/hostdisk.c	2009-12-27 16:04:32.000000000 +0100
-+++ grub2/util/hostdisk.c	2009-12-27 18:21:15.000000000 +0100
+diff -Naurp util/hostdisk.c.orig util/hostdisk.c
+--- util/hostdisk.c.orig	2009-12-27 16:04:32.000000000 +0100
++++ util/hostdisk.c
 @@ -97,6 +97,12 @@ struct hd_geometry
  # include <sys/disk.h>
  #endif
