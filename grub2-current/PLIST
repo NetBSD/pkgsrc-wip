@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/12/21 17:41:00 gregoire Exp $
+@comment $NetBSD: PLIST,v 1.2 2009/12/28 13:29:26 gregoire Exp $
 bin/grub2-editenv
 bin/grub2-fstest
 bin/grub2-mkelfimage
@@ -53,8 +53,6 @@ lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/extcmd.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/fat.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/font.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/fs.lst
-lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/fs_file.mod
-lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/fs_uuid.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/fshelp.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/gettext.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/gfxterm.mod
@@ -123,6 +121,9 @@ lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/reiserfs.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/relocator.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/scsi.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/search.mod
+lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/search_fs_file.mod
+lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/search_fs_uuid.mod
+lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/search_label.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/serial.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/setjmp.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/sfs.mod
