@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/11/25 10:37:30 jihbed Exp $
-
-SHA1 (libdisassemble2.0.tar.gz) = a3c68dd1a62a72a6d510e617f581f27a797fcaf3
-RMD160 (libdisassemble2.0.tar.gz) = d357508324689602de92c7baa1ea6ddbeaae390e
-Size (libdisassemble2.0.tar.gz) = 44801 bytes

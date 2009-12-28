@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/11/25 10:37:30 jihbed Exp $
-bin/disassemble2.5
-${PYSITELIB}/opcode86.py
-${PYSITELIB}/opcode86.pyc
-share/doc/py-libdisassemble/README
