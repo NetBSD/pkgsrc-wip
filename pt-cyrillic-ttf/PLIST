@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2009/12/28 14:29:09 bubuchka Exp $
+lib/X11/fonts/TTF/PTC55F.ttf
+lib/X11/fonts/TTF/PTC75F.ttf
+lib/X11/fonts/TTF/PTN57F.ttf
+lib/X11/fonts/TTF/PTN77F.ttf
+lib/X11/fonts/TTF/PTS55F.ttf
+lib/X11/fonts/TTF/PTS56F.ttf
+lib/X11/fonts/TTF/PTS75F.ttf
+lib/X11/fonts/TTF/PTS76F.ttf
