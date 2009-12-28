@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/12/27 00:14:01 gregoire Exp $
+# $NetBSD: Makefile,v 1.5 2009/12/28 12:08:54 gregoire Exp $
 #
 
 DISTNAME=		grub-bazaar-snapshot
@@ -103,7 +103,9 @@ BUILD_DEPENDS+=		help2man>=1.36:../../converters/help2man
 # Since revision 1974 (2009-12-22) of the bazaar trunk, the real GNU sed is
 # required as the option `-i' of GNU sed is used (in file genmk.rb).
 USE_TOOLS+=		gsed
+.if ${OPSYS} == "NetBSD"
 TOOLS_PLATFORM.gsed=	# empty   (to trick pkgsrc into the real gsed)
+.endif
 
 .include "options.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
