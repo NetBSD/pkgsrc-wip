@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3738 2009/12/27 21:37:18 jihbed Exp $
+# $Id: Makefile,v 1.3739 2009/12/28 15:08:13 bubuchka Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1738,6 +1738,7 @@ SUBDIR+=	prozilla
 SUBDIR+=	prtunnel
 SUBDIR+=	psh
 SUBDIR+=	psi
+SUBDIR+=	pt-cyrillic-ttf
 SUBDIR+=	pts
 SUBDIR+=	ptunnel
 SUBDIR+=	pudb
