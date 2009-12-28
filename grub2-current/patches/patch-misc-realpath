@@ -1,0 +1,40 @@
+--- util/misc.c.orig	2009-12-28 01:09:18.000000000 +0100
++++ util/misc.c
+@@ -52,6 +52,19 @@
+ #include <winioctl.h>
+ #endif
+ 
++/* Determine compile-time limit for realpath().  */
++#include <limits.h>
++#include <sys/param.h>
++#if defined(PATH_MAX)
++# define REALPATH_MAX PATH_MAX
++#elif defined(MAXPATHLEN)
++# define REALPATH_MAX MAXPATHLEN
++#else
++# warning "No compile-time limit found for realpath().  Using 1024."
++# define REALPATH_MAX 1024
++#endif
++
++
+ int verbosity = 0;
+ 
+ void
+@@ -490,14 +503,10 @@ make_system_path_relative_to_its_root (c
+   size_t len;
+ 
+   /* canonicalize.  */
+-  p = realpath (path, NULL);
+-
+-  if (p == NULL)
++  p = (char *) xmalloc (REALPATH_MAX);
++  if (realpath (path, p) == NULL)
+     {
+-      if (errno != EINVAL)
+-	grub_util_error ("failed to get realpath of %s", path);
+-      else
+-	grub_util_error ("realpath not supporting (path, NULL)");
++      grub_util_error ("failed to get realpath of %s", path);
+     }
+   len = strlen (p) + 1;
+   buf = strdup (p);
