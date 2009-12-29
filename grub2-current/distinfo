@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.6 2009/12/28 00:38:06 gregoire Exp $
+$NetBSD: distinfo,v 1.7 2009/12/29 00:01:35 gregoire Exp $
 
 SHA1 (patch-__enable_execute_stack) = 7fde8c41c0cbd2f718bc4cab219b8e5dc1e99c4f
 SHA1 (patch-aa) = a864ac2b3850603392bc9ea52746045dd263da15
 SHA1 (patch-ab) = b8af0f7ee12ac44a6246786b2239efd21fd2e63a
 SHA1 (patch-ac) = c7f76b4b87f0ac623daa0b344f67de1f800751d5
 SHA1 (patch-ad) = e8802d1de0f5df6b511eb52b474f7679eaf6496e
-SHA1 (patch-grub-probe-netbsd) = 78cd4b5e2143eb9aaa275b18e850ca921dd7ebe9
+SHA1 (patch-grub-probe-netbsd) = 31424d470b0dba9723fb86ba7e9265ec81e2d34c
 SHA1 (patch-misc-realpath) = efa6c81c725138ce72c539e9650302aa2c0bc8c3
