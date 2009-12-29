@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.6 2009/12/17 10:11:35 moubctez Exp $
+# $NetBSD: Makefile,v 1.7 2009/12/29 09:50:12 moubctez Exp $
 
-DISTNAME=		postgis-1.4.1rc2
-PKGNAME=		postgresql${PGSQL_VERSION}-${DISTNAME}
-PKGREVISION=		1
-CATEGORIES=		databases geography
-MASTER_SITES=		http://postgis.refractions.net/download/
+DISTNAME=	postgis-1.4.1
+PKGNAME=	postgresql${PGSQL_VERSION}-${DISTNAME}
+CATEGORIES=	databases geography
+MASTER_SITES=	http://postgis.refractions.net/download/
 
-MAINTAINER=		filip@joyent.com
-HOMEPAGE=		http://postgis.refractions.net/
-COMMENT=		Spatial database capabilities for PostgreSQL
-LICENSE=		gnu-gpl-v2
+MAINTAINER=	filip@joyent.com
+HOMEPAGE=	http://postgis.refractions.net/
+COMMENT=	Spatial database capabilities for PostgreSQL
+
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -49,7 +49,7 @@ post-install:
 	${INSTALL_DATA} ${BUILD_DIRS:Q}/doc/html/postgis.html ${DESTDIR}${DOCDIR}
 	${INSTALL_DATA} ${BUILD_DIRS:Q}/doc/html/style.css ${DESTDIR}${DOCDIR}
 	${INSTALL_DATA} ${BUILD_DIRS:Q}/doc/html/images/* ${DESTDIR}${DOCDIR}/images
-	${INSTALL_DATA} ${BUILD_DIRS:Q}/doc/postgis_comments.sql ${DESTDIR}${PREFIX}/share/postgresql/contrib
+	${INSTALL_DATA} ${BUILD_DIRS:Q}/postgis_comments.sql ${DESTDIR}${PREFIX}/share/postgresql/contrib
 	${INSTALL_MAN} ${BUILD_DIRS:Q}/doc/man/*.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../geography/geos/buildlink3.mk"
