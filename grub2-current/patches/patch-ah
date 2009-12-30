@@ -1,0 +1,30 @@
+$NetBSD: patch-ah,v 1.1 2009/12/30 14:45:08 gregoire Exp $
+
+--- util/grub.d/10_linux.in.orig	2009-12-30 15:37:01.000000000 +0100
++++ util/grub.d/10_linux.in
+@@ -22,7 +22,12 @@ bindir=@bindir@
+ libdir=@libdir@
+ . ${libdir}/grub/grub-mkconfig_lib
+ 
+-. ${bindir}/gettext.sh
++if $(which gettext >/dev/null 2>/dev/null) ; then
++  gettext="gettext"
++else
++  gettext="echo"
++fi
++
+ export TEXTDOMAIN=@PACKAGE@
+ export TEXTDOMAINDIR=@localedir@
+ 
+@@ -54,9 +59,9 @@ linux_entry ()
+   recovery="$3"
+   args="$4"
+   if ${recovery} ; then
+-    title="$(gettext "%s, with Linux %s (recovery mode)")"
++    title="$(${gettext} "%s, with Linux %s (recovery mode)")"
+   else
+-    title="$(gettext "%s, with Linux %s")"
++    title="$(${gettext} "%s, with Linux %s")"
+   fi
+   printf "menuentry \"${title}\" {\n" "${os}" "${version}"
+   if [ -z "${prepare_boot_cache}" ]; then
