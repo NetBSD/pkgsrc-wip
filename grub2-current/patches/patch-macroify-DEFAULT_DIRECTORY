@@ -1,0 +1,33 @@
+--- util/elf/grub-mkimage.c.orig	2009-12-30 14:00:31.000000000 +0100
++++ util/elf/grub-mkimage.c
+@@ -390,7 +390,7 @@ main (int argc, char *argv[])
+ 
+ 	    if (prefix)
+ 	      free (prefix);
+-	    prefix = xstrdup ("(memdisk)/boot/grub");
++	    prefix = xstrdup ("(memdisk)" DEFAULT_DIRECTORY);
+ 
+ 	    break;
+ 	  case 'h':
+--- util/i386/pc/grub-mkimage.c.orig	2009-12-30 14:00:31.000000000 +0100
++++ util/i386/pc/grub-mkimage.c
+@@ -387,7 +387,7 @@ main (int argc, char *argv[])
+ 	    if (prefix)
+ 	      free (prefix);
+ 
+-	    prefix = xstrdup ("(memdisk)/boot/grub");
++	    prefix = xstrdup ("(memdisk)" DEFAULT_DIRECTORY);
+ 	    break;
+ 
+ 	  case 'c':
+--- util/sparc64/ieee1275/grub-mkimage.c.orig	2009-12-30 14:00:31.000000000 +0100
++++ util/sparc64/ieee1275/grub-mkimage.c
+@@ -254,7 +254,7 @@ main (int argc, char *argv[])
+ 
+ 	    if (prefix)
+ 	      free (prefix);
+-	    prefix = xstrdup ("(memdisk)/boot/grub");
++	    prefix = xstrdup ("(memdisk)" DEFAULT_DIRECTORY);
+ 	    break;
+ 
+ 	  case 'h':
