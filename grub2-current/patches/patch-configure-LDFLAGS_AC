@@ -1,0 +1,31 @@
+--- acinclude.m4.orig	2009-12-30 22:05:08.000000000 +0100
++++ acinclude.m4	2009-12-30 21:56:05.000000000 +0100
+@@ -93,7 +93,7 @@
+ fi
+ grub_cv_prog_objcopy_absolute=yes
+ for link_addr in 0x2000 0x8000 0x7C00; do
+-  if AC_TRY_COMMAND([${CC-cc} ${CFLAGS} -nostdlib ${TARGET_IMG_LDFLAGS_AC} -Wl,-Ttext -Wl,$link_addr conftest.o -o conftest.exec]); then :
++  if AC_TRY_COMMAND([${CC-cc} ${CFLAGS} -nostdlib ${TARGET_IMG_LDFLAGS_AC}$link_addr conftest.o -o conftest.exec]); then :
+   else
+     AC_MSG_ERROR([${CC-cc} cannot link at address $link_addr])
+   fi
+--- configure.ac.orig	2009-12-30 22:34:06.000000000 +0100
++++ configure.ac	2009-12-30 22:37:04.000000000 +0100
+@@ -311,7 +311,7 @@
+ if test -f "${srcdir}/conf/${target_cpu}-${platform}-${host_os}-img-ld.sc"; then
+   TARGET_IMG_LDSCRIPT='$(top_srcdir)'"/conf/${target_cpu}-${platform}-${host_os}-img-ld.sc"
+   TARGET_IMG_LDFLAGS="-Wl,-T${TARGET_IMG_LDSCRIPT}  -Wl,-Ttext,"
+-  TARGET_IMG_LDFLAGS_AC="-Wl,-T${srcdir}/conf/${target_cpu}-${platform}-${host_os}-img-ld.sc"
++  TARGET_IMG_LDFLAGS_AC="-Wl,-T${srcdir}/conf/${target_cpu}-${platform}-${host_os}-img-ld.sc  -Wl,-Ttext,"
+ else
+   TARGET_IMG_LDSCRIPT=
+   TARGET_IMG_LDFLAGS='-Wl,-N  -Wl,-Ttext,'
+@@ -446,7 +446,7 @@
+ if test "x$target_cpu" = xi386; then
+   if test ! -z "$TARGET_IMG_LDSCRIPT"; then
+     # Check symbols provided by linker script.
+-    CFLAGS="$TARGET_CFLAGS -nostdlib $TARGET_IMG_LDFLAGS_AC -Wl,-Ttext,8000,--defsym,___main=0x8100"
++    CFLAGS="$TARGET_CFLAGS -nostdlib ${TARGET_IMG_LDFLAGS_AC}8000,--defsym,___main=0x8100"
+   fi
+   if test "x$TARGET_APPLE_CC" != x1 ; then
+     grub_CHECK_BSS_START_SYMBOL
