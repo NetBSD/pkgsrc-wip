@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.9 2009/05/18 16:11:18 brook1 Exp $
+$NetBSD: distinfo,v 1.10 2009/12/30 12:26:55 moubctez Exp $
 
-SHA1 (grass-6.3.0.tar.gz) = c4b0b1407655f8ed1e16e911df191323fe00eb9e
-RMD160 (grass-6.3.0.tar.gz) = 66db4223fc0d5172371903f71d68f1dd024ad2d2
-Size (grass-6.3.0.tar.gz) = 17688547 bytes
-SHA1 (patch-af) = 5f49970fa8d11ac98c83eb7ec7b21cbbdbfd11f6
-SHA1 (patch-an) = d316aa2474632092078934328c3dc9ce0c67b59d
+SHA1 (grass-6.4.0RC5.tar.gz) = 6f1f069d3044555f578c62e0601965ff745462b8
+RMD160 (grass-6.4.0RC5.tar.gz) = 3fa11d2672a4717a7f348cec3810bcbe51700202
+Size (grass-6.4.0RC5.tar.gz) = 21087594 bytes
+SHA1 (patch-aa) = 5a1f36098f6ea267c125ae3ad1daf2b9df7b2446
+SHA1 (patch-ab) = a9a1b673f595c20a51b0af98823eaa7799d78913
+SHA1 (patch-af) = b3fdd1c89c8056677fe1682d91174931e55187ae
+SHA1 (patch-an) = 2a2b8bf7e77789318fb0a7a66f43c957909e2768
 SHA1 (patch-ap) = ad294f6dd8dfaad0ce3a486ebdcb060c6e966139

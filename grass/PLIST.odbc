@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST.odbc,v 1.1 2006/08/23 18:39:43 brook1 Exp $
-grass-${PKGVERSION}/driver/db/odbc
+@comment $NetBSD: PLIST.odbc,v 1.2 2009/12/30 12:26:55 moubctez Exp $
+${PKGNAME}/driver/db/odbc

@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.1 2009/05/18 16:08:47 brook1 Exp $
+$NetBSD: patch-af,v 1.2 2009/12/30 12:26:55 moubctez Exp $
 
---- aclocal.m4.orig	2007-11-05 07:33:55.000000000 -0700
+--- aclocal.m4.orig	2008-12-19 20:30:09.000000000 +0000
 +++ aclocal.m4
-@@ -891,7 +891,7 @@ dnl AC_CHECK_TOOL(AR, ar)
+@@ -1005,7 +1005,7 @@ dnl AC_CHECK_TOOL(AR, ar)
  	    SHLIB_SUFFIX=".so"
  	    LDFLAGS='-Wl,-rpath,${LIB_RUNTIME_DIR} -export-dynamic'
  	    CC_SEARCH_FLAGS='-Wl,-rpath,${LIB_RUNTIME_DIR}'

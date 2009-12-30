@@ -1,15 +1,13 @@
-# $NetBSD: options.mk,v 1.3 2009/05/18 16:08:47 brook1 Exp $
-#
+# $NetBSD: options.mk,v 1.4 2009/12/30 12:26:55 moubctez Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.grass
-PKG_SUPPORTED_OPTIONS=	fftw freetype iodbc motif mysql nls
-PKG_SUPPORTED_OPTIONS+=	opengl postgres python sqlite unixodbc
+PKG_SUPPORTED_OPTIONS=	fftw freetype gmath iodbc motif mysql
+PKG_SUPPORTED_OPTIONS+=	opengl pgsql python sqlite unixodbc
 # PKG_SUPPORTED_OPTIONS+=	ffmpeg		# XXX - handle includes
 # PKG_SUPPORTED_OPTIONS+=	glw		# XXX - requires libGLw(M)
-# PKG_SUPPORTED_OPTIONS+=	gmath		# XXX - undefined MAIN__
 # PKG_SUPPORTED_OPTIONS+=	wxWidgets	# XXX - need new version
-PKG_SUGGESTED_OPTIONS+= fftw freetype iodbc motif nls
-PKG_SUGGESTED_OPTIONS+= opengl postgres python sqlite
+PKG_SUGGESTED_OPTIONS+= fftw freetype gmath iodbc motif
+PKG_SUGGESTED_OPTIONS+= opengl pgsql python sqlite
 
 .include "../../mk/bsd.options.mk"
 
@@ -50,7 +48,6 @@ CONFIGURE_ARGS+=	--with-glw-libs=${PREFIX}/lib
 CONFIGURE_ARGS+=	--without-glw
 .endif
 
-# XXX - requires MAIN__ / fortran support
 .if !empty(PKG_OPTIONS:Mgmath)
 USE_LANGUAGES+=		fortran
 CONFIGURE_ARGS+=	--with-blas
@@ -87,13 +84,6 @@ PLIST.mysql=		yes
 CONFIGURE_ARGS+=	--without-mysql
 .endif
 
-.if !empty(PKG_OPTIONS:Mnls)
-CONFIGURE_ARGS+=	--with-nls
-PLIST.nls=		yes
-.else
-CONFIGURE_ARGS+=	--without-nls
-.endif
-
 .if !empty(PKG_OPTIONS:Mopengl)
 CONFIGURE_ARGS+=	--with-opengl
 PLIST.opengl=		yes
@@ -102,7 +92,7 @@ PLIST.opengl=		yes
 CONFIGURE_ARGS+=	--without-opengl
 .endif
 
-.if !empty(PKG_OPTIONS:Mpostgres)
+.if !empty(PKG_OPTIONS:Mpgsql)
 CONFIGURE_ARGS+=	--with-postgres
 PLIST.pgsql=		yes
 . include "../../mk/pgsql.buildlink3.mk"

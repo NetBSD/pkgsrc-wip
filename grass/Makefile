@@ -1,19 +1,17 @@
-# $NetBSD: Makefile,v 1.19 2009/12/14 23:37:53 lexort Exp $
-#
+# $NetBSD: Makefile,v 1.20 2009/12/30 12:26:55 moubctez Exp $
 
 DISTNAME=		grass-${GRASS_VERSION}
-PKGREVISION=		2
 CATEGORIES=		geography
-MASTER_SITES=		http://grass.itc.it/grass63/source/
+MASTER_SITES=		http://grass.itc.it/grass64/source/
 
 MAINTAINER=		brook@nmsu.edu
 HOMEPAGE=		http://grass.itc.it/
 COMMENT=		Open source geographical information system (GIS)
 
+USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
-USE_X11=		yes
 USE_TOOLS+=		autoconf bash gm4 gmake perl
-USE_LANGUAGES+=		c c++
+USE_X11=		yes
 GNU_CONFIGURE=		yes
 
 BUILDLINK_PASSTHRU_RPATHDIRS+=	${GRASS_HOME}/lib
@@ -21,9 +19,11 @@ BUILDLINK_PASSTHRU_RPATHDIRS+=	${GRASS_HOME}/lib
 .include "options.mk"
 
 PLIST_VARS+=		fftw freetype iodbc motif mysql
-PLIST_VARS+=		nls opengl pgsql sqlite unixodbc
+PLIST_VARS+=		opengl pgsql sqlite unixodbc
 
+CONFIGURE_ARGS+=	--with-cairo
 CONFIGURE_ARGS+=	--with-cxx
+CONFIGURE_ARGS+=	--with-nls
 CONFIGURE_ARGS+=	--without-opendwg
 CONFIGURE_ARGS+=	--with-proj-share=${PREFIX}/share/proj
 CONFIGURE_ARGS+=	--with-readline
@@ -34,6 +34,15 @@ REPLACE_BASH+=		scripts/v.in.gpsbabel/v.in.gpsbabel
 
 REPLACE_PYTHON+=	gui/wxpython/gui_modules/menuform.py
 
+REPLACE_INTERPRETER+=	nviz
+REPLACE.nviz.old=	.*nviz
+REPLACE.nviz.new=	${PREFIX}/${PKGNAME}/bin/nviz
+REPLACE_FILES.nviz+=	visualization/nviz/scripts/nviz2.2_script
+REPLACE_FILES.nviz+=	visualization/nviz/scripts/script_file_tools
+REPLACE_FILES.nviz+=	visualization/nviz/scripts/script_get_line
+REPLACE_FILES.nviz+=	visualization/nviz/scripts/script_play
+REPLACE_FILES.nviz+=	visualization/nviz/scripts/script_tools
+
 BUILD_TARGET=		default
 
 # Note - the following is because the grass build process involves
@@ -42,7 +51,7 @@ BUILD_TARGET=		default
 # However, because the install command changes ownership (even during
 # the build phase), the package cannot be built by a non-root user.
 pre-extract:
-	@if [ `${ID} -u` != 0 ]; then \
+	if [ `${ID} -u` != 0 ]; then \
 	  ${ECHO} "${PKGNAME} must be built as root because it uses install during build." ; \
 	  ${FALSE}; fi
 
@@ -53,7 +62,9 @@ post-install:
 .include "Makefile.common"
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
+.include "../../devel/swig/buildlink3.mk"
 .include "../../geography/gdal-lib/buildlink3.mk"
+.include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/gd/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
