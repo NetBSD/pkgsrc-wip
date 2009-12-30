@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/12/29 16:15:50 gregoire Exp $
+# $NetBSD: Makefile,v 1.7 2009/12/30 13:06:16 gregoire Exp $
 #
 
 DISTNAME=		grub-bazaar-snapshot
@@ -82,6 +82,7 @@ PLIST_SUBST+=		GRUB_PLATFORM=${GRUB_PLATFORM}
 # - $sysconfdir/default/grub is replaced by $sysconfdir/default.conf in
 #   scripts.
 # - $libdir/grub is replaced by $libdir/grub2 in Makefile.in and in scripts.
+# - DEFAULT_DIRECTORY in include/grub/util/misc.h.
 #
 SUBST_CLASSES+=			fix-paths-1 fix-paths-2
 SUBST_STAGE.fix-paths-1=	pre-configure
@@ -97,6 +98,11 @@ SUBST_FILES.fix-paths-2+=	util/grub-install.in
 SUBST_SED.fix-paths-2=		-e 's,\$${sysconfdir}/grub.d,\$${sysconfdir},g'
 SUBST_SED.fix-paths-2+=		-e 's,\$${sysconfdir}/default/grub,\$${sysconfdir}/default.conf,g'
 SUBST_SED.fix-paths-2+=		-e 's,\$${libdir}/grub,\$${libdir}/grub2,g'
+SUBST_STAGE.fix-paths-3=	pre-configure
+SUBST_MESSAGE.fix-paths-3=	Fixing default directory in include/grub/util/misc.h.
+SUBST_FILES.fix-paths-3=	include/grub/util/misc.h
+SUBST_SED.fix-paths-3=		-e 's,"/grub","/grub2",g'
+SUBST_SED.fix-paths-3+=		-e 's,"/boot/grub","/boot/grub2",g'
 
 # This package uses help2man to generate man pages.
 BUILD_DEPENDS+=		help2man>=1.36:../../converters/help2man
