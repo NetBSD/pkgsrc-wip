@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3739 2009/12/28 15:08:13 bubuchka Exp $
+# $Id: Makefile,v 1.3740 2009/12/31 19:08:48 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1926,6 +1926,7 @@ SUBDIR+=	qgis
 SUBDIR+=	qhacc
 SUBDIR+=	qico
 SUBDIR+=	qinx
+SUBDIR+=	qmpdclient
 SUBDIR+=	qn-x11
 SUBDIR+=	qpsmtpd
 SUBDIR+=	qtcreator
