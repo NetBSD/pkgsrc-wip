@@ -1,0 +1,16 @@
+QMPDClient is Qt4 based mpd client, originally developed by Havard
+Tautra Knutsen. Set of patches developed by community was then called
+"QMPDClient-ne". Now it became mainline.
+
+Features
+
+    * Covers' display
+    * Lyrics' display
+    * Tag guessing
+    * Internet radio
+    * Storing & using playlists
+    * Last.fm track submission
+    * Tray notifications (Freedesktop too)
+    * Skinnable interface with iconsets
+    * Shoutcast (unstable, see shoutcast branch in git)
+    * And more
