@@ -1,17 +1,16 @@
-$NetBSD: patch-ac,v 1.1.1.1 2009/12/21 17:41:00 gregoire Exp $
+$NetBSD: patch-ac,v 1.2 2010/01/01 23:28:05 gregoire Exp $
 
---- Makefile.in.orig	2009-12-21 12:02:26.000000000 +0100
+--- Makefile.in.orig	2010-01-02 00:21:35.000000000 +0100
 +++ Makefile.in
-@@ -107,6 +107,8 @@ else
+@@ -112,6 +112,7 @@ else
  HELP2MAN := LANG=C $(HELP2MAN) --no-info --source=FSF
  endif
  AWK = @AWK@
-+LIBINTL = @LIBINTL@
 +LIBUTIL = @LIBUTIL@
  LIBCURSES = @LIBCURSES@
  LIBUSB = @LIBUSB@
  LIBPCIACCESS = @LIBPCIACCESS@
-@@ -330,8 +332,8 @@ install-local: all
+@@ -335,8 +336,8 @@ install-local: all
  	@list='$(info_INFOS)'; \
  	for file in $$list; do \
  	  if test -f "$$file"; then dir=; else dir="$(srcdir)/"; fi; \
@@ -22,7 +21,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2009/12/21 17:41:00 gregoire Exp $
  	  if (install-info --version && \
  	       install-info --version 2>&1 | sed 1q | grep -i -v debian) >/dev/null 2>&1; then \
  	    install-info --info-dir="$(DESTDIR)$(infodir)" "$(DESTDIR)$(infodir)/$$dest" || :; \
-@@ -369,12 +371,12 @@ uninstall:
+@@ -374,12 +375,12 @@ uninstall:
  	@list='$(lib_SCRIPTS)'; \
  	for file in $$list; do \
  	  dest="`echo $$file | sed 's,.*/,,'`"; \
