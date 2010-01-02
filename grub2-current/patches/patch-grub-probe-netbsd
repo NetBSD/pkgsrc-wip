@@ -1,23 +1,21 @@
 --- util/getroot.c.orig	2010-01-02 10:53:01.000000000 +0100
-+++ util/getroot.c	2010-01-02 12:10:18.000000000 +0100
-@@ -264,10 +264,19 @@ find_root_device (const char *dir, dev_t
++++ util/getroot.c	2010-01-02 14:17:08.000000000 +0100
+@@ -264,10 +264,17 @@ find_root_device (const char *dir, dev_t
  	  /* Found!  */
  	  char *res;
  	  char *cwd;
 +#if defined(__NetBSD__)
 +	  /* Convert this block device to its character (raw) device.  */
 +	  const char *template = "%s/r%s";
-+	  const int extra_len = 3;
 +#else
 +	  /* Keep the device name as it is.  */
 +	  const char *template = "%s/%s";
-+	  const int extra_len = 2;
 +#endif
  
  	  cwd = xgetcwd ();
 -	  res = xmalloc (strlen (cwd) + strlen (ent->d_name) + 2);
 -	  sprintf (res, "%s/%s", cwd, ent->d_name);
-+	  res = xmalloc (strlen (cwd) + strlen (ent->d_name) + extra_len);
++	  res = xmalloc (strlen (cwd) + strlen (ent->d_name) + 3);
 +	  sprintf (res, template, cwd, ent->d_name);
  	  strip_extra_slashes (res);
  	  free (cwd);
