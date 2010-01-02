@@ -1,4 +1,4 @@
-# $NetBSD: bzr.mk,v 1.2 2009/12/27 00:14:01 gregoire Exp $
+# $NetBSD: bzr.mk,v 1.3 2010/01/02 00:21:20 gregoire Exp $
 #
 
 BUILD_DEPENDS+=		bzr>=1.0:../../devel/bzr
@@ -25,6 +25,6 @@ SUBST_STAGE.fix-py=	pre-configure
 SUBST_MESSAGE.fix-py=	Appending python version in autogen.sh.
 SUBST_FILES.fix-py=	autogen.sh
 SUBST_SED.fix-py=	-e 's,^python,python${PYVERSSUFFIX},g'
-BUILD_DEPENDS+=		ruby>=1.8:../../lang/ruby
+BUILD_DEPENDS+=		ruby>=1.6:../../lang/ruby
 
 .include "../../lang/python/pyversion.mk"

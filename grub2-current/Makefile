@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2009/12/30 13:25:24 gregoire Exp $
+# $NetBSD: Makefile,v 1.9 2010/01/02 00:21:20 gregoire Exp $
 #
 
 DISTNAME=		grub-bazaar-snapshot
@@ -54,7 +54,7 @@ CONF_FILES+=		${EGDIR}/README ${PKG_SYSCONFDIR}/README
 TODAY!=			${DATE} -u +'%Y%m%d'
 
 # GRUB 2 current development trunk seems to prefer a recent version of gcc.
-GCC_REQD=		4.3
+GCC_REQD=		4.1.3
 
 #
 # GRUB 2's configure script sets the variables `target_cpu' and `platform',
