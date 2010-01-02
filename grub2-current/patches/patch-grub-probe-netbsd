@@ -1,22 +1,29 @@
---- util/getroot.c.orig	2009-12-29 00:43:31.000000000 +0100
-+++ util/getroot.c
-@@ -266,8 +266,14 @@ find_root_device (const char *dir, dev_t
+--- util/getroot.c.orig	2010-01-02 10:53:01.000000000 +0100
++++ util/getroot.c	2010-01-02 12:10:18.000000000 +0100
+@@ -264,10 +264,19 @@ find_root_device (const char *dir, dev_t
+ 	  /* Found!  */
+ 	  char *res;
  	  char *cwd;
++#if defined(__NetBSD__)
++	  /* Convert this block device to its character (raw) device.  */
++	  const char *template = "%s/r%s";
++	  const int extra_len = 3;
++#else
++	  /* Keep the device name as it is.  */
++	  const char *template = "%s/%s";
++	  const int extra_len = 2;
++#endif
  
  	  cwd = xgetcwd ();
-+#if defined(__NetBSD__)
-+	  /* Convert this block device to its character (raw) device */
-+	  res = xmalloc (strlen (cwd) + strlen (ent->d_name) + 3);
-+	  sprintf (res, "%s/r%s", cwd, ent->d_name);
-+#else
- 	  res = xmalloc (strlen (cwd) + strlen (ent->d_name) + 2);
- 	  sprintf (res, "%s/%s", cwd, ent->d_name);
-+#endif
+-	  res = xmalloc (strlen (cwd) + strlen (ent->d_name) + 2);
+-	  sprintf (res, "%s/%s", cwd, ent->d_name);
++	  res = xmalloc (strlen (cwd) + strlen (ent->d_name) + extra_len);
++	  sprintf (res, template, cwd, ent->d_name);
  	  strip_extra_slashes (res);
  	  free (cwd);
  
---- util/grub-probe.c.orig	2009-12-29 00:43:31.000000000 +0100
-+++ util/grub-probe.c
+--- util/grub-probe.c.orig	2010-01-02 10:53:01.000000000 +0100
++++ util/grub-probe.c	2010-01-02 11:55:24.000000000 +0100
 @@ -111,7 +111,7 @@ probe (const char *path, char *device_na
  
    if (path == NULL)
@@ -26,16 +33,18 @@
        if (! grub_util_check_char_device (device_name))
          grub_util_error ("%s is not a character device.\n", device_name);
  #else
---- util/hostdisk.c.orig	2009-12-29 00:43:31.000000000 +0100
-+++ util/hostdisk.c
-@@ -97,6 +97,15 @@ struct hd_geometry
+--- util/hostdisk.c.orig	2010-01-02 10:53:01.000000000 +0100
++++ util/hostdisk.c	2010-01-02 12:04:58.000000000 +0100
+@@ -97,6 +97,17 @@ struct hd_geometry
  # include <sys/disk.h>
  #endif
  
 +#if defined(__NetBSD__)
 +# include <sys/ioctl.h>
 +# include <sys/disklabel.h>    /* struct disklabel */
-+# include <util.h>    /* getrawpartition */
++# ifdef HAVE_GETRAWPARTITION
++#  include <util.h>    /* getrawpartition */
++# endif /* HAVE_GETRAWPARTITION */
 +# ifndef RAW_FLOPPY_MAJOR
 +#  define RAW_FLOPPY_MAJOR	9
 +# endif /* ! RAW_FLOPPY_MAJOR */
@@ -44,7 +53,7 @@
  struct
  {
    char *drive;
-@@ -191,16 +200,20 @@ grub_util_biosdisk_open (const char *nam
+@@ -191,16 +202,20 @@ grub_util_biosdisk_open (const char *nam
      return GRUB_ERR_NONE;
    }
  #elif defined(__linux__) || defined(__CYGWIN__) || defined(__FreeBSD__) || \
@@ -67,7 +76,7 @@
      if (fstat (fd, &st) < 0 || ! S_ISCHR (st.st_mode))
  # else
      if (fstat (fd, &st) < 0 || ! S_ISBLK (st.st_mode))
-@@ -214,6 +227,11 @@ grub_util_biosdisk_open (const char *nam
+@@ -214,6 +229,11 @@ grub_util_biosdisk_open (const char *nam
      if (ioctl (fd, DIOCGMEDIASIZE, &nr))
  # elif defined(__APPLE__)
      if (ioctl (fd, DKIOCGETBLOCKCOUNT, &nr))
@@ -79,7 +88,7 @@
  # else
      if (ioctl (fd, BLKGETSIZE64, &nr))
  # endif
-@@ -224,14 +242,16 @@ grub_util_biosdisk_open (const char *nam
+@@ -224,14 +244,16 @@ grub_util_biosdisk_open (const char *nam
  
      close (fd);
  
@@ -99,7 +108,7 @@
  
      grub_util_info ("the size of %s is %llu", name, disk->total_sectors);
  
-@@ -683,7 +703,7 @@ make_device_name (int drive, int dos_par
+@@ -683,7 +705,7 @@ make_device_name (int drive, int dos_par
      dos_part_str = xasprintf (",%d", dos_part + 1);
  
    if (bsd_part >= 0)
@@ -108,7 +117,7 @@
  
    ret = xasprintf ("%s%s%s", map[drive].drive,
                     dos_part_str ? : "",
-@@ -853,6 +873,26 @@ convert_system_partition_to_system_disk 
+@@ -853,6 +875,28 @@ convert_system_partition_to_system_disk 
      }
    return path;
  
@@ -124,8 +133,10 @@
 +      if (grub_isalpha(*q) && grub_isdigit(*(q-1)))
 +        {
 +          int rawpart;
++# ifdef HAVE_GETRAWPARTITION
 +          rawpart = getrawpartition();
 +          if (rawpart < 0)
++# endif /* HAVE_GETRAWPARTITION */
 +            rawpart = 3;    /* default on i386 */
 +          *q = 'a' + rawpart;
 +        }
@@ -135,7 +146,7 @@
  #else
  # warning "The function `convert_system_partition_to_system_disk' might not work on your OS correctly."
    return xstrdup (os_dev);
-@@ -923,7 +963,7 @@ grub_util_biosdisk_get_grub_dev (const c
+@@ -923,7 +967,7 @@ grub_util_biosdisk_get_grub_dev (const c
        == 0)
      return make_device_name (drive, -1, -1);
  
@@ -144,7 +155,7 @@
    if (! S_ISCHR (st.st_mode))
  #else
    if (! S_ISBLK (st.st_mode))
-@@ -1107,6 +1147,133 @@ grub_util_biosdisk_get_grub_dev (const c
+@@ -1107,6 +1151,133 @@ grub_util_biosdisk_get_grub_dev (const c
      return make_device_name (drive, dos_part, bsd_part);
    }
  
@@ -278,3 +289,26 @@
  #else
  # warning "The function `grub_util_biosdisk_get_grub_dev' might not work on your OS correctly."
    return make_device_name (drive, -1, -1);
+--- configure.ac.orig	2010-01-02 10:52:51.000000000 +0100
++++ configure.ac	2010-01-02 11:52:55.000000000 +0100
+@@ -208,6 +208,20 @@ AC_CHECK_FUNCS(memmove sbrk strdup lstat
+ AC_CHECK_HEADERS(sys/mkdev.h sys/sysmacros.h malloc.h termios.h sys/types.h)
+ AC_CHECK_HEADERS(unistd.h string.h strings.h sys/stat.h sys/fcntl.h)
+ 
++# For opendisk() and getrawpartition() on NetBSD.
++# Used in util/deviceiter.c and in util/hostdisk.c.
++AC_CHECK_HEADER([util.h], [
++  AC_CHECK_LIB([util], [opendisk], [
++    LIBUTIL="-lutil"
++    AC_DEFINE(HAVE_OPENDISK, 1, [Define if opendisk() in -lutil can be used])
++  ])
++  AC_CHECK_LIB([util], [getrawpartition], [
++    LIBUTIL="-lutil"
++    AC_DEFINE(HAVE_GETRAWPARTITION, 1, [Define if getrawpartition() in -lutil can be used])
++  ])
++])
++AC_SUBST([LIBUTIL])
++
+ #
+ # Check for target programs.
+ #
