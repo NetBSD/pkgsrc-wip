@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3742 2010/01/02 04:41:08 ryo-on Exp $
+# $Id: Makefile,v 1.3743 2010/01/02 18:09:01 cheusov Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -289,11 +289,9 @@ SUBDIR+=	dfu-util
 SUBDIR+=	di
 SUBDIR+=	diablo
 SUBDIR+=	dicom3tools
-SUBDIR+=	dict-client
 SUBDIR+=	dict-est-rus
 SUBDIR+=	dict-freedict-eng-fra
 SUBDIR+=	dict-mueller7
-SUBDIR+=	dict-server
 SUBDIR+=	digikam
 SUBDIR+=	ding
 SUBDIR+=	dir2ogg
@@ -934,7 +932,6 @@ SUBDIR+=	java-swingwt
 SUBDIR+=	java-swt
 SUBDIR+=	java-xmlrpc
 SUBDIR+=	javascript-guide
-SUBDIR+=	javascript-mode
 SUBDIR+=	javascript-reference
 SUBDIR+=	jbigkit
 SUBDIR+=	jbmgen
