@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2008/04/14 19:57:40 cheusov Exp $
+# $NetBSD: Makefile,v 1.7 2010/01/02 17:24:34 cheusov Exp $
 
 DISTNAME=	eng-fra
 PKGNAME=	dict-freedict-${DISTNAME}-0.0.3
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=freedict/}
 
@@ -15,8 +16,8 @@ USE_TOOLS+=		gzip
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-DEPENDS+=		dict-server>=1.9.14:../../wip/dict-server
-BUILD_DEPENDS+=		dict-server>=1.10.2:../../wip/dict-server
+DEPENDS+=		dict-server>=1.9.14:../../textproc/dict-server
+BUILD_DEPENDS+=		dict-server>=1.10.2:../../textproc/dict-server
 
 DICTD_DB_DIR=		${PREFIX}/share/dictd
 INSTALLATION_DIRS+=	${DICTD_DB_DIR}
