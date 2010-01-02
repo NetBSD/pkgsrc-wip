@@ -1,19 +1,23 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:11 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.3 2010/01/02 20:40:12 jihbed Exp $
 bin/ppserver.py
+${PYSITELIB}/pp.py
 ${PYSITELIB}/pp.pyc
 ${PYSITELIB}/pp.pyo
+${PYSITELIB}/ppauto.py
 ${PYSITELIB}/ppauto.pyc
 ${PYSITELIB}/ppauto.pyo
+${PYSITELIB}/pptransport.py
 ${PYSITELIB}/pptransport.pyc
 ${PYSITELIB}/pptransport.pyo
+${PYSITELIB}/ppworker.py
 ${PYSITELIB}/ppworker.pyc
 ${PYSITELIB}/ppworker.pyo
 man/man1/ppserver.1
-share/doc/${PKGNAME}/ppdoc.html
-share/examples/${PKGNAME}/auto_diff.py
-share/examples/${PKGNAME}/callback.py
-share/examples/${PKGNAME}/dynamic_ncpus.py
-share/examples/${PKGNAME}/quicksort.py
-share/examples/${PKGNAME}/reverse_md5.py
-share/examples/${PKGNAME}/sum_primes.py
-share/examples/${PKGNAME}/sum_primes_functor.py
+share/doc/py25-pp/ppdoc.html
+share/examples/py25-pp/auto_diff.py
+share/examples/py25-pp/callback.py
+share/examples/py25-pp/dynamic_ncpus.py
+share/examples/py25-pp/quicksort.py
+share/examples/py25-pp/reverse_md5.py
+share/examples/py25-pp/sum_primes.py
+share/examples/py25-pp/sum_primes_functor.py

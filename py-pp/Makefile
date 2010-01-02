@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/04/24 22:59:25 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2010/01/02 20:40:12 jihbed Exp $
 #
 
 DISTNAME=	pp-1.5.7
@@ -13,8 +13,8 @@ COMMENT=	Parallel and distributed programming for Python
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-DOCDIR=	${PREFIX}/share/doc/${PYPKGPREFIX}-pp-1.5.7
-EGDIR=		${PREFIX}/share/examples/${PYPKGPREFIX}-pp-1.5.7
+DOCDIR=	${PREFIX}/share/doc/${PYPKGPREFIX}-pp
+EGDIR=		${PREFIX}/share/examples/${PYPKGPREFIX}-pp
 
 MESSAGE_SUBST+=	DOCDIR=${DOCDIR}
 MESSAGE_SUBST+=	EGDIR=${EGDIR}
