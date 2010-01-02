@@ -1,5 +1,5 @@
---- grub-mkconfig.in.orig	2010-01-02 02:18:47.000000000 +0100
-+++ grub-mkconfig.in	2010-01-02 02:43:30.000000000 +0100
+--- util/grub-mkconfig.in.orig	2010-01-02 02:18:47.000000000 +0100
++++ util/grub-mkconfig.in
 @@ -24,10 +24,10 @@ sbindir=@sbindir@
  libdir=@libdir@
  sysconfdir=@sysconfdir@
