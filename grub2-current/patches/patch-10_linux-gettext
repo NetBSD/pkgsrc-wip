@@ -1,6 +1,8 @@
-$NetBSD: patch-10_linux-gettext,v 1.1 2009/12/30 22:23:08 gregoire Exp $
+Description: fixes config file generation failure on Linux when grub is not
+  installed in the same prefix as gettext.
+See: http://lists.gnu.org/archive/html/grub-devel/2009-12/msg00461.html
 
---- util/grub.d/10_linux.in.orig	2009-12-30 15:37:01.000000000 +0100
+--- util/grub.d/10_linux.in.orig	2010-01-02 14:42:38.000000000 +0100
 +++ util/grub.d/10_linux.in
 @@ -22,7 +22,12 @@ bindir=@bindir@
  libdir=@libdir@

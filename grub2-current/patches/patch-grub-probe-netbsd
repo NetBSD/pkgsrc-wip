@@ -1,5 +1,22 @@
---- util/getroot.c.orig	2010-01-02 10:53:01.000000000 +0100
-+++ util/getroot.c	2010-01-02 14:17:08.000000000 +0100
+Description: adds support for NetBSD in GRUB utilities.
+See: http://lists.gnu.org/archive/html/grub-devel/2009-12/msg00432.html
+
+Change log
+----------
+2010-??-??  Gregoire Sutre  <gregoire.sutre@labri.fr>
+
+	Add grub-probe support for NetBSD.
+
+	* util/getroot.c (find_root_device): Convert block device to
+	character device on NetBSD.
+	* util/probe.c (probe): Require character device on NetBSD.
+	* util/hostdisk.c (grub_util_biosdisk_open): NetBSD specific code.
+	(convert_system_partition_to_system_disk): Likewise.
+	(grub_util_biosdisk_get_grub_dev): Likewise.
+	(make_device_name): Fixed a typo in bsd_part_str.
+
+--- util/getroot.c.orig	2010-01-02 14:42:38.000000000 +0100
++++ util/getroot.c
 @@ -264,10 +264,17 @@ find_root_device (const char *dir, dev_t
  	  /* Found!  */
  	  char *res;
@@ -20,8 +37,8 @@
  	  strip_extra_slashes (res);
  	  free (cwd);
  
---- util/grub-probe.c.orig	2010-01-02 10:53:01.000000000 +0100
-+++ util/grub-probe.c	2010-01-02 11:55:24.000000000 +0100
+--- util/grub-probe.c.orig	2010-01-02 14:42:38.000000000 +0100
++++ util/grub-probe.c
 @@ -111,7 +111,7 @@ probe (const char *path, char *device_na
  
    if (path == NULL)
@@ -31,8 +48,8 @@
        if (! grub_util_check_char_device (device_name))
          grub_util_error ("%s is not a character device.\n", device_name);
  #else
---- util/hostdisk.c.orig	2010-01-02 10:53:01.000000000 +0100
-+++ util/hostdisk.c	2010-01-02 12:04:58.000000000 +0100
+--- util/hostdisk.c.orig	2010-01-02 14:42:38.000000000 +0100
++++ util/hostdisk.c
 @@ -97,6 +97,17 @@ struct hd_geometry
  # include <sys/disk.h>
  #endif
@@ -287,8 +304,8 @@
  #else
  # warning "The function `grub_util_biosdisk_get_grub_dev' might not work on your OS correctly."
    return make_device_name (drive, -1, -1);
---- configure.ac.orig	2010-01-02 10:52:51.000000000 +0100
-+++ configure.ac	2010-01-02 11:52:55.000000000 +0100
+--- configure.ac.orig	2010-01-02 14:42:26.000000000 +0100
++++ configure.ac
 @@ -208,6 +208,20 @@ AC_CHECK_FUNCS(memmove sbrk strdup lstat
  AC_CHECK_HEADERS(sys/mkdev.h sys/sysmacros.h malloc.h termios.h sys/types.h)
  AC_CHECK_HEADERS(unistd.h string.h strings.h sys/stat.h sys/fcntl.h)
@@ -310,3 +327,24 @@
  #
  # Check for target programs.
  #
+--- Makefile.in.orig	2010-01-02 14:42:01.000000000 +0100
++++ Makefile.in
+@@ -44,6 +44,9 @@ pkglibdir =  $(libdir)/`echo @PACKAGE_TA
+ # Internationalization library.
+ LIBINTL = @LIBINTL@
+ 
++# Util library.
++LIBUTIL = @LIBUTIL@
++
+ XGETTEXT = @XGETTEXT@
+ MSGMERGE = @MSGMERGE@
+ MSGFMT = @MSGFMT@
+@@ -75,7 +78,7 @@ MKDIR_P = @MKDIR_P@
+ 
+ mkinstalldirs = $(srcdir)/mkinstalldirs
+ 
+-LIBS = @LIBS@ $(LIBINTL)
++LIBS = @LIBS@ $(LIBINTL) $(LIBUTIL)
+ 
+ CC = @CC@
+ CFLAGS = @CFLAGS@

@@ -1,6 +1,11 @@
---- include/grub/misc.h.orig	2009-12-27 12:58:34.000000000 +0100
-+++ include/grub/misc.h	2009-12-27 12:58:54.000000000 +0100
-@@ -191,7 +191,7 @@
+Description: do not override __enable_execute_stack for utilities since they
+  are linked with libc.  Fixes bug #28392.
+See: http://lists.gnu.org/archive/html/grub-devel/2009-12/msg00349.html
+Bug: http://savannah.gnu.org/bugs/?28392
+
+--- include/grub/misc.h.orig	2010-01-02 14:42:34.000000000 +0100
++++ include/grub/misc.h
+@@ -191,7 +191,7 @@ grub_ssize_t EXPORT_FUNC(grub_utf8_to_uc
  grub_uint64_t EXPORT_FUNC(grub_divmod64) (grub_uint64_t n,
  					  grub_uint32_t d, grub_uint32_t *r);
  
@@ -9,9 +14,9 @@
  void EXPORT_FUNC(__enable_execute_stack) (void *addr);
  #endif
  
---- kern/misc.c.orig	2009-12-27 12:58:02.000000000 +0100
-+++ kern/misc.c	2009-12-27 12:58:20.000000000 +0100
-@@ -987,7 +987,7 @@
+--- kern/misc.c.orig	2010-01-02 14:42:35.000000000 +0100
++++ kern/misc.c
+@@ -997,7 +997,7 @@ grub_abort (void)
  void abort (void) __attribute__ ((alias ("grub_abort")));
  #endif
  

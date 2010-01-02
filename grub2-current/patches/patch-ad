@@ -1,6 +1,12 @@
-$NetBSD: patch-ad,v 1.3 2010/01/01 23:28:05 gregoire Exp $
+$NetBSD: patch-ad,v 1.4 2010/01/02 18:17:17 gregoire Exp $
 
---- conf/common.rmk.orig	2010-01-02 00:21:59.000000000 +0100
+Description: forces installation of all configuration scripts.  These are
+  installed in share/examples/grub2.  The appropriates ones (as in the
+  original behavior below) are copied into etc/grub2 with the pkgsrc
+  directive CONF_FILES.  See the main makefile of this pkgsrc package for
+  further details.
+
+--- conf/common.rmk.orig	2010-01-02 14:42:26.000000000 +0100
 +++ conf/common.rmk
 @@ -177,9 +177,9 @@ CLEANFILES += grub-gettext_lib
  	./config.status --file=$@:$<
@@ -15,12 +21,3 @@ $NetBSD: patch-ad,v 1.3 2010/01/01 23:28:05 gregoire Exp $
  
  CLEANFILES += $(grub-mkconfig_SCRIPTS)
  
-@@ -650,3 +650,8 @@ pkglib_MODULES += charset.mod
- charset_mod_SOURCES = lib/charset.c
- charset_mod_CFLAGS = $(COMMON_CFLAGS)
- charset_mod_LDFLAGS = $(COMMON_LDFLAGS)
-+
-+# Theses utilities use libutil (at least on NetBSD).
-+grub_setup_LDFLAGS += $(LIBUTIL)
-+grub_mkdevicemap_LDFLAGS += $(LIBUTIL)
-+grub_probe_LDFLAGS += $(LIBUTIL)

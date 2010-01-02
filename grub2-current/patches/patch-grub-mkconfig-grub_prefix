@@ -1,4 +1,6 @@
---- util/grub-mkconfig.in.orig	2010-01-02 02:18:47.000000000 +0100
+Description: sets $grub_prefix as in grub-install on NetBSD and OpenBSD.
+
+--- util/grub-mkconfig.in.orig	2010-01-02 14:42:38.000000000 +0100
 +++ util/grub-mkconfig.in
 @@ -24,10 +24,10 @@ sbindir=@sbindir@
  libdir=@libdir@

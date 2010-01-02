@@ -1,6 +1,9 @@
---- Makefile.in.orig	2010-01-02 00:40:15.000000000 +0100
+Description: defaults to /usr/include as path for compiler-specific headers
+  when gcc -print-file-name=include does not work.
+
+--- Makefile.in.orig	2010-01-02 14:42:01.000000000 +0100
 +++ Makefile.in
-@@ -89,7 +89,14 @@
+@@ -89,7 +89,14 @@ TARGET_ASFLAGS = @TARGET_ASFLAGS@
  TARGET_MODULE_FORMAT = @TARGET_MODULE_FORMAT@
  TARGET_APPLE_CC = @TARGET_APPLE_CC@
  OBJCONV = @OBJCONV@

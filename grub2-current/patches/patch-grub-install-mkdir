@@ -1,5 +1,9 @@
---- util/grub-install.in.orig	2010-01-02 02:27:06.000000000 +0100
-+++ util/grub-install.in	2010-01-02 02:27:26.000000000 +0100
+Description: on NetBSD and OpenBSD, $bootdir is empty by default.  Hence,
+  grub-install runs mkdir "", which fails.  This patch fixes this problem.
+  Moreover, the patch also permits a root directory of arbitrary depth.
+
+--- util/grub-install.in.orig	2010-01-02 14:42:38.000000000 +0100
++++ util/grub-install.in
 @@ -207,8 +207,7 @@ else
  fi
  
@@ -10,8 +14,8 @@
  
  # If --recheck is specified, remove the device map, if present.
  if test $recheck = yes; then
---- util/i386/efi/grub-install.in.orig	2010-01-02 02:27:58.000000000 +0100
-+++ util/i386/efi/grub-install.in	2010-01-02 02:28:10.000000000 +0100
+--- util/i386/efi/grub-install.in.orig	2010-01-02 14:42:38.000000000 +0100
++++ util/i386/efi/grub-install.in
 @@ -143,8 +143,7 @@ else
  fi
  
@@ -22,8 +26,8 @@
  
  # If --recheck is specified, remove the device map, if present.
  if test $recheck = yes; then
---- util/ieee1275/grub-install.in.orig	2010-01-02 02:27:37.000000000 +0100
-+++ util/ieee1275/grub-install.in	2010-01-02 02:27:50.000000000 +0100
+--- util/ieee1275/grub-install.in.orig	2010-01-02 14:42:38.000000000 +0100
++++ util/ieee1275/grub-install.in
 @@ -140,8 +140,7 @@ fi
  # XXX warn on firmware-unreadable filesystems?
  

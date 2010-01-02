@@ -1,4 +1,10 @@
---- acinclude.m4.orig	2010-01-02 00:55:26.000000000 +0100
+Description: checks whether the C compiler supports the error attribute
+  without warning, and disables -Werror if that is not the case as otherwise
+  the build will fail.
+Note: A better patch is available from the link below.
+See: http://lists.gnu.org/archive/html/grub-devel/2010-01/msg00036.html
+
+--- acinclude.m4.orig	2010-01-02 14:42:11.000000000 +0100
 +++ acinclude.m4
 @@ -458,3 +458,16 @@ else
    AC_MSG_RESULT([no])
@@ -17,8 +23,8 @@
 +rm -f conftest.s
 +AC_MSG_RESULT([${error_attribute_without_warning}])
 +])
---- configure.ac.orig	2010-01-02 00:55:22.000000000 +0100
-+++ configure.ac	2010-01-02 00:57:40.000000000 +0100
+--- configure.ac.orig	2010-01-02 14:42:26.000000000 +0100
++++ configure.ac
 @@ -408,10 +408,14 @@ if test x"$sap_possible" = xyes; then
    TARGET_CFLAGS="$TARGET_CFLAGS -mno-stack-arg-probe"
  fi

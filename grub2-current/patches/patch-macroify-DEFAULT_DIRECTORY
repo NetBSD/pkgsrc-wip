@@ -1,6 +1,8 @@
---- util/elf/grub-mkimage.c.orig	2009-12-30 14:00:31.000000000 +0100
+Description: use macro DEFAULT_DIRECTORY instead of /boot/grub.
+
+--- util/elf/grub-mkimage.c.orig	2010-01-02 14:42:38.000000000 +0100
 +++ util/elf/grub-mkimage.c
-@@ -390,7 +390,7 @@ main (int argc, char *argv[])
+@@ -389,7 +389,7 @@ main (int argc, char *argv[])
  
  	    if (prefix)
  	      free (prefix);
@@ -9,9 +11,9 @@
  
  	    break;
  	  case 'h':
---- util/i386/pc/grub-mkimage.c.orig	2009-12-30 14:00:31.000000000 +0100
+--- util/i386/pc/grub-mkimage.c.orig	2010-01-02 14:42:38.000000000 +0100
 +++ util/i386/pc/grub-mkimage.c
-@@ -387,7 +387,7 @@ main (int argc, char *argv[])
+@@ -386,7 +386,7 @@ main (int argc, char *argv[])
  	    if (prefix)
  	      free (prefix);
  
@@ -20,9 +22,9 @@
  	    break;
  
  	  case 'c':
---- util/sparc64/ieee1275/grub-mkimage.c.orig	2009-12-30 14:00:31.000000000 +0100
+--- util/sparc64/ieee1275/grub-mkimage.c.orig	2010-01-02 14:42:39.000000000 +0100
 +++ util/sparc64/ieee1275/grub-mkimage.c
-@@ -254,7 +254,7 @@ main (int argc, char *argv[])
+@@ -253,7 +253,7 @@ main (int argc, char *argv[])
  
  	    if (prefix)
  	      free (prefix);
