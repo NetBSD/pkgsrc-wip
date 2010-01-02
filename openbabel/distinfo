@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2009/08/02 17:57:30 fulviociriaco Exp $
+$NetBSD: distinfo,v 1.2 2010/01/02 20:16:04 jihbed Exp $
 
-SHA1 (openbabel-2.2.2.tar.gz) = eff94c92f1f0e7e834874e2964056f538fa1574a
-RMD160 (openbabel-2.2.2.tar.gz) = 95c5da693c0d34e85c0f97f23318251b89a47ddb
-Size (openbabel-2.2.2.tar.gz) = 6621343 bytes
+SHA1 (openbabel-2.2.3.tar.gz) = e396b27551a106e001ca6c953181657a0a53f43f
+RMD160 (openbabel-2.2.3.tar.gz) = 4234baf9773aa6f918bb3fa5a25cab5f657f857e
+Size (openbabel-2.2.3.tar.gz) = 6624028 bytes
