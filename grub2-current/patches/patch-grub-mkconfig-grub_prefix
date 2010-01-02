@@ -1,0 +1,33 @@
+--- grub-mkconfig.in.orig	2010-01-02 02:18:47.000000000 +0100
++++ grub-mkconfig.in	2010-01-02 02:43:30.000000000 +0100
+@@ -24,10 +24,10 @@ sbindir=@sbindir@
+ libdir=@libdir@
+ sysconfdir=@sysconfdir@
+ package_version=@PACKAGE_VERSION@
++host_os=@host_os@
+ datarootdir=@datarootdir@
+ datadir=@datadir@
+ pkgdatadir=${datadir}/`echo @PACKAGE_TARNAME@ | sed "${transform}"`
+-grub_prefix=`echo /boot/grub | sed ${transform}`
+ grub_cfg=""
+ grub_mkconfig_dir=${sysconfdir}/grub.d
+ 
+@@ -75,6 +75,18 @@ done
+ 
+ . ${libdir}/grub/grub-mkconfig_lib
+ 
++case "$host_os" in
++netbsd* | openbsd*)
++    # Because /boot is used for the boot block in NetBSD and OpenBSD, use /grub
++    # instead of /boot/grub.
++    grub_prefix=`echo /grub | sed ${transform}`
++    ;;
++*)
++    # Use /boot/grub by default.
++    grub_prefix=`echo /boot/grub | sed ${transform}`
++    ;;
++esac
++
+ if [ "x$EUID" = "x" ] ; then
+   EUID=`id -u`
+ fi
