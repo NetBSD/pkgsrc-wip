@@ -1,34 +1,38 @@
-# $NetBSD: Makefile,v 1.5 2009/03/09 16:20:45 emil_s Exp $
+# $NetBSD: Makefile,v 1.6 2010/01/03 00:18:19 jihbed Exp $
 #
 
-DISTNAME=		givaro-3.2.13
-CATEGORIES=		math
-MASTER_SITES=		http://ljk.imag.fr/CASYS/LOGICIELS/givaro/Downloads/
+DISTNAME=	givaro-3.3.2rc1
+CATEGORIES=	math
+MASTER_SITES=	http://ljk.imag.fr/CASYS/LOGICIELS/givaro/Downloads/
 
-MAINTAINER=		emil@math.su.se
-HOMEPAGE=		http://ljk.imag.fr/CASYS/LOGICIELS/givaro/
-COMMENT=		C++ library for arithmetic and algebraic computations
+MAINTAINER=	emil@math.su.se
+HOMEPAGE=	http://ljk.imag.fr/CASYS/LOGICIELS/givaro/
+COMMENT=	C++ library for arithmetic and algebraic computations
+#LICENSE=	# TODO: (see mk/license.mk)
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_PKGLOCALEDIR=	yes
-USE_LIBTOOL=		yes
-GNU_CONFIGURE=		yes
-USE_LANGUAGES=		c c++
+WRKSRC=		${WRKDIR}/givaro-3.3.2
+GNU_CONFIGURE=	yes
+USE_LIBTOOL=	yes
+USE_LANGUAGES=	c c++
 
-EGDIR=			${PREFIX}/share/examples/${PKGBASE}
+EGDIR=		${PREFIX}/share/examples/${PKGBASE}
 
 
 post-install:
-	${INSTALL_DATA_DIR} ${EGDIR}/FiniteField
-	cd ${WRKSRC}/examples/FiniteField && ${INSTALL_DATA} *.C ${EGDIR}/FiniteField
-	${INSTALL_DATA_DIR} ${EGDIR}/Integer
-	cd ${WRKSRC}/examples/Integer && ${INSTALL_DATA} *.C ${EGDIR}/Integer
-	${INSTALL_DATA_DIR} ${EGDIR}/Polynomial
-	cd ${WRKSRC}/examples/Polynomial && ${INSTALL_DATA} *.C ${EGDIR}/Polynomial
-	${INSTALL_DATA_DIR} ${EGDIR}/Rational
-	cd ${WRKSRC}/examples/Rational && ${INSTALL_DATA} *.C ${EGDIR}/Rational
-
+	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}/FiniteField
+	${INSTALL_DATA} ${WRKSRC}/examples/FiniteField/*.C \
+		${DESTDIR}${EGDIR}/FiniteField
+	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}/Integer
+	${INSTALL_DATA} ${WRKSRC}/examples/Integer/*.C  \
+		${DESTDIR}${EGDIR}/Integer
+	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}/Polynomial
+	${INSTALL_DATA} ${WRKSRC}/examples/Polynomial/*.C \
+		${DESTDIR}${EGDIR}/Polynomial
+	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}/Rational
+	${INSTALL_DATA} ${WRKSRC}/examples/Rational/*.C \
+		${DESTDIR}${EGDIR}/Rational
 
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

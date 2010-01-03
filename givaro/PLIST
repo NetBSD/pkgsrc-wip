@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/10/11 10:44:39 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.8 2010/01/03 00:18:19 jihbed Exp $
 bin/givaro-config
 bin/givaro-makefile
 include/givaro-config.h
@@ -20,12 +20,15 @@ include/givaro/givdegree.h
 include/givaro/givelem.h
 include/givaro/giverror.h
 include/givaro/givextension.h
+include/givaro/givfixedtrunc.h
+include/givaro/givfractiondomain.h
 include/givaro/givgenarith.h
 include/givaro/givgfq.h
 include/givaro/givgfq.inl
 include/givaro/givgfqext.h
 include/givaro/givhashtable.h
 include/givaro/givhashtable.inl
+include/givaro/givhighorder.h
 include/givaro/givindeter.h
 include/givaro/givinit.h
 include/givaro/givinteger.h
@@ -42,6 +45,8 @@ include/givaro/givintrns_convert.inl
 include/givaro/givintrns_cstor.inl
 include/givaro/givintrsa.h
 include/givaro/givintrsa.inl
+include/givaro/givintsqrootmod.h
+include/givaro/givintsqrootmod.inl
 include/givaro/giviterator.h
 include/givaro/givlist0.h
 include/givaro/givlist0.inl
@@ -62,6 +67,9 @@ include/givaro/givpointer.h
 include/givaro/givpoly1.h
 include/givaro/givpoly1addsub.inl
 include/givaro/givpoly1axpy.inl
+include/givaro/givpoly1crt.h
+include/givaro/givpoly1crtconvert.inl
+include/givaro/givpoly1crtcstor.inl
 include/givaro/givpoly1cstor.inl
 include/givaro/givpoly1cyclo.inl
 include/givaro/givpoly1dense.h
@@ -75,9 +83,11 @@ include/givaro/givpoly1misc.inl
 include/givaro/givpoly1muldiv.inl
 include/givaro/givpoly1padic.h
 include/givaro/givpoly1proot.inl
+include/givaro/givpoly1ratrecon.inl
 include/givaro/givpoly1sqrfree.inl
 include/givaro/givpower.h
 include/givaro/givprimes16.h
+include/givaro/givquotientdomain.h
 include/givaro/givrandom.h
 include/givaro/givrational.h
 include/givaro/givrational.inl
@@ -91,6 +101,8 @@ include/givaro/givstorage.h
 include/givaro/givstoragedense.h
 include/givaro/givtablelimits.h
 include/givaro/givtimer.h
+include/givaro/givtruncdomain.h
+include/givaro/givtruncdomain.inl
 include/givaro/givvectdenseops.inl
 include/givaro/givvectdensespe.inl
 include/givaro/givvector.h
@@ -152,6 +164,7 @@ share/examples/givaro/Integer/prevprime.C
 share/examples/givaro/Integer/primitiveelement.C
 share/examples/givaro/Integer/primitiveroot.C
 share/examples/givaro/Integer/probable_primroot.C
+share/examples/givaro/Polynomial/PolynomialCRT.C
 share/examples/givaro/Polynomial/interpolate.C
 share/examples/givaro/Polynomial/isirred.C
 share/examples/givaro/Polynomial/isprimitive.C
