@@ -1,20 +1,20 @@
-@comment $NetBSD: PLIST,v 1.6 2009/10/11 10:44:52 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.7 2010/01/03 16:25:56 pallegra Exp $
 include/drm/drm.h
+include/drm/drm_mode.h
 include/drm/drm_sarea.h
 include/drm/i915_drm.h
 include/drm/mach64_drm.h
 include/drm/mga_drm.h
 include/drm/nouveau_drm.h
 include/drm/r128_drm.h
-include/drm/r300_reg.h
 include/drm/radeon_drm.h
 include/drm/savage_drm.h
 include/drm/sis_drm.h
-include/drm/via_3d_reg.h
 include/drm/via_drm.h
-include/drm/xgi_drm.h
 include/intel_bufmgr.h
 include/xf86drm.h
+include/xf86drmMode.h
 lib/libdrm.la
 lib/libdrm_intel.la
 lib/pkgconfig/libdrm.pc
+lib/pkgconfig/libdrm_intel.pc
