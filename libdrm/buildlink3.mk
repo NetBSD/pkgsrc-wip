@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2010/01/03 16:25:56 pallegra Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2010/01/03 18:07:18 pallegra Exp $
 
 BUILDLINK_TREE+=	libdrm
 
@@ -14,7 +14,7 @@ BUILDLINK_API_DEPENDS.libdrm+=	libdrm>=2.4.16
 ###	[bjs 20080714]
 ###
 #BUILDLINK_API_DEPENDS.libdrm+=	libdrm>=2.3.1
-BUILDLINK_PKGSRCDIR.libdrm?=	../../x11/libdrm
+BUILDLINK_PKGSRCDIR.libdrm?=	../../wip/libdrm
 .endif # LIBDRM_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-libdrm
