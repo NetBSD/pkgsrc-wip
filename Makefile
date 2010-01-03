@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3751 2010/01/03 22:25:59 jihbed Exp $
+# $Id: Makefile,v 1.3752 2010/01/03 23:25:18 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1042,6 +1042,7 @@ SUBDIR+=	libdrm
 SUBDIR+=	libdshconfig
 SUBDIR+=	libdssialsacompat
 SUBDIR+=	libexosip
+SUBDIR+=	libfplll
 SUBDIR+=	libgadu
 SUBDIR+=	libgdata
 SUBDIR+=	libgeotiff
