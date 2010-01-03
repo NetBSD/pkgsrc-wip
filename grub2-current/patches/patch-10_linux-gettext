@@ -2,17 +2,56 @@ Description: fixes config file generation failure on Linux when grub is not
   installed in the same prefix as gettext.
 See: http://lists.gnu.org/archive/html/grub-devel/2009-12/msg00461.html
 
---- util/grub.d/10_linux.in.orig	2010-01-02 14:42:38.000000000 +0100
-+++ util/grub.d/10_linux.in
-@@ -22,7 +22,12 @@ bindir=@bindir@
+--- configure.ac.orig	2010-01-03 23:34:44.000000000 +0100
++++ configure.ac
+@@ -179,6 +179,7 @@ test "x$GCC" = xyes || AC_MSG_ERROR([GCC
+ 
+ AC_GNU_SOURCE
+ AM_GNU_GETTEXT([external])
++AC_PATH_PROG([GETTEXTBIN], [gettext], [echo])
+ AC_SYS_LARGEFILE
+ 
+ # Identify characteristics of the host architecture.
+--- util/grub.d/10_kfreebsd.in.orig	2010-01-02 14:42:38.000000000 +0100
++++ util/grub.d/10_kfreebsd.in
+@@ -20,9 +20,14 @@ prefix=@prefix@
+ exec_prefix=@exec_prefix@
+ bindir=@bindir@
  libdir=@libdir@
++gettext=@GETTEXTBIN@
  . ${libdir}/grub/grub-mkconfig_lib
  
 -. ${bindir}/gettext.sh
-+if $(which gettext >/dev/null 2>/dev/null) ; then
-+  gettext="gettext"
-+else
-+  gettext="echo"
++if [ "x${gettext}" != "xecho" ] && ! test -x "${gettext}" ; then
++  echo "10_kfreebsd: error: \`${gettext}' is missing." >&2
++  exit 1
++fi
++
+ export TEXTDOMAIN=@PACKAGE@
+ export TEXTDOMAINDIR=@localedir@
+ 
+@@ -37,7 +42,7 @@ kfreebsd_entry ()
+   version="$2"
+   recovery="$3"	# not used yet
+   args="$4"	# not used yet
+-  title="$(gettext "%s, with kFreeBSD %s")"
++  title="$(${gettext} "%s, with kFreeBSD %s")"
+   printf "menuentry \"${title}\" {\n" "${os}" "${version}"
+   if [ -z "${prepare_boot_cache}" ]; then
+     prepare_boot_cache="$(prepare_grub_to_access_device ${GRUB_DEVICE_BOOT} | sed -e "s/^/\t/")"
+--- util/grub.d/10_linux.in.orig	2010-01-02 14:42:38.000000000 +0100
++++ util/grub.d/10_linux.in
+@@ -20,9 +20,14 @@ prefix=@prefix@
+ exec_prefix=@exec_prefix@
+ bindir=@bindir@
+ libdir=@libdir@
++gettext=@GETTEXTBIN@
+ . ${libdir}/grub/grub-mkconfig_lib
+ 
+-. ${bindir}/gettext.sh
++if [ "x${gettext}" != "xecho" ] && ! test -x "${gettext}" ; then
++  echo "10_linux: error: \`${gettext}' is missing." >&2
++  exit 1
 +fi
 +
  export TEXTDOMAIN=@PACKAGE@
