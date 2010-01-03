@@ -1,0 +1,10 @@
+$NetBSD: patch-ab,v 1.1.1.1 2010/01/03 14:32:17 pallegra Exp $
+
+--- progs/xdemos/Makefile.orig	2009-12-22 02:26:02.000000000 +0000
++++ progs/xdemos/Makefile
+@@ -113,4 +113,5 @@ ipc.o: ipc.c ipc.h
+ 
+ yuvrect_client: yuvrect_client.c
+ 	$(APP_CC) -I$(INCDIR) $(X11_INCLUDES) $(CFLAGS) $< $(LDFLAGS) $(LIBS) -l$(GLU_LIB) -o $@
++	$(APP_CC) $(PTHREAD_CFLAGS) -I$(INCDIR) $(X11_INCLUDES) $(CFLAGS) $< $(LDFLAGS) $(LIBS) -l$(GLU_LIB) $(PTHREAD_LDFLAGS) $(PTHREAD_LIBS) -o $@
+ 
