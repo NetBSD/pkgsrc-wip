@@ -1,0 +1,1 @@
+PKG_OPTIONS.gl="-dri -asm"
