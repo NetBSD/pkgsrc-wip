@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.7 2010/01/03 15:08:44 pallegra Exp $
+include/GL/glut.h
+lib/libglut.la
+lib/pkgconfig/glut.pc
