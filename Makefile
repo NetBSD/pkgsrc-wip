@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3750 2010/01/03 16:08:29 pallegra Exp $
+# $Id: Makefile,v 1.3751 2010/01/03 22:25:59 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -157,6 +157,7 @@ SUBDIR+=	bmap
 SUBDIR+=	bmp-docklet
 SUBDIR+=	bnr2
 SUBDIR+=	boa
+SUBDIR+=	bodr
 SUBDIR+=	boinc
 SUBDIR+=	boinc-client
 SUBDIR+=	boinc-lib
@@ -474,6 +475,7 @@ SUBDIR+=	gallery
 SUBDIR+=	gallery2
 SUBDIR+=	gambas2
 SUBDIR+=	gambc
+SUBDIR+=	gappa
 SUBDIR+=	gauche-dbd-pg
 SUBDIR+=	gauche-fastcgi
 SUBDIR+=	gcc42
@@ -1325,6 +1327,7 @@ SUBDIR+=	nnrpd
 SUBDIR+=	noip
 SUBDIR+=	noiptun
 SUBDIR+=	nomadio
+SUBDIR+=	noor
 SUBDIR+=	nos-tun
 SUBDIR+=	notify-sharp
 SUBDIR+=	nullpop
@@ -1620,6 +1623,7 @@ SUBDIR+=	packman
 SUBDIR+=	paexec
 SUBDIR+=	pagetools
 SUBDIR+=	pal
+SUBDIR+=	palp
 SUBDIR+=	pam-pkcs11
 SUBDIR+=	pam-pop3
 SUBDIR+=	pam-pwdfile
@@ -1853,6 +1857,7 @@ SUBDIR+=	py-logilab-mtconverter
 SUBDIR+=	py-logilab-pigg
 SUBDIR+=	py-matplotlib
 SUBDIR+=	py-matplotlib-gtk2
+SUBDIR+=	py-mdp
 SUBDIR+=	py-mocker
 SUBDIR+=	py-mpmath
 SUBDIR+=	py-mysqldb-docs
@@ -1873,6 +1878,7 @@ SUBDIR+=	py-pcapy
 SUBDIR+=	py-plucker
 SUBDIR+=	py-pp
 SUBDIR+=	py-ptrace
+SUBDIR+=	py-processing
 SUBDIR+=	py-pygr
 SUBDIR+=	py-rcsparse
 SUBDIR+=	py-rdflib
