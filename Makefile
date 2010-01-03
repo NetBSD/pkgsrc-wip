@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3746 2010/01/03 14:40:12 pallegra Exp $
+# $Id: Makefile,v 1.3747 2010/01/03 14:45:17 pallegra Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -313,6 +313,7 @@ SUBDIR+=	dotconf
 SUBDIR+=	dotproject
 SUBDIR+=	dpic
 SUBDIR+=	dragbox
+SUBDIR+=	dri
 SUBDIR+=	drow
 SUBDIR+=	drpython
 SUBDIR+=	drumpiler
