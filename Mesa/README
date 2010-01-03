@@ -1,0 +1,24 @@
+These packages are copy-pasta of graphics/Mesa* files. The goal is to have
+a r600 dri driver...
+
+To use this new Mesa package, you can either :
+
+1) - copy wip/MesaLib/buildlink3.mk to graphics/MesaLib/buildlink3.mk
+   - make install wip/MesaLib and wip/Mesa
+
+2) - copy wip/gl/buildlink3.mk to graphics/MesaLib/buildlink3.mk
+   - add include wip/dri/buildlink3.mk into x11/modular-xorg-server/Makefile
+   - add include wip/glw/buildlink3.mk into packages that need it...
+(my favorite method)
+
+I chose modular packages (gl dri glw) over a MesaLib katamari, and used
+the configure script.
+
+It seems that binutils>=2.16 is needed for the x86-64 asm option.
+
+Tested on :
+ - NetBSD/amd64 current, options "dri asm" "dri" "", on a r700 radeon
+	swrast_dri : ok
+	r600_dri : libGL error: drmOpenOnce failed (Operation not permitted)
+ - NetBSD/i386 current, options "dri asm", on an intel i915
+	i915_dri : ok
