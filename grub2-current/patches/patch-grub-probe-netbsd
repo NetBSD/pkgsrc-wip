@@ -63,7 +63,7 @@ Change log
 +# ifndef RAW_FLOPPY_MAJOR
 +#  define RAW_FLOPPY_MAJOR	9
 +# endif /* ! RAW_FLOPPY_MAJOR */
-+#endif
++#endif /* defined(__NetBSD__) */
 +
  struct
  {
@@ -132,7 +132,7 @@ Change log
  
    ret = xasprintf ("%s%s%s", map[drive].drive,
                     dos_part_str ? : "",
-@@ -853,6 +875,28 @@ convert_system_partition_to_system_disk 
+@@ -853,6 +875,27 @@ convert_system_partition_to_system_disk 
      }
    return path;
  
@@ -147,13 +147,12 @@ Change log
 +      q = path + strlen(path) - 1;    /* last character */
 +      if (grub_isalpha(*q) && grub_isdigit(*(q-1)))
 +        {
-+          int rawpart;
++          int rawpart = -1;
 +# ifdef HAVE_GETRAWPARTITION
 +          rawpart = getrawpartition();
-+          if (rawpart < 0)
 +# endif /* HAVE_GETRAWPARTITION */
-+            rawpart = 3;    /* default on i386 */
-+          *q = 'a' + rawpart;
++          if (rawpart >= 0)
++            *q = 'a' + rawpart;
 +        }
 +    }
 +  return path;
@@ -161,7 +160,34 @@ Change log
  #else
  # warning "The function `convert_system_partition_to_system_disk' might not work on your OS correctly."
    return xstrdup (os_dev);
-@@ -923,7 +967,7 @@ grub_util_biosdisk_get_grub_dev (const c
+@@ -871,6 +914,26 @@ device_is_wholedisk (const char *os_dev)
+ }
+ #endif
+ 
++#if defined(__NetBSD__)
++/* Try to determine whether a given device name corresponds to a whole disk.
++   This function should give in most cases a definite answer, but it may
++   actually give an approximate one in the following sense: if the return
++   value is 0 then the device name does not correspond to a whole disk.  */
++static int
++device_is_wholedisk (const char *os_dev)
++{
++  int len = strlen (os_dev);
++  int rawpart = -1;
++
++# ifdef HAVE_GETRAWPARTITION
++  rawpart = getrawpartition();
++# endif /* HAVE_GETRAWPARTITION */
++  if (rawpart < 0)
++    return 1;
++  return (os_dev[len - 1] == ('a' + rawpart));
++}
++#endif
++
+ static int
+ find_system_device (const char *os_dev)
+ {
+@@ -923,14 +986,14 @@ grub_util_biosdisk_get_grub_dev (const c
        == 0)
      return make_device_name (drive, -1, -1);
  
@@ -170,140 +196,109 @@ Change log
    if (! S_ISCHR (st.st_mode))
  #else
    if (! S_ISBLK (st.st_mode))
-@@ -1107,6 +1151,133 @@ grub_util_biosdisk_get_grub_dev (const c
-     return make_device_name (drive, dos_part, bsd_part);
-   }
+ #endif
+     return make_device_name (drive, -1, -1);
  
-+#elif defined(__NetBSD__)
-+  /* NetBSD uses "/dev/r[wsc]d[0-9]+[a-z]".  */
-+  /* Adaptation of the Linux code above.
-+     Here, get the start sector of a partition from the disklabel, and
-+     compare it with each partition GRUB recognizes.  */
-+  {
-+    char *name;
-+    grub_disk_t disk;
-+    int fd;
+-#if defined(__linux__) || defined(__CYGWIN__)
++#if defined(__linux__) || defined(__CYGWIN__) || defined(__NetBSD__)
+   /* Linux counts partitions uniformly, whether a BSD partition or a DOS
+      partition, so mapping them to GRUB devices is not trivial.
+      Here, get the start sector of a partition by HDIO_GETGEO, and
+@@ -938,12 +1001,24 @@ grub_util_biosdisk_get_grub_dev (const c
+ 
+      Cygwin /dev/sdXN emulation uses Windows partition mapping. It
+      does not count the extended partition and missing primary
+-     partitions.  Use same method as on Linux here.  */
++     partitions.  Use same method as on Linux here.
++
++     For NetBSD, proceed as for Linux, except that the start sector is
++     obtained from the disk label.  */
+   {
+     char *name;
+     grub_disk_t disk;
+     int fd;
++# if !defined(__NetBSD__)
++    const char *disk_info_msg = "geometry";
+     struct hd_geometry hdg;
++    unsigned long p_offset;
++# else /* defined(__NetBSD__) */
++    const char *disk_info_msg = "label";
 +    struct disklabel label;
 +    int index;
 +    u_int32_t p_offset;
-+    int dos_part = -1;
-+    int bsd_part = -1;
-+    auto int find_partition (grub_disk_t disk,
-+			     const grub_partition_t partition);
-+
-+    int find_partition (grub_disk_t disk __attribute__ ((unused)),
-+			const grub_partition_t partition)
-+      {
-+ 	struct grub_msdos_partition *pcdata = NULL;
-+
-+	if (strcmp (partition->partmap->name, "part_msdos") == 0)
-+	  pcdata = partition->data;
-+
-+	if (pcdata)
-+	  {
-+	    if (pcdata->bsd_part < 0)
-+	      grub_util_info ("DOS partition %d starts from %lu",
-+			      pcdata->dos_part, partition->start);
-+	    else
-+	      grub_util_info ("BSD partition %d,%c starts from %lu",
-+			      pcdata->dos_part, pcdata->bsd_part + 'a',
-+			      partition->start);
-+	  }
-+	else
-+	  {
-+	      grub_util_info ("Partition %d starts from %lu",
-+			      partition->index, partition->start);
-+	  }
-+
++# endif /* !defined(__NetBSD__) */
+     int dos_part = -1;
+     int bsd_part = -1;
+     auto int find_partition (grub_disk_t disk,
+@@ -973,7 +1048,7 @@ grub_util_biosdisk_get_grub_dev (const c
+ 			      partition->index, partition->start);
+ 	  }
+ 
+-	if (hdg.start == partition->start)
 +	if (p_offset == partition->start)
-+	  {
-+	    if (pcdata)
-+	      {
-+		dos_part = pcdata->dos_part;
-+		bsd_part = pcdata->bsd_part;
-+	      }
-+	    else
-+	      {
-+		dos_part = partition->index;
-+		bsd_part = -1;
-+	      }
-+	    return 1;
-+	  }
-+
-+	return 0;
-+      }
-+
-+    name = make_device_name (drive, -1, -1);
-+
-+    /*
-+     * Since os_dev and convert_system_partition_to_system_disk (os_dev) are
-+     * different, we know that os_dev is of the form /dev/[wsc]d[0-9]+[a-z].
-+     */
-+
+ 	  {
+ 	    if (pcdata)
+ 	      {
+@@ -993,21 +1068,32 @@ grub_util_biosdisk_get_grub_dev (const c
+ 
+     name = make_device_name (drive, -1, -1);
+ 
++# if !defined(__NetBSD__)
+     if (MAJOR (st.st_rdev) == FLOPPY_MAJOR)
+       return name;
++# else /* defined(__NetBSD__) */
++    /* Since os_dev and convert_system_partition_to_system_disk (os_dev) are
++     * different, we know that os_dev is of the form /dev/r[wsc]d[0-9]+[a-z]
++     * and in particular it cannot be a floppy device.  */
 +    index = os_dev[strlen(os_dev) - 1] - 'a';
-+
-+    fd = open (os_dev, O_RDONLY);
-+    if (fd == -1)
-+      {
-+	grub_error (GRUB_ERR_BAD_DEVICE, "cannot open `%s' while attempting to get disk label", os_dev);
-+	free (name);
-+	return 0;
-+      }
-+
++# endif /* !defined(__NetBSD__) */
+ 
+     fd = open (os_dev, O_RDONLY);
+     if (fd == -1)
+       {
+-	grub_error (GRUB_ERR_BAD_DEVICE, "cannot open `%s' while attempting to get disk geometry", os_dev);
++	grub_error (GRUB_ERR_BAD_DEVICE, "cannot open `%s' while attempting to get disk %s", os_dev, disk_info_msg);
+ 	free (name);
+ 	return 0;
+       }
+ 
++# if !defined(__NetBSD__)
+     if (ioctl (fd, HDIO_GETGEO, &hdg))
++# else /* defined(__NetBSD__) */
 +    if (ioctl (fd, DIOCGDINFO, &label))
-+      {
-+	grub_error (GRUB_ERR_BAD_DEVICE,
-+		    "cannot get disk label of `%s'", os_dev);
-+	close (fd);
-+	free (name);
-+	return 0;
-+      }
-+
-+    close (fd);
-+
++# endif /* !defined(__NetBSD__) */
+       {
+ 	grub_error (GRUB_ERR_BAD_DEVICE,
+-		    "cannot get geometry of `%s'", os_dev);
++		    "cannot get disk %s of `%s'", disk_info_msg, os_dev);
+ 	close (fd);
+ 	free (name);
+ 	return 0;
+@@ -1015,9 +1101,22 @@ grub_util_biosdisk_get_grub_dev (const c
+ 
+     close (fd);
+ 
+-    grub_util_info ("%s starts from %lu", os_dev, hdg.start);
++# if !defined(__NetBSD__)
++    p_offset = hdg.start;
++# else /* defined(__NetBSD__) */
 +    if (index >= label.d_npartitions)
 +      {
 +	grub_error (GRUB_ERR_BAD_DEVICE,
 +		    "no disk label entry for `%s'", os_dev);
-+	close (fd);
 +	free (name);
 +	return 0;
 +      }
-+
 +    p_offset = label.d_partitions[index].p_offset;
++# endif /* !defined(__NetBSD__) */
++
 +    grub_util_info ("%s starts from %lu", os_dev, p_offset);
-+
-+    if (p_offset == 0)
-+      return name;    /* use whole disk */
-+
-+    grub_util_info ("opening the device %s", name);
-+    disk = grub_disk_open (name);
-+    free (name);
-+
-+    if (! disk)
-+      return 0;
-+
-+    grub_partition_iterate (disk, find_partition);
-+    if (grub_errno != GRUB_ERR_NONE)
-+      {
-+	grub_disk_close (disk);
-+	return 0;
-+      }
-+
-+    if (dos_part < 0)
-+      {
-+	grub_disk_close (disk);
-+	grub_error (GRUB_ERR_BAD_DEVICE,
-+		    "cannot find the partition of `%s'", os_dev);
-+	return 0;
-+      }
-+
-+    return make_device_name (drive, dos_part, bsd_part);
-+  }
-+
- #else
- # warning "The function `grub_util_biosdisk_get_grub_dev' might not work on your OS correctly."
-   return make_device_name (drive, -1, -1);
+ 
+-    if (hdg.start == 0 && device_is_wholedisk (os_dev))
++    if (p_offset == 0 && device_is_wholedisk (os_dev))
+       return name;
+ 
+     grub_util_info ("opening the device %s", name);
 --- configure.ac.orig	2010-01-02 14:42:26.000000000 +0100
 +++ configure.ac
 @@ -208,6 +208,20 @@ AC_CHECK_FUNCS(memmove sbrk strdup lstat
