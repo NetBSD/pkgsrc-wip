@@ -1,0 +1,6 @@
+Gappa is a tool intended to help verifying and formally proving properties
+on numerical programs dealing with floating-point or fixed-point arithmetic.
+It has been used to write robust floating-point filters for CGAL and it is
+used to certify elementary functions in CRlibm. While Gappa is intended to
+be used directly, it can also act as a backend prover for the Why software
+verification plateform or as an automatic tactic for the Coq proof assistant
