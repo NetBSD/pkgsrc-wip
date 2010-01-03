@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2009/11/11 18:19:14 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.14 2010/01/03 14:36:18 cheusov Exp $
 bin/runawk
 man/man1/runawk.1
 share/doc/runawk/ChangeLog
@@ -15,6 +15,8 @@ share/examples/runawk/demo_has_suffix
 share/examples/runawk/demo_has_suffix.in
 share/examples/runawk/demo_heapsort
 share/examples/runawk/demo_heapsort2
+share/examples/runawk/demo_heapsort3
+share/examples/runawk/demo_heapsort3.in
 share/examples/runawk/demo_heapsort.in
 share/examples/runawk/demo_modinfo
 share/examples/runawk/demo_multisub
@@ -22,6 +24,7 @@ share/examples/runawk/demo_power_getopt
 share/examples/runawk/demo_power_getopt2
 share/examples/runawk/demo_quicksort
 share/examples/runawk/demo_quicksort2
+share/examples/runawk/demo_quicksort3
 share/examples/runawk/demo_readfile
 share/examples/runawk/demo_readfile.in
 share/examples/runawk/demo_runcmd
