@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2009/12/29 23:01:17 lexort Exp $
+# $NetBSD: Makefile,v 1.9 2010/01/04 10:23:49 moubctez Exp $
 
 DISTNAME=	postgis-1.4.1
 PKGNAME=	postgresql${PGSQL_VERSION}-${DISTNAME}
@@ -45,6 +45,7 @@ SUBST_STAGE.paths=	pre-configure
 INSTALLATION_DIRS=	${DOCDIR} ${DOCDIR}/images ${PKGMANDIR}/man1
 
 post-install:
+	${LIBTOOL} --mode=install ${INSTALL_LIB} ${WRKSRC}/liblwgeom/liblwgeom.la ${DESTDIR}${PREFIX}/lib
 	${INSTALL_DATA} ${BUILD_DIRS:Q}/README.postgis ${DESTDIR}${DOCDIR}
 	${INSTALL_DATA} ${BUILD_DIRS:Q}/doc/html/postgis.html ${DESTDIR}${DOCDIR}
 	${INSTALL_DATA} ${BUILD_DIRS:Q}/doc/html/style.css ${DESTDIR}${DOCDIR}

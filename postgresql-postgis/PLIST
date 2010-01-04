@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.4 2009/12/29 09:50:12 moubctez Exp $
+@comment $NetBSD: PLIST,v 1.5 2010/01/04 10:23:49 moubctez Exp $
 bin/pgsql2shp
 bin/shp2pgsql
+lib/liblwgeom.la
 lib/libpostgis-1.4.la
 man/man1/pgsql2shp.1
 man/man1/shp2pgsql.1
