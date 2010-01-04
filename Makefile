@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3752 2010/01/03 23:25:18 jihbed Exp $
+# $Id: Makefile,v 1.3753 2010/01/04 14:02:12 pallegra Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -848,6 +848,7 @@ SUBDIR+=	hyena
 SUBDIR+=	hylafax
 SUBDIR+=	hylafax-devel
 SUBDIR+=	i3
+SUBDIR+=	i3lock
 SUBDIR+=	iText
 SUBDIR+=	iTextXML
 SUBDIR+=	ibus
