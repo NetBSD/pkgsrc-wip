@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/01/04 13:53:51 pallegra Exp $
+bin/i3lock
+man/man1/i3lock.1
