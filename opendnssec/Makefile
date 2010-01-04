@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2009/12/19 21:44:23 pettai Exp $
+# $NetBSD: Makefile,v 1.19 2010/01/04 12:46:48 pettai Exp $
 #
 
 DISTNAME=	opendnssec-${VERSION}
@@ -39,6 +39,7 @@ USE_LIBTOOL=	yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
+CONFIGURE_ENV+=		RUBY=${RUBY}
 
 #WRKSRC=		${WRKDIR}/OpenDNSSEC
 EGDIR=			${PREFIX}/share/examples/opendnssec
