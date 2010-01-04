@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.22 2010/01/03 22:44:59 gregoire Exp $
+$NetBSD: distinfo,v 1.23 2010/01/04 00:31:27 gregoire Exp $
 
 SHA1 (patch-10_linux-gettext) = 2e6ee8aeaeac9684fe3eaf56f9e0b074250373f7
 SHA1 (patch-__enable_execute_stack) = 7610d645669b4af497198a9f926017cbc69e5c27
@@ -7,7 +7,7 @@ SHA1 (patch-ad) = fada9edbd11d8c2c2978e377c3caf2278acdbd4d
 SHA1 (patch-configure-LDFLAGS_AC) = d15faa78aa5377d767b382877b96527cb008d296
 SHA1 (patch-grub-install-mkdir) = 459dd20991d92f4bbb365abda94f3aee71feff0b
 SHA1 (patch-grub-mkconfig-grub_prefix) = 24b381eadddc0abe9212e6d557e6400a6ce93f07
-SHA1 (patch-grub-probe-netbsd) = 19f53ed17aebc463dd9e7162258cc51e450c4241
+SHA1 (patch-grub-probe-netbsd) = f0706e7027395cc601d03ea646d9fa06c124a720
 SHA1 (patch-macroify-DEFAULT_DIRECTORY) = de4e275bc8ead17525863d6b0311064728aa38f3
 SHA1 (patch-makefile-gcc-headers) = 9aeaa46efd9ed523ed78ad86a42e643864e0ae9e
 SHA1 (patch-misc-realpath) = 2b0aabaf0fae93effb8006f40dc32651bbaead7c
