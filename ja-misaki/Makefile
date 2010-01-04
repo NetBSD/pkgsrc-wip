@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/01/02 04:36:54 ryo-on Exp $
+# $NetBSD: Makefile,v 1.2 2010/01/04 22:00:08 ryo-on Exp $
 
 DISTNAME=		mskbdb11
-PKGNAME=		${DISTNAME:S/mskbd/ja-misaki-/}
+PKGNAME=		${DISTNAME:S/mskbd/misaki-fonts-/}
 CATEGORIES=		fonts x11 japanese
 MASTER_SITES=		http://www.geocities.jp/littlimi/arc/misaki/
 
