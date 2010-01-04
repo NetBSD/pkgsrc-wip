@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/01/03 22:19:12 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2010/01/04 23:56:59 jihbed Exp $
 #
 
 DISTNAME=	MDP-2.5
 PKGNAME=	${PYPKGPREFIX}-mdp-2.5
-CATEGORIES=	parallel python
+CATEGORIES=	math python
 MASTER_SITES=	http://garr.dl.sourceforge.net/project/mdp-toolkit/mdp-toolkit/2.5/
 
 MAINTAINER=	jihbed.research@gmail.com
