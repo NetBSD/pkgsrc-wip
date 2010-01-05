@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/01/05 21:09:11 ryo-on Exp $
+# $NetBSD: Makefile,v 1.2 2010/01/05 21:28:19 ryo-on Exp $
 
 DISTNAME=		mskbdb11
 PKGNAME=		${DISTNAME:S/mskbd/misaki-fonts-/}
@@ -17,7 +17,7 @@ USE_X11BASE=		YES
 NO_CONFIGURE=		YES
 USE_TOOLS+=		bdftopcf gzip
 
-DOCSDIR=			${PREFIX}/share/doc/${PKGBASE}
+DOCSDIR=		${PREFIX}/share/doc/${PKGBASE}
 FONTDIR=		${PREFIX}/lib/X11/fonts/local
 FONTS_DIRS.x11=		${FONTDIR}
 
