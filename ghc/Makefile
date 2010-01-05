@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2009/12/25 05:49:51 phonohawk Exp $
+# $NetBSD: Makefile,v 1.15 2010/01/05 08:17:50 phonohawk Exp $
 
 DISTNAME=		ghc-${VERSION}
 VERSION=		6.12.1
@@ -45,7 +45,11 @@ CONFIGURE_ENV+=		PerlCmd=${PERL5:Q}
 # We don't want to extract all of the DISTFILEs.
 EXTRACT_ONLY=	${DISTNAME}-src.tar.bz2
 
+PLATFORM= ${LOWER_ARCH}-unknown-${LOWER_OPSYS}
 CONFIGURE_ARGS += \
+	--build=${PLATFORM} \
+	--host=${PLATFORM} \
+	--target=${PLATFORM} \
 	--prefix=${PREFIX} \
 	--mandir=${PREFIX}/${PKGMANDIR} \
 	--with-gmp-includes=${PREFIX}/include \
@@ -86,14 +90,14 @@ pre-configure:
 		cd bootstrap/${DISTNAME} && \
 		${LN} -sf ${PWD_CMD} utils/ghc-pwd/ghc-pwd && \
 		${ECHO} "====> Configuring for bootstrap compiler" && \
-		${ENV} ${CONFIGURE_ENV} ./configure --enable-hc-boot ${CONFIGURE_ARGS} && \
+		${SETENV} ${CONFIGURE_ENV} ./configure --enable-hc-boot ${CONFIGURE_ARGS} && \
 		${ECHO} "====> Extracting bootstrap HC archive" && \
 		(cd .. && bsdtar jxfm ${DISTDIR}/${BOOTSTRAP_TARBALL}) && \
 		${SH} mkfiles && \
 		${ECHO} "====> Building bootstrap compiler" && \
 		${SED} -e "s#\\[\\[PREFIX\\]\\]#${PREFIX}#g" ${BOOTSTRAP_BUILD_MK} > mk/build.mk && \
 		for c in libraries/*/configure; do \
-			(cd `${DIRNAME} $$c` && ${ENV} ${CONFIGURE_ENV} ${SH} configure ${CONFIGURE_ARGS}); \
+			(cd `${DIRNAME} $$c` && ${SETENV} ${CONFIGURE_ENV} ${SH} configure ${CONFIGURE_ARGS}); \
 		done && \
 		for i in inplace/lib/package.conf.d/*.conf */*/package-data.mk */*/*/package-data.mk; do \
 			${SED} -e "s#\\[\\[GHC_SOURCE_PATH\\]\\]#`${PWD_CMD}`#g" $$i > $$i.tmp; \
@@ -113,7 +117,7 @@ pre-configure:
 # link programs by executing ld(1) without passing it -L${PREFIX}/lib.
 do-configure:
 	${RUN} cd ${WRKSRC} && \
-		${ENV} ${CONFIGURE_ENV} ./configure ${CONFIGURE_ARGS}
+		${SETENV} ${CONFIGURE_ENV} ./configure ${CONFIGURE_ARGS}
 	${RUN} ${ECHO} "libraries/integer-gmp_CONFIGURE_OPTS += \
 		--configure-option=--with-gmp-includes=${PREFIX}/include \
 		--configure-option=--with-gmp-libraries=${PREFIX}/lib" > ${WRKSRC}/mk/build.mk
