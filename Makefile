@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3754 2010/01/05 10:07:33 jihbed Exp $
+# $Id: Makefile,v 1.3755 2010/01/05 21:11:47 ryo-on Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -915,7 +915,6 @@ SUBDIR+=	ironpython
 SUBDIR+=	ispell-dictionaries
 SUBDIR+=	ispell-lietuviu
 SUBDIR+=	itask-ng
-SUBDIR+=	ja-misaki
 #SUBDIR+=	jabberd			# not a real package
 SUBDIR+=	jabberd-aim
 SUBDIR+=	jabberd2
@@ -1208,6 +1207,7 @@ SUBDIR+=	minisat2
 SUBDIR+=	miniupnpc
 SUBDIR+=	miracl
 SUBDIR+=	mirage
+SUBDIR+=	misaki-fonts
 SUBDIR+=	mixer.tk
 SUBDIR+=	mixmaster
 SUBDIR+=	mixxx
