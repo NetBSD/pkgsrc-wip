@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2009/11/27 21:24:00 mwdavies Exp $
+# $NetBSD: Makefile,v 1.12 2010/01/05 19:48:49 mwdavies Exp $
 #
 
 DISTNAME=		k3b-1.69.0alpha4
@@ -29,6 +29,12 @@ CONF_FILES=		${PREFIX}/share/examples/k3b/org.k3b.setup.conf \
 			${PKG_SYSCONFBASE}/dbus-1/system.d/org.k3b.setup.conf
 
 ONLY_FOR_PLATFORM=	FreeBSD-*-* Linux-*-* NetBSD-*-* DragonFly-*-*
+
+SUBST_CLASSES+=		pathfix
+SUBST_STAGE.pathfix=	post-patch
+SUBST_MESSAGE.pathfix=	Add cdrtools path.
+SUBST_FILES.pathfix=	libk3b/core/k3bexternalbinmanager.cpp
+SUBST_SED.pathfix=	-e 's:"/usr/bin/":"${LOCALBASE}/bin", "/usr/bin/":g'
 
 .include "../../mk/dlopen.buildlink3.mk"
 BUILDLINK_TRANSFORM+=   opt:-ldl:${BUILDLINK_LDADD.dl:M*}
