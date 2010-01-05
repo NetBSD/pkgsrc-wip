@@ -1,0 +1,4 @@
+PyMetrics produces metrics for Python programs. Metrics include McCabe's
+Cyclomatic Complexity metric, LoC, %Comments, etc.
+Users can also define their own metrics using data from PyMetrics.
+ PyMetrics optionally outputs stdout, SQL command files and CSV
