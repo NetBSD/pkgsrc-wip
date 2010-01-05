@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2010/01/02 00:21:20 gregoire Exp $
+# $NetBSD: Makefile,v 1.10 2010/01/05 23:45:40 gregoire Exp $
 #
 
 DISTNAME=		grub-bazaar-snapshot
@@ -50,6 +50,7 @@ EGFILES+=		10_linux
 CONF_FILES_PERMS+=	${EGDIR}/${file} ${PKG_SYSCONFDIR}/${file} ${ROOT_USER} ${ROOT_GROUP} 0755
 .endfor
 CONF_FILES+=		${EGDIR}/README ${PKG_SYSCONFDIR}/README
+CONF_FILES+=		${EGDIR}/default.conf.sample ${PKG_SYSCONFDIR}/default.conf
 
 TODAY!=			${DATE} -u +'%Y%m%d'
 
@@ -113,6 +114,9 @@ USE_TOOLS+=		gsed
 .if ${OPSYS} == "NetBSD"
 TOOLS_PLATFORM.gsed=	# empty   (to trick pkgsrc into the real gsed)
 .endif
+
+post-install:
+	${INSTALL_DATA} ${FILESDIR}/default.conf ${EGDIR}/default.conf.sample
 
 .include "options.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
