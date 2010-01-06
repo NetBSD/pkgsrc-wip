@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2010/01/06 00:11:20 gregoire Exp $
+@comment $NetBSD: PLIST,v 1.4 2010/01/06 14:22:35 gregoire Exp $
 bin/grub2-editenv
 bin/grub2-fstest
 bin/grub2-mkelfimage
@@ -173,6 +173,7 @@ sbin/grub2-mkdevicemap
 sbin/grub2-probe
 sbin/grub2-setup
 share/examples/grub2/00_header
+share/examples/grub2/05_pkgsrc_theme
 share/examples/grub2/10_hurd
 share/examples/grub2/10_kfreebsd
 share/examples/grub2/10_linux
