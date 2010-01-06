@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/10/12 23:53:40 christtrekker Exp $
+# $NetBSD: Makefile,v 1.2 2010/01/06 04:50:41 christtrekker Exp $
 #
 
 DISTNAME=	etoile-0.4.1
@@ -16,7 +16,9 @@ USE_LANGUAGES=	objc
 USE_TOOLS+=	gmake
 
 MAKE_FILE=	GNUmakefile
-MAKE_ENV=	GNUSTEP_MAKEFILES=${LOCALBASE}/share/GNUstep/Makefiles
+#MAKE_ENV=	GNUSTEP_MAKEFILES=${LOCALBASE}/share/GNUstep/Makefiles
+
+.include "../../devel/gnustep-make/gnustep.mk"
 
 DEPENDS+=	etoile-core>=2.0.0:../../wip/etoile-core
 
