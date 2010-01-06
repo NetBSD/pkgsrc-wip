@@ -1,0 +1,15 @@
+With python-2.6, doesn't start:
+Traceback (most recent call last):
+  File "/usr/pkg/bin/obmenu", line 582, in <module>
+    app.init()
+  File "/usr/pkg/bin/obmenu", line 575, in init
+    self.createTree(None, None)
+  File "/usr/pkg/bin/obmenu", line 41, in createTree
+    if self.menu.getMenu(it["id"]) and it["action"] == "":
+  File "/usr/pkg/lib/python2.6/site-packages/obxml.py", line 340, in getMenu
+    d = self._get_item_props(i)
+  File "/usr/pkg/lib/python2.6/site-packages/obxml.py", line 117, in _get_item_props
+    accion = it.attributes["name"].nodeValue
+  File "/usr/pkg/lib/python2.6/site-packages/_xmlplus/dom/minidom.py", line 532, in __getitem__
+    return self._attrs[attname_or_tuple]
+KeyError: 'name'
