@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/11/18 17:00:03 christtrekker Exp $
+$NetBSD: distinfo,v 1.2 2010/01/06 04:49:09 christtrekker Exp $
 
 SHA1 (Cairo_TTF.zip) = e32572e41de5b303720575887db38f0e04bcf6e9
 RMD160 (Cairo_TTF.zip) = 8cc1223af3b665e9311dc4907b49f65eb6417515
@@ -9,9 +9,9 @@ Size (CityOfAngelsTTF.zip) = 16226 bytes
 SHA1 (Geneva_TTF.zip) = ecd6a208f4884d4fd36bfc9ad4b32c85812c8fc1
 RMD160 (Geneva_TTF.zip) = 50a30c3561999bde6d493080dee3665f9d531da8
 Size (Geneva_TTF.zip) = 37887 bytes
-SHA1 (LondonTTF.sit) = cd4a929f0c4a7b1e0e2b82f5da6273ad207656d6
-RMD160 (LondonTTF.sit) = c39f134d5e817581f44655d223d1b1ebaa645434
-Size (LondonTTF.sit) = 71544 bytes
+SHA1 (LondonTTF.sit) = 26ea730c91f954b286ed1aa2d17d111e378dc52b
+RMD160 (LondonTTF.sit) = b52b50082d14be3c7c6dbb05bd0b3baeec17f131
+Size (LondonTTF.sit) = 40464 bytes
 SHA1 (MONACO.TTF) = 80f9fe49c1962f27c887607e080d3bd8af22bf68
 RMD160 (MONACO.TTF) = c248a4121556bf9dd0ad1115d33c26e98b804e60
 Size (MONACO.TTF) = 65704 bytes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/11/18 17:00:03 christtrekker Exp $
+# $NetBSD: Makefile,v 1.2 2010/01/06 04:49:09 christtrekker Exp $
 #
 
 DISTNAME=	classic-mac-font-pack-0.1
@@ -11,7 +11,8 @@ CATEGORIES=	fonts
 # are available gratis.
 
 DISTFILES+=	alexandria.zip
-SITES.alexandria.zip=	http://www.1001freefonts.com/winfonts/
+SITES.alexandria.zip=	http://www.acidfonts.com/fonts/
+# defunct	http://www.1001freefonts.com/winfonts/
 DISTFILES+=	Cairo_TTF.zip
 SITES.Cairo_TTF.zip=	http://www.masterstech-home.com/The_Library/Font_Samples/Font_Sample_Files/PC/C/
 # File is invalid?
