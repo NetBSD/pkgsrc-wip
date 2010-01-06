@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2010/01/05 23:45:40 gregoire Exp $
+# $NetBSD: Makefile,v 1.11 2010/01/06 00:11:20 gregoire Exp $
 #
 
 DISTNAME=		grub-bazaar-snapshot
@@ -45,6 +45,8 @@ EGFILES=		00_header 30_os-prober 40_custom
 EGFILES+=		10_kfreebsd
 .elif ${OPSYS} == "Linux"
 EGFILES+=		10_linux
+.elif ${OPSYS} == "NetBSD"
+EGFILES+=		10_netbsd
 .endif
 .for file in ${EGFILES}
 CONF_FILES_PERMS+=	${EGDIR}/${file} ${PKG_SYSCONFDIR}/${file} ${ROOT_USER} ${ROOT_GROUP} 0755
@@ -94,7 +96,7 @@ SUBST_SED.fix-paths-1+=		-e 's,\$$(libdir)/grub,\$$(libdir)/grub2,g'
 SUBST_STAGE.fix-paths-2=	pre-configure
 SUBST_MESSAGE.fix-paths-2=	Fixing configuration and library paths in scripts.
 SUBST_FILES.fix-paths-2=	util/grub-mkconfig.in util/update-grub_lib.in
-SUBST_FILES.fix-paths-2+=	util/grub.d/[0-3]*
+SUBST_FILES.fix-paths-2+=	util/grub.d/[0-3]*.in
 SUBST_FILES.fix-paths-2+=	util/grub-install.in
 SUBST_SED.fix-paths-2=		-e 's,\$${sysconfdir}/grub.d,\$${sysconfdir},g'
 SUBST_SED.fix-paths-2+=		-e 's,\$${sysconfdir}/default/grub,\$${sysconfdir}/default.conf,g'

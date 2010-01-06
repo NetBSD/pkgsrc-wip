@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2009/12/28 13:29:26 gregoire Exp $
+@comment $NetBSD: PLIST,v 1.3 2010/01/06 00:11:20 gregoire Exp $
 bin/grub2-editenv
 bin/grub2-fstest
 bin/grub2-mkelfimage
-bin/grub2-mkfloppy
 ${PLIST.mkfont}bin/grub2-mkfont
 bin/grub2-mkimage
 bin/grub2-mkisofs
@@ -158,7 +157,6 @@ lib/grub2/update-grub_lib
 man/man1/grub2-editenv.1
 man/man1/grub2-fstest.1
 man/man1/grub2-mkelfimage.1
-man/man1/grub2-mkfloppy.1
 man/man1/grub2-mkfont.1
 man/man1/grub2-mkimage.1
 man/man1/grub2-mkisofs.1
@@ -178,8 +176,10 @@ share/examples/grub2/00_header
 share/examples/grub2/10_hurd
 share/examples/grub2/10_kfreebsd
 share/examples/grub2/10_linux
+share/examples/grub2/10_netbsd
 share/examples/grub2/10_windows
 share/examples/grub2/30_os-prober
 share/examples/grub2/40_custom
 share/examples/grub2/README
+share/examples/grub2/default.conf.sample
 @pkgdir share/grub2
