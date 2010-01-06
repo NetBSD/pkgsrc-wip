@@ -1,13 +1,10 @@
-$NetBSD: patch-ab,v 1.4 2009/12/20 23:49:47 pallegra Exp $
+$NetBSD: patch-ab,v 1.5 2010/01/06 16:43:45 pallegra Exp $
 
 --- awesomeConfig.cmake.orig	2009-11-26 19:03:25.000000000 +0000
 +++ awesomeConfig.cmake
-@@ -10,14 +10,15 @@ project(${PROJECT_AWE_NAME} C)
+@@ -12,12 +12,13 @@ set(CMAKE_BUILD_TYPE RELEASE)
  
- set(CMAKE_BUILD_TYPE RELEASE)
- 
--option(WITH_DBUS "build with D-BUS" ON)
-+option(WITH_DBUS "build with D-BUS" OFF)
+ option(WITH_DBUS "build with D-BUS" ON)
  option(GENERATE_MANPAGES "generate manpages" ON)
 -option(GENERATE_LUADOC "generate luadoc" ON)
 +option(COMPRESS_MANPAGES "generate manpages" ON)
@@ -38,24 +35,3 @@ $NetBSD: patch-ab,v 1.4 2009/12/20 23:49:47 pallegra Exp $
              SET(missing ${missing} " gzip")
          endif()
  
-@@ -218,6 +219,12 @@ else()
-     set(SYSCONFDIR ${PREFIX}/etc CACHE PATH "config directory")
- endif()
- 
-+if(DEFINED EGDIR)
-+    set(EGDIR ${EGDIR} CACHE PATH "egconfig directory")
-+else()
-+    set(EGDIR ${PREFIX}/share/examples/${PROJECT_AWE_NAME} CACHE PATH "egconfig directory")
-+endif()
-+
- #If an XDG Config Dir is specificed, use it instead
- #of the default XDG configuration dir.
- if(DEFINED XDG_CONFIG_DIR)
-@@ -256,6 +263,7 @@ set(AWESOME_COMPILE_HOSTNAME ${BUILDHOST
- set(AWESOME_COMPILE_BY       $ENV{USER})
- set(AWESOME_RELEASE          ${CODENAME})
- set(AWESOME_SYSCONFDIR       ${XDG_CONFIG_DIR}/${PROJECT_AWE_NAME})
-+set(AWESOME_EGDIR            ${PREFIX}/share/examples/${PROJECT_AWE_NAME})
- set(AWESOME_DATA_PATH        ${PREFIX}/share/${PROJECT_AWE_NAME})
- set(AWESOME_LUA_LIB_PATH     ${AWESOME_DATA_PATH}/lib)
- set(AWESOME_ICON_PATH        ${AWESOME_DATA_PATH}/icons)

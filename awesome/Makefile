@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2009/12/20 23:49:47 pallegra Exp $
+# $NetBSD: Makefile,v 1.15 2010/01/06 16:43:45 pallegra Exp $
 #
 
 DISTNAME=	awesome-3.4.2
@@ -19,14 +19,23 @@ USE_TOOLS+=	bash gmake pkg-config
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
-CMAKE_ARGS+=	-DSYSCONFDIR=${PKG_SYSCONFDIR}
+PKG_SYSCONFSUBDIR=	xdg/awesome
+
+CMAKE_ARGS+=	-DWITH_DBUS=OFF
+CMAKE_ARGS+=	-DSYSCONFDIR=${PKG_SYSCONFDIR:C/\/xdg\/awesome//}
 CMAKE_ARGS+=	-DCOMPRESS_MANPAGES=${MANZ}
 CMAKE_ARGS+=	-DAWESOME_MAN_PATH=${PREFIX}/${PKGMANDIR}
 
 REPLACE_BASH+=	build-utils/gperf.sh
 
 EGDIR=		${PREFIX}/share/examples/awesome
-CONF_FILES=	${EGDIR}/rc.lua ${PKG_SYSCONFDIR}/xdg/awesome/rc.lua
+CONF_FILES=	${EGDIR}/rc.lua ${PKG_SYSCONFDIR}/rc.lua
+
+SUBST_CLASSES+=		eg
+SUBST_MESSAGE.eg=	Fixing pathnames
+SUBST_STAGE.eg=		pre-configure
+SUBST_FILES.eg=		CMakeLists.txt
+SUBST_SED.eg=		-e "s,\$${AWESOME_SYSCONFDIR},${EGDIR},"
 
 BUILD_DEPENDS+= ImageMagick-[0-9]*:../../graphics/ImageMagick
 BUILD_DEPENDS+=	asciidoc>=8.3.0:../../textproc/asciidoc
