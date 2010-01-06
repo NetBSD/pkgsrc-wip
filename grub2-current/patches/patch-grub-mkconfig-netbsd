@@ -12,11 +12,12 @@ Description: adds support for NetBSD in GRUB configuration file generation.
  
 --- util/grub-mkconfig.in.orig	2010-01-02 14:42:38.000000000 +0100
 +++ util/grub-mkconfig.in
-@@ -214,11 +214,13 @@ export GRUB_DEFAULT \
+@@ -214,11 +214,14 @@ export GRUB_DEFAULT \
    GRUB_DISTRIBUTOR \
    GRUB_CMDLINE_LINUX \
    GRUB_CMDLINE_LINUX_DEFAULT \
 +  GRUB_CMDLINE_NETBSD \
++  GRUB_CMDLINE_NETBSD_DEFAULT \
    GRUB_TERMINAL_INPUT \
    GRUB_TERMINAL_OUTPUT \
    GRUB_SERIAL_COMMAND \
@@ -28,7 +29,7 @@ Description: adds support for NetBSD in GRUB configuration file generation.
  
 --- util/grub.d/10_netbsd.in.orig
 +++ util/grub.d/10_netbsd.in
-@@ -0,0 +1,74 @@
+@@ -0,0 +1,75 @@
 +#! /bin/sh -e
 +
 +# grub-mkconfig helper script.
@@ -87,8 +88,9 @@ Description: adds support for NetBSD in GRUB configuration file generation.
 +
 +prepare_boot_cache="$(prepare_grub_to_access_device ${GRUB_DEVICE} | sed -e 's,^,	,')"
 +
-+# Look for NetBSD kernels in /.  We pick all ELF executable files (or links)
-+# whose name starts with `netbsd'.
++# We look for NetBSD kernels in / but not in subdirectories.  We simply
++# pick all statically linked ELF executable files (or links) in / with a
++# name that starts with `netbsd'.
 +for k in $(ls -t /netbsd*) ; do
 +  if ! grub_file_is_not_garbage "$k" ; then
 +    continue
@@ -98,8 +100,8 @@ Description: adds support for NetBSD in GRUB configuration file generation.
 +  fi
 +
 +  echo "Found NetBSD kernel: $k" >&2
-+  netbsd_entry "$k"
++  netbsd_entry "$k" "" "${GRUB_CMDLINE_NETBSD_DEFAULT}"
 +  if [ "x${GRUB_DISABLE_NETBSD_RECOVERY}" != "xtrue" ]; then
-+    netbsd_entry "$k" " (recovery mode)" " -s"
++    netbsd_entry "$k" " (recovery mode)" "-s"
 +  fi
 +done
