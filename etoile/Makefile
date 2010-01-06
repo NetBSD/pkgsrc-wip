@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/10/08 20:25:12 christtrekker Exp $
+# $NetBSD: Makefile,v 1.3 2010/01/06 04:52:16 christtrekker Exp $
 #
 
 DISTNAME=	etoile-0.4.1
@@ -15,25 +15,16 @@ USE_LANGUAGES=	objc
 
 MAKE_FILE=	GNUmakefile
 
-DEPENDS+=	gnustep-make>=2.0.8:../../devel/gnustep-make
-DEPENDS+=	gnustep-base>=1.18.0:../../devel/gnustep-base
-DEPENDS+=	gnustep-gui>=0.16.0:../../x11/gnustep-gui
-DEPENDS+=	gnustep-back>=0.16.0:../../x11/gnustep-back
-DEPENDS+=	lemon>=1.0.0:../../devel/lemon
-DEPENDS+=	postgresql83>=8.3.0:../../databases/postgresql83
+DEPENDS+=	etoile-core:../../gnustep/etoile-core
+DEPENDS+=	etoile-services:../../gnustep/etoile-services
+# DictionaryReader
+# Font Manager
+# Melodie
+# StepChat
+# TypeWriter
+# Vindaloo
+.include "../../misc/Addresses/buildlink3.mk"
 
-.include "../../graphics/png/buildlink3.mk"
-.include "../../devel/zlib/buildlink3.mk"
-.include "../../textproc/oniguruma/buildlink3.mk"
-.include "../../sysutils/dbus/buildlink3.mk"
-.include "../../sysutils/hal/buildlink3.mk"
-.include "../../x11/startup-notification/buildlink3.mk"
-.include "../../x11/xcursor/buildlink3.mk"
-.include "../../x11/xscreensaver/buildlink3.mk"
-.include "../../wip/llvm/buildlink3.mk"
-.include "../../devel/gmp/buildlink3.mk"
-# libavcodec and libavformat   http://ffmpeg.mplayerhq.hu/
-# OSS   http://www.opensound.com/
-.include "../../audio/taglib/buildlink3.mk"
-.include "../../multimedia/libmp4v2/buildlink3.mk"
+META_PACKAGE=	yes
+
 .include "../../mk/bsd.pkg.mk"
