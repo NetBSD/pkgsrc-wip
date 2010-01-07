@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1 2010/01/04 10:23:49 moubctez Exp $
+$NetBSD: patch-ac,v 1.2 2010/01/07 08:54:12 moubctez Exp $
 
 --- loader/Makefile.in.orig	2009-10-06 08:51:49.000000000 +0000
 +++ loader/Makefile.in
@@ -24,3 +24,14 @@ $NetBSD: patch-ac,v 1.1 2010/01/04 10:23:49 moubctez Exp $
  
  shp2pgsql-core-gui.o: shp2pgsql-core.c
  	$(CC) $(CFLAGS) -DPGUI -c -o $@ $^
+@@ -79,8 +79,8 @@ $(SHP2PGSQL-CLI): stringbuffer.o shpopen
+ 
+ install: all
+ 	@mkdir -p $(DESTDIR)$(bindir)
+-	$(INSTALL) $(PGSQL2SHP) $(DESTDIR)$(bindir)
+-	$(INSTALL) $(SHP2PGSQL) $(DESTDIR)$(bindir)
++	${LIBTOOL} --mode=install ${BSD_INSTALL_PROGRAM} $(PGSQL2SHP) $(DESTDIR)$(bindir)
++	${LIBTOOL} --mode=install ${BSD_INSTALL_PROGRAM} $(SHP2PGSQL) $(DESTDIR)$(bindir)
+ 
+ uninstall:
+ 	@rm -f $(DESTDIR)$(bindir)/$(PGSQL2SHP)
