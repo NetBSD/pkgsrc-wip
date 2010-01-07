@@ -301,9 +301,6 @@ PKGPATH=wip/distbb
 PKGNAME=pkg_online-X
 PKGPATH=wip/pkg_online
 
-PKGNAME=dict-server-X
-PKGPATH=wip/dict-server
-
 PKGNAME=checkperms-X
 PKGPATH=sysutils/checkperms
 
@@ -337,17 +334,11 @@ PKGPATH=graphics/libungif
 PKGNAME=tiff-X
 PKGPATH=graphics/tiff
 
-PKGNAME=x11-links-X
-PKGPATH=pkgtools/x11-links
-
 PKGNAME=perl-X
 PKGPATH=lang/perl5
 
 PKGNAME=libltdl-X
 PKGPATH=devel/libltdl
-
-PKGNAME=dict-client-X
-PKGPATH=wip/dict-client
 
 PKGNAME=pipestatus-X
 PKGPATH=wip/pipestatus
@@ -375,6 +366,9 @@ PKGPATH=wip/pkg_online-server
 
 PKGNAME=pkg_online-client-X
 PKGPATH=wip/pkg_online-client
+
+PKGNAME=x11-links-X
+PKGPATH=pkgtools/x11-links
 
 --------------------------------------------------
 ------- pkg_refresh_summary #5.1
@@ -422,9 +416,6 @@ PKGPATH=textproc/dictem
 PKGNAME=pkg_online-X
 PKGPATH=wip/pkg_online
 
-PKGNAME=dict-server-X
-PKGPATH=wip/dict-server
-
 PKGNAME=checkperms-X
 PKGPATH=sysutils/checkperms
 
@@ -472,9 +463,6 @@ PKGPATH=lang/perl5
 
 PKGNAME=libltdl-X
 PKGPATH=devel/libltdl
-
-PKGNAME=dict-client-X
-PKGPATH=wip/dict-client
 
 PKGNAME=pipestatus-X
 PKGPATH=wip/pipestatus
@@ -599,16 +587,16 @@ ok1
 ok2
 --------------------------------------------------
 ------- pkg_src_fetch_var #13.1
-+	xxkb-X	x11/xxkb	vle@gmx.net
++	xxkb-1.11	x11/xxkb	vle@gmx.net
 --------------------------------------------------
 ------- pkg_src_fetch_var #13.2
-+	xxkb-X	x11/xxkb	vle@gmx.net
++	xxkb-1.11	x11/xxkb	vle@gmx.net
 --------------------------------------------------
 ------- pkg_src_fetch_var #13.3
-+	xxkb-X	x11/xxkb	vle@gmx.net
++	xxkb-1.11	x11/xxkb	vle@gmx.net
 --------------------------------------------------
 ------- pkg_src_fetch_var #13.4
-+	xxkb-X	x11/xxkb	vle@gmx.net
++	xxkb-1.11	x11/xxkb	vle@gmx.net
 --------------------------------------------------
 ------- pkg_micro_src_summary #14.1
 PKGNAME=xxkb-X

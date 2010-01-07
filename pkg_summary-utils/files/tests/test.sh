@@ -103,12 +103,13 @@ END {
 }'
 
 normalize_version (){
-  awk '{
-   gsub(/(nb|alpha|beta|pre|rc|pl)[0-9]+/, "")
-   gsub(/-[0-9]+([.][0-9]+)*/, "-X")
-   gsub(/jpeg-X.*$/, "jpeg-X")
-   print $0
-  }' "$@"
+     awk '
+    /^PKGNAME=/ {
+        gsub(/(nb|alpha|beta|pre|rc|pl)[0-9]+$/, "")
+        gsub(/[a-zA-Z]$/, "")
+        gsub(/-[0-9]+([.][0-9]+)*/, "-X")
+    }
+    {  print $0  }' "$@"
 }
 
 
