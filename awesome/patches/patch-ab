@@ -1,15 +1,8 @@
-$NetBSD: patch-ab,v 1.5 2010/01/06 16:43:45 pallegra Exp $
+$NetBSD: patch-ab,v 1.6 2010/01/07 01:26:01 pallegra Exp $
 
---- awesomeConfig.cmake.orig	2009-11-26 19:03:25.000000000 +0000
+--- awesomeConfig.cmake.orig	2010-01-07 01:21:01.000000000 +0000
 +++ awesomeConfig.cmake
-@@ -12,12 +12,13 @@ set(CMAKE_BUILD_TYPE RELEASE)
- 
- option(WITH_DBUS "build with D-BUS" ON)
- option(GENERATE_MANPAGES "generate manpages" ON)
--option(GENERATE_LUADOC "generate luadoc" ON)
-+option(COMPRESS_MANPAGES "generate manpages" ON)
-+option(GENERATE_LUADOC "generate luadoc" OFF)
- 
+@@ -18,7 +18,7 @@ option(GENERATE_LUADOC "generate luadoc"
  link_directories(/usr/local/lib)
  
  # {{{ CFLAGS
@@ -18,20 +11,3 @@ $NetBSD: patch-ab,v 1.5 2010/01/06 16:43:45 pallegra Exp $
      -Wchar-subscripts -Wundef -Wshadow -Wcast-align -Wwrite-strings
      -Wsign-compare -Wunused -Wno-unused-parameter -Wuninitialized -Winit-self
      -Wpointer-arith -Wredundant-decls -Wformat-nonliteral
-@@ -69,14 +70,14 @@ include(FindLua51) #Due to a cmake bug, 
- 
- # {{{ Check if documentation can be build
- if(GENERATE_MANPAGES)
--    if(NOT ASCIIDOC_EXECUTABLE OR NOT XMLTO_EXECUTABLE OR NOT GZIP_EXECUTABLE)
-+    if(NOT ASCIIDOC_EXECUTABLE OR NOT XMLTO_EXECUTABLE OR (COMPRESS_MANPAGES AND NOT GZIP_EXECUTABLE))
-         if(NOT ASCIIDOC_EXECUTABLE)
-             SET(missing "asciidoc")
-         endif()
-         if(NOT XMLTO_EXECUTABLE)
-             SET(missing ${missing} " xmlto")
-         endif()
--        if(NOT GZIP_EXECUTABLE)
-+        if(COMPRESS_MANPAGES AND NOT GZIP_EXECUTABLE)
-             SET(missing ${missing} " gzip")
-         endif()
- 

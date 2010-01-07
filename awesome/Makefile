@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.15 2010/01/06 16:43:45 pallegra Exp $
+# $NetBSD: Makefile,v 1.16 2010/01/07 01:26:01 pallegra Exp $
 #
 
-DISTNAME=	awesome-3.4.2
+DISTNAME=	awesome-3.4.3
 CATEGORIES=	x11 wm
 MASTER_SITES=	http://awesome.naquadah.org/download/
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pallegra@gmail.com
 HOMEPAGE=	http://awesome.naquadah.org/
