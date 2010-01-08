@@ -28,6 +28,7 @@
 #use "power_getopt.awk"
 #use "alt_assert.awk"
 #use "braceexpand.awk"
+#use "psu_funcs.awk"
 
 ############################################################
 #.begin-str help
@@ -116,7 +117,7 @@ function process_deps (){
 			sub(/ .*$/, "", depname)
 			sub(/:.*$/, "", depname)
 
-			idx = match(depname, /-\[[^\[\]]*\].$|(>|>=|<|<=|=|-)[^><=-]*$/)
+			idx = pkgver_position(depname)
 			depbase = substr(depname, 1, idx-1)
 
 			if (!keep_depver){
@@ -144,7 +145,7 @@ function process_deps (){
 			depbase = depname
 
 			if (!keep_depver)
-				sub(/-\[[^\[\]]*\].$|(>|>=|<|<=|=|-)[^><=-]*$/, "", depbase)
+				depbase = pkgname2pkgbase(depbase)
 
 			if (!out_pkgname)
 				full_deps [deppath " " pkgpath] = 1

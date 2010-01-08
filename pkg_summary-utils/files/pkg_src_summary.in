@@ -542,6 +542,7 @@ filter_needed_deps (){
 #use "xgetline.awk"
 #use "pkg_grep_summary.awk"
 #use "braceexpand.awk"
+#use "psu_funcs.awk"
 
 BEGIN {
    oldFS = FS
@@ -555,8 +556,7 @@ BEGIN {
                sub(/ .*$/, "", $i)
             }
             gsub(/:[.][.]\/[.][.]\//, " ")
-            sub(/-\[[^\[\]]*\].$|(>|>=|<|<=|=|-)[^><=-]*$/, "", $i)
-            needed [$i, $(i+1)] = 1
+            needed [pkgname2pkgbase($i), $(i+1)] = 1
          }
       }
    }

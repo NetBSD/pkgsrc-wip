@@ -1,4 +1,12 @@
 ----------------------------------------------------------------------
+Version 0.35.1, by Aleksey Cheusov, Thu,  7 Jan 2010 13:26:33 +0200
+
+ - FIXED: bug in pkg_src_summary caused by incorrect PKGNAME version
+   stripping. (pkg_src_summary -A multimedia/gnash didn't generate
+   summary for multimedia/gst-plugins0.10-ffmpeg and
+   audio/gst-plugins0.10-fluendo-mp3)
+
+----------------------------------------------------------------------
 Version 0.35.0, by Aleksey Cheusov, Wed, 11 Nov 2009 22:56:25 +0200
 
  - New tool pkg_summary2deps

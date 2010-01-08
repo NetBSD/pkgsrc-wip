@@ -41,10 +41,12 @@ MAN+=		pkg_uniq_summary.1 # pkg_summary2bb_pkgs.1
 MAN+=		pkg_cleanup_distdir.1 pkg_summary2build_graph.1
 MAN+=		pkg_summary2deps.1
 
-FILES=		README NEWS TODO pkg_grep_summary.awk pkg_src_summary.mk
+FILES=		README NEWS TODO
+FILES+=		pkg_grep_summary.awk pkg_src_summary.mk psu_funcs.awk
 
 FILESDIR=			${DOCDIR}
 FILESDIR_pkg_grep_summary.awk=	${AWKMODDIR}
+FILESDIR_psu_funcs.awk=		${AWKMODDIR}
 FILESDIR_pkg_src_summary.mk=	${MKSCRIPTSDIR}
 
 BIRTHDATE=	2008-04-06
