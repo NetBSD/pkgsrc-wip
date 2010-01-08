@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2009/12/10 15:05:08 tnn2 Exp $
+@comment $NetBSD: PLIST,v 1.12 2010/01/08 15:27:34 tnn2 Exp $
 bin/xulrunner
 ${PLIST.jit}include/xulrunner/Allocator.h
 ${PLIST.jit}include/xulrunner/Assembler.h
@@ -2300,6 +2300,8 @@ lib/xulrunner/libsoftokn3.so
 lib/xulrunner/libssl3.so
 lib/xulrunner/libunicharutil_external_s.a
 lib/xulrunner/libxpcom.so
+lib/xulrunner/libxpcomglue.a
+lib/xulrunner/libxpcomglue_s.a
 lib/xulrunner/libxul.so
 lib/xulrunner/modules/CertUtils.jsm
 lib/xulrunner/modules/DownloadLastDir.jsm
