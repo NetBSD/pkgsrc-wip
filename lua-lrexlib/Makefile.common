@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2009/08/10 20:20:45 cheusov Exp $
+# $NetBSD: Makefile.common,v 1.8 2010/01/08 10:53:55 cheusov Exp $
 # used by wip/lua-lrexlib-posix/Makefile
 # used by wip/lua-lrexlib-pcre/Makefile
 # used by wip/lua-lrexlib-oniguruma/Makefile
@@ -25,7 +25,7 @@ USE_LIBTOOL=		yes
 BUILD_TARGET=		build_${ENGINE}
 TEST_TARGET=		test_${ENGINE}
 
-MAKE_FILE=		makefile
+#MAKE_FILE=		makefile
 
 #
 PATCHDIR=		${.CURDIR}/../../wip/lua-lrexlib/patches
