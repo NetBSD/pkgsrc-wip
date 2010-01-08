@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2009/08/10 20:11:10 cheusov Exp $
+# $NetBSD: Makefile,v 1.9 2010/01/08 09:38:02 cheusov Exp $
 
 .include "../../wip/heirloom-common/Makefile.common"
 
@@ -35,7 +35,7 @@ do-build:
 	   -rpath ${PREFIX}/lib -version-info 0:0 ${LOFILES}
 
 do-install:
-	${LIBTOOL} ${INSTALL_DATA} ${WRKSRC}/libuxre/libuxre.la ${DESTDIR}${PREFIX}/lib
+	${LIBTOOL} --mode=install ${INSTALL_DATA} ${WRKSRC}/libuxre/libuxre.la ${DESTDIR}${PREFIX}/lib
 	${INSTALL_DATA} ${WRKSRC}/libuxre/regex.h ${DESTDIR}${PREFIX}/include/uxre
 .for i in ${DOC_FILES}
 	${INSTALL_DATA} ${WRKSRC}/libuxre/"${i}" ${DESTDIR}${DOC_DIR}
