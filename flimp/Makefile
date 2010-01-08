@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2009/11/06 19:55:48 jh88 Exp $
+# $NetBSD: Makefile,v 1.6 2010/01/08 12:38:07 jh88 Exp $
 #
 
-DISTNAME=	flimp-0.0.10
+DISTNAME=	flimp-0.0.11
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.ecademix.com/JohannesHofmann/
 
