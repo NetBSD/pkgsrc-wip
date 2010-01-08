@@ -106,7 +106,6 @@ Suggested ready to import packages
 	o castget
 	o commoncpp2
 	o ccrtp
-        o dict-client and dict-server [pkg/33227]
 	o gipfel [pkg/40558]
 	o granule [pkg/40177]
 	o gtypist [pkg/40177]
