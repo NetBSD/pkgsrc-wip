@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2009/09/26 13:11:08 obache Exp $
+# $NetBSD: Makefile,v 1.3 2010/01/09 11:14:26 obache Exp $
 #
 
-DISTNAME=	json-glib-0.8.0
+DISTNAME=	json-glib-0.10.0
 CATEGORIES=	textproc
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/json-glib/0.8/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/json-glib/0.10/}
 
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://live.gnome.org/JsonGlib
