@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/08/18 18:35:48 ficovh Exp $
+# $NetBSD: Makefile,v 1.11 2010/01/09 17:21:42 koifren Exp $
 #
 DISTNAME=	igal-1.4.7-wt
 CATEGORIES=	www graphics
@@ -15,6 +15,12 @@ NO_BUILD=		YES
 REPLACE_PERL=		igal
 USE_TOOLS+=		perl:run
 USE_PKGLOCALEDIR=	YES
+
+SUBST_CLASSES+=			fix-prefix
+SUBST_STAGE.fix-prefix=		post-patch
+SUBST_MESSAGE.fix-prefix=	Fixing relative prefix
+SUBST_FILES.fix-prefix=		igal
+SUBST_SED.fix-prefix=		-e 's,/usr/local/lib/igal,${PREFIX}/share/igal,'
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/igal ${PREFIX}/bin
