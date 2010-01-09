@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/29 05:47:52 obache Exp $
+@comment $NetBSD: PLIST,v 1.3 2010/01/09 11:05:43 obache Exp $
 include/clutter-1.0/clutter/clutter-actor.h
 include/clutter-1.0/clutter/clutter-alpha.h
 include/clutter-1.0/clutter/clutter-animatable.h
@@ -66,7 +66,7 @@ ${PLIST.x11}include/clutter-1.0/clutter/x11/clutter-x11.h
 include/clutter-1.0/cogl/cogl-bitmap.h
 include/clutter-1.0/cogl/cogl-color.h
 include/clutter-1.0/cogl/cogl-debug.h
-include/clutter-1.0/cogl/cogl-defines-gl.h
+include/clutter-1.0/cogl/cogl-defines.h
 include/clutter-1.0/cogl/cogl-deprecated.h
 include/clutter-1.0/cogl/cogl-enum-types.h
 include/clutter-1.0/cogl/cogl-fixed.h
@@ -126,6 +126,8 @@ share/gtk-doc/html/clutter/ClutterTimeline.html
 share/gtk-doc/html/clutter/actor-box.png
 share/gtk-doc/html/clutter/additionaldocs.html
 share/gtk-doc/html/clutter/annotation-glossary.html
+share/gtk-doc/html/clutter/bin-layout.png
+share/gtk-doc/html/clutter/box-layout.png
 share/gtk-doc/html/clutter/building-clutter.html
 share/gtk-doc/html/clutter/ch01.html
 share/gtk-doc/html/clutter/ch02.html
@@ -174,6 +176,8 @@ share/gtk-doc/html/clutter/cluttertools.html
 share/gtk-doc/html/clutter/creating-your-own-behaviours.html
 share/gtk-doc/html/clutter/easing-modes.png
 share/gtk-doc/html/clutter/event-flow.png
+share/gtk-doc/html/clutter/flow-layout-horizontal.png
+share/gtk-doc/html/clutter/flow-layout-vertical.png
 share/gtk-doc/html/clutter/go01.html
 share/gtk-doc/html/clutter/home.png
 share/gtk-doc/html/clutter/index.html
@@ -218,6 +222,10 @@ share/gtk-doc/html/cogl/home.png
 share/gtk-doc/html/cogl/index.html
 share/gtk-doc/html/cogl/index.sgml
 share/gtk-doc/html/cogl/ix01.html
+share/gtk-doc/html/cogl/ix02.html
+share/gtk-doc/html/cogl/ix03.html
+share/gtk-doc/html/cogl/ix04.html
+share/gtk-doc/html/cogl/ix05.html
 share/gtk-doc/html/cogl/left.png
 share/gtk-doc/html/cogl/license.html
 share/gtk-doc/html/cogl/right.png
