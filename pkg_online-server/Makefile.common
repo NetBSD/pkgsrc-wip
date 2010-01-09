@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2010/01/09 12:04:24 cheusov Exp $
+# $NetBSD: Makefile.common,v 1.2 2010/01/09 12:10:08 cheusov Exp $
 #
 # used by wip/pkg_online-client/Makefile
 # used by wip/pkg_online-server/Makefile
@@ -18,7 +18,7 @@ LICENSE=		mit
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 DISTINFO_FILE=		${.CURDIR}/../../wip/pkg_online-server/distinfo
-DESCR_SRC=		${.CURDIR}/../../wip/pkg_online-server/DESCR
+DESCR_SRC=		${.CURDIR}/../../wip/pkg_online-server/DESCR.common
 
 USE_LANGUAGES=		# none
 USE_BSD_MAKEFILE=	yes

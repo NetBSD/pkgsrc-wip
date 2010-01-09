@@ -1,5 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2010/01/09 12:04:24 cheusov Exp $
+# $NetBSD: Makefile,v 1.4 2010/01/09 12:10:08 cheusov Exp $
 #
+
+.include "../../wip/pkg_online-server/Makefile.common"
 
 PKGNAME=	${DISTNAME:C/online/online-server/}
 CATEGORIES=	pkgtools
@@ -17,5 +19,4 @@ DESCR_SRC+=	${.CURDIR}/DESCR
 
 MAKE_FLAGS+=	DOCDIR=${PREFIX}/share/doc/pkg_online-server
 
-.include "../../wip/pkg_online-server/Makefile.common"
 .include "../../mk/bsd.pkg.mk"
