@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2009/12/25 04:28:41 obache Exp $
+# $NetBSD: Makefile,v 1.8 2010/01/10 13:10:21 obache Exp $
 #
 
 DISTNAME=	ibus-1.2.0.20091225
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	inputmethod
 MASTER_SITES=	http://ibus.googlecode.com/files/
 
@@ -12,8 +11,6 @@ COMMENT=	Intelligent Input Bus
 LICENSE=	gnu-lgpl-v2.1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-
-CONFLICTS+=	py[0-9]*-ibus-[0-9]*
 
 DEPENDS+=	${PYPKGPREFIX}-xdg-[0-9]*:../../devel/py-xdg
 
@@ -34,6 +31,7 @@ EXAMPLESDIR=		${PREFIX}/share/examples/ibus
 
 INSTALL_MAKE_FLAGS+=	sysconfdir=${EXAMPLESDIR}
 
+MAKE_DIRS+=		${PKG_SYSCONFBASE}/xdg/autostart
 CONF_FILES+=		${EXAMPLESDIR}/xdg/autostart/ibus.desktop \
 			${PKG_SYSCONFBASE}/xdg/autostart/ibus.desktop
 

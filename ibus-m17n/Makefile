@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2009/12/17 12:38:36 obache Exp $
+# $NetBSD: Makefile,v 1.6 2010/01/10 13:10:21 obache Exp $
 #
 
 DISTNAME=	ibus-m17n-1.2.0.20091217
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	inputmethod
 MASTER_SITES=	http://ibus.googlecode.com/files/
 
@@ -12,8 +11,6 @@ COMMENT=	M17N engine for IBus platform
 LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-
-CONFLICTS+=	py[0-9]*-ibus-m17n-[0-9]*
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes

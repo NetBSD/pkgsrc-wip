@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2010/01/03 06:30:15 obache Exp $
+# $NetBSD: Makefile,v 1.5 2010/01/10 13:10:21 obache Exp $
 #
 
 DISTNAME=	ibus-hangul-1.2.0.20100102
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	inputmethod korean
 MASTER_SITES=	http://ibus.googlecode.com/files/
 
@@ -12,8 +11,6 @@ COMMENT=	Hangul engine for IBus input platform
 LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-
-CONFLICTS+=	py[0-9]*-ibus-hangl-[0-9]*
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes

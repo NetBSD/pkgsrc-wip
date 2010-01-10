@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2009/12/18 10:52:12 obache Exp $
+# $NetBSD: Makefile,v 1.3 2010/01/10 13:10:21 obache Exp $
 #
 
 DISTNAME=	ibus-qt-1.2.0.20091217-Source
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-Source//}
+PKGNAME=	${DISTNAME:S/-Source//}
 CATEGORIES=	inputmethod
 MASTER_SITES=	http://ibus.googlecode.com/files/
 
@@ -13,11 +13,7 @@ LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-.include "../../lang/python/pyversion.mk"
-
-CONFLICTS+=	py[0-9][0-9]-ibus-qt-[0-9]*
-
-DEPENDS+=		${PYPKGPREFIX}-ibus>=1.2:../../wip/ibus
+DEPENDS+=		ibus>=1.2:../../wip/ibus
 
 USE_CMAKE=		yes
 USE_LANGUAGES=		c c++

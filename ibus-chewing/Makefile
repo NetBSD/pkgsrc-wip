@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2009/12/12 05:09:34 obache Exp $
+# $NetBSD: Makefile,v 1.6 2010/01/10 13:10:21 obache Exp $
 #
 
 DISTNAME=	ibus-chewing-1.2.0.20091211-Source
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-Source//}
+PKGNAME=	${DISTNAME:S/-Source//}
 CATEGORIES=	inputmethod chinese
 MASTER_SITES=	http://ibus.googlecode.com/files/
 
@@ -12,8 +12,6 @@ COMMENT=	Chewing engine for IBus input platform
 LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-
-CONFLICTS+=	py[0-9]*-ibus-chewing-[0-9]*
 
 BUILD_DEPENDS+=		gob2-[0-9]*:../../devel/gob2
 

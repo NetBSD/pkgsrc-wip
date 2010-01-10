@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2009/11/22 11:13:09 obache Exp $
+# $NetBSD: Makefile,v 1.4 2010/01/10 13:10:21 obache Exp $
 #
 
 DISTNAME=	ibus-pinyin-1.2.0.20090915
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	inputmethod chinese
 MASTER_SITES=	http://ibus.googlecode.com/files/
 DISTFILES=	${DEFAULT_DISTFILES} ${DBTAR}
@@ -14,7 +13,7 @@ LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-CONFLICTS+=	py[0-9]*-ibus-pinyin-[0-9]*
+.include "../../lang/python/pyversion.mk"
 
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 
