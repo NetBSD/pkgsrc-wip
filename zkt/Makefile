@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/12/18 00:29:03 pettai Exp $
+# $NetBSD: Makefile,v 1.4 2010/01/10 18:40:11 pettai Exp $
 #
 
 DISTNAME=	zkt-0.98
@@ -8,8 +8,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=zkt/}
 MAINTAINER=	pettai@nordu.net
 HOMEPAGE=	http://zkt.sourceforge.net/
 COMMENT=	Tool to manage keys and signatures for DNSSEC-zones
-
-WRKSRC=		${WRKDIR}/${DISTNAME}
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
