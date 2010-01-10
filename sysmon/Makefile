@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/12/13 14:07:02 pettai Exp $
+# $NetBSD: Makefile,v 1.5 2010/01/10 16:26:58 thomasklausner Exp $
 #
 
 DISTNAME=		sysmon-0.92.2
@@ -29,7 +29,7 @@ SUBST_STAGE.paths=      post-patch
 SUBST_SED.paths=        -e 's,@destdir@,${DESTDIR},g'
 
 INSTALLATION_DIRS=      share/examples/sysmon
-INSTALLATION_DIRS+=     share/doc/sysmon bin man/man5 man/man8
+INSTALLATION_DIRS+=     share/doc/sysmon bin ${PKGMANDIR}/man5 ${PKGMANDIR}/man8
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/examples/sysmon.conf.dist ${DESTDIR}${EGDIR}/sysmon.conf.dist
