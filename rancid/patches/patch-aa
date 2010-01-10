@@ -1,4 +1,4 @@
-# $NetBSD: patch-aa,v 1.1 2009/12/12 23:39:47 pettai Exp $
+$NetBSD: patch-aa,v 1.2 2010/01/10 16:12:33 thomasklausner Exp $
 
 --- configure.orig	2009-12-13 00:37:15.000000000 +0100
 +++ configure	2009-12-13 00:37:29.000000000 +0100
