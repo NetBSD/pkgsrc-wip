@@ -1,9 +1,8 @@
-* pgxs
-
-Needs the pgxs makefiles installed with PostgreSQL client. They are
-only currently provided as of postgresql84-client-8.4.1nb1.
-
 * testing
+
+** NetBSD 5 i386 
+
+20100110	passes
 
 ** Solaris SX:CE
 

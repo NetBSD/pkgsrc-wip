@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2010/01/04 10:23:49 moubctez Exp $
+# $NetBSD: Makefile,v 1.10 2010/01/10 02:16:03 lexort Exp $
 
 DISTNAME=	postgis-1.4.1
 PKGNAME=	postgresql${PGSQL_VERSION}-${DISTNAME}
@@ -13,7 +13,8 @@ LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-# See TODO
+# Needs pgxs makefiles installed.  Currently this is done only by the 84
+# package, although there are no good reasons the others don't.
 PGSQL_VERSIONS_ACCEPTED=	84
 
 DEPENDS+=		postgresql${PGSQL_VERSION}-server>=0:../../databases/postgresql${PGSQL_VERSION}-server
