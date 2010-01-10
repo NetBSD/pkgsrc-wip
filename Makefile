@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3757 2010/01/10 13:30:45 obache Exp $
+# $Id: Makefile,v 1.3758 2010/01/10 19:23:16 pettai Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1769,7 +1769,6 @@ SUBDIR+=	py-Fnorb-docs
 SUBDIR+=	py-Genetic
 SUBDIR+=	py-Impacket
 SUBDIR+=	py-MayaVi
-SUBDIR+=	py-MoinMoin
 SUBDIR+=	py-OpenAL
 SUBDIR+=	py-PEAK
 SUBDIR+=	py-PEAK-docs
