@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.7 2007/07/30 15:49:10 jlamwww Exp $
+# $NetBSD: Makefile,v 1.8 2010/01/11 09:19:22 tonnerre Exp $
 
 DISTNAME=	nxclient-${NX_VER}.i386
 PKGNAME=	nx-client-bin-${NX_VER}
-PKGREVISION=	1
 CATEGORIES=	net
-MASTER_SITES=	http://web04.nomachine.com/download/2.1.0/Linux-NoXft/
+MASTER_SITES=	http://web04.nomachine.com/download/3.4.0/Linux/
 
-MAINTAINER=	rumcic@gmail.com
+MAINTAINER=	tonnerre@NetBSD.org
 COMMENT=	NX linux client binary
 
-NX_VER=		2.1.0-11
+NX_VER=		3.4.0-5
 
 WRKSRC?=	${WRKDIR}/NX
 BUILD_DIRS=	# empty
@@ -41,13 +40,13 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/${file} ${NX_LIB}/bin
 .endfor
 	${INSTALL_SCRIPT} ${WRKDIR}/${NX_SCRIPT} ${PREFIX}/bin/nx
-.for file in libXcomp.so libXcomp.so.2 libXcomp.so.2.1.0 libXcompsh.so libXcompsh.so.2 libXcompsh.so.2.1.0 libcrypto.so libcrypto.so.0.9.8 libjpeg.so libjpeg.so.62 libjpeg.so.62.0.0 libpng12.so libpng12.so.0 libpng12.so.0.1.2.8 libz.so libz.so.1 libz.so.1.2.3
+.for file in libXcomp.so libXcomp.so.3 libXcomp.so.3.4.0 libXcompsh.so libXcompsh.so.3 libXcompsh.so.3.4.0 libcrypto.so libcrypto.so.0.9.8 libjpeg.so libjpeg.so.62 libjpeg.so.62.0.0 libpng12.so libpng12.so.0 libpng12.so.0.1.2.8 libz.so libz.so.1 libz.so.1.2.3
 	${INSTALL_LIB} ${WRKSRC}/lib/${file} ${NX_LIB}/lib
 .endfor
 .for file in keyboards rgb
 	${INSTALL_DATA} ${WRKSRC}/share/${file} ${NX_LIB}/share
 .endfor
-.for dir in cups documents/client icons images keys
+.for dir in cups documents/client icons/16x16 icons/22x22 icons/32x32 icons/48x48 images keys
 	${INSTALL_DATA_DIR} ${NX_LIB}/share/${dir}
 	${INSTALL_DATA} ${WRKSRC}/share/${dir}/* ${NX_LIB}/share/${dir}
 .endfor
