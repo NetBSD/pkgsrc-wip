@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2009/09/20 12:34:16 khorben Exp $
+$NetBSD: distinfo,v 1.2 2010/01/11 00:17:14 khorben Exp $
 
 SHA1 (Player-0.1.2.tar.gz) = f9fd600a86bb4123c99762086e4613c4cd834f1d
 RMD160 (Player-0.1.2.tar.gz) = e2aa403aaaa24a5ad99efbb9d3e64cc3b48811fa
 Size (Player-0.1.2.tar.gz) = 22399 bytes
-SHA1 (patch-aa) = 63a33fbd3612ee3bb49b1635be194c90c0dfced9
+SHA1 (patch-aa) = f92f79bc778f1c6cb28e7d75dd01cb5fbeab02fd
