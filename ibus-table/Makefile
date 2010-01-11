@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/01/11 04:55:26 obache Exp $
+# $NetBSD: Makefile,v 1.3 2010/01/11 08:56:40 obache Exp $
 #
 
 DISTNAME=	ibus-table-1.2.0.20100111
@@ -13,7 +13,7 @@ LICENSE=	gnu-lgpl-v2.1
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		pkg-config msgfmt
+USE_TOOLS+=		gmake pkg-config msgfmt
 USE_PKGLOCALEDIR=	yes
 
 PKGCONFIG_OVERRIDE+=	ibus-table.pc.in
