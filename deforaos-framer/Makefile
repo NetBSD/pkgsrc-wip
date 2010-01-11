@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2009/10/13 21:56:47 khorben Exp $
+# $NetBSD: Makefile,v 1.2 2010/01/11 00:20:06 khorben Exp $
 #
 # TODO: add an embedded option
 
@@ -12,6 +12,8 @@ HOMEPAGE=	http://www.defora.org/
 COMMENT=	DeforaOS desktop window manager
 
 LICENSE=	gnu-gpl-v3
+
+USE_TOOLS+=	pkg-config
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_FLAGS+=	PREFIX=${PREFIX}

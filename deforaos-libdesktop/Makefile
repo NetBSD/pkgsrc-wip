@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2009/12/30 22:25:54 khorben Exp $
+# $NetBSD: Makefile,v 1.2 2010/01/11 00:20:06 khorben Exp $
 #
 
 DISTNAME=	libDesktop-0.0.1
@@ -11,6 +11,8 @@ HOMEPAGE=	http://www.defora.org/
 COMMENT=	DeforaOS desktop library
 
 LICENSE=	gnu-gpl-v3
+
+USE_TOOLS+=	pkg-config
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_FLAGS+=	PREFIX=${PREFIX}
