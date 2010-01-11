@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.5 2010/01/06 00:11:20 gregoire Exp $
+$NetBSD: patch-ad,v 1.6 2010/01/11 01:48:28 gregoire Exp $
 
 Description: forces installation of all configuration scripts.  These are
   installed in share/examples/grub2.  The appropriates ones (as in the
@@ -6,7 +6,7 @@ Description: forces installation of all configuration scripts.  These are
   directive CONF_FILES.  See the main makefile of this pkgsrc package for
   further details.
 
---- conf/common.rmk.orig	2010-01-02 14:42:26.000000000 +0100
+--- conf/common.rmk.orig	2010-01-11 02:40:56.000000000 +0100
 +++ conf/common.rmk
 @@ -177,9 +177,9 @@ CLEANFILES += grub-gettext_lib
  	./config.status --file=$@:$<

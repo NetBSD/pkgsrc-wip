@@ -1,10 +1,10 @@
-# $NetBSD: bzr.mk,v 1.3 2010/01/02 00:21:20 gregoire Exp $
+# $NetBSD: bzr.mk,v 1.4 2010/01/11 01:48:28 gregoire Exp $
 #
 
 BUILD_DEPENDS+=		bzr>=1.0:../../devel/bzr
 
 DISTFILES?=		# empty
-BZR_REPOSITORY=		http://bzr.savannah.gnu.org/r/grub/trunk/grub
+BZR_REPOSITORY=		http://bzr.savannah.gnu.org/r/grub/people/gsutre/netbsd
 
 pre-extract: do-bzr-extract
 
