@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2009/11/30 14:58:23 christtrekker Exp $
+# $NetBSD: Makefile,v 1.11 2010/01/11 21:21:28 christtrekker Exp $
 #
 
 DISTNAME=	lcdproc-0.5.3
@@ -45,6 +45,6 @@ CONF_FILES+=	${EGDIR}/lcdproc.conf ${PKG_SYSCONFDIR}/lcdproc.conf
 CONF_FILES+=	${EGDIR}/lcdvc.conf ${PKG_SYSCONFDIR}/lcdvc.conf
 
 post-patch:
-	cp ${FILESDIR}/getopt.h ${WRKSRC}/shared
+	${CP} ${FILESDIR}/getopt.h ${WRKSRC}/shared
 
 .include "../../mk/bsd.pkg.mk"
