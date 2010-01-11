@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2009/11/05 11:48:41 asau Exp $
+@comment $NetBSD: PLIST,v 1.22 2010/01/11 23:37:12 asau Exp $
 bin/efricas
 bin/fricas
 lib/fricas/emacs/fricas-cpl.el
@@ -295,6 +295,7 @@ lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/FLOATRP.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/FM.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/FM2.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/FMC.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/FMCAT-.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/FMCAT.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/FMFUN.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/FMONOID.${FASL}
@@ -964,6 +965,8 @@ lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/SMATCAT-.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/SMATCAT.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/SMITH.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/SMP.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/SMPEXPR.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/SMPCOER.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/SMTS.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/SNTSCAT.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/SOLVEFOR.${FASL}
@@ -1010,7 +1013,6 @@ lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/SUMFS.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/SUMRF.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/SUP.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/SUP2.${FASL}
-lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/SUPEXPR.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/SUPFRACF.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/SUPXS.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/SUTS.${FASL}
