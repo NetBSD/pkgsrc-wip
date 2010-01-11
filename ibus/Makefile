@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2010/01/11 05:36:55 obache Exp $
+# $NetBSD: Makefile,v 1.11 2010/01/11 10:05:12 obache Exp $
 #
 
-DISTNAME=	ibus-1.2.0.20091225
+DISTNAME=	ibus-1.2.0.20100111
 CATEGORIES=	inputmethod
 MASTER_SITES=	http://ibus.googlecode.com/files/
 
@@ -40,6 +40,11 @@ SUBST_CLASSES+=		iso
 SUBST_STAGE.iso=	post-configure
 SUBST_FILES.iso=	ibus/lang.py
 SUBST_SED.iso=		-e "s;/usr/share;${BUILDLINK_PREFIX.iso-codes}/share;"
+
+SUBST_CLASSES+=		epython
+SUBST_STAGE.epython=	pre-configure
+SUBST_FILES.epython=	ui/gtk/ibus-ui-gtk.in
+SUBST_SED.epython=	-e 's;exec python;exec ${PYTHONBIN};g'
 
 .include "../../devel/GConf/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
