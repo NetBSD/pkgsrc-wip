@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/01/10 13:29:49 obache Exp $
+# $NetBSD: Makefile,v 1.2 2010/01/11 04:55:26 obache Exp $
 #
 
-DISTNAME=	ibus-table-1.2.0.20091113
+DISTNAME=	ibus-table-1.2.0.20100111
 CATEGORIES=	inputmethod
 MASTER_SITES=	http://ibus.googlecode.com/files/
 
