@@ -1,7 +1,6 @@
-$NetBSD: patch-ac,v 1.4 2010/01/11 01:48:28 gregoire Exp $
+$NetBSD: patch-ac,v 1.5 2010/01/11 02:01:38 gregoire Exp $
 
-Description: apply program name substitution for generated info file, and
-  fix a minor typo in echo line of target uninstall.
+Description: apply program name substitution for generated info file.
 
 --- Makefile.in.orig	2010-01-11 02:40:40.000000000 +0100
 +++ Makefile.in
