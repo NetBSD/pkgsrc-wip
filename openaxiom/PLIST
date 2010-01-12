@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2009/09/27 15:45:32 asau Exp $
+@comment $NetBSD: PLIST,v 1.14 2010/01/12 11:17:13 asau Exp $
 bin/open-axiom
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/A1AGG-.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/A1AGG.${FASL}
@@ -233,9 +233,9 @@ lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/DLP.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/DMP.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/DOMAIN.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/DOMCTOR.${FASL}
+lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/DOMTMPLT.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/DPMM.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/DPMO.${FASL}
-lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/DOMTMPLT.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/DPOLCAT-.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/DPOLCAT.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/DQAGG.${FASL}
@@ -371,6 +371,7 @@ lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/FM1.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/FMC.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/FMCAT.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/FMFUN.${FASL}
+lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/FMONCAT.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/FMONOID.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/FMTC.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/FNAME.${FASL}
@@ -859,6 +860,7 @@ lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/PADICRC.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/PAIR.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/PALETTE.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/PAN2EXPR.${FASL}
+lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/PARAMAST.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/PARPC2.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/PARPCURV.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/PARSC2.${FASL}
@@ -1041,6 +1043,7 @@ lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/RMATRIX.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/RMCAT2.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/RMODULE.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/RNG.${FASL}
+lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/RNGBIND.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/RNS-.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/RNS.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/ROIRC.${FASL}
@@ -1134,6 +1137,7 @@ lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/STAGG-.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/STAGG.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/STBL.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/STEP.${FASL}
+lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/STEPAST.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/STINPROD.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/STREAM.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/STREAM1.${FASL}
@@ -1166,6 +1170,7 @@ lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/SYMTAB.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/SYNTAX.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/SYSINT.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/SYSNNI.${FASL}
+lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/SYSPTR.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/SYSSOLP.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/SYSTEM.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/TABLBUMP.${FASL}
@@ -1704,6 +1709,24 @@ lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/input/zlindep.input
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lib/command.list
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lib/copyright
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lib/ex2ht
+lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lib/graph/colorpoly.ps
+lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lib/graph/colorwol.ps
+lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lib/graph/draw.ps
+lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lib/graph/drawIstr.ps
+lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lib/graph/drawarc.ps
+lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lib/graph/drawcolor.ps
+lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lib/graph/drawline.ps
+lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lib/graph/drawlines.ps
+lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lib/graph/drawpoint.ps
+lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lib/graph/drawrect.ps
+lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lib/graph/drawstr.ps
+lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lib/graph/drwfilled.ps
+lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lib/graph/end.ps
+lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lib/graph/fillarc.ps
+lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lib/graph/fillpoly.ps
+lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lib/graph/fillwol.ps
+lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lib/graph/header.ps
+lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lib/graph/setup.ps
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lib/htadd
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lib/hthits
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lib/htsearch
@@ -2380,6 +2403,7 @@ lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/share/hypertex/pages/union.
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/share/hypertex/pages/util.ht
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/share/hypertex/pages/xmpexp.ht
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/share/msgs/s2-us.msgs
+lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/share/texmf/tex/open-axiom.sty
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/src/algebra/acplot.spad
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/src/algebra/aggcat.spad
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/src/algebra/aggcat2.spad
