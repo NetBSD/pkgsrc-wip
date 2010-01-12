@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2010/01/05 08:17:50 phonohawk Exp $
+# $NetBSD: Makefile,v 1.16 2010/01/12 04:13:52 phonohawk Exp $
 
 DISTNAME=		ghc-${VERSION}
 VERSION=		6.12.1
@@ -45,7 +45,7 @@ CONFIGURE_ENV+=		PerlCmd=${PERL5:Q}
 # We don't want to extract all of the DISTFILEs.
 EXTRACT_ONLY=	${DISTNAME}-src.tar.bz2
 
-PLATFORM= ${LOWER_ARCH}-unknown-${LOWER_OPSYS}
+PLATFORM= ${MACHINE_ARCH}-unknown-${LOWER_OPSYS}
 CONFIGURE_ARGS += \
 	--build=${PLATFORM} \
 	--host=${PLATFORM} \
