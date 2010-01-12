@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.4 2010/01/06 14:22:35 gregoire Exp $
+@comment $NetBSD: PLIST,v 1.5 2010/01/12 10:34:50 gregoire Exp $
 bin/grub2-editenv
 bin/grub2-fstest
 bin/grub2-mkelfimage
 ${PLIST.mkfont}bin/grub2-mkfont
 bin/grub2-mkimage
 bin/grub2-mkisofs
+bin/grub2-mkpasswd-pbkdf2
 bin/grub2-mkrelpath
 bin/grub2-mkrescue
 info/grub2.info
@@ -38,6 +39,8 @@ lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/configfile.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/cpio.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/cpuid.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/crc.mod
+lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/crypto.lst
+lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/crypto.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/date.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/datehook.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/datetime.mod
@@ -53,6 +56,25 @@ lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/fat.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/font.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/fs.lst
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/fshelp.mod
+lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/gcry_arcfour.mod
+lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/gcry_blowfish.mod
+lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/gcry_camellia.mod
+lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/gcry_cast5.mod
+lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/gcry_crc.mod
+lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/gcry_des.mod
+lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/gcry_md4.mod
+lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/gcry_md5.mod
+lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/gcry_rfc2268.mod
+lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/gcry_rijndael.mod
+lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/gcry_rmd160.mod
+lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/gcry_seed.mod
+lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/gcry_serpent.mod
+lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/gcry_sha1.mod
+lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/gcry_sha256.mod
+lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/gcry_sha512.mod
+lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/gcry_tiger.mod
+lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/gcry_twofish.mod
+lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/gcry_whirlpool.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/gettext.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/gfxterm.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/gptsync.mod
@@ -61,6 +83,7 @@ lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/gzio.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/halt.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/handler.lst
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/handler.mod
+lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/hashsum.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/hdparm.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/hello.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/help.mod
@@ -90,6 +113,7 @@ lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/mmap.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/moddep.lst
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/msdospart.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/multiboot.mod
+lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/multiboot2.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/normal.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/ntfs.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/ntfscomp.mod
@@ -104,6 +128,8 @@ lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/partmap.lst
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/parttool.lst
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/parttool.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/password.mod
+lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/password_pbkdf2.mod
+lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/pbkdf2.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/pci.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/play.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/png.mod
@@ -129,6 +155,8 @@ lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/sfs.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/sh.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/sleep.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/tar.mod
+lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/terminal.lst
+lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/terminal.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/terminfo.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/test.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/tga.mod
@@ -160,6 +188,7 @@ man/man1/grub2-mkelfimage.1
 man/man1/grub2-mkfont.1
 man/man1/grub2-mkimage.1
 man/man1/grub2-mkisofs.1
+man/man1/grub2-mkpasswd-pbkdf2.1
 man/man1/grub2-mkrelpath.1
 man/man1/grub2-mkrescue.1
 man/man8/grub2-install.8
