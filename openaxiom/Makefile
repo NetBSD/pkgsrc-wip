@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2010/01/12 11:28:07 asau Exp $
+# $NetBSD: Makefile,v 1.14 2010/01/12 12:39:58 asau Exp $
 #
 
 DISTNAME=		open-axiom-1.3.0
@@ -51,6 +51,9 @@ SUBST_SED.version-string-2=	-e '/^PACKAGE_VERSION=/s:[0-9.-]\{1,\}:${PKGVERSION_
 
 pre-configure:
 	${RUN} cd ${WRKSRC} && ./build-setup.sh
+
+# Skip these checks for now:
+CHECK_WRKREF_SKIP=     lib/*/hypertex lib/*/viewAlone lib/*/view2D lib/*/view3D lib/*/viewman
 
 .include "../mk/svn-package.mk"
 .include "../../mk/bsd.pkg.mk"
