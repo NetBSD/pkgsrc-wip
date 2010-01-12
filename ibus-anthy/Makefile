@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/01/10 13:10:21 obache Exp $
+# $NetBSD: Makefile,v 1.7 2010/01/12 11:29:35 obache Exp $
 #
 
 DISTNAME=	ibus-anthy-1.2.0.20091127
@@ -27,6 +27,11 @@ SUBST_CLASSES+=		kasumi
 SUBST_STAGE.kasumi=	pre-configure
 SUBST_FILES.kasumi=	setup/anthyprefs.py
 SUBST_SED.kasumi=	-e 's|/usr/bin/kasumi|${KASUMI_DIR}/bin/kasumi|g'
+
+SUBST_CLASSES+=		epython
+SUBST_STAGE.epython=	pre-configure
+SUBST_FILES.epython=	engine/ibus-engine-anthy.in setup/ibus-setup-anthy.in
+SUBST_SED.epython=	-e 's;exec python;exec ${PYTHONBIN};g'
 
 .include "../../devel/swig/buildlink3.mk"
 PY_PATCHPLIST=		yes
