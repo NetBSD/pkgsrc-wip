@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/12/21 19:25:39 christtrekker Exp $
+# $NetBSD: Makefile,v 1.5 2010/01/12 19:15:24 christtrekker Exp $
 #
 
 DISTNAME=	edelib-2.0-beta
@@ -21,14 +21,21 @@ PKGCONFIG_OVERRIDE+=	edelib-gui.pc.in
 PKGCONFIG_OVERRIDE+=	edelib.pc.in
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.edelib
-PKG_SUPPORTED_OPTIONS=	dbus fam-only largefile nls shared
-PKG_SUGGESTED_OPTIONS=	dbus nls
+PKG_SUPPORTED_OPTIONS=	dbus fam fam-only largefile nls shared
+PKG_SUGGESTED_OPTIONS=	dbus fam nls
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/bsd.options.mk"
 
-BUILD_DEPENDS+=	jam:../../devel/jam
+# Solaris /bin/sh is really bad, so use TOOLS_PLATFORM.sh if it's been defined.
+.if ${OPSYS} == "SunOS"
+REPLACE_SH+=    autogen.sh configure \
+                src/tinyscheme/gen-c-string.sh \
+                test/abicheck.sh tools/geniconmap
+.else
+# doxygen doesn't build from pkgsrc on Solaris now - handle this better later
 BUILD_DEPENDS+=	doxygen:../../devel/doxygen
+.endif
 
 .if !empty(PKG_OPTIONS:Mdbus)
 .  include "../../sysutils/dbus/buildlink3.mk"
@@ -37,10 +44,13 @@ CONFIGURE_ARGS+=	--enable-dbus
 CONFIGURE_ARGS+=	--disable-dbus
 .endif
 
-.if !empty(PKG_OPTIONS:Mfam-only)
+.if !empty(PKG_OPTIONS:Mfam) || !empty(PKG_OPTIONS:Mfam-only)
+.  include "../../mk/fam.buildlink3.mk"
+.  if !empty(PKG_OPTIONS:Mfam-only)
 CONFIGURE_ARGS+=	--enable-fam-only
-.else
+.  else
 CONFIGURE_ARGS+=	--disable-fam-only
+.  endif
 .endif
 
 .if !empty(PKG_OPTIONS:Mlargefile)
@@ -61,14 +71,13 @@ CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--disable-shared
 .endif
 
-.include "../../mk/fam.buildlink3.mk"
+BUILD_DEPENDS+=	jam:../../devel/jam
+
 .include "../../x11/fltk/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
-.include "../../graphics/png/buildlink3.mk"
 
 do-build:
-	cd ${WRKSRC} && jam
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} jam
 do-install:
-	cd ${WRKSRC} && jam install
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} jam install
 
 .include "../../mk/bsd.pkg.mk"
