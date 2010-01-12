@@ -1,0 +1,38 @@
+$NetBSD: patch-ae,v 1.1.1.1 2010/01/12 09:22:15 cherrymathew Exp $
+
+--- configure.ac.orig	2008-02-05 04:11:37.000000000 +0000
++++ configure.ac
+@@ -33,12 +33,14 @@ case $host_os in
+     linux*)	HOST_OS=linux;;
+     hpux*)	HOST_OS=hpux;;
+     freebsd*)	HOST_OS=freebsd;;
++    netbsd*)	HOST_OS=netbsd;;
+     *)		HOST_OS=unknown;;
+ esac
+ AC_SUBST(HOST_OS)
+ AM_CONDITIONAL(LINUX, test "$HOST_OS" = linux)
+ AM_CONDITIONAL(HPUX,  test "$HOST_OS" = hpux)
+ AM_CONDITIONAL(FREEBSD, test "$HOST_OS" = freebsd)
++AM_CONDITIONAL(NETBSD, test "$HOST_OS" = netbsd)
+ 
+ # Version number definitions
+ #
+@@ -259,6 +261,10 @@ if test "$HOST_OS" = freebsd; then
+ 	LDFLAGS="$LDFLAGS -lutil"
+ fi
+ 
++if test "$HOST_OS" = netbsd; then
++	LDFLAGS="$LDFLAGS -lutil"
++fi
++
+ dnl Check for optional libs
+ AC_CHECK_LIB(unwind-ia64, _Uia64_get_proc_name, )
+ 
+@@ -347,6 +353,7 @@ case $host_os in
+     hpux10*)	CFLAGS="$CFLAGS -DHPUX1020";;
+     hpux11*)	CFLAGS="$CFLAGS -DHPUX1100";;
+     freebsd*)	CFLAGS="$CFLAGS -DFREEBSD -D__linux__";;
++    netbsd*)	CFLAGS="$CFLAGS -DNETBSD -D__linux__";;
+ esac
+ 
+ dnl Add extra flags to CFLAGS depending on compiler
