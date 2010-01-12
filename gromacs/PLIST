@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/10/11 10:44:41 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.6 2010/01/12 13:51:21 asau Exp $
 bin/GMXRC
 bin/GMXRC.bash
 bin/GMXRC.csh
@@ -77,11 +77,13 @@ bin/genrestr
 bin/gmxcheck
 bin/gmxdump
 bin/grompp
+${PLIST.x11}bin/highway
 bin/luck
 bin/make_edi
 bin/make_ndx
 bin/mdrun
 bin/mk_angndx
+${PLIST.x11}bin/ngmx
 bin/pdb2gmx
 bin/protonate
 bin/sigeps
@@ -93,6 +95,7 @@ bin/wheel
 bin/x2top
 bin/xplor2gmx.pl
 bin/xpm2ps
+${PLIST.x11}bin/xrama
 include/gromacs/3dview.h
 include/gromacs/assert.h
 include/gromacs/atomprop.h
