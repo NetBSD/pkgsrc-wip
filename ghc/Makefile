@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2010/01/12 04:13:52 phonohawk Exp $
+# $NetBSD: Makefile,v 1.17 2010/01/12 04:45:46 phonohawk Exp $
 
 DISTNAME=		ghc-${VERSION}
 VERSION=		6.12.1
@@ -22,7 +22,10 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 .include "../../mk/bsd.prefs.mk"
 
 # Unregisterised HC packages are architecture dependent. We have to
-# create more HC packages to support more architectures.
+# create more HC packages to support more architectures. Note that
+# these packages are built with integer-simple, not integer-gmp, to
+# reduce some complexity by not depending on the GMP. The resulting
+# registerised GHC uses integer-gmp so this won't be a problem.
 ONLY_FOR_PLATFORM= NetBSD-*-i386 FreeBSD-*-i386
 # Note: Darwin-*-powerpc is temporarily disabled for now. It shall
 # come back in the near future. Thanks for your patience.
