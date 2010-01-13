@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/01/13 11:20:41 obache Exp $
+bin/tegaki-recognize
