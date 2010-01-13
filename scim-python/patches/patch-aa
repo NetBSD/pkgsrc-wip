@@ -1,0 +1,31 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/01/13 11:22:16 obache Exp $
+
+--- configure.orig	2010-01-12 10:39:02.000000000 +0000
++++ configure
+@@ -20660,7 +20660,7 @@ if test "${enable_english_writer+set}" =
+ fi
+ 
+ 
+-if test "$enable_english_writer" == "force"; then
++if test "$enable_english_writer" = "force"; then
+ 	 if true; then
+   ENABLE_ENGLISH_WRITER_TRUE=
+   ENABLE_ENGLISH_WRITER_FALSE='#'
+@@ -20669,7 +20669,7 @@ else
+   ENABLE_ENGLISH_WRITER_FALSE=
+ fi
+ 
+-elif test "$enable_english_writer" == "no"; then
++elif test "$enable_english_writer" = "no"; then
+ 	 if false; then
+   ENABLE_ENGLISH_WRITER_TRUE=
+   ENABLE_ENGLISH_WRITER_FALSE='#'
+@@ -20679,7 +20679,7 @@ else
+ fi
+ 
+ else
+-	if test "$have_python_enchant" == "no"; then
++	if test "$have_python_enchant" = "no"; then
+ 		{ { echo "$as_me:$LINENO: error:
+ 		Your system does not have python-enchant, please install it or run \"./configure --disable-english-writer\".
+ 		You may also use \"./configure --enable-english-writer=force\" to foce build this english engine." >&5
