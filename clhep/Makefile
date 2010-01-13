@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2010/01/13 18:01:45 asau Exp $
+# $NetBSD: Makefile,v 1.12 2010/01/13 18:46:28 asau Exp $
 #
 
 DISTNAME=	clhep-2.0.4.5
@@ -19,6 +19,9 @@ USE_TOOLS+=	aclocal autoconf automake gmake perl
 GNU_CONFIGURE=	yes
 CONFIGURE_SCRIPT= ${TMPEXT_DIR}/configure
 USE_LANGUAGES=	c c++
+
+# Apply extra force to make it link on FreeBSD 6.3:
+LDFLAGS.FreeBSD=	-lc
 
 pre-configure:
 	${RUN} ${MKDIR} ${WRKSRC};	\
