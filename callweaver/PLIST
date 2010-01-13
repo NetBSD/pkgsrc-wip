@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/10/15 16:19:32 x400 Exp $
+@comment $NetBSD: PLIST,v 1.6 2010/01/13 13:21:04 x400 Exp $
 bin/callweaver
 sbin/streamplayer
 include/callweaver/acl.h
@@ -213,6 +213,7 @@ ${PLIST.mysql}lib/callweaver/modules/res_config_mysql.la
 ${PLIST.pgsql}lib/callweaver/modules/app_sql_postgres.la
 ${PLIST.pgsql}lib/callweaver/modules/cdr_pgsql.la
 ${PLIST.pgsql}lib/callweaver/modules/res_config_pgsql.la
+${PLIST.snmp}lib/callweaver/modules/res_snmp.la
 man/man8/callweaver.8
 man/man8/safe_callweaver.8
 sbin/callweaver_cli
