@@ -1,8 +1,5 @@
-$NetBSD: distinfo,v 1.5 2007/09/05 16:05:45 hfath Exp $
+$NetBSD: distinfo,v 1.6 2010/01/13 14:48:31 hfath Exp $
 
-SHA1 (TIVsm-API.i386.rpm) = 079846fa44894b6db96944f9beb4a7dbf009d08b
-RMD160 (TIVsm-API.i386.rpm) = f5881f086a34a1b849bc9fb507e13e6794c62f10
-Size (TIVsm-API.i386.rpm) = 1957315 bytes
-SHA1 (TIVsm-BA.i386.rpm) = 2f083dee16ac87e9683e8caf63fd95548ea0e26f
-RMD160 (TIVsm-BA.i386.rpm) = fe3672d052218b45f09c5b6b2b8fc7849a3c4dc2
-Size (TIVsm-BA.i386.rpm) = 14515561 bytes
+SHA1 (TSM525C_LINUX86.tar) = 46895fc7367dac6dd2e51cef99c423ebf1c6f6b2
+RMD160 (TSM525C_LINUX86.tar) = b47a03978d7cd0bc4cc0176de22a78c213d1c9df
+Size (TSM525C_LINUX86.tar) = 45260800 bytes
