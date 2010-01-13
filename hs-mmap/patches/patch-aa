@@ -1,0 +1,37 @@
+$NetBSD: patch-aa,v 1.1 2010/01/13 02:46:31 phonohawk Exp $
+
+--- mmap.cabal.orig	2009-10-28 12:30:01.000000000 +0000
++++ mmap.cabal
+@@ -18,10 +18,6 @@ Category: System
+ Build-type: Simple
+ Extra-Source-Files: cbits/HsMmap.h
+ 
+-Flag mmaptest
+-  Description: Generate mmaptest executable
+-  Default: False
+-
+ Library
+   Build-depends: base<5, bytestring
+   Extensions: ForeignFunctionInterface
+@@ -33,21 +29,3 @@ Library
+   else
+       C-sources: cbits/posix.c
+ 
+-Executable mmaptest
+-  Main-is: tests/mmaptest.hs
+-  if flag(mmaptest)
+-      Buildable: True
+-  else
+-      Buildable: False
+-  Build-depends: base<5, bytestring, HUnit, directory
+-  Extensions: ForeignFunctionInterface, ScopedTypeVariables, CPP
+-  Hs-source-dirs: .
+-  CC-options: -Wall -D_DEBUG
+-  Include-dirs: cbits
+-  if os(mingw32)
+-      cpp-options: -DWINDOWS
+-      C-sources: cbits/win32.c
+-      Build-depends: Win32
+-  else
+-      C-sources: cbits/posix.c
+-

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2009/11/10 07:34:50 phonohawk Exp $
+$NetBSD: distinfo,v 1.3 2010/01/13 02:46:31 phonohawk Exp $
 
 SHA1 (mmap-0.5.4.tar.gz) = 2180a65eb6a438d1b1c2d6c179dffe0986dda94e
 RMD160 (mmap-0.5.4.tar.gz) = 405d9a2489afc7e8d692611f5f4f8cf113c5d1ee
 Size (mmap-0.5.4.tar.gz) = 11616 bytes
+SHA1 (patch-aa) = 25e31c3eaa8ee0039842d8a5c4c2c308b05a3ebf
