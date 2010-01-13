@@ -1,8 +1,12 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:45 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.3 2010/01/13 04:21:32 phonohawk Exp $
 lib/pcre-light-${PKGVERSION}/${HASKELL_VERSION}/HSpcre-light-${PKGVERSION}.o
 lib/pcre-light-${PKGVERSION}/${HASKELL_VERSION}/Text/Regex/PCRE/Light.hi
+lib/pcre-light-${PKGVERSION}/${HASKELL_VERSION}/Text/Regex/PCRE/Light.p_hi
 lib/pcre-light-${PKGVERSION}/${HASKELL_VERSION}/Text/Regex/PCRE/Light/Base.hi
+lib/pcre-light-${PKGVERSION}/${HASKELL_VERSION}/Text/Regex/PCRE/Light/Base.p_hi
 lib/pcre-light-${PKGVERSION}/${HASKELL_VERSION}/Text/Regex/PCRE/Light/Char8.hi
+lib/pcre-light-${PKGVERSION}/${HASKELL_VERSION}/Text/Regex/PCRE/Light/Char8.p_hi
 lib/pcre-light-${PKGVERSION}/${HASKELL_VERSION}/libHSpcre-light-${PKGVERSION}.a
+lib/pcre-light-${PKGVERSION}/${HASKELL_VERSION}/libHSpcre-light-${PKGVERSION}_p.a
 lib/pcre-light-${PKGVERSION}/${HASKELL_VERSION}/package-description
 share/doc/pcre-light-${PKGVERSION}/LICENSE
