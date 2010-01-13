@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/01/13 11:18:28 obache Exp $
+${PYSITELIB}/tegakigtk/__init__.py
+${PYSITELIB}/tegakigtk/__init__.pyc
+${PYSITELIB}/tegakigtk/__init__.pyo
+${PYSITELIB}/tegakigtk/canvas.py
+${PYSITELIB}/tegakigtk/canvas.pyc
+${PYSITELIB}/tegakigtk/canvas.pyo
+${PYSITELIB}/tegakigtk/chartable.py
+${PYSITELIB}/tegakigtk/chartable.pyc
+${PYSITELIB}/tegakigtk/chartable.pyo
+${PYSITELIB}/tegakigtk/iconview.py
+${PYSITELIB}/tegakigtk/iconview.pyc
+${PYSITELIB}/tegakigtk/iconview.pyo
+${PYSITELIB}/tegakigtk/recognizer.py
+${PYSITELIB}/tegakigtk/recognizer.pyc
+${PYSITELIB}/tegakigtk/recognizer.pyo
+${PYSITELIB}/tegakigtk/renderers.py
+${PYSITELIB}/tegakigtk/renderers.pyc
+${PYSITELIB}/tegakigtk/renderers.pyo
+share/tegaki/icons/handwriting.png
