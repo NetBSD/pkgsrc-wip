@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2009/10/02 01:54:10 phonohawk Exp $
+# $NetBSD: Makefile,v 1.3 2010/01/13 06:33:13 phonohawk Exp $
 #
 
-DISTNAME=	convertible-1.0.5
+DISTNAME=	convertible-1.0.8
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
