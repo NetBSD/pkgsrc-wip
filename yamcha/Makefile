@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/01/23 07:39:31 obache Exp $
+# $NetBSD: Makefile,v 1.2 2010/01/13 10:45:11 obache Exp $
 #
 
-DISTNAME=	yamcha-0.33
-CATEGORIES=	devel
-MASTER_SITES=	http://www.chasen.org/~taku/software/yamcha/src/
+.include "Makefile.common"
 
-MAINTAINER=	obache@NetBSD.org
-HOMEPAGE=	http://www.chasen.org/~taku/software/yamcha/
+CATEGORIES=	devel
+
 COMMENT=	Yet Another Multipurpose CHunk Annotator
 
 PKG_DESTDIR_SUPPORT=	user-destdir

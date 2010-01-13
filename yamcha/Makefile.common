@@ -1,0 +1,15 @@
+# $NetBSD: Makefile.common,v 1.1 2010/01/13 10:45:11 obache Exp $
+# used by wip/p5-yamcha/Makefile
+# used by wip/py-yamcha/Makefile
+# used by wip/ruby-yamcha/Makefile
+
+DISTNAME=	yamcha-0.33
+CATEGORIES=	textproc
+MASTER_SITES=	http://www.chasen.org/~taku/software/yamcha/src/
+
+DISTINFO_FILE=	${.CURDIR}/../../wip/yamcha/distinfo
+PATCHDIR=	${.CURDIR}/../../wip/yamcha/patches
+
+MAINTAINER?=	obache@NetBSD.org
+HOMEPAGE=	http://www.chasen.org/~taku/software/yamcha/
+LICENSE=	gnu-lgpl-v2.1
