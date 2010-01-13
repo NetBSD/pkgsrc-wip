@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/01/10 13:10:21 obache Exp $
+# $NetBSD: Makefile,v 1.6 2010/01/13 13:01:36 obache Exp $
 #
 
 DISTNAME=	ibus-hangul-1.2.0.20100102
@@ -17,7 +17,13 @@ USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		pkg-config gmake msgfmt intltool
 
+SUBST_CLASSES+=		epython
+SUBST_STAGE.epython=	pre-configure
+SUBST_FILES.epython=	setup/ibus-setup-hangul.in
+SUBST_SED.epython=	-e 's;exec python;exec ${PYTHONBIN};g'
+
 BUILDLINK_API_DEPENDS.libhangul+=	libhangul>=0.0.10
 .include "../../inputmethod/libhangul/buildlink3.mk"
 .include "../../wip/ibus/buildlink3.mk"
+.include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
