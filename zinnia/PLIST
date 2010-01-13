@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/01/13 11:12:45 obache Exp $
+bin/zinnia
+bin/zinnia_convert
+bin/zinnia_learn
+include/zinnia.h
+include/zinnia/zinnia.h
+lib/libzinnia.la
+lib/pkgconfig/zinnia.pc
