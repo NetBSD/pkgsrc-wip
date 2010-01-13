@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3759 2010/01/11 08:58:53 obache Exp $
+# $Id: Makefile,v 1.3760 2010/01/13 10:55:52 obache Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1620,9 +1620,11 @@ SUBDIR+=	p5-XML-DOM-XPath
 SUBDIR+=	p5-XML-DT
 SUBDIR+=	p5-XML-DTDParser
 SUBDIR+=	p5-XML-Writer-Simple
+SUBDIR+=	p5-cabocha
 SUBDIR+=	p5-clutter
 SUBDIR+=	p5-mozldap
 SUBDIR+=	p5-qt3
+SUBDIR+=	p5-yamcha
 SUBDIR+=	packman
 SUBDIR+=	paexec
 SUBDIR+=	pagetools
@@ -1793,6 +1795,7 @@ SUBDIR+=	py-bitstring
 SUBDIR+=	py-bsddb
 SUBDIR+=	py-buildbot
 SUBDIR+=	py-cElementTree
+SUBDIR+=	py-cabocha
 SUBDIR+=	py-chm
 SUBDIR+=	py-clonedigger
 SUBDIR+=	py-clutter
@@ -1924,6 +1927,7 @@ SUBDIR+=	py-xlrd
 SUBDIR+=	py-xmiparser
 SUBDIR+=	py-xmpppy
 SUBDIR+=	py-xsdb
+SUBDIR+=	py-yamcha
 SUBDIR+=	py-yapgvb
 SUBDIR+=	py-zeitgeist
 SUBDIR+=	pydance
@@ -1993,6 +1997,7 @@ SUBDIR+=	rthread
 SUBDIR+=	rtpbreak
 SUBDIR+=	ruby-GalleryAdministrator
 SUBDIR+=	ruby-actionmessenger
+SUBDIR+=	ruby-cabocha
 SUBDIR+=	ruby-dnsruby
 SUBDIR+=	ruby-git
 SUBDIR+=	ruby-ming
@@ -2000,6 +2005,7 @@ SUBDIR+=	ruby-term-ansicolor
 SUBDIR+=	ruby-thor
 SUBDIR+=	ruby-treetop
 SUBDIR+=	ruby-xmpp4r
+SUBDIR+=	ruby-yamcha
 SUBDIR+=	runawk
 SUBDIR+=	runit
 SUBDIR+=	s3funnel
