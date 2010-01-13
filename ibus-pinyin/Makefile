@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/01/10 13:10:21 obache Exp $
+# $NetBSD: Makefile,v 1.5 2010/01/13 13:13:45 obache Exp $
 #
 
 DISTNAME=	ibus-pinyin-1.2.0.20090915
@@ -30,6 +30,11 @@ DBTAR=		pinyin-database-${DBVER}.tar.bz2
 post-extract:
 	mv ${WRKDIR}/py.db ${WRKSRC}/engine
 	touch -r ${WRKSRC}/engine/py.db ${WRKSRC}/engine/${DBTAR}
+
+SUBST_CLASSES+=		epython
+SUBST_STAGE.epython=	pre-configure
+SUBST_FILES.epython=	engine/ibus-engine-pinyin.in setup/ibus-setup-pinyin.in
+SUBST_SED.epython=	-e 's;exec python;exec ${PYTHONBIN};g'
 
 .include "../../wip/ibus/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
