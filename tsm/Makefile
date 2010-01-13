@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2010/01/13 14:48:30 hfath Exp $
+# $NetBSD: Makefile,v 1.15 2010/01/13 14:55:06 hfath Exp $
 
 DISTNAME=	tsm-5.2.5
 CATEGORIES=	sysutils
@@ -28,7 +28,7 @@ BUILD_DIRS=		# empty
 
 USE_TOOLS+=		rpm2pkg
 EMUL_PKG_FMT=		rpm
-RPM2PKG_PREFIX=		${PREFIX}
+RPM2PKG_PREFIX=		${DESTDIR}${PREFIX}
 RPM2PKG_SUBPREFIX=	${EMULSUBDIR}
 RPM2PKG_STRIP=		0
 RPM2PKG_STAGE=		do-install
