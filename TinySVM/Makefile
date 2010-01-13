@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/01/23 07:34:37 obache Exp $
+# $NetBSD: Makefile,v 1.2 2010/01/13 10:57:38 obache Exp $
 #
 
 DISTNAME=	TinySVM-0.09
-CATEGORIES=	devel
+CATEGORIES=	math
 MASTER_SITES=	http://www.chasen.org/~taku/software/TinySVM/src/
 
 MAINTAINER=	obache@NetBSD.org
