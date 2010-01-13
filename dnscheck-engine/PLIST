@@ -1,15 +1,13 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/04/06 14:56:32 pettai Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/01/13 23:43:49 pettai Exp $
 ${PERL5_SUB_INSTALLVENDORBIN}/dnscheck
 ${PERL5_SUB_INSTALLVENDORBIN}/dnscheck-12hourmailer
 ${PERL5_SUB_INSTALLVENDORBIN}/dnscheck-dispatcher
 ${PERL5_SUB_INSTALLVENDORBIN}/dnscheck-hostsyntax
-${PERL5_SUB_INSTALLVENDORBIN}/dnscheck-nsdiff
 ${PERL5_SUB_INSTALLVENDORBIN}/dnscheck-preflight
 ${PERL5_SUB_INSTALLVENDORBIN}/dnscheck-zonediff
 ${PERL5_SUB_INSTALLVENDORMAN1DIR}/dnscheck-12hourmailer.1
 ${PERL5_SUB_INSTALLVENDORMAN1DIR}/dnscheck-dispatcher.1
 ${PERL5_SUB_INSTALLVENDORMAN1DIR}/dnscheck-hostsyntax.1
-${PERL5_SUB_INSTALLVENDORMAN1DIR}/dnscheck-nsdiff.1
 ${PERL5_SUB_INSTALLVENDORMAN1DIR}/dnscheck-preflight.1
 ${PERL5_SUB_INSTALLVENDORMAN1DIR}/dnscheck-zonediff.1
 ${PERL5_SUB_INSTALLVENDORMAN1DIR}/dnscheck.1
