@@ -1,0 +1,16 @@
+$NetBSD: patch-al,v 1.1 2010/01/14 22:09:23 asau Exp $
+
+Flawed logic: NetBSD has procfs too and may have /proc/cpuinfo as well,
+but it isn't Linux.
+
+--- opal/mca/pstat/linux/configure.m4.orig	2009-11-04 17:57:36.000000000 +0300
++++ opal/mca/pstat/linux/configure.m4	2010-01-14 02:16:08.000000000 +0300
+@@ -23,7 +23,7 @@
+ AC_DEFUN([MCA_pstat_linux_CONFIG],[
+ 
+    case "${host}" in
+-   i?86-*|x86_64*|ia64-*|powerpc-*|powerpc64-*|sparc*-*)
++   i?86-*linux*|x86_64*linux*|ia64-*linux*|powerpc-*linux*|powerpc64-*linux*|sparc*-*linux*)
+               AS_IF([test -r "/proc/cpuinfo"],
+                      [pstat_linux_happy="yes"],
+                      [pstat_linux_happy="no"])

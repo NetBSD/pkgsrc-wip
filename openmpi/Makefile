@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2010/01/13 21:28:09 asau Exp $
+# $NetBSD: Makefile,v 1.23 2010/01/14 22:09:23 asau Exp $
 
 DISTNAME=	openmpi-1.5a1r22193
 PKGNAME=	openmpi-1.4.99.22193
@@ -27,6 +27,11 @@ CONFIGURE_ARGS+=	OPAL_HAVE_LTDL_ADVISE=0
 .include "options.mk"
 
 TEST_TARGET=	check
+
+USE_TOOLS+=	aclocal autoconf automake bash perl
+REPLACE_BASH=	autogen.sh
+pre-configure:	replace-interpreter
+	cd $(WRKSRC) && $(BASH) autogen.sh
 
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
