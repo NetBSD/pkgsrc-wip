@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/01/14 12:12:00 obache Exp $
+
+SHA1 (ibus-table-code-1.2.0.20100108.tar.gz) = e7dfd12690fc2938e211be148050cc844a43bbb8
+RMD160 (ibus-table-code-1.2.0.20100108.tar.gz) = 7e363cbcc0e69b3b0387c0ee2a5294a3ad30a46c
+Size (ibus-table-code-1.2.0.20100108.tar.gz) = 525262 bytes
+SHA1 (patch-aa) = 1b9e346d27fb58e21a32039762b9472c7d367052
