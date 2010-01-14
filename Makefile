@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3764 2010/01/14 10:29:33 obache Exp $
+# $Id: Makefile,v 1.3765 2010/01/14 10:53:02 obache Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2184,7 +2184,21 @@ SUBDIR+=	teco
 SUBDIR+=	tegaki-pygtk
 SUBDIR+=	tegaki-python
 SUBDIR+=	tegaki-recognize
+SUBDIR+=	tegaki-tools
+SUBDIR+=	tegaki-train
+SUBDIR+=	tegaki-wagomu
+SUBDIR+=	tegaki-wagomu-japanese
+SUBDIR+=	tegaki-wagomu-japanese-joyo
+SUBDIR+=	tegaki-wagomu-japanese-kyoiku
+SUBDIR+=	tegaki-wagomu-simplified-chinese
 SUBDIR+=	tegaki-zinnia-japanese
+SUBDIR+=	tegaki-zinnia-japanese-joyo
+SUBDIR+=	tegaki-zinnia-japanese-kyoiku
+SUBDIR+=	tegaki-zinnia-japanese-light
+SUBDIR+=	tegaki-zinnia-simplified-chinese
+SUBDIR+=	tegaki-zinnia-simplified-chinese-light
+SUBDIR+=	tegaki-zinnia-traditional-chinese
+SUBDIR+=	tegaki-zinnia-traditional-chinese-light
 SUBDIR+=	tellico
 SUBDIR+=	tendra
 SUBDIR+=	tendra.org-sid
