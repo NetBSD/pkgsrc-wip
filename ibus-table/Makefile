@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/01/13 10:59:44 obache Exp $
+# $NetBSD: Makefile,v 1.5 2010/01/14 11:56:23 obache Exp $
 #
 
 DISTNAME=	ibus-table-1.2.0.20100111
@@ -23,5 +23,12 @@ SUBST_STAGE.prefix=	pre-configure
 SUBST_FILES.prefix=	engine/tabcreatedb.py
 SUBST_SED.prefix=	-e 's|/usr/share|${PREFIX}/share|g'
 
+SUBST_CLASSES+=		epython
+SUBST_STAGE.epython=	pre-configure
+SUBST_FILES.epython=	engine/ibus-engine-table.in
+SUBST_FILES.epython=	engine/ibus-table-createdb.in
+SUBST_SED.epython=	-e 's;exec python;exec ${PYTHONBIN};g'
+
 .include "../../wip/ibus/buildlink3.mk"
+.include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
