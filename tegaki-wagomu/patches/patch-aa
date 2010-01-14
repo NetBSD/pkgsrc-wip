@@ -1,0 +1,41 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/01/14 10:37:26 obache Exp $
+
+--- wagomu.cpp.orig	2009-08-30 08:38:44.000000000 +0000
++++ wagomu.cpp
+@@ -74,7 +74,7 @@ Character::Character(unsigned int n_vec,
+         ptr += diff;
+         ((char*)ptr)[-1]= diff;
+         */
+-        points = (float *) memalign(16, n_vec * VEC_DIM_MAX *
++       posix_memalign((void**)&points, 16, n_vec * VEC_DIM_MAX *
+                                         sizeof(float));
+ }
+ 
+@@ -194,16 +194,16 @@ bool Recognizer::open(char *path) {
+     max_n_vectors = get_max_n_vectors();
+ 
+ #ifdef __SSE__
+-    dtw1v = (wg_v4sf *) memalign(16, max_n_vectors * VEC_DIM_MAX *
++    posix_memalign((void**)&dtw1v, 16, max_n_vectors * VEC_DIM_MAX *
+                                      sizeof(wg_v4sf));
+-    dtw2v = (wg_v4sf *) memalign(16, max_n_vectors * VEC_DIM_MAX *
++    posix_memalign((void**)&dtw2v, 16, max_n_vectors * VEC_DIM_MAX *
+                                      sizeof(wg_v4sf));
+     dtw1 = (float *) dtw1v;
+     dtw2 = (float *) dtw2v;
+ #else
+-    dtw1 = (float *) memalign(16, max_n_vectors * VEC_DIM_MAX *
++    posix_memalign((void**)&dtw1, 16, max_n_vectors * VEC_DIM_MAX *
+                                   sizeof(float));
+-    dtw2 = (float *) memalign(16, max_n_vectors * VEC_DIM_MAX *
++    posix_memalign((void**)&dtw2, 16, max_n_vectors * VEC_DIM_MAX *
+                                   sizeof(float));
+ #endif
+ 
+@@ -562,4 +562,4 @@ char* Recognizer::get_error_message() {
+     return error_msg;
+ }
+ 
+-}
+\ No newline at end of file
++}
