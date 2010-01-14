@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/01/14 10:27:45 obache Exp $
+# $NetBSD: Makefile,v 1.2 2010/01/14 11:10:39 obache Exp $
 #
 
 DISTNAME=	ibus-table-cangjie-1.2.0.20100106
@@ -19,5 +19,4 @@ USE_LANGUAGES=	c
 USE_TOOLS+=	pkg-config
 
 .include "../../wip/ibus-table/buildlink3.mk"
-.include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
