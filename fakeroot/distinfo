@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/01/14 11:16:47 cheusov Exp $
+
+SHA1 (fakeroot_1.14.4.orig.tar.bz2) = 80fd293a3969e6ee8dbae0a979a5e817a9a6c7f3
+RMD160 (fakeroot_1.14.4.orig.tar.bz2) = 821a48ca2db3e385b7e993ad29f1ab4d006d8120
+Size (fakeroot_1.14.4.orig.tar.bz2) = 280223 bytes

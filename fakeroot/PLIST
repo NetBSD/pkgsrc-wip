@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/01/14 11:16:47 cheusov Exp $
+bin/faked
+bin/fakeroot
+lib/libfakeroot.la
+man/es/man1/faked.1
+man/es/man1/fakeroot.1
+man/fr/man1/faked.1
+man/fr/man1/fakeroot.1
+man/man1/faked.1
+man/man1/fakeroot.1
+man/nl/man1/faked.1
+man/nl/man1/fakeroot.1
+man/sv/man1/faked.1
+man/sv/man1/fakeroot.1
