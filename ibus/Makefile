@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2010/01/11 10:05:12 obache Exp $
+# $NetBSD: Makefile,v 1.12 2010/01/14 12:55:04 obache Exp $
 #
 
 DISTNAME=	ibus-1.2.0.20100111
@@ -43,7 +43,7 @@ SUBST_SED.iso=		-e "s;/usr/share;${BUILDLINK_PREFIX.iso-codes}/share;"
 
 SUBST_CLASSES+=		epython
 SUBST_STAGE.epython=	pre-configure
-SUBST_FILES.epython=	ui/gtk/ibus-ui-gtk.in
+SUBST_FILES.epython=	setup/ibus-setup.in ui/gtk/ibus-ui-gtk.in
 SUBST_SED.epython=	-e 's;exec python;exec ${PYTHONBIN};g'
 
 .include "../../devel/GConf/schemas.mk"
