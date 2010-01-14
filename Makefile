@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3762 2010/01/13 11:32:43 obache Exp $
+# $Id: Makefile,v 1.3763 2010/01/14 08:34:27 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1742,6 +1742,7 @@ SUBDIR+=	pop3.proxy
 SUBDIR+=	postal2-mpdemo-bin
 SUBDIR+=	postgresql-uniqueidentifier
 SUBDIR+=	postoffice
+SUBDIR+=  postr
 SUBDIR+=	pound
 SUBDIR+=	ppp
 SUBDIR+=	ppr
