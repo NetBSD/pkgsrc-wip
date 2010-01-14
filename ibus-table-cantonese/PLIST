@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/01/14 11:08:41 obache Exp $
+share/ibus-table/icons/cantonese.png
+share/ibus-table/icons/cantonhk.png
+share/ibus-table/icons/jyutping.png
+share/ibus-table/tables/cantonese.db
+share/ibus-table/tables/cantonhk.db
+share/ibus-table/tables/jyutping.db
