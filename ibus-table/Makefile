@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/01/14 11:56:23 obache Exp $
+# $NetBSD: Makefile,v 1.6 2010/01/15 11:18:42 obache Exp $
 #
 
 DISTNAME=	ibus-table-1.2.0.20100111
@@ -9,6 +9,8 @@ MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/ibus/
 COMMENT=	The Table engine for IBus platform
 LICENSE=	gnu-lgpl-v2.1
+
+DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -26,7 +28,7 @@ SUBST_SED.prefix=	-e 's|/usr/share|${PREFIX}/share|g'
 SUBST_CLASSES+=		epython
 SUBST_STAGE.epython=	pre-configure
 SUBST_FILES.epython=	engine/ibus-engine-table.in
-SUBST_FILES.epython=	engine/ibus-table-createdb.in
+SUBST_FILES.epython+=	engine/ibus-table-createdb.in
 SUBST_SED.epython=	-e 's;exec python;exec ${PYTHONBIN};g'
 
 .include "../../wip/ibus/buildlink3.mk"
