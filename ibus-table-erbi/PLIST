@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/01/15 11:29:21 obache Exp $
+share/ibus-table/icons/erbi-qs.svg
+share/ibus-table/icons/erbi.png
+share/ibus-table/tables/erbi.db
+share/ibus-table/tables/erbi_qs.db
