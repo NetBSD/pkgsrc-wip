@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2010/01/12 11:29:35 obache Exp $
+# $NetBSD: Makefile,v 1.8 2010/01/15 05:08:41 obache Exp $
 #
 
-DISTNAME=	ibus-anthy-1.2.0.20091127
+DISTNAME=	ibus-anthy-1.2.0.20100115
 CATEGORIES=	inputmethod japanese
 MASTER_SITES=	http://ibus.googlecode.com/files/
 
@@ -37,5 +37,6 @@ SUBST_SED.epython=	-e 's;exec python;exec ${PYTHONBIN};g'
 PY_PATCHPLIST=		yes
 .include "../../lang/python/extension.mk"
 .include "../../inputmethod/anthy/buildlink3.mk"
+BUILDLINK_API_DEPENDS.ibus+=	ibus>=1.2.0.20100111
 .include "../../wip/ibus/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

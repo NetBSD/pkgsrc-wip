@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2009/11/01 08:48:40 obache Exp $
+$NetBSD: patch-aa,v 1.3 2010/01/15 05:08:41 obache Exp $
 
---- configure.orig	2009-09-17 09:08:39.000000000 +0000
+--- configure.orig	2010-01-15 03:27:24.000000000 +0000
 +++ configure
-@@ -17317,7 +17317,7 @@ $as_echo "no" >&6; }
+@@ -18156,7 +18156,7 @@ $as_echo "no" >&6; }
  fi
  
  
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.2 2009/11/01 08:48:40 obache Exp $
       { { $as_echo "$as_me:$LINENO: error: can not find swig" >&5
  $as_echo "$as_me: error: can not find swig" >&2;}
     { (exit 1); exit 1; }; }
-@@ -17595,7 +17595,7 @@ $as_echo "no" >&6; }
+@@ -18464,7 +18464,7 @@ $as_echo "no" >&6; }
  fi
  
  

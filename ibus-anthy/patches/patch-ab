@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.2 2009/11/01 08:48:40 obache Exp $
+$NetBSD: patch-ab,v 1.3 2010/01/15 05:08:41 obache Exp $
 
---- engine/Makefile.in.orig	2009-09-17 09:08:37.000000000 +0000
+--- engine/Makefile.in.orig	2010-01-15 03:27:22.000000000 +0000
 +++ engine/Makefile.in
-@@ -707,7 +707,7 @@ uninstall-am: uninstall-anthyDATA uninst
+@@ -787,7 +787,7 @@ uninstall-am: uninstall-anthyDATA uninst
  
  
  anthy.py anthy_wrap.c: anthy.i
