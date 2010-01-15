@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.7 2010/01/15 14:48:59 hfath Exp $
+$NetBSD: MESSAGE,v 1.8 2010/01/15 14:55:36 hfath Exp $
 
 Tivoli Storage Manager Client has been installed in
 		${EMULDIR}/opt/tivoli
@@ -23,7 +23,8 @@ NetBSD configuration hints:
 
 - The environment variables DSM_DIR, DSM_CONFIG, DSM_LOG
   need to be set properly. DSM_LOG may inadvertently end up in the emul
-  shadow hierarchy.
+  shadow hierarchy, unless you make ${EMULDIR}/var/log a symbolic
+  link to /../var/log/.
   There is a sample start script in ${PREFIX}/share/examples/tsm.
 
 - For backing up the native filesystem hierarchy, use a construct
