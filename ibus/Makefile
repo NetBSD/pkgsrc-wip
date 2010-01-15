@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2010/01/14 12:55:04 obache Exp $
+# $NetBSD: Makefile,v 1.13 2010/01/15 05:48:26 obache Exp $
 #
 
 DISTNAME=	ibus-1.2.0.20100111
@@ -48,6 +48,7 @@ SUBST_SED.epython=	-e 's;exec python;exec ${PYTHONBIN};g'
 
 .include "../../devel/GConf/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 PY_PATCHPLIST=	yes
 .include "../../lang/python/extension.mk"
 BUILDLINK_API_DEPENDS.dbus-glib+=	dbus-glib>=0.74
