@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/08/19 16:49:23 udontknow Exp $
+$NetBSD: distinfo,v 1.2 2010/01/16 17:08:00 tnn2 Exp $
 
 SHA1 (svrcore-4.0.4.tar.bz2) = cfd07bbffeab10c4edca331b980a3f614dac996e
 RMD160 (svrcore-4.0.4.tar.bz2) = d3d6e7bfad7aa3c8f0e51b270e13b7b514f29bcd
 Size (svrcore-4.0.4.tar.bz2) = 217076 bytes
-SHA1 (patch-aa) = 2c4c893e4859e5741798644c6639b920df46a073
-SHA1 (patch-ab) = e62389d8366aeae46fd84d1d90815e60e35f8399
-SHA1 (patch-ac) = 0ba256c6d2bae79ea1ec07150365f9ee860f035a
+SHA1 (patch-aa) = 954099ce0fdfa927ac7f3553a45807b89920ac64

@@ -1,15 +1,22 @@
-$NetBSD: patch-aa,v 1.1.1.1 2009/08/19 16:49:23 udontknow Exp $
+$NetBSD: patch-aa,v 1.2 2010/01/16 17:08:00 tnn2 Exp $
 
---- src/pin.c.orig	2006-12-14 15:07:32.000000000 -0200
-+++ src/pin.c
-@@ -45,8 +45,8 @@
- #include <svrcore.h>
+--- configure.orig	2010-01-16 16:58:11.000000000 +0000
++++ configure
+@@ -19882,6 +19882,8 @@ fi
  
- #include <string.h>
--#include <pk11func.h>
--#include <seccomon.h>
-+#include <nss/pk11func.h>
-+#include <nss/seccomon.h>
+ NSS_CFLAGS="$nss_inc"
+ NSS_LIBS="$nss_lib -lssl3 -lnss3"
++NSS_CFLAGS="`pkg-config --cflags nss`"
++NSS_LIBS="`pkg-config --libs nss`"
+ if test -z "$nss_ver" ; then
+ 	nss_ver=3.11.4
+ fi
+@@ -20067,6 +20069,8 @@ fi
  
- /*
-  * Global state
+ NSPR_CFLAGS="$nspr_inc"
+ NSPR_LIBS="$nspr_lib -lplds4 -lplc4 -lnspr4"
++NSPR_CFLAGS="`pkg-config --cflags nspr`"
++NSPR_LIBS="`pkg-config --libs nspr`"
+ if test -z "$nspr_ver" ; then
+ 	nspr_ver=4.6.4
+ fi
