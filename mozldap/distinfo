@@ -1,11 +1,8 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/08/21 03:45:36 udontknow Exp $
+$NetBSD: distinfo,v 1.2 2010/01/16 17:15:41 tnn2 Exp $
 
 SHA1 (mozldap-6.0.6.tar.gz) = db7b8d845f8917638512ae92381675fe76432eff
 RMD160 (mozldap-6.0.6.tar.gz) = d932813f0b6f5808c8f0b255718a413d6a6e6ba5
 Size (mozldap-6.0.6.tar.gz) = 708821 bytes
-SHA1 (patch-aa) = 6a9ab0ba722d9acbe1a474b724be3cac3ca0b613
-SHA1 (patch-ab) = e0db3b52188a094797ab502e3eda111df400ed3b
-SHA1 (patch-ac) = 26142a3b4239e198ca49b29d2fb125d2051486cc
-SHA1 (patch-ad) = c1d14d9534fa42e1c94da2b258ba3171da035d6f
+SHA1 (patch-aa) = 38225c5c1deae9ac94ffabe685b96095cd62ab4b
 SHA1 (patch-ae) = 2e71b4ea08e7712814109422dc740ed188287d73
 SHA1 (patch-af) = 22b1336501fa7dffb06edef089ca98890c620c3a
