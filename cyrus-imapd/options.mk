@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2010/01/16 12:10:30 obache Exp $
+# $NetBSD: options.mk,v 1.2 2010/01/16 12:25:08 obache Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.cyrus-imapd
@@ -7,6 +7,8 @@ PKG_SUPPORTED_OPTIONS+=	bdb mysql pgsql sqlite
 PKG_SUGGESTED_OPTIONS=	bdb
 
 .include "../../mk/bsd.options.mk"
+
+PLIST_VARS+=	ldap
 
 .if !empty(PKG_OPTIONS:Mkerberos)
 .  if empty(PKG_OPTIONS:Mgssapi)
@@ -35,10 +37,9 @@ CONFIGURE_ARGS+=	--disable-gssapi
 .if !empty(PKG_OPTIONS:Mldap)
 .  include "../../databases/openldap-client/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-ldap=${BUILDLINK_PREFIX.openldap-client}
-PLIST_SUBST+=		LDAP=
+PLIST.ldap=		yes
 .else
 CONFIGURE_ARGS+=	--without-ldap
-PLIST_SUBST+=		LDAP="@comment "
 .endif
 
 .if !empty(PKG_OPTIONS:Msnmp)
