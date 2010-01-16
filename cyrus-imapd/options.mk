@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.2 2010/01/16 12:25:08 obache Exp $
+# $NetBSD: options.mk,v 1.3 2010/01/16 12:31:10 obache Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.cyrus-imapd
-PKG_SUPPORTED_OPTIONS=	gssapi kerberos kerberos4 ldap snmp zephyr
+PKG_SUPPORTED_OPTIONS=	gssapi kerberos kerberos4 ldap snmp
 PKG_SUPPORTED_OPTIONS+=	bdb mysql pgsql sqlite
 PKG_SUGGESTED_OPTIONS=	bdb
 
