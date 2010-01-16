@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/10/10 19:38:49 leot1990 Exp $
+$NetBSD: distinfo,v 1.2 2010/01/16 20:34:54 leot1990 Exp $
 
-SHA1 (xcowsay-1.1.tar.gz) = 1a9ab65efe6d8ef129715798a025a6d1d9afac03
-RMD160 (xcowsay-1.1.tar.gz) = f969660532570963d302c61a7caddbdeabccbe50
-Size (xcowsay-1.1.tar.gz) = 258978 bytes
+SHA1 (xcowsay-1.2.tar.gz) = b42859a189af71535605e2e0ce53468d5b8e2582
+RMD160 (xcowsay-1.2.tar.gz) = e7951d345357db64a96617079baba02ff92ccf92
+Size (xcowsay-1.2.tar.gz) = 264592 bytes
