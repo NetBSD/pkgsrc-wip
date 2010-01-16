@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2010/01/16 12:10:30 obache Exp $
+# $NetBSD: Makefile,v 1.25 2010/01/16 12:13:03 obache Exp $
 
 DISTNAME=	cyrus-imapd-2.3.16
 CATEGORIES=	mail
@@ -51,7 +51,7 @@ CONFIGURE_ARGS+=	--enable-murder
 CONFIGURE_ARGS+=	--enable-nntp
 CONFIGURE_ARGS+=	--enable-replication
 
-include "options.mk"
+.include "options.mk"
 
 .if exists(/usr/bin/compile_et)
 COMERRBASE?=		/usr
