@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/07/27 09:43:54 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2010/01/16 05:20:28 minskim Exp $
 # TeX Live Revision 14143
 
 DISTNAME=	kpathsea
@@ -17,5 +17,5 @@ TEXLIVE_IGNORE_PATTERNS=	texmf/web2c/fmtutil.cnf \
 				texmf/web2c/mktex[a-z]* \
 				texmf/web2c/texmf.cnf
 
-.include "../../wip/mk/tlpkg.mk"
+.include "../../print/texlive/package.mk"
 .include "../../mk/bsd.pkg.mk"

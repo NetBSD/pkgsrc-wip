@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/07/06 18:49:31 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2010/01/16 05:20:28 minskim Exp $
 # TeX Live Revision 14095
 
 DISTNAME=	texdoc
@@ -15,7 +15,7 @@ REPLACE_PERL=		bin/texdoctk
 REPLACE_TEXLUA=		bin/texdoc
 TEX_TEXMF_DIRS+=	${PREFIX}/share/texmf
 
-.include "../../wip/mk/tlpkg.mk"
+.include "../../print/texlive/package.mk"
 
 post-extract:
 	${MKDIR} ${WRKSRC}/bin
