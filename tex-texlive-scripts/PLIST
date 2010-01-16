@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/07/05 22:37:26 minskim Exp $
-bin/rungs
-share/texmf/scripts/texlive/lua/texlive/getopt.tlu
-share/texmf/scripts/texlive/lua/texlive/tlpdb.tlu
-share/texmf/scripts/texlive/lua/texlive/utils.tlu
-share/texmf/scripts/texlive/test-tlpdb.tlu
-share/texmf/scripts/texlive/texconf.tlu

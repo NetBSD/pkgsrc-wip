@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3768 2010/01/15 11:53:20 obache Exp $
+# $Id: Makefile,v 1.3769 2010/01/16 04:45:52 minskim Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2220,7 +2220,6 @@ SUBDIR+=	tex-kochi-ttf
 SUBDIR+=	tex-kpathsea
 SUBDIR+=	tex-texdoc
 SUBDIR+=	tex-texdoc-doc
-SUBDIR+=	tex-texlive-scripts
 SUBDIR+=	texlive
 SUBDIR+=	texlive-bin
 SUBDIR+=	texlive-texmf-base
