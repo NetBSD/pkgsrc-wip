@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.12 2010/01/06 12:24:37 gregoire Exp $
+# $NetBSD: Makefile,v 1.13 2010/01/17 10:55:53 gregoire Exp $
 #
 
 DISTNAME=		grub-bazaar-snapshot
 PKGNAME=		grub2-${TODAY}
 CATEGORIES=		sysutils
 
-MAINTAINER=		gregoire.sutre@labri.fr
+MAINTAINER=		gregoire.sutre@gmail.com
 HOMEPAGE=		http://www.gnu.org/software/grub/grub-2.en.html
 COMMENT=		GRand Unified Bootloader, version 2 (development snapshot)
 LICENSE=		gnu-gpl-v3
@@ -109,13 +109,6 @@ SUBST_SED.fix-paths-3+=		-e 's,"/boot/grub","/boot/grub2",g'
 
 # This package uses help2man to generate man pages.
 BUILD_DEPENDS+=		help2man>=1.36:../../converters/help2man
-
-# Since revision 1974 (2009-12-22) of the bazaar trunk, the real GNU sed is
-# required as the option `-i' of GNU sed is used (in file genmk.rb).
-USE_TOOLS+=		gsed
-.if ${OPSYS} == "NetBSD"
-TOOLS_PLATFORM.gsed=	# empty   (to trick pkgsrc into the real gsed)
-.endif
 
 post-install:
 	${INSTALL_DATA} ${FILESDIR}/default.conf ${EGDIR}/default.conf.sample
