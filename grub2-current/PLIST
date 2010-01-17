@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2010/01/12 10:34:50 gregoire Exp $
+@comment $NetBSD: PLIST,v 1.6 2010/01/17 13:48:48 gregoire Exp $
 bin/grub2-editenv
 bin/grub2-fstest
 bin/grub2-mkelfimage
@@ -50,12 +50,14 @@ lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/drivemap.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/echo.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/efiemu.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/elf.mod
+lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/example_functional_test.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/ext2.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/extcmd.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/fat.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/font.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/fs.lst
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/fshelp.mod
+lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/functional_test.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/gcry_arcfour.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/gcry_blowfish.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/gcry_camellia.mod
@@ -195,11 +197,15 @@ man/man8/grub2-install.8
 man/man8/grub2-mkconfig.8
 man/man8/grub2-mkdevicemap.8
 man/man8/grub2-probe.8
+man/man8/grub2-reboot.8
+man/man8/grub2-set-default.8
 man/man8/grub2-setup.8
 sbin/grub2-install
 sbin/grub2-mkconfig
 sbin/grub2-mkdevicemap
 sbin/grub2-probe
+sbin/grub2-reboot
+sbin/grub2-set-default
 sbin/grub2-setup
 share/examples/grub2/00_header
 share/examples/grub2/05_pkgsrc_theme
