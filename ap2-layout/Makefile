@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2009/08/08 07:06:15 obache Exp $
+# $NetBSD: Makefile,v 1.7 2010/01/17 12:03:23 thomasklausner Exp $
 
 DISTNAME=	mod_layout-4.1
 PKGNAME=	${DISTNAME:S/mod_/ap2-/}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	http://download.tangent.org/
 

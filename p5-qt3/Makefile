@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/12/06 23:05:08 rhialto Exp $
+# $NetBSD: Makefile,v 1.7 2010/01/17 12:03:29 thomasklausner Exp $
 
 PKGNAME=		p5-qt3-3.009b2
 DISTNAME=		PerlQt-3.009-b2
@@ -7,6 +7,7 @@ DISTNAME=		PerlQt-3.009-b2
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=perlqt/}
 COMMENT=		Perl-5 bindings for the Qt3 library
 
+PKGREVISION=		1
 CATEGORIES=		x11
 MAINTAINER=		rhialto@falu.nl
 HOMEPAGE=		http://perlqt.sourceforge.net/

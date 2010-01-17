@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2006/11/10 23:07:17 shattered Exp $
+# $NetBSD: Makefile,v 1.8 2010/01/17 12:03:22 thomasklausner Exp $
 #
 
 DISTNAME=		nsfreetds-0.4-src
 PKGNAME=		aols-freetds-0.4
+PKGREVISION=		1
 CATEGORIES=		www
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=aolserver/}
 

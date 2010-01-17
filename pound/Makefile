@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2009/09/08 17:20:42 fjaeckel Exp $
+# $NetBSD: Makefile,v 1.4 2010/01/17 12:03:30 thomasklausner Exp $
 
 POUND_VERSION=	2.4.5
 PKGNAME=	pound-${POUND_VERSION}
 DISTNAME=	Pound-${POUND_VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://www.apsis.ch/pound/
 EXTRACT_SUFX=	.tgz

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.16 2009/09/11 22:01:15 jsonn Exp $
+# $NetBSD: buildlink3.mk,v 1.17 2010/01/17 12:03:24 thomasklausner Exp $
 
 BUILDLINK_TREE+=	ecore
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	ecore
 ECORE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ecore+=	ecore>=0.9.9.062
+BUILDLINK_ABI_DEPENDS.ecore?=	ecore>=0.9.9.062nb1
 BUILDLINK_PKGSRCDIR.ecore?=	../../wip/ecore
 
 .include "../../devel/eet/buildlink3.mk"

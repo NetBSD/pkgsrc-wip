@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2009/05/19 17:29:44 minskim Exp $
+# $NetBSD: Makefile,v 1.11 2010/01/17 12:03:25 thomasklausner Exp $
 #
 
 DISTNAME=	esmart-0.9.0.042
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.ezunix.org/pkgsrc/e17/snapshots/2008-09-25/
 

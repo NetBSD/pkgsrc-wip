@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2009/07/10 19:49:37 absd Exp $
+# $NetBSD: Makefile,v 1.8 2010/01/17 12:03:25 thomasklausner Exp $
 #
 
 DISTNAME=		sshfs-fuse-1.4
 PKGNAME=		fuse-sshfs-1.4
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=fuse/}
 

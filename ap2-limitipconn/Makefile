@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2008/09/06 20:54:43 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.10 2010/01/17 12:03:23 thomasklausner Exp $
 #
 
 DISTNAME=		mod_limitipconn-0.22
 PKGNAME=		${DISTNAME:S/mod_/ap2-/}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		www
 MASTER_SITES=		http://dominia.org/djao/limit/
 

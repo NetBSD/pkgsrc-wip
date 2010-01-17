@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2009/12/25 04:59:56 schnoebe Exp $
+# $NetBSD: Makefile,v 1.5 2010/01/17 12:03:32 thomasklausner Exp $
 
 DISTNAME=		spectrum
 PKGNAME=		${DISTNAME}-0.1
+PKGREVISION=		1
 CATEGORIES=		chat
 
 # Second paragraph - MAINTAINER/OWNER, HOMEPAGE and COMMENT, and LICEN[CS]E

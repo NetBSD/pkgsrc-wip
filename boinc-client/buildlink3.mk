@@ -1,8 +1,9 @@
-# $NetBSD: buildlink3.mk,v 1.2 2009/03/20 19:43:39 jsonn Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2010/01/17 12:03:23 thomasklausner Exp $
 
 BUILDLINK_TREE+=	boinc-client
 
 BUILDLINK_API_DEPENDS.boinc-client+=	boinc-client>=1
+BUILDLINK_ABI_DEPENDS.boinc-client?=	boinc-client>=1nb1
 BUILDLINK_PKGSRCDIR.boinc-client?=	../../wip/boinc-client
 
 # XXX

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2009/11/03 00:19:28 schnoebe Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2010/01/17 12:03:30 thomasklausner Exp $
 
 BUILDLINK_TREE+=	poco
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	poco
 POCO_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.poco+=	poco>=1.3.5
+BUILDLINK_ABI_DEPENDS.poco?=	poco>=1.3.5nb1
 BUILDLINK_PKGSRCDIR.poco?=	../../wip/poco
 
 .include "../../security/openssl/buildlink3.mk"

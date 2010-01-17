@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/12/04 23:11:11 shattered Exp $
+# $NetBSD: Makefile,v 1.2 2010/01/17 12:03:33 thomasklausner Exp $
 #
 
 DISTNAME=		synce-kde-0.9.1
+PKGREVISION=		1
 CATEGORIES=		comms
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=synce/}
 

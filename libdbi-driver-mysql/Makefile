@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2009/08/10 20:02:30 cheusov Exp $
+# $NetBSD: Makefile,v 1.6 2010/01/17 12:03:28 thomasklausner Exp $
 #
 
 .include "../../wip/libdbi/Makefile_drivers"
 
+PKGREVISION=		1
 LICENSE=		gnu-lgpl-v2
 
 DRIVER=			mysql

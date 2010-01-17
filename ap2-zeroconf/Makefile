@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2008/09/06 20:54:44 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2010/01/17 12:03:23 thomasklausner Exp $
 
 DISTNAME=	mod_zeroconf-0.3
 PKGNAME=	ap2-zeroconf-0.3
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www net
 MASTER_SITES=	http://people.apache.org/~sctemme/Apcon2003/TU10/
 

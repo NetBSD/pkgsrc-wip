@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2008/01/18 04:30:16 tnn2 Exp $
+# $NetBSD: Makefile,v 1.10 2010/01/17 12:03:29 thomasklausner Exp $
 #
 
 DISTNAME=		noiptun-1.0
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		security
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=noiptun/}
 

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.20 2009/12/06 22:08:19 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.21 2010/01/17 12:03:33 thomasklausner Exp $
 #
 
 DISTNAME=	xmms2-0.2DrJekyll
 PKGNAME=	xmms2-0.2rc10
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xmms2/}
 EXTRACT_SUFX=	.tar.bz2

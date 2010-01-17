@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2008/01/18 04:30:13 tnn2 Exp $
+# $NetBSD: Makefile,v 1.4 2010/01/17 12:03:25 thomasklausner Exp $
 #
 
 DISTNAME=		gambas2-1.9.40
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gambas/}
 EXTRACT_SUFX=		.tar.bz2

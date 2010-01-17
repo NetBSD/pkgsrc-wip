@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2008/05/29 19:38:32 tnn2 Exp $
+# $NetBSD: Makefile,v 1.22 2010/01/17 12:03:25 thomasklausner Exp $
 #
 
 DISTNAME=	ezbounce-1.99.14
+PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	http://www.linuxftw.com/ezbounce/files/
 

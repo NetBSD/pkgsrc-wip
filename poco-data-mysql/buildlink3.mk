@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2009/11/05 05:08:41 schnoebe Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2010/01/17 12:03:30 thomasklausner Exp $
 
 BUILDLINK_TREE+=	poco-data-mysql
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	poco-data-mysql
 POCO_DATA_MYSQL_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.poco-data-mysql+=	poco-data-mysql>=1.3.5
+BUILDLINK_ABI_DEPENDS.poco-data-mysql?=	poco-data-mysql>=1.3.5nb1
 BUILDLINK_PKGSRCDIR.poco-data-mysql?=	../../wip/poco-data-mysql
 
 .include "../../databases/mysql5-client/buildlink3.mk"

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.23 2009/09/11 23:03:18 jsonn Exp $
+# $NetBSD: Makefile,v 1.24 2010/01/17 12:03:24 thomasklausner Exp $
 #
 
 DISTNAME=	enlightenment-0.16.999.062
 PKGNAME=	${DISTNAME:S/enlightenment/e17/}
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	http://download.enlightenment.org/snapshots/2009-07-29/
 EXTRACT_SUFX=	.tar.bz2

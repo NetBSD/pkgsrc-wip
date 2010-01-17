@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2009/08/13 15:36:31 tnn2 Exp $
+# $NetBSD: Makefile,v 1.5 2010/01/17 12:03:33 thomasklausner Exp $
 #
 
 DISTNAME=	VirtualBox-${VBOX_VER}-OSE
 PKGNAME=	virtualbox-${VBOX_VER}
 VBOX_VER=	3.0.4
+PKGREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	http://download.virtualbox.org/virtualbox/${VBOX_VER}/
 EXTRACT_SUFX=	.tar.bz2

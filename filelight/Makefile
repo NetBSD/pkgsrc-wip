@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2009/12/07 16:26:16 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2010/01/17 12:03:25 thomasklausner Exp $
 #
 
 DISTNAME=	99561-filelight-1.9rc3
 PKGNAME=	filelight-1.9rc3
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.kde-apps.org/CONTENT/content-files/
 EXTRACT_SUFX=	.tgz

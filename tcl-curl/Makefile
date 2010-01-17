@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2009/11/18 06:49:58 bharder Exp $
+# $NetBSD: Makefile,v 1.2 2010/01/17 12:03:33 thomasklausner Exp $
 #
 
 DISTNAME=		TclCurl-7.19.6
 PKGNAME=		tcl-curl-7.19.6
+PKGREVISION=		1
 CATEGORIES=		www
 MASTER_SITES=		http://personal1.iddeo.es/andresgarci/tclcurl/download/tarball/
 

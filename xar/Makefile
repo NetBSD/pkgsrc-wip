@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2008/02/02 00:46:03 dhowland Exp $
+# $NetBSD: Makefile,v 1.5 2010/01/17 12:03:33 thomasklausner Exp $
 #
 
 DISTNAME=		xar-1.5.2
+PKGREVISION=		1
 CATEGORIES=		archivers
 MASTER_SITES=		http://xar.googlecode.com/files/
 

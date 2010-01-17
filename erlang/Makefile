@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2009/12/15 11:50:46 asau Exp $
+# $NetBSD: Makefile,v 1.10 2010/01/17 12:03:25 thomasklausner Exp $
 
 DISTNAME=		otp_src_${DIST_VERSION_MAJOR}${DIST_VERSION_MINOR:D-${DIST_VERSION_MINOR}}
 PKGNAME=		erlang-${ERLANG_VERSION}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		lang
 MASTER_SITES=		http://www.erlang.org/download/
 

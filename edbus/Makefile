@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2009/09/11 22:26:50 jsonn Exp $
+# $NetBSD: Makefile,v 1.12 2010/01/17 12:03:24 thomasklausner Exp $
 #
 
 DISTNAME=	e_dbus-0.5.0.062
 PKGNAME=	${DISTNAME:S/_//}
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://download.enlightenment.org/snapshots/2009-07-29/
 EXTRACT_SUFX=	.tar.bz2

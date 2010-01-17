@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2009/03/20 19:43:57 jsonn Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2010/01/17 12:03:33 thomasklausner Exp $
 
 BUILDLINK_TREE+=	xmms2
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	xmms2
 XMMS2_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.xmms2+=	xmms2>=0.1DR2.2
-BUILDLINK_ABI_DEPENDS.xmms2?=	xmms2>=0.2rc10nb2
+BUILDLINK_ABI_DEPENDS.xmms2?=	xmms2>=0.2rc10nb5
 BUILDLINK_PKGSRCDIR.xmms2?=	../../wip/xmms2
 
 .if !defined(PKG_BUILD_OPTIONS.xmms2)

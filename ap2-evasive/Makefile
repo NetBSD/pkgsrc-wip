@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2008/09/06 20:54:43 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2010/01/17 12:03:23 thomasklausner Exp $
 #
 
 .include "../../wip/ap-evasive/Makefile.common"
 
 PKGNAME=		ap2-evasive-1.10.1
-PKGREVISION=		2
+PKGREVISION=		3
 PKG_APACHE_ACCEPTED=	apache2
 
 APACHE_MODULE=		yes

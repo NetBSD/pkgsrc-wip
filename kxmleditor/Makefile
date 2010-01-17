@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2008/01/18 04:30:15 tnn2 Exp $
+# $NetBSD: Makefile,v 1.14 2010/01/17 12:03:28 thomasklausner Exp $
 #
 
 DISTNAME=	kxmleditor-1.0.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	textproc kde
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=kxmleditor/}
 

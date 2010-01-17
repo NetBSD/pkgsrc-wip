@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2009/07/22 09:53:17 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2010/01/17 12:03:32 thomasklausner Exp $
 #
 
 DISTNAME=	scratchpad-0.3.0
+PKGREVISION=	1
 CATEGORIES=	editors gnome
 MASTER_SITES=	http://scratchpad.googlecode.com/files/
 EXTRACT_SUFX=	.tar.bz2

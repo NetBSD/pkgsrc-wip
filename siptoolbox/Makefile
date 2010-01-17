@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/11/11 01:34:02 pmatias Exp $
+# $NetBSD: Makefile,v 1.2 2010/01/17 12:03:32 thomasklausner Exp $
 #
 
 DISTNAME=	sip-0.4.0-rc1
 PKGNAME=	siptoolbox-0.4.0nb1
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=siptoolbox/}
 EXTRACT_SUFX=	.tar.bz2

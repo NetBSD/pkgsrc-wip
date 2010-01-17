@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2009/10/02 07:40:28 phonohawk Exp $
+# $NetBSD: Makefile,v 1.4 2010/01/17 12:03:26 thomasklausner Exp $
 #
 
 DISTNAME=	HsOpenSSL-0.6.5
+PKGREVISION=	1
 CATEGORIES=	security
 
 MAINTAINER=	pho@cielonegro.org

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2008/01/18 04:30:15 tnn2 Exp $
+# $NetBSD: Makefile,v 1.6 2010/01/17 12:03:27 thomasklausner Exp $
 
 DISTNAME=	klamav-0.37-source
 PKGNAME=	${DISTNAME:S/-source//}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	security kde
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=klamav/}
 

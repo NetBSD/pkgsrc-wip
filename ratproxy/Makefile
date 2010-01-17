@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/07/12 01:35:10 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.2 2010/01/17 12:03:32 thomasklausner Exp $
 #
 
 DISTNAME=	ratproxy-1.51
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	http://ratproxy.googlecode.com/files/
 

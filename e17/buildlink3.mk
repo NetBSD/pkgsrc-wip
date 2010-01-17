@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2009/06/08 15:32:07 jsonn Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2010/01/17 12:03:24 thomasklausner Exp $
 
 BUILDLINK_TREE+=	e17
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	e17
 E17_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.e17+=	e17>=0.16.999.060
+BUILDLINK_ABI_DEPENDS.e17?=	e17>=0.16.999.062nb1
 BUILDLINK_PKGSRCDIR.e17?=	../../wip/e17
 
 .include "../../wip/ecore/buildlink3.mk"

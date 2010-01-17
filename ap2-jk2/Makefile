@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2008/09/06 20:54:43 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.11 2010/01/17 12:03:23 thomasklausner Exp $
 #
 
 DISTNAME=	jakarta-tomcat-connectors-jk2-${AP_JK_VER}-src
 PKGNAME=	ap2-jk2-${AP_JK_VER}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_APACHE:=jakarta/tomcat-connectors/jk2/source/}
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2009/11/02 17:53:26 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.4 2010/01/17 12:03:31 thomasklausner Exp $
 
 DISTNAME=	Python-3.1.1
 PKGNAME=	python31-3.1.1
+PKGREVISION=	1
 CATEGORIES=	lang python
 MASTER_SITES=	http://www.python.org/ftp/python/3.1.1/
 EXTRACT_SUFX=	.tar.bz2

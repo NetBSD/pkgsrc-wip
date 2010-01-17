@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2008/05/24 15:34:10 tnn2 Exp $
+# $NetBSD: Makefile,v 1.6 2010/01/17 12:03:26 thomasklausner Exp $
 
 DISTNAME=			gwhois_20080219.1
 PKGNAME=			${DISTNAME:S/_/-/g}
+PKGREVISION=			1
 CATEGORIES=			net
 MASTER_SITES=			http://gwhois.de/gwhois/
 

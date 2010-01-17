@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2009/12/14 23:37:53 lexort Exp $
+# $NetBSD: Makefile,v 1.18 2010/01/17 12:03:25 thomasklausner Exp $
 
 DISTNAME=		gdal-1.3.1
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		geography
 MASTER_SITES=		#empty
 DISTFILES=		#empty

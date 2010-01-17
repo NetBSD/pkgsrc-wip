@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/11/11 01:31:24 pmatias Exp $
+# $NetBSD: Makefile,v 1.2 2010/01/17 12:03:28 thomasklausner Exp $
 #
 
 DISTNAME=	animal-0.15.0
 PKGNAME=	lib${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=siptoolbox/}
 EXTRACT_SUFX=	.tar.bz2

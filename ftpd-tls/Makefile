@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2008/01/18 04:30:13 tnn2 Exp $
+# $NetBSD: Makefile,v 1.7 2010/01/17 12:03:25 thomasklausner Exp $
 #
 
 DISTNAME=	ftpd-tls-20031008
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.zeist.de/pub/distfiles/			\
 		ftp://ftp.runestig.com/pub/ftpd-tls/

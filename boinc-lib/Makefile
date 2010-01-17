@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2006/10/29 08:32:38 shattered Exp $
+# $NetBSD: Makefile,v 1.4 2010/01/17 12:03:23 thomasklausner Exp $
 
 DISTNAME=		boinc
 PKGNAME=		boinc-lib-1
+PKGREVISION=		1
 CATEGORIES=		net
 
 COMMENT=		Libraries for the BOINC distributed computing application

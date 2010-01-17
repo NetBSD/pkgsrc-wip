@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2009/09/09 11:22:10 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2010/01/17 12:03:28 thomasklausner Exp $
 #
 
 DISTNAME=	LiVES-0.9.9.9
 LIVESVERS=	0.9.9.9
 PKGNAME=	lives-${LIVESVERS}
+PKGREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	http://www.xs4all.nl/%7Esalsaman/lives/current/
 EXTRACT_SUFX=	.tar.bz2

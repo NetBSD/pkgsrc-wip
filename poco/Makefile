@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2009/11/03 00:19:28 schnoebe Exp $
+# $NetBSD: Makefile,v 1.3 2010/01/17 12:03:30 thomasklausner Exp $
 #
 
 DISTNAME=	poco-1.3.5-all
 PKGNAME=	poco-1.3.5
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=poco/}
 

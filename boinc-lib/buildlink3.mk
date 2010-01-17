@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2009/05/06 09:25:32 cheusov Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2010/01/17 12:03:23 thomasklausner Exp $
 
 BUILDLINK_TREE+=	boinc-lib
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	boinc-lib
 BOINC_LIB_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.boinc-lib+=	boinc-lib>=1
+BUILDLINK_ABI_DEPENDS.boinc-lib?=	boinc-lib>=1nb1
 BUILDLINK_PKGSRCDIR.boinc-lib?=	../../wip/boinc-lib
 
 # XXX

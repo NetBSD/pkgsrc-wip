@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2008/05/24 15:34:09 tnn2 Exp $
+# $NetBSD: Makefile,v 1.5 2010/01/17 12:03:24 thomasklausner Exp $
 #
 
 DISTNAME=	cvsnt-2.5.03.2382
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	http://www.cvsnt.org/archive/
 

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2009/07/22 09:53:11 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.10 2010/01/17 12:03:24 thomasklausner Exp $
 #
 
 DISTNAME=	endeavour-2.8.5
 #PKGREVISION=	1
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.battlefieldlinux.com/wolfpack/packages/
 EXTRACT_SUFX=	.tgz

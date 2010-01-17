@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2009/11/10 09:00:32 phonohawk Exp $
+# $NetBSD: Makefile,v 1.4 2010/01/17 12:03:27 thomasklausner Exp $
 DISTNAME=	hopenssl-1.2
+PKGREVISION=	1
 CATEGORIES=	security
 
 MAINTAINER=	emil@math.su.se

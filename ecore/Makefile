@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.30 2009/09/11 22:01:15 jsonn Exp $
+# $NetBSD: Makefile,v 1.31 2010/01/17 12:03:24 thomasklausner Exp $
 #
 
 DISTNAME=	ecore-0.9.9.062
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	http://download.enlightenment.org/snapshots/2009-07-29/
 

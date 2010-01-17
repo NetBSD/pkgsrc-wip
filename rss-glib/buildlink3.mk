@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2009/05/27 15:13:54 jihbed Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2010/01/17 12:03:32 thomasklausner Exp $
 
 BUILDLINK_TREE+=	rss-glib
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	rss-glib
 RSS_GLIB_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.rss-glib+=	rss-glib>=0.2.2
+BUILDLINK_ABI_DEPENDS.rss-glib?=	rss-glib>=0.2.2nb1
 BUILDLINK_PKGSRCDIR.rss-glib?=	../../wip/rss-glib
 
 
