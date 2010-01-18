@@ -1,11 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.21 2010/01/18 19:38:38 jsonn Exp $
+# $NetBSD: buildlink3.mk,v 1.22 2010/01/18 19:39:35 jsonn Exp $
 
 BUILDLINK_TREE+=	edje
 
 .if !defined(EDJE_BUILDLINK3_MK)
 EDJE_BUILDLINK3_MK:=
 
-BUILDLINK_ABI_DEPENDS.edje?=	edje>=0.9.93.063
+BUILDLINK_API_DEPENDS.edje?=	edje>=0.9.93.063
 BUILDLINK_PKGSRCDIR.edje?=	../../wip/edje
 
 .include	"../../devel/eet/buildlink3.mk"
