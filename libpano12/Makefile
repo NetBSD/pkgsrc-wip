@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2007/03/01 19:12:18 shattered Exp $
+# $NetBSD: Makefile,v 1.5 2010/01/18 09:38:27 thomasklausner Exp $
 #
 
 DISTNAME=		libpano12-2.7.0.8
+PKGREVISION=		1
 CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=panotools/}
 EXTRACT_SUFX=		.tar.bz2

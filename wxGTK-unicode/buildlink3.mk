@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2009/03/20 19:43:53 jsonn Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2010/01/18 09:38:35 thomasklausner Exp $
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -8,7 +8,7 @@ BUILDLINK_TREE+=	wxGTK-unicode
 WXGTK_UNICODE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.wxGTK-unicode+=	wxGTK-unicode>=2.8.0
-BUILDLINK_ABI_DEPENDS.wxGTK-unicode?=	wxGTK-unicode>=2.8.3
+BUILDLINK_ABI_DEPENDS.wxGTK-unicode?=	wxGTK-unicode>=2.8.8
 BUILDLINK_PKGSRCDIR.wxGTK-unicode?=	../../wip/wxGTK-unicode
 
 .include "../../devel/zlib/buildlink3.mk"

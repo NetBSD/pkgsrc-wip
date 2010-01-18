@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2008/01/12 23:24:56 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.10 2010/01/18 09:38:27 thomasklausner Exp $
 #
 
 DISTNAME=		manatee-1.8.4.1
+PKGREVISION=		1
 CATEGORIES=		biology
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=manatee/}
 

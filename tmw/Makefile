@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2010/01/17 12:03:33 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2010/01/18 09:38:33 thomasklausner Exp $
 #
 
 DISTNAME=	tmw-0.0.22.1
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=themanaworld/}
 

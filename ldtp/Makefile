@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2009/05/26 09:40:20 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2010/01/18 09:38:27 thomasklausner Exp $
 #
 
 DISTNAME=	ldtp-1.6.0
+PKGREVISION=	1
 CATEGORIES=	devel x11 python
 MASTER_SITES=	http://download.freedesktop.org/ldtp/1.x/1.6.x/
 

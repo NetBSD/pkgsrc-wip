@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2008/03/07 19:35:14 tnn2 Exp $
+# $NetBSD: Makefile,v 1.9 2010/01/18 09:38:27 thomasklausner Exp $
 
 DISTNAME=	lletters-0.1.9
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lln/}
 DISTFILES=	${DEFAULT_DISTFILES} lletters-media-0.1.9a.tar.gz

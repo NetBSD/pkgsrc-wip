@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2009/08/16 12:32:43 jh88 Exp $
+# $NetBSD: Makefile,v 1.6 2010/01/18 09:38:21 thomasklausner Exp $
 #
 
 DISTNAME=	flimsel-0.0.6
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.ecademix.com/JohannesHofmann/
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/08/22 16:54:34 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2010/01/18 09:38:23 thomasklausner Exp $
 #
 
 DISTNAME=	gts-0.7.6
+PKGREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	http://garr.dl.sourceforge.net/project/gts/gts/0.7.6/
 

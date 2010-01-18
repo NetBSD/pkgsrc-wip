@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2010/01/17 12:03:25 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2010/01/18 09:38:20 thomasklausner Exp $
 #
 
 DISTNAME=	epsilon-0.3.0.012
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	graphics
 MASTER_SITES=	http://download.enlightenment.org/snapshots/2008-01-25/ \
 		http://www.ezunix.org/pkgsrc/e17/snapshots/2008-01-25/ \

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2009/07/22 09:53:13 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2010/01/18 09:38:24 thomasklausner Exp $
 #
 
 DISTNAME=	guitone-0.8.99.0
+PKGREVISION=	1
 CATEGORIES=	devel
 #MASTER_SITES=	http://guitone.thomaskeller.biz/releases/0.8/
 # snapshot

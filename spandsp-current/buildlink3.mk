@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2009/04/02 09:08:50 x400 Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2010/01/18 09:38:33 thomasklausner Exp $
 
 BUILDLINK_TREE+=	spandsp
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	spandsp
 SPANDSP_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.spandsp+=	spandsp>=0.0.6pre7
+BUILDLINK_ABI_DEPENDS.spandsp?=	spandsp>=0.0.6pre7nb1
 BUILDLINK_PKGSRCDIR.spandsp?=	../../wip/spandsp-current
 
 .include "../../graphics/tiff/buildlink3.mk"

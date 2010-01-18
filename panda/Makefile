@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2005/11/02 18:00:24 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2010/01/18 09:38:28 thomasklausner Exp $
 #
 
 DISTNAME=		panda-0.5.4
+PKGREVISION=		1
 CATEGORIES=		print
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=panda/}
 EXTRACT_SUFX=		.tar.bz2

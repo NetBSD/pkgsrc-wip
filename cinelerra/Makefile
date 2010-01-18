@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2006/07/30 19:04:26 shattered Exp $
+# $NetBSD: Makefile,v 1.8 2010/01/18 09:38:18 thomasklausner Exp $
 #
 
 #DISTNAME=		cinelerra-1.2.0-src
 DISTNAME=		hvirtual_1.2.0-2cvs20040814
 PKGNAME=		cinelerra-1.2.0-2cvs20040814
+PKGREVISION=		1
 CATEGORIES=		multimedia
 # unofficial source is here
 MASTER_SITES=		http://www.kiberpipa.org/~minmax/cinelerra/builds/sid/

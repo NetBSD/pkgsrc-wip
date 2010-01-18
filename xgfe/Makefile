@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2006/09/14 19:18:03 dhowland Exp $
+# $NetBSD: Makefile,v 1.6 2010/01/18 09:38:35 thomasklausner Exp $
 #
 
 DISTNAME=		xgfe-2.1
+PKGREVISION=		1
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_TEX_CTAN=graphics/gnuplot/contrib}
 

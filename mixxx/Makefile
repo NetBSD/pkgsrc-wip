@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2009/02/21 13:22:51 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.16 2010/01/18 09:38:27 thomasklausner Exp $
 
 DISTNAME=		mixxx-1.4.2
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=mixxx/}
 

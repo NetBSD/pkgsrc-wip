@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2009/08/12 02:32:03 obache Exp $
+# $NetBSD: Makefile,v 1.4 2010/01/18 09:38:35 thomasklausner Exp $
 #
 
 DISTNAME=	webkit-sharp-0.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/webkit-sharp/
 EXTRACT_SUFX=	.tar.bz2

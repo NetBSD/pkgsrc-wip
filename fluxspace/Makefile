@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2006/10/29 08:32:43 shattered Exp $
+# $NetBSD: Makefile,v 1.14 2010/01/18 09:38:21 thomasklausner Exp $
 #
 
 DISTNAME=		fluxspace-0.0.3
+PKGREVISION=		1
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=fluxspace/}
 

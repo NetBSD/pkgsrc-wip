@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/01/18 07:12:51 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2010/01/18 09:38:28 thomasklausner Exp $
 #
 
 DISTNAME=		moto4lin-0.3
+PKGREVISION=		1
 CATEGORIES=		comms
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=moto4lin/}
 EXTRACT_SUFX=		.tar.bz2

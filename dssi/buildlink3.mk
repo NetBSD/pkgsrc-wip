@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2009/03/20 19:43:40 jsonn Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2010/01/18 09:38:19 thomasklausner Exp $
 
 BUILDLINK_TREE+=	dssi
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	dssi
 DSSI_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.dssi+=	dssi>=0.9.1
+BUILDLINK_ABI_DEPENDS.dssi?=	dssi>=0.9.1nb2
 BUILDLINK_PKGSRCDIR.dssi?=	../../wip/dssi
 BUILDLINK_DEPMETHOD.dssi?=	build
 

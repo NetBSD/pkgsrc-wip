@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2006/11/11 13:26:33 shattered Exp $
+# $NetBSD: Makefile,v 1.6 2010/01/18 09:38:28 thomasklausner Exp $
 #
 
 DISTNAME=		oqtplayer-0.5-src
 PKGNAME=		${DISTNAME:C/-src//}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		security net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=openquicktime/}
 EXTRACT_SUFX=		.tgz

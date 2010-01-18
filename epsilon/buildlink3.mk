@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2010/01/17 12:03:25 thomasklausner Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2010/01/18 09:38:20 thomasklausner Exp $
 
 BUILDLINK_TREE+=	epsilon
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	epsilon
 EPSILON_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.epsilon+=	epsilon>=0.3.0.012
-BUILDLINK_ABI_DEPENDS.epsilon?=	epsilon>=0.3.0.012nb2
+BUILDLINK_ABI_DEPENDS.epsilon?=	epsilon>=0.3.0.012nb3
 BUILDLINK_PKGSRCDIR.epsilon?=	../../wip/epsilon
 
 .include "../../wip/ecore/buildlink3.mk"

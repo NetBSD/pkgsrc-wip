@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2006/11/10 23:07:17 shattered Exp $
+# $NetBSD: Makefile,v 1.12 2010/01/18 09:38:16 thomasklausner Exp $
 #
 
 DISTNAME=		rezound-0.12.0beta
+PKGREVISION=		1
 CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=rezound/}
 

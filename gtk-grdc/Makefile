@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2009/08/02 22:42:15 jihbed Exp $
+# $NetBSD: Makefile,v 1.4 2010/01/18 09:38:23 thomasklausner Exp $
 #
 
 DISTNAME=	grdc-0.4.0
 PKGNAME=	gtk-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=grdc/}
 

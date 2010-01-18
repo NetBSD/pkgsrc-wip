@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2010/01/17 12:03:25 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2010/01/18 09:38:21 thomasklausner Exp $
 #
 
 DISTNAME=	gimmie-0.2.8
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils python
 MASTER_SITES=	http://www.beatniksoftware.com/gimmie/releases/
 

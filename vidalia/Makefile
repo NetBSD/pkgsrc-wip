@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2009/03/07 09:43:38 cheusov Exp $
+# $NetBSD: Makefile,v 1.3 2010/01/18 09:38:34 thomasklausner Exp $
 #
 
 DISTNAME=	vidalia-0.0.16
+PKGREVISION=	1
 CATEGORIES=	net security
 MASTER_SITES=	http://vidalia-project.net/dist/
 

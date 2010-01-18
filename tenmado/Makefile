@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2006/06/12 16:29:01 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2010/01/18 09:38:33 thomasklausner Exp $
 #
 
 DISTNAME=		tenmado-0.6
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		games
 MASTER_SITES=		http://www.interq.or.jp/libra/oohara/tenmado/
 

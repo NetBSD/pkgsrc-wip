@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2006/03/14 01:28:03 jlamwww Exp $
+# $NetBSD: Makefile,v 1.10 2010/01/18 09:38:28 thomasklausner Exp $
 #
 
 DISTNAME=		mythtv-0.11
+PKGREVISION=		1
 CATEGORIES=		graphics
 MASTER_SITES=		http://www.mythtv.org/mc/
 EXTRACT_SUFX=		.tar.bz2

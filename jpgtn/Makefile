@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2006/11/11 11:31:05 shattered Exp $
+# $NetBSD: Makefile,v 1.4 2010/01/18 09:38:25 thomasklausner Exp $
 #
 
 DISTNAME=		jpgtn-2.06
+PKGREVISION=		1
 CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=jpgtn/}
 

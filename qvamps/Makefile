@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2009/12/04 13:32:57 rhialto Exp $
+# $NetBSD: Makefile,v 1.5 2010/01/18 09:38:31 thomasklausner Exp $
 
 DISTNAME=		qvamps-0.98
+PKGREVISION=		1
 CATEGORIES=		multimedia
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=vamps/}
 

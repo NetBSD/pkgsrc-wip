@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2006/03/12 01:41:29 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2010/01/18 09:38:25 thomasklausner Exp $
 #
 
 DISTNAME=		igowin
 PKGNAME=		igowin-1.0
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		games
 MASTER_SITES=		http://www.smart-games.com/
 EXTRACT_SUFX=		.exe

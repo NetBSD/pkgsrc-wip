@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2005/06/12 23:51:23 kristerw Exp $
+# $NetBSD: Makefile,v 1.5 2010/01/18 09:38:27 thomasklausner Exp $
 #
 
 DISTNAME=		molmol-2k.2.0-src
 PKGNAME=		molmol-2.2.0
+PKGREVISION=		1
 CATEGORIES=		biology
 MASTER_SITES=		ftp://freedom7.swmed.edu/pub/software/MOLMOL/unix-gzip/
 

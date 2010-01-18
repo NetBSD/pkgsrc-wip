@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2010/01/17 12:03:33 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2010/01/18 09:38:34 thomasklausner Exp $
 #
 
 DISTNAME=	uffizi
 PKGNAME=	uffizi-0.7
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www graphics perl5
 MASTER_SITES=	http://jmason.org/software/uffizi/
 EXTRACT_SUFX=	.txt

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/10/01 12:13:15 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2010/01/18 09:38:28 thomasklausner Exp $
 #
 
 DISTNAME=	pagetools-0.1
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pagetools/}
 

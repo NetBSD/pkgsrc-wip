@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2006/05/19 16:51:39 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.9 2010/01/18 09:38:33 thomasklausner Exp $
 #
 
 DISTNAME=		SPE-0.4.1.d-wx2.4.2.4.-bl2.28
 PKGNAME=		spe-0.4.1
+PKGREVISION=		1
 CATEGORIES=		editors
 MASTER_SITES=		http://projects.blender.org/download.php/47/
 EXTRACT_SUFX=		.zip

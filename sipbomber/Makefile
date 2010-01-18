@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2009/11/29 21:35:06 gschwarz Exp $
+# $NetBSD: Makefile,v 1.4 2010/01/18 09:38:32 thomasklausner Exp $
 
 DISTNAME=	sipbomber_0.8
 PKGNAME=	${DISTNAME:S/_/-/}
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://metalinkltd.com/wp-content/uploads/
 

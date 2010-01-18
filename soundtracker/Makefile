@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2009/07/22 09:53:17 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2010/01/18 09:38:33 thomasklausner Exp $
 #
 
 DISTNAME=		soundtracker-0.6.8
+PKGREVISION=		1
 CATEGORIES=		audio
 MASTER_SITES=		http://www.soundtracker.org/dl/v0.6/
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2010/01/17 12:03:24 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2010/01/18 09:38:20 thomasklausner Exp $
 #
 
 DISTNAME=	entrance-0.9.9.050
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	http://www.ezunix.org/pkgsrc/e17/snapshots/2008-09-25/
 EXTRACT_SUFX=	.tar.bz2

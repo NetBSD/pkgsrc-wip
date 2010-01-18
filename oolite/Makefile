@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/05/03 13:02:07 koifren Exp $
+# $NetBSD: Makefile,v 1.2 2010/01/18 09:38:28 thomasklausner Exp $
 
 DISTNAME=	oolite-1.65
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	http://download.berlios.de/oolite-linux/ \
 		http://download2.berlios.de/oolite-linux/

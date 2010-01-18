@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2009/03/20 19:43:49 jsonn Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2010/01/18 09:38:27 thomasklausner Exp $
 
 BUILDLINK_TREE+=	mapnik
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	mapnik
 MAPNIK_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.mapnik+=	mapnik>=0.4.0
+BUILDLINK_ABI_DEPENDS.mapnik?=	mapnik>=0.4.0nb1
 BUILDLINK_PKGSRCDIR.mapnik?=	../../wip/mapnik
 
 .include "../../devel/boost-headers/buildlink3.mk"

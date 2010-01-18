@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2006/09/09 02:49:32 obache Exp $
+# $NetBSD: Makefile,v 1.5 2010/01/18 09:38:23 thomasklausner Exp $
 #
 
 DISTNAME=	gstat-2.4.3
+PKGREVISION=	1
 CATEGORIES=	geography math
 MASTER_SITES=	http://www.gstat.org/bin/
 

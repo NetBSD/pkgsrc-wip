@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2009/09/28 04:58:50 phonohawk Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2010/01/18 09:38:33 thomasklausner Exp $
 
 BUILDLINK_TREE+=	synfig
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	synfig
 SYNFIG_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.synfig+=	synfig>=0.61.08
+BUILDLINK_ABI_DEPENDS.synfig?=	synfig>=0.61.08
 BUILDLINK_PKGSRCDIR.synfig?=	../../wip/synfig
 
 pkgbase:= synfig

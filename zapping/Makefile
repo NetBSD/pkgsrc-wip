@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2009/07/22 09:53:18 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.13 2010/01/18 09:38:35 thomasklausner Exp $
 #
 
 DISTNAME=		zapping-0.9.6
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		multimedia
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=zapping/}
 EXTRACT_SUFX=		.tar.bz2

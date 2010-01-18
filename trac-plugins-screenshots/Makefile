@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2009/01/22 09:54:36 rsmarples Exp $
+# $NetBSD: Makefile,v 1.3 2010/01/18 09:38:34 thomasklausner Exp $
 
 DISTNAME=	TracScreenshots-0.1dev
 PKGNAME=	trac-plugins-screenshots-0.1pre5002
 PKGREVISION=	# blank on purpose even though pkglint moans
 EGG_NAME=	${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www
 
 MAINTAINER=	roy@NetBSD.org

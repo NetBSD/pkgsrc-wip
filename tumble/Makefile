@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/06/01 08:27:35 lkundrak Exp $
+# $NetBSD: Makefile,v 1.2 2010/01/18 09:38:34 thomasklausner Exp $
 
 DISTNAME=		tumble-0.33
+PKGREVISION=		1
 CATEGORIES=		print graphics
 MASTER_SITES=		http://tumble.brouhaha.com/download/
 

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2009/06/02 12:28:41 noud4 Exp $
+# $NetBSD: Makefile,v 1.4 2010/01/18 09:38:35 thomasklausner Exp $
 #
 
 PKGNAME=		vncselector-1.6.1
 DISTNAME=		vncselector_1.6.1
+PKGREVISION=		1
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=vncselector/}
 

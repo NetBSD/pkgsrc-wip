@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2009/08/25 11:56:46 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.13 2010/01/18 09:38:33 thomasklausner Exp $
 #
 
 DISTNAME=		SMC_0.97
 PKGNAME=		smc-0.97
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=smclone/}
 DISTFILES=		${DISTNAME}_source.zip ${DISTNAME}_game.zip \

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2009/10/01 14:35:24 fhajny Exp $
+# $NetBSD: Makefile,v 1.8 2010/01/18 09:38:28 thomasklausner Exp $
 
 DISTNAME=		Imager-0.70
 PKGNAME=		p5-${DISTNAME}
+PKGREVISION=		1
 CATEGORIES=		graphics perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Imager/}
 

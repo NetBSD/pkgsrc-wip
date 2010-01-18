@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2009/07/22 09:53:12 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.16 2010/01/18 09:38:22 thomasklausner Exp $
 
 DISTNAME=	gnomebaker-0.6.4
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gnomebaker/}
 

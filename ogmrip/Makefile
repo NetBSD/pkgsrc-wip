@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/07/18 15:27:40 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2010/01/18 09:38:28 thomasklausner Exp $
 #
 
 DISTNAME=		ogmrip-0.12.3
+PKGREVISION=		1
 CATEGORIES=		multimedia
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ogmrip/}
 

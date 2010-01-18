@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2008/02/03 17:50:13 tnn2 Exp $
+# $NetBSD: Makefile,v 1.8 2010/01/18 09:38:34 thomasklausner Exp $
 
 #DISTNAME=	ubit-5.0.4
 DISTNAME=	ubit-5.5.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 
 MASTER_SITES=	ftp://ftp.enst.fr/pub/ubit/

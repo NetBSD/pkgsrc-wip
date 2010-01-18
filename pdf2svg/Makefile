@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2009/05/19 16:22:45 briandealwis Exp $
+# $NetBSD: Makefile,v 1.3 2010/01/18 09:38:28 thomasklausner Exp $
 #
 
 DISTNAME=	pdf2svg-0.2.1
+PKGREVISION=	1
 CATEGORIES=	converters
 MASTER_SITES=	http://www.cityinthesky.co.uk/files/
 

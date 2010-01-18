@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2008/09/22 20:11:17 jsonn Exp $
+# $NetBSD: Makefile,v 1.7 2010/01/18 09:38:34 thomasklausner Exp $
 #
 
 DISTNAME=	tv-0.5
 PKGNAME=	treeviewx-0.5
+PKGREVISION=	1
 CATEGORIES=	biology
 MASTER_SITES=	http://darwin.zoology.gla.ac.uk/~rpage/treeviewx/
 

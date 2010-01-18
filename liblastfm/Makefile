@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/06/11 08:53:41 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2010/01/18 09:38:27 thomasklausner Exp $
 #
 
 DISTNAME=	liblastfm-0.3.0
+PKGREVISION=	1
 CATEGORIES=	audio net
 MASTER_SITES=	http://cdn.last.fm/src/
 EXTRACT_SUFX=	.tar.bz2

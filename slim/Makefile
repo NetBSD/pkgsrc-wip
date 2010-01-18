@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2009/11/22 23:15:59 shindenmorr Exp $
+# $NetBSD: Makefile,v 1.7 2010/01/18 09:38:32 thomasklausner Exp $
 #
 
 DISTNAME=	slim-1.3.1
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	http://download.berlios.de/slim/
 

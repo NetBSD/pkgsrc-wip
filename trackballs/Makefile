@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2009/05/20 00:58:43 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2010/01/18 09:38:34 thomasklausner Exp $
 #
 
 DISTNAME=	trackballs-1.1.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=trackballs/}
 

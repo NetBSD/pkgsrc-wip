@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2010/01/17 12:03:32 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2010/01/18 09:38:33 thomasklausner Exp $
 #
 
 DISTNAME=	splix-2.0.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=splix/}
 EXTRACT_SUFX=	.tar.bz2

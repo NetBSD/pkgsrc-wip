@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2006/03/09 21:02:08 jlamwww Exp $
+# $NetBSD: Makefile,v 1.5 2010/01/18 09:38:20 thomasklausner Exp $
 #
 
 DISTNAME=		epplets-0.7
+PKGREVISION=		1
 CATEGORIES=		wm x11
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=enlightenment/}
 

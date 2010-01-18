@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2007/09/23 14:19:10 tnn2 Exp $
+# $NetBSD: Makefile,v 1.7 2010/01/18 09:38:22 thomasklausner Exp $
 #
 
 DISTNAME=		gpsdrive-2.10pre4
+PKGREVISION=		1
 CATEGORIES=		geography
 MASTER_SITES=		http://www.gpsdrive.de/gpsdrive.tar/
 

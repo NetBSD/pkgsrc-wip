@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/09/12 17:40:32 yacht Exp $
+# $NetBSD: Makefile,v 1.2 2010/01/18 09:38:32 thomasklausner Exp $
 #
 
 PKGNAME=	scorched3d-42.1
 DISTNAME=	Scorched3D-42.1-src
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	http://downloads.sourceforge.net/project/scorched3d/scorched3d/Version%2042.1/
 # The following does not work because of space character

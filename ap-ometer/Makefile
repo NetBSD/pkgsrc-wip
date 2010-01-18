@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2009/06/02 23:30:50 jsonn Exp $
+# $NetBSD: Makefile,v 1.15 2010/01/18 09:38:17 thomasklausner Exp $
 #
 
 DISTNAME=	mod_ometer-1.3.0
 PKGNAME=	${DISTNAME:S/mod_/ap-/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://www.umich.edu/~umweb/downloads/
 

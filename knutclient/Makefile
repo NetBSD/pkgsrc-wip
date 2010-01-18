@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2010/01/17 12:03:27 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2010/01/18 09:38:26 thomasklausner Exp $
 #
 
 DISTNAME=		knutclient-0.9.3
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		sysutils kde
 MASTER_SITES=		ftp://ftp.buzuluk.cz/pub/alo/knutclient/stable/
 

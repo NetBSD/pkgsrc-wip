@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2010/01/17 12:03:27 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2010/01/18 09:38:26 thomasklausner Exp $
 #
 
 DISTNAME=	kgraphviewer-2.0.2-kde4.3.3
 PKGNAME=	${DISTNAME:S/-kde/./}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_KDE:=4.3.3/src/extragear/}
 EXTRACT_SUFX=	.tar.bz2

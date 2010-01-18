@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2008/05/26 13:59:45 tnn2 Exp $
+# $NetBSD: Makefile,v 1.4 2010/01/18 09:38:27 thomasklausner Exp $
 #
 
 DISTNAME=	${PKGNAME}.src
 PKGNAME=	last.fm-1.3.2.13
+PKGREVISION=	1
 CATEGORIES=	audio net
 MASTER_SITES=	http://cdn.last.fm/client/src/
 EXTRACT_SUFX=	.tar.bz2

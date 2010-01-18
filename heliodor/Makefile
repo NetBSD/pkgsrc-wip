@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2009/06/02 13:12:07 noud4 Exp $
+# $NetBSD: Makefile,v 1.4 2010/01/18 09:38:24 thomasklausner Exp $
 #
 
 DISTNAME=	heliodor-0.2.1
-PKGREVISION=	1
+PKGREVISION=	2
 
 .include "../../wip/beryl/Makefile.inc"
 

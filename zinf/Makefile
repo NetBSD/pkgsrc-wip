@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2006/09/14 19:10:52 dhowland Exp $
+# $NetBSD: Makefile,v 1.13 2010/01/18 09:38:35 thomasklausner Exp $
 #
 
 DISTNAME=	zinf-2.2.0
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=zinf/}
 

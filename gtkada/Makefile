@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2008/03/06 14:54:09 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.13 2010/01/18 09:38:23 thomasklausner Exp $
 #
 
 DISTNAME=		GtkAda-2.2.1
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		devel
 MASTER_SITES=		http://libre.act-europe.fr/GtkAda/
 EXTRACT_SUFX=		.tgz

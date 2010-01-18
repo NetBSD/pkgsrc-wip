@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2006/06/12 16:28:59 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.10 2010/01/18 09:38:30 thomasklausner Exp $
 #
 
 DISTNAME=		visionegg-contrib-0.9.3
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=visionegg/}
 EXTRACT_SUFX=		.zip

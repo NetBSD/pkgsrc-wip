@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2006/10/29 08:32:58 shattered Exp $
+# $NetBSD: Makefile,v 1.13 2010/01/18 09:38:35 thomasklausner Exp $
 #
 
 DISTNAME=	yafray-0.0.7
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES= http://yafray.org/sec/2/downloads/
 

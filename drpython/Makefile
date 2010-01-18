@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2008/05/26 13:59:44 tnn2 Exp $
+# $NetBSD: Makefile,v 1.9 2010/01/18 09:38:19 thomasklausner Exp $
 #
 
 DISTNAME=		drpython-2.1.9
+PKGREVISION=		1
 CATEGORIES=		editors
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=drpython/}
 EXTRACT_SUFX=		.zip

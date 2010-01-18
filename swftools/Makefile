@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2010/01/01 23:08:05 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2010/01/18 09:38:33 thomasklausner Exp $
 #
 
 DISTNAME=	swftools-0.9.0
+PKGREVISION=	1
 CATEGORIES=	graphics converters
 MASTER_SITES=	http://www.swftools.org/
 

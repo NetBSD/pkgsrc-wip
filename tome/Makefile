@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/07/17 00:14:51 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2010/01/18 09:38:33 thomasklausner Exp $
 #
 
 DISTNAME=	tome-300alpha18-src
 PKGNAME=	tome-300alpha18
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	http://t-o-m-e.net/dl/src/
 EXTRACT_SUFX=	.tar.bz2

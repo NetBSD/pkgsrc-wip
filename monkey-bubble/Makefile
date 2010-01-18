@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2009/07/22 09:53:14 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.20 2010/01/18 09:38:28 thomasklausner Exp $
 #
 
 DISTNAME=		monkey-bubble-0.4.0
+PKGREVISION=		1
 CATEGORIES=		games
 MASTER_SITES=		http://home.gna.org/monkeybubble/downloads/
 

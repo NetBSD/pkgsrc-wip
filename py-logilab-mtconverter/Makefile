@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/06/17 23:32:42 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2010/01/18 09:38:30 thomasklausner Exp $
 #
 
 DISTNAME=	logilab-mtconverter-0.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	converters python
 MASTER_SITES=	http://ftp.logilab.org/pub/mtconverter/
 

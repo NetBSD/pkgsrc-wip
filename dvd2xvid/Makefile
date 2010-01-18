@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/02/09 05:50:01 netcap Exp $
+# $NetBSD: Makefile,v 1.2 2010/01/18 09:38:19 thomasklausner Exp $
 #
 
 DISTNAME=	dvd2xvid-0.5.0
+PKGREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	http://www.neoversum.org/download/
 

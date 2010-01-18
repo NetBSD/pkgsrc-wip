@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2009/12/16 20:00:38 jsonn Exp $
+# $NetBSD: Makefile,v 1.7 2010/01/18 09:38:33 thomasklausner Exp $
 
 DISTNAME=	sxemacs-22.1.5
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	editors
 MASTER_SITES=	ftp://ftp.sxemacs.org/pub/sxemacs/
 

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/09/07 18:22:56 yacht Exp $
+# $NetBSD: Makefile,v 1.2 2010/01/18 09:38:23 thomasklausner Exp $
 #
 
 PKGNAME=	gst-plugins0.10-farsight-0.12.11
 DISTNAME=	gst-plugins-farsight-0.12.11
+PKGREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	http://farsight.freedesktop.org/releases/gst-plugins-farsight/
 

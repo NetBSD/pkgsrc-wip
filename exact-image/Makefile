@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/10/11 10:26:50 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2010/01/18 09:38:20 thomasklausner Exp $
 #
 
 DISTNAME=	exact-image-0.7.5
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://dl.exactcode.de/oss/exact-image/
 EXTRACT_SUFX=	.tar.bz2

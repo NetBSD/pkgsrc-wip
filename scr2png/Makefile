@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2005/07/18 19:01:23 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.3 2010/01/18 09:38:32 thomasklausner Exp $
 
 DISTNAME=		scr2png-1.1
+PKGREVISION=		1
 CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_FREEBSD_LOCAL:=nik/}
 
