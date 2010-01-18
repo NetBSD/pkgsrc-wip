@@ -1,19 +1,24 @@
-$NetBSD: patch-ai,v 1.1 2009/09/11 23:03:19 jsonn Exp $
+- No bash specific functions, use standard POSIX shell
+- Use a much simpler construct to determine the existance of dbus-send.
 
---- src/bin/e_signals.c.orig	2009-09-12 00:43:06.000000000 +0200
-+++ src/bin/e_signals.c
-@@ -79,10 +79,14 @@ _e_backtrace_int(int fd, const char *msg
-    size_t size;
+--- data/tools/enlightenment_remote.orig	2010-01-11 19:31:40.000000000 +0100
++++ data/tools/enlightenment_remote	2010-01-11 19:35:45.000000000 +0100
+@@ -1,4 +1,4 @@
+-#!/bin/bash
++#!/bin/sh
+ #
+ # See the function show_help_new_tool in order to know more about this tool
  
-    _e_write_safe_int(fd, msg, msg_len);
-+#if 0
-    _e_write_safe(fd, "\nBEGIN TRACEBACK\n");
-    size = backtrace(array, 255);
-    backtrace_symbols_fd(array, size, fd);
-    _e_write_safe(fd, "END TRACEBACK\n");
-+#else
-+   _e_write_safe(fd, "NO TRACEBACK SUPPPORT\n");
-+#endif
+@@ -206,11 +206,7 @@
+ #       RETURNS:  just finishes and exit
+ #===============================================================================
  
-    size = snprintf(attachmsg, sizeof(attachmsg),
- 		   "debug with: gdb --pid=%d\n", getpid());
+-for dir in $( echo $PATH | tr ':' ' ' )
+-do
+-   test -x ${dir}/dbus-send && dbus_send_found=yes
+-done
+-if [[ "$dbus_send_found" != "yes" ]] ; then
++if ! type dbus-send > /dev/null 2>&1; then
+    echo "E: dbus-send command not found, please install it first"
+    exit 1
+ fi

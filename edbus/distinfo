@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2009/09/11 22:26:50 jsonn Exp $
+$NetBSD: distinfo,v 1.7 2010/01/18 19:35:46 jsonn Exp $
 
-SHA1 (e_dbus-0.5.0.062.tar.bz2) = 008307423e9a3fba7ccc0f9b38af0b082fb09336
-RMD160 (e_dbus-0.5.0.062.tar.bz2) = e70f476634d514ac66cf9a284e259652971d5aa8
-Size (e_dbus-0.5.0.062.tar.bz2) = 303102 bytes
+SHA1 (e_dbus-0.5.0.063.tar.bz2) = 305038ecc2f2d00b9f15d7969371385e9c39db8f
+RMD160 (e_dbus-0.5.0.063.tar.bz2) = 47519c0398b2d54e4344907cd5bbb3ecbdf68b2a
+Size (e_dbus-0.5.0.063.tar.bz2) = 311065 bytes

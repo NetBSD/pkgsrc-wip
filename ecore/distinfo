@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2009/09/11 22:01:16 jsonn Exp $
+$NetBSD: distinfo,v 1.15 2010/01/18 19:35:08 jsonn Exp $
 
-SHA1 (ecore-0.9.9.062.tar.gz) = 7741271d92faf816bf7136802c7b4f868fcf9f52
-RMD160 (ecore-0.9.9.062.tar.gz) = 2d941ccf146df85de0006ca41cb1900b1cfb9801
-Size (ecore-0.9.9.062.tar.gz) = 4573260 bytes
+SHA1 (ecore-0.9.9.063.tar.gz) = 5621747369b11ad2f97e57b0117898828f2483c8
+RMD160 (ecore-0.9.9.063.tar.gz) = a9b870175af8c9b35a4156a26f235de391442350
+Size (ecore-0.9.9.063.tar.gz) = 1107692 bytes

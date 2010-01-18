@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2009/06/07 21:27:34 jsonn Exp $
+@comment $NetBSD: PLIST,v 1.11 2010/01/18 19:35:08 jsonn Exp $
 bin/ecore_config
 include/Ecore.h
 include/Ecore_Con.h
@@ -41,3 +41,6 @@ lib/pkgconfig/ecore-job.pc
 lib/pkgconfig/ecore-txt.pc
 lib/pkgconfig/ecore-x.pc
 lib/pkgconfig/ecore.pc
+share/locale/cs/LC_MESSAGES/ecore.mo
+share/locale/fr/LC_MESSAGES/ecore.mo
+share/locale/it/LC_MESSAGES/ecore.mo

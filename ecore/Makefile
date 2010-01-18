@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.32 2010/01/18 09:38:19 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.33 2010/01/18 19:35:08 jsonn Exp $
 #
 
-DISTNAME=	ecore-0.9.9.062
-PKGREVISION=	2
+DISTNAME=	ecore-0.9.9.063
 CATEGORIES=	x11
-MASTER_SITES=	http://download.enlightenment.org/snapshots/2009-07-29/
+MASTER_SITES=	http://download.enlightenment.org/snapshots/2009-12-02/
 
 MAINTAINER=	yazzy@yazzy.org
 HOMEPAGE=	http://enlightenment.org/
