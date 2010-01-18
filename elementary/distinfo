@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/09/11 23:05:15 jsonn Exp $
+$NetBSD: distinfo,v 1.2 2010/01/18 19:41:05 jsonn Exp $
 
-SHA1 (elementary-0.5.1.0.tar.bz2) = 3cad3467aba08167de1e8d41235126ee7cd5a533
-RMD160 (elementary-0.5.1.0.tar.bz2) = 69cd2a2f2fb13b7abd919a40ec8bcbe5fc702b1f
-Size (elementary-0.5.1.0.tar.bz2) = 1961693 bytes
+SHA1 (elementary-0.6.0.063.tar.bz2) = b86bad9aaa3dce986bd85608fb5c81c5628e9beb
+RMD160 (elementary-0.6.0.063.tar.bz2) = 0c3d17b45b385c48bd5168eca285e2d0adb15b5b
+Size (elementary-0.6.0.063.tar.bz2) = 2086093 bytes
