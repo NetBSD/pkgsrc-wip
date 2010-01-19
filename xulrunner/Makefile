@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2010/01/08 15:27:34 tnn2 Exp $
+# $NetBSD: Makefile,v 1.15 2010/01/19 10:06:15 tnn2 Exp $
 #
 
 .include "dist.mk"
@@ -8,6 +8,7 @@ CATEGORIES=	devel www
 MAINTAINER=	tnn@NetBSD.org
 HOMEPAGE=	http://developer.mozilla.org/en/docs/XULRunner
 COMMENT=	XML User Interface Language runtime environment
+LICENSE=	mpl-1.1
 
 MOZILLA_DIR=	# empty
 
