@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2010/01/12 04:45:46 phonohawk Exp $
+# $NetBSD: Makefile,v 1.18 2010/01/19 11:36:40 phonohawk Exp $
 
 DISTNAME=		ghc-${VERSION}
 VERSION=		6.12.1
@@ -11,11 +11,13 @@ LICENSE=		modified-bsd
 
 DISTFILES=		${DISTNAME}-src.tar.bz2 \
 				${DISTNAME}-boot-i386-unknown-netbsd.tar.bz2 \
-				${DISTNAME}-boot-i386-unknown-freebsd.tar.bz2
+				${DISTNAME}-boot-i386-unknown-freebsd.tar.bz2 \
+				${DISTNAME}-boot-powerpc-apple-darwin.tar.bz2
 
 SITES.${DISTNAME}-src.tar.bz2						= http://www.haskell.org/ghc/dist/${VERSION}/
 SITES.${DISTNAME}-boot-i386-unknown-netbsd.tar.bz2	= http://static.cielonegro.org/archive/
 SITES.${DISTNAME}-boot-i386-unknown-freebsd.tar.bz2	= http://static.cielonegro.org/archive/
+SITES.${DISTNAME}-boot-powerpc-apple-darwin.tar.bz2	= http://static.cielonegro.org/archive/
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -26,16 +28,15 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 # these packages are built with integer-simple, not integer-gmp, to
 # reduce some complexity by not depending on the GMP. The resulting
 # registerised GHC uses integer-gmp so this won't be a problem.
-ONLY_FOR_PLATFORM= NetBSD-*-i386 FreeBSD-*-i386
-# Note: Darwin-*-powerpc is temporarily disabled for now. It shall
-# come back in the near future. Thanks for your patience.
+ONLY_FOR_PLATFORM= NetBSD-*-i386 FreeBSD-*-i386 Darwin-*-powerpc
 
 # We must provide the real pass to gcc to the ./configure script,
 # because GHC has a runtime dependency on it. Aren't there any better
 # way than this?
 .include "../../mk/compiler.mk"
 .if empty(CCPATH)
-WARNINGS+= "This package depends on pkgsrc's undocumented variable CCPATH but it disappeared somehow."
+WARNINGS+= "This package depends on pkgsrc's undocumented variable\
+CCPATH but it disappeared somehow."
 WARNINGS+= "Using hard-coded /usr/bin/gcc as the C compiler..."
 CONFIGURE_ARGS+= --with-gcc=/usr/bin/gcc
 .else
@@ -77,9 +78,12 @@ BOOTSTRAP_BUILD_MK = ${PKGDIR}/files/bootstrap-bsd.mk
 BOOTSTRAP_TARBALL = ${DISTNAME}-boot-i386-unknown-freebsd.tar.bz2
 BOOTSTRAP_BUILD_MK = ${PKGDIR}/files/bootstrap-bsd.mk
 
-#.elif ${MACHINE_ARCH} == "powerpc" && ${OPSYS} == "Darwin"
-#BOOTSTRAP_TARBALL = ${DISTNAME}-boot-powerpc-apple-darwin.tar.bz2
-#BOOTSTRAP_BUILD_MK = ${PKGDIR}/files/bootstrap.mk
+.elif ${MACHINE_ARCH} == "powerpc" && ${OPSYS} == "Darwin"
+BOOTSTRAP_TARBALL = ${DISTNAME}-boot-powerpc-apple-darwin.tar.bz2
+BOOTSTRAP_BUILD_MK = ${PKGDIR}/files/bootstrap.mk
+# Existence of libelf makes LeadingUnderscore being "NO", which is
+# incorrect. See ghc-6.12.1/aclocal.m4 (FP_LEADING_UNDERSCORE)
+CONFLICTS=	libelf-[0-9]*
 
 .else
 PKG_FAIL_REASON+=	"internal error: unsupported platform"
@@ -138,6 +142,20 @@ do-configure:
 # Disable file splitting until pkgsrc gets improved.
 pre-build:
 	${RUN} ${ECHO} "SplitObjs = NO" >> ${WRKSRC}/mk/build.mk
+# We have to sacrifice the GHCi library for GHC itself to work around
+# for powerpc ld bug.  See
+# http://hackage.haskell.org/trac/ghc/ticket/3260
+.if ${MACHINE_ARCH} == "powerpc"
+	${RUN} ${MKDIR} ${WRKSRC}/compiler/stage1/build
+	${RUN} ${TOUCH} ${WRKSRC}/compiler/stage1/build/HS${DISTNAME}.o
+	${RUN} ${MKDIR} ${WRKSRC}/compiler/stage2/build
+	${RUN} ${TOUCH} ${WRKSRC}/compiler/stage2/build/HS${DISTNAME}.o
+.endif
+
+.if ${MACHINE_ARCH} == "powerpc"
+WARNINGS+= "You won't be able to use GHCi library for GHC itself\
+because of powerpc ld bug."
+.endif
 
 # Some unused scripts don't pass the portability test.
 CHECK_PORTABILITY_SKIP+=	distrib/prep-bin-dist-mingw
