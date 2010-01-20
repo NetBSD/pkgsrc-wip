@@ -1,3 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/01/14 12:12:00 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/01/20 06:59:27 obache Exp $
 share/ibus-table/icons/cns11643.png
+share/ibus-table/icons/ibus-emoji.svg
 share/ibus-table/tables/cns11643.db
+share/ibus-table/tables/emoji.db
