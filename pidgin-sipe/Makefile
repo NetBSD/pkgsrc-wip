@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2010/01/20 10:41:52 yacht Exp $
+# $NetBSD: Makefile,v 1.5 2010/01/20 14:04:59 thomasklausner Exp $
 #
 
 DISTNAME=	pidgin-sipe-1.7.1
+PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sipe/}
 

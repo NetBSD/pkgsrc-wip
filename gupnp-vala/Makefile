@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/12/07 15:08:38 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2010/01/20 14:04:59 thomasklausner Exp $
 #
 
 DISTNAME=	gupnp-vala-0.5.4
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://gupnp.org/sources/bindings/
 

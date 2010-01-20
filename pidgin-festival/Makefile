@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2009/06/10 06:22:20 othyro Exp $
+# $NetBSD: Makefile,v 1.4 2010/01/20 14:04:59 thomasklausner Exp $
 #
 
 DISTNAME=	pidgin-festival-2.4
+PKGREVISION=	1
 CATEGORIES=	chat audio
 MASTER_SITES=	http://downloads.sourceforge.net/pidgin-festival/
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2009/06/23 09:31:55 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2010/01/20 14:04:59 thomasklausner Exp $
 #
 
 DISTNAME=	pidgin-rhythmbox-2.0
+PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	http://jon.oberheide.org/projects/pidgin-rhythmbox/downloads/
 
