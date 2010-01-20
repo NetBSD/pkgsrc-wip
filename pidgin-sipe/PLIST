@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/08/31 12:09:50 yacht Exp $
-lib/pidgin/libsipe.la
+@comment $NetBSD: PLIST,v 1.2 2010/01/20 10:41:52 yacht Exp $
+lib/purple-2/libsipe.la
 share/pixmaps/pidgin/protocols/16/sipe.png
 share/pixmaps/pidgin/protocols/22/sipe.png
 share/pixmaps/pidgin/protocols/48/sipe.png
