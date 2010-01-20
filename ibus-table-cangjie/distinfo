@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/01/14 10:27:45 obache Exp $
+$NetBSD: distinfo,v 1.2 2010/01/20 06:55:00 obache Exp $
 
-SHA1 (ibus-table-cangjie-1.2.0.20100106.tar.gz) = 5c4f5566c98fb0c7ec2639624e8bb19fba9262b8
-RMD160 (ibus-table-cangjie-1.2.0.20100106.tar.gz) = e88f3d2a4d9cd5ee1095e34457c9d2c9f5c57f9e
-Size (ibus-table-cangjie-1.2.0.20100106.tar.gz) = 2164734 bytes
+SHA1 (ibus-table-cangjie-1.2.0.20100119.tar.gz) = 3839b9170ae3cac3176748e7329d4ca416387e39
+RMD160 (ibus-table-cangjie-1.2.0.20100119.tar.gz) = f05ad71189881b40a715f840c0f511644142cd3c
+Size (ibus-table-cangjie-1.2.0.20100119.tar.gz) = 2536461 bytes
 SHA1 (patch-aa) = 79375e24f98e86236509d389569d61baf9646ff8
