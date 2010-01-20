@@ -1,0 +1,2 @@
+This package should be imported as chat/purple-sipe or chat/sipe since
+as of version 1.7.0 it will work with all libpurple clients, not just Pidgin.
