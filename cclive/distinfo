@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2009/12/15 13:56:04 thomasklausner Exp $
+$NetBSD: distinfo,v 1.7 2010/01/20 12:42:20 thomasklausner Exp $
 
-SHA1 (cclive-0.5.6.tar.bz2) = f6448384aa0a2fe1c77d97a5598277a25b5f5541
-RMD160 (cclive-0.5.6.tar.bz2) = f9e28236bb1cc7057a57a6bf8a91d4abd3407607
-Size (cclive-0.5.6.tar.bz2) = 172652 bytes
+SHA1 (cclive-0.5.8.tar.bz2) = f5ab631b88ec38d50bf05c92768d6be4453a78d1
+RMD160 (cclive-0.5.8.tar.bz2) = 6fd4bb704fe3b58385847d2273096527a4f15831
+Size (cclive-0.5.8.tar.bz2) = 172503 bytes
