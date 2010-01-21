@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/01/04 13:32:28 obache Exp $
+# $NetBSD: Makefile,v 1.5 2010/01/21 12:26:15 obache Exp $
 #
 
 DISTNAME=	jbigkit-2.0
@@ -29,7 +29,7 @@ do-install:
 		${INSTALL_DATA} $${h} ${DESTDIR}${PREFIX}/include; \
 	done; \
 	for l in *.la; do \
-		${LIBTOOL} --mode=install ${INSTALL_DATA} $${l} ${DESTDIR}${PREFIX}/lib; \
+		${LIBTOOL} --mode=install ${INSTALL_LIB} $${l} ${DESTDIR}${PREFIX}/lib; \
 	done; \
 	for t in *.txt; do \
 		${INSTALL_DATA} $${t} ${DESTDIR}${PREFIX}/share/doc/jbig; \
