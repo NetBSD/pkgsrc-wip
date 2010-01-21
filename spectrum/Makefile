@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/01/20 14:04:59 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2010/01/21 15:21:38 schnoebe Exp $
 
 DISTNAME=		spectrum
 PKGNAME=		${DISTNAME}-0.1
@@ -30,8 +30,8 @@ USE_LANGUAGES+=		c++ c
 # always include bsd.prefs.mk before any .if or .ifdef statements
 .include "../../mk/bsd.prefs.mk"
 
-PKG_SYSCONFSUBDIR=	jabberd
-EGDIR=			${PREFIX}/share/examples/jabberd
+PKG_SYSCONFSUBDIR=	spectrum
+EGDIR=			${PREFIX}/share/examples/spectrum
 
 CONF_FILES+=		${EGDIR}/spectrum.cfg ${PKG_SYSCONFDIR}/spectrum.cfg
 
@@ -43,13 +43,14 @@ SUBST_FILES.cfgpath=	CMakeLists.txt
 SUBST_FILES.cfgpath+=	src/configfile.cpp
 SUBST_FILES.cfgpath+=	tools/migrate-db/main.cpp
 SUBST_FILES.cfgpath+=	tools/spectrumctl/spectrumctl
+SUBST_FILES.cfgpath+=	spectrumctl/spectrumctl.py
 SUBST_MESSAGE.cfgpath=	Correcting configuration directory
 SUBST_SED.cfgpath=	-e 's,/etc/spectrum,${PKG_SYSCONFDIR},g'
 
-INSTALLATION_DIRS=	bin ${PKG_SYSCONFDIR}
+INSTALLATION_DIRS=	bin ${PKG_SYSCONFDIR} ${EGDIR}
 INSTALLATION_DIRS+=	share/${PKGNAME}/certificates
 INSTALLATION_DIRS+=	share/${PKGNAME}/locales
-INSTALLATION_DIRS+=	share/examples/jabberd
+INSTALLATION_DIRS+=	${EGDIR}
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/spectrum.cfg ${DESTDIR}${EGDIR}
