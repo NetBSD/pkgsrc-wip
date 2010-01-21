@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.1 2010/01/04 13:32:29 obache Exp $
+$NetBSD: patch-ab,v 1.2 2010/01/21 12:27:59 obache Exp $
+
+libtoolize
 
 --- pbmtools/Makefile.orig	2008-08-25 22:26:39.000000000 +0000
 +++ pbmtools/Makefile

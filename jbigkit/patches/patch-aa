@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.1 2010/01/04 13:32:29 obache Exp $
+$NetBSD: patch-aa,v 1.2 2010/01/21 12:27:59 obache Exp $
+
+libtoolize
 
 --- libjbig/Makefile.orig	2008-08-30 17:20:52.000000000 +0000
 +++ libjbig/Makefile
