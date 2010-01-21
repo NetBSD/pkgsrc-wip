@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/01/21 12:26:15 obache Exp $
+# $NetBSD: Makefile,v 1.6 2010/01/21 12:30:02 obache Exp $
 #
 
 DISTNAME=	jbigkit-2.0
@@ -26,20 +26,20 @@ do-install:
 	${RUN} \
 	cd ${WRKSRC}/libjbig; \
 	for h in *.h; do \
-		${INSTALL_DATA} $${h} ${DESTDIR}${PREFIX}/include; \
+		${INSTALL_DATA} "$${h}" ${DESTDIR}${PREFIX}/include; \
 	done; \
 	for l in *.la; do \
-		${LIBTOOL} --mode=install ${INSTALL_LIB} $${l} ${DESTDIR}${PREFIX}/lib; \
+		${LIBTOOL} --mode=install ${INSTALL_LIB} "$${l}" ${DESTDIR}${PREFIX}/lib; \
 	done; \
 	for t in *.txt; do \
-		${INSTALL_DATA} $${t} ${DESTDIR}${PREFIX}/share/doc/jbig; \
+		${INSTALL_DATA} "$${t}" ${DESTDIR}${PREFIX}/share/doc/jbig; \
 	done; \
 	cd ${WRKSRC}/pbmtools; \
 	for p in jbgtopbm jbgtopbm85 pbmtojbg pbmtojbg85; do \
-		${LIBTOOL} --mode=install ${INSTALL_PROGRAM} $${p} ${DESTDIR}${PREFIX}/bin; \
+		${LIBTOOL} --mode=install ${INSTALL_PROGRAM} "$${p}" ${DESTDIR}${PREFIX}/bin; \
 	done; \
 	for m in *.1; do \
-		${INSTALL_MAN} $${m} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1; \
+		${INSTALL_MAN} "$${m}" ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1; \
 	done;
 
 .include "../../mk/bsd.pkg.mk"
