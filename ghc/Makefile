@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2010/01/19 11:36:40 phonohawk Exp $
+# $NetBSD: Makefile,v 1.19 2010/01/22 09:04:45 phonohawk Exp $
 
 DISTNAME=		ghc-${VERSION}
 VERSION=		6.12.1
@@ -49,7 +49,6 @@ CONFIGURE_ENV+=		PerlCmd=${PERL5:Q}
 # We don't want to extract all of the DISTFILEs.
 EXTRACT_ONLY=	${DISTNAME}-src.tar.bz2
 
-PLATFORM= ${MACHINE_ARCH}-unknown-${LOWER_OPSYS}
 CONFIGURE_ARGS += \
 	--build=${PLATFORM} \
 	--host=${PLATFORM} \
@@ -71,16 +70,17 @@ CONFIGURE_ARGS += \
 # running "ghc-pkg recache".
 
 .if ${MACHINE_ARCH} == "i386" && ${OPSYS} == "NetBSD"
-BOOTSTRAP_TARBALL  = ${DISTNAME}-boot-i386-unknown-netbsd.tar.bz2
 BOOTSTRAP_BUILD_MK = ${PKGDIR}/files/bootstrap-bsd.mk
+PLATFORM           = i386-unknown-netbsd
 
 .elif ${MACHINE_ARCH} == "i386" && ${OPSYS} == "FreeBSD"
-BOOTSTRAP_TARBALL = ${DISTNAME}-boot-i386-unknown-freebsd.tar.bz2
 BOOTSTRAP_BUILD_MK = ${PKGDIR}/files/bootstrap-bsd.mk
+PLATFORM           = i386-unknown-freebsd
 
 .elif ${MACHINE_ARCH} == "powerpc" && ${OPSYS} == "Darwin"
-BOOTSTRAP_TARBALL = ${DISTNAME}-boot-powerpc-apple-darwin.tar.bz2
 BOOTSTRAP_BUILD_MK = ${PKGDIR}/files/bootstrap.mk
+PLATFORM           = powerpc-apple-darwin
+
 # Existence of libelf makes LeadingUnderscore being "NO", which is
 # incorrect. See ghc-6.12.1/aclocal.m4 (FP_LEADING_UNDERSCORE)
 CONFLICTS=	libelf-[0-9]*
@@ -88,6 +88,8 @@ CONFLICTS=	libelf-[0-9]*
 .else
 PKG_FAIL_REASON+=	"internal error: unsupported platform"
 .endif
+
+BOOTSTRAP_TARBALL = ${DISTNAME}-boot-${PLATFORM}.tar.bz2
 
 pre-configure:
 	${RUN} cd ${WRKDIR} && \
