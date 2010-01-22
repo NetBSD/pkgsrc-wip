@@ -1,9 +1,0 @@
-* testing
-
-** NetBSD 5 i386 
-
-20100110	passes
-
-** Solaris SX:CE
-
-some testing, but not make check
