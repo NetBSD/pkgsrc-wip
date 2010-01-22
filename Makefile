@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3772 2010/01/21 12:38:33 obache Exp $
+# $Id: Makefile,v 1.3773 2010/01/22 11:24:07 tnn2 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -145,6 +145,7 @@ SUBDIR+=	bibliographer
 SUBDIR+=	biopython
 SUBDIR+=	bioruby
 SUBDIR+=	bird
+SUBDIR+=	bird6
 SUBDIR+=	blam
 SUBDIR+=	blassic
 SUBDIR+=	bleachbit
