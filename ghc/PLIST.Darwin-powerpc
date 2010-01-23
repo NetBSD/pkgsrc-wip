@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.Darwin-powerpc,v 1.1 2010/01/22 09:04:45 phonohawk Exp $
+@comment $NetBSD: PLIST.Darwin-powerpc,v 1.2 2010/01/23 15:34:55 phonohawk Exp $
 bin/ghc
 bin/${PKGNAME}
 bin/ghc-pkg
@@ -2004,7 +2004,7 @@ lib/${PKGNAME}/package.conf.d/dph-prim-seq-0.4.0-23150bc82f21bd4268b1551af7a3290
 lib/${PKGNAME}/package.conf.d/dph-seq-0.4.0-1f5167ea371010387123b68e975177b2.conf
 lib/${PKGNAME}/package.conf.d/extensible-exceptions-0.1.1.1-95db30aec4429ef77db437055a224b2f.conf
 lib/${PKGNAME}/package.conf.d/filepath-1.1.0.3-07812de93a673f50011d47451bcaac87.conf
-lib/${PKGNAME}/package.conf.d/${PKGNAME}-631c52fbc4b6b15cfb4af0c5f03cf491.conf
+lib/${PKGNAME}/package.conf.d/${PKGNAME}-45889dbd7b1fb5233495684898840568.conf
 lib/${PKGNAME}/package.conf.d/ghc-binary-0.5.0.2-359d07c3fa596bee47da084cc306672c.conf
 lib/${PKGNAME}/package.conf.d/ghc-prim-0.2.0.0-3fbcc20c802efcd7c82089ec77d92990.conf
 lib/${PKGNAME}/package.conf.d/haskell98-1.0.1.1-0fdaf3b26bc38c43ce8371edf538dbf6.conf
