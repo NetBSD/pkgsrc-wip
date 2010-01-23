@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3776 2010/01/23 15:34:20 phonohawk Exp $
+# $Id: Makefile,v 1.3777 2010/01/23 16:35:21 jsonn Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1339,7 +1339,6 @@ SUBDIR+=	netwox
 SUBDIR+=	netx
 SUBDIR+=	newsbeuter
 SUBDIR+=	nginx
-SUBDIR+=	nginx-devel
 SUBDIR+=	nicotine+
 SUBDIR+=	njb-sharp
 SUBDIR+=	nmzmail
