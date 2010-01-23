@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2010/01/05 15:25:30 marko_schuetz Exp $
+@comment $NetBSD: PLIST,v 1.14 2010/01/23 12:24:54 thomasklausner Exp $
 bin/bugpoint
 bin/llc
 bin/lli
@@ -54,6 +54,7 @@ include/llvm/ADT/STLExtras.h
 include/llvm/ADT/ScopedHashTable.h
 include/llvm/ADT/SetOperations.h
 include/llvm/ADT/SetVector.h
+include/llvm/ADT/SmallBitVector.h
 include/llvm/ADT/SmallPtrSet.h
 include/llvm/ADT/SmallSet.h
 include/llvm/ADT/SmallString.h
@@ -81,6 +82,7 @@ include/llvm/Analysis/CallGraph.h
 include/llvm/Analysis/CaptureTracking.h
 include/llvm/Analysis/ConstantFolding.h
 include/llvm/Analysis/ConstantsScanner.h
+include/llvm/Analysis/DOTGraphTraitsPass.h
 include/llvm/Analysis/DebugInfo.h
 include/llvm/Analysis/DomPrinter.h
 include/llvm/Analysis/DominatorInternals.h
@@ -245,8 +247,6 @@ include/llvm/Linker.h
 include/llvm/MC/MCAsmInfo.h
 include/llvm/MC/MCAsmInfoCOFF.h
 include/llvm/MC/MCAsmInfoDarwin.h
-include/llvm/MC/MCAsmLexer.h
-include/llvm/MC/MCAsmParser.h
 include/llvm/MC/MCAssembler.h
 include/llvm/MC/MCCodeEmitter.h
 include/llvm/MC/MCContext.h
@@ -254,6 +254,12 @@ include/llvm/MC/MCDisassembler.h
 include/llvm/MC/MCExpr.h
 include/llvm/MC/MCInst.h
 include/llvm/MC/MCInstPrinter.h
+include/llvm/MC/MCParser/AsmCond.h
+include/llvm/MC/MCParser/AsmLexer.h
+include/llvm/MC/MCParser/AsmParser.h
+include/llvm/MC/MCParser/MCAsmLexer.h
+include/llvm/MC/MCParser/MCAsmParser.h
+include/llvm/MC/MCParser/MCParsedAsmOperand.h
 include/llvm/MC/MCSection.h
 include/llvm/MC/MCSectionELF.h
 include/llvm/MC/MCSectionMachO.h
@@ -299,7 +305,6 @@ include/llvm/Support/InstIterator.h
 include/llvm/Support/InstVisitor.h
 include/llvm/Support/LeakDetector.h
 include/llvm/Support/ManagedStatic.h
-include/llvm/Support/Mangler.h
 include/llvm/Support/MathExtras.h
 include/llvm/Support/MemoryBuffer.h
 include/llvm/Support/MemoryObject.h
@@ -317,6 +322,7 @@ include/llvm/Support/RecyclingAllocator.h
 include/llvm/Support/Regex.h
 include/llvm/Support/Registry.h
 include/llvm/Support/RegistryParser.h
+include/llvm/Support/SMLoc.h
 include/llvm/Support/SlowOperationInformer.h
 include/llvm/Support/SourceMgr.h
 include/llvm/Support/StableBasicBlockNumbering.h
@@ -354,8 +360,10 @@ include/llvm/System/Solaris.h
 include/llvm/System/ThreadLocal.h
 include/llvm/System/Threading.h
 include/llvm/System/TimeValue.h
+include/llvm/Target/Mangler.h
 include/llvm/Target/SubtargetFeature.h
 include/llvm/Target/Target.td
+include/llvm/Target/TargetAsmLexer.h
 include/llvm/Target/TargetAsmParser.h
 include/llvm/Target/TargetCallingConv.td
 include/llvm/Target/TargetData.h
@@ -417,6 +425,7 @@ lib/libLLVMInterpreter.a
 lib/libLLVMJIT.a
 lib/libLLVMLinker.a
 lib/libLLVMMC.a
+lib/libLLVMMCParser.a
 lib/libLLVMScalarOpts.a
 lib/libLLVMSelectionDAG.a
 lib/libLLVMSupport.a
