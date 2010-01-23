@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3774 2010/01/22 14:39:02 lexort Exp $
+# $Id: Makefile,v 1.3775 2010/01/23 15:32:44 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -791,7 +791,6 @@ SUBDIR+=	hs-derive
 SUBDIR+=	hs-digest
 SUBDIR+=	hs-event-list
 SUBDIR+=	hs-explicit-exception
-SUBDIR+=	hs-extensible-exceptions
 SUBDIR+=	hs-gnuplot
 SUBDIR+=	hs-hashed-storage
 SUBDIR+=	hs-hashed-storage3
