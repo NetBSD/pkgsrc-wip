@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/09/24 09:26:52 phonohawk Exp $
+# $NetBSD: Makefile,v 1.3 2010/01/24 03:12:27 phonohawk Exp $
 #
 
 DISTNAME=	terminfo-0.3.1.1
@@ -12,5 +12,4 @@ CONFIGURE_ARGS+= --extra-include-dirs=${PREFIX}/include/ncurses --extra-lib-dirs
 
 .include "../../wip/mk/haskell.mk"
 .include "../../devel/ncurses/buildlink3.mk"
-.include "../../wip/hs-extensible-exceptions/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
