@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/07/27 03:57:38 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2010/01/24 03:41:26 phonohawk Exp $
 #
 
 DISTNAME=	HsHyperEstraier-0.3.1
@@ -14,5 +14,4 @@ CONFIGURE_ARGS=	# none
 
 .include "../../wip/mk/haskell.mk"
 .include "../../wip/hs-network/buildlink3.mk"
-.include "../../wip/hs-utf8-string/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
