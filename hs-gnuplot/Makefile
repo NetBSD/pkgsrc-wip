@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/09/23 13:00:58 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2010/01/24 03:35:26 phonohawk Exp $
 #
 
 DISTNAME=	gnuplot-0.3.3
@@ -11,6 +11,5 @@ LICENSE=	modified-bsd
 DEPENDS+=	gnuplot-[0-9]*:../../graphics/gnuplot
 .include "../../wip/mk/haskell.mk"
 .include "../../wip/hs-monoid-transformer/buildlink3.mk"
-.include "../../wip/hs-time/buildlink3.mk"
 .include "../../wip/hs-utility-ht/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

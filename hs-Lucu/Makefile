@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/01/17 12:03:26 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2010/01/24 03:32:20 phonohawk Exp $
 #
 
 DISTNAME=	Lucu-0.4
@@ -18,6 +18,5 @@ LICENSE=	public-domain
 .include "../../wip/hs-mtl/buildlink3.mk"
 .include "../../wip/hs-network/buildlink3.mk"
 .include "../../wip/hs-stm/buildlink3.mk"
-.include "../../wip/hs-time/buildlink3.mk"
 .include "../../wip/hs-zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

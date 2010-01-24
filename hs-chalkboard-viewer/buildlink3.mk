@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2009/09/22 14:46:34 phonohawk Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2010/01/24 03:33:18 phonohawk Exp $
 
 BUILDLINK_TREE+=	hs-chalkboard-viewer
 
@@ -11,7 +11,6 @@ BUILDLINK_PKGSRCDIR.hs-chalkboard-viewer?=	../../wip/hs-chalkboard-viewer
 .include "../../wip/hs-chalkboard/buildlink3.mk"
 .include "../../wip/hs-GLUT/buildlink3.mk"
 .include "../../wip/hs-OpenGL/buildlink3.mk"
-.include "../../wip/hs-time/buildlink3.mk"
 .endif	# HS_CHALKBOARD_VIEWER_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-hs-chalkboard-viewer

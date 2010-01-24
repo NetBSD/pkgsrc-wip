@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2009/07/27 04:23:31 phonohawk Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2010/01/24 03:36:07 phonohawk Exp $
 
 BUILDLINK_TREE+=	hs-hslogger
 
@@ -10,7 +10,6 @@ BUILDLINK_PKGSRCDIR.hs-hslogger?=	../../wip/hs-hslogger
 
 .include "../../wip/hs-mtl/buildlink3.mk"
 .include "../../wip/hs-network/buildlink3.mk"
-.include "../../wip/hs-time/buildlink3.mk"
 .endif	# HS_HSLOGGER_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-hs-hslogger

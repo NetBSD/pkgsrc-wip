@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/09/22 14:46:34 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2010/01/24 03:33:18 phonohawk Exp $
 #
 
 DISTNAME=	chalkboard-viewer-0.1
@@ -13,5 +13,4 @@ LICENSE=	modified-bsd
 .include "../../wip/hs-chalkboard/buildlink3.mk"
 .include "../../wip/hs-GLUT/buildlink3.mk"
 .include "../../wip/hs-OpenGL/buildlink3.mk"
-.include "../../wip/hs-time/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

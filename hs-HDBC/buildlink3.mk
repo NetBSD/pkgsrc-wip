@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2009/10/02 01:59:57 phonohawk Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2010/01/24 03:30:47 phonohawk Exp $
 
 BUILDLINK_TREE+=	hs-HDBC
 
@@ -10,7 +10,6 @@ BUILDLINK_PKGSRCDIR.hs-HDBC?=	../../wip/hs-HDBC
 
 .include "../../wip/hs-convertible/buildlink3.mk"
 .include "../../wip/hs-mtl/buildlink3.mk"
-.include "../../wip/hs-time/buildlink3.mk"
 .include "../../wip/hs-utf8-string/buildlink3.mk"
 .endif	# HS_HDBC_BUILDLINK3_MK
 

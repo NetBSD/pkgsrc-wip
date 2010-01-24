@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2009/10/02 01:59:57 phonohawk Exp $
+$NetBSD: distinfo,v 1.3 2010/01/24 03:30:47 phonohawk Exp $
 
-SHA1 (HDBC-2.1.1.tar.gz) = 14f2ace64ded11b5c1df16aa7807545433513045
-RMD160 (HDBC-2.1.1.tar.gz) = ce9034ea83360fd0dd3896072db8d4e3cf735155
-Size (HDBC-2.1.1.tar.gz) = 31020 bytes
+SHA1 (HDBC-2.2.1.tar.gz) = 29f1b4d12bd164c7b8c2fde435354df0f4a6fea4
+RMD160 (HDBC-2.2.1.tar.gz) = a9aff6fbb2f99ebe6953d4ebb4f0e4d541e9e636
+Size (HDBC-2.2.1.tar.gz) = 31278 bytes
 SHA1 (patch-aa) = 8accd72ef709521e1364c20c77a758d642474ffb
