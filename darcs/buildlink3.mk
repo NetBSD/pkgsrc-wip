@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2009/09/24 08:34:39 phonohawk Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2010/01/24 03:55:01 phonohawk Exp $
 
 BUILDLINK_TREE+=	darcs
 
@@ -14,7 +14,6 @@ BUILDLINK_PKGSRCDIR.darcs?=	../../wip/darcs
 .include "../../wip/hs-mtl/buildlink3.mk"
 .include "../../wip/hs-parsec/buildlink3.mk"
 .include "../../wip/hs-regex-compat/buildlink3.mk"
-.include "../../wip/hs-utf8-string/buildlink3.mk"
 .endif	# DARCS_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-darcs
