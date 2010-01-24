@@ -1,17 +1,17 @@
-$NetBSD: patch-aa,v 1.1 2009/10/03 16:28:40 leot1990 Exp $
+$NetBSD: patch-aa,v 1.2 2010/01/24 12:42:23 leot1990 Exp $
 
 According to wait(2) to use wait4() <sys/resource.h> and <sys/wait.h> should
 be included.
 
---- src/ApvlvUtil.cpp.orig	2009-09-29 07:49:17.000000000 +0200
+--- src/ApvlvUtil.cpp.orig	2010-01-20 05:52:51.000000000 +0100
 +++ src/ApvlvUtil.cpp
-@@ -29,7 +29,8 @@
- #include "ApvlvUtil.hpp"
+@@ -30,7 +30,8 @@
  
  #include <stdlib.h>
+ #ifndef WIN32
 -#include <wait.h>
 +#include <sys/resource.h>
 +#include <sys/wait.h>
- #include <sys/stat.h>
+ #endif
  #include <gtk/gtk.h>
  
