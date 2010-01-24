@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3777 2010/01/23 16:35:21 jsonn Exp $
+# $Id: Makefile,v 1.3778 2010/01/24 03:17:42 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -837,7 +837,6 @@ SUBDIR+=	hs-terminfo
 SUBDIR+=	hs-transformers
 SUBDIR+=	hs-uconv
 SUBDIR+=	hs-uniplate
-SUBDIR+=	hs-utf8-string
 SUBDIR+=	hs-utility-ht
 SUBDIR+=	hs-x11
 SUBDIR+=	hs-x11-extras
