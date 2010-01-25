@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2010/01/22 11:22:25 tnn2 Exp $
+$NetBSD: patch-aa,v 1.3 2010/01/25 17:49:27 tnn2 Exp $
 
 --- tools/Makefile.in.orig	2009-08-16 20:42:37.000000000 +0000
 +++ tools/Makefile.in
@@ -12,8 +12,9 @@ $NetBSD: patch-aa,v 1.2 2010/01/22 11:22:25 tnn2 Exp $
  	if test -n "@CLIENT@" ; then								\
  		$(INSTALL_PROGRAM) -s $(exedir)/birdc $(DESTDIR)/$(sbindir)/birdc@SUFFIX6@ ;				\
  	fi
- 	if ! test -f $(DESTDIR)/$(sysconfdir)/bird@SUFFIX6@.conf ; then						\
+-	if ! test -f $(DESTDIR)/$(sysconfdir)/bird@SUFFIX6@.conf ; then						\
 -		$(INSTALL_DATA) $(srcdir)/doc/bird.conf.example $(DESTDIR)/$(sysconfdir)/bird@SUFFIX6@.conf ;	\
++	if true; then	\
 +		$(INSTALL_DATA) $(srcdir)/doc/bird.conf.example $(DESTDIR)/$(EGDIR)/bird@SUFFIX6@.conf ;	\
  	else											\
  		echo "Not overwriting old bird@SUFFIX@.conf" ;						\
