@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2010/01/22 11:22:25 tnn2 Exp $
+# $NetBSD: Makefile.common,v 1.2 2010/01/25 08:10:44 fjaeckel Exp $
 # used by wip/bird/Makefile
 # used by wip/bird6/Makefile
 
@@ -7,7 +7,7 @@ PKGNAME=	${DISTNAME:S/bird/bird${BIRD6}/}
 CATEGORIES=	net
 MASTER_SITES=	ftp://bird.network.cz/pub/bird/
 
-MAINTAINER=	fjaeckel@jc-ix.net
+MAINTAINER=	tnn@NetBSD.org
 HOMEPAGE=	http://bird.network.cz/
 COMMENT=	The BIRD Internet Routing Daemon
 
