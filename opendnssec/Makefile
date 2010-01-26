@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2010/01/17 12:03:29 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.21 2010/01/26 07:47:34 pettai Exp $
 #
 
 DISTNAME=	opendnssec-${VERSION}
@@ -12,6 +12,7 @@ COMMENT=	OSS for a fast and easy DNSSEC deployment
 LICENSE=	iis-license
 
 DEPENDS+=	${PYPKGPREFIX}-4Suite-[0-9]*:../../wip/py-4Suite
+DEPENDS+=	ldns>=1.6.4:../../net/ldns
 BUILD_DEPENDS+=	CUnit-[0-9]*:../../devel/cunit
 
 LICENSE_FILE=	${FILESDIR}/iis-license
@@ -20,7 +21,7 @@ LICENSE_FILE=	${FILESDIR}/iis-license
 #SVN_ROOT.opendnssec=	http://svn.opendnssec.org/tags/OpenDNSSEC-${VERSION}
 #SVN_MODULE.opendnssec=	OpenDNSSEC
 #NO_CHECKSUM=		yes
-VERSION=		1.0.0rc2
+VERSION=		1.0.0rc3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 #PKG_INSTALLATION_TYPES= overwrite pkgviews
