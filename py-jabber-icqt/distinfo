@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.14 2009/09/30 13:14:51 fhajny Exp $
+$NetBSD: distinfo,v 1.15 2010/01/26 18:17:17 schnoebe Exp $
 
-SHA1 (pyicqt-0.8.1.4.tar.gz) = c707545cd7cceb80ac08c9389e5922d36953c5d6
-RMD160 (pyicqt-0.8.1.4.tar.gz) = 74f7db6cf28ebf295b1dc0b95eb5687c557b9790
-Size (pyicqt-0.8.1.4.tar.gz) = 183338 bytes
+SHA1 (pyicqt-0.8.1.5.tar.gz) = 47606a4f84f6237c391a1c07139f8715913ea2ea
+RMD160 (pyicqt-0.8.1.5.tar.gz) = 205583d07d938a6d2d5b5af58d1a04682fd8318e
+Size (pyicqt-0.8.1.5.tar.gz) = 183865 bytes
 SHA1 (patch-aa) = 20380de4db720a39f8c0e3dc559637e77a7a5363
 SHA1 (patch-ab) = d4391599bbbd1c467947d4b2bd9f0aea34983ffb
 SHA1 (patch-ac) = 168b5d888a48c0d7a31ea47f94b60d8eb4adb2b6
