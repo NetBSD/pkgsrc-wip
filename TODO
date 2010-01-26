@@ -110,7 +110,6 @@ Suggested ready to import packages
 	o granule [pkg/40177]
 	o gtypist [pkg/40177]
 	o heirloom-sh [pkg/40272]
-	o javascript-mode [pkg/35669]
 	o libdbi, libdbi-driver-{mysql,pgsql,sqlite{,3}} [pkg/40235]
 	o paexec
 	o pipestatus [pkg/40250]
