@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2006/04/29 17:43:16 shattered Exp $
+# $NetBSD: Makefile,v 1.6 2010/01/26 23:00:05 pettai Exp $
 #
 
 DISTNAME=		hping3-alpha-2
+PKGNAME=		hping3-3a2
 CATEGORIES=		net
 MASTER_SITES=		http://wiki.hping.org/uploadedfiles/101/
 
@@ -9,12 +10,29 @@ MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://wiki.hping.org/
 COMMENT=		Command-line oriented TCP/IP packet assembler/analyzer
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+SUBST_CLASSES+=		paths
+SUBST_FILES.paths=	${WRKSRC}/configure
+SUBST_FILES.paths+=	${WRKSRC}/Makefile.in
+SUBST_STAGE.paths=      post-patch
+SUBST_SED.paths=	-e 's,@PREFIX@,${PREFIX},g'
+
+USE_TOOLS=		gmake
 USE_PKGLOCALEDIR=	yes
 HAS_CONFIGURE=		yes
 
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/hping3 ${PREFIX}/sbin/
-	${INSTALL_MAN} ${WRKSRC}/docs/hping3.8 ${PREFIX}/${PKGMANDIR}/man8/
+CONFIGURE_ENV+=		INSTALL_MANPATH=${PKGMANDIR}
 
-.include "../../lang/tcl/buildlink3.mk"
+INSTALLATION_DIRS=	sbin ${PKGMANDIR}/man8
+
+.include "options.mk"
+
+#do-configure:
+#	${SETENV} ${CONFIGURE_ENV} ${CONFIG_SHELL} ${WRKSRC}/configure ${CONFIGURE_ARGS}
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/hping3 ${DESTDIR}${PREFIX}/sbin/
+	${INSTALL_MAN} ${WRKSRC}/docs/hping3.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/
+
 .include "../../mk/bsd.pkg.mk"
