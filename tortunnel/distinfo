@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2010/01/27 20:33:03 pettai Exp $
+
+SHA1 (tortunnel-0.2.tar.gz) = f5d1d11c34f79dc4102fd426fcd15b635e967264
+RMD160 (tortunnel-0.2.tar.gz) = b155f45a25dde74dd23079188378f08364931cf3
+Size (tortunnel-0.2.tar.gz) = 108049 bytes
+SHA1 (patch-aa) = 5b94dd1f987b22e983e4288461cd04d750ad7108
