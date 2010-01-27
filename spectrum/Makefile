@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2010/01/21 15:21:38 schnoebe Exp $
+# $NetBSD: Makefile,v 1.8 2010/01/27 05:22:21 schnoebe Exp $
 
 DISTNAME=		spectrum
 PKGNAME=		${DISTNAME}-0.1
@@ -42,7 +42,6 @@ SUBST_STAGE.cfgpath=	post-patch
 SUBST_FILES.cfgpath=	CMakeLists.txt
 SUBST_FILES.cfgpath+=	src/configfile.cpp
 SUBST_FILES.cfgpath+=	tools/migrate-db/main.cpp
-SUBST_FILES.cfgpath+=	tools/spectrumctl/spectrumctl
 SUBST_FILES.cfgpath+=	spectrumctl/spectrumctl.py
 SUBST_MESSAGE.cfgpath=	Correcting configuration directory
 SUBST_SED.cfgpath=	-e 's,/etc/spectrum,${PKG_SYSCONFDIR},g'

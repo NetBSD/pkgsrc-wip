@@ -1,7 +1,8 @@
-# $NetBSD: options.mk,v 1.3 2010/01/02 03:45:41 schnoebe Exp $
+# $NetBSD: options.mk,v 1.4 2010/01/27 05:22:21 schnoebe Exp $
 
 PKG_OPTIONS_VAR=    		PKG_OPTIONS.spectrum
-PKG_OPTIONS_REQUIRED_GROUPS=	storage debug
+PKG_OPTIONS_REQUIRED_GROUPS=	storage
+PKG_OPTIONS_OPTIONAL_GROUPS=	debug
 PKG_OPTIONS_GROUP.storage=	storage-mysql storage-sqlite
 PKG_OPTIONS_GROUP.debug=	debug cppunit
 
