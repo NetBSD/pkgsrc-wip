@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/12/07 10:58:09 marttikuparinen Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/01/28 13:11:34 marttikuparinen Exp $
 etc/opensips/opensips.cfg
 etc/opensips/opensipsctlrc
 etc/opensips/osipsconsolerc
@@ -163,6 +163,7 @@ share/opensips/dbtext/opensips/address
 share/opensips/dbtext/opensips/aliases
 share/opensips/dbtext/opensips/carrierfailureroute
 share/opensips/dbtext/opensips/carrierroute
+share/opensips/dbtext/opensips/closeddial
 share/opensips/dbtext/opensips/cpl
 share/opensips/dbtext/opensips/dbaliases
 share/opensips/dbtext/opensips/dialog
@@ -172,6 +173,7 @@ share/opensips/dbtext/opensips/domain
 share/opensips/dbtext/opensips/domainpolicy
 share/opensips/dbtext/opensips/dr_gateways
 share/opensips/dbtext/opensips/dr_groups
+share/opensips/dbtext/opensips/dr_gw_lists
 share/opensips/dbtext/opensips/dr_rules
 share/opensips/dbtext/opensips/globalblacklist
 share/opensips/dbtext/opensips/grp
