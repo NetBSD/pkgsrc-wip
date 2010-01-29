@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/12/25 00:49:04 rhialto Exp $
+# $NetBSD: Makefile,v 1.4 2010/01/29 11:29:51 rhialto Exp $
 #
 
 DISTNAME=		vice-2.2
@@ -36,6 +36,10 @@ INFO_FILES=		YES
 FONTS_DIRS.x11=		${PREFIX}/share/vice/fonts
 REQD_DIRS+=		${PREFIX}/share/vice/fonts
 REQD_DIRS+=		${PREFIX}/share/vice
+
+# Skip the check on configure, since the check is done before the
+# patch that fixes it (patch-ab).
+CHECK_PORTABILITY_SKIP += configure
 
 .include "options.mk"
 

@@ -1,0 +1,11 @@
+--- configure.orig	2009-12-14 20:40:01.000000000 +0100
++++ configure	2010-01-29 12:11:38.000000000 +0100
+@@ -19019,7 +19019,7 @@
+ done
+ 
+ 
+-  if test x"$with_pulse" == "xyes"; then
++  if test x"$with_pulse" = "xyes"; then
+ 
+ for ac_header in pulse/simple.h
+ do
