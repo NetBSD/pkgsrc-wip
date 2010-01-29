@@ -53,11 +53,12 @@ Suggested package updates
 	o libgksu-2.0.4
 	o libgtk-java-2.10.2
 	o libuuid-1.41.9
+	o libvdpau-0.4
 	o lincity-ng-2.0
 	o lirc-0.8.6
 	o lives-1.1.8
 	o man-1.6f
-	o meta-tracker-0.7.17
+	o meta-tracker-0.7.18
 	o mixxx-1.7.0
 	o mpgedit-0.73dev2
 	o mupen64-0.5
