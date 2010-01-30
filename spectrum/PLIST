@@ -1,7 +1,14 @@
-@comment $NetBSD: PLIST,v 1.2 2009/12/21 04:57:17 schnoebe Exp $
+@comment $NetBSD: PLIST,v 1.3 2010/01/30 04:24:06 schnoebe Exp $
 bin/spectrum
+bin/spectrumctl
+etc/spectrum/spectrum.cfg
+${PYSITELIB}/spectrum/__init__.py
+${PYSITELIB}/spectrum/spectrum.py
+${PYSITELIB}/spectrum/spectrumconfigparser.py
+share/examples/spectrum/spectrum-mysql.sql
+share/examples/spectrum/spectrum-sqlite3.sql
+share/examples/spectrum/spectrum.cfg
 share/spectrum/certificates/facebook.pem
 share/spectrum/locales/cs.po
-share/examples/jabberd/spectrum.cfg
-share/examples/jabberd/spectrum-mysql.sql
-share/examples/jabberd/spectrum-sqlite3.sql
+@pkgdir share/spectrum/locales
+@pkgdir share/spectrum/certificates
