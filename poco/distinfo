@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.2 2009/11/03 00:19:28 schnoebe Exp $
+$NetBSD: distinfo,v 1.3 2010/01/30 05:56:08 schnoebe Exp $
 
-SHA1 (poco-1.3.5-all.tar.gz) = c1a7e144286445d9e76f283fd16e4ab357950707
-RMD160 (poco-1.3.5-all.tar.gz) = 39970fd38ec31007ef746e3c1d0f8b30620bbb7c
-Size (poco-1.3.5-all.tar.gz) = 2934920 bytes
+SHA1 (poco-1.3.6p2-all.tar.gz) = 44f7e4f412eb7f425a4a88f264c03c257411aa18
+RMD160 (poco-1.3.6p2-all.tar.gz) = 4811b8704f1de15b18fd8924caa0e7eac956b202
+Size (poco-1.3.6p2-all.tar.gz) = 3060204 bytes
 SHA1 (patch-aa) = cc45ce4f9b4c436480118add580ec128a9fe0777
 SHA1 (patch-ab) = f4f3f7f1c6628ad5d6e77e836f6eaa1f9e97bcbd
 SHA1 (patch-ac) = 7e0009dc20e4f2591b1fb3dd13e2f1fa607069fd
