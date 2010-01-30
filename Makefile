@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3782 2010/01/30 10:05:34 jihbed Exp $
+# $Id: Makefile,v 1.3783 2010/01/30 20:47:39 bartoszkuzma Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2301,6 +2301,7 @@ SUBDIR+=	uebimiau
 SUBDIR+=	uffizi
 SUBDIR+=	umefont-ttf
 SUBDIR+=	umix
+SUBDIR+=	uni2ascii
 SUBDIR+=	unix2tcp
 SUBDIR+=	unmo3
 SUBDIR+=	unrealtournament-server
