@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2010/01/30 04:24:06 schnoebe Exp $
+# $NetBSD: Makefile,v 1.10 2010/01/30 06:37:27 schnoebe Exp $
 
 DISTNAME=		spectrum
 PKGNAME=		${DISTNAME}-0.1
@@ -62,6 +62,7 @@ post-install:
 
 
 .include "../../lang/python/application.mk"
+.include "../../lang/python/extension.mk"
 .include "../../wip/poco/buildlink3.mk"
 .include "../../wip/gloox/buildlink3.mk"
 .include "../../chat/libpurple/buildlink3.mk"
