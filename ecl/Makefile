@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2009/12/15 15:19:06 asau Exp $
+# $NetBSD: Makefile,v 1.33 2010/01/30 20:14:08 asau Exp $
 #
 
 DISTNAME=		ecl-9.12.3
@@ -14,15 +14,6 @@ LICENSE=		gnu-lgpl-v2
 PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_JOBS_SAFE=		no
 
-CVS_REPOSITORIES=	ecl
-CVS_PROJECT=		ecls
-CVS_ROOT.ecl=		${CVS_ROOT_SOURCEFORGE}
-CVS_MODULE.ecl=		ecl
-
-# CVS_REPOSITORIES+=	ecl-test
-# CVS_ROOT.ecl-test=	${CVS_ROOT_SOURCEFORGE}
-# CVS_MODULE.ecl-test=	ecl-test
-
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
@@ -32,6 +23,23 @@ INFO_FILES=		yes
 CONFIGURE_ARGS+=	--enable-boehm=system --with-system-gmp
 
 .include "options.mk"
+
+PLIST_SUBST=	PKGVERSION_MAJOR_MINOR=${PKGVERSION_NOREV:R} \
+		PKGVERSION_MAJOR=${PKGVERSION_NOREV:R:R}
+
+## CVS part:
+
+PKGNAME=		ecl-9.12.99
+WRKSRC=			${WRKDIR}/ecl
+
+CVS_REPOSITORIES=	ecl
+CVS_PROJECT=		ecls
+CVS_ROOT.ecl=		${CVS_ROOT_SOURCEFORGE}
+CVS_MODULE.ecl=		ecl
+
+# CVS_REPOSITORIES+=	ecl-test
+# CVS_ROOT.ecl-test=	${CVS_ROOT_SOURCEFORGE}
+# CVS_MODULE.ecl-test=	ecl-test
 
 # Change package version to make it differ from released one:
 SUBST_CLASSES+=			fix-version
@@ -46,23 +54,13 @@ SUBST_MESSAGE.fix-libdir=	Fixing package version.
 SUBST_FILES.fix-libdir=		src/configure.in
 SUBST_SED.fix-libdir=		-e '/^ecldir=/s|^.*$$|ecldir="$${libdir}/${PKGNAME_NOREV}"|'
 
-
-PLIST_SUBST=	PKGVERSION_MAJOR_MINOR=${PKGVERSION_NOREV:R} \
-		PKGVERSION_MAJOR=${PKGVERSION_NOREV:R:R}
-
-## CVS part:
-
-# PKGNAME=		ecl-9.12.99
-# WRKSRC=			${WRKDIR}/ecl
-
 # Make package version change to come in effect:
-# USE_TOOLS+=		autoconf
-# pre-configure:
-# 	cd ${WRKSRC}/src && autoconf
+USE_TOOLS+=		autoconf
+pre-configure:
+	cd ${WRKSRC}/src && autoconf
 
-# CVS_ROOT.ecl=	/home/asau/mirr/ecls
-
-# .include "../../wip/mk/cvs-package.mk"
+.include "../../wip/mk/cvs-package.mk"
+## End of CVS part
 .include "../../devel/boehm-gc/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
