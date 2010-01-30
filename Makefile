@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3781 2010/01/29 03:45:42 minskim Exp $
+# $Id: Makefile,v 1.3782 2010/01/30 10:05:34 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1808,6 +1808,7 @@ SUBDIR+=	py-aspell
 SUBDIR+=	py-aspyct
 SUBDIR+=	py-behaviour
 SUBDIR+=	py-bitstring
+SUBDIR+=	py-brian
 SUBDIR+=	py-bsddb
 SUBDIR+=	py-buildbot
 SUBDIR+=	py-cElementTree
