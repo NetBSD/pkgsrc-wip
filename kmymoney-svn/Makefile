@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2010/01/31 19:35:50 gduzan Exp $
+# $NetBSD: Makefile,v 1.2 2010/01/31 21:39:12 thomasklausner Exp $
 
 DISTNAME=	kmymoney
 CATEGORIES=	finance kde
@@ -9,6 +9,8 @@ HOMEPAGE=	http://kmymoney2.sourceforge.net/
 COMMENT=	Personal finance manager for KDE 4, Subversion Snapshot
 LICENSE=	gnu-gpl-v2
 
+BUILD_DEPENDS+=	automoc4-[0-9]*:../../devel/automoc4
+
 SVN_REPOSITORIES=	kmymoney
 SVN_ROOT.kmymoney=	svn://anonsvn.kde.org/home/kde/trunk/playground/office/kmymoney
 NO_CHECKSUM=YES
@@ -17,15 +19,11 @@ NO_CHECKSUM=YES
 
 USE_CMAKE=		yes
 USE_TOOLS+=		msgfmt pkg-config perl
-USE_TOOLS+=		automoc4 kconfig_compiler
-USE_TOOLS+=		gpgme-config
 USE_TOOLS+=		gsed
 USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++
 
 REPLACE_PERL+=	contrib/splitup-kde-chunk-online
-
-BUILD_DEPENDS+=	automoc4:../../devel/automoc4
 
 .include "../../meta-pkgs/kde4/kde4.mk"
 .include "../../databases/shared-mime-info/buildlink3.mk"
@@ -35,6 +33,7 @@ BUILD_DEPENDS+=	automoc4:../../devel/automoc4
 .include "../../misc/kdepim4/buildlink3.mk"
 .include "../../multimedia/phonon/buildlink3.mk"
 .include "../../security/gpgme/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxml++/buildlink3.mk"
 .include "../../time/libical/buildlink3.mk"
