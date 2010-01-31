@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/01/28 13:11:34 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.4 2010/01/31 13:34:49 marttikuparinen Exp $
 
 DISTNAME=		opensips-${VER}-tls_src
 PKGNAME=		opensips-${VER}
@@ -15,6 +15,7 @@ VER=			1.6.1
 WRKSRC=			${WRKDIR}/opensips-${VER}-tls
 
 USE_TOOLS+=		gmake
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CHECK_INTERPRETER_SKIP+=lib/opensips/opensipsctl/dbtextdb/dbtextdb.py
 REPLACE_PERL+=		scripts/osipsconsole
