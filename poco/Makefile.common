@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2010/01/30 05:56:08 schnoebe Exp $
+# $NetBSD: Makefile.common,v 1.2 2010/01/31 23:10:23 schnoebe Exp $
 #
 #   used by:
 #	wip/poco/Makefile
@@ -16,8 +16,6 @@ HOMEPAGE=	http://www.pocoproject.org/
 
 PATCHDIR=	${.CURDIR}/../../wip/poco/patches
 DISTINFO_FILE=	${.CURDIR}/../../wip/poco/distinfo
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 HAS_CONFIGURE=	yes
 USE_LANGUAGES=	c c++

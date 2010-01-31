@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/11/03 00:16:26 schnoebe Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/01/31 23:10:23 schnoebe Exp $
 include/Poco/Data/SQLite/SessionImpl.h
 include/Poco/Data/SQLite/Connector.h
 include/Poco/Data/SQLite/Binder.h
@@ -7,7 +7,7 @@ include/Poco/Data/SQLite/Extractor.h
 include/Poco/Data/SQLite/Utility.h
 include/Poco/Data/SQLite/SQLite.h
 include/Poco/Data/SQLite/SQLiteStatementImpl.h
-lib/libPocoSQLited.so.8
-lib/libPocoSQLite.so.8
+lib/libPocoSQLited.so.9
+lib/libPocoSQLite.so.9
 lib/libPocoSQLited.so
 lib/libPocoSQLite.so

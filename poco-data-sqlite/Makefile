@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2010/01/30 05:56:09 schnoebe Exp $
+# $NetBSD: Makefile,v 1.4 2010/01/31 23:10:23 schnoebe Exp $
 #
 
 PKGNAME=	poco-data-sqlite-${POCO_VERSION}
 CATEGORIES=	databases
 
 COMMENT=	POCO C++ SQLite RDBMS Accessor libraries
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 
