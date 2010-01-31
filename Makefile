@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3783 2010/01/30 20:47:39 bartoszkuzma Exp $
+# $Id: Makefile,v 1.3784 2010/01/31 17:31:20 rhialto Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -362,6 +362,7 @@ SUBDIR+=	eic
 SUBDIR+=	ejourn
 SUBDIR+=	ekg2
 SUBDIR+=	electricsheep
+SUBDIR+=	electricsheep-svn
 SUBDIR+=	elementary
 SUBDIR+=	elinks-libmm
 SUBDIR+=	elinks-snapshot
@@ -432,6 +433,7 @@ SUBDIR+=	firefox
 SUBDIR+=	firefox-wrapper
 SUBDIR+=	firehose
 SUBDIR+=	fish
+SUBDIR+=	flam3-svn
 SUBDIR+=	flashrom
 SUBDIR+=	flasm
 SUBDIR+=	flc
