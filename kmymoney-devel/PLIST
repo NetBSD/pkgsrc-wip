@@ -1,3 +1,4 @@
+@comment $NetBSD: PLIST,v 1.2 2010/01/31 21:29:48 thomasklausner Exp $
 bin/kmymoney
 include/kmymoney/importinterface.h
 include/kmymoney/imymoneyserialize.h
