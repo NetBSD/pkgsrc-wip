@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2010/01/31 19:35:50 gduzan Exp $
+
+--- libkdchart/kdablibfakes/src/KDABLibFakes.h.orig	2010-01-18 06:37:13.000000000 -0500
++++ libkdchart/kdablibfakes/src/KDABLibFakes.h	2010-01-18 06:37:45.000000000 -0500
+@@ -72,7 +72,7 @@
+ #include <float.h>
+ #define ISNAN(x ) _isnan(x )
+ #define ISINF(x ) (!(_finite(x ) + _isnan(x ) ) )
+-#elif defined (Q_OS_DARWIN) || defined (Q_OS_CYGWIN)
++#elif defined (Q_OS_DARWIN) || defined (Q_OS_CYGWIN) || defined (Q_OS_NETBSD)
+ #define ISNAN(x) std::isnan(x)
+ #define ISINF(x) std::isinf(x)
+ #else
