@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.1 2010/01/31 19:56:28 gduzan Exp $
+# $NetBSD: options.mk,v 1.2 2010/01/31 21:30:36 thomasklausner Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.kmymoney2
-PKG_SUPPORTED_OPTIONS=	libofx 
+PKG_SUPPORTED_OPTIONS=	libofx
 PKG_SUGGESTED_OPTIONS=	libofx
 
 .include "../../mk/bsd.options.mk"
