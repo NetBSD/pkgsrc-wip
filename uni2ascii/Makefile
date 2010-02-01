@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2010/01/30 20:47:40 bartoszkuzma Exp $
+# $NetBSD: Makefile,v 1.2 2010/02/01 08:39:34 bartoszkuzma Exp $
 #
 
 DISTNAME=	uni2ascii-4.14
@@ -7,7 +7,7 @@ MASTER_SITES=	http://billposer.org/Software/Downloads/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	bartosz.kuzma@gmail.com
-HOMEPAGE=	http://billposer.org/Software/Downloads/
+HOMEPAGE=	http://billposer.org/Software/uni2ascii.html
 COMMENT=	Convert between UTF-8 Unicode and 7-bit ASCII equivalents
 LICENSE=	gnu-gpl-v3
 
