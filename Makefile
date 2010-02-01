@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3784 2010/01/31 17:31:20 rhialto Exp $
+# $Id: Makefile,v 1.3785 2010/02/01 02:01:19 jym-netbsd Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -253,7 +253,6 @@ SUBDIR+=	csp2b
 SUBDIR+=	cspchecker
 SUBDIR+=	css-mode
 SUBDIR+=	csstidy
-SUBDIR+=	cups-driver-Magicolor5440DL
 SUBDIR+=	cvs-syncmail
 SUBDIR+=	cvs20hg
 SUBDIR+=	cvs2darcs
