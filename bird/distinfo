@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.7 2010/01/25 17:49:27 tnn2 Exp $
+$NetBSD: distinfo,v 1.8 2010/02/01 15:01:56 tnn2 Exp $
 
 SHA1 (bird-1.2.0.tar.gz) = c9db16ce1a9d729098ebd8a655dae17f69019fba
 RMD160 (bird-1.2.0.tar.gz) = eb8067555992a7ad8f15482b4a9cf9a1d39bdc78
 Size (bird-1.2.0.tar.gz) = 755773 bytes
 SHA1 (patch-aa) = 606782e1d654cbb9b18ab86e2d3a002d71fdacf5
+SHA1 (patch-ab) = b039c061b0ea436a42254b51825a920fab1557e3
