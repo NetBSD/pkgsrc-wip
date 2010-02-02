@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3785 2010/02/01 02:01:19 jym-netbsd Exp $
+# $Id: Makefile,v 1.3786 2010/02/02 02:03:47 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -215,6 +215,7 @@ SUBDIR+=	cherokee
 SUBDIR+=	chora
 SUBDIR+=	chrsh
 SUBDIR+=	cinelerra
+SUBDIR+=	cinelerra-cv
 SUBDIR+=	cjk-latex
 SUBDIR+=	cjk-latex-wadalab
 SUBDIR+=	clamassassin
