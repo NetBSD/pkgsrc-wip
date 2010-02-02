@@ -1,12 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.5 2010/01/24 03:32:20 phonohawk Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2010/02/02 07:28:02 phonohawk Exp $
 
 BUILDLINK_TREE+=	hs-Lucu
 
 .if !defined(HS_LUCU_BUILDLINK3_MK)
 HS_LUCU_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.hs-Lucu+=	hs-Lucu>=0.4
-BUILDLINK_ABI_DEPENDS.hs-Lucu?=	hs-Lucu>=0.4nb1
+BUILDLINK_API_DEPENDS.hs-Lucu+=	hs-Lucu>=0.4.2
 BUILDLINK_PKGSRCDIR.hs-Lucu?=	../../wip/hs-Lucu
 
 .include "../../wip/hs-HsOpenSSL/buildlink3.mk"
