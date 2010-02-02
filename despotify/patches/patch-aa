@@ -1,15 +1,13 @@
-$NetBSD: patch-aa,v 1.1 2009/02/24 16:48:37 tnn2 Exp $
+$NetBSD: patch-aa,v 1.2 2010/02/02 18:17:19 tnn2 Exp $
 
---- audio.c.orig	2009-02-23 04:20:00.000000000 +0100
-+++ audio.c
-@@ -22,9 +22,7 @@
- 
- #ifdef __APPLE__
- #include "coreaudio.h"
--#endif
--
--#ifdef __linux__
-+#else
- #include "pulseaudio.h"
- #endif
- 
+--- clients/despotify/local.mk.orig	2010-02-02 17:50:11.000000000 +0000
++++ clients/despotify/local.mk
+@@ -17,7 +17,7 @@ ifeq ($(shell uname -s),Darwin)
+     # The default ncurses library on Mac OS X supports wide characters
+     # so force linking with the one in /usr/lib
+     LDFLAGS = -L/usr/lib -lncurses -framework CoreAudio
+-else ifeq ($(shell uname -s),Linux)
++else ifeq ($(LINUX_BACKEND),libao)
+     DESPOTIFY_OBJS += libao.o
+     LDFLAGS += -lncursesw -lao
+ else
