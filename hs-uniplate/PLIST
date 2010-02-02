@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/10/01 05:49:36 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/02/02 06:24:13 phonohawk Exp $
 lib/uniplate-${PKGVERSION}/${HASKELL_VERSION}/Data/Generics/Biplate.hi
 lib/uniplate-${PKGVERSION}/${HASKELL_VERSION}/Data/Generics/Biplate.p_hi
 lib/uniplate-${PKGVERSION}/${HASKELL_VERSION}/Data/Generics/Compos.hi
@@ -17,6 +17,22 @@ lib/uniplate-${PKGVERSION}/${HASKELL_VERSION}/Data/Generics/Str.hi
 lib/uniplate-${PKGVERSION}/${HASKELL_VERSION}/Data/Generics/Str.p_hi
 lib/uniplate-${PKGVERSION}/${HASKELL_VERSION}/Data/Generics/Uniplate.hi
 lib/uniplate-${PKGVERSION}/${HASKELL_VERSION}/Data/Generics/Uniplate.p_hi
+lib/uniplate-${PKGVERSION}/${HASKELL_VERSION}/Data/Generics/Uniplate/Data.hi
+lib/uniplate-${PKGVERSION}/${HASKELL_VERSION}/Data/Generics/Uniplate/Data.p_hi
+lib/uniplate-${PKGVERSION}/${HASKELL_VERSION}/Data/Generics/Uniplate/DataOnly.hi
+lib/uniplate-${PKGVERSION}/${HASKELL_VERSION}/Data/Generics/Uniplate/DataOnly.p_hi
+lib/uniplate-${PKGVERSION}/${HASKELL_VERSION}/Data/Generics/Uniplate/Direct.hi
+lib/uniplate-${PKGVERSION}/${HASKELL_VERSION}/Data/Generics/Uniplate/Direct.p_hi
+lib/uniplate-${PKGVERSION}/${HASKELL_VERSION}/Data/Generics/Uniplate/Internal/Data.hi
+lib/uniplate-${PKGVERSION}/${HASKELL_VERSION}/Data/Generics/Uniplate/Internal/Data.p_hi
+lib/uniplate-${PKGVERSION}/${HASKELL_VERSION}/Data/Generics/Uniplate/Internal/DataOnlyOperations.hi
+lib/uniplate-${PKGVERSION}/${HASKELL_VERSION}/Data/Generics/Uniplate/Internal/DataOnlyOperations.p_hi
+lib/uniplate-${PKGVERSION}/${HASKELL_VERSION}/Data/Generics/Uniplate/Internal/Utils.hi
+lib/uniplate-${PKGVERSION}/${HASKELL_VERSION}/Data/Generics/Uniplate/Internal/Utils.p_hi
+lib/uniplate-${PKGVERSION}/${HASKELL_VERSION}/Data/Generics/Uniplate/Operations.hi
+lib/uniplate-${PKGVERSION}/${HASKELL_VERSION}/Data/Generics/Uniplate/Operations.p_hi
+lib/uniplate-${PKGVERSION}/${HASKELL_VERSION}/Data/Generics/Uniplate/Typeable.hi
+lib/uniplate-${PKGVERSION}/${HASKELL_VERSION}/Data/Generics/Uniplate/Typeable.p_hi
 lib/uniplate-${PKGVERSION}/${HASKELL_VERSION}/Data/Generics/UniplateOn.hi
 lib/uniplate-${PKGVERSION}/${HASKELL_VERSION}/Data/Generics/UniplateOn.p_hi
 lib/uniplate-${PKGVERSION}/${HASKELL_VERSION}/Data/Generics/UniplateStr.hi

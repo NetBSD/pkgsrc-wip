@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/10/01 05:49:36 phonohawk Exp $
+$NetBSD: distinfo,v 1.2 2010/02/02 06:24:13 phonohawk Exp $
 
-SHA1 (uniplate-1.2.0.3.tar.gz) = edb03b5a7fd3ee57410df194a5f57caf0173aed0
-RMD160 (uniplate-1.2.0.3.tar.gz) = 35a82831f806dad89346baea7031aedf0c463896
-Size (uniplate-1.2.0.3.tar.gz) = 15433 bytes
+SHA1 (uniplate-1.5.1.tar.gz) = b46ef149e1f5e3f73c011bc49b1d7d54c08d5759
+RMD160 (uniplate-1.5.1.tar.gz) = b820652b59c87d4df2582011a12e1f345a40f9eb
+Size (uniplate-1.5.1.tar.gz) = 23941 bytes
