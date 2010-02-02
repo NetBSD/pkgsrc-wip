@@ -1,0 +1,12 @@
+$NetBSD: patch-thread_C,v 1.1.1.1 2010/02/02 02:01:54 phonohawk Exp $
+
+--- guicast/thread.C.orig	2010-02-01 08:26:23.000000000 +0000
++++ guicast/thread.C
+@@ -239,6 +239,6 @@ int Thread::get_realtime()
+ 
+ int Thread::get_tid()
+ {
+-	return tid;
++	return reinterpret_cast<int>(tid);
+ }
+ 
