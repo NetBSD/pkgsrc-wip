@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2009/12/22 22:25:36 pettai Exp $
+# $NetBSD: Makefile,v 1.16 2010/02/02 14:11:05 pettai Exp $
 #
 
 DISTNAME=	softhsm-${VERSION}
@@ -19,7 +19,7 @@ USE_LIBTOOL=	yes
 #SVN_REPOSITORIES=	softhsm
 #SVN_ROOT.softhsm=	http://svn.opendnssec.org/tags/softHSM-${RCVERSION}/
 #SVN_MODULE.softhsm=	softHSM
-VERSION=		1.1.2
+VERSION=		1.1.3
 #RCVERSION=		${VERSION:S/-RC/rc/}
 #NO_CHECKSUM=		yes
 
