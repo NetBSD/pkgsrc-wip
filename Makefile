@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3786 2010/02/02 02:03:47 phonohawk Exp $
+# $Id: Makefile,v 1.3787 2010/02/02 05:18:31 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -183,6 +183,7 @@ SUBDIR+=	busybox
 SUBDIR+=	bwm-ng
 SUBDIR+=	c-news
 SUBDIR+=	c2hs
+SUBDIR+=	cabal-install
 SUBDIR+=	cabal-upload
 SUBDIR+=	cabocha
 SUBDIR+=	cacti
