@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:30 thomasklausner Exp $
-bin/cabal-upload
-share/doc/${PKGNAME}/LICENSE

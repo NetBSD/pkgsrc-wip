@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/02/02 13:07:33 phonohawk Exp $
-
-SHA1 (cabal-upload-0.4.tar.gz) = 872a32d3d3973c8422f924b0b40ed7c88bcf2319
-RMD160 (cabal-upload-0.4.tar.gz) = 1a7b9992b5bf6d65540cb20721409f54967e0f5c
-Size (cabal-upload-0.4.tar.gz) = 3950 bytes
-SHA1 (patch-aa) = 2f2d1dfc53a9fb53bbb47b9c3eedf1250691a472
-SHA1 (patch-ab) = bf6d359fb7c6f0db66c1924ee05b1b40a29017bc
