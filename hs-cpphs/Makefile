@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2009/10/01 05:27:57 phonohawk Exp $
+# $NetBSD: Makefile,v 1.3 2010/02/02 05:56:04 phonohawk Exp $
 #
 
-DISTNAME=		cpphs-1.9
+DISTNAME=		cpphs-1.10
 CATEGORIES=		lang
 
 MAINTAINER=		emil@math.su.se

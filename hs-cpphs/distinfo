@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2009/10/01 05:27:58 phonohawk Exp $
+$NetBSD: distinfo,v 1.3 2010/02/02 05:56:04 phonohawk Exp $
 
-SHA1 (cpphs-1.9.tar.gz) = 49e436b0bfd35986ef61fa571dcc6f839b3fd1e7
-RMD160 (cpphs-1.9.tar.gz) = 9f0d9b068c0dbd5942b1f2f810c62b907a9f0b70
-Size (cpphs-1.9.tar.gz) = 113977 bytes
+SHA1 (cpphs-1.10.tar.gz) = 1e14336be330ec457c9115398f57ab1b380ec91d
+RMD160 (cpphs-1.10.tar.gz) = f631eaba938b3be5716908a9198cd9651f564ebb
+Size (cpphs-1.10.tar.gz) = 68111 bytes
