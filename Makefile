@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3790 2010/02/03 12:42:25 thomasklausner Exp $
+# $Id: Makefile,v 1.3791 2010/02/03 23:40:36 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2368,7 +2368,6 @@ SUBDIR+=	wtf
 SUBDIR+=	wvstreams
 SUBDIR+=	wxGTK-contrib-unicode
 SUBDIR+=	wxGTK-unicode
-SUBDIR+=	wxmaxima
 SUBDIR+=	xace
 SUBDIR+=	xar
 SUBDIR+=	xaralx-bin
