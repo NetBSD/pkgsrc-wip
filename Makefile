@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3789 2010/02/03 11:21:18 thomasklausner Exp $
+# $Id: Makefile,v 1.3790 2010/02/03 12:42:25 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2300,7 +2300,6 @@ SUBDIR+=	uclibc
 SUBDIR+=	udhcp
 SUBDIR+=	uebimiau
 SUBDIR+=	uffizi
-SUBDIR+=	umefont-ttf
 SUBDIR+=	umix
 SUBDIR+=	uni2ascii
 SUBDIR+=	unix2tcp
