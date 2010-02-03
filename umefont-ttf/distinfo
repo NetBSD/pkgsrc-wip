@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/12/24 13:28:58 ryo-on Exp $
+$NetBSD: distinfo,v 1.2 2010/02/03 12:38:56 thomasklausner Exp $
 
-SHA1 (umefont-410.tar.gz) = f74ce1524df81d17ff4066bf51b9ca5627ca08b7
-RMD160 (umefont-410.tar.gz) = 579a1483bccf9a9a29303e4549df7e7f74e8246e
-Size (umefont-410.tar.gz) = 51399801 bytes
+SHA1 (umefont-412.tar.gz) = 646f1695c8e9e7009c7c87e00eda554646cc18f1
+RMD160 (umefont-412.tar.gz) = 9f4890153ec6db6c5faad4921ae589ec1422676c
+Size (umefont-412.tar.gz) = 51223253 bytes
