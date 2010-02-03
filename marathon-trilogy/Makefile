@@ -1,20 +1,22 @@
-# $NetBSD: Makefile,v 1.6 2009/12/23 21:58:56 christtrekker Exp $
+# $NetBSD: Makefile,v 1.7 2010/02/03 11:16:26 thomasklausner Exp $
 #
 
 # This number is rather arbitrary and only for pkgsrc's benefit.
 DISTNAME=	marathon-trilogy-1.0
 CATEGORIES=	games
-
 # The original Bungie trilogy series
 DISTFILES=	M1A1.zip Marathon2.zip MarathonInfinity.zip
 MASTER_SITES=	http://trilogyrelease.bungie.org/files/
-
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	christtrekker@users.sourceforge.net
 HOMEPAGE=	http://trilogyrelease.bungie.org/
 COMMENT=	Bungie game data files, playable with the Aleph One engine
 LICENSE=	generic-nonlicense
+
+# There is no true dependency on Aleph One.  These scenarios cannot be
+# played without it, though.
+#DEPENDS+=	alephone-[0-9]*:../../games/alephone
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -39,9 +41,4 @@ do-install:
 	${CP} -r ${WRKDIR}/Marathon\ 2/* ${DESTDIR}${PREFIX}/${SCENARIO_BASE}/2
 	${CP} -r ${WRKDIR}/Marathon\ Infinity/* ${DESTDIR}${PREFIX}/${SCENARIO_BASE}/Infinity
 
-# There is no true dependency on Aleph One.  These scenarios cannot be
-# played without it, though.
-#DEPENDS+=	:../../games/alephone
-
-# url2pkg-marker (please do not remove this line.)
 .include "../../mk/bsd.pkg.mk"
