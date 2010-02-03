@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/01/18 09:38:35 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2010/02/03 13:49:09 helgoman Exp $
 #
 
 DISTNAME=	wxMaxima-0.8.4
@@ -9,7 +9,7 @@ MASTER_SITES=	http://downloads.sourceforge.net/project/wxmaxima/wxMaxima/0.8.4/
 MAINTAINER=	helgoman@users.sourceforge.net
 HOMEPAGE=	http://wxmaxima.sourceforge.net/wiki/index.php/Main_Page
 COMMENT=	Graphical UI for maxima
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
