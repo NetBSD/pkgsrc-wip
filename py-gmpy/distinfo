@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/07/16 17:36:29 jihbed Exp $
+$NetBSD: distinfo,v 1.2 2010/02/03 14:44:36 jihbed Exp $
 
-SHA1 (gmpy-1.04.zip) = f281de552f756e37ca5ac256c769808d5ff41214
-RMD160 (gmpy-1.04.zip) = 66ae7f7254214d8566be7d10cc2081f865f8e4ae
-Size (gmpy-1.04.zip) = 234390 bytes
+SHA1 (gmpy-1.11.zip) = 5b163a60d678881141ed7e81c4806270ffee9774
+RMD160 (gmpy-1.11.zip) = 3575da6c7eab9c12216d839b0ee12f5bb3d5a40a
+Size (gmpy-1.11.zip) = 144744 bytes
