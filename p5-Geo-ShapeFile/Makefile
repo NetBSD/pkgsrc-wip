@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/02/02 16:27:43 uccwen Exp $
+# $NetBSD: Makefile,v 1.2 2010/02/04 07:34:18 uccwen Exp $
 #
 
 DISTNAME=	Geo-ShapeFile-2.52
@@ -9,6 +9,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Geo/}
 MAINTAINER=	wenheping@gmail.com
 HOMEPAGE=	http://search.cpan.org/~jasonk/Geo-ShapeFile-2.52/lib/Geo/ShapeFile.pm
 COMMENT=	Perl extension for handling ESRI GIS Shapefiles
+LICENSE=	${PERL5_LICENSE}
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
