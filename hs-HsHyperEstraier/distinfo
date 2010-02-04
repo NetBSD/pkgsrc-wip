@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/07/27 03:57:38 phonohawk Exp $
+$NetBSD: distinfo,v 1.2 2010/02/04 06:58:22 phonohawk Exp $
 
-SHA1 (HsHyperEstraier-0.3.1.tar.gz) = 5d183d001c4c0f314c50e44ca916bace5bdd22cd
-RMD160 (HsHyperEstraier-0.3.1.tar.gz) = 41237af36d581e0837746fd9b8c4103704f3f358
-Size (HsHyperEstraier-0.3.1.tar.gz) = 15987 bytes
+SHA1 (HsHyperEstraier-0.3.2.tar.gz) = 41a4c4caf4f0277e46155438dcce79865535b172
+RMD160 (HsHyperEstraier-0.3.2.tar.gz) = 6bfc78e1d07c95b1bd5b114606438ce70c44ddb7
+Size (HsHyperEstraier-0.3.2.tar.gz) = 15107 bytes
