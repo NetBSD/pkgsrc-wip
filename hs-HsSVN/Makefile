@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2010/01/17 12:03:26 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2010/02/04 06:53:54 phonohawk Exp $
 #
 
-DISTNAME=	HsSVN-0.4.1
-PKGREVISION=	1
+DISTNAME=	HsSVN-0.4.2
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
