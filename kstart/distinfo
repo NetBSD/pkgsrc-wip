@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2008/09/14 18:23:43 jakllsch Exp $
+$NetBSD: distinfo,v 1.3 2010/02/05 21:52:31 jakllsch Exp $
 
-SHA1 (kstart-3.14.tar.gz) = 2a746ac8a36c364e3292841c46cb0c7d0bb72188
-RMD160 (kstart-3.14.tar.gz) = 55162e3836151aae0c2bfcedaa087638a02640de
-Size (kstart-3.14.tar.gz) = 212240 bytes
+SHA1 (kstart-3.16.tar.gz) = cd04209b260cad72b0798f7dade2fe94a6fd6eda
+RMD160 (kstart-3.16.tar.gz) = 49a529f7932dd9de6c2bdc516afe35b174e136f0
+Size (kstart-3.16.tar.gz) = 256268 bytes
