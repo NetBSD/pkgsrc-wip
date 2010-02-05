@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/08/10 15:08:01 jakllsch Exp $
+# $NetBSD: Makefile,v 1.4 2010/02/05 21:01:56 jakllsch Exp $
 #
 
 DISTNAME=	nvramtool-${NVRAMTOOL_SNAP_VERSION}
@@ -18,7 +18,7 @@ USE_LANGUAGES+= c
 
 SVN_REPOSITORIES=	nvramtool
 SVN_TAG=		{${NVRAMTOOL_TAG}}
-SVN_ROOT.nvramtool=	svn://coreboot.org/repos/trunk/util/nvramtool
+SVN_ROOT.nvramtool=	svn://coreboot.org/coreboot/trunk/util/nvramtool
 SVN_MODULE.nvramtool=	nvramtool
 
 pre-build:
@@ -36,15 +36,7 @@ ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-x86_64
 WRKSRC=			${WRKDIR}/${PKGBASE}
 
 .if ${OPSYS} == "NetBSD"
-
-SUBST_CLASSES+= iopl
-SUBST_FILES.iopl+=	cmos_lowlevel.c
-SUBST_MESSAGE.iopl=	fixing iopl
-SUBST_STAGE.iopl=	pre-configure
-SUBST_SED.iopl+= -e 's,iopl(,${MACHINE_ARCH}_iopl(,g'
-
 MAKE_FLAGS+=    LDFLAGS=-l${MACHINE_ARCH}
-
 .endif
 
 BUILD_TARGET= nvramtool
