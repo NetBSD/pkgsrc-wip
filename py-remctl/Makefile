@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/05/23 16:00:40 jakllsch Exp $
+# $NetBSD: Makefile,v 1.2 2010/02/05 21:36:22 jakllsch Exp $
 
-VERSION=	2.14
+VERSION=	2.15
 DISTNAME=	remctl-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-remctl-${VERSION}
 CATEGORIES=	sysutils security

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/05/23 16:00:40 jakllsch Exp $
+$NetBSD: distinfo,v 1.2 2010/02/05 21:36:22 jakllsch Exp $
 
-SHA1 (remctl-2.14.tar.gz) = e046a44338b4169c27941dda48d3722fb842952e
-RMD160 (remctl-2.14.tar.gz) = 24da14b6521fb684a12bfcdc52f0e08e335657bf
-Size (remctl-2.14.tar.gz) = 553311 bytes
+SHA1 (remctl-2.15.tar.gz) = b2b97d19bdd8736a22691d828d63cbc579642b22
+RMD160 (remctl-2.15.tar.gz) = ed39e26f3c086d5e06841bee5fdb5e9550468cc3
+Size (remctl-2.15.tar.gz) = 560033 bytes
