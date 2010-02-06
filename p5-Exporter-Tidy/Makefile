@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/08/08 09:37:35 athaba Exp $
+# $NetBSD: Makefile,v 1.2 2010/02/06 15:27:49 athaba Exp $
 #
 
 DISTNAME=	Exporter-Tidy-0.07
@@ -8,7 +8,10 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Exporter/}
 
 MAINTAINER=	athaba@inode.at
 HOMEPAGE=	http://search.cpan.org/dist/Exporter-Tidy
-COMMENT=	alternative way of exporting symbols
+COMMENT=	Alternative way of exporting symbols in perl
+# In fact the license says:
+# Pick your favourite OSI approved license :)
+LICENSE=	modified-bsd
 
 PKG_DESTDIR_SUPPORT=user-destdir
 
