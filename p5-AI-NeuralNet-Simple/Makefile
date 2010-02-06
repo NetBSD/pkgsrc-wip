@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/09/01 11:18:49 athaba Exp $
+# $NetBSD: Makefile,v 1.4 2010/02/06 15:34:02 athaba Exp $
 #
 
 DISTNAME=	AI-NeuralNet-Simple-0.11
@@ -9,6 +9,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=AI/}
 MAINTAINER=	athaba@inode.at
 HOMEPAGE=	http://search.cpan.org/~ovid/AI-NeuralNet-Simple-0.11/
 COMMENT=	Easy to use backprop neural net
+LICENSE=	${PERL5_LICENSE}
 
 PKG_DESTDIR_SUPPORT=user-destdir
 
