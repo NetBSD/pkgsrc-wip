@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2010/01/26 23:40:39 pettai Exp $
+# $NetBSD: Makefile,v 1.2 2010/02/06 16:06:22 pettai Exp $
 #
 
 VER=		0.7
@@ -15,6 +15,7 @@ COMMENT=	Simple & secure port knocking client/server written in python
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	hping3-[0-9]*:../../wip/hping3
+DEPENDS+=	${PYPKGPREFIX}-pycrypto-[0-9]*:../../wip/py-pycrypto
 
 PYDISTUTILSPKG=	yes
 
