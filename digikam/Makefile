@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2010/02/02 00:34:58 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.22 2010/02/08 20:29:31 thomasklausner Exp $
 #
 
 DISTNAME=	digikam-1.1.0
@@ -29,6 +29,7 @@ USE_TOOLS+=	gawk msgfmt perl:run pkg-config
 # for libkdcraw>=0.4.0
 BUILDLINK_API_DEPENDS.kdegraphics4+=	kdegraphics4>=4.1.2nb1
 .include "../../graphics/kdegraphics4/buildlink3.mk"
+.include "../../graphics/lcms/buildlink3.mk"
 .include "../../graphics/liblqr/buildlink3.mk"
 .include "../../multimedia/kdemultimedia4/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
