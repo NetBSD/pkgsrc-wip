@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.9 2008/10/06 11:28:13 obache Exp $
+@comment $NetBSD: PLIST,v 1.10 2010/02/08 05:22:45 obache Exp $
 bin/dbl2png
 bin/gif2dbl
 bin/gif2mask
-bin/img2swf
 bin/listaction
 bin/listaction_d
 bin/listfdb
@@ -24,7 +23,21 @@ include/ming.h
 include/mingpp.h
 lib/libming.la
 lib/pkgconfig/libming.pc
+man/man1/dbl2png.1
+man/man1/gif2dbl.1
+man/man1/gif2mask.1
+man/man1/listfdb.1
+man/man1/listjpeg.1
+man/man1/listmp3.1
+man/man1/makefdb.1
 man/man1/makeswf.1
+man/man1/png2dbl.1
+man/man1/raw2adpcm.1
+man/man1/swftocxx.1
+man/man1/swftoperl.1
+man/man1/swftophp.1
+man/man1/swftopython.1
+man/man1/swftotcl.1
 man/man3/Ming_getScale.3
 man/man3/Ming_init.3
 man/man3/Ming_setCubicThreshold.3
