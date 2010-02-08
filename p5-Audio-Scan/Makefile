@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/02/08 12:02:57 uccwen Exp $
+# $NetBSD: Makefile,v 1.3 2010/02/08 14:02:57 thomasklausner Exp $
 #
 
 DISTNAME=	Audio-Scan-0.58
@@ -14,6 +14,7 @@ LICENSE=	${PERL5_LICENSE}
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/Audio/Scan/.packlist
+USE_LIBTOOL=		yes
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
