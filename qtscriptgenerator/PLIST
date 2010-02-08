@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/07/22 12:28:42 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/02/08 20:29:12 thomasklausner Exp $
 qt4/bin/generator
 qt4/plugins/script/libqtscript_core.la
 qt4/plugins/script/libqtscript_gui.la
@@ -20,6 +20,7 @@ share/doc/qtscriptgenerator/com_trolltech_qt_svg.html
 share/doc/qtscriptgenerator/com_trolltech_qt_uitools.html
 share/doc/qtscriptgenerator/com_trolltech_qt_webkit.html
 share/doc/qtscriptgenerator/com_trolltech_qt_xml.html
+share/doc/qtscriptgenerator/com_trolltech_qt_xmlpatterns.html
 share/doc/qtscriptgenerator/examples/AnalogClock.qs
 share/doc/qtscriptgenerator/examples/BasicDrawing.qs
 share/doc/qtscriptgenerator/examples/CalendarWidget.qs
@@ -52,6 +53,7 @@ share/doc/qtscriptgenerator/qabstractitemdelegate.html
 share/doc/qtscriptgenerator/qabstractitemmodel.html
 share/doc/qtscriptgenerator/qabstractitemview.html
 share/doc/qtscriptgenerator/qabstractlistmodel.html
+share/doc/qtscriptgenerator/qabstractmessagehandler.html
 share/doc/qtscriptgenerator/qabstractnetworkcache.html
 share/doc/qtscriptgenerator/qabstractpagesetupdialog.html
 share/doc/qtscriptgenerator/qabstractprintdialog.html
@@ -60,6 +62,9 @@ share/doc/qtscriptgenerator/qabstractslider.html
 share/doc/qtscriptgenerator/qabstractsocket.html
 share/doc/qtscriptgenerator/qabstractspinbox.html
 share/doc/qtscriptgenerator/qabstracttablemodel.html
+share/doc/qtscriptgenerator/qabstracturiresolver.html
+share/doc/qtscriptgenerator/qabstractxmlnodemodel.html
+share/doc/qtscriptgenerator/qabstractxmlreceiver.html
 share/doc/qtscriptgenerator/qaccessible.html
 share/doc/qtscriptgenerator/qaccessible2interface.html
 share/doc/qtscriptgenerator/qaccessiblebridge.html
@@ -334,6 +339,7 @@ share/doc/qtscriptgenerator/qshortcut.html
 share/doc/qtscriptgenerator/qshortcutevent.html
 share/doc/qtscriptgenerator/qshowevent.html
 share/doc/qtscriptgenerator/qsignalmapper.html
+share/doc/qtscriptgenerator/qsimplexmlnodemodel.html
 share/doc/qtscriptgenerator/qsize.html
 share/doc/qtscriptgenerator/qsizef.html
 share/doc/qtscriptgenerator/qsizegrip.html
@@ -341,6 +347,7 @@ share/doc/qtscriptgenerator/qsizepolicy.html
 share/doc/qtscriptgenerator/qslider.html
 share/doc/qtscriptgenerator/qsocketnotifier.html
 share/doc/qtscriptgenerator/qsound.html
+share/doc/qtscriptgenerator/qsourcelocation.html
 share/doc/qtscriptgenerator/qspaceritem.html
 share/doc/qtscriptgenerator/qspinbox.html
 share/doc/qtscriptgenerator/qsplashscreen.html
@@ -520,11 +527,19 @@ share/doc/qtscriptgenerator/qxmldefaulthandler.html
 share/doc/qtscriptgenerator/qxmldtdhandler.html
 share/doc/qtscriptgenerator/qxmlentityresolver.html
 share/doc/qtscriptgenerator/qxmlerrorhandler.html
+share/doc/qtscriptgenerator/qxmlformatter.html
 share/doc/qtscriptgenerator/qxmlinputsource.html
+share/doc/qtscriptgenerator/qxmlitem.html
 share/doc/qtscriptgenerator/qxmllexicalhandler.html
 share/doc/qtscriptgenerator/qxmllocator.html
+share/doc/qtscriptgenerator/qxmlname.html
+share/doc/qtscriptgenerator/qxmlnamepool.html
+share/doc/qtscriptgenerator/qxmlnodemodelindex.html
 share/doc/qtscriptgenerator/qxmlparseexception.html
+share/doc/qtscriptgenerator/qxmlquery.html
 share/doc/qtscriptgenerator/qxmlreader.html
+share/doc/qtscriptgenerator/qxmlresultitems.html
+share/doc/qtscriptgenerator/qxmlserializer.html
 share/doc/qtscriptgenerator/qxmlsimplereader.html
 share/doc/qtscriptgenerator/qxmlstreamattribute.html
 share/doc/qtscriptgenerator/qxmlstreamattributes.html
