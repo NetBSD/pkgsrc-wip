@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/01/18 09:38:20 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2010/02/08 20:30:28 thomasklausner Exp $
 #
 
 DISTNAME=	99561-filelight-1.9rc3
@@ -17,7 +17,7 @@ BUILD_DEPENDS+=	automoc4>=0.9.83:../../devel/automoc4
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-WRKSRC=		${WRKDIR}/${PKGNAME}
+WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
 USE_LANGUAGES=	c c++
 USE_CMAKE=	yes
