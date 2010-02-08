@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/01/31 21:39:12 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2010/02/08 20:41:29 thomasklausner Exp $
 
 DISTNAME=	kmymoney
 CATEGORIES=	finance kde
@@ -25,17 +25,18 @@ USE_LANGUAGES=		c c++
 
 REPLACE_PERL+=	contrib/splitup-kde-chunk-online
 
-.include "../../meta-pkgs/kde4/kde4.mk"
 .include "../../databases/shared-mime-info/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/glibmm/buildlink3.mk"
 .include "../../finance/libofx/buildlink3.mk"
+.include "../../meta-pkgs/kde4/kde4.mk"
 .include "../../misc/kdepim4/buildlink3.mk"
+.include "../../misc/kdepimlibs4/buildlink3.mk"
 .include "../../multimedia/phonon/buildlink3.mk"
 .include "../../security/gpgme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxml++/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
 .include "../../time/libical/buildlink3.mk"
 .include "../../x11/kdebase4/buildlink3.mk"
 .include "../../x11/kdelibs4/buildlink3.mk"
