@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/02/08 11:49:12 uccwen Exp $
+# $NetBSD: Makefile,v 1.2 2010/02/08 12:02:57 uccwen Exp $
 #
 
 DISTNAME=	Audio-Scan-0.58
@@ -9,6 +9,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Audio/}
 MAINTAINER=	wenheping@gmail.com
 HOMEPAGE=	http://search.cpan.org/dist/Audio-Scan/
 COMMENT=	XS parser for MP3, MP4, Ogg Vorbis, etc
+LICENSE=	${PERL5_LICENSE}
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
