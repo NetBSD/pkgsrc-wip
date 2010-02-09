@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:44 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.3 2010/02/09 04:23:04 phonohawk Exp $
 lib/hxt-${PKGVERSION}/${HASKELL_VERSION}/Control/Arrow/ArrowIO.hi
 lib/hxt-${PKGVERSION}/${HASKELL_VERSION}/Control/Arrow/ArrowIO.p_hi
 lib/hxt-${PKGVERSION}/${HASKELL_VERSION}/Control/Arrow/ArrowIf.hi
@@ -27,8 +27,6 @@ lib/hxt-${PKGVERSION}/${HASKELL_VERSION}/Data/Atom.hi
 lib/hxt-${PKGVERSION}/${HASKELL_VERSION}/Data/Atom.p_hi
 lib/hxt-${PKGVERSION}/${HASKELL_VERSION}/Data/Char/UTF8.hi
 lib/hxt-${PKGVERSION}/${HASKELL_VERSION}/Data/Char/UTF8.p_hi
-lib/hxt-${PKGVERSION}/${HASKELL_VERSION}/Data/NavTree.hi
-lib/hxt-${PKGVERSION}/${HASKELL_VERSION}/Data/NavTree.p_hi
 lib/hxt-${PKGVERSION}/${HASKELL_VERSION}/Data/Tree/Class.hi
 lib/hxt-${PKGVERSION}/${HASKELL_VERSION}/Data/Tree/Class.p_hi
 lib/hxt-${PKGVERSION}/${HASKELL_VERSION}/Data/Tree/NTree/TypeDefs.hi
@@ -64,10 +62,6 @@ lib/hxt-${PKGVERSION}/${HASKELL_VERSION}/Text/XML/HXT/Arrow/ReadDocument.hi
 lib/hxt-${PKGVERSION}/${HASKELL_VERSION}/Text/XML/HXT/Arrow/ReadDocument.p_hi
 lib/hxt-${PKGVERSION}/${HASKELL_VERSION}/Text/XML/HXT/Arrow/WriteDocument.hi
 lib/hxt-${PKGVERSION}/${HASKELL_VERSION}/Text/XML/HXT/Arrow/WriteDocument.p_hi
-lib/hxt-${PKGVERSION}/${HASKELL_VERSION}/Text/XML/HXT/Arrow/XPath.hi
-lib/hxt-${PKGVERSION}/${HASKELL_VERSION}/Text/XML/HXT/Arrow/XPath.p_hi
-lib/hxt-${PKGVERSION}/${HASKELL_VERSION}/Text/XML/HXT/Arrow/XPathSimple.hi
-lib/hxt-${PKGVERSION}/${HASKELL_VERSION}/Text/XML/HXT/Arrow/XPathSimple.p_hi
 lib/hxt-${PKGVERSION}/${HASKELL_VERSION}/Text/XML/HXT/Arrow/XmlArrow.hi
 lib/hxt-${PKGVERSION}/${HASKELL_VERSION}/Text/XML/HXT/Arrow/XmlArrow.p_hi
 lib/hxt-${PKGVERSION}/${HASKELL_VERSION}/Text/XML/HXT/Arrow/XmlIOStateArrow.hi
@@ -188,38 +182,6 @@ lib/hxt-${PKGVERSION}/${HASKELL_VERSION}/Text/XML/HXT/RelaxNG/XmlSchema/RegexPar
 lib/hxt-${PKGVERSION}/${HASKELL_VERSION}/Text/XML/HXT/RelaxNG/XmlSchema/RegexParser.p_hi
 lib/hxt-${PKGVERSION}/${HASKELL_VERSION}/Text/XML/HXT/Version.hi
 lib/hxt-${PKGVERSION}/${HASKELL_VERSION}/Text/XML/HXT/Version.p_hi
-lib/hxt-${PKGVERSION}/${HASKELL_VERSION}/Text/XML/HXT/XPath.hi
-lib/hxt-${PKGVERSION}/${HASKELL_VERSION}/Text/XML/HXT/XPath.p_hi
-lib/hxt-${PKGVERSION}/${HASKELL_VERSION}/Text/XML/HXT/XPath/NavTree.hi
-lib/hxt-${PKGVERSION}/${HASKELL_VERSION}/Text/XML/HXT/XPath/NavTree.p_hi
-lib/hxt-${PKGVERSION}/${HASKELL_VERSION}/Text/XML/HXT/XPath/XPathArithmetic.hi
-lib/hxt-${PKGVERSION}/${HASKELL_VERSION}/Text/XML/HXT/XPath/XPathArithmetic.p_hi
-lib/hxt-${PKGVERSION}/${HASKELL_VERSION}/Text/XML/HXT/XPath/XPathDataTypes.hi
-lib/hxt-${PKGVERSION}/${HASKELL_VERSION}/Text/XML/HXT/XPath/XPathDataTypes.p_hi
-lib/hxt-${PKGVERSION}/${HASKELL_VERSION}/Text/XML/HXT/XPath/XPathEval.hi
-lib/hxt-${PKGVERSION}/${HASKELL_VERSION}/Text/XML/HXT/XPath/XPathEval.p_hi
-lib/hxt-${PKGVERSION}/${HASKELL_VERSION}/Text/XML/HXT/XPath/XPathFct.hi
-lib/hxt-${PKGVERSION}/${HASKELL_VERSION}/Text/XML/HXT/XPath/XPathFct.p_hi
-lib/hxt-${PKGVERSION}/${HASKELL_VERSION}/Text/XML/HXT/XPath/XPathKeywords.hi
-lib/hxt-${PKGVERSION}/${HASKELL_VERSION}/Text/XML/HXT/XPath/XPathKeywords.p_hi
-lib/hxt-${PKGVERSION}/${HASKELL_VERSION}/Text/XML/HXT/XPath/XPathParser.hi
-lib/hxt-${PKGVERSION}/${HASKELL_VERSION}/Text/XML/HXT/XPath/XPathParser.p_hi
-lib/hxt-${PKGVERSION}/${HASKELL_VERSION}/Text/XML/HXT/XPath/XPathToNodeSet.hi
-lib/hxt-${PKGVERSION}/${HASKELL_VERSION}/Text/XML/HXT/XPath/XPathToNodeSet.p_hi
-lib/hxt-${PKGVERSION}/${HASKELL_VERSION}/Text/XML/HXT/XPath/XPathToString.hi
-lib/hxt-${PKGVERSION}/${HASKELL_VERSION}/Text/XML/HXT/XPath/XPathToString.p_hi
-lib/hxt-${PKGVERSION}/${HASKELL_VERSION}/Text/XML/HXT/XSLT/Application.hi
-lib/hxt-${PKGVERSION}/${HASKELL_VERSION}/Text/XML/HXT/XSLT/Application.p_hi
-lib/hxt-${PKGVERSION}/${HASKELL_VERSION}/Text/XML/HXT/XSLT/Common.hi
-lib/hxt-${PKGVERSION}/${HASKELL_VERSION}/Text/XML/HXT/XSLT/Common.p_hi
-lib/hxt-${PKGVERSION}/${HASKELL_VERSION}/Text/XML/HXT/XSLT/Compilation.hi
-lib/hxt-${PKGVERSION}/${HASKELL_VERSION}/Text/XML/HXT/XSLT/Compilation.p_hi
-lib/hxt-${PKGVERSION}/${HASKELL_VERSION}/Text/XML/HXT/XSLT/CompiledStylesheet.hi
-lib/hxt-${PKGVERSION}/${HASKELL_VERSION}/Text/XML/HXT/XSLT/CompiledStylesheet.p_hi
-lib/hxt-${PKGVERSION}/${HASKELL_VERSION}/Text/XML/HXT/XSLT/Names.hi
-lib/hxt-${PKGVERSION}/${HASKELL_VERSION}/Text/XML/HXT/XSLT/Names.p_hi
-lib/hxt-${PKGVERSION}/${HASKELL_VERSION}/Text/XML/HXT/XSLT/XsltArrows.hi
-lib/hxt-${PKGVERSION}/${HASKELL_VERSION}/Text/XML/HXT/XSLT/XsltArrows.p_hi
 lib/hxt-${PKGVERSION}/${HASKELL_VERSION}/libHShxt-${PKGVERSION}.a
 lib/hxt-${PKGVERSION}/${HASKELL_VERSION}/libHShxt-${PKGVERSION}_p.a
 lib/hxt-${PKGVERSION}/${HASKELL_VERSION}/package-description

@@ -5,5 +5,6 @@ representing XML documents, including the DTD subset and the document
 subset, in Haskell. It contains a validating XML parser, a HTML
 parser, namespace support, an XPath expression evaluator, an XSLT
 library, a RelaxNG schema validator and funtions for serialization and
-deserialization of user defined data. The libraray make extensive use
-of the arrow approach for processing XML.
+deserialization of user defined data. The library make extensive use
+of the arrow approach for processing XML. Since version 8.5 XPath and
+XSLT have been moved to separate packages hxt-xpath and hxt-xslt.
