@@ -1,0 +1,33 @@
+$NetBSD: patch-aa,v 1.1 2010/02/09 04:12:57 phonohawk Exp $
+
+--- tagsoup.cabal.orig	2010-01-08 05:13:27.000000000 +0900
++++ tagsoup.cabal
+@@ -20,10 +20,6 @@ description:
+ extra-source-files:
+     tagsoup.htm
+ 
+-flag testprog
+-    default: True
+-    description: Build the test program
+-
+ library
+     ghc-options: -O2
+     build-depends: base == 4.*, network, mtl, containers, bytestring
+@@ -44,17 +40,3 @@ library
+         Text.HTML.TagSoup.Render
+         Text.HTML.TagSoup.Specification
+         Text.HTML.TagSoup.Type
+-
+-executable tagsoup
+-    ghc-options: -O2
+-    if flag(testprog)
+-        buildable: True
+-    else
+-        buildable: False
+-    build-depends: QuickCheck == 2.1.*, time, deepseq == 1.1.0.0, HTTP
+-
+-    main-is: Main.hs
+-    other-modules:
+-        TagSoup.Benchmark
+-        TagSoup.Sample
+-        TagSoup.Test

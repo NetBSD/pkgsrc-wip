@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2009/07/27 01:44:12 phonohawk Exp $
+# $NetBSD: Makefile,v 1.3 2010/02/09 04:12:57 phonohawk Exp $
 #
 
-DISTNAME=	tagsoup-0.6
+DISTNAME=	tagsoup-0.8
 CATEGORIES=	textproc
 
 MAINTAINER=	pho@cielonegro.org

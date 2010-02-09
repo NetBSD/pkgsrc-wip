@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/06/02 06:49:30 phonohawk Exp $
+$NetBSD: distinfo,v 1.2 2010/02/09 04:12:57 phonohawk Exp $
 
-SHA1 (tagsoup-0.6.tar.gz) = 587edb77203b13a5280f1ef69342a3bf10b82268
-RMD160 (tagsoup-0.6.tar.gz) = 6497b2060132230f4ab969e2ca351f889302d7db
-Size (tagsoup-0.6.tar.gz) = 21627 bytes
+SHA1 (tagsoup-0.8.tar.gz) = 0ec3382ffb54c8e2812eed6e01f6e775739baf4d
+RMD160 (tagsoup-0.8.tar.gz) = 9c2bad3d731f84e7e543ec32b54eb5f1bb8f6127
+Size (tagsoup-0.8.tar.gz) = 28208 bytes
+SHA1 (patch-aa) = 06b991b71006b66412d05eb7d1e6a4ccfd4c56e9
