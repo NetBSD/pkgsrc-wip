@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/02/09 03:25:07 phonohawk Exp $
+lib/deepseq-${PKGVERSION}/${HASKELL_VERSION}/Control/DeepSeq.hi
+lib/deepseq-${PKGVERSION}/${HASKELL_VERSION}/Control/DeepSeq.p_hi
+lib/deepseq-${PKGVERSION}/${HASKELL_VERSION}/HSdeepseq-${PKGVERSION}.o
+lib/deepseq-${PKGVERSION}/${HASKELL_VERSION}/libHSdeepseq-${PKGVERSION}.a
+lib/deepseq-${PKGVERSION}/${HASKELL_VERSION}/libHSdeepseq-${PKGVERSION}_p.a
+lib/deepseq-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/deepseq-${PKGVERSION}/LICENSE
