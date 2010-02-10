@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2010/02/03 23:25:34 pettai Exp $
+# $NetBSD: Makefile,v 1.23 2010/02/10 12:56:31 pettai Exp $
 #
 
 DISTNAME=	opendnssec-${VERSION}
@@ -22,7 +22,7 @@ LICENSE_FILE=	${FILESDIR}/iis-license
 #SVN_ROOT.opendnssec=	http://svn.opendnssec.org/tags/OpenDNSSEC-${VERSION}
 #SVN_MODULE.opendnssec=	OpenDNSSEC
 #NO_CHECKSUM=		yes
-VERSION=		1.0.0rc4
+VERSION=		1.0.0
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 #PKG_INSTALLATION_TYPES= overwrite pkgviews
