@@ -1,0 +1,22 @@
+darcs-to-git
+    written by Steve Purcell, some improvements by Thomas Schilling,
+    Jonathon Mah
+
+Converts a Darcs repository into a Git repository.  Supports
+incremental updates, i.e., you can pull new patches from the source
+repository or import a large repository in steps.
+
+USAGE
+=====
+
+(Use `darcs-to-git --help` to display the latest usage instructions.)
+
+1. Create an *empty* directory that will become the new git repository
+2. From inside that directory, run this program, passing the location
+   of the local source darcs repo as a parameter
+
+The program will git-init the empty directory, and migrate all patches
+in the source darcs repo into commits in that repository.
+
+Thereafter, incremental patch conversion from the same source repo is
+possible by repeating step 2.

@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/02/10 16:33:59 phonohawk Exp $
+bin/darcs-to-git
+share/doc/${PKGNAME}/LICENSE
+share/doc/${PKGNAME}/README.markdown
