@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3795 2010/02/09 12:03:11 phonohawk Exp $
+# $Id: Makefile,v 1.3796 2010/02/10 11:53:35 obache Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1267,6 +1267,8 @@ SUBDIR+=	mpi-ch
 SUBDIR+=	mplayer
 SUBDIR+=	mplayer-mt
 SUBDIR+=	mplayer-share
+SUBDIR+=	mplus-bitmap-fonts
+SUBDIR+=	mplus-outline-fonts
 SUBDIR+=	mppdec
 SUBDIR+=	mpq-tools
 SUBDIR+=	msworkbench
