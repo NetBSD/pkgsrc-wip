@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.3 2009/07/31 11:29:55 jihbed Exp $
+# $NetBSD: Makefile,v 1.4 2010/02/10 12:22:43 jihbed Exp $
 #
 
-DISTNAME=	pudb-0.92.11.tar
+DISTNAME=	pudb-0.92.15.tar
 PKGNAME=	${DISTNAME:S/.tar//}
 CATEGORIES=	devel python
 MASTER_SITES=	http://pypi.python.org/packages/source/p/pudb/
-EXTRACT_SUFX=	.gz
+EXTRACT_SUFX=	.gz#md5=e0b469099b8ab67a4b75e4266b9e659c
 
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://pypi.python.org/pypi/pudb/
 COMMENT=	Curses-based interface to Python debugger
-#LICENSE=	LICENSE
+#LICENSE=	# TODO: (see mk/license.mk)
 
 DEPENDS+=	${PYPKGPREFIX}-urwid-[0-9]*:../../devel/py-urwid
 DEPENDS+=	${PYPKGPREFIX}-numpy>=1.1.0:../../math/py-numpy
@@ -19,8 +19,9 @@ DEPENDS+=	${PYPKGPREFIX}-pygments>=1.0:../../textproc/py-pygments
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-WRKSRC=		${WRKDIR}/pudb-0.92.11
+WRKSRC=		${WRKDIR}/pudb-0.92.15
 USE_LANGUAGES=	# none
+
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
