@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3796 2010/02/10 11:53:35 obache Exp $
+# $Id: Makefile,v 1.3797 2010/02/10 16:35:23 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -270,6 +270,7 @@ SUBDIR+=	d4x
 SUBDIR+=	daphne
 SUBDIR+=	darcnes-svgalib
 SUBDIR+=	darcs
+SUBDIR+=	darcs-to-git
 SUBDIR+=	dasm
 SUBDIR+=	datapipe
 SUBDIR+=	db1
