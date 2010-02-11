@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2009/12/27 04:31:35 khorben Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/02/11 21:58:25 khorben Exp $
 bin/panel
 bin/run
 include/Panel.h
 lib/Panel/applets/battery.so
 lib/Panel/applets/clock.so
 lib/Panel/applets/cpu.so
+lib/Panel/applets/cpufreq.so
 lib/Panel/applets/desktop.so
 lib/Panel/applets/lock.so
 lib/Panel/applets/logout.so
@@ -12,3 +13,4 @@ lib/Panel/applets/main.so
 lib/Panel/applets/memory.so
 lib/Panel/applets/pager.so
 lib/Panel/applets/tasks.so
+lib/Panel/applets/volume.so
