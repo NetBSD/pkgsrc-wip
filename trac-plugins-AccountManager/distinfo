@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.2 2009/09/07 11:50:32 obache Exp $
+$NetBSD: distinfo,v 1.3 2010/02/11 08:55:51 obache Exp $
 
-SHA1 (accountmanagerplugin_0.11-r5836.zip) = 3736bb899497553911ba799e6c9ac6006ba992b9
-RMD160 (accountmanagerplugin_0.11-r5836.zip) = 636196d67f5da1e294286ed55a94fdc8594b06c1
-Size (accountmanagerplugin_0.11-r5836.zip) = 44560 bytes
-SHA1 (patch-aa) = 07fb158909f85eab89862a0a00da445747d0e178
+SHA1 (accountmanagerplugin_0.11-r7163.zip) = a790468fbb20d08c4f77e6897b921aa22086f369
+RMD160 (accountmanagerplugin_0.11-r7163.zip) = e0e36602649557aebbe4cf555d256266380adc1d
+Size (accountmanagerplugin_0.11-r7163.zip) = 44511 bytes
 SHA1 (patch-ab) = bcb4aec4e1384f6a0c932c480a46b9311eb19cd7

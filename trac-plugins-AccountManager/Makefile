@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/09/07 11:50:32 obache Exp $
+# $NetBSD: Makefile,v 1.7 2010/02/11 08:55:51 obache Exp $
 
 DISTNAME=	accountmanagerplugin_0.11-r${SVN_REV}
 PKGNAME=	trac-plugins-AccountManager-0.2.1pre${SVN_REV}
@@ -15,7 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	{ja-,}trac>=0.11:../../www/trac
 
-SVN_REV=	5836
+SVN_REV=	7163
 SVN_MOD=	accountmanagerplugin/0.11
 WRKSRC=		${WRKDIR}/${SVN_MOD}
 
