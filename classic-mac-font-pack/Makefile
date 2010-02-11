@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/01/06 04:49:09 christtrekker Exp $
+# $NetBSD: Makefile,v 1.3 2010/02/11 15:24:20 christtrekker Exp $
 #
 
 DISTNAME=	classic-mac-font-pack-0.1
@@ -41,8 +41,10 @@ SITES.MONACO.TTF=	http://www.webdevkungfu.com/files/
 DISTFILES+=	genoa.zip
 SITES.genoa.zip=	http://www.searchfreefonts.com/assets/downloads/
 
-#DISTFILES+=
-#SITES.apple_garamond.zip=
+# This next one has Apple Garamond.
+# I don't think it is freely distributable though.
+#DISTFILES+=	macfonts.tar.gz
+#SITES.macfonts.tar.gz=	http://ubuntu-debs.googlecode.com/files/
 DISTFILES+=	virtue.zip
 SITES.virtue.zip=	http://www.scootergraphics.com/virtue/
 DISTFILES+=	Mottek.zip
