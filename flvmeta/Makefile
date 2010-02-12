@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2009/09/10 10:11:00 jihbed Exp $
+# $NetBSD: Makefile,v 1.7 2010/02/12 00:19:11 jihbed Exp $
 #
 
-DISTNAME=	flvmeta-1.0.10
+DISTNAME=	flvmeta-1.0.11
 CATEGORIES=	multimedia
 MASTER_SITES=	http://flvmeta.googlecode.com/files/
 

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2009/09/10 10:11:00 jihbed Exp $
+$NetBSD: distinfo,v 1.5 2010/02/12 00:19:11 jihbed Exp $
 
-SHA1 (flvmeta-1.0.10.tar.gz) = e17bb1c12f2eeb96a1bd1a4874f812d15f42286a
-RMD160 (flvmeta-1.0.10.tar.gz) = 106f35cbd72cbf9d75f67c531aeb303583a3056f
-Size (flvmeta-1.0.10.tar.gz) = 114536 bytes
+SHA1 (flvmeta-1.0.11.tar.gz) = cec7da5da2e63d479e1714ada178332c55fe1d9a
+RMD160 (flvmeta-1.0.11.tar.gz) = 410d6929ce61b232dfe64dc91ec93aac64527bb8
+Size (flvmeta-1.0.11.tar.gz) = 114879 bytes
