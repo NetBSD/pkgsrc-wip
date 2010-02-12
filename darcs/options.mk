@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2009/09/24 08:34:39 phonohawk Exp $
+# $NetBSD: options.mk,v 1.2 2010/02/12 06:50:59 phonohawk Exp $
 #
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.darcs
@@ -56,7 +56,7 @@ CONFIGURE_ARGS+= -f-color
 #
 .if !empty(PKG_OPTIONS:Mmmap)
 CONFIGURE_ARGS+= -fmmap
-.include "../../wip/hs-mmap/buildlink3.mk"
+.include "../../wip/hs-mmap4/buildlink3.mk"
 .else
 CONFIGURE_ARGS+= -f-mmap
 .endif
