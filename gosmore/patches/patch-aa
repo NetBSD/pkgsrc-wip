@@ -1,0 +1,26 @@
+$NetBSD: patch-aa,v 1.1 2010/02/12 17:55:50 drochner Exp $
+
+--- gosmore.cpp.orig	2010-02-12 11:16:21.000000000 +0000
++++ gosmore.cpp
+@@ -17,6 +17,7 @@
+ #include <vector>
+ #include <queue>
+ #include <map>
++#include <cmath>
+ using namespace std;
+ #ifndef _WIN32
+ #include <sys/mman.h>
+@@ -347,10 +348,10 @@ void ChangePak (const TCHAR *pakfile, in
+ //  printf ("%s %d %d\n", pakfile, (mlon >> 22) + 512, 512 - (mlat >> 22));
+   if (map != (void*) -1) munmap (map, len);
+   
+-  FILE *gmap = fopen64 (pakfile, "r");
++  FILE *gmap = fopen (pakfile, "r");
+   if (!gmap && currentBbox == pakfile &&
+-             (gmap = fopen64 ("default.pak", "r")) == NULL) {
+-    gmap = fopen64 (RES_DIR "default.pak", "r");
++             (gmap = fopen ("default.pak", "r")) == NULL) {
++    gmap = fopen (RES_DIR "default.pak", "r");
+   }
+   len = gmap && fseek (gmap, 0, SEEK_END) == 0 ? ftell (gmap) : 0;
+   map = !len ? (void*)-1

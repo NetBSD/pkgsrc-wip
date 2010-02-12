@@ -1,0 +1,35 @@
+$NetBSD: patch-ac,v 1.1 2010/02/12 17:55:50 drochner Exp $
+
+--- Makefile.orig	2010-02-12 11:16:21.000000000 +0000
++++ Makefile
+@@ -4,8 +4,8 @@
+ TODAY := `exec date +%Y%m%d`
+ VERSION = 0.0.0.$(TODAY)
+ 
+-DESTDIR=
+-prefix = /usr/local
++#DESTDIR=
++prefix = ${PREFIX}
+ bindir = $(prefix)/bin
+ datarootdir = $(prefix)/share
+ 
+@@ -136,14 +136,14 @@ install: gosmore default.pak
+ 	mkdir -p $(DESTDIR)$(bindir)
+ 	cp gosmore $(DESTDIR)$(bindir)/.
+ 	mkdir -p $(DESTDIR)$(datarootdir)/gosmore
+-	cp -a *.wav default.pak elemstyles.xml icons.csv icons.xpm \
++	cp *.wav default.pak elemstyles.xml icons.csv icons.xpm \
+ 	  $(DESTDIR)$(datarootdir)/gosmore
+-	mkdir -p $(DESTDIR)$(datarootdir)/man/man1
+-	gzip <gosmore.1 >$(DESTDIR)$(datarootdir)/man/man1/gosmore.1.gz
++	mkdir -p $(DESTDIR)$(prefix)/$(PKGMANDIR)/man1
++	gzip <gosmore.1 >$(DESTDIR)$(prefix)/$(PKGMANDIR)/man1/gosmore.1.gz
+ 	mkdir -p $(DESTDIR)$(datarootdir)/pixmaps
+-	cp -a gosmore.xpm $(DESTDIR)$(datarootdir)/pixmaps
++	cp gosmore.xpm $(DESTDIR)$(datarootdir)/pixmaps
+ 	mkdir -p $(DESTDIR)$(datarootdir)/applications
+-	cp -a gosmore.desktop $(DESTDIR)$(datarootdir)/applications
++	cp gosmore.desktop $(DESTDIR)$(datarootdir)/applications
+ 
+ default.pak: gosmore
+ 	! [ -e gosmore.pak ]
