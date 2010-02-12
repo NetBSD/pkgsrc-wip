@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/11/13 10:05:17 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/02/12 12:31:20 fhajny Exp $
 lib/erlang/lib/rabbitmq_server-${RMQ_VERSION}/INSTALL
 lib/erlang/lib/rabbitmq_server-${RMQ_VERSION}/LICENSE
 lib/erlang/lib/rabbitmq_server-${RMQ_VERSION}/LICENSE-MPL-RabbitMQ
@@ -29,9 +29,6 @@ lib/erlang/lib/rabbitmq_server-${RMQ_VERSION}/ebin/rabbit_hooks.beam
 lib/erlang/lib/rabbitmq_server-${RMQ_VERSION}/ebin/rabbit_limiter.beam
 lib/erlang/lib/rabbitmq_server-${RMQ_VERSION}/ebin/rabbit_load.beam
 lib/erlang/lib/rabbitmq_server-${RMQ_VERSION}/ebin/rabbit_log.beam
-lib/erlang/lib/rabbitmq_server-${RMQ_VERSION}/ebin/rabbit_memsup.beam
-lib/erlang/lib/rabbitmq_server-${RMQ_VERSION}/ebin/rabbit_memsup_darwin.beam
-lib/erlang/lib/rabbitmq_server-${RMQ_VERSION}/ebin/rabbit_memsup_linux.beam
 lib/erlang/lib/rabbitmq_server-${RMQ_VERSION}/ebin/rabbit_misc.beam
 lib/erlang/lib/rabbitmq_server-${RMQ_VERSION}/ebin/rabbit_mnesia.beam
 lib/erlang/lib/rabbitmq_server-${RMQ_VERSION}/ebin/rabbit_multi.beam
@@ -52,6 +49,7 @@ lib/erlang/lib/rabbitmq_server-${RMQ_VERSION}/ebin/tcp_acceptor_sup.beam
 lib/erlang/lib/rabbitmq_server-${RMQ_VERSION}/ebin/tcp_client_sup.beam
 lib/erlang/lib/rabbitmq_server-${RMQ_VERSION}/ebin/tcp_listener.beam
 lib/erlang/lib/rabbitmq_server-${RMQ_VERSION}/ebin/tcp_listener_sup.beam
+lib/erlang/lib/rabbitmq_server-${RMQ_VERSION}/ebin/vm_memory_monitor.beam
 lib/erlang/lib/rabbitmq_server-${RMQ_VERSION}/include/rabbit.hrl
 lib/erlang/lib/rabbitmq_server-${RMQ_VERSION}/include/rabbit_framing.hrl
 lib/erlang/lib/rabbitmq_server-${RMQ_VERSION}/include/rabbit_framing_spec.hrl
