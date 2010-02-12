@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2010/01/17 12:03:29 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2010/02/12 12:36:10 fhajny Exp $
 #
 
-PKGNAME=		lua-sec-0.3.3
-DISTNAME=		${PKGNAME:S/-//}
-PKGREVISION=		1
+DISTNAME=		luasec-0.4
+PKGNAME=		${DISTNAME:S/lua/lua-/}
 CATEGORIES=		security
-MASTER_SITES=		http://luaforge.net/frs/download.php/4160/
+MASTER_SITES=		http://luaforge.net/frs/download.php/4255/
 
 MAINTAINER=		filip@joyent.com
 HOMEPAGE=		http://www.inf.puc-rio.br/~brunoos/luasec/

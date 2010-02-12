@@ -1,11 +1,11 @@
-$NetBSD: patch-aa,v 1.1.1.1 2009/09/30 19:53:43 fhajny Exp $
+$NetBSD: patch-aa,v 1.2 2010/02/12 12:36:10 fhajny Exp $
 
---- Makefile.orig	2009-05-09 15:11:47.000000000 +0000
+--- Makefile.orig	2009-10-15 12:59:54.000000000 +0000
 +++ Makefile
 @@ -1,11 +1,11 @@
  # Inform the location to intall the modules
 -LUAPATH=/usr/local/share/lua/5.1
--CPATH=/usr/local/lib/lua/5.1
+-LUACPATH=/usr/local/lib/lua/5.1
 +LUAPATH=${PREFIX}/share/examples/lua
 +CPATH=${PREFIX}/lib/lua/5.1
  
@@ -25,11 +25,17 @@ $NetBSD: patch-aa,v 1.1.1.1 2009/09/30 19:53:43 fhajny Exp $
 +	@echo "  * solaris"
  
  install:
- 	@cd src ; $(MAKE) CPATH="$(CPATH)" LUAPATH="$(LUAPATH)" install
-@@ -46,5 +47,11 @@ macosx:
+ 	@cd src ; $(MAKE) LUACPATH="$(LUACPATH)" LUAPATH="$(LUAPATH)" install
+@@ -46,5 +47,17 @@ macosx:
  	@echo "------------------------------"
  	@cd src ; $(MAKE) INCDIR="$(INCDIR)" LIBDIR="$(LIBDIR)" DEFS="$(DEFS)" MACVER="$(MACOSX_VERSION)" $@
  
++solaris:
++	@echo "---------------------"
++	@echo "** Build for Solaris **"
++	@echo "---------------------"
++	@cd src ; $(MAKE) INCDIR="$(INCDIR)" LIBDIR="$(LIBDIR)" DEFS="$(DEFS)" $@
++
 +solaris:
 +	@echo "---------------------"
 +	@echo "** Build for Solaris **"

@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.1.1.1 2009/09/30 19:53:43 fhajny Exp $
+$NetBSD: patch-ab,v 1.2 2010/02/12 12:36:10 fhajny Exp $
 
---- src/Makefile.orig	2009-05-09 15:11:47.000000000 +0000
+--- src/Makefile.orig	2009-10-15 12:59:54.000000000 +0000
 +++ src/Makefile
 @@ -23,6 +23,9 @@ MAC_ENV=env MACOSX_DEPLOYMENT_TARGET='$(
  MAC_CFLAGS=-O2 -fno-common $(WARN) $(INCDIR) $(DEFS)
@@ -9,10 +9,10 @@ $NetBSD: patch-ab,v 1.1.1.1 2009/09/30 19:53:43 fhajny Exp $
 +SOL_CFLAGS=-O2 -fpic $(WARN) $(INCDIR) $(DEFS)
 +SOL_LDFLAGS=-O -G -fpic $(LIBDIR)
 +
- CP=cp
  CC=gcc
  LD=$(MYENV) gcc
-@@ -46,6 +49,9 @@ bsd:
+ CFLAGS=$(MYCFLAGS)
+@@ -47,6 +50,9 @@ bsd:
  macosx:
  	@$(MAKE) $(CMOD) MYCFLAGS="$(MAC_CFLAGS)" MYLDFLAGS="$(MAC_LDFLAGS)" MYENV="$(MAC_ENV)"
  
