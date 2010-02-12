@@ -1,12 +1,14 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/12/03 20:11:28 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/02/12 00:58:38 jihbed Exp $
 lib/evolution-data-server-1.2/extensions/libebookbackendcouchdb.la
 lib/evolution/2.28/plugins/liborg-gnome-evolution-couchdb.la
 lib/evolution/2.28/plugins/org-gnome-evolution-couchdb.eplug
+share/locale/ca/LC_MESSAGES/evolution-couchdb.mo
 share/locale/cs/LC_MESSAGES/evolution-couchdb.mo
 share/locale/de/LC_MESSAGES/evolution-couchdb.mo
 share/locale/el/LC_MESSAGES/evolution-couchdb.mo
 share/locale/es/LC_MESSAGES/evolution-couchdb.mo
 share/locale/fr/LC_MESSAGES/evolution-couchdb.mo
+share/locale/nds/LC_MESSAGES/evolution-couchdb.mo
 share/locale/pt_BR/LC_MESSAGES/evolution-couchdb.mo
 share/locale/sl/LC_MESSAGES/evolution-couchdb.mo
 share/locale/sv/LC_MESSAGES/evolution-couchdb.mo
