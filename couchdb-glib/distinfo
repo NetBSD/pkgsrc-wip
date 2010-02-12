@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/12/03 20:10:22 jihbed Exp $
+$NetBSD: distinfo,v 1.2 2010/02/12 00:51:08 jihbed Exp $
 
-SHA1 (couchdb-glib-0.5.3.tar.bz2) = 564483cfaba7b5bd36c5070dd6f9fe22893c6b26
-RMD160 (couchdb-glib-0.5.3.tar.bz2) = 1a0a526b43b45c38facb9b9d8f7cf3ccee27c156
-Size (couchdb-glib-0.5.3.tar.bz2) = 264272 bytes
+SHA1 (couchdb-glib-0.5.99.tar.bz2) = 5fc272b1290a03ac7e6ca3bff4bfb014722a5649
+RMD160 (couchdb-glib-0.5.99.tar.bz2) = 8839bf036069b677e4fc5f91720c082b8490ec25
+Size (couchdb-glib-0.5.99.tar.bz2) = 338419 bytes
