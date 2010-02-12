@@ -1,10 +1,10 @@
-$NetBSD: patch-ac,v 1.1.1.1 2009/10/05 10:44:48 fhajny Exp $
+$NetBSD: patch-ac,v 1.2 2010/02/12 12:21:28 fhajny Exp $
 
-Remove the logrotate.d template
+Remove the logrotate.d template.
 
---- etc/Makefile.in.orig	2009-05-04 11:04:36.492288548 +0000
+--- etc/Makefile.in.orig	2009-11-24 23:54:07.000000000 +0000
 +++ etc/Makefile.in
-@@ -217,14 +217,13 @@ version_minor = @version_minor@
+@@ -264,14 +264,13 @@ version_minor = @version_minor@
  version_release = @version_release@
  version_revision = @version_revision@
  version_stage = @version_stage@
@@ -22,7 +22,7 @@ Remove the logrotate.d template
  couchdb_command_name = `echo couchdb | sed '$(transform)'`
  all: all-recursive
  
-@@ -617,9 +616,6 @@ init/couchdb: init/couchdb.tpl
+@@ -707,9 +706,6 @@ init/couchdb: init/couchdb.tpl
  	    -e "s|%couchdb_command_name%|$(couchdb_command_name)|" \
  	< $< > $@
  
