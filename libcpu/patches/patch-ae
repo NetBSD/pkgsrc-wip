@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.1.1.1 2010/02/13 16:22:14 tnn2 Exp $
+$NetBSD: patch-ae,v 1.2 2010/02/13 16:33:06 tnn2 Exp $
 
 --- upcl/c/expression.cpp.orig	2010-02-13 15:20:59.000000000 +0000
 +++ upcl/c/expression.cpp
@@ -8,7 +8,7 @@ $NetBSD: patch-ae,v 1.1.1.1 2010/02/13 16:22:14 tnn2 Exp $
  expression *
 +expression::fromInteger(unsigned long long int x, unsigned bits)
 +{
-+	return fromInteger((uint16_t)x, bits);
++	return fromInteger((uint64_t)x, bits);
 +}
 +
 +expression *
