@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2010/02/13 12:27:41 jtonio Exp $
+# $NetBSD: Makefile,v 1.5 2010/02/13 12:33:27 jtonio Exp $
 #
 
 DISTNAME=	dzen2-0.8.5
 PKGREVISION=	1
-CATEGORIES=	misc
+CATEGORIES=	x11 misc
 MASTER_SITES=	http://gotmor.googlepages.com/
 
 MAINTAINER=	pikapika@8-0.net
