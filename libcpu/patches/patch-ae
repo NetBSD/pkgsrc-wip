@@ -1,0 +1,17 @@
+$NetBSD: patch-ae,v 1.1.1.1 2010/02/13 16:22:14 tnn2 Exp $
+
+--- upcl/c/expression.cpp.orig	2010-02-13 15:20:59.000000000 +0000
++++ upcl/c/expression.cpp
+@@ -40,6 +40,12 @@ expression::fromDecoderOperand(decoder_o
+ }
+ 
+ expression *
++expression::fromInteger(unsigned long long int x, unsigned bits)
++{
++	return fromInteger((uint16_t)x, bits);
++}
++
++expression *
+ expression::fromInteger(uint64_t x, unsigned bits)
+ {
+ 	assert(bits > 0);

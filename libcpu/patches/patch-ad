@@ -1,0 +1,12 @@
+$NetBSD: patch-ad,v 1.1.1.1 2010/02/13 16:22:14 tnn2 Exp $
+
+--- upcl/c/expression.h.orig	2010-02-13 15:20:59.000000000 +0000
++++ upcl/c/expression.h
+@@ -50,6 +50,7 @@ public:
+ 	static expression *fromFloat(double d, unsigned bits);
+ 	static expression *fromFloat(char const *string, unsigned bits);
+ 	static expression *fromString(char const *string);
++	static expression *fromInteger(long long unsigned int x, unsigned bits);
+ 	static expression *fromInteger(uint64_t x, unsigned bits);
+ 	static expression *fromInteger(int64_t x, unsigned bits);
+ 	static expression *fromInteger(char const *string, unsigned bits);

@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/02/13 16:22:14 tnn2 Exp $
+
+--- libcpu/types.h.orig	2010-02-13 15:21:02.000000000 +0000
++++ libcpu/types.h
+@@ -9,7 +9,7 @@ typedef signed short sint16_t;
+ typedef signed int sint32_t;
+ typedef signed long long sint64_t;
+ 
+-#ifndef sun
++#if !defined(sun) && !defined(__NetBSD__)
+ typedef unsigned char uint8_t;
+ typedef unsigned short uint16_t;
+ typedef unsigned int uint32_t;
