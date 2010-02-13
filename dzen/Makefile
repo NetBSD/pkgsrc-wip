@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/02/13 12:33:27 jtonio Exp $
+# $NetBSD: Makefile,v 1.6 2010/02/13 13:25:36 thomasklausner Exp $
 #
 
 DISTNAME=	dzen2-0.8.5
@@ -7,7 +7,7 @@ CATEGORIES=	x11 misc
 MASTER_SITES=	http://gotmor.googlepages.com/
 
 MAINTAINER=	pikapika@8-0.net
-HOMEPAGE=	http://gotmor.googlepages.com/
+HOMEPAGE=	http://sites.google.com/site/gotmor/dzen
 COMMENT=	General purpose messaging and notification program
 
 LICENSE=	mit
