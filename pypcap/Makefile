@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2010/02/13 19:23:15 pettai Exp $
+# $NetBSD: Makefile,v 1.2 2010/02/13 23:34:34 pettai Exp $
 #
 
 DISTNAME=	pypcap-1.1
@@ -19,8 +19,9 @@ FILES_SUBST+=   PYTHONBIN=${PYTHONBIN:Q}
 
 do-configure:
 	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} \
-	${PYTHONBIN} setup.py config
+	${PYTHONBIN} setup.py config --with-pcap=${PREFIX}
 
+.include "../../net/libpcap/buildlink3.mk"
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
