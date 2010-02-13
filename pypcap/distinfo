@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2010/02/13 19:23:15 pettai Exp $
+
+SHA1 (pypcap-1.1.tar.gz) = 966f62deca16d5086e2ef6694b0c795f273da15c
+RMD160 (pypcap-1.1.tar.gz) = 119dcc393d42678e6fa8f0b0f8b82536ab1efb13
+Size (pypcap-1.1.tar.gz) = 22951 bytes

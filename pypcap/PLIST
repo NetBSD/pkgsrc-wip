@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2010/02/13 19:23:15 pettai Exp $
+${PYSITELIB}/pcap.so
