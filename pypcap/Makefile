@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/02/13 23:34:34 pettai Exp $
+# $NetBSD: Makefile,v 1.3 2010/02/14 11:20:29 pettai Exp $
 #
 
 DISTNAME=	pypcap-1.1
@@ -8,10 +8,19 @@ MASTER_SITES=	http://pypcap.googlecode.com/files/
 
 MAINTAINER=	pettai@nordu.net
 HOMEPAGE=	http://code.google.com/p/pypcap/
-COMMENT=	Simplified object-oriented module for libpcap
+COMMENT=	Simplified object-oriented python module for libpcap
 LICENSE=	modified-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+SUBST_CLASSES+=         python
+SUBST_FILES.python=     Makefile
+SUBST_SED.python+=      -e 's,@PYTHON@,${PYTHONBIN},g'
+SUBST_STAGE.python=     post-patch
+SUBST_CLASSES+=         prefix
+SUBST_FILES.prefix=     Makefile
+SUBST_SED.prefix=       -e "s|@PREFIX@|${PREFIX}|g"
+SUBST_STAGE.prefix=     post-patch
 
 PYDISTUTILSPKG= yes
 
