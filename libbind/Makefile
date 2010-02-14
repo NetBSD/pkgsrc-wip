@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/11/19 05:59:52 obache Exp $
+# $NetBSD: Makefile,v 1.2 2010/02/14 09:14:24 obache Exp $
 #
 
 DISTNAME=	libbind-6.0
@@ -19,5 +19,7 @@ USE_TOOLS+=	nroff tbl
 MAKE_JOBS_SAFE=	no
 
 BUILD_TARGET=	all man
+
+.include "options.mk"
 
 .include "../../mk/bsd.pkg.mk"
