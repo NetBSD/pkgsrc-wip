@@ -1,9 +1,9 @@
-$NetBSD: patch-ab,v 1.1 2010/02/14 11:20:29 pettai Exp $
+$NetBSD: patch-ab,v 1.2 2010/02/14 17:33:02 pettai Exp $
 
---- Makefile.orig	2010-02-14 11:44:05.000000000 +0100
-+++ Makefile	2010-02-14 11:45:08.000000000 +0100
+--- Makefile.orig	2005-10-17 02:08:17.000000000 +0200
++++ Makefile	2010-02-14 17:31:22.000000000 +0100
 @@ -1,7 +1,7 @@
- # $Id: patch-ab,v 1.1 2010/02/14 11:20:29 pettai Exp $
+ # $Id: patch-ab,v 1.2 2010/02/14 17:33:02 pettai Exp $
  
 -PYTHON	= python
 -#CONFIG_ARGS = --with-pcap=$(HOME)/build/libpcap-0.8.3
