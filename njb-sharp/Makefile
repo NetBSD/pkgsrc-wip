@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/08/12 02:32:05 obache Exp $
+# $NetBSD: Makefile,v 1.5 2010/02/15 16:47:13 thomasklausner Exp $
 #
 
 DISTNAME=	njb-sharp-0.3.0
@@ -24,6 +24,6 @@ CONFIGURE_ARGS+=	--disable-monodoc
 
 PKGCONFIG_OVERRIDE+=	njb-sharp.pc.in
 
+.include "../../devel/libnjb/buildlink3.mk"
 .include "../../lang/mono/buildlink3.mk"
-.include "../../wip/libnjb/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
