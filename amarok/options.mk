@@ -1,10 +1,8 @@
-# $NetBSD: options.mk,v 1.4 2010/02/15 16:47:12 thomasklausner Exp $
+# $NetBSD: options.mk,v 1.5 2010/02/15 17:24:45 thomasklausner Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.amarok
-PKG_SUPPORTED_OPTIONS=	libgpod libmp4v2 libmtp libnjb libvisual mp3tunes
+PKG_SUPPORTED_OPTIONS=	libgpod libmp4v2 libmtp libvisual mp3tunes
 PKG_SUGGESTED_OPTIONS=	libgpod libmp4v2 libmtp libvisual mp3tunes
-
-# XXX: libnjb is currently not supported
 
 # XXX: not packaged yet
 # libifp, 1.0.0.2: Support iRiver iFP audio devices <http://ifp-driver.sourceforge.net/libifp/>
@@ -25,6 +23,7 @@ BUILDLINK_API_DEPENDS.libgpod+=	libgpod>=0.6.0nb1
 .include "../../devel/libmtp/buildlink3.mk"
 .endif
 
+# libnjb is currently not supported
 #.if !empty(PKG_OPTIONS:Mlibnjb)
 #.include "../../devel/libnjb/buildlink3.mk"
 #.endif
