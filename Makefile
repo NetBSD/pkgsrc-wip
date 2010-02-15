@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3801 2010/02/15 14:43:04 thomasklausner Exp $
+# $Id: Makefile,v 1.3802 2010/02/15 15:31:01 obache Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2080,9 +2080,6 @@ SUBDIR+=	sipp
 SUBDIR+=	siproxd
 SUBDIR+=	siptoolbox
 SUBDIR+=	sis
-SUBDIR+=	sj3
-SUBDIR+=	sj3-client
-SUBDIR+=	sj3-server
 SUBDIR+=	ski
 SUBDIR+=	sks
 SUBDIR+=	slackpkg2pkgsrc

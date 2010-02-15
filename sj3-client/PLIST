@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:50:43 thomasklausner Exp $
-bin/sj3dic
-bin/sj3stat
-include/sj3lib.h
-lib/libsj3lib.la
-lib/pkgconfig/sj3lib.pc
-man/man1/sj3dic.1
-share/doc/sj3/Nihongo.ps
-share/doc/sj3/sj3lib.ms
