@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2009/12/08 21:57:37 thomasklausner Exp $
+$NetBSD: distinfo,v 1.4 2010/02/15 15:27:23 thomasklausner Exp $
 
-SHA1 (kmldonkey-r1055884.tar.bz2) = 89ca63901051fb34ca134c7e09f4da63b27ccfc1
-RMD160 (kmldonkey-r1055884.tar.bz2) = eca662b64948887da31389aad18b7eaa7a18ac08
-Size (kmldonkey-r1055884.tar.bz2) = 200633 bytes
+SHA1 (kmldonkey-2.0.2-kde4.3.3.tar.bz2) = 670371f0ea4594d5c526716249b4fd3d4f8707cf
+RMD160 (kmldonkey-2.0.2-kde4.3.3.tar.bz2) = f5b26cf422dcd6f2ee479c2d8214a1de49d8a154
+Size (kmldonkey-2.0.2-kde4.3.3.tar.bz2) = 395487 bytes

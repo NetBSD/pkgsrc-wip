@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/12/08 21:57:37 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.5 2010/02/15 15:27:23 thomasklausner Exp $
 bin/kmldonkey
 include/kmldonkey/clientinfo.h
 include/kmldonkey/donkeyhost.h
@@ -51,3 +51,33 @@ share/kde/apps/kmldonkey/kmldonkey.notifyrc
 share/kde/apps/kmldonkey/kmldonkeyui.rc
 share/kde4/services/plasma-applet-kmldonkey.desktop
 share/kde4/services/plasma-engine-kmldonkey.desktop
+share/locale/bg/LC_MESSAGES/kmldonkey.mo
+share/locale/ca/LC_MESSAGES/kmldonkey.mo
+share/locale/cs/LC_MESSAGES/kmldonkey.mo
+share/locale/da/LC_MESSAGES/kmldonkey.mo
+share/locale/de/LC_MESSAGES/kmldonkey.mo
+share/locale/el/LC_MESSAGES/kmldonkey.mo
+share/locale/en_GB/LC_MESSAGES/kmldonkey.mo
+share/locale/es/LC_MESSAGES/kmldonkey.mo
+share/locale/et/LC_MESSAGES/kmldonkey.mo
+share/locale/fr/LC_MESSAGES/kmldonkey.mo
+share/locale/ga/LC_MESSAGES/kmldonkey.mo
+share/locale/gl/LC_MESSAGES/kmldonkey.mo
+share/locale/is/LC_MESSAGES/kmldonkey.mo
+share/locale/it/LC_MESSAGES/kmldonkey.mo
+share/locale/lt/LC_MESSAGES/kmldonkey.mo
+share/locale/mai/LC_MESSAGES/kmldonkey.mo
+share/locale/nb/LC_MESSAGES/kmldonkey.mo
+share/locale/nds/LC_MESSAGES/kmldonkey.mo
+share/locale/nl/LC_MESSAGES/kmldonkey.mo
+share/locale/nn/LC_MESSAGES/kmldonkey.mo
+share/locale/pl/LC_MESSAGES/kmldonkey.mo
+share/locale/pt/LC_MESSAGES/kmldonkey.mo
+share/locale/pt_BR/LC_MESSAGES/kmldonkey.mo
+share/locale/ru/LC_MESSAGES/kmldonkey.mo
+share/locale/sk/LC_MESSAGES/kmldonkey.mo
+share/locale/sv/LC_MESSAGES/kmldonkey.mo
+share/locale/tr/LC_MESSAGES/kmldonkey.mo
+share/locale/uk/LC_MESSAGES/kmldonkey.mo
+share/locale/zh_CN/LC_MESSAGES/kmldonkey.mo
+share/locale/zh_TW/LC_MESSAGES/kmldonkey.mo

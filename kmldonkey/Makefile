@@ -1,25 +1,24 @@
-# $NetBSD: Makefile,v 1.6 2010/01/18 09:38:26 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2010/02/15 15:27:23 thomasklausner Exp $
 #
 
-DISTNAME=	kmldonkey-r1055884
-PKGNAME=	${DISTNAME:S/-r/-2.0.5pre/}
-PKGREVISION=	2
+DISTNAME=	kmldonkey-2.0.2-kde4.3.3
+PKGNAME=	${DISTNAME:S/-kde/./}
 CATEGORIES=	net
-MASTER_SITES=	# none, snapshot grabbed from svn
+MASTER_SITES=	${MASTER_SITE_KDE:=4.3.3/src/extragear/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://userbase.kde.org/KMLDonkey
 COMMENT=	KDE interface for mldonkey
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	gnu-gpl-v2
 
 BUILD_DEPENDS+=	automoc4>=0.9.87:../../devel/automoc4
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-WRKSRC=		${WRKDIR}/kmldonkey
 USE_LANGUAGES=	c c++
 USE_CMAKE=	yes
+USE_TOOLS+=	msgfmt
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/kdelibs4/buildlink3.mk"
