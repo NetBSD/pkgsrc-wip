@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2009/04/24 22:29:24 jihbed Exp $
+# $NetBSD: Makefile,v 1.4 2010/02/15 16:34:32 thomasklausner Exp $
 #
 
 DISTNAME=		libnjb-2.2.6
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=libnjb/}
-
 
 MAINTAINER=		ku3@sl.aanet.ru
 HOMEPAGE=		http://libnjb.sourceforge.net/
