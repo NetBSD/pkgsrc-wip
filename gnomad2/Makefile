@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/02/15 16:47:13 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2010/02/15 16:57:24 thomasklausner Exp $
 #
 
 DISTNAME=		gnomad2-2.8.8
@@ -8,15 +8,14 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gnomad2/}
 MAINTAINER=		ku3@sl.aanet.ru
 HOMEPAGE=		http://gnomad2.sourceforge.net/
 COMMENT=		GTK+2 tool for managing Creative and Dell mp3 players
+LICENSE=		gnu-gpl-v2
 
-DEPENDS+=	p5-XML-Parser>=2.34:../../textproc/p5-XML-Parser
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 
-CONFIGURE_ARGS+=	PKG_CONFIG=${PREFIX}/bin/pkg-config
-
-USE_TOOLS+=perl
+USE_TOOLS+=		intltool pkg-config
 
 .include "../../audio/libid3tag/buildlink3.mk"
 .include "../../devel/libmtp/buildlink3.mk"
