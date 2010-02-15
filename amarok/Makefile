@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2010/02/15 15:43:30 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.26 2010/02/15 15:54:34 thomasklausner Exp $
 #
 
 DISTNAME=	amarok-${VERS}
@@ -42,6 +42,7 @@ SUBST_SED.mysql+=	-e s:@@WLR@@:${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.mysql-em
 
 .include "options.mk"
 
+.include "../../audio/liblastfm/buildlink3.mk"
 BUILDLINK_API_DEPENDS.taglib+=	taglib>=1.6nb1
 .include "../../audio/taglib/buildlink3.mk"
 .include "../../audio/taglib-extras/buildlink3.mk"
@@ -50,7 +51,6 @@ BUILDLINK_API_DEPENDS.taglib+=	taglib>=1.6nb1
 .include "../../multimedia/kdemultimedia4/buildlink3.mk"
 .include "../../security/qca2/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../wip/liblastfm/buildlink3.mk"
 .include "../../wip/mysql5-embedded/buildlink3.mk"
 .include "../../wip/qtscriptgenerator/buildlink3.mk"
 # for plasma

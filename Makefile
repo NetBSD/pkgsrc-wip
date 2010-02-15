@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3804 2010/02/15 15:43:30 thomasklausner Exp $
+# $Id: Makefile,v 1.3805 2010/02/15 15:54:34 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1081,7 +1081,6 @@ SUBDIR+=	libharu
 SUBDIR+=	libhttpd
 SUBDIR+=	libipctdata
 SUBDIR+=	libjingle
-SUBDIR+=	liblastfm
 SUBDIR+=	liblingoteach
 SUBDIR+=	liblo
 SUBDIR+=	libmemcached
