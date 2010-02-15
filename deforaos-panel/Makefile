@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2010/01/15 02:14:00 khorben Exp $
+# $NetBSD: Makefile,v 1.4 2010/02/15 19:14:01 khorben Exp $
 #
 # TODO: add an embedded option
 
 DISTNAME=	Panel-0.0.4
 PKGNAME=	deforaos-panel-0.0.4
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	http://www.defora.org/os/download/download/3321/
 
