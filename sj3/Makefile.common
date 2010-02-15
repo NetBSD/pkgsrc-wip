@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2009/02/14 14:05:17 obache Exp $
+# $NetBSD: Makefile.common,v 1.2 2010/02/15 11:47:27 obache Exp $
 # used by wip/sj3-server/Makefile
 # used by wip/sj3-client/Makefile
 #
@@ -19,7 +19,6 @@ DISTINFO_FILE=	${.CURDIR}/../../wip/sj3/distinfo
 PATCHDIR=	${.CURDIR}/../../wip/sj3/patches
 
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	aclocal autoconf automake
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
 
@@ -46,6 +45,3 @@ CONFIGURE_ARGS+=	--disable-demo
 BUILD_DEFS+=		VARBASE
 
 PKG_SYSCONFSUBDIR=	sj3
-
-pre-configure:
-	${RUN} cd ${WRKSRC}; aclocal; autoconf; automake

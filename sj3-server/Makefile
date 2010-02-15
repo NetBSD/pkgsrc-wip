@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2009/05/20 00:58:43 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2010/02/15 11:47:27 obache Exp $
 #
 
 .include "../../wip/sj3/Makefile.common"
 
 PKGNAME=	${DISTNAME:S/sj3-/sj3-server-/}
-PKGREVISION=	1
 
 COMMENT=	SJ3 Japanese input method server
 
@@ -23,13 +22,11 @@ CONF_FILES+=		share/examples/sj3/sj3proxy.lua.example \
 CONF_FILES+=		share/examples/sj3/sj3serv.lua.example \
 			${PKG_SYSCONFDIR}/sj3serv.lua
 
-MAKE_DIRS+=		${VARBASE}
-OWN_DIRS_PERMS+=	${VARBASE}/sj3 ${SJ3OWNER} ${SJ3GROUP} 755
 OWN_DIRS_PERMS+=	${VARBASE}/sj3/run ${SJ3OWNER} ${SJ3GROUP} 755
 OWN_DIRS_PERMS+=	${VARBASE}/sj3/dict/user ${SJ3OWNER} ${SJ3GROUP} 700
 CONF_FILES_PERMS+=      libdata/sj3main.dic \
 			${VARBASE}/sj3/dict/sj3main.dic \
-			${ROOT_USER} ${ROOT_GROUP} 644
+			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 644
 
 RCD_SCRIPTS=		sj3proxy sj3serv
 

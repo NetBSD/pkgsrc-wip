@@ -1,12 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/02/14 14:05:17 obache Exp $
+$NetBSD: distinfo,v 1.2 2010/02/15 11:47:27 obache Exp $
 
-SHA1 (sj3-2.0.1.23.tar.gz) = 511b45c43ec72d85421e94f41b53adc677f19bf7
-RMD160 (sj3-2.0.1.23.tar.gz) = a4ff47ea13e18792c3734243d80e4eb9d47913db
-Size (sj3-2.0.1.23.tar.gz) = 1110084 bytes
-SHA1 (patch-aa) = f4ab12c0ba329c2c2bc14b0fc4b0caa4fb14eba8
-SHA1 (patch-ab) = 3676ece5f2e862196abe5fce8908186006c57cb7
-SHA1 (patch-ac) = 435ec69a5040eadcb43e37a019d001282388c9aa
-SHA1 (patch-ad) = e21e334bdc9a2444c7691fc3d0d9ac5435a8bf94
-SHA1 (patch-ae) = 8b86bff6662ee029aaf4fb87ccb3f6b2cd5c81bf
-SHA1 (patch-af) = bd50302329f0c651a1cfb44edd5afd382adf2a0c
-SHA1 (patch-ag) = 6e026d2f58bb5744d9ee7df1ab74916b08d90048
+SHA1 (sj3-2.0.1.23p1.tar.gz) = 313a8f71f03071ad4d6006d18b569ce390edca8d
+RMD160 (sj3-2.0.1.23p1.tar.gz) = 2541f19bcf6b74c5b59c2e930fe27bb0ffa97ddf
+Size (sj3-2.0.1.23p1.tar.gz) = 1117190 bytes
+SHA1 (patch-ah) = 83416c5aeae4514349c6ab1a4f1ac3018feea406
