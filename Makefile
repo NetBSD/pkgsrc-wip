@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3802 2010/02/15 15:31:01 obache Exp $
+# $Id: Makefile,v 1.3803 2010/02/15 15:33:53 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1000,7 +1000,6 @@ SUBDIR+=	kile
 SUBDIR+=	kino
 SUBDIR+=	kissme
 SUBDIR+=	klamav
-SUBDIR+=	kmldonkey
 SUBDIR+=	kmymoney2-cvs
 SUBDIR+=	kmymoney2-devel
 SUBDIR+=	knutclient
