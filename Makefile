@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3805 2010/02/15 15:54:34 thomasklausner Exp $
+# $Id: Makefile,v 1.3806 2010/02/15 16:02:36 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1973,7 +1973,6 @@ SUBDIR+=	qpsmtpd
 SUBDIR+=	qt4-qscintilla
 SUBDIR+=	qtcreator
 SUBDIR+=	qtre
-SUBDIR+=	qtscriptgenerator
 SUBDIR+=	qucs
 SUBDIR+=	quickfix
 SUBDIR+=	quickie
