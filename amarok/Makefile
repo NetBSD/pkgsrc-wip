@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.28 2010/02/15 17:03:59 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.29 2010/02/15 17:25:02 thomasklausner Exp $
 #
 
 DISTNAME=	amarok-${VERS}
 VERS=		2.2.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	audio multimedia
 #MASTER_SITES=	http://download.kde.org/unstable/amarok/${VERS}/src/ \
 #		ftp://gd.tuwien.ac.at/kde/unstable/amarok/${VERS}/src/
@@ -17,6 +17,7 @@ COMMENT=	KDE4 audio player
 LICENSE=	gnu-gpl-v2 AND gnu-fdl-v1.2 AND gnu-lgpl-v2.1
 
 BUILD_DEPENDS+=	automoc4>=0.9.83:../../devel/automoc4
+DEPENDS+=	moodbar-[0-9]*:../../audio/moodbar
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -37,8 +38,6 @@ SUBST_FILES.mysql=	cmake/modules/FindMySQLAmarok.cmake
 SUBST_FILES.mysql+=	src/collection/mysqlecollection/CMakeLists.txt
 SUBST_SED.mysql=	-e s:/opt/mysqle/:${BUILDLINK_PREFIX.mysql-embedded}/mysqld:
 SUBST_SED.mysql+=	-e s:@@WLR@@:${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.mysql-embedded}/mysqld/lib/mysql:
-
-# XXX: moodbar support?
 
 .include "options.mk"
 
