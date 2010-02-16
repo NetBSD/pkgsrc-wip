@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.29 2010/02/15 17:25:02 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.30 2010/02/16 09:41:59 thomasklausner Exp $
 #
 
 DISTNAME=	amarok-${VERS}
-VERS=		2.2.2
-PKGREVISION=	3
+VERS=		2.2.2.90
 CATEGORIES=	audio multimedia
-#MASTER_SITES=	http://download.kde.org/unstable/amarok/${VERS}/src/ \
-#		ftp://gd.tuwien.ac.at/kde/unstable/amarok/${VERS}/src/
-MASTER_SITES=	http://download.kde.org/stable/amarok/${VERS}/src/ \
-		ftp://gd.tuwien.ac.at/kde/stable/amarok/${VERS}/src/
+MASTER_SITES=	http://download.kde.org/unstable/amarok/${VERS}/src/ \
+		ftp://gd.tuwien.ac.at/kde/unstable/amarok/${VERS}/src/
+#MASTER_SITES=	http://download.kde.org/stable/amarok/${VERS}/src/ \
+#		ftp://gd.tuwien.ac.at/kde/stable/amarok/${VERS}/src/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	wiz@NetBSD.org
@@ -35,7 +34,7 @@ SUBST_CLASSES+=		mysql
 SUBST_STAGE.mysql=	post-patch
 SUBST_MESSAGE.mysql=	Fixup paths for MySQL embedded
 SUBST_FILES.mysql=	cmake/modules/FindMySQLAmarok.cmake
-SUBST_FILES.mysql+=	src/collection/mysqlecollection/CMakeLists.txt
+SUBST_FILES.mysql+=	src/collection/sqlcollection/mysqlecollection/CMakeLists.txt
 SUBST_SED.mysql=	-e s:/opt/mysqle/:${BUILDLINK_PREFIX.mysql-embedded}/mysqld:
 SUBST_SED.mysql+=	-e s:@@WLR@@:${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.mysql-embedded}/mysqld/lib/mysql:
 
