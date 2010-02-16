@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2010/02/16 14:46:58 tnn2 Exp $
+@comment $NetBSD: PLIST,v 1.15 2010/02/16 15:45:07 tnn2 Exp $
 bin/xulrunner
 ${PLIST.jit}include/xulrunner/Allocator.h
 ${PLIST.jit}include/xulrunner/Assembler.h
@@ -1196,6 +1196,7 @@ include/xulrunner/nsILocalFileWin.h
 include/xulrunner/nsILocalStore.h
 include/xulrunner/nsILocale.h
 include/xulrunner/nsILocaleService.h
+${PLIST.debug}include/xulrunner/nsILoggingSink.h
 include/xulrunner/nsILoginInfo.h
 include/xulrunner/nsILoginManager.h
 include/xulrunner/nsILoginManagerIEMigrationHelper.h
