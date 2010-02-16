@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3809 2010/02/16 10:20:41 phonohawk Exp $
+# $Id: Makefile,v 1.3810 2010/02/16 15:45:15 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1914,6 +1914,7 @@ SUBDIR+=	py-scipy
 SUBDIR+=	py-scrobbler
 SUBDIR+=	py-sendmail-admin
 SUBDIR+=	py-shtoom
+SUBDIR+=	py-simpleparse-mxtexttools
 SUBDIR+=	py-snmp
 SUBDIR+=	py-spambayes
 SUBDIR+=	py-spark
