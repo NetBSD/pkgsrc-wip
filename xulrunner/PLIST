@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2010/01/11 11:42:47 tnn2 Exp $
+@comment $NetBSD: PLIST,v 1.14 2010/02/16 14:46:58 tnn2 Exp $
 bin/xulrunner
 ${PLIST.jit}include/xulrunner/Allocator.h
 ${PLIST.jit}include/xulrunner/Assembler.h
@@ -2278,7 +2278,7 @@ lib/xulrunner/defaults/profile/localstore.rdf
 lib/xulrunner/dependentlibs.list
 lib/xulrunner/dictionaries/en-US.aff
 lib/xulrunner/dictionaries/en-US.dic
-lib/xulrunner/gre.d/1.9.2.system.conf
+lib/xulrunner/gre.d/${PKGVERSION}.system.conf
 lib/xulrunner/greprefs/all.js
 lib/xulrunner/greprefs/security-prefs.js
 lib/xulrunner/greprefs/xpinstall.js

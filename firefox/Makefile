@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2010/01/31 21:13:25 tnn2 Exp $
+# $NetBSD: Makefile,v 1.39 2010/02/16 14:46:59 tnn2 Exp $
 #
 
 .include "../../wip/xulrunner/dist.mk"
@@ -50,9 +50,8 @@ post-install:
 	rm -f ${DESTDIR}${PREFIX}/bin/firefox
 	${INSTALL_SCRIPT} ${WRKDIR}/firefox ${DESTDIR}${PREFIX}/bin
 
-BUILDLINK_API_DEPENDS.xulrunner+=	xulrunner>=${MOZ_BRANCH} # .${MOZ_BRANCH_MINOR}
-BUILD_DEPENDS+=				xulrunner-${MOZ_BRANCH}{,nb*}:../../wip/xulrunner
-#BUILD_DEPENDS+=				xulrunner-${MOZ_BRANCH}.${MOZ_BRANCH_MINOR}{,nb*}:../../wip/xulrunner
+BUILDLINK_API_DEPENDS.xulrunner+=	xulrunner>=${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
+BUILD_DEPENDS+=				xulrunner-${MOZ_BRANCH}${MOZ_BRANCH_MINOR}{,nb*}:../../wip/xulrunner
 .include "../../wip/xulrunner/buildlink3.mk"
 PLIST_VARS+=	gnome
 .if !empty(PKG_BUILD_OPTIONS.xulrunner:Mgnome)
