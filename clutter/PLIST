@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2010/01/20 05:21:51 obache Exp $
+@comment $NetBSD: PLIST,v 1.5 2010/02/17 05:08:36 obache Exp $
 include/clutter-1.0/clutter/clutter-actor.h
 include/clutter-1.0/clutter/clutter-alpha.h
 include/clutter-1.0/clutter/clutter-animatable.h
 include/clutter-1.0/clutter/clutter-animation.h
+include/clutter-1.0/clutter/clutter-animator.h
 include/clutter-1.0/clutter/clutter-backend.h
 include/clutter-1.0/clutter/clutter-behaviour-depth.h
 include/clutter-1.0/clutter/clutter-behaviour-ellipse.h
@@ -21,6 +22,7 @@ include/clutter-1.0/clutter/clutter-clone.h
 include/clutter-1.0/clutter/clutter-color.h
 include/clutter-1.0/clutter/clutter-container.h
 include/clutter-1.0/clutter/clutter-deprecated.h
+include/clutter-1.0/clutter/clutter-device-manager.h
 include/clutter-1.0/clutter/clutter-enum-types.h
 include/clutter-1.0/clutter/clutter-event.h
 include/clutter-1.0/clutter/clutter-feature.h
@@ -29,6 +31,7 @@ include/clutter-1.0/clutter/clutter-fixed.h
 include/clutter-1.0/clutter/clutter-flow-layout.h
 include/clutter-1.0/clutter/clutter-frame-source.h
 include/clutter-1.0/clutter/clutter-group.h
+include/clutter-1.0/clutter/clutter-input-device.h
 include/clutter-1.0/clutter/clutter-interval.h
 include/clutter-1.0/clutter/clutter-json.h
 include/clutter-1.0/clutter/clutter-keysyms.h
@@ -64,6 +67,7 @@ ${PLIST.x11}include/clutter-1.0/clutter/x11/clutter-x11-enum-types.h
 ${PLIST.x11}include/clutter-1.0/clutter/x11/clutter-x11-texture-pixmap.h
 ${PLIST.x11}include/clutter-1.0/clutter/x11/clutter-x11.h
 include/clutter-1.0/cogl/cogl-bitmap.h
+include/clutter-1.0/cogl/cogl-buffer.h
 include/clutter-1.0/cogl/cogl-color.h
 include/clutter-1.0/cogl/cogl-debug.h
 include/clutter-1.0/cogl/cogl-defines.h
@@ -75,6 +79,8 @@ include/clutter-1.0/cogl/cogl-matrix.h
 include/clutter-1.0/cogl/cogl-offscreen.h
 include/clutter-1.0/cogl/cogl-pango.h
 include/clutter-1.0/cogl/cogl-path.h
+include/clutter-1.0/cogl/cogl-pixel-buffer.h
+include/clutter-1.0/cogl/cogl-primitives.h
 include/clutter-1.0/cogl/cogl-shader.h
 include/clutter-1.0/cogl/cogl-texture.h
 include/clutter-1.0/cogl/cogl-types.h
@@ -91,6 +97,7 @@ lib/pkgconfig/cogl-gl-1.0.pc
 share/gtk-doc/html/clutter/ClutterActor.html
 share/gtk-doc/html/clutter/ClutterAlpha.html
 share/gtk-doc/html/clutter/ClutterAnimatable.html
+share/gtk-doc/html/clutter/ClutterAnimator.html
 share/gtk-doc/html/clutter/ClutterBehaviour.html
 share/gtk-doc/html/clutter/ClutterBehaviourDepth.html
 share/gtk-doc/html/clutter/ClutterBehaviourEllipse.html
@@ -105,9 +112,11 @@ share/gtk-doc/html/clutter/ClutterCairoTexture.html
 share/gtk-doc/html/clutter/ClutterChildMeta.html
 share/gtk-doc/html/clutter/ClutterClone.html
 share/gtk-doc/html/clutter/ClutterContainer.html
+share/gtk-doc/html/clutter/ClutterDeviceManager.html
 share/gtk-doc/html/clutter/ClutterFixedLayout.html
 share/gtk-doc/html/clutter/ClutterFlowLayout.html
 share/gtk-doc/html/clutter/ClutterGroup.html
+share/gtk-doc/html/clutter/ClutterInputDevice.html
 share/gtk-doc/html/clutter/ClutterLayoutManager.html
 share/gtk-doc/html/clutter/ClutterLayoutMeta.html
 share/gtk-doc/html/clutter/ClutterListModel.html
@@ -205,7 +214,9 @@ share/gtk-doc/html/clutter/style.css
 share/gtk-doc/html/clutter/up.png
 share/gtk-doc/html/clutter/using-cairo.html
 share/gtk-doc/html/cogl/ch01.html
+share/gtk-doc/html/cogl/ch02.html
 share/gtk-doc/html/cogl/cogl-Blend-Strings.html
+share/gtk-doc/html/cogl/cogl-Buffers.html
 share/gtk-doc/html/cogl/cogl-Clipping.html
 share/gtk-doc/html/cogl/cogl-Color-Type.html
 share/gtk-doc/html/cogl/cogl-Fixed-Point-API.html
