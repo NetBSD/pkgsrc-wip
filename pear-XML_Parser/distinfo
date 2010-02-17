@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/02/17 05:44:28 uccwen Exp $
+
+SHA1 (pear/XML_Parser-1.3.2.tgz) = 3e0290f135c25a5e03da3699171acd6ce49e5297
+RMD160 (pear/XML_Parser-1.3.2.tgz) = f08d350a7383946203b358287ad65a03cbf36708
+Size (pear/XML_Parser-1.3.2.tgz) = 16260 bytes
