@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3810 2010/02/16 15:45:15 jihbed Exp $
+# $Id: Makefile,v 1.3811 2010/02/17 08:50:17 pettai Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1864,6 +1864,7 @@ SUBDIR+=	py-kaa-base
 SUBDIR+=	py-kaa-imlib2
 SUBDIR+=	py-kaa-metadata
 SUBDIR+=	py-kcs11
+SUBDIR+=	py-knockknock
 SUBDIR+=	py-kyra
 SUBDIR+=	py-last
 SUBDIR+=	py-lib
@@ -1949,10 +1950,13 @@ SUBDIR+=	py-yamcha
 SUBDIR+=	py-yapgvb
 SUBDIR+=	py-zeitgeist
 SUBDIR+=	py-zinnia
+SUBDIR+=	pycrypto
 SUBDIR+=	pydance
 SUBDIR+=	pydb
+SUBDIR+=	pylibpcap
 SUBDIR+=	pynfo
 SUBDIR+=	pypanel
+SUBDIR+=	pypcap
 SUBDIR+=	pypod
 SUBDIR+=	pysite
 SUBDIR+=	python31
