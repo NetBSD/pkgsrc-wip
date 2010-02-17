@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/02/14 17:33:02 pettai Exp $
+# $NetBSD: Makefile,v 1.5 2010/02/17 21:45:46 pettai Exp $
 #
 
 DISTNAME=	pypcap-1.1
@@ -13,6 +13,10 @@ LICENSE=	modified-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+BUILD_DEPENDS+=		${PYPKGPREFIX}-pyrex-[0-9]*:../../lang/py-pyrex
+
+USE_TOOLS+=	pyrexc
+
 SUBST_CLASSES+=         python
 SUBST_FILES.python=     Makefile
 SUBST_SED.python+=      -e 's,@PYTHON@,${PYTHONBIN},g'
@@ -25,6 +29,10 @@ SUBST_STAGE.prefix=     post-patch
 PYDISTUTILSPKG= yes
 
 FILES_SUBST+=   PYTHONBIN=${PYTHONBIN:Q}
+
+pre-configure:
+	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} \
+	pyrexc pcap.pyx
 
 do-configure:
 	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} \
