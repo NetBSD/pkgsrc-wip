@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/08/05 22:59:31 jkuittinen Exp $
+$NetBSD: distinfo,v 1.2 2010/02/18 12:29:44 uccwen Exp $
 
-SHA1 (Beaker-0.9.5.tar.gz) = 4b42924b9e797c2938355b791754e23bd98e787f
-RMD160 (Beaker-0.9.5.tar.gz) = 9f9796b221ebcc569d93061743d9d85cc386c636
-Size (Beaker-0.9.5.tar.gz) = 38052 bytes
+SHA1 (Beaker-1.5.1.tar.gz) = be503c061666332da563a65e59f0a39c32d99c01
+RMD160 (Beaker-1.5.1.tar.gz) = df39783d277a03d29bb91e96e1f6b49372343bff
+Size (Beaker-1.5.1.tar.gz) = 45632 bytes
