@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2009/12/12 15:22:24 asau Exp $
+@comment $NetBSD: PLIST,v 1.8 2010/02/18 20:45:43 asau Exp $
 bin/mpiCC
 bin/mpic++
 bin/mpicc
@@ -7,11 +7,9 @@ bin/mpiexec
 bin/mpif77
 bin/mpif90
 bin/mpirun
-bin/ompi-checkpoint
 bin/ompi-clean
 bin/ompi-iof
 bin/ompi-ps
-bin/ompi-restart
 bin/ompi-server
 bin/ompi_info
 bin/opal_wrapper
@@ -127,11 +125,9 @@ man/man1/mpiexec.1
 man/man1/mpif77.1
 man/man1/mpif90.1
 man/man1/mpirun.1
-man/man1/ompi-checkpoint.1
 man/man1/ompi-clean.1
 man/man1/ompi-iof.1
 man/man1/ompi-ps.1
-man/man1/ompi-restart.1
 man/man1/ompi-server.1
 man/man1/ompi_info.1
 man/man1/opal_wrapper.1
@@ -506,3 +502,4 @@ share/openmpi/mpicc-wrapper-data.txt
 share/openmpi/mpicxx-wrapper-data.txt
 share/openmpi/mpif77-wrapper-data.txt
 share/openmpi/mpif90-wrapper-data.txt
+share/openmpi/openmpi-valgrind.supp

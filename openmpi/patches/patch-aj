@@ -1,18 +1,18 @@
-$NetBSD: patch-aj,v 1.2 2010/01/13 21:28:10 asau Exp $
+$NetBSD: patch-aj,v 1.3 2010/02/18 20:45:43 asau Exp $
 
 Install configuration files into example directory.
 
---- opal/etc/Makefile.in.orig	2009-11-04 18:00:42.000000000 +0300
-+++ opal/etc/Makefile.in	2010-01-12 20:57:23.000000000 +0300
-@@ -38,6 +38,7 @@
- pkgincludedir = $(includedir)/@PACKAGE@
+--- opal/etc/Makefile.in.orig	2010-02-18 05:04:00.000000000 +0300
++++ opal/etc/Makefile.in	2010-02-18 21:43:54.000000000 +0300
+@@ -36,6 +36,7 @@
+ pkgdatadir = $(datadir)/@PACKAGE@
  pkglibdir = $(libdir)/@PACKAGE@
- pkglibexecdir = $(libexecdir)/@PACKAGE@
+ pkgincludedir = $(includedir)/@PACKAGE@
 +exampledir = $(pkgdatadir)/examples
  am__cd = CDPATH="$${ZSH_VERSION+.}$(PATH_SEPARATOR)" && cd
  install_sh_DATA = $(install_sh) -c -m 644
  install_sh_PROGRAM = $(install_sh) -c
-@@ -1222,24 +1223,24 @@
+@@ -1085,24 +1086,24 @@
  # details why the mkdir is in install-data-local.
  
  install-data-local:

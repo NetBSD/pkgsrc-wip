@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.23 2010/01/14 22:09:23 asau Exp $
+# $NetBSD: Makefile,v 1.24 2010/02/18 20:45:43 asau Exp $
 
-DISTNAME=	openmpi-1.5a1r22193
-PKGNAME=	openmpi-1.4.99.22193
+DISTNAME=	openmpi-1.4.2a1r22645
+PKGNAME=	openmpi-1.4.1.22645
 CATEGORIES=	parallel
-MASTER_SITES=	http://www.open-mpi.org/nightly/v1.5/
+MASTER_SITES=	http://www.open-mpi.org/nightly/v1.5/ \
+		http://www.open-mpi.org/nightly/v1.4/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	asau@inbox.ru
@@ -28,10 +29,10 @@ CONFIGURE_ARGS+=	OPAL_HAVE_LTDL_ADVISE=0
 
 TEST_TARGET=	check
 
-USE_TOOLS+=	aclocal autoconf automake bash perl
-REPLACE_BASH=	autogen.sh
-pre-configure:	replace-interpreter
-	cd $(WRKSRC) && $(BASH) autogen.sh
+# USE_TOOLS+=	aclocal autoconf automake bash perl
+# REPLACE_BASH=	autogen.sh
+# pre-configure:	replace-interpreter
+# 	cd $(WRKSRC) && $(BASH) autogen.sh
 
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

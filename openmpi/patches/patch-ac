@@ -1,19 +1,20 @@
-$NetBSD: patch-ac,v 1.4 2010/01/14 22:09:23 asau Exp $
+$NetBSD: patch-ac,v 1.5 2010/02/18 20:45:43 asau Exp $
 
 Force our libltdl.
+Fix flawed logic: "/proc/cpuinfo" isn't linux-specific.
 
---- configure.orig	2009-11-04 17:59:43.000000000 +0300
-+++ configure	2010-01-14 02:46:54.000000000 +0300
-@@ -68499,7 +68499,7 @@
+--- configure.orig	2010-02-18 05:05:19.000000000 +0300
++++ configure	2010-02-18 21:37:25.000000000 +0300
+@@ -93214,7 +93214,7 @@
  
  
     case "${host}" in
 -   i?86-*|x86_64*|ia64-*|powerpc-*|powerpc64-*|sparc*-*)
 +   i?86-*linux*|x86_64*linux*|ia64-*linux*|powerpc-*linux*|powerpc64-*linux*|sparc*-*linux*)
-               if test -r "/proc/cpuinfo"; then :
-   pstat_linux_happy="yes"
- else
-@@ -140503,9 +140503,10 @@
+         if test "$timer_linux_happy" = "yes"; then
+   if test -r "/proc/cpuinfo"; then
+   timer_linux_happy="yes"
+@@ -168358,9 +168358,10 @@
    "") enable_ltdl_convenience=yes
        ac_configure_args="$ac_configure_args --enable-ltdl-convenience" ;;
  esac
@@ -26,9 +27,9 @@ Force our libltdl.
  
  
  
-@@ -155631,7 +155632,7 @@
-         CPPFLAGS="-I."
-         cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+@@ -184663,7 +184664,7 @@
+ cat confdefs.h >>conftest.$ac_ext
+ cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
 -#include <opal/libltdl/ltdl.h>
 +#include <ltdl.h>

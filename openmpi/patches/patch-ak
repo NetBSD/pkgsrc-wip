@@ -1,18 +1,18 @@
-$NetBSD: patch-ak,v 1.2 2010/01/13 21:28:10 asau Exp $
+$NetBSD: patch-ak,v 1.3 2010/02/18 20:45:43 asau Exp $
 
 Install configuration files into example directory.
 
---- ompi/etc/Makefile.in.orig	2009-11-04 17:59:51.000000000 +0300
-+++ ompi/etc/Makefile.in	2010-01-12 20:57:56.000000000 +0300
-@@ -38,6 +38,7 @@
- pkgincludedir = $(includedir)/@PACKAGE@
+--- ompi/etc/Makefile.in.orig	2010-02-18 05:03:20.000000000 +0300
++++ ompi/etc/Makefile.in	2010-02-18 21:45:13.000000000 +0300
+@@ -36,6 +36,7 @@
+ pkgdatadir = $(datadir)/@PACKAGE@
  pkglibdir = $(libdir)/@PACKAGE@
- pkglibexecdir = $(libexecdir)/@PACKAGE@
+ pkgincludedir = $(includedir)/@PACKAGE@
 +exampledir = $(pkgdatadir)/examples
  am__cd = CDPATH="$${ZSH_VERSION+.}$(PATH_SEPARATOR)" && cd
  install_sh_DATA = $(install_sh) -c -m 644
  install_sh_PROGRAM = $(install_sh) -c
-@@ -1223,19 +1224,19 @@
+@@ -1086,19 +1087,19 @@
  # details why the mkdir is in install-data-local.
  
  install-data-local:

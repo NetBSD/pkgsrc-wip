@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.vt,v 1.2 2009/12/12 21:54:18 asau Exp $
+@comment $NetBSD: PLIST.vt,v 1.3 2010/02/18 20:45:43 asau Exp $
 bin/mpiCC-vt
 bin/mpic++-vt
 bin/mpicc-vt
@@ -64,7 +64,6 @@ share/vampirtrace/doc/opari/ChangeLog
 share/vampirtrace/doc/opari/LICENSE
 share/vampirtrace/doc/opari/Readme.html
 share/vampirtrace/doc/opari/lacsi01.pdf
-share/vampirtrace/doc/opari/lacsi01.ps.gz
 share/vampirtrace/doc/opari/opari-logo-100.gif
 share/vampirtrace/doc/otf/ChangeLog
 share/vampirtrace/doc/otf/LICENSE
