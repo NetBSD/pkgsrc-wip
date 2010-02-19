@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/09/23 06:22:49 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2010/02/19 08:20:55 phonohawk Exp $
 #
 
-DISTNAME=	event-list-0.0.10
+DISTNAME=	event-list-0.0.10.1
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
