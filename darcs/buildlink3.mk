@@ -1,11 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.5 2010/02/12 06:50:59 phonohawk Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2010/02/19 03:50:27 phonohawk Exp $
 
 BUILDLINK_TREE+=	darcs
 
 .if !defined(DARCS_BUILDLINK3_MK)
 DARCS_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.darcs+=	darcs>=2.3.98.3
+BUILDLINK_API_DEPENDS.darcs+=	darcs>=2.3.99.2
 BUILDLINK_PKGSRCDIR.darcs?=	../../wip/darcs
 
 .include "../../wip/hs-hashed-storage/buildlink3.mk"
