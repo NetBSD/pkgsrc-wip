@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.3 2010/02/19 16:45:57 cheusov Exp $
+
+--- contrib/Makefile.in.orig	2010-02-02 15:24:33.000000000 +0000
++++ contrib/Makefile.in
+@@ -305,7 +305,7 @@ SCRIPTS_IN = mc.csh.in mc.sh.in mc-wrapp
+ SCRIPTS_OUT = mc.csh mc.sh mc-wrapper.csh mc-wrapper.sh
+ pkglibexec_SCRIPTS = $(SCRIPTS_OUT)
+ pkglibexecdir = $(libexecdir)/@PACKAGE@
+-cfgdir = $(sysconfdir)/@PACKAGE@
++cfgdir = @datadir@/examples/@PACKAGE@
+ cfg_DATA = \
+ 	$(LIBFILES_ADD)
+ 

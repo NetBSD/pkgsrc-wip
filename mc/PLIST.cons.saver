@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.cons.saver,v 1.4 2010/02/19 16:45:57 cheusov Exp $
+libexec/mc/cons.saver
