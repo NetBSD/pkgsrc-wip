@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.23 2010/02/19 03:50:27 phonohawk Exp $
+# $NetBSD: Makefile,v 1.24 2010/02/19 09:52:53 phonohawk Exp $
 
 DISTNAME=		darcs-beta-${VERSION}
 PKGNAME=		darcs-${VERSION}
 VERSION=		2.3.99.2
+PKGREVISION=		1
 CATEGORIES=		devel scm
 
 MAINTAINER=		matias@dotbsd.org

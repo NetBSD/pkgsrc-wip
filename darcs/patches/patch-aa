@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.10 2010/02/19 09:52:53 phonohawk Exp $
+
+--- darcs-beta.cabal.orig	2010-02-19 03:00:51.000000000 +0900
++++ darcs-beta.cabal
+@@ -369,7 +369,7 @@ Library
+       buildable: False
+ 
+   if flag(mmap) && !os(windows)
+-    build-depends:    mmap >= 0.2
++    build-depends:    mmap >= 0.2 && < 0.5
+     cpp-options:      -DHAVE_MMAP
+ 
+   build-depends:    zlib >= 0.5.1.0 && < 0.6.0.0
