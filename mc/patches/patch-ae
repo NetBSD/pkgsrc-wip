@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1.1.1 2010/02/19 15:53:34 cheusov Exp $
+
+--- misc/syntax/Makefile.in.orig	2010-02-02 15:24:53.000000000 +0000
++++ misc/syntax/Makefile.in
+@@ -359,7 +359,7 @@ SYNTAXCONFFILES = \
+ 
+ @USE_EDIT_TRUE@syntaxdir = $(pkgdatadir)/syntax
+ @USE_EDIT_TRUE@syntax_DATA = $(SYNTAXFILES)
+-@USE_EDIT_TRUE@syntaxconfdir = $(sysconfdir)/@PACKAGE@
++@USE_EDIT_TRUE@syntaxconfdir = @datadir@/examples/@PACKAGE@/syntax
+ @USE_EDIT_TRUE@syntaxconf_DATA = $(SYNTAXCONFFILES)
+ EXTRA_DIST = $(SYNTAXFILES) $(SYNTAXCONFFILES)
+ all: all-am
