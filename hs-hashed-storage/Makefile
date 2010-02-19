@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2010/02/17 14:23:50 phonohawk Exp $
+# $NetBSD: Makefile,v 1.6 2010/02/19 03:24:41 phonohawk Exp $
 #
 
-DISTNAME=	hashed-storage-0.4.6
+DISTNAME=	hashed-storage-0.4.7
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2010/02/12 05:42:53 phonohawk Exp $
+$NetBSD: distinfo,v 1.4 2010/02/19 03:24:41 phonohawk Exp $
 
-SHA1 (hashed-storage-0.4.6.tar.gz) = 4af40c950825b65bca1f64745827e5d6962b5957
-RMD160 (hashed-storage-0.4.6.tar.gz) = 6dd9372453762d400b7595a65a365cca2421611d
-Size (hashed-storage-0.4.6.tar.gz) = 54292 bytes
+SHA1 (hashed-storage-0.4.7.tar.gz) = dc732b95ea3f454d870544012093fd203dd214fd
+RMD160 (hashed-storage-0.4.7.tar.gz) = 07d11934511f0cb2731faea7f3158067377e4c96
+Size (hashed-storage-0.4.7.tar.gz) = 54390 bytes
