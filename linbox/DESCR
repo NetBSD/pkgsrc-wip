@@ -1,0 +1,3 @@
+LinBox is a C++ template library for exact, high-performance linear algebra
+computation with dense, sparse, and structured matrices over the integers
+and over finite fields.
