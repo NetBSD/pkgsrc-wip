@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.thunderbird,v 1.1.1.1 2009/08/03 12:59:09 yhardy Exp $
+# $NetBSD: Makefile.thunderbird,v 1.2 2010/02/20 19:06:52 khorben Exp $
 #
 
 CONFIGURE_ARGS+=	--disable-tests --disable-debug
@@ -29,5 +29,5 @@ build-enigmail:
 	cd ${ENIGMAIL_WRKSRC} && env ${MAKE_ENV} ${MAKE_PROGRAM} ${HACK}
 	cd ${ENIGMAIL_WRKSRC} && env ${MAKE_ENV} ${MAKE_PROGRAM} ${HACK} xpi
 
-.include "../../mail/thunderbird/Makefile-thunderbird.common"
+.include "../../mail/thunderbird2/Makefile-thunderbird.common"
 .include "../../mk/bsd.pkg.mk"
