@@ -18,6 +18,7 @@ WRKSRC=			${WRKDIR}/quickfix
 
 USE_LANGUAGES+=	c c++
 PTHREAD_OPTS+=	native
+PTHREAD_AUTO_VARS=	yes
 GNU_CONFIGURE=	yes
 #USE_LIBTOOL=	yes
 USE_TOOLS+=		gmake bash
