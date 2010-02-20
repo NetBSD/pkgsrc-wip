@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3813 2010/02/17 13:55:43 tnn2 Exp $
+# $Id: Makefile,v 1.3814 2010/02/20 22:48:23 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1115,6 +1115,7 @@ SUBDIR+=	libxc
 SUBDIR+=	libzdb
 SUBDIR+=	libzrtpcpp
 SUBDIR+=	lidia
+SUBDIR+=	linbox
 SUBDIR+=	lincity-ng
 SUBDIR+=	lingoteach-lesson
 SUBDIR+=	lingoteach-ui
@@ -1904,6 +1905,7 @@ SUBDIR+=	py-parsing
 SUBDIR+=	py-pcapy
 SUBDIR+=	py-plucker
 SUBDIR+=	py-pp
+SUBDIR+=	py-prayertime
 SUBDIR+=	py-processing
 SUBDIR+=	py-ptrace
 SUBDIR+=	py-pygr
