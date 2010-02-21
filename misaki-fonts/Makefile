@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/01/05 21:28:19 ryo-on Exp $
+# $NetBSD: Makefile,v 1.3 2010/02/21 12:41:02 ryo-on Exp $
 
 DISTNAME=		mskbdb11
 PKGNAME=		${DISTNAME:S/mskbd/misaki-fonts-/}
@@ -33,8 +33,8 @@ INSTALL_DOCS=		msk_b11.txt \
 
 do-build:
 .for filename in ${INSTALL_FONTS}
-	bdftopcf  -o ${WRKSRC}/`basename ${filename} .bdf`.pcf ${WRKSRC}/${filename}
-	${GZIP_CMD} ${WRKSRC}/`basename ${filename} .bdf`.pcf
+	bdftopcf  -o ${WRKSRC}/${filename:S/bdf/pcf/} ${WRKSRC}/${filename}
+	${GZIP_CMD} ${WRKSRC}/${filename:S/bdf/pcf/}
 .endfor
 
 do-install:
@@ -42,7 +42,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/${filename} ${DESTDIR}${DOCSDIR}
 .endfor
 .for filename in ${INSTALL_FONTS}
-	${INSTALL_DATA} ${WRKSRC}/`basename ${filename} .bdf`.pcf.gz ${DESTDIR}${FONTDIR}
+	${INSTALL_DATA} ${WRKSRC}/${filename:S/bdf/pcf.gz/} ${DESTDIR}${FONTDIR}
 .endfor
 
 .include "../../mk/bsd.pkg.mk"
