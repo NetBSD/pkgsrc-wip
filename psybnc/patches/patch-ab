@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1 2010/02/21 00:08:26 pettai Exp $
+
+--- config.h.orig	2010-02-20 22:37:16.000000000 +0100
++++ config.h	2010-02-20 22:37:40.000000000 +0100
+@@ -58,6 +58,10 @@
+ 
+ #define LOGLEVEL 0
+ 
++/* The Path to SSL */
++
++#define SSLPATH "/usr/"
++
+ /* SSL-Security */
+ 
+ #define SSLSEC 2

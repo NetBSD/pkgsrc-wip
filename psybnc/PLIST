@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2010/02/21 00:08:26 pettai Exp $
+bin/psybnc
+share/doc/psybnc/FAQ
+share/doc/psybnc/README
+share/doc/psybnc/SCRIPTING
+share/examples/psybnc/psybnc.conf
