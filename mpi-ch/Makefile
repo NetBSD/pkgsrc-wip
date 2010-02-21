@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2010/02/21 18:52:47 asau Exp $
+# $NetBSD: Makefile,v 1.22 2010/02/21 20:00:07 asau Exp $
 
 DISTNAME=	mpich2-trunk-r6307
 PKGNAME=	${DISTNAME}
@@ -11,6 +11,7 @@ MAINTAINER=	asau@inbox.ru
 HOMEPAGE=	http://www.mcs.anl.gov/research/projects/mpich2/
 COMMENT=	Open source MPI and MPI-2 implementation from Univ. of Chicago
 
+CONFLICTS+=	musicpd-[0-9]*	# installs bin/mpd
 CONFLICTS+=	mpich-[0-9]*	# installs bin/mpicc & other wrappers
 CONFLICTS+=	openmpi-[0-9]*	# installs bin/mpicc & other wrappers
 CONFLICTS+=	openpa-[0-9]*	# installs the library
@@ -31,6 +32,7 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--docdir=${PREFIX}/share/doc/${PKGBASE}
 CONFIGURE_ARGS+=	--htmldir=${PREFIX}/share/doc/${PKGBASE}/html
 
+CONFIGURE_ARGS+=	--with-pm=hydra:mpd:gforker
 CONFIGURE_ARGS+=	--disable-f90		# problems?
 
 USE_TOOLS+=		perl:run
@@ -62,4 +64,5 @@ CONF_FILES+=		share/${PKGBASE}/examples/mpicxx.conf \
 CONF_FILES+=		share/${PKGBASE}/examples/mpif77.conf \
 			${PKG_SYSCONFDIR}/mpif77.conf
 
+.include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
