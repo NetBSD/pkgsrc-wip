@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2010/02/21 18:04:07 asau Exp $
+# $NetBSD: Makefile,v 1.21 2010/02/21 18:52:47 asau Exp $
 
 DISTNAME=	mpich2-trunk-r6307
 PKGNAME=	${DISTNAME}
@@ -13,10 +13,13 @@ COMMENT=	Open source MPI and MPI-2 implementation from Univ. of Chicago
 
 CONFLICTS+=	mpich-[0-9]*	# installs bin/mpicc & other wrappers
 CONFLICTS+=	openmpi-[0-9]*	# installs bin/mpicc & other wrappers
+CONFLICTS+=	openpa-[0-9]*	# installs the library
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=		no
+
+DEPENDS+=	bash-[0-9]*:../../shells/bash
 
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++ fortran
@@ -59,5 +62,4 @@ CONF_FILES+=		share/${PKGBASE}/examples/mpicxx.conf \
 CONF_FILES+=		share/${PKGBASE}/examples/mpif77.conf \
 			${PKG_SYSCONFDIR}/mpif77.conf
 
-.include "../../parallel/openpa/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
