@@ -1,9 +1,7 @@
-$NetBSD: distinfo,v 1.11 2009/10/29 12:09:42 asau Exp $
+$NetBSD: distinfo,v 1.12 2010/02/21 18:04:07 asau Exp $
 
-SHA1 (mpich2-1.2.tar.gz) = 48502bf0acd6f877503b7f7756d51b63989e4fdd
-RMD160 (mpich2-1.2.tar.gz) = fdf9f578817750be52e0d46c9dbc47fd8cbd925f
-Size (mpich2-1.2.tar.gz) = 17245392 bytes
+SHA1 (mpich2-trunk-r6307.tar.gz) = 265fbb8f2c54de27a11964b7757b79c2e39b662f
+RMD160 (mpich2-trunk-r6307.tar.gz) = e0c51b0ea842fba2c7723858a46873d288a91bf0
+Size (mpich2-trunk-r6307.tar.gz) = 18863340 bytes
 SHA1 (patch-aa) = 1bb0a7575009120f98abcacf211c11fb1a185bc3
 SHA1 (patch-ac) = b956a355ef381d759077288916c40e32b022f178
-SHA1 (patch-ae) = 09263033fea699710edbe1f6e834dffd5fbf7107
-SHA1 (patch-af) = dfebd0e82c7ad8a14ad91558007d104af6765535

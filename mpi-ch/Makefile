@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.19 2009/10/23 22:35:48 asau Exp $
+# $NetBSD: Makefile,v 1.20 2010/02/21 18:04:07 asau Exp $
 
-DISTNAME=	mpich2-1.2
+DISTNAME=	mpich2-trunk-r6307
 PKGNAME=	${DISTNAME}
+PKGNAME=	mpich2-1.2.99.6307
 CATEGORIES=	parallel
-MASTER_SITES=	http://www.mcs.anl.gov/research/projects/mpich2/downloads/tarballs/1.2/
+MASTER_SITES=	http://www.mcs.anl.gov/research/projects/mpich2/downloads/tarballs/1.3a1/ \
+		http://www.mcs.anl.gov/research/projects/mpich2/downloads/tarballs/nightly/trunk/
 
 MAINTAINER=	asau@inbox.ru
 HOMEPAGE=	http://www.mcs.anl.gov/research/projects/mpich2/
 COMMENT=	Open source MPI and MPI-2 implementation from Univ. of Chicago
 
-CONFLICTS+=	musicpd-[0-9]*	# installs bin/mpd
 CONFLICTS+=	mpich-[0-9]*	# installs bin/mpicc & other wrappers
 CONFLICTS+=	openmpi-[0-9]*	# installs bin/mpicc & other wrappers
 
@@ -59,5 +60,4 @@ CONF_FILES+=		share/${PKGBASE}/examples/mpif77.conf \
 			${PKG_SYSCONFDIR}/mpif77.conf
 
 .include "../../parallel/openpa/buildlink3.mk"
-.include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
