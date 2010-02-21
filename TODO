@@ -108,7 +108,7 @@ Suggested ready to import packages
 =================================
 
 	o am-utils [pkg/35668]
-	o botan
+	o bsdstats
 	o castget
 	o commoncpp2
 	o ccrtp
@@ -117,12 +117,27 @@ Suggested ready to import packages
 	o gtypist [pkg/40177]
 	o heirloom-sh [pkg/40272]
 	o libdbi, libdbi-driver-{mysql,pgsql,sqlite{,3}} [pkg/40235]
+	o p5-Authen-TACACS
+	o p5-List-Compare
+	o p5-Mail-RFC822-Address
+	o p5-Net-validMX
 	o paexec
 	o pipestatus [pkg/40250]
+	o py-dpkt
+	o py-sendmail-admin
+	o pycrypto
+	o pylibpcap
+	o pypcap
+	o rancid
+	o ruby-dnsruby
 	o runawk
 	o send-pr
+	o softhsm
+	o sysmon
+	o tclreadline
 	o xmms-cdread [pkg/36220]
 	o xmms-skins [pkg/35666]
+	o zkt
 
 Suggested infrastructure improvements
 =====================================
