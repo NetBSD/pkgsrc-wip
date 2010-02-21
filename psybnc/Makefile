@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2010/02/21 00:08:26 pettai Exp $
+# $NetBSD: Makefile,v 1.2 2010/02/21 00:12:52 pettai Exp $
 #
 
 DISTNAME=	psyBNC-2.3.2-9
@@ -6,7 +6,7 @@ CATEGORIES=	chat
 MASTER_SITES=	http://www.psybnc.at/download/beta/
 
 MAINTAINER=	pettai@nordu.net
-HOMEPAGE=	http://www.psybnc.at/download/beta/
+HOMEPAGE=	http://www.psybnc.at/
 COMMENT=	Easy-to-use, multi-user, permanent IRC-Bouncer with many features
 LICENSE=	gnu-gpl-v2
 
