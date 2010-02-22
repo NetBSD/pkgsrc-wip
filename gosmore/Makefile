@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2010/02/17 10:28:40 drochner Exp $
+# $NetBSD: Makefile,v 1.3 2010/02/22 21:20:13 drochner Exp $
 #
 
 DISTNAME=	gosmore-1
-SVN_DATE=	20100216
+CHECKOUT_DATE=	20100218
 CATEGORIES=	geography
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
