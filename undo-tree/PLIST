@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/02/22 03:52:50 phonohawk Exp $
+${EMACS_LISPPREFIX}/undo-tree.el
+${EMACS_LISPPREFIX}/undo-tree.elc
