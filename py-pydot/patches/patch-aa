@@ -1,0 +1,11 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/02/22 14:45:59 jihbed Exp $
+
+--- setup.py.orig	2008-02-14 20:48:02.000000000 +0000
++++ setup.py	2010-02-22 15:28:27.000000000 +0000
+@@ -27,5 +27,4 @@
+         'Topic :: Software Development :: Libraries :: Python Modules'],
+     long_description = "\n".join(pydot.__doc__.split('\n')),
+     py_modules = ['pydot', 'dot_parser'],
+-    install_requires = ['pyparsing', 'setuptools'],
+-    data_files = [('.', ['ChangeLog', 'LICENSE', 'README'])] )
++    install_requires = ['pyparsing', 'setuptools'])

@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/02/22 14:45:59 jihbed Exp $
+${PYSITELIB}/dot_parser.py
+${PYSITELIB}/dot_parser.pyc
+${PYSITELIB}/dot_parser.pyo
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/pydot.py
+${PYSITELIB}/pydot.pyc
+${PYSITELIB}/pydot.pyo
