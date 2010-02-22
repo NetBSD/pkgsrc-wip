@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/09/23 07:11:21 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2010/02/22 09:06:58 phonohawk Exp $
 #
 
-DISTNAME=	midi-0.1.4
+DISTNAME=	midi-0.1.5
 CATEGORIES=	audio
 
 MAINTAINER=	pho@cielonegro.org

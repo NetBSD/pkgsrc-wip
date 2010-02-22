@@ -1,11 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2009/09/23 07:11:21 phonohawk Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2010/02/22 09:07:18 phonohawk Exp $
 
 BUILDLINK_TREE+=	hs-midi
 
 .if !defined(HS_MIDI_BUILDLINK3_MK)
 HS_MIDI_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.hs-midi+=	hs-midi>=0.1.4
+BUILDLINK_API_DEPENDS.hs-midi+=	hs-midi>=0.1.5
 BUILDLINK_PKGSRCDIR.hs-midi?=	../../wip/hs-midi
 
 .include "../../wip/hs-binary/buildlink3.mk"
