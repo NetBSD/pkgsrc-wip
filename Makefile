@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3817 2010/02/22 03:57:19 phonohawk Exp $
+# $Id: Makefile,v 1.3818 2010/02/22 15:18:31 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1908,6 +1908,7 @@ SUBDIR+=	py-pp
 SUBDIR+=	py-prayertime
 SUBDIR+=	py-processing
 SUBDIR+=	py-ptrace
+SUBDIR+=	py-pydot
 SUBDIR+=	py-pygr
 SUBDIR+=	py-rcsparse
 SUBDIR+=	py-rdflib
