@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/02/11 15:24:20 christtrekker Exp $
+# $NetBSD: Makefile,v 1.4 2010/02/22 20:41:22 christtrekker Exp $
 #
 
 DISTNAME=	classic-mac-font-pack-0.1
@@ -18,10 +18,12 @@ SITES.Cairo_TTF.zip=	http://www.masterstech-home.com/The_Library/Font_Samples/Fo
 # File is invalid?
 #DISTFILES+=	Chicago_TTF.zip
 #SITES.Chicago_TTF.zip=	http://www.masterstech-home.com/The_Library/Font_Samples/Font_Sample_Files/PC/C/
+#DISTFILES+=	CHICAGO.ttf
+#SITES.CHICAGO.ttf=	http://www.fontyukle.com/en/
 DISTFILES+=	Geneva_TTF.zip
 SITES.Geneva_TTF.zip=	http://www.masterstech-home.com/The_Library/Font_Samples/Font_Sample_Files/PC/G/
-DISTFILES+=	LondonTTF.sit
-SITES.LondonTTF.sit=	http://68kmla.net/wiki/uploads/c/c4/
+DISTFILES+=	London.ttf.gz
+SITES.London.ttf.gz=	http://68kmla.net/wiki/uploads/4/4a/
 DISTFILES+=	CityOfAngelsTTF.zip
 SITES.CityOfAngelsTTF.zip=	http://68kmla.net/wiki/uploads/0/0a/
 DISTFILES+=	MONACO.TTF
@@ -43,8 +45,8 @@ SITES.genoa.zip=	http://www.searchfreefonts.com/assets/downloads/
 
 # This next one has Apple Garamond.
 # I don't think it is freely distributable though.
-#DISTFILES+=	macfonts.tar.gz
-#SITES.macfonts.tar.gz=	http://ubuntu-debs.googlecode.com/files/
+DISTFILES+=	macfonts.tar.gz
+SITES.macfonts.tar.gz=	http://ubuntu-debs.googlecode.com/files/
 DISTFILES+=	virtue.zip
 SITES.virtue.zip=	http://www.scootergraphics.com/virtue/
 DISTFILES+=	Mottek.zip
@@ -64,10 +66,24 @@ NO_CONFIGURE=	yes
 NO_BUILD=	yes
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+# OPTIONS
+PKG_OPTIONS_VAR=	PKG_OPTIONS.classic-mac-font-pack
+PKG_SUPPORTED_OPTIONS=	agaramond
+
+.include "../../mk/bsd.prefs.mk"
+.include "../../mk/bsd.options.mk"
+
+PLIST_VARS+=	agaramond
+.if !empty(PKG_OPTIONS:Magaramond)
+PLIST.agaramond=	yes
+.endif
+
 do-install:
-	cd ${WRKSRC} && for f in *.[Tt][Tt][Ff] ; do \
-		${INSTALL_DATA} $$f ${DESTDIR}${FONTS_DIRS.ttf}/$$f; \
-	done
+	${INSTALL_DATA_DIR} ${DESTDIR}${FONTS_DIRS.ttf}
+	${INSTALL_DATA} ${WRKSRC}/*.[Tt][Tt][Ff] ${DESTDIR}${FONTS_DIRS.ttf}
+	if [ "x${PLIST.agaramond}" = "xyes" ]; then \
+		${INSTALL_DATA} ${WRKSRC}/macfonts/AppleGaramond*.[Tt][Tt][Ff] ${DESTDIR}${FONTS_DIRS.ttf}; \
+	fi
 # install doco too!
 
 # url2pkg-marker (please do not remove this line.)

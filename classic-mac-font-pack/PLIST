@@ -1,9 +1,16 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/11/18 17:00:03 christtrekker Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/02/22 20:41:22 christtrekker Exp $
 lib/X11/fonts/TTF/ALEXA.TTF
-lib/X11/fonts/TTF/Cairo.ttf
+${PLIST.agaramond}lib/X11/fonts/TTF/AppleGaramond-Bold.ttf
+${PLIST.agaramond}lib/X11/fonts/TTF/AppleGaramond-BoldItalic.ttf
+${PLIST.agaramond}lib/X11/fonts/TTF/AppleGaramond-Italic.ttf
+${PLIST.agaramond}lib/X11/fonts/TTF/AppleGaramond-Light.ttf
+${PLIST.agaramond}lib/X11/fonts/TTF/AppleGaramond-LightItalic.ttf
+${PLIST.agaramond}lib/X11/fonts/TTF/AppleGaramond.ttf
 lib/X11/fonts/TTF/CITYOARG.TTF
+lib/X11/fonts/TTF/Cairo.ttf
 lib/X11/fonts/TTF/GENEVA.TTF
-lib/X11/fonts/TTF/genoa.ttf
+lib/X11/fonts/TTF/London.ttf
 lib/X11/fonts/TTF/MONACO.TTF
 lib/X11/fonts/TTF/MOTTEK.TTF
+lib/X11/fonts/TTF/genoa.ttf
 lib/X11/fonts/TTF/virtue.ttf
