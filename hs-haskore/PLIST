@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/09/23 09:26:41 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/02/22 09:19:33 phonohawk Exp $
 bin/autotrack
 lib/haskore-${PKGVERSION}/${HASKELL_VERSION}/HShaskore-${PKGVERSION}.o
 lib/haskore-${PKGVERSION}/${HASKELL_VERSION}/Haskore.hi
@@ -57,6 +57,8 @@ lib/haskore-${PKGVERSION}/${HASKELL_VERSION}/Haskore/General/GraphRecursiveGen.h
 lib/haskore-${PKGVERSION}/${HASKELL_VERSION}/Haskore/General/GraphRecursiveGen.p_hi
 lib/haskore-${PKGVERSION}/${HASKELL_VERSION}/Haskore/General/GraphTaggedGen.hi
 lib/haskore-${PKGVERSION}/${HASKELL_VERSION}/Haskore/General/GraphTaggedGen.p_hi
+lib/haskore-${PKGVERSION}/${HASKELL_VERSION}/Haskore/General/LetRec.hi
+lib/haskore-${PKGVERSION}/${HASKELL_VERSION}/Haskore/General/LetRec.p_hi
 lib/haskore-${PKGVERSION}/${HASKELL_VERSION}/Haskore/General/LoopTreeRecursive.hi
 lib/haskore-${PKGVERSION}/${HASKELL_VERSION}/Haskore/General/LoopTreeRecursive.p_hi
 lib/haskore-${PKGVERSION}/${HASKELL_VERSION}/Haskore/General/LoopTreeRecursiveGen.hi

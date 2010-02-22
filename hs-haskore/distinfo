@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/09/23 09:26:41 phonohawk Exp $
+$NetBSD: distinfo,v 1.2 2010/02/22 09:19:33 phonohawk Exp $
 
-SHA1 (haskore-0.1.tar.gz) = 3d655902c488b71e99d3293114752220190a261d
-RMD160 (haskore-0.1.tar.gz) = da701e817a9096a89e83dba363a4dd207a8ce720
-Size (haskore-0.1.tar.gz) = 210460 bytes
+SHA1 (haskore-0.1.0.2.tar.gz) = 940d3781b9072e057a35a1447c02a96701517f50
+RMD160 (haskore-0.1.0.2.tar.gz) = 01bb4ccfe667fab94d3213478d3306bc52de6b40
+Size (haskore-0.1.0.2.tar.gz) = 211075 bytes
 SHA1 (patch-aa) = c183947e4f05a388c6dba98a5cda00f63d193938

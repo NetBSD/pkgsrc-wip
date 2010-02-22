@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/09/23 09:26:41 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2010/02/22 09:19:33 phonohawk Exp $
 #
 
-DISTNAME=	haskore-0.1
+DISTNAME=	haskore-0.1.0.2
 CATEGORIES=	audio
 
 MAINTAINER=	pho@cielonegro.org
