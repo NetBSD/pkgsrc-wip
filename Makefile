@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3820 2010/02/23 08:33:40 ficovh Exp $
+# $Id: Makefile,v 1.3821 2010/02/23 10:02:11 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1025,7 +1025,7 @@ SUBDIR+=	last-exit
 SUBDIR+=	last.fm
 SUBDIR+=	lastfm-sharp
 SUBDIR+=	lat
-SUBDIR+=	lcal
+SUBDIR+=	lcalc
 SUBDIR+=	lcdproc
 SUBDIR+=	lcrack
 SUBDIR+=	ldapbrowser
