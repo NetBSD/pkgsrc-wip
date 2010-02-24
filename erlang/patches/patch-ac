@@ -1,10 +1,10 @@
-$NetBSD: patch-ac,v 1.1.1.1 2008/04/16 06:11:50 marttikuparinen Exp $
+$NetBSD: patch-ac,v 1.2 2010/02/24 13:49:55 marttikuparinen Exp $
 
 Added support for NetBSD.
 
---- erts/emulator/sys/common/erl_mseg.c.orig	2007-11-26 19:59:24.000000000 +0100
-+++ erts/emulator/sys/common/erl_mseg.c
-@@ -369,10 +369,18 @@ mseg_recreate(void *old_seg, Uint old_si
+--- erts/emulator/sys/common/erl_mseg.c.orig	2009-11-20 15:31:33.000000000 +0200
++++ erts/emulator/sys/common/erl_mseg.c	2010-02-24 14:31:08.000000000 +0200
+@@ -355,10 +355,18 @@
  #if defined(ERTS_MSEG_FAKE_SEGMENTS)
      new_seg = erts_sys_realloc(ERTS_ALC_N_INVALID, NULL, old_seg, new_size);
  #elif HAVE_MREMAP

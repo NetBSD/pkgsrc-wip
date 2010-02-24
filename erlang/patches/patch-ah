@@ -1,8 +1,8 @@
-$NetBSD: patch-ah,v 1.1.1.1 2008/04/16 06:11:50 marttikuparinen Exp $
+$NetBSD: patch-ah,v 1.2 2010/02/24 13:49:55 marttikuparinen Exp $
 
---- lib/compiler/src/v3_codegen.erl.orig	2008-02-05 08:37:35.000000000 -0500
-+++ lib/compiler/src/v3_codegen.erl
-@@ -1481,6 +1481,8 @@ cg_binary_size_1([], Bits, Acc) ->
+--- lib/compiler/src/v3_codegen.erl.orig	2009-11-20 15:30:50.000000000 +0200
++++ lib/compiler/src/v3_codegen.erl	2010-02-24 14:38:55.000000000 +0200
+@@ -1518,6 +1518,8 @@
      Sizes = filter(fun({_,{integer,0}}) -> false;
  		      (_) -> true end, Sizes0),
      case Sizes of

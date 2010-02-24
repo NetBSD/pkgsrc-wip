@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2009/12/14 14:12:46 fhajny Exp $
+# $NetBSD: options.mk,v 1.3 2010/02/24 13:49:54 marttikuparinen Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.erlang
 PKG_SUPPORTED_OPTIONS=	java erlang-hipe

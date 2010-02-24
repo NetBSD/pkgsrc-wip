@@ -1,8 +1,8 @@
-$NetBSD: patch-ai,v 1.1.1.1 2008/04/16 06:11:50 marttikuparinen Exp $
+$NetBSD: patch-ai,v 1.2 2010/02/24 13:49:55 marttikuparinen Exp $
 
---- lib/gs/src/tool_utils.erl.orig	2007-11-26 14:03:09.000000000 -0500
-+++ lib/gs/src/tool_utils.erl
-@@ -37,6 +37,9 @@
+--- lib/gs/src/tool_utils.erl.orig	2009-03-12 14:23:23.000000000 +0200
++++ lib/gs/src/tool_utils.erl	2010-02-24 14:39:44.000000000 +0200
+@@ -40,6 +40,9 @@
  	       }).
  
  
@@ -12,7 +12,7 @@ $NetBSD: patch-ai,v 1.1.1.1 2008/04/16 06:11:50 marttikuparinen Exp $
  %%----------------------------------------------------------------------
  %% open_help(Parent, File)
  %%   Parent = gsobj()  (GS root object or parent window)
-@@ -77,7 +80,7 @@ open_help_default(Parent, File) ->
+@@ -80,7 +83,7 @@
  		      {unix,Type} ->
                            case Type of
                                 darwin -> "open " ++ File;
@@ -21,7 +21,7 @@ $NetBSD: patch-ai,v 1.1.1.1 2008/04/16 06:11:50 marttikuparinen Exp $
  			  end;
  		      {win32,_AnyType} ->
  			  "start " ++ filename:nativename(File);
-@@ -92,7 +95,7 @@ open_help_default(Parent, File) ->
+@@ -95,7 +98,7 @@
  		      {unix,Type} ->
                            case Type of
                                 darwin -> "open " ++ File;
@@ -30,7 +30,7 @@ $NetBSD: patch-ai,v 1.1.1.1 2008/04/16 06:11:50 marttikuparinen Exp $
  			  end;
  		      {win32,_AnyType} ->
  			  "netscape.exe -h " ++ regexp:gsub(File,"\\\\","/");
-@@ -429,3 +432,53 @@ insert_newlines([Last]) ->
+@@ -432,3 +435,53 @@
      [Last];
  insert_newlines(Other) ->
      Other.

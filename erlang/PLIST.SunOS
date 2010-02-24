@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.SunOS,v 1.1 2009/12/14 13:12:48 fhajny Exp $
+@comment $NetBSD: PLIST.SunOS,v 1.2 2010/02/24 13:49:54 marttikuparinen Exp $
 lib/erlang/lib/os_mon-${VERSION.os_mon}/priv/bin/cpu_sup
 lib/erlang/lib/os_mon-${VERSION.os_mon}/priv/bin/ferrule
 lib/erlang/lib/os_mon-${VERSION.os_mon}/priv/bin/mod_syslog

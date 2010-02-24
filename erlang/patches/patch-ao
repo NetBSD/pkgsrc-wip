@@ -1,8 +1,8 @@
-$NetBSD: patch-ao,v 1.1.1.1 2008/04/16 06:11:50 marttikuparinen Exp $
+$NetBSD: patch-ao,v 1.2 2010/02/24 13:49:55 marttikuparinen Exp $
 
---- erts/emulator/hipe/hipe_sparc.c.orig	2008-02-05 08:38:06.000000000 -0500
-+++ erts/emulator/hipe/hipe_sparc.c
-@@ -112,6 +112,10 @@ static void atexit_alloc_code_stats(void
+--- erts/emulator/hipe/hipe_sparc.c.orig	2009-03-12 14:16:18.000000000 +0200
++++ erts/emulator/hipe/hipe_sparc.c	2010-02-24 14:42:02.000000000 +0200
+@@ -130,6 +130,10 @@
  #define ALLOC_CODE_STATS(X)	do{}while(0)
  #endif
  
@@ -13,7 +13,7 @@ $NetBSD: patch-ao,v 1.1.1.1 2008/04/16 06:11:50 marttikuparinen Exp $
  static void morecore(unsigned int alloc_bytes)
  {
      unsigned int map_bytes;
-@@ -135,8 +139,8 @@ static void morecore(unsigned int alloc_
+@@ -153,8 +157,8 @@
      map_start = mmap(map_hint, map_bytes,
  		     PROT_EXEC|PROT_READ|PROT_WRITE,
  		     MAP_PRIVATE|MAP_ANONYMOUS

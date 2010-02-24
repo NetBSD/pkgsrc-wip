@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.odbc,v 1.1 2009/12/14 14:12:46 fhajny Exp $
+@comment $NetBSD: PLIST.odbc,v 1.2 2010/02/24 13:49:54 marttikuparinen Exp $
 lib/erlang/lib/odbc-${VERSION.odbc}/c_src/odbcserver.c
 lib/erlang/lib/odbc-${VERSION.odbc}/c_src/odbcserver.h
 lib/erlang/lib/odbc-${VERSION.odbc}/ebin/odbc.app

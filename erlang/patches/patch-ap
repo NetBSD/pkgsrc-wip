@@ -1,8 +1,8 @@
-$NetBSD: patch-ap,v 1.1.1.1 2008/04/16 06:11:50 marttikuparinen Exp $
+$NetBSD: patch-ap,v 1.2 2010/02/24 13:49:55 marttikuparinen Exp $
 
---- erts/emulator/hipe/hipe_x86.c.orig	2007-11-26 13:59:40.000000000 -0500
-+++ erts/emulator/hipe/hipe_x86.c
-@@ -113,8 +113,10 @@ static void morecore(unsigned int alloc_
+--- erts/emulator/hipe/hipe_x86.c.orig	2009-03-12 14:16:21.000000000 +0200
++++ erts/emulator/hipe/hipe_x86.c	2010-02-24 14:42:23.000000000 +0200
+@@ -131,8 +131,10 @@
      map_start = mmap(map_hint, map_bytes,
  		     PROT_EXEC|PROT_READ|PROT_WRITE,
  		     MAP_PRIVATE|MAP_ANONYMOUS

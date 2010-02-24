@@ -1,4 +1,4 @@
-$NetBSD: patch-au,v 1.1 2009/12/15 11:50:49 asau Exp $
+$NetBSD: patch-au,v 1.2 2010/02/24 13:49:55 marttikuparinen Exp $
 
 Don't strip scripts.
 

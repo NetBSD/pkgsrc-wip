@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.1.1.1 2008/04/16 06:11:50 marttikuparinen Exp $
+# $NetBSD: hacks.mk,v 1.2 2010/02/24 13:49:54 marttikuparinen Exp $
 
 .if !defined(ERLANG_HACKS_MK)
 ERLANG_HACKS_MK=	# empty

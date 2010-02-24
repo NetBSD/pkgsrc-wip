@@ -1,8 +1,8 @@
-$NetBSD: patch-am,v 1.1.1.1 2008/04/16 06:11:50 marttikuparinen Exp $
+$NetBSD: patch-am,v 1.2 2010/02/24 13:49:55 marttikuparinen Exp $
 
---- erts/emulator/hipe/hipe_arm.c.orig	2007-11-26 14:00:35.000000000 -0500
-+++ erts/emulator/hipe/hipe_arm.c
-@@ -45,11 +45,19 @@ static struct segment {
+--- erts/emulator/hipe/hipe_arm.c.orig	2009-09-18 17:09:02.000000000 +0300
++++ erts/emulator/hipe/hipe_arm.c	2010-02-24 14:41:19.000000000 +0200
+@@ -73,11 +73,19 @@
  #define in_area(ptr,start,nbytes)	\
  	((unsigned long)((char*)(ptr) - (char*)(start)) < (nbytes))
  
