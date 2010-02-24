@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3821 2010/02/23 10:02:11 jihbed Exp $
+# $Id: Makefile,v 1.3822 2010/02/24 10:49:56 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -203,6 +203,7 @@ SUBDIR+=	cb2bib
 SUBDIR+=	cclive
 SUBDIR+=	ccrtp
 SUBDIR+=	ccrypt
+SUBDIR+=	cddlib
 SUBDIR+=	cdogs
 SUBDIR+=	cdpr
 SUBDIR+=	cedet
