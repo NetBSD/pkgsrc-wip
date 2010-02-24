@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2010/01/12 11:32:35 asau Exp $
+@comment $NetBSD: PLIST,v 1.11 2010/02/24 12:00:26 asau Exp $
 bin/sbcl
 lib/sbcl/asdf-install/.cvsignore
 lib/sbcl/asdf-install/Makefile
@@ -211,6 +211,7 @@ lib/sbcl/sb-simple-streams/internal.fasl
 lib/sbcl/sb-simple-streams/internal.lisp
 lib/sbcl/sb-simple-streams/iodefs.fasl
 lib/sbcl/sb-simple-streams/iodefs.lisp
+lib/sbcl/sb-simple-streams/lp491087.txt
 lib/sbcl/sb-simple-streams/null.fasl
 lib/sbcl/sb-simple-streams/null.lisp
 lib/sbcl/sb-simple-streams/package.fasl
