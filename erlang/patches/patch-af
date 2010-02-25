@@ -1,0 +1,14 @@
+$NetBSD: patch-af,v 1.4 2010/02/25 11:03:11 marttikuparinen Exp $
+
+--- lib/reltool/test/Makefile.orig	2010-02-25 12:58:13.000000000 +0200
++++ lib/reltool/test/Makefile	2010-02-25 12:58:42.000000000 +0200
+@@ -73,7 +73,8 @@
+ release_tests_spec: opt
+ 	$(INSTALL_DIR) $(RELSYSDIR)
+ 	$(INSTALL_DATA) reltool.spec $(ERL_FILES) $(HRL_FILES) $(RELSYSDIR)
+-	$(INSTALL_PROGRAM) rtt $(INSTALL_PROGS) $(RELSYSDIR)
++	$(INSTALL_SCRIPT) rtt $(INSTALL_PROGS) $(RELSYSDIR)
++	$(INSTALL_DATA) $(INSTALL_PROGS) $(RELSYSDIR)
+ #	chmod -f -R u+w $(RELSYSDIR)
+ #	@tar cf - *_SUITE_data | (cd $(RELSYSDIR); tar xf -)
+ 
