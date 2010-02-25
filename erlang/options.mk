@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2010/02/24 13:49:54 marttikuparinen Exp $
+# $NetBSD: options.mk,v 1.4 2010/02/25 17:36:32 marttikuparinen Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.erlang
 PKG_SUPPORTED_OPTIONS=	java erlang-hipe
@@ -21,10 +21,9 @@ CONFIGURE_ENV+=	JAVAC=none
 ### XXX Need to check which platforms will enable this by default, if any.
 ###	Should it be an option?
 ###
-PLIST_SUBST+=		SMP="@comment "
 CONFIGURE_ARGS+=	--enable-hipe
+PLIST_SRC+=		PLIST.hipe
 .else
-PLIST_SUBST+=		SMP=""
 CONFIGURE_ARGS+=	--disable-hipe
 .endif
 
