@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2010/01/24 02:59:00 phonohawk Exp $
+# $NetBSD: Makefile,v 1.21 2010/02/25 07:43:54 phonohawk Exp $
 
 DISTNAME=		ghc-${VERSION}
 VERSION=		6.12.1
@@ -169,6 +169,7 @@ CHECK_PORTABILITY_SKIP+=	distrib/prep-bin-dist-mingw
 # http://hackage.haskell.org/trac/ghc/ticket/2933
 CHECK_SHLIBS_SUPPORTED= 	no
 
+BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 BUILDLINK_DEPMETHOD.libxslt = build
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
