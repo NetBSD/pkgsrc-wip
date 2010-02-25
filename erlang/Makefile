@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2010/02/25 17:36:32 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.13 2010/02/25 18:31:38 marttikuparinen Exp $
 
 DISTNAME=		otp_src_${DIST_VERSION_MAJOR}${DIST_VERSION_MINOR:D-${DIST_VERSION_MINOR}}
 PKGNAME=		erlang-${ERLANG_VERSION}
@@ -8,7 +8,7 @@ MASTER_SITES=		http://www.erlang.org/download/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.erlang.org/
 COMMENT=		Concurrent functional programming language
-#LICENSE=		erlang-public-license
+LICENSE=		erlang-public-license
 
 DIST_SUBDIR=		erlang
 
@@ -39,7 +39,7 @@ SUBST_SED.target=	-e "s|=.*config.guess)|= ${MACHINE_GNU_PLATFORM}|"
 SUBST_MESSAGE.target=	Fixing target name.
 
 TEST_TARGET=		tests
-TEST_MAKE_FLAGS=	ERL_TOP=$(WRKSRC)
+TEST_MAKE_FLAGS=	ERL_TOP=${WRKSRC}
 REPLACE_PERL+=		make/make_emakefile
 
 PLIST_SRC=		PLIST
