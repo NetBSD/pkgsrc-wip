@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/02/25 12:54:20 jihbed Exp $
+
+SHA1 (gvariant-0.tar.gz) = bf5cb1ed61a973c7aa95a2ae36445e9ab2bf83d5
+RMD160 (gvariant-0.tar.gz) = 653c50e4083812998fbc0c190f5bd755ac44dd52
+Size (gvariant-0.tar.gz) = 465970 bytes

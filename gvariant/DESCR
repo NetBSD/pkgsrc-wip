@@ -1,0 +1,4 @@
+GVariant is a new datatype in glib that stores complex values of many types
+(any type that can traditionally be sent over D-Bus). GVariant is allowing
+development of many exciting projects (present and future) including
+GSettings, the  GConf replacement.
