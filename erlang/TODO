@@ -1,0 +1,42 @@
+- fix hipe support on amd64
+
+sys_float.c:(.text+0x242): undefined reference to `skip_sse2_insn'
+make[3]: *** [/home/pkgsrc/wip/erlang/work.x86_64/otp_src_R13B04/bin/x86_64-unknown-netbsd5.99.24/beam.smp] Error 1
+
+
+
+
+
+- fix iodbc support
+
+=> Checking for missing run-time search paths in erlang-13.2.4
+ERROR: lib/erlang/lib/odbc-2.10.7/priv/bin/odbcserver: missing library: libiodbc.so.2
+
+# ldd work.i386/.destdir/usr/pkg/lib/erlang/lib/odbc-2.10.7/priv/bin/odbcserver 
+work.i386/.destdir/usr/pkg/lib/erlang/lib/odbc-2.10.7/priv/bin/odbcserver:
+	-liodbc.2 => not found
+	-lc.12 => /usr/lib/libc.so.12
+	-lpthread.1 => /usr/lib/libpthread.so.1
+# pkg_info | grep iodbc
+iodbc-3.52.7        ODBC 3.x driver manager
+# strings work.i386/.destdir/usr/pkg/lib/erlang/lib/odbc-2.10.7/priv/bin/odbcserver | grep libiodbc.so
+libiodbc.so.2
+
+
+
+
+
+- fix unixodbc support
+
+=> Checking for missing run-time search paths in erlang-13.2.4
+ERROR: lib/erlang/lib/odbc-2.10.7/priv/bin/odbcserver: missing library: libodbc.so.1
+
+# ldd work.i386/.destdir/usr/pkg/lib/erlang/lib/odbc-2.10.7/priv/bin/odbcserver
+work.i386/.destdir/usr/pkg/lib/erlang/lib/odbc-2.10.7/priv/bin/odbcserver:
+	-lodbc.1 => not found
+	-lc.12 => /usr/lib/libc.so.12
+	-lpthread.1 => /usr/lib/libpthread.so.1
+# pkg_info | grep unixodbc
+unixodbc-2.2.14nb3  ODBC 2.x/3.x driver manager
+# strings work.i386/.destdir/usr/pkg/lib/erlang/lib/odbc-2.10.7/priv/bin/odbcserver | grep libodbc.so
+libodbc.so.1
