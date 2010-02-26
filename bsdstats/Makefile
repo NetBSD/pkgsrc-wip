@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2010/01/15 20:29:13 pettai Exp $
+# $NetBSD: Makefile,v 1.2 2010/02/26 09:38:08 shindenmorr Exp $
 #
 
 DISTNAME=		300.statistics
@@ -10,6 +10,8 @@ EXTRACT_SUFX=
 MAINTAINER=		pettai@nordu.net
 HOMEPAGE=		http://www.bsdstats.org/
 COMMENT=		BSD-Stats collector script
+
+DEPENDS+=		netcat-[0-9]*:../../net/netcat
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -25,6 +27,6 @@ MESSAGE_SUBST+=		PREFIX=${PREFIX}
 INSTALLATION_DIRS=	bin ${VARBASE}/db/bsdstats
 
 do-install:
-	${INSTALL} ${WRKDIR}/300.statistics ${DESTDIR}${PREFIX}/bin
+	${INSTALL} ${FILESDIR}/300.statistics ${DESTDIR}${PREFIX}/bin
 
 .include "../../mk/bsd.pkg.mk"

@@ -109,6 +109,17 @@ send_ports () {
 
 	    report_ports
 	    ;;
+	NetBSD|DragonFlyBSD )
+	    for line in `/usr/sbin/pkg_info | /usr/bin/awk '{print $1}' `
+	    do
+	      category=`pkg_info -Q PKGPATH ${line}|cut -d/ -f1`
+              line=$(uri_escape $line)
+              category=$(uri_escape $category)
+	      query_string=$query_string`echo \&port[]=${category}:${line}`
+	    done
+
+	    report_ports
+	    ;;
 	* )
 	    # Not supported
 	    ;;
