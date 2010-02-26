@@ -1,0 +1,9 @@
+This module allows you to incorporate arbitrary files into a haskell
+module during compilation. The files are then available to you through
+functions which allows you to write installer-type applications which
+write out the files when run. Thus this can be considered in the same
+model as Java .jar files or executable zip or other file archives.
+
+The current implementation is now reasonably efficient. However, it
+does require that you have a C compiler installed which can be invoked
+through cc.
