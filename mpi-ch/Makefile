@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2010/02/21 20:00:07 asau Exp $
+# $NetBSD: Makefile,v 1.23 2010/02/26 12:29:44 asau Exp $
 
-DISTNAME=	mpich2-trunk-r6307
+DISTNAME=	mpich2-trunk-r6332
 PKGNAME=	${DISTNAME}
-PKGNAME=	mpich2-1.2.99.6307
+PKGNAME=	mpich2-1.2.99.6332
 CATEGORIES=	parallel
 MASTER_SITES=	http://www.mcs.anl.gov/research/projects/mpich2/downloads/tarballs/1.3a1/ \
 		http://www.mcs.anl.gov/research/projects/mpich2/downloads/tarballs/nightly/trunk/
@@ -63,6 +63,12 @@ CONF_FILES+=		share/${PKGBASE}/examples/mpicxx.conf \
 			${PKG_SYSCONFDIR}/mpicxx.conf
 CONF_FILES+=		share/${PKGBASE}/examples/mpif77.conf \
 			${PKG_SYSCONFDIR}/mpif77.conf
+
+# FreeBSD 6 hack:
+.include "../../mk/bsd.prefs.mk"
+.if $(OPSYS) == "FreeBSD" || $(OPSYS) == "DragonFly"
+BUILDLINK_TRANSFORM+=	rm:-lrt
+.endif
 
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
