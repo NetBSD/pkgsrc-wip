@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/02/26 10:04:59 phonohawk Exp $
+lib/chunks-${PKGVERSION}/${HASKELL_VERSION}/HSchunks-${PKGVERSION}.o
+lib/chunks-${PKGVERSION}/${HASKELL_VERSION}/Text/HTML/Chunks.hi
+lib/chunks-${PKGVERSION}/${HASKELL_VERSION}/Text/HTML/Chunks.p_hi
+lib/chunks-${PKGVERSION}/${HASKELL_VERSION}/Text/HTML/Chunks/Parser.hi
+lib/chunks-${PKGVERSION}/${HASKELL_VERSION}/Text/HTML/Chunks/Parser.p_hi
+lib/chunks-${PKGVERSION}/${HASKELL_VERSION}/Text/HTML/Chunks/TH.hi
+lib/chunks-${PKGVERSION}/${HASKELL_VERSION}/Text/HTML/Chunks/TH.p_hi
+lib/chunks-${PKGVERSION}/${HASKELL_VERSION}/libHSchunks-${PKGVERSION}.a
+lib/chunks-${PKGVERSION}/${HASKELL_VERSION}/libHSchunks-${PKGVERSION}_p.a
+lib/chunks-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/chunks-${PKGVERSION}/LICENSE
