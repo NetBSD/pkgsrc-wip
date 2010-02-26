@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3824 2010/02/25 19:51:24 pettai Exp $
+# $Id: Makefile,v 1.3825 2010/02/26 10:05:59 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -786,6 +786,7 @@ SUBDIR+=	hs-cabal
 SUBDIR+=	hs-cabal-query
 SUBDIR+=	hs-chalkboard
 SUBDIR+=	hs-chalkboard-viewer
+SUBDIR+=	hs-chunks
 SUBDIR+=	hs-convertible
 SUBDIR+=	hs-cpphs
 SUBDIR+=	hs-curl
