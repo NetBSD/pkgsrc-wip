@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2010/01/30 06:37:27 schnoebe Exp $
+# $NetBSD: Makefile,v 1.11 2010/02/26 04:20:50 schnoebe Exp $
 
 DISTNAME=		spectrum
 PKGNAME=		${DISTNAME}-0.1
@@ -28,6 +28,7 @@ USE_CMAKE=		yes
 USE_LANGUAGES+=		c++ c
 
 REPLACE_PYTHON+=	spectrumctl/spectrumctl.py
+PY_PATCHPLIST=		yes
 
 # always include bsd.prefs.mk before any .if or .ifdef statements
 .include "../../mk/bsd.prefs.mk"
