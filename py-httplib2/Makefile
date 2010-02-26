@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2009/09/09 11:22:11 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2010/02/26 18:10:48 jihbed Exp $
 #
 
-DISTNAME=	httplib2-0.5.0
+DISTNAME=	httplib2-0.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	http://httplib2.googlecode.com/files/
@@ -14,8 +14,7 @@ LICENSE=	mit
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG=	yes
-PY_PATCHPLIST=	yes
-
+PYTHON_VERSIONS_ACCEPTED= 26
 
 # Install README manually
 DOCDIR=		${PREFIX}/share/doc/py-httplib2
