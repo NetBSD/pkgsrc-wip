@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.8 2009/04/09 01:28:48 jsonn Exp $
+# $NetBSD: Makefile,v 1.9 2010/02/26 10:30:13 thomasklausner Exp $
 #
 
 DISTNAME=	Radiator-all-3.6
 CATEGORIES=	meta-pkgs net
 
-MAINTAINER=	cjep@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	# irrelevant
 COMMENT=	Provides some useful modules for Radiator
 
