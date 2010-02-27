@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2009/12/27 16:09:47 jihbed Exp $
+# $NetBSD: Makefile,v 1.14 2010/02/27 22:59:51 blef Exp $
 #
 
 DISTNAME=	quodlibet-2.1
@@ -22,8 +22,6 @@ USE_TOOLS+=		msgfmt intltool
 USE_PKGLOCALEDIR=	yes
 BUILD_TARGET=		_trayicon.so _mmkeys.so
 
-PYTHON_VERSIONS_INCOMPATIBLE=\
-			15 20 21 22 23
 PYDISTUTILSPKG= yes
 
 .include "../../devel/py-ctypes/buildlink3.mk"
