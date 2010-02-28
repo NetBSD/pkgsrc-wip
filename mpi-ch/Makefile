@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2010/02/26 12:29:44 asau Exp $
+# $NetBSD: Makefile,v 1.24 2010/02/28 12:50:31 asau Exp $
 
-DISTNAME=	mpich2-trunk-r6332
+DISTNAME=	mpich2-trunk-r6337
 PKGNAME=	${DISTNAME}
-PKGNAME=	mpich2-1.2.99.6332
+PKGNAME=	mpich2-1.2.99.6337
 CATEGORIES=	parallel
 MASTER_SITES=	http://www.mcs.anl.gov/research/projects/mpich2/downloads/tarballs/1.3a1/ \
 		http://www.mcs.anl.gov/research/projects/mpich2/downloads/tarballs/nightly/trunk/
@@ -34,6 +34,8 @@ CONFIGURE_ARGS+=	--htmldir=${PREFIX}/share/doc/${PKGBASE}/html
 
 CONFIGURE_ARGS+=	--with-pm=hydra:mpd:gforker
 CONFIGURE_ARGS+=	--disable-f90		# problems?
+#CONFIGURE_ARGS+=	--enable-g=debug	# problems
+#INSTALL_UNSTRIPPED=	yes
 
 USE_TOOLS+=		perl:run
 
