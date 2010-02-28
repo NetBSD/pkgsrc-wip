@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3826 2010/02/26 10:17:45 phonohawk Exp $
+# $Id: Makefile,v 1.3827 2010/02/28 15:30:48 rhialto Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1656,6 +1656,7 @@ SUBDIR+=	pam-pkcs11
 SUBDIR+=	pam-pop3
 SUBDIR+=	pam-pwdfile
 SUBDIR+=	pam_tacplus
+SUBDIR+=	pan2-git
 SUBDIR+=	panda
 SUBDIR+=	pandoc
 SUBDIR+=	parcellite
