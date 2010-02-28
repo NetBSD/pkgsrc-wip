@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/02/28 12:07:23 uccwen Exp $
+
+SHA1 (IO-Lambda-1.16.tar.gz) = 33aa6ef6069f96f2f93b9d9ff4c276758883d223
+RMD160 (IO-Lambda-1.16.tar.gz) = 92910bb622eaf16e11f1714404c3f27f946448be
+Size (IO-Lambda-1.16.tar.gz) = 83044 bytes
+SHA1 (patch-aa) = 6636e82dc662c7243382a3be17270b18585b7d3c
