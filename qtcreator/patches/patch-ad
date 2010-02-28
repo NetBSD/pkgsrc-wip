@@ -1,12 +1,29 @@
-$NetBSD: patch-ad,v 1.1.1.1 2009/08/03 09:09:00 fwsf Exp $
+$NetBSD: patch-ad,v 1.2 2010/02/28 15:25:27 fwsf Exp $
 
---- src/app/app.pro.orig	2009-07-10 12:38:08 +0000
-+++ src/app/app.pro
-@@ -23,6 +23,6 @@ win32 {
- } else {
-     LIBS *= -lExtensionSystem -lAggregation
+--- share/qtcreator/translations/translations.pro.orig	2010-01-15 17:36:52 +0000
++++ share/qtcreator/translations/translations.pro
+@@ -43,7 +43,7 @@ updateqm.name = LRELEASE ${QMAKE_FILE_IN
+ updateqm.CONFIG += no_link
+ QMAKE_EXTRA_COMPILERS += updateqm
  
--    target.path  = /bin
-+    target.path  = /$(PREFIX)/bin
-     INSTALLS    += target
+-isEmpty(vcproj) {
++!isEmpty(vcproj) {
+     QMAKE_LINK = @: IGNORE THIS LINE
+     OBJECTS_DIR =
+     win32:CONFIG -= embed_manifest_exe
+@@ -53,13 +53,13 @@ isEmpty(vcproj) {
+     phony_src.input = PHONY_DEPS
+     phony_src.output = phony.c
+     phony_src.variable_out = GENERATED_SOURCES
+-    phony_src.commands = echo int main() { return 0; } > phony.c
++    phony_src.commands = echo \"int main() { return 0; }\" > phony.c
+     phony_src.name = CREATE phony.c
+     phony_src.CONFIG += combine
+     QMAKE_EXTRA_COMPILERS += phony_src
  }
+ 
+ qmfiles.files = $$prependAll(LANGUAGES, $$OUT_PWD/qtcreator_,.qm)
+-qmfiles.path = /share/qtcreator/translations
++qmfiles.path = $(PREFIX)/share/qtcreator/translations
+ qmfiles.CONFIG += no_check_exist
+ INSTALLS += qmfiles

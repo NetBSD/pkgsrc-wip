@@ -1,18 +1,17 @@
-$NetBSD: distinfo,v 1.3 2009/08/13 13:42:46 fwsf Exp $
+$NetBSD: distinfo,v 1.4 2010/02/28 15:25:26 fwsf Exp $
 
-SHA1 (qt-creator-1.2.1-src.zip) = 41d10717a83d3b7de7bc5218a35a38f25408a8d6
-RMD160 (qt-creator-1.2.1-src.zip) = 6aea12a39bd5827422afa6e02cfcad2174dc6582
-Size (qt-creator-1.2.1-src.zip) = 8631249 bytes
-SHA1 (patch-aa) = 2eb4500f1611b8f43023f2a80d31e2960ed2c075
-SHA1 (patch-ab) = 53f72e10d49b4834b521847d9d4d7997f1763cf5
-SHA1 (patch-ac) = 3fedaa82d46ab6b378c737f8c2fdf6bda47fdf75
-SHA1 (patch-ad) = 9580f946b162bc4e702988c414a1b9aae249afef
-SHA1 (patch-ae) = c9428014edb42d059610b5e852fbb9f22f1f0296
-SHA1 (patch-af) = 3d8f6c30b9d29e18424c9dbfa19e54eb8efefdf7
-SHA1 (patch-ag) = af870313c4b19f00eed85b706fc191e8cfb02a58
-SHA1 (patch-ah) = 96e3d0f30468f72960bbbd782feee1edf67df89b
-SHA1 (patch-ai) = 9d17a150c08cdff978b7a4b13d3f3864366755e3
-SHA1 (patch-aj) = ecadb2944bdfcefdbf29f4c51046eee609347d48
-SHA1 (patch-ak) = ace322ebb9f1670db1a70e04ea0ae8d154c58a4a
-SHA1 (patch-al) = b59fbf7e8fb0fcb883f65f57b06f150b81ce7438
-SHA1 (patch-am) = af3a7180c0a7be2b7b718fc691b767dc48d69522
+SHA1 (qt-creator-1.3.1-src.zip) = a4a72771f72a04f1aaa6d8e10569c70425002eeb
+RMD160 (qt-creator-1.3.1-src.zip) = 28ce9fa2bf758cb87b6b753bb439ad16e8b4d542
+Size (qt-creator-1.3.1-src.zip) = 12272776 bytes
+SHA1 (patch-aa) = 908f98fcfcd7341aef924efa74938409b51e5b09
+SHA1 (patch-ab) = f0acd533050e7f310dba5981eef0f51992d3a41c
+SHA1 (patch-ac) = 80f3a0669ba9c830ac9ddc79dd0e56bbc95bb693
+SHA1 (patch-ad) = d416f3d5f0e28f2b825aa3943499f0cd9896e8b6
+SHA1 (patch-ae) = 8fa1abb214473b438926d5c0d8cec7671f5c8397
+SHA1 (patch-af) = 199ab3a05c40c9d171e553713ea560367952995e
+SHA1 (patch-ag) = bbfd6e80e323f0a1cf11bc5ef345d2a23edcffc5
+SHA1 (patch-ah) = 56000810ffefa7fbb12d3d36bc656b428c7231cc
+SHA1 (patch-ai) = 6bf785c891cf8a41ce23810975a9c7b3f8afa5b1
+SHA1 (patch-aj) = 82e4a688fc287e08c0c425d601e78f95252d5011
+SHA1 (patch-ak) = 5c33cd0733f84c850856bf7c178fdb0596e1592b
+SHA1 (patch-al) = b8e116a70ec00c4b5bb50f5c2181d438e81de54f

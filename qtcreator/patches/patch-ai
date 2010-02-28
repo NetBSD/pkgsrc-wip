@@ -1,12 +1,22 @@
-$NetBSD: patch-ai,v 1.1.1.1 2009/08/03 09:09:00 fwsf Exp $
+$NetBSD: patch-ai,v 1.2 2010/02/28 15:25:27 fwsf Exp $
 
---- src/qtcreatorlibrary.pri.orig	2009-07-10 12:38:08 +0000
-+++ src/qtcreatorlibrary.pri
-@@ -13,6 +13,6 @@ TARGET = $$qtLibraryTarget($$TARGET)
- contains(QT_CONFIG, reduce_exports):CONFIG += hide_symbols
+--- src/plugins/debugger/gdb/gdbengine.cpp.orig	2010-01-15 17:36:52 +0000
++++ src/plugins/debugger/gdb/gdbengine.cpp
+@@ -806,7 +806,7 @@ void GdbEngine::flushCommand(const GdbCo
+         cmd.command = cmd.command.arg(currentToken());
+     gdbInputAvailable(LogInput, cmd.command);
  
- unix:!macx {
--	target.path = /$$IDE_LIBRARY_BASENAME/qtcreator
-+	target.path = /$(PREFIX)/lib/qtcreator
- 	INSTALLS += target
+-    m_gdbAdapter->write(cmd.command.toLatin1() + "\r\n");
++    m_gdbAdapter->write(cmd.command.toLatin1() + "\n");
+ 
+     m_commandTimer->start();
+ 
+@@ -996,7 +996,7 @@ void GdbEngine::executeDebuggerCommand(c
+         return;
+     }
+ 
+-    m_gdbAdapter->write(command.toLatin1() + "\r\n");
++    m_gdbAdapter->write(command.toLatin1() + "\n");
  }
+ 
+ // Called from CoreAdapter and AttachAdapter
