@@ -1,0 +1,4 @@
+gpx2shp converts the GPS Exchange Format(*.gpx) to ESRI/shape
+format(*.shp) written by C.
+
+It is easy to use (maybe), light and free on GPL.
