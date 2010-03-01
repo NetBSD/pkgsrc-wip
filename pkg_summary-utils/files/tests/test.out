@@ -1255,6 +1255,9 @@ runawk>=0.14.3 pkg_conflicts-0.4.0
 runawk>=0.16.0 paexec-0.13.0nb1
 runawk>=0.16.0 pkg_summary-utils-0.35rc1
 --------------------------------------------------
+------- pkg_lint_summary #21.0
+MandatoryOptionErrorMessage
+--------------------------------------------------
 ------- pkg_lint_summary #21.1
 l: not_found /usr/pkg/lib/libmaa.so.2 wip/dict-client:dict-client-1.11.2
 l: not_found /usr/pkg/lib/libz.so.1 wip/dict-client:dict-client-1.11.2

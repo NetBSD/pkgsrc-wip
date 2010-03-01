@@ -29,6 +29,7 @@
 #use "power_getopt.awk"
 #use "psu_funcs.awk"
 #use "has_prefix.awk"
+#use "exitnow.awk"
 
 ############################################################
 #.begin-str help
@@ -37,7 +38,7 @@
 #        pkg_cmp_summary [OPTIONS] [files...]
 # OPTIONS:
 #   -h|--help      display this help
-#   -l             checks for REQUIRES/PROVIDES consistency
+#   -l             checks REQUIRES/PROVIDES fields
 #.end-str
 ############################################################
 
@@ -48,6 +49,12 @@ BEGIN {
 
 	opt_l = getarg("l")
 	cnt = 0
+
+	if (!opt_l){
+		print "One of the following options should be applied: -l"	\
+			> "/dev/stderr"
+		exitnow(1)
+	}
 }
 
 /^PKGNAME=/{
