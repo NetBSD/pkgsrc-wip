@@ -1,4 +1,17 @@
 ----------------------------------------------------------------------
+Version 0.36.1, by Aleksey Cheusov, Mon,  1 Mar 2010 23:25:27 +0200
+
+ - New tool pkg_lint_summary. Given summary on input it makes some
+   checnity checks. At the moment the only implemented check is (-l
+   option) is PROVIDES/REQUIRES consistency.
+
+ - pkg_grep_summary:
+     - Artificial field PKGBASE is also supported.
+       It is actually a PKGNAME without package version.
+     - New regression tests
+     - Minor update and mixes in manual page
+
+----------------------------------------------------------------------
 Version 0.35.1, by Aleksey Cheusov, Thu,  7 Jan 2010 13:26:33 +0200
 
  - FIXED: bug in pkg_src_summary caused by incorrect PKGNAME version
