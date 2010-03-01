@@ -1,4 +1,6 @@
 
+#use "psu_funcs.awk"
+
 BEGIN {
 	FS                 = "="
 	grep_summary__skip = -1 # -1 - unknown, 0 - false, 1 - true
@@ -29,6 +31,14 @@ grep_summary__skip == 1 && NF > 0 {
 	fname = $1
 	fvalue = $0
 	sub(/^[^=]*=/, "", fvalue)
+}
+
+($1 == "PKGNAME") && (grep_summary__field == "PKGBASE") {
+	if (grep_summary__skip == -1){
+		fname = "PKGBASE"
+		fvalue = pkgname2pkgbase(fvalue)
+		update_skip()
+	}
 }
 
 ($1 == grep_summary__field) || ("" == grep_summary__field) {

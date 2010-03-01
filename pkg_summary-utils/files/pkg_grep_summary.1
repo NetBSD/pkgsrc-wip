@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkg_grep_summary.1,v 1.8 2009/03/31 18:48:01 cheusov Exp $
+.\"	$NetBSD: pkg_grep_summary.1,v 1.9 2010/03/01 20:25:48 cheusov Exp $
 .\"
 .\" Copyright (c) 2008 by Aleksey Cheusov (vle@gmx.net)
 .\" Absolutely no warranty.
@@ -34,14 +34,12 @@ outputs a summary information about packages that matches
 the specified condition.
 In other words, pkg_grep_summary is a search tool
 somewhat similar to
-grep
-,
-PKGSRCDIR/pkglocate
-,
-pkg_find
-etc. but it is multifield
+grep, PKGSRCDIR/pkglocate, pkg_find
+etc. but it is a multifield
 searcher and is fast because it uses summaries instead
 of pkgsrc packages source tree.
+In addition to fields really present in input, PKGBASE is also supported,
+it is a PKGNAME without package version.
 .SH OPTIONS
 .TP
 .B "-h|--help"
@@ -79,5 +77,6 @@ pkg_grep_summary 'COMMENT' 'toupper(fvalue) ~ /DNS/' \\
 .SH SEE ALSO
 .BR pkg_summary-utils(7),
 .BR pkg_summary(5)
+.BR pkg_src_summary(1)
 .SH AUTHOR
 Aleksey Cheusov <vle@gmx.net>

@@ -34,7 +34,7 @@ USAGE: pkg_grep_summary -h
        pkg_grep_summary -m <field> <regexp>
        pkg_grep_summary -s <field> <string>
        pkg_grep_summary <field> <awk_condition>
-  <field>         - PKGNAME, PKGPATH, DEPENDS etc.
+  <field>         - PKGBASE, PKGNAME, PKGPATH, DEPENDS etc.
   <awk_condition> - boolean expression written in AWK language
   <regexp>        - AWK regular expression
   <string>        - text string
@@ -46,12 +46,13 @@ OPTIONS:
   -m          matches <field> against regular expression <regexp>
   -s          matches <field> equal to <string>
 EXAMPLES:
+  pkg_grep_summary -s PKGBASE distbb
   pkg_grep_summary -s 'PKGPATH' 'devel/libjudy'
   pkg_grep_summary -m 'PKGPATH' '^wip/'
-  pkg_grep_summary 'PKGNAME' 'fvalue ~ /judy/' \\
+  pkg_grep_summary 'PKGNAME' 'fvalue ~ /judy/'
   pkg_grep_summary 'PKGPATH' 'fvalue ~ /^lang\//' \\
         < /usr/pkgsrc/packages/pkg_summary.txt
-  pkg_grep_summary 'DEPENDS' 'fvalue ~ /libX/' \\
+  pkg_grep_summary 'DEPENDS' 'fvalue ~ /libX/'
   pkg_grep_summary 'COMMENT' 'toupper(fvalue) ~ /DNS/' \\
   pkg_grep_summary -e 'NO_BIN_ON_FTP' \\
         < /usr/pkgsrc/pkg_src_summary.txt

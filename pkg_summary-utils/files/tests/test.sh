@@ -45,6 +45,10 @@ runtest (){
 }
 
 # pkg_grep_summary
+echo '--------------------------------------------------'
+echo '------- pkg_grep_summary #0'
+runtest pkg_grep_summary -s PKGBASE distbb < src_summary.txt
+runtest pkg_grep_summary -m PKGBASE '^dict' < src_summary.txt
 runtest pkg_grep_summary PKGNAME 'fvalue ~ /^d/' < src_summary.txt
 runtest pkg_grep_summary COMMENT \
     'tolower(fvalue) ~ /dictionary.*client/' < src_summary.txt | \
