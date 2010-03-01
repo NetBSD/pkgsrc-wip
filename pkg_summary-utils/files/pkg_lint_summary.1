@@ -1,0 +1,38 @@
+.\"	$NetBSD: pkg_lint_summary.1,v 1.1 2010/03/01 15:20:44 cheusov Exp $
+.\"
+.\" Copyright (c) 2008 by Aleksey Cheusov (vle@gmx.net)
+.\" Absolutely no warranty.
+.\"
+.\" ------------------------------------------------------------------
+.de VB \" Verbatim Begin
+.ft CW
+.nf
+.ne \\$1
+..
+.de VE \" Verbatim End
+.ft R
+.fi
+..
+.\" ------------------------------------------------------------------
+.TH PKG_LINT_SUMMARY 1 "Feb 10, 2008" "" ""
+.SH NAME
+pkg_lint_summary \- attempts to detect problems in input summaries
+.SH SYNOPSIS
+.BI pkg_lint_summary " [OPTIONS] [files..."
+.SH DESCRIPTION
+.B pkg_lint_summary
+attempts to detect problems in input summaries.
+.SH OPTIONS
+.TP
+.B "-h|--help"
+display help message
+.TP
+.B "-l"
+analyses REQUIRES/PROVIDES of pkg_summary(5)
+.SH SEE ALSO
+.BR pkg_summary-utils(7) ,
+.BR pkg_summary(5) ,
+.BR pkg_src_summary(1) ,
+.BR pkg_info(1)
+.SH AUTHOR
+Aleksey Cheusov <vle@gmx.net>

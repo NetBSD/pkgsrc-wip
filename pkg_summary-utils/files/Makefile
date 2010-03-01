@@ -27,7 +27,7 @@ SCRIPTS+=	pkg_update_summary pkg_grep_summary
 SCRIPTS+=	cvs_checksum pkg_assignments2pkgpath
 SCRIPTS+=	pkg_uniq_summary pkg_summary2bb_pkgs
 SCRIPTS+=	pkg_cleanup_distdir pkg_summary2build_graph
-SCRIPTS+=	pkg_summary2deps
+SCRIPTS+=	pkg_summary2deps pkg_lint_summary
 
 MAN=		pkg_summary-utils.7
 
@@ -39,7 +39,7 @@ MAN+=		pkg_update_summary.1 pkg_grep_summary.1
 MAN+=		cvs_checksum.1 # pkg_assignments2pkgpath.1
 MAN+=		pkg_uniq_summary.1 # pkg_summary2bb_pkgs.1
 MAN+=		pkg_cleanup_distdir.1 pkg_summary2build_graph.1
-MAN+=		pkg_summary2deps.1
+MAN+=		pkg_summary2deps.1 pkg_lint_summary.1
 
 FILES=		README NEWS TODO
 FILES+=		pkg_grep_summary.awk pkg_src_summary.mk psu_funcs.awk

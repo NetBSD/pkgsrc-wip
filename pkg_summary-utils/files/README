@@ -144,3 +144,11 @@ Try to use pkg_grep_summary like the following
         < /usr/pkgsrc/pkg_src_summary.txt
   pkg_grep_summary 'COMMENT' 'toupper(fvalue) ~ /DNS/' \
         < /usr/pkgsrc/pkg_src_summary.txt
+
+-----
+
+In some situations the installed packages may be in inconsistent state
+due to problems with required and installed shared libraries
+(REQUIRES/PROVIDES fields in summary)
+
+  pkg_info -Xa | pkg_lint_summary -l
