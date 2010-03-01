@@ -137,7 +137,7 @@ OS_VERSION=5.0_STABLE
 PKGPATH=wip/dict-client
 PKGTOOLS_VERSION=20090724
 REQUIRES=/usr/lib/libc.so.12
-REQUIRES=/usr/pkg/lib/libmaa.so.1
+REQUIRES=/usr/pkg/lib/libmaa.so.2
 REQUIRES=/usr/pkg/lib/libz.so.1
 
 PKGNAME=dict-server-1.11.2

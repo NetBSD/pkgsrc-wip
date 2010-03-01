@@ -372,3 +372,7 @@ pkg_summary2deps -Apn bin_summary1.txt | sort
 echo '--------------------------------------------------'
 echo '------- pkg_summary2deps #20.3'
 pkg_summary2deps -ArR bin_summary1.txt | sort
+
+echo '--------------------------------------------------'
+echo '------- pkg_lint_summary #21.1'
+pkg_lint_summary -l bin_summary1.txt | sort
