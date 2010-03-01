@@ -298,9 +298,6 @@ XXXX
 PKGNAME=distbb-X
 PKGPATH=wip/distbb
 
-PKGNAME=pkg_online-X
-PKGPATH=wip/pkg_online
-
 PKGNAME=checkperms-X
 PKGPATH=sysutils/checkperms
 
@@ -412,9 +409,6 @@ PKGPATH=wip/distbb
 
 PKGNAME=dictem-X
 PKGPATH=textproc/dictem
-
-PKGNAME=pkg_online-X
-PKGPATH=wip/pkg_online
 
 PKGNAME=checkperms-X
 PKGPATH=sysutils/checkperms

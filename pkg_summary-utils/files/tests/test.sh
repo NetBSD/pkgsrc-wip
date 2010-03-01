@@ -107,7 +107,7 @@ normalize_version (){
     /^PKGNAME=/ {
         gsub(/(nb|alpha|beta|pre|rc|pl)[0-9]+$/, "")
         gsub(/[a-zA-Z]$/, "")
-        gsub(/-[0-9]+([.][0-9]+)*/, "-X")
+        gsub(/-[^-]*$/, "-X")
     }
     {  print $0  }' "$@"
 }
