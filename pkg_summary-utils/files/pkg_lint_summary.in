@@ -77,7 +77,7 @@ opt_l {
 		provides2pkg [provides1] = 1
 	}
 	if (NF == 0){
-		pkg = (pkgpath ":" pkgname)
+		pkg = (pkgpath " " pkgname)
 		for (i=1; i <= requires_cnt; ++i){
 #			print "r:", requires [i], pkg
 			req = requires [i]
