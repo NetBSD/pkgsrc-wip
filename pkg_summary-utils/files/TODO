@@ -13,6 +13,7 @@ existing tools:
        - -f <p> use pkgpath only for comparison
        - -f <n> use pkgbase only for comparison
        - -f <pn> use pkgbase and pkgpath for comparison
+       - automatic removal of #-comments
 
     pkg_grep_summary:
 
