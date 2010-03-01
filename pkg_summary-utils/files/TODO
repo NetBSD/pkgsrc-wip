@@ -49,14 +49,14 @@ existing tools:
        - use standard 'find -newer' instead of 'ls -1t' and
          non-portable 'test f1 -nt f2'
 
-new tools?
-    - list leaf packages?
-
-    - pkg_lint_summary:
+    pkg_lint_summary:
          - versions consistency
          - old binaries
          - distfiles checksums
          - check binaries and their REQUIRES and analyse Makefile
+
+new tools?
+    - list leaf packages?
 
     - replacement for lintpkgsrc -m
 
