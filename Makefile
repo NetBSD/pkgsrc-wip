@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3827 2010/02/28 15:30:48 rhialto Exp $
+# $Id: Makefile,v 1.3828 2010/03/01 20:59:09 cheusov Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1195,6 +1195,7 @@ SUBDIR+=	mathopd
 SUBDIR+=	mawk
 SUBDIR+=	mawk-uxre
 SUBDIR+=	maxima
+SUBDIR+=	mc
 SUBDIR+=	mc-mp
 SUBDIR+=	mcabber
 SUBDIR+=	mcats
