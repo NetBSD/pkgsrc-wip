@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3829 2010/03/02 11:56:56 phonohawk Exp $
+# $Id: Makefile,v 1.3830 2010/03/02 12:02:03 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2033,6 +2033,7 @@ SUBDIR+=	rtpbreak
 SUBDIR+=	ruby-GalleryAdministrator
 SUBDIR+=	ruby-actionmessenger
 SUBDIR+=	ruby-cabocha
+SUBDIR+=	ruby-ditz
 SUBDIR+=	ruby-dnsruby
 SUBDIR+=	ruby-git
 SUBDIR+=	ruby-ming
