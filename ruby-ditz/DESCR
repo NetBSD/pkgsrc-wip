@@ -1,0 +1,13 @@
+Ditz is a simple, light-weight distributed issue tracker designed to
+work with distributed version control systems like darcs and git. Ditz
+maintains an issue database file on disk, written in a line-based and
+human-editable format. This file can be kept under version control
+alongside project code, and issue state change can then be handled
+like code changes: modified as part of a commit, merged with other
+state changes from other developers, conflict-resolved in the standard
+manner, etc.
+
+Ditz provides a simple, console-based interface for creating and
+updating the issue database file, and some rudimentary HTML generation
+capabilities for producing world-readable status pages. It offers no
+central public method of bug submission.
