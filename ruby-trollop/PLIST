@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/03/02 11:55:18 phonohawk Exp $
+${GEM_HOME}/cache/trollop-${PKGVERSION}.gem
+${GEM_LIBDIR}/FAQ.txt
+${GEM_LIBDIR}/History.txt
+${GEM_LIBDIR}/Manifest.txt
+${GEM_LIBDIR}/README.txt
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/lib/trollop.rb
+${GEM_LIBDIR}/test/test_trollop.rb
+${GEM_HOME}/specifications/trollop-${PKGVERSION}.gemspec
