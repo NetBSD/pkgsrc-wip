@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/03/03 09:36:48 phonohawk Exp $
+lib/base-unicode-symbols-${PKGVERSION}/${HASKELL_VERSION}/Control/Applicative/Unicode.hi
+lib/base-unicode-symbols-${PKGVERSION}/${HASKELL_VERSION}/Control/Applicative/Unicode.p_hi
+lib/base-unicode-symbols-${PKGVERSION}/${HASKELL_VERSION}/Control/Category/Unicode.hi
+lib/base-unicode-symbols-${PKGVERSION}/${HASKELL_VERSION}/Control/Category/Unicode.p_hi
+lib/base-unicode-symbols-${PKGVERSION}/${HASKELL_VERSION}/Data/Bool/Unicode.hi
+lib/base-unicode-symbols-${PKGVERSION}/${HASKELL_VERSION}/Data/Bool/Unicode.p_hi
+lib/base-unicode-symbols-${PKGVERSION}/${HASKELL_VERSION}/Data/Eq/Unicode.hi
+lib/base-unicode-symbols-${PKGVERSION}/${HASKELL_VERSION}/Data/Eq/Unicode.p_hi
+lib/base-unicode-symbols-${PKGVERSION}/${HASKELL_VERSION}/Data/Foldable/Unicode.hi
+lib/base-unicode-symbols-${PKGVERSION}/${HASKELL_VERSION}/Data/Foldable/Unicode.p_hi
+lib/base-unicode-symbols-${PKGVERSION}/${HASKELL_VERSION}/Data/Function/Unicode.hi
+lib/base-unicode-symbols-${PKGVERSION}/${HASKELL_VERSION}/Data/Function/Unicode.p_hi
+lib/base-unicode-symbols-${PKGVERSION}/${HASKELL_VERSION}/Data/List/Unicode.hi
+lib/base-unicode-symbols-${PKGVERSION}/${HASKELL_VERSION}/Data/List/Unicode.p_hi
+lib/base-unicode-symbols-${PKGVERSION}/${HASKELL_VERSION}/Data/Monoid/Unicode.hi
+lib/base-unicode-symbols-${PKGVERSION}/${HASKELL_VERSION}/Data/Monoid/Unicode.p_hi
+lib/base-unicode-symbols-${PKGVERSION}/${HASKELL_VERSION}/Data/Ord/Unicode.hi
+lib/base-unicode-symbols-${PKGVERSION}/${HASKELL_VERSION}/Data/Ord/Unicode.p_hi
+lib/base-unicode-symbols-${PKGVERSION}/${HASKELL_VERSION}/HSbase-unicode-symbols-${PKGVERSION}.o
+lib/base-unicode-symbols-${PKGVERSION}/${HASKELL_VERSION}/Prelude/Unicode.hi
+lib/base-unicode-symbols-${PKGVERSION}/${HASKELL_VERSION}/Prelude/Unicode.p_hi
+lib/base-unicode-symbols-${PKGVERSION}/${HASKELL_VERSION}/libHSbase-unicode-symbols-${PKGVERSION}.a
+lib/base-unicode-symbols-${PKGVERSION}/${HASKELL_VERSION}/libHSbase-unicode-symbols-${PKGVERSION}_p.a
+lib/base-unicode-symbols-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/base-unicode-symbols-${PKGVERSION}/LICENSE
