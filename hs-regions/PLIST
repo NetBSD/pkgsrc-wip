@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/03/03 09:51:17 phonohawk Exp $
+lib/regions-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Trans/Region.hi
+lib/regions-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Trans/Region.p_hi
+lib/regions-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Trans/Region/Internal.hi
+lib/regions-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Trans/Region/Internal.p_hi
+lib/regions-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Trans/Region/Unsafe.hi
+lib/regions-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Trans/Region/Unsafe.p_hi
+lib/regions-${PKGVERSION}/${HASKELL_VERSION}/Control/Resource.hi
+lib/regions-${PKGVERSION}/${HASKELL_VERSION}/Control/Resource.p_hi
+lib/regions-${PKGVERSION}/${HASKELL_VERSION}/Data/RegionRef.hi
+lib/regions-${PKGVERSION}/${HASKELL_VERSION}/Data/RegionRef.p_hi
+lib/regions-${PKGVERSION}/${HASKELL_VERSION}/HSregions-${PKGVERSION}.o
+lib/regions-${PKGVERSION}/${HASKELL_VERSION}/libHSregions-${PKGVERSION}.a
+lib/regions-${PKGVERSION}/${HASKELL_VERSION}/libHSregions-${PKGVERSION}_p.a
+lib/regions-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/regions-${PKGVERSION}/LICENSE
