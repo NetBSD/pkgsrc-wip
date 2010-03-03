@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2010/03/03 04:14:18 schnoebe Exp $
+# $NetBSD: Makefile,v 1.13 2010/03/03 05:14:18 schnoebe Exp $
 
 DISTNAME=		spectrum
-PKGNAME=		${DISTNAME}-0.1
-PKGREVISION=		2
+PKGNAME=		${DISTNAME}-0.2s
+# PKGREVISION=		2
 CATEGORIES=		chat
 
 # Second paragraph - MAINTAINER/OWNER, HOMEPAGE and COMMENT, and LICEN[CS]E
@@ -20,6 +20,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 # GIT configuration
 GIT_REPOSITORIES=	spectrum
 GIT_REPO.spectrum=	git://github.com/schnoebe/spectrum.git
+GIT_TAG=		94ff9163690a5bae41821fcda5204a1468ddd5b5
 
 .include "../../wip/mk/git-package.mk"
 
