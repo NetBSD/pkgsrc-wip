@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2007/08/17 13:41:44 shindenmorr Exp $
+# $NetBSD: Makefile,v 1.3 2010/03/03 10:16:41 shindenmorr Exp $
 #
 
 DISTNAME=	libdshconfig-0.20.13
 CATEGORIES=	shells
 MASTER_SITES=	http://www.netfort.gr.jp/~dancer/software/downloads/
 
-MAINTAINER=	shinden@linux.pl
+MAINTAINER=	morr@NetBSD.org
 HOMEPAGE=	http://www.netfort.gr.jp/~dancer/software/downloads/
 COMMENT=	Library for parsing dsh-style configuration files
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/11/22 17:44:29 pettai Exp $
+# $NetBSD: Makefile,v 1.7 2010/03/03 10:16:41 shindenmorr Exp $
 #
 
 DISTNAME=		wordpress-mu-${VERSION}
@@ -6,7 +6,7 @@ VERSION=		2.8.6
 CATEGORIES=		www
 MASTER_SITES=		http://mu.wordpress.org/
 
-MAINTAINER=		shinden@linux.pl
+MAINTAINER=		morr@NetBSD.org
 HOMEPAGE=		http://mu.wordpress.org/
 COMMENT=		Multi User version of blogging tool
 
@@ -23,9 +23,15 @@ INSTALLATION_DIRS+=	share/examples/wordpress-mu
 
 DEPENDS+=		${PHP_PKG_PREFIX}-mysql>=4.3.3:../../databases/php-mysql
 
+<<<<<<< Makefile
+SVN_REPOSITORIES=	wordpress-mu
+SVN_ROOT.wordpress-mu= http://svn.automattic.com/wordpress-mu/tags/2.8.4a
+SVN_TAG=		1696
+=======
 #SVN_REPOSITORIES=	wordpress-mu
 #SVN_ROOT.wordpress-mu=	http://svn.automattic.com/wordpress-mu/tags/2.7
 #SVN_TAG=		1696
+>>>>>>> 1.5
 
 #NO_CHECKSUM=    yes
 
