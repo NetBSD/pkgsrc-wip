@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2010/02/17 05:08:36 obache Exp $
+@comment $NetBSD: PLIST,v 1.6 2010/03/03 02:49:45 obache Exp $
 include/clutter-1.0/clutter/clutter-actor.h
 include/clutter-1.0/clutter/clutter-alpha.h
 include/clutter-1.0/clutter/clutter-animatable.h
@@ -134,6 +134,7 @@ share/gtk-doc/html/clutter/ClutterTexture.html
 share/gtk-doc/html/clutter/ClutterTimeline.html
 share/gtk-doc/html/clutter/actor-box.png
 share/gtk-doc/html/clutter/additionaldocs.html
+share/gtk-doc/html/clutter/animator-key-frames.png
 share/gtk-doc/html/clutter/annotation-glossary.html
 share/gtk-doc/html/clutter/bin-layout.png
 share/gtk-doc/html/clutter/box-layout.png
