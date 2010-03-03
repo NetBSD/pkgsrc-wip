@@ -32,7 +32,9 @@ GIT_TAG?=		tip
 
 DISTFILES?=		# empty
 .if empty(GIT_TAG) || ${GIT_TAG} == "tip"
-PKGREVISION?=	    $(_GIT_PKGVERSION:S/.//g)
+PKGREVISION?=		${_GIT_PKGVERSION:S/.//g}
+.else
+PKGREVISION?=		${GIT_TAG}
 .endif
 
 .if !defined(GIT_REPOSITORIES)
@@ -53,7 +55,7 @@ GIT_TAG.${_repo_}?=	${GIT_TAG}
 
 _GIT_CMD=		git
 _GIT_ENV=		# empty
-_GIT_FLAGS=		-q
+_GIT_FLAGS=		--quiet --depth 1
 _GIT_PKGVERSION_CMD=	${DATE} -u +'%Y.%m.%d'
 _GIT_PKGVERSION=	${_GIT_PKGVERSION_CMD:sh}
 
