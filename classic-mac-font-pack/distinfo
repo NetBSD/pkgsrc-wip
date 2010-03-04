@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.4 2010/02/22 20:41:22 christtrekker Exp $
+$NetBSD: distinfo,v 1.5 2010/03/04 21:12:27 christtrekker Exp $
 
+SHA1 (Brampton.tgz) = 81a0f1494e0f12874f3f62f6f408a943e1c9f707
+RMD160 (Brampton.tgz) = 1824c6f01725308419cd4f6d1ecb987623a0d508
+Size (Brampton.tgz) = 33559 bytes
 SHA1 (Cairo_TTF.zip) = e32572e41de5b303720575887db38f0e04bcf6e9
 RMD160 (Cairo_TTF.zip) = 8cc1223af3b665e9311dc4907b49f65eb6417515
 Size (Cairo_TTF.zip) = 47195 bytes

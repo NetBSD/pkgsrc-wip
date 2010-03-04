@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/02/22 20:41:22 christtrekker Exp $
+# $NetBSD: Makefile,v 1.5 2010/03/04 21:12:27 christtrekker Exp $
 #
 
 DISTNAME=	classic-mac-font-pack-0.1
@@ -38,8 +38,8 @@ SITES.MONACO.TTF=	http://www.webdevkungfu.com/files/
 #DISTFILES+=	Fernando%20Regular%20(2).ttf
 #SITES.Fernando%20Regular%20(2).ttf=	http://ufonts.com/bin/
 # Brampton is not yet complete.
-#DISTFILES+=	Brampton.gz
-#SITES.Brampton=	http://christtrek.dyndns.org:8000/fnt/
+DISTFILES+=	Brampton.tgz
+SITES.Brampton.tgz=	http://christtrek.dyndns.org:8000/fnt/
 DISTFILES+=	genoa.zip
 SITES.genoa.zip=	http://www.searchfreefonts.com/assets/downloads/
 
@@ -81,6 +81,7 @@ PLIST.agaramond=	yes
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${FONTS_DIRS.ttf}
 	${INSTALL_DATA} ${WRKSRC}/*.[Tt][Tt][Ff] ${DESTDIR}${FONTS_DIRS.ttf}
+	${INSTALL_DATA} ${WRKSRC}/brampton/Brampton.ttf ${DESTDIR}${FONTS_DIRS.ttf}
 	if [ "x${PLIST.agaramond}" = "xyes" ]; then \
 		${INSTALL_DATA} ${WRKSRC}/macfonts/AppleGaramond*.[Tt][Tt][Ff] ${DESTDIR}${FONTS_DIRS.ttf}; \
 	fi
