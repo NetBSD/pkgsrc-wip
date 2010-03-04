@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2009/03/02 20:26:35 lexort Exp $
+# $NetBSD: Makefile,v 1.3 2010/03/04 12:29:19 lexort Exp $
 
 SVNVERSION=	4543
 VERSION=	0.7.5.${SVNVERSION}
 DISTNAME=	TracGraphViz-${VERSION}
 PKGNAME=	trac-plugins-GraphViz-${VERSION}
 # Empty to avoid default setting.
-PKGREVISION=
+PKGREVISION=	1
 EGG_NAME=	${DISTNAME}
 CATEGORIES=	www
 MASTER_SITES=	# not defined
