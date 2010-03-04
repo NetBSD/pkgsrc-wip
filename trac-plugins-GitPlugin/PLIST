@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:22 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.3 2010/03/04 20:25:16 lexort Exp $
 ${PYSITELIB}/TracGit-0.11.0.2-py2.5-nspkg.pth
 ${PYSITELIB}/TracGit-0.11.0.2-py2.5.egg-info/PKG-INFO
 ${PYSITELIB}/TracGit-0.11.0.2-py2.5.egg-info/SOURCES.txt
@@ -16,3 +16,5 @@ ${PYSITELIB}/tracext/git/__init__.pyo
 ${PYSITELIB}/tracext/git/git_fs.py
 ${PYSITELIB}/tracext/git/git_fs.pyc
 ${PYSITELIB}/tracext/git/git_fs.pyo
+share/doc/trac-plugins-GitPlugin/COPYING
+share/doc/trac-plugins-GitPlugin/README

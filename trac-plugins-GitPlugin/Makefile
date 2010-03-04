@@ -1,14 +1,17 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/04/30 21:03:21 rsmarples Exp $
+# $NetBSD: Makefile,v 1.2 2010/03/04 20:25:16 lexort Exp $
 
 DISTNAME=	TracGitPlugin-0.1dev
 PKGNAME=	trac-plugins-GitPlugin-0.1pre5396
-PKGREVISION=	# blank on purpose even though pkglint moans
+# PKGREVISION should be empty rather than unset because svn-package.mk
+# does the wrong thing if it is unset, even though pkglint will complain
+PKGREVISION=	1
 EGG_NAME=	${DISTNAME}
 CATEGORIES=	www
 
 MAINTAINER=	roy@NetBSD.org
 HOMEPAGE=	http://trac.edgewall.org/wiki/GitPlugin
 COMMENT=	GIT plugin for Trac
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
