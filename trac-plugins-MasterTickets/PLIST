@@ -1,7 +1,34 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:22 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.3 2010/03/04 12:27:10 lexort Exp $
 ${PYSITELIB}/TracMasterTickets-2.1.3-py2.5.egg-info/PKG-INFO
 ${PYSITELIB}/TracMasterTickets-2.1.3-py2.5.egg-info/SOURCES.txt
 ${PYSITELIB}/TracMasterTickets-2.1.3-py2.5.egg-info/dependency_links.txt
 ${PYSITELIB}/TracMasterTickets-2.1.3-py2.5.egg-info/entry_points.txt
 ${PYSITELIB}/TracMasterTickets-2.1.3-py2.5.egg-info/requires.txt
 ${PYSITELIB}/TracMasterTickets-2.1.3-py2.5.egg-info/top_level.txt
+${PYSITELIB}/mastertickets/__init__.py
+${PYSITELIB}/mastertickets/__init__.pyc
+${PYSITELIB}/mastertickets/__init__.pyo
+${PYSITELIB}/mastertickets/api.py
+${PYSITELIB}/mastertickets/api.pyc
+${PYSITELIB}/mastertickets/api.pyo
+${PYSITELIB}/mastertickets/db_default.py
+${PYSITELIB}/mastertickets/db_default.pyc
+${PYSITELIB}/mastertickets/db_default.pyo
+${PYSITELIB}/mastertickets/graphviz.py
+${PYSITELIB}/mastertickets/graphviz.pyc
+${PYSITELIB}/mastertickets/graphviz.pyo
+${PYSITELIB}/mastertickets/htdocs/disable_resolve.js
+${PYSITELIB}/mastertickets/htdocs/jquery.js
+${PYSITELIB}/mastertickets/htdocs/linkify_blockedby.js
+${PYSITELIB}/mastertickets/htdocs/linkify_blocking.js
+${PYSITELIB}/mastertickets/htdocs/ticket.css
+${PYSITELIB}/mastertickets/model.py
+${PYSITELIB}/mastertickets/model.pyc
+${PYSITELIB}/mastertickets/model.pyo
+${PYSITELIB}/mastertickets/templates/depgraph.html
+${PYSITELIB}/mastertickets/util.py
+${PYSITELIB}/mastertickets/util.pyc
+${PYSITELIB}/mastertickets/util.pyo
+${PYSITELIB}/mastertickets/web_ui.py
+${PYSITELIB}/mastertickets/web_ui.pyc
+${PYSITELIB}/mastertickets/web_ui.pyo
