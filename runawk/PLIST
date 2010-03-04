@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2010/01/03 14:36:18 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.15 2010/03/04 17:22:25 cheusov Exp $
 bin/runawk
 man/man1/runawk.1
 share/doc/runawk/ChangeLog
@@ -9,15 +9,17 @@ share/examples/runawk/demo_alt_join
 share/examples/runawk/demo_basename
 share/examples/runawk/demo_dirname
 share/examples/runawk/demo_embed_str
+share/examples/runawk/demo_fieldwidths
+share/examples/runawk/demo_fieldwidths.in
 share/examples/runawk/demo_has_prefix
 share/examples/runawk/demo_has_prefix.in
 share/examples/runawk/demo_has_suffix
 share/examples/runawk/demo_has_suffix.in
 share/examples/runawk/demo_heapsort
+share/examples/runawk/demo_heapsort.in
 share/examples/runawk/demo_heapsort2
 share/examples/runawk/demo_heapsort3
 share/examples/runawk/demo_heapsort3.in
-share/examples/runawk/demo_heapsort.in
 share/examples/runawk/demo_modinfo
 share/examples/runawk/demo_multisub
 share/examples/runawk/demo_power_getopt
@@ -31,6 +33,7 @@ share/examples/runawk/demo_runcmd
 share/examples/runawk/demo_shquote
 share/examples/runawk/demo_shquote.in
 share/examples/runawk/demo_str2regexp
+share/examples/runawk/demo_tmpfile
 share/examples/runawk/demo_tokenre
 share/examples/runawk/demo_tokenre.in
 share/examples/runawk/demo_tokenre2
@@ -45,6 +48,7 @@ share/runawk/braceexpand.awk
 share/runawk/dirname.awk
 share/runawk/embed_str.awk
 share/runawk/exitnow.awk
+share/runawk/fieldwidths.awk
 share/runawk/has_prefix.awk
 share/runawk/has_suffix.awk
 share/runawk/heapsort.awk
@@ -63,6 +67,7 @@ share/runawk/runcmd.awk
 share/runawk/shquote.awk
 share/runawk/sort.awk
 share/runawk/str2regexp.awk
+share/runawk/tmpfile.awk
 share/runawk/tokenre.awk
 share/runawk/xclose.awk
 share/runawk/xgetline.awk
