@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2009/08/04 18:30:56 lexort Exp $
+# $NetBSD: Makefile,v 1.7 2010/03/04 12:34:48 lexort Exp $
 
 SVNVERSION=	5370
 VERSION=	0.7.6.${SVNVERSION}
 DISTNAME=	TracTimingAndEstimation-${VERSION}
 PKGNAME=	trac-plugins-TimingAndEstimation-${VERSION}
 # Empty to avoid default setting.
-PKGREVISION=	1
+PKGREVISION=	2
 EGG_NAME=	${DISTNAME}
 CATEGORIES=	www
 MASTER_SITES=	# not defined
@@ -32,6 +32,7 @@ PRIVILEGED_STAGES+=	clean
 REPLACE_PYTHON=	scripts/trac-post-commit.py
 
 EGDIR=		share/examples/trac
+INSTALLATION_DIRS+=	${EGDIR}
 
 post-extract:
 	find ${WRKSRC} -type d -name .svn -print | xargs rm -r

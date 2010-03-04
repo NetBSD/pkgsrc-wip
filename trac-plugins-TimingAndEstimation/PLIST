@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/10/11 10:45:22 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.5 2010/03/04 12:34:48 lexort Exp $
 ${PYSITELIB}/timingandestimationplugin-0.7.6-py2.5.egg-info/PKG-INFO
 ${PYSITELIB}/timingandestimationplugin-0.7.6-py2.5.egg-info/SOURCES.txt
 ${PYSITELIB}/timingandestimationplugin-0.7.6-py2.5.egg-info/dependency_links.txt
@@ -13,6 +13,12 @@ ${PYSITELIB}/timingandestimationplugin/api.pyo
 ${PYSITELIB}/timingandestimationplugin/dbhelper.py
 ${PYSITELIB}/timingandestimationplugin/dbhelper.pyc
 ${PYSITELIB}/timingandestimationplugin/dbhelper.pyo
+${PYSITELIB}/timingandestimationplugin/htdocs/billingplugin.css
+${PYSITELIB}/timingandestimationplugin/htdocs/field_disabler.js
+${PYSITELIB}/timingandestimationplugin/htdocs/formatDate.js
+${PYSITELIB}/timingandestimationplugin/htdocs/linkifyer.js
+${PYSITELIB}/timingandestimationplugin/htdocs/query.js
+${PYSITELIB}/timingandestimationplugin/htdocs/ticket.js
 ${PYSITELIB}/timingandestimationplugin/query_webui.py
 ${PYSITELIB}/timingandestimationplugin/query_webui.pyc
 ${PYSITELIB}/timingandestimationplugin/query_webui.pyo
@@ -28,6 +34,7 @@ ${PYSITELIB}/timingandestimationplugin/statuses.pyo
 ${PYSITELIB}/timingandestimationplugin/tande_filters.py
 ${PYSITELIB}/timingandestimationplugin/tande_filters.pyc
 ${PYSITELIB}/timingandestimationplugin/tande_filters.pyo
+${PYSITELIB}/timingandestimationplugin/templates/billing.html
 ${PYSITELIB}/timingandestimationplugin/ticket_daemon.py
 ${PYSITELIB}/timingandestimationplugin/ticket_daemon.pyc
 ${PYSITELIB}/timingandestimationplugin/ticket_daemon.pyo
