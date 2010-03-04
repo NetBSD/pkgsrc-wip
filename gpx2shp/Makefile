@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/03/01 14:50:21 uccwen Exp $
+# $NetBSD: Makefile,v 1.2 2010/03/04 01:21:39 lexort Exp $
 #
 
 DISTNAME=	gpx2shp-0.69
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP:=gpx2shp/13458/}
 
 MAINTAINER=	wenheping@gmail.com
 HOMEPAGE=	http://gpx2shp.sourceforge.jp/
-COMMENT=	Converts the GPS Exchange Format to ESRI/shape format
+COMMENT=	Converts GPX to ESRI shapefile format
 LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
