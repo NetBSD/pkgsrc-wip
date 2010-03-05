@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/01/15 11:22:06 obache Exp $
+$NetBSD: distinfo,v 1.2 2010/03/05 13:05:23 obache Exp $
 
-SHA1 (ibus-table-extraphrase-1.1.0.20090415.tar.gz) = 4a6170297706614ab0bc54f8651ae24bdabe81c1
-RMD160 (ibus-table-extraphrase-1.1.0.20090415.tar.gz) = 22a2b9ad0c466a9d6afa56860a5ae6b02209e3a7
-Size (ibus-table-extraphrase-1.1.0.20090415.tar.gz) = 2198888 bytes
+SHA1 (ibus-table-extraphrase-1.2.0.20100305.tar.gz) = 11f4b473a0fe94ca3de98534bcc7321c0ab474b3
+RMD160 (ibus-table-extraphrase-1.2.0.20100305.tar.gz) = 3053791366521f9dabe142989a678dacdbb09b9b
+Size (ibus-table-extraphrase-1.2.0.20100305.tar.gz) = 2199706 bytes
