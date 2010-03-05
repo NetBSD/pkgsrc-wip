@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/01/15 11:49:51 obache Exp $
+$NetBSD: distinfo,v 1.2 2010/03/05 13:11:10 obache Exp $
 
-SHA1 (ibus-table-tv-1.2.0.20100108.tar.gz) = 7e4392caaf4379f74692c6576f876506ca7f50b7
-RMD160 (ibus-table-tv-1.2.0.20100108.tar.gz) = 2a0dee6fa2ecc9fbf3b1b7bfd4a358e519674591
-Size (ibus-table-tv-1.2.0.20100108.tar.gz) = 85014 bytes
-SHA1 (patch-aa) = f12a8dc9949703d56bb4d190c679b3cc25842f85
+SHA1 (ibus-table-tv-1.2.0.20100305.tar.gz) = 12945a0dd5adee3bcd6751b3437680123f015482
+RMD160 (ibus-table-tv-1.2.0.20100305.tar.gz) = b8c38fa7a2c052a0f74d8a22bb58b330f83f4337
+Size (ibus-table-tv-1.2.0.20100305.tar.gz) = 75183 bytes
