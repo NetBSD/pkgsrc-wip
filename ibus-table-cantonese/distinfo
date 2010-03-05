@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/01/14 11:08:41 obache Exp $
+$NetBSD: distinfo,v 1.2 2010/03/05 13:24:21 obache Exp $
 
-SHA1 (ibus-table-cantonese-1.2.0.20100107.tar.gz) = d9b3464217f855b78fb68af7406679b642a2b60f
-RMD160 (ibus-table-cantonese-1.2.0.20100107.tar.gz) = 733057261caecc14fd00c4187db57f0a6bb1822d
-Size (ibus-table-cantonese-1.2.0.20100107.tar.gz) = 265077 bytes
-SHA1 (patch-aa) = dc7b7310a6cea840f3c5b276733ff61ff2e2a06d
+SHA1 (ibus-table-cantonese-1.2.0.20100305.tar.gz) = 8004bd7546cddb3c9ede6333929f3fb32c86e5cd
+RMD160 (ibus-table-cantonese-1.2.0.20100305.tar.gz) = 00ed443d25ada0deeb6f92636c84b37bafad143e
+Size (ibus-table-cantonese-1.2.0.20100305.tar.gz) = 264712 bytes
