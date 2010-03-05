@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/01/14 12:43:22 obache Exp $
+$NetBSD: distinfo,v 1.2 2010/03/05 13:00:38 obache Exp $
 
-SHA1 (ibus-table-cyrillic-1.2.0.20100107.tar.gz) = fb38da6c362dd68aad5b85a76b21aa946d455ecd
-RMD160 (ibus-table-cyrillic-1.2.0.20100107.tar.gz) = 0c8e6350cf67cb3303a2906dcd182442fc95618d
-Size (ibus-table-cyrillic-1.2.0.20100107.tar.gz) = 95073 bytes
-SHA1 (patch-aa) = c5ab31829c4ddd3ce34cef80d08b3d5ec0f0ed9f
+SHA1 (ibus-table-cyrillic-1.2.0.20100305.tar.gz) = d72c7f56af7f17a2b8983ff4e59418ac037a2c2c
+RMD160 (ibus-table-cyrillic-1.2.0.20100305.tar.gz) = 9f1a0dfe6e5abe56e03046b0c1d8fca73469a56b
+Size (ibus-table-cyrillic-1.2.0.20100305.tar.gz) = 93474 bytes
