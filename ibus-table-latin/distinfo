@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/01/15 11:43:49 obache Exp $
+$NetBSD: distinfo,v 1.2 2010/03/05 13:08:54 obache Exp $
 
-SHA1 (ibus-table-latin-1.2.0.20100108.tar.gz) = 6386f0b2411705ce290dfa8f6e4c0d61b9531309
-RMD160 (ibus-table-latin-1.2.0.20100108.tar.gz) = b1f2818890fa0a8c497aecced9f7068bcd8eed42
-Size (ibus-table-latin-1.2.0.20100108.tar.gz) = 92744 bytes
+SHA1 (ibus-table-latin-1.2.0.20100305.tar.gz) = e63604bfd1644ad87e74391878617899228a6cbd
+RMD160 (ibus-table-latin-1.2.0.20100305.tar.gz) = 831d1dfeca30681862bd4268d83b398cca6ccfd2
+Size (ibus-table-latin-1.2.0.20100305.tar.gz) = 88608 bytes
 SHA1 (patch-aa) = c8cfeeedccb50979727fb9c834c05b232df7939b
