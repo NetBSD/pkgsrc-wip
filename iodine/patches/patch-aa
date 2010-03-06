@@ -1,21 +1,13 @@
-$NetBSD: patch-aa,v 1.1 2009/04/18 12:08:31 gschwarz Exp $
+$NetBSD: patch-aa,v 1.2 2010/03/06 20:06:28 gschwarz Exp $
 
---- src/Makefile.orig	2009-04-18 13:50:38.000000000 +0200
-+++ src/Makefile	2009-04-18 13:52:59.000000000 +0200
-@@ -1,4 +1,4 @@
--CC = gcc
-+#CC = gcc
- COMMONOBJS = tun.o dns.o read.o encoding.o login.o base32.o base64.o md5.o common.o
- CLIENTOBJS = iodine.o
- CLIENT = ../bin/iodine
-@@ -9,8 +9,8 @@
- ARCH = `uname -m`
+--- src/Makefile.orig	2010-03-06 20:47:50.000000000 +0100
++++ src/Makefile	2010-03-06 20:54:32.000000000 +0100
+@@ -28,7 +28,7 @@
  
- LIBPATH = -L.
--LDFLAGS =  -lz `sh osflags $(TARGETOS) link` $(LIBPATH)
--CFLAGS = -c -g -Wall -D$(OS) -pedantic `sh osflags $(TARGETOS) cflags`
-+LDFLAGS +=  -lz `sh osflags $(TARGETOS) link` $(LIBPATH)
-+CFLAGS += -c -D$(OS) `sh osflags $(TARGETOS) cflags` $(CPPFLAGS)
+ .c.o: 
+ 	@echo CC $<
+-	@$(CC) $(CFLAGS) $< -o $@
++	@$(CC) $(CPPFLAGS) $(CFLAGS) $< -o $@
  
- all: stateos $(CLIENT) $(SERVER)
- 
+ base64u.o client.o iodined.o: base64u.h
+ base64u.c: base64.c
