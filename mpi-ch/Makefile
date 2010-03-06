@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2010/02/28 12:50:31 asau Exp $
+# $NetBSD: Makefile,v 1.25 2010/03/06 18:28:39 asau Exp $
 
-DISTNAME=	mpich2-trunk-r6337
+DISTNAME=	mpich2-trunk-r6373
 PKGNAME=	${DISTNAME}
-PKGNAME=	mpich2-1.2.99.6337
+PKGNAME=	mpich2-1.2.99.6373
 CATEGORIES=	parallel
 MASTER_SITES=	http://www.mcs.anl.gov/research/projects/mpich2/downloads/tarballs/1.3a1/ \
 		http://www.mcs.anl.gov/research/projects/mpich2/downloads/tarballs/nightly/trunk/
@@ -11,7 +11,6 @@ MAINTAINER=	asau@inbox.ru
 HOMEPAGE=	http://www.mcs.anl.gov/research/projects/mpich2/
 COMMENT=	Open source MPI and MPI-2 implementation from Univ. of Chicago
 
-CONFLICTS+=	musicpd-[0-9]*	# installs bin/mpd
 CONFLICTS+=	mpich-[0-9]*	# installs bin/mpicc & other wrappers
 CONFLICTS+=	openmpi-[0-9]*	# installs bin/mpicc & other wrappers
 CONFLICTS+=	openpa-[0-9]*	# installs the library
@@ -32,14 +31,10 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--docdir=${PREFIX}/share/doc/${PKGBASE}
 CONFIGURE_ARGS+=	--htmldir=${PREFIX}/share/doc/${PKGBASE}/html
 
-CONFIGURE_ARGS+=	--with-pm=hydra:mpd:gforker
+CONFIGURE_ARGS+=	--with-pm=hydra:gforker
 CONFIGURE_ARGS+=	--disable-f90		# problems?
-#CONFIGURE_ARGS+=	--enable-g=debug	# problems
-#INSTALL_UNSTRIPPED=	yes
 
 USE_TOOLS+=		perl:run
-
-REPLACE_PYTHON+=	src/pm/mpd/*.py src/pm/mpd/test/*.py
 
 CONF_FILES+=		share/${PKGBASE}/examples/mpe_callstack_ldflags.conf \
 			${PKG_SYSCONFDIR}/mpe_callstack_ldflags.conf
@@ -72,5 +67,6 @@ CONF_FILES+=		share/${PKGBASE}/examples/mpif77.conf \
 BUILDLINK_TRANSFORM+=	rm:-lrt
 .endif
 
-.include "../../lang/python/application.mk"
+.include "options.mk"
+
 .include "../../mk/bsd.pkg.mk"
