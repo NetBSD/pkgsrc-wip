@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3833 2010/03/03 09:52:52 phonohawk Exp $
+# $Id: Makefile,v 1.3834 2010/03/07 13:02:53 cheusov Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2399,6 +2399,7 @@ SUBDIR+=	xdiskusage
 SUBDIR+=	xesam-glib
 SUBDIR+=	xf86-video-geode
 SUBDIR+=	xf86-video-nouveau
+SUBDIR+=	xf86-video-nv-current
 SUBDIR+=	xf86rushproto
 SUBDIR+=	xfce4-mailwatch-plugin
 SUBDIR+=	xfce4-mount-plugin
