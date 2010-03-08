@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2010/03/06 13:07:11 helgoman Exp $
+$NetBSD: MESSAGE,v 1.2 2010/03/08 22:33:32 helgoman Exp $
 
 #########################################################################
 #                                                                       #
@@ -8,7 +8,7 @@ $NetBSD: MESSAGE,v 1.1.1.1 2010/03/06 13:07:11 helgoman Exp $
 #                                                                       #
 #         http://sourceforge.net/projects/eric-ide/files/eric4/stable   #
 #                                                                       #
-#         e.g. eric4-i18n-de-4.4.1.tar.gz for GERMAN language           #
+#         e.g. eric4-i18n-de-4.4.2.tar.gz for GERMAN language           #
 #                                                                       #
 #                                                                       #
 #  Unpack it as normal user, change into created folder and type:       #
