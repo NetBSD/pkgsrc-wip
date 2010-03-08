@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2010/02/26 09:38:08 shindenmorr Exp $
+# $NetBSD: Makefile,v 1.3 2010/03/08 21:21:23 shindenmorr Exp $
 #
 
 DISTNAME=		300.statistics
 PKGNAME=		bsdstats-5.3
 CATEGORIES=		sysutils misc
 MASTER_SITES=		# http://www.bsdstats.org/downloads/
-EXTRACT_SUFX=
+DISTFILES=		# empty
 
 MAINTAINER=		pettai@nordu.net
 HOMEPAGE=		http://www.bsdstats.org/
@@ -18,7 +18,9 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 # XXX: Others might work
 ONLY_FOR_PLATFORM=	NetBSD-*-* DragonFly-*-* FreeBSD-*-* OpenBSD-*-*
 
-BUILD_DEFS+=            VARBASE
+BUILD_DEFS+=		VARBASE
+
+WRKSRC=			${WRKDIR}/bsdstats
 
 NO_BUILD=		yes
 
@@ -26,7 +28,12 @@ MESSAGE_SUBST+=		PREFIX=${PREFIX}
 
 INSTALLATION_DIRS=	bin ${VARBASE}/db/bsdstats
 
+post-extract:
+	${MKDIR} ${WRKDIR}/bsdstats
+	${SED} -e "s!@PREFIX@!${PREFIX}!g" ${FILESDIR}/300.statistics \
+		> ${WRKSRC}/300.statistics
+
 do-install:
-	${INSTALL} ${FILESDIR}/300.statistics ${DESTDIR}${PREFIX}/bin
+	${INSTALL} ${WRKSRC}/300.statistics ${DESTDIR}${PREFIX}/bin
 
 .include "../../mk/bsd.pkg.mk"
