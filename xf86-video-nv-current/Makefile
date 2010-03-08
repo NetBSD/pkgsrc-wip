@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/03/07 13:00:45 cheusov Exp $
+# $NetBSD: Makefile,v 1.2 2010/03/08 08:06:33 cheusov Exp $
 
 DISTNAME=	xf86-video-nv-2.1.16
 CATEGORIES=	x11
@@ -8,7 +8,7 @@ HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	Modular Xorg NVIDIA video driver
 
 GIT_REPOSITORIES=	master
-GIT_REPO.master=	http://cgit.freedesktop.org/xorg/driver/xf86-video-nv
+GIT_REPO.master=	git://cgit.freedesktop.org/xorg/driver/xf86-video-nv
 .include "../../wip/mk/git-package.mk"
 
 BUILD_DEPENDS+=		xorg-util-macros-[0-9]*:../../devel/xorg-util-macros
