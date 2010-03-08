@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2010/01/11 23:37:12 asau Exp $
+@comment $NetBSD: PLIST,v 1.23 2010/03/08 21:40:03 asau Exp $
 bin/efricas
 bin/fricas
 lib/fricas/emacs/fricas-cpl.el
@@ -965,8 +965,8 @@ lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/SMATCAT-.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/SMATCAT.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/SMITH.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/SMP.${FASL}
-lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/SMPEXPR.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/SMPCOER.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/SMPEXPR.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/SMTS.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/SNTSCAT.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/SOLVEFOR.${FASL}
@@ -1119,6 +1119,7 @@ lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/VIEW2D.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/VIEW3D.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/VIEWDEF.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/VOID.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/VSBASIS.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/VSPACE-.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/VSPACE.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/WEIER.${FASL}
@@ -1168,8 +1169,6 @@ ${ecl}lib/fricas/target/${MACHINE_GNU_PLATFORM}/autoload/bc-solve.o
 ${clisp-sbcl}lib/fricas/target/${MACHINE_GNU_PLATFORM}/autoload/bc-util.${FASL}
 ${clisp}lib/fricas/target/${MACHINE_GNU_PLATFORM}/autoload/bc-util.lib
 ${ecl}lib/fricas/target/${MACHINE_GNU_PLATFORM}/autoload/bc-util.o
-${clisp-sbcl}lib/fricas/target/${MACHINE_GNU_PLATFORM}/autoload/bootlex.${FASL}
-${ecl}lib/fricas/target/${MACHINE_GNU_PLATFORM}/autoload/bootlex.o
 ${clisp-sbcl}lib/fricas/target/${MACHINE_GNU_PLATFORM}/autoload/br-con.${FASL}
 ${clisp}lib/fricas/target/${MACHINE_GNU_PLATFORM}/autoload/br-con.lib
 ${ecl}lib/fricas/target/${MACHINE_GNU_PLATFORM}/autoload/br-con.o
@@ -1213,8 +1212,6 @@ ${ecl}lib/fricas/target/${MACHINE_GNU_PLATFORM}/autoload/def.o
 ${clisp-sbcl}lib/fricas/target/${MACHINE_GNU_PLATFORM}/autoload/define.${FASL}
 ${clisp}lib/fricas/target/${MACHINE_GNU_PLATFORM}/autoload/define.lib
 ${ecl}lib/fricas/target/${MACHINE_GNU_PLATFORM}/autoload/define.o
-${clisp-sbcl}lib/fricas/target/${MACHINE_GNU_PLATFORM}/autoload/fnewmeta.${FASL}
-${ecl}lib/fricas/target/${MACHINE_GNU_PLATFORM}/autoload/fnewmeta.o
 ${clisp-sbcl}lib/fricas/target/${MACHINE_GNU_PLATFORM}/autoload/functor.${FASL}
 ${clisp}lib/fricas/target/${MACHINE_GNU_PLATFORM}/autoload/functor.lib
 ${ecl}lib/fricas/target/${MACHINE_GNU_PLATFORM}/autoload/functor.o
@@ -1250,15 +1247,6 @@ ${ecl}lib/fricas/target/${MACHINE_GNU_PLATFORM}/autoload/nspadaux.o
 ${clisp-sbcl}lib/fricas/target/${MACHINE_GNU_PLATFORM}/autoload/package.${FASL}
 ${clisp}lib/fricas/target/${MACHINE_GNU_PLATFORM}/autoload/package.lib
 ${ecl}lib/fricas/target/${MACHINE_GNU_PLATFORM}/autoload/package.o
-${ecl}lib/fricas/target/${MACHINE_GNU_PLATFORM}/autoload/parse-files.${FASL}
-${clisp-sbcl}lib/fricas/target/${MACHINE_GNU_PLATFORM}/autoload/parse.${FASL}
-${ecl}lib/fricas/target/${MACHINE_GNU_PLATFORM}/autoload/parse.o
-${clisp-sbcl}lib/fricas/target/${MACHINE_GNU_PLATFORM}/autoload/parsing.${FASL}
-${ecl}lib/fricas/target/${MACHINE_GNU_PLATFORM}/autoload/parsing.o
-${clisp-sbcl}lib/fricas/target/${MACHINE_GNU_PLATFORM}/autoload/postpar.${FASL}
-${ecl}lib/fricas/target/${MACHINE_GNU_PLATFORM}/autoload/postpar.o
-${clisp-sbcl}lib/fricas/target/${MACHINE_GNU_PLATFORM}/autoload/preparse.${FASL}
-${ecl}lib/fricas/target/${MACHINE_GNU_PLATFORM}/autoload/preparse.o
 ${clisp-sbcl}lib/fricas/target/${MACHINE_GNU_PLATFORM}/autoload/profile.${FASL}
 ${clisp}lib/fricas/target/${MACHINE_GNU_PLATFORM}/autoload/profile.lib
 ${ecl}lib/fricas/target/${MACHINE_GNU_PLATFORM}/autoload/profile.o
@@ -2680,6 +2668,7 @@ lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/view3D.spad.pamphlet
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/viewDef.spad.pamphlet
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/viewpack.spad.pamphlet
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/void.spad.pamphlet
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/vsbasis.spad.pamphlet
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/weier.spad.pamphlet
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/wtpol.spad.pamphlet
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/xlpoly.spad.pamphlet
