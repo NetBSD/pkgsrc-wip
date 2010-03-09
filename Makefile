@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3837 2010/03/09 23:04:45 othyro Exp $
+# $Id: Makefile,v 1.3838 2010/03/09 23:50:55 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2415,6 +2415,7 @@ SUBDIR+=	xine-plugin
 SUBDIR+=	xinetd
 SUBDIR+=	xmail
 SUBDIR+=	xmim
+SUBDIR+=	xml-light
 SUBDIR+=	xmlformat-docs
 SUBDIR+=	xmlformat-perl
 SUBDIR+=	xmlformat-ruby
