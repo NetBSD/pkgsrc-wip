@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/02/27 13:52:05 uccwen Exp $
+$NetBSD: distinfo,v 1.2 2010/03/09 13:26:08 uccwen Exp $
 
-SHA1 (dexml-0.3.3.tar.gz) = 786594a9df1dbb84090353ec95d2c523ab588c0b
-RMD160 (dexml-0.3.3.tar.gz) = 3e0577b2e223cce983be0dc0f8ccc40d4ae8f228
-Size (dexml-0.3.3.tar.gz) = 15426 bytes
+SHA1 (dexml-0.3.4.tar.gz) = 75f39b50b23081daed53cd8614d363dac9cf78b4
+RMD160 (dexml-0.3.4.tar.gz) = 78d9f284a6739240b1fedfcee9f56ec95572046d
+Size (dexml-0.3.4.tar.gz) = 16671 bytes

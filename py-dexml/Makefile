@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2010/02/28 05:04:18 uccwen Exp $
+# $NetBSD: Makefile,v 1.3 2010/03/09 13:26:08 uccwen Exp $
 #
 
-DISTNAME=	dexml-0.3.3
+DISTNAME=	dexml-0.3.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	http://pypi.python.org/packages/source/d/dexml/
