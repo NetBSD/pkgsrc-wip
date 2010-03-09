@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/03/09 13:24:22 uccwen Exp $
+
+SHA1 (pip-0.6.3.tar.gz) = 2018efcd5c9a2f3d1b7126b372a2a65985767934
+RMD160 (pip-0.6.3.tar.gz) = 0187f78070c5c3d3fceb90a703364eef75c0d668
+Size (pip-0.6.3.tar.gz) = 71146 bytes
