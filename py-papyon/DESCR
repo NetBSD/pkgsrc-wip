@@ -1,0 +1,3 @@
+papyon is an MSN client library, that tries to abstract the MSN protocol gory
+details. It is a fork of the unmaintained pymsn MSN library. papyon uses
+the GLib main event loop to process the network events in an asynchronous manner
