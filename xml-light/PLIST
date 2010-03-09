@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/03/09 23:49:21 othyro Exp $
+lib/ocaml/dtd.cmi
+lib/ocaml/dtd.cmx
+lib/ocaml/dtd.mli
+lib/ocaml/xml-light.a
+lib/ocaml/xml-light.cma
+lib/ocaml/xml-light.cmxa
+lib/ocaml/xml.cmi
+lib/ocaml/xml.cmx
+lib/ocaml/xml.mli
+lib/ocaml/xmlParser.cmi
+lib/ocaml/xmlParser.cmx
+lib/ocaml/xmlParser.mli

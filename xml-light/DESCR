@@ -1,0 +1,4 @@
+Xml-Light is a minimal XML parser and printer for OCaml. It provides functions
+to parse an XML document into an OCaml data structure, work with it, and print
+it back to an XML document. It also supports DTD parsing and checking, and is
+entirely written in OCaml, hence it does not require additional C library.
