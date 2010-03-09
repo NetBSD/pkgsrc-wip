@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2009/06/24 08:07:58 yhardy Exp $
+# $NetBSD: Makefile,v 1.3 2010/03/09 09:32:07 yhardy Exp $
 #
 
-DISTNAME=	fs2_open-3.6.9
+PKGNAME=	fs2_open-3.6.10
+DISTNAME=	fs2_open_3_6_10
 CATEGORIES=	games
-MASTER_SITES=	http://fs2source.warpcore.org/exes/linux/
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	http://swc.fs2downloads.com/builds/
+EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://scp.indiegames.us/
@@ -14,6 +15,9 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
+USE_TOOLS+=	autoconf automake
+
+CONFIGURE_SCRIPT=	autogen.sh
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/code/fs2_open_r ${DESTDIR}${PREFIX}/bin/fs2_open

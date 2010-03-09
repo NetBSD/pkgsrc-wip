@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1.1.1 2008/12/09 13:10:55 yhardy Exp $
+$NetBSD: patch-ab,v 1.2 2010/03/09 09:32:07 yhardy Exp $
 
---- code/windows_stub/config.h.orig	2008-10-27 11:51:23.000000000 +0200
-+++ code/windows_stub/config.h	2008-10-27 11:55:53.000000000 +0200
-@@ -301,7 +301,7 @@
+--- code/windows_stub/config.h.orig	2009-05-22 00:14:47.000000000 +0200
++++ code/windows_stub/config.h	2010-03-08 21:31:29.000000000 +0200
+@@ -310,7 +310,7 @@
  typedef SDL_mutex* CRITICAL_SECTION;
  
  // timer stuff
