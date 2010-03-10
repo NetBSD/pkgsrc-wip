@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3838 2010/03/09 23:50:55 othyro Exp $
+# $Id: Makefile,v 1.3839 2010/03/10 19:16:17 marttikuparinen Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -329,6 +329,7 @@ SUBDIR+=	drow
 SUBDIR+=	drpython
 SUBDIR+=	drumpiler
 SUBDIR+=	dsh
+SUBDIR+=	dspam
 SUBDIR+=	dssi
 SUBDIR+=	duali-data
 SUBDIR+=	dumb
