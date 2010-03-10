@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/03/09 13:24:22 uccwen Exp $
+# $NetBSD: Makefile,v 1.2 2010/03/10 15:07:55 uccwen Exp $
 #
 
 DISTNAME=	pip-0.6.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
-MASTER_SITES=	http://pypi.python.org/packages/source/d/dexml/
+MASTER_SITES=	http://pypi.python.org/packages/source/p/pip/
 
 MAINTAINER=	wenheping@gmail.com
 HOMEPAGE=	http://pip.openplans.org/
