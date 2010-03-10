@@ -1,7 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2010/01/28 13:11:34 marttikuparinen Exp $
-etc/opensips/opensips.cfg
-etc/opensips/opensipsctlrc
-etc/opensips/osipsconsolerc
+@comment $NetBSD: PLIST,v 1.3 2010/03/10 13:12:26 marttikuparinen Exp $
 lib/opensips/modules/acc.so
 lib/opensips/modules/alias_db.so
 lib/opensips/modules/auth.so
@@ -157,6 +154,9 @@ share/doc/opensips/README.uri
 share/doc/opensips/README.userblacklist
 share/doc/opensips/README.usrloc
 share/doc/opensips/README.xlog
+share/examples/opensips/opensips.cfg
+share/examples/opensips/opensipsctlrc
+share/examples/opensips/osipsconsolerc
 share/opensips/dbtext/opensips/acc
 share/opensips/dbtext/opensips/active_watchers
 share/opensips/dbtext/opensips/address

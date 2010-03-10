@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/01/31 13:34:49 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.5 2010/03/10 13:12:26 marttikuparinen Exp $
 
 DISTNAME=		opensips-${VER}-tls_src
 PKGNAME=		opensips-${VER}
@@ -19,6 +19,13 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 CHECK_INTERPRETER_SKIP+=lib/opensips/opensipsctl/dbtextdb/dbtextdb.py
 REPLACE_PERL+=		scripts/osipsconsole
+
+PKG_SYSCONFSUBDIR=	opensips
+OWN_DIRS=		${EGDIR} ${PKG_SYSCONFDIR}
+EGDIR=			${PREFIX}/share/examples/opensips
+CONF_FILES+=		${EGDIR}/opensips.cfg ${PKG_SYSCONFDIR}/opensips.cf
+CONF_FILES+=		${EGDIR}/opensipsctlrc ${PKG_SYSCONFDIR}/opensipsctlrc
+CONF_FILES+=		${EGDIR}/osipsconsolerc ${PKG_SYSCONFDIR}/osipsconsolerc
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"

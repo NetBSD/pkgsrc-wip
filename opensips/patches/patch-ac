@@ -1,9 +1,18 @@
-$NetBSD: patch-ac,v 1.1 2010/01/31 13:34:50 marttikuparinen Exp $
+$NetBSD: patch-ac,v 1.2 2010/03/10 13:12:26 marttikuparinen Exp $
 
 Added DESTDIR support.
 
---- Makefile.defs.orig	2010-01-31 14:59:25.000000000 +0200
-+++ Makefile.defs	2010-01-31 15:03:56.000000000 +0200
+--- Makefile.defs.orig	2009-12-21 20:19:38.000000000 +0200
++++ Makefile.defs	2010-03-10 14:34:46.000000000 +0200
+@@ -157,7 +157,7 @@
+ SYSBASE ?= /usr
+ 
+ # dirs 
+-cfg-dir = etc/$(MAIN_NAME)/
++cfg-dir = share/examples/$(MAIN_NAME)/
+ bin-dir = sbin/
+ 
+ ARCH_B = $(shell echo $(ARCH) | sed -e 's/.*64.*/64b/')
 @@ -227,8 +227,6 @@
  endif
  
