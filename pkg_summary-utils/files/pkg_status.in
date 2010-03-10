@@ -42,7 +42,7 @@ OPTIONS:
   -h                     display this help message
   -s                     compare against pkgsrc source tree
   -b                     compare against pkg_summary(5) database (not implemented yet)
-  -r                     raw output, i.e. output of pkg_cmp_summary(1)
+  -r                     raw pkg_cmp_summary(1)'s output
   -u                     analyse packages marked as installed by user (the default)
   -a                     analyse all installed packages
   -A                     by default up-to-date packages are skipped,
