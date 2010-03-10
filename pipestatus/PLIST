@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2008/01/24 22:15:11 cheusov Exp $
-bin/pipestatus
-share/doc/pipestatus/NEWS
-share/doc/pipestatus/README

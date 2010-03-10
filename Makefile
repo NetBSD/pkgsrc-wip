@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3840 2010/03/10 22:35:04 guigui2 Exp $
+# $Id: Makefile,v 1.3841 2010/03/10 23:49:58 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1734,7 +1734,6 @@ SUBDIR+=	pike-core
 SUBDIR+=	pike-gdbm
 SUBDIR+=	pike-mime
 SUBDIR+=	pinball
-SUBDIR+=	pipestatus
 SUBDIR+=	pizza
 SUBDIR+=	pjproject
 SUBDIR+=	pkg_conflicts
