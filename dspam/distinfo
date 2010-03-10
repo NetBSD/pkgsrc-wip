@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.4 2010/03/10 19:20:11 marttikuparinen Exp $
+
+SHA1 (dspam-3.9.0.tar.gz) = b238f076f67866b5450ae9b8329857b4e2d83dd1
+RMD160 (dspam-3.9.0.tar.gz) = cbde359e4e846e8be352c087c4af46148e685761
+Size (dspam-3.9.0.tar.gz) = 973232 bytes
+SHA1 (patch-aa) = 27da280fa4c10c2c946bb2d91d1168c641995a8d
+SHA1 (patch-ab) = f4de2d3224c37bf66a5126428726a3f3adc0607f
+SHA1 (patch-ad) = 9a3c30499ab3880bc56e88fb9f1c347f78e9c2b7
+SHA1 (patch-af) = 937edb29480eb7d67d91cc7b4380c41e9b5d5819
+SHA1 (patch-ag) = 3af52547201b8305b828b2ec31a2df80d58842ab
