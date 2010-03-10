@@ -1,13 +1,13 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2009/12/21 04:57:17 schnoebe Exp $
+$NetBSD: MESSAGE,v 1.2 2010/03/10 04:40:09 schnoebe Exp $
 
 Create the databases using the following files:
     ${EGDIR}/spectrum-mysql.sql for MySQL
     ${EGDIR}/spectrum-sqlite3.sql for sqlite3
 
 To configure specturm, copy ${EGDIR}/spectrum.cfg
-to a protocol specific name, and update the contents to reflect the
-protocol specific JID.
+to a protocol specific name in ${PKG_SYSCONFDIR},
+and update the contents to reflect the protocol specific JID.
 
 Quick Start:
 	Update the following fields in the protocol specific
@@ -30,5 +30,8 @@ Quick Start:
 				choices.
 	host/user/database  --	appropriate values for connecting to
 				the database.
+
+Then start the spectrum instances using spectrumctl, or
+the ${PREFIX}/share/examples/rc.d/spectrum rc.d script.
 
 ===========================================================================

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2010/03/03 05:14:18 schnoebe Exp $
+# $NetBSD: Makefile,v 1.14 2010/03/10 04:40:09 schnoebe Exp $
 
 DISTNAME=		spectrum
 PKGNAME=		${DISTNAME}-0.2s
@@ -33,15 +33,17 @@ PY_PATCHPLIST=		yes
 
 # always include bsd.prefs.mk before any .if or .ifdef statements
 .include "../../mk/bsd.prefs.mk"
+.include "../../wip/jabberd/transports.mk"
 
 PKG_SYSCONFSUBDIR=	spectrum
 EGDIR=			${PREFIX}/share/examples/spectrum
+RCD_SCRIPTS+=		spectrum
 
 CONF_FILES+=		${EGDIR}/spectrum.cfg ${PKG_SYSCONFDIR}/spectrum.cfg
 
 .include "options.mk"
 
-SUBST_CLASSES+=		cfgpath
+SUBST_CLASSES+=		cfgpath users
 SUBST_STAGE.cfgpath=	post-patch
 SUBST_FILES.cfgpath=	CMakeLists.txt
 SUBST_FILES.cfgpath+=	src/configfile.cpp
@@ -50,12 +52,28 @@ SUBST_FILES.cfgpath+=	spectrumctl/spectrumctl.py
 SUBST_FILES.cfgpath+=	man/spectrumctl.8
 SUBST_MESSAGE.cfgpath=	Correcting configuration directory
 SUBST_SED.cfgpath=	-e 's,/etc/spectrum,${PKG_SYSCONFDIR},g'
+SUBST_SED.cfgpath+=	-e 's,@ETC_SPECTRUM@,${PKG_SYSCONFDIR},g'
+
+SUBST_STAGE.users=	post-patch
+SUBST_FILES.users=	spectrumctl/spectrumctl.py
+SUBST_FILES.users+=	man/spectrumctl.8
+SUBST_MESSAGE.users=	Correcting spectrum user
+SUBST_SED.users=	-e 's/@SPECTRUM@/${JABBER_USER}/g'
+
+MESSAGE_SUBST+=  EGDIR=${EGDIR:Q}
+MESSAGE_SUBST+=  PREFIX=${PREFIX:Q}
+MESSAGE_SUBST+=  PKG_SYSCONFDIR=${PKG_SYSCONFDIR:Q}
+
+FILES_SUBST+=  PREFIX=${PREFIX:Q}
+FILES_SUBST+=  JABBER_USER=${JABBER_USER:Q}
 
 INSTALLATION_DIRS=	bin ${PKG_SYSCONFDIR} ${EGDIR}
 INSTALLATION_DIRS+=	share/${PKGNAME}/certificates
 INSTALLATION_DIRS+=	share/${PKGNAME}/locales
 INSTALLATION_DIRS+=	${EGDIR}
 
+pre-install:
+	${MKDIR} ${DESTDIR}${PKG_SYSCONFDIR}
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/spectrum.cfg ${DESTDIR}${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/schemas/mysql_schema.sql \
