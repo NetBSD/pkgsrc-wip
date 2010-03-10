@@ -1,0 +1,64 @@
+$NetBSD: patch-ab,v 1.1.1.1 2010/03/10 19:12:52 marttikuparinen Exp $
+
+Make this pkgsrc friendly.
+
+--- contrib/dspam_maintenance/dspam_maintenance.sh.orig	2010-03-10 20:29:36.000000000 +0200
++++ contrib/dspam_maintenance/dspam_maintenance.sh	2010-03-10 20:30:32.000000000 +0200
+@@ -59,7 +59,7 @@
+ #
+ run_dspam_clean() {
+ 	local PURGE_SIG="${1}"
+-	if [ "${PURGE_SIG}" == "YES" ]
++	if [ "${PURGE_SIG}" = "YES" ]
+ 	then
+ 		${DSPAM_BIN_DIR}/dspam_clean -s${SIGNATURE_AGE} -p${SIGNATURE_AGE} -u${SIGNATURE_AGE},${SIGNATURE_AGE},${SIGNATURE_AGE},${SIGNATURE_AGE} >/dev/null 2>&1
+ 	else
+@@ -93,7 +93,7 @@
+ 	local PARAMETER VALUE
+ 	for PARAMETER in $@ ; do
+ 		VALUE=$(awk "BEGIN { IGNORECASE=1; } \$1==\"${PARAMETER}\" { print \$2; exit; }" "${DSPAM_CONFIGDIR}/dspam.conf")
+-		[ ${?} == 0 ] || return 1
++		[ ${?} = 0 ] || return 1
+ 		eval ${PARAMETER}=\"${VALUE}\"
+ 	done
+ 	return 0
+@@ -162,7 +162,7 @@
+ 			DSPAM_MySQL_CMD="${DSPAM_MySQL_CMD} --host=${MySQLServer}"
+ 		[ -n "${MySQLPort}" ] &&
+ 			DSPAM_MySQL_CMD="${DSPAM_MySQL_CMD} --port=${MySQLPort}"
+-		[ "${MySQLCompress}" == "true" ] &&
++		[ "${MySQLCompress}" = "true" ] &&
+ 			DSPAM_MySQL_CMD="${DSPAM_MySQL_CMD} --compress"
+ 
+ 		# Run the MySQL purge script
+@@ -352,25 +352,25 @@
+ if [ -f ${DSPAM_CRON_LOCKFILE} ]; then
+ 	DSPAM_REMOVE_CRON_LOCKFILE="YES"
+ 	for foo in $(cat ${DSPAM_CRON_LOCKFILE} 2>/dev/null); do
+-		if [ -L "/proc/${foo}/exe" -a "$(readlink -f /proc/${foo}/exe)" == "$(readlink -f /proc/$$/exe)" ]; then
++		if [ -L "/proc/${foo}/exe" -a "$(readlink -f /proc/${foo}/exe)" = "$(readlink -f /proc/$$/exe)" ]; then
+ 			DSPAM_REMOVE_CRON_LOCKFILE="NO"
+ 		fi
+ 	done
+-	if [ "${DSPAM_REMOVE_CRON_LOCKFILE}" == "YES" ]; then
++	if [ "${DSPAM_REMOVE_CRON_LOCKFILE}" = "YES" ]; then
+ 		rm -f ${DSPAM_CRON_LOCKFILE} >/dev/null 2>&1
+ 	elif [ $(($(date +%s)-$(stat --printf="%X" ${DSPAM_CRON_LOCKFILE}))) -ge $((12*60*60)) ]; then
+ 		for foo in $(cat ${DSPAM_CRON_LOCKFILE} 2>/dev/null); do
+-			if [ -L "/proc/${foo}/exe" -a "$(readlink -f /proc/${foo}/exe)" == "$(readlink -f /proc/$$/exe)" ]; then
++			if [ -L "/proc/${foo}/exe" -a "$(readlink -f /proc/${foo}/exe)" = "$(readlink -f /proc/$$/exe)" ]; then
+ 				kill -s KILL ${foo} >/dev/null 2>&1
+ 			fi
+ 		done
+ 		DSPAM_REMOVE_CRON_LOCKFILE="YES"
+ 		for foo in $(cat ${DSPAM_CRON_LOCKFILE} 2>/dev/null); do
+-			if [ -L "/proc/${foo}/exe" -a "$(readlink -f /proc/${foo}/exe)" == "$(readlink -f /proc/$$/exe)" ]; then
++			if [ -L "/proc/${foo}/exe" -a "$(readlink -f /proc/${foo}/exe)" = "$(readlink -f /proc/$$/exe)" ]; then
+ 				DSPAM_REMOVE_CRON_LOCKFILE="NO"
+ 			fi
+ 		done
+-		if [ "${DSPAM_REMOVE_CRON_LOCKFILE}" == "YES" ]; then
++		if [ "${DSPAM_REMOVE_CRON_LOCKFILE}" = "YES" ]; then
+ 			rm -f ${DSPAM_CRON_LOCKFILE} >/dev/null 2>&1
+ 		fi
+ 	fi

@@ -1,0 +1,63 @@
+$NetBSD: patch-ad,v 1.1.1.1 2010/03/10 19:12:52 marttikuparinen Exp $
+
+Make this pkgsrc friendly.
+
+--- src/dspam.conf.in.orig	2010-01-11 23:21:58.000000000 +0200
++++ src/dspam.conf.in	2010-03-10 20:25:41.000000000 +0200
+@@ -26,7 +26,7 @@
+ # this option. If you do not wish to lose all of your data, you will need to
+ # migrate it to the new backend before making this change.
+ #
+-StorageDriver @libdir@/dspam/@storage_driver@
++#StorageDriver @libdir@/dspam/@storage_driver@
+ 
+ #
+ # Trusted Delivery Agent: Specifies the local delivery agent DSPAM should call 
+@@ -55,7 +55,7 @@
+ # the user DSPAM is processing mail for. This configuration parameter is only 
+ # necessary if you plan on allowing untrusted processing.
+ #
+-#UntrustedDeliveryAgent "/usr/bin/procmail -d %u"
++#UntrustedDeliveryAgent "@PREFIX@/bin/procmail -d %u"
+ 
+ #
+ # SMTP or LMTP Delivery: Alternatively, you may wish to use SMTP or LMTP 
+@@ -88,7 +88,7 @@
+ # a quarantine agent which will be called with all messages DSPAM thinks is
+ # spam. Use %u to specify the user DSPAM is processing mail for.
+ #
+-#QuarantineAgent	"/usr/bin/procmail -d spam"
++#QuarantineAgent	"@PREFIX@/bin/procmail -d spam"
+ 
+ #
+ # DSPAM can optionally process "plused users" (addresses in the user+detail
+@@ -330,7 +330,7 @@
+ # Storage driver settings: Specific to a particular storage driver. Uncomment
+ # the configuration specific to your installation, if applicable.
+ #
+-#MySQLServer		/var/lib/mysql/mysql.sock
++#MySQLServer		/tmp/mysql.sock
+ #MySQLPort		
+ #MySQLUser		dspam
+ #MySQLPass		changeme
+@@ -776,9 +776,9 @@
+ # interfaces.
+ #
+ #ServerHost		127.0.0.1
+-#ServerPort		24
++#ServerPort		2400
+ #ServerQueueSize	32
+-#ServerPID		/var/run/dspam.pid
++#ServerPID		@DSPAM_PIDDIR@/dspam.pid
+ 
+ #
+ # ServerMode specifies the type of LMTP server to start. This can be one of:
+@@ -832,7 +832,7 @@
+ # If you are a reporting streamlined blackhole list participant, you can
+ # touch ip addresses within the directory the rabl_client process is watching.
+ #
+-#RABLQueue	/var/spool/rabl
++#RABLQueue	@VARBASE@/spool/rabl
+ 
+ # DataSource: If you are using any type of data source that does not include
+ # email-like headers (such as documents), uncomment the line below. This

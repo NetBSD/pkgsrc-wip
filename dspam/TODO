@@ -1,0 +1,17 @@
+NOTE: Remove items from this list when done!
+
+- test to build with these options:
+  - clamav
+  - debug
+  - domainscale
+  - dspam-verbose-debug
+  - graphs
+  - homedir
+  - largescale
+  - long-usernames
+  - syslog
+
+  - mysql
+  - pgsql
+  - sqlite
+  - sqlite3
