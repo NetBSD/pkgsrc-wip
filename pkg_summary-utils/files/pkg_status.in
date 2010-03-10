@@ -43,15 +43,19 @@ OPTIONS:
   -s                     compare against pkgsrc source tree
   -b                     compare against pkg_summary(5) database (not implemented yet)
   -r                     raw output, i.e. output of pkg_cmp_summary(1)
-  -a                     show information about all packages, by default
-                         up-to-date packages are skipped
+  -u                     analyse packages marked as installed by user (the default)
+  -a                     analyse all installed packages
+  -A                     by default up-to-date packages are skipped,
+                         with -A they are output too
 EOF
 }
 #  pkg_status -o [OPTIONS]
 #  -o                     compare against packages served by pkg_online server
 
 #set -- `getopt hsobra $*`
-set -- `getopt hsbra $*`
+set -- `getopt hsbrAau $*`
+
+pkg_info_opts='-u'
 
 while test $# -ne 0; do
     case "$1" in
@@ -68,8 +72,12 @@ while test $# -ne 0; do
 	    mode_bin=1;;
 	-r)
 	    submode_raw=1;;
-	-a)
+	-A)
 	    submode_all=1;;
+	-u)
+	    pkg_info_opts="$pkg_info_opts -u";;
+	-a)
+	    pkg_info_opts="$pkg_info_opts -a";;
     esac
     shift
 done
@@ -110,7 +118,7 @@ EOF
 	{
 	    if ($1 == ">") $1 = ">>>";
 	    if ($1 == "-") $1 = "---";
-	    printf "%3s %20s %12s %10s %10s\n", $1, $2, $3, $4, $5
+	    printf "%3s %-20s %-12s %-10s %-10s\n", $1, $2, $3, $4, $5
 	}'
     }
 fi
@@ -134,9 +142,9 @@ pkgpaths_fn=$tmp_dir/pkgs.txt
 PKG_MICRO_SRC_SUMMARY=${PKG_MICRO_SRC_SUMMARY-pkg_micro_src_summary}
 
 if test -n "$mode_src"; then
-    pkg_info -Q PKGPATH -a > "$pkgpaths_fn"
+    pkg_info -X $pkg_info_opts > "$bin_summary_fn"
+    pkg_info -Q PKGPATH $pkg_info_opts > "$pkgpaths_fn"
     $PKG_MICRO_SRC_SUMMARY < "$pkgpaths_fn" 2>/dev/null > "$src_summary_fn"
-    pkg_info -Xa > "$bin_summary_fn"
     runpipe0 \
 	pkg_cmp_summary -p "$bin_summary_fn" "$src_summary_fn" '|' \
 	skip_uptodate '|' \
