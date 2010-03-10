@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2007/12/15 22:42:26 cheusov Exp $
-include/dbi/dbd.h
-include/dbi/dbi-dev.h
-include/dbi/dbi.h
-lib/libdbi.la

@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3841 2010/03/10 23:49:58 thomasklausner Exp $
+# $Id: Makefile,v 1.3842 2010/03/10 23:58:56 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1058,11 +1058,6 @@ SUBDIR+=	libcli
 SUBDIR+=	libcm
 SUBDIR+=	libcmt
 SUBDIR+=	libcpu
-SUBDIR+=	libdbi
-SUBDIR+=	libdbi-driver-mysql
-SUBDIR+=	libdbi-driver-pgsql
-SUBDIR+=	libdbi-driver-sqlite
-SUBDIR+=	libdbi-driver-sqlite3
 SUBDIR+=	libdialog
 SUBDIR+=	libdisasm
 SUBDIR+=	libdjconsole

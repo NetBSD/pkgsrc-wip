@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2008/12/18 10:39:54 cheusov Exp $
-lib/dbd/libdbdpgsql.la
