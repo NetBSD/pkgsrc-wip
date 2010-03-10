@@ -36,8 +36,8 @@ against pkgsrc source tree or pkg_summary.{txt,gz,bz2}
 
 usage:
   pkg_status -h
-  pkg_status -s [OPTIONS]
-  pkg_status -b [OPTIONS]
+  pkg_status -s [OPTIONS] [pkg-name]
+  pkg_status -b [OPTIONS] [pkg-name]
 OPTIONS:
   -h                     display this help message
   -s                     compare against pkgsrc source tree
@@ -47,6 +47,13 @@ OPTIONS:
   -a                     analyse all installed packages
   -A                     by default up-to-date packages are skipped,
                          with -A they are output too
+Example:
+   pkg_status -h
+   pkg_status -s
+   pkg_status -sA
+   pkg_status -sar
+   pkg_status -s pkg_install
+   pkg_status -srA pkg_summary-utils
 EOF
 }
 #  pkg_status -o [OPTIONS]
@@ -78,15 +85,31 @@ while test $# -ne 0; do
 	    pkg_info_opts="$pkg_info_opts -u";;
 	-a)
 	    pkg_info_opts="$pkg_info_opts -a";;
+	--)
+	    shift
+	    break;;
+	-*)
+	    echo "Unknown option $1" 1>&2
+	    exit 1;;
     esac
     shift
 done
 
 if test -z "${mode_src}${mode_bin}${mode_online}"; then
-    echo 'Either -s or -b must be applied'
+    echo 'Either -s or -b must be applied' 1>&2
 #    echo 'Either -s, -o or -b must be applied'
     exit 1
 fi
+
+case $# in
+    1)
+	pkg_info_opts="$*";;
+    0)
+	;;
+    *)
+	echo 'Unexpected arguments' 1>&2
+	exit 1
+esac
 
 # temporarty directory
 tmp_dir="/tmp/pkg_src_summary.$$"
@@ -100,19 +123,6 @@ if test -n "$submode_raw"; then
     }
 else
     raw2hr (){
-cat <<EOF
-Format of the output:
-SIGN PKGPATH PKGBASE VERSION1 [VERSION2]
-///////////////////////////////////
-Here
-  SIGN:  <   newer version is available
-         >>> only older version is available (problem?)
-         =   the same version is available
-         --- package disappeared or renamed (problem?)
-  VERSION1: version of installed package,
-  VERSION2: (if any) - version of available package
-///////////////////////////////////
-EOF
 	runpipe0 sort -k3,3 -t' ' '|' \
 	awk '
 	{
@@ -138,6 +148,7 @@ fi
 ###
 src_summary_fn=$tmp_dir/src_summary.txt
 bin_summary_fn=$tmp_dir/bin_summary.txt
+res_fn=$tmp_dir/result.txt
 pkgpaths_fn=$tmp_dir/pkgs.txt
 
 PKG_MICRO_SRC_SUMMARY=${PKG_MICRO_SRC_SUMMARY-pkg_micro_src_summary}
@@ -149,7 +160,25 @@ if test -n "$mode_src"; then
     runpipe0 \
 	pkg_cmp_summary -p "$bin_summary_fn" "$src_summary_fn" '|' \
 	skip_uptodate '|' \
-	raw2hr
+	raw2hr > "$res_fn"
+    if test -s "$res_fn"; then
+	cat <<EOF
+Format of the output:
+SIGN PKGPATH PKGBASE VERSION1 [VERSION2]
+///////////////////////////////////
+Here
+  SIGN:  <   newer version is available
+         >>> only older version is available (problem?)
+         =   the same version is available
+         --- package disappeared or renamed (problem?)
+  VERSION1: version of installed package,
+  VERSION2: (if any) - version of available package
+///////////////////////////////////
+EOF
+	cat "$res_fn"
+    else
+	echo 'Everything is up-to-date'
+    fi
     exit 0
 fi
 
