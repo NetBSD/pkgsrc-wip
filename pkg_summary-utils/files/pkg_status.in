@@ -1,0 +1,176 @@
+#!@SH@
+#-*-mode:  sh -*-
+
+# Copyright (c) 2007-2008 Aleksey Cheusov <vle@gmx.net>
+#
+# Permission is hereby granted, free of charge, to any person obtaining
+# a copy of this software and associated documentation files (the
+# "Software"), to deal in the Software without restriction, including
+# without limitation the rights to use, copy, modify, merge, publish,
+# distribute, sublicense, and/or sell copies of the Software, and to
+# permit persons to whom the Software is furnished to do so, subject to
+# the following conditions:
+#
+# The above copyright notice and this permission notice shall be
+# included in all copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+# EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+# NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+# LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+# OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+# WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+set -e
+
+. pipestatus
+
+export LC_ALL=C
+
+############################################################
+usage (){
+    cat 1>&2 <<EOF
+pkg_status - compare versions of installed packages
+against pkgsrc source tree or pkg_summary.{txt,gz,bz2}
+
+usage:
+  pkg_status -h
+  pkg_status -s [OPTIONS]
+  pkg_status -b [OPTIONS]
+OPTIONS:
+  -h                     display this help message
+  -s                     compare against pkgsrc source tree
+  -b                     compare against pkg_summary(5) database (not implemented yet)
+  -r                     raw output, i.e. output of pkg_cmp_summary(1)
+  -a                     show information about all packages, by default
+                         up-to-date packages are skipped
+EOF
+}
+#  pkg_status -o [OPTIONS]
+#  -o                     compare against packages served by pkg_online server
+
+#set -- `getopt hsobra $*`
+set -- `getopt hsbra $*`
+
+while test $# -ne 0; do
+    case "$1" in
+	-h)
+	    usage
+	    exit 0;;
+	-s)
+	    mode_src=1;;
+#	-o)
+#	    mode_online=1;;
+	-b)
+	    echo '-b option is currently not implemented yet' 1>&2
+	    exit 1
+	    mode_bin=1;;
+	-r)
+	    submode_raw=1;;
+	-a)
+	    submode_all=1;;
+    esac
+    shift
+done
+
+if test -z "${mode_src}${mode_bin}${mode_online}"; then
+    echo 'Either -s or -b must be applied'
+#    echo 'Either -s, -o or -b must be applied'
+    exit 1
+fi
+
+# temporarty directory
+tmp_dir="/tmp/pkg_src_summary.$$"
+trap "rm -rf $tmp_dir" 0 1 2 15
+mkdir -m 700 "$tmp_dir"
+
+###
+if test -n "$submode_raw"; then
+    raw2hr (){
+	cat
+    }
+else
+    raw2hr (){
+cat <<EOF
+Format of the output:
+SIGN PKGPATH PKGBASE VERSION1 [VERSION2]
+///////////////////////////////////
+Here
+  SIGN:  <   newer version is available
+         >>> only older version is available (problem?)
+         =   the same version is available
+         --- package disappeared or renamed (problem?)
+  VERSION1: version of installed package,
+  VERSION2: (if any) - version of available package
+///////////////////////////////////
+EOF
+	runpipe0 sort -k3,3 -t' ' '|' \
+	awk '
+	{
+	    if ($1 == ">") $1 = ">>>";
+	    if ($1 == "-") $1 = "---";
+	    printf "%3s %20s %12s %10s %10s\n", $1, $2, $3, $4, $5
+	}'
+    }
+fi
+
+###
+if test -n "$submode_all"; then
+    skip_uptodate (){
+	cat
+    }
+else
+    skip_uptodate (){
+	grep -v '^= ' || true
+    }
+fi
+
+###
+src_summary_fn=$tmp_dir/src_summary.txt
+bin_summary_fn=$tmp_dir/bin_summary.txt
+pkgpaths_fn=$tmp_dir/pkgs.txt
+
+PKG_MICRO_SRC_SUMMARY=${PKG_MICRO_SRC_SUMMARY-pkg_micro_src_summary}
+
+if test -n "$mode_src"; then
+    pkg_info -Q PKGPATH -a > "$pkgpaths_fn"
+    $PKG_MICRO_SRC_SUMMARY < "$pkgpaths_fn" 2>/dev/null > "$src_summary_fn"
+    pkg_info -Xa > "$bin_summary_fn"
+    runpipe0 \
+	pkg_cmp_summary -p "$bin_summary_fn" "$src_summary_fn" '|' \
+	skip_uptodate '|' \
+	raw2hr
+    exit 0
+fi
+
+# online_summary (){
+#     runawk -f str2regexp.awk -f xsystem.awk -v q="'" -e '
+#     function print_summary (){
+# 	cmd = "pkg_online_find -3 -r " q "PKGPATH:re:" accu_re "" q
+# 	print cmd
+# 	xsystem(cmd)
+# 	accu_re = ""
+#     }
+#     {
+# 	if (accu_re != "")
+# 	    accu_re = accu_re "|"
+# 	accu_re = accu_re str2regexp($0)
+# 	if (length(accu_re) > 50) print_summary()
+#     }
+#     END {
+# 	if (accu_re != "") print_summary()
+#     }' "$@"
+# }
+
+# if test -n "$mode_online"; then
+#     pkg_info -Q PKGPATH -a | head -50 > "$pkgpaths_fn"
+#     online_summary "$pkgpaths_fn" 2>/dev/null #> "$src_summary_fn"
+#     exit 55
+#     pkg_info -Xa > "$bin_summary_fn"
+#     runpipe0 \
+# 	pkg_cmp_summary -p "$bin_summary_fn" "$src_summary_fn" '|' \
+# 	skip_uptodate '|' \
+# 	raw2hr
+#     exit 0
+# fi
