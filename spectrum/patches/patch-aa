@@ -1,0 +1,29 @@
+$NetBSD: patch-aa,v 1.1 2010/03/10 04:36:56 schnoebe Exp $
+
+--- CMakeLists.txt.orig	2010-03-10 04:09:18.000000000 +0000
++++ CMakeLists.txt
+@@ -351,12 +351,12 @@ INSTALL(TARGETS spectrum
+     )
+ 
+ 
+-if (NOT EXISTS /etc/spectrum)
++if (NOT EXISTS @ETC_SPECTRUM@)
+ 	INSTALL(FILES
+ 		${CMAKE_CURRENT_SOURCE_DIR}/spectrum.cfg
+-		DESTINATION /etc/spectrum/
++		DESTINATION @ETC_SPECTRUM@/
+ 		)
+-endif (NOT EXISTS /etc/spectrum)
++endif (NOT EXISTS @ETC_SPECTRUM@)
+ 
+ INSTALL(FILES
+     ${CMAKE_CURRENT_SOURCE_DIR}/locales/cs.po
+@@ -379,7 +379,7 @@ INSTALL(FILES
+ 
+ INSTALL(FILES
+     ${CMAKE_CURRENT_SOURCE_DIR}/man/spectrumctl.8
+-	DESTINATION share/man/man8
++	DESTINATION man/man8
+     )
+ 
+ # install(FILES

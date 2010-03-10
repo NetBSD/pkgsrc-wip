@@ -1,0 +1,31 @@
+$NetBSD: patch-ab,v 1.1 2010/03/10 04:36:56 schnoebe Exp $
+
+--- man/spectrumctl.8.orig	2010-03-10 04:09:18.000000000 +0000
++++ man/spectrumctl.8
+@@ -14,7 +14,7 @@ spectrumctl \- util to control spectrum 
+ .SH DESCRIPTION
+ spectrumctl is a small tool written in python which can be used to control instances of the spectrum XMPP transport.
+ spectrum only handles one legacy network per instance, so you need more than one spectrum instance if you want support for more than one legacy network.
+-By default, spectrumctl acts on all transports defined in \fI/etc/spectrum/\fR.
++By default, spectrumctl acts on all transports defined in \fI@ETC_SPECTRUM@/\fR.
+ .SH OPERATIONS
+ .PP
+ \fBstart\fR, \fBstop\fR, \fBrestart\fR
+@@ -49,7 +49,7 @@ Only act on transport configured in FILE
+ .RE
+ \fB\-d\fR \fIDIR\fR, \fB\-\-config\-dir\fR=\fIDIR\fR
+ .RS 4
+-Act on all transports configured in DIR (default: \fI/etc/spectrum\fR)
++Act on all transports configured in DIR (default: \fI@ETC_SPECTRUM@\fR)
+ .sp
+ .RE
+ \fB\-q\fR, \fB\-\-quiet\fR
+@@ -71,7 +71,7 @@ Options for action "\fBstart\fR":
+ .RS 4
+ \fB\-\-su\fR=\fISU\fR
+ .RS 4
+-Start spectrum as this user (default: \fIspectrum\fR)
++Start spectrum as this user (default: \fI@SPECTRUM@\fR)
+ .RE
+ .RE
+ .sp
