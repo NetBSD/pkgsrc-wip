@@ -1,0 +1,7 @@
+pkg_status utility checks the version of each installed package
+against the pkgsrc source tree or pkg_summary.{txt,gz,bz} file.
+'pkg_status -s' (checking against pkgsrc source tree) is
+a drammatically faster and more powerful replacement
+for 'lintpkgsrc -i'.
+
+Of course it is based on pkg_summary-utils ;-)
