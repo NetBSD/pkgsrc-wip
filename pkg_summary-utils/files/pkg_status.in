@@ -22,6 +22,12 @@
 # OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
+############################################################
+# user settable variables
+
+PKG_SRC_SUMMARY=${PKG_SRC_SUMMARY-pkg_micro_src_summary}
+
+############################################################
 set -e
 
 . pipestatus
@@ -36,8 +42,8 @@ against pkgsrc source tree or pkg_summary.{txt,gz,bz2}
 
 usage:
   pkg_status -h
-  pkg_status -s [OPTIONS] [pkg-name]
-  pkg_status -b [OPTIONS] [pkg-name]
+  pkg_status -s [OPTIONS] [ [--] [ pkg_info args ] ]
+  pkg_status -b [OPTIONS] [ [--] [ pkg_info args ] ]
 OPTIONS:
   -h     display this help message
   -s     compare against pkgsrc source tree
@@ -53,8 +59,8 @@ Example:
    pkg_status -s
    pkg_status -sA
    pkg_status -sar
-   pkg_status -s pkg_install
-   pkg_status -srA pkg_summary-utils
+   pkg_status -s pkg_install bmake bootstrap-mk-files
+   pkg_status -srA -- pkg_summary-utils
 EOF
 }
 #  pkg_status -o [OPTIONS]
@@ -62,8 +68,6 @@ EOF
 
 #set -- `getopt hsobra $*`
 set -- `getopt hsbrAauD $*`
-
-pkg_info_opts='-u'
 
 while test $# -ne 0; do
     case "$1" in
@@ -94,6 +98,8 @@ while test $# -ne 0; do
 	-*)
 	    echo "Unknown option $1" 1>&2
 	    exit 1;;
+	*)
+	    break;;
     esac
     shift
 done
@@ -104,15 +110,9 @@ if test -z "${mode_src}${mode_bin}${mode_online}"; then
     exit 1
 fi
 
-case $# in
-    1)
-	pkg_info_opts="$*";;
-    0)
-	;;
-    *)
-	echo 'Unexpected arguments' 1>&2
-	exit 1
-esac
+if test $# -eq 0 -a -z "$pkg_info_opts"; then
+    pkg_info_opts=-u
+fi
 
 # temporarty directory
 tmp_dir="/tmp/pkg_src_summary.$$"
@@ -158,12 +158,10 @@ bin_summary_fn=$tmp_dir/bin_summary.txt
 res_fn=$tmp_dir/result.txt
 pkgpaths_fn=$tmp_dir/pkgs.txt
 
-PKG_MICRO_SRC_SUMMARY=${PKG_MICRO_SRC_SUMMARY-pkg_micro_src_summary}
-
 if test -n "$mode_src"; then
-    pkg_info -X $pkg_info_opts > "$bin_summary_fn"
-    pkg_info -Q PKGPATH $pkg_info_opts > "$pkgpaths_fn"
-    $PKG_MICRO_SRC_SUMMARY < "$pkgpaths_fn" 2>/dev/null > "$src_summary_fn"
+    pkg_info -X $pkg_info_opts "$@" > "$bin_summary_fn"
+    pkg_info -Q PKGPATH $pkg_info_opts "$@" > "$pkgpaths_fn"
+    $PKG_SRC_SUMMARY < "$pkgpaths_fn" 2>/dev/null > "$src_summary_fn"
     runpipe0 \
 	pkg_cmp_summary -p "$bin_summary_fn" "$src_summary_fn" '|' \
 	skip_uptodate '|' \
@@ -172,15 +170,14 @@ if test -n "$mode_src"; then
 	cat <<EOF
 Format of the output:
 SIGN PKGPATH PKGBASE VERSION1 [VERSION2]
-///////////////////////////////////
-Here
-  SIGN:  <   newer version is available
-         >>> only older version is available (problem?)
-         =   the same version is available
-         --- package disappeared or renamed (problem?)
-  VERSION1: version of installed package,
-  VERSION2: (if any) - version of available package
-///////////////////////////////////
+
+     SIGN:      newer version is available
+            >>> only older version is available (problem?)
+            =   the same version is available
+            --- package disappeared or renamed (problem?)
+     VERSION1: version of installed package,
+     VERSION2: (if any) - version of available package
+**********************************************************************
 EOF
 	cat "$res_fn"
     else
