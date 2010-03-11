@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/03/11 21:33:42 shindenmorr Exp $
+# $NetBSD: Makefile,v 1.5 2010/03/11 22:59:50 shindenmorr Exp $
 #
 
 DISTNAME=		bsdstats-5.3
@@ -21,7 +21,7 @@ BUILD_DEFS+=		VARBASE
 
 WRKSRC=			${WRKDIR}/bsdstats
 NO_BUILD=		yes
-AUTO_MKDIRS=		yes
+INSTALLATION_DIRS=	bin
 
 post-extract:
 	${MKDIR} ${WRKDIR}/bsdstats
