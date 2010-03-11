@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2010/01/17 12:03:32 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.19 2010/03/11 14:39:05 pettai Exp $
 #
 
 DISTNAME=	sid-milter-1.0.0
@@ -8,8 +8,10 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sid-milter/}
 
 MAINTAINER=	pettai@nordu.net
 HOMEPAGE=	http://sid-milter.sourceforge.net/
-COMMENT=	Open source SPF/SenderID filter software from Sendmail, Inc.
-LICENSE=		sendmail-open-source-license
+COMMENT=	Open source SPF/SenderID filter software from Sendmail, Inc
+LICENSE=	sendmail-open-source-license
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	sendmail>=8.13.0:../../mail/sendmail
 
@@ -27,6 +29,8 @@ SUBST_FILES.libs=	sid-filter/Makefile.m4
 SUBST_SED.libs=		-e "s|@LMBASE@|${BUILDLINK_PREFIX.libmilter}|g"
 SUBST_MESSAGE.libs=	Fixing paths.
 
+INSTALLATION_DIRS=	bin include lib ${PKGMANDIR}/cat3 ${PKGMANDIR}/cat8
+
 .include "../../security/openssl/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libmilter+=	libmilter>=8.13.0
 .include "../../mail/libmilter/buildlink3.mk"
@@ -39,28 +43,27 @@ do-build:
 	(cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ./Build)
 
 do-install:
-	${INSTALL_DATA_DIR} ${SIDDOC}
-	${INSTALL_MAN_DIR} ${PREFIX}/${PKGMANDIR}/cat3/
-	${INSTALL_MAN_DIR} ${PREFIX}/${PKGMANDIR}/cat8/
-
-	${INSTALL_LIB} ${WRKSRC}/${SIDWORK}/libmarid/sm-marid.h ${PREFIX}/include
-	${INSTALL_LIB} ${WRKSRC}/${SIDWORK}/libar/libar.a ${PREFIX}/lib
+	${INSTALL_DATA_DIR} ${DESTDIR}${SIDDOC}
+	${INSTALL_LIB} ${WRKSRC}/${SIDWORK}/libmarid/sm-marid.h \
+		${DESTDIR}${PREFIX}/include
+	${INSTALL_LIB} ${WRKSRC}/${SIDWORK}/libar/libar.a \
+		${DESTDIR}${PREFIX}/lib
 	${INSTALL_MAN} ${WRKSRC}/${SIDWORK}/libar/ar.0 \
-		${PREFIX}/${PKGMANDIR}/cat3/
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/cat3/
 	${INSTALL_PROGRAM} ${WRKSRC}/${SIDWORK}/sid-filter/sid-filter \
-		${PREFIX}/bin
+		${DESTDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/${SIDWORK}/sid-filter/sid-filter.0 \
-		${PREFIX}/${PKGMANDIR}/cat8/
-	${INSTALL_DATA} ${WRKSRC}/FEATURES ${SIDDOC}
-	${INSTALL_DATA} ${WRKSRC}/INSTALL ${SIDDOC}
-	${INSTALL_DATA} ${WRKSRC}/KNOWNBUGS ${SIDDOC}
-	${INSTALL_DATA} ${WRKSRC}/LICENSE ${SIDDOC}
-	${INSTALL_DATA} ${WRKSRC}/README ${SIDDOC}
-	${INSTALL_DATA} ${WRKSRC}/README-SenderID ${SIDDOC}
-	${INSTALL_DATA} ${WRKSRC}/RELEASE_NOTES ${SIDDOC}
-	${INSTALL_DATA} ${WRKSRC}/rfc4406.txt ${SIDDOC}
-	${INSTALL_DATA} ${WRKSRC}/rfc4407.txt ${SIDDOC}
-	${INSTALL_DATA} ${WRKSRC}/rfc4408.txt ${SIDDOC}
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/cat8/
+	${INSTALL_DATA} ${WRKSRC}/FEATURES ${DESTDIR}${SIDDOC}
+	${INSTALL_DATA} ${WRKSRC}/INSTALL ${DESTDIR}${SIDDOC}
+	${INSTALL_DATA} ${WRKSRC}/KNOWNBUGS ${DESTDIR}${SIDDOC}
+	${INSTALL_DATA} ${WRKSRC}/LICENSE ${DESTDIR}${SIDDOC}
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${SIDDOC}
+	${INSTALL_DATA} ${WRKSRC}/README-SenderID ${DESTDIR}${SIDDOC}
+	${INSTALL_DATA} ${WRKSRC}/RELEASE_NOTES ${DESTDIR}${SIDDOC}
+	${INSTALL_DATA} ${WRKSRC}/rfc4406.txt ${DESTDIR}${SIDDOC}
+	${INSTALL_DATA} ${WRKSRC}/rfc4407.txt ${DESTDIR}${SIDDOC}
+	${INSTALL_DATA} ${WRKSRC}/rfc4408.txt ${DESTDIR}${SIDDOC}
 
 .include "../../mk/bsd.pkg.mk"
 
