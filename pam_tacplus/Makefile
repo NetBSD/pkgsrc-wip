@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/03/31 21:30:33 pettai Exp $
+# $NetBSD: Makefile,v 1.4 2010/03/11 12:33:27 pettai Exp $
 #
 
 DISTNAME=	pam_tacplus-1.2.11
@@ -8,6 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tacplus/}
 MAINTAINER=	pettai@nordu.net
 HOMEPAGE=	http://tacplus.sourceforge.net/
 COMMENT=	TACACS+ client library and PAM module
+#LICENSE=
 
 WRKSRC=	${WRKDIR}/tacplus
 EGDIR= ${PREFIX}/share/examples/pam_tacplus
@@ -21,7 +22,8 @@ SUBST_SED.paths=        -e 's,@PREFIX@,${PREFIX},'
 
 INSTALLATION_DIRS=	lib/security ${EGDIR}
 
-post-install:
+do-install:
+	${INSTALL} ${WRKSRC}/pam_tacplus.so ${DESTDIR}${PREFIX}/lib/security/
 	${INSTALL} ${WRKSRC}/sample.pam ${DESTDIR}${EGDIR}/sample.pam
 
 .include "../../mk/bsd.pkg.mk"
