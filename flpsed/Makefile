@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/03/09 23:01:32 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2010/03/11 17:41:57 othyro Exp $
 #
 
 DISTNAME=	flpsed-0.6.1
@@ -14,6 +14,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
+USE_TOOLS+=	gs:run
 
 .include "../../x11/fltk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
