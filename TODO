@@ -118,7 +118,6 @@ Suggested ready to import packages
 	o gtypist [pkg/40177]
 	o heirloom-sh [pkg/40272]
 	o paexec
-	o pipestatus [pkg/40250]
 	o pycrypto
 	o pylibpcap
 	o pypcap
