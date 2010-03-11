@@ -53,10 +53,12 @@ OPTIONS:
   -a     analyse all installed packages
   -A     by default up-to-date packages are skipped,
          with -A they are output too
+  -Q     No noisy reminder about output format
   -D     for debugging purposes, temp files are not removed
 Example:
    pkg_status -h
    pkg_status -s
+   pkg_status -saQ
    pkg_status -sA
    pkg_status -sar
    pkg_status -s pkg_install bmake bootstrap-mk-files
@@ -67,7 +69,7 @@ EOF
 #  -o                     compare against packages served by pkg_online server
 
 #set -- `getopt hsobra $*`
-set -- `getopt hsbrAauD $*`
+set -- `getopt hsbrAauQD $*`
 
 while test $# -ne 0; do
     case "$1" in
@@ -90,6 +92,8 @@ while test $# -ne 0; do
 	    pkg_info_opts="$pkg_info_opts -u";;
 	-a)
 	    pkg_info_opts="$pkg_info_opts -a";;
+	-Q)
+	    quiet=1;;
 	-D)
 	    debug=1;;
 	--)
@@ -158,15 +162,8 @@ bin_summary_fn=$tmp_dir/bin_summary.txt
 res_fn=$tmp_dir/result.txt
 pkgpaths_fn=$tmp_dir/pkgs.txt
 
-if test -n "$mode_src"; then
-    pkg_info -X $pkg_info_opts "$@" > "$bin_summary_fn"
-    pkg_info -Q PKGPATH $pkg_info_opts "$@" > "$pkgpaths_fn"
-    $PKG_SRC_SUMMARY < "$pkgpaths_fn" 2>/dev/null > "$src_summary_fn"
-    runpipe0 \
-	pkg_cmp_summary -p "$bin_summary_fn" "$src_summary_fn" '|' \
-	skip_uptodate '|' \
-	raw2hr > "$res_fn"
-    if test -s "$res_fn"; then
+show_output_format (){
+    if test -z "$quiet"; then
 	cat <<EOF
 Format of the output:
 SIGN PKGPATH PKGBASE VERSION1 [VERSION2]
@@ -179,6 +176,19 @@ SIGN PKGPATH PKGBASE VERSION1 [VERSION2]
      VERSION2: (if any) - version of available package
 **********************************************************************
 EOF
+    fi
+}
+
+if test -n "$mode_src"; then
+    pkg_info -X $pkg_info_opts "$@" > "$bin_summary_fn"
+    pkg_info -Q PKGPATH $pkg_info_opts "$@" > "$pkgpaths_fn"
+    $PKG_SRC_SUMMARY < "$pkgpaths_fn" 2>/dev/null > "$src_summary_fn"
+    runpipe0 \
+	pkg_cmp_summary -p "$bin_summary_fn" "$src_summary_fn" '|' \
+	skip_uptodate '|' \
+	raw2hr > "$res_fn"
+    if test -s "$res_fn"; then
+	show_output_format
 	cat "$res_fn"
     else
 	echo 'Everything is up-to-date'
