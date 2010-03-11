@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3843 2010/03/11 12:14:25 pettai Exp $
+# $Id: Makefile,v 1.3844 2010/03/11 14:39:20 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -240,6 +240,7 @@ SUBDIR+=	compiz-gnome-current
 SUBDIR+=	converttomp3
 SUBDIR+=	cops
 SUBDIR+=	copytape
+SUBDIR+=	coq
 SUBDIR+=	couchdb
 SUBDIR+=	couchdb-glib
 SUBDIR+=	courierpassd
