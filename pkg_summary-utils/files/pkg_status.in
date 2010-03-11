@@ -39,14 +39,15 @@ usage:
   pkg_status -s [OPTIONS] [pkg-name]
   pkg_status -b [OPTIONS] [pkg-name]
 OPTIONS:
-  -h                     display this help message
-  -s                     compare against pkgsrc source tree
-  -b                     compare against pkg_summary(5) database (not implemented yet)
-  -r                     raw pkg_cmp_summary(1)'s output
-  -u                     analyse packages marked as installed by user (the default)
-  -a                     analyse all installed packages
-  -A                     by default up-to-date packages are skipped,
-                         with -A they are output too
+  -h     display this help message
+  -s     compare against pkgsrc source tree
+  -b     compare against pkg_summary(5) database (not implemented yet)
+  -r     raw pkg_cmp_summary(1)'s output
+  -u     analyse packages marked as installed by user (the default)
+  -a     analyse all installed packages
+  -A     by default up-to-date packages are skipped,
+         with -A they are output too
+  -D     for debugging purposes, temp files are not removed
 Example:
    pkg_status -h
    pkg_status -s
@@ -60,7 +61,7 @@ EOF
 #  -o                     compare against packages served by pkg_online server
 
 #set -- `getopt hsobra $*`
-set -- `getopt hsbrAau $*`
+set -- `getopt hsbrAauD $*`
 
 pkg_info_opts='-u'
 
@@ -85,6 +86,8 @@ while test $# -ne 0; do
 	    pkg_info_opts="$pkg_info_opts -u";;
 	-a)
 	    pkg_info_opts="$pkg_info_opts -a";;
+	-D)
+	    debug=1;;
 	--)
 	    shift
 	    break;;
@@ -113,7 +116,11 @@ esac
 
 # temporarty directory
 tmp_dir="/tmp/pkg_src_summary.$$"
-trap "rm -rf $tmp_dir" 0 1 2 15
+if test -z "$debug"; then
+    trap "rm -rf $tmp_dir" 0 1 2 15
+else
+    echo "Temp directory: $tmp_dir" 1>&2
+fi
 mkdir -m 700 "$tmp_dir"
 
 ###
