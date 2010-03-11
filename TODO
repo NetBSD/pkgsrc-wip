@@ -117,13 +117,8 @@ Suggested ready to import packages
 	o granule [pkg/40177]
 	o gtypist [pkg/40177]
 	o heirloom-sh [pkg/40272]
-	o p5-Authen-TACACS
-	o p5-List-Compare
-	o p5-Mail-RFC822-Address
-	o p5-Net-validMX
 	o paexec
 	o pipestatus [pkg/40250]
-	o py-sendmail-admin
 	o pycrypto
 	o pylibpcap
 	o pypcap
