@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.4 2009/12/18 01:13:01 pettai Exp $
+@comment $NetBSD: PLIST,v 1.5 2010/03/12 09:17:41 pettai Exp $
 ${GEM_HOME}/cache/dnsruby-${PKGVERSION}.gem
 ${GEM_LIBDIR}/DNSSEC
 ${GEM_LIBDIR}/EVENTMACHINE
 ${GEM_LIBDIR}/EXAMPLES
 ${GEM_LIBDIR}/README
+${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/demo/axfr.rb
 ${GEM_LIBDIR}/demo/check_soa.rb
 ${GEM_LIBDIR}/demo/check_zone.rb
