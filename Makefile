@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3847 2010/03/12 09:34:42 pettai Exp $
+# $Id: Makefile,v 1.3848 2010/03/12 22:25:07 christtrekker Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2289,6 +2289,7 @@ SUBDIR+=	tumble
 SUBDIR+=	tutos
 SUBDIR+=	tuxanci
 SUBDIR+=	tuxanci-server
+SUBDIR+=	tuxguitar
 SUBDIR+=	tuxtype2
 SUBDIR+=	tw_cli
 SUBDIR+=	twinkle
