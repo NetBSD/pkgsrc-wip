@@ -123,12 +123,14 @@ function check_ver (ver, condition){
 }
 
 END {
+	ex = 0
 	if (opt_l){
 		for (p in reqd_libs){
 			if (! (p in provides2pkg)){
 				if (has_prefix(p, prefix)){
 					for (i=1; i <= reqd_libs2cnt [p]; ++i){
 						print "l: not_found " p, reqd_libs2where [p, i]
+						ex = 1
 					}
 				}
 			}
@@ -143,9 +145,12 @@ END {
 			split(d, arr, SUBSEP)
 			if (! (pkgdep in pkg2ver)){
 				print "d: not_found", pkgdep, "<-", arr [1], arr [2]
+				ex = 1
 			}
 #			print arr[2]
 #			print d, dep, pkgdep, pkgver
 		}
 	}
+
+	exitnow(ex)
 }
