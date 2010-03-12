@@ -39,6 +39,8 @@
 # OPTIONS:
 #   -h|--help      display this help
 #   -l             checks REQUIRES/PROVIDES fields
+#   -d             checks DEPENDS fields (they present and
+#                  versions are correct)
 #.end-str
 ############################################################
 
@@ -48,10 +50,11 @@ BEGIN {
 		prefix = "@@prefix@@"
 
 	opt_l = getarg("l")
+	opt_d = getarg("d")
 	cnt = 0
 
-	if (!opt_l){
-		print "One of the following options should be applied: -l"	\
+	if (!opt_l && !opt_d){
+		print "One of the following options should be applied: -l, -d"	\
 			> "/dev/stderr"
 		exitnow(1)
 	}
@@ -60,10 +63,18 @@ BEGIN {
 /^PKGNAME=/{
 	pkgname = substr($0, 9)
 	pkgbase = pkgname2pkgbase(pkgname)
+	pkgver  = pkgname2version(pkgname)
 }
 
 /^PKGPATH=/{
 	pkgpath = substr($0, 9)
+}
+
+NF == 0 {
+	for (i=1; i < 10000 && ((pkgbase SUBSEP i) in pkg2ver); ++i){
+		pkg2ver [pkgbase, i] = pkgver
+	}
+	pkg2ver [pkgbase] = 1
 }
 
 opt_l {
@@ -71,12 +82,10 @@ opt_l {
 		requires1 = substr($0, 10)
 		if (!(requires1 in provides2pkg))
 			requires [++requires_cnt] = requires1
-	}
-	if (/^PROVIDES=/){
+	}else if (/^PROVIDES=/){
 		provides1 = substr($0, 10)
 		provides2pkg [provides1] = 1
-	}
-	if (NF == 0){
+	}else if (NF == 0){
 		pkg = (pkgpath " " pkgname)
 		for (i=1; i <= requires_cnt; ++i){
 #			print "r:", requires [i], pkg
@@ -89,6 +98,30 @@ opt_l {
 	}
 }
 
+opt_d {
+	if (/^DEPENDS=/) {
+		cnt=split(substr($0, 9), arr, / /)
+		for (i=1; i <= cnt; ++i){
+			deps [++deps_cnt] = arr [i]
+		}
+	}else if (NF == 0){
+		for (i=1; i <= deps_cnt; ++i){
+			if (! (i in deps))
+				break
+#			print pkgpath, pkgbase, i, "->", deps [i]
+			depends [pkgpath, pkgbase, i] = deps [i]
+		}
+		deps_cnt = 0
+	}
+}
+
+NF == 0 {
+	pkgname = pkgpath = pkgver = ""
+}
+
+function check_ver (ver, condition){
+}
+
 END {
 	if (opt_l){
 		for (p in reqd_libs){
@@ -99,6 +132,20 @@ END {
 					}
 				}
 			}
+		}
+	}
+	if (opt_d){
+		for (d in depends){
+			dep = depends [d]
+			pkgdep=pkgname2pkgbase(dep)
+#			pkgver=pkgname2version(dep)
+
+			split(d, arr, SUBSEP)
+			if (! (pkgdep in pkg2ver)){
+				print "d: not_found", pkgdep, "<-", arr [1], arr [2]
+			}
+#			print arr[2]
+#			print d, dep, pkgdep, pkgver
 		}
 	}
 }
