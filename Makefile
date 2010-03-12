@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3845 2010/03/12 00:53:00 shindenmorr Exp $
+# $Id: Makefile,v 1.3846 2010/03/12 07:55:05 cheusov Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1733,6 +1733,7 @@ SUBDIR+=	pkg_fake
 SUBDIR+=	pkg_online-client
 SUBDIR+=	pkg_online-server
 SUBDIR+=	pkg_rmleaves
+SUBDIR+=	pkg_status
 SUBDIR+=	pkg_summary-utils
 SUBDIR+=	pkgin
 SUBDIR+=	pkgmanager
