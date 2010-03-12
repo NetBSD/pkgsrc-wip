@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkg_lint_summary.1,v 1.1 2010/03/01 15:20:44 cheusov Exp $
+.\"	$NetBSD: pkg_lint_summary.1,v 1.2 2010/03/12 22:06:55 cheusov Exp $
 .\"
 .\" Copyright (c) 2008 by Aleksey Cheusov (vle@gmx.net)
 .\" Absolutely no warranty.
@@ -14,11 +14,11 @@
 .fi
 ..
 .\" ------------------------------------------------------------------
-.TH PKG_LINT_SUMMARY 1 "Feb 10, 2008" "" ""
+.TH PKG_LINT_SUMMARY 1 "Feb 10, 2010" "" ""
 .SH NAME
 pkg_lint_summary \- attempts to detect problems in input summaries
 .SH SYNOPSIS
-.BI pkg_lint_summary " [OPTIONS] [files..."
+.BI pkg_lint_summary " [OPTIONS] [files...]"
 .SH DESCRIPTION
 .B pkg_lint_summary
 attempts to detect problems in input summaries.
@@ -28,7 +28,38 @@ attempts to detect problems in input summaries.
 display help message
 .TP
 .B "-l"
-analyses REQUIRES/PROVIDES of pkg_summary(5)
+analyses REQUIRES/PROVIDES fields of pkg_summary(5) given on
+input. Format of the output:
+.VB
+
+        l: not_found SO_LIBRARY PKGPATH PKGNAME
+
+.VE
+This means that the package PKGNAME from PKGPATH requires SO_LIBRARY but
+there is no package that provide it.
+Sample of usage:
+.VB
+
+        pkg_info -Xa | pkg_lint_summary -l
+
+.VE
+.TP
+.B "-d"
+checks that ALL required dependencies are present. Format of the output:
+.VB
+
+        d: not_found ABSENT <- PKGPATH PKGBASE
+
+.VE
+This means that the package PKGNAME from PKGPATH requires package ABSENT but
+it is absent in input summary.
+Sample of usage:
+.VB
+
+        pkg_delete -f gtk2+
+        pkg_info -Xa | pkg_lint_summary -d
+
+.VE
 .SH SEE ALSO
 .BR pkg_summary-utils(7) ,
 .BR pkg_summary(5) ,
