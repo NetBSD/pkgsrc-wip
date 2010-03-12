@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3849 2010/03/12 22:31:34 pettai Exp $
+# $Id: Makefile,v 1.3850 2010/03/12 23:12:42 pettai Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2075,7 +2075,6 @@ SUBDIR+=	showmesh
 SUBDIR+=	shttpd
 SUBDIR+=	shunt
 SUBDIR+=	sic
-SUBDIR+=	sid-milter
 SUBDIR+=	siege
 SUBDIR+=	silky
 SUBDIR+=	silvertree
