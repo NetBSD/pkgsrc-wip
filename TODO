@@ -86,7 +86,6 @@ Suggested package updates
 	o siege-2.69
 	o smc-1.8
 	o smproxy-1.0.3
-	o softhsm-1.1.1
 	o spe-0.8.2a
 	o sxemacs-22.1.10
 	o task-1.9.0 (now called taskwarrior)
@@ -109,7 +108,6 @@ Suggested ready to import packages
 =================================
 
 	o am-utils [pkg/35668]
-	o bsdstats
 	o castget
 	o commoncpp2
 	o ccrtp
@@ -118,15 +116,12 @@ Suggested ready to import packages
 	o gtypist [pkg/40177]
 	o heirloom-sh [pkg/40272]
 	o paexec
-	o pycrypto
 	o pylibpcap
 	o pypcap
 	o rancid
-	o ruby-dnsruby
 	o runawk
 	o send-pr
 	o softhsm
-	o sysmon
 	o tclreadline
 	o xmms-cdread [pkg/36220]
 	o xmms-skins [pkg/35666]
