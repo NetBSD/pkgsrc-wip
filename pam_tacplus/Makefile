@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/03/11 13:45:20 pettai Exp $
+# $NetBSD: Makefile,v 1.6 2010/03/12 09:55:22 thomasklausner Exp $
 #
 
 DISTNAME=	pam_tacplus-1.2.11
@@ -10,11 +10,11 @@ HOMEPAGE=	http://tacplus.sourceforge.net/
 COMMENT=	TACACS+ client library and PAM module
 #LICENSE=
 
-WRKSRC=	${WRKDIR}/tacplus
-EGDIR= ${PREFIX}/share/examples/pam_tacplus
-DOCDIR= ${PREFIX}/share/doc/pam_tacplus
-
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+WRKSRC=			${WRKDIR}/tacplus
+EGDIR=			${PREFIX}/share/examples/pam_tacplus
+DOCDIR=			${PREFIX}/share/doc/pam_tacplus
 
 SUBST_CLASSES+=         paths
 SUBST_FILES.paths=      ${WRKSRC}/Makefile
