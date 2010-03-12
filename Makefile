@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3846 2010/03/12 07:55:05 cheusov Exp $
+# $Id: Makefile,v 1.3847 2010/03/12 09:34:42 pettai Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2029,7 +2029,6 @@ SUBDIR+=	ruby-GalleryAdministrator
 SUBDIR+=	ruby-actionmessenger
 SUBDIR+=	ruby-cabocha
 SUBDIR+=	ruby-ditz
-SUBDIR+=	ruby-dnsruby
 SUBDIR+=	ruby-git
 SUBDIR+=	ruby-ming
 SUBDIR+=	ruby-term-ansicolor
