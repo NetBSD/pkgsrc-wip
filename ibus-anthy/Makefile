@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2010/01/15 05:08:41 obache Exp $
+# $NetBSD: Makefile,v 1.9 2010/03/12 04:26:19 obache Exp $
 #
 
-DISTNAME=	ibus-anthy-1.2.0.20100115
+DISTNAME=	ibus-anthy-1.2.0.20100312
 CATEGORIES=	inputmethod japanese
 MASTER_SITES=	http://ibus.googlecode.com/files/
 
@@ -39,4 +39,6 @@ PY_PATCHPLIST=		yes
 .include "../../inputmethod/anthy/buildlink3.mk"
 BUILDLINK_API_DEPENDS.ibus+=	ibus>=1.2.0.20100111
 .include "../../wip/ibus/buildlink3.mk"
+BUILDLINK_API_DEPENDS.pygtk2+=	${PYPKGPREFIX}-gtk2>=1.15.2
+.include "../../x11/py-gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
