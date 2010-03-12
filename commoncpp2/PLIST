@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.5 2009/09/05 19:42:54 asau Exp $
+@comment $NetBSD: PLIST,v 1.6 2010/03/12 14:56:54 thomasklausner Exp $
 bin/ccgnu2-config
 include/cc++/address.h
+include/cc++/applog.h
 include/cc++/buffer.h
 include/cc++/cmdoptns.h
 include/cc++/common.h
