@@ -17,14 +17,14 @@ libicc11bsd-ia32.a: icc11bsd-ia32.o
 	objcopy --redefine-sym my_stderr=stderr libicc11bsd-ia32.a
 
 icc11bsd-ia32.o: icc11bsd.c
-	cc -m32 -O icc11bsd.c -c -o icc11bsd-ia32.o
+	cc -m32 -fPIC -O icc11bsd.c -c -o icc11bsd-ia32.o
 
 libicc11bsd-intel64.a: icc11bsd-intel64.o
 	ar r libicc11bsd-intel64.a icc11bsd-intel64.o
 	objcopy --redefine-sym my_stderr=stderr libicc11bsd-intel64.a
 
 icc11bsd-intel64.o: icc11bsd.c
-	cc -m64 -O icc11bsd.c -c -o icc11bsd-intel64.o
+	cc -m64 -fPIC -O icc11bsd.c -c -o icc11bsd-intel64.o
 
 as: as.c util.h util.c
 	cc -O as.c util.c -o as

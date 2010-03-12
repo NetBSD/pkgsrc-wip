@@ -46,7 +46,7 @@ else
 	${0##*/} -Ulinux -U__linux__ -U__linux -U__gnu_linux__ -D__NetBSD__ "$@" \
 	         "-Qlocation,as,@ICC_PREFIX@/libexec"                            \
 	         "-Qlocation,ld,@ICC_PREFIX@/libexec" 3>&1 1>&2 2>&3 3>&- |      \
-	sed -e 's|^\( *\)/lib/ld-linux\.so\.2\([ \]*\)$|\1/usr/libexec/ld.elf_so\2|' \
-	    -e 's|^\( *\)/usr/lib/crt1.o\([ \]*\)$|\1/usr/lib/crt0.o\2|'             \
+	sed -e 's|^\( *\)/lib[64]*/ld-linux[x864-]*\.so\.2\([ \]*\)$|\1/usr/libexec/ld.elf_so\2|' \
+	    -e 's|^\( *\)/usr/lib[64]*/crt1.o\([ \]*\)$|\1/usr/lib/crt0.o\2|'             \
 	    -e 's|^\( *\)-ldl\([ \]*\)$|\1-licc11bsd\2|' 3>&1 1>&2 2>&3 3>&-
 fi

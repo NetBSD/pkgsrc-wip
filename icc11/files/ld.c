@@ -17,7 +17,11 @@ int main(int argc, char* argv[])
 			argv[i] = "-licc11bsd";
 		else if(strcmp(argv[i], "/usr/lib/crt1.o") == 0)
 			argv[i] = "/usr/lib/crt0.o";
+		else if(strcmp(argv[i], "/usr/lib64/crt1.o") == 0)
+			argv[i] = "/usr/lib/crt0.o";
 		else if(strcmp(argv[i], "/lib/ld-linux.so.2") == 0)
+			argv[i] = "/usr/libexec/ld.elf_so";
+		else if(strcmp(argv[i], "/lib64/ld-linux-x86-64.so.2") == 0)
 			argv[i] = "/usr/libexec/ld.elf_so";
 		else if(strncmp(argv[i], "/tmp/i", 6) == 0) {
 			strlcpy(emul, EMULDIR, sizeof(emul));
