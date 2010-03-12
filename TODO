@@ -118,11 +118,9 @@ Suggested ready to import packages
 	o paexec
 	o pylibpcap
 	o pypcap
-	o rancid
 	o runawk
 	o send-pr
 	o softhsm
-	o tclreadline
 	o xmms-cdread [pkg/36220]
 	o xmms-skins [pkg/35666]
 	o zkt
