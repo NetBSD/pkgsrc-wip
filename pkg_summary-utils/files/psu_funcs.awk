@@ -9,3 +9,13 @@ function pkgver_position (pkgname){
 function pkgname2pkgbase (pkgname){
 	return substr(pkgname, 1, pkgver_position(pkgname)-1)
 }
+
+# extract version from PKGNAME, e.g. -1.2.3, -[0-9]*, >=1.0 etc.
+function pkgname2version (pkgname,       pos){
+	pos = pkgver_position(pkgname)
+
+	if (substr(pkgname, pos, 1) == "-")
+		return substr(pkgname, pos+1)
+	else
+		return substr(pkgname, pos)
+}
