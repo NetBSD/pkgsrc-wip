@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3853 2010/03/13 11:01:25 pettai Exp $
+# $Id: Makefile,v 1.3854 2010/03/13 18:06:46 pettai Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2111,7 +2111,6 @@ SUBDIR+=	snark
 SUBDIR+=	snes9express
 SUBDIR+=	socklog
 SUBDIR+=	softflowd
-SUBDIR+=	softhsm
 SUBDIR+=	songwrite
 SUBDIR+=	soundtracker
 SUBDIR+=	sox

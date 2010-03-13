@@ -118,7 +118,6 @@ Suggested ready to import packages
 	o paexec
 	o runawk
 	o send-pr
-	o softhsm
 	o xmms-cdread [pkg/36220]
 	o xmms-skins [pkg/35666]
 	o zkt
