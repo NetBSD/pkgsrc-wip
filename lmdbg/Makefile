@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2010/01/31 19:57:34 cheusov Exp $
+# $NetBSD: Makefile,v 1.15 2010/03/13 17:56:27 cheusov Exp $
 #
 
 DISTNAME=	lmdbg-0.13.0
@@ -13,7 +13,7 @@ COMMENT=	Lightweight Malloc Debugger
 LICENSE=		mit
 
 BUILD_DEPENDS+=		mk-configure>=0.14.0:../../wip/mk-configure
-DEPENDS+=		pipestatus-[0-9]*:../../wip/pipestatus
+DEPENDS+=		pipestatus-[0-9]*:../../devel/pipestatus
 #DEPENDS+=		gdb-[0-9]*:../../devel/gdb
 
 PKG_DESTDIR_SUPPORT=	user-destdir
