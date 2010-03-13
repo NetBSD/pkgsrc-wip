@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2010/03/12 08:10:52 obache Exp $
+# $NetBSD: Makefile,v 1.11 2010/03/13 02:34:07 obache Exp $
 #
 
-DISTNAME=	ibus-anthy-1.2.0.20100312.1
+DISTNAME=	ibus-anthy-1.2.0.20100313
 CATEGORIES=	inputmethod japanese
 MASTER_SITES=	http://ibus.googlecode.com/files/
 
