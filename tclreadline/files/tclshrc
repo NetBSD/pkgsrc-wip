@@ -1,4 +1,0 @@
-if {$tcl_interactive} {
-   ::tclreadline::Loop
-}
-
