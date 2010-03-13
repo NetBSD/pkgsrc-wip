@@ -1,0 +1,4 @@
+py-mx-base contains the base set of packages, such as mxDateTime,
+mxTextTools, mxTools, etc. and is required by all other mx distributions.
+The packages in this distribution are made available under an Open-Source
+license.
