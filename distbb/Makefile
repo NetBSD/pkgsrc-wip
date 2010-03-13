@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2009/10/26 08:42:02 cheusov Exp $
+# $NetBSD: Makefile,v 1.59 2010/03/13 17:54:49 cheusov Exp $
 #
 
 DISTNAME=	distbb-0.33.0
@@ -13,8 +13,8 @@ LICENSE=	mit
 
 DEPENDS+=	pkg_summary-utils>=0.31.0:../../wip/pkg_summary-utils
 DEPENDS+=	paexec>=0.13.0nb1:../../wip/paexec
-DEPENDS+=	runawk>=0.14.3:../../wip/runawk
-DEPENDS+=	pipestatus>=0.5.0:../../wip/pipestatus
+DEPENDS+=	runawk>=0.17.0:../../wip/runawk
+DEPENDS+=	pipestatus>=0.5.0:../../devel/pipestatus
 
 USE_LANGUAGES=		# none
 USE_BSD_MAKEFILE=	yes
