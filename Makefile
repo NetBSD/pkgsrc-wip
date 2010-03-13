@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3852 2010/03/13 10:35:02 pettai Exp $
+# $Id: Makefile,v 1.3853 2010/03/13 11:01:25 pettai Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1958,7 +1958,6 @@ SUBDIR+=	py-zeitgeist
 SUBDIR+=	py-zinnia
 SUBDIR+=	pydance
 SUBDIR+=	pydb
-SUBDIR+=	pylibpcap
 SUBDIR+=	pynfo
 SUBDIR+=	pypanel
 SUBDIR+=	pypod

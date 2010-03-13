@@ -116,7 +116,6 @@ Suggested ready to import packages
 	o gtypist [pkg/40177]
 	o heirloom-sh [pkg/40272]
 	o paexec
-	o pylibpcap
 	o runawk
 	o send-pr
 	o softhsm
