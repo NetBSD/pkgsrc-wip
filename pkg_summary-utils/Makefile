@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2009/09/19 13:31:58 cheusov Exp $
+# $NetBSD: Makefile,v 1.33 2010/03/13 17:51:51 cheusov Exp $
 
 DISTNAME=	pkg_summary-utils-${VERSION}
 CATEGORIES=	pkgtools
@@ -13,7 +13,7 @@ LICENSE=	mit
 
 DEPENDS+=	runawk>=0.16.0:../../wip/runawk
 DEPENDS+=	awk-pkgsrc-dewey>=0.5.6:../../wip/awk-pkgsrc-dewey
-DEPENDS+=	pipestatus-[0-9]*:../../wip/pipestatus
+DEPENDS+=	pipestatus-[0-9]*:../../devel/pipestatus
 #DEPENDS+=	getopt-[0-9]*:../../misc/getopt
 
 CONFLICTS+=	paexec<0.13.0nb1
