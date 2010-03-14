@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2010/03/03 10:16:40 shindenmorr Exp $
+# $NetBSD: Makefile,v 1.10 2010/03/14 23:06:04 shindenmorr Exp $
 #
 
-DISTNAME=	ekg2-20091123
+DISTNAME=	ekg2-20100305
 CATEGORIES=	chat
 MASTER_SITES=	http://pl.ekg2.org/
 MASTER_SITES+=	http://pl.ekg2.org/archive/
