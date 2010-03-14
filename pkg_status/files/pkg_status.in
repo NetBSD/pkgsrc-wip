@@ -51,7 +51,8 @@ usage:
 OPTIONS:
   -h     display this help message
   -s     compare against pkgsrc source tree
-  -b     compare against pkg_summary(5) database (not implemented yet)
+  -b     compare against pkg_summary(5) database,
+         a path to which is stored in PKG_SUMMARY environment variable
   -r     raw pkg_cmp_summary(1)'s output
   -u     analyse packages marked as installed by user (the default)
   -a     analyse all installed packages
@@ -182,6 +183,15 @@ EOF
     fi
 }
 
+output_results (){
+    if test -s "$res_fn"; then
+	show_output_format
+	cat "$res_fn"
+    else
+	echo 'Everything is up-to-date'
+    fi
+}
+
 if test -n "$mode_src"; then
     $PKG_INFO_CMD -X $pkg_info_opts "$@" > "$bin_summary_fn"
     $PKG_INFO_CMD -Q PKGPATH $pkg_info_opts "$@" > "$pkgpaths_fn"
@@ -191,12 +201,7 @@ if test -n "$mode_src"; then
 	skip_uptodate '|' \
 	raw2hr > "$res_fn"
 
-    if test -s "$res_fn"; then
-	show_output_format
-	cat "$res_fn"
-    else
-	echo 'Everything is up-to-date'
-    fi
+    output_results
     exit 0
 fi
 
@@ -221,12 +226,7 @@ if test -n "$mode_bin"; then
 	skip_uptodate '|' \
 	raw2hr > "$res_fn"
 
-    if test -s "$res_fn"; then
-	show_output_format
-	cat "$res_fn"
-    else
-	echo 'Everything is up-to-date'
-    fi
+    output_results
     exit 0
 fi
 
