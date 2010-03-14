@@ -36,7 +36,7 @@ set -e
 export LC_ALL=C
 
 ############################################################
-PKG_INFO_CMD="${PKG_INFO_CMD-@PKG_INFO@}"
+PKG_INFO_CMD="${PKG_INFO_CMD-@PKG_INFO_CMD@}"
 
 ############################################################
 usage (){
