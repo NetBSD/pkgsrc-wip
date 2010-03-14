@@ -1,4 +1,6 @@
 Automatic CONFLICTS detection tools.
-  - pkg_all_conflicts needs src_summary on input which is can be generated
+  - pkg_all_conflicts needs src_summary on input which can be generated
     by pkg_src_summary(1), a part of wip/pkg_summary-utils
   - pkg_conflicts accesses PKG_ONLINE server (dictd.xdsl.by:26280)
+
+Of course it is based on pkg_summary-utils ;-)

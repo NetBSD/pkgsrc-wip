@@ -14,3 +14,5 @@ http://sourceforge.net/projects/dict
 
 pkg_online has minimal amount of things specific to pkgsrc and can
 easily be adapted to any other packageing systems.
+
+Of course it is based on pkg_summary-utils ;-)
