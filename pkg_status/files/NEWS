@@ -1,0 +1,19 @@
+======================================================================
+Version 0.6.0, by Aleksey Cheusov, Sun, 14 Mar 2010 11:25:48 +0200
+
+  Implementation for option -b
+     (comparison with pkg_summary.{txt,gz,bz2})
+
+  In order to avoid conflicts with FreeBSD and OpenBSD native pkg_info
+  utility, path to pkgsrc pkg_info is kept in pkg_status source file.
+
+  fix: with -r stupid banner should not be showed,
+  that is -r implies -Q
+
+  Alternative to pkg_micro_src_summary utility is set by
+  PKG_SRC_SUMMARY_CMD variable.
+
+======================================================================
+Version 0.5.0, by Aleksey Cheusov, Thu, 11 Mar 2010
+
+  initial release
