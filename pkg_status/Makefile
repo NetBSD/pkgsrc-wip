@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/03/14 08:28:38 cheusov Exp $
+# $NetBSD: Makefile,v 1.4 2010/03/14 09:03:20 cheusov Exp $
 
 DISTNAME=	pkg_status-0.5
 CATEGORIES=	pkgtools
@@ -22,7 +22,7 @@ NO_CHECKSUM=	yes
 WRKSRC=		${WRKDIR}
 
 do-build:
-	sed -e 's,@PKG_INFO@,${PKG_INFO},' \
+	sed -e 's,@PKG_INFO_CMD@,${PKG_INFO},' \
 	    ${.CURDIR}/files/pkg_status.in > ${WRKSRC}/pkg_status
 
 do-install:

@@ -26,7 +26,7 @@
 # user settable variables
 
 PKG_SRC_SUMMARY=${PKG_SRC_SUMMARY-pkg_micro_src_summary}
-PKG_INFO='@PKG_INFO@'
+PKG_SUMMARY=${PKG_SUMMARY-@PACKAGES@/All/pkg_summary.txt}
 
 ############################################################
 set -e
@@ -34,6 +34,9 @@ set -e
 . pipestatus
 
 export LC_ALL=C
+
+############################################################
+PKG_INFO_CMD="${PKG_INFO_CMD-@PKG_INFO@}"
 
 ############################################################
 usage (){
@@ -82,8 +85,6 @@ while test $# -ne 0; do
 #	-o)
 #	    mode_online=1;;
 	-b)
-	    echo '-b option is currently not implemented yet' 1>&2
-	    exit 1
 	    mode_bin=1;;
 	-r)
 	    submode_raw=1;;
@@ -160,11 +161,12 @@ fi
 ###
 src_summary_fn=$tmp_dir/src_summary.txt
 bin_summary_fn=$tmp_dir/bin_summary.txt
+ext_summary_fn=$tmp_dir/ext_summary.txt
 res_fn=$tmp_dir/result.txt
 pkgpaths_fn=$tmp_dir/pkgs.txt
 
 show_output_format (){
-    if test -z "$quiet"; then
+    if test -z "$quiet" -a -z "$submode_raw"; then
 	cat <<EOF
 Format of the output:
 SIGN PKGPATH PKGBASE VERSION1 [VERSION2]
@@ -181,13 +183,44 @@ EOF
 }
 
 if test -n "$mode_src"; then
-    $PKG_INFO -X $pkg_info_opts "$@" > "$bin_summary_fn"
-    $PKG_INFO -Q PKGPATH $pkg_info_opts "$@" > "$pkgpaths_fn"
+    $PKG_INFO_CMD -X $pkg_info_opts "$@" > "$bin_summary_fn"
+    $PKG_INFO_CMD -Q PKGPATH $pkg_info_opts "$@" > "$pkgpaths_fn"
     $PKG_SRC_SUMMARY < "$pkgpaths_fn" > "$src_summary_fn"
     runpipe0 \
 	pkg_cmp_summary -p "$bin_summary_fn" "$src_summary_fn" '|' \
 	skip_uptodate '|' \
 	raw2hr > "$res_fn"
+
+    if test -s "$res_fn"; then
+	show_output_format
+	cat "$res_fn"
+    else
+	echo 'Everything is up-to-date'
+    fi
+    exit 0
+fi
+
+cat_ext_summary (){
+    case "$PKG_SUMMARY" in
+	*.gz)
+	    gzip -dc "$PKG_SUMMARY";;
+	*.bz2)
+	    bzip2 -dc "$PKG_SUMMARY";;
+	*)
+	    cat "$PKG_SUMMARY";;
+    esac
+}
+
+if test -n "$mode_bin"; then
+    $PKG_INFO_CMD -X $pkg_info_opts "$@" > "$bin_summary_fn"
+    $PKG_INFO_CMD -Q PKGPATH $pkg_info_opts "$@" > "$pkgpaths_fn"
+    cat_ext_summary | pkg_refresh_summary > "$ext_summary_fn"
+    runpipe0 \
+	pkg_cmp_summary -p "$bin_summary_fn" "$ext_summary_fn" '|' \
+	sed '/^[+]/ d' '|' \
+	skip_uptodate '|' \
+	raw2hr > "$res_fn"
+
     if test -s "$res_fn"; then
 	show_output_format
 	cat "$res_fn"
