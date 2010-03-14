@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2009/12/02 15:03:01 tnn2 Exp $
+# $NetBSD: options.mk,v 1.4 2010/03/14 12:14:26 tnn2 Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.xulrunner
 PKG_SUPPORTED_OPTIONS=	debug mozilla-jemalloc gnome
@@ -40,6 +40,7 @@ CONFIGURE_ARGS+=	--disable-jemalloc
 
 .if !empty(PKG_OPTIONS:Mdebug)
 CONFIGURE_ARGS+=	--enable-debug
+CONFIGURE_ARGS+=	--disable-install-strip
 PLIST.debug=		yes
 .else
 CONFIGURE_ARGS+=	--disable-debug
