@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2009/07/08 10:48:13 jihbed Exp $
+# $NetBSD: Makefile,v 1.5 2010/03/14 23:03:55 shindenmorr Exp $
 #
 
-DISTNAME=	libgadu-1.8.2
+DISTNAME=	libgadu-1.9.0-rc2
+PKGNAME=	libgadu-1.9.0rc2
 CATEGORIES=	wip
 MASTER_SITES=	http://toxygen.net/libgadu/files/
 
@@ -15,10 +16,10 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config gmake
+REPLACE_PERL=	test/protocol/compile
 USE_LANGUAGES=	c c++
 
-CONFIGURE_ARGS+=			  \
-			--without-openssl \
+CONFIGURE_ARGS+=	--without-openssl \
 			--with-pthread 	  \
 			--without-bind
 
