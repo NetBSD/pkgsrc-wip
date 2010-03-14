@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2010/02/21 12:41:02 ryo-on Exp $
-lib/X11/fonts/local/4x8.pcf.gz
-lib/X11/fonts/local/4x8_8859.pcf.gz
-lib/X11/fonts/local/misaki.pcf.gz
-lib/X11/fonts/local/misakimn.pcf.gz
-share/doc/${PKGBASE}/msk_${PKGVERSION}.txt
-share/doc/${PKGBASE}/msk_bdf.txt
+@comment $NetBSD: PLIST,v 1.3 2010/03/14 00:01:52 ryo-on Exp $
+lib/X11/fonts/local/misaki_4x8_iso8859.pcf.gz
+lib/X11/fonts/local/misaki_4x8_jisx0201.pcf.gz
+lib/X11/fonts/local/misaki_gothic.pcf.gz
+lib/X11/fonts/local/misaki_mincho.pcf.gz
+share/doc/${PKGBASE}/misaki_bdf.txt
+share/doc/${PKGBASE}/readme.txt

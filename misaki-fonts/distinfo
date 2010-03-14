@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/01/05 21:09:11 ryo-on Exp $
+$NetBSD: distinfo,v 1.2 2010/03/14 00:01:52 ryo-on Exp $
 
-SHA1 (mskbdb11.tar.gz) = 31bc1ef15f65a7762e66a3329f1210701db61890
-RMD160 (mskbdb11.tar.gz) = fa034517c9b911b00c4b4e480b61cbe1b8da5f80
-Size (mskbdb11.tar.gz) = 202863 bytes
-SHA1 (patch-aa) = c354be7accef33a47aa772aebf4b3218f529934c
+SHA1 (misaki_bdf_b11a.tar.gz) = d59646f82ac6db29b6697a5a6e56303514344fa2
+RMD160 (misaki_bdf_b11a.tar.gz) = 58f9c1e4cd83824088773046e82e10a1a2915c43
+Size (misaki_bdf_b11a.tar.gz) = 202682 bytes
