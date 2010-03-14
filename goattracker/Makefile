@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2009/10/12 12:55:08 rodo6510 Exp $
+# $NetBSD: Makefile,v 1.4 2010/03/14 13:42:25 rodo6510 Exp $
 #
 
 DISTNAME=	goattrk2
-PKGNAME=	goattracker-2.68
+PKGNAME=	goattracker-2.70
 CATEGORIES=	audio
 MASTER_SITES=	http://cadaver.homeftp.net/tools/
 EXTRACT_SUFX=	.zip
