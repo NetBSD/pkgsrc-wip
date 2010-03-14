@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/01/18 09:38:27 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2010/03/14 16:32:22 thomasklausner Exp $
 #
 
 DISTNAME=	mapnik-0.4.0
@@ -33,11 +33,11 @@ do-install:
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../geography/proj/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../lang/python/application.mk"
-.include "../../misc/proj/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

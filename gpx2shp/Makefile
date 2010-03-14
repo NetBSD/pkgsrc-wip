@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/03/04 01:21:39 lexort Exp $
+# $NetBSD: Makefile,v 1.3 2010/03/14 16:32:22 thomasklausner Exp $
 #
 
 DISTNAME=	gpx2shp-0.69
@@ -16,6 +16,6 @@ USE_LANGUAGES=	c
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake
 
-.include "../../misc/proj/buildlink3.mk"
+.include "../../geography/proj/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

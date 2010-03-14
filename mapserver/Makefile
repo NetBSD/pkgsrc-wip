@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2010/01/17 12:03:29 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.21 2010/03/14 16:32:22 thomasklausner Exp $
 #
 
 DISTNAME=		mapserver-4.4.2
@@ -56,13 +56,13 @@ do-install:
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../geography/gdal-lib/buildlink3.mk"
 .include "../../geography/geos/buildlink3.mk"
+.include "../../geography/proj/buildlink3.mk"
 .include "../../graphics/gd/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
-.include "../../misc/proj/buildlink3.mk"
 .include "../../print/pdflib/buildlink3.mk"
 .include "../../mk/pgsql.buildlink3.mk" # this must come before the next line
 #.include "../../geography/postgresql${PGSQL_VERSION}-postgis/buildlink3.mk"
