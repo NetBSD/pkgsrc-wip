@@ -26,6 +26,7 @@
 # user settable variables
 
 PKG_SRC_SUMMARY=${PKG_SRC_SUMMARY-pkg_micro_src_summary}
+PKG_INFO='@PKG_INFO@'
 
 ############################################################
 set -e
@@ -180,8 +181,8 @@ EOF
 }
 
 if test -n "$mode_src"; then
-    pkg_info -X $pkg_info_opts "$@" > "$bin_summary_fn"
-    pkg_info -Q PKGPATH $pkg_info_opts "$@" > "$pkgpaths_fn"
+    $PKG_INFO -X $pkg_info_opts "$@" > "$bin_summary_fn"
+    $PKG_INFO -Q PKGPATH $pkg_info_opts "$@" > "$pkgpaths_fn"
     $PKG_SRC_SUMMARY < "$pkgpaths_fn" > "$src_summary_fn"
     runpipe0 \
 	pkg_cmp_summary -p "$bin_summary_fn" "$src_summary_fn" '|' \
