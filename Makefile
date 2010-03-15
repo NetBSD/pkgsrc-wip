@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3861 2010/03/15 18:53:28 pettai Exp $
+# $Id: Makefile,v 1.3862 2010/03/15 19:05:35 asau Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1219,11 +1219,6 @@ SUBDIR+=	milter-manager
 SUBDIR+=	mime-support
 SUBDIR+=	min12xxw
 SUBDIR+=	ming
-SUBDIR+=	mingw
-SUBDIR+=	mingw-binutils
-SUBDIR+=	mingw-gcc
-SUBDIR+=	mingw-runtime-bin
-SUBDIR+=	mingw-w32api-bin
 SUBDIR+=	minimalist
 SUBDIR+=	minisat2
 SUBDIR+=	miniupnpc

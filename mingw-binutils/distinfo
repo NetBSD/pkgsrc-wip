@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.5 2008/07/12 09:38:39 makoto Exp $
-
-SHA1 (binutils-2.18.tar.bz2) = fdec92e9dfc6c32155869f3910f47041c78e2277
-RMD160 (binutils-2.18.tar.bz2) = 78d07475667c55ecbf9068dbb90362a3445b2a99
-Size (binutils-2.18.tar.bz2) = 14962245 bytes
-SHA1 (patch-aa) = d0eaca0996d6bc4858230e7c22a26d83336b6370
