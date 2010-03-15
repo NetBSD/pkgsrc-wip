@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3858 2010/03/15 07:37:18 pettai Exp $
+# $Id: Makefile,v 1.3859 2010/03/15 14:13:02 asau Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -584,7 +584,6 @@ SUBDIR+=	gretl
 SUBDIR+=	grip
 SUBDIR+=	grisbi
 SUBDIR+=	groku
-SUBDIR+=	gromacs
 SUBDIR+=	grsync
 SUBDIR+=	grub2
 SUBDIR+=	grub2-current
