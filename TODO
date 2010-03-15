@@ -35,8 +35,9 @@ Suggested package updates
 	o gnome-bluetooth-2.28.6
 	o gnunet-0.8.1b
 	o gnupod-0.99.8
+	o gobject-introspection-0.6.8
 	o grsync-1.0.0
-	o grub2-1.97.2
+	o grub2-1.98
 	o gtkaml-0.2.9.1
 	o guichan-0.8.1
 	o guitone-0.9
@@ -62,7 +63,7 @@ Suggested package updates
 	o lirc-0.8.6
 	o lives-1.2.1
 	o man-1.6f
-	o meta-tracker-0.7.24
+	o meta-tracker-0.7.25
 	o mixxx-1.7.0
 	o mpgedit-0.73dev2
 	o mupen64-0.5
@@ -72,16 +73,17 @@ Suggested package updates
 	o osmose-0.9.1
 	o parted-1.9.0
 	o passepartout-0.7.1
+	o pdnsd-1.2.8
 	o pike-7.8.352
 	o py-PyPE-2.9
 	o py-gnucash-0.7.55
 	o py-zeitgeist-0.3.2
 	o qcomicbook-0.5.0
 	o qtcreator-1.3.1
-	o rdup-1.0.5
+	o rdup-1.1.1
 	o rezound-0.12.3beta
 	o rosegarden-current-1.4.0
-	o rsyslog-5.2.0
+	o rsyslog-5.4.0
 	o sflphone-0.7.2
 	o siege-2.69
 	o smc-1.8
