@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2010/03/15 13:38:44 asau Exp $
+# $NetBSD: Makefile,v 1.14 2010/03/15 13:49:32 asau Exp $
 #
 
 DISTNAME=		gromacs-4.0.7
@@ -24,6 +24,7 @@ CONFIGURE_ARGS+=	--with-gsl
 
 .include "options.mk"
 
+USE_TOOLS+=		perl:run
 REPLACE_PERL=		scripts/demux.pl scripts/xplor2gmx.pl
 
 .include "../../math/fftw/buildlink3.mk"
