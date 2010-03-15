@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3862 2010/03/15 19:05:35 asau Exp $
+# $Id: Makefile,v 1.3863 2010/03/15 23:30:03 ryo-on Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -934,6 +934,9 @@ SUBDIR+=	io-vm
 SUBDIR+=	io-zlib
 SUBDIR+=	iodine
 SUBDIR+=	ion3
+SUBDIR+=	ipaexfonts-ttf
+SUBDIR+=	ipafonts-ttf
+SUBDIR+=	ipax0208fonts-ttf
 SUBDIR+=	ipfm
 SUBDIR+=	ipmitools
 SUBDIR+=	ipsvd
@@ -2171,6 +2174,7 @@ SUBDIR+=	tac_plus-libradius
 SUBDIR+=	tacacs-shrubbery
 SUBDIR+=	taglib-sharp
 SUBDIR+=	tagtool
+SUBDIR+=	takao-fonts-ttf
 SUBDIR+=	talksoup
 SUBDIR+=	tardy
 SUBDIR+=	task
