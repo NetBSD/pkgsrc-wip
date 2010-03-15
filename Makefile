@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3860 2010/03/15 17:33:18 pettai Exp $
+# $Id: Makefile,v 1.3861 2010/03/15 18:53:28 pettai Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2399,7 +2399,6 @@ SUBDIR+=	xmlformat-docs
 SUBDIR+=	xmlformat-perl
 SUBDIR+=	xmlformat-ruby
 SUBDIR+=	xmlsysinfo
-SUBDIR+=	xmltooling-c
 SUBDIR+=	xmms-cdread
 SUBDIR+=	xmms-dumb
 SUBDIR+=	xmms-infopipe
