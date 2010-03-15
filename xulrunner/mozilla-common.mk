@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.4 2010/01/19 10:06:15 tnn2 Exp $
+# $NetBSD: mozilla-common.mk,v 1.5 2010/03/15 17:25:34 tnn2 Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 1.9.1.
 # 
@@ -14,6 +14,7 @@ BUILD_DEPENDS+=		zip>=2.3:../../archivers/zip
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}security/nss/tests/libpkix/libpkix.sh
+CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}security/nss/tests/multinit/multinit.sh
 PRIVILEGED_STAGES+=	clean
 
 CONFIGURE_ARGS+=	--disable-tests --disable-pedantic
