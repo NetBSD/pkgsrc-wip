@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3859 2010/03/15 14:13:02 asau Exp $
+# $Id: Makefile,v 1.3860 2010/03/15 17:33:18 pettai Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1152,7 +1152,6 @@ SUBDIR+=	lletters
 SUBDIR+=	llvm
 SUBDIR+=	lmdbg
 SUBDIR+=	lmtp2nntp
-SUBDIR+=	log4shib
 SUBDIR+=	logfmon-devel
 SUBDIR+=	logrotate
 SUBDIR+=	lorder
