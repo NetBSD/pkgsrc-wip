@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2008/07/26 13:41:37 obache Exp $
-# $Id: Makefile,v 1.12 2008/07/26 13:41:37 obache Exp $
+# $NetBSD: Makefile,v 1.13 2010/03/15 18:10:05 asau Exp $
 
 DISTNAME=	mingw-runtime-3.14
 PKGNAME=	mingw-runtime-bin-3.14
