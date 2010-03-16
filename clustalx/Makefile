@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2010/03/16 15:12:46 brook1 Exp $
+# $NetBSD: Makefile,v 1.10 2010/03/16 15:23:45 brook1 Exp $
 #
 
 DISTNAME=		clustalx-2.0.12
 CATEGORIES=		biology
-MASTER_SITES=		ftp://ftp-igbmc.u-strasbg.fr/pub/ClustalX/ \
-			ftp://ftp.ebi.ac.uk/pub/software/clustalw2/2.0.12/
+MASTER_SITES=		ftp://ftp.ebi.ac.uk/pub/software/clustalw2/2.0.12/
 
 MAINTAINER=	brook@nmsu.edu
 HOMEPAGE=	http://bips.u-strasbg.fr/fr/Documentation/ClustalX/
