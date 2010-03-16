@@ -1,8 +1,21 @@
-Clustal X is an X windows interface for the ClustalW multiple sequence
-alignment program. It provides an integrated environment for performing
-multiple sequence and profile alignments and analysing the results. The
-sequence alignment is displayed in a window on the screen. It also provides
-a versatile coloring scheme which has been incorporated to allow one to
-highlight conserved features in the alignment. The pull-down menus at the
-top of the window allow you to select all the options required for
-traditional multiple sequence and profile alignment.
+Clustal X is a new windows interface for the ClustalW multiple
+sequence alignment program.  It provides an integrated environment for
+performing multiple sequence and profile alignments and analysing the
+results.  The sequence alignment is displayed in a window on the
+screen.  A versatile coloring scheme has been incorporated allowing
+you to highlight conserved features in the alignment.  The pull-down
+menus at the top of the window allow you to select all the options
+required for traditional multiple sequence and profile alignment.
+
+You can cut-and-paste sequences to change the order of the alignment;
+you can select a subset of sequences to be aligned; you can select a
+sub-range of the alignment to be realigned and inserted back into the
+original alignment.
+
+Alignment quality analysis can be performed and low-scoring segments
+or exceptional residues can be highlighted.
+
+ClustalX is available for a number of different platforms including:
+SUN Solaris, IRIX5.3 on Silicon Graphics, Digital UNIX on DECStations,
+Microsoft Windows (32 bit) for PC's, Linux ELF for x86 PC's and
+Macintosh PowerMac.

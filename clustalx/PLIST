@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:31 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.3 2010/03/16 15:12:46 brook1 Exp $
 bin/clustalx
-bin/clustalx_help
-bin/coldna.par
-bin/colprint.par
-bin/colprot.par
-share/doc/clustalx/README_X
-share/doc/clustalx/clustalx.html
+libexec/clustalx/clustalx
+libexec/clustalx/clustalx.hlp
+libexec/clustalx/coldna.xml
+libexec/clustalx/colprint.xml
+libexec/clustalx/colprot.xml

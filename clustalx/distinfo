@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2005/09/28 06:41:10 rillig Exp $
+$NetBSD: distinfo,v 1.3 2010/03/16 15:12:46 brook1 Exp $
 
-SHA1 (clustalx1.83.sun.tar.gz) = 456e850f24c59b6bbe9944864711257106205329
-RMD160 (clustalx1.83.sun.tar.gz) = d64c2bc17204b7c9dc08a0ea0050e68b57d37283
-Size (clustalx1.83.sun.tar.gz) = 860205 bytes
-SHA1 (patch-aa) = c252ab1a082f3a976fd23a9082ca06e8a520c962
+SHA1 (clustalx-2.0.12.tar.gz) = f2c5e3450769f384ff6d1725c124d48ba54b975e
+RMD160 (clustalx-2.0.12.tar.gz) = 8496a865acf7dbf935052bcdc0377bb2ce32baed
+Size (clustalx-2.0.12.tar.gz) = 337330 bytes
