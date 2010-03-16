@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2010/03/16 20:15:10 pettai Exp $
+# $NetBSD: Makefile,v 1.9 2010/03/16 20:31:27 pettai Exp $
 #
 
 DISTNAME=		gallery-2.2.6-full
-PKGNAME=		gallery2-2.2.6
+PKGNAME=		gallery-2.2.6
 #PKGREVISION=		1
 CATEGORIES=		www graphics
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gallery/}
@@ -14,8 +14,8 @@ LICENSE=		gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_LANGUAGES=		# none
 USE_TOOLS=		pax
+USE_LANGUAGES=		# none
 
 DEPENDS+=		${PHP_PKG_PREFIX}-gd>=5.0.4:../../graphics/php-gd
 DEPENDS+=		${PHP_PKG_PREFIX}-gettext>=5.0.4:../../devel/php-gettext
@@ -60,15 +60,15 @@ INSTALLATION_DIRS+=	${G2DATA}
 post-extract:
 	${CP} ${FILESDIR}/gallery2.conf ${WRKDIR}/
 	${CP} ${FILESDIR}/config.php ${WRKDIR}/
-	#${CP} ${FILESDIR}/GalleryTemplateAdapter.class.NetBSD-patch ${WRKSRC}/
-	#${CP} ${FILESDIR}/ALL.theme.tpl.NetBSD-patch ${WRKSRC}/
+
+pre-install:
+	${RM} ${WRKSRC}/lib/tools/po/extract.php.orig
 
 do-install:
 	${INSTALL_DATA} ${WRKDIR}/gallery2.conf ${DESTDIR}${EGDIR}/gallery2.conf
 	${INSTALL_DATA} ${WRKDIR}/config.php ${DESTDIR}${EGDIR}/config.php
 	${INSTALL_DATA} ${FILESDIR}/.htaccess ${DESTDIR}${G2DIR}/.htaccess
-	cd ${WRKSRC} && {PAX} -rwppm . ${DESTDIR}${G2DIR}/
-	#${INSTALL_DATA} ${FILESDIR}/*.png ${DESTDIR}${G2DIR}/images/
+	cd ${WRKSRC} && ${PAX} -rwppm . ${DESTDIR}${G2DIR}/
 
 .include "../../lang/php/phpversion.mk"
 .include "../../mk/bsd.pkg.mk"
