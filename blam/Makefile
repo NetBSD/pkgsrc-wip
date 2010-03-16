@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/01/18 09:38:18 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2010/03/16 19:52:07 jihbed Exp $
 #
 
 DISTNAME=	blam-1.8.7
@@ -7,7 +7,7 @@ CATEGORIES=	www
 MASTER_SITES=	http://www.cmartin.tk/blam/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	kamelderouiche@yahoo.com
+MAINTAINER=	pkgsrc.gnome@gmail.com
 HOMEPAGE=	http://www.cmartin.tk/blam.html
 COMMENT=	Blam is a feed reader for GNOME written in C\#
 LICENSE=	gnu-gpl-v2

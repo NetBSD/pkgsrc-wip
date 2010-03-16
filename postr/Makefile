@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/01/14 08:32:40 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2010/03/16 19:49:03 jihbed Exp $
 #
 
 DISTNAME=	postr-0.12.4
@@ -6,7 +6,7 @@ CATEGORIES=	graphics gnome
 MASTER_SITES=	ftp://ftp.gnome.org/pub/gnome/sources/postr/0.12/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	kamelderouiche@yahoo.com
+MAINTAINER=	pkgsrc.gnome@gmail.com
 HOMEPAGE=	http://projects.gnome.org/postr/
 COMMENT=	GNOME flickr uploader
 #LICENSE=	# TODO: (see mk/license.mk)
