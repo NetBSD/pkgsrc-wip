@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2010/03/14 12:14:26 tnn2 Exp $
+# $NetBSD: options.mk,v 1.5 2010/03/16 20:12:06 tnn2 Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.xulrunner
 PKG_SUPPORTED_OPTIONS=	debug mozilla-jemalloc gnome
@@ -10,12 +10,13 @@ PKG_SUGGESTED_OPTIONS+=	mozilla-jemalloc
 .endif
 
 .if !empty(MACHINE_ARCH:Mi386) || !empty(MACHINE_ARCH:Msparc) || \
-	!empty(MACHINE_ARCH:Marm)
+	!empty(MACHINE_ARCH:Marm) || !empty(MACHINE_ARCH:Mx86_64)
 PKG_SUPPORTED_OPTIONS+=	mozilla-jit
 PKG_SUGGESTED_OPTIONS+=	mozilla-jit
 NANOJIT_ARCH.i386=	i386
 NANOJIT_ARCH.arm=	ARM
 NANOJIT_ARCH.sparc=	Sparc
+NANOJIT_ARCH.x86_64=	X64
 .endif
 
 .include "../../mk/bsd.options.mk"

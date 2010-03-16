@@ -1,12 +1,12 @@
-$NetBSD: patch-rc,v 1.1.1.1 2009/12/02 14:36:40 tnn2 Exp $
+$NetBSD: patch-rc,v 1.2 2010/03/16 20:12:06 tnn2 Exp $
 
---- browser/branding/unofficial/locales/en-US/brand.dtd.orig	2009-10-29 23:10:36.000000000 +0100
+--- browser/branding/unofficial/locales/en-US/brand.dtd.orig	2010-03-16 01:02:50.000000000 +0000
 +++ browser/branding/unofficial/locales/en-US/brand.dtd
 @@ -1,5 +1,5 @@
--<!ENTITY  brandShortName        "Namoroka">
--<!ENTITY  brandFullName         "Namoroka">
+-<!ENTITY  brandShortName        "Mozilla Developer Preview">
+-<!ENTITY  brandFullName         "Mozilla Developer Preview">
 +<!ENTITY  brandShortName        "Browser">
 +<!ENTITY  brandFullName         "Browser">
  <!ENTITY  vendorShortName       "mozilla.org">
- <!ENTITY  logoCopyright         " ">
+ <!ENTITY  logoTrademark         " ">
  

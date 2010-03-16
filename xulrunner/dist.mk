@@ -1,12 +1,12 @@
-# $NetBSD: dist.mk,v 1.10 2010/03/15 17:25:33 tnn2 Exp $
+# $NetBSD: dist.mk,v 1.11 2010/03/16 20:12:06 tnn2 Exp $
 #
 # used by wip/xulrunner/Makefile
 # used by wip/firefox/Makefile
 
 DISTNAME=	firefox-${FIREFOX_VER}.source
-FIREFOX_VER=	3.6${MOZ_BRANCH_MINOR}
-MOZ_BRANCH=	1.9.2
-MOZ_BRANCH_MINOR=	.2
+FIREFOX_VER=	3.7a4pre${MOZ_BRANCH_MINOR}
+MOZ_BRANCH=	1.9.3a4pre
+MOZ_BRANCH_MINOR=	# empty
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=firefox/releases/${FIREFOX_VER}/source/}
 EXTRACT_SUFX=	.tar.bz2
 
@@ -16,6 +16,6 @@ PATCHDIR=	${.CURDIR}/../../wip/xulrunner/patches
 WRKSRC=		${WRKDIR}/mozilla-${MOZ_BRANCH}
 
 # snapshot overrides
-DISTNAME=	f14062c981ba
-MASTER_SITES=	http://hg.mozilla.org/releases/mozilla-1.9.2/archive/
-WRKSRC=		${WRKDIR}/mozilla-1-9-2-f14062c981ba
+DISTNAME=	050887c64183
+MASTER_SITES=	http://hg.mozilla.org/mozilla-central/archive/
+WRKSRC=		${WRKDIR}/mozilla-central-050887c64183

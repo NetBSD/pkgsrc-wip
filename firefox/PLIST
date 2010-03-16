@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.17 2009/12/02 15:03:02 tnn2 Exp $
+@comment $NetBSD: PLIST,v 1.18 2010/03/16 20:12:07 tnn2 Exp $
 bin/firefox
-lib/firefox/.autoreg
 lib/firefox/LICENSE
 lib/firefox/README.txt
 lib/firefox/application.ini
@@ -8,23 +7,21 @@ lib/firefox/blocklist.xml
 lib/firefox/browserconfig.properties
 lib/firefox/chrome/browser.jar
 lib/firefox/chrome/browser.manifest
-lib/firefox/chrome/classic.jar
-lib/firefox/chrome/classic.manifest
 lib/firefox/chrome/en-US.jar
 lib/firefox/chrome/en-US.manifest
 lib/firefox/chrome/icons/default/default16.png
 lib/firefox/chrome/icons/default/default32.png
 lib/firefox/chrome/icons/default/default48.png
-lib/firefox/chrome/reporter.jar
-lib/firefox/chrome/reporter.manifest
+lib/firefox/chrome/toolkit.jar
+lib/firefox/chrome/toolkit.manifest
 lib/firefox/components/FeedConverter.js
 lib/firefox/components/FeedWriter.js
+lib/firefox/components/PlacesProtocolHandler.js
 lib/firefox/components/WebContentConverter.js
 lib/firefox/components/browser.xpt
 lib/firefox/components/components.list
 lib/firefox/components/fuelApplication.js
 lib/firefox/components/libbrowsercomps.so
-lib/firefox/components/libbrowserdirprovider.so
 ${PLIST.gnome}lib/firefox/components/libnkgnomevfs.so
 lib/firefox/components/nsBrowserContentHandler.js
 lib/firefox/components/nsBrowserGlue.js
@@ -53,6 +50,7 @@ lib/firefox/extensions/{972ce4c6-7e08-4474-a285-3208198ce6fd}/preview.png
 lib/firefox/firefox
 lib/firefox/icons/document.png
 lib/firefox/icons/mozicon128.png
+lib/firefox/libmozalloc.so
 lib/firefox/modules/NetworkPrioritizer.jsm
 lib/firefox/modules/distribution.js
 lib/firefox/modules/openLocationLastURL.jsm

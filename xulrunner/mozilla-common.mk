@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.5 2010/03/15 17:25:34 tnn2 Exp $
+# $NetBSD: mozilla-common.mk,v 1.6 2010/03/16 20:12:06 tnn2 Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 1.9.1.
 # 
@@ -30,6 +30,7 @@ CONFIGURE_ARGS+=	--enable-system-sqlite
 CONFIGURE_ARGS+=	--disable-crashreporter
 CONFIGURE_ARGS+=	--disable-libnotify
 CONFIGURE_ARGS+=	--disable-necko-wifi
+CONFIGURE_ARGS+=	--disable-ipc # no chromium platform support
 
 SUBST_CLASSES+=			fix-paths
 SUBST_STAGE.fix-paths=		pre-configure
@@ -73,17 +74,19 @@ CONFIGURE_ENV+=	ac_cv_thread_keyword=no
 
 .if ${OPSYS} == "SunOS"
 # native libbz2.so hides BZ2_crc32Table
-PREFER.bzip2?= pkgsrc
+PREFER.bzip2?=	pkgsrc
 .endif
 
 .if ${OPSYS} == "Linux"
 .include "../../audio/alsa-lib/buildlink3.mk"
 .endif
 .include "../../archivers/bzip2/buildlink3.mk"
-BUILDLINK_API_DEPENDS.sqlite3+=	sqlite3>=3.6.16
+BUILDLINK_API_DEPENDS.sqlite3+=	sqlite3>=3.6.22
+CONFIGURE_ENV+=	ac_cv_sqlite_secure_delete=yes # XXX pragma secure_delete
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
+.include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../net/libIDL/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.18.3nb1
 .include "../../x11/gtk2/buildlink3.mk"

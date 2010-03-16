@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.7 2009/12/02 15:03:01 tnn2 Exp $
+$NetBSD: patch-aa,v 1.8 2010/03/16 20:12:06 tnn2 Exp $
 
---- configure.in.orig	2009-10-16 17:13:35.000000000 +0200
+--- configure.in.orig	2010-03-16 01:02:50.000000000 +0000
 +++ configure.in
-@@ -1799,7 +1799,7 @@ case "$target" in
-     fi
+@@ -1915,7 +1915,7 @@ case "$target" in
+     MOZ_FIX_LINK_PATHS='-Wl,-executable_path,$(LIBXUL_DIST)/bin'
      ;;
  
 -*-freebsd*)
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.7 2009/12/02 15:03:01 tnn2 Exp $
      if test `test -x /usr/bin/objformat && /usr/bin/objformat || echo elf` != "elf"; then
  	DLL_SUFFIX=".so.1.0"
  	DSO_LDOPTS="-shared"
-@@ -1813,6 +1813,9 @@ case "$target" in
+@@ -1929,6 +1929,9 @@ case "$target" in
  #	MKSHLIB_FORCE_ALL='-Wl,-Bforcearchive'
  #	MKSHLIB_UNFORCE_ALL=''
  #    fi
@@ -21,7 +21,7 @@ $NetBSD: patch-aa,v 1.7 2009/12/02 15:03:01 tnn2 Exp $
      ;; 
  
  *-hpux*)
-@@ -3043,6 +3046,9 @@ dnl ====================================
+@@ -3220,6 +3223,9 @@ dnl ====================================
  case $target in
  *-hpux11.*)
  	;;
@@ -31,7 +31,7 @@ $NetBSD: patch-aa,v 1.7 2009/12/02 15:03:01 tnn2 Exp $
  *)
  	AC_CHECK_LIB(c_r, gethostbyname_r)
  	;;
-@@ -4158,6 +4164,14 @@ else
+@@ -4492,6 +4498,14 @@ else
     fi
  fi
  
@@ -46,7 +46,7 @@ $NetBSD: patch-aa,v 1.7 2009/12/02 15:03:01 tnn2 Exp $
  if test -z "$SKIP_LIBRARY_CHECKS"; then
  dnl system JPEG support
  dnl ========================================================
-@@ -8375,7 +8389,8 @@ rm -f confdefs.h.save
+@@ -8627,7 +8641,8 @@ rm -f confdefs.h.save
  mv confdefs.h confdefs.h.save
  egrep -v "$_EGREP_PATTERN" confdefs.h.save > confdefs.h
  AC_OUTPUT_MAKE_DEFS()
@@ -56,7 +56,7 @@ $NetBSD: patch-aa,v 1.7 2009/12/02 15:03:01 tnn2 Exp $
  AC_SUBST(MOZ_DEFINES)
  rm -f confdefs.h
  mv confdefs.h.save confdefs.h
-@@ -8466,6 +8481,8 @@ if test -z "$MOZ_NATIVE_NSPR"; then
+@@ -8718,6 +8733,8 @@ if test -z "$MOZ_NATIVE_NSPR"; then
      AC_MSG_WARN([Recreating autoconf.mk with updated nspr-config output])
      if test "$OS_ARCH" != "WINNT" && test "$OS_ARCH" != "WINCE"; then
         NSPR_LIBS=`./nsprpub/config/nspr-config --prefix=$LIBXUL_DIST --exec-prefix=$MOZ_BUILD_ROOT/dist --libdir=$LIBXUL_DIST/lib --libs`
