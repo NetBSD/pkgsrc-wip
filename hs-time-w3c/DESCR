@@ -1,0 +1,5 @@
+This package provides functionalities to parse and format W3C Date and
+Time. The package can also be used to convert it from/to
+Data.Time.Calendar.Day and Data.Time.LocalTime.ZonedTime.
+
+See: http://www.w3.org/TR/NOTE-datetime

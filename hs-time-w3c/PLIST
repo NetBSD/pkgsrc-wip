@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/03/16 04:48:07 phonohawk Exp $
+lib/time-w3c-${PKGVERSION}/${HASKELL_VERSION}/Data/Time/W3C.hi
+lib/time-w3c-${PKGVERSION}/${HASKELL_VERSION}/Data/Time/W3C.p_hi
+lib/time-w3c-${PKGVERSION}/${HASKELL_VERSION}/Data/Time/W3C/Format.hi
+lib/time-w3c-${PKGVERSION}/${HASKELL_VERSION}/Data/Time/W3C/Format.p_hi
+lib/time-w3c-${PKGVERSION}/${HASKELL_VERSION}/Data/Time/W3C/Parser.hi
+lib/time-w3c-${PKGVERSION}/${HASKELL_VERSION}/Data/Time/W3C/Parser.p_hi
+lib/time-w3c-${PKGVERSION}/${HASKELL_VERSION}/Data/Time/W3C/Parser/Parsec.hi
+lib/time-w3c-${PKGVERSION}/${HASKELL_VERSION}/Data/Time/W3C/Parser/Parsec.p_hi
+lib/time-w3c-${PKGVERSION}/${HASKELL_VERSION}/Data/Time/W3C/Types.hi
+lib/time-w3c-${PKGVERSION}/${HASKELL_VERSION}/Data/Time/W3C/Types.p_hi
+lib/time-w3c-${PKGVERSION}/${HASKELL_VERSION}/HStime-w3c-${PKGVERSION}.o
+lib/time-w3c-${PKGVERSION}/${HASKELL_VERSION}/libHStime-w3c-${PKGVERSION}.a
+lib/time-w3c-${PKGVERSION}/${HASKELL_VERSION}/libHStime-w3c-${PKGVERSION}_p.a
+lib/time-w3c-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/time-w3c-${PKGVERSION}/COPYING
