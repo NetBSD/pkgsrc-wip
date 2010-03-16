@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3865 2010/03/16 06:44:23 jgoamakf Exp $
+# $Id: Makefile,v 1.3866 2010/03/16 08:31:47 jgoamakf Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1622,7 +1622,6 @@ SUBDIR+=	p5-Tie-DB_Lock
 SUBDIR+=	p5-Time-Piece-Range
 SUBDIR+=	p5-Tk-TableMatrix
 SUBDIR+=	p5-UNIVERSAL-exports
-SUBDIR+=	p5-URI-Find
 SUBDIR+=	p5-URI-Find-Rule
 SUBDIR+=	p5-URI-Title
 SUBDIR+=	p5-Unicode-CheckUTF8
