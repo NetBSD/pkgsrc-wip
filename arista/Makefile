@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2009/07/22 09:53:10 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2010/03/16 20:32:56 jihbed Exp $
 #
 
 DISTNAME=	arista-0.9.1
 CATEGORIES=	multimedia python
 MASTER_SITES=	http://programmer-art.org/media/releases/arista-transcoder/
 
-MAINTAINER=	kamelderouiche@yahoo.com
+MAINTAINER=	pkgsrc.gnome@gmail.com
 HOMEPAGE=	http://programmer-art.org/projects/arista-transcoder
 COMMENT=	Tools multimedia transcoder for GNOME
 LICENSE=	gnu-lgpl-v2

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/08/02 23:03:11 jihbed Exp $
+# $NetBSD: Makefile,v 1.4 2010/03/16 20:38:14 jihbed Exp $
 #
 
 DISTNAME=	nautilus-sound-converter-1.0.2
@@ -6,7 +6,7 @@ CATEGORIES=	audio gnome sysutils
 MASTER_SITES=	http://nautilus-sound-converter.googlecode.com/files/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	kamelderouiche@yahoo.com
+MAINTAINER=	pkgsrc.gnome@gmail.com
 HOMEPAGE=	http://code.google.com/p/nautilus-sound-converter/
 COMMENT=	Nautilus extension to convert audio files
 
