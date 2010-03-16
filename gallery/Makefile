@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/12/13 21:58:44 pettai Exp $
+# $NetBSD: Makefile,v 1.5 2010/03/16 21:37:24 thomasklausner Exp $
 #
 
 DISTNAME=	gallery-1.5.10
@@ -10,11 +10,13 @@ HOMEPAGE=	http://gallery.sourceforge.net/
 COMMENT=	Web-based photo gallery written in PHP
 LICENSE=	gnu-gpl-v2
 
-NO_BUILD=	yes
-WRKSRC=		${WRKDIR}/${DISTNAME}
-
 DEPENDS+=	${PHP_PKG_PREFIX}-gd>=4.1.0:../../graphics/php-gd
 DEPENDS+=	${PHP_PKG_PREFIX}-gettext>=4.1.0:../../devel/php-gettext
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+NO_BUILD=	yes
+WRKSRC=		${WRKDIR}/${DISTNAME}
 
 REPLACE_PERL=	po/remove_obsolete.pl po/transform_fuzzy.pl
 REPLACE_SH=	po/create_po_template.sh po/change_version.sh
@@ -22,7 +24,6 @@ REPLACE_SH+=	po/edit_changelog.sh po/make_mo_files.sh
 REPLACE_SH+=	po/update_po_files.sh
 
 PKG_SYSCONFDIR=	${G1DIR}
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 EGDIR=		${PREFIX}/share/examples/gallery
 G1DIR=		${PREFIX}/share/gallery
