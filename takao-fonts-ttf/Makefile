@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/03/15 23:25:58 ryo-on Exp $
+# $NetBSD: Makefile,v 1.2 2010/03/16 10:40:31 ryo-on Exp $
 #
 
 DISTNAME=	takao-fonts-ttf-003.02.01
 CATEGORIES=	fonts japanese
 MASTER_SITES=	http://launchpad.net/takao-fonts/003.02/003.02.01/+download/
-EXTRACT_SUFX=	.zip
 
 MAINTAINER=	ryo_on@yk.rim.or.jp
 HOMEPAGE=	https://launchpad.net/takao-fonts
