@@ -1,0 +1,17 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/03/17 13:09:07 obache Exp $
+
+SHA1 (Python-2.7a4.tar.bz2) = b584bcb1216617b5e2e743ad5a61bbfb716df480
+RMD160 (Python-2.7a4.tar.bz2) = 635c864d83c8ecc15f086cc63f0f6faa2174caf6
+Size (Python-2.7a4.tar.bz2) = 11277232 bytes
+SHA1 (patch-aa) = 217dfff258c7029d039715ac046618dae806d2ae
+SHA1 (patch-ab) = efbc0a67f6a1a4cf680718e07ada90f2fe57d75d
+SHA1 (patch-ad) = 77006285427bddc7ab3e1f6daed4d523ff3d259e
+SHA1 (patch-ae) = c90b2a9e6aedada934bbfb1bfe9b6540345b161d
+SHA1 (patch-ah) = 3dca2ee7a2a5fb9414107804139249b642a56c9f
+SHA1 (patch-al) = 6b3a7a072d17053e9535cf0a39127587c77497cb
+SHA1 (patch-am) = 54cfa9a5c06c03e1f31e1fed951c5b682276f207
+SHA1 (patch-an) = 6098fbf0fc31422196cc40d3a227934523db11ca
+SHA1 (patch-ao) = 4ac751b97847c78b0ce19047ecefa3ec97dc62e2
+SHA1 (patch-ap) = bbf997708224d37149d3cf97f6a8abee369c22f0
+SHA1 (patch-au) = 2540f94e212bb194cbe02484cef9cee125e2228a
+SHA1 (patch-av) = f776b7582e5dd25eccc6382a9d6cf5269a9ea03e
