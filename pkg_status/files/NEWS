@@ -1,4 +1,16 @@
 ======================================================================
+Version 0.7.0, by Aleksey Cheusov, Wed, 17 Mar 2010 12:07:00 +0200
+
+  -p option has been added. Sample of usage:
+     pkg_info -u -QPKGPATH /etc/really_needed_packages.txt
+     # Unsorted pkg_add, pkg_delete for days, weeks, months...
+     pkg_status -sp /etc/really_needed_packages.txt
+
+  `>>>' and `---' have been replaced with `>' and `-'
+
+  pkg_status now has its own Makefile
+
+======================================================================
 Version 0.6.0, by Aleksey Cheusov, Sun, 14 Mar 2010 11:25:48 +0200
 
   Implementation for option -b

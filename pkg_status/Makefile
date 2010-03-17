@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2010/03/14 20:12:13 cheusov Exp $
+# $NetBSD: Makefile,v 1.8 2010/03/17 10:10:32 cheusov Exp $
 
-DISTNAME=	pkg_status-0.6
-PKGREVISION=	1
+DISTNAME=	pkg_status-0.7
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -16,22 +15,20 @@ DEPENDS+=	pipestatus-[0-9]*:../../devel/pipestatus
 DEPENDS+=	pkg_summary-utils-[0-9]*:../../wip/pkg_summary-utils
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-INSTALLATION_DIRS+=	bin
 
-NO_CHECKSUM=	yes
+USE_BSD_MAKEFILE=	yes
+NO_CHECKSUM=		yes
 
-WRKSRC=		${WRKDIR}
+WRKSRC=			${.CURDIR}/files
+
+MAKE_ENV+=		PKG_INFO_CMD=${PKG_INFO:Q}
+MAKE_ENV+=		PACKAGES=${PACKAGES}
+MAKE_ENV+=		MKCATPAGES=no
+
+MAKE_ENV+=		MAKEOBJDIR=${WRKDIR}
 
 DOCDIR=			share/doc/pkg_status
-INSTALLATION_DIRS+=	${DOCDIR}
 
-do-build:
-	sed -e 's,@PKG_INFO_CMD@,${PKG_INFO},' \
-	    -e 's,@PACKAGES@,${PACKAGES},' \
-	    ${.CURDIR}/files/pkg_status.in > ${WRKSRC}/pkg_status
-
-do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/pkg_status ${DESTDIR}${PREFIX}/bin/
-	${INSTALL_DATA} ${.CURDIR}/files/NEWS ${DESTDIR}${PREFIX}/${DOCDIR}/
+INSTALLATION_DIRS+=	bin ${DOCDIR}
 
 .include "../../mk/bsd.pkg.mk"
