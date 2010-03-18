@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.16 2010/03/14 23:54:15 asau Exp $
+$NetBSD: distinfo,v 1.17 2010/03/18 22:35:44 helgoman Exp $
 
-SHA1 (mpich2-trunk-r6380.tar.gz) = d68501b9b19d9972e090e1cf3ec9e2df8c2a1886
-RMD160 (mpich2-trunk-r6380.tar.gz) = edb3f8dfa170eb0c885dc7a77c2fa4e6bfe0def4
-Size (mpich2-trunk-r6380.tar.gz) = 18865854 bytes
+SHA1 (mpich2-trunk-r6380.tar.gz) = 70dbf55153bb9dce159f8891f7a71ab76874d257
+RMD160 (mpich2-trunk-r6380.tar.gz) = faa37e6862c48fdd48f2e253579536417d340590
+Size (mpich2-trunk-r6380.tar.gz) = 18867259 bytes
 SHA1 (patch-aa) = 1bb0a7575009120f98abcacf211c11fb1a185bc3
 SHA1 (patch-ac) = b956a355ef381d759077288916c40e32b022f178
