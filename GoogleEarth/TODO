@@ -1,0 +1,16 @@
+This package doesn't run:
+
+% googleearth
+./googleearth-bin: /lib/libc.so.6: version `GLIBC_2.4' not found (required by ./googleearth-bin)
+./googleearth-bin: /lib/libc.so.6: version `GLIBC_2.4' not found (required by ./libgoogleearth_lib.so)
+./googleearth-bin: /usr/lib/libstdc++.so.6: version `GLIBCXX_3.4.9' not found (required by ./libgoogleearth_lib.so)
+./googleearth-bin: /usr/lib/libstdc++.so.6: version `GLIBCXX_3.4.9' not found (required by ./libbase.so)
+./googleearth-bin: /lib/libc.so.6: version `GLIBC_2.4' not found (required by ./libbase.so)
+./googleearth-bin: /lib/libc.so.6: version `GLIBC_2.4' not found (required by ./libgeobase.so)
+./googleearth-bin: /lib/libc.so.6: version `GLIBC_2.4' not found (required by ./libauth.so)
+./googleearth-bin: /lib/libc.so.6: version `GLIBC_2.4' not found (required by ./libcommon.so)
+./googleearth-bin: /lib/libc.so.6: version `GLIBC_2.4' not found (required by ./libge_net.so)
+./googleearth-bin: /lib/libc.so.6: version `GLIBC_2.4' not found (required by ./libgeobaseutils.so)
+./googleearth-bin: /lib/libc.so.6: version `GLIBC_2.4' not found (required by ./librender.so)
+./googleearth-bin: /lib/libc.so.6: version `GLIBC_2.4' not found (required by ./libreporting.so)
+./googleearth-bin: /lib/libc.so.6: version `GLIBC_2.4' not found (required by ./libfusioncommon.so)
