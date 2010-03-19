@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/03/09 21:37:54 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2010/03/19 16:13:58 jihbed Exp $
 #
 
 DISTNAME=    	telepathy-python-0.15.15
@@ -6,7 +6,7 @@ PKGNAME=    	${PYPKGPREFIX}-telepathy-0.15.15
 CATEGORIES=    	chat
 MASTER_SITES=   http://telepathy.freedesktop.org/releases/telepathy-python/
 
-MAINTAINER= kamelderouiche@yahoo.com
+MAINTAINER= pkgsrc.gnome@gmail.com
 HOMEPAGE=   http://telepathy.freedesktop.org/releases/telepathy-python/
 COMMENT=    Python bindings for the Telepathy framework
 LICENSE=    gnu-lgpl-v2.1
