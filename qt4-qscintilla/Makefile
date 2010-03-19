@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/03/03 15:49:17 helgoman Exp $
+# $NetBSD: Makefile,v 1.5 2010/03/19 08:53:28 helgoman Exp $
 #
 
 DISTNAME=			QScintilla-gpl-2.4.2
@@ -14,15 +14,15 @@ LICENSE=			gnu-gpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-WRKSRC=                 ${WRKDIR}/${DISTNAME}/Qt4
+WRKSRC=					${WRKDIR}/${DISTNAME}/Qt4
 
-USE_TOOLS+=             gmake
-USE_LIBTOOL=            yes
+USE_TOOLS+=				gmake
+USE_LIBTOOL=			yes
 USE_LANGUAGES=			c++
 
-MAKE_ENV+=      		QTPREFIX=${QTDIR:Q}
+MAKE_ENV+=				QTPREFIX=${QTDIR}
 
-INSTALLATION_DIRS=      ${QTDIR}/lib ${QTDIR}/include
+INSTALLATION_DIRS=		${QTDIR}/lib ${QTDIR}/include
 
 do-configure:
 	(cd ${WRKSRC} && ${QTDIR}/bin/qmake -o Makefile qscintilla.pro)
