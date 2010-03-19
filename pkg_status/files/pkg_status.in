@@ -174,6 +174,7 @@ if test -z "$pkgpaths_fn"; then
     }
 else
     generate_pkgpaths (){
+    	true;
     }
 fi
 
