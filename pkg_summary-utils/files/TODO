@@ -16,6 +16,8 @@ existing tools:
        - automatic removal of #-comments
 
     pkg_grep_summary:
+       - -S <field> <file with strings>
+       - -M <field> <file with patterns>
 
     pkg_list_all_pkgs:
 
