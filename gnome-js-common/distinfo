@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/03/19 17:47:36 jihbed Exp $
+
+SHA1 (gnome-js-common-0.1.1.tar.bz2) = 0297b768f5a91b8d9e4bbc6e7b9c73f3e7f915ba
+RMD160 (gnome-js-common-0.1.1.tar.bz2) = 11608b34c66b077b6ccf0b8042721cbb8155627d
+Size (gnome-js-common-0.1.1.tar.bz2) = 274010 bytes
+SHA1 (patch-aa) = f0d375bbdd4305b177be32450263151328f1b552
+SHA1 (patch-ab) = 1f7c2a709186cd4d2c9e3b08892387ec9a563227
