@@ -1,11 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.1 2010/03/06 01:40:42 helgoman Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2010/03/19 09:21:04 helgoman Exp $
 
 BUILDLINK_TREE+=	py26-qt4-qscintilla
 
 .if !defined(PY26_QT4_QSCINTILLA_BUILDLINK3_MK)
 PY26_QT4_QSCINTILLA_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.py26-qt4-qscintilla+=	py26-qt4-qscintilla>=2.4.2nb1
+BUILDLINK_API_DEPENDS.py26-qt4-qscintilla+=	py26-qt4-qscintilla>=2.4.3nb1
 BUILDLINK_PKGSRCDIR.py26-qt4-qscintilla?=	../../wip/py-qt4-qscintilla
 
 .include "../../x11/py-sip/buildlink3.mk"
