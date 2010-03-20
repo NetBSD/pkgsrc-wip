@@ -1,9 +1,0 @@
-<Files *.inc>
-Deny From All
-</Files>
-<Files *.class>
-Deny From All
-</Files>
-<Files MANIFEST>
-Deny From All
-</Files>
