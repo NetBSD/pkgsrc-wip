@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3873 2010/03/20 20:47:05 pettai Exp $
+# $Id: Makefile,v 1.3874 2010/03/20 23:17:45 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -387,6 +387,7 @@ SUBDIR+=	emelfm2
 SUBDIR+=	emerald
 SUBDIR+=	emerald-themes
 SUBDIR+=	emirror
+SUBDIR+=	emovix
 SUBDIR+=	endeavour
 SUBDIR+=	enet
 SUBDIR+=	enigmail
@@ -1012,6 +1013,7 @@ SUBDIR+=	kdiff3
 SUBDIR+=	kgrab
 SUBDIR+=	kgraphviewer
 SUBDIR+=	kile
+SUBDIR+=	kiloji-ttf
 SUBDIR+=	kino
 SUBDIR+=	kissme
 SUBDIR+=	klamav
