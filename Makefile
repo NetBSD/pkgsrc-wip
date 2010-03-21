@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3874 2010/03/20 23:17:45 thomasklausner Exp $
+# $Id: Makefile,v 1.3875 2010/03/21 22:31:12 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2234,6 +2234,7 @@ SUBDIR+=	tegaki-zinnia-simplified-chinese
 SUBDIR+=	tegaki-zinnia-simplified-chinese-light
 SUBDIR+=	tegaki-zinnia-traditional-chinese
 SUBDIR+=	tegaki-zinnia-traditional-chinese-light
+SUBDIR+=	telepathy-butterfly
 SUBDIR+=	tellico
 SUBDIR+=	tendra
 SUBDIR+=	tendra.org-sid
