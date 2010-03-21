@@ -1,9 +1,5 @@
-$NetBSD: distinfo,v 1.2 2009/12/21 23:25:09 alnsn Exp $
+$NetBSD: distinfo,v 1.3 2010/03/21 20:40:55 alnsn Exp $
 
-SHA1 (quickfix-1.12.4.tar.gz) = 367a035bae39062da6dd01f1f3c2254165bac061
-RMD160 (quickfix-1.12.4.tar.gz) = c03fd64e13bfbffcf02b60936010cbc9fd6c9b09
-Size (quickfix-1.12.4.tar.gz) = 7543050 bytes
-SHA1 (patch-aa) = 739d03b4d96aa98f4117f4d3d875739bf2f1b8a9
-SHA1 (patch-ab) = 99a7717be0e9159492747d17c15c237b0d3b9861
-SHA1 (patch-ac) = 695a57f4bd1ab2d76675663e910932e6887f1312
-SHA1 (patch-ad) = 77c8112e232555d304d76bd428f54457c70621fe
+SHA1 (quickfix-1.13.2.tar.gz) = 8a3bde88afe62d7d4ad7987580b5c751e4bd119b
+RMD160 (quickfix-1.13.2.tar.gz) = 4bb60954c567547cb2e4522157e2f485968556f7
+Size (quickfix-1.13.2.tar.gz) = 22931934 bytes
