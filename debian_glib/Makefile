@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2 2005/11/03 14:39:35 rillig Exp $
+# $Id: Makefile,v 1.3 2010/03/21 16:29:52 thomasklausner Exp $
 
 DISTNAME=		# empty
 DISTFILES=		${DEBS}
@@ -6,7 +6,7 @@ PKGNAME=		debian_glib-1.2.10.9
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_DEBIAN:=pool/main/g/glib1.2/}
 
-MAINTAINER=		grant@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.debian.org/
 COMMENT=		Debian Linux glib1.2 package
 

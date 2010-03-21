@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2010/01/18 09:38:28 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.11 2010/03/21 16:29:52 thomasklausner Exp $
 #
 
 DISTNAME=		mythtv-0.11
@@ -7,7 +7,7 @@ CATEGORIES=		graphics
 MASTER_SITES=		http://www.mythtv.org/mc/
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		grant@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.mythtv.org/
 COMMENT=		TV/video recorder with many features
 

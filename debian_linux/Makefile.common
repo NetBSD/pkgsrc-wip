@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.5 2008/05/24 15:34:09 tnn2 Exp $
-# $Id: Makefile.common,v 1.5 2008/05/24 15:34:09 tnn2 Exp $
+# $NetBSD: Makefile.common,v 1.6 2010/03/21 16:29:52 thomasklausner Exp $
+# $Id: Makefile.common,v 1.6 2010/03/21 16:29:52 thomasklausner Exp $
 # used by wip/debian_base/Makefile
 # used by wip/debian_glib/Makefile
 # used by wip/debian_gtk/Makefile
 # used by wip/debian_x11/Makefile
 
-MAINTAINER?=		grant@NetBSD.org
+MAINTAINER?=		pkgsrc-users@NetBSD.org
 HOMEPAGE?=		http://www.debian.org/
 
 DIST_SUBDIR=		debian_linux

@@ -157,7 +157,7 @@ PKGPATH=pkgtools/x11-links
 BUILD_DEPENDS= checkperms>=1.1:../../sysutils/checkperms
 HOMEPAGE=ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/doc/pkgsrc.html
 COMMENT=Shadow tree of links to native X11 headers and libraries
-MAINTAINER=jlam@pkgsrc.org
+MAINTAINER=pkgsrc-users@NetBSD.org
 CATEGORIES=pkgtools x11
 
 PKGNAME=perl-5.8.8nb8
@@ -166,7 +166,7 @@ BUILD_DEPENDS= checkperms>=1.1:../../sysutils/checkperms
 CONFLICTS=perl-base-[0-9]* perl-thread-[0-9]*			 p5-CGI-2.66 p5-CGI-2.75 p5-CGI-2.75.[0-2]
 HOMEPAGE=http://www.perl.org/
 COMMENT=Practical Extraction and Report Language
-MAINTAINER=jlam@pkgsrc.org
+MAINTAINER=pkgsrc-users@NetBSD.org
 CATEGORIES=lang devel perl5
 
 PKGNAME=libltdl-1.5.24

@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.2 2005/11/03 14:42:11 rillig Exp $
+# $Id: Makefile,v 1.3 2010/03/21 16:29:52 thomasklausner Exp $
 
 DISTNAME=		# empty
 DISTFILES=		${DEBS}
@@ -7,7 +7,7 @@ CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_DEBIAN:=pool/main/x/xfree86/} \
 			http://security.debian.org/debian-security/pool/updates/main/x/xfree86/
 
-MAINTAINER=		grant@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.debian.org/
 COMMENT=		Debian Linux X11 compatibility libraries
 

@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.4 2006/07/22 04:42:34 rillig Exp $
-# $Id: Makefile,v 1.4 2006/07/22 04:42:34 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2010/03/21 16:29:52 thomasklausner Exp $
+# $Id: Makefile,v 1.5 2010/03/21 16:29:52 thomasklausner Exp $
 
 DISTNAME=		# empty
 DISTFILES=		${DEBS}
@@ -8,7 +8,7 @@ PKGREVISION=		1
 CATEGORIES=		emulators
 MASTER_SITES=		# none
 
-MAINTAINER=		grant@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.debian.org/
 COMMENT=		Debian Linux compatibility base package
 

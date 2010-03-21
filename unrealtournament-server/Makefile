@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/05/26 13:59:47 tnn2 Exp $
+# $NetBSD: Makefile,v 1.7 2010/03/21 16:29:52 thomasklausner Exp $
 #
 
 DISTNAME=	ut-server-436
@@ -7,7 +7,7 @@ WRKSRC=		${WRKDIR}/ut-server
 CATEGORIES=	games
 MASTER_SITES=	http://public.planetmirror.com/pub/lokigames/installers/ut/
 
-MAINTAINER=	grant@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Server for Unreal Tournament first person shooter
 
 EMUL_PLATFORMS=		linux-i386
