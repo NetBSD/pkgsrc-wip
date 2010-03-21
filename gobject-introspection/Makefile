@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2010/03/16 07:28:49 obache Exp $
+# $NetBSD: Makefile,v 1.6 2010/03/21 01:24:52 obache Exp $
 #
 
-DISTNAME=	gobject-introspection-0.6.8
+DISTNAME=	gobject-introspection-0.6.9
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.gnome.org/pub/gnome/sources/gobject-introspection/0.6/
 EXTRACT_SUFX=	.tar.bz2
