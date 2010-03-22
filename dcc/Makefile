@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2009/12/18 13:20:07 pebog Exp $
+# $NetBSD: Makefile,v 1.20 2010/03/22 19:07:07 pebog Exp $
 #
 #
 #	Request by the author:
@@ -10,7 +10,7 @@
 #	> you distribute. Updatedcc must work.
 #
 #
-DISTNAME=		dcc-1.3.116
+DISTNAME=		dcc-1.3.122
 #PKGREVISION=		2
 CATEGORIES=		mail
 MASTER_SITES=		http://www.rhyolite.com/dcc/source/old/
@@ -61,8 +61,9 @@ CONFIGURE_ARGS+=	--homedir=${DCC_HOME} \
 			--bindir=${PREFIX}/bin \
 			--libexecdir=${PREFIX}/libexec \
 			--mandir=${PREFIX}/${PKGMANDIR} \
-			--with-uid=${DCC_USER} \
-			--with-rundir=${DCC_RUN}
+			--with-make-cmd=${MAKE_PROGRAM:Q} \
+			--with-rundir=${DCC_RUN} \
+			--with-uid=${DCC_USER}
 
 .include "options.mk"
 
