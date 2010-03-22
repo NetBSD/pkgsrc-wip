@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2010/02/10 12:56:31 pettai Exp $
+# $NetBSD: Makefile,v 1.24 2010/03/22 14:13:31 pettai Exp $
 #
 
 DISTNAME=	opendnssec-${VERSION}
-#PKGREVISION=	1
 CATEGORIES=	net security
 MASTER_SITES=	http://www.opendnssec.org/files/source/
 
@@ -11,28 +10,19 @@ HOMEPAGE=	http://www.opendnssec.org/
 COMMENT=	OSS for a fast and easy DNSSEC deployment
 LICENSE=	iis-license
 
-DEPENDS+=	${PYPKGPREFIX}-4Suite-[0-9]*:../../wip/py-4Suite
+DEPENDS+=	${PYPKGPREFIX}-4Suite-[0-9]*:../../textproc/py-4Suite
 DEPENDS+=	ldns>=1.6.4:../../net/ldns
-DEPENDS+=	${RUBY_PKGPREFIX}-dnsruby>=1.43:../../wip/ruby-dnsruby
+DEPENDS+=	${RUBY_PKGPREFIX}-dnsruby>=1.43:../../net/ruby-dnsruby
 BUILD_DEPENDS+=	CUnit-[0-9]*:../../devel/cunit
 
 LICENSE_FILE=	${FILESDIR}/iis-license
 
-#SVN_REPOSITORIES=	opendnssec
-#SVN_ROOT.opendnssec=	http://svn.opendnssec.org/tags/OpenDNSSEC-${VERSION}
-#SVN_MODULE.opendnssec=	OpenDNSSEC
-#NO_CHECKSUM=		yes
 VERSION=		1.0.0
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-#PKG_INSTALLATION_TYPES= overwrite pkgviews
-
-# XXX: Others might work
-#ONLY_FOR_PLATFORM=	NetBSD-*-* Darwin-*-*
 
 BUILD_DEFS+=	VARBASE
 
-#USE_TOOLS+=	aclocal autoconf automake autoheader gmake gm4 perl
 USE_TOOLS+=	bash gmake gm4 perl
 CONFIG_SHELL=	${BASH}
 USE_JAVA=	build
@@ -44,7 +34,6 @@ CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ENV+=		RUBY=${RUBY}
 
-#WRKSRC=		${WRKDIR}/OpenDNSSEC
 EGDIR=			${PREFIX}/share/examples/opendnssec
 ODS_SYSCONFDIR=		${PKG_SYSCONFDIR}/opendnssec
 
@@ -78,13 +67,8 @@ INSTALLATION_DIRS+=	${VARBASE}/opendnssec/unsigned
 .include "options.mk"
 
 .if ${OPSYS} == "NetBSD"
-#PKG_JVMS_ACCEPTED=	sun-jdk6 sun-jdk15 sun-jdk14
 .include "../../mk/java-vm.mk"
 .endif
-
-#pre-configure:
-#	${CHMOD} u+x ${WRKSRC}/autogen.sh
-#	cd ${WRKSRC} && ./autogen.sh
 
 pre-install:
 	${MKDIR} ${PKG_SYSCONFDIR}/opendnssec
@@ -94,6 +78,4 @@ pre-install:
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../net/ldns/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
-#.include "../../databases/mysql5-client/buildlink3.mk"
-#.include "../../wip/mk/svn-package.mk"
 .include "../../mk/bsd.pkg.mk"
