@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3875 2010/03/21 22:31:12 jihbed Exp $
+# $Id: Makefile,v 1.3876 2010/03/22 00:56:45 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1842,6 +1842,7 @@ SUBDIR+=	py-daemon
 SUBDIR+=	py-dbutils
 SUBDIR+=	py-decorator
 SUBDIR+=	py-dexml
+SUBDIR+=	py-distutils-extra
 SUBDIR+=	py-divmod-axiom
 SUBDIR+=	py-divmod-epsilon
 SUBDIR+=	py-divmod-mantissa
