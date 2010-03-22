@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.6 2009/12/08 13:04:12 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2010/03/22 14:20:56 jihbed Exp $
 #
 
-DISTNAME=	zeitgeist-0.3.0
+DISTNAME=	zeitgeist-0.3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	sysutils
-MASTER_SITES=	http://edge.launchpad.net/zeitgeist/0.3/0.3.0/+download/
+MASTER_SITES=	http://launchpad.net/zeitgeist/0.3/0.3.2/+download/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://launchpad.net/zeitgeist/
 COMMENT=	Service which logs the users's activities and events
-LICENSE=	gnu-lgpl-v3
+LICENSE=		gnu-lgpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-xdg-[0-9]*:../../devel/py-xdg
 DEPENDS+=	${PYPKGPREFIX}-storm-[0-9]*:../../wip/py-storm
@@ -22,6 +22,7 @@ GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c
 USE_TOOLS+=	gmake intltool
 PY_PATCHPLIST=	yes
+
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"

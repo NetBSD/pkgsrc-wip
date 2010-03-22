@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/12/02 00:19:41 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.4 2010/03/22 14:20:56 jihbed Exp $
 bin/zeitgeist-daemon
 bin/zeitgeist-datahub
 ${PYSITELIB}/zeitgeist/__init__.py
@@ -37,12 +37,24 @@ share/zeitgeist/_zeitgeist/engine/__init__.pyo
 share/zeitgeist/_zeitgeist/engine/extension.py
 share/zeitgeist/_zeitgeist/engine/extension.pyc
 share/zeitgeist/_zeitgeist/engine/extension.pyo
+share/zeitgeist/_zeitgeist/engine/extensions/__init__.py
+share/zeitgeist/_zeitgeist/engine/extensions/__init__.pyc
+share/zeitgeist/_zeitgeist/engine/extensions/__init__.pyo
+share/zeitgeist/_zeitgeist/engine/extensions/blacklist.py
+share/zeitgeist/_zeitgeist/engine/extensions/blacklist.pyc
+share/zeitgeist/_zeitgeist/engine/extensions/blacklist.pyo
+share/zeitgeist/_zeitgeist/engine/main.py
+share/zeitgeist/_zeitgeist/engine/main.pyc
+share/zeitgeist/_zeitgeist/engine/main.pyo
+share/zeitgeist/_zeitgeist/engine/notify.py
+share/zeitgeist/_zeitgeist/engine/notify.pyc
+share/zeitgeist/_zeitgeist/engine/notify.pyo
 share/zeitgeist/_zeitgeist/engine/remote.py
 share/zeitgeist/_zeitgeist/engine/remote.pyc
 share/zeitgeist/_zeitgeist/engine/remote.pyo
-share/zeitgeist/_zeitgeist/engine/resonance_engine.py
-share/zeitgeist/_zeitgeist/engine/resonance_engine.pyc
-share/zeitgeist/_zeitgeist/engine/resonance_engine.pyo
+share/zeitgeist/_zeitgeist/engine/sql.py
+share/zeitgeist/_zeitgeist/engine/sql.pyc
+share/zeitgeist/_zeitgeist/engine/sql.pyo
 share/zeitgeist/_zeitgeist/loggers/__init__.py
 share/zeitgeist/_zeitgeist/loggers/__init__.pyc
 share/zeitgeist/_zeitgeist/loggers/__init__.pyo
