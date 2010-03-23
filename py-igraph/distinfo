@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/03/23 20:12:40 jihbed Exp $
+
+SHA1 (python-igraph-0.5.3.tar.gz) = 949583ef7ce5f71017aa109e1b015d66e2db2ae4
+RMD160 (python-igraph-0.5.3.tar.gz) = 1e414c53b659bd613de4c5ff1505d376cc18bb16
+Size (python-igraph-0.5.3.tar.gz) = 206243 bytes
