@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3877 2010/03/22 15:09:35 jihbed Exp $
+# $Id: Makefile,v 1.3878 2010/03/23 20:14:11 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1867,6 +1867,7 @@ SUBDIR+=	py-greenlet
 SUBDIR+=	py-gtk2-docs
 SUBDIR+=	py-gts
 SUBDIR+=	py-httplib2
+SUBDIR+=	py-igraph
 SUBDIR+=	py-imgSeek
 SUBDIR+=	py-ipaddr
 SUBDIR+=	py-ipython
