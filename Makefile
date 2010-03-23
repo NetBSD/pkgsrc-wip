@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3878 2010/03/23 20:14:11 jihbed Exp $
+# $Id: Makefile,v 1.3879 2010/03/23 20:16:25 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -904,6 +904,7 @@ SUBDIR+=	idled
 SUBDIR+=	ifstat
 SUBDIR+=	igal
 SUBDIR+=	igowin
+SUBDIR+=	igraph
 SUBDIR+=	iisemulator
 SUBDIR+=	iksemel
 SUBDIR+=	ilbc-rfc3951
