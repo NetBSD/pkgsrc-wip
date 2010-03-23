@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2010/03/23 18:23:51 jihbed Exp $
+
+--- ./src/bliss_bignum.hh.orig	2010-02-18 21:25:40.000000000 +0000
++++ ./src/bliss_bignum.hh	2010-02-18 21:28:43.000000000 +0000
+@@ -76,7 +76,7 @@
+   void multiply(const int n) {v *= (long double)n; }
+   int print(FILE *fp) {return fprintf(fp, "%Lg", v); }
+   int tostring(char **str) {
+-    int size=static_cast<int>( (logbl(fabsl(v))/log(10.0))+4 );
++    int size=static_cast<int>( (logbl(fabsf(v))/log(10.0))+4 );
+     *str=igraph_Calloc(size, char );
+     if (! *str) {
+       IGRAPH_ERROR("Cannot convert big number to string", IGRAPH_ENOMEM);
