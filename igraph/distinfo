@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/03/23 13:47:45 uccwen Exp $
+
+SHA1 (igraph-0.5.3.tar.gz) = 12be47df377a399ac2adf4bf2319a26ebbc38d16
+RMD160 (igraph-0.5.3.tar.gz) = 2c07c9b798365615fefa83de0ec4c2433da6550c
+Size (igraph-0.5.3.tar.gz) = 1730184 bytes
