@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.6 2010/03/16 20:12:06 tnn2 Exp $
+# $NetBSD: mozilla-common.mk,v 1.7 2010/03/23 19:27:41 tnn2 Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 1.9.1.
 # 
@@ -83,6 +83,7 @@ PREFER.bzip2?=	pkgsrc
 .include "../../archivers/bzip2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.sqlite3+=	sqlite3>=3.6.22
 CONFIGURE_ENV+=	ac_cv_sqlite_secure_delete=yes # XXX pragma secure_delete
+CONFIGURE_ENV+= ac_cv_sqlite_enable_fts3=yes   # XXX we should enable it
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"

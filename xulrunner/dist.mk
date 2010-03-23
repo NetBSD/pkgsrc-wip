@@ -1,4 +1,4 @@
-# $NetBSD: dist.mk,v 1.11 2010/03/16 20:12:06 tnn2 Exp $
+# $NetBSD: dist.mk,v 1.12 2010/03/23 19:27:41 tnn2 Exp $
 #
 # used by wip/xulrunner/Makefile
 # used by wip/firefox/Makefile
@@ -16,6 +16,6 @@ PATCHDIR=	${.CURDIR}/../../wip/xulrunner/patches
 WRKSRC=		${WRKDIR}/mozilla-${MOZ_BRANCH}
 
 # snapshot overrides
-DISTNAME=	050887c64183
+DISTNAME=	61fb9e7374eb
 MASTER_SITES=	http://hg.mozilla.org/mozilla-central/archive/
-WRKSRC=		${WRKDIR}/mozilla-central-050887c64183
+WRKSRC=		${WRKDIR}/mozilla-central-61fb9e7374eb

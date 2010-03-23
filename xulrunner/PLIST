@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2010/03/16 20:12:06 tnn2 Exp $
+@comment $NetBSD: PLIST,v 1.17 2010/03/23 19:27:41 tnn2 Exp $
 bin/xulrunner
 ${PLIST.jit}include/xulrunner/Allocator.h
 ${PLIST.jit}include/xulrunner/Assembler.h
@@ -9,6 +9,7 @@ include/xulrunner/CustomQS_Canvas2D.h
 include/xulrunner/CustomQS_WebGL.h
 ${PLIST.jit}include/xulrunner/Fragmento.h
 include/xulrunner/ImageErrors.h
+include/xulrunner/ImageLayers.h
 include/xulrunner/ImageLogging.h
 ${PLIST.jit}include/xulrunner/LIR.h
 include/xulrunner/Layers.h
@@ -49,6 +50,7 @@ include/xulrunner/fishsound/deprecated.h
 include/xulrunner/fishsound/encode.h
 include/xulrunner/fishsound/fishsound.h
 include/xulrunner/ftpCore.h
+include/xulrunner/gfx3DMatrix.h
 include/xulrunner/gfxASurface.h
 include/xulrunner/gfxAlphaRecovery.h
 include/xulrunner/gfxBlur.h
@@ -267,7 +269,6 @@ include/xulrunner/nsASocketHandler.h
 include/xulrunner/nsAString.h
 include/xulrunner/nsAXPCNativeCallContext.h
 include/xulrunner/nsAboutProtocolUtils.h
-include/xulrunner/nsAccEvent.h
 include/xulrunner/nsAccessNode.h
 include/xulrunner/nsAccessNodeWrap.h
 include/xulrunner/nsAccessibleRelationWrap.h
@@ -451,6 +452,7 @@ include/xulrunner/nsIAccelerometer.h
 include/xulrunner/nsIAccessNode.h
 include/xulrunner/nsIAccessibilityService.h
 include/xulrunner/nsIAccessible.h
+include/xulrunner/nsIAccessibleApplication.h
 include/xulrunner/nsIAccessibleDocument.h
 include/xulrunner/nsIAccessibleEditableText.h
 include/xulrunner/nsIAccessibleEvent.h
@@ -836,7 +838,6 @@ include/xulrunner/nsIDOMNSHTMLAreaElement2.h
 include/xulrunner/nsIDOMNSHTMLButtonElement.h
 include/xulrunner/nsIDOMNSHTMLDocument.h
 include/xulrunner/nsIDOMNSHTMLElement.h
-include/xulrunner/nsIDOMNSHTMLFormControlList.h
 include/xulrunner/nsIDOMNSHTMLFormElement.h
 include/xulrunner/nsIDOMNSHTMLFrameElement.h
 include/xulrunner/nsIDOMNSHTMLHRElement.h
@@ -1362,6 +1363,7 @@ include/xulrunner/nsIProxiedProtocolHandler.h
 include/xulrunner/nsIProxyAutoConfig.h
 include/xulrunner/nsIProxyInfo.h
 include/xulrunner/nsIProxyObjectManager.h
+include/xulrunner/nsIQueryContentEventResult.h
 include/xulrunner/nsIRDFCompositeDataSource.h
 include/xulrunner/nsIRDFContainer.h
 include/xulrunner/nsIRDFContainerUtils.h
@@ -1462,7 +1464,6 @@ include/xulrunner/nsIScrollPositionListener.h
 include/xulrunner/nsIScrollable.h
 include/xulrunner/nsIScrollableFrame.h
 include/xulrunner/nsIScrollbarMediator.h
-include/xulrunner/nsISearchContext.h
 include/xulrunner/nsISecretDecoderRing.h
 include/xulrunner/nsISecureBrowserUI.h
 include/xulrunner/nsISecurityCheckedComponent.h
@@ -1796,8 +1797,10 @@ include/xulrunner/nsSAXAttributes.h
 include/xulrunner/nsSAXLocator.h
 include/xulrunner/nsSAXXMLReader.h
 include/xulrunner/nsSMILAnimationController.h
+include/xulrunner/nsSMILCSSProperty.h
 include/xulrunner/nsSMILCompositorTable.h
 include/xulrunner/nsSMILKeySpline.h
+include/xulrunner/nsSMILMappedAttribute.h
 include/xulrunner/nsSMILMilestone.h
 include/xulrunner/nsSMILTimeContainer.h
 include/xulrunner/nsSMILTypes.h
@@ -2459,6 +2462,7 @@ share/idl/xulrunner/nsIAccelerometer.idl
 share/idl/xulrunner/nsIAccessNode.idl
 share/idl/xulrunner/nsIAccessibilityService.idl
 share/idl/xulrunner/nsIAccessible.idl
+share/idl/xulrunner/nsIAccessibleApplication.idl
 share/idl/xulrunner/nsIAccessibleDocument.idl
 share/idl/xulrunner/nsIAccessibleEditableText.idl
 share/idl/xulrunner/nsIAccessibleEvent.idl
@@ -2802,7 +2806,6 @@ share/idl/xulrunner/nsIDOMNSHTMLAreaElement2.idl
 share/idl/xulrunner/nsIDOMNSHTMLButtonElement.idl
 share/idl/xulrunner/nsIDOMNSHTMLDocument.idl
 share/idl/xulrunner/nsIDOMNSHTMLElement.idl
-share/idl/xulrunner/nsIDOMNSHTMLFormControlList.idl
 share/idl/xulrunner/nsIDOMNSHTMLFormElement.idl
 share/idl/xulrunner/nsIDOMNSHTMLFrameElement.idl
 share/idl/xulrunner/nsIDOMNSHTMLHRElement.idl
@@ -3246,6 +3249,7 @@ share/idl/xulrunner/nsIProxiedProtocolHandler.idl
 share/idl/xulrunner/nsIProxyAutoConfig.idl
 share/idl/xulrunner/nsIProxyInfo.idl
 share/idl/xulrunner/nsIProxyObjectManager.idl
+share/idl/xulrunner/nsIQueryContentEventResult.idl
 share/idl/xulrunner/nsIRDFCompositeDataSource.idl
 share/idl/xulrunner/nsIRDFContainer.idl
 share/idl/xulrunner/nsIRDFContainerUtils.idl
@@ -3318,7 +3322,6 @@ share/idl/xulrunner/nsIScriptableUConv.idl
 share/idl/xulrunner/nsIScriptableUnescapeHTML.idl
 share/idl/xulrunner/nsIScrollBoxObject.idl
 share/idl/xulrunner/nsIScrollable.idl
-share/idl/xulrunner/nsISearchContext.idl
 share/idl/xulrunner/nsISecretDecoderRing.idl
 share/idl/xulrunner/nsISecureBrowserUI.idl
 share/idl/xulrunner/nsISecurityCheckedComponent.idl
