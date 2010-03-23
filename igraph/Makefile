@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/03/23 13:47:45 uccwen Exp $
+# $NetBSD: Makefile,v 1.2 2010/03/23 14:53:43 christtrekker Exp $
 #
 
 DISTNAME=	igraph-0.5.3
@@ -16,6 +16,9 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
+
+REPLACE_SH+=	configure depcomp install-sh missing ylwrap \
+		tests/testsuite
 
 PKGCONFIG_OVERRIDE+=	igraph.pc.in
 
