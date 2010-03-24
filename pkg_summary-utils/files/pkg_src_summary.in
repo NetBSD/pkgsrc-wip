@@ -555,7 +555,7 @@ BEGIN {
                $i = braceexpand($i)
                sub(/ .*$/, "", $i)
             }
-            gsub(/:[.][.]\/[.][.]\//, " ")
+            sub(/:[.][.]\/[.][.]\//, " ")
             needed [pkgname2pkgbase($i), $(i+1)] = 1
          }
       }

@@ -189,7 +189,7 @@ COMMENT=Dictionary Service Protocol client
 MAINTAINER=cheusov@tut.by
 
 PKGNAME=pipestatus-0.4.0
-PKGPATH=wip/pipestatus
+PKGPATH=devel/pipestatus
 COMMENT=UNIX/POSIX shell helper for running pipes safely
 MAINTAINER=cheusov@tut.by
 
@@ -243,6 +243,7 @@ CATEGORIES=graphics
 = devel/libltdl libltdl 1.5.24 1.5.24
 = devel/libmaa libmaa 1.0.1nb1 1.0.1nb1
 = devel/libtool-base libtool-base 1.5.24nb6 1.5.24nb6
+< devel/pipestatus pipestatus 0.4.0 0.5.0
 = devel/pkg-config pkg-config 0.23 0.23
 = editors/emacs emacs 22.1nb6 22.1nb6
 = graphics/jpeg jpeg 6bnb4 6bnb4
@@ -261,7 +262,6 @@ CATEGORIES=graphics
 < wip/dict-server dict-server 1.10.11nb2 1.11.0
 = wip/distbb distbb 0.22.0 0.22.0
 = wip/paexec paexec 0.10.0nb1 0.10.0nb1
-< wip/pipestatus pipestatus 0.4.0 0.5.0
 = wip/pkg_online pkg_online 0.5.0nb2 0.5.0nb2
 = wip/pkg_online-client pkg_online-client 0.5.0 0.5.0
 = wip/pkg_online-server pkg_online-server 0.5.0 0.5.0
@@ -273,6 +273,7 @@ CATEGORIES=graphics
 = devel/libltdl libltdl 1.5.24 1.5.24
 = devel/libmaa libmaa 1.0.1nb1 1.0.1nb1
 = devel/libtool-base libtool-base 1.5.24nb6 1.5.24nb6
+< devel/pipestatus pipestatus 0.4.0 0.5.0
 = devel/pkg-config pkg-config 0.23 0.23
 = editors/emacs emacs 22.1nb6 22.1nb6
 = graphics/jpeg jpeg 6bnb4 6bnb4
@@ -291,7 +292,6 @@ CATEGORIES=graphics
 < wip/dict-server dict-server 1.10.11nb2 1.11.0
 = wip/distbb distbb 0.22.0 0.22.0
 = wip/paexec paexec 0.10.0nb1 0.10.0nb1
-< wip/pipestatus pipestatus 0.4.0 0.5.0
 = wip/pkg_online pkg_online 0.5.0nb2 0.5.0nb2
 = wip/pkg_online-client pkg_online-client 0.5.0 0.5.0
 = wip/pkg_online-server pkg_online-server 0.5.0 0.5.0
@@ -319,6 +319,7 @@ CATEGORIES=graphics
 = devel/libltdl
 = devel/libmaa
 = devel/libtool-base
+= devel/pipestatus
 = devel/pkg-config
 = editors/emacs
 = graphics/jpeg
@@ -337,7 +338,6 @@ CATEGORIES=graphics
 = wip/dict-server
 = wip/distbb
 = wip/paexec
-= wip/pipestatus
 = wip/pkg_online
 = wip/pkg_online-client
 = wip/pkg_online-server
@@ -391,7 +391,7 @@ PKGNAME=libltdl-X
 PKGPATH=devel/libltdl
 
 PKGNAME=pipestatus-X
-PKGPATH=wip/pipestatus
+PKGPATH=devel/pipestatus
 
 PKGNAME=awk-pkgsrc-dewey-X
 PKGPATH=wip/awk-pkgsrc-dewey
@@ -512,7 +512,7 @@ PKGNAME=libltdl-X
 PKGPATH=devel/libltdl
 
 PKGNAME=pipestatus-X
-PKGPATH=wip/pipestatus
+PKGPATH=devel/pipestatus
 
 PKGNAME=awk-pkgsrc-dewey-X
 PKGPATH=wip/awk-pkgsrc-dewey
@@ -538,7 +538,7 @@ PKGNAME:        pkg_summary-utils-0.18.1
 PKGPATH:        wip/pkg_summary-utils
 DEPENDS:        runawk>=0.12.1:../../wip/runawk
                 awk-pkgsrc-dewey>=0.5.6:../../wip/awk-pkgsrc-dewey
-                pipestatus-[0-9]*:../../wip/pipestatus
+                pipestatus-[0-9]*:../../devel/pipestatus
 BUILD_DEPENDS:  checkperms>=1.1:../../sysutils/checkperms
 CONFLICTS:      paexec<0.9.0
                 pkg_src_summary-[0-9]*
@@ -732,6 +732,9 @@ devel/libtool-base graphics/png
 devel/libtool-base graphics/tiff
 devel/libtool-base wip/dict-client
 devel/libtool-base wip/dict-server
+devel/pipestatus wip/pkg_online-client
+devel/pipestatus wip/pkg_online-server
+devel/pipestatus wip/pkg_summary-utils
 devel/pkg-config editors/emacs
 editors/emacs textproc/dictem
 graphics/jpeg editors/emacs
@@ -747,6 +750,7 @@ sysutils/checkperms devel/gmake
 sysutils/checkperms devel/libltdl
 sysutils/checkperms devel/libmaa
 sysutils/checkperms devel/libtool-base
+sysutils/checkperms devel/pipestatus
 sysutils/checkperms devel/pkg-config
 sysutils/checkperms editors/emacs
 sysutils/checkperms graphics/jpeg
@@ -763,7 +767,6 @@ sysutils/checkperms wip/dict-client
 sysutils/checkperms wip/dict-server
 sysutils/checkperms wip/distbb
 sysutils/checkperms wip/paexec
-sysutils/checkperms wip/pipestatus
 sysutils/checkperms wip/pkg_online
 sysutils/checkperms wip/pkg_online-client
 sysutils/checkperms wip/pkg_online-server
@@ -774,9 +777,6 @@ wip/awk-pkgsrc-dewey wip/pkg_summary-utils
 wip/dict-client wip/pkg_online-client
 wip/dict-server wip/pkg_online-server
 wip/paexec wip/distbb
-wip/pipestatus wip/pkg_online-client
-wip/pipestatus wip/pkg_online-server
-wip/pipestatus wip/pkg_summary-utils
 wip/pkg_online-client wip/pkg_online
 wip/pkg_online-server wip/pkg_online
 wip/pkg_summary-utils wip/distbb
@@ -791,6 +791,7 @@ devel/gmake
 devel/libltdl
 devel/libmaa wip/dict-client
 devel/libtool-base
+devel/pipestatus
 devel/pkg-config
 editors/emacs
 graphics/jpeg
@@ -807,7 +808,6 @@ wip/dict-client wip/pkg_online-client
 wip/dict-server
 wip/distbb
 wip/paexec
-wip/pipestatus
 wip/pkg_online-client wip/pkg_online
 wip/pkg_online-server wip/pkg_online
 wip/pkg_summary-utils
@@ -888,6 +888,9 @@ devel/libtool-base;libtool-base graphics/png;png
 devel/libtool-base;libtool-base graphics/tiff;tiff
 devel/libtool-base;libtool-base wip/dict-client;dict-client
 devel/libtool-base;libtool-base wip/dict-server;dict-server
+devel/pipestatus;pipestatus wip/pkg_online-client;pkg_online-client
+devel/pipestatus;pipestatus wip/pkg_online-server;pkg_online-server
+devel/pipestatus;pipestatus wip/pkg_summary-utils;pkg_summary-utils
 devel/pkg-config;pkg-config editors/emacs;emacs
 editors/emacs;emacs textproc/dictem;dictem
 graphics/jpeg;jpeg editors/emacs;emacs
@@ -903,6 +906,7 @@ sysutils/checkperms;checkperms devel/gmake;gmake
 sysutils/checkperms;checkperms devel/libltdl;libltdl
 sysutils/checkperms;checkperms devel/libmaa;libmaa
 sysutils/checkperms;checkperms devel/libtool-base;libtool-base
+sysutils/checkperms;checkperms devel/pipestatus;pipestatus
 sysutils/checkperms;checkperms devel/pkg-config;pkg-config
 sysutils/checkperms;checkperms editors/emacs;emacs
 sysutils/checkperms;checkperms graphics/jpeg;jpeg
@@ -919,7 +923,6 @@ sysutils/checkperms;checkperms wip/dict-client;dict-client
 sysutils/checkperms;checkperms wip/dict-server;dict-server
 sysutils/checkperms;checkperms wip/distbb;distbb
 sysutils/checkperms;checkperms wip/paexec;paexec
-sysutils/checkperms;checkperms wip/pipestatus;pipestatus
 sysutils/checkperms;checkperms wip/pkg_online-client;pkg_online-client
 sysutils/checkperms;checkperms wip/pkg_online-server;pkg_online-server
 sysutils/checkperms;checkperms wip/pkg_online;pkg_online
@@ -930,9 +933,6 @@ wip/awk-pkgsrc-dewey;awk-pkgsrc-dewey wip/pkg_summary-utils;pkg_summary-utils
 wip/dict-client;dict-client wip/pkg_online-client;pkg_online-client
 wip/dict-server;dict-server wip/pkg_online-server;pkg_online-server
 wip/paexec;paexec wip/distbb;distbb
-wip/pipestatus;pipestatus wip/pkg_online-client;pkg_online-client
-wip/pipestatus;pipestatus wip/pkg_online-server;pkg_online-server
-wip/pipestatus;pipestatus wip/pkg_summary-utils;pkg_summary-utils
 wip/pkg_online-client;pkg_online-client wip/pkg_online;pkg_online
 wip/pkg_online-server;pkg_online-server wip/pkg_online;pkg_online
 wip/pkg_summary-utils;pkg_summary-utils wip/distbb;distbb
@@ -1054,6 +1054,9 @@ devel/libtool-base;libtool-base>=1.5.18nb5 graphics/png;png
 devel/libtool-base;libtool-base>=1.5.18nb5 graphics/tiff;tiff
 devel/libtool-base;libtool-base>=1.5.18nb5 wip/dict-client;dict-client
 devel/libtool-base;libtool-base>=1.5.18nb5 wip/dict-server;dict-server
+devel/pipestatus;pipestatus-[0-9]* wip/pkg_online-client;pkg_online-client
+devel/pipestatus;pipestatus-[0-9]* wip/pkg_online-server;pkg_online-server
+devel/pipestatus;pipestatus-[0-9]* wip/pkg_summary-utils;pkg_summary-utils
 devel/pkg-config;pkg-config>=0.19 editors/emacs;emacs
 editors/emacs;emacs>=22 textproc/dictem;dictem
 graphics/jpeg;jpeg>=6b editors/emacs;emacs
@@ -1075,6 +1078,7 @@ sysutils/checkperms;checkperms>=1.1 devel/gmake;gmake
 sysutils/checkperms;checkperms>=1.1 devel/libltdl;libltdl
 sysutils/checkperms;checkperms>=1.1 devel/libmaa;libmaa
 sysutils/checkperms;checkperms>=1.1 devel/libtool-base;libtool-base
+sysutils/checkperms;checkperms>=1.1 devel/pipestatus;pipestatus
 sysutils/checkperms;checkperms>=1.1 devel/pkg-config;pkg-config
 sysutils/checkperms;checkperms>=1.1 editors/emacs;emacs
 sysutils/checkperms;checkperms>=1.1 graphics/jpeg;jpeg
@@ -1091,7 +1095,6 @@ sysutils/checkperms;checkperms>=1.1 wip/dict-client;dict-client
 sysutils/checkperms;checkperms>=1.1 wip/dict-server;dict-server
 sysutils/checkperms;checkperms>=1.1 wip/distbb;distbb
 sysutils/checkperms;checkperms>=1.1 wip/paexec;paexec
-sysutils/checkperms;checkperms>=1.1 wip/pipestatus;pipestatus
 sysutils/checkperms;checkperms>=1.1 wip/pkg_online-client;pkg_online-client
 sysutils/checkperms;checkperms>=1.1 wip/pkg_online-server;pkg_online-server
 sysutils/checkperms;checkperms>=1.1 wip/pkg_online;pkg_online
@@ -1102,9 +1105,6 @@ wip/awk-pkgsrc-dewey;awk-pkgsrc-dewey>=0.5.6 wip/pkg_summary-utils;pkg_summary-u
 wip/dict-client;dict-client>=1.10.9 wip/pkg_online-client;pkg_online-client
 wip/dict-server;dict-server>=1.10.10nb2 wip/pkg_online-server;pkg_online-server
 wip/paexec;paexec>=0.10.0 wip/distbb;distbb
-wip/pipestatus;pipestatus-[0-9]* wip/pkg_online-client;pkg_online-client
-wip/pipestatus;pipestatus-[0-9]* wip/pkg_online-server;pkg_online-server
-wip/pipestatus;pipestatus-[0-9]* wip/pkg_summary-utils;pkg_summary-utils
 wip/pkg_online-client;pkg_online-client-[0-9]* wip/pkg_online;pkg_online
 wip/pkg_online-server;pkg_online-server-[0-9]* wip/pkg_online;pkg_online
 wip/pkg_summary-utils;pkg_summary-utils-[0-9]* wip/pkg_online-client;pkg_online-client

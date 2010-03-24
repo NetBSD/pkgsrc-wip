@@ -14,7 +14,7 @@ PKGPATH=wip/dict-client
 BUILD_DEPENDS=libmaa-1.11.0:../../devel/libmaa
 
 PKGNAME=pipestatus-0.5.0
-PKGPATH=wip/pipestatus
+PKGPATH=devel/pipestatus
 
 PKGNAME=dict-server-1.11.0
 PKGPATH=wip/dict-server

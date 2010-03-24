@@ -46,7 +46,7 @@ EXFIELD=XVALUE2
 
 PKGNAME=pkg_online-server-0.5.0
 PKGPATH=wip/pkg_online-server
-DEPENDS=dict-server>=1.10.10nb2:../../wip/dict-server pkg_summary-utils>=0.19.0:../../wip/pkg_summary-utils pipestatus-[0-9]*:../../wip/pipestatus
+DEPENDS=dict-server>=1.10.10nb2:../../wip/dict-server pkg_summary-utils>=0.19.0:../../wip/pkg_summary-utils pipestatus-[0-9]*:../../devel/pipestatus
 BUILD_DEPENDS= checkperms>=1.1:../../sysutils/checkperms
 HOMEPAGE=http://mova.org/~cheusov/pub/pkg_online/
 COMMENT=Client/Server search in pkgsrc packages (server tools)
@@ -64,7 +64,7 @@ CATEGORIES=textproc
 
 PKGNAME=pkg_online-client-0.5.0
 PKGPATH=wip/pkg_online-client
-DEPENDS=dict-client>=1.10.9:../../wip/dict-client pkg_summary-utils-[0-9]*:../../wip/pkg_summary-utils pipestatus-[0-9]*:../../wip/pipestatus netcat-[0-9]*:../../net/netcat
+DEPENDS=dict-client>=1.10.9:../../wip/dict-client pkg_summary-utils-[0-9]*:../../wip/pkg_summary-utils pipestatus-[0-9]*:../../devel/pipestatus netcat-[0-9]*:../../net/netcat
 BUILD_DEPENDS= checkperms>=1.1:../../sysutils/checkperms
 HOMEPAGE=http://mova.org/~cheusov/pub/pkg_online/
 COMMENT=Client/Server search in pkgsrc packages (client tools)
@@ -125,7 +125,7 @@ CATEGORIES=editors
 
 PKGNAME=pkg_summary-utils-0.18.1
 PKGPATH=wip/pkg_summary-utils
-DEPENDS=runawk>=0.12.1:../../wip/runawk awk-pkgsrc-dewey>=0.5.6:../../wip/awk-pkgsrc-dewey pipestatus-[0-9]*:../../wip/pipestatus
+DEPENDS=runawk>=0.12.1:../../wip/runawk awk-pkgsrc-dewey>=0.5.6:../../wip/awk-pkgsrc-dewey pipestatus-[0-9]*:../../devel/pipestatus
 BUILD_DEPENDS= checkperms>=1.1:../../sysutils/checkperms
 CONFLICTS=paexec<0.9.0 pkg_src_summary-[0-9]* pkg_cmp_summary-[0-9]* pkg_src_update_summary-[0-9]* pkg_update_summary-[0-9]* pkg_summary4view-[0-9]*
 HOMEPAGE=http://www.mova.org/~cheusov/pub/pkg_summary-utils/
@@ -188,7 +188,7 @@ MAINTAINER=cheusov@tut.by
 CATEGORIES=textproc
 
 PKGNAME=pipestatus-0.4.0
-PKGPATH=wip/pipestatus
+PKGPATH=devel/pipestatus
 BUILD_DEPENDS= checkperms>=1.1:../../sysutils/checkperms
 HOMEPAGE=http://sourceforge.net/projects/pipestatus/
 COMMENT=UNIX/POSIX shell helper for running pipes safely
