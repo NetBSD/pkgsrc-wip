@@ -33,6 +33,7 @@ USAGE: pkg_grep_summary -h
        pkg_grep_summary -e <field>
        pkg_grep_summary -m <field> <regexp>
        pkg_grep_summary -s <field> <string>
+       pkg_grep_summary -S <field> <file>
        pkg_grep_summary <field> <awk_condition>
   <field>         - PKGBASE, PKGNAME, PKGPATH, DEPENDS etc.
   <awk_condition> - boolean expression written in AWK language
@@ -45,6 +46,8 @@ OPTIONS:
                           (equivalent to '<field>' 'fvalue == ""')
   -m          matches <field> against regular expression <regexp>
   -s          matches <field> equal to <string>
+  -S          matches <field> equal to any string in <file>,
+              one string per line
 EXAMPLES:
   pkg_grep_summary -s PKGBASE distbb
   pkg_grep_summary -s 'PKGPATH' 'devel/libjudy'
@@ -57,6 +60,7 @@ EXAMPLES:
   pkg_grep_summary -e 'NO_BIN_ON_FTP' \\
         < /usr/pkgsrc/pkg_src_summary.txt
   pkg_grep_summary -e 'NO_BIN_ON_CDROM'
+  pkg_grep_summary -S 'PKGPATH' wanted_pkgpaths.txt
 EOF
 }
 
@@ -72,6 +76,11 @@ while test $# -ne 0; do
 	-s)
 	    field=$2
 	    string=$3
+	    shift
+	    shift;;
+	-S)
+	    field=$2
+	    strings_fn=$3
 	    shift
 	    shift;;
 	-m)
@@ -95,6 +104,8 @@ if test -n "$empty"; then
     condition='fvalue == ""'
 elif test -n "$string"; then
     condition="fvalue == \"$string\""
+elif test -n "$strings_fn"; then
+    condition="fvalue in strings"
 elif test -n "$regex"; then
     re=`echo $regex | sed 's|/|\\\/|g'`
     condition="fvalue ~ /$re/"
@@ -110,10 +121,16 @@ if test -z "$condition" -o $# -ne 0; then
     exit 1
 fi
 
-runawk -e '
+runawk -v strings_fn="$strings_fn" -e '
 #use "pkg_grep_summary.awk"
+#use "xgetline.awk"
 
 BEGIN {
+   if (strings_fn != ""){
+      while(xgetline0(strings_fn)){
+         strings [$0] = 1
+      }
+   }
    grep_summary__field="'"$field"'"
 }
 
