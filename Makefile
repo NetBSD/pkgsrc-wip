@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3879 2010/03/23 20:16:25 jihbed Exp $
+# $Id: Makefile,v 1.3880 2010/03/24 08:48:52 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2210,6 +2210,7 @@ SUBDIR+=	tasks
 SUBDIR+=	tcc
 SUBDIR+=	tcc-devel
 SUBDIR+=	tcl-curl
+SUBDIR+=	tcl-tDOM
 SUBDIR+=	tcl85
 SUBDIR+=	tcmplex-panteltje
 SUBDIR+=	tcpspy
