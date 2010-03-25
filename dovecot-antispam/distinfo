@@ -1,0 +1,12 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/03/25 19:02:15 marttikuparinen Exp $
+
+SHA1 (dovecot-antispam-1.2.tar.bz2) = cfb834df95b42cb85c12456b953dc7686aa56100
+RMD160 (dovecot-antispam-1.2.tar.bz2) = 52b56839937db36144ba63af96d732b3647a67cb
+Size (dovecot-antispam-1.2.tar.bz2) = 26595 bytes
+SHA1 (patch-aa) = 0d7879dd8d73ab3a3d8af719b1a09e1819a99967
+SHA1 (patch-ab) = a7996b22775f4fe69eee52be4b16e27828670ad8
+SHA1 (patch-ac) = 0702f325201342d59b689f10795d2013081817ee
+SHA1 (patch-ad) = 64d9316dfab40e470026c8cde8db2eae36bc369e
+SHA1 (patch-ae) = 10a09bc95a24a05b0dcc177886f8fb2c387c30e4
+SHA1 (patch-af) = 00244daa07003e9f46977c2c74dda9af5305e366
+SHA1 (patch-ag) = 30adcb4c3780604955b4848766f3651f96a57041

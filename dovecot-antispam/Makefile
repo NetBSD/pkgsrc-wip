@@ -1,0 +1,30 @@
+# $NetBSD: Makefile,v 1.1.1.1 2010/03/25 19:02:15 marttikuparinen Exp $
+
+DISTNAME=	dovecot-antispam-1.2
+CATEGORIES=	mail
+MASTER_SITES=	http://johannes.sipsolutions.net/download/dovecot-antispam/
+EXTRACT_SUFX=	.tar.bz2
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://johannes.sipsolutions.net/Projects/dovecot-antispam
+COMMENT=	Antispam plugin for Dovecot
+
+LICENSE=	gnu-gpl-v2
+
+#PKG_DESTDIR_SUPPORT=	user-destdir
+
+USE_TOOLS+=		gmake
+#MAKE_DIRS+=		lib/dovecot/imap
+
+SUBST_CLASSES+=		pkgsrc
+SUBST_STAGE.pkgsrc=	post-patch
+SUBST_FILES.pkgsrc=	defconfig
+SUBST_SED.pkgsrc=	-e "s|@PREFIX@|${PREFIX}|g"
+SUBST_SED.pkgsrc+=	-e "s|@ROOT_USER@|${ROOT_USER}|g"
+SUBST_SED.pkgsrc+=	-e "s|@ROOT_GROUP@|${ROOT_GROUP}|g"
+
+pre-configure:
+	cp ${WRKSRC}/defconfig ${WRKSRC}/.config
+
+.include "../../mail/dovecot/buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"

@@ -1,0 +1,2 @@
+* Test destdir support
+* Create options.mk so the user can define which backend to use

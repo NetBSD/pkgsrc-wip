@@ -1,0 +1,15 @@
+$NetBSD: patch-ag,v 1.1.1.1 2010/03/25 19:02:15 marttikuparinen Exp $
+
+We don't want to install Git.
+
+--- version.sh.orig	2009-06-15 22:19:48.000000000 +0300
++++ version.sh	2010-03-25 18:53:09.000000000 +0200
+@@ -1,6 +1,8 @@
+ #!/bin/sh
+ 
+ VERSION=1.2
++echo '#define ANTISPAM_VERSION "'${VERSION}'-notgit"'
++exit 0
+ 
+ if head=$(git rev-parse --verify HEAD 2>/dev/null); then
+ 	git update-index --refresh --unmerged > /dev/null

@@ -1,0 +1,44 @@
+$NetBSD: patch-ad,v 1.1.1.1 2010/03/25 19:02:15 marttikuparinen Exp $
+
+Dovecot 1.2 fix.
+
+--- antispam-plugin.c
++++ antispam-plugin.c
+@@ -96,8 +96,8 @@ void lowercase_string(const char *in, char *out)
+ 	}
+ }
+ 
+-static bool mailbox_patternmatch(struct mailbox *box,
+-				 struct mail_storage *storage,
++static bool mailbox_patternmatch(const struct mailbox *box,
++				 const struct mail_storage *storage,
+ 				 const char *name,
+ 				 bool lowercase)
+ {
+@@ -134,21 +134,21 @@ static bool mailbox_patternmatch(struct mailbox *box,
+ 	return rc;
+ }
+ 
+-static bool mailbox_patternmatch_case(struct mailbox *box,
+-				      struct mail_storage *storage,
++static bool mailbox_patternmatch_case(const struct mailbox *box,
++				      const struct mail_storage *storage,
+ 				      const char *name)
+ {
+ 	return mailbox_patternmatch(box, storage, name, FALSE);
+ }
+ 
+-static bool mailbox_patternmatch_icase(struct mailbox *box,
+-				       struct mail_storage *storage,
++static bool mailbox_patternmatch_icase(const struct mailbox *box,
++				       const struct mail_storage *storage,
+ 				       const char *name)
+ {
+ 	return mailbox_patternmatch(box, storage, name, TRUE);
+ }
+ 
+-typedef bool (*match_fn_t)(struct mailbox *, struct mail_storage *,
++typedef bool (*match_fn_t)(const struct mailbox *, const struct mail_storage *,
+ 			   const char *);
+ 
+ /* match information */
