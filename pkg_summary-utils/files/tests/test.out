@@ -249,6 +249,42 @@ MAINTAINER=imil@gcu.info
 CATEGORIES=www databases
 
 --------------------------------------------------
+------- args: 'pkg_grep_summary' '-S' 'PKGPATH' 'pkgs.txt'
+PKGNAME=distbb-0.22.0
+PKGPATH=wip/distbb
+DEPENDS=pkg_summary-utils>=0.18.1:../../wip/pkg_summary-utils paexec>=0.10.0:../../wip/paexec runawk>=0.13.0:../../wip/runawk
+BUILD_DEPENDS= checkperms>=1.1:../../sysutils/checkperms
+HOMEPAGE=http://mova.org/~cheusov/pub/distbb/
+COMMENT=DISTributed Bulk Build tool for pkgsrc
+MAINTAINER=cheusov@tut.by
+CATEGORIES=pkgtools
+EXFIELD=XVALUE1
+
+BUILD_DEPENDS= libtool-base>=1.5.18nb5:../../devel/libtool-base gmake>=3.81:../../devel/gmake checkperms>=1.1:../../sysutils/checkperms
+PKGNAME=dict-server-1.10.11nb2
+PKGPATH=wip/dict-server
+DEPENDS=   libmaa>=1.2:../../devel/libmaa
+HOMEPAGE=http://www.dict.org/
+COMMENT=Dictionary Service Protocol server
+MAINTAINER=cheusov@tut.by
+CATEGORIES=textproc
+
+PKGNAME=png-1.2.32beta01
+PKGPATH=graphics/png
+BUILD_DEPENDS= libtool-base>=1.5.18nb5:../../devel/libtool-base checkperms>=1.1:../../sysutils/checkperms
+HOMEPAGE=http://www.libpng.org/pub/png/
+COMMENT=Library for manipulating PNG images
+MAINTAINER=wiz@NetBSD.org
+CATEGORIES=graphics
+
+PKGNAME=ap2-vhost-ldap-1.2.0nb1
+PKGPATH=www/ap2-vhost-ldap:PKG_APACHE=apache2
+HOMEPAGE=http://packages.qa.debian.org/m/mod-vhost-ldap.html
+COMMENT=Apache 2 module LDAP Virtual Hosts support
+MAINTAINER=imil@gcu.info
+CATEGORIES=www databases
+
+--------------------------------------------------
 ------- pkg_cmp_summary #1.1
 - ap2-vhost-ldap 1.2.0nb1
 - ap22-vhost-ldap 1.2.0nb1

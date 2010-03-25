@@ -65,10 +65,10 @@ runtest pkg_grep_summary -s PKGPATHe www/ap22-vhost-ldap:PKG_APACHE=apache22 \
 runtest pkg_grep_summary -s PKGPATHe www/ap2-vhost-ldap:PKG_APACHE=apache2 \
     < src_summary.txt
 
-runtest pkg_grep_summary -s PKGPATH www/ap22-vhost-ldap \
-    < src_summary.txt
-runtest pkg_grep_summary -s PKGPATH www/ap2-vhost-ldap \
-    < src_summary.txt
+runtest pkg_grep_summary -s PKGPATH www/ap22-vhost-ldap < src_summary.txt
+runtest pkg_grep_summary -s PKGPATH www/ap2-vhost-ldap < src_summary.txt
+
+runtest pkg_grep_summary -S PKGPATH pkgs.txt < src_summary.txt
 
 
 
