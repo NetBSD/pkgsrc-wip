@@ -230,6 +230,25 @@ MAINTAINER=imil@gcu.info
 CATEGORIES=www databases
 
 --------------------------------------------------
+------- args: 'pkg_grep_summary' '-s' 'PKGPATH' 'www/ap22-vhost-ldap'
+PKGNAME=ap22-vhost-ldap-1.2.0nb1
+ASSIGNMENTS=PKG_APACHE=apache22
+HOMEPAGE=http://packages.qa.debian.org/m/mod-vhost-ldap.html
+COMMENT=Apache 2.2 module LDAP Virtual Hosts support
+MAINTAINER=imil@gcu.info
+PKGPATH=www/ap22-vhost-ldap
+CATEGORIES=www databases
+
+--------------------------------------------------
+------- args: 'pkg_grep_summary' '-s' 'PKGPATH' 'www/ap2-vhost-ldap'
+PKGNAME=ap2-vhost-ldap-1.2.0nb1
+PKGPATH=www/ap2-vhost-ldap:PKG_APACHE=apache2
+HOMEPAGE=http://packages.qa.debian.org/m/mod-vhost-ldap.html
+COMMENT=Apache 2 module LDAP Virtual Hosts support
+MAINTAINER=imil@gcu.info
+CATEGORIES=www databases
+
+--------------------------------------------------
 ------- pkg_cmp_summary #1.1
 - ap2-vhost-ldap 1.2.0nb1
 - ap22-vhost-ldap 1.2.0nb1

@@ -69,6 +69,10 @@ function check_PKGPATHe (){
 	}
 }
 
+(grep_summary__field == "PKGPATH" && idx = index(fvalue, ":")) {
+	fvalue = substr(fvalue, 1, idx-1)
+}
+
 (fname == grep_summary__field) || ("" == grep_summary__field) {
 	if (grep_summary__skip == -1){
 		update_skip()
