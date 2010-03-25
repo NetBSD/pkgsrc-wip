@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/12/06 13:21:17 obache Exp $
+# $NetBSD: Makefile,v 1.3 2010/03/25 08:00:33 obache Exp $
 #
 
 DISTNAME=	milter-manager-1.4.1
@@ -34,8 +34,8 @@ PKGCONFIG_OVERRIDE+=	milter-core.pc.in
 PKGCONFIG_OVERRIDE+=	milter-manager.pc.in
 PKGCONFIG_OVERRIDE+=	milter-server.pc.in
 
-MILTER_MANAGER_USER?=	milter-manager
-MILTER_MANAGER_GROUP?=	milter-manager
+MILTER_MANAGER_USER?=	_milter
+MILTER_MANAGER_GROUP?=	_milter
 MILTER_MANAGER_SOCKET_GROUP?=	mail
 PKG_GROUPS=		${MILTER_MANAGER_GROUP} ${MILTER_MANAGER_SOCKET_GROUP}
 PKG_USERS=		${MILTER_MANAGER_USER}:${MILTER_MANAGER_GROUP}
