@@ -60,6 +60,11 @@ runtest pkg_grep_summary -m MAINTAINER 'cheusov|vle@gmx.net' < src_summary.txt |
 
 runtest pkg_grep_summary -s PKGPATH graphics/png < src_summary.txt
 
+runtest pkg_grep_summary -s PKGPATHe www/ap22-vhost-ldap:PKG_APACHE=apache22 \
+    < src_summary.txt
+runtest pkg_grep_summary -s PKGPATHe www/ap2-vhost-ldap:PKG_APACHE=apache2 \
+    < src_summary.txt
+
 
 
 # pkg_cmp_summary

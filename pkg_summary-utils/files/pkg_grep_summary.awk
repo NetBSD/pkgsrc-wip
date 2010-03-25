@@ -2,7 +2,6 @@
 #use "psu_funcs.awk"
 
 BEGIN {
-	FS                 = "="
 	grep_summary__skip = -1 # -1 - unknown, 0 - false, 1 - true
 	count              = 0
 }
@@ -28,12 +27,17 @@ grep_summary__skip == 1 && NF > 0 {
 }
 
 {
-	fname = $1
-	fvalue = $0
-	sub(/^[^=]*=/, "", fvalue)
+	pos = index($0, "=")
+	if (pos > 0){
+		fname  = substr($0, 1, pos-1)
+		fvalue = substr($0, pos+1)
+	}else{
+		fname  = ""
+		fvalue = ""
+	}
 }
 
-($1 == "PKGNAME") && (grep_summary__field == "PKGBASE") {
+(grep_summary__field == "PKGBASE") && (fname == "PKGNAME") {
 	if (grep_summary__skip == -1){
 		fname = "PKGBASE"
 		fvalue = pkgname2pkgbase(fvalue)
@@ -41,7 +45,31 @@ grep_summary__skip == 1 && NF > 0 {
 	}
 }
 
-($1 == grep_summary__field) || ("" == grep_summary__field) {
+function check_PKGPATHe (){
+	if (assigns != "" && pkgpath != ""){
+		fvalue = pkgpath ":" assigns
+		fname  = "PKGPATHe"
+		update_skip()
+	}else if (index(pkgpath, ":") > 0){
+		fvalue = pkgpath
+		fname  = "PKGPATHe"
+		update_skip()
+	}
+}
+
+(grep_summary__field == "PKGPATHe") {
+	if (grep_summary__skip == -1){
+		if (fname == "ASSIGNMENTS") {
+			assigns = fvalue
+			check_PKGPATHe()
+		}else if (fname == "PKGPATH") {
+			pkgpath = fvalue
+			check_PKGPATHe()
+		}
+	}
+}
+
+(fname == grep_summary__field) || ("" == grep_summary__field) {
 	if (grep_summary__skip == -1){
 		update_skip()
 	}
@@ -53,7 +81,7 @@ grep_summary__skip == 0 && NF > 0 {
 }
 
 {
-	grep_summary__fields [$1] = fvalue
+	grep_summary__fields [fname] = fvalue
 }
 
 grep_summary__skip == -1 && NF > 0 {
@@ -72,4 +100,6 @@ NF == 0 {
 	delete grep_summary__fields
 	count = 0
 	grep_summary__skip = -1
+
+	assigns = pkgpath = ""
 }
