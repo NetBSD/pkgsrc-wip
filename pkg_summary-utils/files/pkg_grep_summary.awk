@@ -37,14 +37,6 @@ grep_summary__skip == 1 && NF > 0 {
 	}
 }
 
-(grep_summary__field == "PKGBASE") && (fname == "PKGNAME") {
-	if (grep_summary__skip == -1){
-		fname = "PKGBASE"
-		fvalue = pkgname2pkgbase(fvalue)
-		update_skip()
-	}
-}
-
 function check_PKGPATHe (){
 	if (assigns != "" && pkgpath != ""){
 		fvalue = pkgpath ":" assigns
@@ -57,8 +49,14 @@ function check_PKGPATHe (){
 	}
 }
 
-(grep_summary__field == "PKGPATHe") {
-	if (grep_summary__skip == -1){
+grep_summary__skip == -1{
+	if (grep_summary__field == "PKGBASE"){
+		if (fname == "PKGNAME"){
+			fname = "PKGBASE"
+			fvalue = pkgname2pkgbase(fvalue)
+			update_skip()
+		}
+	}else if (grep_summary__field == "PKGPATHe"){
 		if (fname == "ASSIGNMENTS") {
 			assigns = fvalue
 			check_PKGPATHe()
@@ -66,15 +64,13 @@ function check_PKGPATHe (){
 			pkgpath = fvalue
 			check_PKGPATHe()
 		}
+	}else if (grep_summary__field == "PKGPATH"){
+		idx = index(fvalue, ":")
+		if (idx > 0)
+			fvalue = substr(fvalue, 1, idx-1)
 	}
-}
 
-(grep_summary__field == "PKGPATH" && idx = index(fvalue, ":")) {
-	fvalue = substr(fvalue, 1, idx-1)
-}
-
-(fname == grep_summary__field) || ("" == grep_summary__field) {
-	if (grep_summary__skip == -1){
+	if (fname == grep_summary__field || "" == grep_summary__field) {
 		update_skip()
 	}
 }
