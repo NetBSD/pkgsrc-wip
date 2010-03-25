@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3880 2010/03/24 08:48:52 phonohawk Exp $
+# $Id: Makefile,v 1.3881 2010/03/25 07:57:55 jgoamakf Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1633,6 +1633,7 @@ SUBDIR+=	p5-Text-Hatena
 SUBDIR+=	p5-Text-Quote
 SUBDIR+=	p5-Text-Trim
 SUBDIR+=	p5-Text-VimColor
+SUBDIR+=	p5-TheSchwartz
 SUBDIR+=	p5-Tie-DB_Lock
 SUBDIR+=	p5-Time-Piece-Range
 SUBDIR+=	p5-Tk-TableMatrix
