@@ -22,7 +22,7 @@ existing tools:
 
     pkg_micro_src_summary:
        - rewrite it! There is no reason to "emulate" 'make'.
-         It is enough to run bmake for cut off Makefile.
+         Sometimes it is enough to run bmake for cut off Makefile.
 
     pkg_refresh_summary:
 
@@ -30,12 +30,20 @@ existing tools:
        - remove it, see pkg_micro_src_summary
 
     pkg_src_summary:
+       - Option -A works incorrectly with some sort of
+         {alter,native}:../../depend/encies. This problem is visible in partial
+         distbb(1) bulk builds. Things like
+            DEPENDS=...libao-[a-z]*-[0-9]*...
+         also doesn't work properly.
        - new option for exit code 0 if everything was done successfully,
          1 otherwise
 
     pkg_summary2bb_pkgs:
 
     pkg_summary2build_graph:
+       - See problems of pkg_src_summary -A.
+         Due to that bug distbb sometimes fails to build packages in 'depends' stage.
+         This should not happen.
 
     pkg_summary2deps:
 
