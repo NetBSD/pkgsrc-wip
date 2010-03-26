@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3882 2010/03/25 19:03:20 marttikuparinen Exp $
+# $Id: Makefile,v 1.3883 2010/03/26 13:28:28 marttikuparinen Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1131,6 +1131,7 @@ SUBDIR+=	libvdpau
 SUBDIR+=	libvg
 SUBDIR+=	libwbxml2-patched
 SUBDIR+=	libxc
+SUBDIR+=	libyubikey
 SUBDIR+=	libzdb
 SUBDIR+=	libzrtpcpp
 SUBDIR+=	lidia
