@@ -1,5 +1,3 @@
---------------------------------------------------
-------- args: 'pkg_grep_summary' '-e' 'EXFIELD'
 PKGNAME=perl-5.8.8nb8
 PKGPATH=lang/perl5
 
