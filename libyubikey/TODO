@@ -1,0 +1,22 @@
+* Fix this error:
+
+=> Checking for missing run-time search paths in libyubikey-1.5
+ERROR: bin/modhex: rpath relative to WRKDIR
+ERROR: bin/ykdebug: rpath relative to WRKDIR
+*** Error code 1
+
+
+# ldd work.i386/libyubikey-1.5/ykdebug
+work.i386/libyubikey-1.5/ykdebug:
+        -lc.12 => /usr/lib/libc.so.12
+        -lyubikey.0 => /home/pkgsrc/wip/libyubikey/work.i386/libyubikey-1.5/.libs/libyubikey.so.0
+
+However, there's no problem if I do this:
+
+# cd work.i386/libyubikey-1.5
+# rm -f ykdebug
+# make
+# ldd ykdebug
+ykdebug:
+        -lyubikey.0 => not found
+        -lc.12 => /usr/lib/libc.so.12
