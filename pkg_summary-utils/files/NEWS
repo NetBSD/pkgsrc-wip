@@ -1,4 +1,24 @@
 ----------------------------------------------------------------------
+Version 0.37.0, by Aleksey Cheusov, Sat, 27 Mar 2010 01:01:03 +0200
+
+ pkg_lint_summary:
+   - If problems were encountered, an exit status is 1
+
+   - New option -d for checking that all required dependencies are
+     present in input summary. For details, see a manual page.
+
+ pkg_grep_summary:
+   - New option -S for grepping summaries using a list of PKGPATHs,
+     PKGBASEs or whatever else stored in a file. For details, see a
+     manual page.
+
+   - New artificial field for searching: "PKGPATHe". This is an
+     enriched PKGPATH, i.e. PKGPATH and ASSIGNMENTS (if present)
+     separated by a colon (`:') symbol.
+
+   - optimizations
+
+----------------------------------------------------------------------
 Version 0.36.1, by Aleksey Cheusov, Mon,  1 Mar 2010 23:25:27 +0200
 
  - New tool pkg_lint_summary. Given summary on input it makes some
