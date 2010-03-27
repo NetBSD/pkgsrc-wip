@@ -1,4 +1,4 @@
-# $Id: svn-package.mk,v 1.13 2009/11/20 11:18:59 asau Exp $
+# $Id: svn-package.mk,v 1.14 2010/03/27 13:10:37 obache Exp $
 
 # This file provides simple access to Subversion repositories, so that packages
 # can be created from Subversion instead of from released tarballs.
@@ -195,7 +195,7 @@ pre-extract: do-svn-extract
 do-svn-extract: .PHONY
 .if defined(SVN_CERTS) && !empty(SVN_CERTS)
 	${RUN}${MKDIR} -p ${_SVN_CONFIG_DIR}/auth/svn.ssl.server
-	${RUN}${CP} ${SVN_CERTS:Q} ${_SVN_CONFIG_DIR}/auth/svn.ssl.server
+	${RUN}${CP} ${SVN_CERTS} ${_SVN_CONFIG_DIR}/auth/svn.ssl.server
 .endif
 .for repo in ${SVN_REPOSITORIES}
 	${RUN} cd ${WRKDIR};						\
