@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2010/03/16 05:14:08 phonohawk Exp $
+# $NetBSD: Makefile,v 1.9 2010/03/27 05:49:30 phonohawk Exp $
 #
 
-DISTNAME=	Lucu-0.5
+DISTNAME=	Lucu-0.6
 CATEGORIES=	www
 
 MAINTAINER=	pho@cielonegro.org
@@ -17,5 +17,6 @@ LICENSE=	public-domain
 .include "../../wip/hs-mtl/buildlink3.mk"
 .include "../../wip/hs-network/buildlink3.mk"
 .include "../../wip/hs-stm/buildlink3.mk"
+.include "../../wip/hs-time-http/buildlink3.mk"
 .include "../../wip/hs-zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

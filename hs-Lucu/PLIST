@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2010/03/16 05:14:08 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.4 2010/03/27 05:49:30 phonohawk Exp $
 bin/lucu-implant-file
 lib/Lucu-${PKGVERSION}/${HASKELL_VERSION}/HSLucu-${PKGVERSION}.o
 lib/Lucu-${PKGVERSION}/${HASKELL_VERSION}/Network/HTTP/Lucu.hi
@@ -45,8 +45,6 @@ lib/Lucu-${PKGVERSION}/${HASKELL_VERSION}/Network/HTTP/Lucu/Postprocess.hi
 lib/Lucu-${PKGVERSION}/${HASKELL_VERSION}/Network/HTTP/Lucu/Postprocess.p_hi
 lib/Lucu-${PKGVERSION}/${HASKELL_VERSION}/Network/HTTP/Lucu/Preprocess.hi
 lib/Lucu-${PKGVERSION}/${HASKELL_VERSION}/Network/HTTP/Lucu/Preprocess.p_hi
-lib/Lucu-${PKGVERSION}/${HASKELL_VERSION}/Network/HTTP/Lucu/RFC1123DateTime.hi
-lib/Lucu-${PKGVERSION}/${HASKELL_VERSION}/Network/HTTP/Lucu/RFC1123DateTime.p_hi
 lib/Lucu-${PKGVERSION}/${HASKELL_VERSION}/Network/HTTP/Lucu/Request.hi
 lib/Lucu-${PKGVERSION}/${HASKELL_VERSION}/Network/HTTP/Lucu/Request.p_hi
 lib/Lucu-${PKGVERSION}/${HASKELL_VERSION}/Network/HTTP/Lucu/RequestReader.hi
