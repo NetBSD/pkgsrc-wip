@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3883 2010/03/26 13:28:28 marttikuparinen Exp $
+# $Id: Makefile,v 1.3884 2010/03/27 05:19:11 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -853,6 +853,7 @@ SUBDIR+=	hs-storable-record
 SUBDIR+=	hs-tagsoup
 SUBDIR+=	hs-tar
 SUBDIR+=	hs-terminfo
+SUBDIR+=	hs-time-http
 SUBDIR+=	hs-time-w3c
 SUBDIR+=	hs-transformers
 SUBDIR+=	hs-uconv
