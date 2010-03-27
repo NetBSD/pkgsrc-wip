@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2010/02/16 09:41:59 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.31 2010/03/27 14:09:31 thomasklausner Exp $
 #
 
 DISTNAME=	amarok-${VERS}
@@ -44,7 +44,7 @@ SUBST_SED.mysql+=	-e s:@@WLR@@:${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.mysql-em
 BUILDLINK_API_DEPENDS.taglib+=	taglib>=1.6nb1
 .include "../../audio/taglib/buildlink3.mk"
 .include "../../audio/taglib-extras/buildlink3.mk"
-.include "../../databases/mysql51-embedded/buildlink3.mk"
+.include "../../databases/mysql51-server/buildlink3.mk"
 .include "../../devel/qtscriptgenerator/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../meta-pkgs/kde4/kde4.mk"
