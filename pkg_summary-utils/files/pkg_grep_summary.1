@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkg_grep_summary.1,v 1.10 2010/03/24 14:27:05 cheusov Exp $
+.\"	$NetBSD: pkg_grep_summary.1,v 1.11 2010/03/27 21:45:33 cheusov Exp $
 .\"
 .\" Copyright (c) 2008 by Aleksey Cheusov (vle@gmx.net)
 .\" Absolutely no warranty.
@@ -20,7 +20,7 @@ pkg_grep_summary \- tool for grepping pkgsrc summary file
 .SH SYNOPSIS
 .B "pkg_grep_summary -h"
 .br
-.BI pkg_grep_summary " field awk_condition"
+.BI pkg_grep_summary " field awk_expression"
 .br
 .BI "pkg_grep_summary -e" " field"
 .br
@@ -32,18 +32,28 @@ pkg_grep_summary \- tool for grepping pkgsrc summary file
 .br
 .SH DESCRIPTION
 .B pkg_grep_summary
-outputs a summary information about packages that matches
-the specified condition.
+takes package summaries on stdin and
+outputs those matching the specified condition.
+Format of summary is described in
+.BR pkg_summary(5) .
+Fields are PKGPATH, PKGNAME, DEPENDS, MAINTAINER
+and so on, actually anything present in input.
+In addition to fields really present in input two artificial fields
+are supported: PKGBASE and PKGPATHe. PKGBASE
+is a PKGNAME with package version stripped. PKGPATHe (enriched PKGPATH)
+is PKGPATH with ASSIGNMENTS
+(if present) separated by colon symbol.
 One may think that
 .B pkg_grep_summary
-is a search tool
-somewhat similar to
-grep, PKGSRCDIR/pkglocate, pkg_find
-etc. but it is a multifield
-searcher and is fast because it uses summaries instead
-of pkgsrc packages source tree.
-In addition to fields really present in input, PKGBASE is also supported,
-it is a PKGNAME with package version stripped.
+is a search tool somewhat similar to
+.BR grep(1) ", " PKGSRCDIR/pkglocate ", " pkgfind
+etc. but it is different. Unlike 
+.B grep(1)
+.B pkg_grep_summary
+uses a summary for one package instead of line of text as a basic element.
+Unlike
+.B pkgfind
+it doesn't scan pkgsrc source and therefore works drammatically faster.
 .SH OPTIONS
 .TP
 .B "-h|--help"
@@ -74,26 +84,26 @@ one string per line, and outputs summary given on stdin if
 is equal to one of read strings.
 .SH EXAMPLES
 .VB
-pkg_grep_summary -s 'PKGPATH' 'devel/libjudy'
+pkg_grep_summary -s PKGPATH 'devel/libjudy'
 
-pkg_grep_summary -m 'PKGPATH' '^wip/'
+pkg_grep_summary -m PKGPATH '^wip/'
 
 pkg_info -Xa | pkg_grep_summary SIZE_PKG 'fvalue+0 > 100000000'
 
-pkg_grep_summary 'PKGNAME' 'fvalue ~ /judy/' \\
+pkg_grep_summary PKGNAME 'fvalue ~ /judy/' \\
       < /usr/pkgsrc/packages/pkg_summary.txt
 
-pkg_grep_summary 'PKGPATH' 'fvalue ~ /^lang\\//' \\
+pkg_grep_summary PKGPATH 'fvalue ~ /^lang\\//' \\
       < /usr/pkgsrc/packages/pkg_summary.txt
 
-pkg_grep_summary 'DEPENDS' 'fvalue ~ /libX11/' \\
+pkg_grep_summary DEPENDS 'fvalue ~ /libX11/' \\
       < /usr/pkgsrc/pkg_src_summary.txt
 
-pkg_grep_summary 'COMMENT' 'toupper(fvalue) ~ /DNS/' \\
+pkg_grep_summary COMMENT 'toupper(fvalue) ~ /DNS/' \\
       < /usr/pkgsrc/pkg_src_summary.txt
 
 pkg_info -QPKGPATH -a > /tmp/wanted_pkgpaths.txt
-pkg_grep_summary -S 'PKGPATH' /tmp/wanted_pkgpaths.txt \\
+pkg_grep_summary -S PKGPATH /tmp/wanted_pkgpaths.txt \\
       < /usr/pkgsrc/packages/pkg_summary.txt
 .VE
 .SH SEE ALSO

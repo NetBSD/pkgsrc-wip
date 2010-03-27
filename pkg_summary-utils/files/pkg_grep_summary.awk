@@ -49,7 +49,7 @@ function check_PKGPATHe (){
 	}
 }
 
-grep_summary__skip == -1{
+grep_summary__skip == -1 {
 	if (grep_summary__field == "PKGBASE"){
 		if (fname == "PKGNAME"){
 			fname = "PKGBASE"
@@ -89,6 +89,11 @@ grep_summary__skip == -1 && NF > 0 {
 }
 
 NF == 0 {
+	if (grep_summary__skip == -1 && grep_summary__field == "PKGPATHe"){
+		fvalue = pkgpath
+		update_skip()
+		fvalue = ""
+	}
 	if (grep_summary__skip == -1){
 		update_skip()
 	}
