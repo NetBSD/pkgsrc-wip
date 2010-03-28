@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2010/03/28 17:53:10 khorben Exp $
+bin/download
+bin/surfer
+share/applications/surfer.desktop
