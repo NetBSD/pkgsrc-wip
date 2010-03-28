@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/03/28 11:48:07 ryo-on Exp $
+bin/llgal
+lib/perl5/vendor_perl/5.10.0/Llgal/Config.pm
+lib/perl5/vendor_perl/5.10.0/Llgal/Messages.pm
+lib/perl5/vendor_perl/5.10.0/Llgal/Templates.pm
+lib/perl5/vendor_perl/5.10.0/Llgal/Utils.pm
+lib/perl5/vendor_perl/5.10.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Llgal/.packlist
+man/man1/llgal.1
+man/man5/llgalrc.5
+share/llgal/captions.header
+share/llgal/index.png
+share/llgal/indextemplate.html
+share/llgal/llgal.css
+share/llgal/next.png
+share/llgal/prev.png
+share/llgal/slidetemplate.html
+share/llgal/tile.png
+share/locale/de/LC_MESSAGES/llgal.mo
+share/locale/en/LC_MESSAGES/llgal.mo
+share/locale/fr/LC_MESSAGES/llgal.mo
+share/locale/it/LC_MESSAGES/llgal.mo
+@pkgdir etc/llgal

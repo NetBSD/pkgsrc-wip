@@ -1,0 +1,24 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/03/28 11:48:07 ryo-on Exp $
+
+* install modules into vendor_perl directory
+* install man pages
+--- Makefile.orig	2010-02-28 07:57:05.000000000 +0000
++++ Makefile
+@@ -19,7 +19,7 @@ SYSCONFDIR	=	$(PREFIX)/etc
+ MANDIR	=	$(PREFIX)/man
+ LOCALEDIR	=	$(DATADIR)/locale
+ DOCDIR	=	$(DATADIR)/doc
+-PERL_INSTALLDIRS	=	
++PERL_INSTALLDIRS	=	vendor
+ 
+ TARBALL	=	$(NAME)-$(VERSION)
+ DEBIAN_TARBALL	=	$(NAME)_$(VERSION).orig
+@@ -37,7 +37,7 @@ llgal:: llgal.in VERSION build-lib updat
+ clean:: clean-lib clean-po
+ 	rm -f llgal
+ 
+-install:: install-lib install-po
++install:: install-lib install-po install-man
+ 	install -d -m 0755 $(DESTDIR)$(BINDIR)/ $(DESTDIR)$(DATADIR)/llgal/ $(DESTDIR)$(SYSCONFDIR)/llgal/
+ 	install -m 0755 llgal $(DESTDIR)$(BINDIR)/llgal
+ 	install -m 0644 $(DATA_SUBDIR)/* $(DESTDIR)$(DATADIR)/llgal/
