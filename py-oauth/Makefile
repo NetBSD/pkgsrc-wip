@@ -1,34 +1,25 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/10/06 10:19:30 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2010/03/28 09:38:16 jihbed Exp $
+#
 
-PKGNAME=	${PYPKGPREFIX}-oauth-1.0.1
-DISTNAME=	python
+DISTNAME=	oauth-1.0.1
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	security python
-MASTER_SITES=	http://oauth.googlecode.com/svn/code/
+MASTER_SITES=	http://pypi.python.org/packages/source/o/oauth/
 
 MAINTAINER=	filip@joyent.com
 HOMEPAGE=	http://code.google.com/p/oauth/
 COMMENT=	Python bindings for OAuth
 LICENSE=	mit
 
-.include "../../mk/bsd.prefs.mk"
+PKG_DESTDIR_SUPPORT=	user-destdir
 
-SVNREVISION=	r1130
-
-NO_CHECKSUM=	yes
-PYDISTUTILSPKG=	# yes
+USE_LANGUAGES=	# none
 PYTHON_VERSIONS_ACCEPTED=	26 25 24
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX:Q}
 
-BUILD_DEPENDS+=	subversion-base-[0-9]*:../../devel/subversion-base
-
 EGDIR=		share/examples/py-oauth
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS+=	${EGDIR}
-
-do-fetch:
-do-extract:
-	cd ${WRKDIR} && svn export -r ${SVNREVISION} ${MASTER_SITES}${DISTNAME}
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/oauth/example/*.py ${DESTDIR}${PREFIX}/${EGDIR}
