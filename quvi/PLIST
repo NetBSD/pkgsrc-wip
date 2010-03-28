@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/03/28 05:13:30 ryo-on Exp $
+bin/quvi
+include/quvi/quvi.h
+lib/libquvi.la
+lib/pkgconfig/libquvi.pc
+man/man1/quvi.1
