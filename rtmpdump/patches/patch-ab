@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.1.1.1 2010/03/28 21:28:11 ryo-on Exp $
+
+--- librtmp/Makefile.orig	2010-03-22 09:43:57.000000000 +0000
++++ librtmp/Makefile
+@@ -1,6 +1,6 @@
+ VERSION=v2.2b
+ 
+-prefix=/usr/local
++prefix=${PREFIX}
+ 
+ CC=$(CROSS_COMPILE)gcc
+ LD=$(CROSS_COMPILE)ld
+@@ -20,7 +20,8 @@ CFLAGS=-Wall $(XCFLAGS) $(INC) $(DEF) $(
+ 
+ INCDIR=$(DESTDIR)$(prefix)/include/librtmp
+ 
+-all:	librtmp.a
++posix:	all
++all:	librtmp.a librtmp.pc
+ 
+ clean:
+ 	rm -f *.o *.a

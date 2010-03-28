@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/03/28 21:28:11 ryo-on Exp $
+
+SHA1 (rtmpdump-2.2b.tar.gz) = 5f04beba7b46f0d2812f7e15b3daba525a892996
+RMD160 (rtmpdump-2.2b.tar.gz) = 4264577e30f9c0648cf7f516900d6c7b39440c70
+Size (rtmpdump-2.2b.tar.gz) = 113917 bytes
+SHA1 (patch-aa) = 7865b3a657372b3ebe8bd1cac0bd9c30e063ac59
+SHA1 (patch-ab) = 5ba6e0613d012f57ac97015a949e48b3d36fcaba

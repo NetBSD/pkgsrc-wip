@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/03/28 21:28:11 ryo-on Exp $
+bin/rtmpdump
+bin/rtmpgw
+bin/rtmpsrv
+bin/rtmpsuck
+include/librtmp/amf.h
+include/librtmp/http.h
+include/librtmp/log.h
+include/librtmp/rtmp.h
+lib/librtmp.a
+lib/pkgconfig/librtmp.pc
+man/man1/rtmpdump.1
+man/man8/rtmpgw.8
+share/doc/rtmpdump/ChangeLog
+share/doc/rtmpdump/README
+share/doc/rtmpdump/rtmpdump.1.html
+share/doc/rtmpdump/rtmpgw.8.html
