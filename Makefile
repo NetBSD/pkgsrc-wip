@@ -1,10 +1,11 @@
-# $Id: Makefile,v 1.3889 2010/03/29 12:13:30 ryo-on Exp $
+# $Id: Makefile,v 1.3890 2010/03/29 18:37:56 christtrekker Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
 
 SUBDIR+=	389-ds-base
 SUBDIR+=	Chinput
+SUBDIR+=	FontManager
 SUBDIR+=	GNUMail-pgp
 SUBDIR+=	GSCommander
 SUBDIR+=	GoogleEarth
@@ -43,6 +44,7 @@ SUBDIR+=	StepTalk
 SUBDIR+=	Terminal
 SUBDIR+=	TextEdit
 SUBDIR+=	TinySVM
+SUBDIR+=	Typewriter
 SUBDIR+=	WEPCrack
 SUBDIR+=	a2ps-sharatype
 SUBDIR+=	abclock
