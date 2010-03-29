@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3887 2010/03/28 21:29:24 ryo-on Exp $
+# $Id: Makefile,v 1.3888 2010/03/29 06:16:55 obache Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -224,10 +224,6 @@ SUBDIR+=	clips
 SUBDIR+=	clisp
 SUBDIR+=	clockspeed
 SUBDIR+=	clustalx
-SUBDIR+=	clutter
-SUBDIR+=	clutter-box2d
-SUBDIR+=	clutter-gst
-SUBDIR+=	clutter-gtk
 SUBDIR+=	codeblocks
 SUBDIR+=	coldfire
 SUBDIR+=	collectd
@@ -264,7 +260,6 @@ SUBDIR+=	cxfreeze
 SUBDIR+=	cycle
 SUBDIR+=	cygwin
 SUBDIR+=	cygwin-binutils
-SUBDIR+=	cyrus-imapd
 SUBDIR+=	cython
 SUBDIR+=	d-feet
 SUBDIR+=	d4x
@@ -997,7 +992,6 @@ SUBDIR+=	joomla
 SUBDIR+=	jp2a
 SUBDIR+=	jpgtn
 SUBDIR+=	json-c
-SUBDIR+=	json-glib-devel
 SUBDIR+=	jumpnbump
 SUBDIR+=	jupp
 SUBDIR+=	just
@@ -1655,7 +1649,6 @@ SUBDIR+=	p5-XML-DT
 SUBDIR+=	p5-XML-DTDParser
 SUBDIR+=	p5-XML-Writer-Simple
 SUBDIR+=	p5-cabocha
-SUBDIR+=	p5-clutter
 SUBDIR+=	p5-mozldap
 SUBDIR+=	p5-qt3
 SUBDIR+=	p5-yamcha
@@ -1836,7 +1829,6 @@ SUBDIR+=	py-cElementTree
 SUBDIR+=	py-cabocha
 SUBDIR+=	py-chm
 SUBDIR+=	py-clonedigger
-SUBDIR+=	py-clutter
 SUBDIR+=	py-codepy
 SUBDIR+=	py-configobj
 SUBDIR+=	py-couchdb
