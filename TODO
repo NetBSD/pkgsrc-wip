@@ -5,7 +5,7 @@ Suggested package updates
 	o archimedes-0.9.1
 	o argouml-0.24
 	o backintime-0.9.26
-	o bsnes-0.059
+	o bsnes-0.060
 	o cairo-java-1.0.8
 	o cclive-0.6.2
 	o ccrypt-1.9
@@ -62,18 +62,19 @@ Suggested package updates
 	o libvdpau-0.4
 	o lincity-ng-2.0
 	o lirc-0.8.6
-	o lives-1.2.1
+	o lives-1.3.2
 	o man-1.6f
-	o meta-tracker-0.7.27
+	o meta-tracker-0.7.28
 	o mixxx-1.7.0
 	o mpgedit-0.73dev2
 	o mupen64-0.5
 	o newsbeuter-2.2
-	o ogmrip-0.13.3
+	o ogmrip-0.13.4
 	o openvrml-0.18.5
 	o osmose-0.9.1
 	o parted-1.9.0
 	o passepartout-0.7.1
+	o pdfmod-0.8.1
 	o pdnsd-1.2.8
 	o pike-7.8.352
 	o py-PyPE-2.9
@@ -96,7 +97,7 @@ Suggested package updates
 	o tmw-0.0.29.1
 	o uade-2.13
 	o uptimed-0.3.16
-	o virtualbox-3.1.4
+	o virtualbox-3.1.6
 	o xaralx-bin-0.7.1692
 	o xclipboard-1.1.0
 	o xcowsay-1.2
