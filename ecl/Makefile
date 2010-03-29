@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2010/01/30 20:14:08 asau Exp $
+# $NetBSD: Makefile,v 1.34 2010/03/29 04:10:06 asau Exp $
 #
 
-DISTNAME=		ecl-9.12.3
+DISTNAME=		ecl-10.3.1
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ecls/}
 EXTRACT_SUFX=		.tgz
@@ -27,9 +27,11 @@ CONFIGURE_ARGS+=	--enable-boehm=system --with-system-gmp
 PLIST_SUBST=	PKGVERSION_MAJOR_MINOR=${PKGVERSION_NOREV:R} \
 		PKGVERSION_MAJOR=${PKGVERSION_NOREV:R:R}
 
+
+#.if defined(USE_CVS) && !empty(USE_CVS:M[Yy][Ee][Ss])
 ## CVS part:
 
-PKGNAME=		ecl-9.12.99
+PKGNAME=		ecl-10.3.99
 WRKSRC=			${WRKDIR}/ecl
 
 CVS_REPOSITORIES=	ecl
@@ -61,6 +63,7 @@ pre-configure:
 
 .include "../../wip/mk/cvs-package.mk"
 ## End of CVS part
+#.endif
 .include "../../devel/boehm-gc/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
