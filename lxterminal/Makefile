@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/10/12 15:51:22 christtrekker Exp $
+# $NetBSD: Makefile,v 1.2 2010/03/29 18:41:03 christtrekker Exp $
 #
 
 DISTNAME=	lxterminal-0.1.6
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lxde/}
 
-MAINTAINER=	christtrekker@users.sourceforge.net
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://lxde.org/
 COMMENT=	Desktop-independent VTE-based terminal emulator
 LICENSE=	gnu-gpl-v2
