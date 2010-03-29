@@ -1,0 +1,5 @@
+* more clean patches
+* login feature works?
+* confirm UTF-8 pagename
+* on non-NetBSD platform?
+* fix location of didiwiki.conf
