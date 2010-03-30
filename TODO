@@ -113,16 +113,32 @@ Suggested ready to import packages
 =================================
 
 	o am-utils [pkg/35668]
+	o aspell-dictionaries
+	o aspell-finnish
+	o aspell-telugu
+	o blop
 	o castget
 	o commoncpp2
 	o ccrtp
+	o flimsel
+	o flpsed
 	o gipfel [pkg/40558]
 	o granule [pkg/40177]
 	o gtypist [pkg/40177]
 	o heirloom-sh [pkg/40272]
+	o ilbc-rfc3951
+	o ispell-dictionaries
+	o ispell-lietuviu
+	o libzrtpcpp
+	o nmzmail
 	o paexec
+	o pnmcurve
+	o rar3
 	o runawk
 	o send-pr
+	o vcf
+	o vlevel
+	o wput
 	o xmms-cdread [pkg/36220]
 	o xmms-skins [pkg/35666]
 
