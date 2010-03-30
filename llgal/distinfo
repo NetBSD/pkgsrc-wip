@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/03/28 11:48:07 ryo-on Exp $
+$NetBSD: distinfo,v 1.2 2010/03/30 22:59:43 ryo-on Exp $
 
 SHA1 (llgal-0.13.16.tar.bz2) = 235edb2704b838c7a2a81ed2de971d1c06eece47
 RMD160 (llgal-0.13.16.tar.bz2) = 6ba5b76d01ffa96842de3390908c792e5f50447c
 Size (llgal-0.13.16.tar.bz2) = 80812 bytes
-SHA1 (patch-aa) = 3790cfa25138695ec2e32241cd113e90c1e812c2
