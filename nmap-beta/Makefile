@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2010/03/30 21:12:04 pettai Exp $
+# $NetBSD: Makefile,v 1.2 2010/03/30 21:14:23 pettai Exp $
 #
 
 DISTNAME=	nmap-5.30BETA1
@@ -7,7 +7,7 @@ CATEGORIES=	net security
 MASTER_SITES=	http://nmap.org/dist/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	pettai@NetBSD.org
 HOMEPAGE=	http://insecure.org/nmap/
 COMMENT=	Network/port scanner with OS detection
 LICENSE=	gnu-gpl-v2
