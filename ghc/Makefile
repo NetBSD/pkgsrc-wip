@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2010/02/25 07:43:54 phonohawk Exp $
+# $NetBSD: Makefile,v 1.22 2010/04/01 07:33:13 phonohawk Exp $
 
 DISTNAME=		ghc-${VERSION}
 VERSION=		6.12.1
@@ -134,6 +134,7 @@ do-configure:
 		--configure-option=--with-curses-includes=${PREFIX}/include \
 		--configure-option=--with-curses-libraries=${PREFIX}/lib" >> ${WRKSRC}/mk/build.mk
 
+pre-build:
 # The ghc compiler does normally split the generated C files into small
 # parts before sending them to gcc, to enable the linker to eliminate
 # unused parts.  This does however not play nice with the pkgsrc
@@ -142,8 +143,10 @@ do-configure:
 #    http://mail-index.netbsd.org/tech-pkg/2006/07/30/0005.html
 # for a description of the problem.
 # Disable file splitting until pkgsrc gets improved.
-pre-build:
 	${RUN} ${ECHO} "SplitObjs = NO" >> ${WRKSRC}/mk/build.mk
+# If we don't explicitly disable HsColour, PLIST gets changed
+# depending on whether we have installed it or not.
+	${RUN} ${ECHO} "HSCOLOUR_SRCS = NO" >> ${WRKSRC}/mk/build.mk
 # We have to sacrifice the GHCi library for GHC itself to work around
 # for powerpc ld bug.  See
 # http://hackage.haskell.org/trac/ghc/ticket/3260
@@ -173,7 +176,7 @@ BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 BUILDLINK_DEPMETHOD.libxslt = build
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
+.include "../../devel/ncurses/buildlink3.mk" # I guess pdcurses works well but not tested.
 .include "../../textproc/libxslt/buildlink3.mk"
-.include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
