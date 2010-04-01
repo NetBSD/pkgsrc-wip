@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/04/01 13:42:20 ryo-on Exp $
+${PYSITELIB}/libtorrent.so
