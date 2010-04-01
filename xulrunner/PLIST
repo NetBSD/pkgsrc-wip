@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2010/03/30 11:30:42 tnn2 Exp $
+@comment $NetBSD: PLIST,v 1.19 2010/04/01 14:18:44 tnn2 Exp $
 bin/xulrunner
 ${PLIST.jit}include/xulrunner/Allocator.h
 ${PLIST.jit}include/xulrunner/Assembler.h
@@ -8,16 +8,18 @@ ${PLIST.jit}include/xulrunner/Containers.h
 include/xulrunner/CustomQS_Canvas2D.h
 include/xulrunner/CustomQS_WebGL.h
 ${PLIST.jit}include/xulrunner/Fragmento.h
+include/xulrunner/FramePropertyTable.h
 include/xulrunner/ImageErrors.h
 include/xulrunner/ImageLayers.h
 include/xulrunner/ImageLogging.h
 ${PLIST.jit}include/xulrunner/LIR.h
+include/xulrunner/LayerManagerOGL.h
 include/xulrunner/Layers.h
 include/xulrunner/NSReg.h
 ${PLIST.jit}include/xulrunner/Native.h
 ${PLIST.jit}include/xulrunner/Native${NANOJIT_ARCH}.h
 ${PLIST.jit}include/xulrunner/RegAlloc.h
-include/xulrunner/VMPI.h
+${PLIST.jit}include/xulrunner/VMPI.h
 include/xulrunner/VerReg.h
 include/xulrunner/WebGLArray.h
 include/xulrunner/XPCIDispatch.h
@@ -139,7 +141,6 @@ include/xulrunner/jsiter.h
 include/xulrunner/jslock.h
 include/xulrunner/jslong.h
 include/xulrunner/jsmath.h
-include/xulrunner/jsnum.h
 include/xulrunner/jsobj.h
 include/xulrunner/jsobjinlines.h
 include/xulrunner/json.h
@@ -215,6 +216,8 @@ include/xulrunner/mozISpellCheckingEngine.h
 include/xulrunner/mozISpellI18NManager.h
 include/xulrunner/mozISpellI18NUtil.h
 include/xulrunner/mozIStorageAggregateFunction.h
+include/xulrunner/mozIStorageAsyncStatement.h
+include/xulrunner/mozIStorageBaseStatement.h
 include/xulrunner/mozIStorageBindingParams.h
 include/xulrunner/mozIStorageBindingParamsArray.h
 include/xulrunner/mozIStorageCompletionCallback.h
@@ -259,7 +262,7 @@ include/xulrunner/mozpngconf.h
 ${PLIST.jit}include/xulrunner/nanojit.h
 include/xulrunner/necko-config.h
 include/xulrunner/netCore.h
-include/xulrunner/njconfig.h
+${PLIST.jit}include/xulrunner/njconfig.h
 include/xulrunner/npapi.h
 include/xulrunner/npfunctions.h
 include/xulrunner/npruntime.h
@@ -1244,6 +1247,7 @@ include/xulrunner/nsIMenuBoxObject.h
 include/xulrunner/nsIMenuFrame.h
 include/xulrunner/nsIMenuRollup.h
 include/xulrunner/nsIMetaCharsetService.h
+include/xulrunner/nsIMicrosummaryService.h
 include/xulrunner/nsIModifyableXPointer.h
 include/xulrunner/nsIModule.h
 include/xulrunner/nsIModuleLoader.h
@@ -1297,6 +1301,7 @@ include/xulrunner/nsIPermissionManager.h
 include/xulrunner/nsIPersistentProperties2.h
 include/xulrunner/nsIPhonetic.h
 include/xulrunner/nsIPipe.h
+include/xulrunner/nsIPlacesImportExportService.h
 include/xulrunner/nsIPlaintextEditor.h
 include/xulrunner/nsIPlatformCharset.h
 include/xulrunner/nsIPlugin.h
@@ -2273,6 +2278,7 @@ lib/xulrunner/components/nsLivemarkService.js
 lib/xulrunner/components/nsLoginInfo.js
 lib/xulrunner/components/nsLoginManager.js
 lib/xulrunner/components/nsLoginManagerPrompter.js
+lib/xulrunner/components/nsMicrosummaryService.js
 lib/xulrunner/components/nsPlacesAutoComplete.js
 lib/xulrunner/components/nsPlacesDBFlush.js
 lib/xulrunner/components/nsPlacesExpiration.js
@@ -2432,6 +2438,8 @@ share/idl/xulrunner/mozISpellCheckingEngine.idl
 share/idl/xulrunner/mozISpellI18NManager.idl
 share/idl/xulrunner/mozISpellI18NUtil.idl
 share/idl/xulrunner/mozIStorageAggregateFunction.idl
+share/idl/xulrunner/mozIStorageAsyncStatement.idl
+share/idl/xulrunner/mozIStorageBaseStatement.idl
 share/idl/xulrunner/mozIStorageBindingParams.idl
 share/idl/xulrunner/mozIStorageBindingParamsArray.idl
 share/idl/xulrunner/mozIStorageCompletionCallback.idl
@@ -3156,6 +3164,7 @@ share/idl/xulrunner/nsIMarkupDocumentViewer.idl
 share/idl/xulrunner/nsIMemory.idl
 share/idl/xulrunner/nsIMemoryReporter.idl
 share/idl/xulrunner/nsIMenuBoxObject.idl
+share/idl/xulrunner/nsIMicrosummaryService.idl
 share/idl/xulrunner/nsIModifyableXPointer.idl
 share/idl/xulrunner/nsIModule.idl
 share/idl/xulrunner/nsIModuleLoader.idl
@@ -3193,6 +3202,7 @@ share/idl/xulrunner/nsIPermissionManager.idl
 share/idl/xulrunner/nsIPersistentProperties2.idl
 share/idl/xulrunner/nsIPhonetic.idl
 share/idl/xulrunner/nsIPipe.idl
+share/idl/xulrunner/nsIPlacesImportExportService.idl
 share/idl/xulrunner/nsIPlaintextEditor.idl
 share/idl/xulrunner/nsIPlugin.idl
 share/idl/xulrunner/nsIPluginDocument.idl

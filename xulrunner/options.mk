@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2010/03/16 20:12:06 tnn2 Exp $
+# $NetBSD: options.mk,v 1.6 2010/04/01 14:18:44 tnn2 Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.xulrunner
 PKG_SUPPORTED_OPTIONS=	debug mozilla-jemalloc gnome
@@ -50,7 +50,7 @@ CONFIGURE_ARGS+=	--disable-debug
 .if !empty(PKG_OPTIONS:Mmozilla-jit)
 PLIST.jit=		yes
 PLIST_SUBST+=		NANOJIT_ARCH=${NANOJIT_ARCH.${MACHINE_ARCH}}
-CONFIGURE_ARGS+=	--enable-jit
+CONFIGURE_ARGS+=	--enable-tracejit
 .else
-CONFIGURE_ARGS+=	--disable-jit
+CONFIGURE_ARGS+=	--disable-tracejit
 .endif

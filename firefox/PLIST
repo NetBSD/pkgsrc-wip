@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2010/03/16 20:12:07 tnn2 Exp $
+@comment $NetBSD: PLIST,v 1.19 2010/04/01 14:18:44 tnn2 Exp $
 bin/firefox
 lib/firefox/LICENSE
 lib/firefox/README.txt
@@ -25,7 +25,6 @@ lib/firefox/components/libbrowsercomps.so
 ${PLIST.gnome}lib/firefox/components/libnkgnomevfs.so
 lib/firefox/components/nsBrowserContentHandler.js
 lib/firefox/components/nsBrowserGlue.js
-lib/firefox/components/nsMicrosummaryService.js
 lib/firefox/components/nsPlacesTransactionsService.js
 lib/firefox/components/nsPrivateBrowsingService.js
 lib/firefox/components/nsSafebrowsingApplication.js
@@ -50,7 +49,6 @@ lib/firefox/extensions/{972ce4c6-7e08-4474-a285-3208198ce6fd}/preview.png
 lib/firefox/firefox
 lib/firefox/icons/document.png
 lib/firefox/icons/mozicon128.png
-lib/firefox/libmozalloc.so
 lib/firefox/modules/NetworkPrioritizer.jsm
 lib/firefox/modules/distribution.js
 lib/firefox/modules/openLocationLastURL.jsm
