@@ -1,9 +1,9 @@
-$NetBSD: patch-af,v 1.4 2010/02/18 20:45:43 asau Exp $
+$NetBSD: patch-af,v 1.5 2010/04/01 01:47:28 asau Exp $
 
 Force our libltdl.
 
---- test/support/components.h.orig	2010-02-18 05:00:07.000000000 +0300
-+++ test/support/components.h	2010-02-18 21:42:25.000000000 +0300
+--- test/support/components.h.orig	2010-03-31 05:31:37.000000000 +0400
++++ test/support/components.h	2010-03-31 20:51:16.000000000 +0400
 @@ -20,7 +20,7 @@
  #ifndef OMPI_SUPPORT_COMPONENTS_H
  #define OMPI_SUPPORT_COMPONENTS_H
@@ -12,4 +12,4 @@ Force our libltdl.
 +#include "ltdl.h"
  #include "opal/mca/mca.h"
  
- #if defined(c_plusplus) || defined(__cplusplus)
+ BEGIN_C_DECLS
