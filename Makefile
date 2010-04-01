@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3892 2010/04/01 08:25:48 shindenmorr Exp $
+# $Id: Makefile,v 1.3893 2010/04/01 13:51:38 ryo-on Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1122,6 +1122,7 @@ SUBDIR+=	libticables
 SUBDIR+=	libticalcs
 SUBDIR+=	libtifiles
 SUBDIR+=	libtlen2
+SUBDIR+=	libtorrent-rasterbar
 SUBDIR+=	libuuid
 SUBDIR+=	libuxre
 SUBDIR+=	libvc
@@ -1241,6 +1242,7 @@ SUBDIR+=	minisat2
 SUBDIR+=	miniupnpc
 SUBDIR+=	miracl
 SUBDIR+=	mirage
+SUBDIR+=	miro
 SUBDIR+=	misaki-fonts
 SUBDIR+=	mixer.tk
 SUBDIR+=	mixmaster
@@ -1892,6 +1894,7 @@ SUBDIR+=	py-libmc
 SUBDIR+=	py-libmemcache
 SUBDIR+=	py-libmpdclient2
 SUBDIR+=	py-libopensync-plugin
+SUBDIR+=	py-libtorrent-rasterbar
 SUBDIR+=	py-libtunepimp
 SUBDIR+=	py-lockfile
 SUBDIR+=	py-logilab-astng
