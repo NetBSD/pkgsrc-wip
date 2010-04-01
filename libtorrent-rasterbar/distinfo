@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/04/01 13:41:35 ryo-on Exp $
+
+SHA1 (libtorrent-rasterbar-0.15.0.tar.gz) = ebc9ce111f59e538aff17102fcce907fd967cd8b
+RMD160 (libtorrent-rasterbar-0.15.0.tar.gz) = fa91bdcaf39e6d0da2c68346c9acffaa62a6a846
+Size (libtorrent-rasterbar-0.15.0.tar.gz) = 2569328 bytes
