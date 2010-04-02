@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2010/04/01 13:41:35 ryo-on Exp $
+# $NetBSD: Makefile.common,v 1.2 2010/04/02 12:40:27 ryo-on Exp $
 #
 
 # used by wip/py-libtorrent-rasterbar/Makefile
@@ -27,6 +27,8 @@ CONFIGURE_ARGS+=	--with-boost-filesystem=boost_filesystem
 CONFIGURE_ARGS+=	--with-boost-thread=boost_thread
 CONFIGURE_ARGS+=	--with-libgeoip
 CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
+CONFIGURE_ARGS+=	--enable-dht
+CONFIGURE_ARGS+=	--enable-pool-allocators
 
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../net/GeoIP/buildlink3.mk"

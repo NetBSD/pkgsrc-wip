@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/04/01 13:41:35 ryo-on Exp $
+# $NetBSD: Makefile,v 1.2 2010/04/02 12:40:27 ryo-on Exp $
 #
 
 DISTNAME=	libtorrent-rasterbar-0.15.0
@@ -8,6 +8,8 @@ HOMEPAGE=	http://www.rasterbar.com/products/libtorrent/index.html
 COMMENT=	The rasterbar libtorrent is a feature complete C++ bittorrent library
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+BUILD_MAKE_FLAGS+=	V=1
 
 PKGCONFIG_OVERRIDE=	libtorrent-rasterbar.pc.in
 
