@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2010/04/02 20:18:08 hfath Exp $
+# $NetBSD: Makefile,v 1.15 2010/04/02 22:53:15 hfath Exp $
 
 DISTNAME=		inn-1.7.2.insync-1.1d
 PKGNAME=		nnrpd-1.7.2
@@ -13,6 +13,9 @@ HOMEPAGE=		http://www.isc.org/sw/inn/
 COMMENT=		NNTP reader daemon from InterNet News (INN)
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+INSTALLATION_DIRS=	sbin libexec \
+			share/examples/nnrpd share/doc/nnrpd \
+			${PKGMANDIR}/man3 ${PKGMANDIR}/man5 ${PKGMANDIR}/man8
 
 INN_DATA_DIR?=		/var/news
 
@@ -28,10 +31,10 @@ USE_TOOLS+=		perl
 
 # Given foo=${bar}, replace @foo@ with ${bar}.
 #
-FILES_SUBST+=		PREFIX=${PREFIX:Q}
+FILES_SUBST+=		PREFIX=${PREFIX}
 FILES_SUBST+=		INNDATA=${INN_DATA_DIR:Q}
-FILES_SUBST+=		INNPREFIX=${PREFIX:Q}
-FILES_SUBST+=		INNMANPREFIX=${PREFIX:Q}
+FILES_SUBST+=		INNPREFIX=${PREFIX}
+FILES_SUBST+=		INNMANPREFIX=${PREFIX}
 
 # UBC brought read and mmap in sync
 .if ${OPSYS} == "NetBSD" && (${OS_VERSION:M1.[0-4]*} != "" || \
@@ -79,13 +82,9 @@ post-build:
 	(cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} Install.ms)
 
 do-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}/${PREFIX}/share/examples/nnrpd
-	${INSTALL_DATA_DIR} ${DESTDIR}/${PREFIX}/share/doc/nnrpd
-	${INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/sbin
 	${INSTALL_PROGRAM} ${WRKSRC}/nnrpd/nnrpd ${DESTDIR}/${PREFIX}/sbin/
 	${INSTALL_PROGRAM} ${WRKSRC}/actived/actived ${DESTDIR}/${PREFIX}/sbin/
 	${INSTALL_SCRIPT} ${WRKSRC}/samples/mailpost ${DESTDIR}/${PREFIX}/sbin/
-	${INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/libexec
 	${INSTALL_DATA} ${WRKSRC}/samples/filter_nnrpd.pl \
 		${DESTDIR}/${PREFIX}/libexec/
 	for FILE in innshellvars innshellvars.csh innshellvars.pl \
@@ -102,15 +101,12 @@ do-install:
 		${INSTALL_DATA} ${WRKSRC}/$${FILE} 		\
 			${DESTDIR}/${PREFIX}/share/doc/nnrpd/ ; \
 	done
-	${INSTALL_DATA_DIR} ${DESTDIR}/${PREFIX}/${PKGMANDIR}/man3
 	${INSTALL_MAN} ${WRKSRC}/doc/dbz.3 \
 		${DESTDIR}/${PREFIX}/${PKGMANDIR}/man3/
-	${INSTALL_DATA_DIR} ${DESTDIR}/${PREFIX}/${PKGMANDIR}/man5
 	${INSTALL_MAN} ${WRKSRC}/doc/nnrp.access.5 \
 		${DESTDIR}/${PREFIX}/${PKGMANDIR}/man5/
 	${INSTALL_MAN} ${WRKSRC}/doc/moderators.5 \
 		${DESTDIR}/${PREFIX}/${PKGMANDIR}/man5/
-	${INSTALL_DATA_DIR} ${DESTDIR}/${PREFIX}/${PKGMANDIR}/man8
 	${INSTALL_MAN} ${WRKSRC}/doc/nnrpd.8  \
 		${DESTDIR}/${PREFIX}/${PKGMANDIR}/man8/
 
