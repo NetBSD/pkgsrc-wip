@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2009/03/05 14:17:48 hfath Exp $
+# $NetBSD: Makefile,v 1.20 2010/04/02 18:08:23 hfath Exp $
 
 DISTNAME=	c-news
 PKGNAME=	c-news-CR-7
@@ -43,6 +43,10 @@ EGDIR=		${PREFIX}/share/examples/c-news
 
 .if (${OPSYS} == "NetBSD" && empty(OS_VERSION:M[0123].*))
 DEPENDS+=	uucp-[1-9]*:../../net/uucp
+.endif
+
+.if !empty(PKGSRC_RUN_TEST:M[Yy][Ee][Ss])
+TEST_TARGET=	regression
 .endif
 
 USE_TOOLS+=	perl:run
@@ -94,7 +98,7 @@ pre-configure:
 # One of the regression tests does not work correctly if we are in
 # a union-mounted directory. In that case, build with something like
 # "env WRKOBJDIR=/var/tmp make".
-post-build:     build-doc regression
+post-build:     build-doc
 
 .PHONY: regression
 regression:
