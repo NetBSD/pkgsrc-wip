@@ -1,2 +1,2 @@
 * Resolve ImportError: /usr/pkg/lib/python2.6/site-packages/libtorrent.so: Undefined PLT symbol "_ZN10libtorrent8is_digitEc" (symnum = 79)
-* local -> wip
+* libtorrent-rasterbar is broken.
