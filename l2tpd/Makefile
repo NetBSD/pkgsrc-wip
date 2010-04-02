@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.13 2008/03/08 19:29:06 hfath Exp $
+# $NetBSD: Makefile,v 1.14 2010/04/02 20:55:19 hfath Exp $
 
 DISTNAME=	l2tpd-0.69
 CATEGORIES=	net
 MASTER_SITES=	http://l2tpd.sourceforge.net/l2tpd.org/downloads/
 
-MAINTAINER=	hauke@Espresso.Rhein-Neckar.DE
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://l2tpd.sourceforge.net/
 # NOTE: "The l2tpd project is now officially inactive"
 COMMENT=	Implementation of the layer two tunneling protocol (l2tp)
