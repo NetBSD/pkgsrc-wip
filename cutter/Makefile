@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/03/25 09:13:04 obache Exp $
+# $NetBSD: Makefile,v 1.2 2010/04/03 07:08:03 obache Exp $
 #
 
-DISTNAME=	cutter-1.1.1
+DISTNAME=	cutter-1.1.2
 CATEGORIES=	devel
-MASTER_SITES=	http://downloads.sourceforge.net/project/cutter/cutter/1.1.1/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cutter/}
 
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://cutter.sourceforge.net/

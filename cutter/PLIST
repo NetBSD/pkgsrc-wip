@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/03/25 09:13:04 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/04/03 07:08:04 obache Exp $
 bin/cut-diff
 bin/cutter
 include/cutter/cppcutter.h
@@ -191,6 +191,7 @@ share/gtk-doc/html/cutter/index-1-0-9.html
 share/gtk-doc/html/cutter/index-1-0.html
 share/gtk-doc/html/cutter/index-1-1-0.html
 share/gtk-doc/html/cutter/index-1-1-1.html
+share/gtk-doc/html/cutter/index-1-1-2.html
 share/gtk-doc/html/cutter/index-all.html
 share/gtk-doc/html/cutter/index-deprecated.html
 share/gtk-doc/html/cutter/index.html
@@ -220,7 +221,8 @@ share/gtk-doc/html/cutter/ja/api-index-1.0.8.xml
 share/gtk-doc/html/cutter/ja/api-index-1.0.9.xml
 share/gtk-doc/html/cutter/ja/api-index-1.0.xml
 share/gtk-doc/html/cutter/ja/api-index-1.1.0.xml
-share/gtk-doc/html/cutter/ja/api-index-${PKGVERSION}.xml
+share/gtk-doc/html/cutter/ja/api-index-1.1.1.xml
+share/gtk-doc/html/cutter/ja/api-index-1.1.2.xml
 share/gtk-doc/html/cutter/ja/api-index-deprecated.xml
 share/gtk-doc/html/cutter/ja/api-index-full.xml
 share/gtk-doc/html/cutter/ja/colorized-diff.png
@@ -325,6 +327,7 @@ share/gtk-doc/html/cutter/ja/index-1-0-9.html
 share/gtk-doc/html/cutter/ja/index-1-0.html
 share/gtk-doc/html/cutter/ja/index-1-1-0.html
 share/gtk-doc/html/cutter/ja/index-1-1-1.html
+share/gtk-doc/html/cutter/ja/index-1-1-2.html
 share/gtk-doc/html/cutter/ja/index-all.html
 share/gtk-doc/html/cutter/ja/index-deprecated.html
 share/gtk-doc/html/cutter/ja/index.html
