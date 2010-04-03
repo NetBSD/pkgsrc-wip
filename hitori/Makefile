@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/12/04 19:37:54 jihbed Exp $
+# $NetBSD: Makefile,v 1.5 2010/04/03 16:00:09 jihbed Exp $
 #
 
 DISTNAME=	hitori-0.2.3
@@ -6,7 +6,7 @@ CATEGORIES=	games gnome
 MASTER_SITES=	http://ftp.acc.umu.se/pub/GNOME/sources/hitori/0.2/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	kamelderouiche@yahoo.com
+MAINTAINER=	pkgsrc.gnome@gmail.com
 HOMEPAGE=	http://tecnocode.co.uk/projects/hitori/
 COMMENT=	Hitori is an application that allow to play the eponymous puzzle game
 
