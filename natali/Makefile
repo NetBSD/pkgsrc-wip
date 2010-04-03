@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2010/04/02 22:51:39 hfath Exp $
+# $NetBSD: Makefile,v 1.8 2010/04/03 09:48:34 hfath Exp $
 
 DISTNAME=	natali-1.25
 PKGREVISION=	1
@@ -14,8 +14,8 @@ INSTALLATION_DIRS=	lib include/at share/doc/natali
 
 CONFLICTS=	netatalk-asun-[0-9]* netatalk-umich-[0-9]*
 
-MAKE_ENV+=	ATALKINCDIR=-I${PREFIX}/include
-MAKE_ENV+=	ATALKLIBDIR=-L${PREFIX}/lib
+MAKE_ENV+=	ATALKINCDIR=-I${BUILDLINK_PREFIX.netatalk}/include
+MAKE_ENV+=	ATALKLIBDIR=-L${BUILDLINK_PREFIX.netatalk}/lib
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/History.txt ${DESTDIR}/${PREFIX}/share/doc/natali
