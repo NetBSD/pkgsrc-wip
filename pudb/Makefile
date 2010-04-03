@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2010/02/10 12:22:43 jihbed Exp $
+# $NetBSD: Makefile,v 1.5 2010/04/03 17:16:42 jihbed Exp $
 #
 
 DISTNAME=	pudb-0.92.15.tar
-PKGNAME=	${DISTNAME:S/.tar//}
+PKGNAME=	${EGG_NAME}
+EGG_NAME=		${DISTNAME:S/.tar//}
 CATEGORIES=	devel python
 MASTER_SITES=	http://pypi.python.org/packages/source/p/pudb/
 EXTRACT_SUFX=	.gz#md5=e0b469099b8ab67a4b75e4266b9e659c
@@ -22,6 +23,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 WRKSRC=		${WRKDIR}/pudb-0.92.15
 USE_LANGUAGES=	# none
 
+PY_PATCHPLIST=	yes
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
