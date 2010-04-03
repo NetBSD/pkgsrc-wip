@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.3 2009/12/08 10:29:50 thomasklausner Exp $
+$NetBSD: patch-ac,v 1.4 2010/04/03 18:05:14 asau Exp $
 
---- Makefile.rules.orig	2009-12-08 10:01:35.000000000 +0000
-+++ Makefile.rules
-@@ -576,12 +576,6 @@ ifdef LOADABLE_MODULE
+--- Makefile.rules.orig	2010-04-01 06:23:56.000000000 +0400
++++ Makefile.rules	2010-04-01 06:29:39.000000000 +0400
+@@ -588,12 +588,6 @@
    LD.Flags += -module
  endif
  
@@ -15,36 +15,15 @@ $NetBSD: patch-ac,v 1.3 2009/12/08 10:29:50 thomasklausner Exp $
  ifdef TOOL_VERBOSE
    C.Flags += -v
    CXX.Flags += -v
-@@ -610,9 +604,9 @@ ifneq ($(HOST_OS),Darwin)
- ifneq ($(DARWIN_MAJVERS),4)
+@@ -623,9 +617,9 @@
  ifdef TOOLNAME
- ifdef EXAMPLE_TOOL
--  LD.Flags += $(RPATH) -Wl,$(ExmplDir) $(RDYNAMIC)
-+  LD.Flags += $(RDYNAMIC)
- else
--  LD.Flags += $(RPATH) -Wl,$(ToolDir) $(RDYNAMIC)
-+  LD.Flags += $(RDYNAMIC)
+   LD.Flags += $(RPATH) -Wl,'$$ORIGIN/../lib'
+   ifdef EXAMPLE_TOOL
+-    LD.Flags += $(RPATH) -Wl,$(ExmplDir) $(RDYNAMIC)
++    LD.Flags += $(RDYNAMIC)
+   else
+-    LD.Flags += $(RPATH) -Wl,$(ToolDir) $(RDYNAMIC)
++    LD.Flags += $(RDYNAMIC)
+   endif
  endif
  endif
- endif
-@@ -768,9 +762,6 @@ ObjectsBC := $(BaseNameSources:%=$(ObjDi
- # in the file so they get built before dependencies
- #---------------------------------------------------------
- 
--$(PROJ_bindir) $(PROJ_libdir) $(PROJ_includedir) $(PROJ_etcdir)::
--	$(Verb) $(MKDIR) $@
--
- # To create other directories, as needed, and timestamp their creation
- %/.dir:
- 	$(Verb) $(MKDIR) $* > /dev/null
-@@ -891,7 +882,9 @@ install-local::
- uninstall-local::
- 	$(Echo) UnInstall circumvented with NO_INSTALL
- else
--install-local:: $(PROJ_etcdir) $(CONFIG_FILES)
-+PROJ_etcdir=${PREFIX}/share/examples/llvm
-+install-local:: $(CONFIG_FILES)
-+	$(MKDIR) ${PROJ_etcdir}
- 	$(Echo) Installing Configuration Files To $(PROJ_etcdir)
- 	$(Verb)for file in $(CONFIG_FILES); do \
-           if test -f $(PROJ_OBJ_DIR)/$${file} ; then \
