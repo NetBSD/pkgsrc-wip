@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.34 2010/03/29 04:10:06 asau Exp $
+# $NetBSD: Makefile,v 1.35 2010/04/05 04:12:53 asau Exp $
 #
 
-DISTNAME=		ecl-10.3.1
+DISTNAME=		ecl-10.4.1
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ecls/}
-EXTRACT_SUFX=		.tgz
+#EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		asau@inbox.ru
 HOMEPAGE=		http://ecls.sourceforge.net/
