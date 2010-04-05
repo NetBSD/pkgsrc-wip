@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/01/15 11:18:42 obache Exp $
+# $NetBSD: Makefile,v 1.7 2010/04/05 06:29:13 obache Exp $
 #
 
 DISTNAME=	ibus-table-1.2.0.20100111
@@ -31,6 +31,7 @@ SUBST_FILES.epython=	engine/ibus-engine-table.in
 SUBST_FILES.epython+=	engine/ibus-table-createdb.in
 SUBST_SED.epython=	-e 's;exec python;exec ${PYTHONBIN};g'
 
-.include "../../wip/ibus/buildlink3.mk"
 .include "../../lang/python/application.mk"
+BUILDLINK_ABI_DEPENDS.ibus+=	ibus>=1.1.0
+.include "../../wip/ibus/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
