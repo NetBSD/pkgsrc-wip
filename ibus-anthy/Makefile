@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2010/03/13 02:34:07 obache Exp $
+# $NetBSD: Makefile,v 1.12 2010/04/05 06:04:49 obache Exp $
 #
 
 DISTNAME=	ibus-anthy-1.2.0.20100313
@@ -13,6 +13,8 @@ LICENSE=	gnu-gpl-v2
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	kasumi-[0-9]*:../../inputmethod/kasumi
+DEPENDS+=	ibus>=1.2.0.20100111:../../wip/ibus
+DEPENDS+=	${PYPKGPREFIX}-gtk2>=1.15.2:../../x11/py-gtk2
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
@@ -33,12 +35,9 @@ SUBST_STAGE.epython=	pre-configure
 SUBST_FILES.epython=	engine/ibus-engine-anthy.in setup/ibus-setup-anthy.in
 SUBST_SED.epython=	-e 's;exec python;exec ${PYTHONBIN};g'
 
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/swig/buildlink3.mk"
 PY_PATCHPLIST=		yes
 .include "../../lang/python/extension.mk"
 .include "../../inputmethod/anthy/buildlink3.mk"
-BUILDLINK_API_DEPENDS.ibus+=	ibus>=1.2.0.20100111
-.include "../../wip/ibus/buildlink3.mk"
-BUILDLINK_API_DEPENDS.pygtk2+=	${PYPKGPREFIX}-gtk2>=1.15.2
-.include "../../x11/py-gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
