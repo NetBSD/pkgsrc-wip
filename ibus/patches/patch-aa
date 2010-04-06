@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.5 2010/03/25 09:10:00 obache Exp $
+$NetBSD: patch-aa,v 1.6 2010/04/06 11:50:37 obache Exp $
 
---- configure.orig	2010-03-25 02:44:04.000000000 +0000
+--- configure.orig	2010-03-30 04:50:09.000000000 +0000
 +++ configure
-@@ -18109,7 +18109,7 @@ $as_echo "no" >&6; }
+@@ -18181,7 +18181,7 @@ $as_echo "no" >&6; }
  fi
  
  
--if test x"$PYTHON_CONFIG" == x""; then
-+if test x"$PYTHON_CONFIG" = x""; then
-     # Extract the first word of "python-config", so it can be a program name with args.
+-    if test x"$PYTHON_CONFIG" == x""; then
++    if test x"$PYTHON_CONFIG" = x""; then
+         # Extract the first word of "python-config", so it can be a program name with args.
  set dummy python-config; ac_word=$2
  { $as_echo "$as_me:${as_lineno-$LINENO}: checking for $ac_word" >&5
