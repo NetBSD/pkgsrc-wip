@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/01/13 11:17:42 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/04/06 11:44:54 obache Exp $
 ${PYSITELIB}/tegaki/__init__.py
 ${PYSITELIB}/tegaki/__init__.pyc
 ${PYSITELIB}/tegaki/__init__.pyo
@@ -8,6 +8,9 @@ ${PYSITELIB}/tegaki/arrayutils.pyo
 ${PYSITELIB}/tegaki/character.py
 ${PYSITELIB}/tegaki/character.pyc
 ${PYSITELIB}/tegaki/character.pyo
+${PYSITELIB}/tegaki/charcol.py
+${PYSITELIB}/tegaki/charcol.pyc
+${PYSITELIB}/tegaki/charcol.pyo
 ${PYSITELIB}/tegaki/dictutils.py
 ${PYSITELIB}/tegaki/dictutils.pyc
 ${PYSITELIB}/tegaki/dictutils.pyo

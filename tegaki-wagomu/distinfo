@@ -1,6 +1,9 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/01/14 10:37:26 obache Exp $
+$NetBSD: distinfo,v 1.2 2010/04/06 11:44:55 obache Exp $
 
+SHA1 (tegaki-wagomu-0.3.1.tar.gz) = b2d1188e038d4117c6d257d6182480b8587eb472
+RMD160 (tegaki-wagomu-0.3.1.tar.gz) = cedb5901653756fa7a591f2fb6893d909ffff60b
+Size (tegaki-wagomu-0.3.1.tar.gz) = 6745 bytes
 SHA1 (tegaki-wagomu-0.3.tar.gz) = 113122743488415bed1471ee084911d6b0de3cde
 RMD160 (tegaki-wagomu-0.3.tar.gz) = 5b8e6395e5692de78e3f10c3d12285c3adc5d30f
 Size (tegaki-wagomu-0.3.tar.gz) = 19191 bytes
-SHA1 (patch-aa) = f327c3de766c559425cfd861648879c17cd39b8d
+SHA1 (patch-aa) = bb113d9ff378568ed3b4b469e2026d1423493727

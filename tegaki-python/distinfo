@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/01/13 11:17:42 obache Exp $
+$NetBSD: distinfo,v 1.2 2010/04/06 11:44:54 obache Exp $
 
-SHA1 (tegaki-python-0.3.tar.gz) = 4715f0611709ef2218a908de25a069917f944b51
-RMD160 (tegaki-python-0.3.tar.gz) = 7c7f526337609b277fa76f768821ad3fdec652ec
-Size (tegaki-python-0.3.tar.gz) = 59244 bytes
+SHA1 (tegaki-python-0.3.1.tar.gz) = 23eb6b3d3dfc024dfd3bef973347131635928be5
+RMD160 (tegaki-python-0.3.1.tar.gz) = da5d3c3ca32a5a7803820ebe5a839028384ce1aa
+Size (tegaki-python-0.3.1.tar.gz) = 74691 bytes

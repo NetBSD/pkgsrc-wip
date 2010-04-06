@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/01/14 10:31:37 obache Exp $
+# $NetBSD: Makefile,v 1.2 2010/04/06 11:44:55 obache Exp $
 #
 
-DISTNAME=	tegaki-train-0.3
+DISTNAME=	tegaki-train-0.3.1
 CATEGORIES=	inputmethod
-MASTER_SITES=	http://www.tegaki.org/releases/0.3/
+MASTER_SITES=	http://www.tegaki.org/releases/${PKGVERSION_NOREV}/
 
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://www.tegaki.org/

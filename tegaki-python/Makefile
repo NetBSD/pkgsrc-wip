@@ -1,15 +1,19 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/01/13 11:17:42 obache Exp $
+# $NetBSD: Makefile,v 1.2 2010/04/06 11:44:54 obache Exp $
 #
 
-DISTNAME=	tegaki-python-0.3
+DISTNAME=	tegaki-python-0.3.1
 CATEGORIES=	inputmethod
-MASTER_SITES=	http://www.tegaki.org/releases/0.3/
+MASTER_SITES=	http://www.tegaki.org/releases/${PKGVERSION_NOREV}/
 
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://www.tegaki.org/
 COMMENT=	Base Python library for the Tegaki project
 LICENSE=	gnu-gpl-v2
 
+DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
+DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
+# optional for desktop applications, see tegaki/character.py
+#DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
 DEPENDS+=	${PYPKGPREFIX}-zinnia>=0.05:../../wip/py-zinnia
 
 PKG_DESTDIR_SUPPORT=	user-destdir

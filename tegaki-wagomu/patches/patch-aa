@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2010/01/14 10:37:26 obache Exp $
+$NetBSD: patch-aa,v 1.2 2010/04/06 11:44:55 obache Exp $
 
---- wagomu.cpp.orig	2009-08-30 08:38:44.000000000 +0000
+--- wagomu.cpp.orig	2010-02-27 04:51:50.000000000 +0000
 +++ wagomu.cpp
-@@ -74,7 +74,7 @@ Character::Character(unsigned int n_vec,
+@@ -78,7 +78,7 @@ Character::Character(unsigned int n_vec,
          ptr += diff;
          ((char*)ptr)[-1]= diff;
          */
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2010/01/14 10:37:26 obache Exp $
                                          sizeof(float));
  }
  
-@@ -194,16 +194,16 @@ bool Recognizer::open(char *path) {
+@@ -198,16 +198,16 @@ bool Recognizer::open(char *path) {
      max_n_vectors = get_max_n_vectors();
  
  #ifdef __SSE__
@@ -32,10 +32,3 @@ $NetBSD: patch-aa,v 1.1.1.1 2010/01/14 10:37:26 obache Exp $
                                    sizeof(float));
  #endif
  
-@@ -562,4 +562,4 @@ char* Recognizer::get_error_message() {
-     return error_msg;
- }
- 
--}
-\ No newline at end of file
-+}

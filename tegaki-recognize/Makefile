@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/01/13 11:20:41 obache Exp $
+# $NetBSD: Makefile,v 1.2 2010/04/06 11:44:54 obache Exp $
 #
 
-DISTNAME=	tegaki-recognize-0.3
+DISTNAME=	tegaki-recognize-0.3.1.2
 CATEGORIES=	inputmethod
-MASTER_SITES=	http://www.tegaki.org/releases/0.3/
+MASTER_SITES=	http://www.tegaki.org/releases/0.3.1/
 
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://www.tegaki.org/
@@ -21,4 +21,5 @@ REPLACE_PYTHON=	bin/tegaki-recognize
 
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/application.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
