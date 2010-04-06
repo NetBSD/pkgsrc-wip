@@ -1,0 +1,38 @@
+$NetBSD: patch-aa,v 1.1 2010/04/06 11:55:22 obache Exp $
+
+--- config.h.in.orig	2010-04-05 09:27:31.000000000 +0000
++++ config.h.in
+@@ -42,15 +42,33 @@
+ /* Define to 1 if you have the <string.h> header file. */
+ #undef HAVE_STRING_H
+ 
++/* Define to 1 if you have the `strnlen' function. */
++#undef HAVE_STRNLEN
++
+ /* Define to 1 if you have the <sys/stat.h> header file. */
+ #undef HAVE_SYS_STAT_H
+ 
+ /* Define to 1 if you have the <sys/types.h> header file. */
+ #undef HAVE_SYS_TYPES_H
+ 
++/* Define to 1 if you have the <sys/uuid.h> header file. */
++#undef HAVE_SYS_UUID_H
++
+ /* Define to 1 if you have the <unistd.h> header file. */
+ #undef HAVE_UNISTD_H
+ 
++/* Define to 1 if you have the `uuid_create' function. */
++#undef HAVE_UUID_CREATE
++
++/* Define to 1 if you have the `uuid_generate' function. */
++#undef HAVE_UUID_GENERATE
++
++/* Define to 1 if you have the <uuid.h> header file. */
++#undef HAVE_UUID_H
++
++/* Define to 1 if you have the <uuid/uuid.h> header file. */
++#undef HAVE_UUID_UUID_H
++
+ /* Define to the sub-directory in which libtool stores uninstalled libraries.
+    */
+ #undef LT_OBJDIR

@@ -1,0 +1,29 @@
+$NetBSD: patch-ab,v 1.1 2010/04/06 11:55:22 obache Exp $
+
+--- configure.ac.orig	2010-04-05 09:25:12.000000000 +0000
++++ configure.ac
+@@ -51,6 +51,8 @@ AC_HEADER_STDC
+ IT_PROG_INTLTOOL([0.35.0])
+ AM_PROG_LIBTOOL
+ 
++AC_CHECK_FUNCS([strnlen])
++
+ # check ibus
+ PKG_CHECK_MODULES(IBUS, [
+     ibus-1.0
+@@ -62,9 +64,15 @@ PKG_CHECK_MODULES(SQLITE, [
+ ])
+ 
+ # check uuid
++AC_CHECK_HEADERS(uuid.h uuid/uuid.h sys/uuid.h, break)
++AC_SEARCH_LIBS(uuid_create, uuid)
++AC_SEARCH_LIBS(uuid_generate, uuid)
++AC_CHECK_FUNCS(uuid_create uuid_generate)
++if test $ac_cv_func_uuid_generate = yes; then
+ PKG_CHECK_MODULES(UUID, [
+     uuid
+ ])
++fi
+ 
+ # check uuid
+ PKG_CHECK_MODULES(SIGC, [

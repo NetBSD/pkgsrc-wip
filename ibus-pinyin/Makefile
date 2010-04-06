@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2010/01/13 13:13:45 obache Exp $
+# $NetBSD: Makefile,v 1.6 2010/04/06 11:55:22 obache Exp $
 #
 
-DISTNAME=	ibus-pinyin-1.2.0.20090915
+DISTNAME=	ibus-pinyin-1.3.1
 CATEGORIES=	inputmethod chinese
 MASTER_SITES=	http://ibus.googlecode.com/files/
 DISTFILES=	${DEFAULT_DISTFILES} ${DBTAR}
@@ -13,28 +13,32 @@ LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-.include "../../lang/python/pyversion.mk"
-
-DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
-
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_LANGUAGES=		c
-USE_TOOLS+=		pkg-config gmake msgfmt
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		pkg-config gmake intltool msgfmt
 
-# taken from ${WRKSRC}/engine/Makefile.in
-DBVER=		0.1.10.6
+# taken from ${WRKSRC}/data/db/open-phrase/Makefile.in
+DBVER=		1.2.99
 DBTAR=		pinyin-database-${DBVER}.tar.bz2
 
 post-extract:
-	mv ${WRKDIR}/py.db ${WRKSRC}/engine
-	touch -r ${WRKSRC}/engine/py.db ${WRKSRC}/engine/${DBTAR}
+	${RUN} cd ${WRKSRC}/data/db/open-phrase;	\
+	mkdir -p db;					\
+	mv ${WRKDIR}/db/main.db db/open-phrase.db;	\
+	touch ${DBTAR} stamp-db
 
 SUBST_CLASSES+=		epython
 SUBST_STAGE.epython=	pre-configure
-SUBST_FILES.epython=	engine/ibus-engine-pinyin.in setup/ibus-setup-pinyin.in
+SUBST_FILES.epython=	setup/ibus-setup-pinyin.in
 SUBST_SED.epython=	-e 's;exec python;exec ${PYTHONBIN};g'
 
+CONFIGURE_ARGS+=	--disable-db-android
+CONFIGURE_ARGS+=	--enable-db-open-phrase
+
+.include "../../databases/sqlite3/buildlink3.mk"
+.include "../../devel/libsigc++/buildlink3.mk"
+.include "../../lang/python/application.mk"
 .include "../../wip/ibus/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

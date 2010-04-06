@@ -1,0 +1,25 @@
+$NetBSD: patch-ad,v 1.1 2010/04/06 11:55:22 obache Exp $
+
+--- src/PinyinParser.cc.orig	2010-01-18 08:29:30.000000000 +0000
++++ src/PinyinParser.cc
+@@ -1,4 +1,7 @@
+ /* vim:set et sts=4: */
++#ifdef HAVE_CONFIG_H
++#include "config.h"
++#endif
+ #include <string.h>
+ #include <stdlib.h>
+ #include <glib.h>
+@@ -59,7 +62,12 @@ is_pinyin (const gchar *p,
+         return NULL;
+     }
+ 
++#ifdef HAVE_STRNLEN
+     len = strnlen (p, 6);
++#else
++    len = strlen (p);
++    if (len > 6) len = 6;
++#endif
+     len = MIN (len, end - p);
+     strncpy (buf, p, len);
+ 
