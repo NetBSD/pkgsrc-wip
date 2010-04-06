@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2010/01/18 09:38:25 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2010/04/06 11:56:02 obache Exp $
 #
 
-DISTNAME=	ibus-qt-1.2.0.20091217-Source
+DISTNAME=	ibus-qt-1.3.0-Source
 PKGNAME=	${DISTNAME:S/-Source//}
-PKGREVISION=	1
 CATEGORIES=	inputmethod
 MASTER_SITES=	http://ibus.googlecode.com/files/
 
