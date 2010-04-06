@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/04/06 06:00:13 marttikuparinen Exp $
+bin/ykclient
+include/ykclient.h
+lib/libykclient.la

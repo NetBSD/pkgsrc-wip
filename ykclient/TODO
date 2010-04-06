@@ -1,0 +1,21 @@
+* Fix this error:
+
+=> Checking for missing run-time search paths in ykclient-2.3
+ERROR: bin/ykclient: rpath relative to WRKDIR
+*** Error code 1
+
+# ldd work.i386/ykclient-2.3/ykclient
+...
+-lykclient.3 => /home/pkgsrc/wip/ykclient/work.i386/ykclient-2.3/.libs/libykclient.so.3
+
+However, there's no problem if I do this:
+
+# cd work.i386/ykclient-2.3
+# rm -f ykclient
+# make
+# ldd ykclient
+	-lykclient.3 => not found
+	-lc.12 => /usr/lib/libc.so.12
+[...]
+# cd ../..
+# make install
