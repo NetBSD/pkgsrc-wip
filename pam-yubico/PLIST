@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/04/06 06:06:14 marttikuparinen Exp $
+lib/security/pam_yubico.la
