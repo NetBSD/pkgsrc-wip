@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3894 2010/04/03 11:13:56 jihbed Exp $
+# $Id: Makefile,v 1.3895 2010/04/06 06:01:21 marttikuparinen Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2494,6 +2494,7 @@ SUBDIR+=	yamcha
 SUBDIR+=	yauap
 SUBDIR+=	yaws
 SUBDIR+=	yersinia
+SUBDIR+=	ykclient
 SUBDIR+=	yp-tools
 SUBDIR+=	ypbind-mt
 SUBDIR+=	ypserv
