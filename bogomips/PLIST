@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/04/07 05:05:54 schaecsn Exp $
+bin/bogomips
