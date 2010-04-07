@@ -1,2 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/04/07 05:05:54 schaecsn Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/04/07 22:01:56 schaecsn Exp $
 bin/bogomips
+share/doc/bogomips/README

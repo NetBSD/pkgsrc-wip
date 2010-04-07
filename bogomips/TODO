@@ -1,2 +1,4 @@
-All set.
+Distinguish between i[34]86 and i[56]86. Right now, the wrong bogomips
+version will be build for i[34]86 CPUs.
+
  
