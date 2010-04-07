@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3896 2010/04/06 06:07:22 marttikuparinen Exp $
+# $Id: Makefile,v 1.3897 2010/04/07 05:12:16 schaecsn Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -163,6 +163,7 @@ SUBDIR+=	bmp-docklet
 SUBDIR+=	bnr2
 SUBDIR+=	boa
 SUBDIR+=	bodr
+SUBDIR+=	bogomips
 SUBDIR+=	boinc
 SUBDIR+=	boinc-client
 SUBDIR+=	boinc-lib
