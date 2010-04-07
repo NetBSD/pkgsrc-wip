@@ -23,6 +23,7 @@ Suggested package updates
 	o emboss-base-6.0.1
 	o emelfm2-0.7.1
 	o endeavour-3.1.3
+	o eric4-4.4.3
 	o evolution-couchdb-0.4.4
 	o fakenes-0.5.7
 	o fltk-1.1.10 (PR 43061)
@@ -45,6 +46,7 @@ Suggested package updates
 	o guitone-0.9
 	o httrack-3.43
 	o hu-go-2.11
+	o i3-3.e
 	o icecat-3.6
 	o jakarta-log4j-1.2.15 [now called apache-log4j, http://logging.apache.org/log4j/1.2/download.html]
 	o jakarta-struts-1.2.4
