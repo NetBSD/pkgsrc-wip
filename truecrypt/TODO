@@ -1,0 +1,68 @@
+license
+-------
+
+- Doublecheck details of license.
+
+documentation
+-------------
+
+Source code tar ball does not come with documentation (no manual, man page, ...)
+
+Add documentation? 
+
+Documentation is only included in the official binary releases. Howto get it:
+
+Download a random linux binary package from http://www.truecrypt.org/downloads
+
+Then:
+
+$ tar xvzf truecrypt-6.3a-linux-console-x86.tar.gz 
+truecrypt-6.3a-setup-console-x86
+tar: ustar vol 1, 1 files, 1645056 bytes read, 0 bytes written in 1 secs (1645056 bytes/sec)
+
+
+$ file truecrypt-6.3a-setup-console-x86 
+truecrypt-6.3a-setup-console-x86: POSIX shell script text executable
+
+$ ./truecrypt-6.3a-setup-console-x86 
+TrueCrypt 6.3a Setup
+____________________
+
+
+Installation options:
+
+ 1) Install truecrypt_6.3a_console_i386.tar.gz
+ 2) Extract package file truecrypt_6.3a_console_i386.tar.gz and place it to /tmp
+
+To select, enter 1 or 2: <2>
+
+Before you can use, extract, or install TrueCrypt, you must accept the
+terms of the TrueCrypt License.
+
+Press Enter to display the license terms... 
+
+[license text removed]
+
+<q>
+
+Do you accept and agree to be bound by the license terms? (yes/no): <yes>
+
+
+Uninstalling TrueCrypt:
+-----------------------
+
+To uninstall TrueCrypt, please run 'truecrypt-uninstall.sh'.
+
+Installation package 'truecrypt_6.3a_console_i386.tar.gz' extracted and placed in '/tmp'
+Press Enter to exit...  <enter>
+
+$ cd /tmp
+
+$ ls truecrypt_6.3a_console_i386.tar.gz
+truecrypt_6.3a_console_i386.tar.gz
+
+$ tar xvzf truecrypt_6.3a_console_i386.tar.gz "usr/share/truecrypt/doc/TrueCrypt User Guide.pdf"
+
+## how to extract files from a tar archive without creating the whole path?
+
+$ xpdf usr/share/truecrypt/doc/TrueCrypt\ User\ Guide.pdf 

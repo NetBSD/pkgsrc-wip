@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/04/08 03:36:56 schaecsn Exp $
+
+SHA1 (TrueCrypt%206.3a%20Source.tar.gz) = 87f76143557d499639b2d858e3bb420a7157fbf1
+RMD160 (TrueCrypt%206.3a%20Source.tar.gz) = 9858f00792364b7d1b1425dd67670aa16e662cd9
+Size (TrueCrypt%206.3a%20Source.tar.gz) = 1906146 bytes
+SHA1 (patch-aa) = 2ccafccae357ec1f9e279a69d7efc5a7112649a1
+SHA1 (patch-ab) = 91c08df3543c9894e7e6e039329c56398271b762
+SHA1 (patch-ac) = 549c5b986ecf791a5c4e07c6281a54cdce69f7bf

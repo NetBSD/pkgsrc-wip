@@ -1,0 +1,22 @@
+$NetBSD: patch-ac,v 1.1.1.1 2010/04/08 03:36:56 schaecsn Exp $
+
+--- Common/SecurityToken.h.orig	2010-04-06 15:50:37.000000000 -0700
++++ Common/SecurityToken.h	2010-04-06 15:50:53.000000000 -0700
+@@ -31,7 +31,7 @@
+ #	define CK_DECLARE_FUNCTION_POINTER(RET_TYPE, NAME) RET_TYPE __declspec(dllimport) (* NAME)
+ 
+ #	pragma pack(push, cryptoki, 1)
+-#	include <pkcs11.h>
++#	include <nss/pkcs11.h>
+ #	pragma pack(pop, cryptoki)
+ 
+ #else // !TC_WINDOWS
+@@ -40,7 +40,7 @@
+ #	define CK_DECLARE_FUNCTION(RET_TYPE, NAME) RET_TYPE NAME
+ #	define CK_DECLARE_FUNCTION_POINTER(RET_TYPE, NAME) RET_TYPE (* NAME)
+ 
+-#	include <pkcs11.h>
++#	include <nss/pkcs11.h>
+ 
+ #endif // !TC_WINDOWS
+ 
