@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3897 2010/04/07 05:12:16 schaecsn Exp $
+# $Id: Makefile,v 1.3898 2010/04/08 03:40:06 schaecsn Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2310,6 +2310,7 @@ SUBDIR+=	trayion
 SUBDIR+=	treetool
 SUBDIR+=	treeview
 SUBDIR+=	tripwire2
+SUBDIR+=	truecrypt
 SUBDIR+=	tsh
 SUBDIR+=	tsm
 SUBDIR+=	ttf-indic-fonts
