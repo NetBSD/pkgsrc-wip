@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3898 2010/04/08 03:40:06 schaecsn Exp $
+# $Id: Makefile,v 1.3899 2010/04/09 02:00:34 obache Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1237,7 +1237,6 @@ SUBDIR+=	milter-greylist-devel
 SUBDIR+=	milter-manager
 SUBDIR+=	mime-support
 SUBDIR+=	min12xxw
-SUBDIR+=	ming
 SUBDIR+=	minimalist
 SUBDIR+=	minisat2
 SUBDIR+=	miniupnpc
@@ -2058,7 +2057,6 @@ SUBDIR+=	ruby-actionmessenger
 SUBDIR+=	ruby-cabocha
 SUBDIR+=	ruby-ditz
 SUBDIR+=	ruby-git
-SUBDIR+=	ruby-ming
 SUBDIR+=	ruby-term-ansicolor
 SUBDIR+=	ruby-thor
 SUBDIR+=	ruby-treetop
