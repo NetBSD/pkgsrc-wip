@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2010/02/20 23:24:55 cheusov Exp $
+# $NetBSD: Makefile,v 1.13 2010/04/09 12:52:31 pallegra Exp $
 #
 
-DISTNAME=		libdrm-2.4.18
+DISTNAME=		libdrm-2.4.20
 CATEGORIES=		x11 graphics
 MASTER_SITES=		http://dri.freedesktop.org/libdrm/
 EXTRACT_SUFX=		.tar.bz2
@@ -17,9 +17,6 @@ USE_TOOLS+=		pkg-config
 USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE+=	libdrm.pc.in
 GNU_CONFIGURE=		yes
-
-CONFIGURE_ARGS+=	--enable-nouveau-experimental-api
-CONFIGURE_ARGS+=	--enable-vmwgfx-experimental-api
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -43,5 +40,10 @@ ATOMIC_OPS_CHECK!=\
 
 CONFIGURE_ARGS+=	PTHREADSTUBS_CFLAGS=-I${PREFIX}/include \
 			PTHREADSTUBS_LIBS=-L${PREFIX}/lib
+CONFIGURE_ARGS+=	--disable-nouveau-experimental-api
+CONFIGURE_ARGS+=	--disable-vmwgfx-experimental-api
+CONFIGURE_ARGS+=	--disable-libkms
+CONFIGURE_ARGS+=	--disable-radeon
+#CONFIGURE_ARGS+=	--disable-intel
 
 .include "../../mk/bsd.pkg.mk"
