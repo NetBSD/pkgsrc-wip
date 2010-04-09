@@ -1,4 +1,4 @@
-$NetBSD: patch-ai,v 1.1.1.1 2010/01/03 14:32:17 pallegra Exp $
+$NetBSD: patch-ai,v 1.2 2010/04/09 12:55:12 pallegra Exp $
 
 --- src/mesa/Makefile.orig	2009-12-22 02:26:02.000000000 +0000
 +++ src/mesa/Makefile
@@ -56,7 +56,7 @@ $NetBSD: patch-ai,v 1.1.1.1 2010/01/03 14:32:17 pallegra Exp $
  
  ######################################################################
  # Device drivers
--driver_subdirs: libmesa.a libglapi.a
+-driver_subdirs: libmesa.a libglapi.a libmesagallium.a
 +driver_subdirs: libmesa.la libglapi.la
  	@ (cd drivers && $(MAKE))
  
