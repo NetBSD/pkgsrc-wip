@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/04/08 03:36:56 schaecsn Exp $
+# $NetBSD: Makefile,v 1.2 2010/04/09 00:03:29 schaecsn Exp $
 #
 
 DISTNAME=	TrueCrypt%206.3a%20Source
@@ -10,6 +10,7 @@ MAINTAINER=	schaecsn@gmx.net
 HOMEPAGE=	http://www.truecrypt.org/
 COMMENT=	Filesystem encryption package
 LICENSE=	truecrypt-license
+LICENSE_FILE=	truecrypt-license
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -38,6 +39,7 @@ FETCH_MESSAGE+=	" and click download."
 BUILD_TARGET=
 MAKE_ENV+=	PKCS11=1
 
+INSTALLATION_DIRS+= bin
 
 post-fetch:
 	if [ ! -x ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX} ]; then	\
@@ -45,7 +47,7 @@ post-fetch:
 	fi
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/Main/truecrypt ${DESTDIR}/${PREFIX}/bin/
+	${INSTALL_PROGRAM} ${WRKSRC}/Main/truecrypt ${DESTDIR}${PREFIX}/bin/
 
 .include "../../filesystems/fuse/buildlink3.mk"
 .include "../../x11/wxGTK28/buildlink3.mk"
