@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2010/01/22 21:16:58 asau Exp $
+@comment $NetBSD: PLIST,v 1.25 2010/04/10 08:54:40 asau Exp $
 bin/maxima
 bin/rmaxima
 bin/xmaxima
@@ -31,6 +31,9 @@ share/maxima/${PKGVERSION}/demo/trgsmp.dem
 share/maxima/${PKGVERSION}/doc/EMaximaIntro.ps
 share/maxima/${PKGVERSION}/doc/contributors
 share/maxima/${PKGVERSION}/doc/html/contents.hhc
+share/maxima/${PKGVERSION}/doc/html/figures/contour1.gif
+share/maxima/${PKGVERSION}/doc/html/figures/contour2.gif
+share/maxima/${PKGVERSION}/doc/html/figures/contour3.gif
 share/maxima/${PKGVERSION}/doc/html/figures/dynamics1.gif
 share/maxima/${PKGVERSION}/doc/html/figures/dynamics10.gif
 share/maxima/${PKGVERSION}/doc/html/figures/dynamics2.gif
