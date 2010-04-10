@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2009/11/12 11:22:36 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/04/10 03:44:14 mwdavies Exp $
 bin/kgrab
 share/applications/kde4/kgrab.desktop
 share/dbus-1/interfaces/org.kde.kgrab.xml
@@ -11,25 +11,30 @@ share/kde/apps/kgrab/kgrabui.rc
 share/locale/ar/LC_MESSAGES/kgrab.mo
 share/locale/be/LC_MESSAGES/kgrab.mo
 share/locale/bg/LC_MESSAGES/kgrab.mo
+share/locale/ca/LC_MESSAGES/kgrab.mo
 share/locale/cs/LC_MESSAGES/kgrab.mo
 share/locale/da/LC_MESSAGES/kgrab.mo
 share/locale/de/LC_MESSAGES/kgrab.mo
 share/locale/el/LC_MESSAGES/kgrab.mo
 share/locale/en_GB/LC_MESSAGES/kgrab.mo
+share/locale/eo/LC_MESSAGES/kgrab.mo
 share/locale/es/LC_MESSAGES/kgrab.mo
 share/locale/et/LC_MESSAGES/kgrab.mo
+share/locale/fi/LC_MESSAGES/kgrab.mo
 share/locale/fr/LC_MESSAGES/kgrab.mo
 share/locale/ga/LC_MESSAGES/kgrab.mo
 share/locale/gl/LC_MESSAGES/kgrab.mo
 share/locale/he/LC_MESSAGES/kgrab.mo
 share/locale/hi/LC_MESSAGES/kgrab.mo
 share/locale/hne/LC_MESSAGES/kgrab.mo
+share/locale/hr/LC_MESSAGES/kgrab.mo
 share/locale/hu/LC_MESSAGES/kgrab.mo
 share/locale/is/LC_MESSAGES/kgrab.mo
 share/locale/it/LC_MESSAGES/kgrab.mo
 share/locale/ja/LC_MESSAGES/kgrab.mo
 share/locale/km/LC_MESSAGES/kgrab.mo
 share/locale/lt/LC_MESSAGES/kgrab.mo
+share/locale/lv/LC_MESSAGES/kgrab.mo
 share/locale/mai/LC_MESSAGES/kgrab.mo
 share/locale/nb/LC_MESSAGES/kgrab.mo
 share/locale/nds/LC_MESSAGES/kgrab.mo
