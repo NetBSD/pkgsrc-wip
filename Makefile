@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3901 2010/04/10 21:30:09 jihbed Exp $
+# $Id: Makefile,v 1.3902 2010/04/10 22:16:06 mwdavies Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2044,7 +2044,6 @@ SUBDIR+=	rootcheck
 SUBDIR+=	rope
 SUBDIR+=	rosegarden-current
 SUBDIR+=	roundcube-skin-mvision2
-SUBDIR+=	rsibreak
 SUBDIR+=	rss-glib
 SUBDIR+=	rst-mode
 SUBDIR+=	rsyslog
