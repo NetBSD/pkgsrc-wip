@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/06/17 23:21:56 jihbed Exp $
-lib/python2.5/site-packages/memcache.py
-lib/python2.5/site-packages/memcache.pyc
-lib/python2.5/site-packages/memcache.pyo
-lib/python2.5/site-packages/python_memcached-${PKGVERSION}-py2.5.egg-info/PKG-INFO
-lib/python2.5/site-packages/python_memcached-${PKGVERSION}-py2.5.egg-info/SOURCES.txt
-lib/python2.5/site-packages/python_memcached-${PKGVERSION}-py2.5.egg-info/dependency_links.txt
-lib/python2.5/site-packages/python_memcached-${PKGVERSION}-py2.5.egg-info/top_level.txt
