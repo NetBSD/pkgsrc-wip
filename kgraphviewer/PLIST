@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2009/11/12 11:25:37 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/04/10 03:49:49 mwdavies Exp $
 bin/kgrapheditor
 bin/kgraphviewer
 lib/kde4/kgraphviewerpart.so
@@ -44,6 +44,9 @@ share/doc/kde/HTML/it/kgraphviewer/index.docbook
 share/doc/kde/HTML/pt/kgraphviewer/common
 share/doc/kde/HTML/pt/kgraphviewer/index.cache.bz2
 share/doc/kde/HTML/pt/kgraphviewer/index.docbook
+share/doc/kde/HTML/pt_BR/kgraphviewer/common
+share/doc/kde/HTML/pt_BR/kgraphviewer/index.cache.bz2
+share/doc/kde/HTML/pt_BR/kgraphviewer/index.docbook
 share/doc/kde/HTML/sv/kgraphviewer/common
 share/doc/kde/HTML/sv/kgraphviewer/index.cache.bz2
 share/doc/kde/HTML/sv/kgraphviewer/index.docbook
@@ -80,11 +83,14 @@ share/kde4/services/kgraphviewer_part.desktop
 share/locale/ar/LC_MESSAGES/kgraphviewer.mo
 share/locale/be/LC_MESSAGES/kgraphviewer.mo
 share/locale/bg/LC_MESSAGES/kgraphviewer.mo
+share/locale/ca/LC_MESSAGES/kgraphviewer.mo
+share/locale/ca@valencia/LC_MESSAGES/kgraphviewer.mo
 share/locale/cs/LC_MESSAGES/kgraphviewer.mo
 share/locale/da/LC_MESSAGES/kgraphviewer.mo
 share/locale/de/LC_MESSAGES/kgraphviewer.mo
 share/locale/el/LC_MESSAGES/kgraphviewer.mo
 share/locale/en_GB/LC_MESSAGES/kgraphviewer.mo
+share/locale/eo/LC_MESSAGES/kgraphviewer.mo
 share/locale/es/LC_MESSAGES/kgraphviewer.mo
 share/locale/et/LC_MESSAGES/kgraphviewer.mo
 share/locale/fr/LC_MESSAGES/kgraphviewer.mo
@@ -92,6 +98,7 @@ share/locale/ga/LC_MESSAGES/kgraphviewer.mo
 share/locale/gl/LC_MESSAGES/kgraphviewer.mo
 share/locale/hi/LC_MESSAGES/kgraphviewer.mo
 share/locale/hne/LC_MESSAGES/kgraphviewer.mo
+share/locale/hr/LC_MESSAGES/kgraphviewer.mo
 share/locale/is/LC_MESSAGES/kgraphviewer.mo
 share/locale/it/LC_MESSAGES/kgraphviewer.mo
 share/locale/ja/LC_MESSAGES/kgraphviewer.mo
