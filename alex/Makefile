@@ -1,50 +1,15 @@
-# $NetBSD: Makefile,v 1.5 2009/05/20 00:58:40 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2010/04/10 06:40:52 emil_s Exp $
 #
 
-DISTNAME=	alex-${VERSION}
-PKGREVISION=	1
-CATEGORIES=	devel
-MASTER_SITES=	http://www.haskell.org/alex/dist/${VERSION}/
-DISTFILES=	${DISTNAME}.tar.gz
-DISTFILES+=	alex-doc-html-2.1.0.tar.gz
-SITES.alex-doc-html-2.1.0.tar.gz=http://www.haskell.org/alex/doc/
+DISTNAME=		alex-2.3.2
+PKGNAME=		${DISTNAME}
+CATEGORIES=		devel
+MAINTAINER=		emil@math.su.se
+HOMEPAGE=		http://www.haskell.org/alex/
+COMMENT=		Tool for generating lexical analysers in Haskell
 
-MAINTAINER=	emil@math.su.se
-HOMEPAGE=	http://www.haskell.org/alex/
-COMMENT=	Tool for generating lexical analysers in Haskell
-
-VERSION =	2.1.0
-
-USE_TOOLS+=	gmake perl
-GNU_CONFIGURE=	yes
-
-#EXTRACT_ONLY=	${DISTNAME}-src.tar.gz alex-html.tar.gz
-
-EGDIR=		${PREFIX}/share/examples/alex
-DOCDIR=		${PREFIX}/share/doc/alex
-
-do-configure:
-	cd ${WRKSRC:Q} &&                             \
-	runhaskell Setup.lhs configure                \
-		--ghc                                 \
-		--prefix=${PREFIX:Q}                  \
-		--with-compiler=${PREFIX:Q}/bin/ghc  \
-		--with-hc-pkg=${PREFIX:Q}/bin/ghc-pkg
-
-do-build:
-	cd ${WRKSRC:Q} && runhaskell -cpp Setup.lhs build
-
-do-install:
-	cd ${WRKSRC:Q} && runhaskell -cpp Setup.lhs install
-
-post-install:
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${FIND} ${WRKSRC}/examples -type f \
-		-exec ${INSTALL_DATA} \{\} ${EGDIR} \;
-	${INSTALL_DATA_DIR} ${DOCDIR}
-#	${INSTALL_DATA} ${DISTDIR}/alex.ps ${DOCDIR}
-	${INSTALL_DATA} ${WRKDIR}/alex-html/* ${DOCDIR}
+USE_TOOLS+=		perl
 
 
-.include "../../lang/ghc/buildlink3.mk"
+.include "../../wip/mk/haskell.mk"
 .include "../../mk/bsd.pkg.mk"
