@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/04/10 21:27:38 jihbed Exp $
+
+SHA1 (python-memcached-1.45.tar.gz) = 869919041c85bb1215108b928b724a0cfb404706
+RMD160 (python-memcached-1.45.tar.gz) = 12db87c5ccfcd30c27b05977226f52f6738ed878
+Size (python-memcached-1.45.tar.gz) = 36457 bytes

@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/04/10 21:27:38 jihbed Exp $
+${PYSITELIB}/memcache.py
+${PYSITELIB}/memcache.pyc
+${PYSITELIB}/memcache.pyo
+${PYSITELIB}/python_${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/python_${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/python_${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/python_${EGG_INFODIR}/top_level.txt
+share/doc/py-memcached/memcache.html
