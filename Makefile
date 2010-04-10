@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3900 2010/04/10 21:02:57 jihbed Exp $
+# $Id: Makefile,v 1.3901 2010/04/10 21:30:09 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1907,6 +1907,7 @@ SUBDIR+=	py-logilab-pigg
 SUBDIR+=	py-matplotlib
 SUBDIR+=	py-matplotlib-gtk2
 SUBDIR+=	py-mdp
+SUBDIR+=	py-memcached
 SUBDIR+=	py-metrics
 SUBDIR+=	py-mocker
 SUBDIR+=	py-mpmath
