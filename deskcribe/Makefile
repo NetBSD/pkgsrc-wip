@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/07/22 09:53:11 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2010/04/10 20:21:42 jihbed Exp $
 #
 
 DISTNAME=	deskscribe-0.4.2
@@ -6,7 +6,7 @@ CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/deskscribe/0.4/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	kamel.derouiche@gmail.com
+MAINTAINER=	pkgsrc.gnome@gmail.com
 HOMEPAGE=	https://launchpad.net/deskscribe
 COMMENT=	DeskScribe is a usability testing suite
 

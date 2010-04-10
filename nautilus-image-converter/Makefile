@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/01/18 09:38:28 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2010/04/10 20:19:34 jihbed Exp $
 #
 
 DISTNAME=	nautilus-image-converter-0.3.0
@@ -7,7 +7,7 @@ CATEGORIES=	sysutils graphics gnome
 MASTER_SITES=	ftp://ftp.gnome.org/pub/gnome/sources/nautilus-image-converter/0.3/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	kamelderouiche@yahoo.com
+MAINTAINER=	pkgsrc.gnome@gmail.com
 HOMEPAGE=	http://www.bitron.ch/software/nautilus-image-converter.php
 COMMENT=	Nautilus extension to mass resize or rotate images
 

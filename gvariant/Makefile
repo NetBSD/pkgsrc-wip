@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/02/25 12:54:20 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2010/04/10 20:18:25 jihbed Exp $
 #
 
 DISTNAME=	gvariant-0
 CATEGORIES=	devel
 MASTER_SITES=	http://people.gnome.org/~ryanl/src/
 
-MAINTAINER=	kamelderouiche@yahoo.com
+MAINTAINER=	pkgsrc.gnome@gmail.com
 HOMEPAGE=	http://people.gnome.org/~ryanl/src/
 COMMENT=	GVariant is a new datatype in glib that stores complex values
-LICENSE=		gnu-gpl-v3
+LICENSE=	gnu-gpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
