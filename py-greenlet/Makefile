@@ -1,20 +1,19 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/10/20 08:53:32 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2010/04/10 19:57:15 jihbed Exp $
 #
 
-DISTNAME=	greenlet-0.2.tar
-PKGNAME=	${PYPKGPREFIX}-greenlet-0.2
+DISTNAME=	greenlet-0.3.1
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	http://pypi.python.org/packages/source/g/greenlet/
-EXTRACT_SUFX=	.gz#md5=cfcac72683fbf52d6c9f4f82a319dcb9
 
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://undefined.org/python/#greenlet
 COMMENT=	Lightweight in-process concurrent programming
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	mit
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-
-WRKSRC=	${WRKDIR}/greenlet-0.2
+PYTHON_VERSIONS_ACCEPTED= 26 25
+USE_LANGUAGES=	c 
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
