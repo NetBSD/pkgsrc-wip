@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3899 2010/04/09 02:00:34 obache Exp $
+# $Id: Makefile,v 1.3900 2010/04/10 21:02:57 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1893,7 +1893,6 @@ SUBDIR+=	py-kyra
 SUBDIR+=	py-last
 SUBDIR+=	py-lib
 SUBDIR+=	py-libmc
-SUBDIR+=	py-libmemcache
 SUBDIR+=	py-libmpdclient2
 SUBDIR+=	py-libopensync-plugin
 SUBDIR+=	py-libtorrent-rasterbar
