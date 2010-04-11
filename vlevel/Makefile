@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/02/10 09:16:03 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2010/04/11 09:06:16 obache Exp $
 #
 
 DISTNAME=	vlevel-0.5
@@ -8,6 +8,7 @@ MASTER_SITES=	http://downloads.sourceforge.net/vlevel/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://vlevel.sourceforge.net/
 COMMENT=	Dynamic compressor LADSPA plugin with look-ahead
+LICENSE=	gnu-gpl-v2
 
 WRKSRC=		${WRKDIR}/vlevel-0.5
 USE_LANGUAGES=	c++
