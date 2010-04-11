@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/04/11 08:53:08 obache Exp $
+# $NetBSD: Makefile,v 1.7 2010/04/11 08:58:16 obache Exp $
 #
 
 DISTNAME=	wput-0.6.2
@@ -15,6 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
+USE_TOOLS+=		gmake
 
 MAKE_JOBS_SAFE=		no
 
@@ -22,7 +23,6 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/wput ${DESTDIR}/${PREFIX}/bin/wput
-	${INSTALL_MAN_DIR} ${DESTDIR}/${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_MAN} ${WRKSRC}/doc/wput.1 ${DESTDIR}/${PREFIX}/${PKGMANDIR}/man1/wput.1
 
 .include "../../mk/bsd.pkg.mk"
