@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.1 2010/04/06 11:55:22 obache Exp $
+$NetBSD: patch-ab,v 1.2 2010/04/11 06:44:21 obache Exp $
 
---- configure.ac.orig	2010-04-05 09:25:12.000000000 +0000
+--- configure.ac.orig	2010-04-11 00:28:47.000000000 +0000
 +++ configure.ac
 @@ -51,6 +51,8 @@ AC_HEADER_STDC
  IT_PROG_INTLTOOL([0.35.0])
@@ -11,19 +11,35 @@ $NetBSD: patch-ab,v 1.1 2010/04/06 11:55:22 obache Exp $
  # check ibus
  PKG_CHECK_MODULES(IBUS, [
      ibus-1.0
-@@ -62,9 +64,15 @@ PKG_CHECK_MODULES(SQLITE, [
- ])
- 
+@@ -65,6 +67,31 @@ AC_PATH_PROG(SQLITE3, sqlite3)
  # check uuid
-+AC_CHECK_HEADERS(uuid.h uuid/uuid.h sys/uuid.h, break)
-+AC_SEARCH_LIBS(uuid_create, uuid)
-+AC_SEARCH_LIBS(uuid_generate, uuid)
-+AC_CHECK_FUNCS(uuid_create uuid_generate)
-+if test $ac_cv_func_uuid_generate = yes; then
  PKG_CHECK_MODULES(UUID, [
      uuid
++],
++[
++    cat >>confdefs.h <<_ACEOF
++#define HAVE_UUID_UUID_H 1
++#define HAVE_UUID_GENERATE 1
++_ACEOF
++],
++[
++    uuid_revert_save_LIBS=$LIBS
++    AC_CHECK_HEADERS(uuid.h uuid/uuid.h sys/uuid.h)
++    AC_SEARCH_LIBS(uuid_create, uuid, [
++        if test "$ac_cv_search_uuid_create" != "none required"; then
++            UUID_LIBS=$ac_cv_search_uuid_create
++        fi
++        AC_CHECK_FUNCS(uuid_create)
++    ],
++    [
++        AC_SEARCH_LIBS(uuid_generate, uuid, [
++            if test "$ac_cv_search_uuid_generate" != "none required"; then
++                UUID_LIBS=$ac_cv_search_uuid_generate
++            fi
++            AC_CHECK_FUNCS(uuid_generate)
++        ])
++    ])
++    LIBS=$uuid_revert_save_LIBS
  ])
-+fi
  
  # check uuid
- PKG_CHECK_MODULES(SIGC, [
