@@ -124,7 +124,6 @@ Suggested ready to import packages
 	o ccrtp
 	o flimsel
 	o flpsed
-	o gipfel [pkg/40558]
 	o granule [pkg/40177]
 	o gtypist [pkg/40177]
 	o heirloom-sh [pkg/40272]
