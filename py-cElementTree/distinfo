@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1 2009/11/30 11:34:20 obache Exp $
-
-SHA1 (cElementTree-1.0.5-20051216.tar.gz) = 08f4206d209905ddf3f37cb72f9fc021791d7f99
-RMD160 (cElementTree-1.0.5-20051216.tar.gz) = e079d10507bd4819b2ce4771b53671c2d9ac2418
-Size (cElementTree-1.0.5-20051216.tar.gz) = 93766 bytes
-SHA1 (patch-aa) = 47e18763c51bd083af843dcf18032f855d5cf509

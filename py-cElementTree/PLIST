@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2009/11/30 11:34:20 obache Exp $
-${PYSITELIB}/${C_MODULE_NAME}.so
