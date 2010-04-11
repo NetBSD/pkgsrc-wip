@@ -1,4 +1,3 @@
-Distinguish between i[34]86 and i[56]86. Right now, the wrong bogomips
-version will be build for i[34]86 CPUs.
+add to mk/defaults/options.description
 
- 
+bogomips-pentium	Compile bogomips for pentium and above.
