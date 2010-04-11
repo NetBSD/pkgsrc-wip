@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/01/11 00:20:06 khorben Exp $
-#
-# TODO: add an embedded option
+# $NetBSD: Makefile,v 1.3 2010/04/11 23:12:05 khorben Exp $
 
 DISTNAME=	Framer-0.0.0
 PKGNAME=	deforaos-framer-0.0.0
@@ -18,6 +16,8 @@ USE_TOOLS+=	pkg-config
 PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_FLAGS+=	PREFIX=${PREFIX}
 MAKE_FLAGS+=	DESTDIR=${DESTDIR}
+
+.include "options.mk"
 
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
