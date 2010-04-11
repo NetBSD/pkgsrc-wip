@@ -1,6 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2010/03/28 17:53:10 khorben Exp $
-#
-# TODO: add an embedded option
+# $NetBSD: Makefile,v 1.2 2010/04/11 23:09:35 khorben Exp $
 
 DISTNAME=	Surfer-0.1.0
 PKGNAME=	deforaos-surfer-0.1.0
@@ -18,6 +16,8 @@ USE_TOOLS+=	pkg-config
 PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_FLAGS+=	PREFIX=${PREFIX}
 MAKE_FLAGS+=	DESTDIR=${DESTDIR}
+
+.include "options.mk"
 
 .include "../../wip/deforaos-libsystem/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
