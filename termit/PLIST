@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.2 2010/03/18 00:06:01 crocusino Exp $
+@comment $NetBSD: PLIST,v 1.3 2010/04/11 16:03:45 crocusino Exp $
 bin/termit
 man/man1/termit.1
 share/applications/termit.desktop
 share/doc/termit/COPYING
 share/doc/termit/README
-share/doc/termit/init.lua.example
 share/doc/termit/lua_api.txt
+share/doc/termit/rc.lua.example
 share/locale/fr/LC_MESSAGES/termit.mo
 share/locale/hu/LC_MESSAGES/termit.mo
 share/locale/ko/LC_MESSAGES/termit.mo

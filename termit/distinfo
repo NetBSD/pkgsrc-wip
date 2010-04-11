@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/03/16 22:10:38 crocusino Exp $
+$NetBSD: distinfo,v 1.2 2010/04/11 16:03:45 crocusino Exp $
 
-SHA1 (termit-2.3.0.tar.bz2) = 67156086d99f4a30f2da0947efb7a2f8a3424dae
-RMD160 (termit-2.3.0.tar.bz2) = 72e7b7e2e6c09393aca9bba6008e61f403e2a66e
-Size (termit-2.3.0.tar.bz2) = 33172 bytes
+SHA1 (termit-2.4.0.tar.bz2) = 93770fa0e2152d1270450479074816e59b266888
+RMD160 (termit-2.4.0.tar.bz2) = 035a26875062be56daa7ea92dfaf2b240473bbec
+Size (termit-2.4.0.tar.bz2) = 35594 bytes
