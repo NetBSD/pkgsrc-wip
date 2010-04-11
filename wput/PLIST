@@ -1,2 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/07/27 19:53:18 othyro Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/04/11 08:59:51 obache Exp $
 bin/wput
+man/man1/mput.1
