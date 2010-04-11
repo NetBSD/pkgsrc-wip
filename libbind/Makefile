@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/02/14 09:14:24 obache Exp $
+# $NetBSD: Makefile,v 1.3 2010/04/11 09:51:09 obache Exp $
 #
 
 DISTNAME=	libbind-6.0
@@ -15,6 +15,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	nroff tbl
+
+CONFIGURE_ARGS+=	--with-libtool=yes
 
 MAKE_JOBS_SAFE=	no
 
