@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/04/11 08:48:38 obache Exp $
+# $NetBSD: Makefile,v 1.6 2010/04/11 08:53:08 obache Exp $
 #
 
 DISTNAME=	wput-0.6.2
@@ -9,11 +9,14 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://wput.sourceforge.net/
 COMMENT=	Wput is a command-line ftp-client that looks like wget
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
+
+MAKE_JOBS_SAFE=		no
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
