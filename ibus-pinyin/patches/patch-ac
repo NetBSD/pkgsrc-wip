@@ -1,27 +1,8 @@
-$NetBSD: patch-ac,v 1.2 2010/04/11 06:44:21 obache Exp $
+$NetBSD: patch-ac,v 1.3 2010/04/12 02:29:52 obache Exp $
 
 --- configure.orig	2010-04-11 00:28:57.000000000 +0000
 +++ configure
-@@ -16089,6 +16089,18 @@ ac_compiler_gnu=$ac_cv_c_compiler_gnu
- 
- 
- 
-+for ac_func in strnlen
-+do :
-+  ac_fn_c_check_func "$LINENO" "strnlen" "ac_cv_func_strnlen"
-+if test "x$ac_cv_func_strnlen" = x""yes; then :
-+  cat >>confdefs.h <<_ACEOF
-+#define HAVE_STRNLEN 1
-+_ACEOF
-+
-+fi
-+done
-+
-+
- # check ibus
- 
- 
-@@ -16529,38 +16541,346 @@ fi
+@@ -16529,41 +16529,349 @@ fi
  	# Put the nasty error message in config.log where it belongs
  	echo "$UUID_PKG_ERRORS" >&5
  
@@ -388,4 +369,8 @@ $NetBSD: patch-ac,v 1.2 2010/04/11 06:44:21 obache Exp $
 +
  fi
  
- # check uuid
+-# check uuid
++# check sigc
+ 
+ pkg_failed=no
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking for SIGC" >&5

@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2010/04/11 06:44:21 obache Exp $
+$NetBSD: distinfo,v 1.5 2010/04/12 02:29:52 obache Exp $
 
 SHA1 (ibus-pinyin-1.3.2.tar.gz) = 0e1026ee575055f5d999489a7416bc1db89ab7bc
 RMD160 (ibus-pinyin-1.3.2.tar.gz) = 835d864ffed1046a50a895e3dc4ffd8f67d85b6a
@@ -6,8 +6,8 @@ Size (ibus-pinyin-1.3.2.tar.gz) = 1557928 bytes
 SHA1 (pinyin-database-1.2.99.tar.bz2) = e38a148a772e9909facda66b2d579e17b94cccbe
 RMD160 (pinyin-database-1.2.99.tar.bz2) = 1679567f31c20a235577f02175df38e16a05e7de
 Size (pinyin-database-1.2.99.tar.bz2) = 9977983 bytes
-SHA1 (patch-aa) = f7b337971942792662408aaad3bb730c92adad0f
-SHA1 (patch-ab) = 3f0794ab1046649da440fe507f45239a2d3834ba
-SHA1 (patch-ac) = 8d400b89349a296955876dd7b144ffd0e6f36dd6
-SHA1 (patch-ad) = 0b995f68696510fcd304b9cd27f1d6966d708f25
-SHA1 (patch-ae) = f57357f64b77ac1d41b3ea2c2b317efc85e7efdb
+SHA1 (patch-aa) = 61b3b7b03fc900965070e5eb24578a923230abda
+SHA1 (patch-ab) = e3eee81cc5667239b988a9953a2d6070e4a71762
+SHA1 (patch-ac) = fd9929e89fec1535c4dec048cf59c7c48f8b422c
+SHA1 (patch-ad) = acd4d6a1ccf93cb4d4fa12326e49f55f4796e15b
+SHA1 (patch-ae) = 68b585a9faed06d9093366fb8560258a30eeccac

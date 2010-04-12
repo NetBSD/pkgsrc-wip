@@ -1,17 +1,8 @@
-$NetBSD: patch-aa,v 1.1 2010/04/06 11:55:22 obache Exp $
+$NetBSD: patch-aa,v 1.2 2010/04/12 02:29:52 obache Exp $
 
---- config.h.in.orig	2010-04-05 09:27:31.000000000 +0000
+--- config.h.in.orig	2010-04-11 00:29:09.000000000 +0000
 +++ config.h.in
-@@ -42,15 +42,33 @@
- /* Define to 1 if you have the <string.h> header file. */
- #undef HAVE_STRING_H
- 
-+/* Define to 1 if you have the `strnlen' function. */
-+#undef HAVE_STRNLEN
-+
- /* Define to 1 if you have the <sys/stat.h> header file. */
- #undef HAVE_SYS_STAT_H
- 
+@@ -48,9 +48,24 @@
  /* Define to 1 if you have the <sys/types.h> header file. */
  #undef HAVE_SYS_TYPES_H
  
