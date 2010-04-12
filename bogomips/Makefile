@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/04/11 07:36:11 schaecsn Exp $
+# $NetBSD: Makefile,v 1.5 2010/04/12 01:40:50 schaecsn Exp $
 #
 
 DISTNAME=	bogomips-1.4.2
@@ -17,10 +17,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 WRKSRC=	${WRKDIR}/bogomips
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.bogomips
-.if ${MACHINE_ARCH:Mi386} || ${MACHINE_ARCH:Mx86_64}
 PKG_SUPPORTED_OPTIONS=	bogomips-pentium # version for pentium and above
 PKG_SUGGESTED_OPTIONS=	bogomips-pentium # disable for i[34]86
-.endif
 
 
 .include "../../mk/bsd.options.mk"
