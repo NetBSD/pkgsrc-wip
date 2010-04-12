@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/04/12 15:21:47 phonohawk Exp $
+lib/ConfigFile-${PKGVERSION}/${HASKELL_VERSION}/Data/ConfigFile.hi
+lib/ConfigFile-${PKGVERSION}/${HASKELL_VERSION}/Data/ConfigFile.p_hi
+lib/ConfigFile-${PKGVERSION}/${HASKELL_VERSION}/Data/ConfigFile/Lexer.hi
+lib/ConfigFile-${PKGVERSION}/${HASKELL_VERSION}/Data/ConfigFile/Lexer.p_hi
+lib/ConfigFile-${PKGVERSION}/${HASKELL_VERSION}/Data/ConfigFile/Parser.hi
+lib/ConfigFile-${PKGVERSION}/${HASKELL_VERSION}/Data/ConfigFile/Parser.p_hi
+lib/ConfigFile-${PKGVERSION}/${HASKELL_VERSION}/Data/ConfigFile/Types.hi
+lib/ConfigFile-${PKGVERSION}/${HASKELL_VERSION}/Data/ConfigFile/Types.p_hi
+lib/ConfigFile-${PKGVERSION}/${HASKELL_VERSION}/HSConfigFile-${PKGVERSION}.o
+lib/ConfigFile-${PKGVERSION}/${HASKELL_VERSION}/libHSConfigFile-${PKGVERSION}.a
+lib/ConfigFile-${PKGVERSION}/${HASKELL_VERSION}/libHSConfigFile-${PKGVERSION}_p.a
+lib/ConfigFile-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/ConfigFile-${PKGVERSION}/COPYRIGHT
