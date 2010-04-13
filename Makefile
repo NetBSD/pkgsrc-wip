@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3905 2010/04/12 15:22:49 phonohawk Exp $
+# $Id: Makefile,v 1.3906 2010/04/13 16:20:43 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1836,6 +1836,7 @@ SUBDIR+=	py-cabocha
 SUBDIR+=	py-chm
 SUBDIR+=	py-clonedigger
 SUBDIR+=	py-codepy
+SUBDIR+=	py-cogent
 SUBDIR+=	py-configobj
 SUBDIR+=	py-couchdb
 SUBDIR+=	py-coverage
