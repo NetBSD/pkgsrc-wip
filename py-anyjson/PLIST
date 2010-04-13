@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/11/29 21:10:19 jihbed Exp $
-${PYSITELIB}/anyjson-0.2.0-py2.5.egg-info/PKG-INFO
-${PYSITELIB}/anyjson-0.2.0-py2.5.egg-info/SOURCES.txt
-${PYSITELIB}/anyjson-0.2.0-py2.5.egg-info/dependency_links.txt
-${PYSITELIB}/anyjson-0.2.0-py2.5.egg-info/not-zip-safe
-${PYSITELIB}/anyjson-0.2.0-py2.5.egg-info/top_level.txt
-${PYSITELIB}/anyjson.py
-${PYSITELIB}/anyjson.pyc
-${PYSITELIB}/anyjson.pyo
+@comment $NetBSD: PLIST,v 1.2 2010/04/13 13:34:16 jihbed Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/anyjson/__init__.py
+${PYSITELIB}/anyjson/__init__.pyc
+${PYSITELIB}/anyjson/__init__.pyo
