@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2010/01/17 12:03:29 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.14 2010/04/13 17:05:05 emil_s Exp $
 
 DISTNAME=	newsbeuter-2.0
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	news
 MASTER_SITES=	http://www.newsbeuter.org/downloads/
 
 MAINTAINER=	clamiax@gmail.com
-HOMEPAGE=	http://www.newsbeuter.org/downloads/
+HOMEPAGE=	http://www.newsbeuter.org/
 COMMENT=	Open-source RSS/Atom feed reader for text terminals
 
 PKG_DESTDIR_SUPPORT=	user-destdir
