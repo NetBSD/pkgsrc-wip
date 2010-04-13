@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:42 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.3 2010/04/13 19:17:53 emil_s Exp $
 ${EMACS_LISPPREFIX}/haskell-mode/haskell-c.el
 ${EMACS_LISPPREFIX}/haskell-mode/haskell-c.elc
 ${EMACS_LISPPREFIX}/haskell-mode/haskell-cabal.el
@@ -10,13 +10,18 @@ ${EMACS_LISPPREFIX}/haskell-mode/haskell-doc.elc
 ${EMACS_LISPPREFIX}/haskell-mode/haskell-font-lock.el
 ${EMACS_LISPPREFIX}/haskell-mode/haskell-font-lock.elc
 ${EMACS_LISPPREFIX}/haskell-mode/haskell-ghci.el
+${EMACS_LISPPREFIX}/haskell-mode/haskell-ghci.elc
 ${EMACS_LISPPREFIX}/haskell-mode/haskell-hugs.el
+${EMACS_LISPPREFIX}/haskell-mode/haskell-hugs.elc
 ${EMACS_LISPPREFIX}/haskell-mode/haskell-indent.el
 ${EMACS_LISPPREFIX}/haskell-mode/haskell-indent.elc
+${EMACS_LISPPREFIX}/haskell-mode/haskell-indentation.el
+${EMACS_LISPPREFIX}/haskell-mode/haskell-indentation.elc
 ${EMACS_LISPPREFIX}/haskell-mode/haskell-mode.el
 ${EMACS_LISPPREFIX}/haskell-mode/haskell-mode.elc
 ${EMACS_LISPPREFIX}/haskell-mode/haskell-simple-indent.el
 ${EMACS_LISPPREFIX}/haskell-mode/haskell-simple-indent.elc
 ${EMACS_LISPPREFIX}/haskell-mode/haskell-site-file.el
+${EMACS_LISPPREFIX}/haskell-mode/haskell-site-file.elc
 ${EMACS_LISPPREFIX}/haskell-mode/inf-haskell.el
 ${EMACS_LISPPREFIX}/haskell-mode/inf-haskell.elc
