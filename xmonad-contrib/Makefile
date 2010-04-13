@@ -1,44 +1,24 @@
-# $NetBSD: Makefile,v 1.3 2009/08/09 18:20:24 zul_ Exp $
-#
-
+# $NetBSD: Makefile,v 1.4 2010/04/13 19:03:11 emil_s Exp $
 DISTNAME=	xmonad-contrib-${VERSION}
+PKGNAME=	xmonad-contrib-${VERSION}
+VERSION=	0.9.1
 CATEGORIES=	wm
-MASTER_SITES=	http://hackage.haskell.org/packages/archive/xmonad-contrib/${VERSION}/
 
 MAINTAINER=	degroote@NetBSD.org
 HOMEPAGE=	http://xmonad.org/
-COMMENT=	Third party tiling scripts to xmonad
+COMMENT=	Third party extensions for xmonad
 
-USE_LANGUAGES=	c
+LICENSE=	modified-bsd
 
-GHCVERSION_cmd=		${PREFIX}/bin/ghc -V | ${CUT} -d ' ' -f 8
-GHCVERSION=		${GHCVERSION_cmd:sh}
-FILES_SUBST+=		PREFIX=${PREFIX}
-FILES_SUBST+=		GHCVERSION=${GHCVERSION}
-FILES_SUBST+=		PKGVERSION=${VERSION}
-PLIST_SUBST+=		GHCVERSION=${GHCVERSION}
-
-CONFIGURE_ARGS+=	--ghc
-CONFIGURE_ARGS+=	--with-compiler=${PREFIX}/bin/ghc
-CONFIGURE_ARGS+=	--with-hc-pkg=${PREFIX}/bin/ghc-pkg
-CONFIGURE_ARGS+=	--prefix=${PREFIX}
-
-VERSION=		0.8.1
-
-
-do-configure:
-	cd ${WRKSRC} &&	runhaskell -cpp Setup.lhs configure ${CONFIGURE_ARGS}
-
-do-build:
-	cd ${WRKSRC} && runhaskell -cpp Setup.lhs build
-
-do-install:
-	cd ${WRKSRC} && runhaskell -cpp Setup.lhs copy
-
-
-.include "../../wip/hs-x11-extras/buildlink3.mk"
+.include "../../x11/libXft/buildlink3.mk"
+BUILDLINK_API_DEPENDS.hs-x11+=	hs-x11>=1.5.0.0
+BUILDLINK_API_DEPENDS.hs-x11+=	hs-x11<1.6
 .include "../../wip/hs-x11/buildlink3.mk"
+BUILDLINK_API_DEPENDS.hs-x11-xft+=	hs-x11-xft>=0.2
+.include "../../wip/hs-x11-xft/buildlink3.mk"
+.include "../../wip/hs-utf8-string/buildlink3.mk"
+BUILDLINK_API_DEPENDS.xmonad+=	xmonad>=0.9.1
+BUILDLINK_API_DEPENDS.xmonad+=	xmonad<0.10
 .include "../../wip/xmonad/buildlink3.mk"
-.include "../../lang/ghc/buildlink3.mk"
-.include "../../x11/libX11/buildlink3.mk"
+.include "../../wip/mk/haskell.mk"
 .include "../../mk/bsd.pkg.mk"
