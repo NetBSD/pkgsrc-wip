@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3906 2010/04/13 16:20:43 jihbed Exp $
+# $Id: Makefile,v 1.3907 2010/04/13 19:06:13 emil_s Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -858,9 +858,11 @@ SUBDIR+=	hs-time-w3c
 SUBDIR+=	hs-transformers
 SUBDIR+=	hs-uconv
 SUBDIR+=	hs-uniplate
+SUBDIR+=	hs-utf8-string
 SUBDIR+=	hs-utility-ht
 SUBDIR+=	hs-x11
 SUBDIR+=	hs-x11-extras
+SUBDIR+=	hs-x11-xft
 SUBDIR+=	hs-zip-archive
 SUBDIR+=	hs-zlib
 SUBDIR+=	ht2html
