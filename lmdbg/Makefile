@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2010/03/13 17:56:27 cheusov Exp $
+# $NetBSD: Makefile,v 1.16 2010/04/13 18:41:44 cheusov Exp $
 #
 
-DISTNAME=	lmdbg-0.13.0
+DISTNAME=	lmdbg-0.14.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lmdbg/} \
 		http://mova.org/~cheusov/pub/lmdbg/
@@ -18,17 +18,25 @@ DEPENDS+=		pipestatus-[0-9]*:../../devel/pipestatus
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_BSD_MAKEFILE=	yes
-
 MAKE_FLAGS+=		MKCATPAGES=no MKPICINSTALL=no MKPROFILE=no
 
 TEST_TARGET=		test
 
 DOCDIR=			share/doc/lmdbg
 
+DOCFILES=		README NEWS ChangeLog
+
 AUTO_MKDIRS=		yes
 
-DOCFILES=		README NEWS ChangeLog
+do-build:
+	cd ${WRKSRC} && \
+	env ${MAKE_ENV} mkcmake ${BUILD_MAKE_FLAGS} \
+		-f ${MAKE_FILE} all
+
+do-install:
+	cd ${WRKSRC} && \
+	env ${MAKE_ENV} mkcmake ${INSTALL_MAKE_FLAGS} \
+		-f ${MAKE_FILE} install
 
 post-install:
 .for f in ${DOCFILES}
@@ -36,5 +44,3 @@ post-install:
 .endfor
 
 .include "../../mk/bsd.pkg.mk"
-
-MAKE_PROGRAM=		mkcmake
