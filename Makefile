@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3909 2010/04/14 15:12:46 jihbed Exp $
+# $Id: Makefile,v 1.3910 2010/04/14 16:09:27 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1938,6 +1938,7 @@ SUBDIR+=	py-processing
 SUBDIR+=	py-ptrace
 SUBDIR+=	py-pydot
 SUBDIR+=	py-pygr
+SUBDIR+=	py-pyvib2
 SUBDIR+=	py-qt4-qscintilla
 SUBDIR+=	py-rcsparse
 SUBDIR+=	py-rdflib
