@@ -1,0 +1,21 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/04/14 22:03:44 thomasklausner Exp $
+
+--- Makefile.orig	2004-06-18 20:50:08.000000000 +0000
++++ Makefile
+@@ -12,12 +12,12 @@ npoll: ncp
+ 
+ setup: install
+ 
+-PREFIX=/usr/local
++#PREFIX=/usr/local
+ 
+ #DIET=/opt/diet/bin/diet -Os
+-CC=gcc
+-CFLAGS=-pipe -Wall -O -I../libowfat/
+-LDFLAGS=-s -L../libowfat/ -lowfat
++#CC=gcc
++CFLAGS+=-Wall -O
++LDFLAGS+=-lowfat
+ 
+ install:
+ 	install -d $(PREFIX)/bin $(PREFIX)/man/man1

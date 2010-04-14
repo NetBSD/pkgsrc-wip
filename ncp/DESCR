@@ -1,0 +1,10 @@
+npush will now use IPv6 and IPv4 multicast on the multicast groups
+ff02::6e63:7030 (6e63:7030 == 'ncp0') and 224.110.99.112 (110.99.112
+== 'ncp'). If both methods fail, npush will resort to the broadcast
+packets used by previous versions. You can force the broadcast
+method by passing "-b" to npush so that previous npoll versions
+can see the announcements.
+
+"ncp" is a utility for copying files in a LAN. It has absolutely
+no security or integrity checking, no throttling, no features,
+except one: you don't have to type the coordinates of your peer.
