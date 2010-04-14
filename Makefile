@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3907 2010/04/13 19:06:13 emil_s Exp $
+# $Id: Makefile,v 1.3908 2010/04/14 09:34:52 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1942,6 +1942,7 @@ SUBDIR+=	py-qt4-qscintilla
 SUBDIR+=	py-rcsparse
 SUBDIR+=	py-rdflib
 SUBDIR+=	py-remctl
+SUBDIR+=	py-restkit
 SUBDIR+=	py-rlcompleter2
 SUBDIR+=	py-sage
 SUBDIR+=	py-scipy
