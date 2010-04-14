@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3910 2010/04/14 16:09:27 jihbed Exp $
+# $Id: Makefile,v 1.3911 2010/04/14 20:38:52 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1859,6 +1859,7 @@ SUBDIR+=	py-divmod-vertex
 SUBDIR+=	py-django-diario
 SUBDIR+=	py-django-tagging
 SUBDIR+=	py-duali
+SUBDIR+=	py-embedc
 SUBDIR+=	py-eyeD3
 SUBDIR+=	py-eventlet
 SUBDIR+=	py-ezPyCrypto
@@ -1967,15 +1968,19 @@ SUBDIR+=	py-tranquil
 SUBDIR+=	py-twisted
 SUBDIR+=	py-twisted-kqueue
 SUBDIR+=	py-twisted-zopeinterface
+SUBDIR+=	py-van.testing
 SUBDIR+=	py-visionegg
 SUBDIR+=	py-visionegg-contrib
 SUBDIR+=	py-visionegg-demos
 SUBDIR+=	py-visionegg-docs
 SUBDIR+=	py-vtkmodule
+SUBDIR+=	py-wadllib
 SUBDIR+=	py-weave
 SUBDIR+=	py-webob
 SUBDIR+=	py-webkit
 SUBDIR+=	py-willow
+SUBDIR+=	py-wsgi-intercept
+SUBDIR+=	py-wsgiref
 SUBDIR+=	py-workerpool
 SUBDIR+=	py-wxWidgets-unicode
 SUBDIR+=	py-xlrd
@@ -2100,6 +2105,7 @@ SUBDIR+=	sgmltools-lite
 SUBDIR+=	shadow
 SUBDIR+=	shaper
 SUBDIR+=	shed
+SUBDIR+=	shedskin
 SUBDIR+=	shell-fm
 SUBDIR+=	shibboleth2
 SUBDIR+=	shoutcast
