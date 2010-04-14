@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/04/14 09:31:22 jihbed Exp $
+
+SHA1 (restkit-1.2.1.tar.gz) = cdb512e5b81cc465d44ab3c65f030de72b0b3fea
+RMD160 (restkit-1.2.1.tar.gz) = 09a60e610a0789797a3f0dbce78125cd7298d945
+Size (restkit-1.2.1.tar.gz) = 1482418 bytes

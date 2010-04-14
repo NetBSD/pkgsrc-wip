@@ -1,0 +1,3 @@
+Restkit is an HTTP resource kit for Python. It allows you to easily access to
+HTTP resource and build objects around it.
+It's the base of couchdbkit  a Python CouchDB  framework.
