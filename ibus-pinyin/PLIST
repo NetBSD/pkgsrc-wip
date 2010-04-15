@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2010/04/06 11:55:22 obache Exp $
+@comment $NetBSD: PLIST,v 1.3 2010/04/15 11:34:21 obache Exp $
 libexec/ibus-engine-pinyin
 libexec/ibus-setup-pinyin
 share/ibus-pinyin/db/create_index.sql
@@ -12,6 +12,7 @@ share/ibus-pinyin/icons/half.svg
 share/ibus-pinyin/icons/ibus-pinyin.svg
 share/ibus-pinyin/icons/simp-chinese.svg
 share/ibus-pinyin/icons/trad-chinese.svg
+share/ibus-pinyin/phrases.txt
 share/ibus-pinyin/setup/ibus-pinyin-preferences.ui
 share/ibus-pinyin/setup/main.py
 share/ibus-pinyin/setup/main.pyc

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2010/04/11 06:44:21 obache Exp $
+# $NetBSD: Makefile,v 1.8 2010/04/15 11:34:21 obache Exp $
 #
 
-DISTNAME=	ibus-pinyin-1.3.2
+DISTNAME=	ibus-pinyin-1.3.3
 CATEGORIES=	inputmethod chinese
 MASTER_SITES=	http://ibus.googlecode.com/files/
 DISTFILES=	${DEFAULT_DISTFILES} ${DBTAR}
@@ -16,7 +16,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c99 c++
 USE_TOOLS+=		pkg-config gmake intltool msgfmt
 
 # taken from ${WRKSRC}/data/db/open-phrase/Makefile.in
