@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2010/04/15 17:12:57 khorben Exp $
+bin/Init
+etc/AppInterface/Init.interface
+share/examples/rc.d/Init
