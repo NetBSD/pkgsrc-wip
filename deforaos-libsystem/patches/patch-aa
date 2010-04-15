@@ -1,23 +1,15 @@
-$NetBSD: patch-aa,v 1.1 2009/09/06 21:54:31 khorben Exp $
+$NetBSD: patch-aa,v 1.2 2010/04/15 17:52:39 khorben Exp $
 
-gcc prefers "-lssl" to "-l ssl"
-
---- src/Makefile.orig	2009-09-06 14:23:02.000000000 +0200
-+++ src/Makefile
-@@ -20,14 +20,14 @@ all: $(TARGETS)
+--- tools/Makefile.orig	2009-11-26 19:45:44.000000000 +0000
++++ tools/Makefile
+@@ -34,7 +34,10 @@ distclean: clean
+ 	$(RM) $(TARGETS)
  
- libSystem_OBJS = appclient.o appinterface.o appserver.o array.o buffer.o config.o error.o event.o hash.o object.o parser.o plugin.o string.o token.o
- libSystem_CFLAGS = $(CPPFLAGSF) $(CPPFLAGS) $(CFLAGSF) $(CFLAGS)
--libSystem_LDFLAGS = $(LDFLAGSF) $(LDFLAGS) -l ssl
-+libSystem_LDFLAGS = $(LDFLAGSF) $(LDFLAGS) -lssl
+ install: all
++	$(MKDIR) $(DESTDIR)$(BINDIR)
++	$(INSTALL) -m 0755 AppBroker $(DESTDIR)$(BINDIR)/AppBroker
  
- libSystem.a: $(libSystem_OBJS)
- 	$(AR) libSystem.a $(libSystem_OBJS)
- 	$(RANLIB) libSystem.a
+ uninstall:
++	$(RM) $(DESTDIR)$(BINDIR)/AppBroker
  
- libSystem.so: $(libSystem_OBJS)
--	$(LD) -o libSystem.so -Wl,-soname,libSystem.so.0 $(libSystem_OBJS) -l ssl
-+	$(LD) -o libSystem.so -Wl,-soname,libSystem.so.0 $(libSystem_OBJS) -lssl
- 
- appclient.o: appclient.c appinterface.h
- 	$(CC) $(libSystem_CFLAGS) -c appclient.c
+ .PHONY: all clean distclean install uninstall
