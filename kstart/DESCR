@@ -1,7 +1,0 @@
-k5start aquires kerberos credentials and runs a command
-with those credentials. If the kerberos credentials are
-obtained from a keytab k5start can be configured to
-wake up every so often and renew the obtained credentials.
-It can also optionally run a command every time
-credentials are obtained (for example, you could run
-afslog when credentials are obtained).
