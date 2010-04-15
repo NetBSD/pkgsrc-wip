@@ -1,0 +1,64 @@
+During configure:
+
+configure.ac:63: warning: AC_CACHE_VAL(ac_rwlock, ...): suspicious cache-id, must contain _cv_ to be cached
+../../lib/autoconf/general.m4:1998: AC_CACHE_VAL is expanded from...
+../../lib/autoconf/general.m4:2019: AC_CACHE_CHECK is expanded from...
+m4/ac_rwlock.m4:21: AC_RWLOCK is expanded from...
+configure.ac:63: the top level
+configure.ac:63: warning: AC_CACHE_VAL(ac_rwlock, ...): suspicious cache-id, must contain _cv_ to be cached
+../../lib/autoconf/general.m4:1998: AC_CACHE_VAL is expanded from...
+../../lib/autoconf/general.m4:2019: AC_CACHE_CHECK is expanded from...
+m4/ac_rwlock.m4:21: AC_RWLOCK is expanded from...
+configure.ac:63: the top level
+rm: ./ltmain.sh: No such file or directory
+libtoolize: putting auxiliary files in `.'.
+libtoolize: linking file `./ltmain.sh'
+rm: m4/libtool.m4: No such file or directory
+libtoolize: putting macros in `m4'.
+libtoolize: linking file `m4/libtool.m4'
+rm: m4/ltoptions.m4: No such file or directory
+libtoolize: linking file `m4/ltoptions.m4'
+rm: m4/ltsugar.m4: No such file or directory
+libtoolize: linking file `m4/ltsugar.m4'
+rm: m4/ltversion.m4: No such file or directory
+libtoolize: linking file `m4/ltversion.m4'
+rm: m4/lt~obsolete.m4: No such file or directory
+libtoolize: linking file `m4/lt~obsolete.m4'
+libtoolize: Consider adding `AC_CONFIG_MACRO_DIR([m4])' to configure.ac and
+libtoolize: rerunning libtoolize, to keep the correct libtool macros in-tree.
+configure.ac:63: warning: AC_CACHE_VAL(ac_rwlock, ...): suspicious cache-id, must contain _cv_ to be cached
+../../lib/autoconf/general.m4:1998: AC_CACHE_VAL is expanded from...
+../../lib/autoconf/general.m4:2019: AC_CACHE_CHECK is expanded from...
+m4/ac_rwlock.m4:21: AC_RWLOCK is expanded from...
+configure.ac:63: the top level
+configure.ac:63: warning: AC_CACHE_VAL(ac_rwlock, ...): suspicious cache-id, must contain _cv_ to be cached
+../../lib/autoconf/general.m4:1998: AC_CACHE_VAL is expanded from...
+../../lib/autoconf/general.m4:2019: AC_CACHE_CHECK is expanded from...
+m4/ac_rwlock.m4:21: AC_RWLOCK is expanded from...
+configure.ac:63: the top level
+configure.ac:63: warning: AC_CACHE_VAL(ac_rwlock, ...): suspicious cache-id, must contain _cv_ to be cached
+../../lib/autoconf/general.m4:1998: AC_CACHE_VAL is expanded from...
+../../lib/autoconf/general.m4:2019: AC_CACHE_CHECK is expanded from...
+m4/ac_rwlock.m4:21: AC_RWLOCK is expanded from...
+configure.ac:63: the top level
+configure.ac:63: warning: AC_CACHE_VAL(ac_rwlock, ...): suspicious cache-id, must contain _cv_ to be cached
+../../lib/autoconf/general.m4:1998: AC_CACHE_VAL is expanded from...
+../../lib/autoconf/general.m4:2019: AC_CACHE_CHECK is expanded from...
+m4/ac_rwlock.m4:21: AC_RWLOCK is expanded from...
+configure.ac:63: the top level
+configure.ac:21: installing `./config.guess'
+configure.ac:21: installing `./config.sub'
+configure.ac:11: installing `./install-sh'
+configure: WARNING: unrecognized options: --disable-dynamic
+
+Currently fails on build with:
+
+libtool: compile:  c++ -DHAVE_CONFIG_H -I. -I./src -I./src -I/usr/pkg/include -I/usr/pkg/include/freetype2 -I/usr/include -I/usr/pkg/include/python2.5 -I/usr/pkg/include/ncurses -I/usr/pkg/include/mysql -pthread -DNDEBUG -Wall -Wwrite-strings -Woverloaded-virtual -Wno-sign-compare -O2 -I/usr/pkg/include -I/usr/pkg/include/freetype2 -I/usr/include -I/usr/pkg/include/python2.5 -I/usr/pkg/include/ncurses -I/usr/pkg/include/mysql -Wextra -Wall -Wno-unused -Wno-deprecated -c src/template.cc  -fPIC -DPIC -o .libs/libctemplate_wb_la-template.o
+./src/ctemplate/template_string.h:88: error: ISO C++ forbids declaration of 'TemplateId' with no type
+./src/ctemplate/template_string.h: In member function 'size_t ctemplate::TemplateIdHasher::operator()(ctemplate::TemplateId) const':
+./src/ctemplate/template_string.h:234: warning: right shift count >= width of type
+./src/ctemplate/template_string.h: At global scope:
+./src/ctemplate/template_string.h:344: warning: overflow in implicit constant conversion
+src/template.cc: In static member function 'static void ctemplate::Template::AssureGlobalsInitialized()':
+src/template.cc:2365: warning: comparison between signed and unsigned integer expressions
+*** Error code 1
