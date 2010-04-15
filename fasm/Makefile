@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.9 2009/07/15 22:12:44 athaba Exp $
+# $NetBSD: Makefile,v 1.10 2010/04/15 07:10:02 athaba Exp $
 #
 
 DISTNAME=		fasm-1.68
 CATEGORIES=		devel
 MASTER_SITES=		http://flatassembler.net/
 
-MAINTAINER=		athaba@inode.at
+MAINTAINER=		athaba@users.sourceforge.net
 HOMEPAGE=		http://flatassembler.net/
 COMMENT=		Open source assembly language compiler
 

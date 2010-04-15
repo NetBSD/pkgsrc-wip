@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2010/03/12 12:50:18 athaba Exp $
+# $NetBSD: Makefile,v 1.32 2010/04/15 07:10:07 athaba Exp $
 #
 
 DISTNAME=		tor-0.2.2.10-alpha
@@ -6,7 +6,7 @@ PKGNAME=		${DISTNAME:S/-alpha//}
 CATEGORIES=		net security
 MASTER_SITES=		http://www.torproject.org/dist/
 
-MAINTAINER=		athaba@inode.at
+MAINTAINER=		athaba@users.sourceforge.net
 HOMEPAGE=		http://www.torproject.org/
 COMMENT=		Anonymizing overlay network for TCP
 LICENSE=		modified-bsd

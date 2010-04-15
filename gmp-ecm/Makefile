@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/03/25 22:46:03 athaba Exp $
+# $NetBSD: Makefile,v 1.7 2010/04/15 07:10:05 athaba Exp $
 #
 
 PKGNAME=	gmp-${DISTNAME}
@@ -6,9 +6,10 @@ DISTNAME=	ecm-6.2.2
 CATEGORIES=	math
 MASTER_SITES=	http://gforge.inria.fr/frs/download.php/4663/
 
-MAINTAINER=	athaba@inode.at
+MAINTAINER=	athaba@users.sourceforge.net
 HOMEPAGE=	http://ecm.gforge.inria.fr/
 COMMENT=	Elliptic Curve Method for Integer Factorization
+LICENSE=	gnu-gpl-v2
 
 WRKSRC=			${WRKDIR}/ecm-6.2
 GNU_CONFIGURE=		yes

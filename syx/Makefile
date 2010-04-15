@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/08/03 19:38:44 athaba Exp $
+# $NetBSD: Makefile,v 1.2 2010/04/15 07:10:07 athaba Exp $
 #
 
 DISTNAME=	syx-0.1.7
 CATEGORIES=	lang devel
 MASTER_SITES=	http://syx.berlios.de/downloads/
 
-MAINTAINER=	athaba@inode.at
+MAINTAINER=	athaba@users.sourceforge.net
 HOMEPAGE=	http://syx.berlios.de/
 COMMENT=	Free and portable smalltalk implementation
 LICENSE=	mit
