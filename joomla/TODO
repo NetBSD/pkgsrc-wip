@@ -3,3 +3,6 @@ PREFIX/share/joomla/administrator/cache? Most likely these should be
 somewhere in /var (e.g. /var/joomla).
 
 DESTDIR support
+
+Many security issues in available components, check http://secunia.com
+and/or other sources before using any part of joomla.  pkgsrc-security
