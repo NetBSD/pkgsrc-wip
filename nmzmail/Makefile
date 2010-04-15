@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2010/04/12 12:55:50 obache Exp $
+# $NetBSD: Makefile,v 1.8 2010/04/15 16:39:10 othyro Exp $
 #
 
 DISTNAME=	nmzmail-1.1
@@ -14,6 +14,8 @@ LICENSE=	gnu-gpl-v3
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
+
+DEPENDS+=	namazu>=2.0.20:../../textproc/namazu
 
 .include "../../devel/readline/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
