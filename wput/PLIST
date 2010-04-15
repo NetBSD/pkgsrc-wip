@@ -1,3 +1,18 @@
-@comment $NetBSD: PLIST,v 1.2 2010/04/11 08:59:51 obache Exp $
+@comment $NetBSD: PLIST,v 1.3 2010/04/15 20:44:32 othyro Exp $
+bin/wdel
 bin/wput
-man/man1/mput.1
+man/man1/wdel.1
+man/man1/wput.1
+share/locale/da/wput_da.po
+share/locale/de/wput_de.po
+share/locale/el/wput_el.po
+share/locale/es/wput_es.po
+share/locale/fi/wput_fi.po
+share/locale/fr/wput_fr.po
+share/locale/it/wput_it.po
+share/locale/nl/wput_nl.po
+share/locale/pl/wput_pl.po
+share/locale/ru/wput_ru.po
+share/locale/sv/wput_sv.po
+share/locale/tr/wput_tr.po
+share/locale/zh/wput_zh.po
