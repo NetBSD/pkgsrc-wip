@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/04/15 06:32:42 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2010/04/15 21:42:11 othyro Exp $
 #
 
 PKGVERSION=	5.2.18
@@ -23,8 +23,9 @@ SUBST_CLASSES+=		python
 SUBST_STAGE.python=	pre-configure
 SUBST_FILES.python=	configure configure.in
 SUBST_SED.python=	-e "s,python -c,${PYTHONBIN} -c,g"
-SUBST_MESSAGE.python=	Fixing harcoded python binary
+SUBST_MESSAGE.python=	Fixing hardcoded python binary
 
+.include "../../archivers/libzip/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
