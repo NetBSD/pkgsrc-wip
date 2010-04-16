@@ -1,0 +1,4 @@
+security patch needed for:
+http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-0739
+https://bugzilla.redhat.com/show_bug.cgi?id=572941
+https://bugzilla.redhat.com/attachment.cgi?id=401680&action=diff
