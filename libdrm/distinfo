@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.10 2010/04/09 12:52:31 pallegra Exp $
-
-SHA1 (libdrm-2.4.20.tar.bz2) = f1448ac0f1c7a5f74a86d2fb50941fc12dc932db
-RMD160 (libdrm-2.4.20.tar.bz2) = 5581c45abfb9cb2bd0b95d4754d7812bb8323e3a
-Size (libdrm-2.4.20.tar.bz2) = 400812 bytes
