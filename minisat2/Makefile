@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/06/10 15:30:20 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2010/04/16 20:30:19 jihbed Exp $
 #
 
 DISTNAME=	minisat2-070721
@@ -6,7 +6,7 @@ CATEGORIES=	math
 MASTER_SITES=	http://www.cs.sunysb.edu/~algorith/implement/minisat/distrib/
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=	kamel.derouiche@gmail.com
+MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://minisat.se/MiniSat.html
 COMMENT=	Fast and lightweight SAT solver
 #LICENSE=	LICENSE
