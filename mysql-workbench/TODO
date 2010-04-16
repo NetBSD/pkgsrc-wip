@@ -1,35 +1,7 @@
-During configure (I believe it's ext/ctemplate/ctemplate-src/configure.ac):
-
-config.status: executing default-1 commands
-rm: ./ltmain.sh: No such file or directory
-libtoolize: putting auxiliary files in `.'.
-libtoolize: linking file `./ltmain.sh'
-rm: m4/libtool.m4: No such file or directory
-libtoolize: putting macros in `m4'.
-libtoolize: linking file `m4/libtool.m4'
-rm: m4/ltoptions.m4: No such file or directory
-libtoolize: linking file `m4/ltoptions.m4'
-rm: m4/ltsugar.m4: No such file or directory
-libtoolize: linking file `m4/ltsugar.m4'
-rm: m4/ltversion.m4: No such file or directory
-libtoolize: linking file `m4/ltversion.m4'
-rm: m4/lt~obsolete.m4: No such file or directory
-libtoolize: linking file `m4/lt~obsolete.m4'
-libtoolize: Consider adding `AC_CONFIG_MACRO_DIR([m4])' to configure.ac and
-libtoolize: rerunning libtoolize, to keep the correct libtool macros in-tree.
-configure.ac:21: installing `./config.guess'
-configure.ac:21: installing `./config.sub'
-configure.ac:11: installing `./install-sh'
-configure: WARNING: unrecognized options: --disable-dynamic
-
 Currently fails on build with:
 
-Making all in driver
-cd ../../.. && /usr/pkg/bin/bmake  am--refresh
-source='mysql_art_resultset.cpp' object='mysql_art_resultset.lo' libtool=yes  DEPDIR=.deps depmode=none /bin/sh ../../../depcomp  /bin/sh ../../../libtool --tag=CXX    --mode=compile c++ -DHAVE_CONFIG_H -I. -I../../.. -I.. -I/usr/pkg/include/mysql  -DUSE_OLD_FUNCTIONS -I/usr/pkg/include  -I/usr/pkg/include/ncurses   -Dunix -I./nativeapi -DMYSQLCLIENT_STATIC_BINDING=1 -I../cppconn -I../..   -I/usr/pkg/include -I/usr/pkg/include/freetype2 -I/usr/include -I/usr/pkg/include/python2.5 -I/usr/pkg/include/ncurses -I/usr/pkg/include/mysql  -O2 -I/usr/pkg/include -I/usr/pkg/include/freetype2 -I/usr/include -I/usr/pkg/include/python2.5 -I/usr/pkg/include/ncurses -I/usr/pkg/include/mysql -Wextra -Wall -Wno-unused -Wno-deprecated -ggdb3 -DENABLE_DEBUG -c -o mysql_art_resultset.lo mysql_art_resultset.cpp
-/bin/sh: Can't open ../../../depcomp
-*** Error code 2
-
-Stop.
-bmake: stopped in /usr/pkgsrc/wip/mysql-workbench/work/mysql-workbench-oss-5.2.18/ext/cppconn/driver
+libtool: compile:  c++ -DHAVE_CONFIG_H -I. -I../../.. -I../include -I../../../modules/db.mysql.sqlparser/src -I./linux -I/usr/pkgsrc/wip/mysql-workbench/work/.buildlink/include/mysql -DUSE_OLD_FUNCTIONS -I/usr/pkgsrc/wip/mysql-workbench/work/.buildlink/include -I/usr/pkgsrc/wip/mysql-workbench/work/.buildlink/include/ncurses -Dunix -pthread -I/usr/pkgsrc/wip/mysql-workbench/work/.buildlink/include/glib/glib-2.0 -I/usr/pkgsrc/wip/mysql-workbench/work/.buildlink/lib/glib-2.0/include -I/usr/pkgsrc/wip/mysql-workbench/work/.buildlink/include/libxml2 -I/usr/pkgsrc/wip/mysql-workbench/work/.buildlink/include/freetype2 -I/usr/pkgsrc/wip/mysql-workbench/work/.buildlink/include/python2.5 -O2 -Wextra -Wall -Wno-unused -Wno-deprecated -Wno-unknown-pragmas -O2 -Wextra -Wall -Wno-unused -Wno-deprecated -c myx_lex_helpers.cpp  -fPIC -DPIC -o .libs/myx_lex_helpers.o
+../include/myx_sql_tree_item.h:88: error: 'va_list' has not been declared
+../include/myx_sql_tree_item.h:89: error: 'va_list' has not been declared
+../include/myx_sql_tree_item.h:116: error: 'va_list' has not been declared
 *** Error code 1
