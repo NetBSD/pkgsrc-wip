@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1 2010/04/15 21:26:41 othyro Exp $
+$NetBSD: patch-ab,v 1.2 2010/04/16 22:34:19 othyro Exp $
 
 --- ext/ctemplate/ctemplate-src/configure.ac.orig	2010-04-13 03:42:08.000000000 +0000
 +++ ext/ctemplate/ctemplate-src/configure.ac
@@ -23,3 +23,9 @@ $NetBSD: patch-ab,v 1.1 2010/04/15 21:26:41 othyro Exp $
     AC_SUBST(ac_cv_uint64, unsigned __int64)
  else
     AC_SUBST(ac_cv_uint64, unsigned long long)   # best we can do
+@@ -133,3 +133,5 @@ AC_CONFIG_FILES([Makefile \
+                  src/ctemplate/template_dictionary_interface.h \
+ 		 ])
+ AC_OUTPUT
++
++AC_CONFIG_MACRO_DIR([m4])
