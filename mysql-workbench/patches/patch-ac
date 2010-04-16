@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2010/04/16 00:17:48 othyro Exp $
+
+--- ext/ctemplate/ctemplate-src/m4/ac_rwlock.m4.orig	2010-04-13 03:42:08.000000000 +0000
++++ ext/ctemplate/ctemplate-src/m4/ac_rwlock.m4
+@@ -20,7 +20,7 @@
+ 
+ AC_DEFUN([AC_RWLOCK],
+ [AC_CACHE_CHECK(support for pthread_rwlock_* functions,
+-ac_rwlock,
++ac_cv_rwlock,
+ [AC_LANG_SAVE
+  AC_LANG_C
+  AC_TRY_COMPILE([#define _XOPEN_SOURCE 500
