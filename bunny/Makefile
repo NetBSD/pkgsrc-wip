@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/06/17 23:36:20 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2010/04/16 20:51:46 jihbed Exp $
 #
 
 DISTNAME=	bunny-0.93
@@ -6,7 +6,7 @@ CATEGORIES=	security
 MASTER_SITES=	http://bunny-the-fuzzer.googlecode.com/files/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	kamel.derouiche@gmail.com
+MAINTAINER=	pkgsrc-users@netbsd.org
 HOMEPAGE=	http://code.google.com/p/bunny-the-fuzzer/
 COMMENT=	Tools with C code security fuzzer
 LICENSE=	apache-2.0
