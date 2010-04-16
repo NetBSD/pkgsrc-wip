@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2009/04/18 14:28:42 jihbed Exp $
+$NetBSD: distinfo,v 1.3 2010/04/16 20:10:32 jihbed Exp $
 
-SHA1 (configobj-4.6.0.zip) = b6f2863c67c461702188f3eae0d57fa7dc4ceac6
-RMD160 (configobj-4.6.0.zip) = d2b102a6642237ef3780c5efc9de48356ed472fc
-Size (configobj-4.6.0.zip) = 169617 bytes
+SHA1 (configobj-4.7.2.tar.gz) = e5813f2d2fddf62174e5c52c734686f7be8f82e2
+RMD160 (configobj-4.7.2.tar.gz) = 6161aee073ca06395db7f71d9e1d4b94d0c66095
+Size (configobj-4.7.2.tar.gz) = 32318 bytes
