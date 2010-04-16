@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2010/04/13 18:07:56 emil_s Exp $
+# $NetBSD: Makefile,v 1.10 2010/04/16 22:19:59 emil_s Exp $
 DISTNAME=	xmonad-${VERSION}
 PKGNAME=	xmonad-${VERSION}
 VERSION=	0.9.1
 CATEGORIES=	wm
 
-MAINTAINER=	esg@sdf.org
+MAINTAINER=	esg@sdf.lonestar.org
 HOMEPAGE=	http://xmonad.org/
 COMMENT=	Tiling window manager
 

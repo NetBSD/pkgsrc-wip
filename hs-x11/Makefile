@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2010/04/13 17:58:46 emil_s Exp $
+# $NetBSD: Makefile,v 1.8 2010/04/16 22:19:58 emil_s Exp $
 DISTNAME=	X11-${VERSION}
 PKGNAME=	hs-x11-${VERSION}
 VERSION=	1.5.0.0
 CATEGORIES=	devel
 
-MAINTAINER=	esg@sdf.org
+MAINTAINER=	esg@sdf.lonestar.org
 HOMEPAGE=	http://code.haskell.org/X11
 COMMENT=	Haskell binding to the X11 graphics library
 
