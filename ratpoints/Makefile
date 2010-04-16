@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/03/19 20:59:33 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2010/04/16 18:48:19 jihbed Exp $
 #
 
 DISTNAME=		ratpoints-2.1.3
 CATEGORIES=		math
 MASTER_SITES=	http://www.mathe2.uni-bayreuth.de/stoll/programs/
 
-MAINTAINER=	kamel.derouiche@gmail.com
+MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://www.mathe2.uni-bayreuth.de/stoll/programs/index.html
-COMMENT=	TODO: Short description of the package
+COMMENT=		Optimized quadratic sieve algorithm
 LICENSE=		gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
