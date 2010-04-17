@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3918 2010/04/17 12:09:21 obache Exp $
+# $Id: Makefile,v 1.3919 2010/04/17 12:16:48 obache Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1689,7 +1689,6 @@ SUBDIR+=	pdq
 SUBDIR+=	pear-DB_DataObject
 SUBDIR+=	pear-HTTP_Client
 SUBDIR+=	pear-HTTP_Request2
-SUBDIR+=	pear-Net_LDAP2
 SUBDIR+=	pear-Net_URL2
 SUBDIR+=	pear-XML_Parser
 SUBDIR+=	pfe
