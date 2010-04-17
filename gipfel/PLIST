@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.5 2009/10/11 10:44:39 thomasklausner Exp $
-bin/gipfel
-share/doc/gipfel/NEWS
-share/doc/gipfel/README
-share/gipfel/gipfel.dat
