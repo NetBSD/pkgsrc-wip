@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2010/04/17 11:47:26 khorben Exp $
+$NetBSD: distinfo,v 1.2 2010/04/17 13:51:58 khorben Exp $
 
 SHA1 (xbmc-9.11.tar.gz) = 71956ed8630d46662e49de9d96304308078f10b5
 RMD160 (xbmc-9.11.tar.gz) = 0d0890ba373e05af95a66360aed8871b384849f2
 Size (xbmc-9.11.tar.gz) = 141420517 bytes
-SHA1 (patch-aa) = 6901c7c3d99b4532591f5faad19765e6e391cb92
+SHA1 (patch-aa) = f764f1cb258295e61edd6d1eca21b92e27b719b5

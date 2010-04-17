@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2010/04/17 11:47:26 khorben Exp $
+# $NetBSD: Makefile,v 1.2 2010/04/17 13:51:58 khorben Exp $
 #
 
 DISTNAME=	xbmc-9.11
@@ -33,6 +33,9 @@ SUBST_SED.fix-interpreter=	-e 's,^/bin/sh,${TOOLS_PATH.bash},'
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--enable-external-libraries
+
+LDFLAGS+=	-L ${BUILDLINK_PREFIX.samba}/lib/samba
+LDFLAGS+=	-Wl,-rpath,${BUILDLINK_PREFIX.samba}/lib/samba
 
 PKGCONFIG_OVERRIDE+=	xbmc/cores/dvdplayer/Codecs/libdvd/libdvdread/misc/dvdread.pc.in
 PKGCONFIG_OVERRIDE+=	xbmc/cores/dvdplayer/Codecs/libdvd/libdvdcss/src/libdvdcss.pc.in
@@ -87,4 +90,22 @@ pre-configure:
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../audio/faad2/buildlink3.mk"
 .include "../../net/samba/buildlink3.mk"
+.include "../../audio/SDL_mixer/buildlink3.mk"
+.include "../../graphics/SDL_image/buildlink3.mk"
+.include "../../graphics/jasper/buildlink3.mk"
+.include "../../graphics/tiff/buildlink3.mk"
+.include "../../audio/alsa-lib/buildlink3.mk"
+.include "../../textproc/enca/buildlink3.mk"
+.include "../../x11/libXtst/buildlink3.mk"
+.include "../../x11/libXmu/buildlink3.mk"
+.include "../../x11/libXinerama/buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
+.include "../../sysutils/dbus/buildlink3.mk"
+.include "../../sysutils/hal/buildlink3.mk"
+.include "../../multimedia/ffmpeg/buildlink3.mk"
+.include "../../audio/liba52/buildlink3.mk"
+.include "../../audio/libdca/buildlink3.mk"
+.include "../../multimedia/libmpeg2/buildlink3.mk"
+.include "../../audio/wavpack/buildlink3.mk"
+.include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
