@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.1 2010/04/17 11:47:26 khorben Exp $
+
+--- configure.in.orig	2009-12-17 02:39:13.000000000 +0000
++++ configure.in
+@@ -72,6 +72,12 @@ case $host in
+     x86_64-*-linux-gnu*)
+        ARCH="x86_64-linux"
+        ;;
++    i*86*-*-netbsd*)
++       ARCH="i386-netbsd"
++       ;;
++    x86_64-*-netbsd*)
++       ARCH="x86_64-netbsd"
++       ;;
+     i386-apple-darwin*)
+        ARCH="x86-osx"
+        AC_SUBST(ARCH_DEFINES, "-mmacosx-version-min=10.4 -isysroot /Developer/SDKs/MacOSX10.4u.sdk")
