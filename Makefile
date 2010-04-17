@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3916 2010/04/16 14:33:27 tnn2 Exp $
+# $Id: Makefile,v 1.3917 2010/04/17 11:56:01 obache Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1726,7 +1726,6 @@ SUBDIR+=	php-recode
 SUBDIR+=	php-suhosin
 SUBDIR+=	php-tclink
 SUBDIR+=	php-tidy
-SUBDIR+=	php-uploadprogress
 SUBDIR+=	php-xcache
 SUBDIR+=	picasm
 SUBDIR+=	picocom
