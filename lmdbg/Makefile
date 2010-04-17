@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2010/04/13 18:41:44 cheusov Exp $
+# $NetBSD: Makefile,v 1.17 2010/04/17 20:30:05 cheusov Exp $
 #
 
 DISTNAME=	lmdbg-0.14.0
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lmdbg/} \
 
 MAINTAINER=	cheusov@tut.by
 HOMEPAGE=	http://sourceforge.net/projects/lmdbg/
-COMMENT=	Lightweight Malloc Debugger
+COMMENT=	Lightweight Modular malloc Debugger
 
 LICENSE=		mit
 
