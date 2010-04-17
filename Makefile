@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3917 2010/04/17 11:56:01 obache Exp $
+# $Id: Makefile,v 1.3918 2010/04/17 12:09:21 obache Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2218,7 +2218,6 @@ SUBDIR+=	tac_plus-libradius
 SUBDIR+=	tacacs-shrubbery
 SUBDIR+=	taglib-sharp
 SUBDIR+=	tagtool
-SUBDIR+=	takao-fonts-ttf
 SUBDIR+=	talksoup
 SUBDIR+=	tardy
 SUBDIR+=	task
