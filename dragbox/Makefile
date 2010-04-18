@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2009/06/20 00:14:49 jihbed Exp $
+# $NetBSD: Makefile,v 1.6 2010/04/18 14:12:58 jihbed Exp $
 #
 
 DISTNAME=	dragbox-0.4.0
-CATEGORIES=	misc gnome
+CATEGORIES=	x11 gnome
 MASTER_SITES=	http://kaizer.se/publicfiles/dragbox/
 
-MAINTAINER=	kamelderouiche@yahoo.com
+MAINTAINER=	pkgsrc.gnome@gmail.com
 HOMEPAGE=	http://users.student.lth.se/f04us/wiki/dragbox/
 COMMENT=	Command line drag-and-drop tool for GNOME
 LICENSE=	gnu-gpl-v2
