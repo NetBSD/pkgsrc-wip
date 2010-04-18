@@ -1,20 +1,18 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/02/20 22:45:31 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2010/04/18 14:09:52 jihbed Exp $
 #
 
-DISTNAME=	prayertime-2.0.tar
-PKGNAME=	${PYPKGPREFIX}-prayertime-2.0
+DISTNAME=	prayertime-2.2
+PKGNAME=	${PYPKGPREFIX}-m${DISTNAME}
 CATEGORIES=	time python
 MASTER_SITES=	http://pypi.python.org/packages/source/p/prayertime/
-EXTRACT_SUFX=	.gz#md5=f303672a5b8122493e91874aa3f8372e
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://bitbucket.org/xmonader/pyprayertime/
 COMMENT=	Prayertime algorithm implementation in python
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=		gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-WRKSRC=		${WRKDIR}/prayertime-2.0
 USE_LANGUAGES=	# none
 
 PYDISTUTILSPKG= yes
