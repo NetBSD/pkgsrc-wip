@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/03/22 00:53:19 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2010/04/18 12:37:40 jihbed Exp $
 #
 
-DISTNAME=	python-distutils-extra-2.15
-PKGNAME=	${PYPKGPREFIX}-distutils-extra-2.15
+DISTNAME=	dist-python-distutils-extra-2.18
+EGG_NAME=	python_distutils_extra-2.18
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/dist-python-//}
 CATEGORIES=	devel python
-MASTER_SITES=	http://launchpad.net/python-distutils-extra/trunk/2.15/+download/
+MASTER_SITES=	http://launchpad.net/python-distutils-extra/trunk/2.18/+download/
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://launchpad.net/python-distutils-extra
@@ -13,6 +14,7 @@ LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+WRKSRC=		${WRKDIR}/python-distutils-extra-2.18
 USE_LANGUAGES=	# none
 
 do-test:
