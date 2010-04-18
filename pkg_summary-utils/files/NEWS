@@ -1,4 +1,15 @@
 ----------------------------------------------------------------------
+Version 0.37.2, by Aleksey Cheusov, Sun, 18 Apr 2010 23:16:22 +0300
+
+ FIX: The following command no longer hangs up (infinite loop)
+    pkg_src_summary -G -A graphics/py-cairo:PYTHON_VERSION_REQD=25
+
+ Regression tests correspond to latest pkgsrc sources
+
+----------------------------------------------------------------------
+Version 0.37.1, by Aleksey Cheusov, ?
+
+----------------------------------------------------------------------
 Version 0.37.0, by Aleksey Cheusov, Sat, 27 Mar 2010 01:01:03 +0200
 
  pkg_lint_summary:

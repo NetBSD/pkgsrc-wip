@@ -660,7 +660,10 @@ while test -n "${with_dep}${with_bdep}"; do
     pkg_uniq_summary "$partial_summary_fn" > "$partial_summary_fn".tmp
     mv "$partial_summary_fn".tmp "$partial_summary_fn"
 
-    get_processed_pkgs "$deps1_needed_fn" >> "$processed_pkgs_fn"
+    get_processed_pkgs "$deps1_all_fn" >> "$processed_pkgs_fn"
+    cat "$extra_deps_fn" >> "$processed_pkgs_fn"
+    sort -u "$processed_pkgs_fn" > "$processed_pkgs_fn".tmp
+    mv "$processed_pkgs_fn".tmp "$processed_pkgs_fn"
 done
 
 remove_internal_fields (){
