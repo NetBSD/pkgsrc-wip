@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.1.1.1 2010/04/18 05:52:18 schaecsn Exp $
+$NetBSD: patch-ab,v 1.2 2010/04/18 19:22:45 schaecsn Exp $
 
-Patch as found in FreeBSD, Ubuntu and other Linux distributions.
+Debian's security patch (also used in FreeBSD).
 
 --- main.c.orig	2004-01-09 02:17:38.000000000 -0800
 +++ main.c	2010-04-17 21:56:04.000000000 -0700

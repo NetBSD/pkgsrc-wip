@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/04/18 05:52:18 schaecsn Exp $
+# $NetBSD: Makefile,v 1.2 2010/04/18 19:22:45 schaecsn Exp $
 #
 
 DISTNAME=	pstotext-1.9
@@ -15,9 +15,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CONFIGURE=   yes
 USE_TOOLS+=     gs:run
-
-BUILD_MAKE_FLAGS+=	CFLAGS=-O # force -0: miscompiles on newer versions
-                                  # of gcc and higher optimization levels
 
 INSTALLATION_DIRS=      bin ${PKGMANDIR}/man1
 
