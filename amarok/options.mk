@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2010/02/16 09:41:59 thomasklausner Exp $
+# $NetBSD: options.mk,v 1.7 2010/04/18 15:34:39 thomasklausner Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.amarok
 PKG_SUPPORTED_OPTIONS=	libgpod libmp4v2 libmtp libvisual mp3tunes
