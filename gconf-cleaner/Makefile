@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2009/08/02 22:54:16 jihbed Exp $
+# $NetBSD: Makefile,v 1.4 2010/04/18 13:06:38 jihbed Exp $
 #
 
 DISTNAME=	gconf-cleaner-0.0.3
 CATEGORIES=	sysutils
 MASTER_SITES=	http://gconf-cleaner.googlecode.com/files/
 
-MAINTAINER=	kamelderouiche@yahoo.com
+MAINTAINER=	pkgsrc-users@netbsd.org
 HOMEPAGE=	http://code.google.com/p/gconf-cleaner/
 COMMENT=	Cleaning tool for GConf
 
