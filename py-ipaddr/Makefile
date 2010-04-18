@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2009/12/17 18:16:09 bubuchka Exp $
+# $NetBSD: Makefile,v 1.3 2010/04/18 12:44:34 jihbed Exp $
 #
 
-DISTNAME=	ipaddr-2.0.0
+DISTNAME=	ipaddr-2.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net python
 MASTER_SITES=	http://ipaddr-py.googlecode.com/files/
@@ -13,8 +13,13 @@ LICENSE=	apache-2.0
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+USE_LANGUAGES=	# none
+
 PYDISTUTILSPKG=		yes
 PYTHON_VERSIONS_ACCEPTED= 26 25 24	# XXX - 30 also requires it
+
+do-test:
+	( cd ${WRKSRC && ${PYTHONBIN} ipadrr_test.py )
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,2 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/12/17 13:23:00 bubuchka Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/04/18 12:44:34 jihbed Exp $
 ${PYSITELIB}/ipaddr.py
+${PYSITELIB}/ipaddr.pyc
+${PYSITELIB}/ipaddr.pyo
