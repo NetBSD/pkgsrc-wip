@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/06/17 23:42:49 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2010/04/18 14:30:16 jihbed Exp $
 #
 
 DISTNAME=	probe-1.30-linux6
@@ -6,10 +6,9 @@ PKGNAME=	${DISTNAME:S/-linux6//}
 CATEGORIES=	devel
 MASTER_SITES=	http://www.fsel.com/download/
 
-MAINTAINER=	kamel.derouiche@gmail.com
+MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://www.fsel.com/software.html
 COMMENT=	ProBE is an animator for CSP processes
-LICENSE=	LICENSE
 
 EMUL_PLATFORMS=		linux-i386
 EMUL_MODULES.linux=	base x11
