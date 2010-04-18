@@ -1,3 +1,4 @@
-$Id: TODO,v 1.1.1.1 2004/06/25 23:20:19 xtraeme Exp $
+$Id: TODO,v 1.2 2010/04/18 15:59:48 tezdog Exp $
 
 	o Doesn't seem to work under NetBSD 2.0...
+	o May be vulnerable to CVE-2010-1146 fix before import to pkgsrc
