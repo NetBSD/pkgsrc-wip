@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/06/17 23:41:41 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2010/04/18 15:57:20 jihbed Exp $
 #
 
 DISTNAME=	checker-beta4.linux6
@@ -6,10 +6,10 @@ PKGNAME=	cspchecker-4
 CATEGORIES=	devel
 MASTER_SITES=	http://www.fsel.com/download/
 
-MAINTAINER=	kamel.derouiche@gmail.com
+MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://www.fsel.com/software.html
 COMMENT=	CSP code type hecker
-LICENSE=	LICENSE
+#LICENSE=	LICENSE
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
