@@ -1,14 +1,14 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:11 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.3 2010/04/19 13:24:34 jihbed Exp $
 bin/epylint
 bin/pylint
 bin/pylint-gui
 bin/pyreverse
 bin/symilar
-${PYSITELIB}/pylint-0.18.0-py2.5.egg-info/PKG-INFO
-${PYSITELIB}/pylint-0.18.0-py2.5.egg-info/SOURCES.txt
-${PYSITELIB}/pylint-0.18.0-py2.5.egg-info/dependency_links.txt
-${PYSITELIB}/pylint-0.18.0-py2.5.egg-info/requires.txt
-${PYSITELIB}/pylint-0.18.0-py2.5.egg-info/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/pylint/__init__.py
 ${PYSITELIB}/pylint/__init__.pyc
 ${PYSITELIB}/pylint/__init__.pyo
@@ -36,6 +36,9 @@ ${PYSITELIB}/pylint/checkers/format.pyo
 ${PYSITELIB}/pylint/checkers/imports.py
 ${PYSITELIB}/pylint/checkers/imports.pyc
 ${PYSITELIB}/pylint/checkers/imports.pyo
+${PYSITELIB}/pylint/checkers/logging.py
+${PYSITELIB}/pylint/checkers/logging.pyc
+${PYSITELIB}/pylint/checkers/logging.pyo
 ${PYSITELIB}/pylint/checkers/misc.py
 ${PYSITELIB}/pylint/checkers/misc.pyc
 ${PYSITELIB}/pylint/checkers/misc.pyo
@@ -48,6 +51,9 @@ ${PYSITELIB}/pylint/checkers/raw_metrics.pyo
 ${PYSITELIB}/pylint/checkers/similar.py
 ${PYSITELIB}/pylint/checkers/similar.pyc
 ${PYSITELIB}/pylint/checkers/similar.pyo
+${PYSITELIB}/pylint/checkers/string_format.py
+${PYSITELIB}/pylint/checkers/string_format.pyc
+${PYSITELIB}/pylint/checkers/string_format.pyo
 ${PYSITELIB}/pylint/checkers/typecheck.py
 ${PYSITELIB}/pylint/checkers/typecheck.pyc
 ${PYSITELIB}/pylint/checkers/typecheck.pyo
@@ -102,3 +108,11 @@ ${PYSITELIB}/pylint/reporters/text.pyo
 ${PYSITELIB}/pylint/utils.py
 ${PYSITELIB}/pylint/utils.pyc
 ${PYSITELIB}/pylint/utils.pyo
+man/man1/pylint.1
+man/man1/pyreverse.1
+share/doc/py-logilab-lint/FAQ.txt
+share/doc/py-logilab-lint/beginner_pylint_tutorial.txt
+share/doc/py-logilab-lint/features.txt
+share/doc/py-logilab-lint/flymake.txt
+share/doc/py-logilab-lint/manual.txt
+share/doc/py-logilab-lint/quickstart.txt
