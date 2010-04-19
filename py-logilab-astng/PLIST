@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:11 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.3 2010/04/19 13:50:48 jihbed Exp $
 ${PYSITELIB}/logilab/__init__.py
 ${PYSITELIB}/logilab/astng/__init__.py
 ${PYSITELIB}/logilab/astng/__init__.pyc
@@ -15,24 +15,27 @@ ${PYSITELIB}/logilab/astng/_nodes_ast.pyo
 ${PYSITELIB}/logilab/astng/_nodes_compiler.py
 ${PYSITELIB}/logilab/astng/_nodes_compiler.pyc
 ${PYSITELIB}/logilab/astng/_nodes_compiler.pyo
+${PYSITELIB}/logilab/astng/bases.py
+${PYSITELIB}/logilab/astng/bases.pyc
+${PYSITELIB}/logilab/astng/bases.pyo
 ${PYSITELIB}/logilab/astng/builder.py
 ${PYSITELIB}/logilab/astng/builder.pyc
 ${PYSITELIB}/logilab/astng/builder.pyo
 ${PYSITELIB}/logilab/astng/inference.py
 ${PYSITELIB}/logilab/astng/inference.pyc
 ${PYSITELIB}/logilab/astng/inference.pyo
-${PYSITELIB}/logilab/astng/infutils.py
-${PYSITELIB}/logilab/astng/infutils.pyc
-${PYSITELIB}/logilab/astng/infutils.pyo
 ${PYSITELIB}/logilab/astng/inspector.py
 ${PYSITELIB}/logilab/astng/inspector.pyc
 ${PYSITELIB}/logilab/astng/inspector.pyo
-${PYSITELIB}/logilab/astng/lookup.py
-${PYSITELIB}/logilab/astng/lookup.pyc
-${PYSITELIB}/logilab/astng/lookup.pyo
 ${PYSITELIB}/logilab/astng/manager.py
 ${PYSITELIB}/logilab/astng/manager.pyc
 ${PYSITELIB}/logilab/astng/manager.pyo
+${PYSITELIB}/logilab/astng/mixins.py
+${PYSITELIB}/logilab/astng/mixins.pyc
+${PYSITELIB}/logilab/astng/mixins.pyo
+${PYSITELIB}/logilab/astng/node_classes.py
+${PYSITELIB}/logilab/astng/node_classes.pyc
+${PYSITELIB}/logilab/astng/node_classes.pyo
 ${PYSITELIB}/logilab/astng/nodes.py
 ${PYSITELIB}/logilab/astng/nodes.pyc
 ${PYSITELIB}/logilab/astng/nodes.pyo
@@ -107,6 +110,7 @@ ${PYSITELIB}/logilab/astng/test/data2/suppliermodule_test.pyo
 ${PYSITELIB}/logilab/astng/test/regrtest.py
 ${PYSITELIB}/logilab/astng/test/regrtest.pyc
 ${PYSITELIB}/logilab/astng/test/regrtest.pyo
+${PYSITELIB}/logilab/astng/test/regrtest_data/absimport.py
 ${PYSITELIB}/logilab/astng/test/regrtest_data/descriptor_crash.py
 ${PYSITELIB}/logilab/astng/test/regrtest_data/import_package_subpackage_module.py
 ${PYSITELIB}/logilab/astng/test/regrtest_data/package/__init__.py
@@ -139,10 +143,10 @@ ${PYSITELIB}/logilab/astng/test/unittest_utils.pyo
 ${PYSITELIB}/logilab/astng/utils.py
 ${PYSITELIB}/logilab/astng/utils.pyc
 ${PYSITELIB}/logilab/astng/utils.pyo
-${PYSITELIB}/logilab_astng-0.19.0-py2.5-nspkg.pth
-${PYSITELIB}/logilab_astng-0.19.0-py2.5.egg-info/PKG-INFO
-${PYSITELIB}/logilab_astng-0.19.0-py2.5.egg-info/SOURCES.txt
-${PYSITELIB}/logilab_astng-0.19.0-py2.5.egg-info/dependency_links.txt
-${PYSITELIB}/logilab_astng-0.19.0-py2.5.egg-info/namespace_packages.txt
-${PYSITELIB}/logilab_astng-0.19.0-py2.5.egg-info/requires.txt
-${PYSITELIB}/logilab_astng-0.19.0-py2.5.egg-info/top_level.txt
+${PYSITELIB}/${EGG_NAME}-nspkg.pth
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/namespace_packages.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt

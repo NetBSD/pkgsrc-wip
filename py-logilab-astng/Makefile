@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/06/17 23:28:15 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2010/04/19 13:50:48 jihbed Exp $
 #
 
-DISTNAME=	logilab-astng-0.19.0
+DISTNAME=	logilab-astng-0.20.0
+EGG_NAME=	logilab_astng-0.20.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	http://ftp.logilab.org/pub/astng/
