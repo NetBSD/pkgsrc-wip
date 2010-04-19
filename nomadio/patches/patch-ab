@@ -1,0 +1,64 @@
+$NetBSD: patch-ab,v 1.1 2010/04/19 00:27:41 othyro Exp $
+
+--- nomadio.c.orig	2002-05-28 03:46:11.000000000 +0000
++++ nomadio.c
+@@ -229,7 +229,7 @@ main(argc, argv)
+ 
+ 	if (setowner) {
+ 		/* set owner string */
+-		u_char buf[64];
++		char buf[64];
+ 
+ 		if (strlen(setowner) >= sizeof(buf))
+ 			errx(1, "owner string is too long");
+@@ -585,7 +585,7 @@ void
+ nomad_format(bank)
+ 	int bank;
+ {
+-	u_char buf[4];
++	char buf[4];
+ 
+ 	printf("Formatting %s memory card (yes/no): ",
+ 	    bank? "external" : "internal");
+@@ -605,7 +605,7 @@ void
+ nomad_delete(n, i)
+ 	int n, i;
+ {
+-	u_char buf[12];
++	char buf[12];
+ 
+ 	/* get size and "short" name */
+ 	nomad_lsfile(n, i, NULL, buf, NULL);
+@@ -623,7 +623,7 @@ nomad_download(n, i)
+ 	int n, i;
+ {
+ 	char name[256];
+-	u_char buf[NOMAD_BLKSIZE];
++	char buf[NOMAD_BLKSIZE];
+ 	u_long size, off;
+ 	int fd, len;
+ 
+@@ -680,7 +680,7 @@ nomad_upload(n, i, name)
+ 	int n, i;
+ {
+ 	struct stat sb;
+-	u_char buf[NOMAD_BLKSIZE], buf2[16], *p;
++	char buf[NOMAD_BLKSIZE], buf2[16], *p;
+ 	const char *q;
+ 	u_long size;
+ 	u_int freemem;
+@@ -717,9 +717,11 @@ nomad_upload(n, i, name)
+ 		p = "MP3";
+ 	else {
+ 		p++;
+-		p[0] = toupper(p[0]);
+-		p[1] = toupper(p[1]);
+-		p[2] = toupper(p[2]);
++		*p = toupper((u_char) *p);
++                p++;
++                *p = toupper((u_char) *p);
++                p++;
++                *p = toupper((u_char) *p);
+ 	}
+ 	sprintf(buf + 12, "IO%02d~%03d%s", n, i, p);
+ 	q = strrchr(name, '/');
