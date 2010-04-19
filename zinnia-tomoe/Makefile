@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/01/13 11:16:50 obache Exp $
+# $NetBSD: Makefile,v 1.2 2010/04/19 11:57:21 obache Exp $
 #
 
 DISTNAME=	zinnia-tomoe-0.6.0-20080911
@@ -24,5 +24,4 @@ FIND_PREFIX:=	ZINNIA_DIR=zinnia
 
 CONFIGURE_ARGS+=	--with-zinnia-convert=${ZINNIA_DIR}/bin/zinnia_convert
 
-.include "../../wip/zinnia/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
