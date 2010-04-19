@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2010/04/19 11:57:21 obache Exp $
+# $NetBSD: Makefile,v 1.3 2010/04/19 12:03:43 obache Exp $
 #
 
 DISTNAME=	zinnia-tomoe-0.6.0-20080911
 PKGNAME=	zinnia-tomoe-0.6.0.20080911
 CATEGORIES=	wip
-MASTER_SITES=	http://downloads.sourceforge.net/project/zinnia/zinnia-tomoe/0.6.0-20080911/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=zinnia/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	obache@NetBSD.org
