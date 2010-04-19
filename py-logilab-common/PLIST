@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/08/20 00:29:14 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.4 2010/04/19 09:43:39 jihbed Exp $
 bin/pytest
 ${PYSITELIB}/logilab/__init__.py
 ${PYSITELIB}/logilab/common/__init__.py
@@ -61,6 +61,9 @@ ${PYSITELIB}/logilab/common/fileutils.pyo
 ${PYSITELIB}/logilab/common/graph.py
 ${PYSITELIB}/logilab/common/graph.pyc
 ${PYSITELIB}/logilab/common/graph.pyo
+${PYSITELIB}/logilab/common/html.py
+${PYSITELIB}/logilab/common/html.pyc
+${PYSITELIB}/logilab/common/html.pyo
 ${PYSITELIB}/logilab/common/interface.py
 ${PYSITELIB}/logilab/common/interface.pyc
 ${PYSITELIB}/logilab/common/interface.pyo
@@ -182,9 +185,6 @@ ${PYSITELIB}/logilab/common/test/data/write_protected_file.txt
 ${PYSITELIB}/logilab/common/test/foomod.py
 ${PYSITELIB}/logilab/common/test/foomod.pyc
 ${PYSITELIB}/logilab/common/test/foomod.pyo
-${PYSITELIB}/logilab/common/test/unittest_adbh.py
-${PYSITELIB}/logilab/common/test/unittest_adbh.pyc
-${PYSITELIB}/logilab/common/test/unittest_adbh.pyo
 ${PYSITELIB}/logilab/common/test/unittest_cache.py
 ${PYSITELIB}/logilab/common/test/unittest_cache.pyc
 ${PYSITELIB}/logilab/common/test/unittest_cache.pyo
@@ -200,9 +200,6 @@ ${PYSITELIB}/logilab/common/test/unittest_configuration.pyo
 ${PYSITELIB}/logilab/common/test/unittest_date.py
 ${PYSITELIB}/logilab/common/test/unittest_date.pyc
 ${PYSITELIB}/logilab/common/test/unittest_date.pyo
-${PYSITELIB}/logilab/common/test/unittest_db.py
-${PYSITELIB}/logilab/common/test/unittest_db.pyc
-${PYSITELIB}/logilab/common/test/unittest_db.pyo
 ${PYSITELIB}/logilab/common/test/unittest_decorators.py
 ${PYSITELIB}/logilab/common/test/unittest_decorators.pyc
 ${PYSITELIB}/logilab/common/test/unittest_decorators.pyo
@@ -215,6 +212,9 @@ ${PYSITELIB}/logilab/common/test/unittest_fileutils.pyo
 ${PYSITELIB}/logilab/common/test/unittest_graph.py
 ${PYSITELIB}/logilab/common/test/unittest_graph.pyc
 ${PYSITELIB}/logilab/common/test/unittest_graph.pyo
+${PYSITELIB}/logilab/common/test/unittest_html.py
+${PYSITELIB}/logilab/common/test/unittest_html.pyc
+${PYSITELIB}/logilab/common/test/unittest_html.pyo
 ${PYSITELIB}/logilab/common/test/unittest_interface.py
 ${PYSITELIB}/logilab/common/test/unittest_interface.pyc
 ${PYSITELIB}/logilab/common/test/unittest_interface.pyo
@@ -251,6 +251,9 @@ ${PYSITELIB}/logilab/common/test/unittest_ureports_html.pyo
 ${PYSITELIB}/logilab/common/test/unittest_ureports_text.py
 ${PYSITELIB}/logilab/common/test/unittest_ureports_text.pyc
 ${PYSITELIB}/logilab/common/test/unittest_ureports_text.pyo
+${PYSITELIB}/logilab/common/test/unittest_xmlutils.py
+${PYSITELIB}/logilab/common/test/unittest_xmlutils.pyc
+${PYSITELIB}/logilab/common/test/unittest_xmlutils.pyo
 ${PYSITELIB}/logilab/common/test/utils.py
 ${PYSITELIB}/logilab/common/test/utils.pyc
 ${PYSITELIB}/logilab/common/test/utils.pyo
@@ -290,10 +293,13 @@ ${PYSITELIB}/logilab/common/visitor.pyo
 ${PYSITELIB}/logilab/common/xmlrpcutils.py
 ${PYSITELIB}/logilab/common/xmlrpcutils.pyc
 ${PYSITELIB}/logilab/common/xmlrpcutils.pyo
-${PYSITELIB}/logilab_common-0.44.0-py2.5-nspkg.pth
-${PYSITELIB}/logilab_common-0.44.0-py2.5.egg-info/PKG-INFO
-${PYSITELIB}/logilab_common-0.44.0-py2.5.egg-info/SOURCES.txt
-${PYSITELIB}/logilab_common-0.44.0-py2.5.egg-info/dependency_links.txt
-${PYSITELIB}/logilab_common-0.44.0-py2.5.egg-info/namespace_packages.txt
-${PYSITELIB}/logilab_common-0.44.0-py2.5.egg-info/top_level.txt
+${PYSITELIB}/logilab/common/xmlutils.py
+${PYSITELIB}/logilab/common/xmlutils.pyc
+${PYSITELIB}/logilab/common/xmlutils.pyo
+${PYSITELIB}/logilab_common-0.49.0-py2.6-nspkg.pth
+${PYSITELIB}/logilab_common-0.49.0-py2.6.egg-info/PKG-INFO
+${PYSITELIB}/logilab_common-0.49.0-py2.6.egg-info/SOURCES.txt
+${PYSITELIB}/logilab_common-0.49.0-py2.6.egg-info/dependency_links.txt
+${PYSITELIB}/logilab_common-0.49.0-py2.6.egg-info/namespace_packages.txt
+${PYSITELIB}/logilab_common-0.49.0-py2.6.egg-info/top_level.txt
 man/man1/pytest.1
