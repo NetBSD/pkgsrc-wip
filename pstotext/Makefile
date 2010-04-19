@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/04/18 19:22:45 schaecsn Exp $
+# $NetBSD: Makefile,v 1.3 2010/04/19 19:07:43 schaecsn Exp $
 #
 
 DISTNAME=	pstotext-1.9
@@ -15,6 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CONFIGURE=   yes
 USE_TOOLS+=     gs:run
+USE_TOOLS+=     gmake
 
 INSTALLATION_DIRS=      bin ${PKGMANDIR}/man1
 
