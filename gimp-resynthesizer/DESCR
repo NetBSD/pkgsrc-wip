@@ -1,0 +1,3 @@
+Resynthesizer is a Gimp plug-in for texture synthesis. Given a sample of a
+texture, it can create more of that texture. This has a surprising number of
+uses.

@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/04/20 04:28:20 othyro Exp $
+lib/gimp/2.0/plug-ins/resynth
+share/gimp/2.0/scripts/smart-enlarge.scm
+share/gimp/2.0/scripts/smart-remove.scm
