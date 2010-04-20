@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2010/03/09 22:33:38 othyro Exp $
+$NetBSD: distinfo,v 1.7 2010/04/20 03:24:21 othyro Exp $
 
-SHA1 (rarbsd-3.9.2.tar.gz) = badd28cc6c1ae209e2dd4eceafeaa9310cb15f96
-RMD160 (rarbsd-3.9.2.tar.gz) = e91bb9fc2b802403ffa5b506cf0dba09cbfea9de
-Size (rarbsd-3.9.2.tar.gz) = 820742 bytes
+SHA1 (rarbsd-3.9.3.tar.gz) = d6c42e24e5d050609544c01be4ded33ae41ae60f
+RMD160 (rarbsd-3.9.3.tar.gz) = bc26f4d34b424dbf6bf3d93c0e9c59eba0deb833
+Size (rarbsd-3.9.3.tar.gz) = 820804 bytes
