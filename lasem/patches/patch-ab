@@ -1,0 +1,21 @@
+$NetBSD: patch-ab,v 1.1.1.1 2010/04/20 20:12:00 jihbed Exp $
+
+--- ./Makefile.in.orig	2010-04-16 11:13:37.000000000 +0000
++++ ./Makefile.in	2010-04-16 11:15:30.000000000 +0000
+@@ -285,14 +285,11 @@
+ top_srcdir = @top_srcdir@
+ ACLOCAL_AMFLAGS = -I m4
+ SUBDIRS = itex2mml src po
+-lasemdocdir = ${prefix}/doc/lasem-@LASEM_API_VERSION@
++lasemdocdir = ${prefix}/share/doc/lasem-@LASEM_API_VERSION@
+ lasemdoc_DATA = \
+ 	README		\
+ 	COPYING		\
+-	ChangeLog 	\
+-	AUTHORS		\
+-	INSTALL		\
+-	NEWS
++	AUTHORS
+ 
+ EXTRA_DIST = $(lasemdoc_DATA)
+ pkgconfigdir = $(libdir)/pkgconfig

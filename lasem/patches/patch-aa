@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/04/20 20:12:00 jihbed Exp $
+
+--- ./src/lsmsvgview.c.orig	2010-04-16 10:43:10.000000000 +0000
++++ ./src/lsmsvgview.c	2010-04-16 10:43:49.000000000 +0000
+@@ -907,7 +907,8 @@
+ 		cairo_path_data_t *next_data;
+ 		double stroke_width;
+ 		double prev_x, prev_y;
+-		double x, y;
++		double x = 0; 
++		double y= 0 ;
+ 		double next_x, next_y;
+ 		cairo_path_data_type_t type;
+ 		cairo_path_data_type_t next_type;
