@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/04/19 19:07:43 schaecsn Exp $
+# $NetBSD: Makefile,v 1.4 2010/04/20 21:16:15 schaecsn Exp $
 #
 
 DISTNAME=	pstotext-1.9
@@ -17,8 +17,9 @@ NO_CONFIGURE=   yes
 USE_TOOLS+=     gs:run
 USE_TOOLS+=     gmake
 
-INSTALLATION_DIRS=      bin ${PKGMANDIR}/man1
+BUILD_MAKE_FLAGS+=	CFLAGS="${CFLAGS}"
 
+INSTALLATION_DIRS=      bin ${PKGMANDIR}/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/pstotext ${DESTDIR}${PREFIX}/bin

@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.1 2010/04/18 19:22:45 schaecsn Exp $
+# $NetBSD: hacks.mk,v 1.2 2010/04/20 21:16:15 schaecsn Exp $
 
 .if !defined(PSTOTEXT_HACKS_MK)
 PSTOTEXT_HACKS_MK=   defined
@@ -7,13 +7,14 @@ PSTOTEXT_HACKS_MK=   defined
 
 ###
 ### With debian's security patch patch-ab, pstotext miscompiles under several
-### versions of gcc-4.x when -O2 is used (verified under linux and freebsd).
-### For the time being, pstotext will be optimized on every platform with -O1
-### when a version of gcc-4 is used.
+### versions of gcc-4.x when -O2 is used. It compiles fine with the
+### -fno-strict-aliasing option.
+### For the time being, pstotext will be compiled with -fno-strict-aliasing
+### on any platform when gcc-4 is used independent of the compiler options.
 ###
 .if !empty(CC_VERSION:Mgcc-4.*)
 PKG_HACKS+=             optimisation
-BUILD_MAKE_FLAGS+=	CFLAGS=-O
+CFLAGS+=		-fno-strict-aliasing # must come at the end of CFLAGs.
 .endif
 
 .endif  # PSTOTEXT_HACKS_MK
