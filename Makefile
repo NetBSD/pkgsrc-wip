@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3921 2010/04/18 05:57:42 schaecsn Exp $
+# $Id: Makefile,v 1.3922 2010/04/20 03:40:38 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -789,6 +789,7 @@ SUBDIR+=	hs-Tensor
 SUBDIR+=	hs-base-unicode-symbols
 SUBDIR+=	hs-binary
 SUBDIR+=	hs-binary-strict
+SUBDIR+=	hs-bindings-DSL
 SUBDIR+=	hs-bytestring-trie
 SUBDIR+=	hs-cabal
 SUBDIR+=	hs-cabal-query
