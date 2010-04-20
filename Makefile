@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3924 2010/04/20 08:31:43 phonohawk Exp $
+# $Id: Makefile,v 1.3925 2010/04/20 20:14:00 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1044,6 +1044,7 @@ SUBDIR+=	kyra
 SUBDIR+=	kyra2
 SUBDIR+=	l2tpd
 SUBDIR+=	labyrinth
+SUBDIR+=	lasem
 SUBDIR+=	lasi
 SUBDIR+=	last-exit
 SUBDIR+=	last.fm
