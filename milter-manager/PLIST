@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2010/04/09 12:57:24 obache Exp $
+@comment $NetBSD: PLIST,v 1.5 2010/04/20 12:04:43 obache Exp $
 bin/milter-manager-log-analyzer
 bin/milter-performance-check
 bin/milter-test-client
@@ -24,6 +24,7 @@ include/milter-manager/milter/core/milter-finished-emittable.h
 include/milter-manager/milter/core/milter-headers.h
 include/milter-manager/milter/core/milter-logger.h
 include/milter-manager/milter/core/milter-macros-requests.h
+include/milter-manager/milter/core/milter-memory-profile.h
 include/milter-manager/milter/core/milter-message-result.h
 include/milter-manager/milter/core/milter-option.h
 include/milter-manager/milter/core/milter-protocol-agent.h
