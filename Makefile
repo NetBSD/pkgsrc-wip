@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3925 2010/04/20 20:14:00 jihbed Exp $
+# $Id: Makefile,v 1.3926 2010/04/20 22:02:57 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -254,6 +254,7 @@ SUBDIR+=	csp2b
 SUBDIR+=	cspchecker
 SUBDIR+=	css-mode
 SUBDIR+=	csstidy
+SUBDIR+=	ctemplate
 SUBDIR+=	cvs-syncmail
 SUBDIR+=	cvs20hg
 SUBDIR+=	cvs2darcs
