@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/04/20 08:29:23 phonohawk Exp $
+
+SHA1 (rrdtool-1.4.3.tar.gz) = 1e65de0192c149a30ee0d277e758a31ff7d6d6f0
+RMD160 (rrdtool-1.4.3.tar.gz) = fb888d16b8310d5366e65872735c0e41813eae96
+Size (rrdtool-1.4.3.tar.gz) = 1381821 bytes
+SHA1 (patch-aa) = 1d352081b7d3e2662de16fcf3fd1c5a91283dc8c
+SHA1 (patch-al) = 28c89bbb7c56791ad18d5a927fe7a34f0f3b4b3c

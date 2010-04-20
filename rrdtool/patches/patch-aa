@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/04/20 08:29:23 phonohawk Exp $
+
+--- src/rrd_daemon.c.orig	2010-03-22 14:51:06.000000000 +0000
++++ src/rrd_daemon.c
+@@ -108,7 +108,7 @@
+ #include <libgen.h>
+ #include <grp.h>
+ 
+-#include <glib-2.0/glib.h>
++#include <glib.h>
+ /* }}} */
+ 
+ #define RRDD_LOG(severity, ...) \

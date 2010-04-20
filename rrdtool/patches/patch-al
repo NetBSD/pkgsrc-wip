@@ -1,0 +1,15 @@
+$NetBSD: patch-al,v 1.1.1.1 2010/04/20 08:29:23 phonohawk Exp $
+
+Correct examples directory.
+
+--- examples/Makefile.in.orig	2010-03-22 17:30:04.000000000 +0000
++++ examples/Makefile.in
+@@ -369,7 +369,7 @@ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+ SUBDIRS = rrdcached
+ EXTRA_DIST = cgi-demo.cgi.in
+-examplesdir = $(pkgdatadir)/examples
++examplesdir = $(prefix)/share/examples/rrdtool
+ examples_SCRIPTS = cgi-demo.cgi piped-demo.pl shared-demo.pl \
+ 	stripes.pl bigtops.pl minmax.pl 4charts.pl perftest.pl
+ 
