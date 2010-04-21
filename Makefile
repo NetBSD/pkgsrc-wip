@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3926 2010/04/20 22:02:57 othyro Exp $
+# $Id: Makefile,v 1.3927 2010/04/21 03:30:43 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -771,6 +771,7 @@ SUBDIR+=	hs-GLUT
 SUBDIR+=	hs-HCL
 SUBDIR+=	hs-HDBC
 SUBDIR+=	hs-HDBC-sqlite3
+SUBDIR+=	hs-HList
 SUBDIR+=	hs-HSH
 SUBDIR+=	hs-HTTP
 SUBDIR+=	hs-HUnit
