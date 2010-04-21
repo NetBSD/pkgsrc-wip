@@ -1,0 +1,3 @@
+RRDtool is a high performance data logging and graphing system for
+time series data. This package provides low-level bindings to librrd,
+which contains most of the functionality in RRDtool.
