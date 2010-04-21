@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/10/01 12:39:31 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2010/04/21 10:38:47 fhajny Exp $
 #
 
 DISTNAME=		mod_xsendfile-0.9
@@ -13,18 +13,19 @@ LICENSE=		apache-2.0
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-NO_CONFIGURE=		yes
-
 APACHE_MODULE=		YES
-APACHE_MODULE_NAME=	mod_xsendfile.so
+APACHE_MODULE_NAME=	${DISTNAME:C|-.*||}.so
+APACHE_MODULE_SRC=	${DISTNAME:C|-.*||}.c
+APACHE_MODULE_LA=	${DISTNAME:C|-.*||}.la
 
 .include "../../mk/apache.mk"
 BUILDLINK_API_DEPENDS.apache+=	apache>=2.0.47
 
 do-build:
-	cd ${WRKSRC} && ${APXS} -c ${APACHE_MODULE_NAME:S/.so//}.c
+	cd ${WRKSRC} && ${APXS} ${CPPFLAGS} ${LDFLAGS} -c -o ${APACHE_MODULE_NAME} ${APACHE_MODULE_SRC}
 
 do-install:
-	cd ${WRKSRC} && ${APXS} -i ${APACHE_MODULE_NAME:S/.so//}.la
+	${INSTALL_LIB_DIR} ${DESTDIR}${PREFIX}/lib/httpd
+	cd ${WRKSRC} && ${APXS} -i -S LIBEXECDIR=${DESTDIR}${PREFIX}/lib/httpd ${APACHE_MODULE_LA}
 
 .include "../../mk/bsd.pkg.mk"
