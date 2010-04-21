@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2010/01/17 12:03:24 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.20 2010/04/21 10:44:50 fhajny Exp $
 
 DISTNAME=	dk-milter-1.0.2
 #PKGREVISION=	1
@@ -41,7 +41,7 @@ SUBST_FILES.rename=	dk-filter/dk-filter.8
 SUBST_SED.rename=	-e 's|dk-filter|dk-milter|g'
 SUBST_MESSAGE.rename=	Renaming dk-filter to dk-milter
 
-INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin share/doc/dk-milter/libdk
+INSTALLATION_DIRS=	lib ${PKGMANDIR}/man8 sbin share/doc/dk-milter/libdk
 
 pre-configure:
 	mv ${WRKSRC}/site.config.m4.dist ${WRKSRC}/devtools/Site/site.config.m4
