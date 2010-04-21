@@ -1,0 +1,13 @@
+$NetBSD: patch-Label3,v 1.1.1.1 2010/04/21 03:29:41 phonohawk Exp $
+
+--- Data/HList/Label3.hs.orig	2009-09-15 16:52:31.000000000 +0000
++++ Data/HList/Label3.hs
+@@ -34,7 +34,7 @@ import Data.HList.Record (ShowLabel(..))
+ 
+ 
+ -- Labels are type-level naturals
+-data HNat x => Label x ns desc  -- labels are exclusively type-level entities
++data Label x ns desc  -- labels are exclusively type-level entities
+ 
+ 
+ -- Public constructors for labels

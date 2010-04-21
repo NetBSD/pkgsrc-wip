@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/04/21 03:29:41 phonohawk Exp $
+
+SHA1 (HList-0.2.tar.gz) = b2db3a546cfcc641049c979856cba4445e30b9de
+RMD160 (HList-0.2.tar.gz) = 44a4deda342bd541890a0bd6058a2538a6a6dd0e
+Size (HList-0.2.tar.gz) = 25111 bytes
+SHA1 (patch-GhcSyntax) = c1ae051255be001f81e83ae05ae23839d05b4705
+SHA1 (patch-Label2) = bea27fbf255425b85ee2d4c7f78345c7075f6ad9
+SHA1 (patch-Label3) = 2b11865e087a3badc46987f68bec668b4c80e1cb
