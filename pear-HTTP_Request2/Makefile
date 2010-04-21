@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/11/09 23:21:54 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2010/04/21 14:51:42 uccwen Exp $
 #
 
-DISTNAME=	HTTP_Request2-0.4.1
+DISTNAME=	HTTP_Request2-0.5.2
 CATEGORIES=	www
 MASTER_SITES=	http://download.pear.php.net/package/
 EXTRACT_SUFX=	.tgz
