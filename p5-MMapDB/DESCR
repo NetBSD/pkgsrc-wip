@@ -1,0 +1,9 @@
+MMapDB implements a database similar to a hash of hashes of hashes, ...,
+of arrays of data.
+
+It's main design goals were:
+    * very fast read access
+    * lock-free read access for massive parallelism
+    * minimal memory consumption per accessing process
+    * transaction based write access
+    * simple backup, compactness, one file

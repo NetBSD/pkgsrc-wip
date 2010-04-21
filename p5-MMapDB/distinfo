@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/04/21 15:33:55 uccwen Exp $
+
+SHA1 (MMapDB-0.08.tar.gz) = 739df90665c0ae738583909e935ae20501b5f778
+RMD160 (MMapDB-0.08.tar.gz) = f396ad4bb92cfe8b7730a2cfdc3fbcf199ffbcd7
+Size (MMapDB-0.08.tar.gz) = 78627 bytes
