@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3928 2010/04/21 03:41:33 phonohawk Exp $
+# $Id: Makefile,v 1.3929 2010/04/21 08:10:19 fhajny Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -90,6 +90,7 @@ SUBDIR+=	ap2-jk2
 SUBDIR+=	ap2-layout
 SUBDIR+=	ap2-limitipconn
 SUBDIR+=	ap2-macro
+SUBDIR+=	ap2-passenger
 SUBDIR+=	ap2-xsendfile
 SUBDIR+=	ap2-zeroconf
 SUBDIR+=	apachebench2
