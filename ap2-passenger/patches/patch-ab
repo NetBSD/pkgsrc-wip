@@ -1,0 +1,17 @@
+$NetBSD: patch-ab,v 1.1.1.1 2010/04/21 08:08:26 fhajny Exp $
+
+Patch for sane binary location.
+
+--- ext/common/Utils.cpp.orig	2010-03-05 09:35:16.000000000 +0000
++++ ext/common/Utils.cpp
+@@ -151,8 +151,8 @@ findApplicationPoolServer(const char *pa
+ 	if (fileExists(path.c_str())) {
+ 		return path;
+ 	} else {
+-		path.assign(root);
+-		path.append("lib/phusion_passenger/ApplicationPoolServerExecutable");
++		path.assign("@PREFIX@/");
++		path.append("libexec/phusion_passenger/ApplicationPoolServerExecutable");
+ 		return path;
+ 	}
+ }

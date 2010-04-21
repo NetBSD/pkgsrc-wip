@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/04/21 08:08:26 fhajny Exp $
+
+SHA1 (passenger-2.2.11.tar.gz) = 9c38d364f59cb72c14a2f4c22445252468f08c4e
+RMD160 (passenger-2.2.11.tar.gz) = 54ee5ab25155adaf4b6be9dc0aee190a323254e5
+Size (passenger-2.2.11.tar.gz) = 2058085 bytes
+SHA1 (patch-aa) = a05adf3e39a5591a1df998523ed909d68633beb1
+SHA1 (patch-ab) = 1ccac0313b6f9f423c7310c9a62af1f16237fcc3
