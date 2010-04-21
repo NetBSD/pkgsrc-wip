@@ -1,7 +1,7 @@
-$NetBSD: patch-ak,v 1.5 2010/03/16 20:12:06 tnn2 Exp $
+$NetBSD: patch-ak,v 1.6 2010/04/21 12:51:26 tnn2 Exp $
 
---- js/ctypes/libffi/configure.orig	2010-03-16 01:02:50.000000000 +0000
-+++ js/ctypes/libffi/configure
+--- js/src/ctypes/libffi/configure.orig	2010-03-16 01:02:50.000000000 +0000
++++ js/src/ctypes/libffi/configure
 @@ -12232,7 +12232,7 @@ case "$host" in
    powerpc-*-aix* | rs6000-*-aix*)
  	TARGET=POWERPC_AIX; TARGETDIR=powerpc

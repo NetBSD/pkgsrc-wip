@@ -1,13 +1,13 @@
-$NetBSD: patch-mb,v 1.6 2010/03/23 19:27:41 tnn2 Exp $
+$NetBSD: patch-mb,v 1.7 2010/04/21 12:51:26 tnn2 Exp $
 
---- xpcom/reflect/xptcall/src/md/unix/Makefile.in.orig	2010-02-26 09:18:38.000000000 +0000
+--- xpcom/reflect/xptcall/src/md/unix/Makefile.in.orig	2010-04-21 09:07:48.000000000 +0000
 +++ xpcom/reflect/xptcall/src/md/unix/Makefile.in
 @@ -83,7 +83,7 @@ endif
  endif
  endif
  
--ifneq (,$(filter NetBSD OpenBSD BSD_OS,$(OS_ARCH)))
-+ifneq (,$(filter BSD_OS,$(OS_ARCH)))
+-ifneq (,$(filter NetBSD OpenBSD BSD_OS GNU,$(OS_ARCH)))
++ifneq (,$(filter BSD_OS GNU,$(OS_ARCH)))
  ifeq (86,$(findstring 86,$(OS_TEST)))
  CPPSRCS		:= xptcinvoke_unixish_x86.cpp xptcstubs_unixish_x86.cpp
  endif

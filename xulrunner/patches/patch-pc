@@ -1,11 +1,12 @@
-$NetBSD: patch-pc,v 1.4 2009/12/02 15:03:01 tnn2 Exp $
+$NetBSD: patch-pc,v 1.5 2010/04/21 12:51:26 tnn2 Exp $
 
---- xulrunner/installer/libxul-embedding.pc.in.orig	2009-10-29 23:11:24.000000000 +0100
+--- xulrunner/installer/libxul-embedding.pc.in.orig	2010-04-21 09:07:48.000000000 +0000
 +++ xulrunner/installer/libxul-embedding.pc.in
-@@ -6,5 +6,5 @@ idldir=%idldir%
+@@ -6,5 +6,6 @@ idldir=%idldir%
  Name: libxul-embedding
  Description: Static library for version-independent embedding of the Mozilla runtime
  Version: %MOZILLA_VERSION%
--Libs: -L${sdkdir}/lib -lxpcomglue
+-Libs: -L${sdkdir}/lib -lxpcomglue -ldl
++# XXXtnn -ldl removed
 +Libs: -Wl,-R${prefix}/lib/xulrunner -L${prefix}/lib/xulrunner -lxpcomglue
  Cflags: -DXPCOM_GLUE -I${includedir} %WCHAR_CFLAGS%
