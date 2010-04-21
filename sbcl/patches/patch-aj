@@ -1,0 +1,15 @@
+$NetBSD: patch-aj,v 1.1 2010/04/21 09:20:23 asau Exp $
+
+Use time_t.
+
+--- src/code/unix.lisp   19 Nov 2009 15:38:50 -0000      1.105
++++ src/code/unix.lisp   16 Apr 2010 20:28:29 -0000
+@@ -808,7 +808,7 @@
+             (tm-zone c-string))) ; Timezone abbreviation.
+ 
+ (define-alien-routine get-timezone sb!alien:void
+-  (when sb!alien:long :in)
++  (when time-t :in)
+   (seconds-west sb!alien:int :out)
+   (daylight-savings-p sb!alien:boolean :out))
+ 

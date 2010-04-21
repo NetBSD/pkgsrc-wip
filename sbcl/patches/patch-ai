@@ -1,0 +1,15 @@
+$NetBSD: patch-ai,v 1.1 2010/04/21 09:20:23 asau Exp $
+
+localtime_r(3) suggests that tzset(3) should be called first:
+
+--- src/runtime/runtime.c   7 Apr 2010 16:14:22 -0000       1.82
++++ src/runtime/runtime.c   16 Apr 2010 20:30:31 -0000
+@@ -513,7 +513,7 @@
+         fflush(stdout);
+     }
+ 
+-#if defined(SVR4) || defined(__linux__)
++#if defined(SVR4) || defined(__linux__) || defined(__NetBSD__)
+     tzset();
+ #endif
+ 
