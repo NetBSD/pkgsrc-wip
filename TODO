@@ -118,6 +118,7 @@ Suggested ready to import packages
 	o aspell-finnish
 	o aspell-telugu
 	o blop
+	o bogomips
 	o castget
 	o commoncpp2
 	o ccrtp
@@ -132,9 +133,11 @@ Suggested ready to import packages
 	o libzrtpcpp
 	o paexec
 	o pnmcurve
+	o pstotext
 	o rar3
 	o runawk
 	o send-pr
+	o truecrypt
 	o vcf
 	o vlevel
 	o xmms-cdread [pkg/36220]
