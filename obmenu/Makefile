@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/12/27 04:01:37 cetrox Exp $
+# $NetBSD: Makefile,v 1.2 2010/04/22 16:47:10 othyro Exp $
 #
 
 DISTNAME=	obmenu-1.0
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=obmenu/}
 MAINTAINER=	ccatrian@eml.cc
 HOMEPAGE=	http://obmenu.sourceforge.net/
 COMMENT=	Openbox menu editor
-LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
+LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${PYPKGPREFIX}-gtk2-[0-9]*:../../x11/py-gtk2
 
