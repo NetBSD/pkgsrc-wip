@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/04/22 13:14:36 obache Exp $
+# $NetBSD: Makefile,v 1.5 2010/04/22 14:39:38 obache Exp $
 #
 
 DISTNAME=	TrueCrypt%206.3a%20Source
@@ -41,15 +41,10 @@ MAKE_ENV+=	PKCS11=1
 
 INSTALLATION_DIRS+= bin
 
-post-fetch:
-	if [ ! -x ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX} ]; then	\
-		${CHMOD} +x ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX};	\
-	fi
-
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/Main/truecrypt ${DESTDIR}${PREFIX}/bin/
 
-.include "../../filesystems/fuse/buildlink3.mk"
+.include "../../mk/fuse.buildlink3.mk"
 .include "../../x11/wxGTK28/buildlink3.mk"
 .include "../../devel/nss/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
