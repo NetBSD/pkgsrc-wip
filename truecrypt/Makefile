@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/04/14 04:00:32 othyro Exp $
+# $NetBSD: Makefile,v 1.4 2010/04/22 13:14:36 obache Exp $
 #
 
 DISTNAME=	TrueCrypt%206.3a%20Source
@@ -16,7 +16,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/truecrypt-6.3a-source
 
-USE_TOOLS+=     gmake pkg-config
+USE_TOOLS+=	gmake pkg-config
 NO_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
 GCC_REQD=	4.0
