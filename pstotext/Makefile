@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/04/20 21:16:15 schaecsn Exp $
+# $NetBSD: Makefile,v 1.5 2010/04/22 13:03:33 obache Exp $
 #
 
 DISTNAME=	pstotext-1.9
@@ -13,13 +13,13 @@ LICENSE_FILE=	pstotext-license
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-NO_CONFIGURE=   yes
-USE_TOOLS+=     gs:run
-USE_TOOLS+=     gmake
+NO_CONFIGURE=	yes
+USE_TOOLS+=	gs:run
+USE_TOOLS+=	gmake
 
-BUILD_MAKE_FLAGS+=	CFLAGS="${CFLAGS}"
+BUILD_MAKE_FLAGS+=	CFLAGS=${CFLAGS:Q}
 
-INSTALLATION_DIRS=      bin ${PKGMANDIR}/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/pstotext ${DESTDIR}${PREFIX}/bin
