@@ -1,0 +1,5 @@
+TFP (short for Type Family Programming) provides implementations of
+type-level integers and booleans, and (eventually) simple type-level
+data structures. It uses type families as functions to produce new
+types, which provides an intuitive way to parameterize data types and
+functions on numerical values at compile time.
