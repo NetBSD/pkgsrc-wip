@@ -1,3 +1,4 @@
+- This package needs to be fixed or deleted since lang/sun-jre15 was deleted.
 - AFAIK azureus will not work with NetBSD native java, therefore,
   this package uses Linux binary emulation.
   Should the package name be changed to reflect this?
