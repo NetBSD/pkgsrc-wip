@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.1.1.1 2010/04/21 08:08:26 fhajny Exp $
+$NetBSD: patch-aa,v 1.2 2010/04/23 11:51:05 fhajny Exp $
 
 Add a custom rake task to install into DESTDIR/PREFIX.
 
 --- Rakefile.orig	2010-03-05 09:35:16.000000000 +0000
 +++ Rakefile
-@@ -772,6 +772,49 @@ task :fakeroot => [:apache2, :native_sup
+@@ -772,6 +772,48 @@ task :fakeroot => [:apache2, :native_sup
  	sh "rm", "-rf", *Dir["#{docdir}/{definitions.h,Doxyfile,template}"]
  end
  
@@ -23,7 +23,6 @@ Add a custom rake task to install into DESTDIR/PREFIX.
 +	httpdlibdir = "#{dest}/lib/httpd"
 +	libexecdir = "#{dest}/libexec/phusion_passenger"
 +	
-+	sh "rm -rf #{dest}"
 +	sh "mkdir -p #{dest}"
 +	
 +	sh "mkdir -p #{bindir}"
