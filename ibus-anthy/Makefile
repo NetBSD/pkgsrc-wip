@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2010/04/05 06:04:49 obache Exp $
+# $NetBSD: Makefile,v 1.13 2010/04/23 07:35:52 obache Exp $
 #
 
-DISTNAME=	ibus-anthy-1.2.0.20100313
+DISTNAME=	ibus-anthy-1.2.1
 CATEGORIES=	inputmethod japanese
 MASTER_SITES=	http://ibus.googlecode.com/files/
 
@@ -25,10 +25,8 @@ USE_TOOLS+=		pkg-config msgfmt gmake intltool
 FIND_PREFIX:=	KASUMI_DIR=kasumi
 .include "../../mk/find-prefix.mk"
 
-SUBST_CLASSES+=		kasumi
-SUBST_STAGE.kasumi=	pre-configure
-SUBST_FILES.kasumi=	setup/anthyprefs.py
-SUBST_SED.kasumi=	-e 's|/usr/bin/kasumi|${KASUMI_DIR}/bin/kasumi|g'
+CONFIGURE_ARGS+=	--with-kasumi-exec=${KASUMI_DIR}/bin/kasumi
+CONFIGURE_ARGS+=	--with-kasumi-icon=${KASUMI_DIR}/share/kasumi/kasumi.png
 
 SUBST_CLASSES+=		epython
 SUBST_STAGE.epython=	pre-configure
