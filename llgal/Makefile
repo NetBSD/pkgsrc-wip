@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/03/30 22:59:43 ryo-on Exp $
+# $NetBSD: Makefile,v 1.3 2010/04/24 13:56:12 obache Exp $
 #
 
 DISTNAME=	llgal-0.13.16
@@ -18,7 +18,7 @@ USE_PKGLOCALEDIR=yes
 
 USE_LANGUAGES=	# none
 
-USE_TOOLS+=	gmake perl:run
+USE_TOOLS+=	gmake msgfmt perl:run
 PERL5_PACKLIST=	auto/Llgal/.packlist
 REPLACE_PERL+=	llgal.in
 
