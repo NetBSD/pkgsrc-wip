@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.3 2010/01/15 05:08:41 obache Exp $
+$NetBSD: patch-ab,v 1.4 2010/04/24 12:58:34 obache Exp $
 
 --- engine/Makefile.in.orig	2010-01-15 03:27:22.000000000 +0000
 +++ engine/Makefile.in
@@ -7,7 +7,7 @@ $NetBSD: patch-ab,v 1.3 2010/01/15 05:08:41 obache Exp $
  
  anthy.py anthy_wrap.c: anthy.i
 -	$(SWIG) -python -I/usr/include -o anthy_wrap.c $(srcdir)/anthy.i
-+	$(SWIG) -python -I/usr/include ${ANTHY_CFLAGS} -o anthy_wrap.c $(srcdir)/anthy.i
++	$(SWIG) -python ${ANTHY_CFLAGS} -o anthy_wrap.c $(srcdir)/anthy.i
  
  anthy.xml: anthy.xml.in
  	( \
