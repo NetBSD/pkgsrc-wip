@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2010/04/24 09:20:29 obache Exp $
+# $NetBSD: Makefile,v 1.8 2010/04/24 09:25:42 obache Exp $
 #
 
 DISTNAME=	pstotext-1.9
@@ -21,11 +21,13 @@ SUBST_STAGE.gs=	do-configure
 SUBST_FILES.gs=	main.c
 SUBST_SED.gs=	-e 's|@GS_CMD@|${TOOLS_PATH.gs}|'
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/doc/${PKGBASE}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/pstotext ${DESTDIR}${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/pstotext.1  ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_DATA} ${WRKSRC}/pstotext.hlp ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/pstotext.txt ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 
 
 .include "../../mk/bsd.pkg.mk"
