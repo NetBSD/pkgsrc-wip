@@ -1,10 +1,19 @@
-$NetBSD: patch-ab,v 1.2 2010/04/18 19:22:45 schaecsn Exp $
+$NetBSD: patch-ab,v 1.3 2010/04/24 09:20:29 obache Exp $
 
 Debian's security patch (also used in FreeBSD).
 
---- main.c.orig	2004-01-09 02:17:38.000000000 -0800
-+++ main.c	2010-04-17 21:56:04.000000000 -0700
-@@ -126,12 +126,14 @@
+--- main.c.orig	2004-01-09 10:17:38.000000000 +0000
++++ main.c
+@@ -48,7 +48,7 @@ extern BUNDLE ocr, rot270, rot90;
+ 
+ static BOOLEAN cork = FALSE;
+ static BOOLEAN debug = FALSE;
+-static const char *gs_cmd = "gs";
++static const char *gs_cmd = "@GS_CMD@";
+ static const char *outfile = "";
+ 
+ static char *cmd; /* = argv[0] */
+@@ -126,12 +126,14 @@ static char *cmdfile = NULL, *gsoutfile 
  static int cleanup(void) {
    int gsstatus, status = 0;
    pstotextExit(instance);
@@ -21,7 +30,7 @@ Debian's security patch (also used in FreeBSD).
      if (WIFEXITED(gsstatus)) {
        if (WEXITSTATUS(gsstatus)!=0) status = 3;
        else if (WIFSIGNALED(gsstatus)) status = 4;
-@@ -166,8 +168,13 @@
+@@ -166,8 +168,13 @@ static void handler(int x) {
  
  static int do_it(char *path) {
    /* If "path" is NULL, then "stdin" should be processed. */
@@ -37,7 +46,7 @@ Debian's security patch (also used in FreeBSD).
    int status;
    char norotate[] = "";
    FILE *fileout;
-@@ -201,47 +208,31 @@
+@@ -201,47 +208,31 @@ static int do_it(char *path) {
      exit(1);
    }
  
@@ -106,7 +115,7 @@ Debian's security patch (also used in FreeBSD).
  #ifdef VMS
    cmdfile = tempnam("SYS$SCRATCH:","PS2TGS");
    gsoutfile = tempnam("SYS$SCRATCH:","GSRES");
-@@ -259,8 +250,25 @@
+@@ -259,8 +250,25 @@ static int do_it(char *path) {
  	exit(1);
    }
  #else
