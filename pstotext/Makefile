@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/04/22 13:03:33 obache Exp $
+# $NetBSD: Makefile,v 1.6 2010/04/24 09:06:02 obache Exp $
 #
 
 DISTNAME=	pstotext-1.9
@@ -16,8 +16,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 NO_CONFIGURE=	yes
 USE_TOOLS+=	gs:run
 USE_TOOLS+=	gmake
-
-BUILD_MAKE_FLAGS+=	CFLAGS=${CFLAGS:Q}
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
