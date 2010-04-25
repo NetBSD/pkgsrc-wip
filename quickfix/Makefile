@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2010/03/21 20:40:55 alnsn Exp $
+# $NetBSD: Makefile,v 1.5 2010/04/25 13:22:23 alnsn Exp $
 
-DISTNAME=		quickfix-1.13.2
+DISTNAME=		quickfix-1.13.3
 CATEGORIES=		finance
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=quickfix/}
 
