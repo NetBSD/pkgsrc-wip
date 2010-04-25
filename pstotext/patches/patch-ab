@@ -1,6 +1,8 @@
-$NetBSD: patch-ab,v 1.3 2010/04/24 09:20:29 obache Exp $
+$NetBSD: patch-ab,v 1.4 2010/04/25 12:40:56 obache Exp $
 
-Debian's security patch (also used in FreeBSD).
+* Set absolute path for GS cmmand.
+* Fixes CVE-2005-2536 and SA20012
+  Debian's security patch (also used in FreeBSD).
 
 --- main.c.orig	2004-01-09 10:17:38.000000000 +0000
 +++ main.c
