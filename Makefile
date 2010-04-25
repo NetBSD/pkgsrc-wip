@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3930 2010/04/23 06:35:13 phonohawk Exp $
+# $Id: Makefile,v 1.3931 2010/04/25 12:49:16 obache Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1796,7 +1796,6 @@ SUBDIR+=	prozilla
 SUBDIR+=	prtunnel
 SUBDIR+=	psh
 SUBDIR+=	psi
-SUBDIR+=	pstotext
 SUBDIR+=	psybnc
 SUBDIR+=	pt-cyrillic-ttf
 SUBDIR+=	pts
