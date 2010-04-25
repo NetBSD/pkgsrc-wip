@@ -1,0 +1,24 @@
+$NetBSD: patch-ae,v 1.1 2010/04/25 12:15:27 asau Exp $
+
+"test" portability fixes.
+
+--- configure.orig	2010-02-24 03:54:15.000000000 +0300
++++ configure	2010-02-24 03:56:31.000000000 +0300
+@@ -12355,7 +12355,7 @@
+      fi #if test "x$_libssh2_dir" = "xno"; then
+   fi # if test "x$want_ssh2" != "xno"; then
+ 
+-  if test "x$found_ssh2" == "xyes"; then
++  if test "x$found_ssh2" = "xyes"; then
+     am_save_cflags="$CFLAGS"
+     am_save_ldflags="$LDFLAGS"
+     am_save_libs="$LIBS"
+@@ -12420,7 +12420,7 @@
+     LDFLAGS="$am_save_ldflags"
+     LIBS="$am_save_libs"
+ 
+-    if test "x$found_ssh2" == "xyes"; then
++    if test "x$found_ssh2" = "xyes"; then
+ 
+ cat >>confdefs.h <<\_ACEOF
+ #define HAVE_SSH2 1

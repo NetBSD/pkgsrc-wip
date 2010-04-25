@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2008/07/02 21:57:21 asau Exp $
+# $NetBSD: Makefile,v 1.9 2010/04/25 12:15:27 asau Exp $
 
-DISTNAME=	zabbix-1.4.4
+DISTNAME=	zabbix-1.8.1
 PKGREVISION=	#
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=zabbix/}
@@ -18,7 +18,7 @@ USE_TOOLS+=		makeinfo pax
 
 #CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
-CONFIGURATION_FILES=	zabbix_agent.conf zabbix_agentd.conf zabbix_server.conf zabbix_trapper.conf
+CONFIGURATION_FILES=	zabbix_agent.conf zabbix_agentd.conf zabbix_proxy.conf zabbix_server.conf
 
 PKG_SYSCONFSUBDIR=	zabbix
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
@@ -26,8 +26,8 @@ EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 #EGDIR=			${PREFIX}/share/examples/zabbix
 CONF_FILES=		${EGDIR}/zabbix_agent.conf ${PKG_SYSCONFDIR}/zabbix_agent.conf
 CONF_FILES+=		${EGDIR}/zabbix_agentd.conf ${PKG_SYSCONFDIR}/zabbix_agentd.conf
+CONF_FILES+=		${EGDIR}/zabbix_proxy.conf ${PKG_SYSCONFDIR}/zabbix_trapper.conf
 CONF_FILES+=		${EGDIR}/zabbix_server.conf ${PKG_SYSCONFDIR}/zabbix_server.conf
-CONF_FILES+=		${EGDIR}/zabbix_trapper.conf ${PKG_SYSCONFDIR}/zabbix_trapper.conf
 INSTALLATION_DIRS+=	${EGDIR}
 
 # ZABBIX user account
@@ -73,12 +73,15 @@ SQL_SCRIPTS+=	data/images_mysql.sql data/images_sqlite3.sql
 SQL_SCRIPTS+=	schema/oracle.sql schema/postgresql.sql
 SQL_SCRIPTS+=	schema/mysql.sql schema/sqlite.sql
 
+CHECK_INTERPRETER_SKIP=	share/zabbix/upgrades/dbpatches/1.8/mysql/upgrade
+CHECK_WRKREF_SKIP=	share/zabbix/upgrades/Makefile
+
 post-install:
 .for d in ${OWN_DIRS}
 	mkdir ${DESTDIR}${PREFIX}/$d
 .endfor
 # documentation
-	${INSTALL_DATA} ${WRKSRC}/docs/"ZABBIX Manual v1.4 rev 12.pdf" ${DESTDIR}${PREFIX}/share/doc/zabbix/manual.pdf
+	${INSTALL_DATA} ${WRKSRC}/docs/README ${DESTDIR}${PREFIX}/share/doc/zabbix/
 .for f in ${CONFIGURATION_FILES}
 	${INSTALL_DATA} ${WRKSRC}/misc/conf/$f ${DESTDIR}${EGDIR}/$f
 .endfor

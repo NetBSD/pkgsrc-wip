@@ -1,10 +1,10 @@
-$NetBSD: patch-ad,v 1.1 2007/12/13 22:27:14 asau Exp $
+$NetBSD: patch-ad,v 1.2 2010/04/25 12:15:27 asau Exp $
 
 Fix hard-coded pathes.
 
---- src/zabbix_server/server.c.orig	2007/12/12 07:01:32
-+++ src/zabbix_server/server.c	2007/12/12 07:04:17
-@@ -229,19 +229,19 @@
+--- src/zabbix_server/server.c.orig	2010-01-28 00:22:44.000000000 +0300
++++ src/zabbix_server/server.c	2010-02-24 03:52:42.000000000 +0300
+@@ -260,11 +260,11 @@
  	}
  	if(APP_PID_FILE == NULL)
  	{
@@ -16,11 +16,22 @@ Fix hard-coded pathes.
 -		CONFIG_ALERT_SCRIPTS_PATH=strdup("/home/zabbix/bin");
 +		CONFIG_ALERT_SCRIPTS_PATH=strdup("@HOMEDIR@/bin");
  	}
+ 	if(CONFIG_TMPDIR == NULL)
+ 	{
+@@ -272,17 +272,17 @@
+ 	}
  	if(CONFIG_FPING_LOCATION == NULL)
  	{
 -		CONFIG_FPING_LOCATION=strdup("/usr/sbin/fping");
-+		CONFIG_FPING_LOCATION=strdup("@PREFIX@/sbin/fping");
++		CONFIG_FPING_LOCATION=strdup("@PREFIX@/fping");
  	}
+ #ifdef HAVE_IPV6
+ 	if(CONFIG_FPING6_LOCATION == NULL)
+ 	{
+-		CONFIG_FPING6_LOCATION=strdup("/usr/sbin/fping6");
++		CONFIG_FPING6_LOCATION=strdup("@PREFIX@/fping6");
+ 	}
+ #endif /* HAVE_IPV6 */
  	if(CONFIG_EXTERNALSCRIPTS == NULL)
  	{
 -		CONFIG_EXTERNALSCRIPTS=strdup("/etc/zabbix/externalscripts");
@@ -28,7 +39,7 @@ Fix hard-coded pathes.
  	}
  #ifndef	HAVE_LIBCURL
  	CONFIG_HTTPPOLLER_FORKS = 0;
-@@ -675,7 +675,7 @@
+@@ -340,7 +340,7 @@
  
  	if(CONFIG_FILE == NULL)
  	{

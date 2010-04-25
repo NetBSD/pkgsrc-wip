@@ -1,9 +1,10 @@
-$NetBSD: distinfo,v 1.5 2008/01/03 08:48:57 asau Exp $
+$NetBSD: distinfo,v 1.6 2010/04/25 12:15:27 asau Exp $
 
-SHA1 (zabbix-1.4.4.tar.gz) = 58df5edfe47c9a8853fd9632513e734105d86b3e
-RMD160 (zabbix-1.4.4.tar.gz) = 10c1e292456c1d2d961516a684afde3fd063fd2a
-Size (zabbix-1.4.4.tar.gz) = 3733956 bytes
-SHA1 (patch-aa) = a5148496462d8afc9c2bdf9094a25be836129c55
+SHA1 (zabbix-1.8.1.tar.gz) = ac8d4e73eebd1a86b9fdc5df3035df67e7efa5e0
+RMD160 (zabbix-1.8.1.tar.gz) = 2f444b7292855bb4b9aaf4830871ebeb49e28b47
+Size (zabbix-1.8.1.tar.gz) = 3607414 bytes
+SHA1 (patch-aa) = da39a3ee5e6b4b0d3255bfef95601890afd80709
 SHA1 (patch-ab) = d792e4fca591df6dff9a3be864f1aa8a512ab85e
 SHA1 (patch-ac) = 6f6421924415d1a1306966db297ed0b32069bd37
-SHA1 (patch-ad) = bdbbfb44ab01f8f9eb6b0e2f0596fdd6c0ce2434
+SHA1 (patch-ad) = 9230c97b78e3a539add2eadafea56d7b895e1831
+SHA1 (patch-ae) = dfa260cb77b6cd66451057a1797af80d3465d7ad
