@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2010/04/24 09:25:42 obache Exp $
+# $NetBSD: Makefile,v 1.9 2010/04/25 12:16:36 obache Exp $
 #
 
 DISTNAME=	pstotext-1.9
-CATEGORIES=	print
+CATEGORIES=	converters print
 MASTER_SITES=	ftp://mirror.cs.wisc.edu/pub/mirrors/ghost/contrib/
 
 MAINTAINER=	schaecsn@gmx.net
