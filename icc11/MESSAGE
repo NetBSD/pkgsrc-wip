@@ -1,6 +1,7 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2009/10/20 22:29:10 alnsn Exp $
+$NetBSD: MESSAGE,v 1.3 2010/04/25 13:25:39 alnsn Exp $
 
 Please read
     ${LOCALBASE}/share/doc/icc11/README.bsd
     ${LOCALBASE}/share/doc/icc11/README.pkgsrc
+===========================================================================
