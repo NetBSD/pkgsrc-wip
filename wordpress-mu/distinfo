@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2009/11/22 17:44:29 pettai Exp $
+$NetBSD: distinfo,v 1.6 2010/04/26 11:37:36 shindenmorr Exp $
 
-SHA1 (wordpress-mu-2.8.6/wordpress-mu-2.8.6.tar.gz) = 142e3e3835bca1da173b00f81166c5ae682434af
-RMD160 (wordpress-mu-2.8.6/wordpress-mu-2.8.6.tar.gz) = b8149bb534c13e86cc82e2139887240c76d0ae50
-Size (wordpress-mu-2.8.6/wordpress-mu-2.8.6.tar.gz) = 2185807 bytes
+SHA1 (wordpress-mu-2.9.2/wordpress-mu-2.9.2.tar.gz) = 2a35efff15aa2f576e28e877e24f40faf9a6eb78
+RMD160 (wordpress-mu-2.9.2/wordpress-mu-2.9.2.tar.gz) = 92f08ddf707b80e958dd9d126172f87e8b1d4153
+Size (wordpress-mu-2.9.2/wordpress-mu-2.9.2.tar.gz) = 2345086 bytes

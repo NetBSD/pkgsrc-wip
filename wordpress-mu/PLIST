@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/11/08 23:12:34 pettai Exp $
+@comment $NetBSD: PLIST,v 1.6 2010/04/26 11:37:36 shindenmorr Exp $
 share/doc/wordpress-mu/README.txt
 share/doc/wordpress-mu/license.txt
 share/examples/wordpress-mu/wp-config-sample.php
@@ -18,34 +18,46 @@ share/wordpress-mu/wp-admin/categories.php
 share/wordpress-mu/wp-admin/comment.php
 share/wordpress-mu/wp-admin/css/colors-classic-rtl.css
 share/wordpress-mu/wp-admin/css/colors-classic.css
+share/wordpress-mu/wp-admin/css/colors-classic.dev.css
 share/wordpress-mu/wp-admin/css/colors-fresh-rtl.css
 share/wordpress-mu/wp-admin/css/colors-fresh.css
+share/wordpress-mu/wp-admin/css/colors-fresh.dev.css
 share/wordpress-mu/wp-admin/css/dashboard-rtl.css
 share/wordpress-mu/wp-admin/css/dashboard.css
+share/wordpress-mu/wp-admin/css/dashboard.dev.css
 share/wordpress-mu/wp-admin/css/farbtastic-rtl.css
 share/wordpress-mu/wp-admin/css/farbtastic.css
 share/wordpress-mu/wp-admin/css/global-rtl.css
 share/wordpress-mu/wp-admin/css/global.css
+share/wordpress-mu/wp-admin/css/global.dev.css
 share/wordpress-mu/wp-admin/css/ie-rtl.css
 share/wordpress-mu/wp-admin/css/ie.css
 share/wordpress-mu/wp-admin/css/install-rtl.css
 share/wordpress-mu/wp-admin/css/install.css
+share/wordpress-mu/wp-admin/css/install.dev.css
 share/wordpress-mu/wp-admin/css/login-rtl.css
 share/wordpress-mu/wp-admin/css/login.css
+share/wordpress-mu/wp-admin/css/login.dev.css
 share/wordpress-mu/wp-admin/css/media-rtl.css
 share/wordpress-mu/wp-admin/css/media.css
+share/wordpress-mu/wp-admin/css/media.dev.css
 share/wordpress-mu/wp-admin/css/mu-rtl.css
 share/wordpress-mu/wp-admin/css/mu.css
 share/wordpress-mu/wp-admin/css/plugin-install-rtl.css
 share/wordpress-mu/wp-admin/css/plugin-install.css
+share/wordpress-mu/wp-admin/css/plugin-install.dev.css
 share/wordpress-mu/wp-admin/css/press-this-rtl.css
 share/wordpress-mu/wp-admin/css/press-this.css
+share/wordpress-mu/wp-admin/css/press-this.dev.css
 share/wordpress-mu/wp-admin/css/theme-editor-rtl.css
 share/wordpress-mu/wp-admin/css/theme-editor.css
+share/wordpress-mu/wp-admin/css/theme-editor.dev.css
 share/wordpress-mu/wp-admin/css/theme-install.css
+share/wordpress-mu/wp-admin/css/theme-install.dev.css
 share/wordpress-mu/wp-admin/css/upload-rtl.css
 share/wordpress-mu/wp-admin/css/widgets-rtl.css
 share/wordpress-mu/wp-admin/css/widgets.css
+share/wordpress-mu/wp-admin/css/widgets.dev.css
 share/wordpress-mu/wp-admin/custom-header.php
 share/wordpress-mu/wp-admin/edit-attachment-rows.php
 share/wordpress-mu/wp-admin/edit-category-form.php
@@ -92,6 +104,7 @@ share/wordpress-mu/wp-admin/images/generic.png
 share/wordpress-mu/wp-admin/images/gray-grad.png
 share/wordpress-mu/wp-admin/images/icons32-vs.png
 share/wordpress-mu/wp-admin/images/icons32.png
+share/wordpress-mu/wp-admin/images/imgedit-icons.png
 share/wordpress-mu/wp-admin/images/list-vs.png
 share/wordpress-mu/wp-admin/images/list.png
 share/wordpress-mu/wp-admin/images/loading-publish.gif
@@ -168,10 +181,12 @@ share/wordpress-mu/wp-admin/includes/continents-cities.php
 share/wordpress-mu/wp-admin/includes/dashboard.php
 share/wordpress-mu/wp-admin/includes/export.php
 share/wordpress-mu/wp-admin/includes/file.php
+share/wordpress-mu/wp-admin/includes/image-edit.php
 share/wordpress-mu/wp-admin/includes/image.php
 share/wordpress-mu/wp-admin/includes/import.php
 share/wordpress-mu/wp-admin/includes/manifest.php
 share/wordpress-mu/wp-admin/includes/media.php
+share/wordpress-mu/wp-admin/includes/meta-boxes.php
 share/wordpress-mu/wp-admin/includes/misc.php
 share/wordpress-mu/wp-admin/includes/mu.php
 share/wordpress-mu/wp-admin/includes/plugin-install.php
@@ -210,6 +225,8 @@ share/wordpress-mu/wp-admin/js/editor.js
 share/wordpress-mu/wp-admin/js/farbtastic.js
 share/wordpress-mu/wp-admin/js/gallery.dev.js
 share/wordpress-mu/wp-admin/js/gallery.js
+share/wordpress-mu/wp-admin/js/image-edit.dev.js
+share/wordpress-mu/wp-admin/js/image-edit.js
 share/wordpress-mu/wp-admin/js/inline-edit-post.dev.js
 share/wordpress-mu/wp-admin/js/inline-edit-post.js
 share/wordpress-mu/wp-admin/js/inline-edit-tax.dev.js
@@ -220,8 +237,6 @@ share/wordpress-mu/wp-admin/js/media-upload.dev.js
 share/wordpress-mu/wp-admin/js/media-upload.js
 share/wordpress-mu/wp-admin/js/media.dev.js
 share/wordpress-mu/wp-admin/js/media.js
-share/wordpress-mu/wp-admin/js/page.dev.js
-share/wordpress-mu/wp-admin/js/page.js
 share/wordpress-mu/wp-admin/js/password-strength-meter.dev.js
 share/wordpress-mu/wp-admin/js/password-strength-meter.js
 share/wordpress-mu/wp-admin/js/plugin-install.dev.js
@@ -231,8 +246,8 @@ share/wordpress-mu/wp-admin/js/post.js
 share/wordpress-mu/wp-admin/js/postbox.dev.js
 share/wordpress-mu/wp-admin/js/postbox.js
 share/wordpress-mu/wp-admin/js/revisions-js.php
-share/wordpress-mu/wp-admin/js/slug.dev.js
-share/wordpress-mu/wp-admin/js/slug.js
+share/wordpress-mu/wp-admin/js/set-post-thumbnail.dev.js
+share/wordpress-mu/wp-admin/js/set-post-thumbnail.js
 share/wordpress-mu/wp-admin/js/tags.dev.js
 share/wordpress-mu/wp-admin/js/tags.js
 share/wordpress-mu/wp-admin/js/theme-preview.dev.js
@@ -256,6 +271,7 @@ share/wordpress-mu/wp-admin/link-parse-opml.php
 share/wordpress-mu/wp-admin/link.php
 share/wordpress-mu/wp-admin/load-scripts.php
 share/wordpress-mu/wp-admin/load-styles.php
+share/wordpress-mu/wp-admin/maint/repair.php
 share/wordpress-mu/wp-admin/media-new.php
 share/wordpress-mu/wp-admin/media-upload.php
 share/wordpress-mu/wp-admin/media.php
@@ -283,6 +299,7 @@ share/wordpress-mu/wp-admin/press-this.php
 share/wordpress-mu/wp-admin/profile.php
 share/wordpress-mu/wp-admin/revision.php
 share/wordpress-mu/wp-admin/rtl.css
+share/wordpress-mu/wp-admin/rtl.dev.css
 share/wordpress-mu/wp-admin/setup-config.php
 share/wordpress-mu/wp-admin/sidebar.php
 share/wordpress-mu/wp-admin/theme-editor.php
@@ -300,10 +317,12 @@ share/wordpress-mu/wp-admin/user-new.php
 share/wordpress-mu/wp-admin/users.php
 share/wordpress-mu/wp-admin/widgets.php
 share/wordpress-mu/wp-admin/wp-admin.css
+share/wordpress-mu/wp-admin/wp-admin.dev.css
 share/wordpress-mu/wp-admin/wpmu-admin.php
 share/wordpress-mu/wp-admin/wpmu-blogs.php
 share/wordpress-mu/wp-admin/wpmu-edit.php
 share/wordpress-mu/wp-admin/wpmu-options.php
+share/wordpress-mu/wp-admin/wpmu-terms.php
 share/wordpress-mu/wp-admin/wpmu-themes.php
 share/wordpress-mu/wp-admin/wpmu-upgrade-site.php
 share/wordpress-mu/wp-admin/wpmu-users.php
@@ -406,6 +425,8 @@ share/wordpress-mu/wp-includes/category-template.php
 share/wordpress-mu/wp-includes/category.php
 share/wordpress-mu/wp-includes/class-IXR.php
 share/wordpress-mu/wp-includes/class-feed.php
+share/wordpress-mu/wp-includes/class-json.php
+share/wordpress-mu/wp-includes/class-oembed.php
 share/wordpress-mu/wp-includes/class-phpass.php
 share/wordpress-mu/wp-includes/class-phpmailer.php
 share/wordpress-mu/wp-includes/class-pop3.php
@@ -420,6 +441,7 @@ share/wordpress-mu/wp-includes/comment-template.php
 share/wordpress-mu/wp-includes/comment.php
 share/wordpress-mu/wp-includes/compat.php
 share/wordpress-mu/wp-includes/cron.php
+share/wordpress-mu/wp-includes/default-embeds.php
 share/wordpress-mu/wp-includes/default-filters.php
 share/wordpress-mu/wp-includes/default-widgets.php
 share/wordpress-mu/wp-includes/deprecated.php
@@ -435,7 +457,6 @@ share/wordpress-mu/wp-includes/functions.php
 share/wordpress-mu/wp-includes/functions.wp-scripts.php
 share/wordpress-mu/wp-includes/functions.wp-styles.php
 share/wordpress-mu/wp-includes/general-template.php
-share/wordpress-mu/wp-includes/gettext.php
 share/wordpress-mu/wp-includes/http.php
 share/wordpress-mu/wp-includes/images/blank.gif
 share/wordpress-mu/wp-includes/images/crystal/archive.png
@@ -528,6 +549,11 @@ share/wordpress-mu/wp-includes/js/crop/marqueeHoriz.gif
 share/wordpress-mu/wp-includes/js/crop/marqueeVert.gif
 share/wordpress-mu/wp-includes/js/hoverIntent.dev.js
 share/wordpress-mu/wp-includes/js/hoverIntent.js
+share/wordpress-mu/wp-includes/js/imgareaselect/border-anim-h.gif
+share/wordpress-mu/wp-includes/js/imgareaselect/border-anim-v.gif
+share/wordpress-mu/wp-includes/js/imgareaselect/imgareaselect.css
+share/wordpress-mu/wp-includes/js/imgareaselect/jquery.imgareaselect.dev.js
+share/wordpress-mu/wp-includes/js/imgareaselect/jquery.imgareaselect.js
 share/wordpress-mu/wp-includes/js/jcrop/Jcrop.gif
 share/wordpress-mu/wp-includes/js/jcrop/jquery.Jcrop.css
 share/wordpress-mu/wp-includes/js/jcrop/jquery.Jcrop.dev.js
@@ -553,6 +579,8 @@ share/wordpress-mu/wp-includes/js/jquery/ui.resizable.js
 share/wordpress-mu/wp-includes/js/jquery/ui.selectable.js
 share/wordpress-mu/wp-includes/js/jquery/ui.sortable.js
 share/wordpress-mu/wp-includes/js/jquery/ui.tabs.js
+share/wordpress-mu/wp-includes/js/json2.dev.js
+share/wordpress-mu/wp-includes/js/json2.js
 share/wordpress-mu/wp-includes/js/prototype.js
 share/wordpress-mu/wp-includes/js/quicktags.dev.js
 share/wordpress-mu/wp-includes/js/quicktags.js
@@ -639,6 +667,7 @@ share/wordpress-mu/wp-includes/js/tinymce/plugins/wordpress/css/content.css
 share/wordpress-mu/wp-includes/js/tinymce/plugins/wordpress/editor_plugin.dev.js
 share/wordpress-mu/wp-includes/js/tinymce/plugins/wordpress/editor_plugin.js
 share/wordpress-mu/wp-includes/js/tinymce/plugins/wordpress/img/audio.gif
+share/wordpress-mu/wp-includes/js/tinymce/plugins/wordpress/img/embedded.png
 share/wordpress-mu/wp-includes/js/tinymce/plugins/wordpress/img/help.gif
 share/wordpress-mu/wp-includes/js/tinymce/plugins/wordpress/img/image.gif
 share/wordpress-mu/wp-includes/js/tinymce/plugins/wordpress/img/media.gif
@@ -730,6 +759,7 @@ share/wordpress-mu/wp-includes/l10n.php
 share/wordpress-mu/wp-includes/link-template.php
 share/wordpress-mu/wp-includes/locale.php
 share/wordpress-mu/wp-includes/media.php
+share/wordpress-mu/wp-includes/meta.php
 share/wordpress-mu/wp-includes/pluggable.php
 share/wordpress-mu/wp-includes/plugin.php
 share/wordpress-mu/wp-includes/pomo/entry.php
@@ -738,6 +768,7 @@ share/wordpress-mu/wp-includes/pomo/po.php
 share/wordpress-mu/wp-includes/pomo/streams.php
 share/wordpress-mu/wp-includes/pomo/translations.php
 share/wordpress-mu/wp-includes/post-template.php
+share/wordpress-mu/wp-includes/post-thumbnail-template.php
 share/wordpress-mu/wp-includes/post.php
 share/wordpress-mu/wp-includes/query.php
 share/wordpress-mu/wp-includes/registration-functions.php
@@ -747,7 +778,6 @@ share/wordpress-mu/wp-includes/rss-functions.php
 share/wordpress-mu/wp-includes/rss.php
 share/wordpress-mu/wp-includes/script-loader.php
 share/wordpress-mu/wp-includes/shortcodes.php
-share/wordpress-mu/wp-includes/streams.php
 share/wordpress-mu/wp-includes/taxonomy.php
 share/wordpress-mu/wp-includes/template-loader.php
 share/wordpress-mu/wp-includes/theme.php
