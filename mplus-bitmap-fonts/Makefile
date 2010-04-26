@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/02/10 11:50:46 obache Exp $
+# $NetBSD: Makefile,v 1.2 2010/04/26 11:19:03 obache Exp $
 #
 
 DISTNAME=	mplus_bitmap_fonts-2.2.4
@@ -25,7 +25,7 @@ FONTS_DIRS.x11=	${FONTDIR}
 
 do-install:
 	${RUN} cd ${WRKSRC}; \
-	${SETENV} ${ALL_ENV} DESTDIR=${DESTDIR}${FONTDIR} \
+	${SETENV} ${MAKE_ENV} DESTDIR=${DESTDIR}${FONTDIR} \
 		${SH} install_mplus_fonts
 
 .include "../../mk/bsd.pkg.mk"
