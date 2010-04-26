@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2010/03/03 10:16:40 shindenmorr Exp $
+# $NetBSD: Makefile,v 1.5 2010/04/26 15:44:48 shindenmorr Exp $
 #
 
-DISTNAME=	dsh-0.25.9
+DISTNAME=	dsh-0.25.10
 CATEGORIES=	shells
 MASTER_SITES=	http://www.netfort.gr.jp/~dancer/software/downloads/
 
