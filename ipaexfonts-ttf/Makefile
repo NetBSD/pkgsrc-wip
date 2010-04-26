@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/03/15 23:22:05 ryo-on Exp $
+# $NetBSD: Makefile,v 1.2 2010/04/26 11:05:26 obache Exp $
 #
 
 DISTNAME=	IPAexfont00101
@@ -11,7 +11,7 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	ryo_on@yk.rim.or.jp
 HOMEPAGE=	http://ossipedia.ipa.go.jp/ipafont/
 COMMENT=	IPAex fonts (fixed JIS X0213 Kanji, and proportional ASCII)
-# LICENSE=	IPA Font License Agreement v1.0
+LICENSE=	ipafont
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 

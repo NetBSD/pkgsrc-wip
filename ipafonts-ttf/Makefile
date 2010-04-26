@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/03/15 23:23:00 ryo-on Exp $
+# $NetBSD: Makefile,v 1.2 2010/04/26 11:05:31 obache Exp $
 #
 
 DISTNAME=	IPAfont00302
@@ -11,7 +11,7 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	ryo_on@yk.rim.or.jp
 HOMEPAGE=	http://ossipedia.ipa.go.jp/ipafont/
 COMMENT=	IPA JIS X 0213 fonts (Gothic, P Gothic, Mincho, and P Mincho)
-# LICENSE=	IPA Font License Agreement v1.0
+LICENSE=	ipafont
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
