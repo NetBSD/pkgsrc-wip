@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.10 2010/01/17 12:03:23 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.11 2010/04/27 05:22:20 guigui2 Exp $
 #
 
-DISTNAME=	castget-1.0.1
-PKGREVISION=	2
+DISTNAME=	castget-1.1.0
 CATEGORIES=	audio www
 MASTER_SITES=	http://savannah.nongnu.org/download/castget/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	netbsd@guigui2.net
 HOMEPAGE=	http://castget.nongnu.org/
