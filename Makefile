@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3931 2010/04/25 12:49:16 obache Exp $
+# $Id: Makefile,v 1.3932 2010/04/27 17:59:50 schaecsn Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -599,6 +599,7 @@ SUBDIR+=	gst-inspector
 SUBDIR+=	gst-plugins0.10-farsight
 SUBDIR+=	gstat
 SUBDIR+=	gstreamer-plugins
+SUBDIR+=	gsview
 SUBDIR+=	gtg
 SUBDIR+=	gtk-gnutella-current
 SUBDIR+=	gtk-grdc
