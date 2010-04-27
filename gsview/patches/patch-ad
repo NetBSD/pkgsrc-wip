@@ -1,0 +1,15 @@
+$NetBSD: patch-ad,v 1.1.1.1 2010/04/27 17:53:56 schaecsn Exp $
+
+Set absolute path for GS command.
+
+--- srcunx/gvx.h.orig	2010-04-25 23:44:40.000000000 -0700
++++ srcunx/gvx.h	2010-04-26 00:09:31.000000000 -0700
+@@ -121,7 +121,7 @@
+ #define MAXSTR 256	/* maximum file name length and general string length */
+ #define PROFILE_SIZE 2048
+ #define DEVICENAME "display"
+-#define DEFAULT_GSCOMMAND "gs"
++#define DEFAULT_GSCOMMAND "@GS_CMD@"
+ #define DEFAULT_RESOLUTION 96.0
+ #define DEFAULT_ZOOMRES 300.0
+ #define INISECTION "Options"

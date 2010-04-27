@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/04/27 17:53:56 schaecsn Exp $
+
+SHA1 (gsview-4.9.tar.gz) = c918fbb038939bf183bc05fd86f59c179a9b0dd9
+RMD160 (gsview-4.9.tar.gz) = 55769b62ef8072f0c311c797375936a97a3c60e9
+Size (gsview-4.9.tar.gz) = 892681 bytes
+SHA1 (patch-aa) = 07f4ec4b429cc9235d03ab81d565adf70e5678f1
+SHA1 (patch-ab) = 3cdf851b2b5ac0c20a595ccbd8cee8a42ac16a46
+SHA1 (patch-ac) = 968392975ec8c98292e807395cf09c00aa744bc2
+SHA1 (patch-ad) = 3266621fe8511722371f1edfc4ad443bb1c19f4a
+SHA1 (patch-ae) = 1e34946e1fc48171b52e7e52f674cc0fd7929246

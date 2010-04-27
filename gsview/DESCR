@@ -1,0 +1,5 @@
+GSview is a graphical interface for Ghostscript under MS-Windows, OS/2 and
+Unix. Ghostscript is an interpreter for the PostScript page description
+language used by laser printers. For documents following the Adobe
+PostScript Document Structuring Conventions, GSview allows selected pages to
+be viewed or printed.
