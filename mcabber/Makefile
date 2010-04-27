@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2009/11/14 11:37:23 zul_ Exp $
+# $NetBSD: Makefile,v 1.15 2010/04/27 21:12:47 tonnerre Exp $
 #
 
 DISTNAME=	mcabber-0.9.10
@@ -22,7 +22,6 @@ USE_NCURSES=		yes
 
 INSTALLATION_DIRS+= 	share/examples/mcabber
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/mcabber.desktop ${PREFIX}/share/applications/
 	${INSTALL_DATA} ${WRKSRC}/mcabberrc.example \
 			${DESTDIR}${PREFIX}/share/examples/mcabber
 
