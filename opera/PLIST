@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/11/20 11:25:14 obache Exp $
+@comment $NetBSD: PLIST,v 1.3 2010/04/28 11:08:43 obache Exp $
 bin/opera
 man/man1/opera.1
 share/doc/opera/LGPL
@@ -42,15 +42,14 @@ share/opera/locale/be/search.ini
 share/opera/locale/be/standard_speeddial.ini
 share/opera/locale/bg/bg.lng
 share/opera/locale/cs/cs.lng
-share/opera/locale/da/bookmarks.adr
 share/opera/locale/da/da.lng
 share/opera/locale/de/bookmarks.adr
 share/opera/locale/de/de.lng
 share/opera/locale/de/search.ini
 share/opera/locale/de/standard_speeddial.ini
 share/opera/locale/el/el.lng
-share/opera/locale/en-GB/en-GB.lng
 share/opera/locale/en-GB/bookmarks.adr
+share/opera/locale/en-GB/en-GB.lng
 share/opera/locale/en-GB/search.ini
 share/opera/locale/en-GB/standard_speeddial.ini
 share/opera/locale/en/bookmarks.adr
@@ -59,16 +58,16 @@ share/opera/locale/en/en.zip
 share/opera/locale/en/license.txt
 share/opera/locale/en/search.ini
 share/opera/locale/en/standard_speeddial.ini
-share/opera/locale/es-ES/es-ES.lng
 share/opera/locale/es-ES/bookmarks.adr
+share/opera/locale/es-ES/es-ES.lng
 share/opera/locale/es-ES/search.ini
 share/opera/locale/es-ES/standard_speeddial.ini
 share/opera/locale/es-LA/es-LA.lng
 share/opera/locale/et/et.lng
 share/opera/locale/fi/fi.lng
 share/opera/locale/fr-CA/fr-CA.lng
-share/opera/locale/fr/fr.lng
 share/opera/locale/fr/bookmarks.adr
+share/opera/locale/fr/fr.lng
 share/opera/locale/fr/search.ini
 share/opera/locale/fr/standard_speeddial.ini
 share/opera/locale/fy/fy.lng
@@ -79,8 +78,8 @@ share/opera/locale/hu/hu.lng
 share/opera/locale/id/bookmarks.adr
 share/opera/locale/id/id.lng
 share/opera/locale/id/standard_speeddial.ini
-share/opera/locale/it/it.lng
 share/opera/locale/it/bookmarks.adr
+share/opera/locale/it/it.lng
 share/opera/locale/it/search.ini
 share/opera/locale/it/standard_speeddial.ini
 share/opera/locale/ja/bookmarks.adr
@@ -92,8 +91,8 @@ share/opera/locale/ka/ka.lng
 share/opera/locale/ko/ko.lng
 share/opera/locale/lt/lt.lng
 share/opera/locale/mk/mk.lng
-share/opera/locale/nb/nb.lng
 share/opera/locale/nb/bookmarks.adr
+share/opera/locale/nb/nb.lng
 share/opera/locale/nb/search.ini
 share/opera/locale/nb/standard_speeddial.ini
 share/opera/locale/nl/nl.lng
@@ -115,10 +114,10 @@ share/opera/locale/sv/sv.lng
 share/opera/locale/ta/ta.lng
 share/opera/locale/te/te.lng
 share/opera/locale/tr/tr.lng
-share/opera/locale/uk/uk.lng
 share/opera/locale/uk/bookmarks.adr
 share/opera/locale/uk/search.ini
 share/opera/locale/uk/standard_speeddial.ini
+share/opera/locale/uk/uk.lng
 share/opera/locale/zh-cn/bookmarks.adr
 share/opera/locale/zh-cn/browser.js
 share/opera/locale/zh-cn/search.ini
@@ -133,7 +132,6 @@ share/opera/locale/zh-tw/zh-tw.lng
 share/opera/scripts/common.js
 share/opera/scripts/substance.js
 share/opera/skin/standard_skin.zip
-share/opera/styles/Inconsolata.otf
 share/opera/styles/about.css
 share/opera/styles/cache.css
 share/opera/styles/certinfo.css
@@ -158,7 +156,6 @@ share/opera/styles/images/flag.png
 share/opera/styles/images/folder.png
 share/opera/styles/images/header-expanded.png
 share/opera/styles/images/header.png
-share/opera/styles/images/info-header.png
 share/opera/styles/images/opera.png
 share/opera/styles/images/page-bot.png
 share/opera/styles/images/red_center.png
@@ -205,6 +202,12 @@ share/opera/ui/standard_keyboard_compat.ini
 share/opera/ui/standard_menu.ini
 share/opera/ui/standard_mouse.ini
 share/opera/ui/standard_toolbar.ini
-share/opera/ui/standard_trusted_repositories.ini
 share/opera/ui/unix_keyboard.ini
+share/opera/unite/fileSharing.ua
+share/opera/unite/fridge.ua
+share/opera/unite/home.ua
+share/opera/unite/mediaPlayer.ua
+share/opera/unite/messenger.ua
+share/opera/unite/photoSharing.ua
+share/opera/unite/webserver.ua
 @pkgdir share/opera/plugins

@@ -1,23 +1,23 @@
-$NetBSD: distinfo,v 1.2 2009/11/20 11:25:14 obache Exp $
+$NetBSD: distinfo,v 1.3 2010/04/28 11:08:43 obache Exp $
 
-SHA1 (opera/freebsd-i386/opera-10.01-freebsd7-shared-qt3.i386.tar.bz2) = 4c71c763e344f3e11ef56edfd72528c0cb15e808
-RMD160 (opera/freebsd-i386/opera-10.01-freebsd7-shared-qt3.i386.tar.bz2) = 058d212266704902679d4b7c31d3d9e35dc4a3ab
-Size (opera/freebsd-i386/opera-10.01-freebsd7-shared-qt3.i386.tar.bz2) = 8494823 bytes
-SHA1 (opera/freebsd-x86_64/opera-10.01-freebsd7-shared-qt3.amd64.tar.bz2) = a21ecd96b98cd75c944b2a6efd162a79e67c51cd
-RMD160 (opera/freebsd-x86_64/opera-10.01-freebsd7-shared-qt3.amd64.tar.bz2) = a820daf47897b6681af474cfab07c2fc02cacd22
-Size (opera/freebsd-x86_64/opera-10.01-freebsd7-shared-qt3.amd64.tar.bz2) = 9251850 bytes
-SHA1 (opera/linux-i386/opera-10.01.gcc4-shared-qt3.i386.tar.bz2) = 04bdbf96f72eb357de4fe4addddebdc1d5a2a3bc
-RMD160 (opera/linux-i386/opera-10.01.gcc4-shared-qt3.i386.tar.bz2) = 99974f7449fa2272f19aa4932f6cbacb8289c622
-Size (opera/linux-i386/opera-10.01.gcc4-shared-qt3.i386.tar.bz2) = 8489622 bytes
-SHA1 (opera/linux-powerpc/opera-10.01.gcc4-shared-qt3.ppc.tar.bz2) = a04d9e5ca88a97f399a1bc4b35633d06e401d177
-RMD160 (opera/linux-powerpc/opera-10.01.gcc4-shared-qt3.ppc.tar.bz2) = d9139a6d896b2159a424ac778faaf125df45430e
-Size (opera/linux-powerpc/opera-10.01.gcc4-shared-qt3.ppc.tar.bz2) = 8642734 bytes
-SHA1 (opera/linux-x86_64/opera-10.01.gcc4-shared-qt3.x86_64.tar.bz2) = 2739cd5e77dba8b2a07639131ac70f6281eff342
-RMD160 (opera/linux-x86_64/opera-10.01.gcc4-shared-qt3.x86_64.tar.bz2) = 66357effa8359cfafc943500f9115aa09dc60422
-Size (opera/linux-x86_64/opera-10.01.gcc4-shared-qt3.x86_64.tar.bz2) = 9278710 bytes
-SHA1 (opera/solaris-i386/opera-10.01.gcc4-static-qt3.tar.bz2) = a7382826d46d6be934891a3430b19555586a24dc
-RMD160 (opera/solaris-i386/opera-10.01.gcc4-static-qt3.tar.bz2) = 6aaabe4afcc9bce45bf77fedd757ae06d4a9b9d1
-Size (opera/solaris-i386/opera-10.01.gcc4-static-qt3.tar.bz2) = 10118192 bytes
-SHA1 (opera/solaris-sparc/opera-10.01.gcc4-static-qt3.tar.bz2) = f8cd491edfb173c218dde1ac7335794c737ea6c0
-RMD160 (opera/solaris-sparc/opera-10.01.gcc4-static-qt3.tar.bz2) = f21c10961aff5f12e1505b1ef172ca4c7290cbc1
-Size (opera/solaris-sparc/opera-10.01.gcc4-static-qt3.tar.bz2) = 10045685 bytes
+SHA1 (opera/freebsd-i386/opera-10.10-freebsd7-shared-qt3.i386.tar.bz2) = ce6df2142d109a4e102f086cefdbb99250d4a0fe
+RMD160 (opera/freebsd-i386/opera-10.10-freebsd7-shared-qt3.i386.tar.bz2) = 80e862533d1c1a89e4de442b1cf584a783cca3f8
+Size (opera/freebsd-i386/opera-10.10-freebsd7-shared-qt3.i386.tar.bz2) = 11611506 bytes
+SHA1 (opera/freebsd-x86_64/opera-10.10-freebsd7-shared-qt3.amd64.tar.bz2) = 288370532cf0f7ec24ea6ac303020b7bebcc064d
+RMD160 (opera/freebsd-x86_64/opera-10.10-freebsd7-shared-qt3.amd64.tar.bz2) = 9a5df10ba9b3b6f0659b8ea26e62be15b4f36e74
+Size (opera/freebsd-x86_64/opera-10.10-freebsd7-shared-qt3.amd64.tar.bz2) = 12390632 bytes
+SHA1 (opera/linux-i386/opera-10.10.gcc4-shared-qt3.i386.tar.bz2) = fb49d4bf2f83c5acd47d347e84491e025308b7ee
+RMD160 (opera/linux-i386/opera-10.10.gcc4-shared-qt3.i386.tar.bz2) = 4681757bff76a1c4edd75fc5985e4e16d6d4fa90
+Size (opera/linux-i386/opera-10.10.gcc4-shared-qt3.i386.tar.bz2) = 11708070 bytes
+SHA1 (opera/linux-powerpc/opera-10.10.gcc4-shared-qt3.ppc.tar.bz2) = c1b48469cfbfcab38acd993ce3669ef3b90308cc
+RMD160 (opera/linux-powerpc/opera-10.10.gcc4-shared-qt3.ppc.tar.bz2) = 2d28eb46c550515cac6d1bf042c1a72c33279738
+Size (opera/linux-powerpc/opera-10.10.gcc4-shared-qt3.ppc.tar.bz2) = 11858703 bytes
+SHA1 (opera/linux-x86_64/opera-10.10.gcc4-shared-qt3.x86_64.tar.bz2) = 03dde588b1afcd38076be83bb7cf1c43bde38ff0
+RMD160 (opera/linux-x86_64/opera-10.10.gcc4-shared-qt3.x86_64.tar.bz2) = 269c812f2f4ade237718dc8e695f7e47370f575e
+Size (opera/linux-x86_64/opera-10.10.gcc4-shared-qt3.x86_64.tar.bz2) = 12538791 bytes
+SHA1 (opera/solaris-i386/opera-10.10.gcc4-static-qt3.tar.bz2) = 6685464a855982ed3868eeb6eb2bbb07d426161f
+RMD160 (opera/solaris-i386/opera-10.10.gcc4-static-qt3.tar.bz2) = 9503ff8c9512d76fb0c950677118546f1c7c0236
+Size (opera/solaris-i386/opera-10.10.gcc4-static-qt3.tar.bz2) = 13437133 bytes
+SHA1 (opera/solaris-sparc/opera-10.10.gcc4-static-qt3.tar.bz2) = 69a7977ed864921eb848175a20d2a56cf34becfa
+RMD160 (opera/solaris-sparc/opera-10.10.gcc4-static-qt3.tar.bz2) = 1f1ec9fb119a49cba0827fda3e0cb043a53f42a7
+Size (opera/solaris-sparc/opera-10.10.gcc4-static-qt3.tar.bz2) = 13377045 bytes
