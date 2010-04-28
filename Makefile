@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3932 2010/04/27 17:59:50 schaecsn Exp $
+# $Id: Makefile,v 1.3933 2010/04/28 03:55:51 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -246,6 +246,7 @@ SUBDIR+=	couchdb-glib
 SUBDIR+=	courierpassd
 SUBDIR+=	cpdup
 SUBDIR+=	cpm
+SUBDIR+=	creal
 SUBDIR+=	cream
 SUBDIR+=	crfpp
 SUBDIR+=	crm114
