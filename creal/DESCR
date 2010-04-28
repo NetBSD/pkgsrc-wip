@@ -1,0 +1,12 @@
+Creal is an exact real arithmetic library (constructive reals) for ocaml
+
+Creal actually contains two different implementations:
+
+    * Creal: from the PhD thesis of Valerie Menissier-Morain (.ps)
+    * Cr: port of Hans Boehm's Java CR library
+
+The two interfaces are almost identical, so that it is easy to switch from one
+to the other, unless you are using the approx function directly: in Creal, it
+gives an approximation up to 1/4^n, and in Cr up to 2^n
+
+Both implementations are based on mlgmp by David Monniaux (included in this pkg)
