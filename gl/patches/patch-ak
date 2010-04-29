@@ -1,4 +1,4 @@
-$NetBSD: patch-ak,v 1.1.1.1 2010/01/03 14:32:17 pallegra Exp $
+$NetBSD: patch-ak,v 1.2 2010/04/29 01:03:55 khorben Exp $
 
 --- src/mesa/drivers/dri/Makefile.template.orig	2009-12-22 02:26:02.000000000 +0000
 +++ src/mesa/drivers/dri/Makefile.template
@@ -48,8 +48,8 @@ $NetBSD: patch-ak,v 1.1.1.1 2010/01/03 14:32:17 pallegra Exp $
 +$(TOP)/$(LIB_DIR)/$(LIBNAME): $(OBJECTS) $(MESA_MODULES) $(EXTRA_MODULES) \
 +		$(WINOBJ) Makefile $(TOP)/src/mesa/drivers/dri/Makefile.template
 +	$(LIBTOOL) --mode=link $(CC) -o $(TOP)/$(LIB_DIR)/$(LIBNAME:.so=.la) \
-+		$(OBJECTS:.o=.lo) $(WINOBJ:.o=.lo) $(DRI_LIB_DEPS) \
-+		$(MESA_MODULES:.a=.la) -rpath $(PREFIX)/lib \
++		$(OBJECTS:.o=.lo) $(EXTRA_MODULES) $(WINOBJ:.o=.lo) \
++		$(DRI_LIB_DEPS) $(MESA_MODULES:.a=.la) -rpath $(PREFIX)/lib \
 +		-module -avoid-version
  
  
