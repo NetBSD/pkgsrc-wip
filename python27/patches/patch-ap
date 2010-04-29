@@ -1,6 +1,6 @@
-$NetBSD: patch-ap,v 1.1.1.1 2010/03/17 13:09:07 obache Exp $
+$NetBSD: patch-ap,v 1.2 2010/04/29 14:54:00 obache Exp $
 
---- Modules/socketmodule.c.orig	2010-02-04 20:20:18.000000000 +0000
+--- Modules/socketmodule.c.orig	2010-04-02 11:18:17.000000000 +0000
 +++ Modules/socketmodule.c
 @@ -379,7 +379,7 @@ const char *inet_ntop(int af, const void
  #define SOCKETCLOSE close
@@ -66,7 +66,7 @@ $NetBSD: patch-ap,v 1.1.1.1 2010/03/17 13:09:07 obache Exp $
  			*len_ret = sizeof *addr;
  			return 1;
  		}
-@@ -4630,9 +4649,13 @@ init_socket(void)
+@@ -4642,9 +4661,13 @@ init_socket(void)
  	PyModule_AddIntConstant(m, "BTPROTO_L2CAP", BTPROTO_L2CAP);
  	PyModule_AddIntConstant(m, "BTPROTO_HCI", BTPROTO_HCI);
  	PyModule_AddIntConstant(m, "SOL_HCI", SOL_HCI);

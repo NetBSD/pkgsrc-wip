@@ -1,8 +1,8 @@
-$NetBSD: patch-al,v 1.1.1.1 2010/03/17 13:09:07 obache Exp $
+$NetBSD: patch-al,v 1.2 2010/04/29 14:54:00 obache Exp $
 
---- configure.orig	2010-02-27 00:11:42.000000000 +0000
+--- configure.orig	2010-04-08 08:13:31.000000000 +0000
 +++ configure
-@@ -4177,17 +4177,18 @@ _ACEOF
+@@ -4180,17 +4180,18 @@ _ACEOF
  	  RUNSHARED=LD_LIBRARY_PATH=`pwd`:${LD_LIBRARY_PATH}
  	  INSTSONAME="$LDLIBRARY".$SOVERSION
            ;;
@@ -27,42 +27,50 @@ $NetBSD: patch-al,v 1.1.1.1 2010/03/17 13:09:07 obache Exp $
      hp*|HP*)
  	  case `uname -m` in
  		ia64)
-@@ -14828,8 +14829,8 @@ then
- 			LDSHARED="$LDSHARED "'$(PYTHONFRAMEWORKPREFIX)/$(PYTHONFRAMEWORKDIR)/Versions/$(VERSION)/$(PYTHONFRAMEWORK)'
+@@ -14809,9 +14810,9 @@ then
+ 			LDCXXSHARED="$LDCXXSHARED "'$(PYTHONFRAMEWORKPREFIX)/$(PYTHONFRAMEWORKDIR)/Versions/$(VERSION)/$(PYTHONFRAMEWORK)'
  		else
  			# No framework, use the Python app as bundle-loader
 -			BLDSHARED="$LDSHARED "'-bundle_loader $(BUILDPYTHON)'
 -			LDSHARED="$LDSHARED "'-bundle_loader $(BINDIR)/python$(VERSION)$(EXE)'
+-			LDCXXSHARED="$LDCXXSHARED "'-bundle_loader $(BINDIR)/python$(VERSION)$(EXE)'
 +			BLDSHARED="$LDSHARED "'-flat_namespace -undefined suppress -bundle_loader $(BUILDPYTHON)'
 +			LDSHARED="$LDSHARED "'-flat_namespace -undefined suppress -bundle_loader $(BINDIR)/python$(VERSION)$(EXE)'
++			LDCXXSHARED="$LDCXXSHARED "'-flat_namespace -undefined suppress -bundle_loader $(BINDIR)/python$(VERSION)$(EXE)'
  		fi ;;
  	Darwin/*)
  		# Use -undefined dynamic_lookup whenever possible (10.3 and later).
-@@ -14850,12 +14851,12 @@ then
- 				LDSHARED="$LDSHARED "'$(PYTHONFRAMEWORKPREFIX)/$(PYTHONFRAMEWORKDIR)/Versions/$(VERSION)/$(PYTHONFRAMEWORK)'
+@@ -14835,15 +14836,15 @@ then
+ 				LDCXXSHARED="$LDCXXSHARED "'$(PYTHONFRAMEWORKPREFIX)/$(PYTHONFRAMEWORKDIR)/Versions/$(VERSION)/$(PYTHONFRAMEWORK)'
  			else
  				# No framework, use the Python app as bundle-loader
 -				BLDSHARED="$LDSHARED "'-bundle_loader $(BUILDPYTHON)'
 -				LDSHARED="$LDSHARED "'-bundle_loader $(BINDIR)/python$(VERSION)$(EXE)'
+-				LDCXXSHARED="$LDCXXSHARED "'-bundle_loader $(BINDIR)/python$(VERSION)$(EXE)'
 +				BLDSHARED="$LDSHARED "'-flat_namespace -undefined suppress -bundle_loader $(BUILDPYTHON)'
 +				LDSHARED="$LDSHARED "'-flat_namespace -undefined suppress -bundle_loader $(BINDIR)/python$(VERSION)$(EXE)'
++				LDCXXSHARED="$LDCXXSHARED "'-flat_namespace -undefined suppress -bundle_loader $(BINDIR)/python$(VERSION)$(EXE)'
  			fi
  		fi
  		;;
--	Linux*|GNU*|QNX*) LDSHARED='$(CC) -shared';;
-+	Linux*|GNU*|QNX*) LDSHARED='$(CC) -shared'" ${LDFLAGS}";;
- 	BSD/OS*/4*) LDSHARED="gcc -shared";;
- 	FreeBSD*)
- 		if [ "`$CC -dM -E - </dev/null | grep __ELF__`" != "" ]
-@@ -14879,6 +14880,7 @@ then
- 				esac
- 		fi;;
- 	NetBSD*|DragonFly*) LDSHARED="cc -shared ${LDFLAGS}";;
-+	Interix*) LDSHARED='$(CC) -shared'" ${LDFLAGS}";; # XXX tv needs image-base hack
+ 	Linux*|GNU*|QNX*)
+ 		LDSHARED='$(CC) -shared'
+-		LDCXXSHARED='$(CXX) -shared';;
++		LDCXXSHARED='$(CXX) -shared'" ${LDFLAGS}";;
+ 	BSD/OS*/4*)
+ 		LDSHARED="gcc -shared"
+ 		LDCXXSHARED="g++ -shared";;
+@@ -14874,6 +14875,9 @@ then
+ 	NetBSD*|DragonFly*)
+ 		LDSHARED="cc -shared ${LDFLAGS}"
+ 		LDCXXSHARED="c++ -shared ${LDFLAGS}";;
++	Interix*)
++		LDSHARED='$(CC) -shared'" ${LDFLAGS}"
++		LDCXXSHARED='$(CXX) -shared'" ${LDFLAGS}";; # XXX tv needs image-base hack
  	OpenUNIX*|UnixWare*)
- 		if test "$GCC" = "yes"
- 		then LDSHARED='$(CC) -shared'
-@@ -14913,6 +14915,7 @@ then
+ 		if test "$GCC" = "yes" ; then
+ 			LDSHARED='$(CC) -shared'
+@@ -14918,6 +14922,7 @@ then
  	Linux*|GNU*) CCSHARED="-fPIC";;
  	BSD/OS*/4*) CCSHARED="-fpic";;
  	FreeBSD*|NetBSD*|OpenBSD*|DragonFly*) CCSHARED="-fPIC";;
@@ -70,7 +78,7 @@ $NetBSD: patch-al,v 1.1.1.1 2010/03/17 13:09:07 obache Exp $
  	OpenUNIX*|UnixWare*)
  		if test "$GCC" = "yes"
  		then CCSHARED="-fPIC"
-@@ -14969,6 +14972,7 @@ then
+@@ -14974,6 +14979,7 @@ then
  		then
  			LINKFORSHARED="-Wl,--export-dynamic"
  		fi;;

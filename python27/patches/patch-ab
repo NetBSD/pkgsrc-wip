@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.1.1.1 2010/03/17 13:09:07 obache Exp $
+$NetBSD: patch-ab,v 1.2 2010/04/29 14:54:00 obache Exp $
 
---- Lib/distutils/command/build_ext.py.orig	2010-03-05 00:16:02.000000000 +0000
+--- Lib/distutils/command/build_ext.py.orig	2010-04-01 18:17:09.000000000 +0000
 +++ Lib/distutils/command/build_ext.py
 @@ -514,8 +514,19 @@ class build_ext (Command):
          # that go into the mix.
