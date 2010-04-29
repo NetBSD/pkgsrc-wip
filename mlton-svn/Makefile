@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2010/04/29 08:39:23 asau Exp $
+# $NetBSD: Makefile,v 1.13 2010/04/29 09:59:55 asau Exp $
 
 DISTNAME=	mlton
 PKGNAME=	mlton-0
@@ -12,7 +12,7 @@ LICENSE=	modified-bsd
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=	no
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake bash
 
 .if defined(MLTON_BOOT) && $(MLTON_BOOT) == "mlton"
 BUILD_TARGET=	all
@@ -32,8 +32,8 @@ REPLACE_PERL=	lib/mlrisc-lib/MLRISC/Doc/html/mltex2html \
 		lib/mlrisc-lib/MLRISC/cm/makecm
 # Fix broken scripts, they should use plain sh:
 REPLACE_SH=	lib/smlnj-lib/smlnj-lib/Doc/config.sh \
-		bin/platform bin/host-os bin/host-arch \
-		bin/mlton-script
+		bin/platform bin/host-os bin/host-arch
+REPLACE_BASH=	bin/mlton-script
 
 # No idea why replace-interpreter can't handle it,
 # apply more force and do it manually for now:
