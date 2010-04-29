@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2010/04/27 03:27:22 othyro Exp $
+# $NetBSD: Makefile,v 1.8 2010/04/29 00:21:37 othyro Exp $
 #
 
-PKGVERSION=	5.2.19
+PKGVERSION=	5.2.20
 DISTNAME=	mysql-workbench-oss-${PKGVERSION}
 PKGNAME=	${DISTNAME:S/-oss//}
 CATEGORIES=	databases
