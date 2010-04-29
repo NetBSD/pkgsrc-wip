@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2010/02/24 18:03:03 asau Exp $
+# $NetBSD: Makefile,v 1.11 2010/04/29 07:25:24 asau Exp $
 
 DISTNAME=	mlton
 PKGNAME=	mlton-0
@@ -30,7 +30,18 @@ REPLACE_PERL=	lib/mlrisc-lib/MLRISC/Doc/html/mltex2html \
 		lib/mlrisc-lib/MLRISC/Doc/html/mltex2html.orig \
 		lib/mlrisc-lib/MLRISC/cm/makeallcm \
 		lib/mlrisc-lib/MLRISC/cm/makecm
-REPLACE_SH=	lib/smlnj-lib/smlnj-lib/Doc/config.sh
+# Fix broken scripts, they should use plain sh:
+REPLACE_SH=	lib/smlnj-lib/smlnj-lib/Doc/config.sh \
+		bin/platform bin/host-os bin/host-arch
+
+# No idea why replace-interpreter can't handle it,
+# apply more force and do it manually for now:
+SUBST_CLASSES+=			fix-sh
+SUBST_STAGE.fix-sh=		pre-configure
+SUBST_MESSAGE.fix-sh=		Fixing broken scripts
+SUBST_FILES.fix-sh=		$(REPLACE_SH)
+SUBST_SED.fix-sh=		-e '1s|^#![[:space:]]*[^[:space:]]*sh|#!${SH},'
+
 
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../wip/mk/svn-package.mk"
