@@ -1,0 +1,5 @@
+Package is fine, but installation notes say:
+
+Do note Apache 2.2 and mod_dnssd 0.6 are required to use gnome-user-share.
+
+Currently unclear how to set this up from pkgsrc.
