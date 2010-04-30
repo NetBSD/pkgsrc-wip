@@ -1,13 +1,13 @@
 On NetBSD-5.99.x/amd64, fails in compilation with:
 
 Making all in Do.Interface.Linux
-gmake[1]: Entering directory `/scratch/nih/gnome-do/work/gnome-do-0.8.2/Do.Interface.Linux'
+gmake[1]: Entering directory `/scratch/wip/gnome-do/work/gnome-do-0.8.2/Do.Interface.Linux'
 Generating do.interface.linux.pc...
 Compiling Do.Interface.Linux.dll...
-gmake[1]: Leaving directory `/scratch/nih/gnome-do/work/gnome-do-0.8.2/Do.Interface.Linux'
+gmake[1]: Leaving directory `/scratch/wip/gnome-do/work/gnome-do-0.8.2/Do.Interface.Linux'
 Making all in Do.Platform.Linux
-gmake[1]: Entering directory `/scratch/nih/gnome-do/work/gnome-do-0.8.2/Do.Platform.Linux'
+gmake[1]: Entering directory `/scratch/wip/gnome-do/work/gnome-do-0.8.2/Do.Platform.Linux'
 gmake[1]: *** No rule to make target `src/Do.Platform/Do.Platform.Linux/Do.Platform.Linux.DBus/IController.cs', needed by `../build/Do.Platform.Linux.dll'.  Stop.
-gmake[1]: Leaving directory `/scratch/nih/gnome-do/work/gnome-do-0.8.2/Do.Platform.Linux'
+gmake[1]: Leaving directory `/scratch/wip/gnome-do/work/gnome-do-0.8.2/Do.Platform.Linux'
 gmake: *** [all-recursive] Error 1
 *** Error code 2
