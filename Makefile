@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3934 2010/04/30 10:11:39 thomasklausner Exp $
+# $Id: Makefile,v 1.3935 2010/04/30 10:14:06 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -558,6 +558,7 @@ SUBDIR+=	gnome-do
 SUBDIR+=	gnome-jabber
 SUBDIR+=	gnome-js-common
 SUBDIR+=	gnome-keyring-sharp
+SUBDIR+=	gnome-user-share
 SUBDIR+=	gnomebaker
 SUBDIR+=	gnomeradio
 SUBDIR+=	gnormalize
