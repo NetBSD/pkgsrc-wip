@@ -1,10 +1,13 @@
-@comment $NetBSD: PLIST,v 1.5 2009/10/11 10:50:43 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.6 2010/05/01 22:14:05 thomasklausner Exp $
 bin/o3totxt
+bin/tracker-applet
 bin/tracker-extract
 bin/tracker-files
 bin/tracker-meta-folder
+bin/tracker-preferences
 bin/tracker-query
 bin/tracker-search
+bin/tracker-search-tool
 bin/tracker-stats
 bin/tracker-status
 bin/tracker-tag
@@ -22,13 +25,19 @@ lib/libtrackerclient.la
 lib/pkgconfig/libtracker-gtk.pc
 lib/pkgconfig/tracker.pc
 lib/tracker/extract-modules/libextract-abw.la
+lib/tracker/extract-modules/libextract-exif.la
+lib/tracker/extract-modules/libextract-gstreamer.la
+lib/tracker/extract-modules/libextract-html.la
 lib/tracker/extract-modules/libextract-imagemagick.la
 lib/tracker/extract-modules/libextract-mp3.la
 lib/tracker/extract-modules/libextract-mplayer.la
+lib/tracker/extract-modules/libextract-msoffice.la
 lib/tracker/extract-modules/libextract-oasis.la
+lib/tracker/extract-modules/libextract-pdf.la
 lib/tracker/extract-modules/libextract-png.la
 lib/tracker/extract-modules/libextract-ps.la
 lib/tracker/extract-modules/libextract-totem.la
+lib/tracker/extract-modules/libextract-xmp.la
 lib/tracker/filters/application/csv_filter
 lib/tracker/filters/application/msword_filter
 lib/tracker/filters/application/pdf_filter
@@ -67,10 +76,13 @@ lib/tracker/thumbnailers/image/gif_thumbnailer
 lib/tracker/thumbnailers/image/jpeg_thumbnailer
 lib/tracker/thumbnailers/image/png_thumbnailer
 lib/tracker/thumbnailers/image/tiff_thumbnailer
+man/man1/tracker-applet.1
 man/man1/tracker-extract.1
 man/man1/tracker-files.1
 man/man1/tracker-meta-folder.1
+man/man1/tracker-preferences.1
 man/man1/tracker-query.1
+man/man1/tracker-search-tool.1
 man/man1/tracker-search.1
 man/man1/tracker-stats.1
 man/man1/tracker-status.1
@@ -79,7 +91,10 @@ man/man1/tracker-thumbnailer.1
 man/man1/trackerd.1
 man/man5/tracker.cfg.5
 man/man7/tracker-services.7
+share/applications/tracker-preferences.desktop
+share/applications/tracker-search-tool.desktop
 share/dbus-1/services/tracker.service
+share/gnome/autostart/tracker-applet.desktop
 share/gnome/autostart/trackerd.desktop
 share/icons/hicolor/16x16/apps/tracker.png
 share/icons/hicolor/22x22/apps/tracker.png
@@ -114,6 +129,11 @@ share/locale/sk/LC_MESSAGES/tracker.mo
 share/locale/sl/LC_MESSAGES/tracker.mo
 share/locale/sv/LC_MESSAGES/tracker.mo
 share/locale/zh_CN/LC_MESSAGES/tracker.mo
+share/tracker/icons/thumbnail_frame.png
+share/tracker/icons/tracker-applet-default.png
+share/tracker/icons/tracker-applet-indexing1.png
+share/tracker/icons/tracker-applet-indexing2.png
+share/tracker/icons/tracker-applet-paused.png
 share/tracker/languages/stopwords.da
 share/tracker/languages/stopwords.de
 share/tracker/languages/stopwords.en
@@ -146,4 +166,6 @@ share/tracker/sqlite-stored-procs.sql
 share/tracker/sqlite-tracker-triggers.sql
 share/tracker/sqlite-tracker.sql
 share/tracker/sqlite-user-data.sql
+share/tracker/tracker-applet-prefs.glade
 share/tracker/tracker-introspect.xml
+share/tracker/tracker-preferences.glade
