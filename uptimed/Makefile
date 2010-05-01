@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2008/05/24 15:34:15 tnn2 Exp $
+# $NetBSD: Makefile,v 1.4 2010/05/01 21:11:44 dzoe Exp $
 #
 
-DISTNAME=		uptimed-0.3.10
+DISTNAME=		uptimed-0.3.16
 CATEGORIES=		sysutils
 MASTER_SITES=		http://podgorny.cz/uptimed/releases/
 EXTRACT_SUFX=	.tar.bz2
