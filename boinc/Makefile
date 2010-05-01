@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/04/30 11:18:22 asau Exp $
+# $NetBSD: Makefile,v 1.5 2010/05/01 19:40:57 asau Exp $
 
 DISTNAME=		boinc-6.10.50
 CATEGORIES=		parallel
@@ -27,6 +27,7 @@ USE_TOOLS+=		autoconf automake pkg-config # gmake gm4
 USE_LIBTOOL=		yes
 USE_LANGUAGES=		c c++
 BUILDLINK_TRANSFORM+=	rm:-ldl
+CONFIGURE_ARGS+=	--without-x --without-wx-config
 
 pre-configure:
 	${RUN} cd ${WRKSRC} && ${SH} _autosetup
