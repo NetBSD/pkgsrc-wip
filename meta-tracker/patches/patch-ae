@@ -1,13 +1,13 @@
-$NetBSD: patch-ae,v 1.1 2009/02/15 11:49:25 thomasklausner Exp $
+$NetBSD: patch-ae,v 1.2 2010/05/01 22:34:48 thomasklausner Exp $
 
---- Makefile.in.orig	2008-03-03 04:14:01.000000000 +0000
-+++ Makefile.in
-@@ -297,7 +297,7 @@ target_alias = @target_alias@
- top_builddir = @top_builddir@
- top_srcdir = @top_srcdir@
- SUBDIRS = data src filters thumbnailers docs po python
+--- data/Makefile.in.orig	2010-02-04 10:56:46.000000000 +0000
++++ data/Makefile.in
+@@ -367,7 +367,7 @@ GTESTER_REPORT = gtester-report
+ # initialize variables for unconditional += appending
+ TEST_PROGS = 
+ SUBDIRS = db dbus modules languages icons services
 -autostartdir = $(sysconfdir)/xdg/autostart
 +autostartdir = $(prefix)/share/gnome/autostart
+ autostart_in_in_files = trackerd.desktop.in.in
  autostart_in_files = trackerd.desktop.in
- autostart_DATA = $(autostart_in_files:.desktop.in=.desktop)
- pkgconfigdir = $(libdir)/pkgconfig
+ autostart_DATA = trackerd.desktop

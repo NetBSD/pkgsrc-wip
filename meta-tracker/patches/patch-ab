@@ -1,15 +1,59 @@
-$NetBSD: patch-ab,v 1.2 2010/05/01 22:14:05 thomasklausner Exp $
+$NetBSD: patch-ab,v 1.3 2010/05/01 22:34:48 thomasklausner Exp $
 
---- src/tracker-extract/tracker-extract.c.orig	2008-06-09 22:10:59.000000000 +0200
-+++ src/tracker-extract/tracker-extract.c	2008-06-09 22:11:49.000000000 +0200
-@@ -36,6 +36,10 @@
+--- configure.orig	2010-05-01 22:19:30.000000000 +0000
++++ configure
+@@ -13178,7 +13178,7 @@ else
+ fi
  
- #include "tracker-extract.h"
  
-+#ifndef RLIMIT_AS
-+#define RLIMIT_AS RLIMIT_DATA
-+#endif
-+
- #define MAX_MEM 128
- #define MAX_MEM_AMD64 512
+-if test x$have_enca == "xyes"; then
++if test x$have_enca = "xyes"; then
  
+ $as_echo "#define HAVE_ENCA 1" >>confdefs.h
+ 
+@@ -13259,7 +13259,7 @@ fi
+ 
+ 
+ 
+-if test x$have_raptor == "xyes"; then
++if test x$have_raptor = "xyes"; then
+ 
+ $as_echo "#define HAVE_RAPTOR 1" >>confdefs.h
+ 
+@@ -18017,7 +18017,7 @@ fi
+ 
+ 
+ 
+-   if test x$have_evolution_plugin == "xyes"; then
++   if test x$have_evolution_plugin = "xyes"; then
+       EVOLUTION_PLUGIN_INSTALL_DIR=`$PKG_CONFIG evolution-plugin --variable=plugindir`
+    else
+       EVOLUTION_PLUGIN_INSTALL_DIR=/dev/null
+@@ -18364,10 +18364,10 @@ eval as_val=\$$as_ac_File
+ fi
+ 
+ 
+-if test "x$old_exec_trackerd" == "xyes" -o \
+-        "x$old_exec_tracker_indexer" == "xyes" -o \
+-        "x$old_exec_tracker_extract" == "xyes" -o \
+-        "x$old_exec_tracker_thumbnailer" == "xyes"; then
++if test "x$old_exec_trackerd" = "xyes" -o \
++        "x$old_exec_tracker_indexer" = "xyes" -o \
++        "x$old_exec_tracker_extract" = "xyes" -o \
++        "x$old_exec_tracker_thumbnailer" = "xyes"; then
+    old_exec_message="
+         Old Tracker executable files were found in your path.
+         (trackerd, tracker-indexer, tracker-thumbnailer, tracker-extract)"
+@@ -18375,9 +18375,9 @@ if test "x$old_exec_trackerd" == "xyes" 
+ 	** These files will be removed as part of the installation **"
+ fi
+ 
+-if test "x$old_data_dbus_service" == "xyes" -o \
+-        "x$old_data_dbus_xml" == "xyes" -o \
+-        "x$old_data_stored_procs" == "xyes"; then
++if test "x$old_data_dbus_service" = "xyes" -o \
++        "x$old_data_dbus_xml" = "xyes" -o \
++        "x$old_data_stored_procs" = "xyes"; then
+    old_data_message="
+         Old Tracker data files were found in the prefix you are installing to."
+    old_file_action="

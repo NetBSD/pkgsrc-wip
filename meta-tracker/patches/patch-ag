@@ -1,0 +1,30 @@
+$NetBSD: patch-ag,v 1.1 2010/05/01 22:34:48 thomasklausner Exp $
+
+--- src/trackerd/tracker-crawler.c.orig	2010-02-04 10:25:44.000000000 +0000
++++ src/trackerd/tracker-crawler.c
+@@ -25,7 +25,9 @@
+ /* VFAT check, FIXME should we move this elsewhere? */
+ #include <fcntl.h>
+ #include <sys/ioctl.h>
++#if defined(__Linux__)
+ #include <linux/msdos_fs.h>
++#endif
+ #include <unistd.h>
+ /* End of VFAT check includes */
+ 
+@@ -384,6 +386,7 @@ is_path_ignored (TrackerCrawler *crawler
+ 			goto done;
+ 		}
+ 
++#if defined(__Linux__)
+ 		/* If the file is on FAT and if the hidden attribute is set, we
+ 		 * consider the directory to be hidden */
+ 
+@@ -414,6 +417,7 @@ is_path_ignored (TrackerCrawler *crawler
+ 				goto done;
+ 			}
+ 		}
++#endif
+ 
+ 		/* Check module directory ignore patterns */
+ 		for (l = crawler->private->ignored_directory_patterns; l; l = l->next) {

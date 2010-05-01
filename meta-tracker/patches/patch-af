@@ -1,0 +1,21 @@
+$NetBSD: patch-af,v 1.1 2010/05/01 22:34:48 thomasklausner Exp $
+
+--- src/libtracker-common/tracker-albumart.c.orig	2010-02-04 10:25:44.000000000 +0000
++++ src/libtracker-common/tracker-albumart.c
+@@ -81,6 +81,8 @@ my_compute_checksum_for_data (GChecksumT
+ 	return retval;
+ }
+ 
++/* XXX: correct fix would be to check for it in configure */
++#if !defined(__NetBSD__)
+ #ifndef HAVE_STRCASESTR
+ 
+ static gchar *
+@@ -110,6 +112,7 @@ strcasestr (const gchar *haystack, 
+ }
+ 
+ #endif /* HAVE_STRCASESTR */
++#endif
+ 
+ /* NOTE: This function was stolen from GLib 2.18.x. Since upstream and
+  * the Maemo branch don't have this in circulation yet, we have copied

@@ -1,13 +1,13 @@
-$NetBSD: patch-ad,v 1.1 2009/02/15 11:49:25 thomasklausner Exp $
+$NetBSD: patch-ad,v 1.2 2010/05/01 22:34:48 thomasklausner Exp $
 
---- src/tracker-applet/Makefile.in.orig	2008-03-03 04:14:00.000000000 +0000
+--- src/tracker-applet/Makefile.in.orig	2010-02-04 10:56:49.000000000 +0000
 +++ src/tracker-applet/Makefile.in
-@@ -295,7 +295,7 @@ sysconfdir = @sysconfdir@
- target_alias = @target_alias@
- top_builddir = @top_builddir@
- top_srcdir = @top_srcdir@
+@@ -387,7 +387,7 @@ icon_DATA = \
+ 	tracker-applet-indexing2.png 					\
+ 	tracker-applet-paused.png
+ 
 -autostartdir = $(sysconfdir)/xdg/autostart
 +autostartdir = $(prefix)/share/gnome/autostart
- autostart_in_files = tracker-applet.desktop.in
- autostart_DATA = $(autostart_in_files:.desktop.in=.desktop)
+ autostart_DATA = tracker-applet.desktop
  pkgdata_DATA = tracker-applet-prefs.glade
+ EXTRA_DIST = $(icon_DATA) $(pkgdata_DATA) tracker-marshal.list
