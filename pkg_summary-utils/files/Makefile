@@ -3,6 +3,7 @@
 PREFIX?=	/usr/local
 BINDIR?=	${PREFIX}/bin
 MANDIR?=	${PREFIX}/man
+LIBEXECDIR?=	${PREFIX}/libexec/psu
 DOCDIR=		${PREFIX}/share/doc/pkg_summary-utils
 AWKMODDIR?=	${PREFIX}/share/awk
 MKSCRIPTSDIR?=	${PREFIX}/share/psu_mk
@@ -19,6 +20,8 @@ BMAKE?=		/usr/bin/make
 
 #############################################################
 
+LIBEXECSCRIPTS=	enrich_XDEPENDS direct_deps
+
 SCRIPTS=	pkg_cmp_summary pkg_list_all_pkgs
 SCRIPTS+=	pkg_refresh_summary pkg_src_fetch_var
 SCRIPTS+=	pkg_micro_src_summary pkg_src_summary
@@ -28,6 +31,13 @@ SCRIPTS+=	cvs_checksum pkg_assignments2pkgpath
 SCRIPTS+=	pkg_uniq_summary pkg_summary2bb_pkgs
 SCRIPTS+=	pkg_cleanup_distdir pkg_summary2build_graph
 SCRIPTS+=	pkg_summary2deps pkg_lint_summary
+SCRIPTS+=	pkg_subgraph_deps
+
+SCRIPTS+=	${LIBEXECSCRIPTS}
+
+.for i in ${LIBEXECSCRIPTS}
+SCRIPTSDIR_${i}=	${LIBEXECDIR}
+.endfor
 
 MAN=		pkg_summary-utils.7
 
@@ -40,6 +50,7 @@ MAN+=		cvs_checksum.1 # pkg_assignments2pkgpath.1
 MAN+=		pkg_uniq_summary.1 # pkg_summary2bb_pkgs.1
 MAN+=		pkg_cleanup_distdir.1 pkg_summary2build_graph.1
 MAN+=		pkg_summary2deps.1 pkg_lint_summary.1
+MAN+=		# pkg_subgraph_deps.1
 
 FILES=		README NEWS TODO
 FILES+=		pkg_grep_summary.awk pkg_src_summary.mk psu_funcs.awk
@@ -97,6 +108,10 @@ install-dirs:
 
 ############################################################
 
+all:	${SCRIPTS}
+
+DIFF_PROG?=	diff -U10
+
 .PHONY : test
 test : all
 	@echo 'running tests...'; \
@@ -104,7 +119,7 @@ test : all
 		env PATH="${.OBJDIR}:$$PATH" OBJDIR=${.OBJDIR} \
 			BMAKE=${BMAKE} ./test.sh \
 			> ${.OBJDIR}/_test.res && \
-		diff -C10 ${.CURDIR}/tests/test.out ${.OBJDIR}/_test.res; \
+		${DIFF_PROG} ${.CURDIR}/tests/test.out ${.OBJDIR}/_test.res; \
 	then echo '   succeeded'; \
 	else echo '   failed'; false; \
 	fi

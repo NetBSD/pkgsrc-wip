@@ -743,14 +743,74 @@ PKGNAME=ap22-py25-python-3.3.1
 PKGPATH=www/ap2-python
 
 --------------------------------------------------
-------- pkg_src_summary #11
+------- pkg_src_summary #11.0
 ASSIGNMENTS=PYTHON_VERSION_REQD=25
 PKGNAME=py25-cairo-X
 PKGPATH=graphics/py-cairo
+FAKED_PKGPATH= lang/python25 math/py-Numeric:PYTHON_VERSION_REQD=25 lang/python25 math/py-Numeric:PYTHON_VERSION_REQD=25 
 
 ASSIGNMENTS=PYTHON_VERSION_REQD=25
 PKGNAME=py25-Numeric-X
 PKGPATH=math/py-Numeric
+FAKED_PKGPATH= lang/python25 lang/python25
+
+PKGNAME=cairo-X
+PKGPATH=graphics/cairo
+FAKED_PKGPATH= 
+
+PKGNAME=python25-X
+PKGPATH=lang/python25
+FAKED_PKGPATH= 
+
+--------------------------------------------------
+------- pkg_src_summary #11.1
+PKGNAME=py26-cairo-X
+PKGPATH=graphics/py-cairo
+FAKED_PKGPATH= lang/python26 math/py-Numeric math/py-Numeric 
+
+PKGNAME=cairo-X
+PKGPATH=graphics/cairo
+FAKED_PKGPATH= 
+
+PKGNAME=py26-Numeric-X
+PKGPATH=math/py-Numeric
+FAKED_PKGPATH= lang/python26
+
+PKGNAME=python26-X
+PKGPATH=lang/python26
+FAKED_PKGPATH= 
+
+--------------------------------------------------
+------- pkg_src_summary #11.2
+PKGNAME=py26-cairo-X
+PKGPATH=graphics/py-cairo
+FAKED_PKGPATH= lang/python26 math/py-Numeric math/py-Numeric 
+
+ASSIGNMENTS=PYTHON_VERSION_REQD=25
+PKGNAME=py25-cairo-X
+PKGPATH=graphics/py-cairo
+FAKED_PKGPATH= lang/python25 math/py-Numeric:PYTHON_VERSION_REQD=25 lang/python25 math/py-Numeric:PYTHON_VERSION_REQD=25 
+
+ASSIGNMENTS=PYTHON_VERSION_REQD=25
+PKGNAME=py25-Numeric-X
+PKGPATH=math/py-Numeric
+FAKED_PKGPATH= lang/python25 lang/python25
+
+PKGNAME=cairo-X
+PKGPATH=graphics/cairo
+FAKED_PKGPATH= 
+
+PKGNAME=py26-Numeric-X
+PKGPATH=math/py-Numeric
+FAKED_PKGPATH= lang/python26
+
+PKGNAME=python25-X
+PKGPATH=lang/python25
+FAKED_PKGPATH= 
+
+PKGNAME=python26-X
+PKGPATH=lang/python26
+FAKED_PKGPATH= 
 
 --------------------------------------------------
 ------- pkg_assignments2pkgpath #12
@@ -1449,3 +1509,57 @@ MandatoryOptionErrorMessage
 l: not_found /usr/pkg/lib/libmaa.so.2 wip/dict-client dict-client-1.11.2
 l: not_found /usr/pkg/lib/libz.so.1 wip/dict-client dict-client-1.11.2
 l: not_found /usr/pkg/lib/libz.so.1 wip/dict-server dict-server-1.11.2
+--------------------------------------------------
+------- pkg_subgraph_deps #22.1
+textproc/dictem
+wip/awk-pkgsrc-dewey wip/pkg_summary-utils
+wip/libuxre wip/heirloom-awk
+wip/paexec wip/distbb
+wip/pkg_summary-utils wip/distbb
+wip/pkg_summary-utils wip/pkg_online-client
+wip/pkg_summary-utils wip/pkg_online-server
+wip/runawk wip/awk-pkgsrc-dewey
+wip/runawk wip/distbb
+wip/runawk wip/paexec
+wip/runawk wip/pkg_summary-utils
+--------------------------------------------------
+------- pkg_subgraph_deps -r #22.2
+devel/libtool-base wip/libuxre
+lang/f2c devel/libtool-base
+textproc/dictem
+wip/heirloom-common wip/heirloom-doc
+wip/heirloom-doc wip/heirloom-libcommon
+wip/heirloom-libcommon wip/libuxre
+wip/runawk
+--------------------------------------------------
+------- pkg_subgraph_deps -x #22.3
+wip/awk-pkgsrc-dewey wip/pkg_summary-utils
+wip/heirloom-awk
+wip/paexec wip/distbb
+wip/pkg_summary-utils wip/distbb
+wip/pkg_summary-utils wip/pkg_online-client
+wip/pkg_summary-utils wip/pkg_online-server
+--------------------------------------------------
+------- pkg_subgraph_deps -xr #22.4
+lang/f2c devel/libtool-base
+wip/heirloom-common wip/heirloom-doc
+wip/heirloom-doc wip/heirloom-libcommon
+--------------------------------------------------
+------- pkg_subgraph_deps -xv #22.5
+devel/gmake textproc/dict-client
+devel/gmake textproc/dict-server
+devel/libjudy
+devel/libmaa textproc/dict-client
+devel/libmaa textproc/dict-server
+devel/libtool-base devel/libmaa
+devel/libtool-base textproc/dict-client
+devel/libtool-base textproc/dict-server
+devel/libtool-base wip/libuxre
+devel/pipestatus
+lang/f2c devel/libtool-base
+net/netcat
+textproc/dictem
+wip/heirloom-common wip/heirloom-doc
+wip/heirloom-doc wip/heirloom-libcommon
+wip/heirloom-libcommon wip/libuxre
+wip/runawk

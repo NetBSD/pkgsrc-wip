@@ -21,8 +21,9 @@ AWKPATH="$srcdir:$OBJDIR"
 PATH=$OBJDIR:$PATH
 
 PSS_MKSCRIPTSDIR="${srcdir}"
+LIBEXECDIR="${OBJDIR}"
 
-export PKGSRCDIR BMAKE AWKPATH PATH PSS_MKSCRIPTSDIR AWKPATH
+export PKGSRCDIR BMAKE AWKPATH PATH PSS_MKSCRIPTSDIR AWKPATH LIBEXECDIR
 
 #
 print_args (){
@@ -217,14 +218,51 @@ grep -v DEPENDS
 
 
 # pkg_src_summary
+normalize_python_deps (){
+    awk '
+sub(/^DEPENDS=/, "FAKED_PKGPATH= ") {
+   for (i=2; i <= NF; ++i){
+      if ($i ~ /py/){
+         sub(/^[^:]*:([.][.]\/[.][.]\/)?/, "", $i)
+         if (i && $i == $(i-1))
+            $i = ""
+      }else{
+         $i = ""
+      }
+   }
+   gsub(/  +/, " ")
+}
+/^BUILD_DEPENDS=/ {
+   next
+}
+{
+   print
+}
+' "$@"
+}
+
 echo '--------------------------------------------------'
-echo '------- pkg_src_summary #11'
+echo '------- pkg_src_summary #11.0'
 pkg_src_summary -A -f PKGNAME,PKGPATH \
    graphics/py-cairo:PYTHON_VERSION_REQD=25 |
-grep -v DEPENDS |
-pkg_grep_summary -m PKGPATH 'py-Numeric|py-cairo' |
+normalize_python_deps |
+pkg_grep_summary -m PKGPATH 'py-Numeric|py-cairo|python|cairo' |
 normalize_version
 
+echo '--------------------------------------------------'
+echo '------- pkg_src_summary #11.1'
+pkg_src_summary -A -f PKGNAME,PKGPATH \
+   graphics/py-cairo:PYTHON_VERSION_REQD=26 |
+normalize_python_deps |
+pkg_grep_summary -m PKGPATH 'py-Numeric|py-cairo|python|cairo' |
+normalize_version
+
+echo '--------------------------------------------------'
+echo '------- pkg_src_summary #11.2'
+pkg_src_summary -m -A -f PKGNAME,PKGPATH graphics/py-cairo |
+normalize_python_deps |
+pkg_grep_summary -m PKGPATH 'py-Numeric|py-cairo|python|cairo' |
+normalize_version
 
 
 # pkg_assignments2pkgpath
@@ -395,3 +433,20 @@ sed 's/^One of the.*$/MandatoryOptionErrorMessage/'
 echo '--------------------------------------------------'
 echo '------- pkg_lint_summary #21.1'
 pkg_lint_summary -l bin_summary1.txt | sort
+
+# pkg_subgraph_deps
+echo '--------------------------------------------------'
+echo '------- pkg_subgraph_deps #22.1'
+pkg_subgraph_deps -f src_pkgs.txt src_deps.txt | sort
+echo '--------------------------------------------------'
+echo '------- pkg_subgraph_deps -r #22.2'
+pkg_subgraph_deps -f src_pkgs.txt -r src_deps.txt | sort
+echo '--------------------------------------------------'
+echo '------- pkg_subgraph_deps -x #22.3'
+pkg_subgraph_deps -x -f src_pkgs.txt src_deps.txt | sort
+echo '--------------------------------------------------'
+echo '------- pkg_subgraph_deps -xr #22.4'
+pkg_subgraph_deps -rx -f src_pkgs.txt src_deps.txt | sort
+echo '--------------------------------------------------'
+echo '------- pkg_subgraph_deps -xv #22.5'
+pkg_subgraph_deps -xv -f src_pkgs.txt src_deps.txt | sort

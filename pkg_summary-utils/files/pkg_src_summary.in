@@ -35,6 +35,7 @@ export LC_ALL=C
 PKGSRCDIR=${PKGSRCDIR:=@PKGSRCDIR@}
 BMAKE=${BMAKE:=@BMAKE@}
 PSS_MKSCRIPTSDIR=${PSS_MKSCRIPTSDIR:=@@mkscriptsdir@@}
+LIBEXECDIR=${LIBEXECDIR:=@@libexecdir@@}
 
 ############################################################
 usage (){
@@ -135,13 +136,13 @@ process_options (){
 	    -p|--make-plist)
 		make_plist='-p';;
 	    -d|--with-deps)
-		with_dep=1;;
+		with_dep=-d;;
 	    -D|--with-bdeps)
-		with_bdep=1;;
+		with_bdep=-D;;
 	    -A|--with-alldeps)
 		add_fields DEPENDS BUILD_DEPENDS
-		with_dep=1
-		with_bdep=1;;
+		with_dep=-d
+		with_bdep=-D;;
 	    -m)
 	        multi_var=1;;
 	    -M)
@@ -492,7 +493,7 @@ if test "$multi_var"; then
 
 	runpipe0 \
 	    summary2all_variants < $multi_pkgs_fn '|' \
-	    pkg_src_summary $make_plist '|' \
+	    env _PSS_RECURS=1 pkg_src_summary $make_plist '|' \
 	    move_ASSIGNMENTS_to_PKGPATH >> "$partial_summary_fn"
     fi
 fi
@@ -505,6 +506,12 @@ extra_deps_fn=$tmp_dir/extra_deps.txt
 processed_pkgs_fn=$tmp_dir/processed_pkgs.txt
 
 get_processed_pkgs (){
+    # given summaries on input this script outputs all possible
+    # enriched PKGPATHs, i.e plain PKGPATHs,
+    # PKGPATH:<good_assignments> and
+    # PKGPATH:<good_assignments>,<bad_assignments> where
+    # <good_assignments> are assignments from ASSIGMENTS, and
+    # <bad_assignments> are rejected ones from _INHER_ASSIGNS_REJ.
     awk '
 NF == 0 {
    if (assigns != "")
@@ -535,99 +542,21 @@ NF == 0 {
 get_processed_pkgs < "$partial_summary_fn" > "$processed_pkgs_fn"
 
 deps1_all_fn=$tmp_dir/level1_all_deps.txt
-deps1_needed_fn=$tmp_dir/level1_needed_deps.txt
-
-filter_needed_deps (){
-    runawk -v partial_summary_fn="$partial_summary_fn" -e '
-#use "xgetline.awk"
-#use "pkg_grep_summary.awk"
-#use "braceexpand.awk"
-#use "psu_funcs.awk"
-
-BEGIN {
-   oldFS = FS
-   FS = " "
-   while (xgetline0(partial_summary_fn)){
-      if (match($0, /^(BUILD_)?DEPENDS=/)) {
-         $0=substr($0, RLENGTH+1)
-         for (i=1; i <= NF; i += 2){
-            if ($i ~ /[{]/){
-               $i = braceexpand($i)
-               sub(/ .*$/, "", $i)
-            }
-            sub(/:[.][.]\/[.][.]\//, " ")
-            needed [pkgname2pkgbase($i), $(i+1)] = 1
-         }
-      }
-   }
-   FS = oldFS
-
-   grep_summary__field = "" # all lines will be analysed
-}
-
-function grep_summary__condition (               _res){
-   if (fname == "PKGNAME"){
-      pkgname = fvalue
-      sub(/-[^-]+$/, "", pkgname)
-   }else if (fname == "PKGPATH"){
-      pkgpath = fvalue
-   }
-
-   if (pkgpath && pkgname){
-      _res = (pkgname SUBSEP pkgpath) in needed
-      pkgname = pkgpath = ""
-      return _res
-   }else{
-      return -1
-   }
-}
-' "$@"
-}
 
 while test -n "${with_dep}${with_bdep}"; do
-    runawk -v with_dep=$with_dep -v with_bdep=$with_bdep \
-	   -v processed_pkgs_fn=$processed_pkgs_fn -e '
-#use "xgetline.awk"
-#use "braceexpand.awk"
+    if test -n "$debug"; then
+	echo '===== partial_summary: =========' 1>&2
+	cat "$partial_summary_fn" 1>&2
+    fi
 
-    BEGIN {
-	while (xgetline0(processed_pkgs_fn)){
-	    processed_pkgs [$0] = 1
-	}
-    }
-    /^PKGPATH=/ {
-	pkgpaths [substr($0, 9)] = 1
-	next
-    }
-    NF == 0 {
-	inher_assigns = ""
-	next
-    }
-    /^_INHER_ASSIGNS=/ {
-	inher_assigns = ":" substr($0, 16)
-	next
-    }
-    (with_dep && /^DEPENDS=/) || (with_bdep && /^BUILD_DEPENDS=/)  {
-	sub(/^[^=]*=/, "")
-	for (i=1; i <= NF; ++i){
-	    if ($i ~ /[{]/){
-		$i = braceexpand($i)
-		sub(/ .*$/, "", $i)
-	    }
-	    gsub(/[^ ]*:[.][.]\/[.][.]\//, "", $i)
-	    sub(/\/+$/, "", $i)
-	    depends [$i inher_assigns] = 1
-	}
-	next
-    }
-    END {
-	for (d in depends){
-	    if (! (d in pkgpaths) && ! (d in processed_pkgs)){
-		print d
-	    }
-	}
-    }
-    ' "$partial_summary_fn" > "$extra_deps_fn"
+    if test -n "$debug"; then
+	echo '===== processed_pkgs: =========' 1>&2
+	cat "$processed_pkgs_fn" 1>&2
+    fi
+
+    ##
+    $LIBEXECDIR/direct_deps $with_dep $with_bdep -p "$processed_pkgs_fn" \
+	"$partial_summary_fn" > "$extra_deps_fn"
 
     if test -n "$debug"; then
 	echo '===== extra_deps: =========' 1>&2
@@ -638,24 +567,16 @@ while test -n "${with_dep}${with_bdep}"; do
 	break
     fi
 
-    env _PSS_RECURS=1 $0 -m $make_plist \
+    ##
+    env _PSS_RECURS=1 $0 $make_plist \
 	< "$extra_deps_fn" > "$deps1_all_fn"
     if test -n "$debug"; then
-	echo '===== level-1 deps summaries (multivariant) =========' 1>&2
+	echo '===== level-1 deps summaries =========' 1>&2
 	cat "$deps1_all_fn" 1>&2
     fi
 
-    filter_needed_deps "$deps1_all_fn" > "$deps1_needed_fn"
-    if test -n "$debug"; then
-	echo '===== level-1 deps summaries (needed) =========' 1>&2
-	cat "$deps1_needed_fn" 1>&2
-    fi
-
-    if ! test -s "$deps1_needed_fn"; then
-	break
-    fi
-
-    cat "$deps1_needed_fn" >> "$partial_summary_fn"
+    ##
+    cat "$deps1_all_fn" >> "$partial_summary_fn"
 
     pkg_uniq_summary "$partial_summary_fn" > "$partial_summary_fn".tmp
     mv "$partial_summary_fn".tmp "$partial_summary_fn"
@@ -670,49 +591,13 @@ remove_internal_fields (){
     grep -v '^_.*=' "$@" || true
 }
 
-enrich_XDEPENDS (){
-    awk '
-FILENAME == "-" {
-   if (/^PKGPATH=/){
-      pkgpath = substr($0, 9)
-   }else if (/^PKGNAME=/){
-      pkgbase = substr($0, 9)
-      sub(/-[^-]+$/, "", pkgbase)
-   }else if (/^ASSIGNMENTS=/){
-      assigns = substr($0, 13)
-   }else if (NF == 0){
-      if (assigns != ""){
-         p2a [pkgpath, pkgbase] = assigns
-      }
-      assigns = pkgpath = pkgbase = ""
-   }
-   next
-}
-match($0, /^(BUILD_)?DEPENDS=/) {
-   field = substr($0, 1, RLENGTH)
-   $0 = substr($0, RLENGTH+1)
-   for (i=1; i <= NF; ++i){
-      idx = index($i, ":")
-      pkgpath = substr($i, idx+1)
-      sub(/^[.][.]\/[.][.]\//, "", pkgpath)
-      pkgbase = substr($i, 1, idx-1)
-      sub(/-[^-]+$/, "", pkgbase)
-      if ((pkgpath SUBSEP pkgbase) in p2a){
-         $i = $i ":" p2a [pkgpath, pkgbase]
-      }
-   }
-   print field $0
-   next
-}
-{
-   print $0
-}
-' - "$1" < "$1"
+run_enrich_XDEPENDS (){
+    $LIBEXECDIR/enrich_XDEPENDS - "$1" < "$1"
 }
 
 if test -z "$_PSS_RECURS"; then
-    enrich_XDEPENDS "$partial_summary_fn" |
+    run_enrich_XDEPENDS "$partial_summary_fn" |
     remove_internal_fields
 else
-    remove_internal_fields "$partial_summary_fn"
+    cat "$partial_summary_fn"
 fi

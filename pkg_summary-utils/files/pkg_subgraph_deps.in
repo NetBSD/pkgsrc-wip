@@ -1,0 +1,135 @@
+#!/usr/bin/env runawk
+
+# Copyright (c) 2010 Aleksey Cheusov <vle@gmx.net>
+#
+# Permission is hereby granted, free of charge, to any person obtaining
+# a copy of this software and associated documentation files (the
+# "Software"), to deal in the Software without restriction, including
+# without limitation the rights to use, copy, modify, merge, publish,
+# distribute, sublicense, and/or sell copies of the Software, and to
+# permit persons to whom the Software is furnished to do so, subject to
+# the following conditions:
+#
+# The above copyright notice and this permission notice shall be
+# included in all copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+# EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+# NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+# LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+# OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+# WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+#use "power_getopt.awk"
+#use "xgetline.awk"
+
+#.begin-str help
+# This program takes a dependency graph of packages and a list of
+# individual packages and outputs subgraph consisting of packages that
+# depend on listed packages directly or indirectly (the default).
+#
+# usage: pkg_subgraph_deps [OPTIONS] [files...]
+# OPTIONS:
+#    -h|--help          display this screen
+#    =f <file>          list of packages, one package per line
+#    -r                 output dependencies
+#    -x                 exclude packages in the list
+#    -v                 invert condition
+#
+# Input graph is represented by list of arcs and isolated nodes, e.g.
+#   devel/gmake textproc/dict-client
+#   devel/gmake textproc/dict-server
+#   devel/libjudy
+#   devel/libmaa textproc/dict-client
+#   devel/libmaa textproc/dict-server
+#   devel/libmaa wip/paexec
+#   net/netcat
+#
+# Option -f is mandatory.
+#.end-str
+
+BEGIN {
+	fn         = getarg("f")
+	opt_deps   = getarg("r")
+	opt_excl   = getarg("x")
+	opt_invert = getarg("v")
+
+	if (!fn){
+		print "-f is mandatory!" > "/dev/stderr"
+		exitnow(1)
+	}
+
+	while (xgetline0(fn)){
+		list [$1] = 1
+	}
+}
+
+NF == 2 {
+	if (opt_deps)
+		arc [$2, ++count [$2]] = $1
+	else
+		arc [$1, ++count [$1]] = $2
+
+	nodes [$1] = nodes [$2] = 1
+	next
+}
+
+NF == 1 {
+	nodes [$1] = 1
+}
+
+function rec (pkg,                    i,to){
+	if (pkg in result)
+		return
+
+	if (! (pkg in count))
+		return
+
+	result [pkg] = 1
+	for (i=1; i <= count [pkg]; ++i){
+		to = arc [pkg, i]
+		rec(to)
+		result [to] = 1
+	}
+}
+
+function print_arc (from, to){
+	if ((from in result) && (to in result)){
+		print from, to
+		printed [from] = printed [to] = 1
+	}
+}
+
+END {
+	for (i in list){
+		rec(i)
+		result [i] = 1
+	}
+	if (opt_excl){
+		for (i in list)
+			delete result [i]
+	}
+	if (opt_invert){
+		for (i in nodes){
+			if (i in result)
+				delete result [i]
+			else
+				result [i] = 1
+		}
+	}
+
+	for (i in arc){
+		from = substr(i, 1, index(i, SUBSEP)-1)
+
+		if (opt_deps)
+			print_arc(arc [i], from)
+		else
+			print_arc(from, arc [i])
+	}
+
+	for (i in nodes){
+		if ((i in result) && !(i in printed))
+			print i
+	}
+}

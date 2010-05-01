@@ -17,6 +17,9 @@ existing tools:
 
     pkg_grep_summary:
        - -M <field> <file with patterns>
+       - -t <search_strategy> FIELD STRING_OR_RE
+         search_strategy: exact, prefix, suffix, word, re, substring ...
+       - fix for multiline fields: PLIST, DESCR, DEPENDS, REQUIRES, PROVIDES...
 
     pkg_list_all_pkgs:
 
@@ -30,20 +33,14 @@ existing tools:
        - remove it, see pkg_micro_src_summary
 
     pkg_src_summary:
-       - Option -A works incorrectly with some sort of
-         {alter,native}:../../depend/encies. This problem is visible in partial
-         distbb(1) bulk builds. Things like
-            DEPENDS=...libao-[a-z]*-[0-9]*...
-         also doesn't work properly.
+       - -A + DEPENDS=...libao-[a-z]*-[0-9]*...
        - new option for exit code 0 if everything was done successfully,
          1 otherwise
 
     pkg_summary2bb_pkgs:
 
     pkg_summary2build_graph:
-       - See problems of pkg_src_summary -A.
-         Due to that bug distbb sometimes fails to build packages in 'depends' stage.
-         This should not happen.
+       - -A + DEPENDS=...libao-[a-z]*-[0-9]*...
 
     pkg_summary2deps:
 
@@ -63,6 +60,11 @@ existing tools:
          - old binaries
          - distfiles checksums
          - check binaries and their REQUIRES and analyse Makefile
+         - uniq PKGNAME
+
+    pkg_subgraph_deps:
+         - man page
+         - -p 'pkg1 pkg2 ...pkgN'
 
 new tools?
     - list leaf packages?

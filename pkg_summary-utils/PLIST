@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2010/03/01 15:20:44 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.19 2010/05/01 21:06:44 cheusov Exp $
 bin/cvs_checksum
 bin/pkg_assignments2pkgpath
 bin/pkg_cleanup_distdir
@@ -10,6 +10,7 @@ bin/pkg_micro_src_summary
 bin/pkg_refresh_summary
 bin/pkg_src_fetch_var
 bin/pkg_src_summary
+bin/pkg_subgraph_deps
 bin/pkg_summary2bb_pkgs
 bin/pkg_summary2build_graph
 bin/pkg_summary2deps
@@ -17,6 +18,8 @@ bin/pkg_summary4view
 bin/pkg_uniq_summary
 bin/pkg_update_src_summary
 bin/pkg_update_summary
+libexec/psu/direct_deps
+libexec/psu/enrich_XDEPENDS
 man/man1/cvs_checksum.1
 man/man1/pkg_cleanup_distdir.1
 man/man1/pkg_cmp_summary.1

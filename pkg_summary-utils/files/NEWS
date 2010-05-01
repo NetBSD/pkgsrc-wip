@@ -1,4 +1,31 @@
 ----------------------------------------------------------------------
+Version 0.38.0, by Aleksey Cheusov, Thu, 29 Apr 2010 23:29:38 +0300
+
+ New mega tool -- pkg_subgraph_deps!
+
+ pkg_src_summary:
+    - Fix in adding ASSIGNMENTS inside DEPENDS and BUILD_DEPENDS.
+    - Portions of this script were separated into individual scripts under
+      libexec/ subdirectory.
+    - Improvements for -G
+    - New implementation for -A + -m. Speed-ups. Clean-ups.
+
+ pkg_summary2deps:
+    - FIX: no double removal of -version anymore.
+
+ pkg_summary2bb_pkgs:
+    - FIX: do not output two packages with the same PKGNAME if they
+      both have non-empty ASSIGNMENTS, e.g
+      net/nicotine:PYTHON_VERSION_REQD={24,25}
+
+ Updates in manual pages.
+
+ More regresion tests.
+
+ Makefile:
+    - Overridable DIFF_PROG that defaults to "diff -U10"
+
+----------------------------------------------------------------------
 Version 0.37.2, by Aleksey Cheusov, Sun, 18 Apr 2010 23:16:22 +0300
 
  FIX: The following command no longer hangs up (infinite loop)

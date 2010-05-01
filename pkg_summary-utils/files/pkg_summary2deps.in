@@ -169,9 +169,9 @@ NF == 0 {
 	if (assigns)
 		pkgpath = pkgpath ":" assigns
 
-	base = pkgbase
+	base = pkgname
 	sub(/-[^-]+$/, "", base)
-	pkgpaths [base] = pkgpath
+	pkgpaths [base]    = pkgpath
 	pkgnames [pkgpath] = pkgname
 	pkgbases [pkgpath] = pkgbase
 

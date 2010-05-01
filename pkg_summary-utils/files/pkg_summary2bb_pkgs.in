@@ -61,7 +61,7 @@ BEGIN {
 				assigns = substr($0, 13)
 			}else if (match($0, /^PKGPATH=.*:/)) {
 				assigns = substr($0, RLENGTH+1)
-				update()
+#				update()
 			}else if (NF == 0){
 				commas = assigns != "" ? 1+gsub(/,/, "", assigns) : 0
 				if (pkgname in cnt)
@@ -136,6 +136,7 @@ function update (){
 	if (gsub(/,/, "", assigns)+1 == cnt [pkgname]){
 		print_lines()
 		good_pkg = 1
+		cnt [pkgname] = -1
 		return
 	}
 
