@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/05/01 23:11:52 thomasklausner Exp $
+bin/notmuch
+include/notmuch.h
+lib/libnotmuch.so
+lib/libnotmuch.so.1
+lib/libnotmuch.so.1.1.0
+man/man1/notmuch.1
+share/emacs/site-lisp/coolj.el
+share/emacs/site-lisp/notmuch-address.el
+share/emacs/site-lisp/notmuch-hello.el
+share/emacs/site-lisp/notmuch-lib.el
+share/emacs/site-lisp/notmuch-logo.png
+share/emacs/site-lisp/notmuch-maildir-fcc.el
+share/emacs/site-lisp/notmuch-mua.el
+share/emacs/site-lisp/notmuch-query.el
+share/emacs/site-lisp/notmuch-show.el
+share/emacs/site-lisp/notmuch-wash.el
+share/emacs/site-lisp/notmuch.el
+share/examples/notmuch/bash_completion.d/notmuch
+share/examples/notmuch/zsh/functions/Completion/Unix/notmuch

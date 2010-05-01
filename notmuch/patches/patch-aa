@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/05/01 23:11:52 thomasklausner Exp $
+
+--- configure.orig	2010-04-28 00:04:52.000000000 +0000
++++ configure
+@@ -420,10 +420,10 @@ HAVE_EMACS = ${have_emacs}
+ desktop_dir = \$(prefix)/share/applications
+ 
+ # The directory to which bash completions files should be installed
+-bash_completion_dir = \$(sysconfdir)/bash_completion.d
++bash_completion_dir = \$(prefix)/share/examples/notmuch/bash_completion.d
+ 
+ # The directory to which zsh completions files should be installed
+-zsh_completion_dir = \$(prefix)/share/zsh/functions/Completion/Unix
++zsh_completion_dir = \$(prefix)/share/examples/notmuch/zsh/functions/Completion/Unix
+ 
+ # Whether the getline function is available (if not, then notmuch will
+ # build its own version)
