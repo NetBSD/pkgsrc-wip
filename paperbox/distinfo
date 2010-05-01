@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/05/01 22:44:52 thomasklausner Exp $
+
+SHA1 (paperbox-0.4.4.tar.bz2) = caf7ea9b486d6bcd995268d9ff425d4fd1c27bc5
+RMD160 (paperbox-0.4.4.tar.bz2) = 713cb000250c403deb60673505c18897286ae5f9
+Size (paperbox-0.4.4.tar.bz2) = 205101 bytes
+SHA1 (patch-aa) = 67764e6e1bed1c16a827fe6c3bbe8f18b39aeec4

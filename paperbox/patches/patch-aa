@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/05/01 22:44:52 thomasklausner Exp $
+
+--- src/file-utils.cc.orig	2008-05-01 13:19:22.000000000 +0200
++++ src/file-utils.cc
+@@ -72,7 +72,7 @@ namespace paperbox {
+         modtime = g_file_info_get_attribute_uint64 (info, "time::modified");
+         tv.tv_sec = modtime;
+ 
+-        ptm = localtime(&tv.tv_sec);
++        ptm = localtime((const time_t *)&tv.tv_sec);
+         strftime(time_string, sizeof(time_string), "%c", ptm);
+ 
+         modtime_string = Glib::locale_to_utf8(time_string);
