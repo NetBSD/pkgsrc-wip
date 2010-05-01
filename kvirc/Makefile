@@ -1,17 +1,22 @@
-# $NetBSD: Makefile,v 1.17 2010/01/18 09:38:26 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.18 2010/05/01 20:37:02 thomasklausner Exp $
 #
 
-DISTNAME=		kvirc-3.2.3
-PKGREVISION=		4
+DISTNAME=		kvirc-3.4.2
 CATEGORIES=		chat
-MASTER_SITES=		ftp://ftp.kvirc.net/pub/kvirc/snapshots/source/
+MASTER_SITES=		http://kvirc.gmake.de/pub/kvirc/3.4.2/source/ \
+			http://kvirc-ftp.visualscripts.com/3.4.2/source/ \
+			ftp://dedimarbo.ath.cx/pub/kvirc/3.4.2/source/ \
+			ftp://kvirc.eban-meban.com/3.4.2/source/ \
+			ftp://ftp.kvirc.de/pub/kvirc/3.4.2/source/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		siflfran@hawo.stw.uni-erlangen.de
 HOMEPAGE=		http://www.kvirc.net/
 COMMENT=		QT based irc client
 
-USE_TOOLS+=		gmake msgfmt
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+USE_TOOLS+=		gmake msgfmt perl
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
@@ -25,6 +30,8 @@ CONFIGURE_ARGS+=	--with-aa-fonts
 CONFIGURE_ARGS+=	--disable-perl
 
 PTHREAD_OPTS+=		require
+
+UNWRAP_FILES+=		scripts/config/kvirc-config
 
 #pre-configure:
 #	cd ${WRKSRC} && aclocal

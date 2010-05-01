@@ -1,5 +1,6 @@
-$Id: TODO,v 1.2 2008/10/27 18:25:42 tonnerre Exp $
+$Id: TODO,v 1.3 2010/05/01 20:37:02 thomasklausner Exp $
 
 * Fix the trouble with locales
 * Add optional support for KDE
+* Wrapper problem with kvirc-config (path to msgfmt points to tools dir)
 * This package has known vulnerabilities, please investigate and fix if possible. (see: http://milw0rm.com/exploits/6832).
