@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3935 2010/04/30 10:14:06 thomasklausner Exp $
+# $Id: Makefile,v 1.3936 2010/05/01 19:51:13 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2157,6 +2157,7 @@ SUBDIR+=	smtp.proxy
 SUBDIR+=	smtprc
 SUBDIR+=	smtprc-gui
 SUBDIR+=	smtpscan
+SUBDIR+=	smw
 SUBDIR+=	snark
 SUBDIR+=	snes9express
 SUBDIR+=	socklog
