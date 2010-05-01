@@ -497,6 +497,9 @@ PKGPATH=graphics/libungif
 PKGNAME=tiff-X
 PKGPATH=graphics/tiff
 
+PKGNAME=x11-links-X
+PKGPATH=pkgtools/x11-links
+
 PKGNAME=perl-X
 PKGPATH=lang/perl5
 
@@ -529,9 +532,6 @@ PKGPATH=wip/pkg_online-server
 
 PKGNAME=pkg_online-client-X
 PKGPATH=wip/pkg_online-client
-
-PKGNAME=x11-links-X
-PKGPATH=pkgtools/x11-links
 
 PKGNAME=ap22-vhost-ldap-X
 PKGPATH=www/ap22-vhost-ldap
