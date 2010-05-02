@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2010/03/22 19:07:07 pebog Exp $
+# $NetBSD: Makefile,v 1.21 2010/05/02 18:18:57 pebog Exp $
 #
 #
 #	Request by the author:
@@ -10,7 +10,7 @@
 #	> you distribute. Updatedcc must work.
 #
 #
-DISTNAME=		dcc-1.3.122
+DISTNAME=		dcc-1.3.123
 #PKGREVISION=		2
 CATEGORIES=		mail
 MASTER_SITES=		http://www.rhyolite.com/dcc/source/old/
@@ -101,6 +101,7 @@ post-build:
 # options.mk/dccm adds a dependency on do-install.
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/cdcc/cdcc ${DESTDIR}${PREFIX}/bin/
+	${INSTALL_PROGRAM} ${WRKSRC}/ck2ip/ck2ip ${DESTDIR}${PREFIX}/libexec/
 	${INSTALL_PROGRAM} ${WRKSRC}/dbclean/dbclean ${DESTDIR}${PREFIX}/libexec/
 	${INSTALL_PROGRAM} ${WRKSRC}/dblist/dblist ${DESTDIR}${PREFIX}/libexec/
 	${INSTALL_PROGRAM} ${WRKSRC}/dccd/dccd ${DESTDIR}${PREFIX}/libexec/
