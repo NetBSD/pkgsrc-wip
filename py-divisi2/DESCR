@@ -1,0 +1,8 @@
+Divisi2 is a library for reasoning by analogy and association over
+semantic networks, including common sense knowledge. Divisi uses a
+sparse higher-order SVD and can help find related concepts, features,
+and relation types in any knowledge base that can be represented as a
+semantic network. By including common sense knowledge from ConceptNet,
+the results can include relationships not expressed in the original
+data but related by common sense. See http://divisi.media.mit.edu/ for
+more info
