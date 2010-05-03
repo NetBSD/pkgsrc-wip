@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/05/03 14:57:45 jihbed Exp $
+include/libslab/app-resizer.h
+include/libslab/app-shell.h
+include/libslab/application-tile.h
+include/libslab/bookmark-agent.h
+include/libslab/directory-tile.h
+include/libslab/document-tile.h
+include/libslab/double-click-detector.h
+include/libslab/gnome-utils.h
+include/libslab/libslab-utils.h
+include/libslab/nameplate-tile.h
+include/libslab/nld-marshal.c
+include/libslab/nld-marshal.h
+include/libslab/search-bar.h
+include/libslab/search-context-picker.h
+include/libslab/search-entry-watermark.h
+include/libslab/search-entry.h
+include/libslab/shell-window.h
+include/libslab/slab-gnome-util.h
+include/libslab/slab-section.h
+include/libslab/slab.h
+include/libslab/system-tile.h
+include/libslab/tile.h
+lib/libslab.la
+lib/pkgconfig/libslab.pc
