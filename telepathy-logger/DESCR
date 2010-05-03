@@ -1,0 +1,3 @@
+Telepathy Logger is a session daemon that should be activated whenever telepathy
+is being used (similar to mission control lifetime). For performance reason,
+the database is accessible directly through an API instead of D-Bus channel.
