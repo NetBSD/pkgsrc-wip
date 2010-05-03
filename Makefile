@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3941 2010/05/03 08:37:18 jihbed Exp $
+# $Id: Makefile,v 1.3942 2010/05/03 15:04:44 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -417,6 +417,7 @@ SUBDIR+=	etoile-services
 SUBDIR+=	eventlog
 SUBDIR+=	evilvte
 SUBDIR+=	evolution-couchdb
+SUBDIR+=	evolution-rss
 SUBDIR+=	ewl
 SUBDIR+=	exact-image
 SUBDIR+=	expiretable
@@ -510,6 +511,7 @@ SUBDIR+=	gecko-sharp
 SUBDIR+=	gemrb
 SUBDIR+=	gerris
 SUBDIR+=	gfa
+SUBDIR+=	gfan
 SUBDIR+=	gfontview
 SUBDIR+=	gforge
 SUBDIR+=	gforth
@@ -1128,6 +1130,7 @@ SUBDIR+=	libpthread-stubs
 SUBDIR+=	libpusb
 SUBDIR+=	libraw1394
 SUBDIR+=	libsidplay2
+SUBDIR+=	libslab
 SUBDIR+=	libstacktrace
 SUBDIR+=	libtextcat
 SUBDIR+=	libticables
@@ -1867,6 +1870,7 @@ SUBDIR+=	py-divmod-epsilon
 SUBDIR+=	py-divmod-mantissa
 SUBDIR+=	py-divmod-nevow
 SUBDIR+=	py-divmod-vertex
+SUBDIR+=	py-divisi2
 SUBDIR+=	py-django-diario
 SUBDIR+=	py-django-tagging
 SUBDIR+=	py-duali
@@ -2271,6 +2275,7 @@ SUBDIR+=	tegaki-zinnia-simplified-chinese-light
 SUBDIR+=	tegaki-zinnia-traditional-chinese
 SUBDIR+=	tegaki-zinnia-traditional-chinese-light
 SUBDIR+=	telepathy-butterfly
+SUBDIR+=	telepathy-logger
 SUBDIR+=	tellico
 SUBDIR+=	tendra
 SUBDIR+=	tendra.org-sid
