@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.6 2010/04/15 11:34:21 obache Exp $
+$NetBSD: distinfo,v 1.7 2010/05/03 06:30:46 obache Exp $
 
-SHA1 (ibus-pinyin-1.3.3.tar.gz) = cc00ee61e2a68764849d7df3946edd9af4acfe45
-RMD160 (ibus-pinyin-1.3.3.tar.gz) = 56c395e900d00ff6e7b94343f07be49f42dbb543
-Size (ibus-pinyin-1.3.3.tar.gz) = 1559658 bytes
+SHA1 (ibus-pinyin-1.3.4.tar.gz) = 6629fb52999891e987848bdb02d929709abc58b6
+RMD160 (ibus-pinyin-1.3.4.tar.gz) = e69c6aaad85eac571f7255dc753bb63d7f9d8ff5
+Size (ibus-pinyin-1.3.4.tar.gz) = 1609416 bytes
 SHA1 (pinyin-database-1.2.99.tar.bz2) = e38a148a772e9909facda66b2d579e17b94cccbe
 RMD160 (pinyin-database-1.2.99.tar.bz2) = 1679567f31c20a235577f02175df38e16a05e7de
 Size (pinyin-database-1.2.99.tar.bz2) = 9977983 bytes

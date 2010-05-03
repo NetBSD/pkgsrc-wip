@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2010/04/15 11:35:56 obache Exp $
+# $NetBSD: Makefile,v 1.10 2010/05/03 06:30:46 obache Exp $
 #
 
-DISTNAME=	ibus-pinyin-1.3.3
+DISTNAME=	ibus-pinyin-1.3.4
 CATEGORIES=	inputmethod chinese
 MASTER_SITES=	http://ibus.googlecode.com/files/
 DISTFILES=	${DEFAULT_DISTFILES} ${DBTAR}
@@ -38,7 +38,7 @@ CONFIGURE_ARGS+=	--disable-db-android
 CONFIGURE_ARGS+=	--enable-db-open-phrase
 
 .include "../../databases/sqlite3/buildlink3.mk"
-.include "../../devel/libsigc++/buildlink3.mk"
+.include "../../devel/boost-headers/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../wip/ibus/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
