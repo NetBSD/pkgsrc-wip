@@ -1,0 +1,4 @@
+This plugin adds RSS Feeds support for evolution mail. With this package you are
+able to have RSS in same place as mails, eliminating the need of having a
+separate RSS reader since a RSS Article is like an email message.
+Evolution RSS can display an article using summary view or HTML view

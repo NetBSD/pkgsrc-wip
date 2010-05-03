@@ -1,0 +1,75 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/05/03 14:57:49 jihbed Exp $
+
+--- configure.orig	2010-03-18 14:12:15.000000000 +0000
++++ configure	2010-03-18 14:30:18.000000000 +0000
+@@ -17845,7 +17845,7 @@
+ 	SOUP=2.2
+ fi
+ fi
+-if test "x$SOUP" == "x"; then
++if test "x$SOUP" = "x"; then
+ 
+ pkg_failed=no
+ { $as_echo "$as_me:$LINENO: checking for LIBSOUP" >&5
+@@ -18154,7 +18154,7 @@
+ $as_echo "yes" >&6; }
+ 	GTKHTMLEDITOR=YES
+ fi
+-if test "x$GTKHTMLEDITOR" == "xYES"; then
++if test "x$GTKHTMLEDITOR" = "xYES"; then
+ 
+ cat >>confdefs.h <<_ACEOF
+ #define HAVE_GTKHTMLEDITOR 1
+@@ -19429,7 +19429,7 @@
+ 		GECKO_RPATH="-Wl,--rpath -Wl,"$GECKO_LIBDIR
+ 		GECKO_HOME=$GECKO_LIBDIR
+ 
+-	if test "x$GECKO" == "xxulrunner"; then
++	if test "x$GECKO" = "xxulrunner"; then
+ 
+ cat >>confdefs.h <<_ACEOF
+ #define HAVE_XULRUNNER 1
+@@ -19437,7 +19437,7 @@
+ 
+ 
+ 	fi
+-	if test "x$GECKO" == "xlibxul" -o "x$GECKO" == "xlibxul-embedding"; then
++	if test "x$GECKO" = "xlibxul" -o "x$GECKO" == "xlibxul-embedding"; then
+ 
+ cat >>confdefs.h <<_ACEOF
+ #define HAVE_GECKO_1_9 1
+@@ -19610,7 +19610,7 @@
+ $as_echo "yes" >&6; }
+ 	have_webkit=yes
+ fi
+-if test "x$have_webkit" == "xno"; then
++if test "x$have_webkit" = "xno"; then
+ 
+ pkg_failed=no
+ { $as_echo "$as_me:$LINENO: checking for WebKitGtk" >&5
+@@ -19905,7 +19905,7 @@
+ $as_echo "yes" >&6; }
+ 	have_libsoup_gnome=yes
+ fi
+-if test "x$have_libsoup_gnome" == "xyes"; then
++if test "x$have_libsoup_gnome" = "xyes"; then
+ 	LIBSOUP_LIBS=`$PKG_CONFIG --libs libsoup$SOUP libsoup-gnome$SOUP`
+ 
+ cat >>confdefs.h <<_ACEOF
+@@ -21744,14 +21744,14 @@
+         kits=$kits", WebKit ($WEBKIT_S_VERSION)"
+ fi
+ # rename libxul to xulrunner to prevent confusion on debian
+-if test "x$gecko_cv_gecko" == "xlibxul"; then
++if test "x$gecko_cv_gecko" = "xlibxul"; then
+ 	gecko_cv_gecko="xulrunner"
+ fi
+ if test "x$have_gecko" != "xno" -a "$enable_gecko" = "yes"; then
+ kits="$kits, $gecko_cv_gecko (gecko engine version $gecko_cv_gecko_version)"
+ fi
+ 
+-if test "x$have_dbus" == "xyes"; then
++if test "x$have_dbus" = "xyes"; then
+ 	have_dbus_build="yes"
+ 	import_feeds="evolution-import-rss"
+ else
