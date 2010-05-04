@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.1.1.1 2009/11/28 11:02:47 obache Exp $
+# $NetBSD: options.mk,v 1.2 2010/05/04 13:14:19 obache Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.oxim-setup
 PKG_SUPPORTED_OPTIONS=	gtk qt
-PKG_SUGGESTED_OPTIONS=	qt
+PKG_SUGGESTED_OPTIONS=	gtk
 
 .include "../../mk/bsd.options.mk"
 

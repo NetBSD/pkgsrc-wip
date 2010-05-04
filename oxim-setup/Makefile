@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2010/01/17 12:03:29 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2010/05/04 13:14:19 obache Exp $
 #
 
-DISTNAME=	oxim-setup-1.4.1
-PKGREVISION=	1
+DISTNAME=	oxim-setup-1.4.4
 CATEGORIES=	inputmethod chinese
 MASTER_SITES=	ftp://ftp.opendesktop.org.tw/odp/OXIM/Source/
 
@@ -24,6 +23,7 @@ PKG_SYSCONFSUBDIR=	oxim
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--disable-setup-php
 CONFIGURE_ARGS+=	--disable-setup-gambas
+CONFIGURE_ARGS+=	--disable-setup-pygtk
 INSTALL_MAKE_FLAGS+=	OXIM_DEFAULT_RCDIR=${PREFIX}/${EXAMPLES_DIR}
 
 REPLACE_SH+=		src/utils/oxim-setup.in
@@ -43,5 +43,6 @@ BUILDLINK_API_DEPENDS.curl+=	curl>=7.15
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/libXft/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
+BUILDLINK_API_DEPENDS.oxim+=	oxim>=1.4.4
 .include "../../wip/oxim/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

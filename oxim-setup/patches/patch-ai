@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.1 2010/05/04 13:14:19 obache Exp $
+
+--- src/oxim-setup-gtk-1.1.7/src/oxim_setting_and_config.c.orig	2008-12-16 06:10:54.000000000 +0000
++++ src/oxim-setup-gtk-1.1.7/src/oxim_setting_and_config.c
+@@ -82,7 +82,7 @@ gboolean oxim_conf_readfile(oxim_conf_t*
+ 	  g_printf("(%s:%d)[%s()] file_content_readfile failed\n",__FILE__, __LINE__, __func__);
+ 	  static gchar cmd[100];
+ 	  //g_sprintf(cmd, "echo >%s",OXIM_CONF_FILEPATH);
+-	  g_sprintf(cmd, "cp /etc/oxim/oxim.conf %s/.oxim/",g_get_userhome_dir());
++	  g_sprintf(cmd, "cp @PKG_SYSCONFDIR@/oxim.conf %s/.oxim/",g_get_userhome_dir());
+ 	  system(cmd);
+ 	  //if(!file_content_readfile(&(me->content), OXIM_CONF_FILEPATH))
+ 	  if(!file_content_readfile(&(me->content), oxim_conf_fp))
