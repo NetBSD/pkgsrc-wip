@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/04/19 13:50:48 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2010/05/04 08:37:51 jihbed Exp $
 #
 
 DISTNAME=	logilab-astng-0.20.0
@@ -15,6 +15,8 @@ LICENSE=	gnu-gpl-v2
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_ACCEPTED= 26 25 24 23
 
 .include "../../lang/python/egg.mk"
 .include "../../wip/py-logilab-common/buildlink3.mk"
