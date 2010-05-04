@@ -1,7 +1,15 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/11/28 11:01:20 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/05/04 13:11:15 obache Exp $
 bin/oxim
 bin/oxim-agent
 bin/oxim2tab
+include/oxim/IC.h
+include/oxim/fkey.h
+include/oxim/gencin.h
+include/oxim/gui.h
+include/oxim/imodule.h
+include/oxim/module.h
+include/oxim/oxim.h
+include/oxim/oximtool.h
 ${PLIST.gtk}lib/gtk-2.0/immodules/gtk-im-oxim.so
 lib/liboxim.la
 ${PLIST.gtk}lib/oxim/immodules/gtk-im-oxim.la
@@ -15,6 +23,7 @@ lib/oxim/tables/cnscj.tab
 lib/oxim/tables/cnsphone.tab
 lib/oxim/tables/default.phr
 lib/oxim/tables/symbol.list
+lib/pkgconfig/oxim.pc
 man/man1/oxim.1
 share/examples/oxim/locale.list
 share/examples/oxim/oxim.conf

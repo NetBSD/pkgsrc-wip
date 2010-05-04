@@ -1,14 +1,10 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/11/28 11:01:20 obache Exp $
+$NetBSD: distinfo,v 1.2 2010/05/04 13:11:15 obache Exp $
 
-SHA1 (oxim-1.4.1.tar.gz) = 8e5501a6aab355624e043208a42741af6a8a7f6c
-RMD160 (oxim-1.4.1.tar.gz) = 1bef06044d6574269b6852bc49f03d0df0706adc
-Size (oxim-1.4.1.tar.gz) = 2132893 bytes
-SHA1 (oxim-filters.tar.gz) = 076eafe378a1af260f652a9fb146e88e6e0840b4
-RMD160 (oxim-filters.tar.gz) = 6bf5b908351d2b897ab84bdcf6c4ed99860cb81f
-Size (oxim-filters.tar.gz) = 560162 bytes
-SHA1 (patch-aa) = 5d292c9ca2a1d455e1f7553e75a31262d0467ed3
+SHA1 (oxim-1.4.4.tar.gz) = 9b14a244057a756ca04f948d0351e960942fdfae
+RMD160 (oxim-1.4.4.tar.gz) = da282abac65e2a021f8728f20fe959e2c851e7ce
+Size (oxim-1.4.4.tar.gz) = 2136864 bytes
+SHA1 (patch-aa) = 278c20417d295cba80d29dfef026be54e39b6ba2
 SHA1 (patch-ab) = bc7172ce2f4990e63044d86ddf18fd0f6875191b
 SHA1 (patch-ac) = 88b6ce84a84f449071e29aaf59af8adbb920121c
-SHA1 (patch-ad) = 6b7162b621f494021447b2db63f76730df8ea68e
-SHA1 (patch-ae) = a9c1c7122aea7f6e26ff04e14e0a1de1f2a20179
+SHA1 (patch-ad) = ec2e54f43721d58cf884ef29e63835687426c36c
 SHA1 (patch-af) = 2d4e2b4db3edf45b65b0dc2b0b80dfd77602f041
