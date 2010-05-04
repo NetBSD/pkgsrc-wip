@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/03/02 13:00:09 jkjuopperi Exp $
+# $NetBSD: Makefile,v 1.2 2010/05/04 15:33:13 othyro Exp $
 #
 
 DISTNAME=	aspell6-fi-0.7-0
+PKGNAME=	aspell-finnish-0.7.0
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GNU:=aspell/dict/fi/}
 EXTRACT_SUFX=	.tar.bz2
