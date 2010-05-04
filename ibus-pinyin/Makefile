@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2010/05/03 06:30:46 obache Exp $
+# $NetBSD: Makefile,v 1.11 2010/05/04 01:08:17 obache Exp $
 #
 
-DISTNAME=	ibus-pinyin-1.3.4
+DISTNAME=	ibus-pinyin-1.3.5
 CATEGORIES=	inputmethod chinese
 MASTER_SITES=	http://ibus.googlecode.com/files/
 DISTFILES=	${DEFAULT_DISTFILES} ${DBTAR}
