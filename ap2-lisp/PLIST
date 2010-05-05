@@ -1,1 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/05/05 19:46:58 othyro Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/05/05 21:18:01 othyro Exp $
+lib/httpd/mod_lisp-${PKGVERSION}.so
