@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/05/05 19:46:58 othyro Exp $
+
+SHA1 (mod_lisp2-1.2.c) = 2e9ccf85dc5ce1cd12df1cfe2796371f834de30d
+RMD160 (mod_lisp2-1.2.c) = 67e342f22ad566e281027189c4eae9b89b81bfb4
+Size (mod_lisp2-1.2.c) = 24282 bytes
