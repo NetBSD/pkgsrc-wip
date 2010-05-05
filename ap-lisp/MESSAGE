@@ -1,0 +1,55 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2010/05/05 20:57:45 othyro Exp $
+
+In the Apache config file (httpd.conf or apache.conf):
+
+First, add the mod_lisp module (change the path to where you have put mod_lisp):
+
+LoadModule lisp_module libexec/apache/mod_lisp.so # for Unixes and similar
+LoadModule lisp_module modules/mod_lisp.dll # for Win32
+
+Then add a LispServer directive (LispServer ip-address-of-lisp-computer
+ip-port-of-lisp-process user-defined-name):
+
+* ip-address-of-lisp-computer is the IP address of the computer where the Lisp
+process is.
+* ip-port-of-lisp-process is the IP port of the computer where the Lisp process
+is.
+* user-defined-name is a string that will be passed from Apache to the Lisp
+process. It is useful when you have several virtual servers or directories,
+defined within an Apache server, to be processed by mod_lisp.
+
+Example: LispServer 127.0.0.1 3000 "fractal"
+
+Finally add a SetHandler directive:
+
+<Location /asp>
+	SetHandler lisp-handler
+</Location>
+
+All the url located in /asp (like /asp/index.html) will be sent to mod_lisp.
+
+Your httpd.conf should be like this:
+
+[...]
+LoadModule lisp_module		libexec/apache/mod_lisp.so
+[...]
+ClearModuleList
+[...]
+AddModule mod_lisp.c
+[...]
+LispServer 127.0.0.1 3000 "fractal"
+[...]
+<Location /asp>
+	SetHandler lisp-handler
+</Location>
+[...]
+
+If you use mod_ssl you should put this in your SSL directives:
+
+SSLOptions +StdEnvVars
+
+to have the ssl-session-id sent to the Lisp process.
+Restart Apache and it should be OK.
+
+===========================================================================
