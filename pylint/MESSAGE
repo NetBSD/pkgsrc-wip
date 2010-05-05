@@ -1,6 +1,6 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2010/05/05 09:40:46 jihbed Exp $
+$NetBSD: MESSAGE,v 1.2 2010/05/05 09:54:33 jihbed Exp $
 
-The recommended pkgsrc/x11/py-Tk package is only for using the pylint-gui script. 
+The recommended pkgsrc/x11/py-Tk package is only for using the pylint-gui.
 
 ===========================================================================
