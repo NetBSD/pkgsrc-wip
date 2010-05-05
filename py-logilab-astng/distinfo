@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2010/04/19 13:50:48 jihbed Exp $
+$NetBSD: distinfo,v 1.3 2010/05/05 09:32:13 jihbed Exp $
 
 SHA1 (logilab-astng-0.20.0.tar.gz) = 7a7449d0ec2e48ece29a48f457e5243215c758f7
 RMD160 (logilab-astng-0.20.0.tar.gz) = 4ab0394c3aa0b62654ce385b5713304f32520209
 Size (logilab-astng-0.20.0.tar.gz) = 92492 bytes
+SHA1 (patch-aa) = 323a39e0a8e393b47eae897a328f88181d0eee5f
