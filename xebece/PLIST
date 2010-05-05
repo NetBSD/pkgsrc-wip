@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/05/05 03:04:52 othyro Exp $
+bin/xecebe
+share/doc/xebece/Xebece-Manual.cal
+share/doc/xebece/Xebece-Manual_de.cal
+share/examples/xebece/chi.cal
+share/examples/xebece/solar_system.cal
+xebece/dist/xebece.jar
+xebece/lib/icons.zip
+xebece/lib/prefuse.jar
+xebece/lib/prefusex.jar
