@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3943 2010/05/04 14:51:25 hfath Exp $
+# $Id: Makefile,v 1.3944 2010/05/05 04:25:20 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -214,7 +214,7 @@ SUBDIR+=	cfengine3
 SUBDIR+=	cgit
 SUBDIR+=	chbg
 SUBDIR+=	chems
-SUBDIR+=	cherokee
+
 SUBDIR+=	chora
 SUBDIR+=	chrsh
 SUBDIR+=	cinelerra
@@ -2443,6 +2443,7 @@ SUBDIR+=	xclipboard
 SUBDIR+=	xcowsay
 SUBDIR+=	xcursor-themes
 SUBDIR+=	xdiskusage
+SUBDIR+=	xebece
 SUBDIR+=	xesam-glib
 SUBDIR+=	xf86-video-geode
 SUBDIR+=	xf86-video-nouveau
