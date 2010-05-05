@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/03/13 13:05:44 helgoman Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/05/05 09:40:46 jihbed Exp $
 bin/epylint
 bin/pylint
 bin/pylint-gui
@@ -108,3 +108,11 @@ ${PYSITELIB}/pylint/reporters/text.pyo
 ${PYSITELIB}/pylint/utils.py
 ${PYSITELIB}/pylint/utils.pyc
 ${PYSITELIB}/pylint/utils.pyo
+man/man1/pylint.1
+man/man1/pyreverse.1
+share/doc/pylint/FAQ.txt
+share/doc/pylint/beginner_pylint_tutorial.txt
+share/doc/pylint/features.txt
+share/doc/pylint/flymake.txt
+share/doc/pylint/manual.txt
+share/doc/pylint/quickstart.txt
