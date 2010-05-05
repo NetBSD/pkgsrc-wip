@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/01/03 00:18:19 jihbed Exp $
+# $NetBSD: Makefile,v 1.7 2010/05/05 15:05:50 jihbed Exp $
 #
 
 DISTNAME=	givaro-3.3.2rc1
@@ -8,7 +8,7 @@ MASTER_SITES=	http://ljk.imag.fr/CASYS/LOGICIELS/givaro/Downloads/
 MAINTAINER=	emil@math.su.se
 HOMEPAGE=	http://ljk.imag.fr/CASYS/LOGICIELS/givaro/
 COMMENT=	C++ library for arithmetic and algebraic computations
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	gnu-gpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
