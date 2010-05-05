@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2010/05/05 15:05:50 jihbed Exp $
+# $NetBSD: Makefile,v 1.8 2010/05/05 15:11:05 jihbed Exp $
 #
 
 DISTNAME=	givaro-3.3.2rc1
@@ -17,8 +17,9 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
 
-EGDIR=		${PREFIX}/share/examples/${PKGBASE}
+CONFIGURE_ARGS+=	--with-gmp=${BUILDLINK_PREFIX.gmp}
 
+EGDIR=		${PREFIX}/share/examples/${PKGBASE}
 
 post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}/FiniteField
