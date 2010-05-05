@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/05/05 03:04:52 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2010/05/05 04:27:16 othyro Exp $
 #
 
 DISTNAME=	xebece-1.0.3
@@ -23,8 +23,8 @@ do-build:
 		# nothing
 
 post-build:
-		${ECHO} '#!${SH}' > ${WRKSRC}/xecebe
-		${ECHO} '${DESTDIR}${PREFIX}/bin/sun6-java -jar ${DESTDIR}${PREFIX}/xebece/dist/xebece.jar' >> ${WRKSRC}/xecebe
+		${ECHO} '#!${SH}' > ${WRKSRC}/xebece
+		${ECHO} '${DESTDIR}${PREFIX}/bin/sun6-java -jar ${DESTDIR}${PREFIX}/xebece/dist/xebece.jar' >> ${WRKSRC}/xebece
 
 do-install:
 		${INSTALL_DATA} ${WRKSRC}/doc/Xebece-Manual.cal ${DESTDIR}${PREFIX}/share/doc/xebece/Xebece-Manual.cal
@@ -35,7 +35,7 @@ do-install:
 		${INSTALL_LIB} ${WRKSRC}/lib/icons.zip ${DESTDIR}${PREFIX}/xebece/lib/icons.zip
 		${INSTALL_LIB} ${WRKSRC}/lib/prefuse.jar ${DESTDIR}${PREFIX}/xebece/lib/prefuse.jar
 		${INSTALL_LIB} ${WRKSRC}/lib/prefusex.jar ${DESTDIR}${PREFIX}/xebece/lib/prefusex.jar
-		${INSTALL_SCRIPT} ${WRKSRC}/xecebe ${DESTDIR}${PREFIX}/bin/xecebe
+		${INSTALL_SCRIPT} ${WRKSRC}/xebece ${DESTDIR}${PREFIX}/bin/xebece
 
 .include "../../lang/sun-jre6/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

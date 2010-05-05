@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/05/05 03:04:52 othyro Exp $
-bin/xecebe
+@comment $NetBSD: PLIST,v 1.2 2010/05/05 04:27:49 othyro Exp $
+bin/xebece
 share/doc/xebece/Xebece-Manual.cal
 share/doc/xebece/Xebece-Manual_de.cal
 share/examples/xebece/chi.cal
