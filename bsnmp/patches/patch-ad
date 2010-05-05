@@ -1,0 +1,33 @@
+$NetBSD: patch-ad,v 1.1.1.1 2010/05/05 16:04:39 hfath Exp $
+
+--- snmpd/config.c.orig	2006-02-27 10:03:16.000000000 +0000
++++ snmpd/config.c
+@@ -30,6 +30,7 @@
+  *
+  * Parse configuration file.
+  */
++#include <sys/cdefs.h>
+ #include <sys/types.h>
+ #include <sys/socket.h>
+ #include <sys/un.h>
+@@ -50,6 +51,20 @@
+ #include "snmpd.h"
+ #include "tree.h"
+ 
++#if !defined( __dead2 )
++/* XXX Add other OSes which support __attribute__((__noreturn__)) */
++#if defined( __NetBSD__)
++#define __dead2 __dead
++#else
++#define __dead2
++#endif
++#endif
++
++#if !defined( __printflike )
++/* Punt; everybody comes up with their own k001 macros for gcc extensions */
++#define __printflike(foo, bar)
++#endif
++
+ /*
+ #define DEBUGGING
+ */

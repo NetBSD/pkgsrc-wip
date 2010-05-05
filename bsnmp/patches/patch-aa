@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/05/05 16:04:39 hfath Exp $
+
+--- configure.orig	2010-05-05 12:56:32.000000000 +0000
++++ configure
+@@ -18290,7 +18290,7 @@ fi
+ echo "$as_me:$LINENO: result: $ac_cv_use_libbegemot" >&5
+ echo "${ECHO_T}$ac_cv_use_libbegemot" >&6
+ 
+-if test $ac_cv_use_libbegemot == "yes" ; then
++if test $ac_cv_use_libbegemot = "yes" ; then
+ 	ac_cv_use_libbegemot="/usr/local"
+ fi
+ 

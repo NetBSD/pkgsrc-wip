@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/05/05 16:04:38 hfath Exp $
+
+SHA1 (bsnmp-1.12.tar.gz) = 9a028c7f66a59fb6ac3293e67810abf27cbcaa6a
+RMD160 (bsnmp-1.12.tar.gz) = d7ea4c2c07870f42073f7e758abbd6dfe4afefc9
+Size (bsnmp-1.12.tar.gz) = 418653 bytes
+SHA1 (patch-aa) = 475583f7d1d99c8497a57547d3b29c5c0b81cd5d
+SHA1 (patch-ab) = 549e018542a164988479217b3c25572979668a0e
+SHA1 (patch-ac) = a3fa04cf235d494eaab15c12432f40d99529d856
+SHA1 (patch-ad) = 4931468cf24f3692a1aa97c53c12af57e98be814
+SHA1 (patch-ae) = 1718dfb80c328d784ce42f69146a6270c8a9e9c5
