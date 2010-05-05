@@ -1,6 +1,7 @@
-# $NetBSD: Makefile.common,v 1.2 2010/05/05 21:40:25 othyro Exp $
+# $NetBSD: Makefile.common,v 1.3 2010/05/05 21:50:00 othyro Exp $
 #
-
+# used by wip/ap-lisp/Makefile
+# used by wip/ap2-lisp/Makefile
 CATEGORIES=	lang www
 MASTER_SITES=	http://www.fractalconcept.com/fcweb/download/
 EXTRACT_SUFX=	.c
