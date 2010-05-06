@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/10/14 20:17:34 asau Exp $
+# $NetBSD: Makefile,v 1.7 2010/05/06 09:54:46 jihbed Exp $
 
 ATLAS_VERSION=	3.9.15
 
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=math-atlas/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	asau@inbox.ru
-HOMEPAGE=	http://math-atlas.sourceforge.net/
+HOMEPAGE=	 http://math-atlas.sourceforge.net/
 COMMENT=	Automatically Tuned Linear Algebra Software
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -26,6 +26,8 @@ CONFIGURE_SCRIPT=	../configure
 CONFIGURE_ARGS+=	--incdir=${DESTDIR}${PREFIX}/include
 CONFIGURE_ARGS+=	--libdir=${DESTDIR}${PREFIX}/lib
 CONFIGURE_ARGS+=	-b 32
+
+CONFLITS=	lapack-[0-9]*
 
 TEST_TARGET=	check
 
