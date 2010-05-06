@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/06/17 23:33:20 jihbed Exp $
-
-SHA1 (logilab-doctools-0.2.5.tar.gz) = 30032ab5ecf8412c0ec33fbbf010c0de68669635
-RMD160 (logilab-doctools-0.2.5.tar.gz) = 7c48d68db5b936216797c3074a419e105ea42bc4
-Size (logilab-doctools-0.2.5.tar.gz) = 57642 bytes
