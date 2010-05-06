@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2010/02/20 19:06:52 khorben Exp $
+# $NetBSD: Makefile,v 1.3 2010/05/06 02:38:34 khorben Exp $
 #
 
-DISTNAME=	enigmail-0.96.0
-PKGREVISION=	1
+DISTNAME=	enigmail-1.0.1
 CATEGORIES=	mail
 MASTER_SITES=	http://www.mozilla-enigmail.org/download/source/
 
@@ -21,19 +20,19 @@ REPLACE_PERL+=	${ENIGMAIL_WRKSRC}/makemake
 REPLACE_PERL+=	${ENIGMAIL_WRKSRC}/ipc/makemake
 REPLACE_PERL+=	${ENIGMAIL_WRKSRC}/lang/make-lang-xpi.pl
 
-BUILD_DEPENDS+= 	thunderbird>=2.0.0.0:../../mail/thunderbird2
+BUILD_DEPENDS+= 	thunderbird>=3.0.0:../../mail/thunderbird
 DEPENDS+=		gnupg-[0-9]*:../../security/gnupg
 
 ENIGMAIL_WRKSRC=	${THUNDERBIRD_WRKSRC}/mailnews/extensions/enigmail
-MAKE_THUNDERBIRD=	cd ${PKGDIR}/../../mail/thunderbird2 && \
+MAKE_THUNDERBIRD=	cd ${PKGDIR}/../../mail/thunderbird && \
 			env -i ${MAKE} -f ${PKGDIR}/Makefile.thunderbird \
 				WRKDIR=${THUNDERBIRD_WRKDIR} \
 				WRKSRC=${THUNDERBIRD_WRKSRC}
-THUNDERBIRD_WRKDIR=	${WRKDIR}/thunderbird2
-THUNDERBIRD_WRKSRC=	${THUNDERBIRD_WRKDIR}/mozilla
+THUNDERBIRD_WRKDIR=	${WRKDIR}/thunderbird
+THUNDERBIRD_WRKSRC=	${THUNDERBIRD_WRKDIR}/comm-1.9.1
 
-ENIGMAILXPI=	${DISTNAME}-${LOWER_OPSYS}-${MACHINE_GNU_ARCH}.xpi
-XPIFILE=	${THUNDERBIRD_WRKSRC}/dist/bin/${ENIGMAILXPI}
+ENIGMAILXPI=	enigmail-1.0-${LOWER_OPSYS}-${MACHINE_GNU_ARCH}.xpi
+XPIFILE=	${THUNDERBIRD_WRKSRC}/mozilla/dist/bin/${ENIGMAILXPI}
 XPIDIR=		${PREFIX}/share
 
 MESSAGE_SUBST+= ENIGMAILXPI=${ENIGMAILXPI} XPIDIR=${XPIDIR}

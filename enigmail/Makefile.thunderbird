@@ -1,14 +1,9 @@
-# $NetBSD: Makefile.thunderbird,v 1.2 2010/02/20 19:06:52 khorben Exp $
+# $NetBSD: Makefile.thunderbird,v 1.3 2010/05/06 02:38:34 khorben Exp $
 #
 
 CONFIGURE_ARGS+=	--disable-tests --disable-debug
 CONFIGURE_ARGS+=	--enable-crypto --enable-static-mail --enable-optimize
 ENIGMAIL_WRKSRC=	${WRKSRC}/mailnews/extensions/enigmail
-
-# the following variables should match those in mail/thunderbird/Makefile
-MOZILLA=		thunderbird
-MOZILLA_USE_GTK2=       # yes
-MOZILLA_USE_XFT=        YES
 
 .PHONY: configure-enigmail build-enigmail-prerequisites build-enigmail
 
@@ -18,10 +13,10 @@ configure-enigmail:
 build-enigmail-prerequisites:
 #	cd ${WRKSRC} && env ${MAKE_ENV} ${MAKE_PROGRAM} -f client.mk export
 	cd ${WRKSRC} && env ${MAKE_ENV} ${MAKE_PROGRAM} export
-	cd ${WRKSRC}/modules/libreg && env ${MAKE_ENV} ${MAKE_PROGRAM}
-	cd ${WRKSRC}/xpcom/string && env ${MAKE_ENV} ${MAKE_PROGRAM}
-	cd ${WRKSRC}/xpcom && env ${MAKE_ENV} ${MAKE_PROGRAM}
-	cd ${WRKSRC}/xpcom/obsolete && env ${MAKE_ENV} ${MAKE_PROGRAM}
+	cd ${WRKSRC}/mozilla/modules/libreg && env ${MAKE_ENV} ${MAKE_PROGRAM}
+	cd ${WRKSRC}/mozilla/xpcom/string && env ${MAKE_ENV} ${MAKE_PROGRAM}
+	cd ${WRKSRC}/mozilla/xpcom && env ${MAKE_ENV} ${MAKE_PROGRAM}
+	cd ${WRKSRC}/mozilla/xpcom/obsolete && env ${MAKE_ENV} ${MAKE_PROGRAM}
 
 #HACK=	MOZ_OPTIMIZE=1 MODULE_OPTIMIZE_FLAGS=-O0\ -fno-elide-constructors
 HACK=	
@@ -29,5 +24,6 @@ build-enigmail:
 	cd ${ENIGMAIL_WRKSRC} && env ${MAKE_ENV} ${MAKE_PROGRAM} ${HACK}
 	cd ${ENIGMAIL_WRKSRC} && env ${MAKE_ENV} ${MAKE_PROGRAM} ${HACK} xpi
 
-.include "../../mail/thunderbird2/Makefile-thunderbird.common"
+#XXX this file should probably be maintained from mail/thunderbird
+.include "../../wip/enigmail/Makefile-thunderbird.common"
 .include "../../mk/bsd.pkg.mk"

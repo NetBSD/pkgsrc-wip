@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1.1.1 2009/08/03 12:59:09 yhardy Exp $
+$NetBSD: patch-ab,v 1.2 2010/05/06 02:38:34 khorben Exp $
 
---- genxpi.orig	2009-07-22 14:27:52.000000000 +0200
-+++ genxpi	2009-07-22 14:37:02.000000000 +0200
-@@ -55,7 +55,11 @@
+--- genxpi.orig	2010-01-31 16:31:29.000000000 +0000
++++ genxpi
+@@ -55,7 +55,11 @@ cd "$6"
  targetDir=`pwd`
  cd "$cwd"
  
@@ -15,40 +15,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2009/08/03 12:59:09 yhardy Exp $
  # Prepare chrome.manifest
  cat  ${srcDir}/package/chrome.manifest > ${targetDir}/chrome.manifest
  
-@@ -81,6 +85,8 @@
- const APP_PLATFORM_WIN="win";
- const APP_PLATFORM_MAC="mac";
- const APP_PLATFORM_OS2="os2";
-+const APP_PLATFORM_DRAGONFLY="dragonfly";
-+const APP_PLATFORM_NETBSD="netbsd";
- const APP_PLATFORM_OTHER="other";
- 
- 
-@@ -122,6 +128,10 @@
-       platformNode = APP_PLATFORM_LINUX;
-     else if (platformStr.search(/^OS\/2/) == 0)
-       platformNode = APP_PLATFORM_OS2;
-+    else if (platformStr.search(/^DragonFly/) == 0)
-+      platformNode = APP_PLATFORM_DRAGONFLY;
-+    else if (platformStr.search(/^NetBSD/) == 0)
-+      platformNode = APP_PLATFORM_NETBSD;
-     else
-       platformNode = APP_PLATFORM_OTHER;
-   }
-@@ -173,6 +183,12 @@
-   case APP_PLATFORM_OS2:
-     addDirectory("", "platform/"+ABI_PLATFORM_OS2+"/components",    fComponents, "");
-     break;
-+  case APP_PLATFORM_DRAGONFLY:
-+    addDirectory("", "platform/"+ABI_PLATFORM_DRAGONFLY+"/components",    fComponents, "");
-+    break;
-+  case APP_PLATFORM_NETBSD:
-+    addDirectory("", "platform/"+ABI_PLATFORM_NETBSD+"/components",    fComponents, "");
-+    break;
-   default:
-     addDirectory("", "platform/${platform}/components",    fComponents, "");
-   }
-@@ -285,9 +301,14 @@
+@@ -133,9 +137,14 @@ chmod 755 "${targetDir}/wrappers/gpg-age
  cd ${srcDir}/package
  
  enigmimeDll=${libPrefix}enigmime${dllSuffix}

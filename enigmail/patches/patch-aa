@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2009/08/03 12:59:09 yhardy Exp $
+$NetBSD: patch-aa,v 1.2 2010/05/06 02:38:34 khorben Exp $
 
---- Makefile.in.orig	2009-07-17 09:44:45.000000000 +0200
-+++ Makefile.in	2009-07-22 14:27:36.000000000 +0200
-@@ -70,10 +70,18 @@
+--- Makefile.in.orig	2010-01-31 16:31:31.000000000 +0000
++++ Makefile.in
+@@ -70,10 +70,18 @@ ifeq ($(OS_ARCH),Darwin)
  PLATFORM_STR = darwin
  endif
  
@@ -21,7 +21,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2009/08/03 12:59:09 yhardy Exp $
  ifeq ($(OS_ARCH),OpenBSD)
  PLATFORM_STR = openbsd
  endif
-@@ -95,7 +103,7 @@
+@@ -95,7 +103,7 @@ ENIG_XPCOM_ABI = $(OS_ARCH)_$(TARGET_XPC
  endif
  
  xpi::
