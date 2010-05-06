@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/08/22 16:58:41 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/05/06 10:51:24 jihbed Exp $
 ${PYSITELIB}/gts/__init__.py
 ${PYSITELIB}/gts/__init__.pyc
 ${PYSITELIB}/gts/__init__.pyo
@@ -9,3 +9,5 @@ ${PYSITELIB}/gts/blender.pyo
 ${PYSITELIB}/gts/pygts.py
 ${PYSITELIB}/gts/pygts.pyc
 ${PYSITELIB}/gts/pygts.pyo
+share/doc/py-gts/README.developers
+share/doc/py-gts/gts.html
