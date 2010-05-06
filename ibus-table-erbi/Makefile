@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/01/15 11:29:21 obache Exp $
+# $NetBSD: Makefile,v 1.2 2010/05/06 11:50:50 obache Exp $
 #
 
 DISTNAME=	ibus-table-erbi-1.2.0.20090901
@@ -16,9 +16,8 @@ GNU_CONFIGURE=	yes
 USE_LANGUAGES=	# none
 USE_TOOLS+=	pkg-config
 
-#XXX: should be optionify?
-#CONFIGURE_ARGS+=	--enable-extra-phrases
+CONFIGURE_ARGS+=	--enable-extra-phrases
 
-#.include "../../wip/ibus-table-extraphrase/buildlink3.mk"
+.include "../../wip/ibus-table-extraphrase/buildlink3.mk"
 .include "../../wip/ibus-table/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
