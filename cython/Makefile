@@ -1,18 +1,17 @@
-# $NetBSD: Makefile,v 1.3 2009/12/03 09:09:59 jihbed Exp $
+# $NetBSD: Makefile,v 1.4 2010/05/06 16:00:53 jihbed Exp $
 #
 
-DISTNAME=	Cython-0.12
-PKGNAME=	cython-0.12
+DISTNAME=	Cython-0.12.1
+PKGNAME=	cython-0.12.1
 CATEGORIES=	lang python
 MASTER_SITES=	http://cython.org/release/
 
-MAINTAINER=	kamel.derouiche@gmail.com
+MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://cython.org/
-COMMENT=	The Cython compiler for writing C extensions for the Python language
+COMMENT=	C-Extensions for Python
 LICENSE=	apache-1.1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-
 
 PYDISTUTILSPKG= yes
 PY_PATCHPLIST=	yes
@@ -23,9 +22,11 @@ DOCDIR=	${PREFIX}/share/doc/cython
 
 INSTALLATION_DIRS+=	${DOCDIR}
 
+do-test:
+	( cd ${WRKSRC} && ${PYTHONBIN} runtests.py )
+ 
 post-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/Doc/*.html \
-		${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/Doc/*.html ${DESTDIR}${DOCDIR}
+
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

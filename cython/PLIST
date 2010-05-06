@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/12/03 09:09:59 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.4 2010/05/06 16:00:53 jihbed Exp $
 bin/cython
 ${PYSITELIB}/Cython/CodeWriter.py
 ${PYSITELIB}/Cython/CodeWriter.pyc
@@ -48,7 +48,6 @@ ${PYSITELIB}/Cython/Compiler/Future.pyo
 ${PYSITELIB}/Cython/Compiler/Interpreter.py
 ${PYSITELIB}/Cython/Compiler/Interpreter.pyc
 ${PYSITELIB}/Cython/Compiler/Interpreter.pyo
-${PYSITELIB}/Cython/Compiler/Lexicon.pickle
 ${PYSITELIB}/Cython/Compiler/Lexicon.py
 ${PYSITELIB}/Cython/Compiler/Lexicon.pyc
 ${PYSITELIB}/Cython/Compiler/Lexicon.pyo
@@ -172,6 +171,7 @@ ${PYSITELIB}/Cython/Includes/python_method.pxd
 ${PYSITELIB}/Cython/Includes/python_module.pxd
 ${PYSITELIB}/Cython/Includes/python_number.pxd
 ${PYSITELIB}/Cython/Includes/python_object.pxd
+${PYSITELIB}/Cython/Includes/python_oldbuffer.pxd
 ${PYSITELIB}/Cython/Includes/python_pycapsule.pxd
 ${PYSITELIB}/Cython/Includes/python_ref.pxd
 ${PYSITELIB}/Cython/Includes/python_sequence.pxd
@@ -184,21 +184,6 @@ ${PYSITELIB}/Cython/Includes/python_version.pxd
 ${PYSITELIB}/Cython/Includes/python_weakref.pxd
 ${PYSITELIB}/Cython/Includes/stdio.pxd
 ${PYSITELIB}/Cython/Includes/stdlib.pxd
-${PYSITELIB}/Cython/Mac/DarwinSystem.py
-${PYSITELIB}/Cython/Mac/DarwinSystem.pyc
-${PYSITELIB}/Cython/Mac/DarwinSystem.pyo
-${PYSITELIB}/Cython/Mac/MacSystem.py
-${PYSITELIB}/Cython/Mac/MacSystem.pyc
-${PYSITELIB}/Cython/Mac/MacSystem.pyo
-${PYSITELIB}/Cython/Mac/MacUtils.py
-${PYSITELIB}/Cython/Mac/MacUtils.pyc
-${PYSITELIB}/Cython/Mac/MacUtils.pyo
-${PYSITELIB}/Cython/Mac/TS_Misc_Suite.py
-${PYSITELIB}/Cython/Mac/TS_Misc_Suite.pyc
-${PYSITELIB}/Cython/Mac/TS_Misc_Suite.pyo
-${PYSITELIB}/Cython/Mac/__init__.py
-${PYSITELIB}/Cython/Mac/__init__.pyc
-${PYSITELIB}/Cython/Mac/__init__.pyo
 ${PYSITELIB}/Cython/Plex/Actions.py
 ${PYSITELIB}/Cython/Plex/Actions.pyc
 ${PYSITELIB}/Cython/Plex/Actions.pyo
@@ -257,12 +242,6 @@ ${PYSITELIB}/Cython/Tests/TestCodeWriter.pyo
 ${PYSITELIB}/Cython/Tests/__init__.py
 ${PYSITELIB}/Cython/Tests/__init__.pyc
 ${PYSITELIB}/Cython/Tests/__init__.pyo
-${PYSITELIB}/Cython/Unix/LinuxSystem.py
-${PYSITELIB}/Cython/Unix/LinuxSystem.pyc
-${PYSITELIB}/Cython/Unix/LinuxSystem.pyo
-${PYSITELIB}/Cython/Unix/__init__.py
-${PYSITELIB}/Cython/Unix/__init__.pyc
-${PYSITELIB}/Cython/Unix/__init__.pyo
 ${PYSITELIB}/Cython/Utils.py
 ${PYSITELIB}/Cython/Utils.pyc
 ${PYSITELIB}/Cython/Utils.pyo
