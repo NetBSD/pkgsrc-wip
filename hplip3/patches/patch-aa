@@ -1,0 +1,82 @@
+$NetBSD: patch-aa,v 1.1 2010/05/06 00:25:14 khorben Exp $
+
+--- configure.orig	2010-02-24 23:10:03.000000000 +0000
++++ configure
+@@ -9993,13 +9993,13 @@ else
+ 
+   darwin*)
+   # if libdl is installed we need to link against it
+-    { $as_echo "$as_me:$LINENO: checking for dlopen in -ldl" >&5
+-$as_echo_n "checking for dlopen in -ldl... " >&6; }
++    { $as_echo "$as_me:$LINENO: checking for dlopen" >&5
++$as_echo_n "checking for dlopen... " >&6; }
+ if test "${ac_cv_lib_dl_dlopen+set}" = set; then
+   $as_echo_n "(cached) " >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-ldl  $LIBS"
++LIBS="$LIBS"
+ cat >conftest.$ac_ext <<_ACEOF
+ /* confdefs.h.  */
+ _ACEOF
+@@ -10059,7 +10059,7 @@ fi
+ { $as_echo "$as_me:$LINENO: result: $ac_cv_lib_dl_dlopen" >&5
+ $as_echo "$ac_cv_lib_dl_dlopen" >&6; }
+ if test "x$ac_cv_lib_dl_dlopen" = x""yes; then
+-  lt_cv_dlopen="dlopen" lt_cv_dlopen_libs="-ldl"
++  lt_cv_dlopen="dlopen" lt_cv_dlopen_libs=""
+ else
+ 
+     lt_cv_dlopen="dyld"
+@@ -10315,13 +10315,13 @@ $as_echo "$ac_cv_func_dlopen" >&6; }
+ if test "x$ac_cv_func_dlopen" = x""yes; then
+   lt_cv_dlopen="dlopen"
+ else
+-  { $as_echo "$as_me:$LINENO: checking for dlopen in -ldl" >&5
+-$as_echo_n "checking for dlopen in -ldl... " >&6; }
++  { $as_echo "$as_me:$LINENO: checking for dlopen" >&5
++$as_echo_n "checking for dlopen... " >&6; }
+ if test "${ac_cv_lib_dl_dlopen+set}" = set; then
+   $as_echo_n "(cached) " >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-ldl  $LIBS"
++LIBS="$LIBS"
+ cat >conftest.$ac_ext <<_ACEOF
+ /* confdefs.h.  */
+ _ACEOF
+@@ -10381,7 +10381,7 @@ fi
+ { $as_echo "$as_me:$LINENO: result: $ac_cv_lib_dl_dlopen" >&5
+ $as_echo "$ac_cv_lib_dl_dlopen" >&6; }
+ if test "x$ac_cv_lib_dl_dlopen" = x""yes; then
+-  lt_cv_dlopen="dlopen" lt_cv_dlopen_libs="-ldl"
++  lt_cv_dlopen="dlopen" lt_cv_dlopen_libs=""
+ else
+   { $as_echo "$as_me:$LINENO: checking for dlopen in -lsvld" >&5
+ $as_echo_n "checking for dlopen in -lsvld... " >&6; }
+@@ -21791,13 +21791,13 @@ $as_echo "$as_me: error: \"cannot find l
+    { (exit 102); exit 102; }; }
+ fi
+ 
+-{ $as_echo "$as_me:$LINENO: checking for dlopen in -ldl" >&5
+-$as_echo_n "checking for dlopen in -ldl... " >&6; }
++{ $as_echo "$as_me:$LINENO: checking for dlopen" >&5
++$as_echo_n "checking for dlopen... " >&6; }
+ if test "${ac_cv_lib_dl_dlopen+set}" = set; then
+   $as_echo_n "(cached) " >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-ldl  $LIBS"
++LIBS="$LIBS"
+ cat >conftest.$ac_ext <<_ACEOF
+ /* confdefs.h.  */
+ _ACEOF
+@@ -26305,6 +26305,8 @@ do
+   case $ac_option in
+   # Handling of the options.
+   -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
++	: Avoid regenerating within pkgsrc
++	exit 0
+     ac_cs_recheck=: ;;
+   --version | --versio | --versi | --vers | --ver | --ve | --v | -V )
+     $as_echo "$ac_cs_version"; exit ;;
