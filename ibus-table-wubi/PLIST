@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/05/06 12:13:27 obache Exp $
+share/ibus-table/icons/wubi86.svg
+share/ibus-table/icons/wubi98.svg
+share/ibus-table/tables/wubi86.db
+share/ibus-table/tables/wubi98.db

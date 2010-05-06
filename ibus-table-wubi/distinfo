@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/05/06 12:13:27 obache Exp $
+
+SHA1 (ibus-table-wubi-1.2.0.20091227.tar.gz) = 75f9cc034bda19a5d011dc22345154012de15015
+RMD160 (ibus-table-wubi-1.2.0.20091227.tar.gz) = d4cd973d1569c691bb243e2f1d6b087803b61170
+Size (ibus-table-wubi-1.2.0.20091227.tar.gz) = 2073914 bytes
+SHA1 (patch-aa) = aacb54f181dae9e7b6598bbcb14a1ec1a02deec5
