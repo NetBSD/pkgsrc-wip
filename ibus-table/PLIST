@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/01/10 13:29:49 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/05/06 11:39:23 obache Exp $
 bin/ibus-table-createdb
 lib/pkgconfig/ibus-table.pc
 libexec/ibus-engine-table
@@ -24,14 +24,12 @@ share/ibus-table/engine/tabsqlitedb.pyo
 share/ibus-table/icons/acommit.svg
 share/ibus-table/icons/cb-mode.svg
 share/ibus-table/icons/chinese.svg
-share/ibus-table/icons/compose.svg
 share/ibus-table/icons/english.svg
 share/ibus-table/icons/full-letter.svg
 share/ibus-table/icons/full-punct.svg
 share/ibus-table/icons/half-letter.svg
 share/ibus-table/icons/half-punct.svg
 share/ibus-table/icons/ibus-table.svg
-share/ibus-table/icons/latex.svg
 share/ibus-table/icons/ncommit.svg
 share/ibus-table/icons/onechar.svg
 share/ibus-table/icons/phrase.svg
@@ -41,8 +39,6 @@ share/ibus-table/icons/scb-mode.svg
 share/ibus-table/icons/tab-mode.svg
 share/ibus-table/icons/tc-mode.svg
 share/ibus-table/icons/tcb-mode.svg
-share/ibus-table/tables/compose.db
-share/ibus-table/tables/latex.db
 share/ibus-table/tables/template.txt
 share/ibus/component/table.xml
 share/locale/zh_CN/LC_MESSAGES/ibus-table.mo

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2010/04/05 06:29:13 obache Exp $
+# $NetBSD: Makefile,v 1.8 2010/05/06 11:39:23 obache Exp $
 #
 
 DISTNAME=	ibus-table-1.2.0.20100111
@@ -20,6 +20,8 @@ USE_PKGLOCALEDIR=	yes
 
 PKGCONFIG_OVERRIDE+=	ibus-table.pc.in
 
+CONFIGURE_ARGS+=	--disable-additional
+
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	pre-configure
 SUBST_FILES.prefix=	engine/tabcreatedb.py
@@ -30,6 +32,8 @@ SUBST_STAGE.epython=	pre-configure
 SUBST_FILES.epython=	engine/ibus-engine-table.in
 SUBST_FILES.epython+=	engine/ibus-table-createdb.in
 SUBST_SED.epython=	-e 's;exec python;exec ${PYTHONBIN};g'
+
+REPLACE_PYTHON+=	engine/tabcreatedb.py
 
 .include "../../lang/python/application.mk"
 BUILDLINK_ABI_DEPENDS.ibus+=	ibus>=1.1.0

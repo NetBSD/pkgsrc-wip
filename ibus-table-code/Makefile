@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/03/05 12:57:15 obache Exp $
+# $NetBSD: Makefile,v 1.4 2010/05/06 11:39:23 obache Exp $
 #
 
 DISTNAME=	ibus-table-code-1.2.0.20100305
@@ -14,9 +14,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config
-
-# latex is in ibus-table.
-CONFIGURE_ARGS+=	--disable-latex
 
 .include "../../lang/python/application.mk"
 .include "../../wip/ibus-table/buildlink3.mk"
