@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/05/06 09:51:04 jihbed Exp $
+
+SHA1 (sympycore-0.1.tar.gz) = 321921bfcb6bf0d168de3669c7f33ce94e3f730e
+RMD160 (sympycore-0.1.tar.gz) = 1d2fb58e84ed59f81f9869e98416dcdc21ee67b0
+Size (sympycore-0.1.tar.gz) = 141701 bytes
+SHA1 (patch-aa) = 8eed116886473b04da5069d7a55bbea41e0c5725
