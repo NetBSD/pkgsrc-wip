@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3949 2010/05/06 09:52:31 jihbed Exp $
+# $Id: Makefile,v 1.3950 2010/05/06 10:20:11 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1921,7 +1921,6 @@ SUBDIR+=	py-libtunepimp
 SUBDIR+=	py-lockfile
 SUBDIR+=	py-logilab-astng
 SUBDIR+=	py-logilab-common
-SUBDIR+=	py-logilab-doctools
 SUBDIR+=	py-logilab-mtconverter
 SUBDIR+=	py-logilab-pigg
 SUBDIR+=	py-matplotlib
