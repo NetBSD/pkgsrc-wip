@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2010/05/06 00:25:14 khorben Exp $
+# $NetBSD: Makefile,v 1.2 2010/05/06 00:51:22 khorben Exp $
 #
 
 DISTNAME=	hplip-3.10.2
@@ -18,6 +18,8 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
 
 CONFIGURE_ARGS= --sysconfdir=${PKG_SYSCONFDIR} \
+		--with-cupsbackenddir=${PREFIX}/libexec/cups/backend \
+		--with-cupsfilterdir=${PREFIX}/libexec/cups/filter \
 		--enable-dbus-build=false
 
 .include "../../lang/python/application.mk"
