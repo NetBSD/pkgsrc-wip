@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/05/07 22:14:10 jihbed Exp $
+${PYSITELIB}/mpi4py/MPE.so
+${PYSITELIB}/mpi4py/MPI.so
+${PYSITELIB}/mpi4py/__init__.py
+${PYSITELIB}/mpi4py/__init__.pyc
+${PYSITELIB}/mpi4py/__init__.pyo
+${PYSITELIB}/mpi4py/dl.so
+${PYSITELIB}/mpi4py/include/mpi4py/MPI.pxd
+${PYSITELIB}/mpi4py/include/mpi4py/__init__.pxd
+${PYSITELIB}/mpi4py/include/mpi4py/__init__.pyx
+${PYSITELIB}/mpi4py/include/mpi4py/mpi.pxi
+${PYSITELIB}/mpi4py/include/mpi4py/mpi4py.MPI.h
+${PYSITELIB}/mpi4py/include/mpi4py/mpi4py.MPI_api.h
+${PYSITELIB}/mpi4py/include/mpi4py/mpi4py.h
+${PYSITELIB}/mpi4py/include/mpi4py/mpi4py.i
+${PYSITELIB}/mpi4py/include/mpi4py/mpi_c.pxd
+${PYSITELIB}/mpi4py/rc.py
+${PYSITELIB}/mpi4py/rc.pyc
+${PYSITELIB}/mpi4py/rc.pyo
+share/doc/py-mpi4py/mpi4py.pdf
