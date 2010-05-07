@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3956 2010/05/07 17:03:05 emil_s Exp $
+# $Id: Makefile,v 1.3957 2010/05/07 22:16:33 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1934,6 +1934,7 @@ SUBDIR+=	py-mdp
 SUBDIR+=	py-memcached
 SUBDIR+=	py-metrics
 SUBDIR+=	py-mocker
+SUBDIR+=	py-mpich4py
 SUBDIR+=	py-mpmath
 SUBDIR+=	py-mx-base
 SUBDIR+=	py-mysqldb-docs
