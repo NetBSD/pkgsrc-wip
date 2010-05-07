@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/01/04 04:15:19 netcap Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/05/07 21:02:55 jihbed Exp $
 bin/plod
-man/man1/plod.1.gz
-${EMACS_LISPPREFIX}/plod.el
+man/man1/plod.1
+share/doc/plod/README

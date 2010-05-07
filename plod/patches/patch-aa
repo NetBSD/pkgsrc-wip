@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.1 2010/05/07 21:02:55 jihbed Exp $
+
+--- plod.orig	2010-05-07 20:10:12.000000000 +0000
++++ plod	2010-05-07 20:14:45.000000000 +0000
+@@ -60,9 +60,9 @@
+ $CRYPTCMD = "/usr/bin/crypt";
+ $TMPFILE = "/tmp/plodtmp$$";
+ $HOME = (getpwuid($<))[7];
+-$EDITOR = "/usr/local/bin/emacs";
+-$VISUAL = "/usr/local/bin/emacs";
+-$PAGER =  "/usr/local/bin/less";
++$EDITOR = "/usr/pkg/bin/emacs";
++$VISUAL = "/usr/pkg/bin/emacs";
++$PAGER =  "/usr/bin/less";
+ $LINES = 24;
+ $LOGDIR = "$HOME/.logdir";
+ $LOGFILE = sprintf("%04d%02d", $YY+1900, $MM);
