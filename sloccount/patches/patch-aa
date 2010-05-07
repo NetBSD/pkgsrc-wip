@@ -1,26 +1,28 @@
-$NetBSD: patch-aa,v 1.1 2009/11/06 11:46:43 khorben Exp $
+$NetBSD: patch-aa,v 1.2 2010/05/07 17:43:21 jihbed Exp $
 
---- /home/netbsd/pkgsrc/work/wip/sloccount/work/sloccount-2.26/makefile.orig	2009-11-06 12:40:24.000000000 +0100
-+++ /home/netbsd/pkgsrc/work/wip/sloccount/work/sloccount-2.26/makefile
-@@ -29,6 +29,7 @@
+--- makefile.orig	2004-08-01 18:52:06.000000000 +0000
++++ makefile	2010-05-07 18:29:24.000000000 +0000
+@@ -28,7 +28,8 @@
+ # Set this for where to store the man pages and executables.
  # If you want to store this as part of an official distribution,
  # change this to "/usr":
- PREFIX=/usr/local
+-PREFIX=/usr/local
 +DESTDIR=
++PREFIX=/usr/pkg
  
  # Set "EXE_SUFFIX" to ".exe" if you're running on Windows, like this:
  # EXE_SUFFIX=.exe
-@@ -69,10 +70,10 @@ VERSION=2.26
+@@ -69,10 +70,10 @@
  RPM_VERSION=1
  ARCH=i386
  VERSIONEDNAME=$(NAME)-$(VERSION)
 -INSTALL_DIR=$(PREFIX)/bin
 -MAN_DIR=$(PREFIX)/share/man
 +INSTALL_DIR=$(DESTDIR)$(PREFIX)/bin
-+MAN_DIR=$(DESTDIR)$(PREFIX)/share/man
++MAN_DIR=$(DESTDIR)$(PREFIX)/man
  MAN_DIR_MAN1=$(MAN_DIR)/man1
 -DOC_DIR=$(PREFIX)/share/doc/$(VERSIONEDNAME)-$(RPM_VERSION)
-+DOC_DIR=$(DESTDIR)$(PREFIX)/share/doc/$(VERSIONEDNAME)-$(RPM_VERSION)
++DOC_DIR=$(DESTDIR)$(PREFIX)/share/doc/$(NAME)
  POSTED_DIR=/home/dwheeler/dwheeler.com/sloccount
  
  COMPILED_EXECUTABLES= \

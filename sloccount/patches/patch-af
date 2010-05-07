@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1 2010/05/07 17:43:21 jihbed Exp $
+
+--- rpm_unpacker.orig	2010-05-07 18:08:06.000000000 +0000
++++ rpm_unpacker	2010-05-07 18:09:26.000000000 +0000
+@@ -61,7 +61,7 @@
+   # If disk space is available, REMOVE THIS LINE:
+   # find "$newbuild" -type f -name "*.html" -exec rm {} \;
+  done
+- if [ $anychange == 0 ]
++ if [ $anychange = 0 ]
+  then
+   echo "UNPACKER: did not add a build directory for spec file $specfile"
+  fi
