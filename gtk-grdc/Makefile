@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/01/18 09:38:23 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2010/05/07 12:20:30 jihbed Exp $
 #
 
 DISTNAME=	grdc-0.4.0
@@ -7,7 +7,7 @@ PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=grdc/}
 
-MAINTAINER=	kamelderouiche@yahoo.com
+MAINTAINER=	pkgsrc-users@netbsd.org
 HOMEPAGE=	http://grdc.sourceforge.net/
 COMMENT=	Grdc is a remote desktop client based on GTK+
 
