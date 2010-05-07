@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/03/15 00:25:56 jihbed Exp $
+$NetBSD: distinfo,v 1.2 2010/05/07 21:12:34 jihbed Exp $
 
-SHA1 (webkit-sharp-0.2.tar.bz2) = 751a5f352d3a03b8a0a37c9a8d98c5fd934f68a6
-RMD160 (webkit-sharp-0.2.tar.bz2) = 80543ae5b7bd88dd6828c2cceda36497a4526e66
-Size (webkit-sharp-0.2.tar.bz2) = 81853 bytes
+SHA1 (webkit-sharp-0.3.tar.bz2) = c3a5d219da2e70a37c34b981064a63dbdbd91e1c
+RMD160 (webkit-sharp-0.3.tar.bz2) = 10b80ea1fb253e69dde6fadb3c5df5114b7b5e69
+Size (webkit-sharp-0.3.tar.bz2) = 88972 bytes
