@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3955 2010/05/07 14:54:12 hfath Exp $
+# $Id: Makefile,v 1.3956 2010/05/07 17:03:05 emil_s Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -469,6 +469,7 @@ SUBDIR+=	foomatic-db-engine
 SUBDIR+=	fortunes-it
 SUBDIR+=	fprobe
 SUBDIR+=	fragrouter
+SUBDIR+=	freecell
 SUBDIR+=	freedict-tools-xsl
 SUBDIR+=	freedup
 SUBDIR+=	freej
