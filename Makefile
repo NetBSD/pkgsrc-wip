@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3952 2010/05/07 10:53:55 jihbed Exp $
+# $Id: Makefile,v 1.3953 2010/05/07 10:59:15 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1886,6 +1886,7 @@ SUBDIR+=	py-ezPyCrypto
 SUBDIR+=	py-fastaudio
 SUBDIR+=	py-flakes
 SUBDIR+=	py-foolscap
+SUBDIR+=	py-fuzzpy
 SUBDIR+=	py-fs
 SUBDIR+=	py-gcalendarsync
 SUBDIR+=	py-generateDS
