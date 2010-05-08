@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/05/08 09:48:22 obache Exp $
+share/ibus-sogoupycc/config.lua
+share/ibus-sogoupycc/engine/ibus-sogoupycc
+share/ibus-sogoupycc/fetcher
+share/ibus-sogoupycc/icons/engmode-off.png
+share/ibus-sogoupycc/icons/engmode-on.png
+share/ibus-sogoupycc/icons/extensions.png
+share/ibus-sogoupycc/icons/ibus-sogoupycc.png
+share/ibus-sogoupycc/icons/idle.png
+share/ibus-sogoupycc/icons/requesting.png
+share/ibus/component/sogoupycc.xml

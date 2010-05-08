@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/05/08 09:48:22 obache Exp $
+
+XXX: should be checked.
+
+--- src/XUtility.cpp.orig	2010-04-13 16:35:46.000000000 +0000
++++ src/XUtility.cpp
+@@ -144,7 +144,7 @@ namespace XUtility {
+     const long long getCurrentTime() {
+         struct ntptimeval t;
+         ntp_gettime(&t);
+-        return t.time.tv_usec + t.time.tv_sec * 1000000LL;
++        return t.time.tv_nsec / 1000 + t.time.tv_sec * 1000000LL;
+     }
+ 
+     /**
