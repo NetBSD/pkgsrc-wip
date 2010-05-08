@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3960 2010/05/08 18:57:25 jihbed Exp $
+# $Id: Makefile,v 1.3961 2010/05/08 22:42:43 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1715,6 +1715,7 @@ SUBDIR+=	pear-HTTP_Client
 SUBDIR+=	pear-HTTP_Request2
 SUBDIR+=	pear-Net_URL2
 SUBDIR+=	pear-XML_Parser
+SUBDIR+=	pessulus
 SUBDIR+=	pfe
 SUBDIR+=	pgp6
 SUBDIR+=	phlib
