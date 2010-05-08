@@ -1,31 +1,31 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/01/03 09:19:28 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2010/05/08 17:56:18 jihbed Exp $
 #
 
-DISTNAME=	cvxopt-1.1
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+DISTNAME=	cvxopt-1.1.2.tar
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/.tar//}
 CATEGORIES=	math python
-MASTER_SITES=	http://abel.ee.ucla.edu/src/
+MASTER_SITES=	http://pypi.python.org/packages/source/C/CVXOPT/
+EXTRACT_SUFX=	.gz#md5=211a31494991bcd75b4790a3c5806e18
 
-MAINTAINER=	kamel.derouiche@gmail.com
+MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://abel.ee.ucla.edu/cvxopt/
 COMMENT=	Python software for convex optimization
 LICENSE=	gnu-gpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-WRKSRC=		${WRKDIR}/${DISTNAME}/src
+WRKSRC=		${WRKDIR}/cvxopt-1.1.2/src
 
 USE_TOOLS+=	pax
 USE_LANGUAGES=	c fortran
-PYDISTUTILSPKG= yes
 
-PYTHON_VERSIONS_ACCEPTED= 25
+PYDISTUTILSPKG= yes
 
 DOCDIR=	${PREFIX}/share/doc/py-cvxopt
 
 post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
-	cd ${WRKDIR}/${DISTNAME}/doc/html && pax -rwpe . \
+	cd ${WRKDIR}/${DISTNAME:S/.tar//}/doc/build/html && pax -rwpe . \
 		${DESTDIR}${PREFIX}/share/doc/py-cvxopt
 
 .include "../../math/blas/buildlink3.mk"

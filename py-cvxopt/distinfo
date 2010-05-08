@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/01/03 09:19:28 jihbed Exp $
+$NetBSD: distinfo,v 1.2 2010/05/08 17:56:18 jihbed Exp $
 
-SHA1 (download.php) = 391953aea9ce19a3b5c8055237bb26e79798696e
-RMD160 (download.php) = 86f729c4f7cd7eac8253efc9fe6f3ac06c940413
-Size (download.php) = 2932055 bytes
+SHA1 (cvxopt-1.1.2.tar.gz) = 02005a60b7753bca1f48bc2ca3b8b81d25b1ac44
+RMD160 (cvxopt-1.1.2.tar.gz) = 688defdfc7b54e3e5e719612adfef8bd48a96fa6
+Size (cvxopt-1.1.2.tar.gz) = 2901862 bytes
