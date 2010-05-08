@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/04/14 09:31:22 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/05/08 17:13:38 jihbed Exp $
 bin/restcli
-${PYSITELIB}/restkit-1.2.1-py2.6.egg-info/PKG-INFO
-${PYSITELIB}/restkit-1.2.1-py2.6.egg-info/SOURCES.txt
-${PYSITELIB}/restkit-1.2.1-py2.6.egg-info/dependency_links.txt
-${PYSITELIB}/restkit-1.2.1-py2.6.egg-info/entry_points.txt
-${PYSITELIB}/restkit-1.2.1-py2.6.egg-info/top_level.txt
-${PYSITELIB}/restkit-1.2.1-py2.6.egg-info/zip-safe
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/zip-safe
 ${PYSITELIB}/restkit/__init__.py
 ${PYSITELIB}/restkit/__init__.pyc
 ${PYSITELIB}/restkit/__init__.pyo
@@ -27,6 +27,12 @@ ${PYSITELIB}/restkit/ext/eventlet_pool.pyo
 ${PYSITELIB}/restkit/ext/gevent_pool.py
 ${PYSITELIB}/restkit/ext/gevent_pool.pyc
 ${PYSITELIB}/restkit/ext/gevent_pool.pyo
+${PYSITELIB}/restkit/ext/ipython_shell.py
+${PYSITELIB}/restkit/ext/ipython_shell.pyc
+${PYSITELIB}/restkit/ext/ipython_shell.pyo
+${PYSITELIB}/restkit/ext/webob_api.py
+${PYSITELIB}/restkit/ext/webob_api.pyc
+${PYSITELIB}/restkit/ext/webob_api.pyo
 ${PYSITELIB}/restkit/ext/webob_helper.py
 ${PYSITELIB}/restkit/ext/webob_helper.pyc
 ${PYSITELIB}/restkit/ext/webob_helper.pyo
