@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2009/10/08 09:45:19 fhajny Exp $
+# $NetBSD: Makefile,v 1.17 2010/05/08 05:54:52 obache Exp $
 #
 
 DISTNAME=		luasocket-2.0.2
@@ -13,18 +13,13 @@ LICENSE=		mit
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-MAKE_FILE=		${WRKSRC}/makefile
-BUILD_TARGET=		all
+MAKE_FILE=		makefile
 USE_TOOLS+=		gmake
 
 LDFLAGS.SunOS=		-lrt -lresolv
 
-INSTALLATION_DIRS+=	${LUA_CDIR} ${LUA_LDIR}
-
-do-install:
-	${INSTALL_LIB} ${WRKSRC}/src/mime.so.1.0.2 ${DESTDIR}${PREFIX}/${LUA_CDIR}/mime.so
-	${INSTALL_LIB} ${WRKSRC}/src/socket.so.2.0.2 ${DESTDIR}${PREFIX}/${LUA_CDIR}/socket.so
-	${INSTALL_DATA} ${WRKSRC}/src/*.lua ${DESTDIR}${PREFIX}/${LUA_LDIR}/
+INSTALL_MAKE_FLAGS+=	INSTALL_TOP_SHARE=${DESTDIR}${PREFIX}/${LUA_LDIR}
+INSTALL_MAKE_FLAGS+=	INSTALL_TOP_LIB=${DESTDIR}${PREFIX}/${LUA_CDIR}
 
 .include "../../lang/lua/module.mk"
 .include "../../mk/bsd.pkg.mk"
