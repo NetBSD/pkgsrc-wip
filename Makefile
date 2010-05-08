@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3959 2010/05/08 18:39:08 jihbed Exp $
+# $Id: Makefile,v 1.3960 2010/05/08 18:57:25 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1992,6 +1992,7 @@ SUBDIR+=	py-tranquil
 SUBDIR+=	py-twisted
 SUBDIR+=	py-twisted-kqueue
 SUBDIR+=	py-twisted-zopeinterface
+SUBDIR+=	py-uuid
 SUBDIR+=	py-van.testing
 SUBDIR+=	py-visionegg
 SUBDIR+=	py-visionegg-contrib
