@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2010/05/09 07:28:22 pdtafti Exp $
+
+--- main.c.orig	2010-05-07 21:11:44.000000000 +0200
++++ main.c
+@@ -38,7 +38,7 @@
+ #include <sys/types.h>
+ #include <openssl/rand.h>
+ #ifdef OPENCONNECT_LIBPROXY
+-#include <libproxy/proxy.h>
++#include LIBPROXY_HDR
+ #endif
+ 
+ #define _GNU_SOURCE

@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/05/09 07:28:22 pdtafti Exp $
+
+SHA1 (openconnect-2.24.tar.gz) = 06a874e0653a16cfb2289bc9086a446a40fa565c
+RMD160 (openconnect-2.24.tar.gz) = 0d4516d166c6b36d172b7521ac2742d63fd2e751
+Size (openconnect-2.24.tar.gz) = 73032 bytes
+SHA1 (patch-aa) = 1a8b31f71732f58b7dfe35b4e4fe4decb092ba0e
+SHA1 (patch-ab) = 6ef15b5f40cf459a51eb8d34529a8d82e8fecc2c
+SHA1 (patch-ac) = d4013b28c0957fbf8ea2dd5cb44edf641f8d9e31
+SHA1 (patch-ad) = 28e3ccd5a80dcc2430a5971e61bcb5adafeba6bf
+SHA1 (patch-ae) = 6ff09d66b03266362a3e26f0c8e3c18ecf1bf1fc

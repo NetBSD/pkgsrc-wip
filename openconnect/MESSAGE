@@ -1,0 +1,13 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2010/05/09 07:28:22 pdtafti Exp $
+
+The vpnc-config script included in the vpnc-config package is needed to
+set up DNS and routing.
+
+To use it, invoke "openconnect" (as root) with the "-s" switch, followed by
+the path to the config script.  More information can be found in the man
+page and in the file
+
+    "${PREFIX}/share/doc/openconnect/openconnect.html".
+
+===========================================================================

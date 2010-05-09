@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/05/09 07:28:22 pdtafti Exp $
+man/man8/openconnect.8
+sbin/openconnect
+share/doc/openconnect/README.SecurID
+share/doc/openconnect/openconnect.html
+@dirrm share/doc/openconnect

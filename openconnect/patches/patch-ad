@@ -1,0 +1,15 @@
+$NetBSD: patch-ad,v 1.1.1.1 2010/05/09 07:28:22 pdtafti Exp $
+
+--- tun.c.orig	2010-05-07 21:11:44.000000000 +0200
++++ tun.c
+@@ -41,6 +41,10 @@
+ #if defined(__sun__)
+ #include <stropts.h>
+ #include <sys/sockio.h>
++#include <net/if_tun.h>
++#ifndef TUNNEWPPA
++#error "Install TAP driver from http://www.whiteboard.ne.jp/~admin2/tuntap/"
++#endif
+ #endif
+ 
+ #include "openconnect.h"
