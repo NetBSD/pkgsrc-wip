@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/05/09 10:00:04 pdtafti Exp $
+# $NetBSD: Makefile,v 1.3 2010/05/09 10:14:21 pdtafti Exp $
 
 DISTNAME=	vpnc-script-2.24
 PKGREVISION=	1
