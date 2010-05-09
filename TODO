@@ -7,7 +7,7 @@ Suggested package updates
 	o backintime-0.9.26
 	o bsnes-0.64
 	o cairo-java-1.0.8
-	o cclive-0.6.2
+	o cclive-0.6.3
 	o ccrypt-1.9
 	o chora-2.0.1
 	o cinelerra-4.1
@@ -29,6 +29,7 @@ Suggested package updates
 	o gambas2-2.20.0
 	o gcc42-4.2.4
 	o gcc43-4.3.4
+	o geant-4.9.3p1
 	o gforge-4.5.11
 	o glib-java-0.4.2
 	o globulation2-0.9.4
@@ -44,6 +45,7 @@ Suggested package updates
 	o guitone-0.9
 	o httrack-3.43
 	o hu-go-2.11
+	o hyena-0.3
 	o i3-3.e
 	o icecat-3.6
 	o jakarta-log4j-1.2.15 [now called apache-log4j, http://logging.apache.org/log4j/1.2/download.html]
@@ -67,7 +69,7 @@ Suggested package updates
 	o llvm-2.7
 	o man-1.6f
 	o mcabber-0.10.0
-	o meta-tracker-0.8.4
+	o meta-tracker-0.8.5
 	o mixxx-1.7.0
 	o mpgedit-0.73dev2
 	o mupen64-0.5
@@ -77,7 +79,7 @@ Suggested package updates
 	o osmose-0.9.1
 	o parted-1.9.0
 	o passepartout-0.7.1
-	o pdfmod-0.8.1
+	o pdfmod-0.8.3
 	o pdnsd-1.2.8
 	o pike-7.8.352
 	o py-PyPE-2.9
