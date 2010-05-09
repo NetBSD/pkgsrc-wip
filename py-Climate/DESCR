@@ -1,0 +1,6 @@
+PyClimate is a Python package designed to accomplish some usual tasks needed
+during the analysis of climate variability. It provides functions to handle
+simple I/O operations, handling of COARDS-compliante netCDF files, EOF analysis,
+SVD and CCA analysis of coupled data sets, some linear digital filters, kernel
+based probability density function estimation and access to DCDFLIB.C library
+from Python.
