@@ -1,0 +1,10 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2010/05/09 07:27:01 pdtafti Exp $
+
+A sample config script has been installed at
+
+    "${PKG_SYSCONFDIR}/vpnc-script".
+
+See OpenConnect documentation for usage examples.
+
+===========================================================================
