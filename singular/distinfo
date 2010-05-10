@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/05/10 21:24:52 jihbed Exp $
+
+SHA1 (Singular-3-1-0-7.tar.gz) = 8ffff0a83fd1efb1b4a2416aaa1698e2ec148914
+RMD160 (Singular-3-1-0-7.tar.gz) = 6fc4ce0314cb224d23e654cf1273c1e7ea361e37
+Size (Singular-3-1-0-7.tar.gz) = 18637001 bytes
+SHA1 (patch-aa) = 6fa96287accc436a1b2783935f3aacca7413598c
