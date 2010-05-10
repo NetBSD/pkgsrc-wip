@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2010/04/01 07:33:13 phonohawk Exp $
+# $NetBSD: Makefile,v 1.23 2010/05/10 01:59:13 phonohawk Exp $
 
 DISTNAME=		ghc-${VERSION}
-VERSION=		6.12.1
+VERSION=		6.12.2
 CATEGORIES=		lang
 MASTER_SITES=	http://www.haskell.org/ghc/dist/${VERSION}/
 MAINTAINER=		kristerw@NetBSD.org
@@ -10,8 +10,8 @@ COMMENT=		Compiler for the functional language Haskell
 LICENSE=		modified-bsd
 
 DISTFILES=		${DISTNAME}-src.tar.bz2 \
-				${DISTNAME}-boot-i386-unknown-netbsd.tar.bz2 \
 				${DISTNAME}-boot-i386-unknown-freebsd.tar.bz2 \
+				${DISTNAME}-boot-i386-unknown-netbsd.tar.bz2 \
 				${DISTNAME}-boot-powerpc-apple-darwin.tar.bz2
 
 SITES.${DISTNAME}-src.tar.bz2						= http://www.haskell.org/ghc/dist/${VERSION}/
@@ -99,7 +99,7 @@ pre-configure:
 		cd bootstrap/${DISTNAME} && \
 		${LN} -sf ${PWD_CMD} utils/ghc-pwd/ghc-pwd && \
 		${ECHO} "====> Configuring for bootstrap compiler" && \
-		${SETENV} ${CONFIGURE_ENV} ./configure --enable-hc-boot ${CONFIGURE_ARGS} && \
+		${SETENV} ${CONFIGURE_ENV} ./configure --enable-hc-boot --with-ghc="" ${CONFIGURE_ARGS} && \
 		${ECHO} "====> Extracting bootstrap HC archive" && \
 		(cd .. && bsdtar jxfm ${DISTDIR}/${BOOTSTRAP_TARBALL}) && \
 		${SH} mkfiles && \
@@ -121,20 +121,19 @@ pre-configure:
 		${CP} inplace/bin/ghc-stage2 ${BUILDLINK_DIR}/bin/ghc && \
 		${CP} inplace/bin/ghc-pkg ${BUILDLINK_DIR}/bin/ghc-pkg
 
-# We need to tell the libraries/integer-gmp/configure that libgmp is
-# in a non-standard path. Without that, the resulting GHC tries to
-# link programs by executing ld(1) without passing it -L${PREFIX}/lib.
 do-configure:
 	${RUN} cd ${WRKSRC} && \
 		${SETENV} ${CONFIGURE_ENV} ./configure ${CONFIGURE_ARGS}
+# We need to tell the libraries/integer-gmp/configure that libgmp is
+# in a non-standard path. Without that, the resulting GHC tries to
+# link programs by executing ld(1) without passing it -L${PREFIX}/lib.
 	${RUN} ${ECHO} "libraries/integer-gmp_CONFIGURE_OPTS += \
 		--configure-option=--with-gmp-includes=${PREFIX}/include \
 		--configure-option=--with-gmp-libraries=${PREFIX}/lib" > ${WRKSRC}/mk/build.mk
+# The ncurses is also in a non-standard path.
 	${RUN} ${ECHO} "libraries/terminfo_CONFIGURE_OPTS += \
 		--configure-option=--with-curses-includes=${PREFIX}/include \
 		--configure-option=--with-curses-libraries=${PREFIX}/lib" >> ${WRKSRC}/mk/build.mk
-
-pre-build:
 # The ghc compiler does normally split the generated C files into small
 # parts before sending them to gcc, to enable the linker to eliminate
 # unused parts.  This does however not play nice with the pkgsrc
@@ -147,6 +146,14 @@ pre-build:
 # If we don't explicitly disable HsColour, PLIST gets changed
 # depending on whether we have installed it or not.
 	${RUN} ${ECHO} "HSCOLOUR_SRCS = NO" >> ${WRKSRC}/mk/build.mk
+# To avoid powerpc crash...
+# See http://hackage.haskell.org/trac/ghc/ticket/4034
+.if ${MACHINE_ARCH} == "powerpc" && ${OPSYS} == "Darwin"
+	${RUN} ${ECHO} "GhcRtsHcOpts = -optc-O0 -optc-g" >> ${WRKSRC}/mk/build.mk
+	${RUN} ${ECHO} "GhcRtsCcOpts = -O0 -g" >> ${WRKSRC}/mk/build.mk
+.endif
+
+pre-build:
 # We have to sacrifice the GHCi library for GHC itself to work around
 # for powerpc ld bug.  See
 # http://hackage.haskell.org/trac/ghc/ticket/3260
@@ -172,11 +179,14 @@ CHECK_PORTABILITY_SKIP+=	distrib/prep-bin-dist-mingw
 # http://hackage.haskell.org/trac/ghc/ticket/2933
 CHECK_SHLIBS_SUPPORTED= 	no
 
+# I guess pdcurses works well but not tested.
+USE_NCURSES=	yes
+.include "../../devel/ncurses/buildlink3.mk"
+
 BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 BUILDLINK_DEPMETHOD.libxslt = build
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
-.include "../../devel/ncurses/buildlink3.mk" # I guess pdcurses works well but not tested.
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,19 +1,17 @@
-$NetBSD: distinfo,v 1.9 2010/01/19 11:36:40 phonohawk Exp $
+$NetBSD: distinfo,v 1.10 2010/05/10 01:59:14 phonohawk Exp $
 
-SHA1 (ghc-6.12.1-boot-i386-unknown-freebsd.tar.bz2) = 47ff6791b08c78c66b9f8029bffb6618d8a0210a
-RMD160 (ghc-6.12.1-boot-i386-unknown-freebsd.tar.bz2) = 6a447f357ba8433016eafc569f7dbc0e50e8154d
-Size (ghc-6.12.1-boot-i386-unknown-freebsd.tar.bz2) = 18580036 bytes
-SHA1 (ghc-6.12.1-boot-i386-unknown-netbsd.tar.bz2) = fccf63be43d3c12b276ea273939b1db5f0e7dfcd
-RMD160 (ghc-6.12.1-boot-i386-unknown-netbsd.tar.bz2) = f502fec7c702ade51701669ae3daf133af5126e1
-Size (ghc-6.12.1-boot-i386-unknown-netbsd.tar.bz2) = 18554365 bytes
-SHA1 (ghc-6.12.1-boot-powerpc-apple-darwin.tar.bz2) = e0e4d34a64e4635c76047fb1052ab30b2c9701e0
-RMD160 (ghc-6.12.1-boot-powerpc-apple-darwin.tar.bz2) = afbad3416a0b2df5291023f5ea74ee9a35dbde7e
-Size (ghc-6.12.1-boot-powerpc-apple-darwin.tar.bz2) = 18651776 bytes
-SHA1 (ghc-6.12.1-src.tar.bz2) = dc36df842c931917f322c7fd86e19a4711ba34ea
-RMD160 (ghc-6.12.1-src.tar.bz2) = c5e067f739813421cb07ce6326b2cbe2e14fbdf6
-Size (ghc-6.12.1-src.tar.bz2) = 22543105 bytes
-SHA1 (patch-aa) = 61a7c503a9d8fd0e06d2f43926e3568f1ae1efb2
-SHA1 (patch-ab) = 68c78447f458958a8cfdd316991444fbdae5bc31
+SHA1 (ghc-6.12.2-boot-i386-unknown-freebsd.tar.bz2) = 3353dccff3de4fa49b1399747389ebf2c19d05a7
+RMD160 (ghc-6.12.2-boot-i386-unknown-freebsd.tar.bz2) = 97f73bda83bb79476a3821d05816e95e5d48e63b
+Size (ghc-6.12.2-boot-i386-unknown-freebsd.tar.bz2) = 19552626 bytes
+SHA1 (ghc-6.12.2-boot-i386-unknown-netbsd.tar.bz2) = 67f2ccd431d587372536676fcf6575915697b9d3
+RMD160 (ghc-6.12.2-boot-i386-unknown-netbsd.tar.bz2) = a3ce28eaa63479713f47c5696ba4c79ae8bad53d
+Size (ghc-6.12.2-boot-i386-unknown-netbsd.tar.bz2) = 19555867 bytes
+SHA1 (ghc-6.12.2-boot-powerpc-apple-darwin.tar.bz2) = 894eb868e19865836858acf87a77bafbab1ac60c
+RMD160 (ghc-6.12.2-boot-powerpc-apple-darwin.tar.bz2) = acd20c65c489ef9b72ecc34723729f8845754a70
+Size (ghc-6.12.2-boot-powerpc-apple-darwin.tar.bz2) = 19658673 bytes
+SHA1 (ghc-6.12.2-src.tar.bz2) = 421967729beab8a5051b8b7c216240bfcb879c84
+RMD160 (ghc-6.12.2-src.tar.bz2) = ad114022420fbb313dc56f1c5285d1cef4c88f2f
+Size (ghc-6.12.2-src.tar.bz2) = 34158695 bytes
 SHA1 (patch-af) = 81ae37eeaca5992868f6955b99113aaae010df22
+SHA1 (patch-ag) = 96c074d0d765c0f2de57d26aa145ad109b7cf043
 SHA1 (patch-ah) = 5470ab2e1bb746ef3009e5f02ac0b28b8e9d9688
-SHA1 (patch-ak) = de67817c6e310c28e8012790bf0feb43d729dd30
