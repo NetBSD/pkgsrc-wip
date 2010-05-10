@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2010/02/19 09:52:53 phonohawk Exp $
+# $NetBSD: Makefile,v 1.25 2010/05/10 02:11:39 phonohawk Exp $
 
 DISTNAME=		darcs-beta-${VERSION}
 PKGNAME=		darcs-${VERSION}
@@ -23,4 +23,5 @@ CONFIGURE_ARGS+= -fbytestring -futf8-string -f-type-witnesses -f-test
 .include "../../wip/hs-mtl/buildlink3.mk"
 .include "../../wip/hs-parsec/buildlink3.mk"
 .include "../../wip/hs-regex-compat/buildlink3.mk"
+.include "../../wip/hs-utf8-string/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
