@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/10/16 17:50:31 mbowie Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/05/10 10:04:47 obache Exp $
 lib/php/20040412/xcache.so
 share/examples/xcache/admin/common-en.lang.php
 share/examples/xcache/admin/common-zh-simplified-utf-8.lang.php
@@ -19,5 +19,3 @@ share/examples/xcache/admin/xcache.css
 share/examples/xcache/admin/xcache.php
 share/examples/xcache/admin/xcache.tpl.php
 share/examples/xcache/xcache.ini
-@dirrm share/examples/xcache/admin
-@dirrm share/examples/xcache
