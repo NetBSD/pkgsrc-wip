@@ -1,0 +1,31 @@
+$NetBSD: patch-ab,v 1.1.1.1 2010/05/10 22:06:40 jihbed Exp $
+
+--- ./src/tops/utils/genSCLCCAmulti.sh.orig	2009-12-04 00:42:55.000000000 +0000
++++ ./src/tops/utils/genSCLCCAmulti.sh	2009-12-04 00:43:53.000000000 +0000
+@@ -59,7 +59,7 @@
+ #echo $scope
+ #echo $resolution
+ #exit 0
+-if [ "$language" == python ] ; then
++if [ "$language" = python ] ; then
+   pythonImplLine="<class name=\"$className\" desc=\"python/impl\" />"
+ fi;  
+ if test "x$mode" = "xscl"; then
+@@ -76,7 +76,7 @@
+ __EOF1
+ for className in $classes; do
+     echo "    <class name=\"$className\" desc=\"ior/impl\" />"
+-    if [ "$language" == python ] ; then
++    if [ "$language" = python ] ; then
+       echo "    <class name=\"$className\" desc=\"python/impl\" />"
+     fi
+ done
+@@ -103,7 +103,7 @@
+ __EOF3
+ for className in $classes; do
+     echo "    <class name=\"$className\" desc=\"ior/impl\" />"
+-    if [ "$language" == python ] ; then
++    if [ "$language" = python ] ; then
+       echo "    <class name=\"$className\" desc=\"python/impl\" />"
+     fi
+ done
