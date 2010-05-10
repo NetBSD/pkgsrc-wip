@@ -1,9 +1,12 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:45 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.3 2010/05/10 12:14:14 phonohawk Exp $
 lib/readline-${PKGVERSION}/${HASKELL_VERSION}/HSreadline-${PKGVERSION}.o
 lib/readline-${PKGVERSION}/${HASKELL_VERSION}/System/Console/Readline.hi
+lib/readline-${PKGVERSION}/${HASKELL_VERSION}/System/Console/Readline.p_hi
 lib/readline-${PKGVERSION}/${HASKELL_VERSION}/System/Console/SimpleLineEditor.hi
+lib/readline-${PKGVERSION}/${HASKELL_VERSION}/System/Console/SimpleLineEditor.p_hi
 lib/readline-${PKGVERSION}/${HASKELL_VERSION}/include/HsReadline.h
 lib/readline-${PKGVERSION}/${HASKELL_VERSION}/include/HsReadlineConfig.h
 lib/readline-${PKGVERSION}/${HASKELL_VERSION}/libHSreadline-${PKGVERSION}.a
+lib/readline-${PKGVERSION}/${HASKELL_VERSION}/libHSreadline-${PKGVERSION}_p.a
 lib/readline-${PKGVERSION}/${HASKELL_VERSION}/package-description
 share/doc/readline-${PKGVERSION}/LICENSE
