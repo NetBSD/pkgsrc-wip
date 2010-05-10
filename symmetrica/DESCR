@@ -1,0 +1,4 @@
+Symmetrica is a collection of routines, written in the programming language
+C, through which the user can readily write his/her own programs. Routines
+which manipulate many types of mathematical objects are available. Their use
+is facilitated by Symmetrica's object oriented style.
