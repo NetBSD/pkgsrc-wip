@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/05/10 04:58:50 othyro Exp $
+lib/java/saxon.jar
+share/doc/saxon/index.html
+share/doc/saxon/saxondocs.css
+share/doc/saxon/img/saxonica_logo.gif
