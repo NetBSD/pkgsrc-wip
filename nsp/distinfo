@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/05/10 23:34:11 jihbed Exp $
+
+SHA1 (nsp2-cvs_20090724.tar.gz) = 676847aa017e3b8188d51ad6c758e764b9e963da
+RMD160 (nsp2-cvs_20090724.tar.gz) = cc69ee9ceb903f075a598f16b04daab23c926269
+Size (nsp2-cvs_20090724.tar.gz) = 7326353 bytes
+SHA1 (patch-aa) = dcc2414fe91692dceb050cb2b78bded182d6c5a7
