@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3962 2010/05/09 07:49:21 pdtafti Exp $
+# $Id: Makefile,v 1.3963 2010/05/10 05:00:43 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2107,6 +2107,7 @@ SUBDIR+=	s3funnel
 SUBDIR+=	sakura
 SUBDIR+=	samhain
 SUBDIR+=	sara
+SUBDIR+=	saxon
 SUBDIR+=	sbcl
 SUBDIR+=	scare
 SUBDIR+=	schismtracker
