@@ -1,13 +1,11 @@
-# $NetBSD: Makefile,v 1.10 2009/10/10 14:15:29 tnn2 Exp $
+# $NetBSD: Makefile,v 1.11 2010/05/11 11:42:44 yhardy Exp $
 #
 
 DISTNAME=	icecat-${ICECAT_VER}
-ICECAT_VER=	3.5.3
+ICECAT_VER=	3.6.3
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GNU:=gnuzilla/${ICECAT_VER}/}
-#MASTER_SITES=	http://ftp.gnu.org/gnu/gnuzilla/${ICECAT_VER}-g1/
-#MASTER_SITES+=	http://www.gnu.org/software/gnuzilla/
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/gnuzilla/
@@ -17,6 +15,9 @@ WRKSRC=		${WRKDIR}/${DISTNAME}
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config perl gmake autoconf213
 USE_LANGUAGES=	c c++
+
+XZ_OPT=		-M 70M
+.export XZ_OPT
 
 BUILD_DEPENDS+=		zip>=2.3:../../archivers/zip
 
@@ -33,7 +34,6 @@ CONFIG_SUB_OVERRIDE+=	js/src/build/autoconf/config.sub
 CONFIG_SUB_OVERRIDE+=	nsprpub/build/autoconf/config.sub
 
 CONFIGURE_ARGS+=	--enable-application=browser
-CONFIGURE_ARGS+=	--enable-libxul
 CONFIGURE_ARGS+=	--disable-tests --disable-pedantic
 CONFIGURE_ARGS+=	--enable-crypto
 CONFIGURE_ARGS+=	--enable-optimize=-O2 --with-pthreads
@@ -45,6 +45,7 @@ CONFIGURE_ARGS+=	--with-system-jpeg
 CONFIGURE_ARGS+=	--with-system-zlib --with-system-bz2
 CONFIGURE_ARGS+=	--enable-system-sqlite
 CONFIGURE_ARGS+=	--disable-crashreporter
+CONFIGURE_ARGS+=	--disable-necko-wifi
 
 ALL_ENV+=		MOZILLA_PKG_NAME=icecat
 
@@ -90,11 +91,19 @@ install-desktop:
 .if ${OPSYS} == "Linux"
 .include "../../audio/alsa-lib/buildlink3.mk"
 .endif
+
+.if ${OPSYS} == "NetBSD"
+# The configure test for __thread succeeds, but later we end up with:
+# dist/bin/libxul.so: undefined reference to `__tls_get_addr'
+CONFIGURE_ENV+= ac_cv_thread_keyword=no
+.endif
+
 .include "../../archivers/bzip2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.sqlite3+=	sqlite3>=3.6.10
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../net/libIDL/buildlink3.mk"
+.include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"

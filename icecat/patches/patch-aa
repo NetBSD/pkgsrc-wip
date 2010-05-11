@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1 2009/09/11 14:01:19 yhardy Exp $
+$NetBSD: patch-aa,v 1.2 2010/05/11 11:42:45 yhardy Exp $
 
---- configure.in.orig	2009-07-30 17:30:11.000000000 +0200
+--- configure.in.orig	2009-10-16 17:13:35.000000000 +0200
 +++ configure.in
 @@ -1799,7 +1799,7 @@ case "$target" in
      fi
@@ -21,23 +21,7 @@ $NetBSD: patch-aa,v 1.1 2009/09/11 14:01:19 yhardy Exp $
      ;; 
  
  *-hpux*)
-@@ -2349,8 +2352,15 @@ case "$target" in
-     if test "$LIBRUNPATH"; then
- 	DSO_LDOPTS="-R$LIBRUNPATH $DSO_LDOPTS"
-     fi
-+    case "${target_cpu}" in
-+    alpha*)
-+       CFLAGS="$CFLAGS -mieee"
-+       CXXFLAGS="$CXXFLAGS -mieee"
-+    ;;
-+    esac
-     ;;
- 
-+
- *-openvms*) 
-     AC_DEFINE(NO_PW_GECOS)
-     AC_DEFINE(NO_UDSOCK)
-@@ -3043,6 +3053,9 @@ dnl ====================================
+@@ -3043,6 +3046,9 @@ dnl ====================================
  case $target in
  *-hpux11.*)
  	;;
@@ -47,10 +31,36 @@ $NetBSD: patch-aa,v 1.1 2009/09/11 14:01:19 yhardy Exp $
  *)
  	AC_CHECK_LIB(c_r, gethostbyname_r)
  	;;
-@@ -8468,6 +8481,7 @@ if test -z "$MOZ_NATIVE_NSPR"; then
+@@ -4158,6 +4164,14 @@ else
+    fi
+ fi
+ 
++if test -n "${LIBXUL_SDK_DIR}"; then
++    AC_MSG_WARN([pkgsrc: LIBXUL_SDK_DIR is set; assuming we want nss and nspr from xulrunner.])
++    NSPR_CFLAGS="-I${prefix}/include/xulrunner/unstable `pkg-config --cflags mozilla-nspr`"
++    NSPR_LIBS="`pkg-config --libs mozilla-nspr`"
++    NSS_CFLAGS="`pkg-config --cflags mozilla-nss`"
++    NSS_LIBS="`pkg-config --libs mozilla-nss`"
++fi
++
+ if test -z "$SKIP_LIBRARY_CHECKS"; then
+ dnl system JPEG support
+ dnl ========================================================
+@@ -8375,7 +8389,8 @@ rm -f confdefs.h.save
+ mv confdefs.h confdefs.h.save
+ egrep -v "$_EGREP_PATTERN" confdefs.h.save > confdefs.h
+ AC_OUTPUT_MAKE_DEFS()
+-MOZ_DEFINES=$DEFS
++# nbsed broken. PR bin/42261
++MOZ_DEFINES="$DEFS`awk 'BEGIN {while(x<1000){printf " ";x++}}'`"
+ AC_SUBST(MOZ_DEFINES)
+ rm -f confdefs.h
+ mv confdefs.h.save confdefs.h
+@@ -8466,6 +8481,8 @@ if test -z "$MOZ_NATIVE_NSPR"; then
      AC_MSG_WARN([Recreating autoconf.mk with updated nspr-config output])
      if test "$OS_ARCH" != "WINNT" && test "$OS_ARCH" != "WINCE"; then
         NSPR_LIBS=`./nsprpub/config/nspr-config --prefix=$LIBXUL_DIST --exec-prefix=$MOZ_BUILD_ROOT/dist --libdir=$LIBXUL_DIST/lib --libs`
++       AC_MSG_WARN([pkgsrc: adding run path to NSPR_LIBS for bundled NSPR.])
 +       NSPR_LIBS="-Wl,-R${prefix}/lib/\${MOZILLA_PKG_NAME} ${NSPR_LIBS}"
         $PERL -pi.bak -e "s '^NSPR_LIBS\\s*=.*'NSPR_LIBS = $NSPR_LIBS'" config/autoconf.mk
         NSPR_CFLAGS=`./nsprpub/config/nspr-config --prefix=$LIBXUL_DIST --exec-prefix=$MOZ_BUILD_ROOT/dist --includedir=$LIBXUL_DIST/include/nspr --cflags`

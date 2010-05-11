@@ -1,4 +1,4 @@
-$NetBSD: patch-ah,v 1.1 2009/09/11 14:01:19 yhardy Exp $
+$NetBSD: patch-ah,v 1.2 2010/05/11 11:42:45 yhardy Exp $
 
 --- xpcom/reflect/xptcall/src/md/unix/xptc_platforms_unixish_x86.h.orig	2009-06-29 18:15:33.000000000 +0200
 +++ xpcom/reflect/xptcall/src/md/unix/xptc_platforms_unixish_x86.h

@@ -1,11 +1,11 @@
-$NetBSD: patch-av,v 1.2 2010/05/11 11:42:45 yhardy Exp $
+$NetBSD: patch-ay,v 1.1 2010/05/11 11:42:45 yhardy Exp $
 
---- xulrunner/app/nsXULRunnerApp.cpp.orig	2008-03-22 05:25:35.000000000 +0100
-+++ xulrunner/app/nsXULRunnerApp.cpp
-@@ -37,6 +37,27 @@
+--- browser/app/nsBrowserApp.cpp.orig	2009-06-29 18:14:40.000000000 +0200
++++ browser/app/nsBrowserApp.cpp
+@@ -44,6 +44,27 @@
  
  #include <stdio.h>
- #include <stdlib.h>
+ #include <stdarg.h>
 +#include <sys/resource.h>
 +/*
 + * On netbsd-4, ulimit -n is 64 by default; too few for us.
@@ -27,14 +27,14 @@ $NetBSD: patch-av,v 1.2 2010/05/11 11:42:45 yhardy Exp $
 +	if (setrlimit(RLIMIT_NOFILE, &rlp) == -1)
 +		fprintf(stderr, "warning: setrlimit failed\n");
 +}
- #ifdef XP_WIN
- #include <windows.h>
- #endif
-@@ -283,6 +304,7 @@ private:
+ 
+ #include "plstr.h"
+ #include "prprf.h"
+@@ -106,6 +127,7 @@ public:
  
  int main(int argc, char* argv[])
  {
 +  netbsd_fixrlimit();
-   if (argc > 1 && (IsArg(argv[1], "h") ||
-                    IsArg(argv[1], "help") ||
-                    IsArg(argv[1], "?")))
+   ScopedLogging log;
+ 
+   nsCOMPtr<nsILocalFile> appini;

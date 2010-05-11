@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.1 2009/09/11 14:01:19 yhardy Exp $
+$NetBSD: patch-ad,v 1.2 2010/05/11 11:42:45 yhardy Exp $
 
 --- xpcom/io/nsLocalFileUnix.h.orig	2009-06-29 18:15:32.000000000 +0200
 +++ xpcom/io/nsLocalFileUnix.h

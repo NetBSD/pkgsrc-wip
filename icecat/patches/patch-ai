@@ -1,4 +1,4 @@
-$NetBSD: patch-ai,v 1.1 2009/09/11 14:01:19 yhardy Exp $
+$NetBSD: patch-ai,v 1.2 2010/05/11 11:42:45 yhardy Exp $
 
 --- dbm/src/mktemp.c.orig	2009-06-29 18:14:43.000000000 +0200
 +++ dbm/src/mktemp.c
