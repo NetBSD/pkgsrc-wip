@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2010/03/29 04:10:06 asau Exp $
+@comment $NetBSD: PLIST,v 1.17 2010/05/11 14:28:53 asau Exp $
 bin/ecl
 bin/ecl-config
 include/ecl/bytecodes.h
@@ -49,7 +49,6 @@ lib/${PKGNAME}/serve-event.asd
 lib/${PKGNAME}/serve-event.fas
 lib/${PKGNAME}/sockets.asd
 lib/${PKGNAME}/sockets.fas
-lib/${PKGNAME}/sysfun.lsp
 lib/${PKGNAME}/ucd.dat
 lib/libecl.so
 lib/libecl.so.${PKGVERSION_MAJOR}
