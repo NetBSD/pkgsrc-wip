@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3966 2010/05/11 10:10:35 jihbed Exp $
+# $Id: Makefile,v 1.3967 2010/05/12 16:17:42 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -299,6 +299,7 @@ SUBDIR+=	deforaos-mixer
 SUBDIR+=	deforaos-panel
 SUBDIR+=	deforaos-player
 SUBDIR+=	deskcribe
+SUBDIR+=	desktopcouch
 SUBDIR+=	desmume
 SUBDIR+=	despotify
 SUBDIR+=	dfbpoint
@@ -1879,6 +1880,7 @@ SUBDIR+=	py-daemon
 SUBDIR+=	py-dbutils
 SUBDIR+=	py-decorator
 SUBDIR+=	py-dexml
+SUBDIR+=	py-diffy-structure
 SUBDIR+=	py-distutils-extra
 SUBDIR+=	py-divmod-axiom
 SUBDIR+=	py-divmod-epsilon
@@ -1922,6 +1924,7 @@ SUBDIR+=	py-kaa-base
 SUBDIR+=	py-kaa-imlib2
 SUBDIR+=	py-kaa-metadata
 SUBDIR+=	py-kcs11
+SUBDIR+=	py-keyring
 SUBDIR+=	py-knockknock
 SUBDIR+=	py-kyra
 SUBDIR+=	py-last
@@ -1968,10 +1971,12 @@ SUBDIR+=	py-pp
 SUBDIR+=	py-prayertime
 SUBDIR+=	py-processing
 SUBDIR+=	py-ptrace
+SUBDIR+=	py-pycifrw
 SUBDIR+=	py-pydot
 SUBDIR+=	py-pygr
 SUBDIR+=	py-pypedal
 SUBDIR+=	py-pyvib2
+SUBDIR+=	py-qecalc
 SUBDIR+=	py-qt4-qscintilla
 SUBDIR+=	py-rcsparse
 SUBDIR+=	py-rdflib
@@ -2024,6 +2029,7 @@ SUBDIR+=	py-xmpppy
 SUBDIR+=	py-xsdb
 SUBDIR+=	py-yamcha
 SUBDIR+=	py-yapgvb
+SUBDIR+=	py-yapps2
 SUBDIR+=	py-zeitgeist
 SUBDIR+=	py-zinnia
 SUBDIR+=	pydance
