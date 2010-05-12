@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/05/07 11:37:32 obache Exp $
-
-SHA1 (ibus-table-xingma-1.2.0.20100305.tar.gz) = 32d23d79f30a0e8b4abdaa7010dc7e30fa081f32
-RMD160 (ibus-table-xingma-1.2.0.20100305.tar.gz) = c30c64f5db86a268f1d4012fb545ad009f2729fc
-Size (ibus-table-xingma-1.2.0.20100305.tar.gz) = 2290684 bytes
-SHA1 (patch-aa) = 324e7a1a05ea81ed30222924f81e7ec4489c5bed
