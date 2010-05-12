@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/01/15 11:49:51 obache Exp $
-share/ibus-table/icons/thai.png
-share/ibus-table/icons/viqr.png
-share/ibus-table/tables/thai.db
-share/ibus-table/tables/viqr.db

@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/01/14 12:43:22 obache Exp $
-share/ibus-table/icons/rustrad.png
-share/ibus-table/icons/translit-ua.png
-share/ibus-table/icons/translit.png
-share/ibus-table/icons/yawerty.png
-share/ibus-table/tables/rustrad.db
-share/ibus-table/tables/translit-ua.db
-share/ibus-table/tables/translit.db
-share/ibus-table/tables/yawerty.db

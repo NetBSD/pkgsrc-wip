@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2010/05/06 11:39:23 obache Exp $
-share/ibus-table/icons/compose.svg
-share/ibus-table/icons/ipa-x-sampa.png
-share/ibus-table/tables/compose.db
-share/ibus-table/tables/ipa-x-sampa.db
