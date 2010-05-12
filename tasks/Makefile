@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2009/09/02 12:31:36 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2010/05/12 18:34:21 jihbed Exp $
 #
 
 DISTNAME=	tasks-0.16
 CATEGORIES=	time editors
 MASTER_SITES=	http://pimlico-project.org/sources/tasks/
 
-MAINTAINER=	kamelderouiche@yahoo.com
+MAINTAINER=	pkgsrc.gnome@gmail.com
 HOMEPAGE=	http://pimlico-project.org/tasks.html
 COMMENT=	Simple To Do list application for GNOME
 LICENSE=	gnu-gpl-v2
