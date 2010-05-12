@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/05/12 16:10:47 jihbed Exp $
+
+SHA1 (keyring-0.2.tar.gz) = 717308b999754c7cb09c233c1d34977f17ff69fe
+RMD160 (keyring-0.2.tar.gz) = 9cd2635ec599c4e46bf762a72603fcd0f0bc28b6
+Size (keyring-0.2.tar.gz) = 14836 bytes
