@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/05/12 11:41:16 obache Exp $
+share/ibus-table/icons/erbi-qs.svg
+share/ibus-table/icons/erbi.png
+share/ibus-table/icons/stroke5.png
+share/ibus-table/icons/wu.png
+share/ibus-table/icons/wubi86.svg
+share/ibus-table/icons/xinhua.png
+share/ibus-table/icons/yong.png
+share/ibus-table/icons/zhengma.svg
+share/ibus-table/icons/zhuyin-big.png
+share/ibus-table/icons/zhuyin.png
+share/ibus-table/icons/ziranma.png
+share/ibus-table/tables/erbi.db
+share/ibus-table/tables/erbi_qs.db
+share/ibus-table/tables/stroke5.db
+share/ibus-table/tables/wu.db
+share/ibus-table/tables/wubi86.db
+share/ibus-table/tables/xinhua-ibus.db
+share/ibus-table/tables/yong-ibus.db
+share/ibus-table/tables/zhengma.db
+share/ibus-table/tables/zhuyin-big.db
+share/ibus-table/tables/zhuyin.db
+share/ibus-table/tables/ziranma.db
