@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/05/12 16:06:43 jihbed Exp $
+
+SHA1 (PyCifRW-3.1.4.tar.gz) = 83db6b265c6804e6ef53abe15f3644bf49a7e87f
+RMD160 (PyCifRW-3.1.4.tar.gz) = ccae8826b19b4d1f986bde0acccec64761e66d8f
+Size (PyCifRW-3.1.4.tar.gz) = 260319 bytes

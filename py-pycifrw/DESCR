@@ -1,0 +1,6 @@
+PyCIFRW provides support for reading and writing CIF (Crystallographic
+Information Format) files using Python.  It was developed at the
+Australian National Beamline Facility (ANBF), run by the Australian
+Synchrotron Research Program (ASRP), as part of a larger project to
+provide CIF input/output capabilities for data collection.  It is
+currently (Mar 2006) under active development and testing.

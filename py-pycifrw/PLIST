@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/05/12 16:06:43 jihbed Exp $
+${PYSITELIB}/CifFile.py
+${PYSITELIB}/CifFile.pyc
+${PYSITELIB}/CifFile.pyo
+${PYSITELIB}/StarFile.py
+${PYSITELIB}/StarFile.pyc
+${PYSITELIB}/StarFile.pyo
+${PYSITELIB}/StarScan.so
+${PYSITELIB}/YappsStarParser.py
+${PYSITELIB}/YappsStarParser.pyc
+${PYSITELIB}/YappsStarParser.pyo
+${PYSITELIB}/yapps_compiled_rt.py
+${PYSITELIB}/yapps_compiled_rt.pyc
+${PYSITELIB}/yapps_compiled_rt.pyo
