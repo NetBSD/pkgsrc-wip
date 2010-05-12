@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/05/12 12:21:30 obache Exp $
+share/ibus-table/icons/cangjie-big.png
+share/ibus-table/icons/cangjie3.svg
+share/ibus-table/icons/cangjie5.svg
+share/ibus-table/icons/cantonese.png
+share/ibus-table/icons/cantonhk.png
+share/ibus-table/icons/easy-big.png
+share/ibus-table/icons/jyutping.png
+share/ibus-table/icons/quick-classic.png
+share/ibus-table/icons/quick3.png
+share/ibus-table/icons/quick5.png
+share/ibus-table/icons/scj6.svg
+share/ibus-table/tables/cangjie-big.db
+share/ibus-table/tables/cangjie3.db
+share/ibus-table/tables/cangjie5.db
+share/ibus-table/tables/cantonese.db
+share/ibus-table/tables/cantonhk.db
+share/ibus-table/tables/easy-big.db
+share/ibus-table/tables/jyutping.db
+share/ibus-table/tables/quick-classic.db
+share/ibus-table/tables/quick3.db
+share/ibus-table/tables/quick5.db
+share/ibus-table/tables/scj6.db
