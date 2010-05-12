@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/05/12 16:07:40 jihbed Exp $
+
+SHA1 (diffpy.Structure-1.0-r3067-20090410.tar.gz) = c357dea2f4629dc83a2195939ceebf51d4c7764c
+RMD160 (diffpy.Structure-1.0-r3067-20090410.tar.gz) = 275edf73fe0d48af93ec4c5af6dbd441e5faccbc
+Size (diffpy.Structure-1.0-r3067-20090410.tar.gz) = 77802 bytes
