@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2010/02/02 06:17:12 phonohawk Exp $
+$NetBSD: distinfo,v 1.5 2010/05/12 04:12:32 phonohawk Exp $
 
-SHA1 (haskell-src-exts-1.8.0.tar.gz) = da23f1aebbe88f961f922aea8a69243941f019f4
-RMD160 (haskell-src-exts-1.8.0.tar.gz) = 3577424360eb63a0bcd009bcf488bfe49350303e
-Size (haskell-src-exts-1.8.0.tar.gz) = 176577 bytes
+SHA1 (haskell-src-exts-1.9.0.tar.gz) = e8017cbec5c287ec8b6c7b7d247e083c7502d7a2
+RMD160 (haskell-src-exts-1.9.0.tar.gz) = c8bf9ca9bf8c6eafb56e28031a316c1483112619
+Size (haskell-src-exts-1.9.0.tar.gz) = 176438 bytes
