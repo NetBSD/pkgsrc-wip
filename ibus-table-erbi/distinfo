@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/01/15 11:29:21 obache Exp $
-
-SHA1 (ibus-table-erbi-1.2.0.20090901.tar.gz) = b00b03dfb36b0910edd109ceed7cb25d367e814b
-RMD160 (ibus-table-erbi-1.2.0.20090901.tar.gz) = 9dff06ac26d455728800958cd0df91f0e90b0069
-Size (ibus-table-erbi-1.2.0.20090901.tar.gz) = 1243299 bytes
-SHA1 (patch-aa) = 2fb6041e742e8ce2a6e6fdac0c9fdd4345ca3981
