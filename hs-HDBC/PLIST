@@ -1,10 +1,12 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:43 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.3 2010/05/12 07:47:14 phonohawk Exp $
 lib/HDBC-${PKGVERSION}/${HASKELL_VERSION}/Database/HDBC.hi
 lib/HDBC-${PKGVERSION}/${HASKELL_VERSION}/Database/HDBC.p_hi
 lib/HDBC-${PKGVERSION}/${HASKELL_VERSION}/Database/HDBC/ColTypes.hi
 lib/HDBC-${PKGVERSION}/${HASKELL_VERSION}/Database/HDBC/ColTypes.p_hi
 lib/HDBC-${PKGVERSION}/${HASKELL_VERSION}/Database/HDBC/DriverUtils.hi
 lib/HDBC-${PKGVERSION}/${HASKELL_VERSION}/Database/HDBC/DriverUtils.p_hi
+lib/HDBC-${PKGVERSION}/${HASKELL_VERSION}/Database/HDBC/Locale.hi
+lib/HDBC-${PKGVERSION}/${HASKELL_VERSION}/Database/HDBC/Locale.p_hi
 lib/HDBC-${PKGVERSION}/${HASKELL_VERSION}/Database/HDBC/SqlValue.hi
 lib/HDBC-${PKGVERSION}/${HASKELL_VERSION}/Database/HDBC/SqlValue.p_hi
 lib/HDBC-${PKGVERSION}/${HASKELL_VERSION}/Database/HDBC/Statement.hi
