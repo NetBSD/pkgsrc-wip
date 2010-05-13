@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/03/11 16:08:50 jihbed Exp $
+# $NetBSD: Makefile,v 1.6 2010/05/13 11:52:02 obache Exp $
 #
 
 DISTNAME=		bakery-2.6.3
@@ -6,7 +6,7 @@ CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/bakery/2.6/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	obache@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://bakery.sourceforge.net/
 COMMENT=	C++ Framework for creating GNOME applications using gtkmm
 
