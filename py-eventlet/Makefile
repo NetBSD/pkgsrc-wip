@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/04/10 20:10:33 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2010/05/13 00:38:59 jihbed Exp $
 #
 
 DISTNAME=	eventlet-0.9.7
@@ -6,9 +6,9 @@ PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	http://pypi.python.org/packages/source/e/eventlet/
 
-MAINTAINER= kamel.derouiche@gmail.com
+MAINTAINER= 	kamel.derouiche@gmail.com
 HOMEPAGE=	http://eventlet.net/
-COMMENT=	Coroutine-based networking library
+COMMENT=	High performance network library using coroutines
 LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
