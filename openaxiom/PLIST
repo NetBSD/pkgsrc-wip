@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2010/04/21 14:06:54 asau Exp $
+@comment $NetBSD: PLIST,v 1.16 2010/05/13 08:04:43 asau Exp $
 bin/open-axiom
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/A1AGG-.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/A1AGG.${FASL}
@@ -1286,6 +1286,7 @@ lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/XPOLY.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/XPOLYC.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/XPR.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/XRPOLY.${FASL}
+lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/YDIAGRAM.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/YSTREAM.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/ZDSOLVE.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/ZLINDEP.${FASL}
@@ -1741,6 +1742,7 @@ lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lib/htsearch
 ${x11}lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lib/hypertex
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lib/libopen-axiom-core.a
 ${clisp}lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lib/libopen-axiom-core.so
+${sbcl}lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lib/libopen-axiom-core.so
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lib/presea
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lib/session
 ${x11}lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lib/spadbuf
