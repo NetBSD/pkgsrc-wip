@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/05/29 05:40:08 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2010/05/13 05:17:31 phonohawk Exp $
 #
 
-DISTNAME=	haskelldb-hdbc-0.12
+DISTNAME=	haskelldb-hdbc-0.13
 CATEGORIES=	databases
 
 MAINTAINER=	pho@cielonegro.org
