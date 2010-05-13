@@ -1,0 +1,6 @@
+PaPy is a framework to construct and execute pipelines (flow-charts) of
+arbitrary tasks in parallel, either locally, using multi-processing or
+multi-threading, or remotely, using RPC (Remote Procedure Calls) as provided by
+RPyC (Remote Python Call). The goal is to enable users to create highly generic,
+modular and workflows for execution on ad hoc  computing grids, consisting of,
+local workstations and remote desktops/servers.
