@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/08/31 00:50:04 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2010/05/13 08:12:51 jihbed Exp $
 #
 
 DISTNAME=	gwsmhg-0.8.1
 CATEGORIES=	devel python
 MASTER_SITES=	http://garr.dl.sourceforge.net/project/gwsmhg/gwsmhg/v-0.8.1/
 
-MAINTAINER=	kamelderouiche@yahoo.com
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gwsmhg.sourceforge.net/
 COMMENT=	Mercurial PyGtk GUI client
 LICENSE=	gnu-gpl-v2
