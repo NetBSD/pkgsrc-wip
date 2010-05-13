@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/05/13 10:28:14 pdtafti Exp $
+
+SHA1 (surf-0.3.tar.gz) = c201a48e0b0e2de573b73e286ca4feda4f6df9a8
+RMD160 (surf-0.3.tar.gz) = d22378f6bb12124071e581f24f91ff731b86923f
+Size (surf-0.3.tar.gz) = 9838 bytes
+SHA1 (patch-aa) = f8b09b31483e0eb081cb69e0e1de5320c651efae

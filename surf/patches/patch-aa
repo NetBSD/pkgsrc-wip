@@ -1,0 +1,24 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/05/13 10:28:14 pdtafti Exp $
+
+--- config.mk.orig	2009-10-30 13:41:02.000000000 +0100
++++ config.mk
+@@ -4,15 +4,15 @@ VERSION = 0.3
+ # Customize below to fit your system
+ 
+ # paths
+-PREFIX = /usr/local
++#PREFIX = /usr/local
+ MANPREFIX = ${PREFIX}/share/man
+ 
+-GTKINC=$(shell pkg-config --cflags gtk+-2.0 webkit-1.0)
+-GTKLIB=$(shell pkg-config --libs gtk+-2.0 webkit-1.0)
++GTKINC=`${PKG_CONFIG} --cflags gtk+-2.0 webkit-1.0`
++GTKLIB=`${PKG_CONFIG} --libs gtk+-2.0 webkit-1.0`
+ 
+ 
+ # includes and libs
+-INCS = -I. -I/usr/include ${GTKINC}
++INCS = -I. -I/usr/include -I${PREFIX}/include ${GTKINC}
+ LIBS = -L/usr/lib -lc ${GTKLIB} -lgthread-2.0
+ 
+ # flags
