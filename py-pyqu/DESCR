@@ -1,0 +1,6 @@
+PyQu is an extension module for Python 3 whose main goal is to provide a
+complete set of data types and functions for simulating quantum computation with
+a neat syntax. PyQu is written in C and makes extensive use of libquantum-1.0.0
+library by Bj?rn Butscher and Hendrik Weimer. However, PyQu intends not to be
+just a wrapper of ibquantum to Python, but rather a new high-level language
+(in Python style of course) for quantum programming
