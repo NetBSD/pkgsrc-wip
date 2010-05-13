@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/05/13 11:33:07 obache Exp $
+
+--- src/groonga.c.orig	2010-04-23 03:00:04.000000000 +0000
++++ src/groonga.c
+@@ -1549,7 +1549,11 @@ get_core_number(void)
+   GetSystemInfo(&sinfo);
+   return sinfo.dwNumberOfProcessors;
+ #else /* WIN32 */
++#if defined(_SC_NPROCESSORS_CONF)
+   return sysconf(_SC_NPROCESSORS_CONF);
++#else
++  return 1;
++#endif
+ #endif /* WIN32 */
+ }
+ 

@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/05/13 11:33:07 obache Exp $
+bin/groonga
+include/groonga/groonga.h
+lib/libgroonga.la
+lib/pkgconfig/groonga.pc
+share/groonga/admin_html/css/admin.css
+share/groonga/admin_html/css/ui-lightness/images/ui-bg_diagonals-thick_18_b81900_40x40.png
+share/groonga/admin_html/css/ui-lightness/images/ui-bg_diagonals-thick_20_666666_40x40.png
+share/groonga/admin_html/css/ui-lightness/images/ui-bg_flat_10_000000_40x100.png
+share/groonga/admin_html/css/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png
+share/groonga/admin_html/css/ui-lightness/images/ui-bg_glass_100_fdf5ce_1x400.png
+share/groonga/admin_html/css/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png
+share/groonga/admin_html/css/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png
+share/groonga/admin_html/css/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png
+share/groonga/admin_html/css/ui-lightness/images/ui-bg_highlight-soft_75_ffe45c_1x100.png
+share/groonga/admin_html/css/ui-lightness/images/ui-icons_222222_256x240.png
+share/groonga/admin_html/css/ui-lightness/images/ui-icons_228ef1_256x240.png
+share/groonga/admin_html/css/ui-lightness/images/ui-icons_ef8c08_256x240.png
+share/groonga/admin_html/css/ui-lightness/images/ui-icons_ffd27a_256x240.png
+share/groonga/admin_html/css/ui-lightness/images/ui-icons_ffffff_256x240.png
+share/groonga/admin_html/css/ui-lightness/jquery-ui-1.7.2.custom.css
+share/groonga/admin_html/images/groonga.png
+share/groonga/admin_html/index.html
+share/groonga/admin_html/js/jquery-1.3.2.min.js
+share/groonga/admin_html/js/jquery-ui-1.7.2.custom.min.js
