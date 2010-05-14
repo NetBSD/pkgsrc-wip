@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3967 2010/05/12 16:17:42 jihbed Exp $
+# $Id: Makefile,v 1.3968 2010/05/14 18:40:29 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1476,6 +1476,7 @@ SUBDIR+=	oqtplayer
 SUBDIR+=	or1ksim
 SUBDIR+=	orion
 SUBDIR+=	osmose
+SUBDIR+=	othman
 SUBDIR+=	outguess
 SUBDIR+=	overgod
 SUBDIR+=	owl
@@ -1961,6 +1962,7 @@ SUBDIR+=	py-omniORBpy
 SUBDIR+=	py-openxmllib
 SUBDIR+=	py-orm
 SUBDIR+=	py-osd
+SUBDIR+=	py-papy
 SUBDIR+=	py-papyon
 SUBDIR+=	py-papyros
 SUBDIR+=	py-parsing
@@ -1974,7 +1976,10 @@ SUBDIR+=	py-ptrace
 SUBDIR+=	py-pycifrw
 SUBDIR+=	py-pydot
 SUBDIR+=	py-pygr
+SUBDIR+=	py-pygi
 SUBDIR+=	py-pypedal
+SUBDIR+=	py-pyqu
+SUBDIR+=	py-pyquante
 SUBDIR+=	py-pyvib2
 SUBDIR+=	py-qecalc
 SUBDIR+=	py-qt4-qscintilla
@@ -2003,6 +2008,7 @@ SUBDIR+=	py-sympycore
 SUBDIR+=	py-tagger
 SUBDIR+=	py-taglib
 SUBDIR+=	py-telepathy
+SUBDIR+=	py-texml
 SUBDIR+=	py-tranquil
 SUBDIR+=	py-twisted
 SUBDIR+=	py-twisted-kqueue
