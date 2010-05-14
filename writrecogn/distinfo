@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/05/14 11:04:28 obache Exp $
+
+SHA1 (WritRecogn-0.1.9.tar.gz) = 17b70c412534a263e207022f3599242172c82a30
+RMD160 (WritRecogn-0.1.9.tar.gz) = 8fd6c22b580e2f90a072e3aefd51e2c0fc2c7060
+Size (WritRecogn-0.1.9.tar.gz) = 5140755 bytes
+SHA1 (patch-aa) = 947f3a86d70bda97b77200d196a0a4204781da4c
