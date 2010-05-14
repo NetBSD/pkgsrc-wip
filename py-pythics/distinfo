@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/05/14 21:48:23 jihbed Exp $
+
+SHA1 (pythics-0.2.0.tar.gz) = d49d01cbd0a473b4468ef54b207b40b619f85c10
+RMD160 (pythics-0.2.0.tar.gz) = 25bce344c5f8e90ea6d2b25990bc793731b1cf64
+Size (pythics-0.2.0.tar.gz) = 3728915 bytes
