@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/05/14 11:11:02 obache Exp $
+bin/wordcut
+bin/wordcut_dict_dump
+bin/wordcut_mkdict
+include/wordcut/wordcut.h
+include/wordcut/wordcut_dict.h
+include/wordcut/xmalloc.h
+lib/libwordcut.la
+lib/pkgconfig/wordcut.pc
+share/wordcut/tdict.wcd
