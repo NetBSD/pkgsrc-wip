@@ -1,0 +1,6 @@
+There is a known security issue with [wip/xar]:
+
+ http://code.google.com/p/xar/source/detail?r=225
+ http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2010-0055
+ http://secunia.com/advisories/39774/
+
