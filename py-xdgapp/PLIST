@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/05/14 21:47:27 jihbed Exp $
+${PYSITELIB}/xdgapp.py
+${PYSITELIB}/xdgapp.pyc
+${PYSITELIB}/xdgapp.pyo
