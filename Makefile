@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3968 2010/05/14 18:40:29 jihbed Exp $
+# $Id: Makefile,v 1.3969 2010/05/14 22:00:23 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -230,6 +230,7 @@ SUBDIR+=	classic-mac-font-pack
 SUBDIR+=	clhep
 SUBDIR+=	clips
 SUBDIR+=	clisp
+SUBDIR+=	cloc
 SUBDIR+=	clockspeed
 SUBDIR+=	clustalx
 SUBDIR+=	codeblocks
@@ -1904,6 +1905,7 @@ SUBDIR+=	py-fs
 SUBDIR+=	py-gcalendarsync
 SUBDIR+=	py-generateDS
 SUBDIR+=	py-gettext-tools
+SUBDIR+=	py-gevent
 SUBDIR+=	py-gmpy
 SUBDIR+=	py-gnucash
 SUBDIR+=	py-greenlet
@@ -1980,6 +1982,7 @@ SUBDIR+=	py-pygi
 SUBDIR+=	py-pypedal
 SUBDIR+=	py-pyqu
 SUBDIR+=	py-pyquante
+SUBDIR+=	py-pythics
 SUBDIR+=	py-pyvib2
 SUBDIR+=	py-qecalc
 SUBDIR+=	py-qt4-qscintilla
@@ -2009,6 +2012,7 @@ SUBDIR+=	py-tagger
 SUBDIR+=	py-taglib
 SUBDIR+=	py-telepathy
 SUBDIR+=	py-texml
+SUBDIR+=	py-trackers
 SUBDIR+=	py-tranquil
 SUBDIR+=	py-twisted
 SUBDIR+=	py-twisted-kqueue
@@ -2029,6 +2033,7 @@ SUBDIR+=	py-wsgi-intercept
 SUBDIR+=	py-wsgiref
 SUBDIR+=	py-workerpool
 SUBDIR+=	py-wxWidgets-unicode
+SUBDIR+=	py-xdgapp
 SUBDIR+=	py-xlrd
 SUBDIR+=	py-xmiparser
 SUBDIR+=	py-xmpppy
