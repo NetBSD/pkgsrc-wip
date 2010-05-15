@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/05/15 23:34:59 obache Exp $
+# $NetBSD: Makefile,v 1.4 2010/05/15 23:38:46 obache Exp $
 #
 
 DISTNAME=	CRF++-0.54
@@ -9,6 +9,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=crfpp/}
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://crfpp.sourceforge.net/
 COMMENT=	Yet Another CRF toolkit
+#LICENSE=	gnu-lgpl-v2.1 OR modified-bsd # unclear about version of LGPL
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
