@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/05/09 07:28:22 pdtafti Exp $
+# $NetBSD: Makefile,v 1.2 2010/05/15 09:31:23 pdtafti Exp $
 #
 
-DISTNAME=	openconnect-2.24
+DISTNAME=	openconnect-2.25
 CATEGORIES=	net security
 MASTER_SITES=	ftp://ftp.infradead.org/pub/openconnect/
 
@@ -14,7 +14,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+= 		gmake
 
-DEPENDS+=			vpnc-script:../../wip/vpnc-script
+DEPENDS+=		vpnc-script:../../wip/vpnc-script
 
 INSTALLATION_DIRS=	sbin ${PKGMANDIR}/man8 share/doc/openconnect
 
@@ -22,6 +22,7 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/openconnect ${DESTDIR}${PREFIX}/sbin
 	${INSTALL_MAN} ${WRKSRC}/openconnect.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
 	${INSTALL_DATA} ${WRKSRC}/README.SecurID ${DESTDIR}${PREFIX}/share/doc/openconnect
+	${INSTALL_DATA} ${WRKSRC}/README.DTLS ${DESTDIR}${PREFIX}/share/doc/openconnect
 	${INSTALL_DATA} ${WRKSRC}/openconnect.html ${DESTDIR}${PREFIX}/share/doc/openconnect
 
 .include "../../textproc/libxml2/buildlink3.mk"
