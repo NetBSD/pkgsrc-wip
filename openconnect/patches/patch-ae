@@ -1,7 +1,0 @@
-$NetBSD: patch-ae,v 1.1.1.1 2010/05/09 07:28:22 pdtafti Exp $
-
---- version.c.orig	2010-05-07 21:11:44.000000000 +0200
-+++ version.c
-@@ -1 +1 @@
--char openconnect_version[] = "v2.24";
-+char openconnect_version[] = "v2.24-2-gde5101f";
