@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3969 2010/05/14 22:00:23 jihbed Exp $
+# $Id: Makefile,v 1.3970 2010/05/15 23:48:06 jym-netbsd Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1728,6 +1728,7 @@ SUBDIR+=	petsc
 SUBDIR+=	pfe
 SUBDIR+=	pgp6
 SUBDIR+=	phlib
+SUBDIR+=	php-libawl
 #SUBDIR+=	php-doc			# not a package
 SUBDIR+=	php-doc-ar
 SUBDIR+=	php-doc-br
