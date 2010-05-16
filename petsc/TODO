@@ -1,1 +1,2 @@
-not finished !!!
+Fix installation script in config/install.py,
+it should support staged installation.
