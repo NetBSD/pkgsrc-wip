@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/02/02 02:01:54 phonohawk Exp $
+$NetBSD: distinfo,v 1.2 2010/05/16 13:04:49 thomasklausner Exp $
 
+SHA1 (patch-aa) = f64ce63ebc50f03d0d3bee793c2a81bf5d060c3f
 SHA1 (patch-alsa_m4) = ede3cde78b73945904e181a1cceb6e80be63c8e9
 SHA1 (patch-audiooss_C) = e02915ba294100cd8394d618a309ac496bfdc652
 SHA1 (patch-bluedottheme-Makefile_am) = cbb0ac28b6bcde2e91a03039e2747c3a59375882
