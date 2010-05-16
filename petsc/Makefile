@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/05/10 22:06:40 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2010/05/16 13:31:08 asau Exp $
 #
 
-DISTNAME=	petsc-3.0.0
+DISTNAME=	petsc-3.1-p2
+PKGNAME=	petsc-3.1p2
 CATEGORIES=	math
 MASTER_SITES=	http://ftp.mcs.anl.gov/pub/petsc/release-snapshots/
 
@@ -12,7 +13,6 @@ COMMENT=	Portable, Extensible Toolkit for  Scientific Computation
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-WRKSRC=		${WRKDIR}/petsc-3.0.0-p11
 HAS_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
 
