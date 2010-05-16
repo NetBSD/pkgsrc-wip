@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/05/07 22:14:10 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2010/05/16 13:12:30 asau Exp $
 #
 
 DISTNAME=	mpi4py-1.2.1
@@ -26,5 +26,5 @@ post-install:
 
 .include "../../devel/py-ctypes/buildlink3.mk"
 .include "../../lang/python/extension.mk"
-.include "../../parallel/mpi-ch/buildlink3.mk"
+.include "../../mk/mpi.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

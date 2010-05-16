@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/05/24 15:34:15 tnn2 Exp $
+# $NetBSD: Makefile,v 1.3 2010/05/16 13:12:30 asau Exp $
 
 DISTNAME=	UsingMPI
 PKGNAME=	UsingMPI-2
@@ -30,5 +30,5 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/simplempi/${_prog_} ${DESTDIR}${PREFIX}/bin/${_prog_}
 .endfor
 
-.include "../../wip/mpi-ch/buildlink3.mk"
+.include "../../mk/mpi.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
