@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/05/10 22:06:40 jihbed Exp $
+$NetBSD: distinfo,v 1.2 2010/05/16 15:44:20 asau Exp $
 
-SHA1 (petsc-3.0.0.tar.gz) = 6bbf50dd89d60bb244bc16b03dfb02965acbcaba
-RMD160 (petsc-3.0.0.tar.gz) = e90204fce826814fdc4b73ac92c43f5c7f2dc030
-Size (petsc-3.0.0.tar.gz) = 14602394 bytes
+SHA1 (petsc-3.1-p2.tar.gz) = 35b7a923f59b7e8d6e455c5c1a1fad0bd5a7f362
+RMD160 (petsc-3.1-p2.tar.gz) = fa1be093eec870c057119ee049f8539f0bf47786
+Size (petsc-3.1-p2.tar.gz) = 15447651 bytes
 SHA1 (patch-aa) = db9b62d846e9ea4ec7a034aac35f7a88c287ec94
 SHA1 (patch-ab) = fdc9d12abba19f4bcd426a6182bd0014cb92a5c8
