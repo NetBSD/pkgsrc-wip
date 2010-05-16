@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/05/13 10:47:51 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2010/05/16 15:30:44 jihbed Exp $
 #
 
 DISTNAME=	pygi-0.5.1
@@ -20,6 +20,8 @@ USE_LIBTOOL=	yes
 USE_TOOLS+= pkg-config
 
 PYTHON_VERSIONS_ACCEPTED= 26 25
+CONFIGURE_ENV+=		PYTHON=${PYTHONBIN}
+PY_PATCHPLIST=		yes
 
 .include "../../devel/glib2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.pygobject+=	${PYPKGPREFIX}-gobject>=2.10.1nb1
