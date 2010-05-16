@@ -1,2 +1,5 @@
-Fix installation script in config/install.py,
+$Id: TODO,v 1.3 2010/05/16 20:12:04 asau Exp $
+
+1. Support Fortran.
+2. Fix installation script in config/install.py,
 it should support staged installation.
