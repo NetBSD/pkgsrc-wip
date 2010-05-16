@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3970 2010/05/15 23:48:06 jym-netbsd Exp $
+# $Id: Makefile,v 1.3971 2010/05/16 16:22:01 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -301,6 +301,7 @@ SUBDIR+=	deforaos-panel
 SUBDIR+=	deforaos-player
 SUBDIR+=	deskcribe
 SUBDIR+=	desktopcouch
+SUBDIR+=	desktop-data-model
 SUBDIR+=	desmume
 SUBDIR+=	despotify
 SUBDIR+=	dfbpoint
@@ -594,6 +595,7 @@ SUBDIR+=	gpsdrive
 SUBDIR+=	gpx2shp
 SUBDIR+=	grandr
 SUBDIR+=	granule
+SUBDIR+=	grape
 SUBDIR+=	grass
 SUBDIR+=	grass-JockeyRidge
 SUBDIR+=	grass-Maas
@@ -1091,6 +1093,7 @@ SUBDIR+=	libargp
 SUBDIR+=	libassa
 SUBDIR+=	libatomic_ops
 SUBDIR+=	libavc1394
+SUBDIR+=	libbrahe
 SUBDIR+=	libbtctl
 SUBDIR+=	libcli
 SUBDIR+=	libcm
@@ -1971,7 +1974,9 @@ SUBDIR+=	py-papyros
 SUBDIR+=	py-parsing
 SUBDIR+=	py-pcapy
 SUBDIR+=	py-pip
+SUBDIR+=	py-ploybori
 SUBDIR+=	py-plucker
+SUBDIR+=	py-pmi
 SUBDIR+=	py-pp
 SUBDIR+=	py-prayertime
 SUBDIR+=	py-processing
@@ -1992,6 +1997,7 @@ SUBDIR+=	py-rdflib
 SUBDIR+=	py-remctl
 SUBDIR+=	py-restkit
 SUBDIR+=	py-rlcompleter2
+SUBDIR+=	py-rpyc
 SUBDIR+=	py-sage
 SUBDIR+=	py-scipy
 SUBDIR+=	py-scrobbler
