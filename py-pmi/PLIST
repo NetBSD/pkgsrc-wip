@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/05/16 15:52:28 jihbed Exp $
+${PYSITELIB}/pmi.py
+${PYSITELIB}/pmi.pyc
+${PYSITELIB}/pmi.pyo
