@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/05/16 13:31:08 asau Exp $
+# $NetBSD: Makefile,v 1.3 2010/05/16 19:38:55 asau Exp $
 #
 
 DISTNAME=	petsc-3.1-p2
@@ -13,7 +13,17 @@ COMMENT=	Portable, Extensible Toolkit for  Scientific Computation
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-HAS_CONFIGURE=	yes
-USE_LANGUAGES=	c c++
+HAS_CONFIGURE=		yes
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		perl
+CONFIG_SHELL=		${PYTHONBIN}
+CONFIGURE_SCRIPT=	config/configure.py
 
+MAKE_FILE=		makefile
+BUILD_MAKE_FLAGS+=	PETSC_DIR=${WRKSRC}
+
+.include "../../lang/python/pyversion.mk" # get python
+.include "../../math/lapack/buildlink3.mk"
+.include "../../math/blas/buildlink3.mk"
+.include "../../mk/mpi.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
