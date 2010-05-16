@@ -1,0 +1,10 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/05/16 17:45:45 jym-netbsd Exp $
+
+--- dba/create-database.sh.orig	2010-03-09 02:51:21.000000000 +0000
++++ dba/create-database.sh
+@@ -1,4 +1,4 @@
+-#!/bin/bash
++#!/bin/sh
+ #
+ # Build the DAViCal database
+ #

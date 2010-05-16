@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/05/16 17:45:45 jym-netbsd Exp $
+
+SHA1 (davical-0.9.8.4.tar.gz) = 13580eaa7f47fd2ae4d912be96681d9ebfb4bff1
+RMD160 (davical-0.9.8.4.tar.gz) = 56095fad371dc7ff76ba2bc7874267ca3d26e796
+Size (davical-0.9.8.4.tar.gz) = 1968920 bytes
+SHA1 (patch-aa) = 4a10fb9bc57c5d5141a87cfaf8822262123a316f
+SHA1 (patch-ab) = 220346688f8326f36e27e9130cd972afc2d0326e
+SHA1 (patch-ac) = 74e9b103d502886736dff4fa659fb3e50bae5032
+SHA1 (patch-ad) = 1f54ea82346898c01a969bc2e52c7bcb86353ad4
