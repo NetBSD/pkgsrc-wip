@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/05/15 23:45:50 jym-netbsd Exp $
+# $NetBSD: Makefile,v 1.2 2010/05/17 00:35:29 jym-netbsd Exp $
 #
 
 DISTNAME=	awl-${LIBAWL_VERSION}
@@ -13,10 +13,6 @@ COMMENT=	"PHP Andrew's Web Libraries"
 LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-
-WRKSRC=		${WRKDIR}/awl-0.42
-
-LIBAWLDIR=	lib/php/awl
 
 DEPENDS+=       php>=5.2.0:../../lang/php5
 
@@ -35,4 +31,5 @@ do-install:
 		    ${DESTDIR}${PREFIX}/${LIBAWLDIR}/inc;	\
 	done;
 
+.include "../../wip/php-libawl/Makefile.common"
 .include "../../mk/bsd.pkg.mk"
