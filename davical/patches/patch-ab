@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1.1.1 2010/05/16 17:45:45 jym-netbsd Exp $
+$NetBSD: patch-ab,v 1.2 2010/05/17 23:47:44 jym-netbsd Exp $
 
 --- inc/always.php.orig	2010-03-19 22:50:26.000000000 +0000
 +++ inc/always.php
@@ -7,7 +7,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2010/05/16 17:45:45 jym-netbsd Exp $
  
  // Ensure that ../inc is in our included paths as early as possible
 -set_include_path( '../inc'. PATH_SEPARATOR. get_include_path());
-+set_include_path( '../inc'. PATH_SEPARATOR . "@LIBAWLDIR@" . PATH_SEPARATOR . get_include_path());
++set_include_path( '../inc'. PATH_SEPARATOR . "@LIBAWLDIR@/inc" . PATH_SEPARATOR . get_include_path());
  
  // Kind of private configuration values
  $c->total_query_time = 0;

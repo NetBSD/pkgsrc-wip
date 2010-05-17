@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/05/17 00:46:30 jym-netbsd Exp $
+# $NetBSD: Makefile,v 1.3 2010/05/17 23:47:43 jym-netbsd Exp $
 #
 
 DISTNAME=	davical-${DAVICAL_VERSION}
@@ -33,10 +33,10 @@ INSTALLATION_DIRS=	${DOCDIR} ${EGDIR}/config
 
 DEPENDS+=	${PHP_PKG_PREFIX}-pgsql>=4.3.1:../../databases/php-pgsql
 DEPENDS+=	${PHP_PKG_PREFIX}-pdo_pgsql>=${PHP_BASE_VERS}:../../databases/php-pdo_pgsql
-DEPENDS+=	php-libawl>=0.42:../../wip/php-libawl
+DEPENDS+=	${PHP_PKG_PREFIX}-libawl>=0.42:../../wip/php-libawl
 DEPENDS+=	p5-DBD-postgresql>=2.16.1:../../databases/p5-DBD-postgresql
 DEPENDS+=	p5-Class-DBI-Pg>=0.09:../../databases/p5-Class-DBI-Pg
-DEPENDS+=	p5-YAML-LibYAML>=0.32:../../textproc/p5-YAML-LibYAML
+DEPENDS+=	p5-YAML>=0.71:../../textproc/p5-YAML
 DEPENDS+=	pwgen>=2.06:../../sysutils/pwgen
 DEPENDS+=	postgresql${PGSQL_VERSION}-client-[0-9]*:../../databases/postgresql${PGSQL_VERSION}-client
 
@@ -50,7 +50,7 @@ CONF_FILES=		${EGDIR}/davical.conf	\
 			${PKG_SYSCONFDIR}/davical.conf
 
 CONF_FILES_PERMS+=	${EGDIR}/config/example-config.php	\
-			${PKG_SYSCONFDIR}/config.php		\
+			${PKG_SYSCONFDIR}/example-conf.php	\
 			${DAVICAL_USER} ${DAVICAL_GROUP} 0640
 
 CONF_FILES_PERMS+=	${EGDIR}/config/example-administration.yml	\
@@ -65,18 +65,26 @@ REPLACE_FILES.perl=	scripts/po/extract.pl
 SUBST_CLASSES+=		conf-path
 SUBST_STAGE.conf-path=	post-patch
 SUBST_FILES.conf-path=	inc/always.php dba/update-davical-database
+SUBST_FILES.conf-path+=	inc/davical_configuration_missing.php
 SUBST_SED.conf-path+=	-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g"
 SUBST_MESSAGE.conf-path=Fixing configuration path.
 
-# See ../../devel/php-libawl for the path to the AWL include directory
+# See ../../devel/php-libawl/Makefile.common for the LIBAWLDIR value
 SUBST_CLASSES+=		inc-path
 SUBST_STAGE.inc-path=	post-patch
 SUBST_FILES.inc-path=	inc/always.php scripts/po/rebuild-translations.sh
+SUBST_FILES.inc-path+=	dba/create-database.sh
 SUBST_SED.inc-path+=	-e "s|@LIBAWLDIR@|${PREFIX}/${LIBAWLDIR}|g"
 SUBST_MESSAGE.inc-path=	Fixing AWL include path.
 
+SUBST_CLASSES+=		examples
+SUBST_STAGE.examples=	post-patch
+SUBST_FILES.examples=	dba/create-database.sh
+SUBST_SED.examples+=	-e "s|@EGDIRCONFIG@|${EGDIR}/config|g"
+SUBST_MESSAGE.examples=	Fixing config examples path.
+
 SUBST_CLASSES+=		files
-SUBST_STAGE.files=	do-configure
+SUBST_STAGE.files=	post-patch
 SUBST_FILES.files=	davical.conf
 SUBST_SED.files+=	-e "s|@DAVICALDIR@|${DAVICALDIR}|g"
 SUBST_MESSAGE.files=	Fixing configuration files.

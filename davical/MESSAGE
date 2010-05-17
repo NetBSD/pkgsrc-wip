@@ -1,31 +1,34 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2010/05/17 00:46:30 jym-netbsd Exp $
+$NetBSD: MESSAGE,v 1.3 2010/05/17 23:47:43 jym-netbsd Exp $
 
 For pkgsrc installations, DAViCal's package is installed in non-default
 locations:
 
 	Document root:		${DAVICALDIR}/htdocs
+	Configuration files:	${PKG_SYSCONFDIR}/*-conf.php
 
 To complete the installation of DAViCal, follow these steps:
 
-1. Create DAViCal's database
+1. Create DAViCal's app (application) and dba (database admin) acounts:
+
+	$ su pgsql
+	$ createuser -D -R -S --pwprompt davical_app
+	<enter davical_app passwd>
+	$ createuser -D -R -S --pwprompt davical_dba
+	<enter davical_dba passwd>
+
+2. Edit pg_hba.conf file to add the davical_dba and davical_app users
+
+	local   davical     davical_app   md5
+	local   davical     davical_dba   md5
+
+3. Create DAViCal's database
 
        su pgsql ${DAVICALDIR}/dba/create-database.sh
 
-2. Edit pg_hba.conf file to add the davical_app user close to the
-   top of the accounts
-
-	local   davical     davical_app   trust
-
-3. Edit DAViCal configuration file, which resides under
-
-	${PKG_SYSCONFDIR}/config.php
-
-   It contains all the data needed by DAViCal PHP scripts to set up
-   its environment, including database access.
-
 4. You will need to make DAViCal accessible through your HTTP server.
-   If you are running Apache, edit DAViCal's configuration file:
+   If you are running Apache and ap-php, adapt DAViCal's configuration
+   file to your setup
 
 	${PKG_SYSCONFDIR}/davical.conf
 
@@ -34,10 +37,14 @@ To complete the installation of DAViCal, follow these steps:
 
 	Include ${PKG_SYSCONFDIR}/davical.conf
 
-   then restart Apache. After this step, you should be able to access
-   DAViCal through the URL mentionned within DAViCal's configuration file
-   (XXX XXX by default).
+   then restart Apache.
 
+5. You should now be able to access DAViCal through the URL configured
+   within DAViCal's configuration file. By default, it resides under
+
+	http://<your_webserver>/davical/
+
+   Follow the steps indicated there.
 
 Please refer to the following file if you need further information
 regarding DAViCal's installation.

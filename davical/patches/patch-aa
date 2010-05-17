@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2010/05/16 17:45:45 jym-netbsd Exp $
+$NetBSD: patch-aa,v 1.2 2010/05/17 23:47:44 jym-netbsd Exp $
 
 --- dba/create-database.sh.orig	2010-03-09 02:51:21.000000000 +0000
 +++ dba/create-database.sh
@@ -8,3 +8,21 @@ $NetBSD: patch-aa,v 1.1.1.1 2010/05/16 17:45:45 jym-netbsd Exp $
  #
  # Build the DAViCal database
  #
+@@ -16,7 +16,7 @@ testawldir() {
+ 
+ #
+ # Attempt to locate the AWL directory
+-AWLDIR="${DBADIR}/../../awl"
++AWLDIR="@LIBAWLDIR@"
+ if ! testawldir "${AWLDIR}"; then
+   AWLDIR="/usr/share/awl"
+   if ! testawldir "${AWLDIR}"; then
+@@ -168,7 +168,7 @@ rm "${INSTALL_NOTE_FN}"
+ cat <<FRIENDLY
+ *  The password for the 'admin' user has been set to '${ADMINPW}'"
+ 
+-Thanks for trying DAViCal!  Check in /usr/share/doc/davical/examples/ for
++Thanks for trying DAViCal!  Check in @EGDIRCONFIG@/ for
+ some configuration examples.  For help, visit #davical on irc.oftc.net.
+ 
+ FRIENDLY
