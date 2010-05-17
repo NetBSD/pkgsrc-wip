@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/02/01 08:39:34 bartoszkuzma Exp $
+# $NetBSD: Makefile,v 1.3 2010/05/17 14:36:11 bartoszkuzma Exp $
 #
 
 DISTNAME=	uni2ascii-4.14
@@ -13,7 +13,10 @@ LICENSE=	gnu-gpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+BROKEN_GETTEXT_DETECTION=	yes
 GNU_CONFIGURE=	yes
+
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/ascii2uni ${DESTDIR}${PREFIX}/bin
