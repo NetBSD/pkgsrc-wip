@@ -1,7 +1,7 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.3 2010/05/09 19:07:53 pettai Exp $
+$NetBSD: MESSAGE,v 1.4 2010/05/17 15:36:00 pettai Exp $
 
 For latest information about configurating OpenDNSSEC, see:
-http://trac.opendnssec.org/wiki/WikiStart
+http://www.opendnssec.org/documentation/using-opendnssec/
 
 ===========================================================================
