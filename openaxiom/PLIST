@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2010/05/13 08:04:43 asau Exp $
+@comment $NetBSD: PLIST,v 1.17 2010/05/17 14:48:31 asau Exp $
 bin/open-axiom
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/A1AGG-.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/A1AGG.${FASL}
@@ -1302,7 +1302,6 @@ lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/interp.daase
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/libdb.text
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/operation.daase
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/autoload/ax.${FASL}
-lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/autoload/def.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/autoload/mark.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/autoload/nspadaux.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/autoload/pspad1.${FASL}
