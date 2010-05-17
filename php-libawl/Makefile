@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2010/05/17 00:35:29 jym-netbsd Exp $
+# $NetBSD: Makefile,v 1.3 2010/05/17 23:49:44 jym-netbsd Exp $
 #
 
 DISTNAME=	awl-${LIBAWL_VERSION}
-PKGNAME=	php-libawl-${LIBAWL_VERSION}
+PKGNAME=	${PHP_PKG_PREFIX}-libawl-${LIBAWL_VERSION}
 LIBAWL_VERSION=	0.42
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=rscds/}
@@ -14,7 +14,11 @@ LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+.include "../../lang/php/phpversion.mk"
+
 DEPENDS+=       php>=5.2.0:../../lang/php5
+DEPENDS+=	${PHP_PKG_PREFIX}-iconv-[0-9]*:../../converters/php-iconv
+DEPENDS+=	${PHP_PKG_PREFIX}-gettext-[0-9]*:../../devel/php-gettext
 
 INSTALLATION_DIRS=	${LIBAWLDIR} ${LIBAWLDIR}/inc ${LIBAWLDIR}/dba
 
