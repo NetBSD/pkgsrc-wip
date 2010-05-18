@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/04/01 13:45:44 ryo-on Exp $
+$NetBSD: distinfo,v 1.2 2010/05/18 21:45:39 othyro Exp $
 
-SHA1 (miro-3.0.tar.gz) = 919f857a480c3a0de4efd2c14dd6991c2d7172ae
-RMD160 (miro-3.0.tar.gz) = 4d1cde3472e0abe45727df90b053b55438c5ad86
-Size (miro-3.0.tar.gz) = 9663955 bytes
+SHA1 (miro-3.0.1.tar.gz) = 3b3fe543e3e14010e715a0dfd3a02c4af8288af5
+RMD160 (miro-3.0.1.tar.gz) = 02f7ba94cb63752e679c00687f685691043fe2ed
+Size (miro-3.0.1.tar.gz) = 9714508 bytes

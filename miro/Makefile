@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/04/01 13:45:44 ryo-on Exp $
+# $NetBSD: Makefile,v 1.2 2010/05/18 21:45:09 othyro Exp $
 #
 
-DISTNAME=	miro-3.0
+DISTNAME=	miro-3.0.1
 CATEGORIES=	multimedia net
 MASTER_SITES=	http://ftp.osuosl.org/pub/pculture.org/miro/src/
 
