@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3972 2010/05/16 17:47:49 jym-netbsd Exp $
+# $Id: Makefile,v 1.3973 2010/05/18 07:23:28 bartoszkuzma Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2412,7 +2412,6 @@ SUBDIR+=	uebimiau
 SUBDIR+=	uffizi
 SUBDIR+=	umix
 SUBDIR+=	undo-tree
-SUBDIR+=	uni2ascii
 SUBDIR+=	unix2tcp
 SUBDIR+=	unmo3
 SUBDIR+=	unrealtournament-server
