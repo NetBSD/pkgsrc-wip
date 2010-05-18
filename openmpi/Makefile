@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2010/04/01 01:47:28 asau Exp $
+# $NetBSD: Makefile,v 1.27 2010/05/18 13:29:56 asau Exp $
 
-DISTNAME=	openmpi-1.5a1r22914
-PKGNAME=	openmpi-1.4.99.22914
+DISTNAME=	openmpi-1.5a1r23135
+PKGNAME=	openmpi-1.4.99.23135
 CATEGORIES=	parallel
 MASTER_SITES=	http://www.open-mpi.org/nightly/v1.5/ \
 		http://www.open-mpi.org/nightly/v1.4/
@@ -24,6 +24,9 @@ CONFIGURE_ARGS+=	--with-wrapper-ldflags="-L${PREFIX}/lib ${LINKER_RPATH_FLAG}${P
 CONFIGURE_ENV+=		ompi_cv_f77_have_INTEGERp8=no	# no "INTEGER*8"??
 BUILD_MAKE_FLAGS=	LIBLTDL=$(BUILDLINK_PREFIX.libltdl)/lib/libltdl.la # configure doesn't allow overriding it
 CONFIGURE_ARGS+=	OPAL_HAVE_LTDL_ADVISE=0
+
+USE_TOOLS+=		perl:run
+REPLACE_PERL=		orte/tools/wrappers/orte_wrapper_script.in
 
 .include "options.mk"
 
