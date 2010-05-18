@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/07/21 01:57:43 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/05/18 06:10:47 phonohawk Exp $
 bin/bearoffdump
 bin/gnubg
 bin/makebearoff
@@ -146,9 +146,11 @@ share/gnubg/gnubg_os0.bd
 share/gnubg/gnubg_ts0.bd
 share/gnubg/met/Kazaross-Shaw.xml
 share/gnubg/met/README
+share/gnubg/met/Rockwell-Kazaross.xml
 share/gnubg/met/TODO
 share/gnubg/met/catalog.dtd
 share/gnubg/met/catalog.xml
+share/gnubg/met/dunstan.xml
 share/gnubg/met/g11.xml
 share/gnubg/met/jac050.xml
 share/gnubg/met/jac100.xml
