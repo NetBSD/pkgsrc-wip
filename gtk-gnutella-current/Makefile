@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2007/09/21 16:30:33 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.21 2010/05/19 22:10:09 larnor Exp $
 
 DISTNAME=		gtk-gnutella-${GTK_GNUTELLA_VER}
 CATEGORIES=		net
@@ -11,25 +11,23 @@ COMMENT=		GTK-based gnutella client, SVN snapshot
 # Debug
 #CFLAGS+=		-g
 
-USE_TOOLS+=		gmake msgfmt pkg-config
 USE_PKGLOCALEDIR=	yes
+USE_TOOLS+=		gmake msgfmt pkg-config
 HAS_CONFIGURE=		yes
-CONFIGURE_SCRIPT=	./Configure
-CONFIGURE_ARGS+=	-d -e -r -s -D prefix=${PREFIX:Q} -D cc=${CC:Q} \
-			-D privlib="${PREFIX}/share/gtk-gnutella" \
-			-D sysman="${PREFIX}/${PKGMANDIR}" \
-			-D cflags=${CFLAGS:M*:Q} \
-			-D locale="${PREFIX}/${PKGLOCALEDIR}/locale" \
-			-D optimize=${COPTS:Q} -D gtkversion=2 -D yacc="yacc" \
-			-D official=false
+CONFIGURE_SCRIPT=	./build.sh
+CONFIGURE_ARGS+=	--configure-only
+CONFIGURE_ARGS+=	--prefix=${DESTDIR}/${PREFIX}
+CONFIGURE_ARGS+=	--localedir="${PREFIX}/${PKGLOCALEDIR}/locale"
+CONFIGURE_ARGS+=	--cc=${CC:Q}
+CONFIGURE_ARGS+=	--cflags=${CFLAGS:Unone:Q}
+CONFIGURE_ARGS+=	--yacc="yacc"
 
 CONFLICTS=		gtk-gnutella-*
 
-SVN_REPOSITORIES=	gtk-gnutella
-SVN_CERTS=		files/163e5491b8f4ccb8a4ab62c3ea0219c9
-#SVN_ROOT.gtk-gnutella=	${SVN_ROOT_SOURCEFORGE}/gtk-gnutella/trunk/gtk-gnutella
-SVN_ROOT.gtk-gnutella=	https://gtk-gnutella.svn.sourceforge.net/svnroot/gtk-gnutella/trunk/gtk-gnutella
+SVN_REPOSITORIES+=	gtk-gnutella
 SVN_MODULE.gtk-gnutella=gtk-gnutella
+SVN_ROOT.gtk-gnutella=	https://gtk-gnutella.svn.sourceforge.net/svnroot/gtk-gnutella/trunk/gtk-gnutella
+SVN_CERTS=		files/163e5491b8f4ccb8a4ab62c3ea0219c9
 
 WRKSRC=			${WRKDIR}/gtk-gnutella
 
