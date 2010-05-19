@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2009/09/28 22:05:41 bartoszkuzma Exp $
-bin/gen-data
-bin/super-smack
-share/doc/super-smack/CHANGES
-share/doc/super-smack/MANUAL
-share/doc/super-smack/README
-share/doc/super-smack/TUTORIAL
-share/smacks/select-key.smack
-share/smacks/update-select.smack

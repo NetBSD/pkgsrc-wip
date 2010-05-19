@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3974 2010/05/19 07:59:32 bartoszkuzma Exp $
+# $Id: Makefile,v 1.3975 2010/05/19 08:01:17 bartoszkuzma Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2250,7 +2250,6 @@ SUBDIR+=	sudoscript
 SUBDIR+=	sugarCRM
 SUBDIR+=	sun-j2me
 SUBDIR+=	sunterlib
-SUBDIR+=	super-smack
 SUBDIR+=	supertux
 SUBDIR+=	suse100_32_SDL
 SUBDIR+=	suse100_SDL
