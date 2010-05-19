@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/01/13 10:47:52 obache Exp $
-${RUBY_VENDORARCHLIB}/YamCha.${RUBY_DLEXT}

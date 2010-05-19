@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/01/13 10:46:57 obache Exp $
-${PYSITELIB}/YamCha.py
-${PYSITELIB}/YamCha.pyc
-${PYSITELIB}/YamCha.pyo
-${PYSITELIB}/_YamCha.so
