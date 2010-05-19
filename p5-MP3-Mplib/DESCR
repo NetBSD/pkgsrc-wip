@@ -1,4 +1,0 @@
-MP3::Mplib is a wrapper around Stefan Podkowinski's mplib written in C.
-It combines the best of both worlds: C's speed and Perl's nice
-object-orientedness. Note that MP3::Mplib ships with its own version of
-mplib (currently 1.0.1).

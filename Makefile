@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3973 2010/05/18 07:23:28 bartoszkuzma Exp $
+# $Id: Makefile,v 1.3974 2010/05/19 07:59:32 bartoszkuzma Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1611,7 +1611,6 @@ SUBDIR+=	p5-Log-Dispatch-Array
 SUBDIR+=	p5-MARC-Charset
 SUBDIR+=	p5-MARC-XML
 SUBDIR+=	p5-MKDoc-XML
-SUBDIR+=	p5-MP3-Mplib
 SUBDIR+=	p5-Mail-SPF
 SUBDIR+=	p5-MasonX-Apache2Handler
 SUBDIR+=	p5-Math-FixedPrecision
