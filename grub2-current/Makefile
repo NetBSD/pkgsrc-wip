@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2010/01/17 10:55:53 gregoire Exp $
+# $NetBSD: Makefile,v 1.14 2010/05/19 13:07:49 gregoire Exp $
 #
 
 DISTNAME=		grub-bazaar-snapshot
@@ -109,6 +109,9 @@ SUBST_SED.fix-paths-3+=		-e 's,"/boot/grub","/boot/grub2",g'
 
 # This package uses help2man to generate man pages.
 BUILD_DEPENDS+=		help2man>=1.36:../../converters/help2man
+
+# A recent version of flex is required to build.
+BUILD_DEPENDS+=		flex>=2.5.35:../../devel/flex
 
 post-install:
 	${INSTALL_DATA} ${FILESDIR}/default.conf ${EGDIR}/default.conf.sample
