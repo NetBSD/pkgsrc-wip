@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.4 2010/05/19 11:39:52 jym-netbsd Exp $
+$NetBSD: MESSAGE,v 1.5 2010/05/19 20:49:22 jym-netbsd Exp $
 
 For pkgsrc installations, DAViCal's package is installed in non-default
 locations:
@@ -22,9 +22,14 @@ To complete the installation of DAViCal, follow these steps:
 	local   davical     davical_app   md5
 	local   davical     davical_dba   md5
 
+   then restart pgsql.
+
 3. Create DAViCal's database
 
        su pgsql ${DAVICALDIR}/dba/create-database.sh
+
+   The script will output the password of 'admin' account for DAViCal.
+   Keep it in mind, it will be used at step 6.
 
 4. Adapt DAViCal configuration file to your setup:
 
@@ -50,9 +55,8 @@ To complete the installation of DAViCal, follow these steps:
 	Login: admin
 	Password: <the one obtained in step 3.>
 
-   Validate, then follow the steps indicated there.
-
-See DAViCal online documentation if you need further information:
+   Validate, then follow the steps to create user accounts. See DAViCal
+   online documentation for further information:
 
 	http://www.davical.org/
 
