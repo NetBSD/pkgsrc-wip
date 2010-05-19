@@ -1,0 +1,24 @@
+$NetBSD: patch-aa,v 1.4 2010/05/19 09:29:24 obache Exp $
+
+http://code.google.com/p/ibus/issues/detail?id=910
+
+--- src/PinyinEditor.cc.orig	2010-05-17 02:38:15.000000000 +0000
++++ src/PinyinEditor.cc
+@@ -628,7 +628,7 @@ PinyinEditor::update (void)
+     updateAuxiliaryText ();
+ }
+ 
+-inline void
++void
+ PinyinEditor::commit (const gchar *str)
+ {
+     StaticText text(str);
+@@ -703,7 +703,7 @@ PinyinEditor::selectCandidate (guint i)
+     return FALSE;
+ }
+ 
+-inline gboolean
++gboolean
+ PinyinEditor::selectCandidateInPage (guint i)
+ {
+     guint page_size = m_lookup_table.pageSize ();
