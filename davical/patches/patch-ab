@@ -1,17 +1,17 @@
-$NetBSD: patch-ab,v 1.2 2010/05/17 23:47:44 jym-netbsd Exp $
+$NetBSD: patch-ab,v 1.3 2010/05/19 11:39:52 jym-netbsd Exp $
 
---- inc/always.php.orig	2010-03-19 22:50:26.000000000 +0000
-+++ inc/always.php
-@@ -52,7 +52,7 @@ $c->hide_TODO = true;                   
- $c->readonly_webdav_collections = true;    // WebDAV access is readonly
- 
- // Ensure that ../inc is in our included paths as early as possible
--set_include_path( '../inc'. PATH_SEPARATOR. get_include_path());
-+set_include_path( '../inc'. PATH_SEPARATOR . "@LIBAWLDIR@/inc" . PATH_SEPARATOR . get_include_path());
- 
- // Kind of private configuration values
- $c->total_query_time = 0;
-@@ -93,11 +93,11 @@ if ( @file_exists('/etc/davical/'.$_SERV
+--- inc/always.php.in.orig	2010-04-01 09:21:58.000000000 +0000
++++ inc/always.php.in
+@@ -72,7 +72,7 @@ if ( ! @include_once('AWLUtilities.php')
+   $try_paths = array(
+         '../../awl/inc'
+       , '/usr/share/awl/inc'
+-      , '/usr/local/share/awl/inc'
++      , '@LIBAWLPATH@/inc'
+   );
+   foreach( $try_paths AS $awl_include_path ) {
+     if ( @file_exists($awl_include_path.'/AWLUtilities.php') ) {
+@@ -121,11 +121,11 @@ if ( @file_exists('/etc/davical/'.$_SERV
  else if ( @file_exists('/etc/davical/config.php') ) {
    include('/etc/davical/config.php');
  }
@@ -20,8 +20,9 @@ $NetBSD: patch-ab,v 1.2 2010/05/17 23:47:44 jym-netbsd Exp $
 +else if ( @file_exists('@PKG_SYSCONFDIR@'.$_SERVER['SERVER_NAME'].'-conf.php') ) {
 +  include('@PKG_SYSCONFDIR@'.$_SERVER['SERVER_NAME'].'-conf.php');
  }
- else if ( @file_exists('/usr/local/etc/davical/config.php') ) {
+-else if ( @file_exists('/usr/local/etc/davical/config.php') ) {
 -  include('/usr/local/etc/davical/config.php');
++else if ( @file_exists('@PKG_SYSCONFDIR@/config.php') ) {
 +  include('@PKG_SYSCONFDIR@/config.php');
  }
  else if ( @file_exists('../config/config.php') ) {

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2010/05/17 23:47:43 jym-netbsd Exp $
+# $NetBSD: Makefile,v 1.4 2010/05/19 11:39:52 jym-netbsd Exp $
 #
 
 DISTNAME=	davical-${DAVICAL_VERSION}
-DAVICAL_VERSION=0.9.8.4
+DAVICAL_VERSION=0.9.9
 CATEGORIES=	www
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=rscds/}
+MASTER_SITES=	http://debian.mcmillan.net.nz/packages/davical/
 
 MAINTAINER=	jym@NetBSD.org
 HOMEPAGE=	http://www.davical.org/
@@ -23,7 +23,7 @@ BUILD_DEFS=	APACHE_USER APACHE_GROUP
 DAVICAL_USER?=	${APACHE_USER}
 DAVICAL_GROUP?=	${APACHE_GROUP}
 
-USE_TOOLS=	pax perl:build
+USE_TOOLS=	pax msgfmt perl:build
 
 PAXDIRS=	htdocs inc dba po scripts
 
@@ -50,11 +50,7 @@ CONF_FILES=		${EGDIR}/davical.conf	\
 			${PKG_SYSCONFDIR}/davical.conf
 
 CONF_FILES_PERMS+=	${EGDIR}/config/example-config.php	\
-			${PKG_SYSCONFDIR}/example-conf.php	\
-			${DAVICAL_USER} ${DAVICAL_GROUP} 0640
-
-CONF_FILES_PERMS+=	${EGDIR}/config/example-administration.yml	\
-			${PKG_SYSCONFDIR}/administration.yml		\
+			${PKG_SYSCONFDIR}/config.php		\
 			${DAVICAL_USER} ${DAVICAL_GROUP} 0640
 
 REPLACE_INTERPRETER+=	perl
@@ -62,50 +58,56 @@ REPLACE.perl.old=	.*/bin/perl
 REPLACE.perl.new=	${PREFIX}/bin/perl
 REPLACE_FILES.perl=	scripts/po/extract.pl
 
+REPLACE_INTERPRETER+=	php
+REPLACE.php.old=	.*/bin/php
+REPLACE.php.new=	${PREFIX}/bin/php
+REPLACE_FILES.php=	scripts/sync-remote-caldav.php
+
 SUBST_CLASSES+=		conf-path
-SUBST_STAGE.conf-path=	post-patch
-SUBST_FILES.conf-path=	inc/always.php dba/update-davical-database
+SUBST_STAGE.conf-path=	pre-configure
+SUBST_FILES.conf-path=	inc/always.php.in dba/update-davical-database
 SUBST_FILES.conf-path+=	inc/davical_configuration_missing.php
 SUBST_SED.conf-path+=	-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g"
 SUBST_MESSAGE.conf-path=Fixing configuration path.
 
 # See ../../devel/php-libawl/Makefile.common for the LIBAWLDIR value
 SUBST_CLASSES+=		inc-path
-SUBST_STAGE.inc-path=	post-patch
-SUBST_FILES.inc-path=	inc/always.php scripts/po/rebuild-translations.sh
+SUBST_STAGE.inc-path=	pre-configure
+SUBST_FILES.inc-path=	davical.conf inc/always.php.in
+SUBST_FILES.inc-path+=	scripts/po/rebuild-translations.sh
 SUBST_FILES.inc-path+=	dba/create-database.sh
-SUBST_SED.inc-path+=	-e "s|@LIBAWLDIR@|${PREFIX}/${LIBAWLDIR}|g"
+SUBST_SED.inc-path+=	-e "s|@LIBAWLPATH@|${PREFIX}/${LIBAWLDIR}|g"
 SUBST_MESSAGE.inc-path=	Fixing AWL include path.
 
 SUBST_CLASSES+=		examples
-SUBST_STAGE.examples=	post-patch
+SUBST_STAGE.examples=	pre-configure
 SUBST_FILES.examples=	dba/create-database.sh
 SUBST_SED.examples+=	-e "s|@EGDIRCONFIG@|${EGDIR}/config|g"
 SUBST_MESSAGE.examples=	Fixing config examples path.
 
 SUBST_CLASSES+=		files
-SUBST_STAGE.files=	post-patch
+SUBST_STAGE.files=	pre-configure
 SUBST_FILES.files=	davical.conf
 SUBST_SED.files+=	-e "s|@DAVICALDIR@|${DAVICALDIR}|g"
-SUBST_MESSAGE.files=	Fixing configuration files.
+SUBST_MESSAGE.files=	Fixing DAViCal configuration file for Apache.
 
 post-extract:
 	${CP} ${FILESDIR}/davical.conf ${WRKSRC}/davical.conf
 
 pre-install:
 	${FIND} ${WRKSRC} -name "*.orig" -print | ${XARGS} ${RM} -f
+	${FIND} ${WRKSRC}/po -name "*~" -print | ${XARGS} ${RM} -f
 
 do-install:
-	cd ${WRKSRC};							\
-	for f in COPYING CREDITS ChangeLog				\
-	    INSTALL README TODO VERSION; do				\
-		${INSTALL_DATA} ${WRKSRC}/$$f ${DESTDIR}${DOCDIR};	\
-	done
-
 	${INSTALL_DATA} ${WRKSRC}/davical.conf	\
 		${DESTDIR}${EGDIR}/davical.conf
 
 	cd ${WRKSRC}/docs && pax -rwpam . ${DESTDIR}${DOCDIR}
+
+.	for f in COPYING CREDITS ChangeLog INSTALL README TODO VERSION
+		cd ${WRKSRC} && \
+		${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${DOCDIR}
+.	endfor
 
 .	for d in ${PAXDIRS}
 		${INSTALL_DATA_DIR} ${DESTDIR}${DAVICALDIR}/${d}
