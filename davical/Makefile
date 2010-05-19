@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/05/19 11:39:52 jym-netbsd Exp $
+# $NetBSD: Makefile,v 1.5 2010/05/19 12:04:21 jym-netbsd Exp $
 #
 
 DISTNAME=	davical-${DAVICAL_VERSION}
@@ -48,6 +48,9 @@ MESSAGE_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR:Q}
 
 CONF_FILES=		${EGDIR}/davical.conf	\
 			${PKG_SYSCONFDIR}/davical.conf
+
+CONF_FILES+=		${EGDIR}/config/example-administration.yml	\
+			${PKG_SYSCONFDIR}/administration.yml
 
 CONF_FILES_PERMS+=	${EGDIR}/config/example-config.php	\
 			${PKG_SYSCONFDIR}/config.php		\
