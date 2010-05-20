@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.5 2007/11/12 10:52:33 obache Exp $
-
-SHA1 (gmediaserver-0.13.0.tar.gz) = 5b868bc3c3d3bf0c2c550a4fc618c586a2640799
-RMD160 (gmediaserver-0.13.0.tar.gz) = 57fb849172d28e8adcff2234c787d552c16bde9a
-Size (gmediaserver-0.13.0.tar.gz) = 668281 bytes
-SHA1 (patch-ab) = d0d0ededb40a2c1b8416146807504f09650066b8
