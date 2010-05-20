@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/05/20 05:14:46 obache Exp $
+include/dlna.h
+lib/libdlna.a
+lib/libdlna.so
+lib/libdlna.so.0
+lib/libdlna.so.${PKGVERSION}
+lib/pkgconfig/libdlna.pc
