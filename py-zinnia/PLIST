@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/01/13 11:14:48 obache Exp $
-${PYSITELIB}/_zinnia.so
-${PYSITELIB}/zinnia.py
-${PYSITELIB}/zinnia.pyc
-${PYSITELIB}/zinnia.pyo

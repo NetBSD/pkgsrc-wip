@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3977 2010/05/20 04:31:16 obache Exp $
+# $Id: Makefile,v 1.3978 2010/05/20 09:18:34 obache Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1688,7 +1688,6 @@ SUBDIR+=	p5-XML-DTDParser
 SUBDIR+=	p5-XML-Writer-Simple
 SUBDIR+=	p5-mozldap
 SUBDIR+=	p5-qt3
-SUBDIR+=	p5-zinnia
 SUBDIR+=	packman
 SUBDIR+=	paexec
 SUBDIR+=	pagetools
@@ -2042,7 +2041,6 @@ SUBDIR+=	py-xsdb
 SUBDIR+=	py-yapgvb
 SUBDIR+=	py-yapps2
 SUBDIR+=	py-zeitgeist
-SUBDIR+=	py-zinnia
 SUBDIR+=	pydance
 SUBDIR+=	pydb
 SUBDIR+=	pylint
@@ -2123,7 +2121,6 @@ SUBDIR+=	ruby-thor
 SUBDIR+=	ruby-treetop
 SUBDIR+=	ruby-trollop
 SUBDIR+=	ruby-xmpp4r
-SUBDIR+=	ruby-zinnia
 SUBDIR+=	runawk
 SUBDIR+=	runit
 SUBDIR+=	s3funnel
@@ -2568,8 +2565,6 @@ SUBDIR+=	ypserv
 SUBDIR+=	zabbix
 SUBDIR+=	zapping
 SUBDIR+=	zinf
-SUBDIR+=	zinnia
-SUBDIR+=	zinnia-tomoe
 SUBDIR+=	zope3-unstable
 SUBDIR+=	zsh-snapshot
 SUBDIR+=	zvbi
