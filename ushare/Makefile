@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/05/20 05:49:29 obache Exp $
+# $NetBSD: Makefile,v 1.4 2010/05/20 06:03:37 obache Exp $
 #
 
 DISTNAME=	ushare-1.1a
@@ -32,6 +32,10 @@ CONF_FILES=	${PREFIX}/share/examples/ushare/ushare.conf ${PKG_SYSCONFDIR}/ushare
 RCD_SCRIPTS=	ushare
 
 INSTALL_MAKE_FLAGS+=	sysconfdir=${DESTDIR}${PREFIX}/share/examples/ushare
+
+post-install:
+	${INSTALL_MAN_DIR} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/src/ushare.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
