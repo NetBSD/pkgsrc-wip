@@ -1,23 +1,26 @@
-$NetBSD: patch-ad,v 1.3 2007/11/08 04:16:23 obache Exp $
+$NetBSD: patch-ad,v 1.4 2010/05/20 05:49:30 obache Exp $
 
---- src/ushare.c.orig	2007-07-01 16:57:22.000000000 +0000
+* Treat NetBSD same as FreeBSD.
+* Move sys/param.h and config.h header files before using conditions.
+
+--- src/ushare.c.orig	2007-12-09 13:03:36.000000000 +0000
 +++ src/ushare.c
-@@ -34,7 +34,11 @@
+@@ -28,7 +28,11 @@
  #include <errno.h>
  #include <getopt.h>
  
--#if (defined(BSD) || defined(__FreeBSD__))
+-#if (defined(BSD) || defined(__FreeBSD__) || defined(__APPLE__))
 +#if (defined(__unix__) || defined(unix)) && !defined(USG) || defined(__NetBSD__)
 +#include <sys/param.h>
 +#endif
 +
-+#if (defined(BSD) || defined(__FreeBSD__) || defined(__NetBSD__))
++#if (defined(BSD) || defined(__FreeBSD__) || defined(__APPLE__) || defined(__NetBSD__))
  #include <sys/socket.h>
  #include <sys/sysctl.h>
  #include <net/if_dl.h>
-@@ -47,10 +51,6 @@
- #include <stdbool.h>
- #include <fcntl.h>
+@@ -49,18 +53,15 @@
+ #include <ifaddrs.h>
+ #endif
  
 -#if (defined(__unix__) || defined(unix)) && !defined(USG)
 -#include <sys/param.h>
@@ -26,25 +29,35 @@ $NetBSD: patch-ad,v 1.3 2007/11/08 04:16:23 obache Exp $
  #include <upnp/upnp.h>
  #include <upnp/upnptools.h>
  
-@@ -385,7 +385,7 @@ create_udn (char *interface)
++#include "config.h"
++
+ #if (defined(HAVE_SETLOCALE) && defined(CONFIG_NLS))
+ # include <locale.h>
+ #endif
+ 
+-#include "config.h"
+ #include "ushare.h"
+ #include "services.h"
+ #include "http.h"
+@@ -505,7 +506,7 @@ create_udn (char *interface)
    char *buf;
    unsigned char *ptr;
  
--#if (defined(BSD) || defined(__FreeBSD__))
-+#if (defined(BSD) || defined(__FreeBSD__) || defined(__NetBSD__))
-   int mib[6], len;
+-#if (defined(BSD) || defined(__FreeBSD__) || defined(__APPLE__))
++#if (defined(BSD) || defined(__FreeBSD__) || defined(__APPLE__) || defined(__NetBSD__))
+   int mib[6];
+   size_t len;
    struct if_msghdr *ifm;
-   struct sockaddr_dl *sdl;
-@@ -396,7 +396,7 @@ create_udn (char *interface)
+@@ -517,7 +518,7 @@ create_udn (char *interface)
    if (!interface)
      return NULL;
  
--#if (defined(BSD) || defined(__FreeBSD__))
-+#if (defined(BSD) || defined(__FreeBSD__) || defined(__NetBSD__))
+-#if (defined(BSD) || defined(__FreeBSD__) || defined(__APPLE__))
++#if (defined(BSD) || defined(__FreeBSD__) || defined(__APPLE__) || defined(__NetBSD__))
    mib[0] = CTL_NET;
    mib[1] = AF_ROUTE;
    mib[2] = 0;
-@@ -447,7 +447,7 @@ create_udn (char *interface)
+@@ -568,7 +569,7 @@ create_udn (char *interface)
    buf = (char *) malloc (64 * sizeof (char));
    memset (buf, 0, 64);
    ptr = (unsigned char *) ifr.ifr_hwaddr.sa_data;
@@ -53,8 +66,8 @@ $NetBSD: patch-ad,v 1.3 2007/11/08 04:16:23 obache Exp $
  
    snprintf (buf, 64, "%s-%02x%02x%02x%02x%02x%02x", DEFAULT_UUID,
              (ptr[0] & 0377), (ptr[1] & 0377), (ptr[2] & 0377),
-@@ -620,7 +620,7 @@ setup_i18n(void)
- #if HAVE_SETLOCALE && ENABLE_NLS
+@@ -734,7 +735,7 @@ setup_i18n(void)
+ #ifdef HAVE_SETLOCALE
    setlocale (LC_ALL, "");
  #endif
 -#if (!defined(BSD) && !defined(__FreeBSD__))
@@ -62,7 +75,7 @@ $NetBSD: patch-ad,v 1.3 2007/11/08 04:16:23 obache Exp $
    bindtextdomain (PACKAGE, LOCALEDIR);
  #endif
    textdomain (PACKAGE);
-@@ -715,6 +715,9 @@ main (int argc, char **argv)
+@@ -845,6 +846,9 @@ main (int argc, char **argv)
  
    signal (SIGINT, UPnPBreak);
    signal (SIGHUP, reload_config);
@@ -70,5 +83,5 @@ $NetBSD: patch-ad,v 1.3 2007/11/08 04:16:23 obache Exp $
 +  signal (SIGPIPE, SIG_IGN);
 +#endif
  
-   if (init_upnp (ut) < 0)
+   if (ut->use_telnet)
    {

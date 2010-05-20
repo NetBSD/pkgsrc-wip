@@ -1,10 +1,11 @@
-$NetBSD: distinfo,v 1.3 2007/11/08 04:16:23 obache Exp $
+$NetBSD: distinfo,v 1.4 2010/05/20 05:49:29 obache Exp $
 
-SHA1 (ushare-1.0.tar.bz2) = 5277d865446332f24a37876787558b8c65a02097
-RMD160 (ushare-1.0.tar.bz2) = 0ede732fd5ee378749db95fdb7307153a79db80c
-Size (ushare-1.0.tar.bz2) = 180426 bytes
-SHA1 (patch-aa) = 2214704ea2ecc82f49efd290a996dcfead418c2b
-SHA1 (patch-ab) = ad119b400462879b70ad974d805e7b2ca88cba44
-SHA1 (patch-ac) = 421e45de63ff529e3ea37bbcee4d813f7386e80c
-SHA1 (patch-ad) = e3bfb2513740c9e55d3f4dd9ed32088adc81be0f
-SHA1 (patch-ae) = cbd6b05afc9bcb5f01e8f58857cbc7d12da17278
+SHA1 (ushare-1.1a.tar.bz2) = 1539e83cde5d80f433d262d971f5fe78486c9375
+RMD160 (ushare-1.1a.tar.bz2) = 6194ffec031d20fd897f2c7cf71c3c810238713f
+Size (ushare-1.1a.tar.bz2) = 65864 bytes
+SHA1 (patch-aa) = 1d943227242155b1ebdba6bfecd534fd9f944efb
+SHA1 (patch-ab) = 6c8e838add604b54132fbe924c4a8697ee2e2c09
+SHA1 (patch-ac) = 180151696678bb2f3ccd2bbaaaf9ed55f1c441e9
+SHA1 (patch-ad) = 43de62f0bb720bb31f7e8f1c8a31a5b7c5e19881
+SHA1 (patch-af) = bf8b49ac048b97d9edd6d18f71fa34d93526ce43
+SHA1 (patch-ag) = 2136d6b0e92b797072ea13d30e0fcc7131ab50a6

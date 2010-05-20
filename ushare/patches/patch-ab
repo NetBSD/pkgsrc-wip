@@ -1,6 +1,8 @@
-$NetBSD: patch-ab,v 1.1.1.1 2007/06/04 13:32:59 obache Exp $
+$NetBSD: patch-ab,v 1.2 2010/05/20 05:49:30 obache Exp $
 
---- src/osdep.c.orig	2007-02-26 20:09:16.000000000 +0000
+Treat NetBSD same as FreeBSD.
+
+--- src/osdep.c.orig	2007-12-09 13:03:36.000000000 +0000
 +++ src/osdep.c
 @@ -18,7 +18,7 @@
   * Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
@@ -15,8 +17,8 @@ $NetBSD: patch-ab,v 1.1.1.1 2007/06/04 13:32:59 obache Exp $
  
  #include "osdep.h"
  
--#if (defined(BSD) || defined(__FreeBSD__))
-+#if (defined(BSD) || defined(__FreeBSD__) || defined(__NetBSD__))
+-#if (defined(BSD) || defined(__FreeBSD__) || defined(__APPLE__))
++#if (defined(BSD) || defined(__FreeBSD__) || defined(__APPLE__) || defined(__NetBSD__))
  char *
  strndup (const char *s, size_t n)
  {
@@ -24,5 +26,5 @@ $NetBSD: patch-ab,v 1.1.1.1 2007/06/04 13:32:59 obache Exp $
  
    return len;
  }
--#endif /* (defined(BSD) || defined(__FreeBSD__)) */
-+#endif /* (defined(BSD) || defined(__FreeBSD__) || defined(__NetBSD__)) */
+-#endif /* (defined(BSD) || defined(__FreeBSD__) || defined(__APPLE__)) */
++#endif /* (defined(BSD) || defined(__FreeBSD__) || defined(__APPLE__) || defined(__NetBSD__)) */

@@ -1,6 +1,8 @@
-$NetBSD: patch-ac,v 1.1.1.1 2007/06/04 13:32:59 obache Exp $
+$NetBSD: patch-ac,v 1.2 2010/05/20 05:49:30 obache Exp $
 
---- src/osdep.h.orig	2007-02-26 20:09:16.000000000 +0000
+Treat NetBSD same as FreeBSD.
+
+--- src/osdep.h.orig	2007-12-09 13:03:36.000000000 +0000
 +++ src/osdep.h
 @@ -21,7 +21,7 @@
  #ifndef _OS_DEP_H_

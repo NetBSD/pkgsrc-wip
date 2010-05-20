@@ -1,13 +1,15 @@
-$NetBSD: patch-aa,v 1.1.1.1 2007/06/04 13:32:59 obache Exp $
+$NetBSD: patch-aa,v 1.2 2010/05/20 05:49:30 obache Exp $
 
---- src/cfgparser.h.orig	2007-02-26 20:09:16.000000000 +0000
+Treat NetBSD same as FreeBSD
+
+--- src/cfgparser.h.orig	2007-12-09 13:03:36.000000000 +0000
 +++ src/cfgparser.h
-@@ -32,7 +32,7 @@
- #define USHARE_CONFIG_FILE "ushare.conf"
- #define DEFAULT_USHARE_NAME "uShare"
+@@ -37,7 +37,7 @@
+ #define USHARE_CONFIG_FILE        "ushare.conf"
+ #define DEFAULT_USHARE_NAME       "uShare"
  
 -#if (defined(BSD) || defined(__FreeBSD__))
 +#if (defined(BSD) || defined(__FreeBSD__) || defined(__NetBSD__))
- #define DEFAULT_USHARE_IFACE "lnc0"
+ #define DEFAULT_USHARE_IFACE      "lnc0"
  #else /* Linux */
- #define DEFAULT_USHARE_IFACE "eth0"
+ #define DEFAULT_USHARE_IFACE      "eth0"
