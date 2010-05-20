@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/08/25 11:56:46 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.3 2010/05/20 08:38:32 obache Exp $
 bin/runxlrd.py
 ${PYSITELIB}/xlrd/__init__.py
 ${PYSITELIB}/xlrd/__init__.pyc
@@ -9,8 +9,6 @@ ${PYSITELIB}/xlrd/biffh.pyo
 ${PYSITELIB}/xlrd/compdoc.py
 ${PYSITELIB}/xlrd/compdoc.pyc
 ${PYSITELIB}/xlrd/compdoc.pyo
-${PYSITELIB}/xlrd/doc/HISTORY.html
-${PYSITELIB}/xlrd/doc/README.html
 ${PYSITELIB}/xlrd/doc/compdoc.html
 ${PYSITELIB}/xlrd/doc/xlrd.html
 ${PYSITELIB}/xlrd/examples/namesdemo.xls
