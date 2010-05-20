@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/05/14 11:06:38 obache Exp $
+# $NetBSD: Makefile,v 1.2 2010/05/20 06:14:00 obache Exp $
 #
 
 DISTNAME=	kimera-2.11
@@ -22,6 +22,13 @@ do-configure:
 		target.path=${PREFIX}/share/kimera \
 		script.path=${PREFIX}/bin \
 		kimera.pro
+
+.if !exists(/usr/include/alloca.h)
+SUBST_CLASSES+=		alloca
+SUBST_STAGE.alloca=	post-configure
+SUBST_FILES.alloca=	src/inputmethod.cpp
+SUBST_SED.alloca=	-e 's|<alloca.h>|<stdlib.h>|g'
+.endif
 
 .include "../../inputmethod/anthy/buildlink3.mk"
 .include "../../x11/qt4-libs/buildlink3.mk"
