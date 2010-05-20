@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2010/04/16 08:52:22 asau Exp $
+@comment $NetBSD: PLIST,v 1.15 2010/05/20 09:28:58 asau Exp $
 bin/clisp
 bin/clisp-link
 lib/clisp/base/calls.o
@@ -20,7 +20,6 @@ lib/clisp/build-aux/config.guess
 lib/clisp/build-aux/config.rpath
 lib/clisp/build-aux/config.sub
 lib/clisp/build-aux/depcomp
-lib/clisp/build-aux/install-sh
 lib/clisp/build-aux/warn-on-use.h
 lib/clisp/data/Symbol-Table.text
 lib/clisp/data/UnicodeDataFull.txt
