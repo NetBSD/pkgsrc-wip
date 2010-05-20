@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/05/17 11:44:59 gduzan Exp $
+# $NetBSD: Makefile,v 1.4 2010/05/20 14:03:55 thomasklausner Exp $
 
 DISTNAME=	kmymoney-3.98.0
 CATEGORIES=	finance kde
@@ -12,6 +12,8 @@ LICENSE=	gnu-gpl-v2
 
 BUILD_DEPENDS+=	automoc4-[0-9]*:../../devel/automoc4
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 #MAKE_JOBS_SAFE=no
 
 USE_CMAKE=		yes
@@ -21,6 +23,7 @@ USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++
 
 REPLACE_PERL+=	contrib/splitup-kde-chunk-online
+REPLACE_PERL+=	kmymoney/misc/financequote.pl
 
 .include "../../meta-pkgs/kde4/kde4.mk"
 .include "../../databases/shared-mime-info/buildlink3.mk"
