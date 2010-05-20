@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/05/14 11:04:28 obache Exp $
+# $NetBSD: Makefile,v 1.2 2010/05/20 13:14:20 obache Exp $
 #
 
 DISTNAME=	WritRecogn-0.1.9
@@ -17,6 +17,11 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake pkg-config
+
+SUBST_CLASSES+=		datadir
+SUBST_STAGE.datadir=	post-configure
+SUBST_SED.datadir=	-e 's|/usr/share|${PREFIX}/share|'
+SUBST_FILES.datadir=	src/common.h
 
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
