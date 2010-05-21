@@ -1,7 +1,8 @@
-# $NetBSD: bzr.mk,v 1.4 2010/01/11 01:48:28 gregoire Exp $
+# $NetBSD: bzr.mk,v 1.5 2010/05/21 21:58:17 gregoire Exp $
 #
 
 BUILD_DEPENDS+=		bzr>=1.0:../../devel/bzr
+BUILD_DEPENDS+=		rsync>=3.0:../../net/rsync
 
 DISTFILES?=		# empty
 BZR_REPOSITORY=		http://bzr.savannah.gnu.org/r/grub/people/gsutre/netbsd
@@ -14,6 +15,9 @@ do-bzr-extract:
 	cd ${WRKDIR};								\
 	${STEP_MSG} "Exporting from bazaar repository "${BZR_REPOSITORY};	\
 	bzr export ${DISTNAME} ${BZR_REPOSITORY}
+
+post-extract:
+	cd ${WRKSRC} && rsync -Lrtvz  translationproject.org::tp/latest/grub/ po
 
 pre-configure:
 	cd ${WRKSRC} && ./autogen.sh
