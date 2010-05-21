@@ -1,13 +1,13 @@
-@comment $NetBSD: PLIST,v 1.6 2010/01/17 13:48:48 gregoire Exp $
+@comment $NetBSD: PLIST,v 1.7 2010/05/21 19:14:39 gregoire Exp $
+bin/grub2-bin2h
 bin/grub2-editenv
 bin/grub2-fstest
-bin/grub2-mkelfimage
 ${PLIST.mkfont}bin/grub2-mkfont
 bin/grub2-mkimage
-bin/grub2-mkisofs
 bin/grub2-mkpasswd-pbkdf2
 bin/grub2-mkrelpath
 bin/grub2-mkrescue
+bin/grub2-script-check
 info/grub2.info
 lib/grub2/grub-mkconfig_lib
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/acpi.mod
@@ -22,6 +22,7 @@ lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/befs.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/befs_be.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/biosdisk.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/bitmap.mod
+lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/bitmap_scale.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/blocklist.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/boot.img
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/boot.mod
@@ -78,6 +79,7 @@ lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/gcry_tiger.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/gcry_twofish.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/gcry_whirlpool.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/gettext.mod
+lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/gfxmenu.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/gfxterm.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/gptsync.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/grub_script.tab.h
@@ -92,6 +94,7 @@ lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/help.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/hexdump.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/hfs.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/hfsplus.mod
+lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/iorw.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/iso9660.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/jfs.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/jpeg.mod
@@ -116,6 +119,7 @@ lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/moddep.lst
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/msdospart.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/multiboot.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/multiboot2.mod
+lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/nilfs2.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/normal.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/ntfs.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/ntfscomp.mod
@@ -123,9 +127,11 @@ lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/ohci.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/part_acorn.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/part_amiga.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/part_apple.mod
+lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/part_bsd.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/part_gpt.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/part_msdos.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/part_sun.mod
+lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/part_sunpc.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/partmap.lst
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/parttool.lst
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/parttool.mod
@@ -144,6 +150,7 @@ lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/raid5rec.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/raid6rec.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/read.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/reboot.mod
+lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/regexp.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/reiserfs.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/relocator.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/scsi.mod
@@ -153,6 +160,7 @@ lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/search_fs_uuid.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/search_label.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/serial.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/setjmp.mod
+lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/setpci.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/sfs.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/sh.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/sleep.mod
@@ -162,6 +170,7 @@ lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/terminal.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/terminfo.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/test.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/tga.mod
+lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/trig.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/true.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/udf.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/ufs1.mod
@@ -184,15 +193,15 @@ lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/xfs.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/xnu.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/xnu_uuid.mod
 lib/grub2/update-grub_lib
+man/man1/grub2-bin2h.1
 man/man1/grub2-editenv.1
 man/man1/grub2-fstest.1
-man/man1/grub2-mkelfimage.1
 man/man1/grub2-mkfont.1
 man/man1/grub2-mkimage.1
-man/man1/grub2-mkisofs.1
 man/man1/grub2-mkpasswd-pbkdf2.1
 man/man1/grub2-mkrelpath.1
 man/man1/grub2-mkrescue.1
+man/man1/grub2-script-check.1
 man/man8/grub2-install.8
 man/man8/grub2-mkconfig.8
 man/man8/grub2-mkdevicemap.8

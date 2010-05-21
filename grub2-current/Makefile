@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2010/05/19 23:39:47 gregoire Exp $
+# $NetBSD: Makefile,v 1.16 2010/05/21 19:14:39 gregoire Exp $
 #
 
 DISTNAME=		grub-bazaar-snapshot
@@ -79,31 +79,26 @@ PLIST_SUBST+=		GRUB_TARGET_CPU=${GRUB_TARGET_CPU}
 PLIST_SUBST+=		GRUB_PLATFORM=${GRUB_PLATFORM}
 
 #
-# The following substitutions adjust the configuration and library paths:
+# The following substitutions adjust the configuration paths:
 # - $sysconfdir/grub.d is replaced by $sysconfdir in scripts, and by $EGDIR
 #   in Makefile.in.
 # - $sysconfdir/default/grub is replaced by $sysconfdir/default.conf in
 #   scripts.
-# - $libdir/grub is replaced by $libdir/grub2 in Makefile.in and in scripts.
-# - DEFAULT_DIRECTORY in include/grub/util/misc.h.
+# - DEFAULT_DIRECTORY is adjusted in include/grub/emu/misc.h.
 #
 SUBST_CLASSES+=			fix-paths-1 fix-paths-2 fix-paths-3
 SUBST_STAGE.fix-paths-1=	pre-configure
-SUBST_MESSAGE.fix-paths-1=	Fixing configuration and library paths in makefile.
+SUBST_MESSAGE.fix-paths-1=	Fixing configuration paths in makefile.
 SUBST_FILES.fix-paths-1=	Makefile.in
 SUBST_SED.fix-paths-1=		-e 's,\$$(sysconfdir)/grub.d,\$$(EGDIR),g'
-SUBST_SED.fix-paths-1+=		-e 's,\$$(libdir)/grub,\$$(libdir)/grub2,g'
 SUBST_STAGE.fix-paths-2=	pre-configure
-SUBST_MESSAGE.fix-paths-2=	Fixing configuration and library paths in scripts.
-SUBST_FILES.fix-paths-2=	util/grub-mkconfig.in util/update-grub_lib.in
-SUBST_FILES.fix-paths-2+=	util/grub.d/[0-3]*.in
-SUBST_FILES.fix-paths-2+=	util/grub-install.in
+SUBST_MESSAGE.fix-paths-2=	Fixing configuration paths in util/grub-mkconfig.in.
+SUBST_FILES.fix-paths-2=	util/grub-mkconfig.in
 SUBST_SED.fix-paths-2=		-e 's,\$${sysconfdir}/grub.d,\$${sysconfdir},g'
 SUBST_SED.fix-paths-2+=		-e 's,\$${sysconfdir}/default/grub,\$${sysconfdir}/default.conf,g'
-SUBST_SED.fix-paths-2+=		-e 's,\$${libdir}/grub,\$${libdir}/grub2,g'
 SUBST_STAGE.fix-paths-3=	pre-configure
-SUBST_MESSAGE.fix-paths-3=	Fixing default directory in include/grub/util/misc.h.
-SUBST_FILES.fix-paths-3=	include/grub/util/misc.h
+SUBST_MESSAGE.fix-paths-3=	Fixing default directory in include/grub/emu/misc.h.
+SUBST_FILES.fix-paths-3=	include/grub/emu/misc.h
 SUBST_SED.fix-paths-3=		-e 's,"/grub","/grub2",g'
 SUBST_SED.fix-paths-3+=		-e 's,"/boot/grub","/boot/grub2",g'
 
