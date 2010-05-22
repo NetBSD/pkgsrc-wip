@@ -1,4 +1,4 @@
-# $NetBSD: download.mk,v 1.1 2010/05/22 19:31:22 gregoire Exp $
+# $NetBSD: download.mk,v 1.2 2010/05/22 19:36:09 gregoire Exp $
 #
 
 BUILD_DEPENDS+=		bzr>=1.0:../../devel/bzr
@@ -6,6 +6,8 @@ BUILD_DEPENDS+=		rsync>=3.0:../../net/rsync
 
 DISTFILES?=		# empty
 BZR_REPOSITORY=		http://bzr.savannah.gnu.org/r/grub/people/gsutre/netbsd
+UNIFONT_URL=		http://unifoundry.com/unifont-5.1.20080820.pcf.gz
+UNIFONT_EXT=		pcf.gz
 
 pre-extract: do-bzr-extract
 
@@ -18,6 +20,7 @@ do-bzr-extract:
 
 post-extract:
 	cd ${WRKSRC} && rsync -Lrtvz  translationproject.org::tp/latest/grub/ po
+	cd ${WRKSRC} && ftp -o unifont.${UNIFONT_EXT} ${UNIFONT_URL}
 
 pre-configure:
 	cd ${WRKSRC} && ./autogen.sh
