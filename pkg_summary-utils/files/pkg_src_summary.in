@@ -91,9 +91,19 @@ add_fields (){
 }
 
 rem_fields (){
-    for f in "$@"; do
-	PSS_FIELDS="$(echo $PSS_FIELDS | sed s,$f,,g)"
-    done
+    PSS_FIELDS=`awk '
+BEGIN {
+   for (i=1; i < ARGC; ++i){
+      if (ARGV [i] == "-") break
+      excl [ARGV [i]] = 1
+   }
+   for (++i; i < ARGC; ++i){
+      if (! (ARGV [i] in excl)){
+         printf "%s ", ARGV [i]
+      }
+   }
+}
+' "$@" - $PSS_FIELDS`
 }
 
 process_options (){
@@ -201,6 +211,11 @@ varnames="`echo $PSS_FIELDS |
          gsub(/NOTFOR/,  \"NOT_FOR_PLATFORM\")
          gsub(/DESCRIPTION/, \"DESCR_SRC\")
          print}'`"
+
+if test -n "$debug"; then
+    echo '===== PSS_FIELDS: =========' 1>&2
+    echo "$PSS_FIELDS"
+fi
 
 ############################################################
 cd $PKGSRCDIR
