@@ -63,6 +63,7 @@ OPTIONS:
                                of default ones
   -r|--rem-fields <fields>  remove the specified fields from the list
                                of default ones
+  -b                  add BOOTSTRAP_DEPENDS to BUILD_DEPENDS
   -d|--with-deps      also generates summary for dependancies (DEPENDS)
   -D|--with-bdeps     also generates summary for dependancies (BUILD_DEPENDS)
   -A|--with-alldeps   implies -d and -D
@@ -135,6 +136,9 @@ process_options (){
 		slave=1;;
 	    -p|--make-plist)
 		make_plist='-p';;
+	    -b)
+		add_fields BOOTSTRAP_DEPENDS BUILD_DEPENDS
+	        with_bootstrap=1;;
 	    -d|--with-deps)
 		with_dep=-d;;
 	    -D|--with-bdeps)
@@ -214,7 +218,15 @@ normal_pkgs_fn=$tmp_dir/normal_pkgs.txt
 
 ############################################################
 enrich_summary (){
-    awk '
+    awk -v with_bootstrap="$with_bootstrap" '
+    with_bootstrap && $0 ~ /^BOOTSTRAP_DEPENDS=/ {\
+	bootstrapdeps = substr($0, 19)
+	next
+    }
+    with_bootstrap && $0 ~ /^BUILD_DEPENDS=/ {
+	builddeps = substr($0, 13)
+	next
+    }
     $0 ~ /^DESCR_SRC=/ {
 	$0 = substr($0, 11)
 	for (i=1; i <= NF; ++i){
@@ -233,6 +245,10 @@ enrich_summary (){
 	gsub(/ONLY_FOR_PLATFORM/, "ONLYFOR")
 	gsub(/NOT_FOR_PLATFORM/, "NOTFOR")
 	print
+    }
+    END {
+	if (builddeps != "" || bootstrapdeps != "")
+	    print "BUILD_DEPENDS=" builddeps " " bootstrapdeps
     }' "$@"
 }
 
