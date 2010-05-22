@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/05/22 23:09:54 jihbed Exp $
+bin/wally
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/wally/__init__.py
+${PYSITELIB}/wally/__init__.pyc
+${PYSITELIB}/wally/__init__.pyo
+${PYSITELIB}/wally/__main__.py
+${PYSITELIB}/wally/__main__.pyc
+${PYSITELIB}/wally/__main__.pyo
+${PYSITELIB}/wally/cli.py
+${PYSITELIB}/wally/cli.pyc
+${PYSITELIB}/wally/cli.pyo
+${PYSITELIB}/wally/config.py
+${PYSITELIB}/wally/config.pyc
+${PYSITELIB}/wally/config.pyo
+${PYSITELIB}/wally/gui.py
+${PYSITELIB}/wally/gui.pyc
+${PYSITELIB}/wally/gui.pyo
+${PYSITELIB}/wally/icons/logo.svg
+${PYSITELIB}/wally/utils.py
+${PYSITELIB}/wally/utils.pyc
+${PYSITELIB}/wally/utils.pyo
