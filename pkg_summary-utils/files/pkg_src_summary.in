@@ -433,7 +433,7 @@ if test "$PSS_SLAVES"; then
 	paexec -slez $PSS_PAEXEC_EXTRA_OPTS \
 	    -n "$PSS_SLAVES" \
 	    -t "$PSS_TRANSPORT" \
-	    -c "env $environ $0 -s -f $with_bootstrap '$qfields'" '|' \
+	    -c "env $environ $0 -s $with_bootstrap -f '$qfields'" '|' \
 	paexec_reorder -s > "$partial_summary_fn"
 elif test "$slave"; then
     process_one_by_one
