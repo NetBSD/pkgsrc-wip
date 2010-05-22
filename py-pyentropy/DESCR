@@ -1,0 +1,6 @@
+A Python module for estimation of entropy and information theoretic quantities
+using cutting edge bias correction methods, such as
+
+ * Panzeri-Treves (PT)
+ * Quadratic Extrapolation (QE)
+ * Nemenman-Shafee-Bialek (NSB)

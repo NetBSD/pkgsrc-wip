@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/05/22 23:13:03 jihbed Exp $
+${PYSITELIB}/pyentropy/__init__.py
+${PYSITELIB}/pyentropy/__init__.pyc
+${PYSITELIB}/pyentropy/__init__.pyo
+${PYSITELIB}/pyentropy/maxent.py
+${PYSITELIB}/pyentropy/maxent.pyc
+${PYSITELIB}/pyentropy/maxent.pyo
+${PYSITELIB}/pyentropy/systems.py
+${PYSITELIB}/pyentropy/systems.pyc
+${PYSITELIB}/pyentropy/systems.pyo
+${PYSITELIB}/pyentropy/tests/__init__.py
+${PYSITELIB}/pyentropy/tests/__init__.pyc
+${PYSITELIB}/pyentropy/tests/__init__.pyo
+${PYSITELIB}/pyentropy/tests/test_maxent.py
+${PYSITELIB}/pyentropy/tests/test_maxent.pyc
+${PYSITELIB}/pyentropy/tests/test_maxent.pyo
+${PYSITELIB}/pyentropy/tests/test_systems.py
+${PYSITELIB}/pyentropy/tests/test_systems.pyc
+${PYSITELIB}/pyentropy/tests/test_systems.pyo
+${PYSITELIB}/pyentropy/tests/test_utils.py
+${PYSITELIB}/pyentropy/tests/test_utils.pyc
+${PYSITELIB}/pyentropy/tests/test_utils.pyo
+${PYSITELIB}/pyentropy/utils.py
+${PYSITELIB}/pyentropy/utils.pyc
+${PYSITELIB}/pyentropy/utils.pyo
