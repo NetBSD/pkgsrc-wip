@@ -1,7 +1,0 @@
-GRAPE is a GAP package for computing with graphs and groups, and is primarily
-designed for constructing and analysing graphs related to groups, 
-finite geometries, and designs. 
-
-The vast majority of GRAPE functions are written entirely in the GAP language,
-except for the automorphism group and isomorphism testing functions, which use
-Brendan McKay's nauty package
