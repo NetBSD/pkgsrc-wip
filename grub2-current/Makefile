@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2010/05/21 21:58:17 gregoire Exp $
+# $NetBSD: Makefile,v 1.18 2010/05/22 19:31:21 gregoire Exp $
 #
 
 DISTNAME=		grub-bazaar-snapshot
@@ -13,7 +13,7 @@ LICENSE=		gnu-gpl-v3
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 # Helper file for access to the bazaar repository and for autogen.sh.
-.include "bzr.mk"
+.include "download.mk"
 
 #
 # XXX: Linux-*-powerpc and others?

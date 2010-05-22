@@ -1,4 +1,4 @@
-# $NetBSD: bzr.mk,v 1.5 2010/05/21 21:58:17 gregoire Exp $
+# $NetBSD: download.mk,v 1.1 2010/05/22 19:31:22 gregoire Exp $
 #
 
 BUILD_DEPENDS+=		bzr>=1.0:../../devel/bzr
