@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/05/07 13:00:36 obache Exp $
+# $NetBSD: Makefile,v 1.2 2010/05/23 13:27:25 obache Exp $
 #
 
 DISTNAME=	ibus-unikey-0.4
@@ -16,7 +16,7 @@ GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=		gmake pkg-config
 
 PYTHON_FOR_BUILD_ONLY=	yes
 .include "../../lang/python/pyversion.mk"
