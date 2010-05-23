@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3983 2010/05/23 21:27:26 pettai Exp $
+# $Id: Makefile,v 1.3984 2010/05/23 21:57:54 jym-netbsd Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -279,7 +279,6 @@ SUBDIR+=	darcs-to-git
 SUBDIR+=	dasm
 SUBDIR+=	datapipe
 SUBDIR+=	dates
-SUBDIR+=	davical
 SUBDIR+=	db1
 SUBDIR+=	dbf
 SUBDIR+=	dbus-explorer
@@ -1725,7 +1724,6 @@ SUBDIR+=	petsc
 SUBDIR+=	pfe
 SUBDIR+=	pgp6
 SUBDIR+=	phlib
-SUBDIR+=	php-libawl
 #SUBDIR+=	php-doc			# not a package
 SUBDIR+=	php-doc-ar
 SUBDIR+=	php-doc-br
