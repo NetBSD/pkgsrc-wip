@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3982 2010/05/23 11:48:23 pdtafti Exp $
+# $Id: Makefile,v 1.3983 2010/05/23 21:27:26 pettai Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1645,7 +1645,6 @@ SUBDIR+=	p5-PluceneSimple
 SUBDIR+=	p5-Pod-Constants
 SUBDIR+=	p5-Pod-Xhtml
 SUBDIR+=	p5-Quota
-SUBDIR+=	p5-RRD-Simple
 SUBDIR+=	p5-RTF-Writer
 SUBDIR+=	p5-Spread
 SUBDIR+=	p5-Startup
