@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2010/05/22 19:36:09 gregoire Exp $
+@comment $NetBSD: PLIST,v 1.11 2010/05/23 15:51:57 gregoire Exp $
 bin/grub2-bin2h
 bin/grub2-editenv
 bin/grub2-fstest
@@ -33,6 +33,7 @@ lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/cat.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/cdboot.img
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/chain.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/charset.mod
+lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/cmostest.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/cmp.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/command.lst
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/config.h
