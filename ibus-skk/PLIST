@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/01/11 08:55:31 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/05/23 11:31:21 obache Exp $
 libexec/ibus-engine-skk
 libexec/ibus-setup-skk
 share/ibus-skk/engine/engine.py
@@ -7,6 +7,9 @@ share/ibus-skk/engine/engine.pyo
 share/ibus-skk/engine/factory.py
 share/ibus-skk/engine/factory.pyc
 share/ibus-skk/engine/factory.pyo
+share/ibus-skk/engine/kzik.py
+share/ibus-skk/engine/kzik.pyc
+share/ibus-skk/engine/kzik.pyo
 share/ibus-skk/engine/main.py
 share/ibus-skk/engine/main.pyc
 share/ibus-skk/engine/main.pyo
