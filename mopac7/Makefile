@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/05/22 23:08:12 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2010/05/24 14:11:52 asau Exp $
 #
 
 DISTNAME=	mopac7-1.11
 PKGNAME=	lib${DISTNAME}
 CATEGORIES=	biology
-MASTER_SITES=	http://garr.dl.sourceforge.net/project/mopac7/mopac7/mopac7-1.00/
+MASTER_SITES=	$(MASTER_SITE_SOURCEFORGE:=mopac7/)
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://sourceforge.net/projects/mopac7/
