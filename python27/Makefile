@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2010/04/29 14:54:00 obache Exp $
+# $NetBSD: Makefile,v 1.3 2010/05/24 06:34:59 obache Exp $
 
-DISTNAME=	Python-2.7b1
+DISTNAME=	Python-2.7b2
 PKGNAME=	${DISTNAME:S/Python/python27/:S/b/beta/}
 CATEGORIES=	lang python
 MASTER_SITES=	http://www.python.org/ftp/python/2.7/
