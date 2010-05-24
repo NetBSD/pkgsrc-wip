@@ -1,25 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2006/07/04 20:02:12 thomasklausner Exp $
-man/man1/crypt.sh.1
-man/man1/gzip.sh.1
-man/man1/hist.sh.1
-man/man1/yesterday.sh.1
-man/man8/dump-here.sh.8
-man/man8/dump.sh.8
-man/man8/mirror.sh.8
-man/man8/monthday.sh.8
-man/man8/rdup.8
-man/man8/restore.sh.8
-man/man8/rorrim.sh.8
-sbin/crypt.sh
-sbin/dump-here.sh
-sbin/dump.sh
-sbin/gzip.pl
-sbin/gzip.sh
-sbin/hist.sh
-sbin/mirror.pl
-sbin/mirror.sh
-sbin/monthday.sh
-sbin/rdup
-sbin/restore.sh
-sbin/rorrim.sh
-sbin/yesterday.sh
+@comment $NetBSD: PLIST,v 1.3 2010/05/24 18:16:44 emil_s Exp $
+bin/rdup
+bin/rdup-simple
+bin/rdup-tr
+bin/rdup-up
+man/man1/rdup-tr.1
+man/man1/rdup-up.1
+man/man1/rdup.1
+man/man7/rdup-backups.7
