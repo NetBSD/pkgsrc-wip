@@ -524,7 +524,7 @@ if test "$multi_var"; then
 
 	runpipe0 \
 	    summary2all_variants < $multi_pkgs_fn '|' \
-	    env _PSS_RECURS=1 pkg_src_summary $make_plist '|' \
+	    env _PSS_RECURS=1 $0 $with_bootstrap $make_plist '|' \
 	    move_ASSIGNMENTS_to_PKGPATH >> "$partial_summary_fn"
     fi
 fi
