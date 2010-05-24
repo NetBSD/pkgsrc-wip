@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2010/05/22 19:36:09 gregoire Exp $
+# $NetBSD: Makefile,v 1.20 2010/05/24 17:19:07 gregoire Exp $
 #
 
 DISTNAME=		grub-bazaar-snapshot
@@ -11,10 +11,6 @@ COMMENT=		GRand Unified Bootloader, version 2 (development snapshot)
 LICENSE=		gnu-gpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-
-# Helper file to access the bazaar repository, download translations and font
-# files, and generate the configure script with autogen.sh.
-.include "download.mk"
 
 #
 # XXX: Linux-*-powerpc and others?
@@ -113,6 +109,12 @@ post-install:
 	${INSTALL_DATA} ${FILESDIR}/default.conf ${DESTDIR}${EGDIR}/default.conf.sample
 	${INSTALL_SCRIPT} ${FILESDIR}/05_pkgsrc_theme ${DESTDIR}${EGDIR}/05_pkgsrc_theme
 
+# Options for this package
 .include "options.mk"
+
+# Helper file to access the bazaar repository, download translations and font
+# files, and generate the configure script with autogen.sh.
+.include "download.mk"
+
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

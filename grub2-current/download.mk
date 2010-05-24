@@ -1,4 +1,4 @@
-# $NetBSD: download.mk,v 1.2 2010/05/22 19:36:09 gregoire Exp $
+# $NetBSD: download.mk,v 1.3 2010/05/24 17:19:07 gregoire Exp $
 #
 
 BUILD_DEPENDS+=		bzr>=1.0:../../devel/bzr
@@ -20,7 +20,9 @@ do-bzr-extract:
 
 post-extract:
 	cd ${WRKSRC} && rsync -Lrtvz  translationproject.org::tp/latest/grub/ po
+.if !empty(PKG_OPTIONS:Mgrub-mkfont)
 	cd ${WRKSRC} && ftp -o unifont.${UNIFONT_EXT} ${UNIFONT_URL}
+.endif
 
 pre-configure:
 	cd ${WRKSRC} && ./autogen.sh
