@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/05/24 18:47:04 emil_s Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/05/24 20:02:25 emil_s Exp $
 bin/s3cmd
 ${PYSITELIB}/S3/ACL.py
 ${PYSITELIB}/S3/ACL.pyc
@@ -42,4 +42,4 @@ ${PYSITELIB}/S3/__init__.pyo
 share/doc/packages/s3cmd/INSTALL
 share/doc/packages/s3cmd/NEWS
 share/doc/packages/s3cmd/README
-share/man/man1/s3cmd.1
+man/man1/s3cmd.1
