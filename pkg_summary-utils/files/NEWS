@@ -1,4 +1,12 @@
 ----------------------------------------------------------------------
+Version 0.39.0, by Aleksey Cheusov, Mon, 24 May 2010 23:51:13 +0300
+
+ pkg_src_summary:
+  - new option "-b".
+  - fix for -r and -a options
+    (-a BOOTSTRAP_DEPENDS -r DEPENDS worked incorrectly).
+
+----------------------------------------------------------------------
 Version 0.38.0, by Aleksey Cheusov, Thu, 29 Apr 2010 23:29:38 +0300
 
  New mega tool -- pkg_subgraph_deps!
