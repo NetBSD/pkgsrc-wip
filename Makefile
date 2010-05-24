@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3984 2010/05/23 21:57:54 jym-netbsd Exp $
+# $Id: Makefile,v 1.3985 2010/05/24 18:49:05 emil_s Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2129,6 +2129,7 @@ SUBDIR+=	ruby-trollop
 SUBDIR+=	ruby-xmpp4r
 SUBDIR+=	runawk
 SUBDIR+=	runit
+SUBDIR+=	s3cmd
 SUBDIR+=	s3funnel
 SUBDIR+=	sakura
 SUBDIR+=	samhain
