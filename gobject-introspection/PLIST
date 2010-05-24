@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2010/05/13 11:13:19 obache Exp $
+@comment $NetBSD: PLIST,v 1.4 2010/05/24 07:29:27 obache Exp $
 bin/g-ir-compiler
 bin/g-ir-generate
 bin/g-ir-scanner
@@ -19,6 +19,7 @@ lib/girepository-1.0/libxml2-2.0.typelib
 lib/girepository-1.0/xfixes-4.0.typelib
 lib/girepository-1.0/xft-2.0.typelib
 lib/girepository-1.0/xlib-2.0.typelib
+lib/girepository-1.0/xrandr-1.3.typelib
 lib/gobject-introspection/giscanner/__init__.py
 lib/gobject-introspection/giscanner/__init__.pyc
 lib/gobject-introspection/giscanner/__init__.pyo
@@ -101,4 +102,5 @@ share/gir-1.0/libxml2-2.0.gir
 share/gir-1.0/xfixes-4.0.gir
 share/gir-1.0/xft-2.0.gir
 share/gir-1.0/xlib-2.0.gir
+share/gir-1.0/xrandr-1.3.gir
 share/gobject-introspection-1.0/Makefile.introspection
