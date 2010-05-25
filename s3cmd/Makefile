@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/05/24 20:02:25 emil_s Exp $
+# $NetBSD: Makefile,v 1.3 2010/05/25 04:55:31 emil_s Exp $
 #
 
 DISTNAME=	s3cmd-0.9.9.91
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=s3cmd/}
 
 MAINTAINER=	esg@sdf.lonestar.org
 HOMEPAGE=	http://s3tools.org/s3cmd/
-COMMENT=	TODO: Short description of the package
+COMMENT=	Tool for copying files to/from Amazon S3
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${PYPKGPREFIX}-expat>=0:../../textproc/py-expat
