@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2009/09/20 16:54:46 cheusov Exp $
+$NetBSD: patch-aa,v 1.2 2010/05/25 15:56:04 cheusov Exp $
 
---- tests/t_convert_all.sh.orig	2008-04-28 20:39:42.000000000 +0300
+--- tests/t_convert_all.sh.orig	2010-01-13 18:06:17.000000000 +0000
 +++ tests/t_convert_all.sh
 @@ -19,7 +19,7 @@ fi
  

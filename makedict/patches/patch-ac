@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.1.1.1 2009/09/20 16:54:46 cheusov Exp $
+$NetBSD: patch-ac,v 1.2 2010/05/25 15:56:04 cheusov Exp $
 
---- CMakeLists.txt.orig	2008-04-28 20:39:42.000000000 +0300
+--- CMakeLists.txt.orig	2010-01-13 18:06:17.000000000 +0000
 +++ CMakeLists.txt
 @@ -119,7 +119,7 @@ TARGET_LINK_LIBRARIES(makedict
  	${ZLIB_LIBRARIES})
@@ -8,6 +8,6 @@ $NetBSD: patch-ac,v 1.1.1.1 2009/09/20 16:54:46 cheusov Exp $
  INSTALL(TARGETS makedict RUNTIME DESTINATION bin)
 -INSTALL(FILES docs/makedict.1 DESTINATION share/man/man1)
 +INSTALL(FILES docs/makedict.1 DESTINATION man/man1)
- INSTALL(FILES ${CODECS} DESTINATION lib/makedict-codecs 
+ INSTALL(FILES ${CODECS} DESTINATION lib/makedict-codecs
  	PERMISSIONS OWNER_READ OWNER_EXECUTE GROUP_EXECUTE GROUP_READ
  	WORLD_EXECUTE WORLD_READ)

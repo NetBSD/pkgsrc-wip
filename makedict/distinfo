@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/09/20 16:54:46 cheusov Exp $
+$NetBSD: distinfo,v 1.2 2010/05/25 15:56:04 cheusov Exp $
 
-SHA1 (makedict-0.3.1-beta1-Source.tar.bz2) = 31bb87f7f99ab3bd2304d6cd8d13ea5537a47f27
-RMD160 (makedict-0.3.1-beta1-Source.tar.bz2) = 8c1ce12eb81cd3bd4eb68b4f0687bbb537131a4a
-Size (makedict-0.3.1-beta1-Source.tar.bz2) = 65891 bytes
-SHA1 (patch-aa) = 5c107b19d13b01aecb11b4a8ce345db08c4d2a12
-SHA1 (patch-ab) = f7c1fbe5a679a779255945bdad1b2699a77f03a1
-SHA1 (patch-ac) = 0814e72e039709de9bcbb6ec9c5300d4dd6c9f88
+SHA1 (makedict-0.4.1-beta1-Source.tar.gz) = df0baba87e4b331ab0edda55740ddad0f7d74be6
+RMD160 (makedict-0.4.1-beta1-Source.tar.gz) = 3a7d57879aa11535352f0a2da79c09e170d7f2db
+Size (makedict-0.4.1-beta1-Source.tar.gz) = 150813 bytes
+SHA1 (patch-aa) = 18bb730ad26252e96887e2f6d326b0fae4ef0ded
+SHA1 (patch-ac) = 0e283c0ab02cd63a85aff08dcd0be22c2a28bfbe
