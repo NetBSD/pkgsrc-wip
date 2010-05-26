@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.5 2009/07/30 21:27:09 rsmarples Exp $
+@comment $NetBSD: PLIST,v 1.6 2010/05/26 20:13:45 pdtafti Exp $
 bin/arora
 bin/arora-cacheinfo
 bin/arora-placesimport
 bin/htmlToXBel
-man/man1/arora.1
 man/man1/arora-cacheinfo.1
 man/man1/arora-placesimport.1
+man/man1/arora.1
 man/man1/htmlToXBel.1
 share/applications/arora.desktop
 share/arora/locale/ast.qm
@@ -30,6 +30,7 @@ share/arora/locale/nb_NO.qm
 share/arora/locale/nl_NL.qm
 share/arora/locale/pl_PL.qm
 share/arora/locale/pt_BR.qm
+share/arora/locale/pt_PT.qm
 share/arora/locale/ru_RU.qm
 share/arora/locale/sk_SK.qm
 share/arora/locale/sr_RS.qm
