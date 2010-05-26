@@ -1,0 +1,3 @@
+It allows the user to write desktop tests for the Linux Desktop without needing
+to know how LDTP framework works internally. ? It runs the tests by application
+and it collects results into XML and HTML reports.
