@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3985 2010/05/24 18:49:05 emil_s Exp $
+# $Id: Makefile,v 1.3986 2010/05/26 13:59:28 obache Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1270,7 +1270,6 @@ SUBDIR+=	miniupnpc
 SUBDIR+=	miracl
 SUBDIR+=	mirage
 SUBDIR+=	miro
-SUBDIR+=	misaki-fonts
 SUBDIR+=	mixer.tk
 SUBDIR+=	mixmaster
 SUBDIR+=	mixxx
