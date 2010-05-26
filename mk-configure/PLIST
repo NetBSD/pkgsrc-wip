@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2010/05/24 20:09:27 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.12 2010/05/26 11:09:11 cheusov Exp $
 bin/mkc_check_common.sh
 bin/mkc_check_compiler
 bin/mkc_check_custom
@@ -12,6 +12,7 @@ bin/mkc_install
 bin/mkc_test_helper
 bin/mkc_which
 bin/mkcmake
+man/man1/mkcmake.1
 man/man1/mkc_check_custom.1
 man/man1/mkc_check_decl.1
 man/man1/mkc_check_funclib.1
@@ -25,7 +26,6 @@ share/doc/mk-configure/FAQ
 share/doc/mk-configure/NEWS
 share/doc/mk-configure/README
 share/doc/mk-configure/TODO
-share/examples/mk-configure/8/Makefile
 share/examples/mk-configure/Makefile
 share/examples/mk-configure/hello_compilers/Makefile
 share/examples/mk-configure/hello_compilers/compiler_test.c
@@ -62,6 +62,33 @@ share/examples/mk-configure/hello_cxxlib/cxxlib/include/impl/hello_msg2.h
 share/examples/mk-configure/hello_cxxlib/cxxlib/linkme.mk
 share/examples/mk-configure/hello_cxxlib/expect.out
 share/examples/mk-configure/hello_cxxlib/test.mk
+share/examples/mk-configure/hello_dictd/Makefile
+share/examples/mk-configure/hello_dictd/dict/Makefile
+share/examples/mk-configure/hello_dictd/dict/dict.1
+share/examples/mk-configure/hello_dictd/dict/dict.c
+share/examples/mk-configure/hello_dictd/dictd/Makefile
+share/examples/mk-configure/hello_dictd/dictd/dictd.8
+share/examples/mk-configure/hello_dictd/dictd/dictd.c
+share/examples/mk-configure/hello_dictd/dictfmt/Makefile
+share/examples/mk-configure/hello_dictd/dictfmt/dictfmt.1
+share/examples/mk-configure/hello_dictd/dictfmt/dictfmt.c
+share/examples/mk-configure/hello_dictd/dictzip/Makefile
+share/examples/mk-configure/hello_dictd/dictzip/dictzip.1
+share/examples/mk-configure/hello_dictd/dictzip/dictzip.c
+share/examples/mk-configure/hello_dictd/expect.out
+share/examples/mk-configure/hello_dictd/libcommon/Makefile
+share/examples/mk-configure/hello_dictd/libcommon/iswalnum.c
+share/examples/mk-configure/hello_dictd/libcommon/linkme.mk
+share/examples/mk-configure/hello_dictd/libcommon/str.c
+share/examples/mk-configure/hello_dictd/libdz/Makefile
+share/examples/mk-configure/hello_dictd/libdz/dz.c
+share/examples/mk-configure/hello_dictd/libdz/linkme.mk
+share/examples/mk-configure/hello_dictd/libmaa/Makefile
+share/examples/mk-configure/hello_dictd/libmaa/linkme.mk
+share/examples/mk-configure/hello_dictd/libmaa/log.c
+share/examples/mk-configure/hello_dictd/libmaa/prime.c
+share/examples/mk-configure/hello_dictd/libmaa/set.c
+share/examples/mk-configure/hello_dictd/test.mk
 share/examples/mk-configure/hello_dlopen/Makefile
 share/examples/mk-configure/hello_dlopen/dlopen_test.c
 share/examples/mk-configure/hello_dlopen/expect.out
@@ -152,6 +179,7 @@ share/examples/mk-configure/subprojects/libhello1/hello1.c
 share/examples/mk-configure/subprojects/libhello1/hello1.h
 share/examples/mk-configure/subprojects/libhello1/linkme.mk
 share/examples/mk-configure/subprojects/libhello2/Makefile
+share/examples/mk-configure/subprojects/libhello2/hello2.3
 share/examples/mk-configure/subprojects/libhello2/hello2.cc
 share/examples/mk-configure/subprojects/libhello2/include/hello2.h
 share/examples/mk-configure/subprojects/libhello2/linkme.mk
@@ -173,6 +201,7 @@ share/mkc-mk/mkc.pkg-config.mk
 share/mkc-mk/mkc.prog.mk
 share/mkc-mk/mkc.subdir.mk
 share/mkc-mk/mkc.ver.mk
+share/mkc-mk/mkc_imp.dep.mk
 share/mkc-mk/mkc_imp.files.mk
 share/mkc-mk/mkc_imp.final.mk
 share/mkc-mk/mkc_imp.inc.mk
