@@ -1,8 +1,5 @@
-$NetBSD: distinfo,v 1.2 2009/05/27 21:53:51 jihbed Exp $
+$NetBSD: distinfo,v 1.3 2010/05/26 13:22:18 jihbed Exp $
 
-SHA1 (ldtp-1.5.1.tar.gz) = a29072ec77ea5661064a0b9f94c0dca56cbf8f39
-RMD160 (ldtp-1.5.1.tar.gz) = 03c3620519b886fe69b96ed29b5ecd031a6c5978
-Size (ldtp-1.5.1.tar.gz) = 431647 bytes
-SHA1 (patch-aa) = a0f0518753b6721b38736eadd42c78d098bcf4bf
-SHA1 (patch-ab) = f574e58d8ddc043c186f15d09411ecbb1d05cca0
-SHA1 (patch-ac) = 237c5e0383837792a96007db63cb3037a40c4e5f
+SHA1 (ldtp-2.0.6.tar.gz) = d525c971de0cd200b9e6adf77c5f1b20b256aec7
+RMD160 (ldtp-2.0.6.tar.gz) = f4987530b6a8ebfa2e8d8adbaf80afbba8326eb1
+Size (ldtp-2.0.6.tar.gz) = 43152 bytes

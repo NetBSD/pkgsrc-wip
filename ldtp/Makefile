@@ -1,33 +1,26 @@
-# $NetBSD: Makefile,v 1.3 2010/01/18 09:38:27 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2010/05/26 13:22:18 jihbed Exp $
 #
 
-DISTNAME=	ldtp-1.6.0
-PKGREVISION=	1
+DISTNAME=	ldtp-2.0.6
 CATEGORIES=	devel x11 python
-MASTER_SITES=	http://download.freedesktop.org/ldtp/1.x/1.6.x/
+MASTER_SITES=	http://download.freedesktop.org/ldtp/2.x/2.0.x/
 
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://ldtp.freedesktop.org/wiki/Home
 COMMENT=	GNU/Linux Desktop Testing Project
 LICENSE=	gnu-lgpl-v2
 
+DEPENDS+=	${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-GNU_CONFIGURE=	yes
-USE_TOOLS+=	pkg-config gmake
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=	# none
 
-CONFIGURE_ARGS+= 	--disable-access \
-			--enable-goptionparse \
-			--enable-newroles
+PYDISTUTILSPKG=	yes
+REPLACE_PYTHON+=	bin/ldtp
 
-.include "options.mk"
-
-.include "../../devel/libgail-gnome/buildlink3.mk"
-.include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/at-spi/buildlink3.mk"
-.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../textproc/libxml2/buildlink3.mk"
-.include "../../mk/pthread.buildlink3.mk"
+.include "../../devel/py-at-spi/buildlink3.mk"
+.include "../../devel/py-gobject/buildlink3.mk"
+.include "../../lang/python/application.mk"
+.include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
