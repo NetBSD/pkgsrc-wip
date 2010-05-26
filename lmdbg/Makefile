@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2010/04/17 20:30:05 cheusov Exp $
+# $NetBSD: Makefile,v 1.18 2010/05/26 19:49:59 cheusov Exp $
 #
 
-DISTNAME=	lmdbg-0.14.0
+DISTNAME=	lmdbg-0.15.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lmdbg/} \
 		http://mova.org/~cheusov/pub/lmdbg/
@@ -12,31 +12,18 @@ COMMENT=	Lightweight Modular malloc Debugger
 
 LICENSE=		mit
 
-BUILD_DEPENDS+=		mk-configure>=0.14.0:../../wip/mk-configure
+BUILD_DEPENDS+=		mk-configure>=0.15.0nb2:../../wip/mk-configure
 DEPENDS+=		pipestatus-[0-9]*:../../devel/pipestatus
 #DEPENDS+=		gdb-[0-9]*:../../devel/gdb
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-MAKE_FLAGS+=		MKCATPAGES=no MKPICINSTALL=no MKPROFILE=no
-
 TEST_TARGET=		test
 
 DOCDIR=			share/doc/lmdbg
-
 DOCFILES=		README NEWS ChangeLog
 
 AUTO_MKDIRS=		yes
-
-do-build:
-	cd ${WRKSRC} && \
-	env ${MAKE_ENV} mkcmake ${BUILD_MAKE_FLAGS} \
-		-f ${MAKE_FILE} all
-
-do-install:
-	cd ${WRKSRC} && \
-	env ${MAKE_ENV} mkcmake ${INSTALL_MAKE_FLAGS} \
-		-f ${MAKE_FILE} install
 
 post-install:
 .for f in ${DOCFILES}
@@ -44,3 +31,5 @@ post-install:
 .endfor
 
 .include "../../mk/bsd.pkg.mk"
+
+MAKE_PROGRAM=	${PREFIX}/bin/mkcmake
