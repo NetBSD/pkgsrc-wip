@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2008/02/22 19:28:58 cheusov Exp $
-bin/uudecode
-bin/uuencode
-man/man1/uudecode.1
-man/man1/uuencode.1
-man/man5/uuencode.5
