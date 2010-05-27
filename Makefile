@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3988 2010/05/27 09:20:40 obache Exp $
+# $Id: Makefile,v 1.3989 2010/05/27 09:37:55 cheusov Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1373,10 +1373,7 @@ SUBDIR+=	nestra
 SUBDIR+=	net-quanta
 SUBDIR+=	net-tools
 SUBDIR+=	netbsd-awk
-SUBDIR+=	netbsd-bsdgrep
-SUBDIR+=	netbsd-m4
 SUBDIR+=	netbsd-make
-SUBDIR+=	netbsd-uuencode
 SUBDIR+=	netbt-hcidump
 SUBDIR+=	netclasses
 SUBDIR+=	netkit-base
