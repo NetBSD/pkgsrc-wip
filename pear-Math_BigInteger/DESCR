@@ -1,0 +1,4 @@
+Math_BigInteger is a pure-PHP arbitrary precission integer arithmetic
+library. Supports base-2, base-10, base-16, and base-256 numbers. Uses
+the GMP or BCMath extensions, if available, and an internal implementation,
+otherwise.
