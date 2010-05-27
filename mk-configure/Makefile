@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2010/05/26 11:40:51 cheusov Exp $
+# $NetBSD: Makefile,v 1.20 2010/05/27 09:24:55 cheusov Exp $
 #
 
 DISTNAME=	mk-configure-0.15.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mk-configure/} \
 		http://mova.org/~cheusov/pub/mk-configure/
@@ -32,6 +32,9 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/"${i}" ${DESTDIR}${PREFIX}/${PKGDOCDIR}
 .endfor
 	cp -Rp ${WRKSRC}/examples/* ${DESTDIR}${PREFIX}/${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/mkc_imp.subprjs.mk \
+	                ${WRKSRC}/mkc.subprjs.mk \
+	                ${DESTDIR}${PREFIX}/share/mkc-mk
 
 .include "../../mk/bsd.prefs.mk"
 
