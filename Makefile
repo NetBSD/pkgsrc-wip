@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3987 2010/05/27 09:11:54 obache Exp $
+# $Id: Makefile,v 1.3988 2010/05/27 09:20:40 obache Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -259,6 +259,7 @@ SUBDIR+=	cspchecker
 SUBDIR+=	css-mode
 SUBDIR+=	csstidy
 SUBDIR+=	ctemplate
+SUBDIR+=	cutter
 SUBDIR+=	cvs-syncmail
 SUBDIR+=	cvs20hg
 SUBDIR+=	cvs2darcs
@@ -606,6 +607,7 @@ SUBDIR+=	gretl
 SUBDIR+=	grip
 SUBDIR+=	grisbi
 SUBDIR+=	groku
+SUBDIR+=	groonga
 SUBDIR+=	grsync
 SUBDIR+=	grub2
 SUBDIR+=	grub2-current
@@ -2404,6 +2406,7 @@ SUBDIR+=	uclibc
 SUBDIR+=	udhcp
 SUBDIR+=	uebimiau
 SUBDIR+=	uffizi
+SUBDIR+=	uin-chewing
 SUBDIR+=	umix
 SUBDIR+=	undo-tree
 SUBDIR+=	unix2tcp
@@ -2461,12 +2464,14 @@ SUBDIR+=	wl-current
 SUBDIR+=	wmii-devel
 SUBDIR+=	wmitime
 SUBDIR+=	wmnetload
+SUBDIR+=	wordcut
 SUBDIR+=	wordpress-mu
 SUBDIR+=	wordwarvi
 SUBDIR+=	workrave
 SUBDIR+=	wpro
 SUBDIR+=	wput
 SUBDIR+=	wrcs
+SUBDIR+=	writrecogn
 SUBDIR+=	wsmake
 SUBDIR+=	wtf
 SUBDIR+=	wvstreams
