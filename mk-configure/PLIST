@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2010/05/27 09:24:56 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.15 2010/05/28 20:00:33 cheusov Exp $
 bin/mkc_check_common.sh
 bin/mkc_check_compiler
 bin/mkc_check_custom
@@ -201,6 +201,7 @@ share/mkc-mk/mkc.own.mk
 share/mkc-mk/mkc.pkg-config.mk
 share/mkc-mk/mkc.prog.mk
 share/mkc-mk/mkc.subdir.mk
+share/mkc-mk/mkc.subprj.mk
 share/mkc-mk/mkc.subprjs.mk
 share/mkc-mk/mkc.ver.mk
 share/mkc-mk/mkc_imp.dep.mk
@@ -216,6 +217,6 @@ share/mkc-mk/mkc_imp.own.mk
 share/mkc-mk/mkc_imp.platform.sys.mk
 share/mkc-mk/mkc_imp.prog.mk
 share/mkc-mk/mkc_imp.subdir.mk
-share/mkc-mk/mkc_imp.subprjs.mk
+share/mkc-mk/mkc_imp.subprj.mk
 share/mkc-mk/mkc_imp.sys.mk
 share/mkc-mk/sys.mk
