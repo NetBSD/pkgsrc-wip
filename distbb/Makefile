@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.60 2010/05/01 21:12:38 cheusov Exp $
+# $NetBSD: Makefile,v 1.61 2010/05/28 15:11:57 cheusov Exp $
 #
 
-DISTNAME=	distbb-0.34.0
+DISTNAME=	distbb-0.35.0
 CATEGORIES=	pkgtools
 MASTER_SITES=	http://mova.org/~cheusov/pub/distbb/
 
@@ -11,7 +11,7 @@ COMMENT=	DISTributed Bulk Build tool for pkgsrc
 
 LICENSE=	mit
 
-DEPENDS+=	pkg_summary-utils>=0.38.0:../../wip/pkg_summary-utils
+DEPENDS+=	pkg_summary-utils>=0.39.0:../../wip/pkg_summary-utils
 DEPENDS+=	paexec>=0.13.0nb1:../../wip/paexec
 DEPENDS+=	runawk>=0.21.0:../../wip/runawk
 DEPENDS+=	pipestatus>=0.6.0:../../devel/pipestatus
