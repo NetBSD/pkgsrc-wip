@@ -153,6 +153,9 @@ BEGIN {
    }
 
    FS = "="
+
+   # keep all fields in grep_summary__fields associative array
+   grep_summary__allfields = 1
 }
 
 function grep_summary__condition (           pkgpath, pkgbase){

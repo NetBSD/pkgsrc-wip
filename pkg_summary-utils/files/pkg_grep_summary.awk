@@ -129,7 +129,7 @@ _gs_matched == 1 && NF > 0 {
 	next
 }
 
-{
+grep_summary__allfields {
 	grep_summary__fields [fname] = fvalue
 }
 
