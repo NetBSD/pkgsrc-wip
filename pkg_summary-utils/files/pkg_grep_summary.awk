@@ -5,15 +5,15 @@
 #env "LC_ALL=C"
 
 BEGIN {
-	matched = -1 # -1 - unknown, 0 - false, 1 - true
-	count              = 0
+	_gs_matched = -1 # -1 - unknown, 0 - false, 1 - true
+	_gs_count   = 0
 
-	multiline ["PLIST"]       = 1
-	multiline ["DESCRIPTION"] = 1
-	multiline ["DEPENDS"]     = 1
-	multiline ["REQUIRES"]    = 1
-	multiline ["PROVIDES"]    = 1
-	multiline ["CONFLICTS"]   = 1
+	_sg_multiline ["PLIST"]       = 1
+	_sg_multiline ["DESCRIPTION"] = 1
+	_sg_multiline ["DEPENDS"]     = 1
+	_sg_multiline ["REQUIRES"]    = 1
+	_sg_multiline ["PROVIDES"]    = 1
+	_sg_multiline ["CONFLICTS"]   = 1
 }
 
 function match_first_word (s, word){
@@ -39,7 +39,7 @@ function match_word (s, word,                  idx){
 	if (s == word)
 		return 1
 
-	idx=index(s, word)
+	idx = index(s, word)
 	if (!idx)
 		return 0
 
@@ -57,21 +57,21 @@ function update_skip (){
 	if (ic)
 		fvalue = tolower(fvalue)
 
-	matched = grep_summary__condition()
+	_gs_matched = grep_summary__condition()
 
-	if (matched == 1){
-		for (i=0; i < count; ++i){
-			print accu [i]
+	if (_gs_matched == 1){
+		for (i=0; i < _gs_count; ++i){
+			print _gs_accu [i]
 		}
 
-		delete accu
-		count = 0
-	}else if (matched == 0 && (fname in multiline)){
-		matched = -1
+		delete _gs_accu
+		_gs_count = 0
+	}else if (_gs_matched == 0 && (fname in _sg_multiline)){
+		_gs_matched = -1
 	}
 }
 
-matched == 0 && NF > 0 {
+_gs_matched == 0 && NF > 0 {
 	next
 }
 
@@ -87,18 +87,18 @@ matched == 0 && NF > 0 {
 }
 
 function check_PKGPATHe (){
-	if (assigns != "" && pkgpath != ""){
-		fvalue = pkgpath ":" assigns
+	if (_gs_assigns != "" && _gs_pkgpath != ""){
+		fvalue = _gs_pkgpath ":" _gs_assigns
 		fname  = "PKGPATHe"
 		update_skip()
-	}else if (index(pkgpath, ":") > 0){
-		fvalue = pkgpath
+	}else if (index(_gs_pkgpath, ":") > 0){
+		fvalue = _gs_pkgpath
 		fname  = "PKGPATHe"
 		update_skip()
 	}
 }
 
-matched == -1 {
+_gs_matched == -1 {
 	if (grep_summary__field == "PKGBASE"){
 		if (fname == "PKGNAME"){
 			fname = "PKGBASE"
@@ -107,10 +107,10 @@ matched == -1 {
 		}
 	}else if (grep_summary__field == "PKGPATHe"){
 		if (fname == "ASSIGNMENTS") {
-			assigns = fvalue
+			_gs_assigns = fvalue
 			check_PKGPATHe()
 		}else if (fname == "PKGPATH") {
-			pkgpath = fvalue
+			_gs_pkgpath = fvalue
 			check_PKGPATHe()
 		}
 	}else if (grep_summary__field == "PKGPATH"){
@@ -124,7 +124,7 @@ matched == -1 {
 	}
 }
 
-matched == 1 && NF > 0 {
+_gs_matched == 1 && NF > 0 {
 	print $0
 	next
 }
@@ -133,27 +133,27 @@ matched == 1 && NF > 0 {
 	grep_summary__fields [fname] = fvalue
 }
 
-matched == -1 && NF > 0 {
-	accu [count++] = $0
+_gs_matched == -1 && NF > 0 {
+	_gs_accu [_gs_count++] = $0
 }
 
 NF == 0 {
-	if (matched == -1 && grep_summary__field == "PKGPATHe"){
-		fvalue = pkgpath
+	if (_gs_matched == -1 && grep_summary__field == "PKGPATHe"){
+		fvalue = _gs_pkgpath
 		update_skip()
 		fvalue = ""
 	}
-	if (matched == -1){
+	if (_gs_matched == -1){
 		update_skip()
 	}
-	if (matched == 1){
+	if (_gs_matched == 1){
 		print ""
 	}
 
-	delete accu
+	delete _gs_accu
 	delete grep_summary__fields
-	count = 0
-	matched = -1
+	_gs_count = 0
+	_gs_matched = -1
 
-	assigns = pkgpath = ""
+	_gs_assigns = _gs_pkgpath = ""
 }
