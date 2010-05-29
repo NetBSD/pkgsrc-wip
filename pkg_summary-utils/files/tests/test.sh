@@ -73,6 +73,52 @@ runtest pkg_grep_summary -S PKGPATH  pkgs.txt < src_summary.txt
 runtest pkg_grep_summary -S PKGPATHe pkgs.txt < src_summary.txt
 
 
+grep_PKGNAME_n_PKGBASE_only (){
+    grep -E '^(PKGNAME|PKGPATH)=|^$|^-' "$@"
+}
+
+runtest pkg_grep_summary -t substring PKGNAME dict < src_summary.txt |
+    grep_PKGNAME_n_PKGBASE_only
+runtest pkg_grep_summary -t substring PKGNAME distcc < src_summary.txt |
+    grep_PKGNAME_n_PKGBASE_only
+
+runtest pkg_grep_summary -t first PKGNAME dict < src_summary.txt |
+    grep_PKGNAME_n_PKGBASE_only
+runtest pkg_grep_summary -t first PKGNAME dic < src_summary.txt |
+    grep_PKGNAME_n_PKGBASE_only
+
+runtest pkg_grep_summary -t last PKGBASE client < src_summary.txt |
+    grep_PKGNAME_n_PKGBASE_only
+runtest pkg_grep_summary -t last PKGBASE lient < src_summary.txt |
+    grep_PKGNAME_n_PKGBASE_only
+
+runtest pkg_grep_summary -t exact PKGBASE dictem < src_summary.txt |
+    grep_PKGNAME_n_PKGBASE_only
+runtest pkg_grep_summary -t exact PKGBASE dict < src_summary.txt |
+    grep_PKGNAME_n_PKGBASE_only
+
+runtest pkg_grep_summary -t prefix PKGBASE awk < src_summary.txt |
+    grep_PKGNAME_n_PKGBASE_only
+runtest pkg_grep_summary -t prefix PKGBASE ruby < src_summary.txt |
+    grep_PKGNAME_n_PKGBASE_only
+
+runtest pkg_grep_summary -t suffix PKGBASE ldap < src_summary.txt |
+    grep_PKGNAME_n_PKGBASE_only
+runtest pkg_grep_summary -t suffix PKGBASE nis < src_summary.txt |
+    grep_PKGNAME_n_PKGBASE_only
+
+runtest pkg_grep_summary -t word PKGBASE dict < src_summary.txt |
+    grep_PKGNAME_n_PKGBASE_only
+runtest pkg_grep_summary -t word PKGBASE dic < src_summary.txt |
+    grep_PKGNAME_n_PKGBASE_only
+runtest pkg_grep_summary -t word PKGBASE ldap < src_summary.txt |
+    grep_PKGNAME_n_PKGBASE_only
+runtest pkg_grep_summary -t word PKGBASE dap < src_summary.txt |
+    grep_PKGNAME_n_PKGBASE_only
+runtest pkg_grep_summary -t word PKGBASE nis < src_summary.txt |
+    grep_PKGNAME_n_PKGBASE_only
+runtest pkg_grep_summary -t word PKGBASE dictem < src_summary.txt |
+    grep_PKGNAME_n_PKGBASE_only
 
 # pkg_cmp_summary
 echo '--------------------------------------------------'

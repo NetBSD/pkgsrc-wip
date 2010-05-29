@@ -24,22 +24,28 @@
 
 set -e
 
+export LC_ALL=C
+
 usage (){
     cat 1>&2 <<EOF
 pkg_grep_summary - output summaries about packages that matches
-the specified condition.
+the specified condition, summaries are read from stdin.
 
 USAGE: pkg_grep_summary -h
        pkg_grep_summary -e <field>
        pkg_grep_summary -m <field> <regexp>
        pkg_grep_summary -s <field> <string>
        pkg_grep_summary -S <field> <file>
+       pkg_grep_summary -t <strategy> <field> <string>
        pkg_grep_summary <field> <awk_condition>
   <field>         - PKGBASE, PKGNAME, PKGPATH, DEPENDS etc.
-  <awk_condition> - boolean expression written in AWK language
+  <awk_condition> - Boolean expression written in AWK language
   <regexp>        - AWK regular expression
-  <string>        - text string
-
+  <string>        - Text string
+  <strategy>      - Search strategy. The following strategies are supported:
+                    exact, prefix, suffix, substring, word (separate words within
+                    fields are matched), re (extended regular expresion), first (only
+                    first word is matched), last (only last word is matched)
 OPTIONS:
   -h|--help   display this message
   -e|--empty  matches empty and absent fields only
@@ -75,6 +81,13 @@ while test $# -ne 0; do
 	    regex=$3
 	    shift
 	    shift;;
+	-t)
+	    strategy=$2
+	    field=$3
+	    string=$4
+	    shift
+	    shift
+	    shift;;
 	--)
 	    shift
 	    break;;
@@ -87,7 +100,27 @@ while test $# -ne 0; do
     shift
 done
 
-if test -n "$empty"; then
+if test -n "$strategy"; then
+    case "$strategy" in
+	exact)
+	    condition="fvalue == \"$string\"";;
+	prefix)
+	    condition="has_prefix(fvalue, \"$string\")";;
+	suffix)
+	    condition="has_suffix(fvalue, \"$string\")";;
+	substring)
+	    condition="index(fvalue, \"$string\")";;
+	first)
+	    condition="match_first_word(fvalue, \"$string\")";;
+	last)
+	    condition="match_last_word(fvalue, \"$string\")";;
+	word)
+	    condition="match_word(fvalue, \"$string\")";;
+	*)
+	    echo "Unknown search strategy: $strategy" 1>&2
+	    exit 1;;
+    esac
+elif test -n "$empty"; then
     condition='fvalue == ""'
 elif test -n "$string"; then
     condition="fvalue == \"$string\""
@@ -117,6 +150,7 @@ BEGIN {
       while(xgetline0(strings_fn)){
          strings [$0] = 1
       }
+      close(strings_fn)
    }
    grep_summary__field="'"$field"'"
 }

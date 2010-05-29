@@ -314,6 +314,102 @@ MAINTAINER=wiz@NetBSD.org
 CATEGORIES=graphics
 
 --------------------------------------------------
+------- args: 'pkg_grep_summary' '-t' 'substring' 'PKGNAME' 'dict'
+PKGPATH=textproc/dictem
+PKGNAME=dictem-0.82
+
+PKGNAME=dict-server-1.10.11nb2
+PKGPATH=wip/dict-server
+
+PKGNAME=dict-client-1.9.15nb2
+PKGPATH=textproc/dict-client
+
+PKGNAME=dict-client-1.10.11nb2
+PKGPATH=wip/dict-client
+
+--------------------------------------------------
+------- args: 'pkg_grep_summary' '-t' 'substring' 'PKGNAME' 'distcc'
+--------------------------------------------------
+------- args: 'pkg_grep_summary' '-t' 'first' 'PKGNAME' 'dict'
+PKGNAME=dict-server-1.10.11nb2
+PKGPATH=wip/dict-server
+
+PKGNAME=dict-client-1.9.15nb2
+PKGPATH=textproc/dict-client
+
+PKGNAME=dict-client-1.10.11nb2
+PKGPATH=wip/dict-client
+
+--------------------------------------------------
+------- args: 'pkg_grep_summary' '-t' 'first' 'PKGNAME' 'dic'
+--------------------------------------------------
+------- args: 'pkg_grep_summary' '-t' 'last' 'PKGBASE' 'client'
+PKGNAME=dict-client-1.9.15nb2
+PKGPATH=textproc/dict-client
+
+PKGNAME=pkg_online-client-0.5.0
+PKGPATH=wip/pkg_online-client
+
+PKGNAME=dict-client-1.10.11nb2
+PKGPATH=wip/dict-client
+
+--------------------------------------------------
+------- args: 'pkg_grep_summary' '-t' 'last' 'PKGBASE' 'lient'
+--------------------------------------------------
+------- args: 'pkg_grep_summary' '-t' 'exact' 'PKGBASE' 'dictem'
+PKGPATH=textproc/dictem
+PKGNAME=dictem-0.82
+
+--------------------------------------------------
+------- args: 'pkg_grep_summary' '-t' 'exact' 'PKGBASE' 'dict'
+--------------------------------------------------
+------- args: 'pkg_grep_summary' '-t' 'prefix' 'PKGBASE' 'awk'
+PKGNAME=awk-pkgsrc-dewey-0.5.6
+PKGPATH=wip/awk-pkgsrc-dewey
+
+--------------------------------------------------
+------- args: 'pkg_grep_summary' '-t' 'prefix' 'PKGBASE' 'ruby'
+--------------------------------------------------
+------- args: 'pkg_grep_summary' '-t' 'suffix' 'PKGBASE' 'ldap'
+PKGNAME=ap22-vhost-ldap-1.2.0nb1
+PKGPATH=www/ap22-vhost-ldap
+
+PKGNAME=ap2-vhost-ldap-1.2.0nb1
+PKGPATH=www/ap2-vhost-ldap:PKG_APACHE=apache2
+
+--------------------------------------------------
+------- args: 'pkg_grep_summary' '-t' 'suffix' 'PKGBASE' 'nis'
+--------------------------------------------------
+------- args: 'pkg_grep_summary' '-t' 'word' 'PKGBASE' 'dict'
+PKGNAME=dict-server-1.10.11nb2
+PKGPATH=wip/dict-server
+
+PKGNAME=dict-client-1.9.15nb2
+PKGPATH=textproc/dict-client
+
+PKGNAME=dict-client-1.10.11nb2
+PKGPATH=wip/dict-client
+
+--------------------------------------------------
+------- args: 'pkg_grep_summary' '-t' 'word' 'PKGBASE' 'dic'
+--------------------------------------------------
+------- args: 'pkg_grep_summary' '-t' 'word' 'PKGBASE' 'ldap'
+PKGNAME=ap22-vhost-ldap-1.2.0nb1
+PKGPATH=www/ap22-vhost-ldap
+
+PKGNAME=ap2-vhost-ldap-1.2.0nb1
+PKGPATH=www/ap2-vhost-ldap:PKG_APACHE=apache2
+
+--------------------------------------------------
+------- args: 'pkg_grep_summary' '-t' 'word' 'PKGBASE' 'dap'
+--------------------------------------------------
+------- args: 'pkg_grep_summary' '-t' 'word' 'PKGBASE' 'nis'
+--------------------------------------------------
+------- args: 'pkg_grep_summary' '-t' 'word' 'PKGBASE' 'dictem'
+PKGPATH=textproc/dictem
+PKGNAME=dictem-0.82
+
+--------------------------------------------------
 ------- pkg_cmp_summary #1.1
 - ap2-vhost-ldap 1.2.0nb1
 - ap22-vhost-ldap 1.2.0nb1

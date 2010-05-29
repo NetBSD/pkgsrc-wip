@@ -1,9 +1,49 @@
-
+#use "has_prefix.awk"
+#use "has_suffix.awk"
 #use "psu_funcs.awk"
+
+#env "LC_ALL=C"
 
 BEGIN {
 	grep_summary__skip = -1 # -1 - unknown, 0 - false, 1 - true
 	count              = 0
+}
+
+function match_first_word (s, word){
+	if (s == word)
+		return 1
+	else if (!has_prefix(s, word))
+		return 0
+	else{
+		return substr(s, length(word)+1, 1) ~ /^[^A-Za-z0-9]$/
+	}
+}
+
+function match_last_word (s, word){
+	if (s == word)
+		return 1
+	else if (!has_suffix(s, word))
+		return 0
+	else
+		return substr(s, length(s)-length(word), 1) ~ /^[^A-Za-z0-9]$/
+}
+
+function match_word (s, word,                  idx){
+	if (s == word)
+		return 1
+
+	idx=index(s, word)
+	if (!idx)
+		return 0
+
+	if (idx > 1 && substr(s, idx-1, 1) ~ /[A-Za-z0-9]$/)
+		return 0
+
+	idx += length(word)
+	if (idx <= length(s) && substr(s, idx, 1) ~ /[A-Za-z0-9]$/)
+		return 0
+
+	return 1
 }
 
 function update_skip (){
