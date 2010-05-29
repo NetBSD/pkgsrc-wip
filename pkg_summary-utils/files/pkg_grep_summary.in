@@ -93,7 +93,7 @@ while test $# -ne 0; do
 	    shift
 	    shift;;
 	-T)
-	    echo 'exact prefix suffix substring word first last re strfile awk'
+	    echo 'exact prefix suffix substring word first last re strfile awk empty'
 	    exit 0;;
 	--)
 	    shift
@@ -131,6 +131,8 @@ if test -n "$strategy"; then
 	    strings_fn="$string";;
 	awk)
 	    condition="$string";;
+	empty)
+	    condition='fvalue == ""';;
 	*)
 	    echo "Unknown search strategy: $strategy" 1>&2
 	    exit 1;;

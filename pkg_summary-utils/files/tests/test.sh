@@ -62,6 +62,8 @@ runtest pkg_grep_summary COMMENT \
     grep -E 'PKGNAME|---'
 runtest pkg_grep_summary -e EXFIELD < src_summary.txt | \
     grep -E 'PKGNAME|---'
+runtest pkg_grep_summary -t empty EXFIELD '' < src_summary.txt | \
+    grep -E 'PKGNAME|---'
 runtest pkg_grep_summary -m MAINTAINER 'cheusov|vle@gmx.net' < src_summary.txt |
     grep -E 'PKGNAME|PKGPATH|^$|MAINTAINER|COMMENT'
 
