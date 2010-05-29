@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.5 2010/04/20 12:04:43 obache Exp $
+@comment $NetBSD: PLIST,v 1.6 2010/05/29 06:43:00 obache Exp $
 bin/milter-manager-log-analyzer
 bin/milter-performance-check
 bin/milter-test-client
+bin/milter-test-client-libmilter
 bin/milter-test-server
 include/milter-manager/libmilter/libmilter/mfapi.h
 include/milter-manager/libmilter/libmilter/mfdef.h
@@ -116,6 +117,7 @@ man/man1/milter-performance-check.1
 man/man1/milter-test-client.1
 man/man1/milter-test-server.1
 sbin/milter-manager
+share/doc/milter-manager/available-milters.html
 share/doc/milter-manager/commands.html
 share/doc/milter-manager/configuration.html
 share/doc/milter-manager/home.png
@@ -135,6 +137,7 @@ share/doc/milter-manager/install.html
 share/doc/milter-manager/introduction.html
 share/doc/milter-manager/ja/api-index-deprecated.xml
 share/doc/milter-manager/ja/api-index-full.xml
+share/doc/milter-manager/ja/available-milters.html
 share/doc/milter-manager/ja/client.xml
 share/doc/milter-manager/ja/commands.html
 share/doc/milter-manager/ja/configuration.html
