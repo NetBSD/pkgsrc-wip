@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkg_grep_summary.1,v 1.15 2010/05/29 18:23:02 cheusov Exp $
+.\"	$NetBSD: pkg_grep_summary.1,v 1.16 2010/05/29 19:24:56 cheusov Exp $
 .\"
 .\" Copyright (c) 2008 by Aleksey Cheusov (vle@gmx.net)
 .\" Absolutely no warranty.
@@ -18,19 +18,19 @@
 .SH NAME
 pkg_grep_summary \- tool for grepping pkgsrc summary file
 .SH SYNOPSIS
-.B "pkg_grep_summary -h"
+.BI "pkg_grep_summary -h"
 .br
-.BI pkg_grep_summary " field awk_expression"
+.BI "pkg_grep_summary [-i]" " field awk_expression"
 .br
-.BI "pkg_grep_summary -e" " field"
+.BI "pkg_grep_summary [-i] -e " field
 .br
-.BI "pkg_grep_summary -m" " field regexp"
+.BI "pkg_grep_summary [-i] -m" " field regexp"
 .br
-.BI "pkg_grep_summary -s" " field string"
+.BI "pkg_grep_summary [-i] -s" " field string"
 .br
-.BI "pkg_grep_summary -S" " field filename"
+.BI "pkg_grep_summary [-i] -S" " field filename"
 .br
-.BI "pkg_grep_summary -t" " strategy field str_or_regexp"
+.BI "pkg_grep_summary [-i] -t" " strategy field str_or_regexp"
 .br
 .SH DESCRIPTION
 .B pkg_grep_summary
@@ -39,27 +39,34 @@ outputs those matching the specified condition.
 Format of summary is described in
 .BR pkg_summary(5) .
 Fields are PKGPATH, PKGNAME, DEPENDS, MAINTAINER
-and so on, actually anything present in input.
-In addition to fields really present in input two artificial fields
+and so on, actually anything separated by 
+.B =
+sign.
+In addition to fields really present on input two artificial fields
 are supported: PKGBASE and PKGPATHe. PKGBASE
 is a PKGNAME with package version stripped, PKGPATHe (enriched PKGPATH)
 is PKGPATH with ASSIGNMENTS
 (if present) separated by colon symbol.
-One may think that
 .B pkg_grep_summary
 is a search tool somewhat similar to
 .BR grep(1) ", " PKGSRCDIR/pkglocate ", " pkgfind
-etc. but it is different. Unlike 
+and others. Unlike 
 .B grep(1)
-.B pkg_grep_summary
-uses a summary for one package instead of line of text as a basic element.
-Unlike
-.B pkgfind
-it doesn't scan pkgsrc source tree and therefore works drammatically faster.
+it uses summary information about one package instead of line of text
+as an indivisible block of text.  Unlike
+.BR pkgfind " and " PKGSRCDIR/pkglocate
+it doesn't scan pkgsrc source tree.
+For scanning pkgsrc source tree you may use
+.BR pkg_src_summary(1) " or " pkg_info(1) .
 .SH OPTIONS
 .TP
 .B "-h|--help"
 display help message
+.TP
+.B "-i"
+ignore case. Before matching
+.I field
+is converted to lower case.
 .TP
 .BI "-e" " field"
 outputs summaries in which
@@ -107,15 +114,15 @@ display all search strategies available for
 .B -t
 and exits.
 .SH NOTES
-.IR "-t exact <field> <string>" " and " "-s <field> <string>" " are equivalent."
+.IR "-t exact <field> <string>" " and " "-s <field> <string>" " are equivalents"
 .br
-.IR "-t re <field> <regexp>" " and " "-m <field> <regexp>" " are equivalent."
+.IR "-t re <field> <regexp>" " and " "-m <field> <regexp>" " are equivalents"
 .br
-.IR "-t strfile <field> <filename>" " and " "-S <field> <filename>" " are equivalent."
+.IR "-t strfile <field> <filename>" " and " "-S <field> <filename>" " are equivalents"
 .br
-.IR "-t awk <field> <awk_expr>" " and " "<field> <awk_expr>" " are equivalent."
+.IR "-t awk <field> <awk_expr>" " and " "<field> <awk_expr>" " are equivalents"
 .br
-.IR "-t empty <field> ''" " and " "-e <field>" " are equivalent."
+.IR "-t empty <field> ''" " and " "-e <field>" " are equivalents"
 .SH EXAMPLES
 .VB
 pkg_grep_summary -s PKGPATH 'devel/libjudy'
@@ -147,5 +154,6 @@ pkg_grep_summary -t word COMMENT DNS \\
 .BR pkg_summary-utils(7),
 .BR pkg_summary(5)
 .BR pkg_src_summary(1)
+.BR pkg_info(1)
 .SH AUTHOR
 Aleksey Cheusov <vle@gmx.net>

@@ -47,6 +47,8 @@ function match_word (s, word,                  idx){
 }
 
 function update_skip (){
+	if (ic)
+		fvalue = tolower(fvalue)
 	grep_summary__skip = grep_summary__condition()
 	if (grep_summary__skip == 0 || grep_summary__skip == 1){
 		grep_summary__skip = !grep_summary__skip

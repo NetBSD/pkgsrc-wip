@@ -130,6 +130,9 @@ runtest pkg_grep_summary -t word PKGBASE dictem < src_summary.txt |
 runtest pkg_grep_summary -t re PKGBASE 'd.*t' < src_summary.txt |
     grep_PKGNAME_n_PKGBASE_only
 
+runtest pkg_grep_summary -i -s MAINTAINER 'rillig@netbsd.org' < src_summary.txt |
+    grep_PKGNAME_n_PKGBASE_only
+
 runtest pkg_grep_summary -T
 
 # pkg_cmp_summary

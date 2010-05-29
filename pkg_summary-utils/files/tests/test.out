@@ -538,6 +538,11 @@ PKGNAME=dict-client-1.10.11nb2
 PKGPATH=wip/dict-client
 
 --------------------------------------------------
+------- args: 'pkg_grep_summary' '-i' '-s' 'MAINTAINER' 'rillig@netbsd.org'
+PKGNAME=checkperms-1.10
+PKGPATH=sysutils/checkperms
+
+--------------------------------------------------
 ------- args: 'pkg_grep_summary' '-T'
 exact prefix suffix substring word first last re strfile awk empty
 --------------------------------------------------

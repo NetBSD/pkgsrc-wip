@@ -33,10 +33,10 @@ the specified condition, summaries are read from stdin.
 
 USAGE: pkg_grep_summary -h
        pkg_grep_summary -e <field>
-       pkg_grep_summary -m <field> <regexp>
-       pkg_grep_summary -s <field> <string>
-       pkg_grep_summary -S <field> <file>
-       pkg_grep_summary -t <strategy> <field> <str_or_regexp>
+       pkg_grep_summary [-i] -m <field> <regexp>
+       pkg_grep_summary [-i] -s <field> <string>
+       pkg_grep_summary [-i] -S <field> <file>
+       pkg_grep_summary [-i] -t <strategy> <field> <str_or_regexp>
        pkg_grep_summary -T
        pkg_grep_summary <field> <awk_condition>
   <field>         - PKGBASE, PKGNAME, PKGPATH, DEPENDS etc.
@@ -58,6 +58,7 @@ OPTIONS:
   -t          matches <field> using search strategy <strategy>
               and condition specified in <str_or_regexp>
   -T          displays all search strategies available for -t and exits
+  -i          ignore case
 EOF
 }
 
@@ -98,6 +99,8 @@ while test $# -ne 0; do
 	-T)
 	    echo 'exact prefix suffix substring word first last re strfile awk empty'
 	    exit 0;;
+	-i)
+	    ic=1;;
 	--)
 	    shift
 	    break;;
@@ -153,7 +156,7 @@ case "$strategy" in
 	exit 1;;
 esac
 
-runawk -v strings_fn="$strings_fn" -e '
+runawk -v strings_fn="$strings_fn" -v ic="$ic" -e '
 #use "pkg_grep_summary.awk"
 #use "xgetline.awk"
 
