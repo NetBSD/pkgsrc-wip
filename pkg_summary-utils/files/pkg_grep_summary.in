@@ -67,22 +67,25 @@ while test $# -ne 0; do
 	    usage
 	    exit 0;;
 	-e|--empty)
-	    empty=1
+	    strategy=empty
 	    field=$2
 	    shift;;
 	-s)
+	    strategy=exact
 	    field=$2
 	    string=$3
 	    shift
 	    shift;;
 	-S)
+	    strategy=strfile
 	    field=$2
-	    strings_fn=$3
+	    string=$3
 	    shift
 	    shift;;
 	-m)
+	    strategy=re
 	    field=$2
-	    regex=$3
+	    string=$3
 	    shift
 	    shift;;
 	-t)
@@ -107,56 +110,48 @@ while test $# -ne 0; do
     shift
 done
 
-if test -n "$strategy"; then
-    case "$strategy" in
-	exact)
-	    condition="fvalue == \"$string\"";;
-	prefix)
-	    condition="has_prefix(fvalue, \"$string\")";;
-	suffix)
-	    condition="has_suffix(fvalue, \"$string\")";;
-	substring)
-	    condition="index(fvalue, \"$string\")";;
-	first)
-	    condition="match_first_word(fvalue, \"$string\")";;
-	last)
-	    condition="match_last_word(fvalue, \"$string\")";;
-	word)
-	    condition="match_word(fvalue, \"$string\")";;
-	re)
-	    re=`echo $string | sed 's|/|\\\/|g'`
-	    condition="fvalue ~ /$re/";;
-	strfile)
-	    condition="fvalue in strings"
-	    strings_fn="$string";;
-	awk)
-	    condition="$string";;
-	empty)
-	    condition='fvalue == ""';;
-	*)
-	    echo "Unknown search strategy: $strategy" 1>&2
-	    exit 1;;
-    esac
-elif test -n "$empty"; then
-    condition='fvalue == ""'
-elif test -n "$string"; then
-    condition="fvalue == \"$string\""
-elif test -n "$strings_fn"; then
-    condition="fvalue in strings"
-elif test -n "$regex"; then
-    re=`echo $regex | sed 's|/|\\\/|g'`
-    condition="fvalue ~ /$re/"
-elif test $# -eq 2; then
+if test $# -eq 2 -a -z "$strategy"; then
+    strategy=awk
     field="$1"
-    condition="$2"
+    string="$2"
     shift
     shift
-fi
-
-if test -z "$condition" -o $# -ne 0; then
+elif test $# -eq 0; then
+    true
+else
     usage
     exit 1
 fi
+
+case "$strategy" in
+    exact)
+	condition="fvalue == \"$string\"";;
+    prefix)
+	condition="has_prefix(fvalue, \"$string\")";;
+    suffix)
+	condition="has_suffix(fvalue, \"$string\")";;
+    substring)
+	condition="index(fvalue, \"$string\")";;
+    first)
+	condition="match_first_word(fvalue, \"$string\")";;
+    last)
+	condition="match_last_word(fvalue, \"$string\")";;
+    word)
+	condition="match_word(fvalue, \"$string\")";;
+    re)
+	re=`echo $string | sed 's|/|\\\/|g'`
+	condition="fvalue ~ /$re/";;
+    strfile)
+	condition="fvalue in strings"
+	strings_fn="$string";;
+    awk)
+	condition="$string";;
+    empty)
+	condition='fvalue == ""';;
+    *)
+	echo "Unknown search strategy: $strategy" 1>&2
+	exit 1;;
+esac
 
 runawk -v strings_fn="$strings_fn" -e '
 #use "pkg_grep_summary.awk"
