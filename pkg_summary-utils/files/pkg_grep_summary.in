@@ -116,6 +116,9 @@ if test -n "$strategy"; then
 	    condition="match_last_word(fvalue, \"$string\")";;
 	word)
 	    condition="match_word(fvalue, \"$string\")";;
+	re)
+	    re=`echo $string | sed 's|/|\\\/|g'`
+	    condition="fvalue ~ /$re/";;
 	*)
 	    echo "Unknown search strategy: $strategy" 1>&2
 	    exit 1;;

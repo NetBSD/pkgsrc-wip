@@ -410,6 +410,23 @@ PKGPATH=textproc/dictem
 PKGNAME=dictem-0.82
 
 --------------------------------------------------
+------- args: 'pkg_grep_summary' '-t' 're' 'PKGBASE' 'd.*t'
+PKGNAME=distbb-0.22.0
+PKGPATH=wip/distbb
+
+PKGPATH=textproc/dictem
+PKGNAME=dictem-0.82
+
+PKGNAME=dict-server-1.10.11nb2
+PKGPATH=wip/dict-server
+
+PKGNAME=dict-client-1.9.15nb2
+PKGPATH=textproc/dict-client
+
+PKGNAME=dict-client-1.10.11nb2
+PKGPATH=wip/dict-client
+
+--------------------------------------------------
 ------- pkg_cmp_summary #1.1
 - ap2-vhost-ldap 1.2.0nb1
 - ap22-vhost-ldap 1.2.0nb1
