@@ -1,4 +1,19 @@
 ----------------------------------------------------------------------
+Version 0.40.0, by Aleksey Cheusov, Sun, 30 May 2010 02:36:30 +0300
+
+ pkg_grep_summary:
+  - new option -t that implements the following search strategies:
+    empty (synonym to -e), exact (synonym to -s), prefix, suffix,
+    substring, first, last, word, re (synonym to -m),
+    strfile (synonym to -S) and awk (synonym to non-option mode).
+  - new option -T that displays all available search strategies.
+  - new option -i for ignoring the case while matching
+  - update of manual page
+  - FIXED: Multiline fields don't like my optimization.
+     Disabling optimization for them
+  - minor optimization
+
+----------------------------------------------------------------------
 Version 0.39.0, by Aleksey Cheusov, Mon, 24 May 2010 23:51:13 +0300
 
  pkg_src_summary:

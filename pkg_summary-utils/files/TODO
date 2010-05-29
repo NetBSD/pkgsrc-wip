@@ -17,7 +17,7 @@ existing tools:
 
     pkg_grep_summary:
        - -M <field> <file with patterns>
-       - fix for multiline fields: PLIST, DESCR, DEPENDS, REQUIRES, PROVIDES...
+       - -g <field> <str1 str2 ... strN> (same as -S but without files)
 
     pkg_list_all_pkgs:
 
