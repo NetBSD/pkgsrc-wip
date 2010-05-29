@@ -5,8 +5,15 @@
 #env "LC_ALL=C"
 
 BEGIN {
-	grep_summary__skip = -1 # -1 - unknown, 0 - false, 1 - true
+	matched = -1 # -1 - unknown, 0 - false, 1 - true
 	count              = 0
+
+	multiline ["PLIST"]       = 1
+	multiline ["DESCRIPTION"] = 1
+	multiline ["DEPENDS"]     = 1
+	multiline ["REQUIRES"]    = 1
+	multiline ["PROVIDES"]    = 1
+	multiline ["CONFLICTS"]   = 1
 }
 
 function match_first_word (s, word){
@@ -49,22 +56,22 @@ function match_word (s, word,                  idx){
 function update_skip (){
 	if (ic)
 		fvalue = tolower(fvalue)
-	grep_summary__skip = grep_summary__condition()
-	if (grep_summary__skip == 0 || grep_summary__skip == 1){
-		grep_summary__skip = !grep_summary__skip
-	}
 
-	if (grep_summary__skip == 0){
+	matched = grep_summary__condition()
+
+	if (matched == 1){
 		for (i=0; i < count; ++i){
 			print accu [i]
 		}
 
 		delete accu
 		count = 0
+	}else if (matched == 0 && (fname in multiline)){
+		matched = -1
 	}
 }
 
-grep_summary__skip == 1 && NF > 0 {
+matched == 0 && NF > 0 {
 	next
 }
 
@@ -91,7 +98,7 @@ function check_PKGPATHe (){
 	}
 }
 
-grep_summary__skip == -1 {
+matched == -1 {
 	if (grep_summary__field == "PKGBASE"){
 		if (fname == "PKGNAME"){
 			fname = "PKGBASE"
@@ -117,7 +124,7 @@ grep_summary__skip == -1 {
 	}
 }
 
-grep_summary__skip == 0 && NF > 0 {
+matched == 1 && NF > 0 {
 	print $0
 	next
 }
@@ -126,27 +133,27 @@ grep_summary__skip == 0 && NF > 0 {
 	grep_summary__fields [fname] = fvalue
 }
 
-grep_summary__skip == -1 && NF > 0 {
+matched == -1 && NF > 0 {
 	accu [count++] = $0
 }
 
 NF == 0 {
-	if (grep_summary__skip == -1 && grep_summary__field == "PKGPATHe"){
+	if (matched == -1 && grep_summary__field == "PKGPATHe"){
 		fvalue = pkgpath
 		update_skip()
 		fvalue = ""
 	}
-	if (grep_summary__skip == -1){
+	if (matched == -1){
 		update_skip()
 	}
-	if (grep_summary__skip == 0){
+	if (matched == 1){
 		print ""
 	}
 
 	delete accu
 	delete grep_summary__fields
 	count = 0
-	grep_summary__skip = -1
+	matched = -1
 
 	assigns = pkgpath = ""
 }

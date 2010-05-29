@@ -133,6 +133,13 @@ runtest pkg_grep_summary -t re PKGBASE 'd.*t' < src_summary.txt |
 runtest pkg_grep_summary -i -s MAINTAINER 'rillig@netbsd.org' < src_summary.txt |
     grep_PKGNAME_n_PKGBASE_only
 
+runtest pkg_grep_summary -s PLIST file2 < src_summary10.txt
+runtest pkg_grep_summary -m CONFLICTS package2 < src_summary10.txt
+runtest pkg_grep_summary -m DEPENDS depends2 < src_summary10.txt
+runtest pkg_grep_summary -m PROVIDES provides2 < src_summary10.txt
+runtest pkg_grep_summary -m REQUIRES requires2 < src_summary10.txt
+runtest pkg_grep_summary -m DESCRIPTION descr2 < src_summary10.txt
+
 runtest pkg_grep_summary -T
 
 # pkg_cmp_summary
