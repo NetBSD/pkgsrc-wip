@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/04/15 15:47:14 uccwen Exp $
+# $NetBSD: Makefile,v 1.3 2010/05/29 12:12:36 thomasklausner Exp $
 
 DISTNAME=	moodle-1.9.7
 CATEGORIES=	www
@@ -66,8 +66,8 @@ do-install:
 	  ${DESTDIR}${PREFIX}/${EGDIR}/moodle.conf
 
 post-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}/${MOODLEDATADIR}
-	${CHOWN} ${APACHE_USER}:${APACHE_GROUP} ${MOODLEDATADIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${MOODLEDATADIR}
+	${CHOWN} ${APACHE_USER}:${APACHE_GROUP} ${DESTDIR}${MOODLEDATADIR}
 
 .include "../../lang/php/phpversion.mk"
 .include "../../mk/apache.mk"
