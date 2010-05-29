@@ -123,6 +123,8 @@ runtest pkg_grep_summary -t word PKGBASE dictem < src_summary.txt |
 runtest pkg_grep_summary -t re PKGBASE 'd.*t' < src_summary.txt |
     grep_PKGNAME_n_PKGBASE_only
 
+runtest pkg_grep_summary -T
+
 # pkg_cmp_summary
 echo '--------------------------------------------------'
 echo '------- pkg_cmp_summary #1.1'

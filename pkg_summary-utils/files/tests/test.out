@@ -427,6 +427,9 @@ PKGNAME=dict-client-1.10.11nb2
 PKGPATH=wip/dict-client
 
 --------------------------------------------------
+------- args: 'pkg_grep_summary' '-T'
+exact prefix suffix substring word first last re
+--------------------------------------------------
 ------- pkg_cmp_summary #1.1
 - ap2-vhost-ldap 1.2.0nb1
 - ap22-vhost-ldap 1.2.0nb1

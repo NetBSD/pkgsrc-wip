@@ -36,7 +36,8 @@ USAGE: pkg_grep_summary -h
        pkg_grep_summary -m <field> <regexp>
        pkg_grep_summary -s <field> <string>
        pkg_grep_summary -S <field> <file>
-       pkg_grep_summary -t <strategy> <field> <string>
+       pkg_grep_summary -t <strategy> <field> <str_or_regexp>
+       pkg_grep_summary -T
        pkg_grep_summary <field> <awk_condition>
   <field>         - PKGBASE, PKGNAME, PKGPATH, DEPENDS etc.
   <awk_condition> - Boolean expression written in AWK language
@@ -54,6 +55,9 @@ OPTIONS:
   -s          matches <field> equal to <string>
   -S          matches <field> equal to any string in <file>,
               one string per line
+  -t          matches <field> using search strategy <strategy>
+              and condition specified in <str_or_regexp>
+  -T          displays all search strategies available for -t and exits
 EOF
 }
 
@@ -88,6 +92,9 @@ while test $# -ne 0; do
 	    shift
 	    shift
 	    shift;;
+	-T)
+	    echo 'exact prefix suffix substring word first last re'
+	    exit 0;;
 	--)
 	    shift
 	    break;;

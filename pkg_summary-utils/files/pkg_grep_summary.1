@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkg_grep_summary.1,v 1.12 2010/05/29 15:20:56 cheusov Exp $
+.\"	$NetBSD: pkg_grep_summary.1,v 1.13 2010/05/29 16:45:14 cheusov Exp $
 .\"
 .\" Copyright (c) 2008 by Aleksey Cheusov (vle@gmx.net)
 .\" Absolutely no warranty.
@@ -82,6 +82,32 @@ reads strings from
 one string per line, and outputs summary given on stdin if
 .I "field"
 is equal to one of read strings.
+.TP
+.BI "-t" " strategy field str_or_regexp"
+outputs summary if
+.I str_or_regexp
+matches
+.I field
+according to search strategy
+.IR strategy .
+Available search strategies are:
+.IR exact ", " prefix ", " suffix ", " substring ", " word ", "
+.IR first ", " last ", " re .
+Search strategy 
+.I re
+is for matching using regexp (ERE),
+.IR first ", " last " and " word
+strategies are for matching first, last or any separate word within 
+.IR field .
+.TP
+.B "-T"
+display all search strategies available for
+.B -t
+and exits.
+.SH NOTES
+.IR "-S exact <field> <string>" " and " "-s <field> <string>" " are equivalent."
+.br
+.IR "-S re <field> <regexp>" " and " "-m <field> <regexp>" " are equivalent."
 .SH EXAMPLES
 .VB
 pkg_grep_summary -s PKGPATH 'devel/libjudy'
@@ -105,6 +131,9 @@ pkg_grep_summary COMMENT 'toupper(fvalue) ~ /DNS/' \\
 pkg_info -QPKGPATH -a > /tmp/wanted_pkgpaths.txt
 pkg_grep_summary -S PKGPATH /tmp/wanted_pkgpaths.txt \\
       < /usr/pkgsrc/packages/pkg_summary.txt
+
+pkg_grep_summary -t word COMMENT DNS \\
+      < /usr/pkgsrc/pkg_src_summary.txt
 .VE
 .SH SEE ALSO
 .BR pkg_summary-utils(7),
