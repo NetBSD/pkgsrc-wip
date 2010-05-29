@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/03/21 15:19:15 uccwen Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/05/29 12:37:17 thomasklausner Exp $
+share/examples/moodle/moodle.conf
 share/moodle/COPYING.txt
 share/moodle/README.txt
 share/moodle/admin/auth.php
