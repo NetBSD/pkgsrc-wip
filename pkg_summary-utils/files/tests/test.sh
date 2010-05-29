@@ -45,12 +45,18 @@ runtest (){
     "$prog" "$@" 2>&1
 }
 
+grep_PKGNAME_n_PKGBASE_only (){
+    grep -E '^(PKGNAME|PKGPATH)=|^$|^-' "$@"
+}
+
 # pkg_grep_summary
 echo '--------------------------------------------------'
 echo '------- pkg_grep_summary #0'
 runtest pkg_grep_summary -s PKGBASE distbb < src_summary.txt
 runtest pkg_grep_summary -m PKGBASE '^dict' < src_summary.txt
 runtest pkg_grep_summary PKGNAME 'fvalue ~ /^d/' < src_summary.txt
+runtest pkg_grep_summary -t awk PKGNAME 'fvalue ~ /^d/' < src_summary.txt |
+    grep_PKGNAME_n_PKGBASE_only
 runtest pkg_grep_summary COMMENT \
     'tolower(fvalue) ~ /dictionary.*client/' < src_summary.txt | \
     grep -E 'PKGNAME|---'
@@ -72,10 +78,9 @@ runtest pkg_grep_summary -s PKGPATH www/ap2-vhost-ldap < src_summary.txt
 runtest pkg_grep_summary -S PKGPATH  pkgs.txt < src_summary.txt
 runtest pkg_grep_summary -S PKGPATHe pkgs.txt < src_summary.txt
 
+runtest pkg_grep_summary -t strfile PKGPATH  pkgs.txt < src_summary.txt
+runtest pkg_grep_summary -t strfile PKGPATHe pkgs.txt < src_summary.txt
 
-grep_PKGNAME_n_PKGBASE_only (){
-    grep -E '^(PKGNAME|PKGPATH)=|^$|^-' "$@"
-}
 
 runtest pkg_grep_summary -t substring PKGNAME dict < src_summary.txt |
     grep_PKGNAME_n_PKGBASE_only
