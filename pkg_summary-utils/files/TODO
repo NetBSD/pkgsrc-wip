@@ -17,8 +17,6 @@ existing tools:
 
     pkg_grep_summary:
        - -M <field> <file with patterns>
-       - -t <search_strategy> FIELD STRING_OR_RE
-         search_strategy: exact, prefix, suffix, word, re, substring ...
        - fix for multiline fields: PLIST, DESCR, DEPENDS, REQUIRES, PROVIDES...
 
     pkg_list_all_pkgs:

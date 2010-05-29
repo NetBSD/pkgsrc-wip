@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkg_grep_summary.1,v 1.16 2010/05/29 19:24:56 cheusov Exp $
+.\"	$NetBSD: pkg_grep_summary.1,v 1.17 2010/05/29 20:34:31 cheusov Exp $
 .\"
 .\" Copyright (c) 2008 by Aleksey Cheusov (vle@gmx.net)
 .\" Absolutely no warranty.
@@ -30,7 +30,7 @@ pkg_grep_summary \- tool for grepping pkgsrc summary file
 .br
 .BI "pkg_grep_summary [-i] -S" " field filename"
 .br
-.BI "pkg_grep_summary [-i] -t" " strategy field str_or_regexp"
+.BI "pkg_grep_summary [-i] -t" " strategy field condition"
 .br
 .SH DESCRIPTION
 .B pkg_grep_summary
@@ -57,7 +57,7 @@ as an indivisible block of text.  Unlike
 .BR pkgfind " and " PKGSRCDIR/pkglocate
 it doesn't scan pkgsrc source tree.
 For scanning pkgsrc source tree you may use
-.BR pkg_src_summary(1) " or " pkg_info(1) .
+.BR pkg_src_summary(1) " or " pkg_micro_src_summary(1) .
 .SH OPTIONS
 .TP
 .B "-h|--help"
@@ -76,7 +76,7 @@ is either empty or absent
 .BI "-m" " field regexp"
 outputs summary if
 .I "regexp"
-matches the
+matches
 .I "field"
 .TP
 .BI "-s" " field string"
@@ -92,9 +92,9 @@ one string per line, and outputs summary given on stdin if
 .I "field"
 is equal to one of read strings.
 .TP
-.BI "-t" " strategy field str_or_regexp"
+.BI "-t" " strategy field condition"
 outputs summary if
-.I str_or_regexp
+.I condition
 matches
 .I field
 according to search strategy
@@ -154,6 +154,7 @@ pkg_grep_summary -t word COMMENT DNS \\
 .BR pkg_summary-utils(7),
 .BR pkg_summary(5)
 .BR pkg_src_summary(1)
+.BR pkg_micro_src_summary(1)
 .BR pkg_info(1)
 .SH AUTHOR
 Aleksey Cheusov <vle@gmx.net>
