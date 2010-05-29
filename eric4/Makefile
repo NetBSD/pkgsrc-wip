@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.5 2010/04/10 23:59:04 helgoman Exp $
+# $NetBSD: Makefile,v 1.6 2010/05/29 20:27:15 helgoman Exp $
 #
 
-VERS=			4.4.3
+DATE=			20100523
+VERS=			4.5-snapshot-${DATE}
 DISTNAME=		eric4-${VERS}
 PKGREVISION=	1
 CATEGORIES=		devel
-MASTER_SITES=	http://downloads.sourceforge.net/project/eric-ide/eric4/stable/${VERS}/
+MASTER_SITES=	http://downloads.sourceforge.net/project/eric-ide/eric4/unstable/${DATE}/
 
 MAINTAINER=		helgoman@users.sourceforge.net
 HOMEPAGE=		http://eric-ide.python-projects.org/index.html
-COMMENT=		Python - IDE
+COMMENT=		Snapshot release of the Python and Ruby - IDE 
 LICENSE=		gnu-gpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir

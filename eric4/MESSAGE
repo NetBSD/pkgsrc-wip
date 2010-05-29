@@ -1,15 +1,15 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.3 2010/04/10 23:59:04 helgoman Exp $
+$NetBSD: MESSAGE,v 1.4 2010/05/29 20:27:15 helgoman Exp $
 
 #########################################################################
 #                                                                       #
 #  If you like to use i18n-support for Eric4 you can simply             #
 #  download the necessary files depending on your needs from:           #
 #                                                                       #
-#         http://sourceforge.net/projects/eric-ide/files/eric4/stable   #
+#         http://sourceforge.net/projects/eric-ide/files/eric4/unstable #
 #                                                                       #
-#         e.g. eric4-i18n-de-4.4.3.tar.gz for GERMAN language           #
-#                                                                       #
+#         e.g. eric4-i18n-de-4.5-snapshot-20100523.tar.gz               #
+#         for GERMAN language                                           #
 #                                                                       #
 #  Unpack it as normal user, change into created folder and type:       #
 #                                                                       #

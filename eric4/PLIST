@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2010/04/10 23:59:04 helgoman Exp $
+@comment $NetBSD: PLIST,v 1.3 2010/05/29 20:27:15 helgoman Exp $
 bin/eric4
 bin/eric4-api
 bin/eric4-compare
@@ -47,6 +47,7 @@ ${PYSITELIB}/eric4/DTDs/Session-4.0.dtd
 ${PYSITELIB}/eric4/DTDs/Session-4.1.dtd
 ${PYSITELIB}/eric4/DTDs/Session-4.2.dtd
 ${PYSITELIB}/eric4/DTDs/Session-4.3.dtd
+${PYSITELIB}/eric4/DTDs/Session-4.4.dtd
 ${PYSITELIB}/eric4/DTDs/Shortcuts-3.5.dtd
 ${PYSITELIB}/eric4/DTDs/Shortcuts-3.6.dtd
 ${PYSITELIB}/eric4/DTDs/Tasks-3.7.dtd
@@ -361,6 +362,7 @@ ${PYSITELIB}/eric4/Documentation/Source/eric4.E4Gui.E4TreeSortFilterProxyModel.h
 ${PYSITELIB}/eric4/Documentation/Source/eric4.E4Gui.E4TreeView.html
 ${PYSITELIB}/eric4/Documentation/Source/eric4.E4Network.E4NetworkHeaderDetailsDialog.html
 ${PYSITELIB}/eric4/Documentation/Source/eric4.E4Network.E4NetworkMonitor.html
+${PYSITELIB}/eric4/Documentation/Source/eric4.E4Network.E4NetworkProxyFactory.html
 ${PYSITELIB}/eric4/Documentation/Source/eric4.E4XML.Config.html
 ${PYSITELIB}/eric4/Documentation/Source/eric4.E4XML.DebuggerPropertiesHandler.html
 ${PYSITELIB}/eric4/Documentation/Source/eric4.E4XML.DebuggerPropertiesWriter.html
@@ -959,6 +961,8 @@ ${PYSITELIB}/eric4/E4Network/E4NetworkHeaderDetailsDialog.py
 ${PYSITELIB}/eric4/E4Network/E4NetworkHeaderDetailsDialog.pyc
 ${PYSITELIB}/eric4/E4Network/E4NetworkMonitor.py
 ${PYSITELIB}/eric4/E4Network/E4NetworkMonitor.pyc
+${PYSITELIB}/eric4/E4Network/E4NetworkProxyFactory.py
+${PYSITELIB}/eric4/E4Network/E4NetworkProxyFactory.pyc
 ${PYSITELIB}/eric4/E4Network/Ui_E4NetworkHeaderDetailsDialog.py
 ${PYSITELIB}/eric4/E4Network/Ui_E4NetworkHeaderDetailsDialog.pyc
 ${PYSITELIB}/eric4/E4Network/Ui_E4NetworkMonitor.py
@@ -2850,6 +2854,7 @@ ${PYSITELIB}/eric4/icons/default/stepOver.png
 ${PYSITELIB}/eric4/icons/default/stepQuit.png
 ${PYSITELIB}/eric4/icons/default/stopLoading.png
 ${PYSITELIB}/eric4/icons/default/stopScript.png
+${PYSITELIB}/eric4/icons/default/symlink.png
 ${PYSITELIB}/eric4/icons/default/syncToc.png
 ${PYSITELIB}/eric4/icons/default/syntaxError.png
 ${PYSITELIB}/eric4/icons/default/syntaxErrorGoto.png
