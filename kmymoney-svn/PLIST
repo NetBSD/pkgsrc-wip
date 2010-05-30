@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2010/01/31 21:38:34 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.3 2010/05/30 08:58:52 thomasklausner Exp $
 bin/kmymoney
 include/kmymoney/importinterface.h
 include/kmymoney/imymoneyprocessingcalendar.h
@@ -85,13 +85,16 @@ lib/kde4/kmm_printcheck.so
 lib/kde4/kmm_reconciliationreport.so
 lib/libkmm_kdchart.so
 lib/libkmm_kdchart.so.4
-lib/libkmm_kdchart.so.4.3.0
+lib/libkmm_kdchart.so.4.4.0
 lib/libkmm_mymoney.so
 lib/libkmm_mymoney.so.4
-lib/libkmm_mymoney.so.4.3.0
+lib/libkmm_mymoney.so.4.4.0
 lib/libkmm_plugin.so
 lib/libkmm_plugin.so.4
-lib/libkmm_plugin.so.4.3.0
+lib/libkmm_plugin.so.4.4.0
+lib/libkmm_widgets.so
+lib/libkmm_widgets.so.4
+lib/libkmm_widgets.so.4.4.0
 share/applications/kde4/kmymoney.desktop
 share/icons/locolor/16x16/apps/kmymoney.png
 share/icons/locolor/32x32/apps/kmymoney.png
@@ -424,7 +427,6 @@ share/kde/apps/kmymoney/icons/oxygen/scalable/apps/online-banking.svgz
 share/kde/apps/kmymoney/icons/oxygen/scalable/apps/transaction-report.svgz
 share/kde/apps/kmymoney/icons/oxygen/scalable/apps/transaction.svgz
 share/kde/apps/kmymoney/kmymoneyui.rc
-share/kde/apps/kmymoney/misc/financequote.pl
 share/kde/apps/kmymoney/misc/financequote.pl
 share/kde/apps/kmymoney/pics/l10n/de/.directory
 share/kde/apps/kmymoney/pics/l10n/de/startlogo.png
