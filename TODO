@@ -37,6 +37,7 @@ Suggested package updates
 	o gnome-bluetooth-2.30.0
 	o gnunet-0.8.1b
 	o gnupod-0.99.8
+	o gobject-introspection-0.6.12
 	o grsync-1.1.1
 	o grub2-1.98
 	o gtkaml-0.2.10
@@ -69,7 +70,7 @@ Suggested package updates
 	o llvm-2.7
 	o man-1.6f
 	o mcabber-0.10.0
-	o meta-tracker-0.8.7
+	o meta-tracker-0.8.9
 	o mixxx-1.7.0
 	o mpgedit-0.73dev2
 	o mupen64-0.5
