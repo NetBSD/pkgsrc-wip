@@ -1,0 +1,91 @@
+#!@SH@
+#-*-mode:  sh -*-
+
+# Copyright (c) 2010 Aleksey Cheusov <vle@gmx.net>
+#
+# Permission is hereby granted, free of charge, to any person obtaining
+# a copy of this software and associated documentation files (the
+# "Software"), to deal in the Software without restriction, including
+# without limitation the rights to use, copy, modify, merge, publish,
+# distribute, sublicense, and/or sell copies of the Software, and to
+# permit persons to whom the Software is furnished to do so, subject to
+# the following conditions:
+#
+# The above copyright notice and this permission notice shall be
+# included in all copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+# EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+# NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+# LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+# OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+# WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+set -e
+
+export LC_ALL=C
+
+LIBEXECDIR=${LIBEXECDIR-@@libexecdir@@}
+
+usage (){
+    cat 1>&2 <<EOF
+pkg_bin_summary - outputs summary information
+                  about binary or installed packages
+USAGE: pkg_bin_summary -h
+       pkg_bin_summary [OPTIONS] [[--] [PKG_INFO_ARGS]]
+OPTIONS:
+  -h|--help         display this help
+  -a                add to the output specified fields
+                    separated by space or comma
+  -f                output only specified fields
+                    separated by space or comma
+  -r                remove from output specified fields
+                    output only specified fields
+PKG_INFO_ARGS:
+  options of pkg_info(1), defaults to -a.
+  In addition to these options -X is always applied to pkg_info
+  as well as -B if needed. "--" is required
+  if PKG_INFO_ARGS begins with options.
+Samples of use:
+  pkg_bin_summary -f PKGNAME,PKGPATH,ASSIGNMENTS,DEPENDS,automatic
+  pkg_bin_summary -a automatic,ASSIGNMENTS
+  pkg_bin_summary -r 'DESCRIPTION REQUIRES PROVIDES' -- -u
+  pkg_bin_summary -a automatic -r REQUIRES 'lib*'
+EOF
+}
+
+while test $# -ne 0; do
+    case "$1" in
+	-h|--help)
+	    usage
+	    exit 0;;
+	-a)
+	    add_fields="$add_fields $2"
+	    shift;;
+	-r)
+	    rem_fields="$rem_fields $2"
+	    shift;;
+	-f)
+	    only_fields="$only_fields $2"
+	    shift;;
+	--)
+	    shift
+	    break;;
+	-*)
+	    echo "Bad option $1" 1>&2
+	    exit 1;;
+	*)
+	    break
+    esac
+    shift
+done
+
+if test $# -eq 0; then
+    pkg_info_opts=-XBa
+else
+    pkg_info_opts=-XB
+fi
+
+pkg_info "$pkg_info_opts" "$@" |
+$LIBEXECDIR/XB2bin_summary -a "$add_fields" -r "$rem_fields" -f "$only_fields"

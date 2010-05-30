@@ -1,0 +1,107 @@
+#!/usr/bin/env runawk
+
+# Copyright (c) 2010 Aleksey Cheusov <vle@gmx.net>
+#
+# Permission is hereby granted, free of charge, to any person obtaining
+# a copy of this software and associated documentation files (the
+# "Software"), to deal in the Software without restriction, including
+# without limitation the rights to use, copy, modify, merge, publish,
+# distribute, sublicense, and/or sell copies of the Software, and to
+# permit persons to whom the Software is furnished to do so, subject to
+# the following conditions:
+#
+# The above copyright notice and this permission notice shall be
+# included in all copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+# EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+# NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+# LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+# OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+# WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+#use "power_getopt.awk"
+
+#.begin-str help
+# XB2bin_summary - converts output of 'pkg_info -XB' to bin_summary
+# Usage: XB2bin_summary [OPTIONS] [files...]
+# OPTIONS:
+#  -h|--help         display this help
+#  =a <fields>       add specified fields to the output
+#  =f <fields>       output only specified fields
+#  =r <fields>       remove specified fields
+#.end-str
+
+BEGIN {
+	add_fields_str=getarg("a")
+	gsub(/,/, " ", add_fields_str)
+	cnt=split(add_fields_str, arr)
+	for (i=1; i <= cnt; ++i)
+		add_fields [arr [i]] = 1
+
+	rem_fields_str=getarg("r")
+	gsub(/,/, " ", rem_fields_str)
+	cnt=split(rem_fields_str, arr)
+	for (i=1; i <= cnt; ++i)
+		rem_fields [arr [i]] = 1
+
+	only_fields_str=getarg("f")
+	gsub(/,/, " ", only_fields_str)
+	cnt=split(only_fields_str, arr)
+	for (i=1; i <= cnt; ++i)
+		only_fields [arr [i]] = 1
+
+	multiline ["PLIST"]       = 1
+	multiline ["DESCRIPTION"] = 1
+	multiline ["DEPENDS"]     = 1
+	multiline ["REQUIRES"]    = 1
+	multiline ["PROVIDES"]    = 1
+	multiline ["CONFLICTS"]   = 1
+
+	X_section  = 1
+}
+
+NF == 0 {
+	prev_is_empty = 1
+	next
+}
+
+($1 == "Build" || $1 == "Installed") && $2 == "information:" {
+	prev_is_empty = 0
+	X_section  = 0
+	next
+}
+
+{
+	if (prev_is_empty){
+		print ""
+		X_section  = 1
+		delete already_printed
+	}
+
+	fname = $0
+	sub(/=.*/, "", fname)
+
+	if (rem_fields_str != "" && (fname in rem_fields))
+		ok = 0
+	else if (only_fields_str != "" && !(fname in only_fields))
+		ok = 0
+	else if (!X_section && ((fname in add_fields) || (fname in only_fields)))
+		ok = 1
+	else
+		ok = X_section
+
+	if (ok && !(fname in already_printed)){
+		if (!(fname in multiline))
+			already_printed [fname] = 1
+		print 
+	}
+
+	prev_is_empty = 0
+}
+
+END {
+	if (prev_is_empty)
+		print ""
+}
