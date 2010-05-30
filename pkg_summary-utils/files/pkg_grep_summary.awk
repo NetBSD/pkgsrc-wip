@@ -14,6 +14,8 @@ BEGIN {
 	_sg_multiline ["REQUIRES"]    = 1
 	_sg_multiline ["PROVIDES"]    = 1
 	_sg_multiline ["CONFLICTS"]   = 1
+
+	keep_fields = 0
 }
 
 function match_first_word (s, word){
@@ -129,8 +131,8 @@ _gs_matched == 1 && NF > 0 {
 	next
 }
 
-grep_summary__allfields {
-	grep_summary__fields [fname] = fvalue
+keep_fields {
+	fields [fname] = fvalue
 }
 
 _gs_matched == -1 && NF > 0 {
@@ -151,7 +153,7 @@ NF == 0 {
 	}
 
 	delete _gs_accu
-	delete grep_summary__fields
+	delete fields
 	_gs_count = 0
 	_gs_matched = -1
 

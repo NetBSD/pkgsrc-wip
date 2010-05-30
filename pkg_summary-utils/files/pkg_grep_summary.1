@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkg_grep_summary.1,v 1.17 2010/05/29 20:34:31 cheusov Exp $
+.\"	$NetBSD: pkg_grep_summary.1,v 1.18 2010/05/30 16:07:13 cheusov Exp $
 .\"
 .\" Copyright (c) 2008 by Aleksey Cheusov (vle@gmx.net)
 .\" Absolutely no warranty.
@@ -58,6 +58,16 @@ as an indivisible block of text.  Unlike
 it doesn't scan pkgsrc source tree.
 For scanning pkgsrc source tree you may use
 .BR pkg_src_summary(1) " or " pkg_micro_src_summary(1) .
+The following variables can be used in
+.IR awk_expression ": "
+"fname"
+(field name to check),
+"fvalue"
+(part of line after = sign) and associative array
+"fields"
+mapping field names to values which is availables only if 
+.I field
+is `.' (single dot).
 .SH OPTIONS
 .TP
 .B "-h|--help"
@@ -149,6 +159,10 @@ pkg_grep_summary -S PKGPATH /tmp/wanted_pkgpaths.txt \\
 
 pkg_grep_summary -t word COMMENT DNS \\
       < /usr/pkgsrc/pkg_src_summary.txt
+
+pkg_bin_summary -f PKGNAME,automatic,REQUIREDBY |
+pkg_grep_summary . 'fields ["automatic"] == "yes" &&
+                    fields ["REQUIREDBY"] == ""'
 .VE
 .SH SEE ALSO
 .BR pkg_summary-utils(7),

@@ -154,13 +154,13 @@ BEGIN {
 
    FS = "="
 
-   # keep all fields in grep_summary__fields associative array
-   grep_summary__allfields = 1
+   # keep all fields in associative array "fields"
+   keep_fields = 1
 }
 
 function grep_summary__condition (           pkgpath, pkgbase){
-   pkgpath = grep_summary__fields ["PKGPATH"]
-   pkgbase = grep_summary__fields ["PKGNAME"]
+   pkgpath = fields ["PKGPATH"]
+   pkgbase = fields ["PKGNAME"]
    sub(/-[^-]+$/, "", pkgbase)
 
    if (pkgpath == "" || pkgbase == ""){

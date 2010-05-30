@@ -168,6 +168,7 @@ BEGIN {
       close(strings_fn)
    }
    grep_summary__field="'"$field"'"
+   keep_fields = (grep_summary__field == "" || grep_summary__field == ".")
 }
 
 function grep_summary__condition (){

@@ -140,6 +140,10 @@ runtest pkg_grep_summary -m PROVIDES provides2 < src_summary10.txt
 runtest pkg_grep_summary -m REQUIRES requires2 < src_summary10.txt
 runtest pkg_grep_summary -m DESCRIPTION descr2 < src_summary10.txt
 
+runtest pkg_grep_summary . \
+    'fields ["MAINTAINER"] ~ /cheusov/ && fields ["PKGPATH"] !~ /^wip/' \
+    < src_summary.txt | grep -E '^(PKGNAME|PKGPATH|MAINTAINER)=|^$|^--'
+
 runtest pkg_grep_summary -T
 
 # pkg_cmp_summary

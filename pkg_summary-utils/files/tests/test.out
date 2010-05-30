@@ -585,6 +585,20 @@ DESCRIPTION=descr1
 DESCRIPTION=descr2
 
 --------------------------------------------------
+------- args: 'pkg_grep_summary' '.' 'fields ["MAINTAINER"] ~ /cheusov/ && fields ["PKGPATH"] !~ /^wip/'
+PKGPATH=textproc/dictem
+MAINTAINER=cheusov@tut.by
+PKGNAME=dictem-0.82
+
+PKGNAME=libmaa-1.0.1nb1
+PKGPATH=devel/libmaa
+MAINTAINER=cheusov@tut.by
+
+PKGNAME=pipestatus-0.4.0
+PKGPATH=devel/pipestatus
+MAINTAINER=cheusov@tut.by
+
+--------------------------------------------------
 ------- args: 'pkg_grep_summary' '-T'
 exact prefix suffix substring word first last re strfile awk empty
 --------------------------------------------------

@@ -141,16 +141,16 @@ BEGIN {
    grep_summary__field = ""
    FS = "="
 
-   # keep all fields in grep_summary__fields associative array
-   grep_summary__allfields = 1
+   # keep all fields in associative array "fields"
+   keep_fields = 1
 }
 
 function grep_summary__condition (           pkgpath, pkgname, pair){
-   pkgpath = grep_summary__fields ["PKGPATH"]
+   pkgpath = fields ["PKGPATH"]
    if (pkgpath == "")
       return -1
 
-   pkgname = grep_summary__fields ["PKGNAME"]
+   pkgname = fields ["PKGNAME"]
    if (pkgname == "")
       return -1
 
