@@ -1,6 +1,2 @@
-Compilation on amd64 fails with:
-thread.C: In member function 'int Thread::get_tid()':
-thread.C:242: error: cast from '__pthread_st*' to 'int' loses precision
-
 It actually starts up, but hangs shortly after any operations. I can't
 figure out why.
