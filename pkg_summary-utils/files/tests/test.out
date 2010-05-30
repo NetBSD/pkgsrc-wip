@@ -599,8 +599,68 @@ PKGPATH=devel/pipestatus
 MAINTAINER=cheusov@tut.by
 
 --------------------------------------------------
+------- args: 'pkg_grep_summary' '-i' '-t' 'kw' 'COMMENT' 'dictionary client'
+PKGPATH=textproc/dictem
+DEPENDS=dict-client>=1.9.14:../../textproc/dict-client emacs>=22:../../editors/emacs  emacs>=22:../../editors/emacs
+BUILD_DEPENDS= checkperms>=1.1:../../sysutils/checkperms
+CONFLICTS=xemacs-dictem-[0-9]*
+HOMEPAGE=http://freshmeat.net/projects/dictem/
+COMMENT=Dictionary client (RFC-2229) for [X]Emacs
+MAINTAINER=cheusov@tut.by
+CATEGORIES=textproc editors
+PKGNAME=dictem-0.82
+
+PKGNAME=dict-client-1.9.15nb2
+PKGPATH=textproc/dict-client
+DEPENDS=  libltdl>=1.5.10:../../devel/libltdl
+BUILD_DEPENDS= gmake>=3.81:../../devel/gmake checkperms>=1.1:../../sysutils/checkperms
+HOMEPAGE=http://www.dict.org/
+COMMENT=Dictionary Service Protocol client
+MAINTAINER=pkgsrc-users@NetBSD.org
+CATEGORIES=textproc
+
+PKGNAME=dict-client-1.10.11nb2
+PKGPATH=wip/dict-client
+DEPENDS=  libmaa>=1.0:../../devel/libmaa
+BUILD_DEPENDS= libtool-base>=1.5.18nb5:../../devel/libtool-base gmake>=3.81:../../devel/gmake checkperms>=1.1:../../sysutils/checkperms
+HOMEPAGE=http://www.dict.org/
+COMMENT=Dictionary Service Protocol client
+MAINTAINER=cheusov@tut.by
+CATEGORIES=textproc
+
+--------------------------------------------------
+------- args: 'pkg_grep_summary' '-i' '-t' 'keywords' 'COMMENT' 'dictionary client'
+PKGPATH=textproc/dictem
+DEPENDS=dict-client>=1.9.14:../../textproc/dict-client emacs>=22:../../editors/emacs  emacs>=22:../../editors/emacs
+BUILD_DEPENDS= checkperms>=1.1:../../sysutils/checkperms
+CONFLICTS=xemacs-dictem-[0-9]*
+HOMEPAGE=http://freshmeat.net/projects/dictem/
+COMMENT=Dictionary client (RFC-2229) for [X]Emacs
+MAINTAINER=cheusov@tut.by
+CATEGORIES=textproc editors
+PKGNAME=dictem-0.82
+
+PKGNAME=dict-client-1.9.15nb2
+PKGPATH=textproc/dict-client
+DEPENDS=  libltdl>=1.5.10:../../devel/libltdl
+BUILD_DEPENDS= gmake>=3.81:../../devel/gmake checkperms>=1.1:../../sysutils/checkperms
+HOMEPAGE=http://www.dict.org/
+COMMENT=Dictionary Service Protocol client
+MAINTAINER=pkgsrc-users@NetBSD.org
+CATEGORIES=textproc
+
+PKGNAME=dict-client-1.10.11nb2
+PKGPATH=wip/dict-client
+DEPENDS=  libmaa>=1.0:../../devel/libmaa
+BUILD_DEPENDS= libtool-base>=1.5.18nb5:../../devel/libtool-base gmake>=3.81:../../devel/gmake checkperms>=1.1:../../sysutils/checkperms
+HOMEPAGE=http://www.dict.org/
+COMMENT=Dictionary Service Protocol client
+MAINTAINER=cheusov@tut.by
+CATEGORIES=textproc
+
+--------------------------------------------------
 ------- args: 'pkg_grep_summary' '-T'
-exact prefix suffix substring word first last re strfile awk empty
+exact prefix suffix substring word first last re strfile awk empty kw
 --------------------------------------------------
 ------- pkg_cmp_summary #1.1
 - ap2-vhost-ldap 1.2.0nb1
