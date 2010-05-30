@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/05/30 06:58:08 uccwen Exp $
+# $NetBSD: Makefile,v 1.5 2010/05/30 07:41:42 uccwen Exp $
 
 DISTNAME=	moodle-1.9.8
 CATEGORIES=	www
@@ -49,6 +49,18 @@ SUBST_MESSAGE.paths=	Fixing pathnames in configuration file.
 SUBST_STAGE.paths=	post-patch
 SUBST_FILES.paths=	../moodle.conf
 SUBST_SED.paths=	-e "s,@MOODLEDIR@,${MOODLEDIR},g"
+
+SUBST_CLASSES+=		php
+SUBST_MESSAGE.php=	Fixing the path of php.
+SUBST_STAGE.php=	post-patch
+SUBST_FILES.php=	admin/mailout-debugger.php admin/process_email.php mod/chat/chatd.php
+SUBST_SED.php=		-e "s,/usr/bin/php,/usr/pkg/bin/php,g"
+
+SUBST_CLASSES+=         perl
+SUBST_MESSAGE.paths=	Fixing the path of perl.
+SUBST_STAGE.paths=	post-patch
+SUBST_FILES.paths=	filter/algebra/algebra2tex.pl
+SUBST_SED.paths=	-e "s,/usr/bin/perl,/usr/pkg/bin/perl,g"
 
 WRKSRC=			${WRKDIR}/moodle
 
