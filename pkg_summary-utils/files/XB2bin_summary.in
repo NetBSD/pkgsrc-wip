@@ -22,6 +22,7 @@
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #use "power_getopt.awk"
+#use "trim.awk"
 
 #.begin-str help
 # XB2bin_summary - converts output of 'pkg_info -XB' to bin_summary
@@ -59,7 +60,14 @@ BEGIN {
 	multiline ["PROVIDES"]    = 1
 	multiline ["CONFLICTS"]   = 1
 
+	# FIXME: the following remaps should be fetched automatically
+	remap ["PKG_APACHE_DEFAULT"]     = "PKG_APACHE"
+	remap ["PHP_VERSION_DEFAULT"]    = "PHP_VERSION_REQD"
+	remap ["PYTHON_VERSION_DEFAULT"] = "PYTHON_VERSION_REQD"
+
+	#
 	X_section  = 1
+	need_assigns = ("ASSIGNMENTS" in only_fields) || ("ASSIGNMENTS" in add_fields)
 }
 
 NF == 0 {
@@ -73,16 +81,33 @@ NF == 0 {
 	next
 }
 
-{
-	if (prev_is_empty){
-		print ""
-		X_section  = 1
-		delete already_printed
+function eos (){
+	# end of package summary
+	if (need_assigns && assigns != ""){
+		print "ASSIGNMENTS=" assigns
 	}
 
-	fname = $0
-	sub(/=.*/, "", fname)
+	print ""
+	X_section  = 1
+	delete already_printed
+	assigns = ""
+}
 
+prev_is_empty {
+	eos()
+}
+
+{
+	eq_idx = index($0, "=")
+	fname  = substr($0, 1, eq_idx-1)
+	if (need_assigns && (fname in remap)){
+		fvalue = substr($0, eq_idx+1)
+		if (assigns)
+			assigns = assigns ","
+		assigns = assigns remap [fname] "=" trim_lr(fvalue)
+	}
+
+	# print current non-empty line
 	if (rem_fields_str != "" && (fname in rem_fields))
 		ok = 0
 	else if (only_fields_str != "" && !(fname in only_fields))
@@ -98,10 +123,11 @@ NF == 0 {
 		print 
 	}
 
+	# 
 	prev_is_empty = 0
 }
 
 END {
 	if (prev_is_empty)
-		print ""
+		eos()
 }
