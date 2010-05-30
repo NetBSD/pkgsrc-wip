@@ -21,8 +21,12 @@
 # OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
+#use "exitnow.awk"
 #use "power_getopt.awk"
 #use "trim.awk"
+#use "tmpfile.awk"
+#use "has_prefix.awk"
+#use "xsystem.awk"
 
 #.begin-str help
 # XB2bin_summary - converts output of 'pkg_info -XB' to bin_summary
@@ -61,13 +65,25 @@ BEGIN {
 	multiline ["CONFLICTS"]   = 1
 
 	# FIXME: the following remaps should be fetched automatically
-	remap ["PKG_APACHE_DEFAULT"]     = "PKG_APACHE"
-	remap ["PHP_VERSION_DEFAULT"]    = "PHP_VERSION_REQD"
+	remap ["PKG_APACHE"]          = "PKG_APACHE"
+	remap ["PKG_APACHE_DEFAULT"]  = "PKG_APACHE"
+
+	remap ["PHP_VERSION_REQD"]    = "PHP_VERSION_REQD"
+	remap ["PHP_VERSION_DEFAULT"] = "PHP_VERSION_REQD"
+
+	remap ["PYTHON_VERSION_REQD"]    = "PYTHON_VERSION_REQD"
 	remap ["PYTHON_VERSION_DEFAULT"] = "PYTHON_VERSION_REQD"
 
 	#
-	X_section  = 1
 	need_assigns = ("ASSIGNMENTS" in only_fields) || ("ASSIGNMENTS" in add_fields)
+	need_reqd = ("REQUIREDBY" in only_fields) || ("REQUIREDBY" in add_fields)
+
+	if (need_reqd){
+		out_file = tmpfile()
+	}
+
+	#
+	X_section  = 1
 }
 
 NF == 0 {
@@ -81,13 +97,20 @@ NF == 0 {
 	next
 }
 
+function print_me (s){
+	if (out_file)
+		print s > out_file
+	else
+		print s
+}
+
 function eos (){
 	# end of package summary
 	if (need_assigns && assigns != ""){
-		print "ASSIGNMENTS=" assigns
+		print_me("ASSIGNMENTS=" assigns)
 	}
 
-	print ""
+	print_me("")
 	X_section  = 1
 	delete already_printed
 	assigns = ""
@@ -120,7 +143,8 @@ prev_is_empty {
 	if (ok && !(fname in already_printed)){
 		if (!(fname in multiline))
 			already_printed [fname] = 1
-		print 
+
+		print_me($0)
 	}
 
 	# 
@@ -130,4 +154,43 @@ prev_is_empty {
 END {
 	if (prev_is_empty)
 		eos()
+
+	if (!need_reqd)
+		exitnow(0)
+
+	# close file with bin_summaries
+	printf "" > out_file
+	xclose(out_file)
+
+	# generating file with required_by information
+	reqd_file = tmpfile()
+	pipe = "xargs pkg_info -R > " reqd_file
+	while(xgetline0(out_file)){
+		if (has_prefix($0, "PKGNAME="))
+			print substr($0, 9) | pipe
+	}
+	xclose(out_file)
+	xclose(pipe)
+
+	#
+	while (xgetline0(reqd_file)){
+		if ($1 == "Information" && $2 == "for"){
+			pkgname = $3
+			sub(/:$/, "", pkgname)
+		}else if (NF > 0 && !index($0, ":")){
+			reqd [pkgname, ++reqd_count [pkgname]] = $1
+		}
+	}
+	xclose(reqd_file)
+
+	#
+	while (xgetline0(out_file)){
+		print $0
+		if (has_prefix($0, "PKGNAME=")){
+			pkgname = substr($0, 9)
+			for (i=1; i <= reqd_count [pkgname]; ++i){
+				print "REQUIREDBY=" reqd [pkgname, i]
+			}
+		}
+	}
 }
