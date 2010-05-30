@@ -69,6 +69,12 @@ _VARIANTS+=	${_PBULK_MULTI_VAR.${i}}=${${_PBULK_MULTI_LIST.${i}}:ts,}
 .endfor
 
 #####################################################################
+# pkg_src_summary -l
+.ifdef with_libdeps
+BUILD_DEPENDS+=	${_BLNK_ADD_TO.DEPENDS}
+.endif
+
+#####################################################################
 .PHONY: my-show-vars
 my-show-vars:
 .for VARNAME in ${VARNAMES}

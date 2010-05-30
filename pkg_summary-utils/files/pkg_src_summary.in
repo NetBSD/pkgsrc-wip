@@ -65,6 +65,7 @@ OPTIONS:
   -r|--rem-fields <fields>  remove the specified fields from the list
                                of default ones
   -b                  add BOOTSTRAP_DEPENDS to BUILD_DEPENDS
+  -l                  add library dependencies (bl3.mk) to BUILD_DEPENDS
   -d|--with-deps      also generates summary for dependancies (DEPENDS)
   -D|--with-bdeps     also generates summary for dependancies (BUILD_DEPENDS)
   -A|--with-alldeps   implies -d and -D
@@ -150,6 +151,8 @@ process_options (){
 	    -b)
 		add_fields BOOTSTRAP_DEPENDS BUILD_DEPENDS
 	        with_bootstrap=-b;;
+	    -l)
+	        with_libdeps=-l;;
 	    -d|--with-deps)
 		with_dep=-d;;
 	    -D|--with-bdeps)
@@ -180,6 +183,9 @@ process_options (){
 
     pkgpaths="$@"
 }
+
+with_xxx="$with_bootstrap $with_libdeps"
+export with_libdeps
 
 process_options $PSS_OPTIONS "$@"
 
@@ -434,7 +440,7 @@ if test "$PSS_SLAVES"; then
 	paexec -slez $PSS_PAEXEC_EXTRA_OPTS \
 	    -n "$PSS_SLAVES" \
 	    -t "$PSS_TRANSPORT" \
-	    -c "env $environ $0 -s $with_bootstrap -f '$qfields'" '|' \
+	    -c "env $environ $0 -s $with_xxx -f '$qfields'" '|' \
 	paexec_reorder -s > "$partial_summary_fn"
 elif test "$slave"; then
     process_one_by_one
@@ -525,7 +531,7 @@ if test "$multi_var"; then
 
 	runpipe0 \
 	    summary2all_variants < $multi_pkgs_fn '|' \
-	    env _PSS_RECURS=1 $0 $with_bootstrap $make_plist '|' \
+	    env _PSS_RECURS=1 $0 $with_xxx $make_plist '|' \
 	    move_ASSIGNMENTS_to_PKGPATH >> "$partial_summary_fn"
     fi
 fi
@@ -600,7 +606,7 @@ while test -n "${with_dep}${with_bdep}"; do
     fi
 
     ##
-    env _PSS_RECURS=1 $0 $with_bootstrap $make_plist \
+    env _PSS_RECURS=1 $0 $with_xxx $make_plist \
 	< "$extra_deps_fn" > "$deps1_all_fn"
     if test -n "$debug"; then
 	echo '===== level-1 deps summaries =========' 1>&2
