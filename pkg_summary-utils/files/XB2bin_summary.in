@@ -80,6 +80,8 @@ BEGIN {
 
 	if (need_reqd){
 		out_file = tmpfile()
+		add_fields  ["PKGNAME"] = 1
+		only_fields ["PKGNAME"] = 1
 	}
 
 	#
