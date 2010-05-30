@@ -97,7 +97,7 @@ while test $# -ne 0; do
 	    shift
 	    shift;;
 	-T)
-	    echo 'exact prefix suffix substring word first last re strfile awk empty'
+	    echo 'exact prefix suffix substring word first last re strfile awk empty kw'
 	    exit 0;;
 	-i)
 	    ic=1;;
@@ -145,28 +145,41 @@ case "$strategy" in
 	re=`echo $string | sed 's|/|\\\/|g'`
 	condition="fvalue ~ /$re/";;
     strfile)
-	condition="fvalue in strings"
-	strings_fn="$string";;
+	condition="fvalue in strings";;
     awk)
 	condition="$string";;
     empty)
 	condition='fvalue == ""';;
+    kw|keywords)
+	strategy=kw
+	condition="match_keywords(fvalue)";;
     *)
 	echo "Unknown search strategy: $strategy" 1>&2
 	exit 1;;
 esac
 
-runawk -v strings_fn="$strings_fn" -v ic="$ic" -e '
+runawk -v ic="$ic" \
+       -v string="$string" -v strategy="$strategy" -e '
 #use "pkg_grep_summary.awk"
 #use "xgetline.awk"
+#use "str2regexp.awk"
 
 BEGIN {
-   if (strings_fn != ""){
-      while(xgetline0(strings_fn)){
+   if (strategy == "strfile"){
+      while(xgetline0(string)){
          strings [$0] = 1
       }
-      close(strings_fn)
+      close(string)
+   }else if (strategy == "kw"){
+      cnt_kw = split(string, arr_kw)
+      for (i=1; i <= cnt_kw; ++i){
+         if (i > 1)
+            re_kw = re_kw "|"
+         re_kw = re_kw str2regexp(arr_kw [i])
+      }
+      re_kw = "(" re_kw ")"
    }
+
    grep_summary__field="'"$field"'"
    keep_fields = (grep_summary__field == "" || grep_summary__field == ".")
 }

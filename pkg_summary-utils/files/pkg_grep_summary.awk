@@ -55,6 +55,24 @@ function match_word (s, word,                  idx){
 	return 1
 }
 
+function match_keywords (s,         cnt_s, arr_s, set_s, i){
+    if (s !~ re_kw)
+		return 0
+
+	cnt_s = split(s, arr_s, /[^A-Za-z0-9]/)
+	for (i=1; i <= cnt_s; ++i){
+		set_s [arr_s [i]] = 1
+	}
+
+	for (i=1; i <= cnt_kw; ++i){
+		if (! (arr_kw [i] in set_s)){
+			return 0
+		}
+	}
+
+	return 1
+}
+
 function update_skip (){
 	if (ic)
 		fvalue = tolower(fvalue)

@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkg_grep_summary.1,v 1.18 2010/05/30 16:07:13 cheusov Exp $
+.\"	$NetBSD: pkg_grep_summary.1,v 1.19 2010/05/30 18:21:26 cheusov Exp $
 .\"
 .\" Copyright (c) 2008 by Aleksey Cheusov (vle@gmx.net)
 .\" Absolutely no warranty.
@@ -111,12 +111,19 @@ according to search strategy
 .IR strategy .
 Available search strategies are:
 .IR exact ", " prefix ", " suffix ", " substring ", " word ", "
-.IR first ", " last ", " re ", " strfile ", " awk " and " empty .
+.IR first ", " last ", " re ", " strfile ", " awk ", " kw
+.RI " (" keywords ") and " empty .
 Search strategy 
 .I re
-is for matching using regexp (ERE),
+is for matching using regexp (ERE).
+Search strategies
 .IR first ", " last " and " word
-strategies are for matching first, last or any separate word within 
+are for matching first, last or any separate word within 
+.IR field .
+With
+.IR kw " (" keywords ")"
+.I condition
+is treated as a list of words each of which should present in
 .IR field .
 .TP
 .B "-T"
@@ -163,6 +170,9 @@ pkg_grep_summary -t word COMMENT DNS \\
 pkg_bin_summary -f PKGNAME,automatic,REQUIREDBY |
 pkg_grep_summary . 'fields ["automatic"] == "yes" &&
                     fields ["REQUIREDBY"] == ""'
+
+pkg_grep_summary -i -t kw COMMENT 'dns server' \\
+      < /usr/pkgsrc/packages/pkg_summary.txt
 .VE
 .SH SEE ALSO
 .BR pkg_summary-utils(7),

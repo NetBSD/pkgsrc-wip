@@ -144,6 +144,9 @@ runtest pkg_grep_summary . \
     'fields ["MAINTAINER"] ~ /cheusov/ && fields ["PKGPATH"] !~ /^wip/' \
     < src_summary.txt | grep -E '^(PKGNAME|PKGPATH|MAINTAINER)=|^$|^--'
 
+runtest pkg_grep_summary -i -t kw       COMMENT 'dictionary client' < src_summary.txt
+runtest pkg_grep_summary -i -t keywords COMMENT 'dictionary client' < src_summary.txt
+
 runtest pkg_grep_summary -T
 
 # pkg_cmp_summary
