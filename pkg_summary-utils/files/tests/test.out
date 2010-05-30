@@ -1851,3 +1851,20 @@ wip/heirloom-common wip/heirloom-doc
 wip/heirloom-doc wip/heirloom-libcommon
 wip/heirloom-libcommon wip/libuxre
 wip/runawk
+--------------------------------------------------
+------- pkg_bin_summary #23.1
+LICENSE=modified-bsd
+PKGPATH=pkgtools/pkg_install
+--------------------------------------------------
+------- pkg_bin_summary #23.2
+LICENSE=modified-bsd
+PKGPATH=devel/bmake
+--------------------------------------------------
+------- pkg_bin_summary #23.3
+PKGPATH=devel/bmake
+--------------------------------------------------
+------- pkg_bin_summary #23.4
+PKGPATH=devel/bmake
+
+PKGPATH=pkgtools/pkg_install
+

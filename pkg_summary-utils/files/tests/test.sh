@@ -522,3 +522,24 @@ pkg_subgraph_deps -rx -f src_pkgs.txt src_deps.txt | sort
 echo '--------------------------------------------------'
 echo '------- pkg_subgraph_deps -xv #22.5'
 pkg_subgraph_deps -xv -f src_pkgs.txt src_deps.txt | sort
+
+# pkg_bin_summary
+echo '--------------------------------------------------'
+echo '------- pkg_bin_summary #23.1'
+pkg_bin_summary pkg_install |
+grep -E 'LICENSE|PKGPATH'
+
+echo '--------------------------------------------------'
+echo '------- pkg_bin_summary #23.2'
+pkg_bin_summary |
+pkg_grep_summary -s PKGBASE bmake |
+grep -E 'PKGPATH|LICENSE'
+
+echo '--------------------------------------------------'
+echo '------- pkg_bin_summary #23.3'
+pkg_bin_summary -r LICENSE,COMMENT,DESCRIPTION,REQUIRES -- bmake |
+grep -E 'PKGPATH|LICENSE'
+
+echo '--------------------------------------------------'
+echo '------- pkg_bin_summary #23.4'
+pkg_bin_summary -f 'PKGPATH' -- bmake pkg_install

@@ -177,7 +177,7 @@ END {
 		if ($1 == "Information" && $2 == "for"){
 			pkgname = $3
 			sub(/:$/, "", pkgname)
-		}else if (NF > 0 && !index($0, ":")){
+		}else if (NF == 1 && !index($0, ":")){
 			reqd [pkgname, ++reqd_count [pkgname]] = $1
 		}
 	}
