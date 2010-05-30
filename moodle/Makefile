@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2010/05/29 12:12:36 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2010/05/30 06:58:08 uccwen Exp $
 
-DISTNAME=	moodle-1.9.7
+DISTNAME=	moodle-1.9.8
 CATEGORIES=	www
 MASTER_SITES=	http://download.moodle.org/stable19/ \
 		http://download2.moodle.org/stable19/ \

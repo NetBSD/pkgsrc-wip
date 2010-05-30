@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2010/05/29 12:37:17 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.3 2010/05/30 06:58:08 uccwen Exp $
 share/examples/moodle/moodle.conf
 share/moodle/COPYING.txt
 share/moodle/README.txt
@@ -43,6 +43,7 @@ share/moodle/admin/mnet/mnet_themes.html
 share/moodle/admin/mnet/mnet_themes.php
 share/moodle/admin/mnet/peers.html
 share/moodle/admin/mnet/peers.php
+share/moodle/admin/mnet/tabs.php
 share/moodle/admin/mnet/trustedhosts.html
 share/moodle/admin/mnet/trustedhosts.php
 share/moodle/admin/module.php
@@ -202,6 +203,7 @@ share/moodle/auth/cas/CAS/languages/german.php
 share/moodle/auth/cas/CAS/languages/greek.php
 share/moodle/auth/cas/CAS/languages/japanese.php
 share/moodle/auth/cas/CAS/languages/languages.php
+share/moodle/auth/cas/CAS/readme_moodle.txt
 share/moodle/auth/cas/README-CAS
 share/moodle/auth/cas/auth.php
 share/moodle/auth/cas/cas_form.html
@@ -340,6 +342,7 @@ share/moodle/backup/cc/schemas/imscc_c1p2maeV0p15_definition.xsd
 share/moodle/backup/cc/schemas/imscp_v1p2.xsd
 share/moodle/backup/cc/schemas/imscp_v1p2_constraintsDocument.scmt
 share/moodle/backup/cc/schemas/imscp_v1p2_localised.xsd
+share/moodle/backup/cc/schemas/xml.xsd
 share/moodle/backup/cc/sheets/base.xml
 share/moodle/backup/cc/sheets/course_blocks_block.xml
 share/moodle/backup/cc/sheets/course_header.xml
@@ -473,6 +476,8 @@ share/moodle/blocks/search_forums/db/postgres7.php
 share/moodle/blocks/search_forums/db/upgrade.php
 share/moodle/blocks/search_forums/styles.php
 share/moodle/blocks/section_links/block_section_links.php
+share/moodle/blocks/section_links/config_instance.html
+share/moodle/blocks/section_links/settings.php
 share/moodle/blocks/section_links/db/mysql.php
 share/moodle/blocks/section_links/db/postgres7.php
 share/moodle/blocks/section_links/db/upgrade.php
@@ -821,6 +826,7 @@ share/moodle/install.php
 share/moodle/install/README.txt
 share/moodle/install/lang/af_utf8/installer.php
 share/moodle/install/lang/ar_utf8/installer.php
+share/moodle/install/lang/ast_utf8/installer.php
 share/moodle/install/lang/be_utf8/installer.php
 share/moodle/install/lang/bg_utf8/installer.php
 share/moodle/install/lang/bn_utf8/installer.php
@@ -875,6 +881,7 @@ share/moodle/install/lang/mi_wwow_utf8/installer.php
 share/moodle/install/lang/mk_utf8/installer.php
 share/moodle/install/lang/ml_utf8/installer.php
 share/moodle/install/lang/mn_utf8/installer.php
+share/moodle/install/lang/mr_utf8/installer.php
 share/moodle/install/lang/ms_utf8/installer.php
 share/moodle/install/lang/nl_utf8/installer.php
 share/moodle/install/lang/nn_utf8/installer.php
@@ -908,6 +915,7 @@ share/moodle/install/lang/uz_utf8/installer.php
 share/moodle/install/lang/vi_utf8/installer.php
 share/moodle/install/lang/zh_cn_utf8/installer.php
 share/moodle/install/lang/zh_tw_utf8/installer.php
+share/moodle/install/lang/zu_utf8/installer.php
 share/moodle/install/stringnames.txt
 share/moodle/install/welcome.html
 share/moodle/iplookup/README.txt
@@ -987,8 +995,6 @@ share/moodle/lang/en_utf8/gradereport_overview.php
 share/moodle/lang/en_utf8/gradereport_user.php
 share/moodle/lang/en_utf8/grades.php
 share/moodle/lang/en_utf8/group.php
-share/moodle/lang/en_utf8/help/accessibility.html
-share/moodle/lang/en_utf8/help/advanced_markdown.html
 share/moodle/lang/en_utf8/help/advancedsettings.html
 share/moodle/lang/en_utf8/help/assignment/allowdeleting.html
 share/moodle/lang/en_utf8/help/assignment/allowmaxfiles.html
@@ -2177,6 +2183,7 @@ share/moodle/lib/filelib.php
 share/moodle/lib/filterlib.php
 share/moodle/lib/flashdetect/flashupgrade.fla
 share/moodle/lib/flashdetect/flashupgrade.swf
+share/moodle/lib/flashdetect/message.php
 share/moodle/lib/form/advcheckbox.php
 share/moodle/lib/form/button.php
 share/moodle/lib/form/cancel.php
