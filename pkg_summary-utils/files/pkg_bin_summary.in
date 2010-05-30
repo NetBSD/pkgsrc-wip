@@ -27,6 +27,7 @@ set -e
 export LC_ALL=C
 
 LIBEXECDIR=${LIBEXECDIR-@@libexecdir@@}
+PKG_INFO_CMD="${PKG_INFO_CMD-@PKG_INFO_CMD@}"
 
 usage (){
     cat 1>&2 <<EOF
@@ -87,5 +88,5 @@ else
     pkg_info_opts=-XB
 fi
 
-pkg_info "$pkg_info_opts" "$@" |
+$PKG_INFO_CMD "$pkg_info_opts" "$@" |
 $LIBEXECDIR/XB2bin_summary -a "$add_fields" -r "$rem_fields" -f "$only_fields"

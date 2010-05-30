@@ -84,6 +84,8 @@ BEGIN {
 
 	#
 	X_section  = 1
+
+	pkg_info_cmd="@PKG_INFO_CMD@"
 }
 
 NF == 0 {
@@ -164,7 +166,7 @@ END {
 
 	# generating file with required_by information
 	reqd_file = tmpfile()
-	pipe = "xargs pkg_info -R > " reqd_file
+	pipe = "xargs " pkg_info_cmd " -R > " reqd_file
 	while(xgetline0(out_file)){
 		if (has_prefix($0, "PKGNAME="))
 			print substr($0, 9) | pipe

@@ -36,6 +36,7 @@ PKGSRCDIR=${PKGSRCDIR:=@PKGSRCDIR@}
 BMAKE=${BMAKE:=@BMAKE@}
 PSS_MKSCRIPTSDIR=${PSS_MKSCRIPTSDIR:=@@mkscriptsdir@@}
 LIBEXECDIR=${LIBEXECDIR:=@@libexecdir@@}
+PKG_INFO_CMD="${PKG_INFO_CMD-@PKG_INFO_CMD@}"
 
 ############################################################
 usage (){
@@ -368,7 +369,7 @@ generate_summary (){
 
 ############################################################
 installed_packages2stdout (){
-    pkg_info -Xa | sed -n 's,^PKGPATH=,,p'
+    $PKG_INFO_CMD -Xa | sed -n 's,^PKGPATH=,,p'
 }
 
 packages2stdout__1per_line (){
