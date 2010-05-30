@@ -1,12 +1,10 @@
-# $NetBSD: options.mk,v 1.1.1.1 2010/03/21 15:19:15 uccwen Exp $
+# $NetBSD: options.mk,v 1.2 2010/05/30 09:02:54 thomasklausner Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.moodle
 
 PKG_OPTIONS_REQUIRED_GROUPS=	db
 PKG_OPTIONS_GROUP.db=		mysql pgsql
-
-PKG_SUPPORTED_OPTIONS+=	mysql pgsql
-PKG_SUGGESTED_OPTIONS=	mysql
+PKG_SUGGESTED_OPTIONS=		mysql
 
 .include "../../mk/bsd.options.mk"
 
