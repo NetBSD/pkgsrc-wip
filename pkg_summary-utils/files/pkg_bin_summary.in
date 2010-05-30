@@ -31,8 +31,11 @@ PKG_INFO_CMD="${PKG_INFO_CMD-@PKG_INFO_CMD@}"
 
 usage (){
     cat 1>&2 <<EOF
-pkg_bin_summary - outputs summary information
-                  about binary or installed packages
+pkg_bin_summary - wrapper for 'pkg_info -X' which outputs
+ build information variables and and installation information
+ variables as well some special variables,
+ e.g. ASSIGNMENTS (settings to build multivariant packages) and
+ REQUIREDBY. By default it is equivalent to pkg_info -Xa.
 USAGE: pkg_bin_summary -h
        pkg_bin_summary [OPTIONS] [[--] [PKG_INFO_ARGS]]
 OPTIONS:

@@ -1,4 +1,23 @@
 ----------------------------------------------------------------------
+Version 0.41.0, by Aleksey Cheusov, Sun, 30 May 2010 22:31:49 +0300
+
+ pkg_grep_summary:
+   - new variable "fields" that may be used in awk_condition.
+     See man page for details.
+   - new search strategy "kw" (or "keywords") for matching all words
+     within query.
+
+ pkg_src_summary:
+   - new option -l for adding library dependencies to BUILD_DEPENDS.
+
+ New tool: pkg_bin_summary, wrapper for 'pkg_info -X' which outputs
+ build information variables and and installation information
+ variables as well some special variables, e.g. ASSIGNMENTS and
+ REQUIREDBY.
+
+ Path to "pkg_info" command is embedded to all scripts using it.
+
+----------------------------------------------------------------------
 Version 0.40.0, by Aleksey Cheusov, Sun, 30 May 2010 02:36:30 +0300
 
  pkg_grep_summary:
