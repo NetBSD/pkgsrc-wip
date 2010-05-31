@@ -1,4 +1,14 @@
 ======================================================================
+Version 0.8.0, by Aleksey Cheusov, Mon, 31 May 2010 15:01:42 +0300
+
+  New options:
+   -l, -lt, -lr         faster replacement for pkg_leaves
+   -lR, -lE             for removing automatically installed
+                        leaf packages
+   -l[RE]n              -n is passed to pkg_delete
+   -V                   display version
+
+======================================================================
 Version 0.7.1, by Aleksey Cheusov, Fri, 19 Mar 2010 14:43:05 +0200
 
   fix for dash, seen on Debian

@@ -37,6 +37,7 @@ export LC_ALL=C
 
 ############################################################
 PKG_INFO_CMD="${PKG_INFO_CMD-@PKG_INFO_CMD@}"
+PKG_DELETE_CMD="${PKG_DELETE_CMD-@PKG_DELETE_CMD@}"
 
 ############################################################
 usage (){
@@ -46,22 +47,33 @@ against pkgsrc source tree or pkg_summary.{txt,gz,bz2}
 
 usage:
   pkg_status -h
-  pkg_status -s [OPTIONS] [ [--] [ pkg_info args ] ]
-  pkg_status -b [OPTIONS] [ [--] [ pkg_info args ] ]
+  pkg_status -V
+  pkg_status -s [-ruaAQDp] [ [--] pkg_info_args ]
+  pkg_status -b [-ruaAQD]  [ [--] pkg_info_args ]
+  pkg_status -l [-rtREn]
+
 OPTIONS:
   -h         display this help message
+  -V         display version
+  -r         raw output
+  -D         for debugging purposes, temp files are not removed
+OPTIONS for -s|-b:
   -s         compare against pkgsrc source tree
   -b         compare against pkg_summary(5) database,
              a path to which is stored in PKG_SUMMARY environment variable
-  -r         raw pkg_cmp_summary(1)'s output
-  -u         analyse packages marked as installed by user (the default)
-  -a         analyse all installed packages
+  -u         analyse packages marked as installed by user (the default, see -a)
+  -a         analyse all installed packages (see -u)
   -A         by default up-to-date packages are skipped,
              with -A they are output too
   -Q         No noisy reminder about output format
-  -D         for debugging purposes, temp files are not removed
-  -p <file>  get PKGPATHs from a file (instead of pkg_info -QPKGPATH).
+  -p <file>  get PKGPATHs from <file> (instead of pkg_info -QPKGPATH).
              This option makes sense with -s, not with -b.
+OPTIONS for -l:
+  -l         list leaf packages installed automatically
+  -t         output only PKGNAME
+  -R         remove automatically installed leaf packages
+  -E         the same as -R but with 'pkg_delete -A'
+  -n         pass -n to pkg_delete
 Example:
    pkg_status -h
    pkg_status -s
@@ -72,18 +84,21 @@ Example:
    pkg_status -s pkg_install bmake bootstrap-mk-files
    pkg_status -srA -- pkg_summary-utils
    pkg_status -sp /etc/interesting_pkgs.conf
+   pkg_status -lEn
 EOF
 }
 #  pkg_status -o [OPTIONS]
 #  -o                     compare against packages served by pkg_online server
 
-#set -- `getopt hsobra $*`
-set -- `getopt hsbrAauQDp: $PKG_STATUS_OPTIONS $*`
+set -- `getopt hVsbrAauQDp:ltREn $PKG_STATUS_OPTIONS $*`
 
 while test $# -ne 0; do
     case "$1" in
 	-h)
 	    usage
+	    exit 0;;
+	-V)
+	    echo 'pkg_status @VERSION@'
 	    exit 0;;
 	-s)
 	    mode_src=1;;
@@ -106,6 +121,17 @@ while test $# -ne 0; do
 	-p)
 	    pkgpaths_fn="$2"
 	    shift;;
+	-l)
+	    mode_leaves=1;;
+	-t)
+	    pkgpath_only=1;;
+	-R)
+	    rem_leaves=1;;
+	-E)
+	    pkg_delete_opts="$pkg_delete_opts -A"
+	    rem_leaves=1;;
+	-n)
+	    pkg_delete_opts="$pkg_delete_opts -n";;
 	--)
 	    shift
 	    break;;
@@ -118,9 +144,48 @@ while test $# -ne 0; do
     shift
 done
 
+######################################################################
+# -l
+summary2pkgname (){
+    sed -n 's,^PKGNAME=,,p' "$@"
+}
+
+if test -n "$submode_raw"; then
+    leaves_proc (){
+	cat "$@"
+    }
+elif test -n "$pkgpath_only"; then
+    leaves_proc (){
+	summary2pkgname "$@"
+    }
+elif test -n "$rem_leaves"; then
+    leaves_proc (){
+	summary2pkgname | xargs $PKG_DELETE_CMD $pkg_delete_opts
+    }
+else
+    leaves_proc (){
+	awk '/^PKGNAME=/ {pkgname = substr($0, 9)}
+	     /^COMMENT=/ {comment = substr($0, 9)}
+	     NF == 0 {printf "%-20s %s\n", pkgname, comment;
+	              pkgname = comment = ""}
+	'  "$@"
+    }
+fi
+
+get_leaves_summaries (){
+    pkg_bin_summary -f PKGNAME,COMMENT,PKGPATH,automatic,REQUIREDBY |
+    pkg_grep_summary . 'fields ["automatic"] == "yes" && fields ["REQUIREDBY"] == ""'
+}
+
+if test -n "$mode_leaves"; then
+    get_leaves_summaries | leaves_proc
+    exit 0
+fi
+
+######################################################################
+# -s|-b
 if test -z "${mode_src}${mode_bin}${mode_online}"; then
-    echo 'Either -s or -b must be applied' 1>&2
-#    echo 'Either -s, -o or -b must be applied'
+    echo 'Either of the following options must be applied: -s, -b or -l' 1>&2
     exit 1
 fi
 
@@ -212,6 +277,8 @@ output_results (){
     fi
 }
 
+########################################
+# -s
 if test -n "$mode_src"; then
     $PKG_INFO_CMD -X $pkg_info_opts "$@" > "$bin_summary_fn"
     generate_pkgpaths "$@"
@@ -225,6 +292,8 @@ if test -n "$mode_src"; then
     exit 0
 fi
 
+########################################
+# -b
 cat_ext_summary (){
     case "$PKG_SUMMARY" in
 	*.gz)

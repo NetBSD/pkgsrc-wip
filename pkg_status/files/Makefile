@@ -10,7 +10,10 @@ PACKAGES?=	/usr/pkgsrc/packages
 
 pkg_status: pkg_status.in
 	sed -e 's,@PKG_INFO_CMD@,${PKG_INFO_CMD},' \
+	    -e 's,@PKG_DELETE_CMD@,${PKG_DELETE_CMD},' \
 	    -e 's,@PACKAGES@,${PACKAGES},' \
+	    -e 's,@VERSION@,${VERSION},' \
 	    ${.ALLSRC} > ${.TARGET}
 
+.include "version.mk"
 .include <bsd.prog.mk>
