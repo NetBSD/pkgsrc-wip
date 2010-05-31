@@ -1,10 +1,10 @@
-$NetBSD: patch-as,v 1.5 2010/04/21 12:51:26 tnn2 Exp $
+$NetBSD: patch-as,v 1.6 2010/05/31 09:24:04 tnn2 Exp $
 
 Treat DragonFly like FreeBSD.
 
---- js/src/configure.in.orig	2010-04-21 09:07:48.000000000 +0000
+--- js/src/configure.in.orig	2010-05-28 13:22:58.000000000 +0000
 +++ js/src/configure.in
-@@ -1760,7 +1760,7 @@ case "$target" in
+@@ -1764,7 +1764,7 @@ case "$target" in
      MOZ_FIX_LINK_PATHS='-Wl,-executable_path,$(LIBXUL_DIST)/bin'
      ;;
  
@@ -13,7 +13,7 @@ Treat DragonFly like FreeBSD.
      if test `test -x /usr/bin/objformat && /usr/bin/objformat || echo elf` != "elf"; then
  	DLL_SUFFIX=".so.1.0"
  	DSO_LDOPTS="-shared"
-@@ -2609,7 +2609,7 @@ case "$target" in
+@@ -2634,7 +2634,7 @@ case "$target" in
  *-solaris*)
      AC_DEFINE(AVMPLUS_UNIX)
      ;;
@@ -22,12 +22,12 @@ Treat DragonFly like FreeBSD.
      AC_DEFINE(AVMPLUS_UNIX)
      ;;
  *-gnu*)
-@@ -4274,7 +4274,7 @@ if test "$MOZ_MEMORY"; then
-   darwin*)
+@@ -4325,7 +4325,7 @@ if test "$MOZ_MEMORY"; then
+   *-darwin*)
      AC_DEFINE(MOZ_MEMORY_DARWIN)
      ;;
--  *freebsd*)
-+  *freebsd*|dragonfly*)
+-  *-*freebsd*)
++  *-*freebsd*|*-*dragonfly*)
      AC_DEFINE(MOZ_MEMORY_BSD)
      ;;
-   *linux*)
+   *-*linux*)

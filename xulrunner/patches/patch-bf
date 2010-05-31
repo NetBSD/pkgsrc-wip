@@ -1,0 +1,13 @@
+$NetBSD: patch-bf,v 1.1 2010/05/31 09:24:04 tnn2 Exp $
+
+--- js/src/jsnativestack.cpp.orig	2010-05-28 13:22:58.000000000 +0000
++++ js/src/jsnativestack.cpp
+@@ -150,7 +150,7 @@ GetNativeStackBaseImpl()
+ # else
+     pthread_attr_t sattr;
+     pthread_attr_init(&sattr);
+-#  if defined(PTHREAD_NP_H) || defined(NETBSD)
++#  if defined(PTHREAD_NP_H) || defined(NETBSD) || defined(__NetBSD__) /* XXX tnn not sure why NETBSD isn't defined, it looks like it should be ... */
+     /* e.g. on FreeBSD 5.4, neundorf@kde.org */
+     pthread_attr_get_np(thread, &sattr);
+ #  else

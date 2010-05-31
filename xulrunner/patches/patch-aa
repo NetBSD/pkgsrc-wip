@@ -1,8 +1,17 @@
-$NetBSD: patch-aa,v 1.8 2010/03/16 20:12:06 tnn2 Exp $
+$NetBSD: patch-aa,v 1.9 2010/05/31 09:24:04 tnn2 Exp $
 
---- configure.in.orig	2010-03-16 01:02:50.000000000 +0000
+--- configure.in.orig	2010-05-28 13:22:58.000000000 +0000
 +++ configure.in
-@@ -1915,7 +1915,7 @@ case "$target" in
+@@ -799,7 +799,7 @@ EOF
+                 AC_LANG_RESTORE
+             ])
+ 
+-        if test "$ac_cv_have_std__Throw" == "yes"; then
++        if test "$ac_cv_have_std__Throw" = "yes"; then
+             AC_CACHE_CHECK(for |class __declspec(dllimport) exception| bug,
+                            ac_cv_have_dllimport_exception_bug,
+                 [
+@@ -2071,7 +2071,7 @@ case "$target" in
      MOZ_FIX_LINK_PATHS='-Wl,-executable_path,$(LIBXUL_DIST)/bin'
      ;;
  
@@ -11,17 +20,20 @@ $NetBSD: patch-aa,v 1.8 2010/03/16 20:12:06 tnn2 Exp $
      if test `test -x /usr/bin/objformat && /usr/bin/objformat || echo elf` != "elf"; then
  	DLL_SUFFIX=".so.1.0"
  	DSO_LDOPTS="-shared"
-@@ -1929,6 +1929,9 @@ case "$target" in
+@@ -2083,8 +2083,11 @@ case "$target" in
+ #    # Hack for FreeBSD 2.2
+ #    if test -z "$MKSHLIB_FORCE_ALL"; then
  #	MKSHLIB_FORCE_ALL='-Wl,-Bforcearchive'
- #	MKSHLIB_UNFORCE_ALL=''
+-#	MKSHLIB_UNFORCE_ALL=''
++#	mKSHLIB_UNFORCE_ALL=''
  #    fi
 +    if test "$LIBRUNPATH"; then
 +       DSO_LDOPTS="-Wl,-R$LIBRUNPATH $DSO_LDOPTS"
 +    fi
      ;; 
  
- *-hpux*)
-@@ -3220,6 +3223,9 @@ dnl ====================================
+ ia64*-hpux*)
+@@ -3424,6 +3427,9 @@ dnl ====================================
  case $target in
  *-hpux11.*)
  	;;
@@ -31,7 +43,7 @@ $NetBSD: patch-aa,v 1.8 2010/03/16 20:12:06 tnn2 Exp $
  *)
  	AC_CHECK_LIB(c_r, gethostbyname_r)
  	;;
-@@ -4492,6 +4498,14 @@ else
+@@ -4770,6 +4776,14 @@ else
     fi
  fi
  
@@ -46,7 +58,7 @@ $NetBSD: patch-aa,v 1.8 2010/03/16 20:12:06 tnn2 Exp $
  if test -z "$SKIP_LIBRARY_CHECKS"; then
  dnl system JPEG support
  dnl ========================================================
-@@ -8627,7 +8641,8 @@ rm -f confdefs.h.save
+@@ -8930,7 +8944,8 @@ rm -f confdefs.h.save
  mv confdefs.h confdefs.h.save
  egrep -v "$_EGREP_PATTERN" confdefs.h.save > confdefs.h
  AC_OUTPUT_MAKE_DEFS()
@@ -56,7 +68,7 @@ $NetBSD: patch-aa,v 1.8 2010/03/16 20:12:06 tnn2 Exp $
  AC_SUBST(MOZ_DEFINES)
  rm -f confdefs.h
  mv confdefs.h.save confdefs.h
-@@ -8718,6 +8733,8 @@ if test -z "$MOZ_NATIVE_NSPR"; then
+@@ -9024,6 +9039,8 @@ if test -z "$MOZ_NATIVE_NSPR"; then
      AC_MSG_WARN([Recreating autoconf.mk with updated nspr-config output])
      if test "$OS_ARCH" != "WINNT" && test "$OS_ARCH" != "WINCE"; then
         NSPR_LIBS=`./nsprpub/config/nspr-config --prefix=$LIBXUL_DIST --exec-prefix=$MOZ_BUILD_ROOT/dist --libdir=$LIBXUL_DIST/lib --libs`
