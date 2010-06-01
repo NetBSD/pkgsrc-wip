@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2010/03/19 12:44:03 cheusov Exp $
+# $NetBSD: Makefile,v 1.10 2010/06/01 20:16:57 cheusov Exp $
 
-DISTNAME=	pkg_status-0.7.1
+DISTNAME=	pkg_status-${VERSION}
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -12,7 +12,7 @@ COMMENT=	Shows status of installed packages
 LICENSE=	mit
 
 DEPENDS+=	pipestatus-[0-9]*:../../devel/pipestatus
-DEPENDS+=	pkg_summary-utils-[0-9]*:../../wip/pkg_summary-utils
+DEPENDS+=	pkg_summary-utils>=0.41:../../wip/pkg_summary-utils
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -22,6 +22,7 @@ NO_CHECKSUM=		yes
 WRKSRC=			${.CURDIR}/files
 
 MAKE_ENV+=		PKG_INFO_CMD=${PKG_INFO:Q}
+MAKE_ENV+=		PKG_DELETE_CMD=${PKG_DELETE:Q}
 MAKE_ENV+=		PACKAGES=${PACKAGES}
 MAKE_ENV+=		MKCATPAGES=no
 
@@ -31,4 +32,5 @@ DOCDIR=			share/doc/pkg_status
 
 INSTALLATION_DIRS+=	bin ${DOCDIR}
 
+.include "../../wip/pkg_status/files/version.mk"
 .include "../../mk/bsd.pkg.mk"
