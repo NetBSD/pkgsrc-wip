@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2010/05/23 13:24:35 obache Exp $
+# $NetBSD: Makefile,v 1.3 2010/06/01 06:01:01 obache Exp $
 #
 
-DISTNAME=	ibus-t9-1.3.0.20100403
+DISTNAME=	ibus-t9-2.1.0.20100601
 CATEGORIES=	inputmethod
 MASTER_SITES=	http://ibus-t9.googlecode.com/files/
-EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/ibus-t9/
