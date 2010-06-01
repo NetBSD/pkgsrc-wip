@@ -1,0 +1,27 @@
+$NetBSD: patch-ab,v 1.1.1.1 2010/06/01 06:32:38 obache Exp $
+
+--- avs2ps.c.orig	2006-04-11 19:47:39.000000000 +0100
++++ avs2ps.c	2006-08-17 17:52:17.000000000 +0100
+@@ -5,12 +5,21 @@
+  * but I see no reason it shouldn't work with any other AVS input file.
+  * Ethan A Merritt - Aug 1994
+  */
++#if defined (__FreeBSD__)
++#  include <osreldate.h>
++#endif
++
+ #include	<stdio.h>
+ #include	<time.h>
+ #include	<math.h>
+ #include	<string.h>
+ #include	<stdlib.h>
+-#include	<netinet/in.h>
++
++#if defined (__FreeBSD__) && __FreeBSD_version < 500000
++#  include "in.h"
++#else
++#  include <netinet/in.h>
++#endif
+ 
+ #ifdef WIN32
+ #define random rand

@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/06/01 06:32:38 obache Exp $
+
+SHA1 (Raster3D_2.7d.tar.gz) = eb939d6fa0e27d4f50fbb56e84985b1db96bcb0a
+RMD160 (Raster3D_2.7d.tar.gz) = 646db1421f3222d75ba4f1a0c2339d603629877e
+Size (Raster3D_2.7d.tar.gz) = 1724473 bytes
+SHA1 (patch-aa) = 7322d1f94e59cdca60a08e277f8e7c0f0dea9a67
+SHA1 (patch-ab) = 1ca04b4c6ce4dec41dbaf7b09e7728e4d8ea54f8
