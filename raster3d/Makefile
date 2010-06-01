@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/06/01 08:14:50 obache Exp $
+# $NetBSD: Makefile,v 1.3 2010/06/01 08:56:07 obache Exp $
 #
 
 DISTNAME=	Raster3D_2.7s
@@ -45,31 +45,29 @@ OSDEFS+=	-DLINUX
 OSDEFS+=	-DNETWORKBYTEORDER
 .endif
 
-MAKE_FLAGS+=	OS=${OPSYS:Q} OSDEFS=${OSDEFS:Q} RM=${RM:Q}
+MAKE_FLAGS+=	OS=${OPSYS} OSDEFS=${OSDEFS:Q} RM=${RM:Q}
 
 .include "../../mk/compiler.mk"
 .if !empty(FCPATH:M*g77*) || !empty(FCPATH:M*f2c*)
-do-configure:
-	cd ${WRKSRC} && env ${MAKE_ENV} ${MAKE} strip-for-g77
+BUILD_TARGET=	strip-for-g77 all
+.else
+BUILD_TARGET=	all
 .endif
 
-do-install:
-	${INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/bin
-	${INSTALL_MAN_DIR} ${DESTDIR}${PREFIX}/${PKGMANDIR}/manl
+INSTALLATION_DIRS+=	bin ${PKGMANDIR}/manl ${DATADIR}/materials
+INSTALLATION_DIRS+=	${DOCSDIR}/html ${EGDIR}/msms
 
+do-install:
 	cd ${WRKSRC} && ${INSTALL_PROGRAM} ${BINARIES} ${DESTDIR}${PREFIX}/bin
 .if !empty(PKG_OPTIONS:Mimagemagick)
 	cd ${WRKSRC} && ${INSTALL_SCRIPT} ${SCRIPTS} ${DESTDIR}${PREFIX}/bin
 .endif
-	${INSTALL_DATA_DIR} ${DESTDIR}${DATADIR}/materials
 	cd ${WRKSRC}/materials && ${INSTALL_DATA} * ${DESTDIR}${DATADIR}/materials
 	cd ${WRKSRC}/doc && ${INSTALL_MAN} ${MANL} ${DESTDIR}${PREFIX}/${PKGMANDIR}/manl
 
-	${INSTALL_DATA_DIR} ${DESTDIR}${DOCSDIR}/html
 	cd ${WRKSRC}/doc && ${INSTALL_DATA} R3D_manual.pdf ${DESTDIR}${DOCSDIR}
 	cd ${WRKSRC}/html && ${INSTALL_DATA} * ${DESTDIR}${DOCSDIR}/html
 
-	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}/msms
 	cd ${WRKSRC}/examples && ${INSTALL_DATA} *.* ${DESTDIR}${EGDIR}
 	cd ${WRKSRC}/examples/msms && ${INSTALL_DATA} * ${DESTDIR}${EGDIR}/msms
 
