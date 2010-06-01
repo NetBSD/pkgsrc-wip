@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.18 2009/12/26 20:32:03 anielski Exp $
+$NetBSD: distinfo,v 1.19 2010/06/01 16:05:05 anielski Exp $
 
-SHA1 (nginx-0.7.64.tar.gz) = e4f71b9a908c23c3d7bfeb63e97c7f85c3d6eed7
-RMD160 (nginx-0.7.64.tar.gz) = 88c982dc88a91db3337c1ab74d7a41d503736366
-Size (nginx-0.7.64.tar.gz) = 601601 bytes
+SHA1 (nginx-0.7.65.tar.gz) = f2dcc8e015903ff1277e6fa427f9b7911c4f35ce
+RMD160 (nginx-0.7.65.tar.gz) = c03386b135ec4d72d2997b19ea70b28aeaa7a6da
+Size (nginx-0.7.65.tar.gz) = 604451 bytes
 SHA1 (patch-aa) = 1ef1a800f0d7dffe182b8a74f115105ded205f8e
