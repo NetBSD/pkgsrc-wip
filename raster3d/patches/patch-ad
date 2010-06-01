@@ -1,0 +1,15 @@
+$NetBSD: patch-ad,v 1.1 2010/06/01 08:14:50 obache Exp $
+
+Declaration error for iargc: attemtp to use untyped function
+
+--- rings3d.f.orig	2006-04-11 19:09:12.000000000 +0000
++++ rings3d.f
+@@ -16,7 +16,7 @@ c
+ 	integer input, output, noise
+ 	parameter (input=5, output=6, noise=0)
+ 	integer 	narg
+-c	integer 	iargc
++	integer 	iargc
+ c	external	iargc
+ 	character*64	options
+ 	logical		bflag, pflag, sflag

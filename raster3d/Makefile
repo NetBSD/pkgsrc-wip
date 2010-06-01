@@ -1,20 +1,19 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/06/01 06:32:38 obache Exp $
+# $NetBSD: Makefile,v 1.2 2010/06/01 08:14:50 obache Exp $
 #
 
-PKGNAME=	raster3d-2.7d
-DISTNAME=	Raster3D_${PKGNAME:C/.*-//}
+DISTNAME=	Raster3D_2.7s
+PKGNAME=	${DISTNAME:S/_/-/:tl}
 CATEGORIES=	graphics biology
-MASTER_SITES=	http://skuld.bmsc.washington.edu/raster3d/		\
-		http://mirror.inerd.com/FreeBSD/distfiles/raster3d/	\
-		http://mirror.inerd.com/FreeBSD/distfiles/raster3d/old/
+MASTER_SITES=	http://skuld.bmsc.washington.edu/raster3d/
 
 MAINTAINER=	shaun@inerd.com
 HOMEPAGE=	http://skuld.bmsc.washington.edu/raster3d/
 COMMENT=	Set of tools for generating raster images of proteins and molecules
 
-FFLAGS:=	"${FFLAGS} -Wno-globals -L${LOCALBASE}/lib"
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c fortran
+USE_TOOLS+=	gunzip:run
 
 DATADIR=	${PREFIX}/share/${PKGBASE}
 DOCSDIR=	${PREFIX}/share/doc/${PKGBASE}
@@ -34,61 +33,45 @@ PLIST_SUBST+=	EGDIR="${EGDIR:C/^${PREFIX}\///}"
 
 .include "../../mk/bsd.prefs.mk"
 
-#-----------------------------------------------------------------------
-
 .include "../../mk/endian.mk"
 
 OSDEFS=
 
 .if ${OPSYS} != "IRIX" && ${OPSYS} != "SunOS"
-OSDEFS=		-DLINUX
+OSDEFS+=	-DLINUX
 .endif
 
 .if ${MACHINE_ENDIAN} == "little"
 OSDEFS+=	-DNETWORKBYTEORDER
 .endif
 
-MAKE_ENV+=	OPSYS="${OPSYS}" OSDEFS="${OSDEFS}"
+MAKE_FLAGS+=	OS=${OPSYS:Q} OSDEFS=${OSDEFS:Q} RM=${RM:Q}
 
-.if !empty(PKG_OPTIONS:Mmagick)
-PLIST_SUBST+=	IMAGEMAGICK=""
-.else
-PLIST_SUBST+=	IMAGEMAGICK="@comment "
+.include "../../mk/compiler.mk"
+.if !empty(FCPATH:M*g77*) || !empty(FCPATH:M*f2c*)
+do-configure:
+	cd ${WRKSRC} && env ${MAKE_ENV} ${MAKE} strip-for-g77
 .endif
-
-post-patch:
-.if ${OPSYS} == "FreeBSD"
-	${CP} ${.CURDIR}/files/in.h ${WRKSRC}/in.h
-.endif
-
-#-----------------------------------------------------------------------
-
-pre-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE} netbsd
 
 do-install:
-	${INSTALL_PROGRAM_DIR} ${PREFIX}/bin
-	${INSTALL_MAN_DIR} ${PREFIX}/${PKGMANDIR}/manl
+	${INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN_DIR} ${DESTDIR}${PREFIX}/${PKGMANDIR}/manl
 
-	cd ${WRKSRC} && ${INSTALL_PROGRAM} ${BINARIES} ${PREFIX}/bin
-.if !empty(PKG_OPTIONS:Mmagick)
-	cd ${WRKSRC} && ${INSTALL_SCRIPT} ${SCRIPTS} ${PREFIX}/bin
+	cd ${WRKSRC} && ${INSTALL_PROGRAM} ${BINARIES} ${DESTDIR}${PREFIX}/bin
+.if !empty(PKG_OPTIONS:Mimagemagick)
+	cd ${WRKSRC} && ${INSTALL_SCRIPT} ${SCRIPTS} ${DESTDIR}${PREFIX}/bin
 .endif
-	${INSTALL_DATA_DIR} ${DATADIR}/materials
-	cd ${WRKSRC}/materials && ${INSTALL_DATA} * ${DATADIR}/materials
-	cd ${WRKSRC}/doc && ${INSTALL_MAN} ${MANL} ${PREFIX}/${PKGMANDIR}/manl
+	${INSTALL_DATA_DIR} ${DESTDIR}${DATADIR}/materials
+	cd ${WRKSRC}/materials && ${INSTALL_DATA} * ${DESTDIR}${DATADIR}/materials
+	cd ${WRKSRC}/doc && ${INSTALL_MAN} ${MANL} ${DESTDIR}${PREFIX}/${PKGMANDIR}/manl
 
-	${INSTALL_DATA_DIR} ${DOCSDIR}/html
-	cd ${WRKSRC}/doc && ${INSTALL_DATA} R3D_manual.pdf ${DOCSDIR}
-	cd ${WRKSRC}/html && ${INSTALL_DATA} * ${DOCSDIR}/html
+	${INSTALL_DATA_DIR} ${DESTDIR}${DOCSDIR}/html
+	cd ${WRKSRC}/doc && ${INSTALL_DATA} R3D_manual.pdf ${DESTDIR}${DOCSDIR}
+	cd ${WRKSRC}/html && ${INSTALL_DATA} * ${DESTDIR}${DOCSDIR}/html
 
-	${INSTALL_DATA_DIR} ${EGDIR}/msms
-	cd ${WRKSRC}/examples && ${INSTALL_DATA} *.* ${EGDIR}
-	cd ${WRKSRC}/examples/msms && ${INSTALL_DATA} * ${EGDIR}/msms
-
-.if !empty(PKG_OPTIONS:Mmagick)
-.  include "../../graphics/ImageMagick/buildlink3.mk"
-.endif
+	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}/msms
+	cd ${WRKSRC}/examples && ${INSTALL_DATA} *.* ${DESTDIR}${EGDIR}
+	cd ${WRKSRC}/examples/msms && ${INSTALL_DATA} * ${DESTDIR}${EGDIR}/msms
 
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"

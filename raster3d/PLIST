@@ -1,14 +1,14 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/06/01 06:32:38 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/06/01 08:14:50 obache Exp $
 bin/avs2ps
 bin/balls
+bin/normal3d
 bin/rastep
 bin/render
 bin/ribbon
 bin/rings3d
 bin/rods
-bin/normal3d
-${IMAGEMAGICK}bin/label3d
-${IMAGEMAGICK}bin/stereo3d
+${PLIST.magick}bin/label3d
+${PLIST.magick}bin/stereo3d
 ${DOCSDIR}/html/README
 ${DOCSDIR}/html/avs2ps.html
 ${DOCSDIR}/html/balls.html
@@ -151,20 +151,14 @@ ${DATADIR}/materials/transparent1.r3d
 ${DATADIR}/materials/white.r3d
 ${DATADIR}/materials/yellow.r3d
 man/manl/avs2ps.l
-man/manl/label3d.l
-man/manl/r3d_objects.l
-man/manl/rastep.l
-man/manl/render.l
-man/manl/rods.l
 man/manl/balls.l
+man/manl/label3d.l
 man/manl/normal3d.l
+man/manl/r3d_objects.l
 man/manl/r3dtops.l
+man/manl/rastep.l
 man/manl/raster3d.l
+man/manl/render.l
 man/manl/ribbon.l
+man/manl/rods.l
 man/manl/stereo3d.l
-@dirrm ${EGDIR}/msms
-@dirrm ${EGDIR}
-@dirrm ${DOCSDIR}/html
-@dirrm ${DOCSDIR}
-@dirrm ${DATADIR}/materials
-@dirrm ${DATADIR}
