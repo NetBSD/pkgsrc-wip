@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.5 2010/04/10 03:42:06 mwdavies Exp $
+$NetBSD: distinfo,v 1.6 2010/06/01 21:10:06 mwdavies Exp $
 
-SHA1 (koffice-2.1.82.tar.bz2) = 6f7b8c850388afb5261fadbfa0fc7111bfc6038a
-RMD160 (koffice-2.1.82.tar.bz2) = 8bb79b8596da704b82a3f7438635181bd68bc136
-Size (koffice-2.1.82.tar.bz2) = 55045851 bytes
+SHA1 (koffice-2.2.0.tar.bz2) = 274623699eb666730a0c8d92f81fb99680217345
+RMD160 (koffice-2.2.0.tar.bz2) = 090fb8a5899a5f11a91ca65a0f1dc2aaac5ac26e
+Size (koffice-2.2.0.tar.bz2) = 56558832 bytes
 SHA1 (patch-aa) = 2b7151c071b98f0696ff2e63b829630a6612279a
 SHA1 (patch-ab) = 69c34a2bfd4b79c716cab4186702a3f5de010010
 SHA1 (patch-ac) = 3f344054aa6cff823a1b90feb3e0b60124fa8f87
