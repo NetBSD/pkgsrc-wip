@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2010/06/01 00:30:54 khorben Exp $
+bin/phone
+bin/phone-contacts
+bin/phone-dialer
+bin/phone-messages
+bin/phone-settings
+include/Phone.h
+lib/Phone/plugins/openmoko.so
+lib/Phone/plugins/profiles.so
+share/applications/phone-contacts.desktop
+share/applications/phone-dialer.desktop
+share/applications/phone-messages.desktop
+share/applications/phone-settings.desktop
+share/icons/hicolor/22x22/apps/phone-signal-00.png
+share/icons/hicolor/22x22/apps/phone-signal-100.png
+share/icons/hicolor/22x22/apps/phone-signal-25.png
+share/icons/hicolor/22x22/apps/phone-signal-50.png
+share/icons/hicolor/22x22/apps/phone-signal-75.png
+share/locale/fr/LC_MESSAGES/Phone.mo
