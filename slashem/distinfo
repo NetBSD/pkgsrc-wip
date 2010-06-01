@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/06/01 06:05:45 obache Exp $
+
+SHA1 (se007e7f3.tar.gz) = 24009b87ec13067647c6d23c80671d99e763e2cb
+RMD160 (se007e7f3.tar.gz) = 0fd50b31ce952991b194fbf7b59b6e53353ce991
+Size (se007e7f3.tar.gz) = 5288791 bytes
+SHA1 (patch-aa) = 2ce00bcff1519fca7e03760620d8ca04421002bb
