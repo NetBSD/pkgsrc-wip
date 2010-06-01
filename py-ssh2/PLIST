@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/06/01 21:35:31 guigui2 Exp $
+${PYSITELIB}/ssh4py/SSH2.so
+${PYSITELIB}/ssh4py/__init__.py
+${PYSITELIB}/ssh4py/__init__.pyc
+${PYSITELIB}/ssh4py/__init__.pyo

@@ -1,0 +1,4 @@
+ssh4py is a Python wrapper around libssh2. This package removes methods
+which require the private API files from libssh2 (channel.getSocket,
+ssh.getCompressionMethods) and a method which was not exported, and
+which requires a function that doesn't exist in libssh2 (channel.pollWrite).

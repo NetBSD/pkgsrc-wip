@@ -1,0 +1,37 @@
+$NetBSD: patch-ah,v 1.1.1.1 2010/06/01 21:35:31 guigui2 Exp $
+
+--- src/ssh2/ssh2.c.orig	2008-07-19 06:43:24.000000000 -0400
++++ src/ssh2/ssh2.c	2010-02-11 12:47:17.000000000 -0500
+@@ -86,32 +86,12 @@
+     return (PyObject *)SSH2_SFTP_New(sftp, dealloc);
+ }
+ 
+-static char SSH2_getCompressionMethods_doc[] = "";
+-
+-static PyObject *
+-SSH2_getCompressionMethods(SSH2_SessionObj *self, PyObject *args)
+-{	
+-	PyObject *result;
+-	const LIBSSH2_COMP_METHOD **compp = libssh2_comp_methods();
+-	
+-	if (!PyArg_ParseTuple(args, ":getCompressionMethods"))
+-		return NULL;
+-	
+-	result = PyList_New(0);
+-	while (*compp && (*compp)->name) {
+-        PyList_Append(result, PyString_FromString((unsigned char *) (*compp)->name));
+-        compp++;
+-    }
+-	return result;
+-}
+-
+ /* Methods in the OpenSSL.ssh module (i.e. none) */
+ static PyMethodDef SSH2_methods[] = {
+     /* Module functions */
+ 	{ "Session",(PyCFunction)SSH2_Session,   METH_VARARGS, SSH2_Session_doc },
+ 	{ "Channel",(PyCFunction)SSH2_Channel,   METH_VARARGS, SSH2_Channel_doc },
+ 	{ "SFTP",(PyCFunction)SSH2_SFTP,   METH_VARARGS, SSH2_SFTP_doc },
+-	{ "getCompressionMethods",(PyCFunction)SSH2_getCompressionMethods,   METH_VARARGS, SSH2_getCompressionMethods_doc },
+     { NULL, NULL }
+ };
+ 
