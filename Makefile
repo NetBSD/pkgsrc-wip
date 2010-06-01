@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3989 2010/05/27 09:37:55 cheusov Exp $
+# $Id: Makefile,v 1.3990 2010/06/01 21:16:31 mwdavies Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1029,6 +1029,7 @@ SUBDIR+=	jupp
 SUBDIR+=	just
 SUBDIR+=	jython
 SUBDIR+=	k3b
+SUBDIR+=	k4dirstat
 SUBDIR+=	kBuild
 SUBDIR+=	kacst-fonts
 SUBDIR+=	kaffe
