@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/06/01 06:05:45 obache Exp $
+# $NetBSD: Makefile,v 1.2 2010/06/01 06:14:49 obache Exp $
 #
 
-PKGNAME=	slashem-0.0.7E7F3nb1
-DISTNAME=	se007e7f3
+DISTNAME=	se${VERSION:tl:S/.//g}
+PKGNAME=	slashem-${VERSION}
 CATEGORIES=	games
-MASTER_SITES=	http://downloads.sourceforge.net/project/slashem/slashem-source/0.0.7E7F3/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=slashem/}
 
 MAINTAINER=	lifanov@mail.lifanov.com
 HOMEPAGE=	http://slashem.sourceforge.net/
@@ -13,16 +13,20 @@ LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-WRKSRC=		${WRKDIR}/slashem-0.0.7E7F3
+WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 USE_LANGUAGES=	c c++
+HAS_CONFIGURE=	yes
 
-pre-configure:
-	cd ${WRKSRC}/sys/unix && chmod +x setup.sh
-	cd ${WRKSRC}/sys/unix && ./setup.sh
-	cd ${WRKSRC} && sed -e "s/\/usr/\/usr\/pkg/" -I "" Makefile
-	cd ${WRKSRC} && sed -e "s/\/local//" -I "" Makefile
+CONFIGURE_SCRIPT=	setup.sh
+CONFIGURE_DIRS=		sys/unix
+BUILD_DIRS=		.
 
-do-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM}
+VERSION=	0.0.7E7F3
+
+SUBST_CLASSES+=		dirs
+SUBST_STAGE.dirs=	post-configure
+SUBST_FILES.dirs=	Makefile
+SUBST_SED.dirs=		-e 's|/usr|${PREFIX}|'
+SUBST_SED.dirs+=	-e 's|/local||'
 
 .include "../../mk/bsd.pkg.mk"
