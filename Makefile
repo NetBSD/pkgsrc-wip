@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3993 2010/06/02 14:57:19 jihbed Exp $
+# $Id: Makefile,v 1.3994 2010/06/02 15:52:38 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -147,6 +147,7 @@ SUBDIR+=	beryl-settings
 SUBDIR+=	beryl-settings-bindings
 SUBDIR+=	beryl-settings-simple
 SUBDIR+=	bibliographer
+SUBDIR+=	bicho
 SUBDIR+=	biopython
 SUBDIR+=	bioruby
 SUBDIR+=	bird
@@ -1227,6 +1228,7 @@ SUBDIR+=	lxterminal
 SUBDIR+=	lzs-lkm
 SUBDIR+=	macaulay2
 SUBDIR+=	mac-robber
+SUBDIR+=	mago
 SUBDIR+=	mailfilter
 SUBDIR+=	majordomo-devel
 SUBDIR+=	makedict
@@ -2103,6 +2105,7 @@ SUBDIR+=	relaydb
 SUBDIR+=	remctl
 SUBDIR+=	resid-builder
 SUBDIR+=	residual-nightly
+SUBDIR+=	repositoryhandler
 SUBDIR+=	rhapsody
 SUBDIR+=	ripe-rpsl-objectlibrary
 SUBDIR+=	ripit
