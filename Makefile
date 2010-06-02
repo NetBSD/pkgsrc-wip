@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3991 2010/06/01 21:40:36 guigui2 Exp $
+# $Id: Makefile,v 1.3992 2010/06/02 08:40:16 obache Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -94,6 +94,7 @@ SUBDIR+=	ap2-macro
 SUBDIR+=	ap2-passenger
 SUBDIR+=	ap2-xsendfile
 SUBDIR+=	ap2-zeroconf
+SUBDIR+=	ap22-layout
 SUBDIR+=	apachebench2
 SUBDIR+=	applewmproto
 SUBDIR+=	apstget
