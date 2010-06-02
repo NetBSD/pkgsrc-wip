@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3992 2010/06/02 08:40:16 obache Exp $
+# $Id: Makefile,v 1.3993 2010/06/02 14:57:19 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -232,6 +232,7 @@ SUBDIR+=	clisp
 SUBDIR+=	cloc
 SUBDIR+=	clockspeed
 SUBDIR+=	clustalx
+SUBDIR+=	cmetrics
 SUBDIR+=	codeblocks
 SUBDIR+=	coldfire
 SUBDIR+=	collectd
