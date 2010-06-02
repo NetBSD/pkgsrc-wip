@@ -1,0 +1,5 @@
+Bicho is a command line based tool used to analyze bug tracking systems.
+It creates a database with three tables. Bugs, which contains general
+information about bugs; Comments, which contains information about each comment
+found in the BTS; and Attachments, wich contains information about each
+attachment found. Also, each Comment and Attachment are associated with a Bug.
