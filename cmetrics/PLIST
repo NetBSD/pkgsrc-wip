@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/06/02 14:54:44 jihbed Exp $
+bin/c_halsfilt
+bin/halstead
+bin/kdsi
+bin/mccabe
+bin/stripcom
+bin/stripstr
+share/doc/cmetrics/README
