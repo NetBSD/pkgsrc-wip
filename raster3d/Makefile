@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/06/01 08:56:07 obache Exp $
+# $NetBSD: Makefile,v 1.4 2010/06/02 09:26:11 obache Exp $
 #
 
 DISTNAME=	Raster3D_2.7s
@@ -28,6 +28,7 @@ MANL=		avs2ps.l label3d.l r3d_objects.l rastep.l render.l rods.l \
 PLIST_SUBST+=	DATADIR="${DATADIR:C/^${PREFIX}\///}"
 PLIST_SUBST+=	DOCSDIR="${DOCSDIR:C/^${PREFIX}\///}"
 PLIST_SUBST+=	EGDIR="${EGDIR:C/^${PREFIX}\///}"
+MESSAGE_SUBST+=	DATADIR=${DATADIR}
 
 .include "options.mk"
 
