@@ -1,13 +1,13 @@
-$NetBSD: distinfo,v 1.29 2010/06/02 15:57:53 tnn2 Exp $
+$NetBSD: distinfo,v 1.30 2010/06/03 08:09:09 tnn2 Exp $
 
 SHA1 (e73cbd31c93e.tar.bz2) = 3bb67d4850ba4a585d96bd972a54b4b82d63459c
 RMD160 (e73cbd31c93e.tar.bz2) = 3e39c94a61157139b560cf5c4ca970fcf4f4d2f0
 Size (e73cbd31c93e.tar.bz2) = 50232486 bytes
 SHA1 (patch-aa) = 18af29cf115ad2b5dc3ec20ef75e701aa9b851a5
-SHA1 (patch-ab) = a9a9db3f53ecac231007de9ed163bd99f2184462
+SHA1 (patch-ab) = 5d4b7512f8bbdc9e2e05709cec5b36dc12c25997
 SHA1 (patch-ac) = e50356963fd235ea11fa45baae356fcf21c6669d
 SHA1 (patch-ad) = 7afb960af4e4a311481e7a7b25008ca9b9f7fba1
-SHA1 (patch-ae) = 6679dd9c28f8029cc0ed2a32ae60da696099f351
+SHA1 (patch-ae) = 338d84f6ffa2eefa942131e3f0b764948ac60e95
 SHA1 (patch-af) = 13a9617cd2894cf342487d2a9cfe8cf3066ba0df
 SHA1 (patch-ag) = a924296e6a569eba4229d661fbe5290eeeb999e0
 SHA1 (patch-ah) = 5f8bf19d5ac5ea7e263366a56d10d2eeeee61bac
