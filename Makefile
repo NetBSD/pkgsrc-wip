@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3995 2010/06/03 14:03:59 jihbed Exp $
+# $Id: Makefile,v 1.3996 2010/06/03 19:10:41 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2334,6 +2334,12 @@ SUBDIR+=	tenshi
 SUBDIR+=	termit
 SUBDIR+=	testdisk
 SUBDIR+=	tetrinet
+SUBDIR+=	tex-arabi
+SUBDIR+=	tex-arabi-doc
+SUBDIR+=	tex-arabtex
+SUBDIR+=	tex-arabtex-doc
+SUBDIR+=	tex-arabxtex
+SUBDIR+=	tex-arabxtex-doc
 SUBDIR+=	tex-arphic-ttf
 SUBDIR+=	tex-baekmuk-ttf
 SUBDIR+=	tex-kochi-ttf
