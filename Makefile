@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3994 2010/06/02 15:52:38 jihbed Exp $
+# $Id: Makefile,v 1.3995 2010/06/03 14:03:59 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1116,6 +1116,7 @@ SUBDIR+=	libfplll
 SUBDIR+=	libgadu
 SUBDIR+=	libgdata
 SUBDIR+=	libgeotiff
+SUBDIR+=	libghemical
 SUBDIR+=	libginac
 SUBDIR+=	libgksu
 SUBDIR+=	libgksuui
