@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/06/03 13:14:55 jihbed Exp $
+
+SHA1 (libghemical-2.99.1.tar.gz) = 745adfda11bb58aee0f984ee30e649c5bf43b8ef
+RMD160 (libghemical-2.99.1.tar.gz) = cdcaa4967d3d1b824e6704092cd168592b9d8585
+Size (libghemical-2.99.1.tar.gz) = 778812 bytes
