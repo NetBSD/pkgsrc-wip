@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/06/03 19:05:20 jihbed Exp $
+share/texmf-dist/doc/xelatex/arabxetex/README
+share/texmf-dist/doc/xelatex/arabxetex/arabxetex.pdf
+share/texmf-dist/doc/xelatex/arabxetex/examples/ednotes_example.pdf
+share/texmf-dist/doc/xelatex/arabxetex/examples/ednotes_example.tex
+share/texmf-dist/doc/xelatex/arabxetex/examples/minimal.tex
