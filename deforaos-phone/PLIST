@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2010/06/01 00:30:54 khorben Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/06/03 20:36:26 khorben Exp $
 bin/phone
 bin/phone-contacts
 bin/phone-dialer
@@ -7,6 +7,7 @@ bin/phone-settings
 include/Phone.h
 lib/Phone/plugins/openmoko.so
 lib/Phone/plugins/profiles.so
+lib/Phone/plugins/smscrypt.so
 share/applications/phone-contacts.desktop
 share/applications/phone-dialer.desktop
 share/applications/phone-messages.desktop
