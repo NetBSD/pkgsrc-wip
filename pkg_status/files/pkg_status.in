@@ -80,6 +80,12 @@ OPTIONS for -k:
   -m         check checksums of installed files (pkg_admin check)
   -U         check for REQUIRES/PROVIDES coherence (pkg_lint_summary -l)
   -d         check presense of dependencies (pkg_lint_summary -d)
+Environment:
+   PKG_SUMMARY      - path to pkg_summary.{txt,gx,bz2},
+                      it defaults to @PACKAGES@/All/pkg_summary.txt
+   PKG_SRC_SUMMARY_CMD - command for generating micro summary,
+                      it defaults to pkg_micro_src_summary,
+                      reasonable (but slower) alternative is pkg_src_summary.
 Example:
    pkg_status -h
    pkg_status -s
