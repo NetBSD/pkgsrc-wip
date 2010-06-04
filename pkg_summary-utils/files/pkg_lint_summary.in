@@ -30,17 +30,17 @@
 #use "psu_funcs.awk"
 #use "has_prefix.awk"
 #use "exitnow.awk"
+#use "braceexpand.awk"
 
 ############################################################
 #.begin-str help
 # pkg_lint_summary - does sanity check for summaries
-# usage: pkg_cmp_summary -h
-#        pkg_cmp_summary [OPTIONS] [files...]
+# usage: pkg_lint_summary -h
+#        pkg_lint_summary [OPTIONS] [files...]
 # OPTIONS:
 #   -h|--help      display this help
 #   -l             checks REQUIRES/PROVIDES fields
-#   -d             checks DEPENDS fields (they present and
-#                  versions are correct)
+#   -d             checks DEPENDS fields (required dependencies are present)
 #.end-str
 ############################################################
 
@@ -138,17 +138,32 @@ END {
 	}
 	if (opt_d){
 		for (d in depends){
-			dep = depends [d]
-			pkgdep=pkgname2pkgbase(dep)
-#			pkgver=pkgname2version(dep)
+			# d: pkgpath SUBSEP pkgname SUBSEP <index>
+			dep    = depends [d]
 
 			split(d, arr, SUBSEP)
-			if (! (pkgdep in pkg2ver)){
-				print "d: not_found", pkgdep, "<-", arr [1], arr [2]
-				ex = 1
+
+			if (dep !~ /[{]/){
+				pkgdep = pkgname2pkgbase(dep)
+				if (! (pkgdep in pkg2ver)){
+					print "d: not_found", dep, "<-", arr [1], arr [2]
+					ex = 1
+				}
+			}else{
+				cnt = split(braceexpand(dep), deps)
+				ok = 0
+				for (i=1; i <= cnt; ++i){
+					pkgdep = pkgname2pkgbase(deps [i])
+					if (pkgdep in pkg2ver){
+						ok = 1
+						break
+					}
+				}
+				if (!ok){
+					print "d2: not_found", dep, "<-", arr [1], arr [2]
+					ex = 1
+				}
 			}
-#			print arr[2]
-#			print d, dep, pkgdep, pkgver
 		}
 	}
 
