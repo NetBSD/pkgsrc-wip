@@ -38,6 +38,7 @@ export LC_ALL=C
 ############################################################
 PKG_INFO_CMD="${PKG_INFO_CMD-@PKG_INFO_CMD@}"
 PKG_DELETE_CMD="${PKG_DELETE_CMD-@PKG_DELETE_CMD@}"
+PKG_ADMIN_CMD="${PKG_ADMIN_CMD-@PKG_ADMIN_CMD@}"
 
 ############################################################
 usage (){
@@ -50,6 +51,7 @@ usage:
   pkg_status -V
   pkg_status -s [-ruaAQDp] [ [--] pkg_info_args ]
   pkg_status -b [-ruaAQD]  [ [--] pkg_info_args ]
+  pkg_status -k [-mUd]     [ [--] pkg_info_args or pkg_admin_args ]
   pkg_status -l [-rtREn]
 
 OPTIONS:
@@ -74,6 +76,10 @@ OPTIONS for -l:
   -R         remove automatically installed leaf packages
   -E         the same as -R but with 'pkg_delete -A'
   -n         pass -n to pkg_delete
+OPTIONS for -k:
+  -m         check checksums of installed files (pkg_admin check)
+  -U         check for REQUIRES/PROVIDES coherence (pkg_lint_summary -l)
+  -d         check presense of dependencies (pkg_lint_summary -d)
 Example:
    pkg_status -h
    pkg_status -s
@@ -85,12 +91,14 @@ Example:
    pkg_status -srA -- pkg_summary-utils
    pkg_status -sp /etc/interesting_pkgs.conf
    pkg_status -lEn
+   pkg_status -km
+   pkg_status -kUd
 EOF
 }
 #  pkg_status -o [OPTIONS]
 #  -o                     compare against packages served by pkg_online server
 
-set -- `getopt hVsbrAauQDp:ltREn $PKG_STATUS_OPTIONS $*`
+set -- `getopt hVsbrAauQDp:ltREnkmUd $PKG_STATUS_OPTIONS $*`
 
 while test $# -ne 0; do
     case "$1" in
@@ -121,6 +129,14 @@ while test $# -ne 0; do
 	-p)
 	    pkgpaths_fn="$2"
 	    shift;;
+	-k)
+	    mode_checks=1;;
+	-m)
+	    check_checksums=1;;
+	-U)
+	    check_reqs_provs=1;;
+	-d)
+	    check_deps=1;;
 	-l)
 	    mode_leaves=1;;
 	-t)
@@ -143,6 +159,29 @@ while test $# -ne 0; do
     esac
     shift
 done
+
+######################################################################
+# top-level options
+
+# temporarty directory
+tmp_dir="/tmp/pkg_src_summary.$$"
+if test -z "$debug"; then
+    trap "rm -rf $tmp_dir" 0 1 2 15
+else
+    echo "Temp directory: $tmp_dir" 1>&2
+fi
+mkdir -m 700 "$tmp_dir"
+
+#
+if test -z "${mode_src}${mode_bin}${mode_leaves}${mode_checks}"; then
+    echo 'Either of the following options must be applied: -s, -b, -k or -l' 1>&2
+    exit 1
+fi
+
+#
+if test $# -eq 0 -a -z "$pkg_info_opts"; then
+    pkg_info_opts=-u
+fi
 
 ######################################################################
 # -l
@@ -183,24 +222,37 @@ if test -n "$mode_leaves"; then
 fi
 
 ######################################################################
+# -k
+if test -n "$mode_checks"; then
+    if test -n "$check_checksums"; then
+	echo ' --------------------- checksums --------------------------'
+	runpipe_base \
+	    $PKG_ADMIN_CMD -qv check "$@" '|' \
+	    grep 'fails .* checksum'
+	if test "$pipestatus_1" -ne 0 -o "$pipestatus_2" -ne 1; then
+	    ex=1
+	fi
+    fi
+
+    if test -n "$check_reqs_provs$check_deps"; then
+	$PKG_INFO_CMD -X -a > $tmp_dir/bin_summary.txt
+    fi
+
+    if test -n "$check_reqs_provs"; then
+	echo ' --------------- REQUIRES/PROVIDES coherence --------------'
+	pkg_lint_summary -l $tmp_dir/bin_summary.txt || ex=1
+    fi
+
+    if test -n "$check_deps"; then
+	echo ' ---------------------- dependencies ----------------------'
+	pkg_lint_summary -d $tmp_dir/bin_summary.txt || ex=1
+    fi
+
+    exit $ex
+fi
+
+######################################################################
 # -s|-b
-if test -z "${mode_src}${mode_bin}${mode_online}"; then
-    echo 'Either of the following options must be applied: -s, -b or -l' 1>&2
-    exit 1
-fi
-
-if test $# -eq 0 -a -z "$pkg_info_opts"; then
-    pkg_info_opts=-u
-fi
-
-# temporarty directory
-tmp_dir="/tmp/pkg_src_summary.$$"
-if test -z "$debug"; then
-    trap "rm -rf $tmp_dir" 0 1 2 15
-else
-    echo "Temp directory: $tmp_dir" 1>&2
-fi
-mkdir -m 700 "$tmp_dir"
 
 ###
 if test -n "$submode_raw"; then

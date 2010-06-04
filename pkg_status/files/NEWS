@@ -1,4 +1,12 @@
 ======================================================================
+Version 0.9.0, by Aleksey Cheusov, Sat,  5 Jun 2010 00:41:42 +0300
+
+  New option -k for "sanity checks" of installed packages.
+     -kU - REQUIRES/PROVIDES coherence
+     -kd - existance of required dependencies
+     -km - 'pkg_admin check'
+
+======================================================================
 Version 0.8.0, by Aleksey Cheusov, Mon, 31 May 2010 15:01:42 +0300
 
   New options:
