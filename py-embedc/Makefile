@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/04/14 20:28:11 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2010/06/04 12:04:13 jihbed Exp $
 #
 
 DISTNAME=	embedc-0.21.tar
@@ -8,7 +8,7 @@ CATEGORIES=	devel python
 MASTER_SITES=	http://pypi.python.org/packages/source/e/embedc/
 EXTRACT_SUFX=	.gz#md5=96a0c4bb74158284a2626ef49bbd0883
 
-MAINTAINER=	kamelderouiche@yahoo.com
+MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://pyembedc.sourceforge.net/
 COMMENT=	Python module for embedding C/C++ 
 #LICENSE=	# TODO: (see mk/license.mk)
