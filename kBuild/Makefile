@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2009/08/01 20:34:24 tnn2 Exp $
+# $NetBSD: Makefile,v 1.3 2010/06/04 09:08:04 tnn2 Exp $
 #
 
-DISTNAME=	kBuild-0.1.5-p1-all
-PKGNAME=	kBuild-0.1.5p1
+DISTNAME=	kBuild-0.1.5-p2-all
+PKGNAME=	kBuild-0.1.5p2
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.netlabs.org/pub/kbuild/
 
@@ -15,7 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
-WRKSRC=			${WRKDIR}/kBuild-0.1.5-p1
+WRKSRC=			${WRKDIR}/kBuild-0.1.5-p2
 
 USE_TOOLS+=	pax gmake autoconf automake autoreconf perl flex bison
 
