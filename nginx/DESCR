@@ -8,3 +8,9 @@ Online Security Blog nginx serves or proxies about 4% of all Internet virtual
 hosts, although Netcraft shows much less percent.
 
 The sources are licensed under a BSD-like license.
+
+===========================================================================
+NOTE!
+This is stable nginx branch. For newest available (devel) see www/nginx. 
+===========================================================================
+

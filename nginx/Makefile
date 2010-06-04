@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.27 2010/06/01 16:05:05 anielski Exp $
+# $NetBSD: Makefile,v 1.28 2010/06/04 10:04:39 anielski Exp $
 
 DISTNAME=		nginx-0.7.65
-#PKGREVISION=		2
+DISTFILES=		${DEFAULT_DISTFILES}
+#PKGREVISION=		3
 CATEGORIES=		www
 MASTER_SITES=		http://sysoev.ru/nginx/
 
 MAINTAINER=		aniou@smutek.pl
 HOMEPAGE=		http://nginx.net/
-COMMENT=		Lightweight HTTP server and mail proxy server
+COMMENT=		Lightweight HTTP server and mail proxy server (stable branch)
 LICENSE=		2-clause-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -50,7 +51,8 @@ CONFIGURE_ARGS+=	--http-fastcgi-temp-path=${NGINX_DATADIR}/fstcgi_temp
 PKG_SYSCONFSUBDIR=	nginx
 
 EGDIR=			${PREFIX}/share/examples/nginx
-EGFILES=		fastcgi_params koi-utf koi-win mime.types nginx.conf win-utf
+EGFILES=		fastcgi.conf fastcgi_params koi-utf koi-win \
+			mime.types nginx.conf win-utf
 
 .for file in ${EGFILES}
 CONF_FILES+=		${EGDIR}/conf/${file} ${PKG_SYSCONFDIR}/${file}
@@ -62,7 +64,7 @@ INSTALLATION_DIRS=	sbin share/examples/nginx/conf share/examples/nginx/html
 OWN_DIRS=		${NGINX_LOGDIR}
 OWN_DIRS_PERMS+=	${NGINX_DATADIR} ${NGINX_USER} ${NGINX_GROUP} 0700
 
-BUILD_DEFS+=		PKG_SYSCONFBASE NGINX_LOGDIR ${NGINX_PIDDIR} VARBASE
+BUILD_DEFS+=		NGINX_DATADIR NGINX_LOGDIR NGINX_PIDDIR
 
 BUILD_TARGET=		build
 
