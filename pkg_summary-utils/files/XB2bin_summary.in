@@ -162,6 +162,9 @@ END {
 	if (!need_reqd)
 		exitnow(0)
 
+	##########################################################################
+	### REQUIREDBY section
+
 	# close file with bin_summaries
 	printf "" > out_file
 	xclose(out_file)
