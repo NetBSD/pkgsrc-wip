@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2010/04/06 11:52:37 obache Exp $
+# $NetBSD: Makefile,v 1.10 2010/06/04 04:23:30 obache Exp $
 #
 
-DISTNAME=	ibus-chewing-1.2.99.20100317-Source
+DISTNAME=	ibus-chewing-1.3.4.20100605-Source
 PKGNAME=	${DISTNAME:S/-Source//}
 CATEGORIES=	inputmethod chinese
 MASTER_SITES=	http://ibus.googlecode.com/files/
@@ -32,7 +32,6 @@ CMAKE_ARGS+=	-DGCONF_SCHEMAS_INSTALLED_DIR=${GCONF_SCHEMAS_DIR}
 
 .include "../../devel/GConf/schemas.mk"
 .include "../../wip/ibus/buildlink3.mk"
-.include "../../devel/gob2/buildlink3.mk"
 .include "../../inputmethod/libchewing/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
