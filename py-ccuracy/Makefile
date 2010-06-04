@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/05/22 23:37:52 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2010/06/04 11:57:31 jihbed Exp $
 #
 
 DISTNAME=	Pyccuracy-1.2.23.tar
@@ -8,7 +8,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://pypi.python.org/packages/source/P/Pyccuracy/
 EXTRACT_SUFX=	.gz#md5=5ed9658da71bbc1ba0956833179b4d8a
 
-MAINTAINER=	kamelderouiche@yahoo.com
+MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://www.pyccuracy.org/
 COMMENT=	Pyccuracy is a BDD style Acceptance Testing framework
 #LICENSE=	# TODO: (see mk/license.mk)
