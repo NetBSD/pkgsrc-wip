@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/02/09 19:06:25 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2010/06/05 08:48:29 obache Exp $
 #
 
 DISTNAME=	blop-0.2.8
@@ -8,8 +8,10 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=blop/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://blop.sourceforge.net/
 COMMENT=	Bandlimited LADSPA Oscillator Plugins
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
 
