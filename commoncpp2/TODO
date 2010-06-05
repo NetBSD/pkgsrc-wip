@@ -1,0 +1,1 @@
+* Change overwrite of ac_cv_* to conditionally.
