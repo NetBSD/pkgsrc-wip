@@ -1,29 +1,38 @@
-$NetBSD: patch-aa,v 1.1 2007/09/08 16:45:16 thomasklausner Exp $
+$NetBSD: patch-aa,v 1.2 2010/06/05 11:39:26 obache Exp $
 
---- configure.orig	2007-06-12 12:43:52.000000000 +0000
+kill /opt in $prefix handling, or not works expected if ${LOCALBASE} start with
+/opt.
+
+--- configure.orig	2010-02-24 13:58:06.000000000 +0000
 +++ configure
-@@ -1580,18 +1580,18 @@ fi;
+@@ -2659,30 +2659,6 @@ if test "${with_lsb+set}" = set; then :
+ fi
  
- case "$prefix" in
- /opt/*)
+ 
+-case "$prefix" in
+-/opt/*)
 -	if test "$datadir" == '${prefix}/share' ; then
 -		if test "$mandir" == '${datadir}/man' ; then
-+	if test "$datadir" = '${prefix}/share' ; then
-+		if test "$mandir" = '${datadir}/man' ; then
- 			mandir='${prefix}/man' ; fi
+-			mandir='${prefix}/man' ; fi
 -		if test "$infodir" == '${datadir}/info' ; then
-+		if test "$infodir" = '${datadir}/info' ; then
- 			infodir='${prefix}/info' ; fi
- 		datadir='${prefix}'
- 	fi
+-			infodir='${prefix}/info' ; fi
+-		datadir='${prefix}'
+-	fi
 -	if test "$sysconfdir" == '${prefix}/etc' ; then
-+	if test "$sysconfdir" = '${prefix}/etc' ; then
- 		sysconfdir=/etc${prefix} ; fi
+-		sysconfdir=/etc${prefix} ; fi
 -	if test "$localstatedir" == '${prefix}/var' ; then
-+	if test "$localstatedir" = '${prefix}/var' ; then
- 		localstatedir=/var${prefix} ; fi
+-		localstatedir=/var${prefix} ; fi
 -	if test "$includedir" == '${prefix}/include' ; then
-+	if test "$includedir" = '${prefix}/include' ; then
- 		ccincludedir="$includedir" ; fi
- 
- 
+-		ccincludedir="$includedir" ; fi
+-
+-
+-
+-
+-
+-
+-	;;
+-esac
+-
+ if test -z "$ccincludedir" ; then
+ 	case "$includedir" in
+ 	*/lib/*)
