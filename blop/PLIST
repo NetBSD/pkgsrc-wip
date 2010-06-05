@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:29 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.3 2010/06/05 09:21:04 obache Exp $
 lib/ladspa/adsr_1653.so
 lib/ladspa/adsr_1680.so
 lib/ladspa/amp_1654.so
@@ -28,3 +28,5 @@ lib/ladspa/sync_pulse_2023.so
 lib/ladspa/sync_square_1678.so
 lib/ladspa/tracker_2025.so
 lib/ladspa/triangle_1649.so
+share/locale/de/LC_MESSAGES/blop.mo
+share/locale/en_GB/LC_MESSAGES/blop.mo

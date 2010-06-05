@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/06/05 09:01:10 obache Exp $
+# $NetBSD: Makefile,v 1.4 2010/06/05 09:21:04 obache Exp $
 #
 
 DISTNAME=	blop-0.2.8
@@ -13,8 +13,10 @@ LICENSE=	gnu-gpl-v2
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
+USE_PKGLOCALEDIR=	yes
 
 CONFIGURE_ARGS+=	--with-ladspa-prefix=${BUILDLINK_PREFIX.ladspa}
 
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../audio/ladspa/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
