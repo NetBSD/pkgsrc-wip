@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/01/18 09:38:21 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2010/06/05 11:53:42 obache Exp $
 #
 
 DISTNAME=	flimsel-0.0.6
@@ -11,9 +11,10 @@ HOMEPAGE=	http://www.ecademix.com/JohannesHofmann/flimsel.html
 COMMENT=	Fast Light Image Selector
 LICENSE=	gnu-gpl-v3
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../graphics/epeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
