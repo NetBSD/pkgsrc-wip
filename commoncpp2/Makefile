@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2010/06/05 11:28:58 obache Exp $
+# $NetBSD: Makefile,v 1.16 2010/06/05 11:33:03 obache Exp $
 #
 
 DISTNAME=		commoncpp2-1.8.0
@@ -14,15 +14,17 @@ LICENSE=		gnu-gpl-v2
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
-USE_LANGUAGES+=		c c++
+INFO_FILES=		yes
+USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
+USE_PKGLOCALEDIR=	yes
+
+PKGCONFIG_OVERRIDE+=	${WRKSRC}/src/libccgnu2.pc.in
+PKGCONFIG_OVERRIDE+=	${WRKSRC}/src/libccext2.pc.in
+
 CONFIGURE_ARGS+=	--with-openssl
 CONFIGURE_ENV+=		ac_cv_lib_rt_clock_gettime=no
 CONFIGURE_ENV+=		ac_cv_func_clock_gettime=no
-PKGCONFIG_OVERRIDE+=	${WRKSRC}/src/libccgnu2.pc.in
-PKGCONFIG_OVERRIDE+=	${WRKSRC}/src/libccext2.pc.in
-USE_PKGLOCALEDIR=	yes
-INFO_FILES=		yes
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
