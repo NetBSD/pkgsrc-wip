@@ -1,2 +1,0 @@
-1. sfquery is located in lib/perl5/vendor_perl/bin, 
-   probably should be placed in ${PREFIX}/bin
