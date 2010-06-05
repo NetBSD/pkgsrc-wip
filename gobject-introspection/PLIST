@@ -1,9 +1,13 @@
-@comment $NetBSD: PLIST,v 1.4 2010/05/24 07:29:27 obache Exp $
+@comment $NetBSD: PLIST,v 1.5 2010/06/05 13:52:10 obache Exp $
 bin/g-ir-compiler
 bin/g-ir-generate
 bin/g-ir-scanner
+include/gobject-introspection-1.0/gibaseinfo.h
+include/gobject-introspection-1.0/gifunctioninfo.h
 include/gobject-introspection-1.0/girepository.h
 include/gobject-introspection-1.0/girffi.h
+include/gobject-introspection-1.0/gitypelib.h
+include/gobject-introspection-1.0/gitypes.h
 lib/girepository-1.0/Everything-1.0.typelib
 lib/girepository-1.0/GIMarshallingTests-1.0.typelib
 lib/girepository-1.0/GIRepository-2.0.typelib
