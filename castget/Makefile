@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2010/04/27 05:22:20 guigui2 Exp $
+# $NetBSD: Makefile,v 1.12 2010/06/05 09:54:54 obache Exp $
 #
 
 DISTNAME=	castget-1.1.0
@@ -9,6 +9,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	netbsd@guigui2.net
 HOMEPAGE=	http://castget.nongnu.org/
 COMMENT=	Command-line RSS enclosures dowloader
+LICENSE=	gnu-lgpl-v2.1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
