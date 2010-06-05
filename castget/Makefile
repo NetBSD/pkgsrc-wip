@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2010/06/05 09:57:34 obache Exp $
+# $NetBSD: Makefile,v 1.14 2010/06/05 10:00:40 obache Exp $
 #
 
 DISTNAME=	castget-1.1.0
@@ -16,7 +16,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c
-USE_TOOLS+=	gmake intltool pkg-config
+USE_TOOLS+=	pkg-config
 
 INSTALLATION_DIRS=	share/examples
 
