@@ -16,7 +16,8 @@ existing tools:
        - automatic removal of #-comments
 
     pkg_grep_summary:
-       - -M <field> <file with patterns>
+       - -f <fields>   output only specified fields, this
+                       may work drammatically faster
        - -g <field> <str1 str2 ... strN> (same as -S but without files)
 
     pkg_list_all_pkgs:
