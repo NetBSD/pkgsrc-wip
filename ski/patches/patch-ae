@@ -1,6 +1,6 @@
-$NetBSD: patch-ae,v 1.1.1.1 2010/01/12 09:22:15 cherrymathew Exp $
+$NetBSD: patch-ae,v 1.2 2010/06/06 15:35:46 cherrymathew Exp $
 
---- configure.ac.orig	2008-02-05 04:11:37.000000000 +0000
+--- configure.ac.orig	2008-02-05 09:41:37.000000000 +0530
 +++ configure.ac
 @@ -33,12 +33,14 @@ case $host_os in
      linux*)	HOST_OS=linux;;
@@ -28,7 +28,21 @@ $NetBSD: patch-ae,v 1.1.1.1 2010/01/12 09:22:15 cherrymathew Exp $
  dnl Check for optional libs
  AC_CHECK_LIB(unwind-ia64, _Uia64_get_proc_name, )
  
-@@ -347,6 +353,7 @@ case $host_os in
+@@ -331,6 +337,13 @@ if test "$HOST_OS" = hpux; then
+         check_curses=no], [])
+ fi    
+ 
++if test "$HOST_OS" = netbsd; then
++    # Not ported to NetBSD curses yet.
++    AC_SEARCH_LIBS(tgetent, ncurses,
++	[check_curses=no],
++	[AC_MSG_ERROR(Required ncurses library not found.)])
++fi
++
+ if test "x$check_curses" != xno; then
+ AC_CHECK_LIB(curses, tgetent, [],
+     [AC_CHECK_LIB(ncurses, tgetent, ,
+@@ -347,6 +360,7 @@ case $host_os in
      hpux10*)	CFLAGS="$CFLAGS -DHPUX1020";;
      hpux11*)	CFLAGS="$CFLAGS -DHPUX1100";;
      freebsd*)	CFLAGS="$CFLAGS -DFREEBSD -D__linux__";;
