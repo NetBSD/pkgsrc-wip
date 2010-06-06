@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/01/02 20:16:04 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2010/06/06 10:34:51 jihbed Exp $
 #
 
 DISTNAME=	openbabel-2.2.3
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=openbabel/}
 MAINTAINER=	oivulf@gmail.com
 HOMEPAGE=	http://openbabel.sourceforge.net/
 COMMENT=	Chemistry file translation program
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
