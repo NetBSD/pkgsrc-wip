@@ -1,0 +1,3 @@
+Ghemical is a computational chemistry software package written in C++. It has a graphical user interface and it supports both quantum- mechanics (semi-empirical) models and molecular mechanics models. Geometry optimization, molecular dynamics and a large set of visualization tools using OpenGL are currently available.
+
+Ghemical relies on external code to provide the quantum-mechanical calculations. Semi-empirical methods MNDO, MINDO/3, AM1 and PM3 come from the MOPAC7 package (Public Domain), and are included in the package. The MPQC package is used to provide ab initio methods: the methods based on Hartree-Fock theory are currently supported with basis sets ranging from STO-3G to 6-31G**. 
