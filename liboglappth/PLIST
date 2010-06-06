@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/06/06 16:02:26 jihbed Exp $
+include/oglappth/base_app.h
+include/oglappth/base_wcl.h
+include/oglappth/base_wnd.h
+include/oglappth/ogl_camera.h
+include/oglappth/ogl_lights.h
+include/oglappth/ogl_objects.h
+include/oglappth/oglv3d.h
+include/oglappth/transparent.h
+lib/liboglappth.la
+lib/pkgconfig/liboglappth.pc
