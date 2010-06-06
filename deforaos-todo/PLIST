@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2010/06/06 15:23:33 khorben Exp $
+bin/todo
+share/applications/todo.desktop
+share/locale/fr/LC_MESSAGES/Todo.mo
