@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.12 2010/06/06 02:36:33 obache Exp $
+# $Id: Makefile,v 1.13 2010/06/06 02:39:45 obache Exp $
 #
 
 DISTNAME=	Mail-SPF-v2.007
@@ -7,7 +7,7 @@ CATEGORIES=	mail perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Mail/}
 
 MAINTAINER=	aniou@smutek.pl
-HOMEPAGE=	http://search.cpan.org/~jmehnle/Mail-SPF-v2.00/7
+HOMEPAGE=	http://search.cpan.org/dist/Mail-SPF/
 COMMENT=	Perl implementation of the Sender Policy Framework
 LICENSE=	modified-bsd
 
