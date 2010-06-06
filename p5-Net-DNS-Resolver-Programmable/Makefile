@@ -1,8 +1,8 @@
-# $Id: Makefile,v 1.5 2010/06/05 17:15:14 anielski Exp $
+# $Id: Makefile,v 1.6 2010/06/06 01:41:35 obache Exp $
 #
 
 DISTNAME=	Net-DNS-Resolver-Programmable-v0.003
-PKGNAME=	p5-Net-DNS-Resolver-Programmable-0.003
+PKGNAME=	p5-${DISTNAME:S/-v/-/}
 CATEGORIES=	net perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
 
