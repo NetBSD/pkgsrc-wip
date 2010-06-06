@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.9 2010/06/06 02:04:00 obache Exp $
+# $Id: Makefile,v 1.10 2010/06/06 02:08:27 obache Exp $
 #
 
 DISTNAME=	Mail-SPF-v2.007
@@ -20,7 +20,7 @@ DEPENDS+=	p5-version-[0-9]*:../../devel/p5-version
 DEPENDS+=	p5-Error-[0-9]*:../../devel/p5-Error
 DEPENDS+=	p5-NetAddr-IP>=4.000:../../net/p5-NetAddr-IP
 DEPENDS+=	p5-Net-DNS>=0.58:../../net/p5-Net-DNS
-DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
+DEPENDS+=	p5-URI>=1.13:../../www/p5-URI
 
 SUBST_CLASSES+=		fix
 
