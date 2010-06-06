@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.10 2010/06/06 02:08:27 obache Exp $
+# $Id: Makefile,v 1.11 2010/06/06 02:27:23 obache Exp $
 #
 
 DISTNAME=	Mail-SPF-v2.007
@@ -23,11 +23,10 @@ DEPENDS+=	p5-Net-DNS>=0.58:../../net/p5-Net-DNS
 DEPENDS+=	p5-URI>=1.13:../../www/p5-URI
 
 SUBST_CLASSES+=		fix
-
 SUBST_STAGE.fix=	pre-configure
 SUBST_FILES.fix=	Build.PL
-SUBST_SED.fix=		-e "s,^\\(.*'sbin' *=> *\\)'/usr/sbin',\\1 '${PREFIX}/sbin'\\, 'script' => '${PREFIX}/bin',"
-SUBST_MESSAGE.fix=	Fixing hardcoded spfd/spfquery pathes
+SUBST_SED.fix=		-e "s,'/usr/sbin','${PREFIX}/sbin',"
+SUBST_MESSAGE.fix=	Fixing hardcoded spfd pathes
 
 REPLACE_PERL=	sbin/spfd bin/spfquery
 
