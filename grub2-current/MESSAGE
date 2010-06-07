@@ -1,20 +1,20 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2009/12/21 17:41:00 gregoire Exp $
+$NetBSD: MESSAGE,v 1.2 2010/06/07 01:15:16 gregoire Exp $
 
 GRUB 2 is in development stage and is still neither complete nor well
-tested. Anyways, just installing this package can do no harm.
+tested.  Anyways, just installing this package can do no harm.
 
-To actually install GRUB 2 to disk, use grub2-install utility. Do not do it
-unless you understand what it actually does, for it may lead to loss of
-data when used improperly. Refer to the address below for more information.
+To actually install GRUB 2 to disk, use grub2-install utility.  Do not do
+it unless you understand what it actually does, for it may lead to loss of
+data when used improperly.
 
-Be sure to consult GRUB wiki [1] before using GRUB 2, and in particular the
-manual [2].
+Please visit the official web page of GRUB 2, for more information.  The
+URL is <http://www.gnu.org/software/grub/grub.html>.
 
-Using package emulator/qemu for testing GRUB 2 is a good idea, indeed.
+For now, there is not much documentation yet.  Please look at the GRUB
+Wiki <http://grub.enbug.org> for testing procedures.
 
-Enjoy GRUB. Your feedback is welcome.
+Using package emulators/qemu for testing GRUB 2 is a good idea, indeed.
 
-[1] http://grub.enbug.org/
-[2] http://grub.enbug.org/Manual
+Enjoy GRUB.  Your feedback is welcome.
 ===========================================================================
