@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2010/05/24 17:19:07 gregoire Exp $
+@comment $NetBSD: PLIST,v 1.13 2010/06/07 01:45:38 gregoire Exp $
 bin/grub2-bin2h
 bin/grub2-editenv
 bin/grub2-fstest
@@ -43,6 +43,7 @@ lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/cpuid.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/crc.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/crypto.lst
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/crypto.mod
+lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/cs5536.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/date.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/datehook.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/datetime.mod
