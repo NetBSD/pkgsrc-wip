@@ -1,11 +1,11 @@
-# $NetBSD: download.mk,v 1.3 2010/05/24 17:19:07 gregoire Exp $
+# $NetBSD: download.mk,v 1.4 2010/06/07 00:55:25 gregoire Exp $
 #
 
 BUILD_DEPENDS+=		bzr>=1.0:../../devel/bzr
 BUILD_DEPENDS+=		rsync>=3.0:../../net/rsync
 
 DISTFILES?=		# empty
-BZR_REPOSITORY=		http://bzr.savannah.gnu.org/r/grub/people/gsutre/netbsd
+BZR_REPOSITORY=		http://bzr.savannah.gnu.org/r/grub/people/gsutre/fixes
 UNIFONT_URL=		http://unifoundry.com/unifont-5.1.20080820.pcf.gz
 UNIFONT_EXT=		pcf.gz
 
