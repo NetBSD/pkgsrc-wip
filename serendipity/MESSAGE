@@ -1,0 +1,9 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2010/06/08 08:48:25 tonnerre Exp $
+
+Please read ${DOCDIR}/README for further instructions.
+
+If you are upgrading from an older version of Serendipity,
+reading ${DOCDIR}/UPGRADE will probably help.
+
+===========================================================================
