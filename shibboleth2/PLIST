@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/12/18 00:17:32 pettai Exp $
+@comment $NetBSD: PLIST,v 1.3 2010/06/08 12:24:23 pettai Exp $
 bin/mdquery
 bin/resolvertest
 include/shibsp/AbstractSPRequest.h
@@ -53,12 +53,12 @@ include/shibsp/util/TemplateParameters.h
 include/shibsp/version.h
 lib/libshibsp-lite.a
 lib/libshibsp-lite.so
-lib/libshibsp-lite.so.3
-lib/libshibsp-lite.so.3.0.1
+lib/libshibsp-lite.so.4
+lib/libshibsp-lite.so.4.0.1
 lib/libshibsp.a
 lib/libshibsp.so
-lib/libshibsp.so.3
-lib/libshibsp.so.3.0.1
+lib/libshibsp.so.4
+lib/libshibsp.so.4.0.1
 lib/shibboleth/adfs-lite.la
 lib/shibboleth/adfs.la
 lib/shibboleth/mod_shib_22.la
@@ -101,6 +101,8 @@ share/examples/shibboleth/metadataError.html.dist
 share/examples/shibboleth/metagen.sh
 share/examples/shibboleth/native.logger
 share/examples/shibboleth/native.logger.dist
+share/examples/shibboleth/partialLogout.html
+share/examples/shibboleth/partialLogout.html.dist
 share/examples/shibboleth/postTemplate.html
 share/examples/shibboleth/postTemplate.html.dist
 share/examples/shibboleth/sessionError.html

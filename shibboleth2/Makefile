@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.3 2010/01/17 12:03:32 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2010/06/08 12:24:22 pettai Exp $
 #
 
 DISTNAME=	shibboleth-sp-${PKGVERSION}
 PKGNAME=	shibboleth2-${PKGVERSION}
-PKGVERSION=	2.2.1
-PKGREVISION=	1
+PKGVERSION=	2.3.1
 CATEGORIES=	www
 MASTER_SITES=	http://shibboleth.internet2.edu/downloads/shibboleth/cppsp/latest/
 
-MAINTAINER=	pettai@nordu.net
+MAINTAINER=	pettai@NetBSD.org
 HOMEPAGE=	http://shibboleth.internet2.edu/
 COMMENT=	Shibboleth2 Service Provider (Apache module)
 #LICENSE=	apache-2.0
@@ -21,7 +20,7 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--with-xmltooling=${PREFIX:Q}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 
-WRKSRC=		${WRKDIR}/shibboleth-2.2.1
+WRKSRC=		${WRKDIR}/shibboleth-2.3.1
 EGDIR=		${PREFIX}/share/examples/shibboleth
 
 USE_LIBTOOL=	yes
@@ -62,18 +61,17 @@ INSTALLATION_DIRS+=     ${PREFIX}/include/shibsp/metadata
 INSTALLATION_DIRS+=	${PREFIX}/include/shibsp/remoting
 INSTALLATION_DIRS+=	${PREFIX}/include/shibsp/security
 INSTALLATION_DIRS+=	${PREFIX}/include/shibsp/util
-INSTALLATION_DIRS+=	${PREFIX}/share/doc/shibboleth-2.2.1
-INSTALLATION_DIRS+=     ${PREFIX}/share/doc/shibboleth-2.2.1/api
+INSTALLATION_DIRS+=	${PREFIX}/share/doc/shibboleth-${PKGVERSION}
+INSTALLATION_DIRS+=     ${PREFIX}/share/doc/shibboleth-${PKGVERSION}/api
 INSTALLATION_DIRS+=     ${PREFIX}/share/xml/shibboleth
 INSTALLATION_DIRS+=     ${PREFIX}/lib/shibboleth
 INSTALLATION_DIRS+=	${VARBASE}/log/shibboleth
 
 .include "../../security/openssl/buildlink3.mk"
-.include "../../wip/log4shib/buildlink3.mk"
+.include "../../devel/log4shib/buildlink3.mk"
 .include "../../textproc/xerces-c/buildlink3.mk"
-#.include "../../security/xmlsec1/buildlink3.mk"
 .include "../../security/xml-security-c/buildlink3.mk"
-.include "../../wip/xmltooling-c/buildlink3.mk"
-.include "../../wip/opensaml2/buildlink3.mk"
+.include "../../textproc/xmltooling/buildlink3.mk"
+.include "../../security/opensaml/buildlink3.mk"
 .include "../../mk/apache.mk"
 .include "../../mk/bsd.pkg.mk"
