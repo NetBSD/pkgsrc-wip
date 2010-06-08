@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/03/01 14:43:10 asau Exp $
+# $NetBSD: Makefile,v 1.5 2010/06/08 16:14:56 thomasklausner Exp $
 #
 
 DISTNAME=		azureus-2.2.0.2
@@ -45,5 +45,5 @@ do-install:
 	${INSTALL} ${WRKSRC}/plugins/azupdater/*.jar ${DESTDIR}${PREFIX}/share/azureus/plugins/azupdater/
 	${INSTALL} ${WRKSRC}/plugins/azupdater/*.properties ${DESTDIR}${PREFIX}/share/azureus/plugins/azupdater/
 
-.include "../../lang/sun-jre15/buildlink3.mk"
+.include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
