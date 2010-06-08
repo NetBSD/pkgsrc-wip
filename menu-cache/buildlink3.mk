@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2009/10/22 00:44:47 jeremy-c-reed Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2010/06/08 16:05:09 thomasklausner Exp $
 # XXX
 # XXX This file was created automatically using createbuildlink-3.14.
 # XXX After this file has been verified as correct, the comment lines
@@ -16,7 +16,7 @@ BUILDLINK_TREE+=	menu-cache
 MENU_CACHE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.menu-cache+=	menu-cache>=0.2.3
-BUILDLINK_PKGSRCDIR.menu-cache?=	../../new/menu-cache
+BUILDLINK_PKGSRCDIR.menu-cache?=	../../wip/menu-cache
 
 # XXX
 # XXX Uncomment and keep only the buildlink3 lines below which are directly
