@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/01/17 10:20:46 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2010/06/08 13:51:36 thomasklausner Exp $
 #
 
 DISTNAME=		msworkbench-0.3
@@ -8,6 +8,8 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=msworkbench/}
 MAINTAINER=		mchittur@cs.nmsu.edu
 HOMEPAGE=		http://msworkbench.sourceforge.net/
 COMMENT=		Set of tools for development of MapServer web mapping applications
+
+DEPENDS+=		mapserver-[0-9]*:../../geography/mapserver
 
 WRKSRC=			${WRKDIR}/msworkbench
 
@@ -25,5 +27,4 @@ do-install:
 
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../x11/tk/buildlink3.mk"
-.include "../../wip/mapserver/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
