@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/04/06 11:44:54 obache Exp $
+# $NetBSD: Makefile,v 1.3 2010/06/08 16:11:25 thomasklausner Exp $
 #
 
 DISTNAME=	tegaki-python-0.3.1
@@ -14,7 +14,7 @@ DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 # optional for desktop applications, see tegaki/character.py
 #DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
-DEPENDS+=	${PYPKGPREFIX}-zinnia>=0.05:../../wip/py-zinnia
+DEPENDS+=	${PYPKGPREFIX}-zinnia>=0.05:../../inputmethod/py-zinnia
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
