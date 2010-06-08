@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/04/22 12:53:11 obache Exp $
+# $NetBSD: Makefile,v 1.7 2010/06/08 23:27:51 schaecsn Exp $
 #
 
 DISTNAME=	bogomips-1.4.2
@@ -19,11 +19,13 @@ WRKSRC=	${WRKDIR}/${PKGBASE}
 PKG_OPTIONS_VAR=	PKG_OPTIONS.bogomips
 PKG_SUPPORTED_OPTIONS=	# empty
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
-PKG_SUPPORTED_OPTIONS+=	bogomips-pentium # version for pentium and above
-PKG_SUGGESTED_OPTIONS+=	bogomips-pentium # disable for i[34]86
+PKG_SUPPORTED_OPTIONS+=	bogomips-pentium # Version for pentium and above,
+PKG_SUGGESTED_OPTIONS+=	bogomips-pentium # disable for i[34]86.
 .endif
 .if ${MACHINE_ARCH} == "arm"
 PKG_OPTIONS_OPTIONAL_GROUPS+=	arm
+# Portable bogomips version will be build for ARM, except for ARM IPAQ or ARM
+# Shark architectures, if the corresponding option is set.
 PKG_OPTIONS_GROUP.arm=	bogomips-arm-ipaq bogomips-arm-shark
 .endif
 
