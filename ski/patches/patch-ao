@@ -1,8 +1,8 @@
-$NetBSD: patch-ao,v 1.1.1.1 2010/01/12 09:22:15 cherrymathew Exp $
+$NetBSD: patch-ao,v 1.2 2010/06/09 14:54:03 cherrymathew Exp $
 
---- src/netbsd/syscall-netbsd.c.orig	2009-12-16 12:47:32.000000000 +0000
+--- src/netbsd/syscall-netbsd.c.orig	2010-06-09 19:58:06.000000000 +0530
 +++ src/netbsd/syscall-netbsd.c
-@@ -0,0 +1,655 @@
+@@ -0,0 +1,662 @@
 +/*
 + * Copyright (C) 1995-2007, Hewlett-Packard Development Company, L.P.
 + *
@@ -165,6 +165,11 @@ $NetBSD: patch-ao,v 1.1.1.1 2010/01/12 09:22:15 cherrymathew Exp $
 +
 +	*status = 0;
 +
++	/* syscalls and user space support not available for NetBSD */
++	ret = ENOSYS;
++	goto out;
++
++#if 0
 +	if (num == SYS___syscall) {
 +		num = arg0;
 +		arg0 = arg1;
@@ -651,10 +656,12 @@ $NetBSD: patch-ao,v 1.1.1.1 2010/01/12 09:22:15 cherrymathew Exp $
 +		*status = ~0ULL;
 +	} else
 +		*ret = res;
++#endif
 +
 + out:	;
 +#if 0
 +	printf(" = %llx,%llx\n", *status, *ret);
 +#endif
++
 +}
 +
