@@ -1,0 +1,4 @@
+clustershell is a distributed shell that provides an efficient python
+interface Event-based Python library to execute commands on local or
+distant cluster nodes in parallel depending on the selected engine
+and worker mechanisms.
