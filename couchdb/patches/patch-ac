@@ -1,10 +1,8 @@
-$NetBSD: patch-ac,v 1.2 2010/02/12 12:21:28 fhajny Exp $
+$NetBSD: patch-ac,v 1.3 2010/06/09 13:20:48 fhajny Exp $
 
-Remove the logrotate.d template.
-
---- etc/Makefile.in.orig	2009-11-24 23:54:07.000000000 +0000
+--- etc/Makefile.in.orig	2010-03-23 18:26:13.000000000 +0000
 +++ etc/Makefile.in
-@@ -264,14 +264,13 @@ version_minor = @version_minor@
+@@ -272,14 +272,13 @@ version_minor = @version_minor@
  version_release = @version_release@
  version_revision = @version_revision@
  version_stage = @version_stage@
@@ -16,13 +14,13 @@ Remove the logrotate.d template.
  @LAUNCHD_TRUE@launchd_DATA = launchd/org.apache.couchdb.plist
 -nobase_sysconf_DATA = $(default_sysconf_data) $(init_sysconf_data)
 +nobase_sysconf_DATA = $(init_sysconf_data)
- EXTRA_DIST = $(init_sysconf_data)
+ EXTRA_DIST = default/couchdb $(am__append_1)
 -CLEANFILES = $(init_DATA) $(default_sysconf_data) $(launchd_DATA)
 +CLEANFILES = $(init_DATA) $(launchd_DATA)
  couchdb_command_name = `echo couchdb | sed '$(transform)'`
  all: all-recursive
  
-@@ -707,9 +706,6 @@ init/couchdb: init/couchdb.tpl
+@@ -715,9 +714,6 @@ init/couchdb: init/couchdb.tpl
  	    -e "s|%couchdb_command_name%|$(couchdb_command_name)|" \
  	< $< > $@
  

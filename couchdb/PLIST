@@ -1,11 +1,12 @@
-@comment $NetBSD: PLIST,v 1.2 2010/02/12 12:21:28 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.3 2010/06/09 13:20:48 fhajny Exp $
 bin/couchdb
 bin/couchjs
 libexec/couchdb/couchjs
 lib/erlang/lib/couch-${PKGVERSION}/ebin/couch.app
-lib/erlang/lib/couch-${PKGVERSION}/ebin/couch_batch_save.beam
-lib/erlang/lib/couch-${PKGVERSION}/ebin/couch_batch_save_sup.beam
+lib/erlang/lib/couch-${PKGVERSION}/ebin/couch.beam
+lib/erlang/lib/couch-${PKGVERSION}/ebin/couch_app.beam
 lib/erlang/lib/couch-${PKGVERSION}/ebin/couch_btree.beam
+lib/erlang/lib/couch-${PKGVERSION}/ebin/couch_changes.beam
 lib/erlang/lib/couch-${PKGVERSION}/ebin/couch_config.beam
 lib/erlang/lib/couch-${PKGVERSION}/ebin/couch_config_writer.beam
 lib/erlang/lib/couch-${PKGVERSION}/ebin/couch_db.beam
@@ -23,6 +24,7 @@ lib/erlang/lib/couch-${PKGVERSION}/ebin/couch_httpd_db.beam
 lib/erlang/lib/couch-${PKGVERSION}/ebin/couch_httpd_external.beam
 lib/erlang/lib/couch-${PKGVERSION}/ebin/couch_httpd_misc_handlers.beam
 lib/erlang/lib/couch-${PKGVERSION}/ebin/couch_httpd_oauth.beam
+lib/erlang/lib/couch-${PKGVERSION}/ebin/couch_httpd_rewrite.beam
 lib/erlang/lib/couch-${PKGVERSION}/ebin/couch_httpd_show.beam
 lib/erlang/lib/couch-${PKGVERSION}/ebin/couch_httpd_stats_handlers.beam
 lib/erlang/lib/couch-${PKGVERSION}/ebin/couch_httpd_view.beam
@@ -47,13 +49,16 @@ lib/erlang/lib/couch-${PKGVERSION}/ebin/couch_stats_collector.beam
 lib/erlang/lib/couch-${PKGVERSION}/ebin/couch_stream.beam
 lib/erlang/lib/couch-${PKGVERSION}/ebin/couch_task_status.beam
 lib/erlang/lib/couch-${PKGVERSION}/ebin/couch_util.beam
+lib/erlang/lib/couch-${PKGVERSION}/ebin/couch_uuids.beam
 lib/erlang/lib/couch-${PKGVERSION}/ebin/couch_view.beam
 lib/erlang/lib/couch-${PKGVERSION}/ebin/couch_view_compactor.beam
 lib/erlang/lib/couch-${PKGVERSION}/ebin/couch_view_group.beam
 lib/erlang/lib/couch-${PKGVERSION}/ebin/couch_view_updater.beam
+lib/erlang/lib/couch-${PKGVERSION}/ebin/couch_work_queue.beam
 lib/erlang/lib/couch-${PKGVERSION}/include/couch_db.hrl
 lib/erlang/lib/couch-${PKGVERSION}/priv/couchspawnkillable
-lib/erlang/lib/couch-${PKGVERSION}/priv/lib/couch_erl_driver.la
+lib/erlang/lib/couch-${PKGVERSION}/priv/lib/couch_icu_driver.la
+lib/erlang/lib/couch-${PKGVERSION}/priv/stat_descriptions.cfg
 lib/erlang/lib/erlang-oauth/ebin/oauth.app
 lib/erlang/lib/erlang-oauth/ebin/oauth.beam
 lib/erlang/lib/erlang-oauth/ebin/oauth_hmac_sha1.beam
@@ -110,11 +115,16 @@ share/couchdb/www/config.html
 share/couchdb/www/couch_tests.html
 share/couchdb/www/custom_test.html
 share/couchdb/www/database.html
-share/couchdb/www/dialog/_compact_database.html
+share/couchdb/www/dialog/_admin_party.html
+share/couchdb/www/dialog/_compact_cleanup.html
+share/couchdb/www/dialog/_create_admin.html
 share/couchdb/www/dialog/_create_database.html
+share/couchdb/www/dialog/_database_security.html
 share/couchdb/www/dialog/_delete_database.html
 share/couchdb/www/dialog/_delete_document.html
+share/couchdb/www/dialog/_login.html
 share/couchdb/www/dialog/_save_view_as.html
+share/couchdb/www/dialog/_signup.html
 share/couchdb/www/dialog/_upload_attachment.html
 share/couchdb/www/document.html
 share/couchdb/www/favicon.ico
@@ -127,6 +137,7 @@ share/couchdb/www/image/delete-mini.png
 share/couchdb/www/image/delete.png
 share/couchdb/www/image/grippie.gif
 share/couchdb/www/image/hgrad.gif
+share/couchdb/www/image/key.png
 share/couchdb/www/image/load.png
 share/couchdb/www/image/logo.png
 share/couchdb/www/image/order-asc.gif
@@ -155,7 +166,6 @@ share/couchdb/www/script/couch_tests.js
 share/couchdb/www/script/futon.browse.js
 share/couchdb/www/script/futon.format.js
 share/couchdb/www/script/futon.js
-share/couchdb/www/script/jquery.cookies.js
 share/couchdb/www/script/jquery.couch.js
 share/couchdb/www/script/jquery.dialog.js
 share/couchdb/www/script/jquery.editinline.js
@@ -171,6 +181,7 @@ share/couchdb/www/script/test/attachment_names.js
 share/couchdb/www/script/test/attachment_paths.js
 share/couchdb/www/script/test/attachment_views.js
 share/couchdb/www/script/test/attachments.js
+share/couchdb/www/script/test/attachments_multipart.js
 share/couchdb/www/script/test/basics.js
 share/couchdb/www/script/test/batch_save.js
 share/couchdb/www/script/test/bulk_docs.js
@@ -199,11 +210,14 @@ share/couchdb/www/script/test/lorem_b64.txt
 share/couchdb/www/script/test/lots_of_docs.js
 share/couchdb/www/script/test/multiple_rows.js
 share/couchdb/www/script/test/oauth.js
+share/couchdb/www/script/test/proxyauth.js
 share/couchdb/www/script/test/purge.js
+share/couchdb/www/script/test/reader_acl.js
 share/couchdb/www/script/test/recreate_doc.js
 share/couchdb/www/script/test/reduce.js
 share/couchdb/www/script/test/reduce_builtin.js
 share/couchdb/www/script/test/reduce_false.js
+share/couchdb/www/script/test/reduce_false_temp.js
 share/couchdb/www/script/test/replication.js
 share/couchdb/www/script/test/rev_stemming.js
 share/couchdb/www/script/test/security_validation.js
@@ -213,6 +227,7 @@ share/couchdb/www/script/test/update_documents.js
 share/couchdb/www/script/test/utf8.js
 share/couchdb/www/script/test/uuids.js
 share/couchdb/www/script/test/view_collation.js
+share/couchdb/www/script/test/view_collation_raw.js
 share/couchdb/www/script/test/view_conflicts.js
 share/couchdb/www/script/test/view_errors.js
 share/couchdb/www/script/test/view_include_docs.js
@@ -228,7 +243,13 @@ share/couchdb/www/style/layout.css
 share/doc/couchdb/AUTHORS.gz
 share/doc/couchdb/BUGS.gz
 share/doc/couchdb/CHANGES.gz
+share/doc/couchdb/DEVELOPERS.gz
+share/doc/couchdb/INSTALL.Unix.gz
+share/doc/couchdb/INSTALL.Windows.gz
+share/doc/couchdb/INSTALL.gz
+share/doc/couchdb/LICENSE.gz
 share/doc/couchdb/NEWS.gz
+share/doc/couchdb/NOTICE.gz
 share/doc/couchdb/README.gz
 share/doc/couchdb/THANKS.gz
 share/examples/couchdb/default.ini
