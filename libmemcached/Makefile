@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/10/13 19:58:27 fhajny Exp $
+# $NetBSD: Makefile,v 1.4 2010/06/09 11:27:44 fhajny Exp $
 #
 
 DISTNAME=	libmemcached-0.33
@@ -31,6 +31,10 @@ SUBST_STAGE.gcc=	post-configure
 SUBST_MESSAGE.gcc=	Removing -Wno-attributes for CXX on Solaris/GCC 3.x
 SUBST_FILES.gcc=	tests/Makefile
 SUBST_SED.gcc=		-e '/AM_CXXFLAGS/s/ -Wno-attributes//'
+.endif
+
+.if !empty(ABI) && ${ABI} != 64
+CONFIGURE_ARGS+=	--disable-64bit
 .endif
 
 .include "../../mk/bsd.pkg.mk"
