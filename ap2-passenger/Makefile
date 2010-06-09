@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/04/21 08:08:26 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2010/06/09 13:41:56 fhajny Exp $
 
-DISTNAME=		passenger-2.2.11
+DISTNAME=		passenger-2.2.14
 PKGNAME=		${APACHE_PKG_PREFIX}-${DISTNAME}
 CATEGORIES=		www
 
-MASTER_SITES=		http://rubyforge.org/frs/download.php/69546/
+MASTER_SITES=		http://rubyforge.org/frs/download.php/71015/
 MAINTAINER=		filip@joyent.com
 HOMEPAGE=		http://www.modrails.com/
 COMMENT=		Apache module for easy and robust deployment of Rails applications
