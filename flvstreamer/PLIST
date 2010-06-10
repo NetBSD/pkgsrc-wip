@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2010/06/10 22:47:43 khorben Exp $
+bin/flvstreamer
+bin/rtmpsrv
+bin/streams
