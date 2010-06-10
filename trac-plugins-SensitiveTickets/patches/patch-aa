@@ -1,0 +1,24 @@
+$NetBSD: patch-aa,v 1.1 2010/06/10 14:45:05 lexort Exp $
+
+--- sensitivetickets/sensitivetickets.py.orig	2010-05-06 11:17:35.000000000 +0000
++++ sensitivetickets/sensitivetickets.py
+@@ -10,6 +10,7 @@ from trac.core import *
+ from trac.perm import IPermissionPolicy, IPermissionRequestor
+ from trac.env import IEnvironmentSetupParticipant
+ from trac.ticket.model import Ticket
++from trac.resource import ResourceNotFound
+ 
+ class SensitiveTicketsPolicy(Component):
+     """Prevent public access to security sensitive tickets.
+@@ -45,7 +46,10 @@ class SensitiveTicketsPolicy(Component):
+             resource = resource.parent
+ 
+         if resource and resource.realm == 'ticket' and resource.id is not None:
+-            ticket = Ticket(self.env, int(resource.id))
++            try:
++                ticket = Ticket(self.env, int(resource.id))
++            except ResourceNotFound:
++                return
+             sensitive = ticket['sensitive']
+ 
+             if sensitive and int(sensitive):
