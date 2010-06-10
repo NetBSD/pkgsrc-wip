@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2007/12/30 08:29:46 netcap Exp $
+$NetBSD: patch-aa,v 1.2 2010/06/10 17:35:55 othyro Exp $
 
---- pkg/build-geoip-cache.sh.orig	2007-11-22 22:27:14.000000000 +0100
+--- pkg/build-geoip-cache.sh.orig	2008-02-29 04:30:11.000000000 +0000
 +++ pkg/build-geoip-cache.sh
-@@ -26,7 +26,7 @@ DIRURL="http://tor.noreply.org/tor/statu
+@@ -16,7 +16,7 @@ DIRURL="http://tor.noreply.org/tor/statu
  GEOIPURL="http://geoip.vidalia-project.net/cgi-bin/geoip"
  CACHEFILE="geoip-cache"
  
