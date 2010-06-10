@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/12/30 08:29:46 netcap Exp $
+$NetBSD: distinfo,v 1.2 2010/06/10 17:35:18 othyro Exp $
 
-SHA1 (vidalia-0.0.16.tar.gz) = 1092fcbf77565136f1a5a5c382d01d4ecee2fafd
-RMD160 (vidalia-0.0.16.tar.gz) = 5bd6072d49ee95592d8c0ca35aacc0e95d09f9a1
-Size (vidalia-0.0.16.tar.gz) = 1907078 bytes
-SHA1 (patch-aa) = 2ea9842a511a47188c920ca56b8e188bb35f26e7
-SHA1 (patch-ab) = f73d774bfee35478b00d6889c2c7a7a7983fe926
+SHA1 (vidalia-0.2.9.tar.gz) = cf65dc982b97365664f66fe7c2d265342156cf37
+RMD160 (vidalia-0.2.9.tar.gz) = 45df9f968a041a8ed70b974ebcb59b8b0e5d1153
+Size (vidalia-0.2.9.tar.gz) = 3049123 bytes
+SHA1 (patch-aa) = 8b4900758399bb73185a41ec6d55c96f25ff5057
