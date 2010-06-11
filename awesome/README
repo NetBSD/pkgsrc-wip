@@ -1,5 +1,0 @@
-We need a xcb-enabled package of graphics/cairo to use awesome. There is a
-patch : cairo-xcb.patch which has to be applied to graphics/cairo.
-
-I rebuilt cairo with pkg_comp and installed it with pkg_add -Afu. But I have
-no morality. So you may want to rebuild all cairo's sons.

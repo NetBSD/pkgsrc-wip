@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.6 2010/01/07 01:26:01 pallegra Exp $
+$NetBSD: patch-ab,v 1.7 2010/06/11 15:42:42 pallegra Exp $
 
---- awesomeConfig.cmake.orig	2010-01-07 01:21:01.000000000 +0000
+--- awesomeConfig.cmake.orig	2010-01-04 08:50:02.000000000 +0000
 +++ awesomeConfig.cmake
 @@ -18,7 +18,7 @@ option(GENERATE_LUADOC "generate luadoc"
  link_directories(/usr/local/lib)
@@ -11,3 +11,12 @@ $NetBSD: patch-ab,v 1.6 2010/01/07 01:26:01 pallegra Exp $
      -Wchar-subscripts -Wundef -Wshadow -Wcast-align -Wwrite-strings
      -Wsign-compare -Wunused -Wno-unused-parameter -Wuninitialized -Winit-self
      -Wpointer-arith -Wredundant-decls -Wformat-nonliteral
+@@ -159,7 +159,7 @@ if(NOT AWESOME_REQUIRED_FOUND OR NOT AWE
+ endif()
+ 
+ macro(a_find_library variable library)
+-    find_library(${variable} ${library})
++    find_library(${variable} ${library} PKGPREFIX/lib/ev)
+     if(NOT ${variable})
+         message(FATAL_ERROR ${library} " library not found.")
+     endif()
