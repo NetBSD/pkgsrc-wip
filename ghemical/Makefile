@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/06/06 16:03:16 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2010/06/11 11:20:09 jihbed Exp $
 #
 
 DISTNAME=	ghemical-2.99.2
@@ -10,7 +10,6 @@ HOMEPAGE=	http://www.bioinformatics.org/ghemical/ghemical/
 COMMENT=	Ghemical is a computational chemistry software package for GNOME
 LICENSE=	gnu-gpl-v2
 
-#DEPENDS+=	openbabel>=2.2.3:../../wip/openbabel
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
