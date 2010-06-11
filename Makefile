@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4000 2010/06/11 06:58:09 minskim Exp $
+# $Id: Makefile,v 1.4001 2010/06/11 11:47:52 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1763,6 +1763,7 @@ SUBDIR+=	php-tidy
 SUBDIR+=	php-xcache
 SUBDIR+=	picasm
 SUBDIR+=	picocom
+SUBDIR+=	picosat
 SUBDIR+=	picprog
 SUBDIR+=	pidgin-festival
 SUBDIR+=	pidgin-guifications
