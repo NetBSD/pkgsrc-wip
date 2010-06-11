@@ -1,0 +1,2 @@
+PicoSAT is a SAT solver turned out to be faster on industrial instances than
+MiniSAT 2.0 and also can generate proofs and cores in memory.
