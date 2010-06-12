@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/06/12 23:22:54 jihbed Exp $
+
+SHA1 (depSolver-2.1.tar.gz) = ed6c665b4b0b42363eab9c26a9c67897b65258ac
+RMD160 (depSolver-2.1.tar.gz) = d7e2f396e8a7b8235f9406ea7f59df6c2be87009
+Size (depSolver-2.1.tar.gz) = 2004038 bytes
