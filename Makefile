@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4003 2010/06/12 23:45:37 jihbed Exp $
+# $Id: Makefile,v 1.4004 2010/06/12 23:47:59 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1047,6 +1047,7 @@ SUBDIR+=	kannel-gateway
 SUBDIR+=	kapital
 SUBDIR+=	katapult
 SUBDIR+=	kawa
+SUBDIR+=	kde4-l10n-ar
 SUBDIR+=	kdiff3
 SUBDIR+=	kgrab
 SUBDIR+=	kgraphviewer
