@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.2 2010/06/12 13:09:01 crocusino Exp $
+# $NetBSD: Makefile,v 1.2 2010/06/12 15:51:15 crocusino Exp $
 #
 
 DISTNAME=	calcurse-2.8
 CATEGORIES=	time
-#MASTER_SITES=	http://culot.org/cgi-bin/get.cgi?
 MASTER_SITES=	ftp://ftp2.culot.org/culot/
 
 MAINTAINER=	jan.smydke@jh-inst.cas.cz
@@ -16,6 +15,9 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gmake
 GNU_CONFIGURE=	yes
+
+# force to use ncurses from pkgsrc
+INCOMPAT_CURSES=        NetBSD-*-*
 
 # url2pkg-marker (please do not remove this line.)
 .include "../../devel/ncurses/buildlink3.mk"
