@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/06/12 23:18:05 jihbed Exp $
+
+SHA1 (pdfminer-20100424.tar.gz) = 11027db5ad5d787eab5489250ca32f422d279857
+RMD160 (pdfminer-20100424.tar.gz) = fd9d4ca6a0f4e1e001919388b83da9b1a50f9d34
+Size (pdfminer-20100424.tar.gz) = 4128108 bytes
