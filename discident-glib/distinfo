@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/06/12 23:24:04 jihbed Exp $
+
+SHA1 (discident-glib-0.9.9.tar.bz2) = 8259224225007f0610f6bcfcbcea66fc8574e18b
+RMD160 (discident-glib-0.9.9.tar.bz2) = d39de62be198c29bdaf3a38853c212b9c2f621a7
+Size (discident-glib-0.9.9.tar.bz2) = 285980 bytes
+SHA1 (patch-aa) = 08c326b53699d1af9a4c3f5664e0045290b14347
