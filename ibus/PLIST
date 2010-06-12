@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2010/04/21 10:50:50 obache Exp $
+@comment $NetBSD: PLIST,v 1.9 2010/06/12 02:45:08 obache Exp $
 bin/ibus-daemon
 bin/ibus-setup
 include/ibus-1.0/ibus.h
@@ -9,6 +9,7 @@ include/ibus-1.0/ibuscomponent.h
 include/ibus-1.0/ibusconfig.h
 include/ibus-1.0/ibusconfigservice.h
 include/ibus-1.0/ibusconnection.h
+include/ibus-1.0/ibusdbus.h
 include/ibus-1.0/ibusdebug.h
 include/ibus-1.0/ibusengine.h
 include/ibus-1.0/ibusenginedesc.h
@@ -299,6 +300,7 @@ share/locale/vi/LC_MESSAGES/ibus.mo
 share/locale/zh_CN/LC_MESSAGES/ibus.mo
 share/locale/zh_HK/LC_MESSAGES/ibus.mo
 share/locale/zh_TW/LC_MESSAGES/ibus.mo
+share/vala/vapi/ibus-1.0.vapi
 @pkgdir share/pixmaps
 @pkgdir share/ibus/icons
 @pkgdir share/ibus/engine
