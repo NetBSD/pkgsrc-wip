@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/06/12 23:28:58 jihbed Exp $
+
+SHA1 (pandas-0.2beta.tar.gz) = 0afc825a00a1470eafb3906572f5db3cd1b19805
+RMD160 (pandas-0.2beta.tar.gz) = b1c611a8443837393fbdff467565a2c2597b8732
+Size (pandas-0.2beta.tar.gz) = 194185 bytes

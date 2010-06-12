@@ -1,0 +1,13 @@
+pandas provides NumPy-based data structures and statistical tools for
+common time series and cross-sectional data sets. It is intended to
+accomplish the following:
+
+* Simplify working with possibly labeled 1, 2, and 3 dimensional
+  heterogeneous data sets commonly found in statistics, finance, and
+  econometrics.
+
+* Provide IO utilities for getting data in and out of pandas
+
+* Implement common statistical models with a convenient interface,
+  handling missing data and other common problems associated with
+  messy statistical data sets
