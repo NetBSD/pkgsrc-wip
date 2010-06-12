@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/06/12 11:42:02 crocusino Exp $
+# $NetBSD: Makefile,v 1.1.1.2 2010/06/12 13:09:01 crocusino Exp $
 #
 
 DISTNAME=	calcurse-2.8
@@ -14,7 +14,7 @@ LICENSE=	2-clause-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_TOOLS+=     gmake
+USE_TOOLS+=	gmake
 GNU_CONFIGURE=	yes
 
 # url2pkg-marker (please do not remove this line.)
