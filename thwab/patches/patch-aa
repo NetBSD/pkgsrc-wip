@@ -1,0 +1,19 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/06/12 23:25:01 jihbed Exp $
+
+--- setup.py.orig	2009-01-24 02:07:47.000000000 +0000
++++ setup.py	2010-06-05 21:16:47.000000000 +0000
+@@ -6,8 +6,12 @@
+ # python setup.py install --root=/
+ locales=map(lambda i: ('share/'+i,[''+i+'/thwab.mo',]),glob('locale/*/LC_MESSAGES'))
+ data_files=[
+-      		('/usr/bin',['Thwab','Othman']),
+-      		('share/thwab/icons', glob('icons/*.png') ),
++      		('/usr/pkg/bin',['Thwab','Othman']),
++		('/usr/pkg/share/applications', ['./othman.desktop','./thwab.desktop']),
++		('share/doc/thwab',['./thwab-ar.html','./COPYING','./README','./README-ar.txt']),
++		('share/mime-info',['./thwab.mime','./thwab.keys']),
++		('mime/application',['./thwab.xml']),
++      		('share/thwab/icons', glob('icons/*.png'),'./thwab.svg' ),
+ 		('share/thwab/othman/',glob('othman/*'))
+ 		]
+ data_files.extend(locales)

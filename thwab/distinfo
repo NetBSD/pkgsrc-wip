@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/06/12 23:25:01 jihbed Exp $
+
+SHA1 (thwab-2.2.3.tar.bz2) = 6930e6972e9d89271e951e2e49c2c435cc224db2
+RMD160 (thwab-2.2.3.tar.bz2) = 21abdef2cb6d84134b20b0a6dcddbff8f12efb27
+Size (thwab-2.2.3.tar.bz2) = 793501 bytes
+SHA1 (patch-aa) = 3ad55508ef141c69c3542b0210b1e241286a11c5
