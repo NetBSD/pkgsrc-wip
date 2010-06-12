@@ -1,0 +1,21 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/06/12 23:15:38 jihbed Exp $
+
+--- Makefile.orig	2010-06-07 16:46:23.000000000 +0000
++++ Makefile	2010-06-07 16:47:36.000000000 +0000
+@@ -1,14 +1,14 @@
+ # Installation directory prefix for Debian GNU/Linux
+ DESTDIR =
+ # Generic installation directory prefix
+-PREFIX = $(DESTDIR)/usr
++PREFIX = $(DESTDIR)/usr/pkg
+ 
+ # Where to put binaries on 'make install'?
+ BINDIR = $(PREFIX)/bin
+ # Where to put documentation on 'make install'?
+ DOCDIR = $(PREFIX)/share/doc/lbt
+ # Where to put manual pages on 'make installman'?
+-MANDIR = $(PREFIX)/share/man/man1
++MANDIR = $(PREFIX)/man/man1
+ 
+ # Installation commands
+ INSTALLDIR = install -d
