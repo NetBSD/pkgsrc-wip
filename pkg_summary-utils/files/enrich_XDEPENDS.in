@@ -33,12 +33,13 @@ match($0, /^(BUILD_)?DEPENDS=/) {
 	$0 = substr($0, RLENGTH+1)
 	for (i=1; i <= NF; ++i){
 		idx = index($i, ":")
-		pkgpath = substr($i, idx+1)
-		sub(/^[.][.]\/[.][.]\//, "", pkgpath)
+		pkgpath = normalize_pkgpath(substr($i, idx+1))
 		pkgbase = pkgname2pkgbase(substr($i, 1, idx-1))
 #		print "??????????????????????????", pkgpath, pkgbase
-		if ((pkgpath SUBSEP pkgbase) in p2a && p2a [pkgpath, pkgbase] != ""){
+		if (((pkgpath SUBSEP pkgbase) in p2a) && p2a [pkgpath, pkgbase] != ""){
 			$i = $i ":" p2a [pkgpath, pkgbase]
+		}else{
+			$i = src_depend2pkgpath($i)
 		}
 	}
 	print field $0

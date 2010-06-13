@@ -20,17 +20,18 @@ function pkgname2version (pkgname,       pos){
 		return substr(pkgname, pos)
 }
 
-# remove extra spaces and /
+# remove ../../ prefix, extra spaces and ending /
 function normalize_pkgpath (pkgpath){
+	sub(/^[.][.]\/[.][.]\//, "", pkgpath)
 	sub(/^ +/, "", pkgpath)
 	sub(/ +$/, "", pkgpath)
-	sub(/\/$/, "", pkgpath)
+	sub(/\/+$/, "", pkgpath)
 	return pkgpath
 }
 
 # Source dependency to PKGPATH
 # checkperms>=1.1:../../sysutils/checkperms/ to sysutils/checkperms
 function src_depend2pkgpath (dep){
-	sub(/^[^:]*:(..\/..\/)?/, "", dep)
+	sub(/^[^:]*:/, "", dep)
 	return normalize_pkgpath(dep)
 }
