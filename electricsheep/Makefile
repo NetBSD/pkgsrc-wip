@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2010/01/18 09:38:19 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.10 2010/06/13 22:47:02 thomasklausner Exp $
 
 DISTNAME=		electricsheep-2.6.8
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		x11
 MASTER_SITES=		http://electricsheep.org/
 

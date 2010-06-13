@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2008/12/13 23:50:44 shattered Exp $
+# $NetBSD: Makefile,v 1.6 2010/06/13 22:47:21 thomasklausner Exp $
 
 .include "Makefile.common"
 
-PKGREVISION=		#
+PKGREVISION=		1
 COMMENT=		GTK-based unicode implementation of the wxWidgets GUI library
 
 # conflicts with non unicode version

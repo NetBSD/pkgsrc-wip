@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2010/03/16 20:16:32 jihbed Exp $
+# $NetBSD: Makefile,v 1.6 2010/06/13 22:47:10 thomasklausner Exp $
 #
 
 DISTNAME=	last-exit-6
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	audio gnome
 MASTER_SITES=	http://lastexit-player.org/releases/
 EXTRACT_SUFX=	.tar.bz2

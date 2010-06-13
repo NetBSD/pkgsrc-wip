@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2009/03/20 19:43:39 jsonn Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2010/06/13 22:46:57 thomasklausner Exp $
 # XXX
 # XXX This file was created automatically using createbuildlink-3.13.
 # XXX After this file has been verified as correct, the comment lines
@@ -16,6 +16,7 @@ BUILDLINK_TREE+=	beryl-settings-bindings
 BERYL_SETTINGS_BINDINGS_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.beryl-settings-bindings+=	beryl-settings-bindings>=0.2.1
+BUILDLINK_ABI_DEPENDS.beryl-settings-bindings?=	beryl-settings-bindings>=0.2.1nb1
 BUILDLINK_PKGSRCDIR.beryl-settings-bindings?=	../../wip/beryl-settings-bindings
 
 .include "../../wip/beryl-core/buildlink3.mk"

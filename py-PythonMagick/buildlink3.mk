@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2010/01/18 09:38:29 thomasklausner Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2010/06/13 22:47:14 thomasklausner Exp $
 
 BUILDLINK_TREE+=	py-PythonMagick
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	py-PythonMagick
 PY_PYTHONMAGICK_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.py-PythonMagick+=	${PYPKGPREFIX}-PythonMagick>=0.9.1
-BUILDLINK_ABI_DEPENDS.py-PythonMagick?=	${PYPKGPREFIX}-PythonMagick>=0.9.1nb2
+BUILDLINK_ABI_DEPENDS.py-PythonMagick?=	${PYPKGPREFIX}-PythonMagick>=0.9.1nb3
 BUILDLINK_PKGSRCDIR.py-PythonMagick?=	../../wip/py-PythonMagick
 
 .include "../../graphics/ImageMagick/buildlink3.mk"

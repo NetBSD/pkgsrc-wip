@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2009/07/28 16:19:22 jihbed Exp $
+# $NetBSD: Makefile,v 1.8 2010/06/13 22:47:20 thomasklausner Exp $
 #
 
 DISTNAME=	tilda-0.9.6
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11 sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tilda/}
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2008/05/22 16:11:57 tnn2 Exp $
+# $NetBSD: Makefile,v 1.15 2010/06/13 22:47:13 thomasklausner Exp $
 #
 
 DISTNAME=		pointless-0.5
+PKGREVISION=		1
 CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=pointless/}
 

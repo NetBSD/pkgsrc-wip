@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2010/01/18 09:38:29 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2010/06/13 22:47:14 thomasklausner Exp $
 #
 
 DISTNAME=	PythonMagick-0.9.1
 PKGNAME=        ${PYPKGPREFIX}-PythonMagick-0.9.1
 
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	python graphics
 MASTER_SITES=	http://www.imagemagick.org/download/python/
 EXTRACT_SUFX=	.tar.bz2

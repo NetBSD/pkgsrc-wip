@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2009/07/22 09:53:11 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2010/06/13 22:46:57 thomasklausner Exp $
 #
 
 DISTNAME=	bsnes_v039
 PKGNAME=	${DISTNAME:S/_v0/-0./}
+PKGREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	http://byuu.cinnamonpirate.com/files/
 EXTRACT_SUFX=	.tar.bz2

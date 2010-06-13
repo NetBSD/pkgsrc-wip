@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/05/27 12:44:09 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2010/06/13 22:47:11 thomasklausner Exp $
 #
 
 DISTNAME=	monajat-2.3.1
+PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	http://launchpad.net/monajat/trunk/beta/+download/
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/01/13 11:22:16 obache Exp $
+# $NetBSD: Makefile,v 1.2 2010/06/13 22:47:15 thomasklausner Exp $
 #
 
 DISTNAME=	scim-python-0.1.13rc1
+PKGREVISION=	1
 CATEGORIES=	inputmethod python
 MASTER_SITES=	http://scim-python.googlecode.com/files/
 

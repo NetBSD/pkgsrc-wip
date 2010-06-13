@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2009/05/20 00:58:40 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.15 2010/06/13 22:46:57 thomasklausner Exp $
 #
 
 DISTNAME=	beast-0.5.4
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	audio
 MASTER_SITES=	http://beast.gtk.org/beast-ftp/v0.5/
 

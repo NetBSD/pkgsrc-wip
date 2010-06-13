@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2008/05/24 15:34:12 tnn2 Exp $
+# $NetBSD: Makefile,v 1.8 2010/06/13 22:47:11 thomasklausner Exp $
 #
 
 PKGNAME=		multisync-backup-0.82
-PKGREVISION=		2
+PKGREVISION=		3
 
 COMMENT=		Module for Multisync to backup your PIM data
 

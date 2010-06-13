@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2009/10/22 00:49:43 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.3 2010/06/13 22:47:11 thomasklausner Exp $
 #
 
 DISTNAME=	lxpanel-0.3.999
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lxde/}
 

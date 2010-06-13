@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2010/06/04 11:53:33 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2010/06/13 22:46:58 thomasklausner Exp $
 #
 
 DISTNAME=	chemical-mime-data-0.1.94
+PKGREVISION=	1
 CATEGORIES=	biology
 MASTER_SITES=	http://garr.dl.sourceforge.net/project/chemical-mime/chemical-mime-data/0.1.94/
 

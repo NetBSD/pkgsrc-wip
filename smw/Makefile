@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/05/01 19:49:25 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2010/06/13 22:47:16 thomasklausner Exp $
 #
 
 DISTNAME=	smw-1.8-beta2-src
 PKGNAME=	smw-1.8beta2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	games
 MASTER_SITES=	http://smw.supersanctuary.net/18Beta2/
 EXTRACT_SUFX=	.zip

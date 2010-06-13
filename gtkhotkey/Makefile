@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2009/09/10 13:41:24 jihbed Exp $
+# $NetBSD: Makefile,v 1.5 2010/06/13 22:47:07 thomasklausner Exp $
 #
 
 DISTNAME=	gtkhotkey-0.2.1
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	http://launchpad.net/gtkhotkey/0.2/0.2.1/+download/
 

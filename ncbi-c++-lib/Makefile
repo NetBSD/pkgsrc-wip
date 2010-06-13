@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2010/01/18 09:38:28 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2010/06/13 22:47:12 thomasklausner Exp $
 #
 
 DISTNAME=		ncbi_cxx--Nov_30_2004
 PKGNAME=		ncbi_cxx-lib-20041130
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		biology
 MASTER_SITES=		ftp://ftp.ncbi.nih.gov/toolbox/ncbi_tools++/2004/Nov_30_2004/
 

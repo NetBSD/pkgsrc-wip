@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2010/01/18 09:38:20 thomasklausner Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2010/06/13 22:47:03 thomasklausner Exp $
 
 BUILDLINK_TREE+=	ewl
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	ewl
 EWL_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ewl+=	ewl>=0.5.2.042
-BUILDLINK_ABI_DEPENDS.ewl?=	ewl>=0.5.2.042nb3
+BUILDLINK_ABI_DEPENDS.ewl?=	ewl>=0.5.2.042nb4
 BUILDLINK_PKGSRCDIR.ewl?=	../../wip/ewl
 
 .include "../../wip/efreet/buildlink3.mk"

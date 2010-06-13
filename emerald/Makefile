@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2007/05/27 06:52:52 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.2 2010/06/13 22:47:03 thomasklausner Exp $
 #
 
 DISTNAME=	emerald-0.2.1
+PKGREVISION=	1
 COMMENT=	Emerald decorator for the Beryl Compositor
 
 .include "../../wip/beryl/Makefile.inc"

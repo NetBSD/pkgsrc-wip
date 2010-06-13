@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2010/05/29 20:27:15 helgoman Exp $
+# $NetBSD: Makefile,v 1.7 2010/06/13 22:47:03 thomasklausner Exp $
 #
 
 DATE=			20100523
 VERS=			4.5-snapshot-${DATE}
 DISTNAME=		eric4-${VERS}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=		devel
 MASTER_SITES=	http://downloads.sourceforge.net/project/eric-ide/eric4/unstable/${DATE}/
 

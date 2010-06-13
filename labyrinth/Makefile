@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2010/03/16 19:56:40 jihbed Exp $
+# $NetBSD: Makefile,v 1.5 2010/06/13 22:47:09 thomasklausner Exp $
 #
 
 DISTNAME=	labyrinth_0.4.1
 PKGNAME=	labyrinth-0.4.1
+PKGREVISION=	1
 CATEGORIES=	graphics python
 MASTER_SITES=	http://labyrinth.googlecode.com/files/
 

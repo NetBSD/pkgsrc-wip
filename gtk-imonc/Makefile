@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2009/06/13 17:03:01 gschwarz Exp $
+# $NetBSD: Makefile,v 1.4 2010/06/13 22:47:06 thomasklausner Exp $
 
 DISTNAME=	gtk-imonc-0.6.4.1
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://zeank.in-berlin.de/download/
 

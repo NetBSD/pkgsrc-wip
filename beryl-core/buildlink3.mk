@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2009/03/20 19:43:39 jsonn Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2010/06/13 22:46:57 thomasklausner Exp $
 # XXX
 # XXX This file was created automatically using createbuildlink-3.13.
 # XXX After this file has been verified as correct, the comment lines
@@ -16,6 +16,7 @@ BUILDLINK_TREE+=	beryl-core
 BERYL_CORE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.beryl-core+=	beryl-core>=0.2.1
+BUILDLINK_ABI_DEPENDS.beryl-core?=	beryl-core>=0.2.1nb2
 BUILDLINK_PKGSRCDIR.beryl-core?=	../../wip/beryl-core
 
 .include "../../devel/glib2/buildlink3.mk"

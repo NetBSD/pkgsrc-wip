@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2009/05/20 00:58:43 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.13 2010/06/13 22:47:19 thomasklausner Exp $
 #
 
 DISTNAME=		swami-0.9.2
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=swami/}
 

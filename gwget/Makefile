@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/03/19 19:40:00 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2010/06/13 22:47:07 thomasklausner Exp $
 #
 
 DISTNAME=	gwget-1.0.4
+PKGREVISION=	1
 CATEGORIES=	gnome net
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gwget/1.0/}
 EXTRACT_SUFX=	.tar.bz2

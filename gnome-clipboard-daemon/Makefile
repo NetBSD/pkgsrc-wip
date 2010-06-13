@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2010/03/17 20:12:09 jihbed Exp $
+# $NetBSD: Makefile,v 1.9 2010/06/13 22:47:05 thomasklausner Exp $
 #
 
 DISTNAME=	clipboard-daemon-1.0
 PKGNAME=	gnome-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	http://members.chello.nl/~h.lai/gnome-clipboard-daemon/
 EXTRACT_SUFX=	.tar.bz2

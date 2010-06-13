@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/05/10 23:34:11 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2010/06/13 22:47:12 thomasklausner Exp $
 #
 
 DISTNAME=	nsp2-cvs_20090724
 PKGNAME=	nsp2-20090724
+PKGREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	http://cermics.enpc.fr/~jpc/nsp-tiddly/files/
 

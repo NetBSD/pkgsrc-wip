@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/12/25 12:27:03 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2010/06/13 22:47:21 thomasklausner Exp $
 #
 
 DISTNAME=	wordwarvi-0.24
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wordwarvi/}
 

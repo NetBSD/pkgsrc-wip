@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2010/01/18 09:38:28 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.16 2010/06/13 22:47:12 thomasklausner Exp $
 #
 
 DISTNAME=	navigatrix-0.5
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	misc
 MASTER_SITES=	http://www1.maraudingpirates.org:8080/navigatrix/src/
 

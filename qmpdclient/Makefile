@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2010/01/18 09:38:30 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2010/06/13 22:47:15 thomasklausner Exp $
 #
 
 DISTNAME=	qmpdclient-1.1.2
-PKGREVISION=	2
+PKGREVISION=	3
 
 CATEGORIES=	audio
 MASTER_SITES=	http://dump.bitcheese.net/files/dedycec/

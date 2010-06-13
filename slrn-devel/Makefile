@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2010/06/01 15:46:19 anielski Exp $
+# $NetBSD: Makefile,v 1.5 2010/06/13 22:47:16 thomasklausner Exp $
 
 DISTNAME=	slrn-pre1.0.0~18
 PKGNAME=	slrn-pre1.0.0-18
 CONFLICTS=      slrn-pl-[0-9]* slrn-[0-9]*
 LICENSE=	gnu-gpl-v2
+PKGREVISION=	1
 CATEGORIES=	news
 MASTER_SITES=	http://slrn.sourceforge.net/downloads/svn_snapshots/
 EXTRACT_SUFX=	.tar.bz2

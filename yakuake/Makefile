@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2010/01/18 09:38:35 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2010/06/13 22:47:22 thomasklausner Exp $
 #
 
 DISTNAME=	yakuake-2.9.4
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11
 MASTER_SITES=	http://download.berlios.de/yakuake/
 EXTRACT_SUFX=	.tar.bz2

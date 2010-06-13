@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2010/02/27 22:59:51 blef Exp $
+# $NetBSD: Makefile,v 1.15 2010/06/13 22:47:15 thomasklausner Exp $
 #
 
 DISTNAME=	quodlibet-2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	http://quodlibet.googlecode.com/files/
 

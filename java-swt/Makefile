@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2007/03/01 19:12:17 shattered Exp $
+# $NetBSD: Makefile,v 1.7 2010/06/13 22:47:09 thomasklausner Exp $
 #
 
 DISTNAME=	swt-2.1.3-linux-gtk
 PKGNAME=	java-swt-2.1.3
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	http://download.eclipse.org/downloads/drops/R-2.1.3-200403101828/
 EXTRACT_SUFX=	.zip

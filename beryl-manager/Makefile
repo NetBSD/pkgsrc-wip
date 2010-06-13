@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2008/05/24 15:34:08 tnn2 Exp $
+# $NetBSD: Makefile,v 1.3 2010/06/13 22:46:57 thomasklausner Exp $
 #
 
 DISTNAME=	beryl-manager-${BERYL_VERSION}
+PKGREVISION=	1
 CATEGORIES=	wm
 
 COMMENT=	Managing application of the Beryl compositing window manager

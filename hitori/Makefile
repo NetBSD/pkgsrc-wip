@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2010/04/03 16:00:09 jihbed Exp $
+# $NetBSD: Makefile,v 1.6 2010/06/13 22:47:07 thomasklausner Exp $
 #
 
 DISTNAME=	hitori-0.2.3
+PKGREVISION=	1
 CATEGORIES=	games gnome
 MASTER_SITES=	http://ftp.acc.umu.se/pub/GNOME/sources/hitori/0.2/
 EXTRACT_SUFX=	.tar.bz2

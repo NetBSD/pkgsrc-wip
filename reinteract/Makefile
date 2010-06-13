@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2009/07/22 09:53:14 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2010/06/13 22:47:15 thomasklausner Exp $
 #
 
 DISTNAME=	reinteract-0.5.0
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	http://www.reinteract.org/download/sources/
 EXTRACT_SUFX=	.tar.bz2

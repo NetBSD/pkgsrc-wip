@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2009/08/01 21:00:28 jihbed Exp $
+# $NetBSD: Makefile,v 1.4 2010/06/13 22:47:21 thomasklausner Exp $
 #
 
 DISTNAME=	winwrangler-0.2.1
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	http://launchpad.net/winwrangler/0.2/0.2.1/+download/
 

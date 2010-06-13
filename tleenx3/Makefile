@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2006/10/29 08:32:57 shattered Exp $
+# $NetBSD: Makefile,v 1.7 2010/06/13 22:47:20 thomasklausner Exp $
 #
 
 DISTNAME=		TleenX3-0.1
 PKGNAME=		${DISTNAME:S/T/t/:S/X/x/}
+PKGREVISION=		1
 CATEGORIES=		chat
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=tleenx/}
 

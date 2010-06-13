@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/05/01 22:44:52 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2010/06/13 22:47:12 thomasklausner Exp $
 #
 
 DISTNAME=	paperbox-0.4.4
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/paperbox/0.4/}
 EXTRACT_SUFX=	.tar.bz2

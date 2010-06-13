@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2009/05/31 00:27:27 othyro Exp $
+# $NetBSD: Makefile,v 1.6 2010/06/13 22:47:05 thomasklausner Exp $
 #
 
 DISTNAME=		gnocky-0.0.7
+PKGREVISION=		1
 CATEGORIES=		comms
 MASTER_SITES=		http://www.gnokii.org/download/gnocky/
 

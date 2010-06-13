@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2010/04/22 14:39:38 obache Exp $
+# $NetBSD: Makefile,v 1.6 2010/06/13 22:47:20 thomasklausner Exp $
 #
 
 DISTNAME=	TrueCrypt%206.3a%20Source
 PKGNAME=	truecrypt-6.3a
+PKGREVISION=	1
 CATEGORIES=	security
 
 DOWNLOAD=	http://www.truecrypt.org/downloads2

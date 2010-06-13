@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2010/01/18 09:38:30 thomasklausner Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2010/06/13 22:47:14 thomasklausner Exp $
 
 BUILDLINK_TREE+=	py-webkitgtk
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	py-webkitgtk
 PY_WEBKITGTK_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.py-webkitgtk+=	${PYPKGPREFIX}-webkitgtk>=1.1.6
-BUILDLINK_ABI_DEPENDS.py-webkitgtk?=	${PYPKGPREFIX}-webkitgtk>=1.1.6nb1
+BUILDLINK_ABI_DEPENDS.py-webkitgtk?=	${PYPKGPREFIX}-webkitgtk>=1.1.7nb1
 BUILDLINK_PKGSRCDIR.py-webkitgtk?=	../../wip/py-webkit
 
 

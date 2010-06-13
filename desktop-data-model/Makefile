@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/05/16 16:01:21 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2010/06/13 22:46:59 thomasklausner Exp $
 #
 
 DISTNAME=	desktop-data-model-1.2.5
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/desktop-data-model/1.2/}
 EXTRACT_SUFX=	.tar.bz2

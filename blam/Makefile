@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2010/03/16 19:52:07 jihbed Exp $
+# $NetBSD: Makefile,v 1.8 2010/06/13 22:46:57 thomasklausner Exp $
 #
 
 DISTNAME=	blam-1.8.7
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	http://www.cmartin.tk/blam/
 EXTRACT_SUFX=	.tar.bz2

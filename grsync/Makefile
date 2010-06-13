@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2009/12/03 08:37:59 jihbed Exp $
+# $NetBSD: Makefile,v 1.8 2010/06/13 22:47:06 thomasklausner Exp $
 #
 
 DISTNAME=	grsync-0.9.3
+PKGREVISION=	1
 CATEGORIES=	wip
 MASTER_SITES=	http://www.opbyte.it/release/
 

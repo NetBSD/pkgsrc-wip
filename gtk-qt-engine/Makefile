@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2010/01/18 09:38:23 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2010/06/13 22:47:06 thomasklausner Exp $
 #
 
 DISTNAME=	gtk-qt-engine-0.7
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	x11 devel
 MASTER_SITES=	http://gtk-qt.ecs.soton.ac.uk/files/0.7/
 EXTRACT_SUFX=	.tar.bz2

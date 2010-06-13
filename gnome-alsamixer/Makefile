@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2010/01/18 09:38:22 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2010/06/13 22:47:05 thomasklausner Exp $
 #
 
 DISTNAME=		gnome-alsamixer-0.9.6
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		audio gnome
 MASTER_SITES=		ftp://ftp.paw.co.za/pub/PAW/sources/
 

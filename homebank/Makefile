@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2009/11/26 09:16:30 jihbed Exp $
+# $NetBSD: Makefile,v 1.9 2010/06/13 22:47:08 thomasklausner Exp $
 #
 
 DISTNAME=	homebank-4.1
+PKGREVISION=	1
 CATEGORIES=	finance
 MASTER_SITES=	http://homebank.free.fr/public/
 

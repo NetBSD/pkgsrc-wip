@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2010/01/20 14:04:59 thomasklausner Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2010/06/13 22:47:07 thomasklausner Exp $
 
 BUILDLINK_TREE+=	gupnp-vala
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gupnp-vala
 GUPNP_VALA_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gupnp-vala+=	gupnp-vala>=0.5.4
-BUILDLINK_ABI_DEPENDS.gupnp-vala?=	gupnp-vala>=0.5.4nb1
+BUILDLINK_ABI_DEPENDS.gupnp-vala?=	gupnp-vala>=0.5.4nb2
 BUILDLINK_PKGSRCDIR.gupnp-vala?=	../../wip/gupnp-vala
 
 

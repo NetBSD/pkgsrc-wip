@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/05/03 14:57:49 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2010/06/13 22:47:03 thomasklausner Exp $
 #
 
 DISTNAME=	evolution-rss-0.1.4
+PKGREVISION=	1
 CATEGORIES=	mail gnome
 MASTER_SITES=	http://gnome.eu.org/
 

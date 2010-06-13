@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2009/07/22 09:53:12 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.11 2010/06/13 22:47:06 thomasklausner Exp $
 #
 
 DISTNAME=	grisbi-0.5.9
+PKGREVISION=	1
 CATEGORIES=	finance
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=grisbi/}
 EXTRACT_SUFX=	.tar.bz2

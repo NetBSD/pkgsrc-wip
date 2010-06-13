@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2010/03/16 20:32:56 jihbed Exp $
+# $NetBSD: Makefile,v 1.5 2010/06/13 22:46:56 thomasklausner Exp $
 #
 
 DISTNAME=	arista-0.9.1
+PKGREVISION=	1
 CATEGORIES=	multimedia python
 MASTER_SITES=	http://programmer-art.org/media/releases/arista-transcoder/
 

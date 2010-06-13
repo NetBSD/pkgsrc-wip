@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2010/06/02 09:26:11 obache Exp $
+# $NetBSD: Makefile,v 1.5 2010/06/13 22:47:15 thomasklausner Exp $
 #
 
 DISTNAME=	Raster3D_2.7s
 PKGNAME=	${DISTNAME:S/_/-/:tl}
+PKGREVISION=	1
 CATEGORIES=	graphics biology
 MASTER_SITES=	http://skuld.bmsc.washington.edu/raster3d/
 

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2008/05/24 15:34:15 tnn2 Exp $
+# $NetBSD: Makefile,v 1.7 2010/06/13 22:47:20 thomasklausner Exp $
 
 DISTNAME=		symon-2.76
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		net sysutils
 MASTER_SITES=		http://www.xs4all.nl/~wpd/symon/philes/
 

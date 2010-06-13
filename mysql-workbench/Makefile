@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.8 2010/04/29 00:21:37 othyro Exp $
+# $NetBSD: Makefile,v 1.9 2010/06/13 22:47:11 thomasklausner Exp $
 #
 
 PKGVERSION=	5.2.20
 DISTNAME=	mysql-workbench-oss-${PKGVERSION}
 PKGNAME=	${DISTNAME:S/-oss//}
+PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_MYSQL:=MySQLGUITools/}
 

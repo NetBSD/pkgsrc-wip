@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2009/05/06 10:47:32 cheusov Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2010/06/13 22:47:07 thomasklausner Exp $
 
 BUILDLINK_TREE+=	gtkglk
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gtkglk
 GTKGLK_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gtkglk+=	gtkglk>=0.2
-BUILDLINK_ABI_DEPENDS.gtkglk?=	gtkglk>=0.2nb1
+BUILDLINK_ABI_DEPENDS.gtkglk?=	gtkglk>=0.2nb2
 BUILDLINK_PKGSRCDIR.gtkglk?=	../../wip/gtkglk
 
 BUILDLINK_TRANSFORM+=   l:glk:gtkglk

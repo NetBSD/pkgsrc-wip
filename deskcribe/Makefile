@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2010/04/10 20:21:42 jihbed Exp $
+# $NetBSD: Makefile,v 1.4 2010/06/13 22:46:59 thomasklausner Exp $
 #
 
 DISTNAME=	deskscribe-0.4.2
+PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/deskscribe/0.4/}
 EXTRACT_SUFX=	.tar.bz2

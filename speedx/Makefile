@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2008/03/07 22:58:55 tnn2 Exp $
+# $NetBSD: Makefile,v 1.13 2010/06/13 22:47:16 thomasklausner Exp $
 
 DISTNAME=	SpeedX-0.1.4d
 PKGNAME=	speedx-0.1.4d
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_GNU:=speedx/}
 DISTFILES=	${DEFAULT_DISTFILES} mercrain.s3m.zip

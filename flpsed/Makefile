@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2010/03/11 17:41:57 othyro Exp $
+# $NetBSD: Makefile,v 1.3 2010/06/13 22:47:04 thomasklausner Exp $
 #
 
 DISTNAME=	flpsed-0.6.1
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.ecademix.com/JohannesHofmann/
 

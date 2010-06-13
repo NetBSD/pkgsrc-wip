@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2010/01/18 09:38:18 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.18 2010/06/13 22:46:57 thomasklausner Exp $
 #
 
 DISTNAME=		bubbros-1.6
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=bub-n-bros/}
 

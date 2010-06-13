@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/03/30 13:20:30 emil_s Exp $
+# $NetBSD: Makefile,v 1.2 2010/06/13 22:47:10 thomasklausner Exp $
 #
 
 DISTNAME=	libLASi-1.1.0
 PKGNAME=	liblasi-1.1.0
+PKGREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lasi/}
 

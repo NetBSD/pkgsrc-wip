@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2009/03/20 19:43:39 jsonn Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2010/06/13 22:46:57 thomasklausner Exp $
 
 BUILDLINK_TREE+=	bakery
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	bakery
 BAKERY_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.bakery+=	bakery>=2.6.3
+BUILDLINK_ABI_DEPENDS.bakery?=	bakery>=2.6.3nb1
 BUILDLINK_PKGSRCDIR.bakery?=	../../wip/bakery
 
 .include "../../x11/gtkmm/buildlink3.mk"

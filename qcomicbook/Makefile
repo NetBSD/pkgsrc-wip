@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2010/01/18 09:38:30 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2010/06/13 22:47:15 thomasklausner Exp $
 #
 
 DISTNAME=		qcomicbook-0.3.4
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		graphics
 MASTER_SITES=		http://linux.bydg.org/~yogin/
 

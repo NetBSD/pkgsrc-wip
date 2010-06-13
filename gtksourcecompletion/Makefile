@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2009/08/02 22:46:05 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2010/06/13 22:47:07 thomasklausner Exp $
 #
 
 DISTNAME=	gtksourcecompletion-0.5.2
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtksourcecomple/}
 

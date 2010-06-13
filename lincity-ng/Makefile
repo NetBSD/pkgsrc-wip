@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2010/01/18 09:38:27 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2010/06/13 22:47:10 thomasklausner Exp $
 #
 
 VERSION=		1.1.2
 DISTNAME=		lincity-ng-${VERSION}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		games
 MASTER_SITES=		http://download.berlios.de/lincity-ng/ \
 			http://download2.berlios.de/lincity-ng/

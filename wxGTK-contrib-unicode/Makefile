@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2009/04/04 12:30:12 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2010/06/13 22:47:21 thomasklausner Exp $
 #
 
 .include "../../wip/wxGTK-unicode/Makefile.common"
 
 PKGNAME=		${DISTNAME:S/wxGTK/wxGTK-contrib-unicode/}
-PKGREVISION=		#
+PKGREVISION=		1
 MAINTAINER=		milos.negovanovic@googlemail.com
 COMMENT=		GTK-based unicode implementation of the wxWidgets GUI library (contrib libraries)
 

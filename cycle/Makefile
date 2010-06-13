@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2010/01/18 09:38:18 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2010/06/13 22:46:58 thomasklausner Exp $
 #
 
 DISTNAME=	cycle-0.3.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cycle/}
 EXTRACT_SUFX=	.tar.bz2

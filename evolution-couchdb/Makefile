@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2010/02/12 00:58:38 jihbed Exp $
+# $NetBSD: Makefile,v 1.4 2010/06/13 22:47:03 thomasklausner Exp $
 #
 
 DISTNAME=	evolution-couchdb-0.3.99
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.gnome.org/pub/gnome/sources/evolution-couchdb/0.3/
 EXTRACT_SUFX=	.tar.bz2

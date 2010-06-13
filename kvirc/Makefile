@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2010/05/01 20:37:02 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.19 2010/06/13 22:47:09 thomasklausner Exp $
 #
 
 DISTNAME=		kvirc-3.4.2
+PKGREVISION=		1
 CATEGORIES=		chat
 MASTER_SITES=		http://kvirc.gmake.de/pub/kvirc/3.4.2/source/ \
 			http://kvirc-ftp.visualscripts.com/3.4.2/source/ \

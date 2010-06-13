@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/11/08 17:05:46 milosn Exp $
+# $NetBSD: Makefile,v 1.2 2010/06/13 22:47:07 thomasklausner Exp $
 
 H_VERSION=	0.2.5
 DISTNAME=	habak-${H_VERSION}
+PKGREVISION=    1
 CATEGORIES=	x11
 MASTER_SITES=	http://download.gna.org/fvwm-crystal/habak/${H_VERSION}/
-PKGREVISION=    0
 
 MAINTAINER=	milos.negovanovic@googlemail.com
 HOMEPAGE=	http://fvwm-crystal.org/

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2010/01/18 09:38:17 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2010/06/13 22:46:56 thomasklausner Exp $
 #
 
 DISTNAME=	mod-chxj_0.12.12.src
 PKGNAME=	${APACHE_PKG_PREFIX}-${DISTNAME:S/mod-//:S/_/-/:S/.src//}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP:=modchxj/32266/}
 

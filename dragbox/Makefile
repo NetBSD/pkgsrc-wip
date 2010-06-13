@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2010/04/18 14:12:58 jihbed Exp $
+# $NetBSD: Makefile,v 1.7 2010/06/13 22:46:59 thomasklausner Exp $
 #
 
 DISTNAME=	dragbox-0.4.0
+PKGREVISION=	1
 CATEGORIES=	x11 gnome
 MASTER_SITES=	http://kaizer.se/publicfiles/dragbox/
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2010/04/11 23:12:05 khorben Exp $
+# $NetBSD: Makefile,v 1.4 2010/06/13 22:46:58 thomasklausner Exp $
 
 DISTNAME=	Framer-0.0.0
 PKGNAME=	deforaos-framer-0.0.0
+PKGREVISION=	1
 CATEGORIES=	wm
 MASTER_SITES=	http://www.defora.org/os/download/download/3291/
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/06/03 22:23:02 hoka_adam Exp $
+# $NetBSD: Makefile,v 1.2 2010/06/13 22:46:56 thomasklausner Exp $
 #
 
 PKGNAME=	${DISTNAME:S/.src//}
+PKGREVISION=	1
 COMMENT=	Tron clone in 3D with advanced gameplay and multiplayer
 
 .include "../../devel/SDL/buildlink3.mk"

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2009/08/05 09:54:53 jihbed Exp $
+# $NetBSD: Makefile,v 1.5 2010/06/13 22:46:58 thomasklausner Exp $
 #
 
 DISTNAME=	d-feet-0.1.10
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	http://johnp.fedorapeople.org/downloads/d-feet/
 EXTRACT_SUFX=	.tar.bz2

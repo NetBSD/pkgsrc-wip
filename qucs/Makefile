@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2010/01/18 09:38:31 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2010/06/13 22:47:15 thomasklausner Exp $
 #
 
 DISTNAME=	qucs-0.0.13
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qucs/}
 SUBDIR+=	qucs

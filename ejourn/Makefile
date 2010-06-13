@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2006/07/30 23:14:48 dhowland Exp $
+# $NetBSD: Makefile,v 1.5 2010/06/13 22:46:59 thomasklausner Exp $
 #
 
 DISTNAME=		ejourn-0.4.2
+PKGREVISION=		1
 CATEGORIES=		misc
 MASTER_SITES=		http://www.public.iastate.edu/~chris129/code/ejourn/Downloads/
 EXTRACT_SUFX=		.tar.bz2

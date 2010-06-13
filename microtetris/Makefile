@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2009/06/18 00:28:17 jihbed Exp $
+# $NetBSD: Makefile,v 1.4 2010/06/13 22:47:11 thomasklausner Exp $
 #
 
 DISTNAME=	microtetris
 PKGNAME=	${DISTNAME}-0.1
+PKGREVISION=	1
 CATEGORIES=	games python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=microtetris/}
 EXTRACT_SUFX=	.py

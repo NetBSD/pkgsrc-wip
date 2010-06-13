@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2010/01/18 09:38:32 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.15 2010/06/13 22:47:15 thomasklausner Exp $
 #
 
 DISTNAME=		rekall-2.2.0-beta0
 PKGNAME=		${DISTNAME:S/-beta0//}
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		databases
 MASTER_SITES=		http://www.rekallrevealed.org/packages/
 EXTRACT_SUFX=		.tgz

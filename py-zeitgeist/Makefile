@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2010/03/22 14:20:56 jihbed Exp $
+# $NetBSD: Makefile,v 1.8 2010/06/13 22:47:14 thomasklausner Exp $
 #
 
 DISTNAME=	zeitgeist-0.3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://launchpad.net/zeitgeist/0.3/0.3.2/+download/
 

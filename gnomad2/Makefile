@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2010/02/15 17:04:34 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2010/06/13 22:47:05 thomasklausner Exp $
 #
 
 DISTNAME=		gnomad2-2.8.8
+PKGREVISION=		1
 CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gnomad2/}
 

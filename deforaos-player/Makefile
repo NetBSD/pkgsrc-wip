@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2010/01/11 00:20:06 khorben Exp $
+# $NetBSD: Makefile,v 1.3 2010/06/13 22:46:59 thomasklausner Exp $
 #
 # TODO: add an embedded option
 
 DISTNAME=	Player-0.1.2
 PKGNAME=	deforaos-player-0.1.2
+PKGREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	http://www.defora.org/os/download/download/3277/
 

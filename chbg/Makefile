@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2010/01/18 09:38:18 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2010/06/13 22:46:57 thomasklausner Exp $
 #
 
 DISTNAME=		chbg-1.5
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=chbg/}
 EXTRACT_SUFX=		.tgz

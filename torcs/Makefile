@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2009/06/24 22:15:53 yhardy Exp $
+# $NetBSD: Makefile,v 1.5 2010/06/13 22:47:20 thomasklausner Exp $
 #
 
 DISTNAME=	torcs-1.3.1
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=torcs/}
 EXTRACT_SUFX=	.tar.bz2

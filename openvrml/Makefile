@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2010/01/18 09:38:28 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2010/06/13 22:47:12 thomasklausner Exp $
 
 DISTNAME=	openvrml-0.14.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=openvrml/}
 

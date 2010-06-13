@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2009/07/22 09:53:13 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.16 2010/06/13 22:47:06 thomasklausner Exp $
 
 DISTNAME=		gtk2flat-default
 PKGNAME=		gtk2-engines-flat-2.0
 WRKSRC=			${WRKDIR}/gtk-flat-theme-2.0
+PKGREVISION=		1
 CATEGORIES=		x11
 MASTER_SITES=		http://freshmeat.net/projects/gtk2flat/url_tgz/
 

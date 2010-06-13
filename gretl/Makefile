@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2010/01/18 09:38:22 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2010/06/13 22:47:06 thomasklausner Exp $
 #
 
 DISTNAME=	gretl-1.7.4
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gretl/}
 EXTRACT_SUFX=	.tar.bz2

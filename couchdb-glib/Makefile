@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2010/04/16 18:20:59 jihbed Exp $
+# $NetBSD: Makefile,v 1.4 2010/06/13 22:46:58 thomasklausner Exp $
 #
 
 DISTNAME=	couchdb-glib-0.5.99
+PKGREVISION=	1
 CATEGORIES=	databases gnome
 MASTER_SITES=	ftp://ftp.gnome.org/pub/gnome/sources/couchdb-glib/0.5/
 EXTRACT_SUFX=	.tar.bz2

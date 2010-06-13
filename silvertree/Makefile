@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2010/01/18 09:38:32 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2010/06/13 22:47:15 thomasklausner Exp $
 #
 
 DISTNAME=	silvertree-0.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	games
 MASTER_SITES=	http://www.silvertreerpg.org/downloads/
 

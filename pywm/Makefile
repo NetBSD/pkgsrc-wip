@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2006/05/19 16:51:35 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.6 2010/06/13 22:47:14 thomasklausner Exp $
 #
 
 DISTNAME=		pywm-0.1
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=		1
 CATEGORIES=		wm
 MASTER_SITES=		http://www.freenet.org.nz/python/pywm/
 

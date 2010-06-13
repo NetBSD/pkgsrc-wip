@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2009/07/22 09:53:13 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2010/06/13 22:47:06 thomasklausner Exp $
 
 DISTNAME=		gtk2-engines-magicchicken_1.1.1.orig
 PKGNAME=		gtk2-engines-magicchicken-1.1.1
+PKGREVISION=		1
 CATEGORIES=		x11
 MASTER_SITES=		ftp://ftp.debian.org/debian/pool/main/g/gtk2-engines-magicchicken/
 

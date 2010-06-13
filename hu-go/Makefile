@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2006/06/12 16:28:57 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2010/06/13 22:47:08 thomasklausner Exp $
 #
 
 DISTNAME=		hugo-2.11-preview
 PKGNAME=		hu-go-2.11beta1
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		emulators
 MASTER_SITES=		http://www.zeograd.com/download/
 

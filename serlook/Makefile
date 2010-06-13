@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2010/01/18 09:38:32 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2010/06/13 22:47:15 thomasklausner Exp $
 #
 
 DISTNAME=		serlook-0.2.4-KDE3
 PKGNAME=		serlook-0.2.4
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		kde comms
 MASTER_SITES=	http://serlook.sunsite.dk/
 

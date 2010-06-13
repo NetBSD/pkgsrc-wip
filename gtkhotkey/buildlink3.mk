@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2009/03/20 19:43:42 jsonn Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2010/06/13 22:47:07 thomasklausner Exp $
 
 BUILDLINK_TREE+=	gtkhotkey
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	gtkhotkey
 GTKHOTKEY_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gtkhotkey+=	gtkhotkey>=0.2.0
+BUILDLINK_ABI_DEPENDS.gtkhotkey?=	gtkhotkey>=0.2.1nb1
 BUILDLINK_PKGSRCDIR.gtkhotkey?=	../../wip/gtkhotkey
 
 .include "../../devel/glib2/buildlink3.mk"

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2009/07/22 09:53:13 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2010/06/13 22:47:08 thomasklausner Exp $
 #
 
 DISTNAME=	imagination-1.0
+PKGREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	http://ovh.dl.sourceforge.net/sourceforge/imagination/
 

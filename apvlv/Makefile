@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2010/01/24 12:42:23 leot1990 Exp $
+# $NetBSD: Makefile,v 1.6 2010/06/13 22:46:56 thomasklausner Exp $
 #
 
 DISTNAME=	apvlv-0.0.9.2
+PKGREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	http://apvlv.googlecode.com/files/
 

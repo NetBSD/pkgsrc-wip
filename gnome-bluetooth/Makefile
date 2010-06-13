@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2010/01/18 09:38:22 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.17 2010/06/13 22:47:05 thomasklausner Exp $
 #
 
 DISTNAME=		gnome-bluetooth-0.7.0
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		net
 MASTER_SITES=		http://ftp.gnome.org/pub/gnome/sources/gnome-bluetooth/0.7/
 

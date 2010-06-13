@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/12/08 22:38:45 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2010/06/13 22:47:04 thomasklausner Exp $
 #
 
 DISTNAME=	gemrb-0.6.0
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gemrb/}
 

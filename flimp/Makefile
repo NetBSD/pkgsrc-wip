@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2010/01/18 09:38:20 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2010/06/13 22:47:04 thomasklausner Exp $
 #
 
 DISTNAME=	flimp-0.0.11
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.ecademix.com/JohannesHofmann/
 

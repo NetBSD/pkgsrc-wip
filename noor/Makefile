@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/01/03 22:18:50 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2010/06/13 22:47:12 thomasklausner Exp $
 #
 
 DISTNAME=	noor-1.2.1
+PKGREVISION=	1
 CATEGORIES=	misc python
 MASTER_SITES=	http://garr.dl.sourceforge.net/project/noor/noor/1.2.1/
 

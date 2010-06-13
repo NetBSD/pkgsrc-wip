@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2010/01/18 09:38:28 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2010/06/13 22:47:11 thomasklausner Exp $
 
 DISTNAME=	moon-1.0.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	multimedia
 PKGNAME=	moonlight-1.0.1
 MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/moon/1.0.1/

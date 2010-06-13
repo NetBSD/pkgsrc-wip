@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2009/08/12 02:32:04 obache Exp $
+# $NetBSD: Makefile,v 1.5 2010/06/13 22:47:04 thomasklausner Exp $
 #
 
 DISTNAME=	gecko-sharp-2.0-0.13
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/gecko-sharp2/
 EXTRACT_SUFX=	.tar.bz2

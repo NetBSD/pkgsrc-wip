@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2009/07/28 00:10:09 jihbed Exp $
+# $NetBSD: Makefile,v 1.4 2010/06/13 22:47:07 thomasklausner Exp $
 #
 
 DISTNAME=	gxconsole-0.3.1
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gxconsole/}
 

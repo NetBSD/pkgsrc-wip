@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2009/12/12 11:22:43 guigui2 Exp $
+# $NetBSD: Makefile,v 1.10 2010/06/13 22:47:20 thomasklausner Exp $
 #
 
 DISTNAME=	tagtool-0.12.3
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tagtool/}
 EXTRACT_SUFX=	.tar.bz2

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2009/07/22 09:53:12 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.10 2010/06/13 22:47:04 thomasklausner Exp $
 #
 
 DISTNAME=		gdmap-0.7.5
+PKGREVISION=		1
 CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gdmap/}
 

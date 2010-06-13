@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/05/12 16:05:21 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2010/06/13 22:46:59 thomasklausner Exp $
 #
 
 DISTNAME=	desktopcouch-0.6.4
+PKGREVISION=	1
 CATEGORIES=	databases python
 MASTER_SITES=	http://launchpad.net/desktopcouch/trunk/0.6.4/+download/
 

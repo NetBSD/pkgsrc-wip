@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2009/08/12 02:32:04 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2010/06/13 22:47:04 thomasklausner Exp $
 
 BUILDLINK_TREE+=	gecko-sharp-2.0
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	gecko-sharp-2.0
 GECKO_SHARP_2.0_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.gecko-sharp-2.0+=	gecko-sharp-2.0>=0.13
-BUILDLINK_ABI_DEPENDS.gecko-sharp-2.0?=	gecko-sharp-2.0>=0.13nb1
+BUILDLINK_ABI_DEPENDS.gecko-sharp-2.0?=	gecko-sharp-2.0>=0.13nb2
 BUILDLINK_PKGSRCDIR.gecko-sharp-2.0?=	../../wip/gecko-sharp
 
 # XXX

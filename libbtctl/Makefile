@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2008/02/03 16:53:11 tnn2 Exp $
+# $NetBSD: Makefile,v 1.8 2010/06/13 22:47:10 thomasklausner Exp $
 #
 
 DISTNAME=		libbtctl-0.6.0
+PKGREVISION=		1
 CATEGORIES=		net
 MASTER_SITES=		http://ftp.gnome.org/pub/gnome/sources/libbtctl/0.6/
 

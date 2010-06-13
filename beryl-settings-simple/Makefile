@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2009/06/02 12:19:22 noud4 Exp $
+# $NetBSD: Makefile,v 1.4 2010/06/13 22:46:57 thomasklausner Exp $
 #
 
 DISTNAME=	beryl-settings-simple-0.2.1
-PKGREVISION=	1
+PKGREVISION=	2
 COMMENT=	"Simple" beryl settings (?)
 
 .include "../../wip/beryl/Makefile.inc"

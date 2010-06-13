@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.14 2010/01/18 09:38:26 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.15 2010/06/13 22:47:09 thomasklausner Exp $
 #
 
 # XXX You must update MASTER_SITES download number when updating
 # XXX or you will download old file with new filename.
 DISTNAME=		kino-0.7.5
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		multimedia
 MASTER_SITES=		http://kino.schirmacher.de/filemanager/download/42/
 

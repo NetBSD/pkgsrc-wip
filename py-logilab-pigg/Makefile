@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/06/17 23:31:53 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2010/06/13 22:47:14 thomasklausner Exp $
 #
 
 DISTNAME=	pigg-0.2.0
 PKGNAME=	${PYPKGPREFIX}-logilab-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	x11 python
 MASTER_SITES=	http://ftp.logilab.org/pub/pigg/
 

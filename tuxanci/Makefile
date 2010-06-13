@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2010/01/18 09:38:34 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2010/06/13 22:47:20 thomasklausner Exp $
 #
 
 DISTNAME=	tuxanci-0.20.0-src
 PKGNAME=	tuxanci-0.20.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	games
 MASTER_SITES=	http://download.tuxanci.org/0.20.0/
 EXTRACT_SUFX=	.tar.bz2

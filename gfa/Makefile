@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2009/06/19 22:13:00 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2010/06/13 22:47:04 thomasklausner Exp $
 #
 
 DISTNAME=	gfa-0.4.1
+PKGREVISION=	1
 CATEGORIES=	time
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gfa/}
 

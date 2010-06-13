@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/04/30 10:13:46 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2010/06/13 22:47:05 thomasklausner Exp $
 #
 
 DISTNAME=	gnome-user-share-2.26.0
+PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-user-share/2.26/}
 EXTRACT_SUFX=	.tar.bz2

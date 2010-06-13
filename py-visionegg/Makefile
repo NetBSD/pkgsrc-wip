@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2010/01/18 09:38:30 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.12 2010/06/13 22:47:14 thomasklausner Exp $
 #
 
 DISTNAME=	visionegg-0.9.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics python
 MASTER_SITES=	http://surfnet.dl.sourceforge.net/project/visionegg/visionegg/visionegg-0.9.9/
 

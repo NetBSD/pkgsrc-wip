@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2010/01/17 12:03:29 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2010/06/13 22:47:11 thomasklausner Exp $
 #
 
 PKGNAME=		multisync-opie-0.82
-PKGREVISION=		3
+PKGREVISION=		4
 
 COMMENT=		Module to sync Opie-devices with MultiSync
 

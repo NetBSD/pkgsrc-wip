@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2010/06/01 19:24:22 christtrekker Exp $
+# $NetBSD: Makefile,v 1.7 2010/06/13 22:46:59 thomasklausner Exp $
 #
 
 DISTNAME=	edelib-2.0-beta
 PKGNAME=	${DISTNAME:S/-beta//}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ede/}
 

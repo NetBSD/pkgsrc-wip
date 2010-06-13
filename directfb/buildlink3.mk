@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2010/01/18 09:38:19 thomasklausner Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2010/06/13 22:46:59 thomasklausner Exp $
 
 BUILDLINK_TREE+=	DirectFB
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	DirectFB
 DIRECTFB_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.DirectFB+=	directfb>=0.9.17
-BUILDLINK_ABI_DEPENDS.DirectFB?=	directfb>=0.9.22nb2
+BUILDLINK_ABI_DEPENDS.DirectFB?=	directfb>=0.9.22nb3
 BUILDLINK_PKGSRCDIR.DirectFB?=	../../wip/directfb
 
 .include "../../devel/SDL/buildlink3.mk"

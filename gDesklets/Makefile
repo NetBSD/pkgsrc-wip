@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2010/01/18 09:38:21 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.30 2010/06/13 22:47:04 thomasklausner Exp $
 
 DISTNAME=	gDesklets-0.26
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	x11 gnome
 MASTER_SITES=	http://www.pycage.de/download/gdesklets/
 EXTRACT_SUFX=	.tar.bz2

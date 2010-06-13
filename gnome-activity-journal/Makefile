@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/03/22 15:07:31 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2010/06/13 22:47:05 thomasklausner Exp $
 #
 
 DISTNAME=	gnome-activity-journal-0.3.3
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://edge.launchpad.net/gnome-activity-journal/0.3/0.3.3/+download/
 

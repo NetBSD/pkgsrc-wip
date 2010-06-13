@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2007/01/07 09:16:00 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2010/06/13 22:47:11 thomasklausner Exp $
 #
 
 DISTNAME=		mpgedit_0-7p2beta_src
 PKGNAME=		mpgedit-0.7.1.99
 EXTRACT_SUFX=		.tgz
 WRKSRC=			${WRKDIR}/${DISTNAME}/mpgedit
+PKGREVISION=		1
 CATEGORIES=		audio
 MASTER_SITES=		http://www.mpgedit.org/mpgedit/download/
 

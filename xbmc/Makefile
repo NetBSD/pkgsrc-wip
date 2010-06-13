@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2010/04/17 13:51:58 khorben Exp $
+# $NetBSD: Makefile,v 1.3 2010/06/13 22:47:21 thomasklausner Exp $
 #
 
 DISTNAME=	xbmc-9.11
+PKGREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xbmc/}
 

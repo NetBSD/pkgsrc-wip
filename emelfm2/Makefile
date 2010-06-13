@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2009/07/22 09:53:11 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.10 2010/06/13 22:47:03 thomasklausner Exp $
 #
 
 DISTNAME=	emelfm2-0.1.3
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://emelfm2.net/rel/
 

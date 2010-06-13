@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2010/03/16 19:45:23 jihbed Exp $
+# $NetBSD: Makefile,v 1.6 2010/06/13 22:47:06 thomasklausner Exp $
 #
 
 DISTNAME=	gtg-0.1.1
+PKGREVISION=	1
 CATEGORIES=	editors python
 MASTER_SITES=	http://launchpad.net/gtg/trunk/0.1.1/+download/
 

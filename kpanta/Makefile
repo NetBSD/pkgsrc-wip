@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.11 2010/01/18 09:38:26 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.12 2010/06/13 22:47:09 thomasklausner Exp $
 #
 
 DISTNAME=		kpanta_1_0
 PKGNAME=		${DISTNAME:S/_1_0/-1.0/}
 WRKSRC=			${WRKDIR}/kpanta
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		games
 MASTER_SITES=		http://www.geocities.com/anil_rvce/kpanta/
 EXTRACT_SUFX=		.tgz

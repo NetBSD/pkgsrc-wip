@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2009/07/22 09:53:14 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.20 2010/06/13 22:47:15 thomasklausner Exp $
 #
 
 DISTNAME=	regexxer-0.9
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=regexxer/}
 

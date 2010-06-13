@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2010/05/01 22:36:53 thomasklausner Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2010/06/13 22:47:11 thomasklausner Exp $
 
 BUILDLINK_TREE+=	meta-tracker
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	meta-tracker
 META_TRACKER_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.meta-tracker+=	meta-tracker>=0.6.96
+BUILDLINK_ABI_DEPENDS.meta-tracker?=	meta-tracker>=0.6.96nb1
 BUILDLINK_PKGSRCDIR.meta-tracker?=	../../wip/meta-tracker
 
 .include "../../databases/qdbm/buildlink3.mk"

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/05/03 14:57:45 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2010/06/13 22:47:10 thomasklausner Exp $
 #
 
 DISTNAME=	libslab-2.30.0
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.gnome.org/pub/gnome/sources/libslab/2.30/
 EXTRACT_SUFX=	.tar.bz2

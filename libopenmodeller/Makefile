@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2010/01/17 12:03:28 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.10 2010/06/13 22:47:10 thomasklausner Exp $
 #
 
 DISTNAME=		libopenmodeller-0.3.3
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		geography
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=openmodeller/}
 

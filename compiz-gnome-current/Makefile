@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2010/01/18 09:38:18 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.13 2010/06/13 22:46:58 thomasklausner Exp $
 #
 
 DISTNAME=	compiz-0.5.0
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	wm x11
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=	.tar.bz2

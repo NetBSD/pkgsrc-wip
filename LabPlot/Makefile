@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2010/01/18 09:38:16 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.12 2010/06/13 22:46:54 thomasklausner Exp $
 #
 
 DISTNAME=	LabPlot-1.6.0.1-2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	kde graphics math
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=labplot/}
 EXTRACT_SUFX=	.tar.bz2

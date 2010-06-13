@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2010/05/04 13:14:19 obache Exp $
+# $NetBSD: Makefile,v 1.4 2010/06/13 22:47:12 thomasklausner Exp $
 #
 
 DISTNAME=	oxim-setup-1.4.4
+PKGREVISION=	1
 CATEGORIES=	inputmethod chinese
 MASTER_SITES=	ftp://ftp.opendesktop.org.tw/odp/OXIM/Source/
 

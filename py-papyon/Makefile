@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2010/04/18 14:00:41 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2010/06/13 22:47:14 thomasklausner Exp $
 #
 
 DISTNAME=	papyon-0.4.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	http://telepathy.freedesktop.org/releases/papyon/
 

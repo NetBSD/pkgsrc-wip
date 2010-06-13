@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/05/08 22:40:11 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2010/06/13 22:47:13 thomasklausner Exp $
 #
 
 DISTNAME=	pessulus-2.30.0
+PKGREVISION=	1
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/pessulus/2.30/}
 EXTRACT_SUFX=	.tar.bz2

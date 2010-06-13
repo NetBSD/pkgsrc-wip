@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2009/06/18 00:31:59 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2010/06/13 22:47:14 thomasklausner Exp $
 #
 
 DISTNAME=	EditObj2-0.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	http://download.gna.org/songwrite/
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2010/01/18 09:38:30 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2010/06/13 22:47:15 thomasklausner Exp $
 #
 
 DISTNAME=		qhacc-3.3
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		finance
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=qhacc/}
 

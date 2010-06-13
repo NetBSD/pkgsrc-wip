@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/10/11 10:04:42 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2010/06/13 22:47:13 thomasklausner Exp $
 #
 
 DISTNAME=	pcsx-df-1.10
+PKGREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pcsx-df/}
 

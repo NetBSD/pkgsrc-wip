@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2010/05/06 00:51:22 khorben Exp $
+# $NetBSD: Makefile,v 1.3 2010/06/13 22:47:08 thomasklausner Exp $
 #
 
 DISTNAME=	hplip-3.10.2
+PKGREVISION=	1
 CATEGORIES=	wip
 MASTER_SITES=	http://downloads.sourceforge.net/project/hplip/hplip/3.10.2/
 

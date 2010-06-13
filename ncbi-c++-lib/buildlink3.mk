@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2009/03/20 19:43:51 jsonn Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2010/06/13 22:47:12 thomasklausner Exp $
 # XXX
 # XXX This file was created automatically using createbuildlink-3.8.
 # XXX After this file has been verified as correct, the comment lines
@@ -13,6 +13,7 @@
 BUILDLINK_TREE+=	ncbi_cxx-lib
 
 BUILDLINK_API_DEPENDS.ncbi_cxx-lib+=	ncbi_cxx-lib>=20041130
+BUILDLINK_ABI_DEPENDS.ncbi_cxx-lib?=	ncbi_cxx-lib>=20041130nb2
 BUILDLINK_PKGSRCDIR.ncbi_cxx-lib?=	../../wip/ncbi-c++-lib
 
 # XXX

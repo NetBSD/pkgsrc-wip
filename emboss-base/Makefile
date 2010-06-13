@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2006/10/29 11:23:07 shattered Exp $
+# $NetBSD: Makefile,v 1.6 2010/06/13 22:47:03 thomasklausner Exp $
 
 .include "Makefile.common"
 DISTNAME=		EMBOSS-2.9.0
 PKGNAME=		emboss-base-2.9.0
+PKGREVISION=		1
 
 COMMENT=	European Molecular Biology Open Software Suite
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2010/03/16 15:23:45 brook1 Exp $
+# $NetBSD: Makefile,v 1.11 2010/06/13 22:46:58 thomasklausner Exp $
 #
 
 DISTNAME=		clustalx-2.0.12
+PKGREVISION=		1
 CATEGORIES=		biology
 MASTER_SITES=		ftp://ftp.ebi.ac.uk/pub/software/clustalw2/2.0.12/
 

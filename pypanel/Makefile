@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2010/01/18 09:38:30 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2010/06/13 22:47:14 thomasklausner Exp $
 #
 
 DISTNAME=		PyPanel-2.4
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=pypanel/}
 

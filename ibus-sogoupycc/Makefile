@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/05/08 09:48:22 obache Exp $
+# $NetBSD: Makefile,v 1.2 2010/06/13 22:47:08 thomasklausner Exp $
 #
 
 DISTNAME=	ibus-sogoupycc-0.2.5
+PKGREVISION=	1
 CATEGORIES=	inputmethod
 MASTER_SITES=	http://ibus-sogoupycc.googlecode.com/files/
 

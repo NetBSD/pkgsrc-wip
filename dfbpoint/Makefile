@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2010/01/18 09:38:18 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.13 2010/06/13 22:46:59 thomasklausner Exp $
 #
 
 DISTNAME=	DFBPoint-0.7.2
 PKGNAME=	${DISTNAME:S/DFBP/dfbp/}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.directfb.org/download/DFBPoint/
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2008/11/25 20:46:18 jh88 Exp $
+# $NetBSD: Makefile,v 1.5 2010/06/13 22:47:13 thomasklausner Exp $
 #
 
 DISTNAME=	pnmcurve-0.0.4
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.ecademix.com/JohannesHofmann/
 

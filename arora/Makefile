@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2010/05/26 20:13:44 pdtafti Exp $
+# $NetBSD: Makefile,v 1.10 2010/06/13 22:46:56 thomasklausner Exp $
 
 DISTNAME=		arora-0.10.2
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		www net
 MASTER_SITES=		http://arora.googlecode.com/files/
 

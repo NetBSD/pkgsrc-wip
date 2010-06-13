@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2010/04/06 11:44:54 obache Exp $
+# $NetBSD: Makefile,v 1.3 2010/06/13 22:47:20 thomasklausner Exp $
 #
 
 DISTNAME=	tegaki-pygtk-0.3.1
+PKGREVISION=	1
 CATEGORIES=	inputmethod
 MASTER_SITES=	http://www.tegaki.org/releases/${PKGVERSION_NOREV}/
 

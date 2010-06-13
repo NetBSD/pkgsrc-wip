@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2009/03/20 19:43:54 jsonn Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2010/06/13 22:47:21 thomasklausner Exp $
 
 BUILDLINK_TREE+=	xfce4-radio-plugin
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	xfce4-radio-plugin
 XFCE4_RADIO_PLUGIN_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.xfce4-radio-plugin+=	xfce4-radio-plugin>=0.2.0
+BUILDLINK_ABI_DEPENDS.xfce4-radio-plugin?=	xfce4-radio-plugin>=0.2.0nb1
 BUILDLINK_PKGSRCDIR.xfce4-radio-plugin?=	../../wip/xfce4-radio-plugin
 
 .include "../../x11/xfce4-panel/buildlink3.mk"

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.19 2010/01/18 09:38:23 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.20 2010/06/13 22:47:06 thomasklausner Exp $
 #
 
 DISTNAME=		9714-gtk-qt-engine-0.2
 PKGNAME=		gtk2-engines-qt-0.2
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		devel x11
 MASTER_SITES=		http://www.kde-look.org/content/files/
 EXTRACT_SUFX=		.tar.bz2

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2010/04/26 21:08:35 guigui2 Exp $
+# $NetBSD: Makefile,v 1.12 2010/06/13 22:47:04 thomasklausner Exp $
 #
 
 DISTNAME=	giggle-0.5
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/giggle/0.5/}
 EXTRACT_SUFX=	.tar.bz2

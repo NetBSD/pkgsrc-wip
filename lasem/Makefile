@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/04/20 20:12:00 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2010/06/13 22:47:09 thomasklausner Exp $
 #
 
 DISTNAME=	lasem-0.2.0
+PKGREVISION=	1
 CATEGORIES=	graphics gnome
 MASTER_SITES=	ftp://ftp.gnome.org/pub/gnome/sources/lasem/0.2/
 EXTRACT_SUFX=	.tar.bz2

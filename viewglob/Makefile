@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2006/06/15 13:31:57 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2010/06/13 22:47:21 thomasklausner Exp $
 #
 
 DISTNAME=		viewglob-0.9
+PKGREVISION=		1
 CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=viewglob/}
 

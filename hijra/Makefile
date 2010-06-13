@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2009/07/22 09:53:13 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2010/06/13 22:47:07 thomasklausner Exp $
 #
 
 DISTNAME=	hijra-0.1.18
+PKGREVISION=	1
 CATEGORIES=	time python
 MASTER_SITES=	http://www.ojuba.org/downloads/hijra/
 EXTRACT_SUFX=	.tar.bz2

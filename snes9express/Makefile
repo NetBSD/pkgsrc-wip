@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2006/07/06 21:45:20 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2010/06/13 22:47:16 thomasklausner Exp $
 #
 
 DISTNAME=		snes9express-1.42
+PKGREVISION=		1
 CATEGORIES=		emulators x11
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=snes9express/}
 

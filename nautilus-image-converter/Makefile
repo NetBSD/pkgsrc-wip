@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2010/04/10 20:19:34 jihbed Exp $
+# $NetBSD: Makefile,v 1.6 2010/06/13 22:47:11 thomasklausner Exp $
 #
 
 DISTNAME=	nautilus-image-converter-0.3.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	sysutils graphics gnome
 MASTER_SITES=	ftp://ftp.gnome.org/pub/gnome/sources/nautilus-image-converter/0.3/
 EXTRACT_SUFX=	.tar.bz2

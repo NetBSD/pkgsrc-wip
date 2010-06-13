@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2009/05/06 09:55:11 cheusov Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2010/06/13 22:47:10 thomasklausner Exp $
 # XXX
 # XXX This file was created automatically using createbuildlink-3.12.
 # XXX After this file has been verified as correct, the comment lines
@@ -16,6 +16,7 @@ BUILDLINK_TREE+=	libgtk-java
 uibgtk_java_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libgtk-java+=	libgtk-java>=2.8.5
+BUILDLINK_ABI_DEPENDS.libgtk-java?=	libgtk-java>=2.8.5nb1
 BUILDLINK_PKGSRCDIR.libgtk-java?=	../../wip/libgtk-java
 
 # XXX

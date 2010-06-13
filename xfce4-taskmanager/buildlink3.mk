@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2009/03/20 19:43:54 jsonn Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2010/06/13 22:47:21 thomasklausner Exp $
 
 BUILDLINK_TREE+=	xfce4-taskmanager
 
@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	xfce4-taskmanager
 XFCE4_TASKMANAGER_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.xfce4-taskmanager+=	xfce4-taskmanager>=0.3.2
+BUILDLINK_ABI_DEPENDS.xfce4-taskmanager?=	xfce4-taskmanager>=0.3.2nb1
 BUILDLINK_PKGSRCDIR.xfce4-taskmanager?=	../../wip/xfce4-taskmanager
 
 .include "../../x11/libxfce4gui/buildlink3.mk"

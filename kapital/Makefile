@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2010/01/18 09:38:26 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.21 2010/06/13 22:47:09 thomasklausner Exp $
 
 DISTNAME=	kapital-1.1.030606
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel kde
 
 MAINTAINER=	greyskyy@users.sourceforge.net

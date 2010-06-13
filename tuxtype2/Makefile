@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2010/01/18 09:38:34 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.13 2010/06/13 22:47:20 thomasklausner Exp $
 
 DISTNAME=	Tuxtype2-${VERSION}
 PKGNAME=	tuxtype2-${VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tuxtype/}
 

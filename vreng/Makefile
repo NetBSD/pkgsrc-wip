@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2010/01/18 09:38:35 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.13 2010/06/13 22:47:21 thomasklausner Exp $
 
 #DISTNAME=	vreng-6.8.3
 DISTNAME=	vreng-6.8.12
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	x11
 
 MASTER_SITES=	ftp://ftp.enst.fr/pub/vreng/

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/03/29 12:11:06 ryo-on Exp $
+# $NetBSD: Makefile,v 1.2 2010/06/13 22:47:15 thomasklausner Exp $
 #
 
 DISTNAME=	sakura-2.3.7
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	http://www.pleyades.net/david/projects/sakura/
 EXTRACT_SUFX=	.tar.bz2

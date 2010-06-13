@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2010/03/16 19:49:03 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2010/06/13 22:47:13 thomasklausner Exp $
 #
 
 DISTNAME=	postr-0.12.4
+PKGREVISION=	1
 CATEGORIES=	graphics gnome
 MASTER_SITES=	ftp://ftp.gnome.org/pub/gnome/sources/postr/0.12/
 EXTRACT_SUFX=	.tar.bz2

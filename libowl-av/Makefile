@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/07/16 17:34:02 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2010/06/13 22:47:10 thomasklausner Exp $
 #
 
 DISTNAME=	libowl-av-0.1
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	http://labs.o-hand.com/sources/libowl-av/
 

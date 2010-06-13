@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2010/05/20 13:14:20 obache Exp $
+# $NetBSD: Makefile,v 1.3 2010/06/13 22:47:21 thomasklausner Exp $
 #
 
 DISTNAME=	WritRecogn-0.1.9
 PKGNAME=	${DISTNAME:tl}
+PKGREVISION=	1
 CATEGORIES=	inputmethod
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=/writrecogn/}
 

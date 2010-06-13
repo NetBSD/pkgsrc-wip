@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2006/05/19 16:51:25 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.6 2010/06/13 22:47:10 thomasklausner Exp $
 #
 
 DISTNAME=		lingoteach-ui-0.3.9a
+PKGREVISION=		1
 CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=lingoteach/}
 

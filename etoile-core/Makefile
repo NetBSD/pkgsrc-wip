@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2009/12/02 23:09:54 christtrekker Exp $
+# $NetBSD: Makefile,v 1.4 2010/06/13 22:47:03 thomasklausner Exp $
 #
 
 DISTNAME=	etoile-0.4.1
 PKGNAME=	${DISTNAME:S/-/-core-/}
+PKGREVISION=	1
 CATEGORIES=	gnustep
 MASTER_SITES=	http://download.gna.org/etoile/
 

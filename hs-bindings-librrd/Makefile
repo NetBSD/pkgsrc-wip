@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/04/21 03:39:30 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2010/06/13 22:47:08 thomasklausner Exp $
 #
 
 DISTNAME=	bindings-librrd-0.1
+PKGREVISION=	1
 CATEGORIES=	databases
 
 MAINTAINER=	pho@cielonegro.org

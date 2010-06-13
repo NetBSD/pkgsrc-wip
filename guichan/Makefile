@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2010/01/18 09:38:24 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2010/06/13 22:47:07 thomasklausner Exp $
 #
 
 DISTNAME=		guichan-0.6.0-src
 PKGNAME=		${DISTNAME:S/-src//}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=guichan/}
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2008/03/11 00:22:45 tnn2 Exp $
+# $NetBSD: Makefile,v 1.8 2010/06/13 22:46:56 thomasklausner Exp $
 #
 
 DISTNAME=	awflwm-0.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11 wm
 MASTER_SITES=	http://awflwm.berlios.de/downloads/
 EXTRACT_SUFX=	.tar.bz2

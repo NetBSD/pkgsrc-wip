@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/03/23 20:12:40 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2010/06/13 22:47:14 thomasklausner Exp $
 #
 
 DISTNAME=	python-igraph-0.5.3
 PKGNAME=	${PYPKGPREFIX}-igraph-0.5.3
+PKGREVISION=	1
 CATEGORIES=	graphics math python
 MASTER_SITES=	http://pypi.python.org/packages/source/p/python-igraph/
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2010/01/18 09:38:28 thomasklausner Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2010/06/13 22:47:12 thomasklausner Exp $
 
 BUILDLINK_TREE+=	openvrml
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	openvrml
 OPENVRML_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.openvrml+=	openvrml>=0.14.3
-BUILDLINK_ABI_DEPENDS.openvrml?=	openvrml>=0.14.3nb1
+BUILDLINK_ABI_DEPENDS.openvrml?=	openvrml>=0.14.3nb2
 BUILDLINK_PKGSRCDIR.openvrml?=	../../wip/openvrml
 
 .include "../../graphics/glu/buildlink3.mk"

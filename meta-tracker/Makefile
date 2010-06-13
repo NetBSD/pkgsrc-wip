@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2010/05/01 22:34:48 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2010/06/13 22:47:11 thomasklausner Exp $
 
 DISTNAME=	tracker-0.6.96
 PKGNAME=	meta-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/tracker/0.6/}
 EXTRACT_SUFX=	.tar.bz2

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2009/07/22 09:53:11 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2010/06/13 22:46:58 thomasklausner Exp $
 #
 
 PKGVERSION=	8.02
-PKGREVISION=	1
+PKGREVISION=	2
 DISTNAME=	codeblocks-${PKGVERSION}-src
 PKGNAME=	codeblocks-${PKGVERSION}
 CATEGORIES=	devel

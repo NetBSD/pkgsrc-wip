@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2010/01/18 09:38:16 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2010/06/13 22:46:55 thomasklausner Exp $
 #
 
 DISTNAME=	MoleInvasion-0.4
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	games
 MASTER_SITES=	ftp://download.tuxfamily.org/minvasion/packages/
 EXTRACT_SUFX=	.tar.bz2

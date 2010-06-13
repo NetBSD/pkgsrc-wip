@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2010/01/18 09:38:18 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.11 2010/06/13 22:46:57 thomasklausner Exp $
 #
 
 DISTNAME=		cb2bib-0.7.2
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		misc
 MASTER_SITES=		http://www.molspaces.com/dl/progs/
 

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2010/01/18 09:38:34 thomasklausner Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2010/06/13 22:47:20 thomasklausner Exp $
 
 BUILDLINK_TREE+=	twinkle
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	twinkle
 TWINKLE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.twinkle+=	twinkle>=1.1
-BUILDLINK_ABI_DEPENDS.twinkle?=	twinkle>=1.4.2nb3
+BUILDLINK_ABI_DEPENDS.twinkle?=	twinkle>=1.4.2nb4
 BUILDLINK_PKGSRCDIR.twinkle?=	../../wip/twinkle
 
 .include "../../x11/qt3-tools/buildlink3.mk"

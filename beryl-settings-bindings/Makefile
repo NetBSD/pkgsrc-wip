@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2009/06/02 12:18:01 noud4 Exp $
+# $NetBSD: Makefile,v 1.4 2010/06/13 22:46:57 thomasklausner Exp $
 #
 
 DISTNAME=	beryl-settings-bindings-${BERYL_VERSION}
+PKGREVISION=	1
 CATEGORIES=	wm
 
 COMMENT=	Beryl settings bindings

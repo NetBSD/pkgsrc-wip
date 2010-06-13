@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2010/03/14 16:32:21 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2010/06/13 22:47:04 thomasklausner Exp $
 #
 
 DISTNAME=		gdal-grass-1.3.1.2
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		geography
 MASTER_SITES=		http://www.gdal.org/dl/
 

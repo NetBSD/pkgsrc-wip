@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2007/09/21 13:06:54 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2010/06/13 22:47:10 thomasklausner Exp $
 #
 
 DISTNAME=		libglade-java-2.10.1
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libglade-java/2.10/}
 EXTRACT_SUFX=		.tar.bz2

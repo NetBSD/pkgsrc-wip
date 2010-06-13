@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2010/05/13 11:52:02 obache Exp $
+# $NetBSD: Makefile,v 1.7 2010/06/13 22:46:57 thomasklausner Exp $
 #
 
 DISTNAME=		bakery-2.6.3
+PKGREVISION=	1
 CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/bakery/2.6/}
 EXTRACT_SUFX=	.tar.bz2

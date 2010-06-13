@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2006/10/12 21:13:42 shattered Exp $
+# $NetBSD: Makefile,v 1.3 2010/06/13 22:47:19 thomasklausner Exp $
 #
 
 DISTNAME=	swfmill-0.2.11
+PKGREVISION=	1
 CATEGORIES=	graphics converters
 MASTER_SITES=	http://swfmill.org/releases/
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2008/05/24 15:34:08 tnn2 Exp $
+# $NetBSD: Makefile,v 1.4 2010/06/13 22:46:57 thomasklausner Exp $
 #
 
 DISTNAME=	beryl-core-0.2.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	wm
 MASTER_SITES=	http://releases.beryl-project.org/0.2.1/
 EXTRACT_SUFX=	.tar.bz2

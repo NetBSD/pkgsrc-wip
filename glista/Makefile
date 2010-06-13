@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2009/07/31 17:16:27 jihbed Exp $
+# $NetBSD: Makefile,v 1.6 2010/06/13 22:47:05 thomasklausner Exp $
 #
 
 DISTNAME=	glista-0.4
+PKGREVISION=	1
 CATEGORIES=	time gnome
 MASTER_SITES=	http://glista.googlecode.com/files/
 

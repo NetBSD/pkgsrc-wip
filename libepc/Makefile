@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/05/02 10:26:16 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2010/06/13 22:47:10 thomasklausner Exp $
 
 DISTNAME=		libepc-0.3.11
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libepc/0.3/}
 EXTRACT_SUFX=		.tar.bz2
