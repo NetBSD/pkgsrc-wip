@@ -23,6 +23,7 @@
 
 #use "power_getopt.awk"
 #use "xgetline.awk"
+#use "xclose.awk"
 
 #.begin-str help
 # This program takes a dependency graph of packages and a list of
@@ -33,6 +34,7 @@
 # OPTIONS:
 #    -h|--help          display this screen
 #    =f <file>          list of packages, one package per line
+#    =p <pkgs>          list of packages separated by space character
 #    -r                 output dependencies
 #    -x                 exclude packages in the list
 #    -v                 invert condition
@@ -46,22 +48,30 @@
 #   devel/libmaa wip/paexec
 #   net/netcat
 #
-# Option -f is mandatory.
+# Option -f or -p are mandatory.
 #.end-str
 
 BEGIN {
 	fn         = getarg("f")
+	pkgs       = getarg("p")
 	opt_deps   = getarg("r")
 	opt_excl   = getarg("x")
 	opt_invert = getarg("v")
 
-	if (!fn){
-		print "-f is mandatory!" > "/dev/stderr"
+	if (!fn && !pkgs){
+		print "-f or -p are mandatory!" > "/dev/stderr"
 		exitnow(1)
 	}
 
-	while (xgetline0(fn)){
-		list [$1] = 1
+	if (pkgs != ""){
+		split(pkgs, pkgs_arr)
+		for (i in pkgs_arr)
+			list [pkgs_arr [i]] = 1
+	}else if (fn != ""){
+		while (xgetline0(fn))
+			list [$1] = 1
+
+		xclose(fn)
 	}
 }
 
