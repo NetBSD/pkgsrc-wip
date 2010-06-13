@@ -133,8 +133,7 @@ function process_deps (){
 
 			dep_pkgs [pkgpath] = 1
 		}else{
-			deppath = $i
-			sub(/^[^:]*:(..\/..\/)?/, "", deppath)
+			deppath = src_depend2pkgpath($i)
 
 			depname = $i
 			if (!sub(/:.*$/, "", depname)){
