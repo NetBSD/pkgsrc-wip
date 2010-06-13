@@ -66,8 +66,6 @@ existing tools:
          - -p 'pkg1 pkg2 ...pkgN'
 
 new tools?
-    - list leaf packages?
-
     - replacement for lintpkgsrc -m
 
     - (unsure) additional tool for fields reordering?
