@@ -1,0 +1,16 @@
+AstroAsciiData is a Python module to handle ASCII tables. Features:
+
+    * Imports all reasonably well-formed Ascii tables
+    * Column-first access
+    * Easy creation and manipulation of tables, columns, rows and
+	attached comments
+    * Retains formatting of data values
+    * Support for SExtractor style headers
+    * Column sorting
+    * Interchangeable comment character, column delimiter and null value
+    * Exports data to:
+          o Ascii
+          o Numpy/Numarray
+          o FITS table
+          o HTML table format
+          o LaTeX table format
