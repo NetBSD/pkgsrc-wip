@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2010/05/24 17:19:07 gregoire Exp $
+# $NetBSD: Makefile,v 1.21 2010/06/14 23:12:12 gregoire Exp $
 #
 
 DISTNAME=		grub-bazaar-snapshot
@@ -37,7 +37,7 @@ MAKE_ENV+=		EGDIR=${EGDIR}
 
 .include "../../mk/bsd.prefs.mk"
 
-EGFILES=		00_header 05_pkgsrc_theme 30_os-prober 40_custom
+EGFILES=		00_header 05_pkgsrc_theme 30_os-prober 40_custom 41_custom
 .if ${OPSYS} == "FreeBSD"
 EGFILES+=		10_kfreebsd
 .elif ${OPSYS} == "Linux"
