@@ -110,55 +110,68 @@ dep_builddep && /^BUILD_DEPENDS=/ {
 	next
 }
 
-function process_deps (){
+function process_deps (                arr, i, j, cnt){
 	for (i=1; i <= NF; ++i){
 		if ($i ~ /[{]/){
-			depname = braceexpand($i)
-			sub(/ .*$/, "", depname)
-			sub(/:.*$/, "", depname)
+			cnt = split(braceexpand($i), arr)
 
-			idx = pkgver_position(depname)
-			depbase = substr(depname, 1, idx-1)
+			depname1 = arr [1]
+			sub(/:.*$/, "", depname1)
+			depbase1 = pkgname2pkgbase(depname1)
 
 			if (!keep_depver){
-				depname = depbase
+				depname1 = depbase1
 			}
 
-			if (!out_pkgname)
-				hidden_deps [depbase " " pkgpath] = depname
-			else if (!out_pkgpath)
-				hidden_deps [depbase " " pkgbase] = depname
-			else
-				hidden_deps [depbase " " pkgpath ";" pkgbase] = depname
+			for (j=2; j <= cnt; ++j){
+				depname = arr [j]
+				sub(/:.*$/, "", depname)
+				depbase = pkgname2pkgbase(depname)
 
-			dep_pkgs [pkgpath] = 1
-		}else{
-			deppath = src_depend2pkgpath($i)
+				if (depbase != depbase1){
+					if (!out_pkgname)
+						hidden_deps [depbase1 " " pkgpath] = depname1
+					else if (!out_pkgpath)
+						hidden_deps [depbase1 " " pkgbase] = depname1
+					else
+						hidden_deps [depbase1 " " pkgpath ";" pkgbase] = depname1
 
-			depname = $i
-			if (!sub(/:.*$/, "", depname)){
-				# bin_summary is given on input, no PKGPATH in DEPENDS
-				deppath = ""
+					dep_pkgs [pkgpath] = 1
+					j = -1
+
+					break
+				}
 			}
-
-			depbase = depname
-
-			if (!keep_depver)
-				depbase = pkgname2pkgbase(depbase)
-
-			if (!out_pkgname)
-				full_deps [deppath " " pkgpath] = 1
-			else if (!out_pkgpath)
-				full_deps [depbase " " pkgbase] = 1
-			else if (deppath != "")
-				full_deps [deppath ";" depbase " " pkgpath ";" pkgbase] = 1
-			else
-				full_deps [depbase " " pkgpath ";" pkgbase] = 1
-
-			dep_pkgs [pkgpath] = 1
-			if (!keep_ver)
-				dep_pkgs [deppath] = dep_pkgs [depbase] = 1
+			if (j == -1)
+				continue
 		}
+
+		# ../../pkg/path is a dependency
+		deppath = src_depend2pkgpath($i)
+
+		depname = $i
+		if (!sub(/:.*$/, "", depname)){
+			# bin_summary is given on input, no PKGPATH in DEPENDS
+			deppath = ""
+		}
+
+		depbase = depname
+
+		if (!keep_depver)
+			depbase = pkgname2pkgbase(depbase)
+
+		if (!out_pkgname)
+			full_deps [deppath " " pkgpath] = 1
+		else if (!out_pkgpath)
+			full_deps [depbase " " pkgbase] = 1
+		else if (deppath != "")
+			full_deps [deppath ";" depbase " " pkgpath ";" pkgbase] = 1
+		else
+			full_deps [depbase " " pkgpath ";" pkgbase] = 1
+
+		dep_pkgs [pkgpath] = 1
+		if (!keep_ver)
+			dep_pkgs [deppath] = dep_pkgs [depbase] = 1
 	}
 }
 
