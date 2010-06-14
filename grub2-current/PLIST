@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2010/06/07 01:45:38 gregoire Exp $
+@comment $NetBSD: PLIST,v 1.14 2010/06/14 22:42:45 gregoire Exp $
 bin/grub2-bin2h
 bin/grub2-editenv
 bin/grub2-fstest
@@ -88,7 +88,6 @@ lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/grub_script.tab.h
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/gzio.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/halt.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/handler.lst
-lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/handler.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/hashsum.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/hdparm.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/hello.mod
@@ -164,7 +163,6 @@ lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/serial.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/setjmp.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/setpci.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/sfs.mod
-lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/sh.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/sleep.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/tar.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/terminal.lst
@@ -227,6 +225,7 @@ share/examples/grub2/10_netbsd
 share/examples/grub2/10_windows
 share/examples/grub2/30_os-prober
 share/examples/grub2/40_custom
+share/examples/grub2/41_custom
 share/examples/grub2/README
 share/examples/grub2/default.conf.sample
 ${PLIST.mkfont}share/grub2/ascii.h
