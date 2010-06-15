@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/06/15 10:32:45 fhajny Exp $
+${LUA_CDIR}/lfs.so
