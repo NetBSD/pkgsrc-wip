@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.7 2010/04/29 00:21:09 othyro Exp $
+$NetBSD: distinfo,v 1.8 2010/06/16 08:44:59 othyro Exp $
 
-SHA1 (mysql-workbench-oss-5.2.20.tar.gz) = daaa467c44bb3459d3c7be4d16fe1036d4dab210
-RMD160 (mysql-workbench-oss-5.2.20.tar.gz) = e3ab3e6d9c03d4f496e6025e41771dad43dcc6f2
-Size (mysql-workbench-oss-5.2.20.tar.gz) = 16511576 bytes
+SHA1 (mysql-workbench-oss-5.2.22.tar.gz) = 938557c341ce2d1dbb8591ae8cd17dfb05078a62
+RMD160 (mysql-workbench-oss-5.2.22.tar.gz) = 2dab197335611a4553dc4384b9f82190060e744f
+Size (mysql-workbench-oss-5.2.22.tar.gz) = 21524038 bytes
 SHA1 (patch-ab) = 0228b4438fe44d44627c6fb8578189ffad31c409
 SHA1 (patch-ac) = de1ac3767443170b58fddd1a522a18a36c691b6c
