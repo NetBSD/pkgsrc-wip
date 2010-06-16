@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/06/16 13:51:27 obache Exp $
+${GEM_HOME}/cache/easyjour-${PKGVERSION}.gem
+${GEM_LIBDIR}/CHANGELOG
+${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/Manifest
+${GEM_LIBDIR}/README
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/easyjour.gemspec
+${GEM_LIBDIR}/examples/httpjour.rb
+${GEM_LIBDIR}/lib/easyjour.rb
+${GEM_LIBDIR}/lib/easyjour/version.rb
+${GEM_LIBDIR}/spec/spec_helper.rb
+${GEM_HOME}/specifications/easyjour-${PKGVERSION}.gemspec
