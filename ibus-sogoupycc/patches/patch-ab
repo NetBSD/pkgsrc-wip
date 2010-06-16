@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1 2010/06/16 08:30:31 obache Exp $
+
+Need to include dbus/dbus.h for dbus_threads_init_default().
+
+--- src/main.cpp.orig	2010-04-13 13:58:11.000000000 +0000
++++ src/main.cpp
+@@ -14,6 +14,7 @@
+ #include <ibus.h>
+ #include <signal.h>
+ #include <gtk/gtk.h>
++#include <dbus/dbus.h>
+ 
+ #include "defines.h"
+ #include "engine.h"
