@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4005 2010/06/15 14:24:10 minskim Exp $
+# $Id: Makefile,v 1.4006 2010/06/16 13:52:48 obache Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2140,6 +2140,8 @@ SUBDIR+=	rtpbreak
 SUBDIR+=	ruby-GalleryAdministrator
 SUBDIR+=	ruby-actionmessenger
 SUBDIR+=	ruby-ditz
+SUBDIR+=	ruby-dnssd
+SUBDIR+=	ruby-easyjour
 SUBDIR+=	ruby-git
 SUBDIR+=	ruby-term-ansicolor
 SUBDIR+=	ruby-thor
