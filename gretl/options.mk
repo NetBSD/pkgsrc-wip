@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1.1.1 2008/02/02 16:36:40 asau Exp $
+# $NetBSD: options.mk,v 1.2 2010/06/16 12:30:51 asau Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.gretl
 
@@ -43,3 +43,6 @@ USE_GNU_READLINE=	YES
 .if !empty(PKG_OPTIONS:Mpng)
 .include "../../graphics/png/buildlink3.mk"
 .endif
+
+# More?
+#.include "../../x11/gtk2/buildlink3.mk"

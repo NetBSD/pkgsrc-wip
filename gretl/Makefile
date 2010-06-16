@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2010/06/16 12:02:22 asau Exp $
+# $NetBSD: Makefile,v 1.8 2010/06/16 12:30:51 asau Exp $
 #
 
 DISTNAME=	gretl-1.9.0
@@ -18,7 +18,7 @@ USE_TOOLS+=	gmake
 USE_LIBTOOL=	yes
 BUILD_TARGET=
 TEST_TARGET=		check
-#USE_PKGLOCALEDIR=	yes
+USE_PKGLOCALEDIR=	yes
 
 # Fixing others' bugs:
 .include "../../mk/bsd.prefs.mk"
@@ -39,5 +39,8 @@ CHECK_PORTABILITY_SKIP=	osx/script
 .include "../../math/lapack/buildlink3.mk"
 .include "../../math/fftw/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/pcre/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
