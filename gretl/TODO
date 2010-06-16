@@ -1,5 +1,4 @@
-$Id: TODO,v 1.4 2010/06/16 12:09:14 asau Exp $
+$Id: TODO,v 1.5 2010/06/16 12:22:03 asau Exp $
 
-2. Fix incorrect configuration for readline, it uses readline unconditionally.
 3. Fix -ldl, it is ignored using hack currently.
 7. Check why it insists on using libf2c.
