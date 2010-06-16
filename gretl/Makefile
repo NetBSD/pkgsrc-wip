@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2010/06/13 22:47:06 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2010/06/16 12:02:22 asau Exp $
 #
 
-DISTNAME=	gretl-1.7.4
-PKGREVISION=	3
+DISTNAME=	gretl-1.9.0
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gretl/}
 EXTRACT_SUFX=	.tar.bz2
@@ -11,11 +10,15 @@ MAINTAINER=	asau@users.sourceforge.net
 HOMEPAGE=	http://gretl.sourceforge.net/
 COMMENT=	Gnu Regression, Econometrics and Time-series Library
 
-#USE_PKGLOCALEDIR=	yes
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+USE_LANGUAGES=	c fortran	# problems with LAPACK
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake
+USE_LIBTOOL=	yes
 BUILD_TARGET=
 TEST_TARGET=		check
+#USE_PKGLOCALEDIR=	yes
 
 # Fixing others' bugs:
 .include "../../mk/bsd.prefs.mk"
@@ -29,9 +32,11 @@ CONFIGURE_ARGS+=	--disable-gui
 
 DEPENDS+=	gnuplot-[0-9]*:../../graphics/gnuplot
 
-.include "../../graphics/gdk-pixbuf/buildlink3.mk"
-.include "../../math/lapack/buildlink3.mk"
+# Skip checks temporarily:
+CHECK_PORTABILITY_SKIP=	osx/script
+
 .include "../../math/blas/buildlink3.mk"
+.include "../../math/lapack/buildlink3.mk"
 .include "../../math/fftw/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
