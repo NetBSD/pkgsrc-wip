@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.15 2010/05/20 09:28:58 asau Exp $
+@comment $NetBSD: PLIST,v 1.16 2010/06/16 10:45:28 asau Exp $
 bin/clisp
 bin/clisp-link
+lib/clisp/base/bogomips.o
 lib/clisp/base/calls.o
 lib/clisp/base/gettext.o
 lib/clisp/base/libgnu_cl.a
