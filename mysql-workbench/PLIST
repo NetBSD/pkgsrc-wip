@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2010/04/27 04:34:52 othyro Exp $
+@comment $NetBSD: PLIST,v 1.3 2010/06/16 08:45:37 othyro Exp $
 bin/mysql-workbench
 bin/mysql-workbench-bin
 lib/mysql-workbench/libcdbc.la
@@ -23,6 +23,7 @@ lib/mysql-workbench/modules/db.mysql.sqlparser.grt.la
 lib/mysql-workbench/modules/dbutils.grt.la
 lib/mysql-workbench/modules/forms.grt.la
 lib/mysql-workbench/modules/mforms.py
+lib/mysql-workbench/modules/mysqldoclib.py
 lib/mysql-workbench/modules/opts.py
 lib/mysql-workbench/modules/table_utils.grt.lua
 lib/mysql-workbench/modules/tools.grt.lua
@@ -48,6 +49,7 @@ lib/mysql-workbench/modules/wb_admin_ssh.py
 lib/mysql-workbench/modules/wb_admin_utils.py
 lib/mysql-workbench/modules/wb_admin_variable_list.py
 lib/mysql-workbench/modules/wb_admin_variables.py
+lib/mysql-workbench/modules/wb_doclib_grt.py
 lib/mysql-workbench/modules/wb_utils_grt.py
 lib/mysql-workbench/modules/wba_monitor_be.py
 lib/mysql-workbench/modules/wba_ssh_ui.py
@@ -73,6 +75,7 @@ share/mysql-workbench/data/model_option_toolbar_physical_view.xml
 share/mysql-workbench/data/model_option_toolbar_selection.xml
 share/mysql-workbench/data/model_toolbar.xml
 share/mysql-workbench/data/paper_types.xml
+share/mysql-workbench/data/predefined_starters.xml
 share/mysql-workbench/data/shortcuts.xml
 share/mysql-workbench/data/shortcuts_basic.xml
 share/mysql-workbench/data/shortcuts_physical.xml
@@ -144,9 +147,6 @@ share/mysql-workbench/images/Refresh_18x18.png
 share/mysql-workbench/images/Refresh_disabled_18x18.png
 share/mysql-workbench/images/action_add_schema_objects.png
 share/mysql-workbench/images/action_admin.png
-share/mysql-workbench/images/action_button_left.png
-share/mysql-workbench/images/action_button_middle.png
-share/mysql-workbench/images/action_button_right.png
 share/mysql-workbench/images/action_edit_sql_script.png
 share/mysql-workbench/images/action_edit_table_data.png
 share/mysql-workbench/images/action_eer_open.png
@@ -336,18 +336,23 @@ share/mysql-workbench/images/options-horizontal-separator.png
 share/mysql-workbench/images/properties.png
 share/mysql-workbench/images/query_continue_on_error.png
 share/mysql-workbench/images/query_stop_on_error.png
+share/mysql-workbench/images/recall_query.png
 share/mysql-workbench/images/record_add.png
 share/mysql-workbench/images/record_back.png
 share/mysql-workbench/images/record_del.png
 share/mysql-workbench/images/record_discard.png
 share/mysql-workbench/images/record_edit.png
 share/mysql-workbench/images/record_export.png
+share/mysql-workbench/images/record_fetch_all.png
+share/mysql-workbench/images/record_fetch_next.png
+share/mysql-workbench/images/record_fetch_prev.png
 share/mysql-workbench/images/record_first.png
 share/mysql-workbench/images/record_last.png
 share/mysql-workbench/images/record_next.png
 share/mysql-workbench/images/record_save.png
 share/mysql-workbench/images/record_sort_asc.png
 share/mysql-workbench/images/record_sort_desc.png
+share/mysql-workbench/images/record_sort_reset.png
 share/mysql-workbench/images/record_wrap_vertical.png
 share/mysql-workbench/images/rel11.cur
 share/mysql-workbench/images/rel1n.cur
@@ -493,6 +498,25 @@ share/mysql-workbench/images/wb_rel_nm.png
 share/mysql-workbench/images/wb_rubber.png
 share/mysql-workbench/images/wb_splashscreen_oss.png
 share/mysql-workbench/images/wb_splashscreen_se.png
+share/mysql-workbench/images/wb_starter_button_left.png
+share/mysql-workbench/images/wb_starter_button_middle.png
+share/mysql-workbench/images/wb_starter_button_right.png
+share/mysql-workbench/images/wb_starter_legal.png
+share/mysql-workbench/images/wb_starter_more.png
+share/mysql-workbench/images/wb_starter_mysql_bug_reporter_52.png
+share/mysql-workbench/images/wb_starter_mysql_bug_reporter_68.png
+share/mysql-workbench/images/wb_starter_mysql_doc_lib_52.png
+share/mysql-workbench/images/wb_starter_mysql_doc_lib_68.png
+share/mysql-workbench/images/wb_starter_mysql_news_52.png
+share/mysql-workbench/images/wb_starter_mysql_news_68.png
+share/mysql-workbench/images/wb_starter_mysql_wb_blog_52.png
+share/mysql-workbench/images/wb_starter_mysql_wb_blog_68.png
+share/mysql-workbench/images/wb_starter_mysql_wb_twitters_52.png
+share/mysql-workbench/images/wb_starter_mysql_wb_twitters_68.png
+share/mysql-workbench/images/wb_starter_planet_mysql_52.png
+share/mysql-workbench/images/wb_starter_planet_mysql_68.png
+share/mysql-workbench/images/wb_starter_type_community.png
+share/mysql-workbench/images/wb_starter_type_mysql.png
 share/mysql-workbench/images/workbench.Document.16x16.png
 share/mysql-workbench/images/workbench.Document.32x32.png
 share/mysql-workbench/images/workbench.Document.48x48.png
@@ -531,6 +555,8 @@ share/mysql-workbench/input_dialog.glade
 share/mysql-workbench/libraries/wb.py
 share/mysql-workbench/libraries/wb_library.lua
 share/mysql-workbench/model_view.glade
+share/mysql-workbench/modules/data/DocLibrary/mysqldoclib.sqlite
+share/mysql-workbench/modules/data/DocLibrary/mysqldoclib_webui.sqlite
 share/mysql-workbench/modules/data/com.mysql.rdbms.mysql.sql.editor.xml
 share/mysql-workbench/modules/data/db_mysql_catalog_reporting/Basic_Text.tpl/basic_text_report.txt.tpl
 share/mysql-workbench/modules/data/editor_image.glade
@@ -608,6 +634,8 @@ share/mysql-workbench/mysql.profiles/Windows_x64_(MySQL_x86_zip_Package).xml
 share/mysql-workbench/mysql_system_status.vbs
 share/mysql-workbench/mysql_system_status_rmt.vbs
 share/mysql-workbench/recordset_view.glade
+share/mysql-workbench/shell_snippets.py
+share/mysql-workbench/snippets/DB_Management.txt
 share/mysql-workbench/snippets/SQL_DDL_Statements.txt
 share/mysql-workbench/snippets/SQL_DML_Statements.txt
 share/mysql-workbench/sshtunnel.py
