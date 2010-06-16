@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/06/16 13:50:16 obache Exp $
+
+SHA1 (dnssd-1.3.1.gem) = 9af6a340415cdc3911086df807996f9d856be6fe
+RMD160 (dnssd-1.3.1.gem) = 1edccbadad99110a54eed1e2a776c4e1ebea6807
+Size (dnssd-1.3.1.gem) = 31744 bytes
