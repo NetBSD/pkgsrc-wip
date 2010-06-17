@@ -1,6 +1,6 @@
-$NetBSD: patch-ag,v 1.11 2009/08/01 16:18:15 schnoebe Exp $
+$NetBSD: patch-ag,v 1.12 2010/06/17 03:59:11 schnoebe Exp $
 
---- etc/c2s.xml.in.orig	2009-07-05 16:54:18.000000000 -0500
+--- etc/c2s.xml.in.orig	2010-06-11 11:44:58.000000000 +0000
 +++ etc/c2s.xml.in
 @@ -5,7 +5,7 @@
  
@@ -29,16 +29,19 @@ $NetBSD: patch-ag,v 1.11 2009/08/01 16:18:15 schnoebe Exp $
      -->
    </log>
  
-@@ -125,7 +125,7 @@
+@@ -136,9 +136,9 @@
      <id register-enable='true'>localhost.localdomain</id>
      <!-- or
      <id realm='company.int'
 -        pemfile='@sysconfdir@/server.pem'
 +        pemfile='@SSLCERTS@/server.pem'
          verify-mode='7'
+-        cachain='@sysconfdir@/client_ca_certs.pem'
++        cachain='@SSLCERTS@/client_ca_certs.pem'
          require-starttls='true'
          register-enable='true'
-@@ -164,7 +164,7 @@
+         instructions='Enter a username and password to register with this server.'
+@@ -176,7 +176,7 @@
           use STARTTLS over the standard XMPP port 5222 then you
           MUST specify the pemfile in the 'id' tag above. -->
      <!--
@@ -47,7 +50,16 @@ $NetBSD: patch-ag,v 1.11 2009/08/01 16:18:15 schnoebe Exp $
      -->
  
      <!-- SSL verify mode - see SSL_CTX_set_verify(3), mode parameter -->
-@@ -312,7 +312,7 @@
+@@ -186,7 +186,7 @@
+     
+     <!-- SSL CA chain. Used to verify client certificates. CA names published to client upon connection -->
+     <!--
+-    <cachain>@sysconfdir@/client_ca_certs.pem</cachain>  
++    <cachain>@SSLCERTS@/client_ca_certs.pem</cachain>  
+     -->
+ 
+     <!-- Forward incoming HTTP clients to a real HTTP server -->
+@@ -329,7 +329,7 @@
    <stats>
      <!-- file containing count of packets that went through -->
      <!--
@@ -56,7 +68,16 @@ $NetBSD: patch-ag,v 1.11 2009/08/01 16:18:15 schnoebe Exp $
      -->
    </stats>
  
-@@ -382,7 +382,7 @@
+@@ -338,7 +338,7 @@
+     <!-- Commands named pipe path. Allows creating "fake" sessions
+          with given resource and status -->
+     <!--
+-    <pipe>@localstatedir@/jabberd/run/pbx</pipe>
++    <pipe>@LOGDIR@/jabberd/run/pbx</pipe>
+     -->
+   </pbx>
+ 
+@@ -399,7 +399,7 @@
      <!-- SQLite driver configuration -->
      <sqlite>
        <!-- Database name -->
@@ -65,7 +86,7 @@ $NetBSD: patch-ag,v 1.11 2009/08/01 16:18:15 schnoebe Exp $
  
        <!-- Transacation support. If this is commented out, transactions
             will be disabled. This might make database accesses faster,
-@@ -459,7 +459,7 @@
+@@ -476,7 +476,7 @@
      <!-- Berkeley DB module configuration -->
      <db>
        <!-- Directory to store database files under -->
@@ -74,7 +95,7 @@ $NetBSD: patch-ag,v 1.11 2009/08/01 16:18:15 schnoebe Exp $
  
        <!-- Synchronize the database to disk after each write. If you
             disable this, database accesses may be faster, but data may
-@@ -587,7 +587,7 @@
+@@ -604,7 +604,7 @@
      <!-- Pipe module configuration -->
      <pipe>
        <!-- Program to execute -->
