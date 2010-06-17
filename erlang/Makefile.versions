@@ -1,65 +1,65 @@
-# $NetBSD: Makefile.versions,v 1.8 2010/02/24 13:49:54 marttikuparinen Exp $
+# $NetBSD: Makefile.versions,v 1.9 2010/06/17 12:59:17 marttikuparinen Exp $
 
-ERLANG_VERSION=			13.2.4
-DIST_VERSION_MAJOR=		R13B04
+ERLANG_VERSION=			14.1.0
+DIST_VERSION_MAJOR=		R14A
 #DIST_VERSION_MINOR=		1
 
 _VERSIONS=					\
-	appmon			2.1.11		\
-	asn1			1.6.13		\
-	common_test		1.4.7		\
-	compiler		4.6.5		\
-	cosEvent		2.1.8		\
-	cosEventDomain		1.1.8		\
+	appmon			2.1.12		\
+	asn1			1.6.14		\
+	common_test		1.5		\
+	compiler		4.7		\
+	cosEvent		2.1.9		\
+	cosEventDomain		1.1.9		\
 	cosFileTransfer		1.1.10		\
-	cosNotification		1.1.13		\
-	cosProperty		1.1.11		\
-	cosTime			1.1.8		\
-	cosTransactions		1.2.9		\
-	crypto			1.6.4		\
-	debugger		3.2.2		\
-	dialyzer		2.2.0		\
+	cosNotification		1.1.14		\
+	cosProperty		1.1.12		\
+	cosTime			1.1.9		\
+	cosTransactions		1.2.10		\
+	crypto			2.0		\
+	debugger		3.2.3		\
+	dialyzer		2.3.0		\
 	docbuilder		0.9.8.7		\
 	edoc			0.7.6.6		\
-	erl_docgen		0.2		\
-	erl_interface		3.6.5		\
-	erts			5.7.5		\
+	erl_docgen		0.2.1		\
+	erl_interface		3.7		\
+	erts			5.8		\
 	et			1.4		\
 	eunit			2.1.5		\
-	gs			1.5.11		\
-	hipe			3.7.5		\
-	ic			4.2.24		\
-	inets			5.3		\
+	gs			1.5.12		\
+	hipe			3.7.6		\
+	ic			4.2.25		\
+	inets			5.4		\
 	inviso			0.6.1		\
 	jinterface		1.5.3		\
-	kernel			2.13.5		\
-	megaco			3.14		\
-	mnesia			4.4.13		\
-	observer		0.9.8.2		\
-	odbc			2.10.7		\
-	orber			3.6.15		\
+	kernel			2.14		\
+	megaco			3.14.1.1	\
+	mnesia			4.4.14		\
+	observer		0.9.8.3		\
+	odbc			2.10.8		\
+	orber			3.6.16		\
 	os_mon			2.2.5		\
 	otp_mibs		1.0.6		\
-	parsetools		2.0.2		\
+	parsetools		2.0.3		\
 	percept			0.8.4		\
 	pman			2.7.1		\
-	public_key		0.5		\
-	reltool			0.5.3		\
-	runtime_tools		1.8.3		\
-	sasl			2.1.9		\
-	snmp			4.16		\
-	ssh			1.1.8		\
-	ssl			3.10.8		\
-	stdlib			1.16.5		\
-	syntax_tools		1.6.5		\
-	test_server		3.3.6		\
+	public_key		0.7		\
+	reltool			0.5.4		\
+	runtime_tools		1.8.4		\
+	sasl			2.1.9.2		\
+	snmp			4.17		\
+	ssh			2.0		\
+	ssl			4.0		\
+	stdlib			1.17		\
+	syntax_tools		1.6.6		\
+	test_server		3.4		\
 	toolbar			1.4.1		\
-	tools			2.6.5.1		\
-	tv			2.1.4.4		\
+	tools			2.6.6		\
+	tv			2.1.4.5		\
 	typer			0.1.7.4		\
-	webtool			0.8.6		\
-	wx			0.98.5		\
-	xmerl			1.2.4
+	webtool			0.8.7		\
+	wx			0.98.6		\
+	xmerl			1.2.5
 
 PLIST_SUBST+=	VERSION=${DIST_VERSION_MAJOR}
 

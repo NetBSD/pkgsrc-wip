@@ -1,8 +1,8 @@
-$NetBSD: patch-ar,v 1.3 2010/02/24 13:49:55 marttikuparinen Exp $
+$NetBSD: patch-ar,v 1.4 2010/06/17 12:59:18 marttikuparinen Exp $
 
---- erts/configure.orig	2010-02-24 14:59:17.000000000 +0200
-+++ erts/configure	2010-02-24 15:03:14.000000000 +0200
-@@ -22617,7 +22617,7 @@
+--- erts/configure.orig	2010-06-15 19:21:46.000000000 +0300
++++ erts/configure	2010-06-17 10:20:54.000000000 +0300
+@@ -22830,7 +22830,7 @@
   * Implement SIGFPE handler based on CPU/OS combination
   */
  
@@ -11,7 +11,7 @@ $NetBSD: patch-ar,v 1.3 2010/02/24 13:49:55 marttikuparinen Exp $
  
  #if defined(__linux__) && defined(__i386__)
  #if !defined(X86_FXSR_MAGIC)
-@@ -22731,6 +22731,11 @@
+@@ -22944,6 +22944,11 @@
      struct fxsave64 *fxsave = uc->sc_fpstate;
      fxsave->fx_mxcsr = 0x1F80;
      fxsave->fx_fsw &= ~0xFF;

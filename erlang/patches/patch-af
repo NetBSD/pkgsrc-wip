@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.4 2010/02/25 11:03:11 marttikuparinen Exp $
+$NetBSD: patch-af,v 1.5 2010/06/17 12:59:18 marttikuparinen Exp $
 
---- lib/reltool/test/Makefile.orig	2010-02-25 12:58:13.000000000 +0200
-+++ lib/reltool/test/Makefile	2010-02-25 12:58:42.000000000 +0200
-@@ -73,7 +73,8 @@
+--- lib/reltool/test/Makefile.orig	2010-06-11 17:04:18.000000000 +0300
++++ lib/reltool/test/Makefile	2010-06-17 10:18:43.000000000 +0300
+@@ -74,7 +74,8 @@
  release_tests_spec: opt
  	$(INSTALL_DIR) $(RELSYSDIR)
  	$(INSTALL_DATA) reltool.spec $(ERL_FILES) $(HRL_FILES) $(RELSYSDIR)

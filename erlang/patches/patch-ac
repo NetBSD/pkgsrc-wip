@@ -1,25 +1,21 @@
-$NetBSD: patch-ac,v 1.2 2010/02/24 13:49:55 marttikuparinen Exp $
+$NetBSD: patch-ac,v 1.3 2010/06/17 12:59:18 marttikuparinen Exp $
 
 Added support for NetBSD.
 
---- erts/emulator/sys/common/erl_mseg.c.orig	2009-11-20 15:31:33.000000000 +0200
-+++ erts/emulator/sys/common/erl_mseg.c	2010-02-24 14:31:08.000000000 +0200
-@@ -355,10 +355,18 @@
- #if defined(ERTS_MSEG_FAKE_SEGMENTS)
-     new_seg = erts_sys_realloc(ERTS_ALC_N_INVALID, NULL, old_seg, new_size);
- #elif HAVE_MREMAP
-+#if defined(__NetBSD__)
+--- erts/emulator/sys/common/erl_mseg.c.orig	2010-06-17 12:15:59.000000000 +0300
++++ erts/emulator/sys/common/erl_mseg.c	2010-06-17 12:22:14.000000000 +0300
+@@ -382,6 +382,14 @@
+      new_seg = (void *) pmremap((void *) old_seg,
+ 				(size_t) old_size,
+ 				(size_t) new_size);
++#elif defined(__NetBSD__)
 +    new_seg = (void *) mremap((void *) old_seg,
 +			      (size_t) old_size,
 +			      NULL,
 +			      (size_t) new_size,
 +			      0);
-+#else
++    if (new_seg == (void *) MAP_FAILED)
++	new_seg = NULL;
+ #else
      new_seg = (void *) mremap((void *) old_seg,
  			      (size_t) old_size,
- 			      (size_t) new_size,
- 			      MREMAP_MAYMOVE);
-+#endif
-     if (new_seg == (void *) MAP_FAILED)
- 	new_seg = NULL;
- #else
