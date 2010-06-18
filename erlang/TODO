@@ -1,12 +1,3 @@
-- fix hipe support on amd64
-
-sys_float.c:(.text+0x242): undefined reference to `skip_sse2_insn'
-make[3]: *** [/home/pkgsrc/wip/erlang/work.x86_64/otp_src_R13B04/bin/x86_64-unknown-netbsd5.99.24/beam.smp] Error 1
-
-
-
-
-
 - fix iodbc support
 
 => Checking for missing run-time search paths in erlang-13.2.4

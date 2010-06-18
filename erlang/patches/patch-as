@@ -1,4 +1,4 @@
-$NetBSD: patch-as,v 1.5 2010/06/18 17:45:46 marttikuparinen Exp $
+$NetBSD: patch-as,v 1.6 2010/06/18 20:40:07 marttikuparinen Exp $
 
 --- erts/emulator/sys/unix/sys_float.c.orig	2010-02-19 18:04:07.000000000 +0000
 +++ erts/emulator/sys/unix/sys_float.c
@@ -23,7 +23,7 @@ $NetBSD: patch-as,v 1.5 2010/06/18 17:45:46 marttikuparinen Exp $
  #elif defined(__OpenBSD__) && defined(__x86_64__)
  #define mc_pc(mc)	((mc)->sc_rip)
  #elif defined(__sun__) && defined(__x86_64__)
-@@ -610,11 +615,30 @@ static void fpe_sig_action(int sig, sigi
+@@ -610,11 +615,28 @@ static void fpe_sig_action(int sig, sigi
  	struct env87 *env87 = &savefpu->sv_87.sv_env;
  	env87->en_sw &= ~0xFF;
      }
@@ -46,10 +46,8 @@ $NetBSD: patch-as,v 1.5 2010/06/18 17:45:46 marttikuparinen Exp $
 +#elif defined(__NetBSD__) && defined(__x86_64__)
 +    mcontext_t *mc = &uc->uc_mcontext;
 +    struct fxsave64 *fxsave = (struct fxsave64 *)&mc->__fpregs;
-+    if (fxsave->fx_mxcsr & 0x000D) {
-+	fxsave->fx_mxcsr &= ~(0x003F|0x0680);
-+	skip_sse2_insn(uc);
-+    }
++    pc = mc_pc(mc);
++    fxsave->fx_mxcsr = 0x1F80;
 +    fxsave->fx_fsw &= ~0xFF;
  #elif defined(__sun__) && defined(__x86_64__)
      mcontext_t *mc = &uc->uc_mcontext;
