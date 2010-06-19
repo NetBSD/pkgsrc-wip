@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/05/13 12:42:59 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2010/06/19 23:44:19 jihbed Exp $
 #
 
-DISTNAME=	texml-2.0.1
+TEXML_VERSION=		2.0.1
+DISTNAME=	texml-${TEXML_VERSION}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	print python
 MASTER_SITES=	http://garr.dl.sourceforge.net/project/getfo/texml/texml-2.0.1/
@@ -19,7 +20,7 @@ PYDISTUTILSPKG=	yes
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
-SUBST_SED.paths+=	-e 's,share/man/man1,${PREFIX}/${PKGNAMDIR}/man1,g'
+SUBST_SED.paths+=	-e 's,share/man/man1,${PREFIX}/man/man1,g'
 SUBST_FILES.paths+=	setup.py
 SUBST_MESSAGE.paths=	Fixing header search paths.
 
