@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.3 2009/11/22 10:26:10 gschwarz Exp $
+$NetBSD: distinfo,v 1.4 2010/06/19 22:52:24 gschwarz Exp $
 
 SHA1 (ar7-0.1.tar.gz) = 76c2373f5890e7a511ac78c90c05f03ff60a644d
 RMD160 (ar7-0.1.tar.gz) = 482696b197fdbefd6cad69a8f4ed50025c2c2258
 Size (ar7-0.1.tar.gz) = 79230 bytes
-SHA1 (patch-aa) = 8601b28856197e172423cd02db32171ed9b46ff6
-SHA1 (patch-ab) = 04484effa7edfaa6081eb840d4eac87ea7ab2f85
+SHA1 (patch-aa) = 4886219149eca3fe67b4f76f8be24d51b3adace5
+SHA1 (patch-ab) = 55757452a59a3584f7617c5874548a369bb32ea6

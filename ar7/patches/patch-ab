@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1 2009/11/22 10:26:10 gschwarz Exp $
+$NetBSD: patch-ab,v 1.2 2010/06/19 22:52:24 gschwarz Exp $
 
---- src/logic.c.orig	2009-11-08 10:49:06.920001000 +0100
-+++ src/logic.c	2009-11-08 10:51:26.039999000 +0100
-@@ -2,7 +2,13 @@
+--- src/logic.c.orig	2006-05-24 14:05:53.000000000 +0200
++++ src/logic.c	2010-06-20 00:36:47.000000000 +0200
+@@ -2,9 +2,17 @@
  #include "err.h"
  #include <stdio.h>
  #include <string.h>
@@ -15,4 +15,8 @@ $NetBSD: patch-ab,v 1.1 2009/11/22 10:26:10 gschwarz Exp $
 +#endif
  
  #include "defaults.h"
++#include "net.h" /* needed for get_sock() */
++
  int ar7_login(int fd, const char *user, const char *pass)
+ {
+ 
