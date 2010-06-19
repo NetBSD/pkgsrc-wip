@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4007 2010/06/19 10:15:51 jihbed Exp $
+# $Id: Makefile,v 1.4008 2010/06/19 20:22:21 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2015,6 +2015,7 @@ SUBDIR+=	py-sage
 SUBDIR+=	py-scipy
 SUBDIR+=	py-scrobbler
 SUBDIR+=	py-sfepy
+SUBDIR+=	py-setupdocs
 SUBDIR+=	py-shtoom
 SUBDIR+=	py-simpleparse-mxtexttools
 SUBDIR+=	py-snmp
