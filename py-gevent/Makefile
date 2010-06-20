@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/05/14 21:49:21 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2010/06/20 00:31:42 jihbed Exp $
 #
 
 DISTNAME=	gevent-0.12.2.tar
@@ -18,6 +18,10 @@ WRKSRC=	${WRKDIR}/gevent-0.12.2
 USE_LANGUAGES=	c c++
 
 PYDISTUTILSPKG= yes
+
+do-test:
+	${RUN} cd ${WRKSRC}/greentest; ${SETENV} ${TEST_ENV} ${PYTHONBIN} testrunner.py
+	
 
 BUILDLINK_API_DEPENDS.libevent+=libevent>=0.6
 .include "../../devel/libevent/buildlink3.mk"
