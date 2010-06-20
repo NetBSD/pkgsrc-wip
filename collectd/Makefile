@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2009/12/14 01:30:08 genolopolis Exp $
+# $NetBSD: Makefile,v 1.6 2010/06/20 11:53:07 thomasklausner Exp $
 #
 
-DISTNAME=	collectd-4.7.2
+DISTNAME=	collectd-4.9.2
 CATEGORIES=	net
 MASTER_SITES=	http://collectd.org/files/
 EXTRACT_SUFX=	.tar.bz2
@@ -14,26 +14,39 @@ LICENSE=	gnu-gpl-v2
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
-USE_TOOLS+= perl
+USE_TOOLS+=	perl
 
 PKGCONFIG_OVERRIDE+=	src/libcollectdclient/libcollectdclient.pc.in
-USE_LANGUAGES= c c++
-PKG_DESTDIR_SUPPORT=    user-destdir
-CONFIGURE_ARGS+=	--with-perl-bindings='INSTALLDIRS=vendor'
-CONFIGURE_ARGS+=        --sysconfdir=${PKG_SYSCONFDIR:Q}/${PKGBASE}
-MAKE_DIRS+=		${PKG_SYSCONFDIR:Q}/${PKGBASE}
+USE_LANGUAGES=		c c++
+PKG_DESTDIR_SUPPORT=	user-destdir
 
-EGDIR=                  ${PREFIX}/share/examples/${PKGBASE}
-CONF_FILES+=            ${EGDIR}/collectd.conf ${PKG_SYSCONFDIR}/${PKGBASE}/collectd.conf
-INSTALL_MAKE_FLAGS+=    sysconfdir=${EGDIR:Q}
+CONFIGURE_ARGS+=	--with-perl-bindings='INSTALLDIRS=vendor'
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}/${PKGBASE}
+CONFIGURE_ARGS+=	--with-included-ltdl	# see TODO
+
+MAKE_DIRS+=		${PKG_SYSCONFDIR}/${PKGBASE}
+
+EGDIR=			${PREFIX}/share/examples/${PKGBASE}
+CONF_FILES+=		${EGDIR}/collectd.conf ${PKG_SYSCONFDIR}/${PKGBASE}/collectd.conf
+INSTALL_MAKE_FLAGS+=	sysconfdir=${EGDIR}
 
 PERL5_CONFIGURE=	no
 PERL5_PACKLIST=	auto/Collectd/.packlist
 
+PLIST_VARS+=	apache apcups ascent bind cpu csv curl dbi df disk
+PLIST_VARS+=	dns email exec filecount hddtemp interface load
+PLIST_VARS+=	logfile match-empty-counter match-hashed match-regex
+PLIST_VARS+=	match-timediff match-value mbmon memcached memory
+PLIST_VARS+=	multimeter mysql network nginx ntpd olsrd openvpn
+PLIST_VARS+=	perl postgresql powerdns python rrdtool snmp swap
+PLIST_VARS+=	syslog table tail target-notification target-replace
+PLIST_VARS+=	target-scale target-set tcpconns teamspeak2 ted
+PLIST_VARS+=	unixsock uptime users uuid write-http
+
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
 
-.include "../../devel/libltdl/convenience.mk"
+#.include "../../devel/libltdl/convenience.mk"	# see TODO
 .include "../../lang/perl5/module.mk"
 .include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

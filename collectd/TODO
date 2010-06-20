@@ -5,3 +5,65 @@ This package should really test for OS-specific stuff:
  libstatgrab on *BSD
 
 Put everything in options since there are 70 possible plugins for this
+
+
+rhaamo@gruik.at:
+Can't get build with pkgsrc's libltdl, fail on -lltdl, i've added --with-ltdl..
+in CONFIGURE_ARGS temporarly.
+
+Better dependencie for postgresql than postgresql84-client ? (need pq)
+Better dependencie checking for plugins which need libstatgrab ?
+
+check for plugins:
+ - rrdcached
+ - disk (realy works under netbsd? http://collectd.org/wiki/index.php/Plugin:Disk)
+ - fscache (http://collectd.org/wiki/index.php/Plugin:FSCache)
+ - hddtemp (sysutils/hddtemp has no buildlink3)
+ - memory (realy works under net? http://collectd.org/wiki/index.php/Plugin:Memory)
+ - network (can optionally use libgcrypt http://collectd.org/wiki/index.php/Plugin:Network)
+
+Mac only:
+ - apple_sensors	(http://collectd.org/wiki/index.php/Plugin:Apple_Sensors)
+
+ Linux only:
+ - battery		(http://collectd.org/wiki/index.php/Plugin:Battery)
+ - connrack		(http://collectd.org/wiki/index.php/Plugin:ConnTrack)
+ - contextswitch	(http://collectd.org/wiki/index.php/Plugin:ContextSwitch)
+ - cpufreq		(http://collectd.org/wiki/index.php/Plugin:CPUFreq)
+ - entropy		(http://collectd.org/wiki/index.php/Plugin:Entropy)
+ - iptables
+ - ipvs
+ - irq
+ - madwifi
+ - netlink		(http://collectd.org/wiki/index.php/Plugin:Netlink)
+ - nfs
+ - protocols
+ - serial
+ - thermal
+ - vmem
+ - vserver
+ - wireless
+
+Other:
+ - curl_json		(http://collectd.org/wiki/index.php/Plugin:cURL-JSON)
+ - java			(i don't have/use java)
+ - oracle		(i don't have/use oracle)
+ - load			(can use libstatgrab or libperfstat(3) AIX or getloadavg(3) etc..)
+ - netap		(http://collectd.org/wiki/index.php/Plugin:NetApp)
+ - tokyotyrant		(http://collectd.org/wiki/index.php/Plugin:TokyoTyrant)
+ - XMMS			(http://collectd.org/wiki/index.php/Plugin:XMMS)
+
+Solaris only:
+ - zfs_arc		(http://collectd.org/wiki/index.php/Plugin:ZFS_ARC)
+
+Need libs not in pkgsrc:
+ - gmond		(http://collectd.org/wiki/index.php/Plugin:gmond)
+ - ipmi			(http://collectd.org/wiki/index.php/Plugin:IPMI)
+ - libvirt		(libvirt http://collectd.org/wiki/index.php/Plugin:libvirt)
+ - nut 			(libupsclient http://collectd.org/wiki/index.php/Plugin:NUT)
+ - onewire		(libowfs http://collectd.org/wiki/index.php/Plugin:OneWire)
+ - ping			(liboping http://collectd.org/wiki/index.php/Plugin:Ping)
+ - process		(libkvm? http://collectd.org/wiki/index.php/Plugin:Processes)
+ - routeros		(librouteros http://collectd.org/wiki/index.php/Plugin:RouterOS)
+ - sensors		(lm-sensors http://collectd.org/wiki/index.php/Plugin:Sensors)
+
