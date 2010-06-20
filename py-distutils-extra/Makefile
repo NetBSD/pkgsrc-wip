@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2010/04/18 12:37:40 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2010/06/20 12:14:42 jihbed Exp $
 #
 
-DISTNAME=	dist-python-distutils-extra-2.18
-EGG_NAME=	python_distutils_extra-2.18
+DISTNAME=	dist-python-distutils-extra-2.19
+EGG_NAME=	python_distutils_extra-2.19
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/dist-python-//}
 CATEGORIES=	devel python
-MASTER_SITES=	http://launchpad.net/python-distutils-extra/trunk/2.18/+download/
+MASTER_SITES=	http://launchpad.net/python-distutils-extra/trunk/2.19/+download/
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://launchpad.net/python-distutils-extra
@@ -14,11 +14,18 @@ LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-WRKSRC=		${WRKDIR}/python-distutils-extra-2.18
+WRKSRC=		${WRKDIR}/python-distutils-extra-2.19
 USE_LANGUAGES=	# none
+
+DOCDIR=	${PREFIX}/share/doc/py-distutils-extra
 
 do-test:
 	 ( cd ${WRKSRC}/test &&  ${PYTHONBIN} auto.py )
+
+post-install:
+	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/doc/FAQ ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/doc/README ${DESTDIR}${DOCDIR}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

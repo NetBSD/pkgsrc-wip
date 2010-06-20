@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2010/04/18 12:37:41 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.3 2010/06/20 12:14:42 jihbed Exp $
 ${PYSITELIB}/DistUtilsExtra/__init__.py
 ${PYSITELIB}/DistUtilsExtra/__init__.pyc
 ${PYSITELIB}/DistUtilsExtra/__init__.pyo
@@ -34,3 +34,5 @@ ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+share/doc/py-distutils-extra/FAQ
+share/doc/py-distutils-extra/README
