@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/05/13 10:35:50 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/06/20 00:17:56 jihbed Exp $
 bin/othman-browser
 ${PYSITELIB}/othman/__init__.py
 ${PYSITELIB}/othman/__init__.pyc
@@ -9,6 +9,7 @@ ${PYSITELIB}/othman/core.pyo
 ${PYSITELIB}/othman/gtkUi.py
 ${PYSITELIB}/othman/gtkUi.pyc
 ${PYSITELIB}/othman/gtkUi.pyo
+share/applications/Othman.desktop.in
 share/othman/quran-kareem.png
 share/othman/quran-kareem.svg
 share/othman/quran.db

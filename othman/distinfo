@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.2 2010/06/19 23:49:02 jihbed Exp $
+$NetBSD: distinfo,v 1.3 2010/06/20 00:17:56 jihbed Exp $
 
 SHA1 (othman-0.2.5.tar.bz2) = ddb201154eaae2adf632b624197af8261281d967
 RMD160 (othman-0.2.5.tar.bz2) = 935b5ec8a7323253301f787798e070bd60abaa5b
 Size (othman-0.2.5.tar.bz2) = 533269 bytes
+SHA1 (patch-aa) = 0cc41d21d734a7a6c8600039513b888cc4b10202
