@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4008 2010/06/19 20:22:21 jihbed Exp $
+# $Id: Makefile,v 1.4009 2010/06/20 15:28:22 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1038,7 +1038,6 @@ SUBDIR+=	jython
 SUBDIR+=	k3b
 SUBDIR+=	k4dirstat
 SUBDIR+=	kBuild
-SUBDIR+=	kacst-fonts
 SUBDIR+=	kaffe
 SUBDIR+=	kaffe-x11
 SUBDIR+=	kahakai
@@ -1308,7 +1307,6 @@ SUBDIR+=	monodevelop
 SUBDIR+=	monotone-cvsimport
 SUBDIR+=	moonlight
 SUBDIR+=	moregroupware
-SUBDIR+=	mothanna
 SUBDIR+=	moto4lin
 SUBDIR+=	mozldap
 SUBDIR+=	mozplugger
@@ -2363,7 +2361,6 @@ SUBDIR+=	texlive-bin
 SUBDIR+=	texlive-texmf-base
 SUBDIR+=	texlive-texmf-minimal
 SUBDIR+=	tftp-hpa
-SUBDIR+=	thabit
 SUBDIR+=	thcrut
 SUBDIR+=	theme-gtk-bluecurve
 SUBDIR+=	thwab
