@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/06/21 21:17:22 jihbed Exp $
+lib/X11/fonts/TTF/Thabit-Bold-Oblique.ttf
+lib/X11/fonts/TTF/Thabit-Bold.ttf
+lib/X11/fonts/TTF/Thabit-Oblique.ttf
+lib/X11/fonts/TTF/Thabit.ttf
+share/doc/thabit-fonts/README
