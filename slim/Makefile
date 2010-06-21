@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2010/06/13 22:47:16 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2010/06/21 12:55:28 shindenmorr Exp $
 #
 
 DISTNAME=	slim-1.3.1
@@ -23,10 +23,10 @@ AUTO_MKDIRS=	yes
 RCD_SCRIPTS+=	slim
 
 CFLAGS+=	-I. -I${BUILDLINK_DIR}/include -I${BUILDLINK_DIR}/freetype2 \
-		-I${BUILDLINK_DIR}/freetype2/config -I${BUILDLINK_DIR}/include/libpng12 \
+		-I${BUILDLINK_DIR}/freetype2/config -I${BUILDLINK_DIR}/include/libpng14 \
 		-I/usr/include
 LDFLAGS+=	-L${BUILDLINK_DIR}/lib -lXft -lX11 -lfreetype -lXrender -lfontconfig \
-		-lpng12 -lz -lm -lcrypt -lXmu -lpng -ljpeg
+		-lpng14 -lz -lm -lcrypt -lXmu -lpng -ljpeg
 
 SUBST_CLASSES+=		conf
 SUBST_STAGE.conf=	post-patch
