@@ -38,8 +38,6 @@ match($0, /^(BUILD_)?DEPENDS=/) {
 #		print "??????????????????????????", pkgpath, pkgbase
 		if (((pkgpath SUBSEP pkgbase) in p2a) && p2a [pkgpath, pkgbase] != ""){
 			$i = $i ":" p2a [pkgpath, pkgbase]
-		}else{
-			$i = src_depend2pkgpath($i)
 		}
 	}
 	print field $0
