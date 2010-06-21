@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/06/21 21:15:14 jihbed Exp $
+lib/X11/fonts/TTF/elham.ttf
+lib/X11/fonts/TTF/homa.ttf
+lib/X11/fonts/TTF/koodak.ttf
+lib/X11/fonts/TTF/nazli.ttf
+lib/X11/fonts/TTF/nazlib.ttf
+lib/X11/fonts/TTF/roya.ttf
+lib/X11/fonts/TTF/royab.ttf
+lib/X11/fonts/TTF/terafik.ttf
+lib/X11/fonts/TTF/terafikb.ttf
+lib/X11/fonts/TTF/titr.ttf
+share/doc/farsi-ttf/NEWS
