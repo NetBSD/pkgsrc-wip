@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4010 2010/06/21 21:28:26 jihbed Exp $
+# $Id: Makefile,v 1.4011 2010/06/21 21:41:25 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -902,7 +902,6 @@ SUBDIR+=	ht2html
 SUBDIR+=	html2latex
 SUBDIR+=	httrack
 SUBDIR+=	hu-go
-SUBDIR+=	hunspell-ar
 SUBDIR+=	hunspell-it_IT
 SUBDIR+=	hydrogen-current
 SUBDIR+=	hyena
