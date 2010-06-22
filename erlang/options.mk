@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2010/02/25 17:36:32 marttikuparinen Exp $
+# $NetBSD: options.mk,v 1.5 2010/06/22 05:56:54 marttikuparinen Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.erlang
 PKG_SUPPORTED_OPTIONS=	java erlang-hipe
@@ -13,7 +13,7 @@ USE_JAVA2=		yes
 .include "../../mk/java-vm.mk"
 PLIST_SRC+=		PLIST.java
 .else
-CONFIGURE_ENV+=	JAVAC=none
+CONFIGURE_ARGS+=	--without-javac
 .endif
 
 .if !empty(PKG_OPTIONS:Merlang-hipe)
