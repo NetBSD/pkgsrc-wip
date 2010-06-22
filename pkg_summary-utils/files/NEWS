@@ -1,4 +1,15 @@
 ----------------------------------------------------------------------
+Version 0.42.0, by Aleksey Cheusov, Wed, 23 Jun 2010 00:41:29 +0300
+
+  pkg_src_summary, pkg_summary2deps:
+     Forcibly remove `/' at the end of PKGPATH. This unbreaks some
+     packages in distbb bulk builds.
+
+  pkg_summary2deps:
+     One more fix for alternative dependencies. This unbreaks
+     editors/leim20 and some others.
+
+----------------------------------------------------------------------
 Version 0.41.1, by Aleksey Cheusov, Sat,  5 Jun 2010 00:43:58 +0300
 
   pkg_lint_summary:
