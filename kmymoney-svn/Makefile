@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/05/30 08:58:52 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2010/06/22 10:59:26 thomasklausner Exp $
 
 DISTNAME=	kmymoney
 CATEGORIES=	finance kde
@@ -14,7 +14,7 @@ BUILD_DEPENDS+=	automoc4-[0-9]*:../../devel/automoc4
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 SVN_REPOSITORIES=	kmymoney
-SVN_ROOT.kmymoney=	svn://anonsvn.kde.org/home/kde/trunk/kdereview/kmymoney
+SVN_ROOT.kmymoney=	svn://anonsvn.kde.org/home/kde/trunk/extragear/office/kmymoney
 NO_CHECKSUM=YES
 
 USE_CMAKE=		yes
