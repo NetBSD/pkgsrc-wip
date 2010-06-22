@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/06/22 08:38:29 jihbed Exp $
+bin/gnome-paint
+share/applications/gnome-paint.desktop
+share/gnome-paint/icons/hicolor/16x16/actions/stock-tool-airbrush.png
+share/gnome-paint/icons/hicolor/16x16/actions/stock-tool-bucket-fill.png
+share/gnome-paint/icons/hicolor/16x16/actions/stock-tool-color-picker.png
+share/gnome-paint/icons/hicolor/16x16/actions/stock-tool-eraser.png
+share/gnome-paint/icons/hicolor/16x16/actions/stock-tool-free-select.png
+share/gnome-paint/icons/hicolor/16x16/actions/stock-tool-paintbrush.png
+share/gnome-paint/icons/hicolor/16x16/actions/stock-tool-pencil.png
+share/gnome-paint/icons/hicolor/16x16/actions/stock-tool-rect-select.png
+share/gnome-paint/icons/hicolor/16x16/actions/stock-tool-text.png
+share/gnome-paint/icons/hicolor/16x16/actions/stock-tool-zoom.png
+share/gnome-paint/icons/hicolor/16x16/actions/stock_draw-curve.png
+share/gnome-paint/icons/hicolor/16x16/actions/stock_draw-ellipse.png
+share/gnome-paint/icons/hicolor/16x16/actions/stock_draw-fill_polygon.png
+share/gnome-paint/icons/hicolor/16x16/actions/stock_draw-line.png
+share/gnome-paint/icons/hicolor/16x16/actions/stock_draw-rectangle.png
+share/gnome-paint/icons/hicolor/16x16/actions/stock_draw-rounded-rectangle.png
+share/gnome-paint/ui/gnome_paint.ui
+share/icons/hicolor/16x16/apps/gp.png
+share/locale/es_MX/LC_MESSAGES/gnome_paint.mo
+share/locale/fr/LC_MESSAGES/gnome_paint.mo
+share/locale/it/LC_MESSAGES/gnome_paint.mo
+share/locale/pt_BR/LC_MESSAGES/gnome_paint.mo

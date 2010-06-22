@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/06/22 08:38:29 jihbed Exp $
+
+SHA1 (gnome-paint-0.3.tar.gz) = 3c3aa868e148afc3f48e217293281b686d38ee53
+RMD160 (gnome-paint-0.3.tar.gz) = 6db66eb87668bfefa7d289a4c4d105ab28952390
+Size (gnome-paint-0.3.tar.gz) = 393952 bytes
+SHA1 (patch-aa) = 9ce10cb040b68acfeba887fc89d9b9954dfd289d
