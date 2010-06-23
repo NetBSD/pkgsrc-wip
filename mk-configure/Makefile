@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2010/06/12 12:42:04 cheusov Exp $
+# $NetBSD: Makefile,v 1.23 2010/06/23 10:36:23 cheusov Exp $
 #
 
-DISTNAME=	mk-configure-0.16.0
+DISTNAME=	mk-configure-0.17.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mk-configure/} \
 		http://mova.org/~cheusov/pub/mk-configure/
@@ -19,7 +19,7 @@ USE_LANGUAGES=		# no languages
 DOC_FILES=		README NEWS ChangeLog TODO FAQ COPYRIGHT \
 			doc/presentation.pdf
 
-MAKE_ENV+=		MKCATPAGES=no MKHTML=no
+MAKE_ENV+=		MKCATPAGES=no MKHTML=no BMAKE=${MAKE}
 
 AUTO_MKDIRS=		yes
 
