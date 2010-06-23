@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2010/06/16 08:44:23 othyro Exp $
+# $NetBSD: Makefile,v 1.11 2010/06/23 06:23:48 othyro Exp $
 #
 
-PKGVERSION=	5.2.22
-DISTNAME=	mysql-workbench-oss-${PKGVERSION}
-PKGNAME=	${DISTNAME:S/-oss//}
+PKGVERSION=	5.2.24
+DISTNAME=	mysql-workbench-ce-${PKGVERSION}
+PKGNAME=	${DISTNAME:S/-ce//}
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_MYSQL:=MySQLGUITools/}
 
@@ -26,17 +26,18 @@ SUBST_FILES.python=	configure configure.in
 SUBST_SED.python=	-e "s,python -c,${PYTHONBIN} -c,g"
 SUBST_MESSAGE.python=	Fixing hardcoded python binary
 
-REPLACE_INTERPRETER+=	bash
-REPLACE.bash.old=	/bin/bash
-REPLACE.bash.new=	${BASH}
-REPLACE_FILES.bash=	frontend/linux/workbench/mysql-workbench
+SUBST_CLASSES+=		bash
+SUBST_STAGE.bash=	pre-install
+SUBST_FILES.bash=	frontend/linux/workbench/mysql-workbench
+SUBST_SED.bash=		-e "s,/bin/bash,${BASH},g"
+SUBST_MESSAGE.bash=	Fixing hardcoded bash path
 
 pre-configure:
 	set -e; cd ${WRKSRC}; \
 	aclocal; autoheader; automake -a --foreign -i; autoconf
 
 pre-build:
-	${CP} ${WRKSRC}/res/include/wb_config_oss.h ${WRKSRC}/wb_config.h
+	${CP} ${WRKSRC}/res/include/wb_config_ce.h ${WRKSRC}/wb_config.h
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../wip/ctemplate/buildlink3.mk"
