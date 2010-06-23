@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/06/23 11:42:14 hfath Exp $
+# $NetBSD: Makefile,v 1.3 2010/06/23 13:19:54 hfath Exp $
 #
 
 DISTNAME=	outguess-0.2
@@ -15,10 +15,12 @@ COMMENT=	JPEG steganography tool
 LICENSE=	original-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${OG_DOCSDIR}
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${OG_DOCSDIR} ${OG_EGDIR}
 
 OG_DOCSDIR=	share/doc/outguess
+OG_EGDIR=	share/examples/outguess
 OG_DOCS=	README STIRMARK-README
+OG_EXAMPLES=	seek_script
 
 WRKSRC=		${WRKDIR}/outguess
 GNU_CONFIGURE=	yes
@@ -26,6 +28,9 @@ GNU_CONFIGURE=	yes
 post-install:
 .for file in ${OG_DOCS}
 	${INSTALL_DATA} ${WRKSRC}/${file} ${DESTDIR}${PREFIX}/${OG_DOCSDIR}
+.endfor
+.for file in ${OG_EXAMPLES}
+	${INSTALL_DATA} ${WRKSRC}/${file} ${DESTDIR}${PREFIX}/${OG_EGDIR}
 .endfor
 
 .include "../../mk/bsd.pkg.mk"
