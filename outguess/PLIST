@@ -1,3 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/12/09 05:39:53 hoka_adam Exp $
-man/man1/outguess.1
+@comment $NetBSD: PLIST,v 1.2 2010/06/23 11:42:14 hfath Exp $
 bin/outguess
+man/man1/outguess.1
+share/doc/outguess/README
+share/doc/outguess/STIRMARK-README
