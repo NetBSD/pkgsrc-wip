@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.4 2010/03/10 13:12:26 marttikuparinen Exp $
+$NetBSD: distinfo,v 1.5 2010/06/23 06:43:19 marttikuparinen Exp $
 
-SHA1 (opensips-1.6.1-tls_src.tar.gz) = 30f621efffb7fdd1a3258dc581ed5f4061a36311
-RMD160 (opensips-1.6.1-tls_src.tar.gz) = 9be4141e076fe7b668e991fa2e7ff49683732d74
-Size (opensips-1.6.1-tls_src.tar.gz) = 4179651 bytes
+SHA1 (opensips-1.6.2-tls_src.tar.gz) = cd7bc24c9a6069ea67d663c1c99aa72770168138
+RMD160 (opensips-1.6.2-tls_src.tar.gz) = 031061a996d5bacf78aeff18b76c48dee4b299a2
+Size (opensips-1.6.2-tls_src.tar.gz) = 3763382 bytes
 SHA1 (patch-aa) = 63db8337190813bb8c2e3f17669f6654735375f2
 SHA1 (patch-ab) = 92c03c4857925f0111021110164a3e69ac7ee70c
 SHA1 (patch-ac) = e2d48aa2d6d692532ab7086b56d1dd7479718e57

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/03/10 13:12:26 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.6 2010/06/23 06:43:19 marttikuparinen Exp $
 
 DISTNAME=		opensips-${VER}-tls_src
 PKGNAME=		opensips-${VER}
@@ -11,7 +11,7 @@ COMMENT=		Open Source implementation of a SIP server
 
 LICENSE=		gnu-gpl-v2
 
-VER=			1.6.1
+VER=			1.6.2
 WRKSRC=			${WRKDIR}/opensips-${VER}-tls
 
 USE_TOOLS+=		gmake
