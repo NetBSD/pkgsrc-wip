@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4011 2010/06/21 21:41:25 jihbed Exp $
+# $Id: Makefile,v 1.4012 2010/06/23 07:48:42 obache Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -915,6 +915,7 @@ SUBDIR+=	ibus
 SUBDIR+=	ibus-anthy
 SUBDIR+=	ibus-array
 SUBDIR+=	ibus-chewing
+SUBDIR+=	ibus-el
 SUBDIR+=	ibus-handwrite
 SUBDIR+=	ibus-hangul
 SUBDIR+=	ibus-m17n
@@ -2061,6 +2062,7 @@ SUBDIR+=	py-wsgiref
 SUBDIR+=	py-workerpool
 SUBDIR+=	py-wxWidgets-unicode
 SUBDIR+=	py-xdgapp
+SUBDIR+=	py-xlib
 SUBDIR+=	py-xlrd
 SUBDIR+=	py-xmiparser
 SUBDIR+=	py-xmpppy
