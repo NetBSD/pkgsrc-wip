@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2010/06/23 18:00:18 asau Exp $
+# $NetBSD: Makefile,v 1.27 2010/06/24 07:45:04 asau Exp $
 
 DISTNAME=		${PKGNAME_NOREV}-source
 PKGNAME=		sbcl-1.0.39
@@ -84,6 +84,13 @@ do-install:
 
 do-test:
 	cd ${WRKSRC}/tests && ${SH} ./run-tests.sh
+
+.if $(LOWER_ARCH) == "amd64" || $(LOWER_ARCH) == "x86_64"
+PLIST_SUBST+=	SUFX64=-64
+.else
+PLIST_SUBST+=	SUFX64=
+.endif
+
 
 CVS_REPOSITORIES=	sbcl
 CVS_ROOT.sbcl=		:pserver:anonymous:@sbcl.cvs.sourceforge.net:/cvsroot/sbcl
