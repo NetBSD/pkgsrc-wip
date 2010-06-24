@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.16 2009/08/01 16:18:14 schnoebe Exp $
+@comment $NetBSD: PLIST,v 1.17 2010/06/24 18:30:45 schnoebe Exp $
 bin/c2s
 bin/jabberd
-bin/migrate.pl
 bin/pipe-auth.pl
 bin/router
 bin/s2s
@@ -19,7 +18,6 @@ lib/jabberd/mod_active.la
 lib/jabberd/mod_amp.la
 lib/jabberd/mod_announce.la
 lib/jabberd/mod_deliver.la
-lib/jabberd/mod_disco-publish.la
 lib/jabberd/mod_disco.la
 lib/jabberd/mod_echo.la
 lib/jabberd/mod_help.la
@@ -29,6 +27,7 @@ lib/jabberd/mod_iq-private.la
 lib/jabberd/mod_iq-time.la
 lib/jabberd/mod_iq-vcard.la
 lib/jabberd/mod_iq-version.la
+lib/jabberd/mod_pep.la
 lib/jabberd/mod_offline.la
 lib/jabberd/mod_presence.la
 lib/jabberd/mod_privacy.la

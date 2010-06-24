@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2010/06/17 03:59:11 schnoebe Exp $
+# $NetBSD: Makefile,v 1.70 2010/06/24 18:30:45 schnoebe Exp $
 
 DISTNAME=		jabberd-2.2.10
 CATEGORIES=		chat
@@ -110,7 +110,6 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/etc/templates/roster.xml.dist.in	\
 	    ${DESTDIR}${EGDIR}/roster.xml
 	${INSTALL_SCRIPT} ${WRKSRC}/tools/pipe-auth.pl ${DESTDIR}${BINDIR}
-	${INSTALL_SCRIPT} ${WRKSRC}/tools/migrate.pl ${DESTDIR}${BINDIR}
 .for f in ${DBFILES}
 	${INSTALL_DATA} ${WRKSRC}/tools/${f} ${DESTDIR}${EGDIR}
 .endfor
