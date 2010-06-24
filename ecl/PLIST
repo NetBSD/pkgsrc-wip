@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2010/06/17 14:18:28 asau Exp $
+@comment $NetBSD: PLIST,v 1.19 2010/06/24 07:17:26 asau Exp $
 bin/ecl
 bin/ecl-config
 include/ecl/bytecodes.h
@@ -16,11 +16,11 @@ include/ecl/object.h
 include/ecl/page.h
 include/ecl/stacks.h
 include/ecl/unify.h
-lib/Copyright
-lib/LGPL
-lib/${PKGNAME}/build-stamp
+lib/${PKGNAME}/Copyright
+lib/${PKGNAME}/LGPL
 lib/${PKGNAME}/TAGS
 lib/${PKGNAME}/asdf.fas
+lib/${PKGNAME}/build-stamp
 lib/${PKGNAME}/bytecmp.asd
 lib/${PKGNAME}/bytecmp.fas
 lib/${PKGNAME}/cmp.asd
