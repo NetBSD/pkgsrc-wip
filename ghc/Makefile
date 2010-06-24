@@ -1,20 +1,20 @@
-# $NetBSD: Makefile,v 1.23 2010/05/10 01:59:13 phonohawk Exp $
+# $NetBSD: Makefile,v 1.24 2010/06/24 03:37:00 phonohawk Exp $
 
 DISTNAME=		ghc-${VERSION}
-VERSION=		6.12.2
+VERSION=		6.12.3
 CATEGORIES=		lang
-MASTER_SITES=	http://www.haskell.org/ghc/dist/${VERSION}/
+MASTER_SITES=	http://darcs.haskell.org/download/dist/${VERSION}/
 MAINTAINER=		kristerw@NetBSD.org
 HOMEPAGE=		http://www.haskell.org/ghc/
 COMMENT=		Compiler for the functional language Haskell
 LICENSE=		modified-bsd
 
-DISTFILES=		${DISTNAME}-src.tar.bz2 \
-				${DISTNAME}-boot-i386-unknown-freebsd.tar.bz2 \
-				${DISTNAME}-boot-i386-unknown-netbsd.tar.bz2 \
-				${DISTNAME}-boot-powerpc-apple-darwin.tar.bz2
+DISTFILES=		${DISTNAME}-src.tar.bz2
+DISTFILES+=		${DISTNAME}-boot-i386-unknown-freebsd.tar.bz2
+DISTFILES+=		${DISTNAME}-boot-i386-unknown-netbsd.tar.bz2
+DISTFILES+=		${DISTNAME}-boot-powerpc-apple-darwin.tar.bz2
 
-SITES.${DISTNAME}-src.tar.bz2						= http://www.haskell.org/ghc/dist/${VERSION}/
+
 SITES.${DISTNAME}-boot-i386-unknown-netbsd.tar.bz2	= http://static.cielonegro.org/archive/
 SITES.${DISTNAME}-boot-i386-unknown-freebsd.tar.bz2	= http://static.cielonegro.org/archive/
 SITES.${DISTNAME}-boot-powerpc-apple-darwin.tar.bz2	= http://static.cielonegro.org/archive/
@@ -31,8 +31,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 ONLY_FOR_PLATFORM= NetBSD-*-i386 FreeBSD-*-i386 Darwin-*-powerpc
 
 # We must provide the real pass to gcc to the ./configure script,
-# because GHC has a runtime dependency on it. Aren't there any better
-# way than this?
+# because GHC has a runtime dependency on it. Aren't there any ways
+# better than this?
 .include "../../mk/compiler.mk"
 .if empty(CCPATH)
 WARNINGS+= "This package depends on pkgsrc's undocumented variable\

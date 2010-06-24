@@ -1,17 +1,17 @@
-$NetBSD: distinfo,v 1.10 2010/05/10 01:59:14 phonohawk Exp $
+$NetBSD: distinfo,v 1.11 2010/06/24 03:37:00 phonohawk Exp $
 
-SHA1 (ghc-6.12.2-boot-i386-unknown-freebsd.tar.bz2) = 3353dccff3de4fa49b1399747389ebf2c19d05a7
-RMD160 (ghc-6.12.2-boot-i386-unknown-freebsd.tar.bz2) = 97f73bda83bb79476a3821d05816e95e5d48e63b
-Size (ghc-6.12.2-boot-i386-unknown-freebsd.tar.bz2) = 19552626 bytes
-SHA1 (ghc-6.12.2-boot-i386-unknown-netbsd.tar.bz2) = 67f2ccd431d587372536676fcf6575915697b9d3
-RMD160 (ghc-6.12.2-boot-i386-unknown-netbsd.tar.bz2) = a3ce28eaa63479713f47c5696ba4c79ae8bad53d
-Size (ghc-6.12.2-boot-i386-unknown-netbsd.tar.bz2) = 19555867 bytes
-SHA1 (ghc-6.12.2-boot-powerpc-apple-darwin.tar.bz2) = 894eb868e19865836858acf87a77bafbab1ac60c
-RMD160 (ghc-6.12.2-boot-powerpc-apple-darwin.tar.bz2) = acd20c65c489ef9b72ecc34723729f8845754a70
-Size (ghc-6.12.2-boot-powerpc-apple-darwin.tar.bz2) = 19658673 bytes
-SHA1 (ghc-6.12.2-src.tar.bz2) = 421967729beab8a5051b8b7c216240bfcb879c84
-RMD160 (ghc-6.12.2-src.tar.bz2) = ad114022420fbb313dc56f1c5285d1cef4c88f2f
-Size (ghc-6.12.2-src.tar.bz2) = 34158695 bytes
+SHA1 (ghc-6.12.3-boot-i386-unknown-freebsd.tar.bz2) = 2fa261055724f74e37ffc38eb854f22911a1cf10
+RMD160 (ghc-6.12.3-boot-i386-unknown-freebsd.tar.bz2) = 25f2d840f52a132bb7b6db2c7dace407767d8c03
+Size (ghc-6.12.3-boot-i386-unknown-freebsd.tar.bz2) = 19546151 bytes
+SHA1 (ghc-6.12.3-boot-i386-unknown-netbsd.tar.bz2) = f69f7261cb498b536231a110a5006af4d41db0d2
+RMD160 (ghc-6.12.3-boot-i386-unknown-netbsd.tar.bz2) = 6e8485050ee418ecda4414b474652da973203e24
+Size (ghc-6.12.3-boot-i386-unknown-netbsd.tar.bz2) = 19538526 bytes
+SHA1 (ghc-6.12.3-boot-powerpc-apple-darwin.tar.bz2) = 618f6edd5907c62235d8c2c3baccea027379944e
+RMD160 (ghc-6.12.3-boot-powerpc-apple-darwin.tar.bz2) = ff5d6938d363f59a26de4d9dbfe3335326094a6e
+Size (ghc-6.12.3-boot-powerpc-apple-darwin.tar.bz2) = 19649010 bytes
+SHA1 (ghc-6.12.3-src.tar.bz2) = d811be2131d4403ea452aa94fe71edd1b6bd0a79
+RMD160 (ghc-6.12.3-src.tar.bz2) = 021619aec4c820009e77745657bfdf0d9705f3e7
+Size (ghc-6.12.3-src.tar.bz2) = 26592939 bytes
 SHA1 (patch-af) = 81ae37eeaca5992868f6955b99113aaae010df22
 SHA1 (patch-ag) = 96c074d0d765c0f2de57d26aa145ad109b7cf043
 SHA1 (patch-ah) = 5470ab2e1bb746ef3009e5f02ac0b28b8e9d9688
