@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2009/07/14 08:44:57 cheusov Exp $
+$NetBSD: distinfo,v 1.3 2010/06/24 18:07:11 cheusov Exp $
 
-SHA1 (google-perftools-1.3.tar.gz) = fcf5b13a377bbea486b6fe32a8d2cac61c0afa51
-RMD160 (google-perftools-1.3.tar.gz) = eaf7827eba6307783a13aabb29bce318ffe5cf3b
-Size (google-perftools-1.3.tar.gz) = 1120884 bytes
-SHA1 (patch-aa) = d345d91f3f285c3cef48eb6a26f043d53222c907
+SHA1 (google-perftools-1.5.tar.gz) = 84c44c2576d8b06cd179f3c4bbd5a613dc63ce68
+RMD160 (google-perftools-1.5.tar.gz) = 3c014fa2c2b140374f56678cd10f4427080f4f99
+Size (google-perftools-1.5.tar.gz) = 1159627 bytes
