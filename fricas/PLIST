@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2010/03/08 21:40:03 asau Exp $
+@comment $NetBSD: PLIST,v 1.24 2010/06/24 11:51:01 asau Exp $
 bin/efricas
 bin/fricas
 lib/fricas/emacs/fricas-cpl.el
@@ -98,6 +98,8 @@ lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/CARTEN.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/CARTEN2.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/CCLASS.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/CDEN.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/CDFMAT.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/CDFVEC.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/CFCAT.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/CHAR.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/CHARNZ.${FASL}
@@ -150,7 +152,9 @@ lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/DEQUEUE.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/DERHAM.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/DFINTTLS.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/DFLOAT.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/DFMAT.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/DFSFUN.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/DFVEC.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/DHMATRIX.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/DIAGG-.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/DIAGG.${FASL}
@@ -219,6 +223,7 @@ lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/EVALAB-.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/EVALAB.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/EVALCYC.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/EXIT.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/EXP3D.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/EXPEXPAN.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/EXPR.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/EXPR2.${FASL}
@@ -412,6 +417,7 @@ lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/HEXADEC.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/HOAGG-.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/HOAGG.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/HOPFALG.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/HTMLFORM.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/HYPCAT-.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/HYPCAT.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/IALGFACT.${FASL}
@@ -2053,7 +2059,6 @@ ${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ParametricSurfac
 ${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ParametricSurfaceGraphicsPage1.VIEW/image.xpm
 ${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ParametricSurfaceGraphicsPage5.VIEW/data
 ${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ParametricSurfaceGraphicsPage5.VIEW/image.bm
-${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ParametricSurfaceGraphicsPage5.VIEW/image.xpm
 ${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ParametricTubeGraphicsPage1.VIEW/data
 ${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ParametricTubeGraphicsPage1.VIEW/image.bm
 ${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ParametricTubeGraphicsPage1.VIEW/image.xpm
@@ -2200,7 +2205,6 @@ ${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugGraphThreeDOpt
 ${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugGraphThreeDOptionsPage8.VIEW/image.xpm
 ${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugGraphThreeDParPage1.VIEW/data
 ${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugGraphThreeDParPage1.VIEW/image.bm
-${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugGraphThreeDParPage1.VIEW/image.xpm
 ${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugGraphThreeDParPage6.VIEW/data
 ${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugGraphThreeDParPage6.VIEW/image.bm
 ${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugGraphThreeDParPage6.VIEW/image.xpm
@@ -2305,6 +2309,12 @@ ${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugGraphTwoDbuild
 ${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugGraphTwoDbuildPage43.VIEW/graph0
 ${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugGraphTwoDbuildPage43.VIEW/image.bm
 ${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugGraphTwoDbuildPage43.VIEW/image.xpm
+${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntProgColorArrPage2.VIEW/data
+${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntProgColorArrPage2.VIEW/image.bm
+${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntProgColorArrPage2.VIEW/image.xpm
+${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntProgCompFunsPage3.VIEW/data
+${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntProgCompFunsPage3.VIEW/image.bm
+${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntProgCompFunsPage3.VIEW/image.xpm
 ${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntProgDrawingPage1.VIEW/data
 ${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntProgDrawingPage1.VIEW/image.bm
 ${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntProgDrawingPage1.VIEW/image.xpm
@@ -2314,6 +2324,21 @@ ${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntProgDrawing
 ${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntProgDrawingPage5.VIEW/data
 ${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntProgDrawingPage5.VIEW/image.bm
 ${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntProgDrawingPage5.VIEW/image.xpm
+${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntProgNewtonPage10.VIEW/data
+${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntProgNewtonPage10.VIEW/image.bm
+${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntProgNewtonPage10.VIEW/image.xpm
+${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntProgNewtonPage11.VIEW/data
+${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntProgNewtonPage11.VIEW/image.bm
+${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntProgNewtonPage11.VIEW/image.xpm
+${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntProgPLCPage10.VIEW/data
+${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntProgPLCPage10.VIEW/image.bm
+${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntProgPLCPage10.VIEW/image.xpm
+${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntProgRibbonPage2.VIEW/data
+${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntProgRibbonPage2.VIEW/image.bm
+${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntProgRibbonPage2.VIEW/image.xpm
+${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntProgVecFieldsPage2.VIEW/data
+${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntProgVecFieldsPage2.VIEW/image.bm
+${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntProgVecFieldsPage2.VIEW/image.xpm
 ${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntroGraphicsPage1.VIEW/data
 ${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntroGraphicsPage1.VIEW/graph0
 ${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntroGraphicsPage1.VIEW/image.bm
@@ -2405,6 +2430,7 @@ lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/equation1.spad.pamphlet
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/equation2.spad.pamphlet
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/error.spad.pamphlet
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/expexpan.spad.pamphlet
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/export3D.spad.pamphlet
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/expr.spad.pamphlet
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/expr2ups.spad.pamphlet
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/exprode.spad.pamphlet
@@ -2461,6 +2487,7 @@ lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/grdef.spad.pamphlet
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/groebf.spad.pamphlet
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/groebsol.spad.pamphlet
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/gseries.spad.pamphlet
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/html.spad.pamphlet
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/ideal.spad.pamphlet
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/idecomp.spad.pamphlet
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/indexedp.spad.pamphlet
@@ -2532,6 +2559,7 @@ lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/nlode.spad.pamphlet
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/npcoef.spad.pamphlet
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/nregset.spad.pamphlet
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/nsregset.spad.pamphlet
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/numarr.spad.pamphlet
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/numeigen.spad.pamphlet
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/numeric.spad.pamphlet
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/numode.spad.pamphlet
