@@ -1,6 +1,30 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/03/28 05:13:30 ryo-on Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/06/25 21:23:34 ryo-on Exp $
 bin/quvi
 include/quvi/quvi.h
 lib/libquvi.la
 lib/pkgconfig/libquvi.pc
 man/man1/quvi.1
+${PLIST.doc}share/doc/quvi/HowtoContributeCode
+${PLIST.doc}share/doc/quvi/HowtoGetDevelopmentCode
+${PLIST.doc}share/doc/quvi/HowtoHelp
+${PLIST.doc}share/doc/quvi/HowtoSubmitPatches
+share/quvi/lua/README
+share/quvi/lua/website/README
+share/quvi/lua/website/break.lua
+share/quvi/lua/website/buzzhumor.lua
+share/quvi/lua/website/cctv.lua
+share/quvi/lua/website/clipfish.lua
+share/quvi/lua/website/dailymotion.lua
+share/quvi/lua/website/evisor.lua
+share/quvi/lua/website/funnyhub.lua
+share/quvi/lua/website/golem.lua
+share/quvi/lua/website/google.lua
+share/quvi/lua/website/liveleak.lua
+share/quvi/lua/website/myubo.lua
+share/quvi/lua/website/sevenload.lua
+share/quvi/lua/website/spiegel.lua
+share/quvi/lua/website/tube8.lua
+share/quvi/lua/website/vimeo.lua
+share/quvi/lua/website/xvideos.lua
+share/quvi/lua/website/youjizz.lua
+share/quvi/lua/website/youtube.lua
