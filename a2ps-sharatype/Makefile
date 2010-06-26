@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/07/28 10:12:21 cheusov Exp $
+# $NetBSD: Makefile,v 1.5 2010/06/26 16:59:36 cheusov Exp $
 
 DISTNAME=	sharatype-2.0.5
 PKGNAME=	a2ps-${DISTNAME}
@@ -6,7 +6,7 @@ CATEGORIES=	print
 MASTER_SITES=	http://ftp.wagner.pp.ru/pub/fonts/type1/
 
 MAINTAINER=	cheusov@tut.by
-HOMEPAGE=	http://ftp.45.free.net/pub/fonts/type1/
+HOMEPAGE=	http://ftp.wagner.pp.ru/pub/fonts/type1/
 COMMENT=	Cyrillic fonts for a2ps (a part of sharatype project)
 
 PKG_DESTDIR_SUPPORT=	user-destdir
