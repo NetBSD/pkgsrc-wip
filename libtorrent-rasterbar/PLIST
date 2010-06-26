@@ -1,9 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/04/01 13:41:35 ryo-on Exp $
-include/libtorrent/ConvertUTF.h
+@comment $NetBSD: PLIST,v 1.2 2010/06/26 00:30:36 ryo-on Exp $
+bin/client_test
+bin/dump_torrent
+bin/enum_if
+bin/make_torrent
+bin/simple_client
 include/libtorrent/alert.hpp
 include/libtorrent/alert_types.hpp
-include/libtorrent/alloca.hpp
-include/libtorrent/allocator.hpp
 include/libtorrent/assert.hpp
 include/libtorrent/aux_/session_impl.hpp
 include/libtorrent/bandwidth_limit.hpp
@@ -27,7 +29,6 @@ include/libtorrent/error_code.hpp
 include/libtorrent/escape_string.hpp
 include/libtorrent/extensions.hpp
 include/libtorrent/extensions/logger.hpp
-include/libtorrent/extensions/lt_trackers.hpp
 include/libtorrent/extensions/metadata_transfer.hpp
 include/libtorrent/extensions/smart_ban.hpp
 include/libtorrent/extensions/ut_metadata.hpp
@@ -40,7 +41,6 @@ include/libtorrent/gzip.hpp
 include/libtorrent/hasher.hpp
 include/libtorrent/http_connection.hpp
 include/libtorrent/http_parser.hpp
-include/libtorrent/http_seed_connection.hpp
 include/libtorrent/http_stream.hpp
 include/libtorrent/http_tracker_connection.hpp
 include/libtorrent/identify_client.hpp
@@ -85,6 +85,7 @@ include/libtorrent/session_status.hpp
 include/libtorrent/size_type.hpp
 include/libtorrent/socket.hpp
 include/libtorrent/socket_type.hpp
+include/libtorrent/socks4_stream.hpp
 include/libtorrent/socks5_stream.hpp
 include/libtorrent/ssl_stream.hpp
 include/libtorrent/stat.hpp

@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/03/15 23:24:11 ryo-on Exp $
-lib/X11/fonts/TTF/ipag0208_for_legacy_compatibility.ttf
-lib/X11/fonts/TTF/ipagp0208_for_legacy_compatibility.ttf
-lib/X11/fonts/TTF/ipagui0208_for_legacy_compatibility.ttf
-lib/X11/fonts/TTF/ipam0208_for_legacy_compatibility.ttf
-lib/X11/fonts/TTF/ipamp0208_for_legacy_compatibility.ttf
-share/doc/${PKGBASE}/Readme${PKGVERSION}.txt
-share/doc/${PKGBASE}/enduser_license.txt

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/04/01 13:42:20 ryo-on Exp $
+# $NetBSD: Makefile,v 1.2 2010/06/26 00:30:36 ryo-on Exp $
 #
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,20 +11,19 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c c++
 
-PYTHON_VERSIONS_ACCEPTED=	26 25
+PYTHON_VERSIONS_ACCEPTED=	26 25 24
 PYDISTUTILSPKG=	yes
 PYSETUPSUBDIR=	bindings/python
 
+#CONFIGURE_ARGS+=	--with-boost-libdir=${BUILDLINK_LIBS.boost-python}
+CONFIGURE_ARGS+=	--with-boost-python
 CONFIGURE_ARGS+=	--enable-python-binding
 
+PATCHDIR=	${.CURDIR}/../../wip/libtorrent-rasterbar/patches
 DISTINFO_FILE=	${.CURDIR}/../../wip/libtorrent-rasterbar/distinfo
 
-#SUBST_CLASSES+=		gcc-opt
-#SUBST_STAGE.gcc-opt=	pre-configure
-#SUBST_MESSAGE.gcc-opt=	lower optimization
-#SUBST_FILES.gcc-opt=	configure
-#SUBST_SED.gcc-opt=	-e 's,-O2,,g'
-##SUBST_SED.gcc-opt=	-e 's,-O2,-O,g'
+pre-patch:
+	echo ${BUILDLINK_LIBS.boost-python}
 
 .include "../../lang/python/extension.mk"
 .include "../../devel/boost-python/buildlink3.mk"

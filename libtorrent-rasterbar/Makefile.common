@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.2 2010/04/02 12:40:27 ryo-on Exp $
+# $NetBSD: Makefile.common,v 1.3 2010/06/26 00:30:36 ryo-on Exp $
 #
 
 # used by wip/py-libtorrent-rasterbar/Makefile
 # used by wip/libtorrent-rasterbar/Makefile
-DISTNAME=	libtorrent-rasterbar-0.15.0
+DISTNAME=	libtorrent-rasterbar-0.15.1
 CATEGORIES=	net
 MASTER_SITES=	http://libtorrent.googlecode.com/files/ \
 		${MASTER_SITE_SOURCEFORGE:=libtorrent/}
@@ -17,19 +17,24 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
 
 # testing
-CFLAGS=		-O0
-CXXFLAGS=	-O0
+#CFLAGS=		-lpython${PYVERSSUFFIX}
+#CFLAGS=		-O0
+#CXXFLAGS=	-O0
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--with-boost=${BUILDLINK_PREFIX.boost-libs}
 CONFIGURE_ARGS+=	--with-boost-system=boost_system
+#CONFIGURE_ARGS+=	--with-boost-asio=boost_system
 CONFIGURE_ARGS+=	--with-boost-filesystem=boost_filesystem
 CONFIGURE_ARGS+=	--with-boost-thread=boost_thread
+#CONFIGURE_ARGS+=	--with-boost-regex=boost_regex
+#CONFIGURE_ARGS+=	--with-boost-program-options=boost_program_options
 CONFIGURE_ARGS+=	--with-libgeoip
-CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
-CONFIGURE_ARGS+=	--enable-dht
-CONFIGURE_ARGS+=	--enable-pool-allocators
+#CONFIGURE_ARGS+=	--with-dht=on
+#CONFIGURE_ARGS+=	--with-ssl=${SSLBASE:Q}
+CONFIGURE_ARGS+=	--with-zlib=system
 
+.include "../../lang/python/pyversion.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../net/GeoIP/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
