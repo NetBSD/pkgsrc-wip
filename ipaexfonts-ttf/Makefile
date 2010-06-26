@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2010/04/26 11:05:26 obache Exp $
+# $NetBSD: Makefile,v 1.3 2010/06/26 00:06:57 ryo-on Exp $
 #
 
-DISTNAME=	IPAexfont00101
+DISTNAME=	IPAexfont00102
 PKGNAME=	${DISTNAME:S/IPAexfont/ipaexfonts-/}
 CATEGORIES=	fonts japanese
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP:=ipafonts/46160/} \
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP:=ipafonts/47611/} \
 		http://info.openlab.ipa.go.jp/ipafont/fontdata/
 EXTRACT_SUFX=	.zip
 
@@ -30,7 +30,7 @@ FONTS_DIRS.ttf=	${FONTDIR}
 INSTALL_FONTS=	ipaexg.ttf \
 		ipaexm.ttf
 INSTALL_DOCS=	IPA_Font_License_Agreement_v1.0.txt \
-		Readme_IPAexfont00101.txt
+		Readme_IPAexfont00102.txt
 
 USE_LANGUAGES=	# none
 
