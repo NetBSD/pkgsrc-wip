@@ -1,0 +1,30 @@
+$NetBSD: patch-analpfile_c,v 1.1 2010/06/27 20:08:13 gschwarz Exp $
+
+--- analpfile.c.orig	2004-12-08 13:32:55.000000000 +0100
++++ analpfile.c	2010-06-13 13:37:10.769620000 +0200
+@@ -36,6 +36,7 @@
+ #include "analpfile.h"
+ #include "heuristics.h"
+ 
++int GetPacketBssid(const u_char *pkt, unsigned char *bssid);
+ 
+ #define HUGE_MEM_WEAKPACKETS_SIZE	104000000
+ 
+@@ -102,7 +103,7 @@
+ 	if ((pkt = (unsigned char *) pcap_next(file, &h)) == NULL) break;
+ 
+ 	if (global_v.prismHeaderPresent){
+-		if (GetPacketBssid(pkt+144,bssid)){
++		if (GetPacketBssid(pkt+144,(unsigned char *)bssid)){
+ 			indexArray=(unsigned int) ((bssid[0]^bssid[1]+bssid[2]^bssid[3]+bssid[4]^bssid[5])&0x00000FFF);
+ 			if (!bssidOriginal[indexArray][6]){
+ 				bssidOriginal[indexArray][6]=1;
+@@ -111,7 +112,7 @@
+ 		}
+ 		else indexArray=0;
+ 	}else{
+-		if (GetPacketBssid(pkt,bssid)){
++		if (GetPacketBssid(pkt,(unsigned char *)bssid)){
+ 			indexArray=(unsigned char) ((bssid[0]^bssid[1]+bssid[2]^bssid[3]+bssid[4]^bssid[5])&0x00000FFF);
+ 			if (!bssidOriginal[indexArray][6]){
+ 				bssidOriginal[indexArray][6]=1;

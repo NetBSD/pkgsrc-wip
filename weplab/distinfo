@@ -1,5 +1,12 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/10/28 20:27:56 gschwarz Exp $
+$NetBSD: distinfo,v 1.2 2010/06/27 20:08:12 gschwarz Exp $
 
 SHA1 (weplab-0.1.5.tar.gz) = d4bd858a179a2d0cf4f7be895f2f4a88f961469a
 RMD160 (weplab-0.1.5.tar.gz) = 731401430bdf36c56f9bbda0b8db545df762f3ad
 Size (weplab-0.1.5.tar.gz) = 122053 bytes
+SHA1 (patch-analpfile_c) = 5ffceebea721195930d0e9f069a093aaa06b6973
+SHA1 (patch-debug_h) = fcb974dbcaac0cf89c96cb6706a18bb99eb0fdfe
+SHA1 (patch-dictionary_c) = 2dba999d3b7c1f32f8b433861c87cf3146e214fc
+SHA1 (patch-heuristics_c) = a793a511f2ecfa1809b9e7fe377d75a123ad6007
+SHA1 (patch-main_c) = 7ae14c7a478294e0c39af709c5e64a61a913a9e2
+SHA1 (patch-md5_c) = 03823789358a945d2980a31c94e3946a40358354
+SHA1 (patch-wep_c) = 78d5e3f5f0be61638f587633da03b14c16df7598

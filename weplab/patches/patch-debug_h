@@ -1,0 +1,13 @@
+$NetBSD: patch-debug_h,v 1.1 2010/06/27 20:08:13 gschwarz Exp $
+
+--- debug.h.orig	2010-06-13 14:03:40.697820000 +0200
++++ debug.h	2010-06-13 14:03:52.418828000 +0200
+@@ -28,7 +28,7 @@
+ #define	_DEBUG_H
+ 
+ 
+-inline void debug(char *formatString, ...);
++void debug(char *formatString, ...);
+ 
+ 
+ #endif

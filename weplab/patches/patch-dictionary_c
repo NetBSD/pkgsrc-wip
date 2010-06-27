@@ -1,0 +1,51 @@
+$NetBSD: patch-dictionary_c,v 1.1 2010/06/27 20:08:13 gschwarz Exp $
+
+--- dictionary.c.orig	2005-07-18 22:16:46.000000000 +0200
++++ dictionary.c	2010-06-13 14:03:32.511203000 +0200
+@@ -27,6 +27,9 @@
+ #include <stdlib.h>
+ #include <string.h>
+ #include <sys/types.h>
++#if HAVE_STRINGS_H
++#include <strings.h> /* for bzero() */
++#endif
+ #include <unistd.h>
+ #include <signal.h>
+ #include <time.h>
+@@ -140,7 +143,7 @@
+ 
+ 	bzero(word, sz);
+ 
+-	while (((rv=fgets(word, sz-1, wordfile))!=NULL)&&((word[0]=='\r')||(word[0]=='\n'))) {
++	while (((rv=fgets((char *)word, sz-1, wordfile))!=NULL)&&((word[0]=='\r')||(word[0]=='\n'))) {
+ 		/* We didn't get valuable data :( */
+ 		;
+ 	}
+@@ -281,9 +284,9 @@
+ 				/* We are asked to perform basic ascii test 
+ 			   * We just have to backup the last key for the SIGUSR1 catching function that will print the last word */
+ 				bzero(keys, global_v.key_len+1);
+-				strncpy(keys, word, global_v.key_len);
++				strncpy((char *)keys, (char *)word, global_v.key_len);
+ 				bzero(last_keys, global_v.key_len+1);
+-				strcpy(last_keys, keys);
++				strcpy((char *)last_keys, (char *)keys);
+ 				if (global_v.debug >1) {
+ 					printf("We generate this ");
+ 					ViewKey (keys, global_v.key_len);
+@@ -291,13 +294,13 @@
+ 			} else {
+ 				/* We work with real world key generation algorithm */
+ 				if (global_v.key_len == WEPSTRONGKEYSIZE) {
+-					wep_keygen128(word, keys);
++					wep_keygen128((char *)word, keys);
+ 					if (global_v.debug >1) {
+ 						printf("We generate this ");
+ 						ViewKey (keys, global_v.key_len);
+ 			    }
+ 			  } else {
+-					wep_keygen40(word, keys);
++					wep_keygen40((char *)word, keys);
+ 					if (global_v.debug >1) {
+ 						printf("We generate these four keys : \n");
+ 						printf("Index 1 - ");
