@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/01/24 13:58:18 obache Exp $
+$NetBSD: distinfo,v 1.2 2010/06/27 23:57:45 obache Exp $
 
-SHA1 (xvmware-20081221/xvmware.tar.bz2) = 6b822afc7ba04519ea4d773a1ffc9db635a9fd86
-RMD160 (xvmware-20081221/xvmware.tar.bz2) = 1623cf7f1b04c16de7922e4e3cc09c633da6bbab
-Size (xvmware-20081221/xvmware.tar.bz2) = 8490 bytes
+SHA1 (xvmware-20100627.tar.bz2) = 9a5fbe5e204b34110d0eba3fb9252a27c03fd91a
+RMD160 (xvmware-20100627.tar.bz2) = e9ff44580f75ef352d05f38e14d7b158699549c7
+Size (xvmware-20100627.tar.bz2) = 11127 bytes
