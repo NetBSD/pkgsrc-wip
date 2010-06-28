@@ -3,3 +3,4 @@
 * confirm UTF-8 pagename
 * on non-NetBSD platform?
 * fix location of didiwiki.conf
+* add dependency for ssmtp (msmtp is not sufficient?)

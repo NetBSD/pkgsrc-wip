@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/06/28 11:07:17 ryo-on Exp $
+# $NetBSD: Makefile,v 1.4 2010/06/28 18:32:50 ryo-on Exp $
 #
 
 DISTNAME=	ciwiki-1.6.1
@@ -68,7 +68,7 @@ post-install:
 .endfor
 	${INSTALL_MAN} ${WRKSRC}/${MANFILES1} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
 .for filename in ${SCRIPTFILES}
-	${INSTALL_DATA} ${WRKSRC}/scripts/${filename} ${DESTDIR}/${SCRIPTSDIR}/scripts
+	${INSTALL_SCRIPT} ${WRKSRC}/scripts/${filename} ${DESTDIR}/${SCRIPTSDIR}/scripts
 .endfor
 
 .include "../../mk/bsd.prefs.mk"
