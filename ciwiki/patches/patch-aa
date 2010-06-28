@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2010/03/29 12:12:36 ryo-on Exp $
+$NetBSD: patch-aa,v 1.2 2010/06/28 10:56:57 ryo-on Exp $
 
---- src/didi.h.orig	2010-03-29 06:36:07.000000000 +0000
+--- src/didi.h.orig	2010-05-24 02:04:18.000000000 +0000
 +++ src/didi.h
 @@ -78,6 +78,7 @@
  #include <dirent.h>

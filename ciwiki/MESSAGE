@@ -1,0 +1,10 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2010/06/28 10:56:57 ryo-on Exp $
+
+First, you must copy scripts to your home directory.
+% cp -r  ${PREFIX}/share/ciwiki/scripts ~/
+
+Second, start as
+% didiwiki -s
+and register your account.
+===========================================================================
