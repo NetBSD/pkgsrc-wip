@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/06/28 13:47:42 hfath Exp $
+bin/jsl
+share/doc/html/jsl/README.html
+share/examples/jsl/jsl.config.sample

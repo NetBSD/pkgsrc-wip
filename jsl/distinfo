@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/06/28 13:47:42 hfath Exp $
+
+SHA1 (jsl-0.3.0-src.tar.gz) = f27ec18d1dd325f895bc1682d7be8872c213a986
+RMD160 (jsl-0.3.0-src.tar.gz) = 8527738a1ae1dea7626c40da01dc94f502fa3fcb
+Size (jsl-0.3.0-src.tar.gz) = 924756 bytes
+SHA1 (patch-aa) = 5d1cfea9cf09f6e9a30ff25ba5dc212bd0c50758
+SHA1 (patch-ab) = 396c2141baca9d7059dcdc9ce574f3d2ad7710a1
+SHA1 (patch-ac) = 3cd3cc56cc4b336917d99b22915b1b8ed7237493

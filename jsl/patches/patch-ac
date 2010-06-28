@@ -1,0 +1,23 @@
+$NetBSD: patch-ac,v 1.1.1.1 2010/06/28 13:47:42 hfath Exp $
+
+--- Makefile.ref.orig	2006-10-25 19:41:48.000000000 +0000
++++ Makefile.ref
+@@ -300,11 +300,16 @@
+ ifdef USE_MSVC
+ $(PROGRAM): $(PROG_OBJS) $(LIBRARY) $(FDLIBM_LIBRARY)
+ 	link.exe -out:"$@" $(EXE_LINK_FLAGS) $^
+ else
+-$(PROGRAM): $(PROG_OBJS) $(LIBRARY) $(FDLIBM_LIBRARY)
++$(PROGRAM): $(PROG_OBJS) $(LIBRARY) $(FDLIBM_LIBRARY) symlink.objdir
+ 	$(CC) -o $@ $(CFLAGS) $(PROG_OBJS) $(LIBRARY) $(LDFLAGS) $(OTHER_LIBS) \
+ 	    $(PROG_LIBS)
+ endif
+ 
++# pkgsrc: Symlink the OBJDIR to a fixed, known name so we know where to find
++# pkgsrc: the binaries to install
++symlink.objdir:
++	ln -s $(OBJDIR)/ pkgsrc.objdir
++
+ $(PROGRAM).pure: $(PROG_OBJS) $(LIBRARY)
+ 	purify $(PUREFLAGS) \
+ 	    $(CC) -o $@ $(PURE_OS_CFLAGS) $(PROG_OBJS) $(LIBRARY) $(LDFLAGS) \
