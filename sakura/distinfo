@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/03/29 12:11:06 ryo-on Exp $
+$NetBSD: distinfo,v 1.2 2010/06/28 11:50:43 ryo-on Exp $
 
-SHA1 (sakura-2.3.7.tar.bz2) = 8ffbd39f4bf0c1e84d45bfed455645aea05b9c23
-RMD160 (sakura-2.3.7.tar.bz2) = efc751ced84616b1bedc27b332fdfcbea5d9f22c
-Size (sakura-2.3.7.tar.bz2) = 37260 bytes
+SHA1 (sakura-2.3.8.tar.bz2) = d95016484734a10ef1966431c8f5e2d923040a0f
+RMD160 (sakura-2.3.8.tar.bz2) = 57787df9c1f695c7dd20c17125af9f57d6f09675
+Size (sakura-2.3.8.tar.bz2) = 38623 bytes

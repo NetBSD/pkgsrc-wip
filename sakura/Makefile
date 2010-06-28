@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2010/06/13 22:47:15 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2010/06/28 11:50:42 ryo-on Exp $
 #
 
-DISTNAME=	sakura-2.3.7
+DISTNAME=	sakura-2.3.8
 PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	http://www.pleyades.net/david/projects/sakura/
