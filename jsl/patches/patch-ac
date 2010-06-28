@@ -1,9 +1,8 @@
-$NetBSD: patch-ac,v 1.1.1.1 2010/06/28 13:47:42 hfath Exp $
+$NetBSD: patch-ac,v 1.2 2010/06/28 14:06:49 hfath Exp $
 
 --- Makefile.ref.orig	2006-10-25 19:41:48.000000000 +0000
 +++ Makefile.ref
-@@ -300,11 +300,16 @@
- ifdef USE_MSVC
+@@ -300,11 +300,16 @@ ifdef USE_MSVC
  $(PROGRAM): $(PROG_OBJS) $(LIBRARY) $(FDLIBM_LIBRARY)
  	link.exe -out:"$@" $(EXE_LINK_FLAGS) $^
  else
