@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/06/29 10:20:42 hftmarkand Exp $
+# $NetBSD: Makefile,v 1.2 2010/06/29 14:07:26 hftmarkand Exp $
 
 .include "../teeworlds/Makefile.common"
 
 PKGNAME=	teeworlds-server-${TEEWORLDS_VERSION}
 CONFLICTS+=	teeworlds-[0-9]*
+CONFLICTS+=	teeworlds-client-[0-9]*
 
 # Use the same settings.
 DISTINFO_FILE=	${.CURDIR}/../teeworlds/distinfo
@@ -16,7 +17,7 @@ SUBST_MESSAGE.default-bam=	Fixing default bam for python
 SUBST_FILES.default-bam=	${TEEWORLDS_WRKSRC}/default.bam
 SUBST_SED.default-bam=		-e 's,@PYTHONBIN@,${PYTHONBIN},; s,@CFLAGS@,${CFLAGS},; s,@X11BASE@,,g'
 
-# We want server target.
+# We want server only target.
 BAM_TARGET=	server_release
 
 do-build:
