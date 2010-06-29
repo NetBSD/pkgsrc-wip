@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/06/29 10:20:42 hftmarkand Exp $
+bin/teeworlds_srv
+share/teeworlds/maps/ctf1.map
+share/teeworlds/maps/ctf2.map
+share/teeworlds/maps/ctf3.map
+share/teeworlds/maps/ctf4.map
+share/teeworlds/maps/ctf5.map
+share/teeworlds/maps/dm1.map
+share/teeworlds/maps/dm2.map
+share/teeworlds/maps/dm6.map
+share/teeworlds/maps/dm7.map
+share/teeworlds/maps/dm8.map
+share/teeworlds/maps/dm9.map
