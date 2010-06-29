@@ -1,0 +1,54 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2010/06/29 10:19:31 hftmarkand Exp $
+#
+# used by wip/teeworlds-server/Makefile
+
+DISTNAME=		teeworlds-${TEEWORLDS_VERSION}-src
+CATEGORIES=		games
+MASTER_SITES=		http://www.teeworlds.com/files/ \
+			http://mirror.amdmi3.ru/distfiles/
+
+COMMENT=		Platform game featuring buggers equipped with weapons
+HOMEPAGE=		http://www.teeworlds.com/
+
+MAINTAINER=		pkgsrc-users@NetBSD.org
+USE_LANGUAGES=		c c++
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+NO_CONFIGURE=		yes
+
+USE_TOOLS=	pax
+
+# Need python for build dependency.
+PYTHON_VERSIONS_ACCEPTED=	26 25 24
+PYTHON_FOR_BUILD_ONLY=		yes
+
+# bam is the teeworlds `make'.
+BAM_VERSION=		0.2.0
+BAM_WRKSRC=		${WRKDIR}/bam-${BAM_VERSION}
+
+# teeworlds src directory.
+TEEWORLDS_VERSION=	0.5.2
+TEEWORLDS_WRKSRC=	${WRKDIR}/${DISTNAME}
+
+WRKSRC=			${WRKDIR}
+DATADIR=		${PREFIX}/share/teeworlds
+INSTALLATION_DIRS=	bin ${DATADIR}
+
+# Need bam and teeworlds sources
+DISTFILES=	${DISTNAME}${EXTRACT_SUFX} bam-${BAM_VERSION}${EXTRACT_SUFX}
+
+# Needed for both client/server.
+SUBST_CLASSES+=			make-unix e_engine default-bam
+SUBST_STAGE.make-unix=		pre-build
+SUBST_MESSAGE.make-unix=	Fixing bam make_unix.sh
+SUBST_FILES.make-unix=		${BAM_WRKSRC}/make_unix.sh
+SUBST_SED.make-unix=		-e 's,@CC@,${CC},; s,@CFLAGS@,${CFLAGS},'
+
+SUBST_STAGE.e_engine=		pre-build
+SUBST_MESSAGE.e_engine=		Fixing teeworlds e_engine.c
+SUBST_FILES.e_engine=		${TEEWORLDS_WRKSRC}/src/engine/e_engine.c
+SUBST_SED.e_engine=		-e 's,@DATADIR@,${DESTDIR}${DATADIR},'
+
+.include "../../lang/python/pyversion.mk"
+.include "../../lang/python/application.mk"
+.include "../../mk/bsd.prefs.mk"

@@ -1,0 +1,29 @@
+$NetBSD: patch-ag,v 1.1.1.1 2010/06/29 10:19:31 hftmarkand Exp $
+
+--- teeworlds-0.5.2-src/default.bam.orig	2009-10-26 19:04:31.000000000 +0100
++++ teeworlds-0.5.2-src/default.bam	2010-06-26 15:35:35.000000000 +0200
+@@ -15,7 +15,7 @@
+ 	if family == "windows" then
+ 		return str_replace(name, "/", "\\")
+ 	end
+-	return "python " .. name
++	return "@PYTHONBIN@ " .. name
+ end
+ 
+ function CHash(output, ...)
+@@ -110,13 +110,13 @@
+ 	if config.compiler.value == "cl" then
+ 		settings.cc.flags:Add("/wd4244")
+ 	else
+-		settings.cc.flags:Add("-Wall", "-fno-exceptions")
++		settings.cc.flags:Add("-Wall", "-fno-exceptions @CFLAGS@ -I @X11BASE@/include")
+ 		if platform == "macosx" then
+ 			settings.cc.flags:Add("-mmacosx-version-min=10.4", "-isysroot /Developer/SDKs/MacOSX10.4u.sdk")
+ 			settings.link.flags:Add("-mmacosx-version-min=10.4", "-isysroot /Developer/SDKs/MacOSX10.4u.sdk")
+ 		elseif config.stackprotector.value == 1 then
+ 			settings.cc.flags:Add("-fstack-protector", "-fstack-protector-all")
+-			settings.link.flags:Add("-fstack-protector", "-fstack-protector-all")
++			settings.link.flags:Add("-fstack-protector", "-fstack-protector-all @CFLAGS@ -Wl,-R @X11BASE@/lib -L @X11BASE@/lib")
+ 		end
+ 	end
+ 

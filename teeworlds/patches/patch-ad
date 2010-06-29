@@ -1,0 +1,18 @@
+$NetBSD: patch-ad,v 1.1.1.1 2010/06/29 10:19:31 hftmarkand Exp $
+
+--- bam-0.2.0/src/platform.h.orig	2010-06-26 13:18:39.000000000 +0200
++++ bam-0.2.0/src/platform.h	2010-06-26 13:19:07.000000000 +0200
+@@ -34,6 +34,13 @@
+ 	#define BAM_PLATFORM_STRING "openbsd"
+ #endif
+ 
++#if defined(__NetBSD__)
++	#define BAM_FAMILY_UNIX
++	#define BAM_FAMILY_STRING "unix"
++	#define BAM_PLATFORM_NETBSD
++	#define BAM_PLATFORM_STRING "netbsd"
++#endif
++
+ #if defined(__LINUX__) || defined(__linux__)
+ 	#define BAM_FAMILY_UNIX
+ 	#define BAM_FAMILY_STRING "unix"

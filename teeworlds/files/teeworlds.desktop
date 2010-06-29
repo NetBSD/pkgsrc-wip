@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Teeworlds
+Comment=Platform game featuring buggers equipped with weapons
+Icon=@DATADIR@/Teeworlds.ico
+Categories=Game;ActionGame;
+Type=Application
+StartupNotify=false
+Encoding=UTF-8
