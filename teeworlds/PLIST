@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/06/29 10:19:31 hftmarkand Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/06/29 14:08:58 hftmarkand Exp $
 bin/teeworlds
+bin/teeworlds_srv
 share/applications/teeworlds.desktop
 share/teeworlds/Teeworlds.ico
 share/teeworlds/audio/foley_body_impact-01.wv

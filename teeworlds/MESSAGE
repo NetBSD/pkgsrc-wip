@@ -1,0 +1,14 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2010/06/29 14:08:58 hftmarkand Exp $
+
+This is a `meta-package' for teeworlds, it includes both server and client.
+
+Because these packages install the same files they can not be installed at the
+same time so install only the one that fits your needs.
+
+If you only want teeworlds client install:
+	wip/teeworlds-client
+
+If you only want teeworlds server install:
+	wip/teeworlds-server
+===========================================================================

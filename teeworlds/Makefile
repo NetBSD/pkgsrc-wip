@@ -1,11 +1,13 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/06/29 10:19:31 hftmarkand Exp $
+# $NetBSD: Makefile,v 1.2 2010/06/29 14:08:58 hftmarkand Exp $
 #
 # used by wip/teeworlds-server/Makefile
+# used by wip/teeworlds-client/Makefile
 
 .include "Makefile.common"
 
 PKGNAME=	teeworlds-${TEEWORLDS_VERSION}
 CONFLICTS+=	teeworlds-server-[0-9]*
+CONFLICTS+=	teeworlds-client-[0-9]*
 
 # Only for client side.
 SUBST_STAGE.default-bam=	pre-build
@@ -20,8 +22,8 @@ SUBST_MESSAGE.desktop=		Fixing the icon location in desktop entry.
 SUBST_FILES.desktop=		${DESTDIR}${APPSDIR}/teeworlds.desktop
 SUBST_SED.desktop=		-e 's,@DATADIR@,${DESTDIR}${DATADIR},'
 
-# We want client target.
-BAM_TARGET=	client_release
+# We want both client and server target.
+BAM_TARGET=	release
 
 APPSDIR=		${PREFIX}/share/applications
 INSTALLATION_DIRS+=	${APPSDIR}
@@ -32,6 +34,7 @@ do-build:
 
 do-install:
 	${INSTALL_PROGRAM} ${TEEWORLDS_WRKSRC}/teeworlds ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${TEEWORLDS_WRKSRC}/teeworlds_srv ${DESTDIR}${PREFIX}/bin
 
 	cd ${TEEWORLDS_WRKSRC}/data && ${PAX} -rw . ${DESTDIR}${DATADIR}
 
