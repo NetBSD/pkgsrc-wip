@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4015 2010/06/28 13:50:07 hfath Exp $
+# $Id: Makefile,v 1.4016 2010/06/29 10:22:18 hftmarkand Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2356,6 +2356,8 @@ SUBDIR+=	tenshi
 SUBDIR+=	termit
 SUBDIR+=	testdisk
 SUBDIR+=	tetrinet
+SUBDIR+=	teeworlds
+SUBDIR+=	teeworlds-server
 SUBDIR+=	tex-arabxtex
 SUBDIR+=	tex-arabxtex-doc
 SUBDIR+=	tex-arphic-ttf
