@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2010/05/31 09:24:00 tnn2 Exp $
+@comment $NetBSD: PLIST,v 1.22 2010/06/30 08:19:59 tnn2 Exp $
 bin/xulrunner
 ${PLIST.jit}include/xulrunner/Allocator.h
 ${PLIST.jit}include/xulrunner/Assembler.h
@@ -13,6 +13,7 @@ include/xulrunner/FramePropertyTable.h
 include/xulrunner/GLContext.h
 include/xulrunner/GLContextProvider.h
 include/xulrunner/GLDefs.h
+include/xulrunner/GLXLibrary.h
 include/xulrunner/ImageErrors.h
 include/xulrunner/ImageLayers.h
 include/xulrunner/ImageLogging.h
@@ -94,6 +95,18 @@ include/xulrunner/gtk2xtbin.h
 include/xulrunner/gtkmozembed.h
 include/xulrunner/gtkmozembed_glue.cpp
 include/xulrunner/gtkmozembed_internal.h
+include/xulrunner/harfbuzz/hb-blob.h
+include/xulrunner/harfbuzz/hb-buffer.h
+include/xulrunner/harfbuzz/hb-common.h
+include/xulrunner/harfbuzz/hb-font.h
+include/xulrunner/harfbuzz/hb-language.h
+include/xulrunner/harfbuzz/hb-ot-layout.h
+include/xulrunner/harfbuzz/hb-ot-shape.h
+include/xulrunner/harfbuzz/hb-ot-tag.h
+include/xulrunner/harfbuzz/hb-ot.h
+include/xulrunner/harfbuzz/hb-shape.h
+include/xulrunner/harfbuzz/hb-unicode.h
+include/xulrunner/harfbuzz/hb.h
 include/xulrunner/hasht.h
 include/xulrunner/imgICache.h
 include/xulrunner/imgIContainer.h
@@ -175,6 +188,7 @@ include/xulrunner/jstypes.h
 include/xulrunner/jsutil.h
 include/xulrunner/jsvector.h
 include/xulrunner/jsversion.h
+include/xulrunner/jswrapper.h
 include/xulrunner/jsxdrapi.h
 include/xulrunner/jsxml.h
 include/xulrunner/key.h
@@ -256,19 +270,33 @@ include/xulrunner/mozilla/IHistory.h
 include/xulrunner/mozilla/Monitor.h
 include/xulrunner/mozilla/Mutex.h
 include/xulrunner/mozilla/Omnijar.h
+include/xulrunner/mozilla/PaintTracker.h
 include/xulrunner/mozilla/PluginLibrary.h
 include/xulrunner/mozilla/PluginPRLibrary.h
 include/xulrunner/mozilla/SSE.h
 include/xulrunner/mozilla/ServiceList.h
 include/xulrunner/mozilla/Services.h
 include/xulrunner/mozilla/TimeStamp.h
+include/xulrunner/mozilla/X11Util.h
 include/xulrunner/mozilla/XPCOM.h
 include/xulrunner/mozilla/dom/Element.h
 include/xulrunner/mozilla/dom/Link.h
+include/xulrunner/mozilla/dom/indexedDB/IDBCursor.h
+include/xulrunner/mozilla/dom/indexedDB/IDBDatabase.h
+include/xulrunner/mozilla/dom/indexedDB/IDBEvents.h
+include/xulrunner/mozilla/dom/indexedDB/IDBFactory.h
+include/xulrunner/mozilla/dom/indexedDB/IDBIndex.h
+include/xulrunner/mozilla/dom/indexedDB/IDBKeyRange.h
+include/xulrunner/mozilla/dom/indexedDB/IDBObjectStore.h
+include/xulrunner/mozilla/dom/indexedDB/IDBRequest.h
+include/xulrunner/mozilla/dom/indexedDB/IDBTransaction.h
+include/xulrunner/mozilla/dom/indexedDB/IndexedDatabase.h
+include/xulrunner/mozilla/dom/indexedDB/LazyIdleThread.h
 include/xulrunner/mozilla/mozalloc.h
 include/xulrunner/mozilla/mozalloc_abort.h
 include/xulrunner/mozilla/mozalloc_macro_wrappers.h
 include/xulrunner/mozilla/mozalloc_oom.h
+include/xulrunner/mozilla/mozalloc_undef_macro_wrappers.h
 include/xulrunner/mozilla/storage.h
 include/xulrunner/mozilla/storage/Variant.h
 include/xulrunner/mozilla/storage/Variant_inl.h
@@ -276,6 +304,8 @@ include/xulrunner/mozilla/unused.h
 include/xulrunner/mozpngconf.h
 ${PLIST.jit}include/xulrunner/nanojit.h
 include/xulrunner/necko-config.h
+include/xulrunner/nestegg/_stdint.h
+include/xulrunner/nestegg/nestegg.h
 include/xulrunner/netCore.h
 ${PLIST.jit}include/xulrunner/njconfig.h
 include/xulrunner/npapi.h
@@ -287,6 +317,7 @@ include/xulrunner/nsASocketHandler.h
 include/xulrunner/nsAString.h
 include/xulrunner/nsAXPCNativeCallContext.h
 include/xulrunner/nsAboutProtocolUtils.h
+include/xulrunner/nsAccelerometer.h
 include/xulrunner/nsAccessNode.h
 include/xulrunner/nsAccessNodeWrap.h
 include/xulrunner/nsAccessible.h
@@ -341,7 +372,6 @@ include/xulrunner/nsCSSStruct.h
 include/xulrunner/nsCSSStyleSheet.h
 include/xulrunner/nsCSSValue.h
 include/xulrunner/nsCTooltipTextProvider.h
-include/xulrunner/nsCUPSShim.h
 include/xulrunner/nsCURILoader.h
 include/xulrunner/nsCWebBrowser.h
 include/xulrunner/nsCWebBrowserPersist.h
@@ -387,6 +417,7 @@ include/xulrunner/nsDOMCSSDeclaration.h
 include/xulrunner/nsDOMClassInfoClasses.h
 include/xulrunner/nsDOMClassInfoID.h
 include/xulrunner/nsDOMError.h
+include/xulrunner/nsDOMEventTargetWrapperCache.h
 include/xulrunner/nsDOMFile.h
 include/xulrunner/nsDOMJSUtils.h
 include/xulrunner/nsDOMScriptObjectHolder.h
@@ -411,7 +442,6 @@ include/xulrunner/nsDocShellLoadTypes.h
 include/xulrunner/nsDocumentCharsetInfoCID.h
 include/xulrunner/nsDoubleHashtable.h
 include/xulrunner/nsEditorCID.h
-include/xulrunner/nsEmbedAPI.h
 include/xulrunner/nsEmbedCID.h
 include/xulrunner/nsEmbedString.h
 include/xulrunner/nsEncoderDecoderUtils.h
@@ -459,7 +489,6 @@ include/xulrunner/nsHTMLTagList.h
 include/xulrunner/nsHTMLTags.h
 include/xulrunner/nsHTMLTokens.h
 include/xulrunner/nsHTMLVideoElement.h
-include/xulrunner/nsHankakuToZenkakuCID.h
 include/xulrunner/nsHashKeys.h
 include/xulrunner/nsHashPropertyBag.h
 include/xulrunner/nsHashSets.h
@@ -493,7 +522,6 @@ include/xulrunner/nsIAccessibleTable.h
 include/xulrunner/nsIAccessibleText.h
 include/xulrunner/nsIAccessibleTypes.h
 include/xulrunner/nsIAccessibleValue.h
-include/xulrunner/nsIAddonRepository.h
 include/xulrunner/nsIAlertsService.h
 include/xulrunner/nsIAllocator.h
 include/xulrunner/nsIAnnotationService.h
@@ -521,7 +549,6 @@ include/xulrunner/nsIAuthPrompt2.h
 include/xulrunner/nsIAuthPromptAdapterFactory.h
 include/xulrunner/nsIAuthPromptCallback.h
 include/xulrunner/nsIAuthPromptProvider.h
-include/xulrunner/nsIAuthPromptWrapper.h
 include/xulrunner/nsIAutoCompleteController.h
 include/xulrunner/nsIAutoCompleteInput.h
 include/xulrunner/nsIAutoCompletePopup.h
@@ -698,6 +725,7 @@ include/xulrunner/nsIDOMClassInfo.h
 include/xulrunner/nsIDOMClientInformation.h
 include/xulrunner/nsIDOMClientRect.h
 include/xulrunner/nsIDOMClientRectList.h
+include/xulrunner/nsIDOMCloseEvent.h
 include/xulrunner/nsIDOMCommandEvent.h
 include/xulrunner/nsIDOMComment.h
 include/xulrunner/nsIDOMCompositionListener.h
@@ -1192,13 +1220,28 @@ include/xulrunner/nsIHelperAppLauncherDialog.h
 include/xulrunner/nsIHistoryEntry.h
 include/xulrunner/nsIHttpActivityObserver.h
 include/xulrunner/nsIHttpAuthManager.h
+include/xulrunner/nsIHttpAuthenticableChannel.h
 include/xulrunner/nsIHttpAuthenticator.h
 include/xulrunner/nsIHttpChannel.h
+include/xulrunner/nsIHttpChannelAuthProvider.h
 include/xulrunner/nsIHttpChannelInternal.h
 include/xulrunner/nsIHttpEventSink.h
 include/xulrunner/nsIHttpHeaderVisitor.h
 include/xulrunner/nsIHttpProtocolHandler.h
 include/xulrunner/nsIID.h
+include/xulrunner/nsIIDBCursor.h
+include/xulrunner/nsIIDBDatabase.h
+include/xulrunner/nsIIDBDatabaseException.h
+include/xulrunner/nsIIDBErrorEvent.h
+include/xulrunner/nsIIDBEvent.h
+include/xulrunner/nsIIDBFactory.h
+include/xulrunner/nsIIDBIndex.h
+include/xulrunner/nsIIDBKeyRange.h
+include/xulrunner/nsIIDBObjectStore.h
+include/xulrunner/nsIIDBRequest.h
+include/xulrunner/nsIIDBSuccessEvent.h
+include/xulrunner/nsIIDBTransaction.h
+include/xulrunner/nsIIDBTransactionEvent.h
 include/xulrunner/nsIIDNService.h
 include/xulrunner/nsIIFrameBoxObject.h
 include/xulrunner/nsIINIParser.h
@@ -1498,7 +1541,6 @@ include/xulrunner/nsISecureBrowserUI.h
 include/xulrunner/nsISecurityCheckedComponent.h
 include/xulrunner/nsISecurityEventSink.h
 include/xulrunner/nsISecurityInfoProvider.h
-include/xulrunner/nsISecurityPref.h
 include/xulrunner/nsISecurityWarningDialogs.h
 include/xulrunner/nsISeekableStream.h
 include/xulrunner/nsISelectControlFrame.h
@@ -1661,6 +1703,7 @@ include/xulrunner/nsIWebProgress.h
 include/xulrunner/nsIWebProgressListener.h
 include/xulrunner/nsIWebProgressListener2.h
 include/xulrunner/nsIWebShellServices.h
+include/xulrunner/nsIWebSocket.h
 include/xulrunner/nsIWidget.h
 include/xulrunner/nsIWin32Locale.h
 include/xulrunner/nsIWindowCreator.h
@@ -1781,8 +1824,6 @@ include/xulrunner/nsPISocketTransportService.h
 include/xulrunner/nsPIWindowRoot.h
 include/xulrunner/nsPIWindowWatcher.h
 include/xulrunner/nsPLDOMEvent.h
-include/xulrunner/nsPSPrinters.h
-include/xulrunner/nsPaperPS.h
 include/xulrunner/nsParserCIID.h
 include/xulrunner/nsParserDataListener.h
 include/xulrunner/nsPluginError.h
@@ -1790,7 +1831,6 @@ include/xulrunner/nsPluginLogging.h
 include/xulrunner/nsPluginNativeWindow.h
 include/xulrunner/nsPluginsCID.h
 include/xulrunner/nsPoint.h
-include/xulrunner/nsPrefsCID.h
 include/xulrunner/nsPresContext.h
 include/xulrunner/nsPresState.h
 include/xulrunner/nsPrintfCString.h
@@ -1927,6 +1967,7 @@ include/xulrunner/nsVoidArray.h
 include/xulrunner/nsWaveDecoder.h
 include/xulrunner/nsWeakPtr.h
 include/xulrunner/nsWeakReference.h
+include/xulrunner/nsWebMDecoder.h
 include/xulrunner/nsWhitespaceTokenizer.h
 include/xulrunner/nsWidgetInitData.h
 include/xulrunner/nsWidgetsCID.h
@@ -1942,6 +1983,7 @@ include/xulrunner/nsXPCOMGlue.h
 include/xulrunner/nsXPCOMStrings.h
 include/xulrunner/nsXPIDLString.h
 include/xulrunner/nsXPTCUtils.h
+include/xulrunner/nsXPTZipLoader.h
 include/xulrunner/nsXULAppAPI.h
 include/xulrunner/nsXULListboxAccessibleWrap.h
 include/xulrunner/nsXULMenuAccessibleWrap.h
@@ -2122,6 +2164,7 @@ include/xulrunner/prlock.h
 include/xulrunner/prlog.h
 include/xulrunner/prlong.h
 include/xulrunner/prmem.h
+include/xulrunner/prmjtime.h
 include/xulrunner/prmon.h
 include/xulrunner/prmwait.h
 include/xulrunner/prnetdb.h
@@ -2141,7 +2184,6 @@ include/xulrunner/prtrace.h
 include/xulrunner/prtypes.h
 include/xulrunner/prvrsion.h
 include/xulrunner/prwin16.h
-include/xulrunner/psSharedCore.h
 include/xulrunner/qcms.h
 include/xulrunner/qcmstypes.h
 include/xulrunner/rdf.h
@@ -2188,6 +2230,28 @@ include/xulrunner/txIXPathObject.h
 include/xulrunner/uconvutil.h
 include/xulrunner/utilrename.h
 include/xulrunner/vorbis/codec.h
+include/xulrunner/vpx/config.h
+include/xulrunner/vpx/mem.h
+include/xulrunner/vpx/scale_mode.h
+include/xulrunner/vpx/vp8.h
+include/xulrunner/vpx/vp8cx.h
+include/xulrunner/vpx/vp8dx.h
+include/xulrunner/vpx/vp8e.h
+include/xulrunner/vpx/vpx_codec.h
+include/xulrunner/vpx/vpx_codec_impl_bottom.h
+include/xulrunner/vpx/vpx_codec_impl_top.h
+include/xulrunner/vpx/vpx_decoder.h
+include/xulrunner/vpx/vpx_decoder_compat.h
+include/xulrunner/vpx/vpx_encoder.h
+include/xulrunner/vpx/vpx_image.h
+include/xulrunner/vpx/vpx_integer.h
+include/xulrunner/vpx/vpx_mem.h
+include/xulrunner/vpx/vpx_mem_intrnl.h
+include/xulrunner/vpx/vpx_timer.h
+include/xulrunner/vpx/vpxscale.h
+include/xulrunner/vpx/x86.h
+include/xulrunner/vpx/yv12config.h
+include/xulrunner/vpx/yv12extend.h
 include/xulrunner/xpcIJSModuleLoader.h
 include/xulrunner/xpcIJSWeakReference.h
 include/xulrunner/xpc_map_end.h
@@ -2219,8 +2283,6 @@ lib/xulrunner-sdk/idl
 lib/xulrunner-sdk/include
 lib/xulrunner-sdk/lib
 lib/xulrunner-sdk/sdk/lib/libcrmf.a
-lib/xulrunner-sdk/sdk/lib/libembed_base_s.a
-lib/xulrunner-sdk/sdk/lib/libembed_base_standalone.a
 lib/xulrunner-sdk/sdk/lib/libmozjs.so
 lib/xulrunner-sdk/sdk/lib/libmozreg_s.a
 lib/xulrunner-sdk/sdk/lib/libnspr4.so
@@ -2261,7 +2323,6 @@ lib/xulrunner/components/jsconsole-clhandler.js
 ${PLIST.gnome}lib/xulrunner/components/libdbusservice.so
 ${PLIST.gnome}lib/xulrunner/components/libmozgnome.so
 ${PLIST.gnome}lib/xulrunner/components/libnkgnomevfs.so
-lib/xulrunner/components/nsAddonRepository.js
 lib/xulrunner/components/nsBadCertHandler.js
 lib/xulrunner/components/nsBlocklistService.js
 lib/xulrunner/components/nsContentDispatchChooser.js
@@ -2282,6 +2343,7 @@ lib/xulrunner/components/nsMicrosummaryService.js
 lib/xulrunner/components/nsPlacesAutoComplete.js
 lib/xulrunner/components/nsPlacesDBFlush.js
 lib/xulrunner/components/nsPlacesExpiration.js
+lib/xulrunner/components/nsPrompter.js
 lib/xulrunner/components/nsProxyAutoConfig.js
 lib/xulrunner/components/nsSearchService.js
 lib/xulrunner/components/nsSearchSuggestions.js
@@ -2337,6 +2399,7 @@ lib/xulrunner/libxpcomglue_s.a
 lib/xulrunner/libxul.so
 lib/xulrunner/modules/AddonLogging.jsm
 lib/xulrunner/modules/AddonManager.jsm
+lib/xulrunner/modules/AddonRepository.jsm
 lib/xulrunner/modules/AddonUpdateChecker.jsm
 lib/xulrunner/modules/CSPUtils.jsm
 lib/xulrunner/modules/CertUtils.jsm
@@ -2344,6 +2407,7 @@ lib/xulrunner/modules/DownloadLastDir.jsm
 lib/xulrunner/modules/DownloadPaths.jsm
 lib/xulrunner/modules/DownloadUtils.jsm
 lib/xulrunner/modules/FileUtils.jsm
+lib/xulrunner/modules/HUDService.jsm
 lib/xulrunner/modules/ISO8601DateUtils.jsm
 lib/xulrunner/modules/InlineSpellChecker.jsm
 lib/xulrunner/modules/LightweightThemeConsumer.jsm
@@ -2354,6 +2418,7 @@ lib/xulrunner/modules/PlacesDBUtils.jsm
 lib/xulrunner/modules/PlacesUtils.jsm
 lib/xulrunner/modules/PluginProvider.jsm
 lib/xulrunner/modules/PluralForm.jsm
+lib/xulrunner/modules/PopupNotifications.jsm
 lib/xulrunner/modules/Services.jsm
 lib/xulrunner/modules/SpatialNavigation.js
 lib/xulrunner/modules/WindowDraggingUtils.jsm
@@ -2365,7 +2430,6 @@ lib/xulrunner/modules/utils.js
 lib/xulrunner/mozilla-xremote-client
 lib/xulrunner/nspr-config
 lib/xulrunner/platform.ini
-lib/xulrunner/plugins/libunixprintplugin.so
 lib/xulrunner/res/EditorOverride.css
 lib/xulrunner/res/contenteditable.css
 lib/xulrunner/res/designmode.css
@@ -2380,6 +2444,7 @@ lib/xulrunner/res/entityTables/transliterate.properties
 lib/xulrunner/res/fonts/mathfont.properties
 lib/xulrunner/res/fonts/mathfontSTIXNonUnicode.properties
 lib/xulrunner/res/fonts/mathfontSTIXSize1.properties
+lib/xulrunner/res/fonts/mathfontSTIXSizeOneSym.properties
 lib/xulrunner/res/fonts/mathfontStandardSymbolsL.properties
 lib/xulrunner/res/fonts/mathfontUnicode.properties
 lib/xulrunner/res/grabber.gif
@@ -2495,7 +2560,6 @@ share/idl/xulrunner/nsIAccessibleTable.idl
 share/idl/xulrunner/nsIAccessibleText.idl
 share/idl/xulrunner/nsIAccessibleTypes.idl
 share/idl/xulrunner/nsIAccessibleValue.idl
-share/idl/xulrunner/nsIAddonRepository.idl
 share/idl/xulrunner/nsIAlertsService.idl
 share/idl/xulrunner/nsIAnnotationService.idl
 share/idl/xulrunner/nsIAppShell.idl
@@ -2519,7 +2583,6 @@ share/idl/xulrunner/nsIAuthPrompt2.idl
 share/idl/xulrunner/nsIAuthPromptAdapterFactory.idl
 share/idl/xulrunner/nsIAuthPromptCallback.idl
 share/idl/xulrunner/nsIAuthPromptProvider.idl
-share/idl/xulrunner/nsIAuthPromptWrapper.idl
 share/idl/xulrunner/nsIAutoCompleteController.idl
 share/idl/xulrunner/nsIAutoCompleteInput.idl
 share/idl/xulrunner/nsIAutoCompletePopup.idl
@@ -2667,6 +2730,7 @@ share/idl/xulrunner/nsIDOMChromeWindow.idl
 share/idl/xulrunner/nsIDOMClientInformation.idl
 share/idl/xulrunner/nsIDOMClientRect.idl
 share/idl/xulrunner/nsIDOMClientRectList.idl
+share/idl/xulrunner/nsIDOMCloseEvent.idl
 share/idl/xulrunner/nsIDOMCommandEvent.idl
 share/idl/xulrunner/nsIDOMComment.idl
 share/idl/xulrunner/nsIDOMConstructor.idl
@@ -3120,12 +3184,27 @@ share/idl/xulrunner/nsIHelperAppLauncherDialog.idl
 share/idl/xulrunner/nsIHistoryEntry.idl
 share/idl/xulrunner/nsIHttpActivityObserver.idl
 share/idl/xulrunner/nsIHttpAuthManager.idl
+share/idl/xulrunner/nsIHttpAuthenticableChannel.idl
 share/idl/xulrunner/nsIHttpAuthenticator.idl
 share/idl/xulrunner/nsIHttpChannel.idl
+share/idl/xulrunner/nsIHttpChannelAuthProvider.idl
 share/idl/xulrunner/nsIHttpChannelInternal.idl
 share/idl/xulrunner/nsIHttpEventSink.idl
 share/idl/xulrunner/nsIHttpHeaderVisitor.idl
 share/idl/xulrunner/nsIHttpProtocolHandler.idl
+share/idl/xulrunner/nsIIDBCursor.idl
+share/idl/xulrunner/nsIIDBDatabase.idl
+share/idl/xulrunner/nsIIDBDatabaseException.idl
+share/idl/xulrunner/nsIIDBErrorEvent.idl
+share/idl/xulrunner/nsIIDBEvent.idl
+share/idl/xulrunner/nsIIDBFactory.idl
+share/idl/xulrunner/nsIIDBIndex.idl
+share/idl/xulrunner/nsIIDBKeyRange.idl
+share/idl/xulrunner/nsIIDBObjectStore.idl
+share/idl/xulrunner/nsIIDBRequest.idl
+share/idl/xulrunner/nsIIDBSuccessEvent.idl
+share/idl/xulrunner/nsIIDBTransaction.idl
+share/idl/xulrunner/nsIIDBTransactionEvent.idl
 share/idl/xulrunner/nsIIDNService.idl
 share/idl/xulrunner/nsIIFrameBoxObject.idl
 share/idl/xulrunner/nsIINIParser.idl
@@ -3350,7 +3429,6 @@ share/idl/xulrunner/nsISecureBrowserUI.idl
 share/idl/xulrunner/nsISecurityCheckedComponent.idl
 share/idl/xulrunner/nsISecurityEventSink.idl
 share/idl/xulrunner/nsISecurityInfoProvider.idl
-share/idl/xulrunner/nsISecurityPref.idl
 share/idl/xulrunner/nsISecurityWarningDialogs.idl
 share/idl/xulrunner/nsISeekableStream.idl
 share/idl/xulrunner/nsISelectElement.idl
@@ -3481,6 +3559,7 @@ share/idl/xulrunner/nsIWebPageDescriptor.idl
 share/idl/xulrunner/nsIWebProgress.idl
 share/idl/xulrunner/nsIWebProgressListener.idl
 share/idl/xulrunner/nsIWebProgressListener2.idl
+share/idl/xulrunner/nsIWebSocket.idl
 share/idl/xulrunner/nsIWindowCreator.idl
 share/idl/xulrunner/nsIWindowCreator2.idl
 share/idl/xulrunner/nsIWindowDataSource.idl
@@ -3552,4 +3631,5 @@ share/idl/xulrunner/xpcIJSWeakReference.idl
 share/idl/xulrunner/xpccomponents.idl
 share/idl/xulrunner/xpcexception.idl
 share/idl/xulrunner/xpcjsid.idl
+@pkgdir lib/xulrunner/plugins
 @pkgdir include/xulrunner/nss
