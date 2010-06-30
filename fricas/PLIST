@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2010/06/24 11:51:01 asau Exp $
+@comment $NetBSD: PLIST,v 1.25 2010/06/30 17:51:09 asau Exp $
 bin/efricas
 bin/fricas
 lib/fricas/emacs/fricas-cpl.el
@@ -169,6 +169,7 @@ lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/DIRPCAT-.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/DIRPCAT.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/DIRPROD.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/DIRPROD2.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/DIRRING.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/DISPLAY.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/DIVRING-.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/DIVRING.${FASL}
@@ -2415,6 +2416,7 @@ lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/defintrf.spad.pamphlet
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/degred.spad.pamphlet
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/derham.spad.pamphlet
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/dhmatrix.spad.pamphlet
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/dirichlet.spad.pamphlet
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/divisor.spad.pamphlet
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/dpolcat.spad.pamphlet
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/src/algebra/draw.spad.pamphlet
