@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2010/05/24 18:16:43 emil_s Exp $
+# $NetBSD: Makefile,v 1.5 2010/07/01 20:24:46 emil_s Exp $
 #
 
-DISTNAME=	rdup-1.1.5
+DISTNAME=	rdup-1.1.7
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.miek.nl/projects/rdup/
 EXTRACT_SUFX=	.tar.bz2
@@ -22,6 +22,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=	yes
 
 USE_TOOLS=	pkg-config gmake bash:run
+
+CFLAGS+=	-Wno-char-subscripts
 
 MAKE_FILE=	GNUmakefile
 
