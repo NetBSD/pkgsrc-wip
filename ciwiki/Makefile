@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/06/28 18:32:50 ryo-on Exp $
+# $NetBSD: Makefile,v 1.5 2010/07/03 22:31:54 ryo-on Exp $
 #
 
 DISTNAME=	ciwiki-1.6.1
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-WRKSRC=		${WRKDIR}/ciwiki-1.6.0 # 1.6.1 archive is broken.
+#WRKSRC=		${WRKDIR}/ciwiki-1.6.0 # 1.6.1 archive is broken.
 
 DOCSDIR=	${PREFIX}/share/doc/${PKGBASE}
 SCRIPTSDIR=	${PREFIX}/share/${PKGBASE}
