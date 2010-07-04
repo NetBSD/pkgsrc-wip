@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2010/07/04 10:49:25 rsmarples Exp $
+# $NetBSD: Makefile,v 1.5 2010/07/04 20:55:12 rsmarples Exp $
 
-SVNREV=		9626
-DISTNAME=	TracSpamFilter-0.1dev
-PKGNAME=	trac-plugins-spamfilter-0.1pre${SVNREV}
+SVNREV=		9935
+DISTNAME=	TracSpamFilter-0.3.2dev
+PKGNAME=	trac-plugins-spamfilter-0.3.2pre${SVNREV}
 PKGREVISION=	# blank on purpose even though pkglint moans
 EGG_NAME=	${DISTNAME}
 CATEGORIES=	www
@@ -13,11 +13,11 @@ COMMENT=	Spam Filter plugin for Trac
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-DEPENDS+=	{ja-,}trac>=0.11:../../www/trac
+DEPENDS+=	{ja-,}trac>=0.12:../../www/trac
 DEPENDS+=	${PYPKGPREFIX}-dns:../../net/py-dns
 
 SVN_REPOSITORIES=	spamfilter
-SVN_ROOT.spamfilter=	http://svn.edgewall.org/repos/trac/plugins/0.11/spam-filter
+SVN_ROOT.spamfilter=	http://svn.edgewall.org/repos/trac/plugins/0.12/spam-filter-captcha
 SVN_TAG.spamfilter=	${SVNREV}
 
 NO_CHECKSUM=	yes

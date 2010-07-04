@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:22 thomasklausner Exp $
-${PYSITELIB}/TracSpamFilter-0.2.1dev-py2.5.egg-info/PKG-INFO
-${PYSITELIB}/TracSpamFilter-0.2.1dev-py2.5.egg-info/SOURCES.txt
-${PYSITELIB}/TracSpamFilter-0.2.1dev-py2.5.egg-info/dependency_links.txt
-${PYSITELIB}/TracSpamFilter-0.2.1dev-py2.5.egg-info/entry_points.txt
-${PYSITELIB}/TracSpamFilter-0.2.1dev-py2.5.egg-info/requires.txt
-${PYSITELIB}/TracSpamFilter-0.2.1dev-py2.5.egg-info/top_level.txt
-${PYSITELIB}/TracSpamFilter-0.2.1dev-py2.5.egg-info/zip-safe
+@comment $NetBSD: PLIST,v 1.3 2010/07/04 20:55:12 rsmarples Exp $
+${PYSITELIB}/TracSpamFilter-0.3.2dev-py2.5.egg-info/PKG-INFO
+${PYSITELIB}/TracSpamFilter-0.3.2dev-py2.5.egg-info/SOURCES.txt
+${PYSITELIB}/TracSpamFilter-0.3.2dev-py2.5.egg-info/dependency_links.txt
+${PYSITELIB}/TracSpamFilter-0.3.2dev-py2.5.egg-info/entry_points.txt
+${PYSITELIB}/TracSpamFilter-0.3.2dev-py2.5.egg-info/not-zip-safe
+${PYSITELIB}/TracSpamFilter-0.3.2dev-py2.5.egg-info/requires.txt
+${PYSITELIB}/TracSpamFilter-0.3.2dev-py2.5.egg-info/top_level.txt
 ${PYSITELIB}/tracspamfilter/__init__.py
 ${PYSITELIB}/tracspamfilter/__init__.pyc
 ${PYSITELIB}/tracspamfilter/__init__.pyo
@@ -18,6 +18,18 @@ ${PYSITELIB}/tracspamfilter/admin.pyo
 ${PYSITELIB}/tracspamfilter/api.py
 ${PYSITELIB}/tracspamfilter/api.pyc
 ${PYSITELIB}/tracspamfilter/api.pyo
+${PYSITELIB}/tracspamfilter/captcha/__init__.py
+${PYSITELIB}/tracspamfilter/captcha/__init__.pyc
+${PYSITELIB}/tracspamfilter/captcha/__init__.pyo
+${PYSITELIB}/tracspamfilter/captcha/api.py
+${PYSITELIB}/tracspamfilter/captcha/api.pyc
+${PYSITELIB}/tracspamfilter/captcha/api.pyo
+${PYSITELIB}/tracspamfilter/captcha/expression.py
+${PYSITELIB}/tracspamfilter/captcha/expression.pyc
+${PYSITELIB}/tracspamfilter/captcha/expression.pyo
+${PYSITELIB}/tracspamfilter/captcha/image.py
+${PYSITELIB}/tracspamfilter/captcha/image.pyc
+${PYSITELIB}/tracspamfilter/captcha/image.pyo
 ${PYSITELIB}/tracspamfilter/filters/__init__.py
 ${PYSITELIB}/tracspamfilter/filters/__init__.pyc
 ${PYSITELIB}/tracspamfilter/filters/__init__.pyo
@@ -30,6 +42,9 @@ ${PYSITELIB}/tracspamfilter/filters/bayes.pyo
 ${PYSITELIB}/tracspamfilter/filters/extlinks.py
 ${PYSITELIB}/tracspamfilter/filters/extlinks.pyc
 ${PYSITELIB}/tracspamfilter/filters/extlinks.pyo
+${PYSITELIB}/tracspamfilter/filters/httpbl.py
+${PYSITELIB}/tracspamfilter/filters/httpbl.pyc
+${PYSITELIB}/tracspamfilter/filters/httpbl.pyo
 ${PYSITELIB}/tracspamfilter/filters/ip_blacklist.py
 ${PYSITELIB}/tracspamfilter/filters/ip_blacklist.pyc
 ${PYSITELIB}/tracspamfilter/filters/ip_blacklist.pyo
@@ -58,6 +73,8 @@ ${PYSITELIB}/tracspamfilter/templates/admin_spamentry.cs
 ${PYSITELIB}/tracspamfilter/templates/admin_spamentry.html
 ${PYSITELIB}/tracspamfilter/templates/admin_spammonitor.cs
 ${PYSITELIB}/tracspamfilter/templates/admin_spammonitor.html
+${PYSITELIB}/tracspamfilter/templates/verify_captcha.cs
+${PYSITELIB}/tracspamfilter/templates/verify_captcha.html
 ${PYSITELIB}/tracspamfilter/upgrades.py
 ${PYSITELIB}/tracspamfilter/upgrades.pyc
 ${PYSITELIB}/tracspamfilter/upgrades.pyo
