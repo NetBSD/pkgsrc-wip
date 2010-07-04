@@ -1,18 +1,18 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/07/17 09:18:16 rsmarples Exp $
-${PYSITELIB}/tracblognotifier-0.1-py2.5.egg-info/PKG-INFO
-${PYSITELIB}/tracblognotifier-0.1-py2.5.egg-info/SOURCES.txt
-${PYSITELIB}/tracblognotifier-0.1-py2.5.egg-info/dependency_links.txt
-${PYSITELIB}/tracblognotifier-0.1-py2.5.egg-info/entry_points.txt
-${PYSITELIB}/tracblognotifier-0.1-py2.5.egg-info/not-zip-safe
-${PYSITELIB}/tracblognotifier-0.1-py2.5.egg-info/requires.txt
-${PYSITELIB}/tracblognotifier-0.1-py2.5.egg-info/top_level.txt
-${PYSITELIB}/tracblognotifier/__init__.py
-${PYSITELIB}/tracblognotifier/__init__.pyc
-${PYSITELIB}/tracblognotifier/__init__.pyo
-${PYSITELIB}/tracblognotifier/notification.py
-${PYSITELIB}/tracblognotifier/notification.pyc
-${PYSITELIB}/tracblognotifier/notification.pyo
-${PYSITELIB}/tracblognotifier/templates/fullblognotification_email_template.txt
-${PYSITELIB}/tracblognotifier/tracblognotifier.py
-${PYSITELIB}/tracblognotifier/tracblognotifier.pyc
-${PYSITELIB}/tracblognotifier/tracblognotifier.pyo
+@comment $NetBSD: PLIST,v 1.2 2010/07/04 19:39:18 rsmarples Exp $
+${PYSITELIB}/TracFullBlogNotificationPlugin-0.1-py2.5.egg-info/PKG-INFO
+${PYSITELIB}/TracFullBlogNotificationPlugin-0.1-py2.5.egg-info/SOURCES.txt
+${PYSITELIB}/TracFullBlogNotificationPlugin-0.1-py2.5.egg-info/dependency_links.txt
+${PYSITELIB}/TracFullBlogNotificationPlugin-0.1-py2.5.egg-info/entry_points.txt
+${PYSITELIB}/TracFullBlogNotificationPlugin-0.1-py2.5.egg-info/not-zip-safe
+${PYSITELIB}/TracFullBlogNotificationPlugin-0.1-py2.5.egg-info/requires.txt
+${PYSITELIB}/TracFullBlogNotificationPlugin-0.1-py2.5.egg-info/top_level.txt
+${PYSITELIB}/fullblognotification/__init__.py
+${PYSITELIB}/fullblognotification/__init__.pyc
+${PYSITELIB}/fullblognotification/__init__.pyo
+${PYSITELIB}/fullblognotification/fullblognotification.py
+${PYSITELIB}/fullblognotification/fullblognotification.pyc
+${PYSITELIB}/fullblognotification/fullblognotification.pyo
+${PYSITELIB}/fullblognotification/notification.py
+${PYSITELIB}/fullblognotification/notification.pyc
+${PYSITELIB}/fullblognotification/notification.pyo
+${PYSITELIB}/fullblognotification/templates/fullblognotification_email_template.txt

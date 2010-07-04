@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/07/17 09:18:16 rsmarples Exp $
+# $NetBSD: Makefile,v 1.2 2010/07/04 19:39:18 rsmarples Exp $
 
-DISTNAME=	TracFullBlogNotification-0.1dev
-PKGNAME=	trac-plugins-FullBlogNotification-0.1pre5330
+DISTNAME=	fullblognotification_0.11-r${SVN_REV}
+PKGNAME=	trac-plugins-FullBlogNotification-0.1pre${SVN_REV}
 PKGREVISION=	# blank on purpose even though pkglint moans
-EGG_NAME=	${DISTNAME}
+EGG_NAME=	TracFullBlogNotification-0.1dev
 CATEGORIES=	www
+MASTER_SITES=	-http://trac-hacks.org/changeset/${SVN_REV}/${SVN_MOD}?old_path=/&format=zip
+EXTRACT_SUFX=	.zip
 
 MAINTAINER=	roy@NetBSD.org
 HOMEPAGE=	http://trac-hacks.org/wiki/FullBlogNotificationPlugin
@@ -14,19 +16,12 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	trac-plugins-FullBlog>=0.1pre6158:../../wip/trac-plugins-FullBlog
 
-SVN_REPOSITORIES=	fbnp
-SVN_ROOT.fbnp=		http://trac-hacks.org/svn/fullblognotificationplugin/0.11
-SVN_TAG.fbnp=		5330
-
-NO_CHECKSUM=	yes
-
-WRKSRC=		${WRKDIR}/fbnp
-
-PRIVILEGED_STAGES+=	clean
+SVN_REV=	7463
+SVN_MOD=	fullblognotificationplugin/0.11
+WRKSRC=		${WRKDIR}/${SVN_MOD}
 
 post-extract:
-	find ${WRKSRC} -type d -name .svn -print | xargs rm -r
+	find ${WRKSRC} -type f | xargs chmod +r
 
 .include "../../lang/python/egg.mk"
-.include "../../wip/mk/svn-package.mk"
 .include "../../mk/bsd.pkg.mk"
