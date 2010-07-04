@@ -1,0 +1,23 @@
+Support spamfilter for trac-0.12
+http://trac-hacks.org/ticket/7329
+
+--- tracfullblog/spamfilter.py	2010-03-09 12:33:18.000000000 +0000
++++ tracfullblog/spamfilter.py	2010-07-04 23:03:03.000000000 +0100
+@@ -45,7 +45,8 @@
+             if new and old != new:
+                 changes.append((old, new))
+         author = fields.get('author', '')
+-        FilterSystem(self.env).test(req, author, changes)
++        ip = req.remote_addr
++        FilterSystem(self.env).test(req, author, changes, ip)
+         return []
+ 
+     def validate_blog_comment(self, req, postname, fields):
+@@ -59,5 +60,6 @@
+         author = fields.get('author', '')
+         changes = [(None, fields.get('comment', '')),
+                    (None, author)]
+-        FilterSystem(self.env).test(req, author, changes)
++        ip = req.remote_addr
++        FilterSystem(self.env).test(req, author, changes, ip)
+         return []
