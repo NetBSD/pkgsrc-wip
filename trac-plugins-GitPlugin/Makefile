@@ -1,13 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2010/03/05 13:21:18 lexort Exp $
+# $NetBSD: Makefile,v 1.4 2010/07/04 19:26:06 rsmarples Exp $
 
-DISTNAME=	TracGitPlugin-0.1dev
-PKGNAME=	trac-plugins-GitPlugin-0.1pre${SVNVERSION}
-SVNVERSION=	6442
-# PKGREVISION should be empty rather than unset because svn-package.mk
-# does the wrong thing if it is unset, even though pkglint will complain
-PKGREVISION=	
-EGG_NAME=	${DISTNAME}
+DISTNAME=	gitplugin_0.12-r${SVN_REV}
+PKGNAME=	trac-plugins-GitPlugin-0.1pre${SVN_REV}
+EGGNAME=	TracGitPlugin-0.12.0.2dev
 CATEGORIES=	www
+MASTER_SITES=	-http://trac-hacks.org/changeset/${SVN_REV}/${SVN_MOD}?old_path=/&format=zip
+EXTRACT_SUFX=	.zip
 
 MAINTAINER=	roy@NetBSD.org
 HOMEPAGE=	http://trac.edgewall.org/wiki/GitPlugin
@@ -16,22 +14,15 @@ LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-DEPENDS+=	{ja-,}trac>=0.11:../../www/trac
+DEPENDS+=	{ja-,}trac>=0.12:../../www/trac
 DEPENDS+=	scmgit-base>=1.5.6:../../devel/scmgit-base
 
-SVN_REPOSITORIES=	gitplugin
-SVN_ROOT.gitplugin=	http://trac-hacks.org/svn/gitplugin/0.11
-SVN_TAG.gitplugin=	${SVNVERSION}
-
-NO_CHECKSUM=	yes
-
-WRKSRC=		${WRKDIR}/gitplugin
-
-PRIVILEGED_STAGES+=	clean
+SVN_REV=	7757
+SVN_MOD=	gitplugin/0.12
+WRKSRC=		${WRKDIR}/${SVN_MOD}
 
 post-extract:
-	find ${WRKSRC} -type d -name .svn -print | xargs rm -r
+	find ${WRKSRC} -type f | xargs chmod +r
 
 .include "../../lang/python/egg.mk"
-.include "../../wip/mk/svn-package.mk"
 .include "../../mk/bsd.pkg.mk"
