@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/07/04 10:41:56 rsmarples Exp $
+# $NetBSD: Makefile,v 1.4 2010/07/04 10:49:25 rsmarples Exp $
 
 SVNREV=		9626
 DISTNAME=	TracSpamFilter-0.1dev
@@ -14,6 +14,7 @@ COMMENT=	Spam Filter plugin for Trac
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	{ja-,}trac>=0.11:../../www/trac
+DEPENDS+=	${PYPKGPREFIX}-dns:../../net/py-dns
 
 SVN_REPOSITORIES=	spamfilter
 SVN_ROOT.spamfilter=	http://svn.edgewall.org/repos/trac/plugins/0.11/spam-filter
