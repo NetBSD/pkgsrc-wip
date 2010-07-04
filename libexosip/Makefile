@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/01/17 12:03:28 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2010/07/04 11:59:31 gschwarz Exp $
 
 DISTNAME=	libeXosip2-3.3.0
 PKGREVISION=	1
@@ -8,6 +8,7 @@ MASTER_SITES=	http://download.savannah.nongnu.org/releases/exosip/
 MAINTAINER=	schwarz@NetBSD.org
 HOMEPAGE=	http://savannah.nongnu.org/projects/exosip
 COMMENT=	The Extended Open SIP library
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
