@@ -1,9 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/11/11 17:36:32 kh-p Exp $
+$NetBSD: distinfo,v 1.2 2010/07/04 16:36:45 hftmarkand Exp $
 
-SHA1 (xmoto-0.2.2-src.tar.gz) = 76d7e4164b39a3ee1d31347411c33776a05ff915
-RMD160 (xmoto-0.2.2-src.tar.gz) = c86df47c61f5755858e3294d12ad3ecee6b16aec
-Size (xmoto-0.2.2-src.tar.gz) = 5938064 bytes
-SHA1 (patch-aa) = 736d56ce55a740f964a7b75978b2a464bc755d64
-SHA1 (patch-ab) = 18ed582eb7a6460fd6ee26e25faf86ca50b3b417
-SHA1 (patch-ac) = fc49ad1ba54c0e2bb1c93bc5b4c7774e50b003d4
-SHA1 (patch-ad) = d4d447ae6d82caabde7074f2951bd626f3156fdc
+SHA1 (xmoto-0.5.3-src.tar.gz) = 7a2d8ab30b514932ce6907e5e0a7e926ee20cf8a
+RMD160 (xmoto-0.5.3-src.tar.gz) = 52e10637713b6c48c980032057a0da562c11b912
+Size (xmoto-0.5.3-src.tar.gz) = 52385576 bytes

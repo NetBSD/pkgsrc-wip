@@ -1,28 +1,28 @@
-# $NetBSD: Makefile,v 1.12 2010/06/13 22:47:22 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.13 2010/07/04 16:36:45 hftmarkand Exp $
 
-DISTNAME=		xmoto-0.2.2-src
-PKGNAME=		xmoto-0.2.2
-PKGREVISION=		5
+PKGNAME=		xmoto-${VERSION}
+DISTNAME=		xmoto-${VERSION}-src
 CATEGORIES=		games
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=xmoto/}
+MASTER_SITES=		http://download.tuxfamily.org/xmoto/xmoto/0.5.3/ \
+			${MASTER_SITE_SOURCEFORGE:=xmoto/}
+VERSION=		0.5.3
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://xmoto.sourceforge.net/
 COMMENT=		2D motocross plateform game
 
-WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
+PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_X11BASE=		yes
 USE_LIBTOOL=		yes
 USE_TOOLS+=		msgfmt autoconf automake gmake pkg-config
 USE_LANGUAGES=		c c++
+CONFIGURE_ENV+=		LIBS="-lGL -lm -pthread"
 
 GNU_CONFIGURE=		yes
 
-#Not needed
-#CONFIGURE_ENV+=         XGETTEXT=${TOOLS_PATH.xgettext:Q}
+WRKSRC= 	        ${WRKDIR}/${PKGNAME}
 
-BROKEN_GETTEXT_DETECTION=     yes
+INSTALLATIONS_DIRS+=	share/applications
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -30,11 +30,21 @@ BROKEN_GETTEXT_DETECTION=     yes
 GCC_REQD+=		3.4
 .endif
 
-.if ${OPSYS} != "Linux"
-CONFIGURE_ENV+=		INTLLIBS="-lintl"
-.endif
+.include "options.mk"
 
-.include "../../devel/gettext-lib/buildlink3.mk"
+# Change the desktop file icon.
+SUBST_CLASSES+=			desktop
+SUBST_STAGE.desktop=		post-install
+SUBST_MESSAGE.desktop=		Fixing the icon location in desktop entry.
+SUBST_FILES.desktop=		${DESTDIR}${PREFIX}/share/applications/xmoto.desktop
+SUBST_SED.desktop=		-e 's,@DATADIR@,${DESTDIR}${PREFIX}/share/xmoto/,'
+
+pre-install:
+	${INSTALL_DATA} ${FILESDIR}/xmoto.desktop ${DESTDIR}${PREFIX}/share/applications
+
+.include "../../x11/libxdg-basedir/buildlink3.mk"
+.include "../../databases/sqlite3/buildlink3.mk"
+.include "../../lang/lua/buildlink3.mk"
 .include "../../graphics/aalib/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
@@ -46,11 +56,12 @@ CONFIGURE_ENV+=		INTLLIBS="-lintl"
 .include "../../multimedia/libogg/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../multimedia/smpeg/buildlink3.mk"
-.include "../../audio/SDL_mixer/buildlink3.mk"
-.include "../../lang/lua/buildlink3.mk"
 .include "../../wip/ode/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../audio/SDL_mixer/buildlink3.mk"
+.include "../../net/SDL_net/buildlink3.mk"
+.include "../../devel/SDL_ttf/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
