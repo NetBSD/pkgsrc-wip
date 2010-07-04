@@ -1,24 +1,28 @@
-# $NetBSD: Makefile,v 1.5 2006/11/12 16:49:29 kh-p Exp $
+# $NetBSD: Makefile,v 1.6 2010/07/04 16:38:10 hftmarkand Exp $
 
-DISTNAME=	ode-src-0.7
-PKGNAME=	ode-0.7
+DISTNAME=	ode-${ODE_VERSION}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=opende/}
 EXTRACT_SUFX=	.zip
+ODE_VERSION=	0.11.1
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAINTAINER=	kh.p@no-log.org
 HOMEPAGE=	http://www.ode.org/
 COMMENT=	Library for the simulation of Rigid Body Dynamics
 
-WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake
 
+PKGCONFIG_OVERRIDE=	ode.pc.in
+
 INSTALLATION_DIRS=	include/ode lib
 
-CONFIGURE_ARGS+=	--enable-double-precision
+CONFIGURE_ARGS+=	--enable-shared \
+			--disable-double-precision
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -26,11 +30,7 @@ CONFIGURE_ARGS+=	--enable-double-precision
 CFLAGS+= -fPIC
 .endif
 
-## TODO: Install needs to be corrected.
-#do-install:
-#	${INSTALL_DATA} ${WRKSRC}/include/ode/*.h ${PREFIX}/include/ode
-#	${LIBTOOL} --mode=install ${INSTALL_LIB} ${WRKSRC}/lib/libode.la \
-#	${PREFIX}/lib
-
-.include "../../mk/x11.buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../graphics/glu/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
