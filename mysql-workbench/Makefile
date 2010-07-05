@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2010/06/23 06:23:48 othyro Exp $
+# $NetBSD: Makefile,v 1.12 2010/07/05 04:15:48 othyro Exp $
 #
 
-PKGVERSION=	5.2.24
-DISTNAME=	mysql-workbench-ce-${PKGVERSION}
-PKGNAME=	${DISTNAME:S/-ce//}
+PKGVERSION=	5.2.25
+DISTNAME=	mysql-workbench-gpl-${PKGVERSION}
+PKGNAME=	${DISTNAME:S/-gpl//}
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_MYSQL:=MySQLGUITools/}
 
@@ -37,7 +37,7 @@ pre-configure:
 	aclocal; autoheader; automake -a --foreign -i; autoconf
 
 pre-build:
-	${CP} ${WRKSRC}/res/include/wb_config_ce.h ${WRKSRC}/wb_config.h
+	${CP} ${WRKSRC}/res/include/wb_config_gpl.h ${WRKSRC}/wb_config.h
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../wip/ctemplate/buildlink3.mk"
