@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/06/28 11:50:42 ryo-on Exp $
+# $NetBSD: Makefile,v 1.4 2010/07/05 20:03:47 ryo-on Exp $
 #
 
 DISTNAME=	sakura-2.3.8
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	ryo_on@yk.rim.or.jp
 HOMEPAGE=	http://www.pleyades.net/david/sakura.php
-COMMENT=	The sakura is a terminal emulator based on GTK and VTE
+COMMENT=	The sakura is a terminal emulator based on GTK and VTE supports tab
 
 LICENSE=	gnu-gpl-v2
 
