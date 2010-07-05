@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.4 2010/06/23 06:25:17 othyro Exp $
+@comment $NetBSD: PLIST,v 1.5 2010/07/05 04:17:53 othyro Exp $
 bin/mysql-workbench
 bin/mysql-workbench-bin
+emul/linux/dev/sound0
 lib/mysql-workbench/libcdbc.la
 lib/mysql-workbench/libgrt.la
 lib/mysql-workbench/liblinux_utilities.la
@@ -146,6 +147,9 @@ share/mysql-workbench/images/Refresh_18x18.png
 share/mysql-workbench/images/Refresh_disabled_18x18.png
 share/mysql-workbench/images/action_add_schema_objects.png
 share/mysql-workbench/images/action_admin.png
+share/mysql-workbench/images/action_button_left.png
+share/mysql-workbench/images/action_button_middle.png
+share/mysql-workbench/images/action_button_right.png
 share/mysql-workbench/images/action_edit_sql_script.png
 share/mysql-workbench/images/action_edit_table_data.png
 share/mysql-workbench/images/action_eer_open.png
@@ -500,12 +504,16 @@ share/mysql-workbench/images/wb_splashscreen_se.png
 share/mysql-workbench/images/wb_starter_button_left.png
 share/mysql-workbench/images/wb_starter_button_middle.png
 share/mysql-workbench/images/wb_starter_button_right.png
+share/mysql-workbench/images/wb_starter_grt_shell_52.png
+share/mysql-workbench/images/wb_starter_grt_shell_68.png
 share/mysql-workbench/images/wb_starter_legal.png
 share/mysql-workbench/images/wb_starter_more.png
 share/mysql-workbench/images/wb_starter_mysql_bug_reporter_52.png
 share/mysql-workbench/images/wb_starter_mysql_bug_reporter_68.png
 share/mysql-workbench/images/wb_starter_mysql_doc_lib_52.png
 share/mysql-workbench/images/wb_starter_mysql_doc_lib_68.png
+share/mysql-workbench/images/wb_starter_mysql_forums_52.png
+share/mysql-workbench/images/wb_starter_mysql_forums_68.png
 share/mysql-workbench/images/wb_starter_mysql_news_52.png
 share/mysql-workbench/images/wb_starter_mysql_news_68.png
 share/mysql-workbench/images/wb_starter_mysql_wb_blog_52.png
@@ -578,6 +586,7 @@ share/mysql-workbench/modules/data/sqlide/CSV.tpl
 share/mysql-workbench/modules/data/sqlide/CSV_semicolon.tpl
 share/mysql-workbench/modules/data/sqlide/HTML.tpl
 share/mysql-workbench/modules/data/sqlide/XML.tpl
+share/mysql-workbench/modules/data/sqlide/tab.tpl
 share/mysql-workbench/modules/data/wb_model_reporting/HTML_Basic_Frames.tpl/basic.css.tpl
 share/mysql-workbench/modules/data/wb_model_reporting/HTML_Basic_Frames.tpl/index.html.tpl
 share/mysql-workbench/modules/data/wb_model_reporting/HTML_Basic_Frames.tpl/info.xml
