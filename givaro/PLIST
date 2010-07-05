@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2010/01/03 00:18:19 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.9 2010/07/05 22:17:07 emil_s Exp $
 bin/givaro-config
 bin/givaro-makefile
 include/givaro-config.h
@@ -26,6 +26,7 @@ include/givaro/givgenarith.h
 include/givaro/givgfq.h
 include/givaro/givgfq.inl
 include/givaro/givgfqext.h
+include/givaro/givgfqkron.h
 include/givaro/givhashtable.h
 include/givaro/givhashtable.inl
 include/givaro/givhighorder.h
