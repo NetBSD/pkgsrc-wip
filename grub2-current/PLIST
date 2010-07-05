@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2010/06/14 22:42:45 gregoire Exp $
+@comment $NetBSD: PLIST,v 1.15 2010/07/05 14:28:46 gregoire Exp $
 bin/grub2-bin2h
 bin/grub2-editenv
 bin/grub2-fstest
@@ -32,7 +32,6 @@ lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/build_env.mk
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/cat.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/cdboot.img
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/chain.mod
-lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/charset.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/cmostest.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/cmp.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/command.lst
@@ -187,6 +186,8 @@ lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/vga.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/vga_text.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/video.lst
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/video.mod
+lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/video_bochs.mod
+lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/video_cirrus.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/video_fb.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/videotest.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/xfs.mod
@@ -223,6 +224,7 @@ share/examples/grub2/10_kfreebsd
 share/examples/grub2/10_linux
 share/examples/grub2/10_netbsd
 share/examples/grub2/10_windows
+share/examples/grub2/20_linux_xen
 share/examples/grub2/30_os-prober
 share/examples/grub2/40_custom
 share/examples/grub2/41_custom
