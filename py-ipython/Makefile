@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2010/06/13 22:47:14 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.16 2010/07/05 16:31:55 jihbed Exp $
 #
 
 DISTNAME=	ipython-0.10
@@ -34,7 +34,7 @@ INSTALLATION_DIRS+=	man
 DEPENDS+=	${PYPKGPREFIX}-gobject>=2.18.0:../../devel/py-gobject
 DEPENDS+=	${PYPKGPREFIX}-readline>=0:../../devel/py-readline
 #DEPENDS+=	pydb>=1.26:../../wip/pydb
-DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../wip/py-nose
+DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 
 # Graphics dependecy section
 
