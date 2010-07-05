@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2007/03/03 10:53:15 shattered Exp $
+$NetBSD: distinfo,v 1.4 2010/07/05 17:13:55 gduzan Exp $
 
 SHA1 (audacity-src-1.3.0b.tar.gz) = 6ba57ee1a3a9b6c57bf98142fbe4561b7cadf5db
 RMD160 (audacity-src-1.3.0b.tar.gz) = 4ada2e40799f60477d6c2aabb0b91bb03c8882f9
@@ -10,5 +10,5 @@ SHA1 (patch-ad) = 820e5321a6558063d04ee8da11fc606d59e33046
 SHA1 (patch-ae) = e79a37496da81d0ea33c53eb3ca492bbb91edffc
 SHA1 (patch-ag) = 68bcbd932cd4440bc9090c6afc369cfcae54a16b
 SHA1 (patch-ah) = fc3690d514ebe0612c9a54a2f056d3f807ebbffe
-SHA1 (patch-ai) = c81347fc99990a720e27dd603a3396ad4307a221
+SHA1 (patch-ai) = 7b86df7d36ad94b1c924b301f7e93964eb09b688
 SHA1 (patch-aj) = 34b4cdd266345f04954983cc14e4b762f09f4df8
