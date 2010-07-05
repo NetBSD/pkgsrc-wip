@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2009/12/17 11:25:23 ryo-on Exp $
+# $NetBSD: Makefile,v 1.3 2010/07/05 21:05:07 ryo-on Exp $
 #
 
 DISTNAME=	arcem-20090925-src
 PKGNAME=	${DISTNAME:S/-src//}
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_LOCAL} \
-		http://www.tetera.org-a.googlepages.com/
+		http://ryo-on.users.sourceforge.net/distrib/
 EXTRACT_SUFX=	.tar.bz2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
