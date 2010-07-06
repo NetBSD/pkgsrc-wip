@@ -1,9 +1,12 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/04/05 08:10:26 emil_s Exp $
+$NetBSD: distinfo,v 1.2 2010/07/06 07:07:00 emil_s Exp $
 
-SHA1 (pal-0.3.4.tgz) = 258d5512e3f92ede38b10ea620a3931a430831c6
-RMD160 (pal-0.3.4.tgz) = f0f2461b392bb43e49d8620ce1da2e0e1b23b62b
-Size (pal-0.3.4.tgz) = 109125 bytes
-SHA1 (patch-aa) = 655e97a247711a1759d5a321ebe0c01b2cc2e5e4
-SHA1 (patch-ab) = 8e7df5fa163c3506c7ad32a0030711297f8c4cdf
+SHA1 (pal-0.4.3.tgz) = f638ec3b47375c65118c2d63138348771c969e56
+RMD160 (pal-0.4.3.tgz) = f686501b80227e2083c8240d40c1b6383fe93030
+Size (pal-0.4.3.tgz) = 130865 bytes
+SHA1 (patch-aa) = 794421067832aa37b16017e396e4638f45e4e52d
+SHA1 (patch-ab) = 10bd97557e0f0a23d8aff13e6c994a37e06a76a3
 SHA1 (patch-ac) = 8d17cbbe30654373806886b55cc91ec8b3072f50
 SHA1 (patch-ad) = 0e5cd12fd27021eabf52a46fb2c82d2fe7989e29
+SHA1 (patch-ae) = de6e34773f5054272daf0bb71f1f6360b9c31ef6
+SHA1 (patch-af) = 6c0c7d4fb9b78c0b005a280cf7d4c844e9c9d5ba
+SHA1 (patch-ag) = 4f9dbf61a04162a5ee0307df42553fe752abd983

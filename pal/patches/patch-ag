@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1 2010/07/06 07:07:04 emil_s Exp $
+
+--- rl.c.orig	2008-07-28 16:16:23.000000000 +0000
++++ rl.c
+@@ -24,7 +24,7 @@
+ #include <ncurses.h>
+ #include <time.h>
+ 
+-#include <term.h>
++#include <ncurses/term.h>
+ 
+ 
+ #include "output.h"

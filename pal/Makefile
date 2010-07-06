@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2009/05/20 00:58:42 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2010/07/06 07:06:59 emil_s Exp $
 #
 
-DISTNAME=		pal-0.3.4
-PKGREVISION=		1
+DISTNAME=		pal-0.4.3
+#PKGREVISION=		1
 CATEGORIES=		time
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=palcal/}
 EXTRACT_SUFX=		.tgz
@@ -31,6 +31,11 @@ EGDIR=			${PREFIX}/share/examples/pal
 
 CONF_FILES=		${EGDIR:Q}/pal.conf ${PKG_SYSCONFDIR:Q}/pal.conf
 
+MAKE_JOBS_SAFE=		no
+
+USE_NCURSES=		yes
+
+CFLAGS+=		-DCURSES
 
 do-build:
 	cd ${WRKSRC:Q} && make

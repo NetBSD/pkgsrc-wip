@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.1.1.1 2006/04/05 08:10:26 emil_s Exp $
+$NetBSD: patch-ab,v 1.2 2010/07/06 07:07:04 emil_s Exp $
 
---- Makefile.defs.orig	2004-05-03 00:10:54.000000000 +0100
+--- Makefile.defs.orig	2008-07-28 16:16:23.000000000 +0000
 +++ Makefile.defs
 @@ -3,7 +3,7 @@
  
@@ -10,4 +10,4 @@ $NetBSD: patch-ab,v 1.1.1.1 2006/04/05 08:10:26 emil_s Exp $
 +prefix = @PREFIX@
  CC      = gcc
  
- 
+ PAL_VERSION = 0.4.3

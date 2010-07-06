@@ -1,0 +1,21 @@
+$NetBSD: patch-ae,v 1.1 2010/07/06 07:07:04 emil_s Exp $
+
+--- colorize.h.orig	2008-07-28 16:16:23.000000000 +0000
++++ colorize.h
+@@ -21,6 +21,7 @@
+  *
+  */
+ 
++#include <curses.h>
+ #include <glib.h>
+ 
+ /* attributes */
+@@ -52,8 +53,6 @@ void colorize_error(void);
+ gchar* string_color_of(const int color);
+ int int_color_of(gchar* string);
+ 
+-#ifdef CURSES
+ extern WINDOW *pal_curwin;
+-#endif
+ 
+ #endif
