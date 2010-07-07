@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2010/02/19 16:45:57 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.7 2010/07/07 16:30:40 cheusov Exp $
 bin/mc
 bin/mcmfmt
 bin/mcview
@@ -18,7 +18,6 @@ man/sr/man1/mc.1
 share/examples/mc/cedit.menu
 share/examples/mc/edit.indent.rc
 share/examples/mc/edit.spell.rc
-share/examples/mc/extfs.ini
 share/examples/mc/filehighlight.ini
 share/examples/mc/mc.ext
 share/examples/mc/mc.keymap
@@ -84,13 +83,6 @@ share/mc/mc.hlp.it
 share/mc/mc.hlp.pl
 share/mc/mc.hlp.ru
 share/mc/mc.hlp.sr
-share/mc/extfs/s3
-share/mc/extfs/u7z
-share/mc/extfs/uace
-share/mc/extfs/ualz
-share/mc/extfs/uarc
-share/mc/extfs/uc1541
-share/mc/extfs/ucab
 share/mc/skins/darkfar.ini
 share/mc/skins/default.ini
 share/mc/skins/double-lines.ini
@@ -107,6 +99,7 @@ share/mc/syntax/debian-sources-list.syntax
 share/mc/syntax/d.syntax
 share/mc/syntax/ebuild.syntax
 share/mc/syntax/erlang.syntax
+share/mc/syntax/ini.syntax
 share/mc/syntax/f90.syntax
 share/mc/syntax/filehighlight.syntax
 share/mc/syntax/haskell.syntax

@@ -1,11 +1,10 @@
-$NetBSD: distinfo,v 1.13 2010/02/19 17:21:40 cheusov Exp $
+$NetBSD: distinfo,v 1.14 2010/07/07 16:30:40 cheusov Exp $
 
-SHA1 (mc-4.7.0.2.tar.bz2) = 4a193204405e6ec41e705e3eacc3cb54be8401af
-RMD160 (mc-4.7.0.2.tar.bz2) = 4dc0b546ace58bf7251794c6cfd3fb4d775ad0f1
-Size (mc-4.7.0.2.tar.bz2) = 2809115 bytes
-SHA1 (patch-aa) = 7b1e1b161e614cc1409d2555479817511c6ad82d
-SHA1 (patch-ab) = ccec9928b3eef8dfee30ee14a12cb4e8e73efe65
-SHA1 (patch-ac) = 604472d3dd916bb1aabe743ebae2bfb4c38c6523
-SHA1 (patch-ad) = e03288936cd9a87d4848cfc3d27f8ae37eb3a153
-SHA1 (patch-ae) = 700d956c849a24f4ff7e6b03edaaba5bf08e47da
-SHA1 (patch-af) = 54e1f3738a23caed11b076761474a23b9eaa04a1
+SHA1 (mc-4.7.0.7.tar.bz2) = be88c73e042ea6f7a0911de66ab00028a082ebb2
+RMD160 (mc-4.7.0.7.tar.bz2) = 40c1153682d51d5af727613ffc3fd50abe15392e
+Size (mc-4.7.0.7.tar.bz2) = 2812035 bytes
+SHA1 (patch-ab) = 3539d47589bbe1d14d603b3cfa223d39d2ca7a92
+SHA1 (patch-ac) = 24893b72dbf44e657bb2e576b82c9c541bc035e5
+SHA1 (patch-ad) = a282aa3f877f885f047ec0bb2e87e432966917b9
+SHA1 (patch-ae) = 4ce7d9dcc251affa2bebd241d40433943a51e65c
+SHA1 (patch-af) = 6e45b5c25f68e9c7b4e1b2bc89775be6bf472067

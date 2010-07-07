@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2010/02/19 16:45:57 cheusov Exp $
+# $NetBSD: Makefile,v 1.12 2010/07/07 16:30:40 cheusov Exp $
 
-DISTNAME=	mc-4.7.0.2
+DISTNAME=	mc-4.7.0.7
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.midnight-commander.org/downloads/
 EXTRACT_SUFX=	.tar.bz2
@@ -44,7 +44,7 @@ conffiles=	cedit.menu edit.indent.rc edit.spell.rc filehighlight.ini \
 		mc.menu mc.menu.sr syntax/Syntax
 
 .if !empty(PKG_OPTIONS:Mvfs)
-conffiles+=	extfs.ini sfs.ini
+conffiles+=	sfs.ini
 .endif
 
 .if !empty(PKG_OPTIONS:Mcharset)
@@ -60,10 +60,8 @@ INSTALLATION_DIRS+=	${EGDIR} ${EGDIR}/syntax
 post-install:
 # remove dir if no extensions were installed there
 	rmdir ${DESTDIR}${PREFIX}/lib/mc 2>/dev/null || ${TRUE}
-.if !empty(PKG_OPTIONS:Mvfs)
-	${INSTALL_DATA} ${WRKSRC}/lib/vfs/mc-vfs/extfs/extfs.ini ${DESTDIR}${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/lib/vfs/mc-vfs/extfs/sfs.ini ${DESTDIR}${EGDIR}
-.endif
 
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/libslang2/buildlink3.mk"
+.include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

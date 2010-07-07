@@ -1,13 +1,13 @@
-$NetBSD: patch-af,v 1.1.1.1 2010/02/19 15:53:34 cheusov Exp $
+$NetBSD: patch-af,v 1.2 2010/07/07 16:30:40 cheusov Exp $
 
---- lib/vfs/mc-vfs/extfs/Makefile.in.orig	2010-02-18 15:21:48.481767490 +0000
+--- lib/vfs/mc-vfs/extfs/Makefile.in.orig	2010-07-05 19:13:19.000000000 +0000
 +++ lib/vfs/mc-vfs/extfs/Makefile.in
-@@ -366,7 +366,7 @@ EXTFS_OUT = \
+@@ -391,7 +391,7 @@ EXTFS_OUT = \
  
  @ENABLE_VFS_TRUE@extfs_DATA = $(EXTFS_MISC)
  @ENABLE_VFS_TRUE@extfs_SCRIPTS = $(EXTFS_CONST) $(EXTFS_OUT)
--@ENABLE_VFS_TRUE@extfsconfdir = $(sysconfdir)/@PACKAGE@/extfs
-+@ENABLE_VFS_TRUE@extfsconfdir = @datadir@/examples/@PACKAGE@/extfs
+-@ENABLE_VFS_TRUE@extfsconfdir = $(sysconfdir)/@PACKAGE@
++@ENABLE_VFS_TRUE@extfsconfdir = @datadir@/examples/@PACKAGE@
  @ENABLE_VFS_TRUE@extfsconf_DATA = $(EXTFSCONFFILES)
  EXTRA_DIST = $(EXTFS_MISC) $(EXTFS_CONST) $(EXTFSCONFFILES)
  all: all-am
