@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4017 2010/06/29 14:28:39 hftmarkand Exp $
+# $Id: Makefile,v 1.4018 2010/07/07 15:21:30 ryo-on Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -666,6 +666,7 @@ SUBDIR+=	gxmessage
 SUBDIR+=	gxmms2
 SUBDIR+=	habak
 SUBDIR+=	haddock
+SUBDIR+=	hanazono-ttf
 SUBDIR+=	happy
 SUBDIR+=	haproxy
 SUBDIR+=	hasciicam
