@@ -1,5 +1,6 @@
-$NetBSD: patch-aa,v 1.13 2010/07/04 16:12:37 asau Exp $
+$NetBSD: patch-aa,v 1.14 2010/07/08 22:04:48 asau Exp $
 
+Override library subdirectory name for consistency.
 Don't use cache file to avoid trailing space problem.
 
 --- src/makemake.in.orig	2010-07-04 17:09:21.000000000 +0400
