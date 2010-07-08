@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2010/02/02 06:57:48 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.3 2010/07/08 06:17:57 emil_s Exp $
 bin/hlint
+lib/${PKGNAME}/${HASKELL_VERSION}/Apply.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Apply.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/CmdLine.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/CmdLine.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/HLint.hi
@@ -8,8 +10,6 @@ lib/${PKGNAME}/${HASKELL_VERSION}/HSE/All.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/HSE/All.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/HSE/Bracket.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/HSE/Bracket.p_hi
-lib/${PKGNAME}/${HASKELL_VERSION}/HSE/Eq.hi
-lib/${PKGNAME}/${HASKELL_VERSION}/HSE/Eq.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/HSE/Evaluate.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/HSE/Evaluate.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/HSE/Match.hi
@@ -21,8 +21,6 @@ lib/${PKGNAME}/${HASKELL_VERSION}/HSE/Type.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/HSE/Util.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/HSE/Util.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/HS${PKGNAME}.o
-lib/${PKGNAME}/${HASKELL_VERSION}/Hint.hi
-lib/${PKGNAME}/${HASKELL_VERSION}/Hint.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Hint/All.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Hint/All.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Hint/Bracket.hi
@@ -47,20 +45,24 @@ lib/${PKGNAME}/${HASKELL_VERSION}/Hint/Pragma.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Hint/Pragma.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Hint/Structure.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Hint/Structure.p_hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Hint/Type.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Hint/Type.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Hint/Util.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Hint/Util.p_hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Idea.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Idea.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Language/Haskell/HLint.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Language/Haskell/HLint.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Parallel.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Parallel.p_hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Paths_hlint.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Paths_hlint.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Report.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Report.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Settings.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Settings.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Test.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Test.p_hi
-lib/${PKGNAME}/${HASKELL_VERSION}/Type.hi
-lib/${PKGNAME}/${HASKELL_VERSION}/Type.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Util.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Util.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/libHS${PKGNAME}.a
