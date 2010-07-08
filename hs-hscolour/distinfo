@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/11/10 03:44:43 phonohawk Exp $
+$NetBSD: distinfo,v 1.2 2010/07/08 05:48:20 emil_s Exp $
 
-SHA1 (hscolour-1.15.tar.gz) = 4ce008f77934f0d34549035468913cd78427c68d
-RMD160 (hscolour-1.15.tar.gz) = b394d2ea64f25ae5e1b9b43ef4cee0977d625d4a
-Size (hscolour-1.15.tar.gz) = 56472 bytes
+SHA1 (hscolour-1.16.tar.gz) = 44efd9ba4f47e99d259567dbab01c6d765337984
+RMD160 (hscolour-1.16.tar.gz) = 930bdb326f4badc27d43dec29ee7e8bf9fd9f462
+Size (hscolour-1.16.tar.gz) = 57057 bytes
