@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2010/05/03 10:55:14 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.6 2010/07/09 18:37:15 jihbed Exp $
 bin/pytest
 ${PYSITELIB}/logilab/__init__.py
 ${PYSITELIB}/logilab/common/__init__.py
@@ -109,9 +109,6 @@ ${PYSITELIB}/logilab/common/table.pyo
 ${PYSITELIB}/logilab/common/tasksqueue.py
 ${PYSITELIB}/logilab/common/tasksqueue.pyc
 ${PYSITELIB}/logilab/common/tasksqueue.pyo
-${PYSITELIB}/logilab/common/test/__init__.py
-${PYSITELIB}/logilab/common/test/__init__.pyc
-${PYSITELIB}/logilab/common/test/__init__.pyo
 ${PYSITELIB}/logilab/common/test/data/ChangeLog
 ${PYSITELIB}/logilab/common/test/data/MyPyPa-0.1.0-py2.5.egg
 ${PYSITELIB}/logilab/common/test/data/MyPyPa-0.1.0-py2.5.zip
@@ -299,10 +296,10 @@ ${PYSITELIB}/logilab/common/xmlrpcutils.pyo
 ${PYSITELIB}/logilab/common/xmlutils.py
 ${PYSITELIB}/logilab/common/xmlutils.pyc
 ${PYSITELIB}/logilab/common/xmlutils.pyo
-${PYSITELIB}/${EGG_NAME}-nspkg.pth
-${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
-${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-${PYSITELIB}/${EGG_INFODIR}/namespace_packages.txt
-${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/logilab_common-0.50.3-py2.6-nspkg.pth
+${PYSITELIB}/logilab_common-0.50.3-py2.6.egg-info/PKG-INFO
+${PYSITELIB}/logilab_common-0.50.3-py2.6.egg-info/SOURCES.txt
+${PYSITELIB}/logilab_common-0.50.3-py2.6.egg-info/dependency_links.txt
+${PYSITELIB}/logilab_common-0.50.3-py2.6.egg-info/namespace_packages.txt
+${PYSITELIB}/logilab_common-0.50.3-py2.6.egg-info/top_level.txt
 man/man1/pytest.1

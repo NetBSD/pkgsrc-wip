@@ -1,12 +1,12 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2010/05/03 10:55:14 jihbed Exp $
+$NetBSD: MESSAGE,v 1.3 2010/07/09 18:37:15 jihbed Exp $
 
 The *optional* package:
 
  - ElementTree   	=> 	pkgsrc/textproc/py-elementtree
  - omniOrb 		=> 	pkgsrc/wip/py-omniORBpy
  - IPython		=> 	pkgsrc/wip/py-ipython
- - Pyro			=>   	pkgsrc/devel/py-Pyro
+ - Pyro			=>   pkgsrc/devel/py-Pyro
  - django		=> 	pkgsrc/www/py-django
 
 ===========================================================================
