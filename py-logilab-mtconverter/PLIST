@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:11 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.3 2010/07/09 18:39:17 jihbed Exp $
 ${PYSITELIB}/logilab/__init__.py
 ${PYSITELIB}/logilab/mtconverter/__init__.py
 ${PYSITELIB}/logilab/mtconverter/__init__.pyc
@@ -42,9 +42,9 @@ ${PYSITELIB}/logilab/mtconverter/transforms/pygmentstransforms.pyo
 ${PYSITELIB}/logilab/mtconverter/transforms/python.py
 ${PYSITELIB}/logilab/mtconverter/transforms/python.pyc
 ${PYSITELIB}/logilab/mtconverter/transforms/python.pyo
-${PYSITELIB}/logilab_mtconverter-0.6.0-py2.5-nspkg.pth
-${PYSITELIB}/logilab_mtconverter-0.6.0-py2.5.egg-info/PKG-INFO
-${PYSITELIB}/logilab_mtconverter-0.6.0-py2.5.egg-info/SOURCES.txt
-${PYSITELIB}/logilab_mtconverter-0.6.0-py2.5.egg-info/dependency_links.txt
-${PYSITELIB}/logilab_mtconverter-0.6.0-py2.5.egg-info/namespace_packages.txt
-${PYSITELIB}/logilab_mtconverter-0.6.0-py2.5.egg-info/top_level.txt
+${PYSITELIB}/${EGG_NAME}-nspkg.pth
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/namespace_packages.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
