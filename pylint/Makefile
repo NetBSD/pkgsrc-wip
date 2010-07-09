@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.5 2010/05/05 09:40:46 jihbed Exp $
+# $NetBSD: Makefile,v 1.6 2010/07/09 19:06:50 jihbed Exp $
 #
 
-VERS=					0.20.0
-DISTNAME=			pylint-${VERS}
+VERS=		0.21.1
+DISTNAME=	pylint-${VERS}
 PKGREVISION=    		1
 CATEGORIES=			devel
-MASTER_SITES=		http://pypi.python.org/packages/source/p/pylint/
+MASTER_SITES=	http://ftp.logilab.org/pub/pylint/
 
-MAINTAINER=			helgoman@users.sourceforge.net
-HOMEPAGE=			http://www.logilab.org/project/pylint
-COMMENT=			Python code static checker
-LICENSE=				gnu-gpl-v2
+MAINTAINER=	helgoman@users.sourceforge.net
+HOMEPAGE=	http://www.logilab.org/project/pylint
+COMMENT=	Python code static checker
+LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${PYPKGPREFIX}-logilab-astng>=0.20.0:../../wip/py-logilab-astng
 
