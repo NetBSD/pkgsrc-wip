@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2009/06/03 08:38:07 phonohawk Exp $
+# $NetBSD: Makefile,v 1.7 2010/07/10 20:45:59 emil_s Exp $
 #
 
-DISTNAME=		happy-1.18.4
+DISTNAME=		happy-1.18.5
 PKGNAME=		${DISTNAME}
 CATEGORIES=		devel
 MAINTAINER=		emil@math.su.se
