@@ -1,0 +1,31 @@
+$NetBSD: patch-aa,v 1.1 2010/07/11 14:27:21 jihbed Exp $
+
+--- setup.py.orig	2008-12-10 18:04:26.000000000 +0000
++++ setup.py	2010-07-11 15:24:10.000000000 +0000
+@@ -4,7 +4,7 @@
+ from distutils.core import setup, Extension
+ import glob
+ 
+-from runspade import VERSION
++from runspade import __version__ 
+ 
+ #if os.name != "posix":
+ #	import py2exe
+@@ -27,7 +27,7 @@
+ if os.name == "posix":
+ 	#if sys.platform != "darwin":
+ 		setup(name='SPADE',
+-		version=VERSION,
++		version=__version__ ,
+ 		description='Smart Python multi-Agent Development Environment',
+ 		author='Javier Palanca, Miguel Escriva, Gustavo Aranda, Natalia Criado',
+ 		author_email='jpalanca@dsic.upv.es',
+@@ -54,7 +54,7 @@
+ 	# GUS: What is this case? Meesa not understand :-?
+ 
+ 	setup(name='SPADE',
+-	version=VERSION,
++	version=__version__ ,
+ 	description='Smart Python multi-Agent Development Environment',
+ 	author='Javier Palanca, Miguel Escriva, Gustavo Aranda, Natalia Criado',
+ 	author_email='jpalanca@dsic.upv.es',
