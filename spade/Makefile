@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/07/11 21:21:41 jihbed Exp $
+# $NetBSD: Makefile,v 1.6 2010/07/11 22:53:25 jihbed Exp $
 #
 
 DISTNAME=	spade-2.0rc4
@@ -13,6 +13,7 @@ LICENSE=	gnu-lgpl-v2.1
 DEPENDS+=	${PYPKGPREFIX}-psyco>=1.6:../../lang/py-psyco
 DEPENDS+=	${PYPKGPREFIX}-dns-[0-9]*:../../net/py-dns
 DEPENDS+=	${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
+DEPENDS+=	${PYPKGPREFIX}-m2crypto>=0.13:../../security/py-m2crypto
 DEPENDS+=	${PYPKGPREFIX}-event>=0.3:../../wip/py-event
 DEPENDS+=	${PYPKGPREFIX}-gmpy>=1.04:../../wip/py-gmpy
 DEPENDS+=	jython>=2.5.1:../../wip/jython
@@ -25,7 +26,7 @@ WRKSRC=	${WRKDIR}/spade
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
-SUBST_SED.paths+=	-e 's,tlslite/scripts/tls.py,tls${PYVERSSUFFIX},g'
+SUBST_SED.paths+=	-e 's,tlslite/scripts/tlsdb.py,tlsdb${PYVERSSUFFIX},g'
 SUBST_SED.paths+=	-e 's,tlslite/scripts/tlsdb.py,tlsdb${PYVERSSUFFIX},g'
 SUBST_SED.paths+=	-e 's,etc/xmppd.xml,xmppd/xmppd.xml,g'
 SUBST_FILES.paths+=	setup.py
@@ -44,4 +45,5 @@ do-test:
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
+.include "../../security/py-amkCrypto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
