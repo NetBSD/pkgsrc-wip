@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/11/18 12:34:53 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2010/07/11 18:59:38 jihbed Exp $
 #
 
 DISTNAME=	jython_installer-2.5.1
@@ -30,7 +30,7 @@ REPLACE_BASH+=	jython
 ONLY_FOR_PLATFORM= NetBSD-*-* Linux-*-* FreeBSD-*-* OpenBSD-*-*
 
 PY_PATCHPLIST=	yes
-PYTHON_VERSIONS_ACCEPTED=  25
+PYTHON_VERSIONS_ACCEPTED=  26 25
 
 JYTHON_NAME=	${PKGNAME}
 TARGET_NAME=	${PREFIX}/${PYSITELIB}/${JYTHON_NAME}/Lib
