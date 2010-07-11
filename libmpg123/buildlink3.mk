@@ -1,0 +1,12 @@
+# $NetBSD: buildlink3.mk,v 1.1 2010/07/11 17:40:53 bharder Exp $
+
+BUILDLINK_TREE+=	libmpg123
+
+.if !defined(LIBMPG123_BUILDLINK3_MK)
+LIBMPG123_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.libmpg123+=	libmpg123>=0.7.0
+BUILDLINK_PKGSRCDIR.libmpg123?=	../../audio/libmpg123
+.endif # LIBMPG123_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-libmpg123

@@ -1,0 +1,8 @@
+# $NetBSD: Makefile.version,v 1.1 2010/07/11 17:40:53 bharder Exp $
+#
+
+MPG123_DISTVERSION=	1.12.2
+###
+###	This version number is found as LIBMPG123_VERSION in configure.ac.
+###
+LIBMPG123_VERSION=	25:4:25
