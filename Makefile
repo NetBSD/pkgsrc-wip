@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4018 2010/07/07 15:21:30 ryo-on Exp $
+# $Id: Makefile,v 1.4019 2010/07/11 13:41:14 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1911,6 +1911,7 @@ SUBDIR+=	py-django-tagging
 SUBDIR+=	py-duali
 SUBDIR+=	py-embedc
 SUBDIR+=	py-eyeD3
+SUBDIR+=	py-event
 SUBDIR+=	py-eventlet
 SUBDIR+=	py-ezPyCrypto
 SUBDIR+=	py-fastaudio
