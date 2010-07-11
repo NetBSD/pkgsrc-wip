@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/07/11 15:56:01 jihbed Exp $
+# $NetBSD: Makefile,v 1.5 2010/07/11 21:21:41 jihbed Exp $
 #
 
 DISTNAME=	spade-2.0rc4
@@ -31,6 +31,8 @@ SUBST_SED.paths+=	-e 's,etc/xmppd.xml,xmppd/xmppd.xml,g'
 SUBST_FILES.paths+=	setup.py
 SUBST_MESSAGE.paths=	Fixing header search paths.
 
+REPLACE_PYTHON+=	tls${PYVERSSUFFIX} tlsdb${PYVERSSUFFIX}
+
 post-extract:
 	${CP} ${FILESDIR}/tls.py ${WRKSRC}/tls${PYVERSSUFFIX}
 	${CP} ${FILESDIR}/tlsdb.py ${WRKSRC}/tlsdb${PYVERSSUFFIX}
@@ -40,5 +42,6 @@ do-test:
 	${RUN} cd ${WRKSRC}/examples/unittests; \
 	${SETENV} ${TEST_ENV} ${PYTHONBIN} unittests.py
 
+.include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
