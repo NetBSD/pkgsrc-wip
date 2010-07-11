@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1 2010/07/11 14:27:21 jihbed Exp $
+$NetBSD: patch-aa,v 1.2 2010/07/11 15:56:02 jihbed Exp $
 
 --- setup.py.orig	2008-12-10 18:04:26.000000000 +0000
-+++ setup.py	2010-07-11 15:24:10.000000000 +0000
++++ setup.py	2010-07-11 16:55:32.000000000 +0000
 @@ -4,7 +4,7 @@
  from distutils.core import setup, Extension
  import glob
@@ -20,7 +20,25 @@ $NetBSD: patch-aa,v 1.1 2010/07/11 14:27:21 jihbed Exp $
  		description='Smart Python multi-Agent Development Environment',
  		author='Javier Palanca, Miguel Escriva, Gustavo Aranda, Natalia Criado',
  		author_email='jpalanca@dsic.upv.es',
-@@ -54,7 +54,7 @@
+@@ -35,14 +35,12 @@
+ 		package_dir={'spade': 'spade'},
+ 		#packages=['spade', 'xmpp', 'xmppd', 'xmppd.modules', 'xmppd.locale', 'xmppd.socker', 'tlslite', 'tlslite.utils', 'tlslite.integration'],
+ 		packages=['spade', 'xmpp', 'xmppd', 'xmppd.modules', 'xmppd.socker', 'tlslite', 'tlslite.utils', 'tlslite.integration'],
+-		#scripts=['spade.sh','gspade.sh','gspade.py', 'runspade.py',"tlslite/scripts/tls.py", "tlslite/scripts/tlsdb.py"],
+-		scripts=['runspade.py',"tlslite/scripts/tls.py", "tlslite/scripts/tlsdb.py"],
++		#scripts=['spade.sh','gspade.sh','gspade.py', 'runspade.py',"tls2.6", "tlsdb2.6"],
++		scripts=['runspade.py',"tls2.6", "tlsdb2.6"],
+ 		data_files=[
+-			('/etc/spade',['etc/spade.xml']),
+-			('/etc/spade',['etc/xmppd.xml']),
++			('/etc/spade',['xmppd/xmppd.xml']),
+ 			#('/usr/share/spade',['usr/share/spade/rma.glade']),
+ 			('/usr/share/spade/mtp',glob.glob('usr/share/spade/mtp/*.py')),
+-			('/usr/share/doc/spade',['readme.txt']),
+ 			('/usr/share/doc/spade/',['doc/api.tar.gz']),
+ 			#('/usr/share/spade/jabberd',['usr/share/spade/jabberd/jabberd','usr/share/spade/jabberd/jabber.xml']),
+ 			#('/usr/share/spade/jabberd/libs',glob.glob('usr/share/spade/jabberd/libs/*.so')),
+@@ -54,7 +52,7 @@
  	# GUS: What is this case? Meesa not understand :-?
  
  	setup(name='SPADE',
@@ -29,3 +47,14 @@ $NetBSD: patch-aa,v 1.1 2010/07/11 14:27:21 jihbed Exp $
  	description='Smart Python multi-Agent Development Environment',
  	author='Javier Palanca, Miguel Escriva, Gustavo Aranda, Natalia Criado',
  	author_email='jpalanca@dsic.upv.es',
+@@ -63,8 +61,8 @@
+ 	#packages=['spade', 'xmpp', 'xmppd', 'xmppd.filters', 'tlslite', 'tlslite.utils', 'tlslite.integration'],
+ 	packages=['spade', 'xmpp', 'xmppd', 'xmppd.modules', 'xmppd.socker', 'tlslite', 'tlslite.utils', 'tlslite.integration'],
+ 	#scripts=['spade-rma.py', 'runspade.py'],
+-	scripts=['runspade.py',"tlslite/scripts/tls.py", "tlslite/scripts/tlsdb.py"],
+-	#console=['gspade.py', 'runspade.py','configure.py',"tlslite/scripts/tls.py", "tlslite/scripts/tlsdb.py"],
++	scripts=['runspade.py',"tls2.6", "tlsdb2.6"],
++	#console=['gspade.py', 'runspade.py','configure.py',"tls2.6", "tlsdb2.6"],
+ 	data_files=[
+ 		('etc',[]),
+ 		#('usr/share/spade',['usr/share/spade/rma.glade']),

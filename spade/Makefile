@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/07/11 14:38:23 jihbed Exp $
+# $NetBSD: Makefile,v 1.4 2010/07/11 15:56:01 jihbed Exp $
 #
 
 DISTNAME=	spade-2.0rc4
@@ -19,8 +19,21 @@ DEPENDS+=	jython>=2.5.1:../../wip/jython
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 PYDISTUTILSPKG=	yes
+PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 
 WRKSRC=	${WRKDIR}/spade
+
+SUBST_CLASSES+=		paths
+SUBST_STAGE.paths=	pre-configure
+SUBST_SED.paths+=	-e 's,tlslite/scripts/tls.py,tls${PYVERSSUFFIX},g'
+SUBST_SED.paths+=	-e 's,tlslite/scripts/tlsdb.py,tlsdb${PYVERSSUFFIX},g'
+SUBST_SED.paths+=	-e 's,etc/xmppd.xml,xmppd/xmppd.xml,g'
+SUBST_FILES.paths+=	setup.py
+SUBST_MESSAGE.paths=	Fixing header search paths.
+
+post-extract:
+	${CP} ${FILESDIR}/tls.py ${WRKSRC}/tls${PYVERSSUFFIX}
+	${CP} ${FILESDIR}/tlsdb.py ${WRKSRC}/tlsdb${PYVERSSUFFIX}
 
 TEST_ENV+=	PYTHONPATH=${WRKSRC}/examples/unittests
 do-test:
