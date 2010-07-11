@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2010/07/11 15:56:01 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.4 2010/07/11 23:23:53 jihbed Exp $
 bin/runspade.py
 bin/tls2.6
 bin/tlsdb2.6
@@ -392,3 +392,4 @@ ${PYSITELIB}/xmppd/socker/socker.pyo
 ${PYSITELIB}/xmppd/xmppd.py
 ${PYSITELIB}/xmppd/xmppd.pyc
 ${PYSITELIB}/xmppd/xmppd.pyo
+share/doc/spade/api.tar.gz
