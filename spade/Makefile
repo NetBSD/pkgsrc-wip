@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2010/07/12 19:04:47 jihbed Exp $
+# $NetBSD: Makefile,v 1.10 2010/07/12 19:14:07 jihbed Exp $
 #
 
 DISTNAME=	spade-2.0rc4
@@ -29,7 +29,7 @@ SUBST_STAGE.paths=	pre-configure
 SUBST_SED.paths+=	-e 's,tlslite/scripts/tlsdb.py,tlsdb${PYVERSSUFFIX},g'
 SUBST_SED.paths+=	-e 's,tlslite/scripts/tls.py,tls${PYVERSSUFFIX},g'
 SUBST_SED.paths+=	-e 's,/usr/share/doc/spade,${PREFIX}/share/doc/spade,g'
-SUBST_FILES.paths+=	setup.py runspade.py
+SUBST_FILES.paths+=	setup.py
 SUBST_MESSAGE.paths=	Fixing header search paths.
 
 REPLACE_PYTHON+=	tls${PYVERSSUFFIX} tlsdb${PYVERSSUFFIX}
