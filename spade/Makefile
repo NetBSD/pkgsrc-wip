@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2010/07/12 13:47:44 jihbed Exp $
+# $NetBSD: Makefile,v 1.9 2010/07/12 19:04:47 jihbed Exp $
 #
 
 DISTNAME=	spade-2.0rc4
@@ -27,7 +27,7 @@ WRKSRC=	${WRKDIR}/spade
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
 SUBST_SED.paths+=	-e 's,tlslite/scripts/tlsdb.py,tlsdb${PYVERSSUFFIX},g'
-SUBST_SED.paths+=	-e 's,tlslite/scripts/tlsdb.py,tlsdb${PYVERSSUFFIX},g'
+SUBST_SED.paths+=	-e 's,tlslite/scripts/tls.py,tls${PYVERSSUFFIX},g'
 SUBST_SED.paths+=	-e 's,/usr/share/doc/spade,${PREFIX}/share/doc/spade,g'
 SUBST_FILES.paths+=	setup.py runspade.py
 SUBST_MESSAGE.paths=	Fixing header search paths.
@@ -45,7 +45,7 @@ do-test:
 
 pre-configure:
 	cd ${WRKSRC} && ${PYTHONBIN} configure.py
-	
+
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .include "../../security/py-amkCrypto/buildlink3.mk"
