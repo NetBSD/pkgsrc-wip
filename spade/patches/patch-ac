@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.1 2010/07/12 13:45:49 jihbed Exp $
+$NetBSD: patch-ac,v 1.2 2010/07/12 20:17:39 jihbed Exp $
 
 --- runspade.py.orig	2009-09-28 13:26:41.000000000 +0000
-+++ runspade.py	2010-07-12 14:42:42.000000000 +0000
++++ runspade.py	2010-07-12 21:13:10.000000000 +0000
 @@ -3,6 +3,7 @@
  
  import os #, signal
@@ -29,8 +29,14 @@ $NetBSD: patch-ac,v 1.1 2010/07/12 13:45:49 jihbed Exp $
    #print " -w, --web          load the TurboGears(tm) web interface"
    raise SystemExit
  
-@@ -62,6 +64,10 @@
-   jabberxml = "/etc/spade/xmppd.xml"
+@@ -58,10 +60,14 @@
+   #elif sys.argv[1] in ["--web", "-w"]: web = True
+ 
+ 
+-  configfilename = "/etc/spade/spade.xml"
+-  jabberxml = "/etc/spade/xmppd.xml"
++  configfilename = "/usr/pkg/etc/spade/spade.xml"
++  jabberxml = "/usr/pkg/etc/spade/xmppd.xml"
    dbg = []
  
 +  if sys.platform[:6] == 'netbsd':
@@ -56,7 +62,7 @@ $NetBSD: patch-ac,v 1.1 2010/07/12 13:45:49 jihbed Exp $
 -  os.chdir("xmppd")
 +  if sys.platform[:6] == 'netbsd':
 +	  pyvers= 'python'+str(numb)
-+	  path = "/usr/pkg/lib" + os.sep + pyvers + "/site-packages/xmppd/"
++	  path = "/usr/pkg/lib/" + pyvers + "/site-packages/xmppd/"
 +	  os.chdir(path)
 +  else:
 +	  os.chdir("xmppd")
