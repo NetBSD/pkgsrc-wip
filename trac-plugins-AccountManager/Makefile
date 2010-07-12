@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2010/05/22 13:22:31 obache Exp $
+# $NetBSD: Makefile,v 1.9 2010/07/12 02:29:36 obache Exp $
 
-DISTNAME=	accountmanagerplugin_0.11-r${SVN_REV}
+DISTNAME=	accountmanagerplugin_trnk-r${SVN_REV}
 PKGNAME=	trac-plugins-AccountManager-0.2.1pre${SVN_REV}
 EGG_NAME=	TracAccountManager-0.2.1dev
 CATEGORIES=	www
@@ -14,10 +14,10 @@ COMMENT=	User account management plugin for Trac
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-DEPENDS+=	{ja-,}trac>=0.11:../../www/trac
+DEPENDS+=	trac>=0.12:../../www/trac
 
-SVN_REV=	7731
-SVN_MOD=	accountmanagerplugin/0.11
+SVN_REV=	8246
+SVN_MOD=	accountmanagerplugin/trunk
 WRKSRC=		${WRKDIR}/${SVN_MOD}
 
 post-extract:
