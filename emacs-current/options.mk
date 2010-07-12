@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.19 2010/02/08 21:03:12 thomasklausner Exp $
+# $NetBSD: options.mk,v 1.20 2010/07/12 09:13:11 makoto Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.emacs_current
@@ -15,7 +15,7 @@ PKG_SUGGESTED_OPTIONS=	dbus svg x11 xft2
 ### Check incompatible option sets.
 ###
 .if !empty(PKG_OPTIONS:Mnextstep) && !empty(PKG_OPTIONS:Mxft2)
-PKG_FAIL_REASON+=	`xft2' options is incompatible with `nextstep' option.
+PKG_FAIL_REASON+=	xft2 options is incompatible with nextstep option.
 .endif
 
 ###

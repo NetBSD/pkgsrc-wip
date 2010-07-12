@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.47 2009/12/15 06:44:32 makoto Exp $
+# $NetBSD: Makefile,v 1.48 2010/07/12 09:13:11 makoto Exp $
 #
 
-DISTNAME=	emacs-23.1.90
-PKGNAME=	emacs-23.1.90
-PKGREVISION=	${_CVS_PKGVERSION:S/.//g}
+DISTNAME=	emacs-24.0.50
+#PKGNAME=	emacs-24.0.50
+PKGREVISION=	${_GIT_PKGVERSION:S/.//g}
 CATEGORIES=	editors
 MASTER_SITES=	#
 
@@ -20,8 +20,9 @@ CONFLICTS+=	emacs-nox11-[0-9]*
 
 BUILD_TARGET=	bootstrap
 
-CVS_REPOSITORIES=	emacs
-CVS_ROOT.emacs=		${CVS_ROOT_GNU}/emacs
+GIT_REPOSITORIES=	master
+GIT_REPO.master=	git://repo.or.cz/emacs.git
+_GIT_FLAGS?=		--depth 1
 
 GNU_CONFIGURE=		yes
 INFO_FILES=		yes
@@ -55,7 +56,11 @@ FILESDIR=	${.CURDIR}/../../editors/emacs/files
 post-extract:
 	cp ${FILESDIR}/site-init.el ${WRKSRC}/lisp
 
+.include "../../wip/mk/git-package.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
-.include "../../wip/mk/cvs-package.mk"
 .include "../../mk/bsd.pkg.mk"
+
+
+#PKG_DEBUG_LEVEL?=       1
+#_PKG_SILENT=            # was @ here

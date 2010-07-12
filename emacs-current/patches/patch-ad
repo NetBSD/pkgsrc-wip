@@ -1,17 +1,17 @@
-$NetBSD: patch-ab,v 1.11 2010/07/12 09:13:11 makoto Exp $
+$NetBSD: patch-ad,v 1.1 2010/07/12 09:13:11 makoto Exp $
 
---- work/emacs/configure.orig	2010-06-08 00:51:58.000000000 +0900
-+++ configure	2010-06-08 00:53:33.000000000 +0900
-@@ -2523,7 +2523,7 @@
+--- work/emacs/configure.in	2010-06-08 01:13:11.000000000 +0900
++++ configure.in	2010-06-08 01:13:46.000000000 +0900
+@@ -45,7 +45,7 @@
  docdir='${datadir}/emacs/${version}/etc'
  gamedir='${localstatedir}/games/emacs'
  
 -gameuser=games
 +gameuser=${GAMEOWN}
  
- 
- 
-@@ -7457,9 +7457,9 @@
+ dnl OPTION_DEFAULT_OFF(NAME, HELP-STRING)
+ dnl Create a new --with option that defaults to being disabled.
+@@ -1557,9 +1557,9 @@
    window_system=nextstep
    with_xft=no
    # set up packaging dirs
