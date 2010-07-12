@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.3 2010/07/11 15:56:01 jihbed Exp $
+$NetBSD: distinfo,v 1.4 2010/07/12 13:47:44 jihbed Exp $
 
 SHA1 (spade-2.0rc4.tar.gz) = 3de52a664ac33e71a8205aa61c5581fbe1039dba
 RMD160 (spade-2.0rc4.tar.gz) = 8347ccb8d559e9a018548b82b3de06ee80a36504
 Size (spade-2.0rc4.tar.gz) = 551115 bytes
-SHA1 (patch-aa) = a5660e2995e391c850e3391cbcad5d4f3666bcdb
+SHA1 (patch-aa) = 9f82937b120654de5d153ac6f1ba99bc0d8ca841
+SHA1 (patch-ab) = c30964aebf2f846e12682cf414f5c0b1b10b5211
+SHA1 (patch-ac) = cf2091212e133bb153090f6746a071e60829555f

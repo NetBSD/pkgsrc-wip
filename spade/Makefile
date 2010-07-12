@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2010/07/11 23:23:53 jihbed Exp $
+# $NetBSD: Makefile,v 1.8 2010/07/12 13:47:44 jihbed Exp $
 #
 
 DISTNAME=	spade-2.0rc4
@@ -28,11 +28,8 @@ SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
 SUBST_SED.paths+=	-e 's,tlslite/scripts/tlsdb.py,tlsdb${PYVERSSUFFIX},g'
 SUBST_SED.paths+=	-e 's,tlslite/scripts/tlsdb.py,tlsdb${PYVERSSUFFIX},g'
-SUBST_SED.paths+=	-e 's,/etc/spade/spade.xml,${PREFIX}/etc/spade/spade.xml,g'
-SUBST_SED.paths+=	-e 's,/etc/spade/xmppd.xml,${PREFIX}/etc/spade/xmppd.xml,g'
 SUBST_SED.paths+=	-e 's,/usr/share/doc/spade,${PREFIX}/share/doc/spade,g'
-SUBST_SED.paths+=	-e 's,etc/xmppd.xml,xmppd/xmppd.xml,g'
-SUBST_FILES.paths+=	setup.py spade/spade_backend.py runspade.py configure.py xmppd/modules/config.py
+SUBST_FILES.paths+=	setup.py runspade.py
 SUBST_MESSAGE.paths=	Fixing header search paths.
 
 REPLACE_PYTHON+=	tls${PYVERSSUFFIX} tlsdb${PYVERSSUFFIX}
@@ -46,6 +43,9 @@ do-test:
 	${RUN} cd ${WRKSRC}/examples/unittests; \
 	${SETENV} ${TEST_ENV} ${PYTHONBIN} unittests.py
 
+pre-configure:
+	cd ${WRKSRC} && ${PYTHONBIN} configure.py
+	
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .include "../../security/py-amkCrypto/buildlink3.mk"
