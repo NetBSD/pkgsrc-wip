@@ -1,0 +1,66 @@
+$NetBSD: patch-ac,v 1.1 2010/07/12 13:45:49 jihbed Exp $
+
+--- runspade.py.orig	2009-09-28 13:26:41.000000000 +0000
++++ runspade.py	2010-07-12 14:42:42.000000000 +0000
+@@ -3,6 +3,7 @@
+ 
+ import os #, signal
+ import sys
++import platform
+ import traceback
+ import time
+ import thread
+@@ -29,6 +30,7 @@
+ __copyright__ = "Copyright (C) 2009 Grupo de Tecnologia Informatica - Inteligencia Artificial (DSIC-UPV)"
+ __license__   = "GPL"
+ 
++numb = platform.python_version()[:3]
+ 
+ def print_help():
+   print
+@@ -36,8 +38,8 @@
+   print " -h, --help         display this help text and exit"
+   print " -v, --version      display the version and exit"
+   print " -d, --debug        enable the debug execution"
+-  print " -c, --configfile   load the configuration file (default /etc/spade/spade.xml)"
+-  print " -j, --jabber       load the jabber configuration file (default /usr/share/spade/jabberd/jabber.xml)"
++  print " -c, --configfile   load the configuration file (default /usr/pkg/etc/spade/spade.xml)"
++  print " -j, --jabber       load the jabber configuration file (default /usr/pkg/share/spade/jabberd/jabber.xml)"
+   #print " -w, --web          load the TurboGears(tm) web interface"
+   raise SystemExit
+ 
+@@ -62,6 +64,10 @@
+   jabberxml = "/etc/spade/xmppd.xml"
+   dbg = []
+ 
++  if sys.platform[:6] == 'netbsd':
++	  configfilename = os.sep + "usr" + os.sep + "pkg" + os.sep + configfilename
++	  jabberxml = os.sep+ "usr" + os.sep + "pkg" + os.sep + jabberxml
++
+   if os.name != "posix" or not os.path.exists(jabberxml) or not os.path.exists(configfilename):
+ 	 configfilename = "./etc" + os.sep + "spade.xml"
+ 	 configfilename = os.path.abspath(configfilename)
+@@ -94,7 +100,7 @@
+ 
+   #print "Using config file " + str(configfilename)
+   #print "Using jabber file " + str(jabberxml)
+-  sys.stdout.write("Starting SPADE")
++  sys.stdout.write(colors.color_green +"Starting SPADE"+"\x1b[00m\n")
+   sys.stdout.flush()
+ 
+   #parser = SpadeConfigParser.ConfigParser()
+@@ -105,7 +111,13 @@
+ 
+   jabberxml =  os.path.abspath(jabberxml)
+   #s = xmppd.xmppd.Server(cfgfile=jabberxml, debug = dbg)
+-  os.chdir("xmppd")
++  if sys.platform[:6] == 'netbsd':
++	  pyvers= 'python'+str(numb)
++	  path = "/usr/pkg/lib" + os.sep + pyvers + "/site-packages/xmppd/"
++	  os.chdir(path)
++  else:
++	  os.chdir("xmppd")
++
+   #s = xmppd.Server(cfgfile=jabberxml, cmd_options={'enable_debug':dbg, 'enable_psyco':True})
+   #s = Server(cfgfile=jabberxml, cmd_options={'enable_debug':dbg, 'enable_psyco':True})
+   s = Server(cfgfile=jabberxml, cmd_options={'enable_debug':dbg, 'enable_psyco':False})

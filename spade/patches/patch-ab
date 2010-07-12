@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2010/07/12 13:45:49 jihbed Exp $
+
+--- configure.py.orig	2010-07-12 11:05:07.000000000 +0000
++++ configure.py	2010-07-12 11:05:13.000000000 +0000
+@@ -22,7 +22,7 @@
+ 		else:
+ 			hostname = globalhostname
+ 
+-		path = os.sep+"usr"+os.sep+"share"+os.sep+"spade"
++		path = os.sep+"usr"+os.sep+"pkg"+os.sep+"share"+os.sep+"spade"
+ 	else:
+ 		# If no hostname was previously specified, get one from the system
+ 		if globalhostname == "":	
