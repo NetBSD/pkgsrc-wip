@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/03/28 21:28:11 ryo-on Exp $
+# $NetBSD: Makefile,v 1.2 2010/07/13 06:07:19 ryo-on Exp $
 #
 
-DISTNAME=	rtmpdump-2.2b
+DISTNAME=	rtmpdump-2.3
 CATEGORIES=	net multimedia
 MASTER_SITES=	http://rtmpdump.mplayerhq.hu/download/
+EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	ryo_on@yk.rim.or.jp
 HOMEPAGE=	http://rtmpdump.mplayerhq.hu/download/
@@ -13,47 +14,19 @@ LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-DOCSDIR=	${PREFIX}/share/doc/${PKGBASE}
-
-INSTALLATION_DIRS=	bin \
-			lib \
-			lib/pkgconfig \
-			${DOCSDIR} \
-			${PKGMANDIR}/man1 \
-			${PKGMANDIR}/man8
-
 USE_TOOLS+=	pkg-config
-BUILD_TARGET=	posix
+USE_LIBTOOL=	yes
 BUILD_DIRS=	. \
 		librtmp
 
 PKGCONFIG_OVERRIDE+=	librtmp/librtmp.pc.in
 
-PROGRAMFILES=	rtmpdump \
-		rtmpgw \
-		rtmpsrv \
-		rtmpsuck
-
-LIBFILES=	librtmp/librtmp.a
-
-MANFILE1=	rtmpdump.1
-MANFILE8=	rtmpgw.8
-
-DOCFILES=	ChangeLog \
-		README \
-		rtmpdump.1.html \
-		rtmpgw.8.html
-
-post-install:
-.for filename in ${PROGRAMFILES}
-	${INSTALL_PROGRAM} ${WRKSRC}/${filename} ${DESTDIR}${PREFIX}/bin
-.endfor
-.for filename in ${DOCFILES}
-	${INSTALL_DATA} ${WRKSRC}/${filename} ${DESTDIR}${DOCSDIR}
-.endfor
-	${INSTALL_MAN} ${WRKSRC}/${MANFILE1} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
-	${INSTALL_MAN} ${WRKSRC}/${MANFILE8} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/
-	${INSTALL_LIB} ${WRKSRC}/${LIBFILES:Q} ${DESTDIR}${PREFIX}/lib
+SUBST_CLASSES+=			fix-paths
+SUBST_STAGE.fix-paths=		pre-configure
+SUBST_MESSAGE.fix-paths=	Fixing absolute paths.
+SUBST_FILES.fix-paths=		Makefile
+SUBST_FILES.fix-paths+=		librtmp/Makefile
+SUBST_SED.fix-paths=		-e 's,/usr/local,${PREFIX},g'
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
