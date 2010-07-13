@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2010/07/12 09:13:11 makoto Exp $
+# $NetBSD: Makefile,v 1.49 2010/07/13 00:04:00 obache Exp $
 #
 
 DISTNAME=	emacs-24.0.50
@@ -58,6 +58,7 @@ post-extract:
 
 .include "../../wip/mk/git-package.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
 
