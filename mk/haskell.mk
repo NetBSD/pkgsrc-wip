@@ -1,4 +1,4 @@
-# $NetBSD: haskell.mk,v 1.15 2010/01/13 02:36:45 phonohawk Exp $
+# $NetBSD: haskell.mk,v 1.16 2010/07/13 04:20:50 emil_s Exp $
 #
 # This Makefile fragment handles Haskell Cabal packages.
 # See: http://www.haskell.org/cabal/
@@ -192,7 +192,6 @@ PLIST.prof=		yes
 # Haddock documentations
 PLIST_VARS+=		doc
 .if ${HASKELL_ENABLE_HADDOCK_DOCUMENTATION} == "yes"
-.include "../../wip/hs-haddock/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-haddock=${PREFIX}/bin/haddock
 PLIST.doc=		yes
 .endif
