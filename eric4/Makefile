@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2010/06/13 22:47:03 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2010/07/13 18:39:32 thomasklausner Exp $
 #
 
 DATE=			20100523
@@ -31,6 +31,6 @@ do-install:
 .include "options.mk"
 .include "../../lang/python/extension.mk"
 .include "../../x11/py-qt4/buildlink3.mk"
-.include "../../wip/qt4-qscintilla/buildlink3.mk"
-.include "../../wip/py-qt4-qscintilla/buildlink3.mk"
+.include "../../x11/qt4-qscintilla/buildlink3.mk"
+.include "../../x11/py-qt4-qscintilla/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

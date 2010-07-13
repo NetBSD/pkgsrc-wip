@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4020 2010/07/12 03:24:30 ryo-on Exp $
+# $Id: Makefile,v 1.4021 2010/07/13 18:39:32 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2012,7 +2012,6 @@ SUBDIR+=	py-pyquante
 SUBDIR+=	py-pythics
 SUBDIR+=	py-pyvib2
 SUBDIR+=	py-qecalc
-SUBDIR+=	py-qt4-qscintilla
 SUBDIR+=	py-rcsparse
 SUBDIR+=	py-rdflib
 SUBDIR+=	py-remctl
@@ -2097,7 +2096,6 @@ SUBDIR+=	qinx
 SUBDIR+=	qmpdclient
 SUBDIR+=	qn-x11
 SUBDIR+=	qpsmtpd
-SUBDIR+=	qt4-qscintilla
 SUBDIR+=	qtcreator
 SUBDIR+=	qtre
 SUBDIR+=	qucs
