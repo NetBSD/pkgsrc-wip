@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.84 2010/07/12 09:13:11 makoto Exp $
+@comment $NetBSD: PLIST,v 1.85 2010/07/13 14:45:55 makoto Exp $
 bin/b2m
 bin/ctags
 bin/ebrowse
@@ -2406,7 +2406,8 @@ share/emacs/${PKGVERSION}/lisp/language/georgian.el
 share/emacs/${PKGVERSION}/lisp/language/greek.el
 share/emacs/${PKGVERSION}/lisp/language/hanja-util.el.gz
 share/emacs/${PKGVERSION}/lisp/language/hanja-util.elc
-share/emacs/${PKGVERSION}/lisp/language/hebrew.el
+share/emacs/${PKGVERSION}/lisp/language/hebrew.el.gz
+share/emacs/${PKGVERSION}/lisp/language/hebrew.elc
 share/emacs/${PKGVERSION}/lisp/language/ind-util.el.gz
 share/emacs/${PKGVERSION}/lisp/language/ind-util.elc
 share/emacs/${PKGVERSION}/lisp/language/indian.el.gz
