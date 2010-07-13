@@ -1,0 +1,22 @@
+$NetBSD: patch-ae,v 1.1 2010/07/13 13:13:55 jihbed Exp $
+
+--- ./xmppd/xmppd.py.orig	2010-07-13 14:06:31.000000000 +0000
++++ ./xmppd/xmppd.py	2010-07-13 14:13:37.000000000 +0000
+@@ -32,7 +32,7 @@
+ from math import *
+ import traceback
+ 
+-import socket,select,random,os,sys,thread,errno,time,threading,sha
++import socket,select,random,os,sys,thread,errno,time,threading,hashlib
+ globals()['DEFAULT_LANG'] = 'en'
+ #globals()['LANG_LIST'] = []
+ 
+@@ -953,7 +953,7 @@
+ 	if cmd_options.setdefault('socker_info',False): import xmlrpclib
+ 
+ 	if not cmd_options.setdefault('password',None):
+-	    globals()['RPC_PASSWORD'] = sha.new(str(time.time())+globals()['SOCKER_TGUID']+sha.new(str(time.time())).hexdigest()).hexdigest()
++	    globals()['RPC_PASSWORD'] = hashlib.sha1(str(time.time())+globals()['SOCKER_TGUID']+hashlib.sha1(str(time.time())).hexdigest()).hexdigest()
+ 	else:
+ 	    globals()['RPC_PASSWORD'] = cmd_options['password']
+ 

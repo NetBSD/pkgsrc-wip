@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2010/07/12 19:14:07 jihbed Exp $
+# $NetBSD: Makefile,v 1.11 2010/07/13 13:13:55 jihbed Exp $
 #
 
 DISTNAME=	spade-2.0rc4
@@ -19,6 +19,8 @@ DEPENDS+=	${PYPKGPREFIX}-gmpy>=1.04:../../wip/py-gmpy
 DEPENDS+=	jython>=2.5.1:../../wip/jython
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+PYTHON_VERSIONS_INCOMPATIBLE= 15 20 21 22 23 24 25
 PYDISTUTILSPKG=	yes
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 
