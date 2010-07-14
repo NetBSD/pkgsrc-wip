@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2010/07/09 18:19:31 asau Exp $
+@comment $NetBSD: PLIST,v 1.15 2010/07/14 09:03:39 asau Exp $
 bin/gforth
 bin/${PKGNAME}
 bin/gforth-fast
@@ -152,7 +152,7 @@ share/gforth/${PKGVERSION}/kernel/tools.fs
 share/gforth/${PKGVERSION}/kernel/toolsext.fs
 share/gforth/${PKGVERSION}/kernel/vars.fs
 share/gforth/${PKGVERSION}/kernel/xchars.fs
-share/gforth/${PKGVERSION}/kernl32l.fi
+share/gforth/${PKGVERSION}/kernl${BITS}l.fi
 share/gforth/${PKGVERSION}/lib.fs
 share/gforth/${PKGVERSION}/libcc.fs
 share/gforth/${PKGVERSION}/libffi.fs

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2009/11/20 00:50:37 asau Exp $
+# $NetBSD: Makefile,v 1.13 2010/07/14 09:03:39 asau Exp $
 
 DISTNAME=	gforth-0.7.99
 PKGNAME=	gforth-0.7.99 # needed because of cvs-package.mk
@@ -34,6 +34,13 @@ BUILD_TARGET=	all info # doc
 TEST_TARGET=	check
 
 INSTALLATION_DIRS=	share/emacs/site-lisp
+
+.include "../../mk/bsd.prefs.mk"
+.if $(MACHINE_ARCH) == "amd64" ||  $(MACHINE_ARCH) == "x86_64"
+PLIST_SUBST+=	BITS=64
+.else
+PLIST_SUBST+=	BITS=32
+.endif
 
 # Change package version to make it consistent with our scheme:
 SUBST_CLASSES+=			fix-version
