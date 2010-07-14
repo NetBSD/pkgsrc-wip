@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2010/07/13 13:13:55 jihbed Exp $
+# $NetBSD: Makefile,v 1.12 2010/07/14 00:38:02 jihbed Exp $
 #
 
 DISTNAME=	spade-2.0rc4
@@ -19,12 +19,12 @@ DEPENDS+=	${PYPKGPREFIX}-gmpy>=1.04:../../wip/py-gmpy
 DEPENDS+=	jython>=2.5.1:../../wip/jython
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+WRKSRC=	${WRKDIR}/spade
 
 PYTHON_VERSIONS_INCOMPATIBLE= 15 20 21 22 23 24 25
 PYDISTUTILSPKG=	yes
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 
-WRKSRC=	${WRKDIR}/spade
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
@@ -44,9 +44,6 @@ TEST_ENV+=	PYTHONPATH=${WRKSRC}/examples/unittests
 do-test:
 	${RUN} cd ${WRKSRC}/examples/unittests; \
 	${SETENV} ${TEST_ENV} ${PYTHONBIN} unittests.py
-
-pre-configure:
-	cd ${WRKSRC} && ${PYTHONBIN} configure.py
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"

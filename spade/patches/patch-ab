@@ -1,8 +1,22 @@
-$NetBSD: patch-ab,v 1.1 2010/07/12 13:45:49 jihbed Exp $
+$NetBSD: patch-ab,v 1.2 2010/07/14 00:38:03 jihbed Exp $
 
---- configure.py.orig	2010-07-12 11:05:07.000000000 +0000
-+++ configure.py	2010-07-12 11:05:13.000000000 +0000
-@@ -22,7 +22,7 @@
+--- configure.py.orig	2009-04-16 15:34:31.000000000 +0000
++++ configure.py	2010-07-14 00:37:27.000000000 +0000
+@@ -2,11 +2,12 @@
+ 
+ import sys
+ import string
++import platform
+ import random
+ import os
+ import socket
+ 
+-
++numb = platform.python_version()[:3]
+ globalhostname = ""
+ 
+ def generateCode():
+@@ -22,7 +23,7 @@
  		else:
  			hostname = globalhostname
  
@@ -11,3 +25,37 @@ $NetBSD: patch-ab,v 1.1 2010/07/12 13:45:49 jihbed Exp $
  	else:
  		# If no hostname was previously specified, get one from the system
  		if globalhostname == "":	
+@@ -73,7 +74,9 @@
+ 
+ 	# Now fill the MTPs information
+ 	mtp_str = "\n"
+-	for file in os.listdir("spade/mtp"):
++	pyvers= 'python'+str(numb)
++	path = "/usr/pkg/lib/" + pyvers + "/site-packages/spade/mtp/"
++	for file in os.listdir(path):
+ 		try:
+ 			# If its a python script
+ 			if file[-3:] == ".py":
+@@ -87,9 +90,9 @@
+ 	# Fill the data
+ 	# GUS: By default, no MTPs, thank you
+ 	#spadexml = spadexml.replace("#MTPS#", mtp_str)	
+-	spadexml = spadexml.replace("#MTPS#", "")	
+-
+-	file = open("etc/spade.xml", "w+")
++	spadexml = spadexml.replace("#MTPS#", "")
++	
++	file = open("/usr/pkg/etc/spade/spade.xml", "w+")
+ 	file.write(spadexml)
+ 	file.close()
+ 
+@@ -132,8 +135,7 @@
+                         </components>
+ 		</server>
+ 		'''
+-
+-	file = open("etc/xmppd.xml", "w+")
++	file = open("/usr/pkg/etc/spade/xmppd.xml", "w+")
+ 	file.write(xmppdxml)
+ 	file.close()
+ 

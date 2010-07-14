@@ -1,8 +1,7 @@
-$NetBSD: patch-aa,v 1.5 2010/07/12 20:17:39 jihbed Exp $
-
+$NetBSD: patch-aa,v 1.6 2010/07/14 00:38:03 jihbed Exp $
 
 --- setup.py.orig	2008-12-10 18:04:26.000000000 +0000
-+++ setup.py	2010-07-12 20:09:57.000000000 +0000
++++ setup.py	2010-07-14 01:07:04.000000000 +0000
 @@ -4,7 +4,7 @@
  from distutils.core import setup, Extension
  import glob
@@ -12,7 +11,7 @@ $NetBSD: patch-aa,v 1.5 2010/07/12 20:17:39 jihbed Exp $
  
  #if os.name != "posix":
  #	import py2exe
-@@ -27,7 +27,7 @@
+@@ -27,23 +27,20 @@
  if os.name == "posix":
  	#if sys.platform != "darwin":
  		setup(name='SPADE',
@@ -21,17 +20,18 @@ $NetBSD: patch-aa,v 1.5 2010/07/12 20:17:39 jihbed Exp $
  		description='Smart Python multi-Agent Development Environment',
  		author='Javier Palanca, Miguel Escriva, Gustavo Aranda, Natalia Criado',
  		author_email='jpalanca@dsic.upv.es',
-@@ -35,15 +35,14 @@
+ 		url='http://spade.gti-ia.dsic.upv.es',
  		package_dir={'spade': 'spade'},
  		#packages=['spade', 'xmpp', 'xmppd', 'xmppd.modules', 'xmppd.locale', 'xmppd.socker', 'tlslite', 'tlslite.utils', 'tlslite.integration'],
- 		packages=['spade', 'xmpp', 'xmppd', 'xmppd.modules', 'xmppd.socker', 'tlslite', 'tlslite.utils', 'tlslite.integration'],
+-		packages=['spade', 'xmpp', 'xmppd', 'xmppd.modules', 'xmppd.socker', 'tlslite', 'tlslite.utils', 'tlslite.integration'],
 -		#scripts=['spade.sh','gspade.sh','gspade.py', 'runspade.py',"tlslite/scripts/tls.py", "tlslite/scripts/tlsdb.py"],
 -		scripts=['runspade.py',"tlslite/scripts/tls.py", "tlslite/scripts/tlsdb.py"],
++		packages=['spade', 'spade.mtp','xmpp', 'xmppd', 'xmppd.modules', 'xmppd.socker', 'tlslite', 'tlslite.utils', 'tlslite.integration'],
 +		#scripts=['spade.sh','gspade.sh','gspade.py', 'runspade.py',"tls2.6", "tlsdb2.6"],
-+		scripts=['runspade.py',"tls2.6", "tlsdb2.6"],
++		scripts=['runspade.py','configure.py',"tls2.6", "tlsdb2.6"],
  		data_files=[
- 			('/etc/spade',['etc/spade.xml']),
- 			('/etc/spade',['etc/xmppd.xml']),
+-			('/etc/spade',['etc/spade.xml']),
+-			('/etc/spade',['etc/xmppd.xml']),
  			#('/usr/share/spade',['usr/share/spade/rma.glade']),
  			('/usr/share/spade/mtp',glob.glob('usr/share/spade/mtp/*.py')),
 -			('/usr/share/doc/spade',['readme.txt']),
@@ -40,7 +40,7 @@ $NetBSD: patch-aa,v 1.5 2010/07/12 20:17:39 jihbed Exp $
  			#('/usr/share/spade/jabberd',['usr/share/spade/jabberd/jabberd','usr/share/spade/jabberd/jabber.xml']),
  			#('/usr/share/spade/jabberd/libs',glob.glob('usr/share/spade/jabberd/libs/*.so')),
  			#('/usr/share/spade/jabberd/spool',['usr/share/spade/jabberd/spool/.spool'])
-@@ -63,8 +62,8 @@
+@@ -63,8 +60,8 @@
  	#packages=['spade', 'xmpp', 'xmppd', 'xmppd.filters', 'tlslite', 'tlslite.utils', 'tlslite.integration'],
  	packages=['spade', 'xmpp', 'xmppd', 'xmppd.modules', 'xmppd.socker', 'tlslite', 'tlslite.utils', 'tlslite.integration'],
  	#scripts=['spade-rma.py', 'runspade.py'],
