@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4022 2010/07/14 13:40:47 jihbed Exp $
+# $Id: Makefile,v 1.4023 2010/07/14 13:42:08 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2015,6 +2015,7 @@ SUBDIR+=	py-pygi
 SUBDIR+=	py-pypedal
 SUBDIR+=	py-pyqu
 SUBDIR+=	py-pyquante
+SUBDIR+=	py-pylons
 SUBDIR+=	py-pythics
 SUBDIR+=	py-pyvib2
 SUBDIR+=	py-qecalc
