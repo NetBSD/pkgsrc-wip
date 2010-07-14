@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/07/14 13:21:48 jihbed Exp $
+
+SHA1 (transaction-1.1.0.tar.gz) = 501d06f36517b8a1e6ae055a1f51dc02da817a76
+RMD160 (transaction-1.1.0.tar.gz) = 79325519bd12a8acb3a641baeca997e6a82c0f29
+Size (transaction-1.1.0.tar.gz) = 39712 bytes
