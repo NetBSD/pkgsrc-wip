@@ -1,21 +1,8 @@
-$NetBSD: patch-ac,v 1.5 2010/05/16 14:56:39 thomasklausner Exp $
+$NetBSD: patch-ac,v 1.6 2010/07/14 07:17:41 asau Exp $
 
---- Makefile.rules.orig	2010-05-16 05:20:18.000000000 +0000
-+++ Makefile.rules
-@@ -588,12 +588,6 @@ ifeq ($(TARGET_OS),Darwin)
-   endif
- endif
- 
--ifdef SHARED_LIBRARY
--ifneq ($(DARWIN_MAJVERS),4)
--  LD.Flags += $(RPATH) -Wl,$(LibDir)
--endif
--endif
--
- ifdef TOOL_VERBOSE
-   C.Flags += -v
-   CXX.Flags += -v
-@@ -623,9 +617,9 @@ ifneq ($(DARWIN_MAJVERS),4)
+--- Makefile.rules.orig	2010-07-14 10:19:32.000000000 +0400
++++ Makefile.rules	2010-07-14 10:22:46.000000000 +0400
+@@ -626,9 +626,9 @@
  ifdef TOOLNAME
    LD.Flags += $(RPATH) -Wl,'$$ORIGIN/../lib'
    ifdef EXAMPLE_TOOL

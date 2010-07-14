@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2010/05/16 15:51:33 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.16 2010/07/14 07:17:41 asau Exp $
 bin/bugpoint
 bin/llc
 bin/lli
@@ -10,6 +10,7 @@ bin/llvm-dis
 bin/llvm-extract
 bin/llvm-ld
 bin/llvm-link
+bin/llvm-mc
 bin/llvm-nm
 bin/llvm-prof
 bin/llvm-ranlib
@@ -32,6 +33,7 @@ include/llvm/ADT/APFloat.h
 include/llvm/ADT/APInt.h
 include/llvm/ADT/APSInt.h
 include/llvm/ADT/BitVector.h
+include/llvm/ADT/DAGDeltaAlgorithm.h
 include/llvm/ADT/DeltaAlgorithm.h
 include/llvm/ADT/DenseMap.h
 include/llvm/ADT/DenseMapInfo.h
@@ -83,6 +85,7 @@ include/llvm/Analysis/AliasSetTracker.h
 include/llvm/Analysis/CFGPrinter.h
 include/llvm/Analysis/CallGraph.h
 include/llvm/Analysis/CaptureTracking.h
+include/llvm/Analysis/CodeMetrics.h
 include/llvm/Analysis/ConstantFolding.h
 include/llvm/Analysis/ConstantsScanner.h
 include/llvm/Analysis/DOTGraphTraitsPass.h
@@ -102,6 +105,7 @@ include/llvm/Analysis/LibCallAliasAnalysis.h
 include/llvm/Analysis/LibCallSemantics.h
 include/llvm/Analysis/Lint.h
 include/llvm/Analysis/LiveValues.h
+include/llvm/Analysis/Loads.h
 include/llvm/Analysis/LoopDependenceAnalysis.h
 include/llvm/Analysis/LoopInfo.h
 include/llvm/Analysis/LoopPass.h
@@ -145,6 +149,7 @@ include/llvm/CodeGen/BinaryObject.h
 include/llvm/CodeGen/CalcSpillWeights.h
 include/llvm/CodeGen/CallingConvLower.h
 include/llvm/CodeGen/FastISel.h
+include/llvm/CodeGen/FunctionLoweringInfo.h
 include/llvm/CodeGen/GCMetadata.h
 include/llvm/CodeGen/GCMetadataPrinter.h
 include/llvm/CodeGen/GCStrategy.h
@@ -184,6 +189,7 @@ include/llvm/CodeGen/MachineRelocation.h
 include/llvm/CodeGen/MachineSSAUpdater.h
 include/llvm/CodeGen/ObjectCodeEmitter.h
 include/llvm/CodeGen/Passes.h
+include/llvm/CodeGen/PostRAHazardRecognizer.h
 include/llvm/CodeGen/ProcessImplicitDefs.h
 include/llvm/CodeGen/PseudoSourceValue.h
 include/llvm/CodeGen/RegAllocRegistry.h
@@ -263,13 +269,16 @@ include/llvm/MC/MCExpr.h
 include/llvm/MC/MCFixup.h
 include/llvm/MC/MCInst.h
 include/llvm/MC/MCInstPrinter.h
+include/llvm/MC/MCLabel.h
 include/llvm/MC/MCMachOSymbolFlags.h
+include/llvm/MC/MCObjectStreamer.h
 include/llvm/MC/MCObjectWriter.h
 include/llvm/MC/MCParser/AsmCond.h
 include/llvm/MC/MCParser/AsmLexer.h
 include/llvm/MC/MCParser/AsmParser.h
 include/llvm/MC/MCParser/MCAsmLexer.h
 include/llvm/MC/MCParser/MCAsmParser.h
+include/llvm/MC/MCParser/MCAsmParserExtension.h
 include/llvm/MC/MCParser/MCParsedAsmOperand.h
 include/llvm/MC/MCSection.h
 include/llvm/MC/MCSectionCOFF.h
@@ -292,6 +301,7 @@ include/llvm/PassSupport.h
 include/llvm/Support/AlignOf.h
 include/llvm/Support/Allocator.h
 include/llvm/Support/CFG.h
+include/llvm/Support/COFF.h
 include/llvm/Support/CallSite.h
 include/llvm/Support/Casting.h
 include/llvm/Support/CommandLine.h
@@ -380,6 +390,7 @@ include/llvm/Target/Target.td
 include/llvm/Target/TargetAsmBackend.h
 include/llvm/Target/TargetAsmLexer.h
 include/llvm/Target/TargetAsmParser.h
+include/llvm/Target/TargetCallingConv.h
 include/llvm/Target/TargetCallingConv.td
 include/llvm/Target/TargetData.h
 include/llvm/Target/TargetELFWriterInfo.h
@@ -425,6 +436,7 @@ include/llvm/Use.h
 include/llvm/User.h
 include/llvm/Value.h
 include/llvm/ValueSymbolTable.h
+lib/LLVMHello.so
 lib/libCompilerDriver.a
 lib/libEnhancedDisassembly.a
 lib/libEnhancedDisassembly.so
@@ -437,7 +449,6 @@ lib/libLLVMBitWriter.a
 lib/libLLVMCodeGen.a
 lib/libLLVMCore.a
 lib/libLLVMExecutionEngine.a
-lib/libLLVMHello.so
 lib/libLLVMInstCombine.a
 lib/libLLVMInstrumentation.a
 lib/libLLVMInterpreter.a
@@ -463,7 +474,7 @@ lib/libLTO.so
 lib/libUnitTestMain.a
 lib/libplugin_llvmc_Base.a
 lib/libplugin_llvmc_Clang.a
-lib/libprofile_rt.so
+lib/profile_rt.so
 man/man1/bugpoint.1
 man/man1/lit.1
 man/man1/llc.1
