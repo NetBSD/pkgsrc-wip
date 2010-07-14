@@ -1,7 +1,7 @@
-$NetBSD: patch-ae,v 1.1 2010/07/13 13:13:55 jihbed Exp $
+$NetBSD: patch-ae,v 1.2 2010/07/14 15:31:30 jihbed Exp $
 
---- ./xmppd/xmppd.py.orig	2010-07-13 14:06:31.000000000 +0000
-+++ ./xmppd/xmppd.py	2010-07-13 14:13:37.000000000 +0000
+--- ./xmppd/xmppd.py.orig	2009-06-04 17:49:03.000000000 +0000
++++ ./xmppd/xmppd.py	2010-07-14 16:22:58.000000000 +0000
 @@ -32,7 +32,7 @@
  from math import *
  import traceback
@@ -11,6 +11,15 @@ $NetBSD: patch-ae,v 1.1 2010/07/13 13:13:55 jihbed Exp $
  globals()['DEFAULT_LANG'] = 'en'
  #globals()['LANG_LIST'] = []
  
+@@ -887,7 +887,7 @@
+ 			self.SESS_LOCK.release()
+ 
+ class Server:
+-    def __init__(self,cfgfile="./xmppd.xml",cmd_options={},under_restart=False):
++    def __init__(self,cfgfile="/usr/pkg/etc/spade/xmppd.xml",cmd_options={},under_restart=False):
+ #        threading.Thread.__init__(self)
+         self.defaultNamespace = NS_CLIENT
+         #Load localizer as _l
 @@ -953,7 +953,7 @@
  	if cmd_options.setdefault('socker_info',False): import xmlrpclib
  
