@@ -43,6 +43,7 @@ Suggested package updates
 	o gtkaml-0.2.10
 	o guichan-0.8.1
 	o guitone-0.9
+	o hitori-0.2.4
 	o httrack-3.43
 	o hu-go-2.11
 	o hyena-0.3
@@ -85,7 +86,6 @@ Suggested package updates
 	o pike-7.8.352
 	o py-PyPE-2.9
 	o py-gnucash-0.7.55
-	o py-qt4-qscintilla-2.4.4
 	o py-zeitgeist-0.4.0
 	o python31-3.1.2
 	o qcomicbook-0.5.0
