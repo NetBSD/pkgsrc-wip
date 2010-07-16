@@ -1,0 +1,31 @@
+# $NetBSD: Makefile,v 1.1.1.1 2010/07/16 10:46:57 ryo-on Exp $
+#
+# Imported from uebayasi@NetBSD.org's wip-jp/skkjisyo, and modified.
+#
+
+DISTNAME=	SKK-JISYO.L.${SKKJISYO_VERS}
+PKGNAME=	skk-jisyo-${SKKJISYO_VERS}
+CATEGORIES=	japanese inputmethod
+MASTER_SITES=	ftp://ftp.freebsd.org/pub/FreeBSD/ports/local-distfiles/matusita/skk-jisyo/
+#MASTER_SITES=	${MASTER_SITE_FREEBSD_LOCAL:=matusita/skk-jisyo/}
+EXTRACT_SUFX=	.bz2
+
+MAINTAINER=	ryo_on@yk.rim.or.jp
+HOMEPAGE=	http://openlab.ring.gr.jp/skk/wiki/wiki.cgi?page=SKK%BC%AD%BD%F1
+COMMENT=	Dictionary collection for SKK
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+CONFLICTS=	skkserv-3.9.4nb[1-6]*
+
+NO_BUILD=	yes
+
+SKKJISYO_VERS=	201007
+
+INSTALLATION_DIRS+=	${PREFIX}/share/skk
+
+do-install:
+	${INSTALL_DATA} ${WRKDIR}/SKK-JISYO.L.${SKKJISYO_VERS} \
+		${DESTDIR}${PREFIX}/share/skk/SKK-JISYO.L
+
+.include "../../mk/bsd.pkg.mk"
