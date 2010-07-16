@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/07/16 10:49:58 ryo-on Exp $
+bin/skkdic-count
+bin/skkdic-expr
+bin/skkdic-expr2
+bin/skkdic-sort
