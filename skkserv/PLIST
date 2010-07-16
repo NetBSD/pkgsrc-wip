@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/07/16 10:49:01 ryo-on Exp $
+libexec/skkserv
+share/examples/rc.d/skkserv
+share/skk/README.skkserv
