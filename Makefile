@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4024 2010/07/16 10:52:55 ryo-on Exp $
+# $Id: Makefile,v 1.4025 2010/07/16 12:53:35 tnn2 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2141,6 +2141,7 @@ SUBDIR+=	remctl
 SUBDIR+=	resid-builder
 SUBDIR+=	residual-nightly
 SUBDIR+=	repositoryhandler
+SUBDIR+=	resin
 SUBDIR+=	rhapsody
 SUBDIR+=	ripe-rpsl-objectlibrary
 SUBDIR+=	ripit
