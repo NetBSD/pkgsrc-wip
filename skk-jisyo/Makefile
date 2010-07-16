@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/07/16 10:46:57 ryo-on Exp $
+# $NetBSD: Makefile,v 1.2 2010/07/16 12:09:25 obache Exp $
 #
 # Imported from uebayasi@NetBSD.org's wip-jp/skkjisyo, and modified.
 #
@@ -6,8 +6,7 @@
 DISTNAME=	SKK-JISYO.L.${SKKJISYO_VERS}
 PKGNAME=	skk-jisyo-${SKKJISYO_VERS}
 CATEGORIES=	japanese inputmethod
-MASTER_SITES=	ftp://ftp.freebsd.org/pub/FreeBSD/ports/local-distfiles/matusita/skk-jisyo/
-#MASTER_SITES=	${MASTER_SITE_FREEBSD_LOCAL:=matusita/skk-jisyo/}
+MASTER_SITES=	${MASTER_SITE_FREEBSD_LOCAL:=matusita/skk-jisyo/}
 EXTRACT_SUFX=	.bz2
 
 MAINTAINER=	ryo_on@yk.rim.or.jp
