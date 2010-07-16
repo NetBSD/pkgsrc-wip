@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/06/12 23:26:08 jihbed Exp $
-bin/mgload.py
-${PYSITELIB}/magnitude.py
-${PYSITELIB}/magnitude.pyc
-${PYSITELIB}/magnitude.pyo
-share/doc/py-magnitude/README.txt
