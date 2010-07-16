@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2010/07/14 00:38:02 jihbed Exp $
+# $NetBSD: Makefile,v 1.13 2010/07/16 22:14:59 jihbed Exp $
 #
 
 DISTNAME=	spade-2.0rc4
@@ -15,7 +15,6 @@ DEPENDS+=	${PYPKGPREFIX}-dns-[0-9]*:../../net/py-dns
 DEPENDS+=	${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
 DEPENDS+=	${PYPKGPREFIX}-m2crypto>=0.13:../../security/py-m2crypto
 DEPENDS+=	${PYPKGPREFIX}-event>=0.3:../../wip/py-event
-DEPENDS+=	${PYPKGPREFIX}-gmpy>=1.04:../../wip/py-gmpy
 DEPENDS+=	jython>=2.5.1:../../wip/jython
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -48,4 +47,5 @@ do-test:
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .include "../../security/py-amkCrypto/buildlink3.mk"
+.include "../../wip/py-gmpy/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
