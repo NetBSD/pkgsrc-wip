@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.3 2009/12/23 08:40:14 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.4 2010/07/16 21:53:06 jihbed Exp $
 bin/spin
+bin/xspin
 man/man1/spin.1
 share/doc/spin/Book.Ch6.add
 share/doc/spin/Book.Errata
@@ -37,4 +38,5 @@ share/examples/spin/priorities
 share/examples/spin/snoopy
 share/examples/spin/sort
 share/examples/spin/wordcount
+share/examples/spin/zune.ltl
 share/examples/spin/zune.pml
