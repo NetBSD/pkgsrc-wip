@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/07/16 12:09:25 obache Exp $
+# $NetBSD: Makefile,v 1.3 2010/07/16 13:06:10 ryo-on Exp $
 #
 # Imported from uebayasi@NetBSD.org's wip-jp/skkjisyo, and modified.
 #
@@ -19,7 +19,7 @@ CONFLICTS=	skkserv-3.9.4nb[1-6]*
 
 NO_BUILD=	yes
 
-SKKJISYO_VERS=	201007
+SKKJISYO_VERS=	200708
 
 INSTALLATION_DIRS+=	${PREFIX}/share/skk
 
