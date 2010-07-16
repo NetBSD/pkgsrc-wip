@@ -1,0 +1,15 @@
+$NetBSD: patch-modules_c_src_resin__os_Makefile.in,v 1.1.1.1 2010/07/16 12:50:00 tnn2 Exp $
+
+--- modules/c/src/resin_os/Makefile.in.orig	2010-07-01 14:40:22.000000000 +0000
++++ modules/c/src/resin_os/Makefile.in
+@@ -39,8 +39,8 @@ clean	:
+ 
+ install	: libresin_os.$(SO)
+ #	cp resin $(resin_home)/bin
+-	- mkdir -p $(resin_home)/$(LIBEXEC)
+-	cp libresin_os.$(SO) $(resin_home)/$(LIBEXEC)
++	- mkdir -p $(DESTDIR)$(resin_home)/$(LIBEXEC)
++	cp libresin_os.$(SO) $(DESTDIR)$(resin_home)/$(LIBEXEC)
+ 
+ 
+ 

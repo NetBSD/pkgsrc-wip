@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/07/16 12:50:00 tnn2 Exp $
+
+SHA1 (resin-4.0.8.zip) = cd855461b378619050f33915ba7ba18dc4d8e866
+RMD160 (resin-4.0.8.zip) = a4a8b701472dd1b1e58dfb6c406f2e5e53f5ab16
+Size (resin-4.0.8.zip) = 17712643 bytes
+SHA1 (patch-Makefile.in) = 0cc816d0745e835b14bf9b3c944fed470c642eff
+SHA1 (patch-bin_resin.sh) = 6e58984c550dcd6ecfb8093968b1faf089d75cf7
+SHA1 (patch-configure) = b1ac40297e9a6ac27ec9bc3840dd8d2dd93f3d18
+SHA1 (patch-modules_c_src_resin__os_Makefile.in) = 74a58ea619a4ccb7e2e3b627fd833ab8809e917b
