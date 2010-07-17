@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/07/17 07:57:17 obache Exp $
+# $NetBSD: Makefile,v 1.5 2010/07/17 08:03:39 obache Exp $
 
 DISTNAME=	skk9.6
 PKGNAME=	skkserv-3.9.4
@@ -21,6 +21,7 @@ BUILD_DEFS+=	IPV6_READY
 DIST_SUBDIR=	skk
 
 GNU_CONFIGURE=	YES
+BUILD_DIRS=	skkserv
 
 .include "../../mk/bsd.prefs.mk"
 
