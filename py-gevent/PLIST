@@ -1,10 +1,13 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/05/14 21:49:21 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/07/17 00:49:41 jihbed Exp $
 ${PYSITELIB}/gevent/__init__.py
 ${PYSITELIB}/gevent/__init__.pyc
 ${PYSITELIB}/gevent/__init__.pyo
 ${PYSITELIB}/gevent/backdoor.py
 ${PYSITELIB}/gevent/backdoor.pyc
 ${PYSITELIB}/gevent/backdoor.pyo
+${PYSITELIB}/gevent/baseserver.py
+${PYSITELIB}/gevent/baseserver.pyc
+${PYSITELIB}/gevent/baseserver.pyo
 ${PYSITELIB}/gevent/core.so
 ${PYSITELIB}/gevent/coros.py
 ${PYSITELIB}/gevent/coros.pyc
@@ -24,6 +27,9 @@ ${PYSITELIB}/gevent/http.pyo
 ${PYSITELIB}/gevent/hub.py
 ${PYSITELIB}/gevent/hub.pyc
 ${PYSITELIB}/gevent/hub.pyo
+${PYSITELIB}/gevent/local.py
+${PYSITELIB}/gevent/local.pyc
+${PYSITELIB}/gevent/local.pyo
 ${PYSITELIB}/gevent/monkey.py
 ${PYSITELIB}/gevent/monkey.pyc
 ${PYSITELIB}/gevent/monkey.pyo
@@ -42,6 +48,9 @@ ${PYSITELIB}/gevent/rawgreenlet.pyo
 ${PYSITELIB}/gevent/select.py
 ${PYSITELIB}/gevent/select.pyc
 ${PYSITELIB}/gevent/select.pyo
+${PYSITELIB}/gevent/server.py
+${PYSITELIB}/gevent/server.pyc
+${PYSITELIB}/gevent/server.pyo
 ${PYSITELIB}/gevent/socket.py
 ${PYSITELIB}/gevent/socket.pyc
 ${PYSITELIB}/gevent/socket.pyo

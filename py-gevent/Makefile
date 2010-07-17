@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2010/06/20 00:31:42 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2010/07/17 00:49:41 jihbed Exp $
 #
 
-DISTNAME=	gevent-0.12.2.tar
+DISTNAME=	gevent-0.13.0.tar
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/.tar//}
-CATEGORIES=	devel
+CATEGORIES=	net
 MASTER_SITES=	http://pypi.python.org/packages/source/g/gevent/
-EXTRACT_SUFX=	.gz#md5=97c75039a67593d3f5375fb77f73bbe7
+EXTRACT_SUFX=	.gz
 
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://www.gevent.org/
@@ -14,7 +14,7 @@ LICENSE=	mit
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-WRKSRC=	${WRKDIR}/gevent-0.12.2
+WRKSRC=	${WRKDIR}/gevent-0.13.0
 USE_LANGUAGES=	c c++
 
 PYDISTUTILSPKG= yes
@@ -22,7 +22,7 @@ PYDISTUTILSPKG= yes
 do-test:
 	${RUN} cd ${WRKSRC}/greentest; ${SETENV} ${TEST_ENV} ${PYTHONBIN} testrunner.py
 	
-
+.include "../../devel/py-cython/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libevent+=libevent>=0.6
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../lang/python/extension.mk"
