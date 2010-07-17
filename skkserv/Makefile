@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/07/16 13:06:10 ryo-on Exp $
+# $NetBSD: Makefile,v 1.4 2010/07/17 07:57:17 obache Exp $
 
 DISTNAME=	skk9.6
 PKGNAME=	skkserv-3.9.4
@@ -43,7 +43,7 @@ SUBST_CLASSES+=		ver-num
 SUBST_STAGE.ver-num=	pre-configure
 SUBST_MESSAGE.ver-num=	Fixing version number and its comments.
 SUBST_FILES.ver-num=	skkserv/skkserv.c
-SUBST_SED.ver-num=	-e 's,"3.9.4 ","3.9.4nb${PKGREVISION} (binary search) ",g'
+SUBST_SED.ver-num=	-e 's,"${PKGVERSION_NOREV} ","${PKGVERSION} (binary search) ",g'
 
 INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX}
 
