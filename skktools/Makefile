@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/07/16 10:49:58 ryo-on Exp $
+# $NetBSD: Makefile,v 1.2 2010/07/17 07:37:51 obache Exp $
 #
 # Imported from uebayasi@NetBSD.org's wip-jp/skktools, and modified.
 #
@@ -17,14 +17,12 @@ CONFLICTS=	skkserv-3.9.4nb[1-6]*
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--without-gdbm
-#CONFIGURE_ARGS+=--without-skkdic-expr2
 
-USE_TOOLS+=	pkg-config
+.include "options.mk"
 
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	pre-configure
 SUBST_FILES.prefix=	configure
 SUBST_SED.prefix=	-e 's|/usr/local|${PREFIX}|g'
 
-.include "../../devel/glib2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

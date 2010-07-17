@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/07/16 10:49:58 ryo-on Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/07/17 07:37:51 obache Exp $
 bin/skkdic-count
 bin/skkdic-expr
-bin/skkdic-expr2
+${PLIST.expr2}bin/skkdic-expr2
 bin/skkdic-sort
