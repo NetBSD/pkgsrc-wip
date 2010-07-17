@@ -1,0 +1,11 @@
+dmt-ux is intended to be a unix-port of dmt (http://dmt.mhilfe.de),
+  a DSL-diagnostics-tool.
+
+  It can query certain Modems for data about the line-quality.
+  DMT-UX should work with Thomson Speedtouch and compatible modems.
+  Tested with:
+  - Thomson Speedtouch 516i V6.
+  -
+
+  Author:   Timo Boettcher (dmt-ux@spida.net)
+  Homepage: http://www.spida.net/projects/dmt-ux
