@@ -1,19 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2010/04/10 20:10:33 jihbed Exp $
-${PYSITELIB}/benchmarks/__init__.py
-${PYSITELIB}/benchmarks/__init__.pyc
-${PYSITELIB}/benchmarks/__init__.pyo
-${PYSITELIB}/benchmarks/context.py
-${PYSITELIB}/benchmarks/context.pyc
-${PYSITELIB}/benchmarks/context.pyo
-${PYSITELIB}/benchmarks/hub_timers.py
-${PYSITELIB}/benchmarks/hub_timers.pyc
-${PYSITELIB}/benchmarks/hub_timers.pyo
-${PYSITELIB}/benchmarks/localhost_socket.py
-${PYSITELIB}/benchmarks/localhost_socket.pyc
-${PYSITELIB}/benchmarks/localhost_socket.pyo
-${PYSITELIB}/benchmarks/spawn.py
-${PYSITELIB}/benchmarks/spawn.pyc
-${PYSITELIB}/benchmarks/spawn.pyo
+@comment $NetBSD: PLIST,v 1.3 2010/07/17 00:09:47 jihbed Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -29,9 +14,6 @@ ${PYSITELIB}/eventlet/api.pyo
 ${PYSITELIB}/eventlet/backdoor.py
 ${PYSITELIB}/eventlet/backdoor.pyc
 ${PYSITELIB}/eventlet/backdoor.pyo
-${PYSITELIB}/eventlet/common.py
-${PYSITELIB}/eventlet/common.pyc
-${PYSITELIB}/eventlet/common.pyo
 ${PYSITELIB}/eventlet/convenience.py
 ${PYSITELIB}/eventlet/convenience.pyc
 ${PYSITELIB}/eventlet/convenience.pyo
@@ -194,6 +176,9 @@ ${PYSITELIB}/eventlet/support/__init__.pyo
 ${PYSITELIB}/eventlet/support/greenlets.py
 ${PYSITELIB}/eventlet/support/greenlets.pyc
 ${PYSITELIB}/eventlet/support/greenlets.pyo
+${PYSITELIB}/eventlet/support/psycopg2_patcher.py
+${PYSITELIB}/eventlet/support/psycopg2_patcher.pyc
+${PYSITELIB}/eventlet/support/psycopg2_patcher.pyo
 ${PYSITELIB}/eventlet/support/pylib.py
 ${PYSITELIB}/eventlet/support/pylib.pyc
 ${PYSITELIB}/eventlet/support/pylib.pyo
@@ -227,6 +212,9 @@ ${PYSITELIB}/eventlet/twistedutil/protocols/basic.pyo
 ${PYSITELIB}/eventlet/util.py
 ${PYSITELIB}/eventlet/util.pyc
 ${PYSITELIB}/eventlet/util.pyo
+${PYSITELIB}/eventlet/websocket.py
+${PYSITELIB}/eventlet/websocket.pyc
+${PYSITELIB}/eventlet/websocket.pyo
 ${PYSITELIB}/eventlet/wsgi.py
 ${PYSITELIB}/eventlet/wsgi.pyc
 ${PYSITELIB}/eventlet/wsgi.pyo

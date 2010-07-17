@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2010/04/10 20:10:33 jihbed Exp $
+$NetBSD: distinfo,v 1.3 2010/07/17 00:09:47 jihbed Exp $
 
-SHA1 (eventlet-0.9.7.tar.gz) = 6e63c1ba066765ad5db7716ffa6c39efc52c2199
-RMD160 (eventlet-0.9.7.tar.gz) = 6ae100c9c4175c929c909ffd6f59d050b42ac7eb
-Size (eventlet-0.9.7.tar.gz) = 221239 bytes
+SHA1 (eventlet-0.9.9.tar.gz) = f0c86fc20d27e5c0aee1d91d55fbb50042ac23ee
+RMD160 (eventlet-0.9.9.tar.gz) = ef03668dc1e713437d55ee4021cb6f80327fa612
+Size (eventlet-0.9.9.tar.gz) = 233549 bytes
