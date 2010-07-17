@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2010/01/17 12:03:23 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2010/07/17 14:51:27 genolopolis Exp $
 #
 
-DISTNAME=	cfengine-3.0.2
-PKGREVISION=	1
+DISTNAME=	cfengine-3.0.5p1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.cfengine.org/tarballs/
 
@@ -22,11 +22,11 @@ CONFIGURE_ARGS+=        --with-openssl=${BUILDLINK_PREFIX.openssl:Q}
 CONFIGURE_ARGS+=        --with-pcre=${BUILDLINK_PREFIX.pcre:Q}
 
 EGDIR=                  /var/${PKGBASE}
-CONF_FILES+=            ${PREFIX/share/${PKGBASE}/failsafe.cf ${EGDIR}/failsafe.cf
-CONF_FILES+=            ${PREFIX}/share/${PKGBASE}/library.cf ${EGDIR}/library.cf
-CONF_FILES+=            ${PREFIX}/share/${PKGBASE}/promises.cf ${EGDIR}/promises.cf
-CONF_FILES+=            ${PREFIX}/share/${PKGBASE}/site.cf ${EGDIR}/site.cf
-CONF_FILES+=            ${PREFIX}/share/${PKGBASE}/update.cf ${EGDIR}/update.cf
+CONF_FILES+=            ${PREFIX}/share/doc/${PKGBASE}/inputs/failsafe.cf ${EGDIR}/failsafe.cf
+CONF_FILES+=            ${PREFIX}/share/doc/${PKGBASE}/inputs/library.cf ${EGDIR}/library.cf
+CONF_FILES+=            ${PREFIX}/share/doc/${PKGBASE}/inputs/promises.cf ${EGDIR}/promises.cf
+CONF_FILES+=            ${PREFIX}/share/doc/${PKGBASE}/inputs/site.cf ${EGDIR}/site.cf
+CONF_FILES+=            ${PREFIX}/share/doc/${PKGBASE}/inputs/update.cf ${EGDIR}/update.cf
 INSTALL_MAKE_FLAGS+=    ${MAKE_FLAGS} sysconfdir=${EGDIR:Q}
 
 .include "../../databases/db4/buildlink3.mk"
