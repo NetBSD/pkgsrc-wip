@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4027 2010/07/17 09:05:34 obache Exp $
+# $Id: Makefile,v 1.4028 2010/07/17 20:33:30 gschwarz Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -329,6 +329,7 @@ SUBDIR+=	diveintopython
 SUBDIR+=	djview4
 SUBDIR+=	dk-milter
 SUBDIR+=	dmd-bin
+SUBDIR+=	dmt-ux
 SUBDIR+=	dmxproto
 SUBDIR+=	dnrd
 SUBDIR+=	dns2tcp
