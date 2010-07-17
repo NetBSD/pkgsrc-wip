@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/06/26 00:17:03 ryo-on Exp $
-lib/X11/fonts/TTF/ipag.ttf
-lib/X11/fonts/TTF/ipagp.ttf
-lib/X11/fonts/TTF/ipam.ttf
-lib/X11/fonts/TTF/ipamp.ttf
-share/doc/${PKGBASE}/IPA_Font_License_Agreement_v1.0.txt
-share/doc/${PKGBASE}/Readme_IPAfont${PKGVERSION}.txt
