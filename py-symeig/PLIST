@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/07/17 13:44:57 jihbed Exp $
+${PYSITELIB}/symeig/__init__.py
+${PYSITELIB}/symeig/__init__.pyc
+${PYSITELIB}/symeig/__init__.pyo
+${PYSITELIB}/symeig/froutines.so
+${PYSITELIB}/symeig/symeig.py
+${PYSITELIB}/symeig/symeig.pyc
+${PYSITELIB}/symeig/symeig.pyo
+${PYSITELIB}/symeig/test/__init__.py
+${PYSITELIB}/symeig/test/__init__.pyc
+${PYSITELIB}/symeig/test/__init__.pyo
+${PYSITELIB}/symeig/test/benchmark_symeig.py
+${PYSITELIB}/symeig/test/benchmark_symeig.pyc
+${PYSITELIB}/symeig/test/benchmark_symeig.pyo
+${PYSITELIB}/symeig/test/test_symeig.py
+${PYSITELIB}/symeig/test/test_symeig.pyc
+${PYSITELIB}/symeig/test/test_symeig.pyo
+${PYSITELIB}/symeig/test/testing_tools.py
+${PYSITELIB}/symeig/test/testing_tools.pyc
+${PYSITELIB}/symeig/test/testing_tools.pyo
