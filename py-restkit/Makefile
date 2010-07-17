@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.2 2010/05/08 17:13:38 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2010/07/17 01:00:17 jihbed Exp $
 #
 
-DISTNAME=	restkit-1.3.1.tar
+DISTNAME=	restkit-2.0.4.tar
 EGG_NAME=	${DISTNAME:S/.tar//}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/.tar//}
 CATEGORIES=	www python
 MASTER_SITES=	http://pypi.python.org/packages/source/r/restkit/
-EXTRACT_SUFX=	.gz#md5=4674abf005aee7eb6cd2e848f13fcb52
+EXTRACT_SUFX=	.gz
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://github.com/benoitc/restkit/
@@ -15,12 +15,13 @@ LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-simplejson>=2.0.9:../../converters/py-simplejson
 DEPENDS+=	${PYPKGPREFIX}-pygments>=1.3.1:../../textproc/py-pygments
-DEPENDS+=	${PYPKGPREFIX}-oauth>=1.0.1:../../wip/py-oauth
+DEPENDS+=	${PYPKGPREFIX}-eventlet>=0.9.7:../../wip/py-eventlet
+DEPENDS+=	${PYPKGPREFIX}-gevent>=0.13.0:../../wip/py-gevent
 DEPENDS+=	${PYPKGPREFIX}-webob>=0.9.8:../../wip/py-webob
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-WRKSRC=		${WRKDIR}/restkit-1.3.1
+WRKSRC=		${WRKDIR}/restkit-2.0.4
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCOMPATIBLE= 24 23 22 21 20
