@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2010/07/17 07:37:51 obache Exp $
-bin/skkdic-count
-bin/skkdic-expr
-${PLIST.expr2}bin/skkdic-expr2
-bin/skkdic-sort

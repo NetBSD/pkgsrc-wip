@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4026 2010/07/17 03:10:25 obache Exp $
+# $Id: Makefile,v 1.4027 2010/07/17 09:05:34 obache Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2225,9 +2225,6 @@ SUBDIR+=	sipp
 SUBDIR+=	siproxd
 SUBDIR+=	siptoolbox
 SUBDIR+=	sis
-SUBDIR+=	skk-jisyo
-SUBDIR+=	skkserv
-SUBDIR+=	skktools
 SUBDIR+=	ski
 SUBDIR+=	sks
 SUBDIR+=	slackpkg2pkgsrc
