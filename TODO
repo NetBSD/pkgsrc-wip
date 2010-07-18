@@ -31,6 +31,7 @@ Suggested package updates
 	o gcc42-4.2.4
 	o gcc43-4.3.4
 	o geant-4.9.3p1
+	o gemrb-0.6.1
 	o gforge-4.5.11
 	o glib-java-0.4.2
 	o globulation2-0.9.4
@@ -71,7 +72,7 @@ Suggested package updates
 	o llvm-2.7
 	o man-1.6f
 	o mcabber-0.10.0
-	o meta-tracker-0.8.14
+	o meta-tracker-0.8.15
 	o mixxx-1.7.0
 	o mpgedit-0.73dev2
 	o mupen64-0.5
@@ -94,12 +95,13 @@ Suggested package updates
 	o rosegarden-current-1.4.0
 	o rsyslog-5.4.0
 	o sflphone-0.7.2
-	o siege-2.69
+	o siege-2.70
 	o smc-1.8
 	o smproxy-1.0.3
 	o spe-0.8.2a
 	o swftools-0.9.1
 	o sxemacs-22.1.10
+	o task-1.9.2
 	o tint2-0.7.1
 	o tmw-0.0.29.1
 	o uade-2.13
