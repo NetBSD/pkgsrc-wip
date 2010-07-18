@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2010/04/16 21:33:00 jihbed Exp $
+# $NetBSD: Makefile,v 1.4 2010/07/18 21:50:12 jihbed Exp $
 #
 
-DISTNAME=	pp-1.5.7
+DISTNAME=	pp-1.6.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	parallel python
 MASTER_SITES=	http://www.parallelpython.com/downloads/pp/
@@ -10,8 +10,15 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://www.parallelpython.com/
 COMMENT=	Parallel and distributed programming for Python
+#LICENSE=	# TODO: (see mk/license.mk)
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+PYDISTUTILSPKG=	yes
+
+PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
+post-extract:
+	cd ${WRKSRC} && ${MV} ppserver.py ppserver${PYVERSSUFFIX}
 
 DOCDIR=	${PREFIX}/share/doc/py-pp
 EGDIR=		${PREFIX}/share/examples/py-pp
@@ -22,8 +29,6 @@ MESSAGE_SUBST+=	EGDIR=${EGDIR}
 INSTALLATION_DIRS=	${PKGMANDIR}/man1
 
 USE_LANGUAGES=	# none
-
-PYDISTUTILSPKG=	yes
 
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/doc/ppserver.1\

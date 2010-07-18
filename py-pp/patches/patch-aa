@@ -1,0 +1,21 @@
+$NetBSD: patch-aa,v 1.1 2010/07/18 21:50:12 jihbed Exp $
+
+--- setup.py.orig	2010-05-18 06:30:27.000000000 +0000
++++ setup.py	2010-07-18 22:46:31.000000000 +0000
+@@ -7,6 +7,7 @@
+ """
+ 
+ import os.path
++import sys
+ from distutils.core import setup
+ 
+ from pp import version as VERSION
+@@ -32,7 +33,7 @@
+         author="Vitalii Vanovschi",
+         author_email="support@parallelpython.com",
+         py_modules=["pp", "ppauto", "ppcommon", "pptransport", "ppworker"],
+-        scripts=["ppserver.py"],
++        scripts=["ppserver"+sys.version[0:3]],
+         description="Parallel and distributed programming for Python",
+         platforms=["Windows", "Linux", "Unix"],
+         long_description=LONG_DESCRIPTION,

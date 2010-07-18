@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/04/24 22:59:25 jihbed Exp $
+$NetBSD: distinfo,v 1.2 2010/07/18 21:50:12 jihbed Exp $
 
-SHA1 (pp-1.5.7.tar.bz2) = c7def395ea977f622a7d70e70c77ded6b10d105a
-RMD160 (pp-1.5.7.tar.bz2) = 50271d9cd68865f9597d144ed0b95411bd2e035f
-Size (pp-1.5.7.tar.bz2) = 21836 bytes
+SHA1 (pp-1.6.0.tar.bz2) = 3753ab2430adaca433335cbbba2720f3fdad2ac0
+RMD160 (pp-1.6.0.tar.bz2) = 1e886a002bb0aaccdd58d50ac2e6d3bc169627a3
+Size (pp-1.6.0.tar.bz2) = 22860 bytes
+SHA1 (patch-aa) = 4df42f98d8da64faddaf60ebe2cb8cf1cc435ecc

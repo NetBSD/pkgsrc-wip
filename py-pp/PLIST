@@ -1,11 +1,14 @@
-@comment $NetBSD: PLIST,v 1.4 2010/04/16 21:33:00 jihbed Exp $
-bin/ppserver.py
+@comment $NetBSD: PLIST,v 1.5 2010/07/18 21:50:12 jihbed Exp $
+bin/ppserver2.6
 ${PYSITELIB}/pp.py
 ${PYSITELIB}/pp.pyc
 ${PYSITELIB}/pp.pyo
 ${PYSITELIB}/ppauto.py
 ${PYSITELIB}/ppauto.pyc
 ${PYSITELIB}/ppauto.pyo
+${PYSITELIB}/ppcommon.py
+${PYSITELIB}/ppcommon.pyc
+${PYSITELIB}/ppcommon.pyo
 ${PYSITELIB}/pptransport.py
 ${PYSITELIB}/pptransport.pyc
 ${PYSITELIB}/pptransport.pyo
