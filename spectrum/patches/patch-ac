@@ -1,37 +1,39 @@
-$NetBSD: patch-ac,v 1.1 2010/03/10 04:36:56 schnoebe Exp $
+$NetBSD: patch-ac,v 1.2 2010/07/18 00:58:51 schnoebe Exp $
 
---- spectrumctl/spectrumctl.py.orig	2010-03-10 04:09:18.000000000 +0000
+--- spectrumctl/spectrumctl.py.orig	2010-07-13 17:38:39.000000000 +0000
 +++ spectrumctl/spectrumctl.py
 @@ -3,7 +3,7 @@
  #
  # spectrumctl can be used to control your spectrum-instances. Valid actions are
  # start, stop, restart and reload. By default, spectrumctl acts on all instances
 -# defined in /etc/spectrum/
-+# defined in @ETC_SPECTRUM@/
++# defined in @ETC_SPECTRUM@
  #
  # Copyright (C) 2009, 2010 Mathias Ertl
  #
-@@ -27,12 +27,12 @@ from optparse import *
- 
+@@ -29,12 +29,12 @@ from optparse import *
+ cmds = [ x.name for x in doc.cmds ]
  description='''spectrumctl can be used to control your spectrum-instances.
- Valid actions are start, stop, restart, reload, list and stats. By default, spectrumctl 
--acts on all transports defined in /etc/spectrum/'''
-+acts on all transports defined in @ETC_SPECTRUM@/'''
+ Valid actions are %s and %s. By default, spectrumctl acts on all transports
+-defined in /etc/spectrum/.'''%( ', '.join( cmds[:-1] ), cmds[-1]  )
++defined in @ETC_SPECTRUM@'''%( ', '.join( cmds[:-1] ), cmds[-1]  )
  
- parser = OptionParser( usage='Usage: %prog [options] action', version='0.1', description=description)
+ parser = OptionParser( usage='Usage: %prog [options] action', version='0.2', description=description)
  parser.add_option( '-c', '--config', metavar='FILE',
  	help = 'Only act on transport configured in FILE (ignored for list)' )
 -parser.add_option( '-d', '--config-dir', metavar='DIR', default='/etc/spectrum',
-+parser.add_option( '-d', '--config-dir', metavar='DIR', default='@ETC_SPECTRUM@',
++parser.add_option( '-d', '--config-dir', metavar='DIR', default='@ETC_SPECTRUM@'
  	help = 'Act on all transports configured in DIR (default: %default)' )
  parser.add_option( '-q', '--quiet', action='store_true', default=False,
  	help = 'Do not print any output (ignored for list)' )
-@@ -43,7 +43,7 @@ list_group.add_option( '--status', choic
- parser.add_option_group( list_group )
- 
+@@ -49,8 +49,8 @@ parser.add_option_group( list_group )
  start_group = OptionGroup( parser, 'Options for action "start"' )
--start_group.add_option( '--su', default='spectrum',
-+start_group.add_option( '--su', default='@SPECTRUM@',
- 	help = 'Start spectrum as this user (default: %default)' )
- parser.add_option_group( start_group )
- 
+ start_group.add_option( '--su', # NOTE: the default is set by 
+ 	# spectrum.get_uid(). We need this so we can distinguish between
+-	# actually setting --su=spectrum and setting nothing at all.
+-	help = 'Start spectrum as this user (default: spectrum)' )
++	# actually setting --su=@SPECTRUM_USER@ and setting nothing at all.
++	help = 'Start spectrum as this user (default: @SPECTRUM_USER@)' )
+ start_group.add_option( '--no-daemon', action='store_true', default=False,
+ 	help = 'Do not start spectrum in daemon mode' )
+ start_group.add_option( '--debug', action='store_true', default=False,

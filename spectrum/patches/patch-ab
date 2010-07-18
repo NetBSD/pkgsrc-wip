@@ -1,17 +1,17 @@
-$NetBSD: patch-ab,v 1.1 2010/03/10 04:36:56 schnoebe Exp $
+$NetBSD: patch-ab,v 1.2 2010/07/18 00:58:51 schnoebe Exp $
 
---- man/spectrumctl.8.orig	2010-03-10 04:09:18.000000000 +0000
+--- man/spectrumctl.8.orig	2010-07-13 17:38:39.000000000 +0000
 +++ man/spectrumctl.8
-@@ -14,7 +14,7 @@ spectrumctl \- util to control spectrum 
- .SH DESCRIPTION
- spectrumctl is a small tool written in python which can be used to control instances of the spectrum XMPP transport.
- spectrum only handles one legacy network per instance, so you need more than one spectrum instance if you want support for more than one legacy network.
+@@ -23,7 +23,7 @@ with more complex administration tasks. 
+ explanation.
+ .SH ACTIONS
+ .sp
 -By default, spectrumctl acts on all transports defined in \fI/etc/spectrum/\fR.
-+By default, spectrumctl acts on all transports defined in \fI@ETC_SPECTRUM@/\fR.
- .SH OPERATIONS
- .PP
- \fBstart\fR, \fBstop\fR, \fBrestart\fR
-@@ -49,7 +49,7 @@ Only act on transport configured in FILE
++By default, spectrumctl acts on all transports defined in \fI@ETC_SPECTRUM@\fR.
+ You can use a different directory with the \fI--config-dir\fR option. If you
+ just want to act on a single file, you can use the \fI--config\fR option. Unless
+ you use \fI--config\fR, spectrumctl will silently ignore files where the
+@@ -99,7 +99,7 @@ Only act on transport configured in FILE
  .RE
  \fB\-d\fR \fIDIR\fR, \fB\-\-config\-dir\fR=\fIDIR\fR
  .RS 4
@@ -20,12 +20,33 @@ $NetBSD: patch-ab,v 1.1 2010/03/10 04:36:56 schnoebe Exp $
  .sp
  .RE
  \fB\-q\fR, \fB\-\-quiet\fR
-@@ -71,7 +71,7 @@ Options for action "\fBstart\fR":
+@@ -137,9 +137,9 @@ Options for action "\fBstart\fR":
  .RS 4
  \fB\-\-su\fR=\fISU\fR
  .RS 4
--Start spectrum as this user (default: \fIspectrum\fR)
-+Start spectrum as this user (default: \fI@SPECTRUM@\fR)
- .RE
+-Start spectrum as this user (default: \fIspectrum\fR). Overrides the SPECTRUM_USER environment variable.
++Start spectrum as this user (default: \fI@SPECTRUM_USER@\fR). Overrides the SPECTRUM_USER environment variable.
+ If neither --su nor SPECTRUM_USER is specified, the user defaults to 
+-\fIspectrum\fR.
++\fI@SPECTRUM_USER@\fR.
  .RE
  .sp
+ \fB\-\-no-daemon\fR
+@@ -159,7 +159,7 @@ multiple administration tasks at once. Y
+ commands only available within the shell. 
+ .sp
+ The prompt of the spectrumctl shell represents the transports that commands will
+-act upon. If the shell acts upon all config-files defined in \fI/etc/spectrum\fR,
++act upon. If the shell acts upon all config-files defined in \fI@ETC_SPECTRUM@\fR,
+ the prompt will show \fB<all transports>\fR and the JID of the current transport
+ otherwise.
+ .sp
+@@ -189,7 +189,7 @@ Path where the spectrum binary is locate
+ The user with which spectrum is started. Overridden by the --su command line
+ option. 
+ If neither --su nor SPECTRUM_USER is specified, the user defaults to 
+-\fIspectrum\fR.
++\fI@SPECTRUM_USER@\fR.
+ .RE
+ .SH AUTHORS
+ Copyright \(co 2009\-2010 by Spectrum engineers:

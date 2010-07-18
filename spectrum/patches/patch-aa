@@ -1,29 +1,47 @@
-$NetBSD: patch-aa,v 1.1 2010/03/10 04:36:56 schnoebe Exp $
+$NetBSD: patch-aa,v 1.2 2010/07/18 00:58:51 schnoebe Exp $
 
---- CMakeLists.txt.orig	2010-03-10 04:09:18.000000000 +0000
+#
+# Change to use the CMake function to find the python interpreter,
+# rather than assuming it is "python".  Trying to push upstream.
+#
+# change man path to be configurable to PKGSRC standards.
+#
+
+--- CMakeLists.txt.orig	2010-07-13 17:38:39.000000000 +0000
 +++ CMakeLists.txt
-@@ -351,12 +351,12 @@ INSTALL(TARGETS spectrum
-     )
+@@ -21,8 +21,11 @@ set(libpoco_DIR "${CMAKE_SOURCE_DIR}/cma
+ find_package(libpoco REQUIRED)
+ set(cppunit_DIR "${CMAKE_SOURCE_DIR}/cmake_modules")
+ find_package(cppunit)
++
++# correctly find the python interpreter
++include(FindPythonInterp)
+  
+-execute_process ( COMMAND python -c "from distutils.sysconfig import get_python_lib; print get_python_lib()" OUTPUT_VARIABLE PYTHON_SITE_PACKAGES OUTPUT_STRIP_TRAILING_WHITESPACE)
++execute_process ( COMMAND ${PYTHON_EXECUTABLE} -c "from distutils.sysconfig import get_python_lib; print get_python_lib()" OUTPUT_VARIABLE PYTHON_SITE_PACKAGES OUTPUT_STRIP_TRAILING_WHITESPACE)
+ message(STATUS "Python site-packages directory: " ${PYTHON_SITE_PACKAGES})
+ 
+ include_directories(${GLOOX_INCLUDE_DIR})
+@@ -362,7 +365,7 @@ ELSE(NOT GETTEXT_MSGFMT_EXECUTABLE)
+  
+ ENDIF(NOT GETTEXT_MSGFMT_EXECUTABLE)
+ 
+-ADD_CUSTOM_TARGET (man ALL python ${CMAKE_CURRENT_SOURCE_DIR}/spectrumctl/make_man_page.py > ${CMAKE_CURRENT_SOURCE_DIR}/man/spectrumctl.8)
++ADD_CUSTOM_TARGET (man ALL ${PYTHON_EXECUTABLE} ${CMAKE_CURRENT_SOURCE_DIR}/spectrumctl/make_man_page.py > ${CMAKE_CURRENT_SOURCE_DIR}/man/spectrumctl.8)
  
  
--if (NOT EXISTS /etc/spectrum)
-+if (NOT EXISTS @ETC_SPECTRUM@)
- 	INSTALL(FILES
- 		${CMAKE_CURRENT_SOURCE_DIR}/spectrum.cfg
--		DESTINATION /etc/spectrum/
-+		DESTINATION @ETC_SPECTRUM@/
- 		)
--endif (NOT EXISTS /etc/spectrum)
-+endif (NOT EXISTS @ETC_SPECTRUM@)
- 
- INSTALL(FILES
-     ${CMAKE_CURRENT_SOURCE_DIR}/locales/cs.po
-@@ -379,7 +379,7 @@ INSTALL(FILES
+ INSTALL(TARGETS spectrum
+@@ -395,11 +398,11 @@ INSTALL(FILES
  
  INSTALL(FILES
      ${CMAKE_CURRENT_SOURCE_DIR}/man/spectrumctl.8
 -	DESTINATION share/man/man8
-+	DESTINATION man/man8
++	DESTINATION @PKGMANDIR@/man8
+     )
+ INSTALL(FILES
+     ${CMAKE_CURRENT_SOURCE_DIR}/man/spectrum.cfg.5
+-	DESTINATION share/man/man5
++	DESTINATION @PKGMANDIR@/man5
      )
  
- # install(FILES
+ endif (NOT WITHOUT_SPECTRUMCTL)
