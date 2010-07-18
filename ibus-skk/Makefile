@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2010/05/23 11:31:21 obache Exp $
+# $NetBSD: Makefile,v 1.4 2010/07/18 03:12:58 obache Exp $
 #
 
-DISTNAME=	ibus-skk-0.0.8
+DISTNAME=	ibus-skk-0.0.9
 CATEGORIES=	inputmethod
 MASTER_SITES=	http://cloud.github.com/downloads/ueno/ibus-skk/
 
