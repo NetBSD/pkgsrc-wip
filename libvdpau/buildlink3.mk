@@ -1,4 +1,14 @@
-# $NetBSD: buildlink3.mk,v 1.1 2010/01/14 11:15:29 cheusov Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2010/07/18 09:14:22 cheusov Exp $
+.include "../../mk/bsd.prefs.mk"
+
+# VDPAU is available only for Linux, FreeBSD and Solaris.
+# The following condition is to NOT list these platforms in several places, e.g.
+# in mplayer, xine, xbmc etc.
+#
+# For linking use LDFLAGS.vdpau variable!
+
+.if ${OPSYS} == "Linux" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "SunOS"
+
 BUILDLINK_TREE+=	libvdpau
 
 .if !defined(LIBVDPAU_BUILDLINK3_MK)
@@ -16,3 +26,7 @@ BUILDLINK_PKGSRCDIR.libvdpau?=	../../wip/libvdpau
 .endif	# LIBVDPAU_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-libvdpau
+
+LDFLAGS.vdpau=		-lvdpau
+
+.endif # Linux, FreeBSD, SunOS...
