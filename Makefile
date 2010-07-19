@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4029 2010/07/19 19:14:36 pettai Exp $
+# $Id: Makefile,v 1.4030 2010/07/19 19:47:34 pettai Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1285,6 +1285,7 @@ SUBDIR+=	mid2gmc
 SUBDIR+=	milter-greylist-devel
 SUBDIR+=	milter-manager
 SUBDIR+=	mime-support
+SUBDIR+=	mimedefang
 SUBDIR+=	min12xxw
 SUBDIR+=	minimalist
 SUBDIR+=	minisat2
