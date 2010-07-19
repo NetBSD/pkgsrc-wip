@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2010/07/19 19:45:34 pettai Exp $
+bin/md-mx-ctrl
+bin/mimedefang
+bin/mimedefang-multiplexor
+bin/mimedefang.pl
+bin/watch-mimedefang
+man/man5/mimedefang-filter.5
+man/man7/mimedefang-protocol.7
+man/man8/md-mx-ctrl.8
+man/man8/mimedefang-multiplexor.8
+man/man8/mimedefang.8
+man/man8/mimedefang.pl.8
+man/man8/watch-mimedefang.8
+share/examples/mimedefang/mimedefang-filter
+share/examples/mimedefang/sa-mimedefang.cf
+share/examples/rc.d/mimedefang
+share/examples/rc.d/mimedefang-multiplexor
+share/mimedefang/gen-ip-validator.pl

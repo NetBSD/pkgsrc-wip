@@ -1,0 +1,11 @@
+# $NetBSD: INSTALL,v 1.1 2010/07/19 19:45:34 pettai Exp $
+
+case ${STAGE} in
+POST-INSTALL)
+        if test ! -f @PKG_SYSCONFDIR@/mimedefang-ip-key ; then
+                ${PERL5} @SHAREDIR@/gen-ip-validator.pl > @PKG_SYSCONFDIR@/mimedefang-ip-key
+        fi
+	${CHOWN} @DEFANG_USER@ @PKG_SYSCONFDIR@/mimedefang-ip-key
+        ${CHMOD} 600 @PKG_SYSCONFDIR@/mimedefang-ip-key
+        ;;
+esac
