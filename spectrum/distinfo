@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.4 2010/07/18 00:58:50 schnoebe Exp $
+$NetBSD: distinfo,v 1.5 2010/07/19 23:37:36 schnoebe Exp $
 
 SHA1 (spectrum-0.3.tar.gz) = cce67724dbc12846315d0a38b93d6b9c8e398d90
 RMD160 (spectrum-0.3.tar.gz) = 13906bed3dbe54fc7c96332c24d96beae32fa2b2
 Size (spectrum-0.3.tar.gz) = 208078 bytes
 SHA1 (patch-aa) = 3d0bf85cc601adbf7116bd3fd70f0b172b442c05
 SHA1 (patch-ab) = 0a2804271c9223291edd7d32043f898e590a4591
-SHA1 (patch-ac) = 6cb954bbf14a580d9763c8be0beaaa66d8484c74
+SHA1 (patch-ac) = a9670e7d0252fdaa774ab95a6921744346b40904
 SHA1 (patch-ad) = 0b90adab3faedf7492cf8a0e98f16a2317c96cc7
