@@ -1,13 +1,13 @@
-$NetBSD: patch-ac,v 1.1 2009/08/08 05:43:37 tnn2 Exp $
+$NetBSD: patch-ac,v 1.2 2010/07/19 14:41:43 tnn2 Exp $
 
---- src/VBox/Runtime/VBox/log-vbox.cpp.orig	2009-07-10 17:41:48.000000000 +0200
+--- src/VBox/Runtime/VBox/log-vbox.cpp.orig	2010-06-25 14:25:24.000000000 +0000
 +++ src/VBox/Runtime/VBox/log-vbox.cpp
-@@ -339,7 +339,7 @@ RTDECL(PRTLOGGER) RTLogDefaultInit(void)
+@@ -370,7 +370,7 @@ RTDECL(PRTLOGGER) RTLogDefaultInit(void)
              fclose(pFile);
          }
  
--#  elif defined(RT_OS_LINUX) || defined(RT_OS_FREEBSD)
-+#  elif defined(RT_OS_LINUX) || defined(RT_OS_FREEBSD) || defined(RT_OS_NETBSD)
- #   ifdef RT_OS_LINUX
-         FILE *pFile = fopen("/proc/self/cmdline", "r");
- #   else /* RT_OS_FREEBSD: */
+-#  elif defined(RT_OS_FREEBSD)
++#  elif defined(RT_OS_FREEBSD) || defined(RT_OS_NETBSD)
+         /* Retrieve the required length first */
+         int aiName[4];
+         aiName[0] = CTL_KERN;

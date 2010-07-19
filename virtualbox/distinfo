@@ -1,20 +1,17 @@
-$NetBSD: distinfo,v 1.7 2009/11/10 08:45:13 thomasklausner Exp $
+$NetBSD: distinfo,v 1.8 2010/07/19 14:41:42 tnn2 Exp $
 
-SHA1 (VirtualBox-3.0.4-OSE.tar.bz2) = 454f4fbd46a3c7bfa0f6e48eaa37bb578446aca5
-RMD160 (VirtualBox-3.0.4-OSE.tar.bz2) = 7addc9d840ef751d95356a342c6a51f2c87a855b
-Size (VirtualBox-3.0.4-OSE.tar.bz2) = 51381059 bytes
-SHA1 (patch-aa) = f5b3313cc512cb888ef5cd01f980f7d33e1272e0
-SHA1 (patch-ab) = 1815e18a6cbd6f531d57535896cca6fed99de481
-SHA1 (patch-ac) = de4b4c80cf69d59667e1656b48b7f7b114b88d1d
-SHA1 (patch-ad) = c467a3aa6559e8c4d67a9ff2b98944c7c1cadd35
+SHA1 (VirtualBox-3.2.6-OSE.tar.bz2) = f7d4d89f494cd1f614d9e195a2fcac485ac02fbb
+RMD160 (VirtualBox-3.2.6-OSE.tar.bz2) = e81e9e29fa6ecece33f74ec69f7f9368ba265075
+Size (VirtualBox-3.2.6-OSE.tar.bz2) = 57899455 bytes
+SHA1 (patch-aa) = 255ac0f1f4df6ec4152561ee5aed36b06249edf2
+SHA1 (patch-ac) = bc7222814e51631fcbe81ebc52500e88a0d373bf
+SHA1 (patch-ad) = dea3bdeea57021c236affce900451ef9d111678c
 SHA1 (patch-ae) = e037a416cd4e26980f6b8dc7e6bca39cfd07d147
-SHA1 (patch-af) = eadfa2b5800448b9b4862d52a9d7ea8eb6e1a4d8
-SHA1 (patch-ag) = 0e6bc00e8f88ba3c4d5f5b521019b3250436c5aa
+SHA1 (patch-af) = 41316f05026d7a2c0262093476dd6232f5e1cc31
+SHA1 (patch-ag) = 0449156d1ed53943e73bca0b3cd5dab4f1178350
 SHA1 (patch-ah) = 9dbaa00510b2322fc7ca5ad64a58a0ca02a129cb
-SHA1 (patch-ai) = 1387722f5eaff3ac81ef953fc33f5dc41af66fe8
+SHA1 (patch-ai) = bba2c51eebb193bb49029eadf026a4541731464a
 SHA1 (patch-aj) = 29655e2e7b0260b1d3797df928838ccd503171f0
-SHA1 (patch-ak) = 0278737ba07ce1e301924888c2d4f2467d9a9235
-SHA1 (patch-al) = 9546ff0fc8610e00d0a602da7cad19927b6351ec
 SHA1 (patch-am) = 753fed0b0e0bae3966ae3dbbe2fd91dc901df918
 SHA1 (patch-an) = e5aefc636fce95739e519e80985670e72557596c
-SHA1 (patch-ao) = f0572e31e7704e49f30b7a0173b24a7c7d98f2d8
+SHA1 (patch-ao) = af71aebb441a8a32d3837f0fc6cb2be8d5733032

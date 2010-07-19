@@ -1,8 +1,8 @@
-$NetBSD: patch-ai,v 1.1 2009/08/12 12:54:17 tnn2 Exp $
+$NetBSD: patch-ai,v 1.2 2010/07/19 14:41:43 tnn2 Exp $
 
---- src/VBox/Runtime/Makefile.kmk.orig	2009-08-12 14:35:40.000000000 +0200
+--- src/VBox/Runtime/Makefile.kmk.orig	2010-06-25 14:25:24.000000000 +0000
 +++ src/VBox/Runtime/Makefile.kmk
-@@ -558,6 +558,54 @@ RuntimeR3_SOURCES.freebsd = \
+@@ -715,6 +715,54 @@ RuntimeR3_SOURCES.freebsd = \
  	r3/posix/tls-posix.cpp \
  	r3/posix/utf8-posix.cpp
  
@@ -55,5 +55,5 @@ $NetBSD: patch-ai,v 1.1 2009/08/12 12:54:17 tnn2 Exp $
 +	r3/posix/utf8-posix.cpp
 +
  RuntimeR3_SOURCES.solaris = \
- 	generic/pathhost-generic.cpp \
  	generic/RTDirQueryInfo-generic.cpp \
+ 	generic/RTDirSetTimes-generic.cpp \

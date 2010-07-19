@@ -1,6 +1,6 @@
-$NetBSD: patch-ag,v 1.1 2009/08/12 12:54:17 tnn2 Exp $
+$NetBSD: patch-ag,v 1.2 2010/07/19 14:41:43 tnn2 Exp $
 
---- src/VBox/HostDrivers/Support/SUPR3HardenedMain.cpp.orig	2009-08-04 19:18:37.000000000 +0200
+--- src/VBox/HostDrivers/Support/SUPR3HardenedMain.cpp.orig	2010-06-25 14:25:11.000000000 +0000
 +++ src/VBox/HostDrivers/Support/SUPR3HardenedMain.cpp
 @@ -317,7 +317,7 @@ static void supR3HardenedGetFullExePath(
       *
@@ -10,8 +10,8 @@ $NetBSD: patch-ag,v 1.1 2009/08/12 12:54:17 tnn2 Exp $
 +#if defined(RT_OS_LINUX) || defined(RT_OS_FREEBSD) || defined(RT_OS_SOLARIS) || defined(RT_OS_NETBSD)
  # ifdef RT_OS_LINUX
      int cchLink = readlink("/proc/self/exe", &g_szSupLibHardenedExePath[0], sizeof(g_szSupLibHardenedExePath) - 1);
- # elif defined(RT_OS_SOLARIS)
-@@ -728,7 +728,7 @@ static void supR3HardenedMainDropPrivile
+ 
+@@ -743,7 +743,7 @@ static void supR3HardenedMainDropPrivile
      egid = getegid();
      rgid = sgid = getgid();
  
