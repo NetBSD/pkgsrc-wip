@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2010/07/18 00:58:50 schnoebe Exp $
+# $NetBSD: Makefile,v 1.18 2010/07/20 00:00:34 schnoebe Exp $
 
 DISTNAME=		spectrum-0.3
 # PKGREVISION=		1
@@ -26,7 +26,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		pkg-config msgfmt xgettext
 USE_CMAKE=		yes
-USE_LANGUAGES+=		c++ c
+USE_LANGUAGES=		c++ c
 
 REPLACE_PYTHON+=	spectrumctl/spectrumctl.py
 PY_PATCHPLIST=		yes
@@ -43,7 +43,7 @@ CONF_FILES+=		${EGDIR}/spectrum.cfg ${PKG_SYSCONFDIR}/spectrum.cfg
 
 .include "options.mk"
 
-SUBST_CLASSES+=		cfgpath users manpath
+SUBST_CLASSES+=		cfgpath
 SUBST_STAGE.cfgpath=	post-patch
 SUBST_FILES.cfgpath+=	src/configfile.cpp
 SUBST_FILES.cfgpath+=	tools/migrate-db/main.cpp
@@ -53,23 +53,25 @@ SUBST_MESSAGE.cfgpath=	Correcting configuration directory
 SUBST_SED.cfgpath=	-e 's,/etc/spectrum,${PKG_SYSCONFDIR},g'
 SUBST_SED.cfgpath+=	-e 's,@ETC_SPECTRUM@,${PKG_SYSCONFDIR},g'
 
+SUBST_CLASSES+=		manpath
 SUBST_STAGE.manpath=	post-patch
 SUBST_FILES.manpath=	CMakeLists.txt
 SUBST_MESSAGE.manpath=	Correcting man page directory
 SUBST_SED.manpath+=	-e 's,@PKGMANDIR@,${PKGMANDIR},g'
 
+SUBST_CLASSES+=		users
 SUBST_STAGE.users=	post-patch
 SUBST_FILES.users=	spectrumctl/spectrumctl.py
 SUBST_FILES.users+=	man/spectrumctl.8
 SUBST_MESSAGE.users=	Correcting spectrum user
 SUBST_SED.users=	-e 's/@SPECTRUM_USER@/${JABBER_USER}/g'
 
-MESSAGE_SUBST+=  EGDIR=${EGDIR:Q}
-MESSAGE_SUBST+=  PREFIX=${PREFIX:Q}
-MESSAGE_SUBST+=  PKG_SYSCONFDIR=${PKG_SYSCONFDIR:Q}
+MESSAGE_SUBST+=		EGDIR=${EGDIR}
+MESSAGE_SUBST+=		PREFIX=${PREFIX}
+MESSAGE_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 
-FILES_SUBST+=  PREFIX=${PREFIX:Q}
-FILES_SUBST+=  JABBER_USER=${JABBER_USER:Q}
+FILES_SUBST+=		PREFIX=${PREFIX}
+FILES_SUBST+=		JABBER_USER=${JABBER_USER}
 
 INSTALLATION_DIRS=	bin ${PKG_SYSCONFDIR} ${EGDIR}
 INSTALLATION_DIRS+=	share/locales
