@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/07/21 19:55:59 ryo-on Exp $
+# $NetBSD: Makefile,v 1.4 2010/07/21 20:11:50 ryo-on Exp $
 #
 
 DISTNAME=	OmegaT_2.0.5_04_Without_JRE
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=omegat/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	ryo_on@yk.rim.or.jp
-HOMEPAGE=	http://ryo-on.users.sourceforge.net/distrib/
+HOMEPAGE=	http://www.omegat.org/
 COMMENT=	The translation memory (TM) application written in Java
 
 LICENSE=	gnu-gpl-v2
