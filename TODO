@@ -1,3 +1,5 @@
+<<<<<<< TODO
+=======
 Suggested package updates
 =========================
 
@@ -44,7 +46,6 @@ Suggested package updates
 	o gtkaml-0.2.10
 	o guichan-0.8.1
 	o guitone-0.9
-	o hitori-0.2.4
 	o httrack-3.43
 	o hu-go-2.11
 	o hyena-0.3
@@ -162,3 +163,4 @@ Suggested fixes
 ===============
 
 	o xscreensaver, PR 43047
+>>>>>>> 1.610
