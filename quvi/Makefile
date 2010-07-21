@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/06/25 21:23:34 ryo-on Exp $
+# $NetBSD: Makefile,v 1.3 2010/07/21 11:04:53 ryo-on Exp $
 #
 
 DISTNAME=	quvi-0.2.0
@@ -15,12 +15,12 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILDLINK_API_DEPENDS.curl+=		curl>=7.18.0
 BUILDLINK_API_DEPENDS.pcre+=		pcre>=7.8
-BUILDLINK_API_DEPENDS.libiconv+=	libiconv>=7.18.0
+BUILDLINK_API_DEPENDS.libiconv+=	libiconv>=1.12.0
 BUILDLINK_API_DEPENDS.lua+=		lua>=5.1
 
 PLIST_VARS+=	doc
 
-USE_TOOLS+=	pkg-config perl
+USE_TOOLS+=	pkg-config
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
