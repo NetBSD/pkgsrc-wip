@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2010/03/25 18:39:09 emil_s Exp $
+@comment $NetBSD: PLIST,v 1.5 2010/07/21 06:26:05 emil_s Exp $
 bin/task
 man/man1/task.1
 man/man5/task-color.5
@@ -21,6 +21,9 @@ share/doc/task/i18n/tips.en-US
 share/doc/task/i18n/tips.sv-SE
 share/doc/task/rc/dark-16.theme
 share/doc/task/rc/dark-256.theme
+share/doc/task/rc/dark-blue-256.theme
+share/doc/task/rc/dark-green-256.theme
+share/doc/task/rc/dark-red-256.theme
 share/doc/task/rc/holidays-SE.rc
 share/doc/task/rc/holidays-US.rc
 share/doc/task/rc/light-16.theme
