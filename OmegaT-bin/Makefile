@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/07/12 03:19:49 ryo-on Exp $
+# $NetBSD: Makefile,v 1.2 2010/07/21 19:45:58 ryo-on Exp $
 #
 
 DISTNAME=	OmegaT_2.0.5_04_Without_JRE
 PKGNAME=	${DISTNAME:S/OmegaT_/OmegaT-bin-/:S/_Without_JRE//}
 CATEGORIES=	editors
-MASTER_SITES=	http://ryo-on.users.sourceforge.net/distrib/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=omegat/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	ryo_on@yk.rim.or.jp
