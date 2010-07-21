@@ -1,0 +1,17 @@
+$NetBSD: patch-as,v 1.1 2010/07/21 18:17:59 tnn2 Exp $
+
+--- ./src/recompiler/target-i386/exec.h.orig	2010-07-21 17:15:37.000000000 +0000
++++ ./src/recompiler/target-i386/exec.h
+@@ -245,7 +245,11 @@ DECLINLINE(void) stfl(target_ulong ptr, 
+ #define atan2 atan2l
+ #define floor floorl
+ #define ceil ceill
+-#define ldexp ldexpl
++#ifndef __NetBSD__
++#define ldexp ldexpl
++#else
++#warning XXX tnn fixme
++#endif
+ #endif
+ #else
+ #define floatx_to_int32 float64_to_int32

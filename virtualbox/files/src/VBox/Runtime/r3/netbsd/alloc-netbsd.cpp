@@ -20,7 +20,7 @@ RTDECL(void *) RTMemPageAllocZ(size_t cb) RT_NO_THROW
 {
 }
 
-RTDECL(void) RTMemPageFree(void *pv) RT_NO_THROW
+RTDECL(void) RTMemPageFree(void *pv, size_t cb) RT_NO_THROW
 {
 }
 

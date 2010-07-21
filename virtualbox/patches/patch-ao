@@ -1,7 +1,16 @@
-$NetBSD: patch-ao,v 1.2 2010/07/19 14:41:43 tnn2 Exp $
+$NetBSD: patch-ao,v 1.3 2010/07/21 18:17:59 tnn2 Exp $
 
 --- src/VBox/Runtime/r3/posix/thread-posix.cpp.orig	2010-06-25 14:25:34.000000000 +0000
 +++ src/VBox/Runtime/r3/posix/thread-posix.cpp
+@@ -36,7 +36,7 @@
+ # include <unistd.h>
+ # include <sys/syscall.h>
+ #endif
+-#if defined(RT_OS_SOLARIS)
++#if defined(RT_OS_SOLARIS) || defined(RT_OS_NETBSD)
+ # include <sched.h>
+ #endif
+ 
 @@ -299,7 +299,7 @@ RTDECL(int) RTThreadSleep(RTMSINTERVAL c
          pthread_yield_np();
  #elif defined(RT_OS_FREEBSD) /* void pthread_yield */

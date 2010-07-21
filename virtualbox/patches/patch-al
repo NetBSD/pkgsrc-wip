@@ -1,0 +1,13 @@
+$NetBSD: patch-al,v 1.3 2010/07/21 18:17:59 tnn2 Exp $
+
+--- Config.kmk.orig	2010-06-25 14:23:52.000000000 +0000
++++ Config.kmk
+@@ -407,7 +407,7 @@ if1of ($(KBUILD_TARGET), darwin freebsd 
+  VBOX_WITH_HOSTNETIF_API = 1
+ endif
+ # Enable the new storage I/O path.
+-if1of ($(KBUILD_TARGET), darwin freebsd linux solaris win)
++if1of ($(KBUILD_TARGET), darwin freebsd netbsd linux solaris win)
+  VBOX_WITH_NEW_IO_CODE = 1
+ endif
+ ## @}

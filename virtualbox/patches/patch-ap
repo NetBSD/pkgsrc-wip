@@ -1,0 +1,12 @@
+$NetBSD: patch-ap,v 1.1 2010/07/21 18:17:59 tnn2 Exp $
+
+--- src/recompiler/Makefile.kmk.orig	2010-06-25 14:26:14.000000000 +0000
++++ src/recompiler/Makefile.kmk
+@@ -71,6 +71,7 @@ else
+  VBoxRemPrimary_DEFS.solaris   = HOST_SOLARIS=11
+ endif
+ VBoxRemPrimary_DEFS.freebsd   += _BSD
++VBoxRemPrimary_DEFS.netbsd    += _BSD
+ VBoxRemPrimary_DEFS.amd64     += __x86_64__
+ VBoxRemPrimary_DEFS.x86       += __i386__
+ 

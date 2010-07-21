@@ -1,16 +1,18 @@
-$NetBSD: patch-ag,v 1.2 2010/07/19 14:41:43 tnn2 Exp $
+$NetBSD: patch-ag,v 1.3 2010/07/21 18:17:59 tnn2 Exp $
 
 --- src/VBox/HostDrivers/Support/SUPR3HardenedMain.cpp.orig	2010-06-25 14:25:11.000000000 +0000
 +++ src/VBox/HostDrivers/Support/SUPR3HardenedMain.cpp
-@@ -317,7 +317,7 @@ static void supR3HardenedGetFullExePath(
+@@ -317,8 +317,8 @@ static void supR3HardenedGetFullExePath(
       *
       * Darwin, OS/2 and Windows all have proper APIs for getting the program file name.
       */
 -#if defined(RT_OS_LINUX) || defined(RT_OS_FREEBSD) || defined(RT_OS_SOLARIS)
+-# ifdef RT_OS_LINUX
 +#if defined(RT_OS_LINUX) || defined(RT_OS_FREEBSD) || defined(RT_OS_SOLARIS) || defined(RT_OS_NETBSD)
- # ifdef RT_OS_LINUX
++# if defined(RT_OS_LINUX) || defined(RT_OS_NETBSD)
      int cchLink = readlink("/proc/self/exe", &g_szSupLibHardenedExePath[0], sizeof(g_szSupLibHardenedExePath) - 1);
  
+ # elif defined(RT_OS_SOLARIS)
 @@ -743,7 +743,7 @@ static void supR3HardenedMainDropPrivile
      egid = getegid();
      rgid = sgid = getgid();
