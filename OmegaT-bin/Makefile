@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/07/21 19:45:58 ryo-on Exp $
+# $NetBSD: Makefile,v 1.3 2010/07/21 19:55:59 ryo-on Exp $
 #
 
 DISTNAME=	OmegaT_2.0.5_04_Without_JRE
@@ -14,6 +14,8 @@ COMMENT=	The translation memory (TM) application written in Java
 LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+PKG_JVMS_ACCEPTED=	sun-jdk6
 
 USE_JAVA=	run
 USE_JAVA2=	yes
