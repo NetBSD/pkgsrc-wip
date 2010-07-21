@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/11/24 12:17:46 jihbed Exp $
+$NetBSD: distinfo,v 1.2 2010/07/21 10:50:23 jihbed Exp $
 
-SHA1 (hyena-0.2.tar.bz2) = 74c182fa80eb8d5108a88109785b47f7ed8f0c20
-RMD160 (hyena-0.2.tar.bz2) = d53f79769a78c46d4b093294d0c6a7b7f2263e52
-Size (hyena-0.2.tar.bz2) = 234409 bytes
+SHA1 (hyena-0.3.tar.bz2) = 908072bd05fdf153ecbac58a0b1bc56a2e29eb31
+RMD160 (hyena-0.3.tar.bz2) = e5d0d3fef8e4a4804561c2ec99d1ae00a2c881cd
+Size (hyena-0.3.tar.bz2) = 241933 bytes
