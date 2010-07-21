@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/12/04 19:37:54 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.5 2010/07/21 09:37:03 jihbed Exp $
 bin/hitori
 share/applications/hitori.desktop
 share/gnome/help/hitori/C/figures/hitori_main_window.png
@@ -7,6 +7,9 @@ share/gnome/help/hitori/C/legal.xml
 share/gnome/help/hitori/cs/figures/hitori_main_window.png
 share/gnome/help/hitori/cs/hitori.xml
 share/gnome/help/hitori/cs/legal.xml
+share/gnome/help/hitori/da/figures/hitori_main_window.png
+share/gnome/help/hitori/da/hitori.xml
+share/gnome/help/hitori/da/legal.xml
 share/gnome/help/hitori/de/figures/hitori_main_window.png
 share/gnome/help/hitori/de/hitori.xml
 share/gnome/help/hitori/de/legal.xml
@@ -19,9 +22,9 @@ share/gnome/help/hitori/es/legal.xml
 share/gnome/help/hitori/sv/figures/hitori_main_window.png
 share/gnome/help/hitori/sv/hitori.xml
 share/gnome/help/hitori/sv/legal.xml
-share/hitori/AUTHORS
-share/hitori/NEWS
-share/hitori/README
+share/gnome/help/hitori/zh_CN/figures/hitori_main_window.png
+share/gnome/help/hitori/zh_CN/hitori.xml
+share/gnome/help/hitori/zh_CN/legal.xml
 share/hitori/hitori.ui
 share/icons/hicolor/16x16/apps/hitori.png
 share/icons/hicolor/22x22/apps/hitori.png
@@ -36,13 +39,18 @@ share/locale/es/LC_MESSAGES/hitori.mo
 share/locale/fr/LC_MESSAGES/hitori.mo
 share/locale/gl/LC_MESSAGES/hitori.mo
 share/locale/hu/LC_MESSAGES/hitori.mo
+share/locale/id/LC_MESSAGES/hitori.mo
+share/locale/nb/LC_MESSAGES/hitori.mo
 share/locale/pa/LC_MESSAGES/hitori.mo
 share/locale/pt_BR/LC_MESSAGES/hitori.mo
+share/locale/sl/LC_MESSAGES/hitori.mo
 share/locale/sv/LC_MESSAGES/hitori.mo
 share/locale/zh_CN/LC_MESSAGES/hitori.mo
 share/omf/hitori/hitori-C.omf
 share/omf/hitori/hitori-cs.omf
+share/omf/hitori/hitori-da.omf
 share/omf/hitori/hitori-de.omf
 share/omf/hitori/hitori-en_GB.omf
 share/omf/hitori/hitori-es.omf
 share/omf/hitori/hitori-sv.omf
+share/omf/hitori/hitori-zh_CN.omf
