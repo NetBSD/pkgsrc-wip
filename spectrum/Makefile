@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.18 2010/07/20 00:00:34 schnoebe Exp $
+# $NetBSD: Makefile,v 1.19 2010/07/22 02:59:06 schnoebe Exp $
 
-DISTNAME=		spectrum-0.3
+DISTNAME=		spectrum-0.3.1
 # PKGREVISION=		1
 CATEGORIES=		chat
 
@@ -9,7 +9,7 @@ MAINTAINER=		eric@cirr.com
 HOMEPAGE=		http://spectrum.im/
 COMMENT=		XMPP transport/gateway based on libpurple
 LICENSE=		gnu-gpl-v3
-MASTER_SITES=		http://spectrum.im/attachments/download/5/
+MASTER_SITES=		http://spectrum.im/attachments/download/13/
 
 # if the package can be created without root privileges
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -37,6 +37,7 @@ PY_PATCHPLIST=		yes
 
 PKG_SYSCONFSUBDIR=	spectrum
 EGDIR=			${PREFIX}/share/examples/spectrum
+# DOCDIR=			${PREFIX}/share/doc/spectrum
 RCD_SCRIPTS=		spectrum
 
 CONF_FILES+=		${EGDIR}/spectrum.cfg ${PKG_SYSCONFDIR}/spectrum.cfg
@@ -73,9 +74,10 @@ MESSAGE_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 FILES_SUBST+=		PREFIX=${PREFIX}
 FILES_SUBST+=		JABBER_USER=${JABBER_USER}
 
-INSTALLATION_DIRS=	bin ${PKG_SYSCONFDIR} ${EGDIR}
+INSTALLATION_DIRS=	bin ${PKG_SYSCONFDIR}
 INSTALLATION_DIRS+=	share/locales
 INSTALLATION_DIRS+=	${EGDIR}
+# INSTALLATION_DIRS+=	${DOCDIR}
 
 pre-install:
 	${RM} -f ${WRKSRC}/spectrumctl/spectrumctl.py.orig
@@ -83,11 +85,12 @@ pre-install:
 	${MKDIR} ${DESTDIR}${PKG_SYSCONFDIR}
 
 post-install:
+	${INSTALL_DATA} ${WRKSRC}/ChangeLog ${DESTDIR}${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/spectrum.cfg ${DESTDIR}${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/schemas/mysql_schema.sql \
 					${DESTDIR}${EGDIR}/spectrum-mysql.sql
-	${INSTALL_DATA} ${WRKSRC}/schemas/sqlite_schema.sql \
-					${DESTDIR}${EGDIR}/spectrum-sqlite3.sql
+	# ${INSTALL_DATA} ${WRKSRC}/schemas/sqlite_schema.sql \
+	# 				${DESTDIR}${EGDIR}/spectrum-sqlite3.sql
 
 
 .include "../../lang/python/application.mk"
