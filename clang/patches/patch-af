@@ -1,14 +1,14 @@
-$NetBSD: patch-af,v 1.1 2010/05/04 15:33:16 drochner Exp $
+$NetBSD: patch-af,v 1.2 2010/07/22 17:02:36 drochner Exp $
 
---- tools/clang/lib/Frontend/InitHeaderSearch.cpp.orig	2010-05-04 10:43:04.000000000 +0000
+--- tools/clang/lib/Frontend/InitHeaderSearch.cpp.orig	2010-07-09 10:52:06.000000000 +0000
 +++ tools/clang/lib/Frontend/InitHeaderSearch.cpp
-@@ -637,6 +637,9 @@ void InitHeaderSearch::AddDefaultCPlusPl
-   case llvm::Triple::FreeBSD:
+@@ -723,6 +723,9 @@ AddDefaultCPlusPlusIncludePaths(const ll
+     // FreeBSD 7.3
      AddGnuCPlusPlusIncludePaths("/usr/include/c++/4.2", "", "", "", triple);
      break;
 +  case llvm::Triple::NetBSD:
 +    AddGnuCPlusPlusIncludePaths("/usr/include/g++", "", "", "", triple);
 +    break;
-   case llvm::Triple::Solaris:
-     // Solaris - Fall though..
-   case llvm::Triple::AuroraUX:
+   case llvm::Triple::Minix:
+     AddGnuCPlusPlusIncludePaths("/usr/gnu/include/c++/4.4.3",
+                                 "", "", "", triple);

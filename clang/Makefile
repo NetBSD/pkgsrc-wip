@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2010/05/06 16:50:18 drochner Exp $
+# $NetBSD: Makefile,v 1.3 2010/07/22 17:02:35 drochner Exp $
 #
 
 DISTNAME=	llvm-2.6
-SVN_TAG=	103176
+SVN_TAG=	109091
 CATEGORIES=	lang
 MASTER_SITES=	http://llvm.org/releases/${PKGVERSION_NOREV}/
 

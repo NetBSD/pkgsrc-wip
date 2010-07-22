@@ -1,25 +1,8 @@
-$NetBSD: patch-ac,v 1.1 2010/05/04 15:33:16 drochner Exp $
+$NetBSD: patch-ac,v 1.2 2010/07/22 17:02:36 drochner Exp $
 
---- Makefile.rules.orig	2010-04-27 16:20:34.000000000 +0000
+--- Makefile.rules.orig	2010-07-16 10:05:42.000000000 +0000
 +++ Makefile.rules
-@@ -580,11 +580,11 @@ ifeq ($(TARGET_OS),Darwin)
-   endif
- endif
- 
--ifdef SHARED_LIBRARY
--ifneq ($(DARWIN_MAJVERS),4)
--  LD.Flags += $(RPATH) -Wl,$(LibDir)
--endif
--endif
-+#ifdef SHARED_LIBRARY
-+#ifneq ($(DARWIN_MAJVERS),4)
-+#  LD.Flags += $(RPATH) -Wl,$(LibDir)
-+#endif
-+#endif
- 
- ifdef TOOL_VERBOSE
-   C.Flags += -v
-@@ -615,9 +615,9 @@ ifneq ($(DARWIN_MAJVERS),4)
+@@ -625,9 +625,9 @@ ifneq ($(HOST_OS),Darwin)
  ifdef TOOLNAME
    LD.Flags += $(RPATH) -Wl,'$$ORIGIN/../lib'
    ifdef EXAMPLE_TOOL
@@ -30,8 +13,8 @@ $NetBSD: patch-ac,v 1.1 2010/05/04 15:33:16 drochner Exp $
 +    LD.Flags += $(RDYNAMIC)
    endif
  endif
- endif
-@@ -773,9 +773,6 @@ ObjectsBC := $(BaseNameSources:%=$(ObjDi
+ else
+@@ -787,9 +787,6 @@ ObjectsBC := $(BaseNameSources:%=$(ObjDi
  # in the file so they get built before dependencies
  #---------------------------------------------------------
  
@@ -41,7 +24,7 @@ $NetBSD: patch-ac,v 1.1 2010/05/04 15:33:16 drochner Exp $
  # To create other directories, as needed, and timestamp their creation
  %/.dir:
  	$(Verb) $(MKDIR) $* > /dev/null
-@@ -896,7 +893,9 @@ install-local::
+@@ -915,7 +912,9 @@ install-local::
  uninstall-local::
  	$(Echo) UnInstall circumvented with NO_INSTALL
  else
