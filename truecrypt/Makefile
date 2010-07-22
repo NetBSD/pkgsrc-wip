@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2010/06/13 22:47:20 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2010/07/22 06:08:55 schaecsn Exp $
 #
 
-DISTNAME=	TrueCrypt%206.3a%20Source
-PKGNAME=	truecrypt-6.3a
-PKGREVISION=	1
+DISTNAME=	TrueCrypt%207.0%20Source
+PKGNAME=	truecrypt-7
 CATEGORIES=	security
 
 DOWNLOAD=	http://www.truecrypt.org/downloads2
@@ -15,7 +14,7 @@ LICENSE_FILE=	truecrypt-license
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-WRKSRC=		${WRKDIR}/truecrypt-6.3a-source
+WRKSRC=		${WRKDIR}/truecrypt-7.0-source
 
 USE_TOOLS+=	gmake pkg-config
 NO_CONFIGURE=	yes
@@ -48,4 +47,5 @@ do-install:
 .include "../../mk/fuse.buildlink3.mk"
 .include "../../x11/wxGTK28/buildlink3.mk"
 .include "../../devel/nss/buildlink3.mk"
+.include "../../devel/nspr/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
