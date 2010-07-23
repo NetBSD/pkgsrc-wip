@@ -1,18 +1,19 @@
-# $NetBSD: Makefile,v 1.2 2010/01/04 23:56:59 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2010/07/23 16:19:53 jihbed Exp $
 #
 
-DISTNAME=	MDP-2.5
-PKGNAME=	${PYPKGPREFIX}-mdp-2.5
+DISTNAME=	MDP-2.6
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/MDP/mdp/}
 CATEGORIES=	math python
-MASTER_SITES=	http://garr.dl.sourceforge.net/project/mdp-toolkit/mdp-toolkit/2.5/
+MASTER_SITES=	http://garr.dl.sourceforge.net/project/mdp-toolkit/mdp-toolkit/2.6/
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://mdp-toolkit.sourceforge.net/index.html
 COMMENT=	Modular toolkit for data processing
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	gnu-lgpl-v2
 
 #DEPENDS+=	${PYPKGPREFIX}-scipy>=0.7.0:../../math/py-scipy
-DEPENDS+=	${PYPKGPREFIX}-pp>=1.5.7:../../wip/py-pp
+DEPENDS+=	${PYPKGPREFIX}-pp>=1.6.0:../../wip/py-pp
+DEPENDS+=	${PYPKGPREFIX}-symeig>=1.5:../../wip/py-symeig
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
