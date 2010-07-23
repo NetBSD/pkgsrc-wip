@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/07/18 09:14:22 cheusov Exp $
+# $NetBSD: Makefile,v 1.3 2010/07/23 23:01:58 cheusov Exp $
 #
 
 DISTNAME=	libvdpau-0.4
@@ -8,7 +8,7 @@ MASTER_SITES=	http://people.freedesktop.org/~aplattner/vdpau/
 MAINTAINER=	vle@gmx.net
 HOMEPAGE=	http://http.download.nvidia.com/XFree86/vdpau/doxygen/html/index.html
 COMMENT=	Video Decode and Presentation API for Unix
-#LICENSE=	a la BSD
+LICENSE=	mit
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
