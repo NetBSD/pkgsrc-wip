@@ -1,10 +1,10 @@
-# $NetBSD: buildlink3.mk,v 1.4 2010/07/23 22:58:07 cheusov Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2010/07/23 23:04:15 cheusov Exp $
 
 #
 # For linking use LDFLAGS.vdpau variable
 #
 
-# Check whether VDPAU is available
+# Check whether VDPAU is available on this platform
 .include "../../wip/libvdpau/available.mk"
 .if ${VDPAU_AVAILABLE} == "yes"
 
