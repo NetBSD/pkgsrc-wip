@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/07/05 17:12:22 jihbed Exp $
+# $NetBSD: Makefile,v 1.6 2010/07/23 21:44:15 lexort Exp $
 #
 
 DISTNAME=	foolscap-0.5.1.tar
@@ -24,12 +24,9 @@ USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_ACCEPTED= 26
 
-EDGIR=	${PREFIX}/share/examples/py-foolscap
-
-INSTALLATION_DIRS=	share/doc/py-foolscap
+INSTALLATION_DIRS+=	share/doc/py-foolscap
 
 post-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/py-foolscap
 	${INSTALL_DATA} ${WRKSRC}/doc/*.txt \
 		${DESTDIR}${PREFIX}/share/doc/py-foolscap
 	${INSTALL_DATA} ${WRKSRC}/doc/*.xhtml \
@@ -38,7 +35,6 @@ post-install:
 		${DESTDIR}${PREFIX}/share/doc/py-foolscap
 	${INSTALL_DATA} ${WRKSRC}/doc/*.tpl \
 		${DESTDIR}${PREFIX}/share/doc/py-foolscap
-
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
