@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/07/23 12:10:32 tnn2 Exp $
+# $NetBSD: Makefile,v 1.2 2010/07/23 12:39:50 obache Exp $
 #
 
 DISTNAME=	mtop-0.6.6
@@ -17,10 +17,12 @@ DEPENDS+=	p5-DBD-mysql>=0:../../databases/p5-DBD-mysql
 DEPENDS+=	p5-DBI>=0:../../databases/p5-DBI
 DEPENDS+=	p5-Getopt-Long>=0:../../devel/p5-Getopt-Long
 
-PERL5_PACKLIST=	auto/download/.packlist
+PERL5_PACKLIST=	auto/mtop/.packlist
 USE_LANGUAGES=	# none
+MAKE_PARAMS+=	--prefix=${PREFIX}
 
-pre-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PERL5} Makefile.PL --prefix=${PREFIX}
+post-extract:
+		rm ${WRKSRC}/cpan2spec.pl
 
+.include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
