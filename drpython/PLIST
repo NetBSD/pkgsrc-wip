@@ -1,0 +1,378 @@
+@comment $NetBSD: PLIST,v 1.1 2010/07/23 15:59:18 jihbed Exp $
+bin/drpython
+${PYSITELIB}/drpython/__init__.py
+${PYSITELIB}/drpython/__init__.pyc
+${PYSITELIB}/drpython/__init__.pyo
+${PYSITELIB}/drpython/bitmaps/16/Check Syntax.png
+${PYSITELIB}/drpython/bitmaps/16/Close All Documents.png
+${PYSITELIB}/drpython/bitmaps/16/Close All Other Documents.png
+${PYSITELIB}/drpython/bitmaps/16/Close Prompt.png
+${PYSITELIB}/drpython/bitmaps/16/Close.png
+${PYSITELIB}/drpython/bitmaps/16/Comment.png
+${PYSITELIB}/drpython/bitmaps/16/Copy.png
+${PYSITELIB}/drpython/bitmaps/16/Customize Pop Up Menu.png
+${PYSITELIB}/drpython/bitmaps/16/Customize Shortcuts.png
+${PYSITELIB}/drpython/bitmaps/16/Customize ToolBar.png
+${PYSITELIB}/drpython/bitmaps/16/Cut.png
+${PYSITELIB}/drpython/bitmaps/16/Dedent.png
+${PYSITELIB}/drpython/bitmaps/16/Default.png
+${PYSITELIB}/drpython/bitmaps/16/Delete.png
+${PYSITELIB}/drpython/bitmaps/16/End.png
+${PYSITELIB}/drpython/bitmaps/16/Exit.png
+${PYSITELIB}/drpython/bitmaps/16/Expand All.png
+${PYSITELIB}/drpython/bitmaps/16/Find Next.png
+${PYSITELIB}/drpython/bitmaps/16/Find Previous.png
+${PYSITELIB}/drpython/bitmaps/16/Find.png
+${PYSITELIB}/drpython/bitmaps/16/First Document.png
+${PYSITELIB}/drpython/bitmaps/16/Fold All.png
+${PYSITELIB}/drpython/bitmaps/16/Go To.png
+${PYSITELIB}/drpython/bitmaps/16/Help.png
+${PYSITELIB}/drpython/bitmaps/16/Indent.png
+${PYSITELIB}/drpython/bitmaps/16/Insert Regular Expression.png
+${PYSITELIB}/drpython/bitmaps/16/Last Document.png
+${PYSITELIB}/drpython/bitmaps/16/Lowercase.png
+${PYSITELIB}/drpython/bitmaps/16/New.png
+${PYSITELIB}/drpython/bitmaps/16/Next Document.png
+${PYSITELIB}/drpython/bitmaps/16/Open Imported Module.png
+${PYSITELIB}/drpython/bitmaps/16/Open.png
+${PYSITELIB}/drpython/bitmaps/16/Paste.png
+${PYSITELIB}/drpython/bitmaps/16/Preferences.png
+${PYSITELIB}/drpython/bitmaps/16/Previous Document.png
+${PYSITELIB}/drpython/bitmaps/16/Print File.png
+${PYSITELIB}/drpython/bitmaps/16/Print Prompt.png
+${PYSITELIB}/drpython/bitmaps/16/Print Setup.png
+${PYSITELIB}/drpython/bitmaps/16/Python.png
+${PYSITELIB}/drpython/bitmaps/16/Redo.png
+${PYSITELIB}/drpython/bitmaps/16/Reload File.png
+${PYSITELIB}/drpython/bitmaps/16/Replace.png
+${PYSITELIB}/drpython/bitmaps/16/Restore File From Backup.png
+${PYSITELIB}/drpython/bitmaps/16/Run.png
+${PYSITELIB}/drpython/bitmaps/16/Save All Documents.png
+${PYSITELIB}/drpython/bitmaps/16/Save As.png
+${PYSITELIB}/drpython/bitmaps/16/Save Prompt Output To File.png
+${PYSITELIB}/drpython/bitmaps/16/Save.png
+${PYSITELIB}/drpython/bitmaps/16/Select All.png
+${PYSITELIB}/drpython/bitmaps/16/Select None.png
+${PYSITELIB}/drpython/bitmaps/16/Set Arguments.png
+${PYSITELIB}/drpython/bitmaps/16/Source Browser Go To.png
+${PYSITELIB}/drpython/bitmaps/16/Toggle Fold.png
+${PYSITELIB}/drpython/bitmaps/16/Toggle Prompt.png
+${PYSITELIB}/drpython/bitmaps/16/Toggle Source Browser.png
+${PYSITELIB}/drpython/bitmaps/16/Toggle View Whitespace.png
+${PYSITELIB}/drpython/bitmaps/16/UnComment.png
+${PYSITELIB}/drpython/bitmaps/16/Undo.png
+${PYSITELIB}/drpython/bitmaps/16/Uppercase.png
+${PYSITELIB}/drpython/bitmaps/16/View In Left Panel.png
+${PYSITELIB}/drpython/bitmaps/16/View In Right Panel.png
+${PYSITELIB}/drpython/bitmaps/16/View In Top Panel.png
+${PYSITELIB}/drpython/bitmaps/16/View Python Docs.png
+${PYSITELIB}/drpython/bitmaps/16/View Regular Expression Howto.png
+${PYSITELIB}/drpython/bitmaps/16/View WxWidgets Docs.png
+${PYSITELIB}/drpython/bitmaps/16/Zoom In.png
+${PYSITELIB}/drpython/bitmaps/16/Zoom Out.png
+${PYSITELIB}/drpython/bitmaps/16/active modified.png
+${PYSITELIB}/drpython/bitmaps/16/active not running.png
+${PYSITELIB}/drpython/bitmaps/16/active running.png
+${PYSITELIB}/drpython/bitmaps/16/active unmodified.png
+${PYSITELIB}/drpython/bitmaps/16/bookmark.png
+${PYSITELIB}/drpython/bitmaps/16/class.png
+${PYSITELIB}/drpython/bitmaps/16/def.png
+${PYSITELIB}/drpython/bitmaps/16/down.png
+${PYSITELIB}/drpython/bitmaps/16/drscript.png
+${PYSITELIB}/drpython/bitmaps/16/folder open.png
+${PYSITELIB}/drpython/bitmaps/16/folder.png
+${PYSITELIB}/drpython/bitmaps/16/import.png
+${PYSITELIB}/drpython/bitmaps/16/modified.png
+${PYSITELIB}/drpython/bitmaps/16/not running.png
+${PYSITELIB}/drpython/bitmaps/16/py.png
+${PYSITELIB}/drpython/bitmaps/16/pyw.png
+${PYSITELIB}/drpython/bitmaps/16/running.png
+${PYSITELIB}/drpython/bitmaps/16/transparent.png
+${PYSITELIB}/drpython/bitmaps/16/unknown.png
+${PYSITELIB}/drpython/bitmaps/16/unmodified.png
+${PYSITELIB}/drpython/bitmaps/16/up.png
+${PYSITELIB}/drpython/bitmaps/24/Check Syntax.png
+${PYSITELIB}/drpython/bitmaps/24/Close All Documents.png
+${PYSITELIB}/drpython/bitmaps/24/Close All Other Documents.png
+${PYSITELIB}/drpython/bitmaps/24/Close Prompt.png
+${PYSITELIB}/drpython/bitmaps/24/Close.png
+${PYSITELIB}/drpython/bitmaps/24/Comment.png
+${PYSITELIB}/drpython/bitmaps/24/Copy.png
+${PYSITELIB}/drpython/bitmaps/24/Customize Pop Up Menu.png
+${PYSITELIB}/drpython/bitmaps/24/Customize Shortcuts.png
+${PYSITELIB}/drpython/bitmaps/24/Customize ToolBar.png
+${PYSITELIB}/drpython/bitmaps/24/Cut.png
+${PYSITELIB}/drpython/bitmaps/24/Dedent.png
+${PYSITELIB}/drpython/bitmaps/24/Default.png
+${PYSITELIB}/drpython/bitmaps/24/Delete.png
+${PYSITELIB}/drpython/bitmaps/24/End.png
+${PYSITELIB}/drpython/bitmaps/24/Exit.png
+${PYSITELIB}/drpython/bitmaps/24/Expand All.png
+${PYSITELIB}/drpython/bitmaps/24/Find Next.png
+${PYSITELIB}/drpython/bitmaps/24/Find Previous.png
+${PYSITELIB}/drpython/bitmaps/24/Find.png
+${PYSITELIB}/drpython/bitmaps/24/First Document.png
+${PYSITELIB}/drpython/bitmaps/24/Fold All.png
+${PYSITELIB}/drpython/bitmaps/24/Go To.png
+${PYSITELIB}/drpython/bitmaps/24/Help.png
+${PYSITELIB}/drpython/bitmaps/24/Import All.png
+${PYSITELIB}/drpython/bitmaps/24/Indent.png
+${PYSITELIB}/drpython/bitmaps/24/Insert Regular Expression.png
+${PYSITELIB}/drpython/bitmaps/24/Last Document.png
+${PYSITELIB}/drpython/bitmaps/24/Lowercase.png
+${PYSITELIB}/drpython/bitmaps/24/New.png
+${PYSITELIB}/drpython/bitmaps/24/Next Document.png
+${PYSITELIB}/drpython/bitmaps/24/Open Imported Module.png
+${PYSITELIB}/drpython/bitmaps/24/Open.png
+${PYSITELIB}/drpython/bitmaps/24/Paste.png
+${PYSITELIB}/drpython/bitmaps/24/Preferences.png
+${PYSITELIB}/drpython/bitmaps/24/Previous Document.png
+${PYSITELIB}/drpython/bitmaps/24/Print File.png
+${PYSITELIB}/drpython/bitmaps/24/Print Prompt.png
+${PYSITELIB}/drpython/bitmaps/24/Print Setup.png
+${PYSITELIB}/drpython/bitmaps/24/Python.png
+${PYSITELIB}/drpython/bitmaps/24/Redo.png
+${PYSITELIB}/drpython/bitmaps/24/Reload File.png
+${PYSITELIB}/drpython/bitmaps/24/Replace.png
+${PYSITELIB}/drpython/bitmaps/24/Restore File From Backup.png
+${PYSITELIB}/drpython/bitmaps/24/Run.png
+${PYSITELIB}/drpython/bitmaps/24/Save All Documents.png
+${PYSITELIB}/drpython/bitmaps/24/Save As.png
+${PYSITELIB}/drpython/bitmaps/24/Save Prompt Output To File.png
+${PYSITELIB}/drpython/bitmaps/24/Save.png
+${PYSITELIB}/drpython/bitmaps/24/Select All.png
+${PYSITELIB}/drpython/bitmaps/24/Select None.png
+${PYSITELIB}/drpython/bitmaps/24/Set Arguments.png
+${PYSITELIB}/drpython/bitmaps/24/Side Panels.png
+${PYSITELIB}/drpython/bitmaps/24/Source Browser Go To.png
+${PYSITELIB}/drpython/bitmaps/24/Toggle Fold.png
+${PYSITELIB}/drpython/bitmaps/24/Toggle Prompt.png
+${PYSITELIB}/drpython/bitmaps/24/Toggle Source Browser.png
+${PYSITELIB}/drpython/bitmaps/24/Toggle View Whitespace.png
+${PYSITELIB}/drpython/bitmaps/24/UnComment.png
+${PYSITELIB}/drpython/bitmaps/24/Undo.png
+${PYSITELIB}/drpython/bitmaps/24/Uppercase.png
+${PYSITELIB}/drpython/bitmaps/24/View In Left Panel.png
+${PYSITELIB}/drpython/bitmaps/24/View In Right Panel.png
+${PYSITELIB}/drpython/bitmaps/24/View In Top Panel.png
+${PYSITELIB}/drpython/bitmaps/24/View Python Docs.png
+${PYSITELIB}/drpython/bitmaps/24/View Regular Expression Howto.png
+${PYSITELIB}/drpython/bitmaps/24/View WxWidgets Docs.png
+${PYSITELIB}/drpython/bitmaps/24/Zoom In.png
+${PYSITELIB}/drpython/bitmaps/24/Zoom Out.png
+${PYSITELIB}/drpython/bitmaps/24/back.png
+${PYSITELIB}/drpython/bitmaps/24/bookmarks.png
+${PYSITELIB}/drpython/bitmaps/24/detailed.png
+${PYSITELIB}/drpython/bitmaps/24/drpython.png
+${PYSITELIB}/drpython/bitmaps/24/folder.png
+${PYSITELIB}/drpython/bitmaps/24/forward.png
+${PYSITELIB}/drpython/bitmaps/24/home.png
+${PYSITELIB}/drpython/bitmaps/24/list.png
+${PYSITELIB}/drpython/bitmaps/24/new directory.png
+${PYSITELIB}/drpython/bitmaps/24/up.png
+${PYSITELIB}/drpython/bitmaps/drAdvanced.png
+${PYSITELIB}/drpython/bitmaps/drBeginner.png
+${PYSITELIB}/drpython/bitmaps/drpython.ico
+${PYSITELIB}/drpython/bitmaps/drpython.png
+${PYSITELIB}/drpython/bitmaps/install.wizard.png
+${PYSITELIB}/drpython/bitmaps/uninstall.wizard.png
+${PYSITELIB}/drpython/documentation/NorthStarLogoSmall_top.gif
+${PYSITELIB}/drpython/documentation/credits.html
+${PYSITELIB}/drpython/documentation/credits.txt
+${PYSITELIB}/drpython/documentation/default.css
+${PYSITELIB}/drpython/documentation/drdoc.py
+${PYSITELIB}/drpython/documentation/drdoc.pyc
+${PYSITELIB}/drpython/documentation/drdoc.pyo
+${PYSITELIB}/drpython/documentation/drpython.png
+${PYSITELIB}/drpython/documentation/drscript.html
+${PYSITELIB}/drpython/documentation/drscript.txt
+${PYSITELIB}/drpython/documentation/gpl.html
+${PYSITELIB}/drpython/documentation/gpl.txt
+${PYSITELIB}/drpython/documentation/help.html
+${PYSITELIB}/drpython/documentation/help.txt
+${PYSITELIB}/drpython/documentation/montypythonMOLDoctor.jpg
+${PYSITELIB}/drpython/documentation/montypythonMOLDoctorAndSupport.jpg
+${PYSITELIB}/drpython/documentation/northstar.html
+${PYSITELIB}/drpython/documentation/northstar.txt
+${PYSITELIB}/drpython/documentation/plugins.html
+${PYSITELIB}/drpython/documentation/plugins.txt
+${PYSITELIB}/drpython/documentation/preferences.html
+${PYSITELIB}/drpython/documentation/preferences.txt
+${PYSITELIB}/drpython/documentation/pyrst2html.py
+${PYSITELIB}/drpython/documentation/pyrst2html.pyc
+${PYSITELIB}/drpython/documentation/pyrst2html.pyo
+${PYSITELIB}/drpython/documentation/thanks.html
+${PYSITELIB}/drpython/documentation/thanks.txt
+${PYSITELIB}/drpython/drAboutDialog.py
+${PYSITELIB}/drpython/drAboutDialog.pyc
+${PYSITELIB}/drpython/drAboutDialog.pyo
+${PYSITELIB}/drpython/drBookmarksDialog.py
+${PYSITELIB}/drpython/drBookmarksDialog.pyc
+${PYSITELIB}/drpython/drBookmarksDialog.pyo
+${PYSITELIB}/drpython/drBookmarksMenu.py
+${PYSITELIB}/drpython/drBookmarksMenu.pyc
+${PYSITELIB}/drpython/drBookmarksMenu.pyo
+${PYSITELIB}/drpython/drDragAndDrop.py
+${PYSITELIB}/drpython/drDragAndDrop.pyc
+${PYSITELIB}/drpython/drDragAndDrop.pyo
+${PYSITELIB}/drpython/drDynamicDrScriptDialog.py
+${PYSITELIB}/drpython/drDynamicDrScriptDialog.pyc
+${PYSITELIB}/drpython/drDynamicDrScriptDialog.pyo
+${PYSITELIB}/drpython/drEncoding.py
+${PYSITELIB}/drpython/drEncoding.pyc
+${PYSITELIB}/drpython/drEncoding.pyo
+${PYSITELIB}/drpython/drFileDialog.py
+${PYSITELIB}/drpython/drFileDialog.pyc
+${PYSITELIB}/drpython/drFileDialog.pyo
+${PYSITELIB}/drpython/drFileDialogPrefs.py
+${PYSITELIB}/drpython/drFileDialogPrefs.pyc
+${PYSITELIB}/drpython/drFileDialogPrefs.pyo
+${PYSITELIB}/drpython/drFindReplaceDialog.py
+${PYSITELIB}/drpython/drFindReplaceDialog.pyc
+${PYSITELIB}/drpython/drFindReplaceDialog.pyo
+${PYSITELIB}/drpython/drGetBlockInfo.py
+${PYSITELIB}/drpython/drGetBlockInfo.pyc
+${PYSITELIB}/drpython/drGetBlockInfo.pyo
+${PYSITELIB}/drpython/drGetKeyDialog.py
+${PYSITELIB}/drpython/drGetKeyDialog.pyc
+${PYSITELIB}/drpython/drGetKeyDialog.pyo
+${PYSITELIB}/drpython/drHtmlBrowser.py
+${PYSITELIB}/drpython/drHtmlBrowser.pyc
+${PYSITELIB}/drpython/drHtmlBrowser.pyo
+${PYSITELIB}/drpython/drKeywords.py
+${PYSITELIB}/drpython/drKeywords.pyc
+${PYSITELIB}/drpython/drKeywords.pyo
+${PYSITELIB}/drpython/drMenu.py
+${PYSITELIB}/drpython/drMenu.pyc
+${PYSITELIB}/drpython/drMenu.pyo
+${PYSITELIB}/drpython/drNotebook.py
+${PYSITELIB}/drpython/drNotebook.pyc
+${PYSITELIB}/drpython/drNotebook.pyo
+${PYSITELIB}/drpython/drOpenImportedModuleDialog.py
+${PYSITELIB}/drpython/drOpenImportedModuleDialog.pyc
+${PYSITELIB}/drpython/drOpenImportedModuleDialog.pyo
+${PYSITELIB}/drpython/drPDB.py
+${PYSITELIB}/drpython/drPDB.pyc
+${PYSITELIB}/drpython/drPDB.pyo
+${PYSITELIB}/drpython/drPluginDialog.py
+${PYSITELIB}/drpython/drPluginDialog.pyc
+${PYSITELIB}/drpython/drPluginDialog.pyo
+${PYSITELIB}/drpython/drPluginMenu.py
+${PYSITELIB}/drpython/drPluginMenu.pyc
+${PYSITELIB}/drpython/drPluginMenu.pyo
+${PYSITELIB}/drpython/drPopUp.py
+${PYSITELIB}/drpython/drPopUp.pyc
+${PYSITELIB}/drpython/drPopUp.pyo
+${PYSITELIB}/drpython/drPopUpMenuDialog.py
+${PYSITELIB}/drpython/drPopUpMenuDialog.pyc
+${PYSITELIB}/drpython/drPopUpMenuDialog.pyo
+${PYSITELIB}/drpython/drPreferences.py
+${PYSITELIB}/drpython/drPreferences.pyc
+${PYSITELIB}/drpython/drPreferences.pyo
+${PYSITELIB}/drpython/drPrefsDialog.py
+${PYSITELIB}/drpython/drPrefsDialog.pyc
+${PYSITELIB}/drpython/drPrefsDialog.pyo
+${PYSITELIB}/drpython/drPrefsFile.py
+${PYSITELIB}/drpython/drPrefsFile.pyc
+${PYSITELIB}/drpython/drPrefsFile.pyo
+${PYSITELIB}/drpython/drPrinter.py
+${PYSITELIB}/drpython/drPrinter.pyc
+${PYSITELIB}/drpython/drPrinter.pyo
+${PYSITELIB}/drpython/drPrompt.py
+${PYSITELIB}/drpython/drPrompt.pyc
+${PYSITELIB}/drpython/drPrompt.pyo
+${PYSITELIB}/drpython/drProperty.py
+${PYSITELIB}/drpython/drProperty.pyc
+${PYSITELIB}/drpython/drProperty.pyo
+${PYSITELIB}/drpython/drRegularExpressionDialog.py
+${PYSITELIB}/drpython/drRegularExpressionDialog.pyc
+${PYSITELIB}/drpython/drRegularExpressionDialog.pyo
+${PYSITELIB}/drpython/drSTC.py
+${PYSITELIB}/drpython/drSTC.pyc
+${PYSITELIB}/drpython/drSTC.pyo
+${PYSITELIB}/drpython/drScriptDialog.py
+${PYSITELIB}/drpython/drScriptDialog.pyc
+${PYSITELIB}/drpython/drScriptDialog.pyo
+${PYSITELIB}/drpython/drScriptMenu.py
+${PYSITELIB}/drpython/drScriptMenu.pyc
+${PYSITELIB}/drpython/drScriptMenu.pyo
+${PYSITELIB}/drpython/drScrolledMessageDialog.py
+${PYSITELIB}/drpython/drScrolledMessageDialog.pyc
+${PYSITELIB}/drpython/drScrolledMessageDialog.pyo
+${PYSITELIB}/drpython/drSetupPreferences.py
+${PYSITELIB}/drpython/drSetupPreferences.pyc
+${PYSITELIB}/drpython/drSetupPreferences.pyo
+${PYSITELIB}/drpython/drShortcuts.py
+${PYSITELIB}/drpython/drShortcuts.pyc
+${PYSITELIB}/drpython/drShortcuts.pyo
+${PYSITELIB}/drpython/drShortcutsDialog.py
+${PYSITELIB}/drpython/drShortcutsDialog.pyc
+${PYSITELIB}/drpython/drShortcutsDialog.pyo
+${PYSITELIB}/drpython/drShortcutsFile.py
+${PYSITELIB}/drpython/drShortcutsFile.pyc
+${PYSITELIB}/drpython/drShortcutsFile.pyo
+${PYSITELIB}/drpython/drSingleChoiceDialog.py
+${PYSITELIB}/drpython/drSingleChoiceDialog.pyc
+${PYSITELIB}/drpython/drSingleChoiceDialog.pyo
+${PYSITELIB}/drpython/drSourceBrowser.py
+${PYSITELIB}/drpython/drSourceBrowser.pyc
+${PYSITELIB}/drpython/drSourceBrowser.pyo
+${PYSITELIB}/drpython/drSourceBrowserGoTo.py
+${PYSITELIB}/drpython/drSourceBrowserGoTo.pyc
+${PYSITELIB}/drpython/drSourceBrowserGoTo.pyo
+${PYSITELIB}/drpython/drStyleDialog.py
+${PYSITELIB}/drpython/drStyleDialog.pyc
+${PYSITELIB}/drpython/drStyleDialog.pyo
+${PYSITELIB}/drpython/drTabNanny.py
+${PYSITELIB}/drpython/drTabNanny.pyc
+${PYSITELIB}/drpython/drTabNanny.pyo
+${PYSITELIB}/drpython/drText.py
+${PYSITELIB}/drpython/drText.pyc
+${PYSITELIB}/drpython/drText.pyo
+${PYSITELIB}/drpython/drToolBarDialog.py
+${PYSITELIB}/drpython/drToolBarDialog.pyc
+${PYSITELIB}/drpython/drToolBarDialog.pyo
+${PYSITELIB}/drpython/drToolBarFile.py
+${PYSITELIB}/drpython/drToolBarFile.pyc
+${PYSITELIB}/drpython/drToolBarFile.pyo
+${PYSITELIB}/drpython/drTreeDialog.py
+${PYSITELIB}/drpython/drTreeDialog.pyc
+${PYSITELIB}/drpython/drTreeDialog.pyo
+${PYSITELIB}/drpython/drZip.py
+${PYSITELIB}/drpython/drZip.pyc
+${PYSITELIB}/drpython/drZip.pyo
+${PYSITELIB}/drpython/drpython.lin
+${PYSITELIB}/drpython/drpython.py
+${PYSITELIB}/drpython/drpython.pyc
+${PYSITELIB}/drpython/drpython.pyo
+${PYSITELIB}/drpython/drpython.pyw
+${PYSITELIB}/drpython/drpython_wx26.py
+${PYSITELIB}/drpython/drpython_wx26.pyc
+${PYSITELIB}/drpython/drpython_wx26.pyo
+${PYSITELIB}/drpython/examples/DrScript/PrintEndOfLineCharactersInPrompt.py
+${PYSITELIB}/drpython/examples/DrScript/PrintEndOfLineCharactersInPrompt.pyc
+${PYSITELIB}/drpython/examples/DrScript/PrintEndOfLineCharactersInPrompt.pyo
+${PYSITELIB}/drpython/examples/DrScript/ReplaceAllInSelection.py
+${PYSITELIB}/drpython/examples/DrScript/ReplaceAllInSelection.pyc
+${PYSITELIB}/drpython/examples/DrScript/ReplaceAllInSelection.pyo
+${PYSITELIB}/drpython/examples/DrScript/ReverseAssignment.py
+${PYSITELIB}/drpython/examples/DrScript/ReverseAssignment.pyc
+${PYSITELIB}/drpython/examples/DrScript/ReverseAssignment.pyo
+${PYSITELIB}/drpython/examples/DrScript/RunInTerminal.py
+${PYSITELIB}/drpython/examples/DrScript/RunInTerminal.pyc
+${PYSITELIB}/drpython/examples/DrScript/RunInTerminal.pyo
+${PYSITELIB}/drpython/examples/DrScript/SetTerminalArgs.py
+${PYSITELIB}/drpython/examples/DrScript/SetTerminalArgs.pyc
+${PYSITELIB}/drpython/examples/DrScript/SetTerminalArgs.pyo
+${PYSITELIB}/drpython/examples/DrScript/SwitcherooInSelection.py
+${PYSITELIB}/drpython/examples/DrScript/SwitcherooInSelection.pyc
+${PYSITELIB}/drpython/examples/DrScript/SwitcherooInSelection.pyo
+${PYSITELIB}/drpython/examples/DrScript/drscript.dat
+${PYSITELIB}/drpython/lnkDecoderRing.py
+${PYSITELIB}/drpython/lnkDecoderRing.pyc
+${PYSITELIB}/drpython/lnkDecoderRing.pyo
+${PYSITELIB}/drpython/postinst.py
+${PYSITELIB}/drpython/postinst.pyc
+${PYSITELIB}/drpython/postinst.pyo
+share/applications/drpython.desktop
+share/drpython/icons/drpython.png

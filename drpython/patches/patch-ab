@@ -1,0 +1,26 @@
+$NetBSD: patch-ab,v 1.1 2010/07/23 15:59:18 jihbed Exp $
+
+--- drpython.py.orig	2010-07-07 09:11:53.000000000 +0000
++++ drpython.py	2010-07-23 16:50:39.000000000 +0000
+@@ -40,10 +40,20 @@
+ 
+ #franz: stat is not used
+ import sys, os, shutil, re, string, traceback
++import platform
+ #import wxversion
+ #wxversion.select('2.8')
+ import wx, wx.stc
+-import  wx.lib.dialogs
++import wx.lib.dialogs
++
++numb = platform.python_version()[:3]
++pyvers= 'python'+str(numb)
++path="/usr/pkg/lib/"+pyvers+"/site-packages/drpython/"
++PATHDIR= os.path.dirname(path)
++APPDIR= os.path.abspath(PATHDIR)
++sys.path.insert(0,APPDIR)
++os.chdir(APPDIR)
++
+ import drScrolledMessageDialog
+ import drHtmlBrowser
+ from drNotebook import *
