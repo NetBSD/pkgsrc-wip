@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.16 2010/07/05 16:31:55 jihbed Exp $
+# $NetBSD: Makefile,v 1.17 2010/07/23 21:51:36 lexort Exp $
 #
 
 DISTNAME=	ipython-0.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
-CATEGORIES=	devel python
+PKGREVISION=	3
+CATEGORI
 MASTER_SITES=	http://ipython.scipy.org/dist/
 
 MAINTAINER=	tonnerre@NetBSD.org
@@ -27,7 +27,7 @@ SUBST_MESSAGE.prefix=	Fixing header search prefix.
 
 INSTALLATION_DIRS+=	man
 
-# Devel dependecy section
+# Devel dependency section
 
 .include "../../devel/py-ctypes/buildlink3.mk"
 .include "../../devel/py-pexpect/buildlink3.mk"
@@ -36,12 +36,12 @@ DEPENDS+=	${PYPKGPREFIX}-readline>=0:../../devel/py-readline
 #DEPENDS+=	pydb>=1.26:../../wip/pydb
 DEPENDS+=	${PYPKGPREFIX}-nose-[0-9]*:../../devel/py-nose
 
-# Graphics dependecy section
+# Graphics dependency section
 
 DEPENDS+=	${PYPKGPREFIX}-gnuplot>=1.7:../../graphics/py-gnuplot
 .include "../../graphics/py-matplotlib/buildlink3.mk"
 
-# Math dependecy section
+# Math dependency section
 
 .include "../../math/py-Numeric/buildlink3.mk"
 .include "../../math/py-numarray/buildlink3.mk"
@@ -50,9 +50,9 @@ DEPENDS+=	${PYPKGPREFIX}-gnuplot>=1.7:../../graphics/py-gnuplot
 # Network dependency section
 
 DEPENDS+=	${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
-DEPENDS+=	${PYPKGPREFIX}-foolscap>=0.4.1:../../wip/py-foolscap
+DEPENDS+=	${PYPKGPREFIX}-foolscap>=0.4.1:../../net/py-foolscap
 
-# Security dependcey section
+# Security dependency section
 
 DEPENDS+=	${PYPKGPREFIX}-OpenSSL>=0.7:../../security/py-OpenSSL
 
@@ -60,14 +60,14 @@ DEPENDS+=	${PYPKGPREFIX}-OpenSSL>=0.7:../../security/py-OpenSSL
 
 DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 
-# X11 dependecy section
+# X11 dependency section
 
 .include "../../x11/py-Tk/buildlink3.mk"
 .include "../../x11/py-gtk2/buildlink3.mk"
 .include "../../x11/py-qt4/buildlink3.mk"
 .include "../../x11/py-wxWidgets/buildlink3.mk"
 
-# www dependecy section
+# www dependency section
 
 DEPENDS+=	zope3-[0-9]*:../../www/zope3
 
