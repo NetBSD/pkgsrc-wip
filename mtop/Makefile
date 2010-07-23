@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/07/23 12:52:43 tnn2 Exp $
+# $NetBSD: Makefile,v 1.4 2010/07/23 14:53:26 tnn2 Exp $
 #
 
 DISTNAME=	mtop-0.6.6
@@ -14,7 +14,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Curses>=0:../../devel/p5-Curses
 DEPENDS+=	p5-DBD-mysql>=0:../../databases/p5-DBD-mysql
-DEPENDS+=	p5-Getopt-Long>=0:../../devel/p5-Getopt-Long
 
 PERL5_PACKLIST=	auto/mtop/.packlist
 USE_LANGUAGES=	# none
