@@ -88,6 +88,8 @@ runtest pkg_grep_summary -t substring PKGNAME dict < src_summary.txt |
     grep_PKGNAME_n_PKGBASE_only
 runtest pkg_grep_summary -t substring PKGNAME distcc < src_summary.txt |
     grep_PKGNAME_n_PKGBASE_only
+runtest pkg_grep_summary -t substring DEPENDS pkg_online-server < src_summary.txt |
+    grep_PKGNAME_n_PKGBASE_only
 
 runtest pkg_grep_summary -t first PKGNAME dict < src_summary.txt |
     grep_PKGNAME_n_PKGBASE_only

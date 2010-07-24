@@ -130,11 +130,11 @@ case "$strategy" in
     exact)
 	condition="fvalue == \"$string\"";;
     prefix)
-	condition="has_prefix(fvalue, \"$string\")";;
+	condition="has_prefix(fvalue, \"$string\") != 0";;
     suffix)
-	condition="has_suffix(fvalue, \"$string\")";;
+	condition="has_suffix(fvalue, \"$string\") != 0";;
     substring)
-	condition="index(fvalue, \"$string\")";;
+	condition="index(fvalue, \"$string\") > 0";;
     first)
 	condition="match_first_word(fvalue, \"$string\")";;
     last)

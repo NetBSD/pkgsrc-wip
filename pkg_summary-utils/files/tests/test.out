@@ -441,6 +441,11 @@ PKGPATH=wip/dict-client
 --------------------------------------------------
 ------- args: 'pkg_grep_summary' '-t' 'substring' 'PKGNAME' 'distcc'
 --------------------------------------------------
+------- args: 'pkg_grep_summary' '-t' 'substring' 'DEPENDS' 'pkg_online-server'
+PKGNAME=pkg_online-0.5.0nb2
+PKGPATH=wip/pkg_online
+
+--------------------------------------------------
 ------- args: 'pkg_grep_summary' '-t' 'first' 'PKGNAME' 'dict'
 PKGNAME=dict-server-1.10.11nb2
 PKGPATH=wip/dict-server
