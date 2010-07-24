@@ -1,7 +1,7 @@
 #!/usr/bin/env runawk
 
 #.begin-str help
-# direct_deps - takes summarries on input as well as a list already
+# direct_deps - takes summaries on input and a list of already
 # processed packages and outputs enriched PKGPATHs for direct
 # dependencies (either DEPENDS or BUILD_DEPENDS or both) provided that
 # they are not listed in "processed packages". Output PKGPATHs
