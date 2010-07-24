@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4035 2010/07/24 00:01:05 ryo-on Exp $
+# $Id: Makefile,v 1.4036 2010/07/24 09:45:34 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2485,7 +2485,6 @@ SUBDIR+=	vcf
 SUBDIR+=	vche
 SUBDIR+=	vdesk
 SUBDIR+=	vee
-SUBDIR+=	vice2
 SUBDIR+=	vidalia
 SUBDIR+=	vidrioclock
 SUBDIR+=	vidriolib
