@@ -1,6 +1,6 @@
 #!/usr/bin/env runawk
 
-# Copyright (c) 2008-2009 Aleksey Cheusov <vle@gmx.net>
+# Copyright (c) 2008-2010 Aleksey Cheusov <vle@gmx.net>
 #
 # Permission is hereby granted, free of charge, to any person obtaining
 # a copy of this software and associated documentation files (the
@@ -136,6 +136,8 @@ function process_deps (                arr, i, j, cnt){
 					else
 						hidden_deps [depbase1 " " pkgpath ";" pkgbase] = depname1
 
+					depname2reqd_by [depname1] = pkgpath
+
 					dep_pkgs [pkgpath] = 1
 					j = -1
 
@@ -226,7 +228,8 @@ END {
 		depname = hidden_deps [hdep]
 
 		if (! (depbase in pkgpaths)){
-			print "Cannot find PKGPATH for " depbase > "/dev/stderr"
+			printf "Cannot find PKGPATH for %s needed by %s\n", \
+				depbase, depname2reqd_by [depbase] > "/dev/stderr"
 			ex = 1
 		}else{
 			pkgpath = hdep
