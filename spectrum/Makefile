@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2010/07/22 02:59:06 schnoebe Exp $
+# $NetBSD: Makefile,v 1.20 2010/07/25 05:21:40 schnoebe Exp $
 
 DISTNAME=		spectrum-0.3.1
 # PKGREVISION=		1
@@ -93,12 +93,14 @@ post-install:
 	# 				${DESTDIR}${EGDIR}/spectrum-sqlite3.sql
 
 
-.include "../../lang/python/application.mk"
-.include "../../lang/python/extension.mk"
-.include "../../wip/poco/buildlink3.mk"
-.include "../../wip/gloox/buildlink3.mk"
 .include "../../chat/libpurple/buildlink3.mk"
 .include "../../devel/cmake/buildlink3.mk"
-.include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/py-readline/buildlink.mk"
+.include "../../lang/python/application.mk"
+.include "../../lang/python/extension.mk"
+.include "../../wip/gloox/buildlink3.mk"
+.include "../../wip/poco/buildlink3.mk"
+
 .include "../../mk/bsd.pkg.mk"
