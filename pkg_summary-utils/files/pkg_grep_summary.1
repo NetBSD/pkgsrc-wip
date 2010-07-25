@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkg_grep_summary.1,v 1.19 2010/05/30 18:21:26 cheusov Exp $
+.\"	$NetBSD: pkg_grep_summary.1,v 1.20 2010/07/25 16:16:10 cheusov Exp $
 .\"
 .\" Copyright (c) 2008 by Aleksey Cheusov (vle@gmx.net)
 .\" Absolutely no warranty.
@@ -65,7 +65,7 @@ The following variables can be used in
 "fvalue"
 (part of line after = sign) and associative array
 "fields"
-mapping field names to values which is availables only if 
+mapping field names to values which is available only if 
 .I field
 is `.' (single dot).
 .SH OPTIONS
@@ -111,7 +111,7 @@ according to search strategy
 .IR strategy .
 Available search strategies are:
 .IR exact ", " prefix ", " suffix ", " substring ", " word ", "
-.IR first ", " last ", " re ", " strfile ", " awk ", " kw
+.IR first ", " last ", " re ", " strfile ", " strlist ", " awk ", " kw
 .RI " (" keywords ") and " empty .
 Search strategy 
 .I re
@@ -124,6 +124,11 @@ With
 .IR kw " (" keywords ")"
 .I condition
 is treated as a list of words each of which should present in
+.IR field .
+With
+search strategy
+.IR strlist ", " condition
+is treated as a list of words at least one of which should present in
 .IR field .
 .TP
 .B "-T"
@@ -172,6 +177,9 @@ pkg_grep_summary . 'fields ["automatic"] == "yes" &&
                     fields ["REQUIREDBY"] == ""'
 
 pkg_grep_summary -i -t kw COMMENT 'dns server' \\
+      < /usr/pkgsrc/packages/pkg_summary.txt
+
+pkg_grep_summary -t strlist MAINAINER 'cheusov@tut.by vle@gmx.net' \\
       < /usr/pkgsrc/packages/pkg_summary.txt
 .VE
 .SH SEE ALSO

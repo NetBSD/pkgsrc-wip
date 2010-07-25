@@ -425,6 +425,26 @@ MAINTAINER=wiz@NetBSD.org
 CATEGORIES=graphics
 
 --------------------------------------------------
+------- args: 'pkg_grep_summary' '-t' 'strlist' 'PKGPATH' 'graphics/png wip/distbb'
+PKGNAME=distbb-0.22.0
+PKGPATH=wip/distbb
+DEPENDS=pkg_summary-utils>=0.18.1:../../wip/pkg_summary-utils paexec>=0.10.0:../../wip/paexec runawk>=0.13.0:../../wip/runawk
+BUILD_DEPENDS= checkperms>=1.1:../../sysutils/checkperms
+HOMEPAGE=http://mova.org/~cheusov/pub/distbb/
+COMMENT=DISTributed Bulk Build tool for pkgsrc
+MAINTAINER=cheusov@tut.by
+CATEGORIES=pkgtools
+EXFIELD=XVALUE1
+
+PKGNAME=png-1.2.32beta01
+PKGPATH=graphics/png
+BUILD_DEPENDS= libtool-base>=1.5.18nb5:../../devel/libtool-base checkperms>=1.1:../../sysutils/checkperms
+HOMEPAGE=http://www.libpng.org/pub/png/
+COMMENT=Library for manipulating PNG images
+MAINTAINER=wiz@NetBSD.org
+CATEGORIES=graphics
+
+--------------------------------------------------
 ------- args: 'pkg_grep_summary' '-t' 'substring' 'PKGNAME' 'dict'
 PKGPATH=textproc/dictem
 PKGNAME=dictem-0.82
@@ -665,7 +685,7 @@ CATEGORIES=textproc
 
 --------------------------------------------------
 ------- args: 'pkg_grep_summary' '-T'
-exact prefix suffix substring word first last re strfile awk empty kw
+exact prefix suffix substring word first last re strfile strlist awk empty kw
 --------------------------------------------------
 ------- pkg_cmp_summary #1.1
 - ap2-vhost-ldap 1.2.0nb1

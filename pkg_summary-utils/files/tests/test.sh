@@ -83,6 +83,7 @@ runtest pkg_grep_summary -S PKGPATHe pkgs.txt < src_summary.txt
 runtest pkg_grep_summary -t strfile PKGPATH  pkgs.txt < src_summary.txt
 runtest pkg_grep_summary -t strfile PKGPATHe pkgs.txt < src_summary.txt
 
+runtest pkg_grep_summary -t strlist PKGPATH 'graphics/png wip/distbb' < src_summary.txt
 
 runtest pkg_grep_summary -t substring PKGNAME dict < src_summary.txt |
     grep_PKGNAME_n_PKGBASE_only
