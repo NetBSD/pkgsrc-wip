@@ -543,41 +543,7 @@ extra_deps_fn=$tmp_dir/extra_deps.txt
 
 processed_pkgs_fn=$tmp_dir/processed_pkgs.txt
 
-get_processed_pkgs (){
-    # given summaries on input this script outputs all possible
-    # enriched PKGPATHs, i.e plain PKGPATHs,
-    # PKGPATH:<good_assignments> and
-    # PKGPATH:<good_assignments>,<bad_assignments> where
-    # <good_assignments> are assignments from ASSIGMENTS, and
-    # <bad_assignments> are rejected ones from _INHER_ASSIGNS_REJ.
-    awk '
-NF == 0 {
-   if (assigns != "")
-      pkgpath = pkgpath ":" assigns
-   print pkgpath
-
-   if (assigns_rej != "")
-      print pkgpath (assigns != "" ? "," : ":") assigns_rej
-
-   pkgpath = assigns_rej = assigns = ""
-   next
-}
-/^PKGPATH=/ {
-   pkgpath = substr($0, 9)
-   next
-}
-/^ASSIGNMENTS=/ {
-   assigns = substr($0, 13)
-   next
-}
-/^_INHER_ASSIGNS_REJ=/ {
-   assigns_rej = substr($0, 20)
-   next
-}
-' "$@"
-}
-
-get_processed_pkgs < "$partial_summary_fn" > "$processed_pkgs_fn"
+$LIBEXECDIR/get_processed_pkgs < "$partial_summary_fn" > "$processed_pkgs_fn"
 
 deps1_all_fn=$tmp_dir/level1_all_deps.txt
 
@@ -619,7 +585,7 @@ while test -n "${with_dep}${with_bdep}"; do
     pkg_uniq_summary "$partial_summary_fn" > "$partial_summary_fn".tmp
     mv "$partial_summary_fn".tmp "$partial_summary_fn"
 
-    get_processed_pkgs "$deps1_all_fn" >> "$processed_pkgs_fn"
+    $LIBEXECDIR/get_processed_pkgs "$deps1_all_fn" >> "$processed_pkgs_fn"
     cat "$extra_deps_fn" >> "$processed_pkgs_fn"
     sort -u "$processed_pkgs_fn" > "$processed_pkgs_fn".tmp
     mv "$processed_pkgs_fn".tmp "$processed_pkgs_fn"

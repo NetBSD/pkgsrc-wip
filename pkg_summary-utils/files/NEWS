@@ -1,4 +1,15 @@
 ----------------------------------------------------------------------
+Version 0.42.1, by Aleksey Cheusov, Sun, 25 Jul 2010 17:48:14 +0300
+
+  pkg_grep_summary:
+      - FIXED: search strategy "substring"
+
+  pkg_summary2deps:
+      - More verbose error message "Cannot find PKGPATH for %s"
+
+  get_processed_pkgs is separated into an individual libexec script
+
+----------------------------------------------------------------------
 Version 0.42.0, by Aleksey Cheusov, Wed, 23 Jun 2010 00:41:29 +0300
 
   pkg_src_summary, pkg_summary2deps:
