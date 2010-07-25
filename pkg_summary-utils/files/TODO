@@ -43,7 +43,8 @@ existing tools:
     pkg_summary2deps:
 
     pkg_summary4view:
-       - another format for DEPENDS, BUILD_DEPENDS and CONFLICTS
+       - another format for DEPENDS, BUILD_DEPENDS and CONFLICTS,
+         (convertors for RHEL yum, Debian apt, OpenSolaris IPS)
 
     pkg_uniq_summary:
 
@@ -62,7 +63,6 @@ existing tools:
 
     pkg_subgraph_deps:
          - man page
-         - -p 'pkg1 pkg2 ...pkgN'
 
 new tools?
     - replacement for lintpkgsrc -m
