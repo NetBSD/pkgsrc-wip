@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2009/03/28 21:06:35 milosn Exp $
+# $NetBSD: Makefile,v 1.8 2010/07/25 13:40:09 lexort Exp $
 
 AXIOM_VERSION=	0.5.20
 DISTNAME=	Axiom-${AXIOM_VERSION}
@@ -8,7 +8,7 @@ CATEGORIES=	python
 MASTER_SITES=	ftp://ftp.osuosl.org/pub/nslu2/sources/
 EXTRACT_SUFX=	.tar.gz
 
-MAINTAINER=	milos.negovanovic@googlemail.com
+MAINTAINER=         pkgsrc-wip-users@sourceforge.net
 HOMEPAGE=	http://divmod.org/trac/wiki/DivmodAxiom
 COMMENT=	An object database implemented on top of SQLite
 
