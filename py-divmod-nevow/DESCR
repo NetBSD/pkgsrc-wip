@@ -1,6 +1,0 @@
-Nevow (pronounced as the French "nouveau", or "noo-voh") is a web application
-construction kit written in Python. It is designed to allow the programmer to
-express as much of the view logic as desired in Python, and includes a pure
-Python XML expression syntax named stan to facilitate this. However it also
-provides rich support for designer-edited templates, using a very small XML
-attribute language to provide bi-directional template manipulation capability.
