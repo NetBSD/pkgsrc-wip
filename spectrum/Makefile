@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2010/07/25 05:21:40 schnoebe Exp $
+# $NetBSD: Makefile,v 1.21 2010/07/25 05:34:42 schnoebe Exp $
 
 DISTNAME=		spectrum-0.3.1
 # PKGREVISION=		1
@@ -10,6 +10,9 @@ HOMEPAGE=		http://spectrum.im/
 COMMENT=		XMPP transport/gateway based on libpurple
 LICENSE=		gnu-gpl-v3
 MASTER_SITES=		http://spectrum.im/attachments/download/13/
+
+DEPENDS+=		${PYPKGPREFIX}-xmpppy>=0.4.1:../../wip/py-xmpppy
+PYTHON_VERSIONS_ACCEPTED=	26 25
 
 # if the package can be created without root privileges
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -97,7 +100,7 @@ post-install:
 .include "../../devel/cmake/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/py-readline/buildlink.mk"
+.include "../../devel/py-readline/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .include "../../wip/gloox/buildlink3.mk"
