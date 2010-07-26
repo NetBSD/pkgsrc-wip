@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/07/26 01:35:30 schnoebe Exp $
+# $NetBSD: Makefile,v 1.7 2010/07/26 02:08:35 schnoebe Exp $
 
 DISTNAME=	palaver-0.6
 PKGNAME=	${PYPKGPREFIX}-jabber-${DISTNAME}
@@ -8,6 +8,7 @@ MASTER_SITES=	http://code.stanziq.com/cgit/palaver/palaver/snapshot/
 MAINTAINER=	eric@cirr.com
 HOMEPAGE=	http://code.stanziq.com/palaver
 COMMENT=	XEP-0045 + XEP-0128 Multi-User Conferencing package
+LICENSE=	mit
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 #
@@ -29,13 +30,13 @@ PYDISTUTILSPKG=	yes
 JABBER_USER?=		jabberd
 JABBER_GROUP?=		jabberd
 FILES_SUBST+=		PYTHONBIN=${PYTHONBIN:Q}
-PKG_USERS_VARS+=	JABBER_USER
-PKG_GROUPS_VARS+=	JABBER_GROUP
+PKG_USERS_VARS=		JABBER_USER
+PKG_GROUPS_VARS=	JABBER_GROUP
 
 .include "../../wip/jabberd/transports.mk"
 
-DOCDIR=                 ${DESTDIR}${PREFIX}/share/doc/palaver
-DOCFILES=               README.txt XEP.txt db/muc-pgsql.sql
+DOCDIR=			${DESTDIR}${PREFIX}/share/doc/palaver
+DOCFILES=		README.txt XEP.txt db/muc-pgsql.sql
 
 INSTALLATION_DIRS=	share/doc/palaver
 

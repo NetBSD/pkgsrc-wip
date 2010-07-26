@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.1 2008/08/22 19:32:27 schnoebe Exp $
+$NetBSD: patch-aa,v 1.2 2010/07/26 02:08:35 schnoebe Exp $
+
+# Update to newer style twisted service creation.
 
 --- twisted/plugins/palaver.py.orig	2007-02-08 17:08:22.000000000 -0600
 +++ twisted/plugins/palaver.py

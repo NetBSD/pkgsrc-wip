@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.4 2008/08/26 21:03:47 schnoebe Exp $
+$NetBSD: distinfo,v 1.5 2010/07/26 02:08:35 schnoebe Exp $
 
-SHA1 (palaver-0.5.tar.gz) = 6cfdc251a1812bd01c2fbf358a8897da28dcd299
-RMD160 (palaver-0.5.tar.gz) = ebf2a9443187c715424eaaa3670a370d0851d598
-Size (palaver-0.5.tar.gz) = 57702 bytes
-SHA1 (patch-aa) = 8df9986ac4cdb10668ae9e721853fea372a87819
-SHA1 (patch-ab) = 861989812fdfe1ac1b07a742d4b6d879ec3b8462
-SHA1 (patch-ac) = f46539aa5e58f84c3d8833fa841939a740db5763
+SHA1 (palaver-0.6.tar.gz) = f63e735901b0f85d8be39c35d71abb67be5a3019
+RMD160 (palaver-0.6.tar.gz) = 437feefe35667fb15f1c658b3c5e10cde402b1a0
+Size (palaver-0.6.tar.gz) = 117108 bytes
+SHA1 (patch-aa) = 758cc9cb4819f39732f95ec3279b583bfe9a6fb9
+SHA1 (patch-ab) = 81152faf0358b1d147827ba2e0bdd579973834de
+SHA1 (patch-ac) = 35c5088c28f16e9777f4c701ac0f311f3b890a04

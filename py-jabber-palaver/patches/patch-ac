@@ -1,4 +1,6 @@
-$NetBSD: patch-ac,v 1.1 2008/08/26 21:04:56 schnoebe Exp $
+$NetBSD: patch-ac,v 1.2 2010/07/26 02:08:35 schnoebe Exp $
+
+# ?correct? the argument processing.
 
 --- palaver/palaver.py.orig	2007-03-17 11:20:00.000000000 -0500
 +++ palaver/palaver.py
