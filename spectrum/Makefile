@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2010/07/25 05:34:42 schnoebe Exp $
+# $NetBSD: Makefile,v 1.22 2010/07/26 01:13:45 schnoebe Exp $
 
 DISTNAME=		spectrum-0.3.1
-# PKGREVISION=		1
+PKGREVISION=		1
 CATEGORIES=		chat
 
 # Second paragraph - MAINTAINER/OWNER, HOMEPAGE and COMMENT, and LICEN[CS]E
@@ -12,6 +12,7 @@ LICENSE=		gnu-gpl-v3
 MASTER_SITES=		http://spectrum.im/attachments/download/13/
 
 DEPENDS+=		${PYPKGPREFIX}-xmpppy>=0.4.1:../../wip/py-xmpppy
+DEPENDS+=		${PYPKGPREFIX}-expat>=0nb4:../../textproc/py-expat
 PYTHON_VERSIONS_ACCEPTED=	26 25
 
 # if the package can be created without root privileges
@@ -66,6 +67,7 @@ SUBST_SED.manpath+=	-e 's,@PKGMANDIR@,${PKGMANDIR},g'
 SUBST_CLASSES+=		users
 SUBST_STAGE.users=	post-patch
 SUBST_FILES.users=	spectrumctl/spectrumctl.py
+SUBST_FILES.users+=	spectrumctl/spectrum/env.py
 SUBST_FILES.users+=	man/spectrumctl.8
 SUBST_MESSAGE.users=	Correcting spectrum user
 SUBST_SED.users=	-e 's/@SPECTRUM_USER@/${JABBER_USER}/g'
