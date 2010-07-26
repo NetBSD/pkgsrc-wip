@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.5 2009/02/14 05:31:25 schnoebe Exp $
+# $NetBSD: Makefile,v 1.6 2010/07/26 01:35:30 schnoebe Exp $
 
-DISTNAME=	palaver-0.5
+DISTNAME=	palaver-0.6
 PKGNAME=	${PYPKGPREFIX}-jabber-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	chat python
-MASTER_SITES=	http://onlinegamegroup.com/releases/palaver/
+MASTER_SITES=	http://code.stanziq.com/cgit/palaver/palaver/snapshot/
 
 MAINTAINER=	eric@cirr.com
-HOMEPAGE=	http://www.onlinegamegroup.com/projects/palaver/
+HOMEPAGE=	http://code.stanziq.com/palaver
 COMMENT=	XEP-0045 + XEP-0128 Multi-User Conferencing package
 
 PKG_DESTDIR_SUPPORT=	user-destdir
