@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2010/06/24 16:26:56 marko_schuetz Exp $
-include/mpc.h
-lib/libmpc.la
-info/mpc.info
