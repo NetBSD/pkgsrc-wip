@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2010/06/12 12:42:04 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.17 2010/07/27 19:05:02 cheusov Exp $
 bin/mkc_check_common.sh
 bin/mkc_check_compiler
 bin/mkc_check_custom
@@ -100,6 +100,7 @@ share/examples/mk-configure/hello_dlopen/Makefile
 share/examples/mk-configure/hello_dlopen/dlopen_test.c
 share/examples/mk-configure/hello_dlopen/expect.out
 share/examples/mk-configure/hello_dlopen/test.mk
+share/examples/mk-configure/hello_files/DEBIAN/control
 share/examples/mk-configure/hello_files/Makefile
 share/examples/mk-configure/hello_files/expect.NetBSD.out
 share/examples/mk-configure/hello_files/expect.out
@@ -169,12 +170,28 @@ share/examples/mk-configure/hello_subdirs/prog2/Makefile
 share/examples/mk-configure/hello_subdirs/prog2/expect.out
 share/examples/mk-configure/hello_subdirs/prog2/prog2.c
 share/examples/mk-configure/hello_subdirs/prog2/test.mk
+share/examples/mk-configure/hello_superfs/Makefile
+share/examples/mk-configure/hello_superfs/Makefile.inc
+share/examples/mk-configure/hello_superfs/expect.out
+share/examples/mk-configure/hello_superfs/fsck_superfs/Makefile
+share/examples/mk-configure/hello_superfs/fsck_superfs/fsck_superfs.8
+share/examples/mk-configure/hello_superfs/fsck_superfs/fsck_superfs.c
+share/examples/mk-configure/hello_superfs/mkfs_superfs/Makefile
+share/examples/mk-configure/hello_superfs/mkfs_superfs/mkfs_superfs.8
+share/examples/mk-configure/hello_superfs/mkfs_superfs/mkfs_superfs.c
+share/examples/mk-configure/hello_superfs/test.mk
 share/examples/mk-configure/hello_world/COPYRIGHT
 share/examples/mk-configure/hello_world/Makefile
 share/examples/mk-configure/hello_world/README
 share/examples/mk-configure/hello_world/expect.out
 share/examples/mk-configure/hello_world/hello_world.c
 share/examples/mk-configure/hello_world/test.mk
+share/examples/mk-configure/hello_xxzip/Makefile
+share/examples/mk-configure/hello_xxzip/expect.out
+share/examples/mk-configure/hello_xxzip/test.mk
+share/examples/mk-configure/hello_xxzip/tutorial.pod
+share/examples/mk-configure/hello_xxzip/xxzip.c
+share/examples/mk-configure/hello_xxzip/xxzip.pod
 share/examples/mk-configure/hello_yacc/Makefile
 share/examples/mk-configure/hello_yacc/calc.y
 share/examples/mk-configure/hello_yacc/expect.out
@@ -194,7 +211,7 @@ share/examples/mk-configure/subprojects/libhello1/hello1.h
 share/examples/mk-configure/subprojects/libhello1/linkme.mk
 share/examples/mk-configure/subprojects/libhello2/Makefile
 share/examples/mk-configure/subprojects/libhello2/hello2.3
-share/examples/mk-configure/subprojects/libhello2/hello2.cc
+share/examples/mk-configure/subprojects/libhello2/hello2.c
 share/examples/mk-configure/subprojects/libhello2/include/hello2.h
 share/examples/mk-configure/subprojects/libhello2/linkme.mk
 share/examples/mk-configure/subprojects/test.mk
@@ -216,6 +233,7 @@ share/mkc-mk/mkc.prog.mk
 share/mkc-mk/mkc.subdir.mk
 share/mkc-mk/mkc.subprj.mk
 share/mkc-mk/mkc.subprjs.mk
+share/mkc-mk/mkc_imp.arch.mk
 share/mkc-mk/mkc_imp.dep.mk
 share/mkc-mk/mkc_imp.files.mk
 share/mkc-mk/mkc_imp.final.mk
@@ -229,6 +247,7 @@ share/mkc-mk/mkc_imp.lua.mk
 share/mkc-mk/mkc_imp.man.mk
 share/mkc-mk/mkc_imp.own.mk
 share/mkc-mk/mkc_imp.pkg-config.mk
+share/mkc-mk/mkc_imp.pod.mk
 share/mkc-mk/mkc_imp.platform.sys.mk
 share/mkc-mk/mkc_imp.prog.mk
 share/mkc-mk/mkc_imp.scripts.mk
