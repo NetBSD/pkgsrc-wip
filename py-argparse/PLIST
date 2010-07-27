@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/07/27 09:12:41 jihbed Exp $
+${PYSITELIB}/argparse.py
+${PYSITELIB}/argparse.pyc
+${PYSITELIB}/argparse.pyo
