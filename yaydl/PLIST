@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/07/27 21:43:24 ryo-on Exp $
+bin/yaydl
+share/doc/yaydl.pl/README
+share/doc/yaydl.pl/changelog
