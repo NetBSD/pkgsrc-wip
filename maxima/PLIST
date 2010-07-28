@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2010/05/17 11:47:14 asau Exp $
+@comment $NetBSD: PLIST,v 1.27 2010/07/28 13:36:07 asau Exp $
 bin/maxima
 bin/rmaxima
 bin/xmaxima
@@ -304,8 +304,11 @@ share/maxima/${PKGVERSION}/share/calculus/qual.usg
 share/maxima/${PKGVERSION}/share/calculus/qualsp.lisp
 share/maxima/${PKGVERSION}/share/calculus/revert.mac
 share/maxima/${PKGVERSION}/share/calculus/taylor1.mac
+share/maxima/${PKGVERSION}/share/colnew/colnew-if.lisp
 share/maxima/${PKGVERSION}/share/colnew/colnew-lisp.system
 share/maxima/${PKGVERSION}/share/colnew/colnew-package.lisp
+share/maxima/${PKGVERSION}/share/colnew/colnew.mac
+share/maxima/${PKGVERSION}/share/colnew/colnew.system
 share/maxima/${PKGVERSION}/share/colnew/lisp/approx.lisp
 share/maxima/${PKGVERSION}/share/colnew/lisp/appsln.lisp
 share/maxima/${PKGVERSION}/share/colnew/lisp/colnew.lisp
@@ -335,6 +338,8 @@ share/maxima/${PKGVERSION}/share/colnew/lisp/subbak.lisp
 share/maxima/${PKGVERSION}/share/colnew/lisp/subfor.lisp
 share/maxima/${PKGVERSION}/share/colnew/lisp/vmonde.lisp
 share/maxima/${PKGVERSION}/share/colnew/lisp/vwblok.lisp
+share/maxima/${PKGVERSION}/share/colnew/prob1.mac
+share/maxima/${PKGVERSION}/share/colnew/prob2.mac
 share/maxima/${PKGVERSION}/share/combinatorics/README
 share/maxima/${PKGVERSION}/share/contrib/Grobner/README
 share/maxima/${PKGVERSION}/share/contrib/Grobner/grobner-demo.output
@@ -699,6 +704,7 @@ share/maxima/${PKGVERSION}/share/contrib/rtest_lsquares.mac
 share/maxima/${PKGVERSION}/share/contrib/rtest_mnewton.mac
 share/maxima/${PKGVERSION}/share/contrib/rtest_opproperties.mac
 share/maxima/${PKGVERSION}/share/contrib/rtest_sequence.mac
+share/maxima/${PKGVERSION}/share/contrib/rtest_solve_rat_ineq.mac
 share/maxima/${PKGVERSION}/share/contrib/rtest_to_poly_solver.mac
 share/maxima/${PKGVERSION}/share/contrib/rtest_topoly.mac
 share/maxima/${PKGVERSION}/share/contrib/rtest_z_transform.mac
@@ -1230,6 +1236,7 @@ share/maxima/${PKGVERSION}/share/sym/testsuite.lisp
 share/maxima/${PKGVERSION}/share/sym/treillis.lisp
 share/maxima/${PKGVERSION}/share/sym/tri.lisp
 share/maxima/${PKGVERSION}/share/sym/util.lisp
+share/maxima/${PKGVERSION}/share/template-standalone.texi
 share/maxima/${PKGVERSION}/share/template.texi
 share/maxima/${PKGVERSION}/share/tensor/ademo.dem
 share/maxima/${PKGVERSION}/share/tensor/adsitter.dem
