@@ -91,7 +91,7 @@ _GIT_TAG.${_repo_}=       ${_GIT_TODAY:Q}
 
 # Cache support:
 #   cache file name (compression is not really effective)
-_GIT_DISTFILE.${_repo_}=  ${PKGBASE}-${GIT_MODULE.${_repo_}}-${_GIT_TAG.${_repo_}}.tar
+_GIT_DISTFILE.${_repo_}=  ${GIT_MODULE.${_repo_}}-${_GIT_TAG.${_repo_}}.tar
 
 #   command to extract cache file
 _GIT_EXTRACT_CACHED.${_repo_}=    \
@@ -116,9 +116,9 @@ do-git-extract:
 	cd ${WRKDIR};							\
 	if [ ! -d ${_GIT_DISTDIR} ]; then mkdir -p ${_GIT_DISTDIR:Q};  fi;	\
 	${_GIT_EXTRACT_CACHED.${_repo_}};				\
-	p="$$(cd ${_GIT_DISTDIR} && ls -t ${PKGBASE}-${GIT_MODULE.${_repo_}}-* | head -n 1)";	\
+	p="$$(cd ${_GIT_DISTDIR} && ls -t ${GIT_MODULE.${_repo_}}-* | head -n 1)";	\
 	if [ -n "$$p" ]; then						\
-	    q="$$(cd ${_GIT_DISTDIR} && ls -t ${PKGBASE}-${GIT_MODULE.${_repo_}}-* | wc -l)" &&	\
+	    q="$$(cd ${_GIT_DISTDIR} && ls -t ${GIT_MODULE.${_repo_}}-* | wc -l)" &&	\
 	    if [ $$(($$q)) -gt 3 ] ; then	    \
 	       ${STEP_MSG} "(1a) more than 3 generation files found in ${_GIT_DISTDIR}, you may";	\
 	       ${STEP_MSG} "	 delete them manually to avoid getting them fat --> $$p etc" ;		\
