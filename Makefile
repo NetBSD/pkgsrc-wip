@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4039 2010/07/27 21:45:55 ryo-on Exp $
+# $Id: Makefile,v 1.4040 2010/07/29 09:09:03 ryo-on Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1177,6 +1177,7 @@ SUBDIR+=	libuxre
 SUBDIR+=	libvc
 SUBDIR+=	libvdpau
 SUBDIR+=	libvg
+SUBDIR+=	libvpx
 SUBDIR+=	libwbxml2-patched
 SUBDIR+=	libxc
 SUBDIR+=	libyubikey
