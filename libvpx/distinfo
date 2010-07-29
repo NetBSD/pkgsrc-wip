@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/07/29 00:39:27 ryo-on Exp $
+
+SHA1 (libvpx-0.9.1.tar.bz2) = a18acb7a1a2fd62268e63aab860b43ff04669b9e
+RMD160 (libvpx-0.9.1.tar.bz2) = 365b16848979727689da5e4416978c0a275e1af3
+Size (libvpx-0.9.1.tar.bz2) = 1191203 bytes

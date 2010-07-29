@@ -1,0 +1,3 @@
+* check PLIST
+* test on i386
+* test on non-i386 platforms
