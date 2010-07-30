@@ -18,6 +18,8 @@ existing tools:
     pkg_grep_summary:
        - -f <fields>   output only specified fields, this
                        may work drammatically faster
+       - pkg_src_summary pkgbase < summary.txt
+       - pkg_src_summary category/path < summary.txt
 
     pkg_list_all_pkgs:
 
