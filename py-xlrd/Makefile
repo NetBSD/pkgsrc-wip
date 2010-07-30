@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/05/20 08:38:32 obache Exp $
+# $NetBSD: Makefile,v 1.5 2010/07/30 12:17:29 obache Exp $
 #
 
 DISTNAME=		xlrd-0.7.1
@@ -15,5 +15,5 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG=		yes
 
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
