@@ -241,7 +241,7 @@ normalize_version
 
 
 echo '--------------------------------------------------'
-echo '------- pkg_src_summary #7'
+echo '------- pkg_cmp_summary #7'
 pkg_cmp_summary -p "$objdir"/summary_micro.txt "$objdir"/summary_full.txt |
 grep -v '^='
 
@@ -549,3 +549,9 @@ grep -E 'PKGPATH|LICENSE'
 echo '--------------------------------------------------'
 echo '------- pkg_bin_summary #23.4'
 pkg_bin_summary -f 'PKGPATH' -- bmake pkg_install
+
+# pkg_src_summary
+#echo '--------------------------------------------------'
+#echo '------- pkg_src_summary #24.0'
+#pkg_src_summary -f PKGNAME,PKGPATH x11/xxkb
+
