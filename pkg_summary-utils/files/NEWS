@@ -1,4 +1,10 @@
 ----------------------------------------------------------------------
+Version 0.42.2, by Aleksey Cheusov, Fri, 30 Jul 2010 19:00:01 +0300
+
+  pkg_src_summary:
+      - fix for -b and -l, they didn't work with non-empty PSS_SLAVES
+
+----------------------------------------------------------------------
 Version 0.42.1, by Aleksey Cheusov, Sun, 25 Jul 2010 17:48:14 +0300
 
   pkg_grep_summary:

@@ -184,10 +184,9 @@ process_options (){
     pkgpaths="$@"
 }
 
-with_xxx="$with_bootstrap $with_libdeps"
-export with_libdeps
-
 process_options $PSS_OPTIONS "$@"
+
+with_xxx="$with_bootstrap $with_libdeps"
 
 if test "$multi_var"; then
     # VARIANTS - artificial field keeping all variable assignments
