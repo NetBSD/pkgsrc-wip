@@ -1122,14 +1122,14 @@ PKGNAME=py25-cairo-X
 PKGPATH=graphics/py-cairo
 FAKED_PKGPATH= lang/python25 math/py-Numeric:PYTHON_VERSION_REQD=25 lang/python25 math/py-Numeric:PYTHON_VERSION_REQD=25 
 
+PKGNAME=cairo-X
+PKGPATH=graphics/cairo
+FAKED_PKGPATH= 
+
 ASSIGNMENTS=PYTHON_VERSION_REQD=25
 PKGNAME=py25-Numeric-X
 PKGPATH=math/py-Numeric
 FAKED_PKGPATH= lang/python25 lang/python25
-
-PKGNAME=cairo-X
-PKGPATH=graphics/cairo
-FAKED_PKGPATH= 
 
 PKGNAME=python25-X
 PKGPATH=lang/python25
@@ -1141,13 +1141,13 @@ PKGNAME=py26-cairo-X
 PKGPATH=graphics/py-cairo
 FAKED_PKGPATH= lang/python26 math/py-Numeric math/py-Numeric 
 
-PKGNAME=cairo-X
-PKGPATH=graphics/cairo
-FAKED_PKGPATH= 
-
 PKGNAME=py26-Numeric-X
 PKGPATH=math/py-Numeric
 FAKED_PKGPATH= lang/python26
+
+PKGNAME=cairo-X
+PKGPATH=graphics/cairo
+FAKED_PKGPATH= 
 
 PKGNAME=python26-X
 PKGPATH=lang/python26
@@ -1164,14 +1164,14 @@ PKGNAME=py25-cairo-X
 PKGPATH=graphics/py-cairo
 FAKED_PKGPATH= lang/python25 math/py-Numeric:PYTHON_VERSION_REQD=25 lang/python25 math/py-Numeric:PYTHON_VERSION_REQD=25 
 
+PKGNAME=cairo-X
+PKGPATH=graphics/cairo
+FAKED_PKGPATH= 
+
 ASSIGNMENTS=PYTHON_VERSION_REQD=25
 PKGNAME=py25-Numeric-X
 PKGPATH=math/py-Numeric
 FAKED_PKGPATH= lang/python25 lang/python25
-
-PKGNAME=cairo-X
-PKGPATH=graphics/cairo
-FAKED_PKGPATH= 
 
 PKGNAME=py26-Numeric-X
 PKGPATH=math/py-Numeric
