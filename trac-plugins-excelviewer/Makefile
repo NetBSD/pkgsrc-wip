@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2009/01/14 01:10:17 obache Exp $
+# $NetBSD: Makefile,v 1.3 2010/07/30 12:37:47 obache Exp $
 
-DISTNAME=	excelviewerplugin-0.1dev_r687
-PKGNAME=	trac-plugins-excelviewer-0.1.687
-PKGREVISION=	# empty
+DISTNAME=	excelviewerplugin-0.1dev_r${SVN_REV}
+PKGNAME=	trac-plugins-excelviewer-0.1pre${SVN_REV}
 EGG_NAME=	TracExcelViewer-0.1
 CATEGORIES=	www
-MASTER_SITES=	# not defined
+MASTER_SITES=	-http://trac-hacks.org/changeset/${SVN_REV}/${SVN_MOD}?old_path=/&format=zip
+EXTRACT_SUFX=	.zip
 
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://trac-hacks.org/wiki/ExcelViewerPlugin
@@ -16,19 +16,12 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 DEPENDS+=	{ja-,}trac>=0.10:../../www/trac
 DEPENDS+=	${PYPKGPREFIX}-xlrd>=0:../../wip/py-xlrd
 
-SVN_REPOSITORIES=	excel
-SVN_ROOT.excel=		http://trac-hacks.org/svn/excelviewerplugin/0.10
-SVN_MODULE.excel=	#
-SVN_TAG.excel=		687
+SVN_REV=	687
+SVN_MOD=	excelviewerplugin/0.10
+WRKSRC=		${WRKDIR}/${SVN_MOD}
 
-NO_CHECKSUM=	yes
-
-WRKSRC=		${WRKDIR}/0.10
-
-PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
-
-PRIVILEGED_STAGES+=	clean
+post-extract:
+	find ${WRKSRC} -type f -print | xargs chmod +r
 
 .include "../../lang/python/egg.mk"
-.include "../../wip/mk/svn-package.mk"
 .include "../../mk/bsd.pkg.mk"
