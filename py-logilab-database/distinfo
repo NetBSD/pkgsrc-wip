@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/07/31 12:23:44 jihbed Exp $
+
+SHA1 (logilab-database-1.1.0.tar.gz) = c8568ab6a717a12fe89c1ad5d48c42658a8feb61
+RMD160 (logilab-database-1.1.0.tar.gz) = bc8abe90ec5fbb03aab54f958a9bf36361ad084c
+Size (logilab-database-1.1.0.tar.gz) = 51814 bytes
