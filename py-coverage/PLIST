@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.3 2009/08/30 21:31:00 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.4 2010/07/31 01:00:21 jihbed Exp $
 bin/coverage
-${PYSITELIB}/coverage-3.0.1-py2.5.egg-info/PKG-INFO
-${PYSITELIB}/coverage-3.0.1-py2.5.egg-info/SOURCES.txt
-${PYSITELIB}/coverage-3.0.1-py2.5.egg-info/dependency_links.txt
-${PYSITELIB}/coverage-3.0.1-py2.5.egg-info/entry_points.txt
-${PYSITELIB}/coverage-3.0.1-py2.5.egg-info/not-zip-safe
-${PYSITELIB}/coverage-3.0.1-py2.5.egg-info/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/coverage/__init__.py
 ${PYSITELIB}/coverage/__init__.pyc
 ${PYSITELIB}/coverage/__init__.pyo
@@ -15,6 +15,9 @@ ${PYSITELIB}/coverage/annotate.pyo
 ${PYSITELIB}/coverage/backward.py
 ${PYSITELIB}/coverage/backward.pyc
 ${PYSITELIB}/coverage/backward.pyo
+${PYSITELIB}/coverage/bytecode.py
+${PYSITELIB}/coverage/bytecode.pyc
+${PYSITELIB}/coverage/bytecode.pyo
 ${PYSITELIB}/coverage/cmdline.py
 ${PYSITELIB}/coverage/cmdline.pyc
 ${PYSITELIB}/coverage/cmdline.pyo
@@ -24,6 +27,9 @@ ${PYSITELIB}/coverage/codeunit.pyo
 ${PYSITELIB}/coverage/collector.py
 ${PYSITELIB}/coverage/collector.pyc
 ${PYSITELIB}/coverage/collector.pyo
+${PYSITELIB}/coverage/config.py
+${PYSITELIB}/coverage/config.pyc
+${PYSITELIB}/coverage/config.pyo
 ${PYSITELIB}/coverage/control.py
 ${PYSITELIB}/coverage/control.pyc
 ${PYSITELIB}/coverage/control.pyo
@@ -39,8 +45,10 @@ ${PYSITELIB}/coverage/files.pyo
 ${PYSITELIB}/coverage/html.py
 ${PYSITELIB}/coverage/html.pyc
 ${PYSITELIB}/coverage/html.pyo
+${PYSITELIB}/coverage/htmlfiles/coverage_html.js
 ${PYSITELIB}/coverage/htmlfiles/index.html
 ${PYSITELIB}/coverage/htmlfiles/jquery-1.3.2.min.js
+${PYSITELIB}/coverage/htmlfiles/jquery.tablesorter.min.js
 ${PYSITELIB}/coverage/htmlfiles/pyfile.html
 ${PYSITELIB}/coverage/htmlfiles/style.css
 ${PYSITELIB}/coverage/misc.py
@@ -49,9 +57,15 @@ ${PYSITELIB}/coverage/misc.pyo
 ${PYSITELIB}/coverage/parser.py
 ${PYSITELIB}/coverage/parser.pyc
 ${PYSITELIB}/coverage/parser.pyo
+${PYSITELIB}/coverage/phystokens.py
+${PYSITELIB}/coverage/phystokens.pyc
+${PYSITELIB}/coverage/phystokens.pyo
 ${PYSITELIB}/coverage/report.py
 ${PYSITELIB}/coverage/report.pyc
 ${PYSITELIB}/coverage/report.pyo
+${PYSITELIB}/coverage/results.py
+${PYSITELIB}/coverage/results.pyc
+${PYSITELIB}/coverage/results.pyo
 ${PYSITELIB}/coverage/summary.py
 ${PYSITELIB}/coverage/summary.pyc
 ${PYSITELIB}/coverage/summary.pyo
@@ -59,3 +73,6 @@ ${PYSITELIB}/coverage/templite.py
 ${PYSITELIB}/coverage/templite.pyc
 ${PYSITELIB}/coverage/templite.pyo
 ${PYSITELIB}/coverage/tracer.so
+${PYSITELIB}/coverage/xmlreport.py
+${PYSITELIB}/coverage/xmlreport.pyc
+${PYSITELIB}/coverage/xmlreport.pyo
