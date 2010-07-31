@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/07/31 12:08:02 jihbed Exp $
+${PYSITELIB}/aopython.py
+${PYSITELIB}/aopython.pyc
+${PYSITELIB}/aopython.pyo
+${PYSITELIB}/aopythonexamples.py
+${PYSITELIB}/aopythonexamples.pyc
+${PYSITELIB}/aopythonexamples.pyo
+${PYSITELIB}/aopythontest.py
+${PYSITELIB}/aopythontest.pyc
+${PYSITELIB}/aopythontest.pyo
