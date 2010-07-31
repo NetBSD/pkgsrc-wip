@@ -1,0 +1,21 @@
+$NetBSD: patch-aa,v 1.1 2010/07/31 00:37:22 jihbed Exp $
+
+--- setup.py.orig	2010-07-31 01:27:00.000000000 +0000
++++ setup.py	2010-07-31 01:29:04.000000000 +0000
+@@ -2,6 +2,7 @@
+ # (c) 2005-2009 Divmod, Inc.  See LICENSE file for details
+ 
+ from distutils.core import setup
++import sys
+ 
+ setup(
+     name="pyflakes",
+@@ -13,7 +14,7 @@
+     maintainer_email="moe@divmod.com",
+     url="http://www.divmod.org/trac/wiki/DivmodPyflakes",
+     packages=["pyflakes", "pyflakes.scripts", "pyflakes.test"],
+-    scripts=["bin/pyflakes"],
++    scripts=["bin/pyflakes"+sys.version[:3]],
+     long_description="""Pyflakes is program to analyze Python programs and detect various errors. It
+ works by parsing the source file, not importing it, so it is safe to use on
+ modules with side effects. It's also much faster.""",
