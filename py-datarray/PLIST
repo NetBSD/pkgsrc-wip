@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/07/31 12:19:28 jihbed Exp $
+${PYSITELIB}/datarray/LICENSE
+${PYSITELIB}/datarray/__init__.py
+${PYSITELIB}/datarray/__init__.pyc
+${PYSITELIB}/datarray/__init__.pyo
+${PYSITELIB}/datarray/datarray.py
+${PYSITELIB}/datarray/datarray.pyc
+${PYSITELIB}/datarray/datarray.pyo
+${PYSITELIB}/datarray/stuple.py
+${PYSITELIB}/datarray/stuple.pyc
+${PYSITELIB}/datarray/stuple.pyo
+${PYSITELIB}/datarray/tests/__init__.py
+${PYSITELIB}/datarray/tests/__init__.pyc
+${PYSITELIB}/datarray/tests/__init__.pyo
+${PYSITELIB}/datarray/tests/test_data_array.py
+${PYSITELIB}/datarray/tests/test_data_array.pyc
+${PYSITELIB}/datarray/tests/test_data_array.pyo
+${PYSITELIB}/datarray/tests/test_stuple.py
+${PYSITELIB}/datarray/tests/test_stuple.pyc
+${PYSITELIB}/datarray/tests/test_stuple.pyo
+${PYSITELIB}/datarray/version.py
+${PYSITELIB}/datarray/version.pyc
+${PYSITELIB}/datarray/version.pyo
