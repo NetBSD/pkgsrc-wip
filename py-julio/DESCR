@@ -1,0 +1,4 @@
+Julio (named after Julia that is the Java implementation) is a Python
+implementation of the Fractal component model. Julio has also
+be developed mainly for personal use. It is intended to be compliant to
+Fractal 3.1 (no templates for the moment).
