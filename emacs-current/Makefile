@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2010/07/13 00:04:00 obache Exp $
+# $NetBSD: Makefile,v 1.50 2010/07/31 08:21:30 makoto Exp $
 #
 
 DISTNAME=	emacs-24.0.50
@@ -52,6 +52,7 @@ CHECK_WRKREF_SKIP+=	bin/emacs
 CHECK_WRKREF_SKIP+=	bin/emacs-${PKGVERSION_NOREV}
 
 FILESDIR=	${.CURDIR}/../../editors/emacs/files
+PLIST_SUBST+=		DISTNAME=${DISTNAME}
 
 post-extract:
 	cp ${FILESDIR}/site-init.el ${WRKSRC}/lisp
