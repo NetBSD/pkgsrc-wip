@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4040 2010/07/29 09:09:03 ryo-on Exp $
+# $Id: Makefile,v 1.4041 2010/07/31 08:12:59 ryo-on Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1915,6 +1915,8 @@ SUBDIR+=	py-divmod-vertex
 SUBDIR+=	py-divisi2
 SUBDIR+=	py-django-diario
 SUBDIR+=	py-django-tagging
+SUBDIR+=	py-djvulibre
+SUBDIR+=	py-djvusmooth
 SUBDIR+=	py-duali
 SUBDIR+=	py-embedc
 SUBDIR+=	py-event
