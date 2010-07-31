@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/07/31 07:45:17 makoto Exp $
+# $NetBSD: Makefile,v 1.5 2010/07/31 13:30:31 makoto Exp $
 #
 
 DISTNAME=	emacs-nox11-24.0.50
@@ -62,8 +62,6 @@ CHECK_WRKREF_SKIP+=	bin/emacs
 CHECK_WRKREF_SKIP+=	bin/emacs-${PKGVERSION_NOREV}
 
 FILESDIR=	${.CURDIR}/../../editors/emacs/files
-
-PLIST_SUBST+=	DISTNAME=${DISTNAME:C/-nox11//:Q}
 
 post-extract:
 	${CP} ${FILESDIR}/site-init.el ${WRKSRC}/lisp

@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.87 2010/07/31 07:45:17 makoto Exp $
+@comment $NetBSD: PLIST,v 1.88 2010/07/31 13:30:31 makoto Exp $
 bin/b2m
 bin/ctags
 bin/ebrowse
 bin/emacs
-bin/${DISTNAME}
+bin/emacs-${PKGVERSION}
 bin/emacsclient
 bin/etags
 bin/grep-changelog
