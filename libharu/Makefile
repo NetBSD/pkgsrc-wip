@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/07/01 20:19:14 emil_s Exp $
+# $NetBSD: Makefile,v 1.4 2010/08/01 14:57:09 asau Exp $
 #
 
 DISTNAME=	libharu-2.1.0
@@ -14,7 +14,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_LANGUAGES=	c c++ fortran
+USE_LANGUAGES=	c c++ fortran77
 
 .include "../../mk/bsd.prefs.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/12/18 14:10:15 x400 Exp $
+# $NetBSD: Makefile,v 1.3 2010/08/01 14:57:10 asau Exp $
 
 DISTNAME=	vale-0.0.2
 CATEGORIES=	devel
@@ -12,7 +12,7 @@ COMMENT=	Media streaming library
 WRKSRC=		${WRKDIR}/vale-0.0.1
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=    yes
-USE_LANGUAGES=  c c++ fortran
+USE_LANGUAGES=  c c++ fortran77
 USE_TOOLS+=     gmake
 
 .include "../../mk/bsd.pkg.mk"

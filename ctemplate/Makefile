@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/04/20 22:01:29 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2010/08/01 14:57:08 asau Exp $
 #
 
 DISTNAME=	ctemplate-0.97
@@ -14,6 +14,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_LANGUAGES=	c c++ fortran
+USE_LANGUAGES=	c c++ fortran77
 
 .include "../../mk/bsd.pkg.mk"

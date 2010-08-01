@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2010/01/12 12:39:58 asau Exp $
+# $NetBSD: Makefile,v 1.15 2010/08/01 14:57:09 asau Exp $
 #
 
 DISTNAME=		open-axiom-1.3.0
@@ -25,7 +25,7 @@ MAKE_JOBS_SAFE=		no
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake makeinfo awk:run
-USE_LANGUAGES+=		fortran
+USE_LANGUAGES+=		fortran77
 BUILD_DEPENDS+=		noweb-[0-9]*:../../devel/noweb
 
 BUILD_MAKE_FLAGS+=	TOOLS_PLATFORM.install=${TOOLS_PLATFORM.install:Q}

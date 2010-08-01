@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/03/04 22:46:41 shattered Exp $
+# $NetBSD: Makefile,v 1.6 2010/08/01 14:57:08 asau Exp $
 #
 
 DISTNAME=		bashdb-3.1-0.06
@@ -16,7 +16,7 @@ USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
-USE_LANGUAGES=		c c++ fortran
+USE_LANGUAGES=		c c++ fortran77
 
 INFO_FILES=		yes
 

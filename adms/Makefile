@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/12/08 17:06:46 tnn2 Exp $
+# $NetBSD: Makefile,v 1.6 2010/08/01 14:57:08 asau Exp $
 #
 
 DISTNAME=		adms-2.2.8
@@ -16,7 +16,7 @@ GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake bison flex autoconf automake
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_LANGUAGES=		c c++ fortran
+USE_LANGUAGES=		c c++ fortran77
 
 #LDFLAGS+= ${COMPILER_RPATH_FLAG}${PREFIX}/lib
 

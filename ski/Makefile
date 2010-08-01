@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/06/09 14:22:13 cherrymathew Exp $
+# $NetBSD: Makefile,v 1.5 2010/08/01 14:57:10 asau Exp $
 #
 
 DISTNAME=	ski-1.3.2
@@ -12,7 +12,7 @@ COMMENT=	The ia64 instruction set simulator
 PKG_DESTDIR_SUPPORT=        user-destdir
 
 GNU_CONFIGURE=	yes
-USE_LANGUAGES+= c fortran c++
+USE_LANGUAGES+= c fortran77 c++
 CONFIGURE_ARGS+= --prefix=/usr/pkg
 
 USE_TOOLS+=	aclocal autoconf automake

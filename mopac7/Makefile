@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/05/24 14:11:52 asau Exp $
+# $NetBSD: Makefile,v 1.3 2010/08/01 14:57:09 asau Exp $
 #
 
 DISTNAME=	mopac7-1.11
@@ -15,7 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
-USE_LANGUAGES=	c fortran
+USE_LANGUAGES=	c fortran77
 
 PKGCONFIG_OVERRIDE+=	libmopac7.pc.in
 

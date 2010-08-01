@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/06/13 22:47:12 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2010/08/01 14:57:09 asau Exp $
 #
 
 DISTNAME=	nsp2-cvs_20090724
@@ -17,7 +17,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 WRKSRC=			${WRKDIR}/nsp2
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=	pkg-config automake autoconf
-USE_LANGUAGES=		c c++ fortran
+USE_LANGUAGES=		c c++ fortran77
 
 pre-configure:
 	cd ${WRKSRC} && ${SH} autogen.sh

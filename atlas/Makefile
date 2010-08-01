@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2010/08/01 11:17:03 asau Exp $
+# $NetBSD: Makefile,v 1.10 2010/08/01 14:57:08 asau Exp $
 
 ATLAS_VERSION=	3.9.25
 
@@ -21,7 +21,7 @@ HAS_CONFIGURE=	yes
 
 MAKE_JOBS_SAFE=	no
 
-USE_LANGUAGES=	c fortran
+USE_LANGUAGES=	c fortran77
 
 CONFIGURE_DIRS=		obj
 CONFIGURE_SCRIPT=	../configure

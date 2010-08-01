@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/05/16 13:12:30 asau Exp $
+# $NetBSD: Makefile,v 1.4 2010/08/01 14:57:10 asau Exp $
 
 DISTNAME=	UsingMPI
 PKGNAME=	UsingMPI-2
@@ -12,7 +12,7 @@ COMMENT=	Sample programs from "Using MPI" (2nd ed.) book
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
-USE_LANGUAGES=	c fortran c++
+USE_LANGUAGES=	c fortran77 c++
 CONFIGURE_ARGS+=	--with-mpich=${PREFIX}/bin
 BUILD_MAKE_FLAGS+=	CXX=${PREFIX}/bin/mpicxx
 BUILD_MAKE_FLAGS+=	LIBS=-lm

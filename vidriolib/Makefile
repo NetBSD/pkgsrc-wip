@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/02/03 17:46:40 tnn2 Exp $
+# $NetBSD: Makefile,v 1.3 2010/08/01 14:57:10 asau Exp $
 #
 
 DISTNAME=	vidriolib-0.1.20070718.0
@@ -12,7 +12,7 @@ COMMENT=	Viriolib is a windows, menus and so on development library
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_LANGUAGES=	c c++ fortran
+USE_LANGUAGES=	c c++ fortran77
 USE_TOOLS+=	pkg-config
 
 .include "../../x11/libX11/buildlink3.mk"

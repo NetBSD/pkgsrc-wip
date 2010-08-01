@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/05/12 16:23:11 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2010/08/01 14:57:09 asau Exp $
 #
 
 DISTNAME=	pysparse-1.1
@@ -14,7 +14,7 @@ COMMENT=	Sparse linear algebra extension for Python
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-USE_LANGUAGES=	c c++ fortran
+USE_LANGUAGES=	c c++ fortran77
 PYDISTUTILSPKG= yes
 
 #.include "../../graphics/vtk-python/buildlink3.mk"

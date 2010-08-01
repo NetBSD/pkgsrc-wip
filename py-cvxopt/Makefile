@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/05/08 17:56:18 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2010/08/01 14:57:09 asau Exp $
 #
 
 DISTNAME=	cvxopt-1.1.2.tar
@@ -17,7 +17,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 WRKSRC=		${WRKDIR}/cvxopt-1.1.2/src
 
 USE_TOOLS+=	pax
-USE_LANGUAGES=	c fortran
+USE_LANGUAGES=	c fortran77
 
 PYDISTUTILSPKG= yes
 

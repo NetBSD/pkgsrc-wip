@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/06/13 22:47:15 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2010/08/01 14:57:09 asau Exp $
 #
 
 DISTNAME=	Raster3D_2.7s
@@ -13,7 +13,7 @@ COMMENT=	Set of tools for generating raster images of proteins and molecules
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_LANGUAGES=	c fortran
+USE_LANGUAGES=	c fortran77
 USE_TOOLS+=	gunzip:run
 
 DATADIR=	${PREFIX}/share/${PKGBASE}

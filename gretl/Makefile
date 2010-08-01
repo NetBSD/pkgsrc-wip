@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2010/06/16 12:30:51 asau Exp $
+# $NetBSD: Makefile,v 1.9 2010/08/01 14:57:08 asau Exp $
 #
 
 DISTNAME=	gretl-1.9.0
@@ -12,7 +12,7 @@ COMMENT=	Gnu Regression, Econometrics and Time-series Library
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_LANGUAGES=	c fortran	# problems with LAPACK
+USE_LANGUAGES=	c fortran77	# problems with LAPACK
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake
 USE_LIBTOOL=	yes

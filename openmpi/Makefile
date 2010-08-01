@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2010/06/26 16:57:09 asau Exp $
+# $NetBSD: Makefile,v 1.30 2010/08/01 14:57:09 asau Exp $
 
 DISTNAME=	openmpi-1.5rc3r23304
 PKGNAME=	openmpi-1.4.99.23304
@@ -14,7 +14,7 @@ COMMENT=	Open source MPI-2 implementation
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
-USE_LANGUAGES=		c c++ fortran
+USE_LANGUAGES=		c c++ fortran77
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 SHLIBTOOL_OVERRIDE=	${WRKSRC}/config/libtool.m4

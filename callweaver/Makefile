@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/01/18 09:38:18 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2010/08/01 14:57:08 asau Exp $
 
 DISTNAME=	callweaver-1.2.1
 PKGREVISION=	2
@@ -12,7 +12,7 @@ COMMENT=	The Callweaver Software PBX
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
-USE_LANGUAGES=		c c++ fortran
+USE_LANGUAGES=		c c++ fortran77
 USE_TOOLS+=		gmake perl:run
 
 USE_GNU_READLINE=	yes

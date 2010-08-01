@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/12/05 21:06:58 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2010/08/01 14:57:09 asau Exp $
 #
 
 DISTNAME=	libxc-1.0-alpha
@@ -15,7 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake perl
-USE_LANGUAGES=	c fortran
+USE_LANGUAGES=	c fortran77
 
 REPLACE_PERL+=	src/get_funcs.pl
 CONFIGURE_ARGS+=	--disable-fortran

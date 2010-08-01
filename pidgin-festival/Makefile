@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/06/13 22:47:13 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2010/08/01 14:57:09 asau Exp $
 #
 
 DISTNAME=	pidgin-festival-2.4
@@ -13,7 +13,7 @@ COMMENT=	Pidgin plugin that interfaces with festival
 DEPENDS+=		festival-[0-9]*:../../audio/festival
 WRKSRC=			${WRKDIR}/pidgin-festival-2.4
 GNU_CONFIGURE=		yes
-USE_LANGUAGES+=		c c++ fortran
+USE_LANGUAGES+=		c c++ fortran77
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		pkg-config
