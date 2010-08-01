@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.1 2008/04/27 19:08:31 asau Exp $
+$NetBSD: patch-ab,v 1.2 2010/08/01 11:17:03 asau Exp $
 
 Teach it about NetBSD.
 
---- CONFIG/src/probe_OS.c.orig	2008-02-22 19:38:51.000000000 +0300
-+++ CONFIG/src/probe_OS.c	2008-04-27 18:58:23.000000000 +0400
-@@ -15,6 +15,7 @@
-    if (ierr == 0)
-    {
-       if(strstr(ln, "Linux")) OS = OSLinux;
+--- CONFIG/src/probe_OS.c.orig	2010-06-04 20:42:47.000000000 +0400
++++ CONFIG/src/probe_OS.c	2010-08-01 15:15:22.000000000 +0400
+@@ -19,6 +19,7 @@
+  *    This is patch from Sylvestre Ledru; I have no direct experience wt HURD
+  */
+       if(strstr(ln, "Linux") || strstr(ln, "GNU")) OS = OSLinux;
 +      else if (strstr(ln, "NetBSD")) OS = OSNetBSD;
        else if(strstr(ln, "FreeBSD")) OS = OSFreeBSD;
        else if (strstr(ln, "Darwin")) OS = OSOSX;
