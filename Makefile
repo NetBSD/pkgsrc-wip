@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4042 2010/07/31 12:33:44 jihbed Exp $
+# $Id: Makefile,v 1.4043 2010/08/02 21:45:17 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -229,6 +229,7 @@ SUBDIR+=	ciwiki
 SUBDIR+=	cjk-latex
 SUBDIR+=	cjk-latex-wadalab
 SUBDIR+=	clamassassin
+SUBDIR+=	classgen
 SUBDIR+=	classic-mac-font-pack
 SUBDIR+=	clhep
 SUBDIR+=	clips
@@ -1402,6 +1403,7 @@ SUBDIR+=	netkit-base
 SUBDIR+=	netkit-routed
 SUBDIR+=	netkit-telnet
 SUBDIR+=	netkit-tftp
+SUBDIR+=	netlogo
 SUBDIR+=	netrik
 SUBDIR+=	netwib
 SUBDIR+=	netwox
@@ -1916,6 +1918,7 @@ SUBDIR+=	py-divmod-mantissa
 SUBDIR+=	py-divmod-vertex
 SUBDIR+=	py-divisi2
 SUBDIR+=	py-django-diario
+SUBDIR+=	py-django-quran
 SUBDIR+=	py-django-tagging
 SUBDIR+=	py-djvulibre
 SUBDIR+=	py-djvusmooth
@@ -1974,6 +1977,7 @@ SUBDIR+=	py-logilab-common
 SUBDIR+=	py-logilab-databse
 SUBDIR+=	py-logilab-mtconverter
 SUBDIR+=	py-logilab-pigg
+SUBDIR+=	py-plex
 SUBDIR+=	py-matplotlib
 SUBDIR+=	py-matplotlib-gtk2
 SUBDIR+=	py-mdp
@@ -2046,6 +2050,7 @@ SUBDIR+=	py-spambayes
 SUBDIR+=	py-spark
 SUBDIR+=	py-sparce
 SUBDIR+=	py-speex
+SUBDIR+=	py-spyse
 SUBDIR+=	py-symboltype
 SUBDIR+=	py-psychopy
 SUBDIR+=	py-srpy
