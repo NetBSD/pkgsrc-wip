@@ -1,0 +1,19 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/08/02 21:39:51 jihbed Exp $
+
+--- setup.py.orig	2010-07-31 18:42:21.000000000 +0000
++++ setup.py	2010-07-31 18:42:27.000000000 +0000
+@@ -43,7 +43,6 @@
+     package_dir={'quran': 'quran'},
+     packages=packages,
+     package_data={'quran': data_files},
+-    long_description=read('README.md'),
+     classifiers=[
+         "Development Status :: 3 - Alpha",
+         "Environment :: Web Environment",
+@@ -52,4 +51,4 @@
+         "Operating System :: OS Independent",
+         "Programming Language :: Python",
+     ],
+-)
+\ No newline at end of file
++)
