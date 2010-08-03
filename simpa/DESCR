@@ -1,0 +1,9 @@
+SimpA is based on the A&A (Agents and Artifacts) programming model, which introduces
+high-level metaphors taken from human society, namely agents - programmed to
+perform some kind of tasks and activities and artifacts as resources and tools
+that are dynamically constructed and used by agents to coordinate and execute
+their individual and collective activities. A&A gets its main inspiration from
+Activity Theory.
+
+Being based on a library on top of Java, simpA applications can be compiled and
+run directly on a flat Java environment.
