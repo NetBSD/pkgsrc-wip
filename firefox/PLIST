@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2010/05/31 09:24:04 tnn2 Exp $
+@comment $NetBSD: PLIST,v 1.22 2010/08/03 20:58:00 tnn2 Exp $
 bin/firefox
 lib/firefox/README.txt
 lib/firefox/application.ini
@@ -16,14 +16,13 @@ lib/firefox/components/FeedConverter.js
 lib/firefox/components/FeedWriter.js
 lib/firefox/components/PlacesProtocolHandler.js
 lib/firefox/components/WebContentConverter.js
+lib/firefox/components/browser.manifest
 lib/firefox/components/browser.xpt
-lib/firefox/components/components.list
 lib/firefox/components/fuelApplication.js
 lib/firefox/components/libbrowsercomps.so
 ${PLIST.gnome}lib/firefox/components/libnkgnomevfs.so
 lib/firefox/components/nsBrowserContentHandler.js
 lib/firefox/components/nsBrowserGlue.js
-lib/firefox/components/nsPlacesTransactionsService.js
 lib/firefox/components/nsPrivateBrowsingService.js
 lib/firefox/components/nsSafebrowsingApplication.js
 lib/firefox/components/nsSessionStartup.js
@@ -51,6 +50,7 @@ lib/firefox/modules/NetworkPrioritizer.jsm
 lib/firefox/modules/PlacesUIUtils.jsm
 lib/firefox/modules/distribution.js
 lib/firefox/modules/openLocationLastURL.jsm
+lib/firefox/modules/stylePanel.jsm
 lib/firefox/removed-files
 lib/firefox/run-mozilla.sh
 lib/firefox/searchplugins/amazondotcom.xml

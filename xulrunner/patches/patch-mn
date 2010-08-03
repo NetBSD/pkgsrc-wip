@@ -1,15 +1,15 @@
-$NetBSD: patch-mn,v 1.5 2010/03/16 20:12:06 tnn2 Exp $
+$NetBSD: patch-mn,v 1.6 2010/08/03 20:58:00 tnn2 Exp $
 
 Make sure we link correctly with sqlite3 from pkgsrc.
 
---- security/nss/lib/softoken/config.mk.orig	2010-03-16 01:02:50.000000000 +0000
+--- security/nss/lib/softoken/config.mk.orig	2010-07-21 00:52:46.000000000 +0000
 +++ security/nss/lib/softoken/config.mk
-@@ -81,7 +81,7 @@ else
- 
- # $(PROGRAM) has NO explicit dependencies on $(EXTRA_SHARED_LIBS)
+@@ -80,7 +80,7 @@ else
  # $(EXTRA_SHARED_LIBS) come before $(OS_LIBS), except on AIX.
--SQLITE = -lsqlite3
-+SQLITE = `pkg-config --libs sqlite3`
  EXTRA_SHARED_LIBS += \
  	-L$(DIST)/lib \
+-	-l$(SQLITE_LIB_NAME) \
++	`pkg-config --libs sqlite3` \
  	-L$(NSSUTIL_LIB_DIR) \
+ 	-lnssutil3 \
+ 	-L$(NSPR_LIB_DIR) \
