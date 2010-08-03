@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2010/08/03 02:02:30 erinlalouve Exp $
+
+--- src/Makefile.am.orig	2010-08-03 01:36:46.000000000 +0000
++++ src/Makefile.am
+@@ -24,7 +24,7 @@ if HAVE_HTTPSERV_PLUGIN
+ LDADD += -lseekswebsearchplugin -levent
+ endif
+ LDADD += -lseeksutils -lseeksproxy -lseeksplugins -lpcre -lpcreposix -lseekslsh -lpthread -lz @CURL_LDADD@ @XML2_LDADD@
+-if !HAVE_FREEBSD
++if !HAVE_BSD
+ LDADD += -ldl
+ endif
+ 

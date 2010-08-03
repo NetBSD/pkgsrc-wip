@@ -1,0 +1,14 @@
+$NetBSD: patch-ad,v 1.1.1.1 2010/08/03 02:02:30 erinlalouve Exp $
+
+--- src/proxy/tests/Makefile.am.orig	2010-06-12 13:26:07.000000000 +0000
++++ src/proxy/tests/Makefile.am
+@@ -14,6 +14,6 @@ if USE_PERL
+ AM_LDFLAGS += `perl -MExtUtils::Embed -e ldopts`
+ endif
+ LDADD = @CURL_LDADD@ -lseeksutils -lseekslsh -lseeksproxy -lseeksplugins -lpcre -lpcreposix -lpthread -lz 
+-if !HAVE_FREEBSD
++if !HAVE_BSD
+ LDADD += -ldl
+-endif
+\ No newline at end of file
++endif

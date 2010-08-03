@@ -1,0 +1,22 @@
+$NetBSD: patch-ak,v 1.1.1.1 2010/08/03 02:02:30 erinlalouve Exp $
+
+--- src/plugins/websearch/websearch_configuration.cpp.orig	2010-06-12 13:26:07.000000000 +0000
++++ src/plugins/websearch/websearch_configuration.cpp
+@@ -52,7 +52,7 @@ namespace seeks_plugins
+    void websearch_configuration::set_default_config()
+      {
+ 	_lang = "auto";
+-	_N = 10;
++	N_ = 10;
+ 	_thumbs = false;
+ 	_se_enabled.set(); // all engines is default.
+ 	_query_context_delay = 300; // in seconds, 5 minutes.
+@@ -79,7 +79,7 @@ namespace seeks_plugins
+ 	     break;
+ 	     
+ 	   case hash_n :
+-	       _N = atoi(arg);
++	       N_ = atoi(arg);
+ 	     configuration_spec::html_table_row(_config_args,cmd,arg,
+ 						"Number of websearch results per page");
+ 	     break;

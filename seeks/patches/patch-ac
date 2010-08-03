@@ -1,0 +1,10 @@
+$NetBSD: patch-ac,v 1.1.1.1 2010/08/03 02:02:30 erinlalouve Exp $
+
+--- src/plugins/Makefile.am.orig	2010-06-12 13:26:07.000000000 +0000
++++ src/plugins/Makefile.am
+@@ -1,4 +1 @@
+-SUBDIRS=websearch blocker
+-if HAVE_HTTPSERV_PLUGIN
+-SUBDIRS+=httpserv
+-endif
++SUBDIRS=websearch 

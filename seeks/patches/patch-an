@@ -1,0 +1,13 @@
+$NetBSD: patch-an,v 1.1.1.1 2010/08/03 02:02:30 erinlalouve Exp $
+
+--- src/plugins/websearch/json_renderer.cpp.orig	2010-06-12 13:26:07.000000000 +0000
++++ src/plugins/websearch/json_renderer.cpp
+@@ -47,7 +47,7 @@ namespace seeks_plugins
+ 	  
+ 	     // proceed with rendering.
+ 	     const char *rpp_str = miscutil::lookup(parameters,"rpp"); // results per page.
+-	     int rpp = websearch::_wconfig->_N;
++	     int rpp = websearch::_wconfig->N_;
+ 	     if (rpp_str)
+ 	       rpp = atoi(rpp_str);
+ 	     size_t snisize = snippets.size();

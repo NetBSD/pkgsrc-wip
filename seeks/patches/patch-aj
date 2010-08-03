@@ -1,0 +1,56 @@
+$NetBSD: patch-aj,v 1.1.1.1 2010/08/03 02:02:30 erinlalouve Exp $
+
+--- src/plugins/websearch/static_renderer.cpp.orig	2010-06-12 13:26:07.000000000 +0000
++++ src/plugins/websearch/static_renderer.cpp
+@@ -150,8 +150,8 @@ namespace seeks_plugins
+ 	     
+ 	     // proceed with rendering.
+ 	     int ssize = snippets.size();
+-	     size_t snisize = std::min(current_page*websearch::_wconfig->_N,(int)ssize);
+-	     size_t snistart = (current_page-1) * websearch::_wconfig->_N;
++	     size_t snisize = std::min(current_page*websearch::_wconfig->N_,(int)ssize);
++	     size_t snistart = (current_page-1) * websearch::_wconfig->N_;
+ 	     size_t count = snistart;
+ 	     for (int i=snistart;i<ssize;i++)
+ 	       {
+@@ -347,7 +347,7 @@ namespace seeks_plugins
+ 					       const std::string &engines,
+ 					       hash_map<const char*,const char*,hash<const char*>,eqstr> *exports)
+      {
+-	double nl = snippets_size / static_cast<double>(websearch::_wconfig->_N);
++	double nl = snippets_size / static_cast<double>(websearch::_wconfig->N_);
+ 	     
+ 	if (current_page < nl)
+ 	  {
+@@ -639,13 +639,13 @@ namespace seeks_plugins
+ 	     if (mode == 0)
+ 	       {
+ 		  std::string surl = urlmatch::strip_url(sp->_url);
+-		  ulsh_ham.add(surl,lsh_ham->_L);
++		  ulsh_ham.add(surl,lsh_ham->L_);
+ 	       }
+ 	     else if (mode == 1)
+ 	       {
+ 		  std::string lctitle = sp->_title;
+ 		  std::transform(lctitle.begin(),lctitle.end(),lctitle.begin(),tolower);
+-		  ulsh_ham.add(lctitle,lsh_ham->_L);
++		  ulsh_ham.add(lctitle,lsh_ham->L_);
+ 	       }
+ 	  }
+ 			
+@@ -670,13 +670,13 @@ namespace seeks_plugins
+ 	     if (mode == 0)
+ 	       {
+ 		  std::string surl = urlmatch::strip_url(sp->_url);
+-		  mres = ulsh_ham.getLEltsWithProbabilities(surl,lsh_ham->_L);
++		  mres = ulsh_ham.getLEltsWithProbabilities(surl,lsh_ham->L_);
+ 	       }
+ 	     else if (mode == 1)
+ 	       {
+ 		  std::string lctitle = sp->_title;
+ 		  std::transform(lctitle.begin(),lctitle.end(),lctitle.begin(),tolower);
+-		  mres = ulsh_ham.getLEltsWithProbabilities(lctitle,lsh_ham->_L);
++		  mres = ulsh_ham.getLEltsWithProbabilities(lctitle,lsh_ham->L_);
+ 	       }
+ 	     std::map<double,const std::string,std::greater<double> >::const_iterator mit = mres.begin();
+ 	     while(mit!=mres.end())
