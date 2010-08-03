@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/06/10 11:57:26 obache Exp $
+# $NetBSD: Makefile,v 1.5 2010/08/03 11:49:08 obache Exp $
 #
 
 DISTNAME=	cutter-1.1.4
@@ -29,7 +29,7 @@ TEST_TARGET=	check
 
 .include "options.mk"
 
-# XXX!
+# XXX: PR#lib/39986?
 LDFLAGS.NetBSD+=	-lgcc_s
 
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.16.0
