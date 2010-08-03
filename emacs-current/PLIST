@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.88 2010/07/31 13:30:31 makoto Exp $
+@comment $NetBSD: PLIST,v 1.89 2010/08/03 10:37:45 makoto Exp $
 bin/b2m
 bin/ctags
 bin/ebrowse
@@ -894,6 +894,7 @@ share/emacs/${PKGVERSION}/etc/tutorials/TUTORIAL.de
 share/emacs/${PKGVERSION}/etc/tutorials/TUTORIAL.eo
 share/emacs/${PKGVERSION}/etc/tutorials/TUTORIAL.es
 share/emacs/${PKGVERSION}/etc/tutorials/TUTORIAL.fr
+share/emacs/${PKGVERSION}/etc/tutorials/TUTORIAL.he
 share/emacs/${PKGVERSION}/etc/tutorials/TUTORIAL.it
 share/emacs/${PKGVERSION}/etc/tutorials/TUTORIAL.ja
 share/emacs/${PKGVERSION}/etc/tutorials/TUTORIAL.ko
