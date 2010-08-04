@@ -1,0 +1,5 @@
+Figleaf is a code coverage package for Python.  It supports simple
+and configurable recording of code coverage, as well as more complex
+'section'-based recording.  It's designed for programmers who want
+to integrate code coverage with their tests across a large code base
+in a dynamic way.
