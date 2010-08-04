@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2008/08/28 06:12:19 makoto Exp $
+# $NetBSD: Makefile.common,v 1.2 2010/08/04 01:33:43 makoto Exp $
 #
 # used by wip/cygwin-binutils/Makefile
 # used by wip/cygwin-gcc/Makefile
@@ -16,8 +16,15 @@ CONFIGURE_ENV+=		CYGWIN_TARGET=${CYGWIN_TARGET:Q}
 BUILD_DEFS+=		CROSSBASE
 PATH:=			${CROSSBASE}/bin:${PATH}
 
+BUILD_DEPENDS+=		gtexinfo:../../devel/gtexinfo
+
 .if defined(GNU_CONFIGURE)
+CONFIGURE_ARGS=		# reset
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
+CONFIGURE_ARGS+=	--libdir=${PREFIX}/${CYGWIN_TARGET:Q}/lib
+CONFIGURE_ARGS+=	--infodir=${PREFIX}/${CYGWIN_TARGET:Q}/info
+CONFIGURE_ARGS+=	--datadir=${PREFIX}/${CYGWIN_TARGET:Q}/share
+#ONFIGURE_ARGS+=	--mandir=${PREFIX}/${CYGWIN_TARGET:Q}/man
 CONFIGURE_ARGS+=	--exec-prefix=${PREFIX:Q}
 CONFIGURE_ARGS+=	--target=${CYGWIN_TARGET:Q}
 # following line to avoid getting
