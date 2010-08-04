@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4043 2010/08/02 21:45:17 jihbed Exp $
+# $Id: Makefile,v 1.4044 2010/08/04 00:23:53 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -206,6 +206,7 @@ SUBDIR+=	calcurse
 SUBDIR+=	calcurse-2.8
 SUBDIR+=	callweaver
 SUBDIR+=	callweaver-current
+SUBDIR+=	cartago
 SUBDIR+=	castget
 SUBDIR+=	cb2bib
 SUBDIR+=	cclive
@@ -266,6 +267,7 @@ SUBDIR+=	cspchecker
 SUBDIR+=	css-mode
 SUBDIR+=	csstidy
 SUBDIR+=	ctemplate
+SUBDIR+=	cup
 SUBDIR+=	cutter
 SUBDIR+=	cvs-syncmail
 SUBDIR+=	cvs20hg
@@ -1039,6 +1041,7 @@ SUBDIR+=	jsl
 SUBDIR+=	json-c
 SUBDIR+=	jumpnbump
 SUBDIR+=	jupp
+SUBDIR+=	junit
 SUBDIR+=	just
 SUBDIR+=	jython
 SUBDIR+=	k3b
@@ -1234,6 +1237,7 @@ SUBDIR+=	luacheia
 SUBDIR+=	luaposix
 SUBDIR+=	luasec
 SUBDIR+=	luasocket
+SUBDIR+=	lucene
 SUBDIR+=	lwc
 SUBDIR+=	lxde-common
 SUBDIR+=	lxmenu-data
@@ -2237,6 +2241,7 @@ SUBDIR+=	silky
 SUBDIR+=	silvertree
 SUBDIR+=	sim-kde
 SUBDIR+=	sim-qt
+SUBDIR+=	simpa
 SUBDIR+=	simplec
 SUBDIR+=	singular
 SUBDIR+=	sipbomber
