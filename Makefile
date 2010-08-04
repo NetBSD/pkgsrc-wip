@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4046 2010/08/04 16:13:26 ura Exp $
+# $Id: Makefile,v 1.4047 2010/08/04 16:16:41 ura Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1983,6 +1983,7 @@ SUBDIR+=	py-logilab-databse
 SUBDIR+=	py-logilab-mtconverter
 SUBDIR+=	py-logilab-pigg
 SUBDIR+=	py-plex
+SUBDIR+=	py-ply
 SUBDIR+=	py-matplotlib
 SUBDIR+=	py-matplotlib-gtk2
 SUBDIR+=	py-mdp
