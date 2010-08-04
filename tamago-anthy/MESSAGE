@@ -1,0 +1,12 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2010/08/04 12:14:15 makoto Exp $
+
+README FILE is at
+${PREFIX}/share/anthy/egg-anthy.readme (in Japanese, sorry).
+
+Type C-u C-\ and select "japanese-egg-anthy".
+or you may set this is default as:
+   (setq default-input-method "japanese-egg-anthy")
+in your init-file (~/.emacs etc).
+use C-\ to switch Japanese Kana or Alphabet input.
+===========================================================================
