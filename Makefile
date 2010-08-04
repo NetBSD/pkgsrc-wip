@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4045 2010/08/04 12:18:37 makoto Exp $
+# $Id: Makefile,v 1.4046 2010/08/04 16:13:26 ura Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -791,6 +791,7 @@ SUBDIR+=	heirloom-yes
 SUBDIR+=	heliodor
 SUBDIR+=	hengband
 SUBDIR+=	heroes
+SUBDIR+=	hgsubversion
 SUBDIR+=	hgview
 SUBDIR+=	hijra
 SUBDIR+=	hitori
