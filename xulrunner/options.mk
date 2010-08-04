@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.6 2010/04/01 14:18:44 tnn2 Exp $
+# $NetBSD: options.mk,v 1.7 2010/08/04 16:59:13 tnn2 Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.xulrunner
-PKG_SUPPORTED_OPTIONS=	debug mozilla-jemalloc gnome
+PKG_SUPPORTED_OPTIONS=	debug mozilla-jemalloc gnome pulseaudio
 
 PLIST_VARS+=	jit gnome debug
 
@@ -53,4 +53,9 @@ PLIST_SUBST+=		NANOJIT_ARCH=${NANOJIT_ARCH.${MACHINE_ARCH}}
 CONFIGURE_ARGS+=	--enable-tracejit
 .else
 CONFIGURE_ARGS+=	--disable-tracejit
+.endif
+
+.if !empty(PKG_OPTIONS:Mpulseaudio)
+.include "../../audio/pulseaudio/buildlink3.mk"
+ALL_ENV+=	PKGSRC_PULSEAUDIO=1
 .endif
