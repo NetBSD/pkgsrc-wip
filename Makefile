@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4047 2010/08/04 16:16:41 ura Exp $
+# $Id: Makefile,v 1.4048 2010/08/04 16:23:12 ura Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1935,6 +1935,7 @@ SUBDIR+=	py-extremes/
 SUBDIR+=	py-eyeD3
 SUBDIR+=	py-ezPyCrypto
 SUBDIR+=	py-fastaudio
+SUBDIR+=	py-figleaf
 SUBDIR+=	py-flakes
 SUBDIR+=	py-fuzzpy
 SUBDIR+=	py-fs
