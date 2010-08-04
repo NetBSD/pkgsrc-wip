@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2010/05/29 06:43:00 obache Exp $
+@comment $NetBSD: PLIST,v 1.7 2010/08/04 01:16:52 obache Exp $
 bin/milter-manager-log-analyzer
 bin/milter-performance-check
 bin/milter-test-client
@@ -292,6 +292,7 @@ share/examples/milter-manager/applicable-conditions/restrict-accounts.conf
 share/examples/milter-manager/applicable-conditions/s25r.conf
 share/examples/milter-manager/applicable-conditions/sendmail-compatible.conf
 share/examples/milter-manager/applicable-conditions/stress.conf
+share/examples/milter-manager/applicable-conditions/trust.conf
 share/examples/milter-manager/cron.d/debian/milter-manager-log
 share/examples/milter-manager/cron.d/freebsd/milter-manager-log
 share/examples/milter-manager/cron.d/redhat/milter-manager-log
@@ -465,6 +466,7 @@ share/milter-manager/admin/vendor/plugins/restful-auth/lib/authentication/by_pas
 share/milter-manager/admin/vendor/plugins/restful-auth/lib/authorization.rb
 share/milter-manager/admin/vendor/plugins/restful-auth/lib/authorization/aasm_roles.rb
 share/milter-manager/admin/vendor/plugins/restful-auth/lib/authorization/stateful_roles.rb
+share/milter-manager/admin/vendor/plugins/restful-auth/lib/tasks/auth.rake
 share/milter-manager/admin/vendor/plugins/restful-auth/lib/trustification.rb
 share/milter-manager/admin/vendor/plugins/restful-auth/lib/trustification/email_validation.rb
 share/milter-manager/admin/vendor/plugins/restful-auth/notes/AccessControl.txt
@@ -478,7 +480,6 @@ share/milter-manager/admin/vendor/plugins/restful-auth/notes/Tradeoffs.txt
 share/milter-manager/admin/vendor/plugins/restful-auth/notes/Trustification.txt
 share/milter-manager/admin/vendor/plugins/restful-auth/rails/init.rb
 share/milter-manager/admin/vendor/plugins/restful-auth/restful-authentication.gemspec
-share/milter-manager/admin/vendor/plugins/restful-auth/tasks/auth.rake
 share/milter-manager/license/agpl.txt
 share/milter-manager/license/fdl.txt
 share/milter-manager/license/gpl.txt
@@ -489,3 +490,5 @@ share/milter-manager/munin/plugins/milter_manager_
 share/milter-manager/munin/plugins/milter_manager_memory
 share/milter-manager/munin/plugins/postfix_processes
 share/milter-manager/munin/plugins/sendmail_processes
+share/milter-manager/sample/ruby/milter-regexp.rb
+share/milter-manager/sample/ruby/milter-test-client.rb
