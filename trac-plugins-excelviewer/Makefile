@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/07/30 12:37:47 obache Exp $
+# $NetBSD: Makefile,v 1.4 2010/08/05 12:22:58 obache Exp $
 
 DISTNAME=	excelviewerplugin-0.1dev_r${SVN_REV}
 PKGNAME=	trac-plugins-excelviewer-0.1pre${SVN_REV}
@@ -14,7 +14,7 @@ COMMENT=	Excel viewer plugin for trac
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	{ja-,}trac>=0.10:../../www/trac
-DEPENDS+=	${PYPKGPREFIX}-xlrd>=0:../../wip/py-xlrd
+DEPENDS+=	${PYPKGPREFIX}-xlrd>=0:../../textproc/py-xlrd
 
 SVN_REV=	687
 SVN_MOD=	excelviewerplugin/0.10
