@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2010/07/30 12:17:29 obache Exp $
+# $NetBSD: Makefile,v 1.6 2010/08/05 12:15:18 obache Exp $
 #
 
 DISTNAME=		xlrd-0.7.1
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=		devel python
+CATEGORIES=		textproc python
 MASTER_SITES=		http://cheeseshop.python.org/packages/source/x/xlrd/
 
 MAINTAINER=		obache@NetBSD.org
