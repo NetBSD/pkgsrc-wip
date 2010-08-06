@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/08/06 20:25:30 jihbed Exp $
+
+--- tests/specialTest.orig	2010-08-06 17:16:06.000000000 +0000
++++ tests/specialTest	2010-08-06 17:16:17.000000000 +0000
+@@ -17,7 +17,7 @@
+ ${SCHUR} < $1/tests/specialTest.cmds | ./trim > specialTest.res
+ if diff -w specialTest.res $1/tests/specialTest.expected > specialTest.diff ; then
+ 	rm specialTest.{res,diff}
+-	if [ A${SUPPR} == A1 ]; then
++	if [ A${SUPPR} = A1 ]; then
+ 	       	rm -f test*.schur
+ 	fi
+ else
