@@ -1,10 +1,14 @@
-$NetBSD: patch-ad,v 1.1 2004/06/26 23:43:44 rillig Exp $
+$NetBSD: patch-ad,v 1.1.1.1 2010/08/06 20:28:48 ahp-nils Exp $
 
---- logrotate.c.orig	Tue Jan 27 05:08:04 2004
-+++ logrotate.c	Sat Mar 27 01:43:51 2004
-@@ -1,4 +1,6 @@
+--- logrotate.c.orig	2008-10-15 13:07:43.000000000 +0000
++++ logrotate.c
+@@ -1,5 +1,10 @@
+ #include <sys/queue.h>
 +#ifndef __NetBSD__
  #include <alloca.h>
++#endif
++#if __NetBSD__
++#include <limits.h>
 +#endif
  #include <ctype.h>
  #include <dirent.h>

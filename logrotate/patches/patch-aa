@@ -1,44 +1,19 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/04/07 15:41:29 ura Exp $
+$NetBSD: patch-aa,v 1.1.1.2 2010/08/06 20:28:48 ahp-nils Exp $
 
---- Makefile.orig	Fri Oct 10 05:05:07 2003
-+++ Makefile	Sat Mar 27 02:07:08 2004
-@@ -50,10 +50,12 @@
-     BASEDIR = /usr
+--- Makefile.orig	2008-05-19 10:25:54.000000000 +0000
++++ Makefile
+@@ -45,6 +45,14 @@ ifeq ($(OS_NAME),SunOS)
+     endif
  endif
  
--ifneq ($(POPT_DIR),)
--    CFLAGS += -I$(POPT_DIR)
--    LOADLIBES += -L$(POPT_DIR)
--endif
-+#ifneq ($(POPT_DIR),)
-+#    CFLAGS += -I$(POPT_DIR)
-+#    LOADLIBES += -L$(POPT_DIR)
-+#endif
-+CFLAGS += -I$(BASEDIR)/include
-+LOADLIBES += -L$(BASEDIR)/lib -Wl,-R,$(BASEDIR)/lib
- 
- ifneq ($(STATEFILE),)
-     CFLAGS += -DSTATEFILE=\"$(STATEFILE)\"
-@@ -95,16 +97,12 @@
- 	(cd test; ./test)
- 
- install:
--	[ -d $(PREFIX)/$(BINDIR) ] || mkdir -p $(PREFIX)/$(BINDIR)
--	[ -d $(PREFIX)/$(MANDIR) ] || mkdir -p $(PREFIX)/$(MANDIR)
--	[ -d $(PREFIX)/$(MANDIR)/man8 ] || mkdir -p $(PREFIX)/$(MANDIR)/man8
--
--	if [ "$(OS_NAME)" = HP-UX ]; then \
--	$(INSTALL) $(PROG) $(PREFIX)/$(BINDIR) 0755 bin bin; \
--	$(INSTALL) $(MAN) $(PREFIX)/$(MANDIR)/man`echo $(MAN) | sed "s/.*\.//"` 0644 bin bin; \
--	else \
--	$(INSTALL) -m 755 $(PROG) $(PREFIX)/$(BINDIR); \
--	$(INSTALL) -m 644 $(MAN) $(PREFIX)/$(MANDIR)/man`echo $(MAN) | sed "s/.*\.//"`/$(MAN); \
-+	[ -d $(BINDIR) ] || mkdir -p $(BINDIR)
-+	[ -d $(MANDIR) ] || mkdir -p $(MANDIR)
-+	[ -d $(MANDIR)/man8 ] || mkdir -p $(MANDIR)/man8
++# NetBSD
++ifeq ($(OS_NAME),NetBSD)
++    CFLAGS += -I/usr/include
++    CFLAGS += -I$(BASEDIR)/include
++    LOADLIBES += -L/usr/lib
++    LOADLIBES += -L$(BASEDIR)/lib -Wl,-R,$(BASEDIR)/lib
++endif
 +
-+	$(INSTALL_PROGRAM) $(PROG) $(BINDIR); \
-+	$(INSTALL_MAN) $(MAN) $(MANDIR)/man`echo $(MAN) | sed "s/.*\.//"`/$(MAN); \
- 	fi
- 
- co:
+ # Red Hat Linux
+ ifeq ($(OS_NAME),Linux)
+     INSTALL = install

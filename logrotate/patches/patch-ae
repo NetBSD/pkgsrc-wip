@@ -1,0 +1,27 @@
+$NetBSD: patch-ae,v 1.1.1.1 2010/08/06 20:28:48 ahp-nils Exp $
+
+--- examples/logrotate-default.orig	2007-08-29 07:19:36.000000000 +0000
++++ examples/logrotate-default
+@@ -12,18 +12,12 @@ create
+ dateext
+ 
+ # uncomment this if you want your log files compressed
+-#compress
++compress
+ 
+-# RPM packages drop log rotation information into this directory
+-include /etc/logrotate.d
++# Packages drop log rotation information into this directory
++include __PREFIX__/etc/logrotate.d
+ 
+-# no packages own wtmp and btmp -- we'll rotate them here
+-/var/log/wtmp {
+-    monthly
+-    create 0664 root utmp
+-	minsize 1M
+-    rotate 1
+-}
++# no packages own btmp -- we'll rotate it here
+ 
+ /var/log/btmp {
+     missingok
