@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/05/13 12:37:29 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2010/08/06 20:57:11 jihbed Exp $
 #
 
 DISTNAME=	PyQuante-1.6.3
@@ -13,6 +13,7 @@ LICENSE=	modified-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+USE_LANGUAGES= c
 PYDISTUTILSPKG= yes
 
 DOCDIR=	${PREFIX}/share/doc/py-pyquante
