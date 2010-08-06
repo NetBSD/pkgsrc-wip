@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4050 2010/08/05 16:44:22 uid92699 Exp $
+# $Id: Makefile,v 1.4051 2010/08/06 20:29:28 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -254,6 +254,7 @@ SUBDIR+=	coq
 SUBDIR+=	couchdb
 SUBDIR+=	couchdb-glib
 SUBDIR+=	courierpassd
+SUBDIR+=	coxeter
 SUBDIR+=	cpdup
 SUBDIR+=	cpm
 SUBDIR+=	creal
@@ -2202,6 +2203,7 @@ SUBDIR+=	saxon
 SUBDIR+=	sbcl
 SUBDIR+=	scare
 SUBDIR+=	schismtracker
+SUBDIR+=	schur
 SUBDIR+=	scim-python
 SUBDIR+=	scim-tegaki
 SUBDIR+=	scite
