@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.1.1.1 2010/08/06 20:28:48 ahp-nils Exp $
+$NetBSD: patch-ad,v 1.2 2010/08/06 20:43:34 ahp-nils Exp $
 
 --- logrotate.c.orig	2008-10-15 13:07:43.000000000 +0000
 +++ logrotate.c
