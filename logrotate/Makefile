@@ -1,36 +1,45 @@
-# $NetBSD: Makefile,v 1.5 2006/05/19 16:51:25 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.6 2010/08/06 20:40:38 ahp-nils Exp $
+#
 
-DISTNAME=		logrotate-3.7.2-4.src.rpm
-PKGNAME=		logrotate-3.7.2
-CATEGORIES=		sysutils
-MASTER_SITES=		http://download.fedora.redhat.com/pub/fedora/linux/core/development/SRPMS/
-EXTRACT_SUFX=		# empty
+DISTNAME=	logrotate-3.7.8
+CATEGORIES=	sysutils
+MASTER_SITES=	${MASTER_SITE_GENTOO:=distfiles/}
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		# empty
-COMMENT=		Daemon to rotate, compress, remove and mail system log files
+MAINTAINER=	ahp-nils@users.sourceforge.net
+HOMEPAGE=	https://fedorahosted.org/logrotate/
+COMMENT=        Daemon to rotate, compress, remove and mail system log files
+LICENSE=        gnu-gpl-v2
 
-BUILD_DEPENDS+=		rpm2pkg>=2.0:../../pkgtools/rpm2pkg
-
-USE_TOOLS+=		gmake gzcat tar
-NO_EXPORT_CPP=		yes
-MAKE_ENV+=		"BASEDIR=${PREFIX}"
-MAKE_ENV+=		"INSTALL_PROGRAM=${INSTALL_PROGRAM}"
-MAKE_ENV+=		"INSTALL_MAN=${INSTALL_MAN}"
-WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
-
-do-extract:
-	rpm2pkg -d ${WRKDIR} ${DISTDIR}/${DISTNAME}
-	cd ${WRKDIR} ; ${GZCAT} ${WRKDIR}/${PKGNAME}.tar.gz | ${TAR} -xf -
-
-post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/etc/logrotate.d
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/logrotate/logrotate.d
-	${SED} -e 's|__PREFIX__|${PREFIX}|'		\
-		< ${FILESDIR}/logrotate.conf.sample	\
-		> ${PREFIX}/share/examples/logrotate/logrotate.conf.sample
-	${INSTALL_DATA} ${FILESDIR}/syslog.sample	\
-		${PREFIX}/share/examples/logrotate/logrotate.d/
-
+PKG_DESTDIR_SUPPORT=    user-destdir
 .include "../../devel/popt/buildlink3.mk"
+
+USE_TOOLS+=             gmake
+USE_LIBTOOL=            yes
+NO_EXPORT_CPP=          yes
+MAKE_ENV+=              "BASEDIR=${PREFIX}"
+MAKE_ENV+=              "INSTALL_PROGRAM=${INSTALL_PROGRAM}"
+MAKE_ENV+=              "INSTALL_MAN=${INSTALL_MAN}"
+
+DOCDIR=                 share/doc/logrotate
+TESTDIR=                test
+EXAMPLES_DIR=           examples
+EGDIR=                  ${PREFIX}/${DOCDIR}/${EXAMPLES_DIR}
+CONF_FILES=             ${EGDIR}/logrotate-default ${PKG_SYSCONFDIR}/logrotate.conf
+INSTALLATION_DIRS=      sbin etc ${DOCDIR} ${DOCDIR}/${EXAMPLES_DIR} ${DOCDIR}/${TESTDIR} ${PKGMANDIR}/man8 etc/logrotate.d
+
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/logrotate ${DESTDIR}${PREFIX}/sbin
+	#${INSTALL_DATA} ${WRKSRC}/${EXAMPLES_DIR}/logrotate-default ${DESTDIR}${PREFIX}/${DOCDIR}/${EXAMPLES_DIR}
+	${INSTALL_DATA} ${WRKSRC}/${EXAMPLES_DIR}/logrotate.cron ${DESTDIR}${PREFIX}/${DOCDIR}/${EXAMPLES_DIR}
+	${INSTALL_DATA} ${WRKSRC}/test/* ${DESTDIR}${PREFIX}/${DOCDIR}/${TESTDIR}
+	${INSTALL_DATA} ${WRKSRC}/README.* ${DESTDIR}${PREFIX}/${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/CHANGES ${DESTDIR}${PREFIX}/${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/COPYING ${DESTDIR}${PREFIX}/${DOCDIR}
+	${INSTALL_MAN} ${WRKSRC}/logrotate.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
+post-install:
+	${SED} -e 's|__PREFIX__|${PREFIX}|'             \
+	< ${WRKSRC}/${EXAMPLES_DIR}/logrotate-default     \
+	> ${DESTDIR}${PREFIX}/${DOCDIR}/${EXAMPLES_DIR}/logrotate-default
+
 .include "../../mk/bsd.pkg.mk"
