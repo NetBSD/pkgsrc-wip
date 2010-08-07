@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2010/04/06 11:44:54 obache Exp $
-bin/tegaki-recognize
-share/applications/tegaki-recognize.desktop
-share/menu/tegaki-recognize
-share/pixmaps/tegaki-recognize.svg
