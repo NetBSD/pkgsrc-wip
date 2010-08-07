@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4053 2010/08/07 05:14:06 obache Exp $
+# $Id: Makefile,v 1.4054 2010/08/07 05:20:49 obache Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -919,7 +919,6 @@ SUBDIR+=	i3
 SUBDIR+=	i3lock
 SUBDIR+=	iText
 SUBDIR+=	iTextXML
-SUBDIR+=	ibus-el
 SUBDIR+=	ibus-sogoupycc
 SUBDIR+=	ibus-tegaki
 SUBDIR+=	icc10
