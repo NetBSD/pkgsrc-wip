@@ -1,7 +1,16 @@
-$NetBSD: patch-aa,v 1.1.1.1 2010/01/13 11:22:16 obache Exp $
+$NetBSD: patch-aa,v 1.2 2010/08/07 10:58:34 obache Exp $
 
---- configure.orig	2010-01-12 10:39:02.000000000 +0000
+--- configure.orig	2008-07-11 04:17:12.000000000 +0000
 +++ configure
+@@ -20602,7 +20602,7 @@ fi
+ 
+ 
+ # define PYTHOPN_CFLAGS & PYTHON_LIBS
+-PYTHON_CONFIG=`type -p python$PYTHON_VERSION-config`
++PYTHON_CONFIG=`python$PYTHON_VERSION-config`
+ if test "$PYTHON_CONFIG" != ""; then
+ 	PYTHON_CFLAGS=`$PYTHON_CONFIG --includes`
+ 	PYTHON_LIBS=`$PYTHON_CONFIG --libs`
 @@ -20660,7 +20660,7 @@ if test "${enable_english_writer+set}" =
  fi
  
