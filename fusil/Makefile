@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/08/05 14:10:48 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2010/08/07 05:12:31 obache Exp $
 #
 
 DISTNAME=	fusil-1.2.1
@@ -11,6 +11,7 @@ COMMENT=	Fuzzing program to test applications
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${PYPKGPREFIX}-ptrace>=0.6:../../wip/py-ptrace
+DEPENDS+=	${PYPKGPREFIX}-Xlib-[0-9]*:../../x11/py-Xlib
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -29,5 +30,4 @@ post-install:
 
 
 .include "../../lang/python/extension.mk"
-.include "../../x11/py-Xlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
