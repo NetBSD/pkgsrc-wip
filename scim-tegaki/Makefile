@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/04/06 11:08:40 obache Exp $
+# $NetBSD: Makefile,v 1.4 2010/08/07 13:18:21 obache Exp $
 #
 
 DISTNAME=	scim-tegaki-0.1
@@ -10,7 +10,7 @@ HOMEPAGE=	http://www.tegaki.org/
 COMMENT=	Tegaki integration in SCIM
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	tegaki-pygtk>=0.2:../../wip/tegaki-pygtk
+DEPENDS+=	tegaki-pygtk>=0.2:../../inputmethod/tegaki-pygtk
 DEPENDS+=	scim-python>=0.1.13rc1:../../wip/scim-python
 
 PKG_DESTDIR_SUPPORT=	user-destdir
