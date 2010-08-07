@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/08/30 08:33:09 obache Exp $
-libexec/ibus-engine-m17n
-share/ibus-m17n/icons/ibus-m17n.svg
-share/ibus/component/m17n.xml
-share/locale/zh_CN/LC_MESSAGES/ibus-m17n.mo

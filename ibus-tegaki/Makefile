@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2010/04/06 11:44:54 obache Exp $
+# $NetBSD: Makefile,v 1.2 2010/08/07 02:41:38 obache Exp $
 #
 
 DISTNAME=	ibus-tegaki-0.3.1
@@ -11,7 +11,7 @@ COMMENT=	Tegaki integration in ibus
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	tegaki-pygtk>=0.3:../../wip/tegaki-pygtk
-DEPENDS+=	ibus>=1.2:../../wip/ibus
+DEPENDS+=	ibus>=1.2:../../inputmethod/ibus
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 

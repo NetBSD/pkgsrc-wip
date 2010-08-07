@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4051 2010/08/06 20:29:28 jihbed Exp $
+# $Id: Makefile,v 1.4052 2010/08/07 02:41:34 obache Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -919,26 +919,9 @@ SUBDIR+=	i3
 SUBDIR+=	i3lock
 SUBDIR+=	iText
 SUBDIR+=	iTextXML
-SUBDIR+=	ibus
-SUBDIR+=	ibus-anthy
-SUBDIR+=	ibus-array
-SUBDIR+=	ibus-chewing
 SUBDIR+=	ibus-el
-SUBDIR+=	ibus-handwrite
-SUBDIR+=	ibus-hangul
-SUBDIR+=	ibus-m17n
-SUBDIR+=	ibus-pinyin
-SUBDIR+=	ibus-qt
-SUBDIR+=	ibus-skk
 SUBDIR+=	ibus-sogoupycc
-SUBDIR+=	ibus-t9
-SUBDIR+=	ibus-table
-SUBDIR+=	ibus-table-array30
-SUBDIR+=	ibus-table-chinese
-SUBDIR+=	ibus-table-extraphrase
-SUBDIR+=	ibus-table-others
 SUBDIR+=	ibus-tegaki
-SUBDIR+=	ibus-unikey
 SUBDIR+=	icc10
 SUBDIR+=	icc11
 SUBDIR+=	icecast

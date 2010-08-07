@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/06/23 07:47:02 obache Exp $
+# $NetBSD: Makefile,v 1.2 2010/08/07 02:41:37 obache Exp $
 #
 
 DISTNAME=	ibus-el-0.1.1
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www11.atwiki.jp/s-irie/pages/21.html
 COMMENT=	IBus client for GNU Emacs
 LICENSE=	gnu-gpl-v3
 
-DEPENDS+=	ibus>=1.2:../../wip/ibus
+DEPENDS+=	ibus>=1.2:../../inputmethod/ibus
 DEPENDS+=	${PYPKGPREFIX}-xlib-[0-9]*:../../wip/py-xlib
 
 PKG_DESTDIR_SUPPORT=	user-destdir

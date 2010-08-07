@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/06/13 22:47:08 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2010/08/07 02:41:38 obache Exp $
 #
 
 DISTNAME=	ibus-sogoupycc-0.2.5
@@ -25,8 +25,8 @@ REPLACE.lua.new=	${BUILDLINK_PREFIX.lua}/bin/lua
 REPLACE_FILES.lua=	fetcher
 
 .include "../../databases/sqlite3/buildlink3.mk"
+.include "../../inputmethod/ibus/buildlink3.mk"
 .include "../../lang/lua/buildlink3.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
-.include "../../wip/ibus/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
