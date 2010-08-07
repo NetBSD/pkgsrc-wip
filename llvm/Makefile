@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2009/11/14 17:10:37 asau Exp $
+# $NetBSD: Makefile,v 1.9 2010/08/07 00:36:48 makoto Exp $
 #
 
 DISTNAME=	llvm-2.6
@@ -40,12 +40,25 @@ SVN_REPOSITORIES=	llvm
 SVN_ROOT.llvm=		http://llvm.org/svn/llvm-project/llvm/trunk
 SVN_MODULE.llvm=	llvm
 
+#AKE_FLAGS+=		prefix=${DESTDIR:Q}${PREFIX}
+
 PKGNAME=		llvm-2.6.99
-WRKSRC=			$(WRKDIR)/$(SVN_MODULE.llvm)
+WRKSRC=			${WRKDIR}/${SVN_MODULE.llvm}
 
 CHECK_PORTABILITY_SKIP= utils/buildit/.svn/text-base/build_llvm.svn-base \
 			utils/buildit/build_llvm
 
+.include "../../mk/bsd.prefs.mk"
+
+SO_SUFFIX=		so
+PLIST_SUBST+=   	SO_SUFFIX=${SO_SUFFIX}
+
+.if ${OPSYS} == "Darwin"
+SO_SUFFIX=		dylib
+.endif
+    ## warning: ....usr/pkg/lib/libCompilerDriver.a: executable bit is set on non-executable file.
+#post-install:
+#	${CHMOD}	-x ${DESTDIR}${PREFIX}/lib/lib*.a
 
 .include "../../wip/mk/svn-package.mk"
 

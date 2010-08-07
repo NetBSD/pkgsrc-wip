@@ -1,16 +1,19 @@
-$NetBSD: patch-ac,v 1.6 2010/07/14 07:17:41 asau Exp $
+$NetBSD: patch-ac,v 1.7 2010/08/07 00:36:48 makoto Exp $
 
---- Makefile.rules.orig	2010-07-14 10:19:32.000000000 +0400
-+++ Makefile.rules	2010-07-14 10:22:46.000000000 +0400
-@@ -626,9 +626,9 @@
+This will fix the problem of
+   ERROR: bin/bugpoint: rpath relative to WRKDIR
+
+--- Makefile.rules.orig	2010-08-07 08:04:17.000000000 +0900
++++ Makefile.rules	2010-08-07 08:04:36.000000000 +0900
+@@ -623,9 +623,9 @@
  ifdef TOOLNAME
    LD.Flags += $(RPATH) -Wl,'$$ORIGIN/../lib'
    ifdef EXAMPLE_TOOL
 -    LD.Flags += $(RPATH) -Wl,$(ExmplDir) $(RDYNAMIC)
-+    LD.Flags += $(RDYNAMIC)
++    LD.Flags += $(RPATH) $(RDYNAMIC)
    else
 -    LD.Flags += $(RPATH) -Wl,$(ToolDir) $(RDYNAMIC)
-+    LD.Flags += $(RDYNAMIC)
++    LD.Flags += $(RPATH) $(RDYNAMIC)
    endif
  endif
- endif
+ else

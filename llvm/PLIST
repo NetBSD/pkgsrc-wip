@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2010/07/14 07:17:41 asau Exp $
+@comment $NetBSD: PLIST,v 1.17 2010/08/07 00:36:48 makoto Exp $
 bin/bugpoint
 bin/llc
 bin/lli
@@ -48,6 +48,7 @@ include/llvm/ADT/ImmutableMap.h
 include/llvm/ADT/ImmutableSet.h
 include/llvm/ADT/IndexedMap.h
 include/llvm/ADT/IntrusiveRefCntPtr.h
+include/llvm/ADT/NullablePtr.h
 include/llvm/ADT/Optional.h
 include/llvm/ADT/OwningPtr.h
 include/llvm/ADT/PointerIntPair.h
@@ -118,6 +119,9 @@ include/llvm/Analysis/PostDominators.h
 include/llvm/Analysis/ProfileInfo.h
 include/llvm/Analysis/ProfileInfoLoader.h
 include/llvm/Analysis/ProfileInfoTypes.h
+include/llvm/Analysis/RegionInfo.h
+include/llvm/Analysis/RegionIterator.h
+include/llvm/Analysis/RegionPrinter.h
 include/llvm/Analysis/ScalarEvolution.h
 include/llvm/Analysis/ScalarEvolutionExpander.h
 include/llvm/Analysis/ScalarEvolutionExpressions.h
@@ -265,6 +269,7 @@ include/llvm/MC/MCCodeEmitter.h
 include/llvm/MC/MCContext.h
 include/llvm/MC/MCDirectives.h
 include/llvm/MC/MCDisassembler.h
+include/llvm/MC/MCDwarf.h
 include/llvm/MC/MCExpr.h
 include/llvm/MC/MCFixup.h
 include/llvm/MC/MCInst.h
@@ -275,7 +280,6 @@ include/llvm/MC/MCObjectStreamer.h
 include/llvm/MC/MCObjectWriter.h
 include/llvm/MC/MCParser/AsmCond.h
 include/llvm/MC/MCParser/AsmLexer.h
-include/llvm/MC/MCParser/AsmParser.h
 include/llvm/MC/MCParser/MCAsmLexer.h
 include/llvm/MC/MCParser/MCAsmParser.h
 include/llvm/MC/MCParser/MCAsmParserExtension.h
@@ -297,6 +301,7 @@ include/llvm/Pass.h
 include/llvm/PassAnalysisSupport.h
 include/llvm/PassManager.h
 include/llvm/PassManagers.h
+include/llvm/PassRegistry.h
 include/llvm/PassSupport.h
 include/llvm/Support/AlignOf.h
 include/llvm/Support/Allocator.h
@@ -308,6 +313,7 @@ include/llvm/Support/CommandLine.h
 include/llvm/Support/Compiler.h
 include/llvm/Support/ConstantFolder.h
 include/llvm/Support/ConstantRange.h
+include/llvm/Support/CrashRecoveryContext.h
 include/llvm/Support/DOTGraphTraits.h
 include/llvm/Support/DataFlow.h
 include/llvm/Support/Debug.h
@@ -436,10 +442,10 @@ include/llvm/Use.h
 include/llvm/User.h
 include/llvm/Value.h
 include/llvm/ValueSymbolTable.h
-lib/LLVMHello.so
+lib/LLVMHello.${SO_SUFFIX}
 lib/libCompilerDriver.a
 lib/libEnhancedDisassembly.a
-lib/libEnhancedDisassembly.so
+lib/libEnhancedDisassembly.${SO_SUFFIX}
 lib/libLLVMAnalysis.a
 lib/libLLVMArchive.a
 lib/libLLVMAsmParser.a
@@ -455,6 +461,7 @@ lib/libLLVMInterpreter.a
 lib/libLLVMJIT.a
 lib/libLLVMLinker.a
 lib/libLLVMMC.a
+lib/libLLVMMCDisassembler.a
 lib/libLLVMMCParser.a
 lib/libLLVMScalarOpts.a
 lib/libLLVMSelectionDAG.a
@@ -470,11 +477,11 @@ lib/libLLVMX86Info.a
 lib/libLLVMipa.a
 lib/libLLVMipo.a
 lib/libLTO.a
-lib/libLTO.so
+lib/libLTO.${SO_SUFFIX}
 lib/libUnitTestMain.a
 lib/libplugin_llvmc_Base.a
 lib/libplugin_llvmc_Clang.a
-lib/profile_rt.so
+lib/profile_rt.${SO_SUFFIX}
 man/man1/bugpoint.1
 man/man1/lit.1
 man/man1/llc.1
