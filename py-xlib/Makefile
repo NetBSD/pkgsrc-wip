@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/06/23 07:40:33 obache Exp $
+# $NetBSD: Makefile,v 1.2 2010/08/07 03:02:11 obache Exp $
 #
 
 DISTNAME=	python-xlib-0.14
@@ -16,6 +16,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LANGUAGES=	# none
 
 PYDISTUTILSPKG=	yes
+EGG_NAME=	python_xlib-0.12
 
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
