@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4056 2010/08/08 01:12:53 obache Exp $
+# $Id: Makefile,v 1.4057 2010/08/08 09:29:59 obache Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -382,6 +382,7 @@ SUBDIR+=	edelib
 SUBDIR+=	editline
 SUBDIR+=	edje
 SUBDIR+=	edoc
+SUBDIR+=	eekboard
 SUBDIR+=	efltk
 SUBDIR+=	efreet
 SUBDIR+=	eic
@@ -919,6 +920,7 @@ SUBDIR+=	i3
 SUBDIR+=	i3lock
 SUBDIR+=	iText
 SUBDIR+=	iTextXML
+SUBDIR+=	ibus-input-pad
 SUBDIR+=	ibus-sogoupycc
 SUBDIR+=	icc10
 SUBDIR+=	icc11
@@ -940,6 +942,7 @@ SUBDIR+=	ilohamail
 SUBDIR+=	imagination
 SUBDIR+=	imonc
 SUBDIR+=	innotop
+SUBDIR+=	input-pad
 SUBDIR+=	interbase-docs
 #SUBDIR+=	interchange		# to be removed soon -- eric@cirr.com
 #SUBDIR+=	io			# not a package, same as jabberd bellow
@@ -1110,6 +1113,7 @@ SUBDIR+=	libdshconfig
 SUBDIR+=	libdssialsacompat
 SUBDIR+=	libepc
 SUBDIR+=	libexosip
+SUBDIR+=	libfakekey
 SUBDIR+=	libfplll
 SUBDIR+=	libgadu
 SUBDIR+=	libgdata
