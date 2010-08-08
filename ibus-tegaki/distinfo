@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1 2010/04/06 11:44:54 obache Exp $
-
-SHA1 (ibus-tegaki-0.3.1.tar.gz) = aae9744632de4033c0906be032b37c3dfdcef151
-RMD160 (ibus-tegaki-0.3.1.tar.gz) = 2cdf689b5434626b62f769f47dae06054b166e4e
-Size (ibus-tegaki-0.3.1.tar.gz) = 17026 bytes
-SHA1 (patch-aa) = 25421f22657f8110dc67e21385079c6c285b0bad

@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4055 2010/08/07 13:09:00 obache Exp $
+# $Id: Makefile,v 1.4056 2010/08/08 01:12:53 obache Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -920,7 +920,6 @@ SUBDIR+=	i3lock
 SUBDIR+=	iText
 SUBDIR+=	iTextXML
 SUBDIR+=	ibus-sogoupycc
-SUBDIR+=	ibus-tegaki
 SUBDIR+=	icc10
 SUBDIR+=	icc11
 SUBDIR+=	icecast
@@ -2185,8 +2184,6 @@ SUBDIR+=	sbcl
 SUBDIR+=	scare
 SUBDIR+=	schismtracker
 SUBDIR+=	schur
-SUBDIR+=	scim-python
-SUBDIR+=	scim-tegaki
 SUBDIR+=	scite
 SUBDIR+=	scm
 SUBDIR+=	scmail
