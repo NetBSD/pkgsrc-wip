@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4057 2010/08/08 09:29:59 obache Exp $
+# $Id: Makefile,v 1.4058 2010/08/08 23:17:23 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1297,6 +1297,7 @@ SUBDIR+=	mkdep
 SUBDIR+=	mksend
 SUBDIR+=	mlmmj
 SUBDIR+=	mlton-svn
+SUBDIR+=	mmdb
 SUBDIR+=	mmm-mode
 SUBDIR+=	mnogosearch
 SUBDIR+=	modplugplay
@@ -1881,6 +1882,7 @@ SUBDIR+=	py-brian
 SUBDIR+=	py-bsddb
 SUBDIR+=	py-buildbot
 SUBDIR+=	py-bytecodeassembler
+SUBDIR+=	py-captcha
 SUBDIR+=	py-chm
 SUBDIR+=	py-cjson
 SUBDIR+=	py-clonedigger
@@ -2035,6 +2037,7 @@ SUBDIR+=	py-sage
 SUBDIR+=	py-scipy
 SUBDIR+=	py-scrobbler
 SUBDIR+=	py-sfepy
+SUBDIR+=	py-siginterrupt
 SUBDIR+=	py-setupdocs
 SUBDIR+=	py-shtoom
 SUBDIR+=	py-simpleparse-mxtexttools
