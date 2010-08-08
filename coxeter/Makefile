@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/08/06 20:26:24 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2010/08/08 10:57:18 jihbed Exp $
 #
 
 DISTNAME=	coxeter_3.0_beta3
@@ -16,6 +16,9 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_FILE=	makefile
 USE_TOOLS+=	gmake
 USE_LANGUAGES=	c++
+
+GCC_REQD+=	3.3.5
+ONLY_FOR_PLATFORM= NetBSD-*-* Linux-*-* Solaris-*-*
 
 INSTALLATION_DIRS=	bin
 
