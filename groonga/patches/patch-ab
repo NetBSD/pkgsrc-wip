@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1 2010/08/08 12:54:17 obache Exp $
+
+portability fix.
+
+--- configure.orig	2010-08-08 12:04:32.000000000 +0000
++++ configure
+@@ -15905,7 +15905,7 @@ else
+   enable_benchmark="yes"
+ fi
+ 
+-if test "x$enable_benchmark" == "xno"; then
++if test "x$enable_benchmark" = "xno"; then
+   ac_benchmark_available="no"
+ else
+ 

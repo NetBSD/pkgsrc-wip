@@ -1,6 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/05/13 11:33:07 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/08/08 12:54:17 obache Exp $
+bin/grntest
 bin/groonga
 include/groonga/groonga.h
+lib/groonga/modules/functions/cast.la
+${PLIST.mecab}lib/groonga/modules/tokenizers/mecab.la
 lib/libgroonga.la
 lib/pkgconfig/groonga.pc
 share/groonga/admin_html/css/admin.css
@@ -18,8 +21,15 @@ share/groonga/admin_html/css/ui-lightness/images/ui-icons_228ef1_256x240.png
 share/groonga/admin_html/css/ui-lightness/images/ui-icons_ef8c08_256x240.png
 share/groonga/admin_html/css/ui-lightness/images/ui-icons_ffd27a_256x240.png
 share/groonga/admin_html/css/ui-lightness/images/ui-icons_ffffff_256x240.png
-share/groonga/admin_html/css/ui-lightness/jquery-ui-1.7.2.custom.css
+share/groonga/admin_html/css/ui-lightness/jquery-ui-1.8.1.custom.css
 share/groonga/admin_html/images/groonga.png
 share/groonga/admin_html/index.html
-share/groonga/admin_html/js/jquery-1.3.2.min.js
-share/groonga/admin_html/js/jquery-ui-1.7.2.custom.min.js
+share/groonga/admin_html/js/jquery-1.4.2.min.js
+share/groonga/admin_html/js/jquery-ui-1.8.1.custom.min.js
+share/groonga/munin/plugins/groonga_cpu_load
+share/groonga/munin/plugins/groonga_cpu_time
+share/groonga/munin/plugins/groonga_disk
+share/groonga/munin/plugins/groonga_memory
+share/groonga/munin/plugins/groonga_n_records
+share/groonga/munin/plugins/groonga_query_performance
+share/groonga/munin/plugins/groonga_status
