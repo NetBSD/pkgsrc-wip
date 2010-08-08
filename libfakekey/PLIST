@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/08/08 09:21:20 obache Exp $
+include/fakekey/fakekey.h
+lib/libfakekey.la
+lib/pkgconfig/libfakekey.pc
