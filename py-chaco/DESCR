@@ -1,0 +1,6 @@
+Chaco is a Python plotting application toolkit that facilitates writing plotting
+applications at all levels of complexity, from simple scripts with hard-coded
+data to large plotting programs with complex data interrelationships and a
+multitude of interactive tools. While Chaco generates attractive static plots
+for publication and presentation, it also works well for interactive
+data visualization and exploration.
