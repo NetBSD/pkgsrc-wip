@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2010/08/07 00:36:48 makoto Exp $
+@comment $NetBSD: PLIST,v 1.18 2010/08/09 08:12:05 makoto Exp $
 bin/bugpoint
 bin/llc
 bin/lli
@@ -226,6 +226,8 @@ include/llvm/Config/Disassemblers.def
 include/llvm/Config/Targets.def
 include/llvm/Config/config.h
 include/llvm/Config/config.h.cmake
+include/llvm/Config/llvm-config.h
+include/llvm/Config/llvm-config.h.cmake
 include/llvm/Constant.h
 include/llvm/Constants.h
 include/llvm/DerivedTypes.h
@@ -442,6 +444,7 @@ include/llvm/Use.h
 include/llvm/User.h
 include/llvm/Value.h
 include/llvm/ValueSymbolTable.h
+lib/BugpointPasses.${SO_SUFFIX}
 lib/LLVMHello.${SO_SUFFIX}
 lib/libCompilerDriver.a
 lib/libEnhancedDisassembly.a
