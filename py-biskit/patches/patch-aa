@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/08/09 21:40:36 jihbed Exp $
+
+--- setup.py.orig	2009-05-17 15:44:31.000000000 +0000
++++ setup.py	2010-08-05 14:39:25.000000000 +0000
+@@ -95,7 +95,7 @@
+     requires=['numpy', 'ScientificPython', 'scipy', 'biopython' ],
+     packages = packages,
+     data_files = data_files,
+-    scripts = ['scripts/Biskit/bis.py'],
++    scripts = ['scripts/Biskit/bis'+sys.version[:3]],
+ 
+     classifiers= ['License :: OSI Approved :: GNU General Public License (GPL)',
+                   'Topic :: Scientific/Engineering :: Bio-Informatics',
