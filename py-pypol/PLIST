@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/08/09 21:52:59 jihbed Exp $
+${PYSITELIB}/pypol/__init__.py
+${PYSITELIB}/pypol/__init__.pyc
+${PYSITELIB}/pypol/__init__.pyo
+${PYSITELIB}/pypol/pypol.py
+${PYSITELIB}/pypol/pypol.pyc
+${PYSITELIB}/pypol/pypol.pyo
+${PYSITELIB}/pypol/pypol_test.py
+${PYSITELIB}/pypol/pypol_test.pyc
+${PYSITELIB}/pypol/pypol_test.pyo
