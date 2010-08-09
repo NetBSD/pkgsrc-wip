@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2010/05/17 11:49:35 asau Exp $
+# $NetBSD: Makefile,v 1.22 2010/08/09 18:52:54 asau Exp $
 #
 
 DISTNAME=		maxima-5.21.1
@@ -28,7 +28,7 @@ TEST_TARGET=		check
 
 # Section for VCS-based package:
 
-PKGNAME=		maxima-5.21.99
+PKGNAME=		maxima-5.22.99
 
 CVS_REPOSITORIES=	maxima
 CVS_ROOT.maxima=	:pserver:anonymous:@maxima.cvs.sourceforge.net:/cvsroot/maxima
@@ -43,9 +43,18 @@ SUBST_MESSAGE.fix-version=	Fixing package version.
 SUBST_FILES.fix-version=	configure.in
 SUBST_SED.fix-version=		-e 's:AM_INIT_AUTOMAKE(maxima,[^)]*):AM_INIT_AUTOMAKE(maxima,${PKGVERSION_NOREV}):'
 
+SUBST_CLASSES+=			fix-python
+SUBST_STAGE.fix-python=		post-patch
+SUBST_MESSAGE.fix-python=	Fixing python invocation.
+SUBST_FILES.fix-python=		doc/info/extract_categories.sh
+SUBST_SED.fix-python=		-e 's|^python|$${PYTHON:-python}|'
+
+PYTHON_FOR_BUILD_ONLY=	yes
+
 pre-configure:
 	cd ${WRKSRC} && ./bootstrap
 
 .include "../../wip/mk/cvs-package.mk"
 
+.include "../../lang/python/pyversion.mk"
 .include "../../mk/bsd.pkg.mk"
