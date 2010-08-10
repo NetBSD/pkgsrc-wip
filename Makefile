@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4059 2010/08/09 20:32:19 jihbed Exp $
+# $Id: Makefile,v 1.4060 2010/08/10 03:12:43 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2113,6 +2113,7 @@ SUBDIR+=	pyzor
 SUBDIR+=	q3-urbanterror
 SUBDIR+=	qca2-gnupg
 SUBDIR+=	qcomicbook
+SUBDIR+=	qdevelop
 SUBDIR+=	qemu-neo1973
 SUBDIR+=	qemu-neo1973-images
 SUBDIR+=	qgis
