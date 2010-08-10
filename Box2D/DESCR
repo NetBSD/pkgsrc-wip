@@ -1,0 +1,4 @@
+Box2D is a 2D rigid body simulation library for games.  Programmers can use it
+in their games to make objects move in believable ways and make the game world
+more interactive.  From the game's point of view a physics engine is just a
+system for procedural animation.
