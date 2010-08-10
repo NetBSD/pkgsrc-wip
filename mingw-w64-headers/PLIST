@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/08/10 15:30:56 tnn2 Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/08/10 16:27:23 tnn2 Exp $
 mingw
 x86_64-w64-mingw32/include/GL/gl.h
 x86_64-w64-mingw32/include/GL/glaux.h
@@ -871,4 +871,5 @@ x86_64-w64-mingw32/include/xolehlp.h
 x86_64-w64-mingw32/include/ymath.h
 x86_64-w64-mingw32/include/yvals.h
 x86_64-w64-mingw32/include/zmouse.h
+x86_64-w64-mingw32/lib64
 @pkgdir x86_64-w64-mingw32/include/ddk

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/08/10 15:30:56 tnn2 Exp $
+# $NetBSD: Makefile,v 1.2 2010/08/10 16:27:23 tnn2 Exp $
 #
 
 DISTNAME=	mingw-w64-v1.0-snapshot-20100730
@@ -29,12 +29,13 @@ INSTALL_DIRS=		../build
 
 CONFIGURE_SCRIPT=	${WRKSRC}/mingw-w64-headers/configure
 
-INSTALLATION_DIRS+=	cross/x86_64-w64-mingw32/lib
+INSTALLATION_DIRS+=	x86_64-w64-mingw32/lib
 
 post-extract:
 	mkdir ${WRKDIR}/build
 
 post-install:
 	ln -sf x86_64-w64-mingw32 ${DESTDIR}${PREFIX}/mingw
+	ln -sf lib ${DESTDIR}${PREFIX}/x86_64-w64-mingw32/lib64
 
 .include "../../mk/bsd.pkg.mk"
