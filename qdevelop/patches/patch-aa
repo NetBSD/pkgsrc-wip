@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/08/10 03:10:59 othyro Exp $
+
+--- CMakeLists.txt.orig	2010-04-17 07:24:40.000000000 +0000
++++ CMakeLists.txt
+@@ -216,6 +216,10 @@ ELSE( MINGW )
+ 	SET(QT_UITOOLSLIB	${QT_QTUITOOLS_LIBRARY} QtDesigner )
+ ENDIF( MINGW )
+ 
++if(COMMAND cmake_policy)
++	cmake_policy(SET CMP0003 NEW)
++endif(COMMAND cmake_policy)
++
+ # the main build target
+ ADD_EXECUTABLE( ${QDEV}
+ 	${qdevelop_SRCS} 

@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/08/10 03:10:59 othyro Exp $
+bin/qdevelop
+lib/qdevelop/translations/QDevelop_Chinese.qm
+lib/qdevelop/translations/QDevelop_Czech.qm
+lib/qdevelop/translations/QDevelop_Dutch.qm
+lib/qdevelop/translations/QDevelop_French.qm
+lib/qdevelop/translations/QDevelop_German.qm
+lib/qdevelop/translations/QDevelop_Hungarian.qm
+lib/qdevelop/translations/QDevelop_Italian.qm
+lib/qdevelop/translations/QDevelop_Japanese.qm
+lib/qdevelop/translations/QDevelop_Polish.qm
+lib/qdevelop/translations/QDevelop_Portuguese.qm
+lib/qdevelop/translations/QDevelop_Russian.qm
+lib/qdevelop/translations/QDevelop_Spanish.qm
+lib/qdevelop/translations/QDevelop_Turkish.qm
+lib/qdevelop/translations/QDevelop_Ukrainian.qm
+lib/qdevelop/translations/QDevelop_Vietnamese.qm

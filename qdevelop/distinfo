@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/08/10 03:10:59 othyro Exp $
+
+SHA1 (qdevelop-v0.28.tar.gz) = 1980ed021770e4f976dd20ac5e85b7c8dde6fee0
+RMD160 (qdevelop-v0.28.tar.gz) = 43fe7cf315291ae2061ca5e4b542e5259e6dbc4a
+Size (qdevelop-v0.28.tar.gz) = 1660363 bytes
+SHA1 (patch-aa) = f969551577ada6893e4f058ddfae421a44b907c6
