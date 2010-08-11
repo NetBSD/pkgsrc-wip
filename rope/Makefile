@@ -1,11 +1,13 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/03/14 09:36:04 helgoman Exp $
+# $NetBSD: Makefile,v 1.2 2010/08/11 17:29:51 helgoman Exp $
 #
 
-DISTNAME=							rope-0.9.2
-PKGREVISION=    					1
+VERS=								0.9.3
+DISTNAME=							rope-${VERS}
+PKGNAME=							${PYPKGPREFIX}-${DISTNAME}
+#PKGREVISION=    					
 CATEGORIES=							devel
-MASTER_SITES=						http://downloads.sourceforge.net/project/rope/rope/0.9.2/
-
+MASTER_SITES=						http://pypi.python.org/packages/source/r/rope/
+EXTRACT_SUFX=						.tar.gz
 MAINTAINER=							helgoman@users.sourceforge.net
 HOMEPAGE=							http://rope.sourceforge.net/
 COMMENT=							Rope is a python refactoring library

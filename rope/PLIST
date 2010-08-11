@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/03/14 09:36:04 helgoman Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/08/11 17:29:51 helgoman Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -144,11 +144,6 @@ ${PYSITELIB}/rope/contrib/fixsyntax.pyo
 ${PYSITELIB}/rope/contrib/generate.py
 ${PYSITELIB}/rope/contrib/generate.pyc
 ${PYSITELIB}/rope/contrib/generate.pyo
-${PYSITELIB}/rope/docs/contributing.txt
-${PYSITELIB}/rope/docs/done.txt
-${PYSITELIB}/rope/docs/library.txt
-${PYSITELIB}/rope/docs/overview.txt
-${PYSITELIB}/rope/docs/rope.txt
 ${PYSITELIB}/rope/refactor/__init__.py
 ${PYSITELIB}/rope/refactor/__init__.pyc
 ${PYSITELIB}/rope/refactor/__init__.pyo
