@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/03/13 13:18:23 helgoman Exp $
+# $NetBSD: Makefile,v 1.2 2010/08/11 17:27:26 helgoman Exp $
 #
 
-DISTNAME=				cx_Freeze-4.1.2
-PKGREVISION=			1
+VERS=					4.2
+DISTNAME=				cx_Freeze-${VERS}
 CATEGORIES=				devel
 MASTER_SITES=			${MASTER_SITE_SOURCEFORGE:=cx-freeze/}
 
