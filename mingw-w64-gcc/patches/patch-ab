@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2010/08/11 14:33:10 tnn2 Exp $
+
+--- libstdc++-v3/configure.orig	2010-08-11 13:44:56.000000000 +0000
++++ libstdc++-v3/configure
+@@ -50878,7 +50878,7 @@ $as_echo "$glibcxx_gnu_ld_version" >&6; 
+     { $as_echo "$as_me:${as_lineno-$LINENO}: checking for ld that supports -Wl,--gc-sections" >&5
+ $as_echo_n "checking for ld that supports -Wl,--gc-sections... " >&6; }
+     if test x$gcc_no_link = xyes; then
+-  as_fn_error "Link tests are not allowed after GCC_NO_EXECUTABLES." "$LINENO" 5
++#  as_fn_error "Link tests are not allowed after GCC_NO_EXECUTABLES." "$LINENO" 5
+ fi
+ cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */

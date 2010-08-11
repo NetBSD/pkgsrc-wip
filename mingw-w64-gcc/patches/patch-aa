@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/08/11 14:33:10 tnn2 Exp $
+
+--- libiberty/physmem.c.orig	2005-05-10 15:33:18.000000000 +0000
++++ libiberty/physmem.c
+@@ -48,7 +48,7 @@
+ # include <sys/param.h>
+ #endif
+ 
+-#if HAVE_SYS_SYSCTL_H
++#if HAVE_SYS_SYSCTL_H && !defined(_WIN32) && !defined(_WIN64)
+ # include <sys/sysctl.h>
+ #endif
+ 

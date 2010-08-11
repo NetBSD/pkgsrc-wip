@@ -1,0 +1,6 @@
+This is GNU GCC, targeted for:
+  i686-w64-mingw32
+  x86_64-w64-mingw32
+
+This package contains only the core components.
+For a working environment, "mingw-w64-libgcc" must be installed as well.
