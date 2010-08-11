@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4061 2010/08/10 08:00:15 obache Exp $
+# $Id: Makefile,v 1.4062 2010/08/11 10:43:27 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -650,6 +650,7 @@ SUBDIR+=	gtk2hs
 SUBDIR+=	gtkada
 SUBDIR+=	gtkaml
 SUBDIR+=	gtkfontsel
+SUBDIR+=	gtkglextmm
 SUBDIR+=	gtkglk
 SUBDIR+=	gtkhotkey
 SUBDIR+=	gtklookat
