@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/07/31 20:17:35 bharder Exp $
+# $NetBSD: Makefile,v 1.4 2010/08/12 05:47:57 bharder Exp $
 #
 
 DISTNAME=		tcl${TCL_PKGSRC_PATCHLEVEL}-src
@@ -16,6 +16,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 .include "options.mk"
 
 CONFLICTS+=		tclman80-[0-9]*
+CONFLICTS+=             tcl86-* tcl-[0-9]*
 
 WRKSRC=			${WRKDIR}/tcl${TCL_PKGSRC_PATCHLEVEL}
 
@@ -39,6 +40,5 @@ DESTDIRPREFIX=          ${DESTDIR}${PREFIX}
 
 post-install:
 	mv ${DESTDIRPREFIX:Q}/lib/tclConfig.sh ${DESTDIRPREFIX:Q}/lib/tcl${TCL_PKGSRC_VERSION}
-	cd ${DESTDIR:Q}${PREFIX:Q}/bin && ln -s tclsh8.5 tclsh
 
 .include "../../mk/bsd.pkg.mk"
