@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/08/01 14:57:10 asau Exp $
+# $NetBSD: Makefile,v 1.6 2010/08/12 04:07:34 cherrymathew Exp $
 #
 
 DISTNAME=	ski-1.3.2
@@ -13,7 +13,7 @@ PKG_DESTDIR_SUPPORT=        user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES+= c fortran77 c++
-CONFIGURE_ARGS+= --prefix=/usr/pkg
+CONFIGURE_ARGS+= --prefix=${PREFIX}
 
 USE_TOOLS+=	aclocal autoconf automake
 USE_LIBTOOL=	yes
