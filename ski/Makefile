@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/08/12 04:07:34 cherrymathew Exp $
+# $NetBSD: Makefile,v 1.7 2010/08/12 15:32:29 cherrymathew Exp $
 #
 
 DISTNAME=	ski-1.3.2
@@ -15,7 +15,7 @@ GNU_CONFIGURE=	yes
 USE_LANGUAGES+= c fortran77 c++
 CONFIGURE_ARGS+= --prefix=${PREFIX}
 
-USE_TOOLS+=	aclocal autoconf automake
+USE_TOOLS+=	pkg-config aclocal autoconf automake
 USE_LIBTOOL=	yes
 USE_NCURSES=	yes
 
