@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2010/08/04 01:16:52 obache Exp $
+# $NetBSD: Makefile,v 1.11 2010/08/12 02:07:39 obache Exp $
 #
 
 DISTNAME=	milter-manager-1.5.3
@@ -58,6 +58,7 @@ OWN_DIRS_PERMS+=	${VARBASE}/run/milter-manager \
 	applicable-conditions/s25r.conf \
 	applicable-conditions/sendmail-compatible.conf \
 	applicable-conditions/stress.conf \
+	applicable-conditions/trust.conf \
 	defaults/pkgsrc.conf
 CONF_FILES+=	${EGDIR}/${conf} ${PKG_SYSCONFDIR}/${conf}
 .endfor
