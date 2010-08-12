@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1 2010/08/12 05:59:55 bharder Exp $
+
+--- unix/Makefile.in.orig	2010-03-23 10:45:13.000000000 +0000
++++ unix/Makefile.in
+@@ -578,7 +578,7 @@ libraries:
+ 
+ $(TOP_DIR)/doc/man.macros:
+ 	chmod +x $(UNIX_DIR)/install-sh
+-	$(INSTALL_DATA) @TCL_SRC_DIR@/doc/man.macros $(TOP_DIR)/doc/man.macros
++	$(INSTALL_DATA) $(MANN_INSTALL_DIR)/man.macros $(TOP_DIR)/doc/man.macros
+ 
+ doc: $(TOP_DIR)/doc/man.macros
+ 
+@@ -1652,7 +1652,7 @@ dist:   $(UNIX_DIR)/configure $(UNIX_DIR
+ 	done;)
+ 	mkdir $(DISTDIR)/doc
+ 	cp -p $(TOP_DIR)/license.terms $(TOP_DIR)/doc/*.[13n] \
+-		$(TCLDIR)/doc/man.macros $(DISTDIR)/doc
++		$(MANN_INSTALL_DIR)/man.macros $(DISTDIR)/doc
+ 	mkdir $(DISTDIR)/tests
+ 	cp -p $(TOP_DIR)/license.terms $(TEST_DIR)/*.{test,tcl} \
+ 		$(TEST_DIR)/README $(TEST_DIR)/*.{gif,ppm,xbm} \
