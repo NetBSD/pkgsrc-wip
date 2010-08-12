@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2010/08/12 08:13:08 asau Exp $
+@comment $NetBSD: PLIST,v 1.5 2010/08/12 08:31:34 asau Exp $
 bin/tclsh8.5
 include/tcl.h
 include/tclDecls.h
@@ -932,4 +932,3 @@ man/mann/upvar.n
 man/mann/variable.n
 man/mann/vwait.n
 man/mann/while.n
-@pkgdir lib/tcl8/8.3
