@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.10 2010/07/05 04:16:45 othyro Exp $
+$NetBSD: distinfo,v 1.11 2010/08/13 10:43:53 othyro Exp $
 
-SHA1 (mysql-workbench-gpl-5.2.25.tar.gz) = 4b60e17247f79eb29b56e192817b8ced6bff4112
-RMD160 (mysql-workbench-gpl-5.2.25.tar.gz) = c24cba370f1387fb8a26a3206b7ea2dac20d7e9d
-Size (mysql-workbench-gpl-5.2.25.tar.gz) = 21581850 bytes
+SHA1 (mysql-workbench-gpl-5.2.26.tar.gz) = 3c21db56531b15db414e87f5a2e96769e2d2c90a
+RMD160 (mysql-workbench-gpl-5.2.26.tar.gz) = 2da0b3fbcd56a52c22d7627199042ed934f47ce6
+Size (mysql-workbench-gpl-5.2.26.tar.gz) = 21673665 bytes
 SHA1 (patch-ab) = 0228b4438fe44d44627c6fb8578189ffad31c409
 SHA1 (patch-ac) = de1ac3767443170b58fddd1a522a18a36c691b6c
