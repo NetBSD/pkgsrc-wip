@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 2010/07/05 04:17:53 othyro Exp $
+@comment $NetBSD: PLIST,v 1.6 2010/08/13 10:43:15 othyro Exp $
 bin/mysql-workbench
 bin/mysql-workbench-bin
-emul/linux/dev/sound0
 lib/mysql-workbench/libcdbc.la
 lib/mysql-workbench/libgrt.la
 lib/mysql-workbench/liblinux_utilities.la
@@ -25,7 +24,9 @@ lib/mysql-workbench/modules/forms.grt.la
 lib/mysql-workbench/modules/mforms.py
 lib/mysql-workbench/modules/mysqldoclib.py
 lib/mysql-workbench/modules/opts.py
+lib/mysql-workbench/modules/sqlide_grt.py
 lib/mysql-workbench/modules/table_utils.grt.lua
+lib/mysql-workbench/modules/text_grt.py
 lib/mysql-workbench/modules/tools.grt.lua
 lib/mysql-workbench/modules/wb.model.grt.la
 lib/mysql-workbench/modules/wb.mysql.import.grt.la
@@ -585,6 +586,7 @@ share/mysql-workbench/modules/data/mysql_reserved.xml
 share/mysql-workbench/modules/data/sqlide/CSV.tpl
 share/mysql-workbench/modules/data/sqlide/CSV_semicolon.tpl
 share/mysql-workbench/modules/data/sqlide/HTML.tpl
+share/mysql-workbench/modules/data/sqlide/SQL_inserts.tpl
 share/mysql-workbench/modules/data/sqlide/XML.tpl
 share/mysql-workbench/modules/data/sqlide/tab.tpl
 share/mysql-workbench/modules/data/wb_model_reporting/HTML_Basic_Frames.tpl/basic.css.tpl
@@ -633,10 +635,13 @@ share/mysql-workbench/mysql.profiles/Windows_(MySQL_5.0_x64_Installer_Package).x
 share/mysql-workbench/mysql.profiles/Windows_(MySQL_5.0_x86_Installer_Package).xml
 share/mysql-workbench/mysql.profiles/Windows_(MySQL_5.1_x64_Installer_Package).xml
 share/mysql-workbench/mysql.profiles/Windows_(MySQL_5.1_x86_Installer_Package).xml
+share/mysql-workbench/mysql.profiles/Windows_(MySQL_5.5_x64_Installer_Package).xml
+share/mysql-workbench/mysql.profiles/Windows_(MySQL_5.5_x86_Installer_Package).xml
 share/mysql-workbench/mysql.profiles/Windows_(MySQL_x64_zip_Package).xml
 share/mysql-workbench/mysql.profiles/Windows_(MySQL_x86_zip_Package).xml
 share/mysql-workbench/mysql.profiles/Windows_x64_(MySQL_5.0_x86_Installer_Package).xml
 share/mysql-workbench/mysql.profiles/Windows_x64_(MySQL_5.1_x86_Installer_Package).xml
+share/mysql-workbench/mysql.profiles/Windows_x64_(MySQL_5.5_x86_Installer_Package).xml
 share/mysql-workbench/mysql.profiles/Windows_x64_(MySQL_x86_zip_Package).xml
 share/mysql-workbench/mysql_system_status.vbs
 share/mysql-workbench/mysql_system_status_rmt.vbs
