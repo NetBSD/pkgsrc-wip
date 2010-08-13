@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2010/08/01 14:57:09 asau Exp $
+# $NetBSD: Makefile,v 1.14 2010/08/13 10:42:44 othyro Exp $
 #
 
-PKGVERSION=	5.2.25
+PKGVERSION=	5.2.26
 DISTNAME=	mysql-workbench-gpl-${PKGVERSION}
 PKGNAME=	${DISTNAME:S/-gpl//}
 CATEGORIES=	databases
