@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2009/07/10 23:27:49 jihbed Exp $
-bin/d-feet
-${PYSITELIB}/d_feet-0.1.10-py2.5.egg-info/PKG-INFO
-${PYSITELIB}/d_feet-0.1.10-py2.5.egg-info/SOURCES.txt
-${PYSITELIB}/d_feet-0.1.10-py2.5.egg-info/dependency_links.txt
-${PYSITELIB}/d_feet-0.1.10-py2.5.egg-info/top_level.txt
+@comment $NetBSD: PLIST,v 1.3 2010/08/13 16:41:29 jihbed Exp $
+bin/d-feet2.6
+${PYSITELIB}/d_feet-0.1.11-py2.6.egg-info/PKG-INFO
+${PYSITELIB}/d_feet-0.1.11-py2.6.egg-info/SOURCES.txt
+${PYSITELIB}/d_feet-0.1.11-py2.6.egg-info/dependency_links.txt
+${PYSITELIB}/d_feet-0.1.11-py2.6.egg-info/top_level.txt
 ${PYSITELIB}/dfeet/DFeetApp.py
 ${PYSITELIB}/dfeet/DFeetApp.pyc
 ${PYSITELIB}/dfeet/DFeetApp.pyo
