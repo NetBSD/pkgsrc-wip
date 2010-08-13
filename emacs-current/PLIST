@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.89 2010/08/03 10:37:45 makoto Exp $
+@comment $NetBSD: PLIST,v 1.90 2010/08/13 14:31:12 makoto Exp $
 bin/b2m
 bin/ctags
 bin/ebrowse
@@ -1687,6 +1687,8 @@ share/emacs/${PKGVERSION}/lisp/emacs-lisp/package.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/package.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/package-x.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/package-x.elc
+share/emacs/${PKGVERSION}/lisp/emacs-lisp/pcase.el.gz
+share/emacs/${PKGVERSION}/lisp/emacs-lisp/pcase.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/pp.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/pp.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/re-builder.el.gz
