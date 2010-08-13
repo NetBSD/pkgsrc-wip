@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/08/13 02:15:21 obache Exp $
+# $NetBSD: Makefile,v 1.3 2010/08/13 05:11:35 obache Exp $
 #
 
 DISTNAME=	eekboard-0.0.5
@@ -22,6 +22,8 @@ PKGCONFIG_OVERRIDE+=	eek/eek-0.1.pc.in
 PKGCONFIG_OVERRIDE+=	eek/eek-xkb-0.1.pc.in
 PKGCONFIG_OVERRIDE+=	eek/eek-clutter-0.1.pc.in
 PKGCONFIG_OVERRIDE+=	eek/eek-gtk-0.1.pc.in
+
+TEST_TARGET=		check
 
 .include "../../devel/GConf/buildlink3.mk"
 .include "../../devel/at-spi/buildlink3.mk"
