@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/08/14 11:53:54 obache Exp $
+
+Portability fix.
+
+--- configure.orig	2010-02-24 15:19:09.000000000 +0000
++++ configure
+@@ -8720,7 +8720,7 @@ else
+ fi
+ 
+ 
+-	if test $usenewlibxul == yes; then
++	if test $usenewlibxul = yes; then
+ 
+ cat >>confdefs.h <<\_ACEOF
+ #define HAVE_NEW_XULRUNNER 1
