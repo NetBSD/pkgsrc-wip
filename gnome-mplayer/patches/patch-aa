@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/08/14 11:52:59 obache Exp $
+
+--- src/mntent_compat.c.orig	2010-02-25 16:01:41.000000000 +0000
++++ src/mntent_compat.c
+@@ -34,6 +34,12 @@
+ #include <sys/mount.h>
+ #include <fstab.h>
+ 
++#if defined(__NetBSD__) && (__NetBSD_Version__ >= 299000900)
++#include <sys/statvfs.h>
++#define statfs statvfs
++#define f_flags f_flag
++#endif
++
+ struct statfs *getmntent_mntbufp;
+ int getmntent_mntcount = 0;
+ int getmntent_mntpos = 0;
