@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1 2010/08/15 01:04:52 obache Exp $
+
+--- config.h.in.orig	2010-06-06 00:23:49.000000000 +0000
++++ config.h.in
+@@ -85,6 +85,9 @@
+ /* Define if you have the calloc function.  */
+ #undef HAVE_CALLOC
+ 
++/* Define if you have the fmax function.  */
++#undef HAVE_FMAX
++
+ /* Define if you have the stat function.  */
+ #undef HAVE_STAT
+ 

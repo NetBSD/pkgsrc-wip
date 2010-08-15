@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2010/08/15 01:04:52 obache Exp $
+
+--- configure.orig	2010-06-06 02:57:15.000000000 +0000
++++ configure
+@@ -6318,7 +6318,7 @@ fi
+ 
+ 
+ 
+-for ac_func in popen wcschr wcsdup mkstemp stat mmap lrand48 rand srand48 srand bcopy bzero time getrusage mallinfo open64 calloc
++for ac_func in popen wcschr wcsdup mkstemp stat mmap lrand48 rand srand48 srand bcopy bzero time getrusage mallinfo open64 calloc fmax
+ do
+ as_ac_var=`$as_echo "ac_cv_func_$ac_func" | $as_tr_sh`
+ { $as_echo "$as_me:$LINENO: checking for $ac_func" >&5

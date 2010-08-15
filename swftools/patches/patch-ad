@@ -1,0 +1,36 @@
+$NetBSD: patch-ad,v 1.1 2010/08/15 01:04:52 obache Exp $
+
+--- lib/filters/vectors_to_glyphs.c.orig	2010-04-03 19:34:42.000000000 +0000
++++ lib/filters/vectors_to_glyphs.c
+@@ -29,6 +29,10 @@
+ #include "../mem.h"
+ #include "../q.h"
+ 
++#ifdef HAVE_CONFIG_H
++#include "../../config.h"
++#endif
++
+ typedef struct _vglyph {
+     gfxglyph_t glyph;
+     struct _vglyph*next;
+@@ -44,6 +48,20 @@ typedef struct _internal {
+ 
+ #define FONT_SIZE 1024.0
+ 
++#ifndef HAVE_FMAX
++static double fmax(double x, double y)
++{
++    if (isnan(x))
++	return y;
++    else if (isnan(y))
++	return x;
++    else if (x > y)
++	return x;
++    else
++	return y;
++}
++#endif
++
+ static void pass1_fill(gfxfilter_t*f, gfxline_t*line, gfxcolor_t*color, gfxdevice_t*out)
+ {
+     internal_t*i = (internal_t*)f->internal;

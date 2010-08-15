@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2010/08/15 01:04:52 obache Exp $
+
+--- configure.in.orig	2010-06-06 02:57:12.000000000 +0000
++++ configure.in
+@@ -272,7 +272,7 @@ dnl Checks for typedefs, structures, and
+  AC_TYPE_SIZE_T
+  AC_STRUCT_TM
+  AC_CHECK_TYPE(boolean,int) #needed for jpeglib
+- AC_CHECK_FUNCS(popen wcschr wcsdup mkstemp stat mmap lrand48 rand srand48 srand bcopy bzero time getrusage mallinfo open64 calloc)
++ AC_CHECK_FUNCS(popen wcschr wcsdup mkstemp stat mmap lrand48 rand srand48 srand bcopy bzero time getrusage mallinfo open64 calloc fmax)
+ 
+ AC_CHECK_SIZEOF([signed char])
+ AC_CHECK_SIZEOF([signed short])
