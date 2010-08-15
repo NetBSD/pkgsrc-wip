@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4063 2010/08/14 11:55:29 obache Exp $
+# $Id: Makefile,v 1.4064 2010/08/15 15:16:29 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2362,7 +2362,6 @@ SUBDIR+=	teamspeak
 SUBDIR+=	teco
 SUBDIR+=	telepathy-butterfly
 SUBDIR+=	telepathy-logger
-SUBDIR+=	tellico
 SUBDIR+=	tendra
 SUBDIR+=	tendra.org-sid
 SUBDIR+=	tenmado
