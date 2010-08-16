@@ -1,17 +1,24 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: spectrum.sh,v 1.3 2010/07/26 03:16:03 schnoebe Exp $
+# $NetBSD: spectrum.sh,v 1.4 2010/08/16 21:16:04 schnoebe Exp $
 #
 #   startup script for the spectrum jabber transport service
 #
 # PROVIDE: spectrum
 # REQUIRE: DAEMON s2s
 #
+if [ -f /etc/rc.subr ]; then
+    . /etc/rc.subr
+fi
 
 name="spectrum"
 rcvar="$name"
 procname="$name"
 command=@PREFIX@/bin/spectrumctl
+
+start_cmd="$command start"
+restart_cmd="$command restart"
+stop_cmd="$command stop"
 
 ensure_piddir()
 {
@@ -20,7 +27,6 @@ ensure_piddir()
 }
 
 if [ -f /etc/rc.subr ]; then
-	. /etc/rc.subr
 	load_rc_config $name
 	run_rc_command "$1"
 else

@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2010/07/26 01:13:45 schnoebe Exp $
+# $NetBSD: Makefile,v 1.23 2010/08/16 21:16:04 schnoebe Exp $
 
-DISTNAME=		spectrum-0.3.1
-PKGREVISION=		1
+DISTNAME=		spectrum-1.4.0
 CATEGORIES=		chat
 
 # Second paragraph - MAINTAINER/OWNER, HOMEPAGE and COMMENT, and LICEN[CS]E
@@ -9,7 +8,7 @@ MAINTAINER=		eric@cirr.com
 HOMEPAGE=		http://spectrum.im/
 COMMENT=		XMPP transport/gateway based on libpurple
 LICENSE=		gnu-gpl-v3
-MASTER_SITES=		http://spectrum.im/attachments/download/13/
+MASTER_SITES=		http://spectrum.im/attachments/download/15/
 
 DEPENDS+=		${PYPKGPREFIX}-xmpppy>=0.4.1:../../wip/py-xmpppy
 DEPENDS+=		${PYPKGPREFIX}-expat>=0nb4:../../textproc/py-expat
@@ -17,14 +16,6 @@ PYTHON_VERSIONS_ACCEPTED=	26 25
 
 # if the package can be created without root privileges
 PKG_DESTDIR_SUPPORT=	user-destdir
-
-# PREFER.gettext=		pkgsrc
-# DEPENDS+=		gettext-tools>=0.0:../../devel/gettext-tools
-
-# GIT configuration
-# GIT_REPOSITORIES=	spectrum
-# GIT_REPO.spectrum=	git://github.com/hanzz/spectrum.git
-# GIT_TAG=		v0.3
 
 # .include "../../wip/mk/git-package.mk"
 
