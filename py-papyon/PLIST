@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/03/09 15:33:00 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/08/16 11:12:35 jihbed Exp $
 ${PYSITELIB}/papyon/__init__.py
 ${PYSITELIB}/papyon/__init__.pyc
 ${PYSITELIB}/papyon/__init__.pyo
@@ -182,6 +182,9 @@ ${PYSITELIB}/papyon/msnp2p/constants.pyo
 ${PYSITELIB}/papyon/msnp2p/exceptions.py
 ${PYSITELIB}/papyon/msnp2p/exceptions.pyc
 ${PYSITELIB}/papyon/msnp2p/exceptions.pyo
+${PYSITELIB}/papyon/msnp2p/filetransfer.py
+${PYSITELIB}/papyon/msnp2p/filetransfer.pyc
+${PYSITELIB}/papyon/msnp2p/filetransfer.pyo
 ${PYSITELIB}/papyon/msnp2p/msnobject.py
 ${PYSITELIB}/papyon/msnp2p/msnobject.pyc
 ${PYSITELIB}/papyon/msnp2p/msnobject.pyo
@@ -578,9 +581,6 @@ ${PYSITELIB}/papyon/util/iso8601/test_iso8601.pyo
 ${PYSITELIB}/papyon/util/odict.py
 ${PYSITELIB}/papyon/util/odict.pyc
 ${PYSITELIB}/papyon/util/odict.pyo
-${PYSITELIB}/papyon/util/pyDes.py
-${PYSITELIB}/papyon/util/pyDes.pyc
-${PYSITELIB}/papyon/util/pyDes.pyo
 ${PYSITELIB}/papyon/util/queue.py
 ${PYSITELIB}/papyon/util/queue.pyc
 ${PYSITELIB}/papyon/util/queue.pyo

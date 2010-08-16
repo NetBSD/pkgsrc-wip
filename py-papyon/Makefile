@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.3 2010/06/13 22:47:14 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2010/08/16 11:12:35 jihbed Exp $
 #
 
-DISTNAME=	papyon-0.4.6
+DISTNAME=	papyon-0.4.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 PKGREVISION=	1
 CATEGORIES=	chat
-MASTER_SITES=	http://telepathy.freedesktop.org/releases/papyon/
+MASTER_SITES=	http://www.freedesktop.org/software/papyon/releases/
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://telepathy.freedesktop.org/wiki/Papyon
 COMMENT=	MSN client library written in Python
-LICENSE=	        gnu-gpl-v2
+LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${PYPKGPREFIX}-OpenSSL>=0.7:../../security/py-OpenSSL
 DEPENDS+=	${PYPKGPREFIX}-cElementTree-[0-9]*:../../textproc/py-cElementTree
