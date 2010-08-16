@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/09/28 12:33:33 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.5 2010/08/16 12:18:16 jihbed Exp $
 ${PYSITELIB}/daemon/__init__.py
 ${PYSITELIB}/daemon/__init__.pyc
 ${PYSITELIB}/daemon/__init__.pyo
@@ -17,9 +17,9 @@ ${PYSITELIB}/daemon/version/__init__.pyo
 ${PYSITELIB}/daemon/version/version_info.py
 ${PYSITELIB}/daemon/version/version_info.pyc
 ${PYSITELIB}/daemon/version/version_info.pyo
-${PYSITELIB}/python_daemon-1.5-py2.5.egg-info/PKG-INFO
-${PYSITELIB}/python_daemon-1.5-py2.5.egg-info/SOURCES.txt
-${PYSITELIB}/python_daemon-1.5-py2.5.egg-info/dependency_links.txt
-${PYSITELIB}/python_daemon-1.5-py2.5.egg-info/not-zip-safe
-${PYSITELIB}/python_daemon-1.5-py2.5.egg-info/requires.txt
-${PYSITELIB}/python_daemon-1.5-py2.5.egg-info/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
