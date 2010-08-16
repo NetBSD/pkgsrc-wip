@@ -1,0 +1,20 @@
+$NetBSD: patch-aa,v 1.1 2010/08/16 10:15:17 jihbed Exp $
+
+--- __pkginfo__.py.orig	2010-06-04 14:19:45.000000000 +0000
++++ __pkginfo__.py	2010-08-16 11:18:43.000000000 +0000
+@@ -14,6 +14,8 @@
+ # You should have received a copy of the GNU General Public License along with
+ # this program; if not, write to the Free Software Foundation, Inc.,
+ # 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
++
++import sys
+ """pylint packaging information"""
+ 
+ modname = distname = 'pylint'
+@@ -63,5 +65,5 @@
+ 
+ from os.path import join
+ scripts = [join('bin', filename) for filename in 
+-            ('pylint', 'pylint-gui', "symilar", "epylint", "pyreverse")]
++            ('pylint'+sys.version[:3], 'pylint-gui'+sys.version[:3], "symilar"+sys.version[:3], "epylint"+sys.version[:3], "pyreverse"+sys.version[:3])]
+ 
