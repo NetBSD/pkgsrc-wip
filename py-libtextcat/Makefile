@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/07/31 12:17:48 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2010/08/16 11:00:51 jihbed Exp $
 #
 
-DISTNAME=	pylibtextcat-0.1.tar
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//S/.tar//}
-EGG_NAME=	${DISTNAME:S/.tar//}
+DISTNAME=	pylibtextcat-0.1
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
+EGG_NAME=	${DISTNAME}
 CATEGORIES=	textproc
 MASTER_SITES=	http://pypi.python.org/packages/source/p/pylibtextcat/
-EXTRACT_SUFX=	.bz2#md5=531f8fe586a54752d79cf58c9bb82348
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://proyvind.net/
