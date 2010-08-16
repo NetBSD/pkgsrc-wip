@@ -1,0 +1,9 @@
+A convex polyhedron is the set of points satisfying a finite family of linear
+inequalities.The study of the vertices and extreme rays of such systems is
+important and useful in e.g. mathematics and optimization. In a dual
+interpretation, finding the vertices of a (bounded) polyhedron is equivalent to
+finding the convex hull (bounding inequalities) of an (arbitrary dimensional)
+set of points. Lrs (lexicographic reverse search) has two important features
+that can be very important for certain applications: it works in exact
+arithmetic, and it consumes memory proportional to the input, no matter how
+large the output is.

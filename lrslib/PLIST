@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/08/16 13:18:15 jihbed Exp $
+bin/2nash
+bin/lrs
+bin/lrsbuffer
+bin/lrsfourier
+bin/nash
+bin/redund
+bin/setupnash
+bin/setupnash2
