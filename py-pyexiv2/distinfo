@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/08/16 22:29:17 nthauvin Exp $
+
+SHA1 (pyexiv2-0.2.2.tar.bz2) = 33f58a6826a45cd070833a16d762edea68f7bda0
+RMD160 (pyexiv2-0.2.2.tar.bz2) = 871587f9d4523bf9c606b3faac46964488949c4d
+Size (pyexiv2-0.2.2.tar.bz2) = 180998 bytes

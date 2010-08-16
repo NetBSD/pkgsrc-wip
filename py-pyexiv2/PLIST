@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/08/16 22:29:17 nthauvin Exp $
+${PYSITELIB}/libexiv2python.so
+${PYSITELIB}/pyexiv2/__init__.py
+${PYSITELIB}/pyexiv2/exif.py
+${PYSITELIB}/pyexiv2/iptc.py
+${PYSITELIB}/pyexiv2/metadata.py
+${PYSITELIB}/pyexiv2/preview.py
+${PYSITELIB}/pyexiv2/utils.py
+${PYSITELIB}/pyexiv2/xmp.py
