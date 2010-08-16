@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4064 2010/08/15 15:16:29 thomasklausner Exp $
+# $Id: Makefile,v 1.4065 2010/08/16 11:47:04 ryo-on Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -293,6 +293,7 @@ SUBDIR+=	datapipe
 SUBDIR+=	dates
 SUBDIR+=	db1
 SUBDIR+=	dbf
+SUBDIR+=	dbskkd-cdb
 SUBDIR+=	dbus-explorer
 SUBDIR+=	dcc
 SUBDIR+=	ddate
@@ -2242,6 +2243,7 @@ SUBDIR+=	siproxd
 SUBDIR+=	siptoolbox
 SUBDIR+=	sis
 SUBDIR+=	ski
+SUBDIR+=	skk-jisyo-cdb
 SUBDIR+=	sks
 SUBDIR+=	slackpkg2pkgsrc
 SUBDIR+=	slate
