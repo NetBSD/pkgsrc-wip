@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/11/25 10:51:45 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2010/08/16 11:17:13 jihbed Exp $
 #
 
-DISTNAME=	xmiparser-1.4.tar
-PKGNAME=	${PYPKGPREFIX}-xmiparser-1.4
+DISTNAME=	xmiparser-1.4
+EGG_NAME=	${DISTNAME}
+PKGNAME=	${PYPKGPREFIX}-${EGG_NAME}
 CATEGORIES=	textproc python
 MASTER_SITES=	http://pypi.python.org/packages/source/x/xmiparser/
-EXTRACT_SUFX=	.gz#md5=b6856526ba82742e3ecab9c62bac7d80
+EXTRACT_SUFX=	.tar.gz
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://pypi.python.org/pypi/xmiparser/
