@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2010/07/16 21:34:32 jihbed Exp $
+# $NetBSD: Makefile,v 1.5 2010/08/16 10:43:09 jihbed Exp $
 #
 
-DISTNAME=	decorator-3.2.0.tar
-EGG_NAME=	${DISTNAME:S/.tar//}
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/.tar//}
-CATEGORIES=	wip
+DISTNAME=	decorator-3.2.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+CATEGORIES=	devel python
 MASTER_SITES=	http://pypi.python.org/packages/source/d/decorator/
-EXTRACT_SUFX=	.gz#md5=6208cd51365083c168ab3a04426a646b
+EXTRACT_SUFX=	.tar.gz
 
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://pypi.python.org/pypi/decorator
