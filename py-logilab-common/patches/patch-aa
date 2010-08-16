@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1 2010/08/16 10:38:39 jihbed Exp $
+
+--- __pkginfo__.py.orig	2010-08-16 11:25:32.000000000 +0000
++++ __pkginfo__.py	2010-08-16 11:27:26.000000000 +0000
+@@ -15,6 +15,8 @@
+ #
+ # You should have received a copy of the GNU Lesser General Public License along
+ # with logilab-common.  If not, see <http://www.gnu.org/licenses/>.
++import sys
++
+ """logilab.common packaging information"""
+ __docformat__ = "restructuredtext en"
+ 
+@@ -37,7 +39,7 @@
+ subpackage_of = 'logilab'
+ subpackage_master = True
+ 
+-scripts = ('bin/pytest',)
++scripts = ('bin/pytest'+sys.version[:3],)
+ from os.path import join
+ include_dirs = [join('test', 'data')]
+ pyversions = ['2.4', '2.5', '2.6']

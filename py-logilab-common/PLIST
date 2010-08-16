@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.6 2010/07/09 18:37:15 jihbed Exp $
-bin/pytest
+@comment $NetBSD: PLIST,v 1.7 2010/08/16 10:39:11 jihbed Exp $
+bin/pytest2.6
 ${PYSITELIB}/logilab/__init__.py
 ${PYSITELIB}/logilab/common/__init__.py
 ${PYSITELIB}/logilab/common/__init__.pyc
