@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/08/09 21:42:28 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2010/08/16 10:57:50 jihbed Exp $
 #
 
-DISTNAME=	django-nose-0.1.tar
-EGG_NAME=	django_nose-0.1
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/.tar//}
+DISTNAME=	django-nose-0.1.2
+EGG_NAME=	django_nose-0.1.2
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel www
 MASTER_SITES=	http://pypi.python.org/packages/source/d/django-nose/
-EXTRACT_SUFX=	.gz
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://pypi.python.org/packages/source/d/django-nose/
@@ -18,8 +17,10 @@ DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-WRKSRC=		${WRKDIR}/django-nose-0.1
 USE_LANGUAGES=	# none
+
+do-test:
+	cd ${WRKSRC}/testapp && ${PYTHONBIN} runtests.py
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
