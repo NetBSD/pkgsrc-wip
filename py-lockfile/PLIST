@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/07/04 22:38:25 jihbed Exp $
-lib/python2.5/site-packages/lockfile.py
-lib/python2.5/site-packages/lockfile.pyc
-lib/python2.5/site-packages/lockfile.pyo
+@comment $NetBSD: PLIST,v 1.2 2010/08/16 12:06:44 jihbed Exp $
+${PYSITELIB}/lockfile.py
+${PYSITELIB}/lockfile.pyc
+${PYSITELIB}/lockfile.pyo
