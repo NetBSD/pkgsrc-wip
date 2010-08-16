@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4066 2010/08/16 13:20:51 jihbed Exp $
+# $Id: Makefile,v 1.4067 2010/08/16 22:34:35 nthauvin Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2022,6 +2022,7 @@ SUBDIR+=	py-pydot
 SUBDIR+=	py-pyecm
 SUBDIR+=	py-pyentropy
 SUBDIR+=	py-pyevolve
+SUBDIR+=	py-pyexiv2
 SUBDIR+=	py-pygr
 SUBDIR+=	py-pygi
 SUBDIR+=	py-pypedal
