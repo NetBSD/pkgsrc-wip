@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4067 2010/08/16 22:34:35 nthauvin Exp $
+# $Id: Makefile,v 1.4068 2010/08/17 12:19:12 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -102,7 +102,7 @@ SUBDIR+=	apachebench2
 SUBDIR+=	applewmproto
 SUBDIR+=	apstget
 SUBDIR+=	apvlv
-SUBDIR+=	ar7
+nSUBDIR+=	ar7
 SUBDIR+=	arabeyes-qr-ttf
 SUBDIR+=	arcem-current
 SUBDIR+=	archimedes
@@ -1942,6 +1942,7 @@ SUBDIR+=	py-gnucash
 SUBDIR+=	py-greenlet
 SUBDIR+=	py-gtk2-docs
 SUBDIR+=	py-gts
+SUBDIR+=	py-guppy
 SUBDIR+=	py-httplib2
 SUBDIR+=	py-igraph
 SUBDIR+=	py-imgSeek
