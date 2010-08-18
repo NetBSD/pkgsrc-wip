@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2010/01/03 14:32:17 pallegra Exp $
+# $NetBSD: Makefile.common,v 1.2 2010/08/18 10:27:27 pallegra Exp $
 # used by wip/dri/Makefile
 # used by wip/glu/Makefile
 # used by wip/glut/Makefile
@@ -24,7 +24,7 @@ PATCHDIR=	${.CURDIR}/../../wip/gl/patches
 
 WRKSRC=		${WRKDIR}/Mesa-${MESA_VERSION}
 GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
+#USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake pkg-config makedepend
 USE_LANGUAGES=	c99
 
@@ -32,3 +32,5 @@ CONFIGURE_ARGS+=	--disable-gallium
 CONFIGURE_ARGS+=	--disable-egl
 CONFIGURE_ARGS+=	--disable-motif
 CONFIGURE_ARGS+=	--with-demos=""
+# XXX TODO
+CONFIGURE_ARGS+=	--disable-asm

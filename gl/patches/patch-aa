@@ -1,48 +1,34 @@
-$NetBSD: patch-aa,v 1.1.1.1 2010/01/03 14:32:17 pallegra Exp $
+$NetBSD: patch-aa,v 1.2 2010/08/18 10:27:27 pallegra Exp $
 
---- configure.orig	2009-12-22 02:29:11.000000000 +0000
-+++ configure
-@@ -4647,7 +4647,7 @@ solaris*)
- esac
+--- bin/mklib.orig	2010-08-17 21:59:20.000000000 +0000
++++ bin/mklib
+@@ -307,7 +307,7 @@ fi
+ #
+ case $ARCH in
  
- if test "x$GCC" = xyes; then
--    CFLAGS="$CFLAGS -Wall -Wmissing-prototypes -std=c99 -ffast-math"
-+    CFLAGS="$CFLAGS -Wall -Wmissing-prototypes -std=c99"
+-    'Linux' | 'OpenBSD' | 'DragonFly' | 'GNU' | GNU/*)
++    'Linux' | 'OpenBSD' | 'DragonFly' | 'GNU' | GNU/* | 'NetBSD')
+ 	# we assume gcc
  
-     # Work around aliasing bugs - developers should comment this out
-     CFLAGS="$CFLAGS -fno-strict-aliasing"
-@@ -4836,14 +4836,14 @@ if test "x$enable_asm" = xyes; then
-     case "$host_cpu" in
-     i?86)
-         case "$host_os" in
--        linux* | *freebsd* | dragonfly*)
-+        linux* | *freebsd* | dragonfly* | netbsd*)
-             test "x$enable_64bit" = xyes && asm_arch=x86_64 || asm_arch=x86
-             ;;
-         esac
-         ;;
-     x86_64)
-         case "$host_os" in
--        linux* | *freebsd* | dragonfly*)
-+        linux* | *freebsd* | dragonfly* | netbsd*)
-             test "x$enable_32bit" = xyes && asm_arch=x86 || asm_arch=x86_64
-             ;;
-         esac
-@@ -5399,7 +5399,7 @@ linux*)
-     i*86|x86_64|powerpc*|sparc*) default_driver="dri";;
-     esac
-     ;;
--*freebsd* | dragonfly*)
-+*freebsd* | dragonfly* | netbsd*)
-     case "$host_cpu" in
-     i*86|x86_64|powerpc*|sparc*) default_driver="dri";;
-     esac
-@@ -6943,7 +6943,7 @@ if test "$mesa_driver" = dri; then
-             ;;
-         esac
-         ;;
--    freebsd* | dragonfly*)
-+    freebsd* | dragonfly* | netbsd*)
-         DEFINES="$DEFINES -DPTHREADS -DUSE_EXTERNAL_DXTN_LIB=1"
-         DEFINES="$DEFINES -DIN_DRI_DRIVER -DHAVE_ALIAS"
-         DEFINES="$DEFINES -DGLX_INDIRECT_RENDERING"
+ 	if [ "x$LINK" = "x" ] ; then
+@@ -571,20 +571,6 @@ case $ARCH in
+ 	fi
+ 	;;
+ 
+-    'NetBSD')
+-        if [ $STATIC = 1 ] ; then
+-	    LIBNAME="lib${LIBNAME}_pic.a"
+-	    echo "mklib: Making NetBSD PIC static library: " ${LIBNAME}
+-	    FINAL_LIBS=`make_ar_static_lib cq 1 ${LIBNAME} ${OBJECTS}`
+-	else
+-	    LIBNAME="lib${LIBNAME}.so.${MAJOR}.${MINOR}"
+-	    echo "mklib: Making NetBSD PIC shared library: " ${LIBNAME}
+-	    rm -f ${LIBNAME}
+-	    ld -x -Bshareable -Bforcearchive -o ${LIBNAME} ${OBJECTS}
+-	    FINAL_LIBS=${LIBNAME}
+-	fi
+-	;;
+-
+     'IRIX' | 'IRIX64')
+         if [ $STATIC = 1 ] ; then
+ 	    LIBNAME="lib${LIBNAME}.a"

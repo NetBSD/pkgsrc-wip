@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1.1.1 2010/01/03 14:32:17 pallegra Exp $
+# $NetBSD: options.mk,v 1.2 2010/08/18 10:27:27 pallegra Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -27,22 +27,11 @@ PKG_SUGGESTED_OPTIONS+=		dri
 PKG_SUGGESTED_OPTIONS+=		dri
 .endif
 
-# Assembler code build configurations
-.if (${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64") && \
-    ${OPSYS} != "SunOS" && ${OPSYS} != "Darwin"
-PKG_SUPPORTED_OPTIONS+=		asm
-PKG_SUGGESTED_OPTIONS+=	asm
-.endif
-
 .include "../../mk/bsd.options.mk"
 PLIST_VARS+=	nodri
 
-.if !empty(PKG_OPTIONS:Masm)
-CONFIGURE_ARGS+=	--enable-asm
-LDFLAGS+=		-Wl,-Bsymbolic
-.else
+# XXX asm
 CONFIGURE_ARGS+=	--disable-asm
-.endif
 
 .if !empty(PKG_OPTIONS:Mdri)
 CONFIGURE_ARGS+=	--with-driver=dri

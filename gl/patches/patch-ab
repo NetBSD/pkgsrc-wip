@@ -1,10 +1,57 @@
-$NetBSD: patch-ab,v 1.1.1.1 2010/01/03 14:32:17 pallegra Exp $
+$NetBSD: patch-ab,v 1.2 2010/08/18 10:27:27 pallegra Exp $
 
---- progs/xdemos/Makefile.orig	2009-12-22 02:26:02.000000000 +0000
-+++ progs/xdemos/Makefile
-@@ -113,4 +113,5 @@ ipc.o: ipc.c ipc.h
+--- configure.orig	2010-06-16 21:32:51.000000000 +0000
++++ configure
+@@ -4727,7 +4727,7 @@ cygwin*)
+ esac
  
- yuvrect_client: yuvrect_client.c
- 	$(APP_CC) -I$(INCDIR) $(X11_INCLUDES) $(CFLAGS) $< $(LDFLAGS) $(LIBS) -l$(GLU_LIB) -o $@
-+	$(APP_CC) $(PTHREAD_CFLAGS) -I$(INCDIR) $(X11_INCLUDES) $(CFLAGS) $< $(LDFLAGS) $(LIBS) -l$(GLU_LIB) $(PTHREAD_LDFLAGS) $(PTHREAD_LIBS) -o $@
+ if test "x$GCC" = xyes; then
+-    CFLAGS="$CFLAGS -Wall -Wmissing-prototypes -std=c99 -ffast-math"
++    CFLAGS="$CFLAGS -Wall -Wmissing-prototypes -std=c99"
  
+     # Enable -fvisibility=hidden if using a gcc that supports it
+     save_CFLAGS="$CFLAGS"
+@@ -4947,14 +4947,14 @@ if test "x$enable_asm" = xyes; then
+     case "$host_cpu" in
+     i?86)
+         case "$host_os" in
+-        linux* | *freebsd* | dragonfly*)
++        linux* | *freebsd* | dragonfly* | netbsd*)
+             test "x$enable_64bit" = xyes && asm_arch=x86_64 || asm_arch=x86
+             ;;
+         esac
+         ;;
+     x86_64)
+         case "$host_os" in
+-        linux* | *freebsd* | dragonfly*)
++        linux* | *freebsd* | dragonfly* | netbsd*)
+             test "x$enable_32bit" = xyes && asm_arch=x86 || asm_arch=x86_64
+             ;;
+         esac
+@@ -5509,7 +5509,7 @@ linux*)
+     i*86|x86_64|powerpc*|sparc*) default_driver="dri";;
+     esac
+     ;;
+-*freebsd* | dragonfly*)
++*freebsd* | dragonfly* | netbsd*)
+     case "$host_cpu" in
+     i*86|x86_64|powerpc*|sparc*) default_driver="dri";;
+     esac
+@@ -7152,7 +7152,7 @@ if test "$mesa_driver" = dri; then
+             ;;
+         esac
+         ;;
+-    freebsd* | dragonfly*)
++    freebsd* | dragonfly* | netbsd*)
+         DEFINES="$DEFINES -DPTHREADS -DUSE_EXTERNAL_DXTN_LIB=1"
+         DEFINES="$DEFINES -DIN_DRI_DRIVER -DHAVE_ALIAS"
+         DEFINES="$DEFINES -DGLX_INDIRECT_RENDERING"
+@@ -9252,6 +9252,8 @@ do
+   case $ac_option in
+   # Handling of the options.
+   -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
++	: Avoid regenerating within pkgsrc
++	exit 0
+     ac_cs_recheck=: ;;
+   --version | --versio | --versi | --vers | --ver | --ve | --v | -V )
+     $as_echo "$ac_cs_version"; exit ;;
