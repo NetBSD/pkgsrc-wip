@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST,v 1.6 2010/01/03 14:54:39 pallegra Exp $
+@comment $NetBSD: PLIST,v 1.7 2010/08/18 10:29:56 pallegra Exp $
 include/GL/glu.h
 include/GL/glu_mangle.h
-lib/libGLU.la
+lib/libGLU.so
+lib/libGLU.so.1
+lib/libGLU.so.1.3.070802
 lib/pkgconfig/glu.pc
