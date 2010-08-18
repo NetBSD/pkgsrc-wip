@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/08/16 11:43:45 ryo-on Exp $
+# $NetBSD: Makefile,v 1.2 2010/08/18 22:08:36 ryo-on Exp $
 #
 
 DISTNAME=	dbskkd-cdb-2.00
@@ -26,7 +26,7 @@ SUBST_FILES.fix-paths=		dbskkd-cdb.c
 SUBST_SED.fix-paths=		-e 's,/usr/local/share/skk/SKK-JISYO.L.cdb,${PREFIX}/share/skk/SKK-JISYO.L.cdb,g'
 
 
-MAKE_FLAGS+=		CDBLIB=${BUILDLINK_PREFIX.tinycdb}/lib/libcdb.a
+MAKE_FLAGS+=		CDBLIB=${BUILDLINK_DIR}/lib/libcdb.a
 MAKE_FLAGS+=		INSTALLDIR=${DESTDIR}${PREFIX}/libexec
 
 INSTALL_DOCS=	CHANGES \
