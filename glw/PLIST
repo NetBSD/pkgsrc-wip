@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/01/03 14:38:27 pallegra Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/08/18 10:41:11 pallegra Exp $
 include/GL/GLwDrawA.h
 include/GL/GLwDrawAP.h
 include/GL/GLwMDrawA.h
 include/GL/GLwMDrawAP.h
-lib/libGLw.la
+lib/libGLw.so
+lib/libGLw.so.1
+lib/libGLw.so.1.0.0
 lib/pkgconfig/glw.pc
