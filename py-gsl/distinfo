@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/08/18 11:55:35 jihbed Exp $
+
+SHA1 (pygsl-0.9.5.tar.gz) = 718064cd6c9d50cae5048c920ab7ab2324d27c88
+RMD160 (pygsl-0.9.5.tar.gz) = 0b9d2654bc1cfb84649603b2680932c4ce47a849
+Size (pygsl-0.9.5.tar.gz) = 1674504 bytes
