@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/08/18 10:23:12 ryo-on Exp $
+# $NetBSD: Makefile,v 1.2 2010/08/18 10:29:09 ryo-on Exp $
 #
 
 DISTNAME=	multiskkserv-20100128
@@ -10,6 +10,8 @@ MAINTAINER=	ryo_on@yk.rim.or.jp
 HOMEPAGE=	http://ryo-on.users.sourceforge.net/distrib/
 COMMENT=	Simple skk multi-dictionary server
 LICENSE=	gnu-gpl-v2
+
+DEPENDS=	skk-jisyo-cdb-[0-9]*:../../wip/skk-jisyo-cdb
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
