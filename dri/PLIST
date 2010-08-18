@@ -1,18 +1,18 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/01/03 14:43:27 pallegra Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/08/18 10:28:25 pallegra Exp $
 include/GL/internal/dri_interface.h
-lib/dri/i810_dri.la
-lib/dri/i915_dri.la
-lib/dri/i965_dri.la
-lib/dri/mach64_dri.la
-lib/dri/mga_dri.la
-lib/dri/r128_dri.la
-lib/dri/r200_dri.la
-lib/dri/r300_dri.la
-lib/dri/r600_dri.la
-lib/dri/radeon_dri.la
-lib/dri/savage_dri.la
-lib/dri/sis_dri.la
-lib/dri/swrast_dri.la
-lib/dri/tdfx_dri.la
-lib/dri/unichrome_dri.la
+lib/dri/i810_dri.so
+lib/dri/i915_dri.so
+lib/dri/i965_dri.so
+lib/dri/mach64_dri.so
+lib/dri/mga_dri.so
+lib/dri/r128_dri.so
+lib/dri/r200_dri.so
+lib/dri/r300_dri.so
+lib/dri/r600_dri.so
+lib/dri/radeon_dri.so
+lib/dri/savage_dri.so
+lib/dri/sis_dri.so
+lib/dri/swrast_dri.so
+lib/dri/tdfx_dri.so
+lib/dri/unichrome_dri.so
 lib/pkgconfig/dri.pc

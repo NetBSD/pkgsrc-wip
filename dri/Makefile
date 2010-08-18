@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/01/03 14:43:27 pallegra Exp $
+# $NetBSD: Makefile,v 1.2 2010/08/18 10:28:25 pallegra Exp $
 #
 
 .include "../../wip/gl/Makefile.common"
@@ -22,7 +22,7 @@ CONFIGURE_ARGS+=	--disable-glu
 CONFIGURE_ARGS+=	--disable-glut
 CONFIGURE_ARGS+=	--disable-glw
 
-BUILD_DIRS=	src/mesa
+BUILD_DIRS=	src/glsl src/mesa
 BUILD_TARGET=	default
 
 INSTALL_DIRS=	src/mesa
