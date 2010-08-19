@@ -1,12 +1,13 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/08/03 02:02:30 erinlalouve Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/08/19 18:00:30 erinlalouve Exp $
 bin/seeks
 lib/librmd160.la
 lib/libseekslsh.la
 lib/libseeksplugins.la
 lib/libseeksproxy.la
 lib/libseeksutils.la
+lib/seeks/plugins/blocker/libblockerplugin.la
+lib/seeks/plugins/img_websearch/libseeksimgwebsearchplugin.la
 lib/seeks/plugins/websearch/libseekswebsearchplugin.la
-pgsql/data/pg_stat_tmp/pgstat.stat
 share/seeks/lsh/swl/License.txt
 share/seeks/lsh/swl/arabicST.txt
 share/seeks/lsh/swl/bulgarianST.txt
@@ -23,6 +24,7 @@ share/seeks/lsh/swl/roumanianST.txt
 share/seeks/lsh/swl/russianST.txt
 share/seeks/lsh/swl/spanishST.txt
 share/seeks/lsh/swl/swedishST.txt
+share/seeks/plugins/blocker/blocked-patterns
 share/seeks/plugins/websearch/patterns/audio
 share/seeks/plugins/websearch/patterns/file_doc
 share/seeks/plugins/websearch/patterns/forum
@@ -30,6 +32,7 @@ share/seeks/plugins/websearch/patterns/pdf
 share/seeks/plugins/websearch/patterns/qi_patterns
 share/seeks/plugins/websearch/patterns/reject
 share/seeks/plugins/websearch/patterns/video
+share/seeks/plugins/websearch/public/css/seeks_hp_search.css
 share/seeks/plugins/websearch/public/images/home.svg
 share/seeks/plugins/websearch/public/images/home_32x30.png
 share/seeks/plugins/websearch/public/images/search_cluster_inactive.png

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/08/03 02:02:30 erinlalouve Exp $
+# $NetBSD: Makefile,v 1.2 2010/08/19 18:00:30 erinlalouve Exp $
 #
 
-PKGNAME=	seeks-0.2.3a
-DISTNAME=	seeks_solo_stable-0.2.3a.src
+PKGNAME=	seeks-0.2.4
+DISTNAME=	seeks_solo_stable-0.2.4
 CATEGORIES=	local
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=seeks/}
 

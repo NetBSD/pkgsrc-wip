@@ -1,19 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/08/03 02:02:30 erinlalouve Exp $
+$NetBSD: distinfo,v 1.2 2010/08/19 18:00:30 erinlalouve Exp $
 
-SHA1 (seeks_solo_stable-0.2.3a.src.tar.gz) = 4037e0793099f67713aca10afb2784526b019823
-RMD160 (seeks_solo_stable-0.2.3a.src.tar.gz) = d3ce71e8d8b68bf6d620f5f536fa355c901b3d54
-Size (seeks_solo_stable-0.2.3a.src.tar.gz) = 585703 bytes
-SHA1 (patch-aa) = f2a3f894aa5575b48b1859b946513138e9ad4c04
-SHA1 (patch-ab) = ec6ddc44272d8d9e36ed57ad0ce69cb3107ed01a
-SHA1 (patch-ac) = 3fcab21210ebe5ecb60fcc967b268a87f170d721
-SHA1 (patch-ad) = 271d0dd3f2b91177e964baf9f59201e188f83607
-SHA1 (patch-ae) = 90e980d4a75187a548f8a9fc65764a9258c2221f
-SHA1 (patch-af) = c3ea2792a5326416c5225c1d452ca014ad971750
-SHA1 (patch-ag) = f0d5a96ceabc3e8926b719c6f0fc45ca50bdceb0
-SHA1 (patch-ah) = e8c2ea29ba3a56cec61cbc1f6b1d0b6165fa0766
-SHA1 (patch-ai) = c3f072fc2be759f84488caeddc5a9e4b00e2315b
-SHA1 (patch-aj) = a49728bef9667d3790367e1db30848aabaee4225
-SHA1 (patch-ak) = 7f5100d382de9dc70081258c8187fb7ca4053749
-SHA1 (patch-al) = c2b3c5b0629ccbf55b3d3a7f1da360939beea61b
-SHA1 (patch-am) = d9e0dd3c88098636454a78202a1f0c825f3c95bd
-SHA1 (patch-an) = 1d4f48a04488a3eeee561aafb7675cfbb0a30980
+SHA1 (seeks_solo_stable-0.2.4.tar.gz) = 447aeaae53e9ade1b3ed262b2f7cfea7dd35f6f5
+RMD160 (seeks_solo_stable-0.2.4.tar.gz) = ea847ebfd15786ab36377fc157f3d10c24d01502
+Size (seeks_solo_stable-0.2.4.tar.gz) = 618675 bytes
