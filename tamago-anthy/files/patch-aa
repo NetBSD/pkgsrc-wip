@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2010/08/19 15:46:10 makoto Exp $
+
+--- work/egg-anthy/anthy.el.orig	2010-06-24 09:54:56.000000000 +0900
++++ egg/anthy.el	2010-08-19 23:19:06.000000000 +0900
+@@ -677,4 +677,8 @@
+   "Activate ANTHY backend of Tamago 4."
+   (apply 'egg-mode (append arg anthy-egg-backend-alist)))
+ 
++;; for < 21.3.5 
++(when (not (fboundp 'set-process-query-on-exit-flag))
++  (defun set-process-query-on-exit-flag (one two) ()))
++
+ ;;; egg/anthy.el ends here.

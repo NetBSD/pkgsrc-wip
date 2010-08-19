@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/08/04 12:14:15 makoto Exp $
+# $NetBSD: Makefile,v 1.2 2010/08/19 15:46:10 makoto Exp $
 # the version number is for pkglint only
 DISTNAME=	tamago-anthy-4.0
 
@@ -59,6 +59,7 @@ post-patch:
 pre-configure:
 	cp -p ${WRKDIR}/egg-anthy/anthy.el	${WRKSRC}/egg
 	cp -p ${WRKDIR}/egg-anthy/anthyipc.el	${WRKSRC}/egg
+	cat files/patch-aa | ( cd ${WRKSRC} ; patch -s -p0 )
 
 # take care anthy part needs some make
 post-install:
