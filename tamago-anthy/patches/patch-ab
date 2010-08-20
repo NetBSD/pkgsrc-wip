@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1 2010/08/20 08:02:10 makoto Exp $
+
+--- egg-edep.el.orig	2000-01-04 15:50:05.000000000 +0900
++++ egg-edep.el	2010-08-20 15:37:18.000000000 +0900
+@@ -74,7 +74,9 @@
+ 	  (set-category-table (copy-category-table))
+ 	  (setq category (get-unused-category))
+ 	  (define-category category "")
++	  (if (string-match "^\\(19\\|2[012]\\)" emacs-version)
+ 	  (modify-category-entry (make-char charset) category)
++	  (map-charset-chars 'modify-category-entry charset category)  )
+ 	  (string-match (concat "\\c" (list category) "+") string start))
+       (set-category-table cur-ct))))
+ 
