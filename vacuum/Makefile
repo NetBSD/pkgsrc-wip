@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/11/18 13:22:55 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2010/08/21 14:54:38 cheusov Exp $
 #
 
 DISTNAME=	vacuum-0.7
@@ -10,7 +10,7 @@ HOMEPAGE=	http://apocalypse.rulez.org/vacuum
 COMMENT=	Vacuum Magic, a fast-paced action game
 
 DEPENDS+=	p5-SDL>=1.20.0:../../devel/p5-SDL
-DEPENDS+=	p5-Compress-Zlib-[0-9]*:../../devel/p5-Compress-Zlib
+DEPENDS+=	p5-IO-Compress-[0-9]*:../../devel/p5-IO-Compress
 DEPENDS+=	p5-MIME-Base64-[0-9]*:../../converters/p5-MIME-Base64
 
 GNU_CONFIGURE=	yes
