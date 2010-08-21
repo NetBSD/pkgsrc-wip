@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2010/07/05 21:05:07 ryo-on Exp $
+# $NetBSD: Makefile,v 1.4 2010/08/21 09:10:51 ryo-on Exp $
 #
 
-DISTNAME=	arcem-20090925-src
-PKGNAME=	${DISTNAME:S/-src//}
+DISTNAME=	arcem-20100819
 CATEGORIES=	emulators
-MASTER_SITES=	${MASTER_SITE_LOCAL} \
-		http://ryo-on.users.sourceforge.net/distrib/
+MASTER_SITES=	http://ryo-on.users.sourceforge.net/distrib/
 EXTRACT_SUFX=	.tar.bz2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -30,7 +28,6 @@ MAINTAINER=	ryo_on@yk.rim.or.jp
 HOMEPAGE=	http://arcem.sourceforge.net/
 COMMENT=	Dave Gilbert's Acorn Archimedes emulator
 
-WRKSRC=		${WRKDIR}/arcem
 USE_TOOLS+=	gmake
 
 MAKE_ENV+=	SYSTEM=X

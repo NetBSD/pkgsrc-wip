@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2009/12/11 14:06:24 ryo-on Exp $
+$NetBSD: patch-aa,v 1.2 2010/08/21 09:10:51 ryo-on Exp $
 
---- Makefile.orig	2009-12-05 08:19:39.000000000 +0900
+--- Makefile.orig	2008-11-01 17:40:54.000000000 +0000
 +++ Makefile
 @@ -67,9 +67,7 @@ CFLAGS += \
      -D$(ENDIAN) $(CFL) -DNOOS -DNOFPE $(WARN) \
@@ -9,7 +9,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2009/12/11 14:06:24 ryo-on Exp $
 -prefix=/usr/local
 -
 -INSTALL_DIR = $(prefix)/bin
-+INSTALL_DIR = $(PREFIX)/bin
++INSTALL_DIR = ${DESTDIR}$(PREFIX)/bin
  INSTALL=cp
  
  
@@ -24,11 +24,12 @@ $NetBSD: patch-aa,v 1.1.1.1 2009/12/11 14:06:24 ryo-on Exp $
  endif
  
  ifeq (${SYSTEM},win)
-@@ -190,7 +188,6 @@ all: $(TARGET)
+@@ -190,7 +188,7 @@ all: $(TARGET)
  
  install: all
  	$(INSTALL) $(TARGET) $(INSTALL_DIR)
 -	f=arcemrc; test -f $$HOME/.$$f || $(INSTALL) $$f $(HOME)/.$$f
++#	f=arcemrc; test -f $$HOME/.$$f || $(INSTALL) $$f $(HOME)/.$$f
  
  $(TARGET): $(OBJS) $(MODEL).o
  	$(LD) $(LDFLAGS) $(OBJS) $(LIBS) $(MODEL).o -o $@
