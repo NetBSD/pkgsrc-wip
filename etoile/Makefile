@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/01/06 04:52:16 christtrekker Exp $
+# $NetBSD: Makefile,v 1.4 2010/08/21 14:19:58 cheusov Exp $
 #
 
 DISTNAME=	etoile-0.4.1
@@ -15,8 +15,8 @@ USE_LANGUAGES=	objc
 
 MAKE_FILE=	GNUmakefile
 
-DEPENDS+=	etoile-core:../../gnustep/etoile-core
-DEPENDS+=	etoile-services:../../gnustep/etoile-services
+DEPENDS+=	etoile-core:../../wip/etoile-core
+DEPENDS+=	etoile-services:../../wip/etoile-services
 # DictionaryReader
 # Font Manager
 # Melodie

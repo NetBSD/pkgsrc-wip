@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/06/12 23:16:46 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2010/08/21 14:22:34 cheusov Exp $
 #
 
 DISTNAME=	cvsanaly2-2.0.0
@@ -34,5 +34,5 @@ post-install:
 
 .include "../../devel/subversion-base/buildlink3.mk"
 .include "../../lang/python/extension.mk"
-.include "../../wip/repositoryhandler/buildlink3.mk"
+.include "../../wip/py-repositoryhandler/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
