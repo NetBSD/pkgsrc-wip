@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.17 2010/07/23 21:51:36 lexort Exp $
+# $NetBSD: Makefile,v 1.18 2010/08/21 14:49:40 cheusov Exp $
 #
 
 DISTNAME=	ipython-0.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 PKGREVISION=	3
-CATEGORI
+CATEGORIES=	lang
 MASTER_SITES=	http://ipython.scipy.org/dist/
 
 MAINTAINER=	tonnerre@NetBSD.org
