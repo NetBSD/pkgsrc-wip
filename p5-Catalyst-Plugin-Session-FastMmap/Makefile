@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/10/20 10:10:19 tonnerre Exp $
+# $NetBSD: Makefile,v 1.6 2010/08/21 14:16:36 cheusov Exp $
 
 DISTNAME=	Catalyst-Plugin-Session-FastMmap-0.12
 PKGNAME=	p5-${DISTNAME}
@@ -14,7 +14,7 @@ COMMENT=	FastMmap sessions for Catalyst
 DEPENDS+=	p5-URI>=0:../../www/p5-URI
 DEPENDS+=	p5-Cache-FastMmap>=0:../../devel/p5-Cache-FastMmap
 DEPENDS+=	p5-Class-Accessor>=0:../../devel/p5-Class-Accessor
-DEPENDS+=	p5-URI-Find>=0:../../wip/p5-URI-Find
+DEPENDS+=	p5-URI-Find>=0:../../www/p5-URI-Find
 DEPENDS+=	p5-Digest-MD5>=0:../../security/p5-Digest-MD5
 DEPENDS+=	p5-Catalyst-Runtime>=2.99:../../www/p5-Catalyst-Runtime
 DEPENDS+=	p5-Class-Data-Inheritable>=0:../../devel/p5-Class-Data-Inheritable
