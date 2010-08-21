@@ -1,0 +1,5 @@
+- documentation must be installed under shar/doc, not doc
+- add paraview-license to ../../licenses (?)
+- remove false dependencies
+- add optional MPI support
+- check to see if there is a conflict with vtk
