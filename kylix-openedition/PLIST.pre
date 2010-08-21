@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST.pre,v 1.1.1.1 2003/11/29 03:22:56 mpasternak Exp $
-${EMULSUBDIR}/usr/lib/libwine.borland.so
-${EMULSUBDIR}/usr/lib/libwine_unicode.borland.so

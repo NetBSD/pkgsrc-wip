@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.2 2006/03/09 15:29:39 ghen Exp $
-
-SHA1 (k3_open_update_2.tar.gz) = 3d686a70318529a6aad3c37f0702240366adf6a4
-Size (k3_open_update_2.tar.gz) = 220257 bytes
-SHA1 (kylix3_open.tar.gz) = 95e4a6d257bfdab7f948a870416ac48f1100becc
-Size (kylix3_open.tar.gz) = 95138460 bytes
-SHA1 (patch-aa) = 146137ce8e2e7efb6862cb601e8f74fee5c9d241
