@@ -1,4 +1,4 @@
-# $NetBSD: buidlink3.mk,v 1.1 2010/06/11 11:19:05 jihbed Exp $
+# $NetBSD: buildlink3.mk,v 1.1 2010/08/21 14:25:22 cheusov Exp $
 
 BUILDLINK_TREE+=	openbabel
 
