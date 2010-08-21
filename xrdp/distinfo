@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.4 2008/02/03 16:27:01 tnn2 Exp $
+$NetBSD: distinfo,v 1.5 2010/08/21 13:29:59 cheusov Exp $
 
-SHA1 (xrdp-0.3.2.tar.gz) = 6689f0119c53c717de989d7f79a9e1e7c0d3598f
-RMD160 (xrdp-0.3.2.tar.gz) = 7a094653fe43524c04cfb43541bd861d75a5f3c8
-Size (xrdp-0.3.2.tar.gz) = 164273 bytes
+SHA1 (xrdp-0.4.1.tar.gz) = 6689f0119c53c717de989d7f79a9e1e7c0d3598f
+RMD160 (xrdp-0.4.1.tar.gz) = 7a094653fe43524c04cfb43541bd861d75a5f3c8
+Size (xrdp-0.4.1.tar.gz) = 164273 bytes
 SHA1 (patch-aa) = 5b4108e1a2a0f60dc75ffcf79f6cdeb47124b52e
 SHA1 (patch-ab) = fbeb0a3485c87f69942770a6dced7233a90271bb
 SHA1 (patch-ac) = 3260b81eae147350c0b4f06987d408ecd99ea0b4

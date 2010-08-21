@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/01/17 12:03:34 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2010/08/21 13:29:59 cheusov Exp $
 
 DISTNAME=		xrdp-0.3.2
 PKGREVISION=		2
@@ -11,6 +11,8 @@ COMMENT=		Remote Desktop Protocol server
 
 USE_TOOLS+=		gmake
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 EGDIR=			${PREFIX}/share/examples/xrdp
 MAKE_ENV+=		DESTDIR=${PREFIX:Q}
 MAKE_ENV+=		CFGDIR=${EGDIR:Q}
@@ -19,8 +21,7 @@ MAKE_ENV+=		MANDIR=${PREFIX:Q}/${PKGMANDIR:Q}
 MAKE_ENV+=		DOCDIR=${PREFIX:Q}/share/doc/xrdp
 MAKE_ENV+=		DLLIB=${BUILDLINK_LDADD.dl}
 
-INSTALLATION_DIRS+=	bin share/doc/xrdp share/xrdp
-INSTALLATION_DIRS+=	${EGDIR} share/examples/pam.d
+AUTO_MKDIRS=		yes
 
 PKG_SYSCONFSUBDIR=	xrdp
 CONF_FILES+=		${EGDIR}/sesman.ini	${PKG_SYSCONFDIR}/sesman.ini
