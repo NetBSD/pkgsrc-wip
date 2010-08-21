@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/04/15 07:10:07 athaba Exp $
+# $NetBSD: Makefile,v 1.3 2010/08/21 14:40:44 cheusov Exp $
 #
 
 DISTNAME=	Text-Quote-0.3
@@ -13,7 +13,7 @@ COMMENT=	Quotes strings as required for perl to eval them back correctly
 PKG_DESTDIR_SUPPORT=user-destdir
 
 DEPENDS+=	p5-Carp-Assert>=0.13:../../devel/p5-Carp-Assert
-DEPENDS+=	p5-Compress-Zlib>=1.16:../../devel/p5-Compress-Zlib
+DEPENDS+=	p5-IO-Compress-[0-9]*:../../devel/p5-IO-Compress
 DEPENDS+=	p5-MIME-Base64>=2.12:../../converters/p5-MIME-Base64
 
 PERL5_PACKLIST=	auto/Text/Quote/.packlist
