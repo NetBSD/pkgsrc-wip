@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4070 2010/08/21 13:09:13 cheusov Exp $
+# $Id: Makefile,v 1.4071 2010/08/21 14:35:09 cheusov Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1083,7 +1083,6 @@ SUBDIR+=	last.fm
 SUBDIR+=	lastfm-sharp
 SUBDIR+=	lat
 SUBDIR+=	lateef-shaikh-ttf
-SUBDIR+=	lcal
 SUBDIR+=	lcalc
 SUBDIR+=	lcdproc
 SUBDIR+=	lcrack
