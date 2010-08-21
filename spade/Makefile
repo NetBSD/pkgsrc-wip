@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2010/07/16 22:14:59 jihbed Exp $
+# $NetBSD: Makefile,v 1.14 2010/08/21 14:51:03 cheusov Exp $
 #
 
 DISTNAME=	spade-2.0rc4
@@ -47,5 +47,5 @@ do-test:
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .include "../../security/py-amkCrypto/buildlink3.mk"
-.include "../../wip/py-gmpy/buildlink3.mk"
+.include "../../math/py-gmpy/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

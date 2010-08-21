@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/09/21 13:21:03 cheusov Exp $
+# $NetBSD: Makefile,v 1.9 2010/08/21 14:52:16 cheusov Exp $
 #
 
 DISTNAME=	ptksdict-1.2.1
@@ -18,12 +18,11 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 #DEPENDS+=	p5-Crypt-Blowfish-[0-9]*:../../security/p5-Crypt-Blowfish
 #DEPENDS+=	p5-Digest-MD5-[0-9]*:../../security/p5-Digest-MD5
 DEPENDS+=	p5-Tk-[0-9]*:../../x11/p5-Tk
-DEPENDS+=	p5-Compress-Zlib-[0-9]*:../../devel/p5-Compress-Zlib
+DEPENDS+=	p5-IO-Compress-[0-9]*:../../devel/p5-IO-Compress
 #DEPENDS+=	p5-IO-File-[0-9]*:../../devel/p5-IO-File
 DEPENDS+=	p5-IO-All-[0-9]*:../../devel/p5-IO-All
 DEPENDS+=	p5-Getopt-Long-[0-9]*:../../devel/p5-Getopt-Long
 DEPENDS+=	p5-Data-Dump-[0-9]*:../../devel/p5-Data-Dump
-DEPENDS+=	p5-Compress-Zlib-[0-9]*:../../devel/p5-Compress-Zlib
 
 NO_BUILD=	yes
 
