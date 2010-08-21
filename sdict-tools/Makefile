@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2010/08/21 14:52:16 cheusov Exp $
+# $NetBSD: Makefile,v 1.10 2010/08/21 14:53:38 cheusov Exp $
 #
 
 DISTNAME=	ptksdict-1.2.1
@@ -14,9 +14,9 @@ COMMENT=	SDict conversion tools
 USE_TOOLS+=		gzip tar
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-#DEPENDS+=	p5-DBI-[0-9]*:../../databases/p5-DBI
-#DEPENDS+=	p5-Crypt-Blowfish-[0-9]*:../../security/p5-Crypt-Blowfish
-#DEPENDS+=	p5-Digest-MD5-[0-9]*:../../security/p5-Digest-MD5
+DEPENDS+=	p5-DBI-[0-9]*:../../databases/p5-DBI
+DEPENDS+=	p5-Crypt-Blowfish-[0-9]*:../../security/p5-Crypt-Blowfish
+DEPENDS+=	p5-Digest-MD5-[0-9]*:../../security/p5-Digest-MD5
 DEPENDS+=	p5-Tk-[0-9]*:../../x11/p5-Tk
 DEPENDS+=	p5-IO-Compress-[0-9]*:../../devel/p5-IO-Compress
 #DEPENDS+=	p5-IO-File-[0-9]*:../../devel/p5-IO-File
