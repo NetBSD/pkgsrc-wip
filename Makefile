@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4071 2010/08/21 14:35:09 cheusov Exp $
+# $Id: Makefile,v 1.4072 2010/08/21 16:00:00 pdtafti Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1715,6 +1715,7 @@ SUBDIR+=	pan2-git
 SUBDIR+=	panda
 SUBDIR+=	pandoc
 SUBDIR+=	paperbox
+SUBDIR+=	paraview
 SUBDIR+=	parcellite
 SUBDIR+=	parted
 SUBDIR+=	pasmo
