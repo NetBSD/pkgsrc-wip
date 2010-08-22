@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4072 2010/08/21 16:00:00 pdtafti Exp $
+# $Id: Makefile,v 1.4073 2010/08/22 05:50:30 cheusov Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1071,7 +1071,6 @@ SUBDIR+=	krusader
 SUBDIR+=	kuickshow
 SUBDIR+=	kvirc
 SUBDIR+=	kxmleditor
-SUBDIR+=	kylix-openedition
 SUBDIR+=	kyra
 SUBDIR+=	kyra2
 SUBDIR+=	l2tpd
