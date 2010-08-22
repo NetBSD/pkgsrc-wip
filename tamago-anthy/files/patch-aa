@@ -1,13 +1,45 @@
-$NetBSD: patch-aa,v 1.1 2010/08/19 15:46:10 makoto Exp $
+$NetBSD: patch-aa,v 1.2 2010/08/22 14:22:44 makoto Exp $
+Modified by the info from:
+| Date: Sun, 22 Aug 2010 08:32:38 +0900 (JST)
+| To: elips at heimat.gr.jp
+| From: Hideyuki SHIRAI	<shirai at meadowy dot org>
 
---- work/egg-anthy/anthy.el.orig	2010-06-24 09:54:56.000000000 +0900
-+++ egg/anthy.el	2010-08-19 23:19:06.000000000 +0900
-@@ -677,4 +677,8 @@
-   "Activate ANTHY backend of Tamago 4."
-   (apply 'egg-mode (append arg anthy-egg-backend-alist)))
+--- egg/anthy.el.orig	2010-06-24 09:54:56.000000000 +0900
++++ egg/anthy.el	2010-08-21 18:43:32.012755200 +0900
+@@ -168,6 +168,16 @@
  
-+;; for < 21.3.5 
-+(when (not (fboundp 'set-process-query-on-exit-flag))
-+  (defun set-process-query-on-exit-flag (one two) ()))
+ (defvar anthy-egg-agent-buffer-name " *anthy-egg*")
+ 
++(defmacro anthy-egg-static-if (cond then &rest else)
++  "Like `if', except that it evaluates COND at compile-time."
++  (if (eval cond) then `(progn  ,@else)))
++(put 'anthy-egg-static-if 'lisp-indent-function 2)
 +
- ;;; egg/anthy.el ends here.
++(defun anthy-egg-process-kill-without-query (proc)
++  (anthy-egg-static-if (fboundp 'set-process-query-on-exit-flag)
++      (set-process-query-on-exit-flag proc nil)
++    (process-kill-without-query proc)))
++
+ ;; Getting new context-descriptor, and returns environment with 'inuse' bit
+ (defun anthy-egg-new-environment ()
+   (if (null anthy-egg-proc)
+@@ -182,7 +192,7 @@
+ 			 (append anthy-egg-agent-arguments
+ 				 (list "--utf8"))
+ 		       anthy-egg-agent-arguments)))
+-	(set-process-query-on-exit-flag anthy-egg-proc nil)
++	(anthy-egg-process-kill-without-query anthy-egg-proc)
+ 	(set-process-coding-system anthy-egg-proc cs cs)
+ 	(set-process-sentinel anthy-egg-proc 'anthy-egg-proc-sentinel)
+ 	(set-marker-insertion-type (process-mark anthy-egg-proc) t)
+@@ -637,7 +647,7 @@
+ 			    '("--append" "--utf8")
+ 			  '("--append"))))
+       (when proc
+-	(set-process-query-on-exit-flag proc nil)
++	(anthy-egg-process-kill-without-query proc)
+ 	(set-process-coding-system proc cs cs)
+ 	(set-process-sentinel proc
+ 			      (lambda (proc event)
+
+
