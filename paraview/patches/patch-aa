@@ -1,0 +1,19 @@
+$NetBSD: patch-aa,v 1.1 2010/08/22 20:24:50 pdtafti Exp $
+
+--- VTK/Utilities/vtk_png.h.orig	2010-05-27 17:06:54.000000000 +0000
++++ VTK/Utilities/vtk_png.h
+@@ -19,6 +19,14 @@
+ #include "vtkToolkits.h"
+ #ifdef VTK_USE_SYSTEM_PNG
+ # include <png.h>
++
++#if !defined(png_set_gray_1_2_4_to_8) && \ 
++    defined(PNG_LIBPNG_VER_MAJOR) && defined(PNG_LIBPNG_VER_MINOR) && \ 
++    (PNG_LIBPNG_VER_MAJOR > 1 || \ 
++    (PNG_LIBPNG_VER_MAJOR == 1 && PNG_LIBPNG_VER_MINOR >= 4)) 
++#define png_set_gray_1_2_4_to_8 png_set_expand_gray_1_2_4_to_8 
++#endif
++
+ #else
+ # include <vtkpng/png.h>
+ #endif
