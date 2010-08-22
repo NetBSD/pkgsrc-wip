@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4073 2010/08/22 05:50:30 cheusov Exp $
+# $Id: Makefile,v 1.4074 2010/08/22 13:00:28 ryo-on Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2103,6 +2103,7 @@ SUBDIR+=	pypod
 SUBDIR+=	pysite
 SUBDIR+=	python27
 SUBDIR+=	python31
+SUBDIR+=	pythoncad
 SUBDIR+=	pywm
 SUBDIR+=	pyzor
 SUBDIR+=	q3-urbanterror
