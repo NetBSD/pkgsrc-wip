@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/08/06 20:40:38 ahp-nils Exp $
+# $NetBSD: Makefile,v 1.7 2010/08/23 09:25:09 ahp-nils Exp $
 #
 
 DISTNAME=	logrotate-3.7.8
@@ -27,19 +27,21 @@ EGDIR=                  ${PREFIX}/${DOCDIR}/${EXAMPLES_DIR}
 CONF_FILES=             ${EGDIR}/logrotate-default ${PKG_SYSCONFDIR}/logrotate.conf
 INSTALLATION_DIRS=      sbin etc ${DOCDIR} ${DOCDIR}/${EXAMPLES_DIR} ${DOCDIR}/${TESTDIR} ${PKGMANDIR}/man8 etc/logrotate.d
 
+SUBST_CLASSES+=         confs
+SUBST_STAGE.confs=      post-install
+SUBST_MESSAGE.confs=    Fixing configuration files.
+SUBST_FILES.confs=      ${DESTDIR}${EGDIR}/logrotate-default
+SUBST_FILES.confs+=     ${DESTDIR}${EGDIR}/logrotate.cron
+SUBST_SED.confs=        -e "s|__PREFIX__|${PREFIX}|g"
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/logrotate ${DESTDIR}${PREFIX}/sbin
-	#${INSTALL_DATA} ${WRKSRC}/${EXAMPLES_DIR}/logrotate-default ${DESTDIR}${PREFIX}/${DOCDIR}/${EXAMPLES_DIR}
+	${INSTALL_DATA} ${WRKSRC}/${EXAMPLES_DIR}/logrotate-default ${DESTDIR}${PREFIX}/${DOCDIR}/${EXAMPLES_DIR}
 	${INSTALL_DATA} ${WRKSRC}/${EXAMPLES_DIR}/logrotate.cron ${DESTDIR}${PREFIX}/${DOCDIR}/${EXAMPLES_DIR}
 	${INSTALL_DATA} ${WRKSRC}/test/* ${DESTDIR}${PREFIX}/${DOCDIR}/${TESTDIR}
 	${INSTALL_DATA} ${WRKSRC}/README.* ${DESTDIR}${PREFIX}/${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/CHANGES ${DESTDIR}${PREFIX}/${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/COPYING ${DESTDIR}${PREFIX}/${DOCDIR}
 	${INSTALL_MAN} ${WRKSRC}/logrotate.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
-post-install:
-	${SED} -e 's|__PREFIX__|${PREFIX}|'             \
-	< ${WRKSRC}/${EXAMPLES_DIR}/logrotate-default     \
-	> ${DESTDIR}${PREFIX}/${DOCDIR}/${EXAMPLES_DIR}/logrotate-default
 
 .include "../../mk/bsd.pkg.mk"
