@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/08/19 15:46:10 makoto Exp $
+# $NetBSD: Makefile,v 1.3 2010/08/23 03:42:09 makoto Exp $
 # the version number is for pkglint only
 DISTNAME=	tamago-anthy-4.0
 
@@ -7,10 +7,11 @@ PKGREVISION=	${_CVS_PKGVERSION:S/.//g}
 ANTHY_VERSION=	9100h
 
 CATEGORIES=	inputmethod
+MASTER_SITES=	http://www.meadowy.org/~shirai/elips/
 # anthy
-MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE_JP:=anthy/37536/}
+MASTER_SITES+=   ${MASTER_SITE_SOURCEFORGE_JP:=anthy/37536/}
 # egg-anthy
-MASTER_SITES+=	http://www.meadowy.org/~shirai/elips/
+
 
 MAINTAINER=	makoto@ki.nu
 HOMEPAGE=       http://www.meadowy.org/~shirai/
@@ -51,15 +52,11 @@ post-patch:
 	${ECHO}  ${DISTDIR}/$${i};		\
 	${PAX}	-r -z -f ${DISTDIR}/$${i};	\
 	done;)
-	if [ -r files/egg-anthy.readme.diff ]; then	\
-        cat files/egg-anthy.readme.diff | (cd ${WRKDIR}; patch -s -p0 ) \
-	fi
 
 # overwrite two files from egg-anthy
 pre-configure:
 	cp -p ${WRKDIR}/egg-anthy/anthy.el	${WRKSRC}/egg
 	cp -p ${WRKDIR}/egg-anthy/anthyipc.el	${WRKSRC}/egg
-	cat files/patch-aa | ( cd ${WRKSRC} ; patch -s -p0 )
 
 # take care anthy part needs some make
 post-install:
