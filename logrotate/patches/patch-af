@@ -1,0 +1,12 @@
+$NetBSD: patch-af,v 1.1 2010/08/23 09:21:52 ahp-nils Exp $
+
+--- examples/logrotate.cron.orig	2003-07-09 19:36:35.000000000 +0000
++++ examples/logrotate.cron
+@@ -1,6 +1,6 @@
+ #!/bin/sh
+ 
+-/usr/sbin/logrotate /etc/logrotate.conf
++__PREFIX__/sbin/logrotate __PREFIX__/etc/logrotate.conf
+ EXITVALUE=$?
+ if [ $EXITVALUE != 0 ]; then
+     /usr/bin/logger -t logrotate "ALERT exited abnormally with [$EXITVALUE]"
