@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2010/01/20 12:42:20 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.11 2010/08/23 14:56:32 zecrazytux Exp $
 #
 
-DISTNAME=		cclive-0.5.8
+DISTNAME=		cclive-0.6.5
 CATEGORIES=		net multimedia www
 MASTER_SITES=		http://cclive.googlecode.com/files/
 EXTRACT_SUFX=		.tar.bz2
@@ -24,6 +24,7 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/cclive ${DESTDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/cclive.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
+.include "../../wip/quvi/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../devel/pcre++/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
