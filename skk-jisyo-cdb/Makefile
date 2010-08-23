@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/08/16 11:45:23 ryo-on Exp $
+# $NetBSD: Makefile,v 1.2 2010/08/23 18:46:42 ryo-on Exp $
 #
 
 DISTNAME=	SKK-JISYO.L.${SKKJISYO_VERS}
@@ -14,11 +14,13 @@ COMMENT=	Dictionary collection for SKK
 PKG_DESTDIR_SUPPORT=	user-destdir
 WRKSRC=	${WRKDIR}
 
-DEPENDS=	tinycdb-[0-9]*:../../databases/tinycdb
+BUILD_DEPENDS=	tinycdb-[0-9]*:../../databases/tinycdb
 
 SKKJISYO_VERS=	201008
 
 INSTALLATION_DIRS+=	${PREFIX}/share/skk
+
+FIND_PREFIX:=	CDBDIR=tinycdb-[0-9]*
 
 do-build:
 	LC_ALL=C ${AWK} '/^[^;]/ { \
@@ -29,7 +31,7 @@ do-build:
 			print ""; \
 		}' \
 		< ${WRKDIR}/SKK-JISYO.L.${SKKJISYO_VERS} | \
-	${PREFIX}/bin/cdb -c -t - \
+	${CDBDIR}/bin/cdb -c -t - \
 		${WRKDIR}/SKK-JISYO.L.${SKKJISYO_VERS}.cdb
 
 
@@ -37,4 +39,5 @@ do-install:
 	${INSTALL_DATA} ${WRKDIR}/SKK-JISYO.L.${SKKJISYO_VERS}.cdb \
 		${DESTDIR}${PREFIX}/share/skk/SKK-JISYO.L.cdb
 
+.include "../../mk/find-prefix.mk"
 .include "../../mk/bsd.pkg.mk"
