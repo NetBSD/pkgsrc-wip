@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.12 2010/06/13 22:47:08 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.13 2010/08/23 13:17:05 yhardy Exp $
 #
 
 DISTNAME=	icecat-${ICECAT_VER}
-ICECAT_VER=	3.6.3
-PKGREVISION=	1
+ICECAT_VER=	3.6.8
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GNU:=gnuzilla/${ICECAT_VER}/}
-EXTRACT_SUFX=	.tar.xz
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/gnuzilla/
@@ -16,9 +15,6 @@ WRKSRC=		${WRKDIR}/${DISTNAME}
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config perl gmake autoconf213
 USE_LANGUAGES=	c c++
-
-XZ_OPT=		-M 70M
-.export XZ_OPT
 
 BUILD_DEPENDS+=		zip>=2.3:../../archivers/zip
 
@@ -47,6 +43,7 @@ CONFIGURE_ARGS+=	--with-system-zlib --with-system-bz2
 CONFIGURE_ARGS+=	--enable-system-sqlite
 CONFIGURE_ARGS+=	--disable-crashreporter
 CONFIGURE_ARGS+=	--disable-necko-wifi
+CONFIGURE_ARGS+=	--disable-ipc
 
 ALL_ENV+=		MOZILLA_PKG_NAME=icecat
 
@@ -100,7 +97,7 @@ CONFIGURE_ENV+= ac_cv_thread_keyword=no
 .endif
 
 .include "../../archivers/bzip2/buildlink3.mk"
-BUILDLINK_API_DEPENDS.sqlite3+=	sqlite3>=3.6.10
+BUILDLINK_API_DEPENDS.sqlite3+=	sqlite3>=3.6.22
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../net/libIDL/buildlink3.mk"

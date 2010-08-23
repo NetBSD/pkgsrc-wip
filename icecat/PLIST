@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2010/05/11 11:42:45 yhardy Exp $
+@comment $NetBSD: PLIST,v 1.5 2010/08/23 13:17:05 yhardy Exp $
 bin/icecat
 include/icecat/ImageErrors.h
 include/icecat/ImageLogging.h
@@ -225,6 +225,8 @@ include/icecat/mozilla/CondVar.h
 include/icecat/mozilla/DeadlockDetector.h
 include/icecat/mozilla/Monitor.h
 include/icecat/mozilla/Mutex.h
+include/icecat/mozilla/PluginLibrary.h
+include/icecat/mozilla/PluginPRLibrary.h
 include/icecat/mozilla/TimeStamp.h
 include/icecat/mozilla/XPCOM.h
 include/icecat/mozilla/browser/AboutRedirector.h
@@ -1312,6 +1314,7 @@ include/icecat/nsIProxiedProtocolHandler.h
 include/icecat/nsIProxyAutoConfig.h
 include/icecat/nsIProxyInfo.h
 include/icecat/nsIProxyObjectManager.h
+include/icecat/nsIQueryContentEventResult.h
 include/icecat/nsIRDFCompositeDataSource.h
 include/icecat/nsIRDFContainer.h
 include/icecat/nsIRDFContainerUtils.h
@@ -2223,6 +2226,7 @@ lib/icecat/components/nsFilePicker.js
 lib/icecat/components/nsFormAutoComplete.js
 lib/icecat/components/nsHandlerService.js
 lib/icecat/components/nsHelperAppDlg.js
+lib/icecat/components/nsINIProcessor.js
 lib/icecat/components/nsLivemarkService.js
 lib/icecat/components/nsLoginInfo.js
 lib/icecat/components/nsLoginManager.js
@@ -2264,6 +2268,7 @@ lib/icecat/defaults/profile/chrome/userContent-example.css
 lib/icecat/defaults/profile/localstore.rdf
 lib/icecat/defaults/profile/mimeTypes.rdf
 lib/icecat/defaults/profile/prefs.js
+lib/icecat/dependentlibs.list
 lib/icecat/dictionaries/en-US.aff
 lib/icecat/dictionaries/en-US.dic
 lib/icecat/extensions/{972ce4c6-7e08-4474-a285-3208198ce6fd}/icon.png
@@ -3207,6 +3212,7 @@ share/idl/icecat/nsIProxiedProtocolHandler.idl
 share/idl/icecat/nsIProxyAutoConfig.idl
 share/idl/icecat/nsIProxyInfo.idl
 share/idl/icecat/nsIProxyObjectManager.idl
+share/idl/icecat/nsIQueryContentEventResult.idl
 share/idl/icecat/nsIRDFCompositeDataSource.idl
 share/idl/icecat/nsIRDFContainer.idl
 share/idl/icecat/nsIRDFContainerUtils.idl
