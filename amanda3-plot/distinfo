@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/08/24 03:29:44 schnoebe Exp $
+
+SHA1 (amanda-3.1.2.tar.gz) = 826348395540d17f5da17ecad00036b81fab939b
+RMD160 (amanda-3.1.2.tar.gz) = 80d6423e76ec93b03462eb5f029a2eac32d85a97
+Size (amanda-3.1.2.tar.gz) = 3941255 bytes
+SHA1 (patch-aa) = 95fbc1d1456839a49d92df395333513de744b653
+SHA1 (patch-ab) = 94dca61d570cbeda237b4b57593b7272a4449fdc
+SHA1 (patch-ac) = e43260050e94480eca5031bb7ccf3418778cc97e

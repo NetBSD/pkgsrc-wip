@@ -1,0 +1,50 @@
+$NetBSD: patch-ab,v 1.1.1.1 2010/08/24 03:29:44 schnoebe Exp $
+
+Remove un-necessary directories to build only amplot
+
+--- Makefile.in.orig	2010-08-11 22:21:58.000000000 +0000
++++ Makefile.in
+@@ -944,31 +944,11 @@ ACLOCAL_AMFLAGS = --force -I config -I .
+ @WANT_NDMP_TRUE@NDMP_SUBDIRS = ndmp-src
+ # order is significant, don't change it arbitrarily
+ SUBDIRS = . \
+-	gnulib \
+ 	config \
+-	common-src \
+-	amar-src \
+-	amandad-src \
+-	xfer-src \
+-	$(NDMP_SUBDIRS) \
+-	$(TAPE_SUBDIRS) \
+-	$(CLIENT_SUBDIRS) \
+-	$(SERVER_SUBDIRS) \
+-	$(RESTORE_SUBDIRS) \
+-	$(RECOVER_SUBDIRS) \
+ 	$(PLOT_SUBDIRS) \
+-	perl \
+-	po \
+-	man \
+-	example \
+-	packaging \
+-	installcheck
+-
+-pkgdata_DATA = \
+-	ReleaseNotes	\
+-	COPYRIGHT	\
+-	NEWS		\
+-	ChangeLog
++	man 
++
++pkgdata_DATA = 
+ 
+ CONFIG_STATUS = config.status
+ 
+@@ -1373,7 +1353,7 @@ install-data: install-data-recursive
+ uninstall: uninstall-recursive
+ 
+ install-am: all-am
+-	@$(MAKE) $(AM_MAKEFLAGS) install-exec-am install-data-am
++	@$(MAKE) $(AM_MAKEFLAGS) install-exec-am
+ 
+ installcheck: installcheck-recursive
+ install-strip:

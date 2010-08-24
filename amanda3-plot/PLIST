@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/08/24 03:29:44 schnoebe Exp $
+libexec/amanda/amcat.awk
+libexec/amanda/amplot.awk
+libexec/amanda/amplot.g
+libexec/amanda/amplot.gp
+man/man8/amplot.8
+sbin/amplot
