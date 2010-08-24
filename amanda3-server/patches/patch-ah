@@ -1,0 +1,160 @@
+$NetBSD: patch-ah,v 1.1.1.1 2010/08/24 03:28:51 schnoebe Exp $
+
+Remove build-directory library dependencies and link against the ones
+installed by amanda-common instead.
+
+--- server-src/Makefile.in.orig	2010-08-11 22:22:03.000000000 +0000
++++ server-src/Makefile.in
+@@ -371,8 +371,7 @@ am__installdirs = "$(DESTDIR)$(amlibdir)
+ 	"$(DESTDIR)$(sbindir)" "$(DESTDIR)$(amlibexecdir)" \
+ 	"$(DESTDIR)$(sbindir)"
+ LTLIBRARIES = $(amlib_LTLIBRARIES)
+-libamserver_la_DEPENDENCIES = ../device-src/libamdevice.la \
+-	../common-src/libamanda.la
++libamserver_la_DEPENDENCIES = ../device-src/libamdevice.la 
+ am_libamserver_la_OBJECTS = amindex.lo diskfile.lo driverio.lo \
+ 	cmdline.lo holding.lo infofile.lo logfile.lo tapefile.lo \
+ 	find.lo server_util.lo xfer-source-holding.lo
+@@ -385,78 +384,77 @@ PROGRAMS = $(amlibexec_PROGRAMS) $(sbin_
+ amadmin_SOURCES = amadmin.c
+ amadmin_OBJECTS = amadmin.$(OBJEXT)
+ amadmin_LDADD = $(LDADD)
+-amadmin_DEPENDENCIES = ../common-src/libamanda.la libamserver.la \
+-	../device-src/libamdevice.la ../common-src/libamanda.la
++amadmin_DEPENDENCIES = ../device-src/libamdevice.la
+ amcheck_SOURCES = amcheck.c
+ amcheck_OBJECTS = amcheck.$(OBJEXT)
+ amcheck_LDADD = $(LDADD)
+-amcheck_DEPENDENCIES = ../common-src/libamanda.la libamserver.la \
+-	../device-src/libamdevice.la ../common-src/libamanda.la
++amcheck_DEPENDENCIES = libamserver.la \
++	../device-src/libamdevice.la 
+ amcleanupdisk_SOURCES = amcleanupdisk.c
+ amcleanupdisk_OBJECTS = amcleanupdisk.$(OBJEXT)
+ amcleanupdisk_LDADD = $(LDADD)
+-amcleanupdisk_DEPENDENCIES = ../common-src/libamanda.la libamserver.la \
+-	../device-src/libamdevice.la ../common-src/libamanda.la
++amcleanupdisk_DEPENDENCIES = libamserver.la \
++	../device-src/libamdevice.la
+ amflush_SOURCES = amflush.c
+ amflush_OBJECTS = amflush.$(OBJEXT)
+ amflush_LDADD = $(LDADD)
+-amflush_DEPENDENCIES = ../common-src/libamanda.la libamserver.la \
+-	../device-src/libamdevice.la ../common-src/libamanda.la
++amflush_DEPENDENCIES = libamserver.la \
++	../device-src/libamdevice.la
+ am__objects_1 = amindexd.$(OBJEXT) disk_history.$(OBJEXT) \
+ 	list_dir.$(OBJEXT)
+ am_amindexd_OBJECTS = $(am__objects_1)
+ amindexd_OBJECTS = $(am_amindexd_OBJECTS)
+-amindexd_DEPENDENCIES = $(LDADD) ../amandad-src/libamandad.la
++amindexd_DEPENDENCIES = ../device-src/libamdevice.la
+ amlogroll_SOURCES = amlogroll.c
+ amlogroll_OBJECTS = amlogroll.$(OBJEXT)
+ amlogroll_LDADD = $(LDADD)
+-amlogroll_DEPENDENCIES = ../common-src/libamanda.la libamserver.la \
+-	../device-src/libamdevice.la ../common-src/libamanda.la
++amlogroll_DEPENDENCIES = libamserver.la \
++	../device-src/libamdevice.la
+ amservice_SOURCES = amservice.c
+ amservice_OBJECTS = amservice.$(OBJEXT)
+ amservice_LDADD = $(LDADD)
+-amservice_DEPENDENCIES = ../common-src/libamanda.la libamserver.la \
+-	../device-src/libamdevice.la ../common-src/libamanda.la
++amservice_DEPENDENCIES = libamserver.la \
++	../device-src/libamdevice.la
+ amtrmidx_SOURCES = amtrmidx.c
+ amtrmidx_OBJECTS = amtrmidx.$(OBJEXT)
+ amtrmidx_LDADD = $(LDADD)
+-amtrmidx_DEPENDENCIES = ../common-src/libamanda.la libamserver.la \
+-	../device-src/libamdevice.la ../common-src/libamanda.la
++amtrmidx_DEPENDENCIES = libamserver.la \
++	../device-src/libamdevice.la
+ amtrmlog_SOURCES = amtrmlog.c
+ amtrmlog_OBJECTS = amtrmlog.$(OBJEXT)
+ amtrmlog_LDADD = $(LDADD)
+-amtrmlog_DEPENDENCIES = ../common-src/libamanda.la libamserver.la \
+-	../device-src/libamdevice.la ../common-src/libamanda.la
++amtrmlog_DEPENDENCIES = libamserver.la \
++	../device-src/libamdevice.la
+ chunker_SOURCES = chunker.c
+ chunker_OBJECTS = chunker.$(OBJEXT)
+ chunker_LDADD = $(LDADD)
+-chunker_DEPENDENCIES = ../common-src/libamanda.la libamserver.la \
+-	../device-src/libamdevice.la ../common-src/libamanda.la
++chunker_DEPENDENCIES = libamserver.la \
++	../device-src/libamdevice.la
+ am_diskfile_OBJECTS = diskfile.test.$(OBJEXT)
+ diskfile_OBJECTS = $(am_diskfile_OBJECTS)
+ diskfile_LDADD = $(LDADD)
+-diskfile_DEPENDENCIES = ../common-src/libamanda.la libamserver.la \
+-	../device-src/libamdevice.la ../common-src/libamanda.la
++diskfile_DEPENDENCIES = libamserver.la \
++	../device-src/libamdevice.la
+ driver_SOURCES = driver.c
+ driver_OBJECTS = driver.$(OBJEXT)
+ driver_LDADD = $(LDADD)
+-driver_DEPENDENCIES = ../common-src/libamanda.la libamserver.la \
+-	../device-src/libamdevice.la ../common-src/libamanda.la
++driver_DEPENDENCIES = libamserver.la \
++	../device-src/libamdevice.la
+ dumper_SOURCES = dumper.c
+ dumper_OBJECTS = dumper.$(OBJEXT)
+ dumper_LDADD = $(LDADD)
+-dumper_DEPENDENCIES = ../common-src/libamanda.la libamserver.la \
+-	../device-src/libamdevice.la ../common-src/libamanda.la
++dumper_DEPENDENCIES = libamserver.la \
++	../device-src/libamdevice.la
+ am_infofile_OBJECTS = infofile.test.$(OBJEXT)
+ infofile_OBJECTS = $(am_infofile_OBJECTS)
+ infofile_LDADD = $(LDADD)
+-infofile_DEPENDENCIES = ../common-src/libamanda.la libamserver.la \
+-	../device-src/libamdevice.la ../common-src/libamanda.la
++infofile_DEPENDENCIES = libamserver.la \
++	../device-src/libamdevice.la
+ planner_SOURCES = planner.c
+ planner_OBJECTS = planner.$(OBJEXT)
+ planner_LDADD = $(LDADD)
+-planner_DEPENDENCIES = ../common-src/libamanda.la libamserver.la \
+-	../device-src/libamdevice.la ../common-src/libamanda.la
++planner_DEPENDENCIES = libamserver.la \
++	../device-src/libamdevice.la
+ SCRIPTS = $(amlibexec_SCRIPTS) $(sbin_SCRIPTS)
+ DEFAULT_INCLUDES = -I.@am__isrc@ -I$(top_builddir)/config
+ depcomp = $(SHELL) $(top_srcdir)/config/depcomp
+@@ -794,7 +792,7 @@ INTLLIBS = @INTLLIBS@
+ INTL_MACOSX_LIBS = @INTL_MACOSX_LIBS@
+ KRB5_SECURITY = @KRB5_SECURITY@
+ LD = @LD@
+-LDFLAGS = @LDFLAGS@
++LDFLAGS = -L@amlibdir@ -Wl,-R@amlibdir@ @LDFLAGS@
+ LEX = @LEX@
+ LEXLIB = @LEXLIB@
+ LEX_OUTPUT_ROOT = @LEX_OUTPUT_ROOT@
+@@ -1130,10 +1128,9 @@ INSTALLPERMS_data = \
+ # need to list libamanda twice here, first to override the system library
+ # routines, and second to pick up any references in the other libraries.
+ ###
+-LDADD = ../common-src/libamanda.la   \
+-	libamserver.la               \
++LDADD = libamserver.la               \
+ 	../device-src/libamdevice.la     \
+-	../common-src/libamanda.la
++	-lamanda
+ 
+ libamserver_la_SOURCES = amindex.c	\
+ 			diskfile.c	driverio.c	cmdline.c  \
+@@ -1142,11 +1139,10 @@ libamserver_la_SOURCES = amindex.c	\
+                         xfer-source-holding.c
+ 
+ libamserver_la_LDFLAGS = -release $(VERSION)
+-libamserver_la_LIBADD = ../device-src/libamdevice.la \
+-		       ../common-src/libamanda.la
++libamserver_la_LIBADD = ../device-src/libamdevice.la 
+ 
+ amindexd_LDADD = $(LDADD) \
+-	../amandad-src/libamandad.la
++	-lamandad
+ 
+ 
+ # there are used for testing only:

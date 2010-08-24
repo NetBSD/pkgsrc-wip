@@ -1,0 +1,59 @@
+$NetBSD: patch-af,v 1.1.1.1 2010/08/24 03:28:51 schnoebe Exp $
+
+--- device-src/Makefile.in.orig	2010-08-11 22:22:00.000000000 +0000
++++ device-src/Makefile.in
+@@ -155,8 +155,8 @@ sbin_PROGRAMS = $(am__EXEEXT_2)
+ @WANT_DVDRW_DEVICE_TRUE@am__append_8 = dvdrw-device.c
+ @WANT_NDMP_DEVICE_TRUE@am__append_9 = ndmp-device.c
+ @WANT_NDMP_DEVICE_TRUE@am__append_10 = ../ndmp-src/libndmlib.la
+-TESTS = vfs-test$(EXEEXT)
+-noinst_PROGRAMS = $(am__EXEEXT_1)
++TESTS = # vfs-test$(EXEEXT)
++noinst_PROGRAMS = # $(am__EXEEXT_1)
+ @WANT_S3_DEVICE_TRUE@am__append_11 = activate-devpay
+ subdir = device-src
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+@@ -326,8 +326,8 @@ am__base_list = \
+ am__installdirs = "$(DESTDIR)$(amlibdir)" "$(DESTDIR)$(sbindir)" \
+ 	"$(DESTDIR)$(sbindir)" "$(DESTDIR)$(amincludedir)"
+ LTLIBRARIES = $(amlib_LTLIBRARIES)
+-libamdevice_la_DEPENDENCIES = ../common-src/libamanda.la \
+-	../xfer-src/libamxfer.la $(am__append_10)
++libamdevice_la_DEPENDENCIES = \
++	$(am__append_10)
+ am__libamdevice_la_SOURCES_DIST = property.c device.c \
+ 	device-queueing.c directtcp-connection.c null-device.c \
+ 	rait-device.c vfs-device.c xfer-source-device.c \
+@@ -364,7 +364,7 @@ am__EXEEXT_1 = vfs-test$(EXEEXT)
+ @WANT_S3_DEVICE_TRUE@am__EXEEXT_2 = activate-devpay$(EXEEXT)
+ PROGRAMS = $(noinst_PROGRAMS) $(sbin_PROGRAMS)
+ am__activate_devpay_SOURCES_DIST = activate-devpay.c
+-@WANT_S3_DEVICE_TRUE@am_activate_devpay_OBJECTS =  \
++@WANT_S3_DEVICE_TRUE@am_activate_devpay_OBJECTS =  
+ @WANT_S3_DEVICE_TRUE@	activate-devpay.$(OBJEXT)
+ activate_devpay_OBJECTS = $(am_activate_devpay_OBJECTS)
+ activate_devpay_LDADD = $(LDADD)
+@@ -704,7 +704,7 @@ INTLLIBS = @INTLLIBS@
+ INTL_MACOSX_LIBS = @INTL_MACOSX_LIBS@
+ KRB5_SECURITY = @KRB5_SECURITY@
+ LD = @LD@
+-LDFLAGS = @LDFLAGS@
++LDFLAGS = -L@amlibdir@ -Wl,-R@amlibdir@ @LDFLAGS@
+ LEX = @LEX@
+ LEXLIB = @LEXLIB@
+ LEX_OUTPUT_ROOT = @LEX_OUTPUT_ROOT@
+@@ -992,11 +992,11 @@ libamdevice_la_SOURCES = property.c devi
+ 	$(am__append_2) $(am__append_3) $(am__append_4) \
+ 	$(am__append_5) $(am__append_6) $(am__append_7) \
+ 	$(am__append_8) $(am__append_9)
+-libamdevice_la_LIBADD = ../common-src/libamanda.la \
+-	../xfer-src/libamxfer.la $(am__append_10)
++libamdevice_la_LIBADD = \
++	-lamxfer $(am__append_10) \
++	-lamanda
+ vfs_test_SOURCES = vfs-test.c
+ vfs_test_LDADD = \
+-	../common-src/libtestutils.la \
+ 	libamdevice.la
+ 
+ @WANT_S3_DEVICE_TRUE@activate_devpay_SOURCES = activate-devpay.c

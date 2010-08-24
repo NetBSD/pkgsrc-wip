@@ -1,0 +1,52 @@
+$NetBSD: patch-ai,v 1.1.1.1 2010/08/24 03:28:51 schnoebe Exp $
+
+Remove build-directory library dependencies and link against the ones
+installed by amanda-common instead.
+
+--- changer-src/Makefile.in.orig	2010-08-11 22:21:59.000000000 +0000
++++ changer-src/Makefile.in
+@@ -363,8 +363,8 @@ am__objects_8 = chg-scsi.$(OBJEXT) scsi-
+ am_chg_scsi_OBJECTS = $(am__objects_8)
+ chg_scsi_OBJECTS = $(am_chg_scsi_OBJECTS)
+ chg_scsi_LDADD = $(LDADD)
+-chg_scsi_DEPENDENCIES = ../common-src/libamanda.la \
+-	../common-src/libamanda.la ../device-src/libamdevice.la \
++chg_scsi_DEPENDENCIES = \
++	../device-src/libamdevice.la \
+ 	../gnulib/libgnu.la
+ am__chg_scsi_chio_SOURCES_DIST = libscsi.h chg-scsi-chio.c scsi-hpux.c \
+ 	scsi-chio.c
+@@ -375,8 +375,8 @@ am__objects_11 = chg-scsi-chio.$(OBJEXT)
+ am_chg_scsi_chio_OBJECTS = $(am__objects_11)
+ chg_scsi_chio_OBJECTS = $(am_chg_scsi_chio_OBJECTS)
+ chg_scsi_chio_LDADD = $(LDADD)
+-chg_scsi_chio_DEPENDENCIES = ../common-src/libamanda.la \
+-	../common-src/libamanda.la ../device-src/libamdevice.la \
++chg_scsi_chio_DEPENDENCIES = \
++	../device-src/libamdevice.la \
+ 	../gnulib/libgnu.la
+ am__vpath_adj_setup = srcdirstrip=`echo "$(srcdir)" | sed 's|.|.|g'`;
+ am__vpath_adj = case $$p in \
+@@ -729,7 +729,7 @@ INTLLIBS = @INTLLIBS@
+ INTL_MACOSX_LIBS = @INTL_MACOSX_LIBS@
+ KRB5_SECURITY = @KRB5_SECURITY@
+ LD = @LD@
+-LDFLAGS = @LDFLAGS@
++LDFLAGS = -L@amlibdir@ -Wl,-R@amlibdir@ @LDFLAGS@
+ LEX = @LEX@
+ LEXLIB = @LEXLIB@
+ LEX_OUTPUT_ROOT = @LEX_OUTPUT_ROOT@
+@@ -1057,10 +1057,9 @@ amlibexec_DATA = $(SCRIPTS_INCLUDE)
+ # need to list libamanda twice here, first to override the system library
+ # routines, and second to pick up any references in the other libraries.
+ ###
+-LDADD = ../common-src/libamanda.la \
+-	../common-src/libamanda.la \
+-	../device-src/libamdevice.la \
+-	../gnulib/libgnu.la
++LDADD = ../device-src/libamdevice.la \
++	../gnulib/libgnu.la \
++	-lamanda
+ 
+ chg_scsi_CSRC = chg-scsi.c scsi-changer-driver.c sense.c \
+ 	$(am__append_2) $(am__append_3) $(am__append_4) \

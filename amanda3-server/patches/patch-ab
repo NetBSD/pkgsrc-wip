@@ -1,0 +1,38 @@
+$NetBSD: patch-ab,v 1.1.1.1 2010/08/24 03:28:51 schnoebe Exp $
+
+Remove SUBDIRS and DATA that we don't want in -server package.
+
+--- Makefile.in.orig	2010-08-11 22:21:58.000000000 +0000
++++ Makefile.in
+@@ -947,28 +947,15 @@ SUBDIRS = . \
+ 	gnulib \
+ 	config \
+ 	common-src \
+-	amar-src \
+-	amandad-src \
+-	xfer-src \
+ 	$(NDMP_SUBDIRS) \
+ 	$(TAPE_SUBDIRS) \
+-	$(CLIENT_SUBDIRS) \
+ 	$(SERVER_SUBDIRS) \
+ 	$(RESTORE_SUBDIRS) \
+-	$(RECOVER_SUBDIRS) \
+-	$(PLOT_SUBDIRS) \
+-	perl \
+ 	po \
+ 	man \
+-	example \
+-	packaging \
+-	installcheck
+-
+-pkgdata_DATA = \
+-	ReleaseNotes	\
+-	COPYRIGHT	\
+-	NEWS		\
+-	ChangeLog
++	example
++
++pkgdata_DATA =
+ 
+ CONFIG_STATUS = config.status
+ 

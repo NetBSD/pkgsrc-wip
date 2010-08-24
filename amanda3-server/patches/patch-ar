@@ -1,0 +1,41 @@
+$NetBSD: patch-ar,v 1.1.1.1 2010/08/24 03:28:51 schnoebe Exp $
+
+--- ndmp-src/Makefile.in.orig	2010-08-21 03:56:01.000000000 +0000
++++ ndmp-src/Makefile.in
+@@ -390,12 +390,12 @@ am_amndmjob_OBJECTS = amndmjob_main.$(OB
+ 	ndmjob_job.$(OBJEXT) ndmjob_rules.$(OBJEXT) \
+ 	ndmjob_main_util.$(OBJEXT) amndma_tape_simulator.$(OBJEXT)
+ amndmjob_OBJECTS = $(am_amndmjob_OBJECTS)
+-amndmjob_DEPENDENCIES = libndmjob.la ../common-src/libamanda.la
++amndmjob_DEPENDENCIES = libndmjob.la 
+ am_ndmjob_OBJECTS = ndmjob_main.$(OBJEXT) ndmjob_args.$(OBJEXT) \
+ 	ndmjob_job.$(OBJEXT) ndmjob_rules.$(OBJEXT) \
+ 	ndmjob_main_util.$(OBJEXT) ndma_tape_simulator.$(OBJEXT)
+ ndmjob_OBJECTS = $(am_ndmjob_OBJECTS)
+-ndmjob_DEPENDENCIES = libndmjob.la ../common-src/libamanda.la
++ndmjob_DEPENDENCIES = libndmjob.la 
+ DEFAULT_INCLUDES = -I.@am__isrc@ -I$(top_builddir)/config
+ depcomp = $(SHELL) $(top_srcdir)/config/depcomp
+ am__depfiles_maybe = depfiles
+@@ -726,7 +726,7 @@ INTLLIBS = @INTLLIBS@
+ INTL_MACOSX_LIBS = @INTL_MACOSX_LIBS@
+ KRB5_SECURITY = @KRB5_SECURITY@
+ LD = @LD@
+-LDFLAGS = @LDFLAGS@
++LDFLAGS = -L@amlibdir@ -Wl,-R@amlibdir@ @LDFLAGS@
+ LEX = @LEX@
+ LEXLIB = @LEXLIB@
+ LEX_OUTPUT_ROOT = @LEX_OUTPUT_ROOT@
+@@ -1133,10 +1133,10 @@ amndmjob_SOURCES = amndmjob_main.c \
+ 		      amndma_tape_simulator.c
+ 
+ ndmjob_LDADD = libndmjob.la \
+-		   ../common-src/libamanda.la
++		   -lamanda
+ 
+ amndmjob_LDADD = libndmjob.la \
+-		   ../common-src/libamanda.la
++		   -lamanda
+ 
+ noinst_HEADERS = \
+ 	md5.h            ndmp0_enum_strs.h  ndmp3.x            ndmprotocol.h \

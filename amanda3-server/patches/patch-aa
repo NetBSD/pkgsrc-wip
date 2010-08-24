@@ -1,0 +1,64 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/08/24 03:28:51 schnoebe Exp $
+
+--- changer-src/scsi-chio.c.orig	2010-08-11 22:21:09.000000000 +0000
++++ changer-src/scsi-chio.c
+@@ -144,24 +144,39 @@ struct mtop mt_com;
+  */
+ int isempty(int fd, int slot)
+ {
++#if defined(OCHIOGSTATUS)
++struct changer_element_status_request  cesr;
++#else
+ struct changer_element_status  ces;
++#endif
+ int                            i,rc;
+ int type=CHET_ST;
+ 
+     get_changer_info(fd);
+ 
++#if defined(OCHIOGSTATUS)
++    cesr.cesr_type = type;
++    cesr.cesr_data = malloc(changer_info.cp_nslots);
++    rc = ioctl(fd, OCHIOGSTATUS, &cesr);
++#else
+     ces.ces_type = type;
+     ces.ces_data = malloc(changer_info.cp_nslots);
+-
+     rc = ioctl(fd, CHIOGSTATUS, &ces);
++#endif
++
+     if (rc) {
+ 	dbprintf(_("changer status query failed: 0x%x %s\n"), rc,strerror(errno));
+ 	return -1;
+     }
+ 
++#if defined(OCHIOSTATUS)
++    i = cesr.cesr_data[slot] & CESTATUS_FULL;
++    free(cesr.cesr_data);
++#else
+     i = ces.ces_data[slot] & CESTATUS_FULL;
+-
+     free(ces.ces_data);
++#endif
++
+     return !i;
+ }
+ 
+@@ -189,9 +204,17 @@ int type=CHET_ST;
+     }
+ 
+     i = 0; 
++
++#if defined(OCHIOGSTATUS)
++    while ((i < changer_info.cp_nslots)&&(cesr.cesr_data[i] & CESTATUS_FULL))
++        i++;
++    free(cesr.cesr_data);
++#else
+     while ((i < changer_info.cp_nslots)&&(ces.ces_data[i] & CESTATUS_FULL))
+ 	i++;
+     free(ces.ces_data);
++#endif
++
+     return i;
+ }
+ 

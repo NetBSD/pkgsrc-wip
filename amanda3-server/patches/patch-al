@@ -1,0 +1,13 @@
+$NetBSD: patch-al,v 1.1.1.1 2010/08/24 03:28:51 schnoebe Exp $
+
+--- gnulib/Makefile.in.orig	2010-08-22 06:28:35.000000000 +0000
++++ gnulib/Makefile.in
+@@ -1287,7 +1287,7 @@ install-dvi: install-dvi-recursive
+ 
+ install-dvi-am:
+ 
+-install-exec-am: install-exec-local
++install-exec-am:  #  install-exec-local
+ 
+ install-html: install-html-recursive
+ 

@@ -1,0 +1,22 @@
+$NetBSD: patch-ac,v 1.1.1.1 2010/08/24 03:28:51 schnoebe Exp $
+
+--- example/Makefile.in.orig	2010-08-11 22:22:00.000000000 +0000
++++ example/Makefile.in
+@@ -87,7 +87,7 @@
+ # in this file at all, due to limitations of Automake.
+ 
+ VPATH = @srcdir@
+-pkgdatadir = $(datadir)/@PACKAGE@
++pkgdatadir = $(datadir)/examples/@PACKAGE@
+ pkgincludedir = $(includedir)/@PACKAGE@
+ pkglibdir = $(libdir)/@PACKAGE@
+ pkglibexecdir = $(libexecdir)/@PACKAGE@
+@@ -1156,7 +1156,7 @@ info: info-am
+ 
+ info-am:
+ 
+-install-data-am: install-client_exampleDATA install-lbltemplDATA \
++install-data-am: install-lbltemplDATA \
+ 	install-server_exampleDATA install-templateDATA
+ 	@$(NORMAL_INSTALL)
+ 	$(MAKE) $(AM_MAKEFLAGS) install-data-hook

@@ -1,0 +1,15 @@
+$NetBSD: patch-aq,v 1.1.1.1 2010/08/24 03:28:51 schnoebe Exp $
+
+Fix the bash-isms.
+
+--- configure.orig	2010-08-15 03:16:02.000000000 +0000
++++ configure
+@@ -17353,7 +17353,7 @@ fi
+ 
+ # Check whether --with-xsltproc-flags was given.
+ if test "${with_xsltproc_flags+set}" = set; then :
+-  withval=$with_xsltproc_flags;  if test "x$withval" == "xno"; then
++  withval=$with_xsltproc_flags;  if test "x$withval" = "xno"; then
+ 	XSLTPROC_FLAGS=''
+     else
+ 	if test "x$withval" != "xyes"; then
