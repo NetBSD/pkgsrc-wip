@@ -1,57 +1,59 @@
-# $NetBSD: Makefile,v 1.2 2010/07/11 18:59:38 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2010/08/24 13:12:37 jihbed Exp $
 #
 
-DISTNAME=	jython_installer-2.5.1
-PKGNAME=	jython-${VERSION}
-CATEGORIES=	lang python
-MASTER_SITES=	http://garr.dl.sourceforge.net/project/jython/jython/2.5.1/
+VERSION=	2.5.2b1
+DISTNAME=	jython_installer-${VERSION}
+PKGNAME=	${DISTNAME:S/_installer//}
+CATEGORIES=	lang
+MASTER_SITES=	http://softlayer.dl.sourceforge.net/project/jython/jython-dev/2.5.2b1/
 EXTRACT_SUFX=	.jar
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://www.jython.org/
-COMMENT=	Interpreted, interactive, object-oriented programming language
-#LICENSE=	# TODO: (see mk/license.mk)
+COMMENT=	Python for the Java Platform
+LICENSE=	python-software-foundation 
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-WRKSRC=		${WRKDIR}/jython
-VERSION=	2.5.1
-USE_LANGUAGES=	# none
+WRKSRC=		${WRKDIR}/jython_installer-2.5.2b1.jar
 
-USE_JAVA=	run
-USE_TOOLS+=	pax bash:run
-USE_LANGUAGES=	# none
+USE_TOOLS+=	pax bash
 NO_BUILD=	yes
+USE_LANGUAGES=	# none
 
-JAVA=	${PREFIX}/bin/openjdk7-java
-
-REPLACE_BASH+=	jython
+JYTHON_NAME=	${PKGNAME}
 
 ONLY_FOR_PLATFORM= NetBSD-*-* Linux-*-* FreeBSD-*-* OpenBSD-*-*
+
+PKG_JVMS_ACCEPTED= sun-jdk6 sun-jdk15
+MAKE_ENV+=	JAVA_HOME=${PKG_JAVA_HOME:Q}
+
+REPLACE_PYTHON+=	jython
 
 PY_PATCHPLIST=	yes
 PYTHON_VERSIONS_ACCEPTED=  26 25
 
-JYTHON_NAME=	${PKGNAME}
+TMPJYTHON=	${WRKDIR}/temp.jython
 TARGET_NAME=	${PREFIX}/${PYSITELIB}/${JYTHON_NAME}/Lib
 
-INSTALLATION_DIRS+=	bin ${TARGET_NAME} ${DOCDIR}  ${HTMLDIR}
+INSTALLATION_DIRS+=	bin                       \
+					share/doc/jython  \
+					lib/java/jython      \
+					lib/java/jython/Lib
 
 post-extract:
-	${MKDIR} ${WRKDIR}/jython
-	${JAVA} -jar ${WRKDIR}/jython_installer-2.5.1.jar -s -d \
-			${WRKDIR}/jython
-	${CP} ${FILESDIR}/jython ${WRKSRC}
+	${JAVA_BINPREFIX}-java  -jar ${WRKDIR}/${DISTNAME}.jar -s -d ${TMPJYTHON}
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/jython ${DESTDIR}${PREFIX}/bin/jython
-	cd ${WRKSRC}/Lib && pax -rw -pp . ${DESTDIR}${TARGET_NAME}
-	${INSTALL_DATA} ${WRKSRC}/jython.jar \
-		${DESTDIR}${PREFIX}/${PYSITELIB}/${JYTHON_NAME}
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/*.txt ${DESTDIR}${PREFIX}/${DOCDIR}
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/${HTMLDIR}
-	cd ${WRKSRC}/Doc && pax -rw -pp . ${DESTDIR}${PREFIX}/${HTMLDIR}
+	${INSTALL_DATA} ${TMPJYTHON}/jython ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${TMPJYTHON}/registry ${DESTDIR}${PREFIX}/lib/java/jython
+	${INSTALL_DATA} ${TMPJYTHON}/jython.jar ${DESTDIR}${PREFIX}/lib/java/jython
+	${INSTALL_DATA} ${TMPJYTHON}/ACKNOWLEDGMENTS \
+			${DESTDIR}${PREFIX}/share/doc/jython
+	${INSTALL_DATA} ${TMPJYTHON}/*.txt ${DESTDIR}${PREFIX}/share/doc/jython
+	cd ${TMPJYTHON}/Lib && pax -rw -pp . ${DESTDIR}${PREFIX}/lib/java/jython/Lib
+	cd ${TMPJYTHON}/Doc && pax -rw -pp . ${DESTDIR}${PREFIX}/share/doc/jython
+
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/java-vm.mk"
