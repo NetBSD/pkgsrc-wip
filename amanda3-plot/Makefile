@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/08/24 03:29:44 schnoebe Exp $
+# $NetBSD: Makefile,v 1.2 2010/08/24 03:39:50 schnoebe Exp $
 #
 
 PKGNAME=		amanda-plot-${VERS}
-PKGREVISION=		1
 SVR4_PKGNAME=		amapl
 
 COMMENT=		Visualizes the behavior of Amanda, a network backup system
