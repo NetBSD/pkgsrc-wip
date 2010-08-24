@@ -1,0 +1,16 @@
+$NetBSD: patch-af,v 1.1.1.1 2010/08/24 02:43:11 schnoebe Exp $
+
+Add support for dumping from filesystem snapshots
+
+--- config/config.h.in.orig	2010-08-11 22:21:56.000000000 +0000
++++ config/config.h.in
+@@ -462,6 +462,9 @@
+ /* Define this if dump accepts -h for honoring nodump. */
+ #undef HAVE_HONOR_NODUMP
+ 
++/* Define this if dump accepts -X for filesystem snapshot. */
++#undef HAVE_DUMP_SNAPSHOT
++
+ /* Define if you have the iconv() function. */
+ #undef HAVE_ICONV
+ 

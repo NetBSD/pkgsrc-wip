@@ -1,0 +1,61 @@
+$NetBSD: patch-am,v 1.1.1.1 2010/08/24 02:43:11 schnoebe Exp $
+
+use the version of libamanda installed by amanda3-common
+
+--- application-src/Makefile.in.orig	2010-08-11 22:21:59.000000000 +0000
++++ application-src/Makefile.in
+@@ -341,21 +341,21 @@ PROGRAMS = $(amlibexec_PROGRAMS) $(appli
+ amgtar_SOURCES = amgtar.c
+ amgtar_OBJECTS = amgtar.$(OBJEXT)
+ amgtar_LDADD = $(LDADD)
+-amgtar_DEPENDENCIES = ../common-src/libamanda.la \
+-	../client-src/libamclient.la ../amandad-src/libamandad.la \
+-	../common-src/libamanda.la ../gnulib/libgnu.la
++amgtar_DEPENDENCIES = \
++	../client-src/libamclient.la \
++	../gnulib/libgnu.la
+ amstar_SOURCES = amstar.c
+ amstar_OBJECTS = amstar.$(OBJEXT)
+ amstar_LDADD = $(LDADD)
+-amstar_DEPENDENCIES = ../common-src/libamanda.la \
+-	../client-src/libamclient.la ../amandad-src/libamandad.la \
+-	../common-src/libamanda.la ../gnulib/libgnu.la
++amstar_DEPENDENCIES = \
++	../client-src/libamclient.la \
++	../gnulib/libgnu.la
+ teecount_SOURCES = teecount.c
+ teecount_OBJECTS = teecount.$(OBJEXT)
+ teecount_LDADD = $(LDADD)
+-teecount_DEPENDENCIES = ../common-src/libamanda.la \
+-	../client-src/libamclient.la ../amandad-src/libamandad.la \
+-	../common-src/libamanda.la ../gnulib/libgnu.la
++teecount_DEPENDENCIES = \
++	../client-src/libamclient.la \
++	../gnulib/libgnu.la
+ am__vpath_adj_setup = srcdirstrip=`echo "$(srcdir)" | sed 's|.|.|g'`;
+ am__vpath_adj = case $$p in \
+     $(srcdir)/*) f=`echo "$$p" | sed "s|^$$srcdirstrip/||"`;; \
+@@ -705,7 +705,7 @@ INTLLIBS = @INTLLIBS@
+ INTL_MACOSX_LIBS = @INTL_MACOSX_LIBS@
+ KRB5_SECURITY = @KRB5_SECURITY@
+ LD = @LD@
+-LDFLAGS = @LDFLAGS@
++LDFLAGS = -L@amlibdir@ -Wl,-R@amlibdir@ @LDFLAGS@
+ LEX = @LEX@
+ LEXLIB = @LEXLIB@
+ LEX_OUTPUT_ROOT = @LEX_OUTPUT_ROOT@
+@@ -1024,11 +1024,9 @@ SCRIPTS_SHELL = $(amlibexec_SCRIPTS)
+ applicationexecdir = $(APPLICATION_DIR)
+ applicationdir = $(APPLICATION_DIR)
+ applicationexec_SCRIPTS = $(SCRIPTS_PERL)
+-LDADD = ../common-src/libamanda.la \
+-	../client-src/libamclient.la \
+-	../amandad-src/libamandad.la \
+-	../common-src/libamanda.la \
+-	../gnulib/libgnu.la
++LDADD = ../client-src/libamclient.la \
++	../gnulib/libgnu.la \
++	-lamandad -lamanda
+ 
+ INSTALLPERMS_exec = dest=$(amlibexecdir) chown=amanda \
+ 	$(amlibexec_PROGRAMS) dest=$(applicationdir) chown=amanda \

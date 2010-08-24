@@ -1,0 +1,49 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/08/24 02:43:11 schnoebe Exp $
+
+Add @amlibdir@ to LDFLAGS
+Remove SUBDIRS and DATA that we don't want in -client package.
+
+--- Makefile.in.orig	2010-08-11 22:21:58.000000000 +0000
++++ Makefile.in
+@@ -643,7 +643,7 @@ INTLLIBS = @INTLLIBS@
+ INTL_MACOSX_LIBS = @INTL_MACOSX_LIBS@
+ KRB5_SECURITY = @KRB5_SECURITY@
+ LD = @LD@
+-LDFLAGS = @LDFLAGS@
++LDFLAGS = -L @amlibdir@ -Wl,-R @amlibdir@ @LDFLAGS@
+ LEX = @LEX@
+ LEXLIB = @LEXLIB@
+ LEX_OUTPUT_ROOT = @LEX_OUTPUT_ROOT@
+@@ -946,29 +946,12 @@ ACLOCAL_AMFLAGS = --force -I config -I .
+ SUBDIRS = . \
+ 	gnulib \
+ 	config \
+-	common-src \
+-	amar-src \
+ 	amandad-src \
+-	xfer-src \
+-	$(NDMP_SUBDIRS) \
+-	$(TAPE_SUBDIRS) \
+ 	$(CLIENT_SUBDIRS) \
+-	$(SERVER_SUBDIRS) \
+-	$(RESTORE_SUBDIRS) \
+ 	$(RECOVER_SUBDIRS) \
+-	$(PLOT_SUBDIRS) \
+-	perl \
+-	po \
+-	man \
+-	example \
+-	packaging \
+-	installcheck
+-
+-pkgdata_DATA = \
+-	ReleaseNotes	\
+-	COPYRIGHT	\
+-	NEWS		\
+-	ChangeLog
++	man 
++
++pkgdata_DATA = 
+ 
+ CONFIG_STATUS = config.status
+ 

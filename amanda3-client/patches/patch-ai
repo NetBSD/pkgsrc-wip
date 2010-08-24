@@ -1,0 +1,106 @@
+$NetBSD: patch-ai,v 1.1.1.1 2010/08/24 02:43:11 schnoebe Exp $
+
+Add dump-use-snapshot support;
+remove bashism's on test
+
+--- configure.orig	2010-08-11 22:21:56.000000000 +0000
++++ configure
+@@ -1474,6 +1474,7 @@ with_ssh_security
+ with_ssh_options
+ with_krb5_security
+ with_dump_honor_nodump
++with_dump_use_snapshot
+ with_gnutar
+ with_star
+ with_smbclient
+@@ -2272,6 +2273,8 @@ Optional Packages:
+                           /usr/cygnus /usr /opt/kerberos]
+   --with-dump-honor-nodump
+                           if dump supports -h, use it for level0s too
++  --with-dump-use-snapshot
++			  if dump supports -X, use it to dump from snapshots
+   --with-gnutar=PROG      use PROG as GNU 'tar'
+   --with-star=PROG        use PROG as 'star'
+   --with-smbclient=PROG   use PROG as 'smbclient'
+@@ -17353,7 +17356,7 @@ fi
+ 
+ # Check whether --with-xsltproc-flags was given.
+ if test "${with_xsltproc_flags+set}" = set; then :
+-  withval=$with_xsltproc_flags;  if test "x$withval" == "xno"; then
++  withval=$with_xsltproc_flags;  if test "x$withval" = "xno"; then
+ 	XSLTPROC_FLAGS=''
+     else
+ 	if test "x$withval" != "xyes"; then
+@@ -24236,7 +24239,71 @@ $as_echo "#define HAVE_HONOR_NODUMP 1" >
+ 
+ fi
+ 
+-    fi
++# Check whether --with-dump-use-snapshot or --without-dump-use-snapshot was given.
++if test "${with_dump_use_snapshot+set}" = set; then
++  withval="$with_dump_use_snapshot"
++   if test -x $DUMP; then
++        echo "$as_me:$LINENO: checking whether $DUMP supports -X (use filesystem snapshot)" >&5
++echo $ECHO_N "checking whether $DUMP supports -X (use filesystem snapshot)... $ECHO_C" >&6
++if test "${amanda_cv_use_snapshot+set}" = set; then
++  echo $ECHO_N "(cached) $ECHO_C" >&6
++else
++
++	    case "$DUMP" in
++	    *dump)
++		{ ac_try='$DUMP 9Xf /dev/null /dev/null/invalid/fs 2>&1
++		    | $GREP -v Dumping
++		    | $GREP -v Date
++		    | $GREP -v Label >conftest.d-x 2>&1'
++  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
++  (eval $ac_try) 2>&5
++  ac_status=$?
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); }; }
++		cat conftest.d-x >&5
++		{ ac_try='$DUMP 9f /dev/null /dev/null/invalid/fs 2>&1
++		    | $GREP -v Dumping
++		    | $GREP -v Date
++		    | $GREP -v Label >conftest.d 2>&1'
++  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
++  (eval $ac_try) 2>&5
++  ac_status=$?
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); }; }
++		cat conftest.d >&5
++		if { ac_try='diff conftest.d-x conftest.d 1>&2'
++  { (eval echo "$as_me:$LINENO: \"$ac_try\"") >&5
++  (eval $ac_try) 2>&5
++  ac_status=$?
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); }; }; then
++		    amanda_cv_use_snapshot=yes
++		else
++		    amanda_cv_use_snapshot=no
++		fi
++		rm -f conftest.d conftest.d-x
++	      ;;
++	    *) amanda_cv_use_snapshot=no
++	      ;;
++	    esac
++
++fi
++echo "$as_me:$LINENO: result: $amanda_cv_use_snapshot" >&5
++echo "${ECHO_T}$amanda_cv_use_snapshot" >&6
++      else
++	{ echo "$as_me:$LINENO: WARNING: *** $DUMP is not executable, cannot run -X test" >&5
++echo "$as_me: WARNING: *** $DUMP is not executable, cannot run -X test" >&2;}
++	amanda_cv_use_snapshot=no
++      fi
++      if test "$amanda_cv_use_snapshot" = yes; then
++cat >>confdefs.h <<\_ACEOF
++#define HAVE_DUMP_SNAPSHOT 1
++_ACEOF
++      fi
++
++fi
++
++fi
+
+
+

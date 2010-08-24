@@ -1,0 +1,16 @@
+$NetBSD: patch-ah,v 1.1.1.1 2010/08/24 02:43:11 schnoebe Exp $
+
+More support for -X dumping from snapshot support.
+
+--- client-src/sendsize.c.orig	2010-08-11 22:21:10.000000000 +0000
++++ client-src/sendsize.c
+@@ -1468,6 +1468,9 @@ getsize_dump(
+ 	dumpkeys = vstralloc(level_str,
+ 			     PARAM_DUMP_ESTIMATE,
+ 			     PARAM_HONOR_NODUMP,
++#  ifdef HAVE_DUMP_SNAPSHOT				/* { */
++			     "X",
++#  endif						/* } */
+ 			     "s", "f", NULL);
+ 
+ #  ifdef HAVE_DUMP_ESTIMATE

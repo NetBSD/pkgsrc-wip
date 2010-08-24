@@ -1,0 +1,122 @@
+$NetBSD: patch-ac,v 1.1.1.1 2010/08/24 02:43:11 schnoebe Exp $
+
+Remove build-directory library dependencies and link against the ones
+installed by amanda-common instead.
+
+Make sure to link with the libraries installed via the amanda-common
+package.
+
+--- client-src/Makefile.in.orig	2010-08-11 22:21:59.000000000 +0000
++++ client-src/Makefile.in
+@@ -364,7 +364,7 @@ am__base_list = \
+ am__installdirs = "$(DESTDIR)$(amlibdir)" "$(DESTDIR)$(amlibexecdir)" \
+ 	"$(DESTDIR)$(amlibexecdir)"
+ LTLIBRARIES = $(amlib_LTLIBRARIES)
+-libamclient_la_DEPENDENCIES = ../common-src/libamanda.la
++libamclient_la_DEPENDENCIES = 
+ am__libamclient_la_SOURCES_DIST = amandates.c getfsent.c unctime.c \
+ 	client_util.c findpass.c
+ @WANT_SAMBA_TRUE@am__objects_1 = findpass.lo
+@@ -379,57 +379,48 @@ PROGRAMS = $(amlibexec_PROGRAMS)
+ calcsize_SOURCES = calcsize.c
+ calcsize_OBJECTS = calcsize.$(OBJEXT)
+ calcsize_LDADD = $(LDADD)
+-calcsize_DEPENDENCIES = ../common-src/libamanda.la libamclient.la \
+-	../amandad-src/libamandad.la ../common-src/libamanda.la \
++calcsize_DEPENDENCIES = libamclient.la \
+ 	../gnulib/libgnu.la
+ am_getfsent_OBJECTS = getfsent.test.$(OBJEXT)
+ getfsent_OBJECTS = $(am_getfsent_OBJECTS)
+ getfsent_LDADD = $(LDADD)
+-getfsent_DEPENDENCIES = ../common-src/libamanda.la libamclient.la \
+-	../amandad-src/libamandad.la ../common-src/libamanda.la \
++getfsent_DEPENDENCIES = libamclient.la \
+ 	../gnulib/libgnu.la
+ killpgrp_SOURCES = killpgrp.c
+ killpgrp_OBJECTS = killpgrp.$(OBJEXT)
+ killpgrp_LDADD = $(LDADD)
+-killpgrp_DEPENDENCIES = ../common-src/libamanda.la libamclient.la \
+-	../amandad-src/libamandad.la ../common-src/libamanda.la \
++killpgrp_DEPENDENCIES = libamclient.la \
+ 	../gnulib/libgnu.la
+ noop_SOURCES = noop.c
+ noop_OBJECTS = noop.$(OBJEXT)
+ noop_LDADD = $(LDADD)
+-noop_DEPENDENCIES = ../common-src/libamanda.la libamclient.la \
+-	../amandad-src/libamandad.la ../common-src/libamanda.la \
++noop_DEPENDENCIES = libamclient.la \
+ 	../gnulib/libgnu.la
+ rundump_SOURCES = rundump.c
+ rundump_OBJECTS = rundump.$(OBJEXT)
+ rundump_LDADD = $(LDADD)
+-rundump_DEPENDENCIES = ../common-src/libamanda.la libamclient.la \
+-	../amandad-src/libamandad.la ../common-src/libamanda.la \
++rundump_DEPENDENCIES = libamclient.la \
+ 	../gnulib/libgnu.la
+ runtar_SOURCES = runtar.c
+ runtar_OBJECTS = runtar.$(OBJEXT)
+ runtar_LDADD = $(LDADD)
+-runtar_DEPENDENCIES = ../common-src/libamanda.la libamclient.la \
+-	../amandad-src/libamandad.la ../common-src/libamanda.la \
++runtar_DEPENDENCIES = libamclient.la \
+ 	../gnulib/libgnu.la
+ selfcheck_SOURCES = selfcheck.c
+ selfcheck_OBJECTS = selfcheck.$(OBJEXT)
+ selfcheck_LDADD = $(LDADD)
+-selfcheck_DEPENDENCIES = ../common-src/libamanda.la libamclient.la \
+-	../amandad-src/libamandad.la ../common-src/libamanda.la \
++selfcheck_DEPENDENCIES = libamclient.la \
+ 	../gnulib/libgnu.la
+ am_sendbackup_OBJECTS = sendbackup.$(OBJEXT) sendbackup-dump.$(OBJEXT) \
+ 	sendbackup-gnutar.$(OBJEXT)
+ sendbackup_OBJECTS = $(am_sendbackup_OBJECTS)
+ sendbackup_LDADD = $(LDADD)
+-sendbackup_DEPENDENCIES = ../common-src/libamanda.la libamclient.la \
+-	../amandad-src/libamandad.la ../common-src/libamanda.la \
++sendbackup_DEPENDENCIES = libamclient.la \
+ 	../gnulib/libgnu.la
+ sendsize_SOURCES = sendsize.c
+ sendsize_OBJECTS = sendsize.$(OBJEXT)
+ sendsize_LDADD = $(LDADD)
+-sendsize_DEPENDENCIES = ../common-src/libamanda.la libamclient.la \
+-	../amandad-src/libamandad.la ../common-src/libamanda.la \
++sendsize_DEPENDENCIES = libamclient.la \
+ 	../gnulib/libgnu.la
+ SCRIPTS = $(amlibexec_SCRIPTS)
+ DEFAULT_INCLUDES = -I.@am__isrc@ -I$(top_builddir)/config
+@@ -764,7 +755,7 @@ INTLLIBS = @INTLLIBS@
+ INTL_MACOSX_LIBS = @INTL_MACOSX_LIBS@
+ KRB5_SECURITY = @KRB5_SECURITY@
+ LD = @LD@
+-LDFLAGS = @LDFLAGS@
++LDFLAGS = -L@amlibdir@ -Wl,-R@amlibdir@ @LDFLAGS@
+ LEX = @LEX@
+ LEXLIB = @LEXLIB@
+ LEX_OUTPUT_ROOT = @LEX_OUTPUT_ROOT@
+@@ -1067,8 +1058,8 @@ SCRIPTS_PERL = $(sbin_SCRIPTS)
+ SCRIPTS_SHELL = $(amlibexec_SCRIPTS)
+ libamclient_la_SOURCES = amandates.c getfsent.c unctime.c \
+ 	client_util.c $(am__append_2)
+-libamclient_la_LDFLAGS = -release $(VERSION)
+-libamclient_la_LIBADD = ../common-src/libamanda.la
++libamclient_la_LDFLAGS = -release $(VERSION) 
++libamclient_la_LIBADD = -lamanda
+ 
+ ###
+ # Because libamanda includes routines (e.g. regex) provided by some system
+@@ -1076,11 +1067,10 @@ libamclient_la_LIBADD = ../common-src/li
+ # need to list libamanda twice here, first to override the system library
+ # routines, and second to pick up any references in the other libraries.
+ ###
+-LDADD = ../common-src/libamanda.la \
+-	libamclient.la \
+-	../amandad-src/libamandad.la \
+-	../common-src/libamanda.la \
+-	../gnulib/libgnu.la
++LDADD = libamclient.la \
++	../gnulib/libgnu.la \
++	-lamanda \
++	-lamandad
+ 
+ 
+ # these are used for testing only:

@@ -1,0 +1,53 @@
+$NetBSD: patch-aj,v 1.1.1.1 2010/08/24 02:43:11 schnoebe Exp $
+
+Remove build-directory library dependencies and link against the ones
+installed by amanda-common instead.
+
+Also, install amandad executable only, since libamandad is installed by
+amanda-common.
+
+Add the @amlibdir@ to the loader search path so everything might be
+found.
+
+--- amandad-src/Makefile.in.orig	2010-08-11 22:21:58.000000000 +0000
++++ amandad-src/Makefile.in
+@@ -293,8 +293,7 @@ PROGRAMS = $(amlibexec_PROGRAMS)
+ amandad_SOURCES = amandad.c
+ amandad_OBJECTS = amandad.$(OBJEXT)
+ amandad_LDADD = $(LDADD)
+-amandad_DEPENDENCIES = ../common-src/libamanda.la libamandad.la \
+-	../common-src/libamanda.la ../gnulib/libgnu.la
++amandad_DEPENDENCIES = ../gnulib/libgnu.la
+ DEFAULT_INCLUDES = -I.@am__isrc@ -I$(top_builddir)/config
+ depcomp = $(SHELL) $(top_srcdir)/config/depcomp
+ am__depfiles_maybe = depfiles
+@@ -623,7 +622,7 @@ INTLLIBS = @INTLLIBS@
+ INTL_MACOSX_LIBS = @INTL_MACOSX_LIBS@
+ KRB5_SECURITY = @KRB5_SECURITY@
+ LD = @LD@
+-LDFLAGS = @LDFLAGS@
++LDFLAGS = -L@amlibdir@ -Wl,-R@amlibdir@ @LDFLAGS@
+ LEX = @LEX@
+ LEXLIB = @LEXLIB@
+ LEX_OUTPUT_ROOT = @LEX_OUTPUT_ROOT@
+@@ -914,7 +913,7 @@ AM_CFLAGS = $(AMANDA_WARNING_CFLAGS)
+ AM_LDFLAGS = $(AMANDA_STATIC_LDFLAGS)
+ LINT = $(AMLINT)
+ LINTFLAGS = $(AMLINTFLAGS)
+-amlib_LTLIBRARIES = libamandad.la
++# amlib_LTLIBRARIES = libamandad.la
+ libamandad_la_SOURCES = amandad_util.c
+ libamandad_la_LDFLAGS = -release $(VERSION)
+ libamandad_la_LIBADD = ../common-src/libamanda.la
+@@ -926,10 +925,7 @@ noinst_HEADERS = amandad.h
+ # need to list libamanda twice here, first to override the system library
+ # routines, and second to pick up any references in the other libraries.
+ ###
+-LDADD = ../common-src/libamanda.la \
+-	libamandad.la \
+-	../common-src/libamanda.la \
+-	../gnulib/libgnu.la
++LDADD = ../gnulib/libgnu.la -lamanda -lamandad
+ 
+ INSTALLPERMS_exec = \
+ 	dest=$(amlibexecdir) chown=amanda \

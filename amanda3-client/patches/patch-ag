@@ -1,0 +1,16 @@
+$NetBSD: patch-ag,v 1.1.1.1 2010/08/24 02:43:11 schnoebe Exp $
+
+Adding support for the -X flag for dumping from a snapshot
+
+--- client-src/sendbackup-dump.c.orig	2010-08-11 22:21:10.000000000 +0000
++++ client-src/sendbackup-dump.c
+@@ -391,6 +391,9 @@ start_backup(
+ 			     FREEBSD_EXTRA_KEYS,
+ 			     "s",
+ 			     PARAM_HONOR_NODUMP,
++#ifdef HAVE_DUMP_SNAPSHOT
++			     "X",
++#endif
+ 			     "f",
+ 			     NULL);
+ 
