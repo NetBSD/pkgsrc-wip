@@ -1,0 +1,22 @@
+$NetBSD: patch-ad,v 1.1.1.1 2010/08/24 02:40:36 schnoebe Exp $
+
+Use the correct name for the statvfs struct.
+
+--- gnulib/fsusage.c.orig	2010-08-11 22:21:13.000000000 +0000
++++ gnulib/fsusage.c
+@@ -97,7 +97,15 @@ get_fs_usage (char const *file, char con
+   (void) disk;  /* avoid argument-unused warning */
+ #if defined STAT_STATVFS		/* POSIX */
+ 
++#if defined(__sun) && defined(__SVR4)
++# if defined(_LARGEFILE64_SOURCE)
++  statvfs64_t fsd;
++# else
++  statvfs_t fsd;
++# endif /* _LARGEFILE64_SOURCE) */
++#else
+   struct statvfs fsd;
++#endif
+ 
+   if (statvfs (file, &fsd) < 0)
+     return -1;

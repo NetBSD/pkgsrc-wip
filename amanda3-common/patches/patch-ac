@@ -1,0 +1,20 @@
+$NetBSD: patch-ac,v 1.1.1.1 2010/08/24 02:40:36 schnoebe Exp $
+
+Don't install any manpages except COMMON_MAN*_PAGES.
+
+--- man/Makefile.in.orig	2010-08-11 22:22:01.000000000 +0000
++++ man/Makefile.in
+@@ -838,12 +838,7 @@ RECOVER_MAN_PAGES = amrecover.8
+ RESTORE_MAN_PAGES = amrestore.8 \
+ 		     amfetchdump.8
+ 
+-ALL_MAN_PAGES = $(AMPLOT_MAN_PAGES) \
+-	   $(CLIENT_MAN_PAGES) \
+-	   $(COMMON_MAN_PAGES) \
+-	   $(SERVER_MAN_PAGES) \
+-	   $(RECOVER_MAN_PAGES) \
+-	   $(RESTORE_MAN_PAGES)
++ALL_MAN_PAGES = $(COMMON_MAN_PAGES) 
+ 
+ WANTED_MAN_PAGES = $(COMMON_MAN_PAGES) $(am__append_1) $(am__append_2) \
+ 	$(am__append_3) $(am__append_4) $(am__append_5)

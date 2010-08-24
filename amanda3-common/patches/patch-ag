@@ -1,0 +1,17 @@
+$NetBSD: patch-ag,v 1.1.1.1 2010/08/24 02:40:36 schnoebe Exp $
+
+Don't install amandad executable, just libamandad.  The executable
+belongs in -client, but the library is used by binaries in both
+-client and -server.
+
+--- amandad-src/Makefile.in.orig	2010-08-11 22:21:58.000000000 +0000
++++ amandad-src/Makefile.in
+@@ -115,7 +115,7 @@ DIST_COMMON = $(noinst_HEADERS) $(srcdir
+ 	$(top_srcdir)/config/automake/precompile.am \
+ 	$(top_srcdir)/config/automake/vars.am
+ @WANT_INSTALLPERMS_FALSE@am__append_1 = $(installperms_sh)
+-amlibexec_PROGRAMS = amandad$(EXEEXT)
++# amlibexec_PROGRAMS = amandad$(EXEEXT)
+ subdir = amandad-src
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+ am__aclocal_m4_deps =  \

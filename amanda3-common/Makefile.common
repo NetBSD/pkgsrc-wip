@@ -1,0 +1,61 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2010/08/24 02:40:35 schnoebe Exp $
+
+# used by wip/amanda3-common/Makefile
+# used by wip/amanda3-client/Makefile
+# used by wip/amanda3-server/Makefile
+# used by wip/amanda3-plot/Makefile
+
+VERS=			3.1.2
+DISTNAME?=		amanda-${VERS}
+CATEGORIES=		sysutils
+MASTER_SITES?=		${MASTER_SITE_SOURCEFORGE:=amanda/}
+
+MAINTAINER=		schnoebe@NetBSD.org
+HOMEPAGE=		http://www.amanda.org/
+LICENSE=		modified-bsd AND gnu-gpl-v2 # basically equivalent
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS"
+AMANDA_GROUP?=		sysadmin
+.else
+# NetBSD, Linux and Darwin
+AMANDA_GROUP?=		operator
+.endif
+
+AMANDA_USER?=		backup
+AMANDA_TMP?=		/var/tmp/amanda
+AMANDA_VAR?=		${VARBASE}/amanda
+
+PKG_GROUPS_VARS+=	AMANDA_GROUP
+PKG_USERS_VARS+=	AMANDA_USER
+BUILD_DEFS+=		AMANDA_TMP AMANDA_VAR VARBASE
+
+USE_LIBTOOL=		yes
+
+USE_TOOLS+=		gzip:run gtar:run perl gmake
+CONFIGURE_ENV+=		ac_cv_path_GZIP=${TOOLS_GZIP_CMD:Q}
+CONFIGURE_ENV+=		GNUTAR=${TOOLS_GTAR:Q}
+
+GNU_CONFIGURE=		yes
+CONFIGURE_ARGS+=	--with-user=${AMANDA_USER:Q}
+CONFIGURE_ARGS+=	--with-group=${AMANDA_GROUP:Q}
+CONFIGURE_ARGS+=	--with-owner=${REAL_ROOT_USER:Q}
+CONFIGURE_ARGS+=	--with-amandahosts
+CONFIGURE_ARGS+=	--with-tmpdir=${AMANDA_TMP:Q}
+CONFIGURE_ARGS+=	--localstatedir=${AMANDA_VAR:Q}
+CONFIGURE_ARGS+=	--with-gnutar-listdir=${AMANDA_VAR}/gnutar-lists
+CONFIGURE_ARGS+=	--with-dump-honor-nodump
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--with-amperldir=${PERL5_INSTALLVENDORLIB:Q}
+CONFIGURE_ARGS+=	--disable-installperms
+CONFIGURE_ARGS+=	--without-gnuplot
+
+# BUILD_DEFS+=		AMANDA_SSH AMANDA_FQDN
+
+CHECK_PORTABILITY_SKIP+=	packaging/deb/amanda-backup-server.postinst
+
+.include "../../wip/amanda3-common/options.mk"
+
+.include "../../lang/perl5/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"

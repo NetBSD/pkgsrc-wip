@@ -1,0 +1,24 @@
+$NetBSD: patch-ak,v 1.1.1.1 2010/08/24 02:40:36 schnoebe Exp $
+
+Don't try to build the sbin scripts for -common
+
+--- common-src/Makefile.in.orig	2010-08-15 04:29:28.000000000 +0000
++++ common-src/Makefile.in
+@@ -458,7 +458,7 @@ quoting_test_DEPENDENCIES = libamanda.la
+ am_semaphore_test_OBJECTS = semaphore-test.$(OBJEXT)
+ semaphore_test_OBJECTS = $(am_semaphore_test_OBJECTS)
+ semaphore_test_DEPENDENCIES = libamanda.la libtestutils.la
+-SCRIPTS = $(amlibexec_SCRIPTS) $(sbin_SCRIPTS)
++SCRIPTS = $(amlibexec_SCRIPTS) # $(sbin_SCRIPTS)
+ DEFAULT_INCLUDES = -I.@am__isrc@ -I$(top_builddir)/config
+ depcomp = $(SHELL) $(top_srcdir)/config/depcomp
+ am__depfiles_maybe = depfiles
+@@ -1245,7 +1245,7 @@ SCRIPTS_PERL = $(sbin_SCRIPTS_PERL) $(am
+ SCRIPTS_SHELL = $(sbin_SCRIPTS_SHELL) $(amlibexec_SCRIPTS_SHELL)
+ amlibexec_DATA = $(SCRIPTS_INCLUDE)
+ amlibexec_SCRIPTS = $(amlibexec_SCRIPTS_PERL) $(amlibexec_SCRIPTS_SHELL)
+-sbin_SCRIPTS = $(sbin_SCRIPTS_PERL) $(sbin_SCRIPTS_SHELL)
++sbin_SCRIPTS = 
+ 
+ # installation
+ INSTALLPERMS_data = dest=$(sbindir) chown=amanda $(sbin_SCRIPTS) \

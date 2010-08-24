@@ -1,0 +1,36 @@
+$NetBSD: patch-ab,v 1.1.1.1 2010/08/24 02:40:36 schnoebe Exp $
+
+Remove SUBDIRS that don't belong in -common package.
+
+--- Makefile.in.orig	2010-08-11 22:21:58.000000000 +0000
++++ Makefile.in
+@@ -85,7 +85,7 @@
+ # in this file at all, due to limitations of Automake.
+ 
+ VPATH = @srcdir@
+-pkgdatadir = $(datadir)/@PACKAGE@
++pkgdatadir = $(datadir)/doc/@PACKAGE@
+ pkgincludedir = $(includedir)/@PACKAGE@
+ pkglibdir = $(libdir)/@PACKAGE@
+ pkglibexecdir = $(libexecdir)/@PACKAGE@
+@@ -950,19 +950,8 @@ SUBDIRS = . \
+ 	amar-src \
+ 	amandad-src \
+ 	xfer-src \
+-	$(NDMP_SUBDIRS) \
+-	$(TAPE_SUBDIRS) \
+-	$(CLIENT_SUBDIRS) \
+-	$(SERVER_SUBDIRS) \
+-	$(RESTORE_SUBDIRS) \
+-	$(RECOVER_SUBDIRS) \
+-	$(PLOT_SUBDIRS) \
+ 	perl \
+-	po \
+-	man \
+-	example \
+-	packaging \
+-	installcheck
++	man
+ 
+ pkgdata_DATA = \
+ 	ReleaseNotes	\
