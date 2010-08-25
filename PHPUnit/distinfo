@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/08/25 08:05:51 obache Exp $
+
+SHA1 (pear/PHPUnit-3.4.15.tgz) = 8f829d38e378b92606712a7b735b18666f7e9a4e
+RMD160 (pear/PHPUnit-3.4.15.tgz) = fd7b125094dddd3974e167e8d2f18b16f584e9d1
+Size (pear/PHPUnit-3.4.15.tgz) = 255036 bytes
