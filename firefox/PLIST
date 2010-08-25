@@ -1,24 +1,25 @@
-@comment $NetBSD: PLIST,v 1.22 2010/08/03 20:58:00 tnn2 Exp $
+@comment $NetBSD: PLIST,v 1.23 2010/08/25 14:51:23 tnn2 Exp $
 bin/firefox
 lib/firefox/README.txt
 lib/firefox/application.ini
 lib/firefox/blocklist.xml
+lib/firefox/chrome.manifest
 lib/firefox/chrome/browser.jar
-lib/firefox/chrome/browser.manifest
 lib/firefox/chrome/en-US.jar
-lib/firefox/chrome/en-US.manifest
 lib/firefox/chrome/icons/default/default16.png
 lib/firefox/chrome/icons/default/default32.png
 lib/firefox/chrome/icons/default/default48.png
+lib/firefox/chrome/localized.manifest
+lib/firefox/chrome/nonlocalized.manifest
 lib/firefox/chrome/toolkit.jar
-lib/firefox/chrome/toolkit.manifest
 lib/firefox/components/FeedConverter.js
 lib/firefox/components/FeedWriter.js
 lib/firefox/components/PlacesProtocolHandler.js
 lib/firefox/components/WebContentConverter.js
-lib/firefox/components/browser.manifest
 lib/firefox/components/browser.xpt
+lib/firefox/components/components.manifest
 lib/firefox/components/fuelApplication.js
+lib/firefox/components/interfaces.manifest
 lib/firefox/components/libbrowsercomps.so
 ${PLIST.gnome}lib/firefox/components/libnkgnomevfs.so
 lib/firefox/components/nsBrowserContentHandler.js
@@ -51,6 +52,9 @@ lib/firefox/modules/PlacesUIUtils.jsm
 lib/firefox/modules/distribution.js
 lib/firefox/modules/openLocationLastURL.jsm
 lib/firefox/modules/stylePanel.jsm
+lib/firefox/modules/tabview/AllTabs.jsm
+lib/firefox/modules/tabview/groups.jsm
+lib/firefox/modules/tabview/utils.jsm
 lib/firefox/removed-files
 lib/firefox/run-mozilla.sh
 lib/firefox/searchplugins/amazondotcom.xml

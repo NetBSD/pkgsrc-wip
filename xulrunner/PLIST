@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2010/08/19 08:25:17 tnn2 Exp $
+@comment $NetBSD: PLIST,v 1.25 2010/08/25 14:51:19 tnn2 Exp $
 bin/xulrunner
 ${PLIST.jit}include/xulrunner/Allocator.h
 ${PLIST.jit}include/xulrunner/Assembler.h
@@ -69,6 +69,7 @@ include/xulrunner/gfxCachedTempSurface.h
 include/xulrunner/gfxColor.h
 include/xulrunner/gfxContext.h
 include/xulrunner/gfxCore.h
+include/xulrunner/gfxDrawable.h
 include/xulrunner/gfxFT2FontBase.h
 include/xulrunner/gfxFont.h
 include/xulrunner/gfxFontConstants.h
@@ -330,7 +331,7 @@ include/xulrunner/mozilla/unused.h
 include/xulrunner/mozpngconf.h
 ${PLIST.jit}include/xulrunner/nanojit.h
 include/xulrunner/necko-config.h
-include/xulrunner/nestegg/_stdint.h
+include/xulrunner/nestegg/nestegg-stdint.h
 include/xulrunner/nestegg/nestegg.h
 include/xulrunner/netCore.h
 ${PLIST.jit}include/xulrunner/njconfig.h
@@ -904,7 +905,6 @@ include/xulrunner/nsIDOMMouseMotionListener.h
 include/xulrunner/nsIDOMMouseScrollEvent.h
 include/xulrunner/nsIDOMMozTouchEvent.h
 include/xulrunner/nsIDOMMutationEvent.h
-include/xulrunner/nsIDOMNSCSS2Properties.h
 include/xulrunner/nsIDOMNSDocument.h
 include/xulrunner/nsIDOMNSDocumentStyle.h
 include/xulrunner/nsIDOMNSEditableElement.h
@@ -912,15 +912,11 @@ include/xulrunner/nsIDOMNSElement.h
 include/xulrunner/nsIDOMNSEvent.h
 include/xulrunner/nsIDOMNSEventTarget.h
 include/xulrunner/nsIDOMNSFeatureFactory.h
-include/xulrunner/nsIDOMNSHTMLAnchorElement.h
-include/xulrunner/nsIDOMNSHTMLAnchorElement2.h
 include/xulrunner/nsIDOMNSHTMLDocument.h
 include/xulrunner/nsIDOMNSHTMLElement.h
 include/xulrunner/nsIDOMNSHTMLFormElement.h
 include/xulrunner/nsIDOMNSHTMLFrameElement.h
 include/xulrunner/nsIDOMNSHTMLHRElement.h
-include/xulrunner/nsIDOMNSHTMLImageElement.h
-include/xulrunner/nsIDOMNSHTMLInputElement.h
 include/xulrunner/nsIDOMNSHTMLOptionCollectn.h
 include/xulrunner/nsIDOMNSHTMLTextAreaElement.h
 include/xulrunner/nsIDOMNSMouseEvent.h
@@ -977,7 +973,6 @@ include/xulrunner/nsIDOMSVGAnimatedPoints.h
 include/xulrunner/nsIDOMSVGAnimatedRect.h
 include/xulrunner/nsIDOMSVGAnimatedString.h
 include/xulrunner/nsIDOMSVGAnimationElement.h
-include/xulrunner/nsIDOMSVGCSS2Properties.h
 include/xulrunner/nsIDOMSVGCircleElement.h
 include/xulrunner/nsIDOMSVGClipPathElement.h
 include/xulrunner/nsIDOMSVGDefsElement.h
@@ -1333,7 +1328,6 @@ include/xulrunner/nsIMIMEInfo.h
 include/xulrunner/nsIMIMEInputStream.h
 include/xulrunner/nsIMIMEService.h
 include/xulrunner/nsIMacLocale.h
-include/xulrunner/nsIManifestLoader.h
 include/xulrunner/nsIMarkupDocumentViewer.h
 include/xulrunner/nsIMemory.h
 include/xulrunner/nsIMemoryReporter.h
@@ -1485,6 +1479,7 @@ include/xulrunner/nsIRangeUtils.h
 include/xulrunner/nsIReadConfig.h
 include/xulrunner/nsIRecentBadCertsService.h
 include/xulrunner/nsIRecyclingAllocator.h
+include/xulrunner/nsIRedirectResultListener.h
 include/xulrunner/nsIReflowCallback.h
 include/xulrunner/nsIRefreshURI.h
 include/xulrunner/nsIRegion.h
@@ -1803,7 +1798,6 @@ include/xulrunner/nsLiteralString.h
 include/xulrunner/nsLocalFile.h
 include/xulrunner/nsLocalFileUnix.h
 include/xulrunner/nsLocaleCID.h
-include/xulrunner/nsManifestZIPLoader.h
 include/xulrunner/nsMargin.h
 include/xulrunner/nsMathUtils.h
 include/xulrunner/nsMediaCache.h
@@ -2302,7 +2296,7 @@ lib/xulrunner-sdk/idl
 lib/xulrunner-sdk/include
 lib/xulrunner-sdk/lib
 lib/xulrunner-sdk/sdk/lib/libcrmf.a
-lib/xulrunner-sdk/sdk/lib/libmozjs.so
+lib/xulrunner-sdk/sdk/lib/libmozalloc.so
 lib/xulrunner-sdk/sdk/lib/libmozreg_s.a
 lib/xulrunner-sdk/sdk/lib/libnspr4.so
 lib/xulrunner-sdk/sdk/lib/libnss.a
@@ -2319,6 +2313,7 @@ lib/xulrunner-sdk/sdk/lib/libxul.so
 lib/xulrunner-sdk/xpcom-config.h
 lib/xulrunner/LICENSE
 lib/xulrunner/README.txt
+lib/xulrunner/chrome.manifest
 lib/xulrunner/chrome/en-US.jar
 lib/xulrunner/chrome/en-US.manifest
 lib/xulrunner/chrome/icons/default/default16.png
@@ -2428,7 +2423,6 @@ lib/xulrunner/icons/updater.png
 lib/xulrunner/libfreebl3.chk
 lib/xulrunner/libfreebl3.so
 lib/xulrunner/libmozalloc.so
-lib/xulrunner/libmozjs.so
 lib/xulrunner/libnspr4.so
 lib/xulrunner/libnss3.so
 lib/xulrunner/libnssckbi.so
@@ -2456,6 +2450,7 @@ lib/xulrunner/modules/DownloadLastDir.jsm
 lib/xulrunner/modules/DownloadPaths.jsm
 lib/xulrunner/modules/DownloadUtils.jsm
 lib/xulrunner/modules/FileUtils.jsm
+lib/xulrunner/modules/Geometry.jsm
 lib/xulrunner/modules/HUDService.jsm
 lib/xulrunner/modules/ISO8601DateUtils.jsm
 lib/xulrunner/modules/InlineSpellChecker.jsm
@@ -2925,7 +2920,6 @@ share/idl/xulrunner/nsIDOMMouseEvent.idl
 share/idl/xulrunner/nsIDOMMouseScrollEvent.idl
 share/idl/xulrunner/nsIDOMMozTouchEvent.idl
 share/idl/xulrunner/nsIDOMMutationEvent.idl
-share/idl/xulrunner/nsIDOMNSCSS2Properties.idl
 share/idl/xulrunner/nsIDOMNSDocument.idl
 share/idl/xulrunner/nsIDOMNSDocumentStyle.idl
 share/idl/xulrunner/nsIDOMNSEditableElement.idl
@@ -2933,15 +2927,11 @@ share/idl/xulrunner/nsIDOMNSElement.idl
 share/idl/xulrunner/nsIDOMNSEvent.idl
 share/idl/xulrunner/nsIDOMNSEventTarget.idl
 share/idl/xulrunner/nsIDOMNSFeatureFactory.idl
-share/idl/xulrunner/nsIDOMNSHTMLAnchorElement.idl
-share/idl/xulrunner/nsIDOMNSHTMLAnchorElement2.idl
 share/idl/xulrunner/nsIDOMNSHTMLDocument.idl
 share/idl/xulrunner/nsIDOMNSHTMLElement.idl
 share/idl/xulrunner/nsIDOMNSHTMLFormElement.idl
 share/idl/xulrunner/nsIDOMNSHTMLFrameElement.idl
 share/idl/xulrunner/nsIDOMNSHTMLHRElement.idl
-share/idl/xulrunner/nsIDOMNSHTMLImageElement.idl
-share/idl/xulrunner/nsIDOMNSHTMLInputElement.idl
 share/idl/xulrunner/nsIDOMNSHTMLOptionCollectn.idl
 share/idl/xulrunner/nsIDOMNSHTMLTextAreaElement.idl
 share/idl/xulrunner/nsIDOMNSMouseEvent.idl
@@ -2998,7 +2988,6 @@ share/idl/xulrunner/nsIDOMSVGAnimatedPoints.idl
 share/idl/xulrunner/nsIDOMSVGAnimatedRect.idl
 share/idl/xulrunner/nsIDOMSVGAnimatedString.idl
 share/idl/xulrunner/nsIDOMSVGAnimationElement.idl
-share/idl/xulrunner/nsIDOMSVGCSS2Properties.idl
 share/idl/xulrunner/nsIDOMSVGCircleElement.idl
 share/idl/xulrunner/nsIDOMSVGClipPathElement.idl
 share/idl/xulrunner/nsIDOMSVGDefsElement.idl
@@ -3303,7 +3292,6 @@ share/idl/xulrunner/nsIMIMEHeaderParam.idl
 share/idl/xulrunner/nsIMIMEInfo.idl
 share/idl/xulrunner/nsIMIMEInputStream.idl
 share/idl/xulrunner/nsIMIMEService.idl
-share/idl/xulrunner/nsIManifestLoader.idl
 share/idl/xulrunner/nsIMarkupDocumentViewer.idl
 share/idl/xulrunner/nsIMemory.idl
 share/idl/xulrunner/nsIMemoryReporter.idl
@@ -3425,6 +3413,7 @@ share/idl/xulrunner/nsIRandomGenerator.idl
 share/idl/xulrunner/nsIReadConfig.idl
 share/idl/xulrunner/nsIRecentBadCertsService.idl
 share/idl/xulrunner/nsIRecyclingAllocator.idl
+share/idl/xulrunner/nsIRedirectResultListener.idl
 share/idl/xulrunner/nsIRefreshURI.idl
 share/idl/xulrunner/nsIRelativeFilePref.idl
 share/idl/xulrunner/nsIRemoteService.idl
