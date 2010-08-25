@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4074 2010/08/22 13:00:28 ryo-on Exp $
+# $Id: Makefile,v 1.4075 2010/08/25 08:07:15 obache Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -18,6 +18,7 @@ SUBDIR+=	MoleInvasion
 SUBDIR+=	OmegaT-bin
 SUBDIR+=	OmegaT-devel-bin
 SUBDIR+=	OpenGLUT
+SUBDIR+=	PHPUnit
 SUBDIR+=	PPower4
 SUBDIR+=	PyBabelFish
 SUBDIR+=	Pythonol
@@ -1734,6 +1735,7 @@ SUBDIR+=	pear-HTTP_Client
 SUBDIR+=	pear-HTTP_Request2
 SUBDIR+=	pear-Net_URL2
 SUBDIR+=	pear-XML_Parser
+SUBDIR+=	pear-channel-phpunit
 SUBDIR+=	pessulus
 SUBDIR+=	petsc
 SUBDIR+=	pfe
