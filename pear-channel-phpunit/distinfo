@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/08/25 07:59:44 obache Exp $
+
+SHA1 (pear/channels/pear.phpunit.de/2010.05.12/channel.xml) = a26c74e28b36d1a91d280a3225669e1cb4c87cce
+RMD160 (pear/channels/pear.phpunit.de/2010.05.12/channel.xml) = 54c3ea5de2ac9d511671d2779b6f6c01cc7cd59a
+Size (pear/channels/pear.phpunit.de/2010.05.12/channel.xml) = 804 bytes
