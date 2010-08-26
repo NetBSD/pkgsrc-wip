@@ -1,8 +1,8 @@
-$NetBSD: patch-am,v 1.4 2009/09/22 19:10:18 cheusov Exp $
+$NetBSD: patch-am,v 1.5 2010/08/26 20:05:28 cheusov Exp $
 
---- regexp_system.c.orig	2009-09-21 01:54:13.000000000 +0300
+--- regexp_system.c.orig	2010-06-25 20:43:03.000000000 +0000
 +++ regexp_system.c
-@@ -113,6 +113,20 @@ prepare_regexp(char *regexp)
+@@ -286,7 +286,22 @@ prepare_regexp(char *regexp, const char 
  void *
  REcompile(char *regexp, size_t len)
  {
@@ -21,14 +21,16 @@ $NetBSD: patch-am,v 1.4 2009/09/22 19:10:18 cheusov Exp $
 +#endif
 +
      mawk_re_t *re = (mawk_re_t *) malloc(sizeof(mawk_re_t));
-     char *new_regexp = (char *) malloc(len + 3);
++    char *new_regexp = (char *) malloc(len + 3);
  
-@@ -130,7 +144,7 @@ REcompile(char *regexp, size_t len)
+     if (re != 0) {
+ 	size_t need = (len * 2) + 8;	/* might double, with escaping */
+@@ -308,7 +323,7 @@ REcompile(char *regexp, size_t len)
  
-     memset(re, 0, sizeof(mawk_re_t));
-     re->regexp = strdup(new_regexp);
--    err_code = regcomp(&re->re, new_regexp, REG_EXTENDED);
-+    err_code = regcomp(&re->re, new_regexp, ere_flags);
+ 	    memset(re, 0, sizeof(mawk_re_t));
+ 	    re->regexp = strdup(new_regexp);
+-	    err_code = regcomp(&re->re, new_regexp, REG_EXTENDED);
++	    err_code = regcomp(&re->re, new_regexp, ere_flags);
  
-     free(new_regexp);
+ 	    free(new_regexp);
  
