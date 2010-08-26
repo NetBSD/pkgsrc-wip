@@ -1,3 +1,3 @@
 PR#34225
  * R3D_LIB is user-configurable variable,
-   or always mus be ${PREFIX}/share/raster3d/materials?
+   or always must be ${PREFIX}/share/raster3d/materials?
