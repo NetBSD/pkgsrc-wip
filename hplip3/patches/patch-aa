@@ -1,82 +1,21 @@
-$NetBSD: patch-aa,v 1.1 2010/05/06 00:25:14 khorben Exp $
+$NetBSD: patch-aa,v 1.2 2010/08/27 23:21:17 gregoire Exp $
 
---- configure.orig	2010-02-24 23:10:03.000000000 +0000
-+++ configure
-@@ -9993,13 +9993,13 @@ else
+--- configure.in.orig	2010-07-19 02:18:37.000000000 +0000
++++ configure.in
+@@ -34,14 +34,15 @@ AC_DISABLE_STATIC
+ # Checks for programs.
+ AC_PROG_CXX
+ AC_PROG_CC
++AM_PROG_CC_C_O
+ AC_PROG_INSTALL
++AC_LIBTOOL_DLOPEN
+ AC_PROG_LIBTOOL
  
-   darwin*)
-   # if libdl is installed we need to link against it
--    { $as_echo "$as_me:$LINENO: checking for dlopen in -ldl" >&5
--$as_echo_n "checking for dlopen in -ldl... " >&6; }
-+    { $as_echo "$as_me:$LINENO: checking for dlopen" >&5
-+$as_echo_n "checking for dlopen... " >&6; }
- if test "${ac_cv_lib_dl_dlopen+set}" = set; then
-   $as_echo_n "(cached) " >&6
- else
-   ac_check_lib_save_LIBS=$LIBS
--LIBS="-ldl  $LIBS"
-+LIBS="$LIBS"
- cat >conftest.$ac_ext <<_ACEOF
- /* confdefs.h.  */
- _ACEOF
-@@ -10059,7 +10059,7 @@ fi
- { $as_echo "$as_me:$LINENO: result: $ac_cv_lib_dl_dlopen" >&5
- $as_echo "$ac_cv_lib_dl_dlopen" >&6; }
- if test "x$ac_cv_lib_dl_dlopen" = x""yes; then
--  lt_cv_dlopen="dlopen" lt_cv_dlopen_libs="-ldl"
-+  lt_cv_dlopen="dlopen" lt_cv_dlopen_libs=""
- else
+ # Checks for required libraries, don't set global -lpthread, -lm, -ljpeg, ... here, set in Makefile.
+ AC_CHECK_LIB([pthread], [pthread_create], [LIBS="$LIBS"], [AC_MSG_ERROR([cannot find libpthread support], 7)])
+ AC_CHECK_LIB([m], [pow], [LIBS="$LIBS"], [AC_MSG_ERROR([cannot find libm math support], 10)])
+ AC_CHECK_LIB([jpeg], [jpeg_set_defaults],[LIBS="$LIBS"], [AC_MSG_ERROR(["cannot find libjpeg support"], 102)])
+-AC_CHECK_LIB([dl], [dlopen], [LIBS="$LIBS" AC_DEFINE([HAVE_LIBDL])], [AC_MSG_ERROR(["cannot find libdl support"], 104)])
  
-     lt_cv_dlopen="dyld"
-@@ -10315,13 +10315,13 @@ $as_echo "$ac_cv_func_dlopen" >&6; }
- if test "x$ac_cv_func_dlopen" = x""yes; then
-   lt_cv_dlopen="dlopen"
- else
--  { $as_echo "$as_me:$LINENO: checking for dlopen in -ldl" >&5
--$as_echo_n "checking for dlopen in -ldl... " >&6; }
-+  { $as_echo "$as_me:$LINENO: checking for dlopen" >&5
-+$as_echo_n "checking for dlopen... " >&6; }
- if test "${ac_cv_lib_dl_dlopen+set}" = set; then
-   $as_echo_n "(cached) " >&6
- else
-   ac_check_lib_save_LIBS=$LIBS
--LIBS="-ldl  $LIBS"
-+LIBS="$LIBS"
- cat >conftest.$ac_ext <<_ACEOF
- /* confdefs.h.  */
- _ACEOF
-@@ -10381,7 +10381,7 @@ fi
- { $as_echo "$as_me:$LINENO: result: $ac_cv_lib_dl_dlopen" >&5
- $as_echo "$ac_cv_lib_dl_dlopen" >&6; }
- if test "x$ac_cv_lib_dl_dlopen" = x""yes; then
--  lt_cv_dlopen="dlopen" lt_cv_dlopen_libs="-ldl"
-+  lt_cv_dlopen="dlopen" lt_cv_dlopen_libs=""
- else
-   { $as_echo "$as_me:$LINENO: checking for dlopen in -lsvld" >&5
- $as_echo_n "checking for dlopen in -lsvld... " >&6; }
-@@ -21791,13 +21791,13 @@ $as_echo "$as_me: error: \"cannot find l
-    { (exit 102); exit 102; }; }
- fi
- 
--{ $as_echo "$as_me:$LINENO: checking for dlopen in -ldl" >&5
--$as_echo_n "checking for dlopen in -ldl... " >&6; }
-+{ $as_echo "$as_me:$LINENO: checking for dlopen" >&5
-+$as_echo_n "checking for dlopen... " >&6; }
- if test "${ac_cv_lib_dl_dlopen+set}" = set; then
-   $as_echo_n "(cached) " >&6
- else
-   ac_check_lib_save_LIBS=$LIBS
--LIBS="-ldl  $LIBS"
-+LIBS="$LIBS"
- cat >conftest.$ac_ext <<_ACEOF
- /* confdefs.h.  */
- _ACEOF
-@@ -26305,6 +26305,8 @@ do
-   case $ac_option in
-   # Handling of the options.
-   -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
-+	: Avoid regenerating within pkgsrc
-+	exit 0
-     ac_cs_recheck=: ;;
-   --version | --versio | --versi | --vers | --ver | --ve | --v | -V )
-     $as_echo "$ac_cs_version"; exit ;;
+ # Checks for required header files.
+ AC_CHECK_HEADERS(pthread.h,, [AC_MSG_ERROR([cannot find pthread-devel support], 7)])

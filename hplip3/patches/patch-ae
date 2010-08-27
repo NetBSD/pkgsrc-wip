@@ -1,72 +1,13 @@
-$NetBSD: patch-ae,v 1.1 2010/05/06 00:25:14 khorben Exp $
+$NetBSD: patch-ae,v 1.2 2010/08/27 23:21:17 gregoire Exp $
 
---- Makefile.in.orig	2010-02-24 23:10:02.000000000 +0000
-+++ Makefile.in
-@@ -3749,7 +3749,7 @@ cups_drv = prnt/drv/hpcups.drv
- @DARWIN_BUILD_FALSE@@HPLIP_BUILD_TRUE@@SCAN_BUILD_TRUE@libsane_hpaio_la_LDFLAGS = -version-info 1:0:0
- @DARWIN_BUILD_TRUE@@HPLIP_BUILD_TRUE@@SCAN_BUILD_TRUE@libsane_hpaio_la_LDFLAGS = -module -framework CoreFoundation -version-info 1:0:0
- # The following is a interlibrary dependency that must be compiled first.
--@HPLIP_BUILD_TRUE@@SCAN_BUILD_TRUE@libsane_hpaio_la_LIBADD = libhpip.la libhpmud.la $(DBUS_LIBS) -lcups -ldl
-+@HPLIP_BUILD_TRUE@@SCAN_BUILD_TRUE@libsane_hpaio_la_LIBADD = libhpip.la libhpmud.la $(DBUS_LIBS) -lcups
- #libsane_hpaio_la_CFLAGS = -DWITH_NONAMESPACES -DSOAP_DEBUG
- @HPLIP_BUILD_TRUE@@SCAN_BUILD_TRUE@libsane_hpaio_la_CFLAGS = $(DBUS_CFLAGS)
- 
-@@ -3773,7 +3773,7 @@ cups_drv = prnt/drv/hpcups.drv
- # hp-mkuri.
- @HPLIP_BUILD_TRUE@hp_mkuridir = $(bindir)
- @HPLIP_BUILD_TRUE@hp_mkuri_SOURCES = io/hpmud/hp-mkuri.c
--@HPLIP_BUILD_TRUE@hp_mkuri_LDADD = -ldl libhpmud.la
-+@HPLIP_BUILD_TRUE@hp_mkuri_LDADD = libhpmud.la
- @HPLIP_BUILD_TRUE@hp_mkuri_CFLAGS = -DCONFDIR=\"$(hplip_confdir)\"
- 
- # hpmud.rules
-@@ -3784,7 +3784,7 @@ cups_drv = prnt/drv/hpcups.drv
- @HPLIP_BUILD_TRUE@dist_halpre_DATA = data/rules/20-hplip-devices.fdi
+--- Makefile.am.orig	2010-07-19 02:17:45.000000000 +0000
++++ Makefile.am
+@@ -101,7 +101,7 @@ halpredir = /usr/share/hal/fdi/preprobe/
+ dist_halpre_DATA = data/rules/20-hplip-devices.fdi
  
  # hplip.conf
--@HPLIP_BUILD_TRUE@hplip_confdir = /etc/hp
-+@HPLIP_BUILD_TRUE@hplip_confdir = $(sysconfdir)/hp
- @HPLIP_BUILD_TRUE@hplip_conf_DATA = hplip.conf
+-hplip_confdir = /etc/hp
++hplip_confdir = $(sysconfdir)/hp
+ hplip_conf_DATA = hplip.conf
  
  #pstotiff filter
-@@ -3964,7 +3964,7 @@ cups_drv = prnt/drv/hpcups.drv
- @FULL_BUILD_TRUE@@HPLIP_BUILD_TRUE@hppgsz_SOURCES = prnt/hpijs/PrinterProperties.cpp prnt/hpijs/PrinterProperties.h prnt/hpijs/bug.h
- @FULL_BUILD_TRUE@@HPLIP_BUILD_TRUE@hppgsz_CXXFLAGS = $(libapdk_la_CXXFLAGS)
- @FULL_BUILD_TRUE@@HPLIP_BUILD_TRUE@hppgsz_CFLAGS = $(libapdk_la_CFLAGS)
--@FULL_BUILD_TRUE@@HPLIP_BUILD_TRUE@hppgsz_LDADD = libapdk.la -ljpeg -ldl
-+@FULL_BUILD_TRUE@@HPLIP_BUILD_TRUE@hppgsz_LDADD = libapdk.la -ljpeg
- 
- # hplip.desktop
- @FULL_BUILD_TRUE@@HPLIP_BUILD_TRUE@hplip_desktopdir = $(icondir)
-@@ -4031,8 +4031,8 @@ libapdk_la_CFLAGS = $(libapdk_la_CXXFLAG
- 
- @HPIJS_INSTALL_TRUE@hpijs_CXXFLAGS = $(libapdk_la_CXXFLAGS)
- @HPIJS_INSTALL_TRUE@hpijs_CFLAGS = $(libapdk_la_CFLAGS)
--@HPIJS_INSTALL_TRUE@@HPLIP_BUILD_FALSE@hpijs_LDADD = libapdk.la -ljpeg -ldl
--@HPIJS_INSTALL_TRUE@@HPLIP_BUILD_TRUE@hpijs_LDADD = libapdk.la -ljpeg -ldl libhpip.la libhpmud.la $(DBUS_LIBS)
-+@HPIJS_INSTALL_TRUE@@HPLIP_BUILD_FALSE@hpijs_LDADD = libapdk.la -ljpeg
-+@HPIJS_INSTALL_TRUE@@HPLIP_BUILD_TRUE@hpijs_LDADD = libapdk.la -ljpeg libhpip.la libhpmud.la $(DBUS_LIBS)
- 
- # hpcups
- #if NEW_HPCUPS
-@@ -4070,7 +4070,7 @@ libapdk_la_CFLAGS = $(libapdk_la_CXXFLAG
- @HPCUPS_INSTALL_TRUE@        prnt/hpcups/dj4100PrintModes.h
- 
- @HPCUPS_INSTALL_TRUE@hpcups_CXXFLAGS = $(APDK_ENDIAN_FLAG)
--@HPCUPS_INSTALL_TRUE@hpcups_LDADD = -ljpeg -ldl -lcups -lcupsimage
-+@HPCUPS_INSTALL_TRUE@hpcups_LDADD = -ljpeg -lcups -lcupsimage -lcompat
- #else
- #hpcupsdir = $(cupsfilterdir)
- #hpcups_PROGRAMS = hpcups
-@@ -4078,9 +4078,9 @@ libapdk_la_CFLAGS = $(libapdk_la_CXXFLAG
- #hpcups_CXXFLAGS = $(libapdk_la_CXXFLAGS)
- #hpcups_CFLAGS = $(libapdk_la_CFLAGS)
- #if HPCUPS_ONLY_BUILD
--#hpcups_LDADD = libapdk.la -ljpeg -ldl -lcups -lcupsimage
-+#hpcups_LDADD = libapdk.la -ljpeg -lcups -lcupsimage
- #else
--#hpcups_LDADD = libapdk.la -ljpeg -ldl libhpip.la libhpmud.la $(DBUS_LIBS) -lcups -lcupsimage
-+#hpcups_LDADD = libapdk.la -ljpeg libhpip.la libhpmud.la $(DBUS_LIBS) -lcups -lcupsimage
- #endif #HPCUPS_ONLY_BUILD
- #endif # NEW_HPCUPS
- # hpcupsfax
