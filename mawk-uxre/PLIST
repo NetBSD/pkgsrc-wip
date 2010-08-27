@@ -1,3 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1 2008/02/06 21:33:54 cheusov Exp $
-bin/mawk-uxre
-man/man1/mawk-uxre.1
+@comment $NetBSD: PLIST,v 1.2 2010/08/27 10:11:51 cheusov Exp $
+bin/mawk-${PKGNAMESUF}
+man/man1/mawk-${PKGNAMESUF}.1
