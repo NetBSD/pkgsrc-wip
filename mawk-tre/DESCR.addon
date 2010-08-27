@@ -1,0 +1,2 @@
+Unlike original mawk, mawk-tre
+uses TRE regexp library.
