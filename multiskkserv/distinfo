@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/08/18 10:23:12 ryo-on Exp $
+$NetBSD: distinfo,v 1.2 2010/08/27 14:22:43 ryo-on Exp $
 
-SHA1 (multiskkserv-20100128.tar.bz2) = d7a3fdfc40008ab87fbeecfa4376a3ab4132a95b
-RMD160 (multiskkserv-20100128.tar.bz2) = 6d070839c5ffddc4a725fce5f548d57de923cebe
-Size (multiskkserv-20100128.tar.bz2) = 159785 bytes
+SHA1 (multiskkserv-20100128-ac.tar.bz2) = 0b6594439582a22a334f3a188a57c7ddf7c00bba
+RMD160 (multiskkserv-20100128-ac.tar.bz2) = 0116ef3b8b40ad46886a1687d20c738229338afe
+Size (multiskkserv-20100128-ac.tar.bz2) = 436233 bytes

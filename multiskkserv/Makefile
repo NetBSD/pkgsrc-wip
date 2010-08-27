@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.2 2010/08/18 10:29:09 ryo-on Exp $
+# $NetBSD: Makefile,v 1.3 2010/08/27 14:22:43 ryo-on Exp $
 #
 
-DISTNAME=	multiskkserv-20100128
+DISTNAME=	multiskkserv-20100128-ac
+PKGNAME=	${DISTNAME:S/-ac//}
 CATEGORIES=	inputmethod japanese
 MASTER_SITES=	http://ryo-on.users.sourceforge.net/distrib/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	ryo_on@yk.rim.or.jp
-HOMEPAGE=	http://ryo-on.users.sourceforge.net/distrib/
+HOMEPAGE=	http://github.com/sina-ht/multiskkserv/
 COMMENT=	Simple skk multi-dictionary server
 LICENSE=	gnu-gpl-v2
 
@@ -22,14 +23,9 @@ INSTALL_DOCS=		README \
 			README.j
 
 USE_LIBTOOL=	yes
-USE_TOOLS+=	automake
 GNU_CONFIGURE=	yes
 
 RCD_SCRIPTS=	multiskkserv
-
-pre-configure:
-	set -e; cd ${WRKSRC}; \
-	aclocal; autoheader; automake -a --foreign -i; autoconf
 
 post-install:
 .for filename in ${INSTALL_DOCS}
