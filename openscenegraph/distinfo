@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/06/24 22:19:37 yhardy Exp $
-
-SHA1 (OpenSceneGraph-2.8.1.zip) = 3f0837adda492a270960f684b506ff1e6df40461
-RMD160 (OpenSceneGraph-2.8.1.zip) = efd637d72f9533d786a05ac8a08d8f49cfbad25d
-Size (OpenSceneGraph-2.8.1.zip) = 6465261 bytes
-SHA1 (patch-ab) = 3707347bed3d597bc50ad81f0e5c974ffb60100a
-SHA1 (patch-ac) = bc35c9b0a9c7612137c66018b36b35b9897065be
-SHA1 (patch-ad) = 846f4f93104812125bffc8644948637de206bdc0
-SHA1 (patch-ae) = d882f09acac61f74a25cf3efc8f3b7b3756adae3
