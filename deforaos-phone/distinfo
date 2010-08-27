@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2010/07/24 17:38:15 khorben Exp $
+$NetBSD: distinfo,v 1.4 2010/08/27 13:31:53 khorben Exp $
 
-SHA1 (Phone-0.1.0.tar.gz) = 5616f74709f7c7485d29a310dfbc3fbc405e6407
-RMD160 (Phone-0.1.0.tar.gz) = 1d181b2164f357e84ff41abc6f9e09bc2ede01e5
-Size (Phone-0.1.0.tar.gz) = 72581 bytes
+SHA1 (Phone-0.2.0.tar.gz) = ed85b7ddbe24c3a12e8f80a7714c81409a214b46
+RMD160 (Phone-0.2.0.tar.gz) = 8e4a53f400673e3625bfe2eac6b98792c7790024
+Size (Phone-0.2.0.tar.gz) = 81716 bytes
