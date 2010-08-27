@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4075 2010/08/25 08:07:15 obache Exp $
+# $Id: Makefile,v 1.4076 2010/08/27 07:00:57 moubctez Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1482,7 +1482,6 @@ SUBDIR+=	openoffice2-bin-tn
 SUBDIR+=	openoffice2-bin-ts
 SUBDIR+=	openoffice2-bin-xh
 SUBDIR+=	openoffice2-bin-zu
-SUBDIR+=	openscenegraph
 SUBDIR+=	openscep
 SUBDIR+=	opensips
 SUBDIR+=	opentracker-current
