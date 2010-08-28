@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/06/16 13:50:16 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/08/28 12:19:13 obache Exp $
 ${GEM_HOME}/cache/dnssd-${PKGVERSION}.gem
 ${GEM_LIBDIR}/.autotest
-${GEM_LIBDIR}/.require_paths
 ${GEM_LIBDIR}/History.txt
 ${GEM_LIBDIR}/Manifest.txt
 ${GEM_LIBDIR}/README.txt
@@ -39,6 +38,7 @@ ${GEM_LIBDIR}/sample/server.rb
 ${GEM_LIBDIR}/sample/socket.rb
 ${GEM_LIBDIR}/test/test_dnssd.rb
 ${GEM_LIBDIR}/test/test_dnssd_flags.rb
+${GEM_LIBDIR}/test/test_dnssd_getaddrinfo.rb
 ${GEM_LIBDIR}/test/test_dnssd_record.rb
 ${GEM_LIBDIR}/test/test_dnssd_reply.rb
 ${GEM_LIBDIR}/test/test_dnssd_reply_browse.rb
