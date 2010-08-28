@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2010/08/28 22:00:04 gregoire Exp $
+# $NetBSD: Makefile,v 1.13 2010/08/28 22:19:42 gregoire Exp $
 #
 
 DISTNAME=	hplip-3.10.6
@@ -13,6 +13,8 @@ LICENSE=	gnu-gpl-v2 AND mit AND modified-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+CONFLICTS+=	hpijs-[0-9]*
+
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_LANGUAGES+=	c c++ fortran
@@ -21,6 +23,13 @@ USE_TOOLS+=	aclocal autoconf automake gmake pkg-config
 CONFIGURE_ARGS=	--sysconfdir=${PKG_SYSCONFDIR} \
 		--with-cupsbackenddir=${PREFIX}/libexec/cups/backend \
 		--with-cupsfilterdir=${PREFIX}/libexec/cups/filter
+CONFIGURE_ARGS+=--enable-hpcups-install
+CONFIGURE_ARGS+=--enable-hpijs-install
+CONFIGURE_ARGS+=--enable-cups-drv-install
+CONFIGURE_ARGS+=--enable-cups-ppd-install
+CONFIGURE_ARGS+=--enable-foomatic-drv-install
+CONFIGURE_ARGS+=--enable-foomatic-ppd-install
+CONFIGURE_ARGS+=--enable-foomatic-rip-hplip-install
 
 EGDIR=		${PREFIX}/share/examples/${PKGBASE}
 EGFILES=	hp/hplip.conf cups/pstotiff.convs cups/pstotiff.types \
