@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2010/08/28 21:29:14 gregoire Exp $
+# $NetBSD: Makefile,v 1.11 2010/08/28 21:39:22 gregoire Exp $
 #
 
 DISTNAME=	hplip-3.10.6
@@ -16,7 +16,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_LANGUAGES+=	c c++ fortran
-USE_TOOLS+=	autoconf automake gmake pkg-config
+USE_TOOLS+=	aclocal autoconf automake gmake pkg-config
 
 CONFIGURE_ARGS=	--sysconfdir=${PKG_SYSCONFDIR:Q} \
 		--with-cupsbackenddir=${PREFIX:Q}/libexec/cups/backend \
@@ -68,6 +68,7 @@ pre-configure:
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../net/net-snmp/buildlink3.mk"
 .include "../../print/cups/buildlink3.mk"
