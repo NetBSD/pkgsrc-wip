@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2010/08/28 01:57:48 gregoire Exp $
+@comment $NetBSD: PLIST,v 1.5 2010/08/28 21:29:14 gregoire Exp $
 bin/hp-align
 bin/hp-check
 bin/hp-clean
@@ -29,7 +29,6 @@ bin/hp-timedate
 bin/hp-toolbox
 bin/hp-unload
 bin/hp-wificonfig
-etc/hp/hplip.conf
 lib/libhpip.la
 lib/libhpmud.la
 ${PYSITELIB}/cupsext.la
@@ -80,6 +79,13 @@ share/doc/${PKGNAME}/systray.html
 share/doc/${PKGNAME}/troubleshooting.html
 share/doc/${PKGNAME}/uninstalling.html
 share/doc/${PKGNAME}/upgrading.html
+share/examples/hplip/cups/pstotiff.convs
+share/examples/hplip/cups/pstotiff.types
+share/examples/hplip/hp/hplip.conf
+share/examples/hplip/sane.d/dll.conf
+share/examples/hplip/udev/rules.d/55-hpmud.rules
+share/examples/hplip/udev/rules.d/56-hpmud_support.rules
+share/examples/hplip/xdg/autostart/hplip-systray.desktop
 share/hal/fdi/preprobe/10osvendor/20-hplip-devices.fdi
 share/hplip/__init__.py
 share/hplip/align.py
