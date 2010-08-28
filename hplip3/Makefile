@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2010/08/28 01:41:45 gregoire Exp $
+# $NetBSD: Makefile,v 1.9 2010/08/28 01:57:48 gregoire Exp $
 #
 
 DISTNAME=	hplip-3.10.6
@@ -37,13 +37,11 @@ SUBST_SED.fix-paths=	-e 's,\([ '\''";]\)/etc/hp,\1${PKG_SYSCONFDIR}/hp,g'
 SUBST_SED.fix-paths+=	-e 's,\([ '\''";]\)/etc/cups,\1${PKG_SYSCONFDIR}/cups,g'
 SUBST_SED.fix-paths+=	-e 's,\([ '\''";]\)/etc/foomatic,\1${PKG_SYSCONFDIR}/foomatic,g'
 SUBST_SED.fix-paths+=	-e 's,\([ '\''";]\)/etc/sane.d,\1${PKG_SYSCONFDIR}/sane.d,g'
-SUBST_SED.fix-paths+=	-e 's,\([ '\''";]\)/etc/dbus-1,\1${PKG_SYSCONFDIR}/dbus-1,g'
 SUBST_SED.fix-paths+=	-e 's,\([ '\''";]\)/usr/lib/cups,\1${PREFIX}/libexec/cups,g'
 SUBST_SED.fix-paths+=	-e 's,\([ '\''";]\)/usr/local,\1${PREFIX},g'
 SUBST_SED.fix-paths+=	-e 's,\([ '\''";]\)/usr/share/cups,\1${PREFIX}/share/cups,g'
 SUBST_SED.fix-paths+=	-e 's,\([ '\''";]\)/usr/share/ppd,\1${PREFIX}/share/ppd,g'
 SUBST_SED.fix-paths+=	-e 's,\([ '\''";]\)/usr/share/dbus-1,\1${PREFIX}/share/dbus-1,g'
-SUBST_SED.fix-paths+=	-e 's,\([ '\''";]\)/usr/share/hal,\1${PREFIX}/share/hal,g'
 
 .include "../../mk/dlopen.buildlink3.mk"
 BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:M*}
