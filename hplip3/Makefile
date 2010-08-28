@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2010/08/28 21:39:22 gregoire Exp $
+# $NetBSD: Makefile,v 1.12 2010/08/28 22:00:04 gregoire Exp $
 #
 
 DISTNAME=	hplip-3.10.6
@@ -18,18 +18,18 @@ USE_LIBTOOL=	yes
 USE_LANGUAGES+=	c c++ fortran
 USE_TOOLS+=	aclocal autoconf automake gmake pkg-config
 
-CONFIGURE_ARGS=	--sysconfdir=${PKG_SYSCONFDIR:Q} \
-		--with-cupsbackenddir=${PREFIX:Q}/libexec/cups/backend \
-		--with-cupsfilterdir=${PREFIX:Q}/libexec/cups/filter
+CONFIGURE_ARGS=	--sysconfdir=${PKG_SYSCONFDIR} \
+		--with-cupsbackenddir=${PREFIX}/libexec/cups/backend \
+		--with-cupsfilterdir=${PREFIX}/libexec/cups/filter
 
 EGDIR=		${PREFIX}/share/examples/${PKGBASE}
 EGFILES=	hp/hplip.conf cups/pstotiff.convs cups/pstotiff.types \
 		xdg/autostart/hplip-systray.desktop
 
 INSTALL_MAKE_FLAGS+=	${MAKE_FLAGS}
-INSTALL_MAKE_FLAGS+=	sysconfdir=${EGDIR:Q}
-INSTALL_MAKE_FLAGS+=	systraydir=${EGDIR:Q}/xdg/autostart
-INSTALL_MAKE_FLAGS+=	mimedir=${EGDIR:Q}/cups
+INSTALL_MAKE_FLAGS+=	sysconfdir=${EGDIR}
+INSTALL_MAKE_FLAGS+=	systraydir=${EGDIR}/xdg/autostart
+INSTALL_MAKE_FLAGS+=	mimedir=${EGDIR}/cups
 
 OWN_DIRS+=		${PKG_SYSCONFDIR}/hp
 OWN_DIRS+=		${PKG_SYSCONFDIR}/cups
@@ -61,7 +61,7 @@ SUBST_SED.fix-paths+=	-e 's,\([ '\''"=:;]\)/usr/share/ppd,\1${PREFIX}/share/ppd,
 SUBST_SED.fix-paths+=	-e 's,\([ '\''"=:;]\)/usr/share/dbus-1,\1${PREFIX}/share/dbus-1,g'
 
 .include "../../mk/dlopen.buildlink3.mk"
-BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:M*}
+BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:Q}
 
 pre-configure:
 	cd ${WRKSRC} && aclocal && automake --add-missing --foreign && autoconf
