@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.3 2010/08/28 00:49:01 gregoire Exp $
+$NetBSD: patch-ae,v 1.4 2010/08/28 01:41:45 gregoire Exp $
 
 --- Makefile.am.orig	2010-07-19 02:17:45.000000000 +0000
 +++ Makefile.am
-@@ -90,7 +90,7 @@ hp_mkuri_LDADD = -ldl libhpmud.la
+@@ -90,18 +90,18 @@ hp_mkuri_LDADD = -ldl libhpmud.la
  hp_mkuri_CFLAGS = -DCONFDIR=\"$(hplip_confdir)\"
  
  # hpmud.rules
@@ -11,7 +11,11 @@ $NetBSD: patch-ae,v 1.3 2010/08/28 00:49:01 gregoire Exp $
  dist_rules_DATA = data/rules/56-hpmud_support.rules
  if UDEV_ACL_RULES
  dist_rules_DATA += data/rules/40-hplip.rules
-@@ -101,7 +101,7 @@ halpredir = /usr/share/hal/fdi/preprobe/
+ else
+ dist_rules_DATA += data/rules/55-hpmud.rules
+ endif
+-halpredir = /usr/share/hal/fdi/preprobe/10osvendor
++halpredir = $(datadir)/hal/fdi/preprobe/10osvendor
  dist_halpre_DATA = data/rules/20-hplip-devices.fdi
  
  # hplip.conf
@@ -20,15 +24,18 @@ $NetBSD: patch-ae,v 1.3 2010/08/28 00:49:01 gregoire Exp $
  hplip_conf_DATA = hplip.conf
  
  #pstotiff filter
-@@ -317,7 +317,7 @@ endif
+@@ -317,9 +317,9 @@ endif
  
  # PolicyKit
  if POLICYKIT_INSTALL
 -policykit_dbus_etcdir = /etc/dbus-1/system.d
 +policykit_dbus_etcdir = $(sysconfdir)/dbus-1/system.d
  dist_policykit_dbus_etc_DATA = data/policykit/com.hp.hplip.conf
- policykit_dbus_sharedir = /usr/share/dbus-1/system-services
+-policykit_dbus_sharedir = /usr/share/dbus-1/system-services
++policykit_dbus_sharedir = $(datadir)/dbus-1/system-services
  dist_policykit_dbus_share_DATA = data/policykit/com.hp.hplip.service
+ policykit_policydir = $(policykit_dir)
+ dist_policykit_policy_DATA = data/policykit/com.hp.hplip.policy
 @@ -495,13 +495,13 @@ install-data-hook:
  if HPLIP_BUILD
  #	   If scanner build, add hpaio entry to sane dll.conf.

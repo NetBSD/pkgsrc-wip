@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2010/08/28 00:49:01 gregoire Exp $
+# $NetBSD: Makefile,v 1.8 2010/08/28 01:41:45 gregoire Exp $
 #
 
 DISTNAME=	hplip-3.10.6
@@ -28,7 +28,7 @@ REPLACE_PERL=	prnt/filters/hpcac prnt/hpijs/foomatic-rip-hplip
 PY_PATCHPLIST=	yes
 
 SUBST_CLASSES+=		fix-paths
-SUBST_STAGE.fix-paths=	post-patch
+SUBST_STAGE.fix-paths=	post-configure
 SUBST_MESSAGE.fix-paths=Fixing absolute paths.
 SUBST_FILES.fix-paths=	*.py */*.py */*/*.py prnt/*/*.cpp
 SUBST_FILES.fix-paths+=	prnt/hpijs/foomatic-rip-hplip
@@ -44,7 +44,6 @@ SUBST_SED.fix-paths+=	-e 's,\([ '\''";]\)/usr/share/cups,\1${PREFIX}/share/cups,
 SUBST_SED.fix-paths+=	-e 's,\([ '\''";]\)/usr/share/ppd,\1${PREFIX}/share/ppd,g'
 SUBST_SED.fix-paths+=	-e 's,\([ '\''";]\)/usr/share/dbus-1,\1${PREFIX}/share/dbus-1,g'
 SUBST_SED.fix-paths+=	-e 's,\([ '\''";]\)/usr/share/hal,\1${PREFIX}/share/hal,g'
-
 
 .include "../../mk/dlopen.buildlink3.mk"
 BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:M*}
