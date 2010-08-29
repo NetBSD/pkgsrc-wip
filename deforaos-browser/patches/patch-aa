@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.5 2010/08/29 01:17:48 khorben Exp $
+
+--- src/desktop.c.orig	2010-08-28 23:52:32.000000000 +0000
++++ src/desktop.c
+@@ -229,7 +229,7 @@ static gboolean _new_idle(gpointer data)
+ 	fprintf(stderr, "DEBUG: %s() background=\"%s\"\n", __func__, p);
+ #endif
+ 	if((p = config_get(config, NULL, "background_how")) != NULL)
+-		for(i = 0; _desktop_hows[i] != NULL; i++)
++		for(i = 0; i < DESKTOP_HOW_COUNT; i++)
+ 			if(strcmp(_desktop_hows[i], p) == 0)
+ 				how = i;
+ 	switch(how)
