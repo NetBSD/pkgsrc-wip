@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4079 2010/08/29 12:48:04 cheusov Exp $
+# $Id: Makefile,v 1.4080 2010/08/29 13:11:03 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -520,6 +520,7 @@ SUBDIR+=	gajim
 SUBDIR+=	galib
 SUBDIR+=	gambas2
 SUBDIR+=	gambc
+SUBDIR+=	gaphor
 SUBDIR+=	gappa
 SUBDIR+=	gauche-dbd-pg
 SUBDIR+=	gauche-fastcgi
@@ -1924,13 +1925,14 @@ SUBDIR+=	py-duali
 SUBDIR+=	py-embedc
 SUBDIR+=	py-event
 SUBDIR+=	py-eventlet
-SUBDIR+=	py-extremes/
+SUBDIR+=	py-extremes
 SUBDIR+=	py-ezPyCrypto
 SUBDIR+=	py-fastaudio
 SUBDIR+=	py-figleaf
 SUBDIR+=	py-flakes
 SUBDIR+=	py-fuzzpy
 SUBDIR+=	py-fs
+SUBDIR+=	py-gaphos
 SUBDIR+=	py-gcalendarsync
 SUBDIR+=	py-generateDS
 SUBDIR+=	py-gettext-tools
@@ -2043,7 +2045,9 @@ SUBDIR+=	py-scipy
 SUBDIR+=	py-scrobbler
 SUBDIR+=	py-sfepy
 SUBDIR+=	py-siginterrupt
+SUBDIR+=	py-simplegeneric
 SUBDIR+=	py-setupdocs
+SUBDIR+=	py-setuptools_git
 SUBDIR+=	py-shtoom
 SUBDIR+=	py-simpleparse-mxtexttools
 SUBDIR+=	py-snmp
