@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/08/29 11:54:56 jihbed Exp $
+
+SHA1 (gaphor-0.15.0.tar.gz) = 559916246767d10568daf3e9463608ebeaf64cce
+RMD160 (gaphor-0.15.0.tar.gz) = 07c83a22be59cf83eb7a684366f7449e33ed8e94
+Size (gaphor-0.15.0.tar.gz) = 692219 bytes
