@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2010/08/29 00:39:50 obache Exp $
+# $NetBSD: Makefile,v 1.4 2010/08/29 12:58:46 obache Exp $
 #
 
-DISTNAME=	dnssd-1.3.3
+DISTNAME=	dnssd-1.3.4
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	net ruby
 
