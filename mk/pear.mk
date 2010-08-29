@@ -1,4 +1,4 @@
-# $NetBSD: pear.mk,v 1.3 2010/08/29 05:45:50 obache Exp $
+# $NetBSD: pear.mk,v 1.4 2010/08/29 06:02:29 obache Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install pear packages.
@@ -10,7 +10,6 @@
 #
 # PEAR_LIB	directory under ${PREFIX} where Pear modules are installed
 #
-# PEAR_CHANNEL	channel name for the package
 
 .if !defined(_PEAR_PACKAGE_MK)
 _PEAR_PACKAGE_MK=       # defined
