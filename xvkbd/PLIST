@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/08/29 04:47:41 ryo-on Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/08/29 04:58:41 ryo-on Exp $
 bin/xvkbd
 lib/X11/app-defaults/XVkbd
 lib/X11/app-defaults/XVkbd-belgian
@@ -28,3 +28,4 @@ lib/X11/app-defaults/XVkbd-swissgerman
 lib/X11/app-defaults/XVkbd-turkish
 lib/X11/app-defaults/XVkbd-uk
 man/cat1/xvkbd.0
+man/man1/xvkbd.1
