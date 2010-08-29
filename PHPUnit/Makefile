@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/08/25 08:05:51 obache Exp $
+# $NetBSD: Makefile,v 1.2 2010/08/29 06:10:25 obache Exp $
 
 DISTNAME=	PHPUnit-3.4.15
 CATEGORIES+=	devel
@@ -14,5 +14,5 @@ DEPENDS+=		${PHP_PKG_PREFIX}-dom-[0-9]*:../../textproc/php-dom
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-.include "../../wip/mk/pear.mk"
+.include "../../lang/php/pear.mk"
 .include "../../mk/bsd.pkg.mk"
