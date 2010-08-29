@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/08/29 09:37:38 ggergely Exp $
+share/openttd/data/busy_schedule.mid
+share/openttd/data/chemistry_lab.mid
+share/openttd/data/coconut_run2.mid
+share/openttd/data/harp_harmony.mid
+share/openttd/data/keep_on_rolling.mid
+share/openttd/data/linns_basket.mid
+share/openttd/data/little_blue_box_car.mid
+share/openttd/data/midnight_snow_run.mid
+share/openttd/data/mighty_giant_run.mid
+share/openttd/data/modern_motion.mid
+share/openttd/data/relax_song.mid
+share/openttd/data/run_for_your_life.mid
+share/openttd/data/smooth_groove.mid
+share/openttd/data/the_fast_route.mid
+share/openttd/data/train_filled_with_cash.mid
+share/openttd/data/tttheme2.mid
+share/openttd/data/ultimate_run.mid
+share/openttd/data/wood_whistles.mid
