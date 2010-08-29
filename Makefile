@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4078 2010/08/29 10:57:33 ggergely Exp $
+# $Id: Makefile,v 1.4079 2010/08/29 12:48:04 cheusov Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1252,6 +1252,10 @@ SUBDIR+=	marsyas
 SUBDIR+=	matanza
 SUBDIR+=	mathopd
 SUBDIR+=	mawk
+SUBDIR+=	mawk-uxre
+SUBDIR+=	mawk-libc
+SUBDIR+=	mawk-rxspencer
+SUBDIR+=	mawk-tre
 SUBDIR+=	mawk-uxre
 SUBDIR+=	maxima
 SUBDIR+=	mc
