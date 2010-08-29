@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2010/08/28 22:11:54 asau Exp $
+# $NetBSD: Makefile,v 1.29 2010/08/29 22:04:09 asau Exp $
 
 DISTNAME=		${PKGNAME_NOREV}-source
-PKGNAME=		sbcl-1.0.40
+PKGNAME=		sbcl-1.0.42
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=sbcl/}
 EXTRACT_SUFX=		.tar.bz2
@@ -10,20 +10,17 @@ MAINTAINER=		asau@users.sourceforge.net
 HOMEPAGE=		http://www.sbcl.org/
 COMMENT=		SBCL, a Common Lisp implementation
 
-# ONLY_FOR_PLATFORM=	NetBSD-[2-9]*-i386
-# ONLY_FOR_PLATFORM+=	FreeBSD-[2-9]*-i386
-# ONLY_FOR_PLATFORM+=	Linux-*-i386
-# It should be possible to have SBCL working on amd64, powerpc,
-# sparc, alpha, mips, and HPPA hardware also, but they probably
-# need a bit of porting work done in SBCL itself.
-# In addition, SBCL should also work on Darwin, Solaris, OpenBSD,
-# and possibly Win32, OSF/1, HP-UX, and Irix.
+# SBCL creates a new release with minor updates and fixes every
+# month.  The maintainer of this package does not have the time
+# to build, test, update, etc. this package that often.  If you
+# would like a newer (or older) version, this works very often:
+# 1) change the PKGNAME variable above as desired
+# 2) make fetch && make makesum && make package
 
 USE_TOOLS+=		gmake gtar:run
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-#USE_CONFIGURE=yes
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
 .include "../../mk/bsd.prefs.mk"
