@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2010/08/28 22:19:42 gregoire Exp $
+# $NetBSD: Makefile,v 1.14 2010/08/29 08:42:28 gregoire Exp $
 #
 
 DISTNAME=	hplip-3.10.6
@@ -15,12 +15,15 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=	hpijs-[0-9]*
 
+BUILD_DEFS+=	VARBASE
+
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_LANGUAGES+=	c c++ fortran
 USE_TOOLS+=	aclocal autoconf automake gmake pkg-config
 
 CONFIGURE_ARGS=	--sysconfdir=${PKG_SYSCONFDIR} \
+		--localstatedir=${VARBASE} \
 		--with-cupsbackenddir=${PREFIX}/libexec/cups/backend \
 		--with-cupsfilterdir=${PREFIX}/libexec/cups/filter
 CONFIGURE_ARGS+=--enable-hpcups-install
@@ -37,16 +40,19 @@ EGFILES=	hp/hplip.conf cups/pstotiff.convs cups/pstotiff.types \
 
 INSTALL_MAKE_FLAGS+=	${MAKE_FLAGS}
 INSTALL_MAKE_FLAGS+=	sysconfdir=${EGDIR}
+INSTALL_MAKE_FLAGS+=	localstatedir=${EGDIR}
 INSTALL_MAKE_FLAGS+=	systraydir=${EGDIR}/xdg/autostart
 INSTALL_MAKE_FLAGS+=	mimedir=${EGDIR}/cups
 
 OWN_DIRS+=		${PKG_SYSCONFDIR}/hp
 OWN_DIRS+=		${PKG_SYSCONFDIR}/cups
 OWN_DIRS+=		${PKG_SYSCONFDIR}/xdg/autostart
+OWN_DIRS+=		${VARBASE}/lib/hp
 
 .for file in ${EGFILES}
 CONF_FILES+=	${EGDIR}/${file} ${PKG_SYSCONFDIR}/${file}
 .endfor
+CONF_FILES+=	${EGDIR}/lib/hp/hplip.state ${VARBASE}/lib/hp/hplip.state
 
 REPLACE_PYTHON=	base/magic.py
 REPLACE_PERL=	prnt/filters/hpcac prnt/hpijs/foomatic-rip-hplip
@@ -68,6 +74,9 @@ SUBST_SED.fix-paths+=	-e 's,\([ '\''"=:;]\)/usr/local,\1${PREFIX},g'
 SUBST_SED.fix-paths+=	-e 's,\([ '\''"=:;]\)/usr/share/cups,\1${PREFIX}/share/cups,g'
 SUBST_SED.fix-paths+=	-e 's,\([ '\''"=:;]\)/usr/share/ppd,\1${PREFIX}/share/ppd,g'
 SUBST_SED.fix-paths+=	-e 's,\([ '\''"=:;]\)/usr/share/dbus-1,\1${PREFIX}/share/dbus-1,g'
+SUBST_SED.fix-paths+=	-e 's,\([ '\''"=:;]\)/var/lib/hp,\1${VARBASE}/lib/hp,g'
+SUBST_SED.fix-paths+=	-e 's,\([ '\''"=:;]\)/var/log/cups,\1${VARBASE}/log/cups,g'
+SUBST_SED.fix-paths+=	-e 's,\([ '\''"=:;]\)/var/spool/cups,\1${VARBASE}/spool/cups,g'
 
 .include "../../mk/dlopen.buildlink3.mk"
 BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:Q}

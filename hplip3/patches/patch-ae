@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.4 2010/08/28 01:41:45 gregoire Exp $
+$NetBSD: patch-ae,v 1.5 2010/08/29 08:42:28 gregoire Exp $
 
 --- Makefile.am.orig	2010-07-19 02:17:45.000000000 +0000
 +++ Makefile.am
@@ -24,6 +24,15 @@ $NetBSD: patch-ae,v 1.4 2010/08/28 01:41:45 gregoire Exp $
  hplip_conf_DATA = hplip.conf
  
  #pstotiff filter
+@@ -109,7 +109,7 @@ pstotiffdir = $(cupsfilterdir)
+ pstotiff_SCRIPTS = fax/filters/pstotiff
+ 
+ # hplip.state
+-hplip_statedir = /var/lib/hp
++hplip_statedir = $(localstatedir)/lib/hp
+ dist_hplip_state_DATA = hplip.state
+ 
+ if FULL_BUILD
 @@ -317,9 +317,9 @@ endif
  
  # PolicyKit

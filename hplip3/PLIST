@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2010/08/28 22:19:42 gregoire Exp $
+@comment $NetBSD: PLIST,v 1.7 2010/08/29 08:42:28 gregoire Exp $
 bin/hp-align
 bin/hp-check
 bin/hp-clean
@@ -85,6 +85,7 @@ share/doc/${PKGNAME}/upgrading.html
 share/examples/hplip/cups/pstotiff.convs
 share/examples/hplip/cups/pstotiff.types
 share/examples/hplip/hp/hplip.conf
+share/examples/hplip/lib/hp/hplip.state
 share/examples/hplip/sane.d/dll.conf
 share/examples/hplip/udev/rules.d/55-hpmud.rules
 share/examples/hplip/udev/rules.d/56-hpmud_support.rules
