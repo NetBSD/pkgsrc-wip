@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2006/07/16 16:08:38 shattered Exp $
+# $NetBSD: Makefile,v 1.3 2010/08/29 12:49:44 cheusov Exp $
 #
 
 DISTNAME=		lirc-0.8.0
-CATEGORIES=		wip comms linux
+CATEGORIES=		comms
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=lirc/}
 EXTRACT_SUFX=		.tar.bz2
 
