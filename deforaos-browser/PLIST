@@ -1,10 +1,16 @@
-@comment $NetBSD: PLIST,v 1.1 2009/09/06 21:57:47 khorben Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/08/29 00:33:17 khorben Exp $
 bin/browser
 bin/copy
 bin/delete
 bin/desktop
+bin/desktop-settings
 bin/move
 bin/open
 bin/properties
 bin/view
 share/applications/browser.desktop
+share/applications/desktop-settings.desktop
+share/locale/de/LC_MESSAGES/Browser.mo
+share/locale/es/LC_MESSAGES/Browser.mo
+share/locale/fr/LC_MESSAGES/Browser.mo
+share/locale/it/LC_MESSAGES/Browser.mo
