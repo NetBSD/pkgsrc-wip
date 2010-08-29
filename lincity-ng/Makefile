@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2010/06/13 22:47:10 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2010/08/29 12:53:04 cheusov Exp $
 #
 
 VERSION=		1.1.2
@@ -8,9 +8,11 @@ CATEGORIES=		games
 MASTER_SITES=		http://download.berlios.de/lincity-ng/ \
 			http://download2.berlios.de/lincity-ng/
 
+#LICENSE=		gnu-gpl-v2 AND see COPYING-fonts.txt
+
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		cheusov@tut.by
+MAINTAINER=		pkgsrc-users@NetBSD.org,cheusov@tut.by
 HOMEPAGE=		http://prdownload.berlios.de/lincity-ng/
 COMMENT=		City Simulation Game
 
