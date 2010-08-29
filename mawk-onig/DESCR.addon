@@ -1,0 +1,2 @@
+Unlike original mawk, mawk-onig
+uses Oniguruma regexp library.
