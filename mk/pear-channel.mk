@@ -1,4 +1,4 @@
-# $NetBSD: pear-channel.mk,v 1.1 2010/08/25 07:57:49 obache Exp $
+# $NetBSD: pear-channel.mk,v 1.2 2010/08/29 05:53:09 obache Exp $
 #
 # PEAR channel package templates
 #
@@ -43,9 +43,12 @@ FILES_SUBST+=	PEAR_CHANNEL=${PEAR_CHANNEL}
 INSTALL_TEMPLATES+=	../../wip/mk/pear-channel.tmpl
 DEINSTALL_TEMPLATES+=	../../wip/mk/pear-channel.tmpl
 
+.if !exists(${CURDIR}/DESCR)
 DESCR_SRC=	${WRKDIR}/DESCR_SRC
+do-extract:	pear-channel-descr
+.endif
 
-do-extract:	pear-channel-extract pear-channel-descr
+do-extract:	pear-channel-extract
 
 do-install:	pear-channel-install
 
