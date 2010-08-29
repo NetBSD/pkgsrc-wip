@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/08/29 09:37:38 ggergely Exp $
+$NetBSD: distinfo,v 1.2 2010/08/29 10:47:50 ggergely Exp $
 
-SHA1 (openmsx-0.2.1-all.zip) = 35aaf691e4e63ed158c1a7f3123853436ad6efa8
-RMD160 (openmsx-0.2.1-all.zip) = 1c61140c826c89b0069a00306d3941a260e148a9
-Size (openmsx-0.2.1-all.zip) = 83998 bytes
+SHA1 (openmsx-0.3.1-all.zip) = e9c4203923bb9c974ac67886bd00b7090658b961
+RMD160 (openmsx-0.3.1-all.zip) = 8eff246e89e44f63ca480e9acef94a1da5fa81d2
+Size (openmsx-0.3.1-all.zip) = 136981 bytes
