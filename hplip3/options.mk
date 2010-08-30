@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2010/08/30 15:30:22 gregoire Exp $
+# $NetBSD: options.mk,v 1.3 2010/08/30 15:39:24 gregoire Exp $
 #
 # HPLIP dependencies are detailed in the following page:
 # http://hplipopensource.com/hplip-web/install/manual/distros/other.html
@@ -17,6 +17,7 @@ PLIST.fax=		yes
 CONFIGURE_ARGS+=	--enable-fax-build
 CONFIGURE_ARGS+=	--enable-dbus-build
 EGFILES+=		cups/pstotiff.convs cups/pstotiff.types
+MAKE_DIRS+=		${PKG_SYSCONFDIR}/cups
 DEPENDS+=	${PYPKGPREFIX}-reportlab-[0-9]*:../../print/py-reportlab
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/py-dbus/buildlink3.mk"

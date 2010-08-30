@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2010/08/30 15:30:22 gregoire Exp $
+# $NetBSD: Makefile,v 1.18 2010/08/30 15:39:24 gregoire Exp $
 #
 
 DISTNAME=		hplip-3.10.6
@@ -47,8 +47,7 @@ INSTALL_MAKE_FLAGS+=	systraydir=${EGDIR}/xdg/autostart
 INSTALL_MAKE_FLAGS+=	mimedir=${EGDIR}/cups
 
 OWN_DIRS+=		${PKG_SYSCONFDIR}/hp
-OWN_DIRS+=		${PKG_SYSCONFDIR}/cups
-OWN_DIRS+=		${PKG_SYSCONFDIR}/xdg/autostart
+MAKE_DIRS+=		${PKG_SYSCONFDIR}/xdg/autostart
 OWN_DIRS+=		${VARBASE}/lib/hp
 
 .for file in ${EGFILES}
