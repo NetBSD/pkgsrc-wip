@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2010/08/30 15:39:24 gregoire Exp $
+# $NetBSD: Makefile,v 1.19 2010/08/30 18:43:34 gregoire Exp $
 #
 
 DISTNAME=		hplip-3.10.6
@@ -87,6 +87,7 @@ pre-configure:
 
 post-install:
 	${CHMOD} a-x ${DESTDIR}${PREFIX}/share/hplip/__init__.py
+	${PY_COMPILE_ALL} ${DESTDIR}${PREFIX}/share/hplip
 
 .include "options.mk"
 
