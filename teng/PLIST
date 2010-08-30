@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/08/30 19:21:32 ondratu Exp $
+include/teng.h
+include/tengconfig.h
+include/tengerror.h
+include/tengstructs.h
+include/tengwriter.h
+lib/libteng.la
