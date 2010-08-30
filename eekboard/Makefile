@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/08/13 05:11:35 obache Exp $
+# $NetBSD: Makefile,v 1.4 2010/08/30 09:08:46 obache Exp $
 #
 
 DISTNAME=	eekboard-0.0.5
@@ -25,14 +25,14 @@ PKGCONFIG_OVERRIDE+=	eek/eek-gtk-0.1.pc.in
 
 TEST_TARGET=		check
 
+.include "options.mk"
+
 .include "../../devel/GConf/buildlink3.mk"
 .include "../../devel/at-spi/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
-.include "../../graphics/clutter/buildlink3.mk"
-.include "../../graphics/clutter-gtk/buildlink3.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libxklavier/buildlink3.mk"

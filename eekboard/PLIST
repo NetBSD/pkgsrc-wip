@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/08/08 09:22:29 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/08/30 09:08:46 obache Exp $
 bin/eekboard
-include/eek-0.1/eek/eek-clutter-drawing-context.h
-include/eek-0.1/eek/eek-clutter-key.h
-include/eek-0.1/eek/eek-clutter-keyboard.h
-include/eek-0.1/eek/eek-clutter-section.h
-include/eek-0.1/eek/eek-clutter.h
+${PLIST.clutter}include/eek-0.1/eek/eek-clutter-drawing-context.h
+${PLIST.clutter}include/eek-0.1/eek/eek-clutter-key.h
+${PLIST.clutter}include/eek-0.1/eek/eek-clutter-keyboard.h
+${PLIST.clutter}include/eek-0.1/eek/eek-clutter-section.h
+${PLIST.clutter}include/eek-0.1/eek/eek-clutter.h
 include/eek-0.1/eek/eek-container.h
 include/eek-0.1/eek/eek-element.h
 include/eek-0.1/eek/eek-gtk-keyboard.h
@@ -20,7 +20,7 @@ include/eek-0.1/eek/eek-xkb.h
 include/eek-0.1/eek/eek-xkl-layout.h
 include/eek-0.1/eek/eek-xkl.h
 include/eek-0.1/eek/eek.h
-lib/libeek-clutter.la
+${PLIST.clutter}lib/libeek-clutter.la
 lib/libeek-gtk.la
 lib/libeek-xkb.la
 lib/libeek-xkl.la
