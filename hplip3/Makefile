@@ -1,43 +1,44 @@
-# $NetBSD: Makefile,v 1.15 2010/08/29 10:07:31 gregoire Exp $
+# $NetBSD: Makefile,v 1.16 2010/08/30 10:18:02 gregoire Exp $
 #
 
-DISTNAME=	hplip-3.10.6
-PKGREVISION=	1
-CATEGORIES=	print
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=hplip/}
+DISTNAME=		hplip-3.10.6
+PKGREVISION=		1
+CATEGORIES=		print
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=hplip/}
 
-MAINTAINER=	khorben@defora.org
-HOMEPAGE=	http://hplip.sourceforge.net/
-COMMENT=	HP Linux Imaging and Printing
-LICENSE=	gnu-gpl-v2 AND mit AND modified-bsd
+MAINTAINER=		khorben@defora.org
+HOMEPAGE=		http://hplip.sourceforge.net/
+COMMENT=		HP Linux Imaging and Printing
+LICENSE=		gnu-gpl-v2 AND mit AND modified-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-CONFLICTS+=	hpijs-[0-9]*
+CONFLICTS+=		hpijs-[0-9]*
 
-BUILD_DEFS+=	VARBASE
+BUILD_DEFS+=		VARBASE
 
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
-USE_LANGUAGES+=	c c++ fortran
-USE_TOOLS+=	aclocal autoconf automake gmake pkg-config
-USE_TOOLS+=	perl:run
+GNU_CONFIGURE=		yes
+USE_LIBTOOL=		yes
+USE_LANGUAGES+=		c c++ fortran
+USE_TOOLS+=		aclocal autoconf automake gmake pkg-config
+USE_TOOLS+=		perl:run
 
-CONFIGURE_ARGS=	--sysconfdir=${PKG_SYSCONFDIR} \
-		--localstatedir=${VARBASE} \
-		--with-cupsbackenddir=${PREFIX}/libexec/cups/backend \
-		--with-cupsfilterdir=${PREFIX}/libexec/cups/filter
-CONFIGURE_ARGS+=--enable-hpcups-install
-CONFIGURE_ARGS+=--enable-hpijs-install
-CONFIGURE_ARGS+=--enable-cups-drv-install
-CONFIGURE_ARGS+=--enable-cups-ppd-install
-CONFIGURE_ARGS+=--enable-foomatic-drv-install
-CONFIGURE_ARGS+=--enable-foomatic-ppd-install
-CONFIGURE_ARGS+=--enable-foomatic-rip-hplip-install
+CONFIGURE_ARGS=		--sysconfdir=${PKG_SYSCONFDIR} \
+			--localstatedir=${VARBASE} \
+			--with-cupsbackenddir=${PREFIX}/libexec/cups/backend \
+			--with-cupsfilterdir=${PREFIX}/libexec/cups/filter
+CONFIGURE_ARGS+=	--enable-network-build
+CONFIGURE_ARGS+=	--disable-pp-build
+CONFIGURE_ARGS+=	--enable-hpcups-install
+CONFIGURE_ARGS+=	--enable-hpijs-install
+CONFIGURE_ARGS+=	--enable-cups-drv-install
+CONFIGURE_ARGS+=	--enable-cups-ppd-install
+CONFIGURE_ARGS+=	--enable-foomatic-drv-install
+CONFIGURE_ARGS+=	--enable-foomatic-ppd-install
+CONFIGURE_ARGS+=	--enable-foomatic-rip-hplip-install
 
-EGDIR=		${PREFIX}/share/examples/${PKGBASE}
-EGFILES=	hp/hplip.conf cups/pstotiff.convs cups/pstotiff.types \
-		xdg/autostart/hplip-systray.desktop
+EGDIR=			${PREFIX}/share/examples/${PKGBASE}
+EGFILES=		hp/hplip.conf xdg/autostart/hplip-systray.desktop
 
 INSTALL_MAKE_FLAGS+=	${MAKE_FLAGS}
 INSTALL_MAKE_FLAGS+=	sysconfdir=${EGDIR}
@@ -51,14 +52,14 @@ OWN_DIRS+=		${PKG_SYSCONFDIR}/xdg/autostart
 OWN_DIRS+=		${VARBASE}/lib/hp
 
 .for file in ${EGFILES}
-CONF_FILES+=	${EGDIR}/${file} ${PKG_SYSCONFDIR}/${file}
+CONF_FILES+=		${EGDIR}/${file} ${PKG_SYSCONFDIR}/${file}
 .endfor
-CONF_FILES+=	${EGDIR}/lib/hp/hplip.state ${VARBASE}/lib/hp/hplip.state
+CONF_FILES+=		${EGDIR}/lib/hp/hplip.state ${VARBASE}/lib/hp/hplip.state
 
-REPLACE_PYTHON=	*.py */*.py */*/*.py
-REPLACE_PERL=	prnt/filters/hpcac prnt/hpijs/foomatic-rip-hplip
+REPLACE_PYTHON=		*.py */*.py */*/*.py
+REPLACE_PERL=		prnt/filters/hpcac prnt/hpijs/foomatic-rip-hplip
 
-PY_PATCHPLIST=	yes
+PY_PATCHPLIST=		yes
 
 SUBST_CLASSES+=		fix-paths
 SUBST_STAGE.fix-paths=	post-configure
@@ -85,13 +86,17 @@ BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:Q}
 pre-configure:
 	cd ${WRKSRC} && aclocal && automake --add-missing --foreign && autoconf
 
+.include "options.mk"
+
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../net/net-snmp/buildlink3.mk"
 .include "../../print/cups/buildlink3.mk"
+.include "../../print/ghostscript/buildlink3.mk"
 .include "../../devel/libusb/buildlink3.mk"
-.include "../../graphics/sane-backends/buildlink3.mk"
-.include "../../sysutils/dbus/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
+.include "../../textproc/py-xml/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
