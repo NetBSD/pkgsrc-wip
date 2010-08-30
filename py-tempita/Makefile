@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/07/14 13:21:59 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2010/08/30 12:23:29 jihbed Exp $
 #
 
-DISTNAME=	Tempita-0.4.tar
-EGG_NAME=	${DISTNAME:S/.tar//}
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/T/t/S/.tar//}
-CATEGORIES=	www
+DISTNAME=	Tempita-0.4
+EGG_NAME=	${DISTNAME}
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/T/t/}
+CATEGORIES=	textproc
 MASTER_SITES=	http://pypi.python.org/packages/source/T/Tempita/
-EXTRACT_SUFX=	.gz
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://pythonpaste.org/tempita/
