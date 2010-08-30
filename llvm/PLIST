@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2010/08/25 12:54:00 makoto Exp $
+@comment $NetBSD: PLIST,v 1.20 2010/08/30 04:57:10 makoto Exp $
 bin/bugpoint
 bin/llc
 bin/lli
@@ -436,7 +436,6 @@ include/llvm/Transforms/Utils/Local.h
 include/llvm/Transforms/Utils/PromoteMemToReg.h
 include/llvm/Transforms/Utils/SSAUpdater.h
 include/llvm/Transforms/Utils/SSAUpdaterImpl.h
-include/llvm/Transforms/Utils/SSI.h
 include/llvm/Transforms/Utils/UnifyFunctionExitNodes.h
 include/llvm/Transforms/Utils/UnrollLoop.h
 include/llvm/Transforms/Utils/ValueMapper.h
