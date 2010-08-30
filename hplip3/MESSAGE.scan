@@ -1,0 +1,7 @@
+===========================================================================
+$NetBSD: MESSAGE.scan,v 1.1 2010/08/30 15:30:22 gregoire Exp $
+
+To enable the SANE backend provided by ${PKGNAME}, add the contents
+of ${EGDIR}/sane.d/dll.conf to ${PKG_SYSCONFDIR}/sane.d/dll.conf.
+
+===========================================================================

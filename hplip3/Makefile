@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2010/08/30 10:18:02 gregoire Exp $
+# $NetBSD: Makefile,v 1.17 2010/08/30 15:30:22 gregoire Exp $
 #
 
 DISTNAME=		hplip-3.10.6
@@ -85,6 +85,9 @@ BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:Q}
 
 pre-configure:
 	cd ${WRKSRC} && aclocal && automake --add-missing --foreign && autoconf
+
+post-install:
+	${CHMOD} a-x ${DESTDIR}${PREFIX}/share/hplip/__init__.py
 
 .include "options.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2010/08/30 10:18:02 gregoire Exp $
+# $NetBSD: options.mk,v 1.2 2010/08/30 15:30:22 gregoire Exp $
 #
 # HPLIP dependencies are detailed in the following page:
 # http://hplipopensource.com/hplip-web/install/manual/distros/other.html
@@ -28,6 +28,8 @@ CONFIGURE_ARGS+=	--disable-fax-build
 .if !empty(PKG_OPTIONS:Mscan)
 PLIST.scan=		yes
 CONFIGURE_ARGS+=	--enable-scan-build
+MESSAGE_SRC+=		MESSAGE.scan
+MESSAGE_SUBST+=		EGDIR=${EGDIR}
 DEPENDS+=	xsane-[0-9]*:../../graphics/xsane
 .include "../../graphics/sane-backends/buildlink3.mk"
 .include "../../graphics/py-imaging/buildlink3.mk"
