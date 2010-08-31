@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/08/31 08:46:10 ondratu Exp $
+
+SHA1 (libdbglog-1.5.1.tar.bz2) = f2f44b7f033433654d7ee9836a45a796c523e144
+RMD160 (libdbglog-1.5.1.tar.bz2) = b1c4cb78a69cd1d7ad445f9e0158bc36d366d19a
+Size (libdbglog-1.5.1.tar.bz2) = 20698 bytes
