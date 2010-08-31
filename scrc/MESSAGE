@@ -1,6 +1,10 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2010/08/31 11:53:59 makoto Exp $
+$NetBSD: MESSAGE,v 1.2 2010/08/31 12:19:10 makoto Exp $
 
 For help, type
 ${PREFIX}/scrc-2.1/bin/scrc -h
+
+Or to compile sample file,
+ (rsync -a  ${PREFIX}/scrc-2.1/examples/simple/ /tmp/scrc-simple/ ; \
+  cd /tmp/scrc-simple; env PATH=${PREFIX}/scrc-2.1/bin:$PATH make)
 ===========================================================================
