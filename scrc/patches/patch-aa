@@ -1,0 +1,120 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/08/31 11:53:59 makoto Exp $
+
+--- work/scrc-2.1/Makefile.macros.orig	2006-09-29 02:48:26.000000000 +0900
++++ Makefile.macros	2010-08-31 10:34:22.000000000 +0900
+@@ -64,8 +64,7 @@
+ LLONG_LIB_NAME	= longlong
+ 
+ # --- paths
+-#SPECC		= /home/doemer/project/SpecC/chkout/scrc
+-SPECC		= /home/specc/scrc/current/
++SPECC		= @@SPECC@@
+ SPECC_HOME	= $(SPECC)
+ SPECC_BIN	= $(SPECC)/bin
+ SPECC_SRC	= $(SPECC)/src
+@@ -74,12 +73,9 @@
+ SPECC_IMP       = $(SPECC)/import
+ SPECC_DOC	= $(SPECC)/doc
+ SPECC_MAN	= $(SPECC)/man
++SPECC_INSTALL	= ${DESTDIR}@@PREFIX@@/$(PROJECT)
+ 
+-SPECC_INSTALL	= $(SPECC)/installed
+-#SPECC_INSTALL	= /usr/local/$(PROJECT)
+-
+-#SPECC_SLIB	= $(SPECC_LIB)
+-SPECC_SLIB	= $(SPECC_INSTALL)/lib
++SPECC_SLIB	= ${DESTDIR}@@PREFIX@@/$(PROJECT)/lib
+ 
+ TMP		= /tmp
+ 
+@@ -92,23 +88,38 @@
+ INSTALL_PERM	= u+rwX,g-sw+rX,o-w+rX
+ 
+ # --- target platform
++
++ifeq ($(OPSYS),SunOS)
+ TARGET		= SOLARIS
++SYSTEM		= -DSPARC -DSOLARIS
++SCPP	= $(CPP) -x c -D__attribute__\(x\)= $(GCC296)		# SOLARIS
++
+ #TARGET		= SUNOS4
+-#TARGET		= NETBSD
++#SYSTEM		= -DSPARC -DSUNOS4
++endif
++
++ifeq ($(OPSYS),NetBSD)
++TARGET		= NETBSD
++SYSTEM		= -DNETBSD
++SO_SUFFIX	= $(VERSION_MAJOR).$(VERSION_MINOR)	# NETBSD
++SCPP	= $(CPP) -x c -D__attribute__\(x\)=		# NETBSD
++SHARED	= -shared -nodefaultlibs -Xlinker -shared -Wl,-rpath @@PREFIX@@/$(PROJECT)/lib	-Wl,-rpath-link   @@PREFIX@@/$(PROJECT)/lib
++STDLIB	= -ll			# NETBSD
++endif
+ #TARGET		= LINUX
+ #TARGET		= GNUWIN32
+ 
+ # --- target system, operating system
+-SYSTEM		= -DSPARC -DSOLARIS
+-#SYSTEM		= -DSPARC -DSUNOS4
+ #SYSTEM		= -DAMIGA -DNETBSD
+ #SYSTEM		= -DX86 -DLINUX
+ #SYSTEM		= -DX86 -DGNUWIN32
+ #SYSTEM		= -DX86 -DGNUWIN32 -DWIN_NT
+ 
+ # --- target architecture (CPU)
+-ARCH		= -mv8 -mfpu
+-#ARCH		= -m68030 -m68881
++#ARCH		= -mv8 -mfpu
++ifeq (${MACHINE_ARCH},m68k)
++ARCH		= -m68030 -m68881
++endif
+ #ARCH		= -m32
+ #ARCH		=
+ 
+@@ -117,7 +128,7 @@
+ #EXE_SUFFIX	= .exe	# GNUWIN32
+ 
+ # --- shared library version suffix
+-SO_SUFFIX	= $(VERSION_MAJOR)			# SOLARIS
++#SO_SUFFIX	= $(VERSION_MAJOR)			# SOLARIS
+ #SO_SUFFIX	= $(VERSION_MAJOR).$(VERSION_MINOR)	# SUNOS4
+ #SO_SUFFIX	= $(VERSION_MAJOR).$(VERSION_MINOR)	# NETBSD
+ #SO_SUFFIX	= $(VERSION_MAJOR)			# LINUX
+@@ -132,17 +143,17 @@
+ 
+ # --- preprocessor call for SpecC source code (see also CcDriver.h!!!)
+ GCC296	= "-D__builtin_va_list=void*"
+-SCPP	= $(CPP) -x c -D__attribute__\(x\)= $(GCC296)		# SOLARIS
++#SCPP	= $(CPP) -x c -D__attribute__\(x\)= $(GCC296)		# SOLARIS
+ #SCPP	= $(CPP) -x c -D__USE_FIXED_PROTOTYPES__ -D__attribute__\(x\)=	# SUNOS4
+ #SCPP	= $(CPP) -x c -D__attribute__\(x\)= -D__inline= $(GCC296)	# NETBSD
+-SCPP	= $(CPP) -x c -U__GNUC__ -D__attribute__\(x\)= $(GCC296)	# LINUX
++#SCPP	= $(CPP) -x c -U__GNUC__ -D__attribute__\(x\)= $(GCC296)	# LINUX
+ #SCPP	= $(CPP) -x c -U__CYGWIN__ -D__attribute__\(x\)=		\
+ #		-D__extension__= $(GCC296) 				# GNUWIN32
+ 
+ # --- shared library flags
+-SHARED	= -shared -nodefaultlibs			# SOLARIS
++#SHARED	= -shared -nodefaultlibs			# SOLARIS
+ #SHARED	= -shared -nodefaultlibs			# SUNOS4
+-#SHARED	= -shared -nodefaultlibs -Xlinker -shared	# NETBSD
++
+ #SHARED	= -shared					# LINUX
+ #SHARED	= -shared					# GNUWIN32
+ 
+@@ -163,13 +174,13 @@
+ LNDBG	= -s
+ 
+ # --- shared vs. static libraries
+-DYNLIB	= -DDYNLIB
++#DYNLIB	= -DDYNLIB
+ #DYNLIB	=
+ LIBSFX	= so
+ #LIBSFX	= a
+ CCSLIB	= -fpic
+ #CCSLIB	=
+-LNSLIB	= -Xlinker -R -Xlinker $(SPECC_SLIB)
++LNSLIB	= -Wl,-rpath $(SPECC_SLIB)
+ #LNSLIB	=
+ #ADDLIB	= a
+ #ADDLIB	= so

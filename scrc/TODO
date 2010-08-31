@@ -1,0 +1,14 @@
+(1) Adjust scrc-2.1/Makefile.macros to support Linux and other OS.
+(2) Fix the runtime problem 
+    ERROR #3105: Semantic error in line 221
+             in file "/usr/include/stdio.h":
+             Declaration of symbol '__restrict'
+             does not match former declaration:
+             type mismatch (#2039).
+    (on NetBSD/{i386,amd64} 5.x, probably gcc-4.1.x)
+
+(3) See patches/patch-ag,
+   -Wl,rpath ${SPECC_SLIB} doesn't seem to work so the work around 
+   is on pathces/patch-ag
+   to set LD_RUN_PATH at compile time, may not be hurtful, but rpath
+   may be better

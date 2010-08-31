@@ -1,0 +1,22 @@
+$NetBSD: patch-af,v 1.1.1.1 2010/08/31 11:53:59 makoto Exp $
+
+--- src/IntRep/Expression.cc-orig	2006-09-29 02:47:26.000000000 +0900
++++ src/IntRep/Expression.cc	2010-04-19 12:15:49.000000000 +0900
+@@ -5170,7 +5170,7 @@
+ assert(  (0 == strcmp(EOL, "\n"))	/* (bug fix RD, 09/15/05) */
+        ||(0 == strcmp(EOL, "\r\n")));
+ if (0 == strcmp(EOL, "\n"))
+-   { while(PrintBuffer[LeadingNL] == '\n')
++  { while(PrintBuffer.at(LeadingNL) == '\n')
+ 	{ LeadingNL++;
+ 	 } /* elihw */
+     } /* fi */
+@@ -5179,7 +5179,7 @@
+ 	{ LeadingNL += 2;
+ 	 } /* elihw */
+     } /* esle */
+-return(&PrintBuffer[LeadingNL]);
++ return((const char*) &PrintBuffer.at(LeadingNL));
+ 
+ } /* end of SIR_Expression::Print */
+ 
