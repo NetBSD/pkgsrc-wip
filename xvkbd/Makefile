@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/08/31 09:01:58 ryo-on Exp $
+# $NetBSD: Makefile,v 1.4 2010/08/31 09:17:01 ryo-on Exp $
 #
 
 DISTNAME=	xvkbd-3.2
@@ -32,4 +32,5 @@ SUBST_SED.xaw=		-e 's,define XAW3D,,g'
 .endif
 
 .include "../../x11/libXtst/buildlink3.mk"
+.include "../../x11/libXp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
