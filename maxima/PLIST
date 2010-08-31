@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2010/07/28 13:36:07 asau Exp $
+@comment $NetBSD: PLIST,v 1.28 2010/08/31 13:57:08 asau Exp $
 bin/maxima
 bin/rmaxima
 bin/xmaxima
@@ -922,6 +922,7 @@ share/maxima/${PKGVERSION}/share/lapack/blas/ztrmm.lisp
 share/maxima/${PKGVERSION}/share/lapack/blas/ztrmv.lisp
 share/maxima/${PKGVERSION}/share/lapack/blas/ztrsm.lisp
 share/maxima/${PKGVERSION}/share/lapack/blas/ztrsv.lisp
+share/maxima/${PKGVERSION}/share/lapack/dgesv.lisp
 share/maxima/${PKGVERSION}/share/lapack/eigensys.lisp
 share/maxima/${PKGVERSION}/share/lapack/lapack-package.lisp
 share/maxima/${PKGVERSION}/share/lapack/lapack.mac
@@ -1651,6 +1652,7 @@ share/maxima/${PKGVERSION}/tests/rtest_algebraic.mac
 share/maxima/${PKGVERSION}/tests/rtest_allnummod.mac
 share/maxima/${PKGVERSION}/tests/rtest_ask.mac
 share/maxima/${PKGVERSION}/tests/rtest_boolean.mac
+share/maxima/${PKGVERSION}/tests/rtest_carg.mac
 share/maxima/${PKGVERSION}/tests/rtest_diff_invtrig.mac
 share/maxima/${PKGVERSION}/tests/rtest_dot.mac
 share/maxima/${PKGVERSION}/tests/rtest_elliptic.mac
