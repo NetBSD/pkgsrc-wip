@@ -1,0 +1,6 @@
+Utilities for working with Excel files that require
+both xlrd and xlwt.
+This package provides a collection of utilities for
+working with Excel files. Since these utilities may
+require either or both of the xlrd and xlwt packages,
+they are collected together seperately here.
