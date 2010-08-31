@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/08/29 04:58:41 ryo-on Exp $
+# $NetBSD: Makefile,v 1.3 2010/08/31 09:01:58 ryo-on Exp $
 #
 
 DISTNAME=	xvkbd-3.2
@@ -19,19 +19,17 @@ PKG_SUPPORTED_OPTIONS=	xaw
 
 USE_IMAKE=	yes
 
-INSTALLATION_DIRS=	${PKGMANDIR}/man1
-
-.if !empty(PKG_OPTIONS:Mxaw)
+.if !empty(PKG_OPTIONS:Mxaw) || (defined(XAW_TYPE) && ${XAW_TYPE} == "standard")
 SUBST_CLASSES+=		xaw
 SUBST_STAGE.xaw=	pre-configure
 SUBST_MESSAGE.xaw=	fixing pathes
 SUBST_FILES.xaw=	Imakefile
 SUBST_SED.xaw=		-e 's,define XAW3D,,g'
+
+.include "../../x11/libXaw/buildlink3.mk"
 .else
 .include "../../x11/Xaw3d/buildlink3.mk"
 .endif
 
-post-install:
-	${INSTALL_MAN} ${WRKSRC}/xvkbd.man ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/xvkbd.1
-
+.include "../../x11/libXtst/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
