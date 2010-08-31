@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2010/08/30 22:44:55 gregoire Exp $
+# $NetBSD: Makefile,v 1.21 2010/08/31 21:43:13 gregoire Exp $
 #
 
 DISTNAME=		hplip-3.10.6
@@ -26,7 +26,8 @@ USE_TOOLS+=		perl:run
 CONFIGURE_ARGS=		--sysconfdir=${PKG_SYSCONFDIR} \
 			--localstatedir=${VARBASE} \
 			--with-cupsbackenddir=${PREFIX}/libexec/cups/backend \
-			--with-cupsfilterdir=${PREFIX}/libexec/cups/filter
+			--with-cupsfilterdir=${PREFIX}/libexec/cups/filter \
+			--with-hpppddir=${PREFIX}/share/hplip/ppd/HP
 CONFIGURE_ARGS+=	--enable-network-build
 CONFIGURE_ARGS+=	--disable-pp-build
 CONFIGURE_ARGS+=	--enable-hpcups-install
@@ -90,6 +91,8 @@ pre-configure:
 post-install:
 	${CHMOD} a-x ${DESTDIR}${PREFIX}/share/hplip/__init__.py
 	${PY_COMPILE_ALL} ${DESTDIR}${PREFIX}/share/hplip
+	${MKDIR} ${DESTDIR}${PREFIX}/share/cups/model
+	${LN} -s ../../../share/hplip/ppd ${DESTDIR}${PREFIX}/share/cups/model/hplip-ppds
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
