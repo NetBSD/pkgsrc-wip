@@ -1,0 +1,3 @@
+dbgLog (debug logger) is a C++ library for debugging purposes and runtime
+logging to file with extension for Python and PHP. A simple solution for
+logging same way in many applications using different programming languages.
