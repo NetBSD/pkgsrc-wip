@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4081 2010/08/29 14:15:15 cheusov Exp $
+# $Id: Makefile,v 1.4082 2010/08/31 07:43:52 ondratu Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2071,6 +2071,7 @@ SUBDIR+=	py-tagger
 SUBDIR+=	py-taglib
 SUBDIR+=	py-telepathy
 SUBDIR+=	py-tempita
+SUBDIR+=	py-teng
 SUBDIR+=	py-texml
 SUBDIR+=	py-toscawidgets
 SUBDIR+=	py-tranquil
@@ -2372,6 +2373,7 @@ SUBDIR+=	tendra
 SUBDIR+=	tendra.org-sid
 SUBDIR+=	tenmado
 SUBDIR+=	tenshi
+SUBDIR+=	teng
 SUBDIR+=	termit
 SUBDIR+=	testdisk
 SUBDIR+=	tetrinet
