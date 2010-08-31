@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/08/31 09:17:01 ryo-on Exp $
+# $NetBSD: Makefile,v 1.5 2010/08/31 15:41:18 ryo-on Exp $
 #
 
 DISTNAME=	xvkbd-3.2
@@ -24,7 +24,7 @@ SUBST_CLASSES+=		xaw
 SUBST_STAGE.xaw=	pre-configure
 SUBST_MESSAGE.xaw=	fixing pathes
 SUBST_FILES.xaw=	Imakefile
-SUBST_SED.xaw=		-e 's,define XAW3D,,g'
+SUBST_SED.xaw=		-e 's,define XAW3D,undef XAW3D,g'
 
 .include "../../x11/libXaw/buildlink3.mk"
 .else
