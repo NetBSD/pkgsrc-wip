@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2010/07/02 01:49:06 asau Exp $
+@comment $NetBSD: PLIST,v 1.27 2010/09/01 15:07:34 asau Exp $
 bin/efricas
 bin/fricas
 lib/fricas/emacs/fricas-cpl.el
@@ -2312,6 +2312,12 @@ ${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugGraphTwoDbuild
 ${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugGraphTwoDbuildPage43.VIEW/graph0
 ${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugGraphTwoDbuildPage43.VIEW/image.bm
 ${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugGraphTwoDbuildPage43.VIEW/image.xpm
+${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntProgColorArrPage2.VIEW/data
+${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntProgColorArrPage2.VIEW/image.bm
+${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntProgColorArrPage2.VIEW/image.xpm
+${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntProgCompFunsPage3.VIEW/data
+${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntProgCompFunsPage3.VIEW/image.bm
+${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntProgCompFunsPage3.VIEW/image.xpm
 ${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntProgDrawingPage1.VIEW/data
 ${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntProgDrawingPage1.VIEW/image.bm
 ${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntProgDrawingPage1.VIEW/image.xpm
@@ -2321,6 +2327,21 @@ ${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntProgDrawing
 ${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntProgDrawingPage5.VIEW/data
 ${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntProgDrawingPage5.VIEW/image.bm
 ${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntProgDrawingPage5.VIEW/image.xpm
+${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntProgNewtonPage10.VIEW/data
+${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntProgNewtonPage10.VIEW/image.bm
+${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntProgNewtonPage10.VIEW/image.xpm
+${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntProgNewtonPage11.VIEW/data
+${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntProgNewtonPage11.VIEW/image.bm
+${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntProgNewtonPage11.VIEW/image.xpm
+${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntProgPLCPage10.VIEW/data
+${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntProgPLCPage10.VIEW/image.bm
+${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntProgPLCPage10.VIEW/image.xpm
+${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntProgRibbonPage2.VIEW/data
+${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntProgRibbonPage2.VIEW/image.bm
+${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntProgRibbonPage2.VIEW/image.xpm
+${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntProgVecFieldsPage2.VIEW/data
+${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntProgVecFieldsPage2.VIEW/image.bm
+${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntProgVecFieldsPage2.VIEW/image.xpm
 ${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntroGraphicsPage1.VIEW/data
 ${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntroGraphicsPage1.VIEW/graph0
 ${x11}lib/fricas/target/${MACHINE_GNU_PLATFORM}/share/viewports/ugIntroGraphicsPage1.VIEW/image.bm
