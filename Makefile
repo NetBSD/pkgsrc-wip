@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4084 2010/09/01 20:42:47 thomasklausner Exp $
+# $Id: Makefile,v 1.4085 2010/09/01 23:09:02 gduzan Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1057,8 +1057,6 @@ SUBDIR+=	kissme
 SUBDIR+=	klamav
 SUBDIR+=	kmymoney-devel
 SUBDIR+=	kmymoney-svn
-SUBDIR+=	kmymoney2-cvs
-SUBDIR+=	kmymoney2-devel
 SUBDIR+=	knutclient
 SUBDIR+=	koffice
 SUBDIR+=	koha
