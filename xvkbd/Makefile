@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/08/31 15:41:18 ryo-on Exp $
+# $NetBSD: Makefile,v 1.6 2010/09/01 19:25:56 ryo-on Exp $
 #
 
 DISTNAME=	xvkbd-3.2
@@ -12,23 +12,21 @@ LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.xvkbd
-PKG_SUPPORTED_OPTIONS=	xaw
-
-.include "../../mk/bsd.options.mk"
-
 USE_IMAKE=	yes
 
-.if !empty(PKG_OPTIONS:Mxaw) || (defined(XAW_TYPE) && ${XAW_TYPE} == "standard")
+.include "../../mk/xaw.buildlink3.mk"
+.if ${XAW_TYPE} == "standard"
 SUBST_CLASSES+=		xaw
 SUBST_STAGE.xaw=	pre-configure
-SUBST_MESSAGE.xaw=	fixing pathes
+SUBST_MESSAGE.xaw=	undefine Xaw3d
 SUBST_FILES.xaw=	Imakefile
 SUBST_SED.xaw=		-e 's,define XAW3D,undef XAW3D,g'
-
-.include "../../x11/libXaw/buildlink3.mk"
-.else
-.include "../../x11/Xaw3d/buildlink3.mk"
+.elif ${XAW_TYPE} == "neXtaw"
+SUBST_CLASSES+=		neXtaw
+SUBST_STAGE.neXtaw=	pre-configure
+SUBST_MESSAGE.neXtaw=	using NeXtaw3d
+SUBST_FILES.neXtaw=	Imakefile
+SUBST_SED.neXtaw=		-e 's,-lXaw3d,-lneXtaw,g'
 .endif
 
 .include "../../x11/libXtst/buildlink3.mk"
