@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4083 2010/08/31 13:48:42 obache Exp $
+# $Id: Makefile,v 1.4084 2010/09/01 20:42:47 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1165,7 +1165,6 @@ SUBDIR+=	libtorrent-rasterbar
 SUBDIR+=	libuuid
 SUBDIR+=	libuxre
 SUBDIR+=	libvc
-SUBDIR+=	libvdpau
 SUBDIR+=	libvg
 SUBDIR+=	libvpx
 SUBDIR+=	libwbxml2-patched
