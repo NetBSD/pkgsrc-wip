@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2010/09/01 23:06:49 gregoire Exp $
+# $NetBSD: Makefile,v 1.23 2010/09/01 23:46:57 gregoire Exp $
 #
 
 DISTNAME=		hplip-3.10.6
@@ -39,7 +39,7 @@ CONFIGURE_ARGS+=	--enable-foomatic-ppd-install
 CONFIGURE_ARGS+=	--enable-foomatic-rip-hplip-install
 
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
-EGFILES=		hp/hplip.conf xdg/autostart/hplip-systray.desktop
+EGFILES=		hp/hplip.conf
 
 INSTALL_MAKE_FLAGS+=	${MAKE_FLAGS}
 INSTALL_MAKE_FLAGS+=	sysconfdir=${EGDIR}
@@ -48,7 +48,6 @@ INSTALL_MAKE_FLAGS+=	systraydir=${EGDIR}/xdg/autostart
 INSTALL_MAKE_FLAGS+=	mimedir=${EGDIR}/cups
 
 OWN_DIRS+=		${PKG_SYSCONFDIR}/hp
-MAKE_DIRS+=		${PKG_SYSCONFDIR}/xdg/autostart
 OWN_DIRS+=		${VARBASE}/lib/hp
 
 .include "options.mk"
