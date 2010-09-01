@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/07/23 23:01:58 cheusov Exp $
+# $NetBSD: Makefile,v 1.4 2010/09/01 20:03:33 cheusov Exp $
 #
 
 DISTNAME=	libvdpau-0.4
@@ -9,6 +9,8 @@ MAINTAINER=	vle@gmx.net
 HOMEPAGE=	http://http.download.nvidia.com/XFree86/vdpau/doxygen/html/index.html
 COMMENT=	Video Decode and Presentation API for Unix
 LICENSE=	mit
+
+ONLY_FOR_PLATFORM=	${VDPAU_AVAILABLE_ON:S/$/-*-*/}
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -26,5 +28,6 @@ post-install:
 	set -e; cd ${WRKSRC}; \
 	${INSTALL_DATA} ${DOCFILES} ${DESTDIR}${PREFIX}/share/doc/libvdpau
 
+.include "available.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
