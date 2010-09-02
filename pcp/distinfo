@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/09/02 11:56:15 jihbed Exp $
+
+SHA1 (pcp-2.2.tar.gz) = 1ac8e0d795338645e55321c345eca53382870f08
+RMD160 (pcp-2.2.tar.gz) = c3606f5af124ed604d9d69eaa85719bb1a9f0d8e
+Size (pcp-2.2.tar.gz) = 2710238 bytes

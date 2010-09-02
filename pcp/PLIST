@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/09/02 11:56:15 jihbed Exp $
+bin/pcp
