@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/09/02 12:26:06 jihbed Exp $
+
+SHA1 (scscp-0.6.1.tar.gz) = be925be4c6760f9f9b65c8aa2247acd130cc050f
+RMD160 (scscp-0.6.1.tar.gz) = 39cefe20d8c736a2c23823b533a5ba3d6a5cabcc
+Size (scscp-0.6.1.tar.gz) = 554003 bytes
