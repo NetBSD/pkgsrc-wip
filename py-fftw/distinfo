@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/09/02 12:29:46 jihbed Exp $
+
+SHA1 (PyFFTW3-0.2.tar.gz) = b59c9e44e8c2b9558ed026d1484d4a09c2bbdbe7
+RMD160 (PyFFTW3-0.2.tar.gz) = 927c37576830df24ad1107efd007c3a1f9b784f2
+Size (PyFFTW3-0.2.tar.gz) = 24424 bytes
