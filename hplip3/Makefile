@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2010/09/01 23:46:57 gregoire Exp $
+# $NetBSD: Makefile,v 1.24 2010/09/02 07:31:03 gregoire Exp $
 #
 
 DISTNAME=		hplip-3.10.6
@@ -129,10 +129,11 @@ BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:Q}
 pre-configure:
 	cd ${WRKSRC} && aclocal && automake --add-missing --foreign && autoconf
 
+INSTALLATION_DIRS+=	share/cups/model
+
 post-install:
 	${CHMOD} a-x ${DESTDIR}${PREFIX}/share/hplip/__init__.py
 	${PY_COMPILE_ALL} ${DESTDIR}${PREFIX}/share/hplip
-	${MKDIR} ${DESTDIR}${PREFIX}/share/cups/model
 	${LN} -s ../../../share/hplip/ppd ${DESTDIR}${PREFIX}/share/cups/model/hplip-ppds
 
 .include "../../lang/python/application.mk"
