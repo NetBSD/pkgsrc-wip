@@ -1,0 +1,9 @@
+pyCalverter (Python Calendar Converter) is a tool
+for python developers that need to use Persian(Jalali) or
+Hijri(Islamic) Calendar in their programs . On the other side this to
+ol can convert these calendars (hijri, jalahi, gregorian) together .
+
+Since the Hijri, Jalali and Gregorian date type are difference and
+people in Middle East have problem with converting between these types
+of dates, So pyCalverter make it very easy to convert these\
+ type to each others.
