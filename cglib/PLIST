@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/09/02 12:10:01 jihbed Exp $
+lib/java/${PKGNAME}.jar
+lib/java/cglib.jar
