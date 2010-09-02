@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/09/02 12:20:28 jihbed Exp $
+
+--- setup.py.orig	2010-08-05 13:31:28.000000000 +0000
++++ setup.py	2010-08-05 13:33:39.000000000 +0000
+@@ -69,7 +69,7 @@
+         long_description = "\n".join(doclines[2:]),      
+         classifiers = filter(None, classifiers.split("\n")),
+         platforms = ["Any."],
+-        scripts = ["src/scripts/ccget", "src/scripts/cda"],
++        scripts = ["src/scripts/ccget"+sys.version[:3], "src/scripts/cda"+sys.version[:3]],
+         package_dir = {'cclib':'src/cclib', 'cclib.test':'test'},
+         packages = cclib_packages,
+         data_files = cclib_datafiles )
