@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Name=BKchem
+Comment=Edit chemical structures and reactions
+Type=Application
+Exec=bkchem2.6 %U
+Icon=/usr/pkg/share/bkchem/bkchem.png
+Categories=Education;Science;Chemistry;

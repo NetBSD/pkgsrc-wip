@@ -1,0 +1,42 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/09/02 12:22:32 jihbed Exp $
+
+--- setup.py.orig	2009-02-23 11:59:28.000000000 +0000
++++ setup.py	2010-08-06 13:17:39.000000000 +0000
+@@ -68,6 +68,8 @@
+                ('share/doc/bkchem', glob.glob( 'doc/*.xml') + glob.glob( 'doc/*.html') + ['README', 'INSTALL', 'progress.log']),
+                #('share/doc/bkchem/ps', glob.glob( 'doc/ps/*')),
+                #('share/doc/bkchem/pdf', glob.glob( 'doc/pdf/*')),
++		('/usr/pkg/bin',glob.glob('./bkchem'+sys.version[:3])),
++		('/usr/pkg/share/applications',glob.glob('./bkchem.desktop')),
+                ('share/doc/bkchem/html', glob.glob( 'doc/html/*')),
+                ('share/doc/bkchem/scripts', glob.glob( 'doc/scripts/*')),
+                ('share/doc/bkchem/img', glob.glob( 'doc/img/*')),
+@@ -101,28 +103,3 @@
+   print "file %s created" % config_name
+ 
+ 
+-  # the executable
+-  if not os.path.isdir( bin_dir):
+-    try:
+-      os.mkdir( bin_dir)
+-    except:
+-      print "ERROR: could not create directory %s" % bin_dir
+-      sys.exit( 201)      
+-  exec_name = os.path.join( bin_dir, 'bkchem')
+-  try:
+-    file = open( exec_name, 'w')
+-  except:
+-    print "ERROR: couldn't open the file %s for write" %  exec_name
+-    sys.exit( 201)
+-  file.write( "#!/bin/sh\n")
+-  file.write( 'python %s "$@"\n' % strip_path( os.path.join( py_dir, "bkchem", "bkchem.py")))
+-  file.close()
+-  print "file %s created" % exec_name
+-  try:
+-    os.chmod( os.path.join( bin_dir, 'bkchem'), 5+5*8+7*8*8)
+-  except:
+-    print "ERROR: failed to make %s executable" % exec_name
+-    sys.exit( 201)
+-  print "file %s made executable" % exec_name
+-  
+-
