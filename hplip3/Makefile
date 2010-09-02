@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2010/09/02 07:31:03 gregoire Exp $
+# $NetBSD: Makefile,v 1.25 2010/09/02 13:03:01 gregoire Exp $
 #
 
 DISTNAME=		hplip-3.10.6
@@ -6,7 +6,7 @@ PKGREVISION=		1
 CATEGORIES=		print
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=hplip/}
 
-MAINTAINER=		khorben@defora.org
+MAINTAINER=		gsutre@NetBSD.org
 HOMEPAGE=		http://hplip.sourceforge.net/
 COMMENT=		HP Linux Imaging and Printing
 LICENSE=		gnu-gpl-v2 AND mit AND modified-bsd
