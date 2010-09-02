@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/09/02 11:57:25 jihbed Exp $
+
+SHA1 (nsc2ke.tar.gz) = 847173fd2f0674bdee3387b59734757388c15a64
+RMD160 (nsc2ke.tar.gz) = bb5455ffab567778332111ffe9e1f306a47d9918
+Size (nsc2ke.tar.gz) = 120994 bytes
+SHA1 (patch-aa) = b7334199389fee37a22216c418d4f2c11151e02d

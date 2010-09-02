@@ -1,0 +1,18 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/09/02 11:57:25 jihbed Exp $
+
+--- makefile.orig	2010-08-19 10:45:30.000000000 +0000
++++ makefile	2010-08-19 10:45:44.000000000 +0000
+@@ -1,5 +1,5 @@
+-F77=f77
+-LINK=f77 -O
++F77=f2c-f77
++LINK=f2c-f77 -O
+ FLAGS=-c -O
+ 
+ OBJS=nsc2ke.o config.o mailla.o aires.o seg2d.o\
+@@ -12,4 +12,4 @@
+ 	$(F77) $(FLAGS) $*.f
+ 
+ NSC2KE:$(OBJS)
+-	$(LINK) $(OBJS) -o NSC2KE
++	$(LINK) $(OBJS) -o nsc2ke
