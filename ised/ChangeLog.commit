@@ -1,0 +1,107 @@
+2010-03-17  Simon Copar <simon.copar@gmail.com>
+
+	Changed obsolete atoi/atof functions to strtol/strtod
+	Added Bessel functions bj, by
+
+2010-03-14  Simon Copar <simon.copar@gmail.com>
+
+	Error reporting is inline, source file "errors" discarded
+	/dev/urandom is used for random seed, unless TIMERAND macro is set
+	Input lines can have arbitrary length: dynamic buffer resizing
+
+2010-03-11  Simon Copar <simon.copar@gmail.com>
+
+	Added polynomial operators px, pd, pz
+	Added statistical operators avg, var, c
+	Added vector operators "@^", "@=", "@!"
+	Reorganized man page
+
+2010-03-07  Simon Copar <simon.copar@gmail.com>
+
+	Modulo operator behaves correctly for negative values of second argument
+	Added new functions: min, max, nrm
+
+2010-01-09  Simon Copar <simon.copar@gmail.com>
+
+	Removed unnecessary copying by changing pass-by-value to pass-by-reference in vm.cpp
+
+2010-01-03  Simon Copar <simon.copar@gmail.com>
+
+	Significant speedup by "parse once, evaluate many times" for --l operator
+
+2010-01-02  Simon Copar <simon.copar@gmail.com>
+
+	Added Euler-Mascheroni constant "emc"
+
+2009-11-12  Simon Copar <simon.copar@gmail.com>
+
+	Constructor "()" uses negative counts to iterate over whole repetition sequence
+	Less dynamic allocation when parsing files
+	Polynomial operators "++", "--", "**", "//", "%%" added
+
+2009-11-07  Simon Copar <simon.copar@gmail.com>
+
+	"+" behaves as unary "-" in similar circumstances
+	For --l, entire output is surpressed if applied line is semicolon-terminated
+
+2009-11-04  Simon Copar <simon.copar@gmail.com>
+
+	Added alternative long operators for sqrt, cbrt,...
+
+2009-10-16  Simon Copar <simon.copar@gmail.com>
+
+	Added options --p and --n.
+	Added option transpose (--t).
+	Corrected bug in behavior of index ("_") operator on empty arrays.
+	Corrected line-numbering for --l.
+
+2009-10-01  Simon Copar <simon.copar@gmail.com>
+
+	Commented and empty line are omitted in file and standard input.
+	Comments and empty lines are preserved in --l evaluation.
+
+2009-09-30  Simon Copar <simon.copar@gmail.com>
+
+	Usage of long long int can be selected by preprocessor flag.
+	Extended factorial operator for negative floats and larger integers.
+	Corrected sqt behavior for negative values.
+	readline is now optional.
+	Fixed wrong behaviour of "+" and "-" after built-in constants.
+
+2009-09-26  Simon Copar <simon.copar@gmail.com>
+
+	Added pm and mp operators.
+
+2009-09-25  Simon Copar <simon.copar@gmail.com>
+
+	Fixed wrong behaviour of "+" and "-" after "!" operator.
+
+2009-09-18  Simon Copar <simon.copar@gmail.com>
+
+	Fixed minor bugs in configure.ac and vm.h.
+	Added checks and substitution code for exp10.
+
+2009-08-25  Simon Copar <simon.copar@gmail.com>
+
+        Fixed bug regarding behaviour of semicolon-separated lines in conjunction with --l.
+
+2009-08-18  Simon Copar <simon.copar@gmail.com>
+
+	Corrected behaviour of --l and --a on empty or commented lines.
+
+2009-08-15  Simon Copar <simon.copar@gmail.com>
+
+	Added "deg" constant
+
+2009-07-05  Simon Copar <simon.copar@gmail.com>
+
+	New operator: #_
+
+2009-06-28  Simon Copar <simon.copar@gmail.com>
+
+	Shabang (#!) at the beginning of the line comments it.
+
+2009-06-12  Simon Copar <simon.copar@gmail.com>
+
+	Smart handling of interrupt signal when in interactive mode.
+	Prompt changes when awaiting options. Interrupt resets to ordinary input.

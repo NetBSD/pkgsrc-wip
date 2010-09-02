@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/09/02 12:06:52 jihbed Exp $
+bin/ised
+man/man1/ised.1
