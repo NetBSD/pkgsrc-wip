@@ -1,0 +1,24 @@
+$NetBSD: patch-ab,v 1.4 2010/09/03 21:22:54 shindenmorr Exp $
+
+Strip resource from tlen messages.
+
+--- ekg/themes.c.old	2010-09-02 04:14:27.000000000 +0200
++++ ekg/themes.c	2010-09-03 23:01:55.000000000 +0200
+@@ -808,7 +808,7 @@
+ 	/* 1) let's check if we have such window as target... */
+ 
+ 	/* if it's jabber and we've got '/' in target strip it. [XXX, window resources] */
+-	if ((!xstrncmp(target, "xmpp:", 5)) && (tmp = xstrchr(target, '/'))) {
++	if (((!xstrncmp(target, "xmpp:", 5)) || (!xstrncmp(target, "tlen:", 5))) && (tmp = xstrchr(target, '/'))) {
+ 		newtarget = xstrndup(target, tmp - target);
+ 		w = window_find_s(session, newtarget);		/* and search for windows with stripped '/' */
+ 		/* even if w == NULL here, we use newtarget to create window without resource */
+@@ -837,7 +837,7 @@
+ 	if (u && u->nickname)
+ 		target = u->nickname;			/* use nickname instead of target */
+ 	else if (u && u->uid && ( /* don't use u->uid, if it has resource attached */
+-			xstrncmp(u->uid, "xmpp:", 5) || !xstrchr(u->uid, '/')))
++			xstrncmp(u->uid, "xmpp:", 5) || xstrncmp(u->uid, "tlen:", 5) || !xstrchr(u->uid, '/')))
+ 		target = u->uid;			/* use uid instead of target. XXX here. think about jabber resources */
+ 	else if (newtarget)
+ 		target = newtarget;			/* use target with stripped '/' */
