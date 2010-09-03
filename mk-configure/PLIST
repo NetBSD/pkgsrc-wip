@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2010/07/27 19:05:02 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.18 2010/09/03 20:52:11 cheusov Exp $
 bin/mkc_check_common.sh
 bin/mkc_check_compiler
 bin/mkc_check_custom
@@ -28,6 +28,12 @@ share/doc/mk-configure/README
 share/doc/mk-configure/TODO
 share/doc/mk-configure/presentation.pdf
 share/examples/mk-configure/Makefile
+share/examples/mk-configure/hello_calc2/Makefile
+share/examples/mk-configure/hello_calc2/expect.out
+share/examples/mk-configure/hello_calc2/expressions.txt
+share/examples/mk-configure/hello_calc2/lex.l
+share/examples/mk-configure/hello_calc2/parser.y
+share/examples/mk-configure/hello_calc2/test.mk
 share/examples/mk-configure/hello_compilers/Makefile
 share/examples/mk-configure/hello_compilers/compiler_test.c
 share/examples/mk-configure/hello_compilers/expect.out
@@ -84,22 +90,16 @@ share/examples/mk-configure/hello_dictd/libcommon/iswalnum.c
 share/examples/mk-configure/hello_dictd/libcommon/linkme.mk
 share/examples/mk-configure/hello_dictd/libcommon/str.c
 share/examples/mk-configure/hello_dictd/libdz/Makefile
+share/examples/mk-configure/hello_dictd/libdz/export.sym
 share/examples/mk-configure/hello_dictd/libdz/dz.c
 share/examples/mk-configure/hello_dictd/libdz/linkme.mk
 share/examples/mk-configure/hello_dictd/libmaa/Makefile
+share/examples/mk-configure/hello_dictd/libmaa/export.sym
 share/examples/mk-configure/hello_dictd/libmaa/linkme.mk
 share/examples/mk-configure/hello_dictd/libmaa/log.c
 share/examples/mk-configure/hello_dictd/libmaa/prime.c
 share/examples/mk-configure/hello_dictd/libmaa/set.c
 share/examples/mk-configure/hello_dictd/test.mk
-share/examples/mk-configure/hello_dll/Makefile
-share/examples/mk-configure/hello_dll/expect.out
-share/examples/mk-configure/hello_dll/plugin_foo.c
-share/examples/mk-configure/hello_dll/test.mk
-share/examples/mk-configure/hello_dlopen/Makefile
-share/examples/mk-configure/hello_dlopen/dlopen_test.c
-share/examples/mk-configure/hello_dlopen/expect.out
-share/examples/mk-configure/hello_dlopen/test.mk
 share/examples/mk-configure/hello_files/DEBIAN/control
 share/examples/mk-configure/hello_files/Makefile
 share/examples/mk-configure/hello_files/expect.NetBSD.out
@@ -126,6 +126,15 @@ share/examples/mk-configure/hello_lua/expect.out
 share/examples/mk-configure/hello_lua/foo.lua
 share/examples/mk-configure/hello_lua/foobar
 share/examples/mk-configure/hello_lua/test.mk
+share/examples/mk-configure/hello_plugins/Makefile
+share/examples/mk-configure/hello_plugins/app/Makefile
+share/examples/mk-configure/hello_plugins/app/app.c
+share/examples/mk-configure/hello_plugins/expect.out
+share/examples/mk-configure/hello_plugins/plugin1/Makefile
+share/examples/mk-configure/hello_plugins/plugin1/plugin1.c
+share/examples/mk-configure/hello_plugins/plugin2/Makefile
+share/examples/mk-configure/hello_plugins/plugin2/plugin2.c
+share/examples/mk-configure/hello_plugins/test.mk
 share/examples/mk-configure/hello_reqd/Makefile
 share/examples/mk-configure/hello_reqd/expect.out
 share/examples/mk-configure/hello_reqd/hello
