@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.3 2010/06/09 13:41:56 fhajny Exp $
+$NetBSD: distinfo,v 1.4 2010/09/03 21:42:51 fhajny Exp $
 
-SHA1 (passenger-2.2.14.tar.gz) = 04f8b4318595a6504e061f807c6e64ab0f029a51
-RMD160 (passenger-2.2.14.tar.gz) = c78d55e530e648b2313535e0761ae8b6fa619228
-Size (passenger-2.2.14.tar.gz) = 2207394 bytes
+SHA1 (passenger-2.2.15.tar.gz) = dbb2f3346061872a43efc554990d8993172c8ff9
+RMD160 (passenger-2.2.15.tar.gz) = 52d0eb505d6c19e45ccc0dac8d1e675aed505c14
+Size (passenger-2.2.15.tar.gz) = 2128473 bytes
 SHA1 (patch-aa) = c737244a61cd027c49a1a123696c84fc83a97ac7
 SHA1 (patch-ab) = 1ccac0313b6f9f423c7310c9a62af1f16237fcc3
