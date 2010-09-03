@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2010/05/24 06:34:59 obache Exp $
+# $NetBSD: Makefile,v 1.4 2010/09/03 08:41:14 obache Exp $
 
-DISTNAME=	Python-2.7b2
-PKGNAME=	${DISTNAME:S/Python/python27/:S/b/beta/}
+DISTNAME=	Python-2.7
+PKGNAME=	${DISTNAME:S/Python/python27/}
 CATEGORIES=	lang python
 MASTER_SITES=	http://www.python.org/ftp/python/2.7/
 EXTRACT_SUFX=	.tar.bz2
