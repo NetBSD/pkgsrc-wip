@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.14 2010/08/27 10:11:51 cheusov Exp $
+# $NetBSD: Makefile,v 1.15 2010/09/04 14:10:00 cheusov Exp $
 #
 
 .include "../../wip/mawk-uxre/Makefile.common"
 
 PKGNAMESUF=	uxre
 
-MAKEFLAGS+=	LIBS=-luxre\ -lm
+LIBS=		-luxre
 
 DESCR_SRC+=	${.CURDIR}/DESCR.addon
 
