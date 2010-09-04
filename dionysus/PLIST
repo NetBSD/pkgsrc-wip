@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/09/04 17:12:01 gschwarz Exp $
+bin/dionysus
+info/dionysus
+share/dionysus/databases/chemistry.ddb
+share/dionysus/databases/semiconductors.ddb
+share/dionysus/databases/universal.ddb
