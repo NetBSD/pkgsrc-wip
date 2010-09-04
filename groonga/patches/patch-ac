@@ -1,19 +1,17 @@
-$NetBSD: patch-ac,v 1.1 2010/08/08 12:54:17 obache Exp $
+$NetBSD: patch-ac,v 1.2 2010/09/04 10:57:57 obache Exp $
 
-need for EAI_* in netdb.h
+need for sys/sysctl.h.
 
---- lib/groonga_in.h.orig	2010-07-29 04:53:55.000000000 +0000
+--- lib/groonga_in.h.orig	2010-08-18 05:19:17.000000000 +0000
 +++ lib/groonga_in.h
-@@ -32,8 +32,12 @@
- #define _XOPEN_SOURCE 600
- #else
- #if !defined(__APPLE__) && !defined(__FreeBSD__)
-+#if defined(__NetBSD__)
-+#define _XOPEN_SOURCE 520
-+#else
- #define _XOPEN_SOURCE 500
- #endif
-+#endif
- #endif /* USE_AIO */
+@@ -23,6 +23,10 @@
+ #define _GNU_SOURCE
+ #endif /* __GNUC__ */
  
- #ifdef HAVE_STDLIB_H
++#if defined(__NetBSD__) && !defined(_NETBSD_SOURCE)
++#define _NETBSD_SOURCE 1
++#endif
++
+ #ifdef HAVE_CONFIG_H
+ #include "config.h"
+ #endif /* HAVE_CONFIG_H */
