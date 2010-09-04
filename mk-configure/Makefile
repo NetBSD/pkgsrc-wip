@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2010/09/03 20:52:11 cheusov Exp $
+# $NetBSD: Makefile,v 1.26 2010/09/04 11:48:43 cheusov Exp $
 #
 
 DISTNAME=	mk-configure-0.19.0
@@ -19,7 +19,7 @@ USE_LANGUAGES=		# no languages
 DOC_FILES=		README NEWS ChangeLog TODO FAQ COPYRIGHT \
 			doc/presentation.pdf
 
-MAKE_ENV+=		MKCATPAGES=no MKHTML=no BMAKE=${MAKE}
+MAKE_ENV+=		MANDIR=${PREFIX}/${PKGMANDIR} BMAKE=${MAKE}
 
 AUTO_MKDIRS=		yes
 
