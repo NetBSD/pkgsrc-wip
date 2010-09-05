@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2008/10/02 20:49:45 gschwarz Exp $
+# $NetBSD: Makefile,v 1.16 2010/09/05 11:26:37 gschwarz Exp $
 
-DISTNAME=	pdnsd-1.2.7-par
+DISTNAME=	pdnsd-1.2.8-par
 PKGNAME=	${DISTNAME:S/-par//}
 CATEGORIES=	net
 MASTER_SITES=	http://www.phys.uu.nl/~rombouts/pdnsd/releases/ \
@@ -9,6 +9,7 @@ MASTER_SITES=	http://www.phys.uu.nl/~rombouts/pdnsd/releases/ \
 MAINTAINER=	schwarz@NetBSD.org
 HOMEPAGE=	http://www.phys.uu.nl/~rombouts/pdnsd/
 COMMENT=	Pdnsd is a DNS resolver
+LICENSE=	gnu-gpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 

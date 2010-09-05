@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2008/10/02 20:49:45 gschwarz Exp $
+$NetBSD: distinfo,v 1.6 2010/09/05 11:26:37 gschwarz Exp $
 
-SHA1 (pdnsd-1.2.7-par.tar.gz) = 8f2a0ec234efd61d81a2e89559a94568c342b36f
-RMD160 (pdnsd-1.2.7-par.tar.gz) = 5bb73572120ed9e27f7294f21e2f9878671aef41
-Size (pdnsd-1.2.7-par.tar.gz) = 459565 bytes
+SHA1 (pdnsd-1.2.8-par.tar.gz) = 538849975f29c59b1e7f0dd0756435cc6f0f2b30
+RMD160 (pdnsd-1.2.8-par.tar.gz) = 227a550ba210c2454b3cc39e8d8d056960d49b9f
+Size (pdnsd-1.2.8-par.tar.gz) = 471303 bytes
 SHA1 (patch-aa) = 94b96a52654691cb85e90318fe432afc10ed81f2
