@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/04/19 20:22:33 gschwarz Exp $
+# $NetBSD: Makefile,v 1.7 2010/09/05 09:33:25 gschwarz Exp $
 
 DISTNAME=	fnord-1.10
 CATEGORIES=	www
@@ -8,12 +8,14 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	schwarz@NetBSD.org
 HOMEPAGE=	http://www.fefe.de/fnord/
 COMMENT=	Small HTTP server
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gmake
 DEPENDS+=	ucspi-tcp-*:../../net/ucspi-tcp
 
+CFLAGS+=	${CPPFLAGS}
 MAKE_ENV+=	RANLIB=${RANLIB:Q}
 
 .if exists(/usr/include/alloca.h)
