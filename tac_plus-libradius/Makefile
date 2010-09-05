@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2009/04/19 21:09:41 gschwarz Exp $
+# $NetBSD: Makefile,v 1.8 2010/09/05 16:27:36 gschwarz Exp $
 
 DISTNAME=	tac_plus.F5.0.0.alpha-libradius
 PKGNAME=	tac_plus-libradius-5.0.0
@@ -27,6 +27,10 @@ CPPFLAGS+=	-DFREEBSD
 CPPFLAGS+=	-DNETBSD
 .elif ${OPSYS} == "IRIX"
 CPPFLAGS+=	-DMIPS
+.endif
+
+.if !empty(MACHINE_PLATFORM:MDarwin-9.*) || !empty(MACHINE_PLATFORM:MDarwin-1[0-9].*) # MacOS 10.5 or higher
+CPPFLAGS+=	-DMACOSX5PLUS
 .endif
 
 do-install:

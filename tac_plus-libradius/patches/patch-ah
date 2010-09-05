@@ -1,4 +1,4 @@
-$NetBSD: patch-ah,v 1.3 2008/10/04 20:26:29 gschwarz Exp $
+$NetBSD: patch-ah,v 1.4 2010/09/05 16:27:36 gschwarz Exp $
 
 --- tac_plus.c.orig	2000-12-18 17:58:02.000000000 +0100
 +++ tac_plus.c	2008-10-04 21:54:02.000000000 +0200
@@ -28,10 +28,10 @@ $NetBSD: patch-ah,v 1.3 2008/10/04 20:26:29 gschwarz Exp $
  #ifndef REAPCHILD
  
 -#ifdef LINUX
-+#if defined(LINUX) || defined(__sgi)
++#if defined(LINUX) || defined(__sgi) || defined(MACOSX5PLUS)
  	if (setpgrp() == -1)
 -#else /* LINUX */
-+#else /* LINUX or IRIX */
++#else /* LINUX or IRIX or MacOS 10.5 or later */
  	if (setpgrp(0, getpid()) == -1)
 -#endif /* LINUX */
 +#endif /* LINUX or IRIX */
