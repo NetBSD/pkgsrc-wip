@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/09/04 17:12:01 gschwarz Exp $
+# $NetBSD: Makefile,v 1.2 2010/09/05 08:52:10 gschwarz Exp $
 
 DISTNAME=	dionysus-1.3.0
 CATEGORIES=	misc
@@ -8,6 +8,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	schwarz@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/dionysus/
 COMMENT=	Dionysus is a database engine for for universal constants
+LICENSE=	gnu-gpl-v3
 
 INFO_FILES=	yes
 USE_LANGUAGES=	# none
@@ -18,7 +19,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=	YES
 CONFIGURE_ARGS+=	--infodir=${PREFIX}/${PKGINFODIR}
 
-INSTALLATION_DIRS+=	 bin ${PKGINFODIR} ${PREFIX}/share/dionysus/databases
+INSTALLATION_DIRS+=	 bin ${PKGINFODIR} share/dionysus/databases
 
 post-install:
 		${INSTALL_DATA} ${WRKSRC}/databases/*.ddb ${DESTDIR}${PREFIX}/share/dionysus/databases/
