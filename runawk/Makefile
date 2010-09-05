@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.44 2010/03/28 11:41:49 cheusov Exp $
+# $NetBSD: Makefile,v 1.45 2010/09/05 14:25:41 cheusov Exp $
 #
 
-DISTNAME=	runawk-0.21.0
+DISTNAME=	runawk-1.0.0
 CATEGORIES=	lang devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=runawk/} \
 		http://mova.org/~cheusov/pub/runawk/
@@ -21,8 +21,11 @@ TEST_TARGET=		test
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "SunOS"
-MAKE_ENV+=		AWK_PROG=${AWK:Q}
+MAKE_ENV+=	AWK_PROG=${AWK:Q}
 .endif
+MAKE_ENV+=		PREFIX=${PREFIX}
+MAKE_ENV+=		MKCATPAGES=no
+MAKE_ENV+=		MANDIR=${PREFIX}/${PKGMANDIR}
 
 PKGDOCDIR=		${PREFIX}/share/doc/runawk
 EGDIR=			${PREFIX}/share/examples/runawk
@@ -30,10 +33,6 @@ EGDIR=			${PREFIX}/share/examples/runawk
 AUTO_MKDIRS=		yes
 
 DOC_FILES=		README NEWS ChangeLog
-
-MAKE_ENV+=		PREFIX=${PREFIX}
-MAKE_ENV+=		MKCATPAGES=no
-MAKE_ENV+=		MANDIR=${PREFIX}/${PKGMANDIR}
 
 post-install:
 .for i in ${DOC_FILES}
