@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2009/11/22 11:09:50 gschwarz Exp $
+# $NetBSD: Makefile,v 1.8 2010/09/05 09:19:17 gschwarz Exp $
 
 DISTNAME=	dnrd-2.20.3
 CATEGORIES=	net
@@ -7,6 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dnrd/}
 MAINTAINER=	schwarz@NetBSD.org
 HOMEPAGE=	http://dnrd.sourceforge.net/
 COMMENT=	Dnrd is a caching forwarding DNS proxy
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 

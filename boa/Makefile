@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2009/04/19 20:18:14 gschwarz Exp $
+# $NetBSD: Makefile,v 1.16 2010/09/05 09:10:47 gschwarz Exp $
 #
 
 DISTNAME=	boa-0.94.14rc21
@@ -8,6 +8,7 @@ MASTER_SITES=	http://www.boa.org/
 MAINTAINER=	schwarz@NetBSD.org
 HOMEPAGE=	http://www.boa.org/
 COMMENT=	Small HTTP server
+LICENSE=	gnu-gpl-v2
 
 PKG_SYSCONFSUBDIR=	boa
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
