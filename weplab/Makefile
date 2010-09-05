@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/12/09 23:03:00 gschwarz Exp $
+# $NetBSD: Makefile,v 1.5 2010/09/05 12:04:17 gschwarz Exp $
 
 DISTNAME=	weplab-0.1.5
 CATEGORIES=	security
@@ -7,6 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=weplab/}
 MAINTAINER=	schwarz@NetBSD.org
 HOMEPAGE=	http://weplab.sourceforge.net/
 COMMENT=	Weplab is a tool to review the security of WEP encryption
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
