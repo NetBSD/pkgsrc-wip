@@ -1,15 +1,56 @@
-$NetBSD: patch-ab,v 1.3 2010/08/06 20:43:34 ahp-nils Exp $
+$NetBSD: patch-ab,v 1.4 2010/09/06 09:03:54 ahp-nils Exp $
 
---- config.c.orig	2008-06-02 10:26:14.000000000 +0000
+--- config.c.orig	2010-06-28 08:04:56.000000000 +0000
 +++ config.c
-@@ -1,5 +1,10 @@
+@@ -1,5 +1,9 @@
  #include <sys/queue.h>
-+#ifndef __NetBSD__
++#ifdef _ALLOCA_H
  #include <alloca.h>
-+#endif
-+#if __NetBSD__
++#else
 +#include <limits.h>
 +#endif
  #include <ctype.h>
  #include <dirent.h>
  #include <errno.h>
+@@ -519,7 +523,12 @@ static int readConfigFile(const char *co
+        length arrays -- of course, if we aren't run setuid it doesn't
+        matter much */
+ 
+-    fd = open(configFile, O_RDONLY | O_CLOEXEC);
++#ifdef O_CLOEXEC
++	fd = open(configFile, O_RDONLY | O_CLOEXEC);
++#else /* __NetBSD__ */
++	fd = open(configFile, O_RDONLY);
++#endif /* __NetBSD__ */
++
+     if (fd < 0) {
+ 	message(MESS_ERROR, "failed to open config file %s: %s\n",
+ 		configFile, strerror(errno));
+@@ -546,8 +555,13 @@ static int readConfigFile(const char *co
+     }
+ 
+ 	length = sb.st_size;
++#ifdef MAP_POPULATE
+ 	buf = mmap(NULL, (size_t)(length + 2), PROT_READ | PROT_WRITE,
+ 			MAP_PRIVATE | MAP_POPULATE, fd, (off_t) 0);
++#else /* __NetBSD__ */
++	buf = mmap(NULL, (size_t)(length + 2), PROT_READ | PROT_WRITE,
++			MAP_PRIVATE, fd, (off_t) 0);
++#endif /* __NetBSD__ */
+ 	if (buf == MAP_FAILED) {
+ 		message(MESS_ERROR, "Error mapping config file %s: %s\n",
+ 				configFile, strerror(errno));
+@@ -558,8 +572,13 @@ static int readConfigFile(const char *co
+ 	/* knowing the buffer ends with a newline makes things (a bit) cleaner */
+ 	buf[length + 1] = '\0';
+ 	buf[length] = '\n';
++#ifdef MADV_DONTFORK
+ 	madvise(buf, (size_t)(length + 2),
+ 			MADV_SEQUENTIAL | MADV_WILLNEED | MADV_DONTFORK);
++#else /* __NetBSD__ */
++	madvise(buf, (size_t)(length + 2),
++			MADV_SEQUENTIAL | MADV_WILLNEED);
++#endif /* __NetBSD__ */
+ 
+     message(MESS_DEBUG, "reading config file %s\n", configFile);
+ 

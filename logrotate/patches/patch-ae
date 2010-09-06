@@ -1,6 +1,6 @@
-$NetBSD: patch-ae,v 1.1.1.1 2010/08/06 20:28:48 ahp-nils Exp $
+$NetBSD: patch-ae,v 1.2 2010/09/06 09:03:54 ahp-nils Exp $
 
---- examples/logrotate-default.orig	2007-08-29 07:19:36.000000000 +0000
+--- examples/logrotate-default.orig	2010-06-28 08:04:56.000000000 +0000
 +++ examples/logrotate-default
 @@ -12,18 +12,12 @@ create
  dateext

@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.2 2010/08/06 20:28:48 ahp-nils Exp $
+$NetBSD: patch-aa,v 1.2 2010/09/06 09:03:54 ahp-nils Exp $
 
---- Makefile.orig	2008-05-19 10:25:54.000000000 +0000
+--- Makefile.orig	2010-06-28 08:04:56.000000000 +0000
 +++ Makefile
-@@ -45,6 +45,14 @@ ifeq ($(OS_NAME),SunOS)
+@@ -47,6 +47,14 @@ ifeq ($(OS_NAME),SunOS)
      endif
  endif
  

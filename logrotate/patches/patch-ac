@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.1.1.2 2010/08/06 20:28:48 ahp-nils Exp $
+$NetBSD: patch-ac,v 1.2 2010/09/06 09:03:54 ahp-nils Exp $
 
---- config.h.orig	2005-11-12 19:07:56.000000000 +0000
+--- config.h.orig	2010-06-28 08:04:56.000000000 +0000
 +++ config.h
 @@ -16,6 +16,13 @@
  #define STATEFILE "/var/log/logrotate.status"

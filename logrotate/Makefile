@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2010/08/23 09:25:09 ahp-nils Exp $
+# $NetBSD: Makefile,v 1.8 2010/09/06 09:03:54 ahp-nils Exp $
 #
 
-DISTNAME=	logrotate-3.7.8
+DISTNAME=	logrotate-3.7.9
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GENTOO:=distfiles/}
 
