@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2010/09/05 14:25:41 cheusov Exp $
+# $NetBSD: Makefile,v 1.46 2010/09/06 10:25:06 cheusov Exp $
 #
 
 DISTNAME=	runawk-1.0.0
@@ -24,7 +24,6 @@ TEST_TARGET=		test
 MAKE_ENV+=	AWK_PROG=${AWK:Q}
 .endif
 MAKE_ENV+=		PREFIX=${PREFIX}
-MAKE_ENV+=		MKCATPAGES=no
 MAKE_ENV+=		MANDIR=${PREFIX}/${PKGMANDIR}
 
 PKGDOCDIR=		${PREFIX}/share/doc/runawk
