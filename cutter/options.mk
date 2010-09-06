@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.1.1.1 2010/03/25 09:13:04 obache Exp $
+# $NetBSD: options.mk,v 1.2 2010/09/06 09:12:38 obache Exp $
 #
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.cutter
-PKG_SUPPORTED_OPTIONS=	goffice gstreamer libsoup
+PKG_SUPPORTED_OPTIONS=	goffice gstreamer gtk2 libsoup
 PKG_SUGGESTED_OPTIONS=	#
 
 .include "../../mk/bsd.options.mk"
@@ -13,7 +13,7 @@ PLIST_VARS+=	goffice gst gtk soup
 ### goffice support
 ###
 .if !empty(PKG_OPTIONS:Mgoffice)
-.include "../../misc/goffice0.6/buildlink3.mk"
+.include "../../misc/goffice0.8/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-goffice
 PLIST.gtk=		yes
 .else
@@ -32,13 +32,24 @@ CONFIGURE_ARGS+=	--disable-gstreamer
 .endif
 
 ###
+### gtk2 support
+###
+.if !empty(PKG_OPTIONS:Mgtk2)
+.include "../../x11/gtk2/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-gtktest
+PLIST.gtk=		yes
+.else
+CONFIGURE_ARGS+=	--disable-gtktest
+.endif
+
+###
+###
 ### libsoup support
 ###
 .if !empty(PKG_OPTIONS:Mlibsoup)
 .  include "../../net/libsoup24/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-libsoup
 PLIST.soup=		yes
-PLIST.gtk=		yes
 .else
 CONFIGURE_ARGS+=	--disable-libsoup
 .endif
