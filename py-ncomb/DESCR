@@ -1,0 +1,4 @@
+The pyncomb (PYthoN COMBinatorics) library is a collection of
+functions to work with basic combinatorial objects (e.g. permutations,
+subsets, tuples), and provides algorithms for ranking, unranking, and
+iterating over all objects in a specified class.
