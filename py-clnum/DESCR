@@ -1,0 +1,4 @@
+Adds rational numbers and arbitrary precision floating point numbers in
+real and complex form to Python. Also provides arbitrary precision floating
+point replacements for the functions in the math and cmath standard
+library modules
