@@ -1,0 +1,34 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/09/07 00:54:21 jihbed Exp $
+
+--- Makefile.in.orig	2009-03-12 00:27:29.000000000 +0000
++++ Makefile.in	2010-09-07 01:06:27.000000000 +0000
+@@ -42,19 +42,19 @@
+ install: all
+ 	@echo "==> Installing compiled binaries & manpages..."
+ 	test -d $(PREFIX)/bin \
+-	|| mkdir -p $(PREFIX)/bin \
++	|| mkdir -p $(DESTDIR)$(PREFIX)/bin \
+         || exit 1;
+-	install ical $(PREFIX)/bin
+-	install idate $(PREFIX)/bin
+-	install ipraytime $(PREFIX)/bin
+-	install ireminder $(PREFIX)/bin
++	$(BSD_INSTALL_PROGRAM) ical $(DESTDIR)$(PREFIX)/bin
++	$(BSD_INSTALL_PROGRAM)  idate $(DESTDIR)$(PREFIX)/bin
++	$(BSD_INSTALL_PROGRAM) ipraytime $(DESTDIR)$(PREFIX)/bin
++	$(BSD_INSTALL_SCRIPT) ireminder $(DESTDIR)$(PREFIX)/bin
+ 	test -d $(PREFIX)/man/man1 \
+-	|| mkdir -p $(PREFIX)/man/man1\
++	|| mkdir -p $(DESTDIR)$(PREFIX)/man/man1\
+ 	|| exit 1;
+-	install doc/ical.1 $(PREFIX)/man/man1
+-	install doc/idate.1 $(PREFIX)/man/man1
+-	install doc/ipraytime.1 $(PREFIX)/man/man1
+-	install doc/ireminder.1 $(PREFIX)/man/man1
++	$(BSD_INSTALL_MAN) doc/ical.1 $(DESTDIR)$(PREFIX)/man/man1
++	$(BSD_INSTALL_MAN) doc/idate.1 $(DESTDIR)$(PREFIX)/man/man1
++	$(BSD_INSTALL_MAN) doc/ipraytime.1 $(DESTDIR)$(PREFIX)/man/man1
++	$(BSD_INSTALL_MAN) doc/ireminder.1 $(DESTDIR)$(PREFIX)/man/man1
+ 
+ debinstall: all
+ 	@echo "==> Installing compiled binaries & manpages..."

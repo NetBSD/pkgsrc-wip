@@ -1,0 +1,9 @@
+The itools is a collection of command line tools that mimics the development of
+the underlying ITL library and is meant to always give the end-user a simple
+means to access its functions. The available tools are:
+
+  * ical: Display a Hijri calendar.
+  * idate: Multi method Hijri/Gregorian date converter.
+  * ipraytime: Prayer times and Qibla calculator and schedule table generator.
+  * ireminder: Prayer time reminder Perl script.
+
