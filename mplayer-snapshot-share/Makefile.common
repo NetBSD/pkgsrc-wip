@@ -1,0 +1,88 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2010/09/07 21:52:27 cheusov Exp $
+# used by multimedia/gmplayer/Makefile
+# used by multimedia/mencoder/Makefile
+# used by multimedia/mplayer/Makefile
+
+MPLAYER_SNAPSHOT_DATE=	2010-05-30
+MPLAYER_VERSION=	1.0rc${MPLAYER_SNAPSHOT_DATE:S/-//g}
+
+#DISTNAME=		mplayer-${MPLAYER_SNAPSHOT_DATE:S/-//g}
+DISTNAME=		MPlayer-1.0rc3
+
+CATEGORIES?=		multimedia
+
+#MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=commondistfiles/}
+#MASTER_SITES+=		http://mx1.nygren.pp.se/misc/
+MASTER_SITES=		http://www.mplayerhq.hu/MPlayer/releases/ \
+			ftp://ftp.mplayerhq.hu/MPlayer/releases/
+.for i in 1 2 3 4 5 7 8 9 10 11 12 # 6 is missed
+MASTER_SITES+=		http://www${i}.mplayerhq.hu/MPlayer/releases/
+.endfor
+.for i in 1 2 4 5 6 7 8 9 10 11 12 # 3 is missed
+MASTER_SITES+=		ftp://ftp${i}.mplayerhq.hu/MPlayer/releases/
+.endfor
+
+EXTRACT_SUFX=		.tar.bz2
+DIST_SUBDIR=		mplayer
+
+#WRKSRC=			${WRKDIR}/mplayer-export-${MPLAYER_SNAPSHOT_DATE}
+
+MAINTAINER?=		ahoka@NetBSD.org
+HOMEPAGE?=		http://www.mplayerhq.hu/
+
+#
+# NOTE: gmplayer has its own distinfo file. if you are also updating
+# gmplayer, you must ensure that *both* distinfo files contain the
+# correct, up-to-date files and checksums.
+#
+# NOTE: patches are shared between mplayer and gmplayer!
+#
+
+PATCHDIR=		${.CURDIR}/../../wip/mplayer-snapshot-share/patches
+DISTINFO_FILE=		${.CURDIR}/../../wip/mplayer-snapshot-share/distinfo
+
+RESTRICTED=		Prohibited by USAs DMCA and patent law
+NO_BIN_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
+NO_SRC_ON_FTP=		${RESTRICTED}
+
+USE_TOOLS+=		gmake
+HAS_CONFIGURE=		YES
+
+PTHREAD_OPTS+=		require
+
+CONFIGURE_ARGS+=	--prefix=${PREFIX:Q} \
+			#--with-extraincdir="${LOCALBASE}/include:${LOCALBASE}/include/faad2:${LOCALBASE}/include/cdparanoia:${LOCALBASE}/include/freetype2" \
+			--with-extralibdir="${LOCALBASE}/lib" \
+			--disable-dvdread-internal --disable-smb
+
+ONLY_FOR_COMPILER=	gcc
+
+# The configure script attempts to test-execute compiled programs in /tmp,
+# but that directory may be mounted as noexec; work this around by setting
+# TMPDIR to ${WRKDIR}
+CONFIGURE_ENV+=		TMPDIR=${WRKDIR:Q}
+
+.include "../../mk/bsd.prefs.mk"
+
+# The configure script misdetects endianness on mipseb
+.if ${OPSYS} == "NetBSD" && ${MACHINE_ARCH} == "mipseb"
+CONFIGURE_ARGS+=        --enable-big-endian
+.endif
+
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-arm)
+# Avoid crash with system include file:
+pre-patch:
+	mv ${WRKSRC}/libavutil/arm/bswap.h ${WRKSRC}/libavutil/arm/avbswap.h
+
+SUBST_CLASSES+=			arm_bswap
+SUBST_STAGE.arm_bswap=		pre-configure
+SUBST_FILES.arm_bswap=		libavutil/bswap.h
+SUBST_SED.arm_bswap=		-e s,\"arm/bswap.h\",\"arm/avbswap.h\",g
+SUBST_MESSAGE.arm_bswap=	Fixing "arm/bswap.h" conflict in libavutil
+
+# autodetect code enables these options on NetBSD/arm but it should not
+CONFIGURE_ARGS+=        --disable-armv5te --disable-armv6 --disable-armv6t2
+.endif
+
+.include "../../wip/mplayer-snapshot-share/options.mk"

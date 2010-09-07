@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/09/07 21:53:41 cheusov Exp $
+bin/mplayer
