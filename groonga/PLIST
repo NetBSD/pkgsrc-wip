@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2010/09/04 10:57:57 obache Exp $
+@comment $NetBSD: PLIST,v 1.4 2010/09/07 09:30:33 obache Exp $
 bin/grntest
 bin/groonga
 include/groonga/groonga.h
@@ -8,6 +8,8 @@ lib/libgroonga.la
 lib/pkgconfig/groonga.pc
 man/man1/groonga.1
 share/examples/groonga/groonga.conf
+share/examples/groonga/init.d/redhat/groonga
+share/examples/groonga/init.d/redhat/sysconfig/groonga
 share/groonga/admin_html/css/admin.css
 share/groonga/admin_html/css/ui-lightness/images/ui-bg_diagonals-thick_18_b81900_40x40.png
 share/groonga/admin_html/css/ui-lightness/images/ui-bg_diagonals-thick_20_666666_40x40.png
@@ -29,6 +31,7 @@ share/groonga/admin_html/images/loading.gif
 share/groonga/admin_html/index.html
 share/groonga/admin_html/js/jquery-1.4.2.min.js
 share/groonga/admin_html/js/jquery-ui-1.8.1.custom.min.js
+share/groonga/admin_html/js/jquery.json-2.2.min.js
 share/groonga/doc/ja/html/.buildinfo
 share/groonga/doc/ja/html/_sources/characteristic.txt
 share/groonga/doc/ja/html/_sources/commands.txt
@@ -295,3 +298,4 @@ share/groonga/munin/plugins/groonga_memory
 share/groonga/munin/plugins/groonga_n_records
 share/groonga/munin/plugins/groonga_query_performance
 share/groonga/munin/plugins/groonga_status
+@pkgdir lib/groonga/modules/tokenizers
