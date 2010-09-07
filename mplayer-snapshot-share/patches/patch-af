@@ -1,0 +1,12 @@
+$NetBSD: patch-af,v 1.1 2010/09/07 23:05:40 cheusov Exp $
+
+--- libswscale/yuv2rgb_mlib.c.orig	2009-02-09 14:31:53.000000000 +0000
++++ libswscale/yuv2rgb_mlib.c
+@@ -29,6 +29,7 @@
+ #include <assert.h>
+ 
+ #include "swscale.h"
++#include "swscale_internal.h"
+ 
+ static int mlib_YUV2ARGB420_32(SwsContext *c, uint8_t* src[], int srcStride[], int srcSliceY,
+                                int srcSliceH, uint8_t* dst[], int dstStride[]){
