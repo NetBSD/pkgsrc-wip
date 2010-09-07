@@ -1,0 +1,32 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/09/07 00:59:04 jihbed Exp $
+
+--- Makefile.orig	2010-01-05 04:48:33.000000000 +0000
++++ Makefile	2010-09-06 21:38:23.000000000 +0000
+@@ -1,5 +1,6 @@
+ 
+-INSTALL=install
++INSTALL=${BSD_INSTALL_DATA}
++PREFIX?=/usr/pkg
+ 
+ SOURCES=$(wildcard *.directory.in)
+ TARGETS=${SOURCES:.in=}
+@@ -10,13 +11,13 @@
+ 	make -C po all
+ 
+ install: all
+-	$(INSTALL) -d $(DESTDIR)/etc/xdg/menus/applications-merged/
+-	$(INSTALL) -d $(DESTDIR)/usr/share/desktop-directories/
+-	$(INSTALL) -m 0644 islamic.menu $(DESTDIR)/etc/xdg/menus/applications-merged/
+-	$(INSTALL) -m 0644 *.directory  $(DESTDIR)/usr/share/desktop-directories
++	mkdir -p $(DESTDIR)$(PREFIX)/etc/xdg/menus/applications-merged
++	mkdir -p $(DESTDIR)$(PREFIX)/share/desktop-directories
++	$(INSTALL) -m 0644 islamic.menu $(DESTDIR)$(PREFIX)/etc/xdg/menus/applications-merged
++	$(INSTALL) -m 0644 *.directory  $(DESTDIR)$(PREFIX)/share/desktop-directories
+ 	# Install icons
+-	$(INSTALL) -d $(DESTDIR)/usr/share/icons/hicolor/scalable/categories
+-	$(INSTALL) -m 0644 icons/*.svg $(DESTDIR)/usr/share/icons/hicolor/scalable/categories/
++	mkdir -p $(DESTDIR)$(PREFIX)/share/icons/hicolor/scalable/categories
++	$(INSTALL) -m 0644 icons/*.svg $(DESTDIR)$(PREFIX)/share/icons/hicolor/scalable/categories
+ 
+ %.directory: %.directory.in pos
+ 	intltool-merge -d po $< $@
