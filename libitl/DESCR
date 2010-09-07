@@ -1,0 +1,5 @@
+This library allows applications to convert between Hijri/Gregorian dates and
+compute Muslim prayer times and Qibla direction based on multiple methods
+of calculation.
+
+Part of the Islamic Tools and Libraries project (ITL)

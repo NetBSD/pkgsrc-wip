@@ -1,0 +1,18 @@
+$NetBSD: patch-ab,v 1.1.1.1 2010/09/07 00:53:34 jihbed Exp $
+
+--- ./hijri/Makefile.orig	2006-09-21 16:34:31.000000000 +0000
++++ ./hijri/Makefile	2010-09-07 00:43:20.000000000 +0000
+@@ -10,10 +10,10 @@
+ 
+ install: all
+ 	@echo "==> Installing hijri component..."
+-	test -d $(PREFIX)/include/itl \
+-	|| install -d $(PREFIX)/include/itl \
++	test -d $(DESTDIR)$(PREFIX)/include/itl \
++	|| ${BSD_INSTALL_DATA_DIR} -d $(DESTDIR)$(PREFIX)/include/itl \
+ 	|| exit 1;
+-	install src/hijri.h $(PREFIX)/include/itl
++	${BSD_INSTALL_DATA} src/hijri.h $(DESTDIR)$(PREFIX)/include/itl
+ 
+ uninstall:
+ 	@echo "==> Uninstalling hijri component..."

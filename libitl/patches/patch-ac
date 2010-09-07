@@ -1,0 +1,16 @@
+$NetBSD: patch-ac,v 1.1.1.1 2010/09/07 00:53:34 jihbed Exp $
+
+--- ./prayertime/Makefile.orig	2006-09-21 16:37:51.000000000 +0000
++++ ./prayertime/Makefile	2010-09-07 00:48:24.000000000 +0000
+@@ -11,9 +11,9 @@
+ install: all
+ 	@echo "==> Installing prayertime component..."
+ 	test -d $(PREFIX)/include/itl \
+-	|| install $(PREFIX)/include/itl \
++	|| $(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(PREFIX)/include/itl \
+ 	|| exit 1;
+-	install src/prayer.h $(PREFIX)/include/itl
++	$(BSD_INSTALL_DATA) src/prayer.h $(DESTDIR)$(PREFIX)/include/itl
+ 
+ uninstall:
+ 	@echo "==> Uninstalling prayertime component..."
