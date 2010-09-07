@@ -1,0 +1,13 @@
+Web interface for the Arabic verb conjugator Qutrub.
+The purpose of this software is to simplify automating conjugation for Arabic ve
+rbs. This software is part of the Arabic spellchecker project, focused on studyi
+ng the behavior of Arabic verbs, to be able to identify the conjugated verbs and
+ its root, and thus be able to spell check it or search for it.
+Qutrub conjugate a verb with minimal input (vocalized verb, the future mark), an
+d conjugate it in a generic way. It don't use classified models of verb conjugat
+ion.
+Qutrub detect the verb class and conjugate it in the appropriate form.
+Qutrub offers many features:
+ -Conjugation for past, future, imperative and passive voice.
+ -Suggestion for trilateral verbs
+
