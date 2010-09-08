@@ -1,0 +1,4 @@
+BasicPlayer layer is the simple player API of jlGui. These classes are designed
+to be used in any application that needs simple features
+(play, stop, pause, resume, seek) to play audio file or stream.
+It's a high-level API over JavaSound API
