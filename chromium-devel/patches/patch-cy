@@ -1,0 +1,22 @@
+$NetBSD: patch-cy,v 1.1.1.1 2010/09/08 15:00:59 rxg Exp $
+
+--- chrome/common/render_messages_internal.h.orig	2010-08-29 09:05:18.000000000 +0000
++++ chrome/common/render_messages_internal.h
+@@ -1866,7 +1866,7 @@ IPC_BEGIN_MESSAGES(ViewHost)
+                        int /* fd in browser */)
+ #endif
+ 
+-#if defined(OS_MACOSX)
++#if defined(OS_MACOSX) || defined(OS_FREEBSD)
+   // Asks the browser to create a block of shared memory for the renderer to
+   // pass NativeMetafile data to the browser.
+   IPC_SYNC_MESSAGE_ROUTED1_1(ViewHostMsg_AllocatePDFTransport,
+@@ -2041,7 +2041,7 @@ IPC_BEGIN_MESSAGES(ViewHost)
+   IPC_MESSAGE_CONTROL1(ViewHostMsg_ExtensionRemoveListener,
+                        std::string /* name */)
+ 
+-#if defined(OS_MACOSX)
++#if defined(OS_MACOSX) || defined(OS_FREEBSD)
+   // On OSX, we cannot allocated shared memory from within the sandbox, so
+   // this call exists for the renderer to ask the browser to allocate memory
+   // on its behalf. We return a file descriptor to the POSIX shared memory.

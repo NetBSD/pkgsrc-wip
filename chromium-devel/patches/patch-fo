@@ -1,0 +1,12 @@
+$NetBSD: patch-fo,v 1.1.1.1 2010/09/08 15:01:02 rxg Exp $
+
+--- tools/gyp/pylib/gyp/__init__.py.orig	2010-06-03 09:07:20.000000000 +0000
++++ tools/gyp/pylib/gyp/__init__.py
+@@ -315,6 +315,7 @@ def main(args):
+                            'cygwin':   'msvs',
+                            'freebsd7': 'make',
+                            'freebsd8': 'make',
++                           'netbsd5':  'make',
+                            'linux2':   'make',
+                            'openbsd4': 'make',
+                            'sunos5':   'make',}[sys.platform] ]

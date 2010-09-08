@@ -1,0 +1,22 @@
+$NetBSD: patch-fx,v 1.1.1.1 2010/09/08 15:01:02 rxg Exp $
+
+--- third_party/WebKit/WebCore/WebCore.gyp/WebCore.gyp.orig	2010-09-01 09:09:36.000000000 +0000
++++ third_party/WebKit/WebCore/WebCore.gyp/WebCore.gyp
+@@ -894,7 +894,7 @@
+             '<(chromium_src_dir)/gpu/gpu.gyp:gles2_c_lib',
+           ],
+         }],
+-        ['OS=="linux" or OS=="freebsd"', {
++        ['OS=="linux" or OS=="freebsd" or OS=="netbsd" or OS=="openbsd"', {
+           'dependencies': [
+             '<(chromium_src_dir)/build/linux/system.gyp:fontconfig',
+             '<(chromium_src_dir)/build/linux/system.gyp:gtk',
+@@ -1283,7 +1283,7 @@
+             ['include', '/TransparencyWin\\.cpp$'],
+           ],
+         }],
+-        ['OS!="linux" and OS!="freebsd"', {
++        ['OS!="linux" and OS!="freebsd" and OS!="netbsd" and OS!="openbsd"', {
+           'sources/': [['exclude', '(Gtk|Linux)\\.cpp$']]
+         }],
+         ['OS!="mac"', {

@@ -1,0 +1,13 @@
+$NetBSD: patch-bc,v 1.1.1.1 2010/09/08 15:00:57 rxg Exp $
+
+--- chrome/browser/find_bar_host_browsertest.cc.orig	2010-08-18 09:05:49.000000000 +0000
++++ chrome/browser/find_bar_host_browsertest.cc
+@@ -700,7 +700,7 @@ IN_PROC_BROWSER_TEST_F(FindInPageControl
+ 
+ #if defined(TOOLKIT_VIEWS)
+ // Make sure Find box grabs the Esc accelerator and restores it again.
+-#if defined(OS_LINUX)
++#if defined(USE_X11)
+ // TODO(oshima): On Gtk/Linux, a focus out event is asynchronous and
+ // hiding a find bar does not immediately update the target
+ // accelerator. The last condition fails in most cases due to this

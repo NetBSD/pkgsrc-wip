@@ -1,0 +1,13 @@
+$NetBSD: patch-bt,v 1.1.1.1 2010/09/08 15:00:57 rxg Exp $
+
+--- chrome/browser/views/create_application_shortcut_view.cc.orig	2010-08-26 09:05:18.000000000 +0000
++++ chrome/browser/views/create_application_shortcut_view.cc
+@@ -268,7 +268,7 @@ void CreateApplicationShortcutView::Init
+         l10n_util::GetString(IDS_PIN_TO_TASKBAR_CHKBOX) :
+         l10n_util::GetString(IDS_CREATE_SHORTCUTS_QUICK_LAUNCH_BAR_CHKBOX),
+       profile->GetPrefs()->GetBoolean(prefs::kWebAppCreateInQuickLaunchBar));
+-#elif defined(OS_LINUX)
++#elif defined(OS_POSIX) && !defined(OS_MACOSX)
+   menu_check_box_ = AddCheckbox(
+       l10n_util::GetString(IDS_CREATE_SHORTCUTS_MENU_CHKBOX),
+       profile->GetPrefs()->GetBoolean(prefs::kWebAppCreateInAppsMenu));

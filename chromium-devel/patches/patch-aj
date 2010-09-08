@@ -1,0 +1,15 @@
+$NetBSD: patch-aj,v 1.1.1.1 2010/09/08 15:00:55 rxg Exp $
+
+--- base/debug_util_posix.cc.orig	2010-08-18 09:05:07.000000000 +0000
++++ base/debug_util_posix.cc
+@@ -229,8 +229,8 @@ bool DebugUtil::BeingDebugged() {
+ 
+ bool DebugUtil::BeingDebugged() {
+   // TODO(benl): can we determine this under FreeBSD?
+-  NOTIMPLEMENTED();
+-  return false;
++  LOG(WARNING) << "Don't know how to do this";
++  return true;
+ }
+ 
+ #endif  // defined(OS_FREEBSD)

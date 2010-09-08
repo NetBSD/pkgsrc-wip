@@ -1,0 +1,22 @@
+$NetBSD: patch-fh,v 1.1.1.1 2010/09/08 15:01:01 rxg Exp $
+
+--- third_party/ppapi/ppapi.gyp.orig	2010-08-30 09:08:15.000000000 +0000
++++ third_party/ppapi/ppapi.gyp
+@@ -14,7 +14,7 @@
+       # TODO(ajwong): For internal pepper plugins, which are statically linked
+       # into chrome, do we want to build w/o -fPIC?  If so, how can we express
+       # that in the build system?
+-      ['OS=="linux" or OS=="openbsd" or OS=="freebsd" or OS=="solaris"', {
++      ['OS=="linux" or OS=="openbsd" or OS=="freebsd" or OS=="netbsd" or OS=="solaris"', {
+         'cflags': ['-fPIC', '-fvisibility=hidden'],
+ 
+         # This is needed to make the Linux shlib build happy. Without this,
+@@ -239,7 +239,7 @@
+             ],
+           },
+         }],
+-        ['OS=="linux" or OS=="freebsd" or OS=="openbsd" or OS=="solaris"', {
++        ['OS=="linux" or OS=="freebsd" or OS=="netbsd" or OS=="openbsd" or OS=="solaris"', {
+           'product_name': 'ppapi_example',
+           'type': 'shared_library',
+           'cflags': ['-fvisibility=hidden'],

@@ -1,0 +1,22 @@
+$NetBSD: patch-dl,v 1.1.1.1 2010/09/08 15:00:59 rxg Exp $
+
+--- chrome/test/automation/automation_proxy_uitest.cc.orig	2010-08-20 09:05:15.000000000 +0000
++++ chrome/test/automation/automation_proxy_uitest.cc
+@@ -1304,7 +1304,7 @@ TEST_F(ExternalTabUITestPopupEnabled, Us
+ #endif  // defined(OS_WIN)
+ 
+ // TODO(port): Need to port autocomplete_edit_proxy.* first.
+-#if defined(OS_WIN) || defined(OS_LINUX)
++#if defined(OS_WIN) || defined(OS_POSIX) && !defined(OS_MACOSX)
+ TEST_F(AutomationProxyTest, AutocompleteGetSetText) {
+   scoped_refptr<BrowserProxy> browser(automation()->GetBrowserWindow(0));
+   ASSERT_TRUE(browser.get());
+@@ -1348,7 +1348,7 @@ TEST_F(AutomationProxyTest, Autocomplete
+   EXPECT_EQ(text_to_set2, actual_text2);
+ }
+ 
+-#endif  // defined(OS_WIN) || defined(OS_LINUX)
++#endif  // defined(OS_WIN) || defined(OS_POSIX) && !defined(OS_MACOSX)
+ 
+ #if defined(OS_MACOSX)
+ // TODO(port): Implement AutocompleteEditProxy on Mac.

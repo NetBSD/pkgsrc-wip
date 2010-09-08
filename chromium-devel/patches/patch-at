@@ -1,0 +1,13 @@
+$NetBSD: patch-at,v 1.1.1.1 2010/09/08 15:00:56 rxg Exp $
+
+--- build/temp_gyp/googleurl.gyp.orig	2010-07-16 09:04:23.000000000 +0000
++++ build/temp_gyp/googleurl.gyp
+@@ -82,7 +82,7 @@
+         '../../googleurl/src/gurl_test_main.cc',
+       ],
+       'conditions': [
+-        ['OS=="linux" or OS=="freebsd"', {
++        ['OS=="linux" or OS=="freebsd"or OS=="netbsd"', {
+           'conditions': [
+             ['linux_use_tcmalloc==1', {
+               'dependencies': [

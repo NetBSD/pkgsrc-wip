@@ -1,0 +1,13 @@
+$NetBSD: patch-as,v 1.1.1.1 2010/09/08 15:00:56 rxg Exp $
+
+--- build/linux/system.gyp.orig	2010-08-05 09:04:24.000000000 +0000
++++ build/linux/system.gyp
+@@ -13,7 +13,7 @@
+         'pkg-config': 'pkg-config'
+       },
+     }],
+-    [ 'OS=="linux" or OS=="freebsd" or OS=="openbsd"', {
++    [ 'OS=="linux" or OS=="freebsd" or OS=="netbsd" or OS=="openbsd"', {
+       'variables': {
+         # We use our own copy of libssl, although we still need to link against
+         # the rest of NSS.

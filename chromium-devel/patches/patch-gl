@@ -1,0 +1,22 @@
+$NetBSD: patch-gl,v 1.1.1.1 2010/09/08 15:01:02 rxg Exp $
+
+--- third_party/WebKit/WebKit/chromium/src/ChromiumBridge.cpp.orig	2010-08-25 09:10:10.000000000 +0000
++++ third_party/WebKit/WebKit/chromium/src/ChromiumBridge.cpp
+@@ -66,7 +66,7 @@
+ #include "WebThemeEngine.h"
+ #endif
+ 
+-#if OS(LINUX)
++#if OS(LINUX) || OS(FREEBSD) || OS(NETBSD)
+ #include "WebFontInfo.h"
+ #include "WebFontRenderStyle.h"
+ #endif
+@@ -422,7 +422,7 @@ bool ChromiumBridge::ensureFontLoaded(HF
+ }
+ #endif
+ 
+-#if OS(LINUX)
++#if OS(LINUX) || OS(FREEBSD) || OS(NETBSD)
+ String ChromiumBridge::getFontFamilyForCharacters(const UChar* characters, size_t numCharacters)
+ {
+     if (webKitClient()->sandboxSupport())

@@ -1,0 +1,13 @@
+$NetBSD: patch-ev,v 1.1.1.1 2010/09/08 15:01:00 rxg Exp $
+
+--- third_party/bzip2/bzip2.gyp.orig	2010-05-15 09:02:48.000000000 +0000
++++ third_party/bzip2/bzip2.gyp
+@@ -5,7 +5,7 @@
+ {
+   'variables': {
+     'conditions': [
+-      [ 'OS=="linux" or OS=="freebsd" or OS=="openbsd"', {
++      [ 'OS=="linux" or OS=="freebsd" or OS=="netbsd" or OS=="openbsd"', {
+         # Link to system .so since we already use it due to GTK.
+         'use_system_bzip2%': 1,
+       }, {  # OS!="linux"

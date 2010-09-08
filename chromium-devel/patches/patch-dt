@@ -1,0 +1,22 @@
+$NetBSD: patch-dt,v 1.1.1.1 2010/09/08 15:00:59 rxg Exp $
+
+--- chrome/test/testing_browser_process.h.orig	2010-08-26 09:04:56.000000000 +0000
++++ chrome/test/testing_browser_process.h
+@@ -52,7 +52,7 @@ class TestingBrowserProcess : public Bro
+     return NULL;
+   }
+ 
+-#if defined(OS_LINUX)
++#if defined(OS_POSIX) && !defined(OS_MACOSX)
+   virtual base::Thread* background_x11_thread() {
+     return NULL;
+   }
+@@ -155,7 +155,7 @@ class TestingBrowserProcess : public Bro
+ 
+   virtual void CheckForInspectorFiles() {}
+ 
+-#if (defined(OS_WIN) || defined(OS_LINUX)) && !defined(OS_CHROMEOS)
++#if !defined(OS_MACOSX) && !defined(OS_CHROMEOS)
+   virtual void StartAutoupdateTimer() {}
+ #endif
+ 

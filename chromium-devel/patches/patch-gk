@@ -1,0 +1,13 @@
+$NetBSD: patch-gk,v 1.1.1.1 2010/09/08 15:01:02 rxg Exp $
+
+--- third_party/WebKit/WebCore/loader/CachedFont.cpp.orig	2010-07-14 09:08:02.000000000 +0000
++++ third_party/WebKit/WebCore/loader/CachedFont.cpp
+@@ -27,7 +27,7 @@
+ #include "config.h"
+ #include "CachedFont.h"
+ 
+-#if PLATFORM(CG) || PLATFORM(QT) || PLATFORM(GTK) || (PLATFORM(CHROMIUM) && (OS(WINDOWS) || OS(LINUX))) || PLATFORM(HAIKU) || OS(WINCE) || PLATFORM(ANDROID)
++#if PLATFORM(CG) || PLATFORM(QT) || PLATFORM(GTK) || (PLATFORM(CHROMIUM) && (OS(WINDOWS) || OS(LINUX) || OS(FREEBSD) || OS(NETBSD))) || PLATFORM(HAIKU) || OS(WINCE) || PLATFORM(ANDROID)
+ #define STORE_FONT_CUSTOM_PLATFORM_DATA
+ #endif
+ 

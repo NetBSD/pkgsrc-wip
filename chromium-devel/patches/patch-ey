@@ -1,0 +1,15 @@
+$NetBSD: patch-ey,v 1.1.1.1 2010/09/08 15:01:00 rxg Exp $
+
+--- third_party/libevent/event-config.h.orig	2009-11-21 10:05:19.000000000 +0000
++++ third_party/libevent/event-config.h
+@@ -9,6 +9,10 @@
+ #include "mac/event-config.h"
+ #elif defined(__linux__)
+ #include "linux/event-config.h"
++#elif defined(__FreeBSD__)
++#include "freebsd/event-config.h"
++#elif defined(__NetBSD__)
++#include "netbsd/event-config.h"
+ #else
+ #error generate event-config.h for your platform
+ #endif

@@ -1,0 +1,43 @@
+$NetBSD: patch-fb,v 1.1.1.1 2010/09/08 15:01:01 rxg Exp $
+
+--- third_party/libjingle/libjingle.gyp.orig	2010-07-13 09:04:03.000000000 +0000
++++ third_party/libjingle/libjingle.gyp
+@@ -72,12 +72,12 @@
+             'OSX',
+           ],
+         }],
+-        ['OS=="linux" or OS=="mac" or OS=="freebsd" or OS=="openbsd"', {
++        ['OS=="linux" or OS=="mac" or OS=="freebsd" or OS=="netbsd" or OS=="openbsd"', {
+           'defines': [
+             'POSIX',
+           ],
+         }],
+-        ['OS=="openbsd" or OS=="freebsd"', {
++        ['OS=="openbsd" or OS=="freebsd" or OS=="netbsd"', {
+           'defines': [
+             'BSD',
+           ],
+@@ -116,12 +116,12 @@
+           'OSX',
+         ],
+       }],
+-      ['OS=="linux" or OS=="mac" or OS=="freebsd" or OS=="openbsd"', {
++      ['OS=="linux" or OS=="mac" or OS=="freebsd" or OS=="netbsd" or OS=="openbsd"', {
+         'defines': [
+           'POSIX',
+         ],
+       }],
+-      ['OS=="openbsd" or OS=="freebsd"', {
++      ['OS=="openbsd" or OS=="freebsd" or OS=="netbsd"', {
+         'defines': [
+           'BSD',
+         ],
+@@ -323,7 +323,7 @@
+             'source/talk/base/winping.h',
+           ],
+         }],
+-        ['OS=="linux" or OS=="mac" or OS=="freebsd" or OS=="openbsd"', {
++        ['OS=="linux" or OS=="mac" or OS=="freebsd" or OS=="netbsd" or OS=="openbsd"', {
+           'sources': [
+             'source/talk/base/sslstreamadapter.cc',
+             'source/talk/base/sslstreamadapter.h',

@@ -1,0 +1,22 @@
+$NetBSD: patch-ee,v 1.1.1.1 2010/09/08 15:00:59 rxg Exp $
+
+--- gfx/gfx.gyp.orig	2010-08-16 09:03:43.000000000 +0000
++++ gfx/gfx.gyp
+@@ -57,7 +57,7 @@
+             },
+           }
+         }],
+-        ['OS=="linux" or OS=="freebsd" or OS=="openbsd"', {
++        ['OS=="linux" or OS=="freebsd" or OS=="netbsd" or OS=="openbsd"', {
+           'dependencies': [
+             '../build/linux/system.gyp:gtk',
+           ],
+@@ -149,7 +149,7 @@
+             '<(DEPTH)/third_party/wtl/include',
+           ],          
+         }],
+-        ['OS=="linux" or OS=="freebsd" or OS=="openbsd"', {
++        ['OS=="linux" or OS=="freebsd" or OS=="netbsd" or OS=="openbsd"', {
+           'dependencies': [
+             # font_gtk.cc uses fontconfig.
+             # TODO(evanm): I think this is wrong; it should just use GTK.

@@ -1,0 +1,22 @@
+$NetBSD: patch-fi,v 1.1.1.1 2010/09/08 15:01:01 rxg Exp $
+
+--- third_party/sqlite/sqlite.gyp.orig	2010-08-19 09:07:44.000000000 +0000
++++ third_party/sqlite/sqlite.gyp
+@@ -31,7 +31,7 @@
+             ],
+           },
+         }],
+-        ['(OS=="linux" or OS=="freebsd" or OS=="openbsd") and use_system_sqlite', {
++        ['(OS=="linux" or OS=="freebsd" or OS=="netbsd" or OS=="openbsd") and use_system_sqlite', {
+           'type': 'settings',
+           'direct_dependent_settings': {
+             'cflags': [
+@@ -229,7 +229,7 @@
+     },
+   ],
+   'conditions': [
+-    ['(OS=="linux" or OS=="freebsd" or OS=="openbsd") and not use_system_sqlite', {
++    ['(OS=="linux" or OS=="freebsd" or OS=="netbsd" or OS=="openbsd") and not use_system_sqlite', {
+       'targets': [
+         {
+           'target_name': 'sqlite_shell',

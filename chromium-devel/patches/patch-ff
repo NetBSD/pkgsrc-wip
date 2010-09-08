@@ -1,0 +1,13 @@
+$NetBSD: patch-ff,v 1.1.1.1 2010/09/08 15:01:01 rxg Exp $
+
+--- third_party/libxslt/libxslt.gyp.orig	2010-04-28 09:01:47.000000000 +0000
++++ third_party/libxslt/libxslt.gyp
+@@ -5,7 +5,7 @@
+ {
+   'variables': {
+     'conditions': [
+-      ['OS=="linux" or OS=="freebsd" or OS=="openbsd" or OS=="solaris"', {
++      ['OS=="linux" or OS=="freebsd" or OS=="netbsd" or OS=="openbsd" or OS=="solaris"', {
+         'os_include': 'linux'
+       }],
+       ['OS=="mac"', {'os_include': 'mac'}],

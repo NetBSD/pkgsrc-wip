@@ -1,0 +1,31 @@
+$NetBSD: patch-bp,v 1.1.1.1 2010/09/08 15:00:57 rxg Exp $
+
+--- chrome/browser/sync/engine/syncer_thread.cc.orig	2010-08-05 09:04:39.000000000 +0000
++++ chrome/browser/sync/engine/syncer_thread.cc
+@@ -263,7 +263,7 @@ void SyncerThread::ThreadMainLoop() {
+   bool initial_sync_for_thread = true;
+   bool continue_sync_cycle = false;
+ 
+-#if defined(OS_LINUX)
++#if defined(OS_POSIX) && !defined(OS_MACOSX)
+   idle_query_.reset(new IdleQueryLinux());
+ #endif
+ 
+@@ -345,7 +345,7 @@ void SyncerThread::ThreadMainLoop() {
+         static_cast<int>(vault_.current_wait_interval_.poll_delta.InSeconds()),
+         &user_idle_milliseconds, &continue_sync_cycle, nudged);
+   }
+-#if defined(OS_LINUX)
++#if defined(OS_POSIX) && !defined(OS_MACOSX)
+   idle_query_.reset();
+ #endif
+ }
+@@ -780,7 +780,7 @@ int SyncerThread::UserIdleTime() {
+   } else {
+     return idle_time / 1000000;  // nano to milli
+   }
+-#elif defined(OS_LINUX)
++#elif defined(OS_POSIX) && !defined(OS_MACOSX)
+   if (idle_query_.get()) {
+     return idle_query_->IdleTime();
+   } else {

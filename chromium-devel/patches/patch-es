@@ -1,0 +1,13 @@
+$NetBSD: patch-es,v 1.1.1.1 2010/09/08 15:01:00 rxg Exp $
+
+--- sdch/sdch.gyp.orig	2010-02-05 10:04:30.000000000 +0000
++++ sdch/sdch.gyp
+@@ -55,7 +55,7 @@
+       },
+       'conditions': [
+         [ 'OS == "linux"', { 'include_dirs': [ 'linux' ] } ],
+-        [ 'OS == "freebsd" or OS == "openbsd"', { 'include_dirs': [ 'bsd' ] } ],
++        [ 'OS == "freebsd" or OS == "netbsd" or OS == "openbsd"', { 'include_dirs': [ 'bsd' ] } ],
+         [ 'OS == "mac"', { 'include_dirs': [ 'mac' ] } ],
+         [ 'OS == "win"', { 'include_dirs': [ 'open-vcdiff/vsprojects' ] } ],
+       ],

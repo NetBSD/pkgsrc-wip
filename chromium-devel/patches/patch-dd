@@ -1,0 +1,13 @@
+$NetBSD: patch-dd,v 1.1.1.1 2010/09/08 15:00:59 rxg Exp $
+
+--- chrome/plugin/plugin_thread.cc.orig	2010-08-18 09:05:56.000000000 +0000
++++ chrome/plugin/plugin_thread.cc
+@@ -53,7 +53,7 @@ PluginThread::PluginThread()
+           switches::kPluginPath);
+ 
+   lazy_tls.Pointer()->Set(this);
+-#if defined(OS_LINUX)
++#if defined(OS_POSIX) && !defined(OS_MACOSX)
+   {
+     // XEmbed plugins assume they are hosted in a Gtk application, so we need
+     // to initialize Gtk in the plugin process.

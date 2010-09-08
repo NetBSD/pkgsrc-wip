@@ -1,0 +1,15 @@
+$NetBSD: patch-gj,v 1.1.1.1 2010/09/08 15:01:02 rxg Exp $
+
+--- third_party/WebKit/WebCore/bindings/v8/custom/V8InspectorFrontendHostCustom.cpp.orig	2010-08-26 09:10:46.000000000 +0000
++++ third_party/WebKit/WebCore/bindings/v8/custom/V8InspectorFrontendHostCustom.cpp
+@@ -47,6 +47,10 @@ v8::Handle<v8::Value> V8InspectorFronten
+     return v8String("mac");
+ #elif defined(OS_LINUX)
+     return v8String("linux");
++#elif defined(OS_FREEBSD)
++    return v8String("freebsd");
++#elif defined(OS_NETBSD)
++    return v8String("netbsd");
+ #elif defined(OS_WIN)
+     return v8String("windows");
+ #else

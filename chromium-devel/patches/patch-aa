@@ -1,0 +1,31 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/09/08 15:00:53 rxg Exp $
+
+--- app/app.gyp.orig	2010-08-16 09:03:43.000000000 +0000
++++ app/app.gyp
+@@ -61,7 +61,7 @@
+         '..',
+       ],
+       'conditions': [
+-        ['OS=="linux" or OS=="freebsd" or OS=="openbsd" or OS=="solaris"', {
++        ['OS=="linux" or OS=="freebsd" or OS=="netbsd" or OS=="openbsd" or OS=="solaris"', {
+           'sources': [
+             'gtk_dnd_util_unittest.cc',
+           ],
+@@ -77,7 +77,7 @@
+             'win_util_unittest.cc',
+           ],
+         }],
+-        ['OS =="linux" or OS =="freebsd"', {
++        ['OS =="linux" or OS =="freebsd" or OS =="netbsd"', {
+           'conditions': [
+             ['linux_use_tcmalloc==1', {
+               'dependencies': [
+@@ -169,7 +169,7 @@
+     },
+   ],
+   'conditions': [
+-    ['OS=="linux" or OS=="freebsd" or OS=="openbsd" or OS=="solaris"', {
++    ['OS=="linux" or OS=="freebsd" or OS=="netbsd" or OS=="openbsd" or OS=="solaris"', {
+       'targets': [{
+         'target_name': 'app_unittest_strings',
+         'type': 'none',

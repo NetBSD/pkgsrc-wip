@@ -1,0 +1,46 @@
+$NetBSD: patch-ac,v 1.1.1.1 2010/09/08 15:00:53 rxg Exp $
+
+--- app/surface/transport_dib.h.orig	2010-08-22 09:03:42.000000000 +0000
++++ app/surface/transport_dib.h
+@@ -8,7 +8,7 @@
+ 
+ #include "base/basictypes.h"
+ 
+-#if defined(OS_WIN) || defined(OS_MACOSX)
++#if defined(OS_WIN) || defined(OS_MACOSX) || defined(OS_FREEBSD)
+ #include "base/shared_memory.h"
+ #endif
+ 
+@@ -78,7 +78,7 @@ class TransportDIB {
+     static int fake_handle = 10;
+     return reinterpret_cast<Handle>(fake_handle++);
+   }
+-#elif defined(OS_MACOSX)
++#elif defined(OS_MACOSX) || defined(OS_FREEBSD)
+   typedef base::SharedMemoryHandle Handle;
+   // On Mac, the inode number of the backing file is used as an id.
+   typedef base::SharedMemoryId Id;
+@@ -93,7 +93,7 @@ class TransportDIB {
+     static int fake_handle = 10;
+     return Handle(fake_handle++, false);
+   }
+-#elif defined(USE_X11)
++#elif defined(USE_X11) && !defined(OS_FREEBSD)
+   typedef int Handle;  // These two ints are SysV IPC shared memory keys
+   typedef int Id;
+ 
+@@ -159,11 +159,12 @@ class TransportDIB {
+ 
+  private:
+   TransportDIB();
+-#if defined(OS_WIN) || defined(OS_MACOSX)
++#if defined(OS_WIN) || defined(OS_MACOSX) || (OS_FREEBSD)
+   explicit TransportDIB(base::SharedMemoryHandle dib);
+   base::SharedMemory shared_memory_;
+   uint32 sequence_num_;
+-#elif defined(USE_X11)
++#endif
++#if defined(USE_X11)
+   int key_;  // SysV shared memory id
+   void* address_;  // mapped address
+   XSharedMemoryId x_shm_;  // X id for the shared segment

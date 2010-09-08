@@ -1,0 +1,13 @@
+$NetBSD: patch-eu,v 1.1.1.1 2010/09/08 15:01:00 rxg Exp $
+
+--- testing/gtest.gyp.orig	2010-08-06 09:03:59.000000000 +0000
++++ testing/gtest.gyp
+@@ -61,7 +61,7 @@
+             ],
+           },
+         }],
+-        ['OS == "mac" or OS == "linux" or OS == "freebsd" or OS == "openbsd"', {
++        ['OS == "mac" or OS == "linux" or OS == "freebsd" or OS == "netbsd" or OS == "openbsd"', {
+           'defines': [
+             # gtest isn't able to figure out when RTTI is disabled for gcc
+             # versions older than 4.3.2, and assumes it's enabled.  Our Mac

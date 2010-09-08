@@ -1,0 +1,13 @@
+$NetBSD: patch-dr,v 1.1.1.1 2010/09/08 15:00:59 rxg Exp $
+
+--- chrome/test/startup/feature_startup_test.cc.orig	2010-08-27 09:04:48.000000000 +0000
++++ chrome/test/startup/feature_startup_test.cc
+@@ -192,7 +192,7 @@ TEST_F(NewTabUIStartupTest, NewTabTiming
+   RunNewTabTimingTest();
+ }
+ 
+-#if defined(OS_LINUX)
++#if defined(TOOLKIT_GTK)
+ TEST_F(NewTabUIStartupTest, GtkThemeCold) {
+   RunStartupTest("tab_gtk_theme_cold", false /* cold */,
+                  false /* not important */,

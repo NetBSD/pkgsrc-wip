@@ -1,0 +1,86 @@
+$NetBSD: patch-ah,v 1.1.1.1 2010/09/08 15:00:55 rxg Exp $
+
+--- base/base.gypi.orig	2010-08-27 09:04:47.000000000 +0000
++++ base/base.gypi
+@@ -244,6 +244,7 @@
+           'sys_info_freebsd.cc',
+           'sys_info_linux.cc',
+           'sys_info_mac.cc',
++          'sys_info_netbsd.cc',
+           'sys_info_openbsd.cc',
+           'sys_info_posix.cc',
+           'sys_info_win.cc',
+@@ -325,7 +326,7 @@
+           '$(SDKROOT)/System/Library/Frameworks/ApplicationServices.framework/Frameworks',
+         ],
+         'conditions': [
+-          [ 'OS != "linux" and OS != "freebsd" and OS != "openbsd" and OS != "solaris"', {
++          [ 'OS != "linux" and OS != "freebsd" and OS != "netbsd" and OS != "openbsd" and OS != "solaris"', {
+               'sources/': [
+                 ['exclude', '/xdg_[^/]*\\.cc$'],
+               ],
+@@ -358,6 +359,10 @@
+               'sources/': [ ['exclude', '_freebsd\\.cc$'] ],
+             },
+           ],
++          [ 'OS != "netbsd"', {
++              'sources/': [ ['exclude', '_netbsd\\.cc$'] ],
++            },
++          ],
+           [ 'OS != "openbsd"', {
+               'sources/': [ ['exclude', '_openbsd\\.cc$'] ],
+             },
+@@ -476,7 +481,7 @@
+           'version.h',
+         ],
+         'conditions': [
+-          [ 'OS == "linux" or OS == "freebsd" or OS == "openbsd" or OS == "solaris"', {
++          [ 'OS == "linux" or OS == "freebsd" or OS == "netbsd" or OS == "openbsd" or OS == "solaris"', {
+             'conditions': [
+               [ 'chromeos==1', {
+                   'sources/': [ ['include', '_chromeos\\.cc$'] ]
+@@ -489,7 +494,7 @@
+             'cflags': [
+               '-Wno-write-strings',
+             ],
+-          }, {  # OS != "linux" and OS != "freebsd" and OS != "openbsd" and OS != "solaris"
++          }, {  # OS != "linux" and OS != "freebsd" and OS != "netbsd" and OS != "openbsd" and OS != "solaris"
+               'sources/': [
+                 ['exclude', '/xdg_user_dirs/'],
+                 ['exclude', '_nss\.cc$'],
+@@ -547,7 +552,7 @@
+         ],
+       },
+       'conditions': [
+-        [ 'OS == "linux" or OS == "freebsd" or OS == "openbsd"', {
++        [ 'OS == "linux" or OS == "freebsd" or OS == "netbsd" or OS == "openbsd"', {
+           'conditions': [
+             [ 'linux_use_tcmalloc==0', {
+                 'defines': [
+@@ -578,7 +583,7 @@
+             '../build/linux/system.gyp:gtk',
+           ],
+         },],
+-        [ 'OS == "freebsd" or OS == "openbsd"', {
++        [ 'OS == "freebsd" or OS == "netbsd" or OS == "openbsd"', {
+           'link_settings': {
+             'libraries': [
+               '-L/usr/local/lib -lexecinfo',
+@@ -671,7 +676,7 @@
+             ],
+           },
+           'conditions': [
+-            [ 'OS == "linux" or OS == "freebsd" or OS == "openbsd"', {
++            [ 'OS == "linux" or OS == "freebsd" or OS == "netbsd" or OS == "openbsd"', {
+               'dependencies': [
+                 '../build/util/build_util.gyp:lastchange',
+                 '../build/linux/system.gyp:gtk',
+@@ -704,7 +709,7 @@
+         },
+       ],
+     }],
+-    [ 'OS == "linux" or OS == "freebsd" or OS == "openbsd" or OS == "solaris"', {
++    [ 'OS == "linux" or OS == "freebsd" or OS == "netbsd" or OS == "openbsd" or OS == "solaris"', {
+       'targets': [
+         {
+           'target_name': 'symbolize',

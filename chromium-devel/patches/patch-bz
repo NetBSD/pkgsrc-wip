@@ -1,0 +1,13 @@
+$NetBSD: patch-bz,v 1.1.1.1 2010/09/08 15:00:57 rxg Exp $
+
+--- chrome/browser/views/frame/app_panel_browser_frame_view.cc.orig	2010-08-20 09:05:27.000000000 +0000
++++ chrome/browser/views/frame/app_panel_browser_frame_view.cc
+@@ -21,7 +21,7 @@
+ #include "views/window/window.h"
+ #include "views/window/window_resources.h"
+ 
+-#if defined(OS_LINUX)
++#if defined(OS_POSIX) && !defined(OS_MACOSX)
+ #include "views/window/hit_test.h"
+ #endif
+ 

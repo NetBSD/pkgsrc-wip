@@ -1,0 +1,66 @@
+$NetBSD: patch-el,v 1.1.1.1 2010/09/08 15:01:00 rxg Exp $
+
+--- media/media.gyp.orig	2010-09-03 09:04:39.000000000 +0000
++++ media/media.gyp
+@@ -153,7 +153,7 @@
+             ],
+           },
+         }],
+-        ['OS=="openbsd"', {
++        ['OS=="netbsd" or OS=="openbsd"', {
+           'sources/': [ ['exclude', 'alsa_' ],
+                         ['exclude', 'audio_manager_linux' ],
+                         ['exclude', '\\.mm?$' ] ],
+@@ -162,7 +162,7 @@
+             ],
+           },
+         }],
+-        ['OS!="openbsd"', {
++        ['OS!="netbsd" and OS!="openbsd"', {
+           'sources!': [
+             'audio/openbsd/audio_manager_openbsd.cc',
+             'audio/openbsd/audio_manager_openbsd.h',
+@@ -203,7 +203,7 @@
+         'ffmpeg/ffmpeg_unittest.cc',
+       ],
+       'conditions': [
+-        ['OS=="linux" or OS=="freebsd" or OS=="openbsd" or OS=="solaris"', {
++        ['OS=="linux" or OS=="freebsd" or OS=="netbsd" or OS=="openbsd" or OS=="solaris"', {
+           'dependencies': [
+             # Needed for the following #include chain:
+             #   base/run_all_unittests.cc
+@@ -278,7 +278,7 @@
+         'video/ffmpeg_video_decode_engine_unittest.cc',
+       ],
+       'conditions': [
+-        ['OS=="linux" or OS=="freebsd" or OS=="openbsd" or OS=="solaris"', {
++        ['OS=="linux" or OS=="freebsd" or OS=="netbsd" or OS=="openbsd" or OS=="solaris"', {
+           'dependencies': [
+             # Needed for the following #include chain:
+             #   base/run_all_unittests.cc
+@@ -514,7 +514,7 @@
+         },
+       ],
+     }],
+-    ['OS=="linux" or OS=="freebsd" or OS=="openbsd"', {
++    ['OS=="linux" or OS=="freebsd" or OS=="netbsd" or OS=="openbsd"', {
+       'targets': [
+         {
+           'target_name': 'omx_test',
+@@ -546,7 +546,7 @@
+             '../testing/gtest.gyp:gtest',
+           ],
+           'conditions': [
+-            ['OS=="linux" or OS=="freebsd" or OS=="openbsd" or OS=="solaris"', {
++            ['OS=="linux" or OS=="freebsd" or OS=="netbsd" or OS=="openbsd" or OS=="solaris"', {
+               'dependencies': [
+                 '../build/linux/system.gyp:gtk',
+               ],
+@@ -586,7 +586,6 @@
+           ],
+           'link_settings': {
+             'libraries': [
+-              '-ldl',
+               '-lX11',
+               '-lXrender',
+               '-lXext',

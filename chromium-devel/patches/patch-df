@@ -1,0 +1,22 @@
+$NetBSD: patch-df,v 1.1.1.1 2010/09/08 15:00:59 rxg Exp $
+
+--- chrome/renderer/render_thread.cc.orig	2010-08-29 09:05:21.000000000 +0000
++++ chrome/renderer/render_thread.cc
+@@ -945,7 +945,7 @@ void RenderThread::EnsureWebKitInitializ
+ }
+ 
+ void RenderThread::IdleHandler() {
+-#if (defined(OS_WIN) || defined(OS_LINUX)) && defined(USE_TCMALLOC)
++#if !defined(OS_MACOSX) && defined(USE_TCMALLOC)
+   MallocExtension::instance()->ReleaseFreeMemory();
+ #endif
+ 
+@@ -1021,7 +1021,7 @@ void RenderThread::OnPurgeMemory() {
+   while (!v8::V8::IdleNotification()) {
+   }
+ 
+-#if (defined(OS_WIN) || defined(OS_LINUX)) && defined(USE_TCMALLOC)
++#if !defined(OS_MACOSX) && defined(USE_TCMALLOC)
+   // Tell tcmalloc to release any free pages it's still holding.
+   MallocExtension::instance()->ReleaseFreeMemory();
+ #endif

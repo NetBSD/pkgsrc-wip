@@ -1,0 +1,13 @@
+$NetBSD: patch-ef,v 1.1.1.1 2010/09/08 15:00:59 rxg Exp $
+
+--- gpu/gpu.gyp.orig	2010-08-26 09:04:34.000000000 +0000
++++ gpu/gpu.gyp
+@@ -180,7 +180,7 @@
+         'command_buffer/service/texture_manager.cc',
+       ],
+       'conditions': [
+-        ['OS == "linux"', {
++        ['OS == "linux" or OS=="freebsd" or OS=="netbsd" or OS=="openbsd"', {
+           'dependencies': [
+             '../build/linux/system.gyp:gtk',
+           ],

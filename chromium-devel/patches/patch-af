@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1.1.1 2010/09/08 15:00:55 rxg Exp $
+
+--- base/allocator/allocator.gyp.orig	2010-08-29 09:04:37.000000000 +0000
++++ base/allocator/allocator.gyp
+@@ -309,7 +309,7 @@
+             '<(tcmalloc_dir)/src/debugallocation.cc',
+           ],
+         }],
+-        ['OS=="linux" or OS=="freebsd" or OS=="openbsd"', {
++        ['OS=="linux" or OS=="freebsd" or OS=="netbsd" or OS=="openbsd"', {
+           'sources!': [
+             '<(tcmalloc_dir)/src/system-alloc.h',
+             '<(tcmalloc_dir)/src/windows/port.cc',

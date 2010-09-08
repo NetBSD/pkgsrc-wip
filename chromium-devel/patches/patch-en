@@ -1,0 +1,55 @@
+$NetBSD: patch-en,v 1.1.1.1 2010/09/08 15:01:00 rxg Exp $
+
+--- net/net.gyp.orig	2010-08-29 09:04:29.000000000 +0000
++++ net/net.gyp
+@@ -194,7 +194,7 @@
+         '../base/base.gyp:base',
+       ],
+       'conditions': [
+-        [ 'OS == "linux" or OS == "freebsd" or OS == "openbsd"', {
++        [ 'OS == "linux" or OS == "freebsd" or OS == "netbsd" or OS == "openbsd"', {
+             'dependencies': [
+               '../build/linux/system.gyp:gconf',
+               '../build/linux/system.gyp:gdk',
+@@ -615,7 +615,7 @@
+              'proxy/proxy_config_service_linux.h',
+           ],
+         }],
+-        [ 'OS == "linux" or OS == "freebsd" or OS == "openbsd"', {
++        [ 'OS == "linux" or OS == "freebsd" or OS == "netbsd" or OS == "openbsd"', {
+             'dependencies': [
+               '../build/linux/system.gyp:gconf',
+               '../build/linux/system.gyp:gdk',
+@@ -836,7 +836,7 @@
+              'proxy/proxy_config_service_linux_unittest.cc',
+           ],
+         }],
+-        [ 'OS == "linux" or OS == "freebsd" or OS == "openbsd"', {
++        [ 'OS == "linux" or OS == "freebsd" or OS == "netbsd" or OS == "openbsd"', {
+             'dependencies': [
+               '../build/linux/system.gyp:gtk',
+               '../build/linux/system.gyp:nss',
+@@ -851,7 +851,7 @@
+             ],
+           }
+         ],
+-        ['OS == "linux"', {
++        ['OS == "linux" or OS == "freebsd" or OS == "netbsd" or OS == "openbsd"', {
+           'conditions': [
+             ['linux_use_tcmalloc==1', {
+               'dependencies': [
+@@ -969,12 +969,12 @@
+             '../third_party/protobuf2/protobuf.gyp:py_proto',
+           ],
+         }],
+-        ['OS == "linux" or OS == "freebsd" or OS == "openbsd"', {
++        ['OS == "linux" or OS == "freebsd" or OS == "netbsd" or OS == "openbsd"', {
+           'dependencies': [
+             '../build/linux/system.gyp:nss',
+           ],
+         }],
+-        ['OS == "linux"', {
++        ['OS == "linux" or OS == "freebsd" or OS == "netbsd" or OS == "openbsd"', {
+           'conditions': [
+             ['linux_use_tcmalloc==1', {
+               'dependencies': [

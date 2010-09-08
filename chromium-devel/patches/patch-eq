@@ -1,0 +1,22 @@
+$NetBSD: patch-eq,v 1.1.1.1 2010/09/08 15:01:00 rxg Exp $
+
+--- remoting/remoting.gyp.orig	2010-08-29 09:04:10.000000000 +0000
++++ remoting/remoting.gyp
+@@ -30,7 +30,7 @@
+     }],
+ 
+     # TODO(hclam): Enable this target for mac.
+-    ['OS=="linux" or OS=="freebsd" or OS=="openbsd"', {
++    ['OS=="linux" or OS=="freebsd" or OS=="netbsd" or OS=="openbsd"', {
+ 
+       'targets': [
+         {
+@@ -99,7 +99,7 @@
+             '../media/base/yuv_row_win.cc',
+           ],
+         }],
+-        ['OS=="linux" or OS=="freebsd" or OS=="openbsd" or OS=="mac"', {
++        ['OS=="linux" or OS=="freebsd" or OS=="netbsd" or OS=="openbsd" or OS=="mac"', {
+           'sources': [
+             '../media/base/yuv_row_posix.cc',
+           ],

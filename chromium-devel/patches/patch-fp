@@ -1,0 +1,31 @@
+$NetBSD: patch-fp,v 1.1.1.1 2010/09/08 15:01:02 rxg Exp $
+
+--- v8/tools/gyp/v8.gyp.orig	2010-08-27 09:11:20.000000000 +0000
++++ v8/tools/gyp/v8.gyp
+@@ -96,7 +96,7 @@
+       },
+       'Release': {
+         'conditions': [
+-          ['OS=="linux" or OS=="freebsd" or OS=="openbsd"', {
++          ['OS=="linux" or OS=="freebsd" or OS=="netbsd" or OS=="openbsd"', {
+             'cflags!': [
+               '-O2',
+               '-Os',
+@@ -622,6 +622,17 @@
+             ],
+           }
+         ],
++        ['OS=="netbsd"', {
++            'link_settings': {
++              'libraries': [
++                '-L/usr/local/lib -lexecinfo',
++            ]},
++            'sources': [
++              '../../src/platform-netbsd.cc',
++              '../../src/platform-posix.cc'
++            ],
++          }
++        ],
+         ['OS=="openbsd"', {
+             'link_settings': {
+               'libraries': [

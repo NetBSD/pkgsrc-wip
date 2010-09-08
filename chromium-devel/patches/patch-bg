@@ -1,0 +1,13 @@
+$NetBSD: patch-bg,v 1.1.1.1 2010/09/08 15:00:57 rxg Exp $
+
+--- chrome/browser/options_util.cc.orig	2010-08-26 09:06:45.000000000 +0000
++++ chrome/browser/options_util.cc
+@@ -29,7 +29,7 @@ void OptionsUtil::ResetToDefaults(Profil
+     prefs::kCookieBehavior,
+     prefs::kDefaultCharset,
+     prefs::kDnsPrefetchingEnabled,
+-#if defined(OS_LINUX) || defined(OS_FREEBSD) || defined(OS_OPENBSD)
++#if defined(OS_POSIX) && !defined(OS_MACOSX)
+     prefs::kCertRevocationCheckingEnabled,
+     prefs::kSSL2Enabled,
+     prefs::kSSL3Enabled,

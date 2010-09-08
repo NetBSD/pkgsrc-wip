@@ -1,0 +1,13 @@
+$NetBSD: patch-gp,v 1.1.1.1 2010/09/08 15:01:03 rxg Exp $
+
+--- tools/gyp/test/library/src/library.gyp.orig	2009-11-13 10:07:09.000000000 +0000
++++ tools/gyp/test/library/src/library.gyp
+@@ -48,7 +48,7 @@
+     },
+   ],
+   'conditions': [
+-    ['OS=="linux"', {
++    ['OS=="linux" or OS=="freebsd" or OS=="netbsd" or OS=="openbsd"', {
+       'target_defaults': {
+         # Support 64-bit shared libs (also works fine for 32-bit).
+         'cflags': ['-fPIC'],

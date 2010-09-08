@@ -1,0 +1,83 @@
+$NetBSD: patch-ar,v 1.1.1.1 2010/09/08 15:00:56 rxg Exp $
+
+--- build/common.gypi.orig	2010-08-29 09:04:35.000000000 +0000
++++ build/common.gypi
+@@ -45,7 +45,7 @@
+       'variables': {
+         # Compute the architecture that we're building on.
+         'conditions': [
+-          [ 'OS=="linux" or OS=="freebsd" or OS=="openbsd"', {
++          [ 'OS=="linux" or OS=="freebsd" or OS=="netbsd" or OS=="openbsd"', {
+             # This handles the Linux platforms we generally deal with. Anything
+             # else gets passed through, which probably won't work very well; such
+             # hosts should pass an explicit target_arch to gyp.
+@@ -292,7 +292,7 @@
+     'enable_gpu%': 1,
+ 
+     'conditions': [
+-      ['OS=="linux" or OS=="freebsd" or OS=="openbsd"', {
++      ['OS=="linux" or OS=="freebsd" or OS=="netbsd" or OS=="openbsd"', {
+         # This will set gcc_version to XY if you are running gcc X.Y.*.
+         # This is used to tweak build flags for gcc 4.4.
+         'gcc_version%': '<!(python <(DEPTH)/build/compiler_version.py)',
+@@ -315,7 +315,7 @@
+             'use_titlecase_in_grd_files%': 1,
+           }],
+         ],
+-      }],  # OS=="linux" or OS=="freebsd" or OS=="openbsd"
++      }],  # OS=="linux" or OS=="freebsd" or OS=="netbsd" or OS=="openbsd"
+       ['OS=="mac"', {
+         # Mac wants Title Case strings
+         'use_titlecase_in_grd_files%': 1,
+@@ -537,7 +537,7 @@
+     'target_conditions': [
+       ['chromium_code==0', {
+         'conditions': [
+-          [ 'OS=="linux" or OS=="freebsd" or OS=="openbsd"', {
++          [ 'OS=="linux" or OS=="freebsd" or OS=="netbsd" or OS=="openbsd"', {
+             'cflags!': [
+               '-Wall',
+               '-Wextra',
+@@ -583,14 +583,14 @@
+                           ['exclude', '/(cocoa|mac)/'],
+                           ['exclude', '\.mm?$' ] ],
+           }],
+-          ['OS!="linux" and OS!="freebsd" and OS!="openbsd"', {
++          ['OS!="linux" and OS!="freebsd" and OS!="netbsd" and OS!="openbsd"', {
+             'sources/': [
+               ['exclude', '_(chromeos|gtk|x|x11|xdg)(_unittest)?\\.cc$'],
+               ['exclude', '/gtk/'],
+               ['exclude', '/(gtk|x11)_[^/]*\\.cc$'],
+             ],
+           }],
+-          ['OS!="linux"', {
++          ['OS!="linux" and OS!="freebsd" and OS!="netbsd" and OS!="openbsd"', {
+             'sources/': [
+               ['exclude', '_linux(_unittest)?\\.cc$'],
+               ['exclude', '/linux/'],
+@@ -807,7 +807,7 @@
+     },
+   },
+   'conditions': [
+-    ['OS=="linux" or OS=="freebsd" or OS=="openbsd" or OS=="solaris"', {
++    ['OS=="linux" or OS=="freebsd" or OS=="netbsd" or OS=="openbsd" or OS=="solaris"', {
+       'target_defaults': {
+         # Enable -Werror by default, but put it in a variable so it can
+         # be disabled in ~/.gyp/include.gypi on the valgrind builders.
+@@ -821,6 +821,7 @@
+           'no_strict_aliasing%': 1,
+           'conditions': [['OS=="linux"', {'werror%': '-Werror',}],
+                          ['OS=="freebsd"', {'werror%': '',}],
++                         ['OS=="netbsd"', {'werror%': '',}],
+                          ['OS=="openbsd"', {'werror%': '',}],
+           ],
+         },
+@@ -1358,7 +1359,7 @@
+         },
+       },
+     }],
+-    ['disable_nacl==1 or OS=="freebsd" or OS=="openbsd" or OS=="solaris"', {
++    ['disable_nacl==1 or OS=="freebsd" or OS=="netbsd" or OS=="openbsd" or OS=="solaris"', {
+       'target_defaults': {
+         'defines': [
+           'DISABLE_NACL',

@@ -1,0 +1,13 @@
+$NetBSD: patch-gx,v 1.1.1.1 2010/09/08 15:01:03 rxg Exp $
+
+--- native_client/build/common.gypi.orig	2010-08-12 09:07:46.000000000 +0000
++++ native_client/build/common.gypi
+@@ -383,7 +383,7 @@
+     },
+   },
+   'conditions': [
+-    ['OS=="linux"', {
++    ['OS=="linux" or OS=="freebsd" or OS=="netbsd" or OS=="openbsd"', {
+       'target_defaults': {
+         # Enable -Werror by default, but put it in a variable so it can
+         # be disabled in ~/.gyp/include.gypi on the valgrind builders.

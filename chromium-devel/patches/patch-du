@@ -1,0 +1,22 @@
+$NetBSD: patch-du,v 1.1.1.1 2010/09/08 15:00:59 rxg Exp $
+
+--- chrome/test/testing_profile.cc.orig	2010-08-26 09:04:56.000000000 +0000
++++ chrome/test/testing_profile.cc
+@@ -42,7 +42,7 @@
+ #include "testing/gmock/include/gmock/gmock.h"
+ #include "webkit/database/database_tracker.h"
+ 
+-#if defined(OS_LINUX) && !defined(TOOLKIT_VIEWS)
++#if defined(TOOLKIT_GTK) && !defined(TOOLKIT_VIEWS)
+ #include "chrome/browser/gtk/gtk_theme_provider.h"
+ #endif
+ 
+@@ -338,7 +338,7 @@ net::CookieMonster* TestingProfile::GetC
+ 
+ void TestingProfile::InitThemes() {
+   if (!created_theme_provider_) {
+-#if defined(OS_LINUX) && !defined(TOOLKIT_VIEWS)
++#if defined(TOOLKIT_GTK) && !defined(TOOLKIT_VIEWS)
+     theme_provider_.reset(new GtkThemeProvider);
+ #else
+     theme_provider_.reset(new BrowserThemeProvider);

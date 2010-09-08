@@ -1,0 +1,22 @@
+$NetBSD: patch-eo,v 1.1.1.1 2010/09/08 15:01:00 rxg Exp $
+
+--- net/third_party/nss/ssl.gyp.orig	2010-08-26 09:04:44.000000000 +0000
++++ net/third_party/nss/ssl.gyp
+@@ -4,7 +4,7 @@
+ 
+ {
+   'conditions': [
+-    [ 'OS == "linux" or OS == "freebsd" or OS == "openbsd"', {
++    [ 'OS == "linux" or OS == "freebsd" or OS == "netbsd" or OS == "openbsd"', {
+       'conditions': [
+         ['sysroot!=""', {
+           'variables': {
+@@ -96,7 +96,7 @@
+             ],
+           },
+         ],
+-        [ 'OS == "linux" or OS == "freebsd" or OS == "openbsd"', {
++        [ 'OS == "linux" or OS == "freebsd" or OS == "netbsd" or OS == "openbsd"', {
+           'defines': [
+             # These macros are needed only for compiling the files in
+             # ssl/bodge.

@@ -1,0 +1,40 @@
+$NetBSD: patch-fy,v 1.1.1.1 2010/09/08 15:01:02 rxg Exp $
+
+--- third_party/WebKit/WebKit/chromium/WebKit.gyp.orig	2010-08-26 09:11:12.000000000 +0000
++++ third_party/WebKit/WebKit/chromium/WebKit.gyp
+@@ -581,7 +581,7 @@
+                 }, {
+                     'type': '<(webkit_target_type)'
+                 }],
+-                ['OS=="linux" or OS=="freebsd"', {
++                ['OS=="linux" or OS=="freebsd" or OS=="netbsd" or OS=="openbsd"', {
+                     'dependencies': [
+                         '<(chromium_src_dir)/build/linux/system.gyp:fontconfig',
+                         '<(chromium_src_dir)/build/linux/system.gyp:gtk',
+@@ -592,7 +592,7 @@
+                         'public/gtk',
+                         'public/linux',
+                     ],
+-                }, { # else: OS!="linux" and OS!="freebsd"
++                }, { # else: OS!="linux" and OS!="freebsd" and OS!="netbsd" and OS!="openbsd"
+                     'sources/': [
+                         ['exclude', '/gtk/'],
+                         ['exclude', '/x11/'],
+@@ -906,7 +906,7 @@
+                         ['exclude', 'Mac\\.cpp$'],
+                     ]
+                 }],
+-                ['OS=="linux" or OS=="freebsd" or OS=="openbsd" or OS=="solaris"', {
++                ['OS=="linux" or OS=="freebsd" or OS=="netbsd" or OS=="openbsd" or OS=="solaris"', {
+                     'dependencies': [
+                         '<(chromium_src_dir)/build/linux/system.gyp:fontconfig',
+                         '<(chromium_src_dir)/build/linux/system.gyp:gtk',
+@@ -922,7 +922,7 @@
+                             '<(INTERMEDIATE_DIR)/repack/DumpRenderTree.pak',
+                         ]
+                     }],
+-                },{ # OS!="linux" and OS!="freebsd" and OS!="openbsd" and OS!="solaris"
++                },{ # OS!="linux" and OS!="freebsd" and OS!="netbsd" and OS!="openbsd" and OS!="solaris"
+                     'sources/': [
+                         ['exclude', '(Gtk|Linux)\\.cpp$']
+                     ]

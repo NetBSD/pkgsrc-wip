@@ -1,0 +1,13 @@
+$NetBSD: patch-ga,v 1.1.1.1 2010/09/08 15:01:02 rxg Exp $
+
+--- third_party/WebKit/WebCore/page/EventHandler.cpp.orig	2010-08-14 09:11:08.000000000 +0000
++++ third_party/WebKit/WebCore/page/EventHandler.cpp
+@@ -1899,7 +1899,7 @@ bool EventHandler::dispatchMouseEvent(co
+     return swallowEvent;
+ }
+ 
+-#if !PLATFORM(GTK) && !(PLATFORM(CHROMIUM) && OS(LINUX))
++#if !PLATFORM(GTK) && !(PLATFORM(CHROMIUM) && (OS(LINUX) || OS(FREEBSD) || OS(NETBSD)))
+ bool EventHandler::shouldTurnVerticalTicksIntoHorizontal(const HitTestResult&) const
+ {
+     return false;

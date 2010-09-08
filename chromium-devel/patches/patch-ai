@@ -1,0 +1,22 @@
+$NetBSD: patch-ai,v 1.1.1.1 2010/09/08 15:00:55 rxg Exp $
+
+--- base/base_paths_posix.cc.orig	2010-08-07 09:04:42.000000000 +0000
++++ base/base_paths_posix.cc
+@@ -7,7 +7,7 @@
+ #include "base/base_paths.h"
+ 
+ #include <unistd.h>
+-#if defined(OS_FREEBSD)
++#if defined(OS_FREEBSD) || defined(OS_NETBSD) || defined(OS_OPENBSD)
+ #include <sys/param.h>
+ #include <sys/sysctl.h>
+ #endif
+@@ -44,7 +44,7 @@ bool PathProviderPosix(int key, FilePath
+       bin_dir[bin_dir_size] = 0;
+       *result = FilePath(bin_dir);
+       return true;
+-#elif defined(OS_FREEBSD)
++#elif defined(OS_FREEBSD) || defined(OS_NETBSD) || defined(OS_OPENBSD)
+       int name[] = { CTL_KERN, KERN_PROC, KERN_PROC_PATHNAME, -1 };
+       char bin_dir[PATH_MAX + 1];
+       size_t length = sizeof(bin_dir);

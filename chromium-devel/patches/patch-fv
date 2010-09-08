@@ -1,0 +1,92 @@
+$NetBSD: patch-fv,v 1.1.1.1 2010/09/08 15:01:02 rxg Exp $
+
+--- webkit/tools/test_shell/test_shell.gypi.orig	2010-08-29 09:04:11.000000000 +0000
++++ webkit/tools/test_shell/test_shell.gypi
+@@ -128,7 +128,7 @@
+             'copy_npapi_test_plugin',
+           ],
+         }],
+-        ['OS=="linux" or OS=="freebsd" or OS=="openbsd" or OS=="solaris"', {
++        ['OS=="linux" or OS=="freebsd" or OS=="netbsd" or OS=="openbsd" or OS=="solaris"', {
+           'dependencies': [
+             'test_shell_resources',
+             '<(DEPTH)/build/linux/system.gyp:gtk',
+@@ -170,7 +170,7 @@
+         'pak_path': '<(INTERMEDIATE_DIR)/repack/test_shell.pak',
+       },
+       'conditions': [
+-        ['OS=="linux" or OS=="freebsd" or OS=="openbsd"', {
++        ['OS=="linux" or OS=="freebsd" or OS=="netbsd" or OS=="openbsd"', {
+           'actions': [
+             {
+               'action_name': 'test_shell_repack',
+@@ -264,7 +264,7 @@
+             '<(SHARED_INTERMEDIATE_DIR)/webkit/webkit_strings_en-US.rc',
+           ],
+         }],
+-        ['OS=="linux" or OS=="freebsd" or OS=="openbsd" or OS=="solaris"', {
++        ['OS=="linux" or OS=="freebsd" or OS=="netbsd" or OS=="openbsd" or OS=="solaris"', {
+           'conditions': [
+             ['linux_use_tcmalloc==1', {
+               'dependencies': [
+@@ -421,7 +421,7 @@
+           ],
+           'sources': [ '<@(test_shell_windows_resource_files)' ],
+         }],
+-        ['OS=="linux" or OS=="freebsd" or OS=="openbsd" or OS=="solaris"', {
++        ['OS=="linux" or OS=="freebsd" or OS=="netbsd" or OS=="openbsd" or OS=="solaris"', {
+           'dependencies': [
+             'test_shell_pak',
+             '<(DEPTH)/build/linux/system.gyp:gtk',
+@@ -458,7 +458,7 @@
+             '../../../skia/ext/vector_canvas_unittest.cc',
+           ],
+         }],
+-        ['OS=="linux" or OS=="freebsd" or OS=="solaris"', {
++        ['OS=="linux" or OS=="freebsd" or OS=="netbsd" or OS=="openbsd" or OS=="solaris"', {
+           'conditions': [
+             ['linux_use_tcmalloc==1', {
+               'dependencies': [
+@@ -573,13 +573,13 @@
+                 ],
+               },
+             }],
+-            ['OS=="linux" or OS=="freebsd" or OS=="openbsd"', {
++            ['OS=="linux" or OS=="freebsd" or OS=="netbsd" or OS=="openbsd"', {
+               'sources!': [
+                 # Needs simple event record type porting
+                 '../../glue/plugins/test/plugin_windowless_test.cc',
+               ],
+             }],
+-            ['(OS=="linux" or OS=="freebsd" or OS=="openbsd" or OS=="solaris") and (target_arch=="x64" or target_arch=="arm")', {
++            ['(OS=="linux" or OS=="freebsd" or OS=="netbsd" or OS=="openbsd" or OS=="solaris") and (target_arch=="x64" or target_arch=="arm")', {
+               # Shared libraries need -fPIC on x86-64
+               'cflags': ['-fPIC']
+             }],
+@@ -608,7 +608,7 @@
+                 },
+               ]
+             }],
+-            ['OS=="linux" or OS=="freebsd" or OS=="openbsd" or OS=="solaris"', {
++            ['OS=="linux" or OS=="freebsd" or OS=="netbsd" or OS=="openbsd" or OS=="solaris"', {
+               'copies': [
+                 {
+                   'destination': '<(PRODUCT_DIR)/plugins',
+@@ -675,7 +675,7 @@
+                 },
+               ]
+             }],
+-            ['OS=="linux" or OS=="freebsd" or OS=="openbsd" or OS=="solaris"', {
++            ['OS=="linux" or OS=="freebsd" or OS=="netbsd" or OS=="openbsd" or OS=="solaris"', {
+               'copies': [
+                 {
+                   'destination': '<(PRODUCT_DIR)/plugins',
+@@ -687,7 +687,7 @@
+         },
+       ],
+     }],
+-    ['OS=="linux"  or OS=="freebsd" or OS=="openbsd" or OS=="solaris"', {
++    ['OS=="linux"  or OS=="freebsd" or OS=="netbsd" or OS=="openbsd" or OS=="solaris"', {
+       'targets': [
+         {
+           'target_name': 'test_shell_resources',

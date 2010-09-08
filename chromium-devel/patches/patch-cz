@@ -1,0 +1,13 @@
+$NetBSD: patch-cz,v 1.1.1.1 2010/09/08 15:00:59 rxg Exp $
+
+--- chrome/common_constants.gypi.orig	2010-08-03 09:04:19.000000000 +0000
++++ chrome/common_constants.gypi
+@@ -67,7 +67,7 @@
+         '../base/base.gyp:base',
+       ],
+       'conditions': [
+-        ['OS=="linux" or OS=="freebsd" or OS=="openbsd"', {
++        ['OS=="linux" or OS=="freebsd" or OS=="netbsd" or OS=="openbsd"', {
+           'dependencies': ['../build/linux/system.gyp:gtk'],
+         }],
+       ],

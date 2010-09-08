@@ -1,0 +1,35 @@
+$NetBSD: patch-cq,v 1.1.1.1 2010/09/08 15:00:58 rxg Exp $
+
+--- chrome/chrome_browser.gypi.orig	2010-08-30 09:03:50.000000000 +0000
++++ chrome/chrome_browser.gypi
+@@ -3193,8 +3193,10 @@
+             'browser/file_path_watcher_inotify.cc',
+           ],
+         }],
+-        ['OS=="freebsd" or OS=="openbsd"', {
++        ['OS=="freebsd" or OS=="netbsd" or OS=="openbsd"', {
+           'dependencies': [
++            '../build/linux/system.gyp:dbus-glib',
++            '../build/linux/system.gyp:gconf',
+             '../build/linux/system.gyp:gtk',
+             '../build/linux/system.gyp:gtkprint',
+             '../build/linux/system.gyp:nss',
+@@ -3202,6 +3204,9 @@
+           'sources': [
+             'browser/file_path_watcher_stub.cc',
+           ],
++          'sources!': [
++            'browser/file_watcher_inotify.cc',
++          ],
+         }],
+         ['OS=="mac"', {
+           'sources!': [
+@@ -3762,7 +3767,7 @@
+               ],
+             }],
+             # GTK build only
+-            ['OS=="linux" and toolkit_views==0', {
++            ['(OS=="linux" or OS=="freebsd" or OS=="netbsd" or OS=="openbsd") and toolkit_views==0', {
+               'sources/': [
+                 ['include', '^browser/printing/print_dialog_gtk.cc'],
+                 ['include', '^browser/printing/print_dialog_gtk.h'],

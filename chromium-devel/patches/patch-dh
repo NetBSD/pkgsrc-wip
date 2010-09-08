@@ -1,0 +1,22 @@
+$NetBSD: patch-dh,v 1.1.1.1 2010/09/08 15:00:59 rxg Exp $
+
+--- chrome/renderer/renderer_main.cc.orig	2010-08-11 09:05:21.000000000 +0000
++++ chrome/renderer/renderer_main.cc
+@@ -268,7 +268,7 @@ int RendererMain(const MainFunctionParam
+   PepperPluginRegistry::GetInstance();
+ 
+   {
+-#if !defined(OS_LINUX)
++#if defined(OS_WIN) || defined(OS_MACOSX)
+     // TODO(markus): Check if it is OK to unconditionally move this
+     // instruction down.
+     RenderProcessImpl render_process;
+@@ -278,7 +278,7 @@ int RendererMain(const MainFunctionParam
+     if (!no_sandbox) {
+       run_loop = platform.EnableSandbox();
+     }
+-#if defined(OS_LINUX)
++#if defined(OS_POSIX) && !defined(OS_MACOSX)
+     RenderProcessImpl render_process;
+     render_process.set_main_thread(new RenderThread());
+ #endif

@@ -1,0 +1,12 @@
+$NetBSD: patch-fn,v 1.1.1.1 2010/09/08 15:01:02 rxg Exp $
+
+--- tools/gyp/gyptest.py.orig	2010-03-26 09:05:44.000000000 +0000
++++ tools/gyp/gyptest.py
+@@ -208,6 +208,7 @@ def main(argv=None):
+     format_list = [ {
+       'freebsd7': 'make',
+       'freebsd8': 'make',
++      'netbsd5':  'make',
+       'cygwin':   'msvs',
+       'win32':    'msvs',
+       'linux2':   'make',

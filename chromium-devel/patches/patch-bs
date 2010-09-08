@@ -1,0 +1,13 @@
+$NetBSD: patch-bs,v 1.1.1.1 2010/09/08 15:00:57 rxg Exp $
+
+--- chrome/browser/task_manager_resource_providers.cc.orig	2010-08-19 09:08:30.000000000 +0000
++++ chrome/browser/task_manager_resource_providers.cc
+@@ -841,7 +841,7 @@ TaskManagerBrowserProcessResource::TaskM
+       default_icon_ = IconUtil::CreateSkBitmapFromHICON(icon, icon_size);
+     }
+   }
+-#elif defined(OS_LINUX)
++#elif defined(OS_POSIX) && !defined(OS_MACOSX)
+   if (!default_icon_) {
+     ResourceBundle& rb = ResourceBundle::GetSharedInstance();
+     default_icon_ = rb.GetBitmapNamed(IDR_PRODUCT_LOGO_16);

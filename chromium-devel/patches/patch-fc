@@ -1,0 +1,17 @@
+$NetBSD: patch-fc,v 1.1.1.1 2010/09/08 15:01:01 rxg Exp $
+
+--- third_party/libjpeg/libjpeg.gyp.orig	2010-05-15 09:02:48.000000000 +0000
++++ third_party/libjpeg/libjpeg.gyp
+@@ -5,10 +5,10 @@
+ {
+   'variables': {
+     'conditions': [
+-      [ 'OS=="linux" or OS=="freebsd" or OS=="openbsd"', {
++      [ 'OS=="linux" or OS=="freebsd" or OS=="netbsd" or OS=="openbsd"', {
+         # Link to system .so since we already use it due to GTK.
+         'use_system_libjpeg%': 1,
+-      }, {  # OS!="linux" and OS!="freebsd" and OS!="openbsd"
++      }, {  # OS!="linux" and OS!="freebsd" and OS!="netbsd" and OS!="openbsd"
+         'use_system_libjpeg%': 0,
+       }],
+     ],

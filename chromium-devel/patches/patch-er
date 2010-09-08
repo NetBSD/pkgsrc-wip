@@ -1,0 +1,13 @@
+$NetBSD: patch-er,v 1.1.1.1 2010/09/08 15:01:00 rxg Exp $
+
+--- sandbox/sandbox.gyp.orig	2010-06-17 09:04:14.000000000 +0000
++++ sandbox/sandbox.gyp
+@@ -126,7 +126,7 @@
+     ],
+   },
+   'conditions': [
+-    [ 'OS=="freebsd" or OS=="openbsd"', {
++    [ 'OS=="freebsd" or OS=="netbsd" or OS=="openbsd"', {
+       # GYP requires that each file have at least one target defined.
+       'targets': [
+         {
