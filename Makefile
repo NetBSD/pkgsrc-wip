@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4089 2010/09/08 15:04:49 rxg Exp $
+# $Id: Makefile,v 1.4090 2010/09/08 18:34:30 minskim Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2392,8 +2392,6 @@ SUBDIR+=	tex-arabxtex
 SUBDIR+=	tex-arabxtex-doc
 SUBDIR+=	tex-arphic-ttf
 SUBDIR+=	tex-baekmuk-ttf
-SUBDIR+=	tex-eurosym
-SUBDIR+=	tex-eurosym-doc
 SUBDIR+=	tex-fancybox
 SUBDIR+=	tex-fancybox-doc
 SUBDIR+=	tex-feynmf
