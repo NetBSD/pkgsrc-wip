@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/09/08 20:43:11 jihbed Exp $
+
+SHA1 (commons-logging-1.1.1-bin.tar.gz) = 03140686f697b4cd6d442cdf5965589334380b5a
+RMD160 (commons-logging-1.1.1-bin.tar.gz) = 53e3539047d2a3d4f660160f8e507223c57b70b7
+Size (commons-logging-1.1.1-bin.tar.gz) = 817240 bytes
