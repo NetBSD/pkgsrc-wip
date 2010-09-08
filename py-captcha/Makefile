@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/08/08 21:03:13 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2010/09/08 23:21:32 jihbed Exp $
 #
 
 DISTNAME=	pycaptcha-0.4
@@ -7,7 +7,7 @@ CATEGORIES=	www
 MASTER_SITES=	http://releases.navi.cx/pycaptcha/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	kamelderouiche@yahoo.com
+MAINTAINER=	pkgsrc-users@netbsd.org
 HOMEPAGE=	http://svn.navi.cx/misc/trunk/pycaptcha/
 COMMENT=	Python framework for CAPTCHA tests
 LICENSE=	mit
