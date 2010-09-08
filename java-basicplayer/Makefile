@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/09/08 22:04:56 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2010/09/08 22:27:03 jihbed Exp $
 #
 
 DISTNAME=	basicplayer3.0
 PKGNAME=	java-basicplayer-3.0
-CATEGORIES=	sound java
+CATEGORIES=	audio java
 MASTER_SITES=	http://www.javazoom.net/jlgui/sources/
 EXTRACT_SUFX=	.zip
 
