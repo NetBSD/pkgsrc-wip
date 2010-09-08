@@ -1,0 +1,3 @@
+JSpeex is a Java port of the Speex speech codec (Open Source/Free Software
+patent-free audio compression format designed for speech). It provides both the
+decoder and the encoder in pure Java, as well as a JavaSound SPI.
