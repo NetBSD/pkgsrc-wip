@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/09/08 21:38:01 jihbed Exp $
+
+SHA1 (commons-io-1.4-bin.tar.gz) = 5bde299fd34002006bf5d2d252452b4394c4e8e3
+RMD160 (commons-io-1.4-bin.tar.gz) = a7b5fdb9ab448082d371224a32ed44f930ca80a6
+Size (commons-io-1.4-bin.tar.gz) = 925627 bytes
