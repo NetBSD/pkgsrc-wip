@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/09/09 01:47:48 jihbed Exp $
+
+SHA1 (apache-log4j-1.2.16.tar.gz) = 5d0547046eceedcd4bd9e816a93540dbf8f4ca93
+RMD160 (apache-log4j-1.2.16.tar.gz) = b80cd2d55e10322e7903ffb355d36c93daceece6
+Size (apache-log4j-1.2.16.tar.gz) = 2791979 bytes
