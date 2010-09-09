@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2010/09/09 08:56:07 rxg Exp $
+# $NetBSD: Makefile,v 1.16 2010/09/09 09:31:59 rxg Exp $
 #
 
 DISTNAME=		stardict-3.0.1
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		textproc
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=stardict/}
 EXTRACT_SUFX=		.tar.bz2
