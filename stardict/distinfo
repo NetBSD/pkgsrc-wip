@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2009/09/14 17:34:13 cheusov Exp $
+$NetBSD: distinfo,v 1.4 2010/09/09 08:56:07 rxg Exp $
 
 SHA1 (stardict-3.0.1.tar.bz2) = a0357e88105eaf7d6a4aa4803bf8617759bf0315
 RMD160 (stardict-3.0.1.tar.bz2) = 296d73bd9acdbb53c21a4fb17e608a25f01b76de
 Size (stardict-3.0.1.tar.bz2) = 1964195 bytes
-SHA1 (patch-aa) = fb74e313ccc627e751916ef1f6df98139a925868
+SHA1 (patch-ab) = 1a1fe35e93b2714a78d9ddcfd68112e1888c7db7
+SHA1 (patch-ac) = d47f40089164c6433be5ef8d7b2138fc5c59d89e

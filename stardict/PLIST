@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/09/14 17:43:46 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.5 2010/09/09 08:56:07 rxg Exp $
 bin/stardict
 lib/bonobo/servers/GNOME_Stardict.server
 lib/stardict/plugins/advertisement.la
@@ -14,7 +14,7 @@ lib/stardict/plugins/stardict_wordnet_parsedata.la
 lib/stardict/plugins/stardict_xdxf_parsedata.la
 man/man1/stardict.1
 share/applications/stardict.desktop
-@comment share/gconf/schemas/stardict.schemas
+share/gconf/schemas/stardict.schemas
 share/gnome/help/stardict/C/figures/stardict_float_window.png
 share/gnome/help/stardict/C/figures/stardict_main_window.png
 share/gnome/help/stardict/C/figures/stardict_notification_area.png
@@ -98,3 +98,5 @@ share/stardict/pixmaps/index_wazard.png
 share/stardict/pixmaps/splash.png
 share/stardict/sounds/buttonactive.wav
 share/stardict/sounds/menushow.wav
+@pkgdir share/stardict/treedict
+@pkgdir share/stardict/dic
