@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/09/09 00:57:35 jihbed Exp $
+
+SHA1 (velocity-1.6.4.tar.gz) = 624c244401065f02b1ce5772d14e58039a4a7d6a
+RMD160 (velocity-1.6.4.tar.gz) = 1b6d45c24c054cc8c25ebdbcf1f1d9e465cb1ea4
+Size (velocity-1.6.4.tar.gz) = 5774400 bytes
