@@ -1,11 +1,12 @@
-$NetBSD: patch-aa,v 1.3 2009/12/04 13:32:57 rhialto Exp $
+$NetBSD: patch-aa,v 1.4 2010/09/10 13:00:37 rhialto Exp $
 
-This message from swig appears to be harmless:
+This message from swig is very mysterious; use sed(1) to patch that line.
     ifo_read.i:49: Error: Syntax error in input(1).
+It reads "typedef int wchar_t;"
 
---- Makefile.orig	2006-05-02 21:17:13.000000000 +0200
-+++ Makefile
-@@ -20,10 +20,10 @@ LANGUAGES ?= xx
+--- Makefile.orig	2006-05-02 19:17:13.000000000 +0000
++++ Makefile	2010-09-10 12:51:35.000000000 +0000
+@@ -20,10 +20,10 @@
  PLINC      = $(shell perl -e \
  	       'use Config; print "$$Config{archlibexp}/CORE\n";')
  PLARCH     = $(shell perl -e 'use Config; print "$$Config{archname}\n";')
@@ -18,7 +19,16 @@ This message from swig appears to be harmless:
  CFLAGS    += -I $(PLINC) $(PLCFLAGS) -Wall -W -Wno-strict-aliasing \
  	       -Wno-unused-function -Wno-unused-variable \
  	       -Wno-unused-parameter
-@@ -67,7 +67,7 @@ BINDIST   ?= qVamps-$(VERSION).$(BINVERS
+@@ -31,7 +31,7 @@
+ LOADLIBES ?= -ldvdread
+ 
+ SWIG      ?= swig
+-SWIGFLAGS ?= -perl -Wall -nodefault
++SWIGFLAGS ?= -perl -nodefaultctor -nodefaultdtor -D'__asm(x)='
+ 
+ PUIC      ?= puic
+ PUICFLAGS ?= -p 2
+@@ -67,7 +67,7 @@
  		@rm -f $@.tmp
  
  %.msgs:		%.pm
@@ -27,7 +37,7 @@ This message from swig appears to be harmless:
  
  %.qm:		%.ts
  		$(LRELEASE) -verbose $< -qm $@
-@@ -84,7 +84,7 @@ LibDvdRead.so:	libdvdread_wrap.o
+@@ -84,10 +84,10 @@
  		$(CC) $(SOLDFLAGS) $^ $(LOADLIBES) $(LDLIBS) -o $@
  
  libdvdread_wrap.c LibDvdRead.pm:	libdvdread.i ifo_read.i ignores.i
@@ -35,8 +45,12 @@ This message from swig appears to be harmless:
 +		-$(SWIG) $(SWIGFLAGS) $<
  
  ifo_read.i:	ifo_read.c
- 		$(CC) -E -P $< > $@
-@@ -122,23 +122,24 @@ $(BINDIST):	qvamps LibDvdRead.so main_sw
+-		$(CC) -E -P $< > $@
++		$(CC) -E -P $< | sed -e 's/typedef int wchar_t;//' > $@ 
+ 
+ # .pm from .png
+ DesignerMimeSourceFactory_qvamps.pm:	$(addprefix images/,$(IMAGES))
+@@ -122,23 +122,24 @@
  
  # other targets go below
  install:	all
