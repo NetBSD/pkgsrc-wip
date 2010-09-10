@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.5 2009/05/14 08:55:03 x400 Exp $
-
-SHA1 (callweaver-RC-1.1.99.20090513.tar.gz) = ee8a49c5080102d04227a4dd8169d6aa2a5c75dd
-RMD160 (callweaver-RC-1.1.99.20090513.tar.gz) = c4cee7d4464384b6ab248bd1f9a5d6e2fa9cc890
-Size (callweaver-RC-1.1.99.20090513.tar.gz) = 5756430 bytes
-SHA1 (patch-aa) = 661b7565ab9de1e9c10ba69bb5fe03a186b847c8

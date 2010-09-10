@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2009/04/02 09:08:50 x400 Exp $
-
-SHA1 (spandsp-0.0.6pre7.tgz) = 200cd3052b6d5cdbaed19d5bcc9d3b2875ebad9e
-RMD160 (spandsp-0.0.6pre7.tgz) = c6c2d0ec7cff92647aa7199eb4cc7dacbda83868
-Size (spandsp-0.0.6pre7.tgz) = 2493861 bytes
-SHA1 (patch-aa) = c3eeb44027a108e6ec352259b0a02c47bd9b11b5
