@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4090 2010/09/08 18:34:30 minskim Exp $
+# $Id: Makefile,v 1.4091 2010/09/10 09:14:14 obache Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -297,7 +297,6 @@ SUBDIR+=	datapipe
 SUBDIR+=	dates
 SUBDIR+=	db1
 SUBDIR+=	dbf
-SUBDIR+=	dbskkd-cdb
 SUBDIR+=	dbus-explorer
 SUBDIR+=	dcc
 SUBDIR+=	ddate
@@ -2256,7 +2255,6 @@ SUBDIR+=	siproxd
 SUBDIR+=	siptoolbox
 SUBDIR+=	sis
 SUBDIR+=	ski
-SUBDIR+=	skk-jisyo-cdb
 SUBDIR+=	sks
 SUBDIR+=	slackpkg2pkgsrc
 SUBDIR+=	slate

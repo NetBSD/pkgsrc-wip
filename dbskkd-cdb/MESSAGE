@@ -1,8 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2010/08/16 11:43:45 ryo-on Exp $
-
-Please add the following lines to /etc/inetd.conf.
-
-skkserv stream  tcp     nowait  nobody ${PREFIX}/libexec/dbskkd-cdb dbskkd-cdb
-skkserv stream  tcp6    nowait  nobody ${PREFIX}/libexec/dbskkd-cdb dbskkd-cdb
-===========================================================================
