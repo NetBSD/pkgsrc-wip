@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/08/23 18:46:42 ryo-on Exp $
+# $NetBSD: Makefile,v 1.3 2010/09/10 08:56:56 obache Exp $
 #
 
 DISTNAME=	SKK-JISYO.L.${SKKJISYO_VERS}
@@ -14,13 +14,15 @@ COMMENT=	Dictionary collection for SKK
 PKG_DESTDIR_SUPPORT=	user-destdir
 WRKSRC=	${WRKDIR}
 
-BUILD_DEPENDS=	tinycdb-[0-9]*:../../databases/tinycdb
+BUILD_DEPENDS+=	tinycdb-[0-9]*:../../databases/tinycdb
+
+USE_LANGUAGES=	# empty
 
 SKKJISYO_VERS=	201008
 
 INSTALLATION_DIRS+=	${PREFIX}/share/skk
 
-FIND_PREFIX:=	CDBDIR=tinycdb-[0-9]*
+FIND_PREFIX:=	CDBDIR=tinycdb
 
 do-build:
 	LC_ALL=C ${AWK} '/^[^;]/ { \
