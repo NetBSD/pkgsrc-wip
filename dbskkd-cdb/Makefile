@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/09/10 09:04:45 obache Exp $
+# $NetBSD: Makefile,v 1.5 2010/09/10 09:06:12 obache Exp $
 #
 
 DISTNAME=	dbskkd-cdb-2.00
@@ -19,7 +19,7 @@ INSTALLATION_DIRS=	libexec \
 
 DEPENDS=	skk-jisyo-cdb-[0-9]*:../../wip/skk-jisyo-cdb
 
-FIND_PREFIX:=	SKKJISYOCDBDIR=skk-jisyo-cdb-[0-9]*
+FIND_PREFIX:=	SKKJISYOCDBDIR=skk-jisyo-cdb
 
 SUBST_CLASSES+=			fix-paths
 SUBST_STAGE.fix-paths=		pre-configure
