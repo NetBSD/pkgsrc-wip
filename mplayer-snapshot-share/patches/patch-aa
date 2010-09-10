@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2010/09/07 22:29:05 cheusov Exp $
+$NetBSD: patch-aa,v 1.3 2010/09/10 12:05:39 cheusov Exp $
 
 --- configure.orig	2010-05-29 20:16:38.000000000 +0000
 +++ configure
@@ -95,3 +95,11 @@ $NetBSD: patch-aa,v 1.2 2010/09/07 22:29:05 cheusov Exp $
  int main(void) { return 0; }
  EOF
      cc_check && _tv_v4l2=yes
+@@ -8273,6 +8281,7 @@ XV = $_xv
+ XVID4 = $_xvid
+ XVIDIX = $xvidix
+ XVMC = $_xvmc
++XVR100 = $_xvr100
+ YUV4MPEG = $_yuv4mpeg
+ ZR = $_zr
+ 
