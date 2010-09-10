@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2010/01/13 13:21:04 x400 Exp $
+# $NetBSD: options.mk,v 1.6 2010/09/10 21:31:31 x400 Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.callweaver
 PKG_SUPPORTED_OPTIONS=	jabber mysql pgsql sipsecurity snmp
@@ -20,7 +20,7 @@ CONFIGURE_ARGS+=	--enable-mysql --with-app_sql_mysql --with-cdr_mysql --with-res
 .endif
 
 .if !empty(PKG_OPTIONS:Mpgsql)
-.include "../../databases/postgresql83-client/buildlink3.mk"
+.include "../../databases/postgresql84-client/buildlink3.mk"
 PLIST.pgsql=		yes
 CONFIGURE_ARGS+=	--enable-postgresql --with-app_sql_postgres --with-cdr_pgsql --with-res_config_pgsql
 .endif
