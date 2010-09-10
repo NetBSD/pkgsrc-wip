@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/08/16 11:12:35 jihbed Exp $
+# $NetBSD: Makefile,v 1.5 2010/09/10 20:37:06 jihbed Exp $
 #
 
 DISTNAME=	papyon-0.4.9
@@ -7,7 +7,7 @@ PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	http://www.freedesktop.org/software/papyon/releases/
 
-MAINTAINER=	kamelderouiche@yahoo.com
+MAINTAINER=	pkgsrc.gnome@gmail.com
 HOMEPAGE=	http://telepathy.freedesktop.org/wiki/Papyon
 COMMENT=	MSN client library written in Python
 LICENSE=	gnu-gpl-v2

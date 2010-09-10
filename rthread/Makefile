@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2009/05/19 23:22:43 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2010/09/10 20:43:34 jihbed Exp $
 #
 
 DISTNAME=	rthread-0.1.1
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	http://www.cs.tut.fi/~ask/rthread/
 
@@ -17,5 +18,4 @@ PYDISTUTILSPKG= yes
 
 
 .include "../../lang/python/extension.mk"
-.include "../../x11/py-Tk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
