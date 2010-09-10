@@ -1,9 +1,7 @@
-# $NetBSD: Makefile.depends,v 1.2 2006/01/30 17:22:58 thomasklausner Exp $
+# $NetBSD: Makefile.depends,v 1.3 2010/09/10 19:50:03 cheusov Exp $
 #
 
 DEPENDS+=	mplayer-share>=${MPLAYER_PKG_VERSION}:../../wip/mplayer-share
-
-GCC_REQD+=	2.95.3
 
 .if ${OPSYS} == "NetBSD"
 .  include "../../devel/binutils/buildlink3.mk"
