@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2010/08/30 04:57:10 makoto Exp $
+@comment $NetBSD: PLIST,v 1.21 2010/09/10 21:09:20 thomasklausner Exp $
 bin/bugpoint
 bin/llc
 bin/lli
@@ -132,7 +132,7 @@ include/llvm/Analysis/Trace.h
 include/llvm/Analysis/ValueTracking.h
 include/llvm/Analysis/Verifier.h
 include/llvm/Argument.h
-include/llvm/Assembly/AsmAnnotationWriter.h
+include/llvm/Assembly/AssemblyAnnotationWriter.h
 include/llvm/Assembly/Parser.h
 include/llvm/Assembly/PrintModulePass.h
 include/llvm/Assembly/Writer.h
@@ -492,6 +492,7 @@ man/man1/llvm-ar.1
 man/man1/llvm-as.1
 man/man1/llvm-bcanalyzer.1
 man/man1/llvm-config.1
+man/man1/llvm-diff.1
 man/man1/llvm-dis.1
 man/man1/llvm-extract.1
 man/man1/llvm-ld.1
@@ -522,6 +523,7 @@ share/doc/llvm/html/CommandGuide/llvm-ar.html
 share/doc/llvm/html/CommandGuide/llvm-as.html
 share/doc/llvm/html/CommandGuide/llvm-bcanalyzer.html
 share/doc/llvm/html/CommandGuide/llvm-config.html
+share/doc/llvm/html/CommandGuide/llvm-diff.html
 share/doc/llvm/html/CommandGuide/llvm-dis.html
 share/doc/llvm/html/CommandGuide/llvm-extract.html
 share/doc/llvm/html/CommandGuide/llvm-ld.html
@@ -602,6 +604,7 @@ share/doc/llvm/ps/llvm-as.ps
 share/doc/llvm/ps/llvm-bcanalyzer.ps
 share/doc/llvm/ps/llvm-config.ps
 share/doc/llvm/ps/llvm-dis.ps
+share/doc/llvm/ps/llvm-diff.ps
 share/doc/llvm/ps/llvm-extract.ps
 share/doc/llvm/ps/llvm-ld.ps
 share/doc/llvm/ps/llvm-link.ps
