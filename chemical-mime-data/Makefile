@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/06/13 22:46:58 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2010/09/10 20:49:44 jihbed Exp $
 #
 
 DISTNAME=	chemical-mime-data-0.1.94
@@ -8,7 +8,7 @@ MASTER_SITES=	http://garr.dl.sourceforge.net/project/chemical-mime/chemical-mime
 
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://chemical-mime.sourceforge.net/
-COMMENT=	chemical mime and file type support for desktops
+COMMENT=	Chemical mime and file type support for desktops
 #LICENSE=	# TODO: (see mk/license.mk)
 
 PKG_DESTDIR_SUPPORT=	user-destdir
