@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/06/13 22:47:10 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2010/09/10 20:52:47 jihbed Exp $
 #
 
 DISTNAME=	gtask-0.1.2
@@ -7,7 +7,7 @@ PKGREVISION=	4
 CATEGORIES=	devel
 MASTER_SITES=	http://ftp.dronelabs.com/sources/gtask/0.1/
 
-MAINTAINER=	kamel.derouiche@gmail.com
+MAINTAINER=	pkgsrc.gnome@gmail.com
 HOMEPAGE=	http://chergert.github.com/gtask/
 COMMENT=	Library for asynchronous and Callback-based execution for GObject
 LICENSE=	gnu-lgpl-v2.1
