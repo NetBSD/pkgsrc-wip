@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/09/11 04:34:27 obache Exp $
+# $NetBSD: Makefile,v 1.5 2010/09/11 08:32:12 obache Exp $
 #
 
 DISTNAME=	multiskkserv-20100128-ac
@@ -16,6 +16,8 @@ DEPENDS=	skk-jisyo-cdb-[0-9]*:../../inputmethod/skk-jisyo-cdb
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+FIND_PREFIX:=		SKKJISYOCDBDIR=skk-jisyo-cdb
+
 DOCSDIR=		${PREFIX}/share/doc/${PKGBASE}
 INSTALLATION_DIRS=	${DOCSDIR}
 
@@ -27,9 +29,12 @@ GNU_CONFIGURE=	yes
 
 RCD_SCRIPTS=	multiskkserv
 
+FILES_SUBST=	SKKJISYOCDBDIR=${SKKJISYOCDBDIR}
+
 post-install:
 .for filename in ${INSTALL_DOCS}
 	${INSTALL_DATA} ${WRKSRC}/${filename} ${DESTDIR}/${DOCSDIR}
 .endfor
 
+.include "../../mk/find-prefix.mk"
 .include "../../mk/bsd.pkg.mk"
