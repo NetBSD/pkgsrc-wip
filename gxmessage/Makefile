@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2010/06/13 22:47:07 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2010/09/11 21:38:26 jihbed Exp $
 #
 
 DISTNAME=	gxmessage-2.12.4
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	http://homepages.ihug.co.nz/~trmusson/stuff/
 
-MAINTAINER=	kamelderouiche@yahoo.com
+MAINTAINER=	pkgsrc.gnome@gmail.com
 HOMEPAGE=	http://homepages.ihug.co.nz/~trmusson/stuff/
 COMMENT=	Gxmessage a GTK2+ based xmessage clone
 LICENSE=	gnu-gpl-v3
