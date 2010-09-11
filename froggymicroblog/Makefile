@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/06/13 22:47:04 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2010/09/11 10:10:34 jihbed Exp $
 #
 
 DISTNAME=	frogmicroblog-0.1.4
@@ -6,7 +6,7 @@ PKGREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	http://froggymicroblog.googlecode.com/files/
 
-MAINTAINER=	kamelderouiche@yahoo.com
+MAINTAINER=	pkgsrc.gnome@gmail.com
 HOMEPAGE=	http://code.google.com/p/froggymicroblog/
 COMMENT=	C\# twitter identi.ca client
 LICENSE=	gnu-gpl-v2

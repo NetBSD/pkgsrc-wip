@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/08/11 10:41:28 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2010/09/11 10:14:34 jihbed Exp $
 #
 
 DISTNAME=	gtkglextmm-1.2.0
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtkglext/}
 
-MAINTAINER=	kamelderouiche@yahoo.com
+MAINTAINER=	pkgsrc.gnome@gmail.com
 HOMEPAGE=	http://gtkglext.sourceforge.net/
 COMMENT=	C++ wrapper for GtkGLExt
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
