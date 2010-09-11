@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2010/09/11 13:29:39 cheusov Exp $
+# $NetBSD: options.mk,v 1.5 2010/09/11 20:55:28 cheusov Exp $
 
 .if defined(PKGNAME) && empty(PKGNAME:Mmplayer-share*)
 
@@ -155,6 +155,7 @@ CONFIGURE_ARGS+=	--disable-dvdread
 .if !empty(PKG_OPTIONS:Mdvdnav)
 CONFIGURE_ARGS+=	--enable-dvdnav
 .  include "../../multimedia/libdvdnav/buildlink3.mk"
+CFLAGS+=		-I${BUILDLINK_PREFIX.dvdnav}/include/dvdnav
 .else
 CONFIGURE_ARGS+=	--disable-dvdnav
 .endif
@@ -232,7 +233,7 @@ CONFIGURE_ARGS+=	--disable-menu
 EVAL_PREFIX+=		PREFIX.realplayer-codecs=realplayer-codecs
 PREFIX.realplayer-codecs_DEFAULT=	${LOCALBASE}
 CONFIGURE_ARGS+=	--enable-real
-CONFIGURE_ARGS+=	--realcodecsdir="${PREFIX.realplayer-codecs}/lib/RealPlayer8-Codecs"
+#CONFIGURE_ARGS+=	--realcodecsdir="${PREFIX.realplayer-codecs}/lib/RealPlayer8-Codecs"
 DEPENDS+=		realplayer-codecs>=8nb2:../../multimedia/realplayer-codecs
 .else
 CONFIGURE_ARGS+=	--disable-real
@@ -248,7 +249,7 @@ CONFIGURE_ARGS+=	--disable-runtime-cpudetection
 EVAL_PREFIX+=		PREFIX.win32-codecs=win32-codecs
 PREFIX.win32-codecs_DEFAULT=	${LOCALBASE}
 CONFIGURE_ARGS+=	--enable-win32dll
-CONFIGURE_ARGS+=	--win32codecsdir="${PREFIX.win32-codecs}/lib/win32"
+#CONFIGURE_ARGS+=	--win32codecsdir="${PREFIX.win32-codecs}/lib/win32"
 DEPENDS+=		win32-codecs>=011227:../../multimedia/win32-codecs
 .else
 CONFIGURE_ARGS+=	--disable-win32dll
