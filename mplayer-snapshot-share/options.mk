@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2010/09/07 22:39:32 cheusov Exp $
+# $NetBSD: options.mk,v 1.3 2010/09/11 10:44:31 cheusov Exp $
 
 .if defined(PKGNAME) && empty(PKGNAME:Mmplayer-share*)
 
@@ -15,7 +15,8 @@ PKG_OPTIONS_VAR=	PKG_OPTIONS.${PKGNAME:C/-[0-9].*//}
 
 # Options supported by both mplayer* or mencoder*.
 
-PKG_SUPPORTED_OPTIONS=	gif jpeg mad dts dv dvdread png theora vorbis x264 debug
+PKG_SUPPORTED_OPTIONS=	gif jpeg mad dts dv png theora vorbis x264 debug
+PKG_SUPPORTED_OPTIONS+= dvdread dvdnav
 .if ${OSS_TYPE} != "none"
 PKG_SUPPORTED_OPTIONS+=	oss
 .endif
@@ -78,7 +79,8 @@ PKG_SUPPORTED_OPTIONS+= xvid
 # Define PKG_SUGGESTED_OPTIONS.
 # -------------------------------------------------------------------------
 
-.for _o_ in aalib arts cdparanoia dv dvdread esound gif jpeg \
+.for _o_ in aalib arts cdparanoia dv esound gif jpeg \
+	    dvdread dvdnav \
 	    lame mad mplayer-menu mplayer-real \
 	    mplayer-default-cflags mplayer-runtime-cpudetection mplayer-win32 \
 	    nas oss pulseaudio png sdl theora vorbis x264 xvid vdpau
@@ -147,6 +149,13 @@ CONFIGURE_ARGS+=	--enable-dvdread
 .  include "../../multimedia/libdvdread/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-dvdread
+.endif
+
+.if !empty(PKG_OPTIONS:Mdvdnav)
+CONFIGURE_ARGS+=	--enable-dvdnav
+.  include "../../multimedia/libdvdnav/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-dvdnav
 .endif
 
 .if !empty(PKG_OPTIONS:Mesound)
