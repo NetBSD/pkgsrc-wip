@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2009/07/21 13:23:18 jihbed Exp $
-
-SHA1 (libgdata-0.4.0.tar.bz2) = 632bba476b53632b75354c21bc119313767ce6bc
-RMD160 (libgdata-0.4.0.tar.bz2) = d5e344f433317e426d675e084565fe9a1293e91f
-Size (libgdata-0.4.0.tar.bz2) = 813608 bytes
