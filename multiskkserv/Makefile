@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/08/27 14:22:43 ryo-on Exp $
+# $NetBSD: Makefile,v 1.4 2010/09/11 04:34:27 obache Exp $
 #
 
 DISTNAME=	multiskkserv-20100128-ac
@@ -12,7 +12,7 @@ HOMEPAGE=	http://github.com/sina-ht/multiskkserv/
 COMMENT=	Simple skk multi-dictionary server
 LICENSE=	gnu-gpl-v2
 
-DEPENDS=	skk-jisyo-cdb-[0-9]*:../../wip/skk-jisyo-cdb
+DEPENDS=	skk-jisyo-cdb-[0-9]*:../../inputmethod/skk-jisyo-cdb
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
