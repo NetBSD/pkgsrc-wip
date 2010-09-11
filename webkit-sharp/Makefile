@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/06/13 22:47:21 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2010/09/11 12:33:10 jihbed Exp $
 #
 
 DISTNAME=	webkit-sharp-0.3
@@ -7,7 +7,7 @@ CATEGORIES=	www
 MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/webkit-sharp/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	kamelderouiche@yahoo.com
+MAINTAINER=	pkgsrc.gnome@gmail.com
 # could not find real homepage
 #HOMEPAGE=	http://ftp.novell.com/pub/mono/sources/webkit-sharp/
 COMMENT=	Webkit-sharp Bindings webkit-gtk under C\#

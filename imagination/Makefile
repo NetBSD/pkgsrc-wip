@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/06/13 22:47:08 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2010/09/11 12:35:18 jihbed Exp $
 #
 
 DISTNAME=	imagination-1.0
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	http://ovh.dl.sourceforge.net/sourceforge/imagination/
 
-MAINTAINER=	kamelderouiche@yahoo.com
+MAINTAINER=	pkgsrc.gnome@gmail.com
 HOMEPAGE=	http://imagination.sourceforge.net/
 COMMENT=	Imagination a simple and lightweight DVD slideshow maker
 
