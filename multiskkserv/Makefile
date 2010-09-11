@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/09/11 08:46:15 obache Exp $
+# $NetBSD: Makefile,v 1.7 2010/09/11 09:00:40 obache Exp $
 #
 
 DISTNAME=	multiskkserv-20100128-ac
@@ -35,6 +35,12 @@ post-install:
 .for filename in ${INSTALL_DOCS}
 	${INSTALL_DATA} ${WRKSRC}/${filename} ${DESTDIR}/${DOCSDIR}
 .endfor
+
+SUBST_CLASSES+=		pthread
+SUBST_STAGE.pthread=	pre-configure
+SUBST_FILES.pthread=	configure
+SUBST_SED.pthread=	-e 's/-D_REENTRANT/${PTHREAD_CFLAGS}/g'
+SUBST_SED.pthread+=	-e 's/-lpthread/${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}/g'
 
 .include "../../mk/find-prefix.mk"
 .include "../../mk/pthread.buildlink3.mk"
