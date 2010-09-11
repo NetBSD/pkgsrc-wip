@@ -1,6 +1,6 @@
-$NetBSD: patch-vb,v 1.1.1.1 2010/09/07 21:52:27 cheusov Exp $
+$NetBSD: patch-vb,v 1.2 2010/09/11 13:29:40 cheusov Exp $
 
---- stream/tvi_v4l2.c.orig	2009-05-13 04:58:57.000000000 +0200
+--- stream/tvi_v4l2.c.orig	2010-08-03 15:55:17.000000000 +0000
 +++ stream/tvi_v4l2.c
 @@ -49,8 +49,12 @@ known issues:
  #ifdef HAVE_SYS_SYSINFO_H
@@ -14,4 +14,4 @@ $NetBSD: patch-vb,v 1.1.1.1 2010/09/07 21:52:27 cheusov Exp $
 +#endif
  #include "mp_msg.h"
  #include "libmpcodecs/img_format.h"
- #include "libaf/af_format.h"
+ #include "libmpcodecs/dec_teletext.h"

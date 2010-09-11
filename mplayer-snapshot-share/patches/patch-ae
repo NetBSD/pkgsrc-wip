@@ -1,9 +1,9 @@
-$NetBSD: patch-ae,v 1.1.1.1 2010/09/07 21:52:27 cheusov Exp $
+$NetBSD: patch-ae,v 1.2 2010/09/11 13:29:40 cheusov Exp $
 
---- libvo/aclib.c.orig	2009-04-08 22:21:21.000000000 +0200
+--- libvo/aclib.c.orig	2010-01-03 09:20:01.000000000 +0000
 +++ libvo/aclib.c
-@@ -28,6 +28,11 @@
- #include "fastmemcpy.h"
+@@ -30,6 +30,11 @@
+ #include "libavutil/x86_cpu.h"
  #undef memcpy
  
 +#if ARCH_X86 && defined(__APPLE__)

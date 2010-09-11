@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2010/09/11 10:44:31 cheusov Exp $
+# $NetBSD: options.mk,v 1.4 2010/09/11 13:29:39 cheusov Exp $
 
 .if defined(PKGNAME) && empty(PKGNAME:Mmplayer-share*)
 
@@ -118,6 +118,7 @@ CONFIGURE_ARGS+=	--disable-arts
 .if !empty(PKG_OPTIONS:Mcdparanoia)
 CONFIGURE_ARGS+=	--enable-cdparanoia
 .  include "../../audio/cdparanoia/buildlink3.mk"
+CFLAGS+=		-I${BUILDLINK_PREFIX.cdparanoia}/include/cdparanoia
 .else
 CONFIGURE_ARGS+=	--disable-cdparanoia
 .endif

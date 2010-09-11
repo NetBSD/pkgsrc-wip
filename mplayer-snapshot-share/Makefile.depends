@@ -1,7 +1,17 @@
-# $NetBSD: Makefile.depends,v 1.2 2010/09/10 20:59:34 cheusov Exp $
+# $NetBSD: Makefile.depends,v 1.3 2010/09/11 13:29:39 cheusov Exp $
 #
 
 DEPENDS+=	mplayer-share>=${MPLAYER_PKG_VERSION}:../../wip/mplayer-snapshot-share
+
+#CONFIGURE_ARGS+=	--enable-tremor --disable-tremor-internal
+#.include "../../audio/tremor/buildlink3.mk"
+
+#CONFIGURE_ARGS+=	--enable-liba52 --disable-liba52-internal
+#.include "../../audio/liba52/buildlink3.mk"
+#LDFLAGS+=		-la52
+
+#CONFIGURE_ARGS+=	--enable-libmpeg2 #--disable-libmpeg2-internal
+#.include "../../multimedia/libmpeg2/buildlink3.mk"
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
