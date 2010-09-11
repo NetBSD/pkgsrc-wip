@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/09/11 08:32:12 obache Exp $
+# $NetBSD: Makefile,v 1.6 2010/09/11 08:46:15 obache Exp $
 #
 
 DISTNAME=	multiskkserv-20100128-ac
@@ -37,4 +37,5 @@ post-install:
 .endfor
 
 .include "../../mk/find-prefix.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
