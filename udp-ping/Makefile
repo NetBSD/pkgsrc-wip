@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/09/12 14:05:47 gschwarz Exp $
+# $NetBSD: Makefile,v 1.2 2010/09/12 18:42:22 gschwarz Exp $
 
 DISTNAME=	udp-ping
 PKGNAME=	${DISTNAME}-1.0
@@ -20,11 +20,12 @@ INSTALLATION_DIRS+=	 bin sbin
 
 do-build:
 		cd ${WRKSRC} &&  \
-		${CXX} ${CPPFLAGS} ${CXXFLAGS} ${LDFLAGS} cUDPingLnx.cpp -o udp-ping ${LIBS} && \
+		${CXX} ${CPPFLAGS} ${CXXFLAGS} ${LDFLAGS} ${PTHREAD_LDFLAGS} cUDPingLnx.cpp -o udp-ping ${LIBS} ${PTHREAD_LIBS} && \
 		${CXX} ${CPPFLAGS} ${CXXFLAGS} ${LDFLAGS} sUDPingLnx.cpp -o udp-ping-server ${LIBS}
 
 do-install:
 		${INSTALL_PROGRAM} ${WRKSRC}/udp-ping ${DESTDIR}${PREFIX}/bin && \
 		${INSTALL_PROGRAM} ${WRKSRC}/udp-ping-server ${DESTDIR}${PREFIX}/sbin
 
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
