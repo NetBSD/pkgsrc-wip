@@ -1,0 +1,33 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/09/12 09:24:59 ryo-on Exp $
+
+--- INSTALL.orig	2010-08-13 07:41:12.000000000 +0000
++++ INSTALL
+@@ -122,6 +122,8 @@ PrintRequiredFree()
+ 
+         if [ "${OSname}" = "Linux" ] ; then
+           size=`ls -lLn "$i" | ( read perm links owner group size date ; echo $size )`
++	elif [ `uname -s|sed -e 's|.*\(...\)|\\1|'` = "BSD" -o `uname -s` = "DragonFly" ] ; then
++	  size=`ls -lL "$i" | ( read perm links owner group size date ; echo $size )`
+         else
+           size=`ls -lLon "$i" | ( read perm links owner size date ; echo $size )`
+         fi
+@@ -950,6 +952,19 @@ case "$OSname" in
+     ReadDefaultNum="$ReadIntelLinuxNum"
+     DefaultName="Intel/Linux"
+     ;;
++  NetBSD | DragonFly)
++    MachArch=`uname -p`
++    case "$MachArch" in
++     i386|x86_64)
++       ReadDefaultNum="$ReadIntelLinuxNum"
++       DefaultName="Intel/Linux"
++       ;;
++     sparc*)
++       ReadDefaultNum="$ReadSparcSolarisNum"
++       DefaultName="SPARC/Solaris 2.x"
++       ;;
++    esac
++    ;;
+ esac
+ 
+ if  [ -z "$ReadDefaultNum" ] ; then
