@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2010/09/10 21:31:31 x400 Exp $
+# $NetBSD: options.mk,v 1.7 2010/09/12 00:15:30 x400 Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.callweaver
 PKG_SUPPORTED_OPTIONS=	jabber mysql pgsql sipsecurity snmp
@@ -32,6 +32,7 @@ CONFIGURE_ARGS+=	--enable-sip-tcp-support --enable-srtp
 
 .if !empty(PKG_OPTIONS:Msnmp)
 .include "../../net/net-snmp/buildlink3.mk"
+.include "../../lang/perl5/buildlink3.mk"
 PLIST.snmp=		yes
 CONFIGURE_ARGS+=	--with-res_snmp
 .endif
