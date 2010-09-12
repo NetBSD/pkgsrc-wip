@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/09/12 09:24:59 ryo-on Exp $
+# $NetBSD: Makefile,v 1.2 2010/09/12 21:05:33 ryo-on Exp $
 
 DISTNAME=	acroread9	# overridden below
 PKGNAME=	acroread9-9.3.4
@@ -55,7 +55,7 @@ do-install:
 	set -e; ( ${ECHO} n; ${ECHO} n ) | InstallDir=${DESTDIR}${PREFIX}/Acrobat9 ${WRKSRC}/INSTALL
 
 post-install:
-	set -e
+	set -e;
 	cd ${DESTDIR}${PREFIX}/Acrobat9/Adobe/Reader9/Reader/GlobalPrefs && \
 	  ${BIN_PATCH} <${FILESDIR}/reader_prefs.diff && \
 	  ${RM} -f reader_prefs.orig
