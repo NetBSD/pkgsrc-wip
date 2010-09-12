@@ -1,0 +1,14 @@
+$NetBSD: patch-hd,v 1.1 2010/09/12 15:35:36 rxg Exp $
+
+--- net/socket/ssl_client_socket.h.orig	2010-08-29 09:04:25.000000000 +0000
++++ net/socket/ssl_client_socket.h
+@@ -30,6 +30,9 @@ class DNSSECProvider {
+   //      function will return OK if called again.
+   virtual int GetDNSSECRecords(RRResponse** out,
+                                CompletionCallback* callback) = 0;
++
++ private:
++  virtual ~DNSSECProvider();
+ };
+ 
+ // A client socket that uses SSL as the transport layer.
