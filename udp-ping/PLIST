@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/09/12 14:05:47 gschwarz Exp $
+bin/udp-ping
+sbin/udp-ping-server
