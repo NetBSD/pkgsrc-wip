@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/06/13 22:47:07 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2010/09/12 15:49:59 jihbed Exp $
 #
 
 DISTNAME=	gupnp-ui-0.1.1
@@ -6,7 +6,7 @@ PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	http://www.gupnp.org/sources/gupnp-ui/
 
-MAINTAINER=	kamelderouiche@yahoo.com
+MAINTAINER=	pkgsrc.gnome@gmail.com
 HOMEPAGE=	http://www.gupnp.org/
 COMMENT=	GTK+ widgets for use with GUPnP
 #LICENSE=	# TODO: (see mk/license.mk)

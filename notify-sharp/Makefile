@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/08/12 02:32:04 obache Exp $
+# $NetBSD: Makefile,v 1.4 2010/09/12 15:52:18 jihbed Exp $
 #
 
 DISTNAME=	notify-sharp_0.4.0~r2998.orig
@@ -7,7 +7,7 @@ PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/n/notify-sharp/}
 
-MAINTAINER=	kamelderouiche@yahoo.com
+MAINTAINER=	pkgsrc.gnome@gmail.com
 HOMEPAGE=	http://www.ndesk.org/NotifySharp
 COMMENT=	C\# bindings for libnotify
 #LICENSE=	# TODO: (see mk/license.mk)
