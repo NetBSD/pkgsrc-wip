@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2010/09/11 13:29:39 cheusov Exp $
+# $NetBSD: Makefile.common,v 1.3 2010/09/13 13:34:21 cheusov Exp $
 # used by multimedia/gmplayer/Makefile
 # used by multimedia/mencoder/Makefile
 # used by multimedia/mplayer/Makefile
@@ -14,7 +14,6 @@ CATEGORIES?=		multimedia
 MASTER_SITES=		http://mova.org/~cheusov/pub/mplayer/
 
 #MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=commondistfiles/}
-#MASTER_SITES+=		http://mx1.nygren.pp.se/misc/
 #MASTER_SITES=		http://www.mplayerhq.hu/MPlayer/releases/ \
 #			ftp://ftp.mplayerhq.hu/MPlayer/releases/
 #.for i in 1 2 3 4 5 7 8 9 10 11 12 # 6 is missed
