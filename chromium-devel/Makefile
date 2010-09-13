@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/09/08 15:00:52 rxg Exp $
+# $NetBSD: Makefile,v 1.2 2010/09/13 02:05:26 rxg Exp $
 
 DISTNAME=	chromium.r58671
 PKGNAME=	chromium-7.0.518.0
@@ -14,7 +14,7 @@ LICENSE=	modified-bsd
 WRKSRC=		${WRKDIR}/home/chrome-svn/tarball/chromium/src
 
 USE_TOOLS+=	gmake pkg-config
-USE_LANGUAGES=	c++
+USE_LANGUAGES=	c c++
 
 CHECK_PORTABILITY_SKIP+=breakpad/src/third_party/protobuf/protobuf/post_process_dist.sh
 CHECK_PORTABILITY_SKIP+=native_client/src/third_party/libxt/configure
