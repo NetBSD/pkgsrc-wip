@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/09/13 09:46:51 jihbed Exp $
+
+SHA1 (commons-dbcp-1.4-bin.tar.gz) = c9fdc12c932c9b4ead27037ed9031fd69e6a981a
+RMD160 (commons-dbcp-1.4-bin.tar.gz) = 860d3b31a833c3a68067edb2c07cc574a2502b31
+Size (commons-dbcp-1.4-bin.tar.gz) = 1457756 bytes

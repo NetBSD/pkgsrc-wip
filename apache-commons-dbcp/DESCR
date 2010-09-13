@@ -1,0 +1,10 @@
+The DBCP package provides database connection pooling services.
+The following features are supported
+
+ * DataSource and Driver interfaces to the pool.
+ * Support for arbitrary sources of the underlying Connections.
+ * Integration with arbitrary org.apache.commons.pool.ObjectPool
+   implementations.
+ * Support for Connection validation, expiration, etc.
+ * Support for PreparedStatement pooling.
+ * XML configuration.
