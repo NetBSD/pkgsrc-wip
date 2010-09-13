@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2010/07/03 22:31:54 ryo-on Exp $
+# $NetBSD: Makefile,v 1.6 2010/09/13 10:28:43 ryo-on Exp $
 #
 
-DISTNAME=	ciwiki-1.6.1
+DISTNAME=	ciwiki-1.7.0.1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ciwiki/}
 
@@ -30,10 +30,6 @@ DOCFILES=	AUTHORS \
 		INSTALL \
 		NEWS \
 		README \
-		didiwiki-16.png \
-		didiwiki.html \
-		didiwiki.png \
-		styles.css
 
 NEWDOCFILES=	BUGS \
 		CIWIKI_ON_USBDRIVE \
@@ -42,15 +38,20 @@ NEWDOCFILES=	BUGS \
 		FLASH_PLAYER \
 		FORMS \
 		HOWTOLOGIN \
+		IMAGES_and_ZIP \
 		MAILINGCODE \
 		MYSERVER \
 		PAGESTYLES \
-		README
+		README \
+		index.html \
+		ciwiki.png
 
 SCRIPTFILES=	activity.sh \
 		backup_wiki.sh \
 		inet_adr.sh \
-		install_files.sh \
+		inetadress.sh \
+		kill_wiki.sh \
+		listnewuser.sh \
 		notifynewuser.sh
 
 MANFILES1=	didiwiki.1

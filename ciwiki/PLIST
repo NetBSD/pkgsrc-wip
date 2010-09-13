@@ -1,10 +1,12 @@
-@comment $NetBSD: PLIST,v 1.2 2010/06/28 10:56:57 ryo-on Exp $
+@comment $NetBSD: PLIST,v 1.3 2010/09/13 10:28:43 ryo-on Exp $
 bin/didiwiki
 man/man1/didiwiki.1
 share/ciwiki/scripts/activity.sh
 share/ciwiki/scripts/backup_wiki.sh
 share/ciwiki/scripts/inet_adr.sh
-share/ciwiki/scripts/install_files.sh
+share/ciwiki/scripts/inetadress.sh
+share/ciwiki/scripts/kill_wiki.sh
+share/ciwiki/scripts/listnewuser.sh
 share/ciwiki/scripts/notifynewuser.sh
 share/doc/ciwiki/AUTHORS
 share/doc/ciwiki/COPYING
@@ -12,10 +14,7 @@ share/doc/ciwiki/ChangeLog
 share/doc/ciwiki/INSTALL
 share/doc/ciwiki/NEWS
 share/doc/ciwiki/README
-share/doc/ciwiki/didiwiki-16.png
 share/doc/ciwiki/didiwiki.conf
-share/doc/ciwiki/didiwiki.html
-share/doc/ciwiki/didiwiki.png
 share/doc/ciwiki/docs/BUGS
 share/doc/ciwiki/docs/CIWIKI_ON_USBDRIVE
 share/doc/ciwiki/docs/FAQ_HELP
@@ -23,8 +22,10 @@ share/doc/ciwiki/docs/FIRST
 share/doc/ciwiki/docs/FLASH_PLAYER
 share/doc/ciwiki/docs/FORMS
 share/doc/ciwiki/docs/HOWTOLOGIN
+share/doc/ciwiki/docs/IMAGES_and_ZIP
 share/doc/ciwiki/docs/MAILINGCODE
 share/doc/ciwiki/docs/MYSERVER
 share/doc/ciwiki/docs/PAGESTYLES
 share/doc/ciwiki/docs/README
-share/doc/ciwiki/styles.css
+share/doc/ciwiki/docs/ciwiki.png
+share/doc/ciwiki/docs/index.html

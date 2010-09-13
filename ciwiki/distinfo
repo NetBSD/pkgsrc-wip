@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2010/07/03 22:31:54 ryo-on Exp $
+$NetBSD: distinfo,v 1.4 2010/09/13 10:28:43 ryo-on Exp $
 
-SHA1 (ciwiki-1.6.1.tar.gz) = 03528e75fe55247b71d074ba0964083412f31b59
-RMD160 (ciwiki-1.6.1.tar.gz) = e6001aa24f6bd3fe42044acd6ac221604eda69d8
-Size (ciwiki-1.6.1.tar.gz) = 284566 bytes
+SHA1 (ciwiki-1.7.0.1.tar.gz) = c3cc7667e8ab7e0280bbd71725afac6e18630de3
+RMD160 (ciwiki-1.7.0.1.tar.gz) = 9280e7f008a4d03b6aa59c31e6eaadf62f42ea95
+Size (ciwiki-1.7.0.1.tar.gz) = 294933 bytes
 SHA1 (patch-aa) = 557da44dbca8be6321c0b5f35fd15f0fc657579b
