@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/09/13 08:46:06 jihbed Exp $
+
+SHA1 (commons-pool-1.5.5-bin.tar.gz) = f0de4bda7fa3403839471e26f006d5fa880372ec
+RMD160 (commons-pool-1.5.5-bin.tar.gz) = e325ff0f3cc1ed0820bf9631f6657b56574b9cc4
+Size (commons-pool-1.5.5-bin.tar.gz) = 976992 bytes
