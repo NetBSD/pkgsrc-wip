@@ -1,4 +1,4 @@
-$NetBSD: patch-gu,v 1.1.1.1 2010/09/08 15:01:03 rxg Exp $
+$NetBSD: patch-gu,v 1.2 2010/09/13 02:52:00 rxg Exp $
 
 --- third_party/icu/public/common/unicode/pnetbsd.h.orig	2010-09-07 14:49:30.000000000 +0000
 +++ third_party/icu/public/common/unicode/pnetbsd.h
@@ -313,7 +313,7 @@ $NetBSD: patch-gu,v 1.1.1.1 2010/09/08 15:01:03 rxg Exp $
 +#define U_TZSET         tzset
 +#endif
 +#if 1
-+#define U_TIMEZONE      __timezone
++#define U_TIMEZONE      timezone
 +#endif
 +#if 1
 +#define U_TZNAME        tzname
