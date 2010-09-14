@@ -40,17 +40,17 @@ USAGE: pkg_bin_summary -h
        pkg_bin_summary [OPTIONS] [[--] [PKG_INFO_ARGS]]
 OPTIONS:
   -h|--help         display this help
-  -a                add to the output specified fields
+  -a <fields>       add to the output specified fields
                     separated by space or comma
-  -f                output only specified fields
+  -f <fields>       output only specified fields
                     separated by space or comma
-  -r                remove from output specified fields
+  -r <fields>       remove from output specified fields
                     output only specified fields
 PKG_INFO_ARGS:
   options of pkg_info(1), defaults to -a.
   In addition to these options -X is always applied to pkg_info
   as well as -B if needed. "--" is required
-  if PKG_INFO_ARGS begins with options.
+  if PKG_INFO_ARGS is not empty.
 Samples of use:
   pkg_bin_summary -f PKGNAME,PKGPATH,ASSIGNMENTS,DEPENDS,automatic
   pkg_bin_summary -a automatic,ASSIGNMENTS
