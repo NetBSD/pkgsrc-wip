@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/07/31 08:16:13 ryo-on Exp $
+# $NetBSD: Makefile,v 1.3 2010/09/14 20:48:54 ryo-on Exp $
 #
 
 DISTNAME=	OmegaT_2.1.8_Beta_Without_JRE
@@ -15,7 +15,7 @@ LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-PKG_JVMS_ACCEPTED=	sun-jdk6
+#PKG_JVMS_ACCEPTED=	sun-jdk6
 
 USE_JAVA=	run
 USE_JAVA2=	yes
