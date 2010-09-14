@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2008/11/14 02:20:05 obache Exp $
+# $NetBSD: Makefile,v 1.11 2010/09/14 07:33:46 obache Exp $
 #
 
 DISTNAME=	gallery-0.0.8
-PKGNAME=	${RUBY_PKGPREFIX}-GalleryAdministrator-0.0.8
 PKGREVISION=	1
 CATEGORIES=	graphics ruby www
 MASTER_SITES=	http://www.cozmixng.org/~kou/download/

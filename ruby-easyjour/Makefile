@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/06/16 13:51:27 obache Exp $
+# $NetBSD: Makefile,v 1.2 2010/09/14 07:33:46 obache Exp $
 #
 
 DISTNAME=	easyjour-0.0.4
-PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	net ruby
 
 MAINTAINER=	obache@NetBSD.org
@@ -14,7 +13,5 @@ DEPENDS+=	${RUBY_PKGPREFIX}-dnssd>=0.7.0:../../wip/ruby-dnssd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-GEM_BUILD=	gemspec
-
-.include "../../misc/rubygems/rubygem.mk"
+.include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"

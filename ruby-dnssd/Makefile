@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2010/09/07 11:48:03 obache Exp $
+# $NetBSD: Makefile,v 1.6 2010/09/14 07:33:46 obache Exp $
 #
 
 DISTNAME=	dnssd-1.4
-PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	net ruby
 
 MAINTAINER=	obache@NetBSD.org
@@ -12,9 +11,8 @@ LICENSE=	ruby-license
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-GEM_BUILD=	gemspec
 GEM_CLEANBUILD=	ext/dnssd/*.o ext/dnssd/mkmf.log ext/dnssd/Makefile
 
 .include "../../net/mDNSResponder/buildlink3.mk"
-.include "../../misc/rubygems/rubygem.mk"
+.include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"
