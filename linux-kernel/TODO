@@ -30,7 +30,7 @@ FATAL: ldconfig must be used with "||${TRUE}".
 make sure gcc exists (see very bottom of Makefile)
 
 thread about missing stdarg.h
- http://www.ussg.iu.edu/hypermail/linux/kernel/0209.3/1015.html 
+ http://www.ussg.iu.edu/hypermail/linux/kernel/0209.3/1015.html
 For time being I run kernel make like this:
    GCC_EXEC_PREFIX=/usr/app/gcc/lib/gcc-lib/ make
 
@@ -84,3 +84,4 @@ look at default /boot/config-2.2.20-idepci
   CVE-2009-3939, CVE-2009-4020, CVE-2009-4141, CVE-2010-0006,
   CVE-2010-0007, SA38718, SA38594, SA39297, SA39344, CVE-2010-2524,
   CVE-2010-2954, CVE-2010-2955, CVE-2010-2960).
+  CVE-2010-3081, CVE-2010-3301
