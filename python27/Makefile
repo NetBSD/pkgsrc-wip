@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/09/15 08:44:48 obache Exp $
+# $NetBSD: Makefile,v 1.6 2010/09/15 12:50:46 obache Exp $
 
 DISTNAME=	Python-2.7
 PKGNAME=	${DISTNAME:S/Python/python27/}
@@ -52,6 +52,8 @@ PLIST_SRC+=	${.CURDIR}/../../wip/python27/PLIST.common_end
 
 .if ${OPSYS} == "NetBSD"
 PRIVILEGED_STAGES+=	clean
+# XXX work around a botched autoconf check whiche ignores libintl
+CONFIGURE_ENV+=		ac_cv_func_bind_textdomain_codeset=yes
 .endif
 
 .if ${OPSYS} == "Darwin" || ${OPSYS} == "Interix"
@@ -96,13 +98,6 @@ PLIST.openssl097=	yes
 PLIST_VARS+=	extra-so
 .if !empty(IS_64BIT_PLATFORM:M[nN][oO])
 PLIST.extra-so=	yes
-.endif
-
-# ossaudiodev is only available on x86 for the following platforms
-PLIST_VARS+=	oss
-.if (${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64") && \
-    (${PY_PLATNAME} == "linux2" || ${OPSYS} == "FreeBSD")
-PLIST.oss=	yes
 .endif
 
 # Make sure python modules can link correctly
@@ -152,12 +147,12 @@ PLIST_SUBST+=	PY_VER_SUFFIX=${PY_VER_SUFFIX:Q}
 TEST_TARGET=	test
 INSTALL_TARGET=	altinstall
 
-REPLACE_INTERPRETER+=	py26
-REPLACE.py26.old=	.*python[^ ]*
-REPLACE.py26.new=	${PREFIX}/bin/python${PY_VER_SUFFIX}
-REPLACE_FILES.py26=	Lib/cgi.py	# explicitly demanded to be patched
-REPLACE_FILES.py26+=	Lib/bsddb/dbshelve.py Lib/test/test_bz2.py
-REPLACE_FILES.py26+=	Lib/test/test_largefile.py Lib/test/test_optparse.py
+REPLACE_INTERPRETER+=	py27
+REPLACE.py27.old=	.*python[^ ]*
+REPLACE.py27.new=	${PREFIX}/bin/python${PY_VER_SUFFIX}
+REPLACE_FILES.py27=	Lib/cgi.py	# explicitly demanded to be patched
+REPLACE_FILES.py27+=	Lib/bsddb/dbshelve.py Lib/test/test_bz2.py
+REPLACE_FILES.py27+=	Lib/test/test_largefile.py Lib/test/test_optparse.py
 
 post-extract:
 	${MV} ${WRKSRC}/Lib/smtpd.py ${WRKSRC}/Lib/smtpd${PY_VER_SUFFIX}.py
@@ -180,5 +175,4 @@ BUILDLINK_DEPMETHOD.readline=		build
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
-.include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

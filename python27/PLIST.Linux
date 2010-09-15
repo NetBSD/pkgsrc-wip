@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST.Linux,v 1.1.1.1 2010/03/17 13:09:05 obache Exp $
-lib/python${PY_VER_SUFFIX}/lib-dynload/linuxaudiodev.so
-lib/python${PY_VER_SUFFIX}/lib-dynload/spwd.so
+@comment $NetBSD: PLIST.Linux,v 1.2 2010/09/15 12:50:46 obache Exp $
 lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/CDROM.py
 lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/CDROM.pyc
 lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/CDROM.pyo
