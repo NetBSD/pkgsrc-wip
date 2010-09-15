@@ -1,18 +1,15 @@
-@comment $NetBSD: PLIST,v 1.2 2010/08/18 10:27:27 pallegra Exp $
+@comment $NetBSD: PLIST,v 1.3 2010/09/15 20:38:06 pallegra Exp $
 include/GL/gl.h
 include/GL/gl_mangle.h
-include/GL/glew.h
 include/GL/glext.h
 include/GL/glfbdev.h
 include/GL/glx.h
 include/GL/glx_mangle.h
-include/GL/glxew.h
 include/GL/glxext.h
 include/GL/mesa_wgl.h
 include/GL/mglmesa.h
 include/GL/osmesa.h
 include/GL/vms_x_fix.h
-include/GL/wglew.h
 include/GL/wglext.h
 include/GL/wmesa.h
 lib/libGL.so

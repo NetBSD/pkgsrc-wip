@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/08/18 10:27:27 pallegra Exp $
+# $NetBSD: Makefile,v 1.3 2010/09/15 20:38:06 pallegra Exp $
 #
 
 .include "Makefile.common"
@@ -38,7 +38,7 @@ SUBST_STAGE.rm_mesa2=	pre-install
 
 pre-install:
 	${RM} -f ${WRKSRC}/include/GL/glu*.h
-	#${RM} -f ${WRKSRC}/include/GL/*gl*w*.h
+	${RM} -f ${WRKSRC}/include/GL/*gl*w*.h
 
 INSTALL_DIRS=	src/mesa
 INSTALL_TARGET=	install-libgl
