@@ -1,4 +1,4 @@
-$NetBSD: patch-am,v 1.3 2010/09/03 08:41:15 obache Exp $
+$NetBSD: patch-am,v 1.4 2010/09/15 08:44:48 obache Exp $
 
 Disabled modules for normal build:
 bsdddb
@@ -284,9 +284,10 @@ Build the 1.85 compat module all the time against the BDB version of choice.
  
            # Scripts to install
 -          scripts = ['Tools/scripts/pydoc', 'Tools/scripts/idle',
-+          scripts = ['Tools/scripts/pydoc2.7',
-                      'Tools/scripts/2to3',
+-                     'Tools/scripts/2to3',
 -                     'Lib/smtpd.py']
++          scripts = ['Tools/scripts/pydoc2.7',
++                     'Tools/scripts/2to3-2.7',
 +                     'Lib/smtpd2.7.py']
          )
  

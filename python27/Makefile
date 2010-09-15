@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/09/03 08:41:14 obache Exp $
+# $NetBSD: Makefile,v 1.5 2010/09/15 08:44:48 obache Exp $
 
 DISTNAME=	Python-2.7
 PKGNAME=	${DISTNAME:S/Python/python27/}
@@ -162,6 +162,7 @@ REPLACE_FILES.py26+=	Lib/test/test_largefile.py Lib/test/test_optparse.py
 post-extract:
 	${MV} ${WRKSRC}/Lib/smtpd.py ${WRKSRC}/Lib/smtpd${PY_VER_SUFFIX}.py
 	${MV} ${WRKSRC}/Tools/scripts/pydoc ${WRKSRC}/Tools/scripts/pydoc${PY_VER_SUFFIX}
+	${MV} ${WRKSRC}/Tools/scripts/2to3 ${WRKSRC}/Tools/scripts/2to3-${PY_VER_SUFFIX}
 
 .if ${OPSYS} == "HPUX"
 post-install:
