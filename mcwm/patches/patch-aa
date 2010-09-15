@@ -1,15 +1,15 @@
-$NetBSD: patch-aa,v 1.1.1.1 2010/07/20 14:04:07 thomasklausner Exp $
+$NetBSD: patch-aa,v 1.2 2010/09/15 12:05:32 thomasklausner Exp $
 
 Add rpath for fixing libxcb.
 
---- Makefile.orig	2010-07-19 20:10:13.000000000 +0000
+--- Makefile.orig	2010-08-03 19:53:05.000000000 +0000
 +++ Makefile
 @@ -5,7 +5,7 @@ DISTFILES=LICENSE Makefile NEWS README T
  
  CC=gcc
- CFLAGS=-g -std=c99 -Wall -Wextra -I/usr/local/include #-DDEBUG #-DDMALLOC
+ CFLAGS=-g -std=c99 -Wall -Wextra -I/usr/local/include -DDEBUG #-DDMALLOC
 -LDFLAGS=-L/usr/local/lib -lxcb -lxcb-keysyms -lxcb-icccm -lxcb-atom # -ldmalloc
-+LDFLAGS=-Wl,-R@@PREFIX@@/lib -L/usr/local/lib -lxcb -lxcb-keysyms -lxcb-icccm -lxcb-atom # -ldmalloc
++LDFLAGS=-Wl,-R/usr/X11R7/lib -L/usr/local/lib -lxcb -lxcb-keysyms -lxcb-icccm -lxcb-atom -lxcb-property -lxcb-event # -ldmalloc
  
  RM=/bin/rm
  PREFIX=/usr/local
