@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/09/15 12:50:46 obache Exp $
+# $NetBSD: Makefile,v 1.7 2010/09/16 10:27:25 obache Exp $
 
 DISTNAME=	Python-2.7
 PKGNAME=	${DISTNAME:S/Python/python27/}
@@ -52,7 +52,7 @@ PLIST_SRC+=	${.CURDIR}/../../wip/python27/PLIST.common_end
 
 .if ${OPSYS} == "NetBSD"
 PRIVILEGED_STAGES+=	clean
-# XXX work around a botched autoconf check whiche ignores libintl
+# XXX work around a botched autoconf check which ignores libintl
 CONFIGURE_ENV+=		ac_cv_func_bind_textdomain_codeset=yes
 .endif
 
