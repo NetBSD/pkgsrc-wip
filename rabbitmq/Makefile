@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/04/21 10:05:24 fhajny Exp $
+# $NetBSD: Makefile,v 1.3 2010/09/16 14:08:27 fhajny Exp $
 #
 
 PKGNAME=		rabbitmq-${RMQ_VERSION}
@@ -15,6 +15,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake
 
+BUILD_DEPENDS+=		libxslt-[0-9]*:../../textproc/libxslt
+BUILD_DEPENDS+=		xmlto-[0-9]*:../../textproc/xmlto
 DEPENDS+=		${PYPKGPREFIX}-simplejson>=2:../../converters/py-simplejson
 
 .include "version.mk"
@@ -57,7 +59,6 @@ SUBST_MESSAGE.paths=	Setting standard paths
 SUBST_STAGE.paths=	post-patch
 SUBST_FILES.paths=	${SCRIPTS_DIR}/rabbitmqctl ${SCRIPTS_DIR}/rabbitmq-env
 SUBST_FILES.paths+=	${SCRIPTS_DIR}/rabbitmq-multi ${SCRIPTS_DIR}/rabbitmq-server
-SUBST_FILES.paths+=	${SCRIPTS_DIR}/rabbitmq-activate-plugins ${SCRIPTS_DIR}/rabbitmq-deactivate-plugins
 SUBST_SED.paths=	-e 's|/etc/rabbitmq|${PKG_SYSCONFDIR}/rabbitmq|g'
 SUBST_SED.paths+=	-e 's|/var/lib|${VARBASE}/db|g'
 SUBST_SED.paths+=	-e 's|/var/log|${VARBASE}/log|g'
