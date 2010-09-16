@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2010/04/21 10:38:47 fhajny Exp $
+# $NetBSD: Makefile,v 1.3 2010/09/16 12:49:50 fhajny Exp $
 #
 
-DISTNAME=		mod_xsendfile-0.9
+DISTNAME=		mod_xsendfile-0.11.1
 PKGNAME=		${APACHE_PKG_PREFIX}-${DISTNAME:S/mod_//}
 CATEGORIES=		www
 MASTER_SITES=		http://tn123.ath.cx/mod_xsendfile/
