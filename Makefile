@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4093 2010/09/16 12:36:29 fhajny Exp $
+# $Id: Makefile,v 1.4094 2010/09/16 14:16:25 fhajny Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2194,7 +2194,6 @@ SUBDIR+=	ruby-dnssd
 SUBDIR+=	ruby-easyjour
 SUBDIR+=	ruby-git
 SUBDIR+=	ruby-term-ansicolor
-SUBDIR+=	ruby-thor
 SUBDIR+=	ruby-trollop
 SUBDIR+=	ruby-xmpp4r
 SUBDIR+=	runawk
