@@ -1,7 +1,7 @@
-$NetBSD: patch-am,v 1.5 2010/09/15 12:50:47 obache Exp $
+$NetBSD: patch-am,v 1.6 2010/09/16 13:25:23 obache Exp $
 
 Disabled modules for normal build:
-bsdddb
+bsddb
 curses
 curses_panel
 elementtree
