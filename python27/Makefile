@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2010/09/16 10:27:25 obache Exp $
+# $NetBSD: Makefile,v 1.8 2010/09/16 10:30:53 obache Exp $
 
 DISTNAME=	Python-2.7
 PKGNAME=	${DISTNAME:S/Python/python27/}
@@ -103,11 +103,6 @@ PLIST.extra-so=	yes
 # Make sure python modules can link correctly
 .if ${OPSYS} == "Darwin"
 INSTALL_UNSTRIPPED=	yes
-
-PLIST_VARS+=	nav
-.  if !defined(ABI) || ${ABI} != "64"
-PLIST.nav=	yes
-.  endif
 .endif
 
 PLIST_VARS+=	dll nis no-nis

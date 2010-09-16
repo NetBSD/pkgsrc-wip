@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST.Darwin,v 1.1.1.1 2010/03/17 13:09:05 obache Exp $
+@comment $NetBSD: PLIST.Darwin,v 1.2 2010/09/16 10:30:53 obache Exp $
 lib/libpython${PY_VER_SUFFIX}.dylib
 lib/python${PY_VER_SUFFIX}/lib-dynload/ColorPicker.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/MacOS.so
-${PLIST.nav}lib/python${PY_VER_SUFFIX}/lib-dynload/Nav.so
+lib/python${PY_VER_SUFFIX}/lib-dynload/Nav.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/OSATerminology.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/_AE.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/_AH.so
