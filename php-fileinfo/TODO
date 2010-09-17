@@ -1,3 +1,0 @@
-As of PHP 5.3.0 this extension comes part of the main PHP distribution pack,
-making the PECL version deprecated. When 5.3.0 arrives in pkgsrc, this package
-needs to be converted to built from PHP's ext/fileinfo subdirectory instead.

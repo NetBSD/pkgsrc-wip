@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/10/08 10:55:27 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2010/09/17 08:15:10 fhajny Exp $
 
 MODNAME=		fileinfo
 PECL_VERSION=		1.0.4
@@ -9,6 +9,7 @@ COMMENT=		PHP extension for libmagic bindings
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+PHP_VERSIONS_ACCEPTED=	52
 CONFLICTS=		php-fileinfo-[0-9]*
 
 WRKSRC=			${WRKDIR}/Fileinfo-${PECL_VERSION}
