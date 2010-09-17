@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.17 2010/09/05 14:25:41 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.18 2010/09/17 09:17:27 cheusov Exp $
 bin/runawk
 man/man1/runawk.1
 share/doc/runawk/ChangeLog
 share/doc/runawk/NEWS
 share/doc/runawk/README
+share/doc/runawk/TODO
 share/examples/runawk/demo_alt_getopt
 share/examples/runawk/demo_alt_join
 share/examples/runawk/demo_backslash_in

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.46 2010/09/06 10:25:06 cheusov Exp $
+# $NetBSD: Makefile,v 1.47 2010/09/17 09:17:27 cheusov Exp $
 #
 
 DISTNAME=	runawk-1.0.0
+PKGREVISION=	1
 CATEGORIES=	lang devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=runawk/} \
 		http://mova.org/~cheusov/pub/runawk/
@@ -31,7 +32,7 @@ EGDIR=			${PREFIX}/share/examples/runawk
 
 AUTO_MKDIRS=		yes
 
-DOC_FILES=		README NEWS ChangeLog
+DOC_FILES=		README NEWS ChangeLog TODO
 
 post-install:
 .for i in ${DOC_FILES}
