@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2010/09/16 10:30:53 obache Exp $
+# $NetBSD: Makefile,v 1.9 2010/09/17 09:09:11 obache Exp $
 
-DISTNAME=	Python-2.7
-PKGNAME=	${DISTNAME:S/Python/python27/}
+.include "dist.mk"
+
+PKGNAME=	python27-${PY_DISTVERSION}
 CATEGORIES=	lang python
-MASTER_SITES=	http://www.python.org/ftp/python/2.7/
-EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.python.org/
