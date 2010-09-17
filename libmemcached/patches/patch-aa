@@ -1,0 +1,19 @@
+$NetBSD: patch-aa,v 1.1 2010/09/17 11:57:05 fhajny Exp $
+
+--- Makefile.in.orig	2010-07-28 22:34:16.000000000 +0000
++++ Makefile.in
+@@ -3329,12 +3329,12 @@ test-docs:
+ 	(cd docs && $(MAKE) test-docs)
+ 
+ libmemcached/dtrace_probes.h: libmemcached/libmemcached_probes.d
+-	$(DTRACE) $(DTRACEFLAGS) -h -o libmemcached/dtrace_probes.h -s ${top_srcdir}/libmemcached/libmemcached_probes.d
++	cd libmemcached && $(DTRACE) $(DTRACEFLAGS) -h -o dtrace_probes.h -s libmemcached_probes.d
+ 
+ libmemcached/libmemcached_probes.o: libmemcached/libmemcached_probes.d ${libmemcached_libmemcached_la_OBJECTS} config.h
+ 
+ .d.o:
+-	$(DTRACE) $(DTRACEFLAGS) -o libmemcached/libmemcached_probes.o -G -s ${top_srcdir}/libmemcached/libmemcached_probes.d `grep '^pic_object' ${top_builddir}/libmemcached/*.lo | cut -f 2 -d\' | sed "s/^/${top_builddir}\//"`
++	cd libmemcached && $(DTRACE) $(DTRACEFLAGS) -o libmemcached_probes.o -G -s libmemcached_probes.d `grep '^pic_object' *.lo | cut -f 2 -d\' | sed "s/^/${top_builddir}\//"`
+ 
+ test-start-server:
+ 	clients/memflush --servers=localhost

@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2009/10/06 01:17:03 mbowie Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2010/09/17 11:57:05 fhajny Exp $
 
 BUILDLINK_TREE+=	libmemcached
 
@@ -10,7 +10,6 @@ BUILDLINK_PKGSRCDIR.libmemcached?=	../../wip/libmemcached
 BUILDLINK_FILES.libmemcached=		include/libmemcached/*.h
 BUILDLINK_FILES.libmemcached+=		lib/libmemcached.*
 
-BUILDLINK_INCDIRS.libmemcached+=	include/libmemcached
 .endif	# LIBMEMCACHED_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-libmemcached
