@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.2 2009/10/06 09:16:58 fhajny Exp $
+$NetBSD: distinfo,v 1.2 2010/09/17 12:01:44 fhajny Exp $
 
-SHA1 (php-memcached/memcached-1.0.0.tgz) = e3086ebc4d15aabb224083e4a174c130f3bc4358
-RMD160 (php-memcached/memcached-1.0.0.tgz) = 074b2292d24dc618014adccbd75c414e68b4599f
-Size (php-memcached/memcached-1.0.0.tgz) = 22281 bytes
+SHA1 (php-memcached/memcached-1.0.2.tgz) = 50780eac37b664a239ea52a6634a4d2199c2e3c7
+RMD160 (php-memcached/memcached-1.0.2.tgz) = 4e9b41de16682b7d7b0a86d419fa5279892b09f7
+Size (php-memcached/memcached-1.0.2.tgz) = 22724 bytes
