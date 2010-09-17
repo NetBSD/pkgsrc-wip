@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/09/17 11:12:36 fhajny Exp $
+man/man1/php-fpm.1
+sbin/php-fpm
+share/examples/php/php-fpm.conf
+@pkgdir share/examples/php
