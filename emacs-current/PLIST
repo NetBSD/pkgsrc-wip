@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.91 2010/08/18 03:47:13 makoto Exp $
+@comment $NetBSD: PLIST,v 1.92 2010/09/18 13:12:49 makoto Exp $
 bin/b2m
 bin/ctags
 bin/ebrowse
@@ -261,8 +261,6 @@ share/emacs/${PKGVERSION}/etc/e/eterm-color.ti
 share/emacs/${PKGVERSION}/etc/echo.msg
 share/emacs/${PKGVERSION}/etc/edt-user.el
 share/emacs/${PKGVERSION}/etc/emacs-buffer.gdb
-share/emacs/${PKGVERSION}/etc/emacs.bash
-share/emacs/${PKGVERSION}/etc/emacs.csh
 share/emacs/${PKGVERSION}/etc/emacs.desktop
 share/emacs/${PKGVERSION}/etc/emacs.icon
 share/emacs/${PKGVERSION}/etc/emacs.py
@@ -675,7 +673,6 @@ share/emacs/${PKGVERSION}/etc/images/up-node.xpm
 share/emacs/${PKGVERSION}/etc/images/zoom-in.xpm
 share/emacs/${PKGVERSION}/etc/images/zoom-out.pbm
 share/emacs/${PKGVERSION}/etc/images/zoom-out.xpm
-share/emacs/${PKGVERSION}/etc/ms-kermit
 share/emacs/${PKGVERSION}/etc/nxml/00000-0007F.el
 share/emacs/${PKGVERSION}/etc/nxml/00080-000FF.el
 share/emacs/${PKGVERSION}/etc/nxml/00100-0017F.el
@@ -1977,6 +1974,7 @@ share/emacs/${PKGVERSION}/lisp/fringe.el.gz
 share/emacs/${PKGVERSION}/lisp/fringe.elc
 share/emacs/${PKGVERSION}/lisp/generic-x.el.gz
 share/emacs/${PKGVERSION}/lisp/generic-x.elc
+share/emacs/${PKGVERSION}/lisp/gnus/.dir-locals.el
 share/emacs/${PKGVERSION}/lisp/gnus/auth-source.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/auth-source.elc
 share/emacs/${PKGVERSION}/lisp/gnus/canlock.el.gz
@@ -2031,6 +2029,8 @@ share/emacs/${PKGVERSION}/lisp/gnus/gnus-fun.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-fun.elc
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-group.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-group.elc
+share/emacs/${PKGVERSION}/lisp/gnus/gnus-html.el.gz
+share/emacs/${PKGVERSION}/lisp/gnus/gnus-html.elc
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-int.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-int.elc
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-kill.el.gz
@@ -2043,8 +2043,6 @@ share/emacs/${PKGVERSION}/lisp/gnus/gnus-ml.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-ml.elc
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-mlspl.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-mlspl.elc
-share/emacs/${PKGVERSION}/lisp/gnus/gnus-move.el.gz
-share/emacs/${PKGVERSION}/lisp/gnus/gnus-move.elc
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-msg.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-msg.elc
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-nocem.el.gz
@@ -2063,8 +2061,6 @@ share/emacs/${PKGVERSION}/lisp/gnus/gnus-setup.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-setup.elc
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-sieve.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-sieve.elc
-share/emacs/${PKGVERSION}/lisp/gnus/gnus-soup.el.gz
-share/emacs/${PKGVERSION}/lisp/gnus/gnus-soup.elc
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-spec.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-spec.elc
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-srvr.el.gz
@@ -2139,8 +2135,6 @@ share/emacs/${PKGVERSION}/lisp/gnus/nnagent.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/nnagent.elc
 share/emacs/${PKGVERSION}/lisp/gnus/nnbabyl.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/nnbabyl.elc
-share/emacs/${PKGVERSION}/lisp/gnus/nndb.el.gz
-share/emacs/${PKGVERSION}/lisp/gnus/nndb.elc
 share/emacs/${PKGVERSION}/lisp/gnus/nndiary.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/nndiary.elc
 share/emacs/${PKGVERSION}/lisp/gnus/nndir.el.gz
@@ -2161,10 +2155,6 @@ share/emacs/${PKGVERSION}/lisp/gnus/nnimap.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/nnimap.elc
 share/emacs/${PKGVERSION}/lisp/gnus/nnir.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/nnir.elc
-share/emacs/${PKGVERSION}/lisp/gnus/nnkiboze.el.gz
-share/emacs/${PKGVERSION}/lisp/gnus/nnkiboze.elc
-share/emacs/${PKGVERSION}/lisp/gnus/nnlistserv.el.gz
-share/emacs/${PKGVERSION}/lisp/gnus/nnlistserv.elc
 share/emacs/${PKGVERSION}/lisp/gnus/nnmail.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/nnmail.elc
 share/emacs/${PKGVERSION}/lisp/gnus/nnmaildir.el.gz
@@ -2183,24 +2173,14 @@ share/emacs/${PKGVERSION}/lisp/gnus/nnoo.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/nnoo.elc
 share/emacs/${PKGVERSION}/lisp/gnus/nnrss.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/nnrss.elc
-share/emacs/${PKGVERSION}/lisp/gnus/nnslashdot.el.gz
-share/emacs/${PKGVERSION}/lisp/gnus/nnslashdot.elc
-share/emacs/${PKGVERSION}/lisp/gnus/nnsoup.el.gz
-share/emacs/${PKGVERSION}/lisp/gnus/nnsoup.elc
 share/emacs/${PKGVERSION}/lisp/gnus/nnspool.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/nnspool.elc
 share/emacs/${PKGVERSION}/lisp/gnus/nntp.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/nntp.elc
-share/emacs/${PKGVERSION}/lisp/gnus/nnultimate.el.gz
-share/emacs/${PKGVERSION}/lisp/gnus/nnultimate.elc
 share/emacs/${PKGVERSION}/lisp/gnus/nnvirtual.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/nnvirtual.elc
-share/emacs/${PKGVERSION}/lisp/gnus/nnwarchive.el.gz
-share/emacs/${PKGVERSION}/lisp/gnus/nnwarchive.elc
 share/emacs/${PKGVERSION}/lisp/gnus/nnweb.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/nnweb.elc
-share/emacs/${PKGVERSION}/lisp/gnus/nnwfm.el.gz
-share/emacs/${PKGVERSION}/lisp/gnus/nnwfm.elc
 share/emacs/${PKGVERSION}/lisp/gnus/pop3.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/pop3.elc
 share/emacs/${PKGVERSION}/lisp/gnus/qp.el.gz
@@ -2712,8 +2692,6 @@ share/emacs/${PKGVERSION}/lisp/net/tramp-cmds.el.gz
 share/emacs/${PKGVERSION}/lisp/net/tramp-cmds.elc
 share/emacs/${PKGVERSION}/lisp/net/tramp-compat.el.gz
 share/emacs/${PKGVERSION}/lisp/net/tramp-compat.elc
-share/emacs/${PKGVERSION}/lisp/net/tramp-fish.el.gz
-share/emacs/${PKGVERSION}/lisp/net/tramp-fish.elc
 share/emacs/${PKGVERSION}/lisp/net/tramp-ftp.el.gz
 share/emacs/${PKGVERSION}/lisp/net/tramp-ftp.elc
 share/emacs/${PKGVERSION}/lisp/net/tramp-gvfs.el.gz
@@ -2722,6 +2700,9 @@ share/emacs/${PKGVERSION}/lisp/net/tramp-gw.el.gz
 share/emacs/${PKGVERSION}/lisp/net/tramp-gw.elc
 share/emacs/${PKGVERSION}/lisp/net/tramp-imap.el.gz
 share/emacs/${PKGVERSION}/lisp/net/tramp-imap.elc
+share/emacs/${PKGVERSION}/lisp/net/tramp-loaddefs.el
+share/emacs/${PKGVERSION}/lisp/net/tramp-sh.el.gz
+share/emacs/${PKGVERSION}/lisp/net/tramp-sh.elc
 share/emacs/${PKGVERSION}/lisp/net/tramp-smb.el.gz
 share/emacs/${PKGVERSION}/lisp/net/tramp-smb.elc
 share/emacs/${PKGVERSION}/lisp/net/tramp-uu.el.gz
@@ -2786,7 +2767,6 @@ share/emacs/${PKGVERSION}/lisp/nxml/rng-valid.el.gz
 share/emacs/${PKGVERSION}/lisp/nxml/rng-valid.elc
 share/emacs/${PKGVERSION}/lisp/nxml/rng-xsd.el.gz
 share/emacs/${PKGVERSION}/lisp/nxml/rng-xsd.elc
-share/emacs/${PKGVERSION}/lisp/nxml/TODO
 share/emacs/${PKGVERSION}/lisp/nxml/xmltok.el.gz
 share/emacs/${PKGVERSION}/lisp/nxml/xmltok.elc
 share/emacs/${PKGVERSION}/lisp/nxml/xsd-regexp.el.gz
