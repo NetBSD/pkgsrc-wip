@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/06/13 22:47:10 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2010/09/19 08:26:05 jihbed Exp $
 #
 
 DISTNAME=	libowl-av-0.1
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	http://labs.o-hand.com/sources/libowl-av/
 
-MAINTAINER=	kamelderouiche@yahoo.com
+MAINTAINER=	pkgsrc.gnome@gmail.com
 HOMEPAGE=	http://labs.o-hand.com/av-widget-library/
 COMMENT=	AV widget library
 LICENSE=	gnu-lgpl-v2
