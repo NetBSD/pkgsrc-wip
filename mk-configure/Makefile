@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2010/09/19 19:04:06 cheusov Exp $
+# $NetBSD: Makefile,v 1.28 2010/09/19 20:46:41 cheusov Exp $
 #
 
 DISTNAME=	mk-configure-0.20.0
@@ -20,6 +20,7 @@ DOC_FILES=		README NEWS ChangeLog TODO FAQ COPYRIGHT \
 			doc/presentation.pdf
 
 MAKE_ENV+=		MANDIR=${PREFIX}/${PKGMANDIR} BMAKE=${MAKE}
+MAKE_ENV+=		INSTALL=${INSTALL}
 
 AUTO_MKDIRS=		yes
 
