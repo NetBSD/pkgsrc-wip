@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.5 2010/09/13 02:53:12 rxg Exp $
+$NetBSD: distinfo,v 1.6 2010/09/19 05:07:23 rxg Exp $
 
-SHA1 (chromium.r58671.tgz) = fb1b781e651ac30f6fe8879cf72410a9b28410bc
-RMD160 (chromium.r58671.tgz) = e29e9b4a18241100ef4d2bf858f7313c93d7e9bc
-Size (chromium.r58671.tgz) = 874833368 bytes
+SHA1 (chromium-7.0.518.0.tar.bz2) = 7845f38d62561160e3d65e5e0886533f44909a8c
+RMD160 (chromium-7.0.518.0.tar.bz2) = 5ce5ab14a481c4af4014ca0a5162794ff7ef4c4e
+Size (chromium-7.0.518.0.tar.bz2) = 132284072 bytes
 SHA1 (patch-aa) = 9008c06e48c00a118fe457f1f3c7e296e596d3a3
 SHA1 (patch-ab) = b02558b56654c46cb7258e1bb43bb71555db9297
 SHA1 (patch-ac) = 722dfebee28ce1b074a8970d336e23657404fd31
