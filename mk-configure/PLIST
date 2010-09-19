@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2010/09/03 20:52:11 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.19 2010/09/19 19:04:06 cheusov Exp $
 bin/mkc_check_common.sh
 bin/mkc_check_compiler
 bin/mkc_check_custom
@@ -126,6 +126,12 @@ share/examples/mk-configure/hello_lua/expect.out
 share/examples/mk-configure/hello_lua/foo.lua
 share/examples/mk-configure/hello_lua/foobar
 share/examples/mk-configure/hello_lua/test.mk
+share/examples/mk-configure/hello_lua2/Makefile
+share/examples/mk-configure/hello_lua2/bar.lua
+share/examples/mk-configure/hello_lua2/expect.out
+share/examples/mk-configure/hello_lua2/foo.lua
+share/examples/mk-configure/hello_lua2/foobar
+share/examples/mk-configure/hello_lua2/test.mk
 share/examples/mk-configure/hello_plugins/Makefile
 share/examples/mk-configure/hello_plugins/app/Makefile
 share/examples/mk-configure/hello_plugins/app/app.c
@@ -135,6 +141,15 @@ share/examples/mk-configure/hello_plugins/plugin1/plugin1.c
 share/examples/mk-configure/hello_plugins/plugin2/Makefile
 share/examples/mk-configure/hello_plugins/plugin2/plugin2.c
 share/examples/mk-configure/hello_plugins/test.mk
+share/examples/mk-configure/hello_plugins2/Makefile
+share/examples/mk-configure/hello_plugins2/app/Makefile
+share/examples/mk-configure/hello_plugins2/app/app.c
+share/examples/mk-configure/hello_plugins2/expect.out
+share/examples/mk-configure/hello_plugins2/plugin1/Makefile
+share/examples/mk-configure/hello_plugins2/plugin1/plugin1.c
+share/examples/mk-configure/hello_plugins2/plugin2/Makefile
+share/examples/mk-configure/hello_plugins2/plugin2/plugin2.c
+share/examples/mk-configure/hello_plugins2/test.mk
 share/examples/mk-configure/hello_reqd/Makefile
 share/examples/mk-configure/hello_reqd/expect.out
 share/examples/mk-configure/hello_reqd/hello
