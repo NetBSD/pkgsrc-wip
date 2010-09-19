@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/06/12 23:24:04 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2010/09/19 08:21:47 jihbed Exp $
 #
 
 DISTNAME=	discident-glib-0.9.9
@@ -6,7 +6,7 @@ CATEGORIES=	www
 MASTER_SITES=	ftp://ftp.gnome.org/pub/gnome/sources/discident-glib/0.9/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	kamelderouiche@yahoo.com
+MAINTAINER=	pkgsrc.gnome@gmail.com
 HOMEPAGE=	http://git.gnome.org/browse/discident-glib/
 COMMENT=	Discident-glib is a convenience library for the DiscIdent Web Service
 LICENSE=	gnu-gpl-v2
