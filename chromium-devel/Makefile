@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/09/19 05:07:23 rxg Exp $
+# $NetBSD: Makefile,v 1.4 2010/09/20 01:22:12 rxg Exp $
 
 DISTNAME=	chromium-7.0.518.0
 CATEGORIES=	www
@@ -12,6 +12,15 @@ LICENSE=	modified-bsd
 
 USE_TOOLS+=	gmake pkg-config
 USE_LANGUAGES=	c c++
+
+# Override the LINK variable for the platforms which do not have flock(1).
+MAKE_ENV+=	LINK=${CXX}
+
+RESTRICTED=	tarball contains some allegedly patent-infringing source code
+NO_SRC_ON_FTP=		${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
 
 CHECK_PORTABILITY_SKIP+=breakpad/src/third_party/protobuf/protobuf/post_process_dist.sh
 CHECK_PORTABILITY_SKIP+=native_client/src/third_party/libxt/configure
