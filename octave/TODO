@@ -1,0 +1,25 @@
+Note on fortran
+---------------
+
+- for pkgsrc-2010Q2 and older you need to use::
+
+    USE_LANGUAGES=  c c++ fortran
+
+  instead of::
+
+    USE_LANGUAGES=  c c++ fortran77
+
+  as that option changed only in August 2010
+
+Build Success
+-------------
+
+- NetBSD 5.1_RC3 / amd64 / pkgsrc-2010Q2
+
+Build Failures
+--------------
+
+- NetBSD 5.0.1 / i386 / pkgsr-2010Q2
+
+  It seems that it failed because I already had GraphicsMagick installed and configure found it (but Magick++.h was missing)
+
