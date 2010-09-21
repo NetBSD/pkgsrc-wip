@@ -1,0 +1,19 @@
+--- src/ldapuseradd.c.orig	2010-09-21 12:15:15.000000000 +0000
++++ src/ldapuseradd.c	2010-09-21 12:15:36.000000000 +0000
+@@ -36,7 +36,6 @@
+  */
+ 
+ #include "ldapuseradd.h"
+-#include <sys/prctl.h>
+ 
+ /**
+  * catch_int: Here is the signal handler (to catch ctrl-c)
+@@ -57,8 +56,6 @@
+     struct user_account current_account;
+     struct user_account newmod_account;
+ 
+-    prctl(PR_SET_DUMPABLE, 1);
+-
+     ua1->current_account = &current_account;
+     ua1->newmod_account = &newmod_account;
+ 

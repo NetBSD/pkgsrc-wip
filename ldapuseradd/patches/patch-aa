@@ -1,0 +1,16 @@
+--- src/getopt.c.orig	2010-09-21 12:09:21.000000000 +0000
++++ src/getopt.c	2010-09-21 12:09:50.000000000 +0000
+@@ -75,12 +75,7 @@
+ # endif
+ #endif
+ 
+-#ifdef _LIBC
+-# include <libintl.h>
+-#else
+-/* This is for other GNU distributions with internationalized messages.  */
+-# include "gettext.h"
+-#endif
++#include <libintl.h>
+ #define _(msgid) gettext (msgid)
+ 
+ #if defined _LIBC && defined USE_IN_LIBIO

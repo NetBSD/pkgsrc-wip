@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/09/21 04:59:22 gregschenzel Exp $
+
+SHA1 (ldapuseradd-0.9.2.tar.bz2) = 0033eb27364a12462c15e37d0fd7df2b00acd6ae
+RMD160 (ldapuseradd-0.9.2.tar.bz2) = ea59cbf15042541a457139da42767d45b324be13
+Size (ldapuseradd-0.9.2.tar.bz2) = 71133 bytes
+SHA1 (patch-aa) = 75d5a2a40cad901aedd60e76530a83f2251b897d
+SHA1 (patch-ab) = 7435e092ec9f62c66da36e85094d56100d05d672
+SHA1 (patch-ac) = 3a20b0f6407dd54d108b60e1670bff5db36fafe0
+SHA1 (patch-ad) = 0c034c4d618a528cf6932ec1bad2d3b421704af9
+

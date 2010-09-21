@@ -1,0 +1,19 @@
+prctl
+-fPIC
+gettext.m4
+CONFFILES
+ERROR: distinfo:10: Unknown line type.
+NOTE: distinfo:10: Trailing empty lines.
+WARN: Makefile: This package has not set PKG_DESTDIR_SUPPORT.
+ERROR: PLIST:8: Configuration files must not be registered in the PLIST. Please use the CONF_FILES framework, which is described in mk/pkginstall/bsd.pkginstall.mk.
+ERROR: PLIST:9: Configuration files must not be registered in the PLIST. Please use the CONF_FILES framework, which is described in mk/pkginstall/bsd.pkginstall.mk.
+ERROR: PLIST:10: Configuration files must not be registered in the PLIST. Please use the CONF_FILES framework, which is described in mk/pkginstall/bsd.pkginstall.mk.
+ERROR: PLIST:11: Configuration files must not be registered in the PLIST. Please use the CONF_FILES framework, which is described in mk/pkginstall/bsd.pkginstall.mk.
+ERROR: patches/patch-aa:1: "$NetBSD: TODO,v 1.1.1.1 2010/09/21 04:59:22 gregschenzel Exp $" expected.
+WARN: patches/patch-aa:1: Comment expected.
+ERROR: patches/patch-ab:1: "$NetBSD: TODO,v 1.1.1.1 2010/09/21 04:59:22 gregschenzel Exp $" expected.
+WARN: patches/patch-ab:1: Comment expected.
+ERROR: patches/patch-ac:1: "$NetBSD: TODO,v 1.1.1.1 2010/09/21 04:59:22 gregschenzel Exp $" expected.
+WARN: patches/patch-ac:1: Comment expected.
+ERROR: patches/patch-ad:1: "$NetBSD: TODO,v 1.1.1.1 2010/09/21 04:59:22 gregschenzel Exp $" expected.
+WARN: patches/patch-ad:1: Comment expected.
