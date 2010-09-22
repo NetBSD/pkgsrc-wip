@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4098 2010/09/21 05:03:58 gregschenzel Exp $
+# $Id: Makefile,v 1.4099 2010/09/22 21:36:31 ryo-on Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -353,6 +353,7 @@ SUBDIR+=	dovecot-antispam
 SUBDIR+=	dpic
 SUBDIR+=	dragbox
 SUBDIR+=	dri
+SUBDIR+=	droid-fonts
 SUBDIR+=	drow
 SUBDIR+=	drpython
 SUBDIR+=	drumpiler
@@ -1314,6 +1315,7 @@ SUBDIR+=	monotone-cvsimport
 SUBDIR+=	moonlight
 SUBDIR+=	moregroupware
 SUBDIR+=	moto4lin
+SUBDIR+=	motoya-fonts
 SUBDIR+=	mozldap
 SUBDIR+=	mozplugger
 SUBDIR+=	mp3chop
