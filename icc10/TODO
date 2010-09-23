@@ -1,3 +1,0 @@
-Fix static linking.
-Detect -no* options and don't add corresponding option to iccbin/icpcbin command
-line, for instance, don't add start files if a user passes -nostartfiles.
