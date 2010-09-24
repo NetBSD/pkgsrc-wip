@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2010/06/13 22:47:16 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2010/09/24 14:28:42 anielski Exp $
 
-DISTNAME=	slrn-pre1.0.0~18
-PKGNAME=	slrn-pre1.0.0-18
+DISTNAME=	slrn-pre1.0.0~24
+PKGNAME=	slrn-pre1.0.0-24
 CONFLICTS=      slrn-pl-[0-9]* slrn-[0-9]*
 LICENSE=	gnu-gpl-v2
 PKGREVISION=	1
