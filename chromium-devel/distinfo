@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2010/09/20 01:23:08 rxg Exp $
+$NetBSD: distinfo,v 1.8 2010/09/24 18:23:41 rxg Exp $
 
 SHA1 (chromium-7.0.518.0.tar.bz2) = 7845f38d62561160e3d65e5e0886533f44909a8c
 RMD160 (chromium-7.0.518.0.tar.bz2) = 5ce5ab14a481c4af4014ca0a5162794ff7ef4c4e
@@ -194,3 +194,6 @@ SHA1 (patch-hf) = ec055947aca2aded7c627e79ec490486acd08713
 SHA1 (patch-hg) = a85c2f2a3451991d296477c292fdee9162ceefa8
 SHA1 (patch-hh) = 4047d563cb88e990710acb025fb3a4d6dcfc021f
 SHA1 (patch-hi) = c5cd49882c9399ee668b8f846be817e4017a0128
+SHA1 (patch-hj) = fa0dc70d5690accfa66dfbd3afdf71e4eacb2b07
+SHA1 (patch-hk) = 54545e2774a069cde7645891b85f8e4905ee0879
+SHA1 (patch-hl) = 0997c9ca88ef816d063b5cfd41b7d233338c899d
