@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/09/25 17:02:08 ggergely Exp $
+# $NetBSD: Makefile,v 1.4 2010/09/25 17:32:04 ggergely Exp $
 #
 PKGREVISION=	1
 
@@ -23,13 +23,13 @@ USE_LANGUAGES=	# none
 NO_BUILD=    	YES
 NO_CONFIGURE=	YES
 
-OPENTTD_DATADIR= ${DESTDIR}${PREFIX}/share/openttd/data
+OPENTTD_GMDIR= ${DESTDIR}${PREFIX}/share/openttd/gm
 
 do-install:
 		${INSTALL_DATA} ${WRKSRC}/*.mid \
-			${OPENTTD_DATADIR}
+			${OPENTTD_GMDIR}
 		${INSTALL_DATA} ${WRKSRC}/*.obm \
-			${OPENTTD_DATADIR}
+			${OPENTTD_GMDIR}
 
 
 .include "../../mk/bsd.pkg.mk"
