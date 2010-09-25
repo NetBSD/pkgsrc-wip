@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/09/25 17:32:04 ggergely Exp $
+# $NetBSD: Makefile,v 1.5 2010/09/25 17:41:41 ggergely Exp $
 #
 PKGREVISION=	1
 
@@ -15,7 +15,7 @@ COMMENT=	Free and open source music data files for the game OpenTTD
 #LICENSE=	# TODO: (see mk/license.mk)
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-INSTALLATION_DIRS=  	share/openttd/data
+INSTALLATION_DIRS=  	share/openttd/gm
 
 WRKSRC=		${WRKDIR}/openmsx-${VERSION}
 USE_LANGUAGES=	# none
