@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2010/08/29 10:27:07 ggergely Exp $
+# $NetBSD: Makefile,v 1.9 2010/09/25 17:26:32 ggergely Exp $
 #
 
-VERSION=	1.0.3
+VERSION=	1.0.4
 DISTNAME=	openttd-${VERSION}-source
 PKGNAME=	${DISTNAME:S/-source//}
 CATEGORIES=	games x11
