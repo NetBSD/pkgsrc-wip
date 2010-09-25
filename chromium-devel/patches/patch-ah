@@ -1,4 +1,4 @@
-$NetBSD: patch-ah,v 1.1.1.1 2010/09/08 15:00:55 rxg Exp $
+$NetBSD: patch-ah,v 1.2 2010/09/25 16:21:00 rxg Exp $
 
 --- base/base.gypi.orig	2010-08-27 09:04:47.000000000 +0000
 +++ base/base.gypi
@@ -57,15 +57,6 @@ $NetBSD: patch-ah,v 1.1.1.1 2010/09/08 15:00:55 rxg Exp $
            'conditions': [
              [ 'linux_use_tcmalloc==0', {
                  'defines': [
-@@ -578,7 +583,7 @@
-             '../build/linux/system.gyp:gtk',
-           ],
-         },],
--        [ 'OS == "freebsd" or OS == "openbsd"', {
-+        [ 'OS == "freebsd" or OS == "netbsd" or OS == "openbsd"', {
-           'link_settings': {
-             'libraries': [
-               '-L/usr/local/lib -lexecinfo',
 @@ -671,7 +676,7 @@
              ],
            },
