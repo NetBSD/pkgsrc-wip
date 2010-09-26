@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/09/20 01:22:12 rxg Exp $
+# $NetBSD: Makefile,v 1.5 2010/09/26 16:32:57 rxg Exp $
 
 DISTNAME=	chromium-7.0.518.0
 CATEGORIES=	www
@@ -43,10 +43,16 @@ pre-configure:
 
 do-configure:
 	cd ${WRKSRC} && \
-	${SETENV} ${CONFIGURE_ENV} python build/gyp_chromium --depth=${WRKSRC}
+	${SETENV} ${CONFIGURE_ENV} python build/gyp_chromium --depth=${WRKSRC} \
+	-DOS=netbsd \
+	-Duse_system_libevent=1 \
+	-Duse_system_libjpeg=1 \
+	-Duse_system_libxml=1
 
 .include "../../devel/GConf/buildlink3.mk"
+.include "../../devel/libevent/buildlink3.mk"
 .include "../../devel/nss/buildlink3.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../security/libgnome-keyring/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
