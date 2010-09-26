@@ -1,8 +1,8 @@
-$NetBSD: patch-hm,v 1.1 2010/09/25 16:23:22 rxg Exp $
+$NetBSD: patch-hm,v 1.2 2010/09/26 16:11:55 rxg Exp $
 
---- v8/src/platform-netbsd.cc.orig	2010-09-25 15:39:19.000000000 +0000
+--- v8/src/platform-netbsd.cc.orig	2010-09-26 15:46:15.000000000 +0000
 +++ v8/src/platform-netbsd.cc
-@@ -0,0 +1,623 @@
+@@ -0,0 +1,622 @@
 +// Copyright 2006-2009 the V8 project authors. All rights reserved.
 +// Redistribution and use in source and binary forms, with or without
 +// modification, are permitted provided that the following conditions are
@@ -46,7 +46,6 @@ $NetBSD: patch-hm,v 1.1 2010/09/25 16:23:22 rxg Exp $
 +#include <sys/stat.h>   // open
 +#include <sys/fcntl.h>  // open
 +#include <unistd.h>     // getpagesize
-+#include <execinfo.h>   // backtrace, backtrace_symbols
 +#include <strings.h>    // index
 +#include <errno.h>
 +#include <stdarg.h>
