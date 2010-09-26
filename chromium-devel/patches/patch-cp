@@ -1,7 +1,16 @@
-$NetBSD: patch-cp,v 1.1.1.1 2010/09/08 15:00:58 rxg Exp $
+$NetBSD: patch-cp,v 1.2 2010/09/26 16:16:50 rxg Exp $
 
---- chrome/chrome.gyp.orig	2010-08-31 09:05:29.000000000 +0000
+--- chrome/chrome.gyp.orig	2010-09-13 15:19:41.000000000 +0000
 +++ chrome/chrome.gyp
+@@ -79,7 +79,7 @@
+         'platform_locale_settings_grd':
+             'app/resources/locale_settings_win.grd',
+       },],
+-      ['OS=="linux"', {
++      ['OS=="linux" or OS=="freebsd" or OS=="netbsd" or OS=="openbsd"', {
+         'nacl_defines': [
+           'NACL_WINDOWS=0',
+           'NACL_LINUX=1',
 @@ -571,7 +571,7 @@
          'browser/debugger/inspectable_tab_proxy.h',
        ],
