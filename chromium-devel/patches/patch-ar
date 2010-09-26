@@ -1,6 +1,6 @@
-$NetBSD: patch-ar,v 1.1.1.1 2010/09/08 15:00:56 rxg Exp $
+$NetBSD: patch-ar,v 1.2 2010/09/26 16:19:21 rxg Exp $
 
---- build/common.gypi.orig	2010-08-29 09:04:35.000000000 +0000
+--- build/common.gypi.orig	2010-09-13 15:18:36.000000000 +0000
 +++ build/common.gypi
 @@ -45,7 +45,7 @@
        'variables': {
@@ -11,7 +11,7 @@ $NetBSD: patch-ar,v 1.1.1.1 2010/09/08 15:00:56 rxg Exp $
              # This handles the Linux platforms we generally deal with. Anything
              # else gets passed through, which probably won't work very well; such
              # hosts should pass an explicit target_arch to gyp.
-@@ -292,7 +292,7 @@
+@@ -292,12 +292,12 @@
      'enable_gpu%': 1,
  
      'conditions': [
@@ -20,7 +20,13 @@ $NetBSD: patch-ar,v 1.1.1.1 2010/09/08 15:00:56 rxg Exp $
          # This will set gcc_version to XY if you are running gcc X.Y.*.
          # This is used to tweak build flags for gcc 4.4.
          'gcc_version%': '<!(python <(DEPTH)/build/compiler_version.py)',
-@@ -315,7 +315,7 @@
+         # Figure out the python architecture to decide if we build pyauto.
+-        'python_arch%': '<!(<(DEPTH)/build/linux/python_arch.sh <(sysroot)/usr/lib/libpython<(python_ver).so.1.0)',
++        'python_arch%': '<!(<(DEPTH)/build/linux/python_arch.sh <(sysroot)/usr/pkg/lib/python2.6.so.1.0)',
+         'conditions': [
+           ['branding=="Chrome"', {
+             'linux_breakpad%': 1,
+@@ -312,7 +312,7 @@
              'use_titlecase_in_grd_files%': 1,
            }],
          ],
@@ -29,7 +35,7 @@ $NetBSD: patch-ar,v 1.1.1.1 2010/09/08 15:00:56 rxg Exp $
        ['OS=="mac"', {
          # Mac wants Title Case strings
          'use_titlecase_in_grd_files%': 1,
-@@ -537,7 +537,7 @@
+@@ -533,7 +533,7 @@
      'target_conditions': [
        ['chromium_code==0', {
          'conditions': [
@@ -38,7 +44,7 @@ $NetBSD: patch-ar,v 1.1.1.1 2010/09/08 15:00:56 rxg Exp $
              'cflags!': [
                '-Wall',
                '-Wextra',
-@@ -583,14 +583,14 @@
+@@ -579,7 +579,7 @@
                            ['exclude', '/(cocoa|mac)/'],
                            ['exclude', '\.mm?$' ] ],
            }],
@@ -47,15 +53,7 @@ $NetBSD: patch-ar,v 1.1.1.1 2010/09/08 15:00:56 rxg Exp $
              'sources/': [
                ['exclude', '_(chromeos|gtk|x|x11|xdg)(_unittest)?\\.cc$'],
                ['exclude', '/gtk/'],
-               ['exclude', '/(gtk|x11)_[^/]*\\.cc$'],
-             ],
-           }],
--          ['OS!="linux"', {
-+          ['OS!="linux" and OS!="freebsd" and OS!="netbsd" and OS!="openbsd"', {
-             'sources/': [
-               ['exclude', '_linux(_unittest)?\\.cc$'],
-               ['exclude', '/linux/'],
-@@ -807,7 +807,7 @@
+@@ -803,7 +803,7 @@
      },
    },
    'conditions': [
@@ -64,7 +62,7 @@ $NetBSD: patch-ar,v 1.1.1.1 2010/09/08 15:00:56 rxg Exp $
        'target_defaults': {
          # Enable -Werror by default, but put it in a variable so it can
          # be disabled in ~/.gyp/include.gypi on the valgrind builders.
-@@ -821,6 +821,7 @@
+@@ -817,6 +817,7 @@
            'no_strict_aliasing%': 1,
            'conditions': [['OS=="linux"', {'werror%': '-Werror',}],
                           ['OS=="freebsd"', {'werror%': '',}],
@@ -72,7 +70,7 @@ $NetBSD: patch-ar,v 1.1.1.1 2010/09/08 15:00:56 rxg Exp $
                           ['OS=="openbsd"', {'werror%': '',}],
            ],
          },
-@@ -1358,7 +1359,7 @@
+@@ -1357,7 +1358,7 @@
          },
        },
      }],
