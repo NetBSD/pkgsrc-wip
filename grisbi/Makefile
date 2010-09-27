@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2010/06/13 22:47:06 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.12 2010/09/27 15:29:51 ggergely Exp $
 #
 
 DISTNAME=	grisbi-0.5.9
@@ -17,7 +17,7 @@ GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config intltool gmake
 
 
-INSTALLATION_DIRS=	${PKGMANDIR}/man1
+INSTALLATION_DIRS=	${PKGMANDIR}/man1 ${PREFIX}/share/applications/
 
 PKG_OPTIONS_VAR=                PKG_OPTIONS.gribsi
 PKG_SUPPORTED_OPTIONS=          libofx
@@ -35,7 +35,7 @@ CONFIGURE_ARGS+=	--without-libofx
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/grisbi.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_DATA} ${WRKSRC}/src/grisbi.desktop \
-			${PREFIX}/share/applications/
+			${DESTDIR}${PREFIX}/share/applications/
 
 
 .include "../../databases/shared-mime-info/mimedb.mk"
