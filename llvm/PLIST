@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2010/09/18 21:27:30 makoto Exp $
+@comment $NetBSD: PLIST,v 1.23 2010/09/27 00:19:46 thomasklausner Exp $
 bin/bugpoint
 bin/llc
 bin/lli
@@ -193,10 +193,17 @@ include/llvm/CodeGen/MachineRegisterInfo.h
 include/llvm/CodeGen/MachineRelocation.h
 include/llvm/CodeGen/MachineSSAUpdater.h
 include/llvm/CodeGen/ObjectCodeEmitter.h
+include/llvm/CodeGen/PBQP/Graph.h
+include/llvm/CodeGen/PBQP/HeuristicBase.h
+include/llvm/CodeGen/PBQP/HeuristicSolver.h
+include/llvm/CodeGen/PBQP/Heuristics/Briggs.h
+include/llvm/CodeGen/PBQP/Math.h
+include/llvm/CodeGen/PBQP/Solution.h
 include/llvm/CodeGen/Passes.h
 include/llvm/CodeGen/PostRAHazardRecognizer.h
 include/llvm/CodeGen/ProcessImplicitDefs.h
 include/llvm/CodeGen/PseudoSourceValue.h
+include/llvm/CodeGen/RegAllocPBQP.h
 include/llvm/CodeGen/RegAllocRegistry.h
 include/llvm/CodeGen/RegisterCoalescer.h
 include/llvm/CodeGen/RegisterScavenging.h
@@ -378,6 +385,7 @@ include/llvm/System/DataTypes.h.cmake
 include/llvm/System/Disassembler.h
 include/llvm/System/DynamicLibrary.h
 include/llvm/System/Errno.h
+include/llvm/System/FEnv.h
 include/llvm/System/Host.h
 include/llvm/System/IncludeFile.h
 include/llvm/System/LICENSE.TXT
@@ -389,7 +397,6 @@ include/llvm/System/Program.h
 include/llvm/System/RWMutex.h
 include/llvm/System/Signals.h
 include/llvm/System/Solaris.h
-include/llvm/System/FEnv.h
 include/llvm/System/ThreadLocal.h
 include/llvm/System/Threading.h
 include/llvm/System/TimeValue.h
@@ -448,8 +455,8 @@ include/llvm/Value.h
 include/llvm/ValueSymbolTable.h
 lib/libBugpointPasses.${SO_SUFFIX}
 lib/libCompilerDriver.a
-lib/libEnhancedDisassembly.a
 lib/libEnhancedDisassembly.${SO_SUFFIX}
+lib/libEnhancedDisassembly.a
 lib/libLLVMAnalysis.a
 lib/libLLVMArchive.a
 lib/libLLVMAsmParser.a
@@ -481,8 +488,8 @@ lib/libLLVMX86Disassembler.a
 lib/libLLVMX86Info.a
 lib/libLLVMipa.a
 lib/libLLVMipo.a
-lib/libLTO.a
 lib/libLTO.${SO_SUFFIX}
+lib/libLTO.a
 lib/libUnitTestMain.a
 lib/libprofile_rt.${SO_SUFFIX}
 man/man1/bugpoint.1
@@ -604,8 +611,8 @@ share/doc/llvm/ps/llvm-ar.ps
 share/doc/llvm/ps/llvm-as.ps
 share/doc/llvm/ps/llvm-bcanalyzer.ps
 share/doc/llvm/ps/llvm-config.ps
-share/doc/llvm/ps/llvm-dis.ps
 share/doc/llvm/ps/llvm-diff.ps
+share/doc/llvm/ps/llvm-dis.ps
 share/doc/llvm/ps/llvm-extract.ps
 share/doc/llvm/ps/llvm-ld.ps
 share/doc/llvm/ps/llvm-link.ps
