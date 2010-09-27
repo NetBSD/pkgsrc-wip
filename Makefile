@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4099 2010/09/22 21:36:31 ryo-on Exp $
+# $Id: Makefile,v 1.4100 2010/09/27 04:21:01 schnoebe Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1449,7 +1449,6 @@ SUBDIR+=	openbgpd
 SUBDIR+=	openbgpd-as4byte
 SUBDIR+=	openbsd-input-usbtablet
 SUBDIR+=	openca
-SUBDIR+=	opencobol
 SUBDIR+=	openconnect
 SUBDIR+=	opendchub
 SUBDIR+=	opendesktop-fonts
