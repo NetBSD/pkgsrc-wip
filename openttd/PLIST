@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.11 2010/08/29 10:27:07 ggergely Exp $
+@comment $NetBSD: PLIST,v 1.12 2010/09/27 11:24:17 ggergely Exp $
 bin/openttd
-man/man6/openttd.6.gz
+man/man6/openttd.6
 share/applications/openttd.desktop
 share/doc/openttd/32bpp.txt
 share/doc/openttd/COPYING
@@ -32,6 +32,7 @@ share/openttd/gm/no_music.obm
 share/openttd/gm/orig_win.obm
 share/openttd/lang/afrikaans.lng
 share/openttd/lang/arabic_egypt.lng
+share/openttd/lang/belarusian.lng
 share/openttd/lang/brazilian_portuguese.lng
 share/openttd/lang/bulgarian.lng
 share/openttd/lang/catalan.lng
@@ -52,6 +53,7 @@ share/openttd/lang/hebrew.lng
 share/openttd/lang/hungarian.lng
 share/openttd/lang/icelandic.lng
 share/openttd/lang/indonesian.lng
+share/openttd/lang/irish.lng
 share/openttd/lang/italian.lng
 share/openttd/lang/japanese.lng
 share/openttd/lang/korean.lng
