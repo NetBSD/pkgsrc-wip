@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/09/26 16:32:57 rxg Exp $
+# $NetBSD: Makefile,v 1.6 2010/09/28 05:13:34 rxg Exp $
 
 DISTNAME=	chromium-7.0.518.0
 CATEGORIES=	www
@@ -15,6 +15,18 @@ USE_LANGUAGES=	c c++
 
 # Override the LINK variable for the platforms which do not have flock(1).
 MAKE_ENV+=	LINK=${CXX}
+
+.include "../../mk/bsd.prefs.mk"
+
+CONFIGURE_ENV+=	GYP_DEFINES=${GYP_DEFINES:Q}
+.if ${OPSYS} == "NetBSD"
+GYP_DEFINES+=	OS=netbsd
+# Enable this will cause the infinite loop when mksnapshot generates snapshot.cc
+GYP_DEFINES+=	v8_use_snapshot=0
+.endif
+GYP_DEFINES+=	use_system_libevent=1
+GYP_DEFINES+=	use_system_libjpeg=1
+GYP_DEFINES+=	use_system_libxml=1
 
 RESTRICTED=	tarball contains some allegedly patent-infringing source code
 NO_SRC_ON_FTP=		${RESTRICTED}
@@ -43,11 +55,7 @@ pre-configure:
 
 do-configure:
 	cd ${WRKSRC} && \
-	${SETENV} ${CONFIGURE_ENV} python build/gyp_chromium --depth=${WRKSRC} \
-	-DOS=netbsd \
-	-Duse_system_libevent=1 \
-	-Duse_system_libjpeg=1 \
-	-Duse_system_libxml=1
+	${SETENV} ${CONFIGURE_ENV} python build/gyp_chromium --depth=${WRKSRC}
 
 .include "../../devel/GConf/buildlink3.mk"
 .include "../../devel/libevent/buildlink3.mk"
