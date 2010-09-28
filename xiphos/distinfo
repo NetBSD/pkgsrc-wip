@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/09/28 15:06:44 ggergely Exp $
+
+SHA1 (xiphos-3.1.3.tar.gz) = a6740c2b942e8b34ce70ecf81cba47f821bb464f
+RMD160 (xiphos-3.1.3.tar.gz) = a1eb841b8951e2475e294113de7c8f7b5c9bbcdf
+Size (xiphos-3.1.3.tar.gz) = 4405305 bytes

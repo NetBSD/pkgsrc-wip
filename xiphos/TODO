@@ -1,0 +1,8 @@
+test it!
+when installing modules xiphos currently crashes with:
+(xiphos:18338): Gdk-CRITICAL **: gdk_window_set_cursor: assertion `GDK_IS_WINDOW (window)' failed
+
+				(xiphos:18338): Gdk-CRITICAL **: gdk_window_set_cursor: assertion `GDK_IS_WINDOW (window)' failed
+								Segmentation fault (core dumped) 
+
+investigate and fix it!
