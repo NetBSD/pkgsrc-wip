@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1 2010/09/28 19:23:11 ggergely Exp $
+
+--- src/mgr/curlftpt.cpp.orig	2009-12-04 08:54:06.000000000 +0000
++++ src/mgr/curlftpt.cpp
+@@ -177,6 +177,9 @@ char CURLFTPTransport::getURL(const char
+ 		res = curl_easy_perform(session);
+ 		SWLog::getSystemLog()->logDebug("***** Finished performing curl easy action. \n");
+ 
++		// it seems CURL tries to use this option data later for some reason, so we unset here
++		curl_easy_setopt(session, CURLOPT_PROGRESSDATA, (void*)NULL);
++
+ 		if(CURLE_OK != res) {
+ 			retVal = -1;
+ 		}
