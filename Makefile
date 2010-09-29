@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4100 2010/09/27 04:21:01 schnoebe Exp $
+# $Id: Makefile,v 1.4101 2010/09/29 11:27:31 ggergely Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2330,6 +2330,7 @@ SUBDIR+=	svrcore
 SUBDIR+=	swami
 SUBDIR+=	swfmill
 SUBDIR+=	swftools
+SUBDIR+=	sword
 SUBDIR+=	sxemacs
 SUBDIR+=	sxid
 SUBDIR+=	symon
@@ -2569,6 +2570,7 @@ SUBDIR+=	xgobi
 SUBDIR+=	xhkeys1
 SUBDIR+=	xine-plugin
 SUBDIR+=	xinetd
+SUBDIR+=	xiphos
 SUBDIR+=	xmail
 SUBDIR+=	xmim
 SUBDIR+=	xml-light
