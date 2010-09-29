@@ -166,6 +166,12 @@ while test $# -ne 0; do
     shift
 done
 
+bsd_xargs (){
+    if read a; then
+	{ printf '%s\n' "$a"; cat; } | xargs "$@"
+    fi
+}
+
 ######################################################################
 # top-level options
 
@@ -205,7 +211,7 @@ elif test -n "$pkgpath_only"; then
     }
 elif test -n "$rem_leaves"; then
     leaves_proc (){
-	summary2pkgname | xargs $PKG_DELETE_CMD $pkg_delete_opts
+	summary2pkgname | bsd_xargs $PKG_DELETE_CMD $pkg_delete_opts
     }
 else
     leaves_proc (){
