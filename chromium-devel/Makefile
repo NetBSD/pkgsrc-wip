@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/09/28 05:13:34 rxg Exp $
+# $NetBSD: Makefile,v 1.7 2010/09/29 01:49:02 rxg Exp $
 
 DISTNAME=	chromium-7.0.518.0
 CATEGORIES=	www
@@ -27,6 +27,7 @@ GYP_DEFINES+=	v8_use_snapshot=0
 GYP_DEFINES+=	use_system_libevent=1
 GYP_DEFINES+=	use_system_libjpeg=1
 GYP_DEFINES+=	use_system_libxml=1
+GYP_DEFINES+=	use_system_zlib=1
 
 RESTRICTED=	tarball contains some allegedly patent-infringing source code
 NO_SRC_ON_FTP=		${RESTRICTED}
@@ -60,6 +61,7 @@ do-configure:
 .include "../../devel/GConf/buildlink3.mk"
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../devel/nss/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../security/libgnome-keyring/buildlink3.mk"
