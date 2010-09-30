@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2010/05/26 20:07:27 cheusov Exp $
+# $NetBSD: Makefile,v 1.10 2010/09/30 19:14:57 cheusov Exp $
 #
 
-DISTNAME=	bmake-20100510
+DISTNAME=	bmake-20100911
 PKGNAME=	${DISTNAME:S/bmake/nbmake/}
 CATEGORIES=	devel
 MASTER_SITES=	http://www.crufty.net/ftp/pub/sjg/
