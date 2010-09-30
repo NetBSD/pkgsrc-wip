@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.92 2010/09/18 13:12:49 makoto Exp $
+@comment $NetBSD: PLIST,v 1.93 2010/09/30 16:45:38 makoto Exp $
 bin/b2m
 bin/ctags
 bin/ebrowse
@@ -1226,16 +1226,24 @@ share/emacs/${PKGVERSION}/lisp/cedet/data-debug.el.gz
 share/emacs/${PKGVERSION}/lisp/cedet/data-debug.elc
 share/emacs/${PKGVERSION}/lisp/cedet/ede.el.gz
 share/emacs/${PKGVERSION}/lisp/cedet/ede.elc
+share/emacs/${PKGVERSION}/lisp/cedet/ede/auto.el.gz
+share/emacs/${PKGVERSION}/lisp/cedet/ede/auto.elc
+share/emacs/${PKGVERSION}/lisp/cedet/ede/base.el.gz
+share/emacs/${PKGVERSION}/lisp/cedet/ede/base.elc
 share/emacs/${PKGVERSION}/lisp/cedet/ede/autoconf-edit.el.gz
 share/emacs/${PKGVERSION}/lisp/cedet/ede/autoconf-edit.elc
 share/emacs/${PKGVERSION}/lisp/cedet/ede/cpp-root.el.gz
 share/emacs/${PKGVERSION}/lisp/cedet/ede/cpp-root.elc
+share/emacs/${PKGVERSION}/lisp/cedet/ede/custom.el.gz
+share/emacs/${PKGVERSION}/lisp/cedet/ede/custom.elc
 share/emacs/${PKGVERSION}/lisp/cedet/ede/dired.el.gz
 share/emacs/${PKGVERSION}/lisp/cedet/ede/dired.elc
 share/emacs/${PKGVERSION}/lisp/cedet/ede/emacs.el.gz
 share/emacs/${PKGVERSION}/lisp/cedet/ede/emacs.elc
 share/emacs/${PKGVERSION}/lisp/cedet/ede/files.el.gz
 share/emacs/${PKGVERSION}/lisp/cedet/ede/files.elc
+share/emacs/${PKGVERSION}/lisp/cedet/ede/generic.el.gz
+share/emacs/${PKGVERSION}/lisp/cedet/ede/generic.elc
 share/emacs/${PKGVERSION}/lisp/cedet/ede/linux.el.gz
 share/emacs/${PKGVERSION}/lisp/cedet/ede/linux.elc
 share/emacs/${PKGVERSION}/lisp/cedet/ede/loaddefs.el
@@ -1983,8 +1991,6 @@ share/emacs/${PKGVERSION}/lisp/gnus/compface.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/compface.elc
 share/emacs/${PKGVERSION}/lisp/gnus/deuglify.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/deuglify.elc
-share/emacs/${PKGVERSION}/lisp/gnus/earcon.el.gz
-share/emacs/${PKGVERSION}/lisp/gnus/earcon.elc
 share/emacs/${PKGVERSION}/lisp/gnus/ecomplete.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/ecomplete.elc
 share/emacs/${PKGVERSION}/lisp/gnus/flow-fill.el.gz
@@ -1997,8 +2003,6 @@ share/emacs/${PKGVERSION}/lisp/gnus/gnus-art.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-art.elc
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-async.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-async.elc
-share/emacs/${PKGVERSION}/lisp/gnus/gnus-audio.el.gz
-share/emacs/${PKGVERSION}/lisp/gnus/gnus-audio.elc
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-bcklg.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-bcklg.elc
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-bookmark.el.gz
@@ -2027,6 +2031,8 @@ share/emacs/${PKGVERSION}/lisp/gnus/gnus-ems.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-ems.elc
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-fun.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-fun.elc
+share/emacs/${PKGVERSION}/lisp/gnus/gnus-gravatar.el.gz
+share/emacs/${PKGVERSION}/lisp/gnus/gnus-gravatar.elc
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-group.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-group.elc
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-html.el.gz
@@ -2045,8 +2051,6 @@ share/emacs/${PKGVERSION}/lisp/gnus/gnus-mlspl.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-mlspl.elc
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-msg.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-msg.elc
-share/emacs/${PKGVERSION}/lisp/gnus/gnus-nocem.el.gz
-share/emacs/${PKGVERSION}/lisp/gnus/gnus-nocem.elc
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-picon.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-picon.elc
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-range.el.gz
@@ -2085,6 +2089,8 @@ share/emacs/${PKGVERSION}/lisp/gnus/gnus-win.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-win.elc
 share/emacs/${PKGVERSION}/lisp/gnus/gnus.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/gnus.elc
+share/emacs/${PKGVERSION}/lisp/gnus/gravatar.el.gz
+share/emacs/${PKGVERSION}/lisp/gnus/gravatar.elc
 share/emacs/${PKGVERSION}/lisp/gnus/html2text.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/html2text.elc
 share/emacs/${PKGVERSION}/lisp/gnus/ietf-drums.el.gz
@@ -2628,6 +2634,8 @@ share/emacs/${PKGVERSION}/lisp/net/eudcb-mab.el.gz
 share/emacs/${PKGVERSION}/lisp/net/eudcb-mab.elc
 share/emacs/${PKGVERSION}/lisp/net/eudcb-ph.el.gz
 share/emacs/${PKGVERSION}/lisp/net/eudcb-ph.elc
+share/emacs/${PKGVERSION}/lisp/net/gnutls.el.gz
+share/emacs/${PKGVERSION}/lisp/net/gnutls.elc
 share/emacs/${PKGVERSION}/lisp/net/goto-addr.el.gz
 share/emacs/${PKGVERSION}/lisp/net/goto-addr.elc
 share/emacs/${PKGVERSION}/lisp/net/hmac-def.el.gz
