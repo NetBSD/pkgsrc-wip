@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2010/09/27 00:19:46 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.24 2010/09/30 14:33:38 makoto Exp $
 bin/bugpoint
 bin/llc
 bin/lli
@@ -115,7 +115,6 @@ include/llvm/Analysis/MemoryBuiltins.h
 include/llvm/Analysis/MemoryDependenceAnalysis.h
 include/llvm/Analysis/PHITransAddr.h
 include/llvm/Analysis/Passes.h
-include/llvm/Analysis/PointerTracking.h
 include/llvm/Analysis/PostDominators.h
 include/llvm/Analysis/ProfileInfo.h
 include/llvm/Analysis/ProfileInfoLoader.h
