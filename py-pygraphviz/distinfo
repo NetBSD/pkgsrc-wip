@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/10/01 05:48:10 helgoman Exp $
+
+SHA1 (pygraphviz-1.0.tar.gz) = a2b9a725f331a2170f881022eba6ac2d4272d68f
+RMD160 (pygraphviz-1.0.tar.gz) = 119bd95ae07d76a79fe54b12b8afe2d308bbf035
+Size (pygraphviz-1.0.tar.gz) = 87231 bytes
