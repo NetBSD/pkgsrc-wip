@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/10/01 06:12:03 phonohawk Exp $
+${EMACS_LISPPREFIX}/auto-complete/ac-dict/c++-mode
+${EMACS_LISPPREFIX}/auto-complete/ac-dict/c-mode
+${EMACS_LISPPREFIX}/auto-complete/ac-dict/clojure-mode
+${EMACS_LISPPREFIX}/auto-complete/ac-dict/css-mode
+${EMACS_LISPPREFIX}/auto-complete/ac-dict/java-mode
+${EMACS_LISPPREFIX}/auto-complete/ac-dict/javascript-mode
+${EMACS_LISPPREFIX}/auto-complete/ac-dict/php-mode
+${EMACS_LISPPREFIX}/auto-complete/ac-dict/python-mode
+${EMACS_LISPPREFIX}/auto-complete/ac-dict/ruby-mode
+${EMACS_LISPPREFIX}/auto-complete/ac-dict/scheme-mode
+${EMACS_LISPPREFIX}/auto-complete/ac-dict/tcl-mode
+${EMACS_LISPPREFIX}/auto-complete/auto-complete-config.el
+${EMACS_LISPPREFIX}/auto-complete/auto-complete-config.elc
+${EMACS_LISPPREFIX}/auto-complete/auto-complete.el
+${EMACS_LISPPREFIX}/auto-complete/auto-complete.elc
+${EMACS_LISPPREFIX}/auto-complete/fuzzy.el
+${EMACS_LISPPREFIX}/auto-complete/fuzzy.elc
+${EMACS_LISPPREFIX}/auto-complete/popup.el
+${EMACS_LISPPREFIX}/auto-complete/popup.elc

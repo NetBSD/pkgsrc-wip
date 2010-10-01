@@ -1,0 +1,9 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2010/10/01 06:12:03 phonohawk Exp $
+
+Append the following line to your .emacs file:
+
+  (require 'auto-complete-config)
+  (add-to-list 'ac-dictionary-directories "${LISPDIR}/${PKGBASE}/ac-dict")
+  (ac-config-default)
+===========================================================================
