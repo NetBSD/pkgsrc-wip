@@ -1,30 +1,38 @@
-$NetBSD: patch-am,v 1.1.1.1 2010/09/08 15:00:55 rxg Exp $
+$NetBSD: patch-am,v 1.2 2010/10/01 06:42:35 rxg Exp $
 
---- base/sys_info_netbsd.cc.orig	2010-09-06 12:06:00.000000000 +0000
+--- base/sys_info_netbsd.cc.orig	2010-10-01 06:09:33.000000000 +0000
 +++ base/sys_info_netbsd.cc
-@@ -0,0 +1,25 @@
+@@ -0,0 +1,33 @@
 +// Copyright (c) 2009 The Chromium Authors. All rights reserved.
 +// Use of this source code is governed by a BSD-style license that can be
 +// found in the LICENSE file.
 +
 +#include "base/sys_info.h"
 +
-+#include <sys/param.h>
 +#include <sys/sysctl.h>
 +
 +#include "base/logging.h"
 +
 +namespace base {
 +
-+int SysInfo::NumberOfProcessors() {
-+  int mib[] = { CTL_HW, HW_NCPU };
-+  int ncpu;
-+  size_t size = sizeof(ncpu);
-+  if (sysctl(mib, 2, &ncpu, &size, NULL, 0) == -1) {
++int64 SysInfo::AmountOfPhysicalMemory() {
++  int pages, page_size;
++  size_t size = sizeof(pages);
++  sysctlbyname("vm.stats.vm.v_page_count", &pages, &size, NULL, 0);
++  sysctlbyname("vm.stats.vm.v_page_size", &page_size, &size, NULL, 0);
++  if (pages == -1 || page_size == -1) {
 +    NOTREACHED();
-+    return 1;
++    return 0;
 +  }
-+  return ncpu;
++  return static_cast<int64>(pages) * page_size;
++}
++
++// static
++size_t SysInfo::MaxSharedMemorySize() {
++  size_t limit;
++  size_t size = sizeof(limit);
++  sysctlbyname("kern.ipc.shmmax", &limit, &size, NULL, 0);
++  return limit;
 +}
 +
 +}  // namespace base
