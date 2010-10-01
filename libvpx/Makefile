@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/07/29 00:39:27 ryo-on Exp $
+# $NetBSD: Makefile,v 1.2 2010/10/01 20:36:47 gschwarz Exp $
 #
 
-DISTNAME=	libvpx-0.9.1
+DISTNAME=	libvpx-0.9.2
+DISTFILES=	${DISTNAME:S,-,-v,}${EXTRACT_SUFX}
 CATEGORIES=	multimedia
 MASTER_SITES=	http://webm.googlecode.com/files/
 EXTRACT_SUFX=	.tar.bz2
@@ -30,13 +31,17 @@ SUBST_FILES.fix-paths=		configure \
 				build/make/version.sh \
 				build/make/gen_asm_deps.sh \
 				examples/gen_example_code.sh
-SUBST_SED.fix-paths=		-e 's,/bin/bash,${PREFIX}/bin/bash,g'
+SUBST_SED.fix-paths=		-e 's,/bin/bash,${BASH},g'
 
-CONFIGURE_ARGS=		--enable-pic \
+CONFIGURE_ARGS+=	--enable-pic \
 			--enable-postproc \
 			--enable-runtime-cpu-detect \
-			--prefix=${PREFIX} \
-			--enable-shared
+			--prefix=${PREFIX}
+
+.include "../../mk/bsd.prefs.mk"
+.if ${OBJECT_FMT} == "ELF"
+CONFIGURE_ARGS+=	--enable-shared
+.endif
 
 BUILD_TARGET=	# none
 
