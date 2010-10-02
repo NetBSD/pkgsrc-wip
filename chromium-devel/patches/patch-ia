@@ -1,0 +1,13 @@
+$NetBSD: patch-ia,v 1.1 2010/10/02 12:27:08 rxg Exp $
+
+--- third_party/libjingle/source/talk/base/physicalsocketserver.cc.orig	2010-09-13 15:26:21.000000000 +0000
++++ third_party/libjingle/source/talk/base/physicalsocketserver.cc
+@@ -487,7 +487,7 @@ class PhysicalSocket : public AsyncSocke
+         *slevel = IPPROTO_IP;
+         *sopt = IP_DONTFRAGMENT;
+         break;
+-#elif defined(OSX)
++#elif defined(OSX) || !defined(IP_MTU_DISCOVER)
+         LOG(LS_WARNING) << "Socket::OPT_DONTFRAGMENT not supported.";
+         return -1;
+ #elif defined(POSIX)
