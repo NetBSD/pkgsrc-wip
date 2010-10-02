@@ -1,18 +1,16 @@
-$NetBSD: patch-ht,v 1.1 2010/09/29 01:40:32 rxg Exp $
+$NetBSD: patch-ht,v 1.2 2010/10/02 12:22:54 rxg Exp $
 
 --- net/base/host_resolver_proc.cc.orig	2010-09-13 15:17:55.000000000 +0000
 +++ net/base/host_resolver_proc.cc
-@@ -7,6 +7,9 @@
+@@ -7,6 +7,7 @@
  #include "build/build_config.h"
  
  #if defined(OS_POSIX) && !defined(OS_MACOSX)
-+#if defined(OS_NETBSD)
-+#include <arpa/inet.h>
-+#endif
++#include <netinet/in.h>
  #include <resolv.h>
  #endif
  
-@@ -156,7 +159,7 @@ int SystemHostResolverProc(const std::st
+@@ -156,7 +157,7 @@ int SystemHostResolverProc(const std::st
        hints.ai_family = AF_UNSPEC;
    }
  
@@ -21,7 +19,7 @@ $NetBSD: patch-ht,v 1.1 2010/09/29 01:40:32 rxg Exp $
    // DO NOT USE AI_ADDRCONFIG ON WINDOWS.
    //
    // The following comment in <winsock2.h> is the best documentation I found
-@@ -187,8 +190,10 @@ int SystemHostResolverProc(const std::st
+@@ -187,8 +188,10 @@ int SystemHostResolverProc(const std::st
    // On Linux AI_ADDRCONFIG doesn't consider loopback addreses, even if only
    // loopback addresses are configured. So don't use it when there are only
    // loopback addresses.
@@ -32,7 +30,7 @@ $NetBSD: patch-ht,v 1.1 2010/09/29 01:40:32 rxg Exp $
  
    if (host_resolver_flags & HOST_RESOLVER_CANONNAME)
      hints.ai_flags |= AI_CANONNAME;
-@@ -211,6 +216,15 @@ int SystemHostResolverProc(const std::st
+@@ -211,6 +214,15 @@ int SystemHostResolverProc(const std::st
    // detection), and the results where all localhost of a single family,
    // maybe we should retry.  There were several bugs related to these
    // issues, for example http://crbug.com/42058 and http://crbug.com/49024
@@ -48,7 +46,7 @@ $NetBSD: patch-ht,v 1.1 2010/09/29 01:40:32 rxg Exp $
    if ((hints.ai_family != AF_UNSPEC || hints.ai_flags & AI_ADDRCONFIG) &&
        err == 0 && IsAllLocalhostOfOneFamily(ai)) {
      if (host_resolver_flags & HOST_RESOLVER_DEFAULT_FAMILY_SET_DUE_TO_NO_IPV6) {
-@@ -222,6 +236,7 @@ int SystemHostResolverProc(const std::st
+@@ -222,6 +234,7 @@ int SystemHostResolverProc(const std::st
        should_retry = true;
      }
    }
