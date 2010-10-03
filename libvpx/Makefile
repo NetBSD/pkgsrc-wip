@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/10/01 20:36:47 gschwarz Exp $
+# $NetBSD: Makefile,v 1.3 2010/10/03 19:05:59 ryo-on Exp $
 #
 
 DISTNAME=	libvpx-0.9.2
@@ -8,7 +8,7 @@ MASTER_SITES=	http://webm.googlecode.com/files/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	ryo_on@yk.rim.or.jp
-HOMEPAGE=	http://webm.googlecode.com/files/
+HOMEPAGE=	http://code.google.com/p/webm/
 COMMENT=	On2 VP8 library from Google
 LICENSE=	modified-bsd
 
