@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4102 2010/10/01 06:13:17 phonohawk Exp $
+# $Id: Makefile,v 1.4103 2010/10/03 19:01:41 ryo-on Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1654,6 +1654,7 @@ SUBDIR+=	p5-Net-SMTP-TLS
 SUBDIR+=	p5-Net-SenderBase
 SUBDIR+=	p5-Net-Syslog
 SUBDIR+=	p5-Net-Twitter-Lite
+SUBDIR+=	p5-Net-UPnP
 SUBDIR+=	p5-Net-Whois-RIPE
 SUBDIR+=	p5-News-Newsrc
 SUBDIR+=	p5-PDF-Reuse
