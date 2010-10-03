@@ -14,6 +14,7 @@ Suggested package updates
 	o cygwin-1.7.1
 	o d4x-2.5.7.1
 	o daphne-1.0
+	o dcc-1.3.131
 	o desmume-0.9.6
 	o directfb-1.0.0
 	o dmxproto-2.3
@@ -39,7 +40,7 @@ Suggested package updates
 	o gnome-bluetooth-2.30.0
 	o gnunet-0.8.1b
 	o gnupod-0.99.8
-	o gobject-introspection-0.9.6
+	o gobject-introspection-0.9.10
 	o grass-6.4.0
 	o grsync-1.1.1
 	o grub2-1.98
@@ -51,7 +52,7 @@ Suggested package updates
 	o hyena-0.3
 	o i3-3e [aka i3-3.e]
 	o i3lock-2.0
-	o icecat-3.6.9
+	o icecat-3.6.10
 	o jakarta-struts-1.2.4
 	o jalview-2.4
 	o java-asm-3.2
@@ -82,7 +83,7 @@ Suggested package updates
 	o osmose-0.9.1
 	o parted-1.9.0
 	o passepartout-0.7.1
-	o pdfmod-0.8.3
+	o pdfmod-0.9.0
 	o pike-7.8.352
 	o py-PyPE-2.9
 	o py-gnucash-0.7.55
