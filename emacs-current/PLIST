@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.93 2010/09/30 16:45:38 makoto Exp $
+@comment $NetBSD: PLIST,v 1.94 2010/10/04 01:28:17 makoto Exp $
 bin/b2m
 bin/ctags
 bin/ebrowse
@@ -2177,6 +2177,8 @@ share/emacs/${PKGVERSION}/lisp/gnus/nnnil.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/nnnil.elc
 share/emacs/${PKGVERSION}/lisp/gnus/nnoo.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/nnoo.elc
+share/emacs/${PKGVERSION}/lisp/gnus/nnregistry.el.gz
+share/emacs/${PKGVERSION}/lisp/gnus/nnregistry.elc
 share/emacs/${PKGVERSION}/lisp/gnus/nnrss.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/nnrss.elc
 share/emacs/${PKGVERSION}/lisp/gnus/nnspool.el.gz
@@ -2203,6 +2205,8 @@ share/emacs/${PKGVERSION}/lisp/gnus/rfc2231.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/rfc2231.elc
 share/emacs/${PKGVERSION}/lisp/gnus/score-mode.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/score-mode.elc
+share/emacs/${PKGVERSION}/lisp/gnus/shr.el.gz
+share/emacs/${PKGVERSION}/lisp/gnus/shr.elc
 share/emacs/${PKGVERSION}/lisp/gnus/sieve-manage.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/sieve-manage.elc
 share/emacs/${PKGVERSION}/lisp/gnus/sieve-mode.el.gz
@@ -2225,8 +2229,6 @@ share/emacs/${PKGVERSION}/lisp/gnus/starttls.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/starttls.elc
 share/emacs/${PKGVERSION}/lisp/gnus/utf7.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/utf7.elc
-share/emacs/${PKGVERSION}/lisp/gnus/webmail.el.gz
-share/emacs/${PKGVERSION}/lisp/gnus/webmail.elc
 share/emacs/${PKGVERSION}/lisp/gnus/yenc.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/yenc.elc
 share/emacs/${PKGVERSION}/lisp/gs.el.gz
@@ -2810,8 +2812,6 @@ share/emacs/${PKGVERSION}/lisp/obsolete/rnewspost.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/rnewspost.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/s-region.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/s-region.elc
-share/emacs/${PKGVERSION}/lisp/obsolete/sc.el.gz
-share/emacs/${PKGVERSION}/lisp/obsolete/sc.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/scribe.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/scribe.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/swedish.el.gz
@@ -2820,8 +2820,6 @@ share/emacs/${PKGVERSION}/lisp/obsolete/sym-comp.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/sym-comp.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/vc-mcvs.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/vc-mcvs.elc
-share/emacs/${PKGVERSION}/lisp/obsolete/x-menu.el.gz
-share/emacs/${PKGVERSION}/lisp/obsolete/x-menu.elc
 share/emacs/${PKGVERSION}/lisp/org/ob-asymptote.el.gz
 share/emacs/${PKGVERSION}/lisp/org/ob-asymptote.elc
 share/emacs/${PKGVERSION}/lisp/org/ob-C.el.gz
