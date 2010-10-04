@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.1 2010/10/04 03:30:40 makoto Exp $
+
+--- egg.el.orig	2002-07-22 22:18:56.000000000 +0900
++++ egg.el	2010-10-04 11:43:20.000000000 +0900
+@@ -169,7 +169,9 @@
+       (setq egg-modeless-mode t))
+     (setq inactivate-current-input-method-function 'egg-mode)
+     (setq describe-current-input-method-function 'egg-help)
+-    (make-local-hook 'input-method-activate-hook)
++    (if (and (boundp 'emacs-major-version)
++	     (< emacs-major-version 21))
++	(make-local-hook 'input-method-activate-hook))
+     (add-hook 'input-method-activate-hook 'its-set-mode-line-title nil t)
+     (if (eq (selected-window) (minibuffer-window))
+ 	(add-hook 'minibuffer-exit-hook 'egg-exit-from-minibuffer))

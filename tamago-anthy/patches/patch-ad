@@ -1,0 +1,15 @@
+$NetBSD: patch-ad,v 1.1 2010/10/04 03:30:40 makoto Exp $
+
+--- menudiag.el.orig	2001-01-28 03:53:13.000000000 +0900
++++ menudiag.el	2010-10-04 11:42:56.000000000 +0900
+@@ -503,7 +503,9 @@
+   (make-local-variable 'inhibit-read-only)
+   (setq buffer-read-only t
+ 	inhibit-read-only nil)
+-  (make-local-hook 'post-command-hook)
++  (if (and (boundp 'emacs-major-version)
++	     (< emacs-major-version 21))
++	(make-local-hook 'post-command-hook))
+   (add-hook 'post-command-hook 'menudiag-selection-align-to-item nil t)
+   (use-local-map menudiag-selection-map)
+   (setq mode-name "Menudiag Selection")
