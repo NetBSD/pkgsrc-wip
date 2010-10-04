@@ -1,8 +1,17 @@
-$NetBSD: patch-ax,v 1.1.1.1 2010/09/08 15:00:56 rxg Exp $
+$NetBSD: patch-ax,v 1.2 2010/10/04 07:47:17 rxg Exp $
 
---- chrome/app/generated_resources.grd.orig	2010-08-30 09:03:39.000000000 +0000
+--- chrome/app/generated_resources.grd.orig	2010-09-13 15:19:23.000000000 +0000
 +++ chrome/app/generated_resources.grd
-@@ -9413,7 +9413,7 @@ Keep your key file in a safe place. You 
+@@ -5703,7 +5703,7 @@ Keep your key file in a safe place. You 
+       <message name="IDS_OPTIONS_DIALOG_TITLE" desc="The title of the Options dialog box">
+         <ph name="PRODUCT_NAME">$1<ex>Google Chrome</ex></ph> Options
+       </message>
+-      <if expr="os == 'linux2'">
++      <if expr="os == 'linux2' or os.find('bsd') != -1">
+         <message name="IDS_PREFERENCES_DIALOG_TITLE" desc="The title of the Preferences dialog box">
+           <ph name="PRODUCT_NAME">$1<ex>Google Chrome</ex></ph> Preferences
+         </message>
+@@ -9455,7 +9455,7 @@ Keep your key file in a safe place. You 
        Import bookmarks now...
      </message>
  
