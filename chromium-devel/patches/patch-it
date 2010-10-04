@@ -1,0 +1,13 @@
+$NetBSD: patch-it,v 1.1 2010/10/04 07:32:40 rxg Exp $
+
+--- base/process_util.h.orig	2010-09-13 15:18:37.000000000 +0000
++++ base/process_util.h
+@@ -117,7 +117,7 @@ void CloseProcessHandle(ProcessHandle pr
+ // Win XP SP1 as well.
+ ProcessId GetProcId(ProcessHandle process);
+ 
+-#if defined(OS_LINUX)
++#if defined(OS_POSIX) && !defined(OS_MACOSX)
+ // Returns the ID for the parent of the given process.
+ ProcessId GetParentProcessId(ProcessHandle process);
+ 

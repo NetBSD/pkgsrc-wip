@@ -1,0 +1,13 @@
+$NetBSD: patch-iq,v 1.1 2010/10/04 07:32:40 rxg Exp $
+
+--- chrome/common/chrome_switches.h.orig	2010-09-13 15:19:39.000000000 +0000
++++ chrome/common/chrome_switches.h
+@@ -336,7 +336,7 @@ extern const char kStubCros[];
+ extern const char kScreenSaverUrl[];
+ #endif
+ 
+-#if defined(OS_LINUX)
++#if defined(OS_POSIX) && !defined(OS_MACOSX)
+ extern const char kScrollPixels[];
+ #endif
+ 

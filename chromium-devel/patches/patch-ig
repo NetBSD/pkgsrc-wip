@@ -1,0 +1,13 @@
+$NetBSD: patch-ig,v 1.1 2010/10/04 07:32:40 rxg Exp $
+
+--- chrome/browser/gpu_process_host.h.orig	2010-09-13 15:19:37.000000000 +0000
++++ chrome/browser/gpu_process_host.h
+@@ -85,7 +85,7 @@ class GpuProcessHost : public BrowserChi
+   void OnChannelEstablished(const IPC::ChannelHandle& channel_handle,
+                             const GPUInfo& gpu_info);
+   void OnSynchronizeReply();
+-#if defined(OS_LINUX)
++#if defined(TOOLKIT_USES_GTK)
+   void OnGetViewXID(gfx::NativeViewId id, unsigned long* xid);
+ #elif defined(OS_MACOSX)
+   void OnAcceleratedSurfaceSetIOSurface(

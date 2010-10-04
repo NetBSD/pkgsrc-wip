@@ -1,0 +1,13 @@
+$NetBSD: patch-ij,v 1.1 2010/10/04 07:32:40 rxg Exp $
+
+--- chrome/browser/views/accessible_view_helper.cc.orig	2010-09-13 15:19:32.000000000 +0000
++++ chrome/browser/views/accessible_view_helper.cc
+@@ -20,7 +20,7 @@ AccessibleViewHelper::AccessibleViewHelp
+   if (!accessibility_event_router_->AddViewTree(view_tree_, profile))
+     view_tree_ = NULL;
+ 
+-#if defined(OS_LINUX)
++#if defined(TOOLKIT_USES_GTK)
+   GtkWidget* widget = view_tree->GetWidget()->GetNativeView();
+   widget_helper_.reset(new AccessibleWidgetHelper(widget, profile));
+ #endif

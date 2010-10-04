@@ -1,0 +1,22 @@
+$NetBSD: patch-ik,v 1.1 2010/10/04 07:32:40 rxg Exp $
+
+--- chrome/browser/views/accessible_view_helper.h.orig	2010-09-13 15:19:32.000000000 +0000
++++ chrome/browser/views/accessible_view_helper.h
+@@ -14,7 +14,7 @@
+ #include "base/singleton.h"
+ #include "chrome/browser/accessibility_events.h"
+ 
+-#if defined(OS_LINUX)
++#if defined(TOOLKIT_USES_GTK)
+ #include "chrome/browser/gtk/accessible_widget_helper_gtk.h"
+ #endif
+ 
+@@ -72,7 +72,7 @@ class AccessibleViewHelper {
+   std::string window_title_;
+   std::vector<views::View*> managed_views_;
+ 
+-#if defined(OS_LINUX)
++#if defined(TOOLKIT_USES_GTK)
+   scoped_ptr<AccessibleWidgetHelper> widget_helper_;
+ #endif
+ 

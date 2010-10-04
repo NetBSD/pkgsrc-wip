@@ -1,0 +1,13 @@
+$NetBSD: patch-im,v 1.1 2010/10/04 07:32:40 rxg Exp $
+
+--- chrome/browser/views/find_bar_view.h.orig	2010-09-13 15:19:32.000000000 +0000
++++ chrome/browser/views/find_bar_view.h
+@@ -103,7 +103,7 @@ class FindBarView : public DropdownBarVi
+   // between us and the TabContentsView.
+   FindBarHost* find_bar_host() const;
+ 
+-#if defined(OS_LINUX)
++#if defined(TOOLKIT_USES_GTK)
+   // In gtk we get changed signals if we programatically set the text. If we
+   // don't ignore them we run into problems. For example, switching tabs back
+   // to one with the find bar visible will cause a search to the next found

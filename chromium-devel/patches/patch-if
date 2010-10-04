@@ -1,0 +1,31 @@
+$NetBSD: patch-if,v 1.1 2010/10/04 07:32:40 rxg Exp $
+
+--- chrome/browser/gpu_process_host.cc.orig	2010-09-13 15:19:37.000000000 +0000
++++ chrome/browser/gpu_process_host.cc
+@@ -19,7 +19,7 @@
+ #include "ipc/ipc_channel_handle.h"
+ #include "ipc/ipc_switches.h"
+ 
+-#if defined(OS_LINUX)
++#if defined(TOOLKIT_USES_GTK)
+ #include "gfx/gtk_native_view_id_manager.h"
+ #endif
+ 
+@@ -166,7 +166,7 @@ void GpuProcessHost::OnControlMessageRec
+   IPC_BEGIN_MESSAGE_MAP(GpuProcessHost, message)
+     IPC_MESSAGE_HANDLER(GpuHostMsg_ChannelEstablished, OnChannelEstablished)
+     IPC_MESSAGE_HANDLER(GpuHostMsg_SynchronizeReply, OnSynchronizeReply)
+-#if defined(OS_LINUX)
++#if defined(TOOLKIT_USES_GTK)
+     IPC_MESSAGE_HANDLER(GpuHostMsg_GetViewXID, OnGetViewXID)
+ #elif defined(OS_MACOSX)
+     IPC_MESSAGE_HANDLER(GpuHostMsg_AcceleratedSurfaceSetIOSurface,
+@@ -195,7 +195,7 @@ void GpuProcessHost::OnSynchronizeReply(
+   queued_synchronization_replies_.pop();
+ }
+ 
+-#if defined(OS_LINUX)
++#if defined(TOOLKIT_USES_GTK)
+ void GpuProcessHost::OnGetViewXID(gfx::NativeViewId id, unsigned long* xid) {
+   GtkNativeViewManager* manager = Singleton<GtkNativeViewManager>::get();
+   if (!manager->GetXIDForId(xid, id)) {

@@ -1,0 +1,22 @@
+$NetBSD: patch-io,v 1.1 2010/10/04 07:32:40 rxg Exp $
+
+--- chrome/browser/dom_ui/bug_report_ui.cc.orig	2010-09-13 15:19:35.000000000 +0000
++++ chrome/browser/dom_ui/bug_report_ui.cc
+@@ -49,7 +49,7 @@
+ #include "grit/generated_resources.h"
+ #include "grit/locale_settings.h"
+ 
+-#if defined(OS_LINUX)
++#if defined(USE_X11)
+ #include "app/x11_util.h"
+ #elif defined(OS_MACOSX)
+ #include "base/mac_util.h"
+@@ -150,7 +150,7 @@ void RefreshLastScreenshot(views::Window
+   else
+     last_screenshot_png = new std::vector<unsigned char>;
+ 
+-#if defined(OS_LINUX) || defined(OS_CHROMEOS)
++#if defined(USE_X11) || defined(OS_CHROMEOS)
+   screen_size = parent->GetBounds();
+   x11_util::GrabWindowSnapshot(parent->GetNativeWindow(), last_screenshot_png);
+ #elif defined(OS_MACOSX)
