@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2010/09/29 01:49:02 rxg Exp $
+# $NetBSD: Makefile,v 1.8 2010/10/04 07:44:40 rxg Exp $
 
 DISTNAME=	chromium-7.0.518.0
 CATEGORIES=	www
@@ -24,6 +24,11 @@ GYP_DEFINES+=	OS=netbsd
 # Enable this will cause the infinite loop when mksnapshot generates snapshot.cc
 GYP_DEFINES+=	v8_use_snapshot=0
 .endif
+GYP_DEFINES+=	python_ver=${PYVERSSUFFIX}
+GYP_DEFINES+=	linux_use_tcmalloc=1
+GYP_DEFINES+=	linux_use_heapchecker=1
+GYP_DEFINES+=	linux_link_gnome_keyring=1
+GYP_DEFINES+=	disable_nacl=1
 GYP_DEFINES+=	use_system_libevent=1
 GYP_DEFINES+=	use_system_libjpeg=1
 GYP_DEFINES+=	use_system_libxml=1
@@ -44,12 +49,13 @@ CHECK_PORTABILITY_SKIP+=third_party/GTM/BuildScripts/BuildAllSDKs.sh
 CHECK_PORTABILITY_SKIP+=v8/tools/linux-tick-processor
 
 SUBST_CLASSES+=		path
-SUBST_FILES.path=	build/common.gypi build/linux/python_arch.sh chrome/chrome_tests.gypi
+SUBST_FILES.path+=	build/common.gypi
+SUBST_FILES.path+=	build/linux/python_arch.sh
+SUBST_FILES.path+=	chrome/chrome_tests.gypi
 SUBST_STAGE.path=	post-patch
-SUBST_SED.path+=	-e 's|/usr/lib/libpython<(python_ver)|${LOCALBASE}/${PYLIB}|'
+SUBST_SED.path+=	-e 's|/usr/lib/|${LOCALBASE}/lib/|'
 SUBST_SED.path+=	-e 's|/bin/bash|${LOCALBASE}/bin/bash|'
-SUBST_SED.path+=	-e 's|/usr/include/python<(python_ver)|${LOCALBASE}/${PYINC}|'
-SUBST_SED.path+=	-e 's|-lpython<(python_ver)|-lpython${PYVERSSUFFIX}|'
+SUBST_SED.path+=	-e 's|/usr/include/|${LOCALBASE}/include/|'
 
 pre-configure:
 	${LN} -sf ${PYTHONBIN} ${TOOLS_DIR}/bin/python
