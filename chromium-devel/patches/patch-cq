@@ -1,30 +1,59 @@
-$NetBSD: patch-cq,v 1.1.1.1 2010/09/08 15:00:58 rxg Exp $
+$NetBSD: patch-cq,v 1.2 2010/10/04 07:38:22 rxg Exp $
 
---- chrome/chrome_browser.gypi.orig	2010-08-30 09:03:50.000000000 +0000
+--- chrome/chrome_browser.gypi.orig	2010-09-13 15:19:41.000000000 +0000
 +++ chrome/chrome_browser.gypi
-@@ -3193,8 +3193,10 @@
+@@ -3154,7 +3154,7 @@
+             # Nothing yet.
+           ],
+         }],
+-        ['OS=="linux"', {
++        ['OS=="linux" or OS=="freebsd" or OS=="netbsd" or OS=="openbsd"', {
+           'dependencies': [
+             '../build/linux/system.gyp:dbus-glib',
+             '../build/linux/system.gyp:gconf',
+@@ -3162,12 +3162,16 @@
+             '../build/linux/system.gyp:gtkprint',
+             '../build/linux/system.gyp:nss',
+           ],
+-          'link_settings': {
+-            'libraries': [
+-              # For dlsym() in 'browser/zygote_main_linux.cc'
+-              '-ldl',
+-            ],
+-          },
++          'conditions': [
++            ['OS=="linux"', {
++              'link_settings': {
++                'libraries': [
++                  # For dlsym() in 'browser/zygote_main_linux.cc'
++                  '-ldl',
++                ],
++              },
++            }],
++          ],
+           'sources!': [
+             'browser/views/extensions/extension_view.cc',
+             'browser/views/extensions/extension_view.h',
+@@ -3215,7 +3219,7 @@
              'browser/file_path_watcher_inotify.cc',
            ],
          }],
 -        ['OS=="freebsd" or OS=="openbsd"', {
 +        ['OS=="freebsd" or OS=="netbsd" or OS=="openbsd"', {
            'dependencies': [
-+            '../build/linux/system.gyp:dbus-glib',
-+            '../build/linux/system.gyp:gconf',
              '../build/linux/system.gyp:gtk',
              '../build/linux/system.gyp:gtkprint',
-             '../build/linux/system.gyp:nss',
-@@ -3202,6 +3204,9 @@
+@@ -3224,6 +3228,9 @@
            'sources': [
              'browser/file_path_watcher_stub.cc',
            ],
 +          'sources!': [
-+            'browser/file_watcher_inotify.cc',
++            'browser/file_path_watcher_inotify.cc',
 +          ],
          }],
          ['OS=="mac"', {
            'sources!': [
-@@ -3762,7 +3767,7 @@
+@@ -3788,7 +3795,7 @@
                ],
              }],
              # GTK build only
