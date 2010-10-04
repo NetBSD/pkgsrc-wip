@@ -1,4 +1,4 @@
-$NetBSD: patch-cp,v 1.2 2010/09/26 16:16:50 rxg Exp $
+$NetBSD: patch-cp,v 1.3 2010/10/04 07:42:05 rxg Exp $
 
 --- chrome/chrome.gyp.orig	2010-09-13 15:19:41.000000000 +0000
 +++ chrome/chrome.gyp
@@ -20,16 +20,21 @@ $NetBSD: patch-cp,v 1.2 2010/09/26 16:16:50 rxg Exp $
            'dependencies': [
              '../build/linux/system.gyp:gtk',
            ],
-@@ -643,7 +643,7 @@
+@@ -643,7 +643,12 @@
              'plugin/command_buffer_stub_win.cc',
             ],
          },],
 -        ['OS=="linux" or OS=="freebsd" or OS=="openbsd" or OS=="solaris"', {
++        ['OS=="freebsd" or OS=="netbsd" or OS=="openbsd"', {
++          'sources!': [
++            'plugin/plugin_main_linux.cc',
++          ],
++        }],
 +        ['OS=="linux" or OS=="freebsd" or OS=="netbsd" or OS=="openbsd" or OS=="solaris"', {
            'dependencies': [
              '../build/linux/system.gyp:gtk',
            ],
-@@ -862,7 +862,7 @@
+@@ -862,7 +867,7 @@
          'sync_notifier',
        ],
        'conditions': [
@@ -38,7 +43,7 @@ $NetBSD: patch-cp,v 1.2 2010/09/26 16:16:50 rxg Exp $
            'dependencies': [
              '../build/linux/system.gyp:nss'
            ],
-@@ -1028,7 +1028,7 @@
+@@ -1028,7 +1033,7 @@
              'browser/sync/util/data_encryption.h',
            ],
          }],
@@ -47,7 +52,7 @@ $NetBSD: patch-cp,v 1.2 2010/09/26 16:16:50 rxg Exp $
            'dependencies': [
              '../build/linux/system.gyp:gtk',
              '../build/linux/system.gyp:nss'
-@@ -1884,7 +1884,7 @@
+@@ -1884,7 +1889,7 @@
          },
        ]},  # 'targets'
      ],  # OS=="win" or OS=="mac" or OS=="linux"
@@ -56,7 +61,7 @@ $NetBSD: patch-cp,v 1.2 2010/09/26 16:16:50 rxg Exp $
        'targets': [{
          'target_name': 'packed_resources',
          'type': 'none',
-@@ -1972,7 +1972,7 @@
+@@ -1972,7 +1977,7 @@
            },
          ],
        }],  # targets
