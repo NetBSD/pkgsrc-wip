@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2010/09/14 20:48:54 ryo-on Exp $
+# $NetBSD: Makefile,v 1.4 2010/10/05 21:34:30 ryo-on Exp $
 #
 
-DISTNAME=	OmegaT_2.1.8_Beta_Without_JRE
-PKGNAME=	${DISTNAME:S/OmegaT_/OmegaT-bin-/:S/_Without_JRE//}
+DISTNAME=	OmegaT_Beta_2.2.0_Without_JRE
+#PKGNAME=	${DISTNAME:S/OmegaT_/OmegaT-bin-/:S/_Without_JRE//}
+PKGNAME=	OmegaT-bin-2.2.0-Beta
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=omegat/}
 EXTRACT_SUFX=	.zip

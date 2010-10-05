@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2010/07/31 08:16:13 ryo-on Exp $
+@comment $NetBSD: PLIST,v 1.3 2010/10/05 21:34:30 ryo-on Exp $
 bin/OmegaT
 opt/OmegaT/OmegaT.jar
 opt/OmegaT/changes.txt
@@ -626,6 +626,7 @@ opt/OmegaT/docs/ja/website.html
 opt/OmegaT/docs/nl/GoogleTranslate.html
 opt/OmegaT/docs/nl/OmegaT.css
 opt/OmegaT/docs/nl/aboutOmegaT.html
+opt/OmegaT/docs/nl/commandlineArguments.html
 opt/OmegaT/docs/nl/consoleMode.html
 opt/OmegaT/docs/nl/dictionaries.html
 opt/OmegaT/docs/nl/fileFilters.html
