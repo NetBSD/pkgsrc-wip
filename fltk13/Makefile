@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.2 2010/10/05 18:28:28 christtrekker Exp $
+# $NetBSD: Makefile,v 1.2 2010/10/05 22:02:43 christtrekker Exp $
 #
 
 DISTNAME=	fltk-1.3.x-r7709
@@ -18,6 +18,25 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
+
+PKG_OPTIONS_VAR=	PKG_OPTIONS.fltk13
+PKG_SUPPORTED_OPTIONS=	cairo opengl
+PKG_SUGGESTED_OPTIONS=	cairo opengl
+PLIST_VARS+=	cairo
+PLIST_VARS+=	opengl
+.include "../../mk/bsd.prefs.mk"
+.include "../../mk/bsd.options.mk"
+.if !empty(PKG_OPTIONS:Mcairo)
+.  include "../../graphics/cairo/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-cairo
+PLIST.cairo=	yes
+.endif
+.if !empty(PKG_OPTIONS:Mopengl)
+.  include "../../graphics/Mesa/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-gl
+PLIST.opengl=	yes
+.endif
+CONFIGURE_ARGS+=	--enable-shared
 
 .include "../../x11/libXext/buildlink3.mk"
 

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.2 2010/10/05 18:28:29 christtrekker Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/10/05 22:02:43 christtrekker Exp $
 bin/fltk-config
 bin/fluid
 include/Fl
@@ -286,8 +286,20 @@ include/FL/x.h
 include/FL/x.H
 include/FL/Xutf8.h
 lib/libfltk.a
+${PLIST.cairo}lib/libfltk_cairo.a
+${PLIST.cairo}lib/libfltk_cairo.so
+${PLIST.cairo}lib/libfltk_cairo.so.1.3
 lib/libfltk_forms.a
+lib/libfltk_forms.so
+lib/libfltk_forms.so.1.3
+${PLIST.opengl}lib/libfltk_gl.a
+${PLIST.opengl}lib/libfltk_gl.so
+${PLIST.opengl}lib/libfltk_gl.so.1.3
 lib/libfltk_images.a
+lib/libfltk_images.so
+lib/libfltk_images.so.1.3
+lib/libfltk.so
+lib/libfltk.so.1.3
 man/cat1/fltk-config.1
 man/cat1/fluid.1
 man/cat3/fltk.3
@@ -313,7 +325,9 @@ share/doc/fltk/examples/cube.cxx
 share/doc/fltk/examples/CubeMain.cxx
 share/doc/fltk/examples/CubeView.cxx
 share/doc/fltk/examples/CubeView.h
+share/doc/fltk/examples/CubeViewUI.cxx
 share/doc/fltk/examples/CubeViewUI.fl
+share/doc/fltk/examples/CubeViewUI.h
 share/doc/fltk/examples/cursor.cxx
 share/doc/fltk/examples/curve.cxx
 share/doc/fltk/examples/demo.cxx
