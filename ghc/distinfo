@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2010/06/24 03:37:00 phonohawk Exp $
+$NetBSD: distinfo,v 1.12 2010/10/05 22:35:52 phonohawk Exp $
 
 SHA1 (ghc-6.12.3-boot-i386-unknown-freebsd.tar.bz2) = 2fa261055724f74e37ffc38eb854f22911a1cf10
 RMD160 (ghc-6.12.3-boot-i386-unknown-freebsd.tar.bz2) = 25f2d840f52a132bb7b6db2c7dace407767d8c03
@@ -12,6 +12,8 @@ Size (ghc-6.12.3-boot-powerpc-apple-darwin.tar.bz2) = 19649010 bytes
 SHA1 (ghc-6.12.3-src.tar.bz2) = d811be2131d4403ea452aa94fe71edd1b6bd0a79
 RMD160 (ghc-6.12.3-src.tar.bz2) = 021619aec4c820009e77745657bfdf0d9705f3e7
 Size (ghc-6.12.3-src.tar.bz2) = 26592939 bytes
+SHA1 (patch-aa) = f029560e9207d220b1f0363fe0c1464cd4fdd8b7
+SHA1 (patch-ab) = 14730563d0ca7ace04898d02449c658ee469e94c
 SHA1 (patch-af) = 81ae37eeaca5992868f6955b99113aaae010df22
 SHA1 (patch-ag) = 96c074d0d765c0f2de57d26aa145ad109b7cf043
 SHA1 (patch-ah) = 5470ab2e1bb746ef3009e5f02ac0b28b8e9d9688

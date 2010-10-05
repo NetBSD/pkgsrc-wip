@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2010/06/24 03:37:00 phonohawk Exp $
+# $NetBSD: Makefile,v 1.25 2010/10/05 22:35:52 phonohawk Exp $
 
 DISTNAME=		ghc-${VERSION}
 VERSION=		6.12.3
@@ -80,6 +80,8 @@ PLATFORM           = i386-unknown-freebsd
 .elif ${MACHINE_ARCH} == "powerpc" && ${OPSYS} == "Darwin"
 BOOTSTRAP_BUILD_MK = ${PKGDIR}/files/bootstrap.mk
 PLATFORM           = powerpc-apple-darwin
+WARNINGS+= "You won't be able to use GHCi library for GHC itself\
+because of Mach-O limitation."
 
 # Existence of libelf makes LeadingUnderscore being "NO", which is
 # incorrect. See ghc-6.12.1/aclocal.m4 (FP_LEADING_UNDERSCORE)
@@ -151,24 +153,6 @@ do-configure:
 .if ${MACHINE_ARCH} == "powerpc" && ${OPSYS} == "Darwin"
 	${RUN} ${ECHO} "GhcRtsHcOpts = -optc-O0 -optc-g" >> ${WRKSRC}/mk/build.mk
 	${RUN} ${ECHO} "GhcRtsCcOpts = -O0 -g" >> ${WRKSRC}/mk/build.mk
-.endif
-
-pre-build:
-# We have to sacrifice the GHCi library for GHC itself to work around
-# for powerpc ld bug.  See
-# http://hackage.haskell.org/trac/ghc/ticket/3260
-.if ${MACHINE_ARCH} == "powerpc"
-	${RUN} ${MKDIR} ${WRKSRC}/compiler/stage1/build
-	${RUN} ${TOUCH} -t `expr \`date '+%Y'\` + 1`12310000 \
-					${WRKSRC}/compiler/stage1/build/HS${DISTNAME}.o
-	${RUN} ${MKDIR} ${WRKSRC}/compiler/stage2/build
-	${RUN} ${TOUCH} -t `expr \`date '+%Y'\` + 1`12310000 \
-					${WRKSRC}/compiler/stage2/build/HS${DISTNAME}.o
-.endif
-
-.if ${MACHINE_ARCH} == "powerpc"
-WARNINGS+= "You won't be able to use GHCi library for GHC itself\
-because of powerpc ld bug."
 .endif
 
 # Some unused scripts don't pass the portability test.
