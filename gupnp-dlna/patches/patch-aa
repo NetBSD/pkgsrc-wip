@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/10/05 12:43:53 ryo-on Exp $
+
+--- gst-convenience/Makefile.in.orig	2010-09-27 17:16:33.000000000 +0000
++++ gst-convenience/Makefile.in
+@@ -578,7 +578,7 @@ uninstall-am: uninstall-local
+ 
+ 
+ install-data-local:
+-	$(INSTALL_DATA) -d ${DESTDIR}$(vapidir) -m 755
++	$(INSTALL) -d ${DESTDIR}$(vapidir) -m 755
+ 	@for i in $(vapifiles) $(vapideps); do \
+ 		$(INSTALL_DATA) $(top_srcdir)/gst-convenience/$${i} ${DESTDIR}$(vapidir)/; \
+ 	done

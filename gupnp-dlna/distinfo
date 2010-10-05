@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/10/05 12:43:53 ryo-on Exp $
+
+SHA1 (gupnp-dlna-0.4.0.tar.gz) = f6e44471a6050031203fc46fc092650b776e68d7
+RMD160 (gupnp-dlna-0.4.0.tar.gz) = 57bc7a339e23153cf4854408d49961088d92ab99
+Size (gupnp-dlna-0.4.0.tar.gz) = 429117 bytes
+SHA1 (patch-aa) = ec449b905d244f0b60d4343dd54bbd2ee11c3f92
