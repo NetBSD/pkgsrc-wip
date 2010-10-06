@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4104 2010/10/05 12:47:56 ryo-on Exp $
+# $Id: Makefile,v 1.4105 2010/10/06 11:30:44 cheusov Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -208,7 +208,6 @@ SUBDIR+=	cairo-java
 SUBDIR+=	calcurse
 SUBDIR+=	calcurse-2.8
 SUBDIR+=	callweaver
-SUBDIR+=	callweaver-current
 SUBDIR+=	cartago
 SUBDIR+=	castget
 SUBDIR+=	cb2bib
@@ -931,7 +930,6 @@ SUBDIR+=	i3lock
 SUBDIR+=	iText
 SUBDIR+=	iTextXML
 SUBDIR+=	ibus-sogoupycc
-SUBDIR+=	icc10
 SUBDIR+=	icc11
 SUBDIR+=	icecast
 SUBDIR+=	icecat
@@ -1085,7 +1083,6 @@ SUBDIR+=	last-exit
 SUBDIR+=	last.fm
 SUBDIR+=	lastfm-sharp
 SUBDIR+=	lat
-SUBDIR+=	lateef-shaikh-ttf
 SUBDIR+=	lcalc
 SUBDIR+=	lcdproc
 SUBDIR+=	lcrack
@@ -1122,7 +1119,6 @@ SUBDIR+=	libepc
 SUBDIR+=	libexosip
 SUBDIR+=	libfplll
 SUBDIR+=	libgadu
-SUBDIR+=	libgdata
 SUBDIR+=	libgeotiff
 SUBDIR+=	libghemical
 SUBDIR+=	libginac
@@ -1942,7 +1938,6 @@ SUBDIR+=	py-fftw
 SUBDIR+=	py-flakes
 SUBDIR+=	py-fuzzpy
 SUBDIR+=	py-fs
-SUBDIR+=	py-gaphos
 SUBDIR+=	py-gcalendarsync
 SUBDIR+=	py-generateDS
 SUBDIR+=	py-gettext-tools
@@ -2294,7 +2289,6 @@ SUBDIR+=	spade
 SUBDIR+=	spamassassin-cvs
 SUBDIR+=	spamd-devel
 SUBDIR+=	spandsp
-SUBDIR+=	spandsp-current
 SUBDIR+=	spawnfcgi
 SUBDIR+=	spe
 SUBDIR+=	spectrum
