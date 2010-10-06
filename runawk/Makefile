@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.47 2010/09/17 09:17:27 cheusov Exp $
+# $NetBSD: Makefile,v 1.48 2010/10/06 20:41:57 cheusov Exp $
 #
 
-DISTNAME=	runawk-1.0.0
-PKGREVISION=	1
+DISTNAME=	runawk-1.1.0
 CATEGORIES=	lang devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=runawk/} \
 		http://mova.org/~cheusov/pub/runawk/
 
 MAINTAINER=	cheusov@tut.by
 HOMEPAGE=	http://sourceforge.net/projects/runawk
-COMMENT=	Wrapper that impelements modules for AWK
+COMMENT=	AWK wrapper that provides support for modules
 
 LICENSE=		mit
 
@@ -24,6 +23,7 @@ TEST_TARGET=		test
 .if ${OPSYS} == "SunOS"
 MAKE_ENV+=	AWK_PROG=${AWK:Q}
 .endif
+
 MAKE_ENV+=		PREFIX=${PREFIX}
 MAKE_ENV+=		MANDIR=${PREFIX}/${PKGMANDIR}
 
