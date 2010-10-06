@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.94 2010/10/04 01:28:17 makoto Exp $
+@comment $NetBSD: PLIST,v 1.95 2010/10/06 12:51:42 makoto Exp $
 bin/b2m
 bin/ctags
 bin/ebrowse
@@ -2806,10 +2806,6 @@ share/emacs/${PKGVERSION}/lisp/obsolete/options.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/options.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/resume.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/resume.elc
-share/emacs/${PKGVERSION}/lisp/obsolete/rnews.el.gz
-share/emacs/${PKGVERSION}/lisp/obsolete/rnews.elc
-share/emacs/${PKGVERSION}/lisp/obsolete/rnewspost.el.gz
-share/emacs/${PKGVERSION}/lisp/obsolete/rnewspost.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/s-region.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/s-region.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/scribe.el.gz
