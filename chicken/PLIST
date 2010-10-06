@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/10/06 19:12:21 asau Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/10/06 20:04:18 asau Exp $
 bin/chicken
 bin/chicken-bug
 bin/chicken-install
@@ -19,7 +19,6 @@ lib/chicken/5/irregex.import.so
 lib/chicken/5/lolevel.import.so
 lib/chicken/5/ports.import.so
 lib/chicken/5/posix.import.so
-lib/chicken/5/regex.import.so
 lib/chicken/5/scheme.import.so
 lib/chicken/5/setup-api.import.so
 lib/chicken/5/setup-api.so
@@ -86,7 +85,7 @@ share/doc/${PKGNAME}/manual/Unit library
 share/doc/${PKGNAME}/manual/Unit lolevel
 share/doc/${PKGNAME}/manual/Unit ports
 share/doc/${PKGNAME}/manual/Unit posix
-share/doc/${PKGNAME}/manual/Unit regex
+share/doc/${PKGNAME}/manual/Unit irregex
 share/doc/${PKGNAME}/manual/Unit srfi-1
 share/doc/${PKGNAME}/manual/Unit srfi-13
 share/doc/${PKGNAME}/manual/Unit srfi-14
