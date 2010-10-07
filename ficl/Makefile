@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2008/02/21 18:28:21 asau Exp $
+# $NetBSD: Makefile,v 1.3 2010/10/07 05:49:30 asau Exp $
 
-DISTNAME=	ficl4.0.31
-PKGNAME=	ficl-4.0.31
-PKGREVISION=	1
+DISTNAME=	ficl-4.1.0
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ficl/}
 
@@ -12,12 +10,10 @@ COMMENT=	Forth Inspired Command Language
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-WRKSRC=		${WRKDIR}
-MAKE_FILE=	Makefile.linux
 BUILD_TARGET=	ficl
 
 MAJOR=		4
-MINOR=		0.31
+MINOR=		1.0
 BUILD_TARGET+=	libficl.so.${MAJOR}.${MINOR}
 
 FICL_DIRS+=	contrib contrib/xclasses

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/02/05 19:47:02 asau Exp $
+$NetBSD: distinfo,v 1.2 2010/10/07 05:49:31 asau Exp $
 
-SHA1 (ficl4.0.31.tar.gz) = f0f1e075036f714fdfed34e99081f5e4e86d8035
-RMD160 (ficl4.0.31.tar.gz) = 355a10358fe612d682ad15f7669f5d61a40beff1
-Size (ficl4.0.31.tar.gz) = 571596 bytes
+SHA1 (ficl-4.1.0.tar.gz) = d93950b5961bf2096f452ed9454f0dee7a6b5cf8
+RMD160 (ficl-4.1.0.tar.gz) = 30af9ecbdfc7926b567dc40bd751096f18915aa0
+Size (ficl-4.1.0.tar.gz) = 739684 bytes

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:44:36 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.4 2010/10/07 05:49:31 asau Exp $
 bin/ficl
 include/ficl.h
 include/ficlcompatibility.h
@@ -61,7 +61,6 @@ share/ficl/softcore/jhlocal.fr
 share/ficl/softcore/make.bat
 share/ficl/softcore/makefile
 share/ficl/softcore/makesoftcore.c
-share/ficl/softcore/makesoftcore.exe
 share/ficl/softcore/marker.fr
 share/ficl/softcore/oo.fr
 share/ficl/softcore/prefix.fr
