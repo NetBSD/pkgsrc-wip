@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2010/05/26 19:49:59 cheusov Exp $
+# $NetBSD: Makefile,v 1.19 2010/10/07 20:15:17 cheusov Exp $
 #
 
-DISTNAME=	lmdbg-0.15.0
+DISTNAME=	lmdbg-0.15.1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lmdbg/} \
 		http://mova.org/~cheusov/pub/lmdbg/
@@ -12,7 +12,7 @@ COMMENT=	Lightweight Modular malloc Debugger
 
 LICENSE=		mit
 
-BUILD_DEPENDS+=		mk-configure>=0.15.0nb2:../../wip/mk-configure
+BUILD_DEPENDS+=		mk-configure>=0.20.0:../../wip/mk-configure
 DEPENDS+=		pipestatus-[0-9]*:../../devel/pipestatus
 #DEPENDS+=		gdb-[0-9]*:../../devel/gdb
 
