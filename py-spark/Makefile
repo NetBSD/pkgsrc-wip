@@ -1,30 +1,30 @@
-# $NetBSD: Makefile,v 1.8 2009/09/09 11:22:11 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2010/10/07 00:37:20 jihbed Exp $
 #
 
-DISTNAME=		spark-0.6.1
+DISTNAME=	spark-0.6.1
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=		textproc
+CATEGORIES=		textproc python
 MASTER_SITES=	http://pages.cpsc.ucalgary.ca/~aycock/spark/
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://pages.cpsc.ucalgary.ca/~aycock/spark/
-COMMENT=		Scanning, Parsing, and Rewriting Kit for Python
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://pages.cpsc.ucalgary.ca/~aycock/spark/
+COMMENT=	Scanning, Parsing, and Rewriting Kit for Python
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+USE_TOOLS+=	pax
 NO_BUILD=	YES
-PY_PATCHPLIST=	YES
+
+PLIST_SUBST+=		PYSITELIB=${PYSITELIB}
+
+INSTALLATION_DIRS=	share/py-spark ${PYSITELIB}
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/py-spark
-	${INSTALL_DATA_DIR} ${PREFIX}/share/py-spark/doc
-	${INSTALL_DATA_DIR} ${PREFIX}/share/py-spark/examples/auto
-	${INSTALL_DATA_DIR} ${PREFIX}/share/py-spark/examples/paper
-	${INSTALL_DATA_DIR} ${PREFIX}/share/py-spark/examples/python
-	${INSTALL_DATA} ${WRKSRC}/doc/* ${PREFIX}/share/py-spark/doc
-	${INSTALL_DATA} ${WRKSRC}/examples/auto/* ${PREFIX}/share/py-spark/examples/auto
-	${INSTALL_DATA} ${WRKSRC}/examples/paper/* ${PREFIX}/share/py-spark/examples/paper
-	${INSTALL_DATA} ${WRKSRC}/examples/python/* ${PREFIX}/share/py-spark/examples/python
-	${INSTALL_SCRIPT} ${WRKSRC}/spark.py ${PREFIX}/${PYSITELIB}
+	cd ${WRKSRC}/doc && pax -rw -pp . ${DESTDIR}${PREFIX}/share/py-spark/doc
+	cd ${WRKSRC}/examples  && pax -rw -pp . ${DESTDIR}${PREFIX}/share/py-spark/examples
+	${INSTALL_SCRIPT} ${WRKSRC}/spark.py ${DESTDIR}${PREFIX}/${PYSITELIB}
 #	${LN} ${PREFIX}/${PYSITELIB}/spark.py ${PREFIX}/${PYSITELIB}/generic.py
+
 
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
