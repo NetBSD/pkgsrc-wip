@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2010/09/07 09:30:33 obache Exp $
+@comment $NetBSD: PLIST,v 1.5 2010/10/08 10:41:57 obache Exp $
 bin/grntest
 bin/groonga
 include/groonga/groonga.h
@@ -273,6 +273,7 @@ share/groonga/doc/ja/source/grnslap.txt
 share/groonga/doc/ja/source/grntest.txt
 share/groonga/doc/ja/source/http.txt
 share/groonga/doc/ja/source/index.txt
+share/groonga/doc/ja/source/install.txt
 share/groonga/doc/ja/source/news.txt
 share/groonga/doc/ja/source/process.txt
 share/groonga/doc/ja/source/pseudo_column.txt
