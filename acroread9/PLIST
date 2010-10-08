@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/09/12 09:24:59 ryo-on Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/10/08 23:08:09 ryo-on Exp $
 Acrobat9/Adobe/Reader9/Browser/HowTo/ENU/Browser_Plugin_HowTo.txt
 Acrobat9/Adobe/Reader9/Browser/install_browser_plugin
 Acrobat9/Adobe/Reader9/Browser/intellinux/nppdf.so
@@ -109,6 +109,8 @@ Acrobat9/Adobe/Reader9/Reader/intellinux/lib/libicui18n.so.36.0
 Acrobat9/Adobe/Reader9/Reader/intellinux/lib/libicuuc.so
 Acrobat9/Adobe/Reader9/Reader/intellinux/lib/libicuuc.so.36
 Acrobat9/Adobe/Reader9/Reader/intellinux/lib/libicuuc.so.36.0
+Acrobat9/Adobe/Reader9/Reader/intellinux/lib/liblber.so
+Acrobat9/Adobe/Reader9/Reader/intellinux/lib/libldap.so
 Acrobat9/Adobe/Reader9/Reader/intellinux/lib/librt3d.so
 Acrobat9/Adobe/Reader9/Reader/intellinux/lib/libsccore.so
 Acrobat9/Adobe/Reader9/Reader/intellinux/lib/libssl.so
@@ -262,6 +264,7 @@ Acrobat9/Adobe/Reader9/Resource/Linguistics/Providers/Proximity/11.00/usa03.hsp
 Acrobat9/Adobe/Reader9/Resource/Linguistics/Providers/Proximity/11.00/usa03.ths
 Acrobat9/Adobe/Reader9/Resource/Linguistics/Providers/Proximity/11.00/usa37.hyp
 Acrobat9/Adobe/Reader9/Resource/Shell/acroread.1
+Acrobat9/Adobe/Reader9/Resource/Shell/acroread.1.gz
 Acrobat9/Adobe/Reader9/Resource/Shell/acroread_tab
 Acrobat9/Adobe/Reader9/Resource/Support/AdobeReader.desktop
 Acrobat9/Adobe/Reader9/Resource/Support/AdobeReader.xml
