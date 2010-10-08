@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2010/09/12 09:24:59 ryo-on Exp $
+$NetBSD: patch-aa,v 1.2 2010/10/08 22:50:32 ryo-on Exp $
 
---- INSTALL.orig	2010-08-13 07:41:12.000000000 +0000
+--- INSTALL.orig	2010-09-22 06:19:28.000000000 +0000
 +++ INSTALL
 @@ -122,6 +122,8 @@ PrintRequiredFree()
  
@@ -11,7 +11,38 @@ $NetBSD: patch-aa,v 1.1.1.1 2010/09/12 09:24:59 ryo-on Exp $
          else
            size=`ls -lLon "$i" | ( read perm links owner size date ; echo $size )`
          fi
-@@ -950,6 +952,19 @@ case "$OSname" in
+@@ -390,7 +392,7 @@ MakeLibLDAPLinks()
+ install_dir="$1/Adobe/Reader9/Reader"
+ read_config="$2"
+ 
+-if ${TestCmd} ! ${TestCmdOption} /usr/lib/libldap.so
++if ${TestCmd} ! ${TestCmdOption} /usr/lib/libldap*so
+ then
+ 	rm -f "$install_dir/${read_config}/lib/libldap.so" 2>/dev/null
+ 
+@@ -407,7 +409,7 @@ then
+ 	fi
+ fi
+ 
+-if ${TestCmd} ! ${TestCmdOption} /usr/lib/liblber.so
++if ${TestCmd} ! ${TestCmdOption} /usr/lib/liblber*so
+ then
+ 	rm -f "$install_dir/${read_config}/lib/liblber.so" 2>/dev/null
+ 
+@@ -657,12 +659,8 @@ InstallReader()
+           record_config remove /usr/local/etc/bash_completion.d/acroread.sh
+       fi
+   fi
+-  if [ "${OSname}" = "Linux" ]; then
+-    manPageFile="acroread.1.gz"
+-  else
+     manPageFile="acroread.1"
+     gunzip "$ReadInstallDir/Adobe/Reader9/Resource/Shell/acroread.1.gz" 2>/dev/null 
+-  fi
+ 
+   rm -f "/usr/share/man/man1/${manPageFile}" 2>/dev/null && \
+   ln -s "$ReadInstallDir/Adobe/Reader9/Resource/Shell/${manPageFile}" "/usr/share/man/man1/${manPageFile}" 2>/dev/null && \
+@@ -950,6 +948,19 @@ case "$OSname" in
      ReadDefaultNum="$ReadIntelLinuxNum"
      DefaultName="Intel/Linux"
      ;;

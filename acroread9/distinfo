@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/09/12 09:24:59 ryo-on Exp $
+$NetBSD: distinfo,v 1.2 2010/10/08 22:50:32 ryo-on Exp $
 
-SHA1 (AdbeRdr9.3.4-1_i486linux_enu.tar.bz2) = 9df49f9fdd7f4a9babf37810615d23f84a5daeb9
-RMD160 (AdbeRdr9.3.4-1_i486linux_enu.tar.bz2) = 76448b49218f4da2cde3252a3767053acb9d28dd
-Size (AdbeRdr9.3.4-1_i486linux_enu.tar.bz2) = 60166581 bytes
-SHA1 (patch-aa) = 26d8fe79ec64c53dfcb42881662529749df408d9
+SHA1 (AdbeRdr9.4-1_i486linux_enu.tar.bz2) = a5ee3f94bb5027e1b3842ff373c953fb2ca5665a
+RMD160 (AdbeRdr9.4-1_i486linux_enu.tar.bz2) = ce33d6a66b175dce79ecdf820831b915ddacc9fb
+Size (AdbeRdr9.4-1_i486linux_enu.tar.bz2) = 60172172 bytes
+SHA1 (patch-aa) = 363e8588fc707d342fb74a1d57b0daed3a281787
