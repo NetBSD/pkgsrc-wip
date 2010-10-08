@@ -1,7 +1,5 @@
-@comment $NetBSD: PLIST,v 1.5 2009/10/11 10:45:05 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.6 2010/10/08 09:15:43 asau Exp $
 bin/pfe
-bin/pfe-config
-bin/pfe-config-forth
 bin/pfe-exec
 bin/pfe-exec-forth
 bin/pfe-forth
@@ -137,12 +135,11 @@ lib/pfe-forth/stackhelp.la
 lib/pfe-forth/struct.la
 lib/pfe-forth/structs.la
 lib/pfe-forth/termcatch.la
-lib/pfe-forth/testmodule2.la
 lib/pfe-forth/toolbelt.la
 lib/pfe-forth/zchar.la
 lib/pfe/testmodule1.la
 lib/pkgconfig/pfe.pc
-man/man1/pfe-config.1
+man/man1/pfe.1
 man/man3/P4_LISTWORDS.3
 man/man3/_p4_access.3
 man/man3/_p4_rename.3
@@ -192,7 +189,6 @@ man/man3/p4_append_char.3
 man/man3/p4_appendz.3
 man/man3/p4_arg.3
 man/man3/p4_argc.3
-man/man3/p4_args_brace.3
 man/man3/p4_argv.3
 man/man3/p4_array_of.3
 man/man3/p4_ascii.3
@@ -254,10 +250,7 @@ man/man3/p4_canonic_input_type.3
 man/man3/p4_canonic_output_type.3
 man/man3/p4_case.3
 man/man3/p4_case_sensitive_voc.3
-man/man3/p4_cat.3
-man/man3/p4_cat_back_tick.3
-man/man3/p4_cat_quote.3
-man/man3/p4_cat_str_fetch.3
+man/man3/p4_cat_str_p_fetch.3
 man/man3/p4_catch.3
 man/man3/p4_cell_minus.3
 man/man3/p4_cell_plus.3
@@ -586,6 +579,7 @@ man/man3/p4_local_dlcall.3
 man/man3/p4_local_dlsym.3
 man/man3/p4_local_value.3
 man/man3/p4_locals_bar.3
+man/man3/p4_logmessage.3
 man/man3/p4_longjmp_loop.3
 man/man3/p4_loop.3
 man/man3/p4_loop_execution.3
@@ -604,10 +598,10 @@ man/man3/p4_lt_dlerror.3
 man/man3/p4_lt_dlinit.3
 man/man3/p4_lt_dlopenext.3
 man/man3/p4_lt_dlsym.3
+man/man3/p4_m_comma_s.3
 man/man3/p4_m_count.3
 man/man3/p4_m_count_fetch.3
 man/man3/p4_m_count_store.3
-man/man3/p4_m_place.3
 man/man3/p4_m_plus.3
 man/man3/p4_m_star.3
 man/man3/p4_m_star_slash.3
@@ -697,6 +691,7 @@ man/man3/p4_nvram_to.3
 man/man3/p4_nvram_words.3
 man/man3/p4_nvram_z_fetch.3
 man/man3/p4_obsoleted.3
+man/man3/p4_obsoleted_RT.3
 man/man3/p4_octal.3
 man/man3/p4_of.3
 man/man3/p4_of_execution.3
@@ -735,10 +730,11 @@ man/man3/p4_paren_local.3
 man/man3/p4_paren_marker.3
 man/man3/p4_paren_see.3
 man/man3/p4_paren_type.3
+man/man3/p4_parens_m_store.3
 man/man3/p4_parse.3
-man/man3/p4_parse_cat.3
 man/man3/p4_parse_comma.3
 man/man3/p4_parse_comma_quote.3
+man/man3/p4_parse_s_plus.3
 man/man3/p4_parse_to_s.3
 man/man3/p4_parse_to_str.3
 man/man3/p4_parse_word.3
@@ -822,7 +818,6 @@ man/man3/p4_roll.3
 man/man3/p4_rot.3
 man/man3/p4_s_back_tick.3
 man/man3/p4_s_backslash_quote.3
-man/man3/p4_s_m_comma.3
 man/man3/p4_s_m_slash_rem.3
 man/man3/p4_s_p_fetch.3
 man/man3/p4_s_p_store.3
@@ -913,15 +908,18 @@ man/man3/p4_store_c_string.3
 man/man3/p4_store_csp.3
 man/man3/p4_store_filename.3
 man/man3/p4_store_plus_plus.3
+man/man3/p4_str_args_brace.3
 man/man3/p4_str_back_tick.3
 man/man3/p4_str_breakp_fetch.3
 man/man3/p4_str_bufp_fetch.3
+man/man3/p4_str_comma_s.3
 man/man3/p4_str_constant.3
 man/man3/p4_str_d_dot_r.3
 man/man3/p4_str_depth.3
 man/man3/p4_str_dot.3
 man/man3/p4_str_drop.3
 man/man3/p4_str_dup.3
+man/man3/p4_str_exchange.3
 man/man3/p4_str_fbreakp_fetch.3
 man/man3/p4_str_fetch.3
 man/man3/p4_str_frame.3
@@ -937,12 +935,14 @@ man/man3/p4_str_header.3
 man/man3/p4_str_nip.3
 man/man3/p4_str_over.3
 man/man3/p4_str_pick.3
+man/man3/p4_str_plus.3
+man/man3/p4_str_plus_back_tick.3
+man/man3/p4_str_plus_quote.3
 man/man3/p4_str_pop.3
 man/man3/p4_str_push_ext.3
 man/man3/p4_str_quote.3
 man/man3/p4_str_s_fetch.3
 man/man3/p4_str_s_from.3
-man/man3/p4_str_s_from_copy.3
 man/man3/p4_str_sp0_fetch.3
 man/man3/p4_str_sp_fetch.3
 man/man3/p4_str_store.3
@@ -961,6 +961,7 @@ man/man3/p4_subrecord.3
 man/man3/p4_swap.3
 man/man3/p4_swap_signals.3
 man/man3/p4_synonym.3
+man/man3/p4_synonym_RT.3
 man/man3/p4_system.3
 man/man3/p4_system_quote.3
 man/man3/p4_system_quote_execution.3
@@ -1497,4 +1498,3 @@ share/pfe/test/wordsets.4th
 share/pfe/test/wordsets.fs
 share/pfe/testmodule1.fs
 share/pfe/testmodule2.fs
-@exec ${MKDIR} %D/share/info
