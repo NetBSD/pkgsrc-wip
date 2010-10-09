@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 2010/10/08 23:12:23 ryo-on Exp $
+$NetBSD: patch-aa,v 1.4 2010/10/09 00:21:02 ryo-on Exp $
 
 --- INSTALL.orig	2010-09-22 15:19:28.000000000 +0900
 +++ INSTALL	2010-10-09 08:03:26.881020586 +0900
@@ -11,35 +11,6 @@ $NetBSD: patch-aa,v 1.3 2010/10/08 23:12:23 ryo-on Exp $
          else
            size=`ls -lLon "$i" | ( read perm links owner size date ; echo $size )`
          fi
-@@ -390,12 +392,13 @@
- install_dir="$1/Adobe/Reader9/Reader"
- read_config="$2"
- 
--if ${TestCmd} ! ${TestCmdOption} /usr/lib/libldap.so
-+if ${TestCmd} ! ${TestCmdOption} /usr/lib/libldap.so 
- then
-+if [ "${OSname}" = "Linux" ] ; then
- 	rm -f "$install_dir/${read_config}/lib/libldap.so" 2>/dev/null
- 
- 	LIB_LDAP="`ls -tr /usr/lib/libldap.so*  2>/dev/null | tail -1`"
--
-+fi
- 	if [ "$LIB_LDAP" = "" ] 
- 	then
- 		LIB_LDAP="`ls -tr /usr/lib/libldap* 2>/dev/null | grep -v libldap_r | grep -v libldapcpp | grep '\.so' | tail -1`"
-@@ -409,10 +412,11 @@
- 
- if ${TestCmd} ! ${TestCmdOption} /usr/lib/liblber.so
- then
-+if [ "${OSname}" = "Linux" ] ; then
- 	rm -f "$install_dir/${read_config}/lib/liblber.so" 2>/dev/null
- 
- 	LIB_LBER="`ls -tr /usr/lib/liblber.so* 2>/dev/null | tail -1`"
--
-+fi
- 	if [ "$LIB_LBER" = "" ] 
- 	then
- 		LIB_LBER="`ls -tr /usr/lib/liblber* 2>/dev/null | grep -v liblber_r | grep '\.so' | tail -1`"
 @@ -657,12 +661,8 @@
            record_config remove /usr/local/etc/bash_completion.d/acroread.sh
        fi
