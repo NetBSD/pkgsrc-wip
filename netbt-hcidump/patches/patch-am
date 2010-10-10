@@ -1,6 +1,6 @@
-$NetBSD: patch-am,v 1.7 2010/01/05 21:01:38 plunky Exp $
+$NetBSD: patch-am,v 1.8 2010/10/10 18:49:30 plunky Exp $
 
---- src/hci_lib.c.orig	2010-01-05 12:27:30.000000000 +0000
+--- src/hci_lib.c.orig	2010-09-30 09:12:22.000000000 +0000
 +++ src/hci_lib.c
 @@ -41,9 +41,9 @@
  #include <sys/ioctl.h>
@@ -29,7 +29,7 @@ $NetBSD: patch-am,v 1.7 2010/01/05 21:01:38 plunky Exp $
  }
 +#endif
  
- static char *hci_uint2str(hci_map *m, unsigned int val) 
+ static char *hci_uint2str(hci_map *m, unsigned int val)
  {
 @@ -114,6 +116,7 @@ static char *hci_uint2str(hci_map *m, un
  	return str;
@@ -39,15 +39,15 @@ $NetBSD: patch-am,v 1.7 2010/01/05 21:01:38 plunky Exp $
  static int hci_str2uint(hci_map *map, char *str, unsigned int *val)
  {
  	char *t, *ptr;
-@@ -195,6 +198,7 @@ char *hci_dflagstostr(uint32_t flags)
- 	} 	
+@@ -212,6 +215,7 @@ char *hci_dflagstostr(uint32_t flags)
+ 	}
  	return str;
  }
 +#endif
  
  /* HCI packet type mapping */
  static hci_map pkt_type_map[] = {
-@@ -216,6 +220,7 @@ static hci_map pkt_type_map[] = {
+@@ -233,6 +237,7 @@ static hci_map pkt_type_map[] = {
  	{ NULL }
  };
  
@@ -55,7 +55,7 @@ $NetBSD: patch-am,v 1.7 2010/01/05 21:01:38 plunky Exp $
  static hci_map sco_ptype_map[] = {
  	{ "HV1",   0x0001   },
  	{ "HV2",   0x0002   },
-@@ -229,12 +234,15 @@ static hci_map sco_ptype_map[] = {
+@@ -246,12 +251,15 @@ static hci_map sco_ptype_map[] = {
  	{ "3-EV5", HCI_3EV5 },
  	{ NULL }
  };
@@ -71,7 +71,7 @@ $NetBSD: patch-am,v 1.7 2010/01/05 21:01:38 plunky Exp $
  int hci_strtoptype(char *str, unsigned int *val)
  {
  	return hci_str2bit(pkt_type_map, str, val);
-@@ -249,6 +257,7 @@ int hci_strtoscoptype(char *str, unsigne
+@@ -266,6 +274,7 @@ int hci_strtoscoptype(char *str, unsigne
  {
  	return hci_str2bit(sco_ptype_map, str, val);
  }
@@ -79,7 +79,7 @@ $NetBSD: patch-am,v 1.7 2010/01/05 21:01:38 plunky Exp $
  
  /* Link policy mapping */
  static hci_map link_policy_map[] = {
-@@ -265,6 +274,7 @@ char *hci_lptostr(unsigned int lp)
+@@ -282,6 +291,7 @@ char *hci_lptostr(unsigned int lp)
  	return hci_bit2str(link_policy_map, lp);
  }
  
@@ -87,7 +87,7 @@ $NetBSD: patch-am,v 1.7 2010/01/05 21:01:38 plunky Exp $
  int hci_strtolp(char *str, unsigned int *val)
  {
  	return hci_str2bit(link_policy_map, str, val);
-@@ -621,6 +631,7 @@ char *hci_commandstostr(uint8_t *command
+@@ -638,6 +648,7 @@ char *hci_commandstostr(uint8_t *command
  
  	return str;
  }
@@ -95,7 +95,7 @@ $NetBSD: patch-am,v 1.7 2010/01/05 21:01:38 plunky Exp $
  
  /* Version mapping */
  static hci_map ver_map[] = {
-@@ -639,16 +650,19 @@ char *hci_vertostr(unsigned int ver)
+@@ -656,16 +667,19 @@ char *hci_vertostr(unsigned int ver)
  	return hci_uint2str(ver_map, ver);
  }
  
@@ -115,8 +115,8 @@ $NetBSD: patch-am,v 1.7 2010/01/05 21:01:38 plunky Exp $
  int lmp_strtover(char *str, unsigned int *ver)
  {
  	return hci_str2uint(ver_map, str, ver);
-@@ -2569,3 +2583,4 @@ int hci_read_clock(int dd, uint16_t hand
- 	*accuracy = rp.accuracy;
+@@ -2744,3 +2758,4 @@ int hci_le_create_conn(int dd, uint16_t 
+ 
  	return 0;
  }
 +#endif
