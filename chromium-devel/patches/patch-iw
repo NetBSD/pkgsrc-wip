@@ -1,0 +1,13 @@
+$NetBSD: patch-iw,v 1.1 2010/10/10 15:18:17 rxg Exp $
+
+--- chrome/browser/file_path_watcher_stub.cc.orig	2010-09-13 15:19:37.000000000 +0000
++++ chrome/browser/file_path_watcher_stub.cc
+@@ -9,7 +9,7 @@
+ 
+ class FilePathWatcherImpl : public FilePathWatcher::PlatformDelegate {
+  public:
+-  virtual bool Watch(const FilePath& path, FileWatcher::Delegate* delegate) {
++  virtual bool Watch(const FilePath& path, FilePathWatcher::Delegate* delegate) {
+     return false;
+   }
+ };
