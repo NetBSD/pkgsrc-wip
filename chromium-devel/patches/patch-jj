@@ -1,0 +1,13 @@
+$NetBSD: patch-jj,v 1.1 2010/10/10 15:25:35 rxg Exp $
+
+--- media/audio/openbsd/audio_manager_openbsd.cc.orig	2010-09-13 15:17:43.000000000 +0000
++++ media/audio/openbsd/audio_manager_openbsd.cc
+@@ -29,7 +29,7 @@ AudioOutputStream* AudioManagerOpenBSD::
+ 
+ AudioInputStream* AudioManagerOpenBSD::MakeAudioInputStream(
+     AudioParameters params,
+-    uint32 samples_per_packet) {
++    int samples_per_packet) {
+   NOTIMPLEMENTED();
+   return NULL;
+ }
