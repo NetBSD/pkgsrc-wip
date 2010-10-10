@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2010/03/13 17:51:51 cheusov Exp $
+# $NetBSD: Makefile,v 1.34 2010/10/10 18:23:39 cheusov Exp $
 
 DISTNAME=	pkg_summary-utils-${VERSION}
+PKGREVISION=	1
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -16,7 +17,7 @@ DEPENDS+=	awk-pkgsrc-dewey>=0.5.6:../../wip/awk-pkgsrc-dewey
 DEPENDS+=	pipestatus-[0-9]*:../../devel/pipestatus
 #DEPENDS+=	getopt-[0-9]*:../../misc/getopt
 
-CONFLICTS+=	paexec<0.13.0nb1
+CONFLICTS+=	paexec<0.15.0
 
 CONFLICTS+=	pkg_src_summary-[0-9]*
 CONFLICTS+=	pkg_cmp_summary-[0-9]*
