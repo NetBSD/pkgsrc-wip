@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.19 2010/08/09 22:30:03 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.20 2010/10/10 21:16:22 cheusov Exp $
 bin/distbb
 bin/distbb_diff
 libexec/distbb/common
 libexec/distbb/gen_queue
+libexec/distbb/gen_weights
 libexec/distbb/get_direct_pkgname_deps
 libexec/distbb/make-depends
 libexec/distbb/slave
