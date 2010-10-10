@@ -59,31 +59,17 @@ Samples of use:
 EOF
 }
 
-while test $# -ne 0; do
-    case "$1" in
-	-h|--help)
-	    usage
-	    exit 0;;
-	-a)
-	    add_fields="$add_fields $2"
-	    shift;;
-	-r)
-	    rem_fields="$rem_fields $2"
-	    shift;;
-	-f)
-	    only_fields="$only_fields $2"
-	    shift;;
-	--)
-	    shift
-	    break;;
-	-*)
-	    echo "Bad option $1" 1>&2
-	    exit 1;;
-	*)
-	    break
-    esac
-    shift
-done
+process_args (){
+    alt_getopt \
+	'h help' 'usage; exit 0' \
+	=a       add_fields=     \
+	=r       rem_fields=     \
+	=f       only_fields=    \
+	-- "$@"
+}
+
+cmds=`process_args "$@"`
+eval "$cmds"
 
 if test $# -eq 0; then
     pkg_info_opts=-XBa

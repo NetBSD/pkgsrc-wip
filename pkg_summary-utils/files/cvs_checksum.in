@@ -45,21 +45,15 @@ OPTIONS:
 EOF
 }
 
-while test $# -ne 0; do
-    case "$1" in
-	-h|--help)
-	    usage
-	    exit 0;;
-	-l|--list)
-	    list_only=1;;
-	-*)
-	    echo "Unrecognized option " $1 ". Type --help to see usage" 1>&2
-	    exit 1;;
-	*)
-	    break;;
-    esac
-    shift
-done
+process_args (){
+    alt_getopt \
+	'h help' 'usage; exit 0' \
+	'l list' list_only=1     \
+	-- "$@"
+}
+
+cmds=`process_args "$@"`
+eval "$cmds"
 
 if test "$list_only"; then
     for i in "$@"; do
@@ -67,7 +61,7 @@ if test "$list_only"; then
 	if test -r "$efn"; then
 	    awk -F/ -v d="$i" '$1 == "" {print d "/" $2, $3}' "$efn"
 
-	    subdirs="`awk -F/ -v d="$i" '$1 == "D" && NF > 1 {print d "/" $2}' "$efn" `"
+	    subdirs=`awk -F/ -v d="$i" '$1 == "D" && NF > 1 {print d "/" $2}' "$efn" `
 	    $0 -l $subdirs
 	else
 	    echo "$i/CVS/Entries files is not readable" 1>&2

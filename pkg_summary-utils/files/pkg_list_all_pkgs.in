@@ -37,22 +37,12 @@ OPTIONS:
 EOF
 }
 
-while test $# -ne 0; do
-    case "$1" in
-	-h|--help)
-	    usage
-	    exit 0;;
-	--)
-	    shift
-	    break;;
-	-*)
-	    echo "Unrecognized option " $1 ". Type --help to see usage" 1>&2
-	    exit 1;;
-	*)
-	    break;;
-    esac
-    shift
-done
+process_args (){
+    alt_getopt 'h help' 'usage; exit 0' -- "$@"
+}
+
+cmds=`process_args "$@"`
+eval "$cmds"
 
 ############################################################
 # user settable variables

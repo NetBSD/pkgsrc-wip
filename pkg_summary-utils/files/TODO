@@ -1,9 +1,5 @@
 TODO list and thoughts
 
-------------------------
-0) pkg_summary4view
------------------------
-
 existing tools:
 
     cvs_checksum:
@@ -18,6 +14,7 @@ existing tools:
        - -f <n> use pkgbase only for comparison
        - -f <pn> use pkgbase and pkgpath for comparison
        - automatic removal of #-comments
+       - output ! if DEPENDS or BUILD_DEPENDS differ
 
     pkg_grep_summary:
        - -f <fields>   output only specified fields, this
@@ -49,7 +46,6 @@ existing tools:
     pkg_summary2deps:
 
     pkg_summary4view:
-       - resort tokens inside DEPENDS, BUILD_DEPENDS and CONFLICTS
        - another format for DEPENDS, BUILD_DEPENDS and CONFLICTS,
          (convertors for RHEL yum, Debian apt, OpenSolaris IPS)
 

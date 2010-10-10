@@ -48,24 +48,15 @@ EOF
 }
 
 delete=''
-while test $# -ne 0; do
-    case "$1" in
-	-h|--help)
-	    usage
-	    exit 0;;
-	-r)
-	    delete=1;;
-	--)
-	    shift
-	    break;;
-	-*)
-	    echo "Bad option $1" 1>&2
-	    exit 1;;
-	*)
-	    break
-    esac
-    shift
-done
+process_args (){
+    alt_getopt \
+	'h help' 'usage; exit 0' \
+	r        delete=1 \
+	-- "$@"
+}
+
+cmds=`process_args "$@"`
+eval "$cmds"
 
 DISTDIR=${DISTDIR:=@DISTDIR@}
 cd "$DISTDIR"

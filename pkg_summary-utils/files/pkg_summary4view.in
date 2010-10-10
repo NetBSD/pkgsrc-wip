@@ -1,6 +1,6 @@
 #!/usr/bin/env runawk
 
-# Copyright (c) 2007-2008 Aleksey Cheusov <vle@gmx.net>
+# Copyright (c) 2007-2010 Aleksey Cheusov <vle@gmx.net>
 #
 # Permission is hereby granted, free of charge, to any person obtaining
 # a copy of this software and associated documentation files (the
@@ -28,6 +28,7 @@
 #use "alt_getopt.awk"
 #use "abort.awk"
 #use "power_getopt.awk"
+#use "heapsort.awk"
 
 ############################################################
 #.begin-str help
@@ -46,6 +47,16 @@ function spaces (n,            ret){
 	return ret
 }
 
+function resort_D0 (arr, remap,                i){
+	for (i=1; i <= NF; ++i){
+		arr [i] = $i
+	}
+	heapsort(arr, remap, 1, NF)
+	for (i=1; i <= NF; ++i){
+		$i = arr [remap [i]]
+	}
+}
+
 BEGIN {
 	special ["DESCRIPTION"] = 0
 	special ["PLIST"]       = 0
@@ -56,21 +67,32 @@ BEGIN {
 	depends_like ["DEPENDS"]       = 0
 	depends_like ["CONFLICTS"]     = 0
 
+	# single or multiple line
+	s_or_m ["ALLDISTFILES"]  = 0
+	s_or_m ["ALLSRCFILES"]   = 0
+
 	offset = 16
 }
 
+BEGIN {
+	for (i in s_or_m){
+		depends_like [i] = 0
+	}
+}
+
 NF == 0 {
-	print
-	last_field    = ""
-	printf "%s", accu
-	accu = ""
-	to_be_printed = 0
+	prev_field = ""
+	print ""
 	next
 }
 
-/^PKGNAME=/ {
+function get_alldistfiles (tok,         idx){
+	idx = index(tok, ":")
+	return substr(tok, 1, idx-1) " " spaces(45-idx) substr(tok, idx+1)
+}
+
+NF > 0 && prev_field == "" {
 	print "-----------------------------------------------------------"
-	to_be_printed = 1
 }
 
 {
@@ -81,52 +103,48 @@ NF == 0 {
 	#
 	sub(/^[^=]*=/, "")
 
-	if (NF == 0){
-		prev_field = field
+	if (NF == 0)
 		next
-	}
+
+	field_alldistfiles = (field == "ALLDISTFILES")
 
 	#
 	if (field in depends_like){
+		resort_D0()
+
 		if (field != prev_field) {
 			field1 = field ":"
-			accu = accu field1
+			printf "%s", field1
 		}else{
 			field1 = ""
 		}
 
-		if (NF > 0)
-			accu = accu spaces(offset - length(field1))
+		printf "%s", spaces(offset - length(field1))
 
-		accu = accu $1 "\n"
+		if (field_alldistfiles){
+			printf "%s\n", get_alldistfiles($1)
+		}else{
+			printf "%s\n", $1
+		}
 
 		for (i=2; i <= NF; ++i){
-			accu = accu spaces(offset)
-			accu = accu $i "\n"
+			printf "%s", spaces(offset)
+			if (field_alldistfiles){
+				printf "%s\n", get_alldistfiles($i)
+			}else{
+				printf "%s\n", $i
+			}
 		}
-
-		prev_field = field
-		next
 	}else if (field in special) {
 		if (field != prev_field) {
-			accu = accu field ":\n"
+			printf "%s:\n", field
 		}
 
-		accu = accu "    "
+		printf "    %s\n", $0
 	}else{
-		accu = accu field ":"
-		if ($0 !~ /^( |\t)*$/)
-			accu = accu spaces(offset - length(field) - 1)
+		printf "%s:%s%s\n", field, spaces(offset - length(field) - 1), $0
 	}
 
 	#
 	prev_field = field
-}
-
-{
-	accu = accu $0 "\n"
-	if (to_be_printed){
-		printf "%s", accu
-		accu = ""
-	}
 }

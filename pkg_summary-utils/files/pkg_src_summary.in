@@ -78,21 +78,27 @@ EOF
 
 # list of fields for default pkg_src_summary
 if test -z "$PSS_FIELDS"; then
-    PSS_FIELDS='PKGNAME PKGPATH DEPENDS BUILD_DEPENDS CONFLICTS HOMEPAGE COMMENT LICENSE ONLYFOR NOTFOR MAINTAINER CATEGORIES NO_BIN_ON_FTP NO_SRC_ON_FTP NO_BIN_ON_CDROM NO_SRC_ON_CDROM LICENSE ALLSRCFILES DESCRIPTION PLIST' # CVS_CHECKSUM'
+    PSS_FIELDS='PKGNAME PKGPATH DEPENDS BUILD_DEPENDS CONFLICTS HOMEPAGE COMMENT LICENSE ONLYFOR NOTFOR MAINTAINER CATEGORIES NO_BIN_ON_FTP NO_SRC_ON_FTP NO_BIN_ON_CDROM NO_SRC_ON_CDROM LICENSE ALLSRCFILES DESCRIPTION PLIST' # CVS_CHECKSUM ALLDISTFILES
 fi
 
 if test -z "$PSS_PPERS"; then
     PSS_PPERS=10
 fi
 
+set_fields (){
+    PSS_FIELDS=$(echo $* | tr , ' ')
+}
+
 add_fields (){
-    rem_fields "$@"
-    for f in "$@"; do
+    __fields=$(echo $* | tr , ' ')
+    rem_fields $__fields
+    for f in $__fields; do
 	PSS_FIELDS="$PSS_FIELDS $f"
     done
 }
 
 rem_fields (){
+    __fields=$(echo $* | tr , ' ')
     PSS_FIELDS=`awk '
 BEGIN {
    for (i=1; i < ARGC; ++i){
@@ -105,86 +111,33 @@ BEGIN {
       }
    }
 }
-' "$@" - $PSS_FIELDS`
+' $__fields - $PSS_FIELDS`
 }
 
 process_options (){
-    while test $# -ne 0; do
-	case "$1" in
-	    -h|--help)
-		usage
-		exit 0;;
-	    -f|--fields)
-		PSS_FIELDS="$(echo $2 | tr , ' ')"
-		shift;;
-	    -f=*)
-		printf '%s\n' '-f= is not allowed' 1>&2
-		exit 1;;
-	    -a=*)
-		printf '%s\n' '-a= is not allowed' 1>&2
-		exit 1;;
-	    -r=*)
-		printf '%s\n' '-r= is not allowed' 1>&2
-		exit 1;;
-	    --fields=*)
-		PSS_FIELDS="$(echo $1 | cut -f2 -d= | tr , ' ')";;
-	    -f*)
-		PSS_FIELDS="$(echo $1 | cut -b 3- | tr , ' ')";;
-	    -a|--add-fields)
-		add_fields $(echo $2 | tr , ' ')
-		shift;;
-	    --add-fields=*)
-	        add_fields $(echo $1 | cut -f2 -d= | tr , ' ');;
-	    -a*)
-	        add_fields $(echo $1 | cut -b 3- | tr , ' ');;
-	    -r|--rem-fields)
-		rem_fields $(echo $2 | tr , ' ')
-		shift;;
-	    --rem-fields=*)
-	        rem_fields $(echo $1 | cut -f2 -d= | tr , ' ');;
-	    -r*)
-	        rem_fields $(echo $1 | cut -b 3- | tr , ' ');;
-	    -s|--slave-mode)
-		slave=1;;
-	    -p|--make-plist)
-		make_plist='-p';;
-	    -b)
-		add_fields BOOTSTRAP_DEPENDS BUILD_DEPENDS
-	        with_bootstrap=-b;;
-	    -l)
-	        with_libdeps=-l;;
-	    -d|--with-deps)
-		with_dep=-d;;
-	    -D|--with-bdeps)
-		with_bdep=-D;;
-	    -A|--with-alldeps)
-		add_fields DEPENDS BUILD_DEPENDS
-		with_dep=-d
-		with_bdep=-D;;
-	    -m)
-	        multi_var=1;;
-	    -M)
-	        multi_var=2;;
-	    -i|--installed)
-		installed_pkgs=1;;
-	    -G)
-	        debug=1;;
-	    --)
-		shift
-		break;;
-	    -*)
-		echo "Unrecognized option " $1 ". Type --help to see usage" 1>&2
-		exit 1;;
-	    *)
-		break;;
-	esac
-	shift
-    done
-
-    pkgpaths="$@"
+    alt_getopt \
+	'h help'        'usage; exit 0' \
+	'=f fields'      'set_fields ' \
+	'=a add-fields'  'add_fields ' \
+	'=r rem-fields'  'rem_fields ' \
+	's slave-mode'   slave=1       \
+	'p make-plist'   make_plist='-p' \
+	b        'add_fields BOOTSTRAP_DEPENDS BUILD_DEPENDS; with_bootstrap=-b' \
+	l        'with_libdeps=-l'     \
+	'd with-deps'    with_dep=-d   \
+	'D with-bdeps'   with_bdep=-D  \
+	'A with-alldeps' 'add_fields DEPENDS BUILD_DEPENDS;
+	                 with_dep=-d; with_bdep=-D' \
+	m                multi_var=1   \
+	M                multi_var=2   \
+	'i installed'    installed_pkgs=1 \
+	G                debug=1 \
+	-- "$@"
 }
+cmds=`process_options $PSS_OPTIONS "$@"`
+eval "$cmds"
 
-process_options $PSS_OPTIONS "$@"
+pkgpaths="$*"
 
 with_xxx="$with_bootstrap $with_libdeps"
 
@@ -206,6 +159,9 @@ if echo "$PSS_FIELDS" | grep DESCRIPTION > /dev/null; then
 fi
 if echo "$PSS_FIELDS" | grep PLIST > /dev/null; then
     field_plist=1
+fi
+if echo "$PSS_FIELDS" | grep ALLDISTFILES > /dev/null; then
+    field_alldistfiles=1
 fi
 if echo "$PSS_FIELDS" | grep CVS_CHECKSUM > /dev/null; then
     field_cvs_checksum=1
@@ -284,6 +240,13 @@ pkgpath2multivar_opts (){
     sed -e 's|^[^:]*:||' -e 's|,| |g' -e "s|[^ ][^ ]*|'&'|g" -e 's|~| |g'
 }
 
+get_alldistfiles (){
+    awk -F'[ =()]*' \
+	'$1 == "Size" {printf " %s:%s", $2, $3}
+	END {print ""}
+    ' "$@"
+}
+
 cd_and_print_summary (){
     # $1 - pkgpath
     real_pkgpath="`echo $1 | cut -d: -f1`"
@@ -312,6 +275,14 @@ cd_and_print_summary (){
 	cvs_checksum "$real_pkgpath" > "$tmpfn" || return 1
 	read cksum < "$tmpfn" || return 1
 	printf "CVS_CHECKSUM=%s\n" "$cksum" >>"$summaryfn" || return 1
+    fi
+
+    # alldistfiles
+    if test "$field_alldistfiles"; then
+	distinfo_fns="$(cd $real_pkgpath && ${BMAKE} show-var VARNAME=DISTINFO_FILE)"
+	# /dev/null is a protection against distinfo_fns emptyness
+	alldistfiles=$(get_alldistfiles $distinfo_fns /dev/null)
+	printf "ALLDISTFILES=%s\n" "$alldistfiles" >>"$summaryfn" || return 1
     fi
 
     # PLIST
@@ -382,7 +353,7 @@ packages2stdout__1per_line (){
 	installed_packages2stdout
     elif test $# -eq 0; then
 	# processing stdin
-	cat 
+	awk '{for (i=1; i <= NF; ++i) {print $i}}' "$@"
     else
 	# processing arguments
 	for pkgpath in "$@"; do
@@ -397,11 +368,11 @@ packages2stdout (){
     {
         printf " %s", $0
     }
-    (NR % pss_ppers) == 0 {
+    ((NR-1) % pss_ppers) == 0 {
         printf "\n"
     }
     END {
-        if ((NR % pss_ppers) != 0){
+        if (((NR-1) % pss_ppers) != 0){
             printf "\n"
         }
     }'

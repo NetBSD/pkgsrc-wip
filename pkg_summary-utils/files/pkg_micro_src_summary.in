@@ -47,40 +47,26 @@ about source packages
 usage: pkg_micro_src_summary [OPTIONS] [pkgpath1 pkgpath2 ...]
 OPTIONS:
   -h|--help              display this help message
-  -f|--fields <filename>
-  -f|--fields=<filename> fields to be included to summary,
-                         PKGNAME and PKGPATH by default
+  -f|--fields <fields>   fields to be included to summary,
+                         PKGNAME and PKGPATH is the default
 EOF
 }
 
 fields='PKGNAME PKGPATH'
 
-while test $# -ne 0; do
-    case "$1" in
-	-h|--help)
-	    usage
-	    exit 0;;
-	-f|--fields)
-	    fields="`echo $2 | tr , ' '`"
-	    shift;;
-	-f=*)
-	    printf '%s\n' '-f= is not allowed' 1>&2
-	    exit 1;;
-	--fields=*)
-	    fields="$(echo $1 | cut -f2 -d= | tr , ' ')";;
-	-f*)
-	    fields="$(echo $1 | cut -b 3- | tr , ' ')";;
-	--)
-	    shift
-	    break;;
-	-*)
-	    echo "Unrecognized option " $1 ". Type --help to see usage" 1>&2
-	    exit 1;;
-	*)
-	    break;;
-    esac
-    shift
-done
+set_fields (){
+    fields=$(echo "$@" | tr , ' ')
+}
+
+process_args (){
+    alt_getopt \
+	'h help'    'usage; exit 0' \
+	'=f fields' 'set_fields ' \
+	-- "$@"
+}
+
+cmds=`process_args "$@"`
+eval "$cmds"
 
 ############################################################
 cd $PKGSRCDIR

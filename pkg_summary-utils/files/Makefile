@@ -116,14 +116,9 @@ DIFF_PROG?=	diff -U10
 .PHONY : test
 test : all
 	@echo 'running tests...'; \
-	if cd ${.CURDIR}/tests && \
-		env PATH="${.OBJDIR}:$$PATH" OBJDIR=${.OBJDIR} \
-			BMAKE=${BMAKE} ./test.sh \
-			> ${.OBJDIR}/_test.res && \
-		${DIFF_PROG} ${.CURDIR}/tests/test.out ${.OBJDIR}/_test.res; \
-	then echo '   succeeded'; \
-	else echo '   failed'; false; \
-	fi
+	set -e; cd ${.CURDIR}/tests; \
+	env PATH="${.OBJDIR}:$$PATH" OBJDIR=${.OBJDIR} \
+		BMAKE=${BMAKE} ./test.sh
 
 ############################################################
 
