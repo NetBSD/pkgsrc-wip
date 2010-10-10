@@ -1,0 +1,13 @@
+$NetBSD: patch-jc,v 1.1 2010/10/10 15:22:21 rxg Exp $
+
+--- webkit/support/webkit_support_glue.cc.orig	2010-09-13 15:17:46.000000000 +0000
++++ webkit/support/webkit_support_glue.cc
+@@ -75,7 +75,7 @@ bool IsSingleProcess() {
+ void EnableSpdy(bool enable) {
+ }
+ 
+-#if defined(OS_LINUX)
++#if defined(OS_POSIX) && !defined(OS_MACOSX)
+ int MatchFontWithFallback(const std::string& face, bool bold,
+                           bool italic, int charset) {
+   return -1;
