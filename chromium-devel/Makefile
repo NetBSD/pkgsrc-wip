@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2010/10/04 07:44:40 rxg Exp $
+# $NetBSD: Makefile,v 1.9 2010/10/10 15:06:05 rxg Exp $
 
 DISTNAME=	chromium-7.0.518.0
 CATEGORIES=	www
@@ -10,8 +10,12 @@ HOMEPAGE=	http://dev.chromium.org/Home
 COMMENT=	Open-source browser project
 LICENSE=	modified-bsd
 
-USE_TOOLS+=	gmake pkg-config
+USE_TOOLS+=	bash flex:pkgsrc gmake perl pkg-config
 USE_LANGUAGES=	c c++
+
+ONLY_FOR_PLATFORM=	*-*-arm *-*-i386 *-*-x86_64
+PYTHON_FOR_BUILD_ONLY=	yes
+TOOLS_PLATFORM.flex=	# override the platform definition to use pkgsrc's flex.
 
 # Override the LINK variable for the platforms which do not have flock(1).
 MAKE_ENV+=	LINK=${CXX}
@@ -29,9 +33,12 @@ GYP_DEFINES+=	linux_use_tcmalloc=1
 GYP_DEFINES+=	linux_use_heapchecker=1
 GYP_DEFINES+=	linux_link_gnome_keyring=1
 GYP_DEFINES+=	disable_nacl=1
+GYP_DEFINES+=	use_system_ffmpeg=0
 GYP_DEFINES+=	use_system_libevent=1
 GYP_DEFINES+=	use_system_libjpeg=1
 GYP_DEFINES+=	use_system_libxml=1
+GYP_DEFINES+=	use_system_sqlite=0
+GYP_DEFINES+=	use_system_yasm=1
 GYP_DEFINES+=	use_system_zlib=1
 
 RESTRICTED=	tarball contains some allegedly patent-infringing source code
@@ -53,8 +60,8 @@ SUBST_FILES.path+=	build/common.gypi
 SUBST_FILES.path+=	build/linux/python_arch.sh
 SUBST_FILES.path+=	chrome/chrome_tests.gypi
 SUBST_STAGE.path=	post-patch
+SUBST_SED.path+=	-e 's|/bin/bash|${BASH}|'
 SUBST_SED.path+=	-e 's|/usr/lib/|${LOCALBASE}/lib/|'
-SUBST_SED.path+=	-e 's|/bin/bash|${LOCALBASE}/bin/bash|'
 SUBST_SED.path+=	-e 's|/usr/include/|${LOCALBASE}/include/|'
 
 pre-configure:
@@ -69,7 +76,7 @@ do-configure:
 .include "../../devel/nss/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
-.include "../../lang/python/application.mk"
+.include "../../lang/python/pyversion.mk"
 .include "../../security/libgnome-keyring/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
