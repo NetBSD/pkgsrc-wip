@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.15 2010/10/04 07:45:25 rxg Exp $
+$NetBSD: distinfo,v 1.16 2010/10/10 15:26:16 rxg Exp $
 
 SHA1 (chromium-7.0.518.0.tar.bz2) = 7845f38d62561160e3d65e5e0886533f44909a8c
 RMD160 (chromium-7.0.518.0.tar.bz2) = 5ce5ab14a481c4af4014ca0a5162794ff7ef4c4e
@@ -89,7 +89,7 @@ SHA1 (patch-df) = 6adc6bd2c8763327f02c9b20d98e721b649eac1c
 SHA1 (patch-dg) = 26fd38e99efe58feb38e8a93148b3e4e3b66568b
 SHA1 (patch-dh) = 4020286846846b0e7fd59f80a4977422528de69d
 SHA1 (patch-di) = 9a06981beae0c8dcf3bfde1411d1f3385f010aeb
-SHA1 (patch-dj) = a3300df8c2de8b0b0c7f7d9d5e17f14b7c1266d3
+SHA1 (patch-dj) = 3f4b4b0f338653543c19548d2dc11bbb7852a92d
 SHA1 (patch-dk) = 5592ff7cac2e0ec9738c625ae60407a0be4be9a1
 SHA1 (patch-dl) = e1d030100e3a38d7eaa7caaefdbe8b95831244b5
 SHA1 (patch-dm) = 91fbad57877cb47e66e6bcda7b815bfb3211ea11
@@ -225,3 +225,19 @@ SHA1 (patch-iq) = edf71f8c44e038ff2ea1d1e688c06951d12be989
 SHA1 (patch-ir) = f53067f4cbdfa529c162c7297e65ca49275afb92
 SHA1 (patch-is) = 0315009d503ab9856c00f7c2748bcfba102168cb
 SHA1 (patch-it) = 78cfc3c7820c151aca52405ca324c2fdbdfea5eb
+SHA1 (patch-iu) = 26f1218c5429812c2c82f051931eabd2aa827ac0
+SHA1 (patch-iv) = 66b4ac956159d4aa0c1a4a7e55f8a46a5cf802ca
+SHA1 (patch-iw) = 13aab6da526405a4e41ba29f12f4038ccb49e65f
+SHA1 (patch-ix) = 986bc48d0e218608b92df1b714686a9eba388732
+SHA1 (patch-iy) = 27429901386117b06cd6903d3d370978ca5471ba
+SHA1 (patch-iz) = 0b2208195615493bbd7de7115b3c06ed7bd1f430
+SHA1 (patch-ja) = 858ebf0a11b6816bc5376bfc43cb91051bf0e428
+SHA1 (patch-jb) = eb3524b043844bd613ccae8229da288c580409c9
+SHA1 (patch-jc) = bb6a9e9b7c53c79170e486a6e609ef13854a5254
+SHA1 (patch-jd) = a78bd9f1a1c376262c744f916cc29ec96d1c63da
+SHA1 (patch-je) = 54e7a22eab7d688b134d79c8bffbe574907faf34
+SHA1 (patch-jf) = 574c3685aa3dbb929f5577ed06884068f7ff9fa4
+SHA1 (patch-jg) = 25428d042d246e583a0ce1f0a15194248bdc83aa
+SHA1 (patch-jh) = b524e10dabf5953202ba4480e3bd1fdb81703826
+SHA1 (patch-ji) = 13711695a55580cc97331f58193f976a5a1cc5cd
+SHA1 (patch-jj) = dc8b0936d7f85a0b134378051c3b2929288b04f8
