@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/10/10 12:25:59 cheusov Exp $
+
+SHA1 (mk-20100612.tar.gz) = ccc38f41825c78b8b7819ebd441bae0e5d71bfc0
+RMD160 (mk-20100612.tar.gz) = ce7ec1b6b1114a3c99f047b40c2540b28cc23724
+Size (mk-20100612.tar.gz) = 46000 bytes
