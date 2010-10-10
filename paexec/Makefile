@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2010/01/03 11:34:44 cheusov Exp $
+# $NetBSD: Makefile,v 1.26 2010/10/10 18:20:10 cheusov Exp $
 #
 
-DISTNAME=	paexec-0.14.0
+DISTNAME=	paexec-0.15.0
 CATEGORIES=	parallel sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=paexec/} \
 		http://mova.org/~cheusov/pub/paexec/
@@ -12,26 +12,21 @@ COMMENT=	Parallel executor, distributes tasks over network
 
 LICENSE=		mit
 
-DEPENDS+=		runawk>=0.16.0:../../wip/runawk
+BUILD_DEPENDS+=		mk-configure>=0.20.0:../../wip/mk-configure
+DEPENDS+=		runawk>=0.20.0:../../wip/runawk
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_LANGUAGES=		c
-USE_BSD_MAKEFILE=	yes
-
 TEST_TARGET=		test
+
+AUTO_MKDIRS=		yes
 
 PKGDOCDIR=		${PREFIX}/share/doc/${PKGBASE}
 PKGEGDIR=		${PREFIX}/share/examples/${PKGBASE}
 
-AUTO_MKDIRS=		yes
+DOC_FILES=		README NEWS ChangeLog COPYRIGHT
 
-DOC_FILES=		README NEWS ChangeLog
-
-MAKE_ENV+=		PREFIX=${PREFIX}
-MAKE_ENV+=		MKCATPAGES=no
 MAKE_ENV+=		MANDIR=${PREFIX}/${PKGMANDIR}
-MAKE_ENV+=		LDADD=${LIBS:Q}
 
 REPLACE_AWK+=		examples/1_div_X/1_div_X_cmd \
 			examples/all_substr/all_substr_cmd \
@@ -45,7 +40,6 @@ REPLACE_SH+=		examples/cc_wrapper/cc_wrapper_cmd \
 			examples/broken_echo/transport_broken_echo2
 
 post-install:
-	${INSTALL_SCRIPT} ${.CURDIR}/files/paexec_reorder ${DESTDIR}${PREFIX}/bin
 .for i in ${DOC_FILES}
 	${INSTALL_DATA} ${WRKSRC}/"${i}" ${DESTDIR}${PKGDOCDIR}
 .endfor
@@ -74,3 +68,5 @@ post-install:
 
 .include "../../devel/libmaa/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
+
+MAKE_PROGRAM=	${PREFIX}/bin/mkcmake

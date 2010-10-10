@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.5 2009/08/10 19:35:34 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.6 2010/10/10 18:20:10 cheusov Exp $
 bin/paexec
 bin/paexec_reorder
 man/man1/paexec.1
+man/man1/paexec_reorder.1
+share/doc/paexec/COPYRIGHT
 share/doc/paexec/ChangeLog
 share/doc/paexec/NEWS
 share/doc/paexec/README
