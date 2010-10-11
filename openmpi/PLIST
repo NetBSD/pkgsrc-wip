@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2010/05/18 13:29:56 asau Exp $
+@comment $NetBSD: PLIST,v 1.11 2010/10/11 04:34:19 asau Exp $
 bin/mpiCC
 bin/mpic++
 bin/mpicc
@@ -69,9 +69,9 @@ lib/libmca_common_sm.la
 lib/libmpi.la
 lib/libmpi_cxx.la
 lib/libmpi_f77.la
+lib/libompitrace.la
 lib/libopen-pal.la
 lib/libopen-rte.la
-lib/libtrace.la
 lib/openmpi/libompi_dbg_msgq.la
 lib/openmpi/mca_allocator_basic.la
 lib/openmpi/mca_allocator_bucket.la
@@ -111,7 +111,6 @@ lib/openmpi/mca_mpool_rdma.la
 lib/openmpi/mca_mpool_sm.la
 lib/openmpi/mca_notifier_command.la
 lib/openmpi/mca_notifier_syslog.la
-lib/openmpi/mca_notifier_twitter.la
 lib/openmpi/mca_odls_default.la
 lib/openmpi/mca_oob_tcp.la
 lib/openmpi/mca_osc_pt2pt.la
@@ -121,7 +120,6 @@ lib/openmpi/mca_plm_rsh.la
 lib/openmpi/mca_plm_rshd.la
 lib/openmpi/mca_pml_cm.la
 lib/openmpi/mca_pml_csum.la
-lib/openmpi/mca_pml_dr.la
 lib/openmpi/mca_pml_ob1.la
 lib/openmpi/mca_pml_v.la
 lib/openmpi/mca_pubsub_orte.la
@@ -142,6 +140,7 @@ lib/openmpi/mca_routed_direct.la
 lib/openmpi/mca_routed_linear.la
 lib/openmpi/mca_routed_radix.la
 lib/openmpi/mca_routed_slave.la
+lib/openmpi/mca_sysinfo_linux.la
 lib/openmpi/mca_topo_unity.la
 lib/openmpi/mca_vprotocol_pessimist.la
 lib/pkgconfig/ompi-c.pc
@@ -507,7 +506,6 @@ share/openmpi/help-mpi-coll-sm.txt
 share/openmpi/help-mpi-common-sm.txt
 share/openmpi/help-mpi-errors.txt
 share/openmpi/help-mpi-pml-csum.txt
-share/openmpi/help-mpi-pml-dr.txt
 share/openmpi/help-mpi-pml-ob1.txt
 share/openmpi/help-mpi-runtime.txt
 share/openmpi/help-mpool-base.txt
@@ -532,7 +530,6 @@ share/openmpi/help-orte-filem-base.txt
 share/openmpi/help-orte-filem-rsh.txt
 share/openmpi/help-orte-iof.txt
 share/openmpi/help-orte-notifier-command.txt
-share/openmpi/help-orte-notifier-twitter.txt
 share/openmpi/help-orte-odls-base.txt
 share/openmpi/help-orte-ps.txt
 share/openmpi/help-orte-rmaps-base.txt
