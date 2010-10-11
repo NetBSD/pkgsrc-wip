@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Mikutter
+GenericName=Twitter Client
+Comment=a moest twitter client
+Exec=@PREFIX@/share/mikutter/mikutter.rb %u
+Icon=@PREFIX@/share/mikutter//core/skin/data/icon.png
+StartupNotify=false
+Terminal=false
+Type=Application
+Categories=Application;Network;
+MimeType=
