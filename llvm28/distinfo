@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/10/11 23:56:52 makoto Exp $
+
+SHA1 (llvm-2.8.tgz) = 6d49fe039d28e8664de25491c775cb2c599e30c1
+RMD160 (llvm-2.8.tgz) = 3f5a71d07e105a7cf46eafc7a9006a927035012c
+Size (llvm-2.8.tgz) = 9112527 bytes
+SHA1 (patch-ac) = aa592c91405203dce6c313f8bcf640dba6da9598
+SHA1 (patch-ad) = f0fd2e9902c1db6b5ed97bd87aeac73cc3ae3dfc
+SHA1 (patch-ae) = b1c05fb7d9c701e0a110f8687d98f577929145ae
