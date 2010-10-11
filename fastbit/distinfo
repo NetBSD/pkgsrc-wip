@@ -1,0 +1,12 @@
+$NetBSD: distinfo,v 1.1 2010/10/11 23:33:57 alnsn Exp $
+
+SHA1 (fastbit-ibis1.2.0.tar.gz) = 157341e8459a46f551d4613d5e999499761bbe6e
+RMD160 (fastbit-ibis1.2.0.tar.gz) = b319308a992d3c5bce593d7970902a0f58e49214
+Size (fastbit-ibis1.2.0.tar.gz) = 2197321 bytes
+SHA1 (patch-aa) = e86b078871d95ee905ac2c6e0b9ad06af384eacb
+SHA1 (patch-ab) = bcc852811da1c02919c5176e6bdd519b40070d1a
+SHA1 (patch-ac) = 7e6c731a032d586c7f5439c2947dab400d298735
+SHA1 (patch-ad) = 55aab0b9b78d76afaa83a37940523804e1c7e4bd
+SHA1 (patch-ae) = d47f9b0308a662fcdafa9fbdf2b01089917b9fea
+SHA1 (patch-af) = 60a3c61357e2a43efc8ea2b201d17b7c9ae79c3c
+SHA1 (patch-ag) = 9124476acab58fae27e27843052ca5acfef4e6b5

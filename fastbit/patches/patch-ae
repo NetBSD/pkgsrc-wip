@@ -1,0 +1,16 @@
+$NetBSD: patch-ae,v 1.1 2010/10/11 23:33:57 alnsn Exp $
+
+Preprocessor magic for NetBSD.
+
+--- src/part.cpp.orig	2010-07-14 22:35:03.000000000 +0000
++++ src/part.cpp
+@@ -13068,7 +13068,8 @@ void ibis::part::doBackup() {
+ 		       activeDir, backupDir);
+ 
+ 	char* cmd = new char[strlen(activeDir)+strlen(backupDir)+32];
+-#if defined(unix) || defined(linux) || defined(__HOS_AIX__) || defined(__APPLE__) || defined(__FreeBSD__)
++#if defined(unix) || defined(linux) || defined(__HOS_AIX__) || defined(__APPLE__) || defined(__FreeBSD__) \
++	|| defined(__NetBSD__)
+ 	sprintf(cmd, "/bin/cp -fr \"%s\" \"%s\"", activeDir, backupDir);
+ #elif defined(_WIN32)
+ 	sprintf(cmd, "xcopy /i /s /e /h /r /q \"%s\" \"%s\"", activeDir,

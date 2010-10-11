@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1 2010/10/11 23:33:57 alnsn Exp $
+
+Preprocessor magic for NetBSD.
+
+--- src/capi.h.orig	2010-05-26 21:57:39.000000000 +0000
++++ src/capi.h
+@@ -26,7 +26,7 @@
+ #if !defined(WITHOUT_FASTBIT_CONFIG_H) && !(defined(_WIN32)&&defined(_MSC_VER))
+ #include "fastbit-config.h"
+ #endif
+-#if defined(HAVE_INTTYPES_H) || defined(sun) || defined(__APPLE__) || defined(__FreeBSD__)
++#if defined(HAVE_INTTYPES_H) || defined(sun) || defined(__APPLE__) || defined(__FreeBSD__) || defined(__NetBSD__)
+ #include <inttypes.h>
+ #elif defined(HAVE_STDINT_H) || defined(unix) || defined(__APPLE__)
+ #include <stdint.h>
