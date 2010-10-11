@@ -1,19 +1,22 @@
-@comment $NetBSD: PLIST,v 1.13 2010/03/14 23:54:15 asau Exp $
+@comment $NetBSD: PLIST,v 1.14 2010/10/11 07:52:37 asau Exp $
 bin/bt2line
 bin/check_callstack
 bin/clog2_join
 bin/clog2_print
 bin/clog2_repair
-bin/hydserv
+bin/hydra_nameserver
+bin/hydra_persist
+bin/hydra_pmi_proxy
 bin/mpic++
 bin/mpicc
 bin/mpich2version
 bin/mpicxx
 bin/mpiexec
 bin/mpiexec.gforker
+bin/mpiexec.hydra
 bin/mpif77
+bin/mpirun
 bin/parkill
-bin/pmi_proxy
 include/clog_commset.h
 include/clog_const.h
 include/clog_inttypes.h
@@ -59,7 +62,7 @@ lib/libmpe_null.a
 lib/libmpich.a
 lib/libmpichcxx.a
 lib/libmpl.la
-lib/libopa.a
+lib/libopa.la
 lib/libtmpe.a
 lib/mpe_prof.o
 lib/pkgconfig/mpich2-ch3.pc
