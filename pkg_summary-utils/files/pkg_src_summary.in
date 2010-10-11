@@ -85,6 +85,8 @@ if test -z "$PSS_PPERS"; then
     PSS_PPERS=10
 fi
 
+PSS_PPERS=1 # until I really fix it.
+
 set_fields (){
     PSS_FIELDS=$(echo $* | tr , ' ')
 }
