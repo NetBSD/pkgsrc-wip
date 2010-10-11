@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/08/14 11:53:54 obache Exp $
-lib/netscape/gecko-mediaplayer-dvx.so
-lib/netscape/gecko-mediaplayer-qt.so
-lib/netscape/gecko-mediaplayer-rm.so
-lib/netscape/gecko-mediaplayer-wmp.so
-lib/netscape/gecko-mediaplayer.so
+@comment $NetBSD: PLIST,v 1.2 2010/10/11 01:13:04 obache Exp $
+lib/netscape/plugins/gecko-mediaplayer-dvx.so
+lib/netscape/plugins/gecko-mediaplayer-qt.so
+lib/netscape/plugins/gecko-mediaplayer-rm.so
+lib/netscape/plugins/gecko-mediaplayer-wmp.so
+lib/netscape/plugins/gecko-mediaplayer.so
 share/doc/gecko-mediaplayer/AUTHORS
 share/doc/gecko-mediaplayer/COPYING
 share/doc/gecko-mediaplayer/ChangeLog

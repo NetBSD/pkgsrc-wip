@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/08/14 11:53:54 obache Exp $
+# $NetBSD: Makefile,v 1.2 2010/10/11 01:13:04 obache Exp $
 #
 
 DISTNAME=	gecko-mediaplayer-0.9.9.2
@@ -23,7 +23,7 @@ USE_TOOLS+=		pkg-config msgfmt
 GCONF_SCHEMAS+=		gecko-mediaplayer.schemas
 
 CONFIGURE_ARGS+=	--enable-new-libxul
-CONFIGURE_ARGS+=	--with-plugin-dir=${PREFIX}/lib/netscape
+CONFIGURE_ARGS+=	--with-plugin-dir=${PREFIX}/lib/netscape/plugins
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/nspr/buildlink3.mk"
