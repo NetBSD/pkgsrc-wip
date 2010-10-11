@@ -117,7 +117,9 @@ BEGIN {
 }
 
 process_options (){
-    alt_getopt \
+    alt_opts="$1"
+    shift
+    alt_getopt $alt_opts \
 	'h help'        'usage; exit 0' \
 	'=f fields'      'set_fields ' \
 	'=a add-fields'  'add_fields ' \
@@ -136,7 +138,9 @@ process_options (){
 	G                debug=1 \
 	-- "$@"
 }
-cmds=`process_options $PSS_OPTIONS "$@"`
+cmds=`process_options -c $PSS_OPTIONS`
+eval "$cmds"
+cmds=`process_options '' "$@"`
 eval "$cmds"
 
 pkgpaths="$*"
