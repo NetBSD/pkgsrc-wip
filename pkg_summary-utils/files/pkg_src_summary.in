@@ -413,7 +413,8 @@ if test "$PSS_SLAVES"; then
 	    -n "$PSS_SLAVES" \
 	    -t "$PSS_TRANSPORT" \
 	    -c "env $environ $0 -s $with_xxx -f '$qfields'" '|' \
-	paexec_reorder -S > "$partial_summary_fn"
+	paexec_reorder -S '|' \
+	sed -e '/^success$/ d' -e '/^failure$/ d' > "$partial_summary_fn"
 elif test "$slave"; then
     process_one_by_one
     exit 0
