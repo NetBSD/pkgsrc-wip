@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2010/10/11 23:00:20 makoto Exp $
+@comment $NetBSD: PLIST,v 1.26 2010/10/12 01:50:59 makoto Exp $
 bin/bugpoint
 bin/llc
 bin/lli
@@ -399,6 +399,7 @@ include/llvm/System/Program.h
 include/llvm/System/RWMutex.h
 include/llvm/System/Signals.h
 include/llvm/System/Solaris.h
+include/llvm/System/SwapByteOrder.h
 include/llvm/System/ThreadLocal.h
 include/llvm/System/Threading.h
 include/llvm/System/TimeValue.h
