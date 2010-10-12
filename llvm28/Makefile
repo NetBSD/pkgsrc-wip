@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/10/11 23:56:52 makoto Exp $
+# $NetBSD: Makefile,v 1.2 2010/10/12 01:15:45 makoto Exp $
 
 DISTNAME=	llvm-2.8
 CATEGORIES=	lang
-MASTER_SITES=	http://llvm.org/releases/2.8/
+MASTER_SITES=	http://llvm.org/releases/${PKGVERSION_NOREV}/
 
 MAINTAINER=	adam.hoka@gmail.com
 HOMEPAGE=	http://llvm.org/
