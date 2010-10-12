@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/10/03 19:05:59 ryo-on Exp $
+# $NetBSD: Makefile,v 1.4 2010/10/12 18:18:34 rxg Exp $
 #
 
 DISTNAME=	libvpx-0.9.2
@@ -30,19 +30,19 @@ SUBST_MESSAGE.fix-paths=	Fixing bash paths.
 SUBST_FILES.fix-paths=		configure \
 				build/make/version.sh \
 				build/make/gen_asm_deps.sh \
+				examples/gen_example_text.sh \
 				examples/gen_example_code.sh
 SUBST_SED.fix-paths=		-e 's,/bin/bash,${BASH},g'
 
 CONFIGURE_ARGS+=	--enable-pic \
-			--enable-postproc \
+			--disable-postproc \
 			--enable-runtime-cpu-detect \
 			--prefix=${PREFIX}
 
-.include "../../mk/bsd.prefs.mk"
-.if ${OBJECT_FMT} == "ELF"
-CONFIGURE_ARGS+=	--enable-shared
-.endif
-
 BUILD_TARGET=	# none
 
+post-extract:
+	${CP} ${FILESDIR}/strip_fPIC.sh ${WRKSRC}
+
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
