@@ -1,0 +1,3 @@
+* lang/clang and llvm have many common files, and would
+  confict each other.  Just adding CONFLICT line or resolve
+  conflicts by dividing both packages.
