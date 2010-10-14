@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4108 2010/10/11 07:44:16 obache Exp $
+# $Id: Makefile,v 1.4109 2010/10/14 07:34:36 makoto Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -121,6 +121,7 @@ SUBDIR+=	ati-xfree86-bin
 SUBDIR+=	ati-xfree86-bin-unstable
 SUBDIR+=	atlas
 SUBDIR+=	aubio
+SUBDIR+=	auctex-current
 SUBDIR+=	audacity-devel
 SUBDIR+=	audio-mml
 SUBDIR+=	audit-system
