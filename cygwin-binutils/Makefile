@@ -1,11 +1,15 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/08/28 06:14:09 makoto Exp $
-# $Id: Makefile,v 1.1.1.1 2008/08/28 06:14:09 makoto Exp $
+# $NetBSD: Makefile,v 1.2 2010/10/14 03:53:53 makoto Exp $
+# $Id: Makefile,v 1.2 2010/10/14 03:53:53 makoto Exp $
 
-DISTNAME=	binutils-2.18
+DISTNAME=	binutils-2.20
 PKGNAME=	cygwin-${DISTNAME:S/-src//}
 CATEGORIES=	cross
 MASTER_SITES=	${MASTER_SITE_GNU:=binutils/}
 EXTRACT_SUFX=	.tar.bz2
+
+#PATCH_SITES=    ${MASTER_SITE_GNU:=binutils/}      
+#PATCHFILES=     binutils-2.20-2.20.1-patch.gz
+#PATCH_DIST_STRIP=       -p1
 
 MAINTAINER=	makoto@ki.nu
 HOMEPAGE=	http://www.cygwin.com/
