@@ -1,0 +1,14 @@
+$NetBSD: patch-require-help-mode,v 1.1 2010/10/14 04:38:44 phonohawk Exp $
+
+--- auto-complete.el.orig	2010-10-14 03:56:17.000000000 +0000
++++ auto-complete.el
+@@ -48,6 +48,9 @@
+ 
+ (require 'popup)
+ 
++;; Ensure help-xref-following is defvar'ed.
++(require 'help-mode)
++
+ ;;;; Global stuff
+ 
+ (defun ac-error (&optional var)

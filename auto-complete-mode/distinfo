@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/10/01 06:12:03 phonohawk Exp $
+$NetBSD: distinfo,v 1.2 2010/10/14 04:38:44 phonohawk Exp $
 
 SHA1 (auto-complete-1.3.tar.bz2) = b8ff9e83ad87391bb971b21a749370c198f0c546
 RMD160 (auto-complete-1.3.tar.bz2) = 015a3c08f35dc9b6ce79b453ebc9704a346d92fa
 Size (auto-complete-1.3.tar.bz2) = 138002 bytes
+SHA1 (patch-require-help-mode) = 5eb2eb0ef43cec9714f9abeba690f688ed2e8dec
