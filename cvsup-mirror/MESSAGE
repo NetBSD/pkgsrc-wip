@@ -1,31 +1,35 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2010/10/15 12:01:29 bseklecki Exp $
+$NetBSD: MESSAGE,v 1.3 2010/10/15 16:57:27 bseklecki Exp $
 To setup your shiny new CVSUp mirror:
 
- * Make a symlink within %PREFIX%/etc/cvsup/collections for
+ * Make a symlink within %PREFIX%/etc/cvsup/prefixes for
    directiory ../ -> NetBSD-distrib.self/
 
-   e.g., % cd /usr/pkg/etc/cvsup/collections && ln -s ../ ./NetBSD-distrib.self
+   e.g., % cd /usr/pkg/etc/cvsup/prefixes && ln -s ../ ./NetBSD-distrib.self
 
- * Make a symlink within %PREFIX%/etc/cvsup/collections for
-   directory /export/foo -> -> ./NetBSD.cvs
+ * Make a symlink within %PREFIX%/etc/cvsup/prefixes for
+   directory /export/netbsd/cvs -> ./NetBSD.cvs
 
-   e.g., % cd %PREFIX%/etc/cvsup/collections &&
-	ln -s /export/netbsd/cvs ./NetBSD-distrib.self
+   e.g., % cd %PREFIX%/etc/cvsup/prefixes &&
+	ln -s /export/netbsd/cvs ./NetBSD-CVS
 
  * NOTE: This package ships with a NetBSD client CVSUP supfile that
-   will fetch the "Self" repository from cvsup.jp.netbsd.org; these
-   sup files will reference CVS Repo in path /home/cvsroot ; please
-   ensure that this directory is also symlink'd the path of your CVS
-   repository such as the /export/foo above.
+   will fetch the "NetBSD-distrib.self" repository from cvsup.jp.netbsd.org;
+   these sup files are actually a collection on cvsupd(8) config files that work
+   in combination with the full CVS tree mirror.
+
+   They will reference a full NetBSD CVS tree in path /home/cvsroot ; please
+   ensure that /home/cvsroot is also symlink'd the path of your CVS
+   repository such as the /export/netbsd/cvs above.
 
  * Make sure you have two POSIX [user:group] pairs setup, normally:
    [cvsupin:cvsupin] to run the upgrade script and own all CVS
    repositories, and [cvsup:cvsup] to run the cvsupd(8) service daemon.
 
- * Setup your cvsupd(8) configuration in rc.conf(5), by default it will
-   serve known collections listed in %PREFIX%/etc/cvsup/sup which will
-   be populated by the initial manual synchronization
+ * Setup your cvsupd(8) configuration in rc.conf(5); by default it will
+   serve known 'collections' listed in %PREFIX%/etc/cvsup/sup which will
+   be populated by the initial manual synchronization via the
+   NetBSD-distrib.self prefix symlink
 
  * Run an initial manual synchronization:
 
@@ -36,5 +40,5 @@ To setup your shiny new CVSUp mirror:
    15 0-12,14-23 * * * /usr/pkg/etc/cvsup/update.sh netbsd -s
    15 13 * * * /usr/pkg/etc/cvsup/update.sh netbsd # run it 1/day w/o scanfiles
 
- * Monitor your mirror for freshness!
+ * Monitor your mirror for freshness using your NMS!
 ===========================================================================
