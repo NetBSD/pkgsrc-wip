@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/10/15 11:40:36 bseklecki Exp $
+etc/cvsup/update.sh
+etc/cvsup/config.netbsd.conf
+etc/cvsup/supfile-netbsd
+etc/cvsup/supfile-freebsd
+@exec ${MKDIR} %D/etc/cvsup

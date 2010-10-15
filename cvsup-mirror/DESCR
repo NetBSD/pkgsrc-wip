@@ -1,0 +1,7 @@
+A small package that installs basic dependencies and support so that
+one can very quickly setup a NetBSD CVS Tree mirror server.  Based
+on FreeBSD's port of identical name with some improvements.
+
+Released in the interest of furthering the use of CVSUP as a
+faster alternative to CVS Checkouts (Note: pkgsrc-wip has
+full CVSUp checkout support from cvsup.netbsd.se)

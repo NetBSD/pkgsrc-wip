@@ -1,0 +1,34 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2010/10/15 11:40:36 bseklecki Exp $
+To setup your shiny new CVSUp mirror:
+
+ * Make a symlink within %PREFIX%/etc/cvsup/collections for
+   directiory ../ -> NetBSD-distrib.self/
+
+   e.g., % cd /usr/pkg/etc/cvsup/collections && ln -s ../ ./NetBSD-distrib.self
+
+ * Make a symlink within %PREFIX%/etc/cvsup/collections for
+   directory /export/foo -> -> ./NetBSD.cvs
+
+   e.g., % cd %PREFIX%/etc/cvsup/collections &&
+	ln -s /export/netbsd/cvs ./NetBSD-distrib.self
+
+ * Make sure you have two POSIX [user:group] pairs setup, normally:
+   [cvsupin:cvsupin] to run the upgrade script and own all CVS
+   repositories, and [cvsup:cvsup] to run the cvsupd(8) service daemon.
+
+ * Setup your cvsupd(8) configuration in rc.conf(5), by default it will
+   serve known collections listed in %PREFIX%/etc/cvsup/sup which will
+   be populated by the initial manual synchronization
+
+ * Run an initial manual synchronization:
+
+   e.g., %PREFIX%/etc/cvsup/update.sh netbsd
+
+ * Setup a cronjob schedule agreeable to your bandwidth such as:
+
+   15 0-12,14-23 * * * /usr/pkg/etc/cvsup/update.sh netbsd -s
+   15 13 * * * /usr/pkg/etc/cvsup/update.sh netbsd # run it 1/day without scanfiles
+
+ * Monitor your mirror for freshness!
+===========================================================================

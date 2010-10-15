@@ -1,0 +1,9 @@
+# Standard supfile for CVSup FreeBSD mirrors.
+#
+*default delete use-rel-suffix umask=002
+cvs-all      release=cvs     prefix=/export/freebsd/cvs
+#gnats        release=current SKIP
+#www          release=current SKIP
+#mail-archive release=current SKIP
+distrib      release=self    prefix=prefixes/distrib.self
+

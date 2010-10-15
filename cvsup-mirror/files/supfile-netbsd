@@ -1,0 +1,73 @@
+#
+# Example cvsup config file provided by
+# Onno van der Linden <o.vd.linden@quicknet.nl>
+#
+
+
+# This file can be used to obtain the checked-out NetBSD source files
+
+#*default tag=.                         # Get the current files.  Replace the
+                                        # ``.'' with a cvs tag to get other
+                                        # NetBSD releases.
+#*default release=cvs
+*default delete use-rel-suffix
+*default umask=022
+
+*default release=cvs
+
+*default host=cvsup.jp.freebsd.org
+*default base=/usr/pkg/etc/cvsup
+*default prefix=/export0/netbsd-cvs
+
+
+*default compress                       # Use this unless your network link
+                                        # is a T1 or faster
+
+# You can get everything using the ``netbsd'' collection.
+#netbsd prefix=prefixes/NetBSD.cvs
+#netbsd-base                            # CVSROOT and misc
+#
+#netbsd-src                             # All of src tree
+#netbsd-src-base                        #   src/[A-Z]* and misc.
+#netbsd-src-bin                         #   src/bin
+#netbsd-src-crypto                      #   src/crypto
+#netbsd-src-dist                        #   src/dist
+#netbsd-src-distrib                     #   src/distrib
+#netbsd-src-doc                         #   src/doc
+#netbsd-src-etc                         #   src/etc
+#netbsd-src-games                       #   src/games
+#netbsd-src-gnu                         #   src/gnu
+#netbsd-src-include                     #   src/include
+#netbsd-src-lib                         #   src/lib
+#netbsd-src-libexec                     #   src/libexec
+#netbsd-src-regress                     #   src/regress
+#netbsd-src-rescue                      #   src/rescue
+#netbsd-src-sbin                        #   src/sbin
+#netbsd-src-share                       #   src/share
+#netbsd-src-sys                         #   src/sys
+#netbsd-src-tools                       #   src/tools
+#netbsd-src-usrbin                      #   src/usr.bin
+#netbsd-src-usrsbin                     #   src/usr.sbin
+#
+netbsd-htdocs                           # htdocs
+#netbsd-othersrc                        # othersrc
+#netbsd-pkgsrc                          # pkgsrc
+#netbsd-xsrc                            # All of xsrc tree
+#netbsd-xsrc-3                          # xsrc tree for XFree86 3.X
+#netbsd-xsrc-4                          # xsrc tree for XFree86 4.X
+#
+#netbsd-distrib release=self            # server's own config files
+
+#netbsd-distrib    release=self prefix=prefixes/NetBSD-distrib.self
+
+# Alternatively, comment out the ``netbsd'' collection and just get one or
+# more of the partial collections by uncommenting them below.
+
+# netbsd-basesrc
+# netbsd-doc
+# netbsd-gnusrc
+# netbsd-sharesrc
+# netbsd-syssrc
+# netbsd-pkgsrc
+# netbsd-xsrc
+
