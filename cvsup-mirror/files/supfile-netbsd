@@ -12,19 +12,15 @@
 #*default release=cvs
 *default delete use-rel-suffix
 *default umask=022
-
 *default release=cvs
-
 *default host=cvsup.jp.freebsd.org
 *default base=/usr/pkg/etc/cvsup
 *default prefix=/export0/netbsd-cvs
-
-
 *default compress                       # Use this unless your network link
                                         # is a T1 or faster
 
 # You can get everything using the ``netbsd'' collection.
-#netbsd prefix=prefixes/NetBSD.cvs
+netbsd prefix=prefixes/NetBSD.cvs
 #netbsd-base                            # CVSROOT and misc
 #
 #netbsd-src                             # All of src tree
@@ -49,7 +45,7 @@
 #netbsd-src-usrbin                      #   src/usr.bin
 #netbsd-src-usrsbin                     #   src/usr.sbin
 #
-netbsd-htdocs                           # htdocs
+#netbsd-htdocs                           # htdocs
 #netbsd-othersrc                        # othersrc
 #netbsd-pkgsrc                          # pkgsrc
 #netbsd-xsrc                            # All of xsrc tree

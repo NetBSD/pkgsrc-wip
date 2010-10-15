@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2010/10/15 11:40:36 bseklecki Exp $
+$NetBSD: MESSAGE,v 1.2 2010/10/15 12:01:29 bseklecki Exp $
 To setup your shiny new CVSUp mirror:
 
  * Make a symlink within %PREFIX%/etc/cvsup/collections for
@@ -12,6 +12,12 @@ To setup your shiny new CVSUp mirror:
 
    e.g., % cd %PREFIX%/etc/cvsup/collections &&
 	ln -s /export/netbsd/cvs ./NetBSD-distrib.self
+
+ * NOTE: This package ships with a NetBSD client CVSUP supfile that
+   will fetch the "Self" repository from cvsup.jp.netbsd.org; these
+   sup files will reference CVS Repo in path /home/cvsroot ; please
+   ensure that this directory is also symlink'd the path of your CVS
+   repository such as the /export/foo above.
 
  * Make sure you have two POSIX [user:group] pairs setup, normally:
    [cvsupin:cvsupin] to run the upgrade script and own all CVS
@@ -28,7 +34,7 @@ To setup your shiny new CVSUp mirror:
  * Setup a cronjob schedule agreeable to your bandwidth such as:
 
    15 0-12,14-23 * * * /usr/pkg/etc/cvsup/update.sh netbsd -s
-   15 13 * * * /usr/pkg/etc/cvsup/update.sh netbsd # run it 1/day without scanfiles
+   15 13 * * * /usr/pkg/etc/cvsup/update.sh netbsd # run it 1/day w/o scanfiles
 
  * Monitor your mirror for freshness!
 ===========================================================================

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/10/15 11:40:36 bseklecki Exp $
+# $NetBSD: Makefile,v 1.2 2010/10/15 12:01:29 bseklecki Exp $
 #
 
 PKGVERSION=	1.0
@@ -31,7 +31,6 @@ post-install:
 	${INSTALL_DATA_DIR} ${PKG_SYSCONFDIR}/sup
 	${INSTALL_DATA_DIR} ${PKG_SYSCONFDIR}/sup-client-scan
 	${INSTALL_DATA_DIR} ${PKG_SYSCONFDIR}/prefixes
-	${INSTALL_DATA_DIR} /home/cvsroot
 
 DEPENDS+=            cvsup-16.1.hnb2:../../devel/cvsup
 
