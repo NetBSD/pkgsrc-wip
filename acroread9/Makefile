@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2010/10/08 22:50:32 ryo-on Exp $
+# $NetBSD: Makefile,v 1.4 2010/10/16 16:02:22 ryo-on Exp $
 
 DISTNAME=	acroread9	# overridden below
 PKGNAME=	acroread9-9.4.0
 CATEGORIES=	print
-MASTER_SITES=	ftp://ftp.adobe.com/pub/adobe/reader/unix/9.x/9.4.0/enu/
+MASTER_SITES=	http://ardownload.adobe.com/pub/adobe/reader/unix/9.x/9.4.0/enu/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.adobe.com/products/acrobat/readstep2.html
