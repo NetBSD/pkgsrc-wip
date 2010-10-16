@@ -1,0 +1,20 @@
+$NetBSD: patch-ab,v 1.1.1.1 2010/10/16 17:09:38 hoka_adam Exp $
+
+--- Makefile.orig	2010-03-24 20:53:23.000000000 +0000
++++ Makefile
+@@ -23,8 +23,8 @@ OBJS:=$(patsubst %.c, %.o, $(SRCS))
+ 
+ 
+ # OpenSSL - usually installed at a standard place
+-# EXTRA_CFLAGS:=
+-# EXTRA_LDFLAGS:=-lcrypto -lssl 
++EXTRA_CFLAGS:=
++EXTRA_LDFLAGS:=-lcrypto -lssl 
+ 
+ CFLAGS:=$(CFLAGS) -I. -Wall $(EXTRA_CFLAGS)
+ LDFLAGS:=$(EXTRA_LDFLAGS) $(LDFLAGS) -lconfig 
+@@ -42,4 +42,3 @@ clean:
+ all: umurmurd
+ 
+ $(OBJS): Makefile
+-

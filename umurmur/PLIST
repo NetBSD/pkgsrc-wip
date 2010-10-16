@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/10/16 17:09:38 hoka_adam Exp $
+sbin/umurmurd
+share/examples/umurmur/umurmur.conf

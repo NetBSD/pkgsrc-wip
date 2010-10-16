@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/10/16 17:09:38 hoka_adam Exp $
+
+SHA1 (umurmur-0.2.4.tar.gz) = 38c602fea05de8f82ae2abccb98e91abbea65f52
+RMD160 (umurmur-0.2.4.tar.gz) = daf683eb75f1e903dbdf197af962da9ff3cf2ee3
+Size (umurmur-0.2.4.tar.gz) = 75505 bytes
+SHA1 (patch-aa) = b97e094549a9fa27fd267aa63a8e67179ef678f7
+SHA1 (patch-ab) = b8ad6f83f9d54bbed170224fe82bf6f2aeb74a04
