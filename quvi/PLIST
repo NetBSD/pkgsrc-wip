@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2010/09/13 09:41:09 ryo-on Exp $
+@comment $NetBSD: PLIST,v 1.5 2010/10/17 21:30:19 ryo-on Exp $
 bin/quvi
 include/quvi/quvi.h
 lib/libquvi.la
@@ -8,6 +8,7 @@ share/quvi/lua/README
 share/quvi/lua/util/charset.lua
 share/quvi/lua/util/content_type.lua
 share/quvi/lua/website/README
+share/quvi/lua/website/academicearth.lua
 share/quvi/lua/website/break.lua
 share/quvi/lua/website/buzzhumor.lua
 share/quvi/lua/website/charlierose.lua
