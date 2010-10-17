@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/10/16 17:09:38 hoka_adam Exp $
+# $NetBSD: Makefile,v 1.2 2010/10/17 08:49:14 hoka_adam Exp $
 #
 
 DISTNAME=	umurmur-0.2.4
@@ -25,6 +25,12 @@ SUBST_STAGE.conf=	post-extract
 SUBST_FILES.conf=	conf.c
 SUBST_SED.conf=	-e 's,/etc/umurmur.conf,${PKG_SYSCONFDIR}/umurmur.conf,g'
 
+SUBST_CLASSES+=		certdir
+SUBST_STAGE.certdir=	post-extract
+SUBST_FILES.certdir=	../umurmur.conf.example
+SUBST_SED.certdir=	-e 's,/etc,${PKG_SYSCONFDIR},g'
+
+MAKE_DIRS+=	${PKG_SYSCONFDIR}/umurmur
 RCD_SCRIPTS=	umurmur
 
 do-install:
