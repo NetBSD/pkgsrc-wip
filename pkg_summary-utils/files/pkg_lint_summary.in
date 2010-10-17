@@ -29,7 +29,6 @@
 #use "power_getopt.awk"
 #use "psu_funcs.awk"
 #use "has_prefix.awk"
-#use "exitnow.awk"
 #use "braceexpand.awk"
 #use "glob.awk"
 
@@ -39,9 +38,10 @@
 # usage: pkg_lint_summary -h
 #        pkg_lint_summary [OPTIONS] [files...]
 # OPTIONS:
-#   -h|--help      display this help
-#   -l             checks REQUIRES/PROVIDES fields
-#   -d             checks DEPENDS fields (required dependencies are present)
+#   -h|--help   display this help
+#   -l          checks REQUIRES/PROVIDES fields
+#   -L          compare REQUIRES non-pkgsrc libs and reality (file system)
+#   -d          checks DEPENDS fields (required dependencies are present)
 #.end-str
 ############################################################
 
@@ -50,12 +50,13 @@ BEGIN {
 	if (prefix == "")
 		prefix = "@@prefix@@"
 
+	opt_L = getarg("L")
 	opt_l = getarg("l")
 	opt_d = getarg("d")
 	cnt = 0
 
-	if (!opt_l && !opt_d){
-		print "One of the following options should be applied: -l, -d"	\
+	if (!opt_L && !opt_l && !opt_d){
+		print "One of the following options should be applied: -L, -l or -d" \
 			> "/dev/stderr"
 		exitnow(1)
 	}
@@ -78,12 +79,17 @@ NF == 0 {
 	pkg2ver [pkgbase] = 1
 }
 
-opt_l {
+opt_l || opt_L {
 	if (/^REQUIRES=/){
 		requires1 = substr($0, 10)
 		if (!(requires1 in provides2pkg))
 			requires [++requires_cnt] = requires1
-	}else if (/^PROVIDES=/){
+		if (opt_L && !has_prefix(requires1, prefix)){
+			dirname = requires1
+			sub(/\/[^\/]*\/?$/, "", dirname)
+			syslibdirs [dirname] = 1
+		}
+	}else if (opt_l && /^PROVIDES=/){
 		provides1 = substr($0, 10)
 		provides2pkg [provides1] = 1
 	}else if (NF == 0){
@@ -127,18 +133,35 @@ function check_ver (ver, condition){
 
 END {
 	ex = 0
+	if (opt_L){
+		for (libdir in syslibdirs){
+			pipe = "ls -1 '" libdir "'"
+			while((pipe | getline lib) > 0){
+				syslibs [libdir "/" lib] = 0
+			}
+			close(pipe)
+		}
+	}
+
 	if (opt_l){
 		for (p in reqd_libs){
-			if (! (p in provides2pkg)){
-				if (has_prefix(p, prefix)){
-					for (i=1; i <= reqd_libs2cnt [p]; ++i){
-						print "l: not_found " p, reqd_libs2where [p, i]
-						ex = 1
-					}
+			ok = 1
+			if (has_prefix(p, prefix)){
+				ok = (p in provides2pkg)
+				lpref = "l"
+			}else if (opt_L){
+				ok = (p in syslibs)
+				lpref = "L"
+			}
+			if (!ok){
+				for (i=1; i <= reqd_libs2cnt [p]; ++i){
+					print lpref ": not_found " p, reqd_libs2where [p, i]
+					ex = 1
 				}
 			}
 		}
 	}
+
 	if (opt_d){
 		for (d in depends){
 			# d: pkgpath SUBSEP pkgname SUBSEP <index>
