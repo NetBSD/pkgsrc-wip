@@ -38,8 +38,9 @@
 #    -r                 output dependencies
 #    -x                 exclude packages in the list
 #    -v                 invert condition
+#    -n                 output nodes, not edges
 #
-# Input graph is represented by list of arcs and isolated nodes, e.g.
+# Input graph is represented by list of edges and isolated nodes, e.g.
 #   devel/gmake textproc/dict-client
 #   devel/gmake textproc/dict-server
 #   devel/libjudy
@@ -57,6 +58,7 @@ BEGIN {
 	opt_deps   = getarg("r")
 	opt_excl   = getarg("x")
 	opt_invert = getarg("v")
+	opt_nodes  = getarg("n")
 
 	if (!fn && !pkgs){
 		print "-f or -p are mandatory!" > "/dev/stderr"
@@ -77,9 +79,9 @@ BEGIN {
 
 NF == 2 {
 	if (opt_deps)
-		arc [$2, ++count [$2]] = $1
+		edge [$2, ++count [$2]] = $1
 	else
-		arc [$1, ++count [$1]] = $2
+		edge [$1, ++count [$1]] = $2
 
 	nodes [$1] = nodes [$2] = 1
 	next
@@ -98,13 +100,13 @@ function rec (pkg,                    i,to){
 
 	result [pkg] = 1
 	for (i=1; i <= count [pkg]; ++i){
-		to = arc [pkg, i]
+		to = edge [pkg, i]
 		rec(to)
 		result [to] = 1
 	}
 }
 
-function print_arc (from, to){
+function print_edge (from, to){
 	if ((from in result) && (to in result)){
 		print from, to
 		printed [from] = printed [to] = 1
@@ -129,13 +131,15 @@ END {
 		}
 	}
 
-	for (i in arc){
-		from = substr(i, 1, index(i, SUBSEP)-1)
+	if (!opt_nodes){
+		for (i in edge){
+			from = substr(i, 1, index(i, SUBSEP)-1)
 
-		if (opt_deps)
-			print_arc(arc [i], from)
-		else
-			print_arc(from, arc [i])
+			if (opt_deps)
+				print_edge(edge [i], from)
+			else
+				print_edge(from, edge [i])
+		}
 	}
 
 	for (i in nodes){

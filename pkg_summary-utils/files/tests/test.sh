@@ -2476,6 +2476,25 @@ wip/heirloom-libcommon wip/libuxre
 wip/runawk
 '
 
+pkg_subgraph_deps -xvn -f src_pkgs.txt src_deps.txt | sort |
+cmp 'pkg_subgraph_deps #6' \
+'devel/gmake
+devel/libjudy
+devel/libmaa
+devel/libtool-base
+devel/pipestatus
+lang/f2c
+net/netcat
+textproc/dict-client
+textproc/dict-server
+textproc/dictem
+wip/heirloom-common
+wip/heirloom-doc
+wip/heirloom-libcommon
+wip/libuxre
+wip/runawk
+'
+
 # pkg_bin_summary
 pkg_bin_summary pkg_install |
 grep -E 'LICENSE|PKGPATH' |
