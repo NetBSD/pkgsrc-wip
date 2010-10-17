@@ -1,6 +1,2 @@
 * libgail.so and libatk-bridge.so are needed.
-* When opening Japanese PDF file, acroread crushes (font problem?)
-* relocate man page, now in /usr/pkg/Acrobat9/Adobe/Reader9/Resource/Shell/acroread.1
-* Fill PLIST.Linux
-* resolve CVE-2010-2883 - http://secunia.com/advisories/41340
 + Resolve CVE-2010-2884 - http://secunia.com/advisories/41434

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2010/10/09 00:21:01 ryo-on Exp $
+@comment $NetBSD: PLIST,v 1.5 2010/10/17 16:30:08 ryo-on Exp $
 Acrobat9/Adobe/Reader9/Browser/HowTo/ENU/Browser_Plugin_HowTo.txt
 Acrobat9/Adobe/Reader9/Browser/install_browser_plugin
 Acrobat9/Adobe/Reader9/Browser/intellinux/nppdf.so
@@ -261,7 +261,6 @@ Acrobat9/Adobe/Reader9/Resource/Linguistics/Providers/Proximity/11.00/usa.fca
 Acrobat9/Adobe/Reader9/Resource/Linguistics/Providers/Proximity/11.00/usa03.hsp
 Acrobat9/Adobe/Reader9/Resource/Linguistics/Providers/Proximity/11.00/usa03.ths
 Acrobat9/Adobe/Reader9/Resource/Linguistics/Providers/Proximity/11.00/usa37.hyp
-Acrobat9/Adobe/Reader9/Resource/Shell/acroread.1
 Acrobat9/Adobe/Reader9/Resource/Shell/acroread_tab
 Acrobat9/Adobe/Reader9/Resource/Support/AdobeReader.desktop
 Acrobat9/Adobe/Reader9/Resource/Support/AdobeReader.xml
@@ -318,3 +317,5 @@ Acrobat9/Adobe/Reader9/bin/UNINSTALL
 Acrobat9/Adobe/Reader9/bin/acroread
 bin/acroread
 bin/acroread9
+man/man1/acroread.1
+man/man1/acroread9.1

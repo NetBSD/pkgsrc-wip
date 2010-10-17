@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/10/16 16:02:22 ryo-on Exp $
+# $NetBSD: Makefile,v 1.5 2010/10/17 16:30:08 ryo-on Exp $
 
 DISTNAME=	acroread9	# overridden below
 PKGNAME=	acroread9-9.4.0
@@ -37,7 +37,7 @@ EMUL_REQD=		suse>=10.0
 DISTNAME=	AdbeRdr9.4-1_i486linux_enu
 EXTRACT_SUFX=	.tar.bz2
 PLATFORM=	intellinux
-PLIST_SRC=	PLIST #PLIST.Linux
+PLIST_SRC=	PLIST
 PLATFORM=	unknown
 .endif
 
@@ -49,7 +49,7 @@ BIN_PATCH=	${PATCH} --quiet ${_PATCH_BACKUP_ARG} .orig
 BUILD_DEFS+=		ACROREAD_FONTPATH
 ACROREAD_FONTPATH?=	${PREFIX}/lib/X11/fonts/TTF
 
-INSTALLATION_DIRS=	Acrobat9 bin
+INSTALLATION_DIRS=	Acrobat9 bin man/man1
 
 do-install:
 	set -e; ( ${ECHO} n; ${ECHO} n ) | InstallDir=${DESTDIR}${PREFIX}/Acrobat9 ${WRKSRC}/INSTALL
@@ -70,6 +70,10 @@ post-install:
 	${LN} -sf ${DESTDIR}${PREFIX}/Acrobat9/Adobe/Reader9/bin/acroread \
 	     ${DESTDIR}${PREFIX}/bin/acroread9
 	${CHMOD} +x ${DESTDIR}${PREFIX}/bin/acroread9
+	${MV} ${DESTDIR}${PREFIX}/Acrobat9/Adobe/Reader9/Resource/Shell/acroread.1 \
+	${DESTDIR}${PREFIX}/man/man1
+	cd ${DESTDIR}${PREFIX}/man/man1 && \
+	${LN} -sf acroread.1 acroread9.1
 	@${ECHO_MSG} "Be sure to read the license agreement in"
 	@${ECHO_MSG} "${DESTDIR}${PREFIX}/Acrobat9/Reader/Legal/ENU/License.html"
 	${LN} -sf acroread9 ${DESTDIR}${PREFIX}/bin/acroread
