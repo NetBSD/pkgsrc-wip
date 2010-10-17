@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2010/08/31 13:57:08 asau Exp $
+@comment $NetBSD: PLIST,v 1.29 2010/10/17 19:13:33 asau Exp $
 bin/maxima
 bin/rmaxima
 bin/xmaxima
@@ -193,6 +193,8 @@ share/maxima/${PKGVERSION}/doc/html/maxima_93.html
 share/maxima/${PKGVERSION}/doc/html/maxima_94.html
 share/maxima/${PKGVERSION}/doc/html/maxima_95.html
 share/maxima/${PKGVERSION}/doc/html/maxima_96.html
+share/maxima/${PKGVERSION}/doc/html/maxima_97.html
+share/maxima/${PKGVERSION}/doc/html/maxima_98.html
 share/maxima/${PKGVERSION}/doc/html/maxima_abt.html
 share/maxima/${PKGVERSION}/doc/html/maxima_fot.html
 share/maxima/${PKGVERSION}/doc/html/maxima_ovr.html
@@ -304,6 +306,31 @@ share/maxima/${PKGVERSION}/share/calculus/qual.usg
 share/maxima/${PKGVERSION}/share/calculus/qualsp.lisp
 share/maxima/${PKGVERSION}/share/calculus/revert.mac
 share/maxima/${PKGVERSION}/share/calculus/taylor1.mac
+share/maxima/${PKGVERSION}/share/cobyla/bf-cobyla-interface.lisp
+share/maxima/${PKGVERSION}/share/cobyla/bf_fmin_cobyla.mac
+share/maxima/${PKGVERSION}/share/cobyla/cobyla-interface.lisp
+share/maxima/${PKGVERSION}/share/cobyla/cobyla-package.lisp
+share/maxima/${PKGVERSION}/share/cobyla/ex/die.mac
+share/maxima/${PKGVERSION}/share/cobyla/ex/ex1.mac
+share/maxima/${PKGVERSION}/share/cobyla/ex/ex10.mac
+share/maxima/${PKGVERSION}/share/cobyla/ex/ex2.mac
+share/maxima/${PKGVERSION}/share/cobyla/ex/ex3.mac
+share/maxima/${PKGVERSION}/share/cobyla/ex/ex4.mac
+share/maxima/${PKGVERSION}/share/cobyla/ex/ex5.mac
+share/maxima/${PKGVERSION}/share/cobyla/ex/ex6.mac
+share/maxima/${PKGVERSION}/share/cobyla/ex/ex7.mac
+share/maxima/${PKGVERSION}/share/cobyla/ex/ex8.mac
+share/maxima/${PKGVERSION}/share/cobyla/ex/ex9.mac
+share/maxima/${PKGVERSION}/share/cobyla/fmin_cobyla.mac
+share/maxima/${PKGVERSION}/share/cobyla/lisp/bf-cobyla.lisp
+share/maxima/${PKGVERSION}/share/cobyla/lisp/bf-cobylb.lisp
+share/maxima/${PKGVERSION}/share/cobyla/lisp/bf-trstlp.lisp
+share/maxima/${PKGVERSION}/share/cobyla/lisp/calcfc.lisp
+share/maxima/${PKGVERSION}/share/cobyla/lisp/cobyla.lisp
+share/maxima/${PKGVERSION}/share/cobyla/lisp/cobylb.lisp
+share/maxima/${PKGVERSION}/share/cobyla/lisp/trstlp.lisp
+share/maxima/${PKGVERSION}/share/cobyla/load-bf-cobyla.lisp
+share/maxima/${PKGVERSION}/share/cobyla/load-cobyla.lisp
 share/maxima/${PKGVERSION}/share/colnew/colnew-if.lisp
 share/maxima/${PKGVERSION}/share/colnew/colnew-lisp.system
 share/maxima/${PKGVERSION}/share/colnew/colnew-package.lisp
@@ -846,6 +873,7 @@ share/maxima/${PKGVERSION}/share/integration/bypart.mac
 share/maxima/${PKGVERSION}/share/integration/delta.dem
 share/maxima/${PKGVERSION}/share/integration/delta.mac
 share/maxima/${PKGVERSION}/share/integration/delta.usg
+share/maxima/${PKGVERSION}/share/integration/rtest_antid.mac
 share/maxima/${PKGVERSION}/share/lapack/blas/blas-lisp.system
 share/maxima/${PKGVERSION}/share/lapack/blas/blas-package.lisp
 share/maxima/${PKGVERSION}/share/lapack/blas/dasum.lisp
