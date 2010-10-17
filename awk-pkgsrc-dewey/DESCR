@@ -1,8 +1,0 @@
-AWK module implementing pkgsrc dewey-decimal functions
-Implemented functions:
-
-    dewey_cmp (ver1, ver2)
-        returns "<", ">" or "="
-    dewey_test (ver1, ver2, op)
-              where op: "<", "<=", "==", "!=", ">=" or ">"
-        returns 1 or 0
