@@ -31,6 +31,7 @@
 #use "has_prefix.awk"
 #use "exitnow.awk"
 #use "braceexpand.awk"
+#use "glob.awk"
 
 ############################################################
 #.begin-str help
@@ -99,7 +100,9 @@ opt_l {
 }
 
 opt_d {
-	if (/^DEPENDS=/) {
+	if (/^PKGNAME=/){
+		pkgnames [substr($0,9)] = 0
+	}else if (/^DEPENDS=/){
 		cnt=split(substr($0, 9), arr, / /)
 		for (i=1; i <= cnt; ++i){
 			deps [++deps_cnt] = arr [i]
@@ -145,7 +148,19 @@ END {
 
 			if (dep !~ /[{]/){
 				pkgdep = pkgname2pkgbase(dep)
-				if (! (pkgdep in pkg2ver)){
+				ex_d = 1
+				if (pkgdep ~ /[*?\[\]]/){
+					ere = glob2ere(dep)
+					for (i in pkgnames){
+						if (i ~ ere){
+							ex_d = 0
+							break
+						}
+					}
+				}else{
+					ex_d = !(pkgdep in pkg2ver)
+				}
+				if (ex_d){
 					print "d: not_found", dep, "<-", arr [1], arr [2]
 					ex = 1
 				}
