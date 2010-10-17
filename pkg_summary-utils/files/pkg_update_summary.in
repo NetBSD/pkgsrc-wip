@@ -26,6 +26,8 @@ set -e
 
 . pipestatus
 
+export LC_ALL=C
+
 usage (){
     cat 1>&2 <<EOF
 pkg_update_summary - updates pkg_summary(5) efficiently

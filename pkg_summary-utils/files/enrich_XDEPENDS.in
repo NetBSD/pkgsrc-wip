@@ -1,5 +1,7 @@
 #!/usr/bin/env runawk
 
+#env "LC_ALL=C"
+
 #use "psu_funcs.awk"
 
 #
