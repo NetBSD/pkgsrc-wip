@@ -55,10 +55,12 @@ MAN+=		# pkg_subgraph_deps.1
 
 FILES=		README NEWS TODO
 FILES+=		pkg_grep_summary.awk pkg_src_summary.mk psu_funcs.awk
+FILES+=		pkgsrc-dewey.awk
 
 FILESDIR=			${DOCDIR}
 FILESDIR_pkg_grep_summary.awk=	${AWKMODDIR}
 FILESDIR_psu_funcs.awk=		${AWKMODDIR}
+FILESDIR_pkgsrc-dewey.awk=	${AWKMODDIR}
 FILESDIR_pkg_src_summary.mk=	${MKSCRIPTSDIR}
 
 BIRTHDATE=	2008-04-06

@@ -29,18 +29,12 @@ export PKGSRCDIR BMAKE AWKPATH PATH PSS_MKSCRIPTSDIR AWKPATH LIBEXECDIR
 
 #
 print_args (){
-#    echo "$@"
     for i in "$@"; do
 	printf " '%s'" "$i"
     done
 }
 
 runtest (){
-#    echo '--------------------------------------------------'
-#    printf '%s' '------- args:'
-#    print_args "$@"
-#    printf '\n'
-
     prog="$objdir/$1"
     shift
 
@@ -81,9 +75,11 @@ cmp (){
     fi
 }
 
+# pkgsrc-dewey.awk
+AWKPATH=`pwd`/.. ./pkgsrc-dewey-test < ./pkgsrc-dewey-test.txt 2>&1 |
+cmp 'pkgsrc-dewey.awk' ''
+
 # pkg_grep_summary
-#echo '--------------------------------------------------'
-#echo '------- pkg_grep_summary #0'
 runtest pkg_grep_summary -s PKGBASE distbb < src_summary.txt |
 cmp 'pkg_grep_summary #1' \
 'PKGNAME=distbb-0.22.0
@@ -2512,7 +2508,6 @@ cmp 'pkg_bin_summary #4' \
 PKGPATH=pkgtools/pkg_install
 
 '
-
 
 test -f "$tmpex"
 exit $?
