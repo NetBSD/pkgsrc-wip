@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/03/13 17:48:52 cheusov Exp $
+# $NetBSD: Makefile,v 1.6 2010/10/17 14:49:04 cheusov Exp $
 #
 
 .include "../../wip/pkg_online-server/Makefile.common"
@@ -12,12 +12,20 @@ DEPENDS+=	pkg_summary-utils-[0-9]*:../../wip/pkg_summary-utils
 DEPENDS+=	pipestatus-[0-9]*:../../devel/pipestatus
 DEPENDS+=	netcat-[0-9]*:../../net/netcat
 
-INSTALL_TARGET=	install-client
+BUILD_DEPENDS+=	mk-configure>=0.20.0:../../wip/mk-configure
 
-AUTO_MKDIRS=	yes
+INSTALL_TARGET=	install-client install-doc
 
 DESCR_SRC+=	${.CURDIR}/DESCR
 
-MAKE_FLAGS+=	DOCDIR=${PREFIX}/share/doc/pkg_online-client
+DOCDIR=		${PREFIX}/share/doc/pkg_online-client
+EGDIR=		${PREFIX}/share/examples/pkg_online-client
+
+MAKE_ENV+=	DOCDIR=${DOCDIR} EGDIR=${EGDIR}
+
+CONF_FILES=     ${EGDIR}/pkg_online_client.conf \
+                ${PKG_SYSCONFDIR}/pkg_online_client.conf
 
 .include "../../mk/bsd.pkg.mk"
+
+MAKE_PROGRAM=	mkcmake

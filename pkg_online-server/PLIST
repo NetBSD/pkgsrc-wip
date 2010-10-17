@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/10/12 10:44:07 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/10/17 14:49:04 cheusov Exp $
 bin/pkg_online_mkconf
 bin/pkg_online_server.env
 bin/pkg_summary2all
@@ -10,3 +10,5 @@ bin/pkg_summary2shortinfo
 share/doc/pkg_online-server/NEWS
 share/doc/pkg_online-server/README
 share/doc/pkg_online-server/TODO
+share/examples/pkg_online-server/dictd.conf
+share/examples/pkg_online-server/pkg_online_server.conf
