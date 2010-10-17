@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2010/10/01 08:10:35 asau Exp $
+# $NetBSD: Makefile,v 1.31 2010/10/17 18:25:21 asau Exp $
 
 DISTNAME=		${PKGNAME_NOREV}-source
 PKGNAME=		sbcl-1.0.43
@@ -78,6 +78,7 @@ do-install:
 	rm -f $(DESTDIR)$(PREFIX)/lib/sbcl/asdf-install/installer.lisp.orig
 	rm -f $(DESTDIR)$(PREFIX)/lib/sbcl/sb-posix/posix-tests.lisp.orig
 	find $(DESTDIR)$(PREFIX)/lib/sbcl -type d -name CVS -exec rm -rf {} \+
+	find $(DESTDIR)$(PREFIX)/lib/sbcl -type f -name .cvsignore -exec rm -f {} \+
 
 do-test:
 	cd ${WRKSRC}/tests && ${SH} ./run-tests.sh
