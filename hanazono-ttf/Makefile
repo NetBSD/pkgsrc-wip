@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2010/07/24 12:00:17 ryo-on Exp $
+# $NetBSD: Makefile,v 1.3 2010/10/18 21:09:26 ryo-on Exp $
 #
 
-DISTNAME=	hanazono-20100718
+DISTNAME=	hanazono-20101013
 PKGNAME=	${DISTNAME:S/-/-ttf-/}
 CATEGORIES=	fonts
 MASTER_SITES=	http://www.fonts.jp/hanazono/
@@ -10,7 +10,7 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	ryo_on@yk.rim.or.jp
 HOMEPAGE=	http://www.fonts.jp/hanazono/
 COMMENT=	Hanazono font (HanaMin)
-# LICENSE=	M+ FONTS License
+# LICENSE=	M+ FONTS License OR open-font-license
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
