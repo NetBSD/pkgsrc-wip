@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/08/22 12:58:14 ryo-on Exp $
+# $NetBSD: Makefile,v 1.2 2010/10/18 20:14:35 ryo-on Exp $
 #
 
 DISTNAME=	PythonCAD-DS1-R37
-PKGNAME=	pythoncad-37
+PKGNAME=	${PYPKGPREFIX}-pythoncad-37
 CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pythoncad/}
 EXTRACT_SUFX=	.zip
