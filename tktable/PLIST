@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/10/19 22:38:59 othyro Exp $
+lib/Tktable${PKGVERSION}/README.txt
+lib/Tktable${PKGVERSION}/html/tkTable.html
+lib/Tktable${PKGVERSION}/libTktable${PKGVERSION}.so
+lib/Tktable${PKGVERSION}/license.txt
+lib/Tktable${PKGVERSION}/pkgIndex.tcl
+lib/Tktable${PKGVERSION}/tkTable.tcl
+lib/Tktable${PKGVERSION}/tktable.py
