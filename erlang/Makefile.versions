@@ -1,14 +1,14 @@
-# $NetBSD: Makefile.versions,v 1.11 2010/10/19 07:12:06 asau Exp $
+# $NetBSD: Makefile.versions,v 1.12 2010/10/19 07:37:28 asau Exp $
 
 ERLANG_VERSION=			14.1.0
 DIST_VERSION_MAJOR=		R14B
 #DIST_VERSION_MINOR=		1
 
 _VERSIONS=					\
-	appmon			2.1.12		\
-	asn1			1.6.14		\
-	common_test		1.5		\
-	compiler		4.7		\
+	appmon			2.1.13		\
+	asn1			1.6.14.1	\
+	common_test		1.5.1		\
+	compiler		4.7.1		\
 	cosEvent		2.1.9		\
 	cosEventDomain		1.1.9		\
 	cosFileTransfer		1.1.10		\
@@ -16,50 +16,50 @@ _VERSIONS=					\
 	cosProperty		1.1.12		\
 	cosTime			1.1.9		\
 	cosTransactions		1.2.10		\
-	crypto			2.0		\
-	debugger		3.2.3		\
-	dialyzer		2.3.0		\
-	docbuilder		0.9.8.7		\
-	edoc			0.7.6.6		\
-	erl_docgen		0.2.1		\
-	erl_interface		3.7		\
-	erts			5.8		\
-	et			1.4		\
+	crypto			2.0.1		\
+	debugger		3.2.4		\
+	dialyzer		2.3.1		\
+	docbuilder		0.9.8.8		\
+	edoc			0.7.6.7		\
+	erl_docgen		0.2.2		\
+	erl_interface		3.7.1		\
+	erts			5.8.1		\
+	et			1.4.1		\
 	eunit			2.1.5		\
-	gs			1.5.12		\
-	hipe			3.7.6		\
+	gs			1.5.13		\
+	hipe			3.7.7		\
 	ic			4.2.25		\
-	inets			5.4		\
-	inviso			0.6.1		\
+	inets			5.5		\
+	inviso			0.6.2		\
 	jinterface		1.5.3		\
-	kernel			2.14		\
-	megaco			3.14.1.1	\
-	mnesia			4.4.14		\
+	kernel			2.14.1		\
+	megaco			3.15		\
+	mnesia			4.4.15		\
 	observer		0.9.8.3		\
 	odbc			2.10.8		\
-	orber			3.6.16		\
+	orber			3.6.17		\
 	os_mon			2.2.5		\
 	otp_mibs		1.0.6		\
-	parsetools		2.0.3		\
+	parsetools		2.0.4		\
 	percept			0.8.4		\
 	pman			2.7.1		\
-	public_key		0.7		\
+	public_key		0.8		\
 	reltool			0.5.4		\
-	runtime_tools		1.8.4		\
+	runtime_tools		1.8.4.1		\
 	sasl			2.1.9.2		\
-	snmp			4.17		\
-	ssh			2.0		\
-	ssl			4.0		\
-	stdlib			1.17		\
+	snmp			4.18		\
+	ssh			2.0.1		\
+	ssl			4.0.1		\
+	stdlib			1.17.1		\
 	syntax_tools		1.6.6		\
-	test_server		3.4		\
+	test_server		3.4.1		\
 	toolbar			1.4.1		\
-	tools			2.6.6		\
-	tv			2.1.4.5		\
-	typer			0.1.7.4		\
+	tools			2.6.6.1		\
+	tv			2.1.4.6		\
+	typer			0.1.7.5		\
 	webtool			0.8.7		\
-	wx			0.98.6		\
-	xmerl			1.2.5
+	wx			0.98.7		\
+	xmerl			1.2.6
 
 PLIST_SUBST+=	VERSION=${DIST_VERSION_MAJOR}
 
