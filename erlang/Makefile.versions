@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.versions,v 1.10 2010/06/22 05:56:54 marttikuparinen Exp $
+# $NetBSD: Makefile.versions,v 1.11 2010/10/19 07:12:06 asau Exp $
 
-ERLANG_VERSION=			14.0.0
-DIST_VERSION_MAJOR=		R14A
+ERLANG_VERSION=			14.1.0
+DIST_VERSION_MAJOR=		R14B
 #DIST_VERSION_MINOR=		1
 
 _VERSIONS=					\
