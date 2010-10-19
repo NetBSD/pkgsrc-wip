@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4113 2010/10/19 21:47:14 othyro Exp $
+# $Id: Makefile,v 1.4114 2010/10/19 22:40:10 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2414,6 +2414,7 @@ SUBDIR+=	tinyfugue-beta
 SUBDIR+=	tinylogin
 SUBDIR+=	tk85
 SUBDIR+=	tkpng
+SUBDIR+=	tktable
 SUBDIR+=	tleenx2
 SUBDIR+=	tleenx3
 SUBDIR+=	tmw
