@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2010/06/13 22:47:04 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.31 2010/10/20 20:26:45 thomasklausner Exp $
 
 DISTNAME=	gDesklets-0.26
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	x11 gnome
 MASTER_SITES=	http://www.pycage.de/download/gdesklets/
 EXTRACT_SUFX=	.tar.bz2
@@ -32,6 +32,7 @@ post-install:
 
 .include "../../devel/GConf/schemas.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
+.include "../../graphics/gnome-icon-theme/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../sysutils/libgtop/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
