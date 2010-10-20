@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2010/10/20 14:51:03 othyro Exp $
+
+--- Makefile.in.orig	2008-06-26 14:43:10.000000000 +0000
++++ Makefile.in
+@@ -109,7 +109,7 @@ PLATFORM:=$(shell echo 'package require 
+ all: package libraries
+ package: $(PKG_LIB_FILE) pkgIndex.tcl
+ libraries: $(PKG_STUB_LIB_FILE)
+-install: all install-package install-libraries install-headers install-doc
++install: all install-package install-libraries install-headers install-private-headers install-doc
+ kit: sdx_valid $(PKG_KIT)
+ 
+ #========================================================================
