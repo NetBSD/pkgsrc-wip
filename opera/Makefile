@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2010/08/13 09:20:00 obache Exp $
+# $NetBSD: Makefile,v 1.9 2010/10/20 13:02:34 obache Exp $
 
 DISTNAME=		opera-${OPERA_PKG_VERSION}-${OPERA_PKG_BUILD}.${OPERA_ARCH}.${EMUL_OPSYS}
 PKGNAME=		opera-${OPERA_PKG_VERSION:S/u/pl/}
@@ -31,9 +31,9 @@ MASTER_SITE_OPERA+=	http://ftp.yz.yamagata-u.ac.jp/pub/opera/
 USE_LANGUAGES=		# empty
 NO_BUILD=		yes
 
-OPERA_PKG_BUILD=	6430
-OPERA_PKG_VERSION=	10.61
-OPERA_PKG_VERSION_DIR=	1061
+OPERA_PKG_BUILD=	6450
+OPERA_PKG_VERSION=	10.63
+OPERA_PKG_VERSION_DIR=	1063
 
 .if ${EMUL_OPSYS} == "linux"
 EMUL_MODULES.linux=	gtk2 xml2
@@ -68,14 +68,6 @@ SUBST_FILES.prefix=	install
 SUBST_SED.prefix=	-e 's,/usr/local,${PREFIX},g'
 SUBST_SED.prefix+=	-e 's,dest=,dest=${DESTDIR},g'
 
-#SUBST_CLASSES+=		deststrip
-#SUBST_STAGE.deststrip=	post-install
-#SUBST_FILES.deststrip=	${DESTDIR}${PREFIX}/bin/opera
-#SUBST_FILES.deststrip+=	${DESTDIR}${PREFIX}/bin/opera-widget-manager
-#SUBST_FILES.deststrip+=	${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/opera.1
-#SUBST_FILES.deststrip+=	${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/opera-widget-manager.1
-#SUBST_SED.deststrip=	-e 's,${DESTDIR},,g'
-
 .if ${PKGMANDIR} != "share/man"
 post-extract:
 	${RUN} cd ${WRKSRC}; mv share/man ${PKGMANDIR}
@@ -90,6 +82,7 @@ do-install:
 	${RUN} cd ${WRKSRC};				\
 		${SH} ./install --text --unattended --quiet --system --force
 
+.include "../../databases/shared-mime-info/mimedb.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
