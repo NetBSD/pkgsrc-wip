@@ -1752,7 +1752,36 @@ grep -v '^=' |
 cmp 'pkg_cmp_summary #10' \
 ''
 
-# pkg_src_summary
+pkg_cmp_summary -d summary1.txt summary2.txt |
+cmp 'pkg_cmp_summary #11' \
+'! baz 1.2.3 1.2.3
+'
+
+pkg_cmp_summary -d summary2.txt summary1.txt |
+cmp 'pkg_cmp_summary #12' \
+'! baz 1.2.3 1.2.3
+'
+
+pkg_cmp_summary -d summary1.txt summary4.txt |
+cmp 'pkg_cmp_summary #13' \
+'! baz 1.2.3 1.2.3
+'
+
+pkg_cmp_summary -d summary4.txt summary1.txt |
+cmp 'pkg_cmp_summary #14' \
+'! baz 1.2.3 1.2.3
+'
+
+pkg_cmp_summary -d summary1.txt summary3.txt |
+cmp 'pkg_cmp_summary #15' \
+'= baz 1.2.3 1.2.3
+'
+
+pkg_cmp_summary -d summary3.txt summary1.txt |
+cmp 'pkg_cmp_summary #16' \
+'= baz 1.2.3 1.2.3
+'
+
 # pkg_summary2build_graph
 pkg_summary2build_graph src_summary.txt | sort |
 cmp 'pkg_summary2build_graph #1' \

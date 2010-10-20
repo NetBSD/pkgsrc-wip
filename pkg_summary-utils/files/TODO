@@ -14,7 +14,6 @@ existing tools:
        - -f <n> use pkgbase only for comparison
        - -f <pn> use pkgbase and pkgpath for comparison
        - automatic removal of #-comments
-       - output ! if DEPENDS or BUILD_DEPENDS differ
 
     pkg_grep_summary:
        - -f <fields>   output only specified fields, this

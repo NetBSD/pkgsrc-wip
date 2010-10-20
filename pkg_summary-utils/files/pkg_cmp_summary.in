@@ -40,6 +40,8 @@
 #   -m|--multi           support multi-variant packages, that is packages
 #                         with building options in PKGPATH section
 #   -P|--pkgpath         use PKGPATH only for comparison, ignore PKGNAME
+#   -d                   consider packages different
+#                        if they have different DEPENDS
 #.end-str
 ############################################################
 
@@ -48,6 +50,7 @@ BEGIN {
 
 	with_pkgpath = getarg("p")
 	use_checksum = getarg("c")
+	use_dep      = getarg("d")
 	if (getarg("P")){
 		with_pkgpath = 1
 		with_pkgname = 0
@@ -74,21 +77,35 @@ function trim (s){
 	return s
 }
 
-with_pkgname && $0 ~ /^PKGNAME=/ {
+with_pkgname && /^PKGNAME=/ {
 	pkgname = trim(substr($0, 9))
 	next
 }
 
-use_checksum && $0 ~ /^CVS_CHECKSUM=/ {
+use_checksum && /^CVS_CHECKSUM=/ {
 	checksum = trim(substr($0, 14))
 	next
 }
 
-with_pkgpath && $0 ~ /^PKGPATH=/ {
+with_pkgpath && /^PKGPATH=/ {
 	pkgpath = trim(substr($0, 9))
 	full_pkgpath = pkgpath
 	if (with_multivar && pkgpath ~ /:/){
 		sub(/:.*$/, "", pkgpath)
+	}
+	next
+}
+
+use_dep && /^DEPENDS=/ {
+	$0 = substr($0, 9)
+	if (FILENAME == file1){
+		for (i=1; i <= NF; ++i){
+			dep1 [$i] = 0
+		}
+	}else{
+		for (i=1; i <= NF; ++i){
+			dep2 [$i] = 0
+		}
 	}
 	next
 }
@@ -133,6 +150,13 @@ NF == 0 {
 			if (use_checksum){
 				checksums [pkgbase] = curr_checksum
 			}
+
+			if (use_dep){
+				for (dep in dep1){
+					depends [pkgbase, ++depends_cnt [pkgbase]] = dep
+				}
+				delete dep1
+			}
 		}
 	}else{
 		# second file!
@@ -151,23 +175,55 @@ NF == 0 {
 			next
 		}
 
+		res = "="
+
+		# ! -P
 		if (with_pkgname){
 			ver1 = names [pkgbase]
 			res = dewey_cmp(ver1, ver)
+		}
 
-			if (use_checksum && res == "="){
-				prev_checksum = checksums [pkgbase]
-				if (prev_checksum != "" &&
-					curr_checksum != "" &&
-					prev_checksum != curr_checksum)
-				{
-					res = "!"
-				}
+		# -c
+		if (use_checksum && res == "="){
+			prev_checksum = checksums [pkgbase]
+			if (prev_checksum != "" &&
+				curr_checksum != "" &&
+				prev_checksum != curr_checksum)
+			{
+				res = "!"
 			}
+		}
 
+		# -d
+		if (use_dep && res == "="){
+			if (pkgbase in depends_cnt){
+				cnt = depends_cnt [pkgbase]
+				for (i=1; i <= cnt; ++i){
+					dep = depends [pkgbase, i]
+					if (dep in dep2){
+						delete dep2 [dep]
+					}else{
+						res = "!"
+						break
+					}
+				}
+				if (res == "="){
+					for (dep in dep2){
+						res = "!"
+						break
+					}
+				}
+			}else{
+				res = "!"
+			}
+			delete dep2
+		}
+
+		if (with_pkgname){
+			# result!
 			print res, full_pkgbase, ver1, ver
 		}else{
-			print "=", full_pkgbase
+			print res, full_pkgbase
 		}
 	}
 
