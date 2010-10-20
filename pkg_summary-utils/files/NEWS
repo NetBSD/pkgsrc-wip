@@ -1,4 +1,22 @@
 ----------------------------------------------------------------------
+Version 0.45.0, by Aleksey Cheusov, Thu, 21 Oct 2010 00:04:30 +0300
+
+  FIX: Now pkg_lint_summary -d handles correctly glob patterns like
+      liboa-[a-z]*-[0-9]*
+
+  All scripts using regexp are run with locale C (LC_ALL=C) in order
+      to avoid locale-dependent behaviour.
+
+  New option -n for was added to pkg_subgraph_deps in order to output
+      only nodes without edges
+
+  New option -L was added to pkg_lint_summary for ensuring that
+      all non-pkgsrc libraries exist on filesystem.
+
+  New option -d was added to pkg_cmp_summary for using DEPENDS in
+      comparison.
+
+----------------------------------------------------------------------
 Version 0.44.0, by Aleksey Cheusov, Sun, 17 Oct 2010 18:39:54 +0300
 
   As of this version pkg_summary-utils uses its own pkgsrc-dewey.awk
@@ -7,7 +25,21 @@ Version 0.44.0, by Aleksey Cheusov, Sun, 17 Oct 2010 18:39:54 +0300
 ----------------------------------------------------------------------
 Version 0.43.1, by Aleksey Cheusov
 
-  
+  New artificial field ALLDISTFILES was added consisting of distfiles
+     with their sizes separated by colon.
+
+  Regression tests have been significantly reworked.
+
+  pkg_summary4view:
+     - tokens inside DEPENDS, BUILD_DEPENDS and similar
+       fields are resorted in alphabetic order.
+     - ALLDISTFILES is correctly output.
+
+  All utilities conform to POSIX Utility Syntax Guidelines and support
+     long options.
+
+  paexec>=0.15.0 is needed
+
 ----------------------------------------------------------------------
 Version 0.42.2, by Aleksey Cheusov, Fri, 30 Jul 2010 19:00:01 +0300
 
