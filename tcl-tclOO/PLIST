@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/10/20 14:01:23 othyro Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/10/20 14:52:25 othyro Exp $
 include/tclOO.h
 include/tclOODecls.h
+include/tclOOInt.h
+include/tclOOIntDecls.h
 lib/TclOO${PKGVERSION}/libTclOO${PKGVERSION}.so
 lib/TclOO${PKGVERSION}/libTclOOstub${PKGVERSION}.a
 lib/TclOO${PKGVERSION}/pkgIndex.tcl
