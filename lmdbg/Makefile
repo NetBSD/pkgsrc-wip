@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2010/10/07 20:15:17 cheusov Exp $
+# $NetBSD: Makefile,v 1.20 2010/10/21 19:58:43 cheusov Exp $
 #
 
 DISTNAME=	lmdbg-0.15.1
@@ -19,6 +19,8 @@ DEPENDS+=		pipestatus-[0-9]*:../../devel/pipestatus
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 TEST_TARGET=		test
+
+MAKE_ENV=		MANDIR=${PREFIX}/${PKGMANDIR}
 
 DOCDIR=			share/doc/lmdbg
 DOCFILES=		README NEWS ChangeLog
