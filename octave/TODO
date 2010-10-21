@@ -1,25 +1,39 @@
-Note on fortran
----------------
+dynamic library path not set
+----------------------------
 
-- for pkgsrc-2010Q2 and older you need to use::
+::
 
-    USE_LANGUAGES=  c c++ fortran
+    ldd /usr/pkg/bin/octave
+    /usr/pkg/bin/octave:
+        -loctinterp => not found
+        -loctave => not found
+        -lcruft => not found
+        -llapack.3 => /usr/pkg/lib/liblapack.so.3
+        -lf2c.0 => /usr/pkg/lib/libf2c.so.0
+        -lc.12 => /usr/lib/libc.so.12
+        -lm.0 => /usr/lib/libm.so.0
+        -lblas.1 => /usr/pkg/lib/libblas.so.1
+        -lGL.1 => /usr/X11R7/lib/libGL.so.1
+        -lXext.6 => /usr/X11R7/lib/libXext.so.6
+        -lX11.6 => /usr/X11R7/lib/libX11.so.6
+        -lXdmcp.6 => /usr/X11R7/lib/libXdmcp.so.6
+        -lXau.6 => /usr/X11R7/lib/libXau.so.6
+        -lXxf86vm.1 => /usr/X11R7/lib/libXxf86vm.so.1
+        -lXfixes.3 => /usr/X11R7/lib/libXfixes.so.3
+        -lXdamage.1 => /usr/X11R7/lib/libXdamage.so.1
+        -ldrm.2 => /usr/X11R7/lib/libdrm.so.2
+        -lGLU.1 => /usr/X11R7/lib/libGLU.so.1
+        -lstdc++.6 => /usr/lib/libstdc++.so.6
+        -lgcc_s.1 => /usr/lib/libgcc_s.so.1
+        -lreadline.6 => /usr/pkg/lib/libreadline.so.6
+        -ltermcap.0 => /usr/lib/libtermcap.so.0
+        -lcurses.6 => /usr/lib/libcurses.so.6
+        -lhdf5.0 => /usr/pkg/lib/libhdf5.so.0
+        -lz.1 => /usr/lib/libz.so.1
+        -lfreetype.6 => /usr/X11R7/lib/libfreetype.so.6
+        -lpthread.0 => /usr/lib/libpthread.so.0
 
-  instead of::
+so in order to run octave, do this::
 
-    USE_LANGUAGES=  c c++ fortran77
-
-  as that option changed only in August 2010
-
-Build Success
--------------
-
-- NetBSD 5.1_RC3 / amd64 / pkgsrc-2010Q2
-
-Build Failures
---------------
-
-- NetBSD 5.0.1 / i386 / pkgsr-2010Q2
-
-  It seems that it failed because I already had GraphicsMagick installed and configure found it (but Magick++.h was missing)
+    LD_LIBRARY_PATH=/usr/pkg/lib/octave-3.2.4 octave
 

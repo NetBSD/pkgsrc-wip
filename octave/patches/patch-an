@@ -1,0 +1,22 @@
+$NetBSD: patch-an,v 1.1 2010/10/21 20:25:04 crocusino Exp $
+
+--- configure.in.orig	2010-01-19 11:13:14.000000000 +0000
++++ configure.in
+@@ -672,7 +672,7 @@ fi
+ 
+ warn_magick=
+ AC_CHECK_PROGS(MAGICK_CONFIG, [GraphicsMagick++-config GraphicsMagick-config])
+-if test -z "$MAGICK_CONFIG"; then
++if test -z "$MAGICK_CONFIG" || test "$MAGICK_CONFIG" = "no"; then
+   warn_magick="GraphicsMagick++ config script not found.  Assuming GraphicsMagic++ library and header files are missing, so imread will not be fully functional"
+ else
+   AC_DEFINE(HAVE_MAGICK, 1, [Define if GraphicsMagick++ is available.])
+@@ -1214,7 +1214,7 @@ OCTGRAPHICS_DLL_DEFS=
+ library_path_var=LD_LIBRARY_PATH
+ SCRIPTS_EXE_SUFFIX=
+ case "$canonical_host_type" in
+-  *-*-386bsd* | *-*-netbsd*)
++  *-*-386bsd*)
+     SH_LD=ld
+     SH_LDFLAGS=-Bshareable
+   ;;
