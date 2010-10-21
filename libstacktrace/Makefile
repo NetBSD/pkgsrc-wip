@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/10/21 20:01:56 cheusov Exp $
+# $NetBSD: Makefile,v 1.7 2010/10/21 20:05:03 cheusov Exp $
 #
 
 DISTNAME=	lmdbg-0.15.1
@@ -18,7 +18,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 WRKSRC=			${WRKDIR}/${DISTNAME}/libstacktrace
 
 MAKE_ENV+=		MKINSTALL=yes
-MAKE_ENV+=		MKPROFILE=yes MKPIC=yes MKPICINSTALL=yes
 MAKE_ENV+=		MKPROFILELIB=yes MKPICLIB=yes MKSTATICLIB=yes
 
 AUTO_MKDIRS=		yes
