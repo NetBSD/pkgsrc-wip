@@ -1,19 +1,19 @@
-$NetBSD: distinfo,v 1.4 2010/10/21 07:46:21 makoto Exp $
+$NetBSD: distinfo,v 1.5 2010/10/21 08:13:50 makoto Exp $
 
-SHA1 (hylafax/hylafax-4.3.4.tar.gz) = 5b019a00edd59c66d77866662273e5405f1286f5
-RMD160 (hylafax/hylafax-4.3.4.tar.gz) = ada041ef72d65586f32e5dbdab39ef8ab7fbbe67
-Size (hylafax/hylafax-4.3.4.tar.gz) = 1467634 bytes
+SHA1 (hylafax/hylafax-4.4.7.tar.gz) = ddd9d697178f723f5695221feb09c7e3d2cbe3d1
+RMD160 (hylafax/hylafax-4.4.7.tar.gz) = 03fdd2bd44ff9b19b1ec1e98b69096340218af2f
+Size (hylafax/hylafax-4.4.7.tar.gz) = 1168793 bytes
 SHA1 (patch-aa) = 59f814f979f1e247a1a40c1e3ba31581dde99d62
 SHA1 (patch-ab) = 8cc571b5d1f36a2353e4c407f153618bdae9d748
 SHA1 (patch-ac) = 1f37405fd71840672f7f3916c8da9af4d3ff7333
 SHA1 (patch-ad) = 5a71bd74d37a1a532d0175a3762e83c1e158de67
-SHA1 (patch-ae) = 908379b9797ddf813c6cb6be3462328e4bf59427
-SHA1 (patch-af) = c7dbe5a258d7e710fd5bd065bace337c6e9f585a
+SHA1 (patch-ae) = 63033f5ed867cb332cf2dcb0f7536e7e2d212275
+SHA1 (patch-af) = c6b56d0ddb0329664e7c7e90bec91a896679d6e4
 SHA1 (patch-ag) = d23afb3285ccbd404647fe36bdab97e4c3e56554
-SHA1 (patch-ah) = ae7b9c79fcd54da311f1491bb4d8c2e17136acb6
+SHA1 (patch-ah) = 3445404892a06c695c08be7b914d9890c6ddd2cc
 SHA1 (patch-ai) = a1a882f63c23ca9f05fc85b80887cf1e852b38c5
 SHA1 (patch-al) = d5ee8d2997ce03c148e9f031481221a79d93ee2a
 SHA1 (patch-am) = a5b5b0db0622a2da3a7d2ed858b901d4f1fae4e2
 SHA1 (patch-an) = de84c3e6c9fb9cd52dcdfdc556ae805f01f79fe5
-SHA1 (patch-ao) = 64d2963c7211f1ef5a6ca4f7d286dcd2d51d29ef
+SHA1 (patch-ao) = bd56bcab4de30a57a0fb6ae433e783a0b7b4f5a0
 SHA1 (patch-ap) = e2eae5fdd247fdf4653b67b87b39e1c6b10c5316

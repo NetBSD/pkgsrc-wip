@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:44:46 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.4 2010/10/21 08:13:50 makoto Exp $
 bin/faxalter
 bin/faxcover
 bin/faxmail
@@ -6,12 +6,12 @@ bin/faxrm
 bin/faxstat
 bin/sendfax
 bin/sendpage
-libdata/hylafax/faxcover.ps
-libdata/hylafax/faxcover_example_sgi.ps
-libdata/hylafax/faxmail.ps
-libdata/hylafax/hfaxd.conf
-libdata/hylafax/pagesizes
-libdata/hylafax/typerules
+libdata/fax/faxcover.ps
+libdata/fax/faxcover_example_sgi.ps
+libdata/fax/faxmail.ps
+libdata/fax/hfaxd.conf
+libdata/fax/pagesizes
+libdata/fax/typerules
 libexec/faxgetty
 libexec/faxsend
 libexec/hfaxd
@@ -137,8 +137,6 @@ sbin/typetest
 sbin/xferfaxstats
 share/doc/hylafax/COPYRIGHT
 share/examples/rc.d/hylafax
-share/hylafax/config_template/agere-mp-2
-share/hylafax/config_template/agere-mp-21
 share/hylafax/config_template/att-dataport
 share/hylafax/config_template/att-dataport-2
 share/hylafax/config_template/att-dataport-2.0
@@ -166,6 +164,7 @@ share/hylafax/config_template/gvc-288-2
 share/hylafax/config_template/hayes
 share/hylafax/config_template/iaxmodem
 share/hylafax/config_template/intel-400e
+share/hylafax/config_template/ip568x
 share/hylafax/config_template/linux-isdn-2
 share/hylafax/config_template/lucent
 share/hylafax/config_template/lucent-isa
@@ -173,6 +172,8 @@ share/hylafax/config_template/lucent-mt-10
 share/hylafax/config_template/lucent-mt-2
 share/hylafax/config_template/lucent-mt-20
 share/hylafax/config_template/lucent-mt-21
+share/hylafax/config_template/mainpine-2
+share/hylafax/config_template/mainpine-21
 share/hylafax/config_template/moto-288
 share/hylafax/config_template/mt-1432
 share/hylafax/config_template/nuvo-voyager

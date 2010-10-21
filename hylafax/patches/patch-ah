@@ -1,16 +1,16 @@
-$NetBSD: patch-ah,v 1.2 2007/06/04 09:51:54 ahallmann Exp $
+$NetBSD: patch-ah,v 1.3 2010/10/21 08:13:50 makoto Exp $
 
---- etc/faxaddmodem.sh.in.orig	2006-07-21 19:46:10.000000000 +0200
-+++ etc/faxaddmodem.sh.in
-@@ -46,6 +46,7 @@
- SPOOL=@SPOOL@
+--- etc/faxaddmodem.sh.in.orig	2010-09-15 23:43:15.000000000 +0900
++++ etc/faxaddmodem.sh.in	2010-10-19 09:57:28.000000000 +0900
+@@ -51,6 +51,7 @@
+ }
  
  SPEED=
 +TTY=
+ DOFUSER=no
  while [ x"$1" != x"" ] ; do
      case $1 in
-     -s)	    SPEED=$2; shift;;
-@@ -117,7 +118,7 @@ CAT="$CAT -u"			# something to do unbuff
+@@ -124,7 +125,7 @@
  FAX=@FAXUID@			# identity of the fax user
  GROUP=/etc/group		# where to go for group entries
  PROTOGID=@FAXGID@		# group who's gid we use for FAX user
@@ -19,7 +19,7 @@ $NetBSD: patch-ah,v 1.2 2007/06/04 09:51:54 ahallmann Exp $
  MODEMCONFIG=$SPOOL/config	# location of prototype modem config files
  RMCMD="$RM -f"			# forced removal
  
-@@ -811,7 +812,7 @@ SendToModem()
+@@ -820,7 +821,7 @@
      COMMAND=$*
      sleep 1					# wait for previous kill
      case $TARGET in
@@ -28,7 +28,7 @@ $NetBSD: patch-ah,v 1.2 2007/06/04 09:51:54 ahallmann Exp $
      *)	onDev $STTY 0; sleep 1	;;		# reset the modem (hopefully)
      esac
  						# start listening for output
-@@ -1156,7 +1157,7 @@ EOF
+@@ -1165,7 +1166,7 @@
      done;
      MODEMCLASSES=`echo $MODEMCLASSES | $SED -e 's/3/2.0/g' -e 's/4/1.0/g' -e 's/5/2.1/g' -e 's/ $//g'`
      SUPPORT=`echo $SUPPORT | $SED -e 's/3/2.0/g' -e 's/4/1.0/g' -e 's/5/2.1/g'`.
@@ -37,7 +37,7 @@ $NetBSD: patch-ah,v 1.2 2007/06/04 09:51:54 ahallmann Exp $
      case "$MODEMCLASSES" in
      "")			giveup;;
      "1")		ModemType=Class1; configureClass1Modem;;
-@@ -1167,7 +1168,7 @@ EOF
+@@ -1176,7 +1177,7 @@
      *)
  	DEFAULTCLASS=`echo $MODEMCLASSES | $SED 's/\([^ ]*\).*/\1/g'`
  	x=""

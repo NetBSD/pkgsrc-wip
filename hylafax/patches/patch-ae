@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.3 2010/10/21 05:17:54 makoto Exp $
+$NetBSD: patch-ae,v 1.4 2010/10/21 08:13:50 makoto Exp $
 
---- configure.orig	2007-02-24 07:36:23.000000000 +0900
-+++ configure	2010-10-21 14:10:11.000000000 +0900
-@@ -37,23 +37,23 @@
+--- configure.orig	2010-09-15 23:43:15.000000000 +0900
++++ configure	2010-10-19 10:22:03.000000000 +0900
+@@ -37,21 +37,22 @@
  #
  # Setup general configuration parameters.
  #
@@ -11,20 +11,20 @@ $NetBSD: patch-ae,v 1.3 2010/10/21 05:17:54 makoto Exp $
 -DIR_LIBDATA=/usr/local/lib/fax
 -DIR_LIB=/usr/local/lib
 -DIR_LIBEXEC=$DIR_SBIN
+-DIR_SPOOL=/var/spool/hylafax
+-DIR_CGI=/var/httpd/cgi-bin
+-PATH_DPSRIP=$DIR_LIBEXEC/ps2fax.exe
+-PATH_IMPRIP=/usr/lib/print/psrip
 +DIR_BIN=${PREFIX}/bin
 +DIR_SBIN=${PREFIX}/sbin
-+DIR_LIBDATA=${PREFIX}/libdata/hylafax
++DIR_LIBDATA=${PREFIX}/libdata/fax
 +DIR_LIB=${PREFIX}/lib
 +DIR_LIBEXEC=${PREFIX}/libexec
- DIR_SPOOL=/var/spool/hylafax
--DIR_HTML=/var/httpd/htdocs/hylafax
--DIR_CGI=/var/httpd/cgi-bin
++DIR_SPOOL=/var/spool/hylafax
 +DIR_HTML=${PREFIX}/http/htdocs/hylafax
 +DIR_CGI=${PREFIX}/http/cgi-bin
- PATH_DPSRIP=$DIR_LIBEXEC/ps2fax.exe
--PATH_IMPRIP=/usr/lib/print/psrip
-+PATH_IMPRIP=${PREFIX}/lib/print/psrip
- HTMLPATH=/hylafax
++PATH_DPSRIP=$DIR_LIBEXEC/ps2fax.exe
++PATH_IMPRIP=${PRERFIX}/lib/print/psrip
  CGIPATH=/cgi-bin
  DEFVRES=98
  PAGESIZE="North American Letter"
@@ -35,7 +35,7 @@ $NetBSD: patch-ae,v 1.3 2010/10/21 05:17:54 makoto Exp $
  SYSGID=
  DSO=auto
  GETTY=auto
-@@ -72,9 +72,8 @@
+@@ -69,9 +70,8 @@
  GS=no
  IMP=no
  UTMP=auto
@@ -47,7 +47,7 @@ $NetBSD: patch-ae,v 1.3 2010/10/21 05:17:54 makoto Exp $
  TIFFBIN=
  LIBZ=
  ZLIBINC=
-@@ -82,8 +81,8 @@
+@@ -79,8 +79,8 @@
  LIBREGEX='-L${DEPTH}/regex -lregex'
  REGEXINC='${DEPTH}/${TOPSRCDIR}/regex'
  DBLIB=no
@@ -58,7 +58,7 @@ $NetBSD: patch-ae,v 1.3 2010/10/21 05:17:54 makoto Exp $
  FAXD=
  LIBFAXSERVER='libfaxserver.${DSO}'
  LIBUTIL='${UTIL}/libfaxutil.${DSO}'
-@@ -226,6 +225,7 @@
+@@ -220,6 +220,7 @@
  PKG_VENDOR
  PORT
  PORTFUNCS
@@ -66,7 +66,7 @@ $NetBSD: patch-ae,v 1.3 2010/10/21 05:17:54 makoto Exp $
  PROTOTYPES
  PSPACKAGE	PS
  PWDCMD
-@@ -293,7 +293,7 @@
+@@ -287,7 +288,7 @@
  test -d /usr/ucb && PATH=$PATH:/usr/ucb			# Sun and others
  test -d /usr/contrib/bin && PATH=$PATH:/usr/contrib/bin	# BSDi
  test -d /usr/5bin && PATH=/usr/5bin:$PATH:/usr/etc	# Sun and others
@@ -75,16 +75,7 @@ $NetBSD: patch-ae,v 1.3 2010/10/21 05:17:54 makoto Exp $
  PATH=$PATH:$OPATH
  
  POSIXLY_CORRECT=1; export POSIXLY_CORRECT		# disable GNU extensions
-@@ -2424,7 +2424,7 @@
- 	if [ ${header_ver} -ge 19960307 ]; then
- 	    case ${lib_ver} in
- 		3.4)		tiff_runlen_t="uint16" ;;
--		3.[5678])	tiff_runlen_t="uint32" ;;
-+		3.[56789])	tiff_runlen_t="uint32" ;;
- 	    esac
- 	fi
-     else
-@@ -3162,13 +3162,7 @@
+@@ -3196,13 +3197,7 @@
          printf("old include files: version %u\n", ZLIB_VERSION);
          exit(-1);
      }
@@ -98,7 +89,7 @@ $NetBSD: patch-ae,v 1.3 2010/10/21 05:17:54 makoto Exp $
  }
  EOF
  capture cat t.c
-@@ -3230,7 +3224,7 @@
+@@ -3264,7 +3259,7 @@
  # Location of TIFF binaries
  #
  if [ -z "$TIFFBIN" ]; then
@@ -107,7 +98,7 @@ $NetBSD: patch-ae,v 1.3 2010/10/21 05:17:54 makoto Exp $
      for i in $DIRS; do
          test -x $i/tiff2ps && { TIFFBIN=$i; break; }
      done
-@@ -3861,7 +3855,7 @@
+@@ -3896,7 +3891,7 @@
  if [ -z "$PATH_VGETTY" ]; then
      PATH_VGETTY=`findApp vgetty /usr/libexec:/sbin:$PATH` 
      if [ -z "$PATH_VGETTY" ]; then
@@ -116,7 +107,7 @@ $NetBSD: patch-ae,v 1.3 2010/10/21 05:17:54 makoto Exp $
  	Note "WARNING, no vgetty program found to handle a voice call, using $PATH_VGETTY."
      else
  	Note "Looks like $PATH_VGETTY is the program to exec for a voice call."
-@@ -3874,7 +3868,7 @@
+@@ -3909,7 +3904,7 @@
  if [ -z "$PATH_EGETTY" ]; then
      PATH_EGETTY=`findApp egetty /usr/libexec:/sbin:$PATH` 
      if [ -z "$PATH_EGETTY" ]; then
@@ -125,7 +116,7 @@ $NetBSD: patch-ae,v 1.3 2010/10/21 05:17:54 makoto Exp $
  	Note "WARNING, no egetty program found, using $PATH_EGETTY."
      else
  	Note "Looks like $PATH_EGETTY is the program to exec for an extern call."
-@@ -3946,6 +3940,7 @@
+@@ -3981,6 +3976,7 @@
  {
      if [ -z "$PATH_GSRIP" ]; then
  	GSLOCS="
@@ -133,7 +124,7 @@ $NetBSD: patch-ae,v 1.3 2010/10/21 05:17:54 makoto Exp $
  	    /usr/local/bin/gs
  	    /usr/contrib/bin/gs
  	    /usr/gnu/bin/gs
-@@ -3993,7 +3988,7 @@
+@@ -4028,7 +4024,7 @@
  on building Ghostscript with the necessary TIFF driver.
  
  EOF
@@ -142,7 +133,7 @@ $NetBSD: patch-ae,v 1.3 2010/10/21 05:17:54 makoto Exp $
  	PATH_GSRIP=$PATH_PSRIP
      fi
  }
-@@ -4060,9 +4055,9 @@
+@@ -4095,9 +4091,9 @@
      else
          DIR_AFMS="
  	    /usr/lib/afm
@@ -155,7 +146,7 @@ $NetBSD: patch-ae,v 1.3 2010/10/21 05:17:54 makoto Exp $
  	    /usr/share/ghostscript/fonts
  	    /usr/gnu/lib/ghostscript/fonts
  	    /opt/gnu/lib/ghostscript/fonts
-@@ -4082,7 +4077,7 @@
+@@ -4117,7 +4113,7 @@
  fi
  if [ -z "$PATH_AFM" ]; then
      # put it where ghostscript normally puts things
@@ -164,7 +155,7 @@ $NetBSD: patch-ae,v 1.3 2010/10/21 05:17:54 makoto Exp $
      Note "WARNING, could not locate a directory with font metric information,"
      Note "guessing that font metric information goes in $PATH_AFM."
  else
-@@ -4101,6 +4096,7 @@
+@@ -4136,6 +4132,7 @@
  #
  if [ -z "$DIR_MAN" ]; then
      MANPATH="
@@ -172,7 +163,7 @@ $NetBSD: patch-ae,v 1.3 2010/10/21 05:17:54 makoto Exp $
  	$MANPATH
  	/usr/local/man
  	/usr/contrib/man
-@@ -4110,7 +4106,7 @@
+@@ -4145,7 +4142,7 @@
      for i in $MANPATH; do
  	test -d $i && { DIR_MAN=$i; break; }
      done
