@@ -1,21 +1,33 @@
-$NetBSD: patch-af,v 1.2 2007/03/07 09:56:21 ahallmann Exp $
+$NetBSD: patch-af,v 1.3 2010/10/21 07:46:21 makoto Exp $
 
---- defs.in.orig	2006-01-31 20:03:34.000000000 +0100
-+++ defs.in
-@@ -44,6 +44,7 @@ SHELL		= @SCRIPT_SH@
+--- defs.in.orig	2007-07-05 23:37:54.000000000 +0900
++++ defs.in	2010-10-21 15:31:40.000000000 +0900
+@@ -44,12 +44,13 @@
  # to insufficient; you are better off rerunning the
  # configure script so that all uses are set correctly.
  #
-+PREFIX		= @PREFIX@
- SPOOL		= @SPOOL@
- SBIN		= @SBIN@
- BIN		= @BIN@
-@@ -261,7 +262,7 @@ LDFLAGS		= ${LDOPTS} ${LDLIBS}
- LDOPTS		= ${VLDOPTS} ${LLDOPTS} ${GLDOPTS}
- LDLIBS		= ${VLDLIBS} ${LLDLIBS} ${GLDLIBS}
- 
--GLDOPTS		= -L/usr/local/lib
-+GLDOPTS		= -L${PREFIX}/lib
- GLDLIBS		= ${SHDLIBC}
- 
+-SPOOL		= @SPOOL@
+-SBIN		= @SBIN@
+-BIN		= @BIN@
+-LIBDATA		= @LIBDATA@
+-LIBDIR		= @LIBDIR@
+-LIBEXEC		= @LIBEXEC@
++PREFIX		= ${DESTDIR}@PREFIX@
++SPOOL		= ${DESTDIR}@SPOOL@
++SBIN		= ${DESTDIR}@SBIN@
++BIN		= ${DESTDIR}@BIN@
++LIBDATA		= ${DESTDIR}@LIBDATA@
++LIBDIR		= ${DESTDIR}@LIBDIR@
++LIBEXEC		= ${DESTDIR}@LIBEXEC@
+ FONTMAP		= @FONTMAP@
+ FONTPATH	= @FONTPATH@
+ SENDMAIL	= @SENDMAIL@
+@@ -321,7 +322,7 @@
+ # MANSYS	subdirectory for server & server-related apps
+ # MANFILES	subdirectory for file format info 
  #
+-MAN		= @MANDIR@
++MAN		= ${DESTDIR}@MANDIR@
+ MANAPPS		= @MANAPPS@
+ MANSYS		= @MANSYS@
+ MANFILES	= @MANFILES@

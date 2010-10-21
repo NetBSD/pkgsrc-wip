@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2010/10/21 05:53:35 makoto Exp $
+@comment $NetBSD: PLIST,v 1.7 2010/10/21 07:46:21 makoto Exp $
 bin/faxalter
 bin/faxcover
 bin/faxmail
@@ -164,6 +164,7 @@ share/hylafax/config_template/gvc-288-2
 share/hylafax/config_template/hayes
 share/hylafax/config_template/iaxmodem
 share/hylafax/config_template/intel-400e
+share/hylafax/config_template/ip568x
 share/hylafax/config_template/linux-isdn-2
 share/hylafax/config_template/lucent
 share/hylafax/config_template/lucent-isa
@@ -171,6 +172,8 @@ share/hylafax/config_template/lucent-mt-10
 share/hylafax/config_template/lucent-mt-2
 share/hylafax/config_template/lucent-mt-20
 share/hylafax/config_template/lucent-mt-21
+share/hylafax/config_template/mainpine-2
+share/hylafax/config_template/mainpine-21
 share/hylafax/config_template/moto-288
 share/hylafax/config_template/mt-1432
 share/hylafax/config_template/nuvo-voyager

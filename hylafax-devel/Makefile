@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2010/01/18 09:38:25 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.13 2010/10/21 07:46:21 makoto Exp $
 
 VERS=		4.4.0
 PKGNAME=	hylafax-devel-${VERS}
@@ -22,6 +22,7 @@ DEPENDS+=	mawk>=1.2.2:../../lang/mawk
 
 DIST_SUBDIR=	hylafax
 
+PKG_DESTDIR_SUPPORT=	user-destdir
 CONFLICTS=	hylafax-[0-9]* mgetty-[0-9]*
 
 USE_LANGUAGES=		c c++
@@ -41,8 +42,16 @@ FAXUSER?=	uucp
 FAXGROUP?=	dialer
 RCD_SCRIPTS=	hylafax
 
-SUID_EXES=	${PREFIX}/libexec/faxgetty ${PREFIX}/sbin/faxq \
-		${PREFIX}/bin/faxrm ${PREFIX}/bin/faxalter
+PKG_GROUPS=	${FAXGROUP}
+PKG_USERS=	${FAXUSER}:${FAXGROUP}
+PKG_GECOS.uucp=	Unix to Unix Copy Program
+
+SETUID_UUCP_PERMS=	${FAXUSER} ${FAXGROUP} 4555
+
+SPECIAL_PERMS+=	libexec/faxgetty ${SETUID_UUCP_PERMS} \
+		sbin/faxq ${SETUID_UUCP_PERMS} \
+		bin/faxrm ${SETUID_UUCP_PERMS} \
+		bin/faxalter ${SETUID_UUCP_PERMS}
 
 INSTALLATION_DIRS = libdata
 
@@ -59,10 +68,6 @@ PKG_SUPPORTED_OPTIONS=	pam
 .else
 CONFIGURE_ARGS+=	--disable-pam
 .endif
-
-post-install:
-	${CHOWN} ${FAXUSER} ${SUID_EXES}
-	${CHMOD} 4555 ${SUID_EXES}
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
