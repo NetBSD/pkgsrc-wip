@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/10/20 17:35:09 cheusov Exp $
+# $NetBSD: Makefile,v 1.2 2010/10/22 08:02:10 cheusov Exp $
 #
 
 DISTNAME=	zoem-10-265
@@ -15,11 +15,5 @@ LICENSE=	gnu-gpl-v3
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
-
-USE_TOOLS+=		tar
-
-do-extract:
-	set -e; ${MKDIR} ${WRKDIR}; cd ${WRKDIR}; \
-	${TAR} -xf ${DISTDIR}/${DISTNAME}.tar.gz
 
 .include "../../mk/bsd.pkg.mk"
