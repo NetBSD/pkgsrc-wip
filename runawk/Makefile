@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2010/10/22 22:53:46 cheusov Exp $
+# $NetBSD: Makefile,v 1.50 2010/10/22 22:56:52 cheusov Exp $
 #
 
 DISTNAME=	runawk-1.2.0
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=runawk/} \
 MAINTAINER=	cheusov@tut.by
 HOMEPAGE=	http://sourceforge.net/projects/runawk
 COMMENT=	AWK wrapper that provides support for modules
+
+BUILD_DEPENDS+=		mk-configure>=0.20.0:../../wip/mk-configure
 
 LICENSE=		mit
 
