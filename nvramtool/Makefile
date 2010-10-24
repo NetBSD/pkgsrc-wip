@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/02/05 21:01:56 jakllsch Exp $
+# $NetBSD: Makefile,v 1.5 2010/10/24 17:03:23 jakllsch Exp $
 #
 
 DISTNAME=	nvramtool-${NVRAMTOOL_SNAP_VERSION}
@@ -45,8 +45,10 @@ YESTERDAY!=	expr `date +%s` - 86399
 NVRAMTOOL_TAG!=		${DATE} +%Y%m%d
 NVRAMTOOL_SNAP_VERSION!=		${DATE} -r ${YESTERDAY} +%Y%m%d
 
+INSTALLATION_DIRS=	sbin ${PKGMANDIR}/man8
+
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/nvramtool ${PREFIX}/sbin/nvramtool
-	${INSTALL_MAN} ${WRKSRC}/nvramtool.8 ${PREFIX}/${PKGMANDIR}/man8/nvramtool.8
+	${INSTALL_PROGRAM} ${WRKSRC}/nvramtool ${DESTDIR}${PREFIX}/sbin/nvramtool
+	${INSTALL_MAN} ${WRKSRC}/nvramtool.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/nvramtool.8
 
 .include "../../mk/bsd.pkg.mk"
