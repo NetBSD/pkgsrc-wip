@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/10/26 17:18:15 zecrazytux Exp $
+bin/wkhtmltoimage
+bin/wkhtmltopdf
+include/wkhtmltox/converter.hh
+include/wkhtmltox/dllbegin.inc
+include/wkhtmltox/dllend.inc
+include/wkhtmltox/image.h
+include/wkhtmltox/imageconverter.hh
+include/wkhtmltox/imagesettings.hh
+include/wkhtmltox/loadsettings.hh
+include/wkhtmltox/multipageloader.hh
+include/wkhtmltox/pdf.h
+include/wkhtmltox/pdfconverter.hh
+include/wkhtmltox/pdfsettings.hh
+include/wkhtmltox/settings.hh
+include/wkhtmltox/utilities.hh
+include/wkhtmltox/websettings.hh
+lib/libwkhtmltox.la

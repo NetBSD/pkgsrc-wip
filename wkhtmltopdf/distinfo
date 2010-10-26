@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/10/26 17:18:15 zecrazytux Exp $
+
+SHA1 (wkhtmltopdf-0.10.0_beta5.tar.lzma) = 5cbbcb7427d963cbb276e4c42f5b945790c7b168
+RMD160 (wkhtmltopdf-0.10.0_beta5.tar.lzma) = 6c016f790fc4d5773f045f6a03ca2c7a06aa9198
+Size (wkhtmltopdf-0.10.0_beta5.tar.lzma) = 99431 bytes
