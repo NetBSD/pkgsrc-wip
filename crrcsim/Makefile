@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/10/26 15:53:17 hfath Exp $
+# $NetBSD: Makefile,v 1.3 2010/10/26 16:40:14 hfath Exp $
 #
 
 DISTNAME=	crrcsim-0.9.11
@@ -23,4 +23,5 @@ USE_LANGUAGES=	c c++
 .include "../../games/plib/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
