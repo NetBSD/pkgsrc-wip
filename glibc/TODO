@@ -4,3 +4,5 @@
   everything is okay again.
 
 - Set USE_PKGLOCALEDIR and adapt PLIST.
+
+- Security issue: SA41795
