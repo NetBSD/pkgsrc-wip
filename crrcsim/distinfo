@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/10/26 15:27:58 hfath Exp $
+
+SHA1 (crrcsim-0.9.11.tar.gz) = 7e1b9ce9a5ad0f2b878ff422e00f8a3e28dc0f8d
+RMD160 (crrcsim-0.9.11.tar.gz) = 301e1a5fbface0ecfce7910c557a1fb8a2f01d47
+Size (crrcsim-0.9.11.tar.gz) = 6779165 bytes
+SHA1 (patch-aa) = c115e5fac6ab438e9062c481109567173d789c5e
+SHA1 (patch-ab) = ef1ab30c11dacc70df3582ef1fb3f2c93ff085ce

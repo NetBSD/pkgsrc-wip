@@ -1,0 +1,13 @@
+# $Id: TODO,v 1.1.1.1 2010/10/26 15:27:58 hfath Exp $
+#
+# Things to improve in games/crrcsim
+
+* Send 'test foo == bar' patch upstream
+
+* Find a way to handle inb()/outb() in 
+  'src/mod_inputdev/inputdev_parallel/inputdev_parallel.cpp'
+  or alternatively propose a GNU autoconf option for disabling
+  parallel port access. See patch-ab for the current quick hack.
+
+* Add a math/cgal package (see www.cgal.org) for improved 
+  simulation

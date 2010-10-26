@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2010/10/26 15:27:58 hfath Exp $
+
+--- src/mod_inputdev/inputdev_parallel/inputdev_parallel.cpp.orig	2010-06-02 19:58:05.000000000 +0000
++++ src/mod_inputdev/inputdev_parallel/inputdev_parallel.cpp
+@@ -28,7 +28,7 @@
+ #if defined(__APPLE__) || defined(MACOSX)
+ #else
+ #  if defined(WIN32)
+-#  elif defined(__powerpc__)
++#  elif defined(__powerpc__) || defined(__NetBSD__) /* XXX For now */
+ #    define ioperm(a,b,c) -1
+ #    define inb(a) 0
+ #    define outb(a,b)
