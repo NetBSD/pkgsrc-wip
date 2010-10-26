@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2010/10/26 15:15:02 ahp-nils Exp $
+# $NetBSD: Makefile,v 1.10 2010/10/26 17:03:20 ahp-nils Exp $
 #
 
 DISTNAME=	logrotate-3.7.9
@@ -38,6 +38,9 @@ SUBST_STAGE.man=        post-patch
 SUBST_MESSAGE.man=	Fixing man page.
 SUBST_FILES.man=        ${WRKSRC}/logrotate.8
 SUBST_SED.man=          -e "s|__PREFIX__|${PREFIX}|g"
+MESSAGE_SUBST+=  	DOCDIR=${DOCDIR}
+MESSAGE_SUBST+=  	EXAMPLES_DIR=${EXAMPLES_DIR}
+
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/logrotate ${DESTDIR}${PREFIX}/sbin
