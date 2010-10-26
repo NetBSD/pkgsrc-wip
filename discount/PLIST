@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/10/26 15:14:46 zecrazytux Exp $
+bin/markdown
+include/mkdio.h
+lib/libmarkdown.a
