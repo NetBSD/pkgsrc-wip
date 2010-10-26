@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/10/26 15:27:58 hfath Exp $
+# $NetBSD: Makefile,v 1.2 2010/10/26 15:53:17 hfath Exp $
 #
 
 DISTNAME=	crrcsim-0.9.11
@@ -15,11 +15,12 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
 
+# No pkgsrc package, yet
+##.include "../../math/cgal/buildlink3.mk"
+##.include "../../devel/boost-libs/buildlink3.mk"
+
 .include "../../audio/portaudio/buildlink3.mk"
 .include "../../games/plib/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
-# No pkgsrc package, yet
-##.include "../../math/cgal/buildlink3.mk"
-.include "../../devel/boost-libs/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
