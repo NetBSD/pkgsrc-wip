@@ -1,0 +1,17 @@
+$NetBSD: patch-ag,v 1.1 2010/10/26 15:13:59 ahp-nils Exp $
+
+--- logrotate.8.orig	2010-06-28 08:04:56.000000000 +0000
++++ logrotate.8
+@@ -473,10 +473,10 @@ Log files are rotated if the current yea
+ .SH FILES
+ .PD 0
+ .TP 27
+-\fI/var/lib/logrotate.status\fR
++\fI/var/log/logrotate.status\fR
+ Default state file.
+ .TP 27
+-\fI/etc/logrotate.conf\fR
++\fI__PREFIX__/etc/logrotate.conf\fR
+ Configuration options.
+ 
+ .SH SEE ALSO
