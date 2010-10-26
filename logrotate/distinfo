@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2010/09/06 09:03:54 ahp-nils Exp $
+$NetBSD: distinfo,v 1.7 2010/10/26 15:15:50 ahp-nils Exp $
 
 SHA1 (logrotate-3.7.9.tar.gz) = b920f9664a2c930f1ccdabc0db4f31f67cf95661
 RMD160 (logrotate-3.7.9.tar.gz) = e3fb77e37c454a52566f7d5b017d70c9dddf9b66
@@ -9,3 +9,4 @@ SHA1 (patch-ac) = 5e9716188df5854ac2559a6a2630f51232b6409e
 SHA1 (patch-ad) = d0a18211f1f67536efef827be9e2a829ef2e0a8f
 SHA1 (patch-ae) = f45555bdb1db1f88db281c84ab7954a038c1dc6b
 SHA1 (patch-af) = cc42590411ad7533486c864842df9fbfc0314a7d
+SHA1 (patch-ag) = 677876fee1cd14433f92aa25a02d2aefbf89672d
