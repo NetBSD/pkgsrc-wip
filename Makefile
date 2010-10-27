@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4117 2010/10/27 10:54:49 ryo-on Exp $
+# $Id: Makefile,v 1.4118 2010/10/27 11:07:51 ryo-on Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -55,6 +55,7 @@ SUBDIR+=	acpid
 SUBDIR+=	acroread9
 SUBDIR+=	acroread9-font-share
 SUBDIR+=	acroread9-jpnfont
+SUBDIR+=	acroread9-korfont
 SUBDIR+=	adamem
 SUBDIR+=	adms
 SUBDIR+=	admsmb
