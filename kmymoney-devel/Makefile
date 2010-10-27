@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2010/06/13 22:47:09 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2010/10/27 08:01:10 thomasklausner Exp $
 
 DISTNAME=	kmymoney-3.98.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	finance kde
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=kmymoney2/}
 EXTRACT_SUFX=  .tar.bz2
@@ -40,6 +40,7 @@ REPLACE_PERL+=	kmymoney/misc/financequote.pl
 .include "../../textproc/libxml++/buildlink3.mk"
 .include "../../time/libical/buildlink3.mk"
 .include "../../x11/kdebase4/buildlink3.mk"
+BUILDLINK_API_DEPENDS.kdelibs+=	kdelibs4>=4.5.0
 .include "../../x11/kdelibs4/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/qt4-libs/buildlink3.mk"

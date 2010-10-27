@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2010/08/18 00:24:49 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.37 2010/10/27 07:59:54 thomasklausner Exp $
 #
 
 DISTNAME=	amarok-${VERS}
@@ -56,6 +56,6 @@ BUILDLINK_API_DEPENDS.mysql-server+=	mysql-server>=5.1.44nb1
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 # for plasma
 .include "../../x11/kdebase-workspace4/buildlink3.mk"
-BUILDLINK_API_DEPENDS.kdelibs+=	kdelibs4>=4.4.0
+BUILDLINK_API_DEPENDS.kdelibs+=	kdelibs4>=4.5.0
 .include "../../x11/kdelibs4/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

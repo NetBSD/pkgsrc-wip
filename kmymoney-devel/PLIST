@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2010/05/20 14:03:55 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.5 2010/10/27 08:01:10 thomasklausner Exp $
 bin/kmymoney
 include/kmymoney/importinterface.h
 include/kmymoney/imymoneyprocessingcalendar.h
@@ -85,16 +85,16 @@ lib/kde4/kmm_printcheck.so
 lib/kde4/kmm_reconciliationreport.so
 lib/libkmm_kdchart.so
 lib/libkmm_kdchart.so.4
-lib/libkmm_kdchart.so.4.4.0
+lib/libkmm_kdchart.so.4.5.0
 lib/libkmm_mymoney.so
 lib/libkmm_mymoney.so.4
-lib/libkmm_mymoney.so.4.4.0
+lib/libkmm_mymoney.so.4.5.0
 lib/libkmm_plugin.so
 lib/libkmm_plugin.so.4
-lib/libkmm_plugin.so.4.4.0
+lib/libkmm_plugin.so.4.5.0
 lib/libkmm_widgets.so
 lib/libkmm_widgets.so.4
-lib/libkmm_widgets.so.4.4.0
+lib/libkmm_widgets.so.4.5.0
 man/man1/kmymoney.1
 share/applications/kde4/kmymoney.desktop
 share/doc/kde/HTML/en/kmymoney/account_edit.png
