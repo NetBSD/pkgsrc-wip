@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2010/10/27 12:20:14 lexort Exp $
-#
+# $NetBSD: Makefile,v 1.23 2010/10/27 12:22:59 lexort Exp $
 #
 #	Request by the author:
 #
@@ -9,9 +8,7 @@
 #	> There should be no patches in whatever
 #	> you distribute. Updatedcc must work.
 #
-#
 DISTNAME=		dcc-1.3.123
-#PKGREVISION=		2
 CATEGORIES=		mail
 MASTER_SITES=		http://www.rhyolite.com/dcc/source/old/
 EXTRACT_SUFX=		.tar.Z
@@ -29,16 +26,14 @@ DCC_USER?=		dcc
 DCC_GROUP?=		dcc
 DCC_HOME?=		${VARBASE}/dcc
 DCC_RUN?=		${VARBASE}/run/dcc
-#
-#	expanded in INSTALL
-#
+
+# expanded in INSTALL
 FILES_SUBST+=		DCC_USER=${DCC_USER} \
 			DCC_GROUP=${DCC_GROUP} \
 			DCC_HOME=${DCC_HOME} \
 			DCC_EGDIR=${DCC_EGDIR}
-#
-#	expanded in files/dcc{d,ifd,m}
-#
+
+# expanded in files/dcc{d,ifd,m}
 FILES_SUBST+=		DCC_RUN=${DCC_RUN}
 
 SUBST_CLASSES+=		dae
