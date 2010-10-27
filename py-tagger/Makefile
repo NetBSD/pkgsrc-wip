@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/05/30 12:22:56 jihbed Exp $
+# $NetBSD: Makefile,v 1.5 2010/10/27 18:10:04 shattered Exp $
 #
 
 DISTNAME=		pytagger-0.5
@@ -10,7 +10,7 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		shattered@users.sourceforge.net
 HOMEPAGE=		http://www.liquidx.net/pytagger/
 COMMENT=		ID3v1 and ID3v2 tag library in Python
-LICENSE=		modified-bsd	
+LICENSE=		modified-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
