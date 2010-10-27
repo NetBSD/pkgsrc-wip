@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4120 2010/10/27 12:13:11 ryo-on Exp $
+# $Id: Makefile,v 1.4121 2010/10/27 18:05:56 lexort Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -304,7 +304,6 @@ SUBDIR+=	dates
 SUBDIR+=	db1
 SUBDIR+=	dbf
 SUBDIR+=	dbus-explorer
-SUBDIR+=	dcc
 SUBDIR+=	ddate
 SUBDIR+=	debian_base
 SUBDIR+=	debian_glib
