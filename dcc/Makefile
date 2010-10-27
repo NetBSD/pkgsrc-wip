@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2010/05/02 18:18:57 pebog Exp $
+# $NetBSD: Makefile,v 1.22 2010/10/27 12:20:14 lexort Exp $
 #
 #
 #	Request by the author:
@@ -20,8 +20,6 @@ OWNER=			petar@smokva.net
 HOMEPAGE=		http://www.rhyolite.com/dcc/
 COMMENT=		Anti-spam content filter
 LICENSE=		dcc-free-license
-
-LICENSE_FILE=		${FILESDIR}/dcc-free-license
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
