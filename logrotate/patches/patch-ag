@@ -1,7 +1,16 @@
-$NetBSD: patch-ag,v 1.1 2010/10/26 15:13:59 ahp-nils Exp $
+$NetBSD: patch-ag,v 1.2 2010/10/27 06:49:52 ahp-nils Exp $
 
 --- logrotate.8.orig	2010-06-28 08:04:56.000000000 +0000
 +++ logrotate.8
+@@ -55,7 +55,7 @@ and mail it to the recipient. The defaul
+ \fB-s, -\-state <statefile>\fR
+ Tells \fBlogrotate\fR to use an alternate state file.  This is useful
+ if logrotate is being run as a different user for various sets of
+-log files.  The default state file is \fI/var/lib/logrotate.status\fR.
++log files.  The default state file is \fI/var/log/logrotate.status\fR.
+ 
+ .TP
+ \fB-\-usage\fR
 @@ -473,10 +473,10 @@ Log files are rotated if the current yea
  .SH FILES
  .PD 0
@@ -11,7 +20,7 @@ $NetBSD: patch-ag,v 1.1 2010/10/26 15:13:59 ahp-nils Exp $
  Default state file.
  .TP 27
 -\fI/etc/logrotate.conf\fR
-+\fI__PREFIX__/etc/logrotate.conf\fR
++\fI/usr/pkg/etc/logrotate.conf\fR
  Configuration options.
  
  .SH SEE ALSO
