@@ -96,12 +96,14 @@ BEGIN {
 	long_opts ["fields"] = "f"
 	long_opts ["vars"]   = "v"
 
-	while (getopt("hf:v:")){
+	while (getopt("hf:v:s")){
 		if (optopt == "h"){
 			usage()
 			exit 0
 		}else if (optopt == "f" || optopt == "v"){
 			fields = optarg
+		}else if (optopt == "s"){
+			slave_mode = 1
 		}else{
 			abort()
 		}
@@ -122,15 +124,23 @@ function print_bad_vars (               j){
 	for (j=1; j <= varnames_count; ++j){
 		printf "\t%s", var [varnames [j]]
 	}
-	printf "\t%s", pkgpath
-	printf "\n"
+	printf "\t%s\n", pkgpath
+	if (slave_mode){
+		printf "success\n\n"
+		fflush()
+	}
 }
 
 function print_good_vars (               j){
 	for (j=1; j <= varnames_count; ++j){
 		printf "\t%s", good_var [varnames [j]]
 	}
-	printf "\n"
+	if (slave_mode){
+		printf "\nsuccess\n\n"
+		fflush()
+	}else{
+		printf "\n"
+	}
 }
 
 function calc_and_print (               i, varname, value){
