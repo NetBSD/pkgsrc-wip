@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/10/11 07:39:35 obache Exp $
+# $NetBSD: Makefile,v 1.2 2010/10/28 05:49:44 obache Exp $
 #
 
-DISTNAME=	mikutter.0.0.1.3
+DISTNAME=	mikutter.0.0.1.4
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/./-/}
 CATEGORIES=	net
 MASTER_SITES=	http://mikutter.d.hachune.net/bin/
@@ -43,7 +43,6 @@ do-build:
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/mikutter.rb ${DESTDIR}${PREFIX}/share/mikutter
 	cd ${WRKSRC} && pax -rwpp core plugin ${DESTDIR}${PREFIX}/share/mikutter
-	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/mikutter
 	${INSTALL_DATA} ${WRKSRC}/README.html ${DESTDIR}${PREFIX}/share/doc/mikutter
 	${INSTALL_SCRIPT} ${WRKDIR}/mikutter.sh ${DESTDIR}${PREFIX}/bin/mikutter
 	${INSTALL_DATA} ${WRKDIR}/desktop ${DESTDIR}${PREFIX}/share/applications/mikutter.desktop

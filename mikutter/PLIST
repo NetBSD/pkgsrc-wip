@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/10/11 07:39:35 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/10/28 05:49:44 obache Exp $
 bin/mikutter
 share/applications/mikutter.desktop
-share/doc/mikutter/README
 share/doc/mikutter/README.html
 share/mikutter/core/addon/addon.rb
 share/mikutter/core/addon/bitly.rb
@@ -19,6 +18,7 @@ share/mikutter/core/addon/set_view.rb
 share/mikutter/core/addon/settings.rb
 share/mikutter/core/addon/smartthread.rb
 share/mikutter/core/addon/sqlite.rb
+share/mikutter/core/addon/streaming.rb
 share/mikutter/core/addon/worldcup.rb
 share/mikutter/core/autotag.rb
 share/mikutter/core/chi.rb
@@ -28,6 +28,7 @@ share/mikutter/core/delayer.rb
 share/mikutter/core/environment.rb
 share/mikutter/core/image.rb
 share/mikutter/core/initialize.rb
+share/mikutter/core/lib/lazy.rb
 share/mikutter/core/lib/weakstorage.rb
 share/mikutter/core/message.rb
 share/mikutter/core/messageconverters.rb
@@ -35,7 +36,10 @@ share/mikutter/core/miku/array.rb
 share/mikutter/core/miku/atom.rb
 share/mikutter/core/miku/cons.rb
 share/mikutter/core/miku/error.rb
+share/mikutter/core/miku/hash.rb
+share/mikutter/core/miku/init.miku
 share/mikutter/core/miku/list.rb
+share/mikutter/core/miku/macro.rb
 share/mikutter/core/miku/miku.rb
 share/mikutter/core/miku/nil.rb
 share/mikutter/core/miku/node.rb
@@ -87,6 +91,12 @@ share/mikutter/core/skin/data/sounds/mikuxtu.wav
 share/mikutter/core/skin/data/tab-bg.png
 share/mikutter/core/skin/data/timeline.png
 share/mikutter/core/skin/data/unfav.png
+share/mikutter/core/test/test_message.rb
+share/mikutter/core/test/test_messageconverters.rb
+share/mikutter/core/test/test_plugin.rb
+share/mikutter/core/test/test_retriever.rb
+share/mikutter/core/test/test_user.rb
+share/mikutter/core/test/test_utils.rb
 share/mikutter/core/twitter.rb
 share/mikutter/core/twitter_api.rb
 share/mikutter/core/user.rb
