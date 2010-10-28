@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/10/28 14:11:14 hfath Exp $
+# $NetBSD: Makefile,v 1.2 2010/10/28 14:31:48 hfath Exp $
 #
 
 DISTNAME=	CGAL-${DISTVERS}
@@ -13,6 +13,8 @@ HOMEPAGE=	http://www.cgal.org/
 COMMENT=	Easy access to efficient and reliable geometric algorithms
 LICENSE=	qpl-v1.0 AND gnu-lgpl-v2
 
+# pkgsrc is not currently able to fetch distfiles from https web servers
+# (see mk/fetch/fetch.mk), so you have to use a browser for now.
 FETCH_USING=		wget
 FETCH_BEFORE_ARGS=	--no-check-certificate
 
