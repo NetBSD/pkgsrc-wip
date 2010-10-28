@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/10/28 14:11:15 hfath Exp $
+
+SHA1 (CGAL-3.7.tar.gz) = c5c1ee8a08b596239ced9df6f13a4555253f0cbb
+RMD160 (CGAL-3.7.tar.gz) = f8e884d2ecf37dbd5fcc6fc8c9987f6116c305a8
+Size (CGAL-3.7.tar.gz) = 13809980 bytes
+SHA1 (patch-aa) = c664f64ccc9507871c1ada46b983f0d006b13fe6
