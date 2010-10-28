@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4121 2010/10/27 18:05:56 lexort Exp $
+# $Id: Makefile,v 1.4122 2010/10/28 14:12:56 hfath Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -226,6 +226,7 @@ SUBDIR+=	cdpr
 SUBDIR+=	cedet
 SUBDIR+=	cfengine
 SUBDIR+=	cfengine3
+SUBDIR+=	cgal
 SUBDIR+=	cgit
 SUBDIR+=	cglib
 SUBDIR+=	chbg
