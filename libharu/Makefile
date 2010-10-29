@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2010/08/01 14:57:09 asau Exp $
+# $NetBSD: Makefile,v 1.5 2010/10/29 15:03:19 emil_s Exp $
 #
 
-DISTNAME=	libharu-2.1.0
-PKGREVISION=	1
+DISTNAME=	libharu-2.2.0
 CATEGORIES=	print
 MASTER_SITES=	http://libharu.org/files/
 
-MAINTAINER=	emil@math.su.se
+MAINTAINER=	esg@sdf.lonestar.org
 HOMEPAGE=	http://libharu.org/
 COMMENT=	Library for generating PDF files
 
@@ -14,9 +13,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_LANGUAGES=	c c++ fortran77
-
-.include "../../mk/bsd.prefs.mk"
+USE_LANGUAGES=	c c++
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.libharu
 PKG_SUPPORTED_OPTIONS=	png zlib
