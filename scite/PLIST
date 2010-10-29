@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2009/10/11 11:18:15 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.12 2010/10/29 19:44:34 shattered Exp $
 bin/SciTE
 man/man1/scite.1
 share/applications/SciTE.desktop
@@ -64,6 +64,7 @@ share/scite/others.properties
 share/scite/pascal.properties
 share/scite/perl.properties
 share/scite/pov.properties
+share/scite/powershell.properties
 share/scite/ps.properties
 share/scite/purebasic.properties
 share/scite/python.properties

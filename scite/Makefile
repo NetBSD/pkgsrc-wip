@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2010/06/13 22:47:15 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.25 2010/10/29 19:44:34 shattered Exp $
 
 DISTNAME=		scite177
 PKGNAME=		scite-1.77
-#PKGREVISION=		1
 PKGREVISION=		2
 CATEGORIES=		editors
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=scintilla/}
@@ -15,7 +14,10 @@ COMMENT=		Editor with facilities for building and running programs
 WRKSRC=			${WRKDIR}
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake pkg-config
+
 BUILD_DIRS=		scintilla/gtk scite/gtk
+INSTALLATION_DIRS=	share/applications share/pixmaps
+
 MAKE_FLAGS+=		GTK2=1 CPPFLAGS=-Dunix prefix=${PREFIX}
 MAKE_FILE=		makefile
 
