@@ -86,6 +86,14 @@ Environment:
    PKG_SRC_SUMMARY_CMD - command for generating micro summary,
                       it defaults to pkg_micro_src_summary,
                       reasonable (but slower) alternative is pkg_src_summary.
+   PSS_SLAVES       - If you want to use all available CPUs, i.e. run several
+                      subprocesses in parallel, set this variable to +<cpu_cnt>.
+                      For details, see pkg_src_summary(1). On NetBSD, FreeBSD,
+                      OpenBSD, DragonFlyBSD and Linux PSS_SLAVES defaults
+                      a number of available CPUs and therefore significantly
+                      speeds up 'pkg_status -s'.
+   PSS_TRANSPORT    - See pkg_src_summary(1)
+   PSS_PPERS        - See pkg_src_summary(1)
 Example:
    pkg_status -h
    pkg_status -s
@@ -104,73 +112,51 @@ EOF
 #  pkg_status -o [OPTIONS]
 #  -o                     compare against packages served by pkg_online server
 
-set -- `getopt hVsbrAauQDp:ltREnkmUd $PKG_STATUS_OPTIONS $*`
+process_args (){
+    alt_getopt \
+	h    'usage; exit 0' \
+	V    "echo 'pkg_status @VERSION@'; exit 0" \
+	s    'mode_src=1' \
+	b    'mode_bin=1' \
+	r    submode_raw=1 \
+	A    submode_all=1 \
+	u    'pkg_info_opts="$pkg_info_opts -u"' \
+	a    'pkg_info_opts="$pkg_info_opts -a"' \
+	Q    quiet=1 \
+	D    debug=1 \
+	=p   pkgpaths_fn= \
+	k    mode_checks=1 \
+	m    check_checksums=1 \
+	U    check_reqs_provs=1 \
+	d    check_deps=1 \
+	l    mode_leaves=1 \
+	t    pkgpath_only=1 \
+	R    rem_leaves=1 \
+	E    'pkg_delete_opts="$pkg_delete_opts -A"; rem_leaves=1' \
+	n    'pkg_delete_opts="$pkg_delete_opts -n"' \
+	-- "$@"
+}
 
-while test $# -ne 0; do
-    case "$1" in
-	-h)
-	    usage
-	    exit 0;;
-	-V)
-	    echo 'pkg_status @VERSION@'
-	    exit 0;;
-	-s)
-	    mode_src=1;;
-#	-o)
-#	    mode_online=1;;
-	-b)
-	    mode_bin=1;;
-	-r)
-	    submode_raw=1;;
-	-A)
-	    submode_all=1;;
-	-u)
-	    pkg_info_opts="$pkg_info_opts -u";;
-	-a)
-	    pkg_info_opts="$pkg_info_opts -a";;
-	-Q)
-	    quiet=1;;
-	-D)
-	    debug=1;;
-	-p)
-	    pkgpaths_fn="$2"
-	    shift;;
-	-k)
-	    mode_checks=1;;
-	-m)
-	    check_checksums=1;;
-	-U)
-	    check_reqs_provs=1;;
-	-d)
-	    check_deps=1;;
-	-l)
-	    mode_leaves=1;;
-	-t)
-	    pkgpath_only=1;;
-	-R)
-	    rem_leaves=1;;
-	-E)
-	    pkg_delete_opts="$pkg_delete_opts -A"
-	    rem_leaves=1;;
-	-n)
-	    pkg_delete_opts="$pkg_delete_opts -n";;
-	--)
-	    shift
-	    break;;
-	-*)
-	    echo "Unknown option $1" 1>&2
-	    exit 1;;
-	*)
-	    break;;
-    esac
-    shift
-done
+cmds=`process_args "$@"`
+eval "$cmds"
 
+######################################################################
 bsd_xargs (){
     if read a; then
 	{ printf '%s\n' "$a"; cat; } | xargs "$@"
     fi
 }
+
+# Adjust PSS_SLAVES
+if test "${PSS_SLAVES-fake}" = fake; then
+    case `uname -s` in
+	NetBSD|FreeBSD|OpenBSD|DragonFly)
+	    PSS_SLAVES=+`sysctl hw.ncpu | awk '/hw.ncpu/ {print $3}'`;;
+	Linux)
+	    PSS_SLAVES=+`cat /proc/cpuinfo | awk '/processor/ {++cnt} END {print cnt}'`;;
+    esac
+    export PSS_SLAVES
+fi
 
 ######################################################################
 # top-level options
