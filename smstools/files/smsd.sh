@@ -10,7 +10,7 @@ fi
 
 name="smsd"
 rcvar=$name
-command="@PREFIX@/bin/${name}"
+command="@PREFIX@/sbin/${name}"
 command_args="&"
 required_files="@PKG_SYSCONFDIR@/smsd.conf"
 start_precmd="smsd_precmd"
