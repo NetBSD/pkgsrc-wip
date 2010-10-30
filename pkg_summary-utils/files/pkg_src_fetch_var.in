@@ -1,6 +1,6 @@
 #!/usr/bin/env runawk
 
-# Copyright (c) 2007-2008 Aleksey Cheusov <vle@gmx.net>
+# Copyright (c) 2007-2010 Aleksey Cheusov <vle@gmx.net>
 #
 # Permission is hereby granted, free of charge, to any person obtaining
 # a copy of this software and associated documentation files (the
@@ -125,22 +125,13 @@ function print_bad_vars (               j){
 		printf "\t%s", var [varnames [j]]
 	}
 	printf "\t%s\n", pkgpath
-	if (slave_mode){
-		printf "success\n\n"
-		fflush()
-	}
 }
 
 function print_good_vars (               j){
 	for (j=1; j <= varnames_count; ++j){
 		printf "\t%s", good_var [varnames [j]]
 	}
-	if (slave_mode){
-		printf "\nsuccess\n\n"
-		fflush()
-	}else{
-		printf "\n"
-	}
+	printf "\n"
 }
 
 function calc_and_print (               i, varname, value){
@@ -367,14 +358,21 @@ function process_include (fn, inc, cond_cnt,              ret,varname){
 }
 
 {
-	pkgpath = $1
-	last_fn = pkgsrcdir "/" $1 "/Makefile"
+	for (i=1; i <= NF; ++i){
+		pkgpath = $i
+		last_fn = pkgsrcdir "/" $i "/Makefile"
 
-	top_dir = dirname(last_fn)
-	read_error = 0
-	process_include(".", last_fn, 0)
-	calc_and_print()
+		top_dir = dirname(last_fn)
+		read_error = 0
+		process_include(".", last_fn, 0)
+		calc_and_print()
 
-	delete var
-	delete badvar
+		delete var
+		delete badvar
+	}
+
+	if (slave_mode){
+		printf "success\n\n"
+		fflush()
+	}
 }
