@@ -49,9 +49,9 @@ against pkgsrc source tree or pkg_summary.{txt,gz,bz2}
 usage:
   pkg_status -h
   pkg_status -V
-  pkg_status -s [-ruaAQDp] [ [--] pkg_info_args ]
-  pkg_status -b [-ruaAQD]  [ [--] pkg_info_args ]
-  pkg_status -k [-mUd]     [ [--] pkg_info_args or pkg_admin_args ]
+  pkg_status -s [-ruaAQDp1] [ [--] pkg_info_args ]
+  pkg_status -b [-ruaAQD]   [ [--] pkg_info_args ]
+  pkg_status -k [-mUd]      [ [--] pkg_info_args or pkg_admin_args ]
   pkg_status -l [-rtREn]
 
 OPTIONS:
@@ -59,7 +59,7 @@ OPTIONS:
   -V         display version
   -r         raw output
   -D         for debugging purposes, temp files are not removed
-OPTIONS for -s|-b:
+OPTIONS common for -s and -b:
   -s         compare against pkgsrc source tree
   -b         compare against pkg_summary(5) database,
              a path to which is stored in PKG_SUMMARY environment variable
@@ -68,8 +68,9 @@ OPTIONS for -s|-b:
   -A         by default up-to-date packages are skipped,
              with -A they are output too
   -Q         No noisy reminder about output format
+OPTIONS for -s:
   -p <file>  get PKGPATHs from <file> (instead of pkg_info -QPKGPATH).
-             This option makes sense with -s, not with -b.
+  -1         do not run many pkg_src_summary(1) in parallel.
 OPTIONS for -l:
   -l         list leaf packages installed automatically
   -t         output only PKGNAME
@@ -79,6 +80,7 @@ OPTIONS for -l:
 OPTIONS for -k:
   -m         check checksums of installed files (pkg_admin check)
   -U         check for REQUIRES/PROVIDES coherence (pkg_lint_summary -l)
+  -L         check existence of files listed in REQUIRES (pkg_lint_summary -L)
   -d         check for presense of dependencies (pkg_lint_summary -d)
 Environment:
    PKG_SUMMARY      - path to pkg_summary.{txt,gx,bz2},
@@ -94,17 +96,24 @@ Environment:
                       speeds up 'pkg_status -s'.
    PSS_TRANSPORT    - See pkg_src_summary(1)
    PSS_PPERS        - See pkg_src_summary(1)
-Example:
+Examples:
    pkg_status -h
+   pkg_status -V
+
    pkg_status -s
-   pkg_status -b
    pkg_status -saQ
-   pkg_status -bA
-   pkg_status -bar
+   env PSS_SLAVES=+8 pkg_status -sra
    pkg_status -s pkg_install bmake bootstrap-mk-files
+   pkg_status -s -- -K ~/pkg_distbb/var/db/pkg -a
    pkg_status -srA -- pkg_summary-utils
    pkg_status -sp /etc/interesting_pkgs.conf
+
+   pkg_status -b
+   pkg_status -bA
+   pkg_status -bar
+
    pkg_status -lEn
+
    pkg_status -km
    pkg_status -kUd
 EOF
@@ -125,9 +134,11 @@ process_args (){
 	Q    quiet=1 \
 	D    debug=1 \
 	=p   pkgpaths_fn= \
+	1    PSS_SLAVES=+1 \
 	k    mode_checks=1 \
 	m    check_checksums=1 \
 	U    check_reqs_provs=1 \
+	L    check_reqs_exist=1 \
 	d    check_deps=1 \
 	l    mode_leaves=1 \
 	t    pkgpath_only=1 \
@@ -156,6 +167,10 @@ if test "${PSS_SLAVES-fake}" = fake; then
 	    PSS_SLAVES=+`cat /proc/cpuinfo | awk '/processor/ {++cnt} END {print cnt}'`;;
     esac
     export PSS_SLAVES
+fi
+
+if test "$PSS_SLAVES" = +1; then
+    unset PSS_SLAVES
 fi
 
 ######################################################################
@@ -232,13 +247,18 @@ if test -n "$mode_checks"; then
 	fi
     fi
 
-    if test -n "$check_reqs_provs$check_deps"; then
+    if test -n "$check_reqs_provs$check_reqs_exist$check_deps"; then
 	$PKG_INFO_CMD -X -a > $tmp_dir/bin_summary.txt
     fi
 
     if test -n "$check_reqs_provs"; then
 	echo ' --------------- REQUIRES/PROVIDES coherence --------------'
 	pkg_lint_summary -l $tmp_dir/bin_summary.txt || ex=1
+    fi
+
+    if test -n "$check_reqs_exist"; then
+	echo ' --------------- REQUIRES vs. filesystem ------------------'
+	pkg_lint_summary -L $tmp_dir/bin_summary.txt || ex=1
     fi
 
     if test -n "$check_deps"; then
