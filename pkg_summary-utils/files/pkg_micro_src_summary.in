@@ -30,6 +30,7 @@ set -e
 # user settable variables
 export PKGSRCDIR=${PKGSRCDIR:=@PKGSRCDIR@} # export - for pkg_src_fetch_var
 export BMAKE=${BMAKE:=@BMAKE@}
+SH=${SH-@SH@}
 
 ############################################################
 tmpdir=`mktemp -d /tmp/pkg_micro_src_summary.XXXXXX`
@@ -82,8 +83,12 @@ list_pkgs (){
 	    echo "$pkgpath"
 	done
     else
-	awk '{printf " %s", $0; if ((NR % 10) == 9) printf "\n"; }
-	     END {if (NR && (NR % 10) != 9) printf "\n"}'
+	cat
+	return 0
+	awk -v C=10 \
+	    'BEGIN {modu=C-1}
+	     { printf " %s", $0; if ((NR % C) == modu) printf "\n"; }
+	     END {if (NR && (NR % C) != modu) printf "\n"}'
     fi
 }
 
@@ -102,7 +107,7 @@ pkg_src_fetch (){
 	paexec -glez $PSS_PAEXEC_EXTRA_OPTS \
 	    -n "$PSS_SLAVES" \
 	    -t "$PSS_TRANSPORT" \
-	    -c "env $environ $0 -s -f '$qfields'" '|' \
+	    -c "env $environ $SH $0 -s -f '$qfields'" '|' \
 	paexec_reorder '|' \
 	sed '/^success$/ d'
     else
@@ -111,6 +116,7 @@ pkg_src_fetch (){
 }
 
 runpipe list_pkgs "$@" '|' pkg_src_fetch > "$helper_out"
+#exit 88
 
 # `+' to micro_summary (fast!)
 awk -F'\t' -v fields="$fields" '
