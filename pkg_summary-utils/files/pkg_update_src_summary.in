@@ -73,9 +73,9 @@ cd $PKGSRCDIR
 
 new_summary=$summary.new
 
-tmp_dir="/tmp/pkg_update_src_summary.$$"
+tmp_dir=`mktemp -d /tmp/pkg_update_src_summary.XXXXXX`
 trap "rm -rf $tmp_dir $new_summary" 0 1 2 15
-mkdir -m 700 "$tmp_dir"
+test -n "$tmp_dir" || exit 1
 
 allpkgs_fn=$tmp_dir/allpkgs
 

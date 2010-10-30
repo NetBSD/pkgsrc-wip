@@ -1,7 +1,7 @@
 #!@SH@
 #-*-mode:  sh -*-
 
-# Copyright (c) 2007-2008 Aleksey Cheusov <vle@gmx.net>
+# Copyright (c) 2007-2010 Aleksey Cheusov <vle@gmx.net>
 #
 # Permission is hereby granted, free of charge, to any person obtaining
 # a copy of this software and associated documentation files (the
@@ -28,9 +28,9 @@ export LC_ALL=C
 
 ############################################################
 
-tmp_dir="/tmp/pkg_cleanup_distdir.$$"
+tmp_dir=`mktemp -d /tmp/pkg_cleanup_distdir.XXXXXX`
 trap "rm -rf $tmp_dir" 0 1 2 15
-mkdir -m 700 "$tmp_dir"
+test -n "$tmp_dir" || exit 1
 
 ############################################################
 

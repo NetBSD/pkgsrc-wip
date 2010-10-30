@@ -172,13 +172,13 @@ fi
 if echo "$PSS_FIELDS" | grep CVS_CHECKSUM > /dev/null; then
     field_cvs_checksum=1
 fi
-varnames="`echo $PSS_FIELDS |
-   awk '{gsub(/PLIST/, \"\")
-         gsub(/CVS_CHECKSUM/, \"\")
-         gsub(/ONLYFOR/, \"ONLY_FOR_PLATFORM\")
-         gsub(/NOTFOR/,  \"NOT_FOR_PLATFORM\")
-         gsub(/DESCRIPTION/, \"DESCR_SRC\")
-         print}'`"
+varnames=`echo $PSS_FIELDS |
+   awk '{gsub(/PLIST/, "")
+         gsub(/CVS_CHECKSUM/, "")
+         gsub(/ONLYFOR/, "ONLY_FOR_PLATFORM")
+         gsub(/NOTFOR/,  "NOT_FOR_PLATFORM")
+         gsub(/DESCRIPTION/, "DESCR_SRC")
+         print}'`
 
 if test -n "$debug"; then
     echo '===== PSS_FIELDS: =========' 1>&2
@@ -188,9 +188,9 @@ fi
 ############################################################
 cd $PKGSRCDIR
 
-tmp_dir="/tmp/pkg_src_summary.$$"
+tmp_dir=`mktemp -d /tmp/pkg_src_summary.XXXXXX`
 trap "rm -rf $tmp_dir" 0 1 2 15
-mkdir -m 700 "$tmp_dir"
+test -n "$tmp_dir" || exit 1
 
 tmpfn=$tmp_dir/pkgdirs2info.txt
 errsfn=$tmp_dir/errors.txt

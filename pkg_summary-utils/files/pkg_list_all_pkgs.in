@@ -57,9 +57,9 @@ fi
 ############################################################
 cd $PKGSRCDIR
 
-tmp_dir="/tmp/pkg_list_all_pkgs.$$"
+tmp_dir=`mktemp -d /tmp/pkg_list_all_pkgs.XXXXXX`
 trap "rm -rf $tmp_dir" 0 1 2 15
-mkdir -m 700 "$tmp_dir"
+test -n "$tmp_dir" || exit 1
 
 ############################################################
 ############################################################
