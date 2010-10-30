@@ -56,6 +56,10 @@ contents::
     
     INTEGER_LIBRARY = integer-simple
 
+Copy some configuration files from the ``-target`` tree::
+
+    $ cp ../ghc-{VERSION}-target/includes/{ghcautoconf.h,DerivedConstants.h,GHCConstants.h} includes/
+
 Build it::
 
     $ gmake
