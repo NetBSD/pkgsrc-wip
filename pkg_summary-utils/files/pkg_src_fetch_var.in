@@ -359,8 +359,13 @@ function process_include (fn, inc, cond_cnt,              ret,varname){
 
 {
 	for (i=1; i <= NF; ++i){
-		pkgpath = $i
-		last_fn = pkgsrcdir "/" $i "/Makefile"
+		pkgpaths [i] = $i
+	}
+	pkgpath_cnt = NF
+
+	for (i=1; i <= pkgpath_cnt; ++i){
+		pkgpath = pkgpaths [i]
+		last_fn = pkgsrcdir "/" pkgpath "/Makefile"
 
 		top_dir = dirname(last_fn)
 		read_error = 0
