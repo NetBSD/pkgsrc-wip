@@ -96,6 +96,6 @@ re-archive the HC tree::
           */*/package-data.mk \
           */*/*/package-data.mk
     $ cd ..
-    $ tar jcf ghc-{VERSION}-boot-{PLATFORM}.tar.bz2
+    $ tar jcf ghc-{VERSION}-boot-{PLATFORM}.tar.bz2 ghc-{VERSION}
 
 Done. Upload the archive to some host and add it to the ``Makefile``.
