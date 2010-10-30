@@ -32,9 +32,9 @@ export PKGSRCDIR=${PKGSRCDIR:=@PKGSRCDIR@} # export - for pkg_src_fetch_var
 export BMAKE=${BMAKE:=@BMAKE@}
 
 ############################################################
-tmpdir=/tmp/pkg_micro_src_summary.$$
+tmpdir=`mktemp -d /tmp/pkg_micro_src_summary.XXXXXX`
 trap "rm -rf $tmpdir" 0 1 2 15
-mkdir -m 700 $tmpdir
+test -n $tmpdir || exit 1
 
 errsfn=$tmpdir/errors.txt
 
@@ -62,6 +62,7 @@ process_args (){
     alt_getopt \
 	'h help'    'usage; exit 0' \
 	'=f fields' 'set_fields ' \
+	s           'slave=1' \
 	-- "$@"
 }
 
@@ -78,16 +79,37 @@ list_pkgs (){
     if test $# -ne 0; then
 	# processing arguments
 	for pkgpath in "$@"; do
-	    echo $pkgpath
+	    echo "$pkgpath"
 	done
     else
 	cat
     fi
 }
 
-runpipe \
-    list_pkgs "$@" '|' \
-    pkg_src_fetch_var -f "$fields" > "$helper_out"
+if test "$slave"; then
+    pkg_src_fetch_var -sf "$fields"
+    exit 0
+fi
+
+pkg_src_fetch (){
+    if test "$PSS_SLAVES"; then
+	qfields="$(echo $fields | tr ' ' ,)"
+	environ="PSS_SLAVES= BMAKE=$BMAKE PKGSRCDIR=$PKGSRCDIR"
+	environ="$environ PSS_PRE_PATH=$PSS_PRE_PATH PSS_POST_PATH=$PSS_POST_PATH"
+
+    runpipe0 \
+	paexec -glez $PSS_PAEXEC_EXTRA_OPTS \
+	    -n "$PSS_SLAVES" \
+	    -t "$PSS_TRANSPORT" \
+	    -c "env $environ $0 -s -f '$qfields'" '|' \
+	paexec_reorder '|' \
+	sed '/^success$/ d'
+    else
+	pkg_src_fetch_var -f "$fields"
+    fi
+}
+
+runpipe list_pkgs "$@" '|' pkg_src_fetch > "$helper_out"
 
 # `+' to micro_summary (fast!)
 awk -F'\t' -v fields="$fields" '
