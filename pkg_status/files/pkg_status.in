@@ -170,7 +170,7 @@ if test "${PSS_SLAVES-fake}" = fake; then
     export PSS_SLAVES
 fi
 
-if test "$PSS_SLAVES" = +1; then
+if test "$PSS_SLAVES" = +1 -o "$PSS_SLAVES" = ''; then
     unset PSS_SLAVES
 fi
 
@@ -354,6 +354,18 @@ output_results (){
 if test -n "$mode_src"; then
     $PKG_INFO_CMD -X $pkg_info_opts "$@" > "$bin_summary_fn"
     generate_pkgpaths "$@"
+
+    if test -n "$PSS_SLAVES"; then
+	if ( paexec -h ) > /dev/null 2>&1; then
+	    :
+	else
+	    cat 1>&2 <<'EOF'
+paexec is not found. Using only one CPU...
+EOF
+	    unset PSS_SLAVES
+	fi
+    fi
+
     $PKG_SRC_SUMMARY_CMD < "$pkgpaths_fn" > "$src_summary_fn"
     runpipe0 \
 	pkg_cmp_summary -p "$bin_summary_fn" "$src_summary_fn" '|' \
