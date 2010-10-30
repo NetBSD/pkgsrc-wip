@@ -1,0 +1,97 @@
+.. -*- rst -*-
+
+============
+wip/ghc TODO
+============
+
+* Build more bootstrapping HC archives to support more platforms.
+
+
+--------------------------
+How to build an HC archive
+--------------------------
+
+It's basically the same as the `Porting Guide
+<http://hackage.haskell.org/trac/ghc/wiki/Building/Porting>`_, plus
+some minor tweaks.
+
+Extract the source archive and duplicate the source tree, one for
+``-target`` and one for ``-host``::
+
+    $ tar jxf ghc-{VERSION}-src.tar.bz2
+    $ cp -r ghc-{VERSION} ghc-{VERSION}-target
+    $ mv ghc-{VERSION} ghc-{VERSION}-host
+
+Build some configuration files::
+
+    $ cd ghc-{VERSION}-target
+    $ ln -s /bin/pwd utils/ghc-pwd/ghc-pwd
+    $ ./configure --enable-hc-boot
+    $ echo "INTEGER_LIBRARY = integer-simple" > mk/build.mk
+    $ gmake bootstrapping-files
+    $ cd ..
+
+Run ``./configure`` on the host tree::
+
+    $ cd ghc-{VERSION}-host
+    $ ./configure
+
+Then create ``ghc-{VERSION}-host/mk/build.mk`` with the following
+contents::
+
+    PORTING_HOST = YES
+    GhcUnregisterised = YES
+    GhcLibHcOpts = -O -fvia-C -keep-hc-files
+    GhcRtsHcOpts = -keep-hc-files
+    GhcLibWays = v
+    GhcRTSWays =
+    SplitObjs = NO
+    GhcWithNativeCodeGen = NO
+    GhcWithInterpreter = NO
+    GhcStage1HcOpts = -O
+    GhcStage2HcOpts = -O -fvia-C -keep-hc-files
+    SRC_HC_OPTS += -H32m
+    GhcWithSMP = NO
+    utils/ghc-pkg_dist-install_v_HC_OPTS += -keep-hc-files
+    
+    INTEGER_LIBRARY = integer-simple
+
+Build it::
+
+    $ gmake
+
+Create an intermediate tarball::
+
+    $ rm -f list mkfiles boot.tar.gz
+    $ find . -name "*.hi" >> list
+    $ find . -name "*.hc" >> list
+    $ find . -name "*_stub.c" >> list
+    $ find . -name "*_stub.h" >> list
+    $ find . -name package-data.mk >> list
+    $ find . -name package.conf.d >> list
+    $ find . -name package.conf.inplace >> list
+    $ echo compiler/main/Config.hs >> list
+    $ echo compiler/prelude/primops.txt >> list
+    $ ls compiler/primop-*.hs-incl >> list
+    $ find . -name .depend | sed -e 's/^/mkdir -p `dirname /' -e 's/$/`/' >> mkfiles
+    $ find . -name .depend | sed "s/^/touch /" >> mkfiles
+    $ echo mkfiles >> list
+    $ tar -zcf boot.tar.gz -T list
+
+Then extract it again, in a different directory::
+
+    $ mkdir ghc-{VERSION}
+    $ cd ghc-{VERSION}
+    $ tar zxf ../boot.tar.gz
+
+Modify hard-coded paths in inplace ``.conf`` files, and then
+re-archive the HC tree::
+
+    $ sed -i.bak -e 's#'`dirname \`pwd\``'#[[GHC_SOURCE_PATH]]#g' \
+          inplace/lib/package.conf.d/*.conf \
+          */*/package-data.mk \
+          */*/*/package-data.mk
+    $ cd ..
+    $ tar jcf ghc-{VERSION}-boot-{PLATFORM}.tar.bz2
+
+Done. Upload the archive to some host and add it to the ``Makefile``.

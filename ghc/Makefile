@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2010/10/05 22:35:52 phonohawk Exp $
+# $NetBSD: Makefile,v 1.26 2010/10/30 07:24:45 phonohawk Exp $
 
 DISTNAME=		ghc-${VERSION}
 VERSION=		6.12.3
@@ -28,6 +28,9 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 # these packages are built with integer-simple, not integer-gmp, to
 # reduce some complexity by not depending on the GMP. The resulting
 # registerised GHC uses integer-gmp so this won't be a problem.
+#
+# If you want to build HC packages yourself, follow instructions in
+# the ./TODO file.
 ONLY_FOR_PLATFORM= NetBSD-*-i386 FreeBSD-*-i386 Darwin-*-powerpc
 
 # We must provide the real pass to gcc to the ./configure script,
