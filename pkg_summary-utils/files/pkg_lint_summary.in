@@ -39,9 +39,9 @@
 #        pkg_lint_summary [OPTIONS] [files...]
 # OPTIONS:
 #   -h|--help   display this help
-#   -l          checks REQUIRES/PROVIDES fields
-#   -L          compare REQUIRES non-pkgsrc libs and reality (file system)
-#   -d          checks DEPENDS fields (required dependencies are present)
+#   -l          checks REQUIRES/PROVIDES consistency
+#   -L          checks that libs from REQUIRES are present on filesystem
+#   -d          checks that all packages listed in DEPENDS are in the summary
 #.end-str
 ############################################################
 
@@ -84,7 +84,7 @@ opt_l || opt_L {
 		requires1 = substr($0, 10)
 		if (!(requires1 in provides2pkg))
 			requires [++requires_cnt] = requires1
-		if (opt_L && !has_prefix(requires1, prefix)){
+		if (opt_L) { # && !has_prefix(requires1, prefix)){
 			dirname = requires1
 			sub(/\/[^\/]*\/?$/, "", dirname)
 			syslibdirs [dirname] = 1
@@ -131,37 +131,44 @@ NF == 0 {
 function check_ver (ver, condition){
 }
 
+function print_lib_notfound (prefix, lib,                        i){
+	for (i=1; i <= reqd_libs2cnt [lib]; ++i){
+		print prefix ": not_found " lib, reqd_libs2where [lib, i]
+	}
+}
+
 END {
 	ex = 0
+
+	# -L
 	if (opt_L){
 		for (libdir in syslibdirs){
-			pipe = "ls -1 '" libdir "'"
+			pipe = "ls -1 '" libdir "' 2>/dev/null"
 			while((pipe | getline lib) > 0){
 				syslibs [libdir "/" lib] = 0
 			}
 			close(pipe)
 		}
-	}
 
-	if (opt_l){
 		for (p in reqd_libs){
-			ok = 1
-			if (has_prefix(p, prefix)){
-				ok = (p in provides2pkg)
-				lpref = "l"
-			}else if (opt_L){
-				ok = (p in syslibs)
-				lpref = "L"
-			}
-			if (!ok){
-				for (i=1; i <= reqd_libs2cnt [p]; ++i){
-					print lpref ": not_found " p, reqd_libs2where [p, i]
-					ex = 1
-				}
+			if (!(p in syslibs)){
+				print_lib_notfound("L", p)
+				ex = 1
 			}
 		}
 	}
 
+	# -l
+	if (opt_l){
+		for (p in reqd_libs){
+			if (has_prefix(p, prefix) && !(p in provides2pkg)){
+				print_lib_notfound("l", p)
+				ex = 1
+			}
+		}
+	}
+
+	# -d
 	if (opt_d){
 		for (d in depends){
 			# d: pkgpath SUBSEP pkgname SUBSEP <index>
