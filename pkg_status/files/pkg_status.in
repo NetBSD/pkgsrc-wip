@@ -43,8 +43,9 @@ PKG_ADMIN_CMD="${PKG_ADMIN_CMD-@PKG_ADMIN_CMD@}"
 ############################################################
 usage (){
     cat 1>&2 <<EOF
-pkg_status - compare versions of installed packages
-against pkgsrc source tree or pkg_summary.{txt,gz,bz2}
+pkg_status - checks the status of installed packages, for example,
+compares installed packages with pkgsrc tree or pkg_summary,
+find/remove automatically installed leaf packages etc.
 
 usage:
   pkg_status -h
@@ -177,13 +178,14 @@ fi
 # top-level options
 
 # temporarty directory
-tmp_dir="/tmp/pkg_src_summary.$$"
+tmp_dir=`mktemp -d /tmp/pkg_status.XXXXXX`
 if test -z "$debug"; then
     trap "rm -rf $tmp_dir" 0 1 2 15
 else
     echo "Temp directory: $tmp_dir" 1>&2
 fi
-mkdir -m 700 "$tmp_dir"
+
+test "$tmp_dir" || exit 1
 
 #
 if test -z "${mode_src}${mode_bin}${mode_leaves}${mode_checks}"; then
