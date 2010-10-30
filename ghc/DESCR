@@ -8,3 +8,7 @@ Haskell, including concurrency, a foreign language interface, several
 type-system extensions, exceptions, and so on. GHC comes with a
 generational garbage collector, a space and time profiler, and a
 comprehensive set of libraries.
+
+This package uses binary bootstrap kits.  At least some of them are
+not created by people who have signed the NetBSD developer agreement,
+and therefore this package cannot be moved into pkgsrc proper.
