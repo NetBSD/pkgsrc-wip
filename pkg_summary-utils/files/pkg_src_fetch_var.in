@@ -358,6 +358,7 @@ function process_include (fn, inc, cond_cnt,              ret,varname){
 }
 
 {
+	gsub(/,/, " ")
 	for (i=1; i <= NF; ++i){
 		pkgpaths [i] = $i
 	}

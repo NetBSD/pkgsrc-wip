@@ -83,11 +83,9 @@ list_pkgs (){
 	    echo "$pkgpath"
 	done
     else
-	cat
-	return 0
 	awk -v C=10 \
 	    'BEGIN {modu=C-1}
-	     { printf " %s", $0; if ((NR % C) == modu) printf "\n"; }
+	     { printf ",%s", $0; if ((NR % C) == modu) printf "\n"; }
 	     END {if (NR && (NR % C) != modu) printf "\n"}'
     fi
 }
@@ -103,20 +101,19 @@ pkg_src_fetch (){
 	environ="PSS_SLAVES= BMAKE=$BMAKE PKGSRCDIR=$PKGSRCDIR"
 	environ="$environ PSS_PRE_PATH=$PSS_PRE_PATH PSS_POST_PATH=$PSS_POST_PATH"
 
-    runpipe0 \
-	paexec -glez $PSS_PAEXEC_EXTRA_OPTS \
-	    -n "$PSS_SLAVES" \
-	    -t "$PSS_TRANSPORT" \
-	    -c "env $environ $SH $0 -s -f '$qfields'" '|' \
-	paexec_reorder '|' \
-	sed '/^success$/ d'
+	runpipe0 \
+	    paexec -glez $PSS_PAEXEC_EXTRA_OPTS \
+		-n "$PSS_SLAVES" \
+		-t "$PSS_TRANSPORT" \
+		-c "env $environ $SH $0 -s -f '$qfields'" '|' \
+	    paexec_reorder '|' \
+	    sed '/^success$/ d'
     else
 	pkg_src_fetch_var -f "$fields"
     fi
 }
 
 runpipe list_pkgs "$@" '|' pkg_src_fetch > "$helper_out"
-#exit 88
 
 # `+' to micro_summary (fast!)
 awk -F'\t' -v fields="$fields" '
