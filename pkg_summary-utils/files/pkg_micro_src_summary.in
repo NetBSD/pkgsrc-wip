@@ -82,7 +82,8 @@ list_pkgs (){
 	    echo "$pkgpath"
 	done
     else
-	cat
+	awk '{printf " %s", $0; if ((NR % 10) == 9) printf "\n"; }
+	     END {if (NR && (NR % 10) != 9) printf "\n"}'
     fi
 }
 
