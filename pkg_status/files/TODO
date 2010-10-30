@@ -1,5 +1,3 @@
-- Suboption for -k for checking REQUIRES field and libraries
-  and files of file system.
 - option to save currently installed packages
 - option to compare installed packages with saved ones.
 - auto- (or on-demand) download summary about binary packages
