@@ -50,7 +50,7 @@ find/remove automatically installed leaf packages etc.
 usage:
   pkg_status -h
   pkg_status -V
-  pkg_status -s [-ruaAQDp1] [ [--] pkg_info_args ]
+  pkg_status -s [-ruaAQDp0] [ [--] pkg_info_args ]
   pkg_status -b [-ruaAQD]   [ [--] pkg_info_args ]
   pkg_status -k [-mUd]      [ [--] pkg_info_args or pkg_admin_args ]
   pkg_status -l [-rtREn]
@@ -71,7 +71,7 @@ OPTIONS common for -s and -b:
   -Q         No noisy reminder about output format
 OPTIONS for -s:
   -p <file>  get PKGPATHs from <file> (instead of pkg_info -QPKGPATH).
-  -1         do not run many pkg_src_summary(1) in parallel.
+  -0         use all available CPUs for obtaining pkg_src_summary.
 OPTIONS for -l:
   -l         list leaf packages installed automatically
   -t         output only PKGNAME
@@ -135,7 +135,7 @@ process_args (){
 	Q    quiet=1 \
 	D    debug=1 \
 	=p   pkgpaths_fn= \
-	1    PSS_SLAVES=+1 \
+	0    all_cpus=1 \
 	k    mode_checks=1 \
 	m    check_checksums=1 \
 	U    check_reqs_provs=1 \
@@ -160,7 +160,7 @@ bsd_xargs (){
 }
 
 # Adjust PSS_SLAVES
-if test "${PSS_SLAVES-fake}" = fake; then
+if test -n "$all_cpus"; then
     case `uname -s` in
 	NetBSD|FreeBSD|OpenBSD|DragonFly)
 	    PSS_SLAVES=+`sysctl hw.ncpu | awk '/hw.ncpu/ {print $3}'`;;
@@ -171,7 +171,7 @@ if test "${PSS_SLAVES-fake}" = fake; then
 fi
 
 if test "$PSS_SLAVES" = +1 -o "$PSS_SLAVES" = ''; then
-    unset PSS_SLAVES
+    unset PSS_SLAVES || true
 fi
 
 ######################################################################
@@ -354,17 +354,6 @@ output_results (){
 if test -n "$mode_src"; then
     $PKG_INFO_CMD -X $pkg_info_opts "$@" > "$bin_summary_fn"
     generate_pkgpaths "$@"
-
-    if test -n "$PSS_SLAVES"; then
-	if ( paexec -h ) > /dev/null 2>&1; then
-	    :
-	else
-	    cat 1>&2 <<'EOF'
-paexec is not found. Using only one CPU...
-EOF
-	    unset PSS_SLAVES
-	fi
-    fi
 
     $PKG_SRC_SUMMARY_CMD < "$pkgpaths_fn" > "$src_summary_fn"
     runpipe0 \
