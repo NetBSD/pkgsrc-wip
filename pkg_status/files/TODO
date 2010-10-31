@@ -1,3 +1,6 @@
+- -C option and config file
+- remove unnecessary files from $DESTDIR
+- remove unnecessary files from $PACKAGES
 - option to save currently installed packages
 - option to compare installed packages with saved ones.
 - auto- (or on-demand) download summary about binary packages

@@ -136,7 +136,7 @@ process_args (){
 	    a)    pkg_info_opts="$pkg_info_opts -a";;
 	    Q)    quiet=1;;
 	    D)    debug=1;;
-	    p)    pkgpaths_fn=;;
+	    p)    pkgpaths_fn=$OPTARG;;
 	    0)    all_cpus=1;;
 	    k)    mode_checks=1;;
 	    m)    check_checksums=1;;

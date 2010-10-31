@@ -1,4 +1,27 @@
 ======================================================================
+Version 0.10, by Aleksey Cheusov, Fri, 29 Oct 2010 01:06:37 +0300
+
+  New option -0 was added. If it is applied, on NetBSD, Linux, FreeBSD
+  and OpenBSD, 'pkg_status -s' runs as much subprocesses as CPUs the
+  computer has thus drammatically reducing total time on SMP
+  systems. See PSS_SLAVES variable for changing this behaviour of
+  disabling it.
+
+  Options listed in PKG_STATUS_OPTIONS environment variable are
+  automatically passed to pkg_status, e.g. -0.
+
+  FIX: On Linux, Solaris, Interix and some other platforms xargs
+  stupidly runs the specified application even if there is no any
+  input. As a result pkg_status -l[RE] may fail.
+
+  New suboption -L for option -k was added for checking that all files
+  listed in REQUIRES exist.
+
+  Documentation update, see pkg_status -h
+
+  mktemp(1) is used for creating a temporary directory.
+
+======================================================================
 Version 0.9.0, by Aleksey Cheusov, Sat,  5 Jun 2010 00:41:42 +0300
 
   New option -k for "sanity checks" of installed packages.

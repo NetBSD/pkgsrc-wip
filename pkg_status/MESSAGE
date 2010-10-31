@@ -1,0 +1,6 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2010/10/31 14:41:40 cheusov Exp $
+If you are running pkgsrc on multiprocessor system and want to make
+'pkg_status -s' significantly faster, install wip/paexec and
+add PKG_STATUS_OPTIONS=-0 to ~/.profile
+===========================================================================
