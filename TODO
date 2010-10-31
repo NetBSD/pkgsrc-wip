@@ -3,7 +3,7 @@ Suggested package updates
 
 	o applewmproto-1.4.1
 	o argouml-0.24
-	o backintime-1.0.2
+	o backintime-1.0.4
 	o bsnes-0.72
 	o cairo-java-1.0.8
 	o cclive-0.7.0b1
@@ -27,6 +27,8 @@ Suggested package updates
 	o evolution-couchdb-0.4.4
 	o fakenes-0.5.7
 	o firebird-2.5
+	o fslsfonts-1.0.3
+	o fstobdf-1.0.4
 	o gajim-0.13.1
 	o gambas2-2.21.0
 	o gcc42-4.2.4
@@ -48,12 +50,13 @@ Suggested package updates
 	o gtkaml-0.2.12
 	o guichan-0.8.1
 	o guitone-0.9
+	o hitori-0.2.5
 	o httrack-3.43
 	o hu-go-2.11
 	o hyena-0.3
 	o i3-3e [aka i3-3.e]
 	o i3lock-2.0
-	o icecat-3.6.10
+	o icecat-3.6.11
 	o jakarta-struts-1.2.4
 	o jalview-2.4
 	o java-asm-3.2
@@ -63,7 +66,7 @@ Suggested package updates
 	o kino-1.0.0
 	o kvirc-3.4.2
 	o libAppleWM-1.4.0
-	o libdmx-1.1.0
+	o libdmx-1.1.1
 	o libgksu-2.0.4
 	o libgtk-java-2.10.2
 	o libuuid-1.41.12
@@ -113,7 +116,7 @@ Suggested package updates
 	o xaralx-bin-0.7.1692
 	o xclipboard-1.1.0
 	o xcowsay-1.2
-	o xcursor-themes-1.0.2
+	o xcursor-themes-1.0.3
 	o xf86-video-geode-2.11.9
 	o xinetd-2.3.14
 	o xmms2-0.6
