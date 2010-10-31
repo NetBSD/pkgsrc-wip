@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2010/10/28 20:29:25 mjoellnir Exp $
+# $NetBSD: Makefile,v 1.2 2010/10/31 15:34:53 mjoellnir Exp $
 #
 
 DISTNAME=	libpar2-0.2
@@ -8,19 +8,18 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=parchive/libpar2/0.2/}
 MAINTAINER=	vs@nifelheim.info
 HOMEPAGE=	http://parchive.sourceforge.net/
 COMMENT=	Create or use PAR2 parity volumes
+LICENSE=	gnu-gpl-v2
 
-CONFIGURE_ARGS+=         --prefix=${PREFIX}
+GNU_CONFIGURE=yes
 
-LICENSE=        gnu-gpl-v2
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
-PKG_INSTALLATION_TYPES= overwrite pkgviews
-PKG_DESTDIR_SUPPORT=    user-destdir
-
-USE_LANGUAGES=          c c++
-USE_PKGLOCALEDIR=       yes
-GNU_CONFIGURE=          yes
-USE_LIBTOOL=            yes
-USE_TOOLS+=             gmake pkg-config
+USE_LANGUAGES=		c c++
+USE_PKGLOCALEDIR=	yes
+GNU_CONFIGURE=		yes
+USE_LIBTOOL=		yes
+USE_TOOLS+=		gmake pkg-config
 
 .include "../../devel/libsigc++/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
