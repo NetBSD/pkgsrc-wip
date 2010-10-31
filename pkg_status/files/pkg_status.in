@@ -52,7 +52,7 @@ usage:
   pkg_status -V
   pkg_status -s [-ruaAQDp0] [ [--] pkg_info_args ]
   pkg_status -b [-ruaAQD]   [ [--] pkg_info_args ]
-  pkg_status -k [-mUd]      [ [--] pkg_info_args or pkg_admin_args ]
+  pkg_status -k [-mULd]     [ [--] pkg_info_args or pkg_admin_args ]
   pkg_status -l [-rtREn]
 
 OPTIONS:
@@ -73,7 +73,7 @@ OPTIONS for -s:
   -p <file>  get PKGPATHs from <file> (instead of pkg_info -QPKGPATH).
   -0         use all available CPUs for obtaining pkg_src_summary.
 OPTIONS for -l:
-  -l         list leaf packages installed automatically
+  -l         output leaf packages installed automatically
   -t         output only PKGNAME
   -R         remove automatically installed leaf packages
   -E         the same as -R but with 'pkg_delete -A'
@@ -84,6 +84,7 @@ OPTIONS for -k:
   -L         check existence of files listed in REQUIRES (pkg_lint_summary -L)
   -d         check for presense of dependencies (pkg_lint_summary -d)
 Environment:
+   PKG_STATUS_OPTIONS - additional options passed to pkg_status
    PKG_SUMMARY      - path to pkg_summary.{txt,gx,bz2},
                       it defaults to @PACKAGES@/All/pkg_summary.txt
    PKG_SRC_SUMMARY_CMD - command for generating micro summary,
@@ -102,12 +103,12 @@ Examples:
    pkg_status -V
 
    pkg_status -s
-   pkg_status -saQ
+   pkg_status -saQ0
    env PSS_SLAVES=+8 pkg_status -sra
    pkg_status -s pkg_install bmake bootstrap-mk-files
    pkg_status -s -- -K ~/pkg_distbb/var/db/pkg -a
    pkg_status -srA -- pkg_summary-utils
-   pkg_status -sp /etc/interesting_pkgs.conf
+   env PKG_STATUS_OPTIONS=-0 pkg_status -sp /etc/interesting_pkgs.conf
 
    pkg_status -b
    pkg_status -bA
@@ -123,34 +124,38 @@ EOF
 #  -o                     compare against packages served by pkg_online server
 
 process_args (){
-    alt_getopt \
-	h    'usage; exit 0' \
-	V    "echo 'pkg_status @VERSION@'; exit 0" \
-	s    'mode_src=1' \
-	b    'mode_bin=1' \
-	r    submode_raw=1 \
-	A    submode_all=1 \
-	u    'pkg_info_opts="$pkg_info_opts -u"' \
-	a    'pkg_info_opts="$pkg_info_opts -a"' \
-	Q    quiet=1 \
-	D    debug=1 \
-	=p   pkgpaths_fn= \
-	0    all_cpus=1 \
-	k    mode_checks=1 \
-	m    check_checksums=1 \
-	U    check_reqs_provs=1 \
-	L    check_reqs_exist=1 \
-	d    check_deps=1 \
-	l    mode_leaves=1 \
-	t    pkgpath_only=1 \
-	R    rem_leaves=1 \
-	E    'pkg_delete_opts="$pkg_delete_opts -A"; rem_leaves=1' \
-	n    'pkg_delete_opts="$pkg_delete_opts -n"' \
-	-- "$@"
+    while getopts hVsbrAuaQDp:0kmULdltREn f; do
+	case $f in
+	    h)    usage; exit 0;;
+	    V)    echo 'pkg_status @VERSION@'; exit 0;;
+	    s)    mode_src=1;;
+	    b)    mode_bin=1;;
+	    r)    submode_raw=1;;
+	    A)    submode_all=1;;
+	    u)    pkg_info_opts="$pkg_info_opts -u";;
+	    a)    pkg_info_opts="$pkg_info_opts -a";;
+	    Q)    quiet=1;;
+	    D)    debug=1;;
+	    p)    pkgpaths_fn=;;
+	    0)    all_cpus=1;;
+	    k)    mode_checks=1;;
+	    m)    check_checksums=1;;
+	    U)    check_reqs_provs=1;;
+	    L)    check_reqs_exist=1;;
+	    d)    check_deps=1;;
+	    l)    mode_leaves=1;;
+	    t)    pkgpath_only=1;;
+	    R)    rem_leaves=1;;
+	    E)    pkg_delete_opts="$pkg_delete_opts -A"; rem_leaves=1;;
+	    n)    pkg_delete_opts="$pkg_delete_opts -n";;
+	    '?')  exit 1;;
+	esac
+    done
 }
 
-cmds=`process_args "$@"`
-eval "$cmds"
+process_args $PKG_STATUS_OPTIONS
+process_args "$@"
+shift `expr $OPTIND - 1`
 
 ######################################################################
 bsd_xargs (){
