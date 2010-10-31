@@ -1,4 +1,22 @@
 ----------------------------------------------------------------------
+Version 0.46.0, by Aleksey Cheusov, Sun, 31 Oct 2010 16:27:55 +0200
+
+  pkg_src_fetch_var:
+     -All tokens on input are treated as pkgpath, not only $1. Support
+      for paexec slave mode was added.
+
+  pkg_lint_summary:
+     - Documentation and sample of use for -L was added.
+     - If -L is applied, existense of all files from REQUIRES is
+       checked, not only pkgsrc libraries.
+
+  All shell scripts use 'mktemp -d' for creating a temporary directory
+  instead of $$.
+
+  pkg_micro_src_summary:
+     - become even more "parallelized".
+
+----------------------------------------------------------------------
 Version 0.45.0, by Aleksey Cheusov, Thu, 21 Oct 2010 00:04:30 +0300
 
   FIX: Now pkg_lint_summary -d handles correctly glob patterns like
