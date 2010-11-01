@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2006/10/30 22:45:31 shattered Exp $
+# $NetBSD: Makefile,v 1.5 2010/11/01 00:08:22 thomasklausner Exp $
 
 DISTNAME=		Frontier-RPC-0.06
 PKGNAME=		p5-${DISTNAME}
 CATEGORIES=		net perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Frontier/}
 
-MAINTAINER=		cube@cubidou.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://datetime.perl.org/
 COMMENT=		Perl module to handle client/server xmlrpc
 

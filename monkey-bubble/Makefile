@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2010/06/13 22:47:11 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.22 2010/11/01 00:08:22 thomasklausner Exp $
 #
 
 DISTNAME=		monkey-bubble-0.4.0
@@ -6,7 +6,7 @@ PKGREVISION=		2
 CATEGORIES=		games
 MASTER_SITES=		http://home.gna.org/monkeybubble/downloads/
 
-MAINTAINER=		cube@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://home.gna.org/monkeybubble/
 COMMENT=		Bust'A'Move clone written for GNOME2
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2008/05/23 10:32:35 tnn2 Exp $
+# $NetBSD: Makefile,v 1.5 2010/11/01 00:08:23 thomasklausner Exp $
 
 .include "../../mail/squirrelmail/plugin.mk"
 
 PLUGIN_NAME=	change_ldappass
 PLUGIN_VERSION=	1.8
 
-MAINTAINER=	cube@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.squirrelmail.org/plugin_view.php?id=26
 COMMENT=	Allows users to change their LDAP password from SquirrelMail
 

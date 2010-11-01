@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2009/07/17 17:11:05 adrian_p Exp $
+# $NetBSD: Makefile,v 1.14 2010/11/01 00:08:22 thomasklausner Exp $
 #
 
 DISTNAME=	sks-1.0.9
@@ -7,7 +7,7 @@ CATEGORIES=	security
 MASTER_SITES=	http://savannah.nongnu.org/download/sks/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	cube@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.nongnu.org/sks/
 COMMENT=	Self Replicating PGP Key Server
 
