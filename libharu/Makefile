@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/10/29 15:03:19 emil_s Exp $
+# $NetBSD: Makefile,v 1.6 2010/11/01 14:22:53 emil_s Exp $
 #
 
 DISTNAME=	libharu-2.2.0
@@ -28,7 +28,7 @@ CONFIGURE_ARGS+=	--with-png=${BUILDLINK_PREFIX.png}
 .endif
 
 .if !empty(PKG_OPTIONS:Mzlib)
-CONFIGURE_ARGS+=	--with-zlib
+CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib}
 .endif
 
 

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/03/10 14:40:08 emil_s Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/11/01 14:22:53 emil_s Exp $
 include/hpdf.h
 include/hpdf_annotation.h
 include/hpdf_catalog.h
@@ -19,10 +19,12 @@ include/hpdf_image.h
 include/hpdf_info.h
 include/hpdf_list.h
 include/hpdf_mmgr.h
+include/hpdf_namedict.h
 include/hpdf_objects.h
 include/hpdf_outline.h
 include/hpdf_page_label.h
 include/hpdf_pages.h
+include/hpdf_pdfa.h
 include/hpdf_streams.h
 include/hpdf_types.h
 include/hpdf_u3d.h
