@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.21 2010/09/20 08:23:36 asau Exp $
+@comment $NetBSD: PLIST,v 1.22 2010/11/01 04:15:02 asau Exp $
 bin/ecl
 bin/ecl-config
+include/ecl/atomic_ops.h
 include/ecl/bytecodes.h
 include/ecl/config.h
 include/ecl/configpre.h
