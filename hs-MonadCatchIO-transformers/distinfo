@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/03/03 09:42:58 phonohawk Exp $
+$NetBSD: distinfo,v 1.2 2010/11/02 16:50:07 phonohawk Exp $
 
-SHA1 (MonadCatchIO-transformers-0.0.2.0.tar.gz) = 44305b13c55467f4b637b2acd5a7e3499f102562
-RMD160 (MonadCatchIO-transformers-0.0.2.0.tar.gz) = e4fe49803551d745067e9af6453748a05c87eba2
-Size (MonadCatchIO-transformers-0.0.2.0.tar.gz) = 2160 bytes
+SHA1 (MonadCatchIO-transformers-0.2.2.0.tar.gz) = 04db62a36c08a051406b166a3bdbff00586cb0bd
+RMD160 (MonadCatchIO-transformers-0.2.2.0.tar.gz) = 0c6ac9f8adb2edad5648dde1a1320c68eada021a
+Size (MonadCatchIO-transformers-0.2.2.0.tar.gz) = 2521 bytes

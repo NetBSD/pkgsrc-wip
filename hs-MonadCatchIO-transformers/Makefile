@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/03/03 09:42:58 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2010/11/02 16:50:07 phonohawk Exp $
 #
 
-DISTNAME=	MonadCatchIO-transformers-0.0.2.0
+DISTNAME=	MonadCatchIO-transformers-0.2.2.0
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
