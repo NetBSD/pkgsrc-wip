@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2010/07/01 20:24:46 emil_s Exp $
+# $NetBSD: Makefile,v 1.6 2010/11/02 10:01:24 emil_s Exp $
 #
 
-DISTNAME=	rdup-1.1.7
+DISTNAME=	rdup-1.1.8
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.miek.nl/projects/rdup/
 EXTRACT_SUFX=	.tar.bz2
@@ -11,17 +11,14 @@ HOMEPAGE=	http://www.miek.nl/projects/rdup/
 COMMENT=	Backup utility listing changed files only
 LICENSE=	gnu-gpl-v3
 
-REPLACE_INTERPRETER+=	bash
-REPLACE.bash.old=	/bin/bash
-REPLACE.bash.new=	${PREFIX}/bin/bash
-REPLACE_FILES.bash=	sh/rdup-simple.in
+REPLACE_BASH+=	sh/rdup-simple.in
 
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 
-USE_TOOLS=	pkg-config gmake bash:run
+USE_TOOLS+=	pkg-config gmake bash:run
 
 CFLAGS+=	-Wno-char-subscripts
 
@@ -29,4 +26,7 @@ MAKE_FILE=	GNUmakefile
 
 
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/gmp/buildlink3.mk"
+.include "../../archivers/libarchive/buildlink3.mk"
+.include "../../wip/libnettle/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
