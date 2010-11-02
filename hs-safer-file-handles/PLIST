@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/11/02 17:10:59 phonohawk Exp $
+lib/safer-file-handles-${PKGVERSION}/${HASKELL_VERSION}/HSsafer-file-handles-${PKGVERSION}.o
+lib/safer-file-handles-${PKGVERSION}/${HASKELL_VERSION}/System/IO/SaferFileHandles.hi
+lib/safer-file-handles-${PKGVERSION}/${HASKELL_VERSION}/System/IO/SaferFileHandles.p_hi
+lib/safer-file-handles-${PKGVERSION}/${HASKELL_VERSION}/System/IO/SaferFileHandles/Internal.hi
+lib/safer-file-handles-${PKGVERSION}/${HASKELL_VERSION}/System/IO/SaferFileHandles/Internal.p_hi
+lib/safer-file-handles-${PKGVERSION}/${HASKELL_VERSION}/System/IO/SaferFileHandles/Unsafe.hi
+lib/safer-file-handles-${PKGVERSION}/${HASKELL_VERSION}/System/IO/SaferFileHandles/Unsafe.p_hi
+lib/safer-file-handles-${PKGVERSION}/${HASKELL_VERSION}/libHSsafer-file-handles-${PKGVERSION}.a
+lib/safer-file-handles-${PKGVERSION}/${HASKELL_VERSION}/libHSsafer-file-handles-${PKGVERSION}_p.a
+lib/safer-file-handles-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/safer-file-handles-${PKGVERSION}/LICENSE
