@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.2 2009/09/23 05:56:35 phonohawk Exp $
+# $NetBSD: Makefile,v 1.3 2010/11/02 16:02:15 phonohawk Exp $
 #
 
-DISTNAME=	QuickCheck-2.1.0.2
-PKGREVISION=	1
+DISTNAME=	QuickCheck-2.3.0.2
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
-HOMEPAGE=	http://www.cs.chalmers.se/~koen
 COMMENT=	Automatic testing of Haskell programs
+LICENSE=	modified-bsd
 
 .include "../../wip/mk/haskell.mk"
 .include "../../wip/hs-mtl/buildlink3.mk"
