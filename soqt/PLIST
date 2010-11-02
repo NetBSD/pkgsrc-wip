@@ -1,0 +1,31 @@
+@comment $NetBSD: PLIST,v 1.1 2010/11/02 13:26:43 silasdb Exp $
+bin/soqt-config
+include/Inventor/Qt/SoQt.h
+include/Inventor/Qt/SoQtBasic.h
+include/Inventor/Qt/SoQtColorEditor.h
+include/Inventor/Qt/SoQtComponent.h
+include/Inventor/Qt/SoQtCursor.h
+include/Inventor/Qt/SoQtGLWidget.h
+include/Inventor/Qt/SoQtObject.h
+include/Inventor/Qt/SoQtRenderArea.h
+include/Inventor/Qt/devices/SoQtDevice.h
+include/Inventor/Qt/devices/SoQtKeyboard.h
+include/Inventor/Qt/devices/SoQtMouse.h
+include/Inventor/Qt/devices/SoQtSpaceball.h
+include/Inventor/Qt/editors/SoQtColorEditor.h
+include/Inventor/Qt/editors/SoQtMaterialEditor.h
+include/Inventor/Qt/nodes/SoGuiColorEditor.h
+include/Inventor/Qt/nodes/SoGuiMaterialEditor.h
+include/Inventor/Qt/viewers/SoQtConstrainedViewer.h
+include/Inventor/Qt/viewers/SoQtExaminerViewer.h
+include/Inventor/Qt/viewers/SoQtFlyViewer.h
+include/Inventor/Qt/viewers/SoQtFullViewer.h
+include/Inventor/Qt/viewers/SoQtPlaneViewer.h
+include/Inventor/Qt/viewers/SoQtViewer.h
+include/Inventor/Qt/widgets/SoQtPopupMenu.h
+include/Inventor/Qt/widgets/SoQtThumbWheel.h
+lib/libSoQt.la
+man/man1/soqt-config.1
+share/Coin/conf/soqt-default.cfg
+share/aclocal/soqt.m4
+@pkgdir include/Inventor/Qt/engines
