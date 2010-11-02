@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4124 2010/11/02 16:39:22 phonohawk Exp $
+# $Id: Makefile,v 1.4125 2010/11/02 16:44:55 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -910,6 +910,7 @@ SUBDIR+=	hs-regions
 SUBDIR+=	hs-stm
 SUBDIR+=	hs-storable-record
 SUBDIR+=	hs-storablevector
+SUBDIR+=	hs-tagged
 SUBDIR+=	hs-tagsoup
 SUBDIR+=	hs-tar
 SUBDIR+=	hs-terminfo
