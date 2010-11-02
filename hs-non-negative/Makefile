@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/09/23 06:08:11 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2010/11/02 16:07:11 phonohawk Exp $
 #
 
-DISTNAME=	non-negative-0.0.5
+DISTNAME=	non-negative-0.1
 CATEGORIES=	math
 
 MAINTAINER=	pho@cielonegro.org
 COMMENT=	Non-negative numbers
-LICENSE=	modified-bsd
+LICENSE=	gnu-gpl-v3
 
 .include "../../wip/mk/haskell.mk"
-.include "../../wip/hs-QuickCheck1/buildlink3.mk"
+.include "../../wip/hs-QuickCheck/buildlink3.mk"
+.include "../../wip/hs-utility-ht/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
