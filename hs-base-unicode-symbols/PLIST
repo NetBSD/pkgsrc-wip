@@ -1,8 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/03/03 09:36:48 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/11/02 16:28:59 phonohawk Exp $
 lib/base-unicode-symbols-${PKGVERSION}/${HASKELL_VERSION}/Control/Applicative/Unicode.hi
 lib/base-unicode-symbols-${PKGVERSION}/${HASKELL_VERSION}/Control/Applicative/Unicode.p_hi
+lib/base-unicode-symbols-${PKGVERSION}/${HASKELL_VERSION}/Control/Arrow/Unicode.hi
+lib/base-unicode-symbols-${PKGVERSION}/${HASKELL_VERSION}/Control/Arrow/Unicode.p_hi
 lib/base-unicode-symbols-${PKGVERSION}/${HASKELL_VERSION}/Control/Category/Unicode.hi
 lib/base-unicode-symbols-${PKGVERSION}/${HASKELL_VERSION}/Control/Category/Unicode.p_hi
+lib/base-unicode-symbols-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Unicode.hi
+lib/base-unicode-symbols-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Unicode.p_hi
 lib/base-unicode-symbols-${PKGVERSION}/${HASKELL_VERSION}/Data/Bool/Unicode.hi
 lib/base-unicode-symbols-${PKGVERSION}/${HASKELL_VERSION}/Data/Bool/Unicode.p_hi
 lib/base-unicode-symbols-${PKGVERSION}/${HASKELL_VERSION}/Data/Eq/Unicode.hi
