@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/11/02 16:56:21 phonohawk Exp $
+lib/pathtype-${PKGVERSION}/${HASKELL_VERSION}/HSpathtype-${PKGVERSION}.o
+lib/pathtype-${PKGVERSION}/${HASKELL_VERSION}/System/Path.hi
+lib/pathtype-${PKGVERSION}/${HASKELL_VERSION}/System/Path.p_hi
+lib/pathtype-${PKGVERSION}/${HASKELL_VERSION}/System/Path/Directory.hi
+lib/pathtype-${PKGVERSION}/${HASKELL_VERSION}/System/Path/Directory.p_hi
+lib/pathtype-${PKGVERSION}/${HASKELL_VERSION}/System/Path/IO.hi
+lib/pathtype-${PKGVERSION}/${HASKELL_VERSION}/System/Path/IO.p_hi
+lib/pathtype-${PKGVERSION}/${HASKELL_VERSION}/System/Path/Posix.hi
+lib/pathtype-${PKGVERSION}/${HASKELL_VERSION}/System/Path/Posix.p_hi
+lib/pathtype-${PKGVERSION}/${HASKELL_VERSION}/System/Path/Windows.hi
+lib/pathtype-${PKGVERSION}/${HASKELL_VERSION}/System/Path/Windows.p_hi
+lib/pathtype-${PKGVERSION}/${HASKELL_VERSION}/libHSpathtype-${PKGVERSION}.a
+lib/pathtype-${PKGVERSION}/${HASKELL_VERSION}/libHSpathtype-${PKGVERSION}_p.a
+lib/pathtype-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/pathtype-${PKGVERSION}/LICENSE
