@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/03/03 09:51:17 phonohawk Exp $
+$NetBSD: distinfo,v 1.2 2010/11/02 17:00:10 phonohawk Exp $
 
-SHA1 (regions-0.4.tar.gz) = 86fbeb26dacd66fd6de4f4fefcb625a13915bf09
-RMD160 (regions-0.4.tar.gz) = 43cff53eeea07f7e90b01b7ce352b6e2bfd34616
-Size (regions-0.4.tar.gz) = 8954 bytes
+SHA1 (regions-0.7.0.1.tar.gz) = ad98c78b9a40ecaacbf5688a1c0117569493da2e
+RMD160 (regions-0.7.0.1.tar.gz) = 7d3e65dd1c9f0bfd3cbf2fac37b783a4ec89a9bf
+Size (regions-0.7.0.1.tar.gz) = 6814 bytes
