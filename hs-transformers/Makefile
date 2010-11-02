@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/09/23 05:12:01 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2010/11/02 16:11:16 phonohawk Exp $
 #
 
-DISTNAME=	transformers-0.1.4.0
+DISTNAME=	transformers-0.2.2.0
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
-COMMENT=	Concrete monad transformers
+COMMENT=	Concrete functor and monad transformers
 LICENSE=	modified-bsd
 
 .include "../../wip/mk/haskell.mk"

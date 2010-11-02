@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/09/23 05:12:01 phonohawk Exp $
-lib/transformers-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Identity.hi
-lib/transformers-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Identity.p_hi
-lib/transformers-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Trans.hi
-lib/transformers-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Trans.p_hi
+@comment $NetBSD: PLIST,v 1.2 2010/11/02 16:11:16 phonohawk Exp $
+lib/transformers-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/IO/Class.hi
+lib/transformers-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/IO/Class.p_hi
+lib/transformers-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Trans/Class.hi
+lib/transformers-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Trans/Class.p_hi
 lib/transformers-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Trans/Cont.hi
 lib/transformers-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Trans/Cont.p_hi
 lib/transformers-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Trans/Error.hi
@@ -33,6 +33,14 @@ lib/transformers-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Trans/Writer/Laz
 lib/transformers-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Trans/Writer/Lazy.p_hi
 lib/transformers-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Trans/Writer/Strict.hi
 lib/transformers-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Trans/Writer/Strict.p_hi
+lib/transformers-${PKGVERSION}/${HASKELL_VERSION}/Data/Functor/Compose.hi
+lib/transformers-${PKGVERSION}/${HASKELL_VERSION}/Data/Functor/Compose.p_hi
+lib/transformers-${PKGVERSION}/${HASKELL_VERSION}/Data/Functor/Constant.hi
+lib/transformers-${PKGVERSION}/${HASKELL_VERSION}/Data/Functor/Constant.p_hi
+lib/transformers-${PKGVERSION}/${HASKELL_VERSION}/Data/Functor/Identity.hi
+lib/transformers-${PKGVERSION}/${HASKELL_VERSION}/Data/Functor/Identity.p_hi
+lib/transformers-${PKGVERSION}/${HASKELL_VERSION}/Data/Functor/Product.hi
+lib/transformers-${PKGVERSION}/${HASKELL_VERSION}/Data/Functor/Product.p_hi
 lib/transformers-${PKGVERSION}/${HASKELL_VERSION}/HStransformers-${PKGVERSION}.o
 lib/transformers-${PKGVERSION}/${HASKELL_VERSION}/libHStransformers-${PKGVERSION}.a
 lib/transformers-${PKGVERSION}/${HASKELL_VERSION}/libHStransformers-${PKGVERSION}_p.a
