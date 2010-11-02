@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2010/11/02 13:24:38 silasdb Exp $
+
+SHA1 (OpenCASCADE_src.tgz) = 21a177fae5fa73263517aedbe60a4ee4926156f2
+RMD160 (OpenCASCADE_src.tgz) = b71f1b9a57d9624d2f079d4f7a8090f700c6126f
+Size (OpenCASCADE_src.tgz) = 105877329 bytes
+SHA1 (patch-aa) = 06b60c0fb4f6b56e76800173b00c5c6f8c5a18c2
