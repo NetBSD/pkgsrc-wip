@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/11/03 21:41:24 zecrazytux Exp $
+
+--- Makefile.in.origin	2010-10-29 22:20:10.000000000 +0200
++++ Makefile.in	2010-10-29 22:20:55.000000000 +0200
+@@ -509,7 +509,7 @@
+ xerces_lib = @xerces_lib@
+ AUTOMAKE_OPTIONS = foreign dist-zip
+ SUBDIRS = include
+-INCLUDES = -I$(top_srcdir)/include/ $(xerces_include) -I$(top_srcdir)/src/lexer/ $(faxpp_include) $(tidy_include)
++INCLUDES = -I$(top_srcdir)/include/ -I$(top_srcdir)/src/lexer/ $(faxpp_include) $(tidy_include) $(xerces_include)
+ LDADD = libxqilla.la
+ ACLOCAL_AMFLAGS = -I autotools/m4
+ lib_LTLIBRARIES = libxqilla.la
