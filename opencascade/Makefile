@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2010/11/02 13:24:38 silasdb Exp $
+# $NetBSD: Makefile,v 1.2 2010/11/03 14:58:32 silasdb Exp $
 #
 
-OPENCASCADE_VERSION=6.3
-
 DISTNAME=	OpenCASCADE_src
-PKGNAME=	opencascade-${OPENCASCADE_VERSION}
+PKGNAME=	opencascade-6.3
 CATEGORIES=	cad
 MASTER_SITES=	http://files.opencascade.com/OCC_6.3_release/
 EXTRACT_SUFX=	.tgz
