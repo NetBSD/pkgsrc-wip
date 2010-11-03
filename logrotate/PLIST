@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 2010/10/26 15:15:02 ahp-nils Exp $
-man/man8/logrotate.8
+@comment $NetBSD: PLIST,v 1.6 2010/11/03 10:38:24 ahp-nils Exp $
 man/man5/logrotate.conf.5
+man/man8/logrotate.8
 sbin/logrotate
 share/doc/logrotate/CHANGES
 share/doc/logrotate/COPYING
