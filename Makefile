@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4130 2010/11/04 11:13:20 ryo-on Exp $
+# $Id: Makefile,v 1.4131 2010/11/04 13:51:40 ryo-on Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2661,6 +2661,7 @@ SUBDIR+=	ypbind-mt
 SUBDIR+=	ypserv
 SUBDIR+=	zabbix
 SUBDIR+=	zapping
+SUBDIR+=	zim
 SUBDIR+=	zinf
 SUBDIR+=	zope3-unstable
 SUBDIR+=	zsh-snapshot
