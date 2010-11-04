@@ -1,4 +1,4 @@
-# $Id: TODO,v 1.1.1.1 2010/10/26 15:27:58 hfath Exp $
+# $Id: TODO,v 1.2 2010/11/04 14:47:22 hfath Exp $
 #
 # Things to improve in games/crrcsim
 
@@ -9,5 +9,3 @@
   or alternatively propose a GNU autoconf option for disabling
   parallel port access. See patch-ab for the current quick hack.
 
-* Add a math/cgal package (see www.cgal.org) for improved 
-  simulation
