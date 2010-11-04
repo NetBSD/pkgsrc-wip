@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/11/04 13:48:30 ryo-on Exp $
+# $NetBSD: Makefile,v 1.2 2010/11/04 13:53:58 ryo-on Exp $
 #
 
 DISTNAME=	zim-0.49
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	textproc
+CATEGORIES=	editors
 MASTER_SITES=	http://zim-wiki.org/downloads/
 
 MAINTAINER=	ryo_on@yk.rim.or.jp
