@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4131 2010/11/04 13:51:40 ryo-on Exp $
+# $Id: Makefile,v 1.4132 2010/11/04 18:51:27 cheusov Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1036,8 +1036,6 @@ SUBDIR+=	javascript-guide
 SUBDIR+=	javascript-reference
 SUBDIR+=	jbmgen
 SUBDIR+=	jc
-SUBDIR+=	jdk14
-SUBDIR+=	jdk15
 SUBDIR+=	jdk16
 SUBDIR+=	jemboss-standalone
 SUBDIR+=	jetty
