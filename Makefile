@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4132 2010/11/04 18:51:27 cheusov Exp $
+# $Id: Makefile,v 1.4133 2010/11/04 21:32:43 cheusov Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2310,7 +2310,6 @@ SUBDIR+=	spectrum
 SUBDIR+=	speedx
 SUBDIR+=	spfmilter
 SUBDIR+=	sphinxsearch
-SUBDIR+=	spin
 SUBDIR+=	splix
 SUBDIR+=	squidview
 SUBDIR+=	squirrelmail-avelsieve
