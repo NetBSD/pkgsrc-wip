@@ -85,3 +85,6 @@ look at default /boot/config-2.2.20-idepci
   CVE-2010-0007, SA38718, SA38594, SA39297, SA39344, CVE-2010-2524,
   CVE-2010-2954, CVE-2010-2955, CVE-2010-2960, CVE-2010-2962
   CVE-2010-3081, CVE-2010-3301, SA41440).
+  --- I say there are now too many to enumerate... how about we save
+  --- time and say this package needs to be updated to a known current
+  --- secure version of the linux kernel and stop adding to this list?
