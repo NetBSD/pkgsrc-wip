@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4133 2010/11/04 21:32:43 cheusov Exp $
+# $Id: Makefile,v 1.4134 2010/11/05 16:05:33 ggergely Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1359,6 +1359,7 @@ SUBDIR+=	multisync-ldap
 SUBDIR+=	multisync-opie
 SUBDIR+=	multisync-palm
 SUBDIR+=	multisync-syncml
+SUBDIR+=	mumble
 SUBDIR+=	mupen64
 SUBDIR+=	mupen64-base
 SUBDIR+=	mupen64-plugin-input
@@ -1856,6 +1857,7 @@ SUBDIR+=	premake
 SUBDIR+=	probe
 SUBDIR+=	procps
 SUBDIR+=	progreiserfs
+SUBDIR+=	protobuf
 SUBDIR+=	proxychains
 SUBDIR+=	proxyknife
 SUBDIR+=	prozilla
