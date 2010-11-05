@@ -1,0 +1,18 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/11/05 16:01:32 ggergely Exp $
+
+--- src/mumble/mumble.pro.orig	2010-02-09 16:34:51.000000000 +0000
++++ src/mumble/mumble.pro
+@@ -44,11 +44,12 @@ unix:!CONFIG(bundled-celt):system(pkg-co
+ }
+ 
+ CONFIG(no-bundled-celt) {
+-  INCLUDEPATH	*= /usr/include/celt
++  PKGCONFIG	*= celt
+ }
+ 
+ !CONFIG(no-bundled-celt) {
+   INCLUDEPATH	*= ../../celt-0.7.0-src/libcelt
++  DEFINES += BUNDLED_CELT
+ }
+ 
+ !win32 {

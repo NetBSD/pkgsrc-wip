@@ -1,0 +1,19 @@
+$NetBSD: patch-ab,v 1.1.1.1 2010/11/05 16:01:32 ggergely Exp $
+
+--- src/mumble/mumble_pch.hpp.orig	2010-02-09 16:34:51.000000000 +0000
++++ src/mumble/mumble_pch.hpp
+@@ -48,9 +48,14 @@
+ #define __int64_t __int64
+ #include <sndfile.h>
+ #undef __int64_t
++#if BUNDLED_CELT
+ #include <celt.h>
+ #include <celt_header.h>
+ #else
++#include <celt/celt.h>
++#include <celt/celt_header.h>
++#endif
++#else
+ #include <ogg/ogg.h>
+ #include <speex/speex_callbacks.h>
+ #endif
