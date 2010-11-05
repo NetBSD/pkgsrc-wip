@@ -1,8 +1,8 @@
-$NetBSD: patch-an,v 1.1.1.1 2010/01/12 09:22:15 cherrymathew Exp $
+$NetBSD: patch-an,v 1.2 2010/11/05 12:56:38 cherrymathew Exp $
 
---- src/netbsd/ssc-netbsd.c.orig	2009-12-16 12:47:32.000000000 +0000
+--- src/netbsd/ssc-netbsd.c.orig	2010-11-04 05:01:51.000000000 +0000
 +++ src/netbsd/ssc-netbsd.c
-@@ -0,0 +1,461 @@
+@@ -0,0 +1,463 @@
 +/*
 + * Copyright (C) 1995-2007, Hewlett-Packard Development Company, L.P.
 + *
@@ -113,7 +113,7 @@ $NetBSD: patch-an,v 1.1.1.1 2010/01/12 09:22:15 cherrymathew Exp $
 +{
 +	char name[PATH_MAX];
 +	struct sigaction act;
-+	char *tty;
++	char tty[PATH_MAX];
 +	int namelen;
 +	int master, slave;
 +
@@ -125,28 +125,30 @@ $NetBSD: patch-an,v 1.1.1.1 2010/01/12 09:22:15 cherrymathew Exp $
 +	case -1:
 +		goto fail;
 +	case 0: /* child */
-+		close(slave);
 +		close(0);
 +		close(1);
 +		close(2);
-+		namelen = strlen(name);
-+		tty = name + namelen + 1;
-+		sprintf(tty, "-S%s%d", name + namelen - 2, master);
++		close(master);
++
++		sprintf(tty, "-S%s/%d", name, slave); 
 +		execlp("xterm", "xterm", tty, "-geo", "80x24", "-name",
 +		    "xski console", 0);
++		perror("execlp(\"xterm\", ...) failed.");
 +		abort();
++
 +	default: /* parent */
-+		close(master);
-+		init_console(slave, slave);
++		close(slave);
++		init_console(master, master);
 +		act.sa_sigaction = sigchld_handler;
 +		act.sa_flags = SA_NOCLDSTOP|SA_SIGINFO;
 +		sigaction(SIGCHLD, &act, NULL);
 +
 +		/* Read the window ID. */
-+		if (read(slave, name, 128) == -1)
++		if (read(master, name, 128) == -1)
 +			goto fail;
 +
-+		fcntl(slave, F_SETFL, O_NONBLOCK);
++		fcntl(master, F_SETFL, O_NONBLOCK);
++
 +		break;
 +	}
 +

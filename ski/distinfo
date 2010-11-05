@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2010/11/05 12:17:11 cherrymathew Exp $
+$NetBSD: distinfo,v 1.5 2010/11/05 12:56:38 cherrymathew Exp $
 
 SHA1 (ski-1.3.2.tar.gz) = fc067041a70cf45cad6af42da7ffe5bf100d7c65
 RMD160 (ski-1.3.2.tar.gz) = 1ff739eac7b8163026d208ee9b51d134f524e73f
@@ -16,6 +16,6 @@ SHA1 (patch-aj) = c2ac0b850381d2fee3b3f7846cf3aeb51d8e8245
 SHA1 (patch-ak) = 0abaa09fb172ebbc8715908f5c6f49936b22aefa
 SHA1 (patch-al) = 1911d6c8e051ab2b64055cf1c64856188268619e
 SHA1 (patch-am) = 0965936933424ab4af4d1fa3384808f4e92f9b04
-SHA1 (patch-an) = 7d2cb2199b2597f524f334bf8be1d6970db3790a
+SHA1 (patch-an) = 73629a59de77f233be3748d19c5d17d8e18e8af5
 SHA1 (patch-ao) = 8f2eabd4d8dc6ccef593a5f50d00485a905ee523
 SHA1 (patch-ap) = b392a3b89273db3f55ed7d88ca167229f6e3c802
