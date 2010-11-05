@@ -1,18 +1,18 @@
-# $NetBSD: Makefile,v 1.15 2010/06/13 22:47:15 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.16 2010/11/05 04:07:01 shattered Exp $
 #
 
 DISTNAME=	quodlibet-2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	http://quodlibet.googlecode.com/files/
 
-MAINTAINER=	shattered@users.sourceforge.net
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/quodlibet/
 COMMENT=	Finally a good alternative to iTunes
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=		gst-plugins0.10-mad>=0.10.0:../../audio/gst-plugins0.10-mad
+DEPENDS+=	gst-plugins0.10-mad>=0.10.0:../../audio/gst-plugins0.10-mad
 DEPENDS+=	${PYPKGPREFIX}-mutagen>=1.8:../../audio/py-mutagen
 DEPENDS+=	gst-plugins0.10-vorbis>=0.10.0:../../audio/gst-plugins0.10-vorbis
 DEPENDS+=	gst-plugins0.10-ogg>=0.10.0:../../multimedia/gst-plugins0.10-ogg
@@ -24,6 +24,7 @@ USE_PKGLOCALEDIR=	yes
 BUILD_TARGET=		_trayicon.so _mmkeys.so
 
 PYDISTUTILSPKG= yes
+PYTHON_PATCH_SCRIPTS=	exfalso.py quodlibet.py
 
 .include "../../devel/py-ctypes/buildlink3.mk"
 .include "../../devel/py-gobject/buildlink3.mk"
@@ -35,4 +36,5 @@ PYDISTUTILSPKG= yes
 .include "../../sysutils/py-dbus/buildlink3.mk"
 .include "../../x11/py-gtk2/buildlink3.mk"
 .include "../../lang/python/extension.mk"
+.include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
