@@ -1,4 +1,4 @@
-$NetBSD: patch-ak,v 1.1.1.1 2010/01/12 09:22:15 cherrymathew Exp $
+$NetBSD: patch-ak,v 1.2 2010/11/05 12:17:12 cherrymathew Exp $
 
 --- src/netbsd/osload-netbsd.c.orig	2009-12-16 12:47:32.000000000 +0000
 +++ src/netbsd/osload-netbsd.c
@@ -53,7 +53,7 @@ $NetBSD: patch-ak,v 1.1.1.1 2010/01/12 09:22:15 cherrymathew Exp $
 +	int region;
 +	BOOL abi;
 +
-+	if (ident[EI_OSABI] != ELFOSABI_FREEBSD)
++	if (ident[EI_OSABI] != ELFOSABI_SYSV)
 +		return (0);
 +
 +	region = ehdr->e_entry >> 61;
