@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2008/09/07 11:24:36 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.20 2010/11/05 03:55:12 shattered Exp $
 #
 
 DISTNAME=	oops-1.5.24
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://zipper.paco.net/~igor/oops/
 
-MAINTAINER=	shattered@users.sourceforge.net
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://oops-cache.org/
 COMMENT=	Multithreaded caching HTTP proxy server
 
