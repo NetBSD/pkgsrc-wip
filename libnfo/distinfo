@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/11/06 10:53:44 grasmi Exp $
+
+SHA1 (libnfo-1.0.0.tar.bz2) = 13a041b61a34f3ccabc505d737cba963a3ce935c
+RMD160 (libnfo-1.0.0.tar.bz2) = 05ef0f59a9110ee22c95116c56c2cf60ccab973d
+Size (libnfo-1.0.0.tar.bz2) = 41400 bytes
