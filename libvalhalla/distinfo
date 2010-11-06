@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/11/06 12:40:09 grasmi Exp $
+
+SHA1 (libvalhalla-1.0.1.tar.bz2) = 07eea3135c4682bdc52384e30afec06c3d77a546
+RMD160 (libvalhalla-1.0.1.tar.bz2) = 4721061fb55726a29bb3ada30a3d2dd293b2a15b
+Size (libvalhalla-1.0.1.tar.bz2) = 309057 bytes
