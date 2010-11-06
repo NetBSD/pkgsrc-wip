@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/11/06 12:17:48 narke_versatile Exp $
+# $NetBSD: Makefile,v 1.1.1.2 2010/11/06 15:07:03 narke_versatile Exp $
 #
 
 DISTNAME=	gc-7.1
-CATEGORIES=	lang
+PKGNAME=    libgc-7.1
+CATEGORIES=	lang devel
 MASTER_SITES=	http://www.hpl.hp.com/personal/Hans_Boehm/gc/
 
 MAINTAINER=	tcholoka@gmail.com
