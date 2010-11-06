@@ -1,4 +1,7 @@
-$NetBSD: patch-ab,v 1.4 2010/09/06 09:03:54 ahp-nils Exp $
+$NetBSD: patch-ab,v 1.5 2010/11/06 15:05:50 ahp-nils Exp $
+
+Compatibility patch for systems not using alloca.h and some
+other things. Patch commited upstream
 
 --- config.c.orig	2010-06-28 08:04:56.000000000 +0000
 +++ config.c

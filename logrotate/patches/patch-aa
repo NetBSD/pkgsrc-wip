@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.2 2010/09/06 09:03:54 ahp-nils Exp $
+$NetBSD: patch-aa,v 1.3 2010/11/06 15:05:50 ahp-nils Exp $
+
+Add NetBSD in OS list
 
 --- Makefile.orig	2010-06-28 08:04:56.000000000 +0000
 +++ Makefile
