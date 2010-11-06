@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2010/10/11 01:13:04 obache Exp $
+@comment $NetBSD: PLIST,v 1.3 2010/11/06 11:57:00 obache Exp $
 lib/netscape/plugins/gecko-mediaplayer-dvx.so
 lib/netscape/plugins/gecko-mediaplayer-qt.so
 lib/netscape/plugins/gecko-mediaplayer-rm.so
@@ -13,6 +13,7 @@ share/doc/gecko-mediaplayer/README
 share/doc/gecko-mediaplayer/javascript.txt
 share/gconf/schemas/gecko-mediaplayer.schemas
 share/locale/cs/LC_MESSAGES/gecko-mediaplayer.mo
+share/locale/de/LC_MESSAGES/gecko-mediaplayer.mo
 share/locale/es/LC_MESSAGES/gecko-mediaplayer.mo
 share/locale/fr/LC_MESSAGES/gecko-mediaplayer.mo
 share/locale/it/LC_MESSAGES/gecko-mediaplayer.mo

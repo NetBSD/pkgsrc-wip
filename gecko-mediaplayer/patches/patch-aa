@@ -1,15 +1,15 @@
-$NetBSD: patch-aa,v 1.1.1.1 2010/08/14 11:53:54 obache Exp $
+$NetBSD: patch-aa,v 1.2 2010/11/06 11:57:00 obache Exp $
 
 Portability fix.
 
---- configure.orig	2010-02-24 15:19:09.000000000 +0000
+--- configure.orig	2010-11-06 11:44:27.000000000 +0000
 +++ configure
-@@ -8720,7 +8720,7 @@ else
+@@ -7216,7 +7216,7 @@ else
  fi
  
  
 -	if test $usenewlibxul == yes; then
 +	if test $usenewlibxul = yes; then
+ 		GECKO_CFLAGS="$GECKO_CFLAGS -DMOZ_NO_MOZALLOC"
  
- cat >>confdefs.h <<\_ACEOF
- #define HAVE_NEW_XULRUNNER 1
+ $as_echo "#define HAVE_NEW_XULRUNNER 1" >>confdefs.h
