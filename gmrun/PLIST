@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/11/06 17:08:02 rhaamo Exp $
+bin/gmrun
+man/man1/gmrun.1
+share/doc/gmrun/README
+share/examples/gmrun/gmrunrc
