@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2010/10/08 10:41:57 obache Exp $
+@comment $NetBSD: PLIST,v 1.6 2010/11/07 02:43:10 obache Exp $
 bin/grntest
 bin/groonga
 include/groonga/groonga.h
@@ -34,6 +34,7 @@ share/groonga/admin_html/js/jquery-ui-1.8.1.custom.min.js
 share/groonga/admin_html/js/jquery.json-2.2.min.js
 share/groonga/doc/ja/html/.buildinfo
 share/groonga/doc/ja/html/_sources/characteristic.txt
+share/groonga/doc/ja/html/_sources/command_version.txt
 share/groonga/doc/ja/html/_sources/commands.txt
 share/groonga/doc/ja/html/_sources/commands/cache_limit.txt
 share/groonga/doc/ja/html/_sources/commands/check.txt
@@ -53,6 +54,7 @@ share/groonga/doc/ja/html/_sources/commands/quit.txt
 share/groonga/doc/ja/html/_sources/commands/select.txt
 share/groonga/doc/ja/html/_sources/commands/shutdown.txt
 share/groonga/doc/ja/html/_sources/commands/status.txt
+share/groonga/doc/ja/html/_sources/commands/suggest.txt
 share/groonga/doc/ja/html/_sources/commands/table_create.txt
 share/groonga/doc/ja/html/_sources/commands/table_list.txt
 share/groonga/doc/ja/html/_sources/commands/table_remove.txt
@@ -78,10 +80,15 @@ share/groonga/doc/ja/html/_sources/grnslap.txt
 share/groonga/doc/ja/html/_sources/grntest.txt
 share/groonga/doc/ja/html/_sources/http.txt
 share/groonga/doc/ja/html/_sources/index.txt
+share/groonga/doc/ja/html/_sources/install.txt
 share/groonga/doc/ja/html/_sources/news.txt
 share/groonga/doc/ja/html/_sources/process.txt
 share/groonga/doc/ja/html/_sources/pseudo_column.txt
 share/groonga/doc/ja/html/_sources/reference.txt
+share/groonga/doc/ja/html/_sources/spec.txt
+share/groonga/doc/ja/html/_sources/spec/search.txt
+share/groonga/doc/ja/html/_sources/troubleshooting.txt
+share/groonga/doc/ja/html/_sources/troubleshooting/different_results_with_the_same_keyword.txt
 share/groonga/doc/ja/html/_sources/tutorial.txt
 share/groonga/doc/ja/html/_sources/tutorial/tutorial01.txt
 share/groonga/doc/ja/html/_sources/tutorial/tutorial02.txt
@@ -106,6 +113,7 @@ share/groonga/doc/ja/html/_static/searchtools.js
 share/groonga/doc/ja/html/_static/sidebar.js
 share/groonga/doc/ja/html/_static/underscore.js
 share/groonga/doc/ja/html/characteristic.html
+share/groonga/doc/ja/html/command_version.html
 share/groonga/doc/ja/html/commands.html
 share/groonga/doc/ja/html/commands/cache_limit.html
 share/groonga/doc/ja/html/commands/check.html
@@ -125,6 +133,7 @@ share/groonga/doc/ja/html/commands/quit.html
 share/groonga/doc/ja/html/commands/select.html
 share/groonga/doc/ja/html/commands/shutdown.html
 share/groonga/doc/ja/html/commands/status.html
+share/groonga/doc/ja/html/commands/suggest.html
 share/groonga/doc/ja/html/commands/table_create.html
 share/groonga/doc/ja/html/commands/table_list.html
 share/groonga/doc/ja/html/commands/table_remove.html
@@ -151,6 +160,7 @@ share/groonga/doc/ja/html/grnslap.html
 share/groonga/doc/ja/html/grntest.html
 share/groonga/doc/ja/html/http.html
 share/groonga/doc/ja/html/index.html
+share/groonga/doc/ja/html/install.html
 share/groonga/doc/ja/html/news.html
 share/groonga/doc/ja/html/objects.inv
 share/groonga/doc/ja/html/process.html
@@ -158,6 +168,10 @@ share/groonga/doc/ja/html/pseudo_column.html
 share/groonga/doc/ja/html/reference.html
 share/groonga/doc/ja/html/search.html
 share/groonga/doc/ja/html/searchindex.js
+share/groonga/doc/ja/html/spec.html
+share/groonga/doc/ja/html/spec/search.html
+share/groonga/doc/ja/html/troubleshooting.html
+share/groonga/doc/ja/html/troubleshooting/different_results_with_the_same_keyword.html
 share/groonga/doc/ja/html/tutorial.html
 share/groonga/doc/ja/html/tutorial/tutorial01.html
 share/groonga/doc/ja/html/tutorial/tutorial02.html
@@ -172,6 +186,7 @@ share/groonga/doc/ja/html/tutorial/tutorial10.html
 share/groonga/doc/ja/html/type.html
 share/groonga/doc/ja/source/__init__.py
 share/groonga/doc/ja/source/characteristic.txt
+share/groonga/doc/ja/source/command_version.txt
 share/groonga/doc/ja/source/commands.txt
 share/groonga/doc/ja/source/commands/cache_limit.txt
 share/groonga/doc/ja/source/commands/check.txt
@@ -191,6 +206,7 @@ share/groonga/doc/ja/source/commands/quit.txt
 share/groonga/doc/ja/source/commands/select.txt
 share/groonga/doc/ja/source/commands/shutdown.txt
 share/groonga/doc/ja/source/commands/status.txt
+share/groonga/doc/ja/source/commands/suggest.txt
 share/groonga/doc/ja/source/commands/table_create.txt
 share/groonga/doc/ja/source/commands/table_list.txt
 share/groonga/doc/ja/source/commands/table_remove.txt
@@ -279,6 +295,10 @@ share/groonga/doc/ja/source/process.txt
 share/groonga/doc/ja/source/pseudo_column.txt
 share/groonga/doc/ja/source/rdoc.py
 share/groonga/doc/ja/source/reference.txt
+share/groonga/doc/ja/source/spec.txt
+share/groonga/doc/ja/source/spec/search.txt
+share/groonga/doc/ja/source/troubleshooting.txt
+share/groonga/doc/ja/source/troubleshooting/different_results_with_the_same_keyword.txt
 share/groonga/doc/ja/source/tutorial.txt
 share/groonga/doc/ja/source/tutorial/tutorial01.txt
 share/groonga/doc/ja/source/tutorial/tutorial02.txt
@@ -292,6 +312,19 @@ share/groonga/doc/ja/source/tutorial/tutorial09.txt
 share/groonga/doc/ja/source/tutorial/tutorial10.txt
 share/groonga/doc/ja/source/type.txt
 share/groonga/doc/ja/source/update_execution_example.py
+share/groonga/examples/dictionary/edict/edict2grn.rb
+share/groonga/examples/dictionary/edict/edict_import.sh
+share/groonga/examples/dictionary/eijiro/eijiro2grn.rb
+share/groonga/examples/dictionary/eijiro/eijiro_import.sh
+share/groonga/examples/dictionary/gene95/gene2grn.rb
+share/groonga/examples/dictionary/gene95/gene_import.sh
+share/groonga/examples/dictionary/html/css/dictionary.css
+share/groonga/examples/dictionary/html/index.html
+share/groonga/examples/dictionary/html/js/dictionary.js
+share/groonga/examples/dictionary/html/js/jquery-1.4.2.min.js
+share/groonga/examples/dictionary/init_db.sh
+share/groonga/examples/dictionary/jmdict/jmdict.rb
+share/groonga/examples/dictionary/readme.txt
 share/groonga/munin/plugins/groonga_cpu_load
 share/groonga/munin/plugins/groonga_cpu_time
 share/groonga/munin/plugins/groonga_disk
@@ -299,4 +332,3 @@ share/groonga/munin/plugins/groonga_memory
 share/groonga/munin/plugins/groonga_n_records
 share/groonga/munin/plugins/groonga_query_performance
 share/groonga/munin/plugins/groonga_status
-@pkgdir lib/groonga/modules/tokenizers
