@@ -3,6 +3,7 @@ A collection of utilities for manipulating pkg_summary(5) files.
 pkg_list_all_pkgs       - list (in PKGPATH form) all packages in pkgsrc tree
 pkg_src_summary         - create a full pkg_src_summary
                           for given (in PKGPATH form) packages
+pkg_bin_summary         - creates a summary for binary or installed packages
 pkg_micro_src_summary   - create a micro pkg_src_summary
                           for given (in PKGPATH form) packages
 pkg_cmp_summary         - compare two summary files, i.e. packages

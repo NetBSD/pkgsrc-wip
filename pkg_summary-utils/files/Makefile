@@ -1,122 +1,90 @@
 #############################################################
 
-PREFIX?=	/usr/local
-BINDIR?=	${PREFIX}/bin
-MANDIR?=	${PREFIX}/man
-LIBEXECDIR?=	${PREFIX}/libexec/psu
-DOCDIR=		${PREFIX}/share/doc/pkg_summary-utils
-AWKMODDIR?=	${PREFIX}/share/awk
-MKSCRIPTSDIR?=	${PREFIX}/share/psu_mk
-DISTDIR?=	/usr/pkgsrc/distfiles
+LIBEXECDIR ?=	${PREFIX}/libexec/psu
+DOCDIR =	${DATADIR}/doc/pkg_summary-utils
+AWKMODDIR ?=	${DATADIR}/runawk
+MKSCRIPTSDIR ?=	${DATADIR}/psu_mk
+DISTDIR ?=	/usr/pkgsrc/distfiles
 
-INST_DIR?=	${INSTALL} -d
-
-SH?=		/bin/sh
-AWK?=		/usr/bin/awk
-PKG_INFO_CMD?=	/usr/sbin/pkg_info -K /var/db/pkg
+SH ?=		/bin/sh
+AWK ?=		/usr/bin/awk
+PKG_INFO_CMD ?=	/usr/sbin/pkg_info -K /var/db/pkg
 
 # NetBSD make is required for pkgsrc
-BMAKE?=		/usr/bin/make
+BMAKE ?=	/usr/bin/make
 
 #############################################################
 
-LIBEXECSCRIPTS=	direct_deps XB2bin_summary get_processed_pkgs
+LIBEXECSCRIPTS =	direct_deps XB2bin_summary get_processed_pkgs
 
-SCRIPTS=	pkg_cmp_summary pkg_list_all_pkgs
-SCRIPTS+=	pkg_refresh_summary pkg_src_fetch_var
-SCRIPTS+=	pkg_micro_src_summary pkg_src_summary
-SCRIPTS+=	pkg_update_src_summary pkg_summary4view
-SCRIPTS+=	pkg_update_summary pkg_grep_summary
-SCRIPTS+=	cvs_checksum pkg_assignments2pkgpath
-SCRIPTS+=	pkg_uniq_summary pkg_summary2bb_pkgs
-SCRIPTS+=	pkg_cleanup_distdir pkg_summary2build_graph
-SCRIPTS+=	pkg_summary2deps pkg_lint_summary
-SCRIPTS+=	pkg_subgraph_deps pkg_bin_summary
+INSCRIPTS =	pkg_cmp_summary pkg_list_all_pkgs
+INSCRIPTS +=	pkg_refresh_summary pkg_src_fetch_var
+INSCRIPTS +=	pkg_micro_src_summary pkg_src_summary
+INSCRIPTS +=	pkg_update_src_summary pkg_summary4view
+INSCRIPTS +=	pkg_update_summary pkg_grep_summary
+INSCRIPTS +=	cvs_checksum pkg_assignments2pkgpath
+INSCRIPTS +=	pkg_uniq_summary pkg_summary2bb_pkgs
+INSCRIPTS +=	pkg_cleanup_distdir pkg_summary2build_graph
+INSCRIPTS +=	pkg_summary2deps pkg_lint_summary
+INSCRIPTS +=	pkg_subgraph_deps pkg_bin_summary
 
-SCRIPTS+=	${LIBEXECSCRIPTS}
+INSCRIPTS +=	${LIBEXECSCRIPTS}
+
+SCRIPTS =	${INSCRIPTS}
 
 .for i in ${LIBEXECSCRIPTS}
-SCRIPTSDIR_${i}=	${LIBEXECDIR}
+SCRIPTSDIR_${i} =	${LIBEXECDIR}
 .endfor
 
-MAN=		pkg_summary-utils.7
+MAN =		pkg_summary-utils.7
 
-MAN+=		pkg_cmp_summary.1 pkg_list_all_pkgs.1
-MAN+=		pkg_refresh_summary.1
-MAN+=		pkg_micro_src_summary.1 pkg_src_summary.1
-MAN+=		pkg_update_src_summary.1 pkg_summary4view.1
-MAN+=		pkg_update_summary.1 pkg_grep_summary.1
-MAN+=		cvs_checksum.1 # pkg_assignments2pkgpath.1
-MAN+=		pkg_uniq_summary.1 # pkg_summary2bb_pkgs.1
-MAN+=		pkg_cleanup_distdir.1 pkg_summary2build_graph.1
-MAN+=		pkg_summary2deps.1 pkg_lint_summary.1
-MAN+=		pkg_subgraph_deps.1 pkg_bin_summary.1
+MAN +=		pkg_cmp_summary.1 pkg_list_all_pkgs.1
+MAN +=		pkg_refresh_summary.1
+MAN +=		pkg_micro_src_summary.1 pkg_src_summary.1
+MAN +=		pkg_update_src_summary.1 pkg_summary4view.1
+MAN +=		pkg_update_summary.1 pkg_grep_summary.1
+MAN +=		cvs_checksum.1 # pkg_assignments2pkgpath.1
+MAN +=		pkg_uniq_summary.1 # pkg_summary2bb_pkgs.1
+MAN +=		pkg_cleanup_distdir.1 pkg_summary2build_graph.1
+MAN +=		pkg_summary2deps.1 pkg_lint_summary.1
+MAN +=		pkg_subgraph_deps.1 pkg_bin_summary.1
 
-FILES=		README NEWS TODO
-FILES+=		pkg_grep_summary.awk pkg_src_summary.mk psu_funcs.awk
-FILES+=		pkgsrc-dewey.awk
+FILES =		README NEWS TODO
+FILES +=	pkg_grep_summary.awk pkg_src_summary.mk psu_funcs.awk
+FILES +=	pkgsrc-dewey.awk
 
-FILESDIR=			${DOCDIR}
-FILESDIR_pkg_grep_summary.awk=	${AWKMODDIR}
-FILESDIR_psu_funcs.awk=		${AWKMODDIR}
-FILESDIR_pkgsrc-dewey.awk=	${AWKMODDIR}
-FILESDIR_pkg_src_summary.mk=	${MKSCRIPTSDIR}
+FILESDIR =			${DOCDIR}
+FILESDIR_pkg_grep_summary.awk =	${AWKMODDIR}
+FILESDIR_psu_funcs.awk =	${AWKMODDIR}
+FILESDIR_pkgsrc-dewey.awk =	${AWKMODDIR}
+FILESDIR_pkg_src_summary.mk =	${MKSCRIPTSDIR}
 
-BIRTHDATE=	2008-04-06
+BIRTHDATE =	2008-04-06
 
-PROJECTNAME=	pkg_summary-utils
+PROJECTNAME =	pkg_summary-utils
 
-.SUFFIXES:		.in
+INTEXTS_REPLS +=	version      ${VERSION}
+INTEXTS_REPLS +=	awkmoddir    ${AWKMODDIR}
+INTEXTS_REPLS +=	mkscriptsdir ${MKSCRIPTSDIR}
+INTEXTS_REPLS +=	SH           ${SH}
+INTEXTS_REPLS +=	AWK          ${AWK}
+INTEXTS_REPLS +=	DISTDIR      ${DISTDIR}
+INTEXTS_REPLS +=	PKGSRCDIR    ${PKGSRCDIR}
+INTEXTS_REPLS +=	BMAKE        ${BMAKE}
+INTEXTS_REPLS +=	PKG_SUFX     ${PKG_SUFX}
 
-.in:
-	sed -e 's,@@sysconfdir@@,${SYSCONFDIR},g' \
-	    -e 's,@@libexecdir@@,${LIBEXECDIR},g' \
-	    -e 's,@@prefix@@,${PREFIX},g' \
-	    -e 's,@@bindir@@,${BINDIR},g' \
-	    -e 's,@@sbindir@@,${SBINDIR},g' \
-	    -e 's,@@datadir@@,${DATADIR},g' \
-	    -e 's,@@version@@,${VERSION},g' \
-	    -e 's,@@awkmoddir@@,${AWKMODDIR},g' \
-	    -e 's,@@mkscriptsdir@@,${MKSCRIPTSDIR},g' \
-	    -e 's,@SH@,${SH},g' \
-	    -e 's,@AWK@,${AWK},g' \
-	    -e 's,@DISTDIR@,${DISTDIR},g' \
-	    -e 's,@PKGSRCDIR@,${PKGSRCDIR},g' \
-	    -e 's,@BMAKE@,${BMAKE},g' \
-	    -e 's,@PKG_SUFX@,${PKG_SUFX},g' \
-	    -e 's,@PKG_INFO_CMD@,${PKG_INFO_CMD},g' \
-	    ${.ALLSRC} > ${.TARGET} && chmod +x ${.TARGET}
+INTEXTS_SED += -e 's,@PKG_INFO_CMD@,${PKG_INFO_CMD},'
 
-.PHONY: clean-my
-clean: clean-my
-clean-my:
-	rm -f ChangeLog ${SCRIPTS} *.cat1 *.cat7
+CLEANFILES += ChangeLog
 
 ############################################################
-.PHONY: install-dirs
-install-dirs:
-	$(INST_DIR) ${DESTDIR}${BINDIR}
-	$(INST_DIR) ${DESTDIR}${DOCDIR}
-	$(INST_DIR) ${DESTDIR}${AWKMODDIR}
-	$(INST_DIR) ${DESTDIR}${MKSCRIPTSDIR}
-.if "$(MKMAN)" != "no"
-	$(INST_DIR) ${DESTDIR}${MANDIR}/man1
-	$(INST_DIR) ${DESTDIR}${MANDIR}/man7
-.if "$(MKCATPAGES)" != "no"
-	$(INST_DIR) ${DESTDIR}${MANDIR}/cat1
-	$(INST_DIR) ${DESTDIR}${MANDIR}/cat7
-.endif
-.endif
-
-############################################################
-
-all:	${SCRIPTS}
 
 DIFF_PROG?=	diff -U10
 
 .PHONY : test
 test : all
 	@echo 'running tests...'; \
+	unset MAKEFLAGS; \
 	set -e; cd ${.CURDIR}/tests; \
 	env PATH="${.OBJDIR}:$$PATH" OBJDIR=${.OBJDIR} \
 		BMAKE=${BMAKE} ./test.sh
@@ -124,4 +92,4 @@ test : all
 ############################################################
 
 .include "version.mk"
-.include <bsd.prog.mk>
+.include <mkc.prog.mk>

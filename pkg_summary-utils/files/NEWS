@@ -1,4 +1,19 @@
 ----------------------------------------------------------------------
+Version 0.48.0, by Aleksey Cheusov, Sun,  7 Nov 2010 20:35:18 +0200
+
+  Build system has been changed from mk-files to mk-configure
+
+  pkg_subgraph_deps:
+    - manual page was added.
+    - new option -t was added.
+    - tsort(1)-like input is also accepted, i.e., two equal tokens on
+      input mean isolated node of graph (package with no dependencies and
+      dependent packafes)
+
+  pkg_bin_summary:
+    - manual page was added, usage message was also improved.
+
+----------------------------------------------------------------------
 Version 0.47.0, by Aleksey Cheusov, Sun,  7 Nov 2010 13:35:58 +0200
 
   Long options are considered deprecated. Do not use them. They will

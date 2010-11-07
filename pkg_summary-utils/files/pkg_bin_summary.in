@@ -26,7 +26,7 @@ set -e
 
 export LC_ALL=C
 
-LIBEXECDIR=${LIBEXECDIR-@@libexecdir@@}
+LIBEXECDIR=${LIBEXECDIR-@libexecdir@}
 PKG_INFO_CMD="${PKG_INFO_CMD-@PKG_INFO_CMD@}"
 
 usage (){

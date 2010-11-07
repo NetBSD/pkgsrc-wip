@@ -61,9 +61,6 @@ existing tools:
          - check binaries and their REQUIRES and analyse Makefile
          - uniq PKGNAME
 
-    pkg_subgraph_deps:
-         - man page
-
 new tools?
     - replacement for lintpkgsrc -m
 

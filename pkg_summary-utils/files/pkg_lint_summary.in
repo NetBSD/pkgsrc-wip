@@ -48,7 +48,7 @@
 BEGIN {
 	prefix = ENVIRON ["PREFIX"]
 	if (prefix == "")
-		prefix = "@@prefix@@"
+		prefix = "@prefix@"
 
 	opt_L = getarg("L")
 	opt_l = getarg("l")

@@ -34,8 +34,8 @@ export LC_ALL=C
 # user settable variables
 PKGSRCDIR=${PKGSRCDIR:=@PKGSRCDIR@}
 BMAKE=${BMAKE:=@BMAKE@}
-PSS_MKSCRIPTSDIR=${PSS_MKSCRIPTSDIR:=@@mkscriptsdir@@}
-LIBEXECDIR=${LIBEXECDIR:=@@libexecdir@@}
+PSS_MKSCRIPTSDIR=${PSS_MKSCRIPTSDIR:=@mkscriptsdir@}
+LIBEXECDIR=${LIBEXECDIR:=@libexecdir@}
 PKG_INFO_CMD="${PKG_INFO_CMD-@PKG_INFO_CMD@}"
 
 ############################################################

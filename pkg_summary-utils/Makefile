@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2010/10/17 15:42:54 cheusov Exp $
+# $NetBSD: Makefile,v 1.40 2010/11/07 18:35:45 cheusov Exp $
 
 DISTNAME=	pkg_summary-utils-${VERSION}
 CATEGORIES=	pkgtools
@@ -14,6 +14,8 @@ LICENSE=	mit
 DEPENDS+=	runawk>=1.1.0:../../wip/runawk
 DEPENDS+=	pipestatus-[0-9]*:../../devel/pipestatus
 
+BUILD_DEPENDS+=	mk-configure>=0.20.0:../../wip/mk-configure
+
 CONFLICTS+=	paexec<0.15.0
 CONFLICTS+=	awk-pkgsrc-dewey-[0-9]*
 CONFLICTS+=	pkg_src_summary-[0-9]*
@@ -26,7 +28,6 @@ TEST_TARGET=		test
 
 NO_CHECKSUM=		yes
 
-USE_BSD_MAKEFILE=	yes
 USE_LANGUAGES=		#empty
 USE_TOOLS+=		gzip:run
 
@@ -36,7 +37,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 WRKSRC=		${.CURDIR}/files
 
 MAKE_ENV+=	MAKEOBJDIR=${WRKDIR}
-MAKE_ENV+=	MKCATPAGES=no
 MAKE_ENV+=	AWKMODDIR=${PREFIX}/share/runawk
 MAKE_ENV+=	SH=${SH:Q}
 MAKE_ENV+=	BMAKE=${MAKE:Q}
@@ -49,3 +49,5 @@ AUTO_MKDIRS=	yes
 
 .include "../../wip/pkg_summary-utils/files/version.mk"
 .include "../../mk/bsd.pkg.mk"
+
+MAKE_PROGRAM=	mkcmake
