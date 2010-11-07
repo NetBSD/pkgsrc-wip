@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2010/10/07 16:33:55 khorben Exp $
+$NetBSD: distinfo,v 1.3 2010/11/07 15:41:50 khorben Exp $
 
-SHA1 (Surfer-0.2.0.tar.gz) = 4461d81297aacbb4d88a7537c98c69afb3e9b1b4
-RMD160 (Surfer-0.2.0.tar.gz) = c78f4fe7bc84abb994bc5e481720947b2256835d
-Size (Surfer-0.2.0.tar.gz) = 50412 bytes
+SHA1 (Surfer-0.2.1.tar.gz) = 8b62ce3a588d1c480c788a62feb294edb002f089
+RMD160 (Surfer-0.2.1.tar.gz) = 015df9b0c3dde9bba5acad6d83b3249fdd18fcc8
+Size (Surfer-0.2.1.tar.gz) = 53204 bytes
