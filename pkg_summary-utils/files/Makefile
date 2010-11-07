@@ -50,7 +50,7 @@ MAN+=		cvs_checksum.1 # pkg_assignments2pkgpath.1
 MAN+=		pkg_uniq_summary.1 # pkg_summary2bb_pkgs.1
 MAN+=		pkg_cleanup_distdir.1 pkg_summary2build_graph.1
 MAN+=		pkg_summary2deps.1 pkg_lint_summary.1
-MAN+=		# pkg_subgraph_deps.1
+MAN+=		pkg_subgraph_deps.1
 
 FILES=		README NEWS TODO
 FILES+=		pkg_grep_summary.awk pkg_src_summary.mk psu_funcs.awk

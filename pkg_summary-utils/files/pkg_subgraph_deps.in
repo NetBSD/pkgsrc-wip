@@ -32,14 +32,14 @@
 #
 # usage: pkg_subgraph_deps [OPTIONS] [files...]
 # OPTIONS:
-#    -h|--help          display this screen
-#    =f <file>          list of packages, one package per line
-#    =p <pkgs>          list of packages separated by space character
-#    -r                 output dependencies
-#    -x                 exclude packages in the list
-#    -v                 invert condition
-#    -n                 output nodes, not edges
-#
+#    -h|--help    display this screen
+#    =f <file>    list of packages, one package per line
+#    =p <pkgs>    list of packages separated by space character
+#    -r           output dependencies
+#    -x           exclude packages in the list
+#    -v           invert condition
+#    -n           output nodes, not edges
+#    -t           produce output compatible with tsort(1) command
 # Input graph is represented by list of edges and isolated nodes, e.g.
 #   devel/gmake textproc/dict-client
 #   devel/gmake textproc/dict-server
@@ -59,6 +59,7 @@ BEGIN {
 	opt_excl   = getarg("x")
 	opt_invert = getarg("v")
 	opt_nodes  = getarg("n")
+	opt_tsort  = getarg("t")
 
 	if (!fn && !pkgs){
 		print "-f or -p are mandatory!" > "/dev/stderr"
@@ -143,7 +144,11 @@ END {
 	}
 
 	for (i in nodes){
-		if ((i in result) && !(i in printed))
-			print i
+		if ((i in result) && !(i in printed)){
+			if (opt_tsort)
+				print i, i
+			else
+				print i
+		}
 	}
 }

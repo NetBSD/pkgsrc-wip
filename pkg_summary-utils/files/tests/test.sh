@@ -2524,8 +2524,29 @@ wip/heirloom-libcommon wip/libuxre
 wip/runawk
 '
 
-pkg_subgraph_deps -xvn -f src_pkgs.txt src_deps.txt | sort |
+pkg_subgraph_deps -xvt -f src_pkgs.txt src_deps.txt | sort |
 cmp 'pkg_subgraph_deps #6' \
+'devel/gmake textproc/dict-client
+devel/gmake textproc/dict-server
+devel/libjudy devel/libjudy
+devel/libmaa textproc/dict-client
+devel/libmaa textproc/dict-server
+devel/libtool-base devel/libmaa
+devel/libtool-base textproc/dict-client
+devel/libtool-base textproc/dict-server
+devel/libtool-base wip/libuxre
+devel/pipestatus devel/pipestatus
+lang/f2c devel/libtool-base
+net/netcat net/netcat
+textproc/dictem textproc/dictem
+wip/heirloom-common wip/heirloom-doc
+wip/heirloom-doc wip/heirloom-libcommon
+wip/heirloom-libcommon wip/libuxre
+wip/runawk wip/runawk
+'
+
+pkg_subgraph_deps -xvn -f src_pkgs.txt src_deps.txt | sort |
+cmp 'pkg_subgraph_deps #7' \
 'devel/gmake
 devel/libjudy
 devel/libmaa
