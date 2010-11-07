@@ -2496,7 +2496,7 @@ wip/pkg_summary-utils wip/pkg_online-client
 wip/pkg_summary-utils wip/pkg_online-server
 '
 
-pkg_subgraph_deps -rx -f src_pkgs.txt src_deps.txt | sort |
+pkg_subgraph_deps -rx -fsrc_pkgs.txt src_deps.txt | sort |
 cmp 'pkg_subgraph_deps #4' \
 'lang/f2c devel/libtool-base
 wip/heirloom-common wip/heirloom-doc
@@ -2563,6 +2563,10 @@ wip/heirloom-libcommon
 wip/libuxre
 wip/runawk
 '
+
+pkg_subgraph_deps -r -p'wip/pkg_online-client,wip/distbb' src_deps.txt | sort |
+cmp 'pkg_subgraph_deps #8' \
+''
 
 # pkg_bin_summary
 pkg_bin_summary pkg_install |

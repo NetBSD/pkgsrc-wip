@@ -1,6 +1,6 @@
 devel/gmake textproc/dict-client
 devel/gmake textproc/dict-server
-devel/libjudy
+devel/libjudy devel/libjudy
 devel/libmaa textproc/dict-client
 devel/libmaa textproc/dict-server
 devel/libmaa wip/paexec
