@@ -1,7 +1,7 @@
 PKGPATH=audio/py-karaoke:PYTHON_VERSION_REQD=26
 PKGNAME=py26-karaoke-0.7.1
 MAINTAINER=pkgsrc-users@NetBSD.org
-DEPENDS=py26-mutagen>=1.9:../../audio/py-mutagen:PYTHON_VERSION_REQD=26
+DEPENDS=py26-mutagen>=1.9:../../audio/py-mutagen
 
 PKGPATH=audio/py-mutagen:PYTHON_VERSION_REQD=26
 PKGNAME=py26-mutagen-1.15
@@ -10,7 +10,7 @@ MAINTAINER=pkgsrc-users@NetBSD.org
 PKGPATH=audio/py-karaoke
 PKGNAME=py24-karaoke-0.7.1
 MAINTAINER=pkgsrc-users@NetBSD.org
-DEPENDS=py24-mutagen>=1.9:../../audio/py-mutagen:PYTHON_VERSION_REQD=24
+DEPENDS=py24-mutagen>=1.9:../../audio/py-mutagen
 ASSIGNMENTS=PYTHON_VERSION_REQD=24
 
 ASSIGNMENTS=PYTHON_VERSION_REQD=24

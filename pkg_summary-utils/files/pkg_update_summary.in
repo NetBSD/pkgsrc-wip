@@ -34,8 +34,8 @@ pkg_update_summary - updates pkg_summary(5) efficiently
 
 usage: pkg_update_summary [OPTIONS] summary_file bin_pkg_dir [decomp comp]
 OPTIONS:
-  -h|--help      display this help message
-  -r|--refresh   keeps only latest version for each pkgpath:pkgbase pair
+  -h             display this help message
+  -r             keeps only latest version for each pkgpath:pkgbase pair
 EOF
 }
 

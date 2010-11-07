@@ -1,4 +1,26 @@
 ----------------------------------------------------------------------
+Version 0.47.0, by Aleksey Cheusov, Sun,  7 Nov 2010 13:24:30 +0200
+
+  pkg_summary2deps:
+    - has been completely reimplemented.  Now it handles
+      glob pattern like libao-[a-z]*-[0-9]* correctly.
+    - Options -r and -R now work differently.
+    - New option -s for was added.
+
+  pkg_src_summary:
+    - FIX: With -A option "bad" dependencies, i.e. ones with incorrect
+      assignments like XXX_VERSION_REQD=<unsupported-value>, are
+      skipped, thus allowing distbb to outout much better diagnistics.
+    - Minor fix for -G debugging option
+    - Simplification: due to changes in pkg_summary2deps,
+      "enrich_XDEPENDS" helper script is not needed anymore, so it was
+      removed.
+
+
+  Long options are considered deprecated. Do not use them. They will
+  be removed in the future.
+
+----------------------------------------------------------------------
 Version 0.46.0, by Aleksey Cheusov, Sun, 31 Oct 2010 16:27:55 +0200
 
   pkg_src_fetch_var:

@@ -1,8 +1,11 @@
 # AWK functions for working on pkgsrc
 
 # return a position where version begins
-function pkgver_position (pkgname){
-	return match(pkgname, /(-|>|>=|<|<=|=)(\[[^\[\]]*\][*+]|[^><=-])*$/)
+function pkgver_position (pkgname,            idx){
+	if (match(pkgname, /<|>|=/))
+		return RSTART
+	else
+		return match(pkgname, /-(\[[^\[\]]*\][*+]|[^-])*$/)
 }
 
 # strip version from PKGNAME

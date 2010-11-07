@@ -49,30 +49,30 @@ usage:
   pkg_src_summary -s [OPTIONS]
   pkg_src_summary -i [OPTIONS]
 OPTIONS:
-  -h|--help              display this help message
-  -p|--make-plist        generate PLIST using 'bmake plist'
-  -i|--installed         generate src_summary for the installed packages only,
+  -h                     display this help message
+  -p                     generate PLIST using 'bmake plist'
+  -i                     generate src_summary for the installed packages only,
                          do not read list of packages from stdin and
                          from pkgpathN arguments
-  -f|--fields <fields> list of fields (separated by space or comma)
+  -f <fields>            list of fields (separated by space or comma)
                          to be included to summary,
                          by default FULL summary is generated
-  -s|--slave-mode        ready for use as paexec slave/remote program
+  -s                     ready for use as paexec slave/remote program
                          (used internally for generating summary in parallel
                           when PSS_SLAVES is set)
-  -a|--add-fields <fields>  add the specified fields to the list
+  -a <fields>            add the specified fields to the list
                                of default ones
-  -r|--rem-fields <fields>  remove the specified fields from the list
+  -r <fields>            remove the specified fields from the list
                                of default ones
   -b                  add BOOTSTRAP_DEPENDS to BUILD_DEPENDS
   -l                  add library dependencies (bl3.mk) to BUILD_DEPENDS
-  -d|--with-deps      also generates summary for dependancies (DEPENDS)
-  -D|--with-bdeps     also generates summary for dependancies (BUILD_DEPENDS)
-  -A|--with-alldeps   implies -d and -D
-  -m|--multi          generate ASSIGNMENTS field
+  -d                  also generates summary for dependancies (DEPENDS)
+  -D                  also generates summary for dependancies (BUILD_DEPENDS)
+  -A                  implies -d and -D
+  -m                  generate ASSIGNMENTS field
                       for multi-variant packages
-  -M|--MULTI          implies -m and move/add ASSIGNMENTS to PKGPATH field
-  -G|--debug          for debugging
+  -M                  implies -m and move/add ASSIGNMENTS to PKGPATH field
+  -G                  for debugging
 EOF
 }
 
@@ -182,7 +182,7 @@ varnames=`echo $PSS_FIELDS |
 
 if test -n "$debug"; then
     echo '===== PSS_FIELDS: =========' 1>&2
-    echo "$PSS_FIELDS"
+    echo "$PSS_FIELDS" 1>&2
 fi
 
 ############################################################
@@ -271,7 +271,7 @@ cd_and_print_summary (){
     # INHER_ASSIGNS must be before DEPENDS and BUILD_DEPENDS, see below
     ( cd "$real_pkgpath" && eval ${BMAKE} -f ./Makefile $extra_mk \
 	-f "$PSS_MKSCRIPTSDIR"/pkg_src_summary.mk my-show-vars \
-	VARNAMES="'_INHER_ASSIGNS _INHER_ASSIGNS_REJ ASSIGNMENTS $varnames'" \
+	VARNAMES="'_INHER_ASSIGNS _INHER_ASSIGNS_REJ _INHER_ASSIGNS_BAD ASSIGNMENTS $varnames'" \
 	$var_assignments $var_assigns ) > "$tmpfn" || return 1
 
     enrich_summary "$tmpfn" >"$summaryfn" || return 1
@@ -550,7 +550,10 @@ while test -n "${with_dep}${with_bdep}"; do
 
     ##
     env _PSS_RECURS=1 $0 $with_xxx $make_plist \
-	< "$extra_deps_fn" > "$deps1_all_fn"
+	< "$extra_deps_fn" > "$deps1_all_fn".tmp
+    pkg_grep_summary -e _INHER_ASSIGNS_BAD > "$deps1_all_fn" \
+	< "$deps1_all_fn".tmp > "$deps1_all_fn"
+
     if test -n "$debug"; then
 	echo '===== level-1 deps summaries =========' 1>&2
 	cat "$deps1_all_fn" 1>&2
@@ -572,13 +575,8 @@ remove_internal_fields (){
     grep -v '^_.*=' "$@" || true
 }
 
-run_enrich_XDEPENDS (){
-    $LIBEXECDIR/enrich_XDEPENDS - "$1" < "$1"
-}
-
 if test -z "$_PSS_RECURS"; then
-    run_enrich_XDEPENDS "$partial_summary_fn" |
-    remove_internal_fields
+    remove_internal_fields "$partial_summary_fn"
 else
     cat "$partial_summary_fn"
 fi

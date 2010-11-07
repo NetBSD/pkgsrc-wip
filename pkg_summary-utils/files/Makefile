@@ -20,8 +20,7 @@ BMAKE?=		/usr/bin/make
 
 #############################################################
 
-LIBEXECSCRIPTS=	enrich_XDEPENDS direct_deps XB2bin_summary \
-                get_processed_pkgs
+LIBEXECSCRIPTS=	direct_deps XB2bin_summary get_processed_pkgs
 
 SCRIPTS=	pkg_cmp_summary pkg_list_all_pkgs
 SCRIPTS+=	pkg_refresh_summary pkg_src_fetch_var

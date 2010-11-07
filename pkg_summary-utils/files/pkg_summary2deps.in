@@ -29,6 +29,8 @@
 #use "alt_assert.awk"
 #use "braceexpand.awk"
 #use "psu_funcs.awk"
+#use "glob.awk"
+#use "pkgsrc-dewey.awk"
 
 ############################################################
 #.begin-str help
@@ -43,19 +45,33 @@
 # Here package3 depends on package2, package1 has no dependencies.
 # usage: pkg_summary2deps [OPTIONS] [files...]
 # OPTIONS:
-#   -h|--help            display this help
-#   -p                   output PKGPATH
-#   -n                   output PKGNAME
-#   -d                   analyse DEPENDS
-#   -D                   analyse BUILD_DEPENDS
-#   -A                   analyse both DEPENDS and BUILD_DEPENDS
-#   -t                   produce output compatible in tsort(1) command
-#   -r                   do not strip versions from PKGNAME,
-#                        imply -n
-#   -R                   do not strip versions from dependencies,
-#                        imply -n
+#   -h|--help    display this help
+#   -p           output PKGPATH
+#   -n           output PKGNAME
+#   -d           analyse DEPENDS
+#   -D           analyse BUILD_DEPENDS
+#   -A           analyse both DEPENDS and BUILD_DEPENDS
+#   -t           produce output compatible with tsort(1) command
+#   -r           do not strip versions from PKGNAME,
+#                imply -n
+#   -R           do not strip versions from dependencies,
+#                imply -n
+#   -s           strict mode, >=, <= etc. are always checked
+#                for dependencies, even if there is only one matched
+#                package
 #.end-str
 ############################################################
+
+# comment
+#   pkgpath    - PKGPATH=<...>
+#   assigns    - ASSIGNMENTS=<...>
+#   pkgbase    - PKGNAME=<...> with pkg version stripped
+#   g_basecnt2path   - array: pkgbase, g_basecnt2path_cnt [base] -> PKGPATH:ASSIGNMENTS
+#   g_path2name   - array: PKGPATH:ASSIGNMENTS -> pkgname
+#   g_path2base   - array: PKGPATH:ASSIGNMENTS -> pkgbase
+#   g_pathcnt2namedeps    - array: PKGPATH:ASSIGNMENTS, g_pathcnt2namedeps_cnt [PKGPATH:ASSIGNMENTS] ->
+#                e.g. suse32_base-10.0|suse32_base-10.0nb*
+#   allbases   - set: PKGBASE
 
 BEGIN {
 	keep_ver = getarg("r")
@@ -65,6 +81,7 @@ BEGIN {
 	out_pkgpath = getarg("p")
 
 	mode_tsort  = getarg("t")
+	mode_strict = getarg("s")
 
 	dep_depends  = getarg("d")
 	dep_builddep = getarg("D")
@@ -94,9 +111,7 @@ BEGIN {
 
 /^PKGNAME=/ {
 	pkgbase = pkgname = substr($0, 9)
-	if (!keep_ver)
-		sub(/-[^-]+$/, "", pkgbase)
-
+	sub(/-[^-]+$/, "", pkgbase)
 	next
 }
 
@@ -110,86 +125,28 @@ dep_builddep && /^BUILD_DEPENDS=/ {
 	next
 }
 
-function process_deps (                arr, i, j, cnt){
+function process_deps (               deps,i){
 	for (i=1; i <= NF; ++i){
-		if ($i ~ /[{]/){
-			cnt = split(braceexpand($i), arr)
+		if ($i ~ /[{]/)
+			$i = braceexpand($i)
 
-			depname1 = arr [1]
-			sub(/:.*$/, "", depname1)
-			depbase1 = pkgname2pkgbase(depname1)
-
-			if (!keep_depver){
-				depname1 = depbase1
-			}
-
-			for (j=2; j <= cnt; ++j){
-				depname = arr [j]
-				sub(/:.*$/, "", depname)
-				depbase = pkgname2pkgbase(depname)
-
-				if (depbase != depbase1){
-					if (!out_pkgname)
-						hidden_deps [depbase1 " " pkgpath] = depname1
-					else if (!out_pkgpath)
-						hidden_deps [depbase1 " " pkgbase] = depname1
-					else
-						hidden_deps [depbase1 " " pkgpath ";" pkgbase] = depname1
-
-					depname2reqd_by [depname1] = pkgpath
-
-					dep_pkgs [pkgpath] = 1
-					j = -1
-
-					break
-				}
-			}
-			if (j == -1)
-				continue
-		}
-
-		# ../../pkg/path is a dependency
-		deppath = src_depend2pkgpath($i)
-
-		depname = $i
-		if (!sub(/:.*$/, "", depname)){
-			# bin_summary is given on input, no PKGPATH in DEPENDS
-			deppath = ""
-		}
-
-		depbase = depname
-
-		if (!keep_depver)
-			depbase = pkgname2pkgbase(depbase)
-
-		if (!out_pkgname)
-			full_deps [deppath " " pkgpath] = 1
-		else if (!out_pkgpath)
-			full_deps [depbase " " pkgbase] = 1
-		else if (deppath != "")
-			full_deps [deppath ";" depbase " " pkgpath ";" pkgbase] = 1
-		else
-			full_deps [depbase " " pkgpath ";" pkgbase] = 1
-
-		dep_pkgs [pkgpath] = 1
-		if (!keep_ver)
-			dep_pkgs [deppath] = dep_pkgs [depbase] = 1
+		gsub(/:[^ ]*/, "", $i)
+		gsub(/ /, "|", $i)
+		g_pathcnt2namedeps [pkgpath, ++g_pathcnt2namedeps_cnt [pkgpath]] = $i
 	}
 }
 
 NF == 0 {
 	assert(pkgpath != "", "Cannot find pkgpath")
+	assert(pkgname != "", "Cannot find pkgname")
 
 	if (assigns)
 		pkgpath = pkgpath ":" assigns
 
-	base = pkgname
-	sub(/-[^-]+$/, "", base)
-	pkgpaths [base]    = pkgpath
-	pkgnames [pkgpath] = pkgname
-	pkgbases [pkgpath] = pkgbase
-
-	all_pkgs [pkgpath] = 1
+	g_basecnt2path [pkgbase, ++g_basecnt2path_cnt [pkgbase]] = pkgpath
+	g_path2name [pkgpath] = pkgname
+	g_path2base [pkgpath] = pkgbase
+	allbases [pkgbase] = 1
 
 	$0 = depends
 	process_deps()
@@ -208,71 +165,158 @@ function print_nodep_node (node){
 		print node
 }
 
-function generate_pkgdepname (){
-	if (keep_ver)
-		pkgname = pkgnames [pkgpath]
-	else
-		pkgname = pkgbases [pkgpath]
+function find_by_glob (pattern, strict,           base_i,i){
+	for (base_i in allbases){
+		if (glob(base_i, depbase)){
+#			found [++foundcnt] = base_i
+			for (i=1; i <= g_basecnt2path_cnt [base_i]; ++i)
+				found [++foundcnt] = g_basecnt2path [base_i, i]
+		}
+	}
+}
 
-	if (keep_depver)
-		depname = pkgnames [dep]
-	else
-		depname = pkgbases [dep]
+function pkgmatch (pkg, pattern,                     i,j,k){
+	pkg     = pkgname2version(pkg)
+	pattern = pkgname2version(pattern)
+
+	while (match(pattern, /(>|<|=|>=|<=)[^<=>]*/)){
+		assert(RSTART == 1, "failed in pkgmatch() function")
+		i = substr(pattern, RSTART, RLENGTH)
+		j = substr(pattern, RSTART + RLENGTH)
+		k = match(i, /[0-9]/)
+
+		if (!dewey_test(pkg, substr(i,k), substr(i,1,k-1)))
+			return 0
+
+		pattern = j
+	}
+
+	if (pattern == "" || pattern == "[0-9]*")
+		return 1
+
+	return glob(pkg, pattern)
 }
 
 END {
-	for (hdep in hidden_deps){
-		depbase = hdep
-		sub(/ .*$/, "", depbase)
+	# building dependency graph
+	for (path in g_path2base){
+		name = g_path2name [path]
+		base = g_path2base [path]
+		depscnt = g_pathcnt2namedeps_cnt [path]
+		for (i=1; i <= depscnt; ++i){
+			deps = g_pathcnt2namedeps [path, i]
+#			print base, i, dep
 
-		depname = hidden_deps [hdep]
-
-		if (! (depbase in pkgpaths)){
-			printf "Cannot find PKGPATH for %s needed by %s\n", \
-				depbase, depname2reqd_by [depbase] > "/dev/stderr"
-			ex = 1
-		}else{
-			pkgpath = hdep
-			sub(/^[^ ]* /, "", pkgpath)
-
-			if (!out_pkgpath)
-				print hidden_deps [hdep], pkgpath
-			else if (!out_pkgname)
-				print pkgpaths [depbase], pkgpath
-			else
-				print pkgpaths [depbase] ";" depname, pkgpath
-
-			dep_pkgs [pkgpath] = 1
-			if (!keep_ver)
-				dep_pkgs [deppath] = 1
-		}
-	}
-
-	for (hdep in full_deps){
-		dep = hdep
-		sub(/ .*$/, "", dep)
-		pkgpath = hdep
-		sub(/^.* /, "", pkgpath)
-
-		print dep, pkgpath
-	}
-
-	for (pkgpath in all_pkgs){
-		if (! (pkgpath in dep_pkgs)){
-			if (!out_pkgname){
-				print_nodep_node(pkgpath)
-			}else{
-				generate_pkgdepname()
-
-				if (pkgname in dep_pkgs){
-				}else if (!out_pkgpath){
-					print_nodep_node(pkgname)
-				}else{
-					print pkgpath ";" pkgname
+			altdepscnt = split(deps, arr, /[|]/)
+			for (k=1; k <= altdepscnt; ++k){
+				depname = arr [k]
+				depbase = pkgname2pkgbase(depname)
+#				printf "trying %s->%s...\n" , depname, depbase
+				foundcnt = 0
+				if (depbase ~ /[*?\[\]]/){
+					# glob pattern
+					find_by_glob(depbase, 0)
+				}else if (depbase in allbases){
+					# plain PKGBASE
+					basecnt = g_basecnt2path_cnt [depbase]
+					for (j=1; j <= basecnt; ++j){
+						found [++foundcnt] = g_basecnt2path [depbase, j]
+					}
 				}
+
+				if (foundcnt == 1 && !mode_strict){
+					final_deps [path, found [1]] = depname
+					break
+				}
+
+# 				printf "%s (%s) : %s |", path, name, depname
+# 				for (j=1; j <= foundcnt; ++j){
+# 					printf " %s (%s)", found [j], g_path2name [found [j]]
+# 				}
+# 				printf "\n"
+
+				matched = ""
+				for (j=1; j <= foundcnt; ++j){
+					if (pkgmatch(g_path2name [found [j]], depname)){
+						matched = found [j]
+						break
+					}
+				}
+
+				delete found
+				foundcnt = 0
+
+				if (!matched){
+					if (k == altdepscnt){
+						printf "Cannot find dependency %s for package %s (%s)\n", \
+						depname, path, name> "/dev/stderr"
+					}
+
+					continue
+				}
+
+#				print "!!!", path, matched, depname
+				final_deps [path, matched] = depname
+
+				break
 			}
 		}
 	}
 
-	exit ex
+	# output PKGNAMESs/PKGPATHs
+	for (pair in final_deps){
+		split(pair, arr, SUBSEP)
+		path1 = arr [2]
+		path2 = arr [1]
+		if (out_pkgname){
+			if (keep_ver){
+				name1 = g_path2name [path1]
+				name2 = g_path2name [path2]
+			}else if (out_pkgname){
+				name1 = g_path2base [path1]
+				name2 = g_path2base [path2]
+			}
+		}
+
+		if (!out_pkgname){
+			print path1, path2
+		}else if (!out_pkgpath){
+			if (keep_depver)
+				print name1, name2, "(", final_deps [pair], ")"
+			else
+				print name1, name2
+		}else{
+			if (keep_depver)
+				print path1 ";" name1, path2 ";" name2, "(", final_deps [pair], ")"
+			else
+				print path1 ";" name1, path2 ";" name2
+		}
+
+		already_printed [path1] = already_printed [path2] = 1
+	}
+
+	# printing packages with no dependencies
+	for (path in g_path2base){
+		if (! (path in already_printed)){
+			if (out_pkgname){
+				if (keep_ver)
+					name = g_path2name [path]
+				else
+					name = g_path2base [path]
+			}
+
+			if (!out_pkgname){
+				p = path
+			}else if (!out_pkgpath){
+				p = name
+			}else{
+				p = path ";" name
+			}
+
+			if (mode_tsort)
+				print p, p
+			else
+				print p
+		}
+	}
 }

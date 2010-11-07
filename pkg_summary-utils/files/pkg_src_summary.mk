@@ -21,16 +21,28 @@ _VAR2DEFAULT.${_PBULK_MULTI_VAR.${i}}=${${_PBULK_MULTI_DEFAULT.${i}}}
 #   _VAR2ACCEPTEDVARNAME.PYTHON_VERSION_REQD  = _PYTHON_VERSIONS_ACCEPTED
 #   _VAR2ACCEPTEDVARNAME.PHP_VERSION_REQD     = PHP_VERSIONS_ACCEPTED
 _VAR2ACCEPTEDVARNAME.${_PBULK_MULTI_VAR.${i}}=${_PBULK_MULTI_LIST.${i}}
+# Ex:
+#   _VAR2ACCEPTEDVALUE.PKG_APACHE.13        = 1
+#   _VAR2ACCEPTEDVALUE.PKG_APACHE.2         = 1
+#   _VAR2ACCEPTEDVALUE.PKG_APACHE.22        = 1
+.for j in ${${_PBULK_MULTI_LIST.${i}}}
+_VAR2ACCEPTEDVALUE.${_PBULK_MULTI_VAR.${i}}.${j}=1
+.endfor
 .endfor
 
 .for _SINGLE_ASSIGN in ${_ASSIGNMENTS:S/,/ /g}
 _varname=			${_SINGLE_ASSIGN:C/=.*$//1}
 _value=				${_SINGLE_ASSIGN:C/^[^=]*=//1}
+# Ex:
+#   _varname    = PYTHON_VERSION_REQD
+#   _value      = 24
 _VAR_ASSIGNED.${_varname}=	1
 .if !defined(_VAR2DEFAULT.${_varname})
 _ASSIGN2+=		${_SINGLE_ASSIGN}
 .elif !defined(${_VAR2ACCEPTEDVARNAME.${_varname}})
 __INHER_ASSIGNS_REJ+=	${_SINGLE_ASSIGN}
+.elif !defined(_VAR2ACCEPTEDVALUE.${_varname}.${_value})
+__INHER_ASSIGNS_BAD+=	${_SINGLE_ASSIGN}
 .elif "${_VAR2DEFAULT.${_varname}}" != "${_value}"
 _ASSIGN2+=		${_SINGLE_ASSIGN}
 __INHER_ASSIGNS+=	${_SINGLE_ASSIGN}
@@ -50,9 +62,14 @@ ASSIGNMENTS=		${_ASSIGN2:ts,}
 _INHER_ASSIGNS=		${__INHER_ASSIGNS:ts,}
 
 # _INHER_ASSIGNS_REJ contains variable assignments (PKG_APACHE,
-# PYTHON_VERSION_REQD or PHP_VERSION_REQD) if they are not allowed or
-# their values are _equal_ to default values
+# PYTHON_VERSION_REQD or PHP_VERSION_REQD) if their values
+# are _equal_ to default values
 _INHER_ASSIGNS_REJ=	${__INHER_ASSIGNS_REJ:ts,}
+
+# _INHER_ASSIGNS_BAD contains variable assignments (PKG_APACHE,
+# PYTHON_VERSION_REQD or PHP_VERSION_REQD) if they are not allowed, i.e.
+# not listed in appropriate XXX_VERSIONS_ACCEPTED
+_INHER_ASSIGNS_BAD=	${__INHER_ASSIGNS_BAD:ts,}
 
 #####################################################################
 # for multivariant packages

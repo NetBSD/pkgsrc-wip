@@ -39,8 +39,8 @@ cvs_checksum - analyses CVS/Entries file and print a checksum of
 usage:
   cvs_checksum [OPTIONS] [cvsdirs ...]
 OPTIONS:
-  -h|--help       display this help message
-  -l|--list       list CVS files names with their revisions
+  -h              display this help message
+  -l              list CVS files names with their revisions
                   instead of their checksum
 EOF
 }

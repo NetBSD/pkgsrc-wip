@@ -42,7 +42,7 @@ not referenced by any package.
 
 usage: pkg_cleanup_distdir [OPTIONS] [files...]
 OPTIONS:
-  -h|--help      display this help message
+  -h             display this help message
   -r             remove unreferenced files and empty directories
 EOF
 }

@@ -39,7 +39,7 @@ pkg_bin_summary - wrapper for 'pkg_info -X' which outputs
 USAGE: pkg_bin_summary -h
        pkg_bin_summary [OPTIONS] [[--] [PKG_INFO_ARGS]]
 OPTIONS:
-  -h|--help         display this help
+  -h                display this help
   -a <fields>       add to the output specified fields
                     separated by space or comma
   -f <fields>       output only specified fields

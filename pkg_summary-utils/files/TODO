@@ -1,6 +1,9 @@
 TODO list and thoughts
 
-mktemp!
+WARN: PLIST:14: Manual page missing for bin/pkg_subgraph_deps.
+WARN: PLIST:4: Manual page missing for bin/pkg_bin_summary.
+
+#6
 
 existing tools:
 
@@ -35,14 +38,12 @@ existing tools:
        - remove it, see pkg_micro_src_summary
 
     pkg_src_summary:
-       - -A + DEPENDS=...libao-[a-z]*-[0-9]*...
        - new option for exit code 0 if everything was done successfully,
          1 otherwise
 
     pkg_summary2bb_pkgs:
 
     pkg_summary2build_graph:
-       - -A + DEPENDS=...libao-[a-z]*-[0-9]*...
 
     pkg_summary2deps:
 

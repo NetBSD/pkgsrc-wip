@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkg_cmp_summary.1,v 1.11 2010/10/20 20:58:05 cheusov Exp $
+.\"	$NetBSD: pkg_cmp_summary.1,v 1.12 2010/11/07 11:34:51 cheusov Exp $
 .\"
 .\" Copyright (c) 2008 by Aleksey Cheusov (vle@gmx.net)
 .\" Absolutely no warranty.
@@ -49,18 +49,18 @@ VER1 and VER2 are package versions.
 PKGPATH appears in output if -p option is specified.
 .SH OPTIONS
 .TP
-.B "-h|--help"
+.B "-h"
 display help message
 .TP
-.B "-p|--with-pkgpath"
+.B "-p"
 use PKGPATH:PKGBASE pair for identifing a package, by default only PKGBASE
 is used to identify the package.
 .TP
-.B "-m|--multi"
+.B "-m"
 for comparing summaries for multi-variant packages
 (PKGPATH=category/name:variable_assignments format of PKGPATH field)
 .TP
-.B "-c|--use-checksum"
+.B "-c"
 use CVS_CHECKSUM field for comparing in addition to PKGNAME and/or PKGPATH
 .TP
 .B "-d"

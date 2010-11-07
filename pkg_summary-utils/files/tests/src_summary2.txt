@@ -9,7 +9,7 @@ PKGNAME=digest-99.99.99
 
 PKGNAME=dict-client-1.10.11nb2
 PKGPATH=wip/dict-client
-BUILD_DEPENDS=libmaa-1.11.0:../../devel/libmaa
+BUILD_DEPENDS=libmaa-1.0.1{,nb*}:../../devel/libmaa
 
 PKGNAME=pipestatus-0.5.0
 PKGPATH=devel/pipestatus
@@ -34,7 +34,7 @@ PKGPATH=textproc/dict-client
 
 PKGNAME=pkg_online-client-0.5.0
 PKGPATH=wip/pkg_online-client
-DEPENDS=dict-client-1.11.0:../../wip/dict-client
+DEPENDS=dict-client>=1.10:../../wip/dict-client
 
 PKGNAME=libmaa-1.0.1nb1
 PKGPATH=devel/libmaa
