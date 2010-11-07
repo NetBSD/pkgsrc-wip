@@ -31,23 +31,24 @@ PKG_INFO_CMD="${PKG_INFO_CMD-@PKG_INFO_CMD@}"
 
 usage (){
     cat 1>&2 <<EOF
-pkg_bin_summary - wrapper for 'pkg_info -X' which outputs
- build information variables and and installation information
- variables as well some special variables,
- e.g. ASSIGNMENTS (settings to build multivariant packages) and
- REQUIREDBY. By default it is equivalent to pkg_info -Xa.
+pkg_bin_summary - wrapper for 'pkg_info -X' that outputs
+  build information and installation information
+  variables as well some special variables for installed
+  or binary packages,
+  e.g. ASSIGNMENTS (settings to build multivariant packages) and
+  REQUIREDBY. By default it is equivalent to pkg_info -Xa.
 USAGE: pkg_bin_summary -h
-       pkg_bin_summary [OPTIONS] [[--] [PKG_INFO_ARGS]]
+       pkg_bin_summary [OPTIONS] [-- [PKG_INFO_ARGS]] [packages...]
 OPTIONS:
   -h                display this help
-  -a <fields>       add to the output specified fields
-                    separated by space or comma
-  -f <fields>       output only specified fields
-                    separated by space or comma
-  -r <fields>       remove from output specified fields
-                    output only specified fields
+  -a <fields>       add to the output the specified fields,
+                    fields are separated by space or comma
+  -f <fields>       output only the specified fields,
+                    fields are separated by space or comma
+  -r <fields>       remove from output the specified fields,
+                    fields are output only specified fields
 PKG_INFO_ARGS:
-  options of pkg_info(1), defaults to -a.
+  Options passed to pkg_info(1) that default to -a.
   In addition to these options -X is always applied to pkg_info
   as well as -B if needed. "--" is required
   if PKG_INFO_ARGS is not empty.

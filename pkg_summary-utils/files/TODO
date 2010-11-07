@@ -1,10 +1,5 @@
 TODO list and thoughts
 
-WARN: PLIST:14: Manual page missing for bin/pkg_subgraph_deps.
-WARN: PLIST:4: Manual page missing for bin/pkg_bin_summary.
-
-#6
-
 existing tools:
 
     cvs_checksum:
