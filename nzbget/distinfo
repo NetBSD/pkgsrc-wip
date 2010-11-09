@@ -1,22 +1,6 @@
-$NetBSD: distinfo,v 1.5 2006/07/28 16:36:48 martijnb Exp $
+$NetBSD: distinfo,v 1.6 2010/11/09 20:53:20 mjoellnir Exp $
 
-SHA1 (nzbget-0.2.3.tar.gz) = 114f0e8663ec88b63b9fae6a16d102e085eb32be
-RMD160 (nzbget-0.2.3.tar.gz) = 3d519bc0f8aff5e03b52edb16509954e020285b6
-Size (nzbget-0.2.3.tar.gz) = 202660 bytes
-SHA1 (patch-aa) = 408a3ecf9eb9af0ec30b09a85414bd349c0df580
-SHA1 (patch-ab) = 1e658994fb46ddc9537e3b0acb120e934be3e269
-SHA1 (patch-ac) = 0cd6f2d9da302f0281735bf115dadae20c052cf9
-SHA1 (patch-ad) = 411225899819b02c45c7cf154c41061b9f001613
-SHA1 (patch-ae) = 8e14e05daf587dd4b55cd6b3317c3a82edac1f85
-SHA1 (patch-af) = d038b05c0f35661b76cc00fe77fe34a49cbb6e4b
-SHA1 (patch-ag) = b30f04b175f14f20a398fdd2d3bab3f673490081
-SHA1 (patch-ah) = 7e6f8dd8352b325eaeb2cdb1585b7d01d9fe8995
-SHA1 (patch-ai) = 57ac0fd9339070898a182a7a365a2ba7faafe135
-SHA1 (patch-aj) = 33bf5841a722f473c1f50e5cb8e1d8e62c3b8979
-SHA1 (patch-ak) = e5a837fc7ceb68dad2e51e351aea9c3c9c9e7027
-SHA1 (patch-al) = f3814cd5a1c1ba1a2dfded389ca9fd78151472bf
-SHA1 (patch-am) = 3231726dc69bfad6443d677cc0a07cbf58086fc7
-SHA1 (patch-an) = fe7d2f673b5cef0d27a3053bfe92c6f3ff88959a
-SHA1 (patch-ao) = 8cabf0320c08e0319b5af85ad94af0adfafe86e1
-SHA1 (patch-ap) = b23539c392a893c75189509bbbc1decb78945f1d
-SHA1 (patch-aq) = 2b5fab64914c72c53717cdc64ed1569abb6927fa
+SHA1 (nzbget-0.7.0-testing-r380.tar.gz) = 1e594f30f6395a4247837b706609721ff7e60490
+RMD160 (nzbget-0.7.0-testing-r380.tar.gz) = 899d609e011afccf01100480ab4b22f85da066fc
+Size (nzbget-0.7.0-testing-r380.tar.gz) = 313221 bytes
+SHA1 (patch-aa) = 339ef539f684da8f9927f8e8db42127151e9a414
