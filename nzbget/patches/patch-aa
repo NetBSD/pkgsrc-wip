@@ -1,5 +1,9 @@
---- TLS.cpp~	2010-01-30 21:38:12.000000000 +0100
-+++ TLS.cpp	2010-03-20 08:42:29.000000000 +0100
+$NetBSD: patch-aa,v 1.4 2010/11/09 21:09:19 mjoellnir Exp $
+
+Compilation broke off because explicit casting is required.
+
+--- TLS.cpp.orig	2010-01-30 21:38:12.000000000 +0100
++++ TLS.cpp
 @@ -1107,7 +1107,7 @@
      
      SSL_METHOD *ssl_method = NULL;

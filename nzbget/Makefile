@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2010/11/09 20:53:20 mjoellnir Exp $
+# $NetBSD: Makefile,v 1.14 2010/11/09 21:09:19 mjoellnir Exp $
 #
 
 DISTNAME=		nzbget-0.7.0-testing
-#PKGREVISION=		1
+PKGNAME=		${DISTNAME:S/-testing//}
+PKGREVISION=		1
 CATEGORIES=		news
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=nzbget/}
 EXTRACT_SUFX=		-r380.tar.gz
@@ -11,8 +12,6 @@ MAINTAINER=		martijn.van.buul@gmail.com
 HOMEPAGE=		http://sourceforge.net/projects/nzbget/
 COMMENT=		Binary newsreader with NZB support
 
-MAKE_JOBS_SAFE=		no
-
 USE_TOOLS+=		gmake
 USE_TOOLS+=		autoconf
 USE_TOOLS+=		pkg-config
@@ -20,7 +19,9 @@ USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 
-EGDIR=		${PREFIX}/share/examples/nzbget
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+EGDIR=			${PREFIX}/share/examples/nzbget
 MESSAGE_SUBST+=		EGDIR=${EGDIR}
 
 pre-configure:

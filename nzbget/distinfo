@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2010/11/09 20:53:20 mjoellnir Exp $
+$NetBSD: distinfo,v 1.7 2010/11/09 21:09:19 mjoellnir Exp $
 
 SHA1 (nzbget-0.7.0-testing-r380.tar.gz) = 1e594f30f6395a4247837b706609721ff7e60490
 RMD160 (nzbget-0.7.0-testing-r380.tar.gz) = 899d609e011afccf01100480ab4b22f85da066fc
 Size (nzbget-0.7.0-testing-r380.tar.gz) = 313221 bytes
-SHA1 (patch-aa) = 339ef539f684da8f9927f8e8db42127151e9a414
+SHA1 (patch-aa) = 455af19c02b96fe93a6646e41554155c333414c5
