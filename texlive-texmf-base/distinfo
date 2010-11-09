@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/11/24 08:58:36 minskim Exp $
+$NetBSD: distinfo,v 1.2 2010/11/09 23:08:55 makoto Exp $
 
-SHA1 (texlive-20080822-texmf.tar.lzma) = c4b86ea02a4666f69ee71526fce3609aac34b01b
-RMD160 (texlive-20080822-texmf.tar.lzma) = b7f284580559f245cd116e5c7dd2aeab3a17d49d
-Size (texlive-20080822-texmf.tar.lzma) = 900950847 bytes
+SHA1 (texlive-20091107-texmf.tar.xz) = a85d33e2915fd2bfad86e5a1ce498058a380d959
+RMD160 (texlive-20091107-texmf.tar.xz) = c932eaf4b3412275e769cfefd3271b864a546087
+Size (texlive-20091107-texmf.tar.xz) = 939751324 bytes
