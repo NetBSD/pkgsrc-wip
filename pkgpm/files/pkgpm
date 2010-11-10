@@ -25,8 +25,8 @@ set -e
 
 export LC_ALL=C
 
-pkg_info_orig=$PKG_PATH
-unset PKG_PATH || true
+#pkg_info_orig=$PKG_PATH
+#unset PKG_PATH || true
 
 ######################################################################
 # temp directory
@@ -39,7 +39,7 @@ mkdir -m 700 "$tmp_dir"
 plfn=$HOME/.pkgpm/packages
 binsummary=$HOME/.pkgpm/pkg_summary.txt
 srcsummary=$HOME/.pkgpm/pkg_src_summary.txt
-pkgext=.tbz
+pkgext=.tgz
 packages=/srv/pkgsrc_bin/NetBSD/All
 
 usage (){
@@ -53,7 +53,7 @@ OPTIONS:
    -r -<category/package>      unregister <category/package>
    -rc                         register all packages currently installed
                                and unregister all others (c - copy)
-   -ra                         register all currebntly installed packages
+   -ra                         register all currently installed packages
                                (a - add)
    -rl                         list all registered packages (l - list)
    -re                         edit registered database using $EDITOR
@@ -65,11 +65,17 @@ OPTIONS:
                                installed by user and run editor to manually
                                register required packages. all others will
                                be marked as "installed as a dependency".
+          --------------------------------------------------
+   -ib                         install packages that are registered by not installed
 EOF
 }
 
+cleanup_i2o (){
+    awk '{sub(/#.*$/, "")} NF == 0 {next} {$1=$1; print}' "$@"
+}
+
 register_cleanup (){
-    awk '{sub(/#.*$/, "")} NF == 0 {next} {$1=$1; print}' $plfn |
+    cleanup_i2o $plfn |
     sort -u > $plfn.tmp
     mv $plfn.tmp $plfn
 }
@@ -80,11 +86,20 @@ register_pkg (){
 
     if printf "%s\n" "$1" | grep '^[+]' > /dev/null; then
 	pkg=`printf "%s\n" "$1" | cut -b 2-`
-	{ echo $pkg; cat $plfn; } > $$plfn
+
+	{ echo $pkg; cat $plfn; } > $plfn.tmp
+	mv $plfn.tmp $plfn
+
+	echo $plfn
 	register_cleanup
+	pkg_admin set automatic=NO "$pkg" 2>/dev/null || true
     elif printf "%s\n" "$1" | grep '^[-]' > /dev/null; then
 	pkg=`printf "%s\n" "$1" | cut -b 2-`
-	grep -v '^'"$pkg"'$' $plfn > $plfn.tmp && mv $plfn.tmp $plfn
+
+	grep -v '^'"$pkg"'$' $plfn > $plfn.tmp
+	mv $plfn.tmp $plfn
+
+	pkg_admin set automatic=YES "$pkg" 2>/dev/null || true
     else
 	echo 'Bad argument to -r option'
 	exit 1
@@ -97,6 +112,10 @@ summary2pkgpath (){
 
 summary2pkgname (){
     sed -n 's/^PKGNAME=//p' "$@"
+}
+
+summary2pkgbase (){
+    sed -n 's/^PKGNAME=//p' "$@" | sed 's/-[^-]*$//'
 }
 
 summary2pkgname_pkgpath (){
@@ -184,21 +203,41 @@ compare_cri (){
 edit_ri (){
     {
 	echo '# Uncomment packages to register them'
+	echo '# -----------------------------------'
 	compare_cri | awk '$1 == "+" {print "# " $2}'
-    } > "$tmp_dir"/eir
-    $EDITOR "$tmp_dir"/eir
+    } > "$tmp_dir"/eri
+    $EDITOR "$tmp_dir"/eri
 
     # registered uncommented
-    cat "$tmp_dir"/eir >> $plfn
+    cat "$tmp_dir"/eri >> $plfn
     register_cleanup
 
     # mark others as "installed as a dependency"
-    awk '$1 == "#" {print $2}' "$tmp_dir"/eir |
+    cleanup_i2o "$tmp_dir"/eri |
     while read pkgpath; do
 	pkgname=`pkg_grep_summary -s PKGPATH "$pkgpath" < "$tmp_dir"/installed | summary2pkgname`
+	echo $pkgpath====$pkgname
 	if test -n "$pkgname"; then
-	    pkg_admin set automatic=YES "$pkgname"
+	    pkg_admin set automatic=NO "$pkgname"
 	fi
+    done
+
+    ########################################################
+    {
+	echo '# Uncomment packages to unregister them'
+	echo '# -----------------------------------'
+	compare_cri | awk '$1 == "-" {print "# " $2}'
+    } > "$tmp_dir"/eri
+    $EDITOR "$tmp_dir"/eri
+
+    # registered uncommented
+    cat "$tmp_dir"/eri >> $plfn
+    register_cleanup
+
+    # mark others as "installed as a dependency"
+    cleanup_i2o "$tmp_dir"/eri |
+    while read pkgpath; do
+	register_pkg -pkgpath
     done
 }
 
@@ -238,16 +277,20 @@ compare_cbS (){
 }
 
 install_ib (){
-    compare_cir | awk '$1 == "+" {print $2}' \
+    pkg_update_summary $packages/pkg_summary.txt $packages
+    pkg_chk
+    #
+    compare_cri | awk '$1 == "-" {print $2}' \
 	> "$tmp_dir"/pkgpath_to_install
 
     grep_summary_PKGPATH "$tmp_dir"/pkgpath_to_install "$binsummary" |
-    summary2pkgname > "$tmp_dir"/pkgname_to_install
+    summary2pkgbase > "$tmp_dir"/pkgname_to_install
 
     while read pkgname; do
 	echo '------------------------------------------'
 	printf "Adding $pkgname package... "
-	if pkg_add "$packages/$pkgname$pkgext"; then
+	echo "pkg_add $pkgname"
+	if pkg_add -uu $pkgname; then
 	    echo '[done]'
 	else
 	    echo '[failed]'

@@ -1,3 +1,9 @@
+TODO:
+   -r +package -- mark package as "installed by user"
+                  if it is installed
+   -r -package -- mark package as "installed as a dependency"
+                  if it is installed
+
 Goals:
 
   0) No gui :-)
@@ -26,10 +32,11 @@ Goals:
 
   *) Force rebuilding packages with "bad" REQUIRES.
 
-pkgpm options:
+Notions
+  1) installed packages
+  2) registered packages
 
-1) installed packages
-2) registered packages
+pkgpm options:
 
   -r +epkgpath      - add package to 2)
   -r -epkgpath      - remove package from 2)
@@ -51,6 +58,5 @@ pkgpm options:
   -ib               - install missed packages through binary pkg_summary.gz
   -is               - install missed packages through pkgsrc tree
 
-  -uba              - upgrade package through binary pkg_summary.gz
-  -usa              - upgrade package through pkgsrc tree
-
+  -ub               - upgrade package through binary pkg_summary.gz
+  -us               - upgrade package through pkgsrc tree
