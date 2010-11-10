@@ -1,0 +1,122 @@
+NIH is a planned package management tool for pkgsrc.
+NIH means Not Invented Here, yes, I'm talking about NIH syndrome.
+
+Why not:
+
+
+  pkg_add/pkg_delete:
+    - No comments.
+
+  pkgchk:
+    - It is extremely slow and lacks useful features.
+
+  pkgin:
+    - It is written in C, the worst programming language I've even
+      know for this sort of tasks. All other reasons are secondary.
+
+Why HIN:
+
+  - I've got pkg_summary-utils, a collection of very powerful scripts
+    for managing pkg_summary files.
+
+  - I've got distbb, very powerful and flexible bulk build tool.
+
+  - I've got pkg_status, small tool for checking the status of installed
+    packages.
+
+  - I've got pkg_online and pkg_grep_summary, very powerful tools for
+    searching packages.
+
+Planned features:
+
+  - Configurations files are under ~/.nih or $prefix/etc/nih
+
+  - nih help
+     Display help message
+
+  - nih refresh
+     Download pkg_summary.bz2 and save it to ~/.nih/,
+     then unpack it to pkg_summary.txt.
+
+    ~/.nih/config:
+        FETCH_URL - URL or filename for pkg_summary.bz2
+        FETCH_CMD - command for fetching pkg_summary.bz2
+
+  - nih install [options] <packages...>
+    nih upgrade [options] [packages...]
+     Install or upgrade packages
+      -n     output shell program to execute without running it
+      -r     mark installed packages "for testing purposes only",
+             such packages can be listed and removed in the future.
+      -s     build packages with a help of distbb and then install them.
+      -y     answer "Yes" to all questions
+     By default all packages are upgraded.
+    ~/.nih/config:
+        LAZY_UPGRADE - (for -s) upgrade dependencies only if new versions
+              are really needed.
+
+  - nih uninstall|delete|remove <packages...>
+     Remove specified packages, dependent packages and automatically installed
+     leaf packages.
+      -n     output shell program to execute without running it
+      -y     answer "Yes" to all questions
+
+  - nih verify [options...]
+     Verify installed packages integrity.
+       -m   check checksums of installed files (pkg_admin check)
+       -U   check for REQUIRES/PROVIDES coherence
+       -L   check for existence of library files listed in REQUIRES
+       -d   check for presense of dependencies
+       -D   check for presense of dependencies and their versions
+
+  - nih status [options] [packages]
+     Compare installed packages with pkg_summary.txt (default), pkgsrc
+     tree or pkg_online server.
+       -b     compare installed packages against pkg_summary.txt
+       -s     compare installed packages against pkgsrc tree
+       -o     compare installed packages against pkg_online server content
+       -r     raw output (pkg_summary format)
+       -u     analyse packages marked as installed by user (the default, see -a)
+       -a     analyse all packages (see -u)
+       -Q     No noisy reminder about output format
+
+  - nih audit [options]
+     download-vulnerability-list + pkg_admin audit
+
+  - nih search -f
+     Output fields to search in.
+
+    nih search -s
+     Output search strategies.
+
+    nih search [-1..9] [-r] [-q] query1 [query2 ...]
+
+     Search for packages where 'queryX' is either plain text query or
+     in 'f:s:q' format, 'f' here means field name, 's' - search
+     strategy and 'q' means plain text query
+
+       -1       one-line output
+       -2..9    output found packages in pkg_summary format
+       -r       raw output (pkg_summary format)
+       -q       quiet mode, do not print "No matches found" to stderr
+       ~/.nih/config
+           FIELDS_<N> - list of fields to output
+
+  - nih leaves [options]
+       Output or remove automatically installed leaf packages.
+       -l    output leaf packages installed automatically (default)
+       -t    output only PKGNAME
+       -R    remove automatically installed leaf packages
+       -E    the same as -R but with 'pkg_delete -A'
+       -n    pass -n to pkg_delete
+  - nih licenses [options]
+       Output licenses of installed packages with their packages.
+       Licenses marked as accepted are skipped.
+       -i interactively remove packages with unacceptable licenses or
+          accept licences
+  - nih list [options]
+       Output installed packages.
+       -1      output only PKGNAME and COMMENT
+       -2..9   output packages in pkg_summary format
+       ~/.nih/config
+           FIELDS_<N> - list of fields to output
