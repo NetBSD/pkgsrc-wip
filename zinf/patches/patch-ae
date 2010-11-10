@@ -1,22 +1,13 @@
-$NetBSD: patch-ae,v 1.1.1.1 2003/07/06 19:52:57 rxg Exp $
+$NetBSD: patch-ae,v 1.2 2010/11/10 05:33:54 rxg Exp $
 
---- base/src/thread.cpp.orig	Mon Jul  1 20:22:22 2002
-+++ base/src/thread.cpp
-@@ -25,7 +25,7 @@
- #include "thread.h"
+--- base/src/timer.cpp.orig	2003-09-16 17:34:54.000000000 +0000
++++ base/src/timer.cpp
+@@ -33,7 +33,7 @@ using namespace std;
+ #include "timer.h"
  
- #if defined(__LINUX__) || defined(solaris) || defined(__FreeBSD__) || \
+ #if defined(__linux__) || defined(solaris) || defined(__FreeBSD__) || \
 -    defined(__QNX__) || defined(irix)
-+    defined(__QNX__) || defined(irix) || defined(__NetBSD__)
-     #include "pthreadthread.h"
- #elif WIN32
-     #include "win32thread.h"
-@@ -39,7 +39,7 @@
- {
-     Thread* thread = NULL;
- #if defined(__LINUX__) || defined(solaris) || defined(__FreeBSD__) || \
--    defined(__QNX__) || defined(irix)
-+    defined(__QNX__) || defined(irix) || defined(__NetBSD__)
-     thread = new pthreadThread();
- #elif WIN32
-     thread = new win32Thread();
++    defined(__NetBSD__) || defined(__QNX__) || defined(irix)
+ #include <unistd.h>
+ #define GoToSleep(x) usleep(x*1000)
+ #elif defined(WIN32)

@@ -1,97 +1,17 @@
-$NetBSD: patch-ab,v 1.1.1.1 2003/07/06 19:52:55 rxg Exp $
+$NetBSD: patch-ab,v 1.2 2010/11/10 05:33:54 rxg Exp $
 
---- configure.orig	Mon Jun 24 10:55:37 2002
-+++ configure
-@@ -3084,9 +3084,9 @@
-     LDFLAGS="$LDFLAGS -Wl,-export-dynamic -L/usr/local/lib"
-     ;;
-   netbsd*)
--    host_os="freebsd"
--    CFLAGS="$CFLAGS -I/usr/pkg/include -D_THREAD_SAFE -pthread"
--    LDFLAGS="$LDFLAGS -L/usr/pkg/lib -Wl,-export-dynamic"
-+    host_os="netbsd"
-+    CFLAGS="$CFLAGS"
-+    LDFLAGS="$LDFLAGS -Wl,-export-dynamic"
-     ;;
-   irix*)
-     host_os="irix"
-@@ -3154,7 +3154,7 @@
- 
- if test "$host_os" = "beos"; then
-   echo "configure: warning: skipping libdl check, using BeOS add-on mechanism" 1>&2
--elif test "$host_os" = "freebsd"; then
-+elif test "$host_os" = "freebsd" -o "$host_os" = "netbsd"; then
-   echo $ac_n "checking for dlopen in -lc""... $ac_c" 1>&6
- echo "configure:3160: checking for dlopen in -lc" >&5
- ac_lib_var=`echo c'_'dlopen | sed 'y%./+-%__p_%'`
-@@ -4155,47 +4155,8 @@
- #AM_CONDITIONAL(AM_ENABLE_CMDLINE, test "$cmdline" = "true")
- 
- 
--echo $ac_n "checking for initscr in -lncurses""... $ac_c" 1>&6
--echo "configure:4160: checking for initscr in -lncurses" >&5
--ac_lib_var=`echo ncurses'_'initscr | sed 'y%./+-%__p_%'`
--if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
--  echo $ac_n "(cached) $ac_c" 1>&6
--else
--  ac_save_LIBS="$LIBS"
--LIBS="-lncurses  $LIBS"
--cat > conftest.$ac_ext <<EOF
--#line 4168 "configure"
--#include "confdefs.h"
--/* Override any gcc2 internal prototype to avoid an error.  */
--/* We use char because int might match the return type of a gcc2
--    builtin and then its argument prototype would still apply.  */
--char initscr();
--
--int main() {
--initscr()
--; return 0; }
--EOF
--if { (eval echo configure:4179: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
--  rm -rf conftest*
--  eval "ac_cv_lib_$ac_lib_var=yes"
--else
--  echo "configure: failed program was:" >&5
--  cat conftest.$ac_ext >&5
--  rm -rf conftest*
--  eval "ac_cv_lib_$ac_lib_var=no"
--fi
--rm -f conftest*
--LIBS="$ac_save_LIBS"
--
--fi
--if eval "test \"`echo '$ac_cv_lib_'$ac_lib_var`\" = yes"; then
--  echo "$ac_t""yes" 1>&6
--  curses="ncurses"
--else
--  echo "$ac_t""no" 1>&6
--
- 	echo $ac_n "checking for initscr in -lcurses""... $ac_c" 1>&6
--echo "configure:4199: checking for initscr in -lcurses" >&5
-+echo "configure:4160: checking for initscr in -lcurses" >&5
- ac_lib_var=`echo curses'_'initscr | sed 'y%./+-%__p_%'`
- if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
-   echo $ac_n "(cached) $ac_c" 1>&6
-@@ -4238,9 +4199,6 @@
- fi
- 
- 
--fi
--
--
- if test "$curses" != ""; then
- 	OSDEPPLUGINS="$OSDEPPLUGINS plugins/ncurses.ui";
- 	CURSES="$curses";
-@@ -4934,9 +4892,9 @@
-   echo $ac_n "(cached) $ac_c" 1>&6
- else
-   ac_save_LIBS="$LIBS"
--LIBS="-lmusicbrainz -ldl -lm -lstdc++ $LIBS"
-+LIBS="-lmusicbrainz -lm -lstdc++ $LIBS"
- cat > conftest.$ac_ext <<EOF
--#line 4940 "configure"
-+#line 4898 "configure"
- #include "confdefs.h"
- /* Override any gcc2 internal prototype to avoid an error.  */
- #ifdef __cplusplus
+--- io/cd/unix/src/cdaudio.cpp.orig	2003-09-16 17:34:59.000000000 +0000
++++ io/cd/unix/src/cdaudio.cpp
+@@ -114,8 +114,12 @@ cd_init_device(char *device_name)
+ #endif
+ #ifdef HAVE_GETMNTINFO
+    int mounts;
++#if defined(__NetBSD__)
++   struct statvfs *mnt;
++#else
+    struct statfs *mnt;
+ #endif
++#endif
+    char devname[255];
+    struct stat st;
+    int len = 0;

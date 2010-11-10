@@ -1,14 +1,12 @@
-$NetBSD: distinfo,v 1.2 2005/09/28 06:41:44 rillig Exp $
+$NetBSD: distinfo,v 1.3 2010/11/10 05:33:54 rxg Exp $
 
-SHA1 (zinf-2.2.0.tar.gz) = 614da273c35df3b0f2dcf1aeb1eeeeded64d894d
-RMD160 (zinf-2.2.0.tar.gz) = 44894f70184b4ff0379da80e1009d1d30769ee7b
-Size (zinf-2.2.0.tar.gz) = 2163858 bytes
-SHA1 (patch-aa) = 1e2d128acb7cdc0d35afb26b9c783d12dc370276
-SHA1 (patch-ab) = bccf2dbbc80bfb018332d02dd8ad5773ea7b6342
-SHA1 (patch-ac) = 907dc9741076347f6b1044f61c32c334da2385a3
-SHA1 (patch-ad) = 71551875dd16408ce7e3dec7ea96ce3cb1c84b9e
-SHA1 (patch-ae) = 009faa1d5c157639ba63209156f3394a38c927a2
-SHA1 (patch-af) = 561808becab8c7a301c887faf5e788a76a47bbcd
-SHA1 (patch-ag) = 6bf5cb1c9c34acb948369a3785128c79d9994910
-SHA1 (patch-ah) = 5abe04ab3a1df5d5973843cf75f13baf8e7200b5
-SHA1 (patch-ai) = 4c85e5a1bf2f053e8f7a04940a91db36e7952493
+SHA1 (zinf-2.2.5.tar.gz) = 5ef056e476fa3bfedcb2d0f7de7859b97a22ca6b
+RMD160 (zinf-2.2.5.tar.gz) = 589a31fdac0d9a641bf26fbd94f7aaca05e0efdc
+Size (zinf-2.2.5.tar.gz) = 2044561 bytes
+SHA1 (patch-aa) = 6eedeb783fdd74f3133074f66d87c1e7d2eae1ea
+SHA1 (patch-ab) = beb2d2f9a58fb0355caf95812e94127c74221596
+SHA1 (patch-ac) = cd9f75123d6279e36be109f37d85a4f31e9a1a7f
+SHA1 (patch-ad) = e8e884395d5916c7ed7d2105ecd386255750f951
+SHA1 (patch-ae) = 7adeb2eaab7751e4d3971bca2014b1a2002ade55
+SHA1 (patch-af) = dc554d7d6e5bdef535439c85c22f7a6764ed76ca
+SHA1 (patch-ag) = 83c70c87a962c8d39559979265828117e719eecf

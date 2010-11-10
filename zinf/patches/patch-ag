@@ -1,13 +1,13 @@
-$NetBSD: patch-ag,v 1.1.1.1 2003/07/06 19:52:58 rxg Exp $
+$NetBSD: patch-ag,v 1.2 2010/11/10 05:33:54 rxg Exp $
 
---- base/src/timer.cpp.orig	Mon Jul  1 20:25:24 2002
-+++ base/src/timer.cpp
-@@ -32,7 +32,7 @@
- #include "timer.h"
+--- ui/corba/corbaUI.cpp.orig	2004-01-08 19:33:44.000000000 +0000
++++ ui/corba/corbaUI.cpp
+@@ -44,7 +44,7 @@ using namespace std;
+ #include "eventdata.h"
  
- #if defined(__linux__) || defined(solaris) || defined(__FreeBSD__) || \
--    defined(__QNX__) || defined(irix)
-+    defined(__QNX__) || defined(irix) || defined(__NetBSD__)
- #include <unistd.h>
- #define GoToSleep(x) usleep(x*1000)
- #elif defined(WIN32)
+ #include "MusicPlayer.h"
+-#include <orb/orbit.h>
++#include <orbit/orbit.h>
+ 
+ 
+ /** The server name */
