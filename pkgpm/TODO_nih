@@ -1,8 +1,7 @@
 NIH is a planned package management tool for pkgsrc.
-NIH means Not Invented Here, yes, I'm talking about NIH syndrome.
+NIH means Not Invented Here, yes, I'm talking about NIH syndrome :-)
 
 Why not:
-
 
   pkg_add/pkg_delete:
     - No comments.
@@ -12,48 +11,79 @@ Why not:
 
   pkgin:
     - It is written in C, the worst programming language I've even
-      know for this sort of tasks. All other reasons are secondary.
+      know for this sort of task. All other reasons are secondary.
+    - 'pkgin help' takes 53 seconds on Dual Core Atom 1.6 Ghz machine.
 
 Why HIN:
 
-  - I've got pkg_summary-utils, a collection of very powerful scripts
-    for managing pkg_summary files.
+  - I've got pkg_summary-utils, a big collection of powerful scripts
+    for managing pkg_summary files. I've been developing it for almost
+    three years and I think now it is ready to be a foundation for
+    NIH.
 
-  - I've got distbb, very powerful and flexible bulk build tool.
+  - I've got distbb, very powerful and flexible bulk build tool.  For
+    several years I've been using it for running bulk builds under
+    Linux and NetBSD, and consider it rather stable.
 
-  - I've got pkg_status, small tool for checking the status of installed
-    packages.
+  - I've got pkg_status, small tool for comparing versions of
+    installed packages against pkg_summary.txt or pkgsrc source tree.
+    It also provides lots of other things usually implemented by
+    full-featured package management tools. It is very small and
+    stable.
 
-  - I've got pkg_online and pkg_grep_summary, very powerful tools for
-    searching packages.
+  - I've got pkg_online-client and pkg_grep_summary, very powerful and
+    fast tools for searching for packages. It is also small and stable.
+
+Plans:
+  - To provide features implemented in pkgchk, pkgin, pkg_comp,
+    pkg_leaves, pkgfind, pkg_status, pkg_online-client and
+    pkg_rolling-replace.
+  - Support for both binary and sources-based upgrade
+  - Less than 4000 lines of code
+  - No sqlite or other databases.
+  - Support for PKG_OPTIONS and multivariant packages (Python, Apache, PHP)
+  - No dependencies other than
+      a) pkg_summary-utils, runawk and pipestatus for basic functionality
+      b) paexec and libmaa for running things in parallel
+         using all available CPUs
+      c) distbb (plus paexec and libmaa) for building packages from sources
+      d) dict-client (plus libmaa) and netcat for searching
+         via pkg_online server
+  - Shell, AWK, RunAWK, UNIX tools and nothing else.
+  - No libnih.a
 
 Planned features:
 
-  - Configurations files are under ~/.nih or $prefix/etc/nih
+  - Configuration files are under ~/.nih/ or $prefix/etc/nih/ directories.
 
   - nih help
      Display help message
+
+  - nih <command> -h
+     Display help message for <command>
 
   - nih refresh
      Download pkg_summary.bz2 and save it to ~/.nih/,
      then unpack it to pkg_summary.txt.
 
     ~/.nih/config:
-        FETCH_URL - URL or filename for pkg_summary.bz2
+        PKG_SUMMARY_URL - URL or file name for pkg_summary.bz2/pkg_summary.txt
         FETCH_CMD - command for fetching pkg_summary.bz2
 
-  - nih install [options] <packages...>
+  - nih install [options] <package1> [package2...]
     nih upgrade [options] [packages...]
-     Install or upgrade packages
+     Install or upgrade the specified packages
       -n     output shell program to execute without running it
       -r     mark installed packages "for testing purposes only",
              such packages can be listed and removed in the future.
       -s     build packages with a help of distbb and then install them.
+      -d     only download (binaries or sources), neither install packages
+             nor build packages from sources
       -y     answer "Yes" to all questions
-     By default all packages are upgraded.
+     By default all packages are upgraded by 'nih upgrade'.
     ~/.nih/config:
-        LAZY_UPGRADE - (for -s) upgrade dependencies only if new versions
-              are really needed.
+        LAZY_UPGRADE - upgrade the [automatically installed] dependencies
+              only if new versions are really necessary.
 
   - nih uninstall|delete|remove <packages...>
      Remove specified packages, dependent packages and automatically installed
@@ -66,8 +96,8 @@ Planned features:
        -m   check checksums of installed files (pkg_admin check)
        -U   check for REQUIRES/PROVIDES coherence
        -L   check for existence of library files listed in REQUIRES
-       -d   check for presense of dependencies
-       -D   check for presense of dependencies and their versions
+       -d   check for presence of dependencies
+       -D   check for presence of dependencies and their versions
 
   - nih status [options] [packages]
      Compare installed packages with pkg_summary.txt (default), pkgsrc
