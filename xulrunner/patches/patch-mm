@@ -1,9 +1,9 @@
-$NetBSD: patch-mm,v 1.8 2010/08/04 16:59:13 tnn2 Exp $
+$NetBSD: patch-mm,v 1.9 2010/11/11 14:11:54 tnn2 Exp $
 
---- toolkit/library/Makefile.in.orig	2010-07-21 00:53:04.000000000 +0000
+--- toolkit/library/Makefile.in.orig	2010-11-04 19:20:39.000000000 +0000
 +++ toolkit/library/Makefile.in
-@@ -235,6 +235,13 @@ ifeq ($(OS_ARCH),SunOS)
- EXTRA_DSO_LDOPTS += -lelf -ldemangle
+@@ -244,6 +244,13 @@ EXTRA_DSO_LDOPTS += -lelf -ldemangle
+ endif
  endif
  
 +ifeq ($(OS_ARCH),NetBSD)

@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.11 2010/08/03 20:58:00 tnn2 Exp $
+$NetBSD: patch-aa,v 1.12 2010/11/11 14:11:54 tnn2 Exp $
 
---- configure.in.orig	2010-07-20 13:51:28.000000000 +0000
+--- configure.in.orig	2010-11-04 19:20:39.000000000 +0000
 +++ configure.in
-@@ -802,7 +802,7 @@ EOF
+@@ -801,7 +801,7 @@ EOF
                  AC_LANG_RESTORE
              ])
  
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.11 2010/08/03 20:58:00 tnn2 Exp $
              AC_CACHE_CHECK(for |class __declspec(dllimport) exception| bug,
                             ac_cv_have_dllimport_exception_bug,
                  [
-@@ -2061,7 +2061,7 @@ case "$target" in
+@@ -2084,7 +2084,7 @@ case "$target" in
      MOZ_FIX_LINK_PATHS='-Wl,-executable_path,$(LIBXUL_DIST)/bin'
      ;;
  
@@ -20,7 +20,7 @@ $NetBSD: patch-aa,v 1.11 2010/08/03 20:58:00 tnn2 Exp $
      if test `test -x /usr/bin/objformat && /usr/bin/objformat || echo elf` != "elf"; then
  	DLL_SUFFIX=".so.1.0"
  	DSO_LDOPTS="-shared"
-@@ -2069,6 +2069,9 @@ case "$target" in
+@@ -2092,6 +2092,9 @@ case "$target" in
      if test ! "$GNU_CC"; then
  	DSO_LDOPTS="-Bshareable $DSO_LDOPTS"
      fi
@@ -30,7 +30,7 @@ $NetBSD: patch-aa,v 1.11 2010/08/03 20:58:00 tnn2 Exp $
      ;; 
  
  ia64*-hpux*)
-@@ -3340,6 +3343,9 @@ dnl ====================================
+@@ -3389,6 +3392,9 @@ dnl ====================================
  case $target in
  *-hpux11.*)
  	;;
@@ -40,8 +40,8 @@ $NetBSD: patch-aa,v 1.11 2010/08/03 20:58:00 tnn2 Exp $
  *)
  	AC_CHECK_LIB(c_r, gethostbyname_r)
  	;;
-@@ -4660,6 +4666,14 @@ else
-    fi
+@@ -4738,6 +4744,14 @@ if test -n "$YASM"; then
+   _YASM_BUILD=`        echo ${YASM_VERSION} | $AWK -F\. '{ print $4 }'`
  fi
  
 +if test -n "${LIBXUL_SDK_DIR}"; then
@@ -55,7 +55,7 @@ $NetBSD: patch-aa,v 1.11 2010/08/03 20:58:00 tnn2 Exp $
  if test -z "$SKIP_LIBRARY_CHECKS"; then
  dnl system JPEG support
  dnl ========================================================
-@@ -6425,7 +6439,7 @@ if test -n "$MOZ_INSTALLER" -a "$OS_ARCH
+@@ -6532,7 +6546,7 @@ if test -n "$MOZ_INSTALLER" -a "$OS_ARCH
      changequote(,)
      MAKENSISU_VER=`"$MAKENSISU" -version 2>/dev/null | sed -e '/-Unicode/!s/.*//g' -e 's/^v\([0-9]\+\.[0-9]\+\)\-Unicode$/\1/g'`
      changequote([,])
@@ -64,7 +64,7 @@ $NetBSD: patch-aa,v 1.11 2010/08/03 20:58:00 tnn2 Exp $
          MAKENSISU_MAJOR_VER=`echo $MAKENSISU_VER | $AWK -F\. '{ print $1 }'`
          MAKENSISU_MINOR_VER=`echo $MAKENSISU_VER | $AWK -F\. '{ print $2 }'`
      fi
-@@ -9063,7 +9077,8 @@ rm -f confdefs.h.save
+@@ -9299,7 +9313,8 @@ rm -f confdefs.h.save
  mv confdefs.h confdefs.h.save
  egrep -v "$_EGREP_PATTERN" confdefs.h.save > confdefs.h
  AC_OUTPUT_MAKE_DEFS()
@@ -74,7 +74,7 @@ $NetBSD: patch-aa,v 1.11 2010/08/03 20:58:00 tnn2 Exp $
  AC_SUBST(MOZ_DEFINES)
  rm -f confdefs.h
  mv confdefs.h.save confdefs.h
-@@ -9161,6 +9176,8 @@ if test -z "$MOZ_NATIVE_NSPR"; then
+@@ -9397,6 +9412,8 @@ if test -z "$MOZ_NATIVE_NSPR"; then
      AC_MSG_WARN([Recreating autoconf.mk with updated nspr-config output])
      if test "$OS_ARCH" != "WINNT" -a "$OS_ARCH" != "WINCE"; then
         NSPR_LIBS=`./nsprpub/config/nspr-config --prefix=$LIBXUL_DIST --exec-prefix=$MOZ_BUILD_ROOT/dist --libdir=$LIBXUL_DIST/lib --libs`
