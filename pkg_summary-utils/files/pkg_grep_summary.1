@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkg_grep_summary.1,v 1.22 2010/11/11 21:56:39 cheusov Exp $
+.\"	$NetBSD: pkg_grep_summary.1,v 1.23 2010/11/11 22:34:45 cheusov Exp $
 .\"
 .\" Copyright (c) 2008 by Aleksey Cheusov (vle@gmx.net)
 .\" Absolutely no warranty.
@@ -79,6 +79,9 @@ display help message
 ignore case. Before matching
 .I field
 is converted to lower case.
+.TP
+.B "-v"
+invert the sense of matching to select non-matching summaries
 .TP
 .BI "-f" " fields"
 a list of fields to output, by default the whole package summary is output

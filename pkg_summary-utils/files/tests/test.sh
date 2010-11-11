@@ -941,6 +941,92 @@ cmp 'pkg_grep_summary #49' \
 'exact prefix suffix substring word first last re strfile strlist awk empty kw
 '
 
+runtest pkg_grep_summary -fPKGNAME,PKGPATH,MAINTAINER,COMMENT \
+    -v -t re MAINTAINER 'cheusov|vle@gmx[.]net' \
+    < src_summary.txt |
+cmp 'pkg_grep_summary #50' \
+'COMMENT=Check and correct file permissions
+MAINTAINER=rillig@NetBSD.org
+PKGNAME=checkperms-1.10
+PKGPATH=sysutils/checkperms
+
+PKGNAME=dict-client-1.9.15nb2
+PKGPATH=textproc/dict-client
+COMMENT=Dictionary Service Protocol client
+MAINTAINER=pkgsrc-users@NetBSD.org
+
+PKGNAME=gmake-3.81
+PKGPATH=devel/gmake
+COMMENT=GNU version of '"'"'make'"'"' utility
+MAINTAINER=pkgsrc-users@NetBSD.org
+
+PKGNAME=libtool-base-1.5.24nb6
+PKGPATH=devel/libtool-base
+COMMENT=Generic shared library support script (the script itself)
+MAINTAINER=joerg@NetBSD.org
+
+PKGNAME=emacs-22.1nb6
+PKGPATH=editors/emacs
+COMMENT=GNU editing macros (editor)
+MAINTAINER=markd@NetBSD.org
+
+PKGNAME=libungif-4.1.4nb1
+PKGPATH=graphics/libungif
+COMMENT=Tools and library routines for working with GIF images
+MAINTAINER=pkgsrc-users@NetBSD.org
+
+PKGNAME=tiff-3.8.2nb4
+PKGPATH=graphics/tiff
+COMMENT=Library and tools for reading and writing TIFF data files
+MAINTAINER=pkgsrc-users@NetBSD.org
+
+PKGNAME=x11-links-0.38
+PKGPATH=pkgtools/x11-links
+COMMENT=Shadow tree of links to native X11 headers and libraries
+MAINTAINER=pkgsrc-users@NetBSD.org
+
+PKGNAME=perl-5.8.8nb8
+PKGPATH=lang/perl5
+COMMENT=Practical Extraction and Report Language
+MAINTAINER=pkgsrc-users@NetBSD.org
+
+PKGNAME=libltdl-1.5.24
+PKGPATH=devel/libltdl
+COMMENT=Generic shared library support (libltdl abstraction library)
+MAINTAINER=joerg@NetBSD.org
+
+PKGNAME=png-1.2.32beta01
+PKGPATH=graphics/png
+COMMENT=Library for manipulating PNG images
+MAINTAINER=wiz@NetBSD.org
+
+PKGNAME=netcat-1.10nb2
+PKGPATH=net/netcat
+COMMENT=Read and write data across network connections
+MAINTAINER=pkgsrc-users@NetBSD.org
+
+PKGNAME=pkg-config-0.23
+PKGPATH=devel/pkg-config
+COMMENT=System for managing library compile/link flags
+MAINTAINER=pkgsrc-users@NetBSD.org
+
+COMMENT=IJG'"'"'s jpeg compression utilities
+PKGNAME=jpeg-6bnb4
+PKGPATH=graphics/jpeg
+MAINTAINER=pkgsrc-users@NetBSD.org
+
+PKGNAME=ap22-vhost-ldap-1.2.0nb1
+COMMENT=Apache 2.2 module LDAP Virtual Hosts support
+MAINTAINER=imil@gcu.info
+PKGPATH=www/ap22-vhost-ldap
+
+PKGNAME=ap2-vhost-ldap-1.2.0nb1
+PKGPATH=www/ap2-vhost-ldap:PKG_APACHE=apache2
+COMMENT=Apache 2 module LDAP Virtual Hosts support
+MAINTAINER=imil@gcu.info
+
+'
+
 # pkg_list_all_pkgs
 env  pkg_list_all_pkgs |
 awk '

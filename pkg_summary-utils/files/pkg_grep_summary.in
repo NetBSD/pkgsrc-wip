@@ -110,6 +110,8 @@ while test $# -ne 0; do
 	    fields=`echo "$1" | cut -b3-`;;
 	-i)
 	    ic=1;;
+	-v)
+	    invert=1;;
 	--)
 	    shift
 	    break;;
@@ -169,7 +171,7 @@ case "$strategy" in
 	exit 1;;
 esac
 
-runawk -v ic="$ic" -v reqd_fields_="$fields" \
+runawk -v ic="$ic" -v reqd_fields_="$fields" -v invert="$invert" \
        -v string="$string" -v strategy="$strategy" -e '
 #use "pkg_grep_summary.awk"
 #use "xgetline.awk"

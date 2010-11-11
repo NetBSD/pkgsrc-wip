@@ -17,6 +17,8 @@ BEGIN {
 
 	keep_fields = 0
 
+	invert += 0
+
 	# required fields
 	gsub(/,/, " ", reqd_fields_)
 	reqd_fields_cnt = split(reqd_fields_, f)
@@ -87,14 +89,20 @@ function update_skip (){
 
 	_gs_matched = grep_summary__condition()
 
+	if (_gs_matched == 0 && (fname in _sg_multiline)){
+		_gs_matched = -1
+	}
+
+	if (invert && _gs_matched >= 0){
+		_gs_matched = 1-_gs_matched;
+	}
+
 	if (_gs_matched == 1){
 		for (i=0; i < _gs_count; ++i)
 			print _gs_accu [i]
 
 		delete _gs_accu
 		_gs_count = 0
-	}else if (_gs_matched == 0 && (fname in _sg_multiline)){
-		_gs_matched = -1
 	}
 }
 
