@@ -14,7 +14,7 @@ Why not:
       know for this sort of task. All other reasons are secondary.
     - 'pkgin help' takes 53 seconds on Dual Core Atom 1.6 Ghz machine.
 
-Why HIN:
+Why NIH:
 
   - I've got pkg_summary-utils, a big collection of powerful scripts
     for managing pkg_summary files. I've been developing it for almost
@@ -57,6 +57,7 @@ Planned features:
   - Configuration files are under ~/.nih/ or $prefix/etc/nih/ directories.
 
   - nih help
+    nih -h
      Display help message
 
   - nih <command> -h
@@ -132,14 +133,14 @@ Planned features:
        ~/.nih/config
            FIELDS_<N> - list of fields to output
 
-  - nih leaves [options]
+  - nih leaf [options]
        Output or remove automatically installed leaf packages.
        -l    output leaf packages installed automatically (default)
        -t    output only PKGNAME
        -R    remove automatically installed leaf packages
        -E    the same as -R but with 'pkg_delete -A'
        -n    pass -n to pkg_delete
-  - nih licenses [options]
+  - nih license [options]
        Output licenses of installed packages with their packages.
        Licenses marked as accepted are skipped.
        -i interactively remove packages with unacceptable licenses or
