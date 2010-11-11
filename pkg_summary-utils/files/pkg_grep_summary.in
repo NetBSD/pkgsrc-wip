@@ -32,12 +32,12 @@ pkg_grep_summary - output summaries about packages that matches
 the specified condition, summaries are read from stdin.
 
 USAGE: pkg_grep_summary -h
-       pkg_grep_summary      -e <field>
-       pkg_grep_summary [-i] -m <field> <regexp>
-       pkg_grep_summary [-i] -s <field> <string>
-       pkg_grep_summary [-i] -S <field> <file>
-       pkg_grep_summary [-i] -t <strategy> <field> <condition>
-       pkg_grep_summary [-i]    <field> <awk_condition>
+       pkg_grep_summary [opts] -e <field>
+       pkg_grep_summary [opts] -m <field> <regexp>
+       pkg_grep_summary [opts] -s <field> <string>
+       pkg_grep_summary [opts] -S <field> <file>
+       pkg_grep_summary [opts] -t <strategy> <field> <condition>
+       pkg_grep_summary [opts]    <field> <awk_condition>
        pkg_grep_summary -T
   <field>         - PKGBASE, PKGNAME, PKGPATH, DEPENDS etc.
   <awk_condition> - Boolean expression written in AWK language
@@ -46,7 +46,10 @@ USAGE: pkg_grep_summary -h
   <strategy>      - Search strategy. See -T for a list of available
                     search strategies.
 OPTIONS:
-  -h|--help   display this message
+  -h          display this message
+
+  -t          matches <field> using search strategy <strategy>
+              and condition specified in <condition>
   -e          matches empty and absent fields,
   -m          matches <field> against regular expression <regexp>,
               synonym for "-t re"
@@ -54,10 +57,12 @@ OPTIONS:
               synonym for "-t exact"
   -S          matches <field> equal to any string in <file>,
               one string per line, synonym for "-t strfile"
-  -t          matches <field> using search strategy <strategy>
-              and condition specified in <condition>
+
   -T          displays all search strategies available for -t and exits
+  -f <fields> output only the specified fields, by default
+              the whole summary is output
   -i          ignore case
+  -v          invert the sense of matching
 EOF
 }
 
@@ -98,6 +103,11 @@ while test $# -ne 0; do
 	-T)
 	    echo 'exact prefix suffix substring word first last re strfile strlist awk empty kw'
 	    exit 0;;
+	-f)
+	    fields="$2"
+	    shift;;
+	-f*)
+	    fields=`echo "$1" | cut -b3-`;;
 	-i)
 	    ic=1;;
 	--)
@@ -159,7 +169,7 @@ case "$strategy" in
 	exit 1;;
 esac
 
-runawk -v ic="$ic" \
+runawk -v ic="$ic" -v reqd_fields_="$fields" \
        -v string="$string" -v strategy="$strategy" -e '
 #use "pkg_grep_summary.awk"
 #use "xgetline.awk"

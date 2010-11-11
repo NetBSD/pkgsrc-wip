@@ -3,7 +3,7 @@
 LC_ALL=C
 export LC_ALL
 
-DIFF_PROG=${DIFF_PROG-diff -u}
+DIFF_PROG=${DIFF_PROG-diff -U20}
 
 #
 srcdir="`pwd`/.."
@@ -80,17 +80,13 @@ AWKPATH=`pwd`/.. ./pkgsrc-dewey-test < ./pkgsrc-dewey-test.txt 2>&1 |
 cmp 'pkgsrc-dewey.awk' ''
 
 # pkg_grep_summary
-runtest pkg_grep_summary -s PKGBASE distbb < src_summary.txt |
+runtest pkg_grep_summary -f 'COMMENT PKGNAME PKGPATH DEPENDS' -s PKGBASE distbb \
+    < src_summary.txt |
 cmp 'pkg_grep_summary #1' \
 'PKGNAME=distbb-0.22.0
 PKGPATH=wip/distbb
 DEPENDS=pkg_summary-utils>=0.18.1:../../wip/pkg_summary-utils paexec>=0.10.0:../../wip/paexec runawk>=0.13.0:../../wip/runawk
-BUILD_DEPENDS= checkperms>=1.1:../../sysutils/checkperms
-HOMEPAGE=http://mova.org/~cheusov/pub/distbb/
 COMMENT=DISTributed Bulk Build tool for pkgsrc
-MAINTAINER=cheusov@tut.by
-CATEGORIES=pkgtools
-EXFIELD=XVALUE1
 
 '
 
@@ -215,68 +211,120 @@ PKGNAME=dict-client-1.9.15nb2
 PKGNAME=dict-client-1.10.11nb2
 '
 
-runtest pkg_grep_summary -e EXFIELD < src_summary.txt | \
-    grep -E 'PKGNAME|---' |
+runtest pkg_grep_summary -fPKGNAME -e EXFIELD < src_summary.txt | \
 cmp 'pkg_grep_summary #6' \
 'PKGNAME=dictem-0.82
+
 PKGNAME=pkg_online-0.5.0nb2
+
 PKGNAME=dict-server-1.10.11nb2
+
 PKGNAME=pkg_online-server-0.5.0
+
 PKGNAME=dict-client-1.9.15nb2
+
 PKGNAME=pkg_online-client-0.5.0
+
 PKGNAME=libmaa-1.0.1nb1
+
 PKGNAME=gmake-3.81
+
 PKGNAME=paexec-0.10.0nb1
+
 PKGNAME=libtool-base-1.5.24nb6
+
 PKGNAME=runawk-0.14.3
+
 PKGNAME=emacs-22.1nb6
+
 PKGNAME=pkg_summary-utils-0.18.1
+
 PKGNAME=libungif-4.1.4nb1
+
 PKGNAME=tiff-3.8.2nb4
+
 PKGNAME=x11-links-0.38
+
 PKGNAME=perl-5.8.8nb8
+
 PKGNAME=libltdl-1.5.24
+
 PKGNAME=dict-client-1.10.11nb2
+
 PKGNAME=pipestatus-0.4.0
+
 PKGNAME=awk-pkgsrc-dewey-0.5.6
+
 PKGNAME=png-1.2.32beta01
+
 PKGNAME=netcat-1.10nb2
+
 PKGNAME=pkg-config-0.23
+
 PKGNAME=jpeg-6bnb4
+
 PKGNAME=ap22-vhost-ldap-1.2.0nb1
+
 PKGNAME=ap2-vhost-ldap-1.2.0nb1
+
 '
 
-runtest pkg_grep_summary -t empty EXFIELD '' < src_summary.txt | \
-    grep -E 'PKGNAME|---' |
+runtest pkg_grep_summary -f PKGNAME -t empty EXFIELD '' < src_summary.txt | \
 cmp 'pkg_grep_summary #7' \
 'PKGNAME=dictem-0.82
+
 PKGNAME=pkg_online-0.5.0nb2
+
 PKGNAME=dict-server-1.10.11nb2
+
 PKGNAME=pkg_online-server-0.5.0
+
 PKGNAME=dict-client-1.9.15nb2
+
 PKGNAME=pkg_online-client-0.5.0
+
 PKGNAME=libmaa-1.0.1nb1
+
 PKGNAME=gmake-3.81
+
 PKGNAME=paexec-0.10.0nb1
+
 PKGNAME=libtool-base-1.5.24nb6
+
 PKGNAME=runawk-0.14.3
+
 PKGNAME=emacs-22.1nb6
+
 PKGNAME=pkg_summary-utils-0.18.1
+
 PKGNAME=libungif-4.1.4nb1
+
 PKGNAME=tiff-3.8.2nb4
+
 PKGNAME=x11-links-0.38
+
 PKGNAME=perl-5.8.8nb8
+
 PKGNAME=libltdl-1.5.24
+
 PKGNAME=dict-client-1.10.11nb2
+
 PKGNAME=pipestatus-0.4.0
+
 PKGNAME=awk-pkgsrc-dewey-0.5.6
+
 PKGNAME=png-1.2.32beta01
+
 PKGNAME=netcat-1.10nb2
+
 PKGNAME=pkg-config-0.23
+
 PKGNAME=jpeg-6bnb4
+
 PKGNAME=ap22-vhost-ldap-1.2.0nb1
+
 PKGNAME=ap2-vhost-ldap-1.2.0nb1
+
 '
 
 runtest pkg_grep_summary -m MAINTAINER 'cheusov|vle@gmx.net' < src_summary.txt |
@@ -349,40 +397,34 @@ MAINTAINER=cheusov@tut.by
 
 '
 
-runtest pkg_grep_summary -s PKGPATH graphics/png < src_summary.txt |
+runtest pkg_grep_summary -s PKGPATH graphics/png \
+    -fPKGNAME,PKGPATH,COMMENT,MAINTAINER < src_summary.txt |
 cmp 'pkg_grep_summary #9' \
 'PKGNAME=png-1.2.32beta01
 PKGPATH=graphics/png
-BUILD_DEPENDS= libtool-base>=1.5.18nb5:../../devel/libtool-base checkperms>=1.1:../../sysutils/checkperms
-HOMEPAGE=http://www.libpng.org/pub/png/
 COMMENT=Library for manipulating PNG images
 MAINTAINER=wiz@NetBSD.org
-CATEGORIES=graphics
 
 '
 
 runtest pkg_grep_summary -s PKGPATHe www/ap22-vhost-ldap:PKG_APACHE=apache22 \
-    < src_summary.txt |
+    -f PKGNAME,PKGPATH,COMMENT,MAINTAINER,ASSIGNMENTS < src_summary.txt |
 cmp 'pkg_grep_summary #10' \
 'PKGNAME=ap22-vhost-ldap-1.2.0nb1
 ASSIGNMENTS=PKG_APACHE=apache22
-HOMEPAGE=http://packages.qa.debian.org/m/mod-vhost-ldap.html
 COMMENT=Apache 2.2 module LDAP Virtual Hosts support
 MAINTAINER=imil@gcu.info
 PKGPATH=www/ap22-vhost-ldap
-CATEGORIES=www databases
 
 '
 
 runtest pkg_grep_summary -s PKGPATHe www/ap2-vhost-ldap:PKG_APACHE=apache2 \
-    < src_summary.txt |
+    -f'PKGNAME PKGPATH COMMENT MAINTAINER ASSIGNMENTS' < src_summary.txt |
 cmp 'pkg_grep_summary #11' \
 'PKGNAME=ap2-vhost-ldap-1.2.0nb1
 PKGPATH=www/ap2-vhost-ldap:PKG_APACHE=apache2
-HOMEPAGE=http://packages.qa.debian.org/m/mod-vhost-ldap.html
 COMMENT=Apache 2 module LDAP Virtual Hosts support
 MAINTAINER=imil@gcu.info
-CATEGORIES=www databases
 
 '
 

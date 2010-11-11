@@ -16,6 +16,14 @@ BEGIN {
 	_sg_multiline ["CONFLICTS"]   = 1
 
 	keep_fields = 0
+
+	# required fields
+	gsub(/,/, " ", reqd_fields_)
+	reqd_fields_cnt = split(reqd_fields_, f)
+	for (i=1; i <= reqd_fields_cnt; ++i){
+		reqd_fields [f [i]] = 1
+	}
+	delete f
 }
 
 function match_first_word (s, word){
@@ -80,9 +88,8 @@ function update_skip (){
 	_gs_matched = grep_summary__condition()
 
 	if (_gs_matched == 1){
-		for (i=0; i < _gs_count; ++i){
+		for (i=0; i < _gs_count; ++i)
 			print _gs_accu [i]
-		}
 
 		delete _gs_accu
 		_gs_count = 0
@@ -104,6 +111,7 @@ _gs_matched == 0 && NF > 0 {
 		fname  = ""
 		fvalue = ""
 	}
+	fname_orig = fname
 }
 
 function check_PKGPATHe (){
@@ -145,7 +153,9 @@ _gs_matched == -1 {
 }
 
 _gs_matched == 1 && NF > 0 {
-	print $0
+	if (!reqd_fields_cnt || (fname_orig in reqd_fields))
+		print $0
+
 	next
 }
 
@@ -154,7 +164,8 @@ keep_fields {
 }
 
 _gs_matched == -1 && NF > 0 {
-	_gs_accu [_gs_count++] = $0
+	if (!reqd_fields_cnt || (fname_orig in reqd_fields))
+		_gs_accu [_gs_count++] = $0
 }
 
 NF == 0 {
@@ -166,9 +177,8 @@ NF == 0 {
 	if (_gs_matched == -1){
 		update_skip()
 	}
-	if (_gs_matched == 1){
+	if (_gs_matched == 1)
 		print ""
-	}
 
 	delete _gs_accu
 	delete fields

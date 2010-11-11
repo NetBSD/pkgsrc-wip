@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkg_grep_summary.1,v 1.21 2010/11/07 11:34:51 cheusov Exp $
+.\"	$NetBSD: pkg_grep_summary.1,v 1.22 2010/11/11 21:56:39 cheusov Exp $
 .\"
 .\" Copyright (c) 2008 by Aleksey Cheusov (vle@gmx.net)
 .\" Absolutely no warranty.
@@ -20,17 +20,19 @@ pkg_grep_summary \- tool for grepping pkgsrc summary file
 .SH SYNOPSIS
 .BI "pkg_grep_summary -h"
 .br
-.BI "pkg_grep_summary [-i]" " field awk_expression"
+.BI "pkg_grep_summary [option]" " field awk_expression"
 .br
-.BI "pkg_grep_summary [-i] -e " field
+.BI "pkg_grep_summary [option] -e " field
 .br
-.BI "pkg_grep_summary [-i] -m" " field regexp"
+.BI "pkg_grep_summary [option] -m" " field regexp"
 .br
-.BI "pkg_grep_summary [-i] -s" " field string"
+.BI "pkg_grep_summary [option] -s" " field string"
 .br
-.BI "pkg_grep_summary [-i] -S" " field filename"
+.BI "pkg_grep_summary [option] -S" " field filename"
 .br
-.BI "pkg_grep_summary [-i] -t" " strategy field condition"
+.BI "pkg_grep_summary [option] -t" " strategy field condition"
+.br
+.BI "pkg_grep_summary -T"
 .br
 .SH DESCRIPTION
 .B pkg_grep_summary
@@ -77,6 +79,9 @@ display help message
 ignore case. Before matching
 .I field
 is converted to lower case.
+.TP
+.BI "-f" " fields"
+a list of fields to output, by default the whole package summary is output
 .TP
 .BI "-e" " field"
 outputs summaries in which
