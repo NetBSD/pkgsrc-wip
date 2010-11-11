@@ -11,7 +11,7 @@ Why not:
 
   pkgin:
     - It is written in C, the worst programming language I've even
-      know for this sort of task. All other reasons are secondary.
+      known for this sort of task. All other reasons are secondary.
     - 'pkgin help' takes 53 seconds on Dual Core Atom 1.6 Ghz machine.
 
 Why NIH:
@@ -32,7 +32,7 @@ Why NIH:
     stable.
 
   - I've got pkg_online-client and pkg_grep_summary, very powerful and
-    fast tools for searching for packages. It is also small and stable.
+    fast tools for searching for packages. They are also small and stable.
 
 Plans:
   - To provide features implemented in pkgchk, pkgin, pkg_comp,
