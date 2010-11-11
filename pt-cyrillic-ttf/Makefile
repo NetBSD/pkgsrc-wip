@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.4 2010/11/09 20:16:15 bubuchka Exp $
+# $NetBSD: Makefile,v 1.5 2010/11/11 13:40:05 bubuchka Exp $
 #
 
-DISTNAME=	pt-cyrillic-ttf-1.0.20100113
+DISTNAME=	pt-cyrillic-ttf-2.005
 CATEGORIES=	fonts
 MASTER_SITES=	http://www.fontstock.com/public/
-DISTFILES=	PTSans.zip # PTSerif.zip (still under construction)
+DISTFILES=	PTSans_OFL.zip  # PTSerif_OFL.zip (still under construction)
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.paratype.com/public/
 COMMENT=	Public fonts for minority languages of Russia
-LICENSE=	pt-open-license
+LICENSE=	open-font-license
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
