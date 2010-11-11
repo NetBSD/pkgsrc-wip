@@ -15,7 +15,8 @@ Why not:
   pkgin:
     - It is written in C, the worst programming language I've ever
       known for this sort of task. All other reasons are secondary.
-    - 'pkgin help' takes 53 seconds on Dual Core Atom 1.6 Ghz machine.
+    - sqlite database is absoletely useless but 'pkgin help' takes 53
+      seconds on Dual Core Atom 1.6 Ghz machine.
 
 Why NIH:
 
