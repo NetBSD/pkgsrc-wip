@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/10/29 08:32:53 shattered Exp $
+# $NetBSD: Makefile,v 1.10 2010/11/11 22:42:07 shattered Exp $
 #
 
 DISTNAME=		prozilla-1.3.6
@@ -7,7 +7,7 @@ CATEGORIES=		net
 MASTER_SITES=		http://prozilla.genesys.ro/downloads/prozilla/tarballs/
 
 MAINTAINER=		low@ameba6.com
-HOMEPAGE=		http://directory.fsf.org/network/Tools/ProZilla.html
+HOMEPAGE=		http://directory.fsf.org/project/ProZilla/
 COMMENT=		ProZilla is a multi-threaded download accelerator
 
 USE_PKGLOCALEDIR=	yes

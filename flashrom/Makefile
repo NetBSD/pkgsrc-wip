@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.5 2009/08/10 14:52:39 jakllsch Exp $
+# $NetBSD: Makefile,v 1.6 2010/11/11 22:42:06 shattered Exp $
 #
 
 DISTNAME=	flashrom-0.9.0
 CATEGORIES=	sysutils
-MASTER_SITES=	http://qa.coreboot.org/releases/
+MASTER_SITES=	http://qa.flashrom.org/releases/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jakllsch@NetBSD.org
-HOMEPAGE=	http://www.coreboot.org/Flashrom
+HOMEPAGE=	http://www.flashrom.org/Flashrom
 COMMENT=	Universal (coreboot/LinuxBIOS) flash utility
 
 PKG_DESTDIR_SUPPORT=	user-destdir

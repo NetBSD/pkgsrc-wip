@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2008/05/24 15:34:10 tnn2 Exp $
+# $NetBSD: Makefile,v 1.4 2010/11/11 22:42:06 shattered Exp $
 #
+
 DISTNAME=		fish-1.23.0
 CATEGORIES=		shells
 MASTER_SITES=		http://www.fishshell.org/files/1.23.0/
 
 MAINTAINER=		hugor@users.sourceforge.net
-HOMEPAGE=		http://roo.no-ip.org/fish/
+HOMEPAGE=		http://www.fishshell.org/
 COMMENT=		User friendly command line shell for UNIX-like operating systems
 
 PKG_DESTDIR_SUPPORT=	destdir

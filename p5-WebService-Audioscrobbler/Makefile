@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/10/12 17:37:30 absd Exp $
+# $NetBSD: Makefile,v 1.7 2010/11/11 22:42:07 shattered Exp $
 #
 
 DISTNAME=	WebService-Audioscrobbler-0.07
@@ -7,7 +7,7 @@ CATEGORIES=	net
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/N/NI/NILSONSFJ/
 
 MAINTAINER=	jfranz@bsdprojects.net
-HOMEPAGE=	http://www.audioscrobbler.net/data/webservices/
+HOMEPAGE=	http://www.last.fm/api
 COMMENT=	Interface to the Audioscrobbler WebService API (aka Last.FM)
 
 DEPENDS+=	p5-CLASS>=0:../../devel/p5-CLASS

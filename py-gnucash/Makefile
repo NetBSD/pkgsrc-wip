@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.4 2008/03/06 14:54:10 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2010/11/11 22:42:07 shattered Exp $
 #
 
 DISTNAME=	python-gnucash-0.7.10
 PKGNAME=	${DISTNAME:S/python/${PYPKGPREFIX}/}
 PKGREVISION=	3
 CATEGORIES=	finance
-MASTER_SITES=	http://www.parit.ca/projects/pythongnucash/
+MASTER_SITES=	http://parit.ca/products/finance/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.parit.ca/projects/pythongnucash/
+HOMEPAGE=	http://parit.ca/products/finance/
 COMMENT=	Python bindings to the GnuCash libraries
 
 PYDISTUTILSPKG=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2009/12/23 21:02:16 ghen Exp $
+# $NetBSD: Makefile,v 1.13 2010/11/11 22:42:07 shattered Exp $
 #
 
 DISTNAME=	ion-3-20090110
@@ -8,7 +8,7 @@ CATEGORIES=	wm x11
 MASTER_SITES=	http://iki.fi/tuomov/dl/
 
 MAINTAINER=	matias@dotbsd.org
-HOMEPAGE=	http://modeemi.fi/~tuomov/ion/
+HOMEPAGE=	http://tuomov.iki.fi/software/
 COMMENT=	Tiling tabbed window manager
 
 MAKE_JOBS_SAFE=		no

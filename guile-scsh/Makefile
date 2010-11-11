@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.4 2009/05/20 00:58:41 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2010/11/11 22:42:06 shattered Exp $
 #
 
 DISTNAME=		guile-scsh-2.0.1
 PKGREVISION=		1
 CATEGORIES=		shells
-MASTER_SITES=		http://arglist.com/guile/${DISTNAME}/
+MASTER_SITES=		http://www.arglist.com/guile/${DISTNAME}/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://arglist.com/guile/
+HOMEPAGE=		http://www.arglist.com/guile/
 COMMENT=		Scheme Shell that runs in Guile
 
 GNU_CONFIGURE=		yes

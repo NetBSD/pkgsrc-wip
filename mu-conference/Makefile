@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/04/27 01:53:29 schnoebe Exp $
+# $NetBSD: Makefile,v 1.6 2010/11/11 22:42:07 shattered Exp $
 #
 
 DISTNAME=		mu-conference_0.8
@@ -7,7 +7,7 @@ CATEGORIES=		chat
 MASTER_SITES=		http://download.gna.org/mu-conference/
 
 MAINTAINER=		eric@cirr.com
-HOMEPAGE=		http://gna.org/projects/mu-conference/
+HOMEPAGE=		https://gna.org/projects/mu-conference/
 COMMENT=		Implementation of the JEP-0045 Multi-User Chat protocol
 
 PKG_DESTDIR_SUPPORT=	user-destdir

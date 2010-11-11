@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/07/14 13:23:37 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2010/11/11 22:42:07 shattered Exp $
 #
 
 DISTNAME=	Pylons-1.0.tar
@@ -9,7 +9,7 @@ MASTER_SITES=	http://pypi.python.org/packages/source/P/Pylons/
 EXTRACT_SUFX=	.gz
 
 MAINTAINER=	kamelderouiche@yahoo.com
-HOMEPAGE=	http://www.pylonshq.com/
+HOMEPAGE=	http://pylonshq.com/
 COMMENT=	Pylons Web Framework
 LICENSE=	modified-bsd
 
