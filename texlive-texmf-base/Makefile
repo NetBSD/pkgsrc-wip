@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.11 2010/11/09 23:08:54 makoto Exp $
+# $NetBSD: Makefile,v 1.12 2010/11/11 14:01:55 makoto Exp $
 
-DISTNAME=	texlive-20091107-texmf
-PKGNAME=	texlive-texmf-base-2009
+DISTNAME=	texlive-20100722-texmf
+PKGNAME=	texlive-texmf-base-2010
 #PKGREVISION=	1
 CATEGORIES=	print
-MASTER_SITES=	ftp://tug.org/texlive/historic/2009/
+MASTER_SITES=	ftp://tug.org/texlive/historic/2010/
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	minskim@NetBSD.org

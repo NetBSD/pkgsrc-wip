@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2010/11/09 23:08:55 makoto Exp $
+$NetBSD: distinfo,v 1.3 2010/11/11 14:01:55 makoto Exp $
 
-SHA1 (texlive-20091107-texmf.tar.xz) = a85d33e2915fd2bfad86e5a1ce498058a380d959
-RMD160 (texlive-20091107-texmf.tar.xz) = c932eaf4b3412275e769cfefd3271b864a546087
-Size (texlive-20091107-texmf.tar.xz) = 939751324 bytes
+SHA1 (texlive-20100722-texmf.tar.xz) = df6ba050970592f0f5f38cb9dd36d4d0d671fa80
+RMD160 (texlive-20100722-texmf.tar.xz) = 608c00f03d4c0ef08e957ec00712326e75eee04e
+Size (texlive-20100722-texmf.tar.xz) = 1137115288 bytes
