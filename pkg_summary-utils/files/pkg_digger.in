@@ -1,0 +1,125 @@
+#!/bin/sh
+
+# Copyright (c) 2010 Aleksey Cheusov <vle@gmx.net>
+#
+# Permission is hereby granted, free of charge, to any person obtaining
+# a copy of this software and associated documentation files (the
+# "Software"), to deal in the Software without restriction, including
+# without limitation the rights to use, copy, modify, merge, publish,
+# distribute, sublicense, and/or sell copies of the Software, and to
+# permit persons to whom the Software is furnished to do so, subject to
+# the following conditions:
+#
+# The above copyright notice and this permission notice shall be
+# included in all copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+# EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+# NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+# LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+# OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+# WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+set -e
+
+export LC_ALL=C
+
+usage () {
+    cat 1>&2 <<EOF
+pkg_digger is a pkg summary searcher (backend for pkg_search).
+usage: pkg_digger -h
+       pkg_digger -f
+       pkg_digger -s
+       pkg_digger [-n] fsq1 [fsq2 ...]
+       pkg_digger -1|-3|-9|-i [-r] [-q] pkgpair1 [pkgpair2...]
+where pkgpair is <PKGPATH>,<PKGNAME>
+and fsq is <field>:<strategy>:<query>
+OPTIONS:
+   -h         display this screen
+   -s         display available search strategies
+   -f         display available fields for search in
+   -1         display 1-line information about packages (by PKGPAIR)
+   -3         display short information about packages (by PKGPAIR)
+   -9|-i      display full information about packages (by PKGPAIR)
+   -r         raw output in pkg_summary(5) format
+   -q         quiet mode, do not print "No matches found" to stderr
+   -n <limit>    maximum number of results
+EOF
+}
+
+if test -z "$PKG_DIGGER_SUMMARY"; then
+    echo 'PKG_DIGGER_SUMMARY environment variable must be set' 1>&2
+    exit 1
+fi
+
+if test $# -eq 0; then
+    usage
+    exit 2
+fi
+
+limit=1000000000
+
+show_strats (){
+    awk -F= 'NF > 0 {hash [$1]=0} END {for (i in hash) print i}' \
+	"$PKG_DIGGER_SUMMARY"
+    exit 0
+}
+
+while getopts hsf139irqn: f; do
+    case "$f" in
+	s)    pkg_grep_summary -T | tr ' ' '
+'; exit 0;;
+	f)    show_strats;;
+	9|i)  info=1;;
+	3)    shortinfo=1;;
+	1)    onelineinfo=1;;
+	r)    raw_format=1;;
+	q)    quiet_mode=1;;
+	n)    limit=$OPTARG;;
+	h)    usage; exit 0;;
+	?)    printf "Run pkg_digger -h for details\n"; exit 2;;
+    esac
+done
+
+shift `expr $OPTIND - 1`
+
+if test -n "$onelineinfo"; then
+elif test -n "$shortinfo"; then
+elif test -n "$info"; then
+else
+    for i in "$@"; do
+	field=`echo "$i" | cut -d: -f1`
+	strat=`echo "$i" | cut -d: -f2`
+	query=`echo "$i" | cut -d: -f3`
+	pkg_grep_summary -fPKGNAME,PKGPATH,ASSIGNMENTS -i \
+	    -t "$strat" "$field" "$query" < "$PKG_DIGGER_SUMMARY"
+    done |
+    runawk -f trim.awk -v quiet_mode="$quiet_mode" -v limit="$limit" \
+	-e '
+    /^PKGPATH=/ {
+	pkgpath = trim_lr(substr($0, 9))
+	next
+    }
+    /^PKGNAME=/ {
+	pkgbase = trim_lr(substr($0, 9))
+	sub(/-[^-]*$/, "", pkgbase)
+	next
+    }
+    /^ASSIGNMENTS=/ {
+	assign = trim_lr(substr($0, 13))
+	next
+    }
+    NF == 0 {
+	if (assigns != "") pkgpath = pkgpath ":" assigns
+	print pkgpath "," pkgbase
+	found = 1
+    }
+    END {
+	if (!found){
+	    if (!quiet_mode)
+		print "No matches found"
+	    exit 20
+	}
+    }'
+fi
