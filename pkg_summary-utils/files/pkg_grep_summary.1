@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkg_grep_summary.1,v 1.24 2010/11/12 20:49:00 cheusov Exp $
+.\"	$NetBSD: pkg_grep_summary.1,v 1.25 2010/11/12 22:56:54 cheusov Exp $
 .\"
 .\" Copyright (c) 2008 by Aleksey Cheusov (vle@gmx.net)
 .\" Absolutely no warranty.
@@ -85,6 +85,14 @@ is converted to lower case.
 .TP
 .B "-v"
 invert the sense of matching to select non-matching summaries.
+.TP
+.B "-r"
+exit status is non-zero if no matches were found.
+.TP
+.B "-R"
+option
+.B -r
+is implied and "No matches found" is output to stderr.
 .TP
 .BI "-f" " fields"
 a list of fields to output, by default the whole package summary is output.

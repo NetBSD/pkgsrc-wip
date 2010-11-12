@@ -47,22 +47,26 @@ USAGE: pkg_grep_summary -h
                     search strategies.
 OPTIONS:
   -h          display this message
+  -i          ignore case
+  -v          invert the sense of matching
+  -f <fields> output only the specified fields, by default
+              the whole summary is output
+  -r          exit status is non-zero if nothing was found
+  -R          -r + "No matches found" is output to stderr
 
   -t          matches <field> using search strategy <strategy>
               and condition specified in <condition>
   -e          matches empty and absent fields,
+              synonym to "-t empty"
   -m          matches <field> against regular expression <regexp>,
               synonym for "-t re"
   -s          matches <field> equal to <string>,
               synonym for "-t exact"
   -S          matches <field> equal to any string in <file>,
-              one string per line, synonym for "-t strfile"
+              one string per line,
+              synonym for "-t strfile"
 
   -T          displays all search strategies available for -t and exits
-  -f <fields> output only the specified fields, by default
-              the whole summary is output
-  -i          ignore case
-  -v          invert the sense of matching
 EOF
 }
 
@@ -110,6 +114,11 @@ while test $# -ne 0; do
 	    fields=`echo "$1" | cut -b3-`;;
 	-i)
 	    ic=1;;
+	-r)
+	    error=1;;
+	-R)
+	    error=1
+	    error_msg='No matches found';;
 	-v)
 	    invert=1;;
 	--)
@@ -172,7 +181,9 @@ case "$strategy" in
 esac
 
 runawk -v ic="$ic" -v reqd_fields_="$fields" -v invert="$invert" \
-       -v string="$string" -v strategy="$strategy" -e '
+       -v string="$string" -v strategy="$strategy" \
+       -v error="$error" -v error_msg="$error_msg" \
+-e '
 #use "pkg_grep_summary.awk"
 #use "xgetline.awk"
 #use "str2regexp.awk"

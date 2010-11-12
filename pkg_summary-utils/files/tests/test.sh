@@ -1035,6 +1035,33 @@ PKGPATH=wip/dict-server
 
 '
 
+{
+if runtest pkg_grep_summary -r -fPKGNAME,PKGPATH \
+    -s PKGPAIR 'foo-bar-baz' < src_summary.txt
+then
+    echo found
+else
+    echo not found
+fi
+} |
+cmp 'pkg_grep_summary #52' \
+'not found
+'
+
+{
+if runtest pkg_grep_summary -R -fPKGNAME,PKGPATH \
+    -s PKGPAIR 'foo-bar-baz' < src_summary.txt 2>&1
+then
+    echo found
+else
+    echo not found
+fi
+} |
+cmp 'pkg_grep_summary #53' \
+'No matches found
+not found
+'
+
 # pkg_list_all_pkgs
 env  pkg_list_all_pkgs |
 awk '

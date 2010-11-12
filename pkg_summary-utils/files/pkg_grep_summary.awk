@@ -198,8 +198,10 @@ NF == 0 {
 	if (_gs_matched == -1){
 		update_skip()
 	}
-	if (_gs_matched == 1)
+	if (_gs_matched == 1){
+		++_gs_matches_cnt
 		print ""
+	}
 
 	delete _gs_accu
 	delete fields
@@ -207,4 +209,13 @@ NF == 0 {
 	_gs_matched = -1
 
 	_gs_assigns = _gs_pkgpath = _gs_pkgbase = ""
+}
+
+END {
+	if (error && !_gs_matches_cnt){
+		if (error_msg)
+			print error_msg > "/dev/stderr"
+
+		exitnow(1)
+	}
 }
