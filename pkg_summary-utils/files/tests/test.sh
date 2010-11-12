@@ -1027,6 +1027,14 @@ MAINTAINER=imil@gcu.info
 
 '
 
+runtest pkg_grep_summary -fPKGNAME,PKGPATH \
+    -s PKGPAIR 'wip/dict-server,dict-server' < src_summary.txt |
+cmp 'pkg_grep_summary #51' \
+'PKGNAME=dict-server-1.10.11nb2
+PKGPATH=wip/dict-server
+
+'
+
 # pkg_list_all_pkgs
 env  pkg_list_all_pkgs |
 awk '

@@ -153,6 +153,19 @@ _gs_matched == -1 {
 		idx = index(fvalue, ":")
 		if (idx > 0)
 			fvalue = substr(fvalue, 1, idx-1)
+	}else if (grep_summary__field == "PKGPAIR"){
+		if (fname == "PKGPATH") {
+			_gs_pkgpath = fvalue
+		}else if (fname == "PKGNAME") {
+			_gs_pkgbase = fvalue
+			sub(/-[^-]*$/, "", _gs_pkgbase)
+		}
+
+		if (_gs_pkgbase != "" && _gs_pkgpath != ""){
+			fvalue = _gs_pkgpath "," _gs_pkgbase
+			fname  = "PKGPAIR"
+			update_skip()
+		}
 	}
 
 	if (fname == grep_summary__field || "" == grep_summary__field) {
@@ -193,5 +206,5 @@ NF == 0 {
 	_gs_count = 0
 	_gs_matched = -1
 
-	_gs_assigns = _gs_pkgpath = ""
+	_gs_assigns = _gs_pkgpath = _gs_pkgbase = ""
 }

@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkg_grep_summary.1,v 1.23 2010/11/11 22:34:45 cheusov Exp $
+.\"	$NetBSD: pkg_grep_summary.1,v 1.24 2010/11/12 20:49:00 cheusov Exp $
 .\"
 .\" Copyright (c) 2008 by Aleksey Cheusov (vle@gmx.net)
 .\" Absolutely no warranty.
@@ -44,11 +44,14 @@ Fields are PKGPATH, PKGNAME, DEPENDS, MAINTAINER
 and so on, actually anything separated by 
 .B =
 sign.
-In addition to fields really present on input two artificial fields
-are supported: PKGBASE and PKGPATHe. PKGBASE
+In addition to fields really present on input a few artificial fields
+are supported: PKGBASE, PKGPATHe and PKGPAIR. PKGBASE
 is a PKGNAME with package version stripped, PKGPATHe (enriched PKGPATH)
 is PKGPATH with ASSIGNMENTS
-(if present) separated by colon symbol.
+(if present) separated by colon symbol, for example,
+.I lang/py-psyco:PYTHON_VERSION_REQD=25 ,
+PKGPAIR is a PKGPATH and PKGBASE separated by comma character, for example,
+.IR net/dhisd,dhisd .
 .B pkg_grep_summary
 is a search tool somewhat similar to
 .BR grep(1) ", " PKGSRCDIR/pkglocate ", " pkgfind
@@ -73,7 +76,7 @@ is `.' (single dot).
 .SH OPTIONS
 .TP
 .B "-h"
-display help message
+display help message.
 .TP
 .B "-i"
 ignore case. Before matching
@@ -81,15 +84,15 @@ ignore case. Before matching
 is converted to lower case.
 .TP
 .B "-v"
-invert the sense of matching to select non-matching summaries
+invert the sense of matching to select non-matching summaries.
 .TP
 .BI "-f" " fields"
-a list of fields to output, by default the whole package summary is output
+a list of fields to output, by default the whole package summary is output.
 .TP
 .BI "-e" " field"
 outputs summaries in which
 .I "field"
-is either empty or absent
+is either empty or absent.
 .TP
 .BI "-m" " field regexp"
 outputs summary if
