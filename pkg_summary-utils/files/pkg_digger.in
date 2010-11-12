@@ -27,7 +27,8 @@ export LC_ALL=C
 
 usage () {
     cat 1>&2 <<EOF
-pkg_digger is a pkg summary searcher (backend for pkg_search).
+pkg_digger is a pkg summary searcher
+(backend for pkg_search and pkg_online_find).
 usage: pkg_digger -h
        pkg_digger -f
        pkg_digger -s
@@ -85,6 +86,24 @@ done
 shift `expr $OPTIND - 1`
 
 if test -n "$onelineinfo"; then
+    pkg_grep_summary -fPKGNAME,PKGPATH,COMMENT -i \
+	-t strlist PKGPAIR "$*" < "$PKG_DIGGER_SUMMARY" |
+    awk '/^PKGNAME=/ {pkgbase = substr($0, 9); sub(/-[^-]*$/, "", pkgbase); next}
+	/^PKGPATH=/ {pkgpath = substr($0, 9); next}
+	/^COMMENT=/ {comment = substr($0, 9); next}
+	NF == 0 {
+	    pos = index(pkgpath, "/")
+	    if (substr(pkgpath, pos+1) == pkgbase)
+		printf "%-25s - %s\n", pkgpath, comment
+	    else
+		printf "%-25s - %s\n", pkgpath "(" pkgbase ")", comment
+	    found = 1
+	}
+	END {
+	    if (!found)
+		print "No matches found"
+	    exit 20
+	}'
 elif test -n "$shortinfo"; then
 elif test -n "$info"; then
 else
@@ -95,23 +114,19 @@ else
 	pkg_grep_summary -fPKGNAME,PKGPATH,ASSIGNMENTS -i \
 	    -t "$strat" "$field" "$query" < "$PKG_DIGGER_SUMMARY"
     done |
-    runawk -f trim.awk -v quiet_mode="$quiet_mode" -v limit="$limit" \
+    runawk -v quiet_mode="$quiet_mode" -v limit="$limit" \
 	-e '
     /^PKGPATH=/ {
-	pkgpath = trim_lr(substr($0, 9))
+	pkgpath = substr($0, 9)
+	sub(/:.*/, "", pkgpath)
 	next
     }
     /^PKGNAME=/ {
-	pkgbase = trim_lr(substr($0, 9))
+	pkgbase = substr($0, 9)
 	sub(/-[^-]*$/, "", pkgbase)
 	next
     }
-    /^ASSIGNMENTS=/ {
-	assign = trim_lr(substr($0, 13))
-	next
-    }
     NF == 0 {
-	if (assigns != "") pkgpath = pkgpath ":" assigns
 	print pkgpath "," pkgbase
 	found = 1
     }
