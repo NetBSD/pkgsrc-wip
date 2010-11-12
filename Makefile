@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4136 2010/11/06 17:18:31 rhaamo Exp $
+# $Id: Makefile,v 1.4137 2010/11/12 20:10:20 dolecek Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1794,7 +1794,6 @@ SUBDIR+=	php-fpm
 SUBDIR+=	php-geoip
 SUBDIR+=	php-http
 SUBDIR+=	php-igbinary
-SUBDIR+=	php-intl
 SUBDIR+=	php-memcached
 SUBDIR+=	php-oauth
 SUBDIR+=	php-recode
