@@ -23,6 +23,8 @@
 
 set -e
 
+. pipestatus
+
 export LC_ALL=C
 
 usage () {
@@ -96,10 +98,9 @@ gen_summary4view (){
     fi
 }
 
-if test -n "$onelineinfo"; then
-    pkg_grep_summary -fPKGNAME,PKGPATH,COMMENT -i \
-	-t strlist PKGPAIR "$*" < "$PKG_DIGGER_SUMMARY" |
-    awk '/^PKGNAME=/ {pkgbase = substr($0, 9); sub(/-[^-]*$/, "", pkgbase); next}
+summary2onelineinfo (){
+    awk -v quiet_mode="$quiet_mode" \
+	'/^PKGNAME=/ {pkgbase = substr($0, 9); sub(/-[^-]*$/, "", pkgbase); next}
 	/^PKGPATH=/ {pkgpath = substr($0, 9); next}
 	/^COMMENT=/ {comment = substr($0, 9); next}
 	NF == 0 {
@@ -111,15 +112,35 @@ if test -n "$onelineinfo"; then
 	    found = 1
 	}
 	END {
-	    if (!found)
-		print "No matches found"
-	    exit 20
-	}'
+	    if (!found){
+		if (!quiet_mode)
+		    print "No matches found" > "/dev/stderr"
+		exit 20
+	    }
+	}' "$@"
+}
+
+if test -n "$onelineinfo"; then
+    # -1
+    pkg_grep_summary -r -fPKGNAME,PKGPATH,COMMENT -i \
+	    -t strlist PKGPAIR "$*" < "$PKG_DIGGER_SUMMARY" |
+    summary2onelineinfo
+
+    exit 0
 elif test -n "${shortinfo}${info}"; then
-    pkg_grep_summary $FIELDS -i \
-	-t strlist PKGPAIR "$*" < "$PKG_DIGGER_SUMMARY" |
-    gen_summary4view
+    # -3|-9
+    runpipe \
+	pkg_grep_summary $FIELDS -r -i \
+	    -t strlist PKGPAIR "$*" < "$PKG_DIGGER_SUMMARY" '|' \
+	gen_summary4view
+    if test "$pipestatus_1" != 0; then
+	test "$quiet_mode" = 1 || echo 'No matches found' 1>&2
+	exit 20
+    fi
+
+    exit 0
 else
+    # f:s:q
     for i in "$@"; do
 	field=`echo "$i" | cut -d: -f1`
 	strat=`echo "$i" | cut -d: -f2`
@@ -150,4 +171,5 @@ else
 	    exit 20
 	}
     }'
+    exit 0
 fi
