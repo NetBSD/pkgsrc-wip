@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4137 2010/11/12 20:10:20 dolecek Exp $
+# $Id: Makefile,v 1.4138 2010/11/13 07:03:29 ryo-on Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2479,6 +2479,7 @@ SUBDIR+=	tuxtype2
 SUBDIR+=	tvmet
 SUBDIR+=	tw_cli
 SUBDIR+=	twinkle
+SUBDIR+=	twitim
 SUBDIR+=	twitmail
 SUBDIR+=	txt2tags
 SUBDIR+=	typespeed
