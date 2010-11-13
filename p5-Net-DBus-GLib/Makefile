@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/11/13 10:53:19 ryo-on Exp $
+# $NetBSD: Makefile,v 1.2 2010/11/13 11:37:59 ryo-on Exp $
 #
 
 DISTNAME=	Net-DBus-GLib-0.33.0
@@ -17,5 +17,6 @@ DEPENDS+=	p5-Net-DBus>=0.33.2:../../net/p5-Net-DBus
 
 PERL5_PACKLIST=	auto/Net/DBus/GLib/.packlist
 
+.include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
