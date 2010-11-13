@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/11/13 07:05:35 ryo-on Exp $
+# $NetBSD: Makefile,v 1.3 2010/11/13 13:59:33 ryo-on Exp $
 #
 
 DISTNAME=	twitim_1.5
@@ -37,6 +37,8 @@ DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
 DEPENDS+=	p5-Net-OAuth-[0-9]*:../../net/p5-Net-OAuth
 DEPENDS+=	p5-Data-Random-[0-9]*:../../wip/p5-Data-Random
 DEPENDS+=	libgnome-[0-9]*:../../devel/libgnome
+
+.include "options.mk"
 
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	pre-configure
