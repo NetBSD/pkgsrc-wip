@@ -26,7 +26,8 @@ INSCRIPTS +=	cvs_checksum pkg_assignments2pkgpath
 INSCRIPTS +=	pkg_uniq_summary pkg_summary2bb_pkgs
 INSCRIPTS +=	pkg_cleanup_distdir pkg_summary2build_graph
 INSCRIPTS +=	pkg_summary2deps pkg_lint_summary
-INSCRIPTS +=	pkg_subgraph_deps pkg_bin_summary pkg_digger
+INSCRIPTS +=	pkg_subgraph_deps pkg_bin_summary
+INSCRIPTS +=	pkg_digger_backend
 
 INSCRIPTS +=	${LIBEXECSCRIPTS}
 
@@ -47,7 +48,8 @@ MAN +=		cvs_checksum.1 # pkg_assignments2pkgpath.1
 MAN +=		pkg_uniq_summary.1 # pkg_summary2bb_pkgs.1
 MAN +=		pkg_cleanup_distdir.1 pkg_summary2build_graph.1
 MAN +=		pkg_summary2deps.1 pkg_lint_summary.1
-MAN +=		pkg_subgraph_deps.1 pkg_bin_summary.1 # pkg_digger.1
+MAN +=		pkg_subgraph_deps.1 pkg_bin_summary.1
+MAN +=		# pkg_digger_backend.1
 
 FILES =		README NEWS TODO
 FILES +=	pkg_grep_summary.awk pkg_src_summary.mk psu_funcs.awk
