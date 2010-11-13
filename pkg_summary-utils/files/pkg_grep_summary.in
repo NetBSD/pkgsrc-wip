@@ -70,6 +70,7 @@ OPTIONS:
 EOF
 }
 
+strats=0
 while test $# -ne 0; do
     case "$1" in
 	-h|--help)
@@ -105,8 +106,7 @@ while test $# -ne 0; do
 	    shift
 	    shift;;
 	-T)
-	    echo 'exact prefix suffix substring word first last re strfile strlist awk empty kw'
-	    exit 0;;
+	    strats=$(($strats+1));;
 	-f)
 	    fields="$2"
 	    shift;;
@@ -132,6 +132,33 @@ while test $# -ne 0; do
     esac
     shift
 done
+
+show_strats (){
+    cat <<'EOF'
+exact	Match exactly
+prefix	Match prefixes
+suffix	Match suffixes
+substring	Match substring
+word	Match separate words
+first	Match the first word
+last	Match the last word
+re	POSIX 1003.2 (modern) regular expressions
+strfile	Match the words from file
+strlist	Match the specified words
+awk	Match using AWK expression
+empty	Match an empty string
+kw	"keyword" match
+EOF
+}
+
+if test "$strats" -gt 1; then
+    show_strats
+    exit 0
+elif test "$strats" -eq 1; then
+    strategies=`show_strats | cut -f1`
+    echo $strategies
+    exit 0
+fi
 
 if test $# -eq 2 -a -z "$strategy"; then
     strategy=awk

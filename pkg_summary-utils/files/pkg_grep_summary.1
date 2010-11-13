@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkg_grep_summary.1,v 1.25 2010/11/12 22:56:54 cheusov Exp $
+.\"	$NetBSD: pkg_grep_summary.1,v 1.26 2010/11/13 21:30:40 cheusov Exp $
 .\"
 .\" Copyright (c) 2008 by Aleksey Cheusov (vle@gmx.net)
 .\" Absolutely no warranty.
@@ -153,7 +153,9 @@ is treated as a list of words at least one of which should present in
 .B "-T"
 display all search strategies available for
 .B -t
-and exits.
+and exits. Doubled
+.I -T
+will show search strategies with their descriptions separated by TAB character.
 .SH NOTES
 .IR "-t exact <field> <string>" " and " "-s <field> <string>" " are equivalents"
 .br

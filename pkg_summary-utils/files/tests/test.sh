@@ -936,15 +936,10 @@ CATEGORIES=textproc
 
 '
 
-runtest pkg_grep_summary -T |
-cmp 'pkg_grep_summary #49' \
-'exact prefix suffix substring word first last re strfile strlist awk empty kw
-'
-
 runtest pkg_grep_summary -fPKGNAME,PKGPATH,MAINTAINER,COMMENT \
     -v -t re MAINTAINER 'cheusov|vle@gmx[.]net' \
     < src_summary.txt |
-cmp 'pkg_grep_summary #50' \
+cmp 'pkg_grep_summary #49' \
 'COMMENT=Check and correct file permissions
 MAINTAINER=rillig@NetBSD.org
 PKGNAME=checkperms-1.10
@@ -1029,7 +1024,7 @@ MAINTAINER=imil@gcu.info
 
 runtest pkg_grep_summary -fPKGNAME,PKGPATH \
     -s PKGPAIR 'wip/dict-server,dict-server' < src_summary.txt |
-cmp 'pkg_grep_summary #51' \
+cmp 'pkg_grep_summary #50' \
 'PKGNAME=dict-server-1.10.11nb2
 PKGPATH=wip/dict-server
 
@@ -1044,7 +1039,7 @@ else
     echo not found
 fi
 } |
-cmp 'pkg_grep_summary #52' \
+cmp 'pkg_grep_summary #51' \
 'not found
 '
 
@@ -1057,9 +1052,31 @@ else
     echo not found
 fi
 } |
-cmp 'pkg_grep_summary #53' \
+cmp 'pkg_grep_summary #52' \
 'No matches found
 not found
+'
+
+runtest pkg_grep_summary -T |
+cmp 'pkg_grep_summary #53' \
+'exact prefix suffix substring word first last re strfile strlist awk empty kw
+'
+
+runtest pkg_grep_summary -T -T |
+cmp 'pkg_grep_summary #54' \
+'exact	Match exactly
+prefix	Match prefixes
+suffix	Match suffixes
+substring	Match substring
+word	Match separate words
+first	Match the first word
+last	Match the last word
+re	POSIX 1003.2 (modern) regular expressions
+strfile	Match the words from file
+strlist	Match the specified words
+awk	Match using AWK expression
+empty	Match an empty string
+kw	"keyword" match
 '
 
 # pkg_list_all_pkgs
