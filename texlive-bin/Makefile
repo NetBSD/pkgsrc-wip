@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2010/06/13 22:47:20 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.14 2010/11/13 02:46:40 minskim Exp $
 #
 
 PKGNAME=	texlive-bin-${TEXLIVE_VERSION}
@@ -51,7 +51,6 @@ CONFIGURE_ARGS+=--disable-multiplatform
 .include "../../wip/texlive/Makefile.common"
 .include "options.mk"
 
-#.include "../../mk/tex.buildlink3.mk"  # XXX
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
