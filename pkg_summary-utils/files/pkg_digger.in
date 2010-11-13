@@ -141,13 +141,19 @@ elif test -n "${shortinfo}${info}"; then
     exit 0
 else
     # f:s:q
+    tmp_dir=`mktemp -d /tmp/pkg_digger.XXXXXX`
+    trap "rm -rf $tmp_dir $new_summary" 0 1 2 15
+
+    cnt=1
     for i in "$@"; do
 	field=`echo "$i" | cut -d: -f1`
 	strat=`echo "$i" | cut -d: -f2`
 	query=`echo "$i" | cut -d: -f3`
 	pkg_grep_summary -fPKGNAME,PKGPATH,ASSIGNMENTS -i \
-	    -t "$strat" "$field" "$query" < "$PKG_DIGGER_SUMMARY"
-    done |
+	    -t "$strat" "$field" "$query" < "$PKG_DIGGER_SUMMARY" > "$tmp_dir/$cnt" &
+	cnt=$(($cnt+1))
+    done
+    wait 
     runawk -v quiet_mode="$quiet_mode" -v limit="$limit" \
 	-e '
     /^PKGPATH=/ {
@@ -161,15 +167,19 @@ else
 	next
     }
     NF == 0 {
-	print pkgpath "," pkgbase
+	pkgpair = pkgpath "," pkgbase
+	if (pkgpair in hash)
+	    next
+	hash [pkgpair] = 1
+	print pkgpair
 	found = 1
     }
     END {
 	if (!found){
 	    if (!quiet_mode)
-		print "No matches found"
+		print "No matches found" > "/dev/stderr"
 	    exit 20
 	}
-    }'
+    }' "$tmp_dir"/*
     exit 0
 fi
