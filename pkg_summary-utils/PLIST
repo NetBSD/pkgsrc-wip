@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.27 2010/11/13 19:59:34 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.28 2010/11/13 21:12:28 cheusov Exp $
 bin/cvs_checksum
 bin/pkg_assignments2pkgpath
 bin/pkg_bin_summary
 bin/pkg_cleanup_distdir
 bin/pkg_cmp_summary
+bin/pkg_digger
 bin/pkg_digger_backend
 bin/pkg_grep_summary
 bin/pkg_lint_summary
@@ -44,6 +45,7 @@ man/man7/pkg_summary-utils.7
 share/doc/pkg_summary-utils/NEWS
 share/doc/pkg_summary-utils/README
 share/doc/pkg_summary-utils/TODO
+share/examples/pkg_summary-utils/pkg_digger.conf
 share/psu_mk/pkg_src_summary.mk
 share/runawk/pkg_grep_summary.awk
 share/runawk/pkgsrc-dewey.awk

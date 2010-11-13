@@ -1,7 +1,8 @@
 #############################################################
 
 LIBEXECDIR ?=	${PREFIX}/libexec/psu
-DOCDIR =	${DATADIR}/doc/pkg_summary-utils
+DOCDIR ?=	${DATADIR}/doc/pkg_summary-utils
+EGDIR ?=	${DOCDIR}/examples
 AWKMODDIR ?=	${DATADIR}/runawk
 MKSCRIPTSDIR ?=	${DATADIR}/psu_mk
 DISTDIR ?=	/usr/pkgsrc/distfiles
@@ -27,7 +28,7 @@ INSCRIPTS +=	pkg_uniq_summary pkg_summary2bb_pkgs
 INSCRIPTS +=	pkg_cleanup_distdir pkg_summary2build_graph
 INSCRIPTS +=	pkg_summary2deps pkg_lint_summary
 INSCRIPTS +=	pkg_subgraph_deps pkg_bin_summary
-INSCRIPTS +=	pkg_digger_backend
+INSCRIPTS +=	pkg_digger_backend pkg_digger
 
 INSCRIPTS +=	${LIBEXECSCRIPTS}
 
@@ -49,17 +50,18 @@ MAN +=		pkg_uniq_summary.1 # pkg_summary2bb_pkgs.1
 MAN +=		pkg_cleanup_distdir.1 pkg_summary2build_graph.1
 MAN +=		pkg_summary2deps.1 pkg_lint_summary.1
 MAN +=		pkg_subgraph_deps.1 pkg_bin_summary.1
-MAN +=		# pkg_digger_backend.1
+MAN +=		# pkg_digger_backend.1 pkg_digger.1
 
 FILES =		README NEWS TODO
 FILES +=	pkg_grep_summary.awk pkg_src_summary.mk psu_funcs.awk
-FILES +=	pkgsrc-dewey.awk
+FILES +=	pkgsrc-dewey.awk pkg_digger.conf
 
 FILESDIR =			${DOCDIR}
 FILESDIR_pkg_grep_summary.awk =	${AWKMODDIR}
 FILESDIR_psu_funcs.awk =	${AWKMODDIR}
 FILESDIR_pkgsrc-dewey.awk =	${AWKMODDIR}
 FILESDIR_pkg_src_summary.mk =	${MKSCRIPTSDIR}
+FILESDIR_pkg_digger.conf =	${EGDIR}
 
 BIRTHDATE =	2008-04-06
 

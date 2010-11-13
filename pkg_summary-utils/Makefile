@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2010/11/13 01:17:35 cheusov Exp $
+# $NetBSD: Makefile,v 1.42 2010/11/13 21:12:28 cheusov Exp $
 
 DISTNAME=	pkg_summary-utils-${VERSION}
 CATEGORIES=	pkgtools
@@ -35,8 +35,13 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${.CURDIR}/files
 
+EGDIR=		${PREFIX}/share/examples/pkg_summary-utils
+
+CONF_FILES=    ${EGDIR}/pkg_digger.conf ${PKG_SYSCONFDIR}/pkg_digger.conf
+
 MAKE_ENV+=	MAKEOBJDIR=${WRKDIR}
 MAKE_ENV+=	AWKMODDIR=${PREFIX}/share/runawk
+MAKE_ENV+=	EGDIR=${EGDIR}
 MAKE_ENV+=	SH=${SH:Q}
 MAKE_ENV+=	BMAKE=${MAKE:Q}
 MAKE_ENV+=	DISTDIR=${DISTDIR}
