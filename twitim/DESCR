@@ -1,0 +1,4 @@
+tim is a Twitter client for GNOME. It is implemented with Gtk2-Perl.
+* Custom watchlists
+* Sounds and pop-up notifications
+* Support XMPP

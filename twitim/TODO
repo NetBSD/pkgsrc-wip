@@ -1,0 +1,3 @@
+* use CONF_FILES framwork
+* check hard coded paths
+* support recommended dependencies
