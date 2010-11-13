@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/11/13 11:49:40 ryo-on Exp $
+# $NetBSD: Makefile,v 1.4 2010/11/13 12:49:55 ryo-on Exp $
 #
 
 DISTNAME=	Net-DBus-GLib-0.33.0
@@ -16,6 +16,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_TOOLS+=	pkg-config
 
 DEPENDS+=	p5-Net-DBus>=0.33.2:../../net/p5-Net-DBus
+DEPENDS+=	p5-glib2-[0-9]*:../../devel/p5-glib2
 
 PERL5_PACKLIST=	auto/Net/DBus/GLib/.packlist
 
