@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4138 2010/11/13 07:03:29 ryo-on Exp $
+# $Id: Makefile,v 1.4139 2010/11/13 10:55:15 ryo-on Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1661,6 +1661,7 @@ SUBDIR+=	p5-Module-Pluggable-Ordered
 SUBDIR+=	p5-Module-Starter-Plugin-CGIApp
 SUBDIR+=	p5-Mojo
 SUBDIR+=	p5-NNTPClient
+SUBDIR+=	p5-Net-DBus-GLib
 SUBDIR+=	p5-Net-DNS-Resolver-Programmable
 SUBDIR+=	p5-Net-Delicious
 SUBDIR+=	p5-Net-IP-Match-Regexp
