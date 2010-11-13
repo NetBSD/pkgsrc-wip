@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/11/13 11:37:59 ryo-on Exp $
+# $NetBSD: Makefile,v 1.3 2010/11/13 11:49:40 ryo-on Exp $
 #
 
 DISTNAME=	Net-DBus-GLib-0.33.0
@@ -12,6 +12,8 @@ COMMENT=	Perl extension for the DBus GLib bindings
 #LICENSE=	# TODO: (see mk/license.mk)
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+USE_TOOLS+=	pkg-config
 
 DEPENDS+=	p5-Net-DBus>=0.33.2:../../net/p5-Net-DBus
 
