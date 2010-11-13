@@ -1,0 +1,3 @@
+Perl bindings to GtkSpell, used in concert with Gtk2::TextView.
+Provides mis-spelled word highlighting in red and offers a right
+click pop-up menu with suggested corrections.
