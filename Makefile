@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4139 2010/11/13 10:55:15 ryo-on Exp $
+# $Id: Makefile,v 1.4140 2010/11/13 12:54:01 ryo-on Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1622,6 +1622,7 @@ SUBDIR+=	p5-Frontier-RPC
 SUBDIR+=	p5-GD-Barcode
 SUBDIR+=	p5-GPS-Garmin
 SUBDIR+=	p5-Getopt-GUI-Long
+SUBDIR+=	p5-Gtk2-Spell
 SUBDIR+=	p5-HTML-CalendarMonthSimple
 SUBDIR+=	p5-HTML-GenerateUtil
 SUBDIR+=	p5-HTML-Latex
