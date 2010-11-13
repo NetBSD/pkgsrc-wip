@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/11/13 06:58:48 ryo-on Exp $
+# $NetBSD: Makefile,v 1.2 2010/11/13 07:05:35 ryo-on Exp $
 #
 
 DISTNAME=	twitim_1.5
@@ -57,7 +57,6 @@ do-install:
 	${CP} -r ${WRKSRC}/Twitim ${DESTDIR}${PERL5_INSTALLVENDORLIB}
 	${INSTALL_DATA} ${WRKSRC}/pixmaps/* ${DESTDIR}${PREFIX}/share/pixmaps/${PKGBASE}
 
-#.include "../../lang/perl5/dirs.mk"
 .include "../../lang/perl5/module.mk"
-#.include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
