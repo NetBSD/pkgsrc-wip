@@ -2750,6 +2750,18 @@ l: not_found /usr/pkg/lib/libz.so.1 wip/dict-client dict-client-1.11.2
 l: not_found /usr/pkg/lib/libz.so.1 wip/dict-server dict-server-1.11.2
 '
 
+pkg_lint_summary -dD src_summary.txt | sort |
+cmp 'pkg_summary2deps -Ap #3' \
+'d: not_found libmaa>=1.2 <- wip/dict-server dict-server-1.10.11nb2
+d: not_found pkg_summary-utils>=0.19.0 <- wip/pkg_online-server pkg_online-server-0.5.0
+'
+
+pkg_lint_summary -dD src_summary2.txt | sort |
+cmp 'pkg_summary2deps -Ap #4' \
+'d: not_found pkg_online-client-0.5.0nb2 <- wip/pkg_online pkg_online-0.5.0nb2
+d: not_found pkg_online-server-0.5.0nb2 <- wip/pkg_online pkg_online-0.5.0nb2
+'
+
 # pkg_subgraph_deps
 pkg_subgraph_deps -f src_pkgs.txt src_deps.txt | sort |
 cmp 'pkg_subgraph_deps #1' \

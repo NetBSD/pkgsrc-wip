@@ -26,7 +26,6 @@
 # (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-
 ############################################################
 
 #env "LC_ALL=C"
@@ -35,8 +34,8 @@
 #use "power_getopt.awk"
 #use "psu_funcs.awk"
 #use "has_prefix.awk"
-#use "braceexpand.awk"
-#use "glob.awk"
+#use "tmpfile.awk"
+#use "xclose.awk"
 
 ############################################################
 #.begin-str help
@@ -47,7 +46,8 @@
 #   -h|--help   display this help
 #   -l          checks REQUIRES/PROVIDES consistency
 #   -L          checks that libs from REQUIRES are present on filesystem
-#   -d          checks that all packages listed in DEPENDS are in the summary
+#   -d          checks that dependencies (DEPENDS) are sanisfied
+#   -D          checks that dependencies (BUILD_DEPENDS) are sanisfied
 #.end-str
 ############################################################
 
@@ -59,13 +59,19 @@ BEGIN {
 	opt_L = getarg("L")
 	opt_l = getarg("l")
 	opt_d = getarg("d")
+	opt_D = getarg("D")
+
 	cnt = 0
 
-	if (!opt_L && !opt_l && !opt_d){
+	if (!opt_L && !opt_l && !opt_d && !opt_D){
 		print "One of the following options should be applied: -L, -l or -d" \
 			> "/dev/stderr"
 		exitnow(1)
 	}
+
+	tmp_summary = tmpfile()
+	if (opt_d || opt_D)
+		printf "" > tmp_summary
 }
 
 /^PKGNAME=/{
@@ -111,23 +117,8 @@ opt_l || opt_L {
 	}
 }
 
-opt_d {
-	if (/^PKGNAME=/){
-		pkgnames [substr($0,9)] = 0
-	}else if (/^DEPENDS=/){
-		cnt=split(substr($0, 9), arr)
-		for (i=1; i <= cnt; ++i){
-			deps [++deps_cnt] = arr [i]
-		}
-	}else if (NF == 0){
-		for (i=1; i <= deps_cnt; ++i){
-			if (! (i in deps))
-				break
-#			print pkgpath, pkgbase, i, "->", deps [i]
-			depends [pkgpath, pkgbase, i] = deps [i]
-		}
-		deps_cnt = 0
-	}
+opt_d || opt_D {
+	print > tmp_summary
 }
 
 NF == 0 {
@@ -175,47 +166,18 @@ END {
 	}
 
 	# -d
-	if (opt_d){
-		for (d in depends){
-			# d: pkgpath SUBSEP pkgname SUBSEP <index>
-			dep    = depends [d]
+	if (opt_d || opt_D){
+		if (ex)
+			fflush()
 
-			split(d, arr, SUBSEP)
+		xclose(tmp_summary)
 
-			if (dep !~ /[{]/){
-				pkgdep = pkgname2pkgbase(dep)
-				ex_d = 1
-				if (pkgdep ~ /[*?\[\]]/){
-					ere = glob2ere(dep)
-					for (i in pkgnames){
-						if (i ~ ere){
-							ex_d = 0
-							break
-						}
-					}
-				}else{
-					ex_d = !(pkgdep in pkg2ver)
-				}
-				if (ex_d){
-					print "d: not_found", dep, "<-", arr [1], arr [2]
-					ex = 1
-				}
-			}else{
-				cnt = split(braceexpand(dep), deps)
-				ok = 0
-				for (i=1; i <= cnt; ++i){
-					pkgdep = pkgname2pkgbase(deps [i])
-					if (pkgdep in pkg2ver){
-						ok = 1
-						break
-					}
-				}
-				if (!ok){
-					print "d2: not_found", dep, "<-", arr [1], arr [2]
-					ex = 1
-				}
-			}
-		}
+		if (opt_d) opts = "d"
+		if (opt_D) opts = opts "D"
+
+		cmd = "pkg_summary2deps -nls" opts " " tmp_summary " 2>&1 > /dev/null" 
+		if (system(cmd))
+			ex = 1
 	}
 
 	exitnow(ex)
