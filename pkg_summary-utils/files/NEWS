@@ -1,4 +1,22 @@
 ----------------------------------------------------------------------
+Version 0.49, by Aleksey Cheusov, Sun, 14 Nov 2010 03:06:22 +0200
+
+  New tool pkg_digger (and pkg_digger_backend) was added. pkg_digger
+  is a powerful high-level searcher in package summaries.
+  Run 'pkg_digger -h' for details.
+
+  pkg_grep_summary:
+    - New option -f was added to specify fields to output
+    - New artificial search field: PKGPAIR = PKGPATH,PKGBASE
+      (e.g. textproc/dict-server,dict-server)
+    - New options -r and -R, see the manual page for details.
+    - Doubled -T shows strategies with their description separated by
+      TAB character.
+
+  pkg_summary2build_graph.in:
+    marked as deprecated
+
+----------------------------------------------------------------------
 Version 0.48.0, by Aleksey Cheusov, Sun,  7 Nov 2010 20:35:18 +0200
 
   Build system has been changed from mk-files to mk-configure

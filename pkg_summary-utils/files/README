@@ -18,6 +18,9 @@ pkg_summary(5) and pkg_src_summary (the same but for pkgsrc tree).
                             for given (in PKGPATH form) packages
    pkg_cmp_summary        - compare two summary files, i.e. packages
                             are compared by their versions
+   pkg_digger             - high-level searcher for package summaries,
+                            pkg_online databases etc.
+   pkg_digger_backend     - pkg_summary.txt backend for pkg_digger
    pkg_update_summary     - updates pkg_summary(5) by analysing the modification
                             time of binary packages and pkg_summary(5) file
    pkg_update_src_summary - efficiently updates pkg_src_summary for all
@@ -34,7 +37,6 @@ pkg_summary(5) and pkg_src_summary (the same but for pkgsrc tree).
    pkg_assignments2pkgpath - makes an ASSIGNMENTS field a part of PKGPATH
    pkg_summary2bb_pkgs     - outputs packages ready for bulk builds
    pkg_summary2deps        - extract dependencies from summary
-   pkg_summary2build_graph - synonym for pkg_summary2deps -Ap
 
 =================================================================
 

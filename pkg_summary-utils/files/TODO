@@ -38,7 +38,9 @@ existing tools:
 
     pkg_summary2bb_pkgs:
 
-    pkg_summary2build_graph:
+    pkg_digger:
+
+    pkg_digger_backend:
 
     pkg_summary2deps:
 

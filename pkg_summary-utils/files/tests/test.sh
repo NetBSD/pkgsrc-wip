@@ -1962,9 +1962,9 @@ cmp 'pkg_cmp_summary #16' \
 '= baz 1.2.3 1.2.3
 '
 
-# pkg_summary2build_graph
-pkg_summary2build_graph src_summary.txt | sort |
-cmp 'pkg_summary2build_graph #1' \
+# pkg_summary2deps -Ap
+pkg_summary2deps -Ap src_summary.txt | sort |
+cmp 'pkg_summary2deps -Ap #1' \
 'devel/gmake devel/libmaa
 devel/gmake editors/emacs
 devel/gmake textproc/dict-client
@@ -2040,14 +2040,14 @@ www/ap2-vhost-ldap:PKG_APACHE=apache2
 www/ap22-vhost-ldap:PKG_APACHE=apache22
 '
 
-pkg_summary2build_graph -s src_summary.txt 2>&1 >/dev/null | sort |
-cmp 'pkg_summary2build_graph #2' \
+pkg_summary2deps -Ap -s src_summary.txt 2>&1 >/dev/null | sort |
+cmp 'pkg_summary2deps -Ap #2' \
 'Cannot find dependency libmaa>=1.2 for package wip/dict-server (dict-server-1.10.11nb2)
 Cannot find dependency pkg_summary-utils>=0.19.0 for package wip/pkg_online-server (pkg_online-server-0.5.0)
 '
 
-pkg_summary2build_graph src_summary2.txt | sort |
-cmp 'pkg_summary2build_graph #3' \
+pkg_summary2deps -Ap src_summary2.txt | sort |
+cmp 'pkg_summary2deps -Ap #3' \
 'devel/gmake
 devel/libltdl
 devel/libmaa wip/dict-client
@@ -2075,21 +2075,21 @@ wip/pkg_summary-utils
 wip/runawk
 '
 
-pkg_summary2build_graph -s src_summary2.txt 2>&1 >/dev/null | sort |
-cmp 'pkg_summary2build_graph #4' \
+pkg_summary2deps -Ap -s src_summary2.txt 2>&1 >/dev/null | sort |
+cmp 'pkg_summary2deps -Ap #4' \
 'Cannot find dependency pkg_online-client-0.5.0nb2 for package wip/pkg_online (pkg_online-0.5.0nb2)
 Cannot find dependency pkg_online-server-0.5.0nb2 for package wip/pkg_online (pkg_online-0.5.0nb2)
 '
 
-pkg_summary2build_graph src_summary7.txt | sort |
-cmp 'pkg_summary2build_graph #5' \
+pkg_summary2deps -Ap src_summary7.txt | sort |
+cmp 'pkg_summary2deps -Ap #5' \
 'audio/py-mutagen audio/py-karaoke
 audio/py-mutagen:PYTHON_VERSION_REQD=24 audio/py-karaoke:PYTHON_VERSION_REQD=24
 audio/py-mutagen:PYTHON_VERSION_REQD=26 audio/py-karaoke:PYTHON_VERSION_REQD=26
 '
 
-pkg_summary2build_graph src_summary8.txt | sort | uniq |
-cmp 'pkg_summary2build_graph #6' \
+pkg_summary2deps -Ap src_summary8.txt | sort | uniq |
+cmp 'pkg_summary2deps -Ap #6' \
 'archivers/p5-Archive-Tar devel/p5-Module-Build
 devel/p5-Algorithm-Diff textproc/p5-Text-Diff
 devel/p5-Compress-Raw-Bzip2 devel/p5-IO-Compress
