@@ -2625,6 +2625,42 @@ textproc/dict-client textproc/dictem:EMACS_TYPE=emacs21
 textproc/dict-client textproc/dictem:EMACS_TYPE=emacs23
 '
 
+pkg_summary2deps -dn src_summary10.txt 2>&1 >/dev/null | sort |
+cmp 'pkg_summary2deps #15' \
+'Cannot find dependency depends1 for package pkgtools/barbaz (barbaz)
+Cannot find dependency depends2 for package pkgtools/barbaz (barbaz)
+'
+
+pkg_summary2deps -dln src_summary10.txt 2>&1 >/dev/null | sort |
+cmp 'pkg_summary2deps #16' \
+'d: not_found depends1 <- pkgtools/barbaz barbaz
+d: not_found depends2 <- pkgtools/barbaz barbaz
+'
+
+pkg_summary2deps -dns src_summary.txt 2>&1 >/dev/null | sort |
+cmp 'pkg_summary2deps #17' \
+'Cannot find dependency libmaa>=1.2 for package wip/dict-server (dict-server-1.10.11nb2)
+Cannot find dependency pkg_summary-utils>=0.19.0 for package wip/pkg_online-server (pkg_online-server-0.5.0)
+'
+
+pkg_summary2deps -dlns src_summary.txt 2>&1 >/dev/null | sort |
+cmp 'pkg_summary2deps #18' \
+'d: not_found libmaa>=1.2 <- wip/dict-server dict-server-1.10.11nb2
+d: not_found pkg_summary-utils>=0.19.0 <- wip/pkg_online-server pkg_online-server-0.5.0
+'
+
+pkg_summary2deps -dns src_summary2.txt 2>&1 >/dev/null | sort |
+cmp 'pkg_summary2deps #19' \
+'Cannot find dependency pkg_online-client-0.5.0nb2 for package wip/pkg_online (pkg_online-0.5.0nb2)
+Cannot find dependency pkg_online-server-0.5.0nb2 for package wip/pkg_online (pkg_online-0.5.0nb2)
+'
+
+pkg_summary2deps -dlns src_summary2.txt 2>&1 >/dev/null | sort |
+cmp 'pkg_summary2deps #20' \
+'d: not_found pkg_online-client-0.5.0nb2 <- wip/pkg_online pkg_online-0.5.0nb2
+d: not_found pkg_online-server-0.5.0nb2 <- wip/pkg_online pkg_online-0.5.0nb2
+'
+
 # pkg_lint_summary
 pkg_lint_summary bin_summary1.txt 2>&1 | sort |
 sed 's/^One of the.*$/MandatoryOptionErrorMessage/' |

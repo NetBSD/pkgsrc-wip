@@ -64,6 +64,9 @@
 #   -s           strict mode, >=, <= etc. are always checked
 #                for dependencies, even if there is only one matched
 #                package
+#   -l           output to stderr the error messages
+#                compatible with pkg_lint_summary, e.g.,
+#                d: not_found foo-[0-9]*:../../devel/foo <- lang/bar bar
 #.end-str
 ############################################################
 
@@ -78,6 +81,15 @@
 #                e.g. suse32_base-10.0|suse32_base-10.0nb*
 #   allbases   - set: PKGBASE
 
+function warn (pkgpath, pkgname, depname){
+	if (mode_lint)
+		printf "d: not_found %s <- %s %s\n",
+			depname, pkgpath, pkgname > "/dev/stderr"
+	else
+		printf "Cannot find dependency %s for package %s (%s)\n",
+			depname, pkgpath, pkgname > "/dev/stderr"
+}
+
 BEGIN {
 	keep_ver = getarg("r")
 	keep_depver = getarg("R")
@@ -87,6 +99,7 @@ BEGIN {
 
 	mode_tsort  = getarg("t")
 	mode_strict = getarg("s")
+	mode_lint   = getarg("l")
 
 	dep_depends  = getarg("d")
 	dep_builddep = getarg("D")
@@ -253,8 +266,7 @@ END {
 
 				if (!matched){
 					if (k == altdepscnt){
-						printf "Cannot find dependency %s for package %s (%s)\n", \
-						depname, path, name> "/dev/stderr"
+						warn(path, name, depname)
 					}
 
 					continue

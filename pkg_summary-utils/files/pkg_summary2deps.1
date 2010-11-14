@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkg_summary2deps.1,v 1.3 2010/11/14 01:04:31 cheusov Exp $
+.\"	$NetBSD: pkg_summary2deps.1,v 1.4 2010/11/14 18:11:55 cheusov Exp $
 .\"
 .\" Copyright (c) 2008-2010 by Aleksey Cheusov (cheusov@tut.by)
 .\" Absolutely no warranty.
@@ -64,6 +64,13 @@ do not strip versions from PKGNAME and imply "-n"
 .TP
 .B "-R"
 do not strip versions from dependencies and imply "-n"
+.TP
+.B "-l"
+output to stderr the error messages
+compatible with pkg_lint_summary, e.g.,
+.VB
+d: not_found foo-[0-9]*:../../devel/foo <- lang/bar bar
+.VE
 .SH ""
 If both "-p" and "-n" are applied,
 .B pkg_summary2deps
@@ -80,6 +87,7 @@ pkg_src_summary -A wip/distbb | pkg_summary2deps -ApRr
 .BR pkg_summary-utils(7) ,
 .BR pkg_summary(5) ,
 .BR pkg_src_summary(1) ,
+.BR pkg_lint_summary(1) ,
 .BR tsort(1)
 .SH AUTHOR
 Aleksey Cheusov <vle@gmx.net>
