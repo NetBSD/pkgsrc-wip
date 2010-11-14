@@ -1,4 +1,16 @@
 ======================================================================
+Version 0.11, by Aleksey Cheusov, Sun, 14 Nov 2010 02:40:05 +0200
+
+  Licence has been changed from MIT to functionally equivalent
+  2-clause-BSD.
+
+  fix: If -b and -s are applied multiple times,
+  the later must be used.
+
+  -Q option has been renamed to -q. -Q is still supported by will be
+   removed in the future.
+
+======================================================================
 Version 0.10, by Aleksey Cheusov, Fri, 29 Oct 2010 01:06:37 +0300
 
   New option -0 was added. If it is applied, on NetBSD, Linux, FreeBSD
