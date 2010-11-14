@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.7 2010/09/16 13:25:23 obache Exp $
+$NetBSD: distinfo,v 1.8 2010/11/14 03:19:57 obache Exp $
 
-SHA1 (Python-2.7.tar.bz2) = 6bbcd1ab16d07765a7a405671e1e43a2e74b8e6a
-RMD160 (Python-2.7.tar.bz2) = e89957d8e76127fd4a86fd733deed1c0ad1248df
-Size (Python-2.7.tar.bz2) = 11735195 bytes
+SHA1 (Python-2.7.1rc1.tar.bz2) = 9b2dbc1fe225f18358d40de2b35868b8a7c0ce0e
+RMD160 (Python-2.7.1rc1.tar.bz2) = cf4a5a7a35fdd9e650fcbb7df8efbc63ae0b81cd
+Size (Python-2.7.1rc1.tar.bz2) = 11720597 bytes
 SHA1 (patch-aa) = 990e4025bb6a37715e1f5df1831499f0ab08acfa
 SHA1 (patch-ab) = 8c44f60d9ed0babb107bc4643b0437e2dd55d03a
 SHA1 (patch-ad) = de730b9f5a5efb56afa8bed05824b5f6579242ec
