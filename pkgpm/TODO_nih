@@ -47,7 +47,7 @@ Plans:
     pkg_leaves, pkgfind, pkg_status, pkg_online-client and
     pkg_rolling-replace.
   - Support for both binary and sources-based upgrade
-  - Less than 4000 lines of code
+  - Less than 3000 lines of code
   - No sqlite or other databases.
   - Support for PKG_OPTIONS and multivariant packages (Python, Apache, PHP)
   - No dependencies other than
