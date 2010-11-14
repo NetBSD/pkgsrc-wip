@@ -115,7 +115,7 @@ opt_d {
 	if (/^PKGNAME=/){
 		pkgnames [substr($0,9)] = 0
 	}else if (/^DEPENDS=/){
-		cnt=split(substr($0, 9), arr, / /)
+		cnt=split(substr($0, 9), arr)
 		for (i=1; i <= cnt; ++i){
 			deps [++deps_cnt] = arr [i]
 		}
