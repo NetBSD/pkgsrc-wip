@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2010/09/17 09:09:11 obache Exp $
+# $NetBSD: Makefile,v 1.10 2010/11/15 11:42:04 obache Exp $
 
 .include "dist.mk"
 
@@ -11,8 +11,6 @@ COMMENT=	Interpreted, interactive, object-oriented programming language
 LICENSE=	python-software-foundation
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-
-# Remember to update pkgsrc/lang/python/srcdist.mk when version changes
 
 CONFLICTS+=	python-[0-9]*
 
