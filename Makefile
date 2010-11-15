@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4141 2010/11/15 09:06:12 ryo-on Exp $
+# $Id: Makefile,v 1.4142 2010/11/15 10:08:36 ryo-on Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1381,6 +1381,7 @@ SUBDIR+=	muttvcquery
 SUBDIR+=	mvsis
 SUBDIR+=	mwf-designer
 SUBDIR+=	mxallowd
+SUBDIR+=	mypaint
 SUBDIR+=	mysql++
 SUBDIR+=	mysql-docs
 SUBDIR+=	mysql-workbench
