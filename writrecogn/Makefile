@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/06/13 22:47:21 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2010/11/15 10:52:15 obache Exp $
 #
 
 DISTNAME=	WritRecogn-0.1.9
@@ -11,6 +11,8 @@ MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://writrecogn.sourceforge.net/
 COMMENT=	CJK Handwriting Recoginzer
 LICENSE=	gnu-gpl-v2
+
+BUILD_DEPENDS+=	gob2>=2.0.0:../../devel/gob2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
