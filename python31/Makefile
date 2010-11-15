@@ -1,19 +1,15 @@
-# $NetBSD: Makefile,v 1.4 2010/01/17 12:03:31 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2010/11/15 12:08:16 obache Exp $
 
-DISTNAME=	Python-3.1.1
-PKGNAME=	python31-3.1.1
-PKGREVISION=	1
+.include "dist.mk"
+
+PKGNAME=	python31-${PY_DISTVERSION}
 CATEGORIES=	lang python
-MASTER_SITES=	http://www.python.org/ftp/python/3.1.1/
-EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.python.org/
 COMMENT=	Interpreted, interactive, object-oriented programming language
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-
-# Remember to update pkgsrc/lang/python/srcdist.mk when version changes
 
 CONFLICTS+=	python-[0-9]*
 
@@ -160,6 +156,7 @@ REPLACE_FILES.py31+=	Lib/test/test_largefile.py Lib/test/test_optparse.py
 post-extract:
 	${MV} ${WRKSRC}/Lib/smtpd.py ${WRKSRC}/Lib/smtpd${PY_VER_SUFFIX}.py
 	${MV} ${WRKSRC}/Tools/scripts/pydoc3 ${WRKSRC}/Tools/scripts/pydoc${PY_VER_SUFFIX}
+	${MV} ${WRKSRC}/Tools/scripts/2to3 ${WRKSRC}/Tools/scripts/2to3-${PY_VER_SUFFIX}
 
 .if ${OPSYS} == "HPUX"
 post-install:

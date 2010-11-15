@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2009/11/02 17:23:11 jeremy-c-reed Exp $
+$NetBSD: distinfo,v 1.6 2010/11/15 12:08:17 obache Exp $
 
 SHA1 (Python-3.1.1.tar.bz2) = 42eb37bf75fae5731f6df1b195902960ae1789e0
 RMD160 (Python-3.1.1.tar.bz2) = d60b64e1346b2ff15d65b032ea35fb3ad8b0dc66
@@ -7,7 +7,7 @@ SHA1 (patch-aa) = d44e67645dc86ff14f5daf5705de02c6f330cc48
 SHA1 (patch-ab) = bf82c7a134871c4832ae3603365586a21f911edf
 SHA1 (patch-ah) = baae1dc107d5e497f85155f75affc94a5ac4fa8d
 SHA1 (patch-al) = c39144cfa4a540900fac879b5faa990628fcee3e
-SHA1 (patch-am) = 45bb412bf06b5cb6e3869580cf07e5942cf2e32b
+SHA1 (patch-am) = bd689caf27ccd712381a46e2baa8a2c0beb6280b
 SHA1 (patch-an) = 17b4e17b3b562c29a050e9bb20447084ce82b8ab
 SHA1 (patch-ao) = 9bbd5561c010e0a1ab8e0a70d27a5f77fd2089d2
 SHA1 (patch-ap) = bd66a036c0d7592185feb312a4ab3ce3b9d8616c

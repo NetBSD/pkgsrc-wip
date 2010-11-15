@@ -1,2 +1,0 @@
-the bin/2to3 conflicts with python26 package
-rename it to maybe add PYVERSSUFFIX

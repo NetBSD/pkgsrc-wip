@@ -1,6 +1,8 @@
 --- setup.py.orig	2009-08-12 13:39:44.000000000 -0500
 +++ setup.py	2009-10-29 19:19:47.000000000 -0500
-@@ -16,7 +16,7 @@
+--- setup.py.orig	2009-08-12 18:39:44.000000000 +0000
++++ setup.py
+@@ -16,7 +16,7 @@ from distutils.command.install import in
  from distutils.command.install_lib import install_lib
  
  # This global variable is used to hold the list of modules to be disabled.
@@ -9,7 +11,7 @@
  
  def add_dir_to_list(dirlist, dir):
      """Add the directory 'dir' to the list 'dirlist' (at the front) if
-@@ -294,9 +294,15 @@
+@@ -294,9 +294,15 @@ class PyBuildExt(build_ext):
          return sys.platform
  
      def detect_modules(self):
@@ -28,7 +30,7 @@
  
          # Add paths specified in the environment variables LDFLAGS and
          # CPPFLAGS for header and library files.
-@@ -563,9 +569,7 @@
+@@ -563,9 +569,7 @@ class PyBuildExt(build_ext):
              if krb5_h:
                  ssl_incs += krb5_h
          ssl_libs = find_library_file(self.compiler, 'ssl',lib_dirs,
@@ -39,7 +41,7 @@
  
          if (ssl_incs is not None and
              ssl_libs is not None):
-@@ -1175,6 +1179,14 @@
+@@ -1175,6 +1179,14 @@ class PyBuildExt(build_ext):
              macros = dict()
              libraries = []
  
@@ -54,12 +56,14 @@
          else:                                   # Linux and other unices
              macros = dict()
              libraries = ['rt']
-@@ -1665,7 +1677,7 @@
+@@ -1665,8 +1677,8 @@ def main():
            # called unless there's at least one extension module defined.
            ext_modules=[Extension('_struct', ['_struct.c'])],
  
 -          scripts = ["Tools/scripts/pydoc3", "Tools/scripts/idle3",
+-                     "Tools/scripts/2to3"]
 +          scripts = ["Tools/scripts/pydoc3.1", "Tools/scripts/idle3",
-                      "Tools/scripts/2to3"]
++                     "Tools/scripts/2to3-3.1"]
          )
  
+ # --install-platlib
