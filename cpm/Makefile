@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/11/13 19:34:13 shattered Exp $
+# $NetBSD: Makefile,v 1.3 2010/11/15 18:37:33 shattered Exp $
 #
 
 DISTNAME=	cpm
@@ -26,10 +26,10 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/conf/cpmrc-default ${EGDIR}/cpmrc
 
 .include "../../devel/cdk/buildlink3.mk"
-.include "../../security/gpgme/buildlink3.mk"
+.include "../../devel/dotconf/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
-.include "../../textproc/libxml2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../security/gpgme/buildlink3.mk"
 .include "../../security/libcrack/buildlink3.mk"
-.include "../../wip/dotconf/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
