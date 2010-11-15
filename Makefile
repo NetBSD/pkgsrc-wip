@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4142 2010/11/15 10:08:36 ryo-on Exp $
+# $Id: Makefile,v 1.4143 2010/11/15 12:12:13 ryo-on Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -177,6 +177,7 @@ SUBDIR+=	bmap
 SUBDIR+=	bmp-docklet
 SUBDIR+=	bnr2
 SUBDIR+=	boa
+SUBDIR+=	bochs-snapshot
 SUBDIR+=	bodr
 SUBDIR+=	bogomips
 SUBDIR+=	boinc
