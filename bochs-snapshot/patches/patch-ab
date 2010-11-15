@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2010/11/15 12:01:53 ryo-on Exp $
+
+--- iodev/soundosx.cc.orig	2010-02-26 14:18:19.000000000 +0000
++++ iodev/soundosx.cc
+@@ -21,7 +21,7 @@
+ // This file (SOUNDOSX.CC) written and donated by Brian Huffman
+ 
+ #ifdef PARANOID
+-#include <MacTypes.h>
++#include <CoreServices/CoreServices.h>
+ #endif
+ 
+ #define NO_DEVICE_INCLUDES
