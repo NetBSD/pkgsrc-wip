@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.8 2010/11/16 15:08:41 haad Exp $
+# $NetBSD: Makefile,v 1.1 2010/11/16 15:08:41 haad Exp $
 #
 
-DISTNAME=		buildbot-0.8.2
+DISTNAME=		buildbot-slave-0.8.2
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=buildbot/}
 
 MAINTAINER=		haad@NetBSD.org
 HOMEPAGE=		http://buildbot.sourceforge.net/
-COMMENT=		System to automate the compile/test cycle
+COMMENT=		System to automate the compile/test cycle, this is slave part of buildbot.
 
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
