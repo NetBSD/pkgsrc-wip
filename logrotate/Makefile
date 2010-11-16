@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.12 2010/11/03 22:10:55 ahp-nils Exp $
+# $NetBSD: Makefile,v 1.13 2010/11/16 13:53:39 ahp-nils Exp $
 #
 
 DISTNAME=		logrotate-3.7.9
 CATEGORIES=		sysutils
-#MASTER_SITES=		${MASTER_SITE_GENTOO:=distfiles/}
-MASTER_SITES=		${MASTER_SITE_FREEBSD:=distfiles/}
+MASTER_SITES=		${MASTER_SITE_GENTOO:=distfiles/}
+MASTER_SITES+=		${MASTER_SITE_FREEBSD:=distfiles/}
 
 MAINTAINER=		ahp-nils@users.sourceforge.net
 HOMEPAGE=		https://fedorahosted.org/logrotate/
@@ -33,13 +33,13 @@ SUBST_STAGE.confs=	post-patch
 SUBST_MESSAGE.confs=	Fixing configuration files.
 SUBST_FILES.confs=	${WRKSRC}/${EXAMPLES_DIR}/logrotate-default
 SUBST_FILES.confs+=	${WRKSRC}/${EXAMPLES_DIR}/logrotate.cron
-SUBST_SED.confs=	-e "s|__PREFIX__|${PREFIX}|g"
+SUBST_VARS.confs=	PREFIX
 
 SUBST_CLASSES+=		man
 SUBST_STAGE.man=	post-patch
 SUBST_MESSAGE.man=	Fixing man page.
 SUBST_FILES.man+=	${WRKSRC}/logrotate.8
-SUBST_SED.man+=		-e "s|__PREFIX__|${PREFIX}|g"
+SUBST_VARS.man+=	PREFIX
 
 MESSAGE_SUBST+=		DOCDIR=${DOCDIR}
 MESSAGE_SUBST+=		EXAMPLES_DIR=${EXAMPLES_DIR}
