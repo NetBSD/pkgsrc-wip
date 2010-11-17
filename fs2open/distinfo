@@ -1,7 +1,10 @@
-$NetBSD: distinfo,v 1.2 2010/03/09 09:32:07 yhardy Exp $
+$NetBSD: distinfo,v 1.3 2010/11/17 08:03:41 yhardy Exp $
 
-SHA1 (fs2_open_3_6_10.tgz) = ae54a9f5bf83cd89268f4f9a5e8031d9084cf0d3
-RMD160 (fs2_open_3_6_10.tgz) = a154571dcfd7e962f94e84c293e43d18181778b3
-Size (fs2_open_3_6_10.tgz) = 11291429 bytes
-SHA1 (patch-aa) = a91c18042d0c1f5d3d9fec94308493bbc3f007d7
-SHA1 (patch-ab) = 62f760d6fd526675ab1b46b6945e503215815c9e
+SHA1 (fs2_open_3_6_12_src.tgz) = cc051fb95f36417b99aa7e6c34b8dc4b6a9669c2
+RMD160 (fs2_open_3_6_12_src.tgz) = 1842a4efe1517ac0298bb0f5b5db89330c623b78
+Size (fs2_open_3_6_12_src.tgz) = 7416654 bytes
+SHA1 (patch-aa) = bb3dbca3d892b46ab7fcfaf2d20ea7e1e567c691
+SHA1 (patch-ab) = 4918aa3c488d11fa1132b1659bb7931ddf61669e
+SHA1 (patch-ac) = df7e619c2b8dfef70090149206e64f7b0db35a5f
+SHA1 (patch-ad) = a1c99397bd934224abb8466bbe2bf165a8b7401a
+SHA1 (patch-ae) = 276293d4fb38e4c7042bff30be83f1da1c597516

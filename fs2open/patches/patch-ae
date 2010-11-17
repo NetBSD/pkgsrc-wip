@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1 2010/11/17 08:03:41 yhardy Exp $
+
+--- ./Makefile.am.orig	2010-11-16 11:49:41.000000000 +0200
++++ ./Makefile.am	2010-11-16 11:50:09.000000000 +0200
+@@ -2,7 +2,7 @@
+ #
+ # This file uses GNU Automake to generate makefiles
+ 
+-SUBDIRS = libjpeg lua code
++SUBDIRS = code
+ 
+ 
+ EXTRA_DIST =	\

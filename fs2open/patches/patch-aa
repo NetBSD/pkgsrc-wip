@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.2 2010/03/09 09:32:07 yhardy Exp $
+$NetBSD: patch-aa,v 1.3 2010/11/17 08:03:41 yhardy Exp $
 
---- configure.ac.orig	2010-03-08 21:18:48.000000000 +0200
-+++ configure.ac	2010-03-08 21:20:24.000000000 +0200
+--- ./configure.ac.orig	2010-07-01 17:51:52.000000000 +0200
++++ ./configure.ac	2010-11-16 11:53:26.000000000 +0200
 @@ -155,6 +155,21 @@
  		D_LDFLAGS="$D_LDFLAGS -lobjc -fPIC -Wl,-noprebind"
  		D_CFLAGS="$D_CFLAGS -DLUA_USE_MACOSX"
@@ -24,3 +24,12 @@ $NetBSD: patch-aa,v 1.2 2010/03/09 09:32:07 yhardy Exp $
  	*)
  		# Unknown
  		echo "fs2_open does not support $host_cpu-$host_os"
+@@ -451,7 +466,7 @@
+ 
+ 
+ dnl The makefiles we create
+-AC_OUTPUT([Makefile libjpeg/Makefile lua/Makefile code/Makefile])
++AC_OUTPUT([Makefile code/Makefile])
+ 
+ 
+ echo

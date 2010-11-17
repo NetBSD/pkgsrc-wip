@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.3 2010/11/17 08:03:41 yhardy Exp $
+
+--- ./code/jpgutils/jpgutils.cpp.orig	2010-11-16 11:53:45.000000000 +0200
++++ ./code/jpgutils/jpgutils.cpp	2010-11-16 11:53:54.000000000 +0200
+@@ -13,7 +13,7 @@
+ #include <string.h>
+ #include <setjmp.h>
+ 
+-#include "../../libjpeg/jpeglib.h"
++#include "jpeglib.h"
+ 
+ #undef LOCAL // fix from a jpeg header, pstypes.h will define it again
+ 
