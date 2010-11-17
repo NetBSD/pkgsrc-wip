@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4143 2010/11/15 12:12:13 ryo-on Exp $
+# $Id: Makefile,v 1.4144 2010/11/17 01:41:24 obache Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -610,7 +610,6 @@ SUBDIR+=	gnunet
 SUBDIR+=	gnupoc-makesis
 SUBDIR+=	gnupod
 SUBDIR+=	goattracker
-SUBDIR+=	gobject-introspection
 SUBDIR+=	godura
 SUBDIR+=	goldwater
 SUBDIR+=	google-perftools

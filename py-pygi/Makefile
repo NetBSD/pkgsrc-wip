@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/06/13 22:47:14 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2010/11/17 01:41:24 obache Exp $
 #
 
 DISTNAME=	pygi-0.5.1
@@ -12,7 +12,7 @@ HOMEPAGE=	http://live.gnome.org/PyGI
 COMMENT=	Python dynamic bindings based on GObject-Introspection
 LICENSE=	gnu-lgpl-v2.1
 
-DEPENDS+=	gobject-introspection>=0.6.9:../../wip/gobject-introspection
+DEPENDS+=	gobject-introspection>=0.6.9:../../devel/gobject-introspection
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 

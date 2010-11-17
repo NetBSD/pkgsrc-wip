@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/06/13 22:46:58 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2010/11/17 01:41:24 obache Exp $
 #
 
 DISTNAME=	couchdb-glib-0.5.99
@@ -12,7 +12,7 @@ HOMEPAGE=	https://launchpad.net/couchdb-glib
 COMMENT=	GLib-based api to access couchdb databases
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	gobject-introspection>=0.6.7:../../wip/gobject-introspection
+DEPENDS+=	gobject-introspection>=0.6.7:../../devel/gobject-introspection
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/09/19 08:21:47 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2010/11/17 01:41:24 obache Exp $
 #
 
 DISTNAME=	discident-glib-0.9.9
@@ -11,7 +11,7 @@ HOMEPAGE=	http://git.gnome.org/browse/discident-glib/
 COMMENT=	Discident-glib is a convenience library for the DiscIdent Web Service
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	gobject-introspection>=0.6.10:../../wip/gobject-introspection
+DEPENDS+=	gobject-introspection>=0.6.10:../../devel/gobject-introspection
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
