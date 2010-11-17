@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST.vfs,v 1.6 2010/07/07 16:30:40 cheusov Exp $
+@comment $NetBSD: PLIST.vfs,v 1.7 2010/11/17 10:37:43 cheusov Exp $
+libexec/mc/extfs.d/README
+libexec/mc/extfs.d/README.extfs
 libexec/mc/extfs.d/a+
 libexec/mc/extfs.d/apt+
 libexec/mc/extfs.d/audio
@@ -12,8 +14,6 @@ libexec/mc/extfs.d/iso9660
 libexec/mc/extfs.d/lslR
 libexec/mc/extfs.d/mailfs
 libexec/mc/extfs.d/patchfs
-libexec/mc/extfs.d/README
-libexec/mc/extfs.d/README.extfs
 libexec/mc/extfs.d/rpm
 libexec/mc/extfs.d/rpms+
 libexec/mc/extfs.d/s3+

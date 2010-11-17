@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2010/07/07 16:30:40 cheusov Exp $
+# $NetBSD: Makefile,v 1.13 2010/11/17 10:37:43 cheusov Exp $
 
-DISTNAME=	mc-4.7.0.7
+DISTNAME=	mc-4.7.0.10
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.midnight-commander.org/downloads/
 EXTRACT_SUFX=	.tar.bz2
@@ -12,7 +12,7 @@ COMMENT=	User-friendly file manager and visual shell
 PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_TOOLS+=		pkg-config unzip:run zip:run
+USE_TOOLS+=		pkg-config unzip:run
 GNU_CONFIGURE=		YES
 USE_PKGLOCALEDIR=	YES
 
@@ -52,7 +52,7 @@ conffiles+=	mc.charsets
 .endif
 
 .for i in ${conffiles}
-CONF_FILES+=     ${EGDIR}/${i} ${PKG_SYSCONFDIR}/${i}
+CONF_FILES+=	${EGDIR}/${i} ${PKG_SYSCONFDIR}/${i}
 .endfor
 
 INSTALLATION_DIRS+=	${EGDIR} ${EGDIR}/syntax
