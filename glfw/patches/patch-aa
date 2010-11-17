@@ -1,0 +1,23 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/11/17 13:45:13 ryo-on Exp $
+
+--- lib/x11/Makefile.x11.in.orig	2009-11-08 19:22:48.000000000 +0000
++++ lib/x11/Makefile.x11.in
+@@ -26,12 +26,12 @@ HEADERS     = ../../include/GL/glfw.h ..
+ # Install GLFW static library
+ ##########################################################################
+ install: libglfw.a libglfw.pc
+-	$(INSTALL) -d $(PREFIX)/lib
+-	$(INSTALL) -c -m 644 libglfw.a $(PREFIX)/lib/libglfw.a
+-	$(INSTALL) -d $(PREFIX)/include/GL
+-	$(INSTALL) -c -m 644 ../../include/GL/glfw.h $(PREFIX)/include/GL/glfw.h
+-	$(INSTALL) -d $(PREFIX)/lib/pkgconfig
+-	$(INSTALL) -c -m 644 libglfw.pc $(PREFIX)/lib/pkgconfig/libglfw.pc
++	$(INSTALL) -d ${DESTDIR}$(PREFIX)/lib
++	$(INSTALL) -c -m 644 libglfw.a ${DESTDIR}$(PREFIX)/lib/libglfw.a
++	$(INSTALL) -d ${DESTDIR}$(PREFIX)/include/GL
++	$(INSTALL) -c -m 644 ../../include/GL/glfw.h ${DESTDIR}$(PREFIX)/include/GL/glfw.h
++	$(INSTALL) -d ${DESTDIR}$(PREFIX)/lib/pkgconfig
++	$(INSTALL) -c -m 644 libglfw.pc ${DESTDIR}$(PREFIX)/lib/pkgconfig/libglfw.pc
+ 
+ 
+ ##########################################################################
