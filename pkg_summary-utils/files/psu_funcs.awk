@@ -5,7 +5,7 @@ function pkgver_position (pkgname,            idx){
 	if (match(pkgname, /<|>|=/))
 		return RSTART
 	else
-		return match(pkgname, /-(\[[^\[\]]*\][*+]|[^-])*$/)
+		return match(pkgname, /-(\[[^\[\]]*\]|[^-])*$/)
 }
 
 # strip version from PKGNAME
