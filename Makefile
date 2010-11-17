@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4145 2010/11/17 10:48:47 ryo-on Exp $
+# $Id: Makefile,v 1.4146 2010/11/17 13:46:16 ryo-on Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -569,6 +569,7 @@ SUBDIR+=	gjots2
 SUBDIR+=	gksu
 SUBDIR+=	gl
 SUBDIR+=	glade2-nognome
+SUBDIR+=	glfw
 SUBDIR+=	glib-java
 SUBDIR+=	glibc
 SUBDIR+=	glide3
