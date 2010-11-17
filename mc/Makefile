@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2010/11/17 10:37:43 cheusov Exp $
+# $NetBSD: Makefile,v 1.14 2010/11/17 22:11:26 cheusov Exp $
 
 DISTNAME=	mc-4.7.0.10
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.midnight-commander.org/downloads/
 EXTRACT_SUFX=	.tar.bz2
@@ -31,12 +32,6 @@ PLIST_SRC+=		${PKGDIR}/PLIST
 
 .include "options.mk"
 
-PKG_SYSCONFSUBDIR=	mc
-SUBST_CLASSES+=		conf
-SUBST_STAGE.conf=	post-patch
-SUBST_FILES.conf=	lib/vfs/mc-vfs/extfs.c lib/vfs/mc-vfs/sfs.c
-SUBST_VARS.conf=	PKG_SYSCONFDIR
-
 EGDIR=			${PREFIX}/share/examples/mc
 
 conffiles=	cedit.menu edit.indent.rc edit.spell.rc filehighlight.ini \
@@ -51,8 +46,10 @@ conffiles+=	sfs.ini
 conffiles+=	mc.charsets
 .endif
 
+OWN_DIRS+=	${PKG_SYSCONFDIR}/mc ${PKG_SYSCONFDIR}/mc/syntax
+
 .for i in ${conffiles}
-CONF_FILES+=	${EGDIR}/${i} ${PKG_SYSCONFDIR}/${i}
+CONF_FILES+=	${EGDIR}/${i} ${PKG_SYSCONFDIR}/mc/${i}
 .endfor
 
 INSTALLATION_DIRS+=	${EGDIR} ${EGDIR}/syntax
