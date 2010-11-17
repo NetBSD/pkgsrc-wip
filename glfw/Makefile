@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/11/17 13:45:13 ryo-on Exp $
+# $NetBSD: Makefile,v 1.2 2010/11/17 14:19:05 ryo-on Exp $
 #
 
 DISTNAME=	glfw-2.7
@@ -24,7 +24,7 @@ INSTALL_TARGET=	x11-install
 
 MAKE_FLAGS=	SOFLAGS=-shared
 
-PKGCONFIG_OVERRIDE+=	libglfw.pc.in
+PKGCONFIG_OVERRIDE+=	lib/x11/libglfw.pc.in
 
 do-configure:
 	cd ${WRKSRC} && \
