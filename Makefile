@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4144 2010/11/17 01:41:24 obache Exp $
+# $Id: Makefile,v 1.4145 2010/11/17 10:48:47 ryo-on Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -449,6 +449,7 @@ SUBDIR+=	etoile
 SUBDIR+=	etoile-core
 SUBDIR+=	etoile-services
 SUBDIR+=	eventlog
+SUBDIR+=	ever-note-mode
 SUBDIR+=	evilvte
 SUBDIR+=	evolution-couchdb
 SUBDIR+=	evolution-rss
@@ -534,6 +535,7 @@ SUBDIR+=	gaphor
 SUBDIR+=	gappa
 SUBDIR+=	gauche-dbd-pg
 SUBDIR+=	gauche-fastcgi
+SUBDIR+=	gcap
 SUBDIR+=	gcc42
 SUBDIR+=	gcc43
 SUBDIR+=	gconf-cleaner
@@ -622,6 +624,7 @@ SUBDIR+=	gplbasic
 SUBDIR+=	gps
 SUBDIR+=	gpsdrive
 SUBDIR+=	gpx2shp
+SUBDIR+=	grake
 SUBDIR+=	grandr
 SUBDIR+=	granule
 SUBDIR+=	graphmonkey
@@ -2497,6 +2500,7 @@ SUBDIR+=	udhcp
 SUBDIR+=	uebimiau
 SUBDIR+=	uffizi
 SUBDIR+=	umix
+SUBDIR+=	umph
 SUBDIR+=	umurmur
 SUBDIR+=	undo-tree
 SUBDIR+=	unix2tcp
