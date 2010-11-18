@@ -11,8 +11,6 @@ empty GNATS_SITE
 
 should this predefine GNATS_ROOT??
 
-maybe provide a ${GNATS_ROOT}/gnats-adm/config file ??
-
 allow somethings to be set with variables
 and don't edit file after installation with install-sid
 (and make install-sid modify config file instead)
