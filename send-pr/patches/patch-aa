@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 2010/11/18 17:00:35 cheusov Exp $
+$NetBSD: patch-aa,v 1.4 2010/11/18 17:09:44 cheusov Exp $
 
 --- Makefile.in.orig	2001-05-08 17:22:21.000000000 +0000
 +++ Makefile.in
@@ -10,24 +10,6 @@ $NetBSD: patch-aa,v 1.3 2010/11/18 17:00:35 cheusov Exp $
  
  CFLAGS = -g
  LDFLAGS = -g
-@@ -130,14 +131,14 @@ all: send-pr install-sid send-pr.el send
- send-pr: send-pr.sh Makefile
- 	sed -e 's,xVERSIONx,$(VERSION),' \
- 	    -e 's,xGNATS_ROOTx,$(GNATS_ROOT),' \
--	    -e 's,xGNATS_ADDRx,$(GNATS_ADDR),' \
--	    -e 's,xGNATS_SITEx,$(GNATS_SITE),' \
-+	    -e 's,xGNATS_ADDRx,,' \
-+	    -e 's,xGNATS_SITEx,,' \
- 	    -e 's,xSUBMITTERx,$(SUBMITTER),' \
- 	    -e 's,xECHONx,$(ECHON),' \
- 	    -e 's,xMAIL_AGENTx,$(MAIL_AGENT),' \
- 	    -e 's,xPASSWDx,$(PASSWD),' \
- 	    -e 's%xDEFAULT_ORGANIZATIONx%$(DEFAULT_ORGANIZATION)%' \
--	    -e 's,xDEFAULT_RELEASEx,$(DEFAULT_RELEASE),' \
-+	    -e 's,xDEFAULT_RELEASEx,,' \
- 	    -e 's,xDATADIRx,$(datadir),' $(srcdir)/send-pr.sh > $@-t
- 	mv $@-t $@
- 	chmod 755 $@
 @@ -174,19 +175,19 @@ install-gnats-arch-dep: install-norm-arc
  install-norm all-gnats: install-norm-arch-indep install-norm-arch-dep
  
