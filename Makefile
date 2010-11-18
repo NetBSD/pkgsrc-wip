@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4146 2010/11/17 13:46:16 ryo-on Exp $
+# $Id: Makefile,v 1.4147 2010/11/18 10:06:27 ryo-on Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -513,6 +513,7 @@ SUBDIR+=	frozen-bubble
 SUBDIR+=	fs2open
 SUBDIR+=	fslsfonts
 SUBDIR+=	fstobdf
+SUBDIR+=	ftgl
 SUBDIR+=	ftpd-tls
 SUBDIR+=	ftpsesame
 SUBDIR+=	fuse-smbfs
