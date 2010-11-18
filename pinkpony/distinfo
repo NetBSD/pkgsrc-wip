@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/11/18 13:44:03 ryo-on Exp $
+
+SHA1 (pink-pony-1.2.1.tar.bz2) = d4168fa6b95e114129236a4e7ac7fb92e6a5143e
+RMD160 (pink-pony-1.2.1.tar.bz2) = 829fbb6864bcc3b197d3606c19bea1347888cbb4
+Size (pink-pony-1.2.1.tar.bz2) = 10194361 bytes
+SHA1 (patch-aa) = 8b4668cfea6dde44b75211d9446aea93e841e0f3
