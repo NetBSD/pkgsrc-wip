@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/06/13 22:47:20 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2010/11/18 22:58:28 thomasklausner Exp $
 #
 
 DISTNAME=	torcs-1.3.1
@@ -62,4 +62,5 @@ INSTALL_TARGET=		install datainstall
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
 .include "../../x11/libXrender/buildlink3.mk"
+.include "../../x11/libXxf86vm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
