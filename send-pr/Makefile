@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2010/11/18 17:00:34 cheusov Exp $
+# $NetBSD: Makefile,v 1.11 2010/11/18 17:46:54 cheusov Exp $
 
 # this should use a Makefile.common to share the DISTNAME
 DISTNAME=	gnats-3.113.1
@@ -24,13 +24,25 @@ USE_TOOLS+=		makeinfo
 INFO_FILES=		yes
 
 CONFIGURE_ARGS=		--with-lispdir=${PREFIX}/share/emacs/site-lisp
+
+CONFIGURE_ENV+=		GNATS_ROOT=${PKG_SYSCONFDIR}/gnats
+
 INSTALL_TARGET=		install install-info
 
 # this stops the configuration program from pulling installation
 # information in from the standard NetBSD send-pr program
 CONFIGURE_ENV+=		SEND_PR=/dev/null
+
 MAKE_FLAGS+=		MAKEINFO=makeinfo\ --no-split
+
 AUTO_MKDIRS=		yes
+
+EGDIR=			${PREFIX}/share/examples/gnats
+CONF_FILES=		${EGDIR}/config \
+			${PKG_SYSCONFDIR}/gnats/gnats-adm/config
+
+MAKE_DIRS+=		${PKG_SYSCONFDIR}/gnats \
+			${PKG_SYSCONFDIR}/gnats/gnats-adm
 
 SUBST_CLASSES+=		fix-paths
 SUBST_STAGE.fix-paths=	post-patch
@@ -45,5 +57,6 @@ post-build:
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/INSTALL ${DESTDIR}${PREFIX}/share/gnats/dist/INSTALL.send-pr
 	${INSTALL_DATA} ${FILESDIR}/netbsd-categories ${DESTDIR}${PREFIX}/share/gnats/netbsd
+	${INSTALL_DATA} ${.CURDIR}/files/config ${DESTDIR}${EGDIR}
 
 .include "../../mk/bsd.pkg.mk"
