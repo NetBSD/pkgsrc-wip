@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2010/11/13 15:48:54 cheusov Exp $
+# $NetBSD: Makefile,v 1.10 2010/11/18 17:00:34 cheusov Exp $
 
 # this should use a Makefile.common to share the DISTNAME
 DISTNAME=	gnats-3.113.1
@@ -29,7 +29,7 @@ INSTALL_TARGET=		install install-info
 # this stops the configuration program from pulling installation
 # information in from the standard NetBSD send-pr program
 CONFIGURE_ENV+=		SEND_PR=/dev/null
-
+MAKE_FLAGS+=		MAKEINFO=makeinfo\ --no-split
 AUTO_MKDIRS=		yes
 
 SUBST_CLASSES+=		fix-paths
