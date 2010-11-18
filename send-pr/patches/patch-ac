@@ -1,16 +1,7 @@
-$NetBSD: patch-ac,v 1.1.1.1 2003/10/13 23:23:34 jeremy-c-reed Exp $
+$NetBSD: patch-ac,v 1.2 2010/11/18 18:20:50 cheusov Exp $
 
 --- send-pr.sh.orig	1999-04-20 14:17:06.000000000 -0700
 +++ send-pr.sh	2003-10-13 15:49:51.000000000 -0700
-@@ -195,7 +195,7 @@
- 
- if [ -n "$USER_GNATS_SITE" ] && [ "$USER_GNATS_SITE" != "$GNATS_SITE" ]; then
-   GNATS_SITE=$USER_GNATS_SITE
--  GNATS_ADDR=$USER_GNATS_SITE-gnats
-+  [ -n "$EXPLICIT_GNATS_ADDR" ] || GNATS_ADDR=$USER_GNATS_SITE-gnats
- fi
- 
- if [ "$SUBMITTER" = "unknown" -a -z "$REQUEST_ID" -a -z "$IN_FILE" ]; then
 @@ -208,8 +208,10 @@
  where YOUR-SID is the identification code you received with `send-pr'.
  `send-pr' will automatically insert this value into the template field
