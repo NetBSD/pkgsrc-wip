@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/11/18 13:43:13 ryo-on Exp $
+
+SHA1 (audiere-1.9.4.tar.gz) = 3219f1569ff7f2f754570ddc903d65e9a56754b9
+RMD160 (audiere-1.9.4.tar.gz) = 105fbc74b52a60f73afa029895030c0a1ddc6739
+Size (audiere-1.9.4.tar.gz) = 453279 bytes
