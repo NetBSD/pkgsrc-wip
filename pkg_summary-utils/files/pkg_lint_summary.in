@@ -48,6 +48,7 @@
 #   -L          checks that libs from REQUIRES are present on filesystem
 #   -d          checks that dependencies (DEPENDS) are sanisfied
 #   -D          checks that dependencies (BUILD_DEPENDS) are sanisfied
+#   -c          checks CONFLICTS
 #.end-str
 ############################################################
 
@@ -60,17 +61,18 @@ BEGIN {
 	opt_l = getarg("l")
 	opt_d = getarg("d")
 	opt_D = getarg("D")
+	opt_c = getarg("c")
 
 	cnt = 0
 
-	if (!opt_L && !opt_l && !opt_d && !opt_D){
+	if (!opt_L && !opt_l && !opt_d && !opt_D && !opt_c){
 		print "One of the following options should be applied: -L, -l or -d" \
 			> "/dev/stderr"
 		exitnow(1)
 	}
 
 	tmp_summary = tmpfile()
-	if (opt_d || opt_D)
+	if (opt_d || opt_D || opt_c)
 		printf "" > tmp_summary
 }
 
@@ -117,7 +119,7 @@ opt_l || opt_L {
 	}
 }
 
-opt_d || opt_D {
+opt_d || opt_D || opt_c {
 	print > tmp_summary
 }
 
@@ -165,8 +167,8 @@ END {
 		}
 	}
 
-	# -d
-	if (opt_d || opt_D){
+	# -d -D -c
+	if (opt_d || opt_D || opt_c){
 		if (ex)
 			fflush()
 
@@ -174,6 +176,7 @@ END {
 
 		if (opt_d) opts = "d"
 		if (opt_D) opts = opts "D"
+		if (opt_c) opts = opts "c"
 
 		cmd = "pkg_summary2deps -nls" opts " " tmp_summary " 2>&1 > /dev/null" 
 		if (system(cmd))

@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkg_lint_summary.1,v 1.6 2010/11/14 01:04:31 cheusov Exp $
+.\"	$NetBSD: pkg_lint_summary.1,v 1.7 2010/11/18 22:41:50 cheusov Exp $
 .\"
 .\" Copyright (c) 2008-2010 by Aleksey Cheusov (vle@gmx.net)
 .\" Absolutely no warranty.
@@ -70,14 +70,15 @@ Sample of usage:
 .VE
 .TP
 .B "-d"
-checks that ALL required dependencies are present. Format of the output:
+checks that ALL required DEPENDS are present and their versions
+are good to satisfy requirements. Format of the output:
 .VB
 
    d: not_found ABSENT <- PKGPATH PKGBASE
 
 .VE
-This means that the package PKGNAME from PKGPATH requires package ABSENT but
-it is absent in input summary.
+This means that the package PKGBASE from PKGPATH requires package ABSENT but
+it is absent in input summary or requirements are not satisfied.
 Sample of usage:
 .VB
 
@@ -92,6 +93,18 @@ Sample of usage:
    d: not_found gtk2+ <- devel/libglade libglade
    d: not_found gtk2+ <- www/nspluginwrapper nspluginwrapper
    #
+
+.VE
+.TP
+.B "-D"
+the same as "-d" but for BUILD_DEPENDS
+.TP
+.B "-c"
+summary given on input is analysed for CONFLICTS, found conflicts are
+output in the following format:
+.VB
+
+   c: conflict CNFLCT_REQD CNFLCT_PATH CNFLCT_NAME <- PKGPATH PKGBASE
 
 .VE
 .SH SEE ALSO
