@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4147 2010/11/18 10:06:27 ryo-on Exp $
+# $Id: Makefile,v 1.4148 2010/11/18 13:50:36 ryo-on Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -129,6 +129,7 @@ SUBDIR+=	atlas
 SUBDIR+=	aubio
 SUBDIR+=	auctex-current
 SUBDIR+=	audacity-devel
+SUBDIR+=	audiere
 SUBDIR+=	audio-mml
 SUBDIR+=	audit-system
 SUBDIR+=	auto-complete-mode
@@ -1827,6 +1828,7 @@ SUBDIR+=	pike-core
 SUBDIR+=	pike-gdbm
 SUBDIR+=	pike-mime
 SUBDIR+=	pinball
+SUBDIR+=	pinkpony
 SUBDIR+=	pizza
 SUBDIR+=	pjproject
 SUBDIR+=	pkg_conflicts
