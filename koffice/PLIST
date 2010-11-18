@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2010/06/01 21:10:06 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.7 2010/11/18 12:52:25 thomasklausner Exp $
 bin/karbon
 bin/kexi
 bin/koconverter
@@ -392,7 +392,6 @@ lib/kde4/kritacolorgenerator.so
 lib/kde4/kritacolorrange.so
 lib/kde4/kritacolorsfilters.so
 lib/kde4/kritacolorspaceconversion.so
-lib/kde4/kritacomplexbrush.so
 lib/kde4/kritaconvolutionfilters.so
 lib/kde4/kritacurvepaintop.so
 lib/kde4/kritadefaultdockers.so
@@ -505,9 +504,12 @@ lib/kde4/libkounavailpart.so
 lib/kde4/libkplatopart.so
 lib/kde4/libkplatoworkpart.so
 lib/kde4/libkpresenterpart.so
+lib/kde4/libkrita_raw_import.so
 lib/kde4/libkritabmpexport.so
 lib/kde4/libkritabmpimport.so
 lib/kde4/libkritagifimport.so
+lib/kde4/libkritajp2export.so
+lib/kde4/libkritajp2import.so
 lib/kde4/libkritajpegexport.so
 lib/kde4/libkritajpegimport.so
 lib/kde4/libkritaoraexport.so
@@ -585,7 +587,6 @@ lib/libkdeinit4_krita.so
 lib/libkdeinit4_kspread.so
 lib/libkdeinit4_kthesaurus.so
 lib/libkdeinit4_kword.so
-lib/libkdeinit_kformula.so
 lib/libkexicore.so
 lib/libkexicore.so.7
 lib/libkexicore.so.7.0.0
@@ -717,7 +718,6 @@ lib/libpigmentcms.so.7.0.0
 share/applications/kde4/KThesaurus.desktop
 share/applications/kde4/karbon.desktop
 share/applications/kde4/kexi.desktop
-share/applications/kde4/kformula.desktop
 share/applications/kde4/koffice.desktop
 share/applications/kde4/kplato.desktop
 share/applications/kde4/kplatowork.desktop
@@ -725,11 +725,13 @@ share/applications/kde4/kpresenter.desktop
 share/applications/kde4/krita.desktop
 share/applications/kde4/krita_bmp.desktop
 share/applications/kde4/krita_gif.desktop
+share/applications/kde4/krita_jp2.desktop
 share/applications/kde4/krita_jpeg.desktop
 share/applications/kde4/krita_ora.desktop
 share/applications/kde4/krita_pdf.desktop
 share/applications/kde4/krita_png.desktop
 share/applications/kde4/krita_ppm.desktop
+share/applications/kde4/krita_raw.desktop
 share/applications/kde4/krita_tiff.desktop
 share/applications/kde4/krita_xcf.desktop
 share/applications/kde4/kspread.desktop
@@ -1990,7 +1992,6 @@ share/kde/apps/krita/images/krita-duplicate.png
 share/kde/apps/krita/images/krita-dyna.png
 share/kde/apps/krita/images/krita-eraser.png
 share/kde/apps/krita/images/krita-filterop.png
-share/kde/apps/krita/images/krita-mixing.png
 share/kde/apps/krita/images/krita-paintbrush.png
 share/kde/apps/krita/images/krita-pencil.png
 share/kde/apps/krita/images/krita-smudgebrush.png
@@ -2116,6 +2117,8 @@ share/kde/apps/krita/pics/lowerlayer.png
 share/kde/apps/krita/pics/newlayer.png
 share/kde/apps/krita/pics/novisible.png
 share/kde/apps/krita/pics/openhand_cursor.xpm
+share/kde/apps/krita/pics/paintop_settings_01.png
+share/kde/apps/krita/pics/paintop_settings_02.png
 share/kde/apps/krita/pics/polyline.png
 share/kde/apps/krita/pics/raiselayer.png
 share/kde/apps/krita/pics/rotate_cursor.xpm
@@ -2621,6 +2624,8 @@ share/kde4/services/krita_bmp_import.desktop
 share/kde4/services/krita_colorspaces_extensions_plugin.desktop
 share/kde4/services/krita_digitalmixer.desktop
 share/kde4/services/krita_gif_import.desktop
+share/kde4/services/krita_jp2_export.desktop
+share/kde4/services/krita_jp2_import.desktop
 share/kde4/services/krita_jpeg_export.desktop
 share/kde4/services/krita_jpeg_import.desktop
 share/kde4/services/krita_ora_export.desktop
@@ -2630,6 +2635,7 @@ share/kde4/services/krita_png_export.desktop
 share/kde4/services/krita_png_import.desktop
 share/kde4/services/krita_ppm_export.desktop
 share/kde4/services/krita_ppm_import.desktop
+share/kde4/services/krita_raw_import.desktop
 share/kde4/services/krita_smallcolorselector.desktop
 share/kde4/services/krita_specificcolorselector.desktop
 share/kde4/services/krita_tiff_export.desktop
@@ -2645,7 +2651,6 @@ share/kde4/services/kritacolorgenerator.desktop
 share/kde4/services/kritacolorrange.desktop
 share/kde4/services/kritacolorsfilter.desktop
 share/kde4/services/kritacolorspaceconversion.desktop
-share/kde4/services/kritacomplexbrush.desktop
 share/kde4/services/kritaconvolutionfilters.desktop
 share/kde4/services/kritacurvepaintop.desktop
 share/kde4/services/kritadefaultdockers.desktop
