@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/11/17 14:19:05 ryo-on Exp $
+# $NetBSD: Makefile,v 1.3 2010/11/18 10:02:47 ryo-on Exp $
 #
 
 DISTNAME=	glfw-2.7
@@ -30,5 +30,8 @@ do-configure:
 	cd ${WRKSRC} && \
 	${SH} compile.sh
 
+.include "../../graphics/glu/buildlink3.mk"
+.include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXrandr/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
