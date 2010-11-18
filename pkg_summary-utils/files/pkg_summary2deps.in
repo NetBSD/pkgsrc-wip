@@ -56,13 +56,13 @@
 #   -d           analyse DEPENDS
 #   -D           analyse BUILD_DEPENDS
 #   -A           analyse both DEPENDS and BUILD_DEPENDS
+#   -c           analyse CONFLICTS
 #   -t           produce output compatible with tsort(1) command
 #   -r           do not strip versions from PKGNAME,
 #                imply -n
 #   -R           do not strip versions from dependencies,
 #                imply -n
-#   -s           strict mode, >=, <= etc. are always checked
-#                for dependencies, even if there is only one matched
+#   -s           strict mode
 #                package
 #   -l           output to stderr the error messages
 #                compatible with pkg_lint_summary, e.g.,
@@ -77,7 +77,7 @@
 #   g_basecnt2path   - array: pkgbase, g_basecnt2path_cnt [base] -> PKGPATH:ASSIGNMENTS
 #   g_path2name   - array: PKGPATH:ASSIGNMENTS -> pkgname
 #   g_path2base   - array: PKGPATH:ASSIGNMENTS -> pkgbase
-#   g_pathcnt2namedeps    - array: PKGPATH:ASSIGNMENTS, g_pathcnt2namedeps_cnt [PKGPATH:ASSIGNMENTS] ->
+#   g_pathcnt2namedeps    - array: PKGPATH:ASSIGNMENTS, [1..3], g_pathcnt2namedeps_cnt [PKGPATH:ASSIGNMENTS. [1..3]] ->
 #                e.g. suse32_base-10.0|suse32_base-10.0nb*
 #   allbases   - set: PKGBASE
 
@@ -88,6 +88,18 @@ function warn (pkgpath, pkgname, depname){
 	else
 		printf "Cannot find dependency %s for package %s (%s)\n",
 			depname, pkgpath, pkgname > "/dev/stderr"
+}
+
+function warn_conflicts (\
+	pkgpath, pkgname,
+	conflict_path, conflict_name, conflict_spec)
+{
+	if (mode_lint)
+		printf "c: conflict %s %s %s <- %s %s\n",
+		conflict_spec, conflict_path, conflict_name, pkgpath, pkgname > "/dev/stderr"
+	else
+		printf "%s (%s) conflicts (%s) with %s (%s)\n",
+			pkgpath, pkgname, conflict_spec, conflict_path, conflict_name > "/dev/stderr"
 }
 
 BEGIN {
@@ -101,18 +113,22 @@ BEGIN {
 	mode_strict = getarg("s")
 	mode_lint   = getarg("l")
 
-	dep_depends  = getarg("d")
-	dep_builddep = getarg("D")
+	dep_depends   = getarg("d")
+	dep_builddep  = getarg("D")
+	opt_conflicts = getarg("c")
+
 	if (getarg("A")){
 		dep_builddep = dep_depends = 1
 	}
 
-	if (!out_pkgname && !out_pkgpath){
-		print "Either -p or -n should be applied" > "/dev/stderr"
-		exit 1
+	if (!opt_conflicts){
+		if (!out_pkgname && !out_pkgpath){
+			print "Either -p or -n must be applied" > "/dev/stderr"
+			exit 1
+		}
 	}
-	if (!dep_depends && !dep_builddep){
-		print "Either -d, -D or -A should be applied" > "/dev/stderr"
+	if (!dep_depends && !dep_builddep && !opt_conflicts){
+		print "Either -d, -D, -c or -A must be applied" > "/dev/stderr"
 		exit 1
 	}
 }
@@ -143,14 +159,19 @@ dep_builddep && /^BUILD_DEPENDS=/ {
 	next
 }
 
-function process_deps (               deps,i){
+opt_conflicts && /^CONFLICTS=/ {
+	conflicts = conflicts " " substr($0, 11)
+	next
+}
+
+function process_deps (id,               deps,i){
 	for (i=1; i <= NF; ++i){
 		if ($i ~ /[{]/)
 			$i = braceexpand($i)
 
 		gsub(/:[^ ]*/, "", $i)
 		gsub(/ /, "|", $i)
-		g_pathcnt2namedeps [pkgpath, ++g_pathcnt2namedeps_cnt [pkgpath]] = $i
+		g_pathcnt2namedeps [pkgpath, id, ++g_pathcnt2namedeps_cnt [pkgpath, id]] = $i
 	}
 }
 
@@ -167,12 +188,17 @@ NF == 0 {
 	allbases [pkgbase] = 1
 
 	$0 = depends
-	process_deps()
+	process_deps(1)
 
 	$0 = build_depends
-	process_deps()
+	process_deps(2)
 
-	depends = build_depends = assigns = pkgpath = pkgbase = pkgname = ""
+	$0 = conflicts
+#	print "conflicts=", conflicts
+	process_deps(3)
+
+	conflicts = depends = build_depends = ""
+	assigns = pkgpath = pkgbase = pkgname = ""
 	next
 }
 
@@ -220,62 +246,69 @@ END {
 	for (path in g_path2base){
 		name = g_path2name [path]
 		base = g_path2base [path]
-		depscnt = g_pathcnt2namedeps_cnt [path]
-		for (i=1; i <= depscnt; ++i){
-			deps = g_pathcnt2namedeps [path, i]
-#			print base, i, dep
+		for (id=1; id <= 3; ++id){
+			depscnt = g_pathcnt2namedeps_cnt [path, id]
+			for (i=1; i <= depscnt; ++i){
+				deps = g_pathcnt2namedeps [path, id, i]
 
-			altdepscnt = split(deps, arr, /[|]/)
-			for (k=1; k <= altdepscnt; ++k){
-				depname = arr [k]
-				depbase = pkgname2pkgbase(depname)
-#				printf "trying %s->%s...\n" , depname, depbase
-				foundcnt = 0
-				if (depbase ~ /[*?\[\]]/){
-					# glob pattern
-					find_by_glob(depbase, 0)
-				}else if (depbase in allbases){
-					# plain PKGBASE
-					basecnt = g_basecnt2path_cnt [depbase]
-					for (j=1; j <= basecnt; ++j){
-						found [++foundcnt] = g_basecnt2path [depbase, j]
+				altdepscnt = split(deps, arr, /[|]/)
+#				print "!!!", id, path, name, deps > "/dev/stderr"
+				for (k=1; k <= altdepscnt; ++k){
+					depname = arr [k]
+					depbase = pkgname2pkgbase(depname)
+
+#					print depname, depbase
+
+					foundcnt = 0
+					if (depbase ~ /[*?\[\]]/){
+						# glob pattern
+						find_by_glob(depbase, 0)
+					}else if (depbase in allbases){
+						# plain PKGBASE
+						basecnt = g_basecnt2path_cnt [depbase]
+						for (j=1; j <= basecnt; ++j){
+							found [++foundcnt] = g_basecnt2path [depbase, j]
+						}
 					}
-				}
 
-				if (foundcnt == 1 && !mode_strict){
-					final_deps [path, found [1]] = depname
-					break
-				}
-
-# 				printf "%s (%s) : %s |", path, name, depname
-# 				for (j=1; j <= foundcnt; ++j){
-# 					printf " %s (%s)", found [j], g_path2name [found [j]]
-# 				}
-# 				printf "\n"
-
-				matched = ""
-				for (j=1; j <= foundcnt; ++j){
-					if (pkgmatch(g_path2name [found [j]], depname)){
-						matched = found [j]
+					if (foundcnt == 1 && !mode_strict && id != 3){
+						final_deps [path, found [1]] = depname
 						break
 					}
-				}
 
-				delete found
-				foundcnt = 0
-
-				if (!matched){
-					if (k == altdepscnt){
-						warn(path, name, depname)
+					matched = ""
+					for (j=1; j <= foundcnt; ++j){
+						if (pkgmatch(g_path2name [found [j]], depname)){
+							if (id != 3){
+								matched = found [j]
+								break
+							}else if (found [j] != path){
+								warn_conflicts(path, name, found [j],
+											   g_path2name [found [j]], depname)
+#								print "C:", found [j], g_path2name [found [j]],
+#								path, name, depname > "/dev/stderr"
+							}
+						}
 					}
 
-					continue
+					delete found
+					foundcnt = 0
+
+					if (id == 3)
+						continue
+
+					if (!matched){
+						if (k == altdepscnt){
+							warn(path, name, depname)
+						}
+
+						continue
+					}
+
+					final_deps [path, matched] = depname
+
+					break
 				}
-
-#				print "!!!", path, matched, depname
-				final_deps [path, matched] = depname
-
-				break
 			}
 		}
 	}
@@ -296,7 +329,8 @@ END {
 		}
 
 		if (!out_pkgname){
-			print path1, path2
+			if (out_pkgpath)
+				print path1, path2
 		}else if (!out_pkgpath){
 			if (keep_depver)
 				print name1, name2, "(", final_deps [pair], ")"
@@ -322,18 +356,22 @@ END {
 					name = g_path2base [path]
 			}
 
+			p = ""
 			if (!out_pkgname){
-				p = path
+				if (out_pkgpath)
+					p = path
 			}else if (!out_pkgpath){
 				p = name
 			}else{
 				p = path ";" name
 			}
 
-			if (mode_tsort)
-				print p, p
-			else
-				print p
+			if (p != ""){
+				if (mode_tsort)
+					print p, p
+				else
+					print p
+			}
 		}
 	}
 }

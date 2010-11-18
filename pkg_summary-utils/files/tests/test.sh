@@ -2736,6 +2736,82 @@ pkg_status pkgnih
 runawk paexec
 '
 
+pkg_summary2deps -c src_summary9.txt 2>&1 | sort |
+cmp 'pkg_summary2deps #22' \
+'editors/emacs22 (emacs-22.3nb10) conflicts (emacs-[0-9]*) with editors/emacs (emacs-23.2nb2)
+editors/emacs22 (emacs-22.3nb10) conflicts (emacs-[0-9]*) with editors/emacs21 (emacs-21.4anb19)
+'
+
+pkg_summary2deps -cl src_summary9.txt 2>&1 | sort |
+cmp 'pkg_summary2deps #23' \
+'c: conflict emacs-[0-9]* editors/emacs emacs-23.2nb2 <- editors/emacs22 emacs-22.3nb10
+c: conflict emacs-[0-9]* editors/emacs21 emacs-21.4anb19 <- editors/emacs22 emacs-22.3nb10
+'
+
+pkg_summary2deps -cl src_summary12.txt 2>&1 >/dev/null | sort |
+cmp 'pkg_summary2deps #24' \
+'c: conflict awk-pkgsrc-dewey-[0-9]* wip/awk-pkgsrc-dewey awk-pkgsrc-dewey-0.5.6 <- wip/pkg_summary-utils pkg_summary-utils-0.49beta2
+c: conflict egcs-current-19980608 somewhere/egcs-current egcs-current-19980608 <- lang/f2c f2c-20090411nb5
+c: conflict glibtool-[0-9]* somewhere/glibtool glibtool-1.2.3 <- devel/libtool-base libtool-base-2.2.6bnb4
+c: conflict libtool<=1.3.5nb11 somewhere/libtool libtool-1.3.4 <- devel/libtool-base libtool-base-2.2.6bnb4
+c: conflict libtool<=1.3.5nb11 somewhere/libtool133 libtool-1.3.3 <- devel/libtool-base libtool-base-2.2.6bnb4
+c: conflict paexec<0.15.0 wip/paexec paexec-0.13.0 <- wip/pkg_summary-utils pkg_summary-utils-0.49beta2
+c: conflict pkg_cmp_summary-[0-9]* somewhere/pkg_cmp_summary pkg_cmp_summary-0.0.1 <- wip/pkg_summary-utils pkg_summary-utils-0.49beta2
+c: conflict pkg_src_update_summary-[0-9]* somewhere/pkg_src_update_summary pkg_src_update_summary-0.0.2 <- wip/pkg_summary-utils pkg_summary-utils-0.49beta2
+c: conflict pkg_summary4view-[0-9]* somewhere/pkg_summary4view pkg_summary4view-0.0.4 <- wip/pkg_summary-utils pkg_summary-utils-0.49beta2
+c: conflict pkg_update_summary-[0-9]* somewhere/pkg_update_summary pkg_update_summary-0.0.3 <- wip/pkg_summary-utils pkg_summary-utils-0.49beta2
+'
+
+pkg_summary2deps -Acldns src_summary12.txt 2>&1 | sort |
+cmp 'pkg_summary2deps #25' \
+'awk-pkgsrc-dewey
+c: conflict awk-pkgsrc-dewey-[0-9]* wip/awk-pkgsrc-dewey awk-pkgsrc-dewey-0.5.6 <- wip/pkg_summary-utils pkg_summary-utils-0.49beta2
+c: conflict egcs-current-19980608 somewhere/egcs-current egcs-current-19980608 <- lang/f2c f2c-20090411nb5
+c: conflict glibtool-[0-9]* somewhere/glibtool glibtool-1.2.3 <- devel/libtool-base libtool-base-2.2.6bnb4
+c: conflict libtool<=1.3.5nb11 somewhere/libtool libtool-1.3.4 <- devel/libtool-base libtool-base-2.2.6bnb4
+c: conflict libtool<=1.3.5nb11 somewhere/libtool133 libtool-1.3.3 <- devel/libtool-base libtool-base-2.2.6bnb4
+c: conflict paexec<0.15.0 wip/paexec paexec-0.13.0 <- wip/pkg_summary-utils pkg_summary-utils-0.49beta2
+c: conflict pkg_cmp_summary-[0-9]* somewhere/pkg_cmp_summary pkg_cmp_summary-0.0.1 <- wip/pkg_summary-utils pkg_summary-utils-0.49beta2
+c: conflict pkg_src_update_summary-[0-9]* somewhere/pkg_src_update_summary pkg_src_update_summary-0.0.2 <- wip/pkg_summary-utils pkg_summary-utils-0.49beta2
+c: conflict pkg_summary4view-[0-9]* somewhere/pkg_summary4view pkg_summary4view-0.0.4 <- wip/pkg_summary-utils pkg_summary-utils-0.49beta2
+c: conflict pkg_update_summary-[0-9]* somewhere/pkg_update_summary pkg_update_summary-0.0.3 <- wip/pkg_summary-utils pkg_summary-utils-0.49beta2
+checkperms distbb
+checkperms f2c
+checkperms libmaa
+checkperms libtool-base
+checkperms mk-configure
+checkperms paexec
+checkperms pipestatus
+checkperms pkg_status
+checkperms pkg_summary-utils
+checkperms runawk
+d: not_found mk-configure>=0.20.0 <- wip/paexec paexec-0.13.0
+d: not_found mk-configure>=0.20.0 <- wip/pkg_summary-utils pkg_summary-utils-0.49beta2
+d: not_found mk-configure>=0.20.0 <- wip/runawk runawk-1.2.0
+d: not_found paexec>=0.15.0 <- wip/distbb distbb-0.38.2
+digest distbb
+egcs-current
+f2c libtool-base
+glibtool
+libmaa paexec
+libtool
+libtool
+libtool
+libtool-base libmaa
+pipestatus distbb
+pipestatus pkg_status
+pipestatus pkg_summary-utils
+pkg_cmp_summary
+pkg_src_update_summary
+pkg_summary-utils distbb
+pkg_summary-utils pkg_status
+pkg_summary4view
+pkg_update_summary
+runawk distbb
+runawk paexec
+runawk pkg_summary-utils
+'
+
 # pkg_lint_summary
 pkg_lint_summary bin_summary1.txt 2>&1 | sort |
 sed 's/^One of the.*$/MandatoryOptionErrorMessage/' |
@@ -2751,13 +2827,13 @@ l: not_found /usr/pkg/lib/libz.so.1 wip/dict-server dict-server-1.11.2
 '
 
 pkg_lint_summary -dD src_summary.txt | sort |
-cmp 'pkg_summary2deps -Ap #3' \
+cmp 'pkg_lint_summary -Ap #3' \
 'd: not_found libmaa>=1.2 <- wip/dict-server dict-server-1.10.11nb2
 d: not_found pkg_summary-utils>=0.19.0 <- wip/pkg_online-server pkg_online-server-0.5.0
 '
 
 pkg_lint_summary -dD src_summary2.txt | sort |
-cmp 'pkg_summary2deps -Ap #4' \
+cmp 'pkg_lint_summary -Ap #4' \
 'd: not_found pkg_online-client-0.5.0nb2 <- wip/pkg_online pkg_online-0.5.0nb2
 d: not_found pkg_online-server-0.5.0nb2 <- wip/pkg_online pkg_online-0.5.0nb2
 '
