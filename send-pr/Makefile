@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2010/11/18 17:53:44 cheusov Exp $
+# $NetBSD: Makefile,v 1.13 2010/11/18 18:03:02 cheusov Exp $
 
 # this should use a Makefile.common to share the DISTNAME
 DISTNAME=	gnats-3.113.1
@@ -23,7 +23,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_TOOLS+=		makeinfo
 INFO_FILES=		yes
 
-CONFIGURE_ARGS=		--with-lispdir=${PREFIX}/share/emacs/site-lisp
+LISPDIR=		${PREFIX}/share/emacs/site-lisp
+CONFIGURE_ARGS=		--with-lispdir=${LISPDIR}
 
 CONFIGURE_ENV+=		GNATS_ROOT=${PKG_SYSCONFDIR}/gnats
 
@@ -33,8 +34,13 @@ INSTALL_TARGET=		install install-info
 # information in from the standard NetBSD send-pr program
 CONFIGURE_ENV+=		SEND_PR=/dev/null
 
-MAKE_FLAGS+=		MAKEINFO=makeinfo\ --no-split \
-			INSTALL_SCRIPT=${INSTALL_SCRIPT:Q}
+BUILD_MAKE_FLAGS+=	MAKEINFO=makeinfo\ --no-split
+INSTALL_MAKE_FLAGS+=	INSTALL_SCRIPT=${INSTALL_SCRIPT:Q} \
+			man1dir=${DESTDIR}${PREFIX}/${PKGMANDIR}/man1 \
+			bindir=${DESTDIR}${PREFIX}/bin \
+			datadir=${DESTDIR}${PREFIX}/share \
+			infodir=${DESTDIR}${PREFIX}/${PKGINFODIR} \
+			lispdir=${DESTDIR}${LISPDIR}
 
 AUTO_MKDIRS=		yes
 
