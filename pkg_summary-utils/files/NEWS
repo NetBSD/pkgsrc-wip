@@ -1,9 +1,23 @@
 ----------------------------------------------------------------------
-Version 0.49, by Aleksey Cheusov, Sun, 14 Nov 2010 03:06:22 +0200
+Version 0.49, by Aleksey Cheusov, Sat, 20 Nov 2010 01:14:47 +0200
 
-  New tool pkg_digger (and pkg_digger_backend) was added. pkg_digger
-  is a powerful high-level searcher in package summaries.
-  Run 'pkg_digger -h' for details.
+  New tools pkg_digger and pkg_digger_backend were added. pkg_digger
+  is a powerful high-level package searcher.  Run 'pkg_digger -h' for
+  details.
+
+  psu_funcs.awk:
+    - fix in pkgver_position, pkgname2pkgbase and pkgname2version
+      functions for glob square brackets without *+ after them
+
+  pkg_summary2deps:
+    - New option -l was added
+    - New option -c was added
+
+  pkg_lint_summary:
+    - Option -d was fully reimplemented, now it uses pkg_summary2deps.
+    - New option -D was added
+    - New option -c was added
+    - New option -u was added
 
   pkg_grep_summary:
     - New option -f was added to specify fields to output
@@ -13,7 +27,7 @@ Version 0.49, by Aleksey Cheusov, Sun, 14 Nov 2010 03:06:22 +0200
     - Doubled -T shows strategies with their description separated by
       TAB character.
 
-  pkg_summary2build_graph.in:
+  pkg_summary2build_graph:
     marked as deprecated
 
 ----------------------------------------------------------------------
