@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2010/09/15 12:05:32 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2010/11/19 00:04:18 thomasklausner Exp $
 #
 
-DISTNAME=	mcwm-20100803-3
-PKGNAME=	mcwm-20100803.3
+DISTNAME=	mcwm-20101118-2
+PKGNAME=	mcwm-20101118.2
 CATEGORIES=	wm
 MASTER_SITES=	http://www.hack.org/mc/hacks/mcwm/
 EXTRACT_SUFX=	.tar.bz2
