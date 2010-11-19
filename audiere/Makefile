@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/11/18 13:43:13 ryo-on Exp $
+# $NetBSD: Makefile,v 1.2 2010/11/19 11:39:31 ryo-on Exp $
 #
 
 DISTNAME=	audiere-1.9.4
@@ -19,6 +19,5 @@ USE_LIBTOOL=	yes
 # XXX
 BUILDLINK_TRANSFORM+=l:ogg:ogg:ossaudio
 
-.include "../../audio/flac/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
