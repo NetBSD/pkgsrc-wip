@@ -49,6 +49,7 @@
 #   -d          checks that dependencies (DEPENDS) are sanisfied
 #   -D          checks that dependencies (BUILD_DEPENDS) are sanisfied
 #   -c          checks CONFLICTS
+#   -u          checks unicity of PKGBASEs
 #.end-str
 ############################################################
 
@@ -62,12 +63,12 @@ BEGIN {
 	opt_d = getarg("d")
 	opt_D = getarg("D")
 	opt_c = getarg("c")
+	opt_u = getarg("u")
 
 	cnt = 0
 
-	if (!opt_L && !opt_l && !opt_d && !opt_D && !opt_c){
-		print "One of the following options should be applied: -L, -l or -d" \
-			> "/dev/stderr"
+	if (!opt_L && !opt_l && !opt_d && !opt_D && !opt_c && !opt_u){
+		print "At least one of the following options should be applied:\n     -L, -l, -d, -D, -c or -u" > "/dev/stderr"
 		exitnow(1)
 	}
 
@@ -86,11 +87,21 @@ BEGIN {
 	pkgpath = substr($0, 9)
 }
 
-NF == 0 {
-	for (i=1; i < 10000 && ((pkgbase SUBSEP i) in pkg2ver); ++i){
-		pkg2ver [pkgbase, i] = pkgver
+opt_u {
+	if (/^ASSIGNMENTS=/){
+		assigns = substr($0, 13)
+	}else if (NF == 0){
+		if (assigns != "")
+			path = pkgpath ":" assigns
+		else
+			path = pkgpath
+
+		if (pkgbase in pkgbase2path){
+			pkgbase2path [pkgbase] = pkgbase2path [pkgbase] " " path
+		}else{
+			pkgbase2path [pkgbase] = path
+		}
 	}
-	pkg2ver [pkgbase] = 1
 }
 
 opt_l || opt_L {
@@ -124,10 +135,7 @@ opt_d || opt_D || opt_c {
 }
 
 NF == 0 {
-	pkgname = pkgpath = pkgver = ""
-}
-
-function check_ver (ver, condition){
+	pkgname = pkgpath = pkgver = assigns = ""
 }
 
 function print_lib_notfound (prefix, lib,                        i){
@@ -181,6 +189,16 @@ END {
 		cmd = "pkg_summary2deps -nls" opts " " tmp_summary " 2>&1 > /dev/null" 
 		if (system(cmd))
 			ex = 1
+	}
+
+	# -u
+	if (opt_u){
+		for (pkgbase in pkgbase2path){
+			if (index(pkgbase2path [pkgbase], " ")){
+				printf "u: unicity %s <- %s\n", pkgbase, pkgbase2path [pkgbase]
+				ex = 1
+			}
+		}
 	}
 
 	exitnow(ex)

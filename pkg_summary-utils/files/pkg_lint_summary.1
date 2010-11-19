@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkg_lint_summary.1,v 1.7 2010/11/18 22:41:50 cheusov Exp $
+.\"	$NetBSD: pkg_lint_summary.1,v 1.8 2010/11/19 23:02:38 cheusov Exp $
 .\"
 .\" Copyright (c) 2008-2010 by Aleksey Cheusov (vle@gmx.net)
 .\" Absolutely no warranty.
@@ -105,6 +105,15 @@ output in the following format:
 .VB
 
    c: conflict CNFLCT_REQD CNFLCT_PATH CNFLCT_NAME <- PKGPATH PKGBASE
+
+.VE
+.TP
+.B "-u"
+check unicity of PKGBASE of packages given on input and outputs found
+problems to stderr in the following format:
+.VB
+
+   u: unicity PKGBASE <- PKGPATH1 PKGPATH2 ... PKGPATHn
 
 .VE
 .SH SEE ALSO

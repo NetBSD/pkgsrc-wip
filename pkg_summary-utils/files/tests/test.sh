@@ -2814,7 +2814,7 @@ runawk pkg_summary-utils
 
 # pkg_lint_summary
 pkg_lint_summary bin_summary1.txt 2>&1 | sort |
-sed 's/^One of the.*$/MandatoryOptionErrorMessage/' |
+sed -n 's/At least one.*$/MandatoryOptionErrorMessage/p' |
 cmp 'pkg_lint_summary #1' \
 'MandatoryOptionErrorMessage
 '
@@ -2826,10 +2826,11 @@ l: not_found /usr/pkg/lib/libz.so.1 wip/dict-client dict-client-1.11.2
 l: not_found /usr/pkg/lib/libz.so.1 wip/dict-server dict-server-1.11.2
 '
 
-pkg_lint_summary -dD src_summary.txt | sort |
+pkg_lint_summary -dDu src_summary.txt | sort |
 cmp 'pkg_lint_summary -Ap #3' \
 'd: not_found libmaa>=1.2 <- wip/dict-server dict-server-1.10.11nb2
 d: not_found pkg_summary-utils>=0.19.0 <- wip/pkg_online-server pkg_online-server-0.5.0
+u: unicity dict-client <- textproc/dict-client wip/dict-client
 '
 
 pkg_lint_summary -dD src_summary2.txt | sort |
@@ -2851,6 +2852,20 @@ c: conflict pkg_src_update_summary-[0-9]* somewhere/pkg_src_update_summary pkg_s
 c: conflict pkg_summary4view-[0-9]* somewhere/pkg_summary4view pkg_summary4view-0.0.4 <- wip/pkg_summary-utils pkg_summary-utils-0.49beta2
 c: conflict pkg_update_summary-[0-9]* somewhere/pkg_update_summary pkg_update_summary-0.0.3 <- wip/pkg_summary-utils pkg_summary-utils-0.49beta2
 d: not_found paexec>=0.15.0 <- wip/distbb distbb-0.38.2
+'
+
+pkg_lint_summary -u src_summary3.txt | sort |
+cmp 'pkg_lint_summary -Ap #6' \
+'u: unicity distbb <- wip/distbb:OPT1=1,OPT2=2 wip/distbb:OPT1=1,OPT2=2 wip/distbb:OPT=1,OPT2=3
+'
+
+pkg_lint_summary -u src_summary7.txt | sort |
+cmp 'pkg_lint_summary -Ap #7' \
+''
+
+pkg_lint_summary -u src_summary9.txt | sort |
+cmp 'pkg_lint_summary -Ap #8' \
+'u: unicity emacs <- editors/emacs editors/emacs21 editors/emacs22
 '
 
 # pkg_subgraph_deps
