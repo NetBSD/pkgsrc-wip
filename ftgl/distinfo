@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/11/18 10:05:20 ryo-on Exp $
+$NetBSD: distinfo,v 1.2 2010/11/19 11:36:06 ryo-on Exp $
 
 SHA1 (ftgl-2.1.3-rc5.tar.gz) = b9c11d3a594896333f1bbe46e10d8617713b4fc6
 RMD160 (ftgl-2.1.3-rc5.tar.gz) = 22ead818fde748be1ffeedb31f8702b7924d212f
 Size (ftgl-2.1.3-rc5.tar.gz) = 841597 bytes
+SHA1 (patch-aa) = 98579ab1fc81ae87ed8e8d1d50e39526fda9f0a9
