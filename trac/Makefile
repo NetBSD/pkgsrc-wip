@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2010/06/16 07:48:27 obache Exp $
+# $NetBSD: Makefile,v 1.13 2010/11/22 13:56:45 obache Exp $
 #
 
-DISTNAME=	Trac-0.12
+DISTNAME=	Trac-0.12.1
 PKGNAME=	${DISTNAME:tl}
 EGG_NAME=	${DISTNAME}
 CATEGORIES=	devel www
@@ -10,6 +10,7 @@ MASTER_SITES=	http://ftp.edgewall.com/pub/trac/
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://trac.edgewall.org/
 COMMENT=	Integrated SCM, wiki, issue tracker and project environment
+LICENSE=	modified-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -34,6 +35,9 @@ post-install:
 .endfor
 	cd ${WRKSRC}/contrib && \
 		pax -rw -pp -pm . ${DESTDIR}${PREFIX}/${EGDIR}
+
+# deploy template files
+CHECK_INTERPRETER_SKIP+=	${PYSITELIB}/trac/admin/templates/deploy_*.*cgi
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
