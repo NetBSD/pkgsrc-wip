@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.96 2010/11/01 05:04:14 makoto Exp $
+@comment $NetBSD: PLIST,v 1.97 2010/11/22 22:35:18 makoto Exp $
 bin/ctags
 bin/ebrowse
 bin/emacs
@@ -2821,6 +2821,8 @@ share/emacs/${PKGVERSION}/lisp/org/ob-asymptote.el.gz
 share/emacs/${PKGVERSION}/lisp/org/ob-asymptote.elc
 share/emacs/${PKGVERSION}/lisp/org/ob-C.el.gz
 share/emacs/${PKGVERSION}/lisp/org/ob-C.elc
+share/emacs/${PKGVERSION}/lisp/org/ob-calc.el.gz
+share/emacs/${PKGVERSION}/lisp/org/ob-calc.elc
 share/emacs/${PKGVERSION}/lisp/org/ob-clojure.el.gz
 share/emacs/${PKGVERSION}/lisp/org/ob-clojure.elc
 share/emacs/${PKGVERSION}/lisp/org/ob-comint.el.gz
@@ -2841,10 +2843,16 @@ share/emacs/${PKGVERSION}/lisp/org/ob-gnuplot.el.gz
 share/emacs/${PKGVERSION}/lisp/org/ob-gnuplot.elc
 share/emacs/${PKGVERSION}/lisp/org/ob-haskell.el.gz
 share/emacs/${PKGVERSION}/lisp/org/ob-haskell.elc
+share/emacs/${PKGVERSION}/lisp/org/ob-js.el.gz
+share/emacs/${PKGVERSION}/lisp/org/ob-js.elc
 share/emacs/${PKGVERSION}/lisp/org/ob-keys.el.gz
 share/emacs/${PKGVERSION}/lisp/org/ob-keys.elc
 share/emacs/${PKGVERSION}/lisp/org/ob-latex.el.gz
 share/emacs/${PKGVERSION}/lisp/org/ob-latex.elc
+share/emacs/${PKGVERSION}/lisp/org/ob-ledger.el.gz
+share/emacs/${PKGVERSION}/lisp/org/ob-ledger.elc
+share/emacs/${PKGVERSION}/lisp/org/ob-lisp.el.gz
+share/emacs/${PKGVERSION}/lisp/org/ob-lisp.elc
 share/emacs/${PKGVERSION}/lisp/org/ob-lob.el.gz
 share/emacs/${PKGVERSION}/lisp/org/ob-lob.elc
 share/emacs/${PKGVERSION}/lisp/org/ob-matlab.el.gz
@@ -2855,8 +2863,12 @@ share/emacs/${PKGVERSION}/lisp/org/ob-ocaml.el.gz
 share/emacs/${PKGVERSION}/lisp/org/ob-ocaml.elc
 share/emacs/${PKGVERSION}/lisp/org/ob-octave.el.gz
 share/emacs/${PKGVERSION}/lisp/org/ob-octave.elc
+share/emacs/${PKGVERSION}/lisp/org/ob-org.el.gz
+share/emacs/${PKGVERSION}/lisp/org/ob-org.elc
 share/emacs/${PKGVERSION}/lisp/org/ob-perl.el.gz
 share/emacs/${PKGVERSION}/lisp/org/ob-perl.elc
+share/emacs/${PKGVERSION}/lisp/org/ob-plantuml.el.gz
+share/emacs/${PKGVERSION}/lisp/org/ob-plantuml.elc
 share/emacs/${PKGVERSION}/lisp/org/ob-python.el.gz
 share/emacs/${PKGVERSION}/lisp/org/ob-python.elc
 share/emacs/${PKGVERSION}/lisp/org/ob-R.el.gz
@@ -2867,6 +2879,8 @@ share/emacs/${PKGVERSION}/lisp/org/ob-ruby.el.gz
 share/emacs/${PKGVERSION}/lisp/org/ob-ruby.elc
 share/emacs/${PKGVERSION}/lisp/org/ob-sass.el.gz
 share/emacs/${PKGVERSION}/lisp/org/ob-sass.elc
+share/emacs/${PKGVERSION}/lisp/org/ob-scheme.el.gz
+share/emacs/${PKGVERSION}/lisp/org/ob-scheme.elc
 share/emacs/${PKGVERSION}/lisp/org/ob-screen.el.gz
 share/emacs/${PKGVERSION}/lisp/org/ob-screen.elc
 share/emacs/${PKGVERSION}/lisp/org/ob-sh.el.gz
