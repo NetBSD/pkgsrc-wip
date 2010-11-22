@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/11/22 21:41:47 ryo-on Exp $
+
+SHA1 (qgoogletranslator-1.2.1.tar.bz2) = 7c41aef23f770f462ffa3fae502fc62e8fe56453
+RMD160 (qgoogletranslator-1.2.1.tar.bz2) = 1e0032ff76be79a826d8329f5021ef6ee5fdf969
+Size (qgoogletranslator-1.2.1.tar.bz2) = 279120 bytes
+SHA1 (patch-aa) = 258684e4d34c0b8919742e6bcaf9e7c355068f67
+SHA1 (patch-ab) = 7dcd84bdefb2ae3612bb94a2e0378d70c879be7e
