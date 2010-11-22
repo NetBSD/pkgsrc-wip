@@ -1,0 +1,11 @@
+# Pull in the defaults
+include $(TOP)/configs/pkgsrc-dri
+
+CONFIG_NAME = pkgsrc-dri-x86_64
+
+# Compiler and flags
+ASM_FLAGS = -DUSE_X86_64_ASM
+
+# Source selection
+MESA_ASM_SOURCES = $(X86-64_SOURCES)
+GLAPI_ASM_SOURCES = $(X86-64_API)

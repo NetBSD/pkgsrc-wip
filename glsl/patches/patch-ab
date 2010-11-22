@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1.1.1 2010/11/22 23:39:35 pallegra Exp $
+
+--- configs/default.orig	2010-11-22 23:00:20.000000000 +0000
++++ configs/default
+@@ -20,8 +20,8 @@ DRM_SOURCE_PATH=$(TOP)/../drm
+ CC = cc
+ CXX = CC
+ HOST_CC = $(CC)
+-CFLAGS = -O
+-CXXFLAGS = -O
++#CFLAGS = -O
++#CXXFLAGS = -O
+ LDFLAGS =
+ HOST_CFLAGS = $(CFLAGS)
+ GLU_CFLAGS = 

@@ -1,0 +1,67 @@
+# Pull in the defaults
+include $(TOP)/configs/default
+
+CONFIG_NAME = pkgsrc
+
+# Compiler and flags
+LIBTOOL ?= libtool
+CC = cc
+CXX = c++
+DEFINES = -DPTHREADS -DUSE_XSHM
+GLES_OVERLAY = 0
+CFLAGS += $(WARN_FLAGS) $(PIC_FLAGS) $(OPT_FLAGS) $(PIC_FLAGS) $(DEFINES)
+CXXFLAGS += $(WARN_FLAGS) $(OPT_FLAGS) $(PIC_FLAGS) $(ARCH_FLAGS) $(DEFINES)
+
+TALLOC_LIBS = `$(PKG_CONFIG) --libs talloc`
+TALLOC_CFLAGS = `$(PKG_CONFIG) --cflags talloc`
+
+# dlopen
+DLOPEN_LIBS = 
+
+# Source selection
+MESA_ASM_SOURCES ?= # defined
+GLAPI_ASM_SOURCES ?= # defined
+
+# Python and flags (generally only needed by the developers)
+PYTHON2 = python
+PYTHON_FLAGS = -t -O -O
+
+# Directories to build
+LIB_DIR = lib
+SRC_DIRS = mapi/glapi glsl mesa  glx
+GLU_DIRS = sgi
+DRIVER_DIRS = x11 osmesa
+
+# Dependencies
+X11_INCLUDES = `$(PKG_CONFIG) --cflags x11`
+
+# GLw motif setup
+GLW_SOURCES = 
+MOTIF_CFLAGS = 
+
+# Library/program dependencies
+GL_LIB_DEPS = $(EXTRA_LIB_PATH) -lX11 -lXext -lm $(PTHREAD_STUBLIB)
+OSMESA_LIB_DEPS = -L$(TOP)/$(LIB_DIR)  \
+	$(EXTRA_LIB_PATH) 
+EGL_LIB_DEPS = $(EXTRA_LIB_PATH) 
+GLU_LIB_DEPS = -L$(TOP)/$(LIB_DIR)  \
+	$(EXTRA_LIB_PATH)  
+GLUT_LIB_DEPS = -L$(TOP)/$(LIB_DIR)  \
+	$(EXTRA_LIB_PATH) 
+GLW_LIB_DEPS = -L$(TOP)/$(LIB_DIR)  \
+	$(EXTRA_LIB_PATH) 
+APP_LIB_DEPS = $(EXTRA_LIB_PATH) -lm
+
+# Autoconf directories
+prefix = $(PREFIX)
+exec_prefix = ${prefix}
+libdir = ${exec_prefix}/$(LIB_DIR)
+includedir = ${prefix}/include
+
+# Installation directories (for make install)
+INSTALL_DIR = $(prefix)
+INSTALL_LIB_DIR = $(libdir)
+INSTALL_INC_DIR = $(includedir)
+
+# Xorg driver install directory (for xorg state-tracker)
+XORG_DRIVER_INSTALL_DIR = ${exec_prefix}/lib/xorg/modules/drivers

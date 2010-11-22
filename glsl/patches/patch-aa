@@ -1,0 +1,41 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/11/22 23:39:35 pallegra Exp $
+
+--- src/glsl/Makefile.orig	2010-10-05 01:58:00.000000000 +0000
++++ src/glsl/Makefile
+@@ -128,8 +128,9 @@ ALL_SOURCES = \
+ 
+ default: depend lib$(LIBNAME).a $(APPS)
+ 
+-lib$(LIBNAME).a: $(OBJECTS) Makefile $(TOP)/src/glsl/Makefile.template
+-	$(MKLIB) -cplusplus -o $(LIBNAME) -static $(OBJECTS)
++lib$(LIBNAME).a: $(OBJECTS)
++	$(LIBTOOL) --mode=link $(CXX) -o lib$(LIBNAME).la -static \
++		$(OBJECTS:.o=.lo)
+ 
+ depend: $(ALL_SOURCES) Makefile
+ 	rm -f depend
+@@ -149,16 +150,20 @@ install:
+ ##### RULES #####
+ 
+ glsl_compiler: $(GLSL2_OBJECTS) libglsl.a
+-	$(APP_CXX) $(INCLUDES) $(CFLAGS) $(LDFLAGS) $(GLSL2_OBJECTS) $(LIBS) -o $@
++	$(LIBTOOL) --mode=link $(APP_CXX) $(INCLUDES) $(CFLAGS) $(LDFLAGS) \
++		$(GLSL2_OBJECTS:.o=.lo) $(LIBS:.a=.la) -o $@
+ 
+ glcpp/glcpp: $(GLCPP_OBJECTS) libglsl.a
+-	$(APP_CC) $(INCLUDES) $(CFLAGS) $(LDFLAGS) $(GLCPP_OBJECTS) $(LIBS) -o $@
++	$(LIBTOOL) --mode=link $(APP_CC) $(INCLUDES) $(CFLAGS) $(LDFLAGS) \
++		$(GLCPP_OBJECTS:.o=.lo) $(LIBS:.a=.la) -o $@
+ 
+ .cpp.o:
+-	$(CXX) -c $(INCLUDES) $(CXXFLAGS) $(DEFINES) $< -o $@
++	$(LIBTOOL) --mode=compile --tag=CXX $(CXX) -c $(INCLUDES) $(CXXFLAGS) \
++		$(DEFINES) $< -o $(@:.o=.lo)
+ 
+ .c.o:
+-	$(CC) -c $(INCLUDES) $(CFLAGS) $(DEFINES) $< -o $@
++	$(LIBTOOL) --mode=compile --tag=CC $(CC) -c $(INCLUDES) $(CFLAGS) \
++		$(DEFINES) $< -o $(@:.o=.lo)
+ 
+ glsl_lexer.cpp: glsl_lexer.lpp
+ 	flex --nounistd -o$@  $<

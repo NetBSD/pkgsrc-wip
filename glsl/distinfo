@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/11/22 23:39:34 pallegra Exp $
+
+SHA1 (MesaLib-7.9.tar.bz2) = 5afc7f6f4ee02a1ca39f29ef261cc14e8787d892
+RMD160 (MesaLib-7.9.tar.bz2) = 4aad7da22324556dcd3e833d149d8ae8de1fce7d
+Size (MesaLib-7.9.tar.bz2) = 5678494 bytes
+SHA1 (patch-aa) = 3b1d2e11f25b883323d0b6e130715fc820d4b22f
+SHA1 (patch-ab) = 268eb6bc30b58214a38328dd98de9275512e5002

@@ -1,0 +1,11 @@
+# Pull in the defaults
+include $(TOP)/configs/pkgsrc-dri
+
+CONFIG_NAME = pkgsrc-dri-i386
+
+# Compiler and flags
+ASM_FLAGS = -DUSE_X86_ASM -DUSE_MMX_ASM -DUSE_3DNOW_ASM -DUSE_SSE_ASM
+
+# Source selection
+MESA_ASM_SOURCES = $(X86_SOURCES)
+GLAPI_ASM_SOURCES = $(X86_API)
