@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1 2010/10/12 18:18:34 rxg Exp $
+$NetBSD: patch-aa,v 1.2 2010/11/22 20:58:21 ryo-on Exp $
 
 --- build/make/Makefile.orig	2010-09-02 18:56:47.000000000 +0000
 +++ build/make/Makefile
@@ -7,7 +7,7 @@ $NetBSD: patch-aa,v 1.1 2010/10/12 18:18:34 rxg Exp $
  $(BUILD_PFX)%.c.o: %.c
  	$(if $(quiet),@echo "    [CC] $@")
 -	$(qexec)$(CC) $(CFLAGS) -c -o $@ $<
-+	$(qexec)libtool --mode=compile $(CC) $(CFLAGS) -c -o $@ $<
++	$(qexec)${LIBTOOL} --mode=compile $(CC) $(CFLAGS) -c -o $@ $<
  
  $(BUILD_PFX)%.asm.d: %.asm
  	$(if $(quiet),@echo "    [DEP] $@")
@@ -16,7 +16,7 @@ $NetBSD: patch-aa,v 1.1 2010/10/12 18:18:34 rxg Exp $
  $(BUILD_PFX)%.asm.o: %.asm
  	$(if $(quiet),@echo "    [AS] $@")
 -	$(qexec)$(AS) $(ASFLAGS) -o $@ $<
-+	$(qexec)libtool --mode=compile --tag=CC sh strip_fPIC.sh \
++	$(qexec)${LIBTOOL} --mode=compile --tag=CC sh strip_fPIC.sh \
 +	    $(AS) $(ASFLAGS) -o $@ $<
  
  $(BUILD_PFX)%.s.d: %.s
@@ -26,7 +26,7 @@ $NetBSD: patch-aa,v 1.1 2010/10/12 18:18:34 rxg Exp $
  $(1):
  	$(if $(quiet),@echo    "    [LD] $$@")
 -	$(qexec)$$(LD) $$(strip $$(LDFLAGS) -o $$@ $(2) $(3) $$(extralibs))
-+	$(qexec)libtool --mode=link $(CC) -o $$@ $$(filter-out -lvpx,$(2)) \
++	$(qexec)${LIBTOOL} --mode=link $(CC) -o $$@ $$(filter-out -lvpx,$(2)) \
 +	    libvpx.la $$(extralibs)
  endef
  # make-3.80 has a bug with expanding large input strings to the eval function,
@@ -37,12 +37,12 @@ $NetBSD: patch-aa,v 1.1 2010/10/12 18:18:34 rxg Exp $
  	$(if $(quiet),@echo "    [INSTALL] $$@")
 -	$(qexec)mkdir -p $$(dir $$@)
 -	$(qexec)cp -p $$< $$@
-+	$(qexec)install -d -m 755 $$(dir $$@)
++	$(qexec)${BSD_INSTALL_DATA} -d -m 755 $$(dir $$@)
 +	$$(if $$(filter %.a,$$<), \
-+	libtool --mode=install install -c $$(patsubst %.a,%.la,$$<) $$(dir $$@), \
++	${LIBTOOL} --mode=install ${BSD_INSTALL_LIB} -c $$(patsubst %.a,%.la,$$<) $$(dir $$@), \
 +	$$(if $$(filter %.h,$$<), \
-+	install -c -m 644 $$< $$(dir $$@), \
-+	libtool --mode=install install -c -s $$< $$(dir $$@)))
++	${BSD_INSTALL_DATA} -c -m 644 $$< $$(dir $$@), \
++	${LIBTOOL} --mode=install ${BSD_INSTALL_LIB} -c -s $$< $$(dir $$@)))
  endef
  
  define archive_template
@@ -51,7 +51,7 @@ $NetBSD: patch-aa,v 1.1 2010/10/12 18:18:34 rxg Exp $
  $(1):
  	$(if $(quiet),@echo "    [AR] $$@")
 -	$(qexec)$$(AR) $$(ARFLAGS) $$@ $$?
-+	$(qexec)libtool --mode=link $(CC) -o $$(patsubst %.a,%.la,$$@) \
++	$(qexec)${LIBTOOL} --mode=link $(CC) -o $$(patsubst %.a,%.la,$$@) \
 +	    $$(patsubst %.o,%.lo,$$?) -rpath $(DIST_DIR)/lib \
 +	    -version-info $(VERSION_MINOR):$(VERSION_PATCH):$(VERSION_MINOR)
  endef
