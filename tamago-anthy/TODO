@@ -1,3 +1,0 @@
-* PKG_DESTDIR_SUPPORT is not complete.
-  .. installation has some trick that's why ..
-  (make package asks sudo password now)

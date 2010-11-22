@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/08/23 03:42:09 makoto Exp $
+# $NetBSD: Makefile,v 1.4 2010/11/22 14:38:41 makoto Exp $
 # the version number is for pkglint only
 DISTNAME=	tamago-anthy-4.0
 
@@ -9,12 +9,12 @@ ANTHY_VERSION=	9100h
 CATEGORIES=	inputmethod
 MASTER_SITES=	http://www.meadowy.org/~shirai/elips/
 # anthy
-MASTER_SITES+=   ${MASTER_SITE_SOURCEFORGE_JP:=anthy/37536/}
+MASTER_SITES+=	${MASTER_SITE_SOURCEFORGE_JP:=anthy/37536/}
 # egg-anthy
 
 
 MAINTAINER=	makoto@ki.nu
-HOMEPAGE=       http://www.meadowy.org/~shirai/
+HOMEPAGE=	http://www.meadowy.org/~shirai/
 # HOMEPAGE+=    http://www.m17n.org/tamago/
 #
 DISTFILES+=	egg-anthy.tar.gz
@@ -24,6 +24,8 @@ COMMENT=	Tamago(Emacs CJK input) + Anthy engine interface
 
 CONFLICTS=	tamago-[0-9]*
 PKG_DESTDIR_SUPPORT=	user-destdir
+MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX}
+
 USE_TOOLS+=	pax patch
 INFO_FILES=	yes
 
@@ -34,7 +36,6 @@ CVS_REPOSITORIES=	tamago
 CVS_ROOT.tamago=	:pserver:anonymous:@cvs.m17n.org:/cvs/tamago
 
 GNU_CONFIGURE=	yes
-MAKE_FLAGS+=	prefix=${DESTDIR:Q}${PREFIX}
 WRKSRC=			${WRKDIR}/tamago
 
 .include "../../editors/emacs/modules.mk"
@@ -47,6 +48,7 @@ INSTALL_MAKE_FLAGS=	prefix=${DESTDIR}${PREFIX} \
 
 # This is cvs-package version and DISTFILES may not be automatically read, so:
 post-patch:
+	set -e;					\
 	(cd ${WRKDIR}; pwd;			\
 	for i in ${DISTFILES} ; do		\
 	${ECHO}  ${DISTDIR}/$${i};		\
@@ -59,8 +61,17 @@ pre-configure:
 	cp -p ${WRKDIR}/egg-anthy/anthyipc.el	${WRKSRC}/egg
 
 # take care anthy part needs some make
-post-install:
-	cd ${WRKDIR}/anthy-${ANTHY_VERSION}/src-util && (../configure) && ${MAKE} elc-stamp
+post-build:
+	cd ${WRKDIR}/anthy-${ANTHY_VERSION}/src-util;	\
+	sh ../configure;	\
+	${MAKE} elc-stamp
+
+do-install:
+# original egg install (copied part of mk/install/install.mk)
+	set -e; cd ${WRKDIR}/tamago; 					\
+	${SETENV} ${INSTALL_ENV} ${MAKE_ENV}				\
+		${MAKE_PROGRAM} ${MAKE_FLAGS} ${INSTALL_MAKE_FLAGS}	\
+			install
 
 # anthy-elisp (hide after egg/egg that's why egg/f-anthy instead of just egg/anthy)
 	${INSTALL_DATA_DIR}	${DESTDIR}${EMACS_LISPPREFIX}/egg/f-anthy
@@ -73,10 +84,10 @@ post-install:
 	${INSTALL_DATA} ${WRKDIR}/egg-anthy/*.readme	${DESTDIR}/${PREFIX}/share/anthy
 	${INSTALL_DATA} ${WRKDIR}/egg-anthy/typetab-*	${DESTDIR}/${PREFIX}/share/anthy
 
-PLIST_VARS+=    jisx0213
+PLIST_VARS+=	jisx0213
 
 .if ${EMACS_FLAVOR} == "emacs" && ${EMACS_VERSION_MAJOR} >= 21
-PLIST.jisx0213=        yes
+PLIST.jisx0213=		yes
 .endif
 
 .include "../../wip/mk/cvs-package.mk"
