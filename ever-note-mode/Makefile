@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/11/17 10:41:31 ryo-on Exp $
+# $NetBSD: Makefile,v 1.2 2010/11/22 21:01:51 ryo-on Exp $
 #
 
-DISTNAME=	evernote-mode-0_11
+DISTNAME=	evernote-mode-0_14
 PKGNAME=	${DISTNAME:S/_/./}
 CATEGORIES=	editors net
 MASTER_SITES=	http://emacs-evernote-mode.googlecode.com/files/
