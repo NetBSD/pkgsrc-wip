@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4149 2010/11/22 21:43:17 ryo-on Exp $
+# $Id: Makefile,v 1.4150 2010/11/22 23:41:43 pallegra Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -581,6 +581,7 @@ SUBDIR+=	glkloader
 SUBDIR+=	glkterm
 SUBDIR+=	globulation2
 SUBDIR+=	gloox
+SUBDIR+=	glsl
 SUBDIR+=	glu
 SUBDIR+=	glulxe
 SUBDIR+=	glut
