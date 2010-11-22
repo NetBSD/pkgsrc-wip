@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4148 2010/11/18 13:50:36 ryo-on Exp $
+# $Id: Makefile,v 1.4149 2010/11/22 21:43:17 ryo-on Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2163,6 +2163,7 @@ SUBDIR+=	qcomicbook
 SUBDIR+=	qdevelop
 SUBDIR+=	qemu-neo1973
 SUBDIR+=	qemu-neo1973-images
+SUBDIR+=	qgoogletranslator
 SUBDIR+=	qhacc
 SUBDIR+=	qico
 SUBDIR+=	qinx
