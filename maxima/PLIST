@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2010/11/01 05:09:20 asau Exp $
+@comment $NetBSD: PLIST,v 1.31 2010/11/23 21:37:04 asau Exp $
 bin/maxima
 bin/rmaxima
 bin/xmaxima
@@ -60,6 +60,9 @@ share/maxima/${PKGVERSION}/doc/html/figures/graphs13.gif
 share/maxima/${PKGVERSION}/doc/html/figures/graphs14.gif
 share/maxima/${PKGVERSION}/doc/html/figures/graphs15.gif
 share/maxima/${PKGVERSION}/doc/html/figures/implicit_plot.gif
+share/maxima/${PKGVERSION}/doc/html/figures/introduction1.gif
+share/maxima/${PKGVERSION}/doc/html/figures/introduction2.gif
+share/maxima/${PKGVERSION}/doc/html/figures/introduction3.gif
 share/maxima/${PKGVERSION}/doc/html/figures/orthopoly1.gif
 share/maxima/${PKGVERSION}/doc/html/figures/plotdf1.gif
 share/maxima/${PKGVERSION}/doc/html/figures/plotdf2.gif
@@ -1604,13 +1607,11 @@ share/maxima/${PKGVERSION}/src/optimize.lisp
 share/maxima/${PKGVERSION}/src/option.lisp
 share/maxima/${PKGVERSION}/src/outmis.lisp
 share/maxima/${PKGVERSION}/src/pade.lisp
-share/maxima/${PKGVERSION}/src/parse-body.lisp
 share/maxima/${PKGVERSION}/src/plasma.lisp
 share/maxima/${PKGVERSION}/src/plot.lisp
 share/maxima/${PKGVERSION}/src/pois2.lisp
 share/maxima/${PKGVERSION}/src/pois3.lisp
 share/maxima/${PKGVERSION}/src/polyrz.lisp
-share/maxima/${PKGVERSION}/src/procs.lisp
 share/maxima/${PKGVERSION}/src/psolve.lisp
 share/maxima/${PKGVERSION}/src/rand-mt19937.lisp
 share/maxima/${PKGVERSION}/src/rat3a.lisp
@@ -1625,7 +1626,6 @@ share/maxima/${PKGVERSION}/src/residu.lisp
 share/maxima/${PKGVERSION}/src/result.lisp
 share/maxima/${PKGVERSION}/src/risch.lisp
 share/maxima/${PKGVERSION}/src/rpart.lisp
-share/maxima/${PKGVERSION}/src/runtim.lisp
 share/maxima/${PKGVERSION}/src/rzmac.lisp
 share/maxima/${PKGVERSION}/src/schatc.lisp
 share/maxima/${PKGVERSION}/src/scs.lisp
