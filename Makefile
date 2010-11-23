@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4151 2010/11/23 07:35:23 ryo-on Exp $
+# $Id: Makefile,v 1.4152 2010/11/23 12:29:41 ryo-on Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1438,6 +1438,7 @@ SUBDIR+=	njb-sharp
 SUBDIR+=	nmap
 SUBDIR+=	nmzmail
 SUBDIR+=	nnrpd
+SUBDIR+=	nodau
 SUBDIR+=	noip
 SUBDIR+=	noiptun
 SUBDIR+=	nomadio
