@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2010/11/23 12:28:47 ryo-on Exp $
+
+--- Makefile.orig	2010-11-08 14:29:23.000000000 +0000
++++ Makefile
+@@ -15,7 +15,7 @@ fresh: clean all
+ 
+ install:
+ 	install $(TARGET) $(BIN_DIR)/$(TARGET)
+-	-install man/$(TARGET).1 $(MAN_DIR)/$(TARGET).1
++	install man/$(TARGET).1 $(MAN_DIR)/$(TARGET).1
+ 
+ uninstall:
+ 	rm -f $(BIN_DIR)/$(TARGET)
