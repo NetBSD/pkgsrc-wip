@@ -61,7 +61,6 @@ OPTIONS:
    -1         display 1-line information about packages (default)
    -3         display short information about packages
    -i|-9      display full information about packages
-              (please, do not DOS dict server ;-) )
    -r         raw output in pkg_summary(5) format
    -q         quiet mode, do not print "No matches found" to stderr
 EOF

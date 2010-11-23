@@ -1,4 +1,9 @@
 ----------------------------------------------------------------------
+Version 0.49.1, by Aleksey Cheusov, Wed, 24 Nov 2010 00:35:21 +0200
+
+  Man page for pkg_digger(1)
+
+----------------------------------------------------------------------
 Version 0.49, by Aleksey Cheusov, Sat, 20 Nov 2010 01:14:47 +0200
 
   New tools pkg_digger and pkg_digger_backend were added. pkg_digger
