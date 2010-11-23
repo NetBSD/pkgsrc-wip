@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/08/24 23:30:39 mbowie Exp $
-
-SHA1 (php-geoip/geoip-1.0.7.tgz) = d3445f559813a6ec0972320cf6409b894f843642
-RMD160 (php-geoip/geoip-1.0.7.tgz) = a9bdd0d71a4b2fc8111cfeb08bd2d2161f029174
-Size (php-geoip/geoip-1.0.7.tgz) = 9416 bytes
