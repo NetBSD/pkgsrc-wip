@@ -30,7 +30,6 @@
 
 #env "LC_ALL=C"
 
-#use "alt_getopt.awk"
 #use "abort.awk"
 #use "power_getopt.awk"
 
@@ -41,13 +40,16 @@
 # usage: pkg_uniq_summary -h
 #       pkg_uniq_summary [OPTIONS] [files...]
 # OPTIONS:
-#   -h|--help            display this help
+#   -h|--help    display this help
+#   -n           only PKGBASE is analysed
 #.end-str
 ############################################################
 
 BEGIN {
 	skip       = 0
 	line_count = 0
+
+	opt_n      = getarg("n")
 }
 
 NF == 0 {
@@ -72,7 +74,7 @@ $0 ~ /^PKGNAME=/ {
 	next
 }
 
-$0 ~ /^PKGPATH=/ {
+!opt_n && $0 ~ /^PKGPATH=/ {
 	pkgpath = substr($0, 9)
 	if (sub(/:.*$/, "", pkgpath)){
 		assigns = substr($0, 9)
@@ -81,7 +83,7 @@ $0 ~ /^PKGPATH=/ {
 	next
 }
 
-$0 ~ /^ASSIGNMENTS=/ {
+!opt_n && $0 ~ /^ASSIGNMENTS=/ {
 	assigns = substr($0, 13)
 	next
 }
