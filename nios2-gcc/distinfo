@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/11/26 12:38:21 makoto Exp $
+
+SHA1 (nios2_gnu_gcc3_10.0.tar.gz) = db28844deb79c416d2ded7fafa9b497ff4fa355c
+RMD160 (nios2_gnu_gcc3_10.0.tar.gz) = 67f8d48eb49366154efb3fb9c177a978a7768ce5
+Size (nios2_gnu_gcc3_10.0.tar.gz) = 87391346 bytes
+SHA1 (patch-aa) = 33c61a420b37b81e85f5d9a4f4962f4ad03b41ea
+SHA1 (patch-ab) = fdd79226ecd181c2e4a16a29e46e9f6bce9e878b
