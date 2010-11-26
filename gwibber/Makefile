@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/11/25 11:42:23 ryo-on Exp $
+# $NetBSD: Makefile,v 1.3 2010/11/26 06:39:36 ryo-on Exp $
 #
 
 DISTNAME=	gwibber_2.91.0.orig
@@ -36,11 +36,13 @@ DEPENDS+=	${PYPKGPREFIX}-curl-[0-9]*:../../www/py-curl
 DEPENDS+=	${PYPKGPREFIX}-gnome2-desktop-[0-9]*:../../x11/py-gnome2-desktop
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 #DEPENDS+=	${PYPKGPREFIX}-keyring-[0-9]*:../../wip/py-keyring
-DEPENDS+=	gnome-keyring-[0-9]*:../../security/gnome-keyring
+DEPENDS+=	${PYPKGPREFIX}-oauth-[0-9]*:../../security/py-oauth
+DEPENDS+=	${PYPKGPREFIX}-gnome2-extras-[0-9]*:../../x11/py-gnome2-extras
 
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	post-patch
 SUBST_FILES.prefix=	setup.cfg
+SUBST_FILES.prefix+=	com.Gwibber*
 SUBST_SED.prefix=	-e 's,/usr,${PREFIX},'
 
 .include "../../lang/python/extension.mk"
