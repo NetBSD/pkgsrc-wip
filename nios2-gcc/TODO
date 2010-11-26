@@ -1,5 +1,2 @@
-* two conflicts with binutils are not well resolved.
+* conflict with binutils are not well resolved.
    libiberty.a 
-   info/dir
-* PKG_OPTIONS.netbsd does not complete packaging with
-  the error 'machine/ansi.h' not found
