@@ -9,8 +9,7 @@ pkg_micro_src_summary   - create a micro pkg_src_summary
 pkg_cmp_summary         - compare two summary files, i.e. packages
                           are compared by their versions
 pkg_grep_summary        - grep the summary using AWK expression
-pkg_digger              - high-level searcher for package summaries,
-                          pkg_online databases etc.
+pkg_digger              - very powerful package searcher
 pkg_digger_backend      - pkg_summary.txt backend for pkg_digger
 pkg_update_summary      - updates pkg_summary(5) by analysing the modification
                           time of binary packages and pkg_summary(5) file
@@ -22,6 +21,5 @@ pkg_refresh_summary     - output an information about latest/newest version
 pkg_cleanup_distdir     - remove old unused distfiles
 pkg_uniq_summary        - filter out repeated package summaries
 pkg_summary2deps        - summary to dependency graph converter
-pkg_summary2build_graph - convert src_summary to build dependency graph
 pkg_subgraph_deps       - analyses dependency graph given on input
 pkg_lint_summary        - sanity checks for summaries
