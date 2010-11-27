@@ -1,0 +1,25 @@
+$NetBSD: patch-ap,v 1.1.1.1 2010/11/27 01:24:41 rxg Exp $
+
+--- native_client/src/shared/platform/platform.gyp.orig	2010-11-19 02:38:03.000000000 +0000
++++ native_client/src/shared/platform/platform.gyp
+@@ -59,7 +59,7 @@
+       'time.h',
+     ],
+     'conditions': [
+-      ['OS=="linux"', {
++      ['OS=="linux" ', {
+         'platform_sources': [
+           'linux/condition_variable.cc',
+           'linux/lock.cc',
+@@ -74,6 +74,11 @@
+           'linux/time_linux.cc',
+         ],
+       }],
++      ['OS=="netbsd"', {
++        'platform_sources': [
++          'osx/strnlen_osx.c',
++        ],
++      }],
+       ['OS=="mac"', {
+         'platform_sources': [
+           'linux/condition_variable.cc',

@@ -1,0 +1,15 @@
+$NetBSD: patch-bf,v 1.1.1.1 2010/11/27 01:24:41 rxg Exp $
+
+--- tools/gyp/pylib/gyp/__init__.py.orig	2010-09-13 15:49:44.000000000 +0000
++++ tools/gyp/pylib/gyp/__init__.py
+@@ -313,8 +313,10 @@ def main(args):
+       options.formats = [ {'darwin':   'xcode',
+                            'win32':    'msvs',
+                            'cygwin':   'msvs',
++                           'dragonfly2': 'make',
+                            'freebsd7': 'make',
+                            'freebsd8': 'make',
++                           'netbsd5':  'make',
+                            'linux2':   'make',
+                            'openbsd4': 'make',
+                            'sunos5':   'make',}[sys.platform] ]

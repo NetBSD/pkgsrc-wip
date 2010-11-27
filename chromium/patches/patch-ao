@@ -1,0 +1,30 @@
+$NetBSD: patch-ao,v 1.1.1.1 2010/11/27 01:24:41 rxg Exp $
+
+--- native_client/build/common.gypi.orig	2010-11-18 16:20:41.000000000 +0000
++++ native_client/build/common.gypi
+@@ -86,7 +86,7 @@
+           # else gets passed through, which probably won't work very well; such
+           # hosts should pass an explicit target_arch to gyp.
+           'target_arch%':
+-            '<!(uname -m | sed -e "s/i.86/ia32/;s/x86_64/x64/;s/arm.*/arm/")'
++            '<!(uname -m | sed -e "s/i.86/ia32/;s/x86_64/x64/;s/amd64/x64/;s/arm.*/arm/")'
+         }, {  # OS!="linux"
+           'target_arch%': 'ia32',
+         }],
+@@ -383,7 +383,7 @@
+     },
+   },
+   'conditions': [
+-    ['OS=="linux"', {
++    ['OS=="linux" ', {
+       'target_defaults': {
+         # Enable -Werror by default, but put it in a variable so it can
+         # be disabled in ~/.gyp/include.gypi on the valgrind builders.
+@@ -466,6 +466,7 @@
+           'NACL_OSX=0',
+           'NACL_WINDOWS=0',
+           '_BSD_SOURCE=1',
++          '_NETBSD_SOURCE=1',
+           '_POSIX_C_SOURCE=199506',
+           '_XOPEN_SOURCE=600',
+           '_GNU_SOURCE=1',

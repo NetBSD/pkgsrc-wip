@@ -1,0 +1,14 @@
+$NetBSD: patch-dx,v 1.1.1.1 2010/11/27 01:24:43 rxg Exp $
+
+--- skia/ext/vector_platform_device.h.orig	2010-09-13 15:17:56.000000000 +0000
++++ skia/ext/vector_platform_device.h
+@@ -10,7 +10,8 @@
+ // VectorPlatformDevice header file for your platform.
+ #if defined(WIN32)
+ #include "skia/ext/vector_platform_device_win.h"
+-#elif defined(__linux__) || defined(__FreeBSD__) || defined(__OpenBSD__)
++#elif defined(__linux__) || defined(__FreeBSD__) || defined(__OpenBSD__) || \
++      defined(__NetBSD__) || defined(__DragonFly__)
+ #include "skia/ext/vector_platform_device_linux.h"
+ #endif
+ 

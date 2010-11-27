@@ -1,0 +1,27 @@
+$NetBSD: TODO,v 1.1.1.1 2010/11/27 01:24:39 rxg Exp $
+
+* debug
+* test on Linux/DragonFly/FreeBSD/OpenBSD
+* use libtool
+* check the list below to see if needs to add in hacks.mk
+
+app/clipboard/clipboard_unittest.cc
+base/command_line.cc
+base/dir_reader_posix.h
+base/linux_util.cc
+base/process_posix.cc
+base/process_util_unittest.cc
+chrome/browser/browser_child_process_host.cc
+chrome/browser/debugger/devtools_sanity_unittest.cc
+chrome/browser/extensions/extension_accessibility_apitest.cc
+chrome/browser/extensions/extension_browsertests_misc.cc
+chrome/browser/importer/firefox3_importer.cc
+chrome/browser/process_singleton_uitest.cc
+chrome/browser/search_engines/template_url_model_unittest.cc
+chrome/browser/sync/syncable/directory_backing_store.cc
+chrome/plugin/plugin_main.cc
+chrome/plugin/webplugin_delegate_stub.cc
+chrome/test/ui/fast_shutdown_uitest.cc
+views/controls/textfield/textfield.h
+webkit/glue/webkitclient_impl.cc
+webkit/tools/pepper_test_plugin/event_handler.cc

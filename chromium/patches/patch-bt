@@ -1,0 +1,17 @@
+$NetBSD: patch-bt,v 1.1.1.1 2010/11/27 01:24:42 rxg Exp $
+
+--- base/process_util_posix.cc.orig	2010-09-13 15:18:37.000000000 +0000
++++ base/process_util_posix.cc
+@@ -217,10 +217,10 @@ typedef scoped_ptr_malloc<DIR, ScopedDIR
+ #elif defined(OS_SOLARIS)
+   static const rlim_t kSystemDefaultMaxFds = 8192;
+   static const char kFDDir[] = "/dev/fd";
+-#elif defined(OS_FREEBSD)
++#elif defined(OS_FREEBSD) || defined(OS_DRAGONFLY)
+   static const rlim_t kSystemDefaultMaxFds = 8192;
+   static const char kFDDir[] = "/dev/fd";
+-#elif defined(OS_OPENBSD)
++#elif defined(OS_OPENBSD) || defined(OS_NETBSD)
+   static const rlim_t kSystemDefaultMaxFds = 256;
+   static const char kFDDir[] = "/dev/fd";
+ #endif

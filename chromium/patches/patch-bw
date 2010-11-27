@@ -1,0 +1,16 @@
+$NetBSD: patch-bw,v 1.1.1.1 2010/11/27 01:24:42 rxg Exp $
+
+--- base/third_party/nspr/prcpucfg.h.orig	2010-10-15 08:02:36.000000000 +0000
++++ base/third_party/nspr/prcpucfg.h
+@@ -36,9 +36,9 @@
+ #include "base/third_party/nspr/prcpucfg_mac.h"
+ #elif defined(__linux__)
+ #include "base/third_party/nspr/prcpucfg_linux.h"
+-#elif defined(__FreeBSD__)
++#elif defined(__FreeBSD__) || defined(__DragonFly__)
+ #include "base/third_party/nspr/prcpucfg_freebsd.h"
+-#elif defined(__OpenBSD__)
++#elif defined(__OpenBSD__) || defined(__NetBSD__)
+ #include "base/third_party/nspr/prcpucfg_openbsd.h"
+ #elif defined(__sun)
+ #include "base/third_party/nspr/prcpucfg_solaris.h"

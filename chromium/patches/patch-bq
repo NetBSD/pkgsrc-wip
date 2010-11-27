@@ -1,0 +1,47 @@
+$NetBSD: patch-bq,v 1.1.1.1 2010/11/27 01:24:41 rxg Exp $
+
+--- base/file_util_posix.cc.orig	2010-09-13 15:18:37.000000000 +0000
++++ base/file_util_posix.cc
+@@ -58,8 +58,8 @@ bool RealPath(const FilePath& path, File
+ 
+ }  // namespace
+ 
+-#if defined(OS_OPENBSD) || defined(OS_FREEBSD) || \
+-    (defined(OS_MACOSX) && \
++#if defined(OS_OPENBSD) || defined(OS_FREEBSD) || defined(OS_NETBSD) || \
++    defined(OS_DRAGONFLY) || (defined(OS_MACOSX) && \
+      MAC_OS_X_VERSION_MIN_REQUIRED < MAC_OS_X_VERSION_10_5)
+ typedef struct stat stat_wrapper_t;
+ static int CallStat(const char *path, stat_wrapper_t *sb) {
+@@ -93,8 +93,7 @@ int CountFilesCreatedAfter(const FilePat
+ 
+   DIR* dir = opendir(path.value().c_str());
+   if (dir) {
+-#if !defined(OS_LINUX) && !defined(OS_MACOSX) && !defined(OS_FREEBSD) && \
+-    !defined(OS_OPENBSD) && !defined(OS_SOLARIS)
++#if !defined(OS_POSIX)
+   #error Port warning: depending on the definition of struct dirent, \
+          additional space for pathname may be needed
+ #endif
+@@ -671,8 +670,7 @@ bool FileEnumerator::ReadDirectory(std::
+   if (!dir)
+     return false;
+ 
+-#if !defined(OS_LINUX) && !defined(OS_MACOSX) && !defined(OS_FREEBSD) && \
+-    !defined(OS_OPENBSD) && !defined(OS_SOLARIS)
++#if !defined(OS_POSIX)
+   #error Port warning: depending on the definition of struct dirent, \
+          additional space for pathname may be needed
+ #endif
+@@ -773,7 +771,11 @@ bool GetTempDir(FilePath* path) {
+ }
+ 
+ bool GetShmemTempDir(FilePath* path) {
++#if defined(OS_LINUX)
+   *path = FilePath("/dev/shm");
++#else
++  *path = FilePath("/tmp");
++#endif
+   return true;
+ }
+ 

@@ -1,0 +1,22 @@
+$NetBSD: patch-at,v 1.1.1.1 2010/11/27 01:24:41 rxg Exp $
+
+--- printing/printing.gyp.orig	2010-09-13 15:17:46.000000000 +0000
++++ printing/printing.gyp
+@@ -104,7 +104,7 @@
+         'units_unittest.cc',
+       ],
+       'conditions': [
+-        ['OS!="linux"', {'sources/': [['exclude', '_cairo_unittest\\.cc$']]}],
++        ['OS!="linux" ', {'sources/': [['exclude', '_cairo_unittest\\.cc$']]}],
+         ['OS!="mac"', {'sources/': [['exclude', '_mac_unittest\\.(cc|mm?)$']]}],
+         ['OS!="win"', {'sources/': [['exclude', '_win_unittest\\.cc$']]
+           }, {  # else: OS=="win"
+@@ -116,7 +116,7 @@
+               '../build/linux/system.gyp:gtk',
+            ],
+         }],
+-        ['OS=="linux"', {
++        ['OS=="linux" ', {
+           'conditions': [
+             ['linux_use_tcmalloc==1', {
+               'dependencies': [

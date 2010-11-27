@@ -1,0 +1,22 @@
+$NetBSD: patch-cs,v 1.1.1.1 2010/11/27 01:24:42 rxg Exp $
+
+--- chrome/renderer/render_process_impl.cc.orig	2010-09-13 15:19:41.000000000 +0000
++++ chrome/renderer/render_process_impl.cc
+@@ -262,7 +262,7 @@ TransportDIB* RenderProcessImpl::CreateT
+ #if defined(OS_WIN) || defined(OS_LINUX)
+   // Windows and Linux create transport DIBs inside the renderer
+   return TransportDIB::Create(size, transport_dib_next_sequence_number_++);
+-#elif defined(OS_MACOSX)  // defined(OS_WIN) || defined(OS_LINUX)
++#elif defined(OS_MACOSX) || defined(OS_FREEBSD) // defined(OS_WIN) || defined(OS_LINUX)
+   // Mac creates transport DIBs in the browser, so we need to do a sync IPC to
+   // get one.  The TransportDIB is cached in the browser.
+   TransportDIB::Handle handle;
+@@ -279,7 +279,7 @@ void RenderProcessImpl::FreeTransportDIB
+   if (!dib)
+     return;
+ 
+-#if defined(OS_MACOSX)
++#if defined(OS_MACOSX) || defined(OS_FREEBSD)
+   // On Mac we need to tell the browser that it can drop a reference to the
+   // shared memory.
+   IPC::Message* msg = new ViewHostMsg_FreeTransportDIB(dib->id());

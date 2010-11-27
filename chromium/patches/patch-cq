@@ -1,0 +1,13 @@
+$NetBSD: patch-cq,v 1.1.1.1 2010/11/27 01:24:42 rxg Exp $
+
+--- chrome/nacl/nacl_main.cc.orig	2010-09-13 15:19:41.000000000 +0000
++++ chrome/nacl/nacl_main.cc
+@@ -111,7 +111,7 @@ int NaClMain(const MainFunctionParams& p
+   SystemMonitor system_monitor;
+   HighResolutionTimerManager hi_res_timer_manager;
+ 
+-#if defined(OS_WIN) || defined(OS_MACOSX) || defined(OS_LINUX)
++#if defined(OS_WIN) || defined(OS_POSIX)
+   NaClMainPlatformDelegate platform(parameters);
+ 
+   platform.PlatformInitialize();

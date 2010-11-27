@@ -1,0 +1,13 @@
+$NetBSD: patch-bk,v 1.1.1.1 2010/11/27 01:24:41 rxg Exp $
+
+--- app/gfx/gl/gl_context_egl.cc.orig	2010-09-13 15:17:43.000000000 +0000
++++ app/gfx/gl/gl_context_egl.cc
+@@ -29,7 +29,7 @@ bool BaseEGLContext::InitializeOneOff() 
+   if (initialized)
+     return true;
+ 
+-#ifdef OS_LINUX
++#if defined(OS_LINUX)
+   EGLNativeDisplayType native_display = x11_util::GetXDisplay();
+ #else
+   EGLNativeDisplayType native_display = EGL_DEFAULT_DISPLAY;

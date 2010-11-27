@@ -1,0 +1,38 @@
+$NetBSD: patch-an,v 1.1.1.1 2010/11/27 01:24:41 rxg Exp $
+
+--- media/media.gyp.orig	2010-10-29 08:36:43.000000000 +0000
++++ media/media.gyp
+@@ -152,17 +152,6 @@
+               '-lasound',
+             ],
+           },
+-        }],
+-        ['OS=="openbsd"', {
+-          'sources/': [ ['exclude', 'alsa_' ],
+-                        ['exclude', 'audio_manager_linux' ],
+-                        ['exclude', '\\.mm?$' ] ],
+-          'link_settings': {
+-            'libraries': [
+-            ],
+-          },
+-        }],
+-        ['OS!="openbsd"', {
+           'sources!': [
+             'audio/openbsd/audio_manager_openbsd.cc',
+             'audio/openbsd/audio_manager_openbsd.h',
+@@ -585,8 +574,14 @@
+             '../base/base.gyp:base',
+           ],
+           'link_settings': {
++            'conditions': [
++              ['OS=="linux"', {
++                'libraries': [
++                  '-ldl',
++                ],
++              }],
++            ],
+             'libraries': [
+-              '-ldl',
+               '-lX11',
+               '-lXrender',
+               '-lXext',

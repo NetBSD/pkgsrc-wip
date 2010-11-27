@@ -1,0 +1,13 @@
+$NetBSD: patch-ca,v 1.1.1.1 2010/11/27 01:24:42 rxg Exp $
+
+--- chrome/browser/browser.cc.orig	2010-10-15 08:03:57.000000000 +0000
++++ chrome/browser/browser.cc
+@@ -1376,7 +1376,7 @@ void Browser::ToggleFullscreenMode() {
+   window_->SetFullscreen(!window_->IsFullscreen());
+   // On Linux, setting fullscreen mode is an async call to the X server, which
+   // may or may not support fullscreen mode.
+-#if !defined(OS_LINUX)
++#if !defined(USE_X11)
+   UpdateCommandsForFullscreenMode(window_->IsFullscreen());
+ #endif
+ }

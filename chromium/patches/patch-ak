@@ -1,0 +1,13 @@
+$NetBSD: patch-ak,v 1.1.1.1 2010/11/27 01:24:41 rxg Exp $
+
+--- gpu/demos/demos.gyp.orig	2010-09-13 15:17:46.000000000 +0000
++++ gpu/demos/demos.gyp
+@@ -48,7 +48,7 @@
+         'framework/window.h',
+       ],
+       'conditions': [
+-        ['OS=="linux"', {
++        ['OS=="linux" ', {
+           'dependencies': ['../../build/linux/system.gyp:gtk'],
+         }],
+       ],

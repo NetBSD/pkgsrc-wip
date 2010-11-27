@@ -1,0 +1,13 @@
+$NetBSD: patch-co,v 1.1.1.1 2010/11/27 01:24:42 rxg Exp $
+
+--- chrome/common/chrome_paths.cc.orig	2010-06-24 09:04:39.000000000 +0000
++++ chrome/common/chrome_paths.cc
+@@ -164,7 +164,7 @@ bool PathProvider(int key, FilePath* res
+       cur = cur.Append(FILE_PATH_LITERAL("inspector"));
+       break;
+     case chrome::DIR_APP_DICTIONARIES:
+-#if defined(OS_LINUX) || defined(OS_MACOSX)
++#if defined(OS_POSIX)
+       // We can't write into the EXE dir on Linux, so keep dictionaries
+       // alongside the safe browsing database in the user data dir.
+       // And we don't want to write into the bundle on the Mac, so push

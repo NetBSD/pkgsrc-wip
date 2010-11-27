@@ -1,0 +1,13 @@
+$NetBSD: patch-bg,v 1.1.1.1 2010/11/27 01:24:41 rxg Exp $
+
+--- tools/gyp/pylib/gyp/generator/make.py.orig	2010-10-15 09:03:34.000000000 +0000
++++ tools/gyp/pylib/gyp/generator/make.py
+@@ -195,7 +195,7 @@ sed -e "s|^$(notdir $@)|$@|" $(depfile).
+ # We remove slashes and replace spaces with new lines;
+ # remove blank lines;
+ # delete the first line and append a colon to the remaining lines.
+-sed -e 's|\\||' -e 's| |\n|g' $(depfile).raw |\
++sed -e 's|\\||' -e 'y| |\n|' $(depfile).raw |\
+   grep -v '^$$'                              |\
+   sed -e 1d -e 's|$$|:|'                      \
+     >> $(depfile)

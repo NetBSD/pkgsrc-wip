@@ -1,0 +1,32 @@
+$NetBSD: patch-bn,v 1.1.1.1 2010/11/27 01:24:41 rxg Exp $
+
+--- base/base_paths_posix.cc.orig	2010-10-15 08:02:37.000000000 +0000
++++ base/base_paths_posix.cc
+@@ -7,7 +7,8 @@
+ #include "base/base_paths.h"
+ 
+ #include <unistd.h>
+-#if defined(OS_FREEBSD)
++#if defined(OS_FREEBSD) || defined(OS_NETBSD) || defined(OS_OPENBSD) || \
++    defined(OS_DRAGONFLY)
+ #include <sys/param.h>
+ #include <sys/sysctl.h>
+ #endif
+@@ -23,7 +24,7 @@
+ 
+ namespace base {
+ 
+-#if defined(OS_LINUX)
++#if defined(OS_LINUX) || defined(OS_NETBSD)
+ const char kSelfExe[] = "/proc/self/exe";
+ #elif defined(OS_SOLARIS)
+ const char kSelfExe[] = getexecname();
+@@ -34,7 +35,7 @@ bool PathProviderPosix(int key, FilePath
+   switch (key) {
+     case base::FILE_EXE:
+     case base::FILE_MODULE: {  // TODO(evanm): is this correct?
+-#if defined(OS_LINUX)
++#if defined(OS_LINUX) || defined(OS_NETBSD)
+       char bin_dir[PATH_MAX + 1];
+       int bin_dir_size = readlink(kSelfExe, bin_dir, PATH_MAX);
+       if (bin_dir_size < 0 || bin_dir_size > PATH_MAX) {

@@ -1,0 +1,28 @@
+$NetBSD: patch-dg,v 1.1.1.1 2010/11/27 01:24:42 rxg Exp $
+
+--- native_client/src/trusted/service_runtime/linux/nacl_signal_arch.h.orig	2010-10-15 08:05:00.000000000 +0000
++++ native_client/src/trusted/service_runtime/linux/nacl_signal_arch.h
+@@ -45,7 +45,11 @@ static INLINE void NaClRecoverFromSignal
+      * Note that, in comparison, Breakpad tries to avoid using libc
+      * calls at all when a crash occurs.
+      */
++#if defined(__NetBSD__)
++    uint16_t guest_gs = context->uc_mcontext.__gregs[_REG_GS];
++#else
+     uint16_t guest_gs = context->uc_mcontext.gregs[REG_GS];
++#endif
+     struct NaClThreadContext *nacl_thread = nacl_sys[guest_gs >> 3];
+     NaClSetGs(nacl_thread->gs);
+   }
+@@ -57,7 +61,11 @@ static INLINE void NaClRecoverFromSignal
+ static INLINE void NaClRecoverFromSignal(struct NaClApp *nap,
+                                          ucontext_t *context,
+                                          int *in_untrusted_code) {
++#if defined(__NetBSD__)
++  uintptr_t rip = context->uc_mcontext.__gregs[_REG_RIP];
++#else
+   uintptr_t rip = context->uc_mcontext.gregs[REG_RIP];
++#endif
+   *in_untrusted_code = nap != NULL && NaClIsUserAddr(nap, rip);
+ }
+ 

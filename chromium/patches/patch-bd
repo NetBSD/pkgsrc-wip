@@ -1,0 +1,49 @@
+$NetBSD: patch-bd,v 1.1.1.1 2010/11/27 01:24:41 rxg Exp $
+
+--- third_party/yasm/yasm.gyp.orig	2010-10-15 08:02:30.000000000 +0000
++++ third_party/yasm/yasm.gyp
+@@ -32,7 +32,7 @@
+ {
+   'variables': {
+     'yasm_include_dirs': [
+-      'source/config/<(OS)',
++      'source/config/linux',
+       'source/patched-yasm',
+     ],
+ 
+@@ -157,6 +157,13 @@
+       ],
+       'defines': [ '<@(yasm_defines)' ],
+       'cflags': [ '<@(yasm_cflags)', ],
++      'conditions': [
++        ['OS=="netbsd"', {
++          'libraries': [
++            '-lintl',
++          ],
++        }],
++      ],
+       'rules': [
+         {
+           'rule_name': 'generate_gperf',
+@@ -314,7 +321,7 @@
+         {
+           'action_name': 'generate_module',
+           'variables': {
+-            'makefile': 'source/config/<(OS)/Makefile',
++            'makefile': 'source/config/linux/Makefile',
+             'module_in': 'source/patched-yasm/libyasm/module.in',
+             'outfile': '<(generated_dir)/module.c',
+           },
+@@ -340,9 +347,9 @@
+       'type': 'none',
+       'toolsets': ['host'],
+       'sources': [
+-        'source/config/<(OS)/Makefile',
+-        'source/config/<(OS)/config.h',
+-        'source/config/<(OS)/libyasm-stdint.h',
++        'source/config/linux/Makefile',
++        'source/config/linux/config.h',
++        'source/config/linux/libyasm-stdint.h',
+       ],
+     },
+     {

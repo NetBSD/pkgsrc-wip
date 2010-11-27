@@ -1,0 +1,22 @@
+$NetBSD: patch-dk,v 1.1.1.1 2010/11/27 01:24:43 rxg Exp $
+
+--- net/disk_cache/disk_format.h.orig	2010-09-13 15:17:56.000000000 +0000
++++ net/disk_cache/disk_format.h
+@@ -146,7 +146,7 @@ enum EntryFlags {
+   CHILD_ENTRY = 1 << 1      // Child entry that stores sparse data.
+ };
+ 
+-#pragma pack(push, 4)
++#pragma pack(4)
+ // Rankings information for a given entry.
+ struct RankingsNode {
+   uint64      last_used;        // LRU info.
+@@ -157,7 +157,7 @@ struct RankingsNode {
+   int32       dirty;            // The entry is being modifyied.
+   int32       dummy;            // Old files may have a pointer here.
+ };
+-#pragma pack(pop)
++#pragma pack()
+ 
+ COMPILE_ASSERT(sizeof(RankingsNode) == 36, bad_RankingsNode);
+ 

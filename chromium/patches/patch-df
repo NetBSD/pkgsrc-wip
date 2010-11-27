@@ -1,0 +1,12 @@
+$NetBSD: patch-df,v 1.1.1.1 2010/11/27 01:24:42 rxg Exp $
+
+--- native_client/src/trusted/service_runtime/linux/nacl_signal.c.orig	2010-10-15 08:05:00.000000000 +0000
++++ native_client/src/trusted/service_runtime/linux/nacl_signal.c
+@@ -9,6 +9,7 @@
+ #include <sys/mman.h>
+ #include <unistd.h>
+ 
++#include "native_client/src/include/nacl_platform.h"
+ #include "native_client/src/shared/platform/nacl_check.h"
+ #include "native_client/src/shared/platform/nacl_log.h"
+ #include "native_client/src/trusted/service_runtime/nacl_config.h"

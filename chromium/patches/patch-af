@@ -1,0 +1,49 @@
+$NetBSD: patch-af,v 1.1.1.1 2010/11/27 01:24:40 rxg Exp $
+
+--- chrome/chrome_browser.gypi.orig	2010-11-15 16:50:55.000000000 +0000
++++ chrome/chrome_browser.gypi
+@@ -3161,7 +3161,7 @@
+             # Nothing yet.
+           ],
+         }],
+-        ['OS=="linux"', {
++        ['OS=="linux" ', {
+           'dependencies': [
+             '../build/linux/system.gyp:dbus-glib',
+             '../build/linux/system.gyp:gconf',
+@@ -3170,9 +3170,13 @@
+             '../build/linux/system.gyp:nss',
+           ],
+           'link_settings': {
+-            'libraries': [
+-              # For dlsym() in 'browser/zygote_main_linux.cc'
+-              '-ldl',
++            'conditions': [
++              ['OS=="linux"', {
++                'libraries': [
++                  # For dlsym() in 'browser/zygote_main_linux.cc'
++                  '-ldl',
++                ],
++              }],
+             ],
+           },
+           'sources!': [
+@@ -3222,7 +3226,7 @@
+             'browser/file_path_watcher_inotify.cc',
+           ],
+         }],
+-        ['OS=="freebsd" or OS=="openbsd"', {
++        ['OS=="freebsd" or OS=="openbsd" or OS=="netbsd" or OS=="dragonfly"', {
+           'dependencies': [
+             '../build/linux/system.gyp:gtk',
+             '../build/linux/system.gyp:gtkprint',
+@@ -3231,6 +3235,9 @@
+           'sources': [
+             'browser/file_path_watcher_stub.cc',
+           ],
++          'sources!': [
++            'browser/file_path_watcher_inotify.cc',
++          ],
+         }],
+         ['OS=="mac"', {
+           'sources!': [
