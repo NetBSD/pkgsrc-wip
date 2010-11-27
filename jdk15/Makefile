@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.38 2010/11/27 14:04:52 ftigeot Exp $
+# $NetBSD: Makefile,v 1.39 2010/11/27 14:52:27 ftigeot Exp $
 
 .include "../../wip/jdk16/Makefile.common"
 
 JDK_VERSION=		1.5.0
-JDK_UPDATE=		13
+JDK_UPDATE=		16
 # If updating, please check if patch-ar is still needed. (introduced in patch8)
-JDK_PATCHSET_VERSION=	8
-JDK_VERSION_STRING=	b05-jrl-25_sep_2007
+JDK_PATCHSET_VERSION=	9
+JDK_VERSION_STRING=	b02-jrl-28_may_2008
 
 DISTNAME=		jdk-${JDK_VERSION:S/./_/g}_${JDK_UPDATE}
 PKGNAME=	jdk15-${JDK_VERSION}.${JDK_UPDATE}.${JDK_PATCHSET_VERSION}
@@ -20,9 +20,6 @@ LICENSE=		sun-jrl-16-license
 MAKE_JOBS_SAFE=		no
 USE_TOOLS+=		patch pax
 WRKSRC=			${WRKDIR}
-
-ONLY_FOR_PLATFORM=	NetBSD-[2-9]*-i386
-ONLY_FOR_PLATFORM+=	NetBSD-[2-9]*-x86_64
 
 JAVA_NAME=		jdk15
 JAVA_WRAPPERS=		appletviewer jar java javac javadoc javah javap
