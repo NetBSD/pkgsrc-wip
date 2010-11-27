@@ -1,0 +1,28 @@
+$NetBSD: patch-ab,v 1.3 2010/11/27 02:32:28 rxg Exp $
+
+--- base/base.gypi.orig	2010-09-13 15:18:37.000000000 +0000
++++ base/base.gypi
+@@ -337,11 +337,11 @@
+           [ 'OS != "linux"', {
+               'sources!': [
+                 # Not automatically excluded by the *linux.cc rules.
+-                'gtk_util.cc',
+-                'gtk_util.h',
+-                'linux_util.cc',
++                'file_util_linux.cc',
++                'process_linux.cc',
+                 'setproctitle_linux.c',
+                 'setproctitle_linux.h',
++                'sys_info_linux.cc',
+               ],
+             },
+           ],
+@@ -352,7 +352,7 @@
+           }],
+           # For now, just test the *BSD platforms enough to exclude them.
+           # Subsequent changes will include them further.
+-          [ 'OS != "freebsd"', {
++          [ 'OS != "freebsd" and OS != "netbsd" and OS != "dragonfly"', {
+               'sources/': [ ['exclude', '_freebsd\\.cc$'] ],
+             },
+           ],
