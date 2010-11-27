@@ -1,0 +1,14 @@
+--- control/make/common/Platform.gmk.orig	2010-11-07 19:08:35 +0100
++++ control/make/common/Platform.gmk	2010-11-07 19:11:59 +0100
+@@ -64,6 +64,11 @@
+ LINUX_OR_BSD = true
+ endif
+ 
++ifeq ($(uname), DragonFly)
++PLATFORM = bsd
++LINUX_OR_BSD = true
++endif
++
+ TRUE_PLATFORM = $(uname)
+ export TRUE_PLATFORM
+ export LINUX_OR_BSD

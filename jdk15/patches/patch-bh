@@ -1,0 +1,11 @@
+--- j2se/src/solaris/native/sun/awt/Xinerama.c.orig	2010-11-13 20:13:30 +0100
++++ j2se/src/solaris/native/sun/awt/Xinerama.c	2010-11-13 22:57:21 +0100
+@@ -31,7 +31,7 @@
+ #define NEED_REPLIES
+ #include <X11/Xlibint.h>
+ #include <X11/Xutil.h>
+-#include "Xext.h"
++#include <X11/extensions/Xext.h>
+ #include "extutil.h"
+ #include "panoramiXext.h"
+ #include "panoramiXproto.h"

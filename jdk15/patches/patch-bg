@@ -1,0 +1,21 @@
+--- j2se/src/solaris/native/sun/awt/awt_GraphicsEnv.c.orig	2010-11-13 20:13:30 +0100
++++ j2se/src/solaris/native/sun/awt/awt_GraphicsEnv.c	2010-11-13 23:24:49 +0100
+@@ -232,7 +232,7 @@
+ 
+     if ((forcedVisualStr = getenv("FORCEDEFVIS"))) {
+ 	mask = VisualIDMask | VisualScreenMask;
+-	if (sscanf(forcedVisualStr, "%x", &forcedVisualID) > 0 &&
++	if (sscanf(forcedVisualStr, "%x", (unsigned int *)&forcedVisualID) > 0 &&
+ 	    forcedVisualID > 0) 
+ 	{
+ 	    vinfo.visualid = forcedVisualID;
+@@ -826,6 +826,9 @@
+ 
+ #ifdef MITSHM
+ 
++#include <X11/Xmd.h>
++#include <X11/extensions/shmproto.h>
++
+ static jint canUseShmExt = UNSET_MITSHM;
+ static jint canUseShmExtPixmaps = UNSET_MITSHM;
+ static jboolean xshmAttachFailed = JNI_FALSE;

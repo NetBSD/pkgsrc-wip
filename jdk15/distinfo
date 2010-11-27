@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.15 2010/11/27 14:52:27 ftigeot Exp $
+$NetBSD: distinfo,v 1.16 2010/11/27 15:36:51 ftigeot Exp $
 
 SHA1 (bsd-jdk15-patches-9.tar.bz2) = 410de93e19d15a1f45b825b9751b0482b70bdf7f
 RMD160 (bsd-jdk15-patches-9.tar.bz2) = ff8cc31c3735b33ec8072e6764fd165a775f1fe6
@@ -15,12 +15,19 @@ Size (jdk-1_5_0_16-fcs-src-b02-jrl-28_may_2008.jar) = 58024248 bytes
 SHA1 (patch-aa) = 6f250d23eda6ec3d6ec0c7b485fcc3739b379a88
 SHA1 (patch-ab) = 549dac84644247e0c90978f2c78ce49ee62f7434
 SHA1 (patch-ad) = 18014bd4b668be764cc1a170b161e80cd48c625f
-SHA1 (patch-af) = c6ab873b86e71bf23476a2a17a3e40454f24608a
-SHA1 (patch-ag) = 4e2ce24e8a01de5a865de8632d168e217f5d24a0
+SHA1 (patch-af) = b00b51fa0c03e702c0a037793244c3e49d723293
+SHA1 (patch-ag) = 86b8a68da20b0ecb91ec3777f8a527308469463f
 SHA1 (patch-ak) = 8a9140f181fcc8a02b3c70b062fc3e750393d235
 SHA1 (patch-al) = c4213a76eed62ce25b7a7ce7a594cbb100e597bd
 SHA1 (patch-an) = 131efa89c7a4623a2aa56238f27b336a5c5cda4e
 SHA1 (patch-ap) = e9288fdd092e5015ac116f3b4fd76a946a625380
 SHA1 (patch-aq) = 84e71786c7c399646cd4bc964cffb27dcfedac2c
 SHA1 (patch-ar) = bcacdff75fd31ec3d75df0ac420b5c30b3713c6d
-SHA1 (patch-as) = c230c9e376ee74d7c75681aaf62d9b1c9527515f
+SHA1 (patch-ba) = 40204acadb49878a895fc2dafbf5a91bd78feaea
+SHA1 (patch-bb) = 31d38a121b7f2cb2894d92338f853038bd301d01
+SHA1 (patch-bc) = fa8947f698b3dff5f3c6945be0cf505f08a90ba3
+SHA1 (patch-bd) = f94e83f5f9c7ee7c751b19bffbdd0b26f99a160d
+SHA1 (patch-be) = c1015ccfcb27be85fcbc19053f1b6d9c726ff159
+SHA1 (patch-bf) = 5388da5d6f3b3e656b3a75a738860e10774e29a8
+SHA1 (patch-bg) = de8c47a373ce6869c2baf739868c8f292f82c988
+SHA1 (patch-bh) = 8ad68283d24780fc7de2c38b8f92e59a916bdc62

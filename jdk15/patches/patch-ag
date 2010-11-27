@@ -1,12 +1,12 @@
---- j2se/make/common/Defs-bsd.gmk.orig	2010-11-17 21:29:25 +0100
-+++ j2se/make/common/Defs-bsd.gmk	2010-11-17 21:29:25 +0100
+--- j2se/make/common/Defs-bsd.gmk.orig	2010-11-21 14:39:48 +0100
++++ j2se/make/common/Defs-bsd.gmk	2010-11-21 16:44:01 +0100
 @@ -349,6 +349,10 @@
  # -L paths for finding and -ljava
  #
  LDFLAGS_COMMON += -L$(LIBDIR)/$(LIBARCH)
-+ifeq ($(TRUE_PLATFORM), NetBSD)
++ifeq ($(TRUE_PLATFORM), $(filter $(TRUE_PLATFORM), NetBSD, DragonFly))
 +LDFLAGS_COMMON += -Wl,-rpath $(LIBDIR)/$(LIBARCH)
-+LDFLAGS_COMMON += -Wl,-rpath %%JVM_HOME%%/jre/lib/$(LIBARCH)
++LDFLAGS_COMMON += -Wl,-rpath /usr/pkg/java/jdk-1.5.0/jre/lib/$(LIBARCH)
 +endif
  LDFLAGS_OPT     = -Xlinker -O1 -Wl,-soname=$(LIB_PREFIX)$(LIBRARY)$(OPT_SUFFIX).$(LIBRARY_SUFFIX)
  LDFLAGS_DBG     = -Wl,-soname=$(LIB_PREFIX)$(LIBRARY)$(DBG_SUFFIX).$(LIBRARY_SUFFIX)
@@ -15,9 +15,9 @@
  VM_NAME         = server
  JVMLIB          = -L$(LIBDIR)/$(LIBARCH)/$(VM_NAME)
  JVMLIB		+= -ljvm$(SUFFIX)
-+ifeq ($(TRUE_PLATFORM), NetBSD)
++ifeq ($(TRUE_PLATFORM), $(filter $(TRUE_PLATFORM), NetBSD, DragonFly))
 +JVMLIB          += -Wl,-rpath $(LIBDIR)/$(LIBARCH)/$(VM_NAME)
-+JVMLIB          += -Wl,-rpath %%JVM_HOME%%/jre/lib/$(LIBARCH)/$(VM_NAME)
++JVMLIB          += -Wl,-rpath /usr/pkg/java/jdk-1.5.0/jre/lib/$(LIBARCH)/$(VM_NAME)
 +endif
  JAVALIB         = -ljava$(SUFFIX) $(JVMLIB)
  

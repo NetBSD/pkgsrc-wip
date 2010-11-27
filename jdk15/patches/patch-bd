@@ -1,0 +1,12 @@
+--- j2se/src/solaris/native/java/net/Inet4AddressImpl.c.orig	2010-11-13 20:13:30 +0100
++++ j2se/src/solaris/native/java/net/Inet4AddressImpl.c	2010-11-13 21:40:33 +0100
+@@ -916,7 +916,8 @@
+  *	rather than through the base functions.
+  */
+ 
+-#if !defined(__NetBSD__)		/* gethostent is depricated */
++/* gethostent is depricated */
++#if !defined(__NetBSD__) && !defined(__DragonFly__)
+ HOST_R_RETURN
+ gethostent_r(struct hostent *hptr, HOST_R_ARGS) {
+ 	struct hostent *he = gethostent();

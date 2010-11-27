@@ -1,0 +1,11 @@
+--- hotspot/src/os_cpu/bsd_amd64/vm/os_bsd_amd64.cpp.orig	2010-11-09 00:00:38 +0100
++++ hotspot/src/os_cpu/bsd_amd64/vm/os_bsd_amd64.cpp	2010-11-09 00:17:00 +0100
+@@ -31,7 +31,7 @@
+ #include <poll.h>
+ #include <inttypes.h>
+ 
+-# ifdef __FreeBSD__
++# if defined(__FreeBSD__) || defined(__DragonFly__)
+ #  define context_rip uc_mcontext.mc_rip
+ #  define context_rsp uc_mcontext.mc_rsp
+ #  define context_rax uc_mcontext.mc_rax
