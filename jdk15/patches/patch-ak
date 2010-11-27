@@ -1,0 +1,57 @@
+$NetBSD: patch-ak,v 1.3 2010/11/27 14:04:52 ftigeot Exp $
+
+--- motif/lib/Xm/Makefile.orig	2004-10-19 20:44:03.000000000 +0200
++++ motif/lib/Xm/Makefile
+@@ -128,12 +128,12 @@ TCLIBDIR = /usr/lib
+          IMAKESRC = $(CONFIGSRC)/imake
+         DEPENDSRC = $(CONFIGSRC)/makedepend
+ 
+-          INCROOT = /usr/X11R6/include
+-        USRLIBDIR = /usr/X11R6/lib
++          INCROOT = %%X11BASE%%/include
++        USRLIBDIR = %%X11BASE%%/lib
+         VARLIBDIR = /var/lib
+-         SHLIBDIR = /usr/X11R6/lib
++         SHLIBDIR = %%X11BASE%%/lib
+        LINTLIBDIR = $(USRLIBDIR)/lint
+-          MANPATH = /usr/X11R6/man
++          MANPATH = %%X11BASE%%/man
+     MANSOURCEPATH = $(MANPATH)/man
+            MANDIR = $(MANSOURCEPATH)1
+         LIBMANDIR = $(MANSOURCEPATH)3
+@@ -229,7 +229,7 @@ CXXEXTRA_INCLUDES =
+      INSTDATFLAGS = -m 0444
+     INSTKMEMFLAGS = -m 4711
+ 
+-      PROJECTROOT = /usr/X11R6
++      PROJECTROOT = %%X11BASE%%
+ 
+       #CDEBUGFLAGS = -g -fno-strength-reduce
+         CCOPTIONS = -ansi -pedantic
+@@ -302,7 +302,7 @@ CONNECTION_FLAGS = -DUNIXCONN -DTCPCONN 
+ # X Window System make variables; these need to be coordinated with rules
+ 
+              XTOP = $(TOP)
+-           BINDIR = /usr/X11R6/bin
++           BINDIR = %%X11BASE%%/bin
+      BUILDINCROOT = $(TOP)/exports
+       BUILDINCDIR = $(BUILDINCROOT)/include
+       BUILDINCTOP = ../..
+@@ -633,7 +633,7 @@ CONNECTION_FLAGS = -DUNIXCONN -DTCPCONN 
+ # X Window System make variables; these need to be coordinated with rules
+ 
+              XTOP = $(TOP)
+-           BINDIR = /usr/X11R6/bin
++           BINDIR = %%X11BASE%%/bin
+      BUILDINCROOT = $(TOP)/exports
+       BUILDINCDIR = $(BUILDINCROOT)/include
+       BUILDINCTOP = ../..
+@@ -955,7 +955,7 @@ TOP_MOTIF_INCLUDES = -I$(MINCLUDESRC)
+ 
+     MOTIFENVLIBDIR = $(TOP)/exports/lib
+ 
+-      USRINCDIR = /usr/X11R6/include
++      USRINCDIR = %%X11BASE%%/include
+          UIDDIR = $(LIBDIR)/uid
+         TESTSRC = $(MTOP)/tests
+         TESTLIB = $(TESTSRC)/lib

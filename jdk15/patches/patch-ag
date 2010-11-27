@@ -1,0 +1,58 @@
+$NetBSD: patch-ag,v 1.5 2010/11/27 14:04:52 ftigeot Exp $
+
+--- j2se/make/common/Defs-bsd.gmk.orig	2007-02-28 10:53:38.000000000 -0600
++++ j2se/make/common/Defs-bsd.gmk
+@@ -178,9 +178,9 @@ endif
+ # DEVTOOLS_PATH is for other tools required for building (such as
+ # zip, etc.)
+ ifeq ($(TRUE_PLATFORM), NetBSD)
+-DEVTOOLS_PATH = /usr/pkg/bin/
++DEVTOOLS_PATH = %%PREFIX%%/bin/
+ else
+-DEVTOOLS_PATH = /usr/local/bin/
++DEVTOOLS_PATH = %%PREFIX%%/bin/
+ endif
+ # Allow the user to override the default value...
+ ifdef ALT_DEVTOOLS_PATH
+@@ -347,6 +347,10 @@ EXTRA_LIBS += -pthread
+ # -L paths for finding and -ljava
+ #
+ LDFLAGS_COMMON += -L$(LIBDIR)/$(LIBARCH)
++ifeq ($(TRUE_PLATFORM), NetBSD)
++LDFLAGS_COMMON += -Wl,-rpath $(LIBDIR)/$(LIBARCH)
++LDFLAGS_COMMON += -Wl,-rpath %%JVM_HOME%%/jre/lib/$(LIBARCH)
++endif
+ LDFLAGS_OPT     = -Xlinker -O1 -Wl,-soname=$(LIB_PREFIX)$(LIBRARY)$(OPT_SUFFIX).$(LIBRARY_SUFFIX)
+ LDFLAGS_DBG     = -Wl,-soname=$(LIB_PREFIX)$(LIBRARY)$(DBG_SUFFIX).$(LIBRARY_SUFFIX)
+ 
+@@ -398,6 +402,10 @@ endif
+ VM_NAME         = server
+ JVMLIB          = -L$(LIBDIR)/$(LIBARCH)/$(VM_NAME)
+ JVMLIB		+= -ljvm$(SUFFIX)
++ifeq ($(TRUE_PLATFORM), NetBSD)
++JVMLIB          += -Wl,-rpath $(LIBDIR)/$(LIBARCH)/$(VM_NAME)
++JVMLIB          += -Wl,-rpath %%JVM_HOME%%/jre/lib/$(LIBARCH)/$(VM_NAME)
++endif
+ JAVALIB         = -ljava$(SUFFIX) $(JVMLIB)
+ 
+ #
+@@ -432,7 +440,7 @@ override LIBSOCKET               =
+ override LIBTHREAD               =
+ override MOOT_PRIORITIES         = true
+ override NO_INTERRUPTIBLE_IO     = false
+-override OPENWIN_HOME            = /usr/X11R6
++override OPENWIN_HOME            = %%X11BASE%%
+ override OPENWIN_LIB             = $(OPENWIN_HOME)/lib
+ override OTHER_M4FLAGS           = -DGNU_ASSEMBLER
+ override SUN_CMM_SUBDIR          =
+@@ -491,6 +499,10 @@ ifeq ($(TRUE_PLATFORM), OpenBSD)
+   SYSTEM_ZLIB = true
+ endif
+ 
++ifeq ($(TRUE_PLATFORM), NetBSD)
++  SYSTEM_ZLIB = true
++endif
++
+ #
+ # Japanese manpages
+ #

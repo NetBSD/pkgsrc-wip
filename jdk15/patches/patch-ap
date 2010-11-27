@@ -1,0 +1,22 @@
+$NetBSD: patch-ap,v 1.4 2010/11/27 14:04:52 ftigeot Exp $
+
+--- deploy/src/plugin/share/adapter/common/CNSAdapter_JVMManager.cpp.orig	2008-02-27 03:38:28.000000000 +0100
++++ deploy/src/plugin/share/adapter/common/CNSAdapter_JVMManager.cpp
+@@ -139,7 +139,7 @@ CNSAdapter_JVMManager::GetCurrentThread(
+ 
+     nsresult res = JD_OK;
+     
+-    nsPluginThread* pPluginThread = NULL;
++    PRThread* pPluginThread = NULL;
+     res = m_pThreadManager->GetCurrentThread(&pPluginThread);
+ 
+     if (NS_SUCCEEDED(res) && pPluginThread)
+@@ -169,7 +169,7 @@ CNSAdapter_JVMManager::PostEvent(JDThrea
+     if (spRunnable == NULL)
+ 	return JD_ERROR_OUT_OF_MEMORY;
+ 
+-    return m_pThreadManager->PostEvent((unsigned long)threadID, spRunnable, async);
++    return m_pThreadManager->PostEvent((PRThread*)threadID, spRunnable, async);
+ }
+ 
+ //nsISupports

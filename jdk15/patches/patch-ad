@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.4 2010/11/27 14:04:52 ftigeot Exp $
+
+--- deploy/make/plugin/unsupported/ns6-adapter/Makefile.orig	2005-09-07 10:58:23.000000000 +0200
++++ deploy/make/plugin/unsupported/ns6-adapter/Makefile
+@@ -29,7 +29,7 @@ endif
+ endif
+ 
+ CPPINCPATH = $(SRCDIR) $(SRCDIR)/../adapter-common $(SRCDIR)/../jcomponent/public-include $(subst $(LIBRARY),,$(TMPDIR)) $(subst $(LIBRARY)/,,$(CLASSHDRDIR))
+-EXTRA_CPPFLAGS = -I$(MOZILLA_HEADERS_PATH)/mozilla_headers_ns610 -I$(MOZILLA_HEADERS_PATH)/mozilla_headers_ns610/nspr -I$(MOZILLA_LIBS_PATH)/../jpi/X11/include -I$(MOZILLA_LIBS_PATH)/../jpi/X11/lib/glib/include -DRAPTOR_API -DNEW_STREAMING_API
++EXTRA_CPPFLAGS = -I%%PREFIX%%/include/nspr
+ 
+ vpath %.c $(SRCDIR):$(SRCDIR)/../adapter-common:$(PLUGIN_TOP)/src/plugin/oji-plugin/src/motif/common
+ vpath %.cpp $(SRCDIR):$(SRCDIR)/../adapter-common:$(PLUGIN_TOP)/src/plugin/oji-plugin/src/motif/common

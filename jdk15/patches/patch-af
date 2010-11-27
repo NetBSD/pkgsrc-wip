@@ -1,0 +1,43 @@
+$NetBSD: patch-af,v 1.8 2010/11/27 14:04:52 ftigeot Exp $
+
+--- hotspot/src/os/bsd/vm/os_bsd.cpp.orig	2009-03-06 01:20:09.000000000 +0000
++++ hotspot/src/os/bsd/vm/os_bsd.cpp
+@@ -57,8 +57,20 @@
+ # define pthread_getprio(a) 0
+ # define pthread_setprio(a, b) 0
+ # define pthread_main_np() 0
++typedef struct link_map Link_map; /* Needed on at least NetBSD 5.0 */
+ #endif
+ 
++/*
++ * XXX I have no idea why this is suddently needed.
++ * It built fine on NetBSD 4.99.54 and then began failing on 4.99.55.
++ * This definition usually lives in:
++ *   hotspot/src/share/vm/utilities/globalDefinitions.hpp
++ * But doesn't seem to be picked up anymore.
++ */
++#ifdef bool
++#undef bool
++#endif
++#define bool jint
+ #ifndef timespecsub
+ #define	timespecsub(tsp, usp, vsp)					\
+ 	do {								\
+@@ -508,7 +520,7 @@ void os::init_system_properties_values()
+ #define getenv(n) ::getenv(n)
+ 
+ #ifndef DEFAULT_LD_LIBRARY_PATH
+-#define DEFAULT_LD_LIBRARY_PATH "/usr/lib" /* See ld.so.1(1) */
++#define DEFAULT_LD_LIBRARY_PATH "/usr/lib:%%PREFIX%%/lib:%%X11BASE%%/lib" /* See ld.so.1(1) */
+ #endif
+ #define EXTENSIONS_DIR "/lib/ext"
+ #define ENDORSED_DIR "/lib/endorsed"
+@@ -3000,7 +3012,7 @@ jint os::init_2(void) {
+ 
+   // XXX ugly hack for 32-bit address space, since we know the
+   // java heap is allocated with mmap() not sbrk():
+-#if !defined(__OpenBSD__) && !defined(_LP64)
++#if !defined(__OpenBSD__) && !defined(__NetBSD__) && !defined(_LP64)
+   // set the max datasegment size to something reasonable
+   // complain if getrlimit/setrlimit fails but continue regardless. 
+   struct rlimit dseg_size;

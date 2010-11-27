@@ -1,0 +1,14 @@
+$NetBSD: patch-ar,v 1.3 2010/11/27 14:04:52 ftigeot Exp $
+
+--- hotspot/src/os_cpu/bsd_i486/vm/os_bsd_i486.cpp.orig	2008-02-27 03:38:29.000000000 +0100
++++ hotspot/src/os_cpu/bsd_i486/vm/os_bsd_i486.cpp
+@@ -643,7 +643,8 @@ int JVM_handle_bsd_signal(int sig, sigin
+     if ((sig == SIGSEGV || sig == SIGBUS) &&
+         os::is_memory_serialize_page(thread, (address)info->si_addr)) {
+       // Block current thread until the memory serialize page permission restored.
+-      os::block_on_serialize_page_trap();
++      //XXX Where is this defined?
++      //os::block_on_serialize_page_trap();
+       return true;
+     }
+ 
