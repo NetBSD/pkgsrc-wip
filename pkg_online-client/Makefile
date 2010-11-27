@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/10/17 14:49:04 cheusov Exp $
+# $NetBSD: Makefile,v 1.7 2010/11/27 00:31:49 cheusov Exp $
 #
 
 .include "../../wip/pkg_online-server/Makefile.common"
@@ -8,7 +8,7 @@ CATEGORIES=	pkgtools
 COMMENT+=	(client tools)
 
 DEPENDS+=	dict-client>=1.10.9:../../textproc/dict-client
-DEPENDS+=	pkg_summary-utils-[0-9]*:../../wip/pkg_summary-utils
+DEPENDS+=	pkg_summary-utils>=0.49:../../wip/pkg_summary-utils
 DEPENDS+=	pipestatus-[0-9]*:../../devel/pipestatus
 DEPENDS+=	netcat-[0-9]*:../../net/netcat
 
