@@ -1,8 +1,17 @@
-$NetBSD: patch-aa,v 1.4 2010/11/27 14:04:52 ftigeot Exp $
+$NetBSD: patch-aa,v 1.5 2010/11/28 13:51:37 ftigeot Exp $
 
 --- control/make/common/Defs-bsd.gmk.orig	2005-09-07 10:16:01.000000000 +0200
 +++ control/make/common/Defs-bsd.gmk
-@@ -198,9 +198,9 @@ endif
+@@ -120,7 +120,7 @@
+ 		ia64) \
+ 		    $(ECHO) ia64 \
+ 		    ;; \
+-		amd64) \
++		amd64|x86_64) \
+ 		    $(ECHO) amd64 \
+ 		    ;; \
+ 		sparc*)  \
+@@ -202,9 +202,9 @@
  # DEVTOOLS_PATH is for other tools required for building (such as
  # zip, etc.)
  ifeq ($(TRUE_PLATFORM), NetBSD)

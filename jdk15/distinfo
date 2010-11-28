@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.17 2010/11/28 10:16:43 ftigeot Exp $
+$NetBSD: distinfo,v 1.18 2010/11/28 13:51:37 ftigeot Exp $
 
 SHA1 (bsd-jdk15-patches-9.tar.bz2) = 410de93e19d15a1f45b825b9751b0482b70bdf7f
 RMD160 (bsd-jdk15-patches-9.tar.bz2) = ff8cc31c3735b33ec8072e6764fd165a775f1fe6
@@ -12,7 +12,7 @@ Size (jdk-1_5_0_16-fcs-bin-b02-jrl-28_may_2008.jar) = 2211548 bytes
 SHA1 (jdk-1_5_0_16-fcs-src-b02-jrl-28_may_2008.jar) = 2849fbf2aea4f6b3b028d2788d9004031397b88e
 RMD160 (jdk-1_5_0_16-fcs-src-b02-jrl-28_may_2008.jar) = 2e49d897d0857ebae463a697a1c8f7b20e9aaff0
 Size (jdk-1_5_0_16-fcs-src-b02-jrl-28_may_2008.jar) = 58024248 bytes
-SHA1 (patch-aa) = 6f250d23eda6ec3d6ec0c7b485fcc3739b379a88
+SHA1 (patch-aa) = ebd4d49e718448d8087b9c8980ae253da2b95a98
 SHA1 (patch-ab) = 549dac84644247e0c90978f2c78ce49ee62f7434
 SHA1 (patch-ad) = 18014bd4b668be764cc1a170b161e80cd48c625f
 SHA1 (patch-af) = b00b51fa0c03e702c0a037793244c3e49d723293
