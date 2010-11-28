@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.5 2010/11/14 03:19:57 obache Exp $
+@comment $NetBSD: PLIST.common,v 1.6 2010/11/28 13:04:22 obache Exp $
 bin/2to3-${PY_VER_SUFFIX}
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
@@ -1933,9 +1933,9 @@ lib/python${PY_VER_SUFFIX}/lib-tk/turtle.py
 lib/python${PY_VER_SUFFIX}/lib-tk/turtle.pyc
 lib/python${PY_VER_SUFFIX}/lib-tk/turtle.pyo
 lib/python${PY_VER_SUFFIX}/lib2to3/Grammar.txt
-lib/python${PY_VER_SUFFIX}/lib2to3/Grammar2.7.1.candidate.1.pickle
+lib/python${PY_VER_SUFFIX}/lib2to3/Grammar${PKGVERSION}.final.0.pickle
 lib/python${PY_VER_SUFFIX}/lib2to3/PatternGrammar.txt
-lib/python${PY_VER_SUFFIX}/lib2to3/PatternGrammar2.7.1.candidate.1.pickle
+lib/python${PY_VER_SUFFIX}/lib2to3/PatternGrammar${PKGVERSION}.final.0.pickle
 lib/python${PY_VER_SUFFIX}/lib2to3/__init__.py
 lib/python${PY_VER_SUFFIX}/lib2to3/__init__.pyc
 lib/python${PY_VER_SUFFIX}/lib2to3/__init__.pyo
