@@ -1,4 +1,6 @@
-$NetBSD: patch-ae,v 1.1 2010/11/28 09:39:04 thomasklausner Exp $
+$NetBSD: patch-ae,v 1.2 2010/11/28 09:39:45 thomasklausner Exp $
+
+Recognize latest libwpg.
 
 --- cmake/modules/FindWPG.cmake.orig	2010-08-21 05:37:59.000000000 +0000
 +++ cmake/modules/FindWPG.cmake
