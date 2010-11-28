@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2010/11/28 10:06:39 ftigeot Exp $
+# $NetBSD: Makefile,v 1.41 2010/11/28 10:15:22 ftigeot Exp $
 
 .include "../../wip/jdk16/Makefile.common"
 
@@ -38,6 +38,8 @@ ALT_BOOTDIR=		${PREFIX}/java/sun-6
 BUILD_DEPENDS+=		sun-jdk15>=1:../../lang/sun-jdk15
 ALT_BOOTDIR=		${PREFIX}/java/sun-1.5
 .endif
+
+BUILD_DEPENDS+=		libxslt>=1.1:../../textproc/libxslt
 
 .if !empty(MAKE_ENV:M*/java/sun-*) && !exists(/emul/linux/proc/uptime) && !exists(/proc/uptime)
 PKG_FAIL_REASON=	"If bootstrapping with Linux JDK,"

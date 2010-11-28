@@ -1,0 +1,58 @@
+--- hotspot/build/bsd/makefiles/jvmti.make.orig	2010-11-07 22:13:03 +0100
++++ hotspot/build/bsd/makefiles/jvmti.make	2010-11-07 22:35:31 +0100
+@@ -40,7 +40,7 @@
+ 
+ JvmtiGeneratedFiles = $(JvmtiGeneratedNames:%=$(JvmtiOutDir)/%)
+ 
+-XSLT = $(QUIETLY) $(RUN.JAVA) -classpath $(JvmtiOutDir) jvmtiGen
++XSLT = $(PREFIX)/bin/xsltproc
+ 
+ .PHONY: all jvmtidocs clean cleanall
+ 
+@@ -58,38 +58,38 @@
+ 
+ $(JvmtiOutDir)/jvmtiEnter.cpp: $(both) $(JvmtiSrcDir)/jvmtiEnter.xsl
+ 	@echo Generating $@
+-	$(XSLT) -IN $(JvmtiSrcDir)/jvmti.xml -XSL $(JvmtiSrcDir)/jvmtiEnter.xsl -OUT $(JvmtiOutDir)/jvmtiEnter.cpp -PARAM interface jvmti
++	$(XSLT) -o $(JvmtiOutDir)/jvmtiEnter.cpp --stringparam interface jvmti $(JvmtiSrcDir)/jvmtiEnter.xsl $(JvmtiSrcDir)/jvmti.xml
+ 
+ $(JvmtiOutDir)/jvmtiEnterTrace.cpp: $(both) $(JvmtiSrcDir)/jvmtiEnter.xsl
+ 	@echo Generating $@
+-	$(XSLT) -IN $(JvmtiSrcDir)/jvmti.xml -XSL $(JvmtiSrcDir)/jvmtiEnter.xsl -OUT $(JvmtiOutDir)/jvmtiEnterTrace.cpp -PARAM interface jvmti -PARAM trace Trace
++	$(XSLT) -o $(JvmtiOutDir)/jvmtiEnterTrace.cpp --stringparam interface jvmti --stringparam trace Trace $(JvmtiSrcDir)/jvmtiEnter.xsl $(JvmtiSrcDir)/jvmti.xml
+ 
+ $(JvmtiOutDir)/jvmdiEnter.cpp: $(both) $(JvmtiSrcDir)/jvmdiEnter.xsl $(JvmtiSrcDir)/jvmtiEnter.xsl
+ 	@echo Generating $@
+-	$(XSLT) -IN $(JvmtiSrcDir)/jvmti.xml -XSL $(JvmtiSrcDir)/jvmdiEnter.xsl -OUT $(JvmtiOutDir)/jvmdiEnter.cpp -PARAM interface jvmdi
++	$(XSLT) -o $(JvmtiOutDir)/jvmdiEnter.cpp --stringparam interface jvmdi $(JvmtiSrcDir)/jvmdiEnter.xsl $(JvmtiSrcDir)/jvmti.xml
+ 
+ $(JvmtiOutDir)/jvmdiEnterTrace.cpp: $(both) $(JvmtiSrcDir)/jvmdiEnter.xsl $(JvmtiSrcDir)/jvmtiEnter.xsl
+ 	@echo Generating $@
+-	$(XSLT) -IN $(JvmtiSrcDir)/jvmti.xml -XSL $(JvmtiSrcDir)/jvmdiEnter.xsl -OUT $(JvmtiOutDir)/jvmdiEnterTrace.cpp -PARAM interface jvmdi -PARAM trace Trace
++	$(XSLT) -o $(JvmtiOutDir)/jvmdiEnterTrace.cpp --stringparam interface jvmdi --stringparam trace Trace $(JvmtiSrcDir)/jvmdiEnter.xsl $(JvmtiSrcDir)/jvmti.xml
+ 
+ $(JvmtiOutDir)/jvmtiEnvRecommended.cpp: $(both) $(JvmtiSrcDir)/jvmtiEnv.xsl $(JvmtiSrcDir)/jvmtiEnv.cpp $(JvmtiEnvFillClass)
+ 	@echo Generating $@
+-	$(XSLT) -IN $(JvmtiSrcDir)/jvmti.xml -XSL $(JvmtiSrcDir)/jvmtiEnv.xsl -OUT $(JvmtiOutDir)/jvmtiEnvStub.cpp
++	$(XSLT) -o $(JvmtiOutDir)/jvmtiEnvStub.cpp $(JvmtiSrcDir)/jvmtiEnv.xsl $(JvmtiSrcDir)/jvmti.xml
+ 	$(QUIETLY) $(RUN.JAVA) -classpath $(JvmtiOutDir) jvmtiEnvFill $(JvmtiSrcDir)/jvmtiEnv.cpp $(JvmtiOutDir)/jvmtiEnvStub.cpp $(JvmtiOutDir)/jvmtiEnvRecommended.cpp
+ 
+ $(JvmtiOutDir)/jvmtiEnv.hpp: $(both) $(JvmtiSrcDir)/jvmtiHpp.xsl
+ 	@echo Generating $@
+-	$(XSLT) -IN $(JvmtiSrcDir)/jvmti.xml -XSL $(JvmtiSrcDir)/jvmtiHpp.xsl -OUT $(JvmtiOutDir)/jvmtiEnv.hpp
++	$(XSLT) -o $(JvmtiOutDir)/jvmtiEnv.hpp $(JvmtiSrcDir)/jvmtiHpp.xsl $(JvmtiSrcDir)/jvmti.xml
+ 
+ $(JvmtiOutDir)/jvmti.h: $(both) $(JvmtiSrcDir)/jvmtiH.xsl
+ 	@echo Generating $@
+-	$(XSLT) -IN $(JvmtiSrcDir)/jvmti.xml -XSL $(JvmtiSrcDir)/jvmtiH.xsl -OUT $(JvmtiOutDir)/jvmti.h
++	$(XSLT) -o $(JvmtiOutDir)/jvmti.h $(JvmtiSrcDir)/jvmtiH.xsl $(JvmtiSrcDir)/jvmti.xml
+ 
+ jvmtidocs:  $(JvmtiOutDir)/jvmti.html 
+ 
+ $(JvmtiOutDir)/jvmti.html: $(both) $(JvmtiSrcDir)/jvmti.xsl
+ 	@echo Generating $@
+-	$(XSLT) -IN $(JvmtiSrcDir)/jvmti.xml -XSL $(JvmtiSrcDir)/jvmti.xsl -OUT $(JvmtiOutDir)/jvmti.html
++	$(XSLT) -o $(JvmtiOutDir)/jvmti.html $(JvmtiSrcDir)/jvmti.xsl $(JvmtiSrcDir)/jvmti.xml
+ 
+ # #########################################################################
+ 
