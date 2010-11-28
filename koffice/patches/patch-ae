@@ -1,0 +1,28 @@
+$NetBSD: patch-ae,v 1.1 2010/11/28 09:39:04 thomasklausner Exp $
+
+--- cmake/modules/FindWPG.cmake.orig	2010-08-21 05:37:59.000000000 +0000
++++ cmake/modules/FindWPG.cmake
+@@ -18,14 +18,9 @@ ELSE (LIBWPG_INCLUDE_DIR AND LIBWPG_LIBR
+ 
+   IF (NOT WIN32)
+     INCLUDE(FindPkgConfig)
+-    pkg_check_modules(LIBWPG libwpg-0.1)
++    pkg_check_modules(LIBWPG libwpg-0.2)
+   ENDIF (NOT WIN32)
+ 
+-  FIND_LIBRARY(LIBWPG_STREAM_LIBRARIES NAMES wpg-stream-0.1 libwpg-stream-0.1
+-    PATHS
+-    ${LIBWPG_LIBRARIES}
+-    )
+-
+   FIND_PATH(LIBWPG_INCLUDE_DIR libwpg/libwpg.h
+     PATHS
+     ${LIBWPG_INCLUDE_DIRS}
+@@ -44,7 +39,6 @@ ELSE (LIBWPG_INCLUDE_DIR AND LIBWPG_LIBR
+     MESSAGE("libwpg include dir " ${LIBWPG_INCLUDE_DIR})
+     MESSAGE("libwpg lib dir " ${LIBWPG_LIBRARY_DIRS})
+     MESSAGE("libwpg library " ${LIBWPG_LIBRARIES})
+-    MESSAGE("libwpg stream library " ${LIBWPG_STREAM_LIBRARIES})
+     MESSAGE("libwpg cflags " ${LIBWPG_DEFINITIONS})
+   ELSE (LIBWPG_FOUND)
+     IF (WPG_FIND_REQUIRED)
