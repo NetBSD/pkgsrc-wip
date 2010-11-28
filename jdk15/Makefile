@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2010/11/27 14:52:27 ftigeot Exp $
+# $NetBSD: Makefile,v 1.40 2010/11/28 10:06:39 ftigeot Exp $
 
 .include "../../wip/jdk16/Makefile.common"
 
@@ -58,6 +58,7 @@ MAKE_ENV+=		SYS_CFLAGS=${CFLAGS:Q}
 MAKE_ENV+=		LD_LIBRARY_PATH=
 MAKE_ENV+=		SKIP_COMPARE_IMAGES=YES
 MAKE_ENV+=		ALT_BOOTDIR=${ALT_BOOTDIR}
+MAKE_ENV+=		HOTSPOT_BUILD_JOBS=${MAKE_JOBS}
 
 # MAKE_ENV+=		WRAPPER_DEBUG=yes
 
@@ -165,4 +166,5 @@ USE_PKGSRC_GCC=		yes
 .include "../../mk/java-env.mk"
 .include "../../x11/libXi/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
