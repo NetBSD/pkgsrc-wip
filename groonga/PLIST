@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.6 2010/11/07 02:43:10 obache Exp $
+@comment $NetBSD: PLIST,v 1.7 2010/11/29 00:55:17 obache Exp $
 bin/grntest
 bin/groonga
 include/groonga/groonga.h
-lib/groonga/modules/suggest/suggest.la
-${PLIST.mecab}lib/groonga/modules/tokenizers/mecab.la
+include/groonga/groonga/plugin.h
+lib/groonga/plugins/suggest/suggest.la
+${PLIST.mecab}lib/groonga/plugins/tokenizers/mecab.la
 lib/libgroonga.la
 lib/pkgconfig/groonga.pc
 man/man1/groonga.1
