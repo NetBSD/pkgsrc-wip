@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2010/11/27 01:24:40 rxg Exp $
+# $NetBSD: Makefile.common,v 1.2 2010/11/30 09:25:24 thomasklausner Exp $
 #
 # used by wip/chromium-devel/Makefile
 
@@ -11,7 +11,7 @@ HOMEPAGE=	http://dev.chromium.org/Home
 COMMENT=	Open-source browser project
 LICENSE=	modified-bsd
 
-USE_TOOLS+=	bash flex:pkgsrc gmake pax perl pkg-config
+USE_TOOLS+=	bash bison flex:pkgsrc gmake pax perl pkg-config
 USE_LANGUAGES=	c c++
 
 BUILD_DEPENDS+=	gperf>=3.0.1:../../devel/gperf
