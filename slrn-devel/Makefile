@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.7 2010/09/24 14:29:40 anielski Exp $
+# $NetBSD: Makefile,v 1.8 2010/11/30 20:41:45 anielski Exp $
 
-DISTNAME=	slrn-pre1.0.0~24
-PKGNAME=	slrn-pre1.0.0-24
+DISTNAME=	slrn-pre1.0.0-26
+PKGNAME=	slrn-pre1.0.0-26
 CONFLICTS=      slrn-pl-[0-9]* slrn-[0-9]*
 LICENSE=	gnu-gpl-v2
 #PKGREVISION=	1
 CATEGORIES=	news
-MASTER_SITES=	http://slrn.sourceforge.net/downloads/svn_snapshots/
-EXTRACT_SUFX=	.tar.bz2
-WRKSRC=		${WRKDIR}/slrn
+MASTER_SITES=	http://www.jedsoft.org/snapshots/
+EXTRACT_SUFX=	.tar.gz
+#WRKSRC=		${WRKDIR}/slrn
 
 MAINTAINER=	aniou@smutek.pl
 HOMEPAGE=	http://slrn.sourceforge.net/
