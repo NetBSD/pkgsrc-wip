@@ -1,12 +1,5 @@
 The package only builds/installs the Apache module for now. The Nginx port
-should probably be implemented via OPTION framework inside www/nginx instead.
-
-Compared to a straight 'gem install', minor patching done to keep a more
-sane file system layout, but I'm not going to patch every Ruby script they
-have. Rubygems wrappers for bin scripts are not created under PREFIX/bin
-for now, but can be done if somebody shows me how to call that functionality
-directly.
-
-Still have problems building a functional package with GCC 4.4.x
-on Solaris, but I'll follow up on that with upstream. Confirmed
-working on NetBSD 5.0.1/amd64.
+should be implemented via OPTION framework inside www/nginx instead. The
+new 'Passenger Lite' embedded server requires two gems currently not in
+pkgsrc, and while it's officially built using the 'passenger' script contained
+in this package, it could become a separate package on its own.

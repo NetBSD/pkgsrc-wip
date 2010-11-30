@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2010/04/21 08:08:26 fhajny Exp $
+$NetBSD: MESSAGE,v 1.2 2010/11/30 11:53:29 fhajny Exp $
 
 The Apache 2 module was successfully installed.
 
@@ -11,7 +11,7 @@ LoadModule passenger_module lib/httpd/mod_passenger.so
 Then add this to your Apache configuration:
 
 <IfModule mod_passenger.c>
-  PassengerRoot ${PREFIX}/${RUBY_VENDORLIB}/passenger
+  PassengerRoot ${PREFIX}
   PassengerRuby ${RUBY}
 </IfModule>
 

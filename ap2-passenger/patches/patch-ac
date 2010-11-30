@@ -1,0 +1,41 @@
+$NetBSD: patch-ac,v 1.1 2010/11/30 11:53:29 fhajny Exp $
+
+Fix paths.
+--- ext/common/ResourceLocator.h.orig	2010-10-10 18:52:03.000000000 +0000
++++ ext/common/ResourceLocator.h
+@@ -44,7 +44,7 @@ public:
+ 	
+ 	string getSourceRoot() const {
+ 		if (nativelyPackaged) {
+-			return "/usr/lib/phusion-passenger/source";
++			return "@PREFIX@/lib/phusion-passenger/source";
+ 		} else {
+ 			return root;
+ 		}
+@@ -52,7 +52,7 @@ public:
+ 	
+ 	string getAgentsDir() const {
+ 		if (nativelyPackaged) {
+-			return "/usr/lib/phusion-passenger/agents";
++			return "@PREFIX@/lib/phusion-passenger/agents";
+ 		} else {
+ 			return root + "/agents";
+ 		}
+@@ -60,7 +60,7 @@ public:
+ 	
+ 	string getHelperScriptsDir() const {
+ 		if (nativelyPackaged) {
+-			return "/usr/share/phusion-passenger/helper-scripts";
++			return "@PREFIX@/share/phusion-passenger/helper-scripts";
+ 		} else {
+ 			return root + "/helper-scripts";
+ 		}
+@@ -72,7 +72,7 @@ public:
+ 	
+ 	string getCertificatesDir() const {
+ 		if (nativelyPackaged) {
+-			return "/usr/share/phusion-passenger/certificates";
++			return "@PREFIX@/share/phusion-passenger/certificates";
+ 		} else {
+ 			return root + "/misc";
+ 		}
