@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2010/06/20 11:53:07 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2010/12/01 21:59:52 genolopolis Exp $
 #
 
-DISTNAME=	collectd-4.9.2
+DISTNAME=	collectd-4.9.4
 CATEGORIES=	net
 MASTER_SITES=	http://collectd.org/files/
 EXTRACT_SUFX=	.tar.bz2
