@@ -1,6 +1,8 @@
---- Lib/distutils/command/install.py.orig	2009-06-04 02:39:50.000000000 -0500
-+++ Lib/distutils/command/install.py	2009-10-29 19:02:46.000000000 -0500
-@@ -687,5 +687,6 @@
+$NetBSD: patch-av,v 1.2 2010/12/02 12:16:14 obache Exp $
+
+--- Lib/distutils/command/install.py.orig	2009-06-04 07:39:50.000000000 +0000
++++ Lib/distutils/command/install.py
+@@ -687,5 +687,6 @@ class install(Command):
                      ('install_headers', has_headers),
                      ('install_scripts', has_scripts),
                      ('install_data',    has_data),

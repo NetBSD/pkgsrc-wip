@@ -1,6 +1,6 @@
-$NetBSD: patch-an,v 1.1.1.1 2009/10/30 01:01:16 jeremy-c-reed Exp $
+$NetBSD: patch-an,v 1.2 2010/12/02 12:16:14 obache Exp $
 
---- Modules/makesetup.orig	2002-03-29 13:00:19.000000000 -0500
+--- Modules/makesetup.orig	2008-06-11 05:26:20.000000000 +0000
 +++ Modules/makesetup
 @@ -164,6 +164,7 @@ sed -e 's/[ 	]*#.*//' -e '/^[ 	]*$/d' |
  			-rpath)		libs="$libs $arg"; skip=libs;;

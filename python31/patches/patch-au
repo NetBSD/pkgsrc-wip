@@ -1,19 +1,8 @@
---- Makefile.pre.in.orig	2009-06-11 17:54:11.000000000 -0500
-+++ Makefile.pre.in	2009-10-29 19:14:56.000000000 -0500
-@@ -448,6 +448,12 @@
- libpython$(VERSION).sl: $(LIBRARY_OBJS)
- 	$(LDSHARED) $(LDFLAGS) -o $@ $(LIBRARY_OBJS) $(MODLIBS) $(SHLIBS) $(LIBC) $(LIBM) $(LDLAST)
- 
-+libpython$(VERSION).dylib: $(LIBRARY_OBJS)
-+	$(LINKCC) -dynamiclib -install_name $(LIBDIR)/$@ \
-+	    -current_version 2.6.2 -compatibility_version $(VERSION) \
-+	    -o $@ -flat_namespace -undefined suppress $(LDFLAGS) \
-+	    $(LIBRARY_OBJS) $(SHLIBS) $(LIBC) $(LIBM)
-+
- # This rule is here for OPENSTEP/Rhapsody/MacOSX. It builds a temporary
- # minimal framework (not including the Lib directory and such) in the current
- # directory.
-@@ -802,7 +808,8 @@
+$NetBSD: patch-au,v 1.2 2010/12/02 12:16:14 obache Exp $
+
+--- Makefile.pre.in.orig	2010-10-14 11:35:17.000000000 +0000
++++ Makefile.pre.in
+@@ -802,7 +802,8 @@ altbininstall: $(BUILDPYTHON)
  				(cd $(DESTDIR)$(LIBDIR); $(LN) -sf $(INSTSONAME) $(LDLIBRARY)) \
  			fi \
  		fi; \

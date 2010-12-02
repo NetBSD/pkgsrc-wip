@@ -1,8 +1,8 @@
-$NetBSD: patch-al,v 1.1.1.1 2009/10/30 01:01:16 jeremy-c-reed Exp $
+$NetBSD: patch-al,v 1.2 2010/12/02 12:16:14 obache Exp $
 
---- configure.orig	2009-03-30 17:56:14.000000000 +0000
+--- configure.orig	2010-11-25 17:05:57.000000000 +0000
 +++ configure
-@@ -4108,17 +4108,18 @@ _ACEOF
+@@ -4833,17 +4833,18 @@ $as_echo "#define Py_ENABLE_SHARED 1" >>
  	  RUNSHARED=LD_LIBRARY_PATH=`pwd`:${LD_LIBRARY_PATH}
  	  INSTSONAME="$LDLIBRARY".$SOVERSION
            ;;
@@ -27,7 +27,7 @@ $NetBSD: patch-al,v 1.1.1.1 2009/10/30 01:01:16 jeremy-c-reed Exp $
      hp*|HP*)
  	  case `uname -m` in
  		ia64)
-@@ -13064,8 +13065,8 @@ then
+@@ -7514,8 +7515,8 @@ then
  			LDSHARED="$LDSHARED "'$(PYTHONFRAMEWORKPREFIX)/$(PYTHONFRAMEWORKDIR)/Versions/$(VERSION)/$(PYTHONFRAMEWORK)'
  		else
  			# No framework, use the Python app as bundle-loader
@@ -38,7 +38,7 @@ $NetBSD: patch-al,v 1.1.1.1 2009/10/30 01:01:16 jeremy-c-reed Exp $
  		fi ;;
  	Darwin/*)
  		# Use -undefined dynamic_lookup whenever possible (10.3 and later).
-@@ -13086,12 +13087,12 @@ then
+@@ -7536,12 +7537,12 @@ then
  				LDSHARED="$LDSHARED "'$(PYTHONFRAMEWORKPREFIX)/$(PYTHONFRAMEWORKDIR)/Versions/$(VERSION)/$(PYTHONFRAMEWORK)'
  			else
  				# No framework, use the Python app as bundle-loader
@@ -54,7 +54,7 @@ $NetBSD: patch-al,v 1.1.1.1 2009/10/30 01:01:16 jeremy-c-reed Exp $
  	BSD/OS*/4*) LDSHARED="gcc -shared";;
  	FreeBSD*)
  		if [ "`$CC -dM -E - </dev/null | grep __ELF__`" != "" ]
-@@ -13115,6 +13116,7 @@ then
+@@ -7565,6 +7566,7 @@ then
  				esac
  		fi;;
  	NetBSD*|DragonFly*) LDSHARED="cc -shared ${LDFLAGS}";;
@@ -62,7 +62,7 @@ $NetBSD: patch-al,v 1.1.1.1 2009/10/30 01:01:16 jeremy-c-reed Exp $
  	OpenUNIX*|UnixWare*)
  		if test "$GCC" = "yes"
  		then LDSHARED='$(CC) -shared'
-@@ -13150,6 +13152,7 @@ then
+@@ -7599,6 +7601,7 @@ then
  	Linux*|GNU*) CCSHARED="-fPIC";;
  	BSD/OS*/4*) CCSHARED="-fpic";;
  	FreeBSD*|NetBSD*|OpenBSD*|DragonFly*) CCSHARED="-fPIC";;
@@ -70,7 +70,7 @@ $NetBSD: patch-al,v 1.1.1.1 2009/10/30 01:01:16 jeremy-c-reed Exp $
  	OpenUNIX*|UnixWare*)
  		if test "$GCC" = "yes"
  		then CCSHARED="-fPIC"
-@@ -13207,6 +13210,7 @@ then
+@@ -7647,6 +7650,7 @@ then
  		then
  			LINKFORSHARED="-Wl,--export-dynamic"
  		fi;;
