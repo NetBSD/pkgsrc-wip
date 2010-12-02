@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.26 2010/10/30 07:24:45 phonohawk Exp $
+# $NetBSD: Makefile,v 1.27 2010/12/02 13:06:43 phonohawk Exp $
 
 DISTNAME=		ghc-${VERSION}
-VERSION=		6.12.3
+VERSION=		7.0.1
 CATEGORIES=		lang
-MASTER_SITES=	http://darcs.haskell.org/download/dist/${VERSION}/
+MASTER_SITES=	http://new-www.haskell.org/ghc/dist/${VERSION}/
 MAINTAINER=		kristerw@NetBSD.org
 HOMEPAGE=		http://www.haskell.org/ghc/
 COMMENT=		Compiler for the functional language Haskell
@@ -83,8 +83,6 @@ PLATFORM           = i386-unknown-freebsd
 .elif ${MACHINE_ARCH} == "powerpc" && ${OPSYS} == "Darwin"
 BOOTSTRAP_BUILD_MK = ${PKGDIR}/files/bootstrap.mk
 PLATFORM           = powerpc-apple-darwin
-WARNINGS+= "You won't be able to use GHCi library for GHC itself\
-because of Mach-O limitation."
 
 # Existence of libelf makes LeadingUnderscore being "NO", which is
 # incorrect. See ghc-6.12.1/aclocal.m4 (FP_LEADING_UNDERSCORE)
@@ -96,35 +94,57 @@ PKG_FAIL_REASON+=	"internal error: unsupported platform"
 
 BOOTSTRAP_TARBALL = ${DISTNAME}-boot-${PLATFORM}.tar.bz2
 
-pre-configure:
+pre-configure: ${WRKDIR}/stamp-bootstrap-ghc
+
+${WRKDIR}/stamp-prepare-bootstrap:
 	${RUN} cd ${WRKDIR} && \
 		${ECHO} "====> Preparing bootstrap compiler" && \
+		${RM} -rf bootstrap && \
 		${MKDIR} bootstrap && \
 		${CP} -r ${DISTNAME} bootstrap && \
 		cd bootstrap/${DISTNAME} && \
 		${LN} -sf ${PWD_CMD} utils/ghc-pwd/ghc-pwd && \
+		${TOUCH} $@
+
+${WRKDIR}/stamp-configure-hc-boot: ${WRKDIR}/stamp-prepare-bootstrap
+	${RUN} cd ${WRKDIR}/bootstrap/${DISTNAME} && \
 		${ECHO} "====> Configuring for bootstrap compiler" && \
 		${SETENV} ${CONFIGURE_ENV} ./configure --enable-hc-boot --with-ghc="" ${CONFIGURE_ARGS} && \
+		${TOUCH} $@
+
+${WRKDIR}/stamp-extract-hc: ${WRKDIR}/stamp-configure-hc-boot
+	${RUN} cd ${WRKDIR}/bootstrap/${DISTNAME} && \
 		${ECHO} "====> Extracting bootstrap HC archive" && \
 		(cd .. && bsdtar jxfm ${DISTDIR}/${BOOTSTRAP_TARBALL}) && \
 		${SH} mkfiles && \
-		${ECHO} "====> Building bootstrap compiler" && \
+		${TOUCH} $@
+
+${WRKDIR}/stamp-rewrite-hc-paths: ${WRKDIR}/stamp-extract-hc
+	${RUN} cd ${WRKDIR}/bootstrap/${DISTNAME} && \
+		${ECHO} "====> Rewriting GHC source paths" && \
 		${SED} -e "s#\\[\\[PREFIX\\]\\]#${PREFIX}#g" ${BOOTSTRAP_BUILD_MK} > mk/build.mk && \
 		for c in libraries/*/configure; do \
 			(cd `${DIRNAME} $$c` && ${SETENV} ${CONFIGURE_ENV} ${SH} configure ${CONFIGURE_ARGS}); \
 		done && \
 		for i in inplace/lib/package.conf.d/*.conf */*/package-data.mk */*/*/package-data.mk; do \
-			${SED} -e "s#\\[\\[GHC_SOURCE_PATH\\]\\]#`${PWD_CMD}`#g" $$i > $$i.tmp; \
+			${SED} -e "s#\\[\\[PREFIX\\]\\]#${PREFIX}#g" \
+				   -e "s#\\[\\[GHC_SOURCE_PATH\\]\\]#`${PWD_CMD}`#g" $$i > $$i.tmp; \
 			${MV} -f $$i.tmp $$i; \
 		done && \
 		${TOUCH} -r inplace/lib/package.conf.d */*/package-data.mk */*/*/package-data.mk && \
+		${TOUCH} $@
+
+${WRKDIR}/stamp-bootstrap-ghc: ${WRKDIR}/stamp-rewrite-hc-paths
+	${RUN} cd ${WRKDIR}/bootstrap/${DISTNAME} && \
+		${ECHO} "====> Building bootstrap compiler" && \
 		${GMAKE} bootstrapping-files && \
 		${GMAKE} all_ghc_stage2 && \
 		${GMAKE} inplace/bin/ghc-pkg && \
 		${GMAKE} inplace/lib/unlit && \
 		inplace/bin/ghc-pkg recache && \
-		${CP} inplace/bin/ghc-stage2 ${BUILDLINK_DIR}/bin/ghc && \
-		${CP} inplace/bin/ghc-pkg ${BUILDLINK_DIR}/bin/ghc-pkg
+		${CP} -f inplace/bin/ghc-stage2 ${BUILDLINK_DIR}/bin/ghc && \
+		${CP} -f inplace/bin/ghc-pkg ${BUILDLINK_DIR}/bin/ghc-pkg && \
+		${TOUCH} $@
 
 do-configure:
 	${RUN} cd ${WRKSRC} && \
@@ -139,7 +159,7 @@ do-configure:
 	${RUN} ${ECHO} "libraries/terminfo_CONFIGURE_OPTS += \
 		--configure-option=--with-curses-includes=${PREFIX}/include \
 		--configure-option=--with-curses-libraries=${PREFIX}/lib" >> ${WRKSRC}/mk/build.mk
-# The ghc compiler does normally split the generated C files into small
+# The ghc compiler does normally split the generated asm files into small
 # parts before sending them to gcc, to enable the linker to eliminate
 # unused parts.  This does however not play nice with the pkgsrc
 # framework, and the result is that the build takes more than 5 times
@@ -153,10 +173,10 @@ do-configure:
 	${RUN} ${ECHO} "HSCOLOUR_SRCS = NO" >> ${WRKSRC}/mk/build.mk
 # To avoid powerpc crash...
 # See http://hackage.haskell.org/trac/ghc/ticket/4034
-.if ${MACHINE_ARCH} == "powerpc" && ${OPSYS} == "Darwin"
-	${RUN} ${ECHO} "GhcRtsHcOpts = -optc-O0 -optc-g" >> ${WRKSRC}/mk/build.mk
-	${RUN} ${ECHO} "GhcRtsCcOpts = -O0 -g" >> ${WRKSRC}/mk/build.mk
-.endif
+#.if ${MACHINE_ARCH} == "powerpc" && ${OPSYS} == "Darwin"
+#	${RUN} ${ECHO} "GhcRtsHcOpts = -optc-O0 -optc-g" >> ${WRKSRC}/mk/build.mk
+#	${RUN} ${ECHO} "GhcRtsCcOpts = -O0 -g" >> ${WRKSRC}/mk/build.mk
+#.endif
 
 # Some unused scripts don't pass the portability test.
 CHECK_PORTABILITY_SKIP+=	distrib/prep-bin-dist-mingw

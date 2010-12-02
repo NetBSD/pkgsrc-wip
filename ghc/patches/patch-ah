@@ -1,13 +1,13 @@
-$NetBSD: patch-ah,v 1.5 2009/12/25 05:49:52 phonohawk Exp $
+$NetBSD: patch-ah,v 1.6 2010/12/02 13:06:43 phonohawk Exp $
 
---- libraries/terminfo/configure.orig	2009-12-11 03:31:59.000000000 +0900
+--- libraries/terminfo/configure.orig	2010-11-12 18:10:58.000000000 +0000
 +++ libraries/terminfo/configure
-@@ -3568,7 +3568,7 @@ echo "$as_me: error: curses headers coul
- See \`config.log' for more details." >&2;}
-    { (exit 1); exit 1; }; }
+@@ -3254,7 +3254,7 @@ $as_echo "$as_me: error: in \`$ac_pwd':"
+ as_fn_error "curses headers could not be found, so this package cannot be built
+ See \`config.log' for more details." "$LINENO" 5; }
  else
 -    TERMINFO_INCLUDES="$CursesIncludes term.h"
 +    TERMINFO_INCLUDES="$CursesIncludes"
  fi
  
- { echo "$as_me:$LINENO: checking for setupterm in -lncursesw" >&5
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking for setupterm in -lncursesw" >&5

@@ -34,7 +34,9 @@ Build some configuration files::
 Run ``./configure`` on the host tree::
 
     $ cd ghc-{VERSION}-host
-    $ ./configure
+    $ ./configure \
+          --with-iconv-includes=/usr/pkg/include \
+          --with-iconv-libraries=/usr/pkg/lib
 
 Then create ``ghc-{VERSION}-host/mk/build.mk`` with the following
 contents::
@@ -55,6 +57,9 @@ contents::
     utils/ghc-pkg_dist-install_v_HC_OPTS += -keep-hc-files
     
     INTEGER_LIBRARY = integer-simple
+    libraries/terminfo_CONFIGURE_OPTS += \
+        --configure-option=--with-curses-includes=/usr/pkg/include \
+        --configure-option=--with-curses-libraries=/usr/pkg/lib
 
 Copy some configuration files from the ``-target`` tree::
 
@@ -74,7 +79,7 @@ Create an intermediate tarball::
     $ find . -name package-data.mk >> list
     $ find . -name package.conf.d >> list
     $ find . -name package.conf.inplace >> list
-    $ echo compiler/main/Config.hs >> list
+    $ ls compiler/stage?/build/Config.hs >> list
     $ echo compiler/prelude/primops.txt >> list
     $ ls compiler/primop-*.hs-incl >> list
     $ find . -name .depend | sed -e 's/^/mkdir -p `dirname /' -e 's/$/`/' >> mkfiles
@@ -91,7 +96,9 @@ Then extract it again, in a different directory::
 Modify hard-coded paths in inplace ``.conf`` files, and then
 re-archive the HC tree::
 
-    $ sed -i.bak -e 's#'`dirname \`pwd\``'#[[GHC_SOURCE_PATH]]#g' \
+    $ gsed -i.bak \
+          -e 's#/usr/pkg#[[PREFIX]]#g' \
+          -e 's#'`dirname \`pwd\``'#[[GHC_SOURCE_PATH]]#g' \
           inplace/lib/package.conf.d/*.conf \
           */*/package-data.mk \
           */*/*/package-data.mk

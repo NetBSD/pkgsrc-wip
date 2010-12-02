@@ -1,22 +1,18 @@
-$NetBSD: patch-aa,v 1.7 2010/10/05 22:35:52 phonohawk Exp $
+$NetBSD: patch-aa,v 1.8 2010/12/02 13:06:43 phonohawk Exp $
 
---- libraries/integer-gmp/configure.orig	2010-10-05 12:46:12.000000000 +0000
+--- libraries/integer-gmp/configure.orig	2010-11-12 18:10:51.000000000 +0000
 +++ libraries/integer-gmp/configure
-@@ -2961,68 +2961,6 @@ fi
+@@ -3070,42 +3070,6 @@ fi
  fi
  
  
 -case $target_os in
 -  darwin*)
--    { echo "$as_me:$LINENO: checking for GMP.framework" >&5
--echo $ECHO_N "checking for GMP.framework... $ECHO_C" >&6; }
+-    { $as_echo "$as_me:${as_lineno-$LINENO}: checking for GMP.framework" >&5
+-$as_echo_n "checking for GMP.framework... " >&6; }
 -    save_libs="$LIBS"
 -    LIBS="-framework GMP"
--    cat >conftest.$ac_ext <<_ACEOF
--/* confdefs.h.  */
--_ACEOF
--cat confdefs.h >>conftest.$ac_ext
--cat >>conftest.$ac_ext <<_ACEOF
+-    cat confdefs.h - <<_ACEOF >conftest.$ac_ext
 -/* end confdefs.h.  */
 -
 -/* Override any GCC internal prototype to avoid an error.
@@ -34,40 +30,18 @@ $NetBSD: patch-aa,v 1.7 2010/10/05 22:35:52 phonohawk Exp $
 -  return 0;
 -}
 -_ACEOF
--rm -f conftest.$ac_objext conftest$ac_exeext
--if { (ac_try="$ac_link"
--case "(($ac_try" in
--  *\"* | *\`* | *\\*) ac_try_echo=\$ac_try;;
--  *) ac_try_echo=$ac_try;;
--esac
--eval "echo \"\$as_me:$LINENO: $ac_try_echo\"") >&5
--  (eval "$ac_link") 2>conftest.er1
--  ac_status=$?
--  grep -v '^ *+' conftest.er1 >conftest.err
--  rm -f conftest.er1
--  cat conftest.err >&5
--  echo "$as_me:$LINENO: \$? = $ac_status" >&5
--  (exit $ac_status); } && {
--	 test -z "$ac_c_werror_flag" ||
--	 test ! -s conftest.err
--       } && test -s conftest$ac_exeext &&
--       $as_test_x conftest$ac_exeext; then
+-if ac_fn_c_try_link "$LINENO"; then :
 -  HaveFrameworkGMP=YES; GMP_FRAMEWORK=GMP; GMP_LIBS=
 -else
--  echo "$as_me: failed program was:" >&5
--sed 's/^/| /' conftest.$ac_ext >&5
--
--	HaveFrameworkGMP=NO
+-  HaveFrameworkGMP=NO
 -fi
--
--rm -f core conftest.err conftest.$ac_objext conftest_ipa8_conftest.oo \
--      conftest$ac_exeext conftest.$ac_ext
+-rm -f core conftest.err conftest.$ac_objext \
+-    conftest$ac_exeext conftest.$ac_ext
 -    LIBS="$save_libs"
--    { echo "$as_me:$LINENO: result: $HaveFrameworkGMP" >&5
--echo "${ECHO_T}$HaveFrameworkGMP" >&6; }
+-    { $as_echo "$as_me:${as_lineno-$LINENO}: result: $HaveFrameworkGMP" >&5
+-$as_echo "$HaveFrameworkGMP" >&6; }
 -    ;;
 -esac
--
+ 
  ac_ext=c
  ac_cpp='$CPP $CPPFLAGS'
- ac_compile='$CC -c $CFLAGS $CPPFLAGS conftest.$ac_ext >&5'

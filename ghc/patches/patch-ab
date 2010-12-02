@@ -1,14 +1,29 @@
-$NetBSD: patch-ab,v 1.7 2010/10/05 22:35:52 phonohawk Exp $
+$NetBSD: patch-ab,v 1.8 2010/12/02 13:06:43 phonohawk Exp $
 
---- rules/build-package-way.mk.orig	2010-10-05 12:43:54.000000000 +0000
-+++ rules/build-package-way.mk
-@@ -84,7 +84,8 @@ ifneq "$4" "0"
- BINDIST_LIBS += $$($1_$2_GHCI_LIB)
- endif
- $$($1_$2_GHCI_LIB) : $$($1_$2_$3_HS_OBJS) $$($1_$2_$3_CMM_OBJS) $$($1_$2_$3_C_OBJS) $$($1_$2_$3_S_OBJS) $$($1_$2_EXTRA_OBJS)
--	"$$(LD)" -r -o $$@ $$(EXTRA_LD_OPTS) $$($1_$2_$3_HS_OBJS) $$($1_$2_$3_CMM_OBJS) $$($1_$2_$3_C_OBJS) $$($1_$2_$3_S_OBJS) `$$($1_$2_$3_MKSTUBOBJS)` $$($1_$2_EXTRA_OBJS)
-+	"$$(LD)" -r -o $$@ $$(EXTRA_LD_OPTS) $$($1_$2_$3_HS_OBJS) $$($1_$2_$3_CMM_OBJS) $$($1_$2_$3_C_OBJS) $$($1_$2_$3_S_OBJS) `$$($1_$2_$3_MKSTUBOBJS)` $$($1_$2_EXTRA_OBJS) \
-+		|| (touch empty.c && $$(CC) -o $$@ -c empty.c)
+--- configure.orig	2010-11-12 18:10:41.000000000 +0000
++++ configure
+@@ -6181,7 +6181,7 @@ fi
  
- $(call all-target,$1_$2,$$($1_$2_GHCI_LIB))
- endif
+ 
+ if test -n "$DtraceCmd"; then
+-  if test "x$TargetOS_CPP-$TargetVendor_CPP" == "xdarwin-apple"; then
++  if test "x$TargetOS_CPP-$TargetVendor_CPP" = "xdarwin-apple"; then
+     HaveDtrace=YES
+   fi
+ fi
+@@ -6507,6 +6507,7 @@ $as_echo "$as_me: WARNING: cannot find h
+ fi
+ 
+ 
++if test "$BootingFromHc" = "NO"; then
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking for ghc-pkg matching $WithGhc" >&5
+ $as_echo_n "checking for ghc-pkg matching $WithGhc... " >&6; }
+ if test "${fp_cv_matching_ghc_pkg+set}" = set; then :
+@@ -6528,6 +6529,7 @@ fi
+ { $as_echo "$as_me:${as_lineno-$LINENO}: result: $fp_cv_matching_ghc_pkg" >&5
+ $as_echo "$fp_cv_matching_ghc_pkg" >&6; }
+ GhcPkgCmd=$fp_cv_matching_ghc_pkg
++fi
+ 
+ 
+ 

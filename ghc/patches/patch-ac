@@ -1,0 +1,143 @@
+$NetBSD: patch-ac,v 1.5 2010/12/02 13:06:43 phonohawk Exp $
+
+--- rts/Linker.c.orig	2010-11-12 18:10:05.000000000 +0000
++++ rts/Linker.c
+@@ -69,7 +69,15 @@
+ #include <sys/wait.h>
+ #endif
+ 
+-#if defined(linux_HOST_OS) || defined(freebsd_HOST_OS) || defined(dragonfly_HOST_OS) || defined(netbsd_HOST_OS) || defined(openbsd_HOST_OS) || defined(darwin_HOST_OS)
++#if defined(linux_HOST_OS    ) || defined(freebsd_HOST_OS) || \
++    defined(dragonfly_HOST_OS) || defined(netbsd_HOST_OS ) || \
++    defined(openbsd_HOST_OS  ) || \
++    ( defined(darwin_HOST_OS ) && !defined(powerpc_HOST_ARCH) )
++/* Don't use mmap on powerpc-apple-darwin as mmap doesn't support
++ * reallocating but we need to allocate jump islands just after each
++ * object images. Otherwise relative branches to jump islands can fail
++ * due to 24-bits displacement overflow.
++ */
+ #define USE_MMAP
+ #include <fcntl.h>
+ #include <sys/mman.h>
+@@ -1684,6 +1692,9 @@ loadArchive( char *path )
+    size_t fileSize;
+    int isObject;
+    char tmp[12];
++#if !defined(USE_MMAP) && defined(darwin_HOST_OS)
++   int misalignment;
++#endif
+ 
+    IF_DEBUG(linker, debugBelch("loadArchive `%s'\n", path));
+ 
+@@ -1763,6 +1774,7 @@ loadArchive( char *path )
+        if (isObject) {
+            char *archiveMemberName;
+ 
++#if defined(USE_MMAP)
+            /* We can't mmap from the archive directly, as object
+               files need to be 8-byte aligned but files in .ar
+               archives are 2-byte aligned, and if we malloc the
+@@ -1770,9 +1782,17 @@ loadArchive( char *path )
+               mmap some anonymous memory and use that. We could
+               do better here. */
+            image = mmapForLinker(imageSize, MAP_ANONYMOUS, -1);
++#elif defined(darwin_HOST_OS)
++           // See loadObj()
++           misalignment = machoGetMisalignment(f);
++           image = stgMallocBytes(imageSize + misalignment, "loadArchive(file)");
++           image += misalignment;
++#else
++           image = stgMallocBytes(imageSize, "loadArchive(file)");
++#endif
+            n = fread ( image, 1, imageSize, f );
+            if (n != imageSize)
+-               barf("loadObj: error whilst reading `%s'", path);
++               barf("loadArchive: error whilst reading `%s'", path);
+ 
+            archiveMemberName = stgMallocBytes(strlen(path) + fileNameSize + 3, "loadArchive(file)");
+            sprintf(archiveMemberName, "%s(%.*s)", path, (int)fileNameSize, file);
+@@ -1780,7 +1800,7 @@ loadArchive( char *path )
+            oc = mkOc(path, image, imageSize, archiveMemberName
+ #ifndef USE_MMAP
+ #ifdef darwin_HOST_OS
+-                    , 0
++                    , misalignment
+ #endif
+ #endif
+                     );
+@@ -1841,7 +1861,11 @@ loadObj( char *path )
+    int fd;
+ #else
+    FILE *f;
++#  if defined(darwin_HOST_OS)
++   int misalignment;
++#  endif
+ #endif
++
+    IF_DEBUG(linker, debugBelch("loadObj %s\n", path));
+ 
+    initLinker();
+@@ -1914,12 +1938,12 @@ loadObj( char *path )
+     // We calculate the correct alignment from the header before
+     // reading the file, and then we misalign image on purpose so
+     // that the actual sections end up aligned again.
+-   misalignment = machoGetMisalignment(f);
+-   image = stgMallocBytes(fileSize + misalignment, "loadObj(image)");
+-   image += misalignment;
+-#  else
+-   image = stgMallocBytes(fileSize, "loadObj(image)");
+-#  endif
++    misalignment = machoGetMisalignment(f);
++    image = stgMallocBytes(fileSize + misalignment, "loadObj(image)");
++    image += misalignment;
++#   else
++    image = stgMallocBytes(fileSize, "loadObj(image)");
++#   endif
+ 
+    {
+        int n;
+@@ -2203,6 +2227,12 @@ static int ocAllocateSymbolExtras( Objec
+      */
+     if( m > n ) // we need to allocate more pages
+     {
++#if !defined(x86_64_HOST_ARCH)
++        errorBelch("%s: WARNING: Allocating jump islands separately from "
++                   "the object image itself. This may interfere with "
++                   "relative branches to them.",
++                   OC_INFORMATIVE_FILENAME(oc));
++#endif
+         oc->symbol_extras = mmapForLinker(sizeof(SymbolExtra) * count, 
+                                           MAP_ANONYMOUS, -1);
+     }
+@@ -5211,20 +5241,23 @@ static int machoGetMisalignment( FILE * 
+     struct mach_header header;
+     int misalignment;
+     
+-    fread(&header, sizeof(header), 1, f);
+-    rewind(f);
++    {
++        int n = fread(&header, sizeof(header), 1, f);
++        if (n != 1) {
++            barf("machoGetMisalignment: can't read the Mach-O header");
++        }
++    }
++    fseek(f, -sizeof(header), SEEK_CUR);
+ 
+ #if x86_64_HOST_ARCH || powerpc64_HOST_ARCH
+     if(header.magic != MH_MAGIC_64) {
+-        errorBelch("Bad magic. Expected: %08x, got: %08x.\n",
+-                   MH_MAGIC_64, header->magic);
+-        return 0;
++        barf("Bad magic. Expected: %08x, got: %08x.",
++             MH_MAGIC_64, header.magic);
+     }
+ #else
+     if(header.magic != MH_MAGIC) {
+-        errorBelch("Bad magic. Expected: %08x, got: %08x.\n",
+-                   MH_MAGIC, header->magic);
+-        return 0;
++        barf("Bad magic. Expected: %08x, got: %08x.",
++             MH_MAGIC, header.magic);
+     }
+ #endif
+ 
