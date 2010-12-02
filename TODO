@@ -76,7 +76,7 @@ Suggested package updates
 	o lives-1.3.10
 	o llvm-2.8
 	o man-1.6f
-	o mcabber-0.10.0
+	o mcabber-0.10.1
 	o mcwm-20101118.2
 	o meta-tracker-0.8.17
 	o mixxx-1.8.0
@@ -99,7 +99,7 @@ Suggested package updates
 	o qtcreator-1.3.1
 	o rezound-0.12.3beta
 	o rosegarden-current-1.4.0
-	o rsyslog-5.6.0
+	o rsyslog-5.6.2
 	o samhain-2.8.0
 	o sflphone-0.7.2
 	o siege-2.70
@@ -113,7 +113,7 @@ Suggested package updates
 	o tor-dev-0.2.2.17
 	o uade-2.13
 	o uptimed-0.3.16
-	o virtualbox-3.2.10
+	o virtualbox-3.2.12
 	o xaralx-bin-0.7.1692
 	o xclipboard-1.1.1
 	o xcowsay-1.3
