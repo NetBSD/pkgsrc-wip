@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2010/06/13 22:46:56 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.20 2010/12/02 15:48:57 thomasklausner Exp $
 #
 
 DISTNAME=	awesome-3.4.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11 wm
 MASTER_SITES=	http://awesome.naquadah.org/download/
 EXTRACT_SUFX=	.tar.xz
