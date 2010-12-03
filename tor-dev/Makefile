@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2010/04/28 11:48:41 athaba Exp $
+# $NetBSD: Makefile,v 1.35 2010/12/03 15:37:16 athaba Exp $
 #
 
-DISTNAME=		tor-0.2.2.13-alpha
+DISTNAME=		tor-0.2.2.19-alpha
 PKGNAME=		${DISTNAME:S/-alpha//}
 CATEGORIES=		net security
 MASTER_SITES=		http://www.torproject.org/dist/
@@ -15,12 +15,12 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 
-USE_LANGUAGES+=		c99
+USE_LANGUAGES=		c99
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 
 CONFIGURE_ENV+=		CPP=${CPP:Q}
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
 
 TEST_TARGET=		check
 
@@ -31,7 +31,7 @@ BUILD_DEFS+=		VARBASE
 PKG_SYSCONFSUBDIR=	tor
 
 PKG_GROUPS_VARS+=	TOR_GROUP
-PKG_USERS_VARS+=	TOR_USER
+PKG_USERS_VARS=	TOR_USER
 
 RCD_SCRIPTS=		tor
 RCD_SCRIPT_SRC.tor=	${FILESDIR}/tor.in
@@ -41,15 +41,15 @@ USER_GROUP=		${TOR_USER} ${TOR_GROUP}
 
 OWN_DIRS_PERMS+=	${PKG_HOME} ${USER_GROUP} 0700
 
-CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 
 CONF_FILES+=		${PREFIX}/share/examples/tor/tor-tsocks.conf 	\
 				${PKG_SYSCONFDIR}/tor-tsocks.conf
 CONF_FILES+=		${PREFIX}/share/examples/tor/torrc.sample 	\
 				${PKG_SYSCONFDIR}/torrc
 
-FILES_SUBST+=		PKG_HOME=${PKG_HOME:Q}
-FILES_SUBST+=		TOR_USER=${TOR_USER:Q} TOR_GROUP=${TOR_GROUP:Q}
+FILES_SUBST+=		PKG_HOME=${PKG_HOME}
+FILES_SUBST+=		TOR_USER=${TOR_USER} TOR_GROUP=${TOR_GROUP}
 
 INSTALL_MAKE_FLAGS+=	sysconfdir=${PREFIX}/share/examples
 
