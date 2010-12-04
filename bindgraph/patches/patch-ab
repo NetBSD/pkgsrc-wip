@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2010/12/04 10:16:02 triaxx Exp $
+
+--- bindgraph.pl.orig	2004-10-08 17:48:12.000000000 +0000
++++ bindgraph.pl
+@@ -9,7 +9,7 @@
+ my $rrdstep = 60;
+ 
+ my $daemon_logfile = 'bindgraph.log';
+-my $daemon_rrd_dir = '.';
++my $daemon_rrd_dir = '@RRDDIR@';
+ my $daemon_pidfile;
+ my $rrd = 'bindgraph.rrd';
+ 

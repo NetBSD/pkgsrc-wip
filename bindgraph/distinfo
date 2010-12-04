@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/12/04 08:33:13 triaxx Exp $
+$NetBSD: distinfo,v 1.2 2010/12/04 10:16:02 triaxx Exp $
 
 SHA1 (bindgraph-0.2.tgz) = b2664ee9372b25dd297af0a07de878ea2b0b94c4
 RMD160 (bindgraph-0.2.tgz) = 464962c849258790b95623c01fa3411f56645785
 Size (bindgraph-0.2.tgz) = 15808 bytes
 SHA1 (patch-aa) = 2e33a5c73c45e4fc0159e8bb50f3aca24149b4a7
+SHA1 (patch-ab) = a998d1c32cc80fd6f5e0d832d7db6f6e42caf587

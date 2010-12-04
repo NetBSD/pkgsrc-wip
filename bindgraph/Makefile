@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/12/04 08:33:13 triaxx Exp $
+# $NetBSD: Makefile,v 1.2 2010/12/04 10:16:02 triaxx Exp $
 #
 
 DISTNAME=	bindgraph-0.2
@@ -36,8 +36,7 @@ RCD_SCRIPTS= bindgraph
 SUBST_CLASSES+= defs
 SUBST_STAGE.defs=	pre-build
 SUBST_FILES.defs=	${BG_SCRIPTS}
-SUBST_SED.defs+=	-e "s,'\\.','${DBDIR}',g"
-SUBST_SED.defs+=	-e "s,/var/www/as112/rrd,${DBDIR},g"
+SUBST_SED.defs+=	-e 's,@RRDDIR@,${DBDIR},g'
 #
 SUBST_MESSAGE.defs=	Fixing defaults.
 
