@@ -1,0 +1,4 @@
+You should edit bindgraph_flags in your /etc/rc.conf to configure the bindgraph
+daemon:
+* bindgraph_flags="--logfile /path/to/query.log" to prevent bindgraph to look
+in /var/log/syslog
