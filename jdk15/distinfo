@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.19 2010/12/05 13:25:06 ftigeot Exp $
+$NetBSD: distinfo,v 1.20 2010/12/05 17:16:47 ftigeot Exp $
 
 SHA1 (bsd-jdk15-patches-9.tar.bz2) = 410de93e19d15a1f45b825b9751b0482b70bdf7f
 RMD160 (bsd-jdk15-patches-9.tar.bz2) = ff8cc31c3735b33ec8072e6764fd165a775f1fe6
@@ -32,4 +32,9 @@ SHA1 (patch-bf) = 5388da5d6f3b3e656b3a75a738860e10774e29a8
 SHA1 (patch-bg) = de8c47a373ce6869c2baf739868c8f292f82c988
 SHA1 (patch-bh) = 8ad68283d24780fc7de2c38b8f92e59a916bdc62
 SHA1 (patch-bi) = 86fc7bfa970ac736d5cc85fe64590b682308c32f
+SHA1 (patch-bin_bootscript) = c86572383050c40e1bf36196142af660f43571a5
 SHA1 (patch-bj) = e3b4700c91fbc744669eab548c7c2bc7a21a0c04
+SHA1 (patch-bk) = 00210e6e33cef5d63d3d438e28124f9ae6a6bed4
+SHA1 (patch-j2se_make_java_redist_Makefile) = 6f2095c78aee3b3e00ba53455b095764e5a6b805
+SHA1 (patch-j2se_make_sun_javac_recompile_library_Makefile) = 76b56626213195d2e9a1722d793711b2516f6052
+SHA1 (patch-j2se_src_share_classes_java_lang_ClassLoader_java) = 71c7cb8cbfc0cbb7d1f8eb00d73cd570bedc7d11

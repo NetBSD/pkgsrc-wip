@@ -1,0 +1,27 @@
+--- j2se/make/common/Defs.gmk.orig	2010-11-28 19:15:40 +0100
++++ j2se/make/common/Defs.gmk	2010-11-28 19:17:46 +0100
+@@ -559,7 +559,11 @@
+   STACKSIZE	= 1536
+ endif
+ STACKSIZEFLAG	= -XX:ThreadStackSize=$(STACKSIZE)
+-JAVAHFLAGS	+= -J$(STACKSIZEFLAG)
++
++# Do not confuse kaffe
++ifndef ALT_BOOTDIR2
++  JAVAHFLAGS	+= -J$(STACKSIZEFLAG)
++endif
+ 
+ #
+ # Invoking the Java compiler.   In leaf makefiles, choose as follows:
+@@ -610,9 +614,9 @@
+ # variable in $(BUILDDIR)/java/GNUmakefile.
+ #
+ JAVA_BOOT      = $(BOOTDIR)/bin/java -Xbootclasspath/p:$(BUILDDIR)/sun/javac/javac/gjc.jar
+-JAVAC_BOOT     = $(BOOTDIR)/bin/javac -J-Xbootclasspath/p:$(BUILDDIR)/sun/javac/javac/gjc.jar -Xbootclasspath/p:$(BUILDDIR)/sun/javac/javac/collect.jar -target jsr14
++JAVAC_BOOT     = $(BOOTDIR)/bin/javac -classpath $(BUILDDIR)/sun/javac/javac/gjc.jar:$(BUILDDIR)/sun/javac/javac/collect.jar -target 1.4
+ JAVAC_BOOT_CMD = $(JAVAC_BOOT) $(JAVAC_BOOT_FLAGS) $(JAVACFLAGS) $(LANGUAGE_VERSION)
+-JAVAH_BOOT_CMD = $(BOOTDIR)/bin/javah -J-Xbootclasspath/p:$(BUILDDIR)/sun/javac/javac/gjc.jar
++JAVAH_BOOT_CMD = $(BOOTDIR)/bin/javah -classpath $(ALT_BOOTDIR2)/jre/lib/glibj.zip:$(BUILDDIR)/sun/javac/javac/gjc.jar
+ 
+ # Setting USEBOOTENV in the environment allows using the boot environment
+ # for all targets - very useful to allow a merge to proceed while debugging

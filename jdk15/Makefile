@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2010/11/30 17:34:43 ftigeot Exp $
+# $NetBSD: Makefile,v 1.43 2010/12/05 17:16:47 ftigeot Exp $
 
 .include "../../wip/jdk16/Makefile.common"
 
@@ -13,6 +13,9 @@ PKGNAME=	jdk15-${JDK_VERSION}.${JDK_UPDATE}.${JDK_PATCHSET_VERSION}
 MASTER_SITES+=		# http://download.java.net/tiger/archive/tiger_u${JDK_UPDATE}/
 MASTER_SITES+=		# http://www.eyesbeyond.com/freebsddom/java/jdk15.html
 DISTFILES=		${JRL_SRCFILE} ${JRL_BINFILE} ${PATCHSETFILE}
+
+RT_JAR=			SUNWj5rt/reloc/jdk/instances/jdk1.5.0/jre/lib/rt.jar
+TOOLS_JAR=		SUNWj5dev/reloc/jdk/instances/jdk1.5.0/lib/tools.jar
 
 COMMENT=		Java Development Kit ${JDK_VERSION}
 LICENSE=		sun-jrl-16-license
@@ -35,8 +38,9 @@ ALT_BOOTDIR=		${PREFIX}/java/jdk-1.5.0
 BUILD_DEPENDS+=		sun-jdk6>=1:../../lang/sun-jdk6
 ALT_BOOTDIR=		${PREFIX}/java/sun-6
 .else
-BUILD_DEPENDS+=		sun-jdk15>=1:../../lang/sun-jdk15
-ALT_BOOTDIR=		${PREFIX}/java/sun-1.5
+BUILD_DEPENDS+=		kaffe>=1.1:../../lang/kaffe
+ALT_BOOTDIR=		${WRKSRC}
+ALT_BOOTDIR2=		${PREFIX}/java/kaffe
 .endif
 
 BUILD_DEPENDS+=		unzip>=6.0:../../archivers/unzip
@@ -61,13 +65,19 @@ MAKE_ENV+=		SYS_CFLAGS=${CFLAGS:Q}
 MAKE_ENV+=		LD_LIBRARY_PATH=
 MAKE_ENV+=		SKIP_COMPARE_IMAGES=YES
 MAKE_ENV+=		ALT_BOOTDIR=${ALT_BOOTDIR}
+MAKE_ENV+=		ALT_BOOTDIR2=${ALT_BOOTDIR2}
+MAKE_ENV+=		ALT_BOOTSTRAP=yes
+MAKE_ENV+=		ABS_OUTPUTDIR=${OUTPUTDIR}
 MAKE_ENV+=		HOTSPOT_BUILD_JOBS=${MAKE_JOBS}
+MAKE_ENV+=		OUTPUTDIR=${OUTPUTDIR}
+MAKE_ENV+=		DONT_BUILD_DOCS="YES"
 
 # MAKE_ENV+=		WRAPPER_DEBUG=yes
 
 JRL_SRCFILE=		${DISTNAME}-fcs-src-${JDK_VERSION_STRING}.jar
 JRL_BINFILE=		${DISTNAME}-fcs-bin-${JDK_VERSION_STRING}.jar
 PATCHSETFILE=		bsd-jdk15-patches-${JDK_PATCHSET_VERSION}.tar.bz2
+SOL_BINFILE=		${DISTNAME}-solaris-i586.tar.Z
 
 JRL_DOWNLOAD=	http://download.java.net/tiger/archive/tiger_u${JDK_UPDATE}/
 PATCH_DOWNLOAD=	http://www.eyesbeyond.com/freebsddom/java/JDK15JRLConfirm.html
@@ -76,10 +86,12 @@ PATCH_DOWNLOAD=	http://www.eyesbeyond.com/freebsddom/java/JDK15JRLConfirm.html
 # at a MACHINE_ARCH level if we ever build for powerpc or mips
 JAVA_MACHINE_ARCH=${MACHINE_ARCH}
 .if ${MACHINE_ARCH} == "i386"
+OUTPUTDIR=			${WRKDIR}/control/build/bsd-${MACHINE_ARCH:S/i386/i586/}
 JDKIMAGEDIR=		${WRKDIR}/${BUILD_DIRS}/../build/bsd-i586/j2sdk-image
 # JDKIMAGEDIR_G=	${WRKDIR}/${BUILD_DIRS}/../build/bsd-i586/j2sdk-debug-image
 .elif ${MACHINE_ARCH} == "x86_64"
 JAVA_MACHINE_ARCH=	amd64
+OUTPUTDIR=			${WRKDIR}/control/build/bsd-${JAVA_MACHINE_ARCH}
 JDKIMAGEDIR=		${WRKDIR}/${BUILD_DIRS}/../build/bsd-amd64/j2sdk-image
 # JDKIMAGEDIR_G=	${WRKDIR}/${BUILD_DIRS}/../build/bsd-amd64/j2sdk-debug-image
 .endif
@@ -111,6 +123,11 @@ FETCH_MESSAGE+= " and place it as:"
 FETCH_MESSAGE+= "      ${DISTDIR}/${PATCHSETFILE}"
 FETCH_MESSAGE+= ""
 FETCH_MESSAGE+= " Then resume this build by running '"${MAKE:Q}"' again."
+
+FETCH_MESSAGE+=	"Get 'JDK 5.0 Update 16' for 'Solaris x86 packages' file:"
+FETCH_MESSAGE+=	"    jdk-1_5_0_16-solaris-i586.tar.Z"
+FETCH_MESSAGE+=	"from http://java.sun.com/javase/downloads/index_jdk5.jsp or"
+FETCH_MESSAGE+=	"http://java.sun.com/products/archive/j2se/5.0_16/index.html"
 
 MESSAGE_SUBST+=		PREFIX=${PREFIX}
 MESSAGE_SUBST+=		JAVA_HOME=${JAVA_HOME}
@@ -146,6 +163,19 @@ pre-patch:
 
 post-patch:
 	${MKDIR} ${WRKSRC}/control/build/bsd-i586/lib/i386/server
+	cd ${WRKDIR}/bin && ${CHMOD} +x bootscript
+.for prog in java javac javah jar
+	cd ${WRKDIR}/bin && ln -s bootscript ${prog}
+.endfor
+# We can't use ${EXTRACT_ELEMENTS} conditionally
+# and post-extract has already been redefined.
+	cd ${WRKDIR} && ${TOOLS_TAR} xf \
+		${DISTDIR}/${SOL_BINFILE} ${RT_JAR} ${TOOLS_JAR}
+	mkdir -p ${OUTPUTDIR}/classes
+	cd ${OUTPUTDIR}/classes && \
+		unzip -q ${WRKDIR}/${RT_JAR} -x META-INF* && \
+		unzip -qn ${WRKDIR}/${TOOLS_JAR} -x META-INF*
+	rm -rf ${WRKDIR}/SUNWj5*
 
 do-install:
 	${INSTALL_PROGRAM_DIR} ${DESTDIR}${JAVA_HOME}
