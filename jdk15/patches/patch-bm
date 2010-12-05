@@ -1,0 +1,12 @@
+--- j2se/make/sun/awt/Makefile.orig	2010-12-05 18:36:17 +0100
++++ j2se/make/sun/awt/Makefile	2010-12-05 19:22:39 +0100
+@@ -538,7 +538,8 @@
+ 	$(RM) -r $(TMPDIR)/CompileFontConfig
+ 	$(MKDIR) -p $(TMPDIR)/CompileFontConfig
+ 	$(JAVAC) -d $(TMPDIR)/CompileFontConfig $(BUILDDIR)/tools/CompileFontConfig/CompileFontConfig.java
+-	$(JAVA) -classpath $(TMPDIR)/CompileFontConfig CompileFontConfig $< $(@)
++#	$(JAVA) -classpath $(TMPDIR)/CompileFontConfig CompileFontConfig $< $(@)
++	$(TOUCH) $(@)
+ 	$(CHMOD) 444 $(@)
+ 
+ fontconfigs.clean :
