@@ -1,0 +1,20 @@
+--- j2se/make/sun/xawt/Makefile.orig	2010-12-05 13:11:30 +0100
++++ j2se/make/sun/xawt/Makefile	2010-12-05 14:02:48 +0100
+@@ -43,7 +43,7 @@
+ dummy := $(shell $(MKDIR) -p $(LIB_LOCATION))
+ endif
+ 
+-ifeq ($(TRUE_PLATFORM), NetBSD)
++ifeq ($(TRUE_PLATFORM), $(filter $(TRUE_PLATFORM), NetBSD, DragonFly))
+ LDFLAGS_PLATFORM = -L$(OPENWIN_LIB) -Wl,-R$(OPENWIN_LIB)
+ else
+ LDFLAGS_PLATFORM = -L$(OPENWIN_LIB)  
+@@ -117,7 +117,7 @@
+ endif
+ 
+ ifeq ($(PLATFORM), bsd)
+-  X11DIR ?= /usr/X11R6
++  X11DIR ?= $(PREFIX)
+   LOCALDIR ?= /usr/local
+   CPPFLAGS += -I$(X11DIR)/include/X11/extensions -I$(MOTIF_DIR)/include -I$(OPENWIN_HOME)/include -DX11DIR=\"$(X11DIR)\" -DLOCALDIR=\"$(LOCALDIR)\"
+ endif
