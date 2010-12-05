@@ -1,5 +1,5 @@
---- j2se/make/common/Defs-bsd.gmk.orig	2010-11-21 14:39:48 +0100
-+++ j2se/make/common/Defs-bsd.gmk	2010-11-21 16:44:01 +0100
+--- j2se/make/common/Defs-bsd.gmk.orig	2010-12-05 10:21:51 +0100
++++ j2se/make/common/Defs-bsd.gmk	2010-12-05 11:34:17 +0100
 @@ -349,6 +349,10 @@
  # -L paths for finding and -ljava
  #
@@ -22,11 +22,15 @@
  JAVALIB         = -ljava$(SUFFIX) $(JVMLIB)
  
  #
-@@ -491,6 +499,10 @@
+@@ -491,6 +499,14 @@
    SYSTEM_ZLIB = true
  endif
  
 +ifeq ($(TRUE_PLATFORM), NetBSD)
++  SYSTEM_ZLIB = true
++endif
++
++ifeq ($(TRUE_PLATFORM), DragonFly)
 +  SYSTEM_ZLIB = true
 +endif
 +
