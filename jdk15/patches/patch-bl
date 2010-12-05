@@ -1,0 +1,10 @@
+--- j2se/make/java/redist/Makefile.orig	2008-05-28 09:06:38 +0200
++++ j2se/make/java/redist/Makefile	2010-12-05 16:39:20 +0100
+@@ -417,7 +417,6 @@
+ 
+ $(CLASSBINDIR)/sun/security/jgss/spi \
+ $(CLASSBINDIR)/sun/security/krb5: $(BUILDDIR)/tools/crypto/jgss/jgss_kerberos.jar $(CLASSBINDIR) $(TMPDIR)
+-	$(RM) -r $@
+ 	$(CP) $< $(CLASSBINDIR)
+ 	$(CD) $(CLASSBINDIR); $(BOOTDIR)/bin/jar xf $(<F) $(subst $(CLASSBINDIR)/, ,$@)
+ 	$(CD) $(CLASSBINDIR); $(RM) $(<F)
