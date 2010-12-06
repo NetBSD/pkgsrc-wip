@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2010/12/04 08:33:13 triaxx Exp $
+$NetBSD: patch-aa,v 1.2 2010/12/06 12:38:27 triaxx Exp $
 
 Update version
 Change hostname to a real name
@@ -7,7 +7,7 @@ Create temp directory
 
 --- bindgraph.cgi.orig	2003-05-04 22:26:18.000000000 +0000
 +++ bindgraph.cgi
-@@ -9,10 +9,10 @@
+@@ -9,12 +9,12 @@
  use RRDs;
  use strict;
  
@@ -18,20 +18,35 @@ Create temp directory
 -my $hostname = 'hostname.example.net (please edit bindgraph.cgi)';
 +my $hostname = "$ENV{HTTP_HOST}";
  # path of the RRD database
- my $rrd = '/var/www/as112/rrd/bindgraph.rrd';
+-my $rrd = '/var/www/as112/rrd/bindgraph.rrd';
++my $rrd = '@RRDDIR@/bindgraph.rrd';
  # temporary directory where the images will be saved
-@@ -102,8 +102,8 @@ sub graph($$$;$) {
+ my $tmp_dir = '/tmp/bindgraph';
+ 
+@@ -89,6 +89,10 @@ sub graph($$$;$) {
+ 		}
+ 	}
+ 
++  my $last_update = localtime(last_update($rrd));
++  $last_update =~ s|:|\\:|g unless $RRDs::VERSION < 1.199908;
++  my $date = localtime(time);
++  $date =~ s|:|\\:|g unless $RRDs::VERSION < 1.199908;
+ 	my ($text, $xs, $ys) = RRDs::graph(
+ 		$file,
+ 		'--imgformat', 'PNG',
+@@ -101,9 +105,8 @@ sub graph($$$;$) {
+ 		'--lazy',
  		@rrdef,
  		@rrprint,
- 		'COMMENT:\s',
+-		'COMMENT:\s',
 -		'COMMENT:last update: ' . localtime(last_update($rrd))
 -			. '    graph created on ' . localtime(time) . '\r',
-+#		'COMMENT:last update: ' . localtime(last_update($rrd))
-+#			. '    graph created on ' . localtime(time) . '\r',
++		'COMMENT:last update\: ' . $last_update
++			. '    graph created on ' . $date . '\r',
  	);
  	my $err = RRDs::error;
  	die_fatal("RRDs::graph($file, ...): $err") if $err;
-@@ -209,7 +209,10 @@ sub main {
+@@ -209,7 +212,10 @@ sub main {
  	$uri =~ s#/#,#g;
  	$uri =~ s#~#tilde,#g;
  
