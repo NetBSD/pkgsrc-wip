@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2010/11/12 03:26:54 asau Exp $
+# $NetBSD: Makefile,v 1.35 2010/12/07 17:15:21 asau Exp $
 
 DISTNAME=	openmpi-1.5
-DISTNAME=	openmpi-1.5.1a1r24025
-PKGNAME=	openmpi-1.5.0.24025
+DISTNAME=	openmpi-1.5.1rc3r24143
+PKGNAME=	openmpi-1.5.0.24143
 CATEGORIES=	parallel
 MASTER_SITES=	http://www.open-mpi.org/software/ompi/v1.5/downloads/ \
 		http://www.open-mpi.org/nightly/v1.5/
@@ -20,8 +20,12 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++ fortran77
 USE_LIBTOOL=		yes
-LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
-SHLIBTOOL_OVERRIDE=	${WRKSRC}/config/libtool.m4
+LIBTOOL_OVERRIDE=	${WRKSRC}/libtool \
+			${WRKSRC}/ompi/contrib/vt/vt/extlib/otf/libtool \
+			${WRKSRC}/ompi/contrib/vt/vt/libtool \
+			${WRKSRC}/ompi/mca/io/romio/romio/libtool
+SHLIBTOOL_OVERRIDE=	${WRKSRC}/config/libtool.m4 \
+			${WRKSRC}/opal/libltdl/m4/libtool.m4
 
 CONFIGURE_ARGS+=	--disable-mpi-f90
 CONFIGURE_ARGS+=	--with-libltdl=external # use our libltdl
