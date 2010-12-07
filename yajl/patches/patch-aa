@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/12/07 21:18:00 pallegra Exp $
+Don't use doxygen. (TODO: maybe add an option ?)
+
+--- CMakeLists.txt.orig	2010-12-07 18:10:39.000000000 +0000
++++ CMakeLists.txt
+@@ -74,8 +74,6 @@ ADD_SUBDIRECTORY(test)
+ ADD_SUBDIRECTORY(reformatter)
+ ADD_SUBDIRECTORY(verify)
+ 
+-INCLUDE(YAJLDoc.cmake)
+-
+ # a test target
+ ADD_CUSTOM_TARGET(test
+                   ./run_tests.sh

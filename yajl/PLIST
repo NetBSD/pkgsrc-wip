@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/12/07 21:18:00 pallegra Exp $
+bin/json_reformat
+bin/json_verify
+include/yajl/yajl_common.h
+include/yajl/yajl_gen.h
+include/yajl/yajl_parse.h
+lib/libyajl.so
+lib/libyajl.so.1
+lib/libyajl.so.${PKGVERSION}
+lib/libyajl_s.a

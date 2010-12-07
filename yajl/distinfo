@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/12/07 21:18:00 pallegra Exp $
+
+SHA1 (yajl-1.0.9.tar.gz) = 7296c6e584a85f18fa698b0a9581a7171ed40d38
+RMD160 (yajl-1.0.9.tar.gz) = 1a5314b7675565faedad3c99a876b1cd2f9655f1
+Size (yajl-1.0.9.tar.gz) = 53094 bytes
+SHA1 (patch-aa) = 57b3a7cc3acbf4643238830f8c8f2ace7d1bfcc2
