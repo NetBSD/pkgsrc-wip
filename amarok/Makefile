@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.37 2010/10/27 07:59:54 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.38 2010/12/07 19:51:46 thomasklausner Exp $
 #
 
 DISTNAME=	amarok-${VERS}
-VERS=		2.3.1.90
+VERS=		2.3.90
 CATEGORIES=	audio multimedia
 MASTER_SITES=	http://download.kde.org/unstable/amarok/${VERS}/src/ \
 		ftp://gd.tuwien.ac.at/kde/unstable/amarok/${VERS}/src/
@@ -34,13 +34,14 @@ SUBST_CLASSES+=		mysql
 SUBST_STAGE.mysql=	post-patch
 SUBST_MESSAGE.mysql=	Fixup paths for MySQL embedded
 SUBST_FILES.mysql=	cmake/modules/FindMySQLAmarok.cmake
-SUBST_FILES.mysql+=	src/core-impl/collections/sqlcollection/mysqlecollection/CMakeLists.txt
+SUBST_FILES.mysql+=	src/core-impl/collections/db/sql/mysqlecollection/CMakeLists.txt
 SUBST_SED.mysql=	-e s:/opt/mysqle/:${BUILDLINK_PREFIX.mysql-server}:
 SUBST_SED.mysql+=	-e s:@@WLR@@:${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.mysql-server}/lib/mysql:
 
 .include "options.mk"
 
 .include "../../audio/liblastfm/buildlink3.mk"
+.include "../../audio/libofa/buildlink3.mk"
 BUILDLINK_API_DEPENDS.taglib+=	taglib>=1.6nb1
 .include "../../audio/taglib/buildlink3.mk"
 .include "../../audio/taglib-extras/buildlink3.mk"
@@ -51,6 +52,7 @@ BUILDLINK_API_DEPENDS.mysql-server+=	mysql-server>=5.1.44nb1
 .include "../../devel/qtscriptgenerator/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../meta-pkgs/kde4/kde4.mk"
+.include "../../multimedia/ffmpeg/buildlink3.mk"
 .include "../../multimedia/kdemultimedia4/buildlink3.mk"
 .include "../../security/qca2/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
