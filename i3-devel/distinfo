@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/12/07 21:21:16 pallegra Exp $
+
+SHA1 (i3-tree-pr1.tar.bz2) = 9684c1511d0be1d42c036c9f9a8cc377340214a7
+RMD160 (i3-tree-pr1.tar.bz2) = b832517dd152ba47e44ccab51b6e9c24c50f3fc9
+Size (i3-tree-pr1.tar.bz2) = 309821 bytes
+SHA1 (patch-aa) = 96d90cfd41df38943ae2f60174d4f80e5454d56f
+SHA1 (patch-ab) = 177066d10d88b14d303fb32096f1b8117e7579ba
+SHA1 (patch-ac) = b61cc6f4a91f9ea71ff0b27399348ed0ee852cda

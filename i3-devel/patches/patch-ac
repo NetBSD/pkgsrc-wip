@@ -1,0 +1,33 @@
+$NetBSD: patch-ac,v 1.1.1.1 2010/12/07 21:21:16 pallegra Exp $
+
+--- i3.config.orig	2010-12-07 20:00:38.000000000 +0000
++++ i3.config
+@@ -8,16 +8,16 @@ font -misc-fixed-medium-r-normal--13-120
+ floating_modifier Mod1
+ 
+ # temporary path during development
+-ipc-socket /tmp/nestedcons
++ipc-socket ~/.i3/ipc.sock
+ 
+ # Open empty container
+ bindsym Mod1+Shift+Return open
+ 
+ # Start terminal (Mod1+Enter)
+-bindsym Mod1+Return exec /usr/bin/urxvt
++bindsym Mod1+Return exec xterm
+ 
+ # Start dmenu (Mod1+p)
+-bindsym Mod1+p exec /usr/bin/dmenu_run
++bindsym Mod1+p exec dmenu_run
+ 
+ bindsym Mod1+h split h
+ bindsym Mod1+v split v
+@@ -44,7 +44,7 @@ bindsym Mod1+u level up
+ bindsym Mod1+c kill
+ 
+ # Restore saved JSON layout
+-bindsym Mod1+y restore /home/michael/i3/layout.json
++bindsym Mod1+y restore ~/.i3/layout.json
+ 
+ # Restart i3
+ bindsym Mod1+Shift+c restart

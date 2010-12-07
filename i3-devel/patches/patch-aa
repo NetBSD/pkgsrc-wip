@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2010/12/07 21:21:16 pallegra Exp $
+
+--- Makefile.orig	2010-12-06 12:21:02.000000000 +0000
++++ Makefile
+@@ -26,6 +26,8 @@ src/%.o: src/%.c ${HEADERS}
+ all: src/cfgparse.y.o src/cfgparse.yy.o src/cmdparse.y.o src/cmdparse.yy.o ${FILES}
+ 	echo "LINK i3"
+ 	$(CC) -o i3 $^ $(LDFLAGS)
++	$(MAKE) TOPDIR=$(TOPDIR) -C i3-msg all
++	$(MAKE) TOPDIR=$(TOPDIR) -C i3-input all
+ 
+ loglevels.h:
+ 	echo "LOGLEVELS"

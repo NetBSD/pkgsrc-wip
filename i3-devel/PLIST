@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/12/07 21:21:16 pallegra Exp $
+bin/i3
+bin/i3-input
+bin/i3-msg
+include/i3/ipc.h
+man/man1/i3-input.1
+man/man1/i3-msg.1
+man/man1/i3.1
+share/doc/i3/config
+share/xsessions/i3.desktop
