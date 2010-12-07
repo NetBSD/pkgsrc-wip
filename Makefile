@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4160 2010/12/05 17:43:09 zatmania Exp $
+# $Id: Makefile,v 1.4161 2010/12/07 21:20:31 pallegra Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2673,6 +2673,7 @@ SUBDIR+=	xwelltris
 SUBDIR+=	xxdiff
 SUBDIR+=	xyssl
 SUBDIR+=	yafray
+SUBDIR+=	yajl
 SUBDIR+=	yakuake
 SUBDIR+=	yauap
 SUBDIR+=	yaws
