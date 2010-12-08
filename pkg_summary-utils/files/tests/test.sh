@@ -2059,8 +2059,8 @@ cmp 'pkg_cmp_summary #16' \
 '
 
 # pkg_summary2deps -Ap
-pkg_summary2deps -Ap src_summary.txt | sort |
-cmp 'pkg_summary2deps -Ap #1' \
+pkg_summary2deps -Apa src_summary.txt | sort |
+cmp 'pkg_summary2deps #1' \
 'devel/gmake devel/libmaa
 devel/gmake editors/emacs
 devel/gmake textproc/dict-client
@@ -2119,7 +2119,7 @@ sysutils/checkperms wip/pkg_online-client
 sysutils/checkperms wip/pkg_online-server
 sysutils/checkperms wip/pkg_summary-utils
 sysutils/checkperms wip/runawk
-textproc/dict-client textproc/dictem
+textproc/dict-client|wip/dict-client textproc/dictem
 wip/awk-pkgsrc-dewey wip/pkg_summary-utils
 wip/dict-client wip/pkg_online-client
 wip/dict-server wip/pkg_online-server
@@ -2137,13 +2137,13 @@ www/ap22-vhost-ldap:PKG_APACHE=apache22
 '
 
 pkg_summary2deps -Ap -s src_summary.txt 2>&1 >/dev/null | sort |
-cmp 'pkg_summary2deps -Ap #2' \
+cmp 'pkg_summary2deps #2' \
 'Cannot find dependency libmaa>=1.2 for package wip/dict-server (dict-server-1.10.11nb2)
 Cannot find dependency pkg_summary-utils>=0.19.0 for package wip/pkg_online-server (pkg_online-server-0.5.0)
 '
 
 pkg_summary2deps -Ap src_summary2.txt | sort |
-cmp 'pkg_summary2deps -Ap #3' \
+cmp 'pkg_summary2deps #3' \
 'devel/gmake
 devel/libltdl
 devel/libmaa wip/dict-client
@@ -2172,20 +2172,20 @@ wip/runawk
 '
 
 pkg_summary2deps -Ap -s src_summary2.txt 2>&1 >/dev/null | sort |
-cmp 'pkg_summary2deps -Ap #4' \
+cmp 'pkg_summary2deps #4' \
 'Cannot find dependency pkg_online-client-0.5.0nb2 for package wip/pkg_online (pkg_online-0.5.0nb2)
 Cannot find dependency pkg_online-server-0.5.0nb2 for package wip/pkg_online (pkg_online-0.5.0nb2)
 '
 
 pkg_summary2deps -Ap src_summary7.txt | sort |
-cmp 'pkg_summary2deps -Ap #5' \
+cmp 'pkg_summary2deps #5' \
 'audio/py-mutagen audio/py-karaoke
 audio/py-mutagen:PYTHON_VERSION_REQD=24 audio/py-karaoke:PYTHON_VERSION_REQD=24
 audio/py-mutagen:PYTHON_VERSION_REQD=26 audio/py-karaoke:PYTHON_VERSION_REQD=26
 '
 
 pkg_summary2deps -Ap src_summary8.txt | sort | uniq |
-cmp 'pkg_summary2deps -Ap #6' \
+cmp 'pkg_summary2deps #6' \
 'archivers/p5-Archive-Tar devel/p5-Module-Build
 devel/p5-Algorithm-Diff textproc/p5-Text-Diff
 devel/p5-Compress-Raw-Bzip2 devel/p5-IO-Compress
@@ -2242,8 +2242,8 @@ textproc/p5-YAML devel/p5-Module-Build
 #exit $?
 
 # pkg_summary2deps
-pkg_summary2deps -Apn src_summary.txt | sort |
-cmp 'pkg_summary2deps #1' \
+pkg_summary2deps -Apna src_summary.txt | sort |
+cmp 'pkg_summary2deps #7' \
 'devel/gmake;gmake devel/libmaa;libmaa
 devel/gmake;gmake editors/emacs;emacs
 devel/gmake;gmake textproc/dict-client;dict-client
@@ -2302,7 +2302,7 @@ sysutils/checkperms;checkperms wip/pkg_online-server;pkg_online-server
 sysutils/checkperms;checkperms wip/pkg_online;pkg_online
 sysutils/checkperms;checkperms wip/pkg_summary-utils;pkg_summary-utils
 sysutils/checkperms;checkperms wip/runawk;runawk
-textproc/dict-client;dict-client textproc/dictem;dictem
+textproc/dict-client;dict-client|wip/dict-client;dict-client textproc/dictem;dictem
 wip/awk-pkgsrc-dewey;awk-pkgsrc-dewey wip/pkg_summary-utils;pkg_summary-utils
 wip/dict-client;dict-client wip/pkg_online-client;pkg_online-client
 wip/dict-server;dict-server wip/pkg_online-server;pkg_online-server
@@ -2319,14 +2319,14 @@ www/ap2-vhost-ldap:PKG_APACHE=apache2;ap2-vhost-ldap
 www/ap22-vhost-ldap:PKG_APACHE=apache22;ap22-vhost-ldap
 '
 
-pkg_summary2deps -dnt src_summary.txt | sort |
-cmp 'pkg_summary2deps #2' \
+pkg_summary2deps -dnta src_summary.txt | sort |
+cmp 'pkg_summary2deps #8' \
 'ap2-vhost-ldap ap2-vhost-ldap
 ap22-vhost-ldap ap22-vhost-ldap
 awk-pkgsrc-dewey pkg_summary-utils
 checkperms checkperms
-dict-client dictem
 dict-client pkg_online-client
+dict-client|dict-client dictem
 dict-server pkg_online-server
 emacs dictem
 gmake gmake
@@ -2360,14 +2360,14 @@ x11-links x11-links
 '
 
 pkg_summary2deps -Apntr src_summary7.txt | sort |
-cmp 'pkg_summary2deps #3' \
+cmp 'pkg_summary2deps #9' \
 'audio/py-mutagen:PYTHON_VERSION_REQD=24;py24-mutagen-1.15 audio/py-karaoke:PYTHON_VERSION_REQD=24;py24-karaoke-0.7.1
 audio/py-mutagen:PYTHON_VERSION_REQD=26;py26-mutagen-1.15 audio/py-karaoke:PYTHON_VERSION_REQD=26;py26-karaoke-0.7.1
 audio/py-mutagen;py25-mutagen-1.15 audio/py-karaoke;py25-karaoke-0.7.1
 '
 
 pkg_summary2deps -Dp src_summary8.txt | sort | uniq |
-cmp 'pkg_summary2deps #4' \
+cmp 'pkg_summary2deps #10' \
 'lang/perl5 devel/p5-ExtUtils-CBuilder
 lang/perl5 devel/p5-ExtUtils-ParseXS
 lang/perl5 devel/p5-Module-Build
@@ -2393,7 +2393,7 @@ textproc/p5-YAML devel/p5-Module-Build
 '
 
 pkg_summary2deps -Dpr src_summary8.txt | sort | uniq |
-cmp 'pkg_summary2deps #5' \
+cmp 'pkg_summary2deps #11' \
 'lang/perl5;perl-5.10.0nb7 devel/p5-ExtUtils-CBuilder;p5-ExtUtils-CBuilder-0.26.03.01
 lang/perl5;perl-5.10.0nb7 devel/p5-ExtUtils-ParseXS;p5-ExtUtils-ParseXS-2.20.04.01
 lang/perl5;perl-5.10.0nb7 devel/p5-Module-Build;p5-Module-Build-0.35000
@@ -2418,8 +2418,8 @@ sysutils/checkperms;checkperms-1.10 textproc/p5-YAML;p5-YAML-0.70
 textproc/p5-YAML;p5-YAML-0.70 devel/p5-Module-Build;p5-Module-Build-0.35000
 '
 
-pkg_summary2deps -ApnR src_summary.txt | sort |
-cmp 'pkg_summary2deps #6' \
+pkg_summary2deps -ApnRa src_summary.txt | sort |
+cmp 'pkg_summary2deps #12' \
 'devel/gmake;gmake devel/libmaa;libmaa ( gmake>=3.81 )
 devel/gmake;gmake editors/emacs;emacs ( gmake>=3.81 )
 devel/gmake;gmake textproc/dict-client;dict-client ( gmake>=3.81 )
@@ -2478,7 +2478,7 @@ sysutils/checkperms;checkperms wip/pkg_online-server;pkg_online-server ( checkpe
 sysutils/checkperms;checkperms wip/pkg_online;pkg_online ( checkperms>=1.1 )
 sysutils/checkperms;checkperms wip/pkg_summary-utils;pkg_summary-utils ( checkperms>=1.1 )
 sysutils/checkperms;checkperms wip/runawk;runawk ( checkperms>=1.1 )
-textproc/dict-client;dict-client textproc/dictem;dictem ( dict-client>=1.9.14 )
+textproc/dict-client;dict-client|wip/dict-client;dict-client textproc/dictem;dictem ( dict-client>=1.9.14 )
 wip/awk-pkgsrc-dewey;awk-pkgsrc-dewey wip/pkg_summary-utils;pkg_summary-utils ( awk-pkgsrc-dewey>=0.5.6 )
 wip/dict-client;dict-client wip/pkg_online-client;pkg_online-client ( dict-client>=1.10.9 )
 wip/dict-server;dict-server wip/pkg_online-server;pkg_online-server ( dict-server>=1.10.10nb2 )
@@ -2495,14 +2495,14 @@ www/ap2-vhost-ldap:PKG_APACHE=apache2;ap2-vhost-ldap
 www/ap22-vhost-ldap:PKG_APACHE=apache22;ap22-vhost-ldap
 '
 
-pkg_summary2deps -dntR src_summary.txt | sort |
-cmp 'pkg_summary2deps #7' \
+pkg_summary2deps -dntRa src_summary.txt | sort |
+cmp 'pkg_summary2deps #13' \
 'ap2-vhost-ldap ap2-vhost-ldap
 ap22-vhost-ldap ap22-vhost-ldap
 awk-pkgsrc-dewey pkg_summary-utils ( awk-pkgsrc-dewey>=0.5.6 )
 checkperms checkperms
-dict-client dictem ( dict-client>=1.9.14 )
 dict-client pkg_online-client ( dict-client>=1.10.9 )
+dict-client|dict-client dictem ( dict-client>=1.9.14 )
 dict-server pkg_online-server ( dict-server>=1.10.10nb2 )
 emacs dictem ( emacs>=22 )
 gmake gmake
@@ -2536,14 +2536,14 @@ x11-links x11-links
 '
 
 pkg_summary2deps -ApntrR src_summary7.txt | sort |
-cmp 'pkg_summary2deps #8' \
+cmp 'pkg_summary2deps #14' \
 'audio/py-mutagen:PYTHON_VERSION_REQD=24;py24-mutagen-1.15 audio/py-karaoke:PYTHON_VERSION_REQD=24;py24-karaoke-0.7.1 ( py24-mutagen>=1.9 )
 audio/py-mutagen:PYTHON_VERSION_REQD=26;py26-mutagen-1.15 audio/py-karaoke:PYTHON_VERSION_REQD=26;py26-karaoke-0.7.1 ( py26-mutagen>=1.9 )
 audio/py-mutagen;py25-mutagen-1.15 audio/py-karaoke;py25-karaoke-0.7.1 ( py25-mutagen>=1.9 )
 '
 
 pkg_summary2deps -DpR src_summary8.txt | sort | uniq |
-cmp 'pkg_summary2deps #9' \
+cmp 'pkg_summary2deps #15' \
 'lang/perl5;perl devel/p5-ExtUtils-CBuilder;p5-ExtUtils-CBuilder ( perl>=5.10 )
 lang/perl5;perl devel/p5-ExtUtils-ParseXS;p5-ExtUtils-ParseXS ( perl>=5.10 )
 lang/perl5;perl devel/p5-Module-Build;p5-Module-Build ( perl>=5.10.0 )
@@ -2569,7 +2569,7 @@ textproc/p5-YAML;p5-YAML devel/p5-Module-Build;p5-Module-Build ( p5-YAML>=0.50 )
 '
 
 pkg_summary2deps -DpRr src_summary8.txt | sort | uniq |
-cmp 'pkg_summary2deps #10' \
+cmp 'pkg_summary2deps #16' \
 'lang/perl5;perl-5.10.0nb7 devel/p5-ExtUtils-CBuilder;p5-ExtUtils-CBuilder-0.26.03.01 ( perl>=5.10 )
 lang/perl5;perl-5.10.0nb7 devel/p5-ExtUtils-ParseXS;p5-ExtUtils-ParseXS-2.20.04.01 ( perl>=5.10 )
 lang/perl5;perl-5.10.0nb7 devel/p5-Module-Build;p5-Module-Build-0.35000 ( perl>=5.10.0 )
@@ -2595,7 +2595,7 @@ textproc/p5-YAML;p5-YAML-0.70 devel/p5-Module-Build;p5-Module-Build-0.35000 ( p5
 '
 
 pkg_summary2deps -dn bin_summary1.txt | sort |
-cmp 'pkg_summary2deps #11' \
+cmp 'pkg_summary2deps #17' \
 'awk-pkgsrc-dewey pkg_summary-utils
 checkperms
 dict-client pkg_online-client
@@ -2626,7 +2626,7 @@ runawk pkg_summary-utils
 '
 
 pkg_summary2deps -Apn bin_summary1.txt | sort |
-cmp 'pkg_summary2deps #12' \
+cmp 'pkg_summary2deps #18' \
 'devel/gmake;gmake
 devel/libmaa;libmaa wip/dict-client;dict-client
 devel/libmaa;libmaa wip/dict-server;dict-server
@@ -2657,7 +2657,7 @@ wip/runawk;runawk wip/pkg_summary-utils;pkg_summary-utils
 '
 
 pkg_summary2deps -ArR bin_summary1.txt | sort |
-cmp 'pkg_summary2deps #13' \
+cmp 'pkg_summary2deps #19' \
 'awk-pkgsrc-dewey-0.5.6 pkg_summary-utils-0.35rc1 ( awk-pkgsrc-dewey>=0.5.6 )
 checkperms-1.10
 dict-client-1.11.2 pkg_online-client-0.9.1 ( dict-client>=1.10.9 )
@@ -2687,8 +2687,8 @@ runawk-0.18.0 pkg_conflicts-0.4.0 ( runawk>=0.14.3 )
 runawk-0.18.0 pkg_summary-utils-0.35rc1 ( runawk>=0.16.0 )
 '
 
-pkg_summary2deps -Ap src_summary11.txt | sort |
-cmp 'pkg_summary2deps #14' \
+pkg_summary2deps -Apa src_summary11.txt | sort |
+cmp 'pkg_summary2deps #20' \
 'audio/libao audio/libao-oss
 audio/libao audio/vorbis-tools
 audio/libao-oss audio/vorbis-tools
@@ -2701,6 +2701,7 @@ editors/emacs textproc/dictem:EMACS_TYPE=emacs23
 editors/emacs20 textproc/dictem:EMACS_TYPE=emacs20
 editors/emacs21 textproc/dictem:EMACS_TYPE=emacs21
 editors/emacs22 textproc/dictem
+editors/emacs|editors/emacs22|editors/emacs21|editors/emacs20 wip/emterm
 lang/f2c devel/libtool-base
 lang/perl5 devel/p5-ExtUtils-CBuilder
 sysutils/checkperms devel/gmake
@@ -2722,43 +2723,43 @@ textproc/dict-client textproc/dictem:EMACS_TYPE=emacs23
 '
 
 pkg_summary2deps -dn src_summary10.txt 2>&1 >/dev/null | sort |
-cmp 'pkg_summary2deps #15' \
+cmp 'pkg_summary2deps #21' \
 'Cannot find dependency depends1 for package pkgtools/barbaz (barbaz)
 Cannot find dependency depends2 for package pkgtools/barbaz (barbaz)
 '
 
 pkg_summary2deps -dln src_summary10.txt 2>&1 >/dev/null | sort |
-cmp 'pkg_summary2deps #16' \
+cmp 'pkg_summary2deps #22' \
 'd: not_found depends1 <- pkgtools/barbaz barbaz
 d: not_found depends2 <- pkgtools/barbaz barbaz
 '
 
 pkg_summary2deps -dns src_summary.txt 2>&1 >/dev/null | sort |
-cmp 'pkg_summary2deps #17' \
+cmp 'pkg_summary2deps #23' \
 'Cannot find dependency libmaa>=1.2 for package wip/dict-server (dict-server-1.10.11nb2)
 Cannot find dependency pkg_summary-utils>=0.19.0 for package wip/pkg_online-server (pkg_online-server-0.5.0)
 '
 
 pkg_summary2deps -dlns src_summary.txt 2>&1 >/dev/null | sort |
-cmp 'pkg_summary2deps #18' \
+cmp 'pkg_summary2deps #24' \
 'd: not_found libmaa>=1.2 <- wip/dict-server dict-server-1.10.11nb2
 d: not_found pkg_summary-utils>=0.19.0 <- wip/pkg_online-server pkg_online-server-0.5.0
 '
 
 pkg_summary2deps -dns src_summary2.txt 2>&1 >/dev/null | sort |
-cmp 'pkg_summary2deps #19' \
+cmp 'pkg_summary2deps #25' \
 'Cannot find dependency pkg_online-client-0.5.0nb2 for package wip/pkg_online (pkg_online-0.5.0nb2)
 Cannot find dependency pkg_online-server-0.5.0nb2 for package wip/pkg_online (pkg_online-0.5.0nb2)
 '
 
 pkg_summary2deps -dlns src_summary2.txt 2>&1 >/dev/null | sort |
-cmp 'pkg_summary2deps #20' \
+cmp 'pkg_summary2deps #26' \
 'd: not_found pkg_online-client-0.5.0nb2 <- wip/pkg_online pkg_online-0.5.0nb2
 d: not_found pkg_online-server-0.5.0nb2 <- wip/pkg_online pkg_online-0.5.0nb2
 '
 
 pkg_summary2deps -dlns src_summary9.txt 2>&1 | sort |
-cmp 'pkg_summary2deps #21' \
+cmp 'pkg_summary2deps #27' \
 'd: not_found dbus>=0.91 <- editors/emacs emacs-23.2nb2
 d: not_found desktop-file-utils>=0.10nb1 <- editors/emacs emacs-23.2nb2
 d: not_found desktop-file-utils>=0.8 <- editors/emacs emacs-23.2nb2
@@ -2833,19 +2834,19 @@ runawk paexec
 '
 
 pkg_summary2deps -c src_summary9.txt 2>&1 | sort |
-cmp 'pkg_summary2deps #22' \
+cmp 'pkg_summary2deps #28' \
 'editors/emacs22 (emacs-22.3nb10) conflicts (emacs-[0-9]*) with editors/emacs (emacs-23.2nb2)
 editors/emacs22 (emacs-22.3nb10) conflicts (emacs-[0-9]*) with editors/emacs21 (emacs-21.4anb19)
 '
 
 pkg_summary2deps -cl src_summary9.txt 2>&1 | sort |
-cmp 'pkg_summary2deps #23' \
+cmp 'pkg_summary2deps #29' \
 'c: conflict emacs-[0-9]* editors/emacs emacs-23.2nb2 <- editors/emacs22 emacs-22.3nb10
 c: conflict emacs-[0-9]* editors/emacs21 emacs-21.4anb19 <- editors/emacs22 emacs-22.3nb10
 '
 
 pkg_summary2deps -cl src_summary12.txt 2>&1 >/dev/null | sort |
-cmp 'pkg_summary2deps #24' \
+cmp 'pkg_summary2deps #30' \
 'c: conflict awk-pkgsrc-dewey-[0-9]* wip/awk-pkgsrc-dewey awk-pkgsrc-dewey-0.5.6 <- wip/pkg_summary-utils pkg_summary-utils-0.49beta2
 c: conflict egcs-current-19980608 somewhere/egcs-current egcs-current-19980608 <- lang/f2c f2c-20090411nb5
 c: conflict glibtool-[0-9]* somewhere/glibtool glibtool-1.2.3 <- devel/libtool-base libtool-base-2.2.6bnb4
@@ -2859,7 +2860,7 @@ c: conflict pkg_update_summary-[0-9]* somewhere/pkg_update_summary pkg_update_su
 '
 
 pkg_summary2deps -Acldns src_summary12.txt 2>&1 | sort |
-cmp 'pkg_summary2deps #25' \
+cmp 'pkg_summary2deps #31' \
 'awk-pkgsrc-dewey
 c: conflict awk-pkgsrc-dewey-[0-9]* wip/awk-pkgsrc-dewey awk-pkgsrc-dewey-0.5.6 <- wip/pkg_summary-utils pkg_summary-utils-0.49beta2
 c: conflict egcs-current-19980608 somewhere/egcs-current egcs-current-19980608 <- lang/f2c f2c-20090411nb5
@@ -2906,6 +2907,130 @@ pkg_update_summary
 runawk distbb
 runawk paexec
 runawk pkg_summary-utils
+'
+
+pkg_summary2deps -AplnrRa src_summary13.txt 2>&1 | sort |
+cmp 'pkg_summary2deps #32' \
+'audio/libao-oss;libao-oss-1.0.0|audio/libao-oss;libao-oss-1.0.0|audio/libao-alsa;libao-alsa-1.0.0|audio/libao-arts;libao-arts-1.0.0|audio/libao-esound;libao-esound-1.0.0|audio/libao-nas;libao-nas-1.0.0|audio/libao-pulse;libao-pulse-1.0.0 audio/vorbis-tools;vorbis-tools-1.2.0nb4 ( libao-[a-z]*-[0-9]* )
+audio/libao;libao-1.0.0 audio/libao-alsa;libao-alsa-1.0.0 ( libao>=1.0.0 )
+audio/libao;libao-1.0.0 audio/libao-arts;libao-arts-1.0.0 ( libao>=1.0.0 )
+audio/libao;libao-1.0.0 audio/libao-esound;libao-esound-1.0.0 ( libao>=1.0.0 )
+audio/libao;libao-1.0.0 audio/libao-nas;libao-nas-1.0.0 ( libao>=1.0.0 )
+audio/libao;libao-1.0.0 audio/libao-oss;libao-oss-1.0.0 ( libao>=1.0.0 )
+audio/libao;libao-1.0.0 audio/libao-pulse;libao-pulse-1.0.0 ( libao>=1.0.0 )
+audio/libao;libao-1.0.0 audio/vorbis-tools;vorbis-tools-1.2.0nb4 ( libao>=1.0.0 )
+d: not_found alsa-lib>=1.0.18 <- audio/libao-alsa libao-alsa-1.0.0
+d: not_found arts>=1.1.4nb1 <- audio/libao-arts libao-arts-1.0.0
+d: not_found arts>=1.5.8nb1 <- audio/libao-arts libao-arts-1.0.0
+d: not_found curl>=7.19.7nb1 <- audio/vorbis-tools vorbis-tools-1.2.0nb4
+d: not_found esound>=0.2.18 <- audio/libao-esound libao-esound-1.0.0
+d: not_found esound>=0.2.35nb1 <- audio/libao-esound libao-esound-1.0.0
+d: not_found flac>=1.1.3nb1 <- audio/vorbis-tools vorbis-tools-1.2.0nb4
+d: not_found libXau>=1.0 <- audio/libao-nas libao-nas-1.0.0
+d: not_found libogg>=1.1.2nb1 <- audio/vorbis-tools vorbis-tools-1.2.0nb4
+d: not_found libvorbis>=1.1.0nb1 <- audio/vorbis-tools vorbis-tools-1.2.0nb4
+d: not_found nas>=1.4.2 <- audio/libao-nas libao-nas-1.0.0
+d: not_found nas>=1.7bnb2 <- audio/libao-nas libao-nas-1.0.0
+d: not_found pulseaudio>=0.9.13 <- audio/libao-pulse libao-pulse-1.0.0
+d: not_found speex>=1.2rc1 <- audio/vorbis-tools vorbis-tools-1.2.0nb4
+'
+
+pkg_summary2deps -AplnrR src_summary13.txt 2>&1 | sort |
+cmp 'pkg_summary2deps #32.1' \
+'audio/libao-oss;libao-oss-1.0.0 audio/vorbis-tools;vorbis-tools-1.2.0nb4 ( libao-[a-z]*-[0-9]* )
+audio/libao;libao-1.0.0 audio/libao-alsa;libao-alsa-1.0.0 ( libao>=1.0.0 )
+audio/libao;libao-1.0.0 audio/libao-arts;libao-arts-1.0.0 ( libao>=1.0.0 )
+audio/libao;libao-1.0.0 audio/libao-esound;libao-esound-1.0.0 ( libao>=1.0.0 )
+audio/libao;libao-1.0.0 audio/libao-nas;libao-nas-1.0.0 ( libao>=1.0.0 )
+audio/libao;libao-1.0.0 audio/libao-oss;libao-oss-1.0.0 ( libao>=1.0.0 )
+audio/libao;libao-1.0.0 audio/libao-pulse;libao-pulse-1.0.0 ( libao>=1.0.0 )
+audio/libao;libao-1.0.0 audio/vorbis-tools;vorbis-tools-1.2.0nb4 ( libao>=1.0.0 )
+d: not_found alsa-lib>=1.0.18 <- audio/libao-alsa libao-alsa-1.0.0
+d: not_found arts>=1.1.4nb1 <- audio/libao-arts libao-arts-1.0.0
+d: not_found arts>=1.5.8nb1 <- audio/libao-arts libao-arts-1.0.0
+d: not_found curl>=7.19.7nb1 <- audio/vorbis-tools vorbis-tools-1.2.0nb4
+d: not_found esound>=0.2.18 <- audio/libao-esound libao-esound-1.0.0
+d: not_found esound>=0.2.35nb1 <- audio/libao-esound libao-esound-1.0.0
+d: not_found flac>=1.1.3nb1 <- audio/vorbis-tools vorbis-tools-1.2.0nb4
+d: not_found libXau>=1.0 <- audio/libao-nas libao-nas-1.0.0
+d: not_found libogg>=1.1.2nb1 <- audio/vorbis-tools vorbis-tools-1.2.0nb4
+d: not_found libvorbis>=1.1.0nb1 <- audio/vorbis-tools vorbis-tools-1.2.0nb4
+d: not_found nas>=1.4.2 <- audio/libao-nas libao-nas-1.0.0
+d: not_found nas>=1.7bnb2 <- audio/libao-nas libao-nas-1.0.0
+d: not_found pulseaudio>=0.9.13 <- audio/libao-pulse libao-pulse-1.0.0
+d: not_found speex>=1.2rc1 <- audio/vorbis-tools vorbis-tools-1.2.0nb4
+'
+
+pkg_summary2deps -Apna src_summary13.txt 2>/dev/null | sort |
+cmp 'pkg_summary2deps #33' \
+'audio/libao-oss;libao-oss|audio/libao-oss;libao-oss|audio/libao-alsa;libao-alsa|audio/libao-arts;libao-arts|audio/libao-esound;libao-esound|audio/libao-nas;libao-nas|audio/libao-pulse;libao-pulse audio/vorbis-tools;vorbis-tools
+audio/libao;libao audio/libao-alsa;libao-alsa
+audio/libao;libao audio/libao-arts;libao-arts
+audio/libao;libao audio/libao-esound;libao-esound
+audio/libao;libao audio/libao-nas;libao-nas
+audio/libao;libao audio/libao-oss;libao-oss
+audio/libao;libao audio/libao-pulse;libao-pulse
+audio/libao;libao audio/vorbis-tools;vorbis-tools
+'
+
+pkg_summary2deps -Apn src_summary13.txt 2>/dev/null | sort |
+cmp 'pkg_summary2deps #33.1' \
+'audio/libao-oss;libao-oss audio/vorbis-tools;vorbis-tools
+audio/libao;libao audio/libao-alsa;libao-alsa
+audio/libao;libao audio/libao-arts;libao-arts
+audio/libao;libao audio/libao-esound;libao-esound
+audio/libao;libao audio/libao-nas;libao-nas
+audio/libao;libao audio/libao-oss;libao-oss
+audio/libao;libao audio/libao-pulse;libao-pulse
+audio/libao;libao audio/vorbis-tools;vorbis-tools
+'
+
+pkg_summary2deps -Apa src_summary13.txt 2>/dev/null | sort |
+cmp 'pkg_summary2deps #34' \
+'audio/libao audio/libao-alsa
+audio/libao audio/libao-arts
+audio/libao audio/libao-esound
+audio/libao audio/libao-nas
+audio/libao audio/libao-oss
+audio/libao audio/libao-pulse
+audio/libao audio/vorbis-tools
+audio/libao-oss|audio/libao-oss|audio/libao-alsa|audio/libao-arts|audio/libao-esound|audio/libao-nas|audio/libao-pulse audio/vorbis-tools
+'
+
+pkg_summary2deps -Ap src_summary13.txt 2>/dev/null | sort |
+cmp 'pkg_summary2deps #34.1' \
+'audio/libao audio/libao-alsa
+audio/libao audio/libao-arts
+audio/libao audio/libao-esound
+audio/libao audio/libao-nas
+audio/libao audio/libao-oss
+audio/libao audio/libao-pulse
+audio/libao audio/vorbis-tools
+audio/libao-oss audio/vorbis-tools
+'
+
+pkg_summary2deps -Ana src_summary13.txt 2>/dev/null | sort |
+cmp 'pkg_summary2deps #35' \
+'libao libao-alsa
+libao libao-arts
+libao libao-esound
+libao libao-nas
+libao libao-oss
+libao libao-pulse
+libao vorbis-tools
+libao-oss|libao-oss|libao-alsa|libao-arts|libao-esound|libao-nas|libao-pulse vorbis-tools
+'
+
+pkg_summary2deps -An src_summary13.txt 2>/dev/null | sort |
+cmp 'pkg_summary2deps #35.1' \
+'libao libao-alsa
+libao libao-arts
+libao libao-esound
+libao libao-nas
+libao libao-oss
+libao libao-pulse
+libao vorbis-tools
+libao-oss vorbis-tools
 '
 
 # pkg_lint_summary

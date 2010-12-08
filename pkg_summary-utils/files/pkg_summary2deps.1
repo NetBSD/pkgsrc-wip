@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkg_summary2deps.1,v 1.5 2010/11/18 21:56:21 cheusov Exp $
+.\"	$NetBSD: pkg_summary2deps.1,v 1.6 2010/12/08 22:09:37 cheusov Exp $
 .\"
 .\" Copyright (c) 2008-2010 by Aleksey Cheusov (cheusov@tut.by)
 .\" Absolutely no warranty.
@@ -58,12 +58,16 @@ Versions in CONFLICTS are always checked (see "-s")
 .B "-A"
 analyse both DEPENDS and BUILD_DEPENDS
 .TP
+.B "-a"
+output all matched dependencies separated by `|' symbol,
+not only the first one
+.TP
 .B "-s"
 enable strict mode. Versions of dependencies are always checked, even
 if there is only one matched (by PKGBASE) package.
 .TP
 .B "-t"
-produce output compatible in
+produce output compatible with
 .B tsort(1)
 command
 .TP

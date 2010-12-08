@@ -78,3 +78,7 @@ PKGNAME=libao-oss-1.0.0
 PKGPATH=audio/libao-oss
 DEPENDS=  libao>=0.8.6nb1:../../audio/libao libao>=0.8.4:../../audio/libao  libao>=1.0.0:../../audio/libao
 
+PKGNAME=emterm-0.0.0
+PKGPATH=wip/emterm
+DEPENDS=  emacs-[0-9]*:../../editors/emacs
+
