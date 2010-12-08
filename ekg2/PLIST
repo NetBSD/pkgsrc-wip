@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/11/23 22:30:12 shindenmorr Exp $
+@comment $NetBSD: PLIST,v 1.5 2010/12/08 00:47:04 shindenmorr Exp $
 bin/ekg2
 lib/ekg2/plugins/autoresponder.la
 lib/ekg2/plugins/feed.la
@@ -63,4 +63,5 @@ share/ekg2/themes/blue_sea_dragon.theme
 share/ekg2/themes/dmilith.theme
 share/ekg2/themes/irc-irssi.theme
 share/ekg2/themes/peres.theme
+share/ekg2/vars-en.txt
 share/ekg2/vars-pl.txt

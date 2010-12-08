@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2010/09/03 21:22:54 shindenmorr Exp $
+# $NetBSD: Makefile,v 1.12 2010/12/08 00:47:04 shindenmorr Exp $
 #
 
-DISTNAME=	ekg2-20100901
+DISTNAME=	ekg2-20101207
 CATEGORIES=	chat
 MASTER_SITES=	http://pl.ekg2.org/
 MASTER_SITES+=	http://pl.ekg2.org/archive/
@@ -10,7 +10,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	morr@NetBSD.org
 HOMEPAGE=	http://pl.ekg2.org/
 COMMENT=	Multiplatform, multiprotocol, plugin-based instant messanger
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	gnu-gpl-v3
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
