@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.1 2010/11/22 15:47:12 asau Exp $
+$NetBSD: patch-ag,v 1.2 2010/12/08 21:12:42 asau Exp $
 
 NetBSD has getpagesize(3) in unistd.h
 
@@ -8,7 +8,7 @@ NetBSD has getpagesize(3) in unistd.h
  extern size_t __getpagesize PP ((void));
  #endif
  #else
-+#if defined (__NetBSD__)
++#if defined (__NetBSD__) || defined (__DragonFly__)
 +extern int getpagesize (void); /* from getpagesize(3) */
 +#else
  #include "getpagesize.h"
