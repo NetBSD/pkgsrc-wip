@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2010/12/05 17:16:47 ftigeot Exp $
+# $NetBSD: Makefile,v 1.44 2010/12/08 13:18:57 ftigeot Exp $
 
 .include "../../wip/jdk16/Makefile.common"
 
@@ -12,7 +12,8 @@ DISTNAME=		jdk-${JDK_VERSION:S/./_/g}_${JDK_UPDATE}
 PKGNAME=	jdk15-${JDK_VERSION}.${JDK_UPDATE}.${JDK_PATCHSET_VERSION}
 MASTER_SITES+=		# http://download.java.net/tiger/archive/tiger_u${JDK_UPDATE}/
 MASTER_SITES+=		# http://www.eyesbeyond.com/freebsddom/java/jdk15.html
-DISTFILES=		${JRL_SRCFILE} ${JRL_BINFILE} ${PATCHSETFILE}
+DISTFILES=		${JRL_SRCFILE} ${JRL_BINFILE} ${PATCHSETFILE} ${SOL_BINFILE}
+EXTRACT_ONLY=	${JRL_SRCFILE} ${JRL_BINFILE} ${PATCHSETFILE}
 
 RT_JAR=			SUNWj5rt/reloc/jdk/instances/jdk1.5.0/jre/lib/rt.jar
 TOOLS_JAR=		SUNWj5dev/reloc/jdk/instances/jdk1.5.0/lib/tools.jar
@@ -169,7 +170,7 @@ post-patch:
 .endfor
 # We can't use ${EXTRACT_ELEMENTS} conditionally
 # and post-extract has already been redefined.
-	cd ${WRKDIR} && ${TOOLS_TAR} xf \
+	cd ${WRKDIR} && ${EXTRACTOR} \
 		${DISTDIR}/${SOL_BINFILE} ${RT_JAR} ${TOOLS_JAR}
 	mkdir -p ${OUTPUTDIR}/classes
 	cd ${OUTPUTDIR}/classes && \
