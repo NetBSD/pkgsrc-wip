@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2010/10/12 01:50:59 makoto Exp $
+# $NetBSD: Makefile,v 1.11 2010/12/08 23:10:20 asau Exp $
 #
 
 DISTNAME=	llvm-2.8
@@ -52,6 +52,7 @@ CHECK_PORTABILITY_SKIP= utils/buildit/.svn/text-base/build_llvm.svn-base \
 
 SO_SUFFIX=		so
 PLIST_SUBST+=   	SO_SUFFIX=${SO_SUFFIX}
+PRINT_PLIST_AWK+=	{gsub(/\.${SO_SUFFIX}$$/, ".$${SO_SUFFIX}");}
 
 .if ${OPSYS} == "Darwin"
 SO_SUFFIX=		dylib
