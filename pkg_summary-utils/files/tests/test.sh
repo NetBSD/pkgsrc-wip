@@ -3033,6 +3033,68 @@ libao vorbis-tools
 libao-oss vorbis-tools
 '
 
+pkg_summary2deps -Apa -Pwip/distbb,editors/emacs src_summary.txt | sort |
+cmp 'pkg_summary2deps #36' \
+'devel/gmake editors/emacs
+devel/pkg-config editors/emacs
+graphics/jpeg editors/emacs
+graphics/libungif editors/emacs
+graphics/png editors/emacs
+graphics/tiff editors/emacs
+lang/perl5 editors/emacs
+pkgtools/x11-links editors/emacs
+sysutils/checkperms editors/emacs
+sysutils/checkperms wip/distbb
+wip/paexec wip/distbb
+wip/pkg_summary-utils wip/distbb
+wip/runawk wip/distbb
+'
+
+pkg_summary2deps -dn -P'wip/distbb sysutils/checkperms' src_summary.txt | sort |
+cmp 'pkg_summary2deps #37' \
+'checkperms
+paexec distbb
+pkg_summary-utils distbb
+runawk distbb
+'
+
+pkg_summary2deps -dp -P'wip/distbb sysutils/checkperms' src_summary.txt | sort |
+cmp 'pkg_summary2deps #38' \
+'sysutils/checkperms
+wip/paexec wip/distbb
+wip/pkg_summary-utils wip/distbb
+wip/runawk wip/distbb
+'
+
+pkg_summary2deps -Apa -N distbb-0.22.0,emacs-22.1nb6 src_summary.txt | sort |
+cmp 'pkg_summary2deps #39' \
+'devel/gmake editors/emacs
+devel/pkg-config editors/emacs
+graphics/jpeg editors/emacs
+graphics/libungif editors/emacs
+graphics/png editors/emacs
+graphics/tiff editors/emacs
+lang/perl5 editors/emacs
+pkgtools/x11-links editors/emacs
+sysutils/checkperms editors/emacs
+sysutils/checkperms wip/distbb
+wip/paexec wip/distbb
+wip/pkg_summary-utils wip/distbb
+wip/runawk wip/distbb
+'
+
+pkg_summary2deps -dp -N 'distbb-0.22.0 emacs-22.1nb6' src_summary.txt | sort |
+cmp 'pkg_summary2deps #40' \
+'graphics/jpeg editors/emacs
+graphics/libungif editors/emacs
+graphics/png editors/emacs
+graphics/tiff editors/emacs
+lang/perl5 editors/emacs
+wip/paexec wip/distbb
+wip/pkg_summary-utils wip/distbb
+wip/runawk wip/distbb
+'
+
 # pkg_lint_summary
 pkg_lint_summary bin_summary1.txt 2>&1 | sort |
 sed -n 's/At least one.*$/MandatoryOptionErrorMessage/p' |

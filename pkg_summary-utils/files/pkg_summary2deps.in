@@ -67,6 +67,10 @@
 #   -l    output to stderr the error messages
 #         compatible with pkg_lint_summary, e.g.,
 #         d: not_found foo-[0-9]*:../../devel/foo <- lang/bar bar
+#   =P <pkgs>   find dependencies for specified PKGPATHs,
+#               separated by space or comma
+#   =N <pkgs>   find dependencies for specified PKGNAMEs,
+#               separated by space or comma
 #.end-str
 ############################################################
 
@@ -118,6 +122,28 @@ BEGIN {
 	opt_conflicts = getarg("c")
 
 	show_all_deps = getarg("a")
+
+	all_packages = 1
+
+	pkgs_PKGPATHs = getarg("P", "<fake>")
+	gsub(/,/, " ", pkgs_PKGPATHs)
+	if (pkgs_PKGPATHs != "<fake>"){
+		all_packages = 0
+		split(pkgs_PKGPATHs, arr)
+		for (i in arr){
+			PKGPATHs [arr [i]] = 0
+		}
+	}
+
+	pkgs_PKGNAMEs = getarg("N", "<fake>")
+	gsub(/,/, " ", pkgs_PKGNAMEs)
+	if (pkgs_PKGNAMEs != "<fake>"){
+		all_packages = 0
+		split(pkgs_PKGNAMEs, arr)
+		for (i in arr){
+			PKGNAMEs [arr [i]] = 0
+		}
+	}
 
 	if (getarg("A")){
 		dep_builddep = dep_depends = 1
@@ -189,15 +215,16 @@ NF == 0 {
 	g_path2base [pkgpath] = pkgbase
 	allbases [pkgbase] = 1
 
-	$0 = depends
-	process_deps(1)
+	if (all_packages || (pkgpath in PKGPATHs) || (pkgname in PKGNAMEs)){
+		$0 = depends
+		process_deps(1)
 
-	$0 = build_depends
-	process_deps(2)
+		$0 = build_depends
+		process_deps(2)
 
-	$0 = conflicts
-#	print "conflicts=", conflicts
-	process_deps(3)
+		$0 = conflicts
+		process_deps(3)
+	}
 
 	conflicts = depends = build_depends = ""
 	assigns = pkgpath = pkgbase = pkgname = ""
@@ -381,30 +408,35 @@ END {
 
 	# printing packages with no dependencies
 	for (path in g_path2base){
-		if (! (path in already_printed)){
-			if (out_pkgname){
-				if (keep_ver)
-					name = g_path2name [path]
-				else
-					name = g_path2base [path]
-			}
+		if (path in already_printed)
+			continue
 
-			p = ""
-			if (!out_pkgname){
-				if (out_pkgpath)
-					p = path
-			}else if (!out_pkgpath){
-				p = name
-			}else{
-				p = path ";" name
-			}
+		name = g_path2name [path]
+		base = g_path2base [path]
+		if (!all_packages && !(path in PKGPATHs) && !(name in PKGNAMEs))
+			continue
 
-			if (p != ""){
-				if (mode_tsort)
-					print p, p
-				else
-					print p
-			}
+		# main action
+		if (out_pkgname){
+			if (!keep_ver)
+				name = base
+		}
+
+		p = ""
+		if (!out_pkgname){
+			if (out_pkgpath)
+				p = path
+		}else if (!out_pkgpath){
+			p = name
+		}else{
+			p = path ";" name
+		}
+
+		if (p != ""){
+			if (mode_tsort)
+				print p, p
+			else
+				print p
 		}
 	}
 }
