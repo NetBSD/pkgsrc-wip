@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2010/11/08 22:06:45 cheusov Exp $
+# $NetBSD: Makefile,v 1.72 2010/12/09 18:19:15 cheusov Exp $
 #
 
 DISTNAME=	distbb-0.38.2
@@ -15,6 +15,7 @@ DEPENDS+=	paexec>=0.15.0:../../wip/paexec
 DEPENDS+=	runawk>=1.1.0:../../wip/runawk
 DEPENDS+=	pipestatus>=0.6.0:../../devel/pipestatus
 DEPENDS+=	digest-[0-9]*:../../pkgtools/digest
+BUILD_DEPENDS+=	mk-configure>=0.21:../../wip/mk-configure
 
 USE_LANGUAGES=		# none
 
