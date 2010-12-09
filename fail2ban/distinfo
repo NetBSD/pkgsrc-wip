@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/12/09 16:47:06 rhaamo Exp $
+
+SHA1 (fail2ban-0.8.4.tar.bz2) = 0816a9f8d54013dc9b395284caff3c54f44377d8
+RMD160 (fail2ban-0.8.4.tar.bz2) = 05a9dfd206f734bea9d063a2527695c1b033ea43
+Size (fail2ban-0.8.4.tar.bz2) = 71818 bytes

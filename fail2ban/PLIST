@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/12/09 16:47:06 rhaamo Exp $
+bin/fail2ban-client
+bin/fail2ban-regex
+bin/fail2ban-server
+man/man1/fail2ban-client.1
+man/man1/fail2ban-regex.1
+man/man1/fail2ban-server.1
