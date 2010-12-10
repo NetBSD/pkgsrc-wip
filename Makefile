@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4164 2010/12/09 16:49:37 rhaamo Exp $
+# $Id: Makefile,v 1.4165 2010/12/10 21:50:08 ryo-on Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -61,6 +61,7 @@ SUBDIR+=	acroread9-korfont
 SUBDIR+=	adamem
 SUBDIR+=	adms
 SUBDIR+=	admsmb
+SUBDIR+=	adobe-flash-plugin
 SUBDIR+=	aegis-devel
 SUBDIR+=	aeneas
 SUBDIR+=	aespipe
