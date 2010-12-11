@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/11/15 09:04:53 ryo-on Exp $
+# $NetBSD: Makefile,v 1.2 2010/12/11 06:03:35 ryo-on Exp $
 #
 
-DISTNAME=	gst123-0.1.2
+DISTNAME=	gst123-0.1.3
 CATEGORIES=	audio
 MASTER_SITES=	http://space.twc.de/~stefan/gst123/
 EXTRACT_SUFX=	.tar.bz2
