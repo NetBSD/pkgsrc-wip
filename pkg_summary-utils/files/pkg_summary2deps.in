@@ -107,6 +107,11 @@ function warn_conflicts (\
 }
 
 BEGIN {
+	if (getarg("h")){
+		print_help()
+		exit 0
+	}
+
 	keep_ver = getarg("r")
 	keep_depver = getarg("R")
 
