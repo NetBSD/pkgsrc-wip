@@ -1,9 +1,14 @@
-@comment $NetBSD: PLIST,v 1.8 2010/12/12 10:52:28 ryo-on Exp $
+@comment $NetBSD: PLIST,v 1.9 2010/12/12 20:33:47 ryo-on Exp $
 bin/quvi
 include/quvi/quvi.h
 lib/libquvi.la
 lib/pkgconfig/libquvi.pc
 man/man1/quvi.1
+${PLIST.doc}share/doc/quvi/CodingStyle
+${PLIST.doc}share/doc/quvi/HowtoContributeCode
+${PLIST.doc}share/doc/quvi/HowtoGetDevelopmentCode
+${PLIST.doc}share/doc/quvi/HowtoHelp
+${PLIST.doc}share/doc/quvi/HowtoSubmitPatches
 share/quvi/lua/README
 share/quvi/lua/util/charset.lua
 share/quvi/lua/util/content_type.lua
@@ -32,4 +37,3 @@ share/quvi/lua/website/vimeo.lua
 share/quvi/lua/website/xvideos.lua
 share/quvi/lua/website/youjizz.lua
 share/quvi/lua/website/youtube.lua
-@pkgdir share/doc/quvi
