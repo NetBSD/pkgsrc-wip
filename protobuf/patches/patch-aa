@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2010/12/12 21:15:29 ryo-on Exp $
+
+--- configure.orig	2010-11-18 12:10:13.000000000 +0000
++++ configure
+@@ -16433,7 +16433,7 @@ fi
+ if test "$with_protoc" != "no"; then
+ 
+   PROTOC=$with_protoc
+-  if test "$with_protoc" == "yes"; then
++  if test "$with_protoc" = "yes"; then
+ 
+     # No argument given.  Use system protoc.
+     PROTOC=protoc
