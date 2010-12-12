@@ -186,7 +186,7 @@ END {
 		if (opt_D) opts = opts "D"
 		if (opt_c) opts = opts "c"
 
-		cmd = "pkg_summary2deps -nls" opts " " tmp_summary " 2>&1 > /dev/null" 
+		cmd = "pkg_summary2deps -Xnls" opts " " tmp_summary " 2>&1 > /dev/null" 
 		if (system(cmd))
 			ex = 1
 	}

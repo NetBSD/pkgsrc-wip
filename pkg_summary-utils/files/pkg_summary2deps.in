@@ -71,6 +71,8 @@
 #               separated by space or comma
 #   =N <pkgs>   find dependencies for specified PKGNAMEs,
 #               separated by space or comma
+#   -X          exit with non-zero exit status if problems with
+#               DEPENDS, BUILD_DEPENDS or CONFLICTS are detected
 #.end-str
 ############################################################
 
@@ -127,6 +129,8 @@ BEGIN {
 	opt_conflicts = getarg("c")
 
 	show_all_deps = getarg("a")
+
+	opt_exit_status = getarg("X")
 
 	all_packages = 1
 
@@ -322,6 +326,7 @@ END {
 							}else if (f != path){
 								warn_conflicts(path, name, f,
 											   g_path2name [f], depname)
+								ex = 1
 							}
 						}
 					}
@@ -335,6 +340,7 @@ END {
 					if (!matched){
 						if (k == altdepscnt){
 							warn(path, name, depname)
+							ex = 1
 						}
 
 						continue
@@ -444,4 +450,8 @@ END {
 				print p
 		}
 	}
+
+	# exiting
+	if (opt_exit_status)
+		exitnow(ex)
 }
