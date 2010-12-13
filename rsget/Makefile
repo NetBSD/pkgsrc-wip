@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/07/21 11:19:30 ryo-on Exp $
+# $NetBSD: Makefile,v 1.2 2010/12/13 11:40:51 ryo-on Exp $
 #
 
-DISTNAME=	rsget.pl-11666
+DISTNAME=	rsget.pl-11838
 PKGNAME=	${DISTNAME:S/-/-r/}
 CATEGORIES=	net
 MASTER_SITES=	http://rsget.pl/download/
