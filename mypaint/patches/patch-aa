@@ -1,5 +1,6 @@
-$NetBSD: patch-aa,v 1.1 2010/11/18 21:45:20 ryo-on Exp $
+$NetBSD: patch-aa,v 1.2 2010/12/13 11:23:06 ryo-on Exp $
 
+http://gna.org/bugs/?17084
 --- gui/tileddrawwidget.py.orig	2010-10-30 19:27:59.000000000 +0000
 +++ gui/tileddrawwidget.py
 @@ -9,6 +9,7 @@
