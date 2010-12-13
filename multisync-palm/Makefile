@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/06/13 22:47:11 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2010/12/13 18:07:14 noud4 Exp $
 #
 
 PKGNAME=		multisync-palm-0.82
@@ -13,18 +13,18 @@ DEPENDS+=		multisync>=0.82:../../wip/multisync
 BUILD_DEPENDS+=		libtool-base>=1.5.10:../../devel/libtool-base
 
 pre-configure:
-	cd work/multisync-${PKGVERSION} && \
-		${ACLOCAL} && \
-		${AUTOHEADER} && \
-		${AUTOCONF} && \
-		${AUTOMAKE} -acf
+	cd ${WRKSRC}/../.. && \
+		aclocal && \
+		autoheader && \
+		autoconf && \
+		automake -acf
 	cd ${WRKSRC} && \
-		${ACLOCAL} && \
+		aclocal && \
 		${PREFIX}/bin/libtoolize --force --copy && \
-		${AUTOHEADER} && \
-		${AUTOCONF} && \
-		${AUTOMAKE} -acf
-	cd work/multisync-${PKGVERSION} && \
+		autoheader && \
+		autoconf && \
+		automake -acf
+	cd ${WRKSRC}/../.. && \
 		./configure ${CONFIGURE_ENV} ${CONFIGURE_ARGS}
 
 do-install:
