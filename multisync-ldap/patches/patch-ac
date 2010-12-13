@@ -1,11 +1,11 @@
-$NetBSD: patch-ac,v 1.1 2005/01/09 09:30:29 mreriksson Exp $
+$NetBSD: patch-ac,v 1.2 2010/12/13 18:12:46 noud4 Exp $
 
 --- src/ldap.c.orig	2005-01-09 10:16:58.000000000 +0100
 +++ src/ldap.c
 @@ -1,5 +1,5 @@
  #include "ldap_plugin.h"
 -#include <sasl/sasl.h>
-+#include <sasl.h>
++#include <sasl/sasl.h>
  
  int lutil_sasl_interact(
          LDAP *ld,
