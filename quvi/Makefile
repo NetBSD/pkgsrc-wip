@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2010/12/13 10:09:55 ryo-on Exp $
+# $NetBSD: Makefile,v 1.15 2010/12/13 12:00:57 ryo-on Exp $
 #
 
 DISTNAME=	quvi-0.2.10
@@ -24,18 +24,7 @@ CONFIGURE_ARGS+=	--enable-nsfw
 
 PKGCONFIG_OVERRIDE+=	libquvi.pc.in
 
-DOCUMENTS=	CodingStyle \
-		HowtoContributeCode \
-		HowtoGetDevelopmentCode \
-		HowtoHelp \
-		HowtoSubmitPatches
-
 DOCSDIR=	${PREFIX}/share/doc/${PKGBASE}
-
-post-install:
-.for docfile in ${DOCUMENTS}
-	${INSTALL_DATA} ${WRKSRC}/doc/${docfile} ${DESTDIR}${DOCSDIR}
-.endfor
 
 BUILDLINK_API_DEPENDS.pcre+=		pcre>=7.8
 .include "../../devel/pcre/buildlink3.mk"
