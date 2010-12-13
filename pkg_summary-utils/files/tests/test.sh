@@ -1476,23 +1476,22 @@ PKGPATH=www/ap22-vhost-ldap
 
 '
 
-cat "$tmpfn4" |
+grep_pss_stderr (){
+    grep -E 'Bad package| ----------' "$@"
+}
+
+grep_pss_stderr "$tmpfn4" |
 cmp 'pkg_src_summary #1 stderr' \
 " ------------------
 Bad package wip/pkg_online, skipped
-cd: can't cd to wip/pkg_online
  ------------------
 Bad package wip/dict-server, skipped
-cd: can't cd to wip/dict-server
  ------------------
 Bad package wip/dict-client, skipped
-cd: can't cd to wip/dict-client
  ------------------
 Bad package wip/awk-pkgsrc-dewey, skipped
-cd: can't cd to wip/awk-pkgsrc-dewey
  ------------------
 Bad package www/ap2-vhost-ldap:PKG_APACHE=apache2, skipped
-cd: can't cd to www/ap2-vhost-ldap
 "
 
 pkg_src_summary -m -fPKGNAME,PKGPATH www/ap2-python |
@@ -1886,23 +1885,18 @@ PKGPATH=www/ap22-vhost-ldap
 
 '
 
-cat "$tmpfn4" |
+grep_pss_stderr "$tmpfn4" |
 cmp 'pkg_micro_src_summary #1 stderr' \
 " ------------------
 Bad package wip/pkg_online, skipped
-cd: can't cd to wip/pkg_online
  ------------------
 Bad package wip/dict-server, skipped
-cd: can't cd to wip/dict-server
  ------------------
 Bad package wip/dict-client, skipped
-cd: can't cd to wip/dict-client
  ------------------
 Bad package wip/awk-pkgsrc-dewey, skipped
-cd: can't cd to wip/awk-pkgsrc-dewey
  ------------------
 Bad package www/ap2-vhost-ldap:PKG_APACHE=apache2, skipped
-cd: can't cd to www/ap2-vhost-ldap
 "
 
 pkg_micro_src_summary -f PKGNAME,PKGPATH,MAINTAINER x11/xxkb |
