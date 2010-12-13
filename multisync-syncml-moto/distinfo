@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/12/13 17:50:15 noud4 Exp $
+
+SHA1 (multisync-0.82-1.tar.bz2) = 2960618ff1ebf62513854394f0b397c5e2066c62
+RMD160 (multisync-0.82-1.tar.bz2) = bcc6505f41399944518ee98a96b4a320341a9d6d
+Size (multisync-0.82-1.tar.bz2) = 1432107 bytes
+SHA1 (syncml_plugin_a780.patch) = a13abcbd20c51a2dec656198238d209db2246015
+RMD160 (syncml_plugin_a780.patch) = 9ec450d318bac34e1755776f388d416de65c2951
+Size (syncml_plugin_a780.patch) = 6535 bytes
+SHA1 (patch-aa) = 47f8884f52fa44947b772c2bf7a9099787ce60f0
+SHA1 (patch-ab) = c8071f8da6f35500559d24dc7bcb78b210d63553

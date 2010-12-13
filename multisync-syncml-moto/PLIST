@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/12/13 17:50:15 noud4 Exp $
+lib/multisync/libsyncml_plugin.la
