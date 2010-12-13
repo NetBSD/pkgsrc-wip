@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2010/12/13 12:00:57 ryo-on Exp $
+# $NetBSD: Makefile,v 1.16 2010/12/13 12:19:18 ryo-on Exp $
 #
 
 DISTNAME=	quvi-0.2.10
@@ -13,8 +13,6 @@ LICENSE=	gnu-gpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-PLIST_VARS+=	doc
-
 USE_TOOLS+=	pkg-config
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
@@ -23,8 +21,6 @@ USE_LANGUAGES=	c c++
 CONFIGURE_ARGS+=	--enable-nsfw
 
 PKGCONFIG_OVERRIDE+=	libquvi.pc.in
-
-DOCSDIR=	${PREFIX}/share/doc/${PKGBASE}
 
 BUILDLINK_API_DEPENDS.pcre+=		pcre>=7.8
 .include "../../devel/pcre/buildlink3.mk"
