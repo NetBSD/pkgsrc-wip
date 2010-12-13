@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4165 2010/12/10 21:50:08 ryo-on Exp $
+# $Id: Makefile,v 1.4166 2010/12/13 17:55:05 noud4 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1376,6 +1376,7 @@ SUBDIR+=	multisync-ldap
 SUBDIR+=	multisync-opie
 SUBDIR+=	multisync-palm
 SUBDIR+=	multisync-syncml
+SUBDIR+=	multisync-syncml-moto
 SUBDIR+=	mumble
 SUBDIR+=	mupen64
 SUBDIR+=	mupen64-base
