@@ -1,14 +1,14 @@
-@comment $NetBSD: PLIST,v 1.9 2010/12/12 20:33:47 ryo-on Exp $
+@comment $NetBSD: PLIST,v 1.10 2010/12/13 10:09:55 ryo-on Exp $
 bin/quvi
 include/quvi/quvi.h
 lib/libquvi.la
 lib/pkgconfig/libquvi.pc
 man/man1/quvi.1
-${PLIST.doc}share/doc/quvi/CodingStyle
-${PLIST.doc}share/doc/quvi/HowtoContributeCode
-${PLIST.doc}share/doc/quvi/HowtoGetDevelopmentCode
-${PLIST.doc}share/doc/quvi/HowtoHelp
-${PLIST.doc}share/doc/quvi/HowtoSubmitPatches
+share/doc/quvi/CodingStyle
+share/doc/quvi/HowtoContributeCode
+share/doc/quvi/HowtoGetDevelopmentCode
+share/doc/quvi/HowtoHelp
+share/doc/quvi/HowtoSubmitPatches
 share/quvi/lua/README
 share/quvi/lua/util/charset.lua
 share/quvi/lua/util/content_type.lua
