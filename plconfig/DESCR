@@ -1,0 +1,12 @@
+A tool for configuring HomePlug powerline bridges.
+
+Supported bridges
+
+    * ZEUS Powerline Bridge PLB11/H
+    * Gigafast PE902-EB
+    * Netgear XE102
+    * devolo dLAN duo
+    * Cisco/Linksys Powerline AV PLK200
+    * K?nig CMP-HOMEPLUG25 85 Mbps
+    * Netgear XE104
+    * probably others with Intellon chipset
