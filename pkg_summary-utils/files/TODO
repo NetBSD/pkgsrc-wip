@@ -57,11 +57,11 @@ existing tools:
          non-portable 'test f1 -nt f2'
 
     pkg_lint_summary:
+         - CONFLICTS vs. actual PLISTs in packages
          - versions consistency
          - old binaries
          - distfiles checksums
          - check binaries and their REQUIRES and analyse Makefile
-         - uniq PKGNAME
 
 new tools?
     - replacement for lintpkgsrc -m
