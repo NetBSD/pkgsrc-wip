@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4169 2010/12/14 17:03:52 noud4 Exp $
+# $Id: Makefile,v 1.4170 2010/12/14 22:37:37 noud4 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1856,6 +1856,7 @@ SUBDIR+=	pkg_summary-utils
 SUBDIR+=	pkgin
 SUBDIR+=	pkgmanager
 #SUBDIR+=	pkgpm # not a package yet
+SUBDIR+=	plconfig
 SUBDIR+=	plod
 SUBDIR+=	plplot
 SUBDIR+=	plugger
