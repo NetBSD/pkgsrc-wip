@@ -1,0 +1,11 @@
+--- src/Makefile.in.orig	2009-10-25 17:39:21.000000000 +0000
++++ src/Makefile.in	2009-10-25 17:39:50.000000000 +0000
+@@ -199,7 +199,7 @@
+ formatsdir = @OPENSYNC_FORMATSDIR@
+ opensyncheaderdir = @OPENSYNC_HEADERDIR@
+ INCLUDES = @PACKAGE_CFLAGS@
+-AM_CFLAGS = -Wall -Werror -O2 @PACKAGE_CFLAGS@
++AM_CFLAGS = -Werror -O2 @PACKAGE_CFLAGS@
+ EXTRA_DIST = gnokii-sync gnokii_sync.h gnokii_calendar.h gnokii_calendar_format.h gnokii_calendar_utils.h gnokii_contact.h gnokii_contact_format.h  gnokii_contact_utils.h gnokii_comm.h gnokii_config.h 
+ config_DATA = gnokii-sync
+ opensyncheader_HEADER = gnokii_sync.h gnokii_config.h gnokii_comm.h gnokii_calendar.h gnokii_calendar_utils.h gnokii_contact_utils.h

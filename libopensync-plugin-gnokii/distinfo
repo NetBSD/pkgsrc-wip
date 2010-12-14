@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/12/14 16:40:09 noud4 Exp $
+
+SHA1 (libopensync-plugin-gnokii-0.22.tar.bz2) = 7030ec7370ea1fa3548c86a7b0840630a0a7b2b4
+RMD160 (libopensync-plugin-gnokii-0.22.tar.bz2) = c63efdb21837d55be22f168108a7f2a4bca2967f
+Size (libopensync-plugin-gnokii-0.22.tar.bz2) = 226990 bytes
+SHA1 (patch-aa) = 4c58fbadcd288567553b881eaaf15d7868b864eb
+SHA1 (patch-ab) = ed7ac559191dc5be2a54f99fc04125dba7cc7a16
