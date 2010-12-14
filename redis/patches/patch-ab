@@ -1,0 +1,39 @@
+$NetBSD: patch-ab,v 1.1 2010/12/14 13:31:05 fhajny Exp $
+
+Fix CFLAGS and INSTALL support to pkgsrc standards.
+--- Makefile.orig	2010-11-06 09:07:03.000000000 +0000
++++ Makefile
+@@ -6,18 +6,18 @@ release_hdr := $(shell sh -c './mkreleas
+ uname_S := $(shell sh -c 'uname -s 2>/dev/null || echo not')
+ OPTIMIZATION?=-O2
+ ifeq ($(uname_S),SunOS)
+-  CFLAGS?= -std=c99 -pedantic $(OPTIMIZATION) -Wall -W -D__EXTENSIONS__ -D_XPG6
++  CCFLAGS= $(CFLAGS) -std=c99 -pedantic $(OPTIMIZATION) -Wall -W -D__EXTENSIONS__ -D_XPG6
+   CCLINK?= -ldl -lnsl -lsocket -lm -lpthread
+ else
+-  CFLAGS?= -std=c99 -pedantic $(OPTIMIZATION) -Wall -W $(ARCH) $(PROF)
++  CCFLAGS= $(CFLAGS) -std=c99 -pedantic $(OPTIMIZATION) -Wall -W $(ARCH) $(PROF)
+   CCLINK?= -lm -pthread
+ endif
+-CCOPT= $(CFLAGS) $(CCLINK) $(ARCH) $(PROF)
++CCOPT= $(CCFLAGS) $(CCLINK) $(ARCH) $(PROF)
+ DEBUG?= -g -rdynamic -ggdb 
+ 
+-INSTALL_TOP= /usr/local
+-INSTALL_BIN= $(INSTALL_TOP)/bin
+-INSTALL= cp -p
++INSTALL_TOP= $(PREFIX)
++INSTALL_BIN= $(DESTDIR)$(INSTALL_TOP)/bin
++INSTALL= $(BSD_INSTALL_PROGRAM)
+ 
+ OBJ = adlist.o ae.o anet.o dict.o redis.o sds.o zmalloc.o lzf_c.o lzf_d.o pqsort.o zipmap.o sha1.o
+ BENCHOBJ = ae.o anet.o redis-benchmark.o sds.o adlist.o zmalloc.o
+@@ -80,7 +80,7 @@ redis-check-aof: $(CHECKAOFOBJ)
+ 	$(CC) -o $(CHECKAOFPRGNAME) $(CCOPT) $(DEBUG) $(CHECKAOFOBJ)
+ 
+ .c.o:
+-	$(CC) -c $(CFLAGS) $(DEBUG) $(COMPILE_TIME) $<
++	$(CC) -c $(CCFLAGS) $(DEBUG) $(COMPILE_TIME) $<
+ 
+ clean:
+ 	rm -rf $(PRGNAME) $(BENCHPRGNAME) $(CLIPRGNAME) $(CHECKDUMPPRGNAME) $(CHECKAOFPRGNAME) *.o *.gcda *.gcno *.gcov

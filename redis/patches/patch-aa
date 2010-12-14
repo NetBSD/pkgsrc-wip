@@ -1,8 +1,9 @@
-$NetBSD: patch-aa,v 1.1.1.1 2010/12/05 17:24:18 zatmania Exp $
+$NetBSD: patch-aa,v 1.2 2010/12/14 13:31:05 fhajny Exp $
 
+Change the default config file to something more production like.
 --- redis.conf.orig	2010-07-01 18:36:31.000000000 +0000
 +++ redis.conf
-@@ -14,7 +14,7 @@
+@@ -14,11 +14,11 @@
  
  # By default Redis does not run as a daemon. Use 'yes' if you need it.
  # Note that Redis will write a pid file in /var/run/redis.pid when daemonized.
@@ -11,7 +12,12 @@ $NetBSD: patch-aa,v 1.1.1.1 2010/12/05 17:24:18 zatmania Exp $
  
  # When running daemonized, Redis writes a pid file in /var/run/redis.pid by
  # default. You can specify a custom pid file location here.
-@@ -37,7 +37,7 @@ timeout 300
+-pidfile /var/run/redis.pid
++pidfile @@PIDDIR@@/redis.pid
+ 
+ # Accept connections on the specified port, default is 6379
+ port 6379
+@@ -37,12 +37,12 @@ timeout 300
  # verbose (many rarely useful info, but not a mess like the debug level)
  # notice (moderately verbose, what you want in production probably)
  # warning (only very important / critical messages are logged)
@@ -20,6 +26,12 @@ $NetBSD: patch-aa,v 1.1.1.1 2010/12/05 17:24:18 zatmania Exp $
  
  # Specify the log file name. Also 'stdout' can be used to force
  # Redis to log on the standard output. Note that if you use standard
+ # output for logging but daemonize, logs will be sent to /dev/null
+-logfile stdout
++logfile @@LOGDIR@@/redis.log
+ 
+ # Set the number of databases. The default database is DB 0, you can select
+ # a different one on a per-connection basis using SELECT <dbid> where
 @@ -86,7 +86,7 @@ dbfilename dump.rdb
  # Also the Append Only File will be created inside this directory.
  # 
