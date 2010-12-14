@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4168 2010/12/14 16:46:03 noud4 Exp $
+# $Id: Makefile,v 1.4169 2010/12/14 17:03:52 noud4 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1176,6 +1176,7 @@ SUBDIR+=	libneural
 SUBDIR+=	libopenmodeller
 SUBDIR+=	libopensync-plugin-gnokii
 SUBDIR+=	libopensync-plugin-moto
+SUBDIR+=	libopensync-plugin-palm
 SUBDIR+=	libowl-av
 SUBDIR+=	libpano12
 SUBDIR+=	libparsifal
