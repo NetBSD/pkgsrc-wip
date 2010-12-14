@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4166 2010/12/13 17:55:05 noud4 Exp $
+# $Id: Makefile,v 1.4167 2010/12/14 00:08:37 ryo-on Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2189,7 +2189,6 @@ SUBDIR+=	qucs
 SUBDIR+=	quickfix
 SUBDIR+=	quickie
 SUBDIR+=	quodlibet
-SUBDIR+=	quvi
 SUBDIR+=	qvamps
 SUBDIR+=	r8s
 SUBDIR+=	rabbitmq
