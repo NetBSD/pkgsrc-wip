@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/12/14 17:02:31 noud4 Exp $
+include/opensync-1.0/opensync/palm_contact.h
+include/opensync-1.0/opensync/palm_event.h
+include/opensync-1.0/opensync/palm_format.h
+include/opensync-1.0/opensync/palm_note.h
+include/opensync-1.0/opensync/palm_sync.h
+include/opensync-1.0/opensync/palm_todo.h
+lib/opensync/formats/palm.la
+lib/opensync/plugins/palm_sync.la
+share/opensync/defaults/palm-sync
