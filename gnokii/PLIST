@@ -1,7 +1,22 @@
-@comment $NetBSD: PLIST,v 1.8 2009/10/11 10:44:39 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.9 2010/12/14 16:43:44 noud4 Exp $
 bin/gnokii
 bin/sendsms
+include/gnokii/bitmaps.h
+include/gnokii/call.h
+include/gnokii/common.h
+include/gnokii/data.h
+include/gnokii/encoding.h
+include/gnokii/error.h
+include/gnokii/networks.h
+include/gnokii/ringtones.h
+include/gnokii/rlp-common.h
+include/gnokii/sms.h
+include/gnokii/statemachine.h
+include/gnokii/virtmodem.h
+include/gnokii/wappush.h
+include/gnokii.h
 lib/libgnokii.la
+lib/pkgconfig/gnokii.pc
 man/man1/gnokii.1
 man/man1/sendsms.1
 man/man8/gnokiid.8

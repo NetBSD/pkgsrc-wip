@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2009/06/02 12:20:29 noud4 Exp $
+# $NetBSD: Makefile,v 1.10 2010/12/14 16:43:44 noud4 Exp $
 #
 
 DISTNAME=		gnokii-0.6.22
@@ -29,6 +29,9 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 pre-configure:
 	set -e; cd ${WRKSRC}; autoheader; autoconf
+
+post-install:
+	cd ${WRKSRC} && ${MAKE_PROGRAM} ${MAKE_FLAGS} install-devel
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../devel/libusb/buildlink3.mk"
