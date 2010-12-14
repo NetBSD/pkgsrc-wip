@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.8 2010/06/13 22:47:11 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2010/12/14 17:13:07 noud4 Exp $
 #
 
 PKGNAME=		multisync-syncml-0.82
-PKGREVISION=		3
+PKGREVISION=		4
 
 COMMENT=		SyncML module for Multisync
+
+CONFLICTS=		multisync-syncml-moto-[0-9]*
 
 WRKSRC=			${WRKDIR}/multisync-0.82/plugins/syncml_plugin/
 
