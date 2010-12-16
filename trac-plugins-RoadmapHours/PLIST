@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:22 thomasklausner Exp $
-${PYSITELIB}/RoadmapHours-0.5-py2.5.egg-info/PKG-INFO
-${PYSITELIB}/RoadmapHours-0.5-py2.5.egg-info/SOURCES.txt
-${PYSITELIB}/RoadmapHours-0.5-py2.5.egg-info/dependency_links.txt
-${PYSITELIB}/RoadmapHours-0.5-py2.5.egg-info/entry_points.txt
-${PYSITELIB}/RoadmapHours-0.5-py2.5.egg-info/not-zip-safe
-${PYSITELIB}/RoadmapHours-0.5-py2.5.egg-info/requires.txt
-${PYSITELIB}/RoadmapHours-0.5-py2.5.egg-info/top_level.txt
+@comment $NetBSD: PLIST,v 1.3 2010/12/16 16:13:33 lexort Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/roadmaphours/__init__.py
 ${PYSITELIB}/roadmaphours/__init__.pyc
 ${PYSITELIB}/roadmaphours/__init__.pyo
