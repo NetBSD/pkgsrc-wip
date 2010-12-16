@@ -1,6 +1,6 @@
-$NetBSD: patch-ah,v 1.1.1.1 2010/11/27 01:24:41 rxg Exp $
+$NetBSD: patch-ah,v 1.2 2010/12/16 14:24:22 rxg Exp $
 
---- chrome/chrome_tests.gypi.orig	2010-11-03 01:03:28.000000000 +0000
+--- chrome/chrome_tests.gypi.orig	2010-10-15 08:04:17.000000000 +0000
 +++ chrome/chrome_tests.gypi
 @@ -132,7 +132,7 @@
          'test/unit/chrome_test_suite.h',
@@ -171,15 +171,15 @@ $NetBSD: patch-ah,v 1.1.1.1 2010/11/27 01:24:41 rxg Exp $
                'dependencies': [
                  '../build/linux/system.gyp:gtk',
                  '../tools/xdisplaycheck/xdisplaycheck.gyp:xdisplaycheck',
-@@ -2696,7 +2698,7 @@
-             'GCC_TREAT_WARNINGS_AS_ERRORS': 'NO',  # -Wno-error
-           },
-           'conditions': [
--            ['OS=="linux"', {
-+            ['OS=="linux" ', {
-               'include_dirs': [
-                 '..',
-                 '<(sysroot)/usr/include/python<(python_ver)',
+@@ -2646,7 +2648,7 @@
+     ],  # OS=="win"
+     # Build on linux x86_64 only if linux_fpic==1
+     ['OS=="mac" or (OS=="win" and component=="static_library") '
+-     'or (OS=="linux" and target_arch==python_arch '
++     'or ((OS=="linux") and target_arch==python_arch '
+      'and (target_arch!="x64" or linux_fpic==1))', {
+       'targets': [
+         {
 @@ -2851,7 +2853,7 @@
                  '../courgette/courgette.gyp:courgette_unittests',
                  'browser_tests',
