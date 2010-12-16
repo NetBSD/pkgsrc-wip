@@ -1,4 +1,4 @@
-$NetBSD: patch-bc,v 1.1.1.1 2010/11/27 01:24:41 rxg Exp $
+$NetBSD: patch-bc,v 1.2 2010/12/16 14:30:38 rxg Exp $
 
 --- third_party/sqlite/sqlite.gyp.orig	2010-09-13 15:18:26.000000000 +0000
 +++ third_party/sqlite/sqlite.gyp
@@ -7,7 +7,7 @@ $NetBSD: patch-bc,v 1.1.1.1 2010/11/27 01:24:41 rxg Exp $
        'target_name': 'sqlite',
        'conditions': [
 -        ['OS=="linux" and not use_system_sqlite', {
-+        ['not use_system_sqlite and OS=="linux"', {
++        ['(OS=="linux") and not use_system_sqlite', {
            'link_settings': {
              'libraries': [
                '-ldl',
