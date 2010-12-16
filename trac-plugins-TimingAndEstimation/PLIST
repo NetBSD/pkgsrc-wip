@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.5 2010/03/04 12:34:48 lexort Exp $
-${PYSITELIB}/timingandestimationplugin-0.7.6-py2.5.egg-info/PKG-INFO
-${PYSITELIB}/timingandestimationplugin-0.7.6-py2.5.egg-info/SOURCES.txt
-${PYSITELIB}/timingandestimationplugin-0.7.6-py2.5.egg-info/dependency_links.txt
-${PYSITELIB}/timingandestimationplugin-0.7.6-py2.5.egg-info/entry_points.txt
-${PYSITELIB}/timingandestimationplugin-0.7.6-py2.5.egg-info/top_level.txt
+@comment $NetBSD: PLIST,v 1.6 2010/12/16 16:07:55 lexort Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/timingandestimationplugin/__init__.py
 ${PYSITELIB}/timingandestimationplugin/__init__.pyc
 ${PYSITELIB}/timingandestimationplugin/__init__.pyo
