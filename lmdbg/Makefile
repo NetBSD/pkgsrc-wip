@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2010/10/21 19:58:43 cheusov Exp $
+# $NetBSD: Makefile,v 1.21 2010/12/16 16:41:06 cheusov Exp $
 #
 
-DISTNAME=	lmdbg-0.15.1
+DISTNAME=	lmdbg-0.16.0
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lmdbg/} \
 		http://mova.org/~cheusov/pub/lmdbg/
@@ -9,7 +9,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lmdbg/} \
 MAINTAINER=	cheusov@tut.by
 HOMEPAGE=	http://sourceforge.net/projects/lmdbg/
 COMMENT=	Lightweight Modular malloc Debugger
-
 LICENSE=		mit
 
 BUILD_DEPENDS+=		mk-configure>=0.20.0:../../wip/mk-configure
@@ -32,6 +31,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/${DOCDIR}
 .endfor
 
+.include "../../devel/libjudy/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
 
 MAKE_PROGRAM=	${PREFIX}/bin/mkcmake
