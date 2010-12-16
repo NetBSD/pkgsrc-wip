@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2010/12/16 04:02:04 asau Exp $
+# $NetBSD: Makefile,v 1.37 2010/12/16 19:57:07 asau Exp $
 
 DISTNAME=	openmpi-1.5.1
 # DISTNAME=	openmpi-1.5.1rc3r24143
@@ -31,11 +31,9 @@ CONFIGURE_ARGS+=	--disable-mpi-f90
 CONFIGURE_ARGS+=	--with-libltdl=external # use our libltdl
 CONFIGURE_ARGS+=	--with-wrapper-ldflags="-L${PREFIX}/lib ${LINKER_RPATH_FLAG}${PREFIX}/lib"
 CONFIGURE_ENV+=		ompi_cv_f77_have_INTEGERp8=no	# no "INTEGER*8"??
-BUILD_MAKE_FLAGS=	LIBLTDL=$(BUILDLINK_PREFIX.libltdl)/lib/libltdl.la # configure doesn't allow overriding it
 CONFIGURE_ARGS+=	OPAL_HAVE_LTDL_ADVISE=0
 
 USE_TOOLS+=		perl:run
-REPLACE_PERL=		orte/tools/wrappers/orte_wrapper_script.in
 
 .include "options.mk"
 
@@ -43,6 +41,7 @@ TEST_TARGET=	check
 
 # USE_TOOLS+=	aclocal autoconf automake bash perl
 # REPLACE_BASH=	autogen.sh
+
 # pre-configure:	replace-interpreter
 # 	cd $(WRKSRC) && $(BASH) autogen.sh
 
