@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.29 2010/10/11 07:52:37 asau Exp $
+# $NetBSD: Makefile,v 1.30 2010/12/16 23:41:33 asau Exp $
 
-DISTNAME=	mpich2-1.3rc2
+DISTNAME=	mpich2-1.3.1
 PKGNAME=	${DISTNAME}
 #PKGNAME=	mpich2-1.2.99.6380
 CATEGORIES=	parallel
-MASTER_SITES=	http://www.mcs.anl.gov/research/projects/mpich2/downloads/tarballs/1.3rc2/ \
+MASTER_SITES=	http://www.mcs.anl.gov/research/projects/mpich2/downloads/tarballs/1.3.1/ \
 		http://www.mcs.anl.gov/research/projects/mpich2/downloads/tarballs/nightly/trunk/
 
 MAINTAINER=	asau@inbox.ru
