@@ -1,4 +1,4 @@
-$NetBSD: patch-ax,v 1.1 2010/12/16 13:01:36 obache Exp $
+$NetBSD: patch-ax,v 1.2 2010/12/17 08:48:41 obache Exp $
 
 chop "-RELEASE" or "-DEVELOPMENT" from release for DragonFly.
 
@@ -9,7 +9,7 @@ chop "-RELEASE" or "-DEVELOPMENT" from release for DragonFly.
                  else:
                      machine = 'ppc'
 +    elif osname[:9] == "dragonfly":
-+        release = release.split('-')[0]
++        release = str.split(release, '-')[0]
  
      return "%s-%s-%s" % (osname, release, machine)
  
