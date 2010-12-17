@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2010/10/20 13:54:52 obache Exp $
+# $NetBSD: Makefile,v 1.11 2010/12/17 07:48:45 obache Exp $
 
 DISTNAME=		opera-${OPERA_PKG_VERSION}-${OPERA_PKG_BUILD}.${OPERA_ARCH}.${EMUL_OPSYS}
 PKGNAME=		opera-${OPERA_PKG_VERSION:S/u/pl/}
@@ -8,12 +8,12 @@ EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.opera.com/
-COMMENT=		Small, fast and customizable WWW client
-LICENSE=		opera-1060-license
-LICENSE_FILE=		opera-1060-license
+COMMENT=		Stanards-compliant graphical Web browser
+LICENSE=		opera-1100-license
+LICENSE_FILE=		opera-1100-license
 
 EMUL_PLATFORMS=		freebsd-i386 freebsd-x86_64
-EMUL_PLATFORMS+=	linux-i386 linux-x86_64 linux-powerpc
+EMUL_PLATFORMS+=	linux-i386 linux-x86_64
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -31,9 +31,9 @@ MASTER_SITE_OPERA+=	http://ftp.yz.yamagata-u.ac.jp/pub/opera/
 USE_LANGUAGES=		# empty
 NO_BUILD=		yes
 
-OPERA_PKG_BUILD=	6450
-OPERA_PKG_VERSION=	10.63
-OPERA_PKG_VERSION_DIR=	1063
+OPERA_PKG_BUILD=	1156
+OPERA_PKG_VERSION=	11.00
+OPERA_PKG_VERSION_DIR=	1100
 
 .if ${EMUL_OPSYS} == "linux"
 EMUL_MODULES.linux=	base x11 fontconfig
@@ -62,11 +62,11 @@ SUBST_STAGE.plugin=	post-install
 SUBST_FILES.plugin=	${DESTDIR}${PREFIX}/share/opera/defaults/pluginpath.ini
 SUBST_SED.plugin=	-e 's,/usr/local/,${PREFIX}/,g'
 
-SUBST_CLASSES+=		prefix
-SUBST_STAGE.prefix=	post-extract
-SUBST_FILES.prefix=	install
-SUBST_SED.prefix=	-e 's,/usr/local,${PREFIX},g'
-SUBST_SED.prefix+=	-e 's,dest=,dest=${DESTDIR},g'
+#SUBST_CLASSES+=		prefix
+#SUBST_STAGE.prefix=	post-extract
+#SUBST_FILES.prefix=	install
+#SUBST_SED.prefix=	-e 's,/usr/local,${PREFIX},g'
+#SUBST_SED.prefix+=	-e 's,dest=,dest=${DESTDIR},g'
 
 .if ${PKGMANDIR} != "share/man"
 post-extract:
@@ -80,7 +80,8 @@ SUBST_SED.manpath=	-e 's,share/man,${PKGMANDIR},g'
 
 do-install:
 	${RUN} cd ${WRKSRC};				\
-		${SH} ./install --text --unattended --quiet --system --force
+		${SH} ./install --quiet --prefix ${PREFIX} --force \
+			--repackage ${DESTDIR}${PREFIX}
 
 .include "../../databases/shared-mime-info/mimedb.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"

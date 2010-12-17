@@ -1,17 +1,14 @@
-$NetBSD: distinfo,v 1.7 2010/10/20 13:02:34 obache Exp $
+$NetBSD: distinfo,v 1.8 2010/12/17 07:48:45 obache Exp $
 
-SHA1 (opera-10.63-6450.amd64.freebsd.tar.bz2) = 4ac6d2f8f4d8e6a60bf9a835f9944771c54ab2e8
-RMD160 (opera-10.63-6450.amd64.freebsd.tar.bz2) = 89a75204a3b22bdc1d410c855b2fcedc4db608be
-Size (opera-10.63-6450.amd64.freebsd.tar.bz2) = 13675930 bytes
-SHA1 (opera-10.63-6450.i386.freebsd.tar.bz2) = 4177afa40905ebb7ea7a399af12a4dd195ba728f
-RMD160 (opera-10.63-6450.i386.freebsd.tar.bz2) = abfbe4c691bf0b3b27397d0787e750d0724399ae
-Size (opera-10.63-6450.i386.freebsd.tar.bz2) = 12748677 bytes
-SHA1 (opera-10.63-6450.i386.linux.tar.bz2) = 54c32fa2a4061ee21113c766a144f324432bdd36
-RMD160 (opera-10.63-6450.i386.linux.tar.bz2) = 874d658b884dd3c864429bb8fe1063e2794ee7fa
-Size (opera-10.63-6450.i386.linux.tar.bz2) = 12669974 bytes
-SHA1 (opera-10.63-6450.ppc.linux.tar.bz2) = 25804227a78c57fd6b56c8256ab4aa05e393d1c2
-RMD160 (opera-10.63-6450.ppc.linux.tar.bz2) = dc4147ccc051bfd45d02657f3203f6544ff0f5c8
-Size (opera-10.63-6450.ppc.linux.tar.bz2) = 13011405 bytes
-SHA1 (opera-10.63-6450.x86_64.linux.tar.bz2) = 1982bcde8dcf272b8c1e14c20f44478815a1f7b9
-RMD160 (opera-10.63-6450.x86_64.linux.tar.bz2) = e4770898d08bf3f42d571034290cdd66419577c7
-Size (opera-10.63-6450.x86_64.linux.tar.bz2) = 13801811 bytes
+SHA1 (opera-11.00-1156.amd64.freebsd.tar.bz2) = c7ab72729951b3a673f0f1d2b4e10aa3f25c26c5
+RMD160 (opera-11.00-1156.amd64.freebsd.tar.bz2) = cbd8738d31e142e7e4463def8931e02e2375e51b
+Size (opera-11.00-1156.amd64.freebsd.tar.bz2) = 12316363 bytes
+SHA1 (opera-11.00-1156.i386.freebsd.tar.bz2) = 576e5f4c7a45b90180652eac54d725d61dd4468a
+RMD160 (opera-11.00-1156.i386.freebsd.tar.bz2) = 30db9d0891e557f1e150b5eb279316d0011b13f7
+Size (opera-11.00-1156.i386.freebsd.tar.bz2) = 11348121 bytes
+SHA1 (opera-11.00-1156.i386.linux.tar.bz2) = e28f416a18b04248e9a1e9a99fd8b373df3d0499
+RMD160 (opera-11.00-1156.i386.linux.tar.bz2) = 3955e17bbcb5be3244803a154cc1147fdfc0bb94
+Size (opera-11.00-1156.i386.linux.tar.bz2) = 11625554 bytes
+SHA1 (opera-11.00-1156.x86_64.linux.tar.bz2) = 53d001dd5e9afad32da78c158913d83ac027650f
+RMD160 (opera-11.00-1156.x86_64.linux.tar.bz2) = 2d06fcd4f8ff3e03ebdfd982d17d436c74d5448c
+Size (opera-11.00-1156.x86_64.linux.tar.bz2) = 12858732 bytes
