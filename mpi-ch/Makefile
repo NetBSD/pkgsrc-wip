@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2010/12/16 23:41:33 asau Exp $
+# $NetBSD: Makefile,v 1.31 2010/12/17 03:06:42 asau Exp $
 
 DISTNAME=	mpich2-1.3.1
 PKGNAME=	${DISTNAME}
@@ -13,7 +13,6 @@ COMMENT=	Open source MPI and MPI-2 implementation from Univ. of Chicago
 
 CONFLICTS+=	mpich-[0-9]*	# installs bin/mpicc & other wrappers
 CONFLICTS+=	openmpi-[0-9]*	# installs bin/mpicc & other wrappers
-CONFLICTS+=	openpa-[0-9]*	# installs the library
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -34,6 +33,7 @@ CONFIGURE_ARGS+=	--htmldir=${PREFIX}/share/doc/${PKGBASE}/html
 CONFIGURE_ARGS+=	--with-pm=hydra:gforker
 CONFIGURE_ARGS+=	--with-hydra-bindlib=plpa # problems with hwloc
 CONFIGURE_ARGS+=	--disable-fc		# problems?
+CONFIGURE_ARGS+=	--with-openpa-prefix=$(BUILDLINK_PREFIX.openpa:Q) # reuse it
 
 USE_TOOLS+=		perl:run
 
@@ -70,4 +70,5 @@ BUILDLINK_TRANSFORM+=	rm:-lrt
 
 .include "options.mk"
 
+.include "../../parallel/openpa/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

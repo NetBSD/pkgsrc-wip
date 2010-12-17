@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2010/10/11 07:52:37 asau Exp $
+@comment $NetBSD: PLIST,v 1.15 2010/12/17 03:06:42 asau Exp $
 bin/bt2line
 bin/check_callstack
 bin/clog2_join
@@ -33,24 +33,6 @@ include/mpicxx.h
 include/mpif.h
 include/mpio.h
 include/mpiof.h
-include/opa_config.h
-include/opa_primitives.h
-include/opa_queue.h
-include/opa_util.h
-include/primitives/opa_by_lock.h
-include/primitives/opa_emulated.h
-include/primitives/opa_gcc_ia64.h
-include/primitives/opa_gcc_intel_32_64.h
-include/primitives/opa_gcc_intel_32_64_barrier.h
-include/primitives/opa_gcc_intel_32_64_ops.h
-include/primitives/opa_gcc_intel_32_64_p3.h
-include/primitives/opa_gcc_intel_32_64_p3barrier.h
-include/primitives/opa_gcc_intrinsics.h
-include/primitives/opa_gcc_ppc.h
-include/primitives/opa_gcc_sicortex.h
-include/primitives/opa_nt_intrinsics.h
-include/primitives/opa_sun_atomic_ops.h
-include/primitives/opa_unsafe.h
 lib/libfmpich.a
 lib/liblmpe.a
 lib/libmpe.a
@@ -62,11 +44,9 @@ lib/libmpe_null.a
 lib/libmpich.a
 lib/libmpichcxx.a
 lib/libmpl.la
-lib/libopa.la
 lib/libtmpe.a
 lib/mpe_prof.o
 lib/pkgconfig/mpich2-ch3.pc
-lib/pkgconfig/openpa.pc
 man/man1/MPI.1
 man/man1/mpicc.1
 man/man1/mpicxx.1
@@ -423,7 +403,6 @@ sbin/mpetestexec
 sbin/mpetestexeclog
 sbin/mpetestlink
 sbin/mpeuninstall
-share/doc/mpich2/README
 share/doc/mpich2/html/index.htm
 share/doc/mpich2/html/www1/MPI.html
 share/doc/mpich2/html/www1/index.htm
@@ -828,3 +807,4 @@ share/mpich2/examples_logging/pthread_allreduce.c
 share/mpich2/examples_logging/pthread_sendrecv.c
 share/mpich2/examples_logging/pthread_sendrecv_user.c
 share/mpich2/examples_logging/srtest.c
+@pkgdir etc/mpich
