@@ -39,18 +39,23 @@
 # usage: pkg_cmp_summary -h
 #        pkg_cmp_summary [OPTIONS] summary1 summary2
 # OPTIONS:
-#   -h|--help            display this help
-#   -p|--with-pkgpath    use PKGPATH:PKGBASE pair for identifing a package
-#   -c|--use-checksum    also use CVS_CHECKSUM field in comparing packages
-#   -m|--multi           support multi-variant packages, that is packages
-#                         with building options in PKGPATH section
-#   -P|--pkgpath         use PKGPATH only for comparison, ignore PKGNAME
-#   -d                   consider packages different
-#                        if they have different DEPENDS
+#   -h         display this help
+#   -p         use PKGPATH:PKGBASE pair for identifing a package
+#   -c         also use CVS_CHECKSUM field in comparing packages
+#   -m         ignored
+#   -P         use PKGPATH only for comparison, ignore PKGNAME
+#   -d         consider packages different
+#              if they have different DEPENDS
+#   -2         output PKGPATHe from summary1 and from summary2 (<>!=)
 #.end-str
 ############################################################
 
 BEGIN {
+	if (getarg("h")){
+		print_help()
+		exit 0
+	}
+
 	with_pkgname = 1
 
 	with_pkgpath = getarg("p")
@@ -60,10 +65,8 @@ BEGIN {
 		with_pkgpath = 1
 		with_pkgname = 0
 	}
-	if (getarg("m")){
-		with_multivar = 1
-		with_pkgpath  = 1
-	}
+
+	output2 = getarg("2")
 
 	for (ind=1; ind < ARGC && ARGV [ind] == ""; ++ind);
 
@@ -95,9 +98,12 @@ use_checksum && /^CVS_CHECKSUM=/ {
 with_pkgpath && /^PKGPATH=/ {
 	pkgpath = trim(substr($0, 9))
 	full_pkgpath = pkgpath
-	if (with_multivar && pkgpath ~ /:/){
-		sub(/:.*$/, "", pkgpath)
-	}
+	sub(/:.*$/, "", pkgpath)
+	next
+}
+
+with_pkgpath && /^ASSIGNMENTS=/ {
+	assigns = trim(substr($0, 13))
 	next
 }
 
@@ -116,6 +122,11 @@ use_dep && /^DEPENDS=/ {
 }
 
 NF == 0 {
+	if (assigns != ""){
+		full_pkgpath = full_pkgpath ":" assigns
+		assigns = ""
+	}
+
 	# ver
 	ver = pkgname
 	sub(/^.*-/, "", ver)
@@ -148,9 +159,7 @@ NF == 0 {
 			duplicates [pkgbase] += 1
 		}else{
 			names [pkgbase] = ver
-			if (with_multivar && pkgpath != full_pkgpath){
-				full_pkgpaths [pkgbase] = full_pkgbase
-			}
+			full_pkgpaths [pkgbase] = full_pkgbase
 
 			if (use_checksum){
 				checksums [pkgbase] = curr_checksum
@@ -224,11 +233,18 @@ NF == 0 {
 			delete dep2
 		}
 
-		if (with_pkgname){
-			# result!
-			print res, full_pkgbase, ver1, ver
+		if (output2){
+			_full = full_pkgpaths [pkgbase]
+			sub(/ .*$/, "", _full)
+			if (with_pkgname)
+				print res, _full, full_pkgbase, ver1, ver
+			else
+				print res, _full, full_pkgbase
 		}else{
-			print res, full_pkgbase
+			if (with_pkgname)
+				print res, full_pkgbase, ver1, ver
+			else
+				print res, full_pkgbase
 		}
 	}
 
@@ -244,10 +260,7 @@ END {
 				nm = ""
 			}
 
-			if (pkgbase in full_pkgpaths)
-				print "-", full_pkgpaths [pkgbase] nm
-			else
-				print "-", pkgbase nm
+			print "-", full_pkgpaths [pkgbase] nm
 
 			delete duplicates [pkgbase]
 		}else if (pkgbase in duplicates){
