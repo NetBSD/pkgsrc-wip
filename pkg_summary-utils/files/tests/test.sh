@@ -79,6 +79,52 @@ cmp (){
 AWKPATH=`pwd`/.. ./pkgsrc-dewey-test < ./pkgsrc-dewey-test.txt 2>&1 |
 cmp 'pkgsrc-dewey.awk' ''
 
+# qqq
+pkg_cmp_summary -pe2 src_summary14.txt bin_summary3.txt | sort |
+cmp 'pkg_cmp_summary #17.1' \
+'! lang/ruby ruby 1.9.2
+= archivers/php-zip archivers/php-zip php5-zip 5.2.15.1.8.11
+= archivers/php-zip:PHP_VERSION_REQD=52 archivers/php-zip php5-zip 5.2.15
+= archivers/php-zip:PHP_VERSION_REQD=53 archivers/php-zip php53-zip 5.3.4 5.3.4
+= lang/ruby lang/ruby ruby 1.8.7.302
+'
+
+pkg_cmp_summary -pe src_summary14.txt bin_summary3.txt | sort |
+cmp 'pkg_cmp_summary #17.2' \
+'! lang/ruby ruby 1.9.2
+= archivers/php-zip php5-zip 5.2.15
+= archivers/php-zip php5-zip 5.2.15.1.8.11
+= archivers/php-zip php53-zip 5.3.4 5.3.4
+= lang/ruby ruby 1.8.7.302
+'
+
+pkg_cmp_summary -p src_summary14.txt bin_summary3.txt | sort |
+cmp 'pkg_cmp_summary #17.3' \
+'2 archivers/php-zip php5-zip
+2 lang/ruby ruby
+= archivers/php-zip php53-zip 5.3.4 5.3.4
+'
+
+pkg_cmp_summary -pe2 src_summary14.txt - < src_summary14.txt | sort |
+cmp 'pkg_cmp_summary #17.4' \
+'= archivers/php-zip archivers/php-zip php5-zip 5.2.15.1.8.11
+= archivers/php-zip:PHP_VERSION_REQD=52 archivers/php-zip:PHP_VERSION_REQD=52 php5-zip 5.2.15
+= archivers/php-zip:PHP_VERSION_REQD=53 archivers/php-zip:PHP_VERSION_REQD=53 php53-zip 5.3.4 5.3.4
+= lang/ruby lang/ruby ruby 1.8.7.302
+= lang/ruby:RUBY_VERSION_REQD=19 lang/ruby:RUBY_VERSION_REQD=19 ruby 1.9.2pl0
+'
+
+pkg_cmp_summary -pe2 bin_summary3.txt - < bin_summary3.txt | sort |
+cmp 'pkg_cmp_summary #17.5' \
+'= archivers/php-zip archivers/php-zip php5-zip 5.2.15
+= archivers/php-zip archivers/php-zip php5-zip 5.2.15.1.8.11
+= archivers/php-zip archivers/php-zip php53-zip 5.3.4 5.3.4
+= lang/ruby lang/ruby ruby 1.8.7.302
+= lang/ruby lang/ruby ruby 1.9.2
+'
+
+exit 1
+
 # pkg_summary2leaves
 pkg_summary2leaves -p bin_summary2.txt | sort |
 cmp 'pkg_summary2leaves #1' \
@@ -1970,6 +2016,40 @@ cmp 'pkg_cmp_summary #1' \
 - x11-links 0.38
 '
 
+pkg_cmp_summary -e src_summary.txt src_summary2.txt | sort -k2,2 |
+cmp 'pkg_cmp_summary #1.1' \
+'- ap2-vhost-ldap 1.2.0nb1
+- ap22-vhost-ldap 1.2.0nb1
+= awk-pkgsrc-dewey 0.5.6 0.5.6
+= checkperms 1.10 1.10
+= dict-client dict-client 1.10.11nb2
+= dict-client dict-client 1.9.15nb2
+< dict-server 1.10.11nb2 1.11.0
+= dictem 0.82 0.82
++ digest 99.99.99
+= distbb 0.22.0 0.22.0
+= emacs 22.1nb6 22.1nb6
+= gmake 3.81 3.81
+= jpeg 6bnb4 6bnb4
+= libltdl 1.5.24 1.5.24
+= libmaa 1.0.1nb1 1.0.1nb1
+= libtool-base 1.5.24nb6 1.5.24nb6
+= libungif 4.1.4nb1 4.1.4nb1
+- netcat 1.10nb2
+= paexec 0.10.0nb1 0.10.0nb1
+= perl 5.8.8nb8 5.8.8nb8
+< pipestatus 0.4.0 0.5.0
+= pkg-config 0.23 0.23
+= pkg_online 0.5.0nb2 0.5.0nb2
+= pkg_online-client 0.5.0 0.5.0
+= pkg_online-server 0.5.0 0.5.0
+= pkg_summary-utils 0.18.1 0.18.1
+= png 1.2.32beta01 1.2.32beta01
+> runawk 0.14.3 0.13.0
+= tiff 3.8.2nb4 3.8.2nb4
+- x11-links 0.38
+'
+
 pkg_cmp_summary -p src_summary.txt src_summary2.txt | sort -k2,2 |
 cmp 'pkg_cmp_summary #2' \
 '= devel/gmake gmake 3.81 3.81
@@ -2001,41 +2081,7 @@ cmp 'pkg_cmp_summary #2' \
 = wip/pkg_summary-utils pkg_summary-utils 0.18.1 0.18.1
 > wip/runawk runawk 0.14.3 0.13.0
 - www/ap2-vhost-ldap:PKG_APACHE=apache2 ap2-vhost-ldap 1.2.0nb1
-- www/ap22-vhost-ldap ap22-vhost-ldap 1.2.0nb1
-'
-
-pkg_cmp_summary --with-pkgpath src_summary.txt src_summary2.txt | sort -k2,2 |
-cmp 'pkg_cmp_summary #3' \
-'= devel/gmake gmake 3.81 3.81
-= devel/libltdl libltdl 1.5.24 1.5.24
-= devel/libmaa libmaa 1.0.1nb1 1.0.1nb1
-= devel/libtool-base libtool-base 1.5.24nb6 1.5.24nb6
-< devel/pipestatus pipestatus 0.4.0 0.5.0
-= devel/pkg-config pkg-config 0.23 0.23
-= editors/emacs emacs 22.1nb6 22.1nb6
-= graphics/jpeg jpeg 6bnb4 6bnb4
-= graphics/libungif libungif 4.1.4nb1 4.1.4nb1
-= graphics/png png 1.2.32beta01 1.2.32beta01
-= graphics/tiff tiff 3.8.2nb4 3.8.2nb4
-= lang/perl5 perl 5.8.8nb8 5.8.8nb8
-- net/netcat netcat 1.10nb2
-+ pkgtools/digest digest 99.99.99
-- pkgtools/x11-links x11-links 0.38
-= sysutils/checkperms checkperms 1.10 1.10
-= textproc/dict-client dict-client 1.9.15nb2 1.9.15nb2
-= textproc/dictem dictem 0.82 0.82
-= wip/awk-pkgsrc-dewey awk-pkgsrc-dewey 0.5.6 0.5.6
-= wip/dict-client dict-client 1.10.11nb2 1.10.11nb2
-< wip/dict-server dict-server 1.10.11nb2 1.11.0
-= wip/distbb distbb 0.22.0 0.22.0
-= wip/paexec paexec 0.10.0nb1 0.10.0nb1
-= wip/pkg_online pkg_online 0.5.0nb2 0.5.0nb2
-= wip/pkg_online-client pkg_online-client 0.5.0 0.5.0
-= wip/pkg_online-server pkg_online-server 0.5.0 0.5.0
-= wip/pkg_summary-utils pkg_summary-utils 0.18.1 0.18.1
-> wip/runawk runawk 0.14.3 0.13.0
-- www/ap2-vhost-ldap:PKG_APACHE=apache2 ap2-vhost-ldap 1.2.0nb1
-- www/ap22-vhost-ldap ap22-vhost-ldap 1.2.0nb1
+- www/ap22-vhost-ldap:PKG_APACHE=apache22 ap22-vhost-ldap 1.2.0nb1
 '
 
 pkg_cmp_summary src_summary4.txt src_summary5.txt | sort -k2,2 |
@@ -2047,11 +2093,6 @@ pkg_cmp_summary -p src_summary4.txt src_summary5.txt | sort -k2,2 |
 cmp 'pkg_cmp_summary #5' \
 '- textproc/dictem dictem 1.0.0
 + wip/dictem dictem 1.0.0
-'
-
-pkg_cmp_summary --use-checksum src_summary4.txt src_summary5.txt | sort -k2,2 |
-cmp 'pkg_cmp_summary #6' \
-'! dictem 1.0.0 1.0.0
 '
 
 pkg_cmp_summary -c src_summary4.txt src_summary5.txt | sort -k2,2 |
@@ -2095,7 +2136,7 @@ cmp 'pkg_cmp_summary #9' \
 = wip/pkg_summary-utils
 = wip/runawk
 - www/ap2-vhost-ldap:PKG_APACHE=apache2
-- www/ap22-vhost-ldap
+- www/ap22-vhost-ldap:PKG_APACHE=apache22
 '
 
 pkg_cmp_summary -p "$objdir"/summary_micro.txt "$objdir"/summary_full.txt |

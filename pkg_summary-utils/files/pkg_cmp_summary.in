@@ -47,6 +47,10 @@
 #   -d         consider packages different
 #              if they have different DEPENDS
 #   -2         output PKGPATHe from summary1 and from summary2 (<>!=)
+#   -e         normally a number of duplications is output as a result of
+#              comparison if they (duplications) exist.  If -e was
+#              applied, = (or !) is output if package from summary2
+#              exists (or doesn't exist) in summary1
 #.end-str
 ############################################################
 
@@ -58,9 +62,11 @@ BEGIN {
 
 	with_pkgname = 1
 
-	with_pkgpath = getarg("p")
-	use_checksum = getarg("c")
-	use_dep      = getarg("d")
+	with_pkgpath    = getarg("p")
+	use_checksum    = getarg("c")
+	use_dep         = getarg("d")
+	check_existence = getarg("e")
+
 	if (getarg("P")){
 		with_pkgpath = 1
 		with_pkgname = 0
@@ -71,7 +77,7 @@ BEGIN {
 	for (ind=1; ind < ARGC && ARGV [ind] == ""; ++ind);
 
 	if (ARGC != ind+2){
-		usage()
+		print_help()
 		exit 1
 	}
 
@@ -156,6 +162,11 @@ NF == 0 {
 	if (FILENAME == file1){
 		# first file!
 		if (pkgbase in names){
+			if (check_existence){
+#				print "???", full_pkgbase, "!", full_pkgpaths [pkgbase]
+				exists [pkgbase "-" ver] = full_pkgbase
+				exists [pkgbase "-" names [pkgbase]] = full_pkgpaths [pkgbase]
+			}
 			duplicates [pkgbase] += 1
 		}else{
 			names [pkgbase] = ver
@@ -177,6 +188,29 @@ NF == 0 {
 		present [pkgbase] = 0
 
 		if (pkgbase in duplicates){
+			if (check_existence){
+				if ((pkgbase "-" ver) in exists){
+					if (output2){
+						_full = exists [pkgbase "-" ver]
+						sub(/ .*$/, "", _full)
+						if (with_pkgname)
+							print "=", _full, full_pkgbase, ver
+						else
+							print "=", _full, full_pkgbase
+					}else{
+						if (with_pkgname)
+							print "=", full_pkgbase, ver
+						else
+							print "=", full_pkgbase
+					}
+				}else{
+					if (ver != "")
+						print "!", full_pkgbase, ver
+					else
+						print "!", full_pkgbase
+				}
+			}
+
 			next
 		}
 
@@ -263,7 +297,7 @@ END {
 			print "-", full_pkgpaths [pkgbase] nm
 
 			delete duplicates [pkgbase]
-		}else if (pkgbase in duplicates){
+		}else if (!check_existence && (pkgbase in duplicates)){
 			print duplicates [pkgbase]+1, pkgbase
 		}
 	}
