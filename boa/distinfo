@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2008/10/21 19:50:01 gschwarz Exp $
+$NetBSD: distinfo,v 1.7 2010/12/18 22:42:52 gschwarz Exp $
 
 SHA1 (boa-0.94.14rc21.tar.gz) = c801876113d31e45e2745c081ab7905fdc679236
 RMD160 (boa-0.94.14rc21.tar.gz) = e187a4e21a81a8454f6f08dc2372496e89963a0f
@@ -6,3 +6,4 @@ Size (boa-0.94.14rc21.tar.gz) = 199950 bytes
 SHA1 (patch-aa) = 0b947591b6bcae776c9f0e428bbfd8240e28c66c
 SHA1 (patch-ab) = 11f83e0c50ab552fda53953ce975a51d9c88d7a4
 SHA1 (patch-ac) = f3876f98590373f3d77bbc61bfa0f50345d25470
+SHA1 (patch-src_log) = ee7255e88be4681cff6085d3f90d0eac86fc5d61
