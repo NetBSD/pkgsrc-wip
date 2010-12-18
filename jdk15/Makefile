@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2010/12/12 13:54:48 ftigeot Exp $
+# $NetBSD: Makefile,v 1.46 2010/12/18 11:27:24 ftigeot Exp $
 
 .include "../../wip/jdk16/Makefile.common"
 
@@ -194,5 +194,6 @@ do-install:
 .include "../../mk/java-env.mk"
 .include "../../x11/libXi/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
+.include "../../x11/xextproto/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
