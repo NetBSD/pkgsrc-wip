@@ -6,7 +6,6 @@ Suggested package updates
 	o backintime-1.0.4
 	o bsnes-0.72
 	o cairo-java-1.0.8
-	o cclive-0.7.0b1
 	o ccrypt-1.9
 	o chora-2.0.1
 	o cinelerra-4.2
@@ -30,6 +29,7 @@ Suggested package updates
 	o fstobdf-1.0.4
 	o gajim-0.13.1
 	o gambas2-2.21.0
+	o gcap-0.0.5
 	o gcc42-4.2.4
 	o gcc43-4.3.4
 	o gcc45-4.5.1
@@ -68,7 +68,7 @@ Suggested package updates
 	o libdmx-1.1.1
 	o libgksu-2.0.4
 	o libgtk-java-2.10.2
-	o libuuid-1.41.12
+	o libuuid-1.41.13
 	o lincity-ng-2.0
 	o linphone-3.3.2
 	o lirc-0.8.6
@@ -111,6 +111,7 @@ Suggested package updates
 	o tint2-0.7.1
 	o tmw-0.0.29.1
 	o uade-2.13
+	o ubuntu-font-ttf-0.70.1
 	o uptimed-0.3.16
 	o virtualbox-3.2.12
 	o xaralx-bin-0.7.1692
