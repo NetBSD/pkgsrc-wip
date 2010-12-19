@@ -1,9 +1,0 @@
-$NetBSD: patch-aa,v 1.4 2009/11/30 19:49:04 plunky Exp $
-
---- Makefile.orig	2009-11-30 19:29:18.000000000 +0000
-+++ Makefile
-@@ -0,0 +1,4 @@
-+
-+SUBDIR+=	src
-+
-+.include <bsd.subdir.mk>
