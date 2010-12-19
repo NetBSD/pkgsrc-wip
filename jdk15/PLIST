@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2010/12/13 17:36:42 noud4 Exp $
+@comment $NetBSD: PLIST,v 1.8 2010/12/19 09:02:21 ftigeot Exp $
 bin/jdk15-appletviewer
 bin/jdk15-jar
 bin/jdk15-java
@@ -848,10 +848,10 @@ java/jdk-1.5.0/jre/bin/servertool
 java/jdk-1.5.0/jre/bin/tnameserv
 java/jdk-1.5.0/jre/bin/unpack200
 java/jdk-1.5.0/jre/lib/${JAVA_MACHINE_ARCH}/awt_robot
-java/jdk-1.5.0/jre/lib/${JAVA_MACHINE_ARCH}/client/Xusage.txt
-java/jdk-1.5.0/jre/lib/${JAVA_MACHINE_ARCH}/client/classes.jsa
-java/jdk-1.5.0/jre/lib/${JAVA_MACHINE_ARCH}/client/libjsig.so
-java/jdk-1.5.0/jre/lib/${JAVA_MACHINE_ARCH}/client/libjvm.so
+${PLIST.client_jvm}java/jdk-1.5.0/jre/lib/${JAVA_MACHINE_ARCH}/client/Xusage.txt
+${PLIST.client_jvm}java/jdk-1.5.0/jre/lib/${JAVA_MACHINE_ARCH}/client/classes.jsa
+${PLIST.client_jvm}java/jdk-1.5.0/jre/lib/${JAVA_MACHINE_ARCH}/client/libjsig.so
+${PLIST.client_jvm}java/jdk-1.5.0/jre/lib/${JAVA_MACHINE_ARCH}/client/libjvm.so
 java/jdk-1.5.0/jre/lib/${JAVA_MACHINE_ARCH}/gtkhelper
 java/jdk-1.5.0/jre/lib/${JAVA_MACHINE_ARCH}/headless/libmawt.so
 java/jdk-1.5.0/jre/lib/${JAVA_MACHINE_ARCH}/jvm.cfg
