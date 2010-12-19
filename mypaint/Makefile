@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/12/19 04:35:23 ryo-on Exp $
+# $NetBSD: Makefile,v 1.5 2010/12/19 10:33:19 ryo-on Exp $
 #
 
 DISTNAME=	mypaint-0.9.0
@@ -16,10 +16,10 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 PYTHON_VERSIONS_ACCEPTED=	26 25
 USE_LANGUAGES=	c++
 
-USE_TOOLS+=	bash:run
+USE_TOOLS+=	bash:run msgfmt
+USE_PKGLOCALEDIR=	yes
 
 BUILD_DEPENDS+=	scons-[0-9]*:../../devel/scons
-DEPENDS+=	bash-[0-9]*:../../shells/bash
 DEPENDS+=	${PYPKGPREFIX}-gtk2-[0-9]*:../../x11/py-gtk2
 DEPENDS+=	${PYPKGPREFIX}-cairo-[0-9]*:../../graphics/py-cairo
 
@@ -30,13 +30,22 @@ SUBST_STAGE.python-cmd=		pre-configure
 SUBST_FILES.python-cmd=		brushlib/SConscript
 SUBST_SED.python-cmd=		-e 's,python,${PYTHONBIN},'
 
+SUBST_CLASSES+=			locale-dir
+SUBST_STAGE.locale-dir=		pre-configure
+SUBST_FILES.locale-dir=		SConstruct
+SUBST_SED.locale-dir=		-e 's,share/locale,${PKGLOCALEDIR}/locale,'
+
 REPLACE_BASH=			brushes/label-brush-mypaint.sh
 
 do-build:
-	cd ${WRKSRC} && ${SCONSDIR}/bin/scons prefix=${PREFIX}
+	cd ${WRKSRC} && cd ${BUILD_DIRS} && \
+		${SETENV} ${MAKE_ENV} \
+		${SCONSDIR}/bin/scons prefix=${PREFIX}
 
 do-install:
-	cd ${WRKSRC} && ${SCONSDIR}/bin/scons prefix=${DESTDIR}${PREFIX} install
+	cd ${WRKSRC} && cd ${INSTALL_DIRS} && \
+		${SETENV} ${MAKE_ENV} \
+		${SCONSDIR}/bin/scons prefix=${DESTDIR}${PREFIX} install
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
