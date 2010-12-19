@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/12/19 04:30:53 ryo-on Exp $
+# $NetBSD: Makefile,v 1.4 2010/12/19 04:35:23 ryo-on Exp $
 #
 
 DISTNAME=	mypaint-0.9.0
@@ -16,7 +16,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 PYTHON_VERSIONS_ACCEPTED=	26 25
 USE_LANGUAGES=	c++
 
-USE_TOOLS=	bash:run
+USE_TOOLS+=	bash:run
 
 BUILD_DEPENDS+=	scons-[0-9]*:../../devel/scons
 DEPENDS+=	bash-[0-9]*:../../shells/bash
