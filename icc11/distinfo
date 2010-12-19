@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.9 2010/09/17 23:39:43 alnsn Exp $
+$NetBSD: distinfo,v 1.10 2010/12/19 19:30:28 alnsn Exp $
 
-SHA1 (l_cproc_p_11.1.073.tgz) = 563aa113d4c4c3af66b24e8a088e6560bff3b079
-RMD160 (l_cproc_p_11.1.073.tgz) = 9bfaebd075f21654f5aefc81caf266be725de8a1
-Size (l_cproc_p_11.1.073.tgz) = 1387726708 bytes
+SHA1 (l_cproc_p_11.1.075.tgz) = 1ad2de478682d2bfe2645c1dd1d4d29f968f5f7c
+RMD160 (l_cproc_p_11.1.075.tgz) = 626c4af52285fac9bfef354d2e8b3c076f315fa3
+Size (l_cproc_p_11.1.075.tgz) = 1372886477 bytes
 SHA1 (patch-aa) = a84586dd3eac128f4a1b77b84d3cb4d715787e44
 SHA1 (patch-ab) = 03eb364ff66b3a4281ae5527ee05542f4828d70a
 SHA1 (patch-ac) = b6219e5e7ee3127148bd283313e8ba084d5e4069
