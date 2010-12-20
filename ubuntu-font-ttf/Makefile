@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2010/11/04 11:23:28 ryo-on Exp $
+# $NetBSD: Makefile,v 1.3 2010/12/20 12:57:43 ryo-on Exp $
 #
 
-DISTNAME=	ubuntu-font-family-sources_0.69+ufl.orig
-PKGNAME=	${DISTNAME:S/family-sources_/ttf-/:S/+ufl.orig//}
+DISTNAME=	ubuntu-font-family-sources_0.70.1.orig
+PKGNAME=	${DISTNAME:S/family-sources_/ttf-/:S/.orig//}
 CATEGORIES=	fonts
 MASTER_SITES=	http://archive.ubuntu.com/ubuntu/pool/main/u/ubuntu-font-family-sources/
 
@@ -13,7 +13,7 @@ COMMENT=	Ubuntu font family
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-WRKSRC=		${WRKDIR}/ubuntu-font-family-sources-0.69+ufl
+WRKSRC=		${WRKDIR}/ubuntu-font-family-sources-0.70.1
 USE_LANGUAGES=	# none
 
 USE_X11BASE=	YES
@@ -38,7 +38,6 @@ INSTALL_DOCS=	CONTRIBUTING.txt \
 		LICENCE-FAQ.txt \
 		LICENCE.txt \
 		README.txt \
-		RELEASENOTES.txt \
 		TRADEMARKS.txt \
 		copyright.txt
 
