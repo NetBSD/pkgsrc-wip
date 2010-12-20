@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/11/17 10:43:51 ryo-on Exp $
+# $NetBSD: Makefile,v 1.2 2010/12/20 13:10:24 ryo-on Exp $
 #
 
-DISTNAME=	gcap-0.0.4
+DISTNAME=	gcap-0.0.5
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	net
 MASTER_SITES=	http://gcap.googlecode.com/files/
 
-MAINTAINER=	ryo_on@yk.rim.or.jp
+MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/gcap/
 COMMENT=	Command line tool for retrieving Youtube closed captions
 LICENSE=	gnu-gpl-v3
