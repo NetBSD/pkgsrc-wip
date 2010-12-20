@@ -1,5 +1,7 @@
 - Get some testing.
+
 - Work out installation on rpm-native platforms (Linux, Solaris, AIX)
+
 - Get rid of warning 
 warning: /usr/pkg/emul/linux/opt/tivoli/tsm/client/api/bin/dsmtca: set-uid or set-gid files should not be writable by anyone.
 warning: /usr/pkg/emul/linux/opt/tivoli/tsm/client/ba/bin/dsmtca: set-uid or set-gid files should not be writable by anyone.
@@ -9,3 +11,7 @@ warning: /usr/pkg/emul/linux/opt/tivoli/tsm/client/ba/bin/dsmtca: set-uid or set
   out-of-memory error.
 
 - http://secunia.com/advisories/42639/
+
+- v5.2.x is no longer supported. Unfortunately, it is the last version
+  with a native X11 GUI, and the Java GUI shipped with later versions
+  blows up. A CLI only package might be worth while, though.
