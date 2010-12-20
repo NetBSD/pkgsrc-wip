@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/11/08 21:16:10 gschwarz Exp $
+$NetBSD: distinfo,v 1.2 2010/12/20 01:08:44 gschwarz Exp $
 
-SHA1 (dns2tcp-0.4.3.tar.gz) = 152f3f2282500cc778dad41308ff58ce6fd24b23
-RMD160 (dns2tcp-0.4.3.tar.gz) = 887ad1c66e5798f3b6eae4d5c787b7c10c1dfae3
-Size (dns2tcp-0.4.3.tar.gz) = 230596 bytes
+SHA1 (dns2tcp-0.5.2.tar.gz) = b1de53800bbfda6d8c6f92e2844906b1b8a54af2
+RMD160 (dns2tcp-0.5.2.tar.gz) = 2838d73800013e7763195e92410a2da2a6336c24
+Size (dns2tcp-0.5.2.tar.gz) = 173585 bytes
