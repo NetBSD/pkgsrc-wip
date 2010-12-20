@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1.1.1 2010/11/27 01:24:39 rxg Exp $
+$NetBSD: TODO,v 1.2 2010/12/20 13:12:45 tezdog Exp $
 
 * debug
 * test on Linux/DragonFly/FreeBSD/OpenBSD
@@ -25,3 +25,5 @@ chrome/test/ui/fast_shutdown_uitest.cc
 views/controls/textfield/textfield.h
 webkit/glue/webkitclient_impl.cc
 webkit/tools/pepper_test_plugin/event_handler.cc
+
+resolve http://secunia.com/advisories/42605/ if applicable
