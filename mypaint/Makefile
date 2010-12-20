@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/12/19 10:33:19 ryo-on Exp $
+# $NetBSD: Makefile,v 1.6 2010/12/20 11:31:07 ryo-on Exp $
 #
 
 DISTNAME=	mypaint-0.9.0
@@ -16,14 +16,14 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 PYTHON_VERSIONS_ACCEPTED=	26 25
 USE_LANGUAGES=	c++
 
-USE_TOOLS+=	bash:run msgfmt
-USE_PKGLOCALEDIR=	yes
+USE_TOOLS+=	bash:run msgfmt pkg-config
 
 BUILD_DEPENDS+=	scons-[0-9]*:../../devel/scons
 DEPENDS+=	${PYPKGPREFIX}-gtk2-[0-9]*:../../x11/py-gtk2
 DEPENDS+=	${PYPKGPREFIX}-cairo-[0-9]*:../../graphics/py-cairo
 
 FIND_PREFIX:=	SCONSDIR=scons
+.include "../../mk/find-prefix.mk"
 
 SUBST_CLASSES+=			python-cmd
 SUBST_STAGE.python-cmd=		pre-configure
@@ -34,6 +34,7 @@ SUBST_CLASSES+=			locale-dir
 SUBST_STAGE.locale-dir=		pre-configure
 SUBST_FILES.locale-dir=		SConstruct
 SUBST_SED.locale-dir=		-e 's,share/locale,${PKGLOCALEDIR}/locale,'
+USE_PKGLOCALEDIR=	yes
 
 REPLACE_BASH=			brushes/label-brush-mypaint.sh
 
@@ -54,5 +55,4 @@ do-install:
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../lang/python/pyversion.mk"
 .include "../../devel/swig/buildlink3.mk"
-.include "../../mk/find-prefix.mk"
 .include "../../mk/bsd.pkg.mk"
