@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4171 2010/12/19 20:35:51 plunky Exp $
+# $Id: Makefile,v 1.4172 2010/12/21 11:35:39 obache Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -285,7 +285,6 @@ SUBDIR+=	css-mode
 SUBDIR+=	csstidy
 SUBDIR+=	ctemplate
 SUBDIR+=	cup
-SUBDIR+=	cutter
 SUBDIR+=	cvs-syncmail
 SUBDIR+=	cvs20hg
 SUBDIR+=	cvs2darcs
