@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.5 2007/01/21 18:42:55 jon_hamilton Exp $
+$NetBSD: distinfo,v 1.6 2010/12/22 02:31:50 khorben Exp $
 
 SHA1 (grip-3.2.0.tar.gz) = dd135b689dd0869f9652a1bfe73dcbe42a6475be
 RMD160 (grip-3.2.0.tar.gz) = b162ce4bcc08ea29bf6a504ae5cd6ec5a5f3e969
 Size (grip-3.2.0.tar.gz) = 722039 bytes
 SHA1 (patch-aa) = c3a9799d0c994a5107cffc199669b2968a9d4ec2
+SHA1 (patch-ab) = 0d52b852bb03a27cbf820ec6da56b01393aab38d
+SHA1 (patch-ad) = a3010f547ac2183eec74db9969a4d212e885fc40

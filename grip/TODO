@@ -1,7 +1,5 @@
-$Id: TODO,v 1.4 2008/11/21 18:21:52 tonnerre Exp $
+$Id: TODO,v 1.5 2010/12/22 02:31:50 khorben Exp $
 
-    o Does not work under NetBSD, we'll have to look deeply 
+    o Does not work well under NetBSD, we'll have to look deeply 
       in it :).
     o id3lib support disabled (breaks configure script).
-    o This package has known vulnerabilities, please investigate
-      them and fix if possible (CVE-2005-0706).
