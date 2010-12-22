@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.1.1.1 2009/01/10 16:05:32 tnn2 Exp $
+$NetBSD: patch-ad,v 1.2 2010/12/22 05:07:15 schnoebe Exp $
 
---- Foundation/src/SharedMemory_POSIX.cpp.orig	2008-10-09 18:14:00.000000000 +0200
+--- Foundation/src/SharedMemory_POSIX.cpp.orig	2010-12-16 05:43:25.000000000 +0000
 +++ Foundation/src/SharedMemory_POSIX.cpp
 @@ -69,7 +69,8 @@ SharedMemoryImpl::SharedMemoryImpl(const
  		flags |= O_RDONLY;
@@ -23,7 +23,7 @@ $NetBSD: patch-ad,v 1.1.1.1 2009/01/10 16:05:32 tnn2 Exp $
  	map(addrHint);
 @@ -148,7 +149,7 @@ void SharedMemoryImpl::close()
  	}
- 	if (!_fileMapped && _server)
+ 	if (!_fileMapped && !_server)
  	{
 -		::shm_unlink(_name.c_str());
 +		//::shm_unlink(_name.c_str());
