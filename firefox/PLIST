@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2010/11/11 14:11:54 tnn2 Exp $
+@comment $NetBSD: PLIST,v 1.26 2010/12/22 21:09:40 tnn2 Exp $
 bin/firefox
 lib/firefox/README.txt
 lib/firefox/application.ini
@@ -52,7 +52,6 @@ lib/firefox/chrome/browser/content/browser/migration/migration.xul
 lib/firefox/chrome/browser/content/browser/nsContextMenu.js
 lib/firefox/chrome/browser/content/browser/openLocation.js
 lib/firefox/chrome/browser/content/browser/openLocation.xul
-lib/firefox/chrome/browser/content/browser/pageReportFirstTime.xul
 lib/firefox/chrome/browser/content/browser/pageinfo/feeds.js
 lib/firefox/chrome/browser/content/browser/pageinfo/feeds.xml
 lib/firefox/chrome/browser/content/browser/pageinfo/pageInfo.css
@@ -131,6 +130,8 @@ lib/firefox/chrome/browser/content/browser/search/search.xml
 lib/firefox/chrome/browser/content/browser/search/searchbarBindings.css
 lib/firefox/chrome/browser/content/browser/setDesktopBackground.js
 lib/firefox/chrome/browser/content/browser/setDesktopBackground.xul
+lib/firefox/chrome/browser/content/browser/syncAddDevice.js
+lib/firefox/chrome/browser/content/browser/syncAddDevice.xul
 lib/firefox/chrome/browser/content/browser/syncGenericChange.js
 lib/firefox/chrome/browser/content/browser/syncGenericChange.xul
 lib/firefox/chrome/browser/content/browser/syncKey.xhtml
@@ -268,7 +269,6 @@ lib/firefox/chrome/en-US/locale/browser/openLocation.dtd
 lib/firefox/chrome/en-US/locale/browser/openLocation.properties
 lib/firefox/chrome/en-US/locale/browser/pageInfo.dtd
 lib/firefox/chrome/en-US/locale/browser/pageInfo.properties
-lib/firefox/chrome/en-US/locale/browser/pageReportFirstTime.dtd
 lib/firefox/chrome/en-US/locale/browser/places/bookmarkProperties.properties
 lib/firefox/chrome/en-US/locale/browser/places/editBookmarkOverlay.dtd
 lib/firefox/chrome/en-US/locale/browser/places/moveBookmarks.dtd
@@ -359,17 +359,16 @@ lib/firefox/firefox
 lib/firefox/icons/document.png
 lib/firefox/icons/mozicon128.png
 lib/firefox/modules/HUDService.jsm
+lib/firefox/modules/NetworkHelper.jsm
 lib/firefox/modules/NetworkPrioritizer.jsm
 lib/firefox/modules/PlacesUIUtils.jsm
 lib/firefox/modules/PropertyPanel.jsm
 lib/firefox/modules/distribution.js
 lib/firefox/modules/domplate.jsm
 lib/firefox/modules/openLocationLastURL.jsm
-lib/firefox/modules/services-crypto/WeaveCrypto.js
 lib/firefox/modules/services-sync/auth.js
 lib/firefox/modules/services-sync/base_records/collection.js
 lib/firefox/modules/services-sync/base_records/crypto.js
-lib/firefox/modules/services-sync/base_records/keys.js
 lib/firefox/modules/services-sync/base_records/wbo.js
 lib/firefox/modules/services-sync/constants.js
 lib/firefox/modules/services-sync/engines.js
@@ -385,6 +384,7 @@ lib/firefox/modules/services-sync/ext/Preferences.js
 lib/firefox/modules/services-sync/ext/StringBundle.js
 lib/firefox/modules/services-sync/ext/Sync.js
 lib/firefox/modules/services-sync/identity.js
+lib/firefox/modules/services-sync/jpakeclient.js
 lib/firefox/modules/services-sync/log4moz.js
 lib/firefox/modules/services-sync/main.js
 lib/firefox/modules/services-sync/notifications.js
