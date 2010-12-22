@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2010/12/19 09:02:21 ftigeot Exp $
+@comment $NetBSD: PLIST,v 1.9 2010/12/22 15:20:32 ftigeot Exp $
 bin/jdk15-appletviewer
 bin/jdk15-jar
 bin/jdk15-java
@@ -2402,4 +2402,4 @@ ${PLIST.plugin}@dirrm java/jdk-1.5.0/demo/plugin/applets/Animator/audio
 ${PLIST.plugin}@dirrm java/jdk-1.5.0/demo/plugin/applets/Animator
 ${PLIST.plugin}@dirrm java/jdk-1.5.0/demo/plugin/applets
 ${PLIST.plugin}@dirrm java/jdk-1.5.0/demo/plugin
-@exec ${MKDIR} %D/java/jdk-1.5.0/jre/lib/applet
+@pkgdir java/jdk-1.5.0/jre/lib/applet
