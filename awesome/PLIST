@@ -1,7 +1,19 @@
-@comment $NetBSD: PLIST,v 1.10 2009/12/20 23:49:47 pallegra Exp $
+@comment $NetBSD: PLIST,v 1.11 2010/12/23 09:15:57 pallegra Exp $
 bin/awesome
 bin/awesome-client
 bin/awsetbg
+man/de/man1/awesome-client.1
+man/de/man1/awesome.1
+man/de/man1/awsetbg.1
+man/de/man5/awesomerc.5
+man/es/man1/awesome-client.1
+man/es/man1/awesome.1
+man/es/man1/awsetbg.1
+man/es/man5/awesomerc.5
+man/fr/man1/awesome-client.1
+man/fr/man1/awesome.1
+man/fr/man1/awsetbg.1
+man/fr/man5/awesomerc.5
 man/man1/awesome-client.1
 man/man1/awesome.1
 man/man1/awsetbg.1
@@ -57,7 +69,9 @@ share/awesome/lib/awful/widget/tasklist.lua
 share/awesome/lib/awful/widget/textclock.lua
 share/awesome/lib/beautiful.lua
 share/awesome/lib/naughty.lua
+share/awesome/themes/default/README
 share/awesome/themes/default/background.png
+share/awesome/themes/default/background_white.png
 share/awesome/themes/default/layouts/dwindle.png
 share/awesome/themes/default/layouts/dwindlew.png
 share/awesome/themes/default/layouts/fairh.png

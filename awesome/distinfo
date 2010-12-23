@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.16 2010/06/11 15:42:42 pallegra Exp $
+$NetBSD: distinfo,v 1.17 2010/12/23 09:15:57 pallegra Exp $
 
-SHA1 (awesome-3.4.3.tar.xz) = 02d2bd0170813fe381cac60cb430e0fb5446dada
-RMD160 (awesome-3.4.3.tar.xz) = 58524ec00723f5b3b5dff4ea32fef809872a43c7
-Size (awesome-3.4.3.tar.xz) = 255144 bytes
+SHA1 (awesome-3.4.8.tar.xz) = 1f356741f315b0aa88343d54947369cf622781d3
+RMD160 (awesome-3.4.8.tar.xz) = 03661a17894324017f9e1e9b01c8c01871ad3fb5
+Size (awesome-3.4.8.tar.xz) = 709056 bytes
 SHA1 (patch-ab) = 7da54f805f54413aabd647e3b392927aec17bfab
 SHA1 (patch-ad) = 247e545c60d2532cb31882be9cbb1125db60d6d8
