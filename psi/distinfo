@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.16 2009/12/08 17:09:17 schnoebe Exp $
+$NetBSD: distinfo,v 1.17 2010/12/23 23:15:39 thomasklausner Exp $
 
 SHA1 (psi-0.14/psi-0.14.tar.bz2) = f5f8e1a427339a4e9113b5fa513b01a42ae1be4b
 RMD160 (psi-0.14/psi-0.14.tar.bz2) = 0c4a07726c2f9819da0f8aa8f1982e939f1fc20f
@@ -6,7 +6,7 @@ Size (psi-0.14/psi-0.14.tar.bz2) = 2168801 bytes
 SHA1 (psi-0.14/psi-0.14_langpack_2009-12-02.zip) = f57b8fc70db64ffb57cb82ab5df9f923961dbde8
 RMD160 (psi-0.14/psi-0.14_langpack_2009-12-02.zip) = 176bfaa4b5f787a7157883b3b806dc23d5a2b78b
 Size (psi-0.14/psi-0.14_langpack_2009-12-02.zip) = 1246445 bytes
-SHA1 (patch-ad) = 4e5e7c44124b3ee3f7b79d8478cde350be977be0
+SHA1 (patch-ad) = 3ee21a1cb17637ed650b6b58e5575c8fa246a4f0
 SHA1 (patch-ah) = 5342053f85425439cc653d33e3777d502903e691
 SHA1 (patch-ak) = a6de601a2acedf0cd8e9b15cd402f569f7152d97
 SHA1 (patch-al) = 94b12f02e3320749d51d99dc613a5d83ec303076
