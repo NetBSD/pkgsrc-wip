@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.8 2010/06/13 22:46:57 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2010/12/23 13:00:16 noud4 Exp $
 #
 
 DISTNAME=	blam-1.8.7
 PKGREVISION=	3
 CATEGORIES=	www
-MASTER_SITES=	http://www.cmartin.tk/blam/
+MASTER_SITES=	http://blam.cmartin.tk/downloads/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc.gnome@gmail.com
