@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.2 2009/11/03 00:19:28 schnoebe Exp $
+$NetBSD: patch-ab,v 1.3 2010/12/23 03:28:49 schnoebe Exp $
+
+# include NetBSD with the HP-UX portion of the event handling
 
 --- Foundation/src/NamedEvent_UNIX.cpp.orig	2008-10-09 18:14:00.000000000 +0200
 +++ Foundation/src/NamedEvent_UNIX.cpp

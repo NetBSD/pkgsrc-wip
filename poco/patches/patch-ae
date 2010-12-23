@@ -1,4 +1,6 @@
-$NetBSD: patch-ae,v 1.3 2010/01/31 23:10:23 schnoebe Exp $
+$NetBSD: patch-ae,v 1.4 2010/12/23 03:28:49 schnoebe Exp $
+
+# clean up the FreeBSD configuration to fit better with pkgsrc
 
 --- build/config/FreeBSD.orig	2010-01-15 12:13:34.000000000 +0000
 +++ build/config/FreeBSD

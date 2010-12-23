@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2009/01/10 16:05:32 tnn2 Exp $
+$NetBSD: patch-aa,v 1.2 2010/12/23 03:28:49 schnoebe Exp $
+
+# correct a common error with test(1)
 
 --- build/script/makeldpath.orig	2008-10-09 18:14:00.000000000 +0200
 +++ build/script/makeldpath
