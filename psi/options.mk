@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2009/11/10 21:28:30 schnoebe Exp $
+# $NetBSD: options.mk,v 1.3 2010/12/23 23:16:53 thomasklausner Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.psi
 PKG_SUPPORTED_OPTIONS=	aspell enchant
@@ -12,7 +12,7 @@ CONFIGURE_ARGS+=	--with-aspell-lib=${BUILDLINK_PREFIX.aspell}/lib
 .include "../../textproc/aspell/buildlink3.mk"
 .endif
 
-# enable aspell
+# enable enchant
 .if empty(PKG_OPTIONS:Menchant)
 CONFIGURE_ARGS+=	--disable-enchant
 .else
