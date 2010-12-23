@@ -1,0 +1,15 @@
+$NetBSD: patch-bd,v 1.1 2010/12/23 20:24:39 noud4 Exp $
+
+--- src/rss.c.orig	2010-12-23 18:36:18.000000000 +0000
++++ src/rss.c	2010-12-23 18:35:42.000000000 +0000
+@@ -4978,8 +4978,10 @@
+ 		rss_shell_view);
+ #if EVOLUTION_VERSION >= 22900
+ /*	rss_search_bar_hook();*/
++#ifdef HAVE_WEBKIT
+ 	webkit_hook_actions();
++#endif
+ #endif
+ 	return TRUE;
+ }
+ #endif

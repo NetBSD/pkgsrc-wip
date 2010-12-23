@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2010/06/13 22:47:03 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2010/12/23 20:24:39 noud4 Exp $
 #
 
-DISTNAME=	evolution-rss-0.1.4
-PKGREVISION=	1
+DISTNAME=	evolution-rss-0.2.0
 CATEGORIES=	mail gnome
 MASTER_SITES=	http://gnome.eu.org/
 
@@ -11,6 +10,8 @@ HOMEPAGE=	http://gnome.eu.org/evo/index.php/Evolution_RSS_Reader_Plugin
 COMMENT=	Evolution rss reader plugin
 LICENSE=		gnu-gpl-v2
 
+DEPENDS+=	gsed>=:../../textproc/gsed
+
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
@@ -18,7 +19,19 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config intltool  gmake msgfmt
 USE_LANGUAGES=	c c++
 
-GCONF_SCHEMAS+=	src/evolution-rss.schemas
+GCONF_SCHEMAS+=	evolution-rss.schemas
+
+.include "../../mk/bsd.prefs.mk"
+GSED=${PREFIX}/bin/${GNU_PROGRAM_PREFIX}sed
+
+SUBST_CLASSES+=		paths
+SUBST_STAGE.paths=	pre-configure
+SUBST_SED.paths+=	-e 's|@GSED@|${GSED}|g'
+SUBST_FILES.paths+=	src/Makefile.in
+SUBST_MESSAGE.paths=	Fixing gsed path.
+
+post-extract:
+	ln -s ${WRKSRC}/src/evolution-rss.schemas ${WRKSRC}
 
 .include "options.mk"
 

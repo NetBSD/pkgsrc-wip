@@ -1,0 +1,20 @@
+$NetBSD: patch-bc,v 1.1 2010/12/23 20:24:39 noud4 Exp $
+
+--- src/Makefile.in.orig	2010-12-23 15:24:23.000000000 +0000
++++ src/Makefile.in	2010-12-23 15:24:43.000000000 +0000
+@@ -1017,11 +1017,11 @@
+ 	$< > $@
+ %.schemas.in: %.schemas.in.in
+ 	sed -e "s#\@bindir\@#@bindir@#g" $< > $@
+-@HAVE_BONOBO_TRUE@	sed -i -e 's!^src\/GNOME_Evolution_RSS.server.in.in!!g' $(top_srcdir)/po/POTFILES.skip
+-@HAVE_BONOBO_TRUE@	sed -i -e 's!^#src\/GNOME_Evolution_RSS.server.in.in!!g' $(top_srcdir)/po/POTFILES.in
++@HAVE_BONOBO_TRUE@	@GSED@ -i -e 's!^src\/GNOME_Evolution_RSS.server.in.in!!g' $(top_srcdir)/po/POTFILES.skip
++@HAVE_BONOBO_TRUE@	@GSED@ -i -e 's!^#src\/GNOME_Evolution_RSS.server.in.in!!g' $(top_srcdir)/po/POTFILES.in
+ @HAVE_BONOBO_TRUE@	echo 'src/GNOME_Evolution_RSS.server.in.in' >> $(top_srcdir)/po/POTFILES.in
+-@HAVE_BONOBO_FALSE@	sed -i -e 's!^#src\/GNOME_Evolution_RSS.server.in.in!!g' $(top_srcdir)/po/POTFILES.in
+-@HAVE_BONOBO_FALSE@	sed -i -e 's!^src\/GNOME_Evolution_RSS.server.in.in!!g' $(top_srcdir)/po/POTFILES.in
++@HAVE_BONOBO_FALSE@	@GSED@ -i -e 's!^#src\/GNOME_Evolution_RSS.server.in.in!!g' $(top_srcdir)/po/POTFILES.in
++@HAVE_BONOBO_FALSE@	@GSED@ -i -e 's!^src\/GNOME_Evolution_RSS.server.in.in!!g' $(top_srcdir)/po/POTFILES.in
+ @HAVE_BONOBO_FALSE@	echo 'src/GNOME_Evolution_RSS.server.in.in' >> $(top_srcdir)/po/POTFILES.skip
+ 
+ @EVO_SERVER_RULE@
