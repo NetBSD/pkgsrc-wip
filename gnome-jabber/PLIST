@@ -1,15 +1,5 @@
-@comment $NetBSD: PLIST,v 1.5 2009/10/11 11:18:13 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.6 2010/12/23 11:14:46 noud4 Exp $
 bin/gnome-jabber
-lib/gtk-2.0/2.4.0/engines/libcrux-engine.la
-lib/gtk-2.0/2.4.0/engines/libhcengine.la
-lib/gtk-2.0/2.4.0/engines/libindustrial.la
-lib/gtk-2.0/2.4.0/engines/liblighthouseblue.la
-lib/gtk-2.0/2.4.0/engines/libmetal.la
-lib/gtk-2.0/2.4.0/engines/libmist.la
-lib/gtk-2.0/2.4.0/engines/libredmond95.la
-lib/gtk-2.0/2.4.0/engines/libsmooth.la
-lib/gtk-2.0/2.4.0/engines/libthinice.la
-lib/pkgconfig/gtk-engines-2.pc
 share/applications/gnome-jabber.desktop
 share/gconf/schemas/gnome-jabber.schemas
 share/gnome-jabber/contact.wav
