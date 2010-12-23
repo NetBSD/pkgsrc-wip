@@ -1,10 +1,16 @@
-@comment $NetBSD: PLIST,v 1.2 2010/02/12 00:51:08 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.3 2010/12/23 21:58:30 noud4 Exp $
+include/couchdb-glib-1.0/couchdb-array-field.h
 include/couchdb-glib-1.0/couchdb-credentials.h
 include/couchdb-glib-1.0/couchdb-database-info.h
+include/couchdb-glib-1.0/couchdb-database.h
+include/couchdb-glib-1.0/couchdb-design-document.h
 include/couchdb-glib-1.0/couchdb-document-contact.h
 include/couchdb-glib-1.0/couchdb-document-info.h
+include/couchdb-glib-1.0/couchdb-document-task.h
 include/couchdb-glib-1.0/couchdb-document.h
 include/couchdb-glib-1.0/couchdb-glib.h
+include/couchdb-glib-1.0/couchdb-query.h
+include/couchdb-glib-1.0/couchdb-response.h
 include/couchdb-glib-1.0/couchdb-session.h
 include/couchdb-glib-1.0/couchdb-struct-field.h
 include/couchdb-glib-1.0/couchdb-types.h
@@ -22,10 +28,14 @@ share/gtk-doc/html/couchdb-glib/CouchdbCredentials.html
 share/gtk-doc/html/couchdb-glib/CouchdbDocument.html
 share/gtk-doc/html/couchdb-glib/CouchdbSession.html
 share/gtk-doc/html/couchdb-glib/ch01.html
+share/gtk-doc/html/couchdb-glib/ch02.html
+share/gtk-doc/html/couchdb-glib/couchdb-glib-DesktopcouchSession.html
+share/gtk-doc/html/couchdb-glib/couchdb-glib-couchdb-array-field.html
 share/gtk-doc/html/couchdb-glib/couchdb-glib-couchdb-database-info.html
-share/gtk-doc/html/couchdb-glib/couchdb-glib-couchdb-document-contact.html
 share/gtk-doc/html/couchdb-glib/couchdb-glib-couchdb-document-info.html
 share/gtk-doc/html/couchdb-glib/couchdb-glib-couchdb-struct-field.html
+share/gtk-doc/html/couchdb-glib/couchdb-glib-desktopcouch-document-contact.html
+share/gtk-doc/html/couchdb-glib/couchdb-glib-desktopcouch-document.html
 share/gtk-doc/html/couchdb-glib/couchdb-glib.devhelp
 share/gtk-doc/html/couchdb-glib/couchdb-glib.devhelp2
 share/gtk-doc/html/couchdb-glib/home.png
