@@ -1,12 +1,13 @@
-$NetBSD: patch-ax,v 1.5 2010/12/22 21:09:40 tnn2 Exp $
+$NetBSD: patch-ax,v 1.6 2010/12/23 08:59:00 tnn2 Exp $
 
 --- xpcom/base/nsStackWalk.cpp.orig	2010-12-15 01:03:41.000000000 +0000
 +++ xpcom/base/nsStackWalk.cpp
-@@ -1138,6 +1138,7 @@ NS_FormatCodeAddressDetails(void *aPC, c
+@@ -1137,7 +1137,7 @@ NS_FormatCodeAddressDetails(void *aPC, c
+ #define __USE_GNU
  #endif
  
- #if defined(HAVE_DLOPEN) || defined(XP_MACOSX)
-+#error this patch should be removed
+-#if defined(HAVE_DLOPEN) || defined(XP_MACOSX)
++#if defined(HAVE_DLOPEN) || defined(XP_MACOSX) || defined(__NetBSD__)
  #include <dlfcn.h>
  #endif
  
