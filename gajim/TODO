@@ -1,2 +1,0 @@
-* It seems to depend on py-dns and py-dbus.
-* Segfaults on NetBSD-3.99.15
