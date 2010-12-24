@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.2 2004/03/03 22:04:51 minskim Exp $
+$NetBSD: distinfo,v 1.3 2010/12/24 13:16:24 noud4 Exp $
 
-SHA1 (rssgrab-0.5.tar.gz) = 1afe5f279d56a81ee4d0d8cf6a0078b8952c900d
-Size (rssgrab-0.5.tar.gz) = 123438 bytes
+SHA1 (rssgrab-0.6.4.tar.gz) = 4d0266190dbed182676244bcc6e7d93dcdc892d0
+RMD160 (rssgrab-0.6.4.tar.gz) = 23f6dbf82e9ed7eefd0bf533f7ea45a18be6fe4d
+Size (rssgrab-0.6.4.tar.gz) = 168967 bytes

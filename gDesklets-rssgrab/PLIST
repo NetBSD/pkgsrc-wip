@@ -1,11 +1,14 @@
-@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:44:37 thomasklausner Exp $
-share/gdesklets/Displays/rssgrab/rssgrab-orig.display
-share/gdesklets/Displays/rssgrab/rssgrab-psi.display
-share/gdesklets/Displays/rssgrab/rssgrab.display
+@comment $NetBSD: PLIST,v 1.4 2010/12/24 13:16:24 noud4 Exp $
+share/gdesklets/Displays/rssgrab/LTrssgrab.display
+share/gdesklets/Displays/rssgrab/RDGrssgrab.display
 share/gdesklets/Displays/rssgrab/gfx/action.png
 share/gdesklets/Displays/rssgrab/gfx/bg.png
 share/gdesklets/Displays/rssgrab/gfx/frame.png
 share/gdesklets/Displays/rssgrab/gfx/logo.png
 share/gdesklets/Displays/rssgrab/gfx/preview.png
+share/gdesklets/Displays/rssgrab/gfx/rssframe.png
+share/gdesklets/Displays/rssgrab/rssgrab-psi.display
+share/gdesklets/Displays/rssgrab/rssgrab.display
+share/gdesklets/Sensors/rssgrab/MetaSensor.py
 share/gdesklets/Sensors/rssgrab/__init__.py
 share/gdesklets/Sensors/rssgrab/feedparser.py

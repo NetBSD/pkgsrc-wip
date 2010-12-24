@@ -1,4 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/02/21 04:24:15 minskim Exp $
+$NetBSD: distinfo,v 1.2 2010/12/24 13:17:28 noud4 Exp $
 
-SHA1 (starterbar-desklet-0.22.1.tar.bz2) = a508e54bd96049e5a620044608088845efc37e1a
-Size (starterbar-desklet-0.22.1.tar.bz2) = 67715 bytes
+SHA1 (starterbar-desklet-0.31.3.tar.gz) = ad0e9e2ef7b050dc73af7bbf43c0d9be948f1b8b
+RMD160 (starterbar-desklet-0.31.3.tar.gz) = 2305031e47aff7e77b6c85ded06a4119468e0a31
+Size (starterbar-desklet-0.31.3.tar.gz) = 92908 bytes
