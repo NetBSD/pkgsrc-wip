@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2008/05/26 13:59:45 tnn2 Exp $
+# $NetBSD: Makefile.common,v 1.9 2010/12/24 00:40:03 noud4 Exp $
 # used by wip/jdk14/Makefile
 # used by wip/jdk15/Makefile
 # used by wip/jdk16/Makefile
@@ -43,9 +43,3 @@ MOTIF_TYPE=		openmotif
 .include "../../mk/motif.buildlink3.mk"
 
 _WRAP_EXTRA_ARGS.CXX+=	-Wno-deprecated
-
-#GCC_REQD+=		3.0
-#.if !empty(MACHINE_PLATFORM:MNetBSD-4*)
-#USE_PKGSRC_GCC=		yes
-#.endif
-#.include "../../mk/compiler.mk"

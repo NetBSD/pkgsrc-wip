@@ -1,0 +1,16 @@
+$NetBSD: patch-ca,v 1.1 2010/12/24 00:40:03 noud4 Exp $
+
+--- hotspot/build/bsd/makefiles/vm.make.orig	2010-12-22 19:03:44.000000000 +0000
++++ hotspot/build/bsd/makefiles/vm.make	2010-12-22 19:39:06.000000000 +0000
+@@ -73,6 +73,10 @@
+ LIBS += -pthread
+ endif
+ 
++ifeq (NetBSD, $(UNAME.s))
++LIBS += -lgcc_s
++endif
++
+ # By default, link the *.o into the library, not the executable.
+ LINK_INTO$(LINK_INTO) = LIBJVM
+ 
+

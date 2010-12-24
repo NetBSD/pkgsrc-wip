@@ -1,0 +1,15 @@
+$NetBSD: patch-cb,v 1.1 2010/12/24 00:40:03 noud4 Exp $
+
+conform X11/extensions/shmproto.h
+
+--- j2se/src/solaris/native/sun/awt/awt_GraphicsEnv.h.orig	2010-12-23 22:12:28.000000000 +0000
++++ j2se/src/solaris/native/sun/awt/awt_GraphicsEnv.h	2010-12-23 22:12:48.000000000 +0000
+@@ -21,6 +21,8 @@
+ 
+ #ifdef MITSHM
+ 
++#define X_ShmAttach 1
++
+ #include <sys/ipc.h>
+ #include <sys/shm.h>
+ #include <X11/extensions/XShm.h>
