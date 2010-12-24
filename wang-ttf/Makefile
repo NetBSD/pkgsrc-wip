@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2006/02/18 10:02:03 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2010/12/24 20:24:26 noud4 Exp $
 
 DISTNAME=	wang-ttf-1.3
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	fonts chinese
 MASTER_SITES=	${MASTER_SITE_FREEBSD:=zh-wangttf/} \
 		ftp://cle.linux.org.tw/pub/fonts/wangfonts/ \
@@ -44,5 +44,10 @@ do-install:
 		${INSTALL_DATA} ${_DISTDIR}/$$f ${DOCDIR}; \
 	done
 
+.include "../../mk/bsd.prefs.mk"
+.if ${X11_TYPE} == "modular"
+.include "../../x11/libX11/buildlink3.mk"
+.else
 .include "../../mk/x11.buildlink3.mk"
+.endif
 .include "../../mk/bsd.pkg.mk"
