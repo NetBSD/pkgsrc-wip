@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4174 2010/12/23 12:06:48 ryo-on Exp $
+# $Id: Makefile,v 1.4175 2010/12/24 00:03:39 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -531,7 +531,6 @@ SUBDIR+=	gDesklets
 SUBDIR+=	gDesklets-CornerXMMS
 SUBDIR+=	gDesklets-rssgrab
 SUBDIR+=	gDesklets-starterbar
-SUBDIR+=	gajim
 SUBDIR+=	galib
 SUBDIR+=	gambas2
 SUBDIR+=	gambc

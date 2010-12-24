@@ -1,7 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.2 2007/09/02 18:19:48 shindenmorr Exp $
-For full set of features you could install also:
-	* sysutils/py-dbus
-	* security/py-OpenSSL
-	* x11/py-gnome2
-===========================================================================
