@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.3 2005/09/28 06:41:16 rillig Exp $
+$NetBSD: distinfo,v 1.4 2010/12/24 12:55:11 noud4 Exp $
 
-SHA1 (gDesklets-0.26.tar.bz2) = 94c27ad137f607e1f3c9c865b28ddf740203c6c8
-RMD160 (gDesklets-0.26.tar.bz2) = b6b8d0f4440478f8b7d50f4a96a667355babcfbb
-Size (gDesklets-0.26.tar.bz2) = 390440 bytes
+SHA1 (gdesklets-0.36.tar.bz2) = debed7ae730796761ac829ba6cb7bafd566148d5
+RMD160 (gdesklets-0.36.tar.bz2) = 9e8913c2e50c970f02e265a3cb8b59f332e7f77f
+Size (gdesklets-0.36.tar.bz2) = 3124773 bytes
 SHA1 (patch-aa) = 466cc93060bc87a24bd03fa5a80f965f9761d8d7
 SHA1 (patch-ab) = 3e34e20e58d1bf604889db7526e779b781e0d7f4

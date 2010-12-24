@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.31 2010/10/20 20:26:45 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.32 2010/12/24 12:55:11 noud4 Exp $
+#
 
-DISTNAME=	gDesklets-0.26
-PKGREVISION=	6
+DISTNAME=	gdesklets-0.36
+PKGNAME=	gDesklets-0.36
 CATEGORIES=	x11 gnome
-MASTER_SITES=	http://www.pycage.de/download/gdesklets/
+MASTER_SITES=	http://gdesklets.de/files/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://www.gdesklets.org/
+HOMEPAGE=	http://gdesklets.de/
 COMMENT=	Advanced architecture for desktop applets
 
 GNU_CONFIGURE=	YES
@@ -27,8 +28,17 @@ SUBST_STAGE.python=	post-patch
 SUBST_FILES.python=	locale/Makefile.in
 SUBST_SED.python=	-e 's|python |${PYTHONBIN} |g'
 
+SUBST_CLASSES+=		python2
+SUBST_MESSAGE.python2=	Fixing Python command name.
+SUBST_STAGE.python2=	post-patch
+SUBST_FILES.python2=	configure
+SUBST_SED.python2=	-e 's|python -c|${PYTHONBIN} -c|g'
+
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/gdesklets/Displays
+
+.include "../../databases/shared-mime-info/buildlink3.mk"
+.include "../../graphics/librsvg/buildlink3.mk"
 
 .include "../../devel/GConf/schemas.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
@@ -38,5 +48,11 @@ post-install:
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/py-gnome2/buildlink3.mk"
 .include "../../x11/py-gtk2/buildlink3.mk"
+
+.if ${X11_TYPE} == "modular"
+.include "../../x11/libX11/buildlink3.mk"
+.else
 .include "../../mk/x11.buildlink3.mk"
+.endif
+
 .include "../../mk/bsd.pkg.mk"
