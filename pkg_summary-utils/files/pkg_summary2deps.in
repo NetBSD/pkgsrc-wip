@@ -316,13 +316,17 @@ END {
 						f = found [j]
 						if (pkgmatch(g_path2name [f], depname)){
 							if (id != 3){
-								if (matched == "")
+								if (matched == ""){
 									matched = f
-								else
+									matched_name = g_path2name [f]
+								}else if (show_all_deps){
 									matched = matched "|" f
-
-								if (!show_all_deps)
-									break
+								}else if (pkgname_gt_pkgname(g_path2name [f],
+															 matched_name))
+								{
+									matched = f
+									matched_name = g_path2name [f]
+								}
 							}else if (f != path){
 								warn_conflicts(path, name, f,
 											   g_path2name [f], depname)

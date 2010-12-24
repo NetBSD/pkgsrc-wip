@@ -38,3 +38,11 @@ function src_depend2pkgpath (dep){
 	sub(/^[^:]*:/, "", dep)
 	return normalize_pkgpath(dep)
 }
+
+# returns 1 if pkgname1 is greater than pkgname2
+function pkgname_gt_pkgname (pkgname1, pkgname2,            ver1,ver2){
+	ver1 = pkgname2version(pkgname1)
+	ver2 = pkgname2version(pkgname2)
+
+	return dewey_cmp(ver1, ver2) == ">"
+}
