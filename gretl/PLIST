@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2010/06/16 12:09:14 asau Exp $
+@comment $NetBSD: PLIST,v 1.3 2010/12/24 15:01:21 noud4 Exp $
 bin/gretlcli
 include/gretl/adf_kpss.h
 include/gretl/bhhh_max.h
@@ -460,5 +460,5 @@ share/locale/pt_BR/LC_MESSAGES/gretl.mo
 share/locale/ru/LC_MESSAGES/gretl.mo
 share/locale/tr/LC_MESSAGES/gretl.mo
 share/locale/zh_TW/LC_MESSAGES/gretl.mo
-share/man/man1/gretl.1
+man/man1/gretl.1
 @pkgdir share/gretl/doc
