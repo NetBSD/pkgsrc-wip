@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.15 2010/06/13 22:47:06 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.16 2010/12/24 11:55:23 noud4 Exp $
 
 DISTNAME=		GTK2-Galaxy
 PKGNAME=		gtk2-engines-galaxy-0
 WRKSRC=			${WRKDIR}/galaxy-0.2
 PKGREVISION=		1
 CATEGORIES=		x11
-MASTER_SITES=		http://ftp.gnome.org/pub/GNOME/teams/art.gnome.org/themes/gtk2/
+MASTER_SITES=		http://ftp.gnome.org/pub/GNOME/teams/art.gnome.org/archive/themes/gtk2/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://art.gnome.org/
