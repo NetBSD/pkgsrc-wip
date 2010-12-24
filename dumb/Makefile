@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2009/07/28 11:01:17 jihbed Exp $
+# $NetBSD: Makefile,v 1.12 2010/12/24 18:39:35 noud4 Exp $
 #
 
 DISTNAME=		dumb-0.9.3
+PKGREVISION=		1
 CATEGORIES=		audio devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=dumb/}
 
@@ -24,4 +25,4 @@ post-install:
 
 .include "../../devel/allegro/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
-
+.include "../../mk/bsd.pkg.mk"
