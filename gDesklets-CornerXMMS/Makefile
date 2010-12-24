@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.5 2005/04/11 21:12:20 tvierling Exp $
+# $NetBSD: Makefile,v 1.6 2010/12/24 13:14:30 noud4 Exp $
 
 DISTNAME=	CornerXMMS-0.0.5
 PKGNAME=	gDesklets-${DISTNAME}
 CATEGORIES=	audio
-MASTER_SITES=	http://gdesklets.gnomedesktop.org/files/
+MASTER_SITES=	http://www.gdesklets.info/archive/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	minskim@NetBSD.org
-HOMEPAGE=	http://gdesklets.gnomedesktop.org/categories.php?func=gd_show_app&gd_app_id=53
+HOMEPAGE=	http://www.gdesklets.info/archive/#C
 COMMENT=	Fancy desklet that allows you to control XMMS
 
 DEPENDS+=	gDesklets-[0-9]*:../../wip/gDesklets
