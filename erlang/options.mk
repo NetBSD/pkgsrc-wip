@@ -1,9 +1,20 @@
-# $NetBSD: options.mk,v 1.6 2010/06/23 06:25:46 marttikuparinen Exp $
+# $NetBSD: options.mk,v 1.7 2010/12/24 17:13:25 asau Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.erlang
 PKG_SUPPORTED_OPTIONS=	java erlang-hipe
 PKG_OPTIONS_OPTIONAL_GROUPS=	odbc
 PKG_OPTIONS_GROUP.odbc=		iodbc unixodbc
+
+PKG_SUGGESTED_OPTIONS=	# empty
+###
+### Activate HiPE by default on some systems or if the user has
+### defined the erlang-hipe option in mk.conf
+###
+.if (${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64") &&	\
+    (${OPSYS} == "FreeBSD" || ${OPSYS} == "Linux" ||			\
+     ${OPSYS} == "NetBSD"  || ${OPSYS} == "OpenBSD")
+#PKG_SUGGESTED_OPTIONS+=	erlang-hipe
+.endif
 
 .include "../../mk/bsd.options.mk"
 
@@ -16,14 +27,7 @@ PLIST_SRC+=		PLIST.java
 CONFIGURE_ARGS+=	--without-javac
 .endif
 
-###
-### Activate HiPE by default on some systems or if the user has
-### defined the erlang-hipe option in mk.conf
-###
-.if !empty(PKG_OPTIONS:Merlang-hipe) ||					\
-    (${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64") &&	\
-    (${OPSYS} == "FreeBSD" || ${OPSYS} == "Linux" ||			\
-     ${OPSYS} == "NetBSD"  || ${OPSYS} == "OpenBSD")
+.if !empty(PKG_OPTIONS:Merlang-hipe)
 CONFIGURE_ARGS+=	--enable-hipe
 PLIST_SRC+=		PLIST.hipe
 .else
