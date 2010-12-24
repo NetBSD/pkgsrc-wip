@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/05/22 16:47:08 tnn2 Exp $
+# $NetBSD: Makefile,v 1.11 2010/12/24 16:02:26 noud4 Exp $
 #
 
 DISTNAME=	ArgoUML-0.14
@@ -12,7 +12,7 @@ COMMENT=	UML design tool environment with cognitive support
 
 #DEPENDS+=	xerces-j>=1.4.4:../../textproc/xerces-j
 DEPENDS+=	xerces-j>=1.2.0:../../textproc/xerces-j
-DEPENDS+=	jakarta-log4j>=1.2.8:../../wip/jakarta-log4j
+DEPENDS+=	jakarta-log4j-1.3a>=8:../../wip/jakarta-log4j
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -35,5 +35,10 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/argouml ${DESTDIR}${PREFIX}/bin/
 
 .include "../../mk/java-vm.mk"
+.if ${X11_TYPE} == "modular"
+.include "../../x11/libX11/buildlink3.mk"
+.else
 .include "../../mk/x11.buildlink3.mk"
+.endif
+
 .include "../../mk/bsd.pkg.mk"
