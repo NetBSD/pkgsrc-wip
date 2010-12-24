@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2010/12/24 18:17:09 noud4 Exp $
+# $NetBSD: Makefile,v 1.5 2010/12/24 18:20:48 noud4 Exp $
 #
 
 DISTNAME=		vdesk-1.2
+PKGREVISION=		1
 CATEGORIES=		wm x11
 MASTER_SITES=		http://offog.org/files/
 
