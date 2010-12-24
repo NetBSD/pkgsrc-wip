@@ -46,8 +46,8 @@
 #   -h|--help   display this help
 #   -l          checks REQUIRES/PROVIDES consistency
 #   -L          checks that libs from REQUIRES are present on filesystem
-#   -d          checks that dependencies (DEPENDS) are sanisfied
-#   -D          checks that dependencies (BUILD_DEPENDS) are sanisfied
+#   -d          checks that dependencies (DEPENDS) are satisfied
+#   -D          checks that dependencies (BUILD_DEPENDS) are satisfied
 #   -c          checks CONFLICTS
 #   -u          checks unicity of PKGBASEs
 #.end-str
