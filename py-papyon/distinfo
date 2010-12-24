@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2010/04/18 14:00:41 jihbed Exp $
+$NetBSD: distinfo,v 1.3 2010/12/24 14:23:28 noud4 Exp $
 
-SHA1 (papyon-0.4.6.tar.gz) = ead88deaa47648697e27f20b37ab4a3e87e6d7fb
-RMD160 (papyon-0.4.6.tar.gz) = 084316d60c053b49577bafff8dbf79280f9d7d19
-Size (papyon-0.4.6.tar.gz) = 158683 bytes
+SHA1 (papyon-0.4.9.tar.gz) = 1c7f406cbdd9c186aa33693b72496b5f69b52bf8
+RMD160 (papyon-0.4.9.tar.gz) = 372f4d5292bb4ea01942dffb54a50e64b29c693c
+Size (papyon-0.4.9.tar.gz) = 152337 bytes
