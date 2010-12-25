@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/03/19 19:40:00 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/12/25 13:58:57 noud4 Exp $
 bin/gwget
-lib/epiphany/2.28/extensions/gwget.xml
-lib/epiphany/2.28/extensions/libgwgetextension.la
+lib/epiphany/2.29/extensions/gwget.xml
+lib/epiphany/2.29/extensions/libgwgetextension.la
 share/applications/gwget.desktop
 share/dbus-1/services/org.gnome.gwget.service
 share/gconf/schemas/gwget.schemas

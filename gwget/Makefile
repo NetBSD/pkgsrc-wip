@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2010/06/13 22:47:07 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2010/12/25 13:58:57 noud4 Exp $
 #
 
 DISTNAME=	gwget-1.0.4
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	gnome net
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gwget/1.0/}
 EXTRACT_SUFX=	.tar.bz2
@@ -20,7 +20,10 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config intltool msgfmt gmake
 
-GCONF_SCHEMAS+=	data/gwget.schemas
+GCONF_SCHEMAS+=	gwget.schemas
+
+pre-configure:
+	${LN} -s ${WRKSRC}/data/gwget.schemas ${WRKSRC}/gwget.schemas
 
 .include "options.mk"
 

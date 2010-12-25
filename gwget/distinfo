@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/03/19 19:40:00 jihbed Exp $
+$NetBSD: distinfo,v 1.2 2010/12/25 13:58:57 noud4 Exp $
 
 SHA1 (gwget-1.0.4.tar.bz2) = d2cc6eafb23488798939f99f6aad4e1a87f1d7c0
 RMD160 (gwget-1.0.4.tar.bz2) = 461bc7823aaf5043def1dbf15b07fb098216086d
 Size (gwget-1.0.4.tar.bz2) = 444843 bytes
+SHA1 (patch-aa) = 183db6db93ada3e6681c74a4c687e55a637dfe38
