@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2010/12/25 04:39:24 asau Exp $
+# $NetBSD: options.mk,v 1.9 2010/12/25 04:42:22 asau Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.erlang
 PKG_SUPPORTED_OPTIONS=	java erlang-hipe
@@ -42,7 +42,7 @@ CONFIGURE_ARGS+=	--disable-hipe
 .if !empty(PKG_OPTIONS:Miodbc)
 .  include "../../databases/iodbc/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-odbc=${BUILDLINK_PREFIX.iodbc}
-PLIST_SRC+=		PLIST.odbc
+PLIST.odbc=	yes
 .endif
 
 .if !empty(PKG_OPTIONS:Munixodbc)
