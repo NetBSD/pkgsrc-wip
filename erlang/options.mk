@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.11 2010/12/25 06:24:31 asau Exp $
+# $NetBSD: options.mk,v 1.12 2010/12/25 06:51:53 asau Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.erlang
 PKG_SUPPORTED_OPTIONS=	java erlang-hipe
@@ -18,7 +18,7 @@ PKG_SUGGESTED_OPTIONS+=	erlang-hipe
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=	hipe odbc
+PLIST_VARS+=	odbc
 
 .if !empty(PKG_OPTIONS:Mjava)
 USE_JAVA=		yes
@@ -31,7 +31,7 @@ CONFIGURE_ARGS+=	--without-javac
 
 .if !empty(PKG_OPTIONS:Merlang-hipe)
 CONFIGURE_ARGS+=	--enable-hipe
-PLIST.hipe=	yes
+PLIST_SRC+=		PLIST.hipe
 .else
 CONFIGURE_ARGS+=	--disable-hipe
 .endif
