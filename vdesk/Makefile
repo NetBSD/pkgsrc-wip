@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2010/12/24 18:20:48 noud4 Exp $
+# $NetBSD: Makefile,v 1.6 2010/12/25 12:45:45 noud4 Exp $
 #
 
 DISTNAME=		vdesk-1.2
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		wm x11
 MASTER_SITES=		http://offog.org/files/
 
@@ -19,10 +19,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/AUTHORS ${WRKSRC}/COPYING ${WRKSRC}/README \
 		${DESTDIR}${PREFIX}/share/doc/vdesk
 
-.include "../../mk/bsd.prefs.mk"
-.if ${X11_TYPE} == "modular"
 .include "../../x11/libX11/buildlink3.mk"
-.else
-.include "../../mk/x11.buildlink3.mk"
-.endif
 .include "../../mk/bsd.pkg.mk"

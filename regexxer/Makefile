@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2010/12/24 17:58:42 noud4 Exp $
+# $NetBSD: Makefile,v 1.22 2010/12/25 12:45:45 noud4 Exp $
 #
 
 DISTNAME=	regexxer-0.9
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=regexxer/}
 
@@ -28,9 +28,5 @@ GCONF_SCHEMAS=		regexxer.schemas
 .include "../../devel/libsigc++1/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../x11/gtkmm/buildlink3.mk"
-.if ${X11_TYPE} == "modular"
 .include "../../x11/libX11/buildlink3.mk"
-.else
-.include "../../mk/x11.buildlink3.mk"
-.endif
 .include "../../mk/bsd.pkg.mk"

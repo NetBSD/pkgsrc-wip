@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2010/12/24 18:34:49 noud4 Exp $
+# $NetBSD: Makefile,v 1.8 2010/12/25 12:45:45 noud4 Exp $
 #
 
 DISTNAME=		xace-0.4
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		emulators
 MASTER_SITES=		http://hem.passagen.se/tiletech/
 
@@ -37,10 +37,6 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/forth.txt ${PREFIX}/share/doc/xace
 	${INSTALL_PROGRAM} ${WRKSRC}/xace ${PREFIX}/bin
 
-.if ${X11_TYPE} == "modular"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
-.else
-.include "../../mk/x11.buildlink3.mk"
-.endif
 .include "../../mk/bsd.pkg.mk"
