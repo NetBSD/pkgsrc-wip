@@ -1,8 +1,14 @@
-@comment $NetBSD: PLIST,v 1.2 2010/08/12 07:51:56 asau Exp $
+@comment $NetBSD: PLIST,v 1.3 2010/12/25 02:44:53 bharder Exp $
 bin/tclsh8.6
 include/itcl.h
+include/itcl2TclOO.h
 include/itclDecls.h
 include/itclInt.h
+include/itclIntDecls.h
+include/itclMigrate2TclCore.h
+include/itclNeededFromTclOO.h
+include/itclTclIntStubsFcn.h
+include/itclVarsAndCmds.h
 include/tcl.h
 include/tclDecls.h
 include/tclInt.h
@@ -20,13 +26,13 @@ include/tclUnixPort.h
 include/tdbc.h
 include/tdbcDecls.h
 include/tdbcInt.h
-lib/itcl4.0b4/itcl.tcl
-lib/itcl4.0b4/itclConfig.sh
-lib/itcl4.0b4/itclHullCmds.tcl
-lib/itcl4.0b4/itclWidget.tcl
-lib/itcl4.0b4/libitcl4.0b4.so
-lib/itcl4.0b4/libitclstub4.0b4.a
-lib/itcl4.0b4/pkgIndex.tcl
+lib/itcl4.0b5/itcl.tcl
+lib/itcl4.0b5/itclConfig.sh
+lib/itcl4.0b5/itclHullCmds.tcl
+lib/itcl4.0b5/itclWidget.tcl
+lib/itcl4.0b5/libitcl4.0b5.so
+lib/itcl4.0b5/libitclstub4.0b5.a
+lib/itcl4.0b5/pkgIndex.tcl
 lib/libtcl8.6.so
 lib/libtclstub8.6.a
 lib/pkgconfig/tcl.pc
@@ -257,11 +263,14 @@ lib/tcl8/8.5/tcltest-2.3.2.tm
 lib/tcl8/8.6/http-2.8.2.tm
 lib/tclConfig.sh
 lib/tclooConfig.sh
-lib/tdbc1.0b14.1/libtdbc1.0b14.1.so
-lib/tdbc1.0b14.1/libtdbcstub1.0b14.1.a
-lib/tdbc1.0b14.1/pkgIndex.tcl
-lib/tdbc1.0b14.1/tdbc.tcl
-lib/tdbc1.0b14.1/tdbcConfig.sh
+lib/tdbc1.0b16/libtdbc1.0b16.so
+lib/tdbc1.0b16/libtdbcstub1.0b16.a
+lib/tdbc1.0b16/pkgIndex.tcl
+lib/tdbc1.0b16/tdbc.tcl
+lib/tdbc1.0b16/tdbcConfig.sh
+lib/thread2.6.6/libthread2.6.6.so
+lib/thread2.6.6/pkgIndex.tcl
+lib/thread2.6.6/ttrace.tcl
 man/man1/tclsh.1
 man/man3/TCL_MEM_DEBUG.3
 man/man3/Tcl_Access.3
@@ -1065,12 +1074,16 @@ man/mann/tdbc_resultset.n
 man/mann/tdbc_statement.n
 man/mann/tdbc_tokenize.n
 man/mann/tell.n
+man/mann/thread.n
 man/mann/throw.n
 man/mann/time.n
 man/mann/tm.n
+man/mann/tpool.n
 man/mann/trace.n
 man/mann/transchan.n
 man/mann/try.n
+man/mann/tsv.n
+man/mann/ttrace.n
 man/mann/unknown.n
 man/mann/unload.n
 man/mann/unset.n
@@ -1082,3 +1095,4 @@ man/mann/vwait.n
 man/mann/while.n
 man/mann/yield.n
 man/mann/zlib.n
+@pkgdir lib/tcl8/8.3

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2010/08/12 05:56:41 bharder Exp $
+# $NetBSD: Makefile,v 1.2 2010/12/25 02:44:53 bharder Exp $
 #
 
 DISTNAME=		tcl${TCL_PKGSRC_PATCHLEVEL}-src
@@ -21,10 +21,12 @@ CONFLICTS+=		tcl85-* tcl-[0-9]*
 WRKSRC=			${WRKDIR}/tcl${TCL_PKGSRC_PATCHLEVEL}
 
 GNU_CONFIGURE=	yes
+USE_TOOLS+=	gmake
 CONFIGURE_DIRS=	unix
 BUILD_DIRS=		${CONFIGURE_DIRS}
 
 CONFIGURE_ARGS+=	"--prefix=${PREFIX}"
+# CONFIGURE_ARGS+=	"--enable-shared=off"
 # CONFIGURE_ARGS+=	"--libexecdir=${PREFIX}/tcl${TCL_PKGSRC_PATCHLEVEL}"
 # CONFIGURE_ARGS+=	"--libdir=${PREFIX}/lib/tcl${TCL_PKGSRC_PATCHLEVEL}"
 # CONFIGURE_ARGS+=	"--includedir=${PREFIX}/include/tcl${TCL_PKGSRC_PATCHLEVEL}"
@@ -51,7 +53,7 @@ post-install:
 CVS_REPOSITORIES=	tcl
 CVS_ROOT.tcl=		:pserver:anonymous:@tcl.cvs.sourceforge.net:/cvsroot/tcl
 WRKSRC=			${WRKDIR}/tcl
-CHECKOUT_DATE=		2010-08-07
+CHECKOUT_DATE=		2010-12-23
 
 .include "../mk/cvs-package.mk"
 
