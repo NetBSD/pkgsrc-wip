@@ -1,11 +1,11 @@
-$NetBSD: patch-aa,v 1.1 2010/08/12 05:59:55 bharder Exp $
+$NetBSD: patch-aa,v 1.2 2010/12/25 02:55:18 bharder Exp $
 
---- unix/Makefile.in.orig	2010-03-23 10:45:13.000000000 +0000
-+++ unix/Makefile.in
-@@ -578,7 +578,7 @@ libraries:
+--- ./unix/Makefile.in.orig	2010-12-17 23:13:32.000000000 +0000
++++ ./unix/Makefile.in
+@@ -576,7 +576,7 @@ binaries: ${LIB_FILE} ${STUB_LIB_FILE} $
+ libraries:
  
  $(TOP_DIR)/doc/man.macros:
- 	chmod +x $(UNIX_DIR)/install-sh
 -	$(INSTALL_DATA) @TCL_SRC_DIR@/doc/man.macros $(TOP_DIR)/doc/man.macros
 +	$(INSTALL_DATA) $(MANN_INSTALL_DIR)/man.macros $(TOP_DIR)/doc/man.macros
  

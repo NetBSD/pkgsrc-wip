@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2010/08/12 05:59:55 bharder Exp $
+# $NetBSD: Makefile,v 1.2 2010/12/25 02:55:18 bharder Exp $
 
 DISTNAME=		tk${TK_PKGSRC_PATCHLEVEL}-src
 PKGNAME=		tk86-${TK_PKGSRC_PATCHLEVEL}
@@ -21,7 +21,9 @@ CONFIGURE_DIRS=	unix
 BUILD_DIRS=		${CONFIGURE_DIRS}
 
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
-CONFIGURE_ARGS+=	--with-tcl=${TCLCONFIG_SH_DIR}
+# CONFIGURE_ARGS+=	--with-tcl=${TCLCONFIG_SH_DIR}
+CONFIGURE_ARGS+=	--with-tcl=${PREFIX}/lib
+# CONFIGURE_ARGS+=	--enable-shared=no
 
 TEST_TARGET=	test
 INSTALL_TARGET=	install install-private-headers
@@ -38,7 +40,7 @@ post-install:
 CVS_REPOSITORIES=	tk
 CVS_ROOT.tk=	:pserver:anonymous:@tktoolkit.cvs.sourceforge.net:/cvsroot/tktoolkit
 WRKSRC=			${WRKDIR}/tk
-CHECKOUT_DATE=		2010-08-07
+CHECKOUT_DATE=		2010-12-23
 
 .include "../mk/cvs-package.mk"
 
