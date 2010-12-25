@@ -55,10 +55,13 @@ existing tools:
     pkg_update_summary:
        - use standard 'find -newer' instead of 'ls -1t' and
          non-portable 'test f1 -nt f2'
+       - nefore using modification time of pkg_summary.txt it is necessary
+        to ckeck pkg_summary.txt's content
 
     pkg_lint_summary:
+         - improve REQUIRES/PROVIDES checks, i.e. use
+           PROVIDES from dependencies only
          - CONFLICTS vs. actual PLISTs in packages
-         - versions consistency
          - old binaries
          - distfiles checksums
          - check binaries and their REQUIRES and analyse Makefile
