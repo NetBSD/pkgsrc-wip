@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2010/12/24 17:13:25 asau Exp $
+# $NetBSD: options.mk,v 1.8 2010/12/25 04:39:24 asau Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.erlang
 PKG_SUPPORTED_OPTIONS=	java erlang-hipe
@@ -17,6 +17,8 @@ PKG_SUGGESTED_OPTIONS=	# empty
 .endif
 
 .include "../../mk/bsd.options.mk"
+
+PLIST_VARS+=	odbc
 
 .if !empty(PKG_OPTIONS:Mjava)
 USE_JAVA=		yes
@@ -46,5 +48,8 @@ PLIST_SRC+=		PLIST.odbc
 .if !empty(PKG_OPTIONS:Munixodbc)
 .  include "../../databases/unixodbc/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-odbc=${BUILDLINK_PREFIX.unixodbc}
-PLIST_SRC+=		PLIST.odbc
+PLIST.odbc=	yes
 .endif
+
+# Help generate optional PLIST parts:
+PRINT_PLIST_AWK+=	{if ($$0 ~ /\/erlang\/lib\/odbc-${VERSION.odbc}\//) {$$0 = "$${PLIST.odbc}" $$0;}}
