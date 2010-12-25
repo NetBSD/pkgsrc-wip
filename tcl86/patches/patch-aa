@@ -1,0 +1,49 @@
+--- ./generic/tclCmdIL.c.orig	2010-12-10 05:08:53.000000000 -0800
++++ ./generic/tclCmdIL.c	2010-12-22 23:55:45.000000000 -0800
+@@ -3683,7 +3683,7 @@
+ 	     */
+ 
+ 	    if (sortInfo.indexc > 1) {
+-		TclStackFree(interp, sortInfo.indexv);
++		ckfree((char *) sortInfo.indexv);
+ 	    }
+ 	    if (i == objc-2) {
+ 		Tcl_AppendResult(interp, "\"-index\" option must be "
+@@ -3709,8 +3709,8 @@
+ 		sortInfo.indexv = &sortInfo.singleIndex;
+ 		break;
+ 	    default:
+-		sortInfo.indexv =
+-			TclStackAlloc(interp, sizeof(int) * sortInfo.indexc);
++		sortInfo.indexv = (int *)
++			ckalloc(sizeof(int) * sortInfo.indexc);
+ 		allocatedIndexVector = 1;	/* Cannot use indexc field, as
+ 						 * it might be decreased by 1
+ 						 * later. */
+@@ -3897,7 +3897,7 @@
+      * begins sorting it into the sublists as it appears.
+      */
+ 
+-    elementArray = TclStackAlloc(interp, length * sizeof(SortElement));
++    elementArray = (SortElement *) ckalloc(length * sizeof(SortElement));
+ 
+     for (i=0; i < length; i++){
+ 	idx = groupSize * i + groupOffset;
+@@ -4021,7 +4021,7 @@
+     }
+ 
+   done1:
+-    TclStackFree(interp, elementArray);
++    ckfree((char *) elementArray);
+ 
+   done:
+     if (sortInfo.sortMode == SORTMODE_COMMAND) {
+@@ -4031,7 +4031,7 @@
+     }
+   done2:
+     if (allocatedIndexVector) {
+-	TclStackFree(interp, sortInfo.indexv);
++	ckfree(sortInfo.indexv);
+     }
+     return sortInfo.resultCode;
+ }
