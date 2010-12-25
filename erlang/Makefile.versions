@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.versions,v 1.13 2010/12/24 17:16:42 asau Exp $
+# $NetBSD: Makefile.versions,v 1.14 2010/12/25 03:14:30 asau Exp $
 
 ERLANG_VERSION=			14.1.1
 DIST_VERSION_MAJOR=		R14B01
@@ -36,7 +36,7 @@ _VERSIONS=					\
 	megaco			3.15		\
 	mnesia			4.4.16		\
 	observer		0.9.8.4		\
-	odbc			2.10.8		\
+	odbc			2.10.9		\
 	orber			3.6.18		\
 	os_mon			2.2.5		\
 	otp_mibs		1.0.6		\
