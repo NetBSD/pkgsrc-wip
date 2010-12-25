@@ -51,6 +51,9 @@
 #              comparison if they (duplications) exist.  If -e was
 #              applied, = (or !) is output if package from summary2
 #              exists (or doesn't exist) in summary1
+#   -u         output A at the end of line for automatically
+#              installed packages and U for packages installed by user.
+#              automatic=yes is expected in summary1
 #.end-str
 ############################################################
 
@@ -66,6 +69,7 @@ BEGIN {
 	use_checksum    = getarg("c")
 	use_dep         = getarg("d")
 	check_existence = getarg("e")
+	user_auto       = getarg("u")
 
 	if (getarg("P")){
 		with_pkgpath = 1
@@ -82,6 +86,8 @@ BEGIN {
 	}
 
 	file1 = ARGV [ind]
+
+	installed_by_user = 1
 }
 
 function trim (s){
@@ -108,6 +114,11 @@ with_pkgpath && /^PKGPATH=/ {
 	next
 }
 
+user_auto && FILENAME == file1 && /^automatic=/ {
+	installed_by_user = tolower(trim(substr($0, 11))) != "yes"
+	next
+}
+
 with_pkgpath && /^ASSIGNMENTS=/ {
 	assigns = trim(substr($0, 13))
 	next
@@ -125,6 +136,19 @@ use_dep && /^DEPENDS=/ {
 		}
 	}
 	next
+}
+
+function get_ua_sufx (pkgbase){
+	if (user_auto){
+		if (! (pkgbase in pkgbase2ua))
+			return " ?"
+		else if (pkgbase2ua [pkgbase])
+			return " U"
+		else
+			return " A"
+	}else{
+		return ""
+	}
 }
 
 NF == 0 {
@@ -161,6 +185,11 @@ NF == 0 {
 	#
 	if (FILENAME == file1){
 		# first file!
+		if (user_auto)
+			pkgbase2ua [pkgbase] = installed_by_user
+
+		installed_by_user = 1
+
 		if (pkgbase in names){
 			if (check_existence){
 #				print "???", full_pkgbase, "!", full_pkgpaths [pkgbase]
@@ -187,6 +216,10 @@ NF == 0 {
 		# second file!
 		present [pkgbase] = 0
 
+		if (user_auto){
+			ua_sufx = get_ua_sufx(pkgbase)
+		}
+
 		if (pkgbase in duplicates){
 			if (check_existence){
 				if ((pkgbase "-" ver) in exists){
@@ -194,20 +227,20 @@ NF == 0 {
 						_full = exists [pkgbase "-" ver]
 						sub(/ .*$/, "", _full)
 						if (with_pkgname)
-							print "=", _full, full_pkgbase, ver
+							print "=", _full, full_pkgbase, ver ua_sufx
 						else
-							print "=", _full, full_pkgbase
+							print "=", _full, full_pkgbase ua_sufx
 					}else{
 						if (with_pkgname)
-							print "=", full_pkgbase, ver
+							print "=", full_pkgbase, ver ua_sufx
 						else
-							print "=", full_pkgbase
+							print "=", full_pkgbase ua_sufx
 					}
 				}else{
 					if (ver != "")
-						print "!", full_pkgbase, ver
+						print "!", full_pkgbase, ver ua_sufx
 					else
-						print "!", full_pkgbase
+						print "!", full_pkgbase ua_sufx
 				}
 			}
 
@@ -271,14 +304,14 @@ NF == 0 {
 			_full = full_pkgpaths [pkgbase]
 			sub(/ .*$/, "", _full)
 			if (with_pkgname)
-				print res, _full, full_pkgbase, ver1, ver
+				print res, _full, full_pkgbase, ver1, ver ua_sufx
 			else
-				print res, _full, full_pkgbase
+				print res, _full, full_pkgbase ua_sufx
 		}else{
 			if (with_pkgname)
-				print res, full_pkgbase, ver1, ver
+				print res, full_pkgbase, ver1, ver ua_sufx
 			else
-				print res, full_pkgbase
+				print res, full_pkgbase ua_sufx
 		}
 	}
 
@@ -287,6 +320,10 @@ NF == 0 {
 
 END {
 	for (pkgbase in names){
+		if (user_auto){
+			ua_sufx = get_ua_sufx(pkgbase)
+		}
+
 		if (! (pkgbase in present)){
 			if (names [pkgbase] != ""){
 				nm = " " names [pkgbase]
@@ -294,7 +331,7 @@ END {
 				nm = ""
 			}
 
-			print "-", full_pkgpaths [pkgbase] nm
+			print "-", full_pkgpaths [pkgbase] nm ua_sufx
 
 			delete duplicates [pkgbase]
 		}else if (!check_existence && (pkgbase in duplicates)){

@@ -79,52 +79,6 @@ cmp (){
 AWKPATH=`pwd`/.. ./pkgsrc-dewey-test < ./pkgsrc-dewey-test.txt 2>&1 |
 cmp 'pkgsrc-dewey.awk' ''
 
-# qqq
-pkg_cmp_summary -pe2 src_summary14.txt bin_summary3.txt | sort |
-cmp 'pkg_cmp_summary #17.1' \
-'! lang/ruby ruby 1.9.2
-= archivers/php-zip archivers/php-zip php5-zip 5.2.15.1.8.11
-= archivers/php-zip:PHP_VERSION_REQD=52 archivers/php-zip php5-zip 5.2.15
-= archivers/php-zip:PHP_VERSION_REQD=53 archivers/php-zip php53-zip 5.3.4 5.3.4
-= lang/ruby lang/ruby ruby 1.8.7.302
-'
-
-pkg_cmp_summary -pe src_summary14.txt bin_summary3.txt | sort |
-cmp 'pkg_cmp_summary #17.2' \
-'! lang/ruby ruby 1.9.2
-= archivers/php-zip php5-zip 5.2.15
-= archivers/php-zip php5-zip 5.2.15.1.8.11
-= archivers/php-zip php53-zip 5.3.4 5.3.4
-= lang/ruby ruby 1.8.7.302
-'
-
-pkg_cmp_summary -p src_summary14.txt bin_summary3.txt | sort |
-cmp 'pkg_cmp_summary #17.3' \
-'2 archivers/php-zip php5-zip
-2 lang/ruby ruby
-= archivers/php-zip php53-zip 5.3.4 5.3.4
-'
-
-pkg_cmp_summary -pe2 src_summary14.txt - < src_summary14.txt | sort |
-cmp 'pkg_cmp_summary #17.4' \
-'= archivers/php-zip archivers/php-zip php5-zip 5.2.15.1.8.11
-= archivers/php-zip:PHP_VERSION_REQD=52 archivers/php-zip:PHP_VERSION_REQD=52 php5-zip 5.2.15
-= archivers/php-zip:PHP_VERSION_REQD=53 archivers/php-zip:PHP_VERSION_REQD=53 php53-zip 5.3.4 5.3.4
-= lang/ruby lang/ruby ruby 1.8.7.302
-= lang/ruby:RUBY_VERSION_REQD=19 lang/ruby:RUBY_VERSION_REQD=19 ruby 1.9.2pl0
-'
-
-pkg_cmp_summary -pe2 bin_summary3.txt - < bin_summary3.txt | sort |
-cmp 'pkg_cmp_summary #17.5' \
-'= archivers/php-zip archivers/php-zip php5-zip 5.2.15
-= archivers/php-zip archivers/php-zip php5-zip 5.2.15.1.8.11
-= archivers/php-zip archivers/php-zip php53-zip 5.3.4 5.3.4
-= lang/ruby lang/ruby ruby 1.8.7.302
-= lang/ruby lang/ruby ruby 1.9.2
-'
-
-exit 1
-
 # pkg_summary2leaves
 pkg_summary2leaves -p bin_summary2.txt | sort |
 cmp 'pkg_summary2leaves #1' \
@@ -2022,8 +1976,8 @@ cmp 'pkg_cmp_summary #1.1' \
 - ap22-vhost-ldap 1.2.0nb1
 = awk-pkgsrc-dewey 0.5.6 0.5.6
 = checkperms 1.10 1.10
-= dict-client dict-client 1.10.11nb2
-= dict-client dict-client 1.9.15nb2
+= dict-client 1.10.11nb2
+= dict-client 1.9.15nb2
 < dict-server 1.10.11nb2 1.11.0
 = dictem 0.82 0.82
 + digest 99.99.99
@@ -2172,6 +2126,95 @@ cmp 'pkg_cmp_summary #15' \
 pkg_cmp_summary -d summary3.txt summary1.txt |
 cmp 'pkg_cmp_summary #16' \
 '= baz 1.2.3 1.2.3
+'
+
+pkg_cmp_summary -pe2 src_summary14.txt bin_summary3.txt | sort |
+cmp 'pkg_cmp_summary #17.1' \
+'! lang/ruby ruby 1.9.2
+= archivers/php-zip archivers/php-zip php5-zip 5.2.15.1.8.11
+= archivers/php-zip:PHP_VERSION_REQD=52 archivers/php-zip php5-zip 5.2.15
+= archivers/php-zip:PHP_VERSION_REQD=53 archivers/php-zip php53-zip 5.3.4 5.3.4
+= lang/ruby lang/ruby ruby 1.8.7.302
+'
+
+pkg_cmp_summary -pe src_summary14.txt bin_summary3.txt | sort |
+cmp 'pkg_cmp_summary #17.2' \
+'! lang/ruby ruby 1.9.2
+= archivers/php-zip php5-zip 5.2.15
+= archivers/php-zip php5-zip 5.2.15.1.8.11
+= archivers/php-zip php53-zip 5.3.4 5.3.4
+= lang/ruby ruby 1.8.7.302
+'
+
+pkg_cmp_summary -p src_summary14.txt bin_summary3.txt | sort |
+cmp 'pkg_cmp_summary #17.3' \
+'2 archivers/php-zip php5-zip
+2 lang/ruby ruby
+= archivers/php-zip php53-zip 5.3.4 5.3.4
+'
+
+pkg_cmp_summary -pe2 src_summary14.txt - < src_summary14.txt | sort |
+cmp 'pkg_cmp_summary #17.4' \
+'= archivers/php-zip archivers/php-zip php5-zip 5.2.15.1.8.11
+= archivers/php-zip:PHP_VERSION_REQD=52 archivers/php-zip:PHP_VERSION_REQD=52 php5-zip 5.2.15
+= archivers/php-zip:PHP_VERSION_REQD=53 archivers/php-zip:PHP_VERSION_REQD=53 php53-zip 5.3.4 5.3.4
+= lang/ruby lang/ruby ruby 1.8.7.302
+= lang/ruby:RUBY_VERSION_REQD=19 lang/ruby:RUBY_VERSION_REQD=19 ruby 1.9.2pl0
+'
+
+pkg_cmp_summary -pe2 bin_summary3.txt - < bin_summary3.txt | sort |
+cmp 'pkg_cmp_summary #17.5' \
+'= archivers/php-zip archivers/php-zip php5-zip 5.2.15
+= archivers/php-zip archivers/php-zip php5-zip 5.2.15.1.8.11
+= archivers/php-zip archivers/php-zip php53-zip 5.3.4 5.3.4
+= lang/ruby lang/ruby ruby 1.8.7.302
+= lang/ruby lang/ruby ruby 1.9.2
+'
+
+pkg_cmp_summary -pu bin_summary2.txt - < bin_summary3.txt | sort |
+cmp 'pkg_cmp_summary #18.1' \
+'+ archivers/php-zip php5-zip 5.2.15
++ archivers/php-zip php5-zip 5.2.15.1.8.11
++ archivers/php-zip php53-zip 5.3.4
++ lang/ruby ruby 1.8.7.302
++ lang/ruby ruby 1.9.2
+- devel/libmaa libmaa 1.2.0 U
+- devel/pipestatus pipestatus 0.6.0 U
+- pkgtools/digest digest 20080510 A
+- textproc/dict-client dict-client 1.11.2 U
+- textproc/dict-server dict-server 1.11.2 U
+- wip/distbb distbb 0.38.1 A
+- wip/mk-configure mk-configure 0.21.0 A
+- wip/paexec paexec 0.15.0 A
+- wip/pkg_status pkg_status 0.11 A
+- wip/pkg_summary-utils pkg_summary-utils 0.49.1nb1 A
+- wip/runawk runawk 1.2.0 A
+'
+
+pkg_cmp_summary -pu bin_summary2.txt - < bin_summary1.txt | sort |
+cmp 'pkg_cmp_summary #18.2' \
+'+ devel/gmake gmake 3.81
++ devel/libtool-base libtool-base 1.5.26nb2
++ net/netcat netcat 1.10nb2
++ sysutils/checkperms checkperms 1.10
++ wip/awk-pkgsrc-dewey awk-pkgsrc-dewey 0.5.6
++ wip/dict-client dict-client 1.11.2
++ wip/dict-server dict-server 1.11.2
++ wip/pkg_conflicts pkg_conflicts 0.4.0
++ wip/pkg_online pkg_online 0.9.1
++ wip/pkg_online-client pkg_online-client 0.9.1
++ wip/pkg_online-server pkg_online-server 0.9.1
+- pkgtools/digest digest 20080510 A
+- textproc/dict-client dict-client 1.11.2 U
+- textproc/dict-server dict-server 1.11.2 U
+- wip/mk-configure mk-configure 0.21.0 A
+- wip/pkg_status pkg_status 0.11 A
+= devel/pipestatus pipestatus 0.6.0 0.6.0 U
+> devel/libmaa libmaa 1.2.0 1.1.0 U
+> wip/distbb distbb 0.38.1 0.33.0 A
+> wip/paexec paexec 0.15.0 0.13.0nb1 A
+> wip/pkg_summary-utils pkg_summary-utils 0.49.1nb1 0.35rc1 A
+> wip/runawk runawk 1.2.0 0.18.0 A
 '
 
 # pkg_summary2deps -Ap
