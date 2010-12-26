@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2010/06/13 22:47:10 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.22 2010/12/26 05:01:22 davesainty Exp $
 #
 
 DISTNAME=	links-hacked-${VER}
@@ -63,7 +63,7 @@ pre-configure:
 
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../databases/gdbm/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/06/13 22:47:10 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2010/12/26 05:01:22 davesainty Exp $
 #
 
 DISTNAME=		libpano12-2.7.0.8
@@ -19,7 +19,7 @@ post-extract:
 	${CP} ${FILESDIR}/makefile.netbsd ${WRKSRC}/makefile.netbsd
 
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../mk/java-vm.mk"

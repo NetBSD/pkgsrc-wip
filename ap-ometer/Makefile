@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2010/06/13 22:46:56 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.17 2010/12/26 05:01:21 davesainty Exp $
 #
 
 DISTNAME=	mod_ometer-1.3.0
@@ -16,7 +16,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-freetype=${BUILDLINK_PREFIX.freetype2}
 CONFIGURE_ARGS+=	--with-libpng=${BUILDLINK_PREFIX.png}
 CONFIGURE_ARGS+=	--with-db=${BUILDLINK_PREFIX.db4}
-CONFIGURE_ARGS+=	--with-jpeg=${BUILDLINK_PREFIX.jpeg}
+CONFIGURE_ARGS+=	--with-jpeg=${JPEGBASE}
 CONFIGURE_ARGS+=	--with-libpng=${BUILDLINK_PREFIX.png}
 CONFIGURE_ARGS+=	--with-odometerdb=${VARBASE}/odometer/odometer.db
 
@@ -28,7 +28,7 @@ BUILDLINK_TRANSFORM+=l:db:db4
 .include "../../www/apache/module.mk"
 
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../databases/db4/buildlink3.mk"
 .include "../../graphics/gd/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"

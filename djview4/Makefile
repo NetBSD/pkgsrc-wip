@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/06/13 22:46:59 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2010/12/26 05:01:21 davesainty Exp $
 #
 
 DISTNAME=	djview4-4.3
@@ -19,5 +19,5 @@ USE_LANGUAGES=	c c++
 .include "../../x11/qt4-libs/buildlink3.mk"
 .include "../../x11/qt4-tools/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2010/06/13 22:47:03 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.14 2010/12/26 05:01:22 davesainty Exp $
 #
 
 DISTNAME=	esmart-0.9.0.042
@@ -28,5 +28,5 @@ pre-configure:
 .include "../../wip/epsilon/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../graphics/imlib2/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

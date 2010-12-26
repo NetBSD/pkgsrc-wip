@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2010/09/12 09:24:24 cheusov Exp $
+# $NetBSD: options.mk,v 1.7 2010/12/26 05:01:23 davesainty Exp $
 
 .if defined(PKGNAME) && empty(PKGNAME:Mmplayer-share*)
 
@@ -200,7 +200,7 @@ CONFIGURE_ARGS+=	--disable-gif
 
 .if !empty(PKG_OPTIONS:Mjpeg)
 CONFIGURE_ARGS+=	--enable-jpeg
-.  include "../../graphics/jpeg/buildlink3.mk"
+.  include "../../mk/jpeg.buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-jpeg
 .endif

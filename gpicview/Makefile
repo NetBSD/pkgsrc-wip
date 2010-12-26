@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/06/13 22:47:05 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2010/12/26 05:01:22 davesainty Exp $
 
 DISTNAME=				gpicview-0.1.11
 PKGREVISION=		3
@@ -15,6 +15,6 @@ GNU_CONFIGURE=	yes
 USE_TOOLS+=			pkg-config gmake
 
 .include "../../x11/gtk2/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"

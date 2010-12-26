@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2010/06/13 22:47:12 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.17 2010/12/26 05:01:23 davesainty Exp $
 #
 
 DISTNAME=	navigatrix-0.5
@@ -22,6 +22,6 @@ CONFIGURE_ARGS+=	--with-extra-libs=${LOCALBASE}/libs
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../audio/arts/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

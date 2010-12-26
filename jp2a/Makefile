@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/01/18 09:38:25 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2010/12/26 05:01:22 davesainty Exp $
 #
 
 DISTNAME=	jp2a-1.0.6
@@ -30,7 +30,7 @@ CONFIGURE_ARGS+=	--disable-curl
 CONFIGURE_ARGS+=	--disable-termlib
 .endif
 
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 
 .if !empty(PKG_OPTIONS:Mcurl)
 .include "../../www/curl/buildlink3.mk"

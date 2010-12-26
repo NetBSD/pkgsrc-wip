@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/06/13 22:46:59 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2010/12/26 05:01:21 davesainty Exp $
 #
 
 DISTNAME=	efltk-2.0.8
@@ -28,7 +28,7 @@ CONFIGURE_ARGS+=	--disable-shared
 .include "options.mk"
 
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"

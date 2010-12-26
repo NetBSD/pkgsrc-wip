@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2010/08/15 01:04:52 obache Exp $
+# $NetBSD: Makefile,v 1.13 2010/12/26 05:01:23 davesainty Exp $
 #
 
 DISTNAME=	swftools-0.9.1
@@ -27,7 +27,7 @@ INSTALL_MAKE_FLAGS+=	mandir=${DESTDIR}/${PREFIX}/${PKGMANDIR}
 
 BUILDLINK_INCDIRS.fontconfig=	include/fontconfig
 .include "../../fonts/fontconfig/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/libungif/buildlink3.mk"
 .include "../../multimedia/ming/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"

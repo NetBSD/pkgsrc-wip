@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2010/06/13 22:47:22 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.15 2010/12/26 05:01:24 davesainty Exp $
 #
 
 DISTNAME=		zapping-0.9.6
@@ -28,7 +28,7 @@ GCONF_SCHEMAS+=	zapping.schemas
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../lang/python/extension.mk"
 .include "../../mk/omf-scrollkeeper.mk"

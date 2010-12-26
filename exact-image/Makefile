@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/06/13 22:47:03 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2010/12/26 05:01:22 davesainty Exp $
 #
 
 DISTNAME=	exact-image-0.7.5
@@ -28,7 +28,7 @@ post-extract:
 .include "../../graphics/agg/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/jasper/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/lcms/buildlink3.mk"
 .include "../../graphics/libungif/buildlink3.mk"
 .include "../../graphics/openexr/buildlink3.mk"

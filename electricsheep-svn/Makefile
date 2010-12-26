@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/01/31 17:27:49 rhialto Exp $
+# $NetBSD: Makefile,v 1.2 2010/12/26 05:01:21 davesainty Exp $
 
 PKGNAME=		electricsheep-2.7
 DISTNAME=		electricsheep
@@ -40,7 +40,7 @@ do-install:
 	${INSTALL} -d -m 0755 ${DESTDIR}/${PREFIX}/libexec/xscreensaver/config
 	${INSTALL_DATA} ${WRKSRC}/electricsheep.xml ${DESTDIR}/${PREFIX}/libexec/xscreensaver/config
 
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 # for libavformat:
 .include "../../multimedia/ffmpeg/buildlink3.mk"
 .include "../../devel/libglade/buildlink3.mk"

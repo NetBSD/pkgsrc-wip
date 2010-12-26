@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2010/06/13 22:47:03 thomasklausner Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2010/12/26 05:01:22 davesainty Exp $
 
 BUILDLINK_TREE+=	esmart
 
@@ -15,7 +15,7 @@ BUILDLINK_PKGSRCDIR.esmart?=	../../wip/esmart
 .include "../../wip/epsilon/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../graphics/imlib2/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .endif # ESMART_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-esmart

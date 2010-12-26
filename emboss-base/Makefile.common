@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2008/05/24 15:34:09 tnn2 Exp $
+# $NetBSD: Makefile.common,v 1.9 2010/12/26 05:01:22 davesainty Exp $
 # used by wip/emboss-domainatrix/Makefile
 # used by wip/emboss-emnu/Makefile
 # used by wip/emboss-hmmer/Makefile
@@ -31,6 +31,6 @@ PKG_DISTFILES_DIR=	emboss
 
 .include "../../graphics/gd/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"

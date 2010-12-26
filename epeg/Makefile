@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2010/01/18 09:38:20 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.13 2010/12/26 05:01:22 davesainty Exp $
 #
 
 DISTNAME=	epeg-0.9.1.042
@@ -19,5 +19,5 @@ USE_LIBTOOL=	yes
 USE_TOOLS=	gmake pkg-config
 
 .include "../../wip/ecore/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

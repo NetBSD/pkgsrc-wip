@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/06/13 22:47:15 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2010/12/26 05:01:23 davesainty Exp $
 #
 
 PKGNAME=	scorched3d-42.1
@@ -29,7 +29,7 @@ CONFIGURE_ARGS+=	--with-docdir="${PREFIX}/share/doc/${PKGBASE}"
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../graphics/Mesa/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../math/fftwf/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"

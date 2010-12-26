@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/08/01 14:57:10 asau Exp $
+# $NetBSD: Makefile,v 1.7 2010/12/26 05:01:24 davesainty Exp $
 #
 
 PKGNAME=		vncselector-1.6.1
@@ -16,7 +16,7 @@ USE_LANGUAGES=		c c++ fortran77
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
 
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../x11/fltk/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"

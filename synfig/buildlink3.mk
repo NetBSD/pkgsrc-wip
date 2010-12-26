@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2010/01/18 09:38:33 thomasklausner Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2010/12/26 05:01:23 davesainty Exp $
 
 BUILDLINK_TREE+=	synfig
 
@@ -21,7 +21,7 @@ pkgbase:= synfig
 .  endif
 
 .  if !empty(PKG_BUILD_OPTIONS.synfig:Mjpeg)
-.    include "../../graphics/jpeg/buildlink3.mk"
+.    include "../../mk/jpeg.buildlink3.mk"
 .  endif
 
 .  if !empty(PKG_BUILD_OPTIONS.synfig:Mfreetype)

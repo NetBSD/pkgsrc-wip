@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2010/06/13 22:47:19 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2010/12/26 05:01:23 davesainty Exp $
 
 DISTNAME=	sxemacs-22.1.5
 PKGREVISION=	3
@@ -79,7 +79,7 @@ PLIST_SUBST+=	X11ONLY=""
 .include "../../mk/oss.buildlink3.mk"
 
 .include "../../databases/gdbm/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"

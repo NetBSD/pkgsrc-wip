@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/06/13 22:47:20 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2010/12/26 05:01:23 davesainty Exp $
 #
 
 DISTNAME=	trackballs-1.1.2
@@ -32,5 +32,5 @@ SUBST_SED.share=	-e 's|install -D|${INSTALL_DATA:Q}|'
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../graphics/SDL_image/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

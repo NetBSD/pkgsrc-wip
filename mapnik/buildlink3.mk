@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2010/06/13 22:47:11 thomasklausner Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2010/12/26 05:01:22 davesainty Exp $
 
 BUILDLINK_TREE+=	mapnik
 
@@ -13,7 +13,7 @@ BUILDLINK_PKGSRCDIR.mapnik?=	../../wip/mapnik
 .include "../../devel/libltdl/buildlink3.mk"
 #.include "../../devel/zlib/buildlink3.mk"
 #.include "../../graphics/freetype2/buildlink3.mk"
-#.include "../../graphics/jpeg/buildlink3.mk"
+#.include "../../mk/jpeg.buildlink3.mk"
 #.include "../../graphics/png/buildlink3.mk"
 #.include "../../graphics/tiff/buildlink3.mk"
 #.include "../../geography/proj/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.12 2009/12/12 20:09:33 thomasklausner Exp $
+# $NetBSD: options.mk,v 1.13 2010/12/26 05:01:21 davesainty Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.avifile-devel
 PKG_SUPPORTED_OPTIONS=	sdl faad qt vorbis xvid mad a52 lame jpeg ac3_passthrough
@@ -130,7 +130,7 @@ CONFIGURE_ARGS+=	--disable-ac3passthrough
 .endif
 
 .if !empty(PKG_OPTIONS:Mjpeg)
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 PLIST.jpeg=		yes
 .endif
 

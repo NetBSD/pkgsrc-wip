@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2010/11/13 00:29:41 cheusov Exp $
+# $NetBSD: Makefile,v 1.15 2010/12/26 05:01:24 davesainty Exp $
 
 PKGNAME=		xmoto-${VERSION}
 DISTNAME=		xmoto-${VERSION}-src
@@ -56,7 +56,7 @@ pre-install:
 .include "../../multimedia/smpeg/buildlink3.mk"
 .include "../../wip/ode/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../net/SDL_net/buildlink3.mk"

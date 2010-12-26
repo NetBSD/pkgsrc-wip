@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/01/31 17:25:56 rhialto Exp $
+# $NetBSD: Makefile,v 1.2 2010/12/26 05:01:22 davesainty Exp $
 
 PKGNAME=		flam3-2.7
 DISTNAME=		flam3
@@ -19,7 +19,7 @@ WRKSRC=			${WRKDIR}/flam3/src
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../wip/mk/svn-package.mk"

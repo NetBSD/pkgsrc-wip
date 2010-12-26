@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2010/06/13 22:47:06 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.25 2010/12/26 05:01:22 davesainty Exp $
 
 DISTNAME=		grass-${GRASS_VERSION}
 PKGREVISION=		3
@@ -68,7 +68,7 @@ post-install:
 .include "../../geography/proj/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/gd/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../lang/tcl/buildlink3.mk"

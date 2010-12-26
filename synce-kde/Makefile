@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/06/13 22:47:20 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2010/12/26 05:01:23 davesainty Exp $
 #
 
 DISTNAME=		synce-kde-0.9.1
@@ -19,7 +19,7 @@ USE_TOOLS+=		gmake
 CONFIGURE_ARGS+=	--with-librra=${PREFIX}
 #ONFIGURE_ARGS+=	--datadir=${PREFIX}/share/kde
 
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../comms/synce-librapi2/buildlink3.mk"
 .include "../../comms/synce-rra/buildlink3.mk"
 .include "../../wip/synce-orange/buildlink3.mk"

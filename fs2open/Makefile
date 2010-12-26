@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/11/17 08:03:41 yhardy Exp $
+# $NetBSD: Makefile,v 1.5 2010/12/26 05:01:22 davesainty Exp $
 #
 
 PKGNAME=	fs2_open-3.6.12
@@ -29,7 +29,7 @@ do-install:
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../audio/openal/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../lang/lua/buildlink3.mk"
 .include "../../multimedia/libtheora/buildlink3.mk"

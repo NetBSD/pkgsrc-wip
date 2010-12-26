@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2010/10/21 08:13:50 makoto Exp $
+# $NetBSD: Makefile,v 1.10 2010/12/26 05:01:22 davesainty Exp $
 
 VERS=		4.4.7
 DISTNAME=	hylafax-${VERS}
@@ -68,7 +68,7 @@ CONFIGURE_ARGS+=	--disable-pam
 .endif
 
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2010/06/13 22:47:08 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.10 2010/12/26 05:01:22 davesainty Exp $
 
 DISTNAME=hplip-1.6.10
 PKGREVISION=	5
@@ -54,7 +54,7 @@ CONFIGURE_ARGS= --sysconfdir=${EGDIR:Q} \
 .include "../../textproc/py-xml/buildlink3.mk"
 .include "../../x11/py-qt3-base/buildlink3.mk"
 .include "../../devel/py-readline/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/sane-backends/buildlink3.mk"
 .include "../../print/cups/buildlink3.mk"
 .include "../../devel/libusb/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/01/18 09:38:25 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2010/12/26 05:01:22 davesainty Exp $
 #
 
 DISTNAME=		jpgtn-2.06
@@ -13,5 +13,5 @@ COMMENT=		Thumbnail generator for JPEG images
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

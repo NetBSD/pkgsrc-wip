@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2010/06/13 22:47:09 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.20 2010/12/26 05:01:22 davesainty Exp $
 #
 
 DISTNAME=		kvirc-3.4.2
@@ -49,7 +49,7 @@ CONFIGURE_ARGS+=	--with-ix86-asm
 .include "../../audio/gsm/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../fonts/Xft2/buildlink3.mk"
 .include "../../lang/perl5/buildlink3.mk"

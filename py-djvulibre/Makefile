@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/11/16 13:11:26 ryo-on Exp $
+# $NetBSD: Makefile,v 1.3 2010/12/26 05:01:23 davesainty Exp $
 #
 DISTNAME=	python-djvulibre-0.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//}
@@ -25,5 +25,5 @@ PYDISTUTILSPKG=	yes
 .include "../../lang/python/extension.mk"
 .include "../../devel/py-cython/buildlink3.mk"
 .include "../../graphics/djvulibre-lib/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

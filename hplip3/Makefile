@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2010/09/04 09:25:32 gregoire Exp $
+# $NetBSD: Makefile,v 1.27 2010/12/26 05:01:22 davesainty Exp $
 #
 
 DISTNAME=		hplip-3.10.6
@@ -139,7 +139,7 @@ post-install:
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../net/net-snmp/buildlink3.mk"
 .include "../../print/cups/buildlink3.mk"
 .include "../../print/ghostscript/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/01/18 09:38:35 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2010/12/26 05:01:24 davesainty Exp $
 
 DISTNAME=		wings-0.98.29b
 PKGREVISION=		2
@@ -35,6 +35,6 @@ do-install:
 .include "../../lang/erlang/buildlink3.mk"
 BUILDLINK_API_DEPENDS.erlang+=	erlang>=10
 .include "../../wip/esdl/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

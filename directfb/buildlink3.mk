@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2010/06/13 22:46:59 thomasklausner Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2010/12/26 05:01:21 davesainty Exp $
 
 BUILDLINK_TREE+=	DirectFB
 
@@ -11,7 +11,7 @@ BUILDLINK_PKGSRCDIR.DirectFB?=	../../wip/directfb
 
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
 .endif # DIRECTFB_BUILDLINK3_MK

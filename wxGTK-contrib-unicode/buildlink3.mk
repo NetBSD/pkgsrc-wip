@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2010/06/13 22:47:21 thomasklausner Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2010/12/26 05:01:24 davesainty Exp $
 
 BUILDLINK_TREE+=	wxGTK-contrib-unicode
 
@@ -11,7 +11,7 @@ BUILDLINK_PKGSRCDIR.wxGTK-contrib-unicode?=	../../wip/wxGTK-contrib-unicode
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"

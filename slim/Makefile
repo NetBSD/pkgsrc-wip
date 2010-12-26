@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2010/06/21 12:55:28 shindenmorr Exp $
+# $NetBSD: Makefile,v 1.10 2010/12/26 05:01:23 davesainty Exp $
 #
 
 DISTNAME=	slim-1.3.1
@@ -71,7 +71,7 @@ do-install:
 .include "../../x11/libXmu/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
 .include "../../x11/libXrender/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"

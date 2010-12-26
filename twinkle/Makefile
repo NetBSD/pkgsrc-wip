@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2010/06/13 22:47:20 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.13 2010/12/26 05:01:24 davesainty Exp $
 #
 
 DISTNAME=		twinkle-1.4.2
@@ -18,7 +18,7 @@ USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		have_lrelease=${QTDIR}/bin/lrelease
 # for broken jpeg detection
-CONFIGURE_ARGS+=	--with-extra-includes=${BUILDLINK_PREFIX.jpeg}/include
+CONFIGURE_ARGS+=	--with-extra-includes=${JPEGBASE}/include
 CPPFLAGS+=		-I${BUILDLINK_PREFIX.commoncpp2}/include/cc++2
 
 SUBST_CLASSES+=		boost

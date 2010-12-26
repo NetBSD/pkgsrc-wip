@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2010/01/18 09:38:35 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.14 2010/12/26 05:01:24 davesainty Exp $
 #
 
 DISTNAME=	yafray-0.0.7
@@ -32,7 +32,7 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/loader/.libs/yafray ${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/src/yafraycore/.libs/libyafraycore.so ${PREFIX}/lib
 
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 
 .include "../../mk/pthread.buildlink3.mk"

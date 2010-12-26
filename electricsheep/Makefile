@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2010/06/13 22:47:02 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.11 2010/12/26 05:01:21 davesainty Exp $
 
 DISTNAME=		electricsheep-2.6.8
 PKGREVISION=		2
@@ -34,7 +34,7 @@ post-patch:
 	${SED} < ${WRKSRC}/electricsheep.c.orig > ${WRKSRC}/electricsheep.c \
 		-e 's|/usr/local/share|${DESTDIR}/${PREFIX}/share/electricsheep|'
 
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"

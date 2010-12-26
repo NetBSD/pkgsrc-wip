@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2010/06/13 22:46:59 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.23 2010/12/26 05:01:21 davesainty Exp $
 
 DISTNAME=	DirectFB-0.9.22
 PKGNAME=	directfb-0.9.22
@@ -26,7 +26,7 @@ CONFIGURE_ARGS+=	--with-gfxdrivers=all
 .endif
 
 .include "../../graphics/freetype2/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

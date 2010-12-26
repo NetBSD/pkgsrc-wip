@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2010/06/13 22:46:58 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.10 2010/12/26 05:01:21 davesainty Exp $
 #
 
 #DISTNAME=		cinelerra-1.2.0-src
@@ -48,7 +48,7 @@ USE_TOOLS+=		gmake
 #  libmpeg3
 # jpeg-mmx
 .include "../../graphics/freetype2/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/06/13 22:47:12 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2010/12/26 05:01:23 davesainty Exp $
 #
 
 DISTNAME=		panda-0.5.4
@@ -27,7 +27,7 @@ post-extract:
 	cp ${FILESDIR}/* ${WRKSRC}/config/
 
 .include "../../graphics/tiff/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../databases/edb/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
