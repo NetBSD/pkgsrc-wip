@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2010/12/26 12:27:10 ftigeot Exp $
+# $NetBSD: Makefile,v 1.49 2010/12/26 13:25:10 ftigeot Exp $
 
 .include "../../wip/jdk16/Makefile.common"
 
@@ -81,7 +81,7 @@ JRL_BINFILE=		${DISTNAME}-fcs-bin-${JDK_VERSION_STRING}.jar
 PATCHSETFILE=		bsd-jdk15-patches-${JDK_PATCHSET_VERSION}.tar.bz2
 SOL_BINFILE=		${DISTNAME}-solaris-i586.tar.Z
 
-JRL_DOWNLOAD=	http://download.java.net/tiger/archive/tiger_u${JDK_UPDATE}/
+JRL_DOWNLOAD=	https://tiger.dev.java.net/
 PATCH_DOWNLOAD=	http://www.eyesbeyond.com/freebsddom/java/JDK15JRLConfirm.html
 
 # Use JAVA_MACHINE_ARCH rather than MACHINE as we would want to share
