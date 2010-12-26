@@ -1,0 +1,16 @@
+--- j2se/make/common/shared/Platform.gmk.orig	2010-12-26 15:11:59 +0000
++++ j2se/make/common/shared/Platform.gmk	2010-12-26 15:21:25 +0000
+@@ -374,6 +374,13 @@
+   REQUIRED_OS_VERSION = 4.0
+ endif
+ 
++ifeq ($(SYSTEM_UNAME), DragonFly)
++  PLATFORM = bsd
++  OS_NAME = dragonfly
++  OS_VENDOR = DragonFly
++  REQUIRED_OS_VERSION = 2.6
++endif
++
+ # Platform settings specific to BSD
+ ifeq ($(PLATFORM), bsd)
+   OS_VERSION := $(shell uname -r)
