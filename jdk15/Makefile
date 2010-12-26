@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2010/12/19 09:02:21 ftigeot Exp $
+# $NetBSD: Makefile,v 1.48 2010/12/26 12:27:10 ftigeot Exp $
 
 .include "../../wip/jdk16/Makefile.common"
 
@@ -72,6 +72,7 @@ MAKE_ENV+=		ABS_OUTPUTDIR=${OUTPUTDIR}
 MAKE_ENV+=		HOTSPOT_BUILD_JOBS=${MAKE_JOBS}
 MAKE_ENV+=		OUTPUTDIR=${OUTPUTDIR}
 MAKE_ENV+=		DONT_BUILD_DOCS="YES"
+MAKE_ENV+=		BUILD_PLUGIN=false
 
 # MAKE_ENV+=		WRAPPER_DEBUG=yes
 
@@ -153,7 +154,7 @@ SUBST_SED.paths+=	-e 's,%%JVM_HOME%%,${JVM_HOME},g'
 
 .include "options.mk"
 
-PLIST_VARS+=    jce plugin client_jvm
+PLIST_VARS+=    jce client_jvm
 PLIST_SUBST+=	JAVA_MACHINE_ARCH=${JAVA_MACHINE_ARCH:Q}
 
 .if ${MACHINE_ARCH} == "i386"
