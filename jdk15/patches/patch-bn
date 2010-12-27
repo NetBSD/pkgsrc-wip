@@ -1,0 +1,12 @@
+--- j2se/src/share/classes/sun/awt/FontConfiguration.java.orig	2010-12-27 12:44:25 +0100
++++ j2se/src/share/classes/sun/awt/FontConfiguration.java	2010-12-27 13:35:55 +0100
+@@ -1288,7 +1288,8 @@
+ 				   + "<filename." 
+ 				   + getString(table_componentFontNameIDs[ii])
+                                    + "> entry is missing!!!");
+-                if (!osName.contains("Linux") && !osName.contains("BSD")) {
++                if (!osName.contains("Linux") && !osName.contains("BSD")
++                                        && !osName.contains("DragonFly")) {
+ 		    errors++;
+ 		}
+             }

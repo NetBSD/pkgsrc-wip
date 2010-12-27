@@ -1,12 +1,13 @@
---- j2se/make/sun/awt/Makefile.orig	2010-12-05 18:36:17 +0100
-+++ j2se/make/sun/awt/Makefile	2010-12-05 19:22:39 +0100
-@@ -538,7 +538,8 @@
- 	$(RM) -r $(TMPDIR)/CompileFontConfig
- 	$(MKDIR) -p $(TMPDIR)/CompileFontConfig
- 	$(JAVAC) -d $(TMPDIR)/CompileFontConfig $(BUILDDIR)/tools/CompileFontConfig/CompileFontConfig.java
--	$(JAVA) -classpath $(TMPDIR)/CompileFontConfig CompileFontConfig $< $(@)
-+#	$(JAVA) -classpath $(TMPDIR)/CompileFontConfig CompileFontConfig $< $(@)
-+	$(TOUCH) $(@)
- 	$(CHMOD) 444 $(@)
- 
- fontconfigs.clean :
+--- j2se/src/share/classes/sun/java2d/SunGraphicsEnvironment.java.orig	2010-12-27 11:38:50 +0100
++++ j2se/src/share/classes/sun/java2d/SunGraphicsEnvironment.java	2010-12-27 11:40:43 +0100
+@@ -101,6 +101,10 @@
+ 		    isLinuxOrBSD = true;
+ 		} else if ("OpenBSD".equals(osName)) {
+ 		    isLinuxOrBSD = true;
++		} else if ("NetBSD".equals(osName)) {
++		    isLinuxOrBSD = true;
++		} else if ("DragonFly".equals(osName)) {
++		    isLinuxOrBSD = true;
+ 		} else if ("SunOS".equals(osName)) {
+ 		    isSolaris = true;
+ 		}
