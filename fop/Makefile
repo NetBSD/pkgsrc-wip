@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/12/28 18:00:58 ftigeot Exp $
+# $NetBSD: Makefile,v 1.3 2010/12/28 20:04:00 ftigeot Exp $
 #
 # Note: we currently use the pre-built (-bin) distribution of FOP,
 #
@@ -25,8 +25,23 @@ INSTALLATION_DIRS=	share/java/fop
 
 WRKSRC=${WRKDIR}/${PKGNAME}
 
+.include "options.mk"
+
+PLIST_SRC=	${PKGDIR}/PLIST
+
+.if !empty(PKG_OPTIONS:Mfop-docs)
+PLIST_SRC+=	${PKGDIR}/PLIST.docs
+.endif
+
+post-extract:
+.if empty(PKG_OPTIONS:Mfop-docs)
+.for _dir in docs javadocs
+	cd ${WRKSRC} && ${RM} -rf ${_dir}
+.endfor
+.endif
+
 do-install:
-	cd ${WRKSRC} && pax -rw . ${DESTDIR}${PREFIX}/share/java/fop
+	cd ${WRKSRC} && ${PAX} -rw . ${DESTDIR}${PREFIX}/share/java/fop
 	${LN} -sf ${DESTDIR}${PREFIX}/share/java/fop/fop ${DESTDIR}${PREFIX}/bin
 
 .include "../../mk/java-vm.mk"
