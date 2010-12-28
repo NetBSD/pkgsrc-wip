@@ -1,5 +1,7 @@
 # AWK functions for working on pkgsrc
 
+#use "pkgsrc-dewey.awk"
+
 # return a position where version begins
 function pkgver_position (pkgname,            idx){
 	if (match(pkgname, /<|>|=/))
