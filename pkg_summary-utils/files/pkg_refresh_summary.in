@@ -31,10 +31,9 @@ set -e
 
 usage (){
     cat 1>&2 <<EOF
-pkg_refresh_summary - refresh pkg_summary, that is
-for each pkgpath:pkgbase pair present in summary it outputs
-only summaries about newest packages.
-Duplicated summaries are also removed.
+pkg_refresh_summary - refreshes pkg_summary, that is for each
+(PKGPATH,PKGBASE) pair present on input it outputs summaries about
+newest packages only.  Duplicated summaries are also removed.
 
 usage: pkg_refresh_summary [OPTIONS] [files...]
 OPTIONS:

@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkg_refresh_summary.1,v 1.8 2010/11/14 01:04:31 cheusov Exp $
+.\"	$NetBSD: pkg_refresh_summary.1,v 1.9 2010/12/28 18:12:00 cheusov Exp $
 .\"
 .\" Copyright (c) 2008-2010 by Aleksey Cheusov (vle@gmx.net)
 .\" Absolutely no warranty.
@@ -21,9 +21,9 @@ pkg_refresh_summary \- refreshes the pkg_summary
 .BI pkg_refresh_summary " [OPTIONS] [files...]"
 .SH DESCRIPTION
 .B pkg_refresh_summary
-refreshes pkg_summary, that is
-for each PKGPATH:PKGBASE pair present in summary it outputs
-an information only about newest version.
+pkg_refresh_summary - refreshes pkg_summary, that is for each
+(PKGPATH,PKGBASE) pair present on input it outputs summaries about
+newest packages only.  Duplicated summaries are also removed.
 .SH OPTIONS
 .TP
 .BR "-h"
