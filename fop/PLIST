@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2010/12/28 17:16:17 ftigeot Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/12/28 18:00:58 ftigeot Exp $
+bin/fop
 share/java/fop/javadocs/overview-frame.html
 share/java/fop/javadocs/serialized-form.html
 share/java/fop/javadocs/overview-tree.html
@@ -3751,3 +3752,7 @@ share/java/fop/examples/plan/resources/META-INF/services/org.apache.xmlgraphics.
 share/java/fop/examples/plan/build.xml
 share/java/fop/examples/plan/README
 share/java/fop/fop.js
+@pkgdir share/java/fop/docs/skin
+@pkgdir share/java/fop/docs/skin/translations
+@pkgdir share/java/fop/docs/skin/scripts
+@pkgdir share/java/fop/docs/skin/css
