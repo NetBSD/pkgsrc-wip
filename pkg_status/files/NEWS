@@ -1,4 +1,12 @@
 ======================================================================
+Version 0.12, by Aleksey Cheusov, Sat, 25 Dec 2010 17:22:37 +0200
+
+  Option -T was added in order to show whether packages were installed
+  by user or as a dependencies.
+
+  Output was slightly improved
+
+======================================================================
 Version 0.11, by Aleksey Cheusov, Sun, 14 Nov 2010 02:40:05 +0200
 
   Licence has been changed from MIT to functionally equivalent

@@ -55,8 +55,8 @@ find/remove automatically installed leaf packages etc.
 usage:
   pkg_status -h
   pkg_status -V
-  pkg_status -s [-ruaAqDp0] [ [--] pkg_info_args ]
-  pkg_status -b [-ruaAqD]   [ [--] pkg_info_args ]
+  pkg_status -s [-ruaTAqDp0] [ [--] pkg_info_args ]
+  pkg_status -b [-ruaTAqD]   [ [--] pkg_info_args ]
   pkg_status -k [-mULd]     [ [--] pkg_info_args or pkg_admin_args ]
   pkg_status -l [-rtREn]
 
@@ -74,6 +74,7 @@ OPTIONS common for -s and -b:
   -A         by default up-to-date packages are skipped,
              with -A they are output too
   -q         No noisy reminder about output format
+  -T         Output U near comparison result for packages installed by user
 OPTIONS for -s:
   -p <file>  get PKGPATHs from <file> (instead of pkg_info -QPKGPATH).
   -0         use all available CPUs for obtaining pkg_src_summary.
@@ -128,8 +129,10 @@ EOF
 #  pkg_status -o [OPTIONS]
 #  -o                     compare against packages served by pkg_online server
 
+pkg_cmp_opts='-p'
+
 process_args (){
-    while getopts hVsbrAuaQqDp:0kmULdltREn f; do
+    while getopts hVsbrAuaQqDp:0kmULdltREnT f; do
 	case $f in
 	    h)    usage; exit 0;;
 	    V)    echo 'pkg_status @VERSION@'; exit 0;;
@@ -139,6 +142,7 @@ process_args (){
 	    A)    submode_all=1;;
 	    u)    pkg_info_opts="$pkg_info_opts -u";;
 	    a)    pkg_info_opts="$pkg_info_opts -a";;
+	    T)    pkg_cmp_opts="$pkg_cmp_opts -u";;
 	    Q)    quiet=1; echo '-Q is deprecated, please use -q' 1>&2;;
 	    q)    quiet=1;;
 	    D)    debug=1;;
@@ -295,10 +299,27 @@ else
 	runpipe0 sort -k3,3 -t' ' '|' \
 	awk '
 	{
-#	    if ($1 == ">") $1 = ">>>";
-#	    if ($1 == "-") $1 = "---";
-	    if ($1 == "<") $1 = "";
-	    printf "%3s %-30s %-15s %-12s %-12s\n", $1, $2, $3, $4, $5
+	    pkgpath = pkgname = ver1 = ver2 = ua = ""
+	    pkgpath = $2
+	    pkgname = $3
+	    if ($1 ~ /^[<>=!]$/){
+		ver1    = $4
+		ver2    = $5
+		ua      = $6
+	    }else if ($1 == "-"){
+		ver1    = $4
+		ua      = $5
+	    }else if ($1 == "+"){
+		ver2    = $4
+	    }
+
+	    if ($1 == "<") op = ""
+	    else op = $1
+
+	    if (ua == "U") op = op "U"
+
+	    printf "%3s %-30s %-15s %-12s %-12s\n", \
+		op, pkgpath, pkgname, ver1, ver2
 	}'
     }
 fi
@@ -363,12 +384,13 @@ output_results (){
 ########################################
 # -s
 if test -n "$mode_src"; then
-    $PKG_INFO_CMD -X $pkg_info_opts "$@" > "$bin_summary_fn"
+    pkg_bin_summary -f PKGPATH,PKGNAME,automatic -- $pkg_info_opts "$@" \
+	> "$bin_summary_fn"
     generate_pkgpaths "$@"
 
     $PKG_SRC_SUMMARY_CMD < "$pkgpaths_fn" > "$src_summary_fn"
     runpipe0 \
-	pkg_cmp_summary -p "$bin_summary_fn" "$src_summary_fn" '|' \
+	pkg_cmp_summary $pkg_cmp_opts "$bin_summary_fn" "$src_summary_fn" '|' \
 	skip_uptodate '|' \
 	raw2hr > "$res_fn"
 
@@ -390,10 +412,11 @@ cat_ext_summary (){
 }
 
 if test -n "$mode_bin"; then
-    $PKG_INFO_CMD -X $pkg_info_opts "$@" > "$bin_summary_fn"
+    pkg_bin_summary -f PKGPATH,PKGNAME,automatic -- $pkg_info_opts "$@" \
+	> "$bin_summary_fn"
     cat_ext_summary | pkg_refresh_summary > "$ext_summary_fn"
     runpipe0 \
-	pkg_cmp_summary -p "$bin_summary_fn" "$ext_summary_fn" '|' \
+	pkg_cmp_summary $pkg_cmp_opts "$bin_summary_fn" "$ext_summary_fn" '|' \
 	sed '/^[+]/ d' '|' \
 	skip_uptodate '|' \
 	raw2hr > "$res_fn"
