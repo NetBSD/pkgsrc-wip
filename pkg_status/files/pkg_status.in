@@ -360,9 +360,9 @@ Format of the output:
 SIGN PKGPATH PKGBASE VERSION1 [VERSION2]
 
      SIGN:      newer version is available
-            >   only older version is available (problem?)
+            >   only older version is available
             =   the same version is available
-            -   package disappeared or has been renamed (problem?)
+            -   package disappeared or was renamed
             +   package has been renamed (also see '-' sign)
           [0-9] package is registered at least twice (problem?)
      VERSION1: version of installed package,
