@@ -1,6 +1,7 @@
 # AWK functions for working on pkgsrc
 
 #use "pkgsrc-dewey.awk"
+#use "glob.awk"
 
 # return a position where version begins
 function pkgver_position (pkgname,            idx){
@@ -47,4 +48,24 @@ function pkgname_gt_pkgname (pkgname1, pkgname2,            ver1,ver2){
 	ver2 = pkgname2version(pkgname2)
 
 	return dewey_cmp(ver1, ver2) == ">"
+}
+
+# ex: dewey_match(1.2.3, ">=1.0")
+function dewey_match (ver, pattern,           i,j,k){
+	while (match(pattern, /(>|<|=|>=|<=)[^<=>]*/)){
+		assert(RSTART == 1, "failed in dewey_match() function")
+		i = substr(pattern, RSTART, RLENGTH)
+		j = substr(pattern, RSTART + RLENGTH)
+		k = match(i, /[0-9]/)
+
+		if (!dewey_test(ver, substr(i,k), substr(i,1,k-1)))
+			return 0
+
+		pattern = j
+	}
+
+	if (pattern == "" || pattern == "[0-9]*")
+		return 1
+
+	return glob(ver, pattern)
 }
