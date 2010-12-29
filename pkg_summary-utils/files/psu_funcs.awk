@@ -51,7 +51,7 @@ function pkgname_gt_pkgname (pkgname1, pkgname2,            ver1,ver2){
 }
 
 # ex: dewey_match(1.2.3, ">=1.0")
-function dewey_match (ver, pattern,           i,j,k){
+function pattern_match (ver, pattern,           i,j,k){
 	while (match(pattern, /(>|<|=|>=|<=)[^<=>]*/)){
 		assert(RSTART == 1, "failed in dewey_match() function")
 		i = substr(pattern, RSTART, RLENGTH)

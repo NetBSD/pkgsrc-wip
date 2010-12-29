@@ -261,7 +261,7 @@ function pkgmatch (pkg, pattern){
 	pkg     = pkgname2version(pkg)
 	pattern = pkgname2version(pattern)
 
-	return dewey_match(pkg, pattern)
+	return pattern_match(pkg, pattern)
 }
 
 END {
@@ -299,6 +299,11 @@ END {
 					matched = ""
 					for (j=1; j <= foundcnt; ++j){
 						f = found [j]
+						if (depname ~ /[<>].*(\[|\]|[*])/){
+#							print "bad pattern", depname > "/dev/stderr"
+							continue
+						}
+
 						if (pkgmatch(g_path2name [f], depname)){
 							if (id != 3){
 								if (matched == ""){
