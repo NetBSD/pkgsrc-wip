@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/12/28 18:15:25 cheusov Exp $
+# $NetBSD: Makefile,v 1.4 2010/12/29 20:46:01 cheusov Exp $
 
 DISTNAME=	pkgnih-0.0
 CATEGORIES=	pkgtools
@@ -13,7 +13,7 @@ GIT_REPOSITORIES=	master
 GIT_REPO.master=	git://github.com/cheusov/pkgnih.git
 .include "../../wip/mk/git-package.mk"
 
-DEPENDS+=		pkg_summary-utils>=0.50beta5:../../wip/pkg_summary-utils
+DEPENDS+=		pkg_summary-utils>=0.50beta7:../../wip/pkg_summary-utils
 DEPENDS+=		pkg_status>=0.12:../../wip/pkg_status
 BUILD_DEPENDS+=		mk-configure>=0.21.0:../../wip/mk-configure
 
