@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/12/29 13:11:48 ftigeot Exp $
+# $NetBSD: Makefile,v 1.5 2010/12/29 13:24:37 ftigeot Exp $
 #
 # Note: we currently use the pre-built (-bin) distribution of FOP,
 #
@@ -18,7 +18,7 @@ USE_JAVA=	run
 USE_TOOLS+=	pax
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
-INSTALLATION_DIRS=	share/java/fop
+INSTALLATION_DIRS=	bin share/java/fop
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -41,7 +41,7 @@ post-extract:
 
 do-install:
 	cd ${WRKSRC} && ${PAX} -rw . ${DESTDIR}${PREFIX}/share/java/fop
-	${LN} -sf ${DESTDIR}${PREFIX}/share/java/fop/fop ${DESTDIR}${PREFIX}/bin
+	${LN} -sf ../share/java/fop/fop ${DESTDIR}${PREFIX}/bin
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
