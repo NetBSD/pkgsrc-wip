@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/12/28 20:04:00 ftigeot Exp $
+# $NetBSD: Makefile,v 1.4 2010/12/29 13:11:48 ftigeot Exp $
 #
 # Note: we currently use the pre-built (-bin) distribution of FOP,
 #
@@ -8,7 +8,6 @@ PKGNAME=	fop-${VERSION}
 VERSION=	1.0
 CATEGORIES=	textproc www
 MASTER_SITES=	${MASTER_SITE_APACHE:=xmlgraphics/fop/binaries/}
-EXTRACT_SUFX=	.tar.gz
 
 HOMEPAGE=	http://xmlgraphics.apache.org/fop/
 COMMENT=	Print formatter driven by XSL Formatting Objects (XSL-FO)
@@ -35,8 +34,8 @@ PLIST_SRC+=	${PKGDIR}/PLIST.docs
 
 post-extract:
 .if empty(PKG_OPTIONS:Mfop-docs)
-.for _dir in docs javadocs
-	cd ${WRKSRC} && ${RM} -rf ${_dir}
+.for subdir in docs javadocs
+	cd ${WRKSRC} && ${RM} -rf ${subdir}
 .endfor
 .endif
 
