@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2010/12/02 13:06:43 phonohawk Exp $
+# $NetBSD: Makefile,v 1.28 2010/12/30 06:26:48 phonohawk Exp $
 
 DISTNAME=		ghc-${VERSION}
 VERSION=		7.0.1
@@ -177,6 +177,9 @@ do-configure:
 #	${RUN} ${ECHO} "GhcRtsHcOpts = -optc-O0 -optc-g" >> ${WRKSRC}/mk/build.mk
 #	${RUN} ${ECHO} "GhcRtsCcOpts = -O0 -g" >> ${WRKSRC}/mk/build.mk
 #.endif
+
+# Substitutions for INSTALL and DEINSTALL.
+FILES_SUBST+=	DISTNAME=${DISTNAME}
 
 # Some unused scripts don't pass the portability test.
 CHECK_PORTABILITY_SKIP+=	distrib/prep-bin-dist-mingw
