@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2010/12/30 09:21:21 phonohawk Exp $
+lib/bindings-audiofile-${PKGVERSION}/${HASKELL_VERSION}/Bindings/AudioFile.hi
+lib/bindings-audiofile-${PKGVERSION}/${HASKELL_VERSION}/Bindings/AudioFile.p_hi
+lib/bindings-audiofile-${PKGVERSION}/${HASKELL_VERSION}/Bindings/AudioFile/PVList.hi
+lib/bindings-audiofile-${PKGVERSION}/${HASKELL_VERSION}/Bindings/AudioFile/PVList.p_hi
+lib/bindings-audiofile-${PKGVERSION}/${HASKELL_VERSION}/Bindings/AudioFile/VFS.hi
+lib/bindings-audiofile-${PKGVERSION}/${HASKELL_VERSION}/Bindings/AudioFile/VFS.p_hi
+lib/bindings-audiofile-${PKGVERSION}/${HASKELL_VERSION}/HSbindings-audiofile-${PKGVERSION}.o
+lib/bindings-audiofile-${PKGVERSION}/${HASKELL_VERSION}/libHSbindings-audiofile-${PKGVERSION}.a
+lib/bindings-audiofile-${PKGVERSION}/${HASKELL_VERSION}/libHSbindings-audiofile-${PKGVERSION}_p.a
+lib/bindings-audiofile-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/bindings-audiofile-${PKGVERSION}/COPYING

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/12/30 09:21:21 phonohawk Exp $
+
+SHA1 (bindings-audiofile-0.1.0.1.tar.gz) = 08c7a7a88ae355293f5c4a04e01d03fbc227b43a
+RMD160 (bindings-audiofile-0.1.0.1.tar.gz) = 3776f4101867e11dfdb66af4bbb7e26428402347
+Size (bindings-audiofile-0.1.0.1.tar.gz) = 4227 bytes
