@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2009/09/23 08:59:55 phonohawk Exp $
+# $NetBSD: Makefile,v 1.4 2010/12/30 07:47:25 phonohawk Exp $
 #
 
-DISTNAME=	parsec-3.0.1
+DISTNAME=	parsec-3.1.0
 CATEGORIES=	textproc
 
 MAINTAINER=	pho@cielonegro.org
@@ -11,4 +11,5 @@ LICENSE=	modified-bsd
 
 .include "../../wip/mk/haskell.mk"
 .include "../../wip/hs-mtl/buildlink3.mk"
+.include "../../wip/hs-syb/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
