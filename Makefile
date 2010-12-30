@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4177 2010/12/30 08:25:34 phonohawk Exp $
+# $Id: Makefile,v 1.4178 2010/12/30 09:22:21 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -858,6 +858,7 @@ SUBDIR+=	hs-base-unicode-symbols
 SUBDIR+=	hs-binary
 SUBDIR+=	hs-binary-strict
 SUBDIR+=	hs-bindings-DSL
+SUBDIR+=	hs-bindings-audiofile
 SUBDIR+=	hs-bindings-librrd
 SUBDIR+=	hs-bytestring-trie
 SUBDIR+=	hs-cabal
