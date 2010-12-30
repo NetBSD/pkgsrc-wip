@@ -1,16 +1,12 @@
-# $NetBSD: Makefile,v 1.4 2009/07/26 22:56:03 phonohawk Exp $
+# $NetBSD: Makefile,v 1.5 2010/12/30 06:54:21 phonohawk Exp $
 #
 
-DISTNAME=	mtl-1.1.0.2
-PKGREVISION=	1
-PKGNAME=	hs-${DISTNAME}
+DISTNAME=	mtl-2.0.1.0
 CATEGORIES=	devel
 LICENSE=	modified-bsd
 
 MAINTAINER=	pho@cielonegro.org
-COMMENT=	Monad transformer library
-
-USE_LANGUAGES=	# none
+COMMENT=	Monad classes using functional dependencies
 
 .include "../../wip/mk/haskell.mk"
 .include "../../mk/bsd.pkg.mk"
