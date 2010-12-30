@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2009/10/16 17:50:31 mbowie Exp $
+$NetBSD: MESSAGE,v 1.2 2010/12/30 18:44:13 mjoellnir Exp $
 
   For details on configuring XCache, see:
   http://xcache.lighttpd.net/wiki/InstallingAsPhpExtension
@@ -7,6 +7,8 @@ $NetBSD: MESSAGE,v 1.1.1.1 2009/10/16 17:50:31 mbowie Exp $
   For details on configuring the admin pages, see:
   http://xcache.lighttpd.net/wiki/InstallAdministration
 
-  Example files have been installed in: ${PREFIX}/share/examples/xcache
+  The web-interface files have been installed in:
+
+      ${PREFIX}/share/xcache
 
 ===========================================================================
