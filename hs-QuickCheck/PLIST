@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/09/23 05:41:29 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/12/30 08:43:05 phonohawk Exp $
 lib/QuickCheck-${PKGVERSION}/${HASKELL_VERSION}/HSQuickCheck-${PKGVERSION}.o
 lib/QuickCheck-${PKGVERSION}/${HASKELL_VERSION}/Test/QuickCheck.hi
 lib/QuickCheck-${PKGVERSION}/${HASKELL_VERSION}/Test/QuickCheck.p_hi
+lib/QuickCheck-${PKGVERSION}/${HASKELL_VERSION}/Test/QuickCheck/All.hi
+lib/QuickCheck-${PKGVERSION}/${HASKELL_VERSION}/Test/QuickCheck/All.p_hi
 lib/QuickCheck-${PKGVERSION}/${HASKELL_VERSION}/Test/QuickCheck/Arbitrary.hi
 lib/QuickCheck-${PKGVERSION}/${HASKELL_VERSION}/Test/QuickCheck/Arbitrary.p_hi
 lib/QuickCheck-${PKGVERSION}/${HASKELL_VERSION}/Test/QuickCheck/Exception.hi
