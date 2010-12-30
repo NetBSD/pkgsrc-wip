@@ -23,6 +23,7 @@
 _PKG_MK_GIT_PACKAGE_MK=	# defined
 
 BUILD_DEPENDS+=		scmgit-base>=1.6.4:../../devel/scmgit-base
+USE_TOOLS+=		pax
 
 # switch either (from scratch) clone is necessary or (already cloned) checkout is enough
 _GIT_NEED_CLONE=	${WRKDIR}/.need_clone
