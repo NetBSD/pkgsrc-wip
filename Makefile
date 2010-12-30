@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4175 2010/12/24 00:03:39 thomasklausner Exp $
+# $Id: Makefile,v 1.4176 2010/12/30 07:25:08 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -925,6 +925,7 @@ SUBDIR+=	hs-safer-file-handles
 SUBDIR+=	hs-stm
 SUBDIR+=	hs-storable-record
 SUBDIR+=	hs-storablevector
+SUBDIR+=	hs-syb
 SUBDIR+=	hs-tagged
 SUBDIR+=	hs-tagsoup
 SUBDIR+=	hs-tar
