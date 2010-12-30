@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2010/12/30 09:05:54 phonohawk Exp $
+
+--- storablevector.cabal.orig	2010-09-24 07:23:48.000000000 +0000
++++ storablevector.cabal
+@@ -71,7 +71,7 @@ Library
+       If flag(separateSYB)
+         Build-Depends:
+           base >=4 && <5,
+-          syb >=0.1 && <0.2
++          syb >=0.1 && <0.4
+       Else
+         Build-Depends:
+           base >=3 && <4

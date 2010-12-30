@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/11/02 16:18:33 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2010/12/30 09:05:54 phonohawk Exp $
 #
 
 DISTNAME=	storablevector-0.2.7
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
