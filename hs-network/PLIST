@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/10/11 10:44:44 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.5 2010/12/30 07:55:18 phonohawk Exp $
 lib/network-${PKGVERSION}/${HASKELL_VERSION}/HSnetwork-${PKGVERSION}.o
 lib/network-${PKGVERSION}/${HASKELL_VERSION}/Network.hi
 lib/network-${PKGVERSION}/${HASKELL_VERSION}/Network.p_hi
@@ -6,6 +6,16 @@ lib/network-${PKGVERSION}/${HASKELL_VERSION}/Network/BSD.hi
 lib/network-${PKGVERSION}/${HASKELL_VERSION}/Network/BSD.p_hi
 lib/network-${PKGVERSION}/${HASKELL_VERSION}/Network/Socket.hi
 lib/network-${PKGVERSION}/${HASKELL_VERSION}/Network/Socket.p_hi
+lib/network-${PKGVERSION}/${HASKELL_VERSION}/Network/Socket/ByteString.hi
+lib/network-${PKGVERSION}/${HASKELL_VERSION}/Network/Socket/ByteString.p_hi
+lib/network-${PKGVERSION}/${HASKELL_VERSION}/Network/Socket/ByteString/IOVec.hi
+lib/network-${PKGVERSION}/${HASKELL_VERSION}/Network/Socket/ByteString/IOVec.p_hi
+lib/network-${PKGVERSION}/${HASKELL_VERSION}/Network/Socket/ByteString/Internal.hi
+lib/network-${PKGVERSION}/${HASKELL_VERSION}/Network/Socket/ByteString/Internal.p_hi
+lib/network-${PKGVERSION}/${HASKELL_VERSION}/Network/Socket/ByteString/Lazy.hi
+lib/network-${PKGVERSION}/${HASKELL_VERSION}/Network/Socket/ByteString/Lazy.p_hi
+lib/network-${PKGVERSION}/${HASKELL_VERSION}/Network/Socket/ByteString/MsgHdr.hi
+lib/network-${PKGVERSION}/${HASKELL_VERSION}/Network/Socket/ByteString/MsgHdr.p_hi
 lib/network-${PKGVERSION}/${HASKELL_VERSION}/Network/Socket/Internal.hi
 lib/network-${PKGVERSION}/${HASKELL_VERSION}/Network/Socket/Internal.p_hi
 lib/network-${PKGVERSION}/${HASKELL_VERSION}/Network/URI.hi

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2009/11/10 07:26:48 phonohawk Exp $
+$NetBSD: distinfo,v 1.5 2010/12/30 07:55:18 phonohawk Exp $
 
-SHA1 (network-2.2.1.5.tar.gz) = 119cc2035b7944c0f474999c634d84f909e44516
-RMD160 (network-2.2.1.5.tar.gz) = 2434d95463509bee274f46fa7f8b6dce8a621f91
-Size (network-2.2.1.5.tar.gz) = 111890 bytes
+SHA1 (network-2.3.tar.gz) = 6c4556ba1bcd9d3589c29701815a26360c5d097d
+RMD160 (network-2.3.tar.gz) = 4de026a686c258660e55d210757b0d1e181d5f56
+Size (network-2.3.tar.gz) = 135977 bytes

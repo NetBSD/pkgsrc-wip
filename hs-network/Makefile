@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2009/11/10 07:26:48 phonohawk Exp $
+# $NetBSD: Makefile,v 1.7 2010/12/30 07:55:18 phonohawk Exp $
 #
 
-DISTNAME=	network-2.2.1.5
+DISTNAME=	network-2.3
 CATEGORIES=	net
 
 MAINTAINER=	pho@cielonegro.org
-COMMENT=	Haskell networking-related facilities
+COMMENT=	Haskell Low-level networking interface
 LICENSE=	modified-bsd
 
 .include "../../wip/mk/haskell.mk"
