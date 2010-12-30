@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/11/02 17:10:59 phonohawk Exp $
+$NetBSD: distinfo,v 1.2 2010/12/30 08:52:32 phonohawk Exp $
 
-SHA1 (safer-file-handles-0.8.tar.gz) = 32f274543b395f203a34cf22ed8afc9e412b6c1d
-RMD160 (safer-file-handles-0.8.tar.gz) = 989b3cb00378fe1be6a51bf70856032361f09dae
-Size (safer-file-handles-0.8.tar.gz) = 13533 bytes
+SHA1 (safer-file-handles-0.9.tar.gz) = 88608e58e139bf67499babaeae5b4e2bb389878c
+RMD160 (safer-file-handles-0.9.tar.gz) = 7c84834bc70fede492ce8d856df2c57670b489f3
+Size (safer-file-handles-0.9.tar.gz) = 13847 bytes
