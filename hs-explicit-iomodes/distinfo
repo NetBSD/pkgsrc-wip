@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/11/02 16:46:30 phonohawk Exp $
+$NetBSD: distinfo,v 1.2 2010/12/30 08:39:10 phonohawk Exp $
 
-SHA1 (explicit-iomodes-0.5.tar.gz) = a90da26c2e25c41133c1e64ada3cb10f7149babf
-RMD160 (explicit-iomodes-0.5.tar.gz) = 4c0c51a3de9655f23d3cb2e011fbe69236f2879b
-Size (explicit-iomodes-0.5.tar.gz) = 6223 bytes
+SHA1 (explicit-iomodes-0.6.0.1.tar.gz) = 6b303b84a5c0c8492fd3a33e127fb0f710e8ce91
+RMD160 (explicit-iomodes-0.6.0.1.tar.gz) = 99fc6eb0c7c798c9d9d1358b9c8ea9ffa994d48c
+Size (explicit-iomodes-0.6.0.1.tar.gz) = 6194 bytes

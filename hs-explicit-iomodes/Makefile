@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/11/02 16:46:30 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2010/12/30 08:39:10 phonohawk Exp $
 #
 
-DISTNAME=	explicit-iomodes-0.5
+DISTNAME=	explicit-iomodes-0.6.0.1
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
