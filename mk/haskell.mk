@@ -1,4 +1,4 @@
-# $NetBSD: haskell.mk,v 1.16 2010/07/13 04:20:50 emil_s Exp $
+# $NetBSD: haskell.mk,v 1.17 2010/12/30 06:52:48 phonohawk Exp $
 #
 # This Makefile fragment handles Haskell Cabal packages.
 # See: http://www.haskell.org/cabal/
@@ -115,7 +115,6 @@ PKG_DESTDIR_SUPPORT?=	user-destdir
 # Declarations for ../../mk/misc/show.mk
 _VARGROUPS+=		haskell
 _DEF_VARS.haskell= \
-	_CABAL_SETUP_SCRIPT \
 	_DISTBASE \
 	_DISTVERSION \
 	_GHC_BIN \
@@ -123,13 +122,13 @@ _DEF_VARS.haskell= \
 	_GHC_VERSION \
 	_GHC_VERSION_CMD \
 	_GHC_VERSION_FULL \
+	_HASKELL_BIN \
 	_HASKELL_PKG_BIN \
 	_HASKELL_PKG_DESCR_FILE \
-	_HASKELL_VERSION \
-	_RUNHASKELL_BIN \
-	_RUNGHC_BIN
+	_HASKELL_VERSION
 _PKG_VARS.haskell= \
-	HASKELL_ENABLE_LIBRARY_PROFILING
+	HASKELL_ENABLE_LIBRARY_PROFILING \
+	HASKELL_ENABLE_HADDOCK_DOCUMENTATION
 
 # PKGNAME is usually named after DISTNAME.
 PKGNAME?=	hs-${DISTNAME}
@@ -159,11 +158,10 @@ HASKELL_ENABLE_HADDOCK_DOCUMENTATION?=	no
 .include "../../wip/ghc/buildlink3.mk"
 
 # Tools
-_GHC_BIN=		${PREFIX}/bin/ghc
+_GHC_BIN=			${PREFIX}/bin/ghc
 _GHC_PKG_BIN=		${PREFIX}/bin/ghc-pkg
-_RUNGHC_BIN=		${PREFIX}/bin/runghc
+_HASKELL_BIN=		${_GHC_BIN} # Expose to the outer scope.
 _HASKELL_PKG_BIN=	${_GHC_PKG_BIN} # Expose to the outer scope.
-_RUNHASKELL_BIN=	${_RUNGHC_BIN}  # ditto
 
 # Determine GHC version.
 _GHC_VERSION_CMD=	${_GHC_BIN} -V | ${CUT} -d ' ' -f 8
@@ -209,38 +207,41 @@ PLIST_SUBST+=	HASKELL_VERSION=${_HASKELL_VERSION}
 PRINT_PLIST_AWK+= \
 	{ gsub(/${_HASKELL_VERSION}/, "$${HASKELL_VERSION}"); }
 
-# Setup script can either be Setup.hs or Setup.lhs.
-_CABAL_SETUP_SCRIPT=	Setup.*hs
+# We might not have any working Haskell interpreter so compile
+# Setup.?hs to a binary.
+Setup:
+	${RUN} cd ${WRKSRC} && \
+		${_HASKELL_BIN} --make Setup
 
 # Define configure target.
-do-configure:
+do-configure: Setup
 	${RUN} cd ${WRKSRC} && \
 		${SETENV} ${CONFIGURE_ENV} \
-			${_RUNHASKELL_BIN} ${_CABAL_SETUP_SCRIPT} configure ${CONFIGURE_ARGS}
+			./Setup configure ${CONFIGURE_ARGS}
 
 # Define build target.
-do-build:
+do-build: Setup
 	${RUN} cd ${WRKSRC} && \
-		${_RUNHASKELL_BIN} ${_CABAL_SETUP_SCRIPT} build
+		./Setup build
 .if ${HASKELL_ENABLE_HADDOCK_DOCUMENTATION} == "yes"
 	${RUN} cd ${WRKSRC} && \
-		${_RUNHASKELL_BIN} ${_CABAL_SETUP_SCRIPT} haddock
+		./Setup haddock
 .endif
 
 # Define install target. We need installed-pkg-config to be installed
 # for package registration (if any).
 _HASKELL_PKG_DESCR_FILE=	${PREFIX}/lib/${DISTNAME}/${_HASKELL_VERSION}/package-description
 
-do-install:
+do-install: Setup
 	${RUN} cd ${WRKSRC} && \
-		${_RUNHASKELL_BIN} ${_CABAL_SETUP_SCRIPT} register --gen-pkg-config=dist/package-description && \
+		./Setup register --gen-pkg-config=dist/package-description && \
 		if [ "${DESTDIR}" = "" ]; then \
-			${_RUNHASKELL_BIN} ${_CABAL_SETUP_SCRIPT} copy && \
+			./Setup copy && \
 			if [ -f dist/package-description ]; then \
 				${INSTALL_DATA} dist/package-description ${_HASKELL_PKG_DESCR_FILE}; \
 			fi \
 		else \
-			${_RUNHASKELL_BIN} ${_CABAL_SETUP_SCRIPT} copy --destdir=${DESTDIR} && \
+			./Setup copy --destdir=${DESTDIR} && \
 			if [ -f dist/package-description ]; then \
 				${INSTALL_DATA} dist/package-description ${DESTDIR}${_HASKELL_PKG_DESCR_FILE}; \
 			fi \
