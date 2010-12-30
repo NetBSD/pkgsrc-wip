@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/12/30 09:30:43 phonohawk Exp $
+
+SHA1 (bindings-EsounD-0.1.0.1.tar.gz) = 5c93f72b1e8ed76523fe7c6f130c3b0a3441d82d
+RMD160 (bindings-EsounD-0.1.0.1.tar.gz) = f6643ea22eaf36f75b87a42c18ab56849a78980f
+Size (bindings-EsounD-0.1.0.1.tar.gz) = 2704 bytes
