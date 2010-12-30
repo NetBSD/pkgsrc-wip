@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/11/02 17:03:38 phonohawk Exp $
+$NetBSD: distinfo,v 1.2 2010/12/30 08:49:24 phonohawk Exp $
 
-SHA1 (regional-pointers-0.4.tar.gz) = 13a7164c947cdd22444f9d38793f43b3058166a8
-RMD160 (regional-pointers-0.4.tar.gz) = 1761118a2cfcf1d0d55c2fe67136c874488792b8
-Size (regional-pointers-0.4.tar.gz) = 10903 bytes
+SHA1 (regional-pointers-0.5.tar.gz) = f345366f31b7143a4ea6a81386215308fa4314ae
+RMD160 (regional-pointers-0.5.tar.gz) = 6a7c18e2166f2a572abab10016070743efc0eeee
+Size (regional-pointers-0.5.tar.gz) = 10977 bytes
