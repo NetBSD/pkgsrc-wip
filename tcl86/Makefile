@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/12/27 22:23:46 bharder Exp $
+# $NetBSD: Makefile,v 1.4 2010/12/31 19:55:18 bharder Exp $
 #
 
 DISTNAME=		tcl${TCL_PKGSRC_PATCHLEVEL}-src
@@ -53,7 +53,7 @@ post-install:
 CVS_REPOSITORIES=	tcl
 CVS_ROOT.tcl=		:pserver:anonymous:@tcl.cvs.sourceforge.net:/cvsroot/tcl
 WRKSRC=			${WRKDIR}/tcl
-CHECKOUT_DATE=		2010-12-27
+CHECKOUT_DATE=		2010-12-31
 
 .include "../mk/cvs-package.mk"
 
