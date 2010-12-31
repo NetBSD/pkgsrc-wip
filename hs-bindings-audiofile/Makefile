@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/12/30 09:21:21 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2010/12/31 14:07:43 phonohawk Exp $
 #
 
-DISTNAME=	bindings-audiofile-0.1.0.1
+DISTNAME=	bindings-audiofile-0.1.0.2
 CATEGORIES=	audio
 
 MAINTAINER=	pho@cielonegro.org
