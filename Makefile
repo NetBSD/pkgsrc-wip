@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4180 2010/12/31 15:39:24 makoto Exp $
+# $Id: Makefile,v 1.4181 2010/12/31 17:59:16 anielski Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1825,7 +1825,6 @@ SUBDIR+=	php-suhosin
 SUBDIR+=	php-tclink
 SUBDIR+=	php-tidy
 SUBDIR+=	php-xcache
-SUBDIR+=	php53-fpm
 SUBDIR+=	picasm
 SUBDIR+=	picocom
 SUBDIR+=	picosat
