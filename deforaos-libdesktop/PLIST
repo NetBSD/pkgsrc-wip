@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2009/12/30 22:25:54 khorben Exp $
+@comment $NetBSD: PLIST,v 1.2 2010/12/31 18:39:56 khorben Exp $
 include/Desktop.h
 include/Desktop/about.h
 include/Desktop/accel.h
@@ -9,3 +9,4 @@ lib/libDesktop.a
 lib/libDesktop.so
 lib/libDesktop.so.0
 lib/libDesktop.so.0.0
+lib/pkgconfig/libDesktop.pc
