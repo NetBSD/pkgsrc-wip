@@ -1,0 +1,24 @@
+A simple tool which takes a set of files (e.g. encrypted compressed tar files
+or just any files), stores them Byte by Byte into volumes, which I call bales
+(just because the data are stored Byte by Byte similarly like hay is put into
+bales), and generates a convenient table of contents (XML file) describing what
+and where is stored in this balestack (i.e. the set of bales - the whole
+archive). To get a particular file from the archive, we just look it up in the
+XML table of contents, take the right bale (i.e. mount the right DVD) and
+simply copy and paste the position and size to baler and that's all, folks!
+Easy!
+
+Typically I dedicate four DVDs as my archive media. Three of them contain bales
+and the fourth one is used for the redundant data (so that a lost DVD can be
+regenerated)
+
+I prepare a few tar.xz.enc (i.e. encrypted compressed tarball) files and use
+baler to create three bales and a table of contents. Then I use eor tool
+(Exclusive OR generator for ordianary files) to generate the redundant data
+from the three bales. Finally I just burn each bale plus the TOC file on the
+corresponding DVD (multisession) and the redundant data plus TOC on the fourth
+DVD. This process can be repeated with new balestacks until the DVDs are full.
+
+This way the media are filled efficiently and the data are stored safely. When
+I want a particular file I just open the TOC and see which of the DVDs I need.
+And baler then gets the desired file from one or more bales very quickly.
