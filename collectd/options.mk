@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2010/06/20 11:53:07 thomasklausner Exp $
+# $NetBSD: options.mk,v 1.4 2010/12/31 20:33:08 genolopolis Exp $
 #
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.collectd
@@ -17,7 +17,7 @@ PKG_SUPPORTED_OPTIONS+=		target_notification target_replace target_scale
 PKG_SUPPORTED_OPTIONS+=		target_set tcpconns teamspeak2 ted
 PKG_SUPPORTED_OPTIONS+=		unixsock uptime users uuid write_http
 
-PKG_SUGGESTED_OPTIONS+=		rrdtool curl libstatgrab
+PKG_SUGGESTED_OPTIONS+=		rrdtool curl libstatgrab df interface cpu csv load memory swap syslog network uptime users
 .include "../../mk/bsd.options.mk"
 
 #rrdtool
