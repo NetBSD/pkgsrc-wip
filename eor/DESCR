@@ -1,0 +1,9 @@
+This program takes a set of files and generates a redundant file using the
+exclusive or bit operation. Later, if any of the original files happens to be
+lost or damaged, we can use the redundant file as a wildcard and regenerate the
+lost file again. This process is similar to what RAID-5 does to protect data on
+disk arrays.
+
+The primary purpose of this tool is to protect author's photo archive stored on
+a set of DVDs (which are not 100% reliable), but the program use is actually
+universal.
