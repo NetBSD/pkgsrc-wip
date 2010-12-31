@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2010/12/31 16:21:21 makoto Exp $
+
+SHA1 (libspt-1.1.tar.bz2) = bbeeea6ce87e2d51871194106bb181ab6397e487
+RMD160 (libspt-1.1.tar.bz2) = e2a57706fffcd2cda327f24ea0007ae89de749bc
+Size (libspt-1.1.tar.bz2) = 165168 bytes
+SHA1 (patch-aa) = 5df72121fa55cc2fb9ce89ab5b245a8b6ebd1281
+SHA1 (patch-ab) = 90cefabcb05b5d7f89756636fec327b54b66737f
