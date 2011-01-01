@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2011/01/01 09:58:35 ryo-on Exp $
+# $NetBSD: Makefile,v 1.3 2011/01/01 10:13:55 ryo-on Exp $
 
 DISTNAME=	mp3blaster-3.2.5
 CATEGORIES=	audio
-MASTER_SITES=	http://www.stack.nl/~brama/mp3blaster/src/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mp3blaster/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://mp3blaster.sourceforge.net/
