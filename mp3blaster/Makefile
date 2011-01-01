@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/01/01 10:13:55 ryo-on Exp $
+# $NetBSD: Makefile,v 1.4 2011/01/01 23:32:50 ryo-on Exp $
 
 DISTNAME=	mp3blaster-3.2.5
 CATEGORIES=	audio
@@ -27,25 +27,25 @@ CONFIGURE_ARGS+=	--enable-newthreads
 .endif
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mp3blaster
-PKG_SUPPORTED_OPTIONS+=	esound oss sdl
-PKG_SUGGESTED_OPTIONS+=	oss
+PKG_SUPPORTED_OPTIONS=	esound oss sdl
+PKG_SUGGESTED_OPTIONS=	oss
 
-.if empty(PKG_OPTIONS:Mesound)
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mesound)
 CONFIGURE_ARGS+=	--with-esd=yes
 .include "../../audio/esound/buildlink3.mk"
 .endif
 
-.if empty(PKG_OPTIONS:Moss)
+.if !empty(PKG_OPTIONS:Moss)
 CONFIGURE_ARGS+=	--with-oss=yes
 .include "../../mk/oss.buildlink3.mk"
 .endif
 
-.if empty(PKG_OPTIONS:Msdl)
+.if !empty(PKG_OPTIONS:Msdl)
 CONFIGURE_ARGS+=	--with-sdl=yes
 .include "../../devel/SDL/buildlink3.mk"
 .endif
-
-.include "../../mk/bsd.options.mk"
 
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
