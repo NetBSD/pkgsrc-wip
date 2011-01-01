@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4181 2010/12/31 17:59:16 anielski Exp $
+# $Id: Makefile,v 1.4182 2011/01/01 09:55:47 ryo-on Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1352,6 +1352,7 @@ SUBDIR+=	moto4lin
 SUBDIR+=	motoya-fonts
 SUBDIR+=	mozldap
 SUBDIR+=	mozplugger
+SUBDIR+=	mp3blaster
 SUBDIR+=	mp3chop
 SUBDIR+=	mp3gain
 SUBDIR+=	mpc-el
