@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2010/12/11 23:36:05 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.31 2011/01/02 21:37:42 cheusov Exp $
 bin/cvs_checksum
 bin/pkg_assignments2pkgpath
 bin/pkg_bin_summary
@@ -39,6 +39,7 @@ man/man1/pkg_src_summary.1
 man/man1/pkg_subgraph_deps.1
 man/man1/pkg_summary2build_graph.1
 man/man1/pkg_summary2deps.1
+man/man1/pkg_summary2leaves.1
 man/man1/pkg_summary4view.1
 man/man1/pkg_uniq_summary.1
 man/man1/pkg_update_src_summary.1
