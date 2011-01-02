@@ -1111,6 +1111,22 @@ PKGPATH=wip/dict-server
 
 '
 
+runtest pkg_grep_summary -fPKGNAME,PKGPATH \
+    -s PKGPABA 'sysutils/checkperms,checkperms' < src_summary.txt |
+cmp 'pkg_grep_summary #50.1' \
+'PKGNAME=checkperms-1.10
+PKGPATH=sysutils/checkperms
+
+'
+
+runtest pkg_grep_summary -fPKGNAME,PKGPATH \
+    -s PKGPANA 'wip/dict-server,dict-server-1.10.11nb2' < src_summary.txt |
+cmp 'pkg_grep_summary #50.2' \
+'PKGNAME=dict-server-1.10.11nb2
+PKGPATH=wip/dict-server
+
+'
+
 {
 if runtest pkg_grep_summary -r -fPKGNAME,PKGPATH \
     -s PKGPAIR 'foo-bar-baz' < src_summary.txt
@@ -1158,6 +1174,60 @@ strlist	Match the specified words
 awk	Match using AWK expression
 empty	Match an empty string
 kw	"keyword" match
+'
+
+runtest pkg_grep_summary -i -fPKGNAME,PKGPATH \
+    -s PKGPAIR 'WIP/DICT-SERVER,DICT-SERVER' < src_summary.txt |
+cmp 'pkg_grep_summary #55' \
+'PKGNAME=dict-server-1.10.11nb2
+PKGPATH=wip/dict-server
+
+'
+
+runtest pkg_grep_summary -fPKGNAME,PKGPATH \
+    -i -t re DEPENDS 'perl.*p5-Digest' < bin_summary4.txt |
+cmp 'pkg_grep_summary #56' \
+'PKGNAME=p5-Catalyst-Plugin-Session-0.30nb1
+PKGPATH=www/p5-Catalyst-Plugin-Session
+
+PKGNAME=p5-DBIx-Class-EncodedColumn-0.00010
+PKGPATH=databases/p5-DBIx-Class-EncodedColumn
+
+'
+
+runtest pkg_grep_summary -fPKGNAME,PKGPATH \
+    -i -t re PKGPATH '^WIP/' < src_summary.txt |
+cmp 'pkg_grep_summary #57' \
+'PKGNAME=distbb-0.22.0
+PKGPATH=wip/distbb
+
+PKGNAME=pkg_online-0.5.0nb2
+PKGPATH=wip/pkg_online
+
+PKGNAME=dict-server-1.10.11nb2
+PKGPATH=wip/dict-server
+
+PKGNAME=pkg_online-server-0.5.0
+PKGPATH=wip/pkg_online-server
+
+PKGNAME=pkg_online-client-0.5.0
+PKGPATH=wip/pkg_online-client
+
+PKGNAME=paexec-0.10.0nb1
+PKGPATH=wip/paexec
+
+PKGNAME=runawk-0.14.3
+PKGPATH=wip/runawk
+
+PKGNAME=pkg_summary-utils-0.18.1
+PKGPATH=wip/pkg_summary-utils
+
+PKGNAME=dict-client-1.10.11nb2
+PKGPATH=wip/dict-client
+
+PKGNAME=awk-pkgsrc-dewey-0.5.6
+PKGPATH=wip/awk-pkgsrc-dewey
+
 '
 
 # pkg_list_all_pkgs
@@ -3310,6 +3380,16 @@ cmp 'pkg_lint_summary -Ap #8' \
 'u: unicity emacs <- editors/emacs editors/emacs21 editors/emacs22
 '
 
+pkg_lint_summary -d bin_summary4.txt | sort |
+cmp 'pkg_lint_summary -d #9' \
+'d: not_found p5-Catalyst-Runtime>=5.71001 <- www/p5-Catalyst-Plugin-Session p5-Catalyst-Plugin-Session-0.30nb1
+d: not_found perl>=5.10.0|p5-Digest-SHA-[0-9]* <- databases/p5-DBIx-Class-EncodedColumn p5-DBIx-Class-EncodedColumn-0.00010
+d: not_found perl>=5.10|p5-Digest-[0-9]* <- www/p5-Catalyst-Plugin-Session p5-Catalyst-Plugin-Session-0.30nb1
+d: not_found perl>=5.10|p5-File-Temp-[0-9]* <- www/p5-Catalyst-Plugin-Session p5-Catalyst-Plugin-Session-0.30nb1
+d: not_found perl>=5.7.3|p5-Digest-MD5-[0-9]* <- databases/p5-DBIx-Class-EncodedColumn p5-DBIx-Class-EncodedColumn-0.00010
+d: not_found perl>=5.7.3|p5-Digest-[0-9]* <- databases/p5-DBIx-Class-EncodedColumn p5-DBIx-Class-EncodedColumn-0.00010
+'
+
 # pkg_subgraph_deps
 pkg_subgraph_deps -f src_pkgs.txt src_deps.txt | sort |
 cmp 'pkg_subgraph_deps #1' \
@@ -3451,6 +3531,23 @@ cmp 'pkg_bin_summary #4' \
 PKGPATH=pkgtools/pkg_install
 
 '
+
+pkg_bin_summary -fPKGPATH,PLIST -- bmake pkg_install |
+awk '!/PLIST/ || /\/(s?bin|man)\/pkg_/ || /bmake/' |
+cmp 'pkg_bin_summary #5' \
+'PKGPATH=devel/bmake
+PLIST=/usr/pkg/bin/bmake
+PLIST=/usr/pkg/man/man1/bmake.1
+
+PKGPATH=pkgtools/pkg_install
+PLIST=/usr/pkg/sbin/pkg_add
+PLIST=/usr/pkg/sbin/pkg_admin
+PLIST=/usr/pkg/sbin/pkg_create
+PLIST=/usr/pkg/sbin/pkg_delete
+PLIST=/usr/pkg/sbin/pkg_info
+
+'
+
 
 ############################################################
 test -f "$tmpex"
