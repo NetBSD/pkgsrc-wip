@@ -1,0 +1,14 @@
+$NetBSD: patch-cd,v 1.1 2011/01/02 19:22:32 ftigeot Exp $
+
+--- hotspot/make/Makefile.orig	2011-01-02 19:45:40 +0100
++++ hotspot/make/Makefile	2011-01-02 19:45:56 +0100
+@@ -115,6 +115,9 @@
+   ifeq (Darwin,$(OS))
+     OS=bsd
+   endif
++  ifeq (DragonFly,$(OS))
++    OS=bsd
++  endif
+ endif
+ 
+ # Library suffix

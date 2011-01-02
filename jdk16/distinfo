@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2011/01/02 19:20:24 ftigeot Exp $
+$NetBSD: distinfo,v 1.8 2011/01/02 19:22:32 ftigeot Exp $
 
 SHA1 (bsd-jdk16-patches-4.tar.bz2) = 89421fda207c9c63047ed1329c411fdc772537c4
 RMD160 (bsd-jdk16-patches-4.tar.bz2) = b9e8cfda392b9c4fcdeae22cd5e8aa23a8e4d860
@@ -25,3 +25,5 @@ SHA1 (patch-bf) = b8c87cd07cdc26c1e64119661bcc59b74a650d38
 SHA1 (patch-ca) = 9ba998ba47bbfed138ab7ff92c9384852cad6941
 SHA1 (patch-cb) = 5cc68ad7f839b8659163ef5b103400a897a0ff84
 SHA1 (patch-cc) = 57cba6132ce0119493b4dafad7552c89610b5925
+SHA1 (patch-cd) = 7b31afd503901d502b2f2aa192396d76e552c542
+SHA1 (patch-ce) = 379e60e6443351f3dbfe6ec20e368395d0eafcbf
