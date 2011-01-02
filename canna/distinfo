@@ -1,0 +1,12 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/01/02 08:49:59 makoto Exp $
+
+SHA1 (Canna37p3.tar.bz2) = e39eece7c70c669dd46dd74b26121a60a2496fde
+RMD160 (Canna37p3.tar.bz2) = 33e5eb9e2dc144835db838612897e652acbc60ed
+Size (Canna37p3.tar.bz2) = 1263065 bytes
+SHA1 (patch-aa) = bfcbc667b1b93da39cebe31ebba86d45739c4aad
+SHA1 (patch-ab) = b203ad0cb1285ffed0037e0eced3ae298bec5eb9
+SHA1 (patch-ac) = a81a07db87d3b501dedd423e148a8e7e1d1804c4
+SHA1 (patch-ae) = 0bb5c06e6523952e6cec2188787707d69223fb16
+SHA1 (patch-af) = a3ea53da7ce38c71708031dd9c66aafad3d1bf65
+SHA1 (patch-an) = d639f774bf9ef440458bfc716b211a1dcc95a823
+SHA1 (patch-ao) = c577319f50df6624333726cd62b48d869989d881

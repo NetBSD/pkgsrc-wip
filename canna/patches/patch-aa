@@ -1,0 +1,56 @@
+$NetBSD: patch-aa,v 1.1.1.1 2011/01/02 08:49:59 makoto Exp $
+
+--- Canna.conf.orig	2004-05-20 00:48:47.000000000 +0900
++++ Canna.conf	2010-12-31 20:55:30.000000000 +0900
+@@ -109,12 +109,12 @@
+ # define DefErrDir $(cannaPrefix)/log
+ # define DefLibCannaDir $(cannaExecPrefix)/lib
+ #else 
+-# define DefCannaPrefix /usr/local/canna
++# define DefCannaPrefix ${PREFIX}
+ # ifdef ObsoleteInstallDir
+ #  define DefErrDir /usr/spool/canna
+ #  define DefLibCannaDir /usr/lib
+ # else
+-#  define DefErrDir /var/log
++#  define DefErrDir ${CANNA_SPOOL}
+ #  define DefLibCannaDir $(cannaExecPrefix)/lib
+ # endif
+ #endif
+@@ -169,8 +169,8 @@
+ #define ModernElfLink NO /* experimental */
+ 
+ 
+-cannaOwner = bin
+-cannaGroup = bin
++cannaOwner = ${CANNA_USER}
++cannaGroup = ${CANNA_GROUP}
+ 
+ #ifdef InstallAsUser
+ cannaOwnerGroup =
+@@ -281,12 +281,12 @@
+ DEPCANNALIB = $(libCannaDir)/CannaDepLibraryName(canna)
+ CANNALIB = -L$(libCannaDir) -lcanna $(DLLIB)
+ DEPCANNALIB16 = $(libCannaDir)/CannaDepLibraryName(canna16)
+-CANNALIB16 = -L$(libCannaDir) -lcanna16 $(DLLIB)
++CANNALIB16 = -Wl,-rpath,$(libCannaDir) -L$(libCannaDir) -lcanna16 $(DLLIB)
+ #else
+ DEPCANNALIB = $(CANNASRC)/CannaDepLibraryName(canna)
+-CANNALIB = -L$(CANNASRC) -lcanna $(DLLIB)
+-DEPCANNALIB16 = $(CANNASRC)/CannaDepLibraryName(canna16)
+-CANNALIB16 = -L$(CANNASRC) -lcanna16 $(DLLIB)
++CANNALIB = -Wl,-rpath,$(libCannaDir) -L$(CANNASRC) -lcanna $(DLLIB)
++DEPCANNALIB16 = $(libCannaDir)/libcanna16.a
++CANNALIB16 =  -Wl,-rpath,$(libCannaDir) -L$(CANNASRC) -lcanna16 $(DLLIB)
+ #endif
+ 
+ #if DoSharedLib
+@@ -330,7 +330,7 @@
+ SCRIPTS_DEFINES = $(CANNA_DEFINES)
+ 
+ #ifdef JAPANESEMAN
+-JMNLOCALE = ja
++JMNLOCALE = ja_JP.EUC
+ #endif
+ 
+ /* USE_OBSOLETE_STYLE_FILENAME を定義するための定義 */

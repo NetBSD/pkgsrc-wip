@@ -1,0 +1,46 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2011/01/02 08:49:59 makoto Exp $
+#
+# Canna common makefile.
+#
+# used by wip/canna-canuum/Makefile
+# used by wip/canna-dict/Makefile
+# used by wip/canna-lib/Makefile
+# used by wip/canna-server/Makefile
+
+# "Pkgsrc" version.
+CANNA_VERSION=	3.7p3
+
+DISTNAME=	Canna${CANNA_VERSION:S|.||:S|pl|p|}
+PKGNAME=	Canna-${CANNA_MODULE}-${CANNA_VERSION}
+CATEGORIES=	inputmethod
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP:=canna/9565/}
+EXTRACT_SUFX=	.tar.bz2
+
+MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
+HOMEPAGE=	http://canna.sourceforge.jp/
+COMMENT=	Kana-Kanji conversion system (${CANNA_MODULE})
+
+FILESDIR=	${.CURDIR}/../../wip/canna/files
+DISTINFO_FILE=	${.CURDIR}/../../wip/canna/distinfo
+PATCHDIR=	${.CURDIR}/../../wip/canna/patches
+
+USE_IMAKE=	yes
+CANNA_SPOOL=	${VARBASE}/spool/canna
+CANNA_MODE=	0755
+
+PKG_GROUPS_VARS+=	CANNA_GROUP
+PKG_USERS_VARS+=	CANNA_USER
+
+CANNA_ENV=	CANNA_USER=${CANNA_USER}				\
+		CANNA_GROUP=${CANNA_GROUP}				\
+		CANNA_SPOOL=${CANNA_SPOOL}				\
+		CANNA_MODE=${CANNA_MODE}				\
+		IMDICTDIR=${IMDICTDIR}
+MAKE_ENV+=	${CANNA_ENV}
+SCRIPTS_ENV+=	${CANNA_ENV}
+PLIST_SUBST+=	${CANNA_ENV}
+FILES_SUBST+=	${CANNA_ENV}
+
+INSTALL_MAKE_FLAGS+=	CHOWN=${TRUE}
+INSTALL_MAKE_FLAGS+=	CHGRP=${TRUE}
+INSTALL_MAKE_FLAGS+=	CHMOD=${TRUE}

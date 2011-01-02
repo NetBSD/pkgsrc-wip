@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/01/02 08:49:59 makoto Exp $
+libdata/canna/bushu.cld
+libdata/canna/chimei.ctd
+libdata/canna/dics.dir
+libdata/canna/fuzokugo.cbd
+libdata/canna/hojomwd.ctd
+libdata/canna/hojoswd.ctd
+libdata/canna/iroha.cbd
+libdata/canna/iroha.cld
+libdata/canna/kanasmpl.ctd
+libdata/canna/katakana.ctd
+libdata/canna/keishiki.ctd
+libdata/canna/necgaiji.ctd
+libdata/canna/number.ctd
+libdata/canna/software.ctd
+libdata/canna/suffix.ctd

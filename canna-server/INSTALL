@@ -1,0 +1,11 @@
+# $NetBSD: INSTALL,v 1.1.1.1 2011/01/02 08:49:59 makoto Exp $
+
+case ${STAGE} in
+POST-INSTALL)
+	(${GREP} -v ^# /etc/services | ${GREP} 'canna.*5680' >/dev/null) || \
+	(${ECHO} "" >> /etc/services;					\
+	 ${ECHO} "# canna package" >> /etc/services;			\
+	 ${ECHO} "canna		5680/tcp" >> /etc/services;		\
+	)
+	;;
+esac
