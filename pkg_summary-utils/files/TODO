@@ -16,10 +16,6 @@ existing tools:
        - automatic removal of #-comments
 
     pkg_grep_summary:
-       - -f <fields>   output only specified fields, this
-                       may work drammatically faster
-       - pkg_src_summary pkgbase < summary.txt
-       - pkg_src_summary category/path < summary.txt
 
     pkg_list_all_pkgs:
 
@@ -51,18 +47,18 @@ existing tools:
     pkg_uniq_summary:
 
     pkg_update_src_summary:
+       - use "pkg_grep_summary -t strfile PKGPANA"
 
     pkg_update_summary:
        - use standard 'find -newer' instead of 'ls -1t' and
          non-portable 'test f1 -nt f2'
-       - nefore using modification time of pkg_summary.txt it is necessary
+       - before using modification time of pkg_summary.txt it is necessary
         to ckeck pkg_summary.txt's content
 
     pkg_lint_summary:
          - improve REQUIRES/PROVIDES checks, i.e. use
            PROVIDES from dependencies only
          - CONFLICTS vs. actual PLISTs in packages
-         - old binaries
          - distfiles checksums
          - check binaries and their REQUIRES and analyse Makefile
 
@@ -70,10 +66,6 @@ new tools?
     - replacement for lintpkgsrc -m
 
     - (unsure) additional tool for fields reordering?
-
-    - (unsure) simplified wrapper over pkg_grep_summary for grepping
-      packages by their (list of!) PKGBASEs/PKGNAMEs/PKGPATHs
-      (look inside pkg_refresh_summary and pkg_update_src_summary)
 
     - rfc822_to_summary and (?)debian_to_summary(?) for converting an
       information about Debian packages to pkg_summary(5) format.
@@ -83,7 +75,5 @@ new tools?
       pkg_summary2PKGDB
 
     - pkg_op_summary <refresh|intersect|subtract>
-
-    - pkg_summary2binary
 
 ANY IDEAS? LET ME KNOW
