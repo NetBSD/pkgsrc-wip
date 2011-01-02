@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2011/01/02 17:36:19 ftigeot Exp $
+# $NetBSD: Makefile,v 1.19 2011/01/02 18:04:16 ftigeot Exp $
 
 .include "../../wip/jdk16/Makefile.common"
 
@@ -122,7 +122,6 @@ SUBST_SED.paths+=	-e 's,%%JVM_HOME%%,${JVM_HOME},g'
 .include "options.mk"
 
 INSTALL_TEMPLATES+=	${PKGDIR}/INSTALL.tmpl
-DEINSTALL_TEMPLATES+=	${PKGDIR}/DEINSTALL.tmpl
 
 PLIST_VARS+=		client_jvm
 PLIST_SUBST+=		JAVA_MACHINE_ARCH=${JAVA_MACHINE_ARCH:Q}

@@ -1,6 +1,11 @@
-# $NetBSD: INSTALL.tmpl,v 1.1.1.1 2008/01/19 11:54:23 tnn2 Exp $
+# $NetBSD: INSTALL.tmpl,v 1.2 2011/01/02 18:04:16 ftigeot Exp $
+
+MACHINE_ARCH=`uname -m`
 
 case ${STAGE} in
 POST-INSTALL)
-	${PREFIX}/bin/jdk16-java -Xshare:dump;;
+	if [ "${MACHINE_ARCH}" = "i386" ]; then
+		${PREFIX}/bin/jdk16-java -client -Xshare:dump
+	fi
+	;;
 esac
