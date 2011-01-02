@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.21 2010/12/26 05:01:21 davesainty Exp $
+# $NetBSD: options.mk,v 1.22 2011/01/02 05:02:42 makoto Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.emacs_current
@@ -29,6 +29,7 @@ PKG_FAIL_REASON+=	xft2 options is incompatible with nextstep option.
 ### Support SVG
 ###
 .if !empty(PKG_OPTIONS:Msvg)
+.include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-rsvg
