@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2010/12/24 00:40:03 noud4 Exp $
+# $NetBSD: Makefile,v 1.16 2011/01/02 16:58:23 ftigeot Exp $
 
 .include "../../wip/jdk16/Makefile.common"
 
@@ -17,12 +17,13 @@ DISTFILES=		${JRL_SRCFILE} ${JRL_BINFILE} ${PATCHSETFILE}
 COMMENT=		Java Development Kit ${JDK_VERSION}
 LICENSE=		sun-jrl-16-license
 
+MAKE_JOBS_SAFE=	no
 USE_TOOLS+=		patch
 WRKSRC=			${WRKDIR}
 PLIST_SRC=		PLIST.common
 
 # XXX actually requires -current due to use of getpeereid()
-ONLY_FOR_PLATFORM=	NetBSD-[4-9]*-i386
+ONLY_FOR_PLATFORM=	NetBSD-[4-9]*-i386 NetBSD-[4-9]*-x86_64
 
 JAVA_NAME=		jdk16
 JAVA_WRAPPERS=		appletviewer jar java javac javadoc javah javap
@@ -48,6 +49,7 @@ MAKE_ENV+=		DEV_ONLY=YES
 MAKE_ENV+=		SYS_CFLAGS=${CFLAGS:Q}
 MAKE_ENV+=		LD_LIBRARY_PATH=
 MAKE_ENV+=		SKIP_COMPARE_IMAGES=YES
+MAKE_ENV+=		HOTSPOT_BUILD_JOBS=${MAKE_JOBS}
 
 # MAKE_ENV+=		WRAPPER_DEBUG=yes
 
