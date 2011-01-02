@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2011/01/02 16:58:23 ftigeot Exp $
+# $NetBSD: Makefile,v 1.17 2011/01/02 17:19:10 ftigeot Exp $
 
 .include "../../wip/jdk16/Makefile.common"
 
@@ -60,8 +60,15 @@ PATCHSETFILE=		bsd-jdk16-patches-${JDK_PATCHSET_VERSION}.tar.bz2
 JRL_DOWNLOAD=	http://download.java.net/jdk6/6u3/
 PATCH_DOWNLOAD=	http://www.eyesbeyond.com/freebsddom/java/JDK16JRLConfirm.html
 
+JAVA_MACHINE_ARCH=${MACHINE_ARCH}
+.if ${MACHINE_ARCH} == "i386"
 JDKIMAGEDIR=		${WRKDIR}/${BUILD_DIRS}/../build/bsd-i586/j2sdk-image
 # JDKIMAGEDIR_G=	${WRKDIR}/${BUILD_DIRS}/../build/bsd-i586/j2sdk-debug-image
+.elif ${MACHINE_ARCH} == "x86_64"
+JAVA_MACHINE_ARCH=	amd64
+JDKIMAGEDIR=		${WRKDIR}/${BUILD_DIRS}/../build/bsd-amd64/j2sdk-image
+# JDKIMAGEDIR_G=	${WRKDIR}/${BUILD_DIRS}/../build/bsd-amd64/j2sdk-debug-image
+.endif
 
 FETCH_MESSAGE+= " The source and patches for the Java (tm) 2 SDK require"
 FETCH_MESSAGE+= " a Sun Java Research License, and cannot be"
@@ -117,6 +124,7 @@ SUBST_SED.paths+=	-e 's,%%JVM_HOME%%,${JVM_HOME},g'
 INSTALL_TEMPLATES+=	${PKGDIR}/INSTALL.tmpl
 DEINSTALL_TEMPLATES+=	${PKGDIR}/DEINSTALL.tmpl
 
+PLIST_SUBST+=		JAVA_MACHINE_ARCH=${JAVA_MACHINE_ARCH:Q}
 PLIST_SRC+=		PLIST.common_end
 
 .include "../../wip/jdk16/license-extract.mk"
