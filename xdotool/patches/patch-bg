@@ -1,0 +1,13 @@
+$NetBSD: patch-bg,v 1.1.1.1 2011/01/02 05:42:34 rubengonzalez Exp $
+
+--- cmd_windowraise.c.orig	2010-06-19 21:01:26.000000000 +0000
++++ cmd_windowraise.c
+@@ -15,7 +15,7 @@ int cmd_windowraise(context_t *context) 
+     HELP_SEE_WINDOW_STACK;
+   int option_index;
+ 
+-  while ((c = getopt_long_only(context->argc, context->argv, "+h",
++  while ((c = getopt_long(context->argc, context->argv, "+h",
+                                longopts, &option_index)) != -1) {
+     switch (c) {
+       case 'h':

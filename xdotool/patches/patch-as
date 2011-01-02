@@ -1,0 +1,13 @@
+$NetBSD: patch-as,v 1.1.1.1 2011/01/02 05:42:34 rubengonzalez Exp $
+
+--- cmd_search.c.orig	2010-06-13 09:33:16.000000000 +0000
++++ cmd_search.c
+@@ -57,7 +57,7 @@ int cmd_search(context_t *context) {
+   char *cmd = *context->argv;
+   int option_index;
+ 
+-  while ((c = getopt_long_only(context->argc, context->argv, "+h",
++  while ((c = getopt_long(context->argc, context->argv, "+h",
+                                longopts, &option_index)) != -1) {
+     switch (c) {
+       case 0:

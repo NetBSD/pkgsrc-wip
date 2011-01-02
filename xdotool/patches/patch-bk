@@ -1,0 +1,13 @@
+$NetBSD: patch-bk,v 1.1.1.1 2011/01/02 05:42:34 rubengonzalez Exp $
+
+--- xdotool.c.orig	2010-10-12 06:42:38.000000000 +0000
++++ xdotool.c
+@@ -460,7 +460,7 @@ int args_main(int argc, char **argv) {
+     //fprintf(stderr, "argv[%d] = \"%s\"\n", i, argv[i]);
+   //}
+ 
+-  while ((opt = getopt_long_only(argc, argv, "++hv", long_options, &option_index)) != -1) {
++  while ((opt = getopt_long(argc, argv, "++hv", long_options, &option_index)) != -1) {
+     switch (opt) {
+       case 'h':
+         cmd_help(NULL);

@@ -1,0 +1,13 @@
+$NetBSD: patch-bi,v 1.1.1.1 2011/01/02 05:42:34 rubengonzalez Exp $
+
+--- cmd_windowsize.c.orig	2010-08-17 15:22:11.000000000 +0000
++++ cmd_windowsize.c
+@@ -29,7 +29,7 @@ int cmd_windowsize(context_t *context) {
+             "--sync      - only exit once the window has resized\n";
+ 
+ 
+-  while ((c = getopt_long_only(context->argc, context->argv, "+uh",
++  while ((c = getopt_long(context->argc, context->argv, "+uh",
+                                longopts, &option_index)) != -1) {
+     switch (c) {
+       case 'h':

@@ -1,0 +1,13 @@
+$NetBSD: patch-az,v 1.1.1.1 2011/01/02 05:42:34 rubengonzalez Exp $
+
+--- cmd_window_select.c.orig	2010-08-10 01:20:43.000000000 +0000
++++ cmd_window_select.c
+@@ -13,7 +13,7 @@ int cmd_window_select(context_t *context
+   static const char *usage = "Usage: %s\n";
+   int option_index;
+ 
+-  while ((c = getopt_long_only(context->argc, context->argv, "+h",
++  while ((c = getopt_long(context->argc, context->argv, "+h",
+                                longopts, &option_index)) != -1) {
+     switch (c) {
+       case 'h':

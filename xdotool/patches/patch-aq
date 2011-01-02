@@ -1,0 +1,13 @@
+$NetBSD: patch-aq,v 1.1.1.1 2011/01/02 05:42:34 rubengonzalez Exp $
+
+--- cmd_mousemove_relative.c.orig	2010-09-26 23:23:00.000000000 +0000
++++ cmd_mousemove_relative.c
+@@ -38,7 +38,7 @@ int cmd_mousemove_relative(context_t *co
+       "   %s 100 140\n";
+   int option_index;
+ 
+-  while ((c = getopt_long_only(context->argc, context->argv, "+cph",
++  while ((c = getopt_long(context->argc, context->argv, "+cph",
+                                longopts, &option_index)) != -1) {
+     switch (c) {
+       case 'h':

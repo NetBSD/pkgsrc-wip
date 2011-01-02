@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2011/01/02 05:42:34 rubengonzalez Exp $
+
+--- cmd_behave_screen_edge.c.orig	2010-10-12 06:50:08.000000000 +0000
++++ cmd_behave_screen_edge.c
+@@ -67,7 +67,7 @@ int cmd_behave_screen_edge(context_t *co
+     "The action is any valid xdotool command (chains OK here)\n";
+ 
+   int option_index;
+-  while ((c = getopt_long_only(context->argc, context->argv, "+hdq",
++  while ((c = getopt_long(context->argc, context->argv, "+hdq",
+                                longopts, &option_index)) != -1) {
+     switch (c) {
+       case 'h':

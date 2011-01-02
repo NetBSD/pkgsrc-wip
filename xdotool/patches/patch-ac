@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2011/01/02 05:42:34 rubengonzalez Exp $
+
+--- cmd_click.c.orig	2010-09-26 23:23:00.000000000 +0000
++++ cmd_click.c
+@@ -37,7 +37,7 @@ int cmd_click(context_t *context) {
+             "right = 3, wheel up = 4, wheel down = 5\n";
+   int option_index;
+ 
+-  while ((c = getopt_long_only(context->argc, context->argv, "+cw:h",
++  while ((c = getopt_long(context->argc, context->argv, "+cw:h",
+                                longopts, &option_index)) != -1) {
+     switch (c) {
+       case 'h':

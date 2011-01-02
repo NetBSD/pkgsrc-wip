@@ -1,0 +1,13 @@
+$NetBSD: patch-ay,v 1.1.1.1 2011/01/02 05:42:34 rubengonzalez Exp $
+
+--- cmd_type.c.orig	2010-06-13 09:33:16.000000000 +0000
++++ cmd_type.c
+@@ -30,7 +30,7 @@ int cmd_type(context_t *context) {
+             "-h, --help             - show this help output\n";
+   int option_index;
+ 
+-  while ((c = getopt_long_only(context->argc, context->argv, "+w:d:ch",
++  while ((c = getopt_long(context->argc, context->argv, "+w:d:ch",
+                                longopts, &option_index)) != -1) {
+     switch (c) {
+       case 'w':

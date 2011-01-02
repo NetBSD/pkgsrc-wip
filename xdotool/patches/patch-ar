@@ -1,0 +1,13 @@
+$NetBSD: patch-ar,v 1.1.1.1 2011/01/02 05:42:34 rubengonzalez Exp $
+
+--- cmd_mouseup.c.orig	2010-06-13 09:33:16.000000000 +0000
++++ cmd_mouseup.c
+@@ -22,7 +22,7 @@ int cmd_mouseup(context_t *context) {
+             "--clearmodifiers       - reset active modifiers (alt, etc) while typing\n";
+   int option_index;
+ 
+-  while ((c = getopt_long_only(context->argc, context->argv, "+cw:h",
++  while ((c = getopt_long(context->argc, context->argv, "+cw:h",
+                                longopts, &option_index)) != -1) {
+     switch (c) {
+       case 'h':

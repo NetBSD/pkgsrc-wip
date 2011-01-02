@@ -1,0 +1,13 @@
+$NetBSD: patch-bb,v 1.1.1.1 2011/01/02 05:42:34 rubengonzalez Exp $
+
+--- cmd_windowfocus.c.orig	2010-06-13 10:23:30.000000000 +0000
++++ cmd_windowfocus.c
+@@ -19,7 +19,7 @@ int cmd_windowfocus(context_t *context) 
+     "--sync    - only exit once the window has focus\n";
+ 
+   int option_index;
+-  while ((c = getopt_long_only(context->argc, context->argv, "+h",
++  while ((c = getopt_long(context->argc, context->argv, "+h",
+                                longopts, &option_index)) != -1) {
+     switch (c) {
+       case 'h':

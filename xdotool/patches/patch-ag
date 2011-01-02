@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1.1.1 2011/01/02 05:42:34 rubengonzalez Exp $
+
+--- cmd_get_desktop_viewport.c.orig	2010-07-29 05:06:42.000000000 +0000
++++ cmd_get_desktop_viewport.c
+@@ -14,7 +14,7 @@ int cmd_get_desktop_viewport(context_t *
+   static const char *usage = "Usage: %s\n";
+   int option_index;
+ 
+-  while ((c = getopt_long_only(context->argc, context->argv, "+h",
++  while ((c = getopt_long(context->argc, context->argv, "+h",
+                                longopts, &option_index)) != -1) {
+     switch (c) {
+       case 'h':

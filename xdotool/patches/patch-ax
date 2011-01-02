@@ -1,0 +1,13 @@
+$NetBSD: patch-ax,v 1.1.1.1 2011/01/02 05:42:34 rubengonzalez Exp $
+
+--- cmd_set_window.c.orig	2010-08-10 00:37:29.000000000 +0000
++++ cmd_set_window.c
+@@ -36,7 +36,7 @@ int cmd_set_window(context_t *context) {
+       "--overrideredirect OVERRIDE - set override_redirect.\n"
+       "  1 means the window manager will not manage this window.\n";
+ 
+-  while ((c = getopt_long_only(context->argc, context->argv, "+hn:i:r:C:N:",
++  while ((c = getopt_long(context->argc, context->argv, "+hn:i:r:C:N:",
+                                longopts, &option_index)) != -1) {
+     switch(c) {
+       case 'n': 
