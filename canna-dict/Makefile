@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/01/02 08:49:59 makoto Exp $
+# $NetBSD: Makefile,v 1.2 2011/01/02 13:04:30 makoto Exp $
 
 CANNA_MODULE=	dict
 
@@ -35,10 +35,10 @@ post-patch:
 # cannaconf.h is not automatically generated so specify explicitly.
 do-build:
 	(cd ${WRKSRC};\
-	xmkmf;\
-	make Makefile; \
-	make cannaconf.h; \
-	make canna )
+	${XMKMF};\
+	${MAKE} Makefile; \
+	${MAKE} cannaconf.h; \
+	${MAKE} canna )
 
 INSTALLATION_DIRS+=	${CANNA_DICTDIR}
 
