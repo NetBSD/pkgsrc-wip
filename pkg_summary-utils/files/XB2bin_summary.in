@@ -79,9 +79,13 @@ BEGIN {
 	remap ["PYTHON_VERSION_REQD"]    = "PYTHON_VERSION_REQD"
 	remap ["PYTHON_VERSION_DEFAULT"] = "PYTHON_VERSION_REQD"
 
+	remap ["RUBY_VERSION_REQD"]     = "RUBY_VERSION_REQD"
+	remap ["_RUBY_VERSION_DEFAULT"] = "RUBY_VERSION_REQD"
+
 	#
 	need_assigns = ("ASSIGNMENTS" in only_fields) || ("ASSIGNMENTS" in add_fields)
 	need_reqd = ("REQUIREDBY" in only_fields) || ("REQUIREDBY" in add_fields)
+	need_plist = ("PLIST" in only_fields) || ("PLIST" in add_fields)
 
 	if (need_reqd){
 		out_file = tmpfile()
@@ -90,7 +94,8 @@ BEGIN {
 	}
 
 	#
-	X_section  = 1
+	X_section = 1
+	L_section = 0
 
 	pkg_info_cmd="@PKG_INFO_CMD@"
 }
@@ -102,7 +107,15 @@ NF == 0 {
 
 ($1 == "Build" || $1 == "Installed") && $2 == "information:" {
 	prev_is_empty = 0
-	X_section  = 0
+	X_section = 0
+	L_section = 0
+	next
+}
+
+$1 == "Files:" {
+	prev_is_empty = 0
+	X_section = 0
+	L_section = 1
 	next
 }
 
@@ -120,13 +133,18 @@ function eos (){
 	}
 
 	print_me("")
-	X_section  = 1
+	X_section = 1
+	L_section = 0
 	delete already_printed
 	assigns = ""
 }
 
 prev_is_empty {
 	eos()
+}
+
+L_section {
+	print "PLIST=" $0
 }
 
 {

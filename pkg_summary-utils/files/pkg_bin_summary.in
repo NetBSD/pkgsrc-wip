@@ -65,17 +65,16 @@ Samples of use:
 EOF
 }
 
-process_args (){
-    alt_getopt \
-	'h help' 'usage; exit 0' \
-	=a       add_fields=     \
-	=r       rem_fields=     \
-	=f       only_fields=    \
-	-- "$@"
-}
-
-cmds=`process_args "$@"`
-eval "$cmds"
+while getopts ha:r:f: f; do
+    case "$f" in 
+	'?')   exit 1;;
+	h)     usage; exit 0;;
+	a)     add_fields="$OPTARG";;
+	r)     rem_fields="$OPTARG";;
+	f)     only_fields="$OPTARG";;
+    esac
+done
+shift `expr $OPTIND - 1`
 
 if test $# -eq 0; then
     pkg_info_opts=-XBa
@@ -83,5 +82,9 @@ else
     pkg_info_opts=-XB
 fi
 
-$PKG_INFO_CMD "$pkg_info_opts" "$@" |
+if echo "$only_fields$add_fields" | grep PLIST > /dev/null; then
+    pkg_info_opts="$pkg_info_opts -L"
+fi
+
+$PKG_INFO_CMD $pkg_info_opts "$@" |
 $LIBEXECDIR/XB2bin_summary -a "$add_fields" -r "$rem_fields" -f "$only_fields"
