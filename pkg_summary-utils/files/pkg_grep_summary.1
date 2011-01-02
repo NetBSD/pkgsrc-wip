@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkg_grep_summary.1,v 1.27 2010/11/14 01:04:31 cheusov Exp $
+.\"	$NetBSD: pkg_grep_summary.1,v 1.28 2011/01/02 21:44:26 cheusov Exp $
 .\"
 .\" Copyright (c) 2008-2010 by Aleksey Cheusov (vle@gmx.net)
 .\" Absolutely no warranty.
@@ -45,13 +45,16 @@ and so on, actually anything separated by
 .B =
 sign.
 In addition to fields really present on input a few artificial fields
-are supported: PKGBASE, PKGPATHe and PKGPAIR. PKGBASE
-is a PKGNAME with package version stripped, PKGPATHe (enriched PKGPATH)
+are supported: PKGBASE, PKGPATHe, PKGPAIR, PKGPABA and PKGPANA. PKGBASE
+is a PKGNAME with package version stripped. PKGPATHe (enriched PKGPATH)
 is PKGPATH with ASSIGNMENTS
 (if present) separated by colon symbol, for example,
-.I lang/py-psyco:PYTHON_VERSION_REQD=25 ,
+.IR lang/py-psyco:PYTHON_VERSION_REQD=25 .
 PKGPAIR is a PKGPATH and PKGBASE separated by comma character, for example,
 .IR net/dhisd,dhisd .
+PKGPABA is a synonym for PKGPAIR. PKGPANA is
+a PKGPATH and PKGNAME separated by
+comma, for example textproc/dict-server,dict-server-1.11.2.
 .B pkg_grep_summary
 is a search tool somewhat similar to
 .BR grep(1) ", " PKGSRCDIR/pkglocate ", " pkgfind

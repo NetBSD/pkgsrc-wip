@@ -31,6 +31,9 @@
 #env "LC_ALL=C"
 
 BEGIN {
+	if (ic)
+		string = tolower(string)
+
 	_gs_matched = -1 # -1 - unknown, 0 - false, 1 - true
 	_gs_count   = 0
 
@@ -179,17 +182,21 @@ _gs_matched == -1 {
 		idx = index(fvalue, ":")
 		if (idx > 0)
 			fvalue = substr(fvalue, 1, idx-1)
-	}else if (grep_summary__field == "PKGPAIR"){
+	}else if (grep_summary__field == "PKGPAIR" ||
+		      grep_summary__field == "PKGPABA" ||
+		      grep_summary__field == "PKGPANA")
+	{
 		if (fname == "PKGPATH") {
 			_gs_pkgpath = fvalue
 		}else if (fname == "PKGNAME") {
 			_gs_pkgbase = fvalue
-			sub(/-[^-]*$/, "", _gs_pkgbase)
+			if (grep_summary__field != "PKGPANA")
+				sub(/-[^-]*$/, "", _gs_pkgbase)
 		}
 
 		if (_gs_pkgbase != "" && _gs_pkgpath != ""){
 			fvalue = _gs_pkgpath "," _gs_pkgbase
-			fname  = "PKGPAIR"
+			fname  = grep_summary__field
 			update_skip()
 		}
 	}

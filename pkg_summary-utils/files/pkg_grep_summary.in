@@ -180,33 +180,32 @@ fi
 
 case "$strategy" in
     exact)
-	condition="fvalue == \"$string\"";;
+	condition='fvalue == string';;
     prefix)
-	condition="has_prefix(fvalue, \"$string\") != 0";;
+	condition='has_prefix(fvalue, string) != 0';;
     suffix)
-	condition="has_suffix(fvalue, \"$string\") != 0";;
+	condition='has_suffix(fvalue, string) != 0';;
     substring)
-	condition="index(fvalue, \"$string\") > 0";;
+	condition='index(fvalue, string) > 0';;
     first)
-	condition="match_first_word(fvalue, \"$string\")";;
+	condition='match_first_word(fvalue, string)';;
     last)
-	condition="match_last_word(fvalue, \"$string\")";;
+	condition='match_last_word(fvalue, string)';;
     word)
-	condition="match_word(fvalue, \"$string\")";;
+	condition='match_word(fvalue, string)';;
     re)
-	re=`echo $string | sed 's|/|\\\/|g'`
-	condition="fvalue ~ /$re/";;
+	condition='fvalue ~ string';;
     strfile)
-	condition="fvalue in strings";;
+	condition='fvalue in strings';;
     strlist)
-	condition="fvalue in strings";;
+	condition='fvalue in strings';;
     awk)
 	condition="$string";;
     empty)
 	condition='fvalue == ""';;
     kw|keywords)
 	strategy=kw
-	condition="match_keywords(fvalue)";;
+	condition='match_keywords(fvalue)';;
     *)
 	echo "Unknown search strategy: $strategy" 1>&2
 	exit 1;;
