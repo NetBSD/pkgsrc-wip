@@ -45,8 +45,8 @@
 #   -h    display this help
 #   -r    select leaf packages recursively, implies -a
 #   -a    output only automatically installed leaves,
-#         a field 'automatic' is analysed in input summaries.
-#   -p    output PKGPATHs, not summaries
+#         a field 'automatic' is expected on input
+#   -p    output PKGPATHs instead summaries
 #   -v    PKGPATHs or summaries of non-leaf packages are output
 #.end-str
 ############################################################
@@ -70,7 +70,6 @@ BEGIN {
 	for (i=1; i < ARGC; ++i){
 		files = files " " shquote(ARGV [i])
 	}
-
 }
 
 # build dependency graph
