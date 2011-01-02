@@ -37,15 +37,15 @@ newest packages only.  Duplicated summaries are also removed.
 
 usage: pkg_refresh_summary [OPTIONS] [files...]
 OPTIONS:
-  -h             display this help message
-  -o             output summaries of all package except newest ones
+  -h     display this help message
+  -o     output summaries of all package except newest ones
 EOF
 }
 
 process_args (){
     alt_getopt \
 	'h help' 'usage; exit 0' \
-	o        print_older=1   \
+	o        print_older=-v  \
 	-- "$@"
 }
 cmds=`process_args "$@"`
@@ -106,7 +106,7 @@ NF == 0 && pkgpath != "" && pkgbase != "" {
 END {
    for (p in pkgbase2ver){
       pathname = p
-      sub(/:/, " ", pathname)
+      sub(/:/, ",", pathname)
 
       print pathname "-" pkgbase2ver [p]
    }
@@ -114,52 +114,8 @@ END {
 ' "$@"
 }
 
-############################################################
+find_newest "$@" > "$newest_fn"
 
-grep_newest_summaries (){
-    runawk -v newest_fn="$newest_fn" -v print_older="$print_older" -e '
-#use "xgetline.awk"
-#use "pkg_grep_summary.awk"
-
-BEGIN {
-   print_older = print_older + 0
-   NEWEST_PKG     = 1-print_older
-   OLDER_PKG    = print_older
-
-   FS = " "
-   while (xgetline0(newest_fn)){
-      pair = $1 ":" $2
-      keep [pair] = 1
-   }
-
-   grep_summary__field = ""
-   FS = "="
-
-   # keep all fields in associative array "fields"
-   keep_fields = 1
-}
-
-function grep_summary__condition (           pkgpath, pkgname, pair){
-   pkgpath = fields ["PKGPATH"]
-   if (pkgpath == "")
-      return -1
-
-   pkgname = fields ["PKGNAME"]
-   if (pkgname == "")
-      return -1
-
-   pair = pkgpath ":" pkgname
-   if (pair in processed){
-      return 0
-   }else if (pair in keep){
-      processed [pair] = 1
-      return NEWEST_PKG
-   }
-
-   return OLDER_PKG
-}
-' "$@"
-}
-
-find_newest "$@" > $newest_fn
-grep_newest_summaries "$@"
+cat "$@" |
+pkg_grep_summary $print_older -t strfile PKGPANA "$newest_fn" |
+pkg_uniq_summary
