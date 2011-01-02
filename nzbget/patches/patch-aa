@@ -1,15 +1,19 @@
-$NetBSD: patch-aa,v 1.4 2010/11/09 21:09:19 mjoellnir Exp $
+$NetBSD: patch-aa,v 1.5 2011/01/02 10:38:53 mjoellnir Exp $
 
 Compilation broke off because explicit casting is required.
+obache@users.sourceforge.net mentioned turning *ssl_method
+into a const, so I changed it as well
 
---- TLS.cpp.orig	2010-01-30 21:38:12.000000000 +0100
-+++ TLS.cpp
-@@ -1107,7 +1107,7 @@
+--- TLS.cpp~	2010-01-30 21:38:12.000000000 +0100
++++ TLS.cpp	2011-01-02 11:08:58.000000000 +0100
+@@ -1105,9 +1105,7 @@
+ 
+ #ifdef HAVE_OPENSSL
      
-     SSL_METHOD *ssl_method = NULL;
-     
+-    SSL_METHOD *ssl_method = NULL;
+-    
 -    ssl_method = force_sslv3 ? SSLv3_client_method() : SSLv23_client_method();
-+    ssl_method = force_sslv3 ? (SSL_METHOD*)SSLv3_client_method() : (SSL_METHOD*)SSLv23_client_method();
++    const SSL_METHOD *ssl_method = force_sslv3 ? SSLv3_client_method() : SSLv23_client_method();
      if (!ssl_method)
      {
  	*errstr = xasprintf(_("cannot set TLS method"));
