@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkg_bin_summary.1,v 1.1 2010/11/07 13:56:17 cheusov Exp $
+.\"	$NetBSD: pkg_bin_summary.1,v 1.2 2011/01/02 21:47:39 cheusov Exp $
 .\"
 .\" Copyright (c) 2010 by Aleksey Cheusov (vle@gmx.net)
 .\" Absolutely no warranty.
@@ -25,7 +25,8 @@ wrapper for pkg_info that outputs a package summary
 is a wrapper for 'pkg_info -X' that outputs
 build information and installation information
 variables as well some special variables for installed or binary packages,
-e.g. ASSIGNMENTS (settings to build multivariant packages) and
+e.g. ASSIGNMENTS (settings to build multivariant packages), PLIST (a list of files
+of the package) and
 REQUIREDBY. By default it is equivalent to pkg_info -Xa.
 .SH OPTIONS
 .TP
