@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/12/30 18:44:14 mjoellnir Exp $
+# $NetBSD: Makefile,v 1.4 2011/01/02 09:47:21 mjoellnir Exp $
 #
 
 MODNAME=		xcache
@@ -9,7 +9,10 @@ MASTER_SITES=		http://xcache.lighttpd.net/pub/Releases/${PECL_VERSION}/
 EXTRACT_SUFX=		.tar.gz # required, because ../../lang/php/ext.mk 
 				# overrides it with .tgz
 
-MAINTAINER=		mbowie@buzmo.com
+# Original Maintainer (since dec 2010)
+#MAINTAINER=		mbowie@buzmo.com
+# Maintainer from dec 2010 on
+MAINTAINER=		vs@nifelheim.info
 HOMEPAGE=		http://xcache.lighttpd.net/
 COMMENT=		Fast and stable PHP opcode cacher
 
