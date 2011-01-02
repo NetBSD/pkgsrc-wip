@@ -87,6 +87,16 @@
 #                e.g. suse32_base-10.0|suse32_base-10.0nb*
 #   allbases   - set: PKGBASE
 
+function warn_alt (pkgpath, pkgname, deps, deps_cnt,             i,res){
+	res = ""
+	for (i=1; i <= deps_cnt; ++i){
+		if (res != "")
+			res = res "|"
+		res = res deps [i]
+	}
+	warn(pkgpath, pkgname, res)
+}
+
 function warn (pkgpath, pkgname, depname){
 	if (mode_lint)
 		printf "d: not_found %s <- %s %s\n",
@@ -333,7 +343,11 @@ END {
 
 					if (!matched){
 						if (k == altdepscnt){
-							warn(path, name, depname)
+							if (altdepscnt > 1)
+								warn_alt(path, name, arr, altdepscnt)
+							else
+								warn(path, name, depname)
+
 							ex = 1
 						}
 
