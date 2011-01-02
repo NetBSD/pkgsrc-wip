@@ -1,0 +1,3 @@
+This is an acpi client for Linux, attempts to replicate
+the functionality of the 'old' apm command on ACPI system
+including battery and thermal information.
