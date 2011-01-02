@@ -1,0 +1,13 @@
+$NetBSD: patch-cg,v 1.1 2011/01/02 20:22:48 ftigeot Exp $
+
+--- hotspot/src/os_cpu/bsd_amd64/vm/os_bsd_amd64.cpp.orig	2011-01-02 20:30:15 +0100
++++ hotspot/src/os_cpu/bsd_amd64/vm/os_bsd_amd64.cpp	2011-01-02 20:52:23 +0100
+@@ -33,7 +33,7 @@
+ #include <poll.h>
+ #include <inttypes.h>
+ 
+-# ifdef __FreeBSD__
++# if defined(__FreeBSD__) || defined(__DragonFly__)
+ #  define context_rip uc_mcontext.mc_rip
+ #  define context_rsp uc_mcontext.mc_rsp
+ #  define context_rax uc_mcontext.mc_rax

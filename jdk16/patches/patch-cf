@@ -1,0 +1,13 @@
+$NetBSD: patch-cf,v 1.1 2011/01/02 20:22:48 ftigeot Exp $
+
+--- hotspot/src/share/vm/utilities/globalDefinitions_gcc.hpp.orig	2011-01-02 20:30:15 +0100
++++ hotspot/src/share/vm/utilities/globalDefinitions_gcc.hpp	2011-01-02 20:31:51 +0100
+@@ -212,7 +212,7 @@
+ #elif defined(__APPLE__)
+ inline int g_isnan(double f) { return isnan(f); }
+ #elif defined(LINUX) || defined(_ALLBSD_SOURCE)
+-inline int g_isnan(float  f) { return isnanf(f); }
++inline int g_isnan(float  f) { return isnan(f); }
+ inline int g_isnan(double f) { return isnan(f); }
+ #else
+ #error "missing platform-specific definition here"

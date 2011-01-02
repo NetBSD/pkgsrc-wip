@@ -1,0 +1,20 @@
+$NetBSD: patch-ch,v 1.1 2011/01/02 20:22:48 ftigeot Exp $
+
+--- hotspot/src/os/bsd/vm/os_bsd.cpp.orig	2011-01-02 20:30:15 +0100
++++ hotspot/src/os/bsd/vm/os_bsd.cpp	2011-01-02 21:04:52 +0100
+@@ -45,11 +45,14 @@
+ # include <link.h>
+ #endif
+ 
+-#if defined(__FreeBSD__) || defined(__NetBSD__)
++#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__DragonFly__)
+ # include <elf.h>
+ # ifndef EM_AMD64
+ #  define EM_AMD64 EM_X86_64
+ # endif
++# ifndef EM_486
++#  define EM_486 EM_386
++# endif
+ #endif
+ 
+ #ifdef __APPLE__
