@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/01/03 00:47:19 rubengonzalez Exp $
+
+SHA1 (swarp-0.1.tar.gz) = 0d602b971f3d9fe0197143a9106a5c2e5044fd01
+RMD160 (swarp-0.1.tar.gz) = 6a1308a01ad633d290add947cc02bccc95644c25
+Size (swarp-0.1.tar.gz) = 2277 bytes
