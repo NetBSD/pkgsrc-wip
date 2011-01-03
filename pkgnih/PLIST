@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/01/03 18:52:59 cheusov Exp $
+bin/nih
+bin/pkg_update_plan
+man/man1/nih.1
+share/doc/pkgnih/COPYRIGHT
+share/doc/pkgnih/NEWS
+share/doc/pkgnih/README
+share/doc/pkgnih/TODO
+share/examples/nih/nih.conf

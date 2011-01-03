@@ -1,0 +1,18 @@
+PkgNIH is a user-friendly package manager for pkgsrc.
+
+Available commands:
+   nih help            - Display help message
+   nih refresh         - Download pkg_summary and SHA512 files
+   nih install
+   nih upgrade         - Install or upgrade packages
+   nih uninstall
+   nih delete
+   nih remove          - Uninstall packages
+   nih verify          - Verify packages integrity
+   nih status          - Show the status of installed packages
+   nih audit           - Security audit
+   nih leaf            - Output or remove leaf packages
+   nih license         - Working with licenses
+   nih list            - List packages
+   nih mark            - Mark packages
+   nih clean           - Clean-up DESTDIR or packages cache directories
