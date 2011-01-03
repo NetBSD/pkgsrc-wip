@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/01/03 00:02:49 rubengonzalez Exp $
+# $NetBSD: Makefile,v 1.2 2011/01/03 00:12:21 rubengonzalez Exp $
 #
 
 DISTNAME=	wmname-0.1
@@ -6,7 +6,7 @@ CATEGORIES=     x11
 MASTER_SITES=	http://dl.suckless.org/tools/
 
 MAINTAINER=	rga@sdf.lonestar.org
-HOMEPAGE=	http://dl.suckless.org/tools/
+HOMEPAGE=	http://tools.suckless.org/wmname
 COMMENT=	Prints/sets the window manager name property of the root window
 LICENSE=	mit
 
