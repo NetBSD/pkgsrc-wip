@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/01/03 03:04:25 schnoebe Exp $
+${PYSITELIB}/jabberbot-0.10-py2.5.egg-info
+${PYSITELIB}/jabberbot.py
+${PYSITELIB}/jabberbot.pyc
+${PYSITELIB}/jabberbot.pyo
+share/examples/py-jabberbot/broadcast.py
+share/examples/py-jabberbot/tunes.py
+share/examples/py-jabberbot/twitterbot.py
