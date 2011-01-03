@@ -15,4 +15,4 @@ Available commands:
    nih license         - Working with licenses
    nih list            - List packages
    nih mark            - Mark packages
-   nih clean           - Clean-up DESTDIR or packages cache directories
+   nih clean-cache     - Clean-up cache directory with binaries
