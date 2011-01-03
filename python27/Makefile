@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2010/11/15 11:42:04 obache Exp $
+# $NetBSD: Makefile,v 1.11 2011/01/03 12:21:29 moubctez Exp $
 
 .include "dist.mk"
 
@@ -145,6 +145,12 @@ REPLACE.py27.new=	${PREFIX}/bin/python${PY_VER_SUFFIX}
 REPLACE_FILES.py27=	Lib/cgi.py	# explicitly demanded to be patched
 REPLACE_FILES.py27+=	Lib/bsddb/dbshelve.py Lib/test/test_bz2.py
 REPLACE_FILES.py27+=	Lib/test/test_largefile.py Lib/test/test_optparse.py
+
+SUBST_CLASSES+=		findlib
+SUBST_MESSAGE.findlib=	Fixing find_library_file on Darwin.
+SUBST_STAGE.findlib=	pre-configure
+SUBST_FILES.findlib=	Lib/distutils/unixccompiler.py
+SUBST_SED.findlib=	-e 's,/usr/local,${PREFIX},'
 
 post-extract:
 	${MV} ${WRKSRC}/Lib/smtpd.py ${WRKSRC}/Lib/smtpd${PY_VER_SUFFIX}.py
