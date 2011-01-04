@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.50 2010/10/22 22:56:52 cheusov Exp $
+# $NetBSD: Makefile,v 1.51 2011/01/04 19:28:57 cheusov Exp $
 #
 
-DISTNAME=	runawk-1.2.0
+DISTNAME=	runawk-1.3.0
 CATEGORIES=	lang devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=runawk/} \
 		http://mova.org/~cheusov/pub/runawk/
@@ -10,7 +10,7 @@ MAINTAINER=	cheusov@tut.by
 HOMEPAGE=	http://sourceforge.net/projects/runawk
 COMMENT=	AWK wrapper that provides support for modules
 
-BUILD_DEPENDS+=		mk-configure>=0.20.0:../../wip/mk-configure
+BUILD_DEPENDS+=		mk-configure>=0.21.0:../../wip/mk-configure
 
 LICENSE=		mit
 
@@ -25,20 +25,13 @@ TEST_TARGET=		test
 MAKE_ENV+=	AWK_PROG=${AWK:Q}
 .endif
 
-MAKE_ENV+=		MANDIR=${PREFIX}/${PKGMANDIR}
+EGDIR=		${PREFIX}/share/examples/runawk
 
-PKGDOCDIR=		${PREFIX}/share/doc/runawk
-EGDIR=			${PREFIX}/share/examples/runawk
+MAKE_ENV+=	MANDIR=${PREFIX}/${PKGMANDIR}
+MAKE_ENV+=	EGDIR=${EGDIR}
+MAKE_ENV+=	SUBPRJ_DFLT='runawk modules a_getopt doc examples'
 
-AUTO_MKDIRS=		yes
-
-DOC_FILES=		README NEWS ChangeLog TODO
-
-post-install:
-.for i in ${DOC_FILES}
-	${INSTALL_DATA} ${WRKSRC}/"${i}" ${DESTDIR}${PKGDOCDIR}
-.endfor
-	cp -p ${WRKSRC}/examples/* ${DESTDIR}/${EGDIR}/
+AUTO_MKDIRS=	yes
 
 .include "../../mk/bsd.pkg.mk"
 
