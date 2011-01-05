@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/01/05 12:21:34 obache Exp $
+
+SHA1 (memoize-1.3.1.gem) = bbc40e5adfad89ff5bf8994f92762972e3cfefa8
+RMD160 (memoize-1.3.1.gem) = de459ce60b6720807a4c32aba1373ea087a05250
+Size (memoize-1.3.1.gem) = 7680 bytes
