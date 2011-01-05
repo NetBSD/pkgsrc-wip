@@ -1,0 +1,56 @@
+$NetBSD: patch-aa,v 1.1.1.1 2011/01/05 13:23:14 rubengonzalez Exp $
+
+--- curses/curses_misc.py.orig	2009-09-01 15:05:31.000000000 +0000
++++ curses/curses_misc.py
+@@ -208,7 +208,11 @@ class TabColumns(urwid.WidgetWrap):
+             ])
+         if not firstrun:
+             self.frame.set_body(self.pile)
+-            self.set_w(self.frame)
++	     ## API changed between urwid 0.9.8.4 and 0.9.9
++            try:
++                self.set_w(self.frame)
++            except AttributeError:
++                self._w = self.frame
+ 
+     def selectable(self):
+         return True
+@@ -360,7 +364,11 @@ class ComboBox(urwid.WidgetWrap):
+ 
+     def set_focus(self,index):
+         self.focus = index
+-        self.cbox.set_w(SelText(self.list[index]+self.DOWN_ARROW))
++	 ## API changed between urwid 0.9.8.4 and 0.9.9
++        try:
++            self.cbox.set_w(SelText(self.list[index]+self.DOWN_ARROW))
++        except AttributeError:
++            self.cbox._w = SelText(self.list[index]+self.DOWN_ARROW)
+         if self.overlay:
+             self.overlay._listbox.set_focus(index)
+ 
+@@ -381,7 +389,11 @@ class ComboBox(urwid.WidgetWrap):
+             self.overlay = self.ComboSpace(self.list,parent,ui,self.focus,
+                     pos=(0,row))
+ 
+-        self.set_w(w)
++        ## API changed between urwid 0.9.8.4 and 0.9.9
++        try:
++            self.set_w(w)
++        except AttributeError:
++            self._w = w
+         self.parent = parent
+         self.ui = ui
+         self.row = row
+@@ -398,7 +410,11 @@ class ComboBox(urwid.WidgetWrap):
+             retval = self.overlay.show(self.ui,self.parent)
+             if retval != None:
+                 self.set_focus(self.list.index(retval))
+-                #self.cbox.set_w(SelText(retval+'    vvv'))
++		 ## API changed between urwid 0.9.8.4 and 0.9.9
++                try:
++                    self.cbox.set_w(SelText(retval+'    vvv'))
++                except AttributeError:
++                    self.cbox._w = SelText(retval+'    vvv')
+                 if self.callback != None:
+                     self.callback(self,self.overlay._listbox.get_focus()[1],
+                             self.user_args)

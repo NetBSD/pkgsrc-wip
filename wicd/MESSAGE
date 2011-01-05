@@ -1,0 +1,19 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2011/01/05 13:23:14 rubengonzalez Exp $
+
+wicd rc.d script has been installed into:
+
+* ${PREFIX}/share/examples/rc.d/wicd
+
+If something is wrong, check the logs at /var/log/wicd/wicd.log
+
+Common errors:
+
+* dbus.exceptions.DBusException: org.freedesktop.DBus.Error.AccessDenied:
+Connection ":1.9" is not allowed to own the service "org.wicd.da
+emon" due to security policies in the configuration file
+
+# make sure that ${PKG_SYSCONFDIR}/dbus-1/system.d/wicd.conf exist
+and dbus has reloaded its policy configuration.
+
+===========================================================================

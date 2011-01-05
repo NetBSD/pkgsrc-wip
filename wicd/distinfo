@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/01/05 13:23:14 rubengonzalez Exp $
+
+SHA1 (wicd-1.6.2.2.tar.gz) = 97e66d550ebc483a699c8e87482f82c9185bc0c8
+RMD160 (wicd-1.6.2.2.tar.gz) = 38a5c84a6384c1e6563ecc51e478c633b7cc8a00
+Size (wicd-1.6.2.2.tar.gz) = 464976 bytes
+SHA1 (patch-aa) = a8b19192ef90c7f65f540c8604ffacb892d73899
