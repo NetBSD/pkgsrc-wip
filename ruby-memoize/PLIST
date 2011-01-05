@@ -1,12 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/01/05 12:21:34 obache Exp $
-${GEM_HOME}/cache/${GEM_NAME}.gem
-${GEM_LIBDIR}/CHANGES
-${GEM_LIBDIR}/MANIFEST
-${GEM_LIBDIR}/README
-${GEM_LIBDIR}/Rakefile
-${GEM_LIBDIR}/examples/example_fibonacci.rb
-${GEM_LIBDIR}/examples/example_memoize.rb
-${GEM_LIBDIR}/lib/memoize.rb
-${GEM_LIBDIR}/memoize.gemspec
-${GEM_LIBDIR}/test/test_memoize.rb
-${GEM_HOME}/specifications/${GEM_NAME}.gemspec
+@comment $NetBSD: PLIST,v 1.2 2011/01/05 12:57:37 obache Exp $
+${RUBY_VENDORLIB}/memoize.rb
