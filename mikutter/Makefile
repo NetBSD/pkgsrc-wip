@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2010/10/28 05:49:44 obache Exp $
+# $NetBSD: Makefile,v 1.3 2011/01/05 14:02:54 obache Exp $
 #
 
-DISTNAME=	mikutter.0.0.1.4
+DISTNAME=	mikutter.0.0.2.2
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/./-/}
 CATEGORIES=	net
 MASTER_SITES=	http://mikutter.d.hachune.net/bin/
@@ -15,13 +15,16 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/ruby/rubyversion.mk"
 
+DEPENDS+=	${RUBY_PKGPREFIX}-sqlite3-[0-9]*:../../databases/ruby-sqlite3
 DEPENDS+=	xdg-utils-[0-9]*:../../misc/xdg-utils
-DEPENDS+=	${RUBY_PKGPREFIX}-json-[0-9]*:../../textproc/ruby-json
+DEPENDS+=	${RUBY_PKGPREFIX}-json>=1.1.9:../../textproc/ruby-json
 DEPENDS+=	${RUBY_PKGPREFIX}-hmac-[0-9]*:../../security/ruby-hmac
 DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-gtk-[0-9]*:../../x11/ruby-gnome2-gtk
 DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-gstreamer-[0-9]*:../../multimedia/ruby-gnome2-gstreamer
-DEPENDS+=	${RUBY_PKGPREFIX}-oauth-[0-9]*:../../security/ruby-oauth
+DEPENDS+=	${RUBY_PKGPREFIX}-oauth>=0.3.6:../../security/ruby-oauth
 DEPENDS+=	${RUBY_PKGPREFIX}-escape-[0-9]*:../../wip/ruby-escape
+DEPENDS+=	${RUBY_PKGPREFIX}-memoize>=1.3.1:../../wip/ruby-memoize
+DEPENDS+=	${RUBY_PKGPREFIX}-httpclient-[0-9]*:../../wip/ruby-httpclient
 # notif-send
 DEPENDS+=	libnotify-[0-9]*:../../sysutils/libnotify
 
@@ -36,14 +39,14 @@ REPLACE_RUBY_DIRS=	core
 INSTALLATION_DIRS+=	bin share/doc/mikutter share/applications share/mikutter
 
 do-build:
-	cd ${WRKSRC}/core && ${RM} -rf json* lib/escape.rb lib/oauth*
+	cd ${WRKSRC}/core && ${RM} -rf json* lib/escape.rb lib/oauth* lib/memoize.rb
 	${SED} -e 's,@PREFIX@,${PREFIX},g' < ${FILESDIR}/desktop.in > ${WRKDIR}/desktop
 	${SED} -e 's,@PREFIX@,${PREFIX},g' < ${FILESDIR}/mikutter.sh.in > ${WRKDIR}/mikutter.sh
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/mikutter.rb ${DESTDIR}${PREFIX}/share/mikutter
 	cd ${WRKSRC} && pax -rwpp core plugin ${DESTDIR}${PREFIX}/share/mikutter
-	${INSTALL_DATA} ${WRKSRC}/README.html ${DESTDIR}${PREFIX}/share/doc/mikutter
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/mikutter
 	${INSTALL_SCRIPT} ${WRKDIR}/mikutter.sh ${DESTDIR}${PREFIX}/bin/mikutter
 	${INSTALL_DATA} ${WRKDIR}/desktop ${DESTDIR}${PREFIX}/share/applications/mikutter.desktop
 
