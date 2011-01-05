@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4185 2011/01/03 19:40:57 cheusov Exp $
+# $Id: Makefile,v 1.4186 2011/01/05 12:23:13 obache Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2242,6 +2242,7 @@ SUBDIR+=	ruby-dnssd
 SUBDIR+=	ruby-easyjour
 SUBDIR+=	ruby-escape
 SUBDIR+=	ruby-git
+SUBDIR+=	ruby-memoize
 SUBDIR+=	ruby-term-ansicolor
 SUBDIR+=	ruby-trollop
 SUBDIR+=	ruby-xmpp4r
