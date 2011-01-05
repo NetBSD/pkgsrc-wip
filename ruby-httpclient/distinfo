@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/01/05 13:54:43 obache Exp $
+
+SHA1 (httpclient-2.1.6.tar.gz) = d34f950a6dd48854b94afdcdbb48ec9198995d1d
+RMD160 (httpclient-2.1.6.tar.gz) = 65716afc2e908e6365ed41b01aedd371c8efcf57
+Size (httpclient-2.1.6.tar.gz) = 253483 bytes
+SHA1 (patch-aa) = 20468591e2e2f0be7a654507dad653b570a5b5b6
