@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4187 2011/01/05 13:56:19 obache Exp $
+# $Id: Makefile,v 1.4188 2011/01/06 13:08:32 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -928,6 +928,7 @@ SUBDIR+=	hs-safer-file-handles
 SUBDIR+=	hs-stm
 SUBDIR+=	hs-storable-record
 SUBDIR+=	hs-storablevector
+SUBDIR+=	hs-strict
 SUBDIR+=	hs-syb
 SUBDIR+=	hs-tagged
 SUBDIR+=	hs-tagsoup
