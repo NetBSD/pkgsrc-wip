@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/01/06 15:40:06 phonohawk Exp $
+bin/hscolor
+lib/colorize-haskell-${PKGVERSION}/${HASKELL_VERSION}/HScolorize-haskell-${PKGVERSION}.o
+lib/colorize-haskell-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Colorize.hi
+lib/colorize-haskell-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Colorize.p_hi
+lib/colorize-haskell-${PKGVERSION}/${HASKELL_VERSION}/libHScolorize-haskell-${PKGVERSION}.a
+lib/colorize-haskell-${PKGVERSION}/${HASKELL_VERSION}/libHScolorize-haskell-${PKGVERSION}_p.a
+lib/colorize-haskell-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/colorize-haskell-${PKGVERSION}/LICENSE

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/01/06 15:40:06 phonohawk Exp $
+
+SHA1 (colorize-haskell-1.0.1.tar.gz) = fff27ff33d2687e853d54a645e555d3221f70952
+RMD160 (colorize-haskell-1.0.1.tar.gz) = 002dd1d0722a9857a6d1c544b42437e6a33e69ac
+Size (colorize-haskell-1.0.1.tar.gz) = 3320 bytes
