@@ -1,0 +1,11 @@
+$NetBSD: patch-ab,v 1.1 2011/01/06 17:59:17 thomasklausner Exp $
+
+Avoid hardcoding shared library major number.
+
+--- lib/poppler-sharp/poppler-sharp/poppler-sharp.dll.config.orig	2009-08-11 22:32:25.000000000 +0000
++++ lib/poppler-sharp/poppler-sharp/poppler-sharp.dll.config
+@@ -1,3 +1,3 @@
+ <configuration>
+-  <dllmap dll="poppler-glib" target="libpoppler-glib.so.4"/>
++  <dllmap dll="poppler-glib" target="libpoppler-glib.so"/>
+ </configuration>
