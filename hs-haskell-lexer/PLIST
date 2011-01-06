@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/01/06 15:30:33 phonohawk Exp $
+lib/haskell-lexer-${PKGVERSION}/${HASKELL_VERSION}/HShaskell-lexer-${PKGVERSION}.o
+lib/haskell-lexer-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Lexer.hi
+lib/haskell-lexer-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Lexer.p_hi
+lib/haskell-lexer-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Lexer/Layout.hi
+lib/haskell-lexer-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Lexer/Layout.p_hi
+lib/haskell-lexer-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Lexer/Lex.hi
+lib/haskell-lexer-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Lexer/Lex.p_hi
+lib/haskell-lexer-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Lexer/Position.hi
+lib/haskell-lexer-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Lexer/Position.p_hi
+lib/haskell-lexer-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Lexer/Tokens.hi
+lib/haskell-lexer-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Lexer/Tokens.p_hi
+lib/haskell-lexer-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Lexer/Utils.hi
+lib/haskell-lexer-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Lexer/Utils.p_hi
+lib/haskell-lexer-${PKGVERSION}/${HASKELL_VERSION}/libHShaskell-lexer-${PKGVERSION}.a
+lib/haskell-lexer-${PKGVERSION}/${HASKELL_VERSION}/libHShaskell-lexer-${PKGVERSION}_p.a
+lib/haskell-lexer-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/haskell-lexer-${PKGVERSION}/LICENSE
