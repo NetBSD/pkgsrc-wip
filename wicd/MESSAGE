@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2011/01/05 13:23:14 rubengonzalez Exp $
+$NetBSD: MESSAGE,v 1.2 2011/01/06 16:08:11 rubengonzalez Exp $
 
 wicd rc.d script has been installed into:
 
@@ -15,5 +15,7 @@ emon" due to security policies in the configuration file
 
 # make sure that ${PKG_SYSCONFDIR}/dbus-1/system.d/wicd.conf exist
 and dbus has reloaded its policy configuration.
+
+Also, your user needs to be listed in users group.
 
 ===========================================================================
