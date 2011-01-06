@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/01/06 13:07:28 phonohawk Exp $
+lib/strict-${PKGVERSION}/${HASKELL_VERSION}/Data/Strict.hi
+lib/strict-${PKGVERSION}/${HASKELL_VERSION}/Data/Strict.p_hi
+lib/strict-${PKGVERSION}/${HASKELL_VERSION}/Data/Strict/Either.hi
+lib/strict-${PKGVERSION}/${HASKELL_VERSION}/Data/Strict/Either.p_hi
+lib/strict-${PKGVERSION}/${HASKELL_VERSION}/Data/Strict/Maybe.hi
+lib/strict-${PKGVERSION}/${HASKELL_VERSION}/Data/Strict/Maybe.p_hi
+lib/strict-${PKGVERSION}/${HASKELL_VERSION}/Data/Strict/Tuple.hi
+lib/strict-${PKGVERSION}/${HASKELL_VERSION}/Data/Strict/Tuple.p_hi
+lib/strict-${PKGVERSION}/${HASKELL_VERSION}/HSstrict-${PKGVERSION}.o
+lib/strict-${PKGVERSION}/${HASKELL_VERSION}/System/IO/Strict.hi
+lib/strict-${PKGVERSION}/${HASKELL_VERSION}/System/IO/Strict.p_hi
+lib/strict-${PKGVERSION}/${HASKELL_VERSION}/libHSstrict-${PKGVERSION}.a
+lib/strict-${PKGVERSION}/${HASKELL_VERSION}/libHSstrict-${PKGVERSION}_p.a
+lib/strict-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/strict-${PKGVERSION}/LICENSE
