@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/01/06 15:53:07 phonohawk Exp $
+
+SHA1 (ghc-core-0.5.4.tar.gz) = ecb165612f72543b419ed39af8dec8a194cfaee7
+RMD160 (ghc-core-0.5.4.tar.gz) = d83bbf60dfc1b4e65936f54a1a7d08a5861396f4
+Size (ghc-core-0.5.4.tar.gz) = 5021 bytes
