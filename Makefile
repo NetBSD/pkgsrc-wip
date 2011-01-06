@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4192 2011/01/06 15:54:16 phonohawk Exp $
+# $Id: Makefile,v 1.4193 2011/01/06 16:57:26 makoto Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -218,6 +218,10 @@ SUBDIR+=	cairo-java
 SUBDIR+=	calcurse
 SUBDIR+=	calcurse-2.8
 SUBDIR+=	callweaver
+SUBDIR+=	canna
+SUBDIR+=	canna-dict
+SUBDIR+=	canna-lib
+SUBDIR+=	canna-server
 SUBDIR+=	cartago
 SUBDIR+=	castget
 SUBDIR+=	cb2bib
