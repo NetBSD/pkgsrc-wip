@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4189 2011/01/06 15:24:09 phonohawk Exp $
+# $Id: Makefile,v 1.4190 2011/01/06 15:31:47 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -884,6 +884,7 @@ SUBDIR+=	hs-gnuplot
 SUBDIR+=	hs-hashed-storage
 SUBDIR+=	hs-hashed-storage3
 SUBDIR+=	hs-haskeline
+SUBDIR+=	hs-haskell-lexer
 SUBDIR+=	hs-haskell-src
 SUBDIR+=	hs-haskell-src-exts
 SUBDIR+=	hs-haskelldb
