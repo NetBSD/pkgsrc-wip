@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/01/06 15:53:07 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2011/01/06 15:56:24 phonohawk Exp $
 #
 
 DISTNAME=	ghc-core-0.5.4
+PKGNAME=	${DISTNAME}
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
