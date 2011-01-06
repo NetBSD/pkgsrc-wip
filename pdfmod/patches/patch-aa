@@ -1,7 +1,9 @@
-$NetBSD: patch-aa,v 1.1 2011/01/06 16:36:32 thomasklausner Exp $
+$NetBSD: patch-aa,v 1.2 2011/01/06 21:12:48 thomasklausner Exp $
 
 Avoid unnecessary build-breaking warning about uninitialized variable
 with mono-2.8.1.
+
+https://bugzilla.gnome.org/show_bug.cgi?id=638851
 
 --- src/PdfMod/Gui/Client.cs.orig	2010-09-28 19:45:35.000000000 +0000
 +++ src/PdfMod/Gui/Client.cs
