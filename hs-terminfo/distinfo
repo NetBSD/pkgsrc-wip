@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2009/09/24 09:26:52 phonohawk Exp $
+$NetBSD: distinfo,v 1.4 2011/01/07 09:48:12 phonohawk Exp $
 
-SHA1 (terminfo-0.3.1.1.tar.gz) = 31461914b845615c4a9f7ab19f2b245e12d98861
-RMD160 (terminfo-0.3.1.1.tar.gz) = a5795ead40b88b1ca906f41f4968d323d96eecd1
-Size (terminfo-0.3.1.1.tar.gz) = 42858 bytes
+SHA1 (terminfo-0.3.1.3.tar.gz) = 3485c5a7c892b66b817fc28846678f5369d53d89
+RMD160 (terminfo-0.3.1.3.tar.gz) = ce8a471b877fe41e9588fe72042a4b8769f4cf23
+Size (terminfo-0.3.1.3.tar.gz) = 42968 bytes

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2010/01/24 03:12:27 phonohawk Exp $
+# $NetBSD: Makefile,v 1.4 2011/01/07 09:48:12 phonohawk Exp $
 #
 
-DISTNAME=	terminfo-0.3.1.1
+DISTNAME=	terminfo-0.3.1.3
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
@@ -10,6 +10,7 @@ LICENSE=	modified-bsd
 
 CONFIGURE_ARGS+= --extra-include-dirs=${PREFIX}/include/ncurses --extra-lib-dirs=${PREFIX}/lib
 
+USE_NCURSES=    yes
 .include "../../wip/mk/haskell.mk"
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
