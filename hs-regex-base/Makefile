@@ -1,13 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2009/05/21 04:52:46 phonohawk Exp $
+# $NetBSD: Makefile,v 1.4 2011/01/07 10:11:58 phonohawk Exp $
 #
 
-DISTNAME=	regex-base-0.93.1
-PKGREVISION=	1
-PKGNAME=	hs-${DISTNAME}
-CATEGORIES=	textproc
+DISTNAME=	regex-base-0.93.2
+CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
-HOMEPAGE=	http://sourceforge.net/projects/lazy-regex
 COMMENT=	Replaces/Enhances Haskell Text.Regex
 
 .include "../../wip/mk/haskell.mk"
