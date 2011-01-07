@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/12/23 01:33:08 netcap Exp $
-
-SHA1 (libgnugetopt-1.2.tar.bz2) = eb6cab0fee09d545025ea609e497a1c33e3bce10
-RMD160 (libgnugetopt-1.2.tar.bz2) = 2ff3ff318f975c5af39203f003d9061d282ea31b
-Size (libgnugetopt-1.2.tar.bz2) = 10808 bytes

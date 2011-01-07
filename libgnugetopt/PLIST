@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/12/23 01:33:08 netcap Exp $
-include/gnugetopt.h
-lib/libgnugetopt.a
-lib/libgnugetopt.so
-lib/libgnugetopt.so.1
