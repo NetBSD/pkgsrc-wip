@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2009/09/24 06:22:54 phonohawk Exp $
+$NetBSD: distinfo,v 1.3 2011/01/07 09:55:53 phonohawk Exp $
 
-SHA1 (haskeline-0.6.2.1.tar.gz) = bca2ffad9128d70fa42969c621aec8cd452c3366
-RMD160 (haskeline-0.6.2.1.tar.gz) = 1750cf14d283152e7263821ebccc5468a30d4b0f
-Size (haskeline-0.6.2.1.tar.gz) = 49408 bytes
+SHA1 (haskeline-0.6.3.2.tar.gz) = 917fade13b2579b581824dcb1a81ddf0ee0907c9
+RMD160 (haskeline-0.6.3.2.tar.gz) = 06a043650a15b33fd7e04092abea8d7bda1b9e5f
+Size (haskeline-0.6.3.2.tar.gz) = 61464 bytes
