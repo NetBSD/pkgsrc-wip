@@ -1,0 +1,26 @@
+$NetBSD: patch-ac,v 1.1.1.1 2011/01/07 16:56:46 pdtafti Exp $
+
+--- apps.src/Makefile.orig	2009-04-17 14:46:39.000000000 +0000
++++ apps.src/Makefile
+@@ -16,16 +16,16 @@ PROGRAMS = latfilter olfilter clausefilt
+ all: ladr apps install realclean
+ 
+ ladr:
+-	cd ../ladr && $(MAKE) libladr.a
++	( cd ../ladr && $(MAKE) libladr.a )
+ 
+ clean:
+-	/bin/rm -f *.o
++	rm -f *.o
+ 
+ realclean:
+-	/bin/rm -f *.o $(PROGRAMS)
++	rm -f *.o $(PROGRAMS)
+ 
+-install:
+-	/bin/mv $(PROGRAMS) ../bin
++install: $(PROGRAMS)
++	mv $(PROGRAMS) ../bin
+ 
+ tags:
+ 	etags *.c ../ladr/*.c

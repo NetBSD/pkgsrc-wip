@@ -1,0 +1,12 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/01/07 16:56:46 pdtafti Exp $
+
+SHA1 (LADR-2009-11A.tar.gz) = 0b30a80f36512c0958b0e77ce18d0d8056e33bb1
+RMD160 (LADR-2009-11A.tar.gz) = b4b1af8af6b7bdd7c1f286789a1e16e38589590e
+Size (LADR-2009-11A.tar.gz) = 1795750 bytes
+SHA1 (patch-aa) = 930be7711c402278c9456af3c20c1065a54a20db
+SHA1 (patch-ab) = bbeb7d29f0d8aa181c07f062e78a31bcd4352d8c
+SHA1 (patch-ac) = ee0e5a7f0d7962de59e7313aa99ded33e34417de
+SHA1 (patch-ad) = 639883d7331cfb3e8d449ccbd99cae43934033e9
+SHA1 (patch-ae) = 57a68c829e2409cb62b57374d0bf81f8478e4924
+SHA1 (patch-af) = 446109bc94704f1b00633b88568d0601396bbd57
+SHA1 (patch-ag) = 138e8ebab38645d2a985edf2ca4ed58ecac026e3

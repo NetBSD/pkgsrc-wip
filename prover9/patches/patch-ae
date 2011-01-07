@@ -1,0 +1,28 @@
+$NetBSD: patch-ae,v 1.1.1.1 2011/01/07 16:56:46 pdtafti Exp $
+
+--- mace4.src/Makefile.orig	2009-04-17 14:46:46.000000000 +0000
++++ mace4.src/Makefile
+@@ -26,7 +26,7 @@ lib libmace4:
+ 	$(MAKE) libmace4.a
+ 
+ ladr:
+-	cd ../ladr && $(MAKE) libladr.a
++	( cd ../ladr && $(MAKE) libladr.a )
+ 	$(MAKE) clean
+ 
+ mace4: libmace4.a mace4.o $(OBJECTS)
+@@ -38,10 +38,10 @@ tags:
+ 	etags *.c ../ladr/*.c
+ 
+ clean:
+-	/bin/rm -f *.o
++	rm -f *.o
+ 
+ realclean:
+-	/bin/rm -f *.o *.a mace4
++	rm -f *.o *.a mace4
+ 
+-install:
+-	/bin/mv mace4 ../bin
++install: mace4
++	mv mace4 ../bin

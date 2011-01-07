@@ -1,0 +1,21 @@
+$NetBSD: patch-ag,v 1.1.1.1 2011/01/07 16:56:46 pdtafti Exp $
+
+--- test.src/Makefile.orig	2007-03-06 20:27:59.000000000 +0000
++++ test.src/Makefile
+@@ -17,13 +17,13 @@ all: ladr apps
+ 
+ ladr:
+ 	make clean
+-	cd ../ladr && $(MAKE) libladr.a
++	( cd ../ladr && $(MAKE) libladr.a )
+ 
+ clean:
+-	/bin/rm -f *.o
++	rm -f *.o
+ 
+ realclean:
+-	/bin/rm -f *.o $(PROGRAMS)
++	rm -f *.o $(PROGRAMS)
+ 
+ tags:
+ 	etags *.c ../ladr/*.c
