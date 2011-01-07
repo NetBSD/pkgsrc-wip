@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2009/05/21 04:54:13 phonohawk Exp $
+$NetBSD: distinfo,v 1.3 2011/01/07 10:14:13 phonohawk Exp $
 
-SHA1 (regex-posix-0.94.1.tar.gz) = 4d0c820246da25735438c96c4392dd043a38bbfb
-RMD160 (regex-posix-0.94.1.tar.gz) = 7987b622800e79ce77634c983bbc177d71198acd
-Size (regex-posix-0.94.1.tar.gz) = 13015 bytes
+SHA1 (regex-posix-0.94.4.tar.gz) = deaabc9979933f746f8e0849bf253f759852c233
+RMD160 (regex-posix-0.94.4.tar.gz) = 0c9be47d77a8f90e629f19fea5c6848a66365216
+Size (regex-posix-0.94.4.tar.gz) = 42195 bytes
