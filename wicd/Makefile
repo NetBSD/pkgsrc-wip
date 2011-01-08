@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/01/05 13:23:14 rubengonzalez Exp $
+# $NetBSD: Makefile,v 1.2 2011/01/08 09:50:26 rubengonzalez Exp $
 #
 
 DISTNAME=	wicd-1.6.2.2
@@ -56,4 +56,5 @@ post-install:
 .include "options.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
