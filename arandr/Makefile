@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/01/07 07:23:51 rubengonzalez Exp $
+# $NetBSD: Makefile,v 1.2 2011/01/08 12:00:41 rubengonzalez Exp $
 #
 
 DISTNAME=	arandr-0.1.4
@@ -32,4 +32,5 @@ do-install:
 
 .include "../../x11/py-gtk2/buildlink3.mk"
 .include "../../lang/python/application.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"

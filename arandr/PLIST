@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/01/07 07:23:51 rubengonzalez Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/01/08 12:00:41 rubengonzalez Exp $
 bin/arandr
 man/man1/arandr.1
 share/locale/ar/LC_MESSAGES/arandr.mo
@@ -14,3 +14,5 @@ share/locale/pt_BR/LC_MESSAGES/arandr.mo
 share/locale/ru/LC_MESSAGES/arandr.mo
 share/locale/tr/LC_MESSAGES/arandr.mo
 share/locale/zh_CN/LC_MESSAGES/arandr.mo
+share/applications/arandr.desktop
+lib/python2.6/site-packages/arandr-0.1.4-py2.6.egg-info
