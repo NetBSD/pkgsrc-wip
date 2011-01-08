@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.14 2010/10/19 12:26:27 makoto Exp $
+$NetBSD: distinfo,v 1.15 2011/01/08 12:53:57 asau Exp $
 
 SHA1 (llvm-2.6.tar.gz) = 547471147cbf6d3e49539e01196ffada2c79c250
 RMD160 (llvm-2.6.tar.gz) = 24d58cb052ab5879aae59eaf4885ec41186ee22a
 Size (llvm-2.6.tar.gz) = 7790380 bytes
 SHA1 (patch-ac) = 706057dfbfaf86ae04e2642364de586e4b9476f8
-SHA1 (patch-ad) = f0fd2e9902c1db6b5ed97bd87aeac73cc3ae3dfc
-SHA1 (patch-ae) = b1c05fb7d9c701e0a110f8687d98f577929145ae
+SHA1 (patch-ad) = 17cccba99328411cd76749bdb9bf541db5ad1f6b
