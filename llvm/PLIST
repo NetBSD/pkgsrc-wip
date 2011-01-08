@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2010/12/09 17:18:23 asau Exp $
+@comment $NetBSD: PLIST,v 1.30 2011/01/08 17:32:50 asau Exp $
 bin/bugpoint
 bin/llc
 bin/lli
@@ -17,7 +17,7 @@ bin/llvm-prof
 bin/llvm-ranlib
 bin/llvm-stub
 bin/llvmc
-bin/macho-dumpx
+bin/macho-dump
 bin/opt
 bin/tblgen
 include/llvm-c/Analysis.h
@@ -51,6 +51,7 @@ include/llvm/ADT/ImmutableMap.h
 include/llvm/ADT/ImmutableSet.h
 include/llvm/ADT/InMemoryStruct.h
 include/llvm/ADT/IndexedMap.h
+include/llvm/ADT/IntEqClasses.h
 include/llvm/ADT/IntervalMap.h
 include/llvm/ADT/IntrusiveRefCntPtr.h
 include/llvm/ADT/NullablePtr.h
@@ -98,6 +99,7 @@ include/llvm/Analysis/DIBuilder.h
 include/llvm/Analysis/DOTGraphTraitsPass.h
 include/llvm/Analysis/DebugInfo.h
 include/llvm/Analysis/DomPrinter.h
+include/llvm/Analysis/DominanceFrontier.h
 include/llvm/Analysis/DominatorInternals.h
 include/llvm/Analysis/Dominators.h
 include/llvm/Analysis/FindUsedTypes.h
@@ -158,6 +160,7 @@ include/llvm/CodeGen/AsmPrinter.h
 include/llvm/CodeGen/BinaryObject.h
 include/llvm/CodeGen/CalcSpillWeights.h
 include/llvm/CodeGen/CallingConvLower.h
+include/llvm/CodeGen/EdgeBundles.h
 include/llvm/CodeGen/FastISel.h
 include/llvm/CodeGen/FunctionLoweringInfo.h
 include/llvm/CodeGen/GCMetadata.h
@@ -189,6 +192,7 @@ include/llvm/CodeGen/MachineInstrBuilder.h
 include/llvm/CodeGen/MachineJumpTableInfo.h
 include/llvm/CodeGen/MachineLocation.h
 include/llvm/CodeGen/MachineLoopInfo.h
+include/llvm/CodeGen/MachineLoopRanges.h
 include/llvm/CodeGen/MachineMemOperand.h
 include/llvm/CodeGen/MachineModuleInfo.h
 include/llvm/CodeGen/MachineModuleInfoImpls.h
@@ -286,14 +290,16 @@ include/llvm/MC/MCContext.h
 include/llvm/MC/MCDirectives.h
 include/llvm/MC/MCDisassembler.h
 include/llvm/MC/MCDwarf.h
+include/llvm/MC/MCELFObjectWriter.h
 include/llvm/MC/MCELFSymbolFlags.h
 include/llvm/MC/MCExpr.h
 include/llvm/MC/MCFixup.h
+include/llvm/MC/MCFixupKindInfo.h
 include/llvm/MC/MCInst.h
 include/llvm/MC/MCInstPrinter.h
 include/llvm/MC/MCLabel.h
 include/llvm/MC/MCMachOSymbolFlags.h
-include/llvm/MC/MCObjectFormat.h
+include/llvm/MC/MCMachObjectWriter.h
 include/llvm/MC/MCObjectStreamer.h
 include/llvm/MC/MCObjectWriter.h
 include/llvm/MC/MCParser/AsmCond.h
@@ -376,6 +382,7 @@ include/llvm/Support/NoFolder.h
 include/llvm/Support/OutputBuffer.h
 include/llvm/Support/PassNameParser.h
 include/llvm/Support/Path.h
+include/llvm/Support/PathV1.h
 include/llvm/Support/PathV2.h
 include/llvm/Support/PatternMatch.h
 include/llvm/Support/PluginLoader.h
@@ -394,7 +401,6 @@ include/llvm/Support/SMLoc.h
 include/llvm/Support/Signals.h
 include/llvm/Support/Solaris.h
 include/llvm/Support/SourceMgr.h
-include/llvm/Support/StableBasicBlockNumbering.h
 include/llvm/Support/StandardPasses.h
 include/llvm/Support/StringPool.h
 include/llvm/Support/SwapByteOrder.h
@@ -418,6 +424,7 @@ include/llvm/Target/Mangler.h
 include/llvm/Target/SubtargetFeature.h
 include/llvm/Target/Target.td
 include/llvm/Target/TargetAsmBackend.h
+include/llvm/Target/TargetAsmInfo.h
 include/llvm/Target/TargetAsmLexer.h
 include/llvm/Target/TargetAsmParser.h
 include/llvm/Target/TargetCallingConv.h
@@ -445,7 +452,6 @@ include/llvm/Target/TargetSubtarget.h
 include/llvm/Transforms/IPO.h
 include/llvm/Transforms/IPO/InlinerPass.h
 include/llvm/Transforms/Instrumentation.h
-include/llvm/Transforms/RSProfiling.h
 include/llvm/Transforms/Scalar.h
 include/llvm/Transforms/Utils/AddrModeMatcher.h
 include/llvm/Transforms/Utils/BasicBlockUtils.h
@@ -615,6 +621,7 @@ share/doc/llvm/html/tutorial/OCamlLangImpl4.html
 share/doc/llvm/html/tutorial/OCamlLangImpl5.html
 share/doc/llvm/html/tutorial/OCamlLangImpl6.html
 share/doc/llvm/html/tutorial/OCamlLangImpl7.html
+share/doc/llvm/html/tutorial/OCamlLangImpl8.html
 share/doc/llvm/html/tutorial/index.html
 share/doc/llvm/ps/FileCheck.ps
 share/doc/llvm/ps/bugpoint.ps
