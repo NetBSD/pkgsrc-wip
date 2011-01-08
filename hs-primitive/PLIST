@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/01/08 04:42:00 phonohawk Exp $
+lib/primitive-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Primitive.hi
+lib/primitive-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Primitive.p_hi
+lib/primitive-${PKGVERSION}/${HASKELL_VERSION}/Data/Primitive.hi
+lib/primitive-${PKGVERSION}/${HASKELL_VERSION}/Data/Primitive.p_hi
+lib/primitive-${PKGVERSION}/${HASKELL_VERSION}/Data/Primitive/Addr.hi
+lib/primitive-${PKGVERSION}/${HASKELL_VERSION}/Data/Primitive/Addr.p_hi
+lib/primitive-${PKGVERSION}/${HASKELL_VERSION}/Data/Primitive/Array.hi
+lib/primitive-${PKGVERSION}/${HASKELL_VERSION}/Data/Primitive/Array.p_hi
+lib/primitive-${PKGVERSION}/${HASKELL_VERSION}/Data/Primitive/ByteArray.hi
+lib/primitive-${PKGVERSION}/${HASKELL_VERSION}/Data/Primitive/ByteArray.p_hi
+lib/primitive-${PKGVERSION}/${HASKELL_VERSION}/Data/Primitive/MachDeps.hi
+lib/primitive-${PKGVERSION}/${HASKELL_VERSION}/Data/Primitive/MachDeps.p_hi
+lib/primitive-${PKGVERSION}/${HASKELL_VERSION}/Data/Primitive/Types.hi
+lib/primitive-${PKGVERSION}/${HASKELL_VERSION}/Data/Primitive/Types.p_hi
+lib/primitive-${PKGVERSION}/${HASKELL_VERSION}/HSprimitive-${PKGVERSION}.o
+lib/primitive-${PKGVERSION}/${HASKELL_VERSION}/include/primitive-memops.h
+lib/primitive-${PKGVERSION}/${HASKELL_VERSION}/libHSprimitive-${PKGVERSION}.a
+lib/primitive-${PKGVERSION}/${HASKELL_VERSION}/libHSprimitive-${PKGVERSION}_p.a
+lib/primitive-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/primitive-${PKGVERSION}/LICENSE
