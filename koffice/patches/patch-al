@@ -1,0 +1,15 @@
+$NetBSD: patch-al,v 1.1 2011/01/08 21:30:23 mwdavies Exp $
+
+libwpd-0.9/libwpg-0.2 support from trunk
+
+--- filters/karbon/wpg/import/karbon_wpg_import.desktop	2010-12-29 11:36:55.000000000 +0100
++++ filters/karbon/wpg/import/karbon_wpg_import.desktop	2011-01-02 17:51:40.000000000 +0100
+@@ -42,7 +42,7 @@
+ Name[x-test]=xxKarbon WPG Import Filterxx
+ Name[zh_CN]=Karbon WPG 导入过滤器
+ Name[zh_TW]=Karbon WPG 匯入過濾程式
+-X-KDE-Export=application/vnd.oasis.opendocument.graphics
++X-KDE-Export=image/svg+xml
+ X-KDE-Import=application/x-wpg
+ X-KDE-Weight=1
+ X-KDE-Library=wpgimport

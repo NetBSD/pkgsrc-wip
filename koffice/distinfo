@@ -1,10 +1,21 @@
-$NetBSD: distinfo,v 1.9 2010/11/28 09:39:45 thomasklausner Exp $
+$NetBSD: distinfo,v 1.10 2011/01/08 21:30:23 mwdavies Exp $
 
-SHA1 (koffice-2.2.2.tar.bz2) = ab6405e0efae0d8e895879183f1369facae410e0
-RMD160 (koffice-2.2.2.tar.bz2) = bdd75cb056e2fa96b799eeec0ecb5ed6b6aef4c2
-Size (koffice-2.2.2.tar.bz2) = 56470974 bytes
-SHA1 (patch-aa) = 2b7151c071b98f0696ff2e63b829630a6612279a
+SHA1 (koffice-2.3.0.tar.bz2) = 4eda6ba3f56e9697cde37421b27de1f8da531ba1
+RMD160 (koffice-2.3.0.tar.bz2) = c4fb1ad0895a527f9c2abb96be64f45bf6a23a3c
+Size (koffice-2.3.0.tar.bz2) = 75689297 bytes
 SHA1 (patch-ab) = 69c34a2bfd4b79c716cab4186702a3f5de010010
-SHA1 (patch-ac) = 3f344054aa6cff823a1b90feb3e0b60124fa8f87
-SHA1 (patch-ad) = afdcdedf5a47c8ee3bf8679998fdd0263d16b2d8
-SHA1 (patch-ae) = b431ee7e465d8aed8006bc1d0420f9cbe7c3e32b
+SHA1 (patch-ac) = 2335fc767cc07fa0db865d3e57679e64a70ed5a0
+SHA1 (patch-ad) = c1f4bdbca4df1af37ac3537a9732e2282816d918
+SHA1 (patch-ae) = afea8d6575b505dfe25a040dfb0a3efa552b86fb
+SHA1 (patch-af) = cc488e8c260b8950d7666361dea016f1eacbc071
+SHA1 (patch-ag) = c9f57b7141f3c256139724022d82cc21c45a7886
+SHA1 (patch-ah) = 31024d6bd29e612761ff1609b6a3b2fc28244968
+SHA1 (patch-ai) = 3290e8fda260d488d07640bf96cb651fe6db9a4f
+SHA1 (patch-aj) = 1252e6a0b6064c236c1590ac68194713388ed813
+SHA1 (patch-ak) = 542363ff9fed51d459da159e44ec94dbf0f686f5
+SHA1 (patch-al) = a4fa7ad5f0a75bfe8ef375ec926f1bcbd07f50c6
+SHA1 (patch-am) = 5b897320580e44ecfc7ac2d3e4ee8ae6d2c60505
+SHA1 (patch-an) = 435ba9deeb4da8c264d4e297019e03a5248339d1
+SHA1 (patch-ao) = ad04d3832be790e337018fed844e059da2c2b8a2
+SHA1 (patch-ap) = 9a57202438eefb127331c67985d1ef27d5841162
+SHA1 (patch-aq) = 4f4624cd34d14c77aacedcfc79fe180d8b592995

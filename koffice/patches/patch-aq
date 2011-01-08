@@ -1,0 +1,13 @@
+$NetBSD: patch-aq,v 1.1 2011/01/08 21:30:23 mwdavies Exp $
+
+--- krita/ui/tool/kis_tool_freehand.h.orig	2010-12-29 10:38:29.000000000 +0000
++++ krita/ui/tool/kis_tool_freehand.h
+@@ -42,7 +42,7 @@ class FreehandPaintJobExecutor;
+ 
+ #include "kis_paintop_settings.h"
+ 
+-enum KDE_DEPRECATED enumBrushMode {
++enum enumBrushMode {
+     PAINT,
+     HOVER,
+     EDIT_BRUSH,

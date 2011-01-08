@@ -1,30 +1,18 @@
-$NetBSD: patch-ae,v 1.2 2010/11/28 09:39:45 thomasklausner Exp $
+$NetBSD: patch-ae,v 1.3 2011/01/08 21:30:23 mwdavies Exp $
 
 Recognize latest libwpg.
 
---- cmake/modules/FindWPG.cmake.orig	2010-08-21 05:37:59.000000000 +0000
-+++ cmake/modules/FindWPG.cmake
-@@ -18,14 +18,9 @@ ELSE (LIBWPG_INCLUDE_DIR AND LIBWPG_LIBR
- 
+--- cmake/modules/FindWPG.cmake	2010-12-29 11:34:57.000000000 +0100
++++ cmake/modules/FindWPG.cmake	2011-01-02 17:28:56.000000000 +0100
+@@ -19,9 +19,10 @@
    IF (NOT WIN32)
      INCLUDE(FindPkgConfig)
--    pkg_check_modules(LIBWPG libwpg-0.1)
+     pkg_check_modules(LIBWPG libwpg-0.1)
 +    pkg_check_modules(LIBWPG libwpg-0.2)
    ENDIF (NOT WIN32)
  
 -  FIND_LIBRARY(LIBWPG_STREAM_LIBRARIES NAMES wpg-stream-0.1 libwpg-stream-0.1
--    PATHS
--    ${LIBWPG_LIBRARIES}
--    )
--
-   FIND_PATH(LIBWPG_INCLUDE_DIR libwpg/libwpg.h
++  FIND_LIBRARY(LIBWPG_STREAM_LIBRARIES NAMES libwpg-stream-0.1 wpg-stream-0.1 libwpd-stream-0.9 wpd-stream-0.9
      PATHS
-     ${LIBWPG_INCLUDE_DIRS}
-@@ -44,7 +39,6 @@ ELSE (LIBWPG_INCLUDE_DIR AND LIBWPG_LIBR
-     MESSAGE("libwpg include dir " ${LIBWPG_INCLUDE_DIR})
-     MESSAGE("libwpg lib dir " ${LIBWPG_LIBRARY_DIRS})
-     MESSAGE("libwpg library " ${LIBWPG_LIBRARIES})
--    MESSAGE("libwpg stream library " ${LIBWPG_STREAM_LIBRARIES})
-     MESSAGE("libwpg cflags " ${LIBWPG_DEFINITIONS})
-   ELSE (LIBWPG_FOUND)
-     IF (WPG_FIND_REQUIRED)
+     ${LIBWPG_LIBRARIES}
+     )
