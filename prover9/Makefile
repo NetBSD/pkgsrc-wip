@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/01/08 12:32:05 asau Exp $
+# $NetBSD: Makefile,v 1.3 2011/01/08 12:36:33 asau Exp $
 #
 
 DISTNAME=	LADR-2009-11A
@@ -15,6 +15,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_JOBS_SAFE= 	no
 
 REPLACE_PYTHON=		utilities/attack utilities/gvizify utilities/looper utilities/prover9-mace4
+
+TEST_TARGET=	test1 test2 test3
 
 INSTALLATION_DIRS=      bin ${PKGMANDIR}/man1 share/examples/prover9/prover9 share/examples/prover9/mace4
 
