@@ -1,6 +1,8 @@
---- j2se/make/common/Defs-bsd.gmk.orig	2010-12-05 10:21:51 +0100
-+++ j2se/make/common/Defs-bsd.gmk	2010-12-05 11:34:17 +0100
-@@ -349,6 +349,10 @@
+$NetBSD: patch-ag,v 1.9 2011/01/08 14:31:01 ftigeot Exp $
+
+--- j2se/make/common/Defs-bsd.gmk.orig	2011-01-07 22:58:59.000000000 +0000
++++ j2se/make/common/Defs-bsd.gmk
+@@ -349,6 +349,10 @@ EXTRA_LIBS += -pthread
  # -L paths for finding and -ljava
  #
  LDFLAGS_COMMON += -L$(LIBDIR)/$(LIBARCH)
@@ -11,7 +13,7 @@
  LDFLAGS_OPT     = -Xlinker -O1 -Wl,-soname=$(LIB_PREFIX)$(LIBRARY)$(OPT_SUFFIX).$(LIBRARY_SUFFIX)
  LDFLAGS_DBG     = -Wl,-soname=$(LIB_PREFIX)$(LIBRARY)$(DBG_SUFFIX).$(LIBRARY_SUFFIX)
  
-@@ -400,6 +404,10 @@
+@@ -400,6 +404,10 @@ endif
  VM_NAME         = server
  JVMLIB          = -L$(LIBDIR)/$(LIBARCH)/$(VM_NAME)
  JVMLIB		+= -ljvm$(SUFFIX)
@@ -22,7 +24,17 @@
  JAVALIB         = -ljava$(SUFFIX) $(JVMLIB)
  
  #
-@@ -491,6 +499,14 @@
+@@ -423,6 +431,9 @@ override HAVE_SIGIGNORE          = true
+ else
+ override HAVE_SIGIGNORE          = false
+ endif
++ifeq ($(TRUE_PLATFORM), FreeBSD)
++override HAVE_SIGIGNORE          = true
++endif
+ override LEX_LIBRARY             = -lfl
+ ifeq ($(STATIC_CXX),true)
+ override LIBCXX                  = -Wl,-Bstatic -lstdc++ -lgcc -Wl,-Bdynamic
+@@ -491,6 +502,14 @@ ifeq ($(TRUE_PLATFORM), OpenBSD)
    SYSTEM_ZLIB = true
  endif
  
