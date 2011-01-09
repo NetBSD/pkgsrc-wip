@@ -1,0 +1,29 @@
+$NetBSD: patch-ac,v 1.1 2011/01/09 16:44:04 ftigeot Exp $
+
+--- lib/Munin/Common/Defaults.pm.orig	2009-11-10 20:13:54.000000000 +0000
++++ lib/Munin/Common/Defaults.pm
+@@ -18,18 +18,18 @@ my $COMPONENT_ROOT = dirname(__FILE__) .
+ our $DROPDOWNLIMIT     = 1;
+ 
+ our $MUNIN_PREFIX     = '';
+-our $MUNIN_CONFDIR    = "$COMPONENT_ROOT/t/config/";
++our $MUNIN_CONFDIR    = '@PKG_SYSCONFDIR@/munin/';
+ our $MUNIN_BINDIR     = '';
+ our $MUNIN_SBINDIR    = '';
+ our $MUNIN_DOCDIR     = '';
+-our $MUNIN_LIBDIR     = '';
++our $MUNIN_LIBDIR     = '@MUNIN_LIBDIR@';
+ our $MUNIN_HTMLDIR    = '';
+ our $MUNIN_CGIDIR     = '';
+-our $MUNIN_DBDIR      = '';
+-our $MUNIN_PLUGSTATE  = ''; 
++our $MUNIN_DBDIR      = '@MUNIN_DBDIR@';
++our $MUNIN_PLUGSTATE  = '@MUNIN_DBDIR@/plugin-state'; 
+ our $MUNIN_MANDIR     = '';
+-our $MUNIN_LOGDIR     = "$COMPONENT_ROOT/log/";
+-our $MUNIN_STATEDIR   = ''; 
++our $MUNIN_LOGDIR     = '@MUNIN_LOGDIR@/';
++our $MUNIN_STATEDIR   = '@MUNIN_STATEDIR@'; 
+ our $MUNIN_USER       = getpwuid $UID;
+ our $MUNIN_GROUP      = getgrgid $GID;
+ our $MUNIN_PLUGINUSER = getpwuid $UID;

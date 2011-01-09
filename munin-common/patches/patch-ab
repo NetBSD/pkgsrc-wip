@@ -1,0 +1,27 @@
+$NetBSD: patch-ab,v 1.1 2011/01/09 16:44:04 ftigeot Exp $
+
+--- /dev/null	2011-01-09 11:43:05.000000000 +0000
++++ MANIFEST
+@@ -0,0 +1,22 @@
++Build.PL
++lib/Munin/Common/Config.pm
++lib/Munin/Common/Defaults.pm
++lib/Munin/Common/Timeout.pm
++lib/Munin/Common/TLS.pm
++lib/Munin/Common/TLSClient.pm
++lib/Munin/Common/TLSServer.pm
++MANIFEST			This list of files
++t/critic.t
++t/munin_common_config.t
++t/munin_common_defaults.t
++t/munin_common_timeout.t
++t/munin_common_tls.t
++t/pod-coverage.t
++t/pod.t
++t/tls/CA/ca_cert.pem
++t/tls/master_cert.pem
++t/tls/master_key.pem
++t/tls/node_cert.pem
++t/tls/node_key.pem
++t/tls/openssl.cnf
++t/tls/README

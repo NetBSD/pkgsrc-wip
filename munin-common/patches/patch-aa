@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1 2011/01/09 16:44:04 ftigeot Exp $
+
+--- Build.PL.orig	2009-04-15 06:58:10.000000000 +0000
++++ Build.PL
+@@ -1,6 +1,7 @@
+ use Module::Build;
+ 
+ my $build = Module::Build->new(
++    module_name    => 'Munin::Common',
+     dist_name      => 'Munin::Common',
+     dist_version   => '0.0.0',
+     dist_author    => 'The Munin Team <fix@example.com>',

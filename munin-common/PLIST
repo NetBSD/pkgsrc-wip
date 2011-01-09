@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1 2011/01/09 16:44:04 ftigeot Exp $
+${PERL5_SUB_INSTALLVENDORLIB}/Munin/Common/Config.pm
+${PERL5_SUB_INSTALLVENDORLIB}/Munin/Common/Defaults.pm
+${PERL5_SUB_INSTALLVENDORLIB}/Munin/Common/TLS.pm
+${PERL5_SUB_INSTALLVENDORLIB}/Munin/Common/TLSClient.pm
+${PERL5_SUB_INSTALLVENDORLIB}/Munin/Common/TLSServer.pm
+${PERL5_SUB_INSTALLVENDORLIB}/Munin/Common/Timeout.pm
+man/man3/Munin::Common::Config.3
+man/man3/Munin::Common::Defaults.3
+man/man3/Munin::Common::TLS.3
+man/man3/Munin::Common::TLSClient.3
+man/man3/Munin::Common::TLSServer.3
+man/man3/Munin::Common::Timeout.3
