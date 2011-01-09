@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.33 2010/07/05 14:28:46 gregoire Exp $
+$NetBSD: distinfo,v 1.34 2011/01/09 15:21:50 gregoire Exp $
 
-SHA1 (patch-ad) = 5855770a76831b894d115e16870d84f4ecdd2717
+SHA1 (patch-ad) = ba7eab187e2f032880363eea64223e5730471264
+SHA1 (patch-pkglibdir-in-scripts.diff) = 8f4bec3d328615439e5a4afd903f29e9c889c9f3
