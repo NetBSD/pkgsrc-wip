@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2010/11/11 09:49:21 asau Exp $
+@comment $NetBSD: PLIST,v 1.24 2011/01/09 09:43:39 asau Exp $
 bin/ecl
 bin/ecl-config
 include/ecl/bytecodes.h
@@ -10,6 +10,10 @@ include/ecl/ecl-inl.h
 include/ecl/ecl.h
 include/ecl/eval.h
 include/ecl/external.h
+include/ecl/impl/math_dispatch.h
+include/ecl/impl/math_dispatch2.h
+include/ecl/impl/math_fenv.h
+include/ecl/impl/math_fenv_msvc.h
 include/ecl/internal.h
 include/ecl/number.h
 include/ecl/object.h
