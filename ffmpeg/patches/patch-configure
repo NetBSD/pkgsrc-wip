@@ -1,0 +1,32 @@
+$NetBSD: patch-configure,v 1.1.1.1 2011/01/09 05:47:13 makoto Exp $
+
+--- configure.orig	2010-06-16 04:44:30.000000000 +0900
++++ configure	2011-01-05 17:23:25.000000000 +0900
+@@ -2160,6 +2160,10 @@
+         nm_opts='-P -g'
+         ;;
+     netbsd)
++        if test "${subarch}" != "x86_32"; then
++            LIBOBJFLAGS='$(PIC)'
++            SHFLAGS='-shared'
++        fi
+         oss_indev_extralibs="-lossaudio"
+         oss_outdev_extralibs="-lossaudio"
+         add_cppflags -D_XOPEN_SOURCE=600
+@@ -2387,10 +2391,13 @@
+ union { int x; } __attribute__((may_alias)) x;
+ EOF
+ 
+-check_cc <<EOF || die "endian test failed"
+-unsigned int endian = 'B' << 24 | 'I' << 16 | 'G' << 8 | 'E';
++check_exec <<EOF || enable bigendian
++int main()
++{
++ long one = 1;
++ return !(*((char *)(&one)));
++}
+ EOF
+-od -t x1 $TMPO | grep -q '42 *49 *47 *45' && enable bigendian
+ 
+ if enabled alpha; then
+ 

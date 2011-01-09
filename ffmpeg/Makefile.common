@@ -1,0 +1,81 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2011/01/09 05:47:13 makoto Exp $
+# used by multimedia/ffplay/Makefile
+# used by multimedia/ffmpeg/Makefile
+
+DISTNAME=	ffmpeg-${DISTVERSION:S/-//g}
+CATEGORIES=	multimedia
+MASTER_SITES=	http://www.ffmpeg.org/releases/ \
+		ftp://ftp.NetBSD.org/pub/NetBSD/misc/ahoka/dist/ \
+		http://irkmaffia.com/~ahoka/distfiles/
+EXTRACT_SUFX=	.tar.bz2
+
+DISTVERSION=	0.6.1
+PREV_PKGPATH=	multimedia/ffmpeg-devel
+PATCHDIR=	${.CURDIR}/../../wip/ffmpeg/patches
+
+HAS_CONFIGURE=	YES
+USE_LANGUAGES+=	c99
+USE_LIBTOOL=	YES
+USE_TOOLS+=	gmake texi2html pod2man
+
+.include "../../mk/compiler.mk"
+
+.if ${OPSYS} == "SunOS" && empty(CC_VERSION:Mgcc*)
+SUBST_CLASSES+=		sunwspro
+SUBST_MESSAGE.sunwspro=	Fixing compiler options for SunStudio C compiler.
+SUBST_STAGE.sunwspro=	post-configure
+SUBST_FILES.sunwspro=	config.mak
+SUBST_SED.sunwspro=	-e "s/-O /-KPIC -DPIC /"
+SUBST_SED.sunwspro+=	-e "s/-O3/-xO2/g"
+SUBST_SED.sunwspro+=	-e "s/-std=c99/-xc99=all/"
+SUBST_SED.sunwspro+=	-e "s/-Wl,-rpath-link,/-L /g"
+.endif
+
+BUILD_DEPENDS+=	yasm>=0.7.2:../../devel/yasm
+
+REPLACE_PERL+=	doc/texi2pod.pl
+REPLACE_SH+=	configure version.sh
+
+SUBST_CLASSES+=		conf
+SUBST_STAGE.conf=	post-patch
+SUBST_FILES.conf=	ffserver.c
+SUBST_SED.conf=		-e 's,/etc/ffserver.conf,${PKG_SYSCONFDIR}/ffserver.conf,g'
+SUBST_MESSAGE.conf=	Fixing configuration path.
+
+PLIST_SRC+=	${PKGDIR}/PLIST
+
+MAKE_ENV+=	EXTRA_LIBS=${LIBGETOPT:Q}
+# LOCALBASE=${LOCALBASE:Q}
+
+# Let's not put garbage into /tmp
+CONFIGURE_ENV+=		TMPDIR=${WRKSRC:Q}/tmp
+
+CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR} \
+			--cc=${CC:Q} \
+			--prefix=${PREFIX:Q} \
+			--disable-debug \
+			--disable-stripping \
+			--enable-shared \
+			--enable-pthreads \
+			--enable-gpl
+
+.if ${OPSYS} == "Darwin" || ${OPSYS} == "SunOS"
+CONFIGURE_ARGS+=	--disable-amd3dnow --disable-amd3dnowext
+CONFIGURE_ARGS+=	--disable-mmx --disable-mmx2
+CONFIGURE_ARGS+=	--disable-sse --disable-ssse3
+.else
+CONFIGURE_ARGS+=	--enable-runtime-cpudetect
+.endif
+
+# No posix_memalign() in NetBSD 4.0 and earlier
+#
+.if !empty(MACHINE_PLATFORM:MNetBSD-[1-4].*-*)
+CONFIGURE_ARGS+=	--enable-memalign-hack
+.endif
+
+pre-configure:
+	mkdir ${WRKSRC}/tmp
+
+.include "../../mk/pthread.buildlink3.mk"
+.include "../../devel/libgetopt/buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"
