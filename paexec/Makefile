@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2010/10/16 20:58:24 cheusov Exp $
+# $NetBSD: Makefile,v 1.28 2011/01/09 11:36:47 cheusov Exp $
 #
 
 DISTNAME=	paexec-0.15.0
@@ -9,7 +9,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=paexec/} \
 MAINTAINER=	cheusov@tut.by
 HOMEPAGE=	http://sourceforge.net/projects/paexec
 COMMENT=	Distributes tasks over network or CPUs
-
 LICENSE=		mit
 
 BUILD_DEPENDS+=		mk-configure>=0.20.0:../../wip/mk-configure
