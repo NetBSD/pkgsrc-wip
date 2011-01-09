@@ -1,0 +1,78 @@
+$NetBSD: patch-aa,v 1.1.1.1 2011/01/09 05:43:25 makoto Exp $
+
+--- configure.orig	2010-02-02 06:45:06.000000000 +0900
++++ configure	2011-01-06 01:19:57.000000000 +0900
+@@ -193,7 +193,7 @@
+             LDFLAGS="$LDFLAGS ${opt#--extra-ldflags=}"
+             ;;
+         --enable-pthread)
+-            pthread="auto" # can't skip detection, since it differs by OS
++            pthread="yes"
+             ;;
+         --disable-pthread)
+             pthread="no"
+@@ -213,7 +213,7 @@
+             shared="yes"
+             ;;
+         --enable-visualize)
+-            LDFLAGS="$LDFLAGS -L/usr/X11R6/lib -lX11"
++            LDFLAGS="$LDFLAGS -lX11"
+             define HAVE_VISUALIZE
+             vis="yes"
+             ;;
+@@ -263,7 +263,12 @@
+     SYS="FREEBSD"
+     LDFLAGS="$LDFLAGS -lm"
+     ;;
+-  kfreebsd*-gnu)
++
++  dragonfly*)
++    SYS="DRAGONFLY"
++    LDFLAGS="$LDFLAGS -lm"
++    ;;
++kfreebsd*-gnu)
+     SYS="FREEBSD"
+     define HAVE_MALLOC_H
+     LDFLAGS="$LDFLAGS -lm"
+@@ -326,7 +331,7 @@
+       ASFLAGS="$ASFLAGS -f elf"
+     fi
+     ;;
+-  x86_64)
++  x86_64|amd64)
+     ARCH="X86_64"
+     AS="yasm"
+     if [ "$SYS" = MACOSX ];then
+@@ -342,11 +347,12 @@
+     fi
+     ;;
+   powerpc|powerpc64)
+-    ARCH="PPC"
+     if [ $SYS = MACOSX ]
+     then
++      ARCH="POWERPC"
+       CFLAGS="$CFLAGS -faltivec -fastf -mcpu=G4"
+     else
++      ARCH="PPC"
+       CFLAGS="$CFLAGS -maltivec -mabi=altivec"
+       define HAVE_ALTIVEC_H
+     fi
+@@ -454,7 +460,7 @@
+ 
+ # autodetect options that weren't forced nor disabled
+ 
+-libpthread=""
++libpthread="$PTHREAD_LDFLAGS $PTHREAD_LIBS"
+ if test "$pthread" = "auto" ; then
+     pthread="no"
+     case $SYS in
+@@ -589,7 +595,8 @@
+ fi
+ 
+ if [ "$pic" = "yes" ] ; then
+-    CFLAGS="$CFLAGS -fPIC"
++    CFLAGS="$CFLAGS"
++    PICFLAG="-prefer-pic"
+     ASFLAGS="$ASFLAGS -DPIC"
+     # resolve textrels in the x86 asm
+     cc_check stdio.h -Wl,-Bsymbolic && LDFLAGS="$LDFLAGS -Wl,-Bsymbolic"
