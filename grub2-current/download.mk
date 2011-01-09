@@ -1,6 +1,7 @@
-# $NetBSD: download.mk,v 1.5 2011/01/09 15:21:50 gregoire Exp $
+# $NetBSD: download.mk,v 1.6 2011/01/09 17:54:46 gregoire Exp $
 #
 
+USE_TOOLS+=		ftp
 BUILD_DEPENDS+=		bzr>=1.0:../../devel/bzr
 BUILD_DEPENDS+=		rsync>=3.0:../../net/rsync
 
