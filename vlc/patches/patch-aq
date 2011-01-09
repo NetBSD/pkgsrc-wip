@@ -1,0 +1,16 @@
+$NetBSD: patch-aq,v 1.1.1.1 2011/01/09 05:59:08 makoto Exp $
+
+--- modules/gui/qt4/util/customwidgets.cpp~	2010-07-01 22:09:31.000000000 +0900
++++ modules/gui/qt4/util/customwidgets.cpp	2011-01-07 00:24:42.000000000 +0900
+@@ -392,11 +392,7 @@
+ 
+     if( qtk <= 0xff )
+         /* VLC and X11 use lowercase whereas Qt uses uppercase */
+-#if defined( __STDC_ISO_10646__ ) || defined( _WIN32 )
+         i_vlck = towlower( qtk );
+-#else
+-# error FIXME
+-#endif
+     else
+     {
+         const vlc_qt_key_t *map;

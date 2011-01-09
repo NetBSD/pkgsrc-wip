@@ -1,0 +1,35 @@
+$NetBSD: patch-ar,v 1.1.1.1 2011/01/09 05:59:08 makoto Exp $
+
+--- modules/misc/inhibit/xdg.c~	2010-04-13 09:22:27.000000000 +0900
++++ modules/misc/inhibit/xdg.c	2011-01-07 21:53:43.000000000 +0900
+@@ -25,7 +25,12 @@
+ #include <vlc_common.h>
+ #include <vlc_plugin.h>
+ #include <vlc_inhibit.h>
++    /* http://mailman.videolan.org/pipermail/vlc-devel/2008-December/054112.html */
++#ifdef _POSIX_SPAWN
++# if (_POSIX_SPAWN >= 0)
+ #include <spawn.h>
++# endif
++#endif
+ #include <sys/wait.h>
+ 
+ static int Open (vlc_object_t *);
+@@ -126,6 +131,8 @@
+         pid_t pid;
+         int canc = vlc_savecancel ();
+ 
++#ifdef _POSIX_SPAWN
++# if (_POSIX_SPAWN >= 0)
+         if (!posix_spawnp (&pid, "xdg-screensaver", NULL, NULL, argv, environ))
+         {
+             int status;
+@@ -135,6 +142,8 @@
+             while (waitpid (pid, &status, 0) == -1);
+         }
+         else/* We don't handle the error, but busy looping would be worse :( */
++# endif
++#endif
+             msg_Warn (ih, "could not start xdg-screensaver");
+         suspended = !suspended;
+         vlc_restorecancel (canc);
