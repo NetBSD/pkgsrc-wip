@@ -1,0 +1,35 @@
+# $NetBSD: nag.conf.dist,v 1.1.1.1 2011/01/10 13:49:53 triaxx Exp $
+#
+# Nag configuration file fragment for Apache
+
+# For security, don't serve pages from the Nag configuration and library
+# directories.
+#
+<Directory "@NAGDIR@/config">
+    Order deny,allow
+    Deny from all
+</Directory>
+<Directory "@NAGDIR@/lib">
+    Order deny,allow
+    Deny from all
+</Directory>
+<Directory "@NAGDIR@/locale">
+    Order deny,allow
+    Deny from all
+</Directory>
+<Directory "@NAGDIR@/po">
+    Order deny,allow
+    Deny from all
+</Directory>
+<Directory "@NAGDIR@/scripts">
+    Order deny,allow
+    Deny from all
+</Directory>
+<Directory "@NAGDIR@/tasklists">
+    Order deny,allow
+    Deny from all
+</Directory>
+<Directory "@NAGDIR@/templates">
+    Order deny,allow
+    Deny from all
+</Directory>
