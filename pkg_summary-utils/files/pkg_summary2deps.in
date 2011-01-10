@@ -71,8 +71,8 @@
 #               separated by space or comma
 #   =N <pkgs>   find dependencies for specified PKGNAMEs,
 #               separated by space or comma
-#   -X          exit with non-zero exit status if problems with
-#               DEPENDS, BUILD_DEPENDS or CONFLICTS are detected
+#   -X          exit with non-zero exit status if missed
+#               DEPENDS, BUILD_DEPENDS or CONFLICTS were found
 #.end-str
 ############################################################
 
