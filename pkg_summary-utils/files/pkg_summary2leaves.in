@@ -40,7 +40,7 @@
 #.begin-str help
 # pkg_summary2leaves - takes package summaries on input
 #               and outputs summaries for leaf packages.
-# usage: pkg_summary2leaves [OPTIONS] <files...>
+# usage: pkg_summary2leaves [OPTIONS] file1 <file2...>
 # OPTIONS:
 #   -h    display this help
 #   -r    select leaf packages recursively, implies -a
