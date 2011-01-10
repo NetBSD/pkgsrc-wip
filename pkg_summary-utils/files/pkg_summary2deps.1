@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkg_summary2deps.1,v 1.10 2011/01/10 22:46:57 cheusov Exp $
+.\"	$NetBSD: pkg_summary2deps.1,v 1.11 2011/01/10 22:59:57 cheusov Exp $
 .\"
 .\" Copyright (c) 2008-2010 by Aleksey Cheusov (cheusov@tut.by)
 .\" Absolutely no warranty.
@@ -52,7 +52,9 @@ output PKGPATH.
 output PKGNAME.
 .TP
 .B "-d"
-analyse DEPENDS.
+analyse DEPENDS field. Missed alternative dependencies are
+output as altdep1|altdep2|...|altdepN. The same is applied for
+.IR "-D" .
 .TP
 .B "-D"
 analyse BUILD_DEPENDS.
