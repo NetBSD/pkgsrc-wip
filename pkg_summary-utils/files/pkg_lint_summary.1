@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkg_lint_summary.1,v 1.8 2010/11/19 23:02:38 cheusov Exp $
+.\"	$NetBSD: pkg_lint_summary.1,v 1.9 2011/01/10 23:02:12 cheusov Exp $
 .\"
 .\" Copyright (c) 2008-2010 by Aleksey Cheusov (vle@gmx.net)
 .\" Absolutely no warranty.
@@ -116,6 +116,8 @@ problems to stderr in the following format:
    u: unicity PKGBASE <- PKGPATH1 PKGPATH2 ... PKGPATHn
 
 .VE
+.SH EXIT STATUS
+Non-zero value if errors were encountered, zero otherwise.
 .SH SEE ALSO
 .BR pkg_summary-utils(7) ,
 .BR pkg_summary(5) ,
