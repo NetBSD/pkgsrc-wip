@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkg_summary2deps.1,v 1.9 2011/01/10 22:34:05 cheusov Exp $
+.\"	$NetBSD: pkg_summary2deps.1,v 1.10 2011/01/10 22:46:57 cheusov Exp $
 .\"
 .\" Copyright (c) 2008-2010 by Aleksey Cheusov (cheusov@tut.by)
 .\" Absolutely no warranty.
@@ -25,7 +25,8 @@ extract dependencies from a package summary
 extracts dependencies from a package summary analysing
 {alter,native}pkgbase:../../pkg/pkgpath and
 pkgbase:/../../pkg/path entries in DEPENDS and
-BUILD_DEPENDS fields.  Format of the output:
+BUILD_DEPENDS fields.
+Format of the output:
 .VB
 
    package2 package3
@@ -42,30 +43,29 @@ option was specified.
 .SH OPTIONS
 .TP
 .B "-h"
-display help message
+display help message.
 .TP
 .B "-p"
-output PKGPATH
+output PKGPATH.
 .TP
 .B "-n"
-output PKGNAME
+output PKGNAME.
 .TP
 .B "-d"
-analyse DEPENDS
+analyse DEPENDS.
 .TP
 .B "-D"
-analyse BUILD_DEPENDS
+analyse BUILD_DEPENDS.
 .TP
 .B "-c"
 analyse CONFLICTS and output problems to stderr.
-Versions in CONFLICTS are always checked (see "-s")
+Versions in CONFLICTS are always checked (see "-s").
 .TP
 .B "-A"
-analyse both DEPENDS and BUILD_DEPENDS
+analyse both DEPENDS and BUILD_DEPENDS.
 .TP
 .B "-a"
-output all matched dependencies separated by `|' symbol,
-not only the first one
+output all matched dependencies separated by `|' symbol.
 .TP
 .B "-s"
 enable strict mode. Versions of dependencies are always checked, even
