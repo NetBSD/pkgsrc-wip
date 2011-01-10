@@ -1,4 +1,49 @@
 ----------------------------------------------------------------------
+Version 0.50.0, by Aleksey Cheusov, Tue, 11 Jan 2011 01:06:43 +0200
+
+  pkg_grep_summary:
+     - fix for case insensitive search (pkg_digger_backend)
+     - new artificial fields were added: PKGPANA and PKGPABA,
+       see the manual page for details
+
+  pkg_bin_summary:
+    - new artificial field PLIST was added.
+
+  pkg_uniq_sumary:
+    - new option -n was added
+
+  pkg_summary2deps:
+    - new option -a was added for outputting all matched dependencies
+      separated by `|' symbol, not only the first one.
+    - new options -N and -P were added
+    - new option -X was added
+    - if multiple packages satisfy the condition, the package with highest
+      version is selected unless -a option was specified.
+    - another format for missed alternative dependencies.
+      Now they are written as altdep1|altdep2|...|altdepN
+
+  pkg_lint_summary:
+    - option -d: non-zero status if problems were detected
+
+  New tool pkg_summary2leaves was added.
+
+  pkg_cmp_summary:
+    - long options were removed
+    - option -2 was added
+    - option -u was added for showing information about whether
+       the package from summary1 is installed by user or as a dependency.
+
+  pkg_summary2deps:
+    - workaround for bad patterns like p5-Digest<=1.16nb*
+      found perl binary
+
+  pkg_refresh_summary:
+    - reimplemented using latest version of pkg_grep_summary.
+      This removes about 50 lines of code
+
+  minor fixes and clean-ups
+
+----------------------------------------------------------------------
 Version 0.49.1, by Aleksey Cheusov, Wed, 24 Nov 2010 00:35:21 +0200
 
   Man page for pkg_digger(1)
