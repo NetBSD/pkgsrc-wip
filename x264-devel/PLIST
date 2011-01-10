@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/01/09 05:43:25 makoto Exp $
-bin/libx264.so.84
+@comment $NetBSD: PLIST,v 1.2 2011/01/10 07:46:44 makoto Exp $
 bin/x264
 include/x264.h
-lib/libx264.la
+include/x264_config.h
+lib/libx264.a
+lib/libx264.so
+lib/libx264.so.112
 lib/pkgconfig/x264.pc

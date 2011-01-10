@@ -1,4 +1,5 @@
-# $NetBSD: options.mk,v 1.1.1.1 2011/01/09 05:43:25 makoto Exp $
+
+:# $NetBSD: options.mk,v 1.2 2011/01/10 07:46:44 makoto Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.x264-devel
 PKG_SUPPORTED_OPTIONS=	debug threads
@@ -10,7 +11,6 @@ PKG_SUGGESTED_OPTIONS+=	threads
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mthreads)
-CONFIGURE_ARGS+=	--enable-pthread
 .  include "../../mk/pthread.buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-pthread
