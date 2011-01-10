@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4197 2011/01/08 05:00:27 phonohawk Exp $
+# $Id: Makefile,v 1.4198 2011/01/10 13:56:20 triaxx Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1416,6 +1416,7 @@ SUBDIR+=	mysql-docs
 SUBDIR+=	mysql-workbench
 SUBDIR+=	mysqltcl
 SUBDIR+=	mythtv
+SUBDIR+=	nag
 SUBDIR+=	nanoblogger
 SUBDIR+=	natali
 SUBDIR+=	naturaldocs
