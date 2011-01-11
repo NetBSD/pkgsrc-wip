@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2011/01/11 13:52:13 noud4 Exp $
+# $NetBSD: Makefile,v 1.22 2011/01/11 17:10:43 marko_schuetz Exp $
 
 .include "../../wip/jdk16/Makefile.common"
 
@@ -80,7 +80,7 @@ FETCH_MESSAGE+= "       ${JRL_DOWNLOAD}"
 FETCH_MESSAGE+= " and place them as:"
 FETCH_MESSAGE+= "       ${DISTDIR}/${JRL_SRCFILE}"
 FETCH_MESSAGE+= "       ${DISTDIR}/${JRL_BINFILE}"
-.if !empty(PKG_OPTIONS:Mjdk16-jce)
+.if !empty(PKG_OPTIONS:Msun-jre-jce)
 FETCH_MESSAGE+= ""
 FETCH_MESSAGE+= " Additionally, for the Java Cryptography Extension"
 FETCH_MESSAGE+= " please download jce_policy-6.zip from"
