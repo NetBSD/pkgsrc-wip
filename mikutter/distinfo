@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2011/01/05 14:02:54 obache Exp $
+$NetBSD: distinfo,v 1.4 2011/01/11 11:40:07 obache Exp $
 
-SHA1 (mikutter.0.0.2.2.tar.gz) = 51de46da519e346736a00ad51aa584c749417346
-RMD160 (mikutter.0.0.2.2.tar.gz) = 59715b4be61d2e310a7cef82a343570a1e479289
-Size (mikutter.0.0.2.2.tar.gz) = 715888 bytes
+SHA1 (mikutter.0.0.2.3.tar.gz) = 11e3f6a5b6b045ab8b1f01ba1361607e7d20c655
+RMD160 (mikutter.0.0.2.3.tar.gz) = f43686922f5cb13053871cf2dc97641088594d82
+Size (mikutter.0.0.2.3.tar.gz) = 718554 bytes
