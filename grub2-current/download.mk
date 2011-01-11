@@ -1,4 +1,4 @@
-# $NetBSD: download.mk,v 1.7 2011/01/10 00:15:51 gregoire Exp $
+# $NetBSD: download.mk,v 1.8 2011/01/11 00:44:48 gregoire Exp $
 #
 
 USE_TOOLS+=		ftp
@@ -7,7 +7,7 @@ BUILD_DEPENDS+=		rsync>=3.0:../../net/rsync
 
 DISTFILES?=		# empty
 BZR_REPOSITORY=		http://bzr.savannah.gnu.org/r/grub/trunk/grub
-BZR_REVISION=		3040
+BZR_REVISION=		3056
 UNIFONT_URL=		http://unifoundry.com/unifont-5.1.20080820.pcf.gz
 UNIFONT_EXT=		pcf.gz
 
