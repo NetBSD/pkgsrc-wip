@@ -1,0 +1,12 @@
+$NetBSD: patch-ae,v 1.1 2011/01/12 05:57:35 phonohawk Exp $
+
+--- src/Darcs/Commands/Get.lhs.orig	2011-01-12 04:28:01.000000000 +0000
++++ src/Darcs/Commands/Get.lhs
+@@ -210,6 +210,7 @@ copyRepoAndGoToChosenVersion opts repodi
+                                    putInfo opts $ text "Fetching a hashed repository as an old-fashioned one..."
+                                    copyRepoHashed repository
+                                | otherwise -> copyRepoOldFashioned repository opts repodir
++            copyRepoHashed :: RepoPatch p => Repository p C(r u t) -> IO ()
+             copyRepoHashed repository =
+               do identifyRepositoryFor repository repodir >>= copyRepository
+                  when (SetScriptsExecutable `elem` opts) setScriptsExecutable

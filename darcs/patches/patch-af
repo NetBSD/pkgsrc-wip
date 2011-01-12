@@ -1,0 +1,22 @@
+$NetBSD: patch-af,v 1.1 2011/01/12 05:57:35 phonohawk Exp $
+
+--- src/Darcs/Commands/Record.lhs.orig	2011-01-12 04:29:41.000000000 +0000
++++ src/Darcs/Commands/Record.lhs
+@@ -195,7 +195,8 @@ doRecord repository opts files ps = do
+                           debugMessage ("Patch name as received from getLog: " ++ show (map ord name))
+                           doActualRecord repository opts name date
+                                  my_author my_log logf deps chs
+-    where is_empty_but_not_askdeps l
++    where is_empty_but_not_askdeps :: FL Prim C(r z) -> Bool
++          is_empty_but_not_askdeps l
+               | AskDeps `elem` opts = False
+                                       -- a "partial tag" patch; see below.
+               | otherwise = nullFL l
+@@ -333,6 +334,7 @@ getLog opts m_old make_log chs = gl opts
+                            (n:ls) -> return (n, takeWhile
+                                              (not.(eod `isPrefixOf`)) ls,
+                                              Just f)
++          append_info :: FilePathLike p => p -> [Char] -> IO ()
+           append_info f oldname =
+               do fc <- readLocaleFile f
+                  appendToFile f $ \h ->

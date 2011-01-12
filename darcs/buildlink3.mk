@@ -1,12 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.7 2010/02/19 09:52:53 phonohawk Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2011/01/12 05:56:33 phonohawk Exp $
 
-BUILDLINK_TREE+=	darcs
+BUILDLINK_TREE+=	hs-darcs
 
-.if !defined(DARCS_BUILDLINK3_MK)
-DARCS_BUILDLINK3_MK:=
+.if !defined(HS_DARCS_BUILDLINK3_MK)
+HS_DARCS_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.darcs+=	darcs>=2.3.99.2nb1
-BUILDLINK_PKGSRCDIR.darcs?=	../../wip/darcs
+BUILDLINK_API_DEPENDS.hs-darcs+=	hs-darcs>=2.5
+BUILDLINK_PKGSRCDIR.hs-darcs?=	../../wip/darcs
 
 .include "../../wip/hs-hashed-storage/buildlink3.mk"
 .include "../../wip/hs-haskeline/buildlink3.mk"
@@ -14,6 +14,9 @@ BUILDLINK_PKGSRCDIR.darcs?=	../../wip/darcs
 .include "../../wip/hs-mtl/buildlink3.mk"
 .include "../../wip/hs-parsec/buildlink3.mk"
 .include "../../wip/hs-regex-compat/buildlink3.mk"
-.endif	# DARCS_BUILDLINK3_MK
+.include "../../wip/hs-tar/buildlink3.mk"
+.include "../../wip/hs-text/buildlink3.mk"
+.include "../../wip/hs-zlib/buildlink3.mk"
+.endif	# HS_DARCS_BUILDLINK3_MK
 
-BUILDLINK_TREE+=	-darcs
+BUILDLINK_TREE+=	-hs-darcs

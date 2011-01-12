@@ -1,0 +1,14 @@
+$NetBSD: patch-ag,v 1.1 2011/01/12 05:57:35 phonohawk Exp $
+
+--- src/Darcs/Commands/Send.lhs.orig	2011-01-12 04:31:29.000000000 +0000
++++ src/Darcs/Commands/Send.lhs
+@@ -160,7 +160,8 @@ sendCmd input_opts [unfixedrepodir] = wi
+              putStrLn $ "Creating patch to "++formatPath repodir++"..."
+         wtds <- decideOnBehavior input_opts repo
+         sendToThem repository input_opts wtds repodir them
+-    where the_context [] = return Nothing
++    where the_context :: RepoPatch p => [DarcsFlag] -> IO (Maybe (PatchSet p C(Origin b)))
++          the_context [] = return Nothing
+           the_context (Context foo:_)
+               = (Just . scanContext )`fmap` mmapFilePS (toFilePath foo)
+           the_context (_:fs) = the_context fs

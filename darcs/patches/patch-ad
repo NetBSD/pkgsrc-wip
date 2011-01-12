@@ -1,0 +1,45 @@
+$NetBSD: patch-ad,v 1.1 2011/01/12 05:57:35 phonohawk Exp $
+
+--- src/Darcs/Commands/Convert.lhs.orig	2011-01-12 04:24:30.000000000 +0000
++++ src/Darcs/Commands/Convert.lhs
+@@ -165,8 +165,10 @@ convertCmd orig_opts [inrepodir] = do
+       -- "universal" functions to do the conversion, but that's also
+       -- unsatisfying.
+ 
+-      let repository = unsafeCoerce# repositoryfoo :: Repository (FL RealPatch) C(r u t)
+-          themrepo = unsafeCoerce# themrepobar :: Repository Patch C(r u t)
++      let repository :: Repository (FL RealPatch) C(r u t)
++          repository = unsafeCoerce# repositoryfoo
++          themrepo :: Repository Patch C(r u t)
++          themrepo = unsafeCoerce# themrepobar
+       theirstuff <- readRepo themrepo
+       let patches = mapFL_FL convertNamed $ patchSetToPatches theirstuff
+           inOrderTags = iot theirstuff
+@@ -176,7 +178,8 @@ convertCmd orig_opts [inrepodir] = do
+                     iot_ (Tagged t _ _ :<: ts) = info t : iot_ ts
+                     iot_ NilRL = []
+           outOfOrderTags = catMaybes $ mapRL oot $ newset2RL theirstuff
+-              where oot t = if isTag (info t) && not (info t `elem` inOrderTags)
++              where oot :: PatchInfoAnd Patch C(a b) -> Maybe (PatchInfo, [PatchInfo])
++                    oot t = if isTag (info t) && not (info t `elem` inOrderTags)
+                             then Just (info t, getdeps $ hopefully t)
+                             else Nothing
+           fixDep p = case lookup p outOfOrderTags of
+@@ -206,6 +209,7 @@ convertCmd orig_opts [inrepodir] = do
+                                    (map convertInfo $ concatMap fixDep $ getdeps n)
+           convertInfo n | n `elem` inOrderTags = n
+                         | otherwise = maybe n (\t -> piRename n ("old tag: "++t)) $ piTag n
++          applySome :: FL (PatchInfoAnd (FL RealPatch)) C(x y) -> IO ()
+           applySome xs = do Sealed pw <- tentativelyMergePatches repository "convert" (AllowConflicts:opts) NilFL xs
+                             finalizeRepositoryChanges repository -- this is to clean out pristine.hashed
+                             revertRepositoryChanges repository
+@@ -223,7 +227,8 @@ convertCmd orig_opts [inrepodir] = do
+ 
+       optimizeInventory repository
+       putInfo opts $ text "Finished converting."
+-      where revertable x = x `clarifyErrors` unlines
++      where revertable :: IO a -> IO a
++            revertable x = x `clarifyErrors` unlines
+                   ["An error may have left your new working directory an inconsistent",
+                    "but recoverable state. You should be able to make the new",
+                    "repository consistent again by running darcs revert -a."]

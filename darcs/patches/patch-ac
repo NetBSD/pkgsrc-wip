@@ -1,0 +1,50 @@
+$NetBSD: patch-ac,v 1.3 2011/01/12 05:57:35 phonohawk Exp $
+
+--- src/Darcs/Commands/Changes.lhs.orig	2011-01-12 04:21:38.000000000 +0000
++++ src/Darcs/Commands/Changes.lhs
+@@ -57,7 +57,7 @@ import Darcs.Patch.Depends ( findCommonW
+ import Darcs.Patch.Bundle( contextPatches )
+ import Darcs.Patch.TouchesFiles ( lookTouch )
+ import Darcs.Patch ( RepoPatch, invert, xmlSummary, description, applyToFilepaths,
+-                     listTouchedFiles, effect, identity )
++                     listTouchedFiles, effect, identity, Prim )
+ import Darcs.Witnesses.Ordered ( RL(..), EqCheck(..), filterFLFL, filterRL,
+                                  reverseFL, (:>>)(..), mapRL )
+ import Darcs.Match ( firstMatch, secondMatch,
+@@ -136,7 +136,8 @@ changesCmd opts args =
+             ps <- readRepo repository -- read repo again to prevent holding onto
+                                        -- values forced by filtered_changes
+             putDocLnWith printers $ changelog opts ps $ filtered_changes patches
+-  where maybe_reverse (xs,b,c) = if doReverse opts
++  where maybe_reverse :: ([a], b, c) -> ([a], b, c)
++        maybe_reverse (xs,b,c) = if doReverse opts
+                                  then (reverse xs, b, c)
+                                  else (xs, b, c)
+ 
+@@ -160,7 +161,7 @@ changesHelp' =
+  "whereas `darcs changes --last 3 foo.c' will, of the last three\n" ++
+  "patches, print only those that affect foo.c.\n"
+ 
+-getChangesInfo :: RepoPatch p => [DarcsFlag] -> [FilePath]
++getChangesInfo :: forall p C(x y). RepoPatch p => [DarcsFlag] -> [FilePath]
+                -> PatchSet p C(x y)
+                -> ([(Sealed2 (PatchInfoAnd p), [FilePath])], [FilePath], Doc)
+ getChangesInfo opts plain_fs ps =
+@@ -175,6 +176,7 @@ getChangesInfo opts plain_fs ps =
+         sp2s = if secondMatch opts
+                then matchSecondPatchset opts ps
+                else Sealed $ ps
++        pf :: PatchInfoAnd p C(a b) -> Bool
+         pf = if haveNonrangeMatch opts
+              then matchAPatchread opts
+              else \_ -> True
+@@ -240,7 +242,8 @@ changelog opts patchset (pis_and_fs, ori
+                                           else showFriendly opts p
+               | otherwise = description hp
+                             $$ indent (text "[this patch is unavailable]")
+-              where xx x = case listTouchedFiles x of
++              where xx :: Prim C(x y) -> EqCheck C(x y)
++                    xx x = case listTouchedFiles x of
+                              ys | null $ ys `intersect` fs -> unsafeCoerce IsEq
+                              -- in that case, the change does not affect the patches we are
+                              -- looking at, so we ignore the difference between the two states.

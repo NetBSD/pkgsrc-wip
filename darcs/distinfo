@@ -1,6 +1,19 @@
-$NetBSD: distinfo,v 1.16 2010/02/19 09:52:53 phonohawk Exp $
+$NetBSD: distinfo,v 1.17 2011/01/12 05:56:33 phonohawk Exp $
 
-SHA1 (darcs-beta-2.3.99.2.tar.gz) = 2493671cd602445e1adbe6b6c6ab34591a2c8895
-RMD160 (darcs-beta-2.3.99.2.tar.gz) = 5a31e3e596c80e21bfc786296c7b6cf5854ffd08
-Size (darcs-beta-2.3.99.2.tar.gz) = 1173356 bytes
-SHA1 (patch-aa) = 6f3649370c47ffb5d1fcc6c9316917c54a43b344
+SHA1 (darcs-2.5.tar.gz) = e76d36741099211b8721001f8eb6ea33eb54197f
+RMD160 (darcs-2.5.tar.gz) = cbf7acf836f18d3e5b3bbdaf114095083e488061
+Size (darcs-2.5.tar.gz) = 1222513 bytes
+SHA1 (patch-aa) = 620f8bf877606e86a30e129102157b9400837366
+SHA1 (patch-ab) = f4e2ac415531e9bcb27ac36aa2a49f4e065820fa
+SHA1 (patch-ac) = 95422485c28e364abb5c86e14ff8e046f90281f5
+SHA1 (patch-ad) = e350cbba7247e90accdd8a1a3f1a2418cdeec6bc
+SHA1 (patch-ae) = 110b10f2de2f48dd12fabdece161223d6ab88a02
+SHA1 (patch-af) = 7e91fab88b3af766cc3dffda804d892336cab3bd
+SHA1 (patch-ag) = 5f9036c65fc361379373acaf6662a8cf7679494d
+SHA1 (patch-ah) = 34104911ab76ce12c1c30af7b1a0a671382a6279
+SHA1 (patch-ai) = 8b38921b7504fb91b88dae2e48d7b1f4970195b2
+SHA1 (patch-aj) = 1a962c7149187266f5be9e58e19bf64af1220d0f
+SHA1 (patch-ak) = e952b4da70c2f440012b78661f63cc30d6fa9a85
+SHA1 (patch-al) = 373a9df440b3423c2fb9cb3fdc08d54551a13238
+SHA1 (patch-am) = 7bbf8780c40607a2a161ad4f10c453b1af46748c
+SHA1 (patch-aw) = d54ac57ce742f208e049fe120ff0afef466319ce

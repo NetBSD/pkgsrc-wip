@@ -1,13 +1,13 @@
-# $NetBSD: options.mk,v 1.2 2010/02/12 06:50:59 phonohawk Exp $
+# $NetBSD: options.mk,v 1.3 2011/01/12 05:56:33 phonohawk Exp $
 #
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.darcs
-PKG_SUPPORTED_OPTIONS=	zlib terminfo color mmap
+PKG_SUPPORTED_OPTIONS=	terminfo color mmap
 
 PKG_OPTIONS_OPTIONAL_GROUPS+=	http-lib
 PKG_OPTIONS_GROUP.http-lib=		curl http
 
-PKG_SUGGESTED_OPTIONS=	http zlib terminfo color mmap
+PKG_SUGGESTED_OPTIONS=	http terminfo color mmap
 
 .include "../../mk/bsd.options.mk"
 
@@ -15,21 +15,11 @@ PKG_SUGGESTED_OPTIONS=	http zlib terminfo color mmap
 # Curl or HTTP
 #
 .if !empty(PKG_OPTIONS:Mcurl)
-CONFIGURE_ARGS+= -fcurl -fcurl-pipelining -f-http
+CONFIGURE_ARGS+= -fcurl -f-http
 .include "../../www/curl/buildlink3.mk"
 .elif !empty(PKG_OPTIONS:Mhttp)
 CONFIGURE_ARGS+= -f-curl -fhttp
 .include "../../wip/hs-HTTP/buildlink3.mk"
-.endif
-
-#
-# Zlib
-#
-.if !empty(PKG_OPTIONS:Mzlib)
-CONFIGURE_ARGS+= -fzlib
-.include "../../wip/hs-zlib/buildlink3.mk"
-.else
-CONFIGURE_ARGS+= -f-zlib
 .endif
 
 #
@@ -56,7 +46,7 @@ CONFIGURE_ARGS+= -f-color
 #
 .if !empty(PKG_OPTIONS:Mmmap)
 CONFIGURE_ARGS+= -fmmap
-.include "../../wip/hs-mmap4/buildlink3.mk"
+.include "../../wip/hs-mmap/buildlink3.mk"
 .else
 CONFIGURE_ARGS+= -f-mmap
 .endif

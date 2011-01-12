@@ -1,13 +1,31 @@
-$NetBSD: patch-aa,v 1.10 2010/02/19 09:52:53 phonohawk Exp $
+$NetBSD: patch-aa,v 1.11 2011/01/12 05:56:33 phonohawk Exp $
 
---- darcs-beta.cabal.orig	2010-02-19 03:00:51.000000000 +0900
-+++ darcs-beta.cabal
-@@ -369,7 +369,7 @@ Library
-       buildable: False
+--- Distribution/ShellHarness.hs.orig	2010-10-24 15:29:26.000000000 +0000
++++ Distribution/ShellHarness.hs
+@@ -3,7 +3,8 @@ module Distribution.ShellHarness ( runTe
  
-   if flag(mmap) && !os(windows)
--    build-depends:    mmap >= 0.2
-+    build-depends:    mmap >= 0.2 && < 0.5
-     cpp-options:      -DHAVE_MMAP
+ import Prelude hiding( catch )
+ import System.Directory ( getCurrentDirectory, setPermissions,
+-                          Permissions(..), getDirectoryContents,
++                          emptyPermissions, setOwnerReadable, setOwnerWritable, setOwnerSearchable,
++                          getDirectoryContents,
+                           findExecutable, createDirectoryIfMissing,
+                           renameFile, removeFile )
+ import System.Environment ( getEnv, getEnvironment )
+@@ -111,12 +112,10 @@ run_helper shell (test:ts) fails env = d
+                  forM tixfiles $ \f -> removeFile f
+                  return ()
+              mapM_ (\x->
+-                  setPermissions x (Permissions
+-                                   {readable = True
+-                                   ,writable = True
+-                                   ,executable = False
+-                                   ,searchable = True}
+-                                   )
++                  setPermissions x (setOwnerReadable True $
++                                    setOwnerWritable True $
++                                    setOwnerSearchable True $
++                                    emptyPermissions)
+                  ) tempfiles
  
-   build-depends:    zlib >= 0.5.1.0 && < 0.6.0.0
+ backtick :: String -> String -> [(String, String)]-> IO (String,Status)

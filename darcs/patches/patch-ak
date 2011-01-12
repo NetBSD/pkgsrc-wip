@@ -1,0 +1,14 @@
+$NetBSD: patch-ak,v 1.1 2011/01/12 05:57:35 phonohawk Exp $
+
+--- src/Darcs/Population.hs.orig	2011-01-12 04:13:27.000000000 +0000
++++ src/Darcs/Population.hs
+@@ -87,7 +87,8 @@ getRepoPopVersion :: FilePath -> PatchIn
+ getRepoPopVersion repobasedir pinfo = withRepositoryDirectory [] repobasedir $- \repository ->
+    do pips <- newset2RL `liftM` readRepo repository
+       return $ (unseal applyPatchSetPop) (mkPatchSet $ dropWhileRL ((/=pinfo).info) pips) initPop
+-             where mkPatchSet (Sealed xs) = seal $ PatchSet xs NilRL
++             where mkPatchSet :: Sealed (RL (PatchInfoAnd p) C(a)) -> Sealed (PatchSet p C(a))
++                   mkPatchSet (Sealed xs) = seal $ PatchSet xs NilRL
+                    dropWhileRL :: (FORALL(x y) a C(x y) -> Bool) -> RL a C(r v) -> Sealed (RL a C(r))
+                    dropWhileRL _ NilRL = seal NilRL
+                    dropWhileRL p xs@(x:<:xs')

@@ -1,0 +1,48 @@
+$NetBSD: patch-ai,v 1.1 2011/01/12 05:57:35 phonohawk Exp $
+
+--- src/Darcs/Patch/Choices.hs.orig	2011-01-12 04:08:01.000000000 +0000
++++ src/Darcs/Patch/Choices.hs
+@@ -62,7 +62,7 @@ module Darcs.Patch.Choices ( PatchChoice
+                       substitute
+                     ) where
+ 
+-import Control.Monad.State( State(..) )
++import Control.Monad.State( state, State(..) )
+ 
+ import Darcs.Patch
+ import Darcs.Patch.Permutations ( commuteWhatWeCanRL, commuteWhatWeCanFL )
+@@ -248,12 +248,13 @@ patchSlot (TP t _) pc@(PCs f l) =
+         Just (tp' :> bubble') -> psLast firsts (tp' :<: middles) bubble' ls
+         Nothing -> psLast firsts middles (tp :<: bubble) ls
+     psLast _ _ _ NilFL = impossible
++    settleM, settleB :: RL (TaggedPatch p) C (u v) -> FL (PatchChoice p) C (u v)
+     settleM middles = mapFL_FL (\tp -> PC tp False) $ reverseRL middles
+     settleB bubble = mapFL_FL (\tp -> PC tp True) $ reverseRL bubble
+ 
+ patchSlot' :: Patchy p =>
+               TaggedPatch p C(a b) -> State (PatchChoices p C(x y)) Slot
+-patchSlot' = State . patchSlot
++patchSlot' = state . patchSlot
+ 
+ forceMatchingFirst :: forall p C(a b). Patchy p =>
+                       ( FORALL(x y) TaggedPatch p C(x y) -> Bool)
+@@ -291,7 +292,8 @@ forceFirst p = forceMatchingFirst ((== p
+ selectAllMiddles :: forall p C(x y). Patchy p => Bool
+                    -> PatchChoices p C(x y) -> PatchChoices p C(x y)
+ selectAllMiddles True (PCs f l) = PCs f (mapFL_FL g l)
+-    where g (PC tp _) = PC tp True
++    where g :: PatchChoice p C (a b) -> PatchChoice p C (a b)
++          g (PC tp _) = PC tp True
+ selectAllMiddles False (PCs f l) = samf f NilRL NilRL l
+   where
+     samf :: FORALL(m1 m2 m3)
+@@ -330,7 +332,8 @@ fmlFirst pred b f1 (a :>: f2) l
+ fmlFirst pred b f1 (a :>: f2) l = fmlFirst pred b (a :<: f1) f2 l
+ fmlFirst pred b f1 NilFL l = PCs { firsts = reverseRL f1
+                                  , lasts = mapFL_FL ch l}
+-  where ch (PC tp c) = (PC tp (if pred tp then b else c) )
++  where ch :: PatchChoice p C (x y) -> PatchChoice p C (x y)
++        ch (PC tp c) = (PC tp (if pred tp then b else c) )
+ 
+ forceLasts :: Patchy p => [Tag]
+                     -> PatchChoices p C(a b) -> PatchChoices p C(a b)

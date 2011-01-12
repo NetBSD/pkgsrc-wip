@@ -1,0 +1,80 @@
+$NetBSD: patch-al,v 1.1 2011/01/12 05:57:35 phonohawk Exp $
+
+--- src/Darcs/SelectChanges.hs.orig	2011-01-12 04:16:07.000000000 +0000
++++ src/Darcs/SelectChanges.hs
+@@ -32,7 +32,7 @@ import Data.Char ( toUpper )
+ import Control.Monad ( when, (>=>) )
+ import Control.Monad.Trans ( liftIO )
+ import Control.Monad.Reader ( ReaderT, Reader, asks, runReader, runReaderT )
+-import Control.Monad.State ( State(..), StateT, modify, gets, execStateT )
++import Control.Monad.State ( State(..), StateT, modify, gets, execStateT, runState )
+ import System.Exit ( exitWith, ExitCode(ExitSuccess) )
+ 
+ import English ( Noun(..), englishNum  )
+@@ -160,10 +160,11 @@ triv = \ _ _ _ -> True
+ 
+ -- | 'iswanted' selects patches according to the @--match@ flag in
+ -- opts'
+-iswanted :: Patchy p => MatchCriterion (PatchInfoAnd p)
++iswanted :: forall p. Patchy p => MatchCriterion (PatchInfoAnd p)
+ iswanted whch opts' =
+     unseal2 (iw whch opts')
+         where
++          iw :: WhichChanges -> [DarcsFlag] -> PatchInfoAnd p C (x y) -> Bool
+           iw First o = matchAPatch o . hopefully
+           iw Last o = matchAPatch o . hopefully
+           iw LastReversed o = matchAPatch o . hopefully . invert
+@@ -313,7 +314,7 @@ realSelectChanges whch autoChoices =
+       o <- asks opts
+       if not $ isInteractive o
+        then return $ promote autoChoices
+-       else flip refineChoices autoChoices $ textSelect whch
++       else refineChoices (textSelect whch) autoChoices
+     where forward = not $ backward whch
+           promote = if forward
+                     then makeEverythingSooner
+@@ -328,7 +329,8 @@ deselectUnwanted whichch pc =
+     do
+       o <- asks opts
+       c <- (asks matchCriterion)
+-      let iswanted_ = c whichch o . seal2 . tpPatch
++      let iswanted_ :: TaggedPatch p C (a b) -> Bool
++          iswanted_ = c whichch o . seal2 . tpPatch
+           select = if forward
+                    then forceMatchingFirst iswanted_
+                    else forceMatchingLast iswanted_
+@@ -797,7 +799,7 @@ textView o n_max n
+                     | otherwise    = Just $ length ps_done + length ps_todo
+ 
+ -- | Skips patches we should not ask the user about
+-skipMundane :: Patchy p => WhichChanges ->
++skipMundane :: forall p C(x y). Patchy p => WhichChanges ->
+               InteractiveSelectionM p C(x y) ()
+ skipMundane whichch = do
+   (FZipper tps_done tps_todo) <- gets tps
+@@ -820,13 +822,14 @@ skipMundane whichch = do
+           justDone $ lengthFL boring + numSkipped
+           modify $ \isc -> isc {tps = (FZipper (reverseFL boring +<+ reverseFL skipped +<+ tps_done) interesting)}
+     where
++      show_skipped :: [DarcsFlag] -> String -> Int -> FL (TaggedPatch p) C(a b) -> IO ()
+       show_skipped o jn n ps = do putStrLn $ _nevermind_ jn ++ _these_ n ++ "."
+                                   when (Verbose `elem` o) $
+                                        showskippedpatch ps
+       _nevermind_ jn = "Will not ask whether to " ++ jn ++ " "
+       _these_ n  = show n ++ " already decided " ++ _elem_ n ""
+       _elem_ n = englishNum n (Noun "patch")
+-      showskippedpatch :: Patchy p => FL (TaggedPatch p) C(y t) -> IO ()
++      showskippedpatch :: Patchy p => FL (TaggedPatch p) C(a b) -> IO ()
+       showskippedpatch =
+                     sequence_ . mapFL (printSummary . tpPatch)
+ 
+@@ -855,7 +858,8 @@ filterOutConflicts :: RepoPatch p
+                    -> IO (Bool, Sealed (FL (PatchInfoAnd p) C(x)))   -- ^(True iff any patches were removed, possibly filtered patches)
+ filterOutConflicts o us repository them
+   | SkipConflicts `elem` o
+-     = do let commuter = commuterIdRL selfCommuter
++     = do let commuter :: Patchy q => (q :> RL q) C(x y) -> Maybe ((RL q :> q) C(x y))
++              commuter = commuterIdRL selfCommuter
+           unrec <- fmap n2pia . (anonymous . fromPrims) =<< unrecordedChanges [] repository []
+           them' :> rest <- return $ partitionConflictingFL commuter them (unrec :<: us)
+           return (check rest, Sealed them')

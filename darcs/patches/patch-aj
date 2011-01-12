@@ -1,0 +1,14 @@
+$NetBSD: patch-aj,v 1.1 2011/01/12 05:57:35 phonohawk Exp $
+
+--- src/Darcs/Patch/Set.hs.orig	2011-01-12 04:06:14.000000000 +0000
++++ src/Darcs/Patch/Set.hs
+@@ -52,7 +52,8 @@ newset2FL = reverseRL . newset2RL
+ 
+ progressPatchSet :: String -> PatchSet p C(start x7) -> PatchSet p C(start x7)
+ progressPatchSet k (PatchSet ps0 ts0) = PatchSet (mapRL_RL prog ps0) $ mapRL_RL pts ts0
+-    where prog = progress k
++    where prog :: a -> a
++          prog = progress k
+           pts :: Tagged p C(x8 y) -> Tagged p C(x8 y)
+           pts (Tagged t h ps) = Tagged (prog t) h (mapRL_RL prog ps)
+ 

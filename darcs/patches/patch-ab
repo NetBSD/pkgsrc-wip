@@ -1,0 +1,149 @@
+$NetBSD: patch-ab,v 1.5 2011/01/12 05:57:35 phonohawk Exp $
+
+--- darcs.cabal.orig	2010-10-24 15:29:26.000000000 +0000
++++ darcs.cabal
+@@ -163,19 +163,19 @@ Executable          witnesses
+     build-depends:   base          < 5,
+                      extensible-exceptions >= 0.1 && < 0.2,
+                      regex-compat >= 0.71 && < 0.94,
+-                     mtl          >= 1.0 && < 1.2,
+-                     parsec       >= 2.0 && < 3.1,
++                     mtl          >= 1.0 && < 2.1,
++                     parsec       >= 2.0 && < 3.2,
+                      html         == 1.0.*,
+-                     filepath     == 1.1.*,
++                     filepath     == 1.2.*,
+                      haskeline    >= 0.6.2.2 && < 0.7,
+                      hashed-storage >= 0.5.2 && < 0.6,
+                      base >= 3,
+                      bytestring >= 0.9.0 && < 0.10,
+                      text >= 0.3,
+                      old-time   == 1.0.*,
+-                     directory  == 1.0.*,
++                     directory  == 1.1.*,
+                      process    == 1.0.*,
+-                     containers >= 0.1 && < 0.4,
++                     containers >= 0.1 && < 0.5,
+                      array      >= 0.1 && < 0.4,
+                      random     == 1.0.*,
+                      tar          == 0.3.*,
+@@ -186,8 +186,8 @@ Executable          witnesses
+     if !os(windows)
+       build-depends: unix >= 1.0 && < 2.5
+     if flag(http)
+-        build-depends:    network == 2.2.*,
+-                          HTTP    >= 3000.0 && < 4000.1
++        build-depends:    network == 2.3.*,
++                          HTTP    >= 3000.0 && < 4000.2
+ 
+ 
+ -- ----------------------------------------------------------------------
+@@ -365,10 +365,10 @@ Library
+     build-depends:   base          < 5,
+                      extensible-exceptions >= 0.1 && < 0.2,
+                      regex-compat >= 0.71 && < 0.94,
+-                     mtl          >= 1.0 && < 1.2,
+-                     parsec       >= 2.0 && < 3.1,
++                     mtl          >= 1.0 && < 2.1,
++                     parsec       >= 2.0 && < 3.2,
+                      html         == 1.0.*,
+-                     filepath     == 1.1.*,
++                     filepath     == 1.2.*,
+                      haskeline    >= 0.6.2.2 && < 0.7,
+                      hashed-storage >= 0.5.2 && < 0.6,
+                      tar          == 0.3.*
+@@ -380,9 +380,9 @@ Library
+                    bytestring >= 0.9.0 && < 0.10,
+                    text >= 0.3,
+                    old-time   == 1.0.*,
+-                   directory  == 1.0.*,
++                   directory  == 1.1.*,
+                    process    == 1.0.*,
+-                   containers >= 0.1 && < 0.4,
++                   containers >= 0.1 && < 0.5,
+                    array      >= 0.1 && < 0.4,
+                    random     == 1.0.*
+ 
+@@ -408,8 +408,8 @@ Library
+       cc-options:        -DHAVE_CURL
+ 
+     if flag(http)
+-        build-depends:    network == 2.2.*,
+-                          HTTP    >= 3000.0 && < 4000.1
++        build-depends:    network == 2.3.*,
++                          HTTP    >= 3000.0 && < 4000.2
+         cpp-options:      -DHAVE_HTTP
+         x-have-http:
+ 
+@@ -506,10 +506,10 @@ Executable          darcs
+   build-depends:   base          < 5,
+                    extensible-exceptions >= 0.1 && < 0.2,
+                    regex-compat >= 0.71 && < 0.94,
+-                   mtl          >= 1.0 && < 1.2,
+-                   parsec       >= 2.0 && < 3.1,
++                   mtl          >= 1.0 && < 2.1,
++                   parsec       >= 2.0 && < 3.2,
+                    html         == 1.0.*,
+-                   filepath     == 1.1.*,
++                   filepath     == 1.2.*,
+                    haskeline    >= 0.6.2.2 && < 0.7,
+                    hashed-storage >= 0.5.2 && < 0.6,
+                    tar          == 0.3.*
+@@ -521,9 +521,9 @@ Executable          darcs
+                  bytestring >= 0.9.0 && < 0.10,
+                  text >= 0.3,
+                    old-time   == 1.0.*,
+-                   directory  == 1.0.*,
++                   directory  == 1.1.*,
+                    process    == 1.0.*,
+-                   containers >= 0.1 && < 0.4,
++                   containers >= 0.1 && < 0.5,
+                    array      >= 0.1 && < 0.4,
+                    random     == 1.0.*
+ 
+@@ -535,8 +535,8 @@ Executable          darcs
+     cc-options:        -DHAVE_CURL
+ 
+   if flag(http)
+-      build-depends:    network == 2.2.*,
+-                        HTTP    >= 3000.0 && < 4000.1
++      build-depends:    network == 2.3.*,
++                        HTTP    >= 3000.0 && < 4000.2
+       cpp-options:      -DHAVE_HTTP
+       x-have-http:
+ 
+@@ -594,10 +594,10 @@ Executable          unit
+     build-depends:   base          < 5,
+                      extensible-exceptions >= 0.1 && < 0.2,
+                      regex-compat >= 0.71 && < 0.94,
+-                     mtl          >= 1.0 && < 1.2,
+-                     parsec       >= 2.0 && < 3.1,
++                     mtl          >= 1.0 && < 2.1,
++                     parsec       >= 2.0 && < 3.2,
+                      html         == 1.0.*,
+-                     filepath     == 1.1.*,
++                     filepath     == 1.2.*,
+                      QuickCheck   >= 2.1.0.0,
+                      HUnit        >= 1.0,
+                      test-framework             >= 0.2.2,
+@@ -659,9 +659,9 @@ Executable          unit
+                    haskeline    >= 0.6.2.2 && < 0.7,
+                    text >= 0.3,
+                    old-time   == 1.0.*,
+-                   directory  == 1.0.*,
++                   directory  == 1.1.*,
+                    process    == 1.0.*,
+-                   containers >= 0.1 && < 0.4,
++                   containers >= 0.1 && < 0.5,
+                    array      >= 0.1 && < 0.4,
+                    hashed-storage >= 0.5.2 && < 0.6,
+                    random     == 1.0.*
+@@ -678,7 +678,7 @@ Executable          unit
+       cpp-options:      -DHAVE_TERMINFO
+ 
+     if flag(http)
+-        build-depends:    network == 2.2.*,
++        build-depends:    network == 2.3.*,
+                           HTTP    >= 3000.0 && < 4000.1
+ 
+     if flag(color)

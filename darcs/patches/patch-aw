@@ -1,0 +1,23 @@
+$NetBSD: patch-aw,v 1.1 2011/01/12 05:57:35 phonohawk Exp $
+
+--- src/DateMatcher.hs.orig	2011-01-12 04:05:41.000000000 +0000
++++ src/DateMatcher.hs
+@@ -33,7 +33,7 @@ import IsoDate ( parseDate, englishDateT
+                  MCalendarTime(..), toMCalendarTime, unsafeToCalendarTime,
+                  unsetTime,
+                )
+-import Text.ParserCombinators.Parsec ( eof, parse, ParseError )
++import Text.ParserCombinators.Parsec ( eof, parse, ParseError, CharParser )
+ 
+ -- | 'withinDay' @x y@ is true if @x <= y < (x + one_day)@
+ -- Note that this converts the two dates to @ClockTime@ to avoid
+@@ -153,7 +153,9 @@ getMatchers d =
+                 (parseDate tzNow d)
+                 samePartialDate ]
+  where
++   tillEof :: CharParser () d -> CharParser () d
+    tillEof p = do { x <- p; eof; return x }
++   parseDateWith :: CharParser () d -> Either ParseError d
+    parseDateWith p = parse (tillEof p) "" d
+ 
+ -- | 'tryMatchers' @ms@ returns the first successful match in @ms@

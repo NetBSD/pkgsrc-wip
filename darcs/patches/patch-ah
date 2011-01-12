@@ -1,0 +1,32 @@
+$NetBSD: patch-ah,v 1.1 2011/01/12 05:57:35 phonohawk Exp $
+
+--- src/Darcs/Commands/ShowTags.lhs.orig	2011-01-12 04:33:13.000000000 +0000
++++ src/Darcs/Commands/ShowTags.lhs
+@@ -20,7 +20,7 @@
+ module Darcs.Commands.ShowTags ( showTags ) where
+ import Darcs.Arguments ( DarcsFlag(..), workingRepoDir )
+ import Darcs.Commands ( DarcsCommand(..), nodefaults )
+-import Darcs.Hopefully ( info )
++import Darcs.Hopefully ( info, PatchInfoAnd )
+ import Darcs.Repository ( amInRepository, readRepo, withRepository, ($-) )
+ import Darcs.Patch.Info ( piTag )
+ import Darcs.Patch.Set ( newset2RL )
+@@ -28,6 +28,8 @@ import Darcs.Witnesses.Ordered ( mapRL )
+ import System.IO ( stderr, hPutStrLn )
+ -- import Printer ( renderPS )
+ 
++#include "gadts.h"
++
+ showTagsDescription :: String
+ showTagsDescription = "Show all tags in the repository."
+ 
+@@ -58,7 +60,8 @@ tagsCmd :: [DarcsFlag] -> [String] -> IO
+ tagsCmd opts _ = withRepository opts $- \repository -> do
+   patches <- readRepo repository
+   sequence_ $ mapRL process $ newset2RL patches
+-  where process hp =
++  where process :: PatchInfoAnd p C(x y) -> IO ()
++        process hp =
+             case piTag $ info hp of
+               Just t -> do
+                  t' <- normalize t t False
