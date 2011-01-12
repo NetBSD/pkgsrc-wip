@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/01/12 01:28:44 phonohawk Exp $
+lib/tar-${PKGVERSION}/${HASKELL_VERSION}/Codec/Archive/Tar.hi
+lib/tar-${PKGVERSION}/${HASKELL_VERSION}/Codec/Archive/Tar.p_hi
+lib/tar-${PKGVERSION}/${HASKELL_VERSION}/Codec/Archive/Tar/Check.hi
+lib/tar-${PKGVERSION}/${HASKELL_VERSION}/Codec/Archive/Tar/Check.p_hi
+lib/tar-${PKGVERSION}/${HASKELL_VERSION}/Codec/Archive/Tar/Entry.hi
+lib/tar-${PKGVERSION}/${HASKELL_VERSION}/Codec/Archive/Tar/Entry.p_hi
+lib/tar-${PKGVERSION}/${HASKELL_VERSION}/Codec/Archive/Tar/Pack.hi
+lib/tar-${PKGVERSION}/${HASKELL_VERSION}/Codec/Archive/Tar/Pack.p_hi
+lib/tar-${PKGVERSION}/${HASKELL_VERSION}/Codec/Archive/Tar/Read.hi
+lib/tar-${PKGVERSION}/${HASKELL_VERSION}/Codec/Archive/Tar/Read.p_hi
+lib/tar-${PKGVERSION}/${HASKELL_VERSION}/Codec/Archive/Tar/Types.hi
+lib/tar-${PKGVERSION}/${HASKELL_VERSION}/Codec/Archive/Tar/Types.p_hi
+lib/tar-${PKGVERSION}/${HASKELL_VERSION}/Codec/Archive/Tar/Unpack.hi
+lib/tar-${PKGVERSION}/${HASKELL_VERSION}/Codec/Archive/Tar/Unpack.p_hi
+lib/tar-${PKGVERSION}/${HASKELL_VERSION}/Codec/Archive/Tar/Write.hi
+lib/tar-${PKGVERSION}/${HASKELL_VERSION}/Codec/Archive/Tar/Write.p_hi
+lib/tar-${PKGVERSION}/${HASKELL_VERSION}/HStar-${PKGVERSION}.o
+lib/tar-${PKGVERSION}/${HASKELL_VERSION}/libHStar-${PKGVERSION}.a
+lib/tar-${PKGVERSION}/${HASKELL_VERSION}/libHStar-${PKGVERSION}_p.a
+lib/tar-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/tar-${PKGVERSION}/LICENSE
