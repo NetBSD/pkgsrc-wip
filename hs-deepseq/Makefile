@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/02/09 03:25:07 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2011/01/12 02:34:04 phonohawk Exp $
 #
 
-DISTNAME=	deepseq-1.1.0.0
+DISTNAME=	deepseq-1.1.0.2
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
