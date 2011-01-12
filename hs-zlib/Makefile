@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2009/07/27 03:08:33 phonohawk Exp $
+# $NetBSD: Makefile,v 1.5 2011/01/12 01:51:44 phonohawk Exp $
 #
 
-DISTNAME=	zlib-0.5.2.0
-PKGNAME=	hs-${DISTNAME}
-CATEGORIES=	devel
+DISTNAME=	zlib-0.5.3.1
+CATEGORIES=	archivers
 
 MAINTAINER=	pho@cielonegro.org
 COMMENT=	Zlib binding for Haskell
