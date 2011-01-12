@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/01/05 13:54:43 obache Exp $
+# $NetBSD: Makefile,v 1.2 2011/01/12 13:25:19 obache Exp $
 #
 
-DISTNAME=	httpclient-2.1.6
+DISTNAME=	httpclient-2.1.6.1
 CATEGORIES=	www
 MASTER_SITES=	http://dev.ctor.org/download/ \
 		http://dev.ctor.org/download/archive/
