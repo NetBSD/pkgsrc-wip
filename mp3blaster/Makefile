@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/01/01 23:32:50 ryo-on Exp $
+# $NetBSD: Makefile,v 1.5 2011/01/13 12:27:58 ryo-on Exp $
 
 DISTNAME=	mp3blaster-3.2.5
 CATEGORIES=	audio
@@ -11,8 +11,6 @@ COMMENT=	MP3 console curses-based player
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=		splay-[0-9]*
-
-MAKE_JOBS_SAFE=		yes
 
 PTHREAD_OPTS+=	require
 USE_LANGUAGES=	c c++
@@ -48,4 +46,5 @@ CONFIGURE_ARGS+=	--with-sdl=yes
 .endif
 
 .include "../../audio/libvorbis/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
