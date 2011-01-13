@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2011/01/13 09:22:38 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2011/01/13 21:50:24 ftigeot Exp $
 #
 # Note: we currently use the pre-built (-bin) distribution of FOP,
 #
@@ -25,6 +25,12 @@ INSTALLATION_DIRS=	bin share/java/fop
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
 PLIST_SRC=	${PKGDIR}/PLIST
+
+SUBST_CLASSES+=			java_home
+SUBST_STAGE.java_home=		post-patch
+SUBST_MESSAGE.java_home=	Setting JAVA_HOME to a sane value.
+SUBST_FILES.java_home=		fop
+SUBST_SED.java_home=		-e 's,@JAVA_HOME@,${PKG_JAVA_HOME},g'
 
 .include "options.mk"
 
