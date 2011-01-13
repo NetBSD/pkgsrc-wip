@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2010/06/13 22:47:09 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2011/01/13 09:55:18 thomasklausner Exp $
 
 DISTNAME=	klamav-0.37-source
 PKGNAME=	${DISTNAME:S/-source//}
@@ -21,7 +21,7 @@ CONFIGURE_ARGS+=	--without-included-sqlite
 .include "../../databases/sqlite3/buildlink3.mk"
 
 .include "../../meta-pkgs/kde3/kde3.mk"
-.include "../../mail/clamav/buildlink3.mk"
+.include "../../security/clamav/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
