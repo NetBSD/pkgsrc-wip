@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/01/13 12:16:46 phonohawk Exp $
+lib/stream-fusion-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Stream.hi
+lib/stream-fusion-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Stream.p_hi
+lib/stream-fusion-${PKGVERSION}/${HASKELL_VERSION}/Data/List/Stream.hi
+lib/stream-fusion-${PKGVERSION}/${HASKELL_VERSION}/Data/List/Stream.p_hi
+lib/stream-fusion-${PKGVERSION}/${HASKELL_VERSION}/Data/Stream.hi
+lib/stream-fusion-${PKGVERSION}/${HASKELL_VERSION}/Data/Stream.p_hi
+lib/stream-fusion-${PKGVERSION}/${HASKELL_VERSION}/HSstream-fusion-${PKGVERSION}.o
+lib/stream-fusion-${PKGVERSION}/${HASKELL_VERSION}/libHSstream-fusion-${PKGVERSION}.a
+lib/stream-fusion-${PKGVERSION}/${HASKELL_VERSION}/libHSstream-fusion-${PKGVERSION}_p.a
+lib/stream-fusion-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/stream-fusion-${PKGVERSION}/LICENSE
