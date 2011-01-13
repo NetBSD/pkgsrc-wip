@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2011/01/13 08:28:28 ftigeot Exp $
+# $NetBSD: Makefile,v 1.8 2011/01/13 09:22:38 thomasklausner Exp $
 #
 # Note: we currently use the pre-built (-bin) distribution of FOP,
 #
@@ -9,6 +9,7 @@ VERSION=	1.0
 CATEGORIES=	textproc www
 MASTER_SITES=	${MASTER_SITE_APACHE:=xmlgraphics/fop/binaries/}
 
+MAINTAINER=	ftigeot@users.sourceforge.net
 HOMEPAGE=	http://xmlgraphics.apache.org/fop/
 COMMENT=	Print formatter driven by XSL Formatting Objects (XSL-FO)
 LICENSE=	apache-2.0
