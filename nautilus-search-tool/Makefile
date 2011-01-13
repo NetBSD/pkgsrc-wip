@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/06/13 22:47:12 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2011/01/13 09:56:05 thomasklausner Exp $
 #
 
 DISTNAME=	nautilus-search-tool-0.3.0
@@ -18,7 +18,6 @@ USE_LIBTOOL=	yes
 USE_LANGUAGES+=	c c++
 
 .include "../../devel/GConf/schemas.mk"
-.include "../../devel/eel/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../sysutils/nautilus/buildlink3.mk"
 .include "../../sysutils/gnome-vfs/buildlink3.mk"
