@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2010/08/07 05:12:31 obache Exp $
+# $NetBSD: Makefile,v 1.11 2011/01/13 09:56:54 thomasklausner Exp $
 #
 
 DISTNAME=		PyPanel-2.4
@@ -26,7 +26,6 @@ SUBST_SED.setup+=	-e 's|/usr/lib|${LOCALBASE}/lib|g'
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .include "../../graphics/imlib2/buildlink3.mk"
-.include "../../x11/py-Xlib/buildlink3.mk"
 .include "../../x11/renderproto/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
