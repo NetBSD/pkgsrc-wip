@@ -1,3 +1,4 @@
-* check PLIST
+* fix links of library
 * test on i386
-* test on non-i386 platforms
+* test on non-i386 platforms (I will do the test on NetBSD/sparc 5.1)
+* test on non-NetBSd platform (I will do the test on DFBSD and Gentoo Linux)

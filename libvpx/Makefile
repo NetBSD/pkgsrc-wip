@@ -1,18 +1,20 @@
-# $NetBSD: Makefile,v 1.4 2010/10/12 18:18:34 rxg Exp $
+# $NetBSD: Makefile,v 1.5 2011/01/14 16:19:28 ryo-on Exp $
 #
 
-DISTNAME=	libvpx-0.9.2
+DISTNAME=	libvpx-0.9.5
 DISTFILES=	${DISTNAME:S,-,-v,}${EXTRACT_SUFX}
 CATEGORIES=	multimedia
 MASTER_SITES=	http://webm.googlecode.com/files/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	ryo_on@yk.rim.or.jp
+MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/webm/
 COMMENT=	On2 VP8 library from Google
 LICENSE=	modified-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+WRKSRC=		${WRKDIR}/libvpx-v0.9.5
 
 USE_LIBTOOL=	YES
 USE_TOOLS+=	gmake bash:build perl:build

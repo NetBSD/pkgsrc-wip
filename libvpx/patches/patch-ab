@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1 2010/10/12 18:18:34 rxg Exp $
+$NetBSD: patch-ab,v 1.2 2011/01/14 16:19:28 ryo-on Exp $
 
---- libs.mk.orig	2010-09-02 18:56:47.000000000 +0000
+--- libs.mk.orig	2010-10-28 13:14:14.000000000 +0000
 +++ libs.mk
-@@ -174,8 +174,8 @@ endif
+@@ -176,8 +176,8 @@ endif
  else
  LIBVPX_OBJS=$(call objs,$(CODEC_SRCS))
  OBJS-$(BUILD_LIBVPX) += $(LIBVPX_OBJS)
