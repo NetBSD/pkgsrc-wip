@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4200 2011/01/13 12:17:47 phonohawk Exp $
+# $Id: Makefile,v 1.4201 2011/01/14 22:02:29 asau Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1508,39 +1508,6 @@ SUBDIR+=	opendesktop-fonts
 SUBDIR+=	opendnssec
 SUBDIR+=	openlogos
 SUBDIR+=	openmpi
-SUBDIR+=	openoffice2-bin-af
-SUBDIR+=	openoffice2-bin-be-BY
-SUBDIR+=	openoffice2-bin-bg
-SUBDIR+=	openoffice2-bin-bn
-SUBDIR+=	openoffice2-bin-br
-SUBDIR+=	openoffice2-bin-cs
-SUBDIR+=	openoffice2-bin-cy
-SUBDIR+=	openoffice2-bin-da
-SUBDIR+=	openoffice2-bin-de
-SUBDIR+=	openoffice2-bin-el
-SUBDIR+=	openoffice2-bin-et
-SUBDIR+=	openoffice2-bin-fi
-SUBDIR+=	openoffice2-bin-fr
-SUBDIR+=	openoffice2-bin-ga
-SUBDIR+=	openoffice2-bin-it
-SUBDIR+=	openoffice2-bin-km
-SUBDIR+=	openoffice2-bin-langs
-SUBDIR+=	openoffice2-bin-lo
-SUBDIR+=	openoffice2-bin-mk
-SUBDIR+=	openoffice2-bin-nb
-SUBDIR+=	openoffice2-bin-ne
-SUBDIR+=	openoffice2-bin-nl
-SUBDIR+=	openoffice2-bin-nn
-SUBDIR+=	openoffice2-bin-nr
-SUBDIR+=	openoffice2-bin-sk
-SUBDIR+=	openoffice2-bin-sl
-SUBDIR+=	openoffice2-bin-st
-SUBDIR+=	openoffice2-bin-sv
-SUBDIR+=	openoffice2-bin-th
-SUBDIR+=	openoffice2-bin-tn
-SUBDIR+=	openoffice2-bin-ts
-SUBDIR+=	openoffice2-bin-xh
-SUBDIR+=	openoffice2-bin-zu
 SUBDIR+=	openscep
 SUBDIR+=	opensips
 SUBDIR+=	opentracker-current
