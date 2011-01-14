@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/01/10 07:46:44 makoto Exp $
+# $NetBSD: Makefile,v 1.3 2011/01/14 13:11:15 moubctez Exp $
 
 SNAPSHOT_DATE=		20110101
 
@@ -21,19 +21,17 @@ CFLAGS+=	-DHAVE_STDLIB_H
 .endif
 
 .if ${MACHINE_ARCH} == "i386"
-.  if ${OPSYS} == "Darwin" || ${OPSYS} == "SunOS" || \
-      (${OPSYS} == "NetBSD" && \
-       (!empty(OS_VERSION:M[1-5].*) && empty(OS_VERSION:M5.99.*)))
+.  if ${OPSYS} == "SunOS" || (${OPSYS} == "NetBSD" && \
+	(!empty(OS_VERSION:M[1-5].*) && empty(OS_VERSION:M5.99.*)))
 CONFIGURE_ARGS+=	--disable-asm
 .  else
-BUILD_DEPENDS+=	yasm>=0.4.0:../../devel/yasm
+BUILD_DEPENDS+=		yasm>=0.4.0:../../devel/yasm
 .  endif
 .elif ${MACHINE_ARCH} == "x86_64"
+BUILD_DEPENDS+=		yasm>=0.4.0:../../devel/yasm
+.elif ${MACHINE_ARCH} == "arm" && ${OPSYS} == "NetBSD"
+# pre-ARMv6 is default on NetBSD/arm
 CONFIGURE_ARGS+=	--disable-asm
-.elif ${MACHINE_ARCH} == "arm"
-.  if ${OPSYS} == "NetBSD"	# pre-ARMv6 is default on NetBSD/arm
-CONFIGURE_ARGS+=	--disable-asm
-.  endif
 .endif
 
 USE_TOOLS+=		gmake bash
@@ -42,7 +40,7 @@ USE_LIBTOOL=		yes
 HAS_CONFIGURE=		yes
 CONFIG_SHELL=		${BASH}
 #CONFIGURE_ARGS+=	--enable-pic	# uses libtool's -prefer-pic
-CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
+CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--enable-shared
 MAKE_ENV+=		SH=${SH:Q}
 
