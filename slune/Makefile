@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2009/09/09 11:22:14 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.14 2011/01/14 21:36:48 asau Exp $
 #
 
 DISTNAME=		Slune-0.6.1
@@ -16,7 +16,7 @@ PYDISTUTILSPKG=		yes
 
 DEPENDS+=		${PYPKGPREFIX}-Py2Play>=0.1.6:../../wip/py-Py2Play
 DEPENDS+=		${PYPKGPREFIX}-Soya>=0.6.1:../../wip/py-Soya
-DEPENDS+=		${PYPKGPREFIX}-EditObj>=0.5.2:../../wip/py-EditObj
+DEPENDS+=		${PYPKGPREFIX}-EditObj2>=0.5.2:../../wip/py-EditObj2
 DEPENDS+=		${PYPKGPREFIX}-vorbis>=1.3:../../audio/py-vorbis
 
 PYSETUPINSTALLARGS=	--install-lib ${PYSITELIB} --install-scripts ${PREFIX}/bin --install-data ${PREFIX}/share/
