@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/01/09 05:47:13 makoto Exp $
+# $NetBSD: Makefile,v 1.2 2011/01/14 11:10:54 moubctez Exp $
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ffmpeg.mplayerhq.hu/
@@ -6,12 +6,12 @@ COMMENT=	Decoding, encoding and streaming software
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-CONFIGURE_ARGS+=	--enable-avfilter \
-			--enable-avfilter-lavf \
-			--enable-postproc \
-			--enable-libvorbis \
-			--enable-libmp3lame \
-			--enable-libx264
+CONFIGURE_ARGS+=	--enable-avfilter
+CONFIGURE_ARGS+=	--enable-avfilter-lavf
+CONFIGURE_ARGS+=	--enable-postproc
+CONFIGURE_ARGS+=	--enable-libvorbis
+CONFIGURE_ARGS+=	--enable-libmp3lame
+CONFIGURE_ARGS+=	--enable-libx264
 
 INSTALLATION_DIRS=	lib share/examples/ffmpeg share/doc/ffmpeg
 

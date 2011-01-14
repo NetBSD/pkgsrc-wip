@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2011/01/10 07:46:44 makoto Exp $
+# $NetBSD: options.mk,v 1.3 2011/01/14 11:10:54 moubctez Exp $
 
 # Global and legacy options
 
@@ -20,31 +20,29 @@ PKG_SUGGESTED_OPTIONS+=	vdpau
 ###
 ### faad option
 ###
-
 .if !empty(PKG_OPTIONS:Mfaad)
-CONFIGURE_ARGS+=  --enable-libfaad
+CONFIGURE_ARGS+=	--enable-libfaad
 .include "../../audio/faad2/buildlink3.mk"
 .endif
 
 ###
 ### faac option
 ###
-
 .if !empty(PKG_OPTIONS:Mfaac)
 RESTRICTED=		This software may require the payment of patent royalties
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
-CONFIGURE_ARGS+=	--enable-libfaac \
-			--enable-nonfree
+CONFIGURE_ARGS+=	--enable-libfaac
+CONFIGURE_ARGS+=	--enable-nonfree
 .include "../../audio/faac/buildlink3.mk"
 .endif
 
 ###
 ### opencore-amr option
 ###
-
 .if !empty(PKG_OPTIONS:Mopencore-amr)
-CONFIGURE_ARGS+=  --enable-libopencore-amrnb --enable-libopencore-amrwb
+CONFIGURE_ARGS+=	--enable-libopencore-amrnb
+CONFIGURE_ARGS+=	--enable-libopencore-amrwb
 
 # "The OpenCORE external libraries are under the Apache License
 # 2.0. That license is incompatible with the LGPL v2.1 and the GPL
@@ -56,36 +54,34 @@ CONFIGURE_ARGS+=	--enable-version3
 
 .include "../../audio/opencore-amr/buildlink3.mk"
 .else
-CONFIGURE_ARGS+=  --disable-libopencore-amrnb --disable-libopencore-amrwb
+CONFIGURE_ARGS+=	--disable-libopencore-amrnb
+CONFIGURE_ARGS+=	--disable-libopencore-amrwb
 .endif
 
 ###
 ### OGG Theora support
 ###
-
 .if !empty(PKG_OPTIONS:Mtheora)
-CONFIGURE_ARGS+=  --enable-libtheora
+CONFIGURE_ARGS+=	--enable-libtheora
 .include "../../multimedia/libtheora/buildlink3.mk"
 .endif
 
 ###
 ### XviD support
 ###
-
 .if !empty(PKG_OPTIONS:Mxvid)
-CONFIGURE_ARGS+=  --enable-libxvid
+CONFIGURE_ARGS+=	--enable-libxvid
 .include "../../multimedia/xvidcore/buildlink3.mk"
 .endif
 
 ###
 ### x264 support
 ###
-
 .if !empty(PKG_OPTIONS:Mx264)
 # ABI change between 20090326 and 20100201
 BUILDLINK_API_DEPENDS.x264-devel+=	x264-devel>=20101101
 #BUILDLINK_API_DEPENDS.x264-devel+=	x264-devel<20110102
-CONFIGURE_ARGS+=  --enable-libx264
+CONFIGURE_ARGS+=	--enable-libx264
 .include "../../wip/x264-devel/buildlink3.mk"
 .endif
 
@@ -95,5 +91,5 @@ CONFIGURE_ARGS+=  --enable-libx264
 .if !empty(PKG_OPTIONS:Mvdpau)
 .include "../../multimedia/libvdpau/buildlink3.mk"
 .else
-CONFIGURE_ARGS+=        --disable-vdpau
+CONFIGURE_ARGS+=	--disable-vdpau
 .endif
