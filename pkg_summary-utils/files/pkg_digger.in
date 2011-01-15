@@ -73,7 +73,7 @@ while getopts sfi931rqh f; do
         i|9)  info_type="$info_type -9";;
         3)    info_type="$info_type -3";;
         1)    info_type="$info_type -1";;
-        r)    info_type="$info_type -r";;
+        r)    raw_out='-r';;
         q)    quiet_mode='-q';;
         h)    usage; exit 0;;
 	?)    printf "Run pkg_digger -h for details\n"; exit 2;;
@@ -81,7 +81,11 @@ while getopts sfi931rqh f; do
 done
 shift `expr $OPTIND - 1`
 
-info_type=${info_type:--1} # the default is oneline information
+if test -n "$info_type"; then
+    info_type="$info_type $raw_out"
+else
+    info_type=-1 # the default is oneline information
+fi
 
 # temp dir
 tmp_dir="/tmp/pkg_digger.$$"
@@ -105,6 +109,7 @@ invert_defaults (){
 	invert_def_loop
 }
 
+######################################################################
 # -s
 highligh_strat_def_loop (){
     while read strat comment; do
@@ -125,6 +130,7 @@ if test $strats; then
     exit 0
 fi
 
+######################################################################
 # -f
 highligh_field_def_loop (){
     while read field; do
