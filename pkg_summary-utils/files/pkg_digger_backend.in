@@ -68,8 +68,13 @@ fi
 
 limit=1000000000
 
-show_strats (){
-    awk -F= 'NF > 0 {hash [$1]=0} END {for (i in hash) print i}' \
+show_fields (){
+    runawk -F= -f heapsort.awk -e '
+	BEGIN {hash ["PKGBASE"] = hash ["PKGPATHe"] = ""
+	       hash ["PKGPABA"] = hash ["PKGPANA"] = hash ["PKGPAIR"] = ""}
+	NF > 0 {hash [$1]=0}
+	END {cnt = heapsort_indices(hash, remap)
+	     for (i=1; i <= cnt; ++i) {print remap [i]}}' \
 	"$PKG_DIGGER_SUMMARY"
     exit 0
 }
@@ -80,7 +85,7 @@ FIELDS_9=''
 while getopts hsf139irqn: f; do
     case "$f" in
 	s)    pkg_grep_summary -T -T; exit 0;;
-	f)    show_strats;;
+	f)    show_fields;;
 	9|i)  info=1;;
 	3)    shortinfo=1; FIELDS=-f`echo $FIELDS_3 | tr ' ' ,`;;
 	1)    onelineinfo=1;;
