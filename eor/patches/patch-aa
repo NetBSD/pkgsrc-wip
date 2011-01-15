@@ -1,0 +1,19 @@
+$NetBSD: patch-aa,v 1.1 2011/01/15 18:07:16 crocusino Exp $
+
+configure for pkgsrc
+--- GNUmakefile.orig	2011-01-14 22:53:50.000000000 +0000
++++ GNUmakefile
+@@ -25,10 +25,10 @@
+ 
+ ### CONFIGURE ###############################
+ 
+-PREFIX=	    /usr/local
+-CFLAGS=	    -O3
++#PREFIX=	    /usr/local
++#CFLAGS=	    -O3
+ 
+-CC=	    gcc
++#CC=	    gcc
+ INSTALL=    install
+ 
+ sinclude    LOCAL.mk
