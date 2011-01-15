@@ -189,6 +189,6 @@ else
 		print "No matches found" > "/dev/stderr"
 	    exit 20
 	}
-    }' "$tmp_dir"/*
+    }' "$tmp_dir"
     exit 0
 fi
