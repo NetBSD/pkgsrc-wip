@@ -155,13 +155,13 @@ else
 
     cnt=1
     for i in "$@"; do
-#	if printf '%s\n' "$i" | grep ':.*:' > /dev/null; then
-#	    :
-#	else
-#	    echo "Invalid search pattern: '$i'," 1>&2
-#	    echo "   field:strategy:query is expected" 1>&2
-#	    exit 34
-#	fi
+	if printf '%s\n' "$i" | grep ':.*:' > /dev/null; then
+	    :
+	else
+	    echo "Invalid search pattern: '$i'," 1>&2
+	    echo "   field:strategy:query is expected" 1>&2
+	    exit 34
+	fi
 
 	field=`echo "$i" | cut -d: -f1`
 	strat=`echo "$i" | cut -d: -f2`
