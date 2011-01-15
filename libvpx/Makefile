@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2011/01/14 16:22:54 ryo-on Exp $
+# $NetBSD: Makefile,v 1.7 2011/01/15 10:02:44 ryo-on Exp $
 #
 
 DISTNAME=	libvpx-v0.9.5
@@ -24,15 +24,11 @@ BUILD_DEPENDS+=		yasm-[0-9]*:../../devel/yasm
 HAS_CONFIGURE=	YES
 USE_LANGUAGES=	c c++
 
-SUBST_CLASSES+=			fix-paths
-SUBST_STAGE.fix-paths=		pre-configure
-SUBST_MESSAGE.fix-paths=	Fixing bash paths.
-SUBST_FILES.fix-paths=		configure \
-				build/make/version.sh \
-				build/make/gen_asm_deps.sh \
-				examples/gen_example_text.sh \
-				examples/gen_example_code.sh
-SUBST_SED.fix-paths=		-e 's,/bin/bash,${BASH},g'
+REPLACE_BASH=		configure \
+			build/make/version.sh \
+			build/make/gen_asm_deps.sh \
+			examples/gen_example_text.sh \
+			examples/gen_example_code.sh
 
 CONFIGURE_ARGS+=	--enable-pic \
 			--disable-postproc \
