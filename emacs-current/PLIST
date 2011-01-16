@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.100 2011/01/12 08:23:55 makoto Exp $
+@comment $NetBSD: PLIST,v 1.101 2011/01/16 06:22:53 makoto Exp $
 bin/ctags
 bin/ebrowse
 bin/emacs
@@ -27,6 +27,7 @@ info/emacs-mime.gz
 info/emacs.gz
 info/epa.gz
 info/erc.gz
+info/ert.gz
 info/eshell.gz
 info/eudc.gz
 info/flymake.gz
@@ -1665,6 +1666,10 @@ share/emacs/${PKGVERSION}/lisp/emacs-lisp/elint.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/elint.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/elp.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/elp.elc
+share/emacs/${PKGVERSION}/lisp/emacs-lisp/ert-x.el.gz
+share/emacs/${PKGVERSION}/lisp/emacs-lisp/ert-x.elc
+share/emacs/${PKGVERSION}/lisp/emacs-lisp/ert.el.gz
+share/emacs/${PKGVERSION}/lisp/emacs-lisp/ert.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/ewoc.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/ewoc.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/find-func.el.gz
