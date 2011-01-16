@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2010/09/05 09:33:25 gschwarz Exp $
+# $NetBSD: Makefile,v 1.8 2011/01/16 17:49:52 gschwarz Exp $
 
 DISTNAME=	fnord-1.10
 CATEGORIES=	www
@@ -16,11 +16,13 @@ USE_TOOLS+=	gmake
 DEPENDS+=	ucspi-tcp-*:../../net/ucspi-tcp
 
 CFLAGS+=	${CPPFLAGS}
-MAKE_ENV+=	RANLIB=${RANLIB:Q}
+MAKE_ENV+=	RANLIB=${RANLIB:Q} LIBS=${LIBS:Q}
 
 .if exists(/usr/include/alloca.h)
-CFLAGS+=	-DNEED_ALLOCA_H
+CPPFLAGS+=	-DNEED_ALLOCA_H
 .endif
+
+LIBS.SunOS+=	-lsocket  -lnsl
 
 INSTALLATION_DIRS=	sbin
 

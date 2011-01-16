@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.4 2006/05/25 19:46:54 gschwarz Exp $
+$NetBSD: patch-aa,v 1.5 2011/01/16 17:49:52 gschwarz Exp $
 
 --- Makefile.orig	2005-09-28 17:06:16.000000000 +0200
-+++ Makefile	2006-05-25 20:23:18.000000000 +0200
++++ Makefile	2011-01-16 17:39:37.086123960 +0100
 @@ -1,44 +1,42 @@
 -CC=gcc
 -CXX=g++
@@ -24,15 +24,18 @@ $NetBSD: patch-aa,v 1.4 2006/05/25 19:46:54 gschwarz Exp $
 -	-strip -R .note -R .comment $@
  
  httpd: httpd.o libowfat.a
- 	$(DIET) $(CC) -o $@ $^ $(CFLAGS)
+-	$(DIET) $(CC) -o $@ $^ $(CFLAGS)
++	$(DIET) $(CC) -o $@ $^ $(LDFLAGS) $(LIBS)
  
  fnord-cgi: httpd-cgi.o libowfat.a
- 	$(DIET) $(CC) -o $@ $^ $(CFLAGS)
+-	$(DIET) $(CC) -o $@ $^ $(CFLAGS)
 -	-strip -R .note -R .comment $@
++	$(DIET) $(CC) -o $@ $^ $(LDFLAGS) $(LIBS)
  
  fnord-idx: httpd-idx.o libowfat.a
- 	$(DIET) $(CC) -o $@ $^ $(CFLAGS)
+-	$(DIET) $(CC) -o $@ $^ $(CFLAGS)
 -	-strip -R .note -R .comment $@
++	$(DIET) $(CC) -o $@ $^ $(LDFLAGS) $(LIBS)
  
  libowfat.a: httpd.o buffer_1.o buffer_puts.o buffer_flush.o buffer_put.o \
  buffer_putulong.o buffer_2.o buffer_putspace.o buffer_stubborn.o \
