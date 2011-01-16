@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2010/12/22 21:09:40 tnn2 Exp $
+@comment $NetBSD: PLIST,v 1.29 2011/01/16 15:23:58 tnn2 Exp $
 bin/xulrunner
 ${PLIST.jit}include/xulrunner/Allocator.h
 ${PLIST.jit}include/xulrunner/Assembler.h
@@ -8,6 +8,7 @@ ${PLIST.jit}include/xulrunner/CodeAlloc.h
 ${PLIST.jit}include/xulrunner/Containers.h
 include/xulrunner/CustomQS_Canvas2D.h
 include/xulrunner/CustomQS_WebGL.h
+include/xulrunner/EGLUtils.h
 ${PLIST.jit}include/xulrunner/Fragmento.h
 include/xulrunner/FrameLayerBuilder.h
 include/xulrunner/FramePropertyTable.h
@@ -47,6 +48,17 @@ include/xulrunner/angle/ShaderLang.h
 ${PLIST.jit}include/xulrunner/avmplus.h
 include/xulrunner/base64.h
 include/xulrunner/blapit.h
+include/xulrunner/cairo/cairo-deprecated.h
+include/xulrunner/cairo/cairo-features.h
+include/xulrunner/cairo/cairo-ft.h
+include/xulrunner/cairo/cairo-pdf.h
+include/xulrunner/cairo/cairo-platform.h
+include/xulrunner/cairo/cairo-ps.h
+include/xulrunner/cairo/cairo-rename.h
+include/xulrunner/cairo/cairo-version.h
+include/xulrunner/cairo/cairo-xlib-xrender.h
+include/xulrunner/cairo/cairo-xlib.h
+include/xulrunner/cairo/cairo.h
 include/xulrunner/cert.h
 include/xulrunner/certdb.h
 include/xulrunner/certt.h
@@ -96,9 +108,11 @@ include/xulrunner/gfxPlatformGtk.h
 include/xulrunner/gfxPoint.h
 include/xulrunner/gfxRect.h
 include/xulrunner/gfxSkipChars.h
+include/xulrunner/gfxTeeSurface.h
 include/xulrunner/gfxTextRunCache.h
 include/xulrunner/gfxTextRunWordCache.h
 include/xulrunner/gfxTypes.h
+include/xulrunner/gfxUnicodeProperties.h
 include/xulrunner/gfxUserFontSet.h
 include/xulrunner/gfxUtils.h
 include/xulrunner/gfxXlibNativeRenderer.h
@@ -165,12 +179,14 @@ include/xulrunner/jsdebug.h
 include/xulrunner/jsdhash.h
 include/xulrunner/jsdtoa.h
 include/xulrunner/jsemit.h
+include/xulrunner/jsfriendapi.h
 include/xulrunner/jsfun.h
 include/xulrunner/jsgc.h
 include/xulrunner/jsgcchunk.h
 include/xulrunner/jsgcstats.h
 include/xulrunner/jshash.h
 include/xulrunner/jshashtable.h
+include/xulrunner/jshotloop.h
 include/xulrunner/jsinterp.h
 include/xulrunner/jsinttypes.h
 include/xulrunner/jsiter.h
@@ -351,6 +367,7 @@ include/xulrunner/mozilla/places/History.h
 include/xulrunner/mozilla/scache/StartupCache.h
 include/xulrunner/mozilla/scache/StartupCacheUtils.h
 include/xulrunner/mozilla/storage.h
+include/xulrunner/mozilla/storage/StatementCache.h
 include/xulrunner/mozilla/storage/Variant.h
 include/xulrunner/mozilla/storage/Variant_inl.h
 include/xulrunner/mozilla/threads/nsThreadIDs.h
@@ -1210,6 +1227,7 @@ include/xulrunner/nsIExternalHelperAppService.h
 include/xulrunner/nsIExternalProtocolHandler.h
 include/xulrunner/nsIExternalProtocolService.h
 include/xulrunner/nsIExternalSharingAppService.h
+include/xulrunner/nsIExternalURLHandlerService.h
 include/xulrunner/nsIFIXptr.h
 include/xulrunner/nsIFTPChannel.h
 include/xulrunner/nsIFactory.h
@@ -1297,16 +1315,12 @@ include/xulrunner/nsIID.h
 include/xulrunner/nsIIDBCursor.h
 include/xulrunner/nsIIDBDatabase.h
 include/xulrunner/nsIIDBDatabaseException.h
-include/xulrunner/nsIIDBErrorEvent.h
-include/xulrunner/nsIIDBEvent.h
 include/xulrunner/nsIIDBFactory.h
 include/xulrunner/nsIIDBIndex.h
 include/xulrunner/nsIIDBKeyRange.h
 include/xulrunner/nsIIDBObjectStore.h
 include/xulrunner/nsIIDBRequest.h
-include/xulrunner/nsIIDBSuccessEvent.h
 include/xulrunner/nsIIDBTransaction.h
-include/xulrunner/nsIIDBTransactionEvent.h
 include/xulrunner/nsIIDBVersionChangeEvent.h
 include/xulrunner/nsIIDBVersionChangeRequest.h
 include/xulrunner/nsIIDNService.h
@@ -1670,6 +1684,7 @@ include/xulrunner/nsISupportsObsolete.h
 include/xulrunner/nsISupportsPrimitives.h
 include/xulrunner/nsISupportsPriority.h
 include/xulrunner/nsISupportsUtils.h
+include/xulrunner/nsISyncJPAKE.h
 include/xulrunner/nsISyncLoadDOMService.h
 include/xulrunner/nsISyncStreamListener.h
 include/xulrunner/nsISystemProxySettings.h
@@ -2183,6 +2198,8 @@ include/xulrunner/ots-memory-stream.h
 include/xulrunner/p12.h
 include/xulrunner/p12plcy.h
 include/xulrunner/p12t.h
+include/xulrunner/pixman-version.h
+include/xulrunner/pixman.h
 include/xulrunner/pk11func.h
 include/xulrunner/pk11pqg.h
 include/xulrunner/pk11priv.h
@@ -2436,7 +2453,6 @@ lib/xulrunner/components/nsLoginManagerPrompter.js
 lib/xulrunner/components/nsMicrosummaryService.js
 lib/xulrunner/components/nsPlacesAutoComplete.js
 lib/xulrunner/components/nsPlacesAutoComplete.manifest
-lib/xulrunner/components/nsPlacesDBFlush.js
 lib/xulrunner/components/nsPlacesExpiration.js
 lib/xulrunner/components/nsPrompter.js
 lib/xulrunner/components/nsPrompter.manifest
@@ -3241,6 +3257,7 @@ share/idl/xulrunner/nsIExternalHelperAppService.idl
 share/idl/xulrunner/nsIExternalProtocolHandler.idl
 share/idl/xulrunner/nsIExternalProtocolService.idl
 share/idl/xulrunner/nsIExternalSharingAppService.idl
+share/idl/xulrunner/nsIExternalURLHandlerService.idl
 share/idl/xulrunner/nsIFIXptr.idl
 share/idl/xulrunner/nsIFTPChannel.idl
 share/idl/xulrunner/nsIFactory.idl
@@ -3312,16 +3329,12 @@ share/idl/xulrunner/nsIHttpProtocolHandler.idl
 share/idl/xulrunner/nsIIDBCursor.idl
 share/idl/xulrunner/nsIIDBDatabase.idl
 share/idl/xulrunner/nsIIDBDatabaseException.idl
-share/idl/xulrunner/nsIIDBErrorEvent.idl
-share/idl/xulrunner/nsIIDBEvent.idl
 share/idl/xulrunner/nsIIDBFactory.idl
 share/idl/xulrunner/nsIIDBIndex.idl
 share/idl/xulrunner/nsIIDBKeyRange.idl
 share/idl/xulrunner/nsIIDBObjectStore.idl
 share/idl/xulrunner/nsIIDBRequest.idl
-share/idl/xulrunner/nsIIDBSuccessEvent.idl
 share/idl/xulrunner/nsIIDBTransaction.idl
-share/idl/xulrunner/nsIIDBTransactionEvent.idl
 share/idl/xulrunner/nsIIDBVersionChangeEvent.idl
 share/idl/xulrunner/nsIIDBVersionChangeRequest.idl
 share/idl/xulrunner/nsIIDNService.idl
@@ -3601,6 +3614,7 @@ share/idl/xulrunner/nsISupportsArray.idl
 share/idl/xulrunner/nsISupportsIterators.idl
 share/idl/xulrunner/nsISupportsPrimitives.idl
 share/idl/xulrunner/nsISupportsPriority.idl
+share/idl/xulrunner/nsISyncJPAKE.idl
 share/idl/xulrunner/nsISyncLoadDOMService.idl
 share/idl/xulrunner/nsISyncStreamListener.idl
 share/idl/xulrunner/nsISystemProxySettings.idl

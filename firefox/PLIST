@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2010/12/22 21:09:40 tnn2 Exp $
+@comment $NetBSD: PLIST,v 1.27 2011/01/16 15:23:58 tnn2 Exp $
 bin/firefox
 lib/firefox/README.txt
 lib/firefox/application.ini
@@ -366,6 +366,7 @@ lib/firefox/modules/PropertyPanel.jsm
 lib/firefox/modules/distribution.js
 lib/firefox/modules/domplate.jsm
 lib/firefox/modules/openLocationLastURL.jsm
+lib/firefox/modules/services-crypto/WeaveCrypto.js
 lib/firefox/modules/services-sync/auth.js
 lib/firefox/modules/services-sync/base_records/collection.js
 lib/firefox/modules/services-sync/base_records/crypto.js

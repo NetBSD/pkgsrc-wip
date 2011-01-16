@@ -1,6 +1,6 @@
-$NetBSD: patch-mm,v 1.10 2010/12/22 21:09:40 tnn2 Exp $
+$NetBSD: patch-mm,v 1.11 2011/01/16 15:23:58 tnn2 Exp $
 
---- toolkit/library/Makefile.in.orig	2010-12-15 01:03:37.000000000 +0000
+--- toolkit/library/Makefile.in.orig	2011-01-11 03:27:37.000000000 +0000
 +++ toolkit/library/Makefile.in
 @@ -246,6 +246,13 @@ EXTRA_DSO_LDOPTS += -lelf -ldemangle
  endif
