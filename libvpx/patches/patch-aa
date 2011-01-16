@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 2011/01/14 16:19:28 ryo-on Exp $
+$NetBSD: patch-aa,v 1.4 2011/01/16 23:46:20 ryo-on Exp $
 
 --- build/make/Makefile.orig	2010-10-28 13:14:14.000000000 +0000
 +++ build/make/Makefile
@@ -52,7 +52,7 @@ $NetBSD: patch-aa,v 1.3 2011/01/14 16:19:28 ryo-on Exp $
  	$(if $(quiet),@echo "    [AR] $$@")
 -	$(qexec)$$(AR) $$(ARFLAGS) $$@ $$?
 +	$(qexec)${LIBTOOL} --mode=link $(CC) -o $$(patsubst %.a,%.la,$$@) \
-+	    $$(patsubst %.o,%.lo,$$?) -rpath $(DIST_DIR)/lib \
++	    $$(patsubst %.o,%.lo,$$?) -rpath $(DIST_DIR)/lib $$(extralibs) \
 +	    -version-info $(VERSION_MINOR):$(VERSION_PATCH):$(VERSION_MINOR)
  endef
  
