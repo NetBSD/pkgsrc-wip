@@ -1,18 +1,8 @@
-$NetBSD: patch-af,v 1.1.1.1 2011/01/07 16:56:46 pdtafti Exp $
+$NetBSD: patch-af,v 1.2 2011/01/16 17:20:54 pdtafti Exp $
 
 --- provers.src/Makefile.orig	2009-10-28 14:22:15.000000000 +0000
 +++ provers.src/Makefile
-@@ -33,21 +33,21 @@ all: libs $(PROGRAMS) install clean
- libs: ladr libmace4
- 
- ladr libladr:
--	cd ../ladr && $(MAKE) libladr
-+	( cd ../ladr && $(MAKE) libladr )
- 	$(MAKE) clean
- 
- libmace libmace4:
--	cd ../mace4.src && $(MAKE) libmace4
-+	( cd ../mace4.src && $(MAKE) libmace4 )
+@@ -41,13 +41,13 @@ libmace libmace4:
  	$(MAKE) clean
  
  install:

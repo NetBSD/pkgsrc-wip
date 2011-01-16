@@ -1,20 +1,12 @@
-$NetBSD: patch-aa,v 1.1.1.1 2011/01/07 16:56:46 pdtafti Exp $
+$NetBSD: patch-aa,v 1.2 2011/01/16 17:20:54 pdtafti Exp $
 
 --- Makefile.orig	2007-10-22 21:33:12.000000000 +0000
 +++ Makefile
-@@ -2,11 +2,11 @@ help:
- 	@echo See README.make
- 
- all:
--	cd ladr         && $(MAKE) lib
--	cd mace4.src    && $(MAKE) all
--	cd provers.src  && $(MAKE) all
--	cd apps.src     && $(MAKE) all
+@@ -6,7 +6,7 @@ all:
+ 	cd mace4.src    && $(MAKE) all
+ 	cd provers.src  && $(MAKE) all
+ 	cd apps.src     && $(MAKE) all
 -	/bin/cp -p utilities/* bin
-+	( cd ladr         && $(MAKE) lib )
-+	( cd mace4.src    && $(MAKE) all )
-+	( cd provers.src  && $(MAKE) all )
-+	( cd apps.src     && $(MAKE) all )
 +	cp -p utilities/* bin
  	@echo ""
  	@echo "**** Now try 'make test1'. ****"
