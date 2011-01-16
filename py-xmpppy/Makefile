@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2010/07/26 01:22:58 schnoebe Exp $
+# $NetBSD: Makefile,v 1.12 2011/01/16 06:23:44 schnoebe Exp $
 #
 
 DISTNAME=	xmpppy-0.5.0rc1
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/rc1//}
-PKGREVISION=	1
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	2
 CATEGORIES=	chat python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xmpppy/}
 
@@ -22,10 +22,14 @@ USE_LANGUAGES=	# none
 PYDISTUTILSPKG=		yes
 
 DOCDIR=		${PREFIX}/share/doc/py-xmpppy
+EXDIR=		${PREFIX}/share/examples/py-xmpppy
 
-INSTALLATION_DIRS+=	${DOCDIR}
+INSTALLATION_DIRS+=	${DOCDIR} ${EXDIR}
 
 post-install:
+	${INSTALL_SCRIPT_DIR} ${DESTDIR}${EXDIR}
+	${INSTALL_SCRIPT} ${WRKSRC}/doc/examples/*.py \
+		${DESTDIR}${EXDIR}
 	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/doc/*.html \
 		${DESTDIR}${DOCDIR}
