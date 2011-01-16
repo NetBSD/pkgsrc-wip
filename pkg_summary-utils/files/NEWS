@@ -6,7 +6,7 @@ Version 0.51.0, by Aleksey Cheusov, Sun, 16 Jan 2011 16:21:35 +0200
        and PKGPAIR
 
   pkg_digger:
-     - New short synonyms for fields:
+     - New short synonyms (pkg_digger.conf) for fields:
         - C - CATEGORIES
         - b - PKGBASE
      - New defaults in pkg_digger.conf.
@@ -17,9 +17,9 @@ Version 0.51.0, by Aleksey Cheusov, Sun, 16 Jan 2011 16:21:35 +0200
      - Option -r without -3|-9 doesn't fail anymore
 
   pkg_summary2deps:
-     - TNF provides summaries that contain packages wthout PKGPATH
-       (netbsd-compat50-5.1).  So, absense of PKGPATH is not a fatal
-       error in pkg_summary2deps anymore.
+     - TNF provides pkg_summary(5) files that contain packages without
+       PKGPATH (netbsd-compat50-5.1).  So, absense of PKGPATH is not a
+       fatal error in pkg_summary2deps anymore.
 
   Minor improvements
 
