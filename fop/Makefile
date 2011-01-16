@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2011/01/13 21:50:24 ftigeot Exp $
+# $NetBSD: Makefile,v 1.10 2011/01/16 08:42:23 thomasklausner Exp $
 #
 # Note: we currently use the pre-built (-bin) distribution of FOP,
 #
@@ -37,6 +37,7 @@ SUBST_SED.java_home=		-e 's,@JAVA_HOME@,${PKG_JAVA_HOME},g'
 do-install:
 	cd ${WRKSRC} && ${PAX} -rw . ${DESTDIR}${PREFIX}/share/java/fop
 	${LN} -sf ../share/java/fop/fop ${DESTDIR}${PREFIX}/bin
+	${RM} -f ${DESTDIR}${PREFIX}/share/java/fop/fop.orig
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
