@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/01/03 03:04:25 schnoebe Exp $
+# $NetBSD: Makefile,v 1.2 2011/01/16 06:21:16 schnoebe Exp $
 #
 
 DISTNAME=	jabberbot-0.10
@@ -11,7 +11,7 @@ HOMEPAGE=	${MASTER_SITES}
 COMMENT=	Module to enable easy creation of XMPP bots in Python
 LICENSE=	gnu-gpl-v3
 
-DEPENDS+=	${PYPKGPREFIX}-xmpppy>=0.5.0:../../wip/py-xmpppy
+DEPENDS+=	${PYPKGPREFIX}-xmpppy>=0.5.0rc1:../../wip/py-xmpppy
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
