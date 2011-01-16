@@ -1,4 +1,29 @@
 ----------------------------------------------------------------------
+Version 0.51.0, by Aleksey Cheusov, Sun, 16 Jan 2011 16:21:35 +0200
+
+  pkg_digger_backend:
+     - More fields to search in: PKGBASE, PKGPATHe, PKGPABA, PKGPANA
+       and PKGPAIR
+
+  pkg_digger:
+     - New short synonyms for fields:
+        - C - CATEGORIES
+        - b - PKGBASE
+     - New defaults in pkg_digger.conf.
+       pkg_digger_field__empty has changed from "COMMENTS" to "PKGBASE"
+       pkg_digger_strat__empty is assigned to "exact"
+       Thus ::<query> matches exact PKGBASE, e.g.
+       'pkg_digger ::emacs' will search for PKGBASE equal to 'emacs'.
+     - Option -r without -3|-9 doesn't fail anymore
+
+  pkg_summary2deps:
+     - TNF provides summaries that contain packages wthout PKGPATH
+       (netbsd-compat50-5.1).  So, absense of PKGPATH is not a fatal
+       error in pkg_summary2deps anymore.
+
+  Minor improvements
+
+----------------------------------------------------------------------
 Version 0.50.0, by Aleksey Cheusov, Tue, 11 Jan 2011 01:06:43 +0200
 
   pkg_grep_summary:
