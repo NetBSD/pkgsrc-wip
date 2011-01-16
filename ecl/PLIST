@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2011/01/09 09:43:39 asau Exp $
+@comment $NetBSD: PLIST,v 1.25 2011/01/16 13:27:21 asau Exp $
 bin/ecl
 bin/ecl-config
 include/ecl/bytecodes.h
@@ -62,4 +62,5 @@ lib/libecl.so
 lib/libecl.so.${PKGVERSION_MAJOR}
 lib/libecl.so.${PKGVERSION_MAJOR_MINOR}
 lib/libecl.so.${PKGVERSION}
+man/man1/ecl-config.1
 man/man1/ecl.1
