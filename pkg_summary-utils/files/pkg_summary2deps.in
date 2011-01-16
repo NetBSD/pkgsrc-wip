@@ -223,7 +223,10 @@ function process_deps (id,               deps,i){
 }
 
 NF == 0 {
-	assert(pkgpath != "", "Cannot find pkgpath")
+	if (pkgpath == ""){
+		pkgpath = "none"
+	}
+
 	assert(pkgname != "", "Cannot find pkgname")
 
 	if (assigns)
