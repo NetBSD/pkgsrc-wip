@@ -1,4 +1,4 @@
-$NetSBD$
+$NetBSD: patch-am,v 1.2 2011/01/16 11:08:01 thomasklausner Exp $
 
 libwpd-0.9/libwpg-0.2 support from trunk
 
