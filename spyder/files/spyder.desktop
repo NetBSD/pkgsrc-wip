@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Spyder
+Exec=spyder
+Terminal=false
+Type=Application
+Categories=Development;
+StartupNotify=true

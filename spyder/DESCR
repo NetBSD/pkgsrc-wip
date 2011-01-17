@@ -1,0 +1,6 @@
+The spyderlib module provides powerful console and
+editor related widgets to your PyQt4 application. It also includes a
+Scientific Python development environment named 'Spyder', an alternative to
+IDLE with powerful interactive features such as variable explorer (with
+GUI-based editors for dictionaries, lists, NumPy arrays, etc.), object
+inspector, online help, and a lot more
