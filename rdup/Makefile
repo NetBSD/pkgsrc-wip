@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2010/11/02 10:01:24 emil_s Exp $
+# $NetBSD: Makefile,v 1.7 2011/01/17 10:17:04 emil_s Exp $
 #
 
-DISTNAME=	rdup-1.1.8
+DISTNAME=	rdup-1.1.10
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.miek.nl/projects/rdup/
 EXTRACT_SUFX=	.tar.bz2
