@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2010/11/01 14:22:53 emil_s Exp $
+# $NetBSD: Makefile,v 1.7 2011/01/17 09:26:28 emil_s Exp $
 #
 
-DISTNAME=	libharu-2.2.0
+DISTNAME=	libharu-2.2.1
 CATEGORIES=	print
 MASTER_SITES=	http://libharu.org/files/
 
