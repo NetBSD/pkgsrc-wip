@@ -1,0 +1,23 @@
+$NetBSD: patch-ad,v 1.3 2011/01/17 14:01:33 ryo-on Exp $
+
+--- build/make/configure.sh.orig	2010-10-28 13:14:14.000000000 +0000
++++ build/make/configure.sh
+@@ -956,6 +956,18 @@ EOF
+         esac
+     fi
+ 
++    case ${tgt_os} in
++    darwin*)
++	add_extralibs -lm -lrt
++	;;
++    solaris*)
++	add_extralibs -lm -lrt
++	;;
++    linux*)
++	add_extralibs -lm -lrt
++	;;
++    esac
++
+     # glibc needs these
+     if enabled linux; then
+         add_cflags -D_LARGEFILE_SOURCE
