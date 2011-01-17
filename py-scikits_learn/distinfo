@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/01/17 22:17:27 jihbed Exp $
+
+SHA1 (scikits.learn-0.5.tar.gz) = 6c8c92f3a83b83388a40c894a5b742ba39166467
+RMD160 (scikits.learn-0.5.tar.gz) = 21597b9c9707fa9eb1ca6f8cdad2c79af3394914
+Size (scikits.learn-0.5.tar.gz) = 779881 bytes
+SHA1 (patch-aa) = e06955a0632920b8b8917eec3315f3f1b17c142f
