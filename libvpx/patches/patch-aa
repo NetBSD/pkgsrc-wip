@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2011/01/16 23:46:20 ryo-on Exp $
+$NetBSD: patch-aa,v 1.5 2011/01/17 11:36:43 ryo-on Exp $
 
 --- build/make/Makefile.orig	2010-10-28 13:14:14.000000000 +0000
 +++ build/make/Makefile
@@ -27,7 +27,7 @@ $NetBSD: patch-aa,v 1.4 2011/01/16 23:46:20 ryo-on Exp $
  	$(if $(quiet),@echo    "    [LD] $$@")
 -	$(qexec)$$(LD) $$(strip $$(LDFLAGS) -o $$@ $(2) $(3) $$(extralibs))
 +	$(qexec)${LIBTOOL} --mode=link $(CC) -o $$@ $$(filter-out -lvpx,$(2)) \
-+	    libvpx.la $$(extralibs)
++	    libvpx.la
  endef
  # make-3.80 has a bug with expanding large input strings to the eval function,
  # which was triggered in some cases by the following component of
