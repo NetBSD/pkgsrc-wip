@@ -7,6 +7,7 @@ DEPENDS=libmaa>=1.2.0
 
 PKGPATH=devel/pipestatus
 PKGNAME=pipestatus-0.6.0
+BUILD_DATE=2009-09-13 10:10:45 +0300
 
 PKGPATH=pkgtools/digest
 PKGNAME=digest-20080510
@@ -50,4 +51,8 @@ automatic=yes
 PKGPATH=wip/mk-configure
 PKGNAME=mk-configure-0.21.0
 automatic=yes
+
+PKGNAME=pkgnih-0.3.1
+BUILD_DATE=2011-01-18 13:27:32 +0200
+PKGPATH=wip/pkgnih
 

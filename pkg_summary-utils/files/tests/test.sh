@@ -87,6 +87,7 @@ textproc/dict-server
 wip/distbb
 wip/mk-configure
 wip/pkg_status
+wip/pkgnih
 '
 
 pkg_summary2leaves -pv bin_summary2.txt | sort |
@@ -115,6 +116,7 @@ textproc/dict-client
 textproc/dict-server
 wip/paexec
 wip/pkg_summary-utils
+wip/pkgnih
 wip/runawk
 '
 
@@ -135,6 +137,7 @@ cmp 'pkg_summary2leaves #6' \
 devel/pipestatus
 textproc/dict-client
 textproc/dict-server
+wip/pkgnih
 '
 
 pkg_summary2leaves -a bin_summary2.txt |
@@ -2258,33 +2261,35 @@ cmp 'pkg_cmp_summary #18.1' \
 - wip/paexec paexec 0.15.0 A
 - wip/pkg_status pkg_status 0.11 A
 - wip/pkg_summary-utils pkg_summary-utils 0.49.1nb1 A
+- wip/pkgnih pkgnih 0.3.1 U
 - wip/runawk runawk 1.2.0 A
 '
 
-pkg_cmp_summary -pu bin_summary2.txt - < bin_summary1.txt | sort |
+pkg_cmp_summary -pb bin_summary1.txt bin_summary2.txt | sort |
 cmp 'pkg_cmp_summary #18.2' \
-'+ devel/gmake gmake 3.81
-+ devel/libtool-base libtool-base 1.5.26nb2
-+ net/netcat netcat 1.10nb2
-+ sysutils/checkperms checkperms 1.10
-+ wip/awk-pkgsrc-dewey awk-pkgsrc-dewey 0.5.6
-+ wip/dict-client dict-client 1.11.2
-+ wip/dict-server dict-server 1.11.2
-+ wip/pkg_conflicts pkg_conflicts 0.4.0
-+ wip/pkg_online pkg_online 0.9.1
-+ wip/pkg_online-client pkg_online-client 0.9.1
-+ wip/pkg_online-server pkg_online-server 0.9.1
-- pkgtools/digest digest 20080510 A
-- textproc/dict-client dict-client 1.11.2 U
-- textproc/dict-server dict-server 1.11.2 U
-- wip/mk-configure mk-configure 0.21.0 A
-- wip/pkg_status pkg_status 0.11 A
-= devel/pipestatus pipestatus 0.6.0 0.6.0 U
-> devel/libmaa libmaa 1.2.0 1.1.0 U
-> wip/distbb distbb 0.38.1 0.33.0 A
-> wip/paexec paexec 0.15.0 0.13.0nb1 A
-> wip/pkg_summary-utils pkg_summary-utils 0.49.1nb1 0.35rc1 A
-> wip/runawk runawk 1.2.0 0.18.0 A
+'! wip/pkgnih pkgnih 0.3.1 0.3.1
++ pkgtools/digest digest 20080510
++ textproc/dict-client dict-client 1.11.2
++ textproc/dict-server dict-server 1.11.2
++ wip/mk-configure mk-configure 0.21.0
++ wip/pkg_status pkg_status 0.11
+- devel/gmake gmake 3.81
+- devel/libtool-base libtool-base 1.5.26nb2
+- net/netcat netcat 1.10nb2
+- sysutils/checkperms checkperms 1.10
+- wip/awk-pkgsrc-dewey awk-pkgsrc-dewey 0.5.6
+- wip/dict-client dict-client 1.11.2
+- wip/dict-server dict-server 1.11.2
+- wip/pkg_conflicts pkg_conflicts 0.4.0
+- wip/pkg_online pkg_online 0.9.1
+- wip/pkg_online-client pkg_online-client 0.9.1
+- wip/pkg_online-server pkg_online-server 0.9.1
+< devel/libmaa libmaa 1.1.0 1.2.0
+< wip/distbb distbb 0.33.0 0.38.1
+< wip/paexec paexec 0.13.0nb1 0.15.0
+< wip/pkg_summary-utils pkg_summary-utils 0.35rc1 0.49.1nb1
+< wip/runawk runawk 0.18.0 1.2.0
+= devel/pipestatus pipestatus 0.6.0 0.6.0
 '
 
 # pkg_summary2deps -Ap
@@ -2847,6 +2852,7 @@ pkg_summary-utils distbb
 pkg_summary-utils pkg_conflicts
 pkg_summary-utils pkg_online-client
 pkg_summary-utils pkg_online-server
+pkgnih
 runawk awk-pkgsrc-dewey
 runawk distbb
 runawk paexec
@@ -2878,6 +2884,7 @@ wip/pkg_summary-utils;pkg_summary-utils wip/distbb;distbb
 wip/pkg_summary-utils;pkg_summary-utils wip/pkg_conflicts;pkg_conflicts
 wip/pkg_summary-utils;pkg_summary-utils wip/pkg_online-client;pkg_online-client
 wip/pkg_summary-utils;pkg_summary-utils wip/pkg_online-server;pkg_online-server
+wip/pkgnih;pkgnih
 wip/runawk;runawk wip/awk-pkgsrc-dewey;awk-pkgsrc-dewey
 wip/runawk;runawk wip/distbb;distbb
 wip/runawk;runawk wip/paexec;paexec
@@ -2909,6 +2916,7 @@ pkg_summary-utils-0.35rc1 distbb-0.33.0 ( pkg_summary-utils>=0.31.0 )
 pkg_summary-utils-0.35rc1 pkg_conflicts-0.4.0 ( pkg_summary-utils-[0-9]* )
 pkg_summary-utils-0.35rc1 pkg_online-client-0.9.1 ( pkg_summary-utils-[0-9]* )
 pkg_summary-utils-0.35rc1 pkg_online-server-0.9.1 ( pkg_summary-utils>=0.18.1 )
+pkgnih-0.3.1
 runawk-0.18.0 awk-pkgsrc-dewey-0.5.6 ( runawk-[0-9]* )
 runawk-0.18.0 distbb-0.33.0 ( runawk>=0.14.3 )
 runawk-0.18.0 paexec-0.13.0nb1 ( runawk>=0.16.0 )

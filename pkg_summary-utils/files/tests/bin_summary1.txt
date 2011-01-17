@@ -124,6 +124,10 @@ PKGTOOLS_VERSION=20090406
 PROVIDES=/usr/pkg/lib/libmaa.so.1
 REQUIRES=/usr/lib/libc.so.12
 
+PKGNAME=pkgnih-0.3.1
+BUILD_DATE=2011-01-17 12:27:32 +0200
+PKGPATH=wip/pkgnih
+
 PKGNAME=dict-client-1.11.2
 DEPENDS=libmaa>=0.990
 COMMENT=Dictionary Service Protocol client

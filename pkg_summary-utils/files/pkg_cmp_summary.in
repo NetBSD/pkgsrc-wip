@@ -41,11 +41,15 @@
 # OPTIONS:
 #   -h         display this help
 #   -p         use PKGPATH:PKGBASE pair for identifing a package
-#   -c         also use CVS_CHECKSUM field in comparing packages
+#   -c         consider packages different
+#              if they have different CVS_CHECKSUM
 #   -m         ignored
 #   -P         use PKGPATH only for comparison, ignore PKGNAME
 #   -d         consider packages different
 #              if they have different DEPENDS
+#   -b         consider packages different
+#              if they have different BUILD_DATE, unfortunately pkgsrc
+#              doesn't mark packages with UUID
 #   -2         output PKGPATHe from summary1 and from summary2 (<>!=)
 #   -e         normally a number of duplications is output as a result of
 #              comparison if they (duplications) exist.  If -e was
@@ -68,6 +72,7 @@ BEGIN {
 	with_pkgpath    = getarg("p")
 	use_checksum    = getarg("c")
 	use_dep         = getarg("d")
+	use_builddate   = getarg("b")
 	check_existence = getarg("e")
 	user_auto       = getarg("u")
 
@@ -138,6 +143,11 @@ use_dep && /^DEPENDS=/ {
 	next
 }
 
+use_builddate && /^BUILD_DATE=/ {
+	build_date = substr($0, 12)
+	next
+}
+
 function get_ua_sufx (pkgbase){
 	if (user_auto){
 		if (! (pkgbase in pkgbase2ua))
@@ -176,11 +186,12 @@ NF == 0 {
 		full_pkgbase = pkgname
 	}
 
-	# current checksum
+	# current checksum, build date
 	curr_checksum = checksum
+	curr_build_date = build_date
 
 	# cleaning...
-	pkgname = pkgpath = checksum = ""
+	pkgname = pkgpath = checksum = build_date = ""
 
 	#
 	if (FILENAME == file1){
@@ -210,6 +221,10 @@ NF == 0 {
 					depends [pkgbase, ++depends_cnt [pkgbase]] = dep
 				}
 				delete dep1
+			}
+
+			if (use_builddate){
+				build_dates [pkgbase] = curr_build_date
 			}
 		}
 	}else{
@@ -267,12 +282,15 @@ NF == 0 {
 		# -c
 		if (use_checksum && res == "="){
 			prev_checksum = checksums [pkgbase]
-			if (prev_checksum != "" &&
-				curr_checksum != "" &&
-				prev_checksum != curr_checksum)
-			{
+			if (prev_checksum != curr_checksum)
 				res = "!"
-			}
+		}
+
+		# -b
+		if (use_builddate && res == "="){
+			prev_build_date = build_dates [pkgbase]
+			if (prev_build_date != curr_build_date)
+				res = "!"
 		}
 
 		# -d
@@ -300,6 +318,7 @@ NF == 0 {
 			delete dep2
 		}
 
+		#
 		if (output2){
 			_full = full_pkgpaths [pkgbase]
 			sub(/ .*$/, "", _full)
