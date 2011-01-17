@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.11 2010/11/09 10:46:19 emil_s Exp $
+# $NetBSD: Makefile,v 1.12 2011/01/17 10:48:04 emil_s Exp $
 #
 
 DISTNAME=	task-1.9.3
 CATEGORIES=	time
 MASTER_SITES=	http://www.taskwarrior.org/download/
 
-MAINTAINER=	emil@math.su.se
+MAINTAINER=	esg@sdf.lonestar.org
 HOMEPAGE=	http://taskwarrior.org/projects/show/taskwarrior/
 COMMENT=	Task is an open source, command-line, TODO list manager
 LICENSE=	gnu-gpl-v2

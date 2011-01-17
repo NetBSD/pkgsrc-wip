@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/05/20 00:58:41 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2011/01/17 10:48:03 emil_s Exp $
 #
 
 DISTNAME=		haddock-${VERSION}
@@ -8,7 +8,7 @@ MASTER_SITES=		http://www.haskell.org/haddock/
 DISTFILES=		haddock-${VERSION}-src.tar.gz
 #DISTFILES+=		haddock-html-${VERSION}.tar.gz
 
-MAINTAINER=		emil@math.su.se
+MAINTAINER=		esg@sdf.lonestar.org
 HOMEPAGE=		http://www.haskell.org/haddock/
 COMMENT=		Documentation tool for Haskell
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/03/29 23:35:55 emil_s Exp $
+# $NetBSD: Makefile,v 1.2 2011/01/17 10:48:04 emil_s Exp $
 #
 
 DISTNAME=		tpp-1.3.1
 CATEGORIES=		graphics
 MASTER_SITES=		http://synflood.at/tpp/
 
-MAINTAINER=		emil@math.su.se
+MAINTAINER=		esg@sdf.lonestar.org
 HOMEPAGE=		http://synflood.at/tpp/
 COMMENT=		Tpp is an ncurses-based presentation tool
 

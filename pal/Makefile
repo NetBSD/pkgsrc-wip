@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/07/06 07:06:59 emil_s Exp $
+# $NetBSD: Makefile,v 1.5 2011/01/17 10:48:04 emil_s Exp $
 #
 
 DISTNAME=		pal-0.4.3
@@ -7,7 +7,7 @@ CATEGORIES=		time
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=palcal/}
 EXTRACT_SUFX=		.tgz
 
-MAINTAINER=		emil@math.su.se
+MAINTAINER=		esg@sdf.lonestar.org
 HOMEPAGE=		http://palcal.sourceforge.net/
 COMMENT=		Command-line calendar program
 

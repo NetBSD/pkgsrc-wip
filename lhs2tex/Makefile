@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2009/05/20 00:58:41 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2011/01/17 10:48:04 emil_s Exp $
 #
 
 DISTNAME=		lhs2tex-1.12
@@ -8,7 +8,7 @@ MASTER_SITES=		http://www.iai.uni-bonn.de/~loeh/lhs2tex/
 EXTRACT_SUFX=		.tar.bz2
 
 HOMEPAGE=		http://www.iai.uni-bonn.de/~loeh/lhs2tex/
-MAINTAINER=		emil@math.su.se
+MAINTAINER=		esg@sdf.lonestar.org
 COMMENT=		Preprocessor for typesetting Haskell sources with LaTeX
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes

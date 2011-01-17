@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2009/11/10 09:31:56 phonohawk Exp $
+# $NetBSD: Makefile,v 1.4 2011/01/17 10:48:03 emil_s Exp $
 #
 
 DISTNAME=	Cabal-1.6.0.3
 CATEGORIES=	devel
 
-MAINTAINER=	emil@math.su.se
+MAINTAINER=	esg@sdf.lonestar.org
 COMMENT=	Haskell common architecture for building applications and libraries
 
 .include "../../wip/mk/haskell.mk"

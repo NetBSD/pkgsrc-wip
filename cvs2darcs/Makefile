@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/09/06 15:08:15 emil_s Exp $
+# $NetBSD: Makefile,v 1.2 2011/01/17 10:48:03 emil_s Exp $
 #
 
 DISTNAME=		cvs2darcs-0.7.1
 CATEGORIES=		devel
 MASTER_SITES=		http://ab-initio.mit.edu/cvs2darcs/
 
-MAINTAINER=		emil@math.su.se
+MAINTAINER=		esg@sdf.lonestar.org
 HOMEPAGE=		http://ab-initio.mit.edu/cvs2darcs/
 COMMENT=		Convert CVS repositories to Darcs version control
 

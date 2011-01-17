@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2010/12/26 05:01:22 davesainty Exp $
+# $NetBSD: Makefile,v 1.8 2011/01/17 10:48:03 emil_s Exp $
 #
 
 DISTNAME=	jp2a-1.0.6
@@ -6,7 +6,7 @@ PKGREVISION=	4
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=jp2a/}
 
-MAINTAINER=	emil@math.su.se
+MAINTAINER=	esg@sdf.lonestar.org
 HOMEPAGE=	http://jp2a.sourceforge.net/
 COMMENT=	JPEG to ASCII converter
 

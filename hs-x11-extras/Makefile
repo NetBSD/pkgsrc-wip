@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/05/20 00:58:41 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2011/01/17 10:48:03 emil_s Exp $
 #
 
 DISTNAME=	X11-extras-${VERSION}
@@ -7,7 +7,7 @@ PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	http://hackage.haskell.org/packages/archive/X11-extras/${VERSION}/
 
-MAINTAINER=	emil@math.su.se
+MAINTAINER=	esg@sdf.lonestar.org
 HOMEPAGE=	http://hackage.haskell.org/packages/archive/X11-extras/
 COMMENT=	Missing Haskell bindings to the X11 graphics library
 

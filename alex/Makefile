@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2011/01/14 07:17:08 phonohawk Exp $
+# $NetBSD: Makefile,v 1.8 2011/01/17 10:48:03 emil_s Exp $
 #
 
 DISTNAME=	alex-2.3.5
 PKGNAME=	${DISTNAME}
 CATEGORIES=	devel
-MAINTAINER=	emil@math.su.se
+MAINTAINER=	esg@sdf.lonestar.org
 HOMEPAGE=	http://www.haskell.org/alex/
 COMMENT=	Tool for generating lexical analysers in Haskell
 LICENSE=	modified-bsd
