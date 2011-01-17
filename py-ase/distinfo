@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/01/17 22:01:18 jihbed Exp $
+
+SHA1 (python-ase-3.4.1.1765.tar.gz) = 06c4d9c5329f2f48b055e85d69fbef36e93a8431
+RMD160 (python-ase-3.4.1.1765.tar.gz) = fac5a645ae0e8ab6f0d062ed1d1a9ee10219317f
+Size (python-ase-3.4.1.1765.tar.gz) = 414856 bytes
