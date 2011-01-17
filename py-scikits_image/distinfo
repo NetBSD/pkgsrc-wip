@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/01/17 22:18:27 jihbed Exp $
+
+SHA1 (scikits.image-0.2.2.tar.gz) = 53568addad08b0204b60b590354865dd22cb6580
+RMD160 (scikits.image-0.2.2.tar.gz) = 6be10b73d304b5a3fc9c526dc458dfea8c7ecd7f
+Size (scikits.image-0.2.2.tar.gz) = 572397 bytes
