@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/01/17 22:02:17 jihbed Exp $
+bin/ann2fig
+include/ANN/ANN.h
+include/ANN/ANNperf.h
+include/ANN/ANNx.h
+lib/libANN.a
+share/doc/ann/ANNmanual.pdf
