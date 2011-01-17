@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/01/17 22:00:14 jihbed Exp $
+${PYSITELIB}/pyarabic/__init__.py
+${PYSITELIB}/pyarabic/__init__.pyc
+${PYSITELIB}/pyarabic/__init__.pyo
+${PYSITELIB}/pyarabic/araby.py
+${PYSITELIB}/pyarabic/araby.pyc
+${PYSITELIB}/pyarabic/araby.pyo
