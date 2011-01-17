@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4201 2011/01/14 22:02:29 asau Exp $
+# $Id: Makefile,v 1.4202 2011/01/17 11:50:58 cheusov Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1836,6 +1836,7 @@ SUBDIR+=	pkg_status
 SUBDIR+=	pkg_summary-utils
 SUBDIR+=	pkgin
 SUBDIR+=	pkgmanager
+SUBDIR+=	pkgnih
 SUBDIR+=	pkgnih-current
 SUBDIR+=	plconfig
 SUBDIR+=	plod
