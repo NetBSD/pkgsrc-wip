@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2010/11/05 09:59:36 emil_s Exp $
+# $NetBSD: Makefile,v 1.11 2011/01/17 10:08:40 emil_s Exp $
 #
 
-DISTNAME=	givaro-3.3.3
+DISTNAME=	givaro-3.3.4
 CATEGORIES=	math
 MASTER_SITES=	http://ljk.imag.fr/CASYS/LOGICIELS/givaro/Downloads/
 
