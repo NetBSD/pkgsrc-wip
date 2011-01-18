@@ -56,7 +56,7 @@ usage:
   pkg_status -h
   pkg_status -V
   pkg_status -s [-ruaTAqDp0] [ [--] pkg_info_args ]
-  pkg_status -b [-ruaTAqD]   [ [--] pkg_info_args ]
+  pkg_status -b [-ruaTAqDB]   [ [--] pkg_info_args ]
   pkg_status -k [-mULd]     [ [--] pkg_info_args or pkg_admin_args ]
   pkg_status -l [-rtREn]
 
@@ -71,6 +71,7 @@ OPTIONS common for -s and -b:
              a path to which is stored in PKG_SUMMARY environment variable
   -u         analyse packages marked as installed by user (the default, see -a)
   -a         analyse all installed packages (see -u)
+  -B         consider packages different if their BUILD_DATE differ
   -A         by default up-to-date packages are skipped,
              with -A they are output too
   -q         No noisy reminder about output format
@@ -132,7 +133,7 @@ EOF
 pkg_cmp_opts='-p'
 
 process_args (){
-    while getopts hVsbrAuaQqDp:0kmULcdltREnT f; do
+    while getopts hVsbrAuaQqDp:0kmULcdltREnTB f; do
 	case $f in
 	    h)    usage; exit 0;;
 	    V)    echo 'pkg_status @VERSION@'; exit 0;;
@@ -143,6 +144,7 @@ process_args (){
 	    u)    pkg_info_opts="$pkg_info_opts -u";;
 	    a)    pkg_info_opts="$pkg_info_opts -a";;
 	    T)    pkg_cmp_opts="$pkg_cmp_opts -u";;
+	    B)    pkg_cmp_opts="$pkg_cmp_opts -b";;
 	    Q)    quiet=1; echo '-Q is deprecated, please use -q' 1>&2;;
 	    q)    quiet=1;;
 	    D)    debug=1;;
@@ -413,7 +415,7 @@ cat_ext_summary (){
 }
 
 if test -n "$mode_bin"; then
-    pkg_bin_summary -f PKGPATH,PKGNAME,automatic -- $pkg_info_opts "$@" \
+    pkg_bin_summary -f PKGPATH,PKGNAME,automatic,BUILD_DATE -- $pkg_info_opts "$@" \
 	> "$bin_summary_fn"
     cat_ext_summary | pkg_refresh_summary > "$ext_summary_fn"
     runpipe0 \

@@ -1,7 +1,13 @@
 ======================================================================
+Version 0.14, by Aleksey Cheusov, Mon, 17 Jan 2011 23:49:41 +0200
+
+  Option -B was added for considering packages different if their
+  BUILD_DATE differ. -B works only with -b.
+
+======================================================================
 Version 0.13, by Aleksey Cheusov, Wed, 29 Dec 2010 17:48:20 +0200
 
-  Option -c was added in order check CONFLICTS
+  Option -c was added in order to check CONFLICTS
 
 ======================================================================
 Version 0.12, by Aleksey Cheusov, Sat, 25 Dec 2010 17:22:37 +0200
