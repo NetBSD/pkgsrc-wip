@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.6 2009/08/01 17:55:55 gschwarz Exp $
+$NetBSD: patch-aa,v 1.7 2011/01/18 18:11:55 gschwarz Exp $
 
---- Makefile.in.orig	2009-08-01 18:23:14.000000000 +0200
-+++ Makefile.in	2009-08-01 18:26:57.000000000 +0200
+--- Makefile.in.orig	2011-01-18 19:02:40.000000000 +0100
++++ Makefile.in	2011-01-18 19:05:14.000000000 +0100
 @@ -1,11 +1,11 @@
  
- DISTNAME = $(progname)-$(progversion)
+ DISTNAME = $(pkgname)-$(pkgversion)
 -INSTALL = install
 -INSTALL_PROGRAM = $(INSTALL) -p -m 755
 -INSTALL_DATA = $(INSTALL) -p -m 644
@@ -18,22 +18,22 @@ $NetBSD: patch-aa,v 1.6 2009/08/01 17:55:55 gschwarz Exp $
 +#SHELL = /bin/sh
  
  objs = arg_parser.o basic_buffer.o block.o buffer.o buffer_handle.o \
-        encoding.o iso_8859.o main.o menu_file.o menu_help.o menu_opts.o \
-@@ -66,7 +66,7 @@
- 	if test ! -d $(DESTDIR)$(bindir) ; then $(INSTALL_DIR) $(DESTDIR)$(bindir) ; fi
- 	if test ! -d $(DESTDIR)$(sysconfdir) ; then $(INSTALL_DIR) $(DESTDIR)$(sysconfdir) ; fi
- 	$(INSTALL_PROGRAM) ./$(progname) $(DESTDIR)$(bindir)/$(progname)
--	$(INSTALL_DATA) $(VPATH)/$(progname)rc $(DESTDIR)$(sysconfdir)/$(progname)rc
-+	$(INSTALL_DATA) $(VPATH)/$(progname)rc $(DESTDIR)$(prefix)/share/examples/moe/$(progname)rc
+        encoding.o iso_8859.o menu_file.o menu_help.o menu_opts.o \
+@@ -67,7 +67,7 @@
+ 	if [ ! -d "$(DESTDIR)$(bindir)" ] ; then $(INSTALL_DIR) "$(DESTDIR)$(bindir)" ; fi
+ 	if [ ! -d "$(DESTDIR)$(sysconfdir)" ] ; then $(INSTALL_DIR) "$(DESTDIR)$(sysconfdir)" ; fi
+ 	$(INSTALL_PROGRAM) ./$(progname) "$(DESTDIR)$(bindir)/$(progname)"
+-	$(INSTALL_DATA) $(VPATH)/$(pkgname)rc "$(DESTDIR)$(sysconfdir)/$(pkgname)rc"
++	$(INSTALL_DATA) $(VPATH)/$(pkgname)rc "$(DESTDIR)$(prefix)/share/examples/moe/$(progname)rc"
  
  install-info :
- 	if test ! -d $(DESTDIR)$(infodir) ; then $(INSTALL_DIR) $(DESTDIR)$(infodir) ; fi
-@@ -75,7 +75,7 @@
+ 	if [ ! -d "$(DESTDIR)$(infodir)" ] ; then $(INSTALL_DIR) "$(DESTDIR)$(infodir)" ; fi
+@@ -76,7 +76,7 @@
  
  install-man :
- 	if test ! -d $(DESTDIR)$(mandir)/man1 ; then $(INSTALL_DIR) $(DESTDIR)$(mandir)/man1 ; fi
--	$(INSTALL_DATA) $(VPATH)/doc/$(progname).1 $(DESTDIR)$(mandir)/man1/$(progname).1
-+	$(INSTALL_MAN) $(VPATH)/doc/$(progname).1 $(DESTDIR)$(mandir)/man1/$(progname).1
+ 	if [ ! -d "$(DESTDIR)$(mandir)/man1" ] ; then $(INSTALL_DIR) "$(DESTDIR)$(mandir)/man1" ; fi
+-	$(INSTALL_DATA) $(VPATH)/doc/$(progname).1 "$(DESTDIR)$(mandir)/man1/$(progname).1"
++	$(INSTALL_MAN) $(VPATH)/doc/$(progname).1 "$(DESTDIR)$(mandir)/man1/$(progname).1"
  
  install-strip : all
  	$(MAKE) INSTALL_PROGRAM='$(INSTALL_PROGRAM) -s' install
