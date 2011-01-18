@@ -367,6 +367,7 @@ SIGN PKGPATH PKGBASE VERSION1 [VERSION2]
             =   the same version is available
             -   package disappeared or was renamed
             +   package has been renamed (also see '-' sign)
+            !   packages are different
           [0-9] package is registered at least twice (problem?)
      VERSION1: version of installed package,
      VERSION2: (if any) - version of available package
