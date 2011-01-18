@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.8 2011/01/02 21:47:10 helgoman Exp $
+# $NetBSD: Makefile,v 1.9 2011/01/18 08:25:34 jihbed Exp $
 #
 
-VERSION=		0.22.0
-DISTNAME=		pylint-${VERSION}
-CATEGORIES=		devel
+VERSION=	0.22.0
+DISTNAME=	pylint-${VERSION}
+CATEGORIES=	devel
 MASTER_SITES=	http://ftp.logilab.org/pub/pylint/
 
-MAINTAINER=		helgoman@users.sourceforge.net
-HOMEPAGE=		http://www.logilab.org/project/pylint
-COMMENT=		Python code static checker
+MAINTAINER=	helgoman@users.sourceforge.net
+HOMEPAGE=	http://www.logilab.org/project/pylint
+COMMENT=	Python code static checker
 LICENSE=    	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -25,6 +25,6 @@ post-install:
 
 .include "../../lang/python/egg.mk"
 .include "../../x11/py-Tk/buildlink3.mk"
-.include "../../wip/py-logilab-astng/buildlink3.mk"
-.include "../../wip/py-logilab-common/buildlink3.mk"
+.include "../../devel/py-logilab-astng/buildlink3.mk"
+.include "../../devel/py-logilab-common/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
