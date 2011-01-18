@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/12/03 15:30:44 gschwarz Exp $
+$NetBSD: distinfo,v 1.2 2011/01/18 21:13:54 gschwarz Exp $
 
 SHA1 (lpdsrv.tgz) = 33d0a364ed5872b3cbc01461679fbdcac447314b
 RMD160 (lpdsrv.tgz) = a05a91da720b4c487239340249af70325e0239f5
 Size (lpdsrv.tgz) = 11830 bytes
-SHA1 (patch-aa) = d0ba149176139ea7c061173264e117592f38d65e
+SHA1 (patch-aa) = 98b4ecfd466e7d9e151fd7f9cea6f91e0eceea11
 SHA1 (patch-ab) = 9125347d8a48dc169f8502904cdc9ba56a20b2a0
