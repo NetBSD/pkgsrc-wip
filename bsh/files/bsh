@@ -1,0 +1,12 @@
+#!/bin/sh
+
+if [ "$1" = "-classpath" ]
+then
+  CLASSPATH="$2"
+  shift 2
+fi
+
+CLASSPATH="${CLASSPATH:-.}:/usr/share/java/jline.jar:/usr/share/java/bsh.jar"
+export CLASSPATH
+
+exec /usr/bin/java jline.ConsoleRunner bsh.Interpreter "$@"
