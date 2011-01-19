@@ -1,0 +1,2 @@
+scikits.bvp_solver is a python package for solving two point boundary value
+problems which is based on a modified version of the BVP_SOLVER Fortran package
