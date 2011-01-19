@@ -1,0 +1,15 @@
+The package is built on top of other widely used packages such as
+NumPy, SciPy, ScientificPython, Gnuplot, etc.
+
+SciTools also comes with a plotting interface called Easyviz, which is a
+unified interface to various packages for scientific visualization and plotting.
+Both curve plots and more advanced 2D/3D visualization of scalar and vector
+fields are supported.The Easyviz interface was designed with three ideas in mind
+    1) a simple, Matlab-like syntax;
+    2) a unified interface to lots of visualization engines (backends):
+     Gnuplot, Matplotlib, Grace, Veusz, Pmw.Blt.Graph, PyX, Matlab, VTK, VisIt,
+     OpenDX
+    3) a minimalistic interface which offers only
+basic control of plots: curves, linestyles, legends, title, axis extent
+and names More fine-tuning of plots can be done by adding backend-specific
+commands
