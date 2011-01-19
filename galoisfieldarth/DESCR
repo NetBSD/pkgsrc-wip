@@ -1,0 +1,7 @@
+A simple library written in the C++ language for performing arithmetic over
+Galois fields.The arithmetic can be in the form of either elements or
+polynomials over a specified Galois field.The library is optimised to run in one
+of two modes, normal or LUT mode. In the LUT mode performance is increased
+dramatically at the cost of large consumption of memory. The library can be used
+in but not limited to such fields as cryptography, error correcting codes and
+computational analysis. 
