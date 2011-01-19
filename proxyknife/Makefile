@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2010/09/05 11:31:25 gschwarz Exp $
+# $NetBSD: Makefile,v 1.9 2011/01/19 20:49:02 gschwarz Exp $
 
 DISTNAME=	proxyknife-1.7
 CATEGORIES=	www
@@ -18,6 +18,7 @@ USE_TOOLS+=	perl gmake
 USE_FEATURES+=	snprintf
 
 CONFIGURE_ARGS+=	--docdir=${PREFIX}/share/doc/proxyknife
+CPPFLAGS.SunOS+=	-DHAVE_LOCALE_H # apparently not automatically detected
 
 CONF_FILES=	${DESTDIR}${PREFIX}/share/doc/proxyknife/example/proxyknife.conf.example ${DESTDIR}${PKG_SYSCONFDIR}/proxyknife.conf
 
