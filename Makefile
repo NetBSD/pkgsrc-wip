@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4203 2011/01/17 22:28:31 jihbed Exp $
+# $Id: Makefile,v 1.4204 2011/01/19 14:41:07 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -80,6 +80,7 @@ SUBDIR+=	amarok
 SUBDIR+=	and
 SUBDIR+=	ann
 SUBDIR+=	aoi
+SUBDIR+=	aokell
 SUBDIR+=	aols-freetds
 SUBDIR+=	aols-openssl
 SUBDIR+=	aols-postgres
@@ -539,6 +540,7 @@ SUBDIR+=	gDesklets-CornerXMMS
 SUBDIR+=	gDesklets-rssgrab
 SUBDIR+=	gDesklets-starterbar
 SUBDIR+=	galib
+SUBDIR+=	galoisfieldarth
 SUBDIR+=	gambas2
 SUBDIR+=	gambc
 SUBDIR+=	gaphor
@@ -2083,10 +2085,13 @@ SUBDIR+=	py-rlcompleter2
 SUBDIR+=	py-rpyc
 SUBDIR+=	py-sage
 SUBDIR+=	py-scipy
+SUBDIR+=	py-scikits_bvp1lg
+SUBDIR+=	py-scikits-bvp_solver
 SUBDIR+=	py-scikits_image
 SUBDIR+=	py-scikits_learn
 SUBDIR+=	py-scikits_optimization
 SUBDIR+=	py-scikits_scattpy
+SUBDIR+=	py-scikits_talkbox
 SUBDIR+=	py-scikits_timeseries
 SUBDIR+=	py-scrobbler
 SUBDIR+=	py-sfepy
