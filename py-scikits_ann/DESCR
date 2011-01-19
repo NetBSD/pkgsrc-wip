@@ -1,0 +1,2 @@
+The ANN module provides a numpy-compatible python wrapper around the
+Approximate Nearest Neighbor library (http://www.cs.umd.edu/~mount/ANN/).
