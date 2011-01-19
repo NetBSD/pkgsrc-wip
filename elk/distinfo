@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/01/19 14:26:42 jihbed Exp $
+
+SHA1 (elk-1.1.4.tgz) = 02f5a0809f6240fd6c60bfe8479f26894a0759fe
+RMD160 (elk-1.1.4.tgz) = 0c13bd2aa6f81a3a02b0ba0757e07f473046aec0
+Size (elk-1.1.4.tgz) = 1443604 bytes
+SHA1 (patch-aa) = de39298bd72bbbf687f42cee9473cb378f3fcd49
+SHA1 (patch-ab) = 794cbb2975b2cde8d28be72cd3e22b317958a59a
+SHA1 (patch-ac) = b4b3eb676877b57c9765ba848c8b396c808c4193
+SHA1 (patch-ad) = cb50aa2a579b14137aae0bf575831cedd1d1e31d
+SHA1 (patch-ae) = 6577faa7b06d090451773bdd41ed477b0df5657c
