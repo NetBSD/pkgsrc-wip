@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2009/12/06 20:56:36 gschwarz Exp $
+# $NetBSD: Makefile,v 1.14 2011/01/19 21:28:37 gschwarz Exp $
 #
 
 DISTNAME=	tacacs+-F4.0.4.19
@@ -29,6 +29,10 @@ BUILD_DEFS+=		VARBASE
 
 .if !empty(LOWER_OPSYS:Mirix5*)
 CPPFLAGS+=		-Duint16_t=u_int16_t -Duint32_t=u_int32_t
+.endif
+
+.if exists(/usr/include/pam/pam_appl.h) # MacOS X prior to 10.6
+CPPFLAGS+=		-DPAM-PAM
 .endif
 
 INSTALLATION_DIRS=	sbin ${PKGMANDIR}/man3 ${PKGMANDIR}/man5 \
