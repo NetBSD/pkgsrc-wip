@@ -1,25 +1,24 @@
-$NetBSD: patch-ac,v 1.2 2009/09/06 23:17:58 khorben Exp $
+$NetBSD: patch-ac,v 1.3 2011/01/20 14:56:52 khorben Exp $
 
---- Makefile.orig	2009-06-24 19:46:45.000000000 +0200
+--- Makefile.orig	2010-11-27 18:53:01.000000000 +0000
 +++ Makefile
-@@ -117,16 +117,16 @@ install_olsrd:	install_bin
+@@ -116,17 +116,15 @@ install_olsrd:	install_bin
  		@echo per default.
  		@echo can be found at files/olsrd.conf.default.lq
  		@echo ==========================================================
 -		mkdir -p $(ETCDIR)
 -		-cp -i files/olsrd.conf.default.lq $(CFGFILE)
-+		#mkdir -p $(ETCDIR)
-+		#-install -m 644 files/olsrd.conf.default.lq $(CFGFILE)
  		@echo -------------------------------------------
  		@echo Edit $(CFGFILE) before running olsrd!!
  		@echo -------------------------------------------
  		@echo Installing manpages $(EXENAME)\(8\) and $(CFGNAME)\(5\)
+ ifneq ($(MANDIR),)
  		mkdir -p $(MANDIR)/man8/
 -		cp files/olsrd.8.gz $(MANDIR)/man8/$(EXENAME).8.gz
-+		install -m 644 files/olsrd.8.gz $(MANDIR)/man8/$(EXENAME).8
++		install -m 644 files/olsrd.8.gz $(MANDIR)/man8/$(EXENAME).8.gz
  		mkdir -p $(MANDIR)/man5/
 -		cp files/olsrd.conf.5.gz $(MANDIR)/man5/$(CFGNAME).5.gz
-+		install -m 644 files/olsrd.conf.5.gz $(MANDIR)/man5/$(CFGNAME).5
++		install -m 644 files/olsrd.conf.5.gz $(MANDIR)/man5/$(CFGNAME).5.gz
+ endif
  
  tags:
- 		$(TAGCMD) -o $(TAGFILE) $(TAG_SRCS)

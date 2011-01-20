@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.1 2009/09/06 21:15:32 khorben Exp $
+$NetBSD: patch-ad,v 1.2 2011/01/20 14:56:52 khorben Exp $
 
---- src/defs.h.orig	2009-06-24 19:00:51.000000000 +0200
+--- src/defs.h.orig	2010-04-08 12:50:26.000000000 +0000
 +++ src/defs.h
-@@ -61,9 +61,13 @@ extern const char olsrd_version[];
+@@ -60,9 +60,13 @@ extern const char olsrd_version[];
  extern const char build_date[];
  extern const char build_host[];
  

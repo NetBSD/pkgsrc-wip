@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2009/09/06 23:06:47 khorben Exp $
+# $NetBSD: Makefile,v 1.4 2011/01/20 14:56:52 khorben Exp $
 #
 
-DISTNAME=	olsrd-0.5.6-r5
-PKGNAME=	olsrd-0.5.6r5
+DISTNAME=	olsrd-0.6.1
 CATEGORIES=	net
-MASTER_SITES=	http://www.olsr.org/releases/0.5/
+MASTER_SITES=	http://www.olsr.org/releases/0.6/
 
 MAINTAINER=	khorben@defora.org
 HOMEPAGE=	http://www.olsr.org/
