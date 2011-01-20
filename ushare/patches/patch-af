@@ -1,0 +1,128 @@
+$NetBSD: patch-af,v 1.3 2011/01/20 08:27:11 obache Exp $
+
+* Treat NetBSD same as FreeBSD.
+* Move sys/param.h and config.h header files before using conditions.
+
+--- src/ushare.c.orig	2007-12-09 13:03:36.000000000 +0000
++++ src/ushare.c
+@@ -28,7 +28,11 @@
+ #include <errno.h>
+ #include <getopt.h>
+ 
+-#if (defined(BSD) || defined(__FreeBSD__) || defined(__APPLE__))
++#if (defined(__unix__) || defined(unix)) && !defined(USG) || defined(__NetBSD__)
++#include <sys/param.h>
++#endif
++
++#if (defined(BSD) || defined(__FreeBSD__) || defined(__APPLE__) || defined(__NetBSD__))
+ #include <sys/socket.h>
+ #include <sys/sysctl.h>
+ #include <net/if_dl.h>
+@@ -44,23 +48,21 @@
+ #include <sys/stat.h>
+ #include <stdbool.h>
+ #include <fcntl.h>
++#include <netdb.h>
+ 
+ #ifdef HAVE_IFADDRS_H
+ #include <ifaddrs.h>
+ #endif
+ 
+-#if (defined(__unix__) || defined(unix)) && !defined(USG)
+-#include <sys/param.h>
+-#endif
+-
+ #include <upnp/upnp.h>
+ #include <upnp/upnptools.h>
+ 
++#include "config.h"
++
+ #if (defined(HAVE_SETLOCALE) && defined(CONFIG_NLS))
+ # include <locale.h>
+ #endif
+ 
+-#include "config.h"
+ #include "ushare.h"
+ #include "services.h"
+ #include "http.h"
+@@ -177,7 +179,7 @@ handle_action_request (struct Upnp_Actio
+   struct service_t *service;
+   struct service_action_t *action;
+   char val[256];
+-  uint32_t ip;
++  int error;
+ 
+   if (!request || !ut)
+     return;
+@@ -188,10 +190,9 @@ handle_action_request (struct Upnp_Actio
+   if (strcmp (request->DevUDN + 5, ut->udn))
+     return;
+ 
+-  ip = request->CtrlPtIPAddr.s_addr;
+-  ip = ntohl (ip);
+-  sprintf (val, "%d.%d.%d.%d",
+-           (ip >> 24) & 0xFF, (ip >> 16) & 0xFF, (ip >> 8) & 0xFF, ip & 0xFF);
++  error = getnameinfo((struct sockaddr *)&(request->CtrlPtIPAddr),
++                      request->CtrlPtIPAddr.ss_len,
++                      val, sizeof(val), NULL, 0, NI_NUMERICHOST);
+ 
+   if (ut->verbose)
+   {
+@@ -348,7 +349,7 @@ init_upnp (struct ushare_t *ut)
+ 
+   UpnpEnableWebserver (TRUE);
+ 
+-  res = UpnpSetVirtualDirCallbacks (&virtual_dir_callbacks);
++  res = set_virtual_dir_callbacks();
+   if (res != UPNP_E_SUCCESS)
+   {
+     log_error (_("Cannot set virtual directory callbacks\n"));
+@@ -505,7 +506,7 @@ create_udn (char *interface)
+   char *buf;
+   unsigned char *ptr;
+ 
+-#if (defined(BSD) || defined(__FreeBSD__) || defined(__APPLE__))
++#if (defined(BSD) || defined(__FreeBSD__) || defined(__APPLE__) || defined(__NetBSD__))
+   int mib[6];
+   size_t len;
+   struct if_msghdr *ifm;
+@@ -517,7 +518,7 @@ create_udn (char *interface)
+   if (!interface)
+     return NULL;
+ 
+-#if (defined(BSD) || defined(__FreeBSD__) || defined(__APPLE__))
++#if (defined(BSD) || defined(__FreeBSD__) || defined(__APPLE__) || defined(__NetBSD__))
+   mib[0] = CTL_NET;
+   mib[1] = AF_ROUTE;
+   mib[2] = 0;
+@@ -568,7 +569,7 @@ create_udn (char *interface)
+   buf = (char *) malloc (64 * sizeof (char));
+   memset (buf, 0, 64);
+   ptr = (unsigned char *) ifr.ifr_hwaddr.sa_data;
+-#endif /* (defined(BSD) || defined(__FreeBSD__)) */
++#endif /* (defined(BSD) || defined(__FreeBSD__) || defined(__NetBSD__)) */
+ 
+   snprintf (buf, 64, "%s-%02x%02x%02x%02x%02x%02x", DEFAULT_UUID,
+             (ptr[0] & 0377), (ptr[1] & 0377), (ptr[2] & 0377),
+@@ -734,11 +735,8 @@ setup_i18n(void)
+ #ifdef HAVE_SETLOCALE
+   setlocale (LC_ALL, "");
+ #endif
+-#if (!defined(BSD) && !defined(__FreeBSD__))
+   bindtextdomain (PACKAGE, LOCALEDIR);
+ #endif
+-  textdomain (PACKAGE);
+-#endif
+ }
+ 
+ #define SHUTDOWN_MSG _("Server is shutting down: other clients will be notified soon, Bye bye ...\n")
+@@ -845,6 +843,9 @@ main (int argc, char **argv)
+ 
+   signal (SIGINT, UPnPBreak);
+   signal (SIGHUP, reload_config);
++#ifndef MSG_NOSIGNAL
++  signal (SIGPIPE, SIG_IGN);
++#endif
+ 
+   if (ut->use_telnet)
+   {

@@ -1,0 +1,13 @@
+$NetBSD: patch-aj,v 1.1 2011/01/20 08:27:11 obache Exp $
+
+--- src/presentation.c.orig	2007-12-09 13:03:36.000000000 +0000
++++ src/presentation.c
+@@ -19,6 +19,8 @@
+  */
+ 
+ #include <stdlib.h>
++#include <string.h>
++#include <stdio.h>
+ 
+ #if HAVE_LANGINFO_CODESET
+ # include <langinfo.h>
