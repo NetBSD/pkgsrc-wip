@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2011/01/18 10:09:29 cheusov Exp $
+# $NetBSD: Makefile,v 1.10 2011/01/20 23:37:31 cheusov Exp $
 
 DISTNAME=	pkgnih-999
+PKGREVISION=	1
 CATEGORIES=	pkgtools
 
 MAINTAINER=	vle@gmx.net
@@ -16,7 +17,7 @@ GIT_REPO.master=	git://github.com/cheusov/pkgnih.git
 DEPENDS+=		pkg_summary-utils>=0.51:../../wip/pkg_summary-utils
 DEPENDS+=		pkg_status>=0.14:../../wip/pkg_status
 DEPENDS+=		digest-[0-9]*:../../pkgtools/digest
-BUILD_DEPENDS+=		mk-configure>=0.21.0:../../wip/mk-configure
+BUILD_DEPENDS+=		mk-configure>=0.21.0:../../devel/mk-configure
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
