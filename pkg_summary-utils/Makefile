@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.45 2010/12/17 10:56:44 cheusov Exp $
+# $NetBSD: Makefile,v 1.46 2011/01/20 23:31:40 cheusov Exp $
 
 DISTNAME=	pkg_summary-utils-${VERSION}
+PKGREVISION=	1
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -10,10 +11,10 @@ HOMEPAGE=	http://www.mova.org/~cheusov/pub/pkg_summary-utils/
 COMMENT=	Utilities for manipulating pkg_summary(5) files
 LICENSE=	2-clause-bsd
 
-DEPENDS+=	runawk>=1.1.0:../../wip/runawk
+DEPENDS+=	runawk>=1.1.0:../../lang/runawk
 DEPENDS+=	pipestatus-[0-9]*:../../devel/pipestatus
 
-BUILD_DEPENDS+=	mk-configure>=0.20.0:../../wip/mk-configure
+BUILD_DEPENDS+=	mk-configure>=0.20.0:../../devel/mk-configure
 
 CONFLICTS+=	paexec<0.15.0
 CONFLICTS+=	awk-pkgsrc-dewey-[0-9]*
