@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/10/17 14:49:04 cheusov Exp $
+# $NetBSD: Makefile,v 1.7 2011/01/20 23:30:08 cheusov Exp $
 #
 
 .include "../../wip/pkg_online-server/Makefile.common"
@@ -11,7 +11,7 @@ DEPENDS+=	dict-server>=1.10.10nb2:../../textproc/dict-server
 DEPENDS+=	pkg_summary-utils>=0.18.1:../../wip/pkg_summary-utils
 DEPENDS+=	pipestatus-[0-9]*:../../devel/pipestatus
 
-BUILD_DEPENDS+=	mk-configure>=0.20.0:../../wip/mk-configure
+BUILD_DEPENDS+=	mk-configure>=0.20.0:../../devel/mk-configure
 
 INSTALL_TARGET=	install-server install-doc
 
