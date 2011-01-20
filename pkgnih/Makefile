@@ -1,19 +1,20 @@
-# $NetBSD: Makefile,v 1.2 2011/01/16 21:15:46 cheusov Exp $
+# $NetBSD: Makefile,v 1.3 2011/01/20 23:35:42 cheusov Exp $
 
 DISTNAME=	pkgnih-0.3.1
+PKGREVISION=	1
 CATEGORIES=	pkgtools
+MASTER_SITES=	http://mova.org/~cheusov/pub/pkgnih/
 
 MAINTAINER=	vle@gmx.net
 HOMEPAGE=	https://github.com/cheusov/pkgnih
 COMMENT=	Package manager for pkgsrc
 LICENSE=	2-clause-bsd
 
-MASTER_SITES=		http://mova.org/~cheusov/pub/pkgnih/
-
 DEPENDS+=		pkg_summary-utils>=0.51:../../wip/pkg_summary-utils
 DEPENDS+=		pkg_status>=0.12:../../wip/pkg_status
 DEPENDS+=		digest-[0-9]*:../../pkgtools/digest
-BUILD_DEPENDS+=		mk-configure>=0.21.0:../../wip/mk-configure
+
+BUILD_DEPENDS+=		mk-configure>=0.21.0:../../devel/mk-configure
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
