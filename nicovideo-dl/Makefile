@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2010/11/24 09:29:46 ryo-on Exp $
+# $NetBSD: Makefile,v 1.3 2011/01/21 13:04:06 ryo-on Exp $
 #
 
 DISTNAME=	nicovideo-dl-0.0.20091209
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP:=nicovideo-dl/44836/}
 
-MAINTAINER=	ryo_on@yk.rim.or.jp
+MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://sourceforge.jp/projects/nicovideo-dl/
 COMMENT=	Download videos from www.nicovideo.jp
 LICENSE=	mit
