@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/01/22 13:37:27 jihbed Exp $
+
+SHA1 (tappy-0.8.3.tar.gz) = c613fcd1b2e36dec9870180a117b979b425af52c
+RMD160 (tappy-0.8.3.tar.gz) = ea6c100dd610c1caca9868207d1ec48d084f670f
+Size (tappy-0.8.3.tar.gz) = 1449271 bytes
+SHA1 (patch-aa) = dbfda0c7295a3fe438cba6d8de68b7d86aae6eda
