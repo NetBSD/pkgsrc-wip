@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2010/09/02 20:29:05 ryo-on Exp $
+$NetBSD: distinfo,v 1.3 2011/01/22 12:13:23 ryo-on Exp $
 
-SHA1 (djvusmooth-0.2.8.tar.gz) = 29785c04d35e683a6728f353691a2c32e62d0fc2
-RMD160 (djvusmooth-0.2.8.tar.gz) = b8e038670e8bc8724d5c40c302a8bcd21efe861c
-Size (djvusmooth-0.2.8.tar.gz) = 53631 bytes
+SHA1 (djvusmooth-0.2.9.tar.gz) = fbafce03f97bca21bed691a2f5ce4e83ce7dac0d
+RMD160 (djvusmooth-0.2.9.tar.gz) = ed2cbc304871db337f06ee4aae7b06a6ace1f6d3
+Size (djvusmooth-0.2.9.tar.gz) = 54726 bytes

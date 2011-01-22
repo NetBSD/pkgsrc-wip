@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2010/09/02 20:29:05 ryo-on Exp $
+# $NetBSD: Makefile,v 1.3 2011/01/22 12:13:23 ryo-on Exp $
 #
 
-DISTNAME=	djvusmooth-0.2.8
+DISTNAME=	djvusmooth-0.2.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics textproc
 MASTER_SITES=	http://pypi.python.org/packages/source/d/djvusmooth/
