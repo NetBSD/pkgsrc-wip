@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.2 2011/01/22 11:56:43 cheusov Exp $
+# $NetBSD: options.mk,v 1.3 2011/01/22 12:08:32 cheusov Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mc
-PKG_SUPPORTED_OPTIONS=	charset edit glib12 ncurses samba slang subshell vfs x11
-PKG_SUGGESTED_OPTIONS=	charset edit                      slang subshell vfs
+PKG_SUPPORTED_OPTIONS=	charset edit ncurses samba slang subshell vfs x11
+PKG_SUGGESTED_OPTIONS=	charset edit               slang subshell vfs
 
 .include "../../mk/bsd.options.mk"
 
@@ -23,15 +23,6 @@ CONFIGURE_ARGS+=	--with-edit
 PLIST_SRC+=		${PKGDIR}/PLIST.mcedit
 .else
 CONFIGURE_ARGS+=	--without-edit
-.endif
-
-### On some systems where glib-2.0 does not build, glib-1.2 can be used
-### instead.
-.if !empty(PKG_OPTIONS:Mglib12)
-CONFIGURE_ARGS+=	--with-glib12
-.include "../../devel/glib/buildlink3.mk"
-.else
-.include "../../devel/glib2/buildlink3.mk"
 .endif
 
 ### Enable the Samba virtual file system. You can connect to Windows

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2011/01/22 11:56:43 cheusov Exp $
+# $NetBSD: Makefile,v 1.18 2011/01/22 12:08:32 cheusov Exp $
 
 DISTNAME=	mc-4.7.0.10
 PKGREVISION=	1
@@ -64,4 +64,5 @@ post-install:
 	rmdir ${DESTDIR}${PREFIX}/lib/mc 2>/dev/null || ${TRUE}
 
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
