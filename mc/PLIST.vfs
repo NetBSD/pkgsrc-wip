@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.vfs,v 1.7 2010/11/17 10:37:43 cheusov Exp $
+@comment $NetBSD: PLIST.vfs,v 1.8 2011/01/22 11:56:43 cheusov Exp $
 libexec/mc/extfs.d/README
 libexec/mc/extfs.d/README.extfs
 libexec/mc/extfs.d/a+
@@ -31,3 +31,19 @@ libexec/mc/extfs.d/ulha
 libexec/mc/extfs.d/urar
 libexec/mc/extfs.d/uzip
 libexec/mc/extfs.d/uzoo
+libexec/mc/fish/README.fish
+libexec/mc/fish/append
+libexec/mc/fish/chmod
+libexec/mc/fish/chown
+libexec/mc/fish/fexists
+libexec/mc/fish/get
+libexec/mc/fish/hardlink
+libexec/mc/fish/info
+libexec/mc/fish/ln
+libexec/mc/fish/ls
+libexec/mc/fish/mkdir
+libexec/mc/fish/mv
+libexec/mc/fish/rmdir
+libexec/mc/fish/send
+libexec/mc/fish/unlink
+share/examples/mc/sfs.ini

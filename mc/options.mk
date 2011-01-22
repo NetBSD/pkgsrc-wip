@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1.1.1 2010/02/19 15:53:34 cheusov Exp $
+# $NetBSD: options.mk,v 1.2 2011/01/22 11:56:43 cheusov Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mc
@@ -53,11 +53,10 @@ CONFIGURE_ARGS+=	--without-subshell
 ### VFS you can access files via FTP, SSH, in various archive formats
 ### like if they were on your local disk.
 .if !empty(PKG_OPTIONS:Mvfs)
-CONFIGURE_ARGS+=	--with-vfs
 PLIST_SRC+=		${PKGDIR}/PLIST.vfs
 USE_TOOLS+=		perl:run
 .else
-CONFIGURE_ARGS+=	--without-vfs
+CONFIGURE_ARGS+=	--disable-vfs
 .endif
 
 ### X11 support allows better key handling (detection of the Alt, Ctrl,

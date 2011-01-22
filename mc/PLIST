@@ -1,22 +1,7 @@
-@comment $NetBSD: PLIST,v 1.9 2011/01/22 11:26:56 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.10 2011/01/22 11:56:43 cheusov Exp $
 bin/mc
 bin/mcmfmt
 bin/mcview
-libexec/mc/fish/README.fish
-libexec/mc/fish/append
-libexec/mc/fish/chmod
-libexec/mc/fish/chown
-libexec/mc/fish/fexists
-libexec/mc/fish/get
-libexec/mc/fish/hardlink
-libexec/mc/fish/info
-libexec/mc/fish/ln
-libexec/mc/fish/ls
-libexec/mc/fish/mkdir
-libexec/mc/fish/mv
-libexec/mc/fish/rmdir
-libexec/mc/fish/send
-libexec/mc/fish/unlink
 libexec/mc/mc-wrapper.csh
 libexec/mc/mc-wrapper.sh
 libexec/mc/mc.csh
@@ -41,7 +26,6 @@ share/examples/mc/mc.keymap.emacs
 share/examples/mc/mc.lib
 share/examples/mc/mc.menu
 share/examples/mc/mc.menu.sr
-share/examples/mc/sfs.ini
 share/locale/az/LC_MESSAGES/mc.mo
 share/locale/be/LC_MESSAGES/mc.mo
 share/locale/be@tarask/LC_MESSAGES/mc.mo
