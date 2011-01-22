@@ -1,0 +1,5 @@
+We present a software package based on a new probabilistic model for random
+graphs called MixNet (Erdos-Renyi Mixture for Networks). This model is based on
+the hypothesis that real networks are made of classes which show specific
+connectivity patterns. We compute algorithms to estimate the model's parameters
+as well as a statistical criterion ICL to select the number of classes
