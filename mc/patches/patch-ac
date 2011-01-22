@@ -1,5 +1,6 @@
-$NetBSD: patch-ac,v 1.4 2010/07/07 16:30:40 cheusov Exp $
+$NetBSD: patch-ac,v 1.5 2011/01/22 10:54:12 cheusov Exp $
 
+for installing configs to share/examples/mc
 --- misc/Makefile.in.orig	2010-07-05 19:13:19.000000000 +0000
 +++ misc/Makefile.in
 @@ -369,7 +369,7 @@ LIBFILES_CONST = \

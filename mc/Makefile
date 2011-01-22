@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2010/11/17 22:11:26 cheusov Exp $
+# $NetBSD: Makefile,v 1.15 2011/01/22 10:54:12 cheusov Exp $
 
 DISTNAME=	mc-4.7.0.10
 PKGREVISION=	1
@@ -9,6 +9,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	vle@gmx.net
 HOMEPAGE=	http://www.midnight-commander.org/
 COMMENT=	User-friendly file manager and visual shell
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
@@ -34,21 +35,21 @@ PLIST_SRC+=		${PKGDIR}/PLIST
 
 EGDIR=			${PREFIX}/share/examples/mc
 
-conffiles=	cedit.menu edit.indent.rc edit.spell.rc filehighlight.ini \
+CONFFILES=	cedit.menu edit.indent.rc edit.spell.rc filehighlight.ini \
 		mc.ext mc.keymap mc.keymap.default mc.keymap.emacs mc.lib \
 		mc.menu mc.menu.sr syntax/Syntax
 
 .if !empty(PKG_OPTIONS:Mvfs)
-conffiles+=	sfs.ini
+CONFFILES+=	sfs.ini
 .endif
 
 .if !empty(PKG_OPTIONS:Mcharset)
-conffiles+=	mc.charsets
+CONFFILES+=	mc.charsets
 .endif
 
 OWN_DIRS+=	${PKG_SYSCONFDIR}/mc ${PKG_SYSCONFDIR}/mc/syntax
 
-.for i in ${conffiles}
+.for i in ${CONFFILES}
 CONF_FILES+=	${EGDIR}/${i} ${PKG_SYSCONFDIR}/mc/${i}
 .endfor
 

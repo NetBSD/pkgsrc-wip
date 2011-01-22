@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.7 2010/11/17 13:09:56 cheusov Exp $
+$NetBSD: patch-aa,v 1.8 2011/01/22 10:54:12 cheusov Exp $
+
+https://midnight-commander.org/ticket/2425
 Fixes segmentation fault on NetBSD
 --- src/mountlist.c.orig	2010-11-08 11:46:14.000000000 +0000
 +++ src/mountlist.c
