@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/11/15 12:01:53 ryo-on Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/01/22 13:27:37 ryo-on Exp $
 bin/bochs
 bin/bxcommit
 bin/bximage
@@ -11,6 +11,7 @@ ${PLIST.notiny}${PLIST.plugins}lib/bochs/plugins/libbx_extfpuirq.la
 ${PLIST.notiny}${PLIST.plugins}lib/bochs/plugins/libbx_floppy.la
 ${PLIST.notiny}${PLIST.plugins}lib/bochs/plugins/libbx_gameport.la
 ${PLIST.notiny}${PLIST.plugins}lib/bochs/plugins/libbx_harddrv.la
+${PLIST.notiny}${PLIST.plugins}lib/bochs/plugins/libbx_hdimage.la
 ${PLIST.notiny}${PLIST.plugins}lib/bochs/plugins/libbx_ioapic.la
 ${PLIST.notiny}${PLIST.plugins}lib/bochs/plugins/libbx_keyboard.la
 ${PLIST.notiny}${PLIST.plugins}lib/bochs/plugins/libbx_ne2k.la
@@ -26,6 +27,7 @@ ${PLIST.notiny}${PLIST.plugins}lib/bochs/plugins/libbx_sb16.la
 ${PLIST.notiny}${PLIST.plugins}lib/bochs/plugins/libbx_serial.la
 ${PLIST.notiny}${PLIST.plugins}lib/bochs/plugins/libbx_speaker.la
 ${PLIST.notiny}${PLIST.plugins}lib/bochs/plugins/libbx_unmapped.la
+${PLIST.notiny}${PLIST.plugins}lib/bochs/plugins/libbx_usb_common.la
 ${PLIST.notiny}${PLIST.plugins}lib/bochs/plugins/libbx_usb_ohci.la
 ${PLIST.notiny}${PLIST.plugins}lib/bochs/plugins/libbx_usb_uhci.la
 ${PLIST.notiny}${PLIST.plugins}lib/bochs/plugins/libbx_vga.la

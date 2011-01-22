@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.1.1.1 2010/11/15 12:01:53 ryo-on Exp $
+$NetBSD: patch-ad,v 1.2 2011/01/22 13:27:37 ryo-on Exp $
 
---- Makefile.in.orig	2010-02-26 14:18:18.000000000 +0000
+--- Makefile.in.orig	2011-01-16 19:29:11.000000000 +0000
 +++ Makefile.in
 @@ -66,8 +66,8 @@ RMDIR=rmdir
  TAR=tar
@@ -13,15 +13,6 @@ $NetBSD: patch-ad,v 1.1.1.1 2010/11/15 12:01:53 ryo-on Exp $
  ZIP=zip
  UNIX2DOS=unix2dos
  LIBTOOL=@LIBTOOL@
-@@ -561,7 +561,7 @@ RINCLUDES=/System/Library/Frameworks/Car
- REZ_ARGS=-append -i $RINCLUDES -d SystemSevenOrLater=1 -useDF
- STANDALONE_LIBDIR=`pwd`/$(APP)/Contents/$(APP_PLATFORM)/lib
- OSACOMPILE=/usr/bin/osacompile
--SETFILE=/Developer/Tools/Setfile
-+SETFILE=/Developer/Tools/SetFile
- 
- # On a MacOS X machine, you run rez, osacompile, and setfile to
- # produce the script executable, which has both a data fork and a
 @@ -644,12 +644,9 @@ install_macosx: all download_dlx install
  	$(CPMAC) $(srcdir)/.bochsrc $(DESTDIR)$(sharedir)/bochsrc-sample.txt
  	-mkdir $(DESTDIR)$(sharedir)/keymaps

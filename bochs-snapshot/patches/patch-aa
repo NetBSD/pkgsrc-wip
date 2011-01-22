@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2010/11/15 12:01:53 ryo-on Exp $
+$NetBSD: patch-aa,v 1.2 2011/01/22 13:27:37 ryo-on Exp $
 
---- .bochsrc.orig	2010-07-22 16:41:57.000000000 +0000
+--- .bochsrc.orig	2011-01-16 12:46:47.000000000 +0000
 +++ .bochsrc
-@@ -290,13 +290,13 @@ vga: extension=vbe
+@@ -295,13 +295,13 @@ vga: extension=vbe
  # The optional parameter 'write_protected' can be used to control the media
  # write protect switch. By default it is turned off.
  #=======================================================================
@@ -18,7 +18,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2010/11/15 12:01:53 ryo-on Exp $
  
  #=======================================================================
  # FLOPPYB:
-@@ -377,7 +377,7 @@ ata3: enabled=0, ioaddr1=0x168, ioaddr2=
+@@ -382,7 +382,7 @@ ata3: enabled=0, ioaddr1=0x168, ioaddr2=
  #   ata3-master: type=disk, mode=flat, path=483M.sample, cylinders=1024, heads=15, spt=63
  #   ata3-slave:  type=cdrom, path=iso.sample, status=inserted
  #=======================================================================
@@ -26,4 +26,4 @@ $NetBSD: patch-aa,v 1.1.1.1 2010/11/15 12:01:53 ryo-on Exp $
 +#ata0-master: type=disk, mode=flat, path="30M.sample"
  #ata0-master: type=disk, mode=flat, path="30M.sample", cylinders=615, heads=6, spt=17
  #ata0-master: type=disk, mode=flat, path="c.img", cylinders=0 # autodetect
- #ata0-slave: type=cdrom, path=D:, status=inserted
+ #ata0-slave: type=disk, mode=vvfat, path=/bochs/images/vvfat, journal=vvfat.redolog
