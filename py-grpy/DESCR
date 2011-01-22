@@ -1,0 +1,4 @@
+This is a small package which provides a framework for representing arbitrary
+(finite) dimensional tensors of finite rank as well as some GR-oriented
+routines, which include computing Christoffel symbols of the 2nd kind,
+Riemann curvature tensor, Ricci tensor, Ricci scalar and the Einstein tensor
