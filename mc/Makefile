@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2011/01/22 10:54:12 cheusov Exp $
+# $NetBSD: Makefile,v 1.16 2011/01/22 11:26:56 cheusov Exp $
 
 DISTNAME=	mc-4.7.0.10
 PKGREVISION=	1
@@ -37,7 +37,11 @@ EGDIR=			${PREFIX}/share/examples/mc
 
 CONFFILES=	cedit.menu edit.indent.rc edit.spell.rc filehighlight.ini \
 		mc.ext mc.keymap mc.keymap.default mc.keymap.emacs mc.lib \
-		mc.menu mc.menu.sr syntax/Syntax
+		mc.menu mc.menu.sr
+
+.if !empty(PKG_OPTIONS:Medit)
+CONFFILES+=	syntax/Syntax
+.endif
 
 .if !empty(PKG_OPTIONS:Mvfs)
 CONFFILES+=	sfs.ini

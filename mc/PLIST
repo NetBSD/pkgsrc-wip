@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2010/11/17 10:37:43 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.9 2011/01/22 11:26:56 cheusov Exp $
 bin/mc
 bin/mcmfmt
 bin/mcview
@@ -105,30 +105,3 @@ share/mc/skins/default.ini
 share/mc/skins/double-lines.ini
 share/mc/skins/featured.ini
 share/mc/skins/gotar.ini
-share/mc/syntax/PKGBUILD.syntax
-share/mc/syntax/awk.syntax
-share/mc/syntax/cabal.syntax
-share/mc/syntax/css.syntax
-share/mc/syntax/cxx.syntax
-share/mc/syntax/d.syntax
-share/mc/syntax/debian-changelog.syntax
-share/mc/syntax/debian-control.syntax
-share/mc/syntax/debian-description.syntax
-share/mc/syntax/debian-sources-list.syntax
-share/mc/syntax/ebuild.syntax
-share/mc/syntax/erlang.syntax
-share/mc/syntax/f90.syntax
-share/mc/syntax/filehighlight.syntax
-share/mc/syntax/haskell.syntax
-share/mc/syntax/ini.syntax
-share/mc/syntax/j.syntax
-share/mc/syntax/named.syntax
-share/mc/syntax/nemerle.syntax
-share/mc/syntax/procmail.syntax
-share/mc/syntax/properties.syntax
-share/mc/syntax/strace.syntax
-share/mc/syntax/tt.syntax
-share/mc/syntax/verilog.syntax
-share/mc/syntax/vhdl.syntax
-share/mc/syntax/yum-repo.syntax
-share/mc/syntax/yxx.syntax
