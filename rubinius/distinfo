@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2011/01/23 06:59:38 jafour1 Exp $
+
+SHA1 (rubinius-1.2.1dev.tgz) = 8e5e54f7b00e86bdae4a66aa1b9110090b6eb1e4
+RMD160 (rubinius-1.2.1dev.tgz) = 1a23d9527f92b916f369e1327debff7fac8a5e79
+Size (rubinius-1.2.1dev.tgz) = 8721414 bytes
