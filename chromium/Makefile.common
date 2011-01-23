@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2010/12/26 05:01:21 davesainty Exp $
+# $NetBSD: Makefile.common,v 1.6 2011/01/23 14:30:26 thomasklausner Exp $
 #
 # used by wip/chromium-devel/Makefile
 
@@ -133,7 +133,7 @@ do-install:
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../lang/python/pyversion.mk"
-.include "../../wip/libvpx/buildlink3.mk"
+.include "../../multimedia/libvpx/buildlink3.mk"
 .include "../../security/libgnome-keyring/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
