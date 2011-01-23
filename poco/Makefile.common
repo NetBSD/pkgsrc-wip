@@ -1,11 +1,10 @@
-# $NetBSD: Makefile.common,v 1.4 2010/12/23 03:28:49 schnoebe Exp $
+# $NetBSD: Makefile.common,v 1.5 2011/01/23 15:14:52 thomasklausner Exp $
 #
-#   used by:
-#	wip/poco/Makefile
-#	wip/poco-data/Makefile
-#	wip/poco-data-sqlite/Makefile
-#	wip/poco-data-mysql/Makefile
-#	wip/poco-data-odbc/Makefile
+# used by wip/poco/Makefile
+# used by wip/poco-data/Makefile
+# used by wip/poco-data-sqlite/Makefile
+# used by wip/poco-data-mysql/Makefile
+# used by wip/poco-data-odbc/Makefile
 
 POCO_VERSION=1.4.0
 
