@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2010/12/30 20:31:15 schnoebe Exp $
+# $NetBSD: Makefile,v 1.28 2011/01/23 04:02:05 schnoebe Exp $
 
-DISTNAME=		spectrum-1.4.6
+DISTNAME=		spectrum-1.4.7
 CATEGORIES=		chat
 
 # Second paragraph - MAINTAINER/OWNER, HOMEPAGE and COMMENT, and LICEN[CS]E
@@ -8,7 +8,7 @@ MAINTAINER=		eric@cirr.com
 HOMEPAGE=		http://spectrum.im/
 COMMENT=		XMPP transport/gateway based on libpurple
 LICENSE=		gnu-gpl-v3
-MASTER_SITES=		http://spectrum.im/attachments/download/34/
+MASTER_SITES=		http://spectrum.im/attachments/download/37/
 
 DEPENDS+=		${PYPKGPREFIX}-xmpppy>=0.4.1:../../wip/py-xmpppy
 DEPENDS+=		${PYPKGPREFIX}-expat>=0nb4:../../textproc/py-expat
@@ -92,6 +92,7 @@ post-install:
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/py-readline/buildlink3.mk"
+.include "../../graphics/ImageMagick/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .include "../../wip/gloox/buildlink3.mk"
