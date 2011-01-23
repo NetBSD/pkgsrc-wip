@@ -1,6 +1,4 @@
-$NetBSD: DESCR,v 1.1.1.1 2009/09/06 06:52:51 schnoebe Exp $
-
-    gloox is a rock-solid, full-featured Jabber/XMPP client library,
-    written in C++. It makes writing spec-compliant clients easy
-    and allows for hassle-free integration of Jabber/XMPP functionality
-    into existing applications.
+gloox is a rock-solid, full-featured Jabber/XMPP client library,
+written in C++. It makes writing spec-compliant clients easy and
+allows for hassle-free integration of Jabber/XMPP functionality
+into existing applications.
