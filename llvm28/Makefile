@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2010/10/12 01:15:45 makoto Exp $
+# $NetBSD: Makefile,v 1.3 2011/01/23 07:05:09 jafour1 Exp $
 
 DISTNAME=	llvm-2.8
 CATEGORIES=	lang
 MASTER_SITES=	http://llvm.org/releases/${PKGVERSION_NOREV}/
 
-MAINTAINER=	adam.hoka@gmail.com
+MAINTAINER=	ober@netbsd.org
 HOMEPAGE=	http://llvm.org/
 COMMENT=	Low Level Virtual Machine compiler infrastructure
 EXTRACT_SUFX=	.tgz
@@ -15,13 +15,14 @@ GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake perl:build chown
 USE_LANGUAGES+=	c c++
 MAKE_DIRS+=	etc/llvm
+ALL_ENV+= "REQUIRES_RTTI=1"
 
 CONFIGURE_ARGS=	--enable-bindings=none	# no OCaml, please!
 
 INSTALLATION_DIRS=	bin lib
 
-# This should be changed!
-CONFIGURE_ARGS+= --enable-targets=host-only
+HOST=  ${MACHINE_ARCH}-${MACHINE_GNU_ARCH}-${LOWER_OPSYS}${OS_VERSION}
+CONFIGURE_ARGS+= --build=$HOST --host=$HOST --enable-optimized --enable-targets=host-only 
 
 #CONF_FILES=	share/examples/llvm/c etc/llvm/c
 #CONF_FILES+=	share/examples/llvm/c++ etc/llvm/c++
