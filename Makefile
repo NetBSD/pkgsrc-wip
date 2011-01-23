@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4207 2011/01/22 14:23:06 ryo-on Exp $
+# $Id: Makefile,v 1.4208 2011/01/23 11:13:23 cheusov Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2248,7 +2248,6 @@ SUBDIR+=	ruby-memoize
 SUBDIR+=	ruby-term-ansicolor
 SUBDIR+=	ruby-trollop
 SUBDIR+=	ruby-xmpp4r
-SUBDIR+=	runawk
 SUBDIR+=	runit
 SUBDIR+=	s3cmd
 SUBDIR+=	s3funnel
