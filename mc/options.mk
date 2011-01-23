@@ -1,15 +1,17 @@
-# $NetBSD: options.mk,v 1.3 2011/01/22 12:08:32 cheusov Exp $
+# $NetBSD: options.mk,v 1.4 2011/01/23 14:22:25 thomasklausner Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mc
-PKG_SUPPORTED_OPTIONS=	charset edit ncurses samba slang subshell vfs x11
-PKG_SUGGESTED_OPTIONS=	charset edit               slang subshell vfs
+PKG_OPTIONS_REQUIRED_GROUPS=	screen
+PKG_OPTIONS_GROUP.screen=	ncurses slang
+PKG_SUPPORTED_OPTIONS=	mc-charset mc-edit mc-samba mc-subshell mc-vfs x11
+PKG_SUGGESTED_OPTIONS=	mc-charset mc-edit          slang mc-subshell mc-vfs
 
 .include "../../mk/bsd.options.mk"
 
 ### The charset option enables input/display support for various 8-bit
 ### codepages, chooseable at runtime.
-.if !empty(PKG_OPTIONS:Mcharset)
+.if !empty(PKG_OPTIONS:Mmc-charset)
 CONFIGURE_ARGS+=	--enable-charset
 PLIST_SRC+=		${PKGDIR}/PLIST.charset
 .include "../../converters/libiconv/buildlink3.mk"
@@ -18,7 +20,7 @@ CONFIGURE_ARGS+=	--disable-charset
 .endif
 
 ### The internal editor can be disabled to save disk space.
-.if !empty(PKG_OPTIONS:Medit)
+.if !empty(PKG_OPTIONS:Mmc-edit)
 CONFIGURE_ARGS+=	--with-edit
 PLIST_SRC+=		${PKGDIR}/PLIST.mcedit
 .else
@@ -27,14 +29,14 @@ CONFIGURE_ARGS+=	--without-edit
 
 ### Enable the Samba virtual file system. You can connect to Windows
 ### file servers or Samba servers in your network.
-.if !empty(PKG_OPTIONS:Msamba)
+.if !empty(PKG_OPTIONS:Mmc-samba)
 CONFIGURE_ARGS+=	--with-samba
 .else
 CONFIGURE_ARGS+=	--without-samba
 .endif
 
 ### The subshell is a shell command line inside the Midnight Commander.
-.if !empty(PKG_OPTIONS:Msubshell)
+.if !empty(PKG_OPTIONS:Mmc-subshell)
 CONFIGURE_ARGS+=	--with-subshell
 .else
 CONFIGURE_ARGS+=	--without-subshell
@@ -43,7 +45,7 @@ CONFIGURE_ARGS+=	--without-subshell
 ### Enable the virtual file system of the Midnight Commander. With the
 ### VFS you can access files via FTP, SSH, in various archive formats
 ### like if they were on your local disk.
-.if !empty(PKG_OPTIONS:Mvfs)
+.if !empty(PKG_OPTIONS:Mmc-vfs)
 PLIST_SRC+=		${PKGDIR}/PLIST.vfs
 USE_TOOLS+=		perl:run
 .else
