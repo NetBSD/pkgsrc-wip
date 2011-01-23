@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2011/01/23 15:19:31 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2011/01/23 23:23:01 schnoebe Exp $
 #
 
 PKGNAME=	poco-data-odbc-${POCO_VERSION}
 CATEGORIES=	databases
 
 COMMENT=	POCO C++ ODBC RDBMS Accessor libraries
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../wip/poco/Makefile.common"
 

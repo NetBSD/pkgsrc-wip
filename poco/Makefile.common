@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2011/01/23 15:17:05 thomasklausner Exp $
+# $NetBSD: Makefile.common,v 1.7 2011/01/23 23:23:01 schnoebe Exp $
 #
 # used by wip/poco/Makefile
 # used by wip/poco-data/Makefile
@@ -13,6 +13,9 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=poco/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.pocoproject.org/
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+LICENSE=		boost
 
 PATCHDIR=	${.CURDIR}/../../wip/poco/patches
 DISTINFO_FILE=	${.CURDIR}/../../wip/poco/distinfo

@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2011/01/23 15:19:31 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2011/01/23 23:23:01 schnoebe Exp $
 #
 
 PKGNAME=	poco-data-${POCO_VERSION}
 CATEGORIES=	databases
 
 COMMENT=	POCO C++ RDBMS Master Accessor libraries
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../wip/poco/Makefile.common"
 

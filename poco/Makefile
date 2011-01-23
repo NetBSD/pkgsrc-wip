@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2011/01/23 15:17:05 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2011/01/23 23:23:01 schnoebe Exp $
 #
 
 PKGNAME=	poco-${POCO_VERSION}
 CATEGORIES=	devel
 
-COMMENT=	POCO C++ libraries
-
-PKG_DESTDIR_SUPPORT=	user-destdir
+COMMENT=	POCO C++ Foundation libraries
 
 .include "../../wip/poco/Makefile.common"
 
