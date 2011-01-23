@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2011/01/23 15:14:52 thomasklausner Exp $
+# $NetBSD: Makefile.common,v 1.6 2011/01/23 15:17:05 thomasklausner Exp $
 #
 # used by wip/poco/Makefile
 # used by wip/poco-data/Makefile
@@ -24,6 +24,8 @@ USE_TOOLS+=	gmake
 CONFIGURE_ARGS+=	--prefix=${PREFIX} --omit=Data
 # don't use the bundled versions of SQLite, zlib, etc..
 CONFIGURE_ARGS+=	--unbundled
+
+.include "../../mk/bsd.prefs.mk"
 
 .if !empty(OPSYS:M*BSD)
 CONFIGURE_ARGS+=	--config=FreeBSD
