@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/01/24 14:26:24 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2011/01/24 14:27:21 thomasklausner Exp $
 #
 
 DISTNAME=	gemrb-0.6.3
@@ -22,6 +22,7 @@ INSTALL_MAKE_FLAGS+=	sysconfdir=${PREFIX}/share/examples/gemrb
 
 #.include "../../audio/freealut/buildlink3.mk"
 .include "../../audio/openal/buildlink3.mk"
+# not properly found by cmake?
 .include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
