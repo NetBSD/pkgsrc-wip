@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/01/24 09:26:54 jihbed Exp $
+${PYSITELIB}/pysofa/__init__.py
+${PYSITELIB}/pysofa/__init__.pyc
+${PYSITELIB}/pysofa/__init__.pyo
+${PYSITELIB}/pysofa/pysofa_ctypes.py
+${PYSITELIB}/pysofa/pysofa_ctypes.pyc
+${PYSITELIB}/pysofa/pysofa_ctypes.pyo
+${PYSITELIB}/pysofa/unittests.py
+${PYSITELIB}/pysofa/unittests.pyc
+${PYSITELIB}/pysofa/unittests.pyo
