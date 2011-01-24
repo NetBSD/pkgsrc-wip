@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/01/24 09:21:57 jihbed Exp $
+include/libzn-poly/profiler.h
+include/libzn-poly/support.h
+include/libzn-poly/wide_arith.h
+include/libzn-poly/zn_poly.h
+include/libzn-poly/zn_poly_internal.h
+lib/libzn_poly.a
