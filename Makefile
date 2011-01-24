@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4209 2011/01/23 14:37:28 thomasklausner Exp $
+# $Id: Makefile,v 1.4210 2011/01/24 00:23:42 emil_s Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -564,6 +564,7 @@ SUBDIR+=	gecko-mediaplayer
 SUBDIR+=	gecko-sharp
 SUBDIR+=	gemrb
 SUBDIR+=	gerris
+SUBDIR+=	gf2x
 SUBDIR+=	gfa
 SUBDIR+=	gfan
 SUBDIR+=	gfontview
