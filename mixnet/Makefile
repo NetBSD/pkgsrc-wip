@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/01/22 13:11:31 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2011/01/24 09:07:10 jihbed Exp $
 #
 
 DISTNAME=	mixnet-1.1.2-p1
@@ -8,7 +8,7 @@ MASTER_SITES=	http://stat.genopole.cnrs.fr/_media/logiciels/
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://stat.genopole.cnrs.fr/logiciels/mixnet
-COMMENT=	Erdös-Renyi Mixture for Networks
+COMMENT=	Erdos-Renyi Mixture for Networks
 LICENSE=	gnu-gpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
