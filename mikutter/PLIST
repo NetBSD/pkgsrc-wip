@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2011/01/11 11:40:07 obache Exp $
+@comment $NetBSD: PLIST,v 1.5 2011/01/24 10:59:06 obache Exp $
 bin/mikutter
 share/applications/mikutter.desktop
 share/doc/mikutter/README
@@ -114,5 +114,6 @@ share/mikutter/core/utils.rb
 share/mikutter/core/watch.rb
 share/mikutter/mikutter.rb
 share/mikutter/plugin/WHATSTHIS
+share/mikutter/plugin/peropero.tar.gz
 @pkgdir share/mikutter/core/hatsunelisp
 @pkgdir share/mikutter/core/addon/addon
