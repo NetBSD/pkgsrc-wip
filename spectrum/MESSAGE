@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.3 2011/01/23 15:24:06 thomasklausner Exp $
+$NetBSD: MESSAGE,v 1.4 2011/01/24 17:26:43 schnoebe Exp $
 
 Create the databases using the following files:
     ${EGDIR}/spectrum-mysql.sql for MySQL
@@ -23,7 +23,7 @@ Quick Start:
 				(the value of <secret/> in router.xml
 
 	protocol	    --	The protocol to be implemented
-				ex: Yahoo, ICQ, MSN
+				ex: yahoo, icq, msn
 
 	[database] settings:
 	type		    --	sqlite or mysql, depending on build
