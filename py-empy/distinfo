@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/01/24 09:52:24 jihbed Exp $
+
+SHA1 (EMpy-0.1.2.linux-i686.tar.gz) = 64e328b88ffb44aaa863995b43bfb15218c0b7b4
+RMD160 (EMpy-0.1.2.linux-i686.tar.gz) = 745af6381d448191238cbe4d739999960b66cbda
+Size (EMpy-0.1.2.linux-i686.tar.gz) = 170448 bytes

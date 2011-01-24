@@ -1,0 +1,8 @@
+EMpy (not to be confused with Empy) is a suite of numerical algorithms widely
+used in electromagnetism The package contains:
+
+    * an isotropic and anisotropic transfer matrix algorithm;
+    * an isotropic and anisotropic rigorous coupled wave analysis
+       (RCWA) algorithm;
+    * the numerical model of the frequency response of different well-known
+       devices (Mach-Zehnder, Ring Resonators, etc.)
