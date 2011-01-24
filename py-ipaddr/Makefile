@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2011/01/24 14:00:52 bubuchka Exp $
+# $NetBSD: Makefile,v 1.6 2011/01/24 14:35:34 bubuchka Exp $
 #
 
 DISTNAME=	ipaddr-2.1.7
@@ -16,7 +16,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LANGUAGES=	# none
 
 PYDISTUTILSPKG=		yes
-PYTHON_VERSIONS_ACCEPTED= 26 25 24	# XXX - 30 also requires it
+PYTHON_VERSIONS_ACCEPTED= 26 25 24
 
 do-test:
 	( cd ${WRKSRC} && ${PYTHONBIN} ipaddr_test.py )
