@@ -1,0 +1,24 @@
+$NetBSD: patch-ad,v 1.1 2011/01/24 14:26:24 thomasklausner Exp $
+
+Only check for libdl on Linux. Untested.
+
+--- CMakeLists.txt.orig	2010-11-20 22:45:02.000000000 +0000
++++ CMakeLists.txt
+@@ -140,14 +140,16 @@ ELSE()
+ 	MESSAGE(FATAL_ERROR "Please install the Zlib library and headers first!")
+ ENDIF()
+ 
+-IF(UNIX)
++IF(LINUX)
+ 	FIND_LIBRARY(DLD_LIBRARY_PATH dl dld)
+ 	IF(DLD_LIBRARY_PATH)
+ 		MESSAGE(STATUS "Looking for dl library: found")
+ 	ELSE(DLD_LIBRARY_PATH)
+ 		MESSAGE(FATAL_ERROR "Looking for dl library: not found!")
+ 	ENDIF(DLD_LIBRARY_PATH)
++ENDIF(LINUX)
+ 
++IF(UNIX)
+ 	SET(CMAKE_THREAD_PREFER_PTHREAD true)
+ 	FIND_PACKAGE(Threads REQUIRED)
+ ENDIF(UNIX)

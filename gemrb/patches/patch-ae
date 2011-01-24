@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1 2011/01/24 14:26:24 thomasklausner Exp $
+
+Don't link against libdl, it's not needed on NetBSD.
+XXX: should be fixed better for other opsys.
+
+--- gemrb/plugins/GUIScript/CMakeLists.txt.orig	2010-11-20 22:45:02.000000000 +0000
++++ gemrb/plugins/GUIScript/CMakeLists.txt
+@@ -2,4 +2,4 @@ INCLUDE(FindPythonLibs)
+ 
+ INCLUDE_DIRECTORIES(${PYTHON_INCLUDE_PATH})
+ ADD_GEMRB_PLUGIN (GUIScript GUIScript.cpp PythonHelpers.cpp)
+-TARGET_LINK_LIBRARIES( GUIScript ${PYTHON_LIBRARIES} ${CMAKE_THREAD_LIBS_INIT} -ldl)
++TARGET_LINK_LIBRARIES( GUIScript ${PYTHON_LIBRARIES} ${CMAKE_THREAD_LIBS_INIT})

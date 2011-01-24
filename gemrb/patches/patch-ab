@@ -1,10 +1,12 @@
-$NetBSD: patch-ab,v 1.1.1.1 2009/12/08 22:38:46 thomasklausner Exp $
+$NetBSD: patch-ab,v 1.2 2011/01/24 14:26:24 thomasklausner Exp $
 
---- gemrb/CMakeLists.txt.orig	2009-08-18 15:23:48.000000000 +0000
+Install sample config into share/examples.
+
+--- gemrb/CMakeLists.txt.orig	2010-11-20 22:45:02.000000000 +0000
 +++ gemrb/CMakeLists.txt
-@@ -15,4 +15,4 @@ ELSE(WIN32)
- ENDIF(WIN32)
+@@ -31,4 +30,4 @@ CONFIGURE_FILE(
+ )
  
- INSTALL( TARGETS gemrb DESTINATION ${CMAKE_INSTALL_PREFIX})
--INSTALL( FILES GemRB.cfg.sample GemRB.cfg.subdir.sample DESTINATION ${CMAKE_INSTALL_PREFIX} )
-+INSTALL( FILES GemRB.cfg.sample GemRB.cfg.subdir.sample DESTINATION ${CMAKE_INSTALL_PREFIX}/share/examples/gemrb )
+ INSTALL( TARGETS gemrb DESTINATION ${BIN_DIR} )
+-INSTALL( FILES "${CMAKE_CURRENT_BINARY_DIR}/GemRB.cfg.sample" GemRB.cfg.noinstall.sample DESTINATION ${SYSCONF_DIR} )
++INSTALL( FILES "${CMAKE_CURRENT_BINARY_DIR}/GemRB.cfg.sample" GemRB.cfg.noinstall.sample DESTINATION ${CMAKE_INSTALL_PREFIX}/share/examples/gemrb )

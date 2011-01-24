@@ -1,26 +1,15 @@
-$NetBSD: patch-aa,v 1.1.1.1 2009/12/08 22:38:46 thomasklausner Exp $
+$NetBSD: patch-aa,v 1.2 2011/01/24 14:26:24 thomasklausner Exp $
 
-Compilation on NetBSD-4.99.7/amd64 fails if these are not
-commented out. Better solution happily accepted...
+Unportable test(1) construct.
 
---- gemrb/plugins/ACMImporter/general.h.orig	2005-02-23 22:20:52.000000000 +0000
-+++ gemrb/plugins/ACMImporter/general.h
-@@ -25,7 +25,9 @@
- // Interplay ACM signature
- #define IP_ACM_SIG 0x01032897
- 
-+#if 0
- #pragma pack (push, 1)
-+#endif
- struct ACM_Header {
- 	unsigned int signature;
- 	unsigned int samples;
-@@ -34,6 +36,8 @@ struct ACM_Header {
- 	unsigned short levels : 4;
- 	unsigned short subblocks : 12;
- };
-+#if 0
- #pragma pack (pop)
-+#endif
- 
- #endif
+--- autogen.sh.orig	2010-11-20 22:45:02.000000000 +0000
++++ autogen.sh
+@@ -19,7 +19,7 @@ future versions! Please switch to using 
+ if [ "$1" = "" ]; then
+   dest=$HOME/GemRB
+ else
+-  if [ "${1:0:1}" == "/" ]; then
++  if [ "${1:0:1}" = "/" ]; then
+     dest=$1
+   else
+     dest=$PWD/$1
