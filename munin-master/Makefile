@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2011/01/24 21:37:18 ftigeot Exp $
+# $NetBSD: Makefile,v 1.2 2011/01/25 16:12:35 ftigeot Exp $
 #
 
 DISTNAME=	munin-${VERSION}
@@ -18,7 +18,8 @@ DEPENDS+=	p5-Date-Manip>=0:../../devel/p5-Date-Manip
 DEPENDS+=	p5-HTML-Template>=0:../../www/p5-HTML-Template
 DEPENDS+=	p5-Log-Log4perl>=0:../../devel/p5-Log-Log4perl
 DEPENDS+=	rrdtool>=1.2:../../databases/rrdtool
-#DEPENDS+=	bash>=4:../../shells/bash
+DEPENDS+=	bash>=4:../../shells/bash
+DEPENDS+=	munin-common>=1.4:../munin-common
 #DEPENDS+=	munin-doc>=1.3.1:../../sysutils/munin-doc
 
 .include "../../mk/bsd.prefs.mk"
