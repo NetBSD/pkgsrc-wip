@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2011/01/25 14:30:37 ftigeot Exp $
+# $NetBSD: Makefile,v 1.2 2011/01/25 14:43:12 ftigeot Exp $
 #
 
 DISTNAME=	munin-${VER}
@@ -15,6 +15,7 @@ LICENSE=	gnu-gpl-v2
 PKG_DESTDIR_SUPPORT=	destdir
 
 DEPENDS+=	p5-Net-Server>=0:../../net/p5-Net-Server
+DEPENDS+=	munin-common>=1.4:../munin-common
 #DEPENDS+=	munin-doc>=1.3.1:../../sysutils/munin-doc
 
 .include "../../mk/bsd.prefs.mk"
