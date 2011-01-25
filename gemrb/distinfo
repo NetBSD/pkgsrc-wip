@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2011/01/24 14:26:24 thomasklausner Exp $
+$NetBSD: distinfo,v 1.5 2011/01/25 12:36:46 thomasklausner Exp $
 
 SHA1 (gemrb-0.6.3.tar.gz) = c849490d6669be92b982ff8cb4bfc050cc24e818
 RMD160 (gemrb-0.6.3.tar.gz) = 0dcf3672d719a62972a558644528973587ba5fe2
@@ -6,5 +6,5 @@ Size (gemrb-0.6.3.tar.gz) = 1731131 bytes
 SHA1 (patch-aa) = 33a8fb98d3bf703fe538bad3ed84a5e7fe3eda18
 SHA1 (patch-ab) = c912a4f134ed3b26a1ad782b694dc910612ab4ee
 SHA1 (patch-ac) = 549ae2cd7c030e590c4c8cfa69533b7aa5272572
-SHA1 (patch-ad) = 3d716b7b14a5e801732ec090ce7854f99f77e3be
+SHA1 (patch-ad) = f9aef92e32bb8688a848d209eae805c47491a9d0
 SHA1 (patch-ae) = 8589c5c99ede5330afc468acb98084648ec5e475

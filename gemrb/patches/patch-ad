@@ -1,9 +1,19 @@
-$NetBSD: patch-ad,v 1.1 2011/01/24 14:26:24 thomasklausner Exp $
+$NetBSD: patch-ad,v 1.2 2011/01/25 12:36:46 thomasklausner Exp $
 
-Only check for libdl on Linux. Untested.
+Only check for libdl on Linux. Untested on Linux.
+Fix installation path for man pages for pkgsrc.
 
 --- CMakeLists.txt.orig	2010-11-20 22:45:02.000000000 +0000
 +++ CMakeLists.txt
+@@ -65,7 +65,7 @@ elseif (${LAYOUT} MATCHES "fhs")
+ 	SET_PATH( LIB_DIR ${CMAKE_INSTALL_PREFIX}/lib/gemrb )
+ 	SET_PATH( PLUGIN_DIR ${LIB_DIR}/plugins )
+ 	SET_PATH( DATA_DIR ${CMAKE_INSTALL_PREFIX}/share/gemrb )
+-	SET_PATH( MAN_DIR ${CMAKE_INSTALL_PREFIX}/share/man/man6 )
++	SET_PATH( MAN_DIR ${CMAKE_INSTALL_PREFIX}/man/man6 )
+ 	SET_PATH( BIN_DIR ${CMAKE_INSTALL_PREFIX}/bin )
+ 	IF( NOT SYSCONF_DIR )
+ 		if ( ${CMAKE_INSTALL_PREFIX} STREQUAL "/usr" )
 @@ -140,14 +140,16 @@ ELSE()
  	MESSAGE(FATAL_ERROR "Please install the Zlib library and headers first!")
  ENDIF()
