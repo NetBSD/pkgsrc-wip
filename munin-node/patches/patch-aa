@@ -1,0 +1,75 @@
+$NetBSD: patch-aa,v 1.1 2011/01/25 14:30:37 ftigeot Exp $
+
+--- Makefile.config.orig	2009-11-06 14:35:44.000000000 +0000
++++ Makefile.config
+@@ -17,29 +17,29 @@
+ #
+ # the base of the Munin installation.
+ # 
+-PREFIX     = $(DESTDIR)/opt/munin
++UPREFIX    = $(DESTDIR)$(PREFIX)
+ 
+ # Where Munin keeps its configurations (server.conf, client.conf, ++)
+-CONFDIR    = $(DESTDIR)/etc/opt/munin
++CONFDIR   ?= $(UPREFIX)/etc/munin
+ 
+ # Server only - where to put munin-cron
+-BINDIR     = $(PREFIX)/bin
++BINDIR     = $(UPREFIX)/bin
+ 
+ # Client only - where to put munin-node, munin-node-configure, and munin-run
+-SBINDIR    = $(PREFIX)/sbin
++SBINDIR    = $(UPREFIX)/sbin
+ 
+ # Where to put text and html documentation
+-DOCDIR     = $(PREFIX)/doc
++DOCDIR     = $(UPREFIX)/share/doc/munin
+ 
+ # Where to put man pages
+-MANDIR     = $(PREFIX)/man
++MANDIR     = $(UPREFIX)/${PKGMANDIR}
+ 
+ # Where to put internal binaries and plugin repository
+-LIBDIR     = $(PREFIX)/lib
++LIBDIR     = $(UPREFIX)/lib/munin
+ 
+ # Server only - Output directory
+-HTMLDIR    = $(PREFIX)/www/docs
+-CGIDIR     = $(PREFIX)/www/cgi
++HTMLDIR    = $(UPREFIX)/www/munin/data
++CGIDIR     = $(UPREFIX)/www/cgi-bin
+ 
+ # Server only - spool directory for data gathered from nodes by
+ # munin-gather - experimental.  Place on ramdisk to make munin
+@@ -52,7 +52,7 @@ SSPOOLDIR  = $(PREFIX)/spool
+ # SSPOOLDIR := /tmp/muninspool
+ 
+ # Client only - Where to put RRD files and other intenal data
+-DBDIR      = $(DESTDIR)/var/opt/munin
++DBDIR      = $(DESTDIR)/var/munin
+ 
+ # Client only - Where plugins should put their states. Must be writable by
+ # group "munin", and should be preserved between reboots
+@@ -66,7 +66,7 @@ LOGDIR     = $(PREFIX)/log/munin
+ STATEDIR   = $(DESTDIR)/var/run/munin
+ 
+ # The perl interpreter to use
+-PERL       := $(shell which perl)
++PERL       := ${PERL5}
+ 
+ # The python interpreter to use (used by some plugins)
+ PYTHON     := /usr/bin/env python
+@@ -126,9 +126,10 @@ PLUGINUSER := nobody
+ # Which command to use to check if the USER and GROUP to run Munin as, exists.
+ # These will work on most modern OSes:
+ #
+-GETENT     := $(shell which getent || which true 2>/dev/null)
+-CHECKUSER  := $(shell $(GETENT) passwd $(USER) >/dev/null 2>/dev/null || (echo "echo User $(USER) nonexistent. Create the user and retry; exit 2"))
+-CHECKGROUP := $(shell $(GETENT) group $(GROUP) >/dev/null 2>/dev/null || (echo "echo Group $(GROUP) nonexistent. Create the group and retry; exit 2"))
++CHECKUSER  = $(shell grep $(USER) /etc/passwd >/dev/null 2>/dev/null || (echo "echo User $(USER) nonexistent. Create the user and retry; exit 2"))
++CHECKGROUP = $(shell grep $(GROUP) /etc/group >/dev/null 2>/dev/null || (echo "echo Group $(GROUP) nonexistent. Create the group and retry; exit 2"))
++
++
+ 
+ # For OSX, comment out the previous two lines and comment in these
+ #
