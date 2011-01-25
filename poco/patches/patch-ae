@@ -1,20 +1,24 @@
-$NetBSD: patch-ae,v 1.4 2010/12/23 03:28:49 schnoebe Exp $
+$NetBSD: patch-ae,v 1.5 2011/01/25 05:38:30 schnoebe Exp $
 
 # clean up the FreeBSD configuration to fit better with pkgsrc
 
---- build/config/FreeBSD.orig	2010-01-15 12:13:34.000000000 +0000
+# Build a full set of shared library search paths, rather than
+# *assuming* everything is under PREFIX.
+
+--- build/config/FreeBSD.orig	2010-12-16 05:43:24.000000000 +0000
 +++ build/config/FreeBSD
-@@ -20,7 +20,8 @@ CXX     = g++
+@@ -20,7 +20,9 @@ CXX     = g++
  LINK    = $(CXX)
  LIB     = ar -cr
  RANLIB  = ranlib
 -SHLIB   = $(CXX) -shared -Wl,-soname,$(notdir $@) -o $@
-+SHLIBFLAGS = -L$(POCO_PREFIX)/lib -Wl,-R$(POCO_PREFIX)/lib
++SHLIBFLAGS = -L$(POCO_PREFIX)/lib -Wl,-R$(POCO_PREFIX)/lib \
++		$(foreach p,$(sort $(POCO_ADD_LIBRARY)),-L$(p) -Wl,-R$(p))
 +SHLIB   = $(CXX) -Wl,-R$(POCO_PREFIX)/lib -shared -Wl,-soname,$(notdir $@) -o $@
  SHLIBLN = $(POCO_BASE)/build/script/shlibln
  DEP     = $(POCO_BASE)/build/script/makedepend.gcc 
  STRIP   = strip
-@@ -52,7 +53,7 @@ STATICOPT_CXX   =
+@@ -52,7 +54,7 @@ STATICOPT_CXX   =
  STATICOPT_LINK  = -static
  SHAREDOPT_CC    = -fPIC
  SHAREDOPT_CXX   = -fPIC

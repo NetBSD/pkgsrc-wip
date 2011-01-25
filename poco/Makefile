@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2011/01/23 23:23:01 schnoebe Exp $
+# $NetBSD: Makefile,v 1.8 2011/01/25 05:38:29 schnoebe Exp $
 #
 
 PKGNAME=	poco-${POCO_VERSION}
@@ -7,6 +7,16 @@ CATEGORIES=	devel
 COMMENT=	POCO C++ Foundation libraries
 
 .include "../../wip/poco/Makefile.common"
+
+CONFIGURE_ARGS+=	--library-path=${BUILDLINK_PREFIX.expat}/lib
+CONFIGURE_ARGS+=	--library-path=${BUILDLINK_PREFIX.pcre}/lib
+CONFIGURE_ARGS+=	--library-path=${BUILDLINK_PREFIX.zlib}/lib
+CONFIGURE_ARGS+=	--library-path=${BUILDLINK_PREFIX.openssl}/lib
+
+CONFIGURE_ARGS+=	--include-path=${BUILDLINK_PREFIX.expat}/include
+CONFIGURE_ARGS+=	--include-path=${BUILDLINK_PREFIX.pcre}/include
+CONFIGURE_ARGS+=	--include-path=${BUILDLINK_PREFIX.zlib}/include
+CONFIGURE_ARGS+=	--include-path=${BUILDLINK_PREFIX.openssl}/include
 
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
