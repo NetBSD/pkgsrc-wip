@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/01/20 00:30:13 jym-netbsd Exp $
+# $NetBSD: Makefile,v 1.2 2011/01/26 13:19:50 jym-netbsd Exp $
 #
 
 PKGNAME=	ec2-ami-tools-1.3.57676
@@ -35,8 +35,8 @@ REPLACE_FILES.bash=	bin/*
 SUBST_CLASSES+=		ec2-home
 SUBST_STAGE.ec2-home=	pre-configure
 SUBST_FILES.ec2-home=	bin/*
-SUBST_SED.ec2-home+=	-e 's|\$${EC2_HOME.*}|${EC2_HOME}/}|g'
-SUBST_MESSAGE.ec2-home=	Setting EC2_HOME default path.
+SUBST_SED.ec2-home+=	-e 's|\$${EC2_HOME.*}|${EC2_HOME}}|g'
+SUBST_MESSAGE.ec2-home=	Setting EC2_HOME default path for scripts.
 
 SUBST_CLASSES+=		ruby
 SUBST_STAGE.ruby=	pre-configure
@@ -44,10 +44,23 @@ SUBST_FILES.ruby=	bin/*
 SUBST_SED.ruby+=	-e 's|^ruby |${RUBY_NAME} |g'
 SUBST_MESSAGE.ruby=	Fixing ruby interpreter name.
 
-INSTALLATION_DIRS+=	bin amazon-ec2
-INSTALLATION_DIRS+=	amazon-ec2/etc amazon-ec2/bin amazon-ec2/lib
+SUBST_CLASSES+=		ec2-rb
+SUBST_STAGE.ec2-rb=	pre-configure
+SUBST_FILES.ec2-rb=	lib/ec2/platform/netbsd/constants.rb
+SUBST_VARS.ec2-rb+=	EC2_HOME
+SUBST_MESSAGE.ec2-rb=	Setting EC2_HOME constant for NetBSD EC2 modules.
+
+PLIST_SUBST+=		EC2_DIR=${EC2_DIR:Q}
+
+INSTALLATION_DIRS+=	bin ${EC2_DIR}
+INSTALLATION_DIRS+=	${EC2_DIR}/etc ${EC2_DIR}/bin ${EC2_DIR}/lib
 
 post-extract:
+	# Create and copy the NetBSD Ruby modules
+	${MKDIR} ${WRKSRC}/lib/ec2/platform/netbsd/
+	${CP} ${FILESDIR}/netbsd.rb ${WRKSRC}/lib/ec2/platform/
+	${CP} ${FILESDIR}/netbsd/*.rb ${WRKSRC}/lib/ec2/platform/netbsd/
+
 	find ${WRKSRC}/lib ${WRKSRC}/etc -type d -exec \
 		${CHMOD} ${PKGDIRMODE} {} \;
 	find ${WRKSRC}/lib ${WRKSRC}/etc -type f -exec \
