@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/01/26 12:51:32 jym-netbsd Exp $
+# $NetBSD: Makefile,v 1.3 2011/01/26 13:12:46 jym-netbsd Exp $
 #
 
 PKGNAME=	ec2-api-tools-1.3.62308
@@ -39,6 +39,8 @@ SUBST_STAGE.ec2-home=	pre-configure
 SUBST_FILES.ec2-home=	bin/*
 SUBST_SED.ec2-home+=	-e 's|:.EC2_HOME is not set|:-${EC2_HOME}|g'
 SUBST_MESSAGE.ec2-home=	Setting EC2_HOME default path.
+
+PLIST_SUBST+=		EC2_DIR=${EC2_DIR:Q}
 
 INSTALLATION_DIRS+=	bin ${EC2_DIR} ${EC2_DIR}/bin ${EC2_DIR}/lib
 
