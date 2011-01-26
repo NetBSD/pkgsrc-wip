@@ -1,0 +1,15 @@
+$NetBSD: patch-be,v 1.1.1.1 2011/01/26 08:24:17 makoto Exp $
+# This suppresses the noisy warning that __func__ redefined
+
+--- base/gserror.h.orig	2009-02-10 07:18:18.000000000 +0900
++++ base/gserror.h	2010-12-20 16:28:11.000000000 +0900
+@@ -25,6 +25,9 @@
+ #define return_error(err) return gs_note_error(err)
+ 
+ #if !defined(__STDC_VERSION__) || __STDC_VERSION__ < 199901L
++# if (defined(__func__))
++#  undef __func__
++# endif
+ #  if defined(__GNUC__) && __GNUC__ >= 2
+ #    define __func__ __FUNCTION__
+ #  elif defined(__FUNCTION__)

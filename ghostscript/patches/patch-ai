@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.1.1.1 2011/01/26 08:24:17 makoto Exp $
+
+--- base/mkromfs.c.orig	2009-02-13 12:20:54.000000000 +0100
++++ base/mkromfs.c
+@@ -467,7 +467,7 @@ main(int argc, char *argv[])
+ #endif
+     fprintf(out,"\n#include \"stdint_.h\"\n");
+     fprintf(out,"\n#include \"time_.h\"\n\n");
+-    fprintf(out,"    time_t gs_romfs_buildtime = %ld;\n\n", time(NULL));
++    fprintf(out,"    time_t gs_romfs_buildtime = %lld;\n\n", (long long)time(NULL));
+ 
+     /* process the remaining arguments (options interspersed with paths) */
+     for (; atarg < argc; atarg++) {  
