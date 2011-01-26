@@ -1,0 +1,21 @@
+$NetBSD: patch-ah,v 1.1 2011/01/26 13:03:41 makoto Exp $
+
+--- configure.orig	2010-09-19 18:01:05.000000000 +0900
++++ configure	2011-01-26 19:00:10.000000000 +0900
+@@ -758,6 +758,7 @@
+ LIBS
+ CPPFLAGS
+ CPP
++CPPFLAGS
+ XMKMF'
+ 
+ 
+@@ -5111,7 +5112,7 @@
+ 
+ fi
+ if test x$with_libpaper != xno; then
+-    LIBS="$LIBS -lpaper"
++    LIBS="$LIBS -L${LPLIBDIR} -Wl,-R${LPLIBDIR} -lpaper"
+ 
+ $as_echo "#define USE_LIBPAPER 1" >>confdefs.h
+ 
