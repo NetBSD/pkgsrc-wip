@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/01/26 13:19:50 jym-netbsd Exp $
+# $NetBSD: Makefile,v 1.3 2011/01/26 13:32:50 jym-netbsd Exp $
 #
 
 PKGNAME=	ec2-ami-tools-1.3.57676
@@ -12,7 +12,7 @@ EXTRACT_SUFX=	.zip
 
 MAINTAINER=	jym@NetBSD.org
 HOMEPAGE=	http://aws.amazon.com/developertools/368
-COMMENT=	Amazon EC2 AMI Tools (bundle, create, upload AMIs to S3)
+COMMENT=	Amazon EC2 AMI tools (bundle, create, upload AMIs to S3)
 LICENSE=	amazon-software-license
 
 PKG_DESTDIR_SUPPORT=	user-destdir
