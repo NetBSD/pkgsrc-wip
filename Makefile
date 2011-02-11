@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4211 2011/01/24 09:52:56 jihbed Exp $
+# $Id: Makefile,v 1.4212 2011/02/11 00:16:02 ryo-on Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -365,6 +365,7 @@ SUBDIR+=	dnswalk
 SUBDIR+=	docbook-xsl-ko
 SUBDIR+=	docbook2X
 SUBDIR+=	doorman
+SUBDIR+=	dos2unix
 SUBDIR+=	dotconf
 SUBDIR+=	dotproject
 SUBDIR+=	dovecot-antispam
