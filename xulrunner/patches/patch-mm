@@ -1,6 +1,6 @@
-$NetBSD: patch-mm,v 1.11 2011/01/16 15:23:58 tnn2 Exp $
+$NetBSD: patch-mm,v 1.12 2011/02/11 18:28:11 tnn2 Exp $
 
---- toolkit/library/Makefile.in.orig	2011-01-11 03:27:37.000000000 +0000
+--- toolkit/library/Makefile.in.orig	2011-01-22 00:30:16.000000000 +0000
 +++ toolkit/library/Makefile.in
 @@ -246,6 +246,13 @@ EXTRA_DSO_LDOPTS += -lelf -ldemangle
  endif
@@ -14,5 +14,5 @@ $NetBSD: patch-mm,v 1.11 2011/01/16 15:23:58 tnn2 Exp $
 +endif
 +
  ifeq ($(OS_ARCH),WINNT)
- OS_LIBS += $(call EXPAND_LIBNAME,shell32 ole32 uuid version winspool comdlg32 imm32 winmm wsock32 msimg32 shlwapi psapi Ws2_32)
+ OS_LIBS += $(call EXPAND_LIBNAME,shell32 ole32 uuid version winspool comdlg32 imm32 winmm wsock32 msimg32 shlwapi psapi ws2_32)
  ifneq (,$(MOZ_DEBUG)$(NS_TRACE_MALLOC))

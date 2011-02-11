@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2011/01/16 15:23:58 tnn2 Exp $
+@comment $NetBSD: PLIST,v 1.30 2011/02/11 18:28:10 tnn2 Exp $
 bin/xulrunner
 ${PLIST.jit}include/xulrunner/Allocator.h
 ${PLIST.jit}include/xulrunner/Assembler.h
@@ -271,6 +271,7 @@ include/xulrunner/md/_win95.cfg
 include/xulrunner/md/_winnt.cfg
 include/xulrunner/mozAutoDocUpdate.h
 include/xulrunner/mozFlushType.h
+include/xulrunner/mozIAsyncHistory.h
 include/xulrunner/mozIJSSubScriptLoader.h
 include/xulrunner/mozIPersonalDictionary.h
 include/xulrunner/mozIPlacesAutoComplete.h
@@ -391,9 +392,11 @@ include/xulrunner/nsASocketHandler.h
 include/xulrunner/nsAString.h
 include/xulrunner/nsAXPCNativeCallContext.h
 include/xulrunner/nsAboutProtocolUtils.h
+include/xulrunner/nsAccDocManager.h
 include/xulrunner/nsAccelerometer.h
 include/xulrunner/nsAccessNode.h
 include/xulrunner/nsAccessNodeWrap.h
+include/xulrunner/nsAccessibilityService.h
 include/xulrunner/nsAccessible.h
 include/xulrunner/nsAccessibleRelationWrap.h
 include/xulrunner/nsAccessibleWrap.h
@@ -1101,6 +1104,7 @@ include/xulrunner/nsIDOMSmartCardEvent.h
 include/xulrunner/nsIDOMStorage.h
 include/xulrunner/nsIDOMStorageEvent.h
 include/xulrunner/nsIDOMStorageEventObsolete.h
+include/xulrunner/nsIDOMStorageIndexedDB.h
 include/xulrunner/nsIDOMStorageItem.h
 include/xulrunner/nsIDOMStorageList.h
 include/xulrunner/nsIDOMStorageManager.h
@@ -1167,6 +1171,7 @@ include/xulrunner/nsIDirIndex.h
 include/xulrunner/nsIDirIndexListener.h
 include/xulrunner/nsIDirectoryEnumerator.h
 include/xulrunner/nsIDirectoryService.h
+include/xulrunner/nsIDiskCacheStreamInternal.h
 include/xulrunner/nsIDocCharset.h
 include/xulrunner/nsIDocShell.h
 include/xulrunner/nsIDocShellHistory.h
@@ -1278,6 +1283,7 @@ include/xulrunner/nsIGIOService.h
 include/xulrunner/nsIGenKeypairInfoDlg.h
 include/xulrunner/nsIGeolocationProvider.h
 include/xulrunner/nsIGfxInfo.h
+include/xulrunner/nsIGfxInfoDebug.h
 include/xulrunner/nsIGlobalHistory.h
 include/xulrunner/nsIGlobalHistory2.h
 include/xulrunner/nsIGlobalHistory3.h
@@ -2554,7 +2560,6 @@ lib/xulrunner/modules/debug.js
 lib/xulrunner/modules/nsFormAutoCompleteResult.jsm
 lib/xulrunner/modules/utils.js
 lib/xulrunner/mozilla-xremote-client
-lib/xulrunner/nspr-config
 lib/xulrunner/platform.ini
 lib/xulrunner/res/EditorOverride.css
 lib/xulrunner/res/contenteditable.css
@@ -2631,6 +2636,7 @@ share/idl/xulrunner/inIFlasher.idl
 share/idl/xulrunner/inISearchObserver.idl
 share/idl/xulrunner/inISearchProcess.idl
 share/idl/xulrunner/jsdIDebuggerService.idl
+share/idl/xulrunner/mozIAsyncHistory.idl
 share/idl/xulrunner/mozIJSSubScriptLoader.idl
 share/idl/xulrunner/mozIPersonalDictionary.idl
 share/idl/xulrunner/mozIPlacesAutoComplete.idl
@@ -3145,6 +3151,7 @@ share/idl/xulrunner/nsIDOMSmartCardEvent.idl
 share/idl/xulrunner/nsIDOMStorage.idl
 share/idl/xulrunner/nsIDOMStorageEvent.idl
 share/idl/xulrunner/nsIDOMStorageEventObsolete.idl
+share/idl/xulrunner/nsIDOMStorageIndexedDB.idl
 share/idl/xulrunner/nsIDOMStorageItem.idl
 share/idl/xulrunner/nsIDOMStorageList.idl
 share/idl/xulrunner/nsIDOMStorageManager.idl
@@ -3205,6 +3212,7 @@ share/idl/xulrunner/nsIDirIndex.idl
 share/idl/xulrunner/nsIDirIndexListener.idl
 share/idl/xulrunner/nsIDirectoryEnumerator.idl
 share/idl/xulrunner/nsIDirectoryService.idl
+share/idl/xulrunner/nsIDiskCacheStreamInternal.idl
 share/idl/xulrunner/nsIDocCharset.idl
 share/idl/xulrunner/nsIDocShell.idl
 share/idl/xulrunner/nsIDocShellHistory.idl
@@ -3298,6 +3306,7 @@ share/idl/xulrunner/nsIGIOService.idl
 share/idl/xulrunner/nsIGenKeypairInfoDlg.idl
 share/idl/xulrunner/nsIGeolocationProvider.idl
 share/idl/xulrunner/nsIGfxInfo.idl
+share/idl/xulrunner/nsIGfxInfoDebug.idl
 share/idl/xulrunner/nsIGlobalHistory.idl
 share/idl/xulrunner/nsIGlobalHistory2.idl
 share/idl/xulrunner/nsIGlobalHistory3.idl

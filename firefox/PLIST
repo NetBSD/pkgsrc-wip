@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2011/01/16 15:23:58 tnn2 Exp $
+@comment $NetBSD: PLIST,v 1.28 2011/02/11 18:28:11 tnn2 Exp $
 bin/firefox
 lib/firefox/README.txt
 lib/firefox/application.ini
@@ -15,6 +15,8 @@ lib/firefox/chrome/browser/content/browser/NetworkPanel.xhtml
 lib/firefox/chrome/browser/content/browser/aboutDialog.css
 lib/firefox/chrome/browser/content/browser/aboutDialog.js
 lib/firefox/chrome/browser/content/browser/aboutDialog.xul
+lib/firefox/chrome/browser/content/browser/aboutHome-restore-icon-rtl.png
+lib/firefox/chrome/browser/content/browser/aboutHome-restore-icon.png
 lib/firefox/chrome/browser/content/browser/aboutHome.css
 lib/firefox/chrome/browser/content/browser/aboutHome.js
 lib/firefox/chrome/browser/content/browser/aboutHome.xhtml
@@ -232,13 +234,13 @@ lib/firefox/chrome/browser/skin/classic/browser/tabbrowser/loading.png
 lib/firefox/chrome/browser/skin/classic/browser/tabbrowser/tab.png
 lib/firefox/chrome/browser/skin/classic/browser/tabbrowser/tabDragIndicator.png
 lib/firefox/chrome/browser/skin/classic/browser/tabview/edit-light.png
-lib/firefox/chrome/browser/skin/classic/browser/tabview/edit.png
 lib/firefox/chrome/browser/skin/classic/browser/tabview/new-tab.png
 lib/firefox/chrome/browser/skin/classic/browser/tabview/search.png
 lib/firefox/chrome/browser/skin/classic/browser/tabview/stack-expander.png
 lib/firefox/chrome/browser/skin/classic/browser/tabview/tabview.css
 lib/firefox/chrome/browser/skin/classic/browser/tabview/tabview.png
 lib/firefox/chrome/browser/skin/classic/browser/urlbar-favicon-glow.png
+lib/firefox/chrome/browser/skin/classic/browser/urlbar-over-link-arrow-rtl.png
 lib/firefox/chrome/browser/skin/classic/browser/urlbar-over-link-arrow.png
 lib/firefox/chrome/browser/skin/classic/communicator/communicator.css
 lib/firefox/chrome/en-US/locale/branding/brand.dtd
@@ -317,6 +319,8 @@ lib/firefox/chrome/en-US/locale/browser/tabview.properties
 lib/firefox/chrome/en-US/locale/browser/taskbar.properties
 lib/firefox/chrome/en-US/locale/en-US/services/errors.properties
 lib/firefox/chrome/en-US/locale/en-US/services/sync.properties
+lib/firefox/chrome/en-US/locale/feedback/main.dtd
+lib/firefox/chrome/en-US/locale/feedback/main.properties
 lib/firefox/chrome/icons/default/default16.png
 lib/firefox/chrome/icons/default/default32.png
 lib/firefox/chrome/icons/default/default48.png
@@ -332,7 +336,6 @@ lib/firefox/components/components.manifest
 lib/firefox/components/fuelApplication.js
 lib/firefox/components/interfaces.manifest
 lib/firefox/components/libbrowsercomps.so
-${PLIST.gnome}lib/firefox/components/libnkgnomevfs.so
 lib/firefox/components/nsBrowserContentHandler.js
 lib/firefox/components/nsBrowserGlue.js
 lib/firefox/components/nsPrivateBrowsingService.js
@@ -367,10 +370,6 @@ lib/firefox/modules/distribution.js
 lib/firefox/modules/domplate.jsm
 lib/firefox/modules/openLocationLastURL.jsm
 lib/firefox/modules/services-crypto/WeaveCrypto.js
-lib/firefox/modules/services-sync/auth.js
-lib/firefox/modules/services-sync/base_records/collection.js
-lib/firefox/modules/services-sync/base_records/crypto.js
-lib/firefox/modules/services-sync/base_records/wbo.js
 lib/firefox/modules/services-sync/constants.js
 lib/firefox/modules/services-sync/engines.js
 lib/firefox/modules/services-sync/engines/bookmarks.js
@@ -389,22 +388,13 @@ lib/firefox/modules/services-sync/jpakeclient.js
 lib/firefox/modules/services-sync/log4moz.js
 lib/firefox/modules/services-sync/main.js
 lib/firefox/modules/services-sync/notifications.js
+lib/firefox/modules/services-sync/record.js
 lib/firefox/modules/services-sync/resource.js
 lib/firefox/modules/services-sync/service.js
 lib/firefox/modules/services-sync/status.js
-lib/firefox/modules/services-sync/stores.js
-lib/firefox/modules/services-sync/trackers.js
-lib/firefox/modules/services-sync/type_records/bookmark.js
-lib/firefox/modules/services-sync/type_records/clients.js
-lib/firefox/modules/services-sync/type_records/forms.js
-lib/firefox/modules/services-sync/type_records/history.js
-lib/firefox/modules/services-sync/type_records/passwords.js
-lib/firefox/modules/services-sync/type_records/prefs.js
-lib/firefox/modules/services-sync/type_records/tabs.js
 lib/firefox/modules/services-sync/util.js
 lib/firefox/modules/stylePanel.jsm
 lib/firefox/modules/tabview/AllTabs.jsm
-lib/firefox/modules/tabview/groups.jsm
 lib/firefox/modules/tabview/utils.jsm
 lib/firefox/removed-files
 lib/firefox/run-mozilla.sh
