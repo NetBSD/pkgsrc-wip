@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2011/01/08 17:32:50 asau Exp $
+@comment $NetBSD: PLIST,v 1.31 2011/02/11 01:34:02 asau Exp $
 bin/bugpoint
 bin/llc
 bin/lli
@@ -13,6 +13,7 @@ bin/llvm-ld
 bin/llvm-link
 bin/llvm-mc
 bin/llvm-nm
+bin/llvm-objdump
 bin/llvm-prof
 bin/llvm-ranlib
 bin/llvm-stub
@@ -122,6 +123,8 @@ include/llvm/Analysis/MemoryBuiltins.h
 include/llvm/Analysis/MemoryDependenceAnalysis.h
 include/llvm/Analysis/PHITransAddr.h
 include/llvm/Analysis/Passes.h
+include/llvm/Analysis/PathNumbering.h
+include/llvm/Analysis/PathProfileInfo.h
 include/llvm/Analysis/PostDominators.h
 include/llvm/Analysis/ProfileInfo.h
 include/llvm/Analysis/ProfileInfoLoader.h
@@ -431,7 +434,7 @@ include/llvm/Target/TargetCallingConv.h
 include/llvm/Target/TargetCallingConv.td
 include/llvm/Target/TargetData.h
 include/llvm/Target/TargetELFWriterInfo.h
-include/llvm/Target/TargetFrameInfo.h
+include/llvm/Target/TargetFrameLowering.h
 include/llvm/Target/TargetInstrDesc.h
 include/llvm/Target/TargetInstrInfo.h
 include/llvm/Target/TargetInstrItineraries.h
@@ -472,7 +475,8 @@ include/llvm/Use.h
 include/llvm/User.h
 include/llvm/Value.h
 include/llvm/ValueSymbolTable.h
-lib/libBugpointPasses.${SO_SUFFIX}
+lib/BugpointPasses.${SO_SUFFIX}
+lib/LLVMHello.${SO_SUFFIX}
 lib/libCompilerDriver.a
 lib/libEnhancedDisassembly.a
 lib/libEnhancedDisassembly.${SO_SUFFIX}
@@ -485,7 +489,6 @@ lib/libLLVMBitWriter.a
 lib/libLLVMCodeGen.a
 lib/libLLVMCore.a
 lib/libLLVMExecutionEngine.a
-lib/libLLVMHello.${SO_SUFFIX}
 lib/libLLVMInstCombine.a
 lib/libLLVMInstrumentation.a
 lib/libLLVMInterpreter.a
@@ -511,7 +514,7 @@ lib/libLLVMipo.a
 lib/libLTO.a
 lib/libLTO.${SO_SUFFIX}
 lib/libUnitTestMain.a
-lib/libprofile_rt.${SO_SUFFIX}
+lib/profile_rt.${SO_SUFFIX}
 man/man1/bugpoint.1
 man/man1/lit.1
 man/man1/llc.1
