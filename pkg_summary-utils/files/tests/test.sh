@@ -1505,9 +1505,6 @@ PKGPATH=wip/paexec
 PKGNAME=libtool-base-X
 PKGPATH=devel/libtool-base
 
-PKGNAME=runawk-X
-PKGPATH=wip/runawk
-
 PKGNAME=emacs-X
 PKGPATH=editors/emacs
 
@@ -1559,6 +1556,8 @@ cmp 'pkg_src_summary #1 stderr' \
 Bad package wip/pkg_online, skipped
  ------------------
 Bad package wip/dict-server, skipped
+ ------------------
+Bad package wip/runawk, skipped
  ------------------
 Bad package wip/dict-client, skipped
  ------------------
@@ -1905,9 +1904,6 @@ PKGPATH=wip/paexec
 PKGNAME=libtool-base-X
 PKGPATH=devel/libtool-base
 
-PKGNAME=runawk-X
-PKGPATH=wip/runawk
-
 PKGNAME=emacs-X
 PKGPATH=editors/emacs
 
@@ -1964,6 +1960,8 @@ cmp 'pkg_micro_src_summary #1 stderr' \
 Bad package wip/pkg_online, skipped
  ------------------
 Bad package wip/dict-server, skipped
+ ------------------
+Bad package wip/runawk, skipped
  ------------------
 Bad package wip/dict-client, skipped
  ------------------

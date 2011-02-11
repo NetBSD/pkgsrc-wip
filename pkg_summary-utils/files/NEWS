@@ -1,4 +1,11 @@
 ----------------------------------------------------------------------
+Version 0.52.0, by Aleksey Cheusov, Fri, 11 Feb 2011 17:05:27 +0200
+
+  pkg_cmp_summary:
+     - New option -b was added for using BUILD_DATE field
+       for comparison.
+
+----------------------------------------------------------------------
 Version 0.51.0, by Aleksey Cheusov, Sun, 16 Jan 2011 16:21:35 +0200
 
   pkg_digger_backend:
