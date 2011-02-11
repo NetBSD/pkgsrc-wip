@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.8 2010/12/17 07:48:45 obache Exp $
+$NetBSD: distinfo,v 1.9 2011/02/11 04:55:40 obache Exp $
 
-SHA1 (opera-11.00-1156.amd64.freebsd.tar.bz2) = c7ab72729951b3a673f0f1d2b4e10aa3f25c26c5
-RMD160 (opera-11.00-1156.amd64.freebsd.tar.bz2) = cbd8738d31e142e7e4463def8931e02e2375e51b
-Size (opera-11.00-1156.amd64.freebsd.tar.bz2) = 12316363 bytes
-SHA1 (opera-11.00-1156.i386.freebsd.tar.bz2) = 576e5f4c7a45b90180652eac54d725d61dd4468a
-RMD160 (opera-11.00-1156.i386.freebsd.tar.bz2) = 30db9d0891e557f1e150b5eb279316d0011b13f7
-Size (opera-11.00-1156.i386.freebsd.tar.bz2) = 11348121 bytes
-SHA1 (opera-11.00-1156.i386.linux.tar.bz2) = e28f416a18b04248e9a1e9a99fd8b373df3d0499
-RMD160 (opera-11.00-1156.i386.linux.tar.bz2) = 3955e17bbcb5be3244803a154cc1147fdfc0bb94
-Size (opera-11.00-1156.i386.linux.tar.bz2) = 11625554 bytes
-SHA1 (opera-11.00-1156.x86_64.linux.tar.bz2) = 53d001dd5e9afad32da78c158913d83ac027650f
-RMD160 (opera-11.00-1156.x86_64.linux.tar.bz2) = 2d06fcd4f8ff3e03ebdfd982d17d436c74d5448c
-Size (opera-11.00-1156.x86_64.linux.tar.bz2) = 12858732 bytes
+SHA1 (opera-11.01-1190.amd64.freebsd.tar.bz2) = a5307144a434c75c4add99af69eb5d5671827d0a
+RMD160 (opera-11.01-1190.amd64.freebsd.tar.bz2) = de0f9f31f4a75e3b4ec9899b647a02b519ba28f2
+Size (opera-11.01-1190.amd64.freebsd.tar.bz2) = 12208207 bytes
+SHA1 (opera-11.01-1190.i386.freebsd.tar.bz2) = 57b40d7066e064c62298b616f28f098d822369fb
+RMD160 (opera-11.01-1190.i386.freebsd.tar.bz2) = 6252e3d324799bb367d2940d0c266566f348464e
+Size (opera-11.01-1190.i386.freebsd.tar.bz2) = 11275305 bytes
+SHA1 (opera-11.01-1190.i386.linux.tar.bz2) = 4bb983706e3676cbaf2706c7b4980758093115d4
+RMD160 (opera-11.01-1190.i386.linux.tar.bz2) = 5b5bc92ec071bc82dc6b91c13d7a21049e1422c5
+Size (opera-11.01-1190.i386.linux.tar.bz2) = 11504194 bytes
+SHA1 (opera-11.01-1190.x86_64.linux.tar.bz2) = 67b0cc94f7714fd68a22a7c86d117bcc6b1e11d8
+RMD160 (opera-11.01-1190.x86_64.linux.tar.bz2) = 36c1ef4dcc8015d2ddda36f62c99defa2379a771
+Size (opera-11.01-1190.x86_64.linux.tar.bz2) = 12737153 bytes

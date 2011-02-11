@@ -1,2 +1,2 @@
-ALL:
-* require gstreamer-0.10 for video
+NetBSD-5.1:
+* PR#44464: kernel panic
