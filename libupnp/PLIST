@@ -1,11 +1,14 @@
-@comment $NetBSD: PLIST,v 1.8 2011/01/20 08:20:23 obache Exp $
+@comment $NetBSD: PLIST,v 1.9 2011/02/11 04:59:03 obache Exp $
 include/upnp/FreeList.h
 include/upnp/LinkedList.h
 include/upnp/ThreadPool.h
 include/upnp/TimerThread.h
 include/upnp/UpnpGlobal.h
 include/upnp/UpnpInet.h
+include/upnp/UpnpIntTypes.h
+include/upnp/UpnpStdInt.h
 include/upnp/UpnpString.h
+include/upnp/UpnpUniStd.h
 include/upnp/ithread.h
 include/upnp/ixml.h
 include/upnp/ixmldebug.h

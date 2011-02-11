@@ -1,2 +1,1 @@
 * ABI/API incompatible with 1.6.6, need to fix packages depending on this.
-* IPv6 support is broken for *BSD.
