@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4212 2011/02/11 00:16:02 ryo-on Exp $
+# $Id: Makefile,v 1.4213 2011/02/11 08:31:53 moubctez Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2032,7 +2032,6 @@ SUBDIR+=	py-logilab-mtconverter
 SUBDIR+=	py-logilab-pigg
 SUBDIR+=	py-plex
 SUBDIR+=	py-ply
-SUBDIR+=	py-mako
 SUBDIR+=	py-matplotlib
 SUBDIR+=	py-matplotlib-gtk2
 SUBDIR+=	py-mdp
