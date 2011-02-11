@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2010/12/21 11:35:40 obache Exp $
+# $NetBSD: options.mk,v 1.4 2011/02/11 04:57:09 obache Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.groonga
@@ -25,6 +25,7 @@ USE_TOOLS+=		gmake
 TEST_TARGET=		check
 BUILDLINK_DEPMETHOD.${RUBY_BASE}+=	build
 .include "../../lang/ruby/buildlink3.mk"
+BUILDLINK_API_DEPENDS.cutter+=		cutter>=1.1.6
 .include "../../devel/cutter/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-ruby
