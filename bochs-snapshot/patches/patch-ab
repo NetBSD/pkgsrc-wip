@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.1.1.1 2010/11/15 12:01:53 ryo-on Exp $
+$NetBSD: patch-ab,v 1.2 2011/02/12 11:22:29 ryo-on Exp $
 
---- iodev/soundosx.cc.orig	2010-02-26 14:18:19.000000000 +0000
+--- iodev/soundosx.cc.orig	2011-01-24 20:35:51.000000000 +0000
 +++ iodev/soundosx.cc
 @@ -21,7 +21,7 @@
  // This file (SOUNDOSX.CC) written and donated by Brian Huffman
@@ -10,4 +10,4 @@ $NetBSD: patch-ab,v 1.1.1.1 2010/11/15 12:01:53 ryo-on Exp $
 +#include <CoreServices/CoreServices.h>
  #endif
  
- #define NO_DEVICE_INCLUDES
+ #include "iodev.h"

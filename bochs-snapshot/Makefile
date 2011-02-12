@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2011/01/22 13:27:37 ryo-on Exp $
+# $NetBSD: Makefile,v 1.3 2011/02/12 11:22:29 ryo-on Exp $
 
-DISTNAME=		bochs-20110121
+DISTNAME=		bochs-20110125
 CATEGORIES=		emulators
 MASTER_SITES=		http://bochs.sourceforge.net/cvs-snapshot/
 

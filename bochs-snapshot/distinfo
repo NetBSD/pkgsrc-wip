@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.2 2011/01/22 13:27:37 ryo-on Exp $
+$NetBSD: distinfo,v 1.3 2011/02/12 11:22:29 ryo-on Exp $
 
-SHA1 (bochs-20110121.tar.gz) = 14325440b2f61ab2e1988ee341ce226f5f385ca9
-RMD160 (bochs-20110121.tar.gz) = 7016311df6b84c6d4c3bcd559ef7bc02e58667ec
-Size (bochs-20110121.tar.gz) = 4013605 bytes
+SHA1 (bochs-20110125.tar.gz) = 35eb823403440253a6261ab9845aa84bbe016434
+RMD160 (bochs-20110125.tar.gz) = 4d5452e2aa71e303f237e56d8ee2b107a70e1cc5
+Size (bochs-20110125.tar.gz) = 4014043 bytes
 SHA1 (patch-aa) = 63d7c498989fd25d1db0efc66375a653aa176b87
-SHA1 (patch-ab) = 08041c68385ff390584a515dc3a8ecb565e0f9de
-SHA1 (patch-ac) = 5e5094ac439bec20d3842faf2bb3895554875eda
-SHA1 (patch-ad) = 9bd567acd9b6bfae8f47e8d0daf0f8598d4ee4f5
+SHA1 (patch-ab) = bb28bf7c5daa22367c081bc60780761353837ba3
+SHA1 (patch-ac) = 85084378d1e5c814879eb59e80e37a6e573b2cf6
+SHA1 (patch-ad) = 5000ff906b98288b641987d2e99b9d51675c4986
 SHA1 (patch-ae) = 6ad7652da4a13296baecfff5bba58855cae178f7
