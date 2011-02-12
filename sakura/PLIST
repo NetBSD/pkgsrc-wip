@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/03/29 12:11:06 ryo-on Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/02/12 11:34:03 ryo-on Exp $
 bin/sakura
 man/man1/sakura.1
 share/applications/sakura.desktop
@@ -12,6 +12,7 @@ share/locale/hr/LC_MESSAGES/sakura.mo
 share/locale/hu/LC_MESSAGES/sakura.mo
 share/locale/it/LC_MESSAGES/sakura.mo
 share/locale/ja/LC_MESSAGES/sakura.mo
+share/locale/pl/LC_MESSAGES/sakura.mo
 share/locale/pt_BR/LC_MESSAGES/sakura.mo
 share/locale/ru/LC_MESSAGES/sakura.mo
 share/locale/zh_CN/LC_MESSAGES/sakura.mo

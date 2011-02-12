@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.4 2010/07/05 20:03:47 ryo-on Exp $
+# $NetBSD: Makefile,v 1.5 2011/02/12 11:34:03 ryo-on Exp $
 #
 
-DISTNAME=	sakura-2.3.8
-PKGREVISION=	1
+DISTNAME=	sakura-2.4.0
 CATEGORIES=	x11
 MASTER_SITES=	http://www.pleyades.net/david/projects/sakura/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	ryo_on@yk.rim.or.jp
 HOMEPAGE=	http://www.pleyades.net/david/sakura.php
-COMMENT=	The sakura is a terminal emulator based on GTK and VTE supports tab
+COMMENT=	Sakura is a terminal emulator based on GTK and VTE that supports tab
 
 LICENSE=	gnu-gpl-v2
 
@@ -23,7 +22,7 @@ SUBST_CLASSES+=			fix-man-path
 SUBST_STAGE.fix-man-path=	post-patch
 SUBST_MESSAGE.fix-man-path=	Fix path for man1.
 SUBST_FILES.fix-man-path=	CMakeLists.txt
-SUBST_SED.fix-man-path=		-e 's,share/man/man1,man/man1,g'
+SUBST_SED.fix-man-path=		-e 's,share/man/man1,${PKGMANDIR}/man1,g'
 
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.14.0
 .include "../../devel/glib2/buildlink3.mk"
