@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2011/02/12 10:52:53 ryo-on Exp $
+# $NetBSD: Makefile,v 1.3 2011/02/12 11:08:17 ryo-on Exp $
 #
 
 DISTNAME=	nodau-0.2.1
 CATEGORIES=	editors
-MASTER_SITES=	http://ryo-on.users.sourceforge.net/distrib/
+MASTER_SITES=	-http://sandbox.ltmnet.com/download/35
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	ryo_on@yk.rim.or.jp
