@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/11/23 12:28:47 ryo-on Exp $
+# $NetBSD: Makefile,v 1.2 2011/02/12 10:52:53 ryo-on Exp $
 #
 
 DISTNAME=	nodau-0.2.1
@@ -24,7 +24,8 @@ BUILD_MAKE_FLAGS+=	PREFIX=${PREFIX}
 INSTALL_MAKE_FLAGS+=	BIN_DIR=${DESTDIR}${PREFIX}/bin
 INSTALL_MAKE_FLAGS+=	MAN_DIR=${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
-.if !emptt(OPSYS:M*BSD) || !empty(OPSYS:MDragonFly)
+.include "../../mk/bsd.prefs.mk"
+.if !empty(OPSYS:M*BSD) || !empty(OPSYS:MDragonFly)
 BUILDLINK_TRANSFORM+=	rm:-ldl
 .endif
 
