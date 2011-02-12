@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2010/06/24 18:58:01 marko_schuetz Exp $
+# $NetBSD: Makefile,v 1.2 2011/02/12 14:24:38 asau Exp $
 
 DISTNAME=		gcc-${GCC_VERSION}
 PKGNAME=		gcc45-${GCC_VERSION}
@@ -169,7 +169,7 @@ GENERATE_PLIST+=                                                        \
 	| ${SORT} ;
 
 .include "../../devel/gmp/buildlink3.mk"
-.include "../../wip/mpc/buildlink3.mk"
+.include "../../math/mpcomplex/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../math/mpfr/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
