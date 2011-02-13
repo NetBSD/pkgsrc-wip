@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.2 2007/02/26 20:00:44 lkundrak Exp $
+$NetBSD: patch-aa,v 1.3 2011/02/13 21:02:54 mwilhelmy Exp $
 
---- Makefile.orig	2006-03-04 02:02:01.000000000 +0100
-+++ Makefile
+--- Makefile.orig	2007-01-21 04:44:44.000000000 +0100
++++ Makefile	2011-02-07 18:18:22.000000000 +0100
 @@ -1,10 +1,4 @@
  
 -DESTDIR = /usr/local/xrdp
@@ -13,7 +13,7 @@ $NetBSD: patch-aa,v 1.2 2007/02/26 20:00:44 lkundrak Exp $
  all: world
  
  world: base
-@@ -34,11 +28,6 @@ clean:
+@@ -34,11 +28,6 @@
  	make -C xup clean
  
  install:
@@ -25,16 +25,14 @@ $NetBSD: patch-aa,v 1.2 2007/02/26 20:00:44 lkundrak Exp $
  	make -C vnc install
  	make -C libxrdp install
  	make -C xrdp install
-@@ -46,9 +35,9 @@ install:
+@@ -46,8 +35,8 @@
  	make -C sesman install
  	make -C xup install
  	make -C docs install
 -	if [ -d /etc/pam.d ]; then install instfiles/pam.d/sesman /etc/pam.d/sesman; fi
--	install instfiles/xrdpstart.sh $(DESTDIR)/xrdpstart.sh
 -	install instfiles/xrdp_control.sh $(DESTDIR)/xrdp_control.sh
-+	$(BSD_INSTALL_DATA) instfiles/pam.d/sesman $(DESTDIR)/share/examples/pam.d/sesman
-+	$(BSD_INSTALL_SCRIPT) instfiles/xrdpstart.sh $(DESTDIR)/bin/xrdpstart.sh
-+	$(BSD_INSTALL_SCRIPT) instfiles/xrdp_control.sh $(DESTDIR)/bin/xrdp_control.sh
++	$(BSD_INSTALL_SCRIPT) instfiles/xrdp_control.sh $(DESTDIR)$(BINDIR)/xrdp_control.sh
++	$(BSD_INSTALL_DATA) instfiles/pam.d/sesman $(DESTDIR)$(PAMDIR)/sesman
  
  installdeb:
- 	mkdir -p $(DESTDIRDEB)/usr/xrdp
+ 	mkdir -p $(DESTDIRDEB)/usr/lib/xrdp

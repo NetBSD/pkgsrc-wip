@@ -1,10 +1,10 @@
-$NetBSD: patch-ag,v 1.3 2007/02/27 13:15:22 lkundrak Exp $
+$NetBSD: patch-ag,v 1.4 2011/02/13 21:02:54 mwilhelmy Exp $
 
---- xrdp/Makefile.orig	2006-03-04 02:02:08.000000000 +0100
-+++ xrdp/Makefile
-@@ -5,40 +5,33 @@ XRDPOBJ = xrdp.o xrdp_process.o xrdp_lis
-           xrdp_login_wnd.o xrdp_interface.o \
-           list.o file.o os_calls.o thread_calls.o
+--- xrdp/Makefile.orig	2007-04-13 05:50:59.000000000 +0200
++++ xrdp/Makefile	2011-02-07 02:22:39.000000000 +0100
+@@ -6,21 +6,15 @@
+           list.o file.o os_calls.o thread_calls.o \
+           xrdp_mm.o
  
 -DESTDIR = /usr/local/xrdp
 -CFGDIR = /etc/xrdp
@@ -24,15 +24,11 @@ $NetBSD: patch-ag,v 1.3 2007/02/27 13:15:22 lkundrak Exp $
 -CC = gcc
 +LDFLAGS += -L/usr/gnu/lib -L../libxrdp -Wl,-rpath,.
 +LIBS = $(DLLIB) -lpthread -lxrdp
-+CPPFLAGS += -DSHAREDIR=\"$(DESTDIR)/share/xrdp\"
++CPPFLAGS += -DSHAREDIR=\"$(DESTDIR)$(SHAREDIR)/xrdp\"
  
  all: xrdp
  
- xrdp: $(XRDPOBJ)
- 	$(CC) $(LDFLAGS) -o xrdp $(XRDPOBJ) $(LIBS)
--	strip xrdp
- 
- clean:
+@@ -31,14 +25,14 @@
  	rm -f $(XRDPOBJ) xrdp
  
  install:
@@ -44,19 +40,19 @@ $NetBSD: patch-ag,v 1.3 2007/02/27 13:15:22 lkundrak Exp $
 -	install xrdp.ini $(CFGDIR)/xrdp.ini
 -	install rsakeys.ini $(CFGDIR)/rsakeys.ini
 -	install xrdp $(DESTDIR)/xrdp
-+	$(BSD_INSTALL_DATA) ad256.bmp $(DESTDIR)/share/xrdp/ad256.bmp
-+	$(BSD_INSTALL_DATA) xrdp256.bmp $(DESTDIR)/share/xrdp/xrdp256.bmp
-+	$(BSD_INSTALL_DATA) cursor0.cur $(DESTDIR)/share/xrdp/cursor0.cur
-+	$(BSD_INSTALL_DATA) cursor1.cur $(DESTDIR)/share/xrdp/cursor1.cur
-+	$(BSD_INSTALL_DATA) Tahoma-10.fv1 $(DESTDIR)/share/xrdp/Tahoma-10.fv1
-+	$(BSD_INSTALL_DATA) xrdp.ini $(CFGDIR)/xrdp.ini
-+	$(BSD_INSTALL_DATA) rsakeys.ini $(CFGDIR)/rsakeys.ini
-+	$(BSD_INSTALL_PROGRAM) xrdp $(DESTDIR)/bin/xrdp
++	$(BSD_INSTALL_DATA) ad256.bmp $(DESTDIR)$(SHAREDIR)/xrdp/ad256.bmp
++	$(BSD_INSTALL_DATA) xrdp256.bmp $(DESTDIR)$(SHAREDIR)/xrdp/xrdp256.bmp
++	$(BSD_INSTALL_DATA) cursor0.cur $(DESTDIR)$(SHAREDIR)/xrdp/cursor0.cur
++	$(BSD_INSTALL_DATA) cursor1.cur $(DESTDIR)$(SHAREDIR)/xrdp/cursor1.cur
++	$(BSD_INSTALL_DATA) Tahoma-10.fv1 $(DESTDIR)$(SHAREDIR)/xrdp/Tahoma-10.fv1
++	$(BSD_INSTALL_DATA) xrdp.ini $(DESTDIR)$(ETCDIR)/xrdp.ini
++	$(BSD_INSTALL_DATA) rsakeys.ini $(DESTDIR)$(ETCDIR)/rsakeys.ini
++	$(BSD_INSTALL_PROGRAM) xrdp $(DESTDIR)$(BINDIR)/xrdp
  
  installdeb:
- 	install ad256.bmp $(DESTDIRDEB)/usr/xrdp/ad256.bmp
-@@ -51,14 +44,14 @@ installdeb:
- 	install xrdp $(DESTDIRDEB)/usr/xrdp/xrdp
+ 	install ad256.bmp $(DESTDIRDEB)/usr/lib/xrdp/ad256.bmp
+@@ -51,14 +45,14 @@
+ 	install xrdp $(DESTDIRDEB)/usr/lib/xrdp/xrdp
  
  list.o: ../common/list.c
 -	$(CC) $(C_OS_FLAGS) ../common/list.c

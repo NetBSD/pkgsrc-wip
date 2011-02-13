@@ -1,7 +1,7 @@
-$NetBSD: patch-ad,v 1.3 2007/02/27 13:15:22 lkundrak Exp $
+$NetBSD: patch-ad,v 1.4 2011/02/13 21:02:54 mwilhelmy Exp $
 
---- rdp/Makefile.orig	2006-03-04 02:02:04.000000000 +0100
-+++ rdp/Makefile
+--- rdp/Makefile.orig	2006-08-07 08:03:17.000000000 +0200
++++ rdp/Makefile	2011-02-06 23:52:01.000000000 +0100
 @@ -2,21 +2,14 @@
  RDPOBJ = ssl_calls.o os_calls.o rdp.o rdp_tcp.o rdp_iso.o rdp_mcs.o rdp_sec.o \
           rdp_orders.o rdp_bitmap.o rdp_rdp.o rdp_lic.o
@@ -26,20 +26,20 @@ $NetBSD: patch-ad,v 1.3 2007/02/27 13:15:22 lkundrak Exp $
  
  all: rdp
  
-@@ -27,13 +20,13 @@ clean:
+@@ -27,13 +20,13 @@
  	rm -f $(RDPOBJ) librdp.so
  
  os_calls.o: ../common/os_calls.c
 -	$(CC) $(C_OS_FLAGS) ../common/os_calls.c
-+	$(CC)  $(CPPFLAGS) $(C_OS_FLAGS) ../common/os_calls.c
++	$(CC) $(CPPFLAGS) $(C_OS_FLAGS) ../common/os_calls.c
  
  ssl_calls.o: ../common/ssl_calls.c
 -	$(CC) $(C_OS_FLAGS) ../common/ssl_calls.c
-+	$(CC)  $(CPPFLAGS) $(C_OS_FLAGS) ../common/ssl_calls.c
++	$(CC) $(CPPFLAGS) $(C_OS_FLAGS) ../common/ssl_calls.c
  
  install:
 -	install librdp.so $(DESTDIR)/librdp.so
-+	$(BSD_INSTALL_LIB) librdp.so $(DESTDIR)/lib/librdp.so
++	$(BSD_INSTALL_LIB) librdp.so $(DESTDIR)$(LIBDIR)/librdp.so
  
  installdeb:
- 	install librdp.so $(DESTDIRDEB)/usr/xrdp/librdp.so
+ 	install librdp.so $(DESTDIRDEB)/usr/lib/xrdp/librdp.so

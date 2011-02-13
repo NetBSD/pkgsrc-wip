@@ -1,13 +1,13 @@
-$NetBSD: patch-al,v 1.1 2007/02/26 20:00:44 lkundrak Exp $
+$NetBSD: patch-al,v 1.2 2011/02/13 21:02:54 mwilhelmy Exp $
 
---- xrdp/xrdp_font.c.orig	2006-04-16 04:20:20.000000000 +0200
-+++ xrdp/xrdp_font.c
-@@ -79,7 +79,7 @@ xrdp_font_create(struct xrdp_wm* wm)
+--- xrdp/xrdp_font.c.orig	2007-01-12 07:47:18.000000000 +0300
++++ xrdp/xrdp_font.c	2011-02-01 16:52:12.000000000 +0300
+@@ -79,7 +79,7 @@
    self->wm = wm;
    make_stream(s);
-   init_stream(s, 8192);
+   init_stream(s, 8192 * 2);
 -  fd = g_file_open("Tahoma-10.fv1");
 +  fd = g_file_open(SHAREDIR"/Tahoma-10.fv1");
    if (fd != -1)
    {
-     b = g_file_read(fd, s->data, 8192);
+     b = g_file_read(fd, s->data, 8192 * 2);

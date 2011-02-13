@@ -1,9 +1,9 @@
-$NetBSD: patch-ac,v 1.3 2007/02/27 13:15:22 lkundrak Exp $
+$NetBSD: patch-ac,v 1.4 2011/02/13 21:02:54 mwilhelmy Exp $
 
---- libxrdp/Makefile.orig	2006-03-13 01:58:12.000000000 +0100
-+++ libxrdp/Makefile
-@@ -4,22 +4,16 @@ LIBXRDPOBJ = libxrdp.o xrdp_tcp.o xrdp_i
-              xrdp_bitmap_compress.o \
+--- libxrdp/Makefile.orig	2007-04-08 23:19:42.000000000 +0200
++++ libxrdp/Makefile	2011-02-06 23:48:16.000000000 +0100
+@@ -4,22 +4,15 @@
+              xrdp_bitmap_compress.o xrdp_channel.o \
               os_calls.o ssl_calls.o file.o
  
 -DESTDIR = /usr/local/xrdp
@@ -11,7 +11,7 @@ $NetBSD: patch-ac,v 1.3 2007/02/27 13:15:22 lkundrak Exp $
 -PIDDIR = /var/run
 -MANDIR = /usr/local/man
 -DOCDIR = /usr/doc/xrdp
- 
+-
  DEFINES = -DXRDP_CFG_FILE=\"$(CFGDIR)/xrdp.ini\" \
            -DXRDP_KEY_FILE=\"$(CFGDIR)/rsakeys.ini\"
  
@@ -27,21 +27,15 @@ $NetBSD: patch-ac,v 1.3 2007/02/27 13:15:22 lkundrak Exp $
  
  all: libxrdp
  
-@@ -29,23 +23,22 @@ static: $(LIBXRDPOBJ)
- 
- libxrdp: $(LIBXRDPOBJ)
- 	$(CC) $(LDFLAGS) -o libxrdp.so $(LIBXRDPOBJ) $(LIBS)
--	strip libxrdp.so
- 
- clean:
+@@ -34,17 +27,17 @@
  	rm -f $(LIBXRDPOBJ) libxrdp.a libxrdp.so
  
  install:
 -	install libxrdp.so $(DESTDIR)/libxrdp.so
-+	$(BSD_INSTALL_LIB) libxrdp.so $(DESTDIR)/lib/libxrdp.so
++	$(BSD_INSTALL_LIB) libxrdp.so $(DESTDIR)$(LIBDIR)/libxrdp.so
  
  installdeb:
- 	install libxrdp.so $(DESTDIRDEB)/usr/xrdp/libxrdp.so
+ 	install libxrdp.so $(DESTDIRDEB)/usr/lib/xrdp/libxrdp.so
  
  file.o: ../common/file.c
 -	$(CC) $(C_OS_FLAGS) ../common/file.c
