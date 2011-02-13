@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2010/07/23 06:00:47 asau Exp $
+@comment $NetBSD: PLIST,v 1.20 2011/02/13 21:40:32 asau Exp $
 bin/open-axiom
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/A1AGG-.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/A1AGG.${FASL}
@@ -94,6 +94,7 @@ lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/BINARY.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/BINDING.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/BITS.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/BMODULE.${FASL}
+lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/BOOLE-.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/BOOLE.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/BOOLEAN.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/BOP.${FASL}
@@ -1374,6 +1375,11 @@ lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/doc/help/system.help
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/doc/help/trace.help
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/doc/help/undo.help
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/doc/help/what.help
+lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include/open-axiom/config
+lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include/open-axiom/hash-table
+lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include/open-axiom/sexpr
+lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include/open-axiom/storage
+lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/include/open-axiom/string-pool
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/input/algaggr.input
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/input/algbrbf.input
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/input/algfacob.input
@@ -1759,10 +1765,10 @@ lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lib/htadd
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lib/hthits
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lib/htsearch
 ${x11}lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lib/hypertex
+lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lib/libOpenAxiom.a
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lib/libopen-axiom-core.a
 ${clisp}lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lib/libopen-axiom-core.so
 ${sbcl}lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lib/libopen-axiom-core.so
-lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lib/presea
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lib/session
 ${x11}lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lib/spadbuf
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/lib/spadclient
