@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2010/11/22 13:56:45 obache Exp $
+@comment $NetBSD: PLIST,v 1.10 2011/02/13 11:02:01 obache Exp $
 bin/trac-admin
 bin/tracd
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
@@ -78,6 +78,9 @@ ${PYSITELIB}/trac/db/util.pyo
 ${PYSITELIB}/trac/db_default.py
 ${PYSITELIB}/trac/db_default.pyc
 ${PYSITELIB}/trac/db_default.pyo
+${PYSITELIB}/trac/dist.py
+${PYSITELIB}/trac/dist.pyc
+${PYSITELIB}/trac/dist.pyo
 ${PYSITELIB}/trac/env.py
 ${PYSITELIB}/trac/env.pyc
 ${PYSITELIB}/trac/env.pyo
@@ -141,6 +144,7 @@ ${PYSITELIB}/trac/htdocs/js/messages/en_US.js
 ${PYSITELIB}/trac/htdocs/js/messages/eo.js
 ${PYSITELIB}/trac/htdocs/js/messages/es.js
 ${PYSITELIB}/trac/htdocs/js/messages/es_AR.js
+${PYSITELIB}/trac/htdocs/js/messages/fi.js
 ${PYSITELIB}/trac/htdocs/js/messages/fr.js
 ${PYSITELIB}/trac/htdocs/js/messages/he.js
 ${PYSITELIB}/trac/htdocs/js/messages/hu.js

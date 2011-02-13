@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2010/11/22 13:56:45 obache Exp $
+# $NetBSD: Makefile,v 1.14 2011/02/13 11:02:01 obache Exp $
 #
 
-DISTNAME=	Trac-0.12.1
+DISTNAME=	Trac-0.12.2
 PKGNAME=	${DISTNAME:tl}
 EGG_NAME=	${DISTNAME}
 CATEGORIES=	devel www
