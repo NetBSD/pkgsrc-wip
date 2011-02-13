@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2011/01/24 10:59:06 obache Exp $
+@comment $NetBSD: PLIST,v 1.6 2011/02/13 14:19:14 obache Exp $
 bin/mikutter
 share/applications/mikutter.desktop
 share/doc/mikutter/README
@@ -62,6 +62,8 @@ share/mikutter/core/mui/gtk_listlist.rb
 share/mikutter/core/mui/gtk_message_picker.rb
 share/mikutter/core/mui/gtk_mtk.rb
 share/mikutter/core/mui/gtk_mumble.rb
+share/mikutter/core/mui/gtk_mumble_select.rb
+share/mikutter/core/mui/gtk_mumble_vote.rb
 share/mikutter/core/mui/gtk_postbox.rb
 share/mikutter/core/mui/gtk_prioritybox.rb
 share/mikutter/core/mui/gtk_selectbox.rb
@@ -114,6 +116,4 @@ share/mikutter/core/utils.rb
 share/mikutter/core/watch.rb
 share/mikutter/mikutter.rb
 share/mikutter/plugin/WHATSTHIS
-share/mikutter/plugin/peropero.tar.gz
 @pkgdir share/mikutter/core/hatsunelisp
-@pkgdir share/mikutter/core/addon/addon
