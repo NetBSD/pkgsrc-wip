@@ -1,0 +1,32 @@
+--- SConstruct.orig	2010-12-08 09:33:20.000000000 -0500
++++ SConstruct	2011-02-13 19:13:45.000000000 -0500
+@@ -282,6 +282,7 @@
+ darwin = False
+ windows = False
+ freebsd = False
++netbsd = False
+ openbsd = False
+ solaris = False
+ force64 = not GetOption( "force64" ) is None
+@@ -580,6 +581,13 @@
+     env.Append( LIBPATH=[ "/usr/local/lib" ] )
+     env.Append( CPPDEFINES=[ "__freebsd__" ] )
+ 
++elif os.sys.platform.startswith( "netbsd" ):
++    nix = True
++    netbsd = True
++    env.Append( CPPPATH=[ "/usr/pkg/include" ] )
++    env.Append( LIBPATH=[ "/usr/pkg/lib" ] )
++    env.Append( CPPDEFINES=[ "__netbsd__" ] )
++
+ elif os.sys.platform.startswith( "openbsd" ):
+     nix = True
+     openbsd = True
+@@ -1012,7 +1020,7 @@
+             myCheckLib( "rt" , True )
+ 
+     # requires ports devel/libexecinfo to be installed
+-    if freebsd or openbsd:
++    if freebsd or netbsd or openbsd:
+         myCheckLib( "execinfo", True )
+         env.Append( LIBS=[ "execinfo" ] )

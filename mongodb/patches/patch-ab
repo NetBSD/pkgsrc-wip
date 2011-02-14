@@ -1,0 +1,19 @@
+--- docs/building.md.orig	2010-12-08 09:33:20.000000000 -0500
++++ docs/building.md	2011-02-13 19:14:03.000000000 -0500
+@@ -71,6 +71,16 @@
+   * devel/pcre
+   * lang/spidermonkey
+ 
++NETBSD
++--------------
++
++Install the following packages:
++
++  * devel/boost
++  * devel/libexecinfo
++  * devel/pcre
++  * lang/spidermonkey
++
+ 
+ Special Build Notes
+ --------------

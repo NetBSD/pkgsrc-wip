@@ -1,0 +1,10 @@
+--- util/goodies.h.orig	2010-12-08 09:33:20.000000000 -0500
++++ util/goodies.h	2011-02-13 19:17:54.000000000 -0500
+@@ -33,7 +33,7 @@
+         return s.str();
+     }
+ 
+-#if !defined(_WIN32) && !defined(NOEXECINFO) && !defined(__freebsd__) && !defined(__openbsd__) && !defined(__sun__)
++#if !defined(_WIN32) && !defined(NOEXECINFO) && !defined(__freebsd__) && !defined(__netbsd__) && !defined(__openbsd__) && !defined(__sun__)
+ 
+ } // namespace mongo
