@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.33 2011/01/18 15:33:14 asau Exp $
+@comment $NetBSD: PLIST,v 1.34 2011/02/14 13:45:13 asau Exp $
 bin/maxima
 bin/rmaxima
 bin/xmaxima
@@ -880,6 +880,8 @@ share/maxima/${PKGVERSION}/share/diffequations/phypgm.mac
 share/maxima/${PKGVERSION}/share/diffequations/pivtr.mac
 share/maxima/${PKGVERSION}/share/diffequations/pmain.mac
 share/maxima/${PKGVERSION}/share/draw/draw.lisp
+share/maxima/${PKGVERSION}/share/draw/drawutils.mac
+share/maxima/${PKGVERSION}/share/draw/drawutils.texi
 share/maxima/${PKGVERSION}/share/draw/grcommon.lisp
 share/maxima/${PKGVERSION}/share/draw/implicit3d.lisp
 share/maxima/${PKGVERSION}/share/draw/picture.lisp
@@ -982,6 +984,7 @@ share/maxima/${PKGVERSION}/share/lapack/blas/ztrmm.lisp
 share/maxima/${PKGVERSION}/share/lapack/blas/ztrmv.lisp
 share/maxima/${PKGVERSION}/share/lapack/blas/ztrsm.lisp
 share/maxima/${PKGVERSION}/share/lapack/blas/ztrsv.lisp
+share/maxima/${PKGVERSION}/share/lapack/dgemm.lisp
 share/maxima/${PKGVERSION}/share/lapack/dgesv.lisp
 share/maxima/${PKGVERSION}/share/lapack/eigensys.lisp
 share/maxima/${PKGVERSION}/share/lapack/lapack-lisp.system
