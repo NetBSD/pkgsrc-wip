@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2011/02/14 03:36:13 jafour1 Exp $
+# $NetBSD: Makefile,v 1.2 2011/02/14 04:46:10 jafour1 Exp $
 DISTNAME=	mongodb-src-r1.6.5
 CATEGORIES=	database
 MASTER_SITES=	http://downloads.mongodb.org/src
 
 MAINTAINER=	ober@netbsd.org
 HOMEPAGE=	http://mongodb.org/
-COMMENT=	MongoDB is a powerful,flexible, and scalable data store.
+COMMENT=	A NOSQL distributed document-oriented database
 EXTRACT_SUFX=	.tar.gz
 
 
@@ -29,15 +29,19 @@ DEPENDS+=       pcre:../../devel/pcre
 DEPENDS+=       libexecinfo:../../wip/libexecinfo
 DEPENDS+=       spidermonkey:../../lang/spidermonkey
 
-SCONS=			${PREFIX}/bin/scons
-SCONS_ARGS= ". --prefix=/usr/pkg"
-SCONS_INSTALL= "install"
+SCONS_BIN=			${PREFIX}/bin/scons
+SCONS_ARGS= "--prefix=/usr/pkg"
+SCONS_INSTALL_TARGET= "install"
+SCONS_TARGET=	all
+SCONS_ARGS= 	--prefix=${PREFIX}
+SCONS_ARGS+=	--full
+
 
 do-build:
-	cd ${WRKSRC} && ${SCONS} ${SCONS_ARGS}
+	cd ${WRKSRC} && ${SETENV} ${SCONS_BUILDENV} ${SCONS_BIN} ${SCONS_ENV} ${SCONS_ARGS} ${SCONS_TARGET}
 
 do-install:
-	cd ${WRKSRC} && ${SCONS} ${SCONS_ARGS} #{SCONS_INSTALL}
+	cd ${WRKSRC} && ${SETENV} ${SCONS_BUILDENV} ${SCONS_BIN} ${SCONS_ENV} ${SCONS_ARGS} ${SCONS_TARGET} ${SCONS_INSTALL_TARGET}
 
 .include "../../mk/bsd.pkg.mk"
 

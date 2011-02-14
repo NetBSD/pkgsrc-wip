@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2011/02/14 03:36:13 jafour1 Exp $
+$NetBSD: distinfo,v 1.2 2011/02/14 04:46:10 jafour1 Exp $
 
 SHA1 (mongodb-src-r1.6.5.tar.gz) = 4aed2da91377c2a5c8722c0c6873117014faf31a
 RMD160 (mongodb-src-r1.6.5.tar.gz) = de98b9558544eafb809131347b6a339c46f09732
@@ -9,3 +9,4 @@ SHA1 (patch-ac) = 717bcfc22ac8b691b06d610784f1f6f781b751d8
 SHA1 (patch-ad) = cf6e47280cccf2c49391023370269b13910edf3e
 SHA1 (patch-ae) = c38d46c2a0447c2a090a76bbb53ab2271876568c
 SHA1 (patch-af) = 808d81086789252a6bd43fd655e73c32fd0d9b9d
+SHA1 (patch-ag) = 11e6bbaad294826fe820d400ad3f64f9a04f3030
