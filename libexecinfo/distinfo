@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2011/02/14 01:00:30 jafour1 Exp $
+
+SHA1 (libexecinfo-1.1.tar.bz2) = a2330eae993880850a90ccfdc389a89cdd7f95ab
+RMD160 (libexecinfo-1.1.tar.bz2) = b2227d4095be0002185b667b9fde71cd876a4ed7
+Size (libexecinfo-1.1.tar.bz2) = 4841 bytes
+SHA1 (patch-aa) = f84ba3aadcd39238300ebb7bf5f747e3dfc370e6
+SHA1 (patch-ab) = 8776eaabf052bdc4f8a515ff5548b8e26294f444

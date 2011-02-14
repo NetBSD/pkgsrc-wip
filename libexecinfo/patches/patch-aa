@@ -1,0 +1,8 @@
+--- gen.py.orig	2011-02-13 19:43:48.000000000 -0500
++++ gen.py	2011-02-13 19:43:57.000000000 -0500
+@@ -1,4 +1,4 @@
+-#!/usr/local/bin/python
++#!/usr/pkg/bin/python
+ #
+ # Copyright (c) 2003 Maxim Sobolev <sobomax@FreeBSD.org>
+ # All rights reserved.

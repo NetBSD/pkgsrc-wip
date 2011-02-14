@@ -1,0 +1,11 @@
+--- execinfo.c.orig	2011-02-13 19:45:40.000000000 -0500
++++ execinfo.c	2011-02-13 19:45:57.000000000 -0500
+@@ -78,7 +78,7 @@
+     rval = malloc(clen);
+     if (rval == NULL)
+         return NULL;
+-    (char **)cp = &(rval[size]);
++    /* (char **)cp = &(rval[size]); */
+     for (i = 0; i < size; i++) {
+         if (dladdr(buffer[i], &info) != 0) {
+             if (info.dli_sname == NULL)
