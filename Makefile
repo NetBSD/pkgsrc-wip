@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4215 2011/02/12 12:23:31 cheusov Exp $
+# $Id: Makefile,v 1.4216 2011/02/14 21:24:44 christtrekker Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -500,12 +500,14 @@ SUBDIR+=	flexdump
 SUBDIR+=	flimp
 SUBDIR+=	flimsel
 SUBDIR+=	flpsed
+SUBDIR+=	fltk13
 SUBDIR+=	fluxspace
 SUBDIR+=	flv2mpeg4
 SUBDIR+=	flvmeta
 SUBDIR+=	flyback
 SUBDIR+=	fnord
 SUBDIR+=	fnteditfs
+SUBDIR+=	fntsample
 SUBDIR+=	fontedit
 SUBDIR+=	fonttosfnt
 SUBDIR+=	foo2zjs
