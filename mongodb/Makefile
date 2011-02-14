@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/02/14 04:46:10 jafour1 Exp $
+# $NetBSD: Makefile,v 1.3 2011/02/14 06:03:50 jafour1 Exp $
 DISTNAME=	mongodb-src-r1.6.5
 CATEGORIES=	database
 MASTER_SITES=	http://downloads.mongodb.org/src
@@ -35,7 +35,7 @@ SCONS_INSTALL_TARGET= "install"
 SCONS_TARGET=	all
 SCONS_ARGS= 	--prefix=${PREFIX}
 SCONS_ARGS+=	--full
-
+SCONS_ARGS+= 	--libpath=${LIBPATH}
 
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${SCONS_BUILDENV} ${SCONS_BIN} ${SCONS_ENV} ${SCONS_ARGS} ${SCONS_TARGET}
