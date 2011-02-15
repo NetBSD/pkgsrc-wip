@@ -1,12 +1,13 @@
 Suggested package updates
 =========================
 
+	o acroread9-9.4.1
 	o applewmproto-1.4.1
 	o argouml-0.24
 	o backintime-1.0.6
-	o bsnes-0.74
+	o bsnes-0.75
 	o cairo-java-1.0.8
-	o cclive-0.7.1
+	o cclive-0.7.2
 	o ccrypt-1.9
 	o chora-2.0.1
 	o cinelerra-4.2
@@ -22,7 +23,7 @@ Suggested package updates
 	o ecb-2.40
 	o editline-20100424.3.0
 	o emboss-base-6.0.1
-	o emelfm2-0.7.3
+	o emelfm2-0.7.5
 	o endeavour-3.1.3
 	o evolution-couchdb-0.4.4
 	o fakenes-0.5.7
@@ -34,6 +35,7 @@ Suggested package updates
 	o gcc43-4.3.4
 	o gcc45-4.5.1
 	o geant-4.9.4
+	o gemrb-0.6.3
 	o gforge-4.5.11
 	o glib-java-0.4.2
 	o globulation2-0.9.4
@@ -48,7 +50,7 @@ Suggested package updates
 	o gtkaml-0.4.1
 	o guichan-0.8.1
 	o guitone-0.9
-	o hitori-0.2.5
+	o hitori-0.2.6
 	o httrack-3.43
 	o hu-go-2.11
 	o hyena-0.3
@@ -70,7 +72,7 @@ Suggested package updates
 	o libgtk-java-2.10.2
 	o libuuid-1.41.14
 	o lincity-ng-2.0
-	o linphone-3.3.2
+	o linphone-3.4.0
 	o lirc-0.8.6
 	o lives-1.3.10
 	o llvm-2.8
@@ -81,7 +83,7 @@ Suggested package updates
 	o mixxx-1.8.0
 	o mpgedit-0.73dev2
 	o mupen64-0.5
-	o newsbeuter-2.3
+	o newsbeuter-2.4
 	o ogmrip-0.13.6
 	o openvrml-0.18.6
 	o osmose-0.9.1
@@ -98,7 +100,7 @@ Suggested package updates
 	o qtcreator-1.3.1
 	o rezound-0.12.3beta
 	o rosegarden-current-1.4.0
-	o rsyslog-5.6.2
+	o rsyslog-5.6.3
 	o samhain-2.8.0
 	o sflphone-0.7.2
 	o siege-2.70
@@ -116,7 +118,7 @@ Suggested package updates
 	o xclipboard-1.1.1
 	o xcowsay-1.3
 	o xcursor-themes-1.0.3
-	o xf86-video-geode-2.11.11
+	o xf86-video-geode-2.11.12
 	o xinetd-2.3.14
 	o xmms2-0.6
 	o zinf-2.2.5
