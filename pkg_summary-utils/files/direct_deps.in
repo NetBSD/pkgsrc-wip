@@ -9,7 +9,7 @@
 #
 # Usage: direct_deps [OPTIONS] [files...]
 # OPTIONS:
-#    -h|--help        display this screen
+#    -h               display this screen
 #    -d               generate summary for dependancies (DEPENDS)
 #    -D               generate summary for build dependancies (BUILD_DEPENDS)
 #    =p <filename>    already processed packages
@@ -23,6 +23,11 @@
 #use "power_getopt.awk"
 
 BEGIN {
+	if (getarg("h")){
+		print_help()
+		exitnow(0)
+	}
+
 	with_dep          = getarg("d")
 	with_bdep         = getarg("D")
 	processed_pkgs_fn = getarg("p")

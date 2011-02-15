@@ -40,12 +40,17 @@
 # usage: pkg_uniq_summary -h
 #       pkg_uniq_summary [OPTIONS] [files...]
 # OPTIONS:
-#   -h|--help    display this help
-#   -n           only PKGBASE is analysed
+#   -h      display this help
+#   -n      only PKGBASE is analysed
 #.end-str
 ############################################################
 
 BEGIN {
+	if (getarg("h")){
+		print_help()
+		exitnow(0)
+	}
+
 	skip       = 0
 	line_count = 0
 

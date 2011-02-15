@@ -54,7 +54,7 @@ usage: pkg_micro_src_summary [OPTIONS] [pkgpath1 pkgpath2 ...]
 OPTIONS:
   -h              display this help message
   -f <fields>     fields to be included to summary,
-                         PKGNAME and PKGPATH is the default
+                  PKGNAME and PKGPATH is the default
 EOF
 }
 

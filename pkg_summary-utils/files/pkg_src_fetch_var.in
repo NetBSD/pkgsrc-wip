@@ -86,10 +86,9 @@ pkg_src_fetch_var - hack for obtaining variable values from package,\n\
 \n\
 usage: pkg_src_fetch_var [OPTIONS] [files...]\n\
 OPTIONS:\n\
-  -h|--help                           display this help message\n\
-  -v|-f|--vars|--fields <varnames>\n\
-  -v|-f|--vars|--fields=<varnames>    list of variable names\n\
-                                      separated by space.\n\
+  -h                  display this help message\n\
+  -v|-f <varnames>    list of variable names\n\
+                      separated by space.\n\
                PKGNAME and PKGPATH are fetched by default\n\
 PKGPATHs are read from files or stdin, one PKGPATH per line\n\
 " > "/dev/stderr"
@@ -97,10 +96,6 @@ PKGPATHs are read from files or stdin, one PKGPATH per line\n\
 
 BEGIN {
 	# options and fields
-	long_opts ["help"]   = "h"
-	long_opts ["fields"] = "f"
-	long_opts ["vars"]   = "v"
-
 	while (getopt("hf:v:s")){
 		if (optopt == "h"){
 			usage()

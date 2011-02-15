@@ -36,12 +36,19 @@
 ############################################################
 #.begin-str help
 # pkg_assignments2pkgpath - makes an ASSIGNMENTS section a part of PKGPATH
-# usage: pkg_assignments2pkgpath -h|--help\n\
+# usage: pkg_assignments2pkgpath -h\n\
 #        pkg_assignments2pkgpath [OPTIONS] [files...]
 # OPTIONS:
-#   -h|--help            display this help
+#   -h        display this help
 #.end-str
 ############################################################
+
+BEGIN {
+	if (getarg("h")){
+		print_help()
+		exitnow(0)
+	}
+}
 
 $0 ~ /^PKGPATH=/ {
 	pkgpath = $0

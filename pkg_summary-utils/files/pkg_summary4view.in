@@ -40,7 +40,7 @@
 # pkg_summary4view - converts pkg_summary(5) to human readable format
 # usage: pkg_summary4view [OPTIONS] [files...]
 # OPTIONS:
-#   -h|--help            display this help
+#   -h       display this help
 #.end-str
 ############################################################
 
@@ -63,6 +63,11 @@ function resort_D0 (arr, remap,                i){
 }
 
 BEGIN {
+	if (getarg("h")){
+		print_help()
+		exitnow(0)
+	}
+
 	special ["DESCRIPTION"] = 0
 	special ["PLIST"]       = 0
 	special ["PROVIDES"]    = 0

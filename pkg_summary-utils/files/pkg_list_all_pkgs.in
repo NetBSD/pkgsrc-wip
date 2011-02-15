@@ -38,7 +38,7 @@ pkg_list_all_pkgs - outputs all packages in pkgsrc tree
 
 usage: pkg_list_all_pkgs [OPTIONS]
 OPTIONS:
-  -h              display this help message
+  -h     display this help message
 EOF
 }
 

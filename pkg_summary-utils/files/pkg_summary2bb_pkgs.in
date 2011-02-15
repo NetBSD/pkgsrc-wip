@@ -49,11 +49,16 @@
 # usage: pkg_summary2bb_pkgs -h
 #       pkg_summary2bb_pkgs [OPTIONS] file1 [file2...]
 # OPTIONS:
-#   -h|--help            display this help
+#   -h        display this help
 #.end-str
 ############################################################
 
 BEGIN {
+	if (getarg("h")){
+		print_help()
+		exitnow(0)
+	}
+
 	# find problematic packages
 	for (i=1; i < ARGC; ++i){
 		if (ARGV [i] == "") continue

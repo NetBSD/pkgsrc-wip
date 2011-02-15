@@ -54,30 +54,30 @@ usage:
   pkg_src_summary -s [OPTIONS]
   pkg_src_summary -i [OPTIONS]
 OPTIONS:
-  -h                     display this help message
-  -p                     generate PLIST using 'bmake plist'
-  -i                     generate src_summary for the installed packages only,
-                         do not read list of packages from stdin and
-                         from pkgpathN arguments
-  -f <fields>            list of fields (separated by space or comma)
-                         to be included to summary,
-                         by default FULL summary is generated
-  -s                     ready for use as paexec slave/remote program
-                         (used internally for generating summary in parallel
-                          when PSS_SLAVES is set)
-  -a <fields>            add the specified fields to the list
-                               of default ones
-  -r <fields>            remove the specified fields from the list
-                               of default ones
-  -b                  add BOOTSTRAP_DEPENDS to BUILD_DEPENDS
-  -l                  add library dependencies (bl3.mk) to BUILD_DEPENDS
-  -d                  also generates summary for dependancies (DEPENDS)
-  -D                  also generates summary for dependancies (BUILD_DEPENDS)
-  -A                  implies -d and -D
-  -m                  generate ASSIGNMENTS field
-                      for multi-variant packages
-  -M                  implies -m and move/add ASSIGNMENTS to PKGPATH field
-  -G                  for debugging
+  -h              display this help message
+  -p              generate PLIST using 'bmake plist'
+  -i              generate src_summary for the installed packages only,
+                  do not read list of packages from stdin and
+                  from pkgpathN arguments
+  -f <fields>     list of fields (separated by space or comma)
+                  to be included to summary,
+                  by default FULL summary is generated
+  -s              ready for use as paexec slave/remote program
+                  (used internally for generating summary in parallel
+                  when PSS_SLAVES is set)
+  -a <fields>     add the specified fields to the list
+                             of default ones
+  -r <fields>     remove the specified fields from the list
+                             of default ones
+  -b              add BOOTSTRAP_DEPENDS to BUILD_DEPENDS
+  -l              add library dependencies (bl3.mk) to BUILD_DEPENDS
+  -d              also generates summary for dependancies (DEPENDS)
+  -D              also generates summary for dependancies (BUILD_DEPENDS)
+  -A              implies -d and -D
+  -m              generate ASSIGNMENTS field
+                  for multi-variant packages
+  -M              implies -m and move/add ASSIGNMENTS to PKGPATH field
+  -G              for debugging
 EOF
 }
 

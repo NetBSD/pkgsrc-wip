@@ -37,7 +37,7 @@
 #
 # usage: pkg_subgraph_deps [OPTIONS] [files...]
 # OPTIONS:
-#    -h|--help    display this screen
+#    -h           display this screen
 #    =f <file>    list of packages, one package per line
 #    =p <pkgs>    list of packages separated by space character
 #    -r           output dependencies
@@ -58,6 +58,11 @@
 #.end-str
 
 BEGIN {
+	if (getarg("h")){
+		print_help()
+		exitnow(0)
+	}
+
 	fn         = getarg("f")
 	pkgs       = getarg("p")
 	opt_deps   = getarg("r")

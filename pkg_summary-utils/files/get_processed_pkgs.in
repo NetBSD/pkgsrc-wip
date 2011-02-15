@@ -13,8 +13,15 @@
 #    <bad_assignments> are rejected ones from _INHER_ASSIGNS_REJ.
 # usage: get_process_pkgs [OPTIONS] [files...]
 # OPTIONS:
-#  -h|--help           display this screen
+#  -h       display this screen
 #.end-str
+
+BEGIN {
+	if (getarg("h")){
+		print_help()
+		exitnow(0)
+	}
+}
 
 NF == 0 {
 	if (assigns != "")

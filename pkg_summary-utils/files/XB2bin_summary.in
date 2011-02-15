@@ -37,13 +37,18 @@
 # XB2bin_summary - converts output of 'pkg_info -XB' to bin_summary
 # Usage: XB2bin_summary [OPTIONS] [files...]
 # OPTIONS:
-#  -h|--help         display this help
+#  -h                display this help
 #  =a <fields>       add specified fields to the output
 #  =f <fields>       output only specified fields
 #  =r <fields>       remove specified fields
 #.end-str
 
 BEGIN {
+	if (getarg("h")){
+		print_help()
+		exitnow(0)
+	}
+
 	add_fields_str=getarg("a")
 	gsub(/,/, " ", add_fields_str)
 	cnt=split(add_fields_str, arr)

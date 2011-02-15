@@ -1336,14 +1336,6 @@ cmp 'pkg_summary4view #2' \
 usage: pkg_summary4view [OPTIONS] [files...]
 '
 
-pkg_summary4view --help 2>&1 | grep pkg_summary4view | grep summary4view |
-cmp 'pkg_summary4view #3' \
-'pkg_summary4view - converts pkg_summary(5) to human readable format
-usage: pkg_summary4view [OPTIONS] [files...]
-'
-
-
-
 # pkg_uniq_summary
 pkg_uniq_summary src_summary3.txt |
 cmp 'pkg_uniq_summary #1' \
@@ -1358,13 +1350,6 @@ PKGPATH=wip/distbb:OPT=1,OPT2=3
 
 pkg_uniq_summary -h 2>&1     | grep pkg_uniq_summary |
 cmp 'pkg_uniq_summary #2' \
-'pkg_uniq_summary - filter out repeated summaries.
-usage: pkg_uniq_summary -h
-      pkg_uniq_summary [OPTIONS] [files...]
-'
-
-pkg_uniq_summary --help 2>&1 | grep pkg_uniq_summary |
-cmp 'pkg_uniq_summary #3' \
 'pkg_uniq_summary - filter out repeated summaries.
 usage: pkg_uniq_summary -h
       pkg_uniq_summary [OPTIONS] [files...]
@@ -1837,19 +1822,9 @@ pkg_assignments2pkgpath -h 2>&1 |
 grep pkg_assignments2pkgpath |
 cmp 'pkg_assignments2pkgpath #1' \
 'pkg_assignments2pkgpath - makes an ASSIGNMENTS section a part of PKGPATH
-usage: pkg_assignments2pkgpath -h|--help\n\
+usage: pkg_assignments2pkgpath -h\n\
        pkg_assignments2pkgpath [OPTIONS] [files...]
 '
-
-pkg_assignments2pkgpath --help 2>&1 |
-grep pkg_assignments2pkgpath |
-cmp 'pkg_assignments2pkgpath #2' \
-'pkg_assignments2pkgpath - makes an ASSIGNMENTS section a part of PKGPATH
-usage: pkg_assignments2pkgpath -h|--help\n\
-       pkg_assignments2pkgpath [OPTIONS] [files...]
-'
-
-
 
 # pkg_src_fetch_var
 echo x11/xxkb | pkg_src_fetch_var -f 'PKGNAME PKGPATH MAINTAINER' |
@@ -1863,19 +1838,6 @@ normalize_version |
 cmp 'pkg_src_fetch_var #2' \
 '+	xxkb-1.11	x11/xxkb	vle@gmx.net
 '
-
-echo x11/xxkb | pkg_src_fetch_var --vars='PKGNAME PKGPATH MAINTAINER' |
-normalize_version |
-cmp 'pkg_src_fetch_var #3' \
-'+	xxkb-1.11	x11/xxkb	vle@gmx.net
-'
-
-echo x11/xxkb | pkg_src_fetch_var --fields 'PKGNAME PKGPATH MAINTAINER' |
-normalize_version |
-cmp 'pkg_src_fetch_var #4' \
-'+	xxkb-1.11	x11/xxkb	vle@gmx.net
-'
-
 
 # pkg_micro_src_summary
 pkgs="`sed -n 's/^PKGPATH=//p' src_summary.txt`"

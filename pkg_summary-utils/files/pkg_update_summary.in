@@ -39,16 +39,16 @@ pkg_update_summary - updates pkg_summary(5) efficiently
 
 usage: pkg_update_summary [OPTIONS] summary_file bin_pkg_dir [decomp comp]
 OPTIONS:
-  -h             display this help message
-  -r             keeps only latest version for each pkgpath:pkgbase pair
+  -h      display this help message
+  -r      keeps only latest version for each pkgpath:pkgbase pair
 EOF
 }
 
 refresh=cat
 process_args (){
     alt_getopt \
-	'h help'      'usage; exit 0' \
-	'r refresh'   'refresh=pkg_refresh_summary' \
+	'h'      'usage; exit 0' \
+	'r'   'refresh=pkg_refresh_summary' \
 	-- "$@"
 }
 cmds=`process_args "$@"`
