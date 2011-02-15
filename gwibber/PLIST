@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/11/24 09:32:26 ryo-on Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/02/15 20:57:52 ryo-on Exp $
 bin/gwibber
 bin/gwibber-accounts
 bin/gwibber-error
@@ -294,10 +294,25 @@ share/gwibber/ui/icons/streams/24x24/list.png
 share/gwibber/ui/icons/streams/24x24/lists.png
 share/gwibber/ui/icons/streams/24x24/messages.png
 share/gwibber/ui/icons/streams/24x24/private.png
+share/gwibber/ui/icons/streams/24x24/public.png
 share/gwibber/ui/icons/streams/24x24/replies.png
 share/gwibber/ui/icons/streams/24x24/search.png
 share/gwibber/ui/icons/streams/24x24/sent.png
 share/gwibber/ui/icons/streams/24x24/user.png
+share/gwibber/ui/icons/streams/favorites.png
+share/gwibber/ui/icons/streams/group.png
+share/gwibber/ui/icons/streams/home.png
+share/gwibber/ui/icons/streams/images.png
+share/gwibber/ui/icons/streams/list.png
+share/gwibber/ui/icons/streams/lists.png
+share/gwibber/ui/icons/streams/messages.png
+share/gwibber/ui/icons/streams/private.png
+share/gwibber/ui/icons/streams/public.png
+share/gwibber/ui/icons/streams/replies.png
+share/gwibber/ui/icons/streams/search.png
+share/gwibber/ui/icons/streams/sent.png
+share/gwibber/ui/icons/streams/thread.png
+share/gwibber/ui/icons/streams/user.png
 share/gwibber/ui/progress.gif
 share/gwibber/ui/templates/base.mako
 share/gwibber/ui/templates/css.mako
