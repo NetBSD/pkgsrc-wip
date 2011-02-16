@@ -1,0 +1,3 @@
+The compiler itself compiles, but the standard library isn't ported.
+
+Installation hasn't been done yet, so the PLIST is empty.
