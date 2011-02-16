@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4218 2011/02/16 11:18:31 ryo-on Exp $
+# $Id: Makefile,v 1.4219 2011/02/16 11:28:52 ryo-on Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -458,6 +458,7 @@ SUBDIR+=	es40-firmware
 SUBDIR+=	esdl
 SUBDIR+=	esmart
 SUBDIR+=	ethtool
+SUBDIR+=	etm
 SUBDIR+=	etoile
 SUBDIR+=	etoile-core
 SUBDIR+=	etoile-services
@@ -1502,6 +1503,7 @@ SUBDIR+=	notify-sharp
 SUBDIR+=	notmuch
 SUBDIR+=	nsc2ke
 SUBDIR+=	nsp
+SUBDIR+=	nts
 SUBDIR+=	nullpop
 SUBDIR+=	nuppelvideo
 SUBDIR+=	nuttcp
