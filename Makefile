@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4217 2011/02/15 20:53:39 ryo-on Exp $
+# $Id: Makefile,v 1.4218 2011/02/16 11:18:31 ryo-on Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -583,6 +583,18 @@ SUBDIR+=	ghc-core
 SUBDIR+=	ghemical
 SUBDIR+=	giggle
 SUBDIR+=	gimmie
+SUBDIR+=	gimp-docs-de
+SUBDIR+=	gimp-docs-en
+SUBDIR+=	gimp-docs-es
+SUBDIR+=	gimp-docs-fr
+SUBDIR+=	gimp-docs-it
+SUBDIR+=	gimp-docs-ko
+SUBDIR+=	gimp-docs-nl
+SUBDIR+=	gimp-docs-nn
+SUBDIR+=	gimp-docs-pl
+SUBDIR+=	gimp-docs-ru
+SUBDIR+=	gimp-docs-sv
+SUBDIR+=	gimp-docs-zn_CN
 SUBDIR+=	gimp-high-pass-filter
 SUBDIR+=	git
 SUBDIR+=	givaro
