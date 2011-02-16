@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.14 2010/12/07 19:51:46 thomasklausner Exp $
+$NetBSD: patch-aa,v 1.15 2011/02/16 17:19:45 thomasklausner Exp $
+
+Build fix, accepted by upstream.
 
 --- src/core-impl/collections/playdarcollection/CMakeLists.txt.orig	2010-12-05 21:08:02.000000000 +0000
 +++ src/core-impl/collections/playdarcollection/CMakeLists.txt
