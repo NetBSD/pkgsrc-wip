@@ -1,0 +1,10 @@
+etm is an acronym for Event and Task Manager. It provides a simple,
+intuitive format for using plain text files to store data, a command
+line interface for viewing stored information in a variety of
+convenient ways and a cross-platform, wx(python)-based GUI for
+creating and modifying items as well as viewing them. Displayed
+items can be grouped by date, context, keyword or project and can
+be filtered in various ways. A display of busy and free times is
+also supported as is a ledger view of time spent that is suitable
+for client billing. Alarms are supported for events and repetition
+for both events and tasks in a powerful and flexible manner.
