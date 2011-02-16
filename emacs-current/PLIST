@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.101 2011/01/16 06:22:53 makoto Exp $
+@comment $NetBSD: PLIST,v 1.102 2011/02/16 02:40:20 makoto Exp $
 bin/ctags
 bin/ebrowse
 bin/emacs
@@ -882,6 +882,7 @@ share/emacs/${PKGVERSION}/etc/srecode/template.srt
 share/emacs/${PKGVERSION}/etc/srecode/test.srt
 share/emacs/${PKGVERSION}/etc/srecode/texi.srt
 share/emacs/${PKGVERSION}/etc/srecode/wisent.srt
+share/emacs/${PKGVERSION}/etc/themes/light-blue-theme.el
 share/emacs/${PKGVERSION}/etc/themes/tango-dark-theme.el
 share/emacs/${PKGVERSION}/etc/themes/tango-theme.el
 share/emacs/${PKGVERSION}/etc/themes/tsdh-dark-theme.el
@@ -914,30 +915,23 @@ share/emacs/${PKGVERSION}/etc/yow.lines
 share/emacs/${PKGVERSION}/leim/ja-dic/ja-dic.el.gz
 share/emacs/${PKGVERSION}/leim/ja-dic/ja-dic.elc
 share/emacs/${PKGVERSION}/leim/leim-list.el
-share/emacs/${PKGVERSION}/leim/quail/4Corner.el.gz
-share/emacs/${PKGVERSION}/leim/quail/4Corner.elc
-share/emacs/${PKGVERSION}/leim/quail/ARRAY30.el.gz
-share/emacs/${PKGVERSION}/leim/quail/ARRAY30.elc
+share/emacs/${PKGVERSION}/leim/quail/4Corner.el
+share/emacs/${PKGVERSION}/leim/quail/ARRAY30.el
 share/emacs/${PKGVERSION}/leim/quail/CCDOSPY.el.gz
 share/emacs/${PKGVERSION}/leim/quail/CCDOSPY.elc
 share/emacs/${PKGVERSION}/leim/quail/CTLau-b5.el.gz
 share/emacs/${PKGVERSION}/leim/quail/CTLau-b5.elc
 share/emacs/${PKGVERSION}/leim/quail/CTLau.el.gz
 share/emacs/${PKGVERSION}/leim/quail/CTLau.elc
-share/emacs/${PKGVERSION}/leim/quail/ECDICT.el.gz
-share/emacs/${PKGVERSION}/leim/quail/ECDICT.elc
-share/emacs/${PKGVERSION}/leim/quail/ETZY.el.gz
-share/emacs/${PKGVERSION}/leim/quail/ETZY.elc
-share/emacs/${PKGVERSION}/leim/quail/PY-b5.el.gz
-share/emacs/${PKGVERSION}/leim/quail/PY-b5.elc
+share/emacs/${PKGVERSION}/leim/quail/ECDICT.el
+share/emacs/${PKGVERSION}/leim/quail/ETZY.el
+share/emacs/${PKGVERSION}/leim/quail/PY-b5.el
 share/emacs/${PKGVERSION}/leim/quail/PY.el.gz
 share/emacs/${PKGVERSION}/leim/quail/PY.elc
-share/emacs/${PKGVERSION}/leim/quail/Punct-b5.el.gz
-share/emacs/${PKGVERSION}/leim/quail/Punct-b5.elc
+share/emacs/${PKGVERSION}/leim/quail/Punct-b5.el
 share/emacs/${PKGVERSION}/leim/quail/Punct.el.gz
 share/emacs/${PKGVERSION}/leim/quail/Punct.elc
-share/emacs/${PKGVERSION}/leim/quail/QJ-b5.el.gz
-share/emacs/${PKGVERSION}/leim/quail/QJ-b5.elc
+share/emacs/${PKGVERSION}/leim/quail/QJ-b5.el
 share/emacs/${PKGVERSION}/leim/quail/QJ.el.gz
 share/emacs/${PKGVERSION}/leim/quail/QJ.elc
 share/emacs/${PKGVERSION}/leim/quail/SW.el.gz
@@ -946,8 +940,7 @@ share/emacs/${PKGVERSION}/leim/quail/TONEPY.el.gz
 share/emacs/${PKGVERSION}/leim/quail/TONEPY.elc
 share/emacs/${PKGVERSION}/leim/quail/ZIRANMA.el.gz
 share/emacs/${PKGVERSION}/leim/quail/ZIRANMA.elc
-share/emacs/${PKGVERSION}/leim/quail/ZOZY.el.gz
-share/emacs/${PKGVERSION}/leim/quail/ZOZY.elc
+share/emacs/${PKGVERSION}/leim/quail/ZOZY.el
 share/emacs/${PKGVERSION}/leim/quail/arabic.el.gz
 share/emacs/${PKGVERSION}/leim/quail/arabic.elc
 share/emacs/${PKGVERSION}/leim/quail/croatian.el.gz
@@ -1756,10 +1749,6 @@ share/emacs/${PKGVERSION}/lisp/emulation/edt.el.gz
 share/emacs/${PKGVERSION}/lisp/emulation/edt.elc
 share/emacs/${PKGVERSION}/lisp/emulation/keypad.el.gz
 share/emacs/${PKGVERSION}/lisp/emulation/keypad.elc
-share/emacs/${PKGVERSION}/lisp/emulation/pc-mode.el.gz
-share/emacs/${PKGVERSION}/lisp/emulation/pc-mode.elc
-share/emacs/${PKGVERSION}/lisp/emulation/pc-select.el.gz
-share/emacs/${PKGVERSION}/lisp/emulation/pc-select.elc
 share/emacs/${PKGVERSION}/lisp/emulation/tpu-edt.el.gz
 share/emacs/${PKGVERSION}/lisp/emulation/tpu-edt.elc
 share/emacs/${PKGVERSION}/lisp/emulation/tpu-extras.el.gz
@@ -2654,8 +2643,6 @@ share/emacs/${PKGVERSION}/lisp/net/hmac-def.el.gz
 share/emacs/${PKGVERSION}/lisp/net/hmac-def.elc
 share/emacs/${PKGVERSION}/lisp/net/hmac-md5.el.gz
 share/emacs/${PKGVERSION}/lisp/net/hmac-md5.elc
-share/emacs/${PKGVERSION}/lisp/net/imap-hash.el.gz
-share/emacs/${PKGVERSION}/lisp/net/imap-hash.elc
 share/emacs/${PKGVERSION}/lisp/net/imap.el.gz
 share/emacs/${PKGVERSION}/lisp/net/imap.elc
 share/emacs/${PKGVERSION}/lisp/net/ldap.el.gz
@@ -2718,8 +2705,6 @@ share/emacs/${PKGVERSION}/lisp/net/tramp-gvfs.el.gz
 share/emacs/${PKGVERSION}/lisp/net/tramp-gvfs.elc
 share/emacs/${PKGVERSION}/lisp/net/tramp-gw.el.gz
 share/emacs/${PKGVERSION}/lisp/net/tramp-gw.elc
-share/emacs/${PKGVERSION}/lisp/net/tramp-imap.el.gz
-share/emacs/${PKGVERSION}/lisp/net/tramp-imap.elc
 share/emacs/${PKGVERSION}/lisp/net/tramp-loaddefs.el
 share/emacs/${PKGVERSION}/lisp/net/tramp-sh.el.gz
 share/emacs/${PKGVERSION}/lisp/net/tramp-sh.elc
@@ -2818,6 +2803,10 @@ share/emacs/${PKGVERSION}/lisp/obsolete/old-whitespace.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/old-whitespace.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/options.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/options.elc
+share/emacs/${PKGVERSION}/lisp/obsolete/pc-mode.el.gz
+share/emacs/${PKGVERSION}/lisp/obsolete/pc-mode.elc
+share/emacs/${PKGVERSION}/lisp/obsolete/pc-select.el.gz
+share/emacs/${PKGVERSION}/lisp/obsolete/pc-select.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/pgg-def.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/pgg-def.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/pgg-gpg.el.gz
@@ -2836,6 +2825,8 @@ share/emacs/${PKGVERSION}/lisp/obsolete/s-region.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/s-region.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/scribe.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/scribe.elc
+share/emacs/${PKGVERSION}/lisp/obsolete/spell.el.gz
+share/emacs/${PKGVERSION}/lisp/obsolete/spell.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/sregex.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/sregex.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/swedish.el.gz
@@ -3492,8 +3483,6 @@ share/emacs/${PKGVERSION}/lisp/textmodes/rst.el.gz
 share/emacs/${PKGVERSION}/lisp/textmodes/rst.elc
 share/emacs/${PKGVERSION}/lisp/textmodes/sgml-mode.el.gz
 share/emacs/${PKGVERSION}/lisp/textmodes/sgml-mode.elc
-share/emacs/${PKGVERSION}/lisp/textmodes/spell.el.gz
-share/emacs/${PKGVERSION}/lisp/textmodes/spell.elc
 share/emacs/${PKGVERSION}/lisp/textmodes/table.el.gz
 share/emacs/${PKGVERSION}/lisp/textmodes/table.elc
 share/emacs/${PKGVERSION}/lisp/textmodes/tex-mode.el.gz

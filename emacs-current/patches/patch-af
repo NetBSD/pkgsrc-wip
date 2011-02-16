@@ -1,0 +1,14 @@
+$NetBSD: patch-af,v 1.1 2011/02/16 02:40:20 makoto Exp $
+  To avoid the check:
+    ERROR: [check-portability.awk]
+--- test/indent/shell.sh.orig	2011-02-16 02:00:00.000000000 +0000
++++ test/indent/shell.sh
+@@ -70,7 +70,7 @@ help2
+ EOF2
+ }
+ bar () {
+-    if [ $# == 0 ]; then
++    if [ $# = 0 ]; then
+         while
+             f                   # KNOWN INDENT BUG
+         do
