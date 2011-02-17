@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2010/02/02 06:24:13 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.3 2011/02/17 14:58:38 phonohawk Exp $
 lib/uniplate-${PKGVERSION}/${HASKELL_VERSION}/Data/Generics/Biplate.hi
 lib/uniplate-${PKGVERSION}/${HASKELL_VERSION}/Data/Generics/Biplate.p_hi
 lib/uniplate-${PKGVERSION}/${HASKELL_VERSION}/Data/Generics/Compos.hi
@@ -33,6 +33,8 @@ lib/uniplate-${PKGVERSION}/${HASKELL_VERSION}/Data/Generics/Uniplate/Operations.
 lib/uniplate-${PKGVERSION}/${HASKELL_VERSION}/Data/Generics/Uniplate/Operations.p_hi
 lib/uniplate-${PKGVERSION}/${HASKELL_VERSION}/Data/Generics/Uniplate/Typeable.hi
 lib/uniplate-${PKGVERSION}/${HASKELL_VERSION}/Data/Generics/Uniplate/Typeable.p_hi
+lib/uniplate-${PKGVERSION}/${HASKELL_VERSION}/Data/Generics/Uniplate/Zipper.hi
+lib/uniplate-${PKGVERSION}/${HASKELL_VERSION}/Data/Generics/Uniplate/Zipper.p_hi
 lib/uniplate-${PKGVERSION}/${HASKELL_VERSION}/Data/Generics/UniplateOn.hi
 lib/uniplate-${PKGVERSION}/${HASKELL_VERSION}/Data/Generics/UniplateOn.p_hi
 lib/uniplate-${PKGVERSION}/${HASKELL_VERSION}/Data/Generics/UniplateStr.hi
