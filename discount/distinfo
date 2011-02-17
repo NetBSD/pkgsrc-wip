@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/10/26 15:14:46 zecrazytux Exp $
+$NetBSD: distinfo,v 1.2 2011/02/17 21:01:41 zecrazytux Exp $
 
-SHA1 (discount-2.0.1.tar.gz) = 518990e3131984bd2e2552c68d5ab39b14ad5425
-RMD160 (discount-2.0.1.tar.gz) = fbfe6aece74617e5a97d53a360ca7147a06071f1
-Size (discount-2.0.1.tar.gz) = 94129 bytes
+SHA1 (discount-2.0.6.tar.bz2) = 9665d21b1454d35aaf90133dd878e6f0492ef075
+RMD160 (discount-2.0.6.tar.bz2) = 47f5f98370180dfc1b35d8b91412f94e4d14641f
+Size (discount-2.0.6.tar.bz2) = 79382 bytes
