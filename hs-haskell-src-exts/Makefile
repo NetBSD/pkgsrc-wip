@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2010/05/12 04:12:32 phonohawk Exp $
+# $NetBSD: Makefile,v 1.6 2011/02/17 14:48:14 phonohawk Exp $
 #
 
-DISTNAME=	haskell-src-exts-1.9.0
+DISTNAME=	haskell-src-exts-1.10.1
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
