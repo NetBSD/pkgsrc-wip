@@ -1,5 +1,16 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/03/09 17:03:40 jihbed Exp $
+$NetBSD: distinfo,v 1.2 2011/02/17 13:19:17 ftigeot Exp $
 
 SHA1 (libtextcat-2.2.tar.gz) = e98d7149d6a20fdbb58cc0b79cb5e3f95ae304e4
 RMD160 (libtextcat-2.2.tar.gz) = 2058bab6642460fdaee13993dd05da29aa516efa
 Size (libtextcat-2.2.tar.gz) = 540999 bytes
+SHA1 (patch-src_Makefile.in) = d7e39583302bb0a0a6e3045b2b81291ce5a56f6f
+SHA1 (patch-src_common.c) = 5c345fef52cfb24f0f1bcf9593afd37a0db5f839
+SHA1 (patch-src_common.h) = be4924f93cd3328e1dec376bfec328c3af133df4
+SHA1 (patch-src_constants.h) = f44bdd54c36e1d50f6509d3783751fc951fa5836
+SHA1 (patch-src_fingerprint.c) = 9e2c83704e5b95330baf8b87457b329d56832667
+SHA1 (patch-src_fingerprint.h) = 5d71bc25eb9fcabe9ee5091b9937d589a5ed79f4
+SHA1 (patch-src_libtextcat.map) = b0767c357258778fda34c9f99415f8a1290631a1
+SHA1 (patch-src_textcat.c) = 8d80af1bca14e7a0ee47d7ea70adffaf7e21ddc9
+SHA1 (patch-src_textcat.h) = 64173334742a2f620af22f825814577fb95d5b18
+SHA1 (patch-src_utf8misc.c) = df5c892aed1c266d4f8ef2e3681acecdf2378a80
+SHA1 (patch-src_utf8misc.h) = 39fa345b8f9a8b7536e1d1d69f3535b5c2e4779f

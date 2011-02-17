@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2010/07/09 20:53:18 jihbed Exp $
+# $NetBSD: Makefile,v 1.6 2011/02/17 13:19:17 ftigeot Exp $
 #
 
 DISTNAME=	libtextcat-2.2
+PKGREVISION=    1
 CATEGORIES=	textproc
 MASTER_SITES=	http://software.wise-guys.nl/download/
 
@@ -17,9 +18,13 @@ USE_LIBTOOL=	yes
 INCLUDEDIR=	${PREFIX}/include/libtextcat
 SHAREDIR=	${PREFIX}/share/libtextcat
 
+HEADERS=	textcat.h common.h constants.h fingerprint.h utf8misc.h
+
 post-install:
 	${INSTALL_DATA_DIR}  ${DESTDIR}${INCLUDEDIR}
-	${INSTALL_DATA} ${WRKSRC}/src/textcat.h ${DESTDIR}${INCLUDEDIR}
+.for header in ${HEADERS}
+	${INSTALL_DATA} ${WRKSRC}/src/${header} ${DESTDIR}${INCLUDEDIR}
+.endfor
 	${INSTALL_DATA_DIR} ${DESTDIR}${SHAREDIR}
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/libtextcat
 

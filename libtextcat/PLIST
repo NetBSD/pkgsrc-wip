@@ -1,5 +1,11 @@
-@comment $NetBSD: PLIST,v 1.4 2010/07/09 20:53:18 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.5 2011/02/17 13:19:17 ftigeot Exp $
 bin/createfp
 include/libtextcat/textcat.h
+include/libtextcat/common.h
+include/libtextcat/config.h
+include/libtextcat/constants.h
+include/libtextcat/fingerprint.h
+include/libtextcat/utf8misc.h
+include/libtextcat/wg_mempool.h
 lib/libtextcat.la
 share/libtextcat/README
