@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4224 2011/02/18 09:49:47 phonohawk Exp $
+# $Id: Makefile,v 1.4225 2011/02/18 12:05:50 rodo6510 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -263,6 +263,7 @@ SUBDIR+=	cfengine
 SUBDIR+=	cgal
 SUBDIR+=	cgit
 SUBDIR+=	cglib
+SUBDIR+=	cgterm
 SUBDIR+=	chbg
 SUBDIR+=	chemical-mime-data
 SUBDIR+=	chems
