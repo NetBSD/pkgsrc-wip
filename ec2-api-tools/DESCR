@@ -1,3 +1,0 @@
-The API tools serve as the client interface to the Amazon EC2 web
-service. Use these tools to register and launch AMI instances, manipulate
-security groups, and more.

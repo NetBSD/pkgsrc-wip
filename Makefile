@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4221 2011/02/16 17:15:47 thomasklausner Exp $
+# $Id: Makefile,v 1.4222 2011/02/18 04:43:06 jym-netbsd Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -435,7 +435,6 @@ SUBDIR+=	e3
 SUBDIR+=	easymesh
 SUBDIR+=	eboard-extras
 SUBDIR+=	ec2-ami-tools
-SUBDIR+=	ec2-api-tools
 SUBDIR+=	ecasound
 SUBDIR+=	ecb
 SUBDIR+=	eciadsl-usermode
