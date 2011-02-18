@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/02/22 03:52:50 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2011/02/18 04:55:05 phonohawk Exp $
 #
 
 DISTNAME=	undo-tree
-PKGNAME=	${DISTNAME}-0.1.6
+PKGNAME=	${DISTNAME}-0.3
 CATEGORIES=	editors
 MASTER_SITES=	http://www.dr-qubit.org/${DISTNAME}/
 EXTRACT_SUFX=	.el
