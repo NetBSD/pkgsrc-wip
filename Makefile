@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4225 2011/02/18 12:05:50 rodo6510 Exp $
+# $Id: Makefile,v 1.4226 2011/02/18 14:51:06 lexort Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2306,9 +2306,7 @@ SUBDIR+=	py-traitsgui
 SUBDIR+=	py-tranquil
 SUBDIR+=	py-transaction
 SUBDIR+=	py-turbojson
-SUBDIR+=	py-twisted
 SUBDIR+=	py-twisted-kqueue
-SUBDIR+=	py-twisted-zopeinterface
 SUBDIR+=	py-uuid
 SUBDIR+=	py-van.testing
 SUBDIR+=	py-visionegg
