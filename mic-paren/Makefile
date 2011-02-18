@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2009/07/31 22:18:51 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2011/02/18 04:52:05 phonohawk Exp $
 #
 
 DISTNAME=	mic-paren
-PKGNAME=	mic-paren-3.7
+PKGNAME=	mic-paren-3.8
 CATEGORIES=	editors
 MASTER_SITES=	http://www.emacswiki.org/cgi-bin/emacs/download/
 EXTRACT_SUFX=	.el
@@ -10,10 +10,13 @@ EXTRACT_SUFX=	.el
 MAINTAINER=	pho@cielonegro.org
 HOMEPAGE=	http://www.emacswiki.org/cgi-bin/wiki/${DISTNAME}.el
 COMMENT=	Advanced highlighting of parenthesis
+LICENSE=	gnu-gpl-v3
 
 WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	# none
 MESSAGE_SUBST+=	LISPDIR=${EMACS_LISPPREFIX:Q}
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 do-build:
 	cd ${WRKSRC} && ${EMACS_BIN} -batch -f batch-byte-compile ${DISTNAME}.el
