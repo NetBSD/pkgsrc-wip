@@ -1,13 +1,22 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/10/28 21:27:14 cubidou Exp $
+$NetBSD: patch-aa,v 1.2 2011/02/18 14:05:26 pettai Exp $
 
---- bdb/bdb_stubs.c.orig	2003-07-05 17:10:40.000000000 +0200
+--- bdb/bdb_stubs.c.orig	2009-03-26 01:18:03.000000000 +0000
 +++ bdb/bdb_stubs.c
 @@ -12,7 +12,7 @@
  #include <sys/stat.h>
  #include <sys/types.h>
  #include <limits.h>
 -#include <db.h>
-+#include <db4/db.h>
++#include <db46/db.h>
  /* O_CREAT and others are not defined in db.h */
  #include <fcntl.h>
  
+@@ -1198,7 +1198,7 @@ value caml_txn_begin(value dbenv, value 
+   
+   err = UW_dbenv(dbenv)->txn_begin(UW_dbenv(dbenv), parent, &newtxn, flags);
+   if (err != 0) {
+-    if (err == ENOMEM) { 
++    if (err == DB_BUFFER_SMALL) { 
+       failwith("Maximum # of concurrent transactions reached"); 
+     } else {
+       UW_dbenv(dbenv)->err(UW_dbenv(dbenv), err,"caml_txn_begin");

@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.1 2005/01/13 23:07:59 adrian_p Exp $
+$NetBSD: patch-ac,v 1.2 2011/02/18 14:05:26 pettai Exp $
 
---- Makefile.orig	2004-10-21 03:56:02.000000000 +0100
-+++ Makefile	2005-01-13 22:55:39.000000000 +0000
+--- Makefile.orig	2009-08-13 01:51:24.000000000 +0000
++++ Makefile
 @@ -14,7 +14,7 @@
  #   Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307
  #   USA 
@@ -11,21 +11,18 @@ $NetBSD: patch-ac,v 1.1 2005/01/13 23:07:59 adrian_p Exp $
  CC=gcc
  CXX=g++
  CFLAGS=-O3 -Werror-implicit-function-declaration $(CINCLUDES) -I .
-@@ -127,8 +127,6 @@
+@@ -125,10 +125,10 @@ keyMerge.cmx: keyMerge.ml
  # Special targets 
  
  install: 
+-	mkdir -p $(PREFIX)/bin
 -	install sks_build.sh sks sks_add_mail $(PREFIX)/bin
+-	mkdir -p $(MANDIR)/man8
 -	install sks.8.gz $(MANDIR)/man8
++#	mkdir -p $(PREFIX)/bin
++#	install sks_build.sh sks sks_add_mail $(PREFIX)/bin
++#	mkdir -p $(MANDIR)/man8
++#	install sks.8.gz $(MANDIR)/man8
  
  install.bc: 
- 	install sks_build.bc.sh sks.bc sks_add_mail.bc $(PREFIX)/bin
-@@ -293,7 +291,7 @@
- NXDIR=numerix-0.19
- 
- $(NXDIR)/READ.ME:
--	tar xvmfz $(NXDIR)-3.tar.gz
-+	# tar xvmfz $(NXDIR)-3.tar.gz
- 
- $(NXDIR)/config.status: $(NXDIR)/READ.ME
- 	cd $(NXDIR) && \
+ 	mkdir -p $(PREFIX)/bin

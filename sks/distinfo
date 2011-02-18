@@ -1,14 +1,9 @@
-$NetBSD: distinfo,v 1.5 2006/10/14 00:19:37 adrian_p Exp $
+$NetBSD: distinfo,v 1.6 2011/02/18 14:05:26 pettai Exp $
 
-SHA1 (sks-1.0.9.tgz) = 301ecc30a1a0c99e6b87fae324925695287942b3
-RMD160 (sks-1.0.9.tgz) = 9cb98d68d2465a0c24ef040c4f24d4377fbc00e0
-Size (sks-1.0.9.tgz) = 925362 bytes
-SHA1 (patch-aa) = 1e3854f1be32bf39a85940ec779ad857a49d786d
-SHA1 (patch-ab) = 919846f9c31a89f23430081dbad853d088dcb7e5
-SHA1 (patch-ac) = 4f353811782e106c4d6dbf6e55fb114998674505
-SHA1 (patch-ad) = 52001a1167dc9fc938bfbc3977cb281e6b957bbf
-SHA1 (patch-ae) = 94efa21e9dc1a5866d4dc67e92578c204206acc3
-SHA1 (patch-af) = 3e044f84f0d7b839f84f60b7d71b7496c73c8a80
-SHA1 (patch-ag) = 209be1d3050c090ec4de6b15db224f40c56e07c8
-SHA1 (patch-ah) = f1deabd3b0701f421f83bba8365b533e6c306b7b
-SHA1 (patch-ai) = 5c4b2d75f43b177d462ecbbcb19bf1d08803edc6
+SHA1 (sks-1.1.1.tgz) = 692d731eccf127fbb5c131d41edba29c5d1422cb
+RMD160 (sks-1.1.1.tgz) = 93926ba70366cdd88e07d21091e1c516a4dda701
+Size (sks-1.1.1.tgz) = 273833 bytes
+SHA1 (patch-aa) = bd9106e971e4a49eaa1b9fb11ba7021f2e737164
+SHA1 (patch-ab) = a2e4be2adfdb9ccbfabfd0683e10a068b63cef20
+SHA1 (patch-ac) = 16bd6fbb9bcdbced63e56d2683bf93ff9a152366
+SHA1 (patch-ad) = 4f5f538a6ebed923dd394cea544b516333c34c1d

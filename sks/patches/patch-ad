@@ -1,17 +1,9 @@
-$NetBSD: patch-ad,v 1.1 2005/01/13 23:07:59 adrian_p Exp $
+$NetBSD: patch-ad,v 1.2 2011/02/18 14:05:26 pettai Exp $
 
---- bdb/bdb_stubs.c.orig	2004-09-18 16:55:30.000000000 +0100
-+++ bdb/bdb_stubs.c	2004-09-18 16:57:05.000000000 +0100
-@@ -223,10 +223,10 @@
+--- bdb/Makefile.orig	2011-02-18 10:14:32.000000000 +0000
++++ bdb/Makefile
+@@ -15,3 +15,3 @@
  
- // Declaration of flag enums in ocaml must be in same order as in C
- 
--static int dbenv_create_flags[] = { DB_CLIENT };
-+static int dbenv_create_flags[] = { DB_RPCCLIENT };
- 
- //+
--//+   type create_flag = CLIENT
-+//+   type create_flag = RPCCLIENT
- 
- static int dbenv_open_flags[] = {
-   DB_JOINENV, DB_INIT_CDB, DB_INIT_LOCK, DB_INIT_LOG, DB_INIT_MPOOL, 
+-CINCLUDES=-I`ocamlc -where` $(BDBINCLUDE)
++CINCLUDES=-I${PREFIX}/lib/ocaml $(BDBINCLUDE)
+ CC=gcc
