@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2011/02/11 01:34:02 asau Exp $
+@comment $NetBSD: PLIST,v 1.32 2011/02/18 03:19:26 asau Exp $
 bin/bugpoint
 bin/llc
 bin/lli
@@ -36,6 +36,7 @@ include/llvm-c/lto.h
 include/llvm/ADT/APFloat.h
 include/llvm/ADT/APInt.h
 include/llvm/ADT/APSInt.h
+include/llvm/ADT/ArrayRef.h
 include/llvm/ADT/BitVector.h
 include/llvm/ADT/DAGDeltaAlgorithm.h
 include/llvm/ADT/DeltaAlgorithm.h
@@ -509,6 +510,7 @@ lib/libLLVMX86AsmPrinter.a
 lib/libLLVMX86CodeGen.a
 lib/libLLVMX86Disassembler.a
 lib/libLLVMX86Info.a
+lib/libLLVMX86Utils.a
 lib/libLLVMipa.a
 lib/libLLVMipo.a
 lib/libLTO.a
