@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/02/18 11:39:11 rodo6510 Exp $
+
+SHA1 (cgterm-1.7b2.tar.gz) = e4177031b95ed88316e43be89ede1735b18c462f
+RMD160 (cgterm-1.7b2.tar.gz) = 5d819786598c93c4839e00378ef8d2e44de66e6e
+Size (cgterm-1.7b2.tar.gz) = 91883 bytes
+SHA1 (patch-aa) = a4fbdfc04aa5fce46791eb39938a163db5064cf5
