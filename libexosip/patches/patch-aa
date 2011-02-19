@@ -1,15 +1,15 @@
-$NetBSD: patch-aa,v 1.1 2009/11/22 15:30:22 gschwarz Exp $
+$NetBSD: patch-aa,v 1.2 2011/02/19 17:14:58 gschwarz Exp $
 
---- src/eXutils.c.orig	2009-11-07 01:59:03.300003000 +0100
-+++ src/eXutils.c	2009-11-07 02:09:25.580010000 +0100
-@@ -564,6 +564,10 @@
+--- src/eXutils.c.orig	2011-01-18 22:45:03.000000000 +0100
++++ src/eXutils.c	2011-01-18 22:45:45.000000000 +0100
+@@ -536,6 +536,10 @@
  
  #include <stdio.h>
  
 +#ifndef INADDR_NONE
-+#define INADDR_NONE	 ((unsigned long) -1)	/* needed on Solaris */
++#define INADDR_NONE	((unsigned long) -1)	/* needed on Solaris */
 +#endif
 +
- static int _eXosip_default_gateway_ipv4 (char *address, int size);
+ static int _eXosip_default_gateway_ipv4(char *address, int size);
  
- static int _eXosip_default_gateway_ipv6 (char *address, int size);
+ static int _eXosip_default_gateway_ipv6(char *address, int size);
