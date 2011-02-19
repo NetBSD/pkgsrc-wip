@@ -1,7 +1,0 @@
-pkglint warns:
-WARN: use of DISTFILES with single file discouraged. distribution filename should be set by DISTNAME and EXTRACT_SUFX.
-WARN: do not use DISTFILES and DISTNAME to control WRKSRC. how about "WRKSRC=${WRKDIR}/lletters-0.1.9"?
-
-sometimes lletters hangs
-
-maybe wavr should be made into a separate package (for wavtools)
