@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/03/14 12:20:29 ryo-on Exp $
+# $NetBSD: Makefile,v 1.2 2011/02/19 11:07:00 ryo-on Exp $
 #
 
 DISTNAME=	Konatu_ver_26
-PKGNAME=	${DISTNAME:S/Konatu/konatu-ttf/:S/_ver_/-/}
+PKGNAME=	${DISTNAME:tl:S/_ver_/-ttf-/}
+
 CATEGORIES=	fonts japanese
 MASTER_SITES=	http://www.masuseki.com/be/konatu/
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=	ryo_on@yk.rim.or.jp
+MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://www.masuseki.com/?u=be/konatu.htm
 COMMENT=	Japanese TrueType gothic (sans-serif) fonts, Konatsu fonts
 # LICENSE=	Creative Commons Attribution-Share Alike 3.0 Unported
