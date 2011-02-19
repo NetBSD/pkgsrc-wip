@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2011/02/19 13:16:04 tnn2 Exp $
+$NetBSD: distinfo,v 1.12 2011/02/19 13:27:18 tnn2 Exp $
 
 SHA1 (VirtualBox-4.0.2.tar.bz2) = 82218448fd572ae706c4455fc9e7e0a970ea8bd1
 RMD160 (VirtualBox-4.0.2.tar.bz2) = 50677557729595d77f152157bbb65018beca6c4b
@@ -13,7 +13,7 @@ SHA1 (patch-ag) = daff1abce935947c00ab90b84d85377422a80b82
 SHA1 (patch-ah) = 9dbaa00510b2322fc7ca5ad64a58a0ca02a129cb
 SHA1 (patch-ai) = e7ef6c84668c24230f86eefd90f773e76776efac
 SHA1 (patch-aj) = 29655e2e7b0260b1d3797df928838ccd503171f0
-SHA1 (patch-ak) = 23a8d840c8bd9adca8e74d1dbf7cce3d32147b8b
+SHA1 (patch-ak) = b50cff28ce5f1807129a702c96371bfdf7e2ba50
 SHA1 (patch-al) = 6c47c60a89f7112d5e473d0ee7db0a1f737bd085
 SHA1 (patch-am) = 753fed0b0e0bae3966ae3dbbe2fd91dc901df918
 SHA1 (patch-an) = e5aefc636fce95739e519e80985670e72557596c

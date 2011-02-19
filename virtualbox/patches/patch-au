@@ -1,0 +1,19 @@
+$NetBSD: patch-au,v 1.1 2011/02/19 13:27:18 tnn2 Exp $
+
+--- src/VBox/HostDrivers/Makefile.kmk.orig	2010-06-25 14:25:11.000000000 +0000
++++ src/VBox/HostDrivers/Makefile.kmk
+@@ -25,12 +25,12 @@ if !defined(VBOX_ONLY_DOCS) && !defined(
+  ifdef VBOX_WITH_USB
+   include $(PATH_SUB_CURRENT)/VBoxUSB/Makefile.kmk
+  endif
+- if1of ($(KBUILD_TARGET), darwin solaris win linux freebsd)
++ if1of ($(KBUILD_TARGET), darwin solaris win linux freebsd netbsd)
+   ifdef VBOX_WITH_NETFLT
+    include $(PATH_SUB_CURRENT)/VBoxNetFlt/Makefile.kmk
+   endif
+  endif
+- if1of ($(KBUILD_TARGET), darwin solaris linux freebsd)
++ if1of ($(KBUILD_TARGET), darwin solaris linux freebsd netbsd)
+   ifdef VBOX_WITH_NETADP
+    include $(PATH_SUB_CURRENT)/VBoxNetAdp/Makefile.kmk
+   endif

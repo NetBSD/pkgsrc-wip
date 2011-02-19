@@ -1,0 +1,7 @@
+#!/bin/sh
+
+FILES_VBOXDRV_NOBIN=" \
+"
+
+FILES_VBOXDRV_BIN=" \
+"

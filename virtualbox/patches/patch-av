@@ -1,0 +1,31 @@
+$NetBSD: patch-av,v 1.1 2011/02/19 13:27:18 tnn2 Exp $
+
+--- src/VBox/HostDrivers/Support/Makefile.kmk.orig	2011-01-14 20:15:30.000000000 +0000
++++ src/VBox/HostDrivers/Support/Makefile.kmk
+@@ -45,6 +45,7 @@ if  !defined(VBOX_ONLY_DOCS) \
+  ifdef VBOX_WITH_VBOXDRV
+   LIBRARIES       += SUPR0IdcClient
+   SYSMODS.freebsd += vboxdrv
++  SYSMODS.netbsd  += vboxdrv
+   SYSMODS.linux   += vboxdrv
+   SYSMODS.win     += VBoxDrv
+   SYSMODS.os2     += VBoxDrv
+@@ -52,7 +53,7 @@ if  !defined(VBOX_ONLY_DOCS) \
+  endif
+  INSTALLS.linux   += vboxdrv-mod vboxdrv-sh vboxdrv-dkms
+  INSTALLS.freebsd += vboxdrv-mod vboxdrv-sh
+-
++  INSTALLS.netbsd  += vboxdrv-mod vboxdrv-sh
+  #
+  # Include sub-makefile(s).
+  #
+@@ -67,6 +68,9 @@ if  !defined(VBOX_ONLY_DOCS) \
+  ifeq ($(KBUILD_TARGET),freebsd)
+   include $(PATH_SUB_CURRENT)/freebsd/files_vboxdrv
+  endif
++ ifeq ($(KBUILD_TARGET),netbsd)
++  include $(PATH_SUB_CURRENT)/netbsd/files_vboxdrv
++ endif
+ endif # !VBOX_ONLY_DOCS && !VBOX_ONLY_EXTPACKS && !VBOX_ONLY_TESTSUITE
+ 
+ 
