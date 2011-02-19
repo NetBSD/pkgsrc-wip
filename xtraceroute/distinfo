@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/02/19 15:59:17 thomasklausner Exp $
+
+SHA1 (xtraceroute-0.9.2.tar.bz2) = 2f114d51441fc679bc390d73250b4f601771fc3b
+RMD160 (xtraceroute-0.9.2.tar.bz2) = 03e69262effa4673d68a4b42901ee3c060f7c398
+Size (xtraceroute-0.9.2.tar.bz2) = 1097935 bytes
+SHA1 (patch-intl_Makefile.in) = 194f04e18c0df99e1f741efd8bef6fddce0a40fb

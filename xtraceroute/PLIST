@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/02/19 15:59:17 thomasklausner Exp $
+bin/xtraceroute
+man/man1/xtraceroute.1
+share/xtraceroute/earth.png
+share/xtraceroute/night.png
+share/xtraceroute/xtraceroute-resolve-location.sh
