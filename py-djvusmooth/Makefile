@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/02/19 14:23:18 ryo-on Exp $
+# $NetBSD: Makefile,v 1.5 2011/02/19 14:40:48 ryo-on Exp $
 #
 
 DISTNAME=	djvusmooth-0.2.10
@@ -25,10 +25,10 @@ DEPENDS+=	djvulibre-tools:../../graphics/djvulibre-tools
 PYTHON_VERSIONS_ACCEPTED=	26 25
 PYDISTUTILSPKG=	yes
 
-MANFILES=	djvusmooth.1
-
-post-install:
-	${INSTALL_MAN} ${WRKSRC}/doc/${MANFILES:Q} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
+SUBST_CLASSES+=		fix-paths
+SUBST_STAGE.fix-paths=	pre-configure
+SUBST_FILES.fix-paths=	setup.py
+SUBST_SED.fix-paths=	-e 's,share/man,${PKGMANDIR},'
 
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/application.mk"

@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.4 2011/02/19 14:23:18 ryo-on Exp $
+$NetBSD: distinfo,v 1.5 2011/02/19 14:40:48 ryo-on Exp $
 
 SHA1 (djvusmooth-0.2.10.tar.gz) = 853ea10a2c0f0373bce07bdece80d9676a74e8c2
 RMD160 (djvusmooth-0.2.10.tar.gz) = 1e3acc8b21372db0ea2e9613436551cec5838250
 Size (djvusmooth-0.2.10.tar.gz) = 54222 bytes
-SHA1 (patch-setup.py) = ad9f3eadbd768b69fcf1e3685ead30d1ba8d973d
