@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/02/19 21:54:30 ryo-on Exp $
+# $NetBSD: Makefile,v 1.5 2011/02/19 22:57:57 ryo-on Exp $
 #
 DISTNAME=	python-djvulibre-0.3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//}
@@ -29,7 +29,10 @@ SUBST_FILES.setup=	setup.py
 SUBST_SED.setup=	-e "s,\['cython,\['cython${PYVERSSUFFIX},"
 SUBST_SED.setup+=	-e "s/'sed', '-i~',/'sed', '-n',/"
 
-.include "../../lang/python/extension.mk"
+PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
+
+.include "../../lang/python/egg.mk"
+.include "../../lang/python/pyversion.mk"
 .include "../../devel/py-cython/buildlink3.mk"
 .include "../../graphics/djvulibre-lib/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
