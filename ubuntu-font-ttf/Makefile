@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/12/20 12:58:42 ryo-on Exp $
+# $NetBSD: Makefile,v 1.5 2011/02/19 13:22:46 ryo-on Exp $
 #
 
 DISTNAME=	ubuntu-font-family-sources_0.70.1.orig
@@ -13,7 +13,7 @@ COMMENT=	Ubuntu font family
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-WRKSRC=		${WRKDIR}/ubuntu-font-family-sources-0.70.1
+WRKSRC=		${WRKDIR}/${DISTNAME:S/.orig//:S/_/-/}
 USE_LANGUAGES=	# none
 
 USE_X11BASE=	YES
