@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/06/13 22:47:03 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2011/02/19 09:16:18 mwdavies Exp $
 #
 
 DISTNAME=		epplets-0.7
@@ -28,7 +28,7 @@ CONFIGURE_ARGS+=	--x-libraries=${X11BASE}/include
 # If enlightenment < 0.16.4
 #CONFIGURE_ARGS+=	--disable-new-remember
 
-.include "../../graphics/imlib/buildlink3.mk"
+.include "../../graphics/imlib-gtk/buildlink3.mk"
 .include "../../graphics/Mesa/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"

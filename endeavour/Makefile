@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2010/06/13 22:47:03 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.13 2011/02/19 09:16:18 mwdavies Exp $
 #
 
 DISTNAME=	endeavour-2.8.5
@@ -63,7 +63,7 @@ post-install:
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../archivers/libzip/buildlink3.mk"
-.include "../../graphics/imlib/buildlink3.mk"
+.include "../../graphics/imlib-gtk/buildlink3.mk"
 .include "../../graphics/libungif/buildlink3.mk"
 .include "../../wip/xar/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"

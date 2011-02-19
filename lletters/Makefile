@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2010/06/13 22:47:11 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.11 2011/02/19 09:16:18 mwdavies Exp $
 
 DISTNAME=	lletters-0.1.9
 PKGREVISION=	2
@@ -22,7 +22,7 @@ pre-configure:
 	${MV} ${WRKDIR}/images/* ${WRKSRC}/images/
 
 #.include "../../x11/gtk/buildlink3.mk"
-.include "../../graphics/imlib/buildlink3.mk"
+.include "../../graphics/imlib-gtk/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
