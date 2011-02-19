@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2010/11/16 13:11:26 ryo-on Exp $
+@comment $NetBSD: PLIST,v 1.3 2011/02/19 21:54:30 ryo-on Exp $
 ${PYSITELIB}/djvu/__init__.py
 ${PYSITELIB}/djvu/__init__.pyc
 ${PYSITELIB}/djvu/__init__.pyo
@@ -7,7 +7,7 @@ ${PYSITELIB}/djvu/const.pyc
 ${PYSITELIB}/djvu/const.pyo
 ${PYSITELIB}/djvu/decode.so
 ${PYSITELIB}/djvu/sexpr.so
-${PYSITELIB}/python_djvulibre-0.3.0-py2.6.egg-info/PKG-INFO
-${PYSITELIB}/python_djvulibre-0.3.0-py2.6.egg-info/SOURCES.txt
-${PYSITELIB}/python_djvulibre-0.3.0-py2.6.egg-info/dependency_links.txt
-${PYSITELIB}/python_djvulibre-0.3.0-py2.6.egg-info/top_level.txt
+${PYSITELIB}/python_djvulibre-${PKGVERSION}-py2.6.egg-info/PKG-INFO
+${PYSITELIB}/python_djvulibre-${PKGVERSION}-py2.6.egg-info/SOURCES.txt
+${PYSITELIB}/python_djvulibre-${PKGVERSION}-py2.6.egg-info/dependency_links.txt
+${PYSITELIB}/python_djvulibre-${PKGVERSION}-py2.6.egg-info/top_level.txt
