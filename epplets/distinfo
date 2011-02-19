@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/09/28 06:41:12 rillig Exp $
-
-SHA1 (epplets-0.7.tar.gz) = 64ec248bc6da19424e9b721ca5bff22d813d73bf
-RMD160 (epplets-0.7.tar.gz) = df8a521a2c2efced365a8ae4d741a934f8fc5e5e
-Size (epplets-0.7.tar.gz) = 1001282 bytes
-SHA1 (patch-aa) = a6e3b0805a64b6eed72deffba10cc5076ffd202e
-SHA1 (patch-ab) = e114c7085155c51b3a64acc11c41dc6051435225
-SHA1 (patch-ac) = 8e0f348412a23c1316d5bbb0919b6c46104b2f0f
