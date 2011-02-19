@@ -1,13 +1,22 @@
-$NetBSD: patch-al,v 1.3 2010/07/21 18:17:59 tnn2 Exp $
+$NetBSD: patch-al,v 1.4 2011/02/19 13:16:04 tnn2 Exp $
 
---- Config.kmk.orig	2010-06-25 14:23:52.000000000 +0000
-+++ Config.kmk
-@@ -407,7 +407,7 @@ if1of ($(KBUILD_TARGET), darwin freebsd 
-  VBOX_WITH_HOSTNETIF_API = 1
- endif
- # Enable the new storage I/O path.
--if1of ($(KBUILD_TARGET), darwin freebsd linux solaris win)
-+if1of ($(KBUILD_TARGET), darwin freebsd netbsd linux solaris win)
-  VBOX_WITH_NEW_IO_CODE = 1
- endif
- ## @}
+--- src/VBox/Runtime/r0drv/alloc-r0drv.cpp.orig	2011-01-14 20:15:19.000000000 +0000
++++ src/VBox/Runtime/r0drv/alloc-r0drv.cpp
+@@ -177,7 +177,7 @@ RTDECL(void *)  RTMemAllocZTag(size_t cb
+ RT_EXPORT_SYMBOL(RTMemAllocZTag);
+ 
+ 
+-RTDECL(void *) RTMemAllocVarTag(size_t cbUnaligned, const char *pszTag)
++RTDECL(void *) RTMemAllocVarTag(size_t cbUnaligned, const char *pszTag) RT_NO_THROW
+ {
+     size_t cbAligned;
+     if (cbUnaligned >= 16)
+@@ -189,7 +189,7 @@ RTDECL(void *) RTMemAllocVarTag(size_t c
+ RT_EXPORT_SYMBOL(RTMemAllocVarTag);
+ 
+ 
+-RTDECL(void *) RTMemAllocZVarTag(size_t cbUnaligned, const char *pszTag)
++RTDECL(void *) RTMemAllocZVarTag(size_t cbUnaligned, const char *pszTag) RT_NO_THROW
+ {
+     size_t cbAligned;
+     if (cbUnaligned >= 16)

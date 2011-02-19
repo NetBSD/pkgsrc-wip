@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.3 2010/07/19 14:41:42 tnn2 Exp $
+$NetBSD: patch-aa,v 1.4 2011/02/19 13:16:04 tnn2 Exp $
 
---- configure.orig	2010-06-25 14:23:52.000000000 +0000
+--- configure.orig	2011-01-14 20:15:50.000000000 +0000
 +++ configure
 @@ -51,6 +51,8 @@ case "$OS" in
      ;;
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.3 2010/07/19 14:41:42 tnn2 Exp $
    sunos)
      OS='solaris'
      ;;
-@@ -111,17 +113,17 @@ LIBPTHREAD="-lpthread"
+@@ -113,18 +115,17 @@ LIBPTHREAD="-lpthread"
  LIBCAP="-lcap"
  GSOAP=""
  GSOAP_IMPORT=""
@@ -21,35 +21,40 @@ $NetBSD: patch-aa,v 1.3 2010/07/19 14:41:42 tnn2 Exp $
 -LIBXMU="-lXmu"
 -LIBXINERAMA="-lXinerama"
 -LIBXRANDR="-lXrandr"
--MESA="-lGL"
--INCZ=""
--LIBZ="-lz"
--INCPNG=""
--LIBPNG="-lpng"
 +INCX11="-I${X11PREFIX}/include"
 +LIBX11="-L${X11PREFIX}/lib -Wl,-R${X11PREFIX}/lib -lXext -lX11"
 +LIBXCURSOR="-L${X11PREFIX}/lib -Wl,-R${X11PREFIX}/lib -lXcursor"
 +LIBXMU="-L${X11PREFIX}/lib -Wl,-R${X11PREFIX}/lib -lXmu"
 +LIBXINERAMA="-L${X11PREFIX}/lib -Wl,-R${X11PREFIX}/lib -lXinerama"
 +LIBXRANDR="-L${X11PREFIX}/lib -Wl,-R${X11PREFIX}/lib -lXrandr"
-+MESA="-L${MESAPREFIX}/lib -Wl,-R${MESAPREFIX}/lib -lGL"
+ MAKESELF="makeself"
+-MESA="-lGL"
+-INCZ=""
+-LIBZ="-lz"
 +INCZ="-I${ZLIBPREFIX}/include"
 +LIBZ="-L${ZLIBPREFIX}/lib -Wl,-R${ZLIBPREFIX}/lib -lz"
-+INCPNG="$(pkg-config --cflags libpng)"
-+LIBPNG="$(pkg-config --libs libpng)"
  CXX_FLAGS=""
- if [ "$OS" = "freebsd" ]; then
+-if [ "$OS" = "freebsd" ]; then
++if false; then
    INCCURL="-I/usr/local/include"
-@@ -132,6 +134,8 @@ else
-   INCCURL=""
-   LIBCURL="-lcurl"
+   LIBCURL="-L/usr/local/lib -lcurl"
+   INCPULSE="-I/usr/local/include"
+@@ -132,10 +133,10 @@ if [ "$OS" = "freebsd" ]; then
+   INCPNG="-I/usr/local/include"
+   LIBPNG="-L/usr/local/lib -lpng"
+ else
+-  INCCURL=""
+-  LIBCURL="-lcurl"
+-  INCPNG=""
+-  LIBPNG="-lpng"
++  INCCURL="$(pkg-config --cflags libcurl)"
++  LIBCURL="$(pkg-config --libs libcurl)"
++  INCPNG="$(pkg-config --cflags libpng)"
++  LIBPNG="$(pkg-config --libs libpng)"
  fi
-+INCCURL="$(pkg-config --cflags libcurl)"
-+LIBCURL="$(pkg-config --libs libcurl)"
  PKGCONFIG="`which_wrapper pkg-config`"
  PYTHONDIR="/usr /usr/local"
- QT4DIR="/usr/lib/qt4 /usr/share/qt4 /usr/lib64/qt4 /usr /usr/local"
-@@ -2413,6 +2417,7 @@ check_gcc
+@@ -2474,6 +2475,7 @@ check_gcc
  # the libraries
  [ "$OS" != "darwin"  ] && check_pthread
  check_libxml2

@@ -1,8 +1,8 @@
-$NetBSD: patch-ai,v 1.3 2010/07/21 18:17:59 tnn2 Exp $
+$NetBSD: patch-ai,v 1.4 2011/02/19 13:16:04 tnn2 Exp $
 
---- src/VBox/Runtime/Makefile.kmk.orig	2010-06-25 14:25:24.000000000 +0000
+--- src/VBox/Runtime/Makefile.kmk.orig	2011-01-18 15:28:11.000000000 +0000
 +++ src/VBox/Runtime/Makefile.kmk
-@@ -715,6 +715,59 @@ RuntimeR3_SOURCES.freebsd = \
+@@ -817,6 +817,58 @@ RuntimeR3_SOURCES.freebsd = \
  	r3/posix/tls-posix.cpp \
  	r3/posix/utf8-posix.cpp
  
@@ -30,7 +30,6 @@ $NetBSD: patch-ai,v 1.3 2010/07/21 18:17:59 tnn2 Exp $
 +	generic/RTProcIsRunningByName-generic.cpp \
 +	generic/RTThreadGetNativeState-generic.cpp \
 +	r3/netbsd/mp-netbsd.cpp \
-+	r3/netbsd/alloc-netbsd.cpp \
 +	r3/netbsd/rtProcInitExePath-netbsd.cpp \
 +	r3/posix/RTFileQueryFsSizes-posix.cpp \
 +	r3/posix/RTSystemQueryOSInfo-posix.cpp \
@@ -62,7 +61,7 @@ $NetBSD: patch-ai,v 1.3 2010/07/21 18:17:59 tnn2 Exp $
  RuntimeR3_SOURCES.solaris = \
  	generic/RTDirQueryInfo-generic.cpp \
  	generic/RTDirSetTimes-generic.cpp \
-@@ -1034,6 +1087,8 @@ VBoxRT_SOURCES.darwin         += \
+@@ -1198,6 +1250,8 @@ VBoxRT_SOURCES.darwin         += \
  	r3/posix/fileaio-posix.cpp
  VBoxRT_SOURCES.freebsd        += \
  	r3/freebsd/fileaio-freebsd.cpp
@@ -71,12 +70,12 @@ $NetBSD: patch-ai,v 1.3 2010/07/21 18:17:59 tnn2 Exp $
  VBoxRT_INCS                    = $(RuntimeR3_INCS)
  VBoxRT_INCS.$(KBUILD_TARGET)   = $(RuntimeR3_INCS.$(KBUILD_TARGET))
  VBoxRT_INCS.$(KBUILD_TARGET).$(KBUILD_TARGET_ARCH) = $(RuntimeR3_INCS.$(KBUILD_TARGET).$(KBUILD_TARGET_ARCH))
-@@ -1066,6 +1121,8 @@ VBoxRT_LIBS.darwin             = \
+@@ -1230,6 +1284,8 @@ VBoxRT_LIBS.darwin             = \
  VBoxRT_LIBS.freebsd            = \
  	iconv \
  	rt
 +VBoxRT_LIBS.netbsd             = \
-+        rt
++	rt
  VBoxRT_LIBS.solaris            = \
- 	kstat
- ifn1of ($(KBUILD_TARGET_ARCH), sparc32 sparc64)
+ 	kstat \
+         contract

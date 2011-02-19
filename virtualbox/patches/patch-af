@@ -1,17 +1,17 @@
-$NetBSD: patch-af,v 1.2 2010/07/19 14:41:43 tnn2 Exp $
+$NetBSD: patch-af,v 1.3 2011/02/19 13:16:04 tnn2 Exp $
 
---- src/VBox/Devices/Makefile.kmk.orig	2010-06-25 14:24:53.000000000 +0000
+--- src/VBox/Devices/Makefile.kmk.orig	2011-01-14 20:19:31.000000000 +0000
 +++ src/VBox/Devices/Makefile.kmk
-@@ -970,6 +970,12 @@ Drivers_SOURCES.freebsd = \
- 	Network/DrvTAP.cpp
- endif # freebsd
+@@ -941,6 +941,12 @@ if !defined(VBOX_ONLY_EXTPACKS)         
+  	Network/DrvTAP.cpp
+  endif # freebsd
  
-+ifeq ($(KBUILD_TARGET),netbsd)
-+Drivers_SOURCES      := $(filter-out \
++ ifeq ($(KBUILD_TARGET),netbsd)
++ Drivers_SOURCES      := $(filter-out \
 +	Storage/DrvHost% \
 +	, $(Drivers_SOURCES))
-+Drivers_SOURCES.netbsd =
-+endif # netbsd
++ Drivers_SOURCES.netbsd =
++ endif # netbsd
  
- ifeq ($(KBUILD_TARGET),l4)
- Drivers_SOURCES       = \
+  ifeq ($(KBUILD_TARGET),l4)
+  Drivers_SOURCES       = \

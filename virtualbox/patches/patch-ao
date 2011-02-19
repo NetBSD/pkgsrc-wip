@@ -1,6 +1,6 @@
-$NetBSD: patch-ao,v 1.3 2010/07/21 18:17:59 tnn2 Exp $
+$NetBSD: patch-ao,v 1.4 2011/02/19 13:16:04 tnn2 Exp $
 
---- src/VBox/Runtime/r3/posix/thread-posix.cpp.orig	2010-06-25 14:25:34.000000000 +0000
+--- src/VBox/Runtime/r3/posix/thread-posix.cpp.orig	2011-01-14 20:15:19.000000000 +0000
 +++ src/VBox/Runtime/r3/posix/thread-posix.cpp
 @@ -36,7 +36,7 @@
  # include <unistd.h>
@@ -11,7 +11,7 @@ $NetBSD: patch-ao,v 1.3 2010/07/21 18:17:59 tnn2 Exp $
  # include <sched.h>
  #endif
  
-@@ -299,7 +299,7 @@ RTDECL(int) RTThreadSleep(RTMSINTERVAL c
+@@ -322,7 +322,7 @@ RTDECL(int) RTThreadSleep(RTMSINTERVAL c
          pthread_yield_np();
  #elif defined(RT_OS_FREEBSD) /* void pthread_yield */
          pthread_yield();
@@ -20,7 +20,7 @@ $NetBSD: patch-ao,v 1.3 2010/07/21 18:17:59 tnn2 Exp $
          sched_yield();
  #else
          if (!pthread_yield())
-@@ -336,7 +336,7 @@ RTDECL(bool) RTThreadYield(void)
+@@ -359,7 +359,7 @@ RTDECL(bool) RTThreadYield(void)
  #endif
  #ifdef RT_OS_DARWIN
      pthread_yield_np();
@@ -29,3 +29,12 @@ $NetBSD: patch-ao,v 1.3 2010/07/21 18:17:59 tnn2 Exp $
      sched_yield();
  #else
      pthread_yield();
+@@ -412,7 +412,7 @@ RTDECL(int) RTThreadPoke(RTTHREAD hThrea
+ 
+ RTR3DECL(int) RTThreadGetExecutionTimeMilli(uint64_t *pKernelTime, uint64_t *pUserTime)
+ {
+-#ifndef RT_OS_DARWIN
++#if !defined(RT_OS_DARWIN) && !defined(RT_OS_NETBSD)
+     struct timespec ts;
+     int rc = clock_gettime(CLOCK_THREAD_CPUTIME_ID, &ts);
+     if (rc)

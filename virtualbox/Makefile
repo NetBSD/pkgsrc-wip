@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2010/07/19 14:41:41 tnn2 Exp $
+# $NetBSD: Makefile,v 1.9 2011/02/19 13:16:04 tnn2 Exp $
 #
 
-DISTNAME=	VirtualBox-${VBOX_VER}-OSE
+DISTNAME=	VirtualBox-${VBOX_VER}
 PKGNAME=	virtualbox-${VBOX_VER}
-VBOX_VER=	3.2.6
+VBOX_VER=	4.0.2
 CATEGORIES=	emulators
 MASTER_SITES=	http://download.virtualbox.org/virtualbox/${VBOX_VER}/
 EXTRACT_SUFX=	.tar.bz2
@@ -49,6 +49,7 @@ post-extract:
 
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} KBUILD_PATH=${WRKSRC}/kBuild sh -c ". ./env.sh; kmk"
+#	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} KBUILD_PATH=${WRKSRC}/kBuild sh -c ". ./env.sh && cd src/VBox/HostDrivers && kmk HostDrivers-src vboxdrv-mod"
 
 #.include "../../audio/pulseaudio/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"

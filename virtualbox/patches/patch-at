@@ -1,13 +1,13 @@
-$NetBSD: patch-at,v 1.1 2010/07/22 11:39:24 tnn2 Exp $
+$NetBSD: patch-at,v 1.2 2011/02/19 13:16:04 tnn2 Exp $
 
---- src/VBox/Devices/PC/Etherboot-src/Makefile.kmk.orig	2010-06-25 14:24:56.000000000 +0000
+--- src/VBox/Devices/PC/Etherboot-src/Makefile.kmk.orig	2011-01-14 20:15:14.000000000 +0000
 +++ src/VBox/Devices/PC/Etherboot-src/Makefile.kmk
-@@ -290,7 +290,7 @@ $(PATH_TARGET)/pcnet32.rom.prf: $(PCIENT
- # are not up to compiling Etherboot (the linker messes up big time, shifting
- # the final binary to 0xffc00000 and filling out relocations incorrectly
- # (first occurrence is the call to prelocate in the pciprefix.o file).
--ifeq ($(filter-out darwin.x86 darwin.amd64 os2.x86 solaris.x86 solaris.amd64 win.x86 win.amd64 linux.amd64 freebsd.amd64,$(KBUILD_TARGET).$(KBUILD_TARGET_ARCH)),)
-+ifeq ($(filter-out darwin.x86 darwin.amd64 os2.x86 solaris.x86 solaris.amd64 win.x86 win.amd64 linux.amd64 freebsd.amd64 netbsd.amd64,$(KBUILD_TARGET).$(KBUILD_TARGET_ARCH)),)
- $(PATH_TARGET)/pcnet32.zrom: pcnet32.zrom | $(call DIRDEP,$(PATH_TARGET))
- 	$(CP) -f $< $@
- else
+@@ -18,7 +18,7 @@
+ SUB_DEPTH = ../../../../..
+ include $(KBUILD_PATH)/subheader.kmk
+ 
+-if1of ($(KBUILD_TARGET).$(KBUILD_TARGET_ARCH), darwin.x86 darwin.amd64 os2.x86 solaris.x86 solaris.amd64 win.x86 win.amd64 linux.amd64 freebsd.amd64)
++if1of ($(KBUILD_TARGET).$(KBUILD_TARGET_ARCH), darwin.x86 darwin.amd64 os2.x86 solaris.x86 solaris.amd64 win.x86 win.amd64 linux.amd64 freebsd.amd64 netbsd.amd64)
+  #
+  # Build it from a precompiled binary.
+  # See notes about the binary load address and size way below.

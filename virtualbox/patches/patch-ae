@@ -1,11 +1,11 @@
-$NetBSD: patch-ae,v 1.1 2009/08/08 05:43:37 tnn2 Exp $
+$NetBSD: patch-ae,v 1.2 2011/02/19 13:16:04 tnn2 Exp $
 
---- src/VBox/Devices/Network/lwip/src/api/sockets.c.orig	2009-08-03 02:29:29.000000000 +0200
+--- src/VBox/Devices/Network/lwip/src/api/sockets.c.orig	2011-01-14 20:15:13.000000000 +0000
 +++ src/VBox/Devices/Network/lwip/src/api/sockets.c
-@@ -34,6 +34,7 @@
- 
- #include <string.h>
- #include <errno.h>
+@@ -36,6 +36,7 @@
+ #ifndef _MSC_VER /* Why is errno.h included here - see lwip/arch.h -> lwip/cc.h */
+ # include <errno.h>
+ #endif
 +#include <time.h>
  
  #include "lwip/opt.h"
