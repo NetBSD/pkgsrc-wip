@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/02/12 20:46:05 ryo-on Exp $
+# $NetBSD: Makefile,v 1.4 2011/02/19 09:19:24 thomasklausner Exp $
 #
 
 DISTNAME=	zim-0.49
@@ -27,7 +27,7 @@ DEPENDS+=	${PYPKGPREFIX}-cElementTree-[0-9]*:../../textproc/py-cElementTree
 DEPENDS+=	xdg-utils-[0-9]*:../../misc/xdg-utils
 
 .include "../../lang/python/pyversion.mk"
-.if ${PYTHON_VERSION_DEFAULT} == "25"
+.if ${PYPKGPREFIX} == "py25"
 DEPENDS+=	${PYPKGPREFIX}-simplejson-[0-9]*:../../converters/py-simplejson
 .endif
 
