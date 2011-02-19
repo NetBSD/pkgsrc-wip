@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2010/01/17 12:03:33 thomasklausner Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2011/02/19 16:45:03 thomasklausner Exp $
 
 BUILDLINK_TREE+=	xmms2
 
@@ -9,13 +9,8 @@ BUILDLINK_API_DEPENDS.xmms2+=	xmms2>=0.1DR2.2
 BUILDLINK_ABI_DEPENDS.xmms2?=	xmms2>=0.2rc10nb5
 BUILDLINK_PKGSRCDIR.xmms2?=	../../wip/xmms2
 
-.if !defined(PKG_BUILD_OPTIONS.xmms2)
-PKG_BUILD_OPTIONS.xmms2!=						\
-	cd ${BUILDLINK_PKGSRCDIR.xmms2} &&				\
-	${MAKE} show-var ${MAKEFLAGS} VARNAME=PKG_OPTIONS
-MAKEFLAGS+=	PKG_BUILD_OPTIONS.xmms2=${PKG_BUILD_OPTIONS.xmms2:Q}
-.endif
-MAKEVARS+=	PKG_BUILD_OPTIONS.xmms2
+pkgbase := xmms2
+.include "../../mk/pkg-build-options.mk"
 
 .if !empty(PKG_BUILD_OPTIONS.xmms2:Mfaad)
 .  include "../../audio/faad2/buildlink3.mk"
