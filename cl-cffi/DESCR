@@ -1,0 +1,13 @@
+CFFI, the Common Foreign Function Interface, purports to be a portable foreign
+function interface for Common Lisp. The CFFI library is composed of a
+Lisp-implementation-specific backend in the CFFI-SYS package, and a portable
+frontend in the CFFI package.
+
+Some of the key features include:
+  - an extensible foreign type system;
+  - callback support;
+  - support for foreign string encodings;
+  - ported to Allegro CL, Corman CL, CLISP, CMUCL, ECL, LispWorks, Clozure CL,
+    SBCL and the Scieneer CL;
+  - a groveller;
+  - a UFFI compatibility layer.
