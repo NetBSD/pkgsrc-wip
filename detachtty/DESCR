@@ -1,0 +1,14 @@
+Detachtty is a Unix system programming utility that lets you run interactive
+programs (such as Lisp) non-interactively. Also, it allows you to connect to
+them over the network when you do need to interact with them. It's intended for
+use with long-running server processes running in Common Lisp implementations
+
+If you've used screen, it's a similar concept, but more suited to traditional
+scrolling interfaces whereas screen is better for full-screen (e.g.
+curses-based) apps. Compared to screen, detachtty
+
+ - has no capability to swap between different screens (doesn't eat C-a)
+ - runs in line-at-a-time mode with no tty emulation (you can sanely use it in
+   emacs comint modes or from inside a script(1) session)
+ - has no features (less to go wrong)
+ - and thus doesn't need a configuration file either
