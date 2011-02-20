@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/02/20 10:13:29 ddeus Exp $
+${PLIST.ecl}${ECL_PATH}alexandria.asd
+${PLIST.ecl}${ECL_PATH}alexandria.fas
+share/doc/${LISP}-alexandria/README
+share/doc/${LISP}-alexandria/AUTHORS
+share/doc/${LISP}-alexandria/LICENCE
+share/doc/${LISP}-alexandria/alexandria.html

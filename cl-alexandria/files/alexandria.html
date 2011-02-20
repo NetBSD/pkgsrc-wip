@@ -1,0 +1,1652 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- Alexandria software and associated documentation are in the public
+domain:
+
+  Authors dedicate this work to public domain, for the benefit of the
+  public at large and to the detriment of the authors' heirs and
+  successors. Authors intends this dedication to be an overt act of
+  relinquishment in perpetuity of all present and future rights under
+  copyright law, whether vested or contingent, in the work. Authors
+  understands that such relinquishment of all rights includes the
+  relinquishment of all rights to enforce (by lawsuit or otherwise)
+  those copyrights in the work.
+
+  Authors recognize that, once placed in the public domain, the work
+  may be freely reproduced, distributed, transmitted, used, modified,
+  built upon, or otherwise exploited by anyone for any purpose,
+  commercial or non-commercial, and in any way, including by methods
+  that have not yet been invented or conceived.
+
+
+In those legislations where public domain dedications are not
+recognized or possible, Alexandria is distributed under the following
+terms and conditions:
+
+  Permission is hereby granted, free of charge, to any person
+  obtaining a copy of this software and associated documentation files
+  (the "Software"), to deal in the Software without restriction,
+  including without limitation the rights to use, copy, modify, merge,
+  publish, distribute, sublicense, and/or sell copies of the Software,
+  and to permit persons to whom the Software is furnished to do so,
+  subject to the following conditions:
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+  EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+  MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+  IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+  CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+  TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+  SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+ -->
+<!-- Created on  by texi2html 5.0
+texi2html was written by: 
+            Lionel Cons <Lionel.Cons@cern.ch> (original author)
+            Karl Berry  <karl@freefriends.org>
+            Olaf Bachmann <obachman@mathematik.uni-kl.de>
+            and many others.
+Maintained by: Many creative people.
+Send bugs and suggestions to <texi2html-bug@nongnu.org>
+-->
+<head>
+<title>Alexandria Manual &ndash; draft version</title>
+
+<meta name="description" content="Alexandria Manual &ndash; draft version">
+<meta name="keywords" content="Alexandria Manual &ndash; draft version">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="texi2html 5.0">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.smallquotation {font-size: smaller}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+div.smalldisplay {margin-left: 3.2em}
+div.smallexample {margin-left: 3.2em}
+div.smalllisp {margin-left: 3.2em}
+pre.display {font-family: serif}
+pre.format {font-family: serif}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: serif; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: serif; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.nocodebreak {white-space:pre}
+span.nolinebreak {white-space:pre}
+span.roman {font-family:serif; font-weight:normal}
+span.sansserif {font-family:sans-serif; font-weight:normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="en" bgcolor="#FFFFFF" text="#000000" link="#0000FF" vlink="#800080" alink="#FF0000">
+
+
+<h1>Alexandria Manual</h1>
+<h3 align="right">draft version</h3>
+
+
+<p>Alexandria software and associated documentation are in the public
+domain:
+</p>
+<blockquote>
+<p>  Authors dedicate this work to public domain, for the benefit of the
+  public at large and to the detriment of the authors&rsquo; heirs and
+  successors. Authors intends this dedication to be an overt act of
+  relinquishment in perpetuity of all present and future rights under
+  copyright law, whether vested or contingent, in the work. Authors
+  understands that such relinquishment of all rights includes the
+  relinquishment of all rights to enforce (by lawsuit or otherwise)
+  those copyrights in the work.
+</p>
+<p>  Authors recognize that, once placed in the public domain, the work
+  may be freely reproduced, distributed, transmitted, used, modified,
+  built upon, or otherwise exploited by anyone for any purpose,
+  commercial or non-commercial, and in any way, including by methods
+  that have not yet been invented or conceived.
+</p></blockquote>
+
+<p>In those legislations where public domain dedications are not
+recognized or possible, Alexandria is distributed under the following
+terms and conditions:
+</p>
+<blockquote>
+<p>  Permission is hereby granted, free of charge, to any person
+  obtaining a copy of this software and associated documentation files
+  (the &quot;Software&quot;), to deal in the Software without restriction,
+  including without limitation the rights to use, copy, modify, merge,
+  publish, distribute, sublicense, and/or sell copies of the Software,
+  and to permit persons to whom the Software is furnished to do so,
+  subject to the following conditions:
+</p>
+<p>  THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND,
+  EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+  MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+  IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+  CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+  TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+  SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+</p></blockquote>
+
+<hr>
+<p>&amp;allow-other-keys
+</p>
+<p>&amp;optional
+</p>
+<p>&amp;rest
+</p>
+<p>&amp;key
+</p>
+<p>&amp;body
+</p>
+
+<a name="Top"></a>
+<table class="header" cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[ &lt; ]</td>
+<td valign="middle" align="left">[<a href="#Hash-Tables"> &gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#SEC_Contents"></a>]</td>
+<td valign="middle" align="left">[]</td>
+<td valign="middle" align="left">[<a href="#SEC_About"> ? </a>]</td>
+</tr></table>
+<a name="Alexandria"></a>
+<h1 class="top">Alexandria</h1>
+
+<p>Alexandria software and associated documentation are in the public
+domain:
+</p>
+<blockquote>
+<p>  Authors dedicate this work to public domain, for the benefit of the
+  public at large and to the detriment of the authors&rsquo; heirs and
+  successors. Authors intends this dedication to be an overt act of
+  relinquishment in perpetuity of all present and future rights under
+  copyright law, whether vested or contingent, in the work. Authors
+  understands that such relinquishment of all rights includes the
+  relinquishment of all rights to enforce (by lawsuit or otherwise)
+  those copyrights in the work.
+</p>
+<p>  Authors recognize that, once placed in the public domain, the work
+  may be freely reproduced, distributed, transmitted, used, modified,
+  built upon, or otherwise exploited by anyone for any purpose,
+  commercial or non-commercial, and in any way, including by methods
+  that have not yet been invented or conceived.
+</p></blockquote>
+
+<p>In those legislations where public domain dedications are not
+recognized or possible, Alexandria is distributed under the following
+terms and conditions:
+</p>
+<blockquote>
+<p>  Permission is hereby granted, free of charge, to any person
+  obtaining a copy of this software and associated documentation files
+  (the &quot;Software&quot;), to deal in the Software without restriction,
+  including without limitation the rights to use, copy, modify, merge,
+  publish, distribute, sublicense, and/or sell copies of the Software,
+  and to permit persons to whom the Software is furnished to do so,
+  subject to the following conditions:
+</p>
+<p>  THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND,
+  EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+  MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+  IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+  CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+  TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+  SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+</p></blockquote>
+
+<table class="menu" border="0" cellspacing="0">
+<tr><td align="left" valign="top"><a href="#Hash-Tables">1 Hash Tables</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                 
+</td></tr>
+<tr><td align="left" valign="top"><a href="#Data-and-Control-Flow">2 Data and Control Flow</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">       
+</td></tr>
+<tr><td align="left" valign="top"><a href="#Conses">3 Conses</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                      
+</td></tr>
+<tr><td align="left" valign="top"><a href="#Sequences">4 Sequences</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                   
+</td></tr>
+<tr><td align="left" valign="top"><a href="#Macro-Writing">5 Macro Writing</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">               
+</td></tr>
+<tr><td align="left" valign="top"><a href="#Symbols">6 Symbols</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                     
+</td></tr>
+<tr><td align="left" valign="top"><a href="#Arrays">7 Arrays</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                      
+</td></tr>
+<tr><td align="left" valign="top"><a href="#Types">8 Types</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                       
+</td></tr>
+<tr><td align="left" valign="top"><a href="#Numbers">9 Numbers</a></td><td>&nbsp;&nbsp;</td><td align="left" valign="top">                     
+</td></tr>
+</table>
+
+
+<hr size="6">
+<a name="Hash-Tables"></a>
+<table class="header" cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#Top"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#Top"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#Top"></a>]</td>
+<td valign="middle" align="left">[<a href="#Data-and-Control-Flow"> &gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#Data-and-Control-Flow"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#Top"></a>]</td>
+<td valign="middle" align="left">[<a href="#SEC_Contents"></a>]</td>
+<td valign="middle" align="left">[]</td>
+<td valign="middle" align="left">[<a href="#SEC_About"> ? </a>]</td>
+</tr></table>
+<a name="Hash-Tables-1"></a>
+<h1 class="chapter">1 Hash Tables</h1>
+
+<p><a name="Function-ensure_002dgethash"></a>
+</p><dl>
+<dt><a name="index-ensure_002dgethash"></a>Function: <strong>ensure-gethash</strong><em> key hash-table @&amp;optional default</em></dt>
+<dd><a name="index-ensure_002dgethash-1"></a>
+<p>Like <code>gethash</code>, but if <code>key</code> is not found in the <code>hash-table</code> saves the <code>default</code>
+under key before returning it. Secondary return value is true if key was
+already in the table.
+</p></dd></dl>
+<p><a name="Function-copy_002dhash_002dtable"></a>
+</p><dl>
+<dt><a name="index-copy_002dhash_002dtable"></a>Function: <strong>copy-hash-table</strong><em> table @&amp;key key test size rehash-size rehash-threshold</em></dt>
+<dd><a name="index-copy_002dhash_002dtable-1"></a>
+<p>Returns a copy of hash table <code>table</code>, with the same keys and values
+as the <code>table</code>. The copy has the same properties as the original, unless
+overridden by the keyword arguments.
+</p>
+<p>Before each of the original values is set into the new hash-table, <code>key</code>
+is invoked on the value. As <code>key</code> defaults to <code>cl:identity</code>, a shallow
+copy is returned by default.
+</p></dd></dl>
+<p><a name="Function-maphash_002dkeys"></a>
+</p><dl>
+<dt><a name="index-maphash_002dkeys"></a>Function: <strong>maphash-keys</strong><em> function table</em></dt>
+<dd><a name="index-maphash_002dkeys-1"></a>
+<p>Like <code>maphash</code>, but calls <code>function</code> with each key in the hash table <code>table</code>.
+</p></dd></dl>
+<p><a name="Function-maphash_002dvalues"></a>
+</p><dl>
+<dt><a name="index-maphash_002dvalues"></a>Function: <strong>maphash-values</strong><em> function table</em></dt>
+<dd><a name="index-maphash_002dvalues-1"></a>
+<p>Like <code>maphash</code>, but calls <code>function</code> with each value in the hash table <code>table</code>.
+</p></dd></dl>
+<p><a name="Function-hash_002dtable_002dkeys"></a>
+</p><dl>
+<dt><a name="index-hash_002dtable_002dkeys"></a>Function: <strong>hash-table-keys</strong><em> table</em></dt>
+<dd><a name="index-hash_002dtable_002dkeys-1"></a>
+<p>Returns a list containing the keys of hash table <code>table</code>.
+</p></dd></dl>
+<p><a name="Function-hash_002dtable_002dvalues"></a>
+</p><dl>
+<dt><a name="index-hash_002dtable_002dvalues"></a>Function: <strong>hash-table-values</strong><em> table</em></dt>
+<dd><a name="index-hash_002dtable_002dvalues-1"></a>
+<p>Returns a list containing the values of hash table <code>table</code>.
+</p></dd></dl>
+<p><a name="Function-hash_002dtable_002dalist"></a>
+</p><dl>
+<dt><a name="index-hash_002dtable_002dalist"></a>Function: <strong>hash-table-alist</strong><em> table</em></dt>
+<dd><a name="index-hash_002dtable_002dalist-1"></a>
+<p>Returns an association list containing the keys and values of hash table
+<code>table</code>.
+</p></dd></dl>
+<p><a name="Function-hash_002dtable_002dplist"></a>
+</p><dl>
+<dt><a name="index-hash_002dtable_002dplist"></a>Function: <strong>hash-table-plist</strong><em> table</em></dt>
+<dd><a name="index-hash_002dtable_002dplist-1"></a>
+<p>Returns a property list containing the keys and values of hash table
+<code>table</code>.
+</p></dd></dl>
+<p><a name="Function-alist_002dhash_002dtable"></a>
+</p><dl>
+<dt><a name="index-alist_002dhash_002dtable"></a>Function: <strong>alist-hash-table</strong><em> alist @&amp;rest hash-table-initargs</em></dt>
+<dd><a name="index-alist_002dhash_002dtable-1"></a>
+<p>Returns a hash table containing the keys and values of the association list
+<code>alist</code>. Hash table is initialized using the <code>hash-table-initargs</code>.
+</p></dd></dl>
+<p><a name="Function-plist_002dhash_002dtable"></a>
+</p><dl>
+<dt><a name="index-plist_002dhash_002dtable"></a>Function: <strong>plist-hash-table</strong><em> plist @&amp;rest hash-table-initargs</em></dt>
+<dd><a name="index-plist_002dhash_002dtable-1"></a>
+<p>Returns a hash table containing the keys and values of the property list
+<code>plist</code>. Hash table is initialized using the <code>hash-table-initargs</code>.
+</p></dd></dl>
+
+<hr>
+<a name="Data-and-Control-Flow"></a>
+<table class="header" cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#Hash-Tables"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#Hash-Tables"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#Top"></a>]</td>
+<td valign="middle" align="left">[<a href="#Conses"> &gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#Conses"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#Top"></a>]</td>
+<td valign="middle" align="left">[<a href="#SEC_Contents"></a>]</td>
+<td valign="middle" align="left">[]</td>
+<td valign="middle" align="left">[<a href="#SEC_About"> ? </a>]</td>
+</tr></table>
+<a name="Data-and-Control-Flow-1"></a>
+<h1 class="chapter">2 Data and Control Flow</h1>
+
+<p><a name="Macro-define_002dconstant"></a>
+</p><dl>
+<dt><a name="index-define_002dconstant"></a>Macro: <strong>define-constant</strong><em> name initial-value @&amp;key test documentation</em></dt>
+<dd><a name="index-define_002dconstant-1"></a>
+<p>Ensures that the global variable named by <code>name</code> is a constant with a value
+that is equal under <code>test</code> to the result of evaluating <code>initial-value</code>. <code>test</code> is a
+/function designator/ that defaults to <code>eql</code>. If <code>documentation</code> is given, it
+becomes the documentation string of the constant.
+</p>
+<p>Signals an error if <code>name</code> is already a bound non-constant variable.
+</p>
+<p>Signals an error if <code>name</code> is already a constant variable whose value is not
+equal under <code>test</code> to result of evaluating <code>initial-value</code>.
+</p></dd></dl>
+<p><a name="Macro-destructuring_002dcase"></a>
+</p><dl>
+<dt><a name="index-destructuring_002dcase"></a>Macro: <strong>destructuring-case</strong><em> keyform @&amp;body clauses</em></dt>
+<dd><a name="index-destructuring_002dcase-1"></a>
+<p><code>destructuring-case</code>, <code>-ccase</code>, and <code>-ecase</code> are a combination of <code>case</code> and <code>destructuring-bind</code>.
+<code>keyform</code> must evaluate to a <code>cons</code>.
+</p>
+<p>Clauses are of the form:
+</p>
+<div class="lisp">
+<pre class="lisp">  ((CASE-KEYS . DESTRUCTURING-LAMBDA-LIST) FORM*)
+</pre></div>
+
+<p>The clause whose <code>case-keys</code> matches <code>car</code> of <code>key</code>, as if by <code>case</code>, <code>ccase</code>, or <code>ecase</code>,
+is selected, and FORMs are then executed with <code>cdr</code> of <code>key</code> is destructured and
+bound by the <code>destructuring-lambda-list</code>.
+</p>
+<p>Example:
+</p>
+<div class="lisp">
+<pre class="lisp"> (defun dcase (x)
+   (destructuring-case x
+     ((:foo a b)
+      (format nil &quot;foo: ~S, ~S&quot; a b))
+     ((:bar &amp;key a b)
+      (format nil &quot;bar, ~S, ~S&quot; a b))
+     (((:alt1 :alt2) a)
+      (format nil &quot;alt: ~S&quot; a))
+     ((t &amp;rest rest)
+      (format nil &quot;unknown: ~S&quot; rest))))
+</pre></div>
+
+<div class="lisp">
+<pre class="lisp">  (dcase (list :foo 1 2))        ; =&gt; &quot;foo: 1, 2&quot;
+  (dcase (list :bar :a 1 :b 2))  ; =&gt; &quot;bar: 1, 2&quot;
+  (dcase (list :alt1 1))         ; =&gt; &quot;alt: 1&quot;
+  (dcase (list :alt2 2))         ; =&gt; &quot;alt: 2&quot;
+  (dcase (list :quux 1 2 3))     ; =&gt; &quot;unknown: 1, 2, 3&quot;
+</pre></div>
+
+<div class="lisp">
+<pre class="lisp"> (defun decase (x)
+   (destructuring-case x
+     ((:foo a b)
+      (format nil &quot;foo: ~S, ~S&quot; a b))
+     ((:bar &amp;key a b)
+      (format nil &quot;bar, ~S, ~S&quot; a b))
+     (((:alt1 :alt2) a)
+      (format nil &quot;alt: ~S&quot; a))))
+</pre></div>
+
+<div class="lisp">
+<pre class="lisp">  (decase (list :foo 1 2))        ; =&gt; &quot;foo: 1, 2&quot;
+  (decase (list :bar :a 1 :b 2))  ; =&gt; &quot;bar: 1, 2&quot;
+  (decase (list :alt1 1))         ; =&gt; &quot;alt: 1&quot;
+  (decase (list :alt2 2))         ; =&gt; &quot;alt: 2&quot;
+  (decase (list :quux 1 2 3))     ; =| error
+</pre></div>
+</dd></dl>
+<p><a name="Macro-ensure_002dfunctionf"></a>
+</p><dl>
+<dt><a name="index-ensure_002dfunctionf"></a>Macro: <strong>ensure-functionf</strong><em> @&amp;rest places</em></dt>
+<dd><a name="index-ensure_002dfunctionf-1"></a>
+<p>Multiple-place modify macro for <code>ensure-function:</code> ensures that each of
+<code>places</code> contains a function.
+</p></dd></dl>
+<p><a name="Macro-multiple_002dvalue_002dprog2"></a>
+</p><dl>
+<dt><a name="index-multiple_002dvalue_002dprog2"></a>Macro: <strong>multiple-value-prog2</strong><em> first-form second-form @&amp;body forms</em></dt>
+<dd><a name="index-multiple_002dvalue_002dprog2-1"></a>
+<p>Evaluates <code>first-form</code>, then <code>second-form</code>, and then <code>forms</code>. Yields as its value
+all the value returned by <code>second-form</code>.
+</p></dd></dl>
+<p><a name="Macro-named_002dlambda"></a>
+</p><dl>
+<dt><a name="index-named_002dlambda"></a>Macro: <strong>named-lambda</strong><em> name lambda-list @&amp;body body</em></dt>
+<dd><a name="index-named_002dlambda-1"></a>
+<p>Expands into a lambda-expression within whose <code>body</code> <code>name</code> denotes the
+corresponding function.
+</p></dd></dl>
+<p><a name="Macro-nth_002dvalue_002dor"></a>
+</p><dl>
+<dt><a name="index-nth_002dvalue_002dor"></a>Macro: <strong>nth-value-or</strong><em> nth-value @&amp;body forms</em></dt>
+<dd><a name="index-nth_002dvalue_002dor-1"></a>
+<p>Evaluates <code>form</code> arguments one at a time, until the <code>nth-value</code> returned by one
+of the forms is true. It then returns all the values returned by evaluating
+that form. If none of the forms return a true nth value, this form returns
+<code>nil</code>.
+</p></dd></dl>
+<p><a name="Macro-if_002dlet"></a>
+</p><dl>
+<dt><a name="index-if_002dlet"></a>Macro: <strong>if-let</strong><em> bindings @&amp;body (then-form &amp;optional else-form)</em></dt>
+<dd><a name="index-if_002dlet-1"></a>
+<p>Creates new variable bindings, and conditionally executes either
+<code>then-form</code> or <code>else-form</code>. <code>else-form</code> defaults to <code>nil</code>.
+</p>
+<p><code>bindings</code> must be either single binding of the form:
+</p>
+<div class="lisp">
+<pre class="lisp"> (variable initial-form)
+</pre></div>
+
+<p>or a list of bindings of the form:
+</p>
+<div class="lisp">
+<pre class="lisp"> ((variable-1 initial-form-1)
+  (variable-2 initial-form-2)
+  ...
+  (variable-n initial-form-n))
+</pre></div>
+
+<p>All initial-forms are executed sequentially in the specified order. Then all
+the variables are bound to the corresponding values.
+</p>
+<p>If all variables were bound to true values, the <code>then-form</code> is executed with the
+bindings in effect, otherwise the <code>else-form</code> is executed with the bindings in
+effect.
+</p></dd></dl>
+<p><a name="Macro-when_002dlet"></a>
+</p><dl>
+<dt><a name="index-when_002dlet"></a>Macro: <strong>when-let</strong><em> bindings @&amp;body forms</em></dt>
+<dd><a name="index-when_002dlet-1"></a>
+<p>Creates new variable bindings, and conditionally executes <code>forms</code>.
+</p>
+<p><code>bindings</code> must be either single binding of the form:
+</p>
+<div class="lisp">
+<pre class="lisp"> (variable initial-form)
+</pre></div>
+
+<p>or a list of bindings of the form:
+</p>
+<div class="lisp">
+<pre class="lisp"> ((variable-1 initial-form-1)
+  (variable-2 initial-form-2)
+  ...
+  (variable-n initial-form-n))
+</pre></div>
+
+<p>All initial-forms are executed sequentially in the specified order. Then all
+the variables are bound to the corresponding values.
+</p>
+<p>If all variables were bound to true values, then <code>forms</code> are executed as an
+implicit <code>progn</code>.
+</p></dd></dl>
+<p><a name="Macro-when_002dlet_002a"></a>
+</p><dl>
+<dt><a name="index-when_002dlet_002a"></a>Macro: <strong>when-let*</strong><em> bindings @&amp;body forms</em></dt>
+<dd><a name="index-when_002dlet_002a-1"></a>
+<p>Creates new variable bindings, and conditionally executes <code>forms</code>.
+</p>
+<p><code>bindings</code> must be either single binding of the form:
+</p>
+<div class="lisp">
+<pre class="lisp"> (variable initial-form)
+</pre></div>
+
+<p>or a list of bindings of the form:
+</p>
+<div class="lisp">
+<pre class="lisp"> ((variable-1 initial-form-1)
+  (variable-2 initial-form-2)
+  ...
+  (variable-n initial-form-n))
+</pre></div>
+
+<p>Each initial-form is executed in turn, and the variable bound to the
+corresponding value. Initial-form expressions can refer to variables
+previously bound by the <code>when-let*</code>.
+</p>
+<p>Execution of <code>when-let*</code> stops immediately if any initial-form evaluates to <code>nil</code>.
+If all initial-forms evaluate to true, then <code>forms</code> are executed as an implicit
+<code>progn</code>.
+</p></dd></dl>
+<p><a name="Macro-switch"></a>
+</p><dl>
+<dt><a name="index-switch"></a>Macro: <strong>switch</strong><em> whole (object &amp;key test key) @&amp;body clauses</em></dt>
+<dd><a name="index-switch-1"></a>
+<p>Evaluates first matching clause, returning its values, or evaluates and
+returns the values of <code>default</code> if no keys match.
+</p></dd></dl>
+<p><a name="Macro-cswitch"></a>
+</p><dl>
+<dt><a name="index-cswitch"></a>Macro: <strong>cswitch</strong><em> whole (object &amp;key test key) @&amp;body clauses</em></dt>
+<dd><a name="index-cswitch-1"></a>
+<p>Like <code>switch</code>, but signals a continuable error if no key matches.
+</p></dd></dl>
+<p><a name="Macro-eswitch"></a>
+</p><dl>
+<dt><a name="index-eswitch"></a>Macro: <strong>eswitch</strong><em> whole (object &amp;key test key) @&amp;body clauses</em></dt>
+<dd><a name="index-eswitch-1"></a>
+<p>Like <code>switch</code>, but signals an error if no key matches.
+</p></dd></dl>
+<p><a name="Macro-whichever"></a>
+</p><dl>
+<dt><a name="index-whichever"></a>Macro: <strong>whichever</strong><em> @&amp;rest possibilities env</em></dt>
+<dd><a name="index-whichever-1"></a>
+<p>Evaluates exactly one of <code>possibilities</code>, chosen at random.
+</p></dd></dl>
+<p><a name="Macro-xor"></a>
+</p><dl>
+<dt><a name="index-xor"></a>Macro: <strong>xor</strong><em> @&amp;rest datums</em></dt>
+<dd><a name="index-xor-1"></a>
+<p>Evaluates its arguments one at a time, from left to right. If more then one
+argument evaluates to a true value no further <code>datums</code> are evaluated, and <code>nil</code> is
+returned as both primary and secondary value. If exactly one argument
+evaluates to true, its value is returned as the primary value after all the
+arguments have been evaluated, and <code>t</code> is returned as the secondary value. If no
+arguments evaluate to true <code>nil</code> is retuned as primary, and <code>t</code> as secondary
+value.
+</p></dd></dl>
+
+<p><a name="Function-disjoin"></a>
+</p><dl>
+<dt><a name="index-disjoin"></a>Function: <strong>disjoin</strong><em> predicate @&amp;rest more-predicates</em></dt>
+<dd><a name="index-disjoin-1"></a>
+<p>Returns a function that applies each of <code>predicate</code> and <code>more-predicate</code>
+functions in turn to its arguments, returning the primary value of the first
+predicate that returns true, without calling the remaining predicates.
+If none of the predicates returns true, <code>nil</code> is returned.
+</p></dd></dl>
+<p><a name="Function-conjoin"></a>
+</p><dl>
+<dt><a name="index-conjoin"></a>Function: <strong>conjoin</strong><em> predicate @&amp;rest more-predicates</em></dt>
+<dd><a name="index-conjoin-1"></a>
+<p>Returns a function that applies each of <code>predicate</code> and <code>more-predicate</code>
+functions in turn to its arguments, returning <code>nil</code> if any of the predicates
+returns false, without calling the remaining predicates. If none of the
+predicates returns false, returns the primary value of the last predicate.
+</p></dd></dl>
+<p><a name="Function-compose"></a>
+</p><dl>
+<dt><a name="index-compose"></a>Function: <strong>compose</strong><em> function @&amp;rest more-functions</em></dt>
+<dd><a name="index-compose-1"></a>
+<p>Returns a function composed of <code>function</code> and <code>more-functions</code> that applies its
+arguments to to each in turn, starting from the rightmost of <code>more-functions</code>,
+and then calling the next one with the primary value of the last.
+</p></dd></dl>
+<p><a name="Function-ensure_002dfunction"></a>
+</p><dl>
+<dt><a name="index-ensure_002dfunction"></a>Function: <strong>ensure-function</strong><em> function-designator</em></dt>
+<dd><a name="index-ensure_002dfunction-1"></a>
+<p>Returns the function designated by <code>function-designator:</code>
+if <code>function-designator</code> is a function, it is returned, otherwise
+it must be a function name and its <code>fdefinition</code> is returned.
+</p></dd></dl>
+<p><a name="Function-multiple_002dvalue_002dcompose"></a>
+</p><dl>
+<dt><a name="index-multiple_002dvalue_002dcompose"></a>Function: <strong>multiple-value-compose</strong><em> function @&amp;rest more-functions</em></dt>
+<dd><a name="index-multiple_002dvalue_002dcompose-1"></a>
+<p>Returns a function composed of <code>function</code> and <code>more-functions</code> that applies
+its arguments to each in turn, starting from the rightmost of
+<code>more-functions</code>, and then calling the next one with all the return values of
+the last.
+</p></dd></dl>
+<p><a name="Function-curry"></a>
+</p><dl>
+<dt><a name="index-curry"></a>Function: <strong>curry</strong><em> function @&amp;rest arguments</em></dt>
+<dd><a name="index-curry-1"></a>
+<p>Returns a function that applies <code>arguments</code> and the arguments
+it is called with to <code>function</code>.
+</p></dd></dl>
+<p><a name="Function-rcurry"></a>
+</p><dl>
+<dt><a name="index-rcurry"></a>Function: <strong>rcurry</strong><em> function @&amp;rest arguments</em></dt>
+<dd><a name="index-rcurry-1"></a>
+<p>Returns a function that applies the arguments it is called
+with and <code>arguments</code> to <code>function</code>.
+</p></dd></dl>
+
+<hr>
+<a name="Conses"></a>
+<table class="header" cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#Data-and-Control-Flow"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#Data-and-Control-Flow"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#Top"></a>]</td>
+<td valign="middle" align="left">[<a href="#Sequences"> &gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#Sequences"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#Top"></a>]</td>
+<td valign="middle" align="left">[<a href="#SEC_Contents"></a>]</td>
+<td valign="middle" align="left">[]</td>
+<td valign="middle" align="left">[<a href="#SEC_About"> ? </a>]</td>
+</tr></table>
+<a name="Conses-1"></a>
+<h1 class="chapter">3 Conses</h1>
+
+<p><a name="Type-proper_002dlist"></a>
+</p><dl>
+<dt><a name="index-proper_002dlist"></a>Type: <strong>proper-list</strong></dt>
+<dd><a name="index-proper_002dlist-1"></a>
+<p>Type designator for proper lists. Implemented as a <code>satisfies</code> type, hence
+not recommended for performance intensive use. Main usefullness as a type
+designator of the expected type in a <code>type-error</code>.
+</p></dd></dl>
+<p><a name="Type-circular_002dlist"></a>
+</p><dl>
+<dt><a name="index-circular_002dlist"></a>Type: <strong>circular-list</strong></dt>
+<dd><a name="index-circular_002dlist-1"></a>
+<p>Type designator for circular lists. Implemented as a <code>satisfies</code> type, so not
+recommended for performance intensive use. Main usefullness as the
+expected-type designator of a <code>type-error</code>.
+</p></dd></dl>
+
+<p><a name="Macro-appendf"></a>
+</p><dl>
+<dt><a name="index-appendf"></a>Macro: <strong>appendf</strong><em> place @&amp;rest lists env</em></dt>
+<dd><a name="index-appendf-1"></a>
+<p>Modify-macro for <code>append</code>. Appends <code>lists</code> to the place designated by the first
+argument.
+</p></dd></dl>
+<p><a name="Macro-nconcf"></a>
+</p><dl>
+<dt><a name="index-nconcf"></a>Macro: <strong>nconcf</strong><em> place @&amp;rest lists env</em></dt>
+<dd><a name="index-nconcf-1"></a>
+<p>Modify-macro for <code>nconc</code>. Concatenates <code>lists</code> to place designated by the first
+argument.
+</p></dd></dl>
+<p><a name="Macro-remove_002dfrom_002dplistf"></a>
+</p><dl>
+<dt><a name="index-remove_002dfrom_002dplistf"></a>Macro: <strong>remove-from-plistf</strong><em> place @&amp;rest keys env</em></dt>
+<dd><a name="index-remove_002dfrom_002dplistf-1"></a>
+<p>Modify macro for <code>remove-from-plist</code>.
+</p></dd></dl>
+<p><a name="Macro-delete_002dfrom_002dplistf"></a>
+</p><dl>
+<dt><a name="index-delete_002dfrom_002dplistf"></a>Macro: <strong>delete-from-plistf</strong><em> place @&amp;rest keys env</em></dt>
+<dd><a name="index-delete_002dfrom_002dplistf-1"></a>
+<p>Modify macro for <code>delete-from-plist</code>.
+</p></dd></dl>
+<p><a name="Macro-reversef"></a>
+</p><dl>
+<dt><a name="index-reversef"></a>Macro: <strong>reversef</strong><em> place env</em></dt>
+<dd><a name="index-reversef-1"></a>
+<p>Modify-macro for <code>reverse</code>. Copies and reverses the list stored in the given
+place and saves back the result into the place.
+</p></dd></dl>
+<p><a name="Macro-nreversef"></a>
+</p><dl>
+<dt><a name="index-nreversef"></a>Macro: <strong>nreversef</strong><em> place env</em></dt>
+<dd><a name="index-nreversef-1"></a>
+<p>Modify-macro for <code>nreverse</code>. Reverses the list stored in the given place by
+destructively modifying it and saves back the result into the place.
+</p></dd></dl>
+<p><a name="Macro-unionf"></a>
+</p><dl>
+<dt><a name="index-unionf"></a>Macro: <strong>unionf</strong><em> place list @&amp;rest args env</em></dt>
+<dd><a name="index-unionf-1"></a>
+<p>Modify-macro for <code>union</code>. Saves the union of <code>list</code> and the contents of the
+place designated by the first argument to the designated place.
+</p></dd></dl>
+<p><a name="Macro-nunionf"></a>
+</p><dl>
+<dt><a name="index-nunionf"></a>Macro: <strong>nunionf</strong><em> place list @&amp;rest args env</em></dt>
+<dd><a name="index-nunionf-1"></a>
+<p>Modify-macro for <code>nunion</code>. Saves the union of <code>list</code> and the contents of the
+place designated by the first argument to the designated place. May modify
+either argument.
+</p></dd></dl>
+
+<p><a name="Macro-doplist"></a>
+</p><dl>
+<dt><a name="index-doplist"></a>Macro: <strong>doplist</strong><em> (key val plist &amp;optional values) @&amp;body body</em></dt>
+<dd><a name="index-doplist-1"></a>
+<p>Iterates over elements of <code>plist</code>. <code>body</code> can be preceded by
+declarations, and is like a <code>tagbody</code>. <code>return</code> may be used to terminate
+the iteration early. If <code>return</code> is not used, returns <code>values</code>.
+</p></dd></dl>
+
+<p><a name="Function-circular_002dlist_002dp"></a>
+</p><dl>
+<dt><a name="index-circular_002dlist_002dp"></a>Function: <strong>circular-list-p</strong><em> object</em></dt>
+<dd><a name="index-circular_002dlist_002dp-1"></a>
+<p>Returns true if <code>object</code> is a circular list, <code>nil</code> otherwise.
+</p></dd></dl>
+<p><a name="Function-circular_002dtree_002dp"></a>
+</p><dl>
+<dt><a name="index-circular_002dtree_002dp"></a>Function: <strong>circular-tree-p</strong><em> object</em></dt>
+<dd><a name="index-circular_002dtree_002dp-1"></a>
+<p>Returns true if <code>object</code> is a circular tree, <code>nil</code> otherwise.
+</p></dd></dl>
+<p><a name="Function-proper_002dlist_002dp"></a>
+</p><dl>
+<dt><a name="index-proper_002dlist_002dp"></a>Function: <strong>proper-list-p</strong><em> object</em></dt>
+<dd><a name="index-proper_002dlist_002dp-1"></a>
+<p>Returns true if <code>object</code> is a proper list.
+</p></dd></dl>
+
+<p><a name="Function-alist_002dplist"></a>
+</p><dl>
+<dt><a name="index-alist_002dplist"></a>Function: <strong>alist-plist</strong><em> alist</em></dt>
+<dd><a name="index-alist_002dplist-1"></a>
+<p>Returns a property list containing the same keys and values as the
+association list <code>alist</code> in the same order.
+</p></dd></dl>
+<p><a name="Function-plist_002dalist"></a>
+</p><dl>
+<dt><a name="index-plist_002dalist"></a>Function: <strong>plist-alist</strong><em> plist</em></dt>
+<dd><a name="index-plist_002dalist-1"></a>
+<p>Returns an association list containing the same keys and values as the
+property list <code>plist</code> in the same order.
+</p></dd></dl>
+<p><a name="Function-circular_002dlist"></a>
+</p><dl>
+<dt><a name="index-circular_002dlist-2"></a>Function: <strong>circular-list</strong><em> @&amp;rest elements</em></dt>
+<dd><a name="index-circular_002dlist-3"></a>
+<p>Creates a circular list of <code>elements</code>.
+</p></dd></dl>
+<p><a name="Function-make_002dcircular_002dlist"></a>
+</p><dl>
+<dt><a name="index-make_002dcircular_002dlist"></a>Function: <strong>make-circular-list</strong><em> length @&amp;key initial-element</em></dt>
+<dd><a name="index-make_002dcircular_002dlist-1"></a>
+<p>Creates a circular list of <code>length</code> with the given <code>initial-element</code>.
+</p></dd></dl>
+<p><a name="Function-ensure_002dcar"></a>
+</p><dl>
+<dt><a name="index-ensure_002dcar"></a>Function: <strong>ensure-car</strong><em> thing</em></dt>
+<dd><a name="index-ensure_002dcar-1"></a>
+<p>If <code>thing</code> is a <code>cons</code>, its <code>car</code> is returned. Otherwise <code>thing</code> is returned.
+</p></dd></dl>
+<p><a name="Function-ensure_002dcons"></a>
+</p><dl>
+<dt><a name="index-ensure_002dcons"></a>Function: <strong>ensure-cons</strong><em> cons</em></dt>
+<dd><a name="index-ensure_002dcons-1"></a>
+<p>If <code>cons</code> is a cons, it is returned. Otherwise returns a fresh cons with <code>cons</code>
+  in the car, and <code>nil</code> in the cdr.
+</p></dd></dl>
+<p><a name="Function-ensure_002dlist"></a>
+</p><dl>
+<dt><a name="index-ensure_002dlist"></a>Function: <strong>ensure-list</strong><em> list</em></dt>
+<dd><a name="index-ensure_002dlist-1"></a>
+<p>If <code>list</code> is a list, it is returned. Otherwise returns the list designated by <code>list</code>.
+</p></dd></dl>
+<p><a name="Function-flatten"></a>
+</p><dl>
+<dt><a name="index-flatten"></a>Function: <strong>flatten</strong><em> tree</em></dt>
+<dd><a name="index-flatten-1"></a>
+<p>Traverses the tree in order, collecting non-null leaves into a list.
+</p></dd></dl>
+<p><a name="Function-lastcar"></a>
+</p><dl>
+<dt><a name="index-lastcar"></a>Function: <strong>lastcar</strong><em> list</em></dt>
+<dd><a name="index-lastcar-1"></a>
+<p>Returns the last element of <code>list</code>. Signals a type-error if <code>list</code> is not a
+proper list.
+</p></dd></dl>
+<p><a name="Function-_0028setf-lastcar_0029"></a>
+</p><dl>
+<dt><a name="index-_0028setf-lastcar_0029"></a>Function: <strong>(setf lastcar)</strong></dt>
+<dd><a name="index-_0028setf-lastcar_0029-1"></a>
+<p>Sets the last element of <code>list</code>. Signals a type-error if <code>list</code> is not a proper
+list.
+</p></dd></dl>
+<p><a name="Function-proper_002dlist_002dlength"></a>
+</p><dl>
+<dt><a name="index-proper_002dlist_002dlength"></a>Function: <strong>proper-list-length</strong><em> list</em></dt>
+<dd><a name="index-proper_002dlist_002dlength-1"></a>
+<p>Returns length of <code>list</code>, signalling an error if it is not a proper list.
+</p></dd></dl>
+<p><a name="Function-mappend"></a>
+</p><dl>
+<dt><a name="index-mappend"></a>Function: <strong>mappend</strong><em> function @&amp;rest lists</em></dt>
+<dd><a name="index-mappend-1"></a>
+<p>Applies <code>function</code> to respective element(s) of each <code>list</code>, appending all the
+all the result list to a single list. <code>function</code> must return a list.
+</p></dd></dl>
+<p><a name="Function-map_002dproduct"></a>
+</p><dl>
+<dt><a name="index-map_002dproduct"></a>Function: <strong>map-product</strong><em> function list @&amp;rest more-lists</em></dt>
+<dd><a name="index-map_002dproduct-1"></a>
+<p>Returns a list containing the results of calling <code>function</code> with one argument
+from <code>list</code>, and one from each of <code>more-lists</code> for each combination of arguments.
+In other words, returns the product of <code>list</code> and <code>more-lists</code> using <code>function</code>.
+</p>
+<p>Example:
+</p>
+<div class="lisp">
+<pre class="lisp"> (map-product 'list '(1 2) '(3 4) '(5 6))
+  =&gt; ((1 3 5) (1 3 6) (1 4 5) (1 4 6)
+      (2 3 5) (2 3 6) (2 4 5) (2 4 6))
+</pre></div>
+</dd></dl>
+<p><a name="Function-remove_002dfrom_002dplist"></a>
+</p><dl>
+<dt><a name="index-remove_002dfrom_002dplist"></a>Function: <strong>remove-from-plist</strong><em> plist @&amp;rest keys</em></dt>
+<dd><a name="index-remove_002dfrom_002dplist-1"></a>
+<p>Returns a propery-list with same keys and values as <code>plist</code>, except that keys
+in the list designated by <code>keys</code> and values corresponding to them are removed.
+The returned property-list may share structure with the <code>plist</code>, but <code>plist</code> is
+not destructively modified. Keys are compared using <code>eq</code>.
+</p></dd></dl>
+<p><a name="Function-delete_002dfrom_002dplist"></a>
+</p><dl>
+<dt><a name="index-delete_002dfrom_002dplist"></a>Function: <strong>delete-from-plist</strong><em> plist @&amp;rest keys</em></dt>
+<dd><a name="index-delete_002dfrom_002dplist-1"></a>
+<p>Just like <code>remove-from-plist</code>, but this version may destructively modify the
+provided plist.
+</p></dd></dl>
+<p><a name="Function-set_002dequal"></a>
+</p><dl>
+<dt><a name="index-set_002dequal"></a>Function: <strong>set-equal</strong><em> list1 list2 @&amp;key test key</em></dt>
+<dd><a name="index-set_002dequal-1"></a>
+<p>Returns true if every element of <code>list1</code> matches some element of <code>list2</code> and
+every element of <code>list2</code> matches some element of <code>list1</code>. Otherwise returns false.
+</p></dd></dl>
+<p><a name="Function-setp"></a>
+</p><dl>
+<dt><a name="index-setp"></a>Function: <strong>setp</strong><em> object @&amp;key test key</em></dt>
+<dd><a name="index-setp-1"></a>
+<p>Returns true if <code>object</code> is a list that denotes a set, <code>nil</code> otherwise. A list
+denotes a set if each element of the list is unique under <code>key</code> and <code>test</code>.
+</p></dd></dl>
+
+<hr>
+<a name="Sequences"></a>
+<table class="header" cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#Conses"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#Conses"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#Top"></a>]</td>
+<td valign="middle" align="left">[<a href="#Macro-Writing"> &gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#Macro-Writing"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#Top"></a>]</td>
+<td valign="middle" align="left">[<a href="#SEC_Contents"></a>]</td>
+<td valign="middle" align="left">[]</td>
+<td valign="middle" align="left">[<a href="#SEC_About"> ? </a>]</td>
+</tr></table>
+<a name="Sequences-1"></a>
+<h1 class="chapter">4 Sequences</h1>
+
+<p><a name="Type-proper_002dsequence"></a>
+</p><dl>
+<dt><a name="index-proper_002dsequence"></a>Type: <strong>proper-sequence</strong></dt>
+<dd><a name="index-proper_002dsequence-1"></a>
+<p>Type designator for proper sequences, that is proper lists and sequences
+that are not lists.
+</p></dd></dl>
+
+<p><a name="Macro-deletef"></a>
+</p><dl>
+<dt><a name="index-deletef"></a>Macro: <strong>deletef</strong><em> place item @&amp;rest remove-keywords env</em></dt>
+<dd><a name="index-deletef-1"></a>
+<p>Modify-macro for <code>delete</code>. Sets place designated by the first argument to
+the result of calling <code>delete</code> with <code>item</code>, place, and the <code>remove-keywords</code>.
+</p></dd></dl>
+<p><a name="Macro-removef"></a>
+</p><dl>
+<dt><a name="index-removef"></a>Macro: <strong>removef</strong><em> place item @&amp;rest remove-keywords env</em></dt>
+<dd><a name="index-removef-1"></a>
+<p>Modify-macro for <code>remove</code>. Sets place designated by the first argument to
+the result of calling <code>remove</code> with <code>item</code>, place, and the <code>remove-keywords</code>.
+</p></dd></dl>
+
+<p><a name="Function-rotate"></a>
+</p><dl>
+<dt><a name="index-rotate"></a>Function: <strong>rotate</strong><em> sequence @&amp;optional n</em></dt>
+<dd><a name="index-rotate-1"></a>
+<p>Returns a sequence of the same type as <code>sequence</code>, with the elements of
+<code>sequence</code> rotated by <code>n:</code> <code>n</code> elements are moved from the end of the sequence to
+the front if <code>n</code> is positive, and <code>-n</code> elements moved from the front to the end if
+<code>n</code> is negative. <code>sequence</code> must be a proper sequence. <code>n</code> must be an integer,
+defaulting to <code>1</code>.
+</p>
+<p>If absolute value of <code>n</code> is greater then the length of the sequence, the results
+are identical to calling <code>rotate</code> with
+</p>
+<div class="lisp">
+<pre class="lisp">  (* (signum n) (mod n (length sequence))).
+</pre></div>
+
+<p>Note: the original sequence may be destructively altered, and result sequence may
+share structure with it.
+</p></dd></dl>
+<p><a name="Function-shuffle"></a>
+</p><dl>
+<dt><a name="index-shuffle"></a>Function: <strong>shuffle</strong><em> sequence @&amp;key start end</em></dt>
+<dd><a name="index-shuffle-1"></a>
+<p>Returns a random permutation of <code>sequence</code> bounded by <code>start</code> and <code>end</code>.
+Permuted sequence may share storage with the original one. Signals an
+error if <code>sequence</code> is not a proper sequence.
+</p></dd></dl>
+<p><a name="Function-random_002delt"></a>
+</p><dl>
+<dt><a name="index-random_002delt"></a>Function: <strong>random-elt</strong><em> sequence @&amp;key start end</em></dt>
+<dd><a name="index-random_002delt-1"></a>
+<p>Returns a random element from <code>sequence</code> bounded by <code>start</code> and <code>end</code>. Signals an
+error if the <code>sequence</code> is not a proper sequence.
+</p></dd></dl>
+<p><a name="Function-emptyp"></a>
+</p><dl>
+<dt><a name="index-emptyp"></a>Function: <strong>emptyp</strong><em> sequence</em></dt>
+<dd><a name="index-emptyp-1"></a>
+<p>Returns true if <code>sequence</code> is an empty sequence. Signals an error if <code>sequence</code>
+is not a sequence
+</p></dd></dl>
+<p><a name="Function-sequence_002dof_002dlength_002dp"></a>
+</p><dl>
+<dt><a name="index-sequence_002dof_002dlength_002dp"></a>Function: <strong>sequence-of-length-p</strong><em> sequence length</em></dt>
+<dd><a name="index-sequence_002dof_002dlength_002dp-1"></a>
+<p>Return true if <code>sequence</code> is a sequence of length <code>length</code>. Signals an error if
+<code>sequence</code> is not a sequence. Returns <code>false</code> for circular lists.
+</p></dd></dl>
+<p><a name="Function-length_003d"></a>
+</p><dl>
+<dt><a name="index-length_003d"></a>Function: <strong>length=</strong><em> @&amp;rest sequences</em></dt>
+<dd><a name="index-length_003d-1"></a>
+<p>Takes any number of sequences or integers in any order. Returns true iff
+the length of all the sequences and the integers are equal. Hint: there&rsquo;s a
+compiler macro that expands into more efficient code if the first argument
+is a literal integer.
+</p></dd></dl>
+<p><a name="Function-copy_002dsequence"></a>
+</p><dl>
+<dt><a name="index-copy_002dsequence"></a>Function: <strong>copy-sequence</strong><em> type sequence</em></dt>
+<dd><a name="index-copy_002dsequence-1"></a>
+<p>Returns a fresh sequence of <code>type</code>, which has the same elements as
+<code>sequence</code>.
+</p></dd></dl>
+<p><a name="Function-first_002delt"></a>
+</p><dl>
+<dt><a name="index-first_002delt"></a>Function: <strong>first-elt</strong><em> sequence</em></dt>
+<dd><a name="index-first_002delt-1"></a>
+<p>Returns the first element of <code>sequence</code>. Signals a type-error if <code>sequence</code> is
+not a sequence, or is an empty sequence.
+</p></dd></dl>
+<p><a name="Function-_0028setf-first_002delt_0029"></a>
+</p><dl>
+<dt><a name="index-_0028setf-first_002delt_0029"></a>Function: <strong>(setf first-elt)</strong></dt>
+<dd><a name="index-_0028setf-first_002delt_0029-1"></a>
+<p>Sets the first element of <code>sequence</code>. Signals a type-error if <code>sequence</code> is
+not a sequence, is an empty sequence, or if <code>object</code> cannot be stored in <code>sequence</code>.
+</p></dd></dl>
+<p><a name="Function-last_002delt"></a>
+</p><dl>
+<dt><a name="index-last_002delt"></a>Function: <strong>last-elt</strong><em> sequence</em></dt>
+<dd><a name="index-last_002delt-1"></a>
+<p>Returns the last element of <code>sequence</code>. Signals a type-error if <code>sequence</code> is
+not a proper sequence, or is an empty sequence.
+</p></dd></dl>
+<p><a name="Function-_0028setf-last_002delt_0029"></a>
+</p><dl>
+<dt><a name="index-_0028setf-last_002delt_0029"></a>Function: <strong>(setf last-elt)</strong></dt>
+<dd><a name="index-_0028setf-last_002delt_0029-1"></a>
+<p>Sets the last element of <code>sequence</code>. Signals a type-error if <code>sequence</code> is not a proper
+sequence, is an empty sequence, or if <code>object</code> cannot be stored in <code>sequence</code>.
+</p></dd></dl>
+<p><a name="Function-starts_002dwith"></a>
+</p><dl>
+<dt><a name="index-starts_002dwith"></a>Function: <strong>starts-with</strong><em> object sequence @&amp;key test key</em></dt>
+<dd><a name="index-starts_002dwith-1"></a>
+<p>Returns true if <code>sequence</code> is a sequence whose first element is <code>eql</code> to <code>object</code>.
+Returns <code>nil</code> if the <code>sequence</code> is not a sequence or is an empty sequence.
+</p></dd></dl>
+<p><a name="Function-starts_002dwith_002dsubseq"></a>
+</p><dl>
+<dt><a name="index-starts_002dwith_002dsubseq"></a>Function: <strong>starts-with-subseq</strong><em> prefix sequence @&amp;rest args @&amp;key return-suffix @&amp;allow-other-keys</em></dt>
+<dd><a name="index-starts_002dwith_002dsubseq-1"></a>
+<p>Test whether the first elements of <code>sequence</code> are the same (as per TEST) as the elements of <code>prefix</code>.
+</p>
+<p>If <code>return-suffix</code> is <code>t</code> the functions returns, as a second value, a
+displaced array pointing to the sequence after <code>prefix</code>.
+</p></dd></dl>
+<p><a name="Function-ends_002dwith"></a>
+</p><dl>
+<dt><a name="index-ends_002dwith"></a>Function: <strong>ends-with</strong><em> object sequence @&amp;key test key</em></dt>
+<dd><a name="index-ends_002dwith-1"></a>
+<p>Returns true if <code>sequence</code> is a sequence whose last element is <code>eql</code> to <code>object</code>.
+Returns <code>nil</code> if the <code>sequence</code> is not a sequence or is an empty sequence. Signals
+an error if <code>sequence</code> is an improper list.
+</p></dd></dl>
+<p><a name="Function-ends_002dwith_002dsubseq"></a>
+</p><dl>
+<dt><a name="index-ends_002dwith_002dsubseq"></a>Function: <strong>ends-with-subseq</strong><em> suffix sequence @&amp;key test</em></dt>
+<dd><a name="index-ends_002dwith_002dsubseq-1"></a>
+<p>Test whether <code>sequence</code> ends with <code>suffix</code>. In other words: return true if
+the last (length SUFFIX) elements of <code>sequence</code> are equal to <code>suffix</code>.
+</p></dd></dl>
+<p><a name="Function-map_002dcombinations"></a>
+</p><dl>
+<dt><a name="index-map_002dcombinations"></a>Function: <strong>map-combinations</strong><em> function sequence @&amp;key start end length copy</em></dt>
+<dd><a name="index-map_002dcombinations-1"></a>
+<p>Calls <code>function</code> with each combination of <code>length</code> constructable from the
+elements of the subsequence of <code>sequence</code> delimited by <code>start</code> and <code>end</code>. <code>start</code>
+defaults to <code>0</code>, <code>end</code> to length of <code>sequence</code>, and <code>length</code> to the length of the
+delimited subsequence. (So unless <code>length</code> is specified there is only a single
+combination, which has the same elements as the delimited subsequence.) If
+<code>copy</code> is true (the default) each combination is freshly allocated. If <code>copy</code> is
+false all combinations are <code>eq</code> to each other, in which case consequences are
+specified if a combination is modified by <code>function</code>.
+</p></dd></dl>
+<p><a name="Function-map_002dderangements"></a>
+</p><dl>
+<dt><a name="index-map_002dderangements"></a>Function: <strong>map-derangements</strong><em> function sequence @&amp;key start end copy</em></dt>
+<dd><a name="index-map_002dderangements-1"></a>
+<p>Calls <code>function</code> with each derangement of the subsequence of <code>sequence</code> denoted
+by the bounding index designators <code>start</code> and <code>end</code>. Derangement is a permutation
+of the sequence where no element remains in place. <code>sequence</code> is not modified,
+but individual derangements are <code>eq</code> to each other. Consequences are unspecified
+if calling <code>function</code> modifies either the derangement or <code>sequence</code>.
+</p></dd></dl>
+<p><a name="Function-map_002dpermutations"></a>
+</p><dl>
+<dt><a name="index-map_002dpermutations"></a>Function: <strong>map-permutations</strong><em> function sequence @&amp;key start end length copy</em></dt>
+<dd><a name="index-map_002dpermutations-1"></a>
+<p>Calls function with each permutation of <code>length</code> constructable
+from the subsequence of <code>sequence</code> delimited by <code>start</code> and <code>end</code>. <code>start</code>
+defaults to <code>0</code>, <code>end</code> to length of the sequence, and <code>length</code> to the
+length of the delimited subsequence.
+</p></dd></dl>
+
+<hr>
+<a name="Macro-Writing"></a>
+<table class="header" cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#Sequences"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#Sequences"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#Top"></a>]</td>
+<td valign="middle" align="left">[<a href="#Symbols"> &gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#Symbols"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#Top"></a>]</td>
+<td valign="middle" align="left">[<a href="#SEC_Contents"></a>]</td>
+<td valign="middle" align="left">[]</td>
+<td valign="middle" align="left">[<a href="#SEC_About"> ? </a>]</td>
+</tr></table>
+<a name="Macro-Writing-1"></a>
+<h1 class="chapter">5 Macro Writing</h1>
+
+<p><a name="Macro-once_002donly"></a>
+</p><dl>
+<dt><a name="index-once_002donly"></a>Macro: <strong>once-only</strong><em> specs @&amp;body forms</em></dt>
+<dd><a name="index-once_002donly-1"></a>
+<p>Evaluates <code>forms</code> with symbols specified in <code>specs</code> rebound to temporary
+variables, ensuring that each initform is evaluated only once.
+</p>
+<p>Each of <code>specs</code> must either be a symbol naming the variable to be rebound, or of
+the form:
+</p>
+<div class="lisp">
+<pre class="lisp">  (symbol initform)
+</pre></div>
+
+<p>Bare symbols in <code>specs</code> are equivalent to
+</p>
+<div class="lisp">
+<pre class="lisp">  (symbol symbol)
+</pre></div>
+
+<p>Example:
+</p>
+<div class="lisp">
+<pre class="lisp">  (defmacro cons1 (x) (once-only (x) `(cons ,x ,x)))
+  (let ((y 0)) (cons1 (incf y))) =&gt; (1 . 1)
+</pre></div>
+</dd></dl>
+<p><a name="Macro-with_002dgensyms"></a>
+</p><dl>
+<dt><a name="index-with_002dgensyms"></a>Macro: <strong>with-gensyms</strong><em> names @&amp;body forms</em></dt>
+<dd><a name="index-with_002dgensyms-1"></a>
+<p>Binds each variable named by a symbol in <code>names</code> to a unique symbol around
+<code>forms</code>. Each of <code>names</code> must either be either a symbol, or of the form:
+</p>
+<div class="lisp">
+<pre class="lisp"> (symbol string-designator)
+</pre></div>
+
+<p>Bare symbols appearing in <code>names</code> are equivalent to:
+</p>
+<div class="lisp">
+<pre class="lisp"> (symbol symbol)
+</pre></div>
+
+<p>The string-designator is used as the argument to <code>gensym</code> when constructing the
+unique symbol the named variable will be bound to.
+</p></dd></dl>
+<p><a name="Macro-with_002dunique_002dnames"></a>
+</p><dl>
+<dt><a name="index-with_002dunique_002dnames"></a>Macro: <strong>with-unique-names</strong><em> names @&amp;body forms</em></dt>
+<dd><a name="index-with_002dunique_002dnames-1"></a>
+<p>Alias for <code>with-gensyms</code>.
+</p></dd></dl>
+<p><a name="Function-featurep"></a>
+</p><dl>
+<dt><a name="index-featurep"></a>Function: <strong>featurep</strong><em> feature-expression</em></dt>
+<dd><a name="index-featurep-1"></a>
+<p>Returns <code>t</code> if the argument matches the state of the <code>*features*</code>
+list and <code>nil</code> if it does not. <code>feature-expression</code> can be any atom
+or list acceptable to the reader macros <code>#+</code> and <code>#-</code>.
+</p></dd></dl>
+<p><a name="Function-parse_002dbody"></a>
+</p><dl>
+<dt><a name="index-parse_002dbody"></a>Function: <strong>parse-body</strong><em> body @&amp;key documentation whole</em></dt>
+<dd><a name="index-parse_002dbody-1"></a>
+<p>Parses <code>body</code> into (values remaining-forms declarations doc-string).
+Documentation strings are recognized only if <code>documentation</code> is true.
+Syntax errors in body are signalled and <code>whole</code> is used in the signal
+arguments when given.
+</p></dd></dl>
+<p><a name="Function-parse_002dordinary_002dlambda_002dlist"></a>
+</p><dl>
+<dt><a name="index-parse_002dordinary_002dlambda_002dlist"></a>Function: <strong>parse-ordinary-lambda-list</strong><em> lambda-list @&amp;key normalize allow-specializers normalize-optional normalize-keyword normalize-auxilary</em></dt>
+<dd><a name="index-parse_002dordinary_002dlambda_002dlist-1"></a>
+<p>Parses an ordinary lambda-list, returning as multiple values:
+</p>
+<p><code>1</code>. Required parameters.
+</p>
+<p><code>2</code>. Optional parameter specifications, normalized into form:
+</p>
+<div class="lisp">
+<pre class="lisp">   (name init suppliedp)
+</pre></div>
+
+<p><code>3</code>. Name of the rest parameter, or <code>nil</code>.
+</p>
+<p><code>4</code>. Keyword parameter specifications, normalized into form:
+</p>
+<div class="lisp">
+<pre class="lisp">   ((keyword-name name) init suppliedp)
+</pre></div>
+
+<p><code>5</code>. Boolean indicating <code>&amp;allow-other-keys</code> presence.
+</p>
+<p><code>6</code>. <code>&amp;aux</code> parameter specifications, normalized into form
+</p>
+<div class="lisp">
+<pre class="lisp">   (name init).
+</pre></div>
+
+<p>Signals a <code>program-error</code> is the lambda-list is malformed.
+</p></dd></dl>
+
+<hr>
+<a name="Symbols"></a>
+<table class="header" cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#Macro-Writing"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#Macro-Writing"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#Top"></a>]</td>
+<td valign="middle" align="left">[<a href="#Arrays"> &gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#Arrays"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#Top"></a>]</td>
+<td valign="middle" align="left">[<a href="#SEC_Contents"></a>]</td>
+<td valign="middle" align="left">[]</td>
+<td valign="middle" align="left">[<a href="#SEC_About"> ? </a>]</td>
+</tr></table>
+<a name="Symbols-1"></a>
+<h1 class="chapter">6 Symbols</h1>
+
+<p><a name="Function-ensure_002dsymbol"></a>
+</p><dl>
+<dt><a name="index-ensure_002dsymbol"></a>Function: <strong>ensure-symbol</strong><em> name @&amp;optional package</em></dt>
+<dd><a name="index-ensure_002dsymbol-1"></a>
+<p>Returns a symbol with name designated by <code>name</code>, accessible in package
+designated by <code>package</code>. If symbol is not already accessible in <code>package</code>, it is
+interned there. Returns a secondary value reflecting the status of the symbol
+in the package, which matches the secondary return value of <code>intern</code>.
+</p>
+<p>Example:
+</p>
+<div class="lisp">
+<pre class="lisp">  (ensure-symbol :cons :cl) =&gt; cl:cons, :external
+</pre></div>
+</dd></dl>
+<p><a name="Function-format_002dsymbol"></a>
+</p><dl>
+<dt><a name="index-format_002dsymbol"></a>Function: <strong>format-symbol</strong><em> package control @&amp;rest arguments</em></dt>
+<dd><a name="index-format_002dsymbol-1"></a>
+<p>Constructs a string by applying <code>arguments</code> to string designator
+<code>control</code> as if by <code>format</code>, and then creates a symbol named by that
+string. If <code>package</code> is <code>nil</code>, returns an uninterned symbol, if package is
+<code>t</code>, returns a symbol interned in the current package, and otherwise
+returns a symbol interned in the package designated by <code>package</code>.
+</p></dd></dl>
+<p><a name="Function-make_002dkeyword"></a>
+</p><dl>
+<dt><a name="index-make_002dkeyword"></a>Function: <strong>make-keyword</strong><em> name</em></dt>
+<dd><a name="index-make_002dkeyword-1"></a>
+<p>Interns the string designated by <code>name</code> in the <code>keyword</code> package.
+</p></dd></dl>
+<p><a name="Function-make_002dgensym"></a>
+</p><dl>
+<dt><a name="index-make_002dgensym"></a>Function: <strong>make-gensym</strong><em> name</em></dt>
+<dd><a name="index-make_002dgensym-1"></a>
+<p>If <code>name</code> is a non-negative integer, calls <code>gensym</code> using it. Otherwise <code>name</code>
+must be a string designator, in which case calls <code>gensym</code> using the designated
+string as the argument.
+</p></dd></dl>
+<p><a name="Function-make_002dgensym_002dlist"></a>
+</p><dl>
+<dt><a name="index-make_002dgensym_002dlist"></a>Function: <strong>make-gensym-list</strong><em> length @&amp;optional x</em></dt>
+<dd><a name="index-make_002dgensym_002dlist-1"></a>
+<p>Returns a list of <code>length</code> gensyms, each generated as if with a call to <code>make-gensym</code>,
+using the second (optional, defaulting to &quot;G&quot;) argument.
+</p></dd></dl>
+<p><a name="Function-symbolicate"></a>
+</p><dl>
+<dt><a name="index-symbolicate"></a>Function: <strong>symbolicate</strong><em> @&amp;rest things</em></dt>
+<dd><a name="index-symbolicate-1"></a>
+<p>Concatenate together the names of some strings and symbols,
+producing a symbol in the current package.
+</p></dd></dl>
+
+<hr>
+<a name="Arrays"></a>
+<table class="header" cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#Symbols"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#Symbols"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#Top"></a>]</td>
+<td valign="middle" align="left">[<a href="#Types"> &gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#Types"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#Top"></a>]</td>
+<td valign="middle" align="left">[<a href="#SEC_Contents"></a>]</td>
+<td valign="middle" align="left">[]</td>
+<td valign="middle" align="left">[<a href="#SEC_About"> ? </a>]</td>
+</tr></table>
+<a name="Arrays-1"></a>
+<h1 class="chapter">7 Arrays</h1>
+
+<p><a name="Type-array_002dindex"></a>
+</p><dl>
+<dt><a name="index-array_002dindex"></a>Type: <strong>array-index</strong></dt>
+<dd><a name="index-array_002dindex-1"></a>
+<p>Type designator for an index into array of <code>length:</code> an integer between
+<code>0</code> (inclusive) and <code>length</code> (exclusive). <code>length</code> defaults to
+<code>array-dimension-limit</code>.
+</p></dd></dl>
+<p><a name="Type-array_002dlength"></a>
+</p><dl>
+<dt><a name="index-array_002dlength"></a>Type: <strong>array-length</strong></dt>
+<dd><a name="index-array_002dlength-1"></a>
+<p>Type designator for a dimension of an array of <code>length:</code> an integer between
+<code>0</code> (inclusive) and <code>length</code> (inclusive). <code>length</code> defaults to
+<code>array-dimension-limit</code>.
+</p></dd></dl>
+<p><a name="Function-copy_002darray"></a>
+</p><dl>
+<dt><a name="index-copy_002darray"></a>Function: <strong>copy-array</strong><em> array @&amp;key element-type fill-pointer adjustable</em></dt>
+<dd><a name="index-copy_002darray-1"></a>
+<p>Returns an undisplaced copy of <code>array</code>, with same fill-pointer and
+adjustability (if any) as the original, unless overridden by the keyword
+arguments. Performance depends on efficiency of general <code>adjust-array</code> in the
+host lisp <code>--</code> for most cases a special purpose copying function is likely to
+perform better.
+</p></dd></dl>
+
+<hr>
+<a name="Types"></a>
+<table class="header" cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#Arrays"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#Arrays"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#Top"></a>]</td>
+<td valign="middle" align="left">[<a href="#Numbers"> &gt; </a>]</td>
+<td valign="middle" align="left">[<a href="#Numbers"> &gt;&gt; </a>]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#Top"></a>]</td>
+<td valign="middle" align="left">[<a href="#SEC_Contents"></a>]</td>
+<td valign="middle" align="left">[]</td>
+<td valign="middle" align="left">[<a href="#SEC_About"> ? </a>]</td>
+</tr></table>
+<a name="Types-1"></a>
+<h1 class="chapter">8 Types</h1>
+
+<p><a name="Type-string_002ddesignator"></a>
+</p><dl>
+<dt><a name="index-string_002ddesignator"></a>Type: <strong>string-designator</strong></dt>
+<dd><a name="index-string_002ddesignator-1"></a>
+<p>A string designator type. A string designator is either a string, a symbol,
+or a character.
+</p></dd></dl>
+<p><a name="Macro-coercef"></a>
+</p><dl>
+<dt><a name="index-coercef"></a>Macro: <strong>coercef</strong><em> place type-spec env</em></dt>
+<dd><a name="index-coercef-1"></a>
+<p>Modify-macro for <code>coerce</code>.
+</p></dd></dl>
+<p><a name="Function-of_002dtype"></a>
+</p><dl>
+<dt><a name="index-of_002dtype"></a>Function: <strong>of-type</strong><em> type</em></dt>
+<dd><a name="index-of_002dtype-1"></a>
+<p>Returns a function of one argument, which returns true when its argument is
+of <code>type</code>.
+</p></dd></dl>
+<p><a name="Function-type_003d"></a>
+</p><dl>
+<dt><a name="index-type_003d"></a>Function: <strong>type=</strong><em> type1 type2</em></dt>
+<dd><a name="index-type_003d-1"></a>
+<p>Returns a primary value of <code>t</code> is <code>type1</code> and <code>type2</code> are the same type,
+and a secondary value that is true is the type equality could be reliably
+determined: primary value of <code>nil</code> and secondary value of <code>t</code> indicates that the
+types are not equivalent.
+</p></dd></dl>
+
+<hr>
+<a name="Numbers"></a>
+<table class="header" cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#Types"> &lt;&lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#Types"> &lt; </a>]</td>
+<td valign="middle" align="left">[<a href="#Top"></a>]</td>
+<td valign="middle" align="left">[ &gt; ]</td>
+<td valign="middle" align="left">[ &gt;&gt; ]</td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left"> &nbsp; </td>
+<td valign="middle" align="left">[<a href="#Top"></a>]</td>
+<td valign="middle" align="left">[<a href="#SEC_Contents"></a>]</td>
+<td valign="middle" align="left">[]</td>
+<td valign="middle" align="left">[<a href="#SEC_About"> ? </a>]</td>
+</tr></table>
+<a name="Numbers-1"></a>
+<h1 class="chapter">9 Numbers</h1>
+
+<p><a name="Macro-maxf"></a>
+</p><dl>
+<dt><a name="index-maxf"></a>Macro: <strong>maxf</strong><em> place @&amp;rest numbers env</em></dt>
+<dd><a name="index-maxf-1"></a>
+<p>Modify-macro for <code>max</code>. Sets place designated by the first argument to the
+maximum of its original value and <code>numbers</code>.
+</p></dd></dl>
+<p><a name="Macro-minf"></a>
+</p><dl>
+<dt><a name="index-minf"></a>Macro: <strong>minf</strong><em> place @&amp;rest numbers env</em></dt>
+<dd><a name="index-minf-1"></a>
+<p>Modify-macro for <code>min</code>. Sets place designated by the first argument to the
+minimum of its original value and <code>numbers</code>.
+</p></dd></dl>
+
+<p><a name="Function-binomial_002dcoefficient"></a>
+</p><dl>
+<dt><a name="index-binomial_002dcoefficient"></a>Function: <strong>binomial-coefficient</strong><em> n k</em></dt>
+<dd><a name="index-binomial_002dcoefficient-1"></a>
+<p>Binomial coefficient of <code>n</code> and <code>k</code>, also expressed as <code>n</code> choose <code>k</code>. This is the
+number of <code>k</code> element combinations given <code>n</code> choises. <code>n</code> must be equal to or
+greater then <code>k</code>.
+</p></dd></dl>
+<p><a name="Function-count_002dpermutations"></a>
+</p><dl>
+<dt><a name="index-count_002dpermutations"></a>Function: <strong>count-permutations</strong><em> n @&amp;optional k</em></dt>
+<dd><a name="index-count_002dpermutations-1"></a>
+<p>Number of <code>k</code> element permutations for a sequence of <code>n</code> objects.
+<code>k</code> defaults to <code>n</code>
+</p></dd></dl>
+<p><a name="Function-clamp"></a>
+</p><dl>
+<dt><a name="index-clamp"></a>Function: <strong>clamp</strong><em> number min max</em></dt>
+<dd><a name="index-clamp-1"></a>
+<p>Clamps the <code>number</code> into [min, max] range. Returns <code>min</code> if <code>number</code> is lesser then
+<code>min</code> and <code>max</code> if <code>number</code> is greater then <code>max</code>, otherwise returns <code>number</code>.
+</p></dd></dl>
+<p><a name="Function-lerp"></a>
+</p><dl>
+<dt><a name="index-lerp"></a>Function: <strong>lerp</strong><em> v a b</em></dt>
+<dd><a name="index-lerp-1"></a>
+<p>Returns the result of linear interpolation between A and <code>b</code>, using the
+interpolation coefficient <code>v</code>.
+</p></dd></dl>
+<p><a name="Function-factorial"></a>
+</p><dl>
+<dt><a name="index-factorial"></a>Function: <strong>factorial</strong><em> n</em></dt>
+<dd><a name="index-factorial-1"></a>
+<p>Factorial of non-negative integer <code>n</code>.
+</p></dd></dl>
+<p><a name="Function-subfactorial"></a>
+</p><dl>
+<dt><a name="index-subfactorial"></a>Function: <strong>subfactorial</strong><em> n</em></dt>
+<dd><a name="index-subfactorial-1"></a>
+<p>Subfactorial of the non-negative integer <code>n</code>.
+</p></dd></dl>
+<p><a name="Function-gaussian_002drandom"></a>
+</p><dl>
+<dt><a name="index-gaussian_002drandom"></a>Function: <strong>gaussian-random</strong><em> @&amp;optional min max</em></dt>
+<dd><a name="index-gaussian_002drandom-1"></a>
+<p>Returns two gaussian random double floats as the primary and secondary value,
+optionally constrained by <code>min</code> and <code>max</code>. Gaussian random numbers form a standard
+normal distribution around <code>0</code>.0d0.
+</p></dd></dl>
+<p><a name="Function-iota"></a>
+</p><dl>
+<dt><a name="index-iota"></a>Function: <strong>iota</strong><em> n @&amp;key start step</em></dt>
+<dd><a name="index-iota-1"></a>
+<p>Return a list of n numbers, starting from <code>start</code> (with numeric contagion
+from <code>step</code> applied), each consequtive number being the sum of the previous one
+and <code>step</code>. <code>start</code> defaults to <code>0</code> and <code>step</code> to <code>1</code>.
+</p>
+<p>Examples:
+</p>
+<div class="lisp">
+<pre class="lisp">  (iota 4)                      =&gt; (0 1 2 3 4)
+  (iota 3 :start 1 :step 1.0)   =&gt; (1.0 2.0 3.0)
+  (iota 3 :start -1 :step -1/2) =&gt; (-1 -3/2 -2)
+</pre></div>
+</dd></dl>
+<p><a name="Function-map_002diota"></a>
+</p><dl>
+<dt><a name="index-map_002diota"></a>Function: <strong>map-iota</strong><em> function n @&amp;key start step</em></dt>
+<dd><a name="index-map_002diota-1"></a>
+<p>Calls <code>function</code> with <code>n</code> numbers, starting from <code>start</code> (with numeric contagion
+from <code>step</code> applied), each consequtive number being the sum of the previous one
+and <code>step</code>. <code>start</code> defaults to <code>0</code> and <code>step</code> to <code>1</code>. Returns <code>n</code>.
+</p>
+<p>Examples:
+</p>
+<div class="lisp">
+<pre class="lisp">  (map-iota #'print 3 :start 1 :step 1.0) =&gt; 3
+    ;;; 1.0
+    ;;; 2.0
+    ;;; 3.0
+</pre></div>
+</dd></dl>
+<p><a name="Function-mean"></a>
+</p><dl>
+<dt><a name="index-mean"></a>Function: <strong>mean</strong><em> sample</em></dt>
+<dd><a name="index-mean-1"></a>
+<p>Returns the mean of <code>sample</code>. <code>sample</code> must be a sequence of numbers.
+</p></dd></dl>
+<p><a name="Function-median"></a>
+</p><dl>
+<dt><a name="index-median"></a>Function: <strong>median</strong><em> sample</em></dt>
+<dd><a name="index-median-1"></a>
+<p>Returns median of <code>sample</code>. <code>sample</code> must be a sequence of real numbers.
+</p></dd></dl>
+<p><a name="Function-variance"></a>
+</p><dl>
+<dt><a name="index-variance"></a>Function: <strong>variance</strong><em> sample @&amp;key biased</em></dt>
+<dd><a name="index-variance-1"></a>
+<p>Variance of <code>sample</code>. Returns the biased variance if <code>biased</code> is true (the default),
+and the unbiased estimator of variance if <code>biased</code> is false. <code>sample</code> must be a
+sequence of numbers.
+</p></dd></dl>
+<p><a name="Function-standard_002ddeviation"></a>
+</p><dl>
+<dt><a name="index-standard_002ddeviation"></a>Function: <strong>standard-deviation</strong><em> sample @&amp;key biased</em></dt>
+<dd><a name="index-standard_002ddeviation-1"></a>
+<p>Standard deviation of <code>sample</code>. Returns the biased standard deviation if
+<code>biased</code> is true (the default), and the square root of the unbiased estimator
+for variance if <code>biased</code> is false (which is not the same as the unbiased
+estimator for standard deviation). <code>sample</code> must be a sequence of numbers.
+</p></dd></dl>
+
+<hr size="6">
+<a name="SEC_Contents"></a>
+<table class="header" cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#Top"></a>]</td>
+<td valign="middle" align="left">[<a href="#SEC_Contents"></a>]</td>
+<td valign="middle" align="left">[]</td>
+<td valign="middle" align="left">[<a href="#SEC_About"> ? </a>]</td>
+</tr></table>
+
+<div class="contents">
+
+<ul class="no-bullet">
+  <li><a name="toc-Hash-Tables-1" href="#Hash-Tables">1 Hash Tables</a></li>
+  <li><a name="toc-Data-and-Control-Flow-1" href="#Data-and-Control-Flow">2 Data and Control Flow</a></li>
+  <li><a name="toc-Conses-1" href="#Conses">3 Conses</a></li>
+  <li><a name="toc-Sequences-1" href="#Sequences">4 Sequences</a></li>
+  <li><a name="toc-Macro-Writing-1" href="#Macro-Writing">5 Macro Writing</a></li>
+  <li><a name="toc-Symbols-1" href="#Symbols">6 Symbols</a></li>
+  <li><a name="toc-Arrays-1" href="#Arrays">7 Arrays</a></li>
+  <li><a name="toc-Types-1" href="#Types">8 Types</a></li>
+  <li><a name="toc-Numbers-1" href="#Numbers">9 Numbers</a></li>
+</ul>
+</div>
+<hr>
+<a name="SEC_About"></a>
+<table class="header" cellpadding="1" cellspacing="1" border="0">
+<tr><td valign="middle" align="left">[<a href="#Top"></a>]</td>
+<td valign="middle" align="left">[<a href="#SEC_Contents"></a>]</td>
+<td valign="middle" align="left">[]</td>
+<td valign="middle" align="left">[<a href="#SEC_About"> ? </a>]</td>
+</tr></table>
+
+<p>
+  
+</p>
+<p>
+
+</p>
+<table border="1">
+  <tr>
+    <th>  </th>
+    <th>  </th>
+    <th>  </th>
+    <th> </th>
+  </tr>
+  <tr>
+    <td align="center"> [ &lt;&lt; ] </td>
+    <td align="center"></td>
+    <td></td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td align="center"> [ &lt; ] </td>
+    <td align="center"></td>
+    <td></td>
+    <td>1.2.2</td>
+  </tr>
+  <tr>
+    <td align="center"> [] </td>
+    <td align="center"></td>
+    <td></td>
+    <td>1.2</td>
+  </tr>
+  <tr>
+    <td align="center"> [ &gt; ] </td>
+    <td align="center"></td>
+    <td></td>
+    <td>1.2.4</td>
+  </tr>
+  <tr>
+    <td align="center"> [ &gt;&gt; ] </td>
+    <td align="center"></td>
+    <td></td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td align="center"> [] </td>
+    <td align="center"></td>
+    <td></td>
+    <td> &nbsp; </td>
+  </tr>
+  <tr>
+    <td align="center"> [] </td>
+    <td align="center"></td>
+    <td></td>
+    <td> &nbsp; </td>
+  </tr>
+  <tr>
+    <td align="center"> [] </td>
+    <td align="center"></td>
+    <td></td>
+    <td> &nbsp; </td>
+  </tr>
+  <tr>
+    <td align="center"> [ ? ] </td>
+    <td align="center"></td>
+    <td></td>
+    <td> &nbsp; </td>
+  </tr>
+</table>
+
+<p>
+
+</p>
+
+<ul>
+  <li> 1. 
+    <ul>
+      <li>1.1 
+        <ul>
+          <li>...</li>
+        </ul>
+      </li>
+      <li>1.2 
+        <ul>
+          <li>1.2.1 </li>
+          <li>1.2.2 </li>
+          <li>1.2.3  &nbsp; &nbsp;
+            <strong>&lt;==  </strong></li>
+          <li>1.2.4 </li>
+        </ul>
+      </li>
+      <li>1.3 
+        <ul>
+          <li>...</li>
+        </ul>
+      </li>
+      <li>1.4 </li>
+    </ul>
+  </li>
+</ul>
+
+<hr>
+<p>
+ <font size="-1">
+  
+ </font>
+ <br>
+
+</p>
+</body>
+</html>
