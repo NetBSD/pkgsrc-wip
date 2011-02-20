@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/02/20 09:59:15 ddeus Exp $
+
+SHA1 (cl-fad.tar.gz) = 32271c47ca3179d87e809e947db86bc3468440b9
+RMD160 (cl-fad.tar.gz) = 86a367a19a733bf3649a2c651e1f7c4be6b6c78f
+Size (cl-fad.tar.gz) = 11712 bytes
