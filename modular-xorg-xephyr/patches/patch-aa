@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2011/02/20 01:04:31 khorben Exp $
+
+--- hw/kdrive/ephyr/ephyrdriext.c.orig	2009-10-12 02:52:40.000000000 +0000
++++ hw/kdrive/ephyr/ephyrdriext.c
+@@ -472,7 +472,7 @@ EphyrDuplicateVisual (unsigned int a_scr
+     int i=0 ;
+ 
+     EPHYR_LOG ("enter\n") ; 
+-    if (a_screen > screenInfo.numScreens) {
++    if (a_screen >= screenInfo.numScreens) {
+         EPHYR_LOG_ERROR ("bad screen number\n") ;
+         goto out;
+     }
