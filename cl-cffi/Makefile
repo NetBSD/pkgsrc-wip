@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/02/20 10:41:23 ddeus Exp $
+# $NetBSD: Makefile,v 1.2 2011/02/20 12:05:07 ddeus Exp $
 #
 
 VERSION=        0.10.6
@@ -35,6 +35,8 @@ DEPENDS+=			ecl-babel:../../wip/cl-babel
 ECL_CENTRAL_REGISTRY=           lib/ecl-${ECL_VERSION}/
 PLIST_SUBST+=			ECL_PATH="${ECL_CENTRAL_REGISTRY}"
 PLIST_SUBST+=			LISP="${LISP_PREFIX}"
+INSTALLATION_DIRS+=		${ECL_CENTRAL_REGISTRY}
+INSTALLATION_DIRS+=		share/doc/${LISP_PREFIX}-${SHORTNAME}/examples
 
 do-build:
 	( cd ${WRKSRC} && ${PREFIX}/bin/ecl -q -norc \
