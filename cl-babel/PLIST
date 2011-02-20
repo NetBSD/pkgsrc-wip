@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/02/20 10:38:59 ddeus Exp $
+${PLIST.ecl}${ECL_PATH}babel.asd
+${PLIST.ecl}${ECL_PATH}babel.fas
+${PLIST.ecl}${ECL_PATH}babel-streams.asd
+${PLIST.ecl}${ECL_PATH}babel-streams.fas
+share/doc/${LISP}-babel/README
+share/doc/${LISP}-babel/HEADER
+share/doc/${LISP}-babel/NOTES
+share/doc/${LISP}-babel/COPYRIGHT
