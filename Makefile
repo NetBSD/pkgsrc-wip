@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4231 2011/02/21 11:33:14 obache Exp $
+# $Id: Makefile,v 1.4232 2011/02/21 11:37:55 obache Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2362,6 +2362,7 @@ SUBDIR+=	r8s
 SUBDIR+=	rabbitmq
 SUBDIR+=	radare
 SUBDIR+=	rar3
+SUBDIR+=	rast
 SUBDIR+=	raster3d
 SUBDIR+=	ratpoints
 SUBDIR+=	ratproxy
