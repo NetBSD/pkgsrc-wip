@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/02/21 11:32:09 obache Exp $
+
+SHA1 (ruby/bdb-0.6.5.tar.gz) = 9a9151801d2a02feb0bba866762634bec860e724
+RMD160 (ruby/bdb-0.6.5.tar.gz) = 32e32f106cccbd7361a5ad0090fdf390fd2cd13c
+Size (ruby/bdb-0.6.5.tar.gz) = 321865 bytes
