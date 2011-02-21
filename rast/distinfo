@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/02/21 11:36:58 obache Exp $
+
+SHA1 (rast-0.3.1.tar.bz2) = 269dbd433bdc8f926e28b9a3f1a67f60ee0077dc
+RMD160 (rast-0.3.1.tar.bz2) = 2c16467c02636a6857adc87f37bd20983d581cd9
+Size (rast-0.3.1.tar.bz2) = 719583 bytes
+SHA1 (patch-src_local__db.c) = 9ccd41ccd4a820283b6e191b7998a41abc6ab3d1
+SHA1 (patch-src_merger.c) = d4474c8b2e1eed7720ab13568555ea98d6579f58
