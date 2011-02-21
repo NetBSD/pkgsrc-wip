@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4230 2011/02/21 04:41:01 phonohawk Exp $
+# $Id: Makefile,v 1.4231 2011/02/21 11:33:14 obache Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2403,6 +2403,7 @@ SUBDIR+=	rtpbreak
 SUBDIR+=	rubinius
 SUBDIR+=	ruby-GalleryAdministrator
 SUBDIR+=	ruby-actionmessenger
+SUBDIR+=	ruby-bdb
 SUBDIR+=	ruby-ditz
 SUBDIR+=	ruby-dnssd
 SUBDIR+=	ruby-easyjour
