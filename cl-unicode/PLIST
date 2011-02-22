@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/02/22 16:31:21 ddeus Exp $
+${PLIST.ecl}${ECL_PATH}cl-unicode.asd
+${PLIST.ecl}${ECL_PATH}cl-unicode.fas
+share/doc/${LISP}-unicode/CHANGELOG.txt
+share/doc/${LISP}-unicode/index.html
