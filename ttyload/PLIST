@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/02/22 16:07:41 emil_s Exp $
+bin/ttyload
