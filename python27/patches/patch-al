@@ -1,4 +1,4 @@
-$NetBSD: patch-al,v 1.4 2010/12/20 08:48:29 obache Exp $
+$NetBSD: patch-al,v 1.5 2011/02/22 07:34:14 obache Exp $
 
 --- configure.orig	2010-11-01 01:47:19.000000000 +0000
 +++ configure
@@ -7,7 +7,7 @@ $NetBSD: patch-al,v 1.4 2010/12/20 08:48:29 obache Exp $
  	  INSTSONAME="$LDLIBRARY".$SOVERSION
            ;;
 -    Linux*|GNU*|NetBSD*|FreeBSD*|DragonFly*)
-+    Linux*|GNU*|NetBSD*|FreeBSD*|Interix*|DragonFly*)
++    Linux*|GNU*|NetBSD*|FreeBSD*|Interix*|DragonFly*|OpenBSD*)
  	  LDLIBRARY='libpython$(VERSION).so'
  	  BLDLIBRARY='-L. -lpython$(VERSION)'
  	  RUNSHARED=LD_LIBRARY_PATH=`pwd`:${LD_LIBRARY_PATH}
