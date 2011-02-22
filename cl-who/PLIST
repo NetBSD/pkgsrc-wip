@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/02/22 16:10:33 ddeus Exp $
+${PLIST.ecl}${ECL_PATH}cl-who.asd
+${PLIST.ecl}${ECL_PATH}cl-who.fas
+share/doc/${LISP}-who/CHANGELOG
+share/doc/${LISP}-who/index.html
