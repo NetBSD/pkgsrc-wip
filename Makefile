@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4233 2011/02/22 03:13:57 phonohawk Exp $
+# $Id: Makefile,v 1.4234 2011/02/22 11:15:11 obache Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2332,7 +2332,6 @@ SUBDIR+=	pypanel
 SUBDIR+=	pypod
 SUBDIR+=	pysite
 SUBDIR+=	pysvn
-SUBDIR+=	python27
 SUBDIR+=	python31
 SUBDIR+=	pythoncad
 SUBDIR+=	pywm
