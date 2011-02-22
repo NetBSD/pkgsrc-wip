@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/02/22 21:17:07 ddeus Exp $
+${PLIST.ecl}${ECL_PATH}bordeaux-threads.asd
+${PLIST.ecl}${ECL_PATH}bordeaux-threads.fas
+share/doc/${LISP}-bordeaux-threads/LICENSE
+share/doc/${LISP}-bordeaux-threads/CONTRIBUTORS
+share/doc/${LISP}-bordeaux-threads/index.html
+share/doc/${LISP}-bordeaux-threads/style.css
