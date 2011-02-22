@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4234 2011/02/22 11:15:11 obache Exp $
+# $Id: Makefile,v 1.4235 2011/02/22 16:10:51 emil_s Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2681,6 +2681,7 @@ SUBDIR+=	tsh
 SUBDIR+=	tsm
 SUBDIR+=	ttf-indic-fonts
 SUBDIR+=	ttr
+SUBDIR+=	ttyload
 SUBDIR+=	ttysnoop
 SUBDIR+=	tuareg-mode
 SUBDIR+=	tumble
