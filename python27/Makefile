@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2011/01/03 12:21:29 moubctez Exp $
+# $NetBSD: Makefile,v 1.12 2011/02/22 08:25:40 obache Exp $
 
 .include "dist.mk"
 
@@ -42,7 +42,7 @@ LIBS.SunOS+=		-lrt
 PY_VER_SUFFIX=		2.7
 
 PLIST_SRC=	${.CURDIR}/../../wip/python27/PLIST.common
-.if exists(${.CURDIR}/../../lang/python26/PLIST.${OPSYS})
+.if exists(${.CURDIR}/../../wip/python27/PLIST.${OPSYS})
 PLIST_SRC+=	${.CURDIR}/../../wip/python27/PLIST.${OPSYS}
 .endif
 PLIST_SRC+=	${.CURDIR}/../../wip/python27/PLIST.common_end
