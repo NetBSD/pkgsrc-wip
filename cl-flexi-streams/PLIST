@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/02/22 16:06:49 ddeus Exp $
+${PLIST.ecl}${ECL_PATH}flexi-streams.asd
+${PLIST.ecl}${ECL_PATH}flexi-streams.fas
+share/doc/${LISP}-flexi-streams/CHANGELOG
+share/doc/${LISP}-flexi-streams/index.html
