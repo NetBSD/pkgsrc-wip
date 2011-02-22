@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/02/22 16:33:55 ddeus Exp $
+
+SHA1 (cl-ppcre.tar.gz) = 81e720aac06f1e6183177f762cc0e508d4c0262b
+RMD160 (cl-ppcre.tar.gz) = feb7977d6a51f20f834e9aec2eeddf0c65f006bd
+Size (cl-ppcre.tar.gz) = 157665 bytes
