@@ -1,0 +1,5 @@
+SPLIT-SEQUENCE (formerly known as PARTITION) is a member of the Common Lisp
+Utilities family of programs, designed by community consensus.
+
+Splits sequence into a list of subsequences delimited by objects satisfying the
+test.
