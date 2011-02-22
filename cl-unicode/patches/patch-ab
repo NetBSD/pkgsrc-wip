@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2011/02/22 21:15:50 ddeus Exp $
+
+--- util.lisp.orig	2011-02-22 20:50:09.000000000 +0000
++++ util.lisp
+@@ -211,7 +211,7 @@ algorithmically derived.")
+ the *HANGUL-SYLLABLES-TO-CODE-POINTS* hash table.  Used for
+ CHARACTER-NAMED."
+   (declare #.*standard-optimize-settings*)
+-  (format t "~&;;; Computing Hangul syllable names")
++  ;(format t "~&;;; Computing Hangul syllable names")
+   (loop for code-point from +first-hangul-syllable+ to +last-hangul-syllable+
+         for name = (compute-hangul-name code-point)
+         do (setf (gethash name *hangul-syllables-to-code-points*) code-point)))

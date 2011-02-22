@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/02/22 16:31:21 ddeus Exp $
+$NetBSD: distinfo,v 1.2 2011/02/22 21:15:49 ddeus Exp $
 
 SHA1 (cl-unicode.tar.gz) = 9923fb7a69ad92e1237fd673af4c07861017bbc8
 RMD160 (cl-unicode.tar.gz) = 8e693aa999e0905717b4bc4db20ec9e05fc4b220
 Size (cl-unicode.tar.gz) = 380160 bytes
 SHA1 (patch-aa) = b18f821d61aa00adb62410dbda79b460575f216c
+SHA1 (patch-ab) = 098393fdcdd2c68ec40abd88f08f27f7972eec3e
