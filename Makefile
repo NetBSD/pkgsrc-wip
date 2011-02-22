@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4232 2011/02/21 11:37:55 obache Exp $
+# $Id: Makefile,v 1.4233 2011/02/22 03:13:57 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2550,6 +2550,7 @@ SUBDIR+=	suse100_devel
 SUBDIR+=	suse100_gdb
 SUBDIR+=	suse100_glut
 SUBDIR+=	suse100_gmp4
+SUBDIR+=	suse113_libgmp3
 SUBDIR+=	svgalib
 SUBDIR+=	svrcore
 SUBDIR+=	swami
