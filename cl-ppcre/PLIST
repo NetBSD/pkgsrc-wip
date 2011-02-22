@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/02/22 16:12:02 ddeus Exp $
+${PLIST.ecl}${ECL_PATH}cl-ppcre.asd
+${PLIST.ecl}${ECL_PATH}cl-ppcre.fas
+share/doc/${LISP}-ppcre/CHANGELOG
+share/doc/${LISP}-ppcre/index.html
