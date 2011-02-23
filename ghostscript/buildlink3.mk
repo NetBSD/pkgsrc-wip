@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2011/01/26 08:24:16 makoto Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2011/02/23 13:59:46 makoto Exp $
 
 BUILDLINK_TREE+=	ghostscript
 
@@ -7,7 +7,7 @@ GHOSTSCRIPT_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ghostscript+=	ghostscript>=8.63nb1
 BUILDLINK_ABI_DEPENDS.ghostscript?=	ghostscript>=8.71nb7
-BUILDLINK_PKGSRCDIR.ghostscript?=	../../print/ghostscript
+BUILDLINK_PKGSRCDIR.ghostscript?=	../../wip/ghostscript
 
 .include "../../graphics/png/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"

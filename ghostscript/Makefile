@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/01/26 08:24:16 makoto Exp $
+# $NetBSD: Makefile,v 1.2 2011/02/23 13:59:46 makoto Exp $
 
-DISTNAME=	ghostscript-9.00
+DISTNAME=	ghostscript-${GS_VERSION}
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ghostscript/}
 MASTER_SITES+=	http://ghostscript.com/releases/
@@ -11,6 +11,8 @@ COMMENT=	Postscript interpreter
 
 # Plus adobe verbatim for Resources/CMap.
 LICENSE=	gnu-gpl-v3
+
+.include	"Makefile.common"
 
 DEPENDS+=		ghostscript-fonts>=6.0:../../fonts/ghostscript-fonts
 

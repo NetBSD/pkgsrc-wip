@@ -1,0 +1,6 @@
+# $NetBSD: Makefile.common,v 1.1 2011/02/23 13:59:46 makoto Exp $
+# used by wip/ghostscript/Makefile
+# used by wip/ghostscript-cidfonts/Makefile
+# used by wip/ghostscript-cidfonts-ryumin/Makefile
+
+GS_VERSION=	9.00
