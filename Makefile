@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4235 2011/02/22 16:10:51 emil_s Exp $
+# $Id: Makefile,v 1.4236 2011/02/23 08:49:49 moubctez Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2805,7 +2805,6 @@ SUBDIR+=	xcursor-themes
 SUBDIR+=	xdiskusage
 SUBDIR+=	xdotool
 SUBDIR+=	xebece
-SUBDIR+=	xerces-c
 SUBDIR+=	xesam-glib
 SUBDIR+=	xf86-input-synaptics
 SUBDIR+=	xf86-video-geode
@@ -2868,7 +2867,6 @@ SUBDIR+=	xpde
 SUBDIR+=	xpdq
 SUBDIR+=	xpilot-ng
 SUBDIR+=	xplore
-SUBDIR+=	xqilla
 SUBDIR+=	xrdp
 SUBDIR+=	xrootconsole
 SUBDIR+=	xspd
