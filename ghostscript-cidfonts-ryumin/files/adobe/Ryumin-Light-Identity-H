@@ -1,0 +1,5 @@
+%% $NetBSD: Ryumin-Light-Identity-H,v 1.1.1.1 2011/02/23 13:40:10 makoto Exp $
+/Ryumin-Light-Identity-H
+/H /CMap findresource
+[/WadaMin-Regular /CIDFont findresource]
+composefont pop
