@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/02/12 14:24:38 asau Exp $
+# $NetBSD: Makefile,v 1.3 2011/02/23 19:16:53 keckhardt Exp $
 
 DISTNAME=		gcc-${GCC_VERSION}
 PKGNAME=		gcc45-${GCC_VERSION}
@@ -19,7 +19,7 @@ USE_TOOLS+=		awk:run bash:run perl chmod \
 
 DEPENDS+=		zip-[0-9]*:../../archivers/zip
 
-GCC_VERSION=		4.5.0
+GCC_VERSION=		4.5.2
 
 GCC_SUBPREFIX=		gcc45
 GCC_PREFIX=		${PREFIX}/${GCC_SUBPREFIX}
@@ -32,6 +32,7 @@ CONFIG_SHELL=		${TOOLS_PATH.bash}
 
 NOT_FOR_PLATFORM=	Interix-*-*
 UNLIMIT_RESOURCES+=	datasize
+UNLIMIT_RESOURCES+=	stacksize
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
@@ -64,7 +65,11 @@ REPLACE_BASH+= libstdc++-v3/scripts/run_doxygen
 BUILD_DEFS+=		BUILD_CXX BUILD_FORTRAN BUILD_JAVA BUILD_OBJC
 BUILD_CXX?=		YES
 BUILD_FORTRAN?=		YES
+.if ${OPSYS} == "NetBSD"
+BUILD_JAVA?=		NO
+.else
 BUILD_JAVA?=		YES
+.endif
 BUILD_OBJC?=		YES
 
 LANGS= c
@@ -89,6 +94,7 @@ LANGS+= java
 LANGS+= objc
 .endif
 
+
 CONFIGURE_ARGS+=	--prefix=${GCC_PREFIX:Q}
 CONFIGURE_ARGS+=	--enable-languages=${LANGS:Q}
 CONFIGURE_ARGS+=	--with-system-zlib
@@ -109,6 +115,7 @@ CONFIGURE_ENV+=		CONFIG_SHELL=${CONFIG_SHELL}
 CONFIGURE_ENV+=		PKGSRC_MAKE=${TOOLS_PATH.gmake}
 MAKE_ENV+=		PKGSRC_MAKE=${TOOLS_PATH.gmake}
 
+
 # fastjar-0.93 from pkgsrc/archivers/fastjar seems to trigger a build
 # failure (seen on NetBSD-5.0/i386) when building java.  So in case
 # the fastjar package is installed, make sure the configure script
@@ -128,6 +135,7 @@ MAKE_ENV+=		lt_cv_path_SED=${TOOLS_SED}
 
 CPPFLAGS+=		-I${BUILDLINK_DIR}/include
 CFLAGS+=		-I${BUILDLINK_DIR}/include
+
 
 # Somone should fix this so it will match the NetBSD system compiler
 #.if ${OPSYS} == "NetBSD"
