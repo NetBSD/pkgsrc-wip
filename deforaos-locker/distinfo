@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2011/02/24 22:57:52 khorben Exp $
+
+SHA1 (Locker-0.0.1.tar.gz) = 54a3265b343cc60f7fe7b79637273f05a2840921
+RMD160 (Locker-0.0.1.tar.gz) = f5f3ea162d241a62152f9e07fb1e93953cc516d2
+Size (Locker-0.0.1.tar.gz) = 15865 bytes
