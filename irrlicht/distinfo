@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/02/24 15:12:08 pallegra Exp $
+
+SHA1 (irrlicht-1.7.2.zip) = 2f064cb4c712e1d7aca90a116485b5b166ae6218
+RMD160 (irrlicht-1.7.2.zip) = 066a2a664cced9ba92c2dd0337f7ca779bad8b75
+Size (irrlicht-1.7.2.zip) = 24603866 bytes
+SHA1 (patch-include_IrrCompileConfig.h) = e2b5e6b9441d05358d92c66d4c212d876003f20a
+SHA1 (patch-source_Irrlicht_CImageLoaderPNG.cpp) = 8f71abee479c788f27a8c55b88d8d303b585e9b9
+SHA1 (patch-source_Irrlicht_CImageWriterPNG.cpp) = fb8de067678ee913f085ad3ac8023af17f1af988
+SHA1 (patch-source_Irrlicht_Makefile) = f4072d1fb0a72db871556179288d3603fde6b185
+SHA1 (patch-source_Irrlicht_os.cpp) = 1baea559392fe5aa31ca0e6f246c453274ee5b8d
