@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2010/11/22 21:41:47 ryo-on Exp $
+$NetBSD: patch-aa,v 1.2 2011/02/24 18:51:35 ryo-on Exp $
+
+* Add NetBSD support
 
 --- src/defines.h.in.orig	2010-11-20 20:07:29.000000000 +0000
 +++ src/defines.h.in
