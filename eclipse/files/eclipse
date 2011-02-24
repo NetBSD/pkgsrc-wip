@@ -1,0 +1,9 @@
+#!/bin/sh
+#
+# $NetBSD: eclipse,v 1.1 2011/02/24 18:37:31 khorben Exp $
+#
+# start the eclipse IDE
+
+ECLIPSE_DIR=@PREFIX@/eclipse
+
+(cd ${ECLIPSE_DIR} && ./eclipse $@)

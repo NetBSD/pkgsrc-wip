@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2011/02/24 18:37:31 khorben Exp $
+
+SHA1 (eclipse-3.6.1.tar.gz) = 776610deb3d68a888cf81cf4de5a3d428ac076f0
+RMD160 (eclipse-3.6.1.tar.gz) = 3ae6df7d3967d7eb75a4314446f45fed39c777e3
+Size (eclipse-3.6.1.tar.gz) = 103853218 bytes
