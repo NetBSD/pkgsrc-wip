@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/11/04 13:48:30 ryo-on Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/02/24 21:15:15 ryo-on Exp $
 bin/zim
 ${PYSITELIB}/zim/__init__.py
 ${PYSITELIB}/zim/__init__.pyc
@@ -24,6 +24,9 @@ ${PYSITELIB}/zim/config.pyo
 ${PYSITELIB}/zim/daemon.py
 ${PYSITELIB}/zim/daemon.pyc
 ${PYSITELIB}/zim/daemon.pyo
+${PYSITELIB}/zim/datetimetz.py
+${PYSITELIB}/zim/datetimetz.pyc
+${PYSITELIB}/zim/datetimetz.pyo
 ${PYSITELIB}/zim/errors.py
 ${PYSITELIB}/zim/errors.pyc
 ${PYSITELIB}/zim/errors.pyo
@@ -54,6 +57,9 @@ ${PYSITELIB}/zim/gui/__init__.pyo
 ${PYSITELIB}/zim/gui/applications.py
 ${PYSITELIB}/zim/gui/applications.pyc
 ${PYSITELIB}/zim/gui/applications.pyo
+${PYSITELIB}/zim/gui/cleannotebookdialog.py
+${PYSITELIB}/zim/gui/cleannotebookdialog.pyc
+${PYSITELIB}/zim/gui/cleannotebookdialog.pyo
 ${PYSITELIB}/zim/gui/clipboard.py
 ${PYSITELIB}/zim/gui/clipboard.pyc
 ${PYSITELIB}/zim/gui/clipboard.pyo
@@ -90,9 +96,6 @@ ${PYSITELIB}/zim/gui/searchdialog.pyo
 ${PYSITELIB}/zim/gui/server.py
 ${PYSITELIB}/zim/gui/server.pyc
 ${PYSITELIB}/zim/gui/server.pyo
-${PYSITELIB}/zim/gui/versionsdialog.py
-${PYSITELIB}/zim/gui/versionsdialog.pyc
-${PYSITELIB}/zim/gui/versionsdialog.pyo
 ${PYSITELIB}/zim/gui/widgets.py
 ${PYSITELIB}/zim/gui/widgets.pyc
 ${PYSITELIB}/zim/gui/widgets.pyo
@@ -208,6 +211,7 @@ share/icons/hicolor/scalable/mimetypes/application-x-zim-notebook.svg
 share/icons/hicolor/scalable/mimetypes/gnome-mime-application-x-zim-notebook.svg
 share/locale/ca/LC_MESSAGES/zim.mo
 share/locale/cs/LC_MESSAGES/zim.mo
+share/locale/da/LC_MESSAGES/zim.mo
 share/locale/de/LC_MESSAGES/zim.mo
 share/locale/el/LC_MESSAGES/zim.mo
 share/locale/en_GB/LC_MESSAGES/zim.mo
@@ -330,7 +334,7 @@ share/zim/templates/html/SlideShow_(S5).html
 share/zim/templates/latex/Article.tex
 share/zim/templates/latex/Part.tex
 share/zim/templates/latex/Report.tex
-share/zim/templates/wiki/_Calendar.txt
-share/zim/templates/wiki/_New.txt
+share/zim/templates/wiki/Calendar.txt
+share/zim/templates/wiki/Default.txt
 share/zim/urls.list
 share/zim/zim.png

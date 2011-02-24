@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2011/02/19 09:19:24 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2011/02/24 21:15:15 ryo-on Exp $
 #
 
-DISTNAME=	zim-0.49
+DISTNAME=	zim-0.50
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	editors
 MASTER_SITES=	http://zim-wiki.org/downloads/
@@ -26,10 +26,23 @@ DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 DEPENDS+=	${PYPKGPREFIX}-cElementTree-[0-9]*:../../textproc/py-cElementTree
 DEPENDS+=	xdg-utils-[0-9]*:../../misc/xdg-utils
 
+SUBST_CLASSES+=		data-path
+SUBST_STAGE.data-path=	pre-configure
+SUBST_FILES.data-path=	zim/config.py
+SUBST_SED.data-path=	-e 's,/usr/local/share/,${PREFIX}/share/,'
+
 .include "../../lang/python/pyversion.mk"
 .if ${PYPKGPREFIX} == "py25"
 DEPENDS+=	${PYPKGPREFIX}-simplejson-[0-9]*:../../converters/py-simplejson
 .endif
+
+#post-install:
+#	set -e; \
+#	cd ${SRKSRC}/data/pixmaps; \
+#	${INSTALL_DATA} attachment.png calendar.png checked-box.png link.png \
+#		linkmap.png task-list.png unchecked-box.png xchecked-box.png \
+#		${DESTDIR}${PREFIX}/share/pixmaps
+
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
