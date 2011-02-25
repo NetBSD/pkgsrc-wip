@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4243 2011/02/25 18:27:13 ryo-on Exp $
+# $Id: Makefile,v 1.4244 2011/02/25 20:24:54 slitvinov Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1534,6 +1534,7 @@ SUBDIR+=	ncbi
 SUBDIR+=	ncbi-bin
 SUBDIR+=	ncbi-c++-lib
 SUBDIR+=	ncbi-lib
+SUBDIR+=	ncdu
 SUBDIR+=	ncp
 #SUBDIR+=	ncurses-devel	# missing Makefile.common
 SUBDIR+=	neb-cd512
