@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4241 2011/02/25 02:05:54 obache Exp $
+# $Id: Makefile,v 1.4242 2011/02/25 02:41:00 obache Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2411,10 +2411,7 @@ SUBDIR+=	ruby-bdb
 SUBDIR+=	ruby-ditz
 SUBDIR+=	ruby-dnssd
 SUBDIR+=	ruby-easyjour
-SUBDIR+=	ruby-escape
 SUBDIR+=	ruby-git
-SUBDIR+=	ruby-httpclient
-SUBDIR+=	ruby-memoize
 SUBDIR+=	ruby-term-ansicolor
 SUBDIR+=	ruby-trollop
 SUBDIR+=	ruby-xmpp4r
