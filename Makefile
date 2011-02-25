@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4242 2011/02/25 02:41:00 obache Exp $
+# $Id: Makefile,v 1.4243 2011/02/25 18:27:13 ryo-on Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -63,7 +63,6 @@ SUBDIR+=	acroread9-korfont
 SUBDIR+=	adamem
 SUBDIR+=	adms
 SUBDIR+=	admsmb
-SUBDIR+=	adobe-flash-plugin
 SUBDIR+=	ae-fonts-decorative
 SUBDIR+=	aegis-devel
 SUBDIR+=	aeneas
