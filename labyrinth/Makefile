@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/06/13 22:47:09 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2011/02/25 09:47:47 thomasklausner Exp $
 #
 
 DISTNAME=	labyrinth_0.4.1
@@ -20,7 +20,7 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config intltool gmake
 USE_LANGUAGES=	c c++
 
-PYTHON_VERSIONS_ACCEPTED=   26 25
+PYTHON_VERSIONS_ACCEPTED=   27 26 25
 PY_PATCHPLIST=		yes
 
 .include "../../devel/libglade/buildlink3.mk"

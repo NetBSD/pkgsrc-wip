@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/11/17 01:41:24 obache Exp $
+# $NetBSD: Makefile,v 1.5 2011/02/25 09:47:49 thomasklausner Exp $
 #
 
 DISTNAME=	pygi-0.5.1
@@ -20,7 +20,7 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+= pkg-config
 
-PYTHON_VERSIONS_ACCEPTED= 26 25
+PYTHON_VERSIONS_ACCEPTED= 27 26 25
 CONFIGURE_ENV+=		PYTHON=${PYTHONBIN}
 PY_PATCHPLIST=		yes
 

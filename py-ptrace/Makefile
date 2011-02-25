@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/12/07 16:11:03 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2011/02/25 09:47:49 thomasklausner Exp $
 #
 
 DISTNAME=	python-ptrace-0.6.2
@@ -15,7 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG= 	yes
 
-PYTHON_VERSIONS_ACCEPTED= 26 25
+PYTHON_VERSIONS_ACCEPTED= 27 26 25
 
 .include "../../devel/py-ctypes/buildlink3.mk"
 .include "../../devel/py-readline/buildlink3.mk"

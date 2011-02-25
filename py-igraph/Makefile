@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/06/13 22:47:14 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2011/02/25 09:47:48 thomasklausner Exp $
 #
 
 DISTNAME=	python-igraph-0.5.3
@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-PYTHON_VERSIONS_ACCEPTED= 26 25 24
+PYTHON_VERSIONS_ACCEPTED= 27 26 25 24
 
 
 .include "../../graphics/py-cairo/buildlink3.mk"

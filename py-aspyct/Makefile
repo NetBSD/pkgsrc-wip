@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/06/21 21:10:20 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2011/02/25 09:47:48 thomasklausner Exp $
 #
 
 DISTNAME=	Aspyct-3.0_beta_4
@@ -16,7 +16,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_ACCEPTED=  26 25 24
+PYTHON_VERSIONS_ACCEPTED=  27 26 25 24
 PYDISTUTILSPKG=	yes
 
 

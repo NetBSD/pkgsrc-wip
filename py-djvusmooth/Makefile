@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2011/02/19 14:40:48 ryo-on Exp $
+# $NetBSD: Makefile,v 1.6 2011/02/25 09:47:48 thomasklausner Exp $
 #
 
 DISTNAME=	djvusmooth-0.2.10
@@ -22,7 +22,7 @@ DEPENDS+=	${PYPKGPREFIX}-wxWidgets:../../x11/py-wxWidgets
 DEPENDS+=	${PYPKGPREFIX}-djvulibre:../../wip/py-djvulibre
 DEPENDS+=	djvulibre-tools:../../graphics/djvulibre-tools
 
-PYTHON_VERSIONS_ACCEPTED=	26 25
+PYTHON_VERSIONS_ACCEPTED=	27 26 25
 PYDISTUTILSPKG=	yes
 
 SUBST_CLASSES+=		fix-paths

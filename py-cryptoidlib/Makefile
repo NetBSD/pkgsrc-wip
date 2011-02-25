@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/11/18 14:50:56 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2011/02/25 09:47:48 thomasklausner Exp $
 #
 
 DISTNAME=	cryptoIDlib-0.3.3
@@ -20,7 +20,7 @@ DEPENDS+=	${PYPKGPREFIX}-gmpy>=1.04:../../wip/py-gmpy
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-PYTHON_VERSIONS_ACCEPTED= 26 25 24 23
+PYTHON_VERSIONS_ACCEPTED= 27 26 25 24 23
 PYDISTUTILSPKG= yes
 PY_PATCHPLIST=	yes
 

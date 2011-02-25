@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/08/02 23:53:08 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2011/02/25 09:47:49 thomasklausner Exp $
 #
 
 DISTNAME=	srpy-0.2.3
@@ -19,7 +19,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_TOOLS+=	pax
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_ACCEPTED= 26 25
+PYTHON_VERSIONS_ACCEPTED= 27 26 25
 
 HTMLDIR=	${PREFIX}/share/doc/html/py-srpy
 

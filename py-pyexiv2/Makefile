@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/08/16 22:29:17 nthauvin Exp $
+# $NetBSD: Makefile,v 1.2 2011/02/25 09:47:49 thomasklausner Exp $
 #
 
 DISTNAME=	pyexiv2-0.2.2
@@ -19,7 +19,7 @@ USE_LANGUAGES=	c++
 BUILD_DEPENDS+=	scons-[0-9]*:../../devel/scons
 BUILDLINK_ABI_DEPENDS.exiv2+=	exiv2>=0.20
 
-PYTHON_VERSIONS_ACCEPTED=	26 25
+PYTHON_VERSIONS_ACCEPTED=	27 26 25
 PY_PATCHPLIST=	yes
 
 do-build:

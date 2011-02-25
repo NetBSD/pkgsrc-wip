@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2010/07/17 12:30:59 jihbed Exp $
+# $NetBSD: Makefile,v 1.9 2011/02/25 09:47:48 thomasklausner Exp $
 #
 
 DISTNAME=	bitstring-2.0.1_beta_2
@@ -15,7 +15,7 @@ LICENSE=	mit
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
-PYTHON_VERSIONS_ACCEPTED= 26
+PYTHON_VERSIONS_ACCEPTED= 27 26
 
 PYDISTUTILSPKG=	yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/07/17 13:44:57 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2011/02/25 09:47:50 thomasklausner Exp $
 #
 
 DISTNAME=	symeig-1.5
@@ -15,7 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c
 PYDISTUTILSPKG=	yes
-PYTHON_VERSIONS_ACCEPTED= 26 25 24
+PYTHON_VERSIONS_ACCEPTED= 27 26 25 24
 
 TEST_ENV+=	PYTHONPATH=${WRKSRC}/test/
 do-test:

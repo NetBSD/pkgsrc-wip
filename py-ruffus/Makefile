@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/01/17 22:16:29 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2011/02/25 09:47:49 thomasklausner Exp $
 #
 
 DISTNAME=	ruffus-2.2
@@ -19,7 +19,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_ACCEPTED= 26 25
+PYTHON_VERSIONS_ACCEPTED= 27 26 25
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

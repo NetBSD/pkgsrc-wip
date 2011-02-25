@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2010/08/21 14:49:40 cheusov Exp $
+# $NetBSD: Makefile,v 1.19 2011/02/25 09:47:48 thomasklausner Exp $
 #
 
 DISTNAME=	ipython-0.10
@@ -71,7 +71,7 @@ DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 
 DEPENDS+=	zope3-[0-9]*:../../www/zope3
 
-PYTHON_VERSIONS_ACCEPTED= 26 25 24
+PYTHON_VERSIONS_ACCEPTED= 27 26 25 24
 
 PLIST_SRC+=	PLIST
 PLIST_SRC+=	${PKGDIR}/PLIST.doc

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/01/17 22:21:34 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2011/02/25 09:47:49 thomasklausner Exp $
 #
 
 DISTNAME=	scikits.timeseries-0.91.3
@@ -14,7 +14,7 @@ LICENSE=	modified-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-PYTHON_VERSIONS_ACCEPTED= 26 25 24
+PYTHON_VERSIONS_ACCEPTED= 27 26 25 24
 
 .include "../../graphics/py-matplotlib/buildlink3.mk"
 .include "../../lang/python/egg.mk"

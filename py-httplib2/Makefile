@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2010/02/26 18:10:48 jihbed Exp $
+# $NetBSD: Makefile,v 1.8 2011/02/25 09:47:48 thomasklausner Exp $
 #
 
 DISTNAME=	httplib2-0.6.0
@@ -14,7 +14,7 @@ LICENSE=	mit
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG=	yes
-PYTHON_VERSIONS_ACCEPTED= 26
+PYTHON_VERSIONS_ACCEPTED= 27 26
 
 # Install README manually
 DOCDIR=		${PREFIX}/share/doc/py-httplib2

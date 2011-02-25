@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/05/10 21:03:59 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2011/02/25 09:47:49 thomasklausner Exp $
 #
 
 DISTNAME=	sfepy-release-2010.2
@@ -16,7 +16,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c c++
 
-PYTHON_VERSIONS_ACCEPTED= 26
+PYTHON_VERSIONS_ACCEPTED= 27 26
 PYDISTUTILSPKG= yes
 
 do-test:

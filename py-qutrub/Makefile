@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/09/07 00:57:41 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2011/02/25 09:47:49 thomasklausner Exp $
 #
 
 DISTNAME=	qutrub-0.5
@@ -24,7 +24,7 @@ QUTRUB_FILES=	ar_ctype.py arabic_const.py classverb.py mosaref_main.py  conjugat
 PLIST_SUBST+=		PYSITELIB=${PYSITELIB}
 PY_EXEC=	${PREFIX}/bin/python${PYVERSSUFFIX}
 QUTRUBDIR=	${PREFIX}/${PYSITELIB}/py-qutrub
-PYTHON_VERSIONS_ACCEPTED= 26 25
+PYTHON_VERSIONS_ACCEPTED= 27 26 25
 
 INSTALLATION_DIRS=	bin ${QUTRUBDIR}
 

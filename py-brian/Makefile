@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/06/13 22:47:14 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2011/02/25 09:47:48 thomasklausner Exp $
 #
 
 DISTNAME=	brian-1.1.3
@@ -21,7 +21,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LANGUAGES=	c c++
 PYDISTUTILSPKG= yes
 
-PYTHON_VERSIONS_ACCEPTED= 26 25
+PYTHON_VERSIONS_ACCEPTED= 27 26 25
 
 .include "../../devel/py-game/buildlink3.mk"
 .include "../../graphics/py-matplotlib/buildlink3.mk"

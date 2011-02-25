@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/05/08 18:14:08 jihbed Exp $
+# $NetBSD: Makefile,v 1.5 2011/02/25 09:47:49 thomasklausner Exp $
 #
 
 DISTNAME=	openxmllib-1.0.6
@@ -17,7 +17,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_ACCEPTED=	26 25 24
+PYTHON_VERSIONS_ACCEPTED=	27 26 25 24
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

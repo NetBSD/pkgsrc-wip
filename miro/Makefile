@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/06/13 22:47:11 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2011/02/25 09:47:47 thomasklausner Exp $
 #
 
 DISTNAME=	miro-3.0.1
@@ -21,7 +21,7 @@ USE_TOOLS+=	pkg-config
 DEPENDS=	${PYPKGPREFIX}-pyrex>=0.9.6.4:../../lang/py-pyrex
 DEPENDS+=	${PYPKGPREFIX}-libtorrent-rasterbar>=0.15.0:../../wip/py-libtorrent-rasterbar
 
-PYTHON_VERSIONS_ACCEPTED=	26 25
+PYTHON_VERSIONS_ACCEPTED=	27 26 25
 PYDISTUTILSPKG=	yes
 PYSETUPSUBDIR=	platform/gtk-x11
 REPLACE_PYTHON=	${WRKSRC}/platform/gtk-x11/miro.real

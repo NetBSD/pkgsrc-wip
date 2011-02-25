@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/04/16 20:10:32 jihbed Exp $
+# $NetBSD: Makefile,v 1.6 2011/02/25 09:47:48 thomasklausner Exp $
 #
 
 DISTNAME=	configobj-4.7.2.tar
@@ -18,7 +18,7 @@ WRKSRC=		${WRKDIR}/configobj-4.7.2
 USE_LANGUAGES=	# none
 
 PYDISTUTILSPKG=	yes
-PYTHON_VERSIONS_ACCEPTED= 26 25 24
+PYTHON_VERSIONS_ACCEPTED= 27 26 25 24
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/02/15 20:57:52 ryo-on Exp $
+# $NetBSD: Makefile,v 1.5 2011/02/25 09:47:47 thomasklausner Exp $
 #
 
 DISTNAME=	gwibber-2.91.2
@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-PYTHON_VERSIONS_ACCEPTED=	26 25
+PYTHON_VERSIONS_ACCEPTED=	27 26 25
 PYDISTUTILSPKG=	yes
 
 USE_LANGUAGES=	# none

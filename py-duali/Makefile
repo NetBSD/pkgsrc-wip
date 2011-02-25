@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/11/25 11:43:11 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2011/02/25 09:47:48 thomasklausner Exp $
 #
 
 DISTNAME=	duali-0.1.1
@@ -24,7 +24,7 @@ SUBST_SED.paths+=	-e 's,/etc,${PREFIX}/etc,g'
 SUBST_FILES.paths+=	setup.py duali.conf
 SUBST_MESSAGE.paths=	Fixing header search paths.
 
-PYTHON_VERSIONS_ACCEPTED= 26 25 24 23
+PYTHON_VERSIONS_ACCEPTED= 27 26 25 24 23
 PYDISTUTILSPKG= yes
 
 INSTALLATION_DIRS=	share/doc/py-duali ${PKGMANDIR}/man1

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2010/06/29 10:19:31 hftmarkand Exp $
+# $NetBSD: Makefile.common,v 1.2 2011/02/25 09:47:50 thomasklausner Exp $
 #
 # used by wip/teeworlds-server/Makefile
 
@@ -19,7 +19,7 @@ NO_CONFIGURE=		yes
 USE_TOOLS=	pax
 
 # Need python for build dependency.
-PYTHON_VERSIONS_ACCEPTED=	26 25 24
+PYTHON_VERSIONS_ACCEPTED=	27 26 25 24
 PYTHON_FOR_BUILD_ONLY=		yes
 
 # bam is the teeworlds `make'.

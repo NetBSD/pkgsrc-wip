@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/04/14 09:51:39 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2011/02/25 09:47:50 thomasklausner Exp $
 #
 
 DISTNAME=	WebOb-0.9.8.tar
@@ -18,7 +18,7 @@ DEPENDS+=		${PYPKGPREFIX}-simplejson>=2.0.9:../../converters/py-simplejson
 WRKSRC=	${WRKDIR}/WebOb-0.9.8
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-PYTHON_VERSIONS_ACCEPTED= 26 2
+PYTHON_VERSIONS_ACCEPTED= 27 26 2
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

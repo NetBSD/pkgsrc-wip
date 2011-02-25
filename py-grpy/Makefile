@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/01/22 13:43:12 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2011/02/25 09:47:48 thomasklausner Exp $
 #
 
 DISTNAME=	GRPy
@@ -24,7 +24,7 @@ USE_LANGUAGES=	# none
 GRPy_FILES=	Christoffel.py Riemann.py Tensor.py
 PLIST_SUBST+=		PYPKGPREFIX=${PYPKGPREFIX:Q}
 PY_PATCHPLIST=		yes
-PYTHON_VERSIONS_ACCEPTED= 26
+PYTHON_VERSIONS_ACCEPTED= 27 26
 
 INSTALLATION_DIRS=	${PYSITELIB}
 

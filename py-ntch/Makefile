@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/10/14 14:40:39 jihbed Exp $
+# $NetBSD: Makefile,v 1.5 2011/02/25 09:47:49 thomasklausner Exp $
 #
 
 DISTNAME=	pyntch-dist-20090907
@@ -15,7 +15,7 @@ PKG_DESTDIR_SUPPORT=		user-destdir
 VERSION=	20090615
 
 PYDISTUTILSPKG= 	yes
-PYTHON_VERSIONS_ACCEPTED= 26 25 24
+PYTHON_VERSIONS_ACCEPTED= 27 26 25 24
 
 DOCDIR=		${PREFIX}/share/doc/py-ntch
 

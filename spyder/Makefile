@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/01/17 22:27:02 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2011/02/25 09:47:50 thomasklausner Exp $
 #
 
 DISTNAME=	spyder-2.0.5
@@ -18,7 +18,7 @@ DEPENDS+=	${PYPKGPREFIX}-flakes>=0.4.0:../../wip/py-flakes
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
-PYTHON_VERSIONS_ACCEPTED= 26 25
+PYTHON_VERSIONS_ACCEPTED= 27 26 25
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 PYDISTUTILSPKG=	yes
 
