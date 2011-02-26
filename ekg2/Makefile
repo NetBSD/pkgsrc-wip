@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.12 2010/12/08 00:47:04 shindenmorr Exp $
+# $NetBSD: Makefile,v 1.13 2011/02/26 17:38:20 shindenmorr Exp $
 #
 
-DISTNAME=	ekg2-20101207
+DISTNAME=	ekg2-0.3.0
 CATEGORIES=	chat
 MASTER_SITES=	http://pl.ekg2.org/
 MASTER_SITES+=	http://pl.ekg2.org/archive/
-EXTRACT_SUFX=	.tar.bz2
+#EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	morr@NetBSD.org
 HOMEPAGE=	http://pl.ekg2.org/
@@ -18,9 +18,9 @@ USE_PKGLOCALEDIR=	yes
 
 PKG_DESTDIR_SUPPORT=	destdir
 GNU_CONFIGURE=		yes
-USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_NCURSES=		yes
+USE_GNU_READLINE=	yes
 USE_TOOLS+=		perl gmake
 CONFIGURE_ARGS+=	--enable-shared \
 			--disable-static \
@@ -28,7 +28,6 @@ CONFIGURE_ARGS+=	--enable-shared \
 			--without-inotify \
 			--without-ioctld \
 			--without-gtk \
-			--without-readline \
 			--disable-nls \
 			--without-libxosd \
 			--without-perl \
@@ -36,11 +35,14 @@ CONFIGURE_ARGS+=	--enable-shared \
 			--with-sqlite3 \
 			--without-gpg \
 			--without-logsoracle \
-			--with-ncurses=${BUILDLINK_PREFIX.ncurses}
+			--with-readline=${BUILDLINK_PREFIX.readline} \
+			--enable-unicode \
+			--with-ncurses
 
 .include "options.mk"
-.include "../../devel/ncurses/buildlink3.mk"
-.include "../../devel/zlib/buildlink3.mk"
-.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/ncursesw/buildlink3.mk"
+.include "../../devel/readline/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
