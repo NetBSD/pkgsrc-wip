@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1 2011/02/26 15:15:18 khorben Exp $
+
+--- src/main.c.orig	2007-11-25 14:50:14.000000000 +0000
++++ src/main.c
+@@ -26,7 +26,10 @@
+ #include "callbacks.h"
+ #include "prefs.h"
+ 
+-#define XNEST_BIN "/usr/bin/Xephyr"
++#ifndef PREFIX
++# define PREFIX "/usr"
++#endif
++#define XNEST_BIN PREFIX "/bin/Xephyr"
+ 
+ /* Used by the signal handler to detect which child has died */
+ pid_t xnest_pid;

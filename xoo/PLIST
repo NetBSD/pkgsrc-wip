@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2011/02/26 15:15:18 khorben Exp $
+bin/xoo
+share/applications/xoo.desktop
+share/pixmaps/xoo.png
+share/xoo/Xoo.glade
+share/xoo/dot.png
+share/xoo/ipaq3800.png
+share/xoo/ipaq3800.xml
+share/xoo/ipaq4700.png
+share/xoo/ipaq4700.xml
+share/xoo/nokia-n800.png
+share/xoo/nokia-n800.xml
