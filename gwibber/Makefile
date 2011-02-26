@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2011/02/26 10:04:06 ryo-on Exp $
+# $NetBSD: Makefile,v 1.7 2011/02/26 11:56:25 ryo-on Exp $
 #
 
 DISTNAME=	gwibber-2.91.90
@@ -41,7 +41,8 @@ SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	post-patch
 SUBST_FILES.prefix=	setup.cfg
 SUBST_FILES.prefix+=	com.Gwibber*
-SUBST_SED.prefix=	-e 's,/usr,${PREFIX},'
+SUBST_FILES.prefix+=	gwibber/microblog/util/resources.py
+SUBST_SED.prefix=	-e 's,/usr,${PREFIX},g'
 
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/application.mk"

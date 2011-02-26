@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.3 2011/02/26 10:04:06 ryo-on Exp $
+$NetBSD: distinfo,v 1.4 2011/02/26 11:56:25 ryo-on Exp $
 
 SHA1 (gwibber-2.91.90.tar.gz) = deb3f63a99eb51afb9ec04e3ba329ebbccca4a37
 RMD160 (gwibber-2.91.90.tar.gz) = da65d150ac261ae9b36d41df47e284f33aae7061
 Size (gwibber-2.91.90.tar.gz) = 620635 bytes
-SHA1 (patch-gwibber_microblog_util_keyring.py) = 7d981c9c417d27d103c6f58d1708aaccccee6492
+SHA1 (patch-gwibber_microblog_util_keyring.py) = 5bfe35b421c14598d46ba74bc162e2c7cdeeedaf
+SHA1 (patch-gwibber_microblog_util_resources.py) = dbdd6b7ec97219183d5c50b5371cd97a4cf3b54b
+SHA1 (patch-setup.py) = 0b5b126cb58582a2dd3ad2ec5284829e35b11f4a

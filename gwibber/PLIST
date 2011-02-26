@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2011/02/26 10:04:06 ryo-on Exp $
+@comment $NetBSD: PLIST,v 1.4 2011/02/26 11:56:25 ryo-on Exp $
 bin/gwibber
 bin/gwibber-accounts
 bin/gwibber-client
@@ -431,6 +431,7 @@ share/gwibber/ui/themes/ubuntu/jquery.js
 share/gwibber/ui/themes/ubuntu/main.css
 share/gwibber/ui/themes/ubuntu/template.mako
 share/gwibber/ui/themes/ubuntu/theme.version
+share/indicators/messages/applications/gwibber
 share/locale/ar/LC_MESSAGES/gwibber.mo
 share/locale/ast/LC_MESSAGES/gwibber.mo
 share/locale/bg/LC_MESSAGES/gwibber.mo
