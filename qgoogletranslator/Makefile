@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/12/26 12:57:47 ryo-on Exp $
+# $NetBSD: Makefile,v 1.3 2011/02/26 23:22:45 ryo-on Exp $
 #
 
 DISTNAME=	qgoogletranslator-1.2.1
@@ -6,7 +6,7 @@ CATEGORIES=	editors
 MASTER_SITES=	http://qgt.googlecode.com/files/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	ryo_on@yk.rim.or.jp
+MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/qgt/
 COMMENT=	Qt gui for google translate based on ajax api
 LICENSE=	gnu-gpl-v3
