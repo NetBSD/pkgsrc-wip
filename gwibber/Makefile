@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2011/02/25 09:47:47 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2011/02/26 10:04:06 ryo-on Exp $
 #
 
-DISTNAME=	gwibber-2.91.2
+DISTNAME=	gwibber-2.91.90
 CATEGORIES=	net
-MASTER_SITES=	http://launchpad.net/gwibber/trunk/2.91.92/+download/
+MASTER_SITES=	http://launchpad.net/gwibber/trunk/2.91.90/+download/
 
 MAINTAINER=	ryo_on@yk.rim.or.jp
 HOMEPAGE=	http://gwibber.com/
