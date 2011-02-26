@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2010/06/13 22:46:59 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2011/02/26 20:22:11 khorben Exp $
 
-DISTNAME=	Todo-0.0.1
-PKGNAME=	deforaos-todo-0.0.1
-PKGREVISION=	1
+DISTNAME=	Todo-0.1.0
+PKGNAME=	deforaos-todo-0.1.0
 CATEGORIES=	time
-MASTER_SITES=	http://www.defora.org/os/download/download/3369/
+MASTER_SITES=	http://www.defora.org/os/download/download/3395/
 
 MAINTAINER=	khorben@defora.org
 HOMEPAGE=	http://www.defora.org/
