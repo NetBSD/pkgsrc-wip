@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4249 2011/02/27 17:03:15 thomasklausner Exp $
+# $Id: Makefile,v 1.4250 2011/02/27 19:06:47 ryo-on Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1476,7 +1476,6 @@ SUBDIR+=	moonlight
 SUBDIR+=	mopac7
 SUBDIR+=	moregroupware
 SUBDIR+=	moto4lin
-SUBDIR+=	motoya-fonts
 SUBDIR+=	mozldap
 SUBDIR+=	mozplugger
 SUBDIR+=	mp3blaster
