@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.16 2011/02/27 12:32:28 obache Exp $
+# $NetBSD: Makefile,v 1.17 2011/02/27 12:51:30 obache Exp $
 #
 
 DISTNAME=	Mail-SPF-v2.007
