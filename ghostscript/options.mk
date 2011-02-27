@@ -1,10 +1,16 @@
-# $NetBSD: options.mk,v 1.1.1.1 2011/01/26 08:24:17 makoto Exp $
+# $NetBSD: options.mk,v 1.2 2011/02/27 15:26:53 makoto Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ghostscript
 PKG_SUPPORTED_OPTIONS=	x11 cups debug fontconfig disable-compile-inits
 PKG_SUGGESTED_OPTIONS=	x11 fontconfig
 
 .include "../../mk/bsd.options.mk"
+
+# (cidfmap)	default complie, GS_COMPILE_INITS, not active now.
+# (no_cidfmap)	when --disable-compile-inits selected, 
+#		cidfmap is renamed to cidfmap.dist
+PLIST_VARS+=		cidfmap
+PLIST_VARS+=		no_cidfmap
 
 .if !empty(PKG_OPTIONS:Mx11)
 CONFIGURE_ARGS+=	--with-x
@@ -47,6 +53,10 @@ CONFIGURE_ARGS+=	--enable-debug
 CONFIGURE_ARGS+=	--disable-fontconfig
 .endif
 
+# Please note the same if cond is in post-install: target in Makefile
 .if !empty(PKG_OPTIONS:Mdisable-compile-inits)
 CONFIGURE_ARGS+=        --disable-compile-inits
+PLIST.no_cidfmap=	YES
+.else
+PLIST.cidfmap=		YES
 .endif

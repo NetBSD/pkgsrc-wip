@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/02/23 13:59:46 makoto Exp $
+# $NetBSD: Makefile,v 1.3 2011/02/27 15:26:53 makoto Exp $
 
 DISTNAME=	ghostscript-${GS_VERSION}
 CATEGORIES=	print
@@ -55,6 +55,10 @@ SUBST_MESSAGE.resdir=	Fixing resource directory path
 SUBST_FILES.resdir=	Resource/Init/gs_res.ps
 SUBST_SED.resdir=	-e "s|/Resource/|${GS_RESOURCEDIR}/|g"
 
+# to switch cidfmap is renamed to cidfmap.dist  (if --disable-compile-inits)
+# or cidfmap is installed ( when above option not specified)
+SUBST_VARS=		GS_COMPILE_INIT
+
 .if ${OPSYS} == "HPUX"
 CONFIGURE_ENV+=		ac_cv_func_fopen64=no
 .endif
@@ -74,6 +78,8 @@ BUILDLINK_TRANSFORM+=	l:fontconfig:fontconfig:iconv
 
 CONFIGURE_ENV+=	LPLIBDIR=${PREFIX}/lib
 
+.include "options.mk"
+
 post-extract:
 	${MKDIR} ${WRKSRC}/bin
 	${MKDIR} ${WRKSRC}/obj
@@ -81,13 +87,16 @@ post-extract:
 	${RM} -rf ${WRKSRC}/libpng
 	${RM} -rf ${WRKSRC}/tiff
 #	${RM} -rf ${WRKSRC}/zlib
-#  To arrow outside customization, rename (logically empty) cidfmap
+#
+#  To allow outside customization, rename cidfmap
+#	 (if you look at inside of the file, it is logically empty)
+.if !empty(PKG_OPTIONS:Mdisable-compile-inits)
 	(cd  ${WRKSRC}/Resource/Init/; ${MV} cidfmap cidfmap.dist)
+.endif
 
 post-install:
 	${LN} -sf gsc ${DESTDIR}${PREFIX}/bin/gs
 
-.include "options.mk"
 
 .include "../../print/libpaper/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
