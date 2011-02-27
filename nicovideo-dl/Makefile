@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2011/01/21 13:04:06 ryo-on Exp $
+# $NetBSD: Makefile,v 1.4 2011/02/27 19:58:22 ryo-on Exp $
 #
 
-DISTNAME=	nicovideo-dl-0.0.20091209
+DISTNAME=	nicovideo-dl-0.0.20110122
 CATEGORIES=	net
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP:=nicovideo-dl/44836/}
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP:=nicovideo-dl/50675/}
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://sourceforge.jp/projects/nicovideo-dl/
