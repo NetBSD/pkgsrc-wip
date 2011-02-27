@@ -1,3 +1,5 @@
+$NetBSD: patch-ah,v 1.2 2011/02/27 12:44:37 keckhardt Exp $
+
 --- gcc/fortran/f95-lang.c.orig	2010-06-15 14:17:16.000000000 +0200
 +++ gcc/fortran/f95-lang.c
 @@ -794,10 +794,17 @@

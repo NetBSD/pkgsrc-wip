@@ -1,3 +1,5 @@
+$NetBSD: patch-ai,v 1.2 2011/02/27 12:44:37 keckhardt Exp $
+
 --- libgfortran/intrinsics/c99_functions.c.orig	2011-02-23 18:44:34.000000000 +0100
 +++ libgfortran/intrinsics/c99_functions.c
 @@ -601,7 +601,7 @@

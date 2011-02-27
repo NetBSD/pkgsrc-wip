@@ -1,3 +1,5 @@
+$NetBSD: patch-aj,v 1.2 2011/02/27 12:44:37 keckhardt Exp $
+
 --- libstdc++-v3/config/os/bsd/netbsd/ctype_base.h.orig	2011-02-23 18:48:42.000000000 +0100
 +++ libstdc++-v3/config/os/bsd/netbsd/ctype_base.h
 @@ -30,6 +30,7 @@
