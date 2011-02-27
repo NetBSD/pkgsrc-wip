@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4245 2011/02/26 09:36:51 slitvinov Exp $
+# $Id: Makefile,v 1.4246 2011/02/27 11:38:52 obache Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1778,7 +1778,6 @@ SUBDIR+=	p5-Module-Starter-Plugin-CGIApp
 SUBDIR+=	p5-Mojo
 SUBDIR+=	p5-NNTPClient
 SUBDIR+=	p5-Net-DBus-GLib
-SUBDIR+=	p5-Net-DNS-Resolver-Programmable
 SUBDIR+=	p5-Net-Delicious
 SUBDIR+=	p5-Net-IP-Match-Regexp
 SUBDIR+=	p5-Net-PcapUtils
