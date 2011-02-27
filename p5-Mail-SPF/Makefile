@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.13 2010/06/06 02:39:45 obache Exp $
+# $Id: Makefile,v 1.14 2011/02/27 11:41:19 obache Exp $
 #
 
 DISTNAME=	Mail-SPF-v2.007
@@ -14,7 +14,7 @@ LICENSE=	modified-bsd
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-BUILD_DEPENDS+=		p5-Net-DNS-Resolver-Programmable-[0-9]*:../../wip/p5-Net-DNS-Resolver-Programmable
+BUILD_DEPENDS+=		p5-Net-DNS-Resolver-Programmable-[0-9]*:../../net/p5-Net-DNS-Resolver-Programmable
 BUILD_DEPENDS+=		p5-Test-Simple-[0-9]*:../../devel/p5-Test-Simple
 
 DEPENDS+=	p5-version-[0-9]*:../../devel/p5-version
