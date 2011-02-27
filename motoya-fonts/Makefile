@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2011/02/12 22:49:22 ryo-on Exp $
+# $NetBSD: Makefile,v 1.3 2011/02/27 18:49:23 ryo-on Exp $
 #
 
 DISTNAME=	motoya-al-fonts-20100921
 PKGNAME=	${DISTNAME:S/-al//}
 CATEGORIES=	fonts japanese
-MASTER_SITES=	ftp://ftp.freebsd.org/pub/FreeBSD/ports/local-distfiles/hrs/
+MASTER_SITES=	${MASTER_SITE_FREEBSD_LOCAL:=hrs/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	ryoon@NetBSD.org
