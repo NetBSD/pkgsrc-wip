@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.8 2010/06/06 01:48:42 obache Exp $
+# $NetBSD: Makefile,v 1.9 2011/02/27 11:21:25 obache Exp $
 #
 
 DISTNAME=	Net-DNS-Resolver-Programmable-v0.003
