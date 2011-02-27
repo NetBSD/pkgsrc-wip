@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/01/15 18:07:15 crocusino Exp $
+# $NetBSD: Makefile,v 1.4 2011/02/27 14:40:33 thomasklausner Exp $
 #
 
 DISTNAME=	eor-1.0.2
@@ -9,7 +9,6 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	jan.smydke@jh-inst.cas.cz
 HOMEPAGE=	http://blue.jh-inst.cas.cz/~smydke/projects/eor/
 COMMENT=	Exclusive OR bit operation to protect your files
-
 LICENSE=	2-clause-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
