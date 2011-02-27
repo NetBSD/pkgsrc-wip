@@ -1,0 +1,9 @@
+This plugin fetches lyrics from the web.
+
+The Lyrics Plugin queries 2 sites to get lyrics.
+
+The idea is to split this plugin in two separate plugins for both
+websites.  The sites used for this plugin are:
+
+    * Lyrics tracker
+    * Neolyrics
