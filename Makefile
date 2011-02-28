@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4252 2011/02/28 18:22:21 thomasklausner Exp $
+# $Id: Makefile,v 1.4253 2011/02/28 18:33:33 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2444,6 +2444,7 @@ SUBDIR+=	samhain
 SUBDIR+=	sara
 SUBDIR+=	saxon
 SUBDIR+=	sbcl
+SUBDIR+=	scantailor
 SUBDIR+=	scare
 SUBDIR+=	schismtracker
 SUBDIR+=	schur
