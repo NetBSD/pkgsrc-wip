@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/02/28 18:32:39 thomasklausner Exp $
+bin/scantailor
+share/scantailor/translations/scantailor_bg.qm
+share/scantailor/translations/scantailor_de.qm
+share/scantailor/translations/scantailor_fr.qm
+share/scantailor/translations/scantailor_ja.qm
+share/scantailor/translations/scantailor_ru.qm
