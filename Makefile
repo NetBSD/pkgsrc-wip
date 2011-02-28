@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4251 2011/02/28 17:55:06 thomasklausner Exp $
+# $Id: Makefile,v 1.4252 2011/02/28 18:22:21 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1504,6 +1504,7 @@ SUBDIR+=	mtd-utils
 SUBDIR+=	mtf
 SUBDIR+=	mtop
 SUBDIR+=	mtrack
+SUBDIR+=	mu
 SUBDIR+=	mu-conference
 SUBDIR+=	muine
 SUBDIR+=	multisync
