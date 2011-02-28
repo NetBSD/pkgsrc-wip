@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/02/23 19:16:53 keckhardt Exp $
+# $NetBSD: Makefile,v 1.4 2011/02/28 15:17:43 keckhardt Exp $
 
 DISTNAME=		gcc-${GCC_VERSION}
 PKGNAME=		gcc45-${GCC_VERSION}
@@ -131,6 +131,7 @@ MAKE_ENV+=		ac_cv_path_ac_cv_prog_chmod=${TOOLS_CHMOD}
 # ${WRKSRC}/fixincludes/ looks for sed and compiles the path to sed into
 # a binary so we need to make sure we give it the installed sed and not
 # the tool wrapped one.
+MAKE_ENV+=		ac_cv_path_SED=${TOOLS_SED}
 MAKE_ENV+=		lt_cv_path_SED=${TOOLS_SED}
 
 CPPFLAGS+=		-I${BUILDLINK_DIR}/include
