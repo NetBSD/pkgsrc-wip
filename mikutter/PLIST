@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2011/02/13 14:19:14 obache Exp $
+@comment $NetBSD: PLIST,v 1.7 2011/02/28 11:13:04 obache Exp $
 bin/mikutter
 share/applications/mikutter.desktop
 share/doc/mikutter/README
@@ -6,6 +6,7 @@ share/mikutter/core/addon/addon.rb
 share/mikutter/core/addon/bitly.rb
 share/mikutter/core/addon/bugreport.rb
 share/mikutter/core/addon/change_account.rb
+share/mikutter/core/addon/contextmenu.rb
 share/mikutter/core/addon/extract.rb
 share/mikutter/core/addon/followingcontrol.rb
 share/mikutter/core/addon/friend_timeline.rb
@@ -95,9 +96,26 @@ share/mikutter/core/skin/data/retweet.png
 share/mikutter/core/skin/data/savedsearch.png
 share/mikutter/core/skin/data/search.png
 share/mikutter/core/skin/data/settings.png
+share/mikutter/core/skin/data/sounds/favo-old1.wav
+share/mikutter/core/skin/data/sounds/favo.wav
+share/mikutter/core/skin/data/sounds/favo2-old1.wav
+share/mikutter/core/skin/data/sounds/favo2.wav
+share/mikutter/core/skin/data/sounds/message-received-se.wav
 share/mikutter/core/skin/data/sounds/message-received.wav
+share/mikutter/core/skin/data/sounds/mikutter-se.wav
 share/mikutter/core/skin/data/sounds/mikutter.wav
+share/mikutter/core/skin/data/sounds/mikuxtu-se.wav
 share/mikutter/core/skin/data/sounds/mikuxtu.wav
+share/mikutter/core/skin/data/sounds/retweeted.wav
+share/mikutter/core/skin/data/sounds/sources/favo.vsq
+share/mikutter/core/skin/data/sounds/sources/favo2.vsq
+share/mikutter/core/skin/data/sounds/sources/message-received.vsq
+share/mikutter/core/skin/data/sounds/sources/mikutter.vsq
+share/mikutter/core/skin/data/sounds/sources/mikuxtu.vsq
+share/mikutter/core/skin/data/sounds/sources/retweeted.aup
+share/mikutter/core/skin/data/sounds/sources/retweeted.vsq
+share/mikutter/core/skin/data/sounds/sources/retweeted_data/e00/d00/e0000496.au
+share/mikutter/core/skin/data/sounds/sources/retweeted_data/e00/d00/e00008c6.au
 share/mikutter/core/skin/data/tab-bg.png
 share/mikutter/core/skin/data/timeline.png
 share/mikutter/core/skin/data/unfav.png
