@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2010/08/14 11:52:59 obache Exp $
+$NetBSD: patch-aa,v 1.2 2011/02/28 10:40:29 obache Exp $
+
+* http://code.google.com/p/gnome-mplayer/issues/detail?id=490
 
 --- src/mntent_compat.c.orig	2010-02-25 16:01:41.000000000 +0000
 +++ src/mntent_compat.c
