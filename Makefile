@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4250 2011/02/27 19:06:47 ryo-on Exp $
+# $Id: Makefile,v 1.4251 2011/02/28 17:55:06 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1297,6 +1297,7 @@ SUBDIR+=	libpano12
 SUBDIR+=	libpar2
 SUBDIR+=	libparsifal
 SUBDIR+=	libpcap-latest
+SUBDIR+=	libplist
 SUBDIR+=	libpthread-stubs
 SUBDIR+=	libpusb
 SUBDIR+=	libraw1394
