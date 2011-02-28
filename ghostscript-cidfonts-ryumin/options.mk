@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.1.1.1 2011/02/23 13:40:10 makoto Exp $
+# $NetBSD: options.mk,v 1.2 2011/02/28 07:29:38 makoto Exp $
 
 # gcr = ghostscript-cidfonts-ryumin
 PKG_OPTIONS_VAR=        PKG_OPTIONS.gcr_type
-PKG_SUPPORTED_OPTIONS=  ipa adobe-cidfonts
+PKG_SUPPORTED_OPTIONS=  ipa adobe-cidfonts umefont
 PKG_SUGGESTED_OPTIONS=  ipa
 
 PLIST_VARS+=	cidfmap
@@ -18,6 +18,14 @@ PLIST_VARS+=	adobe
 DEPENDS+=	adobe-cidfonts:../../fonts/adobe-cidfonts
 DEPENDS+=	ghostscript-cidfonts:../../fonts/ghostscript-cidfonts
 GCR_INSTALL_TYPE= adobe
+.endif
+
+# -------- IPA (TTF) font requested -------------
+.if !empty(PKG_OPTIONS:Mumefont)
+GS_CIDFMAP=	cidfmap-umefont
+DEPENDS+=	ipafont:../../fonts/umefont-ttf
+PLIST.cidfmap=	yes
+GCR_INSTALL_TYPE= ttf
 .endif
 
 # -------- IPA (TTF) font requested -------------

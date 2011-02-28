@@ -1,0 +1,4 @@
+% $NetBSD: cidfmap-umefont,v 1.1 2011/02/28 07:29:38 makoto Exp $
+%
+/Ryumin-Light          << /FileType /TrueType /Path (%%PREFIX%%/lib/X11/fonts/TTF/ume-tgo4.ttf) /SubfontID 0 /CSI [(Japan1) 2] >> ;
+/GothicBBB-Medium      << /FileType /TrueType /Path (%%PREFIX%%/lib/X11/fonts/TTF/ume-tmo3.ttf) /SubfontID 0 /CSI [(Japan1) 2] >> ;
