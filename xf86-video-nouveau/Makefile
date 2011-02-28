@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/04/16 14:36:10 tnn2 Exp $
+# $NetBSD: Makefile,v 1.5 2011/02/28 14:53:18 thomasklausner Exp $
 #
 
 DISTNAME=	xf86-video-nouveau-0.0.10
@@ -7,7 +7,7 @@ CATEGORIES=	x11
 MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/bjs/distfiles/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	bjs@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/bjs/distfiles/
 COMMENT=	New (or nouveau) NVidia driver for modular X.org
 

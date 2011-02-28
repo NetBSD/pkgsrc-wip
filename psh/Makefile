@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2008/09/20 19:32:13 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.4 2011/02/28 14:53:18 thomasklausner Exp $
 #
 
 DISTNAME=	psh-1.8.1
 CATEGORIES=	shells
 MASTER_SITES=	http://www.focusresearch.com/gregor/download/
 
-MAINTAINER=	bjs@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.focusresearch.com/gregor/download/
 COMMENT=	Perl Shell
 

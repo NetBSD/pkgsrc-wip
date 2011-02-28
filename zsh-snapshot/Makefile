@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/09/09 02:32:19 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.2 2011/02/28 14:53:18 thomasklausner Exp $
 #
 
 DISTNAME=	zsh-${ZSH_SNAP_DATE}
@@ -8,7 +8,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 ZSH_SNAP_DATE=	20080908
 
-MAINTAINER=	bjs@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.zsh.org
 COMMENT=	Z Shell (development version)
 

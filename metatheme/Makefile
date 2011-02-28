@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2010/06/13 22:47:11 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.26 2011/02/28 14:53:17 thomasklausner Exp $
 #
 
 DISTNAME=		metatheme-0.9.7
@@ -7,7 +7,7 @@ CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/metatheme/0.9/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		recht@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Themes for GNOME 2
 

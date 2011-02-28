@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/06/28 05:37:33 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.2 2011/02/28 14:53:17 thomasklausner Exp $
 #
 
 DISTNAME=	edb-1.0.5.042
@@ -7,7 +7,7 @@ MASTER_SITES=	http://download.enlightenment.org/snaphots/2008-05-19/
 MASTER_SITES+=	ftp://ftp.springdaemons.com/pub/snapshots/e17/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	bjs@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.enlightenment.org/
 COMMENT=	Enlightenment Database Library
 

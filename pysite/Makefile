@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2008/05/26 13:59:46 tnn2 Exp $
+# $NetBSD: Makefile,v 1.5 2011/02/28 14:53:18 thomasklausner Exp $
 #
 
 DISTNAME=	Pysite-0.2.0
 CATEGORIES=	textproc
 MASTER_SITES=	http://ambient.2y.net/pysite/download/
 
-MAINTAINER=	recht@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ambient.2y.net/pysite/
 COMMENT=	XHTML website generation tool
 

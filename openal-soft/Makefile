@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/08/22 01:05:10 asau Exp $
+# $NetBSD: Makefile,v 1.4 2011/02/28 14:53:17 thomasklausner Exp $
 #
 
 DISTNAME=	openal-soft-1.5.304
@@ -7,7 +7,7 @@ MASTER_SITES=	http://connect.creativelabs.com/openal/Downloads/ \
 		http://kcat.strangesoft.net/openal-releases/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	bjs@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://kcat.strangesoft.net/
 COMMENT=	Alternative OpenAL implementation
 

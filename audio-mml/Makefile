@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/05/24 15:34:08 tnn2 Exp $
+# $NetBSD: Makefile,v 1.3 2011/02/28 14:53:17 thomasklausner Exp $
 #
 
 DISTNAME=	rat-4.4.01r4121
@@ -7,7 +7,7 @@ CATEGORIES=	mbone audio multimedia
 MASTER_SITES=	http://ftp.NetBSD.org/pub/NetBSD/packages/distfiles/LOCAL_PORTS/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	bjs@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www-mice.cs.ucl.ac.uk/multimedia/software/
 COMMENT=	Real-time Audio Tool
 

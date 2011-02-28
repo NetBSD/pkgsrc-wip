@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2009/09/09 11:22:11 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.16 2011/02/28 14:53:18 thomasklausner Exp $
 #
 
 DISTNAME=	generateDS-1.6a
@@ -6,7 +6,7 @@ PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc
 MASTER_SITES=	http://www.rexx.com/~dkuhlman/
 
-MAINTAINER=	recht@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.rexx.com/~dkuhlman/
 COMMENT=	Python XML data binding library
 

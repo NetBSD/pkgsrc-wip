@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/05/26 13:59:45 tnn2 Exp $
+# $NetBSD: Makefile,v 1.3 2011/02/28 14:53:17 thomasklausner Exp $
 #
 
 DISTNAME=	monotone-cvsimport-20080325
@@ -6,7 +6,7 @@ CATEGORIES=	devel scm
 MASTER_SITES=	http://www.NetBSD.org/~bjs/distfiles/
 EXTRACT_SUFX?=	.tar.bz2
 
-MAINTAINER=	bjs@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://monotone.ca/
 COMMENT=	Free distributed version control system
 

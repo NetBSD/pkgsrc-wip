@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2009/11/20 12:33:33 cheusov Exp $
+# $NetBSD: Makefile,v 1.5 2011/02/28 14:53:17 thomasklausner Exp $
 #
 
 DISTNAME=	pmk-0.10.4
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pmk/}
 
-MAINTAINER=	bjs@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pmk.sourceforge.net/
 COMMENT=	Pre-make kit
 

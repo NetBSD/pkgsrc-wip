@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2008/05/26 13:59:46 tnn2 Exp $
+# $NetBSD: Makefile,v 1.14 2011/02/28 14:53:18 thomasklausner Exp $
 #
 
 DISTNAME=	albatross-1.10
@@ -6,7 +6,7 @@ PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	http://www.object-craft.com.au/projects/albatross/download/
 
-MAINTAINER=	recht@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.object-craft.com.au/projects/albatross/
 COMMENT=	Toolkit for Stateful Web Applications
 

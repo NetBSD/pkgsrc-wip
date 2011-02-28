@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/06/13 22:47:07 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2011/02/28 14:53:17 thomasklausner Exp $
 #
 
 DISTNAME=	guitone-0.8.99.0
@@ -9,7 +9,7 @@ CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/bjs/distfiles/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	bjs@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://guitone.thomaskeller.biz/
 COMMENT=	Graphical Monotone VCS Tool
 

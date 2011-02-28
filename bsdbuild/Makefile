@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/10/26 20:27:57 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.2 2011/02/28 14:53:17 thomasklausner Exp $
 #
 
 DISTNAME=	bsdbuild-102608
 CATEGORIES=	devel
 MASTER_SITES=	http://ftp.NetBSD.org/pub/NetBSD/misc/bjs/distfiles/
 
-MAINTAINER=	bjs@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.hypertriton.com/bsdbuild/
 COMMENT=	BSD-licensed portable build system
 

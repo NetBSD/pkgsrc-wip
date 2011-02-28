@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2008/05/26 13:59:44 tnn2 Exp $
+# $NetBSD: Makefile,v 1.8 2011/02/28 14:53:17 thomasklausner Exp $
 #
 
 DISTNAME=		ht2html-2.0
 CATEGORIES=		textproc
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ht2html/}
 
-MAINTAINER=		recht@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://ht2html.sourceforge.net/
 COMMENT=		Simple web page templating system
 
