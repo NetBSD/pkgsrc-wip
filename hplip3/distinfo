@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.7 2010/09/02 00:15:11 gregoire Exp $
+$NetBSD: distinfo,v 1.8 2011/02/28 03:12:53 schnoebe Exp $
 
-SHA1 (hplip-3.10.6.tar.gz) = 1dc507340f8087bdeefb804c7771410bf958d564
-RMD160 (hplip-3.10.6.tar.gz) = a5194123a584bad62b1a04fbd05aca7f22ddc03c
-Size (hplip-3.10.6.tar.gz) = 21577342 bytes
-SHA1 (patch-aa) = 950626e8f61a33d7a62c061132ec42ca2abb6b03
-SHA1 (patch-ab) = 0670ddd301f176a574f5845b67b8dae8c90d48a0
-SHA1 (patch-ac) = a7a3097349ad91a69bd60b0b83e37a3984485f3c
-SHA1 (patch-ad) = ac00f1e11d520b7ade7484c62feaf47d45fcd71a
-SHA1 (patch-ae) = dfec669c9afcd7150076005614076c30214fdcd5
+SHA1 (hplip-3.11.1.tar.gz) = 6b06567373cadc7dff48134c6b58f90a4d72582a
+RMD160 (hplip-3.11.1.tar.gz) = 0ac41ed3935a050f1bcd431418fa280b853e8caf
+Size (hplip-3.11.1.tar.gz) = 22167916 bytes
+SHA1 (patch-aa) = 6487ae3ccfd73d40e7f48e9d65f165d2e283056a
+SHA1 (patch-ab) = ce2775ef74746aefd942bda49c4e548f7c771ff5
+SHA1 (patch-ac) = 82e2951ec3edf44dd78dae9ac6abb307eb60b9fc
+SHA1 (patch-ad) = 468fbf167e1f20bb8617e444977969e46b19f3be
+SHA1 (patch-ae) = 3630ac8098cd2dc50c6c41982b6bc59f60d3070e

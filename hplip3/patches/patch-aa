@@ -1,4 +1,9 @@
-$NetBSD: patch-aa,v 1.4 2010/09/02 00:15:11 gregoire Exp $
+$NetBSD: patch-aa,v 1.5 2011/02/28 03:12:53 schnoebe Exp $
+
+# lots of portability changes to configure.in, removing hard-coded paths
+# and pulling in the dynamic library loading modules..
+
+# pushed upstream as https://bugs.launchpad.net/hplip/+bug/726207
 
 --- configure.in.orig	2010-07-19 02:18:37.000000000 +0000
 +++ configure.in

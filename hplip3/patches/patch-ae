@@ -1,8 +1,13 @@
-$NetBSD: patch-ae,v 1.5 2010/08/29 08:42:28 gregoire Exp $
+$NetBSD: patch-ae,v 1.6 2011/02/28 03:12:53 schnoebe Exp $
 
---- Makefile.am.orig	2010-07-19 02:17:45.000000000 +0000
+# Conform to autoconf's standard variable usage, making it easier
+# to install on pkgsrc platforms
+
+# reported upstream as https://bugs.launchpad.net/hplip/+bug/726218
+
+--- Makefile.am.orig	2011-01-19 05:18:26.000000000 +0000
 +++ Makefile.am
-@@ -90,18 +90,18 @@ hp_mkuri_LDADD = -ldl libhpmud.la
+@@ -91,18 +91,18 @@ hp_mkuri_LDADD = -ldl libhpmud.la
  hp_mkuri_CFLAGS = -DCONFDIR=\"$(hplip_confdir)\"
  
  # hpmud.rules
@@ -24,7 +29,7 @@ $NetBSD: patch-ae,v 1.5 2010/08/29 08:42:28 gregoire Exp $
  hplip_conf_DATA = hplip.conf
  
  #pstotiff filter
-@@ -109,7 +109,7 @@ pstotiffdir = $(cupsfilterdir)
+@@ -110,7 +110,7 @@ pstotiffdir = $(cupsfilterdir)
  pstotiff_SCRIPTS = fax/filters/pstotiff
  
  # hplip.state

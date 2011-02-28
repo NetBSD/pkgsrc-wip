@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.27 2010/12/26 05:01:22 davesainty Exp $
+# $NetBSD: Makefile,v 1.28 2011/02/28 03:12:53 schnoebe Exp $
 #
 
-DISTNAME=		hplip-3.10.6
-PKGREVISION=		2
+DISTNAME=		hplip-3.11.1
 CATEGORIES=		print
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=hplip/}
 
 MAINTAINER=		gsutre@NetBSD.org
-HOMEPAGE=		http://hplip.sourceforge.net/
+HOMEPAGE=		http://hplipopensource.com/
 COMMENT=		HP Linux Imaging and Printing
 LICENSE=		gnu-gpl-v2 AND mit AND modified-bsd
 
@@ -19,7 +18,7 @@ BUILD_DEFS+=		VARBASE
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
-USE_LANGUAGES+=		c c++ fortran
+USE_LANGUAGES+=		c c++ # fortran
 USE_TOOLS+=		aclocal autoconf automake gmake pkg-config
 USE_TOOLS+=		perl:run
 
