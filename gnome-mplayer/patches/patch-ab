@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.1 2010/11/06 11:55:42 obache Exp $
+$NetBSD: patch-ab,v 1.2 2011/02/28 10:41:04 obache Exp $
 
-Always install schema files (but not instal-schemas).
+Always install schema files (but not install-schemas).
 
 --- Makefile.in.orig	2010-11-05 16:16:54.000000000 +0000
 +++ Makefile.in
