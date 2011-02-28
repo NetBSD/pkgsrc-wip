@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/02/28 18:21:48 thomasklausner Exp $
+bin/mu
+man/man1/mu-cleanup.1
+man/man1/mu-easy.1
+man/man1/mu-extract.1
+man/man1/mu-find.1
+man/man1/mu-index.1
+man/man1/mu-mkdir.1
+man/man1/mu-view.1
+man/man1/mu.1
+man/man1/mug.1
+man/man5/mu-bookmarks.5
