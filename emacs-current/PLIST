@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.103 2011/02/23 13:17:35 makoto Exp $
+@comment $NetBSD: PLIST,v 1.104 2011/02/28 13:32:02 makoto Exp $
 bin/ctags
 bin/ebrowse
 bin/emacs
@@ -3432,6 +3432,7 @@ share/emacs/${PKGVERSION}/lisp/term/pc-win.el.gz
 share/emacs/${PKGVERSION}/lisp/term/pc-win.elc
 share/emacs/${PKGVERSION}/lisp/term/rxvt.el.gz
 share/emacs/${PKGVERSION}/lisp/term/rxvt.elc
+share/emacs/${PKGVERSION}/lisp/term/screen.el
 share/emacs/${PKGVERSION}/lisp/term/sun.el.gz
 share/emacs/${PKGVERSION}/lisp/term/sun.elc
 share/emacs/${PKGVERSION}/lisp/term/sup-mouse.el.gz
