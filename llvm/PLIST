@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2011/02/18 03:19:26 asau Exp $
+@comment $NetBSD: PLIST,v 1.33 2011/03/01 04:41:03 asau Exp $
 bin/bugpoint
 bin/llc
 bin/lli
@@ -115,7 +115,6 @@ include/llvm/Analysis/LazyValueInfo.h
 include/llvm/Analysis/LibCallAliasAnalysis.h
 include/llvm/Analysis/LibCallSemantics.h
 include/llvm/Analysis/Lint.h
-include/llvm/Analysis/LiveValues.h
 include/llvm/Analysis/Loads.h
 include/llvm/Analysis/LoopDependenceAnalysis.h
 include/llvm/Analysis/LoopInfo.h
@@ -441,6 +440,7 @@ include/llvm/Target/TargetInstrInfo.h
 include/llvm/Target/TargetInstrItineraries.h
 include/llvm/Target/TargetIntrinsicInfo.h
 include/llvm/Target/TargetJITInfo.h
+include/llvm/Target/TargetLibraryInfo.h
 include/llvm/Target/TargetLowering.h
 include/llvm/Target/TargetLoweringObjectFile.h
 include/llvm/Target/TargetMachine.h
@@ -515,7 +515,6 @@ lib/libLLVMipa.a
 lib/libLLVMipo.a
 lib/libLTO.a
 lib/libLTO.${SO_SUFFIX}
-lib/libUnitTestMain.a
 lib/profile_rt.${SO_SUFFIX}
 man/man1/bugpoint.1
 man/man1/lit.1
