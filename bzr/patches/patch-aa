@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2011/03/01 21:50:00 ddeus Exp $
+
+--- setup.py.orig	2010-03-24 07:18:08.000000000 +0000
++++ setup.py
+@@ -709,7 +709,7 @@ else:
+     if not 'bdist_egg' in sys.argv:
+         # generate and install bzr.1 only with plain install, not the
+         # easy_install one
+-        DATA_FILES = [('man/man1', ['bzr.1'])]
++        DATA_FILES = [(os.getenv('PKGMANDIR', 'man') + '/man1', ['bzr.1'])]
+ 
+     # std setup
+     ARGS = {'scripts': ['bzr'],
