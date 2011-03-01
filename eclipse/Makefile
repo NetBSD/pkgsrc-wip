@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2011/02/24 18:37:31 khorben Exp $
+# $NetBSD: Makefile,v 1.2 2011/03/01 08:35:26 khorben Exp $
 #
 
 DISTNAME=	${PKGNAME_NOREV}
@@ -35,6 +35,7 @@ do-install:
 		${WRKDIR}/.eclipse
 	cd ${DESTDIR}${PREFIX} && \
 		${TAR} -xzf ${DISTDIR}/${PKGNAME_NOREV}${EXTRACT_SUFX}
+	${MKDIR} ${DESTDIR}${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKDIR}/.eclipse ${DESTDIR}${PREFIX}/bin/eclipse
 
 .include "../../mk/java-vm.mk"
