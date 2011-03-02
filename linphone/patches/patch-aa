@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.7 2009/12/08 12:19:39 thomasklausner Exp $
+$NetBSD: patch-aa,v 1.8 2011/03/02 21:52:00 gschwarz Exp $
 
---- console/commands.c.orig	2009-08-28 14:00:13.000000000 +0000
-+++ console/commands.c
-@@ -214,19 +214,19 @@ linphonec_parse_command_line(LinphoneCor
+--- console/commands.c.orig	2011-01-30 21:05:42.000000000 +0100
++++ console/commands.c	2011-01-30 21:06:27.000000000 +0100
+@@ -266,19 +266,19 @@
  	LPC_COMMAND *cmd;
  
  	/* Isolate first word and args */
@@ -26,7 +26,7 @@ $NetBSD: patch-aa,v 1.7 2009/12/08 12:19:39 thomasklausner Exp $
  		{
  			linphone_core_send_dtmf(lc, *cl);
  			ms_sleep(1); // be nice
-@@ -671,12 +671,12 @@ lpc_cmd_proxy(LinphoneCore *lc, char *ar
+@@ -756,12 +756,12 @@
  	if ( ! arg1 ) return 0;
  
  	/* Isolate first and second arg */

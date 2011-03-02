@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.14 2009/12/08 12:19:38 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.15 2011/03/02 21:52:00 gschwarz Exp $
 ${GUI}bin/linphone-3
 bin/linphonec
 bin/linphonecsh
-bin/sipomatic
 include/linphone/config.h
 include/linphone/linphonecore.h
 include/linphone/lpconfig.h
@@ -20,7 +19,6 @@ include/mediastreamer2/msfilter.h
 include/mediastreamer2/msqueue.h
 include/mediastreamer2/msrtp.h
 include/mediastreamer2/mssndcard.h
-include/mediastreamer2/msspeexec.h
 include/mediastreamer2/mstee.h
 include/mediastreamer2/msticker.h
 include/mediastreamer2/msv4l.h
@@ -68,8 +66,6 @@ share/linphone/call_logs.glade
 share/linphone/chatroom.glade
 share/linphone/contact.glade
 share/linphone/incoming_call.glade
-share/linphone/linphone.png
-share/linphone/linphone2.png
 share/linphone/log.glade
 share/linphone/main.glade
 share/linphone/parameters.glade
@@ -90,21 +86,9 @@ share/locale/pt_BR/LC_MESSAGES/linphone.mo
 share/locale/ru/LC_MESSAGES/linphone.mo
 share/locale/sv/LC_MESSAGES/linphone.mo
 share/locale/zh_CN/LC_MESSAGES/linphone.mo
-share/pixmaps/linphone/green.png
 share/pixmaps/linphone/linphone.png
-share/pixmaps/linphone/linphone2.png
-share/pixmaps/linphone/linphone2.xpm
 share/pixmaps/linphone/mic_active.png
 share/pixmaps/linphone/mic_muted.png
-share/pixmaps/linphone/red.png
-share/pixmaps/linphone/sip-away.png
-share/pixmaps/linphone/sip-bifm.png
-share/pixmaps/linphone/sip-busy.png
-share/pixmaps/linphone/sip-closed.png
-share/pixmaps/linphone/sip-online.png
-share/pixmaps/linphone/sip-otl.png
-share/pixmaps/linphone/sip-otp.png
-share/pixmaps/linphone/sip-wfa.png
 share/sounds/linphone/hello16000.wav
 share/sounds/linphone/hello8000.wav
 share/sounds/linphone/ringback.wav
