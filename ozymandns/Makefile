@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2009/12/06 17:47:08 gschwarz Exp $
+# $NetBSD: Makefile,v 1.5 2011/03/02 18:36:02 gschwarz Exp $
 
 DISTNAME=	ozymandns_src_0.1
 PKGNAME=	${DISTNAME:S/_src_/-/}
 CATEGORIES=	net
-MASTER_SITES=	http://www.doxpara.com/ http://www.cship.info/mirror/dnstunnel/
+MASTER_SITES=	http://www.cship.info/mirror/dnstunnel/ http://beta.ivancover.com/dnstunnel/ http://wiki.kartbuilding.net/ http://s3.amazonaws.com/dmk/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	schwarz@NetBSD.org
