@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2010/12/20 13:10:24 ryo-on Exp $
+# $NetBSD: Makefile,v 1.3 2011/03/03 20:31:28 ryo-on Exp $
 #
 
-DISTNAME=	gcap-0.0.5
+DISTNAME=	gcap-0.0.6
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	net
 MASTER_SITES=	http://gcap.googlecode.com/files/
