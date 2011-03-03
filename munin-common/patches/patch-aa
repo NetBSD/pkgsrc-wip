@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.1 2011/01/09 16:44:04 ftigeot Exp $
+$NetBSD: patch-aa,v 1.2 2011/03/03 13:53:56 ftigeot Exp $
+
+Add missing module_name so that Munin::Common becomes a valid Perl Module.
 
 --- Build.PL.orig	2009-04-15 06:58:10.000000000 +0000
 +++ Build.PL
