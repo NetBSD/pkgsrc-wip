@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.4 2010/08/29 12:58:46 obache Exp $
+@comment $NetBSD: PLIST,v 1.5 2011/03/04 04:40:35 obache Exp $
 ${GEM_HOME}/cache/dnssd-${PKGVERSION}.gem
 ${GEM_LIBDIR}/.autotest
+${GEM_LIBDIR}/.gemtest
 ${GEM_LIBDIR}/History.txt
 ${GEM_LIBDIR}/Manifest.txt
 ${GEM_LIBDIR}/README.txt

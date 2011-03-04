@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2010/09/14 07:33:46 obache Exp $
+# $NetBSD: Makefile,v 1.7 2011/03/04 04:40:35 obache Exp $
 #
 
-DISTNAME=	dnssd-1.4
+DISTNAME=	dnssd-2.0
 CATEGORIES=	net ruby
 
 MAINTAINER=	obache@NetBSD.org
