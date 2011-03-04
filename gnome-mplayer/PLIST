@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2010/11/06 11:55:42 obache Exp $
+@comment $NetBSD: PLIST,v 1.3 2011/03/04 04:17:28 obache Exp $
 bin/gnome-mplayer
 ${PLIST.nautilus}lib/nautilus/extensions-2.0/libgnome-mplayer-properties-page.so
 man/man1/gnome-mplayer.1
@@ -27,7 +27,6 @@ share/locale/cs/LC_MESSAGES/gnome-mplayer.mo
 share/locale/da/LC_MESSAGES/gnome-mplayer.mo
 share/locale/de/LC_MESSAGES/gnome-mplayer.mo
 share/locale/el/LC_MESSAGES/gnome-mplayer.mo
-share/locale/en/LC_MESSAGES/gnome-mplayer.mo
 share/locale/en_GB/LC_MESSAGES/gnome-mplayer.mo
 share/locale/es/LC_MESSAGES/gnome-mplayer.mo
 share/locale/et/LC_MESSAGES/gnome-mplayer.mo
@@ -35,6 +34,7 @@ share/locale/eu/LC_MESSAGES/gnome-mplayer.mo
 share/locale/fi/LC_MESSAGES/gnome-mplayer.mo
 share/locale/fo/LC_MESSAGES/gnome-mplayer.mo
 share/locale/fr/LC_MESSAGES/gnome-mplayer.mo
+share/locale/fy/LC_MESSAGES/gnome-mplayer.mo
 share/locale/gl/LC_MESSAGES/gnome-mplayer.mo
 share/locale/he/LC_MESSAGES/gnome-mplayer.mo
 share/locale/hu/LC_MESSAGES/gnome-mplayer.mo
@@ -52,6 +52,7 @@ share/locale/sr/LC_MESSAGES/gnome-mplayer.mo
 share/locale/sr@latin/LC_MESSAGES/gnome-mplayer.mo
 share/locale/sv/LC_MESSAGES/gnome-mplayer.mo
 share/locale/tr/LC_MESSAGES/gnome-mplayer.mo
+share/locale/uk/LC_MESSAGES/gnome-mplayer.mo
 share/locale/zh_CN/LC_MESSAGES/gnome-mplayer.mo
 share/locale/zh_HK/LC_MESSAGES/gnome-mplayer.mo
 share/locale/zh_TW/LC_MESSAGES/gnome-mplayer.mo
