@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.4 2009/09/07 11:36:38 obache Exp $
+@comment $NetBSD: PLIST,v 1.5 2011/03/04 08:13:14 obache Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/${EGG_INFODIR}/zip-safe
 ${PYSITELIB}/acct_mgr/__init__.py
@@ -17,15 +18,28 @@ ${PYSITELIB}/acct_mgr/api.pyo
 ${PYSITELIB}/acct_mgr/db.py
 ${PYSITELIB}/acct_mgr/db.pyc
 ${PYSITELIB}/acct_mgr/db.pyo
+${PYSITELIB}/acct_mgr/guard.py
+${PYSITELIB}/acct_mgr/guard.pyc
+${PYSITELIB}/acct_mgr/guard.pyo
 ${PYSITELIB}/acct_mgr/hashlib_compat.py
 ${PYSITELIB}/acct_mgr/hashlib_compat.pyc
 ${PYSITELIB}/acct_mgr/hashlib_compat.pyo
+${PYSITELIB}/acct_mgr/htdocs/acct_mgr.css
+${PYSITELIB}/acct_mgr/htdocs/acct_mgr_login.css
+${PYSITELIB}/acct_mgr/htdocs/locked.png
+${PYSITELIB}/acct_mgr/htdocs/time-locked.png
 ${PYSITELIB}/acct_mgr/htfile.py
 ${PYSITELIB}/acct_mgr/htfile.pyc
 ${PYSITELIB}/acct_mgr/htfile.pyo
 ${PYSITELIB}/acct_mgr/http.py
 ${PYSITELIB}/acct_mgr/http.pyc
 ${PYSITELIB}/acct_mgr/http.pyo
+${PYSITELIB}/acct_mgr/locale/.placeholder
+${PYSITELIB}/acct_mgr/locale/cs/LC_MESSAGES/acct_mgr.mo
+${PYSITELIB}/acct_mgr/locale/de/LC_MESSAGES/acct_mgr.mo
+${PYSITELIB}/acct_mgr/locale/es/LC_MESSAGES/acct_mgr.mo
+${PYSITELIB}/acct_mgr/locale/ja/LC_MESSAGES/acct_mgr.mo
+${PYSITELIB}/acct_mgr/locale/ru/LC_MESSAGES/acct_mgr.mo
 ${PYSITELIB}/acct_mgr/md5crypt.py
 ${PYSITELIB}/acct_mgr/md5crypt.pyc
 ${PYSITELIB}/acct_mgr/md5crypt.pyo
@@ -38,6 +52,7 @@ ${PYSITELIB}/acct_mgr/pwhash.pyo
 ${PYSITELIB}/acct_mgr/svnserve.py
 ${PYSITELIB}/acct_mgr/svnserve.pyc
 ${PYSITELIB}/acct_mgr/svnserve.pyo
+${PYSITELIB}/acct_mgr/templates/account_details.html
 ${PYSITELIB}/acct_mgr/templates/admin_accountsconfig.html
 ${PYSITELIB}/acct_mgr/templates/admin_accountsnotification.html
 ${PYSITELIB}/acct_mgr/templates/admin_users.html
