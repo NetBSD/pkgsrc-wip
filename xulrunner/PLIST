@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2011/02/11 18:28:10 tnn2 Exp $
+@comment $NetBSD: PLIST,v 1.31 2011/03/05 17:09:39 tnn2 Exp $
 bin/xulrunner
 ${PLIST.jit}include/xulrunner/Allocator.h
 ${PLIST.jit}include/xulrunner/Assembler.h
@@ -33,6 +33,7 @@ ${PLIST.jit}include/xulrunner/NativeCommon.h
 ${PLIST.jit}include/xulrunner/Native${NANOJIT_ARCH}.h
 include/xulrunner/PPrefTuple.h
 include/xulrunner/PrefTuple.h
+include/xulrunner/ReadbackLayer.h
 ${PLIST.jit}include/xulrunner/RegAlloc.h
 ${PLIST.jit}include/xulrunner/VMPI.h
 include/xulrunner/VerReg.h
@@ -90,6 +91,7 @@ include/xulrunner/gfxContext.h
 include/xulrunner/gfxCore.h
 include/xulrunner/gfxDrawable.h
 include/xulrunner/gfxFT2FontBase.h
+include/xulrunner/gfxFailure.h
 include/xulrunner/gfxFont.h
 include/xulrunner/gfxFontConstants.h
 include/xulrunner/gfxFontTest.h
@@ -1006,6 +1008,7 @@ include/xulrunner/nsIDOMPkcs11.h
 include/xulrunner/nsIDOMPlugin.h
 include/xulrunner/nsIDOMPluginArray.h
 include/xulrunner/nsIDOMPopStateEvent.h
+include/xulrunner/nsIDOMPopStateEvent_MOZILLA_2_BRANCH.h
 include/xulrunner/nsIDOMPopupBlockedEvent.h
 include/xulrunner/nsIDOMProcessingInstruction.h
 include/xulrunner/nsIDOMProgressEvent.h
@@ -1319,6 +1322,7 @@ include/xulrunner/nsIHttpHeaderVisitor.h
 include/xulrunner/nsIHttpProtocolHandler.h
 include/xulrunner/nsIID.h
 include/xulrunner/nsIIDBCursor.h
+include/xulrunner/nsIIDBCursorWithValue.h
 include/xulrunner/nsIIDBDatabase.h
 include/xulrunner/nsIIDBDatabaseException.h
 include/xulrunner/nsIIDBFactory.h
@@ -3054,6 +3058,7 @@ share/idl/xulrunner/nsIDOMPkcs11.idl
 share/idl/xulrunner/nsIDOMPlugin.idl
 share/idl/xulrunner/nsIDOMPluginArray.idl
 share/idl/xulrunner/nsIDOMPopStateEvent.idl
+share/idl/xulrunner/nsIDOMPopStateEvent_MOZILLA_2_BRANCH.idl
 share/idl/xulrunner/nsIDOMPopupBlockedEvent.idl
 share/idl/xulrunner/nsIDOMProcessingInstruction.idl
 share/idl/xulrunner/nsIDOMProgressEvent.idl
@@ -3336,6 +3341,7 @@ share/idl/xulrunner/nsIHttpEventSink.idl
 share/idl/xulrunner/nsIHttpHeaderVisitor.idl
 share/idl/xulrunner/nsIHttpProtocolHandler.idl
 share/idl/xulrunner/nsIIDBCursor.idl
+share/idl/xulrunner/nsIIDBCursorWithValue.idl
 share/idl/xulrunner/nsIIDBDatabase.idl
 share/idl/xulrunner/nsIIDBDatabaseException.idl
 share/idl/xulrunner/nsIIDBFactory.idl

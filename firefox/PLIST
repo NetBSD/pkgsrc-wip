@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2011/02/11 18:28:11 tnn2 Exp $
+@comment $NetBSD: PLIST,v 1.29 2011/03/05 17:09:39 tnn2 Exp $
 bin/firefox
 lib/firefox/README.txt
 lib/firefox/application.ini
@@ -15,7 +15,7 @@ lib/firefox/chrome/browser/content/browser/NetworkPanel.xhtml
 lib/firefox/chrome/browser/content/browser/aboutDialog.css
 lib/firefox/chrome/browser/content/browser/aboutDialog.js
 lib/firefox/chrome/browser/content/browser/aboutDialog.xul
-lib/firefox/chrome/browser/content/browser/aboutHome-restore-icon-rtl.png
+lib/firefox/chrome/browser/content/browser/aboutHome-restore-icon-small.png
 lib/firefox/chrome/browser/content/browser/aboutHome-restore-icon.png
 lib/firefox/chrome/browser/content/browser/aboutHome.css
 lib/firefox/chrome/browser/content/browser/aboutHome.js
@@ -231,6 +231,7 @@ lib/firefox/chrome/browser/skin/classic/browser/syncSetup.css
 lib/firefox/chrome/browser/skin/classic/browser/tabbrowser/alltabs.png
 lib/firefox/chrome/browser/skin/classic/browser/tabbrowser/connecting.png
 lib/firefox/chrome/browser/skin/classic/browser/tabbrowser/loading.png
+lib/firefox/chrome/browser/skin/classic/browser/tabbrowser/tab-overflow-border.png
 lib/firefox/chrome/browser/skin/classic/browser/tabbrowser/tab.png
 lib/firefox/chrome/browser/skin/classic/browser/tabbrowser/tabDragIndicator.png
 lib/firefox/chrome/browser/skin/classic/browser/tabview/edit-light.png
@@ -240,8 +241,6 @@ lib/firefox/chrome/browser/skin/classic/browser/tabview/stack-expander.png
 lib/firefox/chrome/browser/skin/classic/browser/tabview/tabview.css
 lib/firefox/chrome/browser/skin/classic/browser/tabview/tabview.png
 lib/firefox/chrome/browser/skin/classic/browser/urlbar-favicon-glow.png
-lib/firefox/chrome/browser/skin/classic/browser/urlbar-over-link-arrow-rtl.png
-lib/firefox/chrome/browser/skin/classic/browser/urlbar-over-link-arrow.png
 lib/firefox/chrome/browser/skin/classic/communicator/communicator.css
 lib/firefox/chrome/en-US/locale/branding/brand.dtd
 lib/firefox/chrome/en-US/locale/branding/brand.properties
