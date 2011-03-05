@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.34 2011/03/02 12:50:10 imilh Exp $
+# $NetBSD: Makefile,v 1.35 2011/03/05 23:59:38 imilh Exp $
 #
 
-DISTNAME=		pkgin-20110302
+DISTNAME=		pkgin-20110306
 CATEGORIES=		pkgtools
-MASTER_SITES=		http://imil.net/NetBSD/
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=pkgin/}
 
 MAINTAINER=		imil@home.imil.net
-HOMEPAGE=		http://imil.net/pkgin/
+HOMEPAGE=		http://pkgin.net/
 COMMENT=		Apt / yum like tool for managing pkgsrc binary packages
 LICENSE=		modified-bsd
 
