@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/03/05 22:13:33 amoibos Exp $
+bin/dhex
+man/man1/dhex.1
+man/man5/dhex_markers.5
+man/man5/dhex_searchlog.5
+man/man5/dhexrc.5

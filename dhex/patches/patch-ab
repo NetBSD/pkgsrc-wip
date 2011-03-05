@@ -1,0 +1,25 @@
+$NetBSD: patch-ab,v 1.1.1.1 2011/03/05 22:13:33 amoibos Exp $
+
+prevent segmentation fault
+--- buffers.c.orig	2011-02-25 14:51:15.000000000 +0100
++++ buffers.c	2011-02-25 14:53:58.000000000 +0100
+@@ -11,14 +11,17 @@
+ 
+ // retval: OK
+ // 
++#define MAX 512
+ tUInt32 openbuf(tBuffer* hBuf,tUInt8 bufnum,char* filename)
+ {
++	char buf[MAX];
+ 	hBuf->changesnum=0;
+ 	hBuf->valid=0;
+ 	hBuf->fresh=1;
+ 	hBuf->file=fopen(filename,"rb");
+-	memcpy(hBuf->filename,filename,512);
+-	hBuf->filename[511]=0;
++	snprintf(buf, MAX, "%s", filename);
++	memcpy(hBuf->filename,buf,MAX);
++	hBuf->filename[MAX-1]=0;
+ 	if (hBuf->file)
+ 	{
+ 		hBuf->valid=1;
