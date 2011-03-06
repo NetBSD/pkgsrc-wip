@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2011/03/02 21:52:00 gschwarz Exp $
+@comment $NetBSD: PLIST,v 1.16 2011/03/06 13:10:44 gschwarz Exp $
 ${GUI}bin/linphone-3
 bin/linphonec
 bin/linphonecsh
@@ -11,11 +11,17 @@ include/mediastreamer2/dsptools.h
 include/mediastreamer2/dtmfgen.h
 include/mediastreamer2/ice.h
 include/mediastreamer2/mediastream.h
+include/mediastreamer2/msaudiomixer.h
+include/mediastreamer2/mschanadapter.h
 include/mediastreamer2/mscommon.h
 include/mediastreamer2/msequalizer.h
+include/mediastreamer2/mseventqueue.h
+include/mediastreamer2/msextdisplay.h
 include/mediastreamer2/msfileplayer.h
 include/mediastreamer2/msfilerec.h
 include/mediastreamer2/msfilter.h
+include/mediastreamer2/msinterfaces.h
+include/mediastreamer2/msitc.h
 include/mediastreamer2/msqueue.h
 include/mediastreamer2/msrtp.h
 include/mediastreamer2/mssndcard.h
@@ -86,13 +92,26 @@ share/locale/pt_BR/LC_MESSAGES/linphone.mo
 share/locale/ru/LC_MESSAGES/linphone.mo
 share/locale/sv/LC_MESSAGES/linphone.mo
 share/locale/zh_CN/LC_MESSAGES/linphone.mo
+share/pixmaps/linphone/contact-orange.png
+share/pixmaps/linphone/dialer-orange.png
+share/pixmaps/linphone/linphone-3-250x130.png
+share/pixmaps/linphone/linphone-3.png
+share/pixmaps/linphone/linphone-banner.png
 share/pixmaps/linphone/linphone.png
+share/pixmaps/linphone/linphone2-57x57.png
 share/pixmaps/linphone/mic_active.png
 share/pixmaps/linphone/mic_muted.png
+share/pixmaps/linphone/startcall-green.png
+share/pixmaps/linphone/status-green.png
+share/pixmaps/linphone/status-offline.png
+share/pixmaps/linphone/status-orange.png
+share/pixmaps/linphone/status-red.png
+share/pixmaps/linphone/stopcall-red.png
 share/sounds/linphone/hello16000.wav
 share/sounds/linphone/hello8000.wav
 share/sounds/linphone/ringback.wav
 share/sounds/linphone/rings/bigben.wav
+share/sounds/linphone/rings/oldphone-mono.wav
 share/sounds/linphone/rings/oldphone.wav
 share/sounds/linphone/rings/orig.wav
 share/sounds/linphone/rings/rock.wav
