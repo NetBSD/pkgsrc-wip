@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2009/08/16 18:26:33 cheusov Exp $
-lib/xmms/Input/libcdread.la
-share/doc/${PKGBASE}/AUTHORS
-share/doc/${PKGBASE}/ChangeLog
-share/doc/${PKGBASE}/COPYING
-share/doc/${PKGBASE}/NEWS
-share/doc/${PKGBASE}/README
