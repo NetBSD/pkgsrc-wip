@@ -1554,7 +1554,15 @@ Bad package www/ap2-vhost-ldap:PKG_APACHE=apache2, skipped
 pkg_src_summary -m -fPKGNAME,PKGPATH www/ap2-python |
 grep -v DEPENDS |
 cmp 'pkg_src_summary #2' \
-'ASSIGNMENTS=PKG_APACHE=apache2
+'ASSIGNMENTS=PKG_APACHE=apache2,PYTHON_VERSION_REQD=27
+PKGNAME=ap2-py27-python-3.3.1
+PKGPATH=www/ap2-python
+
+ASSIGNMENTS=PKG_APACHE=apache2,PYTHON_VERSION_REQD=27
+PKGNAME=ap2-py27-python-3.3.1
+PKGPATH=www/ap2-python
+
+ASSIGNMENTS=PKG_APACHE=apache2
 PKGNAME=ap2-py26-python-3.3.1
 PKGPATH=www/ap2-python
 
@@ -1564,6 +1572,14 @@ PKGPATH=www/ap2-python
 
 ASSIGNMENTS=PKG_APACHE=apache2,PYTHON_VERSION_REQD=24
 PKGNAME=ap2-py24-python-3.3.1
+PKGPATH=www/ap2-python
+
+ASSIGNMENTS=PYTHON_VERSION_REQD=27
+PKGNAME=ap22-py27-python-3.3.1
+PKGPATH=www/ap2-python
+
+ASSIGNMENTS=PYTHON_VERSION_REQD=27
+PKGNAME=ap22-py27-python-3.3.1
 PKGPATH=www/ap2-python
 
 PKGNAME=ap22-py26-python-3.3.1
@@ -1582,7 +1598,15 @@ PKGPATH=www/ap2-python
 pkg_src_summary -m --fields PKGNAME,PKGPATH www/ap2-python:PKG_APACHE=apache2 |
 grep -v DEPENDS |
 cmp 'pkg_src_summary #3' \
-'PKGNAME=ap22-py26-python-3.3.1
+'ASSIGNMENTS=PYTHON_VERSION_REQD=27
+PKGNAME=ap22-py27-python-3.3.1
+PKGPATH=www/ap2-python
+
+ASSIGNMENTS=PYTHON_VERSION_REQD=27
+PKGNAME=ap22-py27-python-3.3.1
+PKGPATH=www/ap2-python
+
+PKGNAME=ap22-py26-python-3.3.1
 PKGPATH=www/ap2-python
 
 ASSIGNMENTS=PYTHON_VERSION_REQD=25
