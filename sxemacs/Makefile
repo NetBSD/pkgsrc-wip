@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2010/12/26 05:01:23 davesainty Exp $
+# $NetBSD: Makefile,v 1.10 2011/03/06 16:37:19 thomasklausner Exp $
 
 DISTNAME=	sxemacs-22.1.5
 PKGREVISION=	3
@@ -40,15 +40,6 @@ INSTALL_UNSTRIPPED=	yes
 #		--with-widgets=motif \
 #		--with-xim=motif
 #.include "../../mk/motif.buildlink3.mk"
-#.elif defined(USE_GTK)
-#WITH_DIALOGS= \
-#		--with-gtk \
-#		--with-menubars=yes \
-#		--with-scrollbars=yes \
-#		--with-dialogs=yes \
-#		--with-widgets=yes \
-#		--with-xim=yes
-#.include "../../x11/gtk/buildlink3.mk"
 #.else
 # XXX Default is "lucid".  Due to the output of `configure --help', Lucid
 #     widgets wrap Athena, so xaw.buildlink3.mk.
