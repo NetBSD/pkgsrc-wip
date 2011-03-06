@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/06/13 22:47:09 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2011/03/06 16:46:28 thomasklausner Exp $
 #
 
 DISTNAME=	kuickshow-0.9.1-kde4.4.0
@@ -24,5 +24,6 @@ USE_TOOLS+=	msgfmt pkg-config
 
 .include "../../graphics/imlib/buildlink3.mk"
 .include "../../x11/kdelibs4/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../meta-pkgs/kde4/kde4.mk"
 .include "../../mk/bsd.pkg.mk"
