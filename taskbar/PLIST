@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2009/10/11 10:45:20 thomasklausner Exp $
-bin/taskbar
-share/taskbar/libclock.la
-share/taskbar/libsensors.la
-share/doc/taskbar/README
-share/examples/taskbar/example_.taskbar

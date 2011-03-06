@@ -1,4 +1,0 @@
-o Endeavour has many optional dependencies that I havn't included
-
-o I'm sure the substitutions in the configure phase need to be more
-  general.  eg. use ${CC} etc.

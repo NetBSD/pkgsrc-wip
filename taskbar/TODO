@@ -1,7 +1,0 @@
-add option for --enable-xft
-(even when not buildlinked, it was linked to libXft)
-
-get rid of sensor support under NetBSD or make it work?
-(remove sensor from DESCR)
-
-what provides background.pc so it can be built with that support?

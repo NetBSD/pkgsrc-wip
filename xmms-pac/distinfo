@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/09/26 08:14:43 thomaspfaff Exp $
-
-SHA1 (libpac-0.6.2.tar.gz) = d5e5b93ffd1e048c5ca751ff24a21137c9a66e20
-RMD160 (libpac-0.6.2.tar.gz) = c8ab53b76925670b5fd7f34ec243bcf56f329bb8
-Size (libpac-0.6.2.tar.gz) = 42244 bytes

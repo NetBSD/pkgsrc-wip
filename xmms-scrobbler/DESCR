@@ -1,7 +1,0 @@
-Audioscrobbler builds a profile of your musical taste using a plugin
-for your media player. Plugins send the name of every song you play to
-the Audioscrobbler server, which updates your musical profile with the
-new song. Every person with a plugin has their own page on
-http://www.audioscrobbler.com which shows their listening statistics.
-The system automatically matches you to people with a similar music taste,
-and generates personalised recommendations.

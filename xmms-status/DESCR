@@ -1,5 +1,0 @@
-xmms-status-plugin is a general plugin for the xmms mp3 player. It
-provides a docklet for the GNOME Status applet and the KDE panel.
-
-It has freedesktop.org Notification Area specification and GNOME 1.2
-status dock.

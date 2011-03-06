@@ -1,3 +1,0 @@
-XMP input plugin for XMMS.  The XMP player already exist in pkgsrc/audio/xmp,
-but it does not compile the XMMS plugin.  This package only installs the
-plugin.

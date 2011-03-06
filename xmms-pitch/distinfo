@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/09/28 06:41:44 rillig Exp $
-
-SHA1 (pitch-plugin-xmms.tar.gz) = 77876ec09e8dca29acfc857dcf396e14be43bd26
-RMD160 (pitch-plugin-xmms.tar.gz) = 0de6449c8921dcd1123bc34573f1ef5c90331ef1
-Size (pitch-plugin-xmms.tar.gz) = 1227 bytes
-SHA1 (patch-aa) = 93297e9563333d2c9c9eb9e01be799aba435f2fb

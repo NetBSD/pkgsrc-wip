@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2007/12/04 00:47:10 netcap Exp $
-
-SHA1 (soundtracker-0.6.8.tar.gz) = 255c87cdbe2ccb715d9f97a0677e4594b7909595
-RMD160 (soundtracker-0.6.8.tar.gz) = b86bf86013e5d2959e1a8dbb19a9255c116b68d0
-Size (soundtracker-0.6.8.tar.gz) = 1016718 bytes
-SHA1 (patch-aa) = 958a1b3773d5ab5679e7a0aaa55de449fdb72ca7

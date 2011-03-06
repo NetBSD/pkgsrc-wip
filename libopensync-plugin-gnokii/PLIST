@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/12/14 16:40:09 noud4 Exp $
-lib/opensync/formats/gnokii.la
-lib/opensync/plugins/gnokii_sync.la
-share/opensync/defaults/gnokii-sync

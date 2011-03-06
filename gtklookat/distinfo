@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/09/28 06:41:21 rillig Exp $
-
-SHA1 (gtklookat-0.13.0.tar.gz) = 3066b9e655d1645b0e4fdf954e15f2d3ed6b7a66
-RMD160 (gtklookat-0.13.0.tar.gz) = 53a7758ba7d0165eed7e159e1e1d33f2e78d4d00
-Size (gtklookat-0.13.0.tar.gz) = 85907 bytes

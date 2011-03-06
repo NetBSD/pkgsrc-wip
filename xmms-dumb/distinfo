@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/09/28 06:41:44 rillig Exp $
-
-SHA1 (dumb-xmms-0.1.tar.gz) = 0d769e4fea9104a021bd58029978e8066f7e5dad
-RMD160 (dumb-xmms-0.1.tar.gz) = 46386ba86c5b3a964039949adaca004075df6a9f
-Size (dumb-xmms-0.1.tar.gz) = 11718 bytes
-SHA1 (patch-aa) = 075537ba9cd32d1fcc24f807fab7a0d81720c9a3
-SHA1 (patch-ab) = 7beb6a30373976d6d595ccdda23a9a19e423e3fe

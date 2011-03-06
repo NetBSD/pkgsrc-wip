@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/09/28 06:41:42 rillig Exp $
-
-SHA1 (taskbar-1.0.3.tar.gz) = 236330a424a776c2a7eb498b55cc35df1bd261e0
-RMD160 (taskbar-1.0.3.tar.gz) = a22fa72856510af9d21b0d1b7159462fba9699bf
-Size (taskbar-1.0.3.tar.gz) = 434051 bytes
-SHA1 (patch-aa) = 75f65c2c8b5ada467d7f91d9b5d2c123805abf5f
-SHA1 (patch-ab) = dd788e9b7cfdb961e7e5a4eaa178dc9bcbe080e3
