@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/10/11 13:50:22 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2011/03/06 15:56:11 thomasklausner Exp $
 
 DISTNAME=	pop3proxy-2.0.0-beta8
 PKGNAME=	${DISTNAME:S/-beta/beta/}
@@ -15,5 +15,5 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_FILE=	makefile
 INSTALLATION_DIRS=	sbin man/man1
 
-.include "../../mail/clamav/buildlink3.mk"
+.include "../../security/clamav/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
