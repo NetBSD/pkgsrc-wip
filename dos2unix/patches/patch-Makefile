@@ -1,11 +1,11 @@
-$NetBSD: patch-Makefile,v 1.1.1.1 2011/02/11 00:09:13 ryo-on Exp $
+$NetBSD: patch-Makefile,v 1.2 2011/03/06 09:51:23 ryo-on Exp $
 
 * install man pages to ${PREFIX}/man
 * do not generate ps, pdf, and html documents
 
---- Makefile.orig	2011-01-31 21:06:08.000000000 +0000
+--- Makefile.orig	2011-03-02 16:35:32.000000000 +0000
 +++ Makefile
-@@ -62,7 +62,7 @@ datadir		= $(datarootdir)
+@@ -73,7 +73,7 @@ datadir		= $(datarootdir)
  docsubdir	= $(PACKAGE)-$(DOS2UNIX_VERSION)
  docdir		= $(datarootdir)/doc/$(docsubdir)
  localedir	= $(datarootdir)/locale
@@ -14,16 +14,7 @@ $NetBSD: patch-Makefile,v 1.1.1.1 2011/02/11 00:09:13 ryo-on Exp $
  man1dir		= $(mandir)/man1
  manext		= .1
  man1ext		= .1
-@@ -77,7 +77,7 @@ ifdef ENABLE_NLS
- 	MOFILES			= $(DOS2UNIX_MOFILES) $(UNIX2DOS_MOFILES)
- endif
- 
--DOCFILES	= $(PACKAGE).txt $(PACKAGE).ps $(PACKAGE).pdf $(PACKAGE).htm
-+DOCFILES	= $(PACKAGE).txt
- INSTALL_OBJS_DOC = README.txt NEWS.txt ChangeLog.txt COPYING.txt TODO.txt BUGS.txt $(DOCFILES)
- 
- #PODFILES	= man/man1/dos2unix.pod $(wildcard man/*/man1/dos2unix.pod)
-@@ -274,11 +274,11 @@ else
+@@ -313,11 +313,11 @@ else
  	cd $(DESTDIR)$(man1dir); $(LINK_MAN) $(PACKAGE).1 $(UNIX2DOS).1
  	cd $(DESTDIR)$(man1dir); $(LINK_MAN) $(PACKAGE).1 $(UNIX2MAC).1
  endif

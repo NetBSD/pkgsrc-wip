@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/02/11 00:09:13 ryo-on Exp $
+$NetBSD: distinfo,v 1.2 2011/03/06 09:51:23 ryo-on Exp $
 
-SHA1 (dos2unix-5.2.tar.gz) = 477d45afc2932d0d4546a704a7200e5ee1779fb9
-RMD160 (dos2unix-5.2.tar.gz) = 764626c21cc2bfaea98528fa2c13d8b6845bda2f
-Size (dos2unix-5.2.tar.gz) = 51722 bytes
-SHA1 (patch-Makefile) = 94363689d3f3290e943c798e8a3bc588af5227fa
+SHA1 (dos2unix-5.2.1.tar.gz) = 79e1dbb3753e029d2a5b0d65f3f512d09cbc6f79
+RMD160 (dos2unix-5.2.1.tar.gz) = 0bcce6e16dd94fa85a6cbcb44dc72d5c30db062a
+Size (dos2unix-5.2.1.tar.gz) = 52877 bytes
+SHA1 (patch-Makefile) = 54cc5f3e3cc5f2e67c0f8464fbf853150cce6b1a

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/02/11 00:09:13 ryo-on Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/03/06 09:51:23 ryo-on Exp $
 bin/dos2unix
 bin/mac2unix
 bin/unix2dos
@@ -17,11 +17,10 @@ share/doc/${PKGNAME}/ChangeLog.txt
 share/doc/${PKGNAME}/NEWS.txt
 share/doc/${PKGNAME}/README.txt
 share/doc/${PKGNAME}/TODO.txt
+share/doc/${PKGNAME}/dos2unix.htm
 share/doc/${PKGNAME}/dos2unix.txt
 share/locale/de/LC_MESSAGES/dos2unix.mo
 share/locale/de/LC_MESSAGES/unix2dos.mo
-share/locale/eo-x/LC_MESSAGES/dos2unix.mo
-share/locale/eo-x/LC_MESSAGES/unix2dos.mo
 share/locale/eo/LC_MESSAGES/dos2unix.mo
 share/locale/eo/LC_MESSAGES/unix2dos.mo
 share/locale/nl/LC_MESSAGES/dos2unix.mo
