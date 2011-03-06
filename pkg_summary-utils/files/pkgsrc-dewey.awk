@@ -40,7 +40,7 @@ function __remove_leading0 (ver,     tmp){
 }
 
 function __dewey2str (ver,        left,right,sym,num,last){
-	ver = "." __remove_leading0(toupper(ver))
+	ver = __remove_leading0(toupper(ver))
 
 	gsub(/ALPHA/, "\072", ver) # A
 	gsub(/BETA/, "\073", ver)  # B
@@ -49,6 +49,16 @@ function __dewey2str (ver,        left,right,sym,num,last){
 	gsub(/NB/, "\076", ver)    # Y
 	gsub(/PL/, ".", ver)       # .
 	gsub(/_/, ".", ver)        # .
+
+	if (match(ver, /([.]0+)+$/)){
+		# 1.2.0.0 -> 1.2
+		ver = substr(ver, 1, RSTART-1)
+	}else if (match(ver, /([.]0+)+(\072|\073|\074|\076)/)){
+		# 1.2.0.0nb1 -> 1.2nb1
+		ver = substr(ver, 1, RSTART-1) substr(ver, RSTART+RLENGTH-1)
+	}
+
+	ver = "." ver
 
 	while (match(ver, /[QWERTYUIOPASDFGHJKLZXCVBNM]/)){
 		last = substr(ver, RSTART, 1)
