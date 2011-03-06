@@ -31,6 +31,7 @@ Suggested package updates
 	o fslsfonts-1.0.3
 	o fstobdf-1.0.4
 	o gambas2-2.21.0
+	o gcap-0.0.7
 	o gcc42-4.2.4
 	o gcc43-4.3.4
 	o gcc45-4.5.1
@@ -79,7 +80,7 @@ Suggested package updates
 	o man-1.6f
 	o mcabber-0.10.1
 	o mcwm-20101118.2
-	o meta-tracker-0.10.0
+	o meta-tracker-0.10.1
 	o mixxx-1.8.0
 	o mpgedit-0.73dev2
 	o mumble-1.2.3
@@ -92,6 +93,7 @@ Suggested package updates
 	o parted-1.9.0
 	o passepartout-0.7.1
 	o pdfedit-0.4.5
+	o pdfmod-0.9.1
 	o pessulus-2.30.4
 	o pike-7.8.352
 	o py-PyPE-2.9
@@ -102,7 +104,7 @@ Suggested package updates
 	o qtcreator-1.3.1
 	o rezound-0.12.3beta
 	o rosegarden-current-1.4.0
-	o rsyslog-6.1.4
+	o rsyslog-6.1.5
 	o samhain-2.8.2
 	o sflphone-0.7.2
 	o siege-2.70
@@ -111,6 +113,7 @@ Suggested package updates
 	o spe-0.8.2a
 	o swftools-0.9.1
 	o sxemacs-22.1.10
+	o task-1.9.4
 	o tint2-0.7.1
 	o tmw-0.0.29.1
 	o uade-2.13
@@ -120,6 +123,7 @@ Suggested package updates
 	o xclipboard-1.1.1
 	o xcowsay-1.3
 	o xcursor-themes-1.0.3
+	o xf86-input-synaptics-1.4.0
 	o xf86-video-geode-2.11.12
 	o xinetd-2.3.14
 	o xmms2-0.6
