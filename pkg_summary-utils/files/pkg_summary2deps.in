@@ -81,9 +81,9 @@
 #   assigns    - ASSIGNMENTS=<...>
 #   pkgbase    - PKGNAME=<...> with pkg version stripped
 #   g_basecnt2path   - array: pkgbase, g_basecnt2path_cnt [base] -> PKGPATH:ASSIGNMENTS
-#   g_path2name   - array: PKGPATH:ASSIGNMENTS -> pkgname
-#   g_path2base   - array: PKGPATH:ASSIGNMENTS -> pkgbase
-#   g_pathcnt2namedeps    - array: PKGPATH:ASSIGNMENTS, [1..3], g_pathcnt2namedeps_cnt [PKGPATH:ASSIGNMENTS. [1..3]] ->
+#   g_pair2name   - array: PKGPATH:ASSIGNMENTS,PKGNAME -> pkgname
+#   g_pair2base   - array: PKGPATH:ASSIGNMENTS,PKGNAME -> pkgbase
+#   g_paircnt2namedeps    - array: PKGPATH:ASSIGNMENTS,PKGNAME , [1..3] , g_paircnt2namedeps_cnt [PKGPATH:ASSIGNMENTS. [1..3]] ->
 #                e.g. suse32_base-10.0|suse32_base-10.0nb*
 #   allbases   - set: PKGBASE
 
@@ -218,7 +218,8 @@ function process_deps (id,               deps,i){
 
 		gsub(/:[^ ]*/, "", $i)
 		gsub(/ /, "|", $i)
-		g_pathcnt2namedeps [pkgpath, id, ++g_pathcnt2namedeps_cnt [pkgpath, id]] = $i
+
+		g_paircnt2namedeps [pair, id, ++g_paircnt2namedeps_cnt [pair, id]] = $i
 	}
 }
 
@@ -232,9 +233,11 @@ NF == 0 {
 	if (assigns)
 		pkgpath = pkgpath ":" assigns
 
-	g_basecnt2path [pkgbase, ++g_basecnt2path_cnt [pkgbase]] = pkgpath
-	g_path2name [pkgpath] = pkgname
-	g_path2base [pkgpath] = pkgbase
+	pair = pkgpath "," pkgname
+
+	g_basecnt2path [pkgbase, ++g_basecnt2path_cnt [pkgbase]] = pair
+	g_pair2name [pair] = pkgname
+	g_pair2base [pair] = pkgbase
 	allbases [pkgbase] = 1
 
 	if (all_packages || (pkgpath in PKGPATHs) || (pkgname in PKGNAMEs)){
@@ -277,15 +280,21 @@ function pkgmatch (pkg, pattern){
 	return pattern_match(pkg, pattern)
 }
 
+function pair2path (pair){
+	sub(/,.*$/, "", pair)
+	return pair
+}
+
 END {
 	# building dependency graph
-	for (path in g_path2base){
-		name = g_path2name [path]
-		base = g_path2base [path]
+	for (pair in g_pair2base){
+		path = pair2path(pair)
+		name = g_pair2name [pair]
+		base = g_pair2base [pair]
 		for (id=1; id <= 3; ++id){
-			depscnt = g_pathcnt2namedeps_cnt [path, id]
+			depscnt = g_paircnt2namedeps_cnt [pair, id]
 			for (i=1; i <= depscnt; ++i){
-				deps = g_pathcnt2namedeps [path, id, i]
+				deps = g_paircnt2namedeps [pair, id, i]
 
 				altdepscnt = split(deps, arr, /[|]/)
 				for (k=1; k <= altdepscnt; ++k){
@@ -305,34 +314,35 @@ END {
 					}
 
 					if (foundcnt == 1 && !mode_strict && id != 3){
-						final_deps [path, found [1]] = depname
+						final_deps [pair, found [1]] = depname
 						break
 					}
 
 					matched = ""
 					for (j=1; j <= foundcnt; ++j){
 						f = found [j]
+
 						if (depname ~ /[<>].*(\[|\]|[*])/){
 #							print "bad pattern", depname > "/dev/stderr"
 							continue
 						}
 
-						if (pkgmatch(g_path2name [f], depname)){
+						if (pkgmatch(g_pair2name [f], depname)){
 							if (id != 3){
 								if (matched == ""){
 									matched = f
-									matched_name = g_path2name [f]
+									matched_name = g_pair2name [f]
 								}else if (show_all_deps){
 									matched = matched "|" f
-								}else if (pkgname_gt_pkgname(g_path2name [f],
+								}else if (pkgname_gt_pkgname(g_pair2name [f],
 															 matched_name))
 								{
 									matched = f
-									matched_name = g_path2name [f]
+									matched_name = g_pair2name [f]
 								}
-							}else if (f != path){
-								warn_conflicts(path, name, f,
-											   g_path2name [f], depname)
+							}else if (f != pair){
+								warn_conflicts(path, name, pair2path(f),
+											   g_pair2name [f], depname)
 								ex = 1
 							}
 						}
@@ -357,7 +367,7 @@ END {
 						continue
 					}
 
-					final_deps [path, matched] = depname
+					final_deps [pair, matched] = depname
 
 					break
 				}
@@ -369,15 +379,17 @@ END {
 	for (pair in final_deps){
 		split(pair, arr, SUBSEP)
 
-		path1 = arr [2]
-		path2 = arr [1]
+		pair1 = arr [2]
+		pair2 = arr [1]
+		path1 = pair2path(pair1)
+		path2 = pair2path(pair2)
 
 		# right part
 		if (out_pkgname){
 			if (keep_ver)
-				name2 = g_path2name [path2]
+				name2 = g_pair2name [pair2]
 			else
-				name2 = g_path2base [path2]
+				name2 = g_pair2base [pair2]
 		}
 
 		if (!out_pkgname){
@@ -390,25 +402,25 @@ END {
 		}
 
 		# left part
-		path1_cnt = split(path1, path1_arr, /[|]/)
+		path1_cnt = split(pair1, pair1_arr, /[|]/)
 		left = ""
 		for (i=1; i <= path1_cnt; ++i){
-			p1 = path1_arr [i]
+			p1 = pair1_arr [i]
 			l = ""
 			if (out_pkgname){
 				if (keep_ver)
-					name1 = g_path2name [p1]
+					name1 = g_pair2name [p1]
 				else
-					name1 = g_path2base [p1]
+					name1 = g_pair2base [p1]
 			}
 
 			if (!out_pkgname){
 				if (out_pkgpath)
-					l = p1
+					l = pair2path(p1)
 			}else if (!out_pkgpath){
 				l = name1
 			}else{
-				l = p1 ";" name1
+				l = pair2path(p1) ";" name1
 			}
 
 			if (l != ""){
@@ -429,12 +441,14 @@ END {
 	}
 
 	# printing packages with no dependencies
-	for (path in g_path2base){
+	for (pair in g_pair2base){
+		path = pair2path(pair)
+
 		if (path in already_printed)
 			continue
 
-		name = g_path2name [path]
-		base = g_path2base [path]
+		name = g_pair2name [pair]
+		base = g_pair2base [pair]
 		if (!all_packages && !(path in PKGPATHs) && !(name in PKGNAMEs))
 			continue
 

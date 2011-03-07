@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.46 2011/01/20 23:31:40 cheusov Exp $
+# $NetBSD: Makefile,v 1.47 2011/03/07 15:40:33 cheusov Exp $
 
 DISTNAME=	pkg_summary-utils-${VERSION}
-PKGREVISION=	1
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty

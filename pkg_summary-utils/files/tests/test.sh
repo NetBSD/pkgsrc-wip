@@ -3316,6 +3316,66 @@ wip/pkg_summary-utils wip/distbb
 wip/runawk wip/distbb
 '
 
+pkg_summary2deps -dn bin_summary5.txt | sort |
+cmp 'pkg_summary2deps #41' \
+'php php-extensions
+php php-extensions
+php php5-exif
+php php5-exif
+php php53-exif
+php php53-exif
+php5-exif php-extensions
+php53-exif php-extensions
+'
+
+pkg_summary2deps -dnr bin_summary5.txt | sort |
+cmp 'pkg_summary2deps #42' \
+'php-5.2.17nb2 php-extensions-5.2.17
+php-5.2.17nb2 php5-exif-5.2.17
+php-5.2.17nb2 php5-exif-5.2.17nb2
+php-5.3.5nb1 php-extensions-5.3.5
+php-5.3.5nb1 php53-exif-5.3.5
+php-5.3.5nb1 php53-exif-5.3.5nb2
+php5-exif-5.2.17nb2 php-extensions-5.2.17
+php53-exif-5.3.5nb2 php-extensions-5.3.5
+'
+
+pkg_summary2deps -dnra bin_summary5.txt | sort |
+cmp 'pkg_summary2deps #43' \
+'php-5.2.17|php-5.2.17nb2 php-extensions-5.2.17
+php-5.2.17|php-5.2.17nb2 php5-exif-5.2.17
+php-5.2.17|php-5.2.17nb2 php5-exif-5.2.17nb2
+php-5.3.5|php-5.3.5nb1 php-extensions-5.3.5
+php-5.3.5|php-5.3.5nb1 php53-exif-5.3.5
+php-5.3.5|php-5.3.5nb1 php53-exif-5.3.5nb2
+php5-exif-5.2.17|php5-exif-5.2.17nb2 php-extensions-5.2.17
+php53-exif-5.3.5|php53-exif-5.3.5nb2 php-extensions-5.3.5
+'
+
+pkg_summary2deps -dpnra bin_summary5.txt | sort |
+cmp 'pkg_summary2deps #44' \
+'graphics/php-exif;php5-exif-5.2.17|graphics/php-exif;php5-exif-5.2.17nb2 meta-pkgs/php5-extensions;php-extensions-5.2.17
+graphics/php-exif;php53-exif-5.3.5|graphics/php-exif;php53-exif-5.3.5nb2 meta-pkgs/php53-extensions;php-extensions-5.3.5
+lang/php53;php-5.3.5|lang/php53;php-5.3.5nb1 graphics/php-exif;php53-exif-5.3.5
+lang/php53;php-5.3.5|lang/php53;php-5.3.5nb1 graphics/php-exif;php53-exif-5.3.5nb2
+lang/php53;php-5.3.5|lang/php53;php-5.3.5nb1 meta-pkgs/php53-extensions;php-extensions-5.3.5
+lang/php5;php-5.2.17|lang/php5;php-5.2.17nb2 graphics/php-exif;php5-exif-5.2.17
+lang/php5;php-5.2.17|lang/php5;php-5.2.17nb2 graphics/php-exif;php5-exif-5.2.17nb2
+lang/php5;php-5.2.17|lang/php5;php-5.2.17nb2 meta-pkgs/php5-extensions;php-extensions-5.2.17
+'
+
+pkg_summary2deps -dpa bin_summary5.txt | sort |
+cmp 'pkg_summary2deps #45' \
+'graphics/php-exif|graphics/php-exif meta-pkgs/php5-extensions
+graphics/php-exif|graphics/php-exif meta-pkgs/php53-extensions
+lang/php53|lang/php53 graphics/php-exif
+lang/php53|lang/php53 graphics/php-exif
+lang/php53|lang/php53 meta-pkgs/php53-extensions
+lang/php5|lang/php5 graphics/php-exif
+lang/php5|lang/php5 graphics/php-exif
+lang/php5|lang/php5 meta-pkgs/php5-extensions
+'
+
 # pkg_lint_summary
 pkg_lint_summary bin_summary1.txt 2>&1 | sort |
 sed -n 's/At least one.*$/MandatoryOptionErrorMessage/p' |
