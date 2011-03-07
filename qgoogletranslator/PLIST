@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/11/22 21:41:47 ryo-on Exp $
-bin/qgoogletranslator
-share/applications/qgoogletranslator.desktop
-share/pixmaps/qgoogletranslator.png
-share/qgoogletranslator/l10n/English.qm
-share/qgoogletranslator/l10n/Japanese.qm
-share/qgoogletranslator/l10n/Russian.qm
-share/qgoogletranslator/l10n/Ukrainian.qm
