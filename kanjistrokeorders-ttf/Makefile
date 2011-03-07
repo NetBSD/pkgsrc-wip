@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/01/22 14:21:01 ryo-on Exp $
+# $NetBSD: Makefile,v 1.2 2011/03/07 10:03:45 ryo-on Exp $
 #
 
 DISTNAME=	KanjiStrokeOrders_v2.015
@@ -36,11 +36,11 @@ WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	# none
 
 do-install:
-.for fontfile in ${INSTALL_FONTS}
-	${INSTALL_DATA} ${WRKSRC}/${fontfile} ${DESTDIR}${FONTDIR}
+.for f in ${INSTALL_FONTS}
+	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${FONTDIR}
 .endfor
-.for docfile in ${INSTALL_DOCS}
-	${INSTALL_DATA} ${WRKSRC}/${docfile} ${DESTDIR}${DOCSDIR}
+.for f in ${INSTALL_DOCS}
+	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${DOCSDIR}
 .endfor
 
 .include "../../mk/bsd.pkg.mk"
