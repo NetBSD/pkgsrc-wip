@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/03/07 11:47:21 jihbed Exp $
+
+SHA1 (pyslha-0.6.1.tar.gz) = dc668af0befc5776d7ad7776b2565817beca310c
+RMD160 (pyslha-0.6.1.tar.gz) = 0b6346095eb2cc979c30de025c0b6806897456c3
+Size (pyslha-0.6.1.tar.gz) = 14865 bytes
+SHA1 (patch-aa) = 3003ad05a71451072f3877dbf8320506be9bc46c

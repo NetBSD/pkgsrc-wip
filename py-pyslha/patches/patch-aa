@@ -1,0 +1,19 @@
+$NetBSD: patch-aa,v 1.1.1.1 2011/03/07 11:47:21 jihbed Exp $
+
+--- setup.py.orig	2010-11-17 14:10:07.000000000 +0000
++++ setup.py	2010-11-17 14:10:47.000000000 +0000
+@@ -7,12 +7,13 @@
+ 
+ ## Setup definition
+ import pyslha
++import sys
+ __doc__ = pyslha.__doc__
+ 
+ setup(name = 'pyslha',
+       version = pyslha.__version__,
+       py_modules = ["pyslha"],
+-      scripts = ["slhaplot", "slha2isawig", "isawig2slha"],
++      scripts = ["slhaplot"+sys.version[:3], "slha2isawig"+sys.version[:3], "isawig2slha"+sys.version[:3]],
+       author = 'Andy Buckley',
+       author_email = 'andy@insectnation.org',
+       #url = 'http://projects.hepforge.org/pyslha/',
