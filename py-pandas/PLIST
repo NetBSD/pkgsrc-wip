@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/06/12 23:28:58 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/03/07 19:53:09 jihbed Exp $
 ${PYSITELIB}/pandas/__init__.py
 ${PYSITELIB}/pandas/__init__.pyc
 ${PYSITELIB}/pandas/__init__.pyo
@@ -48,6 +48,7 @@ ${PYSITELIB}/pandas/core/setup.py
 ${PYSITELIB}/pandas/core/setup.pyc
 ${PYSITELIB}/pandas/core/setup.pyo
 ${PYSITELIB}/pandas/core/tests/common.py
+${PYSITELIB}/pandas/core/tests/test_common.py
 ${PYSITELIB}/pandas/core/tests/test_daterange.py
 ${PYSITELIB}/pandas/core/tests/test_datetools.py
 ${PYSITELIB}/pandas/core/tests/test_frame.py
@@ -67,6 +68,12 @@ ${PYSITELIB}/pandas/io/__init__.pyo
 ${PYSITELIB}/pandas/io/parsers.py
 ${PYSITELIB}/pandas/io/parsers.pyc
 ${PYSITELIB}/pandas/io/parsers.pyo
+${PYSITELIB}/pandas/io/pytables.py
+${PYSITELIB}/pandas/io/pytables.pyc
+${PYSITELIB}/pandas/io/pytables.pyo
+${PYSITELIB}/pandas/io/sql.py
+${PYSITELIB}/pandas/io/sql.pyc
+${PYSITELIB}/pandas/io/sql.pyo
 ${PYSITELIB}/pandas/lib/__init__.py
 ${PYSITELIB}/pandas/lib/__init__.pyc
 ${PYSITELIB}/pandas/lib/__init__.pyo
@@ -76,12 +83,25 @@ ${PYSITELIB}/pandas/lib/bench.pyo
 ${PYSITELIB}/pandas/lib/build.py
 ${PYSITELIB}/pandas/lib/build.pyc
 ${PYSITELIB}/pandas/lib/build.pyo
-${PYSITELIB}/pandas/lib/include/Python.pxi
-${PYSITELIB}/pandas/lib/include/wirth.h
 ${PYSITELIB}/pandas/lib/setup.py
 ${PYSITELIB}/pandas/lib/setup.pyc
 ${PYSITELIB}/pandas/lib/setup.pyo
 ${PYSITELIB}/pandas/lib/tseries.so
+${PYSITELIB}/pandas/rpy/__init__.py
+${PYSITELIB}/pandas/rpy/__init__.pyc
+${PYSITELIB}/pandas/rpy/__init__.pyo
+${PYSITELIB}/pandas/rpy/base.py
+${PYSITELIB}/pandas/rpy/base.pyc
+${PYSITELIB}/pandas/rpy/base.pyo
+${PYSITELIB}/pandas/rpy/common.py
+${PYSITELIB}/pandas/rpy/common.pyc
+${PYSITELIB}/pandas/rpy/common.pyo
+${PYSITELIB}/pandas/rpy/mass.py
+${PYSITELIB}/pandas/rpy/mass.pyc
+${PYSITELIB}/pandas/rpy/mass.pyo
+${PYSITELIB}/pandas/rpy/vars.py
+${PYSITELIB}/pandas/rpy/vars.pyc
+${PYSITELIB}/pandas/rpy/vars.pyo
 ${PYSITELIB}/pandas/sandbox/__init__.py
 ${PYSITELIB}/pandas/sandbox/__init__.pyc
 ${PYSITELIB}/pandas/sandbox/__init__.pyo
@@ -106,6 +126,9 @@ ${PYSITELIB}/pandas/stats/interface.pyo
 ${PYSITELIB}/pandas/stats/math.py
 ${PYSITELIB}/pandas/stats/math.pyc
 ${PYSITELIB}/pandas/stats/math.pyo
+${PYSITELIB}/pandas/stats/misc.py
+${PYSITELIB}/pandas/stats/misc.pyc
+${PYSITELIB}/pandas/stats/misc.pyo
 ${PYSITELIB}/pandas/stats/moments.py
 ${PYSITELIB}/pandas/stats/moments.pyc
 ${PYSITELIB}/pandas/stats/moments.pyo
@@ -120,8 +143,10 @@ ${PYSITELIB}/pandas/stats/setup.pyc
 ${PYSITELIB}/pandas/stats/setup.pyo
 ${PYSITELIB}/pandas/stats/tests/common.py
 ${PYSITELIB}/pandas/stats/tests/test_fama_macbeth.py
+${PYSITELIB}/pandas/stats/tests/test_moments.py
 ${PYSITELIB}/pandas/stats/tests/test_ols.py
 ${PYSITELIB}/pandas/stats/tests/test_ols_filter.py
+${PYSITELIB}/pandas/stats/tests/test_var.py
 ${PYSITELIB}/pandas/stats/var.py
 ${PYSITELIB}/pandas/stats/var.pyc
 ${PYSITELIB}/pandas/stats/var.pyo
@@ -131,6 +156,9 @@ ${PYSITELIB}/pandas/util/__init__.pyo
 ${PYSITELIB}/pandas/util/decorators.py
 ${PYSITELIB}/pandas/util/decorators.pyc
 ${PYSITELIB}/pandas/util/decorators.pyo
+${PYSITELIB}/pandas/util/misc.py
+${PYSITELIB}/pandas/util/misc.pyc
+${PYSITELIB}/pandas/util/misc.pyo
 ${PYSITELIB}/pandas/util/testing.py
 ${PYSITELIB}/pandas/util/testing.pyc
 ${PYSITELIB}/pandas/util/testing.pyo
