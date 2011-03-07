@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2011/02/19 13:22:46 ryo-on Exp $
+# $NetBSD: Makefile,v 1.6 2011/03/07 07:57:51 ryo-on Exp $
 #
 
-DISTNAME=	ubuntu-font-family-sources_0.70.1.orig
-PKGNAME=	${DISTNAME:S/family-sources_/ttf-/:S/.orig//}
+DISTNAME=	ubuntu-font-family-0.70.1
+PKGNAME=	${DISTNAME:S/family-/ttf-/}
 CATEGORIES=	fonts
-MASTER_SITES=	http://archive.ubuntu.com/ubuntu/pool/main/u/ubuntu-font-family-sources/
+MASTER_SITES=	http://font.ubuntu.com/download/
+EXTRACT_SUFX=	.zip
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://wiki.ubuntu.com/Ubuntu%20Font%20Family
