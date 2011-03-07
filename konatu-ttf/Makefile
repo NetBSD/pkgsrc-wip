@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2011/03/07 07:21:29 ryo-on Exp $
+# $NetBSD: Makefile,v 1.4 2011/03/07 07:36:57 ryo-on Exp $
 #
 
 DISTNAME=	Konatu_ver_26
 PKGNAME=	${DISTNAME:tl:S/_ver_/-ttf-/}
-
 CATEGORIES=	fonts japanese
 MASTER_SITES=	http://www.masuseki.com/be/konatu/
 EXTRACT_SUFX=	.zip
