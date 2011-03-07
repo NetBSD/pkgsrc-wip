@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/03/07 11:28:45 jihbed Exp $
+
+SHA1 (pydelay-0.1.1.tar.gz) = 240a7204698b33d76c7a71f39781fb1df2a69cd4
+RMD160 (pydelay-0.1.1.tar.gz) = c0c0a01a85783a3d03b69ea26a94adf1d2f0609b
+Size (pydelay-0.1.1.tar.gz) = 227781 bytes
