@@ -233,7 +233,7 @@ NF == 0 {
 	if (assigns)
 		pkgpath = pkgpath ":" assigns
 
-	pair = pkgpath "," pkgname
+	pair = pkgpath ";" pkgname
 
 	g_basecnt2path [pkgbase, ++g_basecnt2path_cnt [pkgbase]] = pair
 	g_pair2name [pair] = pkgname
@@ -281,7 +281,7 @@ function pkgmatch (pkg, pattern){
 }
 
 function pair2path (pair){
-	sub(/,.*$/, "", pair)
+	sub(/;.*$/, "", pair)
 	return pair
 }
 
