@@ -1965,7 +1965,7 @@ MAINTAINER=vle@gmx.net
 
 '
 
-pkg_micro_src_summary --fields=PKGNAME,PKGPATH,MAINTAINER x11/xxkb |
+pkg_micro_src_summary -fPKGNAME,PKGPATH,MAINTAINER x11/xxkb |
 normalize_version |
 cmp 'pkg_micro_src_summary #3' \
 'PKGNAME=xxkb-X
@@ -1973,25 +1973,6 @@ PKGPATH=x11/xxkb
 MAINTAINER=vle@gmx.net
 
 '
-
-pkg_micro_src_summary -fPKGNAME,PKGPATH,MAINTAINER x11/xxkb |
-normalize_version |
-cmp 'pkg_micro_src_summary #4' \
-'PKGNAME=xxkb-X
-PKGPATH=x11/xxkb
-MAINTAINER=vle@gmx.net
-
-'
-
-pkg_micro_src_summary --fields PKGNAME,PKGPATH,MAINTAINER x11/xxkb |
-normalize_version |
-cmp 'pkg_micro_src_summary #5' \
-'PKGNAME=xxkb-X
-PKGPATH=x11/xxkb
-MAINTAINER=vle@gmx.net
-
-'
-
 
 # pkg_cmp_summary
 pkg_cmp_summary src_summary.txt src_summary2.txt | sort -k2,2 |

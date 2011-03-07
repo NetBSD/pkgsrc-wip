@@ -42,14 +42,14 @@ OPTIONS:
 EOF
 }
 
-process_args (){
-    alt_getopt \
-	'h help' 'usage; exit 0' \
-	o        print_older=-v  \
-	-- "$@"
-}
-cmds=`process_args "$@"`
-eval "$cmds"
+while getopts ho f; do
+    case "$f" in
+	h)    usage; exit 0;;
+	o)    print_older=-v;;
+	?)    printf "Run pkg_refresh_summary -h for details\n"; exit 2;;
+    esac
+done
+shift `expr $OPTIND - 1`
 
 ############################################################
 

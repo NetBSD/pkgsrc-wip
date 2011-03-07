@@ -55,15 +55,15 @@ EOF
 
 pkgs_fn=''
 
-process_args (){
-    alt_getopt \
-	'h'   'usage; exit 0' \
-	'=f'  pkgs_fn= \
-	'=i'  fields=  \
-	-- "$@"
-}
-cmds=`process_args "$@"`
-eval "$cmds"
+while getopts hf:i: f; do
+    case "$f" in
+	h)  usage; exit 0;;
+	f)  pkgs_fn="$OPTARG";;
+	i)  fields="$OPTARG";;
+	?)  printf "Run pkg_update_src_summary -h for details\n"; exit 2;;
+    esac
+done
+shift `expr $OPTIND - 1`
 
 if test $# -ne 1; then
     usage

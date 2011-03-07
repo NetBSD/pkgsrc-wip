@@ -53,15 +53,14 @@ EOF
 }
 
 delete=''
-process_args (){
-    alt_getopt \
-	'h help' 'usage; exit 0' \
-	r        delete=1 \
-	-- "$@"
-}
-
-cmds=`process_args "$@"`
-eval "$cmds"
+while getopts hr f; do
+    case "$f" in
+	h)   usage; exit 0;;
+	r)   delete=1;;
+	?)   printf "Run pkg_cleanup_distdir -h for details\n"; exit 2;;
+    esac
+done
+shift `expr $OPTIND - 1`
 
 DISTDIR=${DISTDIR:=@DISTDIR@}
 cd "$DISTDIR"

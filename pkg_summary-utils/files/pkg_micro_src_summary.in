@@ -64,16 +64,14 @@ set_fields (){
     fields=$(echo "$@" | tr , ' ')
 }
 
-process_args (){
-    alt_getopt \
-	'h help'    'usage; exit 0' \
-	'=f fields' 'set_fields ' \
-	s           'slave=1' \
-	-- "$@"
-}
-
-cmds=`process_args "$@"`
-eval "$cmds"
+while getopts hf: f; do
+    case "$f" in
+	h)    usage; exit 0;;
+	f)    set_fields "$OPTARG";;
+	?)    printf "Run pkg_micro_src_summary -h for details\n"; exit 2;;
+    esac
+done
+shift `expr $OPTIND - 1`
 
 ############################################################
 cd $PKGSRCDIR

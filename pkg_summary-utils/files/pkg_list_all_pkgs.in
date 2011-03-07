@@ -42,12 +42,13 @@ OPTIONS:
 EOF
 }
 
-process_args (){
-    alt_getopt 'h help' 'usage; exit 0' -- "$@"
-}
-
-cmds=`process_args "$@"`
-eval "$cmds"
+while getopts h f; do
+    case "$f" in
+	h)    usage; exit 0;;
+	?)    printf "Run pkg_list_all_pkgs -h for details\n"; exit 2;;
+    esac
+done
+shift `expr $OPTIND - 1`
 
 ############################################################
 # user settable variables
