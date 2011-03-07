@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2011/03/07 17:06:22 cheusov Exp $
+# $NetBSD: Makefile,v 1.13 2011/03/07 17:07:12 cheusov Exp $
 
 DISTNAME=	pkgnih-999
-PKGREVISION=	1
 CATEGORIES=	pkgtools
 
 MAINTAINER=	vle@gmx.net
