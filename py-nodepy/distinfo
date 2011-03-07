@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/03/07 10:50:33 jihbed Exp $
+
+SHA1 (nodepy-0.3.tar.gz) = d36c6638ff5454e159ea7ddd5ba6cd338d9a3146
+RMD160 (nodepy-0.3.tar.gz) = 1cd2de5ba2bd6354593d6d48313360e5cb18fd43
+Size (nodepy-0.3.tar.gz) = 50493 bytes
