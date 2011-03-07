@@ -1,0 +1,46 @@
+$NetBSD: patch-aa,v 1.1.1.1 2011/03/07 19:10:35 amoibos Exp $
+
+fix name issue 
+--- Makefile.in.orig	2004-02-29 15:42:32.000000000 +0100
++++ Makefile.in	2010-12-21 00:48:03.000000000 +0100
+@@ -11,8 +11,8 @@
+ 
+ CC		= @CC@
+ CFLAGS		= @CFLAGS@ @GCCFLAGS@ -I$(srcdir) -I. \
+-		  -DLEVELDIR=\"@datadir@/enigma/\" \
+-		  -DSAVEDIR=\"@localstatedir@/enigma/\" \
++		  -DLEVELDIR=\"@datadir@/enigma2000/\" \
++		  -DSAVEDIR=\"@localstatedir@/enigma2000/\" \
+ 		  @CURSES@
+ LDFLAGS		= @LDFLAGS@
+ LIBS            = @LIBS@
+@@ -29,21 +29,21 @@
+ all: enigma
+ 
+ enigma: $(ENIGMA)
+-	$(CC) $(LDFLAGS) -o enigma $(ENIGMA) $(LIBS)
++	$(CC) $(LDFLAGS) -o enigma2000 $(ENIGMA) $(LIBS)
+ 
+ install: enigma
+-	$(INSTALL_PROGRAM) enigma $(bindir)/enigma
+-	-chown root.games $(bindir)/enigma && chmod 2755 $(bindir)/enigma
++	$(INSTALL_PROGRAM) enigma2000 $(bindir)/enigma2000
++	-chown root.games $(bindir)/enigma2000 && chmod 2755 $(bindir)/enigma2000
+ 	#$(INSTALL_DATA) $(srcdir)/enigma.1 $(mandir)/man1/enigma.1
+-	mkdir -p $(datadir)/enigma
++	mkdir -p $(datadir)/enigma2000
+ 	for i in $(srcdir)/levels/*.set $(srcdir)/levels/*.level; do \
+-		$(INSTALL_DATA) $$i $(datadir)/enigma; \
++		$(INSTALL_DATA) $$i $(datadir)/enigma2000; \
+ 	done
+-	mkdir -p $(localstatedir)/enigma
+-	-chown root.games $(localstatedir)/enigma && chmod 2770 $(localstatedir)/enigma
++	mkdir -p $(localstatedir)/enigma2000
++	-chown root.games $(localstatedir)/enigma2000 && chmod 2770 $(localstatedir)/enigma2000
+ 
+ clean:
+-	rm -f *.o enigma
++	rm -f *.o enigma2000
+ 
+ distclean: clean
+ 	rm -f config.* Makefile *~ *.bak *.lst *.bin

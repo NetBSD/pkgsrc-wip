@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/03/07 19:10:35 amoibos Exp $
+
+SHA1 (enigma-1.04.tar.gz) = 81b2f9cf628f87e4bf34843cb3ab0d94c35e5431
+RMD160 (enigma-1.04.tar.gz) = ddd15b0783461e15f888ab1d733f0a563aad8fbd
+Size (enigma-1.04.tar.gz) = 42526 bytes
+SHA1 (patch-aa) = eae2c10c33135c1b3dbd7602816eaf04f9175faf
+SHA1 (patch-ab) = 72b134b254a5fbdbb76b3d4738b3b514260d2ca1
