@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/03/07 12:07:31 jihbed Exp $
+
+SHA1 (Theano-0.3.0.tar.gz) = a81be56279e57938e3245ebe340d0bfd0cebc10d
+RMD160 (Theano-0.3.0.tar.gz) = 6cb4b88e76668ec712dd620dfa94b728335a1328
+Size (Theano-0.3.0.tar.gz) = 846353 bytes
