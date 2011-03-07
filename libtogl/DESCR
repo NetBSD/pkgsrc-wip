@@ -1,0 +1,15 @@
+Togl is a Tk widget for OpenGL rendering. Togl was originally based on OGLTK, 
+by Benjamin Bederson at the University of New Mexico. Togl's main features are:
+
+ * unifies Microsoft Windows, X11 (Linux/IRIX/...), and Mac OS X
+   Aqua support
+ * support for requesting stencil, accumulation, alpha buffers, etc.
+ * multiple OpenGL drawing windows
+ * simple stereo rendering support
+ * simple, portable font support
+ * color-index mode support including color allocation functions
+ * overlay plane support
+ * OpenGL extension testing from Tcl
+ * Tcl Extension Architecture (TEA) 3 compliant
+
+This package contains development files for using optimized shared libraries.

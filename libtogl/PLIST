@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/03/07 11:54:25 jihbed Exp $
+include/togl.h
+include/toglDecls.h
+include/togl_ws.h
+lib/Togl${PKGVERSION}/LICENSE
+lib/Togl${PKGVERSION}/libTogl${PKGVERSION}.so
+lib/Togl${PKGVERSION}/pkgIndex.tcl
+lib/libToglstub${PKGVERSION}.a
+share/doc/libtogl/capi.html
+share/doc/libtogl/download.html
+share/doc/libtogl/faq.html
+share/doc/libtogl/index.html
+share/doc/libtogl/stereo.html
+share/doc/libtogl/tclapi.html
+share/doc/libtogl/upgrading.html
+share/doc/libtogl/using.html
