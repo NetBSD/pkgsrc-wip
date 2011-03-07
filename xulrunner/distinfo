@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.45 2011/03/05 17:09:39 tnn2 Exp $
+$NetBSD: distinfo,v 1.46 2011/03/07 17:29:52 tnn2 Exp $
 
 SHA1 (firefox-4.0b12.source.tar.bz2) = 4f867c9f7881f1e45403186de4ccede0c1b16570
 RMD160 (firefox-4.0b12.source.tar.bz2) = d9b6d1537661b4c39a25302e9b799b29d394e569
@@ -32,6 +32,8 @@ SHA1 (patch-be) = 723d74807830632ecd3b88e8271d91d73ac81be4
 SHA1 (patch-bf) = 8d8b2868040ff043ebdbb09fc37d9ae2b598d70d
 SHA1 (patch-bg) = 85d82348c43257eded6426ac84af9815619eb759
 SHA1 (patch-bi) = a79369cf0c7370a8655fe414cdb7c8ddb4c2d495
+SHA1 (patch-js_src_jsval.h) = 07aaa247ed7a0d3c075fa6574b67b3f7c73be381
+SHA1 (patch-js_src_xpconnect_src_xpcprivate.h) = 58322122cdb96e16b1bb1a6fbc4bce6e182d1d75
 SHA1 (patch-ma) = a20b263ff14c841fd0ae1634962b90a41173b524
 SHA1 (patch-mb) = 97e2b454f190ebc639908ee93c9f1217e0c147db
 SHA1 (patch-md) = 6bf5242245b17fbd868a6a978eb5849726f81393
