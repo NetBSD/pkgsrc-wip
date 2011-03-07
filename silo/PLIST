@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/03/07 12:20:06 jihbed Exp $
+bin/browser
+bin/silock
+bin/silodiff
+bin/silofile
+include/ioperf.h
+include/pmpio.h
+include/silo.h
+include/silo.inc
+lib/libsilo.la
+lib/libsilo.settings

@@ -1,0 +1,24 @@
+--- configure.orig	2010-11-19 21:13:36.000000000 +0000
++++ configure	2010-11-19 21:14:16.000000000 +0000
+@@ -27000,10 +27000,10 @@
+     consumeCount=-1
+     toks=`$QT_BIN/qmake --version`
+     for tok in $toks; do
+-        if test "$tok" == "Qt"; then
++        if test "$tok" = "Qt"; then
+             consumeCount=2
+         fi
+-        if test $consumeCount == 0; then
++        if test $consumeCount = 0; then
+             QtVersion2=$tok
+             break
+         else
+@@ -27015,7 +27015,7 @@
+     for ver in  4.4.0 4.4.1 4.4.2 4.4.3 4.4.4 4.4.5 \
+                 4.5.0 4.5.1 4.5.2 4.5.3 4.5.4 4.5.5 \
+                 4.6.0 4.6.1 4.6.2 4.6.3 4.6.4 4.6.5 ; do
+-       if test "$QtVersion2" == "$ver"; then
++       if test "$QtVersion2" = "$ver"; then
+            QtVersion=$ver
+            break
+        fi
