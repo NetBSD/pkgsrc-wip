@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/03/07 10:12:58 jihbed Exp $
+
+SHA1 (gpaw-0.7.2.6974.tar.gz) = 85b3e41c0ca15e36b6344910276c05f779017cbc
+RMD160 (gpaw-0.7.2.6974.tar.gz) = 3bdadbb023194451d0689be03d11cb4abb25bf0a
+Size (gpaw-0.7.2.6974.tar.gz) = 940577 bytes
+SHA1 (patch-aa) = b9a85bbe8979f4718229b434d26a2ea4ccf80443
