@@ -1,43 +1,50 @@
-$NetBSD: patch-aa,v 1.2 2010/12/14 13:31:05 fhajny Exp $
+$NetBSD: patch-aa,v 1.3 2011/03/08 10:52:25 zatmania Exp $
 
-Change the default config file to something more production like.
---- redis.conf.orig	2010-07-01 18:36:31.000000000 +0000
-+++ redis.conf
-@@ -14,11 +14,11 @@
+Fix CFLAGS and INSTALL support to pkgsrc standards.
+--- deps/hiredis/Makefile.orig	2011-03-04 15:31:20.000000000 +0000
++++ deps/hiredis/Makefile
+@@ -8,7 +8,7 @@ BINS = hiredis-example hiredis-test
+ uname_S := $(shell sh -c 'uname -s 2>/dev/null || echo not')
+ OPTIMIZATION?=-O3
+ ifeq ($(uname_S),SunOS)
+-  CFLAGS?=-std=c99 -pedantic $(OPTIMIZATION) -fPIC -Wall -W -D__EXTENSIONS__ -D_XPG6 $(ARCH) $(PROF)
++  CCFLAGS?= $(CFLAGS) -std=c99 -pedantic $(OPTIMIZATION) -fPIC -Wall -W -D__EXTENSIONS__ -D_XPG6 $(ARCH) $(PROF)
+   CCLINK?=-ldl -lnsl -lsocket -lm -lpthread
+   LDFLAGS?=-L. -Wl,-R,.
+   DYLIBNAME?=libhiredis.so
+@@ -16,7 +16,7 @@ ifeq ($(uname_S),SunOS)
+   STLIBNAME?=libhiredis.a
+   STLIB_MAKE_CMD?=ar rcs ${STLIBNAME} ${OBJ}
+ else ifeq ($(uname_S),Darwin)
+-  CFLAGS?=-std=c99 -pedantic $(OPTIMIZATION) -fPIC -Wall -W -Wwrite-strings $(ARCH) $(PROF)
++  CiCFLAGS?= $(CFLAGS) -std=c99 -pedantic $(OPTIMIZATION) -fPIC -Wall -W -Wwrite-strings $(ARCH) $(PROF)
+   CCLINK?=-lm -pthread
+   LDFLAGS?=-L. -Wl,-rpath,.
+   OBJARCH?=-arch i386 -arch x86_64
+@@ -25,7 +25,7 @@ else ifeq ($(uname_S),Darwin)
+   STLIBNAME?=libhiredis.a
+   STLIB_MAKE_CMD?=libtool -static -o ${STLIBNAME} - ${OBJ}
+ else
+-  CFLAGS?=-std=c99 -pedantic $(OPTIMIZATION) -fPIC -Wall -W -Wwrite-strings $(ARCH) $(PROF)
++  CCFLAGS?= $(CFLAGS) -std=c99 -pedantic $(OPTIMIZATION) -fPIC -Wall -W -Wwrite-strings $(ARCH) $(PROF)
+   CCLINK?=-lm -pthread
+   LDFLAGS?=-L. -Wl,-rpath,.
+   DYLIBNAME?=libhiredis.so
+@@ -36,7 +36,7 @@ endif
+ CCOPT= $(CFLAGS) $(CCLINK)
+ DEBUG?= -g -ggdb
  
- # By default Redis does not run as a daemon. Use 'yes' if you need it.
- # Note that Redis will write a pid file in /var/run/redis.pid when daemonized.
--daemonize no
-+daemonize yes
+-PREFIX?= /usr/local
++PREFIX?= ./ 
+ INSTALL_INC= $(PREFIX)/include/hiredis
+ INSTALL_LIB= $(PREFIX)/lib
+ INSTALL= cp -a
+@@ -83,7 +83,7 @@ test: hiredis-test
+ 	./hiredis-test
  
- # When running daemonized, Redis writes a pid file in /var/run/redis.pid by
- # default. You can specify a custom pid file location here.
--pidfile /var/run/redis.pid
-+pidfile @@PIDDIR@@/redis.pid
+ .c.o:
+-	$(CC) -c $(CFLAGS) $(OBJARCH) $(DEBUG) $(COMPILE_TIME) $<
++	$(CC) -c $(CCFLAGS) $(OBJARCH) $(DEBUG) $(COMPILE_TIME) $<
  
- # Accept connections on the specified port, default is 6379
- port 6379
-@@ -37,12 +37,12 @@ timeout 300
- # verbose (many rarely useful info, but not a mess like the debug level)
- # notice (moderately verbose, what you want in production probably)
- # warning (only very important / critical messages are logged)
--loglevel verbose
-+loglevel warning
- 
- # Specify the log file name. Also 'stdout' can be used to force
- # Redis to log on the standard output. Note that if you use standard
- # output for logging but daemonize, logs will be sent to /dev/null
--logfile stdout
-+logfile @@LOGDIR@@/redis.log
- 
- # Set the number of databases. The default database is DB 0, you can select
- # a different one on a per-connection basis using SELECT <dbid> where
-@@ -86,7 +86,7 @@ dbfilename dump.rdb
- # Also the Append Only File will be created inside this directory.
- # 
- # Note that you must specify a directory here, not a file name.
--dir ./
-+dir @@DBDIR@@
- 
- ################################# REPLICATION #################################
- 
+ clean:
+ 	rm -rf ${DYLIBNAME} ${STLIBNAME} $(BINS) hiredis-example* *.o *.gcda *.gcno *.gcov

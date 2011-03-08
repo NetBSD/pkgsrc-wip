@@ -1,34 +1,39 @@
-$NetBSD: patch-ab,v 1.1 2010/12/14 13:31:05 fhajny Exp $
+$NetBSD: patch-ab,v 1.2 2011/03/08 10:52:25 zatmania Exp $
 
 Fix CFLAGS and INSTALL support to pkgsrc standards.
---- Makefile.orig	2010-11-06 09:07:03.000000000 +0000
-+++ Makefile
-@@ -6,18 +6,18 @@ release_hdr := $(shell sh -c './mkreleas
+--- src/Makefile.orig	2011-03-04 15:31:20.000000000 +0000
++++ src/Makefile
+@@ -6,11 +6,11 @@ release_hdr := $(shell sh -c './mkreleas
  uname_S := $(shell sh -c 'uname -s 2>/dev/null || echo not')
  OPTIMIZATION?=-O2
  ifeq ($(uname_S),SunOS)
 -  CFLAGS?= -std=c99 -pedantic $(OPTIMIZATION) -Wall -W -D__EXTENSIONS__ -D_XPG6
 +  CCFLAGS= $(CFLAGS) -std=c99 -pedantic $(OPTIMIZATION) -Wall -W -D__EXTENSIONS__ -D_XPG6
    CCLINK?= -ldl -lnsl -lsocket -lm -lpthread
+   DEBUG?= -g -ggdb 
  else
 -  CFLAGS?= -std=c99 -pedantic $(OPTIMIZATION) -Wall -W $(ARCH) $(PROF)
 +  CCFLAGS= $(CFLAGS) -std=c99 -pedantic $(OPTIMIZATION) -Wall -W $(ARCH) $(PROF)
    CCLINK?= -lm -pthread
+   DEBUG?= -g -rdynamic -ggdb 
+ endif
+@@ -19,11 +19,11 @@ ifeq ($(USE_TCMALLOC),yes)
+   CCLINK+= -ltcmalloc
+   CFLAGS+= -DUSE_TCMALLOC
  endif
 -CCOPT= $(CFLAGS) $(CCLINK) $(ARCH) $(PROF)
 +CCOPT= $(CCFLAGS) $(CCLINK) $(ARCH) $(PROF)
- DEBUG?= -g -rdynamic -ggdb 
  
--INSTALL_TOP= /usr/local
--INSTALL_BIN= $(INSTALL_TOP)/bin
+-PREFIX= /usr/local
+-INSTALL_BIN= $(PREFIX)/bin
 -INSTALL= cp -p
 +INSTALL_TOP= $(PREFIX)
 +INSTALL_BIN= $(DESTDIR)$(INSTALL_TOP)/bin
 +INSTALL= $(BSD_INSTALL_PROGRAM)
  
- OBJ = adlist.o ae.o anet.o dict.o redis.o sds.o zmalloc.o lzf_c.o lzf_d.o pqsort.o zipmap.o sha1.o
+ OBJ = adlist.o ae.o anet.o dict.o redis.o sds.o zmalloc.o lzf_c.o lzf_d.o pqsort.o zipmap.o sha1.o ziplist.o release.o networking.o util.o object.o db.o replication.o rdb.o t_string.o t_list.o t_set.o t_zset.o t_hash.o config.o aof.o vm.o pubsub.o multi.o debug.o sort.o intset.o syncio.o
  BENCHOBJ = ae.o anet.o redis-benchmark.o sds.o adlist.o zmalloc.o
-@@ -80,7 +80,7 @@ redis-check-aof: $(CHECKAOFOBJ)
+@@ -133,7 +133,7 @@ redis-check-aof: $(CHECKAOFOBJ)
  	$(CC) -o $(CHECKAOFPRGNAME) $(CCOPT) $(DEBUG) $(CHECKAOFOBJ)
  
  .c.o:

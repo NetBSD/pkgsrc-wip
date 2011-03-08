@@ -1,0 +1,43 @@
+$NetBSD: patch-ac,v 1.1 2011/03/08 10:52:25 zatmania Exp $
+
+Change the default config file to something more production like.
+--- redis.conf.orig	2011-03-04 15:31:20.000000000 +0000
++++ redis.conf
+@@ -14,11 +14,11 @@
+ 
+ # By default Redis does not run as a daemon. Use 'yes' if you need it.
+ # Note that Redis will write a pid file in /var/run/redis.pid when daemonized.
+-daemonize no
++daemonize yes 
+ 
+ # When running daemonized, Redis writes a pid file in /var/run/redis.pid by
+ # default. You can specify a custom pid file location here.
+-pidfile /var/run/redis.pid
++pidfile @@PIDDIR@@/redis.pid
+ 
+ # Accept connections on the specified port, default is 6379.
+ # If port 0 is specified Redis will not listen on a TCP socket.
+@@ -44,12 +44,12 @@ timeout 300
+ # verbose (many rarely useful info, but not a mess like the debug level)
+ # notice (moderately verbose, what you want in production probably)
+ # warning (only very important / critical messages are logged)
+-loglevel verbose
++loglevel warning 
+ 
+ # Specify the log file name. Also 'stdout' can be used to force
+ # Redis to log on the standard output. Note that if you use standard
+ # output for logging but daemonize, logs will be sent to /dev/null
+-logfile stdout
++logfile @@LOGDIR@@/redis.log 
+ 
+ # To enable logging to the system logger, just set 'syslog-enabled' to yes,
+ # and optionally update the other syslog parameters to suit your needs.
+@@ -103,7 +103,7 @@ dbfilename dump.rdb
+ # Also the Append Only File will be created inside this directory.
+ # 
+ # Note that you must specify a directory here, not a file name.
+-dir ./
++dir @@DBDIR@@ 
+ 
+ ################################# REPLICATION #################################
+ 

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/12/05 17:24:18 zatmania Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/03/08 10:52:25 zatmania Exp $
 bin/redis-benchmark
 bin/redis-check-aof
 bin/redis-check-dump
@@ -8,12 +8,12 @@ share/doc/redis/00-RELEASENOTES
 share/doc/redis/AppendCommand.html
 share/doc/redis/AppendOnlyFileHowto.html
 share/doc/redis/AuthCommand.html
-share/doc/redis/BETATESTING.txt
 share/doc/redis/BUGS
 share/doc/redis/Benchmarks.html
 share/doc/redis/BgrewriteaofCommand.html
 share/doc/redis/BgsaveCommand.html
 share/doc/redis/BlpopCommand.html
+share/doc/redis/BrpoplpushCommand.html
 share/doc/redis/COPYING
 share/doc/redis/Changelog
 share/doc/redis/CommandReference.html
@@ -36,6 +36,7 @@ share/doc/redis/FlushdbCommand.html
 share/doc/redis/FromSqlToDataStructures.html
 share/doc/redis/GenericCommandsSidebar.html
 share/doc/redis/GetCommand.html
+share/doc/redis/GetbitCommand.html
 share/doc/redis/GetsetCommand.html
 share/doc/redis/HackingStrings.html
 share/doc/redis/HashCommandsSidebar.html
@@ -87,8 +88,11 @@ share/doc/redis/RedisCLI.html
 share/doc/redis/RedisEventLibrary.html
 share/doc/redis/RedisGuides.html
 share/doc/redis/RedisInternals.html
+share/doc/redis/RedisPipelining.html
+share/doc/redis/RedisStatus.html
 share/doc/redis/Redis_1_2_0_Changelog.html
 share/doc/redis/Redis_2_0_0_Changelog.html
+share/doc/redis/Redis_2_0_Whats_new.html
 share/doc/redis/RenameCommand.html
 share/doc/redis/RenamenxCommand.html
 share/doc/redis/ReplicationHowto.html
@@ -104,8 +108,10 @@ share/doc/redis/SdiffstoreCommand.html
 share/doc/redis/SelectCommand.html
 share/doc/redis/SetCommand.html
 share/doc/redis/SetCommandsSidebar.html
+share/doc/redis/SetbitCommand.html
 share/doc/redis/SetexCommand.html
 share/doc/redis/SetnxCommand.html
+share/doc/redis/SetrangeCommand.html
 share/doc/redis/Sets.html
 share/doc/redis/ShutdownCommand.html
 share/doc/redis/SideBar.html
@@ -125,6 +131,7 @@ share/doc/redis/SrandmemberCommand.html
 share/doc/redis/SremCommand.html
 share/doc/redis/StringCommandsSidebar.html
 share/doc/redis/Strings.html
+share/doc/redis/StrlenCommand.html
 share/doc/redis/SubstrCommand.html
 share/doc/redis/SunionCommand.html
 share/doc/redis/SunionstoreCommand.html
@@ -134,7 +141,6 @@ share/doc/redis/TemplateCommand.html
 share/doc/redis/TtlCommand.html
 share/doc/redis/TwitterAlikeExample.html
 share/doc/redis/TypeCommand.html
-share/doc/redis/UDP.html
 share/doc/redis/UnstableSource.html
 share/doc/redis/VirtualMemorySpecification.html
 share/doc/redis/VirtualMemoryUserGuide.html
@@ -157,6 +163,7 @@ share/examples/rc.d/redis
 share/examples/redis/redis.conf.example
 share/examples/redis/tests/assets/default.conf
 share/examples/redis/tests/integration/aof.tcl
+share/examples/redis/tests/integration/redis-cli.tcl
 share/examples/redis/tests/integration/replication.tcl
 share/examples/redis/tests/support/redis.tcl
 share/examples/redis/tests/support/server.tcl
@@ -167,15 +174,20 @@ share/examples/redis/tests/test_helper.tcl
 share/examples/redis/tests/tmp/.gitignore
 share/examples/redis/tests/unit/auth.tcl
 share/examples/redis/tests/unit/basic.tcl
+share/examples/redis/tests/unit/cas.tcl
 share/examples/redis/tests/unit/expire.tcl
 share/examples/redis/tests/unit/other.tcl
 share/examples/redis/tests/unit/protocol.tcl
+share/examples/redis/tests/unit/pubsub.tcl
+share/examples/redis/tests/unit/quit.tcl
 share/examples/redis/tests/unit/sort.tcl
 share/examples/redis/tests/unit/type/hash.tcl
 share/examples/redis/tests/unit/type/list.tcl
 share/examples/redis/tests/unit/type/set.tcl
 share/examples/redis/tests/unit/type/zset.tcl
 share/examples/redis/utils/build-static-symbols.tcl
+share/examples/redis/utils/generate-command-help.rb
+share/examples/redis/utils/mktarball.sh
 share/examples/redis/utils/redis-copy.rb
 share/examples/redis/utils/redis-sha1.rb
 share/examples/redis/utils/redis_init_script
