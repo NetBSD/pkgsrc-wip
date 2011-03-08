@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2011/01/09 15:21:50 gregoire Exp $
+@comment $NetBSD: PLIST,v 1.17 2011/03/08 22:56:13 gregoire Exp $
 bin/grub2-bin2h
 bin/grub2-editenv
 bin/grub2-fstest
@@ -270,5 +270,6 @@ share/locale/nl/LC_MESSAGES/grub2.mo
 share/locale/pl/LC_MESSAGES/grub2.mo
 share/locale/ru/LC_MESSAGES/grub2.mo
 share/locale/sv/LC_MESSAGES/grub2.mo
+share/locale/uk/LC_MESSAGES/grub2.mo
 share/locale/vi/LC_MESSAGES/grub2.mo
 share/locale/zh_CN/LC_MESSAGES/grub2.mo

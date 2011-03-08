@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.3 2011/01/11 00:44:48 gregoire Exp $
+$NetBSD: MESSAGE,v 1.4 2011/03/08 22:56:13 gregoire Exp $
 
 GRUB 2 is in development stage and is still neither complete nor well
 tested.  Anyways, just installing this package should do no harm.
@@ -9,7 +9,7 @@ it unless you understand what it actually does, for it may lead to loss of
 data when used improperly.
 
 Please visit the official web page of GRUB 2, for more information.  The
-URL is <http://www.gnu.org/software/grub/grub.html>.
+URL is <http://www.gnu.org/software/grub/>.
 
 Enjoy GRUB.  Your feedback is welcome.
 ===========================================================================
