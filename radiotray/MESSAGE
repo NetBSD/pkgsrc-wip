@@ -1,0 +1,14 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2011/03/08 14:04:22 pdtafti Exp $
+
+You will need the appropriate GStreamer plugins to decode streaming audio.
+A large collection of GStreamer plugins is provided by the meta-package
+
+    meta-pkgs/gstreamer0.10-plugins
+
+Install, at the very least,
+
+    audio/gst-plugins0.10-fluendo-mp3
+
+to be able to listen to mp3 streams.
+===========================================================================
