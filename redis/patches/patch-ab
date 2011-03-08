@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.2 2011/03/08 10:52:25 zatmania Exp $
+$NetBSD: patch-ab,v 1.3 2011/03/08 16:24:51 zatmania Exp $
 
 Fix CFLAGS and INSTALL support to pkgsrc standards.
 --- src/Makefile.orig	2011-03-04 15:31:20.000000000 +0000
@@ -33,6 +33,22 @@ Fix CFLAGS and INSTALL support to pkgsrc standards.
  
  OBJ = adlist.o ae.o anet.o dict.o redis.o sds.o zmalloc.o lzf_c.o lzf_d.o pqsort.o zipmap.o sha1.o ziplist.o release.o networking.o util.o object.o db.o replication.o rdb.o t_string.o t_list.o t_set.o t_zset.o t_hash.o config.o aof.o vm.o pubsub.o multi.o debug.o sort.o intset.o syncio.o
  BENCHOBJ = ae.o anet.o redis-benchmark.o sds.o adlist.o zmalloc.o
+@@ -118,13 +118,13 @@ redis-benchmark: dependencies $(BENCHOBJ
+ 	$(CC) -o $(BENCHPRGNAME) $(CCOPT) $(DEBUG) $(BENCHOBJ) ../deps/hiredis/libhiredis.a
+ 
+ redis-benchmark.o:
+-	$(CC) -c $(CFLAGS) -I../deps/hiredis $(DEBUG) $(COMPILE_TIME) $<
++	$(CC) -c $(CCFLAGS) -I../deps/hiredis $(DEBUG) $(COMPILE_TIME) $<
+ 
+ redis-cli: dependencies $(CLIOBJ)
+ 	$(CC) -o $(CLIPRGNAME) $(CCOPT) $(DEBUG) $(CLIOBJ) ../deps/hiredis/libhiredis.a ../deps/linenoise/linenoise.o
+ 
+ redis-cli.o:
+-	$(CC) -c $(CFLAGS) -I../deps/hiredis -I../deps/linenoise $(DEBUG) $(COMPILE_TIME) $<
++	$(CC) -c $(CCFLAGS) -I../deps/hiredis -I../deps/linenoise $(DEBUG) $(COMPILE_TIME) $<
+ 
+ redis-check-dump: $(CHECKDUMPOBJ)
+ 	$(CC) -o $(CHECKDUMPPRGNAME) $(CCOPT) $(DEBUG) $(CHECKDUMPOBJ)
 @@ -133,7 +133,7 @@ redis-check-aof: $(CHECKAOFOBJ)
  	$(CC) -o $(CHECKAOFPRGNAME) $(CCOPT) $(DEBUG) $(CHECKAOFOBJ)
  

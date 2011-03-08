@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.3 2011/03/08 10:52:25 zatmania Exp $
+$NetBSD: patch-aa,v 1.4 2011/03/08 16:24:51 zatmania Exp $
 
 Fix CFLAGS and INSTALL support to pkgsrc standards.
 --- deps/hiredis/Makefile.orig	2011-03-04 15:31:20.000000000 +0000
@@ -17,7 +17,7 @@ Fix CFLAGS and INSTALL support to pkgsrc standards.
    STLIB_MAKE_CMD?=ar rcs ${STLIBNAME} ${OBJ}
  else ifeq ($(uname_S),Darwin)
 -  CFLAGS?=-std=c99 -pedantic $(OPTIMIZATION) -fPIC -Wall -W -Wwrite-strings $(ARCH) $(PROF)
-+  CiCFLAGS?= $(CFLAGS) -std=c99 -pedantic $(OPTIMIZATION) -fPIC -Wall -W -Wwrite-strings $(ARCH) $(PROF)
++  CCFLAGS?= $(CFLAGS) -std=c99 -pedantic $(OPTIMIZATION) -fPIC -Wall -W -Wwrite-strings $(ARCH) $(PROF)
    CCLINK?=-lm -pthread
    LDFLAGS?=-L. -Wl,-rpath,.
    OBJARCH?=-arch i386 -arch x86_64
