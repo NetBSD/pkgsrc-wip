@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/03/07 19:10:35 amoibos Exp $
+# $NetBSD: Makefile,v 1.2 2011/03/08 23:27:53 thomasklausner Exp $
 
 DISTNAME=	enigma-1.04
 PKGNAME=	enigma2000-1.04
 CATEGORIES=	games
-MASTER_SITES=	http://www.chiark.greenend.org.uk/~sgtatham/
+MASTER_SITES=	http://www.chiark.greenend.org.uk/~sgtatham/enigma/
 
 MAINTAINER=	amoibos@gmail.com
-HOMEPAGE=	http://www.chiark.greenend.org.uk/~sgtatham/
+HOMEPAGE=	http://www.chiark.greenend.org.uk/~sgtatham/enigma/
 COMMENT=	Enigma2000 is a mixing of boulder dash and sokoban
 LICENSE=	mit
 
