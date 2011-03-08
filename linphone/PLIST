@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.16 2011/03/06 13:10:44 gschwarz Exp $
-${GUI}bin/linphone-3
+@comment $NetBSD: PLIST,v 1.17 2011/03/08 22:12:35 gschwarz Exp $
+${GUI}bin/linphone
 bin/linphonec
 bin/linphonecsh
 include/linphone/config.h
@@ -66,19 +66,18 @@ man/man1/sipomatic.1
 share/applications/linphone.desktop
 share/images/nowebcamCIF.jpg
 share/linphone/COPYING
-share/linphone/about.glade
-share/linphone/buddylookup.glade
-share/linphone/call_logs.glade
-share/linphone/chatroom.glade
-share/linphone/contact.glade
-share/linphone/incoming_call.glade
-share/linphone/log.glade
-share/linphone/main.glade
-share/linphone/parameters.glade
-share/linphone/password.glade
-share/linphone/sip_account.glade
+share/linphone/about.ui
+share/linphone/buddylookup.ui
+share/linphone/call_logs.ui
+share/linphone/chatroom.ui
+share/linphone/contact.ui
+share/linphone/log.ui
+share/linphone/main.ui
+share/linphone/parameters.ui
+share/linphone/password.ui
+share/linphone/sip_account.ui
 share/linphone/stock_people.png
-share/linphone/waiting.glade
+share/linphone/waiting.ui
 share/locale/cs/LC_MESSAGES/linphone.mo
 share/locale/de/LC_MESSAGES/linphone.mo
 share/locale/es/LC_MESSAGES/linphone.mo
@@ -111,6 +110,7 @@ share/sounds/linphone/hello16000.wav
 share/sounds/linphone/hello8000.wav
 share/sounds/linphone/ringback.wav
 share/sounds/linphone/rings/bigben.wav
+share/sounds/linphone/rings/oldphone-mono-30s.caf
 share/sounds/linphone/rings/oldphone-mono.wav
 share/sounds/linphone/rings/oldphone.wav
 share/sounds/linphone/rings/orig.wav
@@ -118,4 +118,4 @@ share/sounds/linphone/rings/rock.wav
 share/sounds/linphone/rings/sweet.wav
 share/sounds/linphone/rings/synth.wav
 share/sounds/linphone/rings/tapping.wav
-share/sounds/linphone/rings/toy.wav
+share/sounds/linphone/rings/toy-mono.wav

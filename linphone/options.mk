@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.3 2011/03/02 21:52:00 gschwarz Exp $
+# $NetBSD: options.mk,v 1.4 2011/03/08 22:12:35 gschwarz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.linphone
-PKG_SUPPORTED_OPTIONS=	alsa inet6 linphone-gui linphone-video
-PKG_SUGGESTED_OPTIONS=	linphone-gui linphone-video
+PKG_SUPPORTED_OPTIONS=	alsa inet6 linphone-gui linphone-video gsm
+PKG_SUGGESTED_OPTIONS=	linphone-gui linphone-video gsm
 
 .include "../../mk/bsd.options.mk"
 
@@ -27,6 +27,14 @@ CONFIGURE_ARGS+=	--enable-video=no
 CONFIGURE_ARGS+=	--enable-video=yes
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../multimedia/ffmpeg/buildlink3.mk"
+.endif
+
+.if !empty(PKG_OPTIONS:Mgsm)
+.include "../../audio/gsm/buildlink3.mk"
+SUBST_CLASSES+=		gsm
+SUBST_STAGE.gsm=	post-patch
+SUBST_FILES.gsm=	mediastreamer2/src/gsm.c mediastreamer2/configure
+SUBST_SED.gsm=		-e 's,gsm/gsm.h,gsm.h,g'
 .endif
 
 .if !empty(PKG_OPTIONS:Minet6)

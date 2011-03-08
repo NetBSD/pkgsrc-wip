@@ -1,0 +1,14 @@
+$NetBSD: patch-ai,v 1.4 2011/03/08 22:12:35 gschwarz Exp $
+
+--- mediastreamer2/src/oss.c.orig	2011-03-06 15:58:47.000000000 +0100
++++ mediastreamer2/src/oss.c	2011-03-06 15:59:07.000000000 +0100
+@@ -30,7 +30,9 @@
+ #include <sys/time.h>
+ #include <sys/ioctl.h>
+ #include <unistd.h>
++#ifndef __NetBSD__
+ #include <alloca.h>
++#endif
+ 
+ MSFilter *ms_oss_read_new(MSSndCard *card);
+ MSFilter *ms_oss_write_new(MSSndCard *card);

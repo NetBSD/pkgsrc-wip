@@ -1,12 +1,12 @@
-$NetBSD: patch-ac,v 1.5 2011/03/02 21:52:00 gschwarz Exp $
+$NetBSD: patch-ac,v 1.6 2011/03/08 22:12:35 gschwarz Exp $
 
---- console/Makefile.in.orig	2011-01-30 21:06:02.000000000 +0100
-+++ console/Makefile.in	2011-01-30 21:07:55.000000000 +0100
-@@ -325,6 +325,7 @@
- @BUILD_CONSOLE_TRUE@		$(top_builddir)/mediastreamer2/src/libmediastreamer.la \
+--- console/Makefile.in.orig	2011-03-06 15:21:20.000000000 +0100
++++ console/Makefile.in	2011-03-06 15:21:50.000000000 +0100
+@@ -331,6 +331,7 @@
  @BUILD_CONSOLE_TRUE@		$(ORTP_LIBS) \
  @BUILD_CONSOLE_TRUE@		$(SPEEX_LIBS) \
+ @BUILD_CONSOLE_TRUE@		$(OSIP_LIBS) \
 +@BUILD_CONSOLE_TRUE@		$(INTLLIBS) \
- @BUILD_CONSOLE_TRUE@		$(OSIP_LIBS)
+ @BUILD_CONSOLE_TRUE@		$(X11_LIBS)
  
  

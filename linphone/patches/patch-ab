@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.7 2011/03/02 21:52:00 gschwarz Exp $
+$NetBSD: patch-ab,v 1.8 2011/03/08 22:12:35 gschwarz Exp $
 
---- console/linphonec.c.orig	2011-01-30 21:05:52.000000000 +0100
-+++ console/linphonec.c	2011-01-30 21:06:56.000000000 +0100
-@@ -1348,12 +1348,12 @@
+--- console/linphonec.c.orig	2011-03-06 15:19:30.000000000 +0100
++++ console/linphonec.c	2011-03-06 15:19:36.000000000 +0100
+@@ -1435,12 +1435,12 @@
  	char *iptr;
  
  	/* Find first non-blank */

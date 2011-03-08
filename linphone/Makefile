@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2011/03/02 21:52:00 gschwarz Exp $
+# $NetBSD: Makefile,v 1.30 2011/03/08 22:12:35 gschwarz Exp $
 
-DISTNAME=	linphone-3.3.2
+DISTNAME=	linphone-3.4.2
 CATEGORIES=	net
-MASTER_SITES=	http://download.savannah.gnu.org/releases/linphone/3.3.x/sources/
+MASTER_SITES=	http://download.savannah.gnu.org/releases/linphone/3.4.x/sources/
 
 MAINTAINER=	schwarz@NetBSD.org
 HOMEPAGE=	http://www.linphone.org/
@@ -23,7 +23,7 @@ CONFIGURE_ARGS+=	--with-speex=${BUILDLINK_PREFIX.speex}
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/linphone
 CONFIGURE_ARGS+=	--disable-manual --enable-glib
 
-# don't treat warnings as errors, code is not portable enough (3.3.2)
+# don't treat warnings as errors, code is not portable enough (3.4.2)
 BUILDLINK_TRANSFORM+=	rm:-Werror
 
 .include "options.mk"
@@ -38,6 +38,11 @@ SUBST_MESSAGE.objective-c=	adding "-x objective-c" for mediastreamer2 code
 SUBST_FILES.objective-c=	mediastreamer2/src/Makefile.in
 SUBST_SED.objective-c=		-e 's/^CC = @CC@/CC = @CC@ -x objective-c/g'
 . endif
+SUBST_CLASSES+=			frameworks
+SUBST_STAGE.frameworks=		post-patch
+SUBST_MESSAGE.frameworks=	adding Carbon and AudioUnit frameworks
+SUBST_FILES.frameworks=		mediastreamer2/configure
+SUBST_SED.frameworks=		-e 's/-framework CoreFoundation -framework AudioToolbox -framework CoreAudio/-framework Carbon -framework AudioToolbox -framework AudioUnit/g'
 .else # OS other than MacOS X
 LIBS+=		${LIBOSSAUDIO}
 CPPFLAGS+=	-DDSP_NAME="\"${DEVOSSAUDIO}\""

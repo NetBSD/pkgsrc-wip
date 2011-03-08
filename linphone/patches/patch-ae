@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.7 2011/03/02 21:52:00 gschwarz Exp $
+$NetBSD: patch-ae,v 1.8 2011/03/08 22:12:35 gschwarz Exp $
 
---- configure.orig	2011-01-30 21:06:18.000000000 +0100
-+++ configure	2011-01-30 21:08:21.000000000 +0100
-@@ -9600,7 +9600,7 @@
+--- configure.orig	2011-03-06 15:22:29.000000000 +0100
++++ configure	2011-03-06 15:22:36.000000000 +0100
+@@ -9543,7 +9543,7 @@
  LIBTOOL_DEPS="$ltmain"
  
  # Always use our own libtool.
