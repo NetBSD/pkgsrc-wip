@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/02/20 10:13:29 ddeus Exp $
+# $NetBSD: Makefile,v 1.2 2011/03/08 13:36:33 ddeus Exp $
 #
 
 SHORTNAME=	alexandria
@@ -18,49 +18,12 @@ GIT_REPO.master=    git://common-lisp.net/projects/alexandria/alexandria.git
 GIT_MODULE=	    alexandria
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-
-WRKSRC=		${WRKDIR}/${DISTNAME}
-USE_LANGUAGES=	# none
+WRKSRC=			${WRKDIR}/${DISTNAME}
+COMMON_LISP_DOCFILES=	\
+    ${WRKSRC}/README ${WRKSRC}/AUTHORS \
+    ${WRKSRC}/LICENSE ${FILESDIR}/alexandria.html
 
 .include "options.mk"
-
-.if !empty(PKG_OPTIONS:Mecl)
-
-LISP_PREFIX=			ecl
-USE_LANGUAGES+=			c
-USE_TOOLS+=			install find mkdir
-
-ECL_VERSION!=                   cd ../../lang/ecl && ${MAKE} show-var VARNAME=PKGVERSION_NOREV
-DEPENDS+=                       ecl-${ECL_VERSION}{,nb*}:../../lang/ecl
-
-ECL_CENTRAL_REGISTRY=           lib/ecl-${ECL_VERSION}/
-PLIST_SUBST+=			ECL_PATH="${ECL_CENTRAL_REGISTRY}"
-PLIST_SUBST+=			LISP="${LISP_PREFIX}"
-INSTALLATION_DIRS+=		${ECL_CENTRAL_REGISTRY}
-INSTALLATION_DIRS+=		share/doc/${LISP_PREFIX}-${SHORTNAME}
-
-do-build:
-	( cd ${WRKSRC} && ${PREFIX}/bin/ecl -q -norc \
-	    -eval "(let ((*load-verbose* nil)) (require 'asdf))" \
-	    -eval "(setf asdf::*user-cache* \"${WRKSRC}/build/\")" \
-	    -eval "(push #P\"${WRKSRC}/\" asdf::*central-registry*)" \
-	    -eval "(asdf:oos 'asdf:load-fasl-op :${DISTNAME})" \
-	    -eval "(quit)" </dev/null )
-	${FIND} ${WRKSRC} -name '*.fasb' -exec ${CP} {} ${WRKSRC}/build/ \;
-
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/build/${DISTNAME}.fasb \
-	    ${DESTDIR}${PREFIX}/${ECL_CENTRAL_REGISTRY}${DISTNAME}.fas
-	${INSTALL_DATA} ${FILESDIR}/ecl-${SHORTNAME}.asd \
-	    ${DESTDIR}${PREFIX}/${ECL_CENTRAL_REGISTRY}${DISTNAME}.asd
-	${INSTALL_DATA} \
-	    ${WRKSRC}/README ${WRKSRC}/AUTHORS ${WRKSRC}/LICENCE \
-	    ${FILESDIR}/alexandria.html \
-	    ${DESTDIR}${PREFIX}/share/doc/${LISP_PREFIX}-${SHORTNAME}/
-
-.include "../../lang/ecl/buildlink3.mk"
-
-.endif
-
 .include "../../wip/mk/git-package.mk"
+.include "../../wip/mk/cl-package.mk"
 .include "../../mk/bsd.pkg.mk"
