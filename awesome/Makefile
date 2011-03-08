@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2010/12/23 09:15:57 pallegra Exp $
+# $NetBSD: Makefile,v 1.22 2011/03/08 09:26:37 pallegra Exp $
 #
 
-DISTNAME=	awesome-3.4.8
+DISTNAME=	awesome-3.4.9
 CATEGORIES=	x11 wm
 MASTER_SITES=	http://awesome.naquadah.org/download/
 EXTRACT_SUFX=	.tar.xz
@@ -43,7 +43,7 @@ SUBST_STAGE.ev=		pre-configure
 SUBST_FILES.ev=		awesomeConfig.cmake
 SUBST_SED.ev=		-e "s,PKGPREFIX,${PREFIX},"
 
-BUILD_DEPENDS+= ImageMagick-[0-9]*:../../graphics/ImageMagick
+BUILD_DEPENDS+=	ImageMagick-[0-9]*:../../graphics/ImageMagick
 BUILD_DEPENDS+=	asciidoc>=8.3.0:../../textproc/asciidoc
 BUILD_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
 BUILD_DEPENDS+=	docbook-xml-[0-9]*:../../textproc/docbook-xml

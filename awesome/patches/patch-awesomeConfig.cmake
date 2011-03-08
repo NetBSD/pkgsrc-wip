@@ -1,9 +1,9 @@
-$NetBSD: patch-ab,v 1.7 2010/06/11 15:42:42 pallegra Exp $
+$NetBSD: patch-awesomeConfig.cmake,v 1.1 2011/03/08 09:26:37 pallegra Exp $
 
---- awesomeConfig.cmake.orig	2010-01-04 08:50:02.000000000 +0000
+--- awesomeConfig.cmake.orig	2011-01-17 11:38:13.000000000 +0000
 +++ awesomeConfig.cmake
-@@ -18,7 +18,7 @@ option(GENERATE_LUADOC "generate luadoc"
- link_directories(/usr/local/lib)
+@@ -16,7 +16,7 @@ option(COMPRESS_MANPAGES "compress manpa
+ option(GENERATE_LUADOC "generate luadoc" ON)
  
  # {{{ CFLAGS
 -add_definitions(-std=gnu99 -ggdb3 -fno-strict-aliasing -Wall -Wextra
@@ -11,12 +11,12 @@ $NetBSD: patch-ab,v 1.7 2010/06/11 15:42:42 pallegra Exp $
      -Wchar-subscripts -Wundef -Wshadow -Wcast-align -Wwrite-strings
      -Wsign-compare -Wunused -Wno-unused-parameter -Wuninitialized -Winit-self
      -Wpointer-arith -Wredundant-decls -Wformat-nonliteral
-@@ -159,7 +159,7 @@ if(NOT AWESOME_REQUIRED_FOUND OR NOT AWE
+@@ -155,7 +155,7 @@ if(NOT AWESOME_REQUIRED_FOUND OR NOT AWE
  endif()
  
  macro(a_find_library variable library)
 -    find_library(${variable} ${library})
-+    find_library(${variable} ${library} PKGPREFIX/lib/ev)
++    find_library(${variable} ${library} /usr/pkg/lib/ev)
      if(NOT ${variable})
          message(FATAL_ERROR ${library} " library not found.")
      endif()
