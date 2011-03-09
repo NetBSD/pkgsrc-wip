@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/03/09 19:57:56 ryo-on Exp $
+lib/X11/fonts/TTF/uming.ttc
+share/doc/${PKGBASE}/ARPHICPL.TXT
+share/doc/${PKGBASE}/FONTLOG
