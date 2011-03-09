@@ -1,0 +1,18 @@
+AR PL UKai font was taken from the from the TrueType fonts generously
+released by Arphic Technologies Taiwan under the Arphic Public License.
+It was modified with Fontforge by Arne Goetje <arne@ubuntu.com> to contain
+both Big5 and GB2312 charsets plus some European characters.
+
+Currently it fully supports the following charsets:
+ISO8859-1,2,3,4,7,9,10,13,14,15
+Big5
+HKSCS-2004
+GB2312-80
+Bopomofo Extensions for Hakka, Minnan (Unicode 5.0) and their MBE variants.
+
+Partly support is implemented for:
+CNS 11643
+GBK
+GB18030
+Japanese
+Korean

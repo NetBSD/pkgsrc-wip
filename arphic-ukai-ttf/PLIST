@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/03/09 19:57:15 ryo-on Exp $
+lib/X11/fonts/TTF/ukai.ttc
+share/doc/${PKGBASE}/ARPHICPL.TXT
+share/doc/${PKGBASE}/FONTLOG
