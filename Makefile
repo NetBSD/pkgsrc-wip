@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4261 2011/03/09 12:22:21 ryo-on Exp $
+# $Id: Makefile,v 1.4262 2011/03/09 20:02:35 ryo-on Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -142,6 +142,8 @@ SUBDIR+=	arla-3.99.14
 SUBDIR+=	armagetronad
 SUBDIR+=	arora
 SUBDIR+=	arpdig
+SUBDIR+=	arphic-ukai-ttf
+SUBDIR+=	arphic-uming-ttf
 SUBDIR+=	artemis
 SUBDIR+=	aspell-dictionaries
 SUBDIR+=	aspell-finnish
@@ -2816,6 +2818,7 @@ SUBDIR+=	wordwarvi
 SUBDIR+=	workrave
 SUBDIR+=	wpro
 SUBDIR+=	wput
+SUBDIR+=	wqy-microhei-ttf
 SUBDIR+=	wqy-zenhei-ttf
 SUBDIR+=	wrcs
 SUBDIR+=	writrecogn
