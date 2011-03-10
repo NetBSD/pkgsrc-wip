@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/06/06 10:34:51 jihbed Exp $
+# $NetBSD: Makefile,v 1.4 2011/03/10 13:57:13 ryo-on Exp $
 #
 
 DISTNAME=	openbabel-2.2.3
@@ -21,7 +21,6 @@ PKGCONFIG_OVERRIDE+=	openbabel-2.0.pc.in
 
 CONFIGURE_ARGS+=	--disable-inchi
 CONFIGURE_ARGS+=	--disable-dynamic-modules
-CONFIGURE_ARGS+=	--disable-inchi
 
 .include "options.mk"
 
