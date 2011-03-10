@@ -1,0 +1,16 @@
+GoogleCL brings Google services to the command line.
+We currently support the following Google services:
+    * Blogger
+          $ google blogger post --title "foo" "command line posting"
+    * Calendar
+          $ google calendar add "Lunch with Jim at noon tomorrow"
+    * Contacts
+          $ google contacts list Bob name,email > the_bobs.csv
+    * Docs
+          $ google docs edit "Shopping list"
+    * Finance
+          $ google finance create-txn "Savings Portfolio" NASDAQ:GOOG Buy
+    * Picasa
+          $ google picasa create "Cat Photos" ~/photos/cats/*.jpg
+    * Youtube
+          $ google youtube post --category Education killer_robots.avi
