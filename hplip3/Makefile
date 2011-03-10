@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2011/02/28 03:12:53 schnoebe Exp $
+# $NetBSD: Makefile,v 1.29 2011/03/10 16:05:56 gregoire Exp $
 #
 
 DISTNAME=		hplip-3.11.1
@@ -121,6 +121,15 @@ SUBST_MESSAGE.fix-paths-6=	Fixing paths in fax/filters/pstotiff.
 SUBST_FILES.fix-paths-6=	fax/filters/pstotiff
 SUBST_SED.fix-paths-6=	-e 's,"-I/usr/share/cups/fonts","-I${PREFIX}/share/cups/fonts",g'
 SUBST_SED.fix-paths-6+=	-e 's,"/usr/bin/gs","${PREFIX}/bin/gs",g'
+
+# NetBSD has strnlen(3) since 5.99.12
+.if ${OPSYS} == "NetBSD" && empty(OS_VERSION:M5.99.*) && empty(OS_VERSION:M[6-9].*)
+SUBST_CLASSES+=			fix-strnlen
+SUBST_STAGE.fix-strnlen=	post-configure
+SUBST_MESSAGE.fix-strnlen=	Replacing strnlen() with strlen() in two C++ files.
+SUBST_FILES.fix-strnlen=	prnt/hpijs/context2.cpp prnt/hpijs/ljzjscolor.cpp
+SUBST_SED.fix-strnlen=	-e 's/\([ (]\)strnlen(\([^,]*\), DevIDBuffSize)/\1strlen(\2)/g'
+.endif
 
 .include "../../mk/dlopen.buildlink3.mk"
 BUILDLINK_TRANSFORM+=	opt:-ldl:${BUILDLINK_LDADD.dl:Q}
