@@ -1,31 +1,28 @@
-# $NetBSD: Makefile,v 1.5 2011/03/10 12:18:31 ryo-on Exp $
+# $NetBSD: Makefile,v 1.6 2011/03/10 12:59:34 obache Exp $
 #
 
 DISTNAME=	chemical-mime-data-0.1.94
 PKGREVISION=	1
 CATEGORIES=	biology
-MASTER_SITES=	http://garr.dl.sourceforge.net/project/chemical-mime/chemical-mime-data/0.1.94/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=chemical-mime/}
 
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://chemical-mime.sourceforge.net/
 COMMENT=	Chemical mime and file type support for desktops
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	gnu-lgpl-v2.1 # or later
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEPENDS+=		ImageMagick-[0-9]*:../../graphics/ImageMagick
+BUILD_DEPENDS+=		libxslt-[0-9]*:../../textproc/libxslt
 
 GNU_CONFIGURE=	yes
 USE_PKGLOCALEDIR=  yes
 USE_TOOLS+=	pkg-config intltool msgfmt gmake
-USE_LANGUAGES=	c c++
-
-CONFIGURE_ENV+=		PYTHON=${PYTHONBIN}
 
 PKGCONFIG_OVERRIDE+=	chemical-mime-data.pc.in
 
 .include "../../databases/gnome-mime-data/buildlink3.mk"
-.include "../../databases/shared-mime-info/buildlink3.mk"
-.include "../../lang/python/application.mk"
-.include "../../textproc/libxslt/buildlink3.mk"
+.include "../../databases/shared-mime-info/mimedb.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
