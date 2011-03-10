@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2011/03/10 16:05:56 gregoire Exp $
+# $NetBSD: Makefile,v 1.30 2011/03/10 18:24:04 gregoire Exp $
 #
 
 DISTNAME=		hplip-3.11.1
@@ -60,6 +60,16 @@ REPLACE_PYTHON=		*.py */*.py */*/*.py
 REPLACE_PERL=		prnt/filters/hpcac prnt/hpijs/foomatic-rip-hplip
 
 PY_PATCHPLIST=		yes
+
+SUBST_CLASSES+=			fix-python
+SUBST_STAGE.fix-python=		post-configure
+SUBST_MESSAGE.fix-python=	Fixing python invocations in Python files.
+SUBST_FILES.fix-python=		check.py scan.py setup.py
+SUBST_FILES.fix-python+=	base/utils.py base/pkit.py
+SUBST_FILES.fix-python+=	installer/core_install.py
+SUBST_FILES.fix-python+=	ui/nodevicesform.py ui/devmgr4.py
+SUBST_FILES.fix-python+=	ui4/nodevicesdialog.py ui4/devmgr5.py
+SUBST_SED.fix-python=	-e 's,\(['\''"]\)python ,\1${PYTHONBIN} ,g'
 
 SUBST_CLASSES+=			fix-paths-0 fix-paths-1 fix-paths-2 fix-paths-3
 SUBST_CLASSES+=			fix-paths-4 fix-paths-5 fix-paths-6
