@@ -1,4 +1,4 @@
-# $NetBSD: download.mk,v 1.9 2011/03/08 22:56:13 gregoire Exp $
+# $NetBSD: download.mk,v 1.10 2011/03/10 20:04:41 gregoire Exp $
 #
 
 USE_TOOLS+=		ftp
@@ -36,12 +36,13 @@ pre-configure: do-autogen
 do-autogen:
 	cd ${WRKSRC} && ./autogen.sh
 
-# The script autogen.sh uses python.
+# Python is used to generate the autogen makefile template.
 PYTHON_FOR_BUILD_ONLY=	yes
+REPLACE_PYTHON=		gentpl.py
 SUBST_CLASSES+=		fix-py
-SUBST_STAGE.fix-py=	pre-configure
+SUBST_STAGE.fix-py=	post-patch
 SUBST_MESSAGE.fix-py=	Replacing python executable in autogen.sh.
-SUBST_FILES.fix-py=	autogen.sh
-SUBST_SED.fix-py=	-e 's,^python,${PYTHONBIN},g'
+SUBST_FILES.fix-py=	autogen.sh conf/Makefile.common
+SUBST_SED.fix-py=	-e 's,^\([	]*\)python ,\1${PYTHONBIN} ,g'
 
-.include "../../lang/python/pyversion.mk"
+.include "../../lang/python/application.mk"
