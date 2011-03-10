@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.6 2011/02/28 03:12:53 schnoebe Exp $
+$NetBSD: patch-ae,v 1.7 2011/03/10 19:08:46 gregoire Exp $
 
 # Conform to autoconf's standard variable usage, making it easier
 # to install on pkgsrc platforms
