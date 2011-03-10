@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4262 2011/03/09 20:02:35 ryo-on Exp $
+# $Id: Makefile,v 1.4263 2011/03/10 13:38:00 ryo-on Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -704,6 +704,7 @@ SUBDIR+=	goattracker
 SUBDIR+=	godura
 SUBDIR+=	goldwater
 SUBDIR+=	google-perftools
+SUBDIR+=	googlecl
 SUBDIR+=	googlesharing
 SUBDIR+=	gosmore
 SUBDIR+=	gov2
