@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.1.1.1 2010/12/07 21:23:29 pallegra Exp $
+$NetBSD: patch-src_ipc.c,v 1.1 2011/03/11 12:17:34 pallegra Exp $
 
---- src/ipc.c.orig	2010-12-07 20:40:59.000000000 +0000
+--- src/ipc.c.orig	2010-12-23 15:39:53.000000000 +0000
 +++ src/ipc.c
 @@ -10,6 +10,7 @@
   */

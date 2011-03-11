@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/12/07 21:23:29 pallegra Exp $
+$NetBSD: distinfo,v 1.2 2011/03/11 12:17:33 pallegra Exp $
 
-SHA1 (i3bar-0.5.tar.gz) = bfda82949a50826f4015c8429d243fe25af43682
-RMD160 (i3bar-0.5.tar.gz) = b9400c34f6f40b87c4cd41d0f5ab452184db12f0
-Size (i3bar-0.5.tar.gz) = 17598 bytes
-SHA1 (patch-aa) = 566c21e1a88e7154ccad2a29a0ecd87d1596ea97
-SHA1 (patch-ab) = ce0f30a1bff50d6fc846e50e4cd14f43d250ede5
+SHA1 (i3bar-0.6.tar.gz) = 9ed402aa54154e3e7542999e355c9c08d37d8c96
+RMD160 (i3bar-0.6.tar.gz) = 452ccbdd4d06f1ec6965926fb47956012be77750
+Size (i3bar-0.6.tar.gz) = 24344 bytes
+SHA1 (patch-common.mk) = 160157f0170d8ad702739853a87b1db9fd77c483
+SHA1 (patch-src_ipc.c) = a0bd3186fa27b2a5316d455ad58df7fb2cb61480

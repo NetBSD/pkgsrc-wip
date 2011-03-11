@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/12/07 21:23:29 pallegra Exp $
+# $NetBSD: Makefile,v 1.2 2011/03/11 12:17:33 pallegra Exp $
 #
 
-DISTNAME=	i3bar-0.5
+DISTNAME=	i3bar-0.6
 CATEGORIES=	x11 wm
 MASTER_SITES=	http://git.merovius.de/i3bar/snapshot/
 
