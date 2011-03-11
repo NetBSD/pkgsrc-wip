@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2011/03/11 21:17:08 cheusov Exp $
+# $NetBSD: Makefile,v 1.16 2011/03/11 21:19:50 cheusov Exp $
 
 DISTNAME=	pkgnih-999
 CATEGORIES=	pkgtools
@@ -34,7 +34,6 @@ CONF_FILES=		${EGDIR}/nih.conf \
 MAKE_DIRS+=		${PKG_SYSCONFDIR}/nih
 
 MAKE_ENV+=		MANDIR=${PREFIX}/${PKGMANDIR}
-MAKE_ENV+=		EGDIR=${EGDIR}
 MAKE_ENV+=		DOCDIR=${PREFIX}/share/doc/pkgnih
 
 .include "../../wip/mk/git-package.mk"
