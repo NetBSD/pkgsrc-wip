@@ -1,0 +1,6 @@
+Task Coach is a simple open source todo manager to keep track of
+personal tasks and todo lists. It grew out of a frustration that
+most task managers do not provide facilities for composite tasks.
+Often, tasks and other things todo consist of several activities.
+Task Coach is designed to deal with composite tasks. In addition,
+it offers effort tracking, categories, and notes.
