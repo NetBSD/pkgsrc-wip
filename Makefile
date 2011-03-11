@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4263 2011/03/10 13:38:00 ryo-on Exp $
+# $Id: Makefile,v 1.4264 2011/03/11 12:36:53 ryo-on Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2628,6 +2628,7 @@ SUBDIR+=	talloc
 SUBDIR+=	tamago-anthy
 SUBDIR+=	tardy
 SUBDIR+=	task
+SUBDIR+=	taskcoach
 SUBDIR+=	tasks
 SUBDIR+=	tcc
 SUBDIR+=	tcc-devel
