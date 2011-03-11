@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/01/03 03:04:25 schnoebe Exp $
+$NetBSD: distinfo,v 1.2 2011/03/11 05:25:20 schnoebe Exp $
 
-SHA1 (jabberbot-0.10.tar.gz) = 0ba03b3fd22df0fcb82dabfe7461b252a97a4b28
-RMD160 (jabberbot-0.10.tar.gz) = 2a44929a3b4e4fb38f9e73f47e3d66faee437bae
-Size (jabberbot-0.10.tar.gz) = 21074 bytes
+SHA1 (jabberbot-0.12.tar.gz) = a439867a37dc96729b83b366565ffb42afef8586
+RMD160 (jabberbot-0.12.tar.gz) = 57d779ff9599e306919634965d251a35d8f70f88
+Size (jabberbot-0.12.tar.gz) = 22649 bytes

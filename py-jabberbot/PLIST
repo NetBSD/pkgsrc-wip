@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2011/01/08 02:01:05 schnoebe Exp $
+@comment $NetBSD: PLIST,v 1.3 2011/03/11 05:25:20 schnoebe Exp $
 ${PLIST.eggfile}${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/jabberbot.py
 ${PYSITELIB}/jabberbot.pyc
@@ -6,3 +6,4 @@ ${PYSITELIB}/jabberbot.pyo
 share/examples/py-jabberbot/broadcast.py
 share/examples/py-jabberbot/tunes.py
 share/examples/py-jabberbot/twitterbot.py
+share/examples/py-jabberbot/muc.py
