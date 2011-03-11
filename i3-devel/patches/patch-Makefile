@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2010/12/07 21:21:16 pallegra Exp $
+$NetBSD: patch-Makefile,v 1.1 2011/03/11 12:16:10 pallegra Exp $
 
---- Makefile.orig	2010-12-06 12:21:02.000000000 +0000
+--- Makefile.orig	2011-03-07 19:24:40.000000000 +0000
 +++ Makefile
 @@ -26,6 +26,8 @@ src/%.o: src/%.c ${HEADERS}
  all: src/cfgparse.y.o src/cfgparse.yy.o src/cmdparse.y.o src/cmdparse.yy.o ${FILES}
