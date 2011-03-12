@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4264 2011/03/11 12:36:53 ryo-on Exp $
+# $Id: Makefile,v 1.4265 2011/03/12 10:42:48 ryo-on Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1277,6 +1277,7 @@ SUBDIR+=	libgxim
 SUBDIR+=	libharu
 SUBDIR+=	libhttpd
 SUBDIR+=	libipctdata
+SUBDIR+=	libisofs
 SUBDIR+=	libitl
 SUBDIR+=	libjingle
 SUBDIR+=	liblingoteach
