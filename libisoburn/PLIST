@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/03/12 10:50:32 ryo-on Exp $
+bin/osirrox
+bin/xorrecord
+bin/xorriso
+bin/xorrisofs
+include/libisoburn/libisoburn.h
+include/libisoburn/xorriso.h
+info/xorriso.info
+info/xorrisofs.info
+lib/libisoburn.la
+lib/pkgconfig/libisoburn-1.pc
+man/man1/xorriso.1
+man/man1/xorrisofs.1
