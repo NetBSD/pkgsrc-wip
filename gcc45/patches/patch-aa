@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1 2010/06/24 18:58:03 marko_schuetz Exp $
+$NetBSD: patch-aa,v 1.2 2011/03/12 21:38:13 keckhardt Exp $
 
---- gcc/config.gcc.orig	2010-04-07 06:34:00.000000000 -0400
+--- gcc/config.gcc.orig	2010-10-09 09:35:53.000000000 +0000
 +++ gcc/config.gcc
-@@ -497,6 +497,33 @@ case ${target} in
+@@ -499,6 +499,33 @@ case ${target} in
    # need_64bit_hwint=yes # system compiler has this for all arch!
    use_gcc_stdint=wrap
    ;;
@@ -36,7 +36,15 @@ $NetBSD: patch-aa,v 1.1 2010/06/24 18:58:03 marko_schuetz Exp $
  *-*-linux* | frv-*-*linux* | *-*-kfreebsd*-gnu | *-*-knetbsd*-gnu | *-*-gnu* | *-*-kopensolaris*-gnu)
    extra_parts="crtbegin.o crtbeginS.o crtbeginT.o crtend.o crtendS.o"
    gas=yes
-@@ -1113,6 +1140,12 @@ x86_64-*-freebsd*)
+@@ -572,6 +599,7 @@ case ${target} in
+       default_use_cxa_atexit=yes
+       ;;
+   esac
++  use_gcc_stdint=wrap
+   ;;
+ *-*-openbsd*)
+   tmake_file="t-libc-ok t-openbsd t-libgcc-pic"
+@@ -1117,17 +1145,23 @@ x86_64-*-freebsd*)
  	tm_file="${tm_file} i386/unix.h i386/att.h dbxelf.h elfos.h ${fbsd_tm_file} i386/x86-64.h i386/freebsd.h i386/freebsd64.h"
  	tmake_file="${tmake_file} i386/t-crtstuff"
  	;;
@@ -47,5 +55,19 @@ $NetBSD: patch-aa,v 1.1 2010/06/24 18:58:03 marko_schuetz Exp $
 +	tm_file="${tm_file} i386/unix.h i386/att.h dbxelf.h elfos.h ${dfbsd_tm_file} i386/dragonfly.h"
 +	;;
  i[34567]86-*-netbsdelf*)
- 	tm_file="${tm_file} i386/unix.h i386/att.h dbxelf.h elfos.h netbsd.h netbsd-elf.h i386/netbsd-elf.h"
+-	tm_file="${tm_file} i386/unix.h i386/att.h dbxelf.h elfos.h netbsd.h netbsd-elf.h i386/netbsd-elf.h"
++	tm_file="${tm_file} i386/unix.h i386/att.h dbxelf.h elfos.h netbsd.h netbsd-elf.h i386/netbsd-elf.h netbsd-stdint.h"
  	;;
+ i[34567]86-*-netbsd*)
+-	tm_file="${tm_file} i386/unix.h i386/bsd.h i386/gas.h i386/gstabs.h netbsd.h netbsd-aout.h i386/netbsd.h"
++	tm_file="${tm_file} i386/unix.h i386/bsd.h i386/gas.h i386/gstabs.h netbsd.h netbsd-aout.h i386/netbsd.h netbsd-stdint.h"
+ 	tmake_file="${tmake_file} t-netbsd"
+ 	extra_parts=""
+ 	use_collect2=yes
+ 	;;
+ x86_64-*-netbsd*)
+-	tm_file="${tm_file} i386/unix.h i386/att.h dbxelf.h elfos.h netbsd.h netbsd-elf.h i386/x86-64.h i386/netbsd64.h"
++	tm_file="${tm_file} i386/unix.h i386/att.h dbxelf.h elfos.h netbsd.h netbsd-elf.h i386/x86-64.h i386/netbsd64.h netbsd-stdint.h"
+ 	tmake_file="${tmake_file} i386/t-crtstuff"
+ 	;;
+ i[34567]86-*-openbsd2.*|i[34567]86-*openbsd3.[0123])
