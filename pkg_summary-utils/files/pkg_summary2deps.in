@@ -280,6 +280,39 @@ function pkgmatch (pkg, pattern){
 	return pattern_match(pkg, pattern)
 }
 
+function pkgmatch_all (pair, matched_pkg, pattern,
+					   id,depscnt,deps,j,k,depname,arr,all_matched)
+{
+	if (!pkgmatch(matched_pkg, pattern))
+		return 0
+
+	for (id=1; id <= 2; ++id){
+		depscnt = g_paircnt2namedeps_cnt [pair, id]
+		for (j=1; j <= depscnt; ++j){
+			deps = g_paircnt2namedeps [pair, id, j]
+			altdepscnt = split(deps, arr, /[|]/)
+			all_matched = 1
+			for (k=1; k <= altdepscnt; ++k){
+				depname = arr [k]
+				if (pkgname2pkgbase(matched_pkg) \
+					!= pkgname2pkgbase(depname))
+					continue
+
+				if (pkgmatch(matched_pkg, depname)){
+					all_matched = 1
+					break
+				}else{
+					all_matched = 0
+				}
+			}
+			if (!all_matched)
+				return 0
+		}
+	}
+
+	return 1
+}
+
 function pair2path (pair){
 	sub(/;.*$/, "", pair)
 	return pair
@@ -327,7 +360,7 @@ END {
 							continue
 						}
 
-						if (pkgmatch(g_pair2name [f], depname)){
+						if (pkgmatch_all(pair, g_pair2name [f], depname)){
 							if (id != 3){
 								if (matched == ""){
 									matched = f

@@ -3357,6 +3357,56 @@ lang/php5|lang/php5 graphics/php-exif
 lang/php5|lang/php5 meta-pkgs/php5-extensions
 '
 
+pkg_summary2deps -dpa bin_summary6.txt 2>/dev/null | sort -k2 -k1 |
+cmp 'pkg_summary2deps #46' \
+'lang/ruby18-base lang/ruby
+security/openssl lang/ruby
+lang/ruby18-base lang/ruby18
+security/openssl lang/ruby18
+security/openssl lang/ruby18-base
+lang/ruby19-base lang/ruby19
+security/openssl lang/ruby19
+security/openssl lang/ruby19-base
+lang/ruby19-base lang/ruby:RUBY_VERSION_REQD=19
+security/openssl lang/ruby:RUBY_VERSION_REQD=19
+lang/ruby18-base textproc/ruby-eruby
+security/openssl textproc/ruby-eruby
+lang/ruby18-base www/ap-ruby
+security/openssl www/ap-ruby
+textproc/ruby-eruby www/ap-ruby
+www/apache22 www/ap-ruby
+lang/ruby18-base www/ap-ruby:PKG_APACHE=apache13
+security/openssl www/ap-ruby:PKG_APACHE=apache13
+textproc/ruby-eruby www/ap-ruby:PKG_APACHE=apache13
+www/apache www/ap-ruby:PKG_APACHE=apache13
+lang/ruby18-base www/ap-ruby:PKG_APACHE=apache2
+security/openssl www/ap-ruby:PKG_APACHE=apache2
+textproc/ruby-eruby www/ap-ruby:PKG_APACHE=apache2
+www/apache2 www/ap-ruby:PKG_APACHE=apache2
+security/openssl www/apache2
+security/openssl www/apache22
+x11/qt3-docs x11/qt3
+x11/qt3-libs x11/qt3
+x11/qt3-tools x11/qt3
+x11/qt3-libs x11/qt3-docs
+x11/qt3-libs x11/qt3-mysql
+x11/qt3-libs x11/qt3-pgsql
+x11/qt3-libs x11/qt3-qscintilla
+x11/qt3-libs x11/qt3-tools
+x11/qt4-docs x11/qt4
+x11/qt4-libs x11/qt4
+x11/qt4-tools x11/qt4
+x11/qt4-libs x11/qt4-docs
+x11/qt4-libs x11/qt4-mng
+x11/qt4-libs x11/qt4-mysql
+x11/qt4-libs x11/qt4-pgsql
+x11/qt4-libs x11/qt4-qdbus
+x11/qt4-libs x11/qt4-qscintilla
+x11/qt4-libs x11/qt4-sqlite3
+x11/qt4-libs x11/qt4-tiff
+x11/qt4-libs x11/qt4-tools
+'
+
 # pkg_lint_summary
 pkg_lint_summary bin_summary1.txt 2>&1 | sort |
 sed -n 's/At least one.*$/MandatoryOptionErrorMessage/p' |
