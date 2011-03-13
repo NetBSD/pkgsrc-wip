@@ -1,31 +1,24 @@
-# $NetBSD: Makefile,v 1.4 2011/03/10 13:57:13 ryo-on Exp $
+# $NetBSD: Makefile,v 1.5 2011/03/13 03:45:52 ryo-on Exp $
 #
 
-DISTNAME=	openbabel-2.2.3
+DISTNAME=	openbabel-2.3.0
 CATEGORIES=	biology
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=openbabel/}
 
 MAINTAINER=	oivulf@gmail.com
-HOMEPAGE=	http://openbabel.sourceforge.net/
+HOMEPAGE=	http://openbabel.org/
 COMMENT=	Chemistry file translation program
 LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config perl
 USE_LANGUAGES=	c c++
 
-PKGCONFIG_OVERRIDE+=	openbabel-2.0.pc.in
-
-CONFIGURE_ARGS+=	--disable-inchi
-CONFIGURE_ARGS+=	--disable-dynamic-modules
+USE_CMAKE=	yes
 
 .include "options.mk"
 
-.include "../../devel/boost-libs/buildlink3.mk"
-.include "../../lang/mono/buildlink3.mk"
-.include "../../lang/python/extension.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../math/eigen2/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
