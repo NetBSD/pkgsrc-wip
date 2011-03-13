@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/03/13 03:52:27 ryo-on Exp $
+# $NetBSD: Makefile,v 1.4 2011/03/13 11:00:17 ryo-on Exp $
 #
 
 DISTNAME=	gnome-chemistry-utils-0.13.2
@@ -25,6 +25,8 @@ GCONF_SCHEMAS+=	programs/paint/gchempaint.schemas
 
 BUILDLINK_TRANSFORM+=rm:-DGTK_DISABLE_DEPRECATED
 BUILDLINK_TRANSFORM+=rm:-ldl
+
+CONFIGURE_ARGS+=	--disable-update-databases
 
 .include "../../devel/GConf/schemas.mk"
 .include "../../databases/shared-mime-info/buildlink3.mk"

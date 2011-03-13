@@ -1,1 +1,2 @@
-* fix build
+* fix POLLRDHUP handling
+* fix install stage errors (schemas related)
