@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/05/10 21:41:24 jihbed Exp $
+$NetBSD: distinfo,v 1.2 2011/03/13 03:52:27 ryo-on Exp $
 
-SHA1 (gnome-chemistry-utils-0.11.4.tar.bz2) = 4f8e68920403efbe7c69efaf06b4e504be70ea74
-RMD160 (gnome-chemistry-utils-0.11.4.tar.bz2) = c8ee696dc29b4deb75de51e6f4e64564a4ac4d7b
-Size (gnome-chemistry-utils-0.11.4.tar.bz2) = 4318687 bytes
+SHA1 (gnome-chemistry-utils-0.13.2.tar.bz2) = f8ec86fcc881c7797a2b26da41887bd01dcde77d
+RMD160 (gnome-chemistry-utils-0.13.2.tar.bz2) = 300fc82f6b648031f94623fe740619bc79482ce8
+Size (gnome-chemistry-utils-0.13.2.tar.bz2) = 5043333 bytes
