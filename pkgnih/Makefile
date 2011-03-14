@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2011/03/13 23:34:46 cheusov Exp $
+# $NetBSD: Makefile,v 1.11 2011/03/14 14:09:00 cheusov Exp $
 
-DISTNAME=	pkgnih-0.5
-PKGREVISION=	4
+DISTNAME=	pkgnih-0.6
 CATEGORIES=	pkgtools
 MASTER_SITES=	http://mova.org/~cheusov/pub/pkgnih/
 
@@ -30,8 +29,6 @@ CONF_FILES=		${EGDIR}/nih.conf \
 MAKE_DIRS+=		${PKG_SYSCONFDIR}/nih
 
 MAKE_ENV+=		MANDIR=${PREFIX}/${PKGMANDIR}
-MAKE_ENV+=		EGDIR=${EGDIR}
-MAKE_ENV+=		DOCDIR=${PREFIX}/share/doc/pkgnih
 
 .include "../../mk/bsd.pkg.mk"
 
