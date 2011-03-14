@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/03/08 10:52:25 zatmania Exp $
+# $NetBSD: Makefile,v 1.4 2011/03/14 07:11:19 zatmania Exp $
 #
 
 DISTNAME=	redis-2.2.2
@@ -6,7 +6,7 @@ CATEGORIES=	databases
 MASTER_SITES=	http://redis.googlecode.com/files/
 
 MAINTAINER=	zatmania@gotofreedom.org
-HOMEPAGE=	http://code.google.com/p/redis/
+HOMEPAGE=	http://redis.io/
 COMMENT=	Persistent key-value database with built-in net interface
 LICENSE=	modified-bsd
 
