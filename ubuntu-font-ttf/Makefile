@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2011/03/07 07:57:51 ryo-on Exp $
+# $NetBSD: Makefile,v 1.7 2011/03/15 20:00:25 ryo-on Exp $
 #
 
-DISTNAME=	ubuntu-font-family-0.70.1
+DISTNAME=	ubuntu-font-family-0.71.2
 PKGNAME=	${DISTNAME:S/family-/ttf-/}
 CATEGORIES=	fonts
 MASTER_SITES=	http://font.ubuntu.com/download/
@@ -31,8 +31,12 @@ FONTS_DIRS.ttf=	${FONTDIR}
 
 INSTALL_FONTS=	Ubuntu-B.ttf \
 		Ubuntu-BI.ttf \
-		Ubuntu-I.ttf \
-		Ubuntu-R.ttf
+		Ubuntu-L.ttf \
+		Ubuntu-LI.ttf \
+		Ubuntu-M.ttf \
+		Ubuntu-MI.ttf \
+		Ubuntu-R.ttf \
+		Ubuntu-RI.ttf
 
 INSTALL_DOCS=	CONTRIBUTING.txt \
 		FONTLOG.txt \

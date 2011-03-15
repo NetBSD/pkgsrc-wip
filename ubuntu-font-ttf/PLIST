@@ -1,8 +1,12 @@
-@comment $NetBSD: PLIST,v 1.2 2010/12/20 12:57:43 ryo-on Exp $
+@comment $NetBSD: PLIST,v 1.3 2011/03/15 20:00:25 ryo-on Exp $
 lib/X11/fonts/TTF/Ubuntu-B.ttf
 lib/X11/fonts/TTF/Ubuntu-BI.ttf
-lib/X11/fonts/TTF/Ubuntu-I.ttf
+lib/X11/fonts/TTF/Ubuntu-L.ttf
+lib/X11/fonts/TTF/Ubuntu-LI.ttf
+lib/X11/fonts/TTF/Ubuntu-M.ttf
+lib/X11/fonts/TTF/Ubuntu-MI.ttf
 lib/X11/fonts/TTF/Ubuntu-R.ttf
+lib/X11/fonts/TTF/Ubuntu-RI.ttf
 share/doc/ubuntu-font-ttf/CONTRIBUTING.txt
 share/doc/ubuntu-font-ttf/FONTLOG.txt
 share/doc/ubuntu-font-ttf/LICENCE-FAQ.txt
