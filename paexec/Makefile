@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2011/03/11 15:43:45 cheusov Exp $
+# $NetBSD: Makefile,v 1.32 2011/03/15 18:28:13 cheusov Exp $
 #
 
 DISTNAME=	paexec-0.16
@@ -17,8 +17,6 @@ DEPENDS+=		runawk>=0.20.0:../../lang/runawk
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 TEST_TARGET=		test
-
-AUTO_MKDIRS=		yes
 
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 
