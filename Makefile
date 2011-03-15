@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4268 2011/03/15 08:13:57 cheusov Exp $
+# $Id: Makefile,v 1.4269 2011/03/15 15:42:00 pettai Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2497,7 +2497,6 @@ SUBDIR+=	shaper
 SUBDIR+=	sharif-univ-ttf
 SUBDIR+=	shed
 SUBDIR+=	shell-fm
-SUBDIR+=	shibboleth2
 SUBDIR+=	shoutcast
 SUBDIR+=	showmesh
 SUBDIR+=	shttpd
