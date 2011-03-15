@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2010/02/05 21:36:22 jakllsch Exp $
+# $NetBSD: Makefile,v 1.6 2011/03/15 20:15:31 jakllsch Exp $
 
-VERSION=	2.15
+VERSION=	2.16
 DISTNAME=	remctl-${VERSION}
 CATEGORIES=	sysutils security
 MASTER_SITES=	http://archives.eyrie.org/software/kerberos/
@@ -8,6 +8,7 @@ MASTER_SITES=	http://archives.eyrie.org/software/kerberos/
 MAINTAINER=	jakllsch@NetBSD.org
 HOMEPAGE=	http://www.eyrie.org/~eagle/software/remctl/
 COMMENT=	Client/server protocol for running commands using Kerberos v5 auth
+LICENSE=	mit
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
