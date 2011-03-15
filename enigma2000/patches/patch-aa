@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.1.1.1 2011/03/07 19:10:35 amoibos Exp $
+$NetBSD: patch-aa,v 1.2 2011/03/15 01:52:58 thomasklausner Exp $
 
 fix name issue 
---- Makefile.in.orig	2004-02-29 15:42:32.000000000 +0100
-+++ Makefile.in	2010-12-21 00:48:03.000000000 +0100
-@@ -11,8 +11,8 @@
+--- Makefile.in.orig	2004-02-29 14:42:32.000000000 +0000
++++ Makefile.in
+@@ -11,8 +11,8 @@ localstatedir   = @localstatedir@
  
  CC		= @CC@
  CFLAGS		= @CFLAGS@ @GCCFLAGS@ -I$(srcdir) -I. \
@@ -14,7 +14,7 @@ fix name issue
  		  @CURSES@
  LDFLAGS		= @LDFLAGS@
  LIBS            = @LIBS@
-@@ -29,21 +29,21 @@
+@@ -29,21 +29,22 @@ ENIGMA = main.o screen.o engine.o memory
  all: enigma
  
  enigma: $(ENIGMA)
@@ -24,19 +24,20 @@ fix name issue
  install: enigma
 -	$(INSTALL_PROGRAM) enigma $(bindir)/enigma
 -	-chown root.games $(bindir)/enigma && chmod 2755 $(bindir)/enigma
-+	$(INSTALL_PROGRAM) enigma2000 $(bindir)/enigma2000
-+	-chown root.games $(bindir)/enigma2000 && chmod 2755 $(bindir)/enigma2000
++	mkdir -p $(DESTDIR)$(bindir)
++	$(INSTALL_PROGRAM) enigma2000 $(DESTDIR)$(bindir)/enigma2000
++	-chown root.games $(DESTDIR)$(bindir)/enigma2000 && chmod 2755 $(DESTDIR)$(bindir)/enigma2000
  	#$(INSTALL_DATA) $(srcdir)/enigma.1 $(mandir)/man1/enigma.1
 -	mkdir -p $(datadir)/enigma
-+	mkdir -p $(datadir)/enigma2000
++	mkdir -p $(DESTDIR)$(datadir)/enigma2000
  	for i in $(srcdir)/levels/*.set $(srcdir)/levels/*.level; do \
 -		$(INSTALL_DATA) $$i $(datadir)/enigma; \
-+		$(INSTALL_DATA) $$i $(datadir)/enigma2000; \
++		$(INSTALL_DATA) $$i $(DESTDIR)$(datadir)/enigma2000; \
  	done
 -	mkdir -p $(localstatedir)/enigma
 -	-chown root.games $(localstatedir)/enigma && chmod 2770 $(localstatedir)/enigma
-+	mkdir -p $(localstatedir)/enigma2000
-+	-chown root.games $(localstatedir)/enigma2000 && chmod 2770 $(localstatedir)/enigma2000
++	mkdir -p $(DESTDIR)$(localstatedir)/enigma2000
++	-chown root.games $(DESTDIR)$(localstatedir)/enigma2000 && chmod 2770 $(DESTDIR)$(localstatedir)/enigma2000
  
  clean:
 -	rm -f *.o enigma
