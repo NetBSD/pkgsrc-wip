@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2011/03/12 21:38:13 keckhardt Exp $
+# $NetBSD: Makefile,v 1.6 2011/03/15 16:16:28 keckhardt Exp $
 
 DISTNAME=		gcc-${GCC_VERSION}
 PKGNAME=		gcc45-${GCC_VERSION}
@@ -15,7 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		awk:run bash:run perl chmod \
 			gmake:run makeinfo msgfmt bison flex gm4 \
-			sed:run unzip
+			sed:run unzip 
 
 DEPENDS+=		zip-[0-9]*:../../archivers/zip
 
@@ -186,4 +186,5 @@ GENERATE_PLIST+=                                                        \
 .include "../../math/mpcomplex/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../math/mpfr/buildlink3.mk"
+.include "../../devel/binutils/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
