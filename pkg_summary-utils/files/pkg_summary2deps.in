@@ -36,6 +36,7 @@
 #use "psu_funcs.awk"
 #use "glob.awk"
 #use "pkgsrc-dewey.awk"
+#use "xgetline.awk"
 
 ############################################################
 #.begin-str help
@@ -67,12 +68,18 @@
 #   -l    output to stderr the error messages
 #         compatible with pkg_lint_summary, e.g.,
 #         d: not_found foo-[0-9]*:../../devel/foo <- lang/bar bar
-#   =P <pkgs>   find dependencies for specified PKGPATHs,
-#               separated by space or comma
-#   =N <pkgs>   find dependencies for specified PKGNAMEs,
-#               separated by space or comma
-#   -X          exit with non-zero exit status if missed
-#               DEPENDS, BUILD_DEPENDS or CONFLICTS were found
+#   =P <pkgpaths>
+#         find dependencies for specified PKGPATHs.
+#         If pkgpaths starts with `/' or `.', it is treated as a
+#         filename that contains PKGPATHs, one per line. Otherwise
+#         pkgpaths is a list of PKGPATHs separated by space or comma.
+#   =N <pkgnames>
+#         find dependencies for specified PKGNAMEs.
+#         If pkgnames starts with `/' or `.', it is treated as a
+#         filename that contains PKGNAMEs, one per line. Otherwise
+#         pkgnames is a list of PKGNAMEs separated by space or comma.
+#   -X    exit with non-zero exit status if missed
+#         DEPENDS, BUILD_DEPENDS or CONFLICTS were found
 #.end-str
 ############################################################
 
@@ -145,22 +152,38 @@ BEGIN {
 	all_packages = 1
 
 	pkgs_PKGPATHs = getarg("P", "<fake>")
-	gsub(/,/, " ", pkgs_PKGPATHs)
-	if (pkgs_PKGPATHs != "<fake>"){
+	if (pkgs_PKGPATHs ~ /^[.\/]/){
 		all_packages = 0
-		split(pkgs_PKGPATHs, arr)
-		for (i in arr){
-			PKGPATHs [arr [i]] = 0
+		while (xgetline0(pkgs_PKGPATHs)){
+			PKGPATHs [$1] = 0
+		}
+		close(pkgs_PKGPATHs)
+	}else{
+		gsub(/,/, " ", pkgs_PKGPATHs)
+		if (pkgs_PKGPATHs != "<fake>"){
+			all_packages = 0
+			split(pkgs_PKGPATHs, arr)
+			for (i in arr){
+				PKGPATHs [arr [i]] = 0
+			}
 		}
 	}
 
 	pkgs_PKGNAMEs = getarg("N", "<fake>")
-	gsub(/,/, " ", pkgs_PKGNAMEs)
-	if (pkgs_PKGNAMEs != "<fake>"){
+	if (pkgs_PKGNAMEs ~ /^[.\/]/){
 		all_packages = 0
-		split(pkgs_PKGNAMEs, arr)
-		for (i in arr){
-			PKGNAMEs [arr [i]] = 0
+		while (xgetline0(pkgs_PKGNAMEs)){
+			PKGNAMEs [$1] = 0
+		}
+		close(pkgs_PKGNAMEs)
+	}else{
+		gsub(/,/, " ", pkgs_PKGNAMEs)
+		if (pkgs_PKGNAMEs != "<fake>"){
+			all_packages = 0
+			split(pkgs_PKGNAMEs, arr)
+			for (i in arr){
+				PKGNAMEs [arr [i]] = 0
+			}
 		}
 	}
 

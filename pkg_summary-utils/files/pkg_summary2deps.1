@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkg_summary2deps.1,v 1.11 2011/01/10 22:59:57 cheusov Exp $
+\.\"	$NetBSD: pkg_summary2deps.1,v 1.12 2011/03/15 10:37:47 cheusov Exp $
 .\"
 .\" Copyright (c) 2008-2010 by Aleksey Cheusov (cheusov@tut.by)
 .\" Absolutely no warranty.
@@ -91,13 +91,23 @@ compatible with pkg_lint_summary, e.g.,
 d: not_found foo-[0-9]*:../../devel/foo <- lang/bar bar
 .VE
 .TP
-.BI "-P " "<PKGPATHs>"
-find dependencies for specified PKGPATHs only.
-Packages are separated by space or comma.
+.BI "-P " "<pkgpaths>"
+find dependencies for specified PKGPATHs.
+If
+.I pkgpaths
+starts with `/' or `.', it is treated as a
+filename that contains PKGPATHs, one per line. Otherwise
+.I pkgpaths
+contains a list of PKGPATHs separated by space or comma.
 .TP
-.BI "-N " "<PKGNAMEs>"
-find dependencies for specified PKGNAMEs only.
-Packages are separated by space or comma.
+.BI "-N " "<pkgnames>"
+find dependencies for specified PKGNAMEs.
+If
+.I pkgnames
+starts with `/' or `.', it is treated as a
+filename that contains PKGNAMEs, one per line. Otherwise
+.I pkgnames
+contains a list of PKGNAMEs separated by space or comma.
 .TP
 .B "-X"
 exit with non-zero exit status if missed

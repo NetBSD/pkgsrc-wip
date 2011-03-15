@@ -3252,6 +3252,25 @@ wip/pkg_summary-utils wip/distbb
 wip/runawk wip/distbb
 '
 
+echo 'wip/distbb' > $tmpfn4
+echo 'editors/emacs' >> $tmpfn4
+pkg_summary2deps -Apa -P"$tmpfn4" src_summary.txt | sort |
+cmp 'pkg_summary2deps #36.1' \
+'devel/gmake editors/emacs
+devel/pkg-config editors/emacs
+graphics/jpeg editors/emacs
+graphics/libungif editors/emacs
+graphics/png editors/emacs
+graphics/tiff editors/emacs
+lang/perl5 editors/emacs
+pkgtools/x11-links editors/emacs
+sysutils/checkperms editors/emacs
+sysutils/checkperms wip/distbb
+wip/paexec wip/distbb
+wip/pkg_summary-utils wip/distbb
+wip/runawk wip/distbb
+'
+
 pkg_summary2deps -dn -P'wip/distbb sysutils/checkperms' src_summary.txt | sort |
 cmp 'pkg_summary2deps #37' \
 'checkperms
@@ -3287,6 +3306,20 @@ wip/runawk wip/distbb
 
 pkg_summary2deps -dp -N 'distbb-0.22.0 emacs-22.1nb6' src_summary.txt | sort |
 cmp 'pkg_summary2deps #40' \
+'graphics/jpeg editors/emacs
+graphics/libungif editors/emacs
+graphics/png editors/emacs
+graphics/tiff editors/emacs
+lang/perl5 editors/emacs
+wip/paexec wip/distbb
+wip/pkg_summary-utils wip/distbb
+wip/runawk wip/distbb
+'
+
+echo distbb-0.22.0 > "$tmpfn4"
+echo emacs-22.1nb6 >> "$tmpfn4"
+pkg_summary2deps -dp -N "$tmpfn4" src_summary.txt | sort |
+cmp 'pkg_summary2deps #40.1' \
 'graphics/jpeg editors/emacs
 graphics/libungif editors/emacs
 graphics/png editors/emacs
