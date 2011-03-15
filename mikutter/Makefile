@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.9 2011/03/07 05:14:47 obache Exp $
+# $NetBSD: Makefile,v 1.10 2011/03/15 09:11:09 obache Exp $
 #
 
-DISTNAME=	mikutter.0.0.2.10
+DISTNAME=	mikutter.0.0.2.11
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/./-/}
 CATEGORIES=	net
-MASTER_SITES=	http://mikutter.d.hachune.net/bin/
+MASTER_SITES=	http://mikutter.hachune.net/bin/
 
 MAINTAINER=	obache@NetBSD.org
-HOMEPAGE=	http://mikutter.d.hachune.net/
+HOMEPAGE=	http://mikutter.hachune.net/
 COMMENT=	Moest Twitter Client
 LICENSE=	gnu-gpl-v3
 
