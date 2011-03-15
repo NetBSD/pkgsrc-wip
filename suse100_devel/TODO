@@ -1,3 +1,19 @@
-# $NetBSD: TODO,v 1.1 2009/02/16 14:39:38 hfath Exp $
+# $NetBSD: TODO,v 1.2 2011/03/15 15:02:15 hfath Exp $
 
 - test on !i386 platforms.
+
+- the package currently fails to install on netbsd-5 with
+
+[...]
+=> Generating post-install file lists
+pkg_create: can't stat `/var/obj/pkgsrc/wip/suse100_devel/work/.destdir/usr/pkg/emul/linux/usr/lib/libstdc++.so.6'
+pkg_create: can't stat `/var/obj/pkgsrc/wip/suse100_devel/work/.destdir/usr/pkg/emul/linux/usr/lib/libstdc++.so.6.0.6'
+=> Checking file-check results for suse_devel-10.0nb1
+ERROR: ************************************************************
+ERROR: The following files are in the PLIST but not in /usr/pkg:
+ERROR:         /var/obj/pkgsrc/wip/suse100_devel/work/.destdir/usr/pkg/emul/linux/usr/lib/libstdc++.so.6
+ERROR:         /var/obj/pkgsrc/wip/suse100_devel/work/.destdir/usr/pkg/emul/linux/usr/lib/libstdc++.so.6.0.6
+*** Error code 1
+
+  -- find out which of the gazillion RPM archives has
+  libstdc++.so.6.0.6, and add it.
