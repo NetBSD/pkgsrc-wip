@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2011/03/05 17:09:39 tnn2 Exp $
+@comment $NetBSD: PLIST,v 1.30 2011/03/15 20:18:48 tnn2 Exp $
 bin/firefox
 lib/firefox/README.txt
 lib/firefox/application.ini
@@ -381,7 +381,6 @@ lib/firefox/modules/services-sync/engines/tabs.js
 lib/firefox/modules/services-sync/ext/Observers.js
 lib/firefox/modules/services-sync/ext/Preferences.js
 lib/firefox/modules/services-sync/ext/StringBundle.js
-lib/firefox/modules/services-sync/ext/Sync.js
 lib/firefox/modules/services-sync/identity.js
 lib/firefox/modules/services-sync/jpakeclient.js
 lib/firefox/modules/services-sync/log4moz.js

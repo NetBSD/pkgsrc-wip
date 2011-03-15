@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2011/03/05 17:09:39 tnn2 Exp $
+@comment $NetBSD: PLIST,v 1.32 2011/03/15 20:18:48 tnn2 Exp $
 bin/xulrunner
 ${PLIST.jit}include/xulrunner/Allocator.h
 ${PLIST.jit}include/xulrunner/Assembler.h
@@ -89,6 +89,7 @@ include/xulrunner/gfxCachedTempSurface.h
 include/xulrunner/gfxColor.h
 include/xulrunner/gfxContext.h
 include/xulrunner/gfxCore.h
+include/xulrunner/gfxCrashReporterUtils.h
 include/xulrunner/gfxDrawable.h
 include/xulrunner/gfxFT2FontBase.h
 include/xulrunner/gfxFailure.h
@@ -1008,7 +1009,6 @@ include/xulrunner/nsIDOMPkcs11.h
 include/xulrunner/nsIDOMPlugin.h
 include/xulrunner/nsIDOMPluginArray.h
 include/xulrunner/nsIDOMPopStateEvent.h
-include/xulrunner/nsIDOMPopStateEvent_MOZILLA_2_BRANCH.h
 include/xulrunner/nsIDOMPopupBlockedEvent.h
 include/xulrunner/nsIDOMProcessingInstruction.h
 include/xulrunner/nsIDOMProgressEvent.h
@@ -1772,6 +1772,11 @@ include/xulrunner/nsIUpdateService.h
 include/xulrunner/nsIUpdateTimerManager.h
 include/xulrunner/nsIUploadChannel.h
 include/xulrunner/nsIUploadChannel2.h
+include/xulrunner/nsIUrlClassifierDBService.h
+include/xulrunner/nsIUrlClassifierHashCompleter.h
+include/xulrunner/nsIUrlClassifierStreamUpdater.h
+include/xulrunner/nsIUrlClassifierUtils.h
+include/xulrunner/nsIUrlListManager.h
 include/xulrunner/nsIUserCertPicker.h
 include/xulrunner/nsIUserInfo.h
 include/xulrunner/nsIVariant.h
@@ -2473,6 +2478,7 @@ lib/xulrunner/components/nsSearchSuggestions.js
 lib/xulrunner/components/nsTaggingService.js
 lib/xulrunner/components/nsTryToClose.js
 lib/xulrunner/components/nsTryToClose.manifest
+lib/xulrunner/components/nsURLClassifier.manifest
 lib/xulrunner/components/nsURLFormatter.js
 lib/xulrunner/components/nsURLFormatter.manifest
 lib/xulrunner/components/nsUpdateService.js
@@ -2480,6 +2486,8 @@ lib/xulrunner/components/nsUpdateService.manifest
 lib/xulrunner/components/nsUpdateServiceStub.js
 lib/xulrunner/components/nsUpdateTimerManager.js
 lib/xulrunner/components/nsUpdateTimerManager.manifest
+lib/xulrunner/components/nsUrlClassifierLib.js
+lib/xulrunner/components/nsUrlClassifierListManager.js
 lib/xulrunner/components/nsWebHandlerApp.js
 lib/xulrunner/components/nsWebHandlerApp.manifest
 lib/xulrunner/components/nsXULAppInstall.js
@@ -2506,7 +2514,7 @@ lib/xulrunner/defaults/profile/localstore.rdf
 lib/xulrunner/dependentlibs.list
 lib/xulrunner/dictionaries/en-US.aff
 lib/xulrunner/dictionaries/en-US.dic
-lib/xulrunner/gre.d/${PKGVERSION}.system.conf
+lib/xulrunner/gre.d/2.0.system.conf
 lib/xulrunner/greprefs.js
 lib/xulrunner/icons/document.png
 lib/xulrunner/icons/updater.png
@@ -3058,7 +3066,6 @@ share/idl/xulrunner/nsIDOMPkcs11.idl
 share/idl/xulrunner/nsIDOMPlugin.idl
 share/idl/xulrunner/nsIDOMPluginArray.idl
 share/idl/xulrunner/nsIDOMPopStateEvent.idl
-share/idl/xulrunner/nsIDOMPopStateEvent_MOZILLA_2_BRANCH.idl
 share/idl/xulrunner/nsIDOMPopupBlockedEvent.idl
 share/idl/xulrunner/nsIDOMProcessingInstruction.idl
 share/idl/xulrunner/nsIDOMProgressEvent.idl
@@ -3694,6 +3701,11 @@ share/idl/xulrunner/nsIUpdateService.idl
 share/idl/xulrunner/nsIUpdateTimerManager.idl
 share/idl/xulrunner/nsIUploadChannel.idl
 share/idl/xulrunner/nsIUploadChannel2.idl
+share/idl/xulrunner/nsIUrlClassifierDBService.idl
+share/idl/xulrunner/nsIUrlClassifierHashCompleter.idl
+share/idl/xulrunner/nsIUrlClassifierStreamUpdater.idl
+share/idl/xulrunner/nsIUrlClassifierUtils.idl
+share/idl/xulrunner/nsIUrlListManager.idl
 share/idl/xulrunner/nsIUserCertPicker.idl
 share/idl/xulrunner/nsIUserInfo.idl
 share/idl/xulrunner/nsIVariant.idl
