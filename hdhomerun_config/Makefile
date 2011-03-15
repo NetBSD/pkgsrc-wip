@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2009/04/14 20:19:39 jakllsch Exp $
+# $NetBSD: Makefile,v 1.12 2011/03/15 20:27:50 jakllsch Exp $
 #
 
-DISTNAME=	libhdhomerun_20090411
+DISTNAME=	libhdhomerun_20100828
 PKGNAME=	${DISTNAME:S/libhdhomerun_/hdhomerun_config-/}
 CATEGORIES=	multimedia
 MASTER_SITES=	http://download.silicondust.com/hdhomerun/
@@ -10,6 +10,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	jakllsch@NetBSD.org
 HOMEPAGE=	http://www.silicondust.com/hdhomerun/
 COMMENT=	SiliconDust HDHomeRun utility
+LICENSE=	gnu-lgpl-v3
 
 WRKSRC=		${WRKDIR}/libhdhomerun
 BUILD_TARGET=	hdhomerun_config
