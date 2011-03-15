@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4269 2011/03/15 15:42:00 pettai Exp $
+# $Id: Makefile,v 1.4270 2011/03/15 19:45:32 ryo-on Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1184,7 +1184,6 @@ SUBDIR+=	kaffe
 SUBDIR+=	kaffe-x11
 SUBDIR+=	kahakai
 SUBDIR+=	kahua
-SUBDIR+=	kanjistrokeorders-ttf
 SUBDIR+=	kannel-gateway
 SUBDIR+=	kapital
 SUBDIR+=	katapult
