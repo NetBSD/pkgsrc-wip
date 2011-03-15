@@ -1,9 +1,11 @@
-@comment $NetBSD: PLIST,v 1.17 2011/03/08 22:12:35 gschwarz Exp $
+@comment $NetBSD: PLIST,v 1.18 2011/03/15 01:49:14 thomasklausner Exp $
 ${GUI}bin/linphone
 bin/linphonec
 bin/linphonecsh
 include/linphone/config.h
 include/linphone/linphonecore.h
+include/linphone/linphonecore_utils.h
+include/linphone/linphonefriend.h
 include/linphone/lpconfig.h
 include/linphone/sipsetup.h
 include/mediastreamer2/allfilters.h
@@ -22,11 +24,14 @@ include/mediastreamer2/msfilerec.h
 include/mediastreamer2/msfilter.h
 include/mediastreamer2/msinterfaces.h
 include/mediastreamer2/msitc.h
+include/mediastreamer2/msjava.h
+include/mediastreamer2/msjpegwriter.h
 include/mediastreamer2/msqueue.h
 include/mediastreamer2/msrtp.h
 include/mediastreamer2/mssndcard.h
 include/mediastreamer2/mstee.h
 include/mediastreamer2/msticker.h
+include/mediastreamer2/mstonedetector.h
 include/mediastreamer2/msv4l.h
 include/mediastreamer2/msvideo.h
 include/mediastreamer2/msvideoout.h
@@ -91,8 +96,12 @@ share/locale/pt_BR/LC_MESSAGES/linphone.mo
 share/locale/ru/LC_MESSAGES/linphone.mo
 share/locale/sv/LC_MESSAGES/linphone.mo
 share/locale/zh_CN/LC_MESSAGES/linphone.mo
+share/pixmaps/linphone/addcall-green.png
 share/pixmaps/linphone/contact-orange.png
 share/pixmaps/linphone/dialer-orange.png
+share/pixmaps/linphone/history-orange.png
+share/pixmaps/linphone/hold_off.png
+share/pixmaps/linphone/hold_on.png
 share/pixmaps/linphone/linphone-3-250x130.png
 share/pixmaps/linphone/linphone-3.png
 share/pixmaps/linphone/linphone-banner.png
@@ -119,3 +128,7 @@ share/sounds/linphone/rings/sweet.wav
 share/sounds/linphone/rings/synth.wav
 share/sounds/linphone/rings/tapping.wav
 share/sounds/linphone/rings/toy-mono.wav
+share/tutorials/linphone/buddy_status.c
+share/tutorials/linphone/chatroom.c
+share/tutorials/linphone/helloworld.c
+share/tutorials/linphone/registration.c
