@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2010/06/13 22:47:09 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.16 2011/03/16 08:52:51 mwdavies Exp $
 #
 
-DISTNAME=		k3b-1.69.0alpha4
-PKGREVISION=		3
+DISTNAME=		k3b-2.0.2
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=k3b/}
 EXTRACT_SUFX=		.tar.bz2
@@ -13,21 +12,21 @@ COMMENT=		DVD and CD authoring program
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-WRKSRC=			${WRKDIR}/k3b-1.69.0
+#WRKSRC=			${WRKDIR}/k3b-1.69.0
 
 BUILD_DEPENDS+=		automoc4>=0.9.87:../../devel/automoc4
 DEPENDS+=		cdrdao-[0-9]*:../../sysutils/cdrdao
 DEPENDS+=		{cdrtools,cdrtools-ossdvd}-[0-9]*:../../sysutils/cdrtools
 
 USE_CMAKE=		yes
-USE_TOOLS+=		perl pkg-config
+USE_TOOLS+=		perl pkg-config gmake
 USE_LANGUAGES=		c c++
 
 #CMAKE_ARGS+=		-DK3B_ENABLE_DVD_RIPPING=OFF
-#CMAKE_ARGS+=            -DCMAKE_BUILD_TYPE=Debug
+CMAKE_ARGS+=            -DCMAKE_BUILD_TYPE=Debug
 
-CONF_FILES=		${PREFIX}/share/examples/k3b/org.k3b.setup.conf \
-			${PKG_SYSCONFBASE}/dbus-1/system.d/org.k3b.setup.conf
+CONF_FILES=		${PREFIX}/share/examples/kde4-dbus/org.kde.kcontrol.k3bsetup.conf \
+			${PKG_SYSCONFBASE}/dbus-1/system.d/org.kde.kcontrol.k3bsetup.conf
 
 ONLY_FOR_PLATFORM=	FreeBSD-*-* Linux-*-* NetBSD-*-* DragonFly-*-*
 

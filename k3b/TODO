@@ -1,0 +1,4 @@
+
+pre-configure rule needs to work for other than netbsd.
+
+patch-ah needs to be adjusted for current code.
