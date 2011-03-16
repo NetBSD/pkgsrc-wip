@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2011/03/16 12:46:42 cheusov Exp $
+# $NetBSD: Makefile,v 1.24 2011/03/16 12:51:20 cheusov Exp $
 #
 
 DISTNAME=	lmdbg-0.16.0
@@ -17,6 +17,7 @@ DEPENDS+=		pipestatus-[0-9]*:../../devel/pipestatus
 #DEPENDS+=		gdb-[0-9]*:../../devel/gdb
 
 ONLY_FOR_COMPILER=	gcc icc
+NOT_FOR_PLATFORM=	Darwin-*-*
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
