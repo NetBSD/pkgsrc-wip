@@ -1,21 +1,20 @@
-LMDBG is a collection of small tools for collecting and analysing the
-logs of malloc/realloc/memalign/free function calls. Unlike many
-others LMDBG does *NOT* provide any way to detect overruns of the
-boundaries of a malloc() memory allocations. On the other hand LMDBG
-provides sory leaks effectively excluding those appeared in system
-libraries (e.g. libc).ome features that others doesn't have.  LMDBG
-provides a FULL stacktrace of each malloc/realloc/memalign/free call.
-Your application should *NOT* be (re)linked statically to be checked
-by LMDBG.  LMDBG correctly determines source.c:NNN even if it is in
-the shared library.  LMDBG is portable to many OSes and doesn't make
-your application significantly slower. LMDBG allows to effectively
-exclude memory leaks appeared in system libraries, e.g. in libc.
+LMDBG is a collection of small tools for collecting and analyzing logs
+of malloc/realloc/memalign/free etc. function calls. Unlike many
+others, LMDBG does not provide any way to detect overruns of the
+boundaries of malloc() memory allocations, as this is not the
+goal. Like most other malloc debuggers, LMDBG allows detecting memory
+leaks. Unlike some others LMDBG generates full stacktraces and
+separates the logging process from analysis, thus allowing you to
+analyze application on a per-module basis. Simple but powerful tools
+for analisis are also provided.
 
-               LMDBG - lightweight malloc debugger.
-
-LMDBG logs the calls of malloc/realloc/free/memalign functions with their
-stack frames and analyses such a logs.
-
-lmdbg-run  - for create malloc/realloc/free/memalign logs
-lmdbg-sym  - for converting address to 'file.c:NUM func_name'
-lmdbg-leak - memory leaks checker
+lmdbg-run    - Creates malloc/realloc/free/memalign/... logs
+lmdbg-sym    - Converts addresses to 'file.c:NUM func_name'
+lmdbg-leak   - Checks for memory leaks
+lmdbg-stat   - Gathers statistical information about memory allocations
+lmdbg-grep   - Greps the stackframes
+lmdbg-strip  - Strips the stackframes
+lmdbg-module - Enrichs the stackframes with a module name
+lmdbg-sort   - Sorts the stackframes by e.g. total allocated bytes,
+               a number of memory allocations etc.
+lmdbg-sysleaks - Filters out system memory leaks e.g. libc's
