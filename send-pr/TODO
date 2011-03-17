@@ -1,28 +1,4 @@
 maybe remove send-pr from database/gnats and depend on this instead
 (and get rid of any CONFLICTs)
-but then share/gnats/dist may need to be chowned the gnats user ??
 
-check to make sure defaults are appropriate even on NetBSD
-install-sid should be installed to ${PREFIX}/sbin
-
-have empty GNATS_ADDR
-empty DEFAULT_RELEASE
-empty GNATS_SITE
-
-should this predefine GNATS_ROOT??
-
-allow somethings to be set with variables
-and don't edit file after installation with install-sid
-(and make install-sid modify config file instead)
-maybe add option for PKG_SYSCONFDIR/send-pr.conf
-(be sure to submit patches back to real gnats developers.)
-
-should MESSAGE include:
-Any users who wish to use the Emacs version of `send-pr' must place
-    the following line in their ".emacs" files:
-
-        (autoload 'send-pr "send-pr" "Submit a Problem Report." t)
-
-should this use RMDIR for the gnats directory like it does for emacs?
-(because my mit-krb5 package provides a mit gnats categories file,
-maybe it shouldn't?)
+update to latest version
