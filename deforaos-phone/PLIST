@@ -1,14 +1,17 @@
-@comment $NetBSD: PLIST,v 1.5 2010/11/07 15:59:05 khorben Exp $
+@comment $NetBSD: PLIST,v 1.6 2011/03/17 11:28:48 khorben Exp $
 bin/phone
 bin/phone-contacts
 bin/phone-dialer
 bin/phone-logs
 bin/phone-messages
+bin/phone-resume
 bin/phone-settings
+bin/phone-suspend
 include/Phone.h
 lib/Phone/plugins/blacklist.so
 lib/Phone/plugins/debug.so
 lib/Phone/plugins/engineering.so
+lib/Phone/plugins/gprs.so
 lib/Phone/plugins/openmoko.so
 lib/Phone/plugins/panel.so
 lib/Phone/plugins/profiles.so
