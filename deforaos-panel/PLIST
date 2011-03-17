@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2011/02/24 13:23:25 khorben Exp $
+@comment $NetBSD: PLIST,v 1.7 2011/03/17 11:26:50 khorben Exp $
 bin/panel
 bin/panel-settings
 bin/run
@@ -21,17 +21,20 @@ lib/Panel/applets/phone.so
 lib/Panel/applets/swap.so
 lib/Panel/applets/systray.so
 lib/Panel/applets/tasks.so
+lib/Panel/applets/usb.so
 lib/Panel/applets/volume.so
 lib/Panel/applets/wpa_supplicant.so
 share/applications/panel-settings.desktop
 share/icons/hicolor/16x16/apps/panel-applet-bluetooth.png
 share/icons/hicolor/16x16/apps/panel-applet-desktop.png
+share/icons/hicolor/16x16/apps/panel-applet-usb.png
 share/icons/hicolor/16x16/apps/panel-settings.png
 share/icons/hicolor/22x22/apps/panel-applet-bluetooth.png
 share/icons/hicolor/22x22/apps/panel-applet-desktop.png
 share/icons/hicolor/22x22/apps/panel-settings.png
 share/icons/hicolor/24x24/apps/panel-applet-bluetooth.png
 share/icons/hicolor/24x24/apps/panel-applet-desktop.png
+share/icons/hicolor/24x24/apps/panel-applet-usb.png
 share/icons/hicolor/24x24/apps/panel-settings.png
 share/icons/hicolor/32x32/apps/panel-applet-bluetooth.png
 share/icons/hicolor/32x32/apps/panel-applet-desktop.png

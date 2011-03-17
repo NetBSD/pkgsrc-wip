@@ -1,0 +1,21 @@
+$NetBSD: patch-aa,v 1.1 2011/03/17 11:26:50 khorben Exp $
+
+--- src/applets/usb.c.orig	2011-03-16 14:21:32.000000000 +0000
++++ src/applets/usb.c
+@@ -19,7 +19,6 @@
+ # include <sys/types.h>
+ # include <sys/ioctl.h>
+ # include <net/if.h>
+-# include <usb.h>
+ # include <unistd.h>
+ # include <stdio.h>
+ # include <string.h>
+@@ -170,7 +169,7 @@ static gboolean _usb_get(USB * usb)
+ 	/* XXX currently hard-coded for the Openmoko Freerunner */
+ 	char const dv1[] = "/sys/bus/platform/devices/gta02-pm-usbhost.0"
+ 		"/power_on";
+-	char const dv2[] = "/sys/bus/platform/devices/neo1973-pm-usbhost.0"
++	char const dv2[] = "/sys/bus/platform/devices/neo1973-pm-host.0"
+ 		"/power_on";
+ 	char const * dev = dv1;
+ 	char on;
