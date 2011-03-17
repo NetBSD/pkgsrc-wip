@@ -1,3 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2009/09/20 12:34:16 khorben Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/03/17 11:51:38 khorben Exp $
 bin/player
 share/applications/player.desktop
+share/locale/fr/LC_MESSAGES/Player.mo
