@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2011/03/16 08:52:51 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.7 2011/03/17 08:01:51 mwdavies Exp $
 bin/k3b
 bin/k3bsetup
 include/k3b_export.h
@@ -126,6 +126,7 @@ lib/kde4/k3bflacdecoder.so
 lib/kde4/k3blameencoder.so
 lib/kde4/k3blibsndfiledecoder.so
 lib/kde4/k3bmaddecoder.so
+lib/kde4/k3bmpcdecoder.so
 lib/kde4/k3boggvorbisdecoder.so
 lib/kde4/k3boggvorbisencoder.so
 lib/kde4/k3bsoxencoder.so
@@ -334,6 +335,7 @@ share/kde4/services/k3bflacdecoder.desktop
 share/kde4/services/k3blameencoder.desktop
 share/kde4/services/k3blibsndfiledecoder.desktop
 share/kde4/services/k3bmaddecoder.desktop
+share/kde4/services/k3bmpcdecoder.desktop
 share/kde4/services/k3boggvorbisdecoder.desktop
 share/kde4/services/k3boggvorbisencoder.desktop
 share/kde4/services/k3bsetup.desktop
