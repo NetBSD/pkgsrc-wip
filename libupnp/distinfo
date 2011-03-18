@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.18 2011/02/11 04:59:03 obache Exp $
+$NetBSD: distinfo,v 1.19 2011/03/18 04:39:47 obache Exp $
 
-SHA1 (libupnp-1.6.12.tar.bz2) = ee4cbafc8e3714282bc05e79b4a064db90812911
-RMD160 (libupnp-1.6.12.tar.bz2) = b26aab06e6629f0ec24c34977cce4bd86ddd18ad
-Size (libupnp-1.6.12.tar.bz2) = 1178639 bytes
+SHA1 (libupnp-1.6.13.tar.bz2) = c852a0124af4e146d6facc3f8baa01805ade50aa
+RMD160 (libupnp-1.6.13.tar.bz2) = 86f2eb1d0d5b5a8627bb82400724426b6b22044e
+Size (libupnp-1.6.13.tar.bz2) = 1191882 bytes
