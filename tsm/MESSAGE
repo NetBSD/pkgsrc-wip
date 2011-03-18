@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.9 2011/03/18 16:40:09 hfath Exp $
+$NetBSD: MESSAGE,v 1.10 2011/03/18 17:27:36 hfath Exp $
 
 Tivoli Storage Manager Client has been installed in
 		${EMULDIR}/opt/tivoli
@@ -12,13 +12,17 @@ The documentation (html and pdf) has been installed in
 
 NetBSD configuration hints:
 
-- TSM expects ${EMULDIR}/etc/mtab to exist and be meaningful. The
-  suse_base package sets up a symlink to ${EMULDIR}/proc/mounts
-  (make sure it links to /proc/mounts instead for NetBSD 5 and
-  newer!), which works on NetBSD 3 or newer if you mount procfs like
+- TSM expects ${EMULDIR}/etc/mtab to exist and be meaningful.
+  Making it a syslink to /proc/mounts works on NetBSD 3 or 
+  newer, if you mount procfs like
   >> procfs  /emul/linux/proc  procfs  ro,linux  0 0 <<
   in /etc/fstab.
   Alternatively, make ${EMULDIR}/etc/mtab a symlink to /etc/fstab.
+
+- The suse_base package sets up ${EMULDIR}/etc/mtab as a symlink 
+  to ${EMULDIR}/proc/mounts. Make sure it links to /proc/mounts 
+  instead for NetBSD 5 and newer, or dsmc will die an early 
+  ANS1030E death.
 
 - Make sure the 'passworddir' variable is set in tsm.sys so that the
   passwd file ends up in ${PKG_SYSCONFDIR} instead of the shadow

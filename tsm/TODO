@@ -2,9 +2,6 @@
 
 - Work out installation on rpm-native platforms (Linux, Solaris, AIX)
 
-- With suse-linux 10, this version of the TSM client dies with an
-  out-of-memory error.
-
 - http://secunia.com/advisories/42639/
 
 - v5.2.x is no longer supported. Unfortunately, it is the last version
