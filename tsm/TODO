@@ -2,11 +2,6 @@
 
 - Work out installation on rpm-native platforms (Linux, Solaris, AIX)
 
-- Get rid of warning 
-warning: /usr/pkg/emul/linux/opt/tivoli/tsm/client/api/bin/dsmtca: set-uid or set-gid files should not be writable by anyone.
-warning: /usr/pkg/emul/linux/opt/tivoli/tsm/client/ba/bin/dsmtca: set-uid or set-gid files should not be writable by anyone.
-  -- bogus, since linux binaries are always installed root-writable.
-
 - With suse-linux 10, this version of the TSM client dies with an
   out-of-memory error.
 
