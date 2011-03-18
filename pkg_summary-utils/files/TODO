@@ -50,10 +50,8 @@ existing tools:
        - use "pkg_grep_summary -t strfile PKGPANA"
 
     pkg_update_summary:
-       - use standard 'find -newer' instead of 'ls -1t' and
-         non-portable 'test f1 -nt f2'
-       - before using modification time of pkg_summary.txt it is necessary
-        to ckeck pkg_summary.txt's content
+       - reimplement it using 'pkg_grep_summary -S FILE_NAME file'
+         and...
 
     pkg_lint_summary:
          - checks for bad patterns like foobar<=1.1.1nb*
