@@ -1,6 +1,11 @@
-@comment $NetBSD: PLIST,v 1.4 2009/10/11 10:45:22 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.5 2011/03/18 16:46:42 hfath Exp $
 share/examples/tsm/dsm.opt.smp
 share/examples/tsm/dsm.sys.smp
+share/examples/tsm/tsm_ld_so.conf
 share/examples/tsm/tsm_daily.sh
 @exec ${LN} -s ${EMULDIR}/${TSMCLIENTSUBDIR}/ba/bin/en_US/ ${PKG_SYSCONFDIR}/en_US
+@exec ${LN} -s ${EMULDIR}/${TSMCLIENTSUBDIR}/ba/bin/en_US/ ${PKG_SYSCONFDIR}/EN_US
+@exec ${EMULDIR}/sbin/ldconfig
 @unexec ${RM} -f ${PKG_SYSCONFDIR}/en_US
+@unexec ${RM} -f ${PKG_SYSCONFDIR}/EN_US
+@unexec ${EMULDIR}/sbin/ldconfig
