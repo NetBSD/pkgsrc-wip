@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2011/02/15 20:52:17 ryo-on Exp $
+$NetBSD: distinfo,v 1.7 2011/03/19 07:13:56 ryo-on Exp $
 
-SHA1 (OmegaT_2.2.3_02_Beta_Without_JRE.zip) = dfad22e6fceba586398e91e534df1bd62e7a9ef4
-RMD160 (OmegaT_2.2.3_02_Beta_Without_JRE.zip) = a7edea101af339623be4754168d4911c0384338a
-Size (OmegaT_2.2.3_02_Beta_Without_JRE.zip) = 17073420 bytes
+SHA1 (OmegaT_2.2.3_03_Without_JRE.zip) = 31e23a5daffb0b390c5436abb1c2b841fdacf9e1
+RMD160 (OmegaT_2.2.3_03_Without_JRE.zip) = 760c8bc16761f3330922d526cd7e0c8f61e2eb1e
+Size (OmegaT_2.2.3_03_Without_JRE.zip) = 17211973 bytes
