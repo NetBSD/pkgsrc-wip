@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2011/02/12 16:48:36 cheusov Exp $
+# $NetBSD: Makefile.common,v 1.6 2011/03/19 15:12:15 cheusov Exp $
 #
 # used by wip/pkg_online-client/Makefile
 # used by wip/pkg_online-server/Makefile
@@ -6,7 +6,7 @@
 DISTNAME=	pkg_online-${VERSION}
 MASTER_SITES=	http://mova.org/~cheusov/pub/pkg_online/
 
-VERSION=	0.12
+VERSION=	0.12.1
 
 MAINTAINER=	cheusov@tut.by
 HOMEPAGE=	http://mova.org/~cheusov/pub/pkg_online/
