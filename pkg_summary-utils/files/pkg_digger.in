@@ -26,8 +26,6 @@
 # (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-set -e
-
 #LIBEXECDIR=${LIBEXECDIR-@libexecdir@}
 #. "$LIBEXECDIR"/pkg_digger_backend.env
 . pipestatus
@@ -44,6 +42,8 @@ if test -r "$user_conf"; then
 elif test -r "$systemwide_conf"; then
     . "$systemwide_conf"
 fi
+
+set -e
 
 usage () {
 cat <<EOF
