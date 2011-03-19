@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2010/12/12 04:18:40 genolopolis Exp $
+# $NetBSD: Makefile,v 1.2 2011/03/19 14:42:23 genolopolis Exp $
 #
 
-DISTNAME=	maatkit-7041
+DISTNAME=	maatkit-7332
 PKGREVISION=    1
 CATEGORIES=	wip
 MASTER_SITES=	http://maatkit.googlecode.com/files/

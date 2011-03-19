@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2010/12/12 04:18:40 genolopolis Exp $
+$NetBSD: distinfo,v 1.2 2011/03/19 14:42:23 genolopolis Exp $
 
-SHA1 (maatkit-7041.tar.gz) = d27e8e625e02f9b55ab0f75c671abdb650455f9b
-RMD160 (maatkit-7041.tar.gz) = 9eb34d16dd3c4c5b25435c60fac5d3e3e8952bf7
-Size (maatkit-7041.tar.gz) = 1143373 bytes
+SHA1 (maatkit-7332.tar.gz) = 4553de8c8f2e8bcb65ea5eaa08741e6a9bc9a627
+RMD160 (maatkit-7332.tar.gz) = a19c496250edf2a174257cad1f66ded27cfb8262
+Size (maatkit-7332.tar.gz) = 1204253 bytes
