@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2011/03/13 23:34:46 cheusov Exp $
+# $NetBSD: Makefile,v 1.19 2011/03/19 13:42:21 cheusov Exp $
 
 DISTNAME=	pkgnih-999
 CATEGORIES=	pkgtools
@@ -34,6 +34,7 @@ CONF_FILES=		${EGDIR}/nih.conf \
 MAKE_DIRS+=		${PKG_SYSCONFDIR}/nih
 
 MAKE_ENV+=		MANDIR=${PREFIX}/${PKGMANDIR}
+MAKE_ENV+=		VERSION=${_GIT_TODAY:S/-//g}
 
 .include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"
