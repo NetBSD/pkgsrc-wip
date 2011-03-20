@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/03/20 21:43:34 jihbed Exp $
+${PYSITELIB}/graphserver/__init__.py
+${PYSITELIB}/graphserver/__init__.pyc
+${PYSITELIB}/graphserver/__init__.pyo
+${PYSITELIB}/graphserver/xmlrpc.py
+${PYSITELIB}/graphserver/xmlrpc.pyc
+${PYSITELIB}/graphserver/xmlrpc.pyo
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/zip-safe
+${PYSITELIB}/liveplots/__init__.py
+${PYSITELIB}/liveplots/__init__.pyc
+${PYSITELIB}/liveplots/__init__.pyo
+${PYSITELIB}/liveplots/filemonitor.py
+${PYSITELIB}/liveplots/filemonitor.pyc
+${PYSITELIB}/liveplots/filemonitor.pyo
+${PYSITELIB}/liveplots/xmlrpcserver.py
+${PYSITELIB}/liveplots/xmlrpcserver.pyc
+${PYSITELIB}/liveplots/xmlrpcserver.pyo
