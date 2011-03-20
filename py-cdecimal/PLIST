@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/03/20 23:19:17 jihbed Exp $
+${PYSITELIB}/cdecimal.so
