@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/03/20 23:23:02 jihbed Exp $
+
+SHA1 (pycvf-0.2.0.tar.gz) = ffdb4839e1eb450b852789467b61ae6c3e3f5f36
+RMD160 (pycvf-0.2.0.tar.gz) = 9786c103681d30d38404fb581511ebff8b2e5b36
+Size (pycvf-0.2.0.tar.gz) = 838925 bytes
