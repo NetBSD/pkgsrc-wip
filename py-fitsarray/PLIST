@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/03/20 22:21:46 jihbed Exp $
+${PYSITELIB}/fitsarray/__init__.py
+${PYSITELIB}/fitsarray/__init__.pyc
+${PYSITELIB}/fitsarray/__init__.pyo
+${PYSITELIB}/fitsarray/fitsarray.py
+${PYSITELIB}/fitsarray/fitsarray.pyc
+${PYSITELIB}/fitsarray/fitsarray.pyo
