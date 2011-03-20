@@ -1,0 +1,3 @@
+CoreBio is a python toolkit for computational biology. It includes code to read
+and write biological sequence formats, access computational and database
+resources, and to perform sequence alignment and other computational analysis
