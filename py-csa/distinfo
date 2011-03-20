@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/03/20 22:25:47 jihbed Exp $
+
+SHA1 (csa-0.0.1.tar.gz) = fe376771da542514cad7068a3e9c6b757004590b
+RMD160 (csa-0.0.1.tar.gz) = 64e17ca5025fd5ba53499d097c437aae22b66762
+Size (csa-0.0.1.tar.gz) = 25349 bytes
