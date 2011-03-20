@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/03/20 23:33:48 jihbed Exp $
+
+SHA1 (joblib-0.4.6.dev.tar.gz) = a8696e1e84e58396b35af03fc0d34964479b5055
+RMD160 (joblib-0.4.6.dev.tar.gz) = 3f50a2e044bbaab2640df3500596398fbb629afc
+Size (joblib-0.4.6.dev.tar.gz) = 190818 bytes
