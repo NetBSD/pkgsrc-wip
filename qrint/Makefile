@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/01/22 13:30:49 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2011/03/20 23:07:48 jihbed Exp $
 #
 
 DISTNAME=	qrint
@@ -7,9 +7,9 @@ CATEGORIES=	math
 MASTER_SITES=	http://people.math.gatech.edu/~dieci/qrint/
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=	jihbed.resarch@gmail.com
+MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://people.math.gatech.edu/~dieci/software-qrint.html
-COMMENT=	TODO: Short description of the package
+COMMENT=	Orthonormal integrators
 #LICENSE=	# TODO: (see mk/license.mk)
 
 PKG_DESTDIR_SUPPORT=	user-destdir

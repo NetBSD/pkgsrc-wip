@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/03/07 10:48:54 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2011/03/20 22:55:54 jihbed Exp $
 #
 
 DISTNAME=	mwavepy-1.0
@@ -7,7 +7,7 @@ PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	science
 MASTER_SITES=	http://mwavepy.googlecode.com/files/
 
-MAINTAINER=	jihbed.esearch@gmail.com
+MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://code.google.com/p/mwavepy/
 COMMENT=	Python datatypes and functions for microwave engineering
 LICENSE=	gnu-gpl-v2
