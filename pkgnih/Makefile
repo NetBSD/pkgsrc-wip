@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2011/03/14 14:09:00 cheusov Exp $
+# $NetBSD: Makefile,v 1.12 2011/03/20 14:38:48 cheusov Exp $
 
-DISTNAME=	pkgnih-0.6
+DISTNAME=	pkgnih-0.6.2
 CATEGORIES=	pkgtools
 MASTER_SITES=	http://mova.org/~cheusov/pub/pkgnih/
 
