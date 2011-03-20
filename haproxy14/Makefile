@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/10/17 20:04:27 shindenmorr Exp $
+# $NetBSD: Makefile,v 1.2 2011/03/20 20:40:46 shindenmorr Exp $
 
-DISTNAME=	haproxy-1.4.8
+DISTNAME=	haproxy-1.4.13
 CATEGORIES=	www
 MASTER_SITES=	http://haproxy.1wt.eu/download/1.4/src/
 
 MAINTAINER=	morr@NetBSD.org
 HOMEPAGE=	http://haproxy.1wt.eu/
 COMMENT=	Reliable, high performance TCP/HTTP load balancer
-
 LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir

@@ -1,6 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2010/10/17 20:04:27 shindenmorr Exp $
+$NetBSD: patch-aa,v 1.2 2011/03/20 20:40:46 shindenmorr Exp $
 
---- Makefile.orig	2010-06-16 20:57:48.000000000 +0000
+Add support for NetBSD.
+
+--- Makefile.orig	2011-03-09 08:00:16.000000000 +0000
 +++ Makefile
 @@ -71,7 +71,7 @@ DOCDIR = $(PREFIX)/doc/haproxy
  # Use TARGET=<target_name> to optimize for a specifc target OS among the
@@ -19,21 +21,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2010/10/17 20:04:27 shindenmorr Exp $
  LD = $(CC)
  
  #### Debug flags (typically "-g").
-@@ -150,13 +149,11 @@ ARCH_FLAGS        = $(ARCH_FLAGS.$(ARCH)
- # These CFLAGS contain general optimization options, CPU-specific optimizations
- # and debug flags. They may be overridden by some distributions which prefer to
- # set all of them at once instead of playing with the CPU and DEBUG variables.
--CFLAGS = $(ARCH_FLAGS) $(CPU_CFLAGS) $(DEBUG_CFLAGS)
- 
- #### Common LDFLAGS
- # These LDFLAGS are used as the first "ld" options, regardless of any library
- # path or any other option. They may be changed to add any linker-specific
- # option at the beginning of the ld command line.
--LDFLAGS = $(ARCH_FLAGS) -g
- 
- #### Target system options
- # Depending on the target platform, some options are set, as well as some
-@@ -220,6 +217,12 @@ ifeq ($(TARGET),freebsd)
+@@ -228,6 +227,12 @@ ifeq ($(TARGET),freebsd)
    USE_TPROXY     = implicit
    USE_LIBCRYPT   = implicit
  else
@@ -46,7 +34,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2010/10/17 20:04:27 shindenmorr Exp $
  ifeq ($(TARGET),openbsd)
    # This is for OpenBSD >= 3.0
    USE_POLL       = implicit
-@@ -234,6 +237,7 @@ ifeq ($(TARGET),cygwin)
+@@ -242,6 +247,7 @@ ifeq ($(TARGET),cygwin)
    TARGET_CFLAGS  = $(if $(filter 1.5.%, $(shell uname -r)), -DUSE_IPV6 -DAF_INET6=23 -DINET6_ADDRSTRLEN=46, )
  endif # cygwin
  endif # openbsd
@@ -54,7 +42,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2010/10/17 20:04:27 shindenmorr Exp $
  endif # freebsd
  endif # solaris
  endif # linux26
-@@ -465,7 +469,7 @@ all:
+@@ -473,7 +479,7 @@ all:
  	@echo "Please choose the target among the following supported list :"
  	@echo
  	@echo "   linux26, linux24, linux24e, linux22, solaris"
