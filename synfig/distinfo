@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/07/20 13:55:36 phonohawk Exp $
+$NetBSD: distinfo,v 1.2 2011/03/21 16:43:49 phonohawk Exp $
 
-SHA1 (synfig-0.61.08.tar.gz) = ec0f90da55089bf273dca05115c851c79f5f2a59
-RMD160 (synfig-0.61.08.tar.gz) = 3b764b432ba6e97511b010eb01608e6424868396
-Size (synfig-0.61.08.tar.gz) = 2688529 bytes
+SHA1 (synfig-0.62.02.tar.gz) = dd571f8a382d97fc45171527938ac36efab9274b
+RMD160 (synfig-0.62.02.tar.gz) = 3242b9aa85d76eb462f8e294f9241a499370e4ba
+Size (synfig-0.62.02.tar.gz) = 3118478 bytes
+SHA1 (patch-src_modules_mod__png_mptr__png.cpp) = fbfc81c28e8860bc268bd79082c826e427f19f76
+SHA1 (patch-src_modules_mod__png_trgt__png.cpp) = b3f6ac7a83afd87baf7b6beaba46aa540df725ac
