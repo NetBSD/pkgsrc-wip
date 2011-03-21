@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4275 2011/03/21 12:46:13 phonohawk Exp $
+# $Id: Makefile,v 1.4276 2011/03/21 16:55:18 minskim Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2672,7 +2672,6 @@ SUBDIR+=	testdisk
 SUBDIR+=	tetrinet
 SUBDIR+=	tex-arabxtex
 SUBDIR+=	tex-arabxtex-doc
-SUBDIR+=	tex-arphic-ttf
 SUBDIR+=	tex-baekmuk-ttf
 SUBDIR+=	tex-feynmf
 SUBDIR+=	tex-feynmf-doc
