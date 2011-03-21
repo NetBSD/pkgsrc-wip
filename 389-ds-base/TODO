@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.1.1.1 2009/08/26 20:36:01 udontknow Exp $
+$NetBSD: TODO,v 1.2 2011/03/21 22:14:11 pettai Exp $
 
 - Fix heimdal - https://bugzilla.redhat.com/show_bug.cgi?id=519464
 
@@ -9,3 +9,4 @@ $NetBSD: TODO,v 1.1.1.1 2009/08/26 20:36:01 udontknow Exp $
 
 - Write BSD-compatible rc script
 
+- Note CVE-2011-1067, CVE-2010-4746
