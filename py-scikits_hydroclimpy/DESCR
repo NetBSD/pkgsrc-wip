@@ -1,0 +1,4 @@
+The scikits.hydroclimpy module is a collection of tools for manipulating and
+plotting environmental time series of various frequencies. This package is
+an extension for scikits.timeseries, focusing on tools for the analysis of
+hydroclimatologic datasets
