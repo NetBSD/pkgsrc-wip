@@ -1,10 +1,10 @@
-$NetBSD: patch-src_modules_mod__png_mptr__png.cpp,v 1.1 2011/03/21 16:43:49 phonohawk Exp $
+$NetBSD: patch-src_modules_mod__png_mptr__png.cpp,v 1.2 2011/03/22 10:14:08 phonohawk Exp $
 
 Fix build breakage on png-1.5.1
 
 --- src/modules/mod_png/mptr_png.cpp.orig	2010-11-13 13:51:52.000000000 +0000
 +++ src/modules/mod_png/mptr_png.cpp
-@@ -301,15 +301,26 @@ png_mptr::png_mptr(const char *file_name
+@@ -301,15 +301,27 @@ png_mptr::png_mptr(const char *file_name
  		break;
  
  	case PNG_COLOR_TYPE_PALETTE:
@@ -12,10 +12,11 @@ Fix build breakage on png-1.5.1
 +        int num_palette;
 +        png_get_PLTE(png_ptr, info_ptr, &palette, &num_palette);
 +
-+        bool const is_tRNS_valid = png_get_valid(png_ptr, info_ptr, PNG_INFO_tRNS);
++        bool is_tRNS_valid;
 +        png_bytep trans_alpha;
 +        int num_trans;
 +        png_color_16p trans_color;
++        is_tRNS_valid = png_get_valid(png_ptr, info_ptr, PNG_INFO_tRNS);
 +        png_get_tRNS(png_ptr, info_ptr, &trans_alpha, &num_trans, &trans_color);
 +
  		for(y=0;y<height;y++)
