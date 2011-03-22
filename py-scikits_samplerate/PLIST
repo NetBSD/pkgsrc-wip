@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/03/22 08:24:23 jihbed Exp $
+${PYSITELIB}/${EGG_NAME}-nspkg.pth
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/namespace_packages.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/scikits/__init__.py
+${PYSITELIB}/scikits/samplerate/__init__.py
+${PYSITELIB}/scikits/samplerate/__init__.pyc
+${PYSITELIB}/scikits/samplerate/__init__.pyo
+${PYSITELIB}/scikits/samplerate/_samplerate.so
+${PYSITELIB}/scikits/samplerate/info.py
+${PYSITELIB}/scikits/samplerate/info.pyc
+${PYSITELIB}/scikits/samplerate/info.pyo
+${PYSITELIB}/scikits/samplerate/setup.py
+${PYSITELIB}/scikits/samplerate/setup.pyc
+${PYSITELIB}/scikits/samplerate/setup.pyo
+${PYSITELIB}/scikits/samplerate/setuphelp.py
+${PYSITELIB}/scikits/samplerate/setuphelp.pyc
+${PYSITELIB}/scikits/samplerate/setuphelp.pyo
+${PYSITELIB}/scikits/samplerate/tests/test_regression.py
+${PYSITELIB}/scikits/samplerate/version.py
+${PYSITELIB}/scikits/samplerate/version.pyc
+${PYSITELIB}/scikits/samplerate/version.pyo
