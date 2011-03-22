@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4276 2011/03/21 16:55:18 minskim Exp $
+# $Id: Makefile,v 1.4277 2011/03/22 14:57:37 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1892,6 +1892,7 @@ SUBDIR+=	parallel
 SUBDIR+=	paraview
 SUBDIR+=	parcellite
 SUBDIR+=	parted
+SUBDIR+=	partonevolution
 SUBDIR+=	pasmo
 SUBDIR+=	passepartout
 SUBDIR+=	pbbuttonsd
@@ -2283,13 +2284,16 @@ SUBDIR+=	py-scikits-bvp_solver
 SUBDIR+=	py-scikits_ann
 SUBDIR+=	py-scikits_bvp1lg
 SUBDIR+=	py-scikits_datasmooth
+SUBDIR+=	py-scikits_hydroclimpy
 SUBDIR+=	py-scikits_image
 SUBDIR+=	py-scikits_learn
 SUBDIR+=	py-scikits_optimization
+SUBDIR+=	py-scikits_samplerate
 SUBDIR+=	py-scikits_scattpy
 SUBDIR+=	py-scikits_statsmodels
 SUBDIR+=	py-scikits_talkbox
 SUBDIR+=	py-scikits_timeseries
+SUBDIR+=	py-scikits_vectorplot
 SUBDIR+=	py-scipy
 SUBDIR+=	py-scitools
 SUBDIR+=	py-scrobbler
