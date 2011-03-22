@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/03/22 08:21:39 jihbed Exp $
+${PYSITELIB}/${EGG_NAME}-nspkg.pth
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/namespace_packages.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/zip-safe
+${PYSITELIB}/scikits/vectorplot/__init__.py
+${PYSITELIB}/scikits/vectorplot/__init__.pyc
+${PYSITELIB}/scikits/vectorplot/__init__.pyo
+${PYSITELIB}/scikits/vectorplot/kernels.py
+${PYSITELIB}/scikits/vectorplot/kernels.pyc
+${PYSITELIB}/scikits/vectorplot/kernels.pyo
+${PYSITELIB}/scikits/vectorplot/lic.py
+${PYSITELIB}/scikits/vectorplot/lic.pyc
+${PYSITELIB}/scikits/vectorplot/lic.pyo
+${PYSITELIB}/scikits/vectorplot/setup.py
+${PYSITELIB}/scikits/vectorplot/setup.pyc
+${PYSITELIB}/scikits/vectorplot/setup.pyo
