@@ -1,11 +1,11 @@
-# $NetBSD: dist.mk,v 1.27 2011/03/15 20:18:48 tnn2 Exp $
+# $NetBSD: dist.mk,v 1.28 2011/03/22 15:43:08 tnn2 Exp $
 #
 # used by wip/xulrunner/Makefile
 # used by wip/firefox/Makefile
 
 DISTNAME=	firefox-${FIREFOX_VER}.source
-FIREFOX_VER=	4.0rc1${MOZ_BRANCH_MINOR}
-MOZ_BRANCH=	2.0rc1
+FIREFOX_VER=	4.0${MOZ_BRANCH_MINOR}
+MOZ_BRANCH=	2.0
 MOZ_BRANCH_MINOR=	# empty
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=firefox/releases/${FIREFOX_VER}/source/}
 EXTRACT_SUFX=	.tar.bz2
