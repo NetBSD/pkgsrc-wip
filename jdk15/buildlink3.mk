@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2010/11/27 14:04:52 ftigeot Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2011/03/23 05:16:04 obache Exp $
 
 BUILDLINK_TREE+=	jdk15
 
@@ -13,7 +13,7 @@ BUILDLINK_PASSTHRU_DIRS+=	${BUILDLINK_JAVA_PREFIX.jdk15}
 
 BUILDLINK_CPPFLAGS.jdk15= \
 	-I${BUILDLINK_JAVA_PREFIX.jdk15}/include	\
-	-I${BUILDLINK_JAVA_PREFIX.jdk15}/include/netbsd
+	-I${BUILDLINK_JAVA_PREFIX.jdk15}/include/${LOWER_OPSYS}
 
 .include "../../x11/libXi/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
