@@ -1,0 +1,21 @@
+$NetBSD: patch-aa,v 1.1.1.1 2011/03/23 11:00:51 jihbed Exp $
+
+--- setup.py.orig	2010-03-18 11:03:11.000000000 +0000
++++ setup.py	2010-08-15 12:21:36.000000000 +0000
+@@ -9,6 +9,7 @@
+     
+ #flib = Extension(name='model-builder.Bayes.flib',sources=['model-builder/Bayes/flib.f'])
+ 
++
+ setup(name = 'Model-Builder',
+       version = version,
+       author = 'Flavio Codeco Coelho',
+@@ -22,6 +23,7 @@
+       packages = ['model_builder'],
+       entry_points = {'gui_scripts':['PyMB = model_builder.PyMB:main']},
+       #scripts=['model-builder/PyMB.py'],
+-      #datafiles=[('share/model-builder/examples',['model-builder/Examples/*.ode'])],
++      datafiles=[('/usr/pkg/share/applications', ['./model-builder.desktop']),
++			('/usr/pkg/share/pixmaps/', ['./MB.png'])],
+       #ext_modules = [flib]
+      )

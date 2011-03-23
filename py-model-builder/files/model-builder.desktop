@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Model Builder
+Comment=Graphical ODE simulator
+GenericName=Graphical ODE simulator
+Exec=PyMB
+Icon=/usr/share/pixmaps/MB.ico
+Type=Application
+StartupNotify=false
+Terminal=false
+Categories=Science;Math;Engineering;
