@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.2 2010/08/19 18:00:30 erinlalouve Exp $
+# $NetBSD: Makefile,v 1.3 2011/03/23 16:30:42 erinlalouve Exp $
 #
 
-PKGNAME=	seeks-0.2.4
-DISTNAME=	seeks_solo_stable-0.2.4
+PKGNAME=	seeks-0.3.2
+DISTNAME=	seeks-0.3.2
 CATEGORIES=	local
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=seeks/}
 
-MAINTAINER=	erinlalouve@free.fr
+MAINTAINER=	erin.nivelet@erinlalouve.com
 HOMEPAGE=	https://www.seeks-project.info/
 COMMENT=	Decentralized metasearch engine
 
@@ -22,12 +22,11 @@ USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	autoconf automake gmake
 
-WRKSRC=		${WRKDIR}/seeks # More than one possibility -- please check manually.
-
-pre-configure:
-	cd ${WRKSRC} && sh autogen.sh
+WRKSRC=		${WRKDIR}/seeks-0.3.2 
 
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
+.include "../../databases/tokyocabinet/buildlink3.mk"
+.include "../../wip/protobuf/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
