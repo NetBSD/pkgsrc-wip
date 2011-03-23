@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/03/23 09:48:21 jihbed Exp $
+
+SHA1 (pymvpa_0.4.5.tar.gz) = 3d10e586ed30e6565fd6f8d3df7c5d85e2f3c2b3
+RMD160 (pymvpa_0.4.5.tar.gz) = b061337981cfbf8e3b62c4deb6d98543bb57c34c
+Size (pymvpa_0.4.5.tar.gz) = 4148710 bytes
