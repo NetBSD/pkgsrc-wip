@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4277 2011/03/22 14:57:37 jihbed Exp $
+# $Id: Makefile,v 1.4278 2011/03/23 12:38:09 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2201,8 +2201,10 @@ SUBDIR+=	py-mdp
 SUBDIR+=	py-memcached
 SUBDIR+=	py-metrics
 SUBDIR+=	py-mocker
+SUBDIR+=	py-model-builder
 SUBDIR+=	py-mois
 SUBDIR+=	py-mpich4py
+SUBDIR+=	py-multichain_mcmc
 SUBDIR+=	py-mwavepy
 SUBDIR+=	py-mx-base
 SUBDIR+=	py-mysqldb-docs
@@ -2297,6 +2299,7 @@ SUBDIR+=	py-scikits_vectorplot
 SUBDIR+=	py-scipy
 SUBDIR+=	py-scitools
 SUBDIR+=	py-scrobbler
+SUBDIR+=	py-se
 SUBDIR+=	py-selenium
 SUBDIR+=	py-setupdocs
 SUBDIR+=	py-setuptools_git
@@ -2323,6 +2326,7 @@ SUBDIR+=	py-stem
 SUBDIR+=	py-storm
 SUBDIR+=	py-sumatra
 SUBDIR+=	py-swarmsdk
+SUBDIR+=	py-swiginac
 SUBDIR+=	py-symboltype
 SUBDIR+=	py-symeig
 SUBDIR+=	py-sympycore
@@ -2378,6 +2382,7 @@ SUBDIR+=	py-xmpppy
 SUBDIR+=	py-xsdb
 SUBDIR+=	py-yapgvb
 SUBDIR+=	py-yapps2
+SUBDIR+=	py-pymvpa
 SUBDIR+=	py-zeitgeist
 SUBDIR+=	pydance
 SUBDIR+=	pydb
