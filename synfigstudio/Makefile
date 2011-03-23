@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2011/03/22 06:10:38 phonohawk Exp $
+# $NetBSD: Makefile,v 1.8 2011/03/23 04:37:07 phonohawk Exp $
 #
 
 DISTNAME=	synfigstudio-0.62.02
@@ -26,6 +26,8 @@ post-install:
 
 .include "../../wip/ETL/buildlink3.mk"
 .include "../../devel/GConf/schemas.mk"
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/libltdl/buildlink3.mk"
 .include "../../devel/libsigc++/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glibmm/buildlink3.mk"
