@@ -1,14 +1,8 @@
-$NetBSD: patch-aa,v 1.1 2011/03/23 04:31:29 bharder Exp $
+$NetBSD: patch-aa,v 1.2 2011/03/23 21:10:43 bharder Exp $
 
 --- ./snappy_unittest.cc.orig	2011-03-18 17:15:10.000000000 +0000
 +++ ./snappy_unittest.cc
-@@ -147,12 +147,13 @@ static bool Compress(const char* input, 
- #endif  // LZO_VERSION
- 
- #ifdef LZF_VERSION
-+#define LZF_STATE_ARG 0
-     case LIBLZF: {
-       compressed->resize(input_size - 1);
+@@ -152,7 +152,7 @@ static bool Compress(const char* input, 
        int destlen = lzf_compress(input,
                                   input_size,
                                   string_as_array(compressed),
