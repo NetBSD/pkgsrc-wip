@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2011/03/24 10:28:19 keckhardt Exp $
+# $NetBSD: Makefile,v 1.10 2011/03/24 21:59:51 keckhardt Exp $
 
 DISTNAME=		gcc-${GCC_VERSION}
 PKGNAME=		gcc45-${GCC_VERSION}
@@ -102,7 +102,7 @@ CONFIGURE_ARGS+=	--disable-libssp
 CONFIGURE_ARGS+=	--enable-threads=posix
 CONFIGURE_ARGS+=	--with-gmp=${BUILDLINK_PREFIX.gmp}
 CONFIGURE_ARGS+=	--with-mpfr=${BUILDLINK_PREFIX.mpfr}
-.if !(${OPSYS} == "NetBSD")
+.if !(${OPSYS} == "Linux")
 CONFIGURE_ARGS+=	--with-ld=${PREFIX}/bin/gnu-ld
 CONFIGURE_ARGS+=	--with-libelf=${PREFIX}
 .endif
