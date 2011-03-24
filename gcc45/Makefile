@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2011/03/16 16:05:42 keckhardt Exp $
+# $NetBSD: Makefile,v 1.9 2011/03/24 10:28:19 keckhardt Exp $
 
 DISTNAME=		gcc-${GCC_VERSION}
 PKGNAME=		gcc45-${GCC_VERSION}
@@ -65,11 +65,7 @@ REPLACE_BASH+= libstdc++-v3/scripts/run_doxygen
 BUILD_DEFS+=		BUILD_CXX BUILD_FORTRAN BUILD_JAVA BUILD_OBJC
 BUILD_CXX?=		YES
 BUILD_FORTRAN?=		YES
-.if ${OPSYS} == "NetBSD"
 BUILD_JAVA?=		NO
-.else
-BUILD_JAVA?=		YES
-.endif
 BUILD_OBJC?=		YES
 
 LANGS= c
@@ -106,8 +102,10 @@ CONFIGURE_ARGS+=	--disable-libssp
 CONFIGURE_ARGS+=	--enable-threads=posix
 CONFIGURE_ARGS+=	--with-gmp=${BUILDLINK_PREFIX.gmp}
 CONFIGURE_ARGS+=	--with-mpfr=${BUILDLINK_PREFIX.mpfr}
+.if !(${OPSYS} == "NetBSD")
 CONFIGURE_ARGS+=	--with-ld=${PREFIX}/bin/gnu-ld
 CONFIGURE_ARGS+=	--with-libelf=${PREFIX}
+.endif
 
 CONFIGURE_ENV+=		CONFIG_SHELL=${CONFIG_SHELL}
 
