@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/03/25 18:11:59 jihbed Exp $
+
+SHA1 (maloc-1.4.tar.gz) = e5a677463a88a8022babf0ed896cb086f00d10bd
+RMD160 (maloc-1.4.tar.gz) = 52890e85bf94073409a30e80006ae933cc7b738b
+Size (maloc-1.4.tar.gz) = 797520 bytes
+SHA1 (patch-aa) = 043a8b358f5260f86de85a01e0e63726e88f0f0c
