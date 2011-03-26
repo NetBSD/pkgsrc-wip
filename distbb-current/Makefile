@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/03/16 11:55:30 cheusov Exp $
+# $NetBSD: Makefile,v 1.3 2011/03/26 20:48:52 cheusov Exp $
 #
 
 DISTNAME=	distbb-9
@@ -13,7 +13,7 @@ GIT_REPOSITORIES=	master
 GIT_REPO.master=	git@github.com:cheusov/distbb.git
 .include "../../wip/mk/git-package.mk"
 
-DEPENDS+=	pkg_summary-utils>=0.50beta4:../../wip/pkg_summary-utils
+DEPENDS+=	pkg_summary-utils>=0.50beta6:../../wip/pkg_summary-utils
 DEPENDS+=	paexec>=0.15.0:../../parallel/paexec
 DEPENDS+=	runawk>=1.1.0:../../lang/runawk
 DEPENDS+=	pipestatus>=0.6.0:../../devel/pipestatus
