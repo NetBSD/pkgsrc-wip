@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2011/03/26 20:19:32 genolopolis Exp $
+# $NetBSD: Makefile,v 1.2 2011/03/27 23:28:33 genolopolis Exp $
 
 DISTNAME=	AnyEvent-IRC-0.96
 PKGNAME=	p5-${DISTNAME}
@@ -16,6 +16,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST= auto/AnyEvent/IRC/.packlist
 
+DEPENDS+=	p5-Object-Event-[0-9]*:../../devel/p5-Object-Event
 DEPENDS+=	p5-AnyEvent>=5:../../devel/p5-AnyEvent
 
 .include "../../lang/perl5/module.mk"
