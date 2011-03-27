@@ -74,19 +74,6 @@ BEGIN {
 	multiline ["PROVIDES"]    = 1
 	multiline ["CONFLICTS"]   = 1
 
-	# FIXME: the following remaps should be fetched automatically
-	remap ["PKG_APACHE"]          = "PKG_APACHE"
-	remap ["PKG_APACHE_DEFAULT"]  = "PKG_APACHE"
-
-	remap ["PHP_VERSION_REQD"]    = "PHP_VERSION_REQD"
-	remap ["PHP_VERSION_DEFAULT"] = "PHP_VERSION_REQD"
-
-	remap ["PYTHON_VERSION_REQD"]    = "PYTHON_VERSION_REQD"
-	remap ["PYTHON_VERSION_DEFAULT"] = "PYTHON_VERSION_REQD"
-
-	remap ["RUBY_VERSION_REQD"]     = "RUBY_VERSION_REQD"
-	remap ["_RUBY_VERSION_DEFAULT"] = "RUBY_VERSION_REQD"
-
 	#
 	need_assigns = ("ASSIGNMENTS" in only_fields) || ("ASSIGNMENTS" in add_fields)
 	need_reqd = ("REQUIREDBY" in only_fields) || ("REQUIREDBY" in add_fields)
@@ -155,11 +142,9 @@ L_section {
 {
 	eq_idx = index($0, "=")
 	fname  = substr($0, 1, eq_idx-1)
-	if (need_assigns && (fname in remap)){
-		fvalue = substr($0, eq_idx+1)
-		if (assigns)
-			assigns = assigns ","
-		assigns = assigns remap [fname] "=" trim_lr(fvalue)
+	if (need_assigns && fname == "MULTI"){
+		assigns = substr($0, eq_idx+1)
+		gsub(/ /, ",", assigns)
 	}
 
 	# print current non-empty line
