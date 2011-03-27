@@ -1484,9 +1484,6 @@ PKGPATH=devel/libmaa
 PKGNAME=gmake-X
 PKGPATH=devel/gmake
 
-PKGNAME=paexec-X
-PKGPATH=wip/paexec
-
 PKGNAME=libtool-base-X
 PKGPATH=devel/libtool-base
 
@@ -1541,6 +1538,8 @@ cmp 'pkg_src_summary #1 stderr' \
 Bad package wip/pkg_online, skipped
  ------------------
 Bad package wip/dict-server, skipped
+ ------------------
+Bad package wip/paexec, skipped
  ------------------
 Bad package wip/runawk, skipped
  ------------------
@@ -1884,9 +1883,6 @@ PKGPATH=devel/libmaa
 PKGNAME=gmake-X
 PKGPATH=devel/gmake
 
-PKGNAME=paexec-X
-PKGPATH=wip/paexec
-
 PKGNAME=libtool-base-X
 PKGPATH=devel/libtool-base
 
@@ -1946,6 +1942,8 @@ cmp 'pkg_micro_src_summary #1 stderr' \
 Bad package wip/pkg_online, skipped
  ------------------
 Bad package wip/dict-server, skipped
+ ------------------
+Bad package wip/paexec, skipped
  ------------------
 Bad package wip/runawk, skipped
  ------------------

@@ -1,4 +1,32 @@
 ----------------------------------------------------------------------
+Version 0.53.0, by Aleksey Cheusov, Sun, 27 Mar 2011 22:56:39 +0300
+
+  Long options have been removed from all utilities.
+
+  Fix in comparing dewey versions: (N.0 > N problem)
+
+  pkg_summary2deps:
+     - Now it works correctly if multiple packages per
+       (PKGPATH, ASSIGNMENTS) pair are available in input summary.
+
+     - Now multiple conditions for the same package, e.g
+       "apache-1.3.* AND apache>=1.3" are handled correctly.
+
+     - Now -N and -P options accept absolute and relative
+        filename as argument.
+
+  pkg_digger.in:
+     - Workaround for buggy /bin/sh on DragonFly and FreeBSD<=N.M.
+       On these systems the following code
+                set -e; if eval false; then ...; fi
+       doesn't work correctly. Due to this problem pkg_digger failed.
+
+  pkg_bin_summary:
+     - Field ASSIGNMENTS is set with a help of recently introduced
+       field MULTI in "Build information" section of the binary
+       package.  Hardcoded rules have been removed.
+
+----------------------------------------------------------------------
 Version 0.52.0, by Aleksey Cheusov, Fri, 11 Feb 2011 17:05:27 +0200
 
   pkg_cmp_summary:
