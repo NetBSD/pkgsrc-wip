@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2011/01/15 18:07:16 crocusino Exp $
+$NetBSD: distinfo,v 1.3 2011/03/27 09:50:21 crocusino Exp $
 
 SHA1 (eor-1.0.2.zip) = 625827dc8035f69dd1ef4bc9506b236da2c8b931
 RMD160 (eor-1.0.2.zip) = c7a2a7c2f5342129f6727632494a69fc3f392aea
 Size (eor-1.0.2.zip) = 7763 bytes
-SHA1 (patch-aa) = 3aab195a1fa33db6a35bcaf7969c30309b85abdf
+SHA1 (patch-aa) = 22b6052c601c9d30641813f0f1c9c7e5bc1b2618

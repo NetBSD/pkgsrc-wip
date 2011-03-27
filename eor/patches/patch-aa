@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1 2011/01/15 18:07:16 crocusino Exp $
+$NetBSD: patch-aa,v 1.2 2011/03/27 09:50:21 crocusino Exp $
 
 configure for pkgsrc
 --- GNUmakefile.orig	2011-01-14 22:53:50.000000000 +0000
@@ -17,3 +17,12 @@ configure for pkgsrc
  INSTALL=    install
  
  sinclude    LOCAL.mk
+@@ -44,7 +44,7 @@ ${PROGNAME}:	${SRC}
+ 
+ install:    ${PROGNAME}
+ 	mkdir -p ${PREFIX}/bin
+-	${INSTALL} -m 755 ${PROGNAME} ${PREFIX}/bin/${PROGNAME}
++	${INSTALL} -m 755 ${PROGNAME} ${DESTDIR}${PREFIX}/bin/${PROGNAME}
+ 
+ clean:
+ 	rm -f ${PROGNAME}
