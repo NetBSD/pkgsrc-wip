@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2011/03/27 15:20:16 crocusino Exp $
+# $NetBSD: Makefile,v 1.6 2011/03/28 22:27:01 crocusino Exp $
 #
 
 DISTNAME=	termit-2.7.1
@@ -18,13 +18,12 @@ USE_TOOLS+=	gmake
 USE_CMAKE=	yes
 
 # fetch from https - fails with ftp
-# TODO - how to set properly so that pkglint is content?
-FETCH_USING=	custom
-FETCH_CMD=	wget
-FETCH_BEFORE_ARGS=	--no-check-certificate
+# curl still fails for pkgsrc-2010Q4,
+# but for newer mk/fetch/fetch.mk, curl works fine
+FETCH_USING=	curl
 
 # fix the MANPATH
-# cannot use patch as ${PKGMANDIR} is not expanded in CMakeKists.txt
+# cannot use patch as ${PKGMANDIR} is not expanded in CMakeLists.txt
 SUBST_CLASSES+=			fix-paths
 SUBST_STAGE.fix-paths=		pre-configure
 SUBST_MESSAGE.fix-paths=	Fixing absolute paths.
