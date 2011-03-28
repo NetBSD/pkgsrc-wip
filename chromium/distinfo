@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2011/01/19 07:57:49 thomasklausner Exp $
+$NetBSD: distinfo,v 1.8 2011/03/28 10:14:50 rxg Exp $
 
 SHA1 (chromium-7.0.517.43.tar.bz2) = e8294b6cd50aa41f28aaa7e5d10b2ca80be314cd
 RMD160 (chromium-7.0.517.43.tar.bz2) = 5136c9d8b7ef458f5bc58b3c3e92876b8d195cf3
@@ -62,6 +62,8 @@ SHA1 (patch-ce) = 84c891e1c60d2a71479ae8e2ad3b4ae1b4536fa2
 SHA1 (patch-cf) = 169ea9af7aa9f39211fc43255718a28c1e7c6875
 SHA1 (patch-cg) = ea7a5b160927f347e65d2a56f41ae3f5cd7589c1
 SHA1 (patch-ch) = 1acec5b73736d12a65731019848ce3ddc3a2cd26
+SHA1 (patch-chrome_browser_renderer_host_render_sandbox_host_linux.cc) = 8c759653da33b604cf8651c8d11a023650850575
+SHA1 (patch-chrome_browser_zygote_host_linux.cc) = 46da5cddc33f0a5b8adaecc18c01571e61e9b957
 SHA1 (patch-ci) = cba9150ecbaadb52ee686cc636c3ae2583d6ee1a
 SHA1 (patch-cj) = ff4ab6953cfab47966be7e000512a9c3914ff515
 SHA1 (patch-ck) = 26f1218c5429812c2c82f051931eabd2aa827ac0
@@ -125,3 +127,4 @@ SHA1 (patch-ep) = 064e875d9642420145f542050e17301ab64a545e
 SHA1 (patch-eq) = e5d71943a6464b6c65da6a17223a92f28e5e4a31
 SHA1 (patch-er) = 609079f9baf3446d0de74828b698391ec66264ca
 SHA1 (patch-es) = c3305058e78c7fd0a1741ed594a2cdb449fd8824
+SHA1 (patch-third_party_tcmalloc_vendor_configure) = dc208c508bd29363725d0af79e74b317be001992
