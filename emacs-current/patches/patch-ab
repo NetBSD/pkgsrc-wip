@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.12 2011/01/02 05:07:47 makoto Exp $
+$NetBSD: patch-ab,v 1.13 2011/03/29 10:44:15 makoto Exp $
 
 --- work/emacs/configure.orig	2010-06-08 00:51:58.000000000 +0900
-+++ configure	2010-06-08 00:53:33.000000000 +0900
++++ autogen/configure	2010-06-08 00:53:33.000000000 +0900
 @@ -7457,9 +7457,9 @@
    window_system=nextstep
    with_xft=no

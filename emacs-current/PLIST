@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.104 2011/02/28 13:32:02 makoto Exp $
+@comment $NetBSD: PLIST,v 1.105 2011/03/29 10:44:15 makoto Exp $
 bin/ctags
 bin/ebrowse
 bin/emacs
@@ -927,11 +927,13 @@ share/emacs/${PKGVERSION}/etc/srecode/test.srt
 share/emacs/${PKGVERSION}/etc/srecode/texi.srt
 share/emacs/${PKGVERSION}/etc/srecode/wisent.srt
 share/emacs/${PKGVERSION}/etc/themes/light-blue-theme.el
+share/emacs/${PKGVERSION}/etc/themes/misterioso-theme.el
 share/emacs/${PKGVERSION}/etc/themes/tango-dark-theme.el
 share/emacs/${PKGVERSION}/etc/themes/tango-theme.el
 share/emacs/${PKGVERSION}/etc/themes/tsdh-dark-theme.el
 share/emacs/${PKGVERSION}/etc/themes/tsdh-light-theme.el
 share/emacs/${PKGVERSION}/etc/themes/wheatgrass-theme.el
+share/emacs/${PKGVERSION}/etc/themes/wombat-theme.el
 share/emacs/${PKGVERSION}/etc/tutorials/TUTORIAL
 share/emacs/${PKGVERSION}/etc/tutorials/TUTORIAL.bg
 share/emacs/${PKGVERSION}/etc/tutorials/TUTORIAL.cn
@@ -1067,8 +1069,6 @@ share/emacs/${PKGVERSION}/lisp/COPYING
 share/emacs/${PKGVERSION}/lisp/README
 share/emacs/${PKGVERSION}/lisp/abbrev.el.gz
 share/emacs/${PKGVERSION}/lisp/abbrev.elc
-share/emacs/${PKGVERSION}/lisp/abbrevlist.el.gz
-share/emacs/${PKGVERSION}/lisp/abbrevlist.elc
 share/emacs/${PKGVERSION}/lisp/align.el.gz
 share/emacs/${PKGVERSION}/lisp/align.elc
 share/emacs/${PKGVERSION}/lisp/allout-widgets.el.gz
@@ -1958,8 +1958,6 @@ share/emacs/${PKGVERSION}/lisp/eshell/esh-opt.el.gz
 share/emacs/${PKGVERSION}/lisp/eshell/esh-opt.elc
 share/emacs/${PKGVERSION}/lisp/eshell/esh-proc.el.gz
 share/emacs/${PKGVERSION}/lisp/eshell/esh-proc.elc
-share/emacs/${PKGVERSION}/lisp/eshell/esh-test.el.gz
-share/emacs/${PKGVERSION}/lisp/eshell/esh-test.elc
 share/emacs/${PKGVERSION}/lisp/eshell/esh-util.el.gz
 share/emacs/${PKGVERSION}/lisp/eshell/esh-util.elc
 share/emacs/${PKGVERSION}/lisp/eshell/esh-var.el.gz
@@ -2130,6 +2128,8 @@ share/emacs/${PKGVERSION}/lisp/gnus/gnus.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/gnus.elc
 share/emacs/${PKGVERSION}/lisp/gnus/gravatar.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/gravatar.elc
+share/emacs/${PKGVERSION}/lisp/gnus/gssapi.el.gz
+share/emacs/${PKGVERSION}/lisp/gnus/gssapi.elc
 share/emacs/${PKGVERSION}/lisp/gnus/html2text.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/html2text.elc
 share/emacs/${PKGVERSION}/lisp/gnus/ietf-drums.el.gz
@@ -2826,6 +2826,8 @@ share/emacs/${PKGVERSION}/lisp/nxml/xmltok.el.gz
 share/emacs/${PKGVERSION}/lisp/nxml/xmltok.elc
 share/emacs/${PKGVERSION}/lisp/nxml/xsd-regexp.el.gz
 share/emacs/${PKGVERSION}/lisp/nxml/xsd-regexp.elc
+share/emacs/${PKGVERSION}/lisp/obsolete/abbrevlist.el.gz
+share/emacs/${PKGVERSION}/lisp/obsolete/abbrevlist.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/awk-mode.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/awk-mode.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/cl-compat.el.gz

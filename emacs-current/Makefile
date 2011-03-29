@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2010/07/31 13:30:31 makoto Exp $
+# $NetBSD: Makefile,v 1.52 2011/03/29 10:44:15 makoto Exp $
 #
 
 DISTNAME=	emacs-24.0.50
@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_TOOLS+=	gmake makeinfo gzip
+USE_TOOLS+=	gmake makeinfo gzip autoconf automake
 
 CONFLICTS+=	emacs-nox11-[0-9]*
 
@@ -55,6 +55,9 @@ FILESDIR=	${.CURDIR}/../../editors/emacs/files
 
 post-extract:
 	cp ${FILESDIR}/site-init.el ${WRKSRC}/lisp
+
+pre-configure:
+	(cd ${WRKSRC}; ./autogen.sh)
 
 .include "../../wip/mk/git-package.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
