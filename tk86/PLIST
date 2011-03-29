@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2010/08/12 05:59:55 bharder Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/03/29 22:19:05 bharder Exp $
 bin/wish8.6
 include/tk.h
 include/tkDecls.h
@@ -525,6 +525,7 @@ man/mann/tk_focusPrev.n
 man/mann/tk_getOpenFile.n
 man/mann/tk_getSaveFile.n
 man/mann/tk_library.n
+man/mann/tk_mac.n
 man/mann/tk_menuBar.n
 man/mann/tk_menuSetFocus.n
 man/mann/tk_messageBox.n

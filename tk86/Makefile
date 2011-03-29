@@ -1,12 +1,14 @@
-# $NetBSD: Makefile,v 1.4 2010/12/31 19:56:29 bharder Exp $
+# $NetBSD: Makefile,v 1.5 2011/03/29 22:19:05 bharder Exp $
 
-DISTNAME=		tk${TK_PKGSRC_PATCHLEVEL}-src
+DISTNAME=		c1b5bef43f
 PKGNAME=		tk86-${TK_PKGSRC_PATCHLEVEL}
 CATEGORIES=		x11 lang
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tcl/}
+MASTER_SITES=		http://mirror1.tcl.tk/tk/tarball/tk.tgz?uuid=
 
 MAINTAINER=		bch@methodlogic.net
 HOMEPAGE=		http://www.tcl.tk/
+EXTRACT_SUFX=
+EXTRACT_CMD=		tar xzf $$extract_file
 COMMENT=		Graphical toolkit for Tcl
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -14,7 +16,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 .include "../../wip/tk86/Makefile.version"
 .include "../../wip/tcl86/options.mk"
 
-WRKSRC=			${WRKDIR}/tk${TK_PKGSRC_PATCHLEVEL}
+WRKSRC=			${WRKDIR}/tk.tgz
 
 GNU_CONFIGURE=	yes
 CONFIGURE_DIRS=	unix
@@ -36,12 +38,5 @@ DESTDIRPREFIX=		${DESTDIR}${PREFIX}
 
 post-install:
 	mv ${DESTDIRPREFIX:Q}/lib/tkConfig.sh ${DESTDIRPREFIX:Q}/lib/tk${TK_PKGSRC_VERSION}
-
-CVS_REPOSITORIES=	tk
-CVS_ROOT.tk=	:pserver:anonymous:@tktoolkit.cvs.sourceforge.net:/cvsroot/tktoolkit
-WRKSRC=			${WRKDIR}/tk
-CHECKOUT_DATE=		2010-12-31
-
-.include "../mk/cvs-package.mk"
 
 .include "../../mk/bsd.pkg.mk"
