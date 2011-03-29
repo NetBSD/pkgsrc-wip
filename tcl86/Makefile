@@ -1,10 +1,13 @@
-# $NetBSD: Makefile,v 1.4 2010/12/31 19:55:18 bharder Exp $
+# $NetBSD: Makefile,v 1.5 2011/03/29 22:17:56 bharder Exp $
 #
 
-DISTNAME=		tcl${TCL_PKGSRC_PATCHLEVEL}-src
+DISTNAME=		999804376c
 PKGNAME=		tcl86-${TCL_PKGSRC_PATCHLEVEL}
+PKGREVISION=		1
 CATEGORIES=		lang
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tcl/}
+MASTER_SITES=		http://mirror1.tcl.tk/tcl/tarball/tcl.tgz?uuid=
+EXTRACT_SUFX=
+EXTRACT_CMD=		tar xzf $$extract_file
 
 MAINTAINER=		bch@methodlogic.net
 HOMEPAGE=		http://www.tcl.tk/
@@ -18,7 +21,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 CONFLICTS+=		tclman80-[0-9]*
 CONFLICTS+=		tcl85-* tcl-[0-9]*
 
-WRKSRC=			${WRKDIR}/tcl${TCL_PKGSRC_PATCHLEVEL}
+WRKSRC=			${WRKDIR}/tcl.tgz
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake
@@ -50,11 +53,5 @@ post-install:
 #	mkdir -p ${DESTDIRPREFIX:Q}/lib/tcl${TCL_PKGSRC_VERSION}
 #	mv ${DESTDIRPREFIX:Q}/lib/tclConfig.sh ${DESTDIRPREFIX:Q}/lib/tcl${TCL_PKGSRC_VERSION}
 
-CVS_REPOSITORIES=	tcl
-CVS_ROOT.tcl=		:pserver:anonymous:@tcl.cvs.sourceforge.net:/cvsroot/tcl
-WRKSRC=			${WRKDIR}/tcl
-CHECKOUT_DATE=		2010-12-31
-
-.include "../mk/cvs-package.mk"
 
 .include "../../mk/bsd.pkg.mk"

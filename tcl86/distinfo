@@ -1,2 +1,5 @@
-$NetBSD: distinfo,v 1.2 2010/12/31 19:55:18 bharder Exp $
+$NetBSD: distinfo,v 1.3 2011/03/29 22:17:56 bharder Exp $
 
+SHA1 (999804376c) = 130f53ff50a2752747ada7441929d86c83209aa8
+RMD160 (999804376c) = aeeb60ee3a964f3d0cf6671754817b61adb451b1
+Size (999804376c) = 8324999 bytes
