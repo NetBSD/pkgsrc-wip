@@ -1,13 +1,22 @@
-$NetBSD: patch-aa,v 1.2 2011/03/23 21:10:43 bharder Exp $
+$NetBSD: patch-aa,v 1.3 2011/03/29 06:22:28 bharder Exp $
 
---- ./snappy_unittest.cc.orig	2011-03-18 17:15:10.000000000 +0000
+--- ./snappy_unittest.cc.orig	2011-03-24 23:20:16.000000000 +0000
 +++ ./snappy_unittest.cc
-@@ -152,7 +152,7 @@ static bool Compress(const char* input, 
+@@ -154,10 +154,17 @@ static bool Compress(const char* input, 
+ #ifdef LZF_VERSION
+     case LIBLZF: {
+       compressed->resize(input_size - 1);
++#ifdef __NetBSD__
++      int destlen = lzf_compress(input,
++                                 input_size,
++                                 string_as_array(compressed),
++                                 input_size - 1, NULL);
++#else
        int destlen = lzf_compress(input,
                                   input_size,
                                   string_as_array(compressed),
--                                 input_size - 1);
-+                                 input_size - 1, NULL);
+                                  input_size - 1);
++#endif
        if (destlen == 0) {
          // lzf *can* cause lots of blowup when compressing, so they
          // recommend to limit outsize to insize, and just not compress
