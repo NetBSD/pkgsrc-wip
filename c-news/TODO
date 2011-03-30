@@ -1,7 +1,8 @@
 # C News pkg issues
 
 - use USE_PKGINSTALL=YES for /var/news
-- Sync patch list with dinoex.org
+- sync patch list with dinoex.org
 - provide sample cron entries for user 'news' in share/examples/c-news
-- In NetBSD 3, postinstall removes the compatibility symlink /bin/rmail. 
-  Have C News check for the new location /usr/libexec/rmail. 
+- in NetBSD 3, postinstall removes the compatibility symlink /bin/rmail;
+  have C News check for the new location /usr/libexec/rmail
+- add DESTDIR support
