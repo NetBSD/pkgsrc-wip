@@ -1,9 +1,9 @@
-$NetBSD: patch-af,v 1.1 2011/01/26 13:03:41 makoto Exp $
+$NetBSD: patch-af,v 1.2 2011/03/30 12:49:24 makoto Exp $
 
---- base/unix-dll.mak.orig	2010-07-23 17:22:43.000000000 +0900
-+++ base/unix-dll.mak	2011-01-26 21:48:51.000000000 +0900
-@@ -52,12 +52,12 @@
- LDFLAGS_SO=-shared -Wl,-soname=$(GS_SONAME_MAJOR)
+--- base/unix-dll.mak.orig	2011-01-18 19:22:12.000000000 +0900
++++ base/unix-dll.mak	2011-03-30 16:10:24.000000000 +0900
+@@ -58,12 +58,12 @@
+ 
  
  # MacOS X
 -#GS_SOEXT=dylib
@@ -16,21 +16,21 @@ $NetBSD: patch-af,v 1.1 2011/01/26 13:03:41 makoto Exp $
 +#Darwin#GS_SONAME_MAJOR_MINOR=$(GS_SONAME_BASE).$(GS_VERSION_MAJOR).$(GS_VERSION_MINOR).$(GS_SOEXT)
  #LDFLAGS_SO=-dynamiclib -flat_namespace
 -#LDFLAGS_SO=-dynamiclib -install_name $(GS_SONAME_MAJOR_MINOR)
-+#Darwin#LDFLAGS_SO=-dynamiclib -install_name $(DESTDIR)$(libdir)/$(GS_SONAME_MAJOR)
++#Darwin#LDFLAGS_SO=-dynamiclib -install_name $(DESTDIR)$(libdir)/$(GS_SONAME_MAJOR_MINOR)
  #LDFLAGS_SO=-dynamiclib -install_name $(FRAMEWORK_NAME)
  
  GS_SO=$(BINDIR)/$(GS_SONAME)
-@@ -79,15 +79,15 @@
+@@ -85,15 +85,15 @@
  # Build the small Ghostscript loaders, with Gtk+ and without
  $(GSSOC_XE): $(GS_SO) $(PSSRC)$(SOC_LOADER)
  	$(GLCC) -g -o $(GSSOC_XE) $(PSSRC)dxmainc.c \
--	$(LDFLAGS) -L$(BINDIR) -l$(GS)
-+	$(LDFLAGS) -L$(BINDIR) -Wl,-R$(PREFIX)/lib -l$(GS)
+-	-L$(BINDIR) -l$(GS)
++	-L$(BINDIR) -Wl,-R$(PREFIX)/lib -l$(GS)
  
  $(GSSOX_XE): $(GS_SO) $(PSSRC)$(SOC_LOADER)
  	$(GLCC) -g $(SOC_CFLAGS) -o $(GSSOX_XE) $(PSSRC)$(SOC_LOADER) \
--	$(LDFLAGS) -L$(BINDIR) -l$(GS) $(SOC_LIBS)
-+	$(LDFLAGS) -L$(BINDIR) -Wl,-R$(PREFIX)/lib -l$(GS) $(SOC_LIBS)
+-	-L$(BINDIR) -l$(GS) $(SOC_LIBS)
++	-L$(BINDIR) -l$(GS) -Wl,-R$(PREFIX)/lib -l$(GS) $(SOC_LIBS)
  
  # ------------------------- Recursive make targets ------------------------- #
  

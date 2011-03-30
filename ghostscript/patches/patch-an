@@ -1,16 +1,16 @@
-$NetBSD: patch-an,v 1.1.1.1 2011/01/26 08:24:17 makoto Exp $
+$NetBSD: patch-an,v 1.2 2011/03/30 12:49:24 makoto Exp $
 
---- psi/imainarg.c.orig	2009-12-08 06:31:51.000000000 +0000
-+++ psi/imainarg.c
-@@ -194,6 +194,11 @@ gs_main_init_with_args(gs_main_instance 
- 		return e_Fatal;
- 	}
+--- psi/imainarg.c.orig	2011-01-13 23:37:33.000000000 +0900
++++ psi/imainarg.c	2011-03-30 16:22:08.000000000 +0900
+@@ -194,6 +194,11 @@
+                 return e_Fatal;
+         }
      }
 +
 +    code = gs_main_init1(minst);
 +    if (code < 0)
-+	return code;
++      return code;
 +
      while ((arg = arg_next(&args, &code)) != 0) {
- 	switch (*arg) {
- 	    case '-':
+         switch (*arg) {
+             case '-':

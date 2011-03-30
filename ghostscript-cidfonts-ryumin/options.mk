@@ -1,17 +1,15 @@
-# $NetBSD: options.mk,v 1.3 2011/02/28 08:05:25 makoto Exp $
+# $NetBSD: options.mk,v 1.4 2011/03/30 12:49:24 makoto Exp $
 
 # gcr = ghostscript-cidfonts-ryumin
 PKG_OPTIONS_VAR=        PKG_OPTIONS.gcr_type
 PKG_SUPPORTED_OPTIONS=  ipa adobe-cidfonts umefont motoya
-PKG_SUGGESTED_OPTIONS=  ipa
-
-PLIST_VARS+=	cidfmap
-PLIST_VARS+=	adobe
+PKG_SUGGESTED_OPTIONS=	ipa
 
 .include "../../mk/bsd.options.mk"
 
 # -------- Adobe CID font requested -------------
 .if !empty(PKG_OPTIONS:Madobe-cidfonts)
+GS_CIDFMAP=	cidfmap-adobe
 DEPENDS+=	adobe-cidfonts:../../fonts/adobe-cidfonts
 DEPENDS+=	ghostscript-cidfonts:../../fonts/ghostscript-cidfonts
 GCR_INSTALL_TYPE= adobe
@@ -21,7 +19,6 @@ GCR_INSTALL_TYPE= adobe
 .if !empty(PKG_OPTIONS:Mmotoya)
 GS_CIDFMAP=	cidfmap-motoya
 DEPENDS+=	ipafont:../../fonts/motoya-fonts
-PLIST.cidfmap=	yes
 GCR_INSTALL_TYPE= ttf
 .endif
 
@@ -29,7 +26,6 @@ GCR_INSTALL_TYPE= ttf
 .if !empty(PKG_OPTIONS:Mumefont)
 GS_CIDFMAP=	cidfmap-umefont
 DEPENDS+=	ipafont:../../fonts/umefont-ttf
-PLIST.cidfmap=	yes
 GCR_INSTALL_TYPE= ttf
 .endif
 
@@ -37,7 +33,6 @@ GCR_INSTALL_TYPE= ttf
 .if !empty(PKG_OPTIONS:Mipa)
 GS_CIDFMAP=	cidfmap-ipa
 DEPENDS+=	ipafont:../../fonts/ipafont
-PLIST.cidfmap=	yes
 GCR_INSTALL_TYPE= ttf
 .endif
 

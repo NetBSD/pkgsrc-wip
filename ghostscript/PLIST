@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2011/02/27 15:26:53 makoto Exp $
+@comment $NetBSD: PLIST,v 1.3 2011/03/30 12:49:24 makoto Exp $
 bin/bdftops
 bin/dumphint
 bin/dvipdf
@@ -21,6 +21,7 @@ bin/pdfopt
 bin/pf2afm
 bin/pfbtopfa
 bin/printafm
+bin/pphs
 bin/ps2ascii
 bin/ps2epsi
 bin/ps2pdf
@@ -431,7 +432,6 @@ ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/Init/gs_typ32.ps
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/Init/gs_typ42.ps
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/Init/gs_type1.ps
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/Init/gs_wan_e.ps
-${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/Init/opdfread.ps
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/Init/pdf_base.ps
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/Init/pdf_cslayer.ps
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/Init/pdf_draw.ps
@@ -499,6 +499,18 @@ share/ghostscript/${PKGVERSION}/examples/snowflak.ps
 share/ghostscript/${PKGVERSION}/examples/tiger.eps
 share/ghostscript/${PKGVERSION}/examples/vasarely.ps
 share/ghostscript/${PKGVERSION}/examples/waterfal.ps
+share/ghostscript/${PKGVERSION}/examples/cjk/all_ac1.ps
+share/ghostscript/${PKGVERSION}/examples/cjk/all_ag1.ps
+share/ghostscript/${PKGVERSION}/examples/cjk/all_aj1.ps
+share/ghostscript/${PKGVERSION}/examples/cjk/all_aj2.ps
+share/ghostscript/${PKGVERSION}/examples/cjk/all_ak1.ps
+share/ghostscript/${PKGVERSION}/examples/cjk/article9.ps
+share/ghostscript/${PKGVERSION}/examples/cjk/gscjk_ac.ps
+share/ghostscript/${PKGVERSION}/examples/cjk/gscjk_ag.ps
+share/ghostscript/${PKGVERSION}/examples/cjk/gscjk_aj.ps
+share/ghostscript/${PKGVERSION}/examples/cjk/gscjk_ak.ps
+share/ghostscript/${PKGVERSION}/examples/cjk/iso2022.ps
+share/ghostscript/${PKGVERSION}/examples/cjk/iso2022v.ps
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/iccprofiles/default_cmyk.icc
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/iccprofiles/default_gray.icc
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/iccprofiles/default_rgb.icc
@@ -622,7 +634,6 @@ share/ghostscript/${PKGVERSION}/lib/pdfwrite.ps
 share/ghostscript/${PKGVERSION}/lib/pf2afm.ps
 share/ghostscript/${PKGVERSION}/lib/pfbtopfa.ps
 share/ghostscript/${PKGVERSION}/lib/ppath.ps
-share/ghostscript/${PKGVERSION}/lib/pphs
 share/ghostscript/${PKGVERSION}/lib/pphs.ps
 share/ghostscript/${PKGVERSION}/lib/prfont.ps
 share/ghostscript/${PKGVERSION}/lib/printafm.ps
