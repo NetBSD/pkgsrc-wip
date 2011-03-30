@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/06/13 22:47:03 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2011/03/30 08:20:06 rsmarples Exp $
 #
 
 DISTNAME=		evilvte-0.4.3
@@ -17,7 +17,7 @@ CONFIGURE_ARGS+=	--prefix=${PREFIX}
 USE_TOOLS+=		gmake pkg-config
 MAKE_FLAGS+=		OPTFLAGS="${CFLAGS}"
 
-INSTALL_MAKE_FLAGS+=	mandir=${PREFIX}/${PKGMANDIR}/man1
+INSTALL_MAKE_FLAGS+=	mandir=${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../x11/vte/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
