@@ -1,0 +1,28 @@
+To fix a problem with one particular combination:
+
+(1) the option at 
+wip/ghostscrip-cidfonts-ryumin
+set
+PKG_OPTION.gcr_type= ipa
+
+(2) and only if gs invoked from dvipdfmx via following sequence:
+    ps2pdf
+    ps2pdf14
+    ps2pdfwrt
+    gs -sDEVICE=pdfwrite
+
+gs failed to find the font Ryumin-Light-EUC-H
+----
+
+Meaning that 
+(a) if
+PKG_OPTION.gcr_type= adobe-cidfonts
+set -> OK
+
+(b) 
+gs alone invoked command line, the same file 
+(included in *.eps used above (2) problem)
+can be processed successfully even if
+following line in /etc/mk.conf mentioned in (1)
+PKG_OPTION.gcr_type= ipa
+is set.
