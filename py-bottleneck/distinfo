@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/04/02 22:35:05 jihbed Exp $
+
+SHA1 (bottleneck-0.1.0dev.tar.gz) = 79dd24211db356f7b15544705d5a55c4a864c9c9
+RMD160 (bottleneck-0.1.0dev.tar.gz) = eea17af423e1c8c8cbf0fdbcf2433d2c3e810c27
+Size (bottleneck-0.1.0dev.tar.gz) = 296746 bytes

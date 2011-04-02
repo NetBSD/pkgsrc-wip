@@ -1,0 +1,7 @@
+Bottleneck is a collection of fast, NumPy array functions written in Cython.
+
+The three categories of Bottleneck functions:
+
+    * Faster, drop-in replacement for NaN functions in NumPy and SciPy
+    * Moving window functions
+    * Group functions that bin calculations by like-labeled elements
