@@ -1,0 +1,6 @@
+ONELOOP is a program to evaluate the one-loop scalar 1-point, 2-point, 3-point
+and 4-point functions, for all kinematical configurations relevant for
+collider-physics, and for any non-positive imaginary parts of the internal
+squared masses. It deals with all UV and IR divergences within dimensional
+regularization. Furthermore, it provides routines to evaluate these functions
+using straightforward numerical integration.
