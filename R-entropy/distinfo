@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/04/02 19:03:31 bubuchka Exp $
+$NetBSD: distinfo,v 1.2 2011/04/02 19:42:42 bubuchka Exp $
 
-SHA1 (R/entropy_1.1.5.tar.gz) = d4e987dac7e081e240419979c68bf6ccfea32d12
-RMD160 (R/entropy_1.1.5.tar.gz) = 42b75ebb0502f7ccc9e85871cee189df313f2b9a
-Size (R/entropy_1.1.5.tar.gz) = 21280 bytes
+SHA1 (R/entropy_1.1.6.tar.gz) = a54b692e76a40ca91e21787e11c42d9bedb594e6
+RMD160 (R/entropy_1.1.6.tar.gz) = f8d5595aa5102a42a563e9799d5b70b9012003e5
+Size (R/entropy_1.1.6.tar.gz) = 21382 bytes
