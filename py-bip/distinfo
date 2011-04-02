@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/04/02 22:40:52 jihbed Exp $
+
+SHA1 (BIP-0.5.4.tar.gz) = 9ca29055f54ea7d98ff70deeeb7b802df37bbd37
+RMD160 (BIP-0.5.4.tar.gz) = a96c2be0a6e919d14124804bd680703b9f46e864
+Size (BIP-0.5.4.tar.gz) = 361835 bytes
