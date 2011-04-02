@@ -1,0 +1,3 @@
+The mclust provides functions for parameter estimation via the EM
+algorithm for normal mixture models with a variety of covariance
+structures, and functions for simulation from these models.
