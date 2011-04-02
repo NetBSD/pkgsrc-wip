@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4282 2011/04/02 19:13:56 bubuchka Exp $
+# $Id: Makefile,v 1.4283 2011/04/02 22:44:47 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -545,6 +545,7 @@ SUBDIR+=	fbida
 SUBDIR+=	fbpager
 SUBDIR+=	fbpanel
 SUBDIR+=	fdm
+SUBDIR+=	feynhiggs
 SUBDIR+=	ffmpeg
 SUBDIR+=	ffmpeg-snapshot
 SUBDIR+=	ficl
@@ -1460,6 +1461,7 @@ SUBDIR+=	mingw-w64-libgcc
 SUBDIR+=	minimalist
 SUBDIR+=	minisat2
 SUBDIR+=	miniupnpc
+SUBDIR+=	minuit2
 SUBDIR+=	miracl
 SUBDIR+=	mirage
 SUBDIR+=	miro
@@ -1630,6 +1632,7 @@ SUBDIR+=	ogmrip
 SUBDIR+=	ogre
 SUBDIR+=	olsrd
 SUBDIR+=	omniORB
+SUBDIR+=	oneloop
 SUBDIR+=	oolite
 SUBDIR+=	oops
 SUBDIR+=	oorexx
@@ -2076,9 +2079,12 @@ SUBDIR+=	py-aspell
 SUBDIR+=	py-aspyct
 SUBDIR+=	py-astropysics
 SUBDIR+=	py-behaviour
+SUBDIR+=	py-bidict
 SUBDIR+=	py-bigfloat
+SUBDIR+=	py-bip
 SUBDIR+=	py-biskit
 SUBDIR+=	py-bitstring
+SUBDIR+=	py-bottleneck
 SUBDIR+=	py-brian
 SUBDIR+=	py-bsddb
 SUBDIR+=	py-buildbot
@@ -2152,6 +2158,7 @@ SUBDIR+=	py-gnm
 SUBDIR+=	py-gnucash
 SUBDIR+=	py-gpaw
 SUBDIR+=	py-greenlet
+SUBDIR+=	py-griddata
 SUBDIR+=	py-grpy
 SUBDIR+=	py-gsl
 SUBDIR+=	py-gtk2-docs
