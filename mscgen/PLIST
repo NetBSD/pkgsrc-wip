@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2011/04/02 16:03:59 locutus42 Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/04/03 13:20:36 locutus42 Exp $
 bin/mscgen
 man/man1/mscgen.1
 share/doc/mscgen/COPYING
 share/doc/mscgen/ChangeLog
 share/doc/mscgen/README
+share/doc/mscgen/mscgen.lang
 share/doc/mscgen/examples/boxes_example.msc
 share/doc/mscgen/examples/client_server.msc
 share/doc/mscgen/examples/colour_sample.msc
