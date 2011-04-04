@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2011/03/29 04:38:53 obache Exp $
+# $NetBSD: Makefile,v 1.13 2011/04/04 12:03:24 obache Exp $
 #
 
 DISTNAME=	groonga-1.2.0
@@ -24,6 +24,8 @@ CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 PKGCONFIG_OVERRIDE+=	groonga.pc.in
 
 PKG_SYSCONFSUBDIR=	${PKGBASE}
+
+BUILD_DEFS+=		VARBASE
 
 INSTALL_MAKE_FLAGS+=	sysconfdir=${PREFIX}/share/examples
 
