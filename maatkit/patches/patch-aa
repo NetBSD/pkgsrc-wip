@@ -1,4 +1,8 @@
-$NetBSD: patch-aa,v 1.1 2011/03/19 17:24:14 genolopolis Exp $
+$NetBSD: patch-aa,v 1.2 2011/04/04 18:34:50 genolopolis Exp $
+
+rename man pages to .1 from .1p
+submitted upstream as 1277
+http://code.google.com/p/maatkit/issues/detail?id=1277
 
 --- Makefile.PL.orig	2011-03-12 17:39:22.000000000 +0000
 +++ Makefile.PL
