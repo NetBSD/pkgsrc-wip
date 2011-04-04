@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2011/04/03 13:20:36 locutus42 Exp $
+# $NetBSD: Makefile,v 1.3 2011/04/04 11:45:33 obache Exp $
 #
 
-DISTNAME=		mscgen-src-${VERSION}
-PKGNAME=		mscgen-${VERSION}
-VERSION=		0.20
+DISTNAME=		mscgen-src-0.20
+PKGNAME=		${DISTNAME:S/-src-/-/}
 CATEGORIES=		devel graphics
 MASTER_SITES=		http://www.mcternan.me.uk/mscgen/software/
 
@@ -20,7 +19,7 @@ GNU_CONFIGURE=		yes
 
 USE_TOOLS+=		gmake pkg-config
 
-WRKSRC=			${WRKDIR}/mscgen-${VERSION}
+WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
 .include "../../graphics/gd/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
