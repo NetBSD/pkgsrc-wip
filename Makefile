@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4285 2011/04/04 12:50:24 obache Exp $
+# $Id: Makefile,v 1.4286 2011/04/04 14:03:24 obache Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2962,6 +2962,7 @@ SUBDIR+=	ypbind-mt
 SUBDIR+=	ypserv
 SUBDIR+=	zabbix
 SUBDIR+=	zapping
+SUBDIR+=	zeromq
 SUBDIR+=	zim
 SUBDIR+=	zinf
 SUBDIR+=	zoem
