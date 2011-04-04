@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.2 2011/03/30 12:49:24 makoto Exp $
+# $NetBSD: Makefile,v 1.3 2011/04/04 15:19:10 makoto Exp $
 
 DISTNAME=	ghostscript-cidfonts-ryumin-${GS_VERSION}
 # Please note  following is a must when building ghostscript
 # for this package to work
 #    PKGOPTION.ghostscipt+= disable-compile-inits
+LICENSE=	# empty
 
-CATEGORIES=     print
+CATEGORIES=	print
 DISTFILES=	# empty
 
 CONFLICTS+=	ghostscript-[0-7]*
@@ -13,8 +14,8 @@ CONFLICTS+=	ghostscript-8.[0-6]*
 CONFLICTS+=	ghostscript-8.71
 CONFLICTS+=	ghostscript-8.71nb[1-7]
 
-MAINTAINER=     tech-pkg-ja@jp.NetBSD.org
-COMMENT=        Enable Ryumin-Light and GothicBBB for ghostscript
+MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
+COMMENT=	Enable Ryumin-Light and GothicBBB for ghostscript
 
 .include	"../../wip/ghostscript/Makefile.common"
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -33,9 +34,9 @@ SUBST_VARS=	GCR_INSTALL_TYPE
 .if !empty(GS_CIDFMAP)
 SUBST_CLASSES+=		ttf_path
 SUBST_STAGE.ttf_path=	post-build
-SUBST_MESSAGES.ttf_path=  Fixing ttf install directory in cidfmap
-SUBST_FILES.ttf_path= 	  ${GS_CIDFMAP}
-SUBST_SED.ttf_path=       -e 's|%%PREFIX%%|${PREFIX}|'
+SUBST_MESSAGES.ttf_path=Fixing ttf install directory in cidfmap
+SUBST_FILES.ttf_path=	${GS_CIDFMAP}
+SUBST_SED.ttf_path=	-e 's|%%PREFIX%%|${PREFIX}|'
 .endif
 
 # To edit %%PREFIX%% in cidfmap before installation by SUBST,
@@ -57,8 +58,8 @@ do-install:
 NO_BUILD=	yes
 .endif
 
-NO_CHECKSUM=    yes
-NO_CONFIGURE=   yes
+NO_CHECKSUM=	yes
+NO_CONFIGURE=	yes
 
 .include "../../wip/ghostscript/buildlink3.mk"
 #.include "../../fonts/adobe-cidfonts/buildlink3.mk"

@@ -8,7 +8,7 @@ PKG_OPTION.gcr_type= ipa
 (2) and only if gs invoked from dvipdfmx via following sequence:
     ps2pdf
     ps2pdf14
-    ps2pdfwrt
+    ps2pdfwr
     gs -sDEVICE=pdfwrite
 
 gs failed to find the font Ryumin-Light-EUC-H

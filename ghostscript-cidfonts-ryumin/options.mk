@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.4 2011/03/30 12:49:24 makoto Exp $
+# $NetBSD: options.mk,v 1.5 2011/04/04 15:19:10 makoto Exp $
 
 # gcr = ghostscript-cidfonts-ryumin
-PKG_OPTIONS_VAR=        PKG_OPTIONS.gcr_type
-PKG_SUPPORTED_OPTIONS=  ipa adobe-cidfonts umefont motoya
+PKG_OPTIONS_VAR=	PKG_OPTIONS.gcr_type
+PKG_SUPPORTED_OPTIONS=	ipa adobe-cidfonts umefont motoya
 PKG_SUGGESTED_OPTIONS=	ipa
 
 .include "../../mk/bsd.options.mk"
