@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/04/04 14:00:46 obache Exp $
+# $NetBSD: Makefile,v 1.2 2011/04/04 14:06:35 obache Exp $
 #
 
 DISTNAME=	zeromq-2.0.11
@@ -18,5 +18,11 @@ USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
 
 PKGCONFIG_OVERRIDE+=	src/libzmq.pc.in
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Linux" || ${OPSYS} == "SunOS"
+.include "../../devel/libuuid/buildlink3.mk"
+.endif
 
 .include "../../mk/bsd.pkg.mk"
