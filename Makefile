@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4283 2011/04/02 22:44:47 jihbed Exp $
+# $Id: Makefile,v 1.4284 2011/04/04 11:58:35 obache Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1449,7 +1449,6 @@ SUBDIR+=	microtetris
 SUBDIR+=	mid2gmc
 SUBDIR+=	mikutter
 SUBDIR+=	milter-greylist-devel
-SUBDIR+=	milter-manager
 SUBDIR+=	mime-support
 SUBDIR+=	mimedefang
 SUBDIR+=	min12xxw
