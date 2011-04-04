@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4284 2011/04/04 11:58:35 obache Exp $
+# $Id: Makefile,v 1.4285 2011/04/04 12:50:24 obache Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1515,6 +1515,7 @@ SUBDIR+=	mplus-bitmap-fonts
 SUBDIR+=	mplus-outline-fonts
 SUBDIR+=	mppdec
 SUBDIR+=	mpq-tools
+SUBDIR+=	msgpack
 SUBDIR+=	msworkbench
 SUBDIR+=	mtd-utils
 SUBDIR+=	mtf
