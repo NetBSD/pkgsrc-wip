@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.4 2011/02/11 04:57:09 obache Exp $
+# $NetBSD: options.mk,v 1.5 2011/04/04 12:00:36 obache Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.groonga
 PKG_SUPPORTED_OPTIONS=	mecab tests zlib lzo
-PKG_SUGGESTED_OPTIONS=  mecab tests
+PKG_SUGGESTED_OPTIONS=	mecab tests
 
 .include "../../mk/bsd.options.mk"
 
