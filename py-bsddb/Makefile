@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2011/04/04 11:09:47 bubuchka Exp $
+# $NetBSD: Makefile,v 1.10 2011/04/04 11:12:47 bubuchka Exp $
 #
 
 PKGNAME=	${PYPKGPREFIX}-bsddb-${PY_DISTVERSION}
@@ -15,7 +15,7 @@ PYBINMODULE=	yes
 EXTRACT_ELEMENTS=	${PYSUBDIR}/Modules/_bsddb.c
 
 .include "../../lang/python/pyversion.mk"
-.if ${_PYTHON_VERSION:M2[67}
+.if ${_PYTHON_VERSION:M2[67]}
 EXTRACT_ELEMENTS+=	${PYSUBDIR}/Modules/bsddb.h
 .endif
 
