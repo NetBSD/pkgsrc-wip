@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2011/02/28 14:53:18 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2011/04/04 11:09:47 bubuchka Exp $
 #
 
-PKGNAME=	${PYPKGPREFIX}-bsddb-0
-PKGREVISION=	1
+PKGNAME=	${PYPKGPREFIX}-bsddb-${PY_DISTVERSION}
+#PKGREVISION=	1
 CATEGORIES=	databases
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -14,14 +14,25 @@ PYBINMODULE=	yes
 
 EXTRACT_ELEMENTS=	${PYSUBDIR}/Modules/_bsddb.c
 
+.include "../../lang/python/pyversion.mk"
+.if ${_PYTHON_VERSION:M2[67}
+EXTRACT_ELEMENTS+=	${PYSUBDIR}/Modules/bsddb.h
+.endif
+
 PY_SETUP_SUBST+=	BLPREFIX=${LOCALBASE}
 PY_SETUP_SUBST+=	DBRTPREFIX=${BUILDLINK_PREFIX.db4}
 PY_SETUP_SUBST+=	DBPREFIX=${BUILDLINK_PREFIX.db4}
 
+# XXX: a dirty hack used to append more patches which are not in
+# the pkgsrc tree yet - required by Python <= 2.6
+.if ${_PYTHON_VERSION} != "27"
+pkgsrc_extra_patches=	${:!echo ${.CURDIR}/patches/patch-*!:N*\*}
+.endif
+
 # ignore errors due to missing files (EXTRACT_ELEMENTS!)
 do-patch:
 	(cd ${WRKSRC}; \
-	for f in ${PATCHDIR}/patch-*;do \
+	for f in ${pkgsrc_patches} ${pkgsrc_extra_patches}; do \
 	${PATCH} --batch <$$f || true; \
 	done)
 
