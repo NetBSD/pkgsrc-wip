@@ -1,4 +1,11 @@
 ----------------------------------------------------------------------
+Version 0.53.1, by Aleksey Cheusov, Tue,  5 Apr 2011 13:41:54 +0300
+
+  pkg_lint_summary:
+     - Remove duplicated // in fields PROVIDES and REQUIRED.
+       Official pkg_summary.txt contains such a bad paths.
+
+----------------------------------------------------------------------
 Version 0.53.0, by Aleksey Cheusov, Sun, 27 Mar 2011 22:56:39 +0300
 
   Long options have been removed from all utilities.
