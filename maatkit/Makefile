@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/04/04 18:34:50 genolopolis Exp $
+# $NetBSD: Makefile,v 1.4 2011/04/05 16:01:32 genolopolis Exp $
 #
 
 DISTNAME=	maatkit-7332
@@ -20,7 +20,7 @@ DEPENDS+=	p5-DBD-mysql:../../databases/p5-DBD-mysql
 DEPENDS+=	p5-Time-HiRes:../../time/p5-Time-HiRes
 
 do-configure:
-	cd ${WRKSRC} && perl Makefile.PL INSTALL_BASE=${PREFIX}
+	cd ${WRKSRC} && ${PERL5} Makefile.PL INSTALL_BASE=${PREFIX}
 
 post-install:
 	find ${WRKDIR} -name "perllocal.pod" -exec rm {} \;
