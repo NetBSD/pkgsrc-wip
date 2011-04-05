@@ -1,13 +1,13 @@
-# $NetBSD: options.mk,v 1.6 2011/04/04 12:05:38 obache Exp $
+# $NetBSD: options.mk,v 1.7 2011/04/05 11:33:38 obache Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.groonga
-PKG_SUPPORTED_OPTIONS=	mecab tests zlib lzo
+PKG_SUPPORTED_OPTIONS=	mecab tests zlib lzo groonga-suggest-learner
 PKG_SUGGESTED_OPTIONS=	mecab
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=		mecab
+PLIST_VARS+=		mecab learner
 
 .if !empty(PKG_OPTIONS:Mmecab)
 CONFIGURE_ARGS+=	--with-mecab
@@ -44,4 +44,18 @@ CONFIGURE_ARGS+=	--with-lzo
 .include "../../archivers/lzo/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-lzo
+.endif
+
+.if !empty(PKG_OPTIONS:Mgroonga-suggest-learner)
+.include "../../devel/libevent/buildlink3.mk"
+.include "../../wip/msgpack/buildlink3.mk"
+.include "../../wip/zeromq/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-libevent=${BUILDLINK_PREFIX.libevent}
+CONFIGURE_ARGS+=	--with-message-pack=${BUILDLINK_PREFIX.msgpack}
+CONFIGURE_ARGS+=	--enable-zeromq
+PLIST.learner=		yes
+.else
+CONFIGURE_ARGS+=	--without-libevent
+CONFIGURE_ARGS+=	--without-message-pack
+CONFIGURE_ARGS+=	--disable-zeromq
 .endif
