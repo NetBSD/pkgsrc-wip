@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4289 2011/04/05 19:18:47 minskim Exp $
+# $Id: Makefile,v 1.4290 2011/04/06 13:22:51 obache Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -738,7 +738,6 @@ SUBDIR+=	gretl
 SUBDIR+=	grip
 SUBDIR+=	grisbi
 SUBDIR+=	groku
-SUBDIR+=	groonga
 SUBDIR+=	grsync
 SUBDIR+=	grub2
 SUBDIR+=	grub2-current
@@ -1513,7 +1512,6 @@ SUBDIR+=	mplus-bitmap-fonts
 SUBDIR+=	mplus-outline-fonts
 SUBDIR+=	mppdec
 SUBDIR+=	mpq-tools
-SUBDIR+=	msgpack
 SUBDIR+=	msworkbench
 SUBDIR+=	mtd-utils
 SUBDIR+=	mtf
@@ -2959,7 +2957,6 @@ SUBDIR+=	ypbind-mt
 SUBDIR+=	ypserv
 SUBDIR+=	zabbix
 SUBDIR+=	zapping
-SUBDIR+=	zeromq
 SUBDIR+=	zim
 SUBDIR+=	zinf
 SUBDIR+=	zoem
