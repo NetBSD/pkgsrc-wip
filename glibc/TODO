@@ -5,4 +5,4 @@
 
 - Set USE_PKGLOCALEDIR and adapt PLIST.
 
-- Security issue: SA41795, SA42547
+- Security issue: SA41795, SA42547, SA43976, SA43492, (and probably others)
