@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4290 2011/04/06 13:22:51 obache Exp $
+# $Id: Makefile,v 1.4291 2011/04/07 03:07:49 makoto Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1518,6 +1518,7 @@ SUBDIR+=	mtf
 SUBDIR+=	mtop
 SUBDIR+=	mtrack
 SUBDIR+=	mu
+SUBDIR+=	mu-cite
 SUBDIR+=	mu-conference
 SUBDIR+=	muine
 SUBDIR+=	multisync
