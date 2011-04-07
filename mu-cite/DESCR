@@ -1,0 +1,12 @@
+Citing recently read Mail message when writing mail reply.
+---
+MU stands for "Message Utilities".  It consists of following
+modules:
+  mu-cite: a citation utility
+  mu-cite.el     --- main module of mu-cite
+  mu-bbdb.el     --- mu-cite submodule for BBDB
+  mu-register.el --- mu-cite submodule for registration
+
+  latex-math-symbol.el --- translate mathematical symbols of
+                                 LaTeX into MULE characters
+---

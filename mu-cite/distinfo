@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/04/07 03:01:53 makoto Exp $
+
+SHA1 (mu-cite-201006212322.tar.gz) = f4a4ad8dd75f9f5f67c9d04c3384a3c97221372d
+RMD160 (mu-cite-201006212322.tar.gz) = a7121cfdac75d113362df763848a3002cabe5be7
+Size (mu-cite-201006212322.tar.gz) = 19274 bytes
+SHA1 (patch-Makefile) = a443e9688bc14a632728276e134553a5bcfd0353

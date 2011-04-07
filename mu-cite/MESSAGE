@@ -1,0 +1,19 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2011/04/07 03:01:53 makoto Exp $
+You may have following lines in your init-file (~/.emacs etc)
+;; --------
+; -*- Emacs-Lisp -*-
+(autoload 'mu-cite-original "mu-cite" nil t)
+(add-hook 'mail-citation-hook (function mu-cite-original))
+(setq mu-cite-top-format
+      '(
+        id " in the following mail,\n"
+        "| To: " to "\n"
+        "| From: " from "\n"
+        "| Subject: " subject "\n"
+        "| Date: " date "\n"
+        "| Message-ID: " message-id "\n"
+        "\n"))
+;; --------
+For other info, see ${PREFIX}/share/doc/mu-cite/{README.en,NEWS}, thanks.
+===========================================================================
