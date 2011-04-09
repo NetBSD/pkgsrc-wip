@@ -1,0 +1,13 @@
+$NetBSD: patch-al,v 1.1.1.1 2011/04/09 12:19:37 keckhardt Exp $
+
+--- libgfortran/config.h.in.orig	2011-04-09 10:21:41.000000000 +0000
++++ libgfortran/config.h.in
+@@ -1,7 +1,7 @@
+ /* config.h.in.  Generated from configure.ac by autoheader.  */
+ 
+ /* Define to 0 if the target shouldn't use #pragma weak */
+-#undef GTHREAD_USE_WEAK
++#define GTHREAD_USE_WEAK 0
+ 
+ /* Define to 1 if you have the `access' function. */
+ #undef HAVE_ACCESS
