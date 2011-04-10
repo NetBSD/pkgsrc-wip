@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4291 2011/04/07 03:07:49 makoto Exp $
+# $Id: Makefile,v 1.4292 2011/04/10 08:58:21 obache Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -631,7 +631,6 @@ SUBDIR+=	gde
 SUBDIR+=	gdmap
 SUBDIR+=	gdvb
 SUBDIR+=	geant
-SUBDIR+=	gecko-mediaplayer
 SUBDIR+=	gecko-sharp
 SUBDIR+=	gemrb
 SUBDIR+=	gerris
@@ -695,7 +694,6 @@ SUBDIR+=	gnome-do
 SUBDIR+=	gnome-jabber
 SUBDIR+=	gnome-js-common
 SUBDIR+=	gnome-keyring-sharp
-SUBDIR+=	gnome-mplayer
 SUBDIR+=	gnome-paint
 SUBDIR+=	gnome-user-share
 SUBDIR+=	gnomebaker
