@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/03/12 10:41:51 ryo-on Exp $
+# $NetBSD: Makefile,v 1.2 2011/04/10 15:13:12 ryo-on Exp $
 #
 
-DISTNAME=	libisofs-1.0.4
+DISTNAME=	libisofs-1.0.6
 CATEGORIES=	sysutils
 MASTER_SITES=	http://files.libburnia-project.org/releases/
 
