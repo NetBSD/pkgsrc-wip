@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2011/04/10 14:11:57 cheusov Exp $
+# $NetBSD: Makefile,v 1.15 2011/04/10 14:13:33 cheusov Exp $
 
 DISTNAME=	Mueller7GPL
 PKGNAME=	dict-mueller7-1.2
@@ -6,7 +6,6 @@ PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	http://dict.osdn.org.ua/ \
 		http://mova.org/~cheusov/pub/dict-mueller/
-		# http://mueller-dic.chat.ru/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	cheusov@tut.by
