@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/03/12 10:43:33 ryo-on Exp $
+$NetBSD: distinfo,v 1.2 2011/04/10 15:16:51 ryo-on Exp $
 
-SHA1 (libburn-1.0.4.pl00.tar.gz) = 39791e2fad661e31727ef7a03bfd5fb4592f9281
-RMD160 (libburn-1.0.4.pl00.tar.gz) = 1fb345e66ec89e9707fb873ee14d349b767fc4eb
-Size (libburn-1.0.4.pl00.tar.gz) = 812208 bytes
+SHA1 (libburn-1.0.6.pl00.tar.gz) = bf0807f26909b0d8e1ee7df3fd5633a2d809deb6
+RMD160 (libburn-1.0.6.pl00.tar.gz) = cd063fdcda708e0ba65967d31812fea410b726d9
+Size (libburn-1.0.6.pl00.tar.gz) = 814455 bytes
