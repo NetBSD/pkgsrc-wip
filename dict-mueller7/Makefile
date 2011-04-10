@@ -1,45 +1,35 @@
-# $NetBSD: Makefile,v 1.13 2011/03/16 13:11:14 cheusov Exp $
+# $NetBSD: Makefile,v 1.14 2011/04/10 14:11:57 cheusov Exp $
 
 DISTNAME=	Mueller7GPL
 PKGNAME=	dict-mueller7-1.2
 PKGREVISION=	1
 CATEGORIES=	textproc
-MASTER_SITES=	http://www.geocities.com/mueller_dic/ \
-		http://mueller-dic.chat.ru/ \
-		http://www.chat.ru/~mueller_dic/
+MASTER_SITES=	http://dict.osdn.org.ua/ \
+		http://mova.org/~cheusov/pub/dict-mueller/
+		# http://mueller-dic.chat.ru/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	cheusov@tut.by
 HOMEPAGE=	http://mueller-dic.chat.ru/
-COMMENT=	DICTD data for English-Russian dictionary by Mueller
+COMMENT=	English-Russian dictionary by Mueller for dictd
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	dict-server>=1.9.14:../../textproc/dict-server
 
 BUILD_DEPENDS+=	dict-server>=1.10.2:../../textproc/dict-server
 BUILD_DEPENDS+=	p5-Unicode-Map8-[0-9]*:../../converters/p5-Unicode-Map8
-BUILD_DEPENDS+=	metamail-[0-9]*:../../mail/metamail
+BUILD_DEPENDS+= coreutils-[0-9]*:../../sysutils/coreutils # we need GNU fmt
 
-# we need GNU fmt
-BUILD_DEPENDS+= coreutils-[0-9]*:../../sysutils/coreutils
-
-WRKSRC=		${WRKDIR}/mueller7/usr/local/share/dict
+WRKSRC=		${WRKDIR}/usr/local/share/dict
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_TOOLS+=		gsed perl tar bzip2
+USE_TOOLS+=		gsed perl tar gzip
 
 INSTALLATION_DIRS+=	share/dictd
 
 pre-configure:
 	cp files/mueller2utf8 files/to-dict ${WRKSRC}
-
-do-extract:
-	set -e; \
-	mkdir ${WRKDIR}/mueller7; \
-	cd ${WRKDIR}/mueller7; \
-	bzip2 -dc ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX} >${WRKDIR}/1.tar; \
-	tar -xf ${WRKDIR}/1.tar
 
 do-build:
 	cd ${WRKSRC} && \
