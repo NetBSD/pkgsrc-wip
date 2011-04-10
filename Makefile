@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4292 2011/04/10 08:58:21 obache Exp $
+# $Id: Makefile,v 1.4293 2011/04/10 14:49:43 cheusov Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2343,12 +2343,8 @@ SUBDIR+=	py-telepathy
 SUBDIR+=	py-tempita
 SUBDIR+=	py-teng
 SUBDIR+=	py-texml
-<<<<<<< Makefile
-SUBDIR+=	py-topkapi
-=======
 SUBDIR+=	py-thermopy
 SUBDIR+=	py-topkapi
->>>>>>> 1.4259
 SUBDIR+=	py-toscawidgets
 SUBDIR+=	py-tracks
 SUBDIR+=	py-traits
@@ -2417,11 +2413,7 @@ SUBDIR+=	qpsmtpd
 SUBDIR+=	qrint
 SUBDIR+=	qtcreator
 SUBDIR+=	qtre
-<<<<<<< Makefile
-SUBDIR+=	qrint
-=======
 SUBDIR+=	quantlib
->>>>>>> 1.4259
 SUBDIR+=	qucs
 SUBDIR+=	quickfix
 SUBDIR+=	quickie
