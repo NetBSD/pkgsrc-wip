@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2010/12/25 06:51:53 asau Exp $
+@comment $NetBSD: PLIST,v 1.13 2011/04/11 19:49:29 asau Exp $
 bin/dialyzer
 bin/epmd
 bin/erl
@@ -60,6 +60,7 @@ lib/erlang/erts-${VERSION.erts}/include/internal/erl_misc_utils.h
 lib/erlang/erts-${VERSION.erts}/include/internal/erl_printf.h
 lib/erlang/erts-${VERSION.erts}/include/internal/erl_printf_format.h
 lib/erlang/erts-${VERSION.erts}/include/internal/erts_internal.mk
+lib/erlang/erts-${VERSION.erts}/include/internal/ethr_atomics.h
 lib/erlang/erts-${VERSION.erts}/include/internal/ethr_mutex.h
 lib/erlang/erts-${VERSION.erts}/include/internal/ethr_optimized_fallbacks.h
 lib/erlang/erts-${VERSION.erts}/include/internal/ethread.h
@@ -191,6 +192,8 @@ lib/erlang/lib/common_test-${VERSION.common_test}/ebin/ct_event.beam
 lib/erlang/lib/common_test-${VERSION.common_test}/ebin/ct_framework.beam
 lib/erlang/lib/common_test-${VERSION.common_test}/ebin/ct_ftp.beam
 lib/erlang/lib/common_test-${VERSION.common_test}/ebin/ct_gen_conn.beam
+lib/erlang/lib/common_test-${VERSION.common_test}/ebin/ct_hooks.beam
+lib/erlang/lib/common_test-${VERSION.common_test}/ebin/ct_hooks_lock.beam
 lib/erlang/lib/common_test-${VERSION.common_test}/ebin/ct_line.beam
 lib/erlang/lib/common_test-${VERSION.common_test}/ebin/ct_logs.beam
 lib/erlang/lib/common_test-${VERSION.common_test}/ebin/ct_make.beam
@@ -223,6 +226,8 @@ lib/erlang/lib/common_test-${VERSION.common_test}/src/ct_event.erl
 lib/erlang/lib/common_test-${VERSION.common_test}/src/ct_framework.erl
 lib/erlang/lib/common_test-${VERSION.common_test}/src/ct_ftp.erl
 lib/erlang/lib/common_test-${VERSION.common_test}/src/ct_gen_conn.erl
+lib/erlang/lib/common_test-${VERSION.common_test}/src/ct_hooks.erl
+lib/erlang/lib/common_test-${VERSION.common_test}/src/ct_hooks_lock.erl
 lib/erlang/lib/common_test-${VERSION.common_test}/src/ct_line.erl
 lib/erlang/lib/common_test-${VERSION.common_test}/src/ct_logs.erl
 lib/erlang/lib/common_test-${VERSION.common_test}/src/ct_make.erl
@@ -1328,6 +1333,7 @@ lib/erlang/lib/edoc-${VERSION.edoc}/ebin/edoc_refs.beam
 lib/erlang/lib/edoc-${VERSION.edoc}/ebin/edoc_report.beam
 lib/erlang/lib/edoc-${VERSION.edoc}/ebin/edoc_run.beam
 lib/erlang/lib/edoc-${VERSION.edoc}/ebin/edoc_scanner.beam
+lib/erlang/lib/edoc-${VERSION.edoc}/ebin/edoc_specs.beam
 lib/erlang/lib/edoc-${VERSION.edoc}/ebin/edoc_tags.beam
 lib/erlang/lib/edoc-${VERSION.edoc}/ebin/edoc_types.beam
 lib/erlang/lib/edoc-${VERSION.edoc}/ebin/edoc_wiki.beam
@@ -1352,6 +1358,7 @@ lib/erlang/lib/edoc-${VERSION.edoc}/src/edoc_refs.erl
 lib/erlang/lib/edoc-${VERSION.edoc}/src/edoc_report.erl
 lib/erlang/lib/edoc-${VERSION.edoc}/src/edoc_run.erl
 lib/erlang/lib/edoc-${VERSION.edoc}/src/edoc_scanner.erl
+lib/erlang/lib/edoc-${VERSION.edoc}/src/edoc_specs.erl
 lib/erlang/lib/edoc-${VERSION.edoc}/src/edoc_tags.erl
 lib/erlang/lib/edoc-${VERSION.edoc}/src/edoc_types.erl
 lib/erlang/lib/edoc-${VERSION.edoc}/src/edoc_types.hrl
@@ -2250,6 +2257,8 @@ lib/erlang/lib/inets-${VERSION.inets}/examples/server_root/icons/world1.gif
 lib/erlang/lib/inets-${VERSION.inets}/examples/server_root/icons/world2.gif
 lib/erlang/lib/inets-${VERSION.inets}/examples/server_root/ssl/ssl_client.pem
 lib/erlang/lib/inets-${VERSION.inets}/examples/server_root/ssl/ssl_server.pem
+lib/erlang/lib/inets-${VERSION.inets}/include/httpd.hrl
+lib/erlang/lib/inets-${VERSION.inets}/include/mod_auth.hrl
 lib/erlang/lib/inets-${VERSION.inets}/priv/bin/runcgi.sh
 lib/erlang/lib/inets-${VERSION.inets}/src/ftp/ftp.erl
 lib/erlang/lib/inets-${VERSION.inets}/src/ftp/ftp_internal.hrl
@@ -2546,6 +2555,7 @@ lib/erlang/lib/megaco-${VERSION.megaco}/ebin/megaco_compact_text_encoder_v1.beam
 lib/erlang/lib/megaco-${VERSION.megaco}/ebin/megaco_compact_text_encoder_v2.beam
 lib/erlang/lib/megaco-${VERSION.megaco}/ebin/megaco_compact_text_encoder_v3.beam
 lib/erlang/lib/megaco-${VERSION.megaco}/ebin/megaco_config.beam
+lib/erlang/lib/megaco-${VERSION.megaco}/ebin/megaco_config_misc.beam
 lib/erlang/lib/megaco-${VERSION.megaco}/ebin/megaco_digit_map.beam
 lib/erlang/lib/megaco-${VERSION.megaco}/ebin/megaco_edist_compress.beam
 lib/erlang/lib/megaco-${VERSION.megaco}/ebin/megaco_encoder.beam
@@ -2736,6 +2746,7 @@ lib/erlang/lib/megaco-${VERSION.megaco}/src/binary/megaco_per_media_gateway_cont
 lib/erlang/lib/megaco-${VERSION.megaco}/src/binary/megaco_per_media_gateway_control_v3.erl
 lib/erlang/lib/megaco-${VERSION.megaco}/src/binary/megaco_per_media_gateway_control_v3.hrl
 lib/erlang/lib/megaco-${VERSION.megaco}/src/engine/megaco_config.erl
+lib/erlang/lib/megaco-${VERSION.megaco}/src/engine/megaco_config_misc.erl
 lib/erlang/lib/megaco-${VERSION.megaco}/src/engine/megaco_digit_map.erl
 lib/erlang/lib/megaco-${VERSION.megaco}/src/engine/megaco_edist_compress.erl
 lib/erlang/lib/megaco-${VERSION.megaco}/src/engine/megaco_encoder.erl
@@ -2912,6 +2923,8 @@ lib/erlang/lib/observer-${VERSION.observer}/ebin/ttb.beam
 lib/erlang/lib/observer-${VERSION.observer}/ebin/ttb_et.beam
 lib/erlang/lib/observer-${VERSION.observer}/examples/multitrace.erl
 lib/erlang/lib/observer-${VERSION.observer}/include/etop.hrl
+lib/erlang/lib/observer-${VERSION.observer}/priv/bin/cdv
+lib/erlang/lib/observer-${VERSION.observer}/priv/bin/cdv.bat
 lib/erlang/lib/observer-${VERSION.observer}/priv/bin/etop
 lib/erlang/lib/observer-${VERSION.observer}/priv/bin/etop.bat
 lib/erlang/lib/observer-${VERSION.observer}/priv/bin/getop
@@ -3405,6 +3418,7 @@ lib/erlang/lib/sasl-${VERSION.sasl}/src/systools_lib.erl
 lib/erlang/lib/sasl-${VERSION.sasl}/src/systools_make.erl
 lib/erlang/lib/sasl-${VERSION.sasl}/src/systools_rc.erl
 lib/erlang/lib/sasl-${VERSION.sasl}/src/systools_relup.erl
+lib/erlang/lib/snmp-${VERSION.snmp}/bin/snmpc
 lib/erlang/lib/snmp-${VERSION.snmp}/ebin/snmp.app
 lib/erlang/lib/snmp-${VERSION.snmp}/ebin/snmp.appup
 lib/erlang/lib/snmp-${VERSION.snmp}/ebin/snmp.beam
@@ -3466,6 +3480,7 @@ lib/erlang/lib/snmp-${VERSION.snmp}/ebin/snmpa_target_cache.beam
 lib/erlang/lib/snmp-${VERSION.snmp}/ebin/snmpa_trap.beam
 lib/erlang/lib/snmp-${VERSION.snmp}/ebin/snmpa_usm.beam
 lib/erlang/lib/snmp-${VERSION.snmp}/ebin/snmpa_vacm.beam
+lib/erlang/lib/snmp-${VERSION.snmp}/ebin/snmpc
 lib/erlang/lib/snmp-${VERSION.snmp}/ebin/snmpc.beam
 lib/erlang/lib/snmp-${VERSION.snmp}/ebin/snmpc_lib.beam
 lib/erlang/lib/snmp-${VERSION.snmp}/ebin/snmpc_mib_gram.beam
@@ -3621,6 +3636,7 @@ lib/erlang/lib/snmp-${VERSION.snmp}/src/app/snmp_app_sup.erl
 lib/erlang/lib/snmp-${VERSION.snmp}/src/app/snmp_internal.hrl
 lib/erlang/lib/snmp-${VERSION.snmp}/src/compiler/snmpc.erl
 lib/erlang/lib/snmp-${VERSION.snmp}/src/compiler/snmpc.hrl
+lib/erlang/lib/snmp-${VERSION.snmp}/src/compiler/snmpc.src
 lib/erlang/lib/snmp-${VERSION.snmp}/src/compiler/snmpc_lib.erl
 lib/erlang/lib/snmp-${VERSION.snmp}/src/compiler/snmpc_lib.hrl
 lib/erlang/lib/snmp-${VERSION.snmp}/src/compiler/snmpc_mib_gram.erl
@@ -4188,18 +4204,7 @@ lib/erlang/lib/tv-${VERSION.tv}/src/tv_utils.erl
 lib/erlang/lib/typer-${VERSION.typer}/ebin/typer.app
 lib/erlang/lib/typer-${VERSION.typer}/ebin/typer.appup
 lib/erlang/lib/typer-${VERSION.typer}/ebin/typer.beam
-lib/erlang/lib/typer-${VERSION.typer}/ebin/typer_annotator.beam
-lib/erlang/lib/typer-${VERSION.typer}/ebin/typer_info.beam
-lib/erlang/lib/typer-${VERSION.typer}/ebin/typer_map.beam
-lib/erlang/lib/typer-${VERSION.typer}/ebin/typer_options.beam
-lib/erlang/lib/typer-${VERSION.typer}/ebin/typer_preprocess.beam
 lib/erlang/lib/typer-${VERSION.typer}/src/typer.erl
-lib/erlang/lib/typer-${VERSION.typer}/src/typer.hrl
-lib/erlang/lib/typer-${VERSION.typer}/src/typer_annotator.erl
-lib/erlang/lib/typer-${VERSION.typer}/src/typer_info.erl
-lib/erlang/lib/typer-${VERSION.typer}/src/typer_map.erl
-lib/erlang/lib/typer-${VERSION.typer}/src/typer_options.erl
-lib/erlang/lib/typer-${VERSION.typer}/src/typer_preprocess.erl
 lib/erlang/lib/webtool-${VERSION.webtool}/ebin/webtool.app
 lib/erlang/lib/webtool-${VERSION.webtool}/ebin/webtool.appup
 lib/erlang/lib/webtool-${VERSION.webtool}/ebin/webtool.beam
