@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2010/06/22 08:04:35 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.16 2011/04/11 19:46:23 asau Exp $
 
 DISTNAME=		otp_src_${DIST_VERSION_MAJOR}${DIST_VERSION_MINOR:D-${DIST_VERSION_MINOR}}
 PKGNAME=		erlang-${ERLANG_VERSION}
@@ -20,6 +20,11 @@ USE_GNU_CONFIGURE_HOST=	${USE_CROSS_COMPILE}
 OVERRIDE_DIRDEPTH=	4
 USE_TOOLS+=		gmake perl:run
 USE_LANGUAGES=		c c++
+
+CONFIGURE_ARGS+=	--with-ssl=${BUILDLINK_PREFIX.openssl}
+
+PTHREAD_OPTS+=		require native
+CONFIGURE_ARGS+=	--enable-threads
 
 MAKE_ENV+=		DESTDIR=${DESTDIR}
 
@@ -43,6 +48,12 @@ PLIST_SRC+=	${.CURDIR}/PLIST.${OPSYS}
 
 .if ${OPSYS} == "DragonFly"
 CONFIGURE_ARGS+=	--disable-sctp
+.endif
+###
+### XXX There may be others here.
+###
+.if ${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD"
+CONFIGURE_ARGS+=	--enable-kernel-poll
 .endif
 
 .include "options.mk"
