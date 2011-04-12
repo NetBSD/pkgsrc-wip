@@ -1,6 +1,6 @@
-#!/bin/sh
+#!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: haproxy.sh,v 1.1.1.1 2009/08/12 20:03:07 shindenmorr Exp $
+# $NetBSD: haproxy.sh,v 1.2 2011/04/12 20:40:34 shattered Exp $
 #
 
 # PROVIDE: haproxy

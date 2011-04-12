@@ -1,6 +1,6 @@
-#!/bin/sh
+#!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: qico.sh,v 1.1.1.1 2003/09/17 18:07:11 xtraeme Exp $
+# $NetBSD: qico.sh,v 1.2 2011/04/12 20:40:35 shattered Exp $
 #
 # PROVIDE: qico
 # REQUIRE: DAEMON

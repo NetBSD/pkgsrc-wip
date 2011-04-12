@@ -1,6 +1,6 @@
-#!/bin/sh
+#!@RCD_SCRIPTS_SHELL@
 #
-#	$NetBSD: oops.sh,v 1.2 2004/10/01 18:55:59 shattered Exp $
+#	$NetBSD: oops.sh,v 1.3 2011/04/12 20:40:34 shattered Exp $
 #
 # PROVIDE: oops
 # REQUIRE: DAEMON
