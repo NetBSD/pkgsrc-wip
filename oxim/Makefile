@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2010/06/16 09:04:33 obache Exp $
+# $NetBSD: Makefile,v 1.4 2011/04/13 13:58:47 obache Exp $
 #
 
 DISTNAME=	oxim-1.4.4
 PKGREVISION=	1
 CATEGORIES=	inputmethod chinese
-MASTER_SITES=	ftp://ftp.opendesktop.org.tw/odp/OXIM/Source/
+MASTER_SITES=	ftp://ftp.opendesktop.org.tw/odp/others/OXIM/Source/tarball/
 
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://opendesktop.org.tw/demopage/oxim/
