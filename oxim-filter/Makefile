@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/11/28 11:03:31 obache Exp $
+# $NetBSD: Makefile,v 1.2 2011/04/13 14:00:26 obache Exp $
 #
 
 DISTNAME=	oxim-filters
 PKGNAME=	${DISTNAME}-0.1
 CATEGORIES=	inputmethod chinese
-MASTER_SITES=	ftp://ftp.opendesktop.org.tw/odp/OXIM/Source/
+MASTER_SITES=	ftp://ftp.opendesktop.org.tw/odp/others/OXIM/Source/tarball/
 DIST_SUBDIR=	${PKGNAME_NOREV}
 
 MAINTAINER=	obache@NetBSD.org
