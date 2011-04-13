@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4294 2011/04/13 09:45:39 bartoszkuzma Exp $
+# $Id: Makefile,v 1.4295 2011/04/13 10:28:39 bartoszkuzma Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -148,6 +148,7 @@ SUBDIR+=	arpdig
 SUBDIR+=	arphic-ukai-ttf
 SUBDIR+=	arphic-uming-ttf
 SUBDIR+=	artemis
+SUBDIR+=	ascii2binary
 SUBDIR+=	aspell-dictionaries
 SUBDIR+=	aspell-finnish
 SUBDIR+=	aspell-telugu
