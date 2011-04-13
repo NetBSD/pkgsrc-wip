@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.java,v 1.3 2010/02/24 13:49:54 marttikuparinen Exp $
+@comment $NetBSD: PLIST.java,v 1.4 2011/04/13 21:08:17 asau Exp $
 lib/erlang/lib/ic-${VERSION.ic}/java_src/com/ericsson/otp/ic/Any.java
 lib/erlang/lib/ic-${VERSION.ic}/java_src/com/ericsson/otp/ic/AnyHelper.java
 lib/erlang/lib/ic-${VERSION.ic}/java_src/com/ericsson/otp/ic/AnyHolder.java
@@ -46,8 +46,10 @@ lib/erlang/lib/jinterface-${VERSION.jinterface}/java_src/com/ericsson/otp/erlang
 lib/erlang/lib/jinterface-${VERSION.jinterface}/java_src/com/ericsson/otp/erlang/OtpErlangDecodeException.java
 lib/erlang/lib/jinterface-${VERSION.jinterface}/java_src/com/ericsson/otp/erlang/OtpErlangDouble.java
 lib/erlang/lib/jinterface-${VERSION.jinterface}/java_src/com/ericsson/otp/erlang/OtpErlangException.java
+lib/erlang/lib/jinterface-${VERSION.jinterface}/java_src/com/ericsson/otp/erlang/OtpErlangExternalFun.java
 lib/erlang/lib/jinterface-${VERSION.jinterface}/java_src/com/ericsson/otp/erlang/OtpErlangExit.java
 lib/erlang/lib/jinterface-${VERSION.jinterface}/java_src/com/ericsson/otp/erlang/OtpErlangFloat.java
+lib/erlang/lib/jinterface-${VERSION.jinterface}/java_src/com/ericsson/otp/erlang/OtpErlangFun.java
 lib/erlang/lib/jinterface-${VERSION.jinterface}/java_src/com/ericsson/otp/erlang/OtpErlangInt.java
 lib/erlang/lib/jinterface-${VERSION.jinterface}/java_src/com/ericsson/otp/erlang/OtpErlangList.java
 lib/erlang/lib/jinterface-${VERSION.jinterface}/java_src/com/ericsson/otp/erlang/OtpErlangLong.java
