@@ -1,13 +1,13 @@
-$NetBSD: patch-al,v 1.1.1.1 2011/04/09 12:19:37 keckhardt Exp $
+$NetBSD: patch-al,v 1.2 2011/04/13 15:04:55 keckhardt Exp $
 
---- libgfortran/config.h.in.orig	2011-04-09 10:21:41.000000000 +0000
-+++ libgfortran/config.h.in
-@@ -1,7 +1,7 @@
- /* config.h.in.  Generated from configure.ac by autoheader.  */
+--- libgfortran/configure.orig	2011-04-13 10:23:06.659661693 +0000
++++ libgfortran/configure
+@@ -25687,7 +25687,7 @@ $as_echo "#define SUPPORTS_WEAK 1" >>con
  
- /* Define to 0 if the target shouldn't use #pragma weak */
--#undef GTHREAD_USE_WEAK
-+#define GTHREAD_USE_WEAK 0
+   fi
+   case "$host" in
+-    *-*-darwin* | *-*-hpux* | *-*-cygwin* | *-*-mingw* )
++    *-*-darwin* | *-*-hpux* | *-*-cygwin* | *-*-mingw* | *-*-netbsd*)
  
- /* Define to 1 if you have the `access' function. */
- #undef HAVE_ACCESS
+ $as_echo "#define GTHREAD_USE_WEAK 0" >>confdefs.h
+ 
