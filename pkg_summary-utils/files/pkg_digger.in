@@ -188,7 +188,7 @@ FILENAME == minuend {
 }
 
 # search images...
-pkg_digger_backend__fsq (){
+run_backend__fsq (){
     field=`printf '%s\n' "$1" | cut -d: -f1`
     strat=`printf '%s\n' "$1" | cut -d: -f2`
     query=`printf '%s\n' "$1" | cut -d: -f3`
@@ -217,6 +217,23 @@ pkg_digger_backend__fsq (){
     $PKG_DIGGER_BACKEND $quiet_mode -- "$field:$strat:$query"
 }
 
+run_backend__fallbacks (){
+    eval "$PKG_DIGGER_BACKEND $quiet_mode $query"
+}
+
+run_backend (){
+    if printf '%s\n' "$1" | grep '^[^:]*:[^:]*:[^:]*$' > /dev/null; then
+	run_backend__fsq "$1"
+    else
+	query=''
+	for rule in $PKG_DIGGER_FALLBACK_RULES; do
+	    query="$query '$rule:$1'"
+	done
+
+	run_backend__fallbacks
+    fi
+}
+
 cnt_with=0
 touch $tmp_dir/without.txt $tmp_dir/with_0.txt
 for q in "$@"; do
@@ -229,14 +246,13 @@ for q in "$@"; do
 
     q=$(printf '%s\n' "$q" | sed 's/^[!-]//')
 
-    if printf '%s\n' "$q" | grep '^[^:]*:[^:]*:[^:]*$' > /dev/null; then
-	pkg_digger_backend__fsq "$q" >> $res_fn
+    if test "_$res_fn" = "_$tmp_dir/without.txt"; then
+	# - pattern
+	set +e
+	run_backend "$q" >> $res_fn 2>/dev/null
+	set -e
     else
-	query=''
-	for rule in $PKG_DIGGER_FALLBACK_RULES; do
-	    query="$query '$rule:$q'"
-	done
-	eval "$PKG_DIGGER_BACKEND $quiet_mode $query" >> $res_fn
+	run_backend "$q" >> $res_fn
     fi
 done
 
