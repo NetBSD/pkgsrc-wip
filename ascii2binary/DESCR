@@ -1,0 +1,9 @@
+The Ascii2Binary project consists of two complementary programs that
+convert between textual and binary representations of numbers.
+Ascii2Binary reads input consisting of textual representations of
+numbers separated by whitespace and produces as output the binary
+equivalents. It is useful for generating test data and linking
+programs that generate textual output to programs that require binary
+input. Binary2Ascii converts binary numbers to text. In both programs,
+the type and size/precision of the input or output is selected using
+command line flags.
