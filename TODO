@@ -79,6 +79,7 @@ Suggested package updates
 	o llvm-2.8
 	o man-1.6f
 	o mcabber-0.10.1
+	o mcwm-20110412
 	o meta-tracker-0.10.8
 	o mixxx-1.8.0
 	o mpgedit-0.73dev2
@@ -103,7 +104,7 @@ Suggested package updates
 	o qtcreator-1.3.1
 	o rezound-0.12.3beta
 	o rosegarden-current-1.4.0
-	o rsyslog-6.1.6
+	o rsyslog-5.8.0
 	o samhain-2.8.3
 	o sflphone-0.7.2
 	o siege-2.70
