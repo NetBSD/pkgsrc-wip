@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/04/13 09:42:44 bartoszkuzma Exp $
+
+SHA1 (duff-0.5.tar.bz2) = 1078dbeca52ac61b4496d388106e27c89686fbe5
+RMD160 (duff-0.5.tar.bz2) = e62594f0a0198ff4741d4eaa4e2b20033e1871bd
+Size (duff-0.5.tar.bz2) = 168991 bytes
+SHA1 (patch-join-duplicates.sh) = e942c9eeef0400fe8610ebc617e2f60217381e5f

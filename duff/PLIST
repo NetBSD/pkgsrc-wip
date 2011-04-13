@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/04/13 09:42:44 bartoszkuzma Exp $
+bin/duff
+man/man1/duff.1
+share/doc/duff/README.SHA
+share/duff/join-duplicates.sh
+share/locale/en/LC_MESSAGES/duff.mo
+share/locale/en@boldquot/LC_MESSAGES/duff.mo
+share/locale/en@quot/LC_MESSAGES/duff.mo
+share/locale/sv/LC_MESSAGES/duff.mo

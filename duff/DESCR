@@ -1,0 +1,8 @@
+Duff is a Unix command-line utility for quickly finding duplicates
+in a given set of files.
+
+How does it work:
+ - Only compare files if they're of equal size.
+ - Compare a few bytes before checksumming large files.
+ - Compare checksums before actual contents.
+ - Don't compare actual contents unless explicitly asked.
