@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/04/14 09:07:40 bartoszkuzma Exp $
+
+SHA1 (libestr-0.1.0.tar.gz) = 67955fd312d31973472d431b27161fc0107df082
+RMD160 (libestr-0.1.0.tar.gz) = b2660669e849d5ddcfb7bb377b6a41ea3853c208
+Size (libestr-0.1.0.tar.gz) = 311934 bytes
