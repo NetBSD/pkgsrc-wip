@@ -1,0 +1,11 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2011/04/14 09:44:42 bartoszkuzma Exp $
+
+For simple replacement for syslogd(8), you may put the following lines
+into your /etc/rc.conf:
+
+    syslogd=NO
+    rsyslogd=YES
+    rsyslogd_flags="-f /etc/syslog.conf"
+
+===========================================================================
