@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4295 2011/04/13 10:28:39 bartoszkuzma Exp $
+# $Id: Makefile,v 1.4296 2011/04/14 09:49:23 bartoszkuzma Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1261,7 +1261,9 @@ SUBDIR+=	libdjconsole
 SUBDIR+=	libdmx
 SUBDIR+=	libdshconfig
 SUBDIR+=	libdssialsacompat
+SUBDIR+=	libee
 SUBDIR+=	libepc
+SUBDIR+=	libestr
 SUBDIR+=	libexecinfo
 SUBDIR+=	libexosip
 SUBDIR+=	libfplll
@@ -1288,6 +1290,7 @@ SUBDIR+=	libitl
 SUBDIR+=	libjingle
 SUBDIR+=	liblingoteach
 SUBDIR+=	liblo
+SUBDIR+=	liblognorm
 SUBDIR+=	libmemcached
 SUBDIR+=	libmpg123
 SUBDIR+=	libmrss
@@ -2462,6 +2465,7 @@ SUBDIR+=	rsget
 SUBDIR+=	rss-glib
 SUBDIR+=	rst-mode
 SUBDIR+=	rsyslog
+SUBDIR+=	rsyslog6
 SUBDIR+=	rte
 SUBDIR+=	rthread
 SUBDIR+=	rtpbreak
