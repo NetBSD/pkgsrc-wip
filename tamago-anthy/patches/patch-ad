@@ -1,4 +1,6 @@
-$NetBSD: patch-ad,v 1.1 2010/10/04 03:30:40 makoto Exp $
+$NetBSD: patch-ad,v 1.2 2011/04/14 03:27:17 makoto Exp $
+
+ make-local-hook is used only before emacs-21.
 
 --- menudiag.el.orig	2001-01-28 03:53:13.000000000 +0900
 +++ menudiag.el	2010-10-04 11:42:56.000000000 +0900

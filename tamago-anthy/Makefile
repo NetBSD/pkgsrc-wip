@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/11/22 14:38:41 makoto Exp $
+# $NetBSD: Makefile,v 1.5 2011/04/14 03:27:16 makoto Exp $
 # the version number is for pkglint only
 DISTNAME=	tamago-anthy-4.0
 
@@ -19,7 +19,6 @@ HOMEPAGE=	http://www.meadowy.org/~shirai/
 #
 DISTFILES+=	egg-anthy.tar.gz
 DISTFILES+=	anthy-${ANTHY_VERSION}.tar.gz
-
 COMMENT=	Tamago(Emacs CJK input) + Anthy engine interface
 
 CONFLICTS=	tamago-[0-9]*
@@ -60,20 +59,21 @@ pre-configure:
 	cp -p ${WRKDIR}/egg-anthy/anthy.el	${WRKSRC}/egg
 	cp -p ${WRKDIR}/egg-anthy/anthyipc.el	${WRKSRC}/egg
 
-# take care anthy part needs some make
+# Take care anthy part, it needs some make there
 post-build:
+	set -e;	\
 	cd ${WRKDIR}/anthy-${ANTHY_VERSION}/src-util;	\
 	sh ../configure;	\
 	${MAKE} elc-stamp
 
 do-install:
-# original egg install (copied part of mk/install/install.mk)
+# Original egg install (copied part of mk/install/install.mk)
 	set -e; cd ${WRKDIR}/tamago; 					\
 	${SETENV} ${INSTALL_ENV} ${MAKE_ENV}				\
 		${MAKE_PROGRAM} ${MAKE_FLAGS} ${INSTALL_MAKE_FLAGS}	\
 			install
-
-# anthy-elisp (hide after egg/egg that's why egg/f-anthy instead of just egg/anthy)
+# Install anthy-elisp
+#  (hide after egg/egg that's why egg/f-anthy instead of just egg/anthy)
 	${INSTALL_DATA_DIR}	${DESTDIR}${EMACS_LISPPREFIX}/egg/f-anthy
 	${INSTALL_DATA} ${WRKDIR}/anthy-${ANTHY_VERSION}/src-util/*.el	\
 				${DESTDIR}${EMACS_LISPPREFIX}/egg/f-anthy

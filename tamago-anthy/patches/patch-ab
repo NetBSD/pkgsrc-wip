@@ -1,4 +1,8 @@
-$NetBSD: patch-ab,v 1.2 2010/10/04 03:30:39 makoto Exp $
+$NetBSD: patch-ab,v 1.3 2011/04/14 03:27:17 makoto Exp $
+
+See following mail (in Japanese)
+[mule-ja-2009:09758] Re: (emacs-23.2) M-x egg-toroku-region  Invalid code(s) (Re: tamago Anthy
+http://www.m17n.org/mlarchive/mule-ja/201008/msg00005.html
 
 --- egg-edep.el.orig	2001-01-28 03:45:24.000000000 +0900
 +++ egg-edep.el	2010-10-04 11:42:17.000000000 +0900

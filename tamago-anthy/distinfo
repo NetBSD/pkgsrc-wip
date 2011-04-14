@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2010/11/19 13:45:54 makoto Exp $
+$NetBSD: distinfo,v 1.6 2011/04/14 03:27:16 makoto Exp $
 
 SHA1 (anthy-9100h.tar.gz) = bfea9e74e208c4b976b6bd7ac6784cd290c636fd
 RMD160 (anthy-9100h.tar.gz) = 6ddb26c0a47daf2f765b2973817cfbe84fa85606
@@ -6,7 +6,7 @@ Size (anthy-9100h.tar.gz) = 4446148 bytes
 SHA1 (egg-anthy.tar.gz) = 2d180ed57dac5adce74f4f2df97de8d25d650f72
 RMD160 (egg-anthy.tar.gz) = 944ab5d1b2b338fb2ac24961ad68d83716ff879c
 Size (egg-anthy.tar.gz) = 14670 bytes
-SHA1 (patch-ab) = 7e9bdfbf15ff2eda474b3a5d6bc2e1d3e5ef84ab
-SHA1 (patch-ac) = c4b8a4d87553f16c76a3b2f738b0ec16bd96db0e
-SHA1 (patch-ad) = 2aa4e6d483795428488650f6890580e86e68a445
-SHA1 (patch-ae) = 06b48b680258391442ea23f6dece03e5888d8bdb
+SHA1 (patch-ab) = 50fc1b3b608f8b82eab574304e2465f1991d2418
+SHA1 (patch-ac) = 9bf2e5271eac665c6fbb48003037cceb3cddc929
+SHA1 (patch-ad) = 002866f58728118d90d051844990d90b33a6a9c8
+SHA1 (patch-ae) = 23d5f45b2321c952c48df82621b96e0e02982028

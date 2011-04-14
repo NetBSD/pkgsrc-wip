@@ -1,4 +1,6 @@
-$NetBSD: patch-ac,v 1.1 2010/10/04 03:30:40 makoto Exp $
+$NetBSD: patch-ac,v 1.2 2011/04/14 03:27:17 makoto Exp $
+
+ make-local-hook is used only before emacs-21.
 
 --- egg.el.orig	2002-07-22 22:18:56.000000000 +0900
 +++ egg.el	2010-10-04 11:43:20.000000000 +0900
