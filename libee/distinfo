@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/04/14 09:06:55 bartoszkuzma Exp $
+
+SHA1 (libee-0.3.0.tar.gz) = a2211629840f8900878215e31cc1bc836477a384
+RMD160 (libee-0.3.0.tar.gz) = 06485acb76f8c65bb85db78496378de3142d6c4d
+Size (libee-0.3.0.tar.gz) = 344492 bytes
