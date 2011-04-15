@@ -2,3 +2,4 @@
 - Fix defaults for localhost linux_memory.pl -> bsd_memory.pl
 - Fix security issue:	http://secunia.com/advisories/37481/
 			http://secunia.com/advisories/37484/
+                        http://secunia.com/advisories/44133/
