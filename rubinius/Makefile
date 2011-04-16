@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2011/02/16 07:28:09 jafour1 Exp $
-DISTNAME=	rubinius-1.2.1-20110215
+# $NetBSD: Makefile,v 1.3 2011/04/16 23:45:55 jafour1 Exp $
+VERSION=	1.2.3
+DISTNAME=	rubinius-${VERSION}-20110315
 CATEGORIES=	lang
 MASTER_SITES=	http://asset.rubini.us/
 
@@ -30,7 +31,7 @@ do-install:
 		ln -s ${DESTDIR}/bin/rake18 ${DESTDIR}/bin/rake; \
 	 fi; \
 	fi;
-	cd work/rubinius-1.2.1 && ./configure --prefix=${DESTDIR}/rubinius && ${DESTDIR}/bin/rake install
+	cd work/rubinius-${VERSION} && ./configure --prefix=${DESTDIR}/rubinius && ${DESTDIR}/bin/rake install
 
 DEPENDS+=	bison>=2.4.3:../../devel/bison
 DEPENDS+=	zlib>=1.2.3:../../devel/zlib

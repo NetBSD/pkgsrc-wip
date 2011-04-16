@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2011/02/16 07:28:09 jafour1 Exp $
+$NetBSD: distinfo,v 1.3 2011/04/16 23:45:55 jafour1 Exp $
 
-SHA1 (rubinius-1.2.1-20110215.tar.gz) = 8061df0748fba21365e2eb461a53d70fd78adea9
-RMD160 (rubinius-1.2.1-20110215.tar.gz) = bc27a7431a104d89963bf86ecb6d234b294771f2
-Size (rubinius-1.2.1-20110215.tar.gz) = 8978480 bytes
+SHA1 (rubinius-1.2.3-20110315.tar.gz) = 7326e27f459e299dd0c2905de9b54034cc70ccbe
+RMD160 (rubinius-1.2.3-20110315.tar.gz) = eb4f7c304cfa3592dc8f75096a38d67c0e7530b5
+Size (rubinius-1.2.3-20110315.tar.gz) = 9485259 bytes
