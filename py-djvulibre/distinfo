@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2011/02/19 21:54:30 ryo-on Exp $
+$NetBSD: distinfo,v 1.4 2011/04/17 00:53:34 ryo-on Exp $
 
-SHA1 (python-djvulibre-0.3.2.tar.gz) = 118f7142243d3604dee7726a6aad5467652b5497
-RMD160 (python-djvulibre-0.3.2.tar.gz) = cc4b7065cdaf0db0c1ec657ec98e076a13eeac3a
-Size (python-djvulibre-0.3.2.tar.gz) = 120072 bytes
+SHA1 (python-djvulibre-0.3.3.tar.gz) = 449d6c21aa42c257f75335762f01f1dd1bd02ce5
+RMD160 (python-djvulibre-0.3.3.tar.gz) = 6f2a5eb64912e7efddc458ef900c41953afbbeec
+Size (python-djvulibre-0.3.3.tar.gz) = 119209 bytes

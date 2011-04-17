@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2011/02/19 22:57:57 ryo-on Exp $
+@comment $NetBSD: PLIST,v 1.5 2011/04/17 00:53:34 ryo-on Exp $
 ${PYSITELIB}/djvu/__init__.py
 ${PYSITELIB}/djvu/__init__.pyc
 ${PYSITELIB}/djvu/__init__.pyo
@@ -6,13 +6,11 @@ ${PYSITELIB}/djvu/const.py
 ${PYSITELIB}/djvu/const.pyc
 ${PYSITELIB}/djvu/const.pyo
 ${PYSITELIB}/djvu/decode.so
+${PYSITELIB}/djvu/dllpath.py
+${PYSITELIB}/djvu/dllpath.pyc
+${PYSITELIB}/djvu/dllpath.pyo
 ${PYSITELIB}/djvu/sexpr.so
-${PYSITELIB}/python_djvulibre-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/PKG-INFO
-${PYSITELIB}/python_djvulibre-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/SOURCES.txt
-${PYSITELIB}/python_djvulibre-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/dependency_links.txt
-${PYSITELIB}/python_djvulibre-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/top_level.txt
-@comment${PYSITELIB}/${EGG_INFODIR}/PKG-INFO 
-@comment${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
-@comment${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
-@comment${PYSITELIB}/${EGG_INFODIR}/top_level.txt
-
+${PYSITELIB}/python_djvulibre-${PKGVERSION}-py2.6.egg-info/PKG-INFO
+${PYSITELIB}/python_djvulibre-${PKGVERSION}-py2.6.egg-info/SOURCES.txt
+${PYSITELIB}/python_djvulibre-${PKGVERSION}-py2.6.egg-info/dependency_links.txt
+${PYSITELIB}/python_djvulibre-${PKGVERSION}-py2.6.egg-info/top_level.txt

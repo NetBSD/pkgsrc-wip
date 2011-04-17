@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2011/02/25 09:47:48 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2011/04/17 00:53:34 ryo-on Exp $
 #
-DISTNAME=	python-djvulibre-0.3.2
+DISTNAME=	python-djvulibre-0.3.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//}
 CATEGORIES=	graphics textproc
 MASTER_SITES=	http://pypi.python.org/packages/source/p/python-djvulibre/
