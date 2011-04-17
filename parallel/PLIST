@@ -1,10 +1,16 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/10/24 17:10:11 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/04/17 11:38:32 cheusov Exp $
+bin/niceload
 bin/parallel
 bin/sem
 bin/sql
+man/man1/niceload.1
 man/man1/parallel.1
 man/man1/sem.1
 man/man1/sql.1
+share/doc/parallel/COPYING
+share/doc/parallel/NEWS
+share/doc/parallel/README
+share/doc/parallel/niceload.html
 share/doc/parallel/parallel.html
 share/doc/parallel/sem.html
 share/doc/parallel/sql.html
