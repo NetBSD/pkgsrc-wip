@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2010/12/10 23:04:37 ryo-on Exp $
+# $NetBSD: Makefile,v 1.4 2011/04/17 05:55:08 ryo-on Exp $
 #
 
-DISTNAME=	evernote-mode-0_21
+DISTNAME=	evernote-mode-0_30
 PKGNAME=	${DISTNAME:S/_/./}
 CATEGORIES=	editors net
 MASTER_SITES=	http://emacs-evernote-mode.googlecode.com/files/
@@ -25,7 +25,11 @@ RUBY_VERSION_SUPPORTED=	19 #18
 USE_RUBY_SETUP=	YES
 
 DOCUMENTS=	readme_en.txt \
-		readme_ja.txt
+		readme_en.html \
+		readme_en.org \
+		readme_ja.html \
+		readme_ja.txt \
+		readme_ja.org
 
 SUBST_CLASSES+=		ruby-cmd
 SUBST_STAGE.ruby-cmd=	pre-configure

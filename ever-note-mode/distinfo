@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2010/12/10 23:04:37 ryo-on Exp $
+$NetBSD: distinfo,v 1.4 2011/04/17 05:55:08 ryo-on Exp $
 
-SHA1 (evernote-mode-0_21.zip) = 73f204fe7bb80c2e69333fa7c9bf3a3694589903
-RMD160 (evernote-mode-0_21.zip) = 7790f45efece4a51d4f59239cb3c60bc8ba1773c
-Size (evernote-mode-0_21.zip) = 129920 bytes
+SHA1 (evernote-mode-0_30.zip) = f05eb0b02d1568c884114e192507ac8370238b56
+RMD160 (evernote-mode-0_30.zip) = c7448ab2d55f9cb170a5988e611ac25028abdfb9
+Size (evernote-mode-0_30.zip) = 147222 bytes
