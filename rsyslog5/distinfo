@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/04/18 13:46:22 bartoszkuzma Exp $
+
+SHA1 (rsyslog-5.8.0.tar.gz) = 5a64f0ca8b6d5b32db1c20d46965803a2d8d047a
+RMD160 (rsyslog-5.8.0.tar.gz) = ee0491ec0986ab1ec507a40d5129ea90a0bbdb85
+Size (rsyslog-5.8.0.tar.gz) = 2336866 bytes
