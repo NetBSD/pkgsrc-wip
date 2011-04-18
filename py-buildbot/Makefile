@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2010/11/16 15:08:41 haad Exp $
+# $NetBSD: Makefile,v 1.9 2011/04/18 00:26:02 silasdb Exp $
 #
 
 DISTNAME=		buildbot-0.8.2
@@ -12,6 +12,7 @@ COMMENT=		System to automate the compile/test cycle
 
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
+PYTHON_VERSIONS_ACCEPTED=	27 26 25
 
 ALL_ENV+=               NO_INSTALL_REQS=1
 
