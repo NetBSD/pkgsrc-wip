@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/04/14 09:44:42 bartoszkuzma Exp $
+$NetBSD: distinfo,v 1.2 2011/04/18 13:45:24 bartoszkuzma Exp $
 
-SHA1 (rsyslog-6.1.6.tar.gz) = 7e6421cf7c8db2fe5ccd36a0aa710c6152b36f76
-RMD160 (rsyslog-6.1.6.tar.gz) = 51274b649fe52fc339c557f5dd177ea93565de5a
-Size (rsyslog-6.1.6.tar.gz) = 2374738 bytes
+SHA1 (rsyslog-6.1.7.tar.gz) = 4ba271e31b8b45679359b9a3f8ee01600fc648fd
+RMD160 (rsyslog-6.1.7.tar.gz) = 86ed2959f1b8d3a3209b47d4bbd8ef5492f2fd9d
+Size (rsyslog-6.1.7.tar.gz) = 2391945 bytes

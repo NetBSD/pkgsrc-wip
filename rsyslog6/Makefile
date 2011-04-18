@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/04/14 09:44:42 bartoszkuzma Exp $
+# $NetBSD: Makefile,v 1.2 2011/04/18 13:45:24 bartoszkuzma Exp $
 #
 
-DISTNAME=		rsyslog-6.1.6
+DISTNAME=		rsyslog-6.1.7
 CATEGORIES=		sysutils
 MASTER_SITES=		http://download.rsyslog.com/rsyslog/
 
@@ -9,6 +9,8 @@ MAINTAINER=		bartosz.kuzma@gmail.com
 HOMEPAGE=		http://www.rsyslog.com/
 COMMENT=		The enhanced syslogd for Unix
 LICENSE=		gnu-gpl-v3
+
+CONFLICTS=		rsyslog-[0-9]-*
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
