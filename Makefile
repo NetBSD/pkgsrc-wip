@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4297 2011/04/18 13:47:49 bartoszkuzma Exp $
+# $Id: Makefile,v 1.4298 2011/04/18 19:52:35 genolopolis Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1215,6 +1215,7 @@ SUBDIR+=	krusader
 SUBDIR+=	kuickshow
 SUBDIR+=	kvirc
 SUBDIR+=	kxmleditor
+SUBDIR+=	kyotocabinet
 SUBDIR+=	kyra
 SUBDIR+=	kyra2
 SUBDIR+=	l2tpd
@@ -1683,6 +1684,7 @@ SUBDIR+=	p5-AI-NeuralNet-Simple
 SUBDIR+=	p5-AI-Prolog
 SUBDIR+=	p5-Aceperl
 SUBDIR+=	p5-Algorithm-Cluster
+SUBDIR+=	p5-AnyEvent-IRC
 SUBDIR+=	p5-Apache-AuthenNTLM
 SUBDIR+=	p5-Apache2-ModSSL
 SUBDIR+=	p5-App-cpanminus
