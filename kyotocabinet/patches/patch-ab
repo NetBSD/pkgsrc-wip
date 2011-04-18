@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1.1.1 2011/04/18 11:12:35 genolopolis Exp $
+
+have netbsd use the portable locking mechanism
+
+--- kcthread.cc.orig	2011-04-17 20:48:20.000000000 +0000
++++ kcthread.cc
+@@ -402,7 +402,7 @@ bool Mutex::lock_try() {
+  * Try to get the lock.
+  */
+ bool Mutex::lock_try(double sec) {
+-#if defined(_SYS_MSVC_) || defined(_SYS_MINGW_) || defined(_SYS_CYGWIN_) || defined(_SYS_MACOSX_)
++#if defined(_SYS_MSVC_) || defined(_SYS_MINGW_) || defined(_SYS_CYGWIN_) || defined(_SYS_MACOSX_) || defined(_SYS_NETBSD_)
+   _assert_(sec >= 0.0);
+   if (lock_try()) return true;
+   double end = time() + sec;
