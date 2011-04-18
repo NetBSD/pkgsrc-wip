@@ -1,0 +1,59 @@
+$NetBSD: patch-symux_symux.8,v 1.1 2011/04/18 14:51:27 hfath Exp $
+
+Allow for substitution of hardcoded paths
+
+--- symux/symux.8.orig	2010-06-14 15:37:34.000000000 +0000
++++ symux/symux.8
+@@ -81,7 +81,7 @@ configuration.
+ Read configuration from
+ .Ar filename
+ instead of
+-.Pa /etc/symux.conf .
++.Pa @PKG_SYSCONFDIR@/symux.conf .
+ .It Fl l
+ List rrd files found in active configuration.
+ .It Fl t
+@@ -92,7 +92,7 @@ Show version.
+ .Sh CONFIGURATION
+ .Nm
+ obtains configuration data from
+-.Pa /etc/symux.conf .
++.Pa @PKG_SYSCONFDIR@/symux.conf .
+ The configuration file contains one mux stanza that defines on what host
+ address and port
+ .Nm
+@@ -291,7 +291,7 @@ soft_read_error_rate: g_sense_error_rate
+ Causes
+ .Nm
+ to read
+-.Pa /etc/symux.conf
++.Pa @PKG_SYSCONFDIR@/symux.conf
+ or the file specified by the
+ .Fl f
+ flag.
+@@ -305,7 +305,7 @@ configuration file.
+ Contains the program id of the
+ .Nm
+ daemon.
+-.It Pa /etc/symux.conf
++.It Pa @PKG_SYSCONFDIR@/symux.conf
+ .Nm
+ system wide configuration file.
+ .El
+@@ -316,14 +316,14 @@ supports symon(8) clients that send
+ .It pre OpenBSD 3.5 disk statistics.
+ These streams should be identified as io1(<disk>) instead of
+ io(<disk>) in
+-.Pa /etc/symux.conf.
++.Pa @PKG_SYSCONFDIR@/symux.conf.
+ Also note that symon(8) measures io1 or io2 depending on whether it was
+ compiled on a host that supports version 1 or 2. The rrd datastructures of
+ these streams differ and there is no easy way to change an io1 rrd into an io2
+ rrd.
+ .It pre symon 2.78 mem/if statistics.
+ These streams should be identified as if1(<interface>) and mem1() in
+-.Pa /etc/symux.conf.
++.Pa @PKG_SYSCONFDIR@/symux.conf.
+ symon versions 2.78 and up will always report if2 and mem2 statistics. The rrd
+ files for the old and new probes are identical and need not be changed.
+ .El

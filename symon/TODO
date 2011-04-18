@@ -1,5 +1,8 @@
-add rc.d scripts.
+o Split package into *-server (symux) and *-client (symon) to get rid
+of the rrdtool dependency on monitored hosts
 
-add a MESSAGE so it's not so confusing for a pkg-hunter
+o Alternatively, carve up into symon-{symux,symon,syweb}
 
-stil some hard codes in there...
+o Send NetBSD related changes upstream
+
+

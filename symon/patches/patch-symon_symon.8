@@ -1,0 +1,67 @@
+$NetBSD: patch-symon_symon.8,v 1.1 2011/04/18 14:51:27 hfath Exp $
+
+Allow for substitution of hardcoded paths
+
+--- symon/symon.8.orig	2010-03-29 06:49:12.000000000 +0000
++++ symon/symon.8
+@@ -76,7 +76,7 @@ from becoming a daemon and show debug in
+ Read configuration from
+ .Ar filename
+ instead of
+-.Pa /etc/symon.conf .
++.Pa @PKG_SYSCONFDIR@/symon.conf .
+ .It Fl t
+ Test configuration file and exit.
+ .It Fl u
+@@ -93,7 +93,7 @@ Show version information.
+ .Sh CONFIGURATION
+ .Nm
+ obtains configuration data from
+-.Pa /etc/symon.conf .
++.Pa @PKG_SYSCONFDIR@/symon.conf .
+ The configuration file contains monitor stanzas that define what
+ resources should be monitored and to which
+ .Xr symux 8
+@@ -124,7 +124,7 @@ symux(8) datafile.
+ .Pp
+ The pf probe will return data that is collected for the
+ .Pa loginterface
+-set in /etc/pf.conf(5).
++set in @PKG_SYSCONFDIR@/pf.conf(5).
+ .Sh EXAMPLE
+ Here is an example
+ .Ar symon.conf
+@@ -145,7 +145,7 @@ monitor { cpu(0),  mem, pf, if(xl0), if(
+ Causes
+ .Nm
+ to read
+-.Pa /etc/symon.conf .
++.Pa @PKG_SYSCONFDIR@/symon.conf .
+ .Nm
+ will keep the old configuration if errors occured during parsing of the
+ configuration file. Note that the chroot(2) may cause resources to become
+@@ -157,13 +157,13 @@ unattainable, most notably the configura
+ Contains the program id of the
+ .Nm
+ daemon.
+-.It Pa /etc/symon.conf
++.It Pa @PKG_SYSCONFDIR@/symon.conf
+ .Nm
+ system wide configuration file.
+ .El
+ .Sh BUGS
+ Every monitored resource mentioned
+-.Pa /etc/symon.conf
++.Pa @PKG_SYSCONFDIR@/symon.conf
+ gets queried. Mentioning, for example, cpu(0) twice for different muxes will
+ result in two distinct cpu(0) measurement actions.
+ .Pp
+@@ -172,7 +172,7 @@ process is simply counted twice.
+ .Pp
+ .Nm
+ does not check whether resources mentioned in
+-.Pa /etc/symon.conf
++.Pa @PKG_SYSCONFDIR@/symon.conf
+ exist.
+ .Pp
+ .Sh AUTHOR

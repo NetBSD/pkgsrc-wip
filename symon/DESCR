@@ -1,23 +1,24 @@
-symon is a system monitor. It can be used to obtain accurate and up to date
-information on the performance of a number of systems.
+symon is a system monitor. It can be used to obtain accurate and up to
+date information on the performance of a number of systems.
 
 Currently the "suite" consists of these parts:
 
-symon - lightweight system monitor. Can be run with privleges equivalent
-    to nobody on the monitored host. Offers no functionality but monitoring
-    and forwarding of measured data.
+symon - lightweight system monitor. Can be run with privileges
+equivalent to nobody on the monitored host. Offers no functionality
+but monitoring and forwarding of measured data.
 
-symux - persists data. Incoming symon streams are stored on disk in rrd
-    files. symux offers systems statistics as they come in to 3rd party
-    clients.
+symux - persists data. Incoming symon streams are stored on disk in
+rrd files. symux offers systems statistics as they come in to 3rd
+party clients.
 
-syweb - draws rrdtool pictures of the stored data. syweb is a php script
-    that can deal with chrooted apaches. It can show all systems that are
-    monitored in one go, or be configured to only show a set of graphs.
+syweb - draws rrdtool pictures of the stored data. syweb is a php
+script that can deal with chrooted apaches. It can show all systems
+that are monitored in one go, or be configured to only show a set of
+graphs.
 
 sylcd - symux client that drives CrystalFontz and HD44780 lcds. sylcd
-    shows current network load on a specific host.
+shows current network load on a specific host.
 
-SymuxClient.pm - generic perl symux client. Could, for instance, be used
-    to get the hourly amount of data that was transmitted on a particular
-    interface.
+SymuxClient.pm - generic perl symux client. Could, for instance, be
+used to get the hourly amount of data that was transmitted on a
+particular interface.
