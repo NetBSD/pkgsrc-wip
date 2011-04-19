@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2011/03/26 09:57:43 asau Exp $
+@comment $NetBSD: PLIST,v 1.36 2011/04/19 23:02:13 asau Exp $
 bin/maxima
 bin/rmaxima
 bin/xmaxima
@@ -121,6 +121,7 @@ share/maxima/${PKGVERSION}/doc/html/maxima_1.html
 share/maxima/${PKGVERSION}/doc/html/maxima_10.html
 share/maxima/${PKGVERSION}/doc/html/maxima_100.html
 share/maxima/${PKGVERSION}/doc/html/maxima_101.html
+share/maxima/${PKGVERSION}/doc/html/maxima_102.html
 share/maxima/${PKGVERSION}/doc/html/maxima_11.html
 share/maxima/${PKGVERSION}/doc/html/maxima_12.html
 share/maxima/${PKGVERSION}/doc/html/maxima_13.html
@@ -505,7 +506,6 @@ share/maxima/${PKGVERSION}/share/contrib/ezunits/ezunits.mac
 share/maxima/${PKGVERSION}/share/contrib/ezunits/physical_constants.mac
 share/maxima/${PKGVERSION}/share/contrib/ezunits/rtestezunits.mac
 share/maxima/${PKGVERSION}/share/contrib/f90.lisp
-share/maxima/${PKGVERSION}/share/contrib/finance/finance.es.texi
 share/maxima/${PKGVERSION}/share/contrib/finance/finance.mac
 share/maxima/${PKGVERSION}/share/contrib/floatproperties.lisp
 share/maxima/${PKGVERSION}/share/contrib/format/README
@@ -887,6 +887,7 @@ share/maxima/${PKGVERSION}/share/draw/grcommon.lisp
 share/maxima/${PKGVERSION}/share/draw/implicit3d.lisp
 share/maxima/${PKGVERSION}/share/draw/picture.lisp
 share/maxima/${PKGVERSION}/share/draw/rtest_draw.mac
+share/maxima/${PKGVERSION}/share/draw/vtk.lisp
 share/maxima/${PKGVERSION}/share/draw/wbd.lisp
 share/maxima/${PKGVERSION}/share/draw/worldmap.mac
 share/maxima/${PKGVERSION}/share/dynamics/complex_dynamics.lisp
