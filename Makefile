@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4298 2011/04/18 19:52:35 genolopolis Exp $
+# $Id: Makefile,v 1.4299 2011/04/19 11:25:09 genolopolis Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1216,6 +1216,7 @@ SUBDIR+=	kuickshow
 SUBDIR+=	kvirc
 SUBDIR+=	kxmleditor
 SUBDIR+=	kyotocabinet
+SUBDIR+=	kyototycoon
 SUBDIR+=	kyra
 SUBDIR+=	kyra2
 SUBDIR+=	l2tpd
