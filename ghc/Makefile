@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.28 2010/12/30 06:26:48 phonohawk Exp $
+# $NetBSD: Makefile,v 1.29 2011/04/19 12:22:34 phonohawk Exp $
 
 DISTNAME=		ghc-${VERSION}
 VERSION=		7.0.1
 CATEGORIES=		lang
-MASTER_SITES=	http://new-www.haskell.org/ghc/dist/${VERSION}/
+MASTER_SITES=	http://www.haskell.org/ghc/dist/${VERSION}/
 MAINTAINER=		kristerw@NetBSD.org
 HOMEPAGE=		http://www.haskell.org/ghc/
 COMMENT=		Compiler for the functional language Haskell
@@ -149,13 +149,9 @@ ${WRKDIR}/stamp-bootstrap-ghc: ${WRKDIR}/stamp-rewrite-hc-paths
 do-configure:
 	${RUN} cd ${WRKSRC} && \
 		${SETENV} ${CONFIGURE_ENV} ./configure ${CONFIGURE_ARGS}
-# We need to tell the libraries/integer-gmp/configure that libgmp is
+# We need to tell the libraries/terminfo/configure that our ncurses is
 # in a non-standard path. Without that, the resulting GHC tries to
 # link programs by executing ld(1) without passing it -L${PREFIX}/lib.
-	${RUN} ${ECHO} "libraries/integer-gmp_CONFIGURE_OPTS += \
-		--configure-option=--with-gmp-includes=${PREFIX}/include \
-		--configure-option=--with-gmp-libraries=${PREFIX}/lib" > ${WRKSRC}/mk/build.mk
-# The ncurses is also in a non-standard path.
 	${RUN} ${ECHO} "libraries/terminfo_CONFIGURE_OPTS += \
 		--configure-option=--with-curses-includes=${PREFIX}/include \
 		--configure-option=--with-curses-libraries=${PREFIX}/lib" >> ${WRKSRC}/mk/build.mk
