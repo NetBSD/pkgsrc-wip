@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2008/11/18 02:11:41 makoto Exp $
+$NetBSD: patch-aa,v 1.2 2011/04/19 13:05:47 makoto Exp $
+
+Install utils also as commented below.
 
 --- WL-CFG.orig	Tue Oct 23 20:44:04 2001
 +++ WL-CFG
