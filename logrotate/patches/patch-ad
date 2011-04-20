@@ -1,7 +1,9 @@
-$NetBSD: patch-ad,v 1.4 2010/11/06 15:05:50 ahp-nils Exp $
+$NetBSD: patch-ad,v 1.5 2011/04/20 18:53:58 ahp-nils Exp $
 
 Compatibility patch for systems not using alloca.h and some
-other things. Patch commited upstream.
+other things. Patch commited upstream. 
+Also fixes CVE-2011-1154, CVE-2011-1155 and CVE-2011-1098.
+
 
 --- logrotate.c.orig	2010-06-28 08:04:56.000000000 +0000
 +++ logrotate.c
@@ -15,3 +17,297 @@ other things. Patch commited upstream.
  #include <ctype.h>
  #include <dirent.h>
  #include <errno.h>
+@@ -36,6 +40,12 @@ int selinux_enforce = 0;
+ #define GLOB_ABORTED GLOB_ABEND
+ #endif
+ 
++#ifdef PATH_MAX
++#define STATEFILE_BUFFER_SIZE 2 * PATH_MAX + 16
++#else
++#define STATEFILE_BUFFER_SIZE 4096
++#endif
++
+ struct logState {
+     char *fn;
+     struct tm lastRotated;	/* only tm.mon, tm_mday, tm_year are good! */
+@@ -62,7 +72,7 @@ int debug = 0;
+ char *mailCommand = DEFAULT_MAIL_COMMAND;
+ time_t nowSecs = 0;
+ 
+-static int shred_file(char *filename, struct logInfo *log);
++static int shred_file(int fd, char *filename, struct logInfo *log);
+ 
+ static int globerr(const char *pathname, int theerr)
+ {
+@@ -73,6 +83,34 @@ static int globerr(const char *pathname,
+     return 1;
+ }
+ 
++static void unescape(char *arg)
++{
++	char *p = arg;
++	char *next;
++	char escaped;
++	while ((next = strchr(p, '\\')) != NULL) {
++
++		p = next;
++
++		switch (p[1]) {
++		case 'n':
++			escaped = '\n';
++			break;
++		case '\\':
++			escaped = '\\';
++			break;
++		default:
++			++p;
++			continue;
++		}
++
++		/* Overwrite the backslash with the intended character,
++		* and shift everything down one */
++		*p++ = escaped;
++		memmove(p, p+1, 1 + strlen(p+1));
++	}
++}
++
+ #define HASH_SIZE_MIN 64
+ static int allocateHash(void)
+ {
+@@ -194,86 +232,112 @@ static int runScript(char *logfn, char *
+ int createOutputFile(char *fileName, int flags, struct stat *sb)
+ {
+     int fd;
+-
+-    fd = open(fileName, flags, sb->st_mode);
+-    if (fd < 0) {
+-	message(MESS_ERROR, "error creating output file %s: %s\n",
+-		fileName, strerror(errno));
+-	return -1;
+-    }
+-    if (fchmod(fd, (S_IRUSR | S_IWUSR) & sb->st_mode)) {
+-	message(MESS_ERROR, "error setting mode of %s: %s\n",
+-		fileName, strerror(errno));
+-	close(fd);
+-	return -1;
+-    }
+-    if (fchown(fd, sb->st_uid, sb->st_gid)) {
+-	message(MESS_ERROR, "error setting owner of %s: %s\n",
+-		fileName, strerror(errno));
+-	close(fd);
+-	return -1;
+-    }
+-    if (fchmod(fd, sb->st_mode)) {
+-	message(MESS_ERROR, "error setting mode of %s: %s\n",
+-		fileName, strerror(errno));
+-	close(fd);
+-	return -1;
+-    }
++	char template[PATH_MAX + 1];
++	mode_t umask_value;
++	snprintf(template, PATH_MAX, "%s/logrotate_temp.XXXXXX", ourDirName(fileName));
++
++	umask_value = umask(0000);
++	fd = mkstemp(template);
++	umask(umask_value);
++
++	if (fd < 0) {
++		message(MESS_ERROR, "error creating unique temp file: %s\n",
++				strerror(errno));
++		return -1;
++	}
++
++	if (fchown(fd, sb->st_uid, sb->st_gid)) {
++		message(MESS_ERROR, "error setting owner of %s: %s\n",
++				fileName, strerror(errno));
++		close(fd);
++		return -1;
++	}
++
++	if (fchmod(fd, sb->st_mode)) {
++		message(MESS_ERROR, "error setting mode of %s: %s\n",
++				fileName, strerror(errno));
++		close(fd);
++		return -1;
++	}
++
++	if (rename(template, fileName)) {
++		message(MESS_ERROR, "error renaming temp file to %s: %s\n",
++				fileName, strerror(errno));
++		close(fd);
++		return -1;
++	}
+     return fd;
+ }
+ 
+-#define SHRED_CALL "shred -u "
+-#define SHRED_COUNT_FLAG "-n "
+ #define DIGITS 10
+ /* unlink, but try to call shred from GNU fileutils */
+-static int shred_file(char *filename, struct logInfo *log)
++static int shred_file(int fd, char *filename, struct logInfo *log)
+ {
+-	int len, ret;
+-	char *cmd;
+ 	char count[DIGITS];    /*  that's a lot of shredding :)  */
++	const char **fullCommand;
++	int id = 0;
++	int status;
+ 
+ 	if (!(log->flags & LOG_FLAG_SHRED)) {
+ 		return unlink(filename);
+ 	}
+ 
+-	len = strlen(filename) + strlen(SHRED_CALL);
+-	len += strlen(SHRED_COUNT_FLAG) + DIGITS;
+-	cmd = malloc(len);
++	message(MESS_DEBUG, "Using shred to remove the file %s\n", filename);
+ 
+-	if (!cmd) {
+-		message(MESS_ERROR, "malloc error while shredding");
+-		return unlink(filename);
++	if (log->shred_cycles != 0) {
++		fullCommand = alloca(sizeof(*fullCommand) * 6);
+ 	}
+-	strcpy(cmd, SHRED_CALL);
++	else {
++		fullCommand = alloca(sizeof(*fullCommand) * 4);
++	}
++	fullCommand[id++] = "shred";
++	fullCommand[id++] = "-u";
++
+ 	if (log->shred_cycles != 0) {
+-		strcat(cmd, SHRED_COUNT_FLAG);
++		fullCommand[id++] = "-n";
+ 		snprintf(count, DIGITS - 1, "%d", log->shred_cycles);
+-		strcat(count, " ");
+-		strcat(cmd, count);
++		fullCommand[id++] = count;
+ 	}
+-	strcat(cmd, filename);
+-	ret = system(cmd);
+-	free(cmd);
+-	if (ret != 0) {
++	fullCommand[id++] = "-";
++	fullCommand[id++] = NULL;
++
++	if (!fork()) {
++		dup2(fd, 1);
++		close(fd);
++		
++		execvp(fullCommand[0], (void *) fullCommand);
++		exit(1);
++	}
++
++	wait(&status);
++
++	if (!WIFEXITED(status) || WEXITSTATUS(status)) {
+ 		message(MESS_ERROR, "Failed to shred %s\n, trying unlink", filename);
+-		if (ret != -1) {
+-			message(MESS_NORMAL, "Shred returned %d\n", ret);
+-		}
+ 		return unlink(filename);
+-	} else {
+-		return ret;
+ 	}
++	/* We have to unlink it after shred anyway,
++	 * because it doesn't remove the file itself */
++	return unlink(filename);
+ }
+ 
+ static int removeLogFile(char *name, struct logInfo *log)
+ {
++    int fd;
+     message(MESS_DEBUG, "removing old log %s\n", name);
+ 
+-    if (!debug && shred_file(name, log)) {
+-	message(MESS_ERROR, "Failed to remove old log %s: %s\n",
+-		name, strerror(errno));
+-	return 1;
++    if ((fd = open(name, O_RDWR)) < 0) {    
++	    message(MESS_ERROR, "error opening %s: %s\n",
++			    name, strerror(errno));
++	    return 1;
++    }
++
++    if (!debug && shred_file(fd, name, log)) {
++	    message(MESS_ERROR, "Failed to remove old log %s: %s\n",
++			name, strerror(errno));
++	    close(fd);
++	    return 1;
+     }
++    close(fd);
+     return 0;
+ }
+ 
+@@ -301,7 +365,7 @@ static int compressLogFile(char *name, s
+     compressedName = alloca(strlen(name) + strlen(log->compress_ext) + 2);
+     sprintf(compressedName, "%s%s", name, log->compress_ext);
+ 
+-    if ((inFile = open(name, O_RDONLY)) < 0) {
++    if ((inFile = open(name, O_RDWR)) < 0) {
+ 	message(MESS_ERROR, "unable to open %s for compression\n", name);
+ 	return 1;
+     }
+@@ -323,7 +387,6 @@ static int compressLogFile(char *name, s
+ 	exit(1);
+     }
+ 
+-    close(inFile);
+     close(outFile);
+ 
+     wait(&status);
+@@ -339,7 +402,8 @@ static int compressLogFile(char *name, s
+     /* If we can't change atime/mtime, it's not a disaster.
+        It might possibly fail under SELinux. */
+ 
+-    shred_file(name, log);
++    shred_file(inFile, name, log);
++    close(inFile);
+ 
+     return 0;
+ }
+@@ -1418,7 +1482,13 @@ static int writeState(char *stateFilenam
+ 			for (chptr = p->fn; *chptr; chptr++) {
+ 				switch (*chptr) {
+ 				case '"':
++				case '\\':
+ 					fputc('\\', f);
++					break;
++				case '\n':
++					fputc('\\', f);
++					fputc('n', f);
++					continue;
+ 				}
+ 
+ 				fputc(*chptr, f);
+@@ -1439,7 +1509,8 @@ static int writeState(char *stateFilenam
+ static int readState(char *stateFilename)
+ {
+     FILE *f;
+-    char buf[1024];
++    char buf[STATEFILE_BUFFER_SIZE];
++    	char *filename;
+     const char **argv;
+     int argc;
+     int year, month, day;
+@@ -1550,7 +1621,10 @@ static int readState(char *stateFilename
+ 
+ 	year -= 1900, month -= 1;
+ 
+-	if ((st = findState(argv[0])) == NULL)
++	filename = strdup(argv[0]);
++	unescape(filename);
++
++	if ((st = findState(filename)) == NULL)
+ 		return 1;
+ 
+ 	st->lastRotated.tm_mon = month;
+@@ -1562,6 +1636,7 @@ static int readState(char *stateFilename
+ 	st->lastRotated = *localtime(&lr_time);
+ 
+ 	free(argv);
++	free(filename);
+     }
+ 
+     fclose(f);
