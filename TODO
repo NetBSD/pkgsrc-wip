@@ -70,7 +70,7 @@ Suggested package updates
 	o libexosip-3.5.0
 	o libgksu-2.0.4
 	o libgtk-java-2.10.2
-	o libmemcached-0.48
+	o libmemcached-0.49
 	o libuuid-1.41.14
 	o lincity-ng-2.0
 	o linphone-3.4.3
@@ -80,7 +80,7 @@ Suggested package updates
 	o man-1.6f
 	o mcabber-0.10.1
 	o mcwm-20110412
-	o meta-tracker-0.10.9
+	o meta-tracker-0.10.10
 	o mixxx-1.8.0
 	o mpgedit-0.73dev2
 	o mumble-1.2.3
@@ -88,7 +88,7 @@ Suggested package updates
 	o nautilus-open-terminal-0.19
 	o newsbeuter-2.4
 	o ogmrip-0.13.6
-	o openvrml-0.18.6
+	o openvrml-0.18.8
 	o osmose-0.9.1
 	o parted-1.9.0
 	o passepartout-0.7.1
