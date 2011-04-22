@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.6 2011/04/20 19:04:38 ahp-nils Exp $
+$NetBSD: patch-ag,v 1.7 2011/04/22 07:59:42 ahp-nils Exp $
 
 Add pkgsrc paths compatibility
 
@@ -22,7 +22,7 @@ Add pkgsrc paths compatibility
  Default state file.
  .TP 27
 -\fI/etc/logrotate.conf\fR
-+\fI/usr/pkg/etc/logrotate.conf\fR
++\fI@PREFIX@/etc/logrotate.conf\fR
  Configuration options.
  
  .SH SEE ALSO

@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.5 2011/04/20 19:04:38 ahp-nils Exp $
+$NetBSD: patch-af,v 1.6 2011/04/22 07:59:42 ahp-nils Exp $
 
 Add pkgsrc paths compatibility
 
@@ -8,7 +8,7 @@ Add pkgsrc paths compatibility
  #!/bin/sh
  
 -/usr/sbin/logrotate /etc/logrotate.conf >/dev/null 2>&1
-+/usr/pkg/sbin/logrotate /usr/pkg/etc/logrotate.conf >/dev/null 2>&1
++@PREFIX@/sbin/logrotate @PREFIX@/etc/logrotate.conf >/dev/null 2>&1
  EXITVALUE=$?
  if [ $EXITVALUE != 0 ]; then
      /usr/bin/logger -t logrotate "ALERT exited abnormally with [$EXITVALUE]"
