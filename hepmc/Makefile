@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/09/06 14:00:14 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2011/04/23 17:27:23 jihbed Exp $
 #
 
 DISTNAME=	HepMC-2.06.02
 PKGNAME=	${DISTNAME:S/H/h/S/MC/mc/}
-CATEGORIES=	math
+CATEGORIES=	physics
 MASTER_SITES=	http://lcgapp.cern.ch/project/simu/HepMC/download/
 
 MAINTAINER=	jihbed.research@gmail.com
