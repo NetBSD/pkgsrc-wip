@@ -1,0 +1,14 @@
+The Pythia program can be used to generate high-energy-physics events,
+i.e. sets of outgoing particles produced in the interactions between two in-
+coming particles. The objective is to provide as accurate as possible a
+representation of event properties in a wide range of reactions, within and
+beyond the Standard Model, with emphasis on those where strong inter-
+actions play a role, directly or indirectly, and therefore multihadronic final
+states are produced. The physics is then not understood well enough to
+give an exact description; instead the program has to be based on a com-
+bination of analytical results and various QCD-based models. This physics
+input is summarized here, for areas such as hard subprocesses, initial- and
+final-state parton showers, underlying events and beam remnants, fragmen-
+tation and decays, and much more. Furthermore, extensive information is
+provided on all program elements: subroutines and functions, switches and
+parameters, and particle and process data
