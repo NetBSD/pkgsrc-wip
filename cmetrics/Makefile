@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/06/02 14:54:44 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2011/04/23 20:02:41 jihbed Exp $
 #
 
 DISTNAME=	cmetrics-0.11
@@ -7,7 +7,7 @@ MASTER_SITES=	http://forge.morfeo-project.org/frs/download.php/750/
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://tools.libresoft.es/cmetrics
-COMMENT=	C metrics package
+COMMENT=	Size and complexity metrics for C source code files
 LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
