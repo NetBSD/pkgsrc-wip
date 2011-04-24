@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/04/17 05:55:08 ryo-on Exp $
+# $NetBSD: Makefile,v 1.5 2011/04/24 11:45:48 ryo-on Exp $
 #
 
 DISTNAME=	evernote-mode-0_30
@@ -13,6 +13,8 @@ COMMENT=	Refer and edit Evernote notes directly from Emacs
 LICENSE=	apache-2.0
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+DEPENDS+=	${RUBY_PKGPREFIX}-gdbm>=${RUBY_VERSION_SUFFIX}:../../databases/ruby-gdbm
 
 USE_LANGUAGES=	# none
 
