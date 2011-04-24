@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2011/02/13 21:40:32 asau Exp $
+@comment $NetBSD: PLIST,v 1.21 2011/04/24 14:34:14 asau Exp $
 bin/open-axiom
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/A1AGG-.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/A1AGG.${FASL}
@@ -796,7 +796,9 @@ lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/NUMINT.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/NUMODE.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/NUMQUAD.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/NUMTUBE.${FASL}
+lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/OAGROUP-.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/OAGROUP.${FASL}
+lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/OAMON-.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/OAMON.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/OAMONS.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/OASGP.${FASL}
@@ -852,7 +854,6 @@ lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/ORDCOMP2.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/ORDFIN.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/ORDFUNS.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/ORDMON.${FASL}
-lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/ORDRING-.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/ORDRING.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/ORDSET.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/ORDSTRCT.${FASL}
@@ -1161,6 +1162,7 @@ lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/SRAGG-.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/SRAGG.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/SRDCMPK.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/SREGSET.${FASL}
+lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/SRING.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/STACK.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/STAGG-.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/STAGG.${FASL}
@@ -1323,12 +1325,6 @@ lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/interp.daase
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/libdb.text
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/operation.daase
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/autoload/ax.${FASL}
-lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/autoload/mark.${FASL}
-lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/autoload/nspadaux.${FASL}
-lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/autoload/pspad1.${FASL}
-lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/autoload/pspad2.${FASL}
-lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/autoload/wi1.${FASL}
-lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/autoload/wi2.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/bin/AXIOMsys
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/bin/asq
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/bin/bootsys
