@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2010/06/14 15:16:22 jihbed Exp $
+# $NetBSD: Makefile,v 1.4 2011/04/24 18:42:08 jihbed Exp $
 #
 
-DISTNAME=	Astropysics-0.1.dev-r596.tar
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/A/a/S/.tar//}
-CATEGORIES=	math
+DISTNAME=	Astropysics-0.1.dev-r596
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+CATEGORIES=	physics
 MASTER_SITES=	http://pypi.python.org/packages/source/A/Astropysics/
-EXTRACT_SUFX=	.gz#md5=15cb8e36b433ba6660c67939d234c6af
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://www.physics.uci.edu/~etolleru/software.html#astropysics
