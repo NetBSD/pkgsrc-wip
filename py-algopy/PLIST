@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/03/20 23:59:05 jihbed Exp $
-${PYSITELIB}/algopy-0.2.2-py2.6.egg-info/PKG-INFO
-${PYSITELIB}/algopy-0.2.2-py2.6.egg-info/SOURCES.txt
-${PYSITELIB}/algopy-0.2.2-py2.6.egg-info/dependency_links.txt
-${PYSITELIB}/algopy-0.2.2-py2.6.egg-info/entry_points.txt
-${PYSITELIB}/algopy-0.2.2-py2.6.egg-info/top_level.txt
+@comment $NetBSD: PLIST,v 1.2 2011/04/25 21:00:36 jihbed Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/algopy/__init__.py
 ${PYSITELIB}/algopy/__init__.pyc
 ${PYSITELIB}/algopy/__init__.pyo
