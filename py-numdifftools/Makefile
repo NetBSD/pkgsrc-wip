@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/03/20 22:33:37 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2011/04/25 21:19:27 jihbed Exp $
 #
 
 DISTNAME=	Numdifftools-0.3.4
@@ -7,7 +7,7 @@ CATEGORIES=	math python
 MASTER_SITES=	http://pypi.python.org/packages/source/N/Numdifftools/
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=	jihbed.research@gmail.comE
+MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://code.google.com/p/numdifftools/
 COMMENT=	Tools for automatic numerical differentiation
 LICENSE=	modified-bsd
