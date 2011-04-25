@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/04/25 21:14:00 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2011/04/25 21:16:09 jihbed Exp $
 #
 
 DISTNAME=	pyslha-1.2.3
@@ -7,7 +7,7 @@ CATEGORIES=	physics
 MASTER_SITES=	http://pypi.python.org/packages/source/p/pyslha/
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://pypi.python.org/packages/source/p/pyslha/
+HOMEPAGE=	http://www.insectnation.org/projects/pyslha
 COMMENT=	Parsing, manipulating, and visualising SUSY Les Houches Accord data
 LICENSE=	gnu-gpl-v3
 
