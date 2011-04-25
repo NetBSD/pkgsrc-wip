@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/03/07 11:47:21 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2011/04/25 21:14:00 jihbed Exp $
 #
 
-DISTNAME=	pyslha-0.6.1
+DISTNAME=	pyslha-1.2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	math python
+CATEGORIES=	physics
 MASTER_SITES=	http://pypi.python.org/packages/source/p/pyslha/
 
 MAINTAINER=	jihbed.research@gmail.com
@@ -13,7 +13,10 @@ LICENSE=	gnu-gpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+WRKSRC=		${WRKDIR}/pyslha-1.2.3
+
 USE_LANGUAGES=	# none
+PYDISTUTILSPKG=	yes
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 
 post-extract:
@@ -21,5 +24,5 @@ post-extract:
 	${MV} ${WRKSRC}/slha2isawig ${WRKSRC}/slha2isawig${PYVERSSUFFIX}
 	${MV} ${WRKSRC}/slhaplot ${WRKSRC}/slhaplot${PYVERSSUFFIX}
 
-.include "../../lang/python/distutils.mk"
+.include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

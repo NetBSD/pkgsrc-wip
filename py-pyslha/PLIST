@@ -1,1 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/03/07 11:47:21 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/04/25 21:14:00 jihbed Exp $
+bin/isawig2slha2.6
+bin/slha2isawig2.6
+bin/slhaplot2.6
+${PYSITELIB}/pyslha.py
+${PYSITELIB}/pyslha.pyc
+${PYSITELIB}/pyslha.pyo
