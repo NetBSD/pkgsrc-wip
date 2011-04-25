@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.5 2011/03/11 21:15:27 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.6 2011/04/25 23:27:17 cheusov Exp $
 bin/nih
 bin/pkg_update_plan
+bin/pkg_status
 lib/nih/nih.default.conf
 man/man1/nih.1
 man/man1/pkg_update_plan.1
