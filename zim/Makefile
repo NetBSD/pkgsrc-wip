@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2011/04/26 11:22:56 ryo-on Exp $
+# $NetBSD: Makefile,v 1.9 2011/04/26 11:43:03 ryo-on Exp $
 #
 
 DISTNAME=	zim-0.51
@@ -30,6 +30,13 @@ SUBST_CLASSES+=		data-path
 SUBST_STAGE.data-path=	pre-configure
 SUBST_FILES.data-path=	zim/config.py
 SUBST_SED.data-path=	-e 's,/usr/local/share/,${PREFIX}/share/,'
+
+SUBST_CLASSES+=			fix-python
+SUBST_STAGE.fix-python=		pre-configure
+SUBST_MESSAGE.fix-python=	Fixing dynamic python
+SUBST_FILES.fix-python+=	zim/_lib/xdot.py
+SUBST_FILES.fix-python+=	zim/_version.py
+SUBST_SED.fix-python+=		-e 's,/usr/bin/env python,${PYTHONBIN},'
 
 .include "../../lang/python/pyversion.mk"
 .if ${PYPKGPREFIX} == "py25"
