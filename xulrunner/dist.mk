@@ -1,4 +1,4 @@
-# $NetBSD: dist.mk,v 1.28 2011/03/22 15:43:08 tnn2 Exp $
+# $NetBSD: dist.mk,v 1.29 2011/04/26 14:29:35 tnn2 Exp $
 #
 # used by wip/xulrunner/Makefile
 # used by wip/firefox/Makefile
@@ -13,7 +13,7 @@ EXTRACT_SUFX=	.tar.bz2
 DISTINFO_FILE=	${.CURDIR}/../../wip/xulrunner/distinfo
 PATCHDIR=	${.CURDIR}/../../wip/xulrunner/patches
 
-WRKSRC=		${WRKDIR}/mozilla-2.0
+WRKSRC=		${WRKDIR}/mozilla-${MOZ_BRANCH}
 
 # snapshot overrides
 #DISTNAME=	77979cd6890d

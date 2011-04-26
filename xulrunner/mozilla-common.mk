@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.14 2011/01/16 15:23:58 tnn2 Exp $
+# $NetBSD: mozilla-common.mk,v 1.15 2011/04/26 14:29:35 tnn2 Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 1.9.3
 # 
@@ -15,8 +15,6 @@ BUILD_DEPENDS+=		zip>=2.3:../../archivers/zip
 PKG_DESTDIR_SUPPORT=	user-destdir
 CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}security/nss/tests/libpkix/libpkix.sh
 CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}security/nss/tests/multinit/multinit.sh
-# XXX we patch configure.in
-CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}configure
 PRIVILEGED_STAGES+=	clean
 
 CONFIGURE_ARGS+=	--disable-tests --disable-pedantic
@@ -34,7 +32,7 @@ CONFIGURE_ARGS+=	--enable-system-sqlite
 CONFIGURE_ARGS+=	--disable-crashreporter
 CONFIGURE_ARGS+=	--disable-libnotify
 CONFIGURE_ARGS+=	--disable-necko-wifi
-CONFIGURE_ARGS+=	--disable-ipc # no chromium platform support
+CONFIGURE_ARGS+=	--disable-ipc	# no chromium platform support on BSD
 
 SUBST_CLASSES+=			fix-paths
 SUBST_STAGE.fix-paths=		pre-configure
@@ -85,7 +83,7 @@ PREFER.bzip2?=	pkgsrc
 .include "../../audio/alsa-lib/buildlink3.mk"
 .endif
 .include "../../archivers/bzip2/buildlink3.mk"
-BUILDLINK_API_DEPENDS.sqlite3+=	sqlite3>=3.6.23.1nb1
+BUILDLINK_API_DEPENDS.sqlite3+=	sqlite3>=3.7.1
 CONFIGURE_ENV+=	ac_cv_sqlite_secure_delete=yes	# c.f. patches/patch-al
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
