@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2006/05/14 21:21:40 cheusov Exp $
+# $NetBSD: Makefile,v 1.2 2011/04/26 09:24:52 moubctez Exp $
 
 # pike-* packages are not ready yet
 PKGNAME=	pike-core-${PIKE_VERSION}
@@ -15,7 +15,7 @@ MODULE_DIRS+=		modules/${m:Q}
 .include "../../wip/pike-core/Makefile.common"
 
 .include "../../devel/gmp/buildlink3.mk"
-.include "../../wip/libnettle/buildlink3.mk"
+.include "../../security/nettle/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2010/11/01 17:00:23 emil_s Exp $
-
-SHA1 (nettle-2.1.tar.gz) = 15f660ef6cfd62c1c3302f68055f194913de0dfb
-RMD160 (nettle-2.1.tar.gz) = 56bd66654e8320abb12812d0fa1b79733bc62094
-Size (nettle-2.1.tar.gz) = 965345 bytes
