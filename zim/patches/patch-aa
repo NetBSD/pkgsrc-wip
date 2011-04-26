@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.1.1.1 2010/11/04 13:48:30 ryo-on Exp $
+$NetBSD: patch-aa,v 1.2 2011/04/26 11:22:56 ryo-on Exp $
 
 fix man page path
---- setup.py.orig	2010-07-20 20:26:54.000000000 +0000
+--- setup.py.orig	2011-04-07 20:21:33.000000000 +0000
 +++ setup.py
-@@ -75,7 +75,7 @@ def include_file(file):
+@@ -81,7 +81,7 @@ def include_file(file):
  def collect_data_files():
  	# Search for data files to be installed in share/
  	data_files = [

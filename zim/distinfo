@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2011/02/24 21:15:15 ryo-on Exp $
+$NetBSD: distinfo,v 1.3 2011/04/26 11:22:56 ryo-on Exp $
 
-SHA1 (zim-0.50.tar.gz) = 8dd9efda950a70aacaed984df175b622e0d77744
-RMD160 (zim-0.50.tar.gz) = 52c9cf5b53828f7fe006cf8bbeeebd996cd6debe
-Size (zim-0.50.tar.gz) = 1136886 bytes
-SHA1 (patch-aa) = b8b9cc80e2cc998bb8f449027712bb2316e2d042
+SHA1 (zim-0.51.tar.gz) = ceebee02e303d1c9c21a0b67a49e7e33a449dc7f
+RMD160 (zim-0.51.tar.gz) = e5a634cd8d763ff095c4f057cd2f486d8f5c60e9
+Size (zim-0.51.tar.gz) = 1192204 bytes
+SHA1 (patch-aa) = f0f3fad085b64ed1c29c21231c2cc71181f52dba

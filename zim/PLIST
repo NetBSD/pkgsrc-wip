@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2011/02/24 21:15:15 ryo-on Exp $
+@comment $NetBSD: PLIST,v 1.3 2011/04/26 11:22:56 ryo-on Exp $
 bin/zim
 ${PYSITELIB}/zim/__init__.py
 ${PYSITELIB}/zim/__init__.pyc
@@ -129,12 +129,18 @@ ${PYSITELIB}/zim/plugins/equationeditor.pyo
 ${PYSITELIB}/zim/plugins/gnu_r_ploteditor.py
 ${PYSITELIB}/zim/plugins/gnu_r_ploteditor.pyc
 ${PYSITELIB}/zim/plugins/gnu_r_ploteditor.pyo
+${PYSITELIB}/zim/plugins/gnuplot_ploteditor.py
+${PYSITELIB}/zim/plugins/gnuplot_ploteditor.pyc
+${PYSITELIB}/zim/plugins/gnuplot_ploteditor.pyo
 ${PYSITELIB}/zim/plugins/inlinecalculator.py
 ${PYSITELIB}/zim/plugins/inlinecalculator.pyc
 ${PYSITELIB}/zim/plugins/inlinecalculator.pyo
 ${PYSITELIB}/zim/plugins/insertsymbol.py
 ${PYSITELIB}/zim/plugins/insertsymbol.pyc
 ${PYSITELIB}/zim/plugins/insertsymbol.pyo
+${PYSITELIB}/zim/plugins/linesorter.py
+${PYSITELIB}/zim/plugins/linesorter.pyc
+${PYSITELIB}/zim/plugins/linesorter.pyo
 ${PYSITELIB}/zim/plugins/linkmap/__init__.py
 ${PYSITELIB}/zim/plugins/linkmap/__init__.pyc
 ${PYSITELIB}/zim/plugins/linkmap/__init__.pyo
@@ -153,6 +159,9 @@ ${PYSITELIB}/zim/plugins/screenshot.pyo
 ${PYSITELIB}/zim/plugins/spell.py
 ${PYSITELIB}/zim/plugins/spell.pyc
 ${PYSITELIB}/zim/plugins/spell.pyo
+${PYSITELIB}/zim/plugins/tags.py
+${PYSITELIB}/zim/plugins/tags.pyc
+${PYSITELIB}/zim/plugins/tags.pyo
 ${PYSITELIB}/zim/plugins/tasklist.py
 ${PYSITELIB}/zim/plugins/tasklist.pyc
 ${PYSITELIB}/zim/plugins/tasklist.pyo
@@ -279,6 +288,7 @@ share/zim/manual/Help/Pages.txt
 share/zim/manual/Help/Preferences.txt
 share/zim/manual/Help/Properties.txt
 share/zim/manual/Help/Searching.txt
+share/zim/manual/Help/Tags.txt
 share/zim/manual/Help/Templates.txt
 share/zim/manual/Help/Wiki_Syntax.txt
 share/zim/manual/Plugins.txt
@@ -287,6 +297,9 @@ share/zim/manual/Plugins/Diagram_Editor.txt
 share/zim/manual/Plugins/Diagram_Editor/diagram.png
 share/zim/manual/Plugins/Equation_Editor.txt
 share/zim/manual/Plugins/Equation_Editor/equation_01.png
+share/zim/manual/Plugins/GNUPlot_Editor.txt
+share/zim/manual/Plugins/GNUPlot_Editor/gnuplot.gnu
+share/zim/manual/Plugins/GNUPlot_Editor/gnuplot.png
 share/zim/manual/Plugins/GNU_R_Plot_Editor.txt
 share/zim/manual/Plugins/GNU_R_Plot_Editor/gnu_r_plot.png
 share/zim/manual/Plugins/GNU_R_Plot_Editor/gnu_r_plot.r
@@ -298,6 +311,7 @@ share/zim/manual/Plugins/Insert_Symbol.txt
 share/zim/manual/Plugins/Link_Map.txt
 share/zim/manual/Plugins/Quick_Note.txt
 share/zim/manual/Plugins/Spell_Checker.txt
+share/zim/manual/Plugins/Tags.txt
 share/zim/manual/Plugins/Task_List.txt
 share/zim/manual/Plugins/Tray_Icon.txt
 share/zim/manual/Plugins/Version_Control.txt
@@ -326,6 +340,7 @@ share/zim/style.conf
 share/zim/symbols.list
 share/zim/templates/_Equation.tex
 share/zim/templates/_GNU_R_Plot.r
+share/zim/templates/_gnuplot.gnu
 share/zim/templates/_quicknote.txt
 share/zim/templates/html/Default.html
 share/zim/templates/html/Presentation.html
