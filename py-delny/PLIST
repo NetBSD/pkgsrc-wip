@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/04/27 22:22:34 jihbed Exp $
+${PYSITELIB}/delaunay/__init__.py
+${PYSITELIB}/delaunay/__init__.pyc
+${PYSITELIB}/delaunay/__init__.pyo
+${PYSITELIB}/delaunay/_qhull.so
+${PYSITELIB}/delaunay/core.py
+${PYSITELIB}/delaunay/core.pyc
+${PYSITELIB}/delaunay/core.pyo
