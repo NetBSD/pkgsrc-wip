@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/04/27 22:20:37 jihbed Exp $
+
+SHA1 (qitensor-0.5.tar.gz) = 92a431cf4ac3d64b020f85c687009e5e99761d7d
+RMD160 (qitensor-0.5.tar.gz) = eb2ce6ecfa72af9d5716b97808cd943237c8539d
+Size (qitensor-0.5.tar.gz) = 23750 bytes
