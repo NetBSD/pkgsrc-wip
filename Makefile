@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4302 2011/04/26 09:24:52 moubctez Exp $
+# $Id: Makefile,v 1.4303 2011/04/27 23:45:47 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2117,6 +2117,7 @@ SUBDIR+=	py-dbglog
 SUBDIR+=	py-dbutils
 SUBDIR+=	py-decorator
 SUBDIR+=	py-decoratortools
+SUBDIR+=	py-delny
 SUBDIR+=	py-dexml
 SUBDIR+=	py-diffpy-structure
 SUBDIR+=	py-diffpy_pdffit2
@@ -2220,6 +2221,8 @@ SUBDIR+=	py-mwavepy
 SUBDIR+=	py-mx-base
 SUBDIR+=	py-mysqldb-docs
 SUBDIR+=	py-ncomb
+SUBDIR+=	py-neurolab
+SUBDIR+=	py-neuronpy
 SUBDIR+=	py-netcdf
 SUBDIR+=	py-nibabel
 SUBDIR+=	py-nodepy
@@ -2280,6 +2283,7 @@ SUBDIR+=	py-pyslha
 SUBDIR+=	py-pythics
 SUBDIR+=	py-pyvib2
 SUBDIR+=	py-qecalc
+SUBDIR+=	py-qitensor
 SUBDIR+=	py-quaternionarray
 SUBDIR+=	py-qutrub
 SUBDIR+=	py-rcsparse
@@ -2609,6 +2613,7 @@ SUBDIR+=	sudoscript
 SUBDIR+=	sugarCRM
 SUBDIR+=	sun-j2me
 SUBDIR+=	sunterlib
+SUBDIR+=	superchic
 SUBDIR+=	supertux
 SUBDIR+=	surf
 SUBDIR+=	suse100_32_SDL
