@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4303 2011/04/27 23:45:47 jihbed Exp $
+# $Id: Makefile,v 1.4304 2011/04/28 14:39:13 makoto Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1124,6 +1124,7 @@ SUBDIR+=	ispell-dictionaries
 SUBDIR+=	ispell-lietuviu
 SUBDIR+=	itask-ng
 SUBDIR+=	itools
+SUBDIR+=	ja-freewnn-cvs
 #SUBDIR+=	jabberd			# not a real package
 SUBDIR+=	jabberd-aim
 SUBDIR+=	jabberd2
