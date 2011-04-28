@@ -1,0 +1,2 @@
+* Wnntouch changes MD5 value of some files. pkg_delete rumbles for that.
+* honour IMDICTDIR for dictionary files

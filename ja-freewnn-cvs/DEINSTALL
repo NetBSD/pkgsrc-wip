@@ -1,0 +1,12 @@
+# $NetBSD: DEINSTALL,v 1.1.1.1 2011/04/28 13:48:14 makoto Exp $
+
+case ${STAGE} in
+POST-DEINSTALL)
+	${FIND} ${PREFIX}/${WNNDICDIR} -type f \( -name \*dic -o -name  \*fzk \) | xargs rm -f
+#	for i in `${FIND} ${PREFIX}/${WNNDICDIR} -type f \( -name \*dic -o -name  \*fzk \)`; 
+#	 do
+#	   ${CHMOD} +w ${i};
+#	   ${RM} -f ${i};
+#	 done;
+	;;
+esac

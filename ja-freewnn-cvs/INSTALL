@@ -1,0 +1,11 @@
+# $NetBSD: INSTALL,v 1.1.1.1 2011/04/28 13:48:14 makoto Exp $
+
+case ${STAGE} in
+POST-INSTALL)
+	for i in `${FIND} ${PREFIX}/${WNNDICDIR} -type f \( -name \*dic -o -name  \*fzk \)`; 
+	 do
+	   ${CHMOD} +w ${i};
+	   ${PREFIX}/bin/Wnn4/wnntouch ${i};
+	 done;
+	;;
+esac
