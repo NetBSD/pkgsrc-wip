@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2011/03/06 09:51:23 ryo-on Exp $
+# $NetBSD: Makefile,v 1.3 2011/04/29 22:54:29 ryo-on Exp $
 #
 
-DISTNAME=	dos2unix-5.2.1
+DISTNAME=	dos2unix-5.3
 CATEGORIES=	converters
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dos2unix/}
 
