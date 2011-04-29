@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2011/04/26 11:22:56 ryo-on Exp $
+@comment $NetBSD: PLIST,v 1.4 2011/04/29 16:45:56 ryo-on Exp $
 bin/zim
 ${PYSITELIB}/zim/__init__.py
 ${PYSITELIB}/zim/__init__.pyc
@@ -297,14 +297,14 @@ share/zim/manual/Plugins/Diagram_Editor.txt
 share/zim/manual/Plugins/Diagram_Editor/diagram.png
 share/zim/manual/Plugins/Equation_Editor.txt
 share/zim/manual/Plugins/Equation_Editor/equation_01.png
-share/zim/manual/Plugins/GNUPlot_Editor.txt
-share/zim/manual/Plugins/GNUPlot_Editor/gnuplot.gnu
-share/zim/manual/Plugins/GNUPlot_Editor/gnuplot.png
 share/zim/manual/Plugins/GNU_R_Plot_Editor.txt
 share/zim/manual/Plugins/GNU_R_Plot_Editor/gnu_r_plot.png
 share/zim/manual/Plugins/GNU_R_Plot_Editor/gnu_r_plot.r
 share/zim/manual/Plugins/GNU_R_Plot_Editor/gnu_r_plot001.png
 share/zim/manual/Plugins/GNU_R_Plot_Editor/gnu_r_plot001.r
+share/zim/manual/Plugins/Gnuplot_Editor.txt
+share/zim/manual/Plugins/Gnuplot_Editor/gnuplot.gnu
+share/zim/manual/Plugins/Gnuplot_Editor/gnuplot.png
 share/zim/manual/Plugins/Inline_Calculator.txt
 share/zim/manual/Plugins/Insert_Screenshot.txt
 share/zim/manual/Plugins/Insert_Symbol.txt
