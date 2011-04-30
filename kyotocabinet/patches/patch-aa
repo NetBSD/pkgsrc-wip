@@ -1,21 +1,13 @@
-$NetBSD: patch-aa,v 1.1.1.1 2011/04/18 11:12:35 genolopolis Exp $
+$NetBSD: patch-aa,v 1.2 2011/04/30 15:55:31 genolopolis Exp $
 
-explicitly defined modfl
-
---- kccommon.h.orig	2011-04-17 20:21:56.000000000 +0000
+--- kccommon.h.orig	2011-04-30 15:52:25.000000000 +0000
 +++ kccommon.h
-@@ -68,14 +68,12 @@ extern "C" {
+@@ -68,7 +68,7 @@ extern "C" {
  #define snprintf  _snprintf
  #endif
  
 -#if defined(__CYGWIN__)
++#if defined(__CYGWIN__) || defined(__NetBSD__)
  inline long double modfl(long double val, long double* iptr) {
    double integ;
    double fract = std::modf(val, &integ);
-   *iptr = integ;
-   return fract;
- }
--#endif
- 
- namespace std {
- using ::modfl;

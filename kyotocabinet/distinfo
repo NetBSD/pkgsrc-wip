@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/04/18 11:12:35 genolopolis Exp $
+$NetBSD: distinfo,v 1.2 2011/04/30 15:55:31 genolopolis Exp $
 
 SHA1 (kyotocabinet-1.2.51.tar.gz) = 8c3faba605019b8498d4e3d31c123f8e237cd0db
 RMD160 (kyotocabinet-1.2.51.tar.gz) = 8835b5bea05a7ea0aec1bbc0b86d0ce0a0b355c2
 Size (kyotocabinet-1.2.51.tar.gz) = 839368 bytes
-SHA1 (patch-aa) = 6ec2f906189e89a31969eea38c148f0919134d5f
+SHA1 (patch-aa) = 9c563aa9b4dc72380d70ed6545e92ac288827984
 SHA1 (patch-ab) = 12ead491159ac80014260151283220e649158354
