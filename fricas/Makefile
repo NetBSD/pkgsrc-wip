@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2011/05/01 17:21:20 asau Exp $
+# $NetBSD: Makefile,v 1.25 2011/05/01 17:30:06 asau Exp $
 
 PKGNAME=		fricas-1.1.99
 DISTNAME=		${PKGNAME}-full
@@ -10,17 +10,11 @@ MAINTAINER=		asau@inbox.ru
 HOMEPAGE=		http://fricas.sourceforge.net/
 COMMENT=		FriCAS is a fork of the Axiom computer algebra system
 
-# Get it from Subversion repository:
-SVN_REPOSITORIES=	fricas
-SVN_ROOT.fricas=	http://fricas.svn.sourceforge.net/svnroot/fricas/trunk
-SVN_MODULE.fricas=	fricas
-
-#WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
-WRKSRC=			${WRKDIR}/fricas
-
 BUILD_DEPENDS+=		noweb-[0-9]*:../../devel/noweb
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake
@@ -44,6 +38,13 @@ post-build:
 # This should start Xvfb temporarily (1024x768x24 resolution recommended):
 	cd ${WRKSRC}/src/paste && ${MAKE_PROGRAM} gphts
 .endif
+
+# Get it from Subversion repository:
+SVN_REPOSITORIES=	fricas
+SVN_ROOT.fricas=	http://fricas.svn.sourceforge.net/svnroot/fricas/trunk
+SVN_MODULE.fricas=	fricas
+
+WRKSRC=			${WRKDIR}/fricas
 
 .include "../mk/svn-package.mk"
 .include "../../mk/bsd.pkg.mk"
