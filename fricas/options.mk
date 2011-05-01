@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.15 2009/10/22 02:22:51 asau Exp $
+# $NetBSD: options.mk,v 1.16 2011/05/01 17:16:32 asau Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.fricas
 PKG_OPTIONS_REQUIRED_GROUPS=	lisp
@@ -24,6 +24,7 @@ CONFIGURE_ARGS+=	--with-lisp=sbcl
 .if !empty(PKG_OPTIONS:Mecl)
 FASL=			fas
 CONFIGURE_ARGS+=	--with-lisp=ecl
+.include "../../devel/libffi/buildlink3.mk"
 .include "../../lang/ecl/buildlink3.mk"
 .endif
 
