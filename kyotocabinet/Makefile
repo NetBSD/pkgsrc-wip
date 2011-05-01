@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/04/18 11:12:35 genolopolis Exp $
+# $NetBSD: Makefile,v 1.2 2011/05/01 02:57:50 genolopolis Exp $
 #
 
-DISTNAME=	kyotocabinet-1.2.51
+DISTNAME=	kyotocabinet-1.2.52
 CATEGORIES=	wip
 MASTER_SITES=	http://fallabs.com/kyotocabinet/pkg/
 
