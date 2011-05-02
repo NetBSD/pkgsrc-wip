@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2011/04/28 03:09:01 rxg Exp $
+# $NetBSD: Makefile,v 1.10 2011/05/02 20:39:10 absd Exp $
 
 DISTNAME=	chromium-10.0.648.205
 CATEGORIES=	www
@@ -141,11 +141,12 @@ do-install:
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../devel/nss/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../lang/python/pyversion.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../multimedia/libvpx/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libXScrnSaver/buildlink3.mk"
+.include "../../x11/libXtst/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
