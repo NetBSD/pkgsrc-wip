@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2011/04/24 14:34:14 asau Exp $
+@comment $NetBSD: PLIST,v 1.22 2011/05/02 16:59:55 asau Exp $
 bin/open-axiom
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/A1AGG-.${FASL}
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/algebra/A1AGG.${FASL}
@@ -1340,6 +1340,7 @@ ${ecl}lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/boot/pile.o
 ${ecl}lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/boot/scanner.o
 ${ecl}lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/boot/tokens.o
 ${ecl}lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/boot/translator.o
+${ecl}lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/boot/utility.o
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/doc/gloss.text
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/doc/glossdef.text
 lib/open-axiom/${MACHINE_GNU_PLATFORM}/${PKGVERSION}/doc/glosskey.text
