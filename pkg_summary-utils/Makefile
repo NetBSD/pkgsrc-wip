@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2011/04/28 09:49:26 cheusov Exp $
+# $NetBSD: Makefile,v 1.49 2011/05/03 08:46:31 thomasklausner Exp $
 
 DISTNAME=	pkg_summary-utils-${VERSION}
 CATEGORIES=	pkgtools
@@ -42,7 +42,7 @@ CONF_FILES=	${EGDIR}/pkg_digger.conf ${PKG_SYSCONFDIR}/pkg_digger.conf
 REPLACE_INTERPRETER+=	runawk
 REPLACE.runawk.old=	.*runawk
 REPLACE.runawk.new=	${PREFIX}/bin/runawk
-REPLACE_FILES.runawk=	pkg_*.in XB2bin_summary.in direct_deps.in
+REPLACE_FILES.runawk=	get_processed_pkgs.in pkg_*.in XB2bin_summary.in direct_deps.in
 
 MAKE_ENV+=	MAKEOBJDIR=${WRKDIR}
 MAKE_ENV+=	AWKMODDIR=${PREFIX}/share/runawk
