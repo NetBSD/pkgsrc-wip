@@ -1,0 +1,68 @@
+$NetBSD: patch-ad,v 1.1 2011/05/03 21:00:14 genolopolis Exp $
+
+--- Makefile.orig	2011-05-03 20:36:45.000000000 +0000
++++ Makefile
+@@ -1,4 +1,4 @@
+-WAF=python tools/waf-light
++WAF=python2.6 tools/waf-light
+ 
+ web_root = ryan@nodejs.org:~/web/nodejs.org/
+ 
+@@ -23,34 +23,34 @@ uninstall:
+ 	@$(WAF) uninstall
+ 
+ test: all
+-	python tools/test.py --mode=release simple message
++	python2.6 tools/test.py --mode=release simple message
+ 
+ test-valgrind: all
+-	python tools/test.py --mode=release --valgrind simple message
++	python2.6 tools/test.py --mode=release --valgrind simple message
+ 
+ test-all: all
+-	python tools/test.py --mode=debug,release
++	python2.6 tools/test.py --mode=debug,release
+ 
+ test-all-valgrind: all
+-	python tools/test.py --mode=debug,release --valgrind
++	python2.6 tools/test.py --mode=debug,release --valgrind
+ 
+ test-release: all
+-	python tools/test.py --mode=release
++	python2.6 tools/test.py --mode=release
+ 
+ test-debug: all
+-	python tools/test.py --mode=debug
++	python2.6 tools/test.py --mode=debug
+ 
+ test-message: all
+-	python tools/test.py message
++	python2.6 tools/test.py message
+ 
+ test-simple: all
+-	python tools/test.py simple
++	python2.6 tools/test.py simple
+ 
+ test-pummel: all
+-	python tools/test.py pummel
++	python2.6 tools/test.py pummel
+ 
+ test-internet: all
+-	python tools/test.py internet
++	python2.6 tools/test.py internet
+ 
+ build/default/node: all
+ 
+@@ -132,10 +132,10 @@ bench-idle:
+ 	./node benchmark/idle_clients.js &
+ 
+ jslint:
+-	PYTHONPATH=tools/closure_linter/ python tools/closure_linter/closure_linter/gjslint.py --unix_mode --strict --nojsdoc -r lib/ -r src/ -r test/
++	PYTHONPATH=tools/closure_linter/ python2.6 tools/closure_linter/closure_linter/gjslint.py --unix_mode --strict --nojsdoc -r lib/ -r src/ -r test/
+ 
+ cpplint:
+-	@python tools/cpplint.py $(wildcard src/*.cc src/*.h src/*.c)
++	@python2.6 tools/cpplint.py $(wildcard src/*.cc src/*.h src/*.c)
+ 
+ lint: jslint cpplint
+ 
