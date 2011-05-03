@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2011/05/03 19:53:18 genolopolis Exp $
+
+--- deps/v8/tools/utils.py.orig	2011-05-03 02:06:37.000000000 +0000
++++ deps/v8/tools/utils.py
+@@ -59,6 +59,8 @@ def GuessOS():
+     return 'freebsd'
+   elif id == 'OpenBSD':
+     return 'openbsd'
++  elif id == 'NetBSD':
++    return 'netbsd'
+   elif id == 'SunOS':
+     return 'solaris'
+   else:

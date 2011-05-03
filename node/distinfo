@@ -1,0 +1,17 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/05/03 19:53:18 genolopolis Exp $
+
+SHA1 (node-v0.4.7.tar.gz) = 514c8fff800070752739b2872eed18750c202c78
+RMD160 (node-v0.4.7.tar.gz) = 73307e90c941274390454e544ee914a1e7bfe01d
+Size (node-v0.4.7.tar.gz) = 5011520 bytes
+SHA1 (patch-aa) = f94b5b03e9fd72e0bb0fb20f03c3b889ae3aecbb
+SHA1 (patch-ab) = ef8823b44dabae1e5c7832e84a2fae306b0d1dbf
+SHA1 (patch-ac) = d341d95b91a982601cae6ab00b13244e223deaa9
+SHA1 (patch-v8_src_platform-netbsd.cc) = 40ccfbe0a36ee78ba6b398327eef728f83e3ac04
+SHA1 (patch-v8_src_platform-openbsd.cc) = 041e7ad3c5f7e8489a6c56811d7edd7502b6f3f2
+SHA1 (patch-v8_src_x64_code-stubs-x64.cc) = e4672a78cd27efac04ca1fe136fb0a67a70b8369
+SHA1 (patch-v8_src_x64_codegen-x64.cc) = 4810b0aaedd3477d5a447168da70d43eec4b93e4
+SHA1 (patch-v8_src_x64_full-codegen-x64.cc) = 6c5f9407283b172fcdd67aa3e0fa2ce4d73a8bcc
+SHA1 (patch-v8_src_x64_lithium-codegen-x64.cc) = 5995e75d9aa5ea8fec9e195b8e0b1ae3a057d389
+SHA1 (patch-v8_src_x64_macro-assembler-x64.cc) = da5a9f92a7f64636a792d7f7ed7de6fed080dea3
+SHA1 (patch-v8_src_x64_macro-assembler-x64.h) = c0de48fbf18caef50e54598b6ed9de4ed2de5846
+SHA1 (patch-v8_tools_gyp_v8.gyp) = 58e3503957d5006c2d2c53c8755a45b8f185ed0f

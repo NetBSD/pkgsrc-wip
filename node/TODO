@@ -1,0 +1,7 @@
+this pkg does not yet compile for me
+
+it fails with a huge stack trace on 'c++ -o obj/release/mksnapshot'
+with 'undefined reference to `v8::internal::ThreadHandle'
+
+these should be defined in platform_netbsd.cc, but we probably need
+another patch to convince the compilation to use it.
