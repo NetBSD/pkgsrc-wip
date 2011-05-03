@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2011/05/03 08:50:07 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.51 2011/05/03 20:17:00 cheusov Exp $
 
 DISTNAME=	pkg_summary-utils-${VERSION}
 CATEGORIES=	pkgtools
@@ -33,7 +33,7 @@ USE_TOOLS+=		gzip:run
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-WRKSRC=		${WRKDIR}
+WRKSRC=		${WRKDIR}/files
 
 EGDIR=		${PREFIX}/share/examples/pkg_summary-utils
 
@@ -57,9 +57,7 @@ MAKE_ENV+=	PKG_INFO_CMD=${PKG_INFO:Q}
 AUTO_MKDIRS=	yes
 
 do-extract:
-	${CP} ${FILESDIR}/[M-Za-su-z]* ${WRKSRC}
-	${MKDIR} ${WRKSRC}/tests
-	${CP} ${FILESDIR}/tests/[a-z]* ${WRKSRC}/tests
+	${CP} -Rp ${FILESDIR} ${WRKSRC}
 
 .include "../../wip/pkg_summary-utils/files/version.mk"
 .include "../../mk/bsd.pkg.mk"
