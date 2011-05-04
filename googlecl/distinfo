@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/03/10 13:35:51 ryo-on Exp $
+$NetBSD: distinfo,v 1.2 2011/05/04 12:37:19 ryo-on Exp $
 
-SHA1 (googlecl-0.9.12.tar.gz) = a823b7324073760e9dc19d93d5a3e3074b1b2d5e
-RMD160 (googlecl-0.9.12.tar.gz) = 924baf8b4a40723a2ee4cf31dc2eab856b53c013
-Size (googlecl-0.9.12.tar.gz) = 84266 bytes
-SHA1 (patch-src_googlecl_authentication.py) = b377d202b5da28c692ab03bed77eafe2ae5db700
+SHA1 (googlecl-0.9.13.tar.gz) = c0eea1bc0a76e84f3d9f2ebf360e09cf63fe9a0d
+RMD160 (googlecl-0.9.13.tar.gz) = 8324f45f05f34652f775258580f234a43db52fe3
+Size (googlecl-0.9.13.tar.gz) = 85690 bytes

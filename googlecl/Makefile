@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/03/10 13:35:51 ryo-on Exp $
+# $NetBSD: Makefile,v 1.2 2011/05/04 12:37:19 ryo-on Exp $
 #
 
-DISTNAME=	googlecl-0.9.12
+DISTNAME=	googlecl-0.9.13
 CATEGORIES=	net
 MASTER_SITES=	http://googlecl.googlecode.com/files/
 
@@ -21,7 +21,7 @@ PYDISTUTILSPKG=	yes
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/man/google.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
-.include "../../lang/python/extension.mk"
 .include "../../lang/python/application.mk"
+.include "../../lang/python/egg.mk"
 .include "../../www/py-gdata/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
