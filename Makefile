@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4307 2011/05/03 11:31:03 ryo-on Exp $
+# $Id: Makefile,v 1.4308 2011/05/04 05:49:07 ryo-on Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1199,7 +1199,6 @@ SUBDIR+=	kdiff3
 SUBDIR+=	kgrab
 SUBDIR+=	kgraphviewer
 SUBDIR+=	kile
-SUBDIR+=	kiloji-ttf
 SUBDIR+=	kino
 SUBDIR+=	kissme
 SUBDIR+=	klamav
