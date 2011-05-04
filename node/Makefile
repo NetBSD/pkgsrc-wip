@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/05/03 23:53:48 genolopolis Exp $
+# $NetBSD: Makefile,v 1.3 2011/05/04 16:08:47 genolopolis Exp $
 #
 
 DISTNAME=	node-v0.4.7
@@ -26,6 +26,9 @@ post-extract:
 	cp -r ${WRKSRC}/deps/c-ares/openbsd-ia32 ${WRKSRC}/deps/c-ares/netbsd-ia32
 
 REPLACE_PYTHON+=	tools/waf-light
+REPLACE_PYTHON+=	tools/node-waf
+REPLACE_PYTHON+=	tools/wafadmin/*.py
+REPLACE_PYTHON+=	tools/wafadmin/Tools/*.py
 
 .include "../../lang/python26/buildlink3.mk"
 .include "../../lang/python/application.mk"
