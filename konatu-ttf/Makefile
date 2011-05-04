@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/03/07 07:36:57 ryo-on Exp $
+# $NetBSD: Makefile,v 1.5 2011/05/04 20:22:54 ryo-on Exp $
 #
 
 DISTNAME=	Konatu_ver_26
@@ -35,11 +35,11 @@ INSTALL_DOCS=	README.txt \
 USE_LANGUAGES=	# none
 
 do-install:
-.for fontfile in ${INSTALL_FONTS}
-	${INSTALL_DATA} ${WRKSRC}/${fontfile} ${DESTDIR}${FONTDIR}
+.for f in ${INSTALL_FONTS}
+	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${FONTDIR}
 .endfor
-.for docfile in ${INSTALL_DOCS}
-	${INSTALL_DATA} ${WRKSRC}/${docfile} ${DESTDIR}${DOCSDIR}
+.for f in ${INSTALL_DOCS}
+	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${DOCSDIR}
 .endfor
 
 .include "../../mk/bsd.pkg.mk"
