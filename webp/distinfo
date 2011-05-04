@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/03/30 21:13:24 ryo-on Exp $
+$NetBSD: distinfo,v 1.2 2011/05/04 12:29:11 ryo-on Exp $
 
-SHA1 (libwebp-0.1.2-rc1.tgz) = 18ebbd708245090494e219e14613200a49149f5a
-RMD160 (libwebp-0.1.2-rc1.tgz) = 5c8da89fe8bacd898bf567ef20f13ab2ed9296bb
-Size (libwebp-0.1.2-rc1.tgz) = 447729 bytes
+SHA1 (libwebp-0.1.2.tar.gz) = 8d5550cbfabaa2218791637c15b41d6a5ee8d8ad
+RMD160 (libwebp-0.1.2.tar.gz) = 008f72c05c6a0c1684fe19d75701c9ad07a928fe
+Size (libwebp-0.1.2.tar.gz) = 154784 bytes

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/03/30 21:13:24 ryo-on Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/05/04 12:29:11 ryo-on Exp $
 bin/cwebp
 bin/dwebp
 include/webp/decode.h
@@ -6,5 +6,6 @@ include/webp/decode_vp8.h
 include/webp/encode.h
 include/webp/types.h
 lib/libwebp.la
+lib/pkgconfig/libwebp.pc
 man/man1/cwebp.1
 man/man1/dwebp.1
