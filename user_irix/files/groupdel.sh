@@ -19,5 +19,6 @@ if test $# -ne 1; then
     show_usage
 fi
 
+cp -p /etc/group /etc/group.tmp
 awk -F: -v name="$1" '$1 != name' /etc/group > /etc/group.tmp
 mv /etc/group.tmp /etc/group

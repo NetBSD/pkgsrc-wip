@@ -53,6 +53,6 @@ elif test -z "$reuse"; then
     uniq_gid "$gid"
 fi
 
-cp /etc/group /etc/group.tmp
+cp -p /etc/group /etc/group.tmp
 echo "$1:*:$gid:" >> /etc/group.tmp
 mv /etc/group.tmp /etc/group
