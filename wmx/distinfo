@@ -1,0 +1,12 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/05/05 13:07:00 ishit Exp $
+
+SHA1 (wmx-7.tar.gz) = 0abf20ac8fda4a10dbd92e2830d35e81396a816f
+RMD160 (wmx-7.tar.gz) = 3201671612e0118f0640e4190ecd500c66b82819
+Size (wmx-7.tar.gz) = 137802 bytes
+SHA1 (patch-Border.C) = e31315606a492999c6a0ff9b755f5e6c7615da67
+SHA1 (patch-Client.C) = 9fd1f8976b72ffb0aa6d974d264d644cdcfcbb6b
+SHA1 (patch-Config.h) = 68df280ac20f25bd72be3f61ad858c4fccf59fc6
+SHA1 (patch-General.h) = 0fad28bab16165ddb287d6465255dddb103ab8dd
+SHA1 (patch-Makefile.in) = f6436df3c24afcbd155240008b6d58e7dc853531
+SHA1 (patch-Manager.C) = 89094c2bd90fc8fd7e83e573187563e496640f24
+SHA1 (patch-Rotated.C) = e88ac82fd2ebf4c64183d06d74c49fe45854c78a
