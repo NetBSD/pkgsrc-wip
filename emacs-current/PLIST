@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.105 2011/03/29 10:44:15 makoto Exp $
+@comment $NetBSD: PLIST,v 1.106 2011/05/05 23:21:19 makoto Exp $
 bin/ctags
 bin/ebrowse
 bin/emacs
@@ -1649,6 +1649,8 @@ share/emacs/${PKGVERSION}/lisp/emacs-lisp/byte-run.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/byte-run.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/bytecomp.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/bytecomp.elc
+share/emacs/${PKGVERSION}/lisp/emacs-lisp/cconv.el.gz
+share/emacs/${PKGVERSION}/lisp/emacs-lisp/cconv.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/chart.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/chart.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/check-declare.el.gz
@@ -1687,8 +1689,6 @@ share/emacs/${PKGVERSION}/lisp/emacs-lisp/edebug.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/edebug.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/eieio-base.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/eieio-base.elc
-share/emacs/${PKGVERSION}/lisp/emacs-lisp/eieio-comp.el.gz
-share/emacs/${PKGVERSION}/lisp/emacs-lisp/eieio-comp.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/eieio-custom.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/eieio-custom.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/eieio-datadebug.el.gz
@@ -1757,6 +1757,8 @@ share/emacs/${PKGVERSION}/lisp/emacs-lisp/smie.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/smie.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/syntax.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/syntax.elc
+share/emacs/${PKGVERSION}/lisp/emacs-lisp/tabulated-list.el.gz
+share/emacs/${PKGVERSION}/lisp/emacs-lisp/tabulated-list.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/tcover-ses.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/tcover-ses.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/tcover-unsafep.el.gz
@@ -1857,8 +1859,6 @@ share/emacs/${PKGVERSION}/lisp/erc/erc-fill.el.gz
 share/emacs/${PKGVERSION}/lisp/erc/erc-fill.elc
 share/emacs/${PKGVERSION}/lisp/erc/erc-goodies.el.gz
 share/emacs/${PKGVERSION}/lisp/erc/erc-goodies.elc
-share/emacs/${PKGVERSION}/lisp/erc/erc-hecomplete.el.gz
-share/emacs/${PKGVERSION}/lisp/erc/erc-hecomplete.elc
 share/emacs/${PKGVERSION}/lisp/erc/erc-ibuffer.el.gz
 share/emacs/${PKGVERSION}/lisp/erc/erc-ibuffer.elc
 share/emacs/${PKGVERSION}/lisp/erc/erc-identd.el.gz
@@ -2230,10 +2230,10 @@ share/emacs/${PKGVERSION}/lisp/gnus/nnweb.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/nnweb.elc
 share/emacs/${PKGVERSION}/lisp/gnus/pop3.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/pop3.elc
-share/emacs/${PKGVERSION}/lisp/gnus/proto-stream.el.gz
-share/emacs/${PKGVERSION}/lisp/gnus/proto-stream.elc
 share/emacs/${PKGVERSION}/lisp/gnus/qp.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/qp.elc
+share/emacs/${PKGVERSION}/lisp/gnus/registry.el.gz
+share/emacs/${PKGVERSION}/lisp/gnus/registry.elc
 share/emacs/${PKGVERSION}/lisp/gnus/rfc1843.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/rfc1843.elc
 share/emacs/${PKGVERSION}/lisp/gnus/rfc2045.el.gz
@@ -2699,6 +2699,8 @@ share/emacs/${PKGVERSION}/lisp/net/net-utils.el.gz
 share/emacs/${PKGVERSION}/lisp/net/net-utils.elc
 share/emacs/${PKGVERSION}/lisp/net/netrc.el.gz
 share/emacs/${PKGVERSION}/lisp/net/netrc.elc
+share/emacs/${PKGVERSION}/lisp/net/network-stream.el.gz
+share/emacs/${PKGVERSION}/lisp/net/network-stream.elc
 share/emacs/${PKGVERSION}/lisp/net/newst-backend.el.gz
 share/emacs/${PKGVERSION}/lisp/net/newst-backend.elc
 share/emacs/${PKGVERSION}/lisp/net/newst-plainview.el.gz
@@ -2834,6 +2836,8 @@ share/emacs/${PKGVERSION}/lisp/obsolete/cl-compat.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/cl-compat.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/complete.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/complete.elc
+share/emacs/${PKGVERSION}/lisp/obsolete/erc-hecomplete.el.gz
+share/emacs/${PKGVERSION}/lisp/obsolete/erc-hecomplete.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/fast-lock.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/fast-lock.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/iso-acc.el.gz
