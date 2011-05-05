@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/05/05 10:57:52 pettai Exp $
+# $NetBSD: Makefile,v 1.3 2011/05/05 10:59:18 pettai Exp $
 #
 
 DISTNAME=	rpki-svn
@@ -30,6 +30,8 @@ CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 WRKSRC=			${WRKDIR}/rpki
 
 INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX}
+
+INSTALLATION_DIRS=	bin
 
 .include "../../lang/perl5/buildlink3.mk"
 .include "../../lang/python/application.mk"
