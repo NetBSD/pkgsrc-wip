@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2011/05/05 09:58:17 pettai Exp $
+# $NetBSD: Makefile,v 1.2 2011/05/05 10:57:52 pettai Exp $
 #
 
 DISTNAME=	rpki-svn
@@ -23,7 +23,7 @@ DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django
 USE_TOOLS+=	perl python
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}/rpki
+CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 #CONFIGURE_ARGS+=	--disable-django
 #CONFIGURE_ARGS+=	--disable-system-openssl
 
