@@ -1,6 +1,6 @@
-$NetBSD: patch-aj,v 1.5 2010/12/02 13:06:43 phonohawk Exp $
+$NetBSD: patch-aj,v 1.6 2011/05/06 02:30:25 phonohawk Exp $
 
---- rules/hs-suffix-rules-srcdir.mk.orig	2010-11-23 10:12:17.000000000 +0000
+--- rules/hs-suffix-rules-srcdir.mk.orig	2011-03-26 18:10:07.000000000 +0000
 +++ rules/hs-suffix-rules-srcdir.mk
 @@ -55,6 +55,9 @@ $1/$2/build/%.$$($3_osuf) : $1/$4/%.hc i
  $1/$2/build/%.$$($3_osuf) : $1/$2/build/%.hc includes/ghcautoconf.h includes/ghcplatform.h

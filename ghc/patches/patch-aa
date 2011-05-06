@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.8 2010/12/02 13:06:43 phonohawk Exp $
+$NetBSD: patch-aa,v 1.9 2011/05/06 02:30:25 phonohawk Exp $
 
---- libraries/integer-gmp/configure.orig	2010-11-12 18:10:51.000000000 +0000
+--- libraries/integer-gmp/configure.orig	2011-03-26 18:10:55.000000000 +0000
 +++ libraries/integer-gmp/configure
 @@ -3070,42 +3070,6 @@ fi
  fi

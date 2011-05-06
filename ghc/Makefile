@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.29 2011/04/19 12:22:34 phonohawk Exp $
+# $NetBSD: Makefile,v 1.30 2011/05/06 02:30:25 phonohawk Exp $
 
 DISTNAME=		ghc-${VERSION}
-VERSION=		7.0.1
+VERSION=		7.0.3
 CATEGORIES=		lang
 MASTER_SITES=	http://www.haskell.org/ghc/dist/${VERSION}/
 MAINTAINER=		kristerw@NetBSD.org
@@ -38,7 +38,7 @@ ONLY_FOR_PLATFORM= NetBSD-*-i386 FreeBSD-*-i386 Darwin-*-powerpc
 # better than this?
 .include "../../mk/compiler.mk"
 .if empty(CCPATH)
-WARNINGS+= "This package depends on pkgsrc's undocumented variable\
+WARNINGS+= "This package depends on pkgsrc's undocumented variable \
 CCPATH but it disappeared somehow."
 WARNINGS+= "Using hard-coded /usr/bin/gcc as the C compiler..."
 CONFIGURE_ARGS+= --with-gcc=/usr/bin/gcc
@@ -83,9 +83,9 @@ PLATFORM           = i386-unknown-freebsd
 .elif ${MACHINE_ARCH} == "powerpc" && ${OPSYS} == "Darwin"
 BOOTSTRAP_BUILD_MK = ${PKGDIR}/files/bootstrap.mk
 PLATFORM           = powerpc-apple-darwin
-
 # Existence of libelf makes LeadingUnderscore being "NO", which is
-# incorrect. See ghc-6.12.1/aclocal.m4 (FP_LEADING_UNDERSCORE)
+# incorrect for this platform. See ghc-6.12.1/aclocal.m4
+# (FP_LEADING_UNDERSCORE)
 CONFLICTS=	libelf-[0-9]*
 
 .else
@@ -100,10 +100,11 @@ ${WRKDIR}/stamp-prepare-bootstrap:
 	${RUN} cd ${WRKDIR} && \
 		${ECHO} "====> Preparing bootstrap compiler" && \
 		${RM} -rf bootstrap && \
-		${MKDIR} bootstrap && \
+		${MKDIR} -p bootstrap && \
 		${CP} -r ${DISTNAME} bootstrap && \
 		cd bootstrap/${DISTNAME} && \
-		${LN} -sf ${PWD_CMD} utils/ghc-pwd/ghc-pwd && \
+		${MKDIR} -p utils/ghc-pwd/dist-boot && \
+		${LN} -sf ${PWD_CMD} utils/ghc-pwd/dist-boot/ghc-pwd && \
 		${TOUCH} $@
 
 ${WRKDIR}/stamp-configure-hc-boot: ${WRKDIR}/stamp-prepare-bootstrap
@@ -147,6 +148,10 @@ ${WRKDIR}/stamp-bootstrap-ghc: ${WRKDIR}/stamp-rewrite-hc-paths
 		${TOUCH} $@
 
 do-configure:
+# Seemingly by mistake, ghc-7.0.3 has a prebuilt
+# utils/ghc-pwd/dist-boot/ghc-pwd for amd64 GNU/Linux.
+	${RUN} cd ${WRKSRC} && \
+		rm -rf utils/ghc-pwd/dist-boot
 	${RUN} cd ${WRKSRC} && \
 		${SETENV} ${CONFIGURE_ENV} ./configure ${CONFIGURE_ARGS}
 # We need to tell the libraries/terminfo/configure that our ncurses is
@@ -177,7 +182,7 @@ do-configure:
 # Substitutions for INSTALL and DEINSTALL.
 FILES_SUBST+=	DISTNAME=${DISTNAME}
 
-# Some unused scripts don't pass the portability test.
+# There is an unused script which don't pass the portability test.
 CHECK_PORTABILITY_SKIP+=	distrib/prep-bin-dist-mingw
 
 # GHC currently *requires* ${PREFIX}/lib to be in
