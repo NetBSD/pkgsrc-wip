@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2011/02/25 09:47:48 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2011/05/07 21:35:41 ryo-on Exp $
 #
 
 DISTNAME=	djvusmooth-0.2.10
@@ -6,7 +6,7 @@ PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics textproc
 MASTER_SITES=	http://pypi.python.org/packages/source/d/djvusmooth/
 
-MAINTAINER=	ryo_on@yk.rim.or.jp
+MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://jwilk.net/software/djvusmooth
 COMMENT=	Graphical editor for DjVu documents
 LICENSE=	gnu-gpl-v2
