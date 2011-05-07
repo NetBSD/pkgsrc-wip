@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2011/03/10 18:24:04 gregoire Exp $
+# $NetBSD: Makefile,v 1.31 2011/05/07 01:25:52 schnoebe Exp $
 #
 
 DISTNAME=		hplip-3.11.1
@@ -57,6 +57,7 @@ CONF_FILES+=		${EGDIR}/${file} ${PKG_SYSCONFDIR}/${file}
 CONF_FILES+=		${EGDIR}/lib/hp/hplip.state ${VARBASE}/lib/hp/hplip.state
 
 REPLACE_PYTHON=		*.py */*.py */*/*.py
+REPLACE_PYTHON+=	fax/filters/pstotiff
 REPLACE_PERL=		prnt/filters/hpcac prnt/hpijs/foomatic-rip-hplip
 
 PY_PATCHPLIST=		yes
