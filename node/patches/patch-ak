@@ -1,4 +1,4 @@
-$NetBSD: patch-ak,v 1.1 2011/05/04 16:08:48 genolopolis Exp $
+$NetBSD: patch-ak,v 1.2 2011/05/07 20:32:15 genolopolis Exp $
 
 --- deps/libev/wscript.orig	2011-04-23 00:06:25.000000000 +0000
 +++ deps/libev/wscript
@@ -11,7 +11,7 @@ $NetBSD: patch-ak,v 1.1 2011/05/04 16:08:48 genolopolis Exp $
  PLATFORM_IS_WIN32 = platform.platform().find('Win') >= 0
  
  def set_options(opt):
-@@ -16,58 +16,65 @@ def configure(conf):
+@@ -16,58 +16,68 @@ def configure(conf):
    # the other is to define HAVE_EPOLL_CTL
    # Yes, WAF is a piece of shit.
  
@@ -98,14 +98,17 @@ $NetBSD: patch-ak,v 1.1 2011/05/04 16:08:48 genolopolis Exp $
 +    conf.check_cc(fragment=code, define_name="HAVE_CLOCK_SYSCALL", execute=True,
 +                  msg="Checking for SYS_clock_gettime")
 +
++  have_clock_gettime = 0
++  have_nanosleep = 0
++
 +  if conf.check(header_name="time.h"):
 +    have_clock_gettime = conf.check_cc(header_name="time.h", function_name="clock_gettime")
 +    have_nanosleep = conf.check_cc(header_name="time.h", function_name="nanosleep")
 +
-+  if (not have_clock_gettime) and (not have_nanosleep):
-+    have_librt = conf.check(lib='rt', uselib_store='RT')
-+    if have_librt:
++  if conf.check(lib='rt', uselib_store='RT'):
++    if have_clock_gettime == 0:
 +      conf.check_cc(lib="rt", header_name="time.h", function_name="clock_gettime")
++    if have_nanosleep == 0:
 +      conf.check_cc(lib="rt", header_name="time.h", function_name="nanosleep")
  
    conf.check_cc(lib="m", header_name="math.h", function_name="ceil")
