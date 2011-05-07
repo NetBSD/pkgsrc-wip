@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/02/16 11:26:26 ryo-on Exp $
+# $NetBSD: Makefile,v 1.2 2011/05/07 19:48:50 ryo-on Exp $
 #
 
 DISTNAME=	nts-77
@@ -20,5 +20,5 @@ USE_LANGUAGES=	# none
 PYDISTUTILSPKG=	yes
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
