@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/05/07 07:27:21 makoto Exp $
+bin/quickml-analog
+${RUBY_SITELIB}/quickml.rb
+${RUBY_SITELIB}/quickml/config.rb
+${RUBY_SITELIB}/quickml/core.rb
+${RUBY_SITELIB}/quickml/gettext.rb
+${RUBY_SITELIB}/quickml/logger.rb
+${RUBY_SITELIB}/quickml/mail.rb
+${RUBY_SITELIB}/quickml/server.rb
+${RUBY_SITELIB}/quickml/sweeper.rb
+${RUBY_SITELIB}/quickml/utils.rb
+${RUBY_SITELIB}/quickml/version.rb
+sbin/quickml
+sbin/quickml-ctl
+share/examples/quickml/quickmlrc
+share/examples/rc.d/quickml

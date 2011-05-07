@@ -1,0 +1,51 @@
+# $NetBSD: Makefile,v 1.1.1.1 2011/05/07 07:27:21 makoto Exp $
+#
+
+DISTNAME=	quickml-0.7
+CATEGORIES=	mail
+MASTER_SITES=	http://0xcc.net/quickml/
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://0xcc.net/quickml/
+COMMENT=	Easy-to-use mailing list system
+LICENSE=	gnu-gpl-v2
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+GNU_CONFIGURE=	yes
+USE_LANGUAGES=	# none
+RCD_SCRIPTS+=	quickml
+
+QUICKML_USER=   quickml
+QUICKML_GROUP=  quickml
+PKG_GROUPS=     ${QUICKML_GROUP}
+PKG_USERS=      ${QUICKML_USER}:${QUICKML_GROUP}
+#USERGROUP_PHASE=        configure
+BUILD_DEFS+=	VARBASE
+
+.include "../../mk/bsd.prefs.mk"
+
+QUICKML_DATA_DIR=	${DESTDIR}${VARBASE}/quickml
+INSTALLATION_DIRS+=	share/examples/quickml
+
+.include "options.mk"
+.include "../../lang/ruby/buildlink3.mk"
+
+CONFIGURE_ARGS+=        --datadir=${QUICKML_DATA_DIR}
+CONFIGURE_ARGS+=        --with-ruby=${RUBY}
+CONFIGURE_ARGS+=        --with-user=${QUICKML_USER}
+CONFIGURE_ARGS+=        --with-group=${QUICKML_GROUP}
+CONFIGURE_ARGS+=        --with-rubydir=${PREFIX}/${RUBY_SITELIB}
+CONFIGURE_ARGS+=        --localstatedir=${VARBASE}
+
+SPECIAL_PERMS+=         ${VARBASE}/quickml ${QUICKML_USER} ${QUICKML_GROUP} 0750
+
+CONF_FILES=	${PREFIX}/share/examples/quickml/quickmlrc ${PKG_SYSCONFDIR}/quickmlrc
+
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/messages.ja ${QUICKML_DATA_DIR}
+	# installed in wrong place, move it
+	${RM}	${DESTDIR}${PREFIX}/etc/quickmlrc.sample
+	${INSTALL_DATA} ${WRKSRC}/quickmlrc.sample ${DESTDIR}${PREFIX}/share/examples/quickml/quickmlrc
+
+.include "../../lang/ruby/modules.mk"
+.include "../../mk/bsd.pkg.mk"

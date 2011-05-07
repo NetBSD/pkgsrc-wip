@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/05/07 07:27:21 makoto Exp $
+
+SHA1 (quickml-0.7.tar.gz) = 7122a100840d16762e101e62993752401e95e5bb
+RMD160 (quickml-0.7.tar.gz) = bc34b93676eb342a450bc1a2d3b92d7a06603872
+Size (quickml-0.7.tar.gz) = 94147 bytes
+SHA1 (patch-Makefile.in) = cf61f60bedf789dea12dd5b6ed04d7a5598274f5
+SHA1 (patch-configure.ac) = 71f11d523256363e1dd322a6459c724ec9e5901c
+SHA1 (patch-quickml-analog.in) = a5534672089d6f5501d8729cf3d74788370e13a7

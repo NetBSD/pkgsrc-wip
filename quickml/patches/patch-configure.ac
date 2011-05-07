@@ -1,0 +1,28 @@
+$NetBSD: patch-configure.ac,v 1.1.1.1 2011/05/07 07:27:21 makoto Exp $
+
+ruby path fix
+
+--- configure.ac.orig	2004-06-07 08:50:58.000000000 +0000
++++ configure.ac
+@@ -5,10 +5,17 @@ AC_PROG_INSTALL
+ AC_PROG_LN_S
+ AC_PROG_MAKE_SET
+ 
+-AC_PATH_PROG(RUBY, ruby, no)
+-if test "$RUBY" = "no"; then
+-    AC_MSG_ERROR(ruby not found)
+-fi
++AC_ARG_WITH(
++    ruby,
++    [  --with-ruby=RUBY        quickml runs with RUBY [[ruby]]],
++    [RUBY=${withval}],
++    [AC_PATH_PROG(RUBY, ruby, no)
++        if test "$RUBY" = "no"; then
++            AC_MSG_ERROR(ruby not found)
++        fi
++    ]
++)
++AC_SUBST(RUBY)
+ 
+ AC_ARG_WITH(
+     user,
