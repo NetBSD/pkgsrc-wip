@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4310 2011/05/07 07:29:05 makoto Exp $
+# $Id: Makefile,v 1.4311 2011/05/07 20:10:50 ryo-on Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1616,7 +1616,6 @@ SUBDIR+=	notify-sharp
 SUBDIR+=	notmuch
 SUBDIR+=	nsc2ke
 SUBDIR+=	nsp
-SUBDIR+=	nts
 SUBDIR+=	nullpop
 SUBDIR+=	nuppelvideo
 SUBDIR+=	nuttcp
