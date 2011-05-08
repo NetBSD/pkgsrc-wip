@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2011/05/08 02:21:33 obache Exp $
+# $NetBSD: Makefile,v 1.7 2011/05/08 02:37:46 obache Exp $
 #
 
 DISTNAME=	quickml-0.7
@@ -15,11 +15,11 @@ GNU_CONFIGURE=	yes
 USE_LANGUAGES=	# none
 RCD_SCRIPTS+=	quickml
 
-QUICKML_USER=   quickml
-QUICKML_GROUP=  quickml
-PKG_GROUPS=     ${QUICKML_GROUP}
-PKG_USERS=      ${QUICKML_USER}:${QUICKML_GROUP}
-#USERGROUP_PHASE=        configure
+QUICKML_USER=	quickml
+QUICKML_GROUP=	quickml
+PKG_GROUPS=	${QUICKML_GROUP}
+PKG_USERS=	${QUICKML_USER}:${QUICKML_GROUP}
+#USERGROUP_PHASE=	configure
 BUILD_DEFS+=	VARBASE
 
 .include "../../mk/bsd.prefs.mk"
@@ -30,16 +30,16 @@ INSTALLATION_DIRS+=	share/examples/quickml
 .include "options.mk"
 .include "../../lang/ruby/buildlink3.mk"
 
-CONFIGURE_ARGS+=        --datadir=${QUICKML_DATA_DIR}
+CONFIGURE_ARGS+=	--datadir=${QUICKML_DATA_DIR}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+=        --with-user=${QUICKML_USER}
-CONFIGURE_ARGS+=        --with-group=${QUICKML_GROUP}
-CONFIGURE_ARGS+=        --with-rubydir=${PREFIX}/${RUBY_VENDORLIB}
-CONFIGURE_ARGS+=        --localstatedir=${VARBASE}
+CONFIGURE_ARGS+=	--with-user=${QUICKML_USER}
+CONFIGURE_ARGS+=	--with-group=${QUICKML_GROUP}
+CONFIGURE_ARGS+=	--with-rubydir=${PREFIX}/${RUBY_VENDORLIB}
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 
 INSTALL_MAKE_FLAGS+=	etcdir=${PREFIX}/share/examples/quickml
 
-SPECIAL_PERMS+=         ${VARBASE}/quickml ${QUICKML_USER} ${QUICKML_GROUP} 0750
+SPECIAL_PERMS+=		${VARBASE}/quickml ${QUICKML_USER} ${QUICKML_GROUP} 0750
 
 CONF_FILES=	${PREFIX}/share/examples/quickml/quickmlrc.sample ${PKG_SYSCONFDIR}/quickmlrc
 
