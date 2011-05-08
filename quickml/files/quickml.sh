@@ -1,26 +1,21 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $FreeBSD: ports/mail/quickml/files/quickml.in,v 1.2 2010/02/13 21:17:42 dougb Exp $
+# $NetBSD: quickml.sh,v 1.4 2011/05/08 09:46:25 obache Exp $
 #
-
 # PROVIDE: quickml
 # REQUIRE: LOGIN
 #
-# Add the following lines to /etc/rc.conf.local or /etc/rc.conf
-# to enable this service:
+# Add the following lines to /etc/rc.conf to enable this service:
 #
 # quickml=YES
 
-#. /etc/rc.subr
-#
-#name="quickml"
-#rcvar=$name
-#
-#command="@PREFIX@/sbin/${name}-ctl"
-#run_rc_command "$1"
-
-
+. /etc/rc.subr
 
 name="quickml"
-command="/usr/pkg/sbin/${name}-ctl"
-$command "$1"
+rcvar=$name
+command="@PREFIX@/sbin/${name}"
+command_interpreter="@RUBY@"
+pidfile="@VARBASE@/run/${name}.pid"
+
+load_rc_config ${name}
+run_rc_command "$1"
