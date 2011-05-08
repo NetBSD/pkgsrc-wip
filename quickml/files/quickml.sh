@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: quickml.sh,v 1.4 2011/05/08 09:46:25 obache Exp $
+# $NetBSD: quickml.sh,v 1.5 2011/05/08 10:08:22 obache Exp $
 #
 # PROVIDE: quickml
 # REQUIRE: LOGIN
@@ -16,6 +16,7 @@ rcvar=$name
 command="@PREFIX@/sbin/${name}"
 command_interpreter="@RUBY@"
 pidfile="@VARBASE@/run/${name}.pid"
+required_files=@PKG_SYSCONFDIR@/quickmlrc
 
 load_rc_config ${name}
 run_rc_command "$1"
