@@ -1,4 +1,4 @@
-#!/bin/sh
+#!@RCD_SCRIPTS_SHELL@
 #
 # $FreeBSD: ports/mail/quickml/files/quickml.in,v 1.2 2010/02/13 21:17:42 dougb Exp $
 #
