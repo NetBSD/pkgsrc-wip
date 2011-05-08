@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2011/05/08 02:51:10 obache Exp $
+# $NetBSD: Makefile,v 1.9 2011/05/08 04:06:12 obache Exp $
 #
 
 DISTNAME=	quickml-0.7
@@ -25,7 +25,6 @@ BUILD_DEFS+=	VARBASE
 .include "../../mk/bsd.prefs.mk"
 
 QUICKML_DATA_DIR=	${VARBASE}/quickml
-INSTALLATION_DIRS+=	share/examples/quickml
 
 .include "options.mk"
 .include "../../lang/ruby/buildlink3.mk"
