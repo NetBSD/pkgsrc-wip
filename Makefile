@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4311 2011/05/07 20:10:50 ryo-on Exp $
+# $Id: Makefile,v 1.4312 2011/05/08 11:15:47 ryo-on Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1207,7 +1207,6 @@ SUBDIR+=	kmymoney-svn
 SUBDIR+=	knutclient
 SUBDIR+=	koffice
 SUBDIR+=	koha
-SUBDIR+=	konatu-ttf
 SUBDIR+=	korelib
 SUBDIR+=	kpanta
 SUBDIR+=	kplayer
@@ -2458,7 +2457,6 @@ SUBDIR+=	resid-builder
 SUBDIR+=	residual-nightly
 SUBDIR+=	resin
 SUBDIR+=	rhapsody
-SUBDIR+=	ricty-ttf
 SUBDIR+=	ripe-rpsl-objectlibrary
 SUBDIR+=	ripit
 SUBDIR+=	ripole
