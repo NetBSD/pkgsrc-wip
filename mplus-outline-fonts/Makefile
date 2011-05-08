@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2011/04/19 01:41:58 obache Exp $
+# $NetBSD: Makefile,v 1.12 2011/05/08 12:34:37 obache Exp $
 #
 
 DISTNAME=	mplus-TESTFLIGHT-038
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP:=mplus-fonts/6650/}
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://mplus-fonts.sourceforge.jp/mplus-outline-fonts/index-en.html
 COMMENT=	M+ outline fonts
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	mplusfont
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/04/26 11:19:03 obache Exp $
+# $NetBSD: Makefile,v 1.3 2011/05/08 12:34:37 obache Exp $
 #
 
 DISTNAME=	mplus_bitmap_fonts-2.2.4
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP:=mplus-fonts/5030/}
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://mplus-fonts.sourceforge.jp/mplus-bitmap-fonts/index.html
 COMMENT=	Simple and highly readable bitmap fonts
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	mplusfont
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
