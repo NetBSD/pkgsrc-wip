@@ -24,4 +24,3 @@
 name="quickml"
 command="/usr/pkg/sbin/${name}-ctl"
 $command "$1"
-
