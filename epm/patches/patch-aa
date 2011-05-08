@@ -1,5 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2009/03/22 18:17:56 cheusov Exp $
+$NetBSD: patch-aa,v 1.2 2011/05/08 21:23:47 cheusov Exp $
 
+DESTDIR support
 --- Makefile.in.orig	2006-11-30 23:59:27.000000000 +0200
 +++ Makefile.in
 @@ -31,7 +31,10 @@ RANLIB		=	@RANLIB@
