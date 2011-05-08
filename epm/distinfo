@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.2 2009/09/09 09:49:18 cheusov Exp $
+$NetBSD: distinfo,v 1.3 2011/05/08 21:16:34 cheusov Exp $
 
-SHA1 (epm-4.1-source.tar.bz2) = 3cb291a1cc018b4d6ac75675b8346e94316c941c
-RMD160 (epm-4.1-source.tar.bz2) = bfea331f8047514229350eda9d71bba607e5010e
-Size (epm-4.1-source.tar.bz2) = 452818 bytes
+SHA1 (epm-4.2-source.tar.bz2) = e11049c6bb77432e3c4784aa44b6e05ace5a4de9
+RMD160 (epm-4.2-source.tar.bz2) = 31b84c74fd66b470b88c6fec49e9fe9a04abe055
+Size (epm-4.2-source.tar.bz2) = 458362 bytes
 SHA1 (patch-aa) = f2fa4d0e7c177d46b049abb85131091854281ccb
 SHA1 (patch-ab) = 3249c8c2f5155d3d8bcef28e6736fd4ed97565b2

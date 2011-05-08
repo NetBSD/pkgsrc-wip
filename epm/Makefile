@@ -1,15 +1,19 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/03/22 18:17:56 cheusov Exp $
+# $NetBSD: Makefile,v 1.2 2011/05/08 21:16:33 cheusov Exp $
 #
 
-DISTNAME=	epm-4.1-source
-PKGNAME=	${DISTNAME:S/-source//}
+VERSION=	4.2
+DISTNAME=	epm-${VERSION}-source
+PKGNAME=	epm-${VERSION}
 CATEGORIES=	misc
-MASTER_SITES=	http://ftp.funet.fi/pub/mirrors/ftp.easysw.com/pub/epm/4.1/
+MASTER_SITES=	http://ftp.easysw.com/pub/epm/${VERSION}/ \
+		http://ftp2.easysw.com/pub/epm/${VERSION}/ \
+		http://ftp.funet.fi/pub/mirrors/ftp.easysw.com/pub/epm/${VERSION}/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	vle@gmx.net
-HOMEPAGE=	http://ftp.funet.fi/pub/mirrors/ftp.easysw.com/pub/epm/4.1/
+HOMEPAGE=	http://epmhome.org/
 COMMENT=	ESP generates software packages from a list of files
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -17,7 +21,7 @@ USE_TOOLS+=		autoconf #gzip:run tar:run
 
 #TEST_TARGET=		test
 
-WRKSRC=			${WRKDIR}/${PKGNAME}
+WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
 
