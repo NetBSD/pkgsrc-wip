@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2011/05/08 02:17:05 obache Exp $
+# $NetBSD: Makefile,v 1.6 2011/05/08 02:21:33 obache Exp $
 #
 
 DISTNAME=	quickml-0.7
@@ -34,7 +34,7 @@ CONFIGURE_ARGS+=        --datadir=${QUICKML_DATA_DIR}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=        --with-user=${QUICKML_USER}
 CONFIGURE_ARGS+=        --with-group=${QUICKML_GROUP}
-CONFIGURE_ARGS+=        --with-rubydir=${PREFIX}/${RUBY_SITELIB}
+CONFIGURE_ARGS+=        --with-rubydir=${PREFIX}/${RUBY_VENDORLIB}
 CONFIGURE_ARGS+=        --localstatedir=${VARBASE}
 
 INSTALL_MAKE_FLAGS+=	etcdir=${PREFIX}/share/examples/quickml
