@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4314 2011/05/08 18:26:31 cheusov Exp $
+# $Id: Makefile,v 1.4315 2011/05/08 18:42:17 cheusov Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1371,7 +1371,6 @@ SUBDIR+=	lissac
 SUBDIR+=	lives
 SUBDIR+=	llvm
 SUBDIR+=	llvm28
-SUBDIR+=	lmdbg
 SUBDIR+=	lmfit
 SUBDIR+=	lmtp2nntp
 SUBDIR+=	logfmon-devel
