@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4313 2011/05/08 12:58:21 cheusov Exp $
+# $Id: Makefile,v 1.4314 2011/05/08 18:26:31 cheusov Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -404,7 +404,6 @@ SUBDIR+=	dicom3tools
 SUBDIR+=	dict-est-rus
 SUBDIR+=	dict-freedict-eng-ara
 SUBDIR+=	dict-freedict-eng-fra
-SUBDIR+=	dict-mueller7
 SUBDIR+=	dikt
 SUBDIR+=	ding
 SUBDIR+=	dionysus
