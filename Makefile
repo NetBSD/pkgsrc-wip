@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4315 2011/05/08 18:42:17 cheusov Exp $
+# $Id: Makefile,v 1.4316 2011/05/08 18:50:55 cheusov Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2964,7 +2964,6 @@ SUBDIR+=	zabbix
 SUBDIR+=	zapping
 SUBDIR+=	zim
 SUBDIR+=	zinf
-SUBDIR+=	zoem
 SUBDIR+=	zope3-unstable
 SUBDIR+=	zsh-snapshot
 SUBDIR+=	zvbi
