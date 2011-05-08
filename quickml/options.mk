@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2011/05/08 02:37:46 obache Exp $
+# $NetBSD: options.mk,v 1.3 2011/05/08 02:59:17 obache Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.quickml
 PKG_SUPPORTED_OPTIONS+= limit analog
@@ -17,7 +17,7 @@ PATCH_DIST_STRIP.${LIMIT_PATCH}=	-p1
 
 
 .if !empty(PKG_OPTIONS:Manalog)
-.include "../../graphics/ImageMagick/buildlink3.mk"
-.include "../../print/ghostscript/buildlink3.mk"
+USE_TOOLS+=	gs:run
+DEPENDS+=	ImageMagick-[0-9]*:../../graphics/ImageMagick
 DEPENDS+=	gnuplot>=3.7:../../graphics/gnuplot
 .endif
