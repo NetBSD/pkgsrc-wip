@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4317 2011/05/08 19:11:14 cheusov Exp $
+# $Id: Makefile,v 1.4318 2011/05/08 21:57:51 cheusov Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -510,7 +510,6 @@ SUBDIR+=	entrance
 SUBDIR+=	eor
 SUBDIR+=	eot
 SUBDIR+=	epeg
-SUBDIR+=	epm
 SUBDIR+=	epsilon
 SUBDIR+=	erc
 SUBDIR+=	eric4
