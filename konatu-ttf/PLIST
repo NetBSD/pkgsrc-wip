@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/03/14 12:20:29 ryo-on Exp $
-lib/X11/fonts/TTF/Konatu.ttf
-lib/X11/fonts/TTF/KonatuTohaba.ttf
-share/doc/${PKGBASE}/README.txt
-share/doc/${PKGBASE}/README_Japanese.txt
