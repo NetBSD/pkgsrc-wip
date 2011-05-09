@@ -1,0 +1,17 @@
+Given a sparse matrix A the SPAI Algorithm computes a sparse approximate inverse
+M by minimizing || AM - I || in the Frobenius norm. The approximate inverse is
+computed explicitly and can then be applied as a preconditioner to an iterative
+method.The sparsity pattern of the approximate inverse is either fixed a priori
+or captured automatically:
+
+ * Fixed sparsity: The sparsity pattern of M is either banded or a subset
+   of the sparsity pattern of A.
+ * Adaptive sparsity: The algorithm proceeds until the 2-norm of each column
+   of AM-I is less than eps. By varying eps the user controls the quality and
+    the cost of computing the preconditioner. Usually the optimal eps lies between 0.5 and 0.7.
+
+A very sparse preconditioner is very cheap to compute but may not lead to much
+improvement, while if M becomes rather dense it  becomes too expensive to
+compute. The optimal preconditioner lies between these two extremes and is
+problem and computer architecture dependent. The approximate inverse M can also
+be used as a robust (parallel) smoother for (algebraic) multi-grid methods
