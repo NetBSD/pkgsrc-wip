@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/05/09 20:15:34 jihbed Exp $
+include/ExHuME/CrossSection.h
+include/ExHuME/DiPhoton.h
+include/ExHuME/Dummy.h
+include/ExHuME/Event.h
+include/ExHuME/GG.h
+include/ExHuME/Higgs.h
+include/ExHuME/I.h
+include/ExHuME/PI.h
+include/ExHuME/Particle.h
+include/ExHuME/PythiaRecord.h
+include/ExHuME/QQ.h
+include/ExHuME/TwoSpace.h
+include/ExHuME/Weight.h
+include/ExHuME/hdecay.h
+lib/libExHuME.a
