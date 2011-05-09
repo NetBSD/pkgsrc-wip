@@ -1,0 +1,12 @@
+genus2reduction is a program for computing the conductor and reduction types
+for a genus 2 hyperelliptic curve.
+
+As an example of genus2reduction's functionality, let C be a proper smooth curve
+of genus 2 defined by a hyperelliptic equation y^2+Q(x)y=P(x), where P(x)
+and Q(x) are polynomials with rational coefficients such that deg(Q(x))<4,
+deg(P(x))<7. Let J(C) be the Jacobian of C, let X be the minimal regular model
+of C over the ring of integers Z.
+
+This program determines the reduction of C at any prime number p
+(that is the special fiber X_p of X over p), and the exponent f of
+the conductor of J(C) at p
