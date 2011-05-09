@@ -1,7 +1,7 @@
 #!@SH@
 #-*-mode:  sh -*-
 
-# Copyright (c) 2007-2010, Aleksey Cheusov <vle@gmx.net>
+# Copyright (c) 2007-2011, Aleksey Cheusov <vle@gmx.net>
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -59,7 +59,7 @@ while getopts hf:i: f; do
     case "$f" in
 	h)  usage; exit 0;;
 	f)  pkgs_fn="$OPTARG";;
-	i)  fields="$OPTARG";;
+	i)  fields="-f '$OPTARG'";;
 	?)  printf "Run pkg_update_src_summary -h for details\n"; exit 2;;
     esac
 done
@@ -74,7 +74,6 @@ summary=$1
 shift
 
 ############################################################
-cd $PKGSRCDIR
 
 new_summary=$summary.new
 
@@ -82,6 +81,7 @@ tmp_dir=`mktemp -d /tmp/pkg_update_src_summary.XXXXXX`
 trap "rm -rf $tmp_dir $new_summary" 0 1 2 15
 test -n "$tmp_dir" || exit 1
 
+# list of packages
 allpkgs_fn=$tmp_dir/allpkgs
 
 if test "$pkgs_fn"; then
@@ -90,9 +90,6 @@ else
     pkg_list_all_pkgs > $allpkgs_fn
 fi
 
-############################################################
-#### process packages
-
 # src_summary from scratch
 if ! test -f $summary; then
     eval pkg_src_summary $fields < $allpkgs_fn > $new_summary
@@ -100,99 +97,23 @@ if ! test -f $summary; then
     exit $?
 fi
 
-# micro summary
+# micro-summary for all packages
 micsum_fn=$tmp_dir/micsum
 pkg_micro_src_summary < $allpkgs_fn >$micsum_fn
 
-# summary against microsummary
+# cmp summary and micro-summary
 cmp_fn=$tmp_dir/cmp
 pkg_cmp_summary -p $summary $micsum_fn > $cmp_fn
 
-# copying summary about unchanged packages
-eq_pkgs_fn=$tmp_dir/eqpkgs
-awk '$1 ~ /^[=]/ {print $2 ":" $3}' $cmp_fn > $eq_pkgs_fn # pkgpath:pkgbase
-
-copy_eq_pkgs (){
-env eq_pkgs_fn="$eq_pkgs_fn" runawk -e '
-#use "xgetline.awk"
-#use "pkg_grep_summary.awk"
-
-BEGIN {
-   eq_pkgs_fn = ENVIRON ["eq_pkgs_fn"]
-
-   FS = " "
-   while (xgetline0(eq_pkgs_fn)){
-      eq_pkgs [$1] = 1
-   }
-
-   FS = "="
-
-   # keep all fields in associative array "fields"
-   keep_fields = 1
-}
-
-function grep_summary__condition (           pkgpath, pkgbase){
-   pkgpath = fields ["PKGPATH"]
-   pkgbase = fields ["PKGNAME"]
-   sub(/-[^-]+$/, "", pkgbase)
-
-   if (pkgpath == "" || pkgbase == ""){
-      return -1
-   }
-
-   if (((pkgpath ":" pkgbase) in eq_pkgs) &&
-      !((pkgpath ":" pkgbase) in processed))
-   {
-      processed [pkgpath ":" pkgbase] = 1
-      return 1
-   }
-
-   return 0
-}
-' "$@"
-}
-
-copy_eq_pkgs $summary > $new_summary
+# copying summary of unchanged packages
+eq_pkgs_fn=$tmp_dir/eq_pkgs
+awk '/^[=]/ {print $2}' $cmp_fn > $eq_pkgs_fn # pkgpath:pkgbase
+pkg_grep_summary -S PKGPATH "$eq_pkgs_fn" < "$summary" > "$new_summary"
 
 # add new/updated/changed packages
 changed_pkgs_fn=$tmp_dir/changed_pkgs
-awk '$1 ~ /^[+<>?0-9]/ {print $2 ":" $3}' $cmp_fn > $changed_pkgs_fn
+awk '/^[+<>?0-9!]/ {print $2}' $cmp_fn > $changed_pkgs_fn # pkgpath:pkgbase
 
-extract_pkgpath (){
-runawk -v changed_pkgs_fn=$changed_pkgs_fn -e '
-#use "xgetline.awk"
+eval pkg_src_summary $fields < $changed_pkgs_fn >> $new_summary
 
-BEGIN {
-   while (xgetline0(changed_pkgs_fn)){
-      pkgs [$1] = 1
-   }
-
-   SUBSEP = ":"
-   FS     = "="
-}
-
-$1 == "PKGNAME" {
-   pkgbase = $2
-   sub(/-[^-]+$/, "", pkgbase)
-}
-
-$1 == "PKGPATH" {
-   pkgpath = $2
-}
-
-NF == 0 && ((pkgpath ":" pkgbase) in pkgs) {
-   print pkgpath
-   pkgbase = pkgpath = ""
-}
-' "$@"
-}
-
-pkgpath_fn=$tmp_dir/pkgpaths
-extract_pkgpath $micsum_fn > $pkgpath_fn
-
-eval pkg_src_summary $fields < $pkgpath_fn >> $new_summary
-
-# result
-pkg_uniq_summary $new_summary > $new_summary.uniq
-rm $new_summary
-mv $new_summary.uniq $summary
+mv $new_summary $summary
