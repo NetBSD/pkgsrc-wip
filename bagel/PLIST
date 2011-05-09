@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/05/09 21:02:50 jihbed Exp $
+bin/bagel-config
+include/alpha.h
+include/alpha264.h
+include/bagel_config.h
+include/bagel_config_internal.h
+include/bagel_int.h
+include/powerpc.h
+include/processor.h
+include/registers.h
+include/unknown.h
+include/usparc.h
+lib/libbagel.a
