@@ -1,0 +1,1 @@
+PySE is an environemnt written in Python for solving partial differnetial equations, using the finite difference method. It is heavily based on the 'Stencil' concept in FDM methods.
