@@ -1,0 +1,4 @@
+stkSolver is a Boundary Element Method solver for 3D Stokes flow.
+I originally developed this code to calculate accurately the drag experienced
+by arbitrarily shaped bodies. The current implementation is limited to using
+given velocities as the boundary conditins of the problem
