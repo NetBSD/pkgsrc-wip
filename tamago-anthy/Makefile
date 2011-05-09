@@ -1,18 +1,19 @@
-# $NetBSD: Makefile,v 1.5 2011/04/14 03:27:16 makoto Exp $
+# $NetBSD: Makefile,v 1.6 2011/05/09 04:32:25 makoto Exp $
 # the version number is for pkglint only
 DISTNAME=	tamago-anthy-4.0
-
+# to avoid trailing -cvs in package name.
+PKGNAME=	${DISTNAME}
 PKGREVISION=	${_CVS_PKGVERSION:S/.//g}
+LICENSE=	gnu-gpl-v2
+
 # See ../../inputmethod/anthy/Makefile.common
 ANTHY_VERSION=	9100h
 
 CATEGORIES=	inputmethod
+# egg-anthy
 MASTER_SITES=	http://www.meadowy.org/~shirai/elips/
 # anthy
 MASTER_SITES+=	${MASTER_SITE_SOURCEFORGE_JP:=anthy/37536/}
-# egg-anthy
-
-
 MAINTAINER=	makoto@ki.nu
 HOMEPAGE=	http://www.meadowy.org/~shirai/
 # HOMEPAGE+=    http://www.m17n.org/tamago/
@@ -42,9 +43,6 @@ WRKSRC=			${WRKDIR}/tamago
 INSTALL_MAKE_FLAGS=	prefix=${DESTDIR}${PREFIX} \
 			infodir=${DESTDIR}${PREFIX}/${PKGINFODIR}
 
-#BUILD_DEFS+=		VARBASE
-#BUILD_DEFS+=		GAMEDATAMODE
-
 # This is cvs-package version and DISTFILES may not be automatically read, so:
 post-patch:
 	set -e;					\
@@ -59,7 +57,7 @@ pre-configure:
 	cp -p ${WRKDIR}/egg-anthy/anthy.el	${WRKSRC}/egg
 	cp -p ${WRKDIR}/egg-anthy/anthyipc.el	${WRKSRC}/egg
 
-# Take care anthy part, it needs some make there
+# Take care anthy part, it needs some 'make' there
 post-build:
 	set -e;	\
 	cd ${WRKDIR}/anthy-${ANTHY_VERSION}/src-util;	\
@@ -79,7 +77,7 @@ do-install:
 				${DESTDIR}${EMACS_LISPPREFIX}/egg/f-anthy
 	${INSTALL_DATA} ${WRKDIR}/anthy-${ANTHY_VERSION}/src-util/*.elc	\
 				${DESTDIR}${EMACS_LISPPREFIX}/egg/f-anthy
-# install egg-anthy others
+# install misc stuff of egg-anthy
 	${INSTALL_DATA_DIR}				${DESTDIR}/${PREFIX}/share/anthy
 	${INSTALL_DATA} ${WRKDIR}/egg-anthy/*.readme	${DESTDIR}/${PREFIX}/share/anthy
 	${INSTALL_DATA} ${WRKDIR}/egg-anthy/typetab-*	${DESTDIR}/${PREFIX}/share/anthy
