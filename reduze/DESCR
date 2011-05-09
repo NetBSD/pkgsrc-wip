@@ -1,0 +1,4 @@
+Reduze is a computer program for reducing Feynman Integrals to master integrals
+employing the Gauss/Laporta algorithm. Reduze is written in C++ and uses classes
+provided by the GiNaC library to perform the simplifications.
+of the algebraic prefactors in the system of equations.

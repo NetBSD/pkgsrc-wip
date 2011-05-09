@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/05/09 10:48:08 jihbed Exp $
+bin/reduze
+examples/reduze/prepare3lv.in
+examples/reduze/prepare3lv.in.in
+examples/reduze/prepareA.in
+examples/reduze/prepareA.in.in
+examples/reduze/preparecut.in
+examples/reduze/preparecut.in.in
+examples/reduze/topo3lv.in
+examples/reduze/topo3lv.in.in
+examples/reduze/topoA.in
+examples/reduze/topoA.in.in
+examples/reduze/topocut.in
+examples/reduze/topocut.in.in
+@pkgdir doc/reduze
