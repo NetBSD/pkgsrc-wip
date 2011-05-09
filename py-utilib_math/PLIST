@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/05/09 20:01:43 jihbed Exp $
+${PYSITELIB}/${EGG_NAME}-nspkg.pth
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/namespace_packages.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/pyutilib/math/__init__.py
+${PYSITELIB}/pyutilib/math/__init__.pyc
+${PYSITELIB}/pyutilib/math/__init__.pyo
+${PYSITELIB}/pyutilib/math/math.py
+${PYSITELIB}/pyutilib/math/math.pyc
+${PYSITELIB}/pyutilib/math/math.pyo
+${PYSITELIB}/pyutilib/math/numtypes.py
+${PYSITELIB}/pyutilib/math/numtypes.pyc
+${PYSITELIB}/pyutilib/math/numtypes.pyo
