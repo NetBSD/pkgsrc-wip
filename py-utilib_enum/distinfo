@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/05/09 19:57:43 jihbed Exp $
+
+SHA1 (pyutilib.enum-1.0.5.tar.gz) = 79c95262f1fcacbef5f40f69a737fa84fb32c58e
+RMD160 (pyutilib.enum-1.0.5.tar.gz) = 350b023773082722135c76b9dd6b89d87b031ac2
+Size (pyutilib.enum-1.0.5.tar.gz) = 8685 bytes
