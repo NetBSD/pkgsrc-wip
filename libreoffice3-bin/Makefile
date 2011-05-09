@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/03/26 06:14:59 ryo-on Exp $
+# $NetBSD: Makefile,v 1.3 2011/05/09 10:54:02 ryo-on Exp $
 
 DISTNAME=		libreoffice3-bin	# overridden below
 PKGNAME=		libreoffice3-bin-${OO_RELEASE}
@@ -35,8 +35,8 @@ PLIST_SRC+=		${PKGDIR}/PLIST.dirs
 
 EMUL_PLATFORMS=		linux-i386
 #EMUL_PLATFORMS+=	solaris-i386 solaris-sparc
-EMUL_MODULES.linux=	compat freetype2 x11
-EMUL_REQD=		suse>=10.0
+EMUL_MODULES.linux=	freetype2 x11 locale
+EMUL_REQD=		suse>=11.3
 
 EMUL_PKG_FMT=		rpm
 RPMFILES=		${WRKSRC}/RPMS/*.rpm
