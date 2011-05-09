@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/05/09 20:07:42 jihbed Exp $
+
+SHA1 (pyutilib.component.config-3.2.3.tar.gz) = f905de1d272f4fe57750b0c5f058c3a692d98b17
+RMD160 (pyutilib.component.config-3.2.3.tar.gz) = 58cec978021a750f574fff4bde15792ed26b24d3
+Size (pyutilib.component.config-3.2.3.tar.gz) = 17108 bytes
