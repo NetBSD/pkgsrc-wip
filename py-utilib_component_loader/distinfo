@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/05/09 20:09:37 jihbed Exp $
+
+SHA1 (pyutilib.component.loader-3.2.3.tar.gz) = 308b1ed1270f5a6af1962419d51cd49ef7388799
+RMD160 (pyutilib.component.loader-3.2.3.tar.gz) = 454044054a39fe9cea8a5659ba122f9b41998a1b
+Size (pyutilib.component.loader-3.2.3.tar.gz) = 30891 bytes
