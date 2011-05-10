@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/11/02 16:44:04 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2011/05/10 23:30:31 phonohawk Exp $
 #
 
-DISTNAME=	tagged-0.1.1
+DISTNAME=	tagged-0.2.2
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
@@ -10,4 +10,5 @@ LICENSE=	modified-bsd
 
 .include "../../wip/mk/haskell.mk"
 .include "../../wip/hs-data-default/buildlink3.mk"
+.include "../../wip/hs-semigroups/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

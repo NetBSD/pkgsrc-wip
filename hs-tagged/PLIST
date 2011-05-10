@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/11/02 16:44:04 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/05/10 23:30:31 phonohawk Exp $
+lib/tagged-${PKGVERSION}/${HASKELL_VERSION}/Data/Proxy.hi
+lib/tagged-${PKGVERSION}/${HASKELL_VERSION}/Data/Proxy.p_hi
 lib/tagged-${PKGVERSION}/${HASKELL_VERSION}/Data/Tagged.hi
 lib/tagged-${PKGVERSION}/${HASKELL_VERSION}/Data/Tagged.p_hi
 lib/tagged-${PKGVERSION}/${HASKELL_VERSION}/HStagged-${PKGVERSION}.o
