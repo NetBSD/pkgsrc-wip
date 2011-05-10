@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2010/12/30 08:31:08 phonohawk Exp $
+# $NetBSD: Makefile,v 1.4 2011/05/10 13:03:16 phonohawk Exp $
 #
 
-DISTNAME=	regions-0.8
+DISTNAME=	regions-0.9
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
@@ -10,6 +10,6 @@ LICENSE=	modified-bsd
 
 .include "../../wip/mk/haskell.mk"
 .include "../../wip/hs-base-unicode-symbols/buildlink3.mk"
-.include "../../wip/hs-monad-peel/buildlink3.mk"
+.include "../../wip/hs-monad-control/buildlink3.mk"
 .include "../../wip/hs-transformers/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
