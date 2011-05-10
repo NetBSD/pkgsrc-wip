@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2010/12/30 09:05:54 phonohawk Exp $
+$NetBSD: distinfo,v 1.3 2011/05/10 12:43:13 phonohawk Exp $
 
-SHA1 (storablevector-0.2.7.tar.gz) = bc43569e9138d2b77ddd919ecbedfccd3d3e2e9f
-RMD160 (storablevector-0.2.7.tar.gz) = 46641cde5cdd10acd7abb51defaef4be0be06ebc
-Size (storablevector-0.2.7.tar.gz) = 48737 bytes
-SHA1 (patch-aa) = d6591276ec99821c08424a61bf7824ca9b2f2d5a
+SHA1 (storablevector-0.2.7.2.tar.gz) = 5f025d143bfd66d4d858718667a3f7122c59f52a
+RMD160 (storablevector-0.2.7.2.tar.gz) = 5a2d286620090ce6e40d9742f4e8c086729c2999
+Size (storablevector-0.2.7.2.tar.gz) = 48685 bytes
