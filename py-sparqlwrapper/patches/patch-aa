@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2011/05/10 13:17:32 jihbed Exp $
+
+--- setup.py.orig	2011-01-28 14:04:04.000000000 +0100
++++ setup.py	2011-05-10 11:18:53.000000000 +0100
+@@ -39,6 +39,6 @@
+       ],
+       keywords = 'python SPARQL',
+       #requires_python = '>=2.5', # Future in PEP 345
+-      #scripts = ['ez_setup.py']
++     scripts = ['scripts/sparql.py','scripts/example.py']
+ )
+ 
