@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2010/12/30 08:52:32 phonohawk Exp $
+# $NetBSD: Makefile,v 1.3 2011/05/10 23:38:03 phonohawk Exp $
 #
 
-DISTNAME=	safer-file-handles-0.9
+DISTNAME=	safer-file-handles-0.10
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
@@ -11,7 +11,7 @@ LICENSE=	modified-bsd
 .include "../../wip/mk/haskell.mk"
 .include "../../wip/hs-base-unicode-symbols/buildlink3.mk"
 .include "../../wip/hs-explicit-iomodes/buildlink3.mk"
-.include "../../wip/hs-monad-peel/buildlink3.mk"
+.include "../../wip/hs-monad-control/buildlink3.mk"
 .include "../../wip/hs-pathtype/buildlink3.mk"
 .include "../../wip/hs-regional-pointers/buildlink3.mk"
 .include "../../wip/hs-regions/buildlink3.mk"
