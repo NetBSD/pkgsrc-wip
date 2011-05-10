@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2010/11/02 16:28:59 phonohawk Exp $
+$NetBSD: distinfo,v 1.3 2011/05/10 12:19:14 phonohawk Exp $
 
-SHA1 (base-unicode-symbols-0.2.1.1.tar.gz) = e3c6bb3cd9d7d79ece8e46721f3547511032b6ea
-RMD160 (base-unicode-symbols-0.2.1.1.tar.gz) = 1f762d996d1b1e4e0844fd49efed539cda9858f3
-Size (base-unicode-symbols-0.2.1.1.tar.gz) = 4993 bytes
+SHA1 (base-unicode-symbols-0.2.1.5.tar.gz) = 79cf429b6d5ecdde2eefea08411c17a6805da3e8
+RMD160 (base-unicode-symbols-0.2.1.5.tar.gz) = c30c4b8d196828b303325de994cfedbdcb562042
+Size (base-unicode-symbols-0.2.1.5.tar.gz) = 5132 bytes
