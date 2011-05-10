@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4322 2011/05/10 12:58:03 phonohawk Exp $
+# $Id: Makefile,v 1.4323 2011/05/10 13:49:34 ryo-on Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2971,7 +2971,6 @@ SUBDIR+=	yajl
 SUBDIR+=	yakuake
 SUBDIR+=	yauap
 SUBDIR+=	yaws
-SUBDIR+=	yaydl
 SUBDIR+=	yelp-xsl
 SUBDIR+=	yersinia
 SUBDIR+=	ykclient
