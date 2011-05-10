@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/05/09 10:54:02 ryo-on Exp $
+# $NetBSD: Makefile,v 1.4 2011/05/10 12:56:08 ryo-on Exp $
 
 DISTNAME=		libreoffice3-bin	# overridden below
 PKGNAME=		libreoffice3-bin-${OO_RELEASE}
@@ -75,15 +75,11 @@ do-install:
 	${RM} -f ${DESTDIR}${PREFIX}/opt/libreoffice/program/spadmin.orig
 	uniq ${RPM2PKG_PLIST} | \
 		${SED} -e 's,^@exec mkdir -m 755 -p %D/,@pkgdir,' > ${WRKDIR}/PLIST
-.if defined(PKG_JVM) && !empty(PKG_JVM)
 	${RM} -f ${DESTDIR}${PREFIX}/bin/soffice
 	${SED}  -e "s|@@PREFIX@@|${PREFIX}|g" -e "s|@@OO_VER@@|${OO_VER}|g" \
 		-e "s|@@JAVA_HOME@@|${PKG_JAVA_HOME}|g" \
 		< ${FILESDIR}/soffice > ${DESTDIR}${PREFIX}/bin/soffice
 	${CHMOD} +x ${DESTDIR}${PREFIX}/bin/soffice
-.else
-	${LN} -sf ../opt/libreoffice/program/soffice ${DESTDIR}${PREFIX}/bin/soffice
-.endif
 .for i in scalc sdraw simpress smath spadmin swriter
 	${LN} -sf ../opt/libreoffice/program/${i} ${DESTDIR}${PREFIX}/bin/${i}
 .endfor
