@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/09/23 06:16:04 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/05/10 12:36:51 phonohawk Exp $
 lib/utility-ht-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/HT.hi
 lib/utility-ht-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/HT.p_hi
 lib/utility-ht-${PKGVERSION}/${HASKELL_VERSION}/Data/Bool/HT.hi
@@ -11,6 +11,8 @@ lib/utility-ht-${PKGVERSION}/${HASKELL_VERSION}/Data/Function/HT.hi
 lib/utility-ht-${PKGVERSION}/${HASKELL_VERSION}/Data/Function/HT.p_hi
 lib/utility-ht-${PKGVERSION}/${HASKELL_VERSION}/Data/Function/HT/Private.hi
 lib/utility-ht-${PKGVERSION}/${HASKELL_VERSION}/Data/Function/HT/Private.p_hi
+lib/utility-ht-${PKGVERSION}/${HASKELL_VERSION}/Data/Ix/Enum.hi
+lib/utility-ht-${PKGVERSION}/${HASKELL_VERSION}/Data/Ix/Enum.p_hi
 lib/utility-ht-${PKGVERSION}/${HASKELL_VERSION}/Data/List/HT.hi
 lib/utility-ht-${PKGVERSION}/${HASKELL_VERSION}/Data/List/HT.p_hi
 lib/utility-ht-${PKGVERSION}/${HASKELL_VERSION}/Data/List/HT/Private.hi
@@ -25,6 +27,8 @@ lib/utility-ht-${PKGVERSION}/${HASKELL_VERSION}/Data/List/Match/Private.hi
 lib/utility-ht-${PKGVERSION}/${HASKELL_VERSION}/Data/List/Match/Private.p_hi
 lib/utility-ht-${PKGVERSION}/${HASKELL_VERSION}/Data/Maybe/HT.hi
 lib/utility-ht-${PKGVERSION}/${HASKELL_VERSION}/Data/Maybe/HT.p_hi
+lib/utility-ht-${PKGVERSION}/${HASKELL_VERSION}/Data/Monoid/HT.hi
+lib/utility-ht-${PKGVERSION}/${HASKELL_VERSION}/Data/Monoid/HT.p_hi
 lib/utility-ht-${PKGVERSION}/${HASKELL_VERSION}/Data/Ord/HT.hi
 lib/utility-ht-${PKGVERSION}/${HASKELL_VERSION}/Data/Ord/HT.p_hi
 lib/utility-ht-${PKGVERSION}/${HASKELL_VERSION}/Data/Record/HT.hi

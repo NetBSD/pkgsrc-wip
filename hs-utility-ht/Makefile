@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/09/23 06:16:04 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2011/05/10 12:36:51 phonohawk Exp $
 #
 
-DISTNAME=	utility-ht-0.0.5.1
+DISTNAME=	utility-ht-0.0.7
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
