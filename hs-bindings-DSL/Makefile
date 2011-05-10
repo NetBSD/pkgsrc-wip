@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2010/12/30 09:10:25 phonohawk Exp $
+# $NetBSD: Makefile,v 1.3 2011/05/10 12:23:01 phonohawk Exp $
 #
 
-DISTNAME=	bindings-DSL-1.0.8
+DISTNAME=	bindings-DSL-1.0.10
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
