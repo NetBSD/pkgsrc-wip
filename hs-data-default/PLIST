@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/11/02 16:38:18 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/05/10 23:19:24 phonohawk Exp $
 lib/data-default-${PKGVERSION}/${HASKELL_VERSION}/Data/Default.hi
 lib/data-default-${PKGVERSION}/${HASKELL_VERSION}/Data/Default.p_hi
 lib/data-default-${PKGVERSION}/${HASKELL_VERSION}/HSdata-default-${PKGVERSION}.o
 lib/data-default-${PKGVERSION}/${HASKELL_VERSION}/libHSdata-default-${PKGVERSION}.a
 lib/data-default-${PKGVERSION}/${HASKELL_VERSION}/libHSdata-default-${PKGVERSION}_p.a
 lib/data-default-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/data-default-${PKGVERSION}/LICENSE
