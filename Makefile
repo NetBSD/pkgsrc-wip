@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4320 2011/05/09 21:30:08 jihbed Exp $
+# $Id: Makefile,v 1.4321 2011/05/10 12:27:45 ryo-on Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -233,6 +233,7 @@ SUBDIR+=	bub-n-bros
 SUBDIR+=	bunny
 SUBDIR+=	busybox
 SUBDIR+=	bwm-ng
+SUBDIR+=	bwping
 SUBDIR+=	bzr
 SUBDIR+=	bzrtools
 SUBDIR+=	c-news
