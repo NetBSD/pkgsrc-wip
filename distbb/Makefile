@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.80 2011/05/11 19:43:10 cheusov Exp $
+# $NetBSD: Makefile,v 1.81 2011/05/11 19:49:18 cheusov Exp $
 #
 
 DISTNAME=	distbb-0.40.0
@@ -22,6 +22,11 @@ USE_LANGUAGES=		# none
 
 REPLACE_SH+=		distbb.in distbb_diff.in slave.in stage_*.in
 
+REPLACE_INTERPRETER+=	runawk
+REPLACE.runawk.old=	/usr/bin/env runawk
+REPLACE.runawk.new=	${PREFIX}/bin/runawk
+REPLACE_FILES.runawk=	gen_weights.in gen_queue.in
+
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 EGDIR=			${PREFIX}/share/examples/distbb
@@ -35,11 +40,6 @@ DOCFILES=		README NEWS TODO
 MAKE_FLAGS+=		EGDIR=${EGDIR}
 
 AUTO_MKDIRS=		yes
-
-REPLACE_INTERPRETER+=	runawk
-REPLACE.runawk.old=	/usr/bin/env runawk
-REPLACE.runawk.new=	${PREFIX}/bin/runawk
-REPLACE_FILES.runawk=	gen_weights.in gen_queue.in
 
 post-install:
 .for f in ${DOCFILES}
