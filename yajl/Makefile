@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/12/07 21:18:00 pallegra Exp $
+# $NetBSD: Makefile,v 1.2 2011/05/11 16:27:12 pallegra Exp $
 #
 
 DISTNAME=	yajl-1.0.9
@@ -12,8 +12,16 @@ LICENSE=	modified-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_TOOLS+=	gmake
-USE_CMAKE=	yes
-USE_LANGUAGES=	c c++
+USE_LIBTOOL=	yes
+
+USE_LANGUAGES=	c
+
+MAKE_ENV+=	MKDIR="${MKDIR}"
+MAKE_ENV+=	CP="${CP}"
+
+post-extract:
+	${CP} ${FILESDIR}/Makefile ${WRKSRC}/src/
+
+BUILD_DIRS=	src
 
 .include "../../mk/bsd.pkg.mk"
