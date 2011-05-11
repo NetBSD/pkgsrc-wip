@@ -1,5 +1,2 @@
 * pass %miro --unittest
-* pkg-config libxul makes sane.
-* only tested with native X.org on NetBSD-current
-* change bl3 -> DEPENDS
 * complete dependencies
