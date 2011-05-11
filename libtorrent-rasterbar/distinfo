@@ -1,5 +1,15 @@
-$NetBSD: distinfo,v 1.2 2010/06/26 00:30:36 ryo-on Exp $
+$NetBSD: distinfo,v 1.3 2011/05/11 09:18:46 ryo-on Exp $
 
-SHA1 (libtorrent-rasterbar-0.15.1.tar.gz) = a06aaca590a93eb98acb1ff858378995cf94030f
-RMD160 (libtorrent-rasterbar-0.15.1.tar.gz) = cc140d6e0f4712cf30049b185f1276b5e267eeff
-Size (libtorrent-rasterbar-0.15.1.tar.gz) = 2464678 bytes
+SHA1 (libtorrent-rasterbar-0.14.12.tar.gz) = e1165fccd4a34ed1d686b350b88e9a5a321b7515
+RMD160 (libtorrent-rasterbar-0.14.12.tar.gz) = 2fea2f10b0351ff7b269258ecc57a267415620cf
+Size (libtorrent-rasterbar-0.14.12.tar.gz) = 1989687 bytes
+SHA1 (patch-configure) = 8b4a21bbb1ee24330dfa486a683267e3bed724a9
+SHA1 (patch-include_libtorrent_create__torrent.hpp) = d6318a15effd0627c8c2cb135e1ed8d98f183009
+SHA1 (patch-include_libtorrent_debug.hpp) = 3d5b8c3bb2742fc010e021f0ee7bbd4e70cc4e66
+SHA1 (patch-include_libtorrent_udp__socket.hpp) = abd91baded429cb8e2be2258e0dcca563390112f
+SHA1 (patch-src_create__torrent.cpp) = 5a7f06948b22d9cc587c373a3f741db55679fac5
+SHA1 (patch-src_file.cpp) = bebfad460872fec2808aea7b8087bd055c1e68ae
+SHA1 (patch-src_file__storage.cpp) = e1e5e969dc062a8a19d6eea298b932891544823e
+SHA1 (patch-src_logger.cpp) = d6d341847b150ba621bdbd32b19e1ffe12199eea
+SHA1 (patch-src_storage.cpp) = 2ad34c34333c7c15827a767ec0ead8b0157533b8
+SHA1 (patch-src_torrent__info.cpp) = 0ac049c727219ebaeed868ddf880880872951738

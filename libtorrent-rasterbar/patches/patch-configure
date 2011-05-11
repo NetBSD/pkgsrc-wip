@@ -1,0 +1,24 @@
+$NetBSD: patch-configure,v 1.1 2011/05/11 09:18:46 ryo-on Exp $
+
+* Replace == with =, improve compatibility
+
+--- configure.orig	2010-09-07 05:47:12.000000000 +0000
++++ configure
+@@ -18743,7 +18743,7 @@ $as_echo "" >&6; }
+ 		;;
+ esac
+ 
+-if [ "x$PYTHON_INSTALL_PARAMS" == "x" ]; then
++if [ "x$PYTHON_INSTALL_PARAMS" = "x" ]; then
+ 	PYTHON_INSTALL_PARAMS='--prefix=$(DESTDIR)$(prefix)'
+ fi
+ 
+@@ -18856,7 +18856,7 @@ $as_echo "" >&6; }
+ 		;;
+ esac
+ 
+-if [ "x$enable_shared" == "xyes" ]; then
++if [ "x$enable_shared" = "xyes" ]; then
+ 
+ $as_echo "#define TORRENT_BUILDING_SHARED /**/" >>confdefs.h
+ 
