@@ -91,7 +91,7 @@ test : all
 	unset MAKEFLAGS; \
 	set -e; cd ${.CURDIR}/tests; \
 	env PATH="${.OBJDIR}:$$PATH" OBJDIR=${.OBJDIR} \
-		BMAKE=${BMAKE} ./test.sh
+		PKGSRCDIR=${PKGSRCDIR} BMAKE=${BMAKE} ./test.sh
 
 ############################################################
 
