@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2010/06/20 12:14:42 jihbed Exp $
+$NetBSD: distinfo,v 1.4 2011/05/11 09:26:35 ryo-on Exp $
 
-SHA1 (dist-python-distutils-extra-2.19.tar.gz) = 695d5c71a232f09894190d41400637acd2eb113b
-RMD160 (dist-python-distutils-extra-2.19.tar.gz) = a83c0e79f09376facec82720f58442899e88c180
-Size (dist-python-distutils-extra-2.19.tar.gz) = 26859 bytes
+SHA1 (python-distutils-extra-2.26.tar.gz) = 6af0a6f7edb929cfb9515b0c521d5091fa6acd44
+RMD160 (python-distutils-extra-2.26.tar.gz) = 94bdf728395b2224badc1de75050184140651bf3
+Size (python-distutils-extra-2.26.tar.gz) = 26085 bytes
