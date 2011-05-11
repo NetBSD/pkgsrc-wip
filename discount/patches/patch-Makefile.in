@@ -1,0 +1,57 @@
+$NetBSD: patch-Makefile.in,v 1.1 2011/05/11 08:12:14 fhajny Exp $
+
+Fix DESTDIR support.
+--- Makefile.in.orig	2011-01-30 04:55:45.000000000 +0000
++++ Makefile.in
+@@ -22,33 +22,36 @@ MAN3PAGES=mkd-callbacks.3 mkd-functions.
+ all: $(PGMS) $(SAMPLE_PGMS)
+ 
+ install: $(PGMS)
+-	@INSTALL_PROGRAM@ $(PGMS) $(DESTDIR)/$(BINDIR)
+-	./librarian.sh install libmarkdown VERSION $(DESTDIR)/$(LIBDIR)
+-	@INSTALL_DATA@ mkdio.h $(DESTDIR)/$(INCDIR)
++	@INSTALL_DIR@ $(DESTDIR)$(BINDIR)
++	@INSTALL_PROGRAM@ $(PGMS) $(DESTDIR)$(BINDIR)
++	@INSTALL_DIR@ $(DESTDIR)$(LIBDIR)
++	./librarian.sh install libmarkdown VERSION $(DESTDIR)$(LIBDIR)
++	@INSTALL_DIR@ $(DESTDIR)$(INCDIR)
++	@INSTALL_DATA@ mkdio.h $(DESTDIR)$(INCDIR)
+ 
+ install.everything: install install.samples install.man
+ 
+ install.samples: $(SAMPLE_PGMS) install
+-	@INSTALL_PROGRAM@ $(SAMPLE_PGMS) $(DESTDIR)/$(BINDIR)
+-	@INSTALL_DIR@ $(DESTDIR)/$(MANDIR)/man1
+-	@INSTALL_DATA@ theme.1 makepage.1 mkd2html.1 $(DESTDIR)/$(MANDIR)/man1
++	@INSTALL_PROGRAM@ $(SAMPLE_PGMS) $(DESTDIR)$(BINDIR)
++	@INSTALL_DIR@ $(DESTDIR)$(MANDIR)/man1
++	@INSTALL_DATA@ theme.1 makepage.1 mkd2html.1 $(DESTDIR)$(MANDIR)/man1
+ 
+ install.man:
+-	@INSTALL_DIR@ $(DESTDIR)/$(MANDIR)/man3
+-	@INSTALL_DATA@ $(MAN3PAGES) $(DESTDIR)/$(MANDIR)/man3
++	@INSTALL_DIR@ $(DESTDIR)$(MANDIR)/man3
++	@INSTALL_DATA@ $(MAN3PAGES) $(DESTDIR)$(MANDIR)/man3
+ 	for x in mkd_line mkd_generateline; do \
+-	    ( echo '.\"' ; echo ".so man3/mkd-line.3" ) > $(DESTDIR)/$(MANDIR)/man3/$$x.3;\
++	    ( echo '.\"' ; echo ".so man3/mkd-line.3" ) > $(DESTDIR)$(MANDIR)/man3/$$x.3;\
+ 	done
+ 	for x in mkd_in mkd_string; do \
+-	    ( echo '.\"' ; echo ".so man3/markdown.3" ) > $(DESTDIR)/$(MANDIR)/man3/$$x.3;\
++	    ( echo '.\"' ; echo ".so man3/markdown.3" ) > $(DESTDIR)$(MANDIR)/man3/$$x.3;\
+ 	done
+ 	for x in mkd_compile mkd_css mkd_generatecss mkd_generatehtml mkd_cleanup mkd_doc_title mkd_doc_author mkd_doc_date; do \
+-	    ( echo '.\"' ; echo ".so man3/mkd-functions.3" ) > $(DESTDIR)/$(MANDIR)/man3/$$x.3; \
++	    ( echo '.\"' ; echo ".so man3/mkd-functions.3" ) > $(DESTDIR)$(MANDIR)/man3/$$x.3; \
+ 	done
+-	@INSTALL_DIR@ $(DESTDIR)/$(MANDIR)/man7
+-	@INSTALL_DATA@ markdown.7 mkd-extensions.7 $(DESTDIR)/$(MANDIR)/man7
+-	@INSTALL_DIR@ $(DESTDIR)/$(MANDIR)/man1
+-	@INSTALL_DATA@ markdown.1 $(DESTDIR)/$(MANDIR)/man1
++	@INSTALL_DIR@ $(DESTDIR)$(MANDIR)/man7
++	@INSTALL_DATA@ markdown.7 mkd-extensions.7 $(DESTDIR)$(MANDIR)/man7
++	@INSTALL_DIR@ $(DESTDIR)$(MANDIR)/man1
++	@INSTALL_DATA@ markdown.1 $(DESTDIR)$(MANDIR)/man1
+ 
+ install.everything: install install.man
+ 
