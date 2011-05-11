@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.79 2011/04/22 21:49:14 cheusov Exp $
+# $NetBSD: Makefile,v 1.80 2011/05/11 19:43:10 cheusov Exp $
 #
 
 DISTNAME=	distbb-0.40.0
@@ -10,7 +10,7 @@ HOMEPAGE=	http://mova.org/~cheusov/pub/distbb/
 COMMENT=	DISTributed Bulk Build tool for pkgsrc
 LICENSE=	2-clause-bsd
 
-DEPENDS+=	pkg_summary-utils>=0.53:../../wip/pkg_summary-utils
+DEPENDS+=	pkg_summary-utils>=0.53:../../pkgtools/pkg_summary-utils
 DEPENDS+=	paexec>=0.16.0:../../parallel/paexec
 DEPENDS+=	runawk>=1.1.0:../../lang/runawk
 DEPENDS+=	pipestatus>=0.6.0:../../devel/pipestatus
@@ -35,6 +35,11 @@ DOCFILES=		README NEWS TODO
 MAKE_FLAGS+=		EGDIR=${EGDIR}
 
 AUTO_MKDIRS=		yes
+
+REPLACE_INTERPRETER+=	runawk
+REPLACE.runawk.old=	/usr/bin/env runawk
+REPLACE.runawk.new=	${PREFIX}/bin/runawk
+REPLACE_FILES.runawk=	gen_weights.in gen_queue.in
 
 post-install:
 .for f in ${DOCFILES}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2011/04/22 21:47:03 cheusov Exp $
+# $NetBSD: Makefile,v 1.6 2011/05/11 19:47:08 cheusov Exp $
 #
 
 DISTNAME=	distbb-9
@@ -13,7 +13,7 @@ GIT_REPOSITORIES=	master
 GIT_REPO.master=	git@github.com:cheusov/distbb.git
 .include "../../wip/mk/git-package.mk"
 
-DEPENDS+=	pkg_summary-utils>=0.53:../../wip/pkg_summary-utils
+DEPENDS+=	pkg_summary-utils>=0.53:../../pkgtools/pkg_summary-utils
 DEPENDS+=	paexec>=0.16.0:../../parallel/paexec
 DEPENDS+=	runawk>=1.1.0:../../lang/runawk
 DEPENDS+=	pipestatus>=0.6.0:../../devel/pipestatus
@@ -26,6 +26,11 @@ WRKSRC=			${WRKDIR}/distbb
 USE_LANGUAGES=		# none
 
 REPLACE_SH+=		distbb.in distbb_diff.in slave.in stage_*.in
+
+REPLACE_INTERPRETER+=	runawk
+REPLACE.runawk.old=	/usr/bin/env runawk
+REPLACE.runawk.new=	${PREFIX}/bin/runawk
+REPLACE_FILES.runawk=	gen_weights.in gen_queue.in
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
