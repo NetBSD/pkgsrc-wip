@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.3 2010/09/16 12:49:50 fhajny Exp $
+# $NetBSD: Makefile,v 1.4 2011/05/11 07:25:56 fhajny Exp $
 #
 
-DISTNAME=		mod_xsendfile-0.11.1
+DISTNAME=		mod_xsendfile-0.12
 PKGNAME=		${APACHE_PKG_PREFIX}-${DISTNAME:S/mod_//}
 CATEGORIES=		www
-MASTER_SITES=		http://tn123.ath.cx/mod_xsendfile/
+MASTER_SITES=		http://tn123.org/mod_xsendfile/
 
 MAINTAINER=		filip@joyent.com
-HOMEPAGE=		http://tn123.ath.cx/mod_xsendfile/
+HOMEPAGE=		http://tn123.org/mod_xsendfile/
 COMMENT=		Apache 2 module that processes X-SENDFILE headers
 LICENSE=		apache-2.0
 
