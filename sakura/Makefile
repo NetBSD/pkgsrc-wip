@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2011/02/12 11:34:03 ryo-on Exp $
+# $NetBSD: Makefile,v 1.6 2011/05/11 10:53:45 ryo-on Exp $
 #
 
 DISTNAME=	sakura-2.4.0
@@ -6,7 +6,7 @@ CATEGORIES=	x11
 MASTER_SITES=	http://www.pleyades.net/david/projects/sakura/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	ryo_on@yk.rim.or.jp
+MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://www.pleyades.net/david/sakura.php
 COMMENT=	Sakura is a terminal emulator based on GTK and VTE that supports tab
 
@@ -24,11 +24,11 @@ SUBST_MESSAGE.fix-man-path=	Fix path for man1.
 SUBST_FILES.fix-man-path=	CMakeLists.txt
 SUBST_SED.fix-man-path=		-e 's,share/man/man1,${PKGMANDIR}/man1,g'
 
-BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.14.0
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.20.0
 .include "../../devel/glib2/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.10.0
+BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.16.0
 .include "../../x11/gtk2/buildlink3.mk"
-BUILDLINK_API_DEPENDS.vte+=	vte>=0.16.15
+BUILDLINK_API_DEPENDS.vte+=	vte>=0.26
 .include "../../x11/vte/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
