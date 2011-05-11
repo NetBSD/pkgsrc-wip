@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2011/05/11 09:22:53 ryo-on Exp $
+# $NetBSD: Makefile,v 1.6 2011/05/11 09:23:40 ryo-on Exp $
 #
 
 DISTNAME=	miro-3.5.1
 CATEGORIES=	multimedia net
 MASTER_SITES=	http://ftp.osuosl.org/pub/pculture.org/miro/src/
 
-MAINTAINER=	ryo_on@yk.rim.or.jp
+MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://www.getmiro.com/
 COMMENT=	Miro is a integrated video downloader and player
 
