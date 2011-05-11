@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/01/27 06:50:32 phonohawk Exp $
+$NetBSD: distinfo,v 1.2 2011/05/11 09:47:09 ryo-on Exp $
 
 SHA1 (aubio-0.3.2.tar.gz) = 8ef7ccbf18a4fa6db712a9192acafc9c8d080978
 RMD160 (aubio-0.3.2.tar.gz) = 44e3bb8ab38aa715052466e7ae50123089914b5b
 Size (aubio-0.3.2.tar.gz) = 609006 bytes
+SHA1 (patch-python_aubio_Makefile.in) = 4d6b2bf9f6b1cc6661f4aa65f400a0c575c8aca5

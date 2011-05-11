@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/01/27 06:50:32 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/05/11 09:47:09 ryo-on Exp $
 bin/aubiocut
 bin/aubionotes
 bin/aubioonset
@@ -66,11 +66,7 @@ ${PYSITELIB}/aubio/bench/node.py
 ${PYSITELIB}/aubio/bench/node.pyc
 ${PYSITELIB}/aubio/bench/node.pyo
 ${PYSITELIB}/aubio/bench/onset.py
-${PYSITELIB}/aubio/bench/onset.pyc
-${PYSITELIB}/aubio/bench/onset.pyo
 ${PYSITELIB}/aubio/gnuplot.py
-${PYSITELIB}/aubio/gnuplot.pyc
-${PYSITELIB}/aubio/gnuplot.pyo
 ${PYSITELIB}/aubio/median.py
 ${PYSITELIB}/aubio/median.pyc
 ${PYSITELIB}/aubio/median.pyo
@@ -81,29 +77,19 @@ ${PYSITELIB}/aubio/plot/__init__.py
 ${PYSITELIB}/aubio/plot/__init__.pyc
 ${PYSITELIB}/aubio/plot/__init__.pyo
 ${PYSITELIB}/aubio/plot/keyboard.py
-${PYSITELIB}/aubio/plot/keyboard.pyc
-${PYSITELIB}/aubio/plot/keyboard.pyo
 ${PYSITELIB}/aubio/task/__init__.py
 ${PYSITELIB}/aubio/task/__init__.pyc
 ${PYSITELIB}/aubio/task/__init__.pyo
 ${PYSITELIB}/aubio/task/beat.py
-${PYSITELIB}/aubio/task/beat.pyc
-${PYSITELIB}/aubio/task/beat.pyo
 ${PYSITELIB}/aubio/task/cut.py
 ${PYSITELIB}/aubio/task/cut.pyc
 ${PYSITELIB}/aubio/task/cut.pyo
 ${PYSITELIB}/aubio/task/notes.py
-${PYSITELIB}/aubio/task/notes.pyc
-${PYSITELIB}/aubio/task/notes.pyo
 ${PYSITELIB}/aubio/task/onset.py
-${PYSITELIB}/aubio/task/onset.pyc
-${PYSITELIB}/aubio/task/onset.pyo
 ${PYSITELIB}/aubio/task/params.py
 ${PYSITELIB}/aubio/task/params.pyc
 ${PYSITELIB}/aubio/task/params.pyo
 ${PYSITELIB}/aubio/task/pitch.py
-${PYSITELIB}/aubio/task/pitch.pyc
-${PYSITELIB}/aubio/task/pitch.pyo
 ${PYSITELIB}/aubio/task/silence.py
 ${PYSITELIB}/aubio/task/silence.pyc
 ${PYSITELIB}/aubio/task/silence.pyo
