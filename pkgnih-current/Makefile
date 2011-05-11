@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2011/04/25 23:27:17 cheusov Exp $
+# $NetBSD: Makefile,v 1.22 2011/05/11 22:22:12 cheusov Exp $
 
 DISTNAME=	pkgnih-999
 CATEGORIES=	pkgtools
@@ -13,7 +13,7 @@ GIT_REPOSITORIES=	master
 GIT_REPO.master=	git://github.com/cheusov/pkgnih.git
 .include "../../wip/mk/git-package.mk"
 
-DEPENDS+=		pkg_summary-utils>=0.53.1:../../wip/pkg_summary-utils
+DEPENDS+=		pkg_summary-utils>=0.53.1:../../pkgtools/pkg_summary-utils
 
 DEPENDS+=		digest-[0-9]*:../../pkgtools/digest
 DEPENDS+=		pkg_install>=20100915:../../pkgtools/pkg_install
@@ -38,7 +38,7 @@ MAKE_DIRS+=		${PKG_SYSCONFDIR}/nih
 MAKE_ENV+=		MANDIR=${PREFIX}/${PKGMANDIR}
 MAKE_ENV+=		VERSION=${_GIT_TODAY:S/-//g}
 
+MAKE_PROGRAM=		mkcmake
+
 .include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"
-
-MAKE_PROGRAM=		mkcmake
