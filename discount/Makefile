@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2011/05/11 08:12:14 fhajny Exp $
+# $NetBSD: Makefile,v 1.4 2011/05/11 08:52:05 fhajny Exp $
 #
 
-DISTNAME=	discount-2.0.6
+DISTNAME=	discount-2.0.9
 CATEGORIES=	textproc
 MASTER_SITES=	http://www.pell.portland.or.us/~orc/Code/discount/
 EXTRACT_SUFX=	.tar.bz2
@@ -9,7 +9,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	zecrazytux@zecrazytux.net
 HOMEPAGE=	http://www.pell.portland.or.us/~orc/Code/discount/
 COMMENT=	Markdown C implementation
-
 LICENSE=	modified-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
