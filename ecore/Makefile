@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2010/01/18 19:35:08 jsonn Exp $
+# $NetBSD: Makefile,v 1.34 2011/05/12 09:03:38 absd Exp $
 #
 
 DISTNAME=	ecore-0.9.9.063
@@ -22,14 +22,17 @@ CONFIGURE_ARGS+=	--disable-openssl \
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/eet/buildlink3.mk"
-.include "../../graphics/evas/buildlink3.mk"
 .include "../../graphics/evas-buffer/buildlink3.mk"
 .include "../../graphics/evas-software-x11/buildlink3.mk"
+.include "../../graphics/evas/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../x11/libXScrnSaver/buildlink3.mk"
 .include "../../x11/libXcomposite/buildlink3.mk"
+.include "../../x11/libXcursor/buildlink3.mk"
 .include "../../x11/libXdamage/buildlink3.mk"
+.include "../../x11/libXinerama/buildlink3.mk"
 .include "../../x11/libXp/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
 .include "../../x11/libXrender/buildlink3.mk"
+.include "../../x11/libXtst/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
