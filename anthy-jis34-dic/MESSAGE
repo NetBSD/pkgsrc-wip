@@ -1,0 +1,9 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2011/05/12 05:19:58 makoto Exp $
+   ${PREFIX}/share/${PKGBASE}/jis3_4.t
+is installed. To activate, copy this dictionary to
+  ~/.anthy/imported_words_default.d/jis3_4.t.
+For example,
+  mkdir ~/.anthy/imported_words_default.d;
+  cp -p ${PREFIX}/share/${PKGBASE}/jis3_4.t ~/.anthy/imported_words_default.d
+===========================================================================

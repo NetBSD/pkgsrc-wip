@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/05/12 05:19:58 makoto Exp $
+share/anthy-dic-jis34/COPYING
+share/anthy-dic-jis34/ChangeLog
+share/anthy-dic-jis34/README
+share/anthy-dic-jis34/jis3_4.t
