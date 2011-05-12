@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4330 2011/05/12 12:22:18 ryo-on Exp $
+# $Id: Makefile,v 1.4331 2011/05/12 18:55:52 lexort Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -581,8 +581,6 @@ SUBDIR+=	fntsample
 SUBDIR+=	fontedit
 SUBDIR+=	fonttosfnt
 SUBDIR+=	foo2zjs
-SUBDIR+=	foomatic-db
-SUBDIR+=	foomatic-db-engine
 SUBDIR+=	fortunes-it
 SUBDIR+=	fprobe
 SUBDIR+=	fragrouter
