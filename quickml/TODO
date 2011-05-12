@@ -1,0 +1,3 @@
+* bin/quickml-analog should not be installed without 'analog' option?
+* simplify patch for quickml-analog, just for gnuplot>=4.0 (and adjust DEPENDS)?
+* PKG_OPTIONS name is global scope, 'limit' option should be renamed to 'quickml-limited'?
