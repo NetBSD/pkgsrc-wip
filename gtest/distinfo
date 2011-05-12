@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/05/12 11:50:56 ryo-on Exp $
+
+SHA1 (gtest-1.6.0.zip) = 00d6be170eb9fc3b2198ffdcb1f1d6ba7fc6e621
+RMD160 (gtest-1.6.0.zip) = ae4be5325f0cd83fea9902aa8674915ef2dcf8b4
+Size (gtest-1.6.0.zip) = 1121697 bytes
+SHA1 (patch-Makefile.in) = f071727b3f8bc1c50837cc59dc87a20ff203ed72
+SHA1 (patch-configure) = 7e11bf665760d489ad0bbb0806d2f88c7e335738
