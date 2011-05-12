@@ -1,6 +1,6 @@
-$NetBSD: patch-quickml-analog.in,v 1.1.1.1 2011/05/07 07:27:21 makoto Exp $
+$NetBSD: patch-quickml-analog.in,v 1.2 2011/05/12 13:24:30 obache Exp $
 
-gnuplot fix
+* gnuplot>=4.0 support.
 
 --- quickml-analog.in.orig	2004-06-07 08:50:59.000000000 +0000
 +++ quickml-analog.in
