@@ -1,0 +1,17 @@
+$NetBSD: patch-bin_ditz,v 1.1 2011/05/12 04:42:02 phonohawk Exp $
+
+The option --issue-dir should override the
+.ditz-config/issue_dir. This seems to be already fixed in the Git HEAD
+but not in 0.5 release.
+
+--- bin/ditz.orig	2011-05-12 04:33:55.000000000 +0000
++++ bin/ditz
+@@ -101,7 +101,7 @@ EOS
+   end
+ end
+ 
+-issue_dir = Pathname.new(config.issue_dir || $opts[:issue_dir])
++issue_dir = Pathname.new($opts[:issue_dir] || config.issue_dir)
+ cmd = ARGV.shift || "todo"
+ unless op.has_operation? cmd
+   die "no such command: #{cmd}"

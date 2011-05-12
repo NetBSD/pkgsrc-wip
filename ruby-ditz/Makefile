@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2010/11/13 00:10:56 cheusov Exp $
+# $NetBSD: Makefile,v 1.3 2011/05/12 04:42:02 phonohawk Exp $
 #
 
 DISTNAME=	ditz-0.5
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
