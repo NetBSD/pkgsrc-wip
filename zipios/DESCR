@@ -1,0 +1,3 @@
+Zipios++ is a java.util.zip-like C++ library for reading and writing
+Zip files. Access to individual entries is provided through standard
+C++ iostreams.
