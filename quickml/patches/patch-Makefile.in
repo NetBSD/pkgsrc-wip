@@ -1,7 +1,7 @@
-$NetBSD: patch-Makefile.in,v 1.1.1.1 2011/05/07 07:27:21 makoto Exp $
+$NetBSD: patch-Makefile.in,v 1.2 2011/05/12 13:20:19 obache Exp $
 
-(1)
-(2) user-destdir fix
+(1) fix copy&paste&modify error?
+(2) $(quickmlstatedir) will be handled by pkgsrc framework.
 
 --- Makefile.in.orig	2004-06-07 10:21:36.000000000 +0000
 +++ Makefile.in
@@ -14,7 +14,7 @@ $NetBSD: patch-Makefile.in,v 1.1.1.1 2011/05/07 07:27:21 makoto Exp $
  
  quickmlrc.sample: quickmlrc.sample.in Makefile
  	rm -f quickmlrc.sample
-@@ -639,10 +639,10 @@ quickmlrc.sample: quickmlrc.sample.in Ma
+@@ -639,10 +639,6 @@ quickmlrc.sample: quickmlrc.sample.in Ma
  		quickmlrc.sample.in > quickmlrc.sample
  
  install-data-local:
@@ -22,10 +22,6 @@ $NetBSD: patch-Makefile.in,v 1.1.1.1 2011/05/07 07:27:21 makoto Exp $
 -	chown -R $(USER)  $(quickmlstatedir)
 -	chgrp -R $(GROUP) $(quickmlstatedir)
 -	chmod 750 $(quickmlstatedir)
-+	mkdir -p $(DESTDIR)$(quickmlstatedir)
-+	echo chown -R $(USER)  $(DESTDIR)$(quickmlstatedir)
-+	echo chgrp -R $(GROUP) $(DESTDIR)$(quickmlstatedir)
-+	echo chmod 750 $(DESTDIR)$(quickmlstatedir)
  
  quickml.ja.html: quickml.ja.rd
  	rd2 $(RDOPT) \
