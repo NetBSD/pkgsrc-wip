@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/05/12 12:13:39 ryo-on Exp $
+
+SHA1 (ziparchive-4.1.0/ziparchive.zip) = 034c46bae0732f352c8bc072c380f1519e2fa04e
+RMD160 (ziparchive-4.1.0/ziparchive.zip) = 873ecf4bfc2e08fdd253e51f9d4490b24f20fe7e
+Size (ziparchive-4.1.0/ziparchive.zip) = 1565247 bytes
+SHA1 (patch-ZipArchive_DirEnumerator.cpp) = c27acbb61f92ce0059cda92f738885ad43b8a49c
+SHA1 (patch-ZipArchive_ZipFile__stl.cpp) = f9593619c38281007662bdfe9485f46f7964bc41
+SHA1 (patch-ZipArchive_ZipPlatform__lnx.cpp) = 908e7da544871deec91c57499c6bc50d1b7dac26
