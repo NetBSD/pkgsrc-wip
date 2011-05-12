@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4329 2011/05/12 12:14:39 ryo-on Exp $
+# $Id: Makefile,v 1.4330 2011/05/12 12:22:18 ryo-on Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2983,10 +2983,11 @@ SUBDIR+=	yp-tools
 SUBDIR+=	ypbind-mt
 SUBDIR+=	ypserv
 SUBDIR+=	zabbix
-SUBDIR+=	zaparchive
 SUBDIR+=	zapping
 SUBDIR+=	zim
 SUBDIR+=	zinf
+SUBDIR+=	ziparchive
+SUBDIR+=	zipios
 SUBDIR+=	zope3-unstable
 SUBDIR+=	zsh-snapshot
 SUBDIR+=	zvbi
