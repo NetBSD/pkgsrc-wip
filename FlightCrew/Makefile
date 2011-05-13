@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/05/13 04:29:35 ryo-on Exp $
+# $NetBSD: Makefile,v 1.2 2011/05/13 10:57:58 ryo-on Exp $
 #
 
 DISTNAME=	FlightCrew-0.7.1-Code
@@ -21,7 +21,7 @@ BUILDLINK_TRANSFORM+=	l:BoostParts:boost_date_time:boost_filesystem:boost_regex:
 BUILDLINK_TRANSFORM+=	l:Xerces:xerces-c
 BUILDLINK_TRANSFORM+=	l:zlib:z
 
-.include "../../wip/gtest/buildlink3.mk"
+.include "../../devel/googletest/buildlink3.mk"
 .include "../../wip/gmock/buildlink3.mk"
 .include "../../textproc/xerces-c/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
