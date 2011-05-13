@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/05/13 10:33:52 ryo-on Exp $
+# $NetBSD: Makefile,v 1.3 2011/05/13 10:58:41 ryo-on Exp $
 #
 
 DISTNAME=	gmock-1.6.0
@@ -32,6 +32,6 @@ pre-configure:
 post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/scripts/gmock-config ${DESTDIR}${PREFIX}/bin
 
-.include "../../wip/gtest/buildlink3.mk"
+.include "../../devel/googletest/buildlink3.mk"
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
