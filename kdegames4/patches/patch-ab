@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.3 2011/05/13 23:25:15 mwdavies Exp $
+
+--- ksirk/ksirk/iris/src/jdns/jdns_sys.c.orig	2008-11-13 05:36:48.000000000 +1300
++++ ksirk/ksirk/iris/src/jdns/jdns_sys.c
+@@ -705,6 +705,10 @@ static int my_res_init()
+ # define USE_EXTEXT
+ #endif
+ 
++#ifdef __NetBSD__
++# define USE_EXTEXT
++#endif
++
+ static jdns_dnsparams_t *dnsparams_get_unixsys()
+ {
+ 	int n;

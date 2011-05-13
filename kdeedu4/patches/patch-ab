@@ -1,0 +1,30 @@
+$NetBSD: patch-ab,v 1.4 2011/05/13 23:25:15 mwdavies Exp $
+
+--- kmplot/kmplot/parser.cpp.orig	2011-01-19 22:06:31.000000000 +0000
++++ kmplot/kmplot/parser.cpp
+@@ -102,9 +102,13 @@ ScalarFunction Parser::scalarFunctions[ 
+ 	{"floor", QString(), floor},				// round down to nearest integer
+ 	{"ceil", QString(), ceil},					// round up to nearest integer
+ 	{"round", QString(), round},				// round to nearest integer
++#ifndef __NetBSD__
+ 	{"gamma", QString(), tgamma},			// gamma function
++#endif
+ 	{"lgamma", QString(), lgamma},			// log-gamma function
++#ifndef __NetBSD__
+ 	{"factorial", QString(), factorial},		// factorial
++#endif
+ 	{"erfc", QString(), lerfc},			// error function
+ 	{"erf", QString(), lerf},			// complementary error function
+ 	
+@@ -1346,9 +1350,11 @@ double larcsin(double x) {
+ double larctan(double x) {
+ 	return atan(x) / Parser::radiansPerAngleUnit();
+ }
++#ifndef __NetBSD__
+ double factorial( double x ) {
+ 	return tgamma(x+1);
+ }
++#endif
+ double legendre0( double ) {
+ 	return 1.0;
+ }

@@ -1,0 +1,17 @@
+$NetBSD: patch-step_CMakeLists.txt,v 1.1 2011/05/13 23:25:15 mwdavies Exp $
+
+Older NetBSD doesn't have fmin()
+
+--- step/CMakeLists.txt.orig	2011-05-06 07:31:17.000000000 +0000
++++ step/CMakeLists.txt
+@@ -13,6 +13,10 @@ set(STEP_WITH_QALCULATE ${QALCULATE_FOUN
+ 
+ include_directories(${CMAKE_CURRENT_SOURCE_DIR} ${EIGEN2_INCLUDE_DIR})
+ 
++if(HAVE_FMIN)
++  add_definitions(-DHAVE_FMIN)
++endif(HAVE_FMIN)
++
+ add_subdirectory(stepcore)
+ add_subdirectory(step)
+ 

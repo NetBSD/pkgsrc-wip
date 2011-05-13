@@ -1,0 +1,31 @@
+$NetBSD: patch-ac,v 1.5 2011/05/13 23:25:15 mwdavies Exp $
+
+--- kmix/CMakeLists.txt.orig	2011-01-19 22:23:32.000000000 +0000
++++ kmix/CMakeLists.txt
+@@ -62,7 +62,7 @@ set(kmix_KDEINIT_SRCS ${kmix_adaptor_SRC
+ 
+ kde4_add_kdeinit_executable( kmix ${kmix_KDEINIT_SRCS})
+ 
+-target_link_libraries(kdeinit_kmix ${KDE4_KUTILS_LIBS} ${KDE4_PHONON_LIBS} ${KDE4_SOLID_LIBS} ${KDE4_KDEUI_LIBS} ${KDE4_PLASMA_LIBS} ${QT_QTXML_LIBRARY})
++target_link_libraries(kdeinit_kmix ${KDE4_KUTILS_LIBS} ${KDE4_PHONON_LIBS} ${KDE4_SOLID_LIBS} ${KDE4_KDEUI_LIBS} ${KDE4_PLASMA_LIBS} ${QT_QTXML_LIBRARY} $ENV{LIBOSSAUDIO})
+ 
+ if (HAVE_LIBASOUND2)
+     target_link_libraries(kdeinit_kmix ${ASOUND_LIBRARY})
+@@ -96,7 +96,7 @@ install(TARGETS kmix  ${INSTALL_TARGETS_
+ kde4_add_plugin(kded_kmixd ${kded_kmixd_SRCS})
+ 
+ 
+-target_link_libraries(kded_kmixd ${KDE4_KDEUI_LIBS} ${KDE4_SOLID_LIBS} ${QT_QTXML_LIBRARY})
++target_link_libraries(kded_kmixd ${KDE4_KDEUI_LIBS} ${KDE4_SOLID_LIBS} ${QT_QTXML_LIBRARY} $ENV{LIBOSSAUDIO})
+ 
+ if (HAVE_LIBASOUND2)
+     target_link_libraries(kded_kmixd ${ASOUND_LIBRARY})
+@@ -131,7 +131,7 @@ set(kmixctrl_KDEINIT_SRCS ${kmix_adaptor
+ 
+ kde4_add_kdeinit_executable( kmixctrl ${kmixctrl_KDEINIT_SRCS})
+ 
+-target_link_libraries(kdeinit_kmixctrl ${KDE4_KDEUI_LIBS} ${KDE4_SOLID_LIBS} ${QT_QTXML_LIBRARY})
++target_link_libraries(kdeinit_kmixctrl ${KDE4_KDEUI_LIBS} ${KDE4_SOLID_LIBS} ${QT_QTXML_LIBRARY} $ENV{LIBOSSAUDIO})
+ 
+ if (HAVE_LIBASOUND2)
+     target_link_libraries(kdeinit_kmixctrl ${ASOUND_LIBRARY})

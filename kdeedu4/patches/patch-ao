@@ -1,0 +1,17 @@
+$NetBSD: patch-ao,v 1.1 2011/05/13 23:25:15 mwdavies Exp $
+
+Older NetBSD doesn't have fmin()
+
+--- kig/objects/object_factory.cc.orig	2010-06-08 10:11:01.000000000 +0000
++++ kig/objects/object_factory.cc
+@@ -41,6 +41,10 @@
+ #include <limits>
+ #include <iterator>
+ 
++#ifndef HAVE_FMIN
++#define fmin(a,b) ((a) < (b) ? (a) : (b))
++#endif
++
+ ObjectHolder* ObjectFactory::fixedPoint( const Coordinate& c ) const
+ {
+   ObjectHolder* o = new ObjectHolder( fixedPointCalcer( c ) );

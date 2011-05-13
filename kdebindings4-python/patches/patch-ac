@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.1 2011/05/13 23:25:15 mwdavies Exp $
+
+--- CMakeLists.txt.orig	2010-04-04 12:10:19.000000000 +0000
++++ CMakeLists.txt
+@@ -1,6 +1,6 @@
+ project(kdebindings)
+ 
+-add_subdirectory(generator)
++#add_subdirectory(generator)
+ 
+ # where to look first for cmake modules, before ${CMAKE_ROOT}/Modules/ is checked
+ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_SOURCE_DIR}/cmake/modules )

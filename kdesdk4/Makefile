@@ -1,0 +1,70 @@
+# $NetBSD: Makefile,v 1.17 2011/05/13 23:25:16 mwdavies Exp $
+
+DISTNAME=	kdesdk-${_KDE_VERSION}
+CATEGORIES=	devel
+COMMENT=	Support applications and tools used by KDE developers
+
+CONFLICTS+=	cervisia-[0-9]*
+CONFLICTS+=	umbrello-[0-9]*
+
+.include "../../wip/kde4/Makefile.kde4"
+
+# BUILD_MAKE_FLAGS+= VERBOSE=1
+
+CMAKE_ARGS+=	-DBUILD_kmtrace:BOOL=OFF
+
+# disable for the moment till sort out -ldl
+CMAKE_ARGS+=	-DBUILD_kstartperf:BOOL=OFF
+
+REPLACE_PERL+= \
+	scripts/cxxmetric \
+	scripts/fixkdeincludes \
+	scripts/fixuifiles \
+	scripts/kdesrc-build \
+	scripts/krazy-licensecheck \
+	scripts/png2mng.pl \
+	scripts/svnintegrate \
+	kioslave/perldoc/pod2html.pl \
+	kcachegrind/converters/dprof2calltree \
+	kcachegrind/converters/memprof2calltree \
+	kcachegrind/converters/op2calltree \
+	cervisia/cervisia-change_repos_list.pl \
+	cervisia/cervisia-normalize_cvsroot.pl \
+	cervisia/change_colors.pl
+
+REPLACE_PYTHON+= \
+    kcachegrind/converters/hotshot2calltree \
+    lokalize/scripts/xliffmerge.py \
+    scripts/rename_source_files \
+    scripts/kdelnk2desktop.py \
+    scripts/kde_generate_export_header \
+    scripts/kde-systemsettings-tree.py \
+    scripts/zonetab2pot.py \
+    umbrello/umbrello/headings/heading.py
+
+REPLACE_SH+= \
+	scripts/build-progress.sh \
+	scripts/cvsaddcurrentdir
+
+INSTALLATION_DIRS+=	${PKGMANDIR}/man1
+
+USE_TOOLS+=	gmake
+
+BUILDLINK_DEPMETHOD.qt4-tools=	full
+.include "../../wip/kde4/kde4.mk"
+
+.include "../../devel/libiberty/buildlink3.mk"
+.include "../../devel/libltdl/buildlink3.mk"
+.include "../../devel/subversion-base/buildlink3.mk"
+.include "../../lang/python/application.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../wip/kdepimlibs4/buildlink3.mk"
+.include "../../security/qca2/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../textproc/hunspell/buildlink3.mk"
+.include "../../wip/kdelibs4/buildlink3.mk"
+.include "../../wip/kdebase4/buildlink3.mk"
+.include "../../wip/kdebase-runtime4/buildlink3.mk"
+.include "../../wip/kdebase-workspace4/buildlink3.mk"
+
+.include "../../mk/bsd.pkg.mk"

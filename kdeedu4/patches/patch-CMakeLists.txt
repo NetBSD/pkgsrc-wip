@@ -1,0 +1,19 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2011/05/13 23:25:15 mwdavies Exp $
+
+Older NetBSD systems don't have fmin()
+
+--- CMakeLists.txt.orig	2011-01-02 09:53:20.000000000 +0000
++++ CMakeLists.txt
+@@ -63,6 +63,12 @@ include(MacroLibrary)
+ include(MacroOptionalAddSubdirectory)
+ include(MacroBoolTo01)
+ 
++set(CMAKE_REQUIRED_INCLUDES "math.h")
++set(CMAKE_REQUIRED_LIBRARIES m)
++check_function_exists(fmin      HAVE_FMIN)
++set(CMAKE_REQUIRED_INCLUDES)
++set(CMAKE_REQUIRED_LIBRARIES)
++
+ add_definitions (${QT_DEFINITIONS} ${KDE4_DEFINITIONS})
+ include_directories (${QDBUS_INCLUDE_DIRS}  ${CMAKE_SOURCE_DIR} ${CMAKE_BINARY_DIR} ${KDE4_INCLUDES})
+ 
