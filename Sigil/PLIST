@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/05/13 04:05:18 ryo-on Exp $
+bin/sigil
+share/applications/sigil.desktop
+share/pixmaps/sigil.png

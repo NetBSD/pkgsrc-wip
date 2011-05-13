@@ -1,0 +1,30 @@
+# $NetBSD: Makefile,v 1.1.1.1 2011/05/13 04:05:18 ryo-on Exp $
+#
+
+DISTNAME=	Sigil-0.3.4-Code
+PKGNAME=	${DISTNAME:S/-Code//}
+CATEGORIES=	editors
+MASTER_SITES=	http://sigil.googlecode.com/files/
+EXTRACT_SUFX=	.zip
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://code.google.com/p/sigil/
+COMMENT=	Multi-platform WYSIWYG ebook editor (for the ePub format)
+LICENSE=	gnu-gpl-v3
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+USE_LANGUAGES=	c c++
+USE_CMAKE=	yes
+
+BUILDLINK_TRANSFORM+=	l:BoostParts:boost_date_time:boost_filesystem:boost_regex:boost_system:boost_thread:boost_program_options
+BUILDLINK_TRANSFORM+=	l:Xerces:xerces-c
+BUILDLINK_TRANSFORM+=	l:zlib:z
+
+.include "../../textproc/xerces-c/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../devel/boost-libs/buildlink3.mk"
+.include "../../x11/qt4-libs/buildlink3.mk"
+.include "../../x11/qt4-tools/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../mk/bsd.pkg.mk"
