@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/05/12 12:10:15 ryo-on Exp $
+# $NetBSD: Makefile,v 1.2 2011/05/13 10:33:52 ryo-on Exp $
 #
 
 DISTNAME=	gmock-1.6.0
@@ -8,7 +8,7 @@ EXTRACT_SUFX=	.zip
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/googlemock/
-COMMENT=	TODO: Short description of the package
+COMMENT=	C++ Mocking Framework
 LICENSE=	modified-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
