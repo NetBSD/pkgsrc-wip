@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2010/12/20 00:43:56 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.13 2011/05/13 07:36:24 ryo-on Exp $
 #
 
-DISTNAME=		cclive-0.6.5
+DISTNAME=		cclive-0.7.3.1
 CATEGORIES=		net multimedia www
-MASTER_SITES=		http://cclive.googlecode.com/files/
-EXTRACT_SUFX=		.tar.bz2
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=cclive/}
 
 MAINTAINER= 		zecrazytux@zecrazytux.net
 HOMEPAGE=		http://code.google.com/p/cclive/
@@ -14,17 +13,16 @@ LICENSE=		gnu-gpl-v3
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c++ c
-GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config
-USE_TOOLS+=		gmake
+USE_CMAKE=		yes
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
-
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/src/cclive ${DESTDIR}${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/cclive.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+SUBST_CLASSES+=		man-path
+SUBST_STAGE.man-path+=	pre-configure
+SUBST_FILES.man-path+=	man1/CMakeLists.txt
+SUBST_SED.man-path=	-e s,share/man/man1,${PKGMANDIR}/man1,
 
 .include "../../net/quvi/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
+.include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/pcre++/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
