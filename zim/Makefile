@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2011/04/29 16:45:56 ryo-on Exp $
+# $NetBSD: Makefile,v 1.11 2011/05/14 04:31:30 ryo-on Exp $
 #
 
 DISTNAME=	zim-0.52
@@ -37,6 +37,11 @@ SUBST_MESSAGE.fix-python=	Fixing dynamic python
 SUBST_FILES.fix-python+=	zim/_lib/xdot.py
 SUBST_FILES.fix-python+=	zim/_version.py
 SUBST_SED.fix-python+=		-e 's,/usr/bin/env python,${PYTHONBIN},'
+
+SUBST_CLASSES+=			man-path
+SUBST_STAGE.man-path+=		pre-configure
+SUBST_FILES.man-path+=		setup.py
+SUBST_SED.man-path=		-e s,share/man/man1,${PKGMANDIR}/man1,
 
 .include "../../lang/python/pyversion.mk"
 .if ${PYPKGPREFIX} == "py25"
