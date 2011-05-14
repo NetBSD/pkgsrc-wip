@@ -1,7 +1,19 @@
-$NetBSD: patch-aa,v 1.1.1.1 2009/07/18 14:36:21 thomasklausner Exp $
+$NetBSD: patch-aa,v 1.2 2011/05/14 22:28:47 ryo-on Exp $
+
+* Fix libGL linking
+* Fix installation location
 
 --- src/Makefile.orig	2008-07-19 18:11:04.000000000 +0000
 +++ src/Makefile
+@@ -12,7 +12,7 @@ EXEOB = MoleInvasion
+ EDTOB = editor
+ EDWOB = editworld
+ 
+-LINLIBS=$(LDLIBS) -lGL
++LINLIBS=$(LDLIBS) $$(pkg-config gl --libs)
+ LINEXE = ../lin/moleinvasion
+ LINEDT = ../lin/editor
+ LINEDW = ../lin/editworld
 @@ -22,8 +22,8 @@ WINEXE = ../win/moleinvasion.exe
  WINEDT = ../win/editor.exe
  WINEDW = ../win/editworld.exe

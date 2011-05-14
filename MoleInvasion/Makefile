@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/06/13 22:46:55 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2011/05/14 22:28:47 ryo-on Exp $
 #
 
 DISTNAME=	MoleInvasion-0.4
@@ -28,4 +28,5 @@ post-install:
 .include "../../devel/SDL_ttf/buildlink3.mk"
 .include "../../graphics/SDL_image/buildlink3.mk"
 .include "../../audio/SDL_mixer/buildlink3.mk"
+.include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
