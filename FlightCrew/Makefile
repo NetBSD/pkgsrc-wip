@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/05/13 10:57:58 ryo-on Exp $
+# $NetBSD: Makefile,v 1.3 2011/05/14 06:35:39 ryo-on Exp $
 #
 
 DISTNAME=	FlightCrew-0.7.1-Code
@@ -20,6 +20,13 @@ USE_CMAKE=	yes
 BUILDLINK_TRANSFORM+=	l:BoostParts:boost_date_time:boost_filesystem:boost_regex:boost_system:boost_thread:boost_program_options
 BUILDLINK_TRANSFORM+=	l:Xerces:xerces-c
 BUILDLINK_TRANSFORM+=	l:zlib:z
+
+SUBST_CLASSES+=			fix-damaged
+SUBST_STAGE.fix-damaged=	pre-patch
+SUBST_MESSAGE.fix-damaged=	fixing
+SUBST_FILES.fix-damaged=	src/FlightCrew/tests/misc_tests/ConvertUtf8PathToBoostPath_test.cpp
+SUBST_SED.fix-damaged+=		-e "2,2s/^/\//" # commented-out
+SUBST_SED.fix-damaged+=		-e "1,1d" # deleted
 
 .include "../../devel/googletest/buildlink3.mk"
 .include "../../wip/gmock/buildlink3.mk"
