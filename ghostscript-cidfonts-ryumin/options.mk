@@ -1,9 +1,11 @@
-# $NetBSD: options.mk,v 1.5 2011/04/04 15:19:10 makoto Exp $
+# $NetBSD: options.mk,v 1.6 2011/05/14 03:08:47 makoto Exp $
 
 # gcr = ghostscript-cidfonts-ryumin
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gcr_type
 PKG_SUPPORTED_OPTIONS=	ipa adobe-cidfonts umefont motoya
-PKG_SUGGESTED_OPTIONS=	ipa
+# Other than adobe-cidfonts options may have problem on dvipdfmx -> gs invocation
+# In case for includegraphicx eps file
+PKG_SUGGESTED_OPTIONS=	adobe-cidfonts
 
 .include "../../mk/bsd.options.mk"
 

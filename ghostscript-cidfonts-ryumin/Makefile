@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/04/04 15:43:08 makoto Exp $
+# $NetBSD: Makefile,v 1.5 2011/05/14 03:08:47 makoto Exp $
 
 DISTNAME=	ghostscript-cidfonts-ryumin-${GS_VERSION}
 # Please note  following is a must when building ghostscript
@@ -25,6 +25,7 @@ INSTALLATION_DIRS+=	${GS_RESOURCEDIR}/Font
 INSTALLATION_DIRS+=	${GS_RESOURCEDIR}/Init
 
 DEPENDS+=	ghostscript>=8.71.nb8:../../wip/ghostscript
+DEPENDS+=	ghostscript-cidfonts>=20000901nb3:../../wip/ghostscript-cidfonts
 BUILD_DEFS=	GS_CIDFMAP
 # used in options.mk to switch adobe or ttf
 SUBST_VARS=	GCR_INSTALL_TYPE
