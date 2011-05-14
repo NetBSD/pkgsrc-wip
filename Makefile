@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4334 2011/05/13 22:24:10 ryo-on Exp $
+# $Id: Makefile,v 1.4335 2011/05/14 20:21:30 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -626,7 +626,6 @@ SUBDIR+=	gauche-fastcgi
 SUBDIR+=	gcap
 SUBDIR+=	gcc42
 SUBDIR+=	gcc43
-SUBDIR+=	gcc45
 SUBDIR+=	gconf-cleaner
 SUBDIR+=	gdal
 SUBDIR+=	gdal-docs
