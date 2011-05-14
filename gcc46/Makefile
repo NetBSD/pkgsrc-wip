@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/04/13 15:04:55 keckhardt Exp $
+# $NetBSD: Makefile,v 1.3 2011/05/14 19:25:31 thomasklausner Exp $
 
 DISTNAME=		gcc-${GCC_VERSION}
 PKGNAME=		gcc46-${GCC_VERSION}
@@ -15,7 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		awk:run bash:run perl chmod \
 			gmake:run makeinfo msgfmt bison flex gm4 \
-			sed:run unzip 
+			sed:run unzip
 
 DEPENDS+=		zip-[0-9]*:../../archivers/zip
 DEPENDS+=		libiconv-[0-9]*:../../converters/libiconv
@@ -164,7 +164,7 @@ pre-configure:
 .endif
 
 .if ${OPSYS} == "NetBSD"
-	${CP} ${WRKSRC}/gcc/config/freebsd-stdint.h ${WRKSRC}/gcc/config/netbsd-stdint.h 
+	${CP} ${WRKSRC}/gcc/config/freebsd-stdint.h ${WRKSRC}/gcc/config/netbsd-stdint.h
 .endif
 
 do-configure:
