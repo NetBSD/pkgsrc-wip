@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/04/14 02:47:31 genolopolis Exp $
+# $NetBSD: Makefile,v 1.3 2011/05/15 16:17:30 thomasklausner Exp $
 #
 
 DISTNAME=	mod_geoip2_1.2.5
@@ -26,5 +26,4 @@ pre-install:
 
 .include "../../www/apache/module.mk"
 .include "../../net/GeoIP/buildlink3.mk"
-# url2pkg-marker (please do not remove this line.)
 .include "../../mk/bsd.pkg.mk"
