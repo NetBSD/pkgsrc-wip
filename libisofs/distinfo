@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2011/04/10 15:13:12 ryo-on Exp $
+$NetBSD: distinfo,v 1.3 2011/05/15 02:32:34 ryo-on Exp $
 
-SHA1 (libisofs-1.0.6.tar.gz) = d6ee6d0a0d859dce87663b20024819a5fd30386e
-RMD160 (libisofs-1.0.6.tar.gz) = 937471ac994127026e7b325ce68cebf2bbd07bf9
-Size (libisofs-1.0.6.tar.gz) = 698718 bytes
+SHA1 (libisofs-1.0.8.tar.gz) = 4f555b7f8c6457e119fde1f71860c2f23bd41074
+RMD160 (libisofs-1.0.8.tar.gz) = 4e1c9d8332107aa49571a154fb28a9cb113af1b3
+Size (libisofs-1.0.8.tar.gz) = 699081 bytes
