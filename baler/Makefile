@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/01/03 23:24:38 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2011/05/15 16:10:22 thomasklausner Exp $
 #
 
 DISTNAME=	baler-1.0
@@ -18,5 +18,8 @@ MAKE_FILE=	GNUmakefile
 
 NO_BUILD=	yes
 
+REPLACE_RUBY=	baler.rb
+
 .include "../../lang/ruby/buildlink3.mk"
+.include "../../lang/ruby/replace.mk"
 .include "../../mk/bsd.pkg.mk"
