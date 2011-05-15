@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2011/05/15 11:07:35 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2011/05/15 11:21:13 thomasklausner Exp $
 
 DISTNAME=		debugger-git
 CATEGORIES=		devel
-MASTER_SITES=		https://github.com/path64/
+MASTER_SITES=		https://github.com/path64/debugger
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		https://github.com/path64/
+HOMEPAGE=		https://github.com/path64/debugger
 COMMENT=		X86/x86_64 debugger with the goal to drop-in replace gdb
 LICENSE=		2-clause-bsd
 
