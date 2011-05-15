@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/02/27 14:40:33 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2011/05/15 16:10:31 thomasklausner Exp $
 #
 
 DISTNAME=	eor-1.0.2
@@ -17,5 +17,7 @@ USE_LANGUAGES=	c
 USE_TOOLS+=	gmake
 
 MAKE_FILE=	GNUmakefile
+
+INSTALLATION_DIRS=	bin
 
 .include "../../mk/bsd.pkg.mk"
