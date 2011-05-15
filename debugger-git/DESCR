@@ -1,0 +1,10 @@
+PathDB (debugger) has been ported to FreeBSD, but I thought others
+around here may have some (mild) interest.
+
+Summary:  x86/x86_64 debugger with the goal to drop-in replace gdb.
+We recently finished some heavy refactoring and now focusing on
+improving performance, robustness, scalability (clusters/multicore
+systems), DWARF4, OS portability and supported targets.  PathDB
+has a library based design with a CLI interface doing direct function
+calls.  Using C-bindings it should be fairly trivial to extend or
+add a new front-end in python or other scripting language.
