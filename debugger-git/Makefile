@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/05/15 10:59:33 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2011/05/15 11:07:35 thomasklausner Exp $
 
 DISTNAME=		debugger-git
 CATEGORIES=		devel
@@ -8,6 +8,8 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://github.com/path64/
 COMMENT=		X86/x86_64 debugger with the goal to drop-in replace gdb
 LICENSE=		2-clause-bsd
+
+DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
