@@ -1,41 +1,24 @@
-$NetBSD: patch-ac,v 1.1 2010/11/30 11:53:29 fhajny Exp $
+$NetBSD: patch-ac,v 1.2 2011/05/16 12:45:21 fhajny Exp $
 
-Fix paths.
---- ext/common/ResourceLocator.h.orig	2010-10-10 18:52:03.000000000 +0000
+--- ext/common/ResourceLocator.h.orig	2011-02-17 15:05:08.000000000 +0000
 +++ ext/common/ResourceLocator.h
-@@ -44,7 +44,7 @@ public:
- 	
- 	string getSourceRoot() const {
- 		if (nativelyPackaged) {
--			return "/usr/lib/phusion-passenger/source";
-+			return "@PREFIX@/lib/phusion-passenger/source";
- 		} else {
- 			return root;
- 		}
-@@ -52,7 +52,7 @@ public:
- 	
- 	string getAgentsDir() const {
- 		if (nativelyPackaged) {
--			return "/usr/lib/phusion-passenger/agents";
-+			return "@PREFIX@/lib/phusion-passenger/agents";
- 		} else {
- 			return root + "/agents";
- 		}
-@@ -60,7 +60,7 @@ public:
- 	
- 	string getHelperScriptsDir() const {
- 		if (nativelyPackaged) {
--			return "/usr/share/phusion-passenger/helper-scripts";
-+			return "@PREFIX@/share/phusion-passenger/helper-scripts";
- 		} else {
- 			return root + "/helper-scripts";
- 		}
-@@ -72,7 +72,7 @@ public:
- 	
- 	string getCertificatesDir() const {
- 		if (nativelyPackaged) {
--			return "/usr/share/phusion-passenger/certificates";
-+			return "@PREFIX@/share/phusion-passenger/certificates";
- 		} else {
- 			return root + "/misc";
- 		}
+@@ -65,13 +65,13 @@ public:
+ 				!fileExists(root + "/DEVELOPERS.TXT");
+ 			
+ 			if (nativelyPackaged) {
+-				agentsDir           = "/usr/lib/phusion-passenger/agents";
+-				helperScriptsDir    = "/usr/share/phusion-passenger/helper-scripts";
+-				resourcesDir        = "/usr/share/phusion-passenger";
+-				docDir              = "/usr/share/doc/phusion-passenger";
++				agentsDir           = "@PREFIX@/lib/phusion-passenger/agents";
++				helperScriptsDir    = "@PREFIX@/share/phusion-passenger/helper-scripts";
++				resourcesDir        = "@PREFIX@/share/phusion-passenger";
++				docDir              = "@PREFIX@/share/doc/phusion-passenger";
+ 				rubyLibDir          = "";
+-				compilableSourceDir = "/usr/share/phusion-passenger/compilable-source";
+-				apache2Module       = "/usr/lib/apache2/modules/mod_passenger.so";
++				compilableSourceDir = "@PREFIX@/share/phusion-passenger/compilable-source";
++				apache2Module       = "@PREFIX@/lib/httpd/mod_passenger.so";
+ 			} else {
+ 				agentsDir           = root + "/agents";
+ 				helperScriptsDir    = root + "/helper-scripts";

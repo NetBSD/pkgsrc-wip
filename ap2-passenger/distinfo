@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.6 2010/11/30 12:39:34 fhajny Exp $
+$NetBSD: distinfo,v 1.7 2011/05/16 12:45:21 fhajny Exp $
 
-SHA1 (passenger-3.0.0.tar.gz) = c076de4d739345fa705f35024f51af0f71f408f7
-RMD160 (passenger-3.0.0.tar.gz) = c379346b625d6e6938f8e81c31d7f7524972a878
-Size (passenger-3.0.0.tar.gz) = 3048705 bytes
-SHA1 (patch-aa) = b68a7435a5d71b3f1852e16761ab9ef355d659dd
+SHA1 (passenger-3.0.7.tar.gz) = f6fd2ff499af9b5ed637505bb3bbe3cc7675b989
+RMD160 (passenger-3.0.7.tar.gz) = 3a22895d72b3f6c9f953e00cb90fe0193494d058
+Size (passenger-3.0.7.tar.gz) = 2830376 bytes
+SHA1 (patch-aa) = f89c1738225b3db9cd3acc367c89f9c79f9d4684
 SHA1 (patch-ab) = 0d297d7c322900ed4e9f4e6dadacb0d3997c9d69
-SHA1 (patch-ac) = fba583b8827c3fdb866ea4b77de412e06e0201d1
+SHA1 (patch-ac) = fd87a14c30057bb7d13e8ef3389098b6d205ff41
 SHA1 (patch-ad) = c7fda683b859a8b66e0e6d17fcaf183e7fdab40c
 SHA1 (patch-ae) = 055978c055db764f32c9679858d4421a20794cef
-SHA1 (patch-af) = 8cce8fefdf9d2b4dd88bad9dad06b66844cede51
+SHA1 (patch-af) = 370c87d6d71aa999f221c2e2738444554772d026
