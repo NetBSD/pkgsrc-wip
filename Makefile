@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4338 2011/05/15 11:14:56 thomasklausner Exp $
+# $Id: Makefile,v 1.4339 2011/05/16 12:48:51 moubctez Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -344,7 +344,6 @@ SUBDIR+=	csp2b
 SUBDIR+=	cspchecker
 SUBDIR+=	css-mode
 SUBDIR+=	csstidy
-SUBDIR+=	ctemplate
 SUBDIR+=	cubature
 SUBDIR+=	cup
 SUBDIR+=	cvs-syncmail
@@ -1581,7 +1580,6 @@ SUBDIR+=	mwf-designer
 SUBDIR+=	mxallowd
 SUBDIR+=	mysql++
 SUBDIR+=	mysql-docs
-SUBDIR+=	mysql-workbench
 SUBDIR+=	mysqltcl
 SUBDIR+=	mythtv
 SUBDIR+=	nag
