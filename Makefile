@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4340 2011/05/16 19:26:46 cheusov Exp $
+# $Id: Makefile,v 1.4341 2011/05/16 22:33:06 cheusov Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2012,11 +2012,9 @@ SUBDIR+=	pkg_conflicts
 SUBDIR+=	pkg_fake
 #SUBDIR+=	pkg_get			# not a package (yet?)
 SUBDIR+=	pkg_rmleaves
-SUBDIR+=	pkg_status
 SUBDIR+=	pkg_summary-utils
 SUBDIR+=	pkgin
 SUBDIR+=	pkgmanager
-SUBDIR+=	pkgnih
 SUBDIR+=	pkgnih-current
 SUBDIR+=	plasti
 SUBDIR+=	plconfig
