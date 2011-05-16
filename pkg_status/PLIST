@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2010/03/14 09:39:57 cheusov Exp $
-bin/pkg_status
-share/doc/pkg_status/NEWS

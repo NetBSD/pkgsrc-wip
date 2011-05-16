@@ -1,8 +1,0 @@
-pkg_status utility can do the following things:
-  - fast check the version of installed packages against the pkgsrc source
-    tree or pkg_summary.{txt,gz,bz} file.
-  - find leaf packages, i.e., packages installed automatically unneeded
-    by other packages and optionally remove them.
-  - do some kind of sanity checks for installed packages
-
-"Of course it is based on pkg_summary-utils" :-)
