@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4339 2011/05/16 12:48:51 moubctez Exp $
+# $Id: Makefile,v 1.4340 2011/05/16 19:26:46 cheusov Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2011,8 +2011,6 @@ SUBDIR+=	pjproject
 SUBDIR+=	pkg_conflicts
 SUBDIR+=	pkg_fake
 #SUBDIR+=	pkg_get			# not a package (yet?)
-SUBDIR+=	pkg_online-client
-SUBDIR+=	pkg_online-server
 SUBDIR+=	pkg_rmleaves
 SUBDIR+=	pkg_status
 SUBDIR+=	pkg_summary-utils
