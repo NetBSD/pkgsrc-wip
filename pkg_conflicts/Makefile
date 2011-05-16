@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2011/05/11 20:45:40 cheusov Exp $
+# $NetBSD: Makefile,v 1.10 2011/05/16 19:23:24 cheusov Exp $
 
 DISTNAME=	pkg_conflicts-0.4.0
 PKGREVISION=	1
@@ -12,7 +12,7 @@ COMMENT=	Tools for automatic CONFLICTS detection
 LICENSE=	mit
 
 DEPENDS+=	runawk>=0.14.3:../../lang/runawk
-DEPENDS+=	pkg_online-client>=0.6.0:../../wip/pkg_online-client
+DEPENDS+=	pkg_online-client>=0.6.0:../../pkgtools/pkg_online-client
 DEPENDS+=	pkg_summary-utils-[0-9]*:../../pkgtools/pkg_summary-utils
 
 USE_LANGUAGES=		#empty
