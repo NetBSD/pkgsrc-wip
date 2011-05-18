@@ -1,6 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.2 2008/10/22 20:30:17 cheusov Exp $
-Additional software necessary to run bulk builds
-(rsync, sodo, mailx or whatever you want)
-should be installed separately.
-===========================================================================
