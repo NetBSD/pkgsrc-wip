@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2005/09/28 06:41:37 rillig Exp $
+$NetBSD: distinfo,v 1.3 2011/05/18 19:23:12 alnsn Exp $
 
-SHA1 (pcapy-0.10.2.tar.gz) = eca552e1daf53ba570f1f27a9939e0ad1a46abb8
-RMD160 (pcapy-0.10.2.tar.gz) = 190cc9f1117e22713b104947f7ec28b0eb21ed1b
-Size (pcapy-0.10.2.tar.gz) = 18651 bytes
+SHA1 (pcapy-0.10.5.tar.gz) = e7e803b423f2c2e3401ee616cddfd6ab237fc8d8
+RMD160 (pcapy-0.10.5.tar.gz) = fef424f4b912ba73e95e192355a0ad2e527492ff
+Size (pcapy-0.10.5.tar.gz) = 18884 bytes

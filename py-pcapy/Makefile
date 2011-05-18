@@ -1,43 +1,24 @@
-# $NetBSD: Makefile,v 1.10 2009/09/09 11:22:11 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.11 2011/05/18 19:23:12 alnsn Exp $
 #
 
-DISTNAME=		pcapy-0.10.2
+DISTNAME=		pcapy-0.10.5
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=		net
-MASTER_SITES=		http://oss.corest.com/repo/
+MASTER_SITES=	http://oss.corest.com/repo/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://oss.corest.com/projects/pcapy.html
 COMMENT=		Python interface to pcap library
+LICENSE=		apache-1.1
+
+USE_LANGUAGES+=		c c++
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
 
+BUILDLINK_API_DEPENDS.libpcap+=	libpcap>=0.7.2
+
 .include "../../lang/python/extension.mk"
-
-###########################################################################
-# WARNING!
-#
-# this is only temporary solution because of braindead buildlink3.mk
-# "autoconfiguration"; on 1.6.1-stable system this will _not_ build just
-# because -stable has too old pcap library.
-###########################################################################
-
-BUILD_DEPENDS+=		libpcap>=0.7.2:../../net/libpcap
-BUILDLINK_PACKAGES+=	libpcap
-EVAL_PREFIX+=		BUILDLINK_PREFIX.libpcap=libpcap
-BUILDLINK_PREFIX.libpcap_DEFAULT=	${LOCALBASE}
-BUILDLINK_FILES.libpcap=	include/pcap.h
-BUILDLINK_FILES.libpcap+=	include/pcap-namedb.h
-BUILDLINK_FILES.libpcap+=	include/net/bpf.h
-BUILDLINK_FILES.libpcap+=	lib/libpcap.*
-BUILDLINK_TARGETS+=	libpcap-buildlink
-libpcap-buildlink: _BUILDLINK_USE
-
-#
-# If the buildlink wasn't broken, I could use this:
-#
-# .include "../../net/libpcap/buildlink3.mk"
-#
-
+.include "../../net/libpcap/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
