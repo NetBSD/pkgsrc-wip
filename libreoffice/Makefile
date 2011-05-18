@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/05/18 14:17:32 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2011/05/18 14:31:17 thomasklausner Exp $
 
 VER=			2011-05-17
 DISTNAME=		libreoffice-${VER}
@@ -28,6 +28,7 @@ LO_COMPONENTS=	artwork base calc components extensions extras \
 MORE_DISTFILES= \
 	1756c4fa6c616ae15973c104cd8cb256-Adobe-Core35_AFMs-314.tar.gz \
 	881af2b7dca9b8259abbca00bbbc004d-LinLibertineG-20110101.zip \
+	f02578f5218f217a9f20e9c30e119c6a-boost_1_44_0.tar.bz2 \
 	d70951c80dabecc2892c919ff5d07172-db-4.7.25.NC-custom.tar.gz \
 	37282537d0ed1a087b1c8f050dc812d9-dejavu-fonts-ttf-2.32.zip \
 	35efabc239af896dfb79be7ebdd6e6b9-gentiumbasic-fonts-1.10.zip \
@@ -100,12 +101,12 @@ CONFIGURE_ARGS+=	--with-fonts
 CONFIGURE_ARGS+=	--with-max-jobs=${MAKE_JOBS}
 CONFIGURE_ARGS+=	--with-system-headers
 CONFIGURE_ARGS+=	--with-system-libs
-CONFIGURE_ARGS+=	--with-system-boost
 CONFIGURE_ARGS+=	--with-system-libtextcat
 CONFIGURE_ARGS+=	--with-system-python
 CONFIGURE_ARGS+=	--with-vendor="The LibreOffice pkgsrc team"
 CONFIGURE_ARGS+=	--without-java
 CONFIGURE_ARGS+=	--without-system-altlinuxhyph
+CONFIGURE_ARGS+=	--without-system-boost
 CONFIGURE_ARGS+=	--without-system-db
 CONFIGURE_ARGS+=	--without-system-jars
 CONFIGURE_ARGS+=	--without-system-mdds
@@ -146,11 +147,9 @@ post-configure:
 .include "../../converters/libwpg/buildlink3.mk"
 .include "../../converters/libwps/buildlink3.mk"
 .include "../../databases/unixodbc/buildlink3.mk"
-.include "../../devel/boost-headers/buildlink3.mk"
-.include "../../devel/boost-libs/buildlink3.mk"
-.include "../../devel/cppunit/buildlink3.mk"
 .include "../../devel/gperf/buildlink3.mk"
 .include "../../devel/GConf/buildlink3.mk"
+.include "../../devel/cppunit/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
