@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/05/18 12:12:16 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2011/05/18 12:58:10 thomasklausner Exp $
 
 VER=			2011-05-17
 DISTNAME=		libreoffice-${VER}
@@ -50,6 +50,8 @@ EXTRACT_ONLY+=	libreoffice-${component}-${VER}.tar.bz2
 DISTFILES+=		${md}
 .endfor
 
+# tar: Invalid header, starting valid header search.
+EXTRACT_USING=		gtar
 
 WRKSRC=		${WRKDIR}/${LO_BOOTSTRAP}
 
@@ -81,7 +83,7 @@ CONFLICTS+=		openoffice-linux-[0-9]*
 CONFLICTS+=		libreoffice3-bin-[0-9]*
 
 
-USE_TOOLS+=			automake bash gmake perl pkg-config unzip
+USE_TOOLS+=		automake bash bison gmake perl pkg-config unzip
 PTHREAD_OPTS+=		require
 
 HAS_CONFIGURE=		yes
