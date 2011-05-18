@@ -1,23 +1,22 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/05/18 11:50:18 ftigeot Exp $
+# $NetBSD: Makefile,v 1.2 2011/05/18 12:12:16 thomasklausner Exp $
 
 VER=			2011-05-17
 DISTNAME=		libreoffice-${VER}
-PKGNAME=		libreoffice-${VER}
+PKGNAME=		libreoffice-${VER:S/-//g}
 CATEGORIES=		misc
 #MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/
 MASTER_SITES=	http://dl.wolfpond.org/libreoffice/ \
-				http://download.go-oo.org/src/ \
-				http://www.numbertext.org/linux/
-
-DIST_SUBDIR=	libreoffice
+		http://download.go-oo.org/src/ \
+		http://www.numbertext.org/linux/
 
 MAINTAINER=		ftigeot@wolfpond.org
 HOMEPAGE=		http://www.libreoffice.org/
-
 COMMENT=		Office productivity suite
 LICENSE=		gnu-lgpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+DIST_SUBDIR=	libreoffice
 
 
 LO_BOOTSTRAP=	libreoffice-bootstrap-${VER}
