@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2011/05/18 14:31:17 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2011/05/19 05:57:59 ftigeot Exp $
 
 VER=			2011-05-17
 DISTNAME=		libreoffice-${VER}
@@ -88,7 +88,7 @@ PTHREAD_OPTS+=		require
 
 HAS_CONFIGURE=		yes
 
-CONFIGURE_ARGS+=	--prefix=${DESTDIR}${PREFIX}
+CONFIGURE_ARGS+=	--prefix=${DESTDIR}${PREFIX}/${PKGNAME}
 CONFIGURE_ARGS+=	--disable-epm
 CONFIGURE_ARGS+=	--disable-mozilla
 CONFIGURE_ARGS+=	--disable-neon
@@ -123,6 +123,7 @@ SUBST_FILES.libpath=	set_soenv.in
 SUBST_SED.libpath=		-e 's,@LIBPATH@,${LIBPATH},g'
 SUBST_MESSAGE.libpath=	Fixing library path for dmake scripts
 
+LO_PROGRAMS=	sbase scalc sdraw simpress smath soffice swriter
 
 post-extract:
 	${MKDIR} -p ${WRKSRC}/clone
@@ -141,6 +142,12 @@ do-configure:
 post-configure:
 	cd ${WRKSRC} && ./bin/create_bootstrap_links
 	${TOUCH} ${WRKSRC}/src.downloaded
+
+post-install:
+	${MKDIR} -p ${DESTDIR}${PREFIX}/bin
+	for f in ${LO_PROGRAMS}; do \
+		${LN} -s ${DESTDIR}${PREFIX}/${PKGNAME}/program/$$f ${DESTDIR}${PREFIX}/bin/$$f; \
+	done
 
 
 .include "../../converters/libwpd/buildlink3.mk"
