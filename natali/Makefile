@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2010/04/03 09:48:34 hfath Exp $
+# $NetBSD: Makefile,v 1.9 2011/05/19 12:57:41 hfath Exp $
 
 DISTNAME=	natali-1.25
 PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ppr/}
 
-MAINTAINER=	hauke@Espresso.Rhein-Neckar.DE
+MAINTAINER=	hauke@NetBSD.org
 HOMEPAGE=	http://ppr.trincoll.edu/
 COMMENT=	AT&T/Apple AppleTalk Library Interface for Netatalk
 

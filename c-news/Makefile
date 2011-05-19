@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2010/04/02 18:08:23 hfath Exp $
+# $NetBSD: Makefile,v 1.21 2011/05/19 12:54:18 hfath Exp $
 
 DISTNAME=	c-news
 PKGNAME=	c-news-CR-7
@@ -25,7 +25,7 @@ PATCHFILES=	c-news-patch-fileart.c c-news-patch-namecheck.awk \
 		c-news-patch-pgpverify-1.12-perl4 \
 		c-news-patch-gawk3
 
-MAINTAINER=	hauke@Espresso.Rhein-Neckar.DE
+MAINTAINER=	hauke@NetBSD.org
 HOMEPAGE=	http://www.dinoex.net/c-news.html
 COMMENT=	The 3rd generation USENET news server
 

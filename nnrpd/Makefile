@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2010/04/02 22:53:15 hfath Exp $
+# $NetBSD: Makefile,v 1.16 2011/05/19 12:53:30 hfath Exp $
 
 DISTNAME=		inn-1.7.2.insync-1.1d
 PKGNAME=		nnrpd-1.7.2
@@ -8,7 +8,7 @@ MASTER_SITES=		ftp://ftp.isc.org/isc/inn/OLD/1.7/ \
 			ftp://ftp.sunet.se/pub/news/nntp/inn/OLD/1.7/ \
 			ftp://ftp.fu-berlin.de/unix/news/inn/OLD/1.7/
 
-MAINTAINER=		hauke@Espresso.Rhein-Neckar.DE
+MAINTAINER=		hauke@NetBSD.org
 HOMEPAGE=		http://www.isc.org/sw/inn/
 COMMENT=		NNTP reader daemon from InterNet News (INN)
 
