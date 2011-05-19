@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.4 2011/05/19 12:22:07 obache Exp $
+# $NetBSD: options.mk,v 1.5 2011/05/19 12:36:38 obache Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.quickml
-PKG_SUPPORTED_OPTIONS+= limit analog
+PKG_SUPPORTED_OPTIONS+= quickml-limit analog
 
 .include "../../mk/bsd.options.mk"
 
