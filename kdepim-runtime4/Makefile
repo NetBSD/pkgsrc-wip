@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/05/13 23:25:15 mwdavies Exp $
+# $NetBSD: Makefile,v 1.4 2011/05/19 20:27:27 mwdavies Exp $
 
 #DISTNAME=	kdepim-runtime-${_KDE_VERSION}
 DISTNAME=	kdepim-runtime-4.4.11.1
@@ -7,6 +7,9 @@ CATEGORIES=	misc
 COMMENT=	Runtime requirements for the KDE PIM tools
 
 .include "../../wip/kde4/Makefile.kde4"
+
+# tar: Invalid header, starting valid header search.
+EXTRACT_USING=	gtar
 
 # BUILD_MAKE_FLAGS+= VERBOSE=1
 
