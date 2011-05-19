@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2011/04/13 12:38:45 obache Exp $
+# $NetBSD: Makefile,v 1.14 2011/05/19 07:50:25 obache Exp $
 
 DISTNAME=		opera-${OPERA_PKG_VERSION}-${OPERA_PKG_BUILD}.${OPERA_ARCH}.${EMUL_OPSYS}
 PKGNAME=		opera-${OPERA_PKG_VERSION:S/u/pl/}
@@ -31,9 +31,9 @@ MASTER_SITE_OPERA+=	http://ftp.yz.yamagata-u.ac.jp/pub/opera/
 USE_LANGUAGES=		# empty
 NO_BUILD=		yes
 
-OPERA_PKG_BUILD=	2092
-OPERA_PKG_VERSION=	11.10
-OPERA_PKG_VERSION_DIR=	1110
+OPERA_PKG_BUILD=	2109
+OPERA_PKG_VERSION=	11.11
+OPERA_PKG_VERSION_DIR=	1111
 
 .if ${EMUL_OPSYS} == "linux"
 EMUL_MODULES.linux=	base x11 fontconfig

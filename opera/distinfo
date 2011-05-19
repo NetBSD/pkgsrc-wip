@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.10 2011/04/13 12:38:45 obache Exp $
+$NetBSD: distinfo,v 1.11 2011/05/19 07:50:25 obache Exp $
 
-SHA1 (opera-11.10-2092.amd64.freebsd.tar.bz2) = 0c65447a45d73f65cf007662a345382d2cdf2b3f
-RMD160 (opera-11.10-2092.amd64.freebsd.tar.bz2) = fe0b96b8d269e490286db6455724a37ee3c1b659
-Size (opera-11.10-2092.amd64.freebsd.tar.bz2) = 13103890 bytes
-SHA1 (opera-11.10-2092.i386.freebsd.tar.bz2) = 03e1c134941e5bffaca23c25457c22ad6c96a065
-RMD160 (opera-11.10-2092.i386.freebsd.tar.bz2) = fce8e16fd228b531ce0b1545fb783699cf5fc559
-Size (opera-11.10-2092.i386.freebsd.tar.bz2) = 12345478 bytes
-SHA1 (opera-11.10-2092.i386.linux.tar.bz2) = f2d13666245602b38a6b52e8d60c93e7fcfd1243
-RMD160 (opera-11.10-2092.i386.linux.tar.bz2) = cc1bba83bc2d71148ba706adcf9bec0a5dcb13ea
-Size (opera-11.10-2092.i386.linux.tar.bz2) = 12397942 bytes
-SHA1 (opera-11.10-2092.x86_64.linux.tar.bz2) = f6f3a903d4ab452de067e3e006687f17362930b7
-RMD160 (opera-11.10-2092.x86_64.linux.tar.bz2) = 4ca9bbc668e90d35bfcf8e11c26e1928522c03cf
-Size (opera-11.10-2092.x86_64.linux.tar.bz2) = 13622320 bytes
+SHA1 (opera-11.11-2109.amd64.freebsd.tar.bz2) = 8b2011b21b7c18620184c0fa17d3a9030a00524c
+RMD160 (opera-11.11-2109.amd64.freebsd.tar.bz2) = 1c3631f62feb81a78ca9f407db1a6adb58c9598d
+Size (opera-11.11-2109.amd64.freebsd.tar.bz2) = 12720118 bytes
+SHA1 (opera-11.11-2109.i386.freebsd.tar.bz2) = abda23a368fe1cbf5fd91139169bc9fde4482e05
+RMD160 (opera-11.11-2109.i386.freebsd.tar.bz2) = bef713a5a974ead1f00ec3b909225443e3d9a090
+Size (opera-11.11-2109.i386.freebsd.tar.bz2) = 11972926 bytes
+SHA1 (opera-11.11-2109.i386.linux.tar.bz2) = 647fb6c5779fc8386a351cf3fac589a5b4d16edc
+RMD160 (opera-11.11-2109.i386.linux.tar.bz2) = 7d5c73d5a9c70006d5fa1d2cf178a4f33aba24d7
+Size (opera-11.11-2109.i386.linux.tar.bz2) = 12029917 bytes
+SHA1 (opera-11.11-2109.x86_64.linux.tar.bz2) = 116fdd70a5bcee639d359820bb3b1935e4e28d75
+RMD160 (opera-11.11-2109.x86_64.linux.tar.bz2) = 1ae8388d965fae8a8995777fd94da73121c91c77
+Size (opera-11.11-2109.x86_64.linux.tar.bz2) = 13247200 bytes

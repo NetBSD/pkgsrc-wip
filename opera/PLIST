@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2011/04/13 12:38:45 obache Exp $
+@comment $NetBSD: PLIST,v 1.9 2011/05/19 07:50:25 obache Exp $
 bin/opera
 bin/opera-widget-manager
 lib/opera/gstreamer/plugins/libgstoperamatroska.so
@@ -90,8 +90,6 @@ share/opera/files.sig
 share/opera/files_old.sig
 share/opera/html40_entities.dtd
 share/opera/lngcode.txt
-share/opera/locale/af/af.lng
-share/opera/locale/az/az.lng
 share/opera/locale/be/be.lng
 share/opera/locale/be/bookmarks.adr
 share/opera/locale/be/search.ini
@@ -156,9 +154,7 @@ share/opera/locale/ja/standard_speeddial.ini
 share/opera/locale/ka/ka.lng
 share/opera/locale/ko/ko.lng
 share/opera/locale/lt/lt.lng
-share/opera/locale/me/me.lng
 share/opera/locale/mk/mk.lng
-share/opera/locale/ms/ms.lng
 share/opera/locale/nb/bookmarks.adr
 share/opera/locale/nb/nb.lng
 share/opera/locale/nb/search.ini
@@ -193,14 +189,11 @@ share/opera/locale/sr/standard_speeddial.ini
 share/opera/locale/sv/sv.lng
 share/opera/locale/ta/ta.lng
 share/opera/locale/te/te.lng
-share/opera/locale/th/th.lng
-share/opera/locale/tl/tl.lng
 share/opera/locale/tr/tr.lng
 share/opera/locale/uk/bookmarks.adr
 share/opera/locale/uk/search.ini
 share/opera/locale/uk/standard_speeddial.ini
 share/opera/locale/uk/uk.lng
-share/opera/locale/uz/uz.lng
 share/opera/locale/vi/vi.lng
 share/opera/locale/zh-cn/bookmarks.adr
 share/opera/locale/zh-cn/browser.js
