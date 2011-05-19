@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2011/05/18 14:31:17 thomasklausner Exp $
+$NetBSD: distinfo,v 1.5 2011/05/19 14:01:46 ftigeot Exp $
 
 SHA1 (libreoffice/067201ea8b126597670b5eff72e1f66c-mythes-1.2.0.tar.gz) = 025d5d0d566a23ddb353495c116116c1088ba2e9
 RMD160 (libreoffice/067201ea8b126597670b5eff72e1f66c-mythes-1.2.0.tar.gz) = aefa80476ef8340be84440b61f738f432da51c92
@@ -94,6 +94,7 @@ SHA1 (libreoffice/libreoffice-writer-2011-05-17.tar.bz2) = fa02caa7b8ae481b43056
 RMD160 (libreoffice/libreoffice-writer-2011-05-17.tar.bz2) = 0ff3700a112aefc03981126ea96d250fc92a7dc4
 Size (libreoffice/libreoffice-writer-2011-05-17.tar.bz2) = 5619921 bytes
 SHA1 (patch-clone_calc_sc_Module_sc.mk) = 8c381b5dbe014095eb9e118d09b8e6b433fcd28f
+SHA1 (patch-clone_filters_lotuswordpro_Module_lotuswordpro.mk) = 2a6f457663efe8361e9a74002389d74a75e951dc
 SHA1 (patch-clone_impress_sd_Module_sd.mk) = 975c8a47e5b11d8a28e14784515615e2118eccb7
 SHA1 (patch-clone_ure_sal_osl_unx_file__volume.cxx) = 3761fc3b8ec656c00cbb65c0e23e8373c999ebb9
 SHA1 (patch-clone_writer_starmath_Module_starmath.mk) = c3398e08b4aca94fa7edcd41485b0abe1105e826

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2011/05/19 05:57:59 ftigeot Exp $
+@comment $NetBSD: PLIST,v 1.3 2011/05/19 14:01:45 ftigeot Exp $
 bin/sbase
 bin/scalc
 bin/sdraw
@@ -11,7 +11,6 @@ ${PKGNAME}/LICENSE
 ${PKGNAME}/LICENSE.odt
 ${PKGNAME}/THIRDPARTYLICENSEREADME.html
 ${PKGNAME}/basis-link
-${PKGNAME}/basis3.4/basis3.4
 ${PKGNAME}/basis3.4/help/en/err.html
 ${PKGNAME}/basis3.4/help/en/sbasic.db
 ${PKGNAME}/basis3.4/help/en/sbasic.ht
@@ -557,7 +556,6 @@ ${PKGNAME}/ure/lib/textoutstream.uno.so
 ${PKGNAME}/ure/lib/uuresolver.uno.so
 ${PKGNAME}/ure/share/misc/services.rdb
 ${PKGNAME}/ure/share/misc/types.rdb
-${PKGNAME}/ure/ure
 @pkgdir ${PKGNAME}/share/uno_packages/cache
 @pkgdir ${PKGNAME}/share/prereg
 @pkgdir ${PKGNAME}/basis3.4/share/samples/en-US
