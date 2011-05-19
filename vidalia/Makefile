@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/06/13 22:47:21 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2011/05/19 13:39:59 hfath Exp $
 #
 
 DISTNAME=	vidalia-0.2.9
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-FETCH_CMD=		wget
+FETCH_USING=		wget
 FETCH_BEFORE_ARGS=	--no-check-certificate
 
 USE_CMAKE=	yes
