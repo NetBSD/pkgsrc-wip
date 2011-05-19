@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.4 2011/05/09 00:40:28 obache Exp $
-bin/quickml-analog
+@comment $NetBSD: PLIST,v 1.5 2011/05/19 12:22:07 obache Exp $
+${PLIST.analog}bin/quickml-analog
 ${RUBY_VENDORLIB}/quickml.rb
 ${RUBY_VENDORLIB}/quickml/config.rb
 ${RUBY_VENDORLIB}/quickml/core.rb
