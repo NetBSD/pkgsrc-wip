@@ -1,0 +1,15 @@
+Why is a software verification platform.
+
+This platform contains several tools:
+
+    1. a general-purpose verification condition generator (VCG), Why, which is
+       used as a back-end by other verification tools (see below) but which
+       can also be used directly to verify programs (see for instance these
+       examples);
+    2. a tool Krakatoa for the verification of Java programs;
+    3. a tool Caduceus for the verification of C programs; note that Caduceus
+       is somewhat obsolete now and users should turn to Frama-C instead.
+
+One of the main features of Why is to be integrated with many existing provers
+(proof assistants such as Coq, PVS, Isabelle/HOL, HOL 4, HOL Light, Mizar and
+decision procedures such as Simplify, Alt-Ergo, Yices, Z3, CVC3, etc.).
