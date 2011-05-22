@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2011/05/22 11:14:29 ftigeot Exp $
+# $NetBSD: Makefile,v 1.8 2011/05/22 16:17:58 ftigeot Exp $
 
 VER=			2011-05-22
 DISTNAME=		libreoffice-${VER}
@@ -116,7 +116,7 @@ CONFIGURE_ARGS+=	--without-system-mythes
 # and fail with the pkgsrc environment
 # Preset LD_LIBRARY_PATH to sane defaults and avoid complicating them
 # further
-LIBPATH=				${BUILDLINK_DIR}/lib:${WRKSRC}/desktop/unxdfly.pro/lib
+LIBPATH=				${BUILDLINK_DIR}/lib:${WRKSRC}/desktop/unxdfly.pro/lib:${WRKSRC}/desktop/unxnbsd.pro/lib
 SUBST_CLASSES+=			libpath
 SUBST_STAGE.libpath=	pre-configure
 SUBST_FILES.libpath=	set_soenv.in
