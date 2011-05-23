@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2011/05/23 19:05:26 marko_schuetz Exp $
+
+SHA1 (cvc3-2.2.tar.gz) = acb66f5237dc98e74da2d765d3c4d36ac3817151
+RMD160 (cvc3-2.2.tar.gz) = 404c9e6d4dfb0d3e14448fcd8ad82a95b8ac8b30
+Size (cvc3-2.2.tar.gz) = 1096987 bytes

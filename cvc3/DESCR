@@ -1,0 +1,4 @@
+CVC3 is an automatic theorem prover for Satisfiability Modulo Theories (SMT)
+problems. It can be used to prove the validity (or, dually, the
+satisfiability) of first-order formulas in a large number of built-in logical
+theories and their combination.
