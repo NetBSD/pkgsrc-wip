@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/03/01 21:50:00 ddeus Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/05/23 09:37:43 ddeus Exp $
 bin/bzr
 ${PYSITELIB}/bzrlib/cmd_test_script.py
 ${PYSITELIB}/bzrlib/cmd_test_script.pyc
@@ -48,6 +48,9 @@ ${PYSITELIB}/bzrlib/pyutils.pyo
 ${PYSITELIB}/bzrlib/recordcounter.py
 ${PYSITELIB}/bzrlib/recordcounter.pyc
 ${PYSITELIB}/bzrlib/recordcounter.pyo
+${PYSITELIB}/bzrlib/tests/per_repository_reference/test_graph.py
+${PYSITELIB}/bzrlib/tests/per_repository_reference/test_graph.pyc
+${PYSITELIB}/bzrlib/tests/per_repository_reference/test_graph.pyo
 ${PYSITELIB}/bzrlib/tests/blackbox/test_config.py
 ${PYSITELIB}/bzrlib/tests/blackbox/test_config.pyc
 ${PYSITELIB}/bzrlib/tests/blackbox/test_config.pyo
