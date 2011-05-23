@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2011/05/13 23:25:15 mwdavies Exp $
+# $NetBSD: Makefile,v 1.25 2011/05/23 11:37:08 mwdavies Exp $
 
 DISTNAME=	kdelibs-${_KDE_VERSION}
 CATEGORIES=	x11
@@ -65,7 +65,7 @@ BUILDLINK_DEPMETHOD.qt4-tools=		full
 .include "../../wip/kde4/kde4.mk"
 
 BUILDLINK_API_DEPENDS.strigi+=	strigi>=0.5.11
-BUILDLINK_API_DEPENDS.soprano+=	soprano>=2.3.0
+BUILDLINK_API_DEPENDS.soprano+=	soprano>=2.5.60
 BUILDLINK_API_DEPENDS.shared-desktop-ontologies+=	shared-desktop-ontologies>=0.4
 
 .include "../../archivers/bzip2/buildlink3.mk"
