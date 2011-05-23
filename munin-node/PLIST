@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2011/05/23 18:05:32 ftigeot Exp $
+@comment $NetBSD: PLIST,v 1.3 2011/05/23 18:57:43 ftigeot Exp $
 bin/munindoc
 lib/munin/plugins/amavis
 lib/munin/plugins/apache_accesses
@@ -12,7 +12,6 @@ lib/munin/plugins/courier_
 lib/munin/plugins/courier_mta_mailqueue
 lib/munin/plugins/courier_mta_mailstats
 lib/munin/plugins/courier_mta_mailvolume
-lib/munin/plugins/cpu
 lib/munin/plugins/cupsys_pages
 lib/munin/plugins/df
 lib/munin/plugins/df_inode
@@ -27,16 +26,12 @@ lib/munin/plugins/hddtemp
 lib/munin/plugins/hddtemp2
 lib/munin/plugins/hddtemp_smartctl
 lib/munin/plugins/hddtempd
-lib/munin/plugins/if_
-lib/munin/plugins/iostat
 lib/munin/plugins/ipac-ng
 lib/munin/plugins/ircu
-lib/munin/plugins/load
 lib/munin/plugins/loggrep
 lib/munin/plugins/mailman
 lib/munin/plugins/mailscanner
 lib/munin/plugins/mbmon_
-lib/munin/plugins/memory
 lib/munin/plugins/mhttping
 lib/munin/plugins/multips
 lib/munin/plugins/munin_stats
