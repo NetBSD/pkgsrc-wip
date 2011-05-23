@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/02/27 14:33:39 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2011/05/23 18:05:32 ftigeot Exp $
 #
 
 DISTNAME=	munin-${VER}
@@ -12,7 +12,7 @@ HOMEPAGE=	http://munin-monitoring.org/
 COMMENT=	System monitoring tool, client version
 LICENSE=	gnu-gpl-v2
 
-PKG_DESTDIR_SUPPORT=	destdir
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Net-Server>=0:../../net/p5-Net-Server
 DEPENDS+=	munin-common>=1.4:../../wip/munin-common
@@ -25,28 +25,6 @@ USE_TOOLS+=	gmake
 USE_PKGINSTALL=	YES
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
-
-PLIST_VARS+=	aix freebsd linux netbsd sunos
-
-.if ${OPSYS} == "AIX"
-PLIST.aix=	yes
-.endif
-
-.if ${OPSYS} == "FreeBSD"
-PLIST.freebsd=	yes
-.endif
-
-.if ${OPSYS} == "Linux"
-PLIST.linux=	yes
-.endif
-
-.if ${OPSYS} == "NetBSD"
-PLIST.netbsd=	yes
-.endif
-
-.if ${OPSYS} == "SunOS"
-PLIST.sunos=	yes
-.endif
 
 PKG_GROUPS_VARS+=	MUNIN_GROUP
 PKG_USERS_VARS+=	MUNIN_USER

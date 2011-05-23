@@ -1,0 +1,9 @@
+lib/munin/plugins/fs_df
+lib/munin/plugins/fs_inodes
+lib/munin/plugins/io_busy_
+lib/munin/plugins/io_bytes_
+lib/munin/plugins/io_ops_
+lib/munin/plugins/paging_in
+lib/munin/plugins/paging_out
+lib/munin/plugins/temperature
+lib/munin/plugins/uptime

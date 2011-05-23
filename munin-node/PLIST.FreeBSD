@@ -1,0 +1,4 @@
+lib/munin/plugins/if_errcoll_
+lib/munin/plugins/open_files
+lib/munin/plugins/swap
+lib/munin/plugins/uptime
