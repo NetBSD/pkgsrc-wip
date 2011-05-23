@@ -1,0 +1,46 @@
+$NetBSD: patch-BATCH-SORT,v 1.1.1.1 2011/05/23 13:37:52 makoto Exp $
+
+Emacs code for batch-sort in emacs-internal-code
+ 
+--- BATCH-SORT.orig	2011-04-14 07:32:32.000000000 +0000
++++ BATCH-SORT
+@@ -0,0 +1,39 @@
++;  -*- emacs-lisp -*-
++;;; batch-sort-file.el --- 
++
++;; Copyright (C) 2010  Makoto Fujiwara
++
++;; Author: Makoto Fujiwara <makoto@modena.i.ki.nu>
++;; Keywords: 
++
++;; This program is free software; you can redistribute it and/or modify
++;; it under the terms of the GNU General Public License as published by
++;; the Free Software Foundation, either version 3 of the License, or
++;; (at your option) any later version.
++
++;; This program is distributed in the hope that it will be useful,
++;; but WITHOUT ANY WARRANTY; without even the implied warranty of
++;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++;; GNU General Public License for more details.
++
++;; You should have received a copy of the GNU General Public License
++;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
++
++;;; Commentary:
++
++;;; Code:
++(provide 'batch-sort-file)
++
++(defun batch-sort-file()
++  "Just sort file, important thing is: done by emacs internal code order"
++   (interactive)
++   (set 'in_file (car command-line-args-left))
++   (set 'out_file(car (cdr command-line-args-left)))
++   (message (concat " *** sorting `" in_file "' to `" out_file "' by internal code order"))
++   (setq coding-system-for-read 'euc-japan)
++   (insert-file-contents in_file)
++   (sort-lines nil (point-min) (point-max))
++   (set-buffer-file-coding-system 'euc-japan)
++   (write-file out_file)
++)
++;;; batch-sort-file.el ends here
