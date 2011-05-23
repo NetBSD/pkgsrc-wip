@@ -1,8 +1,13 @@
+lib/munin/plugins/cpu
 lib/munin/plugins/forks
+lib/munin/plugins/if_
 lib/munin/plugins/if_errcoll_
 lib/munin/plugins/interrupts
+lib/munin/plugins/iostat
 lib/munin/plugins/iostat_ops
 lib/munin/plugins/irqstats
+lib/munin/plugins/load
+lib/munin/plugins/memory
 lib/munin/plugins/memory_pools
 lib/munin/plugins/memory_types
 lib/munin/plugins/nfs_client
