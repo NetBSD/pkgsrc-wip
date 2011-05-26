@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2010/12/26 05:01:24 davesainty Exp $
+# $NetBSD: Makefile,v 1.10 2011/05/26 20:34:25 thomasklausner Exp $
 
 #DISTNAME=	ubit-5.0.4
 DISTNAME=	ubit-5.5.0
@@ -23,7 +23,7 @@ USE_LIBTOOL=		yes
 #CONFIGURE_ENV+=
 CONFIGURE_ARGS+=	--with-gl-prefix=${LOCALBASE}
 
-.include "../../graphics/libungif/buildlink3.mk"
+.include "../../mk/giflib.buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"

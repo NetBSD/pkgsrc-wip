@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2010/12/26 05:01:22 davesainty Exp $
+# $NetBSD: Makefile,v 1.10 2011/05/26 20:34:25 thomasklausner Exp $
 #
 
 DISTNAME=		fbida-2.03
@@ -21,7 +21,7 @@ USE_TOOLS+=		gmake perl
 .include "../../graphics/png/buildlink3.mk"
 #.include "../../graphics/sane-backends/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
-.include "../../graphics/libungif/buildlink3.mk"
+.include "../../mk/giflib.buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../x11/openmotif/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
