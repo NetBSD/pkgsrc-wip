@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/02/25 02:04:07 obache Exp $
+# $NetBSD: Makefile,v 1.2 2011/05/26 20:32:56 thomasklausner Exp $
 #
 
 DISTNAME=	gpac-0.4.6
@@ -35,7 +35,7 @@ pre-install:
 .include "../../audio/pulseaudio/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
-.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 # doesn't work yet
 #.include "../../lang/spidermonkey/buildlink3.mk"
