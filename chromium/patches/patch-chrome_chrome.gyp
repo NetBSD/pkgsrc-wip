@@ -1,6 +1,6 @@
-$NetBSD: patch-chrome_chrome.gyp,v 1.1 2011/04/28 03:09:02 rxg Exp $
+$NetBSD: patch-chrome_chrome.gyp,v 1.2 2011/05/27 13:23:09 rxg Exp $
 
---- chrome/chrome.gyp.orig	2011-04-13 08:01:59.000000000 +0000
+--- chrome/chrome.gyp.orig	2011-05-24 08:01:58.000000000 +0000
 +++ chrome/chrome.gyp
 @@ -82,7 +82,7 @@
          'platform_locale_settings_grd':
@@ -20,16 +20,16 @@ $NetBSD: patch-chrome_chrome.gyp,v 1.1 2011/04/28 03:09:02 rxg Exp $
            'dependencies': [
              '../build/linux/system.gyp:gtk',
            ],
-@@ -611,7 +611,7 @@
-             'plugin/command_buffer_stub_win.cc',
-            ],
-         },],
+@@ -601,7 +601,7 @@
+             '<(DEPTH)/third_party/wtl/include',
+           ],
+         }],
 -        ['OS=="linux" or OS=="freebsd" or OS=="openbsd" or OS=="solaris"', {
 +        ['OS=="linux" or OS=="dragonfly" or OS=="freebsd" or OS=="netbsd" or OS=="openbsd" or OS=="solaris"', {
            'dependencies': [
              '../build/linux/system.gyp:gtk',
            ],
-@@ -635,7 +635,7 @@
+@@ -625,7 +625,7 @@
          '..',
        ],
        'conditions': [
@@ -38,7 +38,7 @@ $NetBSD: patch-chrome_chrome.gyp,v 1.1 2011/04/28 03:09:02 rxg Exp $
            'dependencies': [
              '../build/linux/system.gyp:gtk',
            ],
-@@ -758,7 +758,7 @@
+@@ -748,7 +748,7 @@
              'gpu/media/mft_angle_video_device.h',
            ],
          }],
@@ -47,7 +47,7 @@ $NetBSD: patch-chrome_chrome.gyp,v 1.1 2011/04/28 03:09:02 rxg Exp $
            'sources': [
              'gpu/x_util.cc',
              'gpu/x_util.h',
-@@ -853,7 +853,7 @@
+@@ -842,7 +842,7 @@
          'sync_notifier',
        ],
        'conditions': [
@@ -56,7 +56,7 @@ $NetBSD: patch-chrome_chrome.gyp,v 1.1 2011/04/28 03:09:02 rxg Exp $
            'dependencies': [
              '../build/linux/system.gyp:nss'
            ],
-@@ -1017,7 +1017,7 @@
+@@ -1027,7 +1027,7 @@
              'browser/sync/util/data_encryption.h',
            ],
          }],
@@ -65,7 +65,7 @@ $NetBSD: patch-chrome_chrome.gyp,v 1.1 2011/04/28 03:09:02 rxg Exp $
            'dependencies': [
              '../build/linux/system.gyp:gtk',
              '../build/linux/system.gyp:nss'
-@@ -1140,7 +1140,7 @@
+@@ -1150,7 +1150,7 @@
              'service/cloud_print/print_system_win.cc',
            ],
          }],
@@ -74,7 +74,7 @@ $NetBSD: patch-chrome_chrome.gyp,v 1.1 2011/04/28 03:09:02 rxg Exp $
            'dependencies': [
              '../build/linux/system.gyp:gtk',
            ],
-@@ -1810,7 +1810,7 @@
+@@ -1824,7 +1824,7 @@
          },
        ]},  # 'targets'
      ],  # OS=="win"

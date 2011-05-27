@@ -1,6 +1,6 @@
-$NetBSD: patch-net_proxy_proxy__config__service__linux.cc,v 1.1 2011/04/28 03:09:02 rxg Exp $
+$NetBSD: patch-net_proxy_proxy__config__service__linux.cc,v 1.2 2011/05/27 13:23:09 rxg Exp $
 
---- net/proxy/proxy_config_service_linux.cc.orig	2011-04-13 08:01:16.000000000 +0000
+--- net/proxy/proxy_config_service_linux.cc.orig	2011-05-24 08:01:13.000000000 +0000
 +++ net/proxy/proxy_config_service_linux.cc
 @@ -12,7 +12,13 @@
  #include <limits.h>
@@ -16,7 +16,7 @@ $NetBSD: patch-net_proxy_proxy__config__service__linux.cc,v 1.1 2011/04/28 03:09
  #include <unistd.h>
  
  #include <map>
-@@ -432,7 +438,7 @@ class GConfSettingGetterImplKDE
+@@ -433,7 +439,7 @@ class GConfSettingGetterImplKDE
        public base::MessagePumpLibevent::Watcher {
   public:
    explicit GConfSettingGetterImplKDE(base::Environment* env_var_getter)
@@ -24,8 +24,8 @@ $NetBSD: patch-net_proxy_proxy__config__service__linux.cc,v 1.1 2011/04/28 03:09
 +      : notify_fd_(-1), notify_delegate_(NULL), indirect_manual_(false),
          auto_no_pac_(false), reversed_bypass_list_(false),
          env_var_getter_(env_var_getter), file_loop_(NULL) {
-     // Derive the location of the kde config dir from the environment.
-@@ -488,31 +494,35 @@ class GConfSettingGetterImplKDE
+     // This has to be called on the UI thread (http://crbug.com/69057).
+@@ -492,33 +498,37 @@ class GConfSettingGetterImplKDE
    }
  
    virtual ~GConfSettingGetterImplKDE() {
@@ -46,6 +46,8 @@ $NetBSD: patch-net_proxy_proxy__config__service__linux.cc,v 1.1 2011/04/28 03:09
  
    virtual bool Init(MessageLoop* glib_default_loop,
                      MessageLoopForIO* file_loop) {
+     // This has to be called on the UI thread (http://crbug.com/69057).
+     base::ThreadRestrictions::ScopedAllowIO allow_io;
 -    DCHECK(inotify_fd_ < 0);
 -    inotify_fd_ = inotify_init();
 -    if (inotify_fd_ < 0) {
@@ -71,7 +73,7 @@ $NetBSD: patch-net_proxy_proxy__config__service__linux.cc,v 1.1 2011/04/28 03:09
        return false;
      }
      file_loop_ = file_loop;
-@@ -523,28 +533,41 @@ class GConfSettingGetterImplKDE
+@@ -529,28 +539,40 @@ class GConfSettingGetterImplKDE
    }
  
    void Shutdown() {
@@ -96,7 +98,6 @@ $NetBSD: patch-net_proxy_proxy__config__service__linux.cc,v 1.1 2011/04/28 03:09
 +    int kioslavercfd = open(kde_config_dir_.Append("kioslaverc").value().c_str(), O_RDONLY);
 +    if (kioslavercfd == -1)
 +      return false;
-+
 +    struct kevent ke;
 +    EV_SET(&ke, kioslavercfd, EVFILT_VNODE, EV_ADD | EV_ONESHOT, NOTE_DELETE | NOTE_RENAME, 0, NULL);
 +
@@ -121,7 +122,7 @@ $NetBSD: patch-net_proxy_proxy__config__service__linux.cc,v 1.1 2011/04/28 03:09
    }
  
    virtual MessageLoop* GetNotificationLoop() {
-@@ -553,7 +576,7 @@ class GConfSettingGetterImplKDE
+@@ -559,7 +581,7 @@ class GConfSettingGetterImplKDE
  
    // Implement base::MessagePumpLibevent::Delegate.
    void OnFileCanReadWithoutBlocking(int fd) {
@@ -130,13 +131,14 @@ $NetBSD: patch-net_proxy_proxy__config__service__linux.cc,v 1.1 2011/04/28 03:09
      DCHECK(MessageLoop::current() == file_loop_);
      OnChangeNotification();
    }
-@@ -824,12 +847,25 @@ class GConfSettingGetterImplKDE
+@@ -830,17 +852,29 @@ class GConfSettingGetterImplKDE
    // from the inotify file descriptor and starts up a debounce timer if
    // an event for kioslaverc is seen.
    void OnChangeNotification() {
 -    DCHECK(inotify_fd_ >= 0);
 +    DCHECK(notify_fd_ >= 0);
      DCHECK(MessageLoop::current() == file_loop_);
+-    char event_buf[(sizeof(inotify_event) + NAME_MAX + 1) * 4];
 +#if defined(OS_BSD)
 +    bool kioslaverc_touched = true;
 +    struct kevent ke;
@@ -148,9 +150,8 @@ $NetBSD: patch-net_proxy_proxy__config__service__linux.cc,v 1.1 2011/04/28 03:09
 +      kioslaverc_touched = false;
 +    }
 +    close(ke.ident);
-+    
 +#else
-     char event_buf[(sizeof(inotify_event) + NAME_MAX + 1) * 4];
++    char event_buf[(sizeof(notify_event) + NAME_MAX + 1) * 4];
      bool kioslaverc_touched = false;
      ssize_t r;
 -    while ((r = read(inotify_fd_, event_buf, sizeof(event_buf))) > 0) {
@@ -158,12 +159,14 @@ $NetBSD: patch-net_proxy_proxy__config__service__linux.cc,v 1.1 2011/04/28 03:09
        // inotify returns variable-length structures, which is why we have
        // this strange-looking loop instead of iterating through an array.
        char* event_ptr = event_buf;
-@@ -856,14 +892,15 @@ class GConfSettingGetterImplKDE
-       if (errno == EINVAL) {
-         // Our buffer is not large enough to read the next event. This should
-         // not happen (because its size is calculated to always be sufficiently
--        // large), but if it does we'd warn continuously since |inotify_fd_|
-+        // large), but if it does we'd warn continuously since |notify_fd_|
+       while (event_ptr < event_buf + r) {
+-        inotify_event* event = reinterpret_cast<inotify_event*>(event_ptr);
++        notify_event* event = reinterpret_cast<inotify_event*>(event_ptr);
+         // The kernel always feeds us whole events.
+         CHECK_LE(event_ptr + sizeof(inotify_event), event_buf + r);
+         CHECK_LE(event->name + event->len, event_buf + r);
+@@ -865,11 +899,12 @@ class GConfSettingGetterImplKDE
+         // large), but if it does we'd warn continuously since |inotify_fd_|
          // would be forever ready to read. Close it and stop watching instead.
          LOG(ERROR) << "inotify failure; no longer watching kioslaverc!";
 -        inotify_watcher_.StopWatchingFileDescriptor();
@@ -178,7 +181,7 @@ $NetBSD: patch-net_proxy_proxy__config__service__linux.cc,v 1.1 2011/04/28 03:09
      if (kioslaverc_touched) {
        // We don't use Reset() because the timer may not yet be running.
        // (In that case Stop() is a no-op.)
-@@ -877,8 +914,8 @@ class GConfSettingGetterImplKDE
+@@ -883,8 +918,8 @@ class GConfSettingGetterImplKDE
    typedef std::map<std::string, std::string> string_map_type;
    typedef std::map<std::string, std::vector<std::string> > strings_map_type;
  

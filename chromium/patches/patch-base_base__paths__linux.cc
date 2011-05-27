@@ -1,6 +1,6 @@
-$NetBSD: patch-base_base__paths__linux.cc,v 1.1 2011/04/28 03:09:02 rxg Exp $
+$NetBSD: patch-base_base__paths__linux.cc,v 1.2 2011/05/27 13:23:09 rxg Exp $
 
---- base/base_paths_linux.cc.orig	2011-04-13 08:01:34.000000000 +0000
+--- base/base_paths_linux.cc.orig	2011-05-24 08:01:33.000000000 +0000
 +++ base/base_paths_linux.cc
 @@ -5,7 +5,7 @@
  #include "base/base_paths.h"
@@ -29,20 +29,11 @@ $NetBSD: patch-base_base__paths__linux.cc,v 1.1 2011/04/28 03:09:02 rxg Exp $
        FilePath bin_dir;
        if (!file_util::ReadSymbolicLink(FilePath(kSelfExe), &bin_dir)) {
          NOTREACHED() << "Unable to resolve " << kSelfExe << ".";
-@@ -44,7 +44,7 @@ bool PathProviderPosix(int key, FilePath
-       }
-       *result = bin_dir;
-       return true;
--#elif defined(OS_FREEBSD)
-+#elif defined(OS_FREEBSD) || defined(OS_DRAGONFLY)
-       int name[] = { CTL_KERN, KERN_PROC, KERN_PROC_PATHNAME, -1 };
-       char bin_dir[PATH_MAX + 1];
-       size_t length = sizeof(bin_dir);
 @@ -56,6 +56,9 @@ bool PathProviderPosix(int key, FilePath
        bin_dir[strlen(bin_dir)] = 0;
        *result = FilePath(bin_dir);
        return true;
-+#elif defined(OS_OPENBSD)
++#elif defined(OS_OPENBSD) || defined(OS_DRAGONFLY)
 +      *result = FilePath("/usr/local/share/chromium/chrome");
 +      return true;
  #endif

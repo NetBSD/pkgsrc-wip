@@ -1,22 +1,21 @@
-$NetBSD: patch-app_surface_transport__dib__freebsd.cc,v 1.1 2011/04/28 03:09:02 rxg Exp $
+$NetBSD: patch-app_surface_transport__dib__freebsd.cc,v 1.2 2011/05/27 13:23:09 rxg Exp $
 
---- app/surface/transport_dib_freebsd.cc.orig	2011-04-26 05:17:11.000000000 +0000
+--- app/surface/transport_dib_freebsd.cc.orig	2011-05-26 07:36:59.000000000 +0000
 +++ app/surface/transport_dib_freebsd.cc
-@@ -0,0 +1,87 @@
+@@ -0,0 +1,96 @@
 +// Copyright (c) 2009 The Chromium Authors. All rights reserved.
 +// Use of this source code is governed by a BSD-style license that can be
 +// found in the LICENSE file.
 +
-+#include <sys/stat.h>
-+#include <unistd.h>
-+
 +#include "app/surface/transport_dib.h"
++
++#include <unistd.h>
++#include <sys/stat.h>
++
 +#include "base/eintr_wrapper.h"
 +#include "base/shared_memory.h"
++#include "base/scoped_ptr.h"
 +#include "skia/ext/platform_canvas.h"
-+
-+// The shmat system call uses this as it's invalid return address
-+static void *const kInvalidAddress = (void*) -1;
 +
 +TransportDIB::TransportDIB()
 +    : size_(0) {
@@ -33,8 +32,7 @@ $NetBSD: patch-app_surface_transport__dib__freebsd.cc,v 1.1 2011/04/28 03:09:02 
 +// static
 +TransportDIB* TransportDIB::Create(size_t size, uint32 sequence_num) {
 +  TransportDIB* dib = new TransportDIB;
-+  if (!dib->shared_memory_.Create(L"", false /* read write */,
-+                                  false /* do not open existing */, size)) {
++  if (!dib->shared_memory_.CreateAndMapAnonymous(size)) {
 +    delete dib;
 +    return NULL;
 +  }
@@ -44,21 +42,32 @@ $NetBSD: patch-app_surface_transport__dib__freebsd.cc,v 1.1 2011/04/28 03:09:02 
 +}
 +
 +// static
-+TransportDIB* TransportDIB::Map(TransportDIB::Handle handle) {
-+  if (!is_valid(handle))
++TransportDIB* TransportDIB::Map(Handle handle) {
++  scoped_ptr<TransportDIB> dib(CreateWithHandle(handle));
++  if (!dib->Map())
 +    return NULL;
-+  TransportDIB* dib = new TransportDIB(handle);
++  return dib.release();
++}
++
++// static
++TransportDIB* TransportDIB::CreateWithHandle(Handle handle) {
++  return new TransportDIB(handle);
++}
++
++bool TransportDIB::Map() {
++  if (!is_valid(handle()))
++    return false;
++  if (memory())
++    return true;
++
 +  struct stat st;
-+  if ((fstat(handle.fd, &st) != 0) ||
-+      (!dib->shared_memory_.Map(st.st_size))) {
-+    delete dib;
-+    HANDLE_EINTR(close(handle.fd));
-+    return NULL;
++  if ((fstat(shared_memory_.handle().fd, &st) != 0) ||
++      (!shared_memory_.Map(st.st_size))) {
++    return false;
 +  }
 +
-+  dib->size_ = st.st_size;
-+
-+  return dib;
++  size_ = st.st_size;
++  return true;
 +}
 +
 +bool TransportDIB::is_valid(Handle dib) {
@@ -84,7 +93,7 @@ $NetBSD: patch-app_surface_transport__dib__freebsd.cc,v 1.1 2011/04/28 03:09:02 
 +
 +XID TransportDIB::MapToX(Display* display) {
 +  if (!x_shm_) {
-+    x_shm_ = x11_util::AttachSharedMemory(display, key_);
++    x_shm_ = ui::AttachSharedMemory(display, key_);
 +    display_ = display;
 +  }
 +

@@ -1,9 +1,9 @@
-$NetBSD: patch-chrome_browser_renderer__host_browser__render__process__host.cc,v 1.1 2011/04/28 03:09:02 rxg Exp $
+$NetBSD: patch-chrome_browser_renderer__host_browser__render__process__host.cc,v 1.2 2011/05/27 13:23:09 rxg Exp $
 
---- chrome/browser/renderer_host/browser_render_process_host.cc.orig	2011-04-13 08:01:43.000000000 +0000
+--- chrome/browser/renderer_host/browser_render_process_host.cc.orig	2011-05-24 08:01:42.000000000 +0000
 +++ chrome/browser/renderer_host/browser_render_process_host.cc
-@@ -886,7 +886,7 @@ TransportDIB* BrowserRenderProcessHost::
-   HANDLE section = app::win::GetSectionFromProcess(
+@@ -903,7 +903,7 @@ TransportDIB* BrowserRenderProcessHost::
+   HANDLE section = chrome::GetSectionFromProcess(
        dib_id.handle, GetHandle(), false /* read write */);
    return TransportDIB::Map(section);
 -#elif defined(OS_MACOSX)

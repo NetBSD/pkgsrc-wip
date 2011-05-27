@@ -1,8 +1,8 @@
-$NetBSD: patch-media_media.gyp,v 1.1 2011/04/28 03:09:02 rxg Exp $
+$NetBSD: patch-media_media.gyp,v 1.2 2011/05/27 13:23:09 rxg Exp $
 
---- media/media.gyp.orig	2011-04-13 08:01:07.000000000 +0000
+--- media/media.gyp.orig	2011-05-24 08:01:03.000000000 +0000
 +++ media/media.gyp
-@@ -171,14 +171,14 @@
+@@ -173,14 +173,14 @@
              'video/mft_h264_decode_engine.h',
            ],
          }],
@@ -19,7 +19,7 @@ $NetBSD: patch-media_media.gyp,v 1.1 2011/04/28 03:09:02 rxg Exp $
            'sources/': [ ['exclude', 'alsa_' ],
                          ['exclude', 'audio_manager_linux' ],
                          ['exclude', '\\.mm?$' ] ],
-@@ -187,13 +187,13 @@
+@@ -189,13 +189,13 @@
              ],
            },
          }],
@@ -35,7 +35,16 @@ $NetBSD: patch-media_media.gyp,v 1.1 2011/04/28 03:09:02 rxg Exp $
            'sources': [
              'filters/omx_video_decoder.cc',
              'filters/omx_video_decoder.h',
-@@ -229,7 +229,7 @@
+@@ -271,7 +271,7 @@
+         '..',
+       ],
+       'conditions': [
+-        [ 'OS == "linux" or OS == "freebsd" or OS == "openbsd"', {
++        [ 'OS == "linux" or OS == "dragonfly" or OS == "freebsd" or OS == "netbsd" or OS == "openbsd"', {
+           'cflags': [
+             '-msse2',
+           ],
+@@ -298,7 +298,7 @@
          'ffmpeg/ffmpeg_unittest.cc',
        ],
        'conditions': [
@@ -44,7 +53,7 @@ $NetBSD: patch-media_media.gyp,v 1.1 2011/04/28 03:09:02 rxg Exp $
            'dependencies': [
              # Needed for the following #include chain:
              #   base/run_all_unittests.cc
-@@ -308,7 +308,12 @@
+@@ -379,7 +379,12 @@
          'video/ffmpeg_video_decode_engine_unittest.cc',
        ],
        'conditions': [
@@ -58,7 +67,7 @@ $NetBSD: patch-media_media.gyp,v 1.1 2011/04/28 03:09:02 rxg Exp $
            'dependencies': [
              # Needed for the following #include chain:
              #   base/run_all_unittests.cc
-@@ -507,7 +512,7 @@
+@@ -580,7 +585,7 @@
              'tools/shader_bench/window.h',
            ],
            'conditions': [
@@ -67,7 +76,7 @@ $NetBSD: patch-media_media.gyp,v 1.1 2011/04/28 03:09:02 rxg Exp $
                'dependencies': [
                  '../build/linux/system.gyp:gtk',
                ],
-@@ -528,7 +533,7 @@
+@@ -620,7 +625,7 @@
          },
        ],
      }],
@@ -76,7 +85,7 @@ $NetBSD: patch-media_media.gyp,v 1.1 2011/04/28 03:09:02 rxg Exp $
        'targets': [
          {
            'target_name': 'omx_test',
-@@ -560,7 +565,7 @@
+@@ -652,7 +657,7 @@
              '../testing/gtest.gyp:gtest',
            ],
            'conditions': [
@@ -85,7 +94,7 @@ $NetBSD: patch-media_media.gyp,v 1.1 2011/04/28 03:09:02 rxg Exp $
                'dependencies': [
                  '../build/linux/system.gyp:gtk',
                ],
-@@ -600,12 +605,20 @@
+@@ -692,12 +697,20 @@
            ],
            'link_settings': {
              'libraries': [

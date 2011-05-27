@@ -1,8 +1,23 @@
-$NetBSD: patch-chrome_chrome__common.gypi,v 1.1 2011/04/28 03:09:02 rxg Exp $
+$NetBSD: patch-chrome_chrome__common.gypi,v 1.2 2011/05/27 13:23:09 rxg Exp $
 
---- chrome/chrome_common.gypi.orig	2011-04-13 08:01:59.000000000 +0000
+--- chrome/chrome_common.gypi.orig	2011-05-24 08:01:58.000000000 +0000
 +++ chrome/chrome_common.gypi
-@@ -389,7 +389,7 @@
+@@ -156,6 +156,14 @@
+           'common/win_safe_util.cc',
+           'common/win_safe_util.h',
+         ],
++        'conditions': [
++          ['OS=="dragonfly" or OS=="freebsd" or OS=="netbsd" or OS=="openbsd"', {
++            'sources!': [
++              'common/set_process_title_linux.cc',
++              'common/set_process_title_linux.h',
++            ],
++          }],
++        ],
+       }],
+     ],
+   },
+@@ -368,7 +376,7 @@
          'common/zip.h',
        ],
        'conditions': [
@@ -11,7 +26,7 @@ $NetBSD: patch-chrome_chrome__common.gypi,v 1.1 2011/04/28 03:09:02 rxg Exp $
            'dependencies': [
              '../build/linux/system.gyp:gtk',
            ],
-@@ -405,7 +405,7 @@
+@@ -384,7 +392,7 @@
              ],
            },
          },],
@@ -20,7 +35,7 @@ $NetBSD: patch-chrome_chrome__common.gypi,v 1.1 2011/04/28 03:09:02 rxg Exp $
            'include_dirs': [
              '<(SHARED_INTERMEDIATE_DIR)',
            ],
-@@ -526,7 +526,7 @@
+@@ -510,7 +518,7 @@
          '../third_party/icu/icu.gyp:icuuc',
        ],
        'conditions': [

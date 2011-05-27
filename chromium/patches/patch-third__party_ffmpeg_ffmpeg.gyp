@@ -1,6 +1,6 @@
-$NetBSD: patch-third__party_ffmpeg_ffmpeg.gyp,v 1.1 2011/04/28 03:09:03 rxg Exp $
+$NetBSD: patch-third__party_ffmpeg_ffmpeg.gyp,v 1.2 2011/05/27 13:23:09 rxg Exp $
 
---- third_party/ffmpeg/ffmpeg.gyp.orig	2011-04-13 08:02:52.000000000 +0000
+--- third_party/ffmpeg/ffmpeg.gyp.orig	2011-05-24 08:02:43.000000000 +0000
 +++ third_party/ffmpeg/ffmpeg.gyp
 @@ -23,7 +23,7 @@
  {
@@ -11,7 +11,7 @@ $NetBSD: patch-third__party_ffmpeg_ffmpeg.gyp,v 1.1 2011/04/28 03:09:03 rxg Exp 
          'sources/': [['exclude', '/linux/']]
        }],
        ['OS!="mac"', {'sources/': [['exclude', '/mac/']]}],
-@@ -326,7 +326,7 @@
+@@ -320,7 +320,7 @@
                  }],
                ],
              }],
@@ -20,16 +20,7 @@ $NetBSD: patch-third__party_ffmpeg_ffmpeg.gyp,v 1.1 2011/04/28 03:09:03 rxg Exp 
                'defines': [
                  '_ISOC99_SOURCE',
                  '_LARGEFILE_SOURCE',
-@@ -492,7 +492,7 @@
-           'rules': [
-             {
-               'conditions': [
--                ['OS=="linux" or OS=="freebsd" or OS=="openbsd" or OS=="solaris"', {
-+                ['OS=="linux" or OS=="dragonfly" or OS=="freebsd" or OS=="netbsd" or OS=="openbsd" or OS=="solaris"', {
-                   'variables': {
-                     'obj_format': 'elf',
-                   },
-@@ -620,7 +620,7 @@
+@@ -501,7 +501,7 @@
              'ffmpegsumo',
            ],
            'conditions': [

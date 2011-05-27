@@ -1,9 +1,9 @@
-$NetBSD: patch-third__party_WebKit_Source_JavaScriptCore_config.h,v 1.1 2011/04/28 03:09:03 rxg Exp $
+$NetBSD: patch-third__party_WebKit_Source_JavaScriptCore_config.h,v 1.2 2011/05/27 13:23:09 rxg Exp $
 
---- third_party/WebKit/Source/JavaScriptCore/config.h.orig	2011-04-13 08:12:07.000000000 +0000
+--- third_party/WebKit/Source/JavaScriptCore/config.h.orig	2011-05-24 08:03:02.000000000 +0000
 +++ third_party/WebKit/Source/JavaScriptCore/config.h
-@@ -57,7 +57,7 @@
- 
+@@ -61,7 +61,7 @@
+ #define WTF_USE_OS_RANDOMNESS 1
  #endif
  
 -#if OS(FREEBSD) || OS(OPENBSD)

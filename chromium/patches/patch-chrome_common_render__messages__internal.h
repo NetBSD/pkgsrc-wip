@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_common_render__messages__internal.h,v 1.1 2011/04/28 03:09:02 rxg Exp $
+$NetBSD: patch-chrome_common_render__messages__internal.h,v 1.2 2011/05/27 13:23:09 rxg Exp $
 
---- chrome/common/render_messages_internal.h.orig	2011-04-13 08:01:58.000000000 +0000
+--- chrome/common/render_messages_internal.h.orig	2011-05-24 08:01:58.000000000 +0000
 +++ chrome/common/render_messages_internal.h
-@@ -2139,7 +2139,7 @@ IPC_MESSAGE_CONTROL2(ViewHostMsg_Extensi
-                      std::string /* extension_id */,
-                      std::string /* name */)
+@@ -1931,7 +1931,7 @@ IPC_MESSAGE_ROUTED3(ViewHostMsg_CommandS
+                     bool /* is_enabled */,
+                     int /* checked_state */)
  
 -#if defined(OS_MACOSX)
 +#if defined(OS_MACOSX) || defined(OS_BSD)

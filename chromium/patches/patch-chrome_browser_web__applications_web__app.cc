@@ -1,10 +1,10 @@
-$NetBSD: patch-chrome_browser_web__applications_web__app.cc,v 1.1 2011/04/28 03:09:02 rxg Exp $
+$NetBSD: patch-chrome_browser_web__applications_web__app.cc,v 1.2 2011/05/27 13:23:09 rxg Exp $
 
---- chrome/browser/web_applications/web_app.cc.orig	2011-04-13 08:01:40.000000000 +0000
+--- chrome/browser/web_applications/web_app.cc.orig	2011-05-24 08:01:39.000000000 +0000
 +++ chrome/browser/web_applications/web_app.cc
 @@ -34,9 +34,9 @@
- #include "chrome/common/url_constants.h"
- #include "chrome/common/web_apps.h"
+ #include "content/browser/browser_thread.h"
+ #include "content/browser/tab_contents/tab_contents.h"
  
 -#if defined(OS_LINUX)
 +#if defined(OS_LINUX) || defined(OS_BSD)

@@ -1,8 +1,8 @@
-$NetBSD: patch-third__party_WebKit_Source_JavaScriptCore_wtf_Platform.h,v 1.1 2011/04/28 03:09:03 rxg Exp $
+$NetBSD: patch-third__party_WebKit_Source_JavaScriptCore_wtf_Platform.h,v 1.2 2011/05/27 13:23:09 rxg Exp $
 
---- third_party/WebKit/Source/JavaScriptCore/wtf/Platform.h.orig	2011-04-13 08:12:03.000000000 +0000
+--- third_party/WebKit/Source/JavaScriptCore/wtf/Platform.h.orig	2011-05-24 08:02:57.000000000 +0000
 +++ third_party/WebKit/Source/JavaScriptCore/wtf/Platform.h
-@@ -398,6 +398,11 @@
+@@ -400,6 +400,11 @@
  #define WTF_OS_MAC_OS_X 1
  #endif
  
@@ -12,9 +12,9 @@ $NetBSD: patch-third__party_WebKit_Source_JavaScriptCore_wtf_Platform.h,v 1.1 20
 +#endif
 +
  /* OS(FREEBSD) - FreeBSD */
- #ifdef __FreeBSD__
+ #if defined(__FreeBSD__) || defined(__DragonFly__)
  #define WTF_OS_FREEBSD 1
-@@ -452,6 +457,7 @@
+@@ -454,6 +459,7 @@
  #if   OS(AIX)              \
      || OS(ANDROID)          \
      || OS(DARWIN)           \
@@ -22,7 +22,7 @@ $NetBSD: patch-third__party_WebKit_Source_JavaScriptCore_wtf_Platform.h,v 1.1 20
      || OS(FREEBSD)          \
      || OS(HAIKU)            \
      || OS(LINUX)            \
-@@ -466,6 +472,14 @@
+@@ -468,6 +474,14 @@
  #define WTF_OS_UNIX 1
  #endif
  

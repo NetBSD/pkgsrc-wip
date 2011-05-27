@@ -1,5 +1,5 @@
-$NetBSD: TODO,v 1.5 2011/04/28 03:09:01 rxg Exp $
+$NetBSD: TODO,v 1.6 2011/05/27 13:23:09 rxg Exp $
 
 * debug
-* test on Linux/DragonFly/FreeBSD/OpenBSD
+* test on Linux/FreeBSD/OpenBSD
 * use libtool

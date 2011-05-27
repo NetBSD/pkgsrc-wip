@@ -1,9 +1,9 @@
-$NetBSD: patch-chrome_chrome__tests.gypi,v 1.1 2011/04/28 03:09:02 rxg Exp $
+$NetBSD: patch-chrome_chrome__tests.gypi,v 1.2 2011/05/27 13:23:09 rxg Exp $
 
---- chrome/chrome_tests.gypi.orig	2011-04-13 08:01:59.000000000 +0000
+--- chrome/chrome_tests.gypi.orig	2011-05-24 08:01:58.000000000 +0000
 +++ chrome/chrome_tests.gypi
-@@ -149,7 +149,7 @@
-         'test/unit/chrome_test_suite.h',
+@@ -185,7 +185,7 @@
+         '../content/common/notification_observer_mock.h',
        ],
        'conditions': [
 -        ['OS=="linux"', {
@@ -11,16 +11,16 @@ $NetBSD: patch-chrome_chrome__tests.gypi,v 1.1 2011/04/28 03:09:02 rxg Exp $
            'dependencies': [
              '../build/linux/system.gyp:gtk',
              '../build/linux/system.gyp:nss',
-@@ -199,7 +199,7 @@
-         'test/ui/ui_test_suite.h',
-       ],
-       'conditions': [
+@@ -239,7 +239,7 @@
+             'chrome.gyp:crash_service',  # run time dependency
+           ],
+         }],
 -        ['OS=="linux"', {
 +        ['OS=="linux" or OS=="dragonfly" or OS=="freebsd" or OS=="netbsd" or OS=="openbsd"', {
            'dependencies': [
              '../build/linux/system.gyp:gtk',
            ],
-@@ -223,7 +223,7 @@
+@@ -279,7 +279,7 @@
          'test/unit/run_all_unittests.cc',
        ],
        'conditions': [
@@ -29,7 +29,7 @@ $NetBSD: patch-chrome_chrome__tests.gypi,v 1.1 2011/04/28 03:09:02 rxg Exp $
            'dependencies': [
              # Needed for the following #include chain:
              #   test/unit/run_all_unittests.cc
-@@ -269,7 +269,7 @@
+@@ -325,7 +325,7 @@
              },
            },
          },],
@@ -38,7 +38,7 @@ $NetBSD: patch-chrome_chrome__tests.gypi,v 1.1 2011/04/28 03:09:02 rxg Exp $
            'dependencies': [
              '../tools/xdisplaycheck/xdisplaycheck.gyp:xdisplaycheck',
            ],
-@@ -346,14 +346,14 @@
+@@ -398,14 +398,14 @@
          'test/unit/chrome_test_suite.h',
        ],
        'conditions': [
@@ -54,8 +54,8 @@ $NetBSD: patch-chrome_chrome__tests.gypi,v 1.1 2011/04/28 03:09:02 rxg Exp $
 +        ['(OS=="linux" or OS=="dragonfly" or OS=="freebsd" or OS=="netbsd" or OS=="openbsd") and toolkit_views==0', {
            'sources!': [
              # TODO(port)
-             'browser/ui/views/bookmark_bar_view_test.cc',
-@@ -558,7 +558,7 @@
+             'browser/ui/views/bookmarks/bookmark_bar_view_test.cc',
+@@ -606,7 +606,7 @@
              '../webkit/webkit.gyp:copy_npapi_test_plugin',
            ],
          }],
@@ -64,7 +64,7 @@ $NetBSD: patch-chrome_chrome__tests.gypi,v 1.1 2011/04/28 03:09:02 rxg Exp $
            'dependencies': [
              '../build/linux/system.gyp:gtk',
              '../tools/xdisplaycheck/xdisplaycheck.gyp:xdisplaycheck',
-@@ -630,7 +630,7 @@
+@@ -672,7 +672,7 @@
              'browser/printing/printing_layout_uitest.cc',
            ],
          }],
@@ -73,8 +73,8 @@ $NetBSD: patch-chrome_chrome__tests.gypi,v 1.1 2011/04/28 03:09:02 rxg Exp $
            'conditions': [
              ['linux_use_tcmalloc==1', {
                'dependencies': [
-@@ -723,7 +723,7 @@
-         'test/webdriver/commands/webdriver_command.cc',
+@@ -782,7 +782,7 @@
+         'test/webdriver/commands/webelement_commands.cc',
        ],
        'conditions': [
 -        ['OS=="linux"', {
@@ -82,16 +82,16 @@ $NetBSD: patch-chrome_chrome__tests.gypi,v 1.1 2011/04/28 03:09:02 rxg Exp $
            'dependencies': [
              '../build/linux/system.gyp:gtk',
              '../tools/xdisplaycheck/xdisplaycheck.gyp:xdisplaycheck',
-@@ -767,7 +767,7 @@
-             },
-           },
-         },],
+@@ -793,7 +793,7 @@
+             '../views/views.gyp:views',
+           ],
+         }],
 -        ['OS=="linux" or OS=="freebsd"', {
 +        ['OS=="linux" or OS=="dragonfly" or OS=="freebsd" or OS=="netbsd" or OS=="openbsd"', {
            'conditions': [
              ['linux_use_tcmalloc==1', {
                'dependencies': [
-@@ -822,7 +822,7 @@
+@@ -939,7 +939,7 @@
            ],
          },],
          # Set fPIC in case it isn't set.
@@ -100,7 +100,7 @@ $NetBSD: patch-chrome_chrome__tests.gypi,v 1.1 2011/04/28 03:09:02 rxg Exp $
           'and (target_arch=="x64" or target_arch=="arm") and linux_fpic!=1', {
            'cflags': ['-fPIC'],
          },],
-@@ -1746,7 +1746,7 @@
+@@ -1893,7 +1893,7 @@
              ['exclude', '^browser/chromeos/'],
            ],
          }],
@@ -109,7 +109,7 @@ $NetBSD: patch-chrome_chrome__tests.gypi,v 1.1 2011/04/28 03:09:02 rxg Exp $
            'conditions': [
              ['gcc_version==44', {
                # Avoid gcc 4.4 strict aliasing issues in stl_tree.h when
-@@ -1790,7 +1790,7 @@
+@@ -1937,7 +1937,7 @@
              '../views/focus/accelerator_handler_gtk_unittest.cc',
            ],
          }],
@@ -118,7 +118,7 @@ $NetBSD: patch-chrome_chrome__tests.gypi,v 1.1 2011/04/28 03:09:02 rxg Exp $
            'conditions': [
              ['linux_use_tcmalloc==1', {
                'dependencies': [
-@@ -2202,7 +2202,7 @@
+@@ -2362,7 +2362,7 @@
              'test/plugin/pdf_browsertest.cc',
            ],
          }],
@@ -127,8 +127,8 @@ $NetBSD: patch-chrome_chrome__tests.gypi,v 1.1 2011/04/28 03:09:02 rxg Exp $
            'sources!': [
              'browser/extensions/browser_action_test_util_gtk.cc',
              'browser/ui/gtk/view_id_util_browsertest.cc',
-@@ -2262,7 +2262,7 @@
-             'browser/renderer_host/test/render_view_host_manager_browsertest.cc',
+@@ -2420,7 +2420,7 @@
+             '../content/browser/renderer_host/render_view_host_manager_browsertest.cc',
            ],
          }],
 -        ['OS=="linux"', {
@@ -136,7 +136,7 @@ $NetBSD: patch-chrome_chrome__tests.gypi,v 1.1 2011/04/28 03:09:02 rxg Exp $
            'dependencies': [
              '../build/linux/system.gyp:gtk',
              '../build/linux/system.gyp:nss',
-@@ -2299,7 +2299,7 @@
+@@ -2458,7 +2458,7 @@
              'browser/extensions/browser_action_test_util_mac.mm',
            ],
          }],
@@ -145,7 +145,7 @@ $NetBSD: patch-chrome_chrome__tests.gypi,v 1.1 2011/04/28 03:09:02 rxg Exp $
            'conditions': [
              ['linux_use_tcmalloc==1', {
                'dependencies': [
-@@ -2432,7 +2432,7 @@
+@@ -2589,7 +2589,7 @@
              },
            },
          },],
@@ -154,7 +154,7 @@ $NetBSD: patch-chrome_chrome__tests.gypi,v 1.1 2011/04/28 03:09:02 rxg Exp $
            'dependencies': [
              '../build/linux/system.gyp:gtk',
              '../tools/xdisplaycheck/xdisplaycheck.gyp:xdisplaycheck',
-@@ -2463,7 +2463,7 @@
+@@ -2620,7 +2620,7 @@
              },
            },
          },],
@@ -163,7 +163,7 @@ $NetBSD: patch-chrome_chrome__tests.gypi,v 1.1 2011/04/28 03:09:02 rxg Exp $
            'conditions': [
              ['linux_use_tcmalloc==1', {
                'dependencies': [
-@@ -2533,7 +2533,7 @@
+@@ -2690,7 +2690,7 @@
              },
            },
          },],
@@ -172,7 +172,7 @@ $NetBSD: patch-chrome_chrome__tests.gypi,v 1.1 2011/04/28 03:09:02 rxg Exp $
            'dependencies': [
              '../build/linux/system.gyp:gtk',
            ],
-@@ -2570,7 +2570,7 @@
+@@ -2727,7 +2727,7 @@
              },
            },
          },],
@@ -181,7 +181,7 @@ $NetBSD: patch-chrome_chrome__tests.gypi,v 1.1 2011/04/28 03:09:02 rxg Exp $
            'dependencies': [
              '../build/linux/system.gyp:gtk',
              '../tools/xdisplaycheck/xdisplaycheck.gyp:xdisplaycheck',
-@@ -2607,7 +2607,7 @@
+@@ -2764,7 +2764,7 @@
          'test/tab_switching/tab_switching_test.cc',
        ],
        'conditions': [
@@ -190,7 +190,7 @@ $NetBSD: patch-chrome_chrome__tests.gypi,v 1.1 2011/04/28 03:09:02 rxg Exp $
            'dependencies': [
              '../build/linux/system.gyp:gtk',
              '../tools/xdisplaycheck/xdisplaycheck.gyp:xdisplaycheck',
-@@ -2641,7 +2641,7 @@
+@@ -2798,7 +2798,7 @@
          'test/memory_test/memory_test.cc',
        ],
        'conditions': [
@@ -199,7 +199,7 @@ $NetBSD: patch-chrome_chrome__tests.gypi,v 1.1 2011/04/28 03:09:02 rxg Exp $
            'dependencies': [
              '../build/linux/system.gyp:gtk',
              '../tools/xdisplaycheck/xdisplaycheck.gyp:xdisplaycheck',
-@@ -2792,7 +2792,7 @@
+@@ -2961,7 +2961,7 @@
              'browser/sync/util/data_encryption_unittest.cc',
            ],
          }],
@@ -208,7 +208,7 @@ $NetBSD: patch-chrome_chrome__tests.gypi,v 1.1 2011/04/28 03:09:02 rxg Exp $
            'dependencies': [
              '../build/linux/system.gyp:gtk',
              '../build/linux/system.gyp:nss',
-@@ -2910,7 +2910,7 @@
+@@ -3075,7 +3075,7 @@
        ],
        'conditions': [
          # Plugin code.
@@ -217,7 +217,7 @@ $NetBSD: patch-chrome_chrome__tests.gypi,v 1.1 2011/04/28 03:09:02 rxg Exp $
            'dependencies': [
              'plugin',
             ],
-@@ -2918,7 +2918,7 @@
+@@ -3083,7 +3083,7 @@
              'plugin',
            ],
          }],
@@ -226,7 +226,7 @@ $NetBSD: patch-chrome_chrome__tests.gypi,v 1.1 2011/04/28 03:09:02 rxg Exp $
             'dependencies': [
               '../build/linux/system.gyp:gtk',
               '../build/linux/system.gyp:nss',
-@@ -3065,7 +3065,7 @@
+@@ -3228,7 +3228,7 @@
            # See comments about "xcode_settings" elsewhere in this file.
            'xcode_settings': {'OTHER_LDFLAGS': ['-Wl,-ObjC']},
          }],
@@ -235,7 +235,7 @@ $NetBSD: patch-chrome_chrome__tests.gypi,v 1.1 2011/04/28 03:09:02 rxg Exp $
             'dependencies': [
               '../build/linux/system.gyp:gtk',
               '../build/linux/system.gyp:nss',
-@@ -3148,7 +3148,7 @@
+@@ -3311,7 +3311,7 @@
              'test/perf/url_parse_perftest.cc',
            ],
            'conditions': [
@@ -244,7 +244,7 @@ $NetBSD: patch-chrome_chrome__tests.gypi,v 1.1 2011/04/28 03:09:02 rxg Exp $
                'dependencies': [
                  '../build/linux/system.gyp:gtk',
                  '../tools/xdisplaycheck/xdisplaycheck.gyp:xdisplaycheck',
-@@ -3539,7 +3539,7 @@
+@@ -3705,7 +3705,7 @@
                  '../courgette/courgette.gyp:courgette_unittests',
                  'browser_tests',
                  ]}],

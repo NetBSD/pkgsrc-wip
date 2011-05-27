@@ -1,6 +1,6 @@
-$NetBSD: patch-remoting_remoting.gyp,v 1.1 2011/04/28 03:09:03 rxg Exp $
+$NetBSD: patch-remoting_remoting.gyp,v 1.2 2011/05/27 13:23:09 rxg Exp $
 
---- remoting/remoting.gyp.orig	2011-04-13 08:01:07.000000000 +0000
+--- remoting/remoting.gyp.orig	2011-05-24 08:01:04.000000000 +0000
 +++ remoting/remoting.gyp
 @@ -16,7 +16,7 @@
    },
@@ -47,7 +47,7 @@ $NetBSD: patch-remoting_remoting.gyp,v 1.1 2011/04/28 03:09:03 rxg Exp $
            'sources': [
              'client/x11_client.cc',
              'client/x11_input_handler.cc',
-@@ -99,7 +109,7 @@
+@@ -112,7 +122,7 @@
              '../media/base/yuv_row_win.cc',
            ],
          }],
@@ -56,8 +56,8 @@ $NetBSD: patch-remoting_remoting.gyp,v 1.1 2011/04/28 03:09:03 rxg Exp $
            'sources': [
              '../media/base/yuv_row_posix.cc',
            ],
-@@ -221,7 +231,11 @@
-             'host/event_executor_win.h',
+@@ -237,7 +247,11 @@
+             'host/user_authenticator_win.cc',
            ],
          }],
 -        ['OS=="linux"', {
@@ -69,15 +69,16 @@ $NetBSD: patch-remoting_remoting.gyp,v 1.1 2011/04/28 03:09:03 rxg Exp $
            'sources': [
              'host/capturer_linux.cc',
              'host/capturer_linux.h',
-@@ -233,6 +247,7 @@
-               '-lX11',
-               '-lXdamage',
-               '-lXtst',
-+              '-lvpx',
-             ],
-           },
-         }],
-@@ -500,7 +515,7 @@
+@@ -474,7 +488,7 @@
+         '..',
+       ],
+       'conditions': [
+-        [ 'OS == "linux" or OS == "freebsd" or OS == "openbsd"', {
++        [ 'OS == "linux" or OS == "dragonfly" or OS == "freebsd" or OS == "netbsd" or OS == "openbsd"', {
+           'cflags': [
+             '-msse2',
+           ],
+@@ -573,7 +587,7 @@
              'host/capturer_gdi_unittest.cc',
            ],
          }],

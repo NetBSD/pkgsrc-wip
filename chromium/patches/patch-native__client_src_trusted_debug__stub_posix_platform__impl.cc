@@ -1,6 +1,6 @@
-$NetBSD: patch-native__client_src_trusted_debug__stub_posix_platform__impl.cc,v 1.1 2011/04/28 03:09:02 rxg Exp $
+$NetBSD: patch-native__client_src_trusted_debug__stub_posix_platform__impl.cc,v 1.2 2011/05/27 13:23:09 rxg Exp $
 
---- native_client/src/trusted/debug_stub/posix/platform_impl.cc.orig	2011-04-13 08:13:06.000000000 +0000
+--- native_client/src/trusted/debug_stub/posix/platform_impl.cc.orig	2011-05-24 08:19:25.000000000 +0000
 +++ native_client/src/trusted/debug_stub/posix/platform_impl.cc
 @@ -11,6 +11,9 @@
  #include <sys/types.h>
@@ -12,12 +12,14 @@ $NetBSD: patch-native__client_src_trusted_debug__stub_posix_platform__impl.cc,v 
  
  #include <map>
  #include <vector>
-@@ -49,13 +52,21 @@ struct StartInfo_t {
+@@ -49,13 +52,25 @@ struct StartInfo_t {
  
  // Get the OS id of this thread
  uint32_t IPlatform::GetCurrentThread() {
 +#if defined(__NetBSD__)
 +  return static_cast<uint32_t>(_lwp_self());
++#elif defined(__DragonFly__)
++  return static_cast<uint32_t>(lwp_gettid());
 +#else
    return static_cast<uint32_t>(syscall(SYS_gettid));
 +#endif
@@ -28,6 +30,8 @@ $NetBSD: patch-native__client_src_trusted_debug__stub_posix_platform__impl.cc,v 
    StartInfo_t* info = reinterpret_cast<StartInfo_t*>(cookie);
 +#if defined(__NetBSD__)
 +  info->id_ = (uint32_t) _lwp_self();
++#elif defined(__DragonFly__)
++  info->id_ = (uint32_t) lwp_gettid();
 +#else
    info->id_ = (uint32_t) syscall(SYS_gettid);
 +#endif

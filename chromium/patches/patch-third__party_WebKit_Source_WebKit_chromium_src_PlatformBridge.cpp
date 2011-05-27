@@ -1,6 +1,6 @@
-$NetBSD: patch-third__party_WebKit_Source_WebKit_chromium_src_PlatformBridge.cpp,v 1.1 2011/04/28 03:09:03 rxg Exp $
+$NetBSD: patch-third__party_WebKit_Source_WebKit_chromium_src_PlatformBridge.cpp,v 1.2 2011/05/27 13:23:09 rxg Exp $
 
---- third_party/WebKit/Source/WebKit/chromium/src/PlatformBridge.cpp.orig	2011-04-13 08:12:09.000000000 +0000
+--- third_party/WebKit/Source/WebKit/chromium/src/PlatformBridge.cpp.orig	2011-05-24 08:03:03.000000000 +0000
 +++ third_party/WebKit/Source/WebKit/chromium/src/PlatformBridge.cpp
 @@ -70,7 +70,7 @@
  #include "win/WebThemeEngine.h"
@@ -11,16 +11,16 @@ $NetBSD: patch-third__party_WebKit_Source_WebKit_chromium_src_PlatformBridge.cpp
  #include "linux/WebThemeEngine.h"
  #include "WebFontInfo.h"
  #include "WebFontRenderStyle.h"
-@@ -436,7 +436,7 @@ bool PlatformBridge::ensureFontLoaded(HF
+@@ -432,7 +432,7 @@ bool PlatformBridge::ensureFontLoaded(HF
  }
  #endif
  
 -#if OS(LINUX) || OS(FREEBSD)
 +#if OS(LINUX) || OS(BSD)
- String PlatformBridge::getFontFamilyForCharacters(const UChar* characters, size_t numCharacters)
+ String PlatformBridge::getFontFamilyForCharacters(const UChar* characters, size_t numCharacters, const char* preferredLocale)
  {
      if (webKitClient()->sandboxSupport())
-@@ -778,7 +778,7 @@ void PlatformBridge::paintProgressBar(
+@@ -773,7 +773,7 @@ void PlatformBridge::paintProgressBar(
          gc->platformContext()->canvas(), barRect, valueRect, determinate, animatedSeconds);
  }
  

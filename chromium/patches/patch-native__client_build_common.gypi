@@ -1,8 +1,8 @@
-$NetBSD: patch-native__client_build_common.gypi,v 1.1 2011/04/28 03:09:02 rxg Exp $
+$NetBSD: patch-native__client_build_common.gypi,v 1.2 2011/05/27 13:23:09 rxg Exp $
 
---- native_client/build/common.gypi.orig	2011-04-13 08:13:11.000000000 +0000
+--- native_client/build/common.gypi.orig	2011-05-24 08:19:29.000000000 +0000
 +++ native_client/build/common.gypi
-@@ -78,12 +78,12 @@
+@@ -71,12 +71,12 @@
        # Compute the architecture that we're building for. Default to the
        # architecture that we're building on.
        'conditions': [
@@ -17,7 +17,7 @@ $NetBSD: patch-native__client_build_common.gypi,v 1.1 2011/04/28 03:09:02 rxg Ex
          }, {  # OS!="linux"
            'target_arch%': 'ia32',
          }],
-@@ -375,7 +375,7 @@
+@@ -358,7 +358,7 @@
      },
    },
    'conditions': [
@@ -26,7 +26,7 @@ $NetBSD: patch-native__client_build_common.gypi,v 1.1 2011/04/28 03:09:02 rxg Ex
        'target_defaults': {
          # Enable -Werror by default, but put it in a variable so it can
          # be disabled in ~/.gyp/include.gypi on the valgrind builders.
-@@ -458,6 +458,7 @@
+@@ -441,11 +441,20 @@
            'NACL_OSX=0',
            'NACL_WINDOWS=0',
            '_BSD_SOURCE=1',
@@ -34,3 +34,16 @@ $NetBSD: patch-native__client_build_common.gypi,v 1.1 2011/04/28 03:09:02 rxg Ex
            '_POSIX_C_SOURCE=199506',
            '_XOPEN_SOURCE=600',
            '_GNU_SOURCE=1',
+           '__STDC_LIMIT_MACROS=1',
+         ],
++        'conditions': [
++          ['OS=="dragonfly"', {
++            'defines!': [
++              '_POSIX_C_SOURCE=199506',
++              '_XOPEN_SOURCE=600',
++            ],
++          }],
++        ],
+         'link_settings': {
+           'libraries': [
+             '-lrt',

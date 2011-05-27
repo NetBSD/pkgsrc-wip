@@ -1,0 +1,20 @@
+$NetBSD: patch-chrome_browser_browser__resources.grd,v 1.1 2011/05/27 13:23:09 rxg Exp $
+
+--- chrome/browser/browser_resources.grd.orig	2011-05-24 08:01:43.000000000 +0000
++++ chrome/browser/browser_resources.grd
+@@ -14,13 +14,13 @@ without changes to the corresponding grd
+       <if expr="os.find('win') != -1">
+         <include name="IDR_ABOUT_CONFLICTS_HTML" file="resources\about_conflicts.html" flattenhtml="true" type="BINDATA" />
+       </if>
+-      <if expr="os == 'linux2' or os.find('bsd') != -1">
++      <if expr="os == 'linux2' or os.find('bsd') != -1 or os == 'dragonfly2'">
+         <include name="IDR_ABOUT_MEMORY_HTML" file="resources\about_memory_linux.html" flattenhtml="true" type="BINDATA" />
+       </if>
+       <if expr="os == 'darwin'">
+         <include name="IDR_ABOUT_MEMORY_HTML" file="resources\about_memory_mac.html" flattenhtml="true" type="BINDATA" />
+       </if>
+-      <if expr="os != 'linux2' and os != 'darwin' and os.find('bsd') == -1">
++      <if expr="os != 'linux2' and os != 'darwin' and os.find('bsd') == -1 and os != 'dragonfly2'">
+         <include name="IDR_ABOUT_MEMORY_HTML" file="resources\about_memory.html" flattenhtml="true" type="BINDATA" />
+       </if>
+       <include name="IDR_ABOUT_STATS_HTML" file="resources\about_stats.html" flattenhtml="true" type="BINDATA" />

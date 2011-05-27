@@ -1,8 +1,8 @@
-$NetBSD: patch-app_surface_transport__dib__openbsd.cc,v 1.1 2011/04/28 03:09:02 rxg Exp $
+$NetBSD: patch-app_surface_transport__dib__openbsd.cc,v 1.2 2011/05/27 13:23:09 rxg Exp $
 
---- app/surface/transport_dib_openbsd.cc.orig	2011-04-26 05:17:11.000000000 +0000
+--- app/surface/transport_dib_openbsd.cc.orig	2011-05-26 07:36:59.000000000 +0000
 +++ app/surface/transport_dib_openbsd.cc
-@@ -0,0 +1,96 @@
+@@ -0,0 +1,102 @@
 +// Copyright (c) 2009 The Chromium Authors. All rights reserved.
 +// Use of this source code is governed by a BSD-style license that can be
 +// found in the LICENSE file.
@@ -13,8 +13,9 @@ $NetBSD: patch-app_surface_transport__dib__openbsd.cc,v 1.1 2011/04/28 03:09:02 
 +#include <sys/stat.h>
 +
 +#include "base/eintr_wrapper.h"
-+#include "base/shared_memory.h"
++#include "base/logging.h"
 +#include "base/scoped_ptr.h"
++#include "base/shared_memory.h"
 +#include "skia/ext/platform_canvas.h"
 +
 +TransportDIB::TransportDIB()
@@ -54,6 +55,20 @@ $NetBSD: patch-app_surface_transport__dib__openbsd.cc,v 1.1 2011/04/28 03:09:02 
 +  return new TransportDIB(handle);
 +}
 +
++// static
++bool TransportDIB::is_valid(Handle dib) {
++  return dib.fd >= 0;
++}
++
++skia::PlatformCanvas* TransportDIB::GetPlatformCanvas(int w, int h) {
++  if (!memory() && !Map())
++    return NULL;
++  scoped_ptr<skia::PlatformCanvas> canvas(new skia::PlatformCanvas);
++  if (!canvas->initialize(w, h, true, reinterpret_cast<uint8_t*>(memory())))
++    return NULL;
++  return canvas.release();
++}
++
 +bool TransportDIB::Map() {
 +  if (!is_valid(handle()))
 +    return false;
@@ -68,15 +83,6 @@ $NetBSD: patch-app_surface_transport__dib__openbsd.cc,v 1.1 2011/04/28 03:09:02 
 +
 +  size_ = st.st_size;
 +  return true;
-+}
-+
-+bool TransportDIB::is_valid(Handle dib) {
-+  return dib.fd >= 0;
-+}
-+
-+skia::PlatformCanvas* TransportDIB::GetPlatformCanvas(int w, int h) {
-+  return new skia::PlatformCanvas(w, h, true,
-+                                  reinterpret_cast<uint8_t*>(memory()));
 +}
 +
 +void* TransportDIB::memory() const {

@@ -1,17 +1,15 @@
-$NetBSD: patch-media_audio_openbsd_audio__manager__openbsd.cc,v 1.1 2011/04/28 03:09:02 rxg Exp $
+$NetBSD: patch-media_audio_openbsd_audio__manager__openbsd.cc,v 1.2 2011/05/27 13:23:09 rxg Exp $
 
---- media/audio/openbsd/audio_manager_openbsd.cc.orig	2011-04-13 08:01:06.000000000 +0000
+--- media/audio/openbsd/audio_manager_openbsd.cc.orig	2011-05-24 08:01:03.000000000 +0000
 +++ media/audio/openbsd/audio_manager_openbsd.cc
-@@ -4,21 +4,23 @@
+@@ -4,9 +4,13 @@
  
  #include "media/audio/openbsd/audio_manager_openbsd.h"
  
 +#include "base/command_line.h"
  #include "base/logging.h"
 -
--namespace {
--AudioManagerOpenBSD* g_audio_manager = NULL;
--}  // namespace
+-static AudioManagerOpenBSD* g_audio_manager = NULL;
 +#include "media/audio/audio_output_dispatcher.h"
 +#include "media/audio/fake_audio_input_stream.h"
 +#include "media/audio/fake_audio_output_stream.h"
@@ -20,19 +18,7 @@ $NetBSD: patch-media_audio_openbsd_audio__manager__openbsd.cc,v 1.1 2011/04/28 0
  
  // Implementation of AudioManager.
  bool AudioManagerOpenBSD::HasAudioOutputDevices() {
-   NOTIMPLEMENTED();
--  return false;
-+  return true;
- }
- 
- bool AudioManagerOpenBSD::HasAudioInputDevices() {
-   NOTIMPLEMENTED();
--  return false;
-+  return true;
- }
- 
- AudioOutputStream* AudioManagerOpenBSD::MakeAudioOutputStream(
-@@ -51,6 +53,10 @@ void AudioManagerOpenBSD::UnMuteAll() {
+@@ -49,6 +53,10 @@ void AudioManagerOpenBSD::UnMuteAll() {
    NOTIMPLEMENTED();
  }
  

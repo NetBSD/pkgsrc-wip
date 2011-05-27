@@ -1,6 +1,6 @@
-$NetBSD: patch-base_base.gyp,v 1.1 2011/04/28 03:09:02 rxg Exp $
+$NetBSD: patch-base_base.gyp,v 1.2 2011/05/27 13:23:09 rxg Exp $
 
---- base/base.gyp.orig	2011-04-13 08:01:34.000000000 +0000
+--- base/base.gyp.orig	2011-05-24 08:01:33.000000000 +0000
 +++ base/base.gyp
 @@ -20,7 +20,7 @@
          '../third_party/icu/icu.gyp:icuuc',
@@ -11,7 +11,16 @@ $NetBSD: patch-base_base.gyp,v 1.1 2011/04/28 03:09:02 rxg Exp $
            'dependencies': [
              # i18n/rtl.cc uses gtk
              '../build/linux/system.gyp:gtk',
-@@ -184,7 +184,7 @@
+@@ -69,7 +69,7 @@
+         'bits_unittest.cc',
+         'callback_unittest.cc',
+         'command_line_unittest.cc',
+-        'cpu_unittest.cc',
++        #'cpu_unittest.cc',
+         'crypto/encryptor_unittest.cc',
+         'crypto/rsa_private_key_unittest.cc',
+         'crypto/rsa_private_key_nss_unittest.cc',
+@@ -188,7 +188,7 @@
          '../testing/gtest.gyp:gtest',
        ],
        'conditions': [
@@ -20,7 +29,7 @@ $NetBSD: patch-base_base.gyp,v 1.1 2011/04/28 03:09:02 rxg Exp $
            'sources!': [
              'file_version_info_unittest.cc',
            ],
-@@ -249,7 +249,7 @@
+@@ -253,7 +253,7 @@
          '../testing/gtest.gyp:gtest',
        ],
        'conditions': [
@@ -29,7 +38,7 @@ $NetBSD: patch-base_base.gyp,v 1.1 2011/04/28 03:09:02 rxg Exp $
            'dependencies': [
              # test_suite initializes GTK.
              '../build/linux/system.gyp:gtk',
-@@ -294,7 +294,7 @@
+@@ -298,7 +298,7 @@
          ],
        },
        'conditions': [

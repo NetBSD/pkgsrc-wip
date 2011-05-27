@@ -1,8 +1,8 @@
-$NetBSD: patch-third__party_sqlite_sqlite.gyp,v 1.1 2011/04/28 03:09:03 rxg Exp $
+$NetBSD: patch-third__party_sqlite_sqlite.gyp,v 1.2 2011/05/27 13:23:09 rxg Exp $
 
---- third_party/sqlite/sqlite.gyp.orig	2011-04-13 08:01:30.000000000 +0000
+--- third_party/sqlite/sqlite.gyp.orig	2011-05-24 08:01:29.000000000 +0000
 +++ third_party/sqlite/sqlite.gyp
-@@ -31,7 +31,7 @@
+@@ -41,7 +41,7 @@
              ],
            },
          }],
@@ -11,7 +11,16 @@ $NetBSD: patch-third__party_sqlite_sqlite.gyp,v 1.1 2011/04/28 03:09:03 rxg Exp 
            'type': 'settings',
            'direct_dependent_settings': {
              'cflags': [
-@@ -229,7 +229,7 @@
+@@ -233,7 +233,7 @@
+             }, {  # else: OS!="win"
+               'sources/': [['exclude', '_(w32|win)\\.cc?$']],
+             }],
+-            ['OS=="linux"', {
++            ['OS=="linux" or OS=="dragonfly" or OS=="freebsd" or OS=="netbsd" or OS=="openbsd"', {
+               'cflags': [
+                 # SQLite doesn't believe in compiler warnings,
+                 # preferring testing.
+@@ -248,7 +248,7 @@
      },
    ],
    'conditions': [

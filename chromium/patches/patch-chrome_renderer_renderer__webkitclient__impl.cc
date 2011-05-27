@@ -1,6 +1,6 @@
-$NetBSD: patch-chrome_renderer_renderer__webkitclient__impl.cc,v 1.1 2011/04/28 03:09:02 rxg Exp $
+$NetBSD: patch-chrome_renderer_renderer__webkitclient__impl.cc,v 1.2 2011/05/27 13:23:09 rxg Exp $
 
---- chrome/renderer/renderer_webkitclient_impl.cc.orig	2011-04-13 08:01:45.000000000 +0000
+--- chrome/renderer/renderer_webkitclient_impl.cc.orig	2011-05-24 08:01:44.000000000 +0000
 +++ chrome/renderer/renderer_webkitclient_impl.cc
 @@ -55,7 +55,7 @@
  #include "third_party/WebKit/Source/WebKit/chromium/public/mac/WebSandboxSupport.h"
@@ -18,9 +18,9 @@ $NetBSD: patch-chrome_renderer_renderer__webkitclient__impl.cc,v 1.1 2011/04/28 
 -#elif defined(OS_LINUX)
 +#elif defined(OS_LINUX) || defined(OS_BSD)
    virtual WebKit::WebString getFontFamilyForCharacters(
-       const WebKit::WebUChar* characters, size_t numCharacters);
-   virtual void getRenderStyleForStrike(
-@@ -419,7 +419,7 @@ bool RendererWebKitClientImpl::SandboxSu
+       const WebKit::WebUChar* characters,
+       size_t numCharacters,
+@@ -430,7 +430,7 @@ bool RendererWebKitClientImpl::SandboxSu
    return RenderThread::current()->Send(new ViewHostMsg_PreCacheFont(logfont));
  }
  
@@ -28,4 +28,4 @@ $NetBSD: patch-chrome_renderer_renderer__webkitclient__impl.cc,v 1.1 2011/04/28 
 +#elif defined(OS_LINUX) || defined(OS_BSD)
  
  WebString RendererWebKitClientImpl::SandboxSupport::getFontFamilyForCharacters(
-     const WebKit::WebUChar* characters, size_t num_characters) {
+     const WebKit::WebUChar* characters,
