@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/05/15 04:18:09 schnoebe Exp $
+# $NetBSD: Makefile,v 1.2 2011/05/27 03:26:10 schnoebe Exp $
 #
 
 DISTNAME=	construct-2.04
@@ -34,6 +34,4 @@ PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 #	${PYTHONBIN} -c "import numpy; numpy.test()"
 
 .include "../../lang/python/egg.mk"
-# .include "../../lang/python/application.mk"
-# .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
