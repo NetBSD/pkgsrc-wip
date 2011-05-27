@@ -1,47 +1,13 @@
-$NetBSD: patch-ak,v 1.1.1.1 2008/10/26 20:27:57 bsadewitz Exp $
+$NetBSD: patch-ak,v 1.2 2011/05/27 20:42:56 reinoudz70 Exp $
 
---- build.po.mk.orig	2008-10-04 21:55:45.000000000 -0400
+--- build.po.mk.orig	2010-08-12 04:24:57.000000000 +0000
 +++ build.po.mk
-@@ -104,21 +104,21 @@ install-po:
+@@ -104,7 +104,7 @@ install-po:
  	@export _mos="${MOS}"; \
  	if [ "${ENABLE_NLS}" = "yes" -a "${HAVE_GETTEXT}" = "yes" \
  	     -a "$$_mos" != "" ]; then \
 -            if [ ! -d "${LOCALEDIR}" ]; then \
--                echo "${INSTALL_DATA_DIR} ${LOCALEDIR}"; \
--                ${SUDO} ${INSTALL_DATA_DIR} ${LOCALEDIR}; \
 +            if [ ! -d "${DESTDIR}${LOCALEDIR}" ]; then \
-+                echo "${INSTALL_DATA_DIR} ${DESTDIR}${LOCALEDIR}"; \
-+                ${SUDO} ${INSTALL_DATA_DIR} ${DESTDIR}${LOCALEDIR}; \
+                 echo "${INSTALL_DATA_DIR} ${LOCALEDIR}"; \
+                 ${SUDO} ${INSTALL_DATA_DIR} ${DESTDIR}${LOCALEDIR}; \
              fi; \
-             for F in $$_mos; do \
- 	        _lang=`echo $$F | sed 's,\.mo,,'`; \
--                echo "${INSTALL_DATA_DIR} ${LOCALEDIR}/$$_lang"; \
--                ${SUDO} ${INSTALL_DATA_DIR} ${LOCALEDIR}/$$_lang; \
--                echo "${INSTALL_DATA_DIR} ${LOCALEDIR}/$$_lang/LC_MESSAGES"; \
--                ${SUDO} ${INSTALL_DATA_DIR} ${LOCALEDIR}/$$_lang/LC_MESSAGES; \
-+                echo "${INSTALL_DATA_DIR} ${DESTDIR}${LOCALEDIR}/$$_lang"; \
-+                ${SUDO} ${INSTALL_DATA_DIR} ${DESTDIR}${LOCALEDIR}/$$_lang; \
-+                echo "${INSTALL_DATA_DIR} ${DESTDIR}${LOCALEDIR}/$$_lang/LC_MESSAGES"; \
-+                ${SUDO} ${INSTALL_DATA_DIR} ${DESTDIR}${LOCALEDIR}/$$_lang/LC_MESSAGES; \
- 		cp -f $$F ${DOMAIN}.mo; \
-                 echo "${INSTALL_DATA} ${DOMAIN}.mo \
--		    ${LOCALEDIR}/$$_lang/LC_MESSAGES"; \
-+		    ${DESTDIR}${LOCALEDIR}/$$_lang/LC_MESSAGES"; \
-                 ${SUDO} ${INSTALL_DATA} ${DOMAIN}.mo \
--		    ${LOCALEDIR}/$$_lang/LC_MESSAGES; \
-+		    ${DESTDIR}${LOCALEDIR}/$$_lang/LC_MESSAGES; \
- 		rm -f ${DOMAIN}.mo; \
-             done; \
- 	else \
-@@ -131,9 +131,9 @@ deinstall-po:
-             for F in $$_mos; do \
- 	        _lang=`echo $$F | sed 's,\.mo,,'`; \
-                 echo "${DEINSTALL_DATA} \
--		    ${LOCALEDIR}/$$_lang/LC_MESSAGES/${DOMAIN}.mo"; \
-+		    ${DESTDIR}${LOCALEDIR}/$$_lang/LC_MESSAGES/${DOMAIN}.mo"; \
-                 ${SUDO} ${DEINSTALL_DATA} \
--		    ${LOCALEDIR}/$$_lang/LC_MESSAGES/${DOMAIN}.mo; \
-+		    ${DESTDIR}${LOCALEDIR}/$$_lang/LC_MESSAGES/${DOMAIN}.mo; \
-             done; \
- 	fi
- 

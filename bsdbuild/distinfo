@@ -1,18 +1,15 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/10/26 20:27:57 bsadewitz Exp $
+$NetBSD: distinfo,v 1.2 2011/05/27 20:42:56 reinoudz70 Exp $
 
-SHA1 (bsdbuild-102608.tar.gz) = 567b14675a050c5c12094684267ec4eea5b28afd
-RMD160 (bsdbuild-102608.tar.gz) = fff57da27d46fe4b65fdcc6cc9d81a2457498591
-Size (bsdbuild-102608.tar.gz) = 123760 bytes
-SHA1 (patch-aa) = 4e371e260aa75b849865e232a3ff530fa2b71e83
-SHA1 (patch-ab) = 350d007fe183bdb0fb91323375526c228944cad1
-SHA1 (patch-ac) = c9c871778eda10c85c5f15f36d45b64f8d2e2943
-SHA1 (patch-ad) = 78e2e8da887fc9a6710a0901b30ac14883e6a033
-SHA1 (patch-ae) = 166a819e32d1cbfbc6bbf42ccc1653316becda18
-SHA1 (patch-af) = a202d3d209111e1e2ebcec3c67cbbf064a46fdcc
-SHA1 (patch-ag) = c9409238afd03967674674c3065e2695f5167bcc
-SHA1 (patch-ah) = 5676bd32f86a1528bc77434120b09c6c4bfea12e
+SHA1 (bsdbuild-2.8.tar.gz) = 83a1124aebabecae15f4ffdd4a3d5cb9e117751a
+RMD160 (bsdbuild-2.8.tar.gz) = f5c617a23f99359d509d682125b096040141584e
+Size (bsdbuild-2.8.tar.gz) = 213331 bytes
+SHA1 (patch-aa) = a4567dd3a0c7cacc95af954eb7b905fc7eee4a20
+SHA1 (patch-ab) = 00adbc03877e358901f29e37ab30625d4102419f
+SHA1 (patch-ad) = 88e3b2ec06521ac953821dad94f360c01eae3fad
+SHA1 (patch-ag) = d303e160ecfbe880c629a6216924fe5d8c381f6c
 SHA1 (patch-ai) = 9449ec32f3636159bdfb1a55fbea95ddd68c4cf5
-SHA1 (patch-aj) = cae1f25aa8ff7d6a386d6c38153f75dff6738e63
-SHA1 (patch-ak) = 42f1845d3a73c760a7747e64fc6b34efac0d37c0
-SHA1 (patch-al) = d0f53284dd8036d4ed58e1a6a38dcc28af8a053e
-SHA1 (patch-am) = b1521ad4a473e26d5e5cbb3d9420776c6f87f670
+SHA1 (patch-ak) = 457971c1602f747645d634ff7eed15602696f345
+SHA1 (patch-al) = 45ac37529eb7a6bcf1e4b5e1f98cf9400d3c06ba
+SHA1 (patch-ao) = 6f09d52db3fc6622ab9e1f46796d5094db274dec
+SHA1 (patch-ap) = 64f3ee47cfdc3b42d0afc0f175123cb012cade06
+SHA1 (patch-aq) = 009011c084557ba39945a5597847ccf4d79c2227

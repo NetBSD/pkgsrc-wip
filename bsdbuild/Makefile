@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2011/02/28 14:53:17 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2011/05/27 20:42:56 reinoudz70 Exp $
 #
 
-DISTNAME=	bsdbuild-102608
+DISTNAME=	bsdbuild-2.8
 CATEGORIES=	devel
-MASTER_SITES=	http://ftp.NetBSD.org/pub/NetBSD/misc/bjs/distfiles/
+MASTER_SITES=	http://stable.hypertriton.com/bsdbuild/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.hypertriton.com/bsdbuild/

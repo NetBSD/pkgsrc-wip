@@ -1,15 +1,15 @@
-$NetBSD: patch-al,v 1.1.1.1 2008/10/26 20:27:57 bsadewitz Exp $
+$NetBSD: patch-al,v 1.2 2011/05/27 20:42:56 reinoudz70 Exp $
 
---- configure.orig	2008-10-21 04:29:05.000000000 -0400
+--- configure.orig	2011-01-25 03:28:04.000000000 +0000
 +++ configure
-@@ -336,9 +336,7 @@ fi
+@@ -531,9 +531,7 @@ if [ "${with_ctags}" = "yes" ]; then
+ 	fi
+ fi
  echo "CTAGS=${CTAGS}" >> Makefile.config
- 
- # Default to bundled libtool.
 -LIBTOOL_BUNDLED="yes"
 -LIBTOOL=\${TOP}/mk/libtool/libtool
 -echo "LIBTOOL=${LIBTOOL}" >> Makefile.config
 +LIBTOOL_BUNDLED="no"
- 
- #
- # Process the installation paths.
+ echo "PREFIX?=${PREFIX}" >> Makefile.config
+ echo "#ifndef PREFIX" > config/prefix.h
+ echo "#define PREFIX \"$PREFIX\"" >> config/prefix.h

@@ -1,128 +1,61 @@
-$NetBSD: patch-ag,v 1.1.1.1 2008/10/26 20:27:57 bsadewitz Exp $
+$NetBSD: patch-ag,v 1.2 2011/05/27 20:42:56 reinoudz70 Exp $
 
---- build.www.mk.orig	2008-03-13 23:04:16.000000000 -0400
+--- build.www.mk.orig	2010-09-05 12:10:58.000000000 +0000
 +++ build.www.mk
-@@ -121,53 +121,53 @@ clean-www:
- 	fi
- 
- install-www:
--	@if [ "${HTMLDIR}" = "none" ]; then \
-+	@if [ "${DESTDIR}${HTMLDIR}"" = "none" ]; then \
- 		exit 0; \
- 	fi
--	@if [ ! -d "${HTMLDIR}" ]; then \
--		echo "${INSTALL_DATA_DIR} ${HTMLDIR}"; \
--		${SUDO} ${INSTALL_DATA_DIR} ${HTMLDIR}; \
-+	@if [ ! -d "${DESTDIR}${HTMLDIR}"" ]; then \
-+		echo "${INSTALL_DATA_DIR} ${DESTDIR}${HTMLDIR}"; \
-+		${SUDO} ${INSTALL_DATA_DIR} ${DESTDIR}${HTMLDIR}; \
+@@ -143,7 +143,7 @@ install-www:
+ 		${SUDO} ${INSTALL_DATA_DIR} ${DESTDIR}${HTMLDIR}; \
  	fi
  	@if [ "${HTML_INSTSOURCE}" = "Yes" ]; then \
 -		if [ ! -d "${HTMLDIR}/mk" ]; then \
--			echo "${INSTALL_DATA_DIR} ${HTMLDIR}/mk"; \
--			${SUDO} ${INSTALL_DATA_DIR} ${HTMLDIR}/mk; \
-+		if [ ! -d "${DESTDIR}${HTMLDIR}"/mk" ]; then \
-+			echo "${INSTALL_DATA_DIR} ${DESTDIR}${HTMLDIR}/mk"; \
-+			${SUDO} ${INSTALL_DATA_DIR} ${DESTDIR}${HTMLDIR}/mk; \
++		if [ ! -d "${DESTDIR}${HTMLDIR}/mk" ]; then \
+ 			echo "${INSTALL_DATA_DIR} ${HTMLDIR}/mk"; \
+ 			${SUDO} ${INSTALL_DATA_DIR} ${DESTDIR}${HTMLDIR}/mk; \
  		fi; \
- 		for MK in ${MKDEPS}; do \
--			echo "${INSTALL_DATA} ${TOP}/mk/$$MK ${HTMLDIR}/mk"; \
--			${SUDO} ${INSTALL_DATA} ${TOP}/mk/$$MK ${HTMLDIR}/mk; \
-+			echo "${INSTALL_DATA} ${TOP}/mk/$$MK ${DESTDIR}${HTMLDIR}/mk"; \
-+			${SUDO} ${INSTALL_DATA} ${TOP}/mk/$$MK ${DESTDIR}${HTMLDIR}/mk; \
+@@ -152,12 +152,12 @@ install-www:
+ 			${SUDO} ${INSTALL_DATA} ${TOP}/mk/$$MK \
+ 			    ${DESTDIR}${HTMLDIR}/mk; \
  		done; \
 -       		if [ ! -d "${HTMLDIR}/xsl" ]; then \
--			echo "${INSTALL_DATA_DIR} ${HTMLDIR}/xsl"; \
--			${SUDO} ${INSTALL_DATA_DIR} ${HTMLDIR}/xsl; \
-+       		if [ ! -d "${DESTDIR}${HTMLDIR}"/xsl" ]; then \
-+			echo "${INSTALL_DATA_DIR} ${DESTDIR}${HTMLDIR}/xsl"; \
-+			${SUDO} ${INSTALL_DATA_DIR} ${DESTDIR}${HTMLDIR}/xsl; \
++       		if [ ! -d "${DESTDIR}${HTMLDIR}/xsl" ]; then \
+ 			echo "${INSTALL_DATA_DIR} ${HTMLDIR}/xsl"; \
+ 			${SUDO} ${INSTALL_DATA_DIR} ${DESTDIR}${HTMLDIR}/xsl; \
  		fi; \
  		for XSL in ${XSL}; do \
 -			if [ -e "${HTMLDIR}/xsl/$$XSL" \
-+			if [ -e "${DESTDIR}${HTMLDIR}"/xsl/$$XSL" \
++			if [ -e "${DESTDIR}${HTMLDIR}/xsl/$$XSL" \
  			     -a "${HTML_OVERWRITE}" = "" ]; then \
  				echo "xsl/$$XSL: exists; preserving"; \
  			else \
--				echo "${INSTALL_DATA} $$XSL ${HTMLDIR}/xsl"; \
--				${SUDO} ${INSTALL_DATA} $$XSL ${HTMLDIR}/xsl; \
-+				echo "${INSTALL_DATA} $$XSL ${DESTDIR}${HTMLDIR}/xsl"; \
-+				${SUDO} ${INSTALL_DATA} $$XSL ${DESTDIR}${HTMLDIR}/xsl; \
+@@ -166,12 +166,12 @@ install-www:
+ 				    ${DESTDIR}${HTMLDIR}/xsl; \
  			fi; \
  		done; \
 -		if [ ! -d "${HTMLDIR}/m4" ]; then \
--			echo "${INSTALL_DATA_DIR} ${HTMLDIR}/m4"; \
--			${SUDO} ${INSTALL_DATA_DIR} ${HTMLDIR}/m4; \
-+		if [ ! -d "${DESTDIR}${HTMLDIR}"/m4" ]; then \
-+			echo "${INSTALL_DATA_DIR} ${DESTDIR}${HTMLDIR}/m4"; \
-+			${SUDO} ${INSTALL_DATA_DIR} ${DESTDIR}${HTMLDIR}/m4; \
++		if [ ! -d "${DESTDIR}${HTMLDIR}/m4" ]; then \
+ 			echo "${INSTALL_DATA_DIR} ${HTMLDIR}/m4"; \
+ 			${SUDO} ${INSTALL_DATA_DIR} ${DESTDIR}${HTMLDIR}/m4; \
  		fi; \
- 		(cd m4; for M4IN in `ls -1 *.m4`; do \
+ 		(cd ${BASEDIR}; for M4IN in `ls -1 *.m4`; do \
 -			if [ -e "${HTMLDIR}/m4/$$M4IN" \
-+			if [ -e "${DESTDIR}${HTMLDIR}"/m4/$$M4IN" \
++			if [ -e "${DESTDIR}${HTMLDIR}/m4/$$M4IN" \
  			     -a "${HTML_OVERWRITE}" = "" ]; then \
  				echo "m4/$$M4IN: exists; preserving"; \
  			else \
--				echo "${INSTALL_DATA} $$M4IN ${HTMLDIR}/m4"; \
--				${SUDO} ${INSTALL_DATA} $$M4IN ${HTMLDIR}/m4; \
-+				echo "${INSTALL_DATA} $$M4IN ${DESTDIR}${HTMLDIR}/m4"; \
-+				${SUDO} ${INSTALL_DATA} $$M4IN ${DESTDIR}${HTMLDIR}/m4; \
- 			fi; \
- 		done); \
- 	fi
- 	@for F in ${HTML}; do \
- 		rm -f $$F; \
- 		if [ "${HTML_INSTSOURCE}" = "Yes" -a \
--		     ! -e "${HTMLDIR}/Makefile" ]; then \
-+		     ! -e "${DESTDIR}${HTMLDIR}"/Makefile" ]; then \
- 			echo "TOP=." > Makefile.prep; \
- 			echo "HTML=${HTML}" >> Makefile.prep; \
- 			echo "HTMLDIR=none" >> Makefile.prep; \
-@@ -180,36 +180,36 @@ install-www:
- 			echo "XSL=${XSL}" >> Makefile.prep; \
- 			echo "include mk/build.www.mk" >> Makefile.prep; \
- 			echo "${INSTALL_DATA} Makefile.prep \
--			    ${HTMLDIR}/Makefile"; \
-+			    ${DESTDIR}${HTMLDIR}/Makefile"; \
- 			${SUDO} ${INSTALL_DATA} Makefile.prep \
--			    ${HTMLDIR}/Makefile; \
-+			    ${DESTDIR}${HTMLDIR}/Makefile; \
- 			rm -f Makefile.prep; \
- 		fi; \
- 		if [ "${HTML_INSTSOURCE}" = "Yes" ]; then \
- 			export SF=`echo $$F |sed s,.html$$,.htm,`; \
--			if [ -e "${HTMLDIR}/$$SF" \
-+			if [ -e "${DESTDIR}${HTMLDIR}"/$$SF" \
- 			     -a "${HTML_OVERWRITE}" = "" ]; then \
- 				echo "$$SF exists; preserving"; \
- 			else \
--				echo "${INSTALL_DATA} $$SF ${HTMLDIR}"; \
--				${SUDO} ${INSTALL_DATA} $$SF ${HTMLDIR}; \
-+				echo "${INSTALL_DATA} $$SF ${DESTDIR}${HTMLDIR}"; \
-+				${SUDO} ${INSTALL_DATA} $$SF ${DESTDIR}${HTMLDIR}; \
+@@ -213,7 +213,7 @@ install-www:
+ 				    ${DESTDIR}${HTMLDIR}; \
  			fi; \
  		fi; \
 -		if [ -e "${HTMLDIR}/$$F.var" \
-+		if [ -e "${DESTDIR}${HTMLDIR}"/$$F.var" \
++		if [ -e "${DESTDIR}${HTMLDIR}/$$F.var" \
  		     -a "${HTML_OVERWRITE}" = "" ]; then \
  			echo "$$F.var exists; preserving"; \
  		else \
--			echo "${INSTALL_DATA} $$F.var ${HTMLDIR}"; \
--			${SUDO} ${INSTALL_DATA} $$F.var ${HTMLDIR}; \
-+			echo "${INSTALL_DATA} $$F.var ${DESTDIR}${HTMLDIR}"; \
-+			${SUDO} ${INSTALL_DATA} $$F.var ${DESTDIR}${HTMLDIR}; \
+@@ -222,7 +222,7 @@ install-www:
  		fi; \
  		for LANG in ${LANGUAGES}; do \
  			for ENC in `ls -1 $$F.$$LANG*`; do \
 -			    if [ -e "${HTMLDIR}/$$ENC" \
-+			    if [ -e "${DESTDIR}${HTMLDIR}"/$$ENC" \
++			    if [ -e "${DESTDIR}${HTMLDIR}/$$ENC" \
  			         -a "${HTML_OVERWRITE}" = "" ]; then \
  				    echo "$$ENC exists; preserving"; \
  			    else \
--				    echo "${INSTALL_DATA} $$ENC ${HTMLDIR}"; \
--				    ${SUDO} ${INSTALL_DATA} $$ENC ${HTMLDIR}; \
-+				    echo "${INSTALL_DATA} $$ENC ${DESTDIR}${HTMLDIR}"; \
-+				    ${SUDO} ${INSTALL_DATA} $$ENC ${DESTDIR}${HTMLDIR}; \
- 			    fi; \
- 			done; \
- 		done; \
