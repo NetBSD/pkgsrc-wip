@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4347 2011/05/28 10:35:09 cheusov Exp $
+# $Id: Makefile,v 1.4348 2011/05/28 15:25:04 cheusov Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1251,7 +1251,6 @@ SUBDIR+=	libtogl
 SUBDIR+=	libtorrent-rasterbar
 SUBDIR+=	libupnp
 SUBDIR+=	libuuid
-SUBDIR+=	libuxre
 SUBDIR+=	libvalhalla
 SUBDIR+=	libvc
 SUBDIR+=	libvg
