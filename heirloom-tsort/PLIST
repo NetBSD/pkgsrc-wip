@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2007/05/19 13:26:19 cheusov Exp $
-${HLROOT}/bin/ccs/tsort
-${HLROOT}/man/man1/tsort.1

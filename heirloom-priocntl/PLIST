@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2007/12/27 21:27:36 cheusov Exp $
-${HLROOT}/bin/priocntl
-${HLROOT}/bin/s42/priocntl
-${HLROOT}/man/man1/priocntl.1

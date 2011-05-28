@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2006/12/17 22:47:19 cheusov Exp $
-${HLROOT}/bin/mt
-${HLROOT}/bin/tape
-${HLROOT}/bin/tapecntl
-${HLROOT}/man/man1/mt.1
-${HLROOT}/man/man1/tape.1
-${HLROOT}/man/man1/tapecntl.1

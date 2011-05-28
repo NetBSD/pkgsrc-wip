@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2006/12/18 21:05:41 cheusov Exp $
-${HLROOT}/bin/posix/wc
-${HLROOT}/bin/posix2001/wc
-${HLROOT}/bin/s42/wc
-${HLROOT}/bin/wc
-${HLROOT}/man/man1/wc.1

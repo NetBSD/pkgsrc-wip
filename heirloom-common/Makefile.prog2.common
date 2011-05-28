@@ -1,9 +1,0 @@
-# $NetBSD: Makefile.prog2.common,v 1.3 2008/01/10 20:39:05 cheusov Exp $
-.include "../../wip/heirloom-common/Makefile.prog.common"
-
-CONFLICTS+=	heirloom-toolchest-[0-9]*
-
-MAKE_FLAGS+=	NO_INSTALL_INTRO=1
-LDFLAGS+=	-lheirloomcommon
-
-DEPENDS+=	heirloom-doc-${HEIRLOOM_VER}:../../wip/heirloom-doc

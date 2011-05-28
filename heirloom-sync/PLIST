@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2006/12/17 22:47:19 cheusov Exp $
-${HLROOT}/bin/sync
-${HLROOT}/man/man1m/sync.1m
