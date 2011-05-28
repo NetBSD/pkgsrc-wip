@@ -1,4 +1,4 @@
-#	$NetBSD: Makefile,v 1.1 2011/05/28 15:54:14 cheusov Exp $
+#	$NetBSD: Makefile,v 1.2 2011/05/28 16:20:07 cheusov Exp $
 
 PROG=	nbawk
 SRCS=	awkgram.y b.c lex.c lib.c main.c parse.c proctab.c run.c tran.c
@@ -30,7 +30,9 @@ CPPFLAGS+=	-DHAS_ISBLANK
 MKC_ERR_MSG+=	"fpurge(3) cannot be found"
 .endif
 
-CPPFLAGS+=	-I.
+CPPFLAGS+=	-I. -DHAVE_NBTOOL_CONFIG_H=1
 LDADD+=		-lm
+
+WARNS=		4
 
 .include <mkc.prog.mk>

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2011/05/28 15:59:09 cheusov Exp $
+# $NetBSD: Makefile,v 1.16 2011/05/28 16:20:07 cheusov Exp $
 #
 
 DISTNAME=	netbsd-awk-20110509
@@ -24,7 +24,7 @@ INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
 post-patch:
 	set -e; \
 	sed -e 's|awk|nbawk|g' ${WRKSRC}/awk.1 > ${WRKSRC}/nbawk.1; \
-	cp ${FILESDIR}/* ${WRKSRC}/
+	cp ${FILESDIR}/*.c ${FILESDIR}/*.h ${FILESDIR}/Makefile ${WRKSRC}/
 
 MAKE_PROGRAM=		mkcmake
 
