@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2011/02/19 13:16:04 tnn2 Exp $
+# $NetBSD: Makefile,v 1.10 2011/05/28 11:49:32 asau Exp $
 #
 
 DISTNAME=	VirtualBox-${VBOX_VER}
@@ -20,6 +20,7 @@ WRKSRC=		${WRKDIR}/VirtualBox-${VBOX_VER}_OSE
 
 CHECK_PORTABILITY_SKIP+= src/VBox/VMM/testcase/mkdsk.sh # XXX
 
+DEPENDS+=	cdrtools-[0-9]*:../../sysutils/cdrtools # requires mkisofs
 BUILD_DEPENDS+=	dev86-[0-9]*:../../devel/dev86
 BUILD_DEPENDS+=	kBuild-[0-9]*:../../wip/kBuild
 BUILD_DEPENDS+=	acpica-utils-[0-9]*:../../sysutils/acpica-utils
