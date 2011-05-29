@@ -2,6 +2,8 @@
 #define _NBTOOL_CONFIG_H_
 
 #include <stdint.h>
+#include <string.h>
+#include <stdio.h>
 
 #define __UNCONST(a)   ((void *) (intptr_t) (const void *) (a))
 
