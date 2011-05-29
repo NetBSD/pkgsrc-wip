@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/05/29 08:38:07 cheusov Exp $
+# $NetBSD: Makefile,v 1.5 2011/05/29 10:26:26 cheusov Exp $
 #
 
 ENGINE=		onig
@@ -8,6 +8,7 @@ ENGINE_DIR=	oniguruma
 
 PKGREVISION=	1
 COMMENT=	Oniguruma regexp library for Lua (lrexlib project)
+MAINTAINER=	cheusov@tut.by
 
 DESCR_SRC+=	${.CURDIR}/DESCR
 
