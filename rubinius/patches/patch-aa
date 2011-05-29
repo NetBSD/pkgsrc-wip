@@ -1,0 +1,19 @@
+$NetBSD: patch-aa,v 1.1 2011/05/29 07:06:55 jafour1 Exp $
+
+--- configure.orig	2011-05-28 16:16:24.000000000 -0500
++++ configure	2011-05-28 16:16:48.000000000 -0500
+@@ -569,12 +569,9 @@
+ 
+   def c_includes
+     str = []
+-    if File.exists? "/usr/local/include"
+-      str << "-I/usr/local/include"
+-    end
+ 
+-    if File.exists? "/opt/local/include"
+-      str << "-I/opt/local/include"
++    if File.exists? "/usr/pkg/include"
++      str << "-I/usr/pkg/include"
+     end
+ 
+     return str.join(" ")

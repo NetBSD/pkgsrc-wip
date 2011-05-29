@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.1 2011/05/29 07:06:55 jafour1 Exp $
+
+--- lib/ext/gdbm/extconf.rb.orig	2011-05-28 16:58:34.000000000 -0500
++++ lib/ext/gdbm/extconf.rb	2011-05-28 16:59:01.000000000 -0500
+@@ -1,8 +1,8 @@
+ require 'mkmf'
+ 
+ dir_config("gdbm")
+-find_header("gdbm.h", "/usr/local/include", "/opt/local/include")
+-find_library("gdbm", "gdbm_open", "/usr/local/lib", "/opt/local/lib")
++find_header("gdbm.h", "/usr/pkg/include")
++find_library("gdbm", "gdbm_open", "/usr/pkg/lib")
+ if have_library("gdbm", "gdbm_open") and
+    have_header("gdbm.h")
+   create_makefile("gdbm")
