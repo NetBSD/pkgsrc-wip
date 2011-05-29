@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2010/12/01 22:40:36 cheusov Exp $
+# $NetBSD: Makefile,v 1.12 2011/05/29 07:53:47 cheusov Exp $
 #
 
-DISTNAME=	bmake-20101126
+DISTNAME=	bmake-20110505
 PKGNAME=	${DISTNAME:S/bmake/nbmake/}
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/sjg/
@@ -14,8 +14,6 @@ LICENSE=	original-bsd
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/bmake
-
-USE_FEATURES=		nbcompat
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 

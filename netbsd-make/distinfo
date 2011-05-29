@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2010/12/01 22:40:36 cheusov Exp $
+$NetBSD: distinfo,v 1.8 2011/05/29 07:53:47 cheusov Exp $
 
-SHA1 (bmake-20101126.tar.gz) = d7952b6fb474957e5bdb1b880f377fce474fcac1
-RMD160 (bmake-20101126.tar.gz) = 6e307b7c7e93850b8e433ea34c8cf48fb3c25231
-Size (bmake-20101126.tar.gz) = 404193 bytes
+SHA1 (bmake-20110505.tar.gz) = eb8ea863530ce21dfc42b5b5c49f3286f06094a6
+RMD160 (bmake-20110505.tar.gz) = 883cdb7092f16110f1a05d90b5ec302b3a451db1
+Size (bmake-20110505.tar.gz) = 429715 bytes
