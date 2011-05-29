@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2011/03/28 19:44:17 asau Exp $
+@comment $NetBSD: PLIST,v 1.14 2011/05/29 21:18:35 asau Exp $
 bin/mpiCC
 bin/mpic++
 bin/mpicc
@@ -142,7 +142,6 @@ lib/openmpi/mca_routed_direct.la
 lib/openmpi/mca_routed_linear.la
 lib/openmpi/mca_routed_radix.la
 lib/openmpi/mca_routed_slave.la
-lib/openmpi/mca_sysinfo_linux.la
 lib/openmpi/mca_topo_unity.la
 lib/openmpi/mca_vprotocol_pessimist.la
 lib/pkgconfig/ompi-c.pc
