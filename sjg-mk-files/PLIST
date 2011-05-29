@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/10/10 12:25:59 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/05/29 08:17:46 cheusov Exp $
 share/sjg-mk/auto.dep.mk
 share/sjg-mk/auto.obj.mk
 share/sjg-mk/autoconf.mk
@@ -15,19 +15,27 @@ share/sjg-mk/bsd.own.mk
 share/sjg-mk/bsd.prog.mk
 share/sjg-mk/bsd.subdir.mk
 share/sjg-mk/dep.mk
+share/sjg-mk/dirdeps.mk
 share/sjg-mk/doc.mk
 share/sjg-mk/dpadd.mk
 share/sjg-mk/final.mk
+share/sjg-mk/gendirdeps.mk
 share/sjg-mk/host-target.mk
 share/sjg-mk/host.libnames.mk
 share/sjg-mk/inc.mk
 share/sjg-mk/init.mk
+share/sjg-mk/install-new.mk
 share/sjg-mk/java.mk
 share/sjg-mk/lib.mk
 share/sjg-mk/libnames.mk
 share/sjg-mk/libs.mk
 share/sjg-mk/links.mk
 share/sjg-mk/man.mk
+share/sjg-mk/meta.autodep.mk
+share/sjg-mk/meta.stage.mk
+share/sjg-mk/meta.subdir.mk
+share/sjg-mk/meta.sys.mk
+share/sjg-mk/meta2deps.sh
 share/sjg-mk/nls.mk
 share/sjg-mk/obj.mk
 share/sjg-mk/own.mk

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/10/10 12:25:59 cheusov Exp $
+# $NetBSD: Makefile,v 1.2 2011/05/29 08:17:46 cheusov Exp $
 #
 
-DISTNAME=	mk-20100612
+DISTNAME=	mk-20110505
 PKGNAME=	${DISTNAME:S/mk/sjg-mk-files/}
 CATEGORIES=	devel
 MASTER_SITES=	http://crufty.net/ftp/pub/sjg/
