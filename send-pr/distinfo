@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2011/01/22 18:23:15 cheusov Exp $
+$NetBSD: distinfo,v 1.11 2011/05/29 13:55:06 cheusov Exp $
 
-SHA1 (gnats-3.113.1.tar.gz) = ad4dbafae3e643c61dbcacb721a1e11a803c67aa
-RMD160 (gnats-3.113.1.tar.gz) = 047f455d91f3bb452435a9ccdc6eb5823d8a8138
-Size (gnats-3.113.1.tar.gz) = 1120985 bytes
+SHA1 (gnats-4.1.0.tar.gz) = 7f8ce7fbb7594698c5ba71421cad3cbc7e079003
+RMD160 (gnats-4.1.0.tar.gz) = b16bfa3ffa4f1c7dc351d1c5639061c358c64afd
+Size (gnats-4.1.0.tar.gz) = 1221364 bytes
