@@ -1,5 +1,6 @@
-$NetBSD: patch-ac,v 1.1.1.1 2008/12/27 18:09:28 cheusov Exp $
+$NetBSD: patch-ac,v 1.2 2011/05/29 08:38:07 cheusov Exp $
 
+# accept CC from environment
 --- src/defaults.mak.orig	2007-04-21 13:29:10.000000000 +0300
 +++ src/defaults.mak
 @@ -10,4 +10,4 @@ LIB_LUA  =

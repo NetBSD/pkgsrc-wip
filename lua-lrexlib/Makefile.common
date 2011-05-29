@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2010/01/08 10:53:55 cheusov Exp $
+# $NetBSD: Makefile.common,v 1.9 2011/05/29 08:38:07 cheusov Exp $
 # used by wip/lua-lrexlib-posix/Makefile
 # used by wip/lua-lrexlib-pcre/Makefile
 # used by wip/lua-lrexlib-oniguruma/Makefile
@@ -7,12 +7,10 @@
 
 DISTNAME=	lrexlib-${VERSION}
 PKGNAME=	${LUA_PKGPREFIX}-lrexlib-${ENGINE}-${VERSION}
-PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://luaforge.net/frs/download.php/3599/
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=	cheusov@tut.by
 HOMEPAGE=	http://luaforge.net/projects/lrexlib
 
 LICENSE=		mit
@@ -37,8 +35,6 @@ MAKE_FLAGS+=		LIBTOOL=${LIBTOOL:Q}
 MAKE_FLAGS+=		MODULES_DIR=${PREFIX}/${LUA_CDIR}
 
 INSTALLATION_DIRS+=	${LUA_CDIR}
-
-ENGINE_DIR?=		${ENGINE}
 
 do-install:
 	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} \

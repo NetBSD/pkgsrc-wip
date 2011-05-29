@@ -1,5 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2008/12/27 18:09:28 cheusov Exp $
+$NetBSD: patch-aa,v 1.2 2011/05/29 08:38:07 cheusov Exp $
 
+# libtool-ization
 --- src/common.mak.orig	2008-06-14 20:11:08.000000000 +0300
 +++ src/common.mak
 @@ -3,11 +3,11 @@

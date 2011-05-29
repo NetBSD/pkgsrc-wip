@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/08/10 20:20:45 cheusov Exp $
+# $NetBSD: Makefile,v 1.7 2011/05/29 08:38:07 cheusov Exp $
 
 .include "../../wip/lua-lrexlib/Makefile.version"
 
@@ -10,6 +10,7 @@ DISTFILES=	# empty
 MAINTAINER=	cheusov@tut.by
 HOMEPAGE=	http://luaforge.net/projects/lrexlib
 COMMENT=	Regexp libraries for Lua programming language
+LICENSE=	mit
 
 APIs=		pcre posix onig
 
