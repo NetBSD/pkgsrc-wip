@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2011/03/11 12:16:10 pallegra Exp $
+# $NetBSD: Makefile,v 1.3 2011/05/30 20:22:51 pallegra Exp $
 #
 
-DISTNAME=	i3-tree-pr2
+DISTNAME=	i3-tree-pr3
 PKGNAME=	${DISTNAME:C/tree-pr/4devel/}
 CATEGORIES=	wm
 MASTER_SITES=	http://i3.zekjur.net/downloads/
