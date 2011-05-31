@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/05/31 00:50:56 mrampke Exp $
+
+SHA1 (tipp10_source_v2-1-0.zip) = a50aeab9b579149b3d34789fdeeab4c175db6a0f
+RMD160 (tipp10_source_v2-1-0.zip) = 2d460d3447a8de5344fded0638e2b993f3320167
+Size (tipp10_source_v2-1-0.zip) = 2106535 bytes
+SHA1 (patch-def_defines.h) = 4d0ac4c2e5ea9e25b89ae0e3df645fbfd8d9b2b4
