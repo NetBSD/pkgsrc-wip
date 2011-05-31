@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2011/03/29 22:17:56 bharder Exp $
+# $NetBSD: Makefile,v 1.6 2011/05/31 18:59:10 bharder Exp $
 #
 
-DISTNAME=		999804376c
+DISTNAME=		188a795873
 PKGNAME=		tcl86-${TCL_PKGSRC_PATCHLEVEL}
-PKGREVISION=		1
 CATEGORIES=		lang
 MASTER_SITES=		http://mirror1.tcl.tk/tcl/tarball/tcl.tgz?uuid=
 EXTRACT_SUFX=

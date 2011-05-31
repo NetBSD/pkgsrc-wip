@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2011/03/29 22:19:05 bharder Exp $
+# $NetBSD: Makefile,v 1.6 2011/05/31 18:59:56 bharder Exp $
 
-DISTNAME=		c1b5bef43f
+DISTNAME=		9bc115d8f1
 PKGNAME=		tk86-${TK_PKGSRC_PATCHLEVEL}
 CATEGORIES=		x11 lang
 MASTER_SITES=		http://mirror1.tcl.tk/tk/tarball/tk.tgz?uuid=
