@@ -1,9 +1,10 @@
-# $NetBSD: download.mk,v 1.10 2011/03/10 20:04:41 gregoire Exp $
+# $NetBSD: download.mk,v 1.11 2011/06/01 22:00:55 gregoire Exp $
 #
 
 USE_TOOLS+=		ftp
 BUILD_DEPENDS+=		bzr>=1.0:../../devel/bzr
 BUILD_DEPENDS+=		rsync>=3.0:../../net/rsync
+BUILD_DEPENDS+=		autogen>=5.9:../../devel/autogen
 
 DISTFILES?=		# empty
 BZR_REPOSITORY=		http://bzr.savannah.gnu.org/r/grub/trunk/grub
