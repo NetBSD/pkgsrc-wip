@@ -1,0 +1,3 @@
+* atod path was sbin but this is bin for now  (probably OK).
+* share/wnn/ja_JP/jserverrc is ja-freewnn-lib (probably OK).
+* dic is not split yet (probably OK).
