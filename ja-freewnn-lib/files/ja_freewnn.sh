@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: ja_freewnn.sh,v 1.1.1.1 2011/06/01 14:32:11 makoto Exp $
+# $NetBSD: ja_freewnn.sh,v 1.2 2011/06/01 23:48:13 makoto Exp $
 #
 # PROVIDE: freewnn
 # REQUIRE: DAEMON
@@ -8,8 +8,8 @@
 . /etc/rc.subr
 
 name="freewnn"
-command_start="@PREFIX@/bin/Wnn4/jserver"
-command_stop="@PREFIX@/bin/Wnn4/wnnkill"
+command_start="@PREFIX@/sbin/jserver"
+command_stop="@PREFIX@/sbin/wnnkill"
 pidfile=""
 
 cmd=${1:-start}
