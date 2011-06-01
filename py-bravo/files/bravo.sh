@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: bravo.sh,v 1.2 2011/06/01 04:18:35 schnoebe Exp $
+# $NetBSD: bravo.sh,v 1.3 2011/06/01 04:33:02 schnoebe Exp $
 #
 #   startup script for the proxy65 file transfer proxy service for Jabber
 #   uses the twistd application engine
@@ -14,19 +14,18 @@ rcvar=$name
 command=@PREFIX@/bin/twistd
 command_interpreter="@PYTHONBIN@"
 required_files="@PKG_SYSCONFDIR@/bravo.ini"
-pidfile="@PIDDIR@/${name}.pid"
-logfile="@LOGDIR@/${name}.log"
-command_args="-u @BRAVO_USER@ -g @BRAVO_GROUP@ -p ${pidfile} -l ${logfile}"
-command_args="${command_args} ${name}"
+pidfile="@BRAVO_PIDDIR@/${name}.pid"
+logfile="@BRAVO_LOGDIR@/${name}.log"
+command_args="-u @BRAVO_USER@ -g @BRAVO_GROUP@ --pidfile=${pidfile}"
+command_args="${command_args} -l ${logfile} -d @BRAVO_RUNDIR@ ${name}"
 
-# start_precmd="ensure_dirs"
+start_precmd="ensure_dirs"
 
-# ensure_dirs()
-# {
-# 	ChatDir=$(sed -ne 's:.*<spool>\(.*\)</spool>.*:\1:p' ${required_files})
-# 	mkdir -p @JABBER_PIDDIR@ ${ChatDir}
-# 	chown @JABBER_USER@ @JABBER_PIDDIR@ ${ChatDir}
-# }
+ensure_dirs()
+{
+	mkdir -p @BRAVO_RUNDIR@
+	chown @BRAVO_USER@ @BRAVO_RUNDIR@
+}
 
 if [ -f /etc/rc.subr ]; then
 	. /etc/rc.subr
