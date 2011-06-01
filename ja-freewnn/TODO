@@ -1,8 +1,0 @@
-* To be divided into -server -serve-bin -dict -lib
-  to replace inputmethod version
-
-* honour IMDICTDIR for dictionary files
-* inputmethod/kinput2/options.mk wants "ja-freewnn-lib/buildlink3.mk",
-  which is NOT satisfied by this (say, of unsplit version of freewnn)
-
-* Wnntouch changes MD5 value of some files. pkg_delete rumbles for that.
