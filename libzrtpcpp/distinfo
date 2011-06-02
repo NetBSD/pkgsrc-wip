@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2009/11/09 20:10:49 othyro Exp $
+$NetBSD: distinfo,v 1.4 2011/06/02 19:39:35 othyro Exp $
 
-SHA1 (libzrtpcpp-1.4.6.tar.gz) = 7c1eecfe01804b718e2c2549707b59a7503e981d
-RMD160 (libzrtpcpp-1.4.6.tar.gz) = 4edebcd18669b931e375828c683fe079421a6f06
-Size (libzrtpcpp-1.4.6.tar.gz) = 461600 bytes
+SHA1 (libzrtpcpp-1.5.3.tar.gz) = 20dafbb99db57df8315adcd0f006ef2017011398
+RMD160 (libzrtpcpp-1.5.3.tar.gz) = abeb39cecbf3cc6969e717c58f93f0c3d4fff0ba
+Size (libzrtpcpp-1.5.3.tar.gz) = 481549 bytes
