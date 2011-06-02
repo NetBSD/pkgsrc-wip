@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2010/06/05 11:33:03 obache Exp $
+# $NetBSD: Makefile,v 1.17 2011/06/02 19:15:11 othyro Exp $
 #
 
-DISTNAME=		commoncpp2-1.8.0
+DISTNAME=		commoncpp2-1.8.1
 PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GNU:=commonc++/}
