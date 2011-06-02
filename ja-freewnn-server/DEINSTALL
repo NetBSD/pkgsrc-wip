@@ -1,4 +1,4 @@
-# $NetBSD: DEINSTALL,v 1.1.1.1 2011/06/01 14:32:11 makoto Exp $
+# $NetBSD: DEINSTALL,v 1.1 2011/06/02 00:40:28 makoto Exp $
 
 case ${STAGE} in
 POST-DEINSTALL)
