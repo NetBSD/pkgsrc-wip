@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/06/01 03:51:46 schnoebe Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/06/02 02:01:39 schnoebe Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -91,6 +91,12 @@ ${PYSITELIB}/bravo/plugins/debug.pyo
 ${PYSITELIB}/bravo/plugins/dig_hooks.py
 ${PYSITELIB}/bravo/plugins/dig_hooks.pyc
 ${PYSITELIB}/bravo/plugins/dig_hooks.pyo
+${PYSITELIB}/bravo/plugins/door.py
+${PYSITELIB}/bravo/plugins/door.pyc
+${PYSITELIB}/bravo/plugins/door.pyo
+${PYSITELIB}/bravo/plugins/fertilizer.py
+${PYSITELIB}/bravo/plugins/fertilizer.pyc
+${PYSITELIB}/bravo/plugins/fertilizer.pyo
 ${PYSITELIB}/bravo/plugins/generators.py
 ${PYSITELIB}/bravo/plugins/generators.pyc
 ${PYSITELIB}/bravo/plugins/generators.pyo
@@ -118,6 +124,9 @@ ${PYSITELIB}/bravo/plugins/warp.pyo
 ${PYSITELIB}/bravo/plugins/web.py
 ${PYSITELIB}/bravo/plugins/web.pyc
 ${PYSITELIB}/bravo/plugins/web.pyo
+${PYSITELIB}/bravo/plugins/worldedit.py
+${PYSITELIB}/bravo/plugins/worldedit.pyc
+${PYSITELIB}/bravo/plugins/worldedit.pyo
 ${PYSITELIB}/bravo/policy/__init__.py
 ${PYSITELIB}/bravo/policy/__init__.pyc
 ${PYSITELIB}/bravo/policy/__init__.pyo
@@ -163,6 +172,9 @@ ${PYSITELIB}/bravo/tests/factories/test_beta.pyo
 ${PYSITELIB}/bravo/tests/plugins/__init__.py
 ${PYSITELIB}/bravo/tests/plugins/__init__.pyc
 ${PYSITELIB}/bravo/tests/plugins/__init__.pyo
+${PYSITELIB}/bravo/tests/plugins/test_automatons.py
+${PYSITELIB}/bravo/tests/plugins/test_automatons.pyc
+${PYSITELIB}/bravo/tests/plugins/test_automatons.pyo
 ${PYSITELIB}/bravo/tests/plugins/test_build_hooks.py
 ${PYSITELIB}/bravo/tests/plugins/test_build_hooks.pyc
 ${PYSITELIB}/bravo/tests/plugins/test_build_hooks.pyo
@@ -244,6 +256,9 @@ ${PYSITELIB}/bravo/tests/utilities/test_maths.pyo
 ${PYSITELIB}/bravo/utilities/__init__.py
 ${PYSITELIB}/bravo/utilities/__init__.pyc
 ${PYSITELIB}/bravo/utilities/__init__.pyo
+${PYSITELIB}/bravo/utilities/automatic.py
+${PYSITELIB}/bravo/utilities/automatic.pyc
+${PYSITELIB}/bravo/utilities/automatic.pyo
 ${PYSITELIB}/bravo/utilities/bits.py
 ${PYSITELIB}/bravo/utilities/bits.pyc
 ${PYSITELIB}/bravo/utilities/bits.pyo
@@ -256,6 +271,9 @@ ${PYSITELIB}/bravo/utilities/coords.pyo
 ${PYSITELIB}/bravo/utilities/decos.py
 ${PYSITELIB}/bravo/utilities/decos.pyc
 ${PYSITELIB}/bravo/utilities/decos.pyo
+${PYSITELIB}/bravo/utilities/geometry.py
+${PYSITELIB}/bravo/utilities/geometry.pyc
+${PYSITELIB}/bravo/utilities/geometry.pyo
 ${PYSITELIB}/bravo/utilities/maths.py
 ${PYSITELIB}/bravo/utilities/maths.pyc
 ${PYSITELIB}/bravo/utilities/maths.pyo
