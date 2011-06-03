@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2011/05/27 20:42:56 reinoudz70 Exp $
+$NetBSD: distinfo,v 1.3 2011/06/03 08:11:30 reinoudz70 Exp $
 
 SHA1 (bsdbuild-2.8.tar.gz) = 83a1124aebabecae15f4ffdd4a3d5cb9e117751a
 RMD160 (bsdbuild-2.8.tar.gz) = f5c617a23f99359d509d682125b096040141584e
@@ -13,3 +13,4 @@ SHA1 (patch-al) = 45ac37529eb7a6bcf1e4b5e1f98cf9400d3c06ba
 SHA1 (patch-ao) = 6f09d52db3fc6622ab9e1f46796d5094db274dec
 SHA1 (patch-ap) = 64f3ee47cfdc3b42d0afc0f175123cb012cade06
 SHA1 (patch-aq) = 009011c084557ba39945a5597847ccf4d79c2227
+SHA1 (patch-ar) = ec46c99ca3c3478956e53ecf122c96b9db62af32

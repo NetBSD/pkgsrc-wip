@@ -1,0 +1,21 @@
+$NetBSD: patch-ar,v 1.1 2011/06/03 08:11:30 reinoudz70 Exp $
+
+--- BSDBuild/glu.pm.orig	2010-08-20 15:16:15.000000000 +0000
++++ BSDBuild/glu.pm
+@@ -26,12 +26,16 @@
+ my %autoIncludeDirs = (
+ 	'/usr/include'				=> '/usr/lib',
+ 	'/usr/local/include'		=> '/usr/local/lib',
++	'/usr/pkg/include'		=> '/usr/pkg/lib',
+ 	'/usr/include/X11'			=> '/usr/lib/X11',
+ 	'/usr/include/X11R6'		=> '/usr/lib/X11R6',
++	'/usr/include/X11R7'		=> '/usr/lib/X11R7',
+ 	'/usr/local/X11/include'	=> '/usr/local/X11/lib',
+ 	'/usr/local/X11R6/include'	=> '/usr/local/X11R6/lib',
++	'/usr/local/X11R7/include'	=> '/usr/local/X11R7/lib',
+ 	'/usr/local/include/X11'	=> '/usr/local/lib/X11',
+ 	'/usr/local/include/X11R6'	=> '/usr/local/lib/X11R6',
++	'/usr/local/include/X11R7'	=> '/usr/local/lib/X11R7',
+ 	'/usr/X11/include'			=> '/usr/X11/lib',
+ 	'/usr/X11R6/include'		=> '/usr/X11R6/lib',
+ );
