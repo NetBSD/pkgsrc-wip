@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/06/03 00:22:59 othyro Exp $
+
+SHA1 (rarbsd-4.0.1.tar.gz) = 84fd1c3cec6765f0abdd744ff3affd6eb6c44c56
+RMD160 (rarbsd-4.0.1.tar.gz) = df4f32bc17d32c1ff5eaee51fb08ca2e51941a62
+Size (rarbsd-4.0.1.tar.gz) = 853202 bytes

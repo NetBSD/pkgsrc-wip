@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/06/03 00:22:59 othyro Exp $
+bin/rar4
+bin/unrar4
+lib/default.sfx
+man/cat1/rar4.0
+share/examples/rar4/rarfiles.lst
+share/rar4/license.txt
+share/rar4/order.htm
+share/examples/rar4/rarfiles.lst
+share/rar4/rar.txt
+share/rar4/readme.txt
+share/rar4/technote.txt
+share/rar4/whatsnew.txt
