@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2011/05/19 13:39:59 hfath Exp $
+# $NetBSD: Makefile,v 1.7 2011/06/04 13:39:05 othyro Exp $
 #
 
-DISTNAME=	vidalia-0.2.9
+DISTNAME=	vidalia-0.2.12
 PKGREVISION=	1
 CATEGORIES=	net security
 MASTER_SITES=	https://www.torproject.org/vidalia/dist/
