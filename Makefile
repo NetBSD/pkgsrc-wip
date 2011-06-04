@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4353 2011/06/03 00:27:53 othyro Exp $
+# $Id: Makefile,v 1.4354 2011/06/04 07:52:02 obache Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -280,7 +280,6 @@ SUBDIR+=	cgterm
 SUBDIR+=	chbg
 SUBDIR+=	chemical-mime-data
 SUBDIR+=	chems
-SUBDIR+=	cherokee
 SUBDIR+=	chicken
 SUBDIR+=	chora
 SUBDIR+=	chromium
