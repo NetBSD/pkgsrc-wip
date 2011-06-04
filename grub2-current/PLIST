@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2011/06/04 14:02:41 gregoire Exp $
+@comment $NetBSD: PLIST,v 1.19 2011/06/04 15:07:40 gregoire Exp $
 bin/grub2-bin2h
 bin/grub2-editenv
 bin/grub2-fstest
@@ -13,7 +13,6 @@ bin/grub2-mkrescue
 bin/grub2-script-check
 info/grub2-dev.info
 info/grub2.info
-lib/charset.alias
 lib/grub2/grub-mkconfig_lib
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/acpi.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/affs.mod
