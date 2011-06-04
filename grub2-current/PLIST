@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2011/03/08 22:56:13 gregoire Exp $
+@comment $NetBSD: PLIST,v 1.18 2011/06/04 14:02:41 gregoire Exp $
 bin/grub2-bin2h
 bin/grub2-editenv
 bin/grub2-fstest
@@ -11,6 +11,7 @@ bin/grub2-mkpasswd-pbkdf2
 bin/grub2-mkrelpath
 bin/grub2-mkrescue
 bin/grub2-script-check
+info/grub2-dev.info
 info/grub2.info
 lib/charset.alias
 lib/grub2/grub-mkconfig_lib

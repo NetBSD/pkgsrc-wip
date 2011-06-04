@@ -1,4 +1,4 @@
-# $NetBSD: download.mk,v 1.11 2011/06/01 22:00:55 gregoire Exp $
+# $NetBSD: download.mk,v 1.12 2011/06/04 14:02:41 gregoire Exp $
 #
 
 USE_TOOLS+=		ftp
@@ -8,7 +8,7 @@ BUILD_DEPENDS+=		autogen>=5.9:../../devel/autogen
 
 DISTFILES?=		# empty
 BZR_REPOSITORY=		http://bzr.savannah.gnu.org/r/grub/trunk/grub
-BZR_REVISION=		3093
+BZR_REVISION=		3273
 UNIFONT_URL=		http://unifoundry.com/unifont-5.1.20080820.pcf.gz
 UNIFONT_EXT=		pcf.gz
 
@@ -21,10 +21,10 @@ do-bzr-extract:
 	${STEP_MSG} "Exporting from bazaar repository "${BZR_REPOSITORY};	\
 	bzr export -r ${BZR_REVISION} ${DISTNAME} ${BZR_REPOSITORY}
 
-post-extract: do-get-translations
+post-extract: do-extra-downloads
 
-.PHONY: do-get-translations
-do-get-translations:
+.PHONY: do-extra-downloads
+do-extra-downloads:
 	cd ${WRKSRC} && rsync -Lrtvz translationproject.org::tp/latest/grub/ po
 	cd ${WRKSRC}/po && (ls *.po | sed -e 's,\.po$$,,') > LINGUAS
 .if !empty(PKG_OPTIONS:Mgrub-mkfont)

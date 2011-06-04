@@ -1,8 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.4 2011/03/08 22:56:13 gregoire Exp $
-
-GRUB 2 is in development stage and is still neither complete nor well
-tested.  Anyways, just installing this package should do no harm.
+$NetBSD: MESSAGE,v 1.5 2011/06/04 14:02:41 gregoire Exp $
 
 To actually install GRUB 2 to disk, use grub2-install utility.  Do not do
 it unless you understand what it actually does, for it may lead to loss of

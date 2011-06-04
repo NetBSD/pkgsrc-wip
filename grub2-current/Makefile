@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2011/03/08 22:56:13 gregoire Exp $
+# $NetBSD: Makefile,v 1.24 2011/06/04 14:02:41 gregoire Exp $
 #
 
 DISTNAME=		grub-bazaar-snapshot
@@ -101,14 +101,16 @@ SUBST_SED.fix-name-2+=		-e '\,^\.SH SYNOPSIS, { n ; s,\.B grub-,\.B grub2-,g ; }
 
 #
 # The following substitution and post-patch rule adjust the name of the
-# generated info file (grub2.info).
+# generated info files (grub2.info and grub2-dev.info).
 #
 SUBST_CLASSES+=			fix-name-3
 SUBST_STAGE.fix-name-3=		post-patch
 SUBST_MESSAGE.fix-name-3=	Fixing package name for texinfo manual.
-SUBST_FILES.fix-name-3=		docs/Makefile.am docs/grub2.texi
+SUBST_FILES.fix-name-3=		docs/Makefile.am docs/grub2.texi docs/grub2-dev.texi
 SUBST_SED.fix-name-3=		-e 's,grub\.info,grub2\.info,g'
 SUBST_SED.fix-name-3+=		-e 's,grub\.texi,grub2\.texi,g'
+SUBST_SED.fix-name-3+=		-e 's,grub-dev\.info,grub2-dev\.info,g'
+SUBST_SED.fix-name-3+=		-e 's,grub-dev\.texi,grub2-dev\.texi,g'
 SUBST_SED.fix-name-3+=		-e 's,grub_TEXINFOS,grub2_TEXINFOS,g'
 
 post-patch: do-move-texinfo
@@ -116,6 +118,7 @@ post-patch: do-move-texinfo
 .PHONY: do-move-texinfo
 do-move-texinfo:
 	${MV} ${WRKSRC}/docs/grub.texi ${WRKSRC}/docs/grub2.texi
+	${MV} ${WRKSRC}/docs/grub-dev.texi ${WRKSRC}/docs/grub2-dev.texi
 
 #
 # The following substitutions adjust the configuration paths:
