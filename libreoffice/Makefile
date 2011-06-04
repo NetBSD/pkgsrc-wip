@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2011/05/22 16:17:58 ftigeot Exp $
+# $NetBSD: Makefile,v 1.9 2011/06/04 12:59:29 ftigeot Exp $
 
-VER=			2011-05-22
+VER=			2011-06-04
 DISTNAME=		libreoffice-${VER}
 PKGNAME=		libreoffice-${VER:S/-//g}
 CATEGORIES=		misc
@@ -163,6 +163,7 @@ post-install:
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2-xlib/buildlink3.mk"
+.include "../../graphics/librsvg/buildlink3.mk"
 .include "../../graphics/sane-backends/buildlink3.mk"
 .include "../../graphics/vigra/buildlink3.mk"
 .include "../../lang/python/application.mk"
