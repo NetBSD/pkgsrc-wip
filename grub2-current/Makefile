@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2011/06/05 18:12:54 gregoire Exp $
+# $NetBSD: Makefile,v 1.27 2011/06/05 18:38:29 gregoire Exp $
 #
 
 DISTNAME=		grub-bazaar-snapshot
@@ -52,6 +52,15 @@ CONF_FILES+=		${EGDIR}/README ${PKG_SYSCONFDIR}/README
 CONF_FILES+=		${EGDIR}/default.conf.sample ${PKG_SYSCONFDIR}/default.conf
 
 TODAY!=			${DATE} -u +'%Y%m%d'
+
+#
+# Force installation of all OS configuration scripts in ${EGDIR}.
+#
+SUBST_CLASSES+=			fix-os-conf
+SUBST_STAGE.fix-os-conf=	post-patch
+SUBST_MESSAGE.fix-os-conf=	Fixing installation of OS configuration scripts.
+SUBST_FILES.fix-os-conf=	Makefile.util.def
+SUBST_SED.fix-os-conf=		-e '\,^[ ]*name = '\''[12]0_, { n ; n ; n ; \,^[ ]*condition = COND_HOST_,d ; }'
 
 #
 # Requirements: GCC >= 4.1.3, Flex >= 2.5.35 and help2man.
