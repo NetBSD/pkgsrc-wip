@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2011/06/04 14:43:16 gregoire Exp $
+# $NetBSD: Makefile,v 1.26 2011/06/05 18:12:54 gregoire Exp $
 #
 
 DISTNAME=		grub-bazaar-snapshot
@@ -146,8 +146,8 @@ SUBST_CLASSES+=			fix-paths-3
 SUBST_STAGE.fix-paths-3=	post-patch
 SUBST_MESSAGE.fix-paths-3=	Fixing bash completion installation path.
 SUBST_FILES.fix-paths-3=	util/bash-completion.d/Makefile.am
-SUBST_SED.fix-paths-3=		-e 's,bash_completion_script = grub,bash_completion_script = grub2,g'
-SUBST_SED.fix-paths-3+=		-e 's,\$$(sysconfdir)/bash_completion.d,\$$(datadir)/bash-completion.d,g'
+SUBST_SED.fix-paths-3=		-e 's,bash_completion_script = grub,bash_completion_script = grub2-bash-completion.sh,g'
+SUBST_SED.fix-paths-3+=		-e 's,\$$(sysconfdir)/bash_completion.d,\$$(EGDIR),g'
 
 post-install:
 	${INSTALL_DATA} ${FILESDIR}/default.conf ${DESTDIR}${EGDIR}/default.conf.sample

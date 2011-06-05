@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2011/06/05 17:42:20 gregoire Exp $
+@comment $NetBSD: PLIST,v 1.21 2011/06/05 18:12:54 gregoire Exp $
 bin/grub2-bin2h
 bin/grub2-editenv
 bin/grub2-fstest
@@ -237,7 +237,6 @@ sbin/grub2-probe
 sbin/grub2-reboot
 sbin/grub2-set-default
 sbin/grub2-setup
-share/bash-completion.d/grub2
 share/examples/grub2/00_header
 share/examples/grub2/05_pkgsrc_theme
 share/examples/grub2/10_hurd
@@ -251,6 +250,7 @@ share/examples/grub2/40_custom
 share/examples/grub2/41_custom
 share/examples/grub2/README
 share/examples/grub2/default.conf.sample
+share/examples/grub2/grub2-bash-completion.sh
 ${PLIST.freetype}share/grub2/ascii.h
 ${PLIST.freetype}share/grub2/ascii.pf2
 ${PLIST.freetype}share/grub2/euro.pf2
