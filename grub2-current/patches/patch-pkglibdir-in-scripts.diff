@@ -1,3 +1,5 @@
+$NetBSD: patch-pkglibdir-in-scripts.diff,v 1.2 2011/06/05 18:46:00 gregoire Exp $
+
 The files grub-mkconfig_lib and update-grub_lib are installed into
 $libdir/@PACKAGE@.
 
@@ -129,4 +131,3 @@ $libdir/@PACKAGE@.
 +. ${libdir}/@PACKAGE@/grub-mkconfig_lib
  
  grub_warn "update-grub_lib is deprecated, use grub-mkconfig_lib instead"
-
