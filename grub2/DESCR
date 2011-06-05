@@ -1,8 +1,3 @@
-This is the second version of the GRand Unified Bootloader, rewritten
-from scratch to make GNU GRUB cleaner, safer, more robust, more powerful,
-and more portable.
-
-GRUB 2 currently runs on i386 and macppc, and groks many filesystems
-(e.g. ext2, fat, ufs, minix, iso9660, jfs, hfs). It is able to load and
-boot Multiboot (1 and 2) and Linux (bzImage and zImage) kernels and
-chainload foreign operating systems' bootsectors.
+This is GRUB 2, the second version of the GRand Unified Bootloader.
+GRUB 2 is rewritten from scratch to make GNU GRUB cleaner, safer, more
+robust, more powerful, and more portable.

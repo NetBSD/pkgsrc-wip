@@ -1,12 +1,6 @@
-$NetBSD: distinfo,v 1.14 2009/12/18 11:03:44 gregoire Exp $
+$NetBSD: distinfo,v 1.15 2011/06/05 21:59:32 gregoire Exp $
 
-SHA1 (grub-1.97.1.tar.gz) = a8465fc16ef5d082a43df0f8e7caeea01db0c515
-RMD160 (grub-1.97.1.tar.gz) = 3f0036add7298bfd1bb2dcd963671bbeea136c3c
-Size (grub-1.97.1.tar.gz) = 1242959 bytes
-SHA1 (patch-aa) = 92435d458d9b94cec531575240efcf6c5db4de80
-SHA1 (patch-ab) = 4a69c597a8890274d1c7f88ac3ae60e939677e96
-SHA1 (patch-ac) = 534bc5e8d3f36988273bcfe8e7f3f6a8ae0b0ce3
-SHA1 (patch-ad) = 59e143eeac54494b4071ae42afd438bf7eea5552
-SHA1 (patch-ae) = 57b78a9bcd6f83386e542997ad89d88f3f42db01
-SHA1 (patch-af) = ebd87294944ccc4f027eb770ad43a316e2ac6fa0
-SHA1 (patch-ag) = 659cb79965a9e01d5a1f9c498cfe6bf2af310d2a
+SHA1 (grub-1.99.tar.gz) = 6d0536da38224e7caf94cf2531a5f921ac057b9b
+RMD160 (grub-1.99.tar.gz) = 63293381ac2ed2479ac65896d4744b866e6d216c
+Size (grub-1.99.tar.gz) = 4652619 bytes
+SHA1 (patch-pkglibdir-in-scripts.diff) = 30f0a3eeb2eb67f634cde551d67db0239afe8e7c
