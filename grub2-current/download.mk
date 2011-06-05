@@ -1,4 +1,9 @@
-# $NetBSD: download.mk,v 1.13 2011/06/05 17:42:20 gregoire Exp $
+# $NetBSD: download.mk,v 1.14 2011/06/05 21:37:01 gregoire Exp $
+#
+
+#
+# Helper file to access the bazaar repository, download translations and font
+# files, and generate the configure script with autogen.sh.
 #
 
 USE_TOOLS+=		ftp
