@@ -1,4 +1,4 @@
-# $NetBSD: download.mk,v 1.12 2011/06/04 14:02:41 gregoire Exp $
+# $NetBSD: download.mk,v 1.13 2011/06/05 17:42:20 gregoire Exp $
 #
 
 USE_TOOLS+=		ftp
@@ -27,7 +27,7 @@ post-extract: do-extra-downloads
 do-extra-downloads:
 	cd ${WRKSRC} && rsync -Lrtvz translationproject.org::tp/latest/grub/ po
 	cd ${WRKSRC}/po && (ls *.po | sed -e 's,\.po$$,,') > LINGUAS
-.if !empty(PKG_OPTIONS:Mgrub-mkfont)
+.if !empty(PKG_OPTIONS:Mfreetype)
 	cd ${WRKSRC} && ftp -o unifont.${UNIFONT_EXT} ${UNIFONT_URL}
 .endif
 

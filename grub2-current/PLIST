@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.19 2011/06/04 15:07:40 gregoire Exp $
+@comment $NetBSD: PLIST,v 1.20 2011/06/05 17:42:20 gregoire Exp $
 bin/grub2-bin2h
 bin/grub2-editenv
 bin/grub2-fstest
 bin/grub2-kbdcomp
 bin/grub2-menulst2cfg
-${PLIST.mkfont}bin/grub2-mkfont
+${PLIST.freetype}bin/grub2-mkfont
 bin/grub2-mkimage
 bin/grub2-mklayout
 bin/grub2-mkpasswd-pbkdf2
@@ -214,7 +214,7 @@ man/man1/grub2-bin2h.1
 man/man1/grub2-editenv.1
 man/man1/grub2-fstest.1
 man/man1/grub2-menulst2cfg.1
-${PLIST.mkfont}man/man1/grub2-mkfont.1
+${PLIST.freetype}man/man1/grub2-mkfont.1
 man/man1/grub2-mkimage.1
 man/man1/grub2-mklayout.1
 man/man1/grub2-mkpasswd-pbkdf2.1
@@ -251,11 +251,11 @@ share/examples/grub2/40_custom
 share/examples/grub2/41_custom
 share/examples/grub2/README
 share/examples/grub2/default.conf.sample
-${PLIST.mkfont}share/grub2/ascii.h
-${PLIST.mkfont}share/grub2/ascii.pf2
-${PLIST.mkfont}share/grub2/euro.pf2
-${PLIST.mkfont}share/grub2/unicode.pf2
-${PLIST.mkfont}share/grub2/widthspec.h
+${PLIST.freetype}share/grub2/ascii.h
+${PLIST.freetype}share/grub2/ascii.pf2
+${PLIST.freetype}share/grub2/euro.pf2
+${PLIST.freetype}share/grub2/unicode.pf2
+${PLIST.freetype}share/grub2/widthspec.h
 share/locale/ast/LC_MESSAGES/grub2.mo
 share/locale/ca/LC_MESSAGES/grub2.mo
 share/locale/da/LC_MESSAGES/grub2.mo
