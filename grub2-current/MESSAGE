@@ -1,12 +1,19 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.5 2011/06/04 14:02:41 gregoire Exp $
+$NetBSD: MESSAGE,v 1.6 2011/06/05 17:05:53 gregoire Exp $
 
-To actually install GRUB 2 to disk, use grub2-install utility.  Do not do
-it unless you understand what it actually does, for it may lead to loss of
-data when used improperly.
+To actually install GRUB 2 to disk, use ${PKGBASE}-install(8).  But do
+not use it unless you understand what it actually does, for it may
+lead to loss of data when used improperly.
 
-Please visit the official web page of GRUB 2, for more information.  The
-URL is <http://www.gnu.org/software/grub/>.
+Please visit the official web page of GRUB 2, for more information.
+The URL is <http://www.gnu.org/software/grub/>.
 
-Enjoy GRUB.  Your feedback is welcome.
+More extensive documentation is available in the Info manual,
+accessible using 'info ${PKGBASE}'.
+
+There are a number of important user-visible differences from the
+first version of GRUB, now known as GRUB Legacy.  For a summary,
+please see:
+
+  info ${PKGBASE} Introduction 'Changes from GRUB Legacy'
 ===========================================================================

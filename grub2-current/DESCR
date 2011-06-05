@@ -2,4 +2,4 @@ This is GRUB 2, the second version of the GRand Unified Bootloader.
 GRUB 2 is rewritten from scratch to make GNU GRUB cleaner, safer, more
 robust, more powerful, and more portable.
 
-This package is based on the current bazaar development snapshot.
+This package is based on a (recent) bazaar development snapshot.
