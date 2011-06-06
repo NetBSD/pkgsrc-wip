@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1 2011/06/06 00:52:22 khorben Exp $
+bin/compose
+bin/mailer
+include/Desktop/Mailer.h
+include/Desktop/Mailer/account.h
+include/Desktop/Mailer/folder.h
+include/Desktop/Mailer/mailer.h
+include/Desktop/Mailer/message.h
+include/Desktop/Mailer/transport.h
+lib/Mailer/account/imap4.so
+lib/Mailer/account/mbox.so
+lib/Mailer/account/pop3.so
+share/applications/mailer.desktop
+share/icons/hicolor/24x24/apps/mailer-accounts.png
+share/icons/hicolor/24x24/apps/mailer-drafts.png
+share/icons/hicolor/24x24/apps/mailer-inbox.png
+share/icons/hicolor/24x24/apps/mailer-outbox.png
+share/icons/hicolor/24x24/apps/mailer-sent.png
+share/icons/hicolor/24x24/apps/mailer.png
+share/icons/hicolor/48x48/apps/mailer-inbox.png
+share/icons/hicolor/48x48/apps/mailer-outbox.png
+share/icons/hicolor/48x48/apps/mailer-sent.png
+share/icons/hicolor/48x48/apps/mailer.png
+share/locale/fr/LC_MESSAGES/Mailer.mo
