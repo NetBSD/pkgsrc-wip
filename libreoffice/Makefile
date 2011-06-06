@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2011/06/05 09:06:52 ftigeot Exp $
+# $NetBSD: Makefile,v 1.11 2011/06/06 15:50:02 thomasklausner Exp $
 
 VER=			2011-06-05
 DISTNAME=		libreoffice-${VER}
@@ -122,6 +122,11 @@ SUBST_STAGE.libpath=	pre-configure
 SUBST_FILES.libpath=	set_soenv.in
 SUBST_SED.libpath=		-e 's,@LIBPATH@,${LIBPATH},g'
 SUBST_MESSAGE.libpath=	Fixing library path for dmake scripts
+
+PLIST_VARS+=	adabas
+.if ${OPSYS} == "NetBSD"
+PLIST.adabas=	yes
+.endif
 
 LO_PROGRAMS=	sbase scalc sdraw simpress smath soffice swriter
 
