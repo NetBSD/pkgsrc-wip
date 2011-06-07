@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2011/06/07 19:50:29 asau Exp $
+# $NetBSD: Makefile,v 1.6 2011/06/07 20:05:12 asau Exp $
 
-DISTNAME=	tcl${TCL_PKGSRC_PATCHLEVEL}-src
-PKGNAME=	tcl-${TCL_PKGSRC_PATCHLEVEL}
+DISTNAME=	tcl${TCL_VERSION}-src
+PKGNAME=	tcl-${TCL_VERSION}
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tcl/}
 
@@ -17,13 +17,13 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 CONFLICTS+=		tclman80-[0-9]*
 CONFLICTS+=             tcl86-* tcl-[0-9]*
 
-WRKSRC=			${WRKDIR}/tcl${TCL_PKGSRC_PATCHLEVEL}
+WRKSRC=			${WRKDIR}/tcl${TCL_VERSION}
 
 GNU_CONFIGURE=		yes
 CONFIGURE_DIRS=		unix
 BUILD_DIRS=		${CONFIGURE_DIRS}
 
-CONFIGURE_ARGS+=	"--prefix=${PREFIX}"
+CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 INSTALL_TARGET=	install install-private-headers
 
 # The test target gives better results when not run as root.
@@ -38,6 +38,6 @@ CONFIGURE_ARGS+=	--enable-64bit
 DESTDIRPREFIX=          ${DESTDIR}${PREFIX}
 
 post-install:
-	mv ${DESTDIRPREFIX:Q}/lib/tclConfig.sh ${DESTDIRPREFIX:Q}/lib/tcl${TCL_PKGSRC_VERSION}
+	mv ${DESTDIRPREFIX:Q}/lib/tclConfig.sh ${DESTDIRPREFIX:Q}/lib/tcl${TCL_VERSION:C/.[0-9]*$//}
 
 .include "../../mk/bsd.pkg.mk"
