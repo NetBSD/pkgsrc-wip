@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2011/06/07 20:05:12 asau Exp $
+# $NetBSD: Makefile,v 1.7 2011/06/07 20:36:34 asau Exp $
 
 DISTNAME=	tcl${TCL_VERSION}-src
 PKGNAME=	tcl-${TCL_VERSION}
@@ -15,7 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 .include "options.mk"
 
 CONFLICTS+=		tclman80-[0-9]*
-CONFLICTS+=             tcl86-* tcl-[0-9]*
+CONFLICTS+=		tcl86-* tcl-[0-9]*
 
 WRKSRC=			${WRKDIR}/tcl${TCL_VERSION}
 
