@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/06/07 16:37:24 emil_s Exp $
+
+SHA1 (mlocate-0.24.tar.xz) = 7beb0572c9cfdef0db3e2f34cd71c616344e2d53
+RMD160 (mlocate-0.24.tar.xz) = 4ddb5e95d9a324fcb5574db9c3836f3f9b30dffa
+Size (mlocate-0.24.tar.xz) = 353948 bytes
