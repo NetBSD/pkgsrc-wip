@@ -1,6 +1,5 @@
-# $NetBSD: Makefile.version,v 1.1.1.1 2008/07/24 19:35:09 egavilan Exp $
+# $NetBSD: Makefile.version,v 1.2 2011/06/07 23:05:30 asau Exp $
 
 .include "../../wip/tcl85/Makefile.version"
 
-TK_PKGSRC_PATCHLEVEL=	${TCL_PKGSRC_PATCHLEVEL}
-TK_PKGSRC_VERSION=	${TCL_PKGSRC_VERSION}
+TK_VERSION=	${TCL_VERSION}

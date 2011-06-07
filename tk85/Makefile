@@ -1,29 +1,29 @@
-# $NetBSD: Makefile,v 1.2 2009/09/20 21:30:10 shindenmorr Exp $
+# $NetBSD: Makefile,v 1.3 2011/06/07 23:05:30 asau Exp $
 
-DISTNAME=		tk${TK_PKGSRC_PATCHLEVEL}-src
-PKGNAME=		tk-${TK_PKGSRC_PATCHLEVEL}
-CATEGORIES=		x11 lang
+DISTNAME=	tk${TK_VERSION}-src
+PKGNAME=	tk-${TK_VERSION}
+CATEGORIES=	x11 lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tcl/}
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.tcl.tk/
-COMMENT=		Graphical toolkit for Tcl
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://www.tcl.tk/
+COMMENT=	Graphical toolkit for TCL
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../wip/tk85/Makefile.version"
 
-WRKSRC=			${WRKDIR}/tk${TK_PKGSRC_PATCHLEVEL}
+WRKSRC=			${WRKDIR}/tk${TK_VERSION}
 
-GNU_CONFIGURE=	yes
-CONFIGURE_DIRS=	unix
+GNU_CONFIGURE=		yes
+CONFIGURE_DIRS=		unix
 BUILD_DIRS=		${CONFIGURE_DIRS}
 
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
-CONFIGURE_ARGS+=	--with-tcl=${BUILDLINK_PREFIX.tcl}/lib/tcl${TCL_PKGSRC_VERSION}
+CONFIGURE_ARGS+=	--with-tcl=${BUILDLINK_PREFIX.tcl}/lib/tcl${TCL_VERSION:C/.[0-9]*$//}
 
-TEST_TARGET=	test
-INSTALL_TARGET=	install install-private-headers
+TEST_TARGET=		test
+INSTALL_TARGET=		install install-private-headers
 
 .include "../../wip/tcl85/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
@@ -33,7 +33,7 @@ DESTDIRPREFIX=		${DESTDIR}${PREFIX}
 
 post-install:
 	rm -f ${DESTDIRPREFIX:Q}/bin/wish
-	ln -s wish8.5 ${DESTDIRPREFIX:Q}/bin/wish
-	mv ${DESTDIRPREFIX:Q}/lib/tkConfig.sh ${DESTDIRPREFIX:Q}/lib/tk${TK_PKGSRC_VERSION}
+	ln -s wish${TK_VERSION:C/.[0-9]*$//} ${DESTDIRPREFIX:Q}/bin/wish
+	mv ${DESTDIRPREFIX:Q}/lib/tkConfig.sh ${DESTDIRPREFIX:Q}/lib/tk${TK_VERSION:C/.[0-9]*$//}
 
 .include "../../mk/bsd.pkg.mk"
