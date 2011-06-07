@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/06/07 20:14:13 rhialto Exp $
+bin/unnethack
+@comment lib/X11/app-defaults/UnNetHack
+@comment lib/X11/fonts/misc/ibm.bdf
+@comment lib/X11/fonts/misc/nh10.bdf
+share/unnethackdir350/Guidebook.txt
+share/unnethackdir350/license
+share/unnethackdir350/nhdat
+share/unnethackdir350/recover
+share/unnethackdir350/unnethack
+@comment share/unnethackdir350/unnethack.x11.rc

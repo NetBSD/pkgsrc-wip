@@ -1,0 +1,18 @@
+$NetBSD: patch-sys_autoconf_Makefile.src,v 1.1.1.1 2011/06/07 20:14:13 rhialto Exp $
+
+Add #defines for libraries as set in pkgsrc Makefile, and runtime
+link path for curses.
+
+--- sys/autoconf/Makefile.src.orig	2010-10-10 12:46:08.000000000 +0000
++++ sys/autoconf/Makefile.src
+@@ -30,8 +30,8 @@ SYSOBJ=@SYSOBJ@
+ CC = @CC@ -DAUTOCONF
+ WINDRES = @WINDRES@
+ 
+-CFLAGS = -Wall -I../include -I$(srcdir)/../include @CFLAGS@ #-fbounds-check #-fprofile-arcs -ftest-coverage
+-LFLAGS = @LFLAGS@ #-fbounds-check
++CFLAGS = -Wall -I../include -I$(srcdir)/../include @CFLAGS@ '-DVAR_PLAYGROUND="${VARDIR:Q}"' '-DHACKDIR="${GAMEDIR:Q}"' #-fbounds-check #-fprofile-arcs -ftest-coverage
++LFLAGS = @LFLAGS@ -Wl,-R,${CURSESLIBDIR} #-fbounds-check
+ 
+ # Compile with PDCurses installed in a separate directory that doesn't
+ # conflict with the system curses/ncurses library

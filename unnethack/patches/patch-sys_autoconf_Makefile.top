@@ -1,0 +1,240 @@
+$NetBSD: patch-sys_autoconf_Makefile.top,v 1.1.1.1 2011/06/07 20:14:13 rhialto Exp $
+
+Hefty patching for setgid (rather than setuid), $DESTDIR, and potential
+separate installation of data and executables.
+
+--- sys/autoconf/Makefile.top.orig	2010-10-10 12:46:08.000000000 +0000
++++ sys/autoconf/Makefile.top
+@@ -27,12 +27,12 @@ GAMEGRP  = @GROUP@
+ 
+ # Permissions - some places use setgid instead of setuid, for instance
+ # See also the option "SECURE" in include/config.h
+-GAMEPERM = 04755
++GAMEPERM = 2755
+ FILEPERM = 0644
+ EXEPERM  = 0755
+ DIRPERM  = 0755
+ VARFILEPERM = 0644
+-VARDIRPERM  = 0755
++VARDIRPERM  = 0775
+ 
+ # GAMEDIR also appears in config.h as "HACKDIR".
+ # VARDIR may also appear in unixconf.h as "VAR_PLAYGROUND" else GAMEDIR
+@@ -45,8 +45,8 @@ VARDIRPERM  = 0755
+ # These must agree with the definitions in unixconf.h
+ 
+ # Defs. for non file areas support.
+-GAMEDIR  = $(PREFIX)/unnethackdir
+-VARDIR = $(GAMEDIR)
++GAMEDIR ?= $(PREFIX)/share/unnethackdir350
++VARDIR ?= /var/games/unnethack350
+ FILE_AREA_VAR = $(VARDIR)
+ FILE_AREA_SAVE = $(VARDIR)/save
+ FILE_AREA_SHARE = $(GAMEDIR)
+@@ -126,9 +126,12 @@ UNSHARE_DAT = $(UNSHARE_DATNODLB) $(UNSH
+ $(GAME):
+ 	( cd src ; $(MAKE) )
+ 
+-all:	$(GAME) recover$(EXEEXT) @GUIDEBOOK@ $(CNF_SHARE_DAT) dungeon spec_levs check-dlb
++all:	$(GAME) datastuff
+ 	@echo "Done."
+ 
++datastuff:	recover$(EXEEXT) @GUIDEBOOK@ $(CNF_SHARE_DAT) dungeon spec_levs check-dlb
++	@echo "Data Sets Built."
++
+ # Note: many of the dependencies below are here to allow parallel make
+ # to generate valid output
+ 
+@@ -138,46 +141,46 @@ Guidebook:
+ manpages:
+ 	( cd doc ; $(MAKE) manpages )
+ 
+-data: $(GAME)
++data: # $(GAME)
+ 	( cd dat ; $(MAKE) data )
+ 
+-rumors: $(GAME)
++rumors: # $(GAME)
+ 	( cd dat ; $(MAKE) rumors )
+ 
+-oracles: $(GAME)
++oracles: # $(GAME)
+ 	( cd dat ; $(MAKE) oracles )
+ 
+ #	Note: options should have already been made with make, but...
+ @OPTIONS_FILE@: $(GAME)
+ 	( cd dat ; $(MAKE) options )
+ 
+-quest.dat: $(GAME)
++quest.dat: # $(GAME)
+ 	( cd dat ; $(MAKE) quest.dat )
+ 
+-spec_levs: $(GAME)
++spec_levs: # $(GAME)
+ 	( cd util ; $(MAKE) lev_comp )
+ 	( cd dat ; $(MAKE) spec_levs )
+ 	( cd dat ; $(MAKE) quest_levs )
+ 
+-dungeon: $(GAME)
++dungeon: # $(GAME)
+ 	( cd util ; $(MAKE) dgn_comp )
+ 	( cd dat ; $(MAKE) dungeon )
+ 
+ Guidebook.txt:
+ 	( cd doc; $(MAKE) Guidebook.txt )
+ 
+-tiles.bmp: $(GAME)
++tiles.bmp: # $(GAME)
+ 	( cd dat ; $(MAKE) tiles.bmp )
+ 
+-x11tiles: $(GAME)
++x11tiles: # $(GAME)
+ 	( cd util ; $(MAKE) tile2x11 )
+ 	( cd dat ; $(MAKE) x11tiles )
+ 
+-beostiles: $(GAME)
++beostiles: # $(GAME)
+ 	( cd util ; $(MAKE) tile2beos )
+ 	( cd dat ; $(MAKE) beostiles )
+ 
+-UnNetHack.ad: $(GAME)
++UnNetHack.ad: # $(GAME)
+ 	( cd dat ; $(MAKE) UnNetHack.ad )
+ 
+ pet_mark.xbm:
+@@ -214,7 +217,7 @@ dlb: spec_levs
+ 
+ # recover can be used when INSURANCE is defined in include/config.h
+ # and the checkpoint option is true
+-recover$(EXEEXT): $(GAME)
++recover$(EXEEXT): # $(GAME)
+ 	( cd util ; $(MAKE) recover$(EXEEXT) )
+ 
+ dofiles:
+@@ -225,49 +228,49 @@ dofiles:
+ 		-e '}' 					\
+ 	  	-e '$$s/.*/nodlb/p' < dat/@OPTIONS_FILE@` ;	\
+ 	$(MAKE) dofiles-$${target-nodlb}
+-	(cd src; cp $(GAME) @EXTRA_UNSHARE@ $(FILE_AREA_UNSHARE))
+-	@HOST_MSWIN@cp $(srcdir)/sys/winnt/defaults.nh $(FILE_AREA_UNSHARE)
+-	cp util/recover$(EXEEXT) $(FILE_AREA_UNSHARE)
++	(cd src; cp $(GAME) @EXTRA_UNSHARE@ ${DESTDIR}$(FILE_AREA_UNSHARE))
++	@HOST_MSWIN@cp $(srcdir)/sys/winnt/defaults.nh ${DESTDIR}$(FILE_AREA_UNSHARE)
++	cp util/recover$(EXEEXT) ${DESTDIR}$(FILE_AREA_UNSHARE)
+ 	if test -f $(srcdir)/doc/Guidebook.txt ; then \
+-		cp $(srcdir)/doc/Guidebook.txt $(FILE_AREA_DOC); \
++		cp $(srcdir)/doc/Guidebook.txt ${DESTDIR}$(FILE_AREA_DOC); \
+ 	fi
+-	cp $(srcdir)/dat/license $(FILE_AREA_DOC)
++	cp $(srcdir)/dat/license ${DESTDIR}$(FILE_AREA_DOC)
+ #	cp win/Qt/KDE/kunnethack.kdelnk $(KDEDIR)/share/applnk/Games
+-	@HOST_UNIX@-rm -f $(SHELLDIR)/$(SCRIPT)
++	@HOST_UNIX@-rm -f ${DESTDIR}$(SHELLDIR)/$(SCRIPT)
+ 	@HOST_UNIX@sed -e 's;/usr/games/lib/nethackdir;$(FILE_AREA_UNSHARE);' \
+ 	@HOST_UNIX@	-e 's;HACKDIR/nethack;HACKDIR/$(GAME);' \
+ 	@HOST_UNIX@	< $(srcdir)/sys/unix/nethack.sh \
+-	@HOST_UNIX@	> $(SHELLDIR)/$(SCRIPT)
++	@HOST_UNIX@	> ${DESTDIR}$(SHELLDIR)/$(SCRIPT)
+ # set up their permissions
+-	-( cd $(FILE_AREA_UNSHARE) ; $(CHOWN) $(GAMEUID) $(GAME) recover$(EXEEXT) ; \
++	-( cd ${DESTDIR}$(FILE_AREA_UNSHARE) ; $(CHOWN) $(GAMEUID) $(GAME) recover$(EXEEXT) ; \
+ 			$(CHGRP) $(GAMEGRP) $(GAME) recover$(EXEEXT) )
+-	chmod $(GAMEPERM) $(FILE_AREA_UNSHARE)/$(GAME)
+-	chmod $(EXEPERM) $(FILE_AREA_UNSHARE)/recover$(EXEEXT)
+-	-( cd $(FILE_AREA_DOC) ; \
++	chmod $(GAMEPERM) ${DESTDIR}$(FILE_AREA_UNSHARE)/$(GAME)
++	chmod $(EXEPERM) ${DESTDIR}$(FILE_AREA_UNSHARE)/recover$(EXEEXT)
++	-( cd ${DESTDIR}$(FILE_AREA_DOC) ; \
+ 			$(CHOWN) $(GAMEUID) license @GUIDEBOOK_TXT@ ; \
+ 			$(CHGRP) $(GAMEGRP) license @GUIDEBOOK_TXT@ ; \
+ 			chmod $(FILEPERM) license @GUIDEBOOK_TXT@ )
+-	@HOST_UNIX@-$(CHOWN) $(GAMEUID) $(SHELLDIR)/$(SCRIPT)
+-	@HOST_UNIX@$(CHGRP) $(GAMEGRP) $(SHELLDIR)/$(SCRIPT)
+-	@HOST_UNIX@chmod $(EXEPERM) $(SHELLDIR)/$(SCRIPT)
++	@HOST_UNIX@-$(CHOWN) $(GAMEUID) ${DESTDIR}$(SHELLDIR)/$(SCRIPT)
++	@HOST_UNIX@$(CHGRP) $(GAMEGRP) ${DESTDIR}$(SHELLDIR)/$(SCRIPT)
++	@HOST_UNIX@chmod $(EXEPERM) ${DESTDIR}$(SHELLDIR)/$(SCRIPT)
+ 
+ dofiles-dlb: check-dlb
+-	( cd dat ; cp nhdat $(SHARE_DATNODLB) $(FILE_AREA_SHARE) )
++	( cd dat ; cp nhdat $(SHARE_DATNODLB) ${DESTDIR}$(FILE_AREA_SHARE) )
+ # set up their permissions
+-	-( cd $(FILE_AREA_SHARE) ; \
++	-( cd ${DESTDIR}$(FILE_AREA_SHARE) ; \
+ 			$(CHOWN) $(GAMEUID) nhdat $(SHARE_DATNODLB) ; \
+ 			$(CHGRP) $(GAMEGRP) nhdat $(SHARE_DATNODLB) ; \
+ 			chmod $(FILEPERM) nhdat $(SHARE_DATNODLB) )
+ 
+ dofiles-nodlb:
+ # copy over the game files
+-	( cd dat ; cp $(SHARE_DAT) $(FILE_AREA_SHARE) )
+-	( cd dat ; cp $(UNSHARE_DAT) $(FILE_AREA_UNSHARE) )
++	( cd dat ; cp $(SHARE_DAT) ${DESTDIR}$(FILE_AREA_SHARE) )
++	( cd dat ; cp $(UNSHARE_DAT) ${DESTDIR}$(FILE_AREA_UNSHARE) )
+ # set up their permissions
+-	-( cd $(FILE_AREA_SHARE) ; $(CHOWN) $(GAMEUID) $(SHARE_DAT) ; \
++	-( cd ${DESTDIR}$(FILE_AREA_SHARE) ; $(CHOWN) $(GAMEUID) $(SHARE_DAT) ; \
+ 			$(CHGRP) $(GAMEGRP) $(SHARE_DAT) ; \
+ 			chmod $(FILEPERM) $(SHARE_DAT) )
+-	-( cd $(FILE_AREA_UNSHARE) ; $(CHOWN) $(GAMEUID) $(UNSHARE_DAT) ; \
++	-( cd ${DESTDIR}$(FILE_AREA_UNSHARE) ; $(CHOWN) $(GAMEUID) $(UNSHARE_DAT) ; \
+ 			$(CHGRP) $(GAMEGRP) $(UNSHARE_DAT) ; \
+ 			chmod $(FILEPERM) $(UNSHARE_DAT) )
+ 
+@@ -287,34 +290,40 @@ update: $(GAME) recover$(EXEEXT) $(CNF_S
+ # and a reminder
+ 	@echo You may also want to install the man pages via the doc Makefile.
+ 
+-install: $(GAME) recover$(EXEEXT) $(CNF_SHARE_DAT) dungeon spec_levs @GUIDEBOOK_TXT@
++install-dat: recover$(EXEEXT) $(CNF_SHARE_DAT) dungeon spec_levs @GUIDEBOOK_TXT@
+ # set up the directories
+ # not all mkdirs have -p; those that don't will create a -p directory
+-	-mkdir -p $(SHELLDIR)
+-	-rm -rf $(FILE_AREA_VAR) $(FILE_AREA_BONES) $(FILE_AREA_SAVE)
+-	-rm -rf $(FILE_AREA_LEVL) $(FILE_AREA_SHARE) $(FILE_AREA_UNSHARE)
+-	-rm -rf $(FILE_AREA_DOC)
+-	-mkdir -p $(FILE_AREA_VAR) $(FILE_AREA_BONES) $(FILE_AREA_SAVE)
+-	-mkdir -p $(FILE_AREA_LEVL) $(FILE_AREA_SHARE) $(FILE_AREA_UNSHARE)
+-	-mkdir -p $(FILE_AREA_DOC)
++	-mkdir -p ${DESTDIR}$(SHELLDIR)
++	-mkdir -p ${DESTDIR}$(FILE_AREA_VAR) ${DESTDIR}$(FILE_AREA_BONES) ${DESTDIR}$(FILE_AREA_SAVE)
++	-mkdir -p ${DESTDIR}$(FILE_AREA_LEVL) ${DESTDIR}$(FILE_AREA_SHARE) ${DESTDIR}$(FILE_AREA_UNSHARE)
++	-mkdir -p ${DESTDIR}$(FILE_AREA_DOC)
+ 	-rmdir ./-p
+-	-$(CHOWN) $(GAMEUID) $(FILE_AREA_VAR) $(FILE_AREA_BONES) $(FILE_AREA_SAVE) $(FILE_AREA_LEVL)
+-	$(CHGRP) $(GAMEGRP) $(FILE_AREA_VAR) $(FILE_AREA_BONES) $(FILE_AREA_SAVE) $(FILE_AREA_LEVL)
+-	chmod $(VARDIRPERM) $(FILE_AREA_VAR) $(FILE_AREA_BONES) $(FILE_AREA_SAVE) $(FILE_AREA_LEVL)
+-	-$(CHOWN) $(GAMEUID) $(FILE_AREA_SHARE) $(FILE_AREA_UNSHARE)
+-	$(CHGRP) $(GAMEGRP) $(FILE_AREA_SHARE) $(FILE_AREA_UNSHARE)
+-	chmod $(DIRPERM) $(FILE_AREA_SHARE) $(FILE_AREA_UNSHARE)
++	-$(CHOWN) $(GAMEUID) ${DESTDIR}$(FILE_AREA_VAR) ${DESTDIR}$(FILE_AREA_BONES) ${DESTDIR}$(FILE_AREA_SAVE) ${DESTDIR}$(FILE_AREA_LEVL)
++	$(CHGRP) $(GAMEGRP) ${DESTDIR}$(FILE_AREA_VAR) ${DESTDIR}$(FILE_AREA_BONES) ${DESTDIR}$(FILE_AREA_SAVE) ${DESTDIR}$(FILE_AREA_LEVL)
++	chmod $(VARDIRPERM) ${DESTDIR}$(FILE_AREA_VAR) ${DESTDIR}$(FILE_AREA_BONES) ${DESTDIR}$(FILE_AREA_SAVE) ${DESTDIR}$(FILE_AREA_LEVL)
++	-$(CHOWN) $(GAMEUID) ${DESTDIR}$(FILE_AREA_SHARE) ${DESTDIR}$(FILE_AREA_UNSHARE)
++	$(CHGRP) $(GAMEGRP) ${DESTDIR}$(FILE_AREA_SHARE) ${DESTDIR}$(FILE_AREA_UNSHARE)
++	chmod $(DIRPERM) ${DESTDIR}$(FILE_AREA_SHARE) ${DESTDIR}$(FILE_AREA_UNSHARE)
+ # set up the game files
+ 	( $(MAKE) dofiles )
+ # set up some additional files
+-	touch $(FILE_AREA_VAR)/perm $(FILE_AREA_VAR)/record $(FILE_AREA_VAR)/logfile $(FILE_AREA_VAR)/@XLOGFILE@ $(FILE_AREA_VAR)/@LIVELOGFILE@
+-	-( cd $(FILE_AREA_VAR) ; $(CHOWN) $(GAMEUID) perm record logfile @XLOGFILE@ @LIVELOGFILE@ ; \
++	touch ${DESTDIR}$(FILE_AREA_VAR)/perm ${DESTDIR}$(FILE_AREA_VAR)/record ${DESTDIR}$(FILE_AREA_VAR)/logfile ${DESTDIR}$(FILE_AREA_VAR)/@XLOGFILE@ ${DESTDIR}$(FILE_AREA_VAR)/@LIVELOGFILE@
++	-( cd ${DESTDIR}$(FILE_AREA_VAR) ; $(CHOWN) $(GAMEUID) perm record logfile @XLOGFILE@ @LIVELOGFILE@ ; \
+ 			$(CHGRP) $(GAMEGRP) perm record logfile @XLOGFILE@ @LIVELOGFILE@ ; \
+ 			chmod $(VARFILEPERM) perm record logfile @XLOGFILE@ @LIVELOGFILE@ )
+ # and a reminder
+ 	@echo You may also want to reinstall the man pages via the doc Makefile.
+ 
+ 
++binfiles: $(GAME)
++	mkdir -p ${DESTDIR}$(SHELLDIR)
++	mkdir -p ${DESTDIR}$(GAMEDIR)
++	cp src/$(GAME) ${DESTDIR}$(FILE_AREA_UNSHARE)/$(GAME)
++	-( cd ${DESTDIR}$(FILE_AREA_UNSHARE) ; $(CHOWN) $(GAMEUID) $(GAME) ; \
++		$(CHGRP) $(GAMEGRP) $(GAME) ; \
++	chmod $(GAMEPERM) ${DESTDIR}$(FILE_AREA_UNSHARE)/$(GAME) )
++
++
+ # 'make clean' removes all the .o files, but leaves around all the executables
+ # and compiled data files
+ clean:

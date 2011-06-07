@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1.1.1 2011/06/07 20:14:13 rhialto Exp $
+
+test == is not portable 
+
+--- configure.orig	2010-10-10 12:46:08.000000000 +0000
++++ configure
+@@ -3969,7 +3969,7 @@ fi
+ rm -f conftest.l $LEX_OUTPUT_ROOT.c
+ 
+ fi
+-if test "$LEX" == ":"; then
++if test "$LEX" = ":"; then
+ 	as_fn_error "cannot find flex or lex" "$LINENO" 5
+ fi
+ for ac_prog in 'bison -y' byacc yacc

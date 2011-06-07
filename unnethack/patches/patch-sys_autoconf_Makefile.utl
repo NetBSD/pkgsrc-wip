@@ -1,0 +1,15 @@
+$NetBSD: patch-sys_autoconf_Makefile.utl,v 1.1.1.1 2011/06/07 20:14:13 rhialto Exp $
+
+This step is needed for compiling tile2x11.
+
+--- sys/autoconf/Makefile.utl.orig	2010-10-10 12:46:08.000000000 +0000
++++ sys/autoconf/Makefile.utl
+@@ -343,7 +343,7 @@ $(srcdir)/../src/tile.c: tilemap
+ 
+ ../include/tile.h: ../win/share/tile.h tilemap
+ 	./tilemap
+-#	cp ../win/share/tile.h ../include/tile.h
++	cp ../win/share/tile.h ../include/tile.h
+ 
+ tiletext.o: $(srcdir)/../win/share/tiletext.c $(CONFIG_H) ../include/tile.h
+ 	$(CC) $(CFLAGS) -c $(srcdir)/../win/share/tiletext.c
