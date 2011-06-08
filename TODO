@@ -70,6 +70,8 @@ Suggested package updates
 	o libgksu-2.0.4
 	o libgtk-java-2.10.2
 	o libmemcached-0.49
+	o libreoffice-3.4.0
+	o libreoffice3-bin-3.4.0
 	o libuuid-1.41.14
 	o linphone-3.4.3
 	o lirc-0.8.6
@@ -78,7 +80,7 @@ Suggested package updates
 	o man-1.6f
 	o mcabber-0.10.1
 	o mcwm-20110412
-	o meta-tracker-0.10.15
+	o meta-tracker-0.10.16
 	o mixxx-1.8.0
 	o mpgedit-0.73dev2
 	o mumble-1.2.3
