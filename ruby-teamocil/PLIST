@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/06/08 10:46:54 ishit Exp $
+bin/teamocil
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/README.mkd
+${GEM_LIBDIR}/bin/teamocil
+${GEM_LIBDIR}/lib/teamocil.rb
+${GEM_LIBDIR}/lib/teamocil/layout.rb
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
