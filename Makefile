@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4356 2011/06/07 20:28:18 rhialto Exp $
+# $Id: Makefile,v 1.4357 2011/06/08 10:50:42 ishit Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2442,6 +2442,7 @@ SUBDIR+=	ruby-ditz
 SUBDIR+=	ruby-dnssd
 SUBDIR+=	ruby-easyjour
 SUBDIR+=	ruby-git
+SUBDIR+=	ruby-teamocil
 SUBDIR+=	ruby-term-ansicolor
 SUBDIR+=	ruby-trollop
 SUBDIR+=	ruby-xmpp4r
