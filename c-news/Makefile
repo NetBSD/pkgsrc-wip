@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2011/05/19 12:54:18 hfath Exp $
+# $NetBSD: Makefile,v 1.22 2011/06/09 16:22:57 hfath Exp $
 
 DISTNAME=	c-news
 PKGNAME=	c-news-CR-7
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	news
 MASTER_SITES=	ftp://ftp.cs.toronto.edu/pub/c-news/ \
 		ftp://ftp.funet.fi/pub/unix/news/cnews/ \
@@ -28,6 +28,8 @@ PATCHFILES=	c-news-patch-fileart.c c-news-patch-namecheck.awk \
 MAINTAINER=	hauke@NetBSD.org
 HOMEPAGE=	http://www.dinoex.net/c-news.html
 COMMENT=	The 3rd generation USENET news server
+LICENSE=	c-news-license
+LICENSE_FILE=	c-news-license
 
 CONFLICTS+=	nntpclnt-[0-9]* inn-[0-9]*
 

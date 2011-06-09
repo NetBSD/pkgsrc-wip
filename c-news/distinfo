@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2008/02/23 03:45:12 hfath Exp $
+$NetBSD: distinfo,v 1.6 2011/06/09 16:22:57 hfath Exp $
 
 SHA1 (c-news/c-news.tar.Z) = fee33ba349ab42a547b48fc6f8427c374817dd8d
 RMD160 (c-news/c-news.tar.Z) = 5f222302bea9c145d438fd1edd7366cd69ce5c30
@@ -66,3 +66,19 @@ SHA1 (patch-ai) = 263e2d0be194b8dbdf14d2fa4e989a4320c505f3
 SHA1 (patch-aj) = a122932f53840ae994572b70cb2a772bb08c1cef
 SHA1 (patch-ak) = 456394d2a2bf543109ad67ff5f35f947ec69b697
 SHA1 (patch-al) = 13f29f6dfcf6bcaff41cad5712511f496bef742b
+SHA1 (patch-batch_batcher.c) = a2a6ad45316cf0bb3cd0b942f35d4c7744e0f64b
+SHA1 (patch-batch_bencode.c) = a21724fb7232222f1abd5a58b17c25cf96dec404
+SHA1 (patch-batch_c7encode.c) = 5da18e26b39786a53160b99a4b2ec496e916c8a9
+SHA1 (patch-inject_actflag.c) = 97d633c7b77a82c5437d3f222540f11866608c67
+SHA1 (patch-inject_defaults.c) = ac681cb5c3a4bd6788e0e7ce42c10a0476fbc2e7
+SHA1 (patch-input_bdecode.c) = 85456a1681b0e12495e14c2ee1d60f84e9625fb6
+SHA1 (patch-input_c7decode.c) = e4c88c8deef8cbf00d54665e482ef4ef5f03ee58
+SHA1 (patch-libc_error.c) = daefdd1b50fa99c1b78e5bc868a8dab0da7f4f77
+SHA1 (patch-libc_fgetfln.c) = d6389bf7d4af705decaf86ce86fe77cae8a44868
+SHA1 (patch-libc_stdfdopen.c) = 43eab21585776ad233b87aec033f15f1dec54cf7
+SHA1 (patch-libcnews_hostname.c) = 3cceb06faf6979fa4e7bea66a636dea89ac06e32
+SHA1 (patch-libcnews_rerror.c) = 002fb7f8b4c3fbdf04e8f55af2f2294f215b73bb
+SHA1 (patch-maint_histinfo.c) = fc3145aa2c53063f1f5ddee98637ea30f344d9ef
+SHA1 (patch-relay_control.c) = 915f3cf92c1e057e08246db1da2898a6a4240037
+SHA1 (patch-util_newslock.c) = cdc5490a53ba65e7e540a20539021be5a0485c8e
+SHA1 (patch-util_now.c) = b5008d1afd5a3f389ee30b659a71760ff980f89a

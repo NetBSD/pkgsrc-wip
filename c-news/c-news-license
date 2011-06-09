@@ -1,0 +1,32 @@
+/*
+ * Older parts Copyright (c) University of Toronto 1985-1993 and years
+ * between.  All rights reserved.
+ * Recent work Copyright (c) Geoffrey Collyer and Henry Spencer 1994.  All
+ * rights reserved.
+ * Written mostly by Geoffrey Collyer and Henry Spencer.
+ *
+ * This software is not subject to any license of the American Telephone
+ * and Telegraph Company, the Regents of the University of California, or
+ * the Free Software Foundation.
+ *
+ * Permission is granted to anyone to use this software for any purpose on
+ * any computer system, and to alter it and redistribute it freely, subject
+ * to the following restrictions:
+ *
+ * 1. The authors are not responsible for the consequences of use of this
+ *    software, no matter how awful, even if they arise from flaws in it.
+ *
+ * 2. The origin of this software must not be misrepresented, either by
+ *    explicit claim or by omission.  Since few users ever read sources,
+ *    credits must appear in the documentation.
+ *
+ * 3. Altered versions must be plainly marked as such, and must not be
+ *    misrepresented as being the original software.  Since few users
+ *    ever read sources, credits must appear in the documentation.
+ *
+ * 4. This notice may not be removed or altered.
+ *
+ * We also ask that, if possible, all distributions retain the sponsorship
+ * information in the README file and the sponsors directory.  These folks
+ * have helped us out, and we want to see them get proper credit for it.
+ */
