@@ -6,3 +6,5 @@
 - in NetBSD 3, postinstall removes the compatibility symlink /bin/rmail;
   have C News check for the new location /usr/libexec/rmail
 - add DESTDIR support
+- C News breaks on NetBSD-current, since 
+  sizeof(time_t) == 8 != sizeof(long)

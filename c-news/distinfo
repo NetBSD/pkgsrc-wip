@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2011/06/09 16:22:57 hfath Exp $
+$NetBSD: distinfo,v 1.7 2011/06/09 19:49:50 hfath Exp $
 
 SHA1 (c-news/c-news.tar.Z) = fee33ba349ab42a547b48fc6f8427c374817dd8d
 RMD160 (c-news/c-news.tar.Z) = 5f222302bea9c145d438fd1edd7366cd69ce5c30
@@ -79,6 +79,8 @@ SHA1 (patch-libc_stdfdopen.c) = 43eab21585776ad233b87aec033f15f1dec54cf7
 SHA1 (patch-libcnews_hostname.c) = 3cceb06faf6979fa4e7bea66a636dea89ac06e32
 SHA1 (patch-libcnews_rerror.c) = 002fb7f8b4c3fbdf04e8f55af2f2294f215b73bb
 SHA1 (patch-maint_histinfo.c) = fc3145aa2c53063f1f5ddee98637ea30f344d9ef
+SHA1 (patch-readnews_active.c) = 61d1a6d825173022f6ed6f1d59094872193518c8
+SHA1 (patch-readnews_newsrc.c) = c03512912372cc470c2bfdfdf77dc51a11cfafbb
 SHA1 (patch-relay_control.c) = 915f3cf92c1e057e08246db1da2898a6a4240037
 SHA1 (patch-util_newslock.c) = cdc5490a53ba65e7e540a20539021be5a0485c8e
 SHA1 (patch-util_now.c) = b5008d1afd5a3f389ee30b659a71760ff980f89a
