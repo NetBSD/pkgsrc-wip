@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2011/06/05 09:06:52 ftigeot Exp $
+$NetBSD: distinfo,v 1.9 2011/06/09 23:33:11 thomasklausner Exp $
 
 SHA1 (libreoffice/067201ea8b126597670b5eff72e1f66c-mythes-1.2.0.tar.gz) = 025d5d0d566a23ddb353495c116116c1088ba2e9
 RMD160 (libreoffice/067201ea8b126597670b5eff72e1f66c-mythes-1.2.0.tar.gz) = aefa80476ef8340be84440b61f738f432da51c92
@@ -98,3 +98,4 @@ SHA1 (patch-clone_filters_lotuswordpro_Module_lotuswordpro.mk) = 2a6f457663efe83
 SHA1 (patch-clone_impress_sd_Module_sd.mk) = 975c8a47e5b11d8a28e14784515615e2118eccb7
 SHA1 (patch-clone_writer_starmath_Module_starmath.mk) = c3398e08b4aca94fa7edcd41485b0abe1105e826
 SHA1 (patch-set_soenv.in) = 2397076ed3568a6fdfe9a4d2143d1a4112bf5ce9
+SHA1 (patch-solenv-gbuild-platform-netbsd.mk) = c1a4c2b9a3a76350534232bc20ba7662b8eababb
