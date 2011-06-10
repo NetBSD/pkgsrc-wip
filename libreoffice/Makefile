@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2011/06/06 15:50:02 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.12 2011/06/10 22:48:17 thomasklausner Exp $
 
 VER=			2011-06-05
 DISTNAME=		libreoffice-${VER}
@@ -55,7 +55,6 @@ EXTRACT_USING=		gtar
 
 WRKSRC=		${WRKDIR}/${LO_BOOTSTRAP}
 
-
 BUILD_DEPENDS+=		cppunit>1.12:../../devel/cppunit
 BUILD_DEPENDS+=		gperf-[0-9]*:../../devel/gperf
 BUILD_DEPENDS+=		hunspell>=1.2.8:../../textproc/hunspell
@@ -81,7 +80,6 @@ CONFLICTS+=		openoffice3-[0-9]*
 CONFLICTS+=		openoffice3-bin-[0-9]*
 CONFLICTS+=		openoffice-linux-[0-9]*
 CONFLICTS+=		libreoffice3-bin-[0-9]*
-
 
 USE_TOOLS+=		automake bash bison gmake perl pkg-config unzip
 PTHREAD_OPTS+=		require
@@ -122,6 +120,12 @@ SUBST_STAGE.libpath=	pre-configure
 SUBST_FILES.libpath=	set_soenv.in
 SUBST_SED.libpath=		-e 's,@LIBPATH@,${LIBPATH},g'
 SUBST_MESSAGE.libpath=	Fixing library path for dmake scripts
+
+REPLACE_PERL=	clone/impress/sd/res/webview/editpic.pl
+REPLACE_PERL+=	clone/impress/sd/res/webview/poll.pl
+REPLACE_PERL+=	clone/impress/sd/res/webview/savepic.pl
+REPLACE_PERL+=	clone/impress/sd/res/webview/show.pl
+REPLACE_PERL+=	clone/impress/sd/res/webview/webview.pl
 
 PLIST_VARS+=	adabas
 .if ${OPSYS} == "NetBSD"
