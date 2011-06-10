@@ -1,10 +1,10 @@
-$NetBSD: patch-ae,v 1.6 2011/04/22 07:59:42 ahp-nils Exp $
+$NetBSD: patch-ae,v 1.7 2011/06/10 08:55:05 ahp-nils Exp $
 
 Add pkgsrc paths compatibility
 
 --- examples/logrotate-default.orig	2010-06-28 08:04:56.000000000 +0000
 +++ examples/logrotate-default
-@@ -12,18 +12,12 @@ create
+@@ -12,20 +12,14 @@ create
  dateext
  
  # uncomment this if you want your log files compressed
@@ -25,5 +25,8 @@ Add pkgsrc paths compatibility
 -}
 +# no packages own btmp -- we'll rotate it here
  
- /var/log/btmp {
+-/var/log/btmp {
++@VARBASE@/log/btmp {
      missingok
+     monthly
+     create 0600 root utmp

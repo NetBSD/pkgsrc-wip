@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2011/04/20 18:53:57 ahp-nils Exp $
+# $NetBSD: Makefile,v 1.16 2011/06/10 08:55:05 ahp-nils Exp $
 #
 
 DISTNAME=		logrotate-3.7.9
@@ -35,6 +35,7 @@ SUBST_MESSAGE.confs=	Fixing configuration files.
 SUBST_FILES.confs=	${WRKSRC}/${EXAMPLES_DIR}/logrotate-default
 SUBST_FILES.confs+=	${WRKSRC}/${EXAMPLES_DIR}/logrotate.cron
 SUBST_VARS.confs=	PREFIX
+SUBST_VARS.confs+=	VARBASE
 
 SUBST_CLASSES+=		man
 SUBST_STAGE.man=	post-patch
