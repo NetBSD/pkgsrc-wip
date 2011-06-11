@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/06/11 12:56:32 jathis Exp $
+
+SHA1 (kicad-sources-2010-05-05-BZR2356-stable.zip) = f31233c3777cfa2b2269995a5a13a001c5ef1e0a
+RMD160 (kicad-sources-2010-05-05-BZR2356-stable.zip) = f88d1c0c5f78f5d7cb838bb7cee0c43e8f0ffdf1
+Size (kicad-sources-2010-05-05-BZR2356-stable.zip) = 9242459 bytes
+SHA1 (patch-CMakeModules_config.h.cmake) = 993abc24375dc3305e2194454e5e63bbdd62304c
