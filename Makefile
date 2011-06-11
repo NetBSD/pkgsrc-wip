@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4357 2011/06/08 10:50:42 ishit Exp $
+# $Id: Makefile,v 1.4358 2011/06/11 13:17:16 jathis Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1122,6 +1122,7 @@ SUBDIR+=	kdewebdev4
 SUBDIR+=	kdiff3
 SUBDIR+=	kgrab
 SUBDIR+=	kgraphviewer
+SUBDIR+=	kicad
 SUBDIR+=	kile
 SUBDIR+=	kino
 SUBDIR+=	kissme
