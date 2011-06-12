@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.106 2011/05/05 23:21:19 makoto Exp $
+@comment $NetBSD: PLIST,v 1.107 2011/06/12 00:43:34 makoto Exp $
 bin/ctags
 bin/ebrowse
 bin/emacs
@@ -59,7 +59,6 @@ info/vip.gz
 info/viper.gz
 info/widget.gz
 info/woman.gz
-libexec/emacs/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/fakemail
 libexec/emacs/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/hexl
 libexec/emacs/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/movemail
 libexec/emacs/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/profile
@@ -581,6 +580,17 @@ share/emacs/${PKGVERSION}/etc/images/mpc/rewind.xpm
 share/emacs/${PKGVERSION}/etc/images/mpc/stop.xpm
 share/emacs/${PKGVERSION}/etc/images/new.pbm
 share/emacs/${PKGVERSION}/etc/images/new.xpm
+share/emacs/${PKGVERSION}/etc/images/newsticker/README
+share/emacs/${PKGVERSION}/etc/images/newsticker/browse-url.xpm
+share/emacs/${PKGVERSION}/etc/images/newsticker/get-all.xpm
+share/emacs/${PKGVERSION}/etc/images/newsticker/mark-immortal.xpm
+share/emacs/${PKGVERSION}/etc/images/newsticker/mark-read.xpm
+share/emacs/${PKGVERSION}/etc/images/newsticker/narrow.xpm
+share/emacs/${PKGVERSION}/etc/images/newsticker/next-feed.xpm
+share/emacs/${PKGVERSION}/etc/images/newsticker/next-item.xpm
+share/emacs/${PKGVERSION}/etc/images/newsticker/prev-feed.xpm
+share/emacs/${PKGVERSION}/etc/images/newsticker/prev-item.xpm
+share/emacs/${PKGVERSION}/etc/images/newsticker/update.xpm
 share/emacs/${PKGVERSION}/etc/images/next-node.pbm
 share/emacs/${PKGVERSION}/etc/images/next-node.xpm
 share/emacs/${PKGVERSION}/etc/images/next-page.pbm
@@ -1015,6 +1025,7 @@ share/emacs/${PKGVERSION}/leim/quail/hebrew.el.gz
 share/emacs/${PKGVERSION}/leim/quail/hebrew.elc
 share/emacs/${PKGVERSION}/leim/quail/indian.el.gz
 share/emacs/${PKGVERSION}/leim/quail/indian.elc
+share/emacs/${PKGVERSION}/leim/quail/ipa-praat.el
 share/emacs/${PKGVERSION}/leim/quail/ipa.el.gz
 share/emacs/${PKGVERSION}/leim/quail/ipa.elc
 share/emacs/${PKGVERSION}/leim/quail/japanese.el.gz
@@ -1031,6 +1042,8 @@ share/emacs/${PKGVERSION}/leim/quail/latin-pre.el.gz
 share/emacs/${PKGVERSION}/leim/quail/latin-pre.elc
 share/emacs/${PKGVERSION}/leim/quail/lrt.el.gz
 share/emacs/${PKGVERSION}/leim/quail/lrt.elc
+share/emacs/${PKGVERSION}/leim/quail/persian.el.gz
+share/emacs/${PKGVERSION}/leim/quail/persian.elc
 share/emacs/${PKGVERSION}/leim/quail/py-punct.el.gz
 share/emacs/${PKGVERSION}/leim/quail/py-punct.elc
 share/emacs/${PKGVERSION}/leim/quail/pypunct-b5.el.gz
@@ -3382,8 +3395,6 @@ share/emacs/${PKGVERSION}/lisp/server.el.gz
 share/emacs/${PKGVERSION}/lisp/server.elc
 share/emacs/${PKGVERSION}/lisp/ses.el.gz
 share/emacs/${PKGVERSION}/lisp/ses.elc
-share/emacs/${PKGVERSION}/lisp/sha1.el.gz
-share/emacs/${PKGVERSION}/lisp/sha1.elc
 share/emacs/${PKGVERSION}/lisp/shadowfile.el.gz
 share/emacs/${PKGVERSION}/lisp/shadowfile.elc
 share/emacs/${PKGVERSION}/lisp/shell.el.gz
@@ -3602,6 +3613,8 @@ share/emacs/${PKGVERSION}/lisp/url/url-file.el.gz
 share/emacs/${PKGVERSION}/lisp/url/url-file.elc
 share/emacs/${PKGVERSION}/lisp/url/url-ftp.el.gz
 share/emacs/${PKGVERSION}/lisp/url/url-ftp.elc
+share/emacs/${PKGVERSION}/lisp/url/url-future.el.gz
+share/emacs/${PKGVERSION}/lisp/url/url-future.elc
 share/emacs/${PKGVERSION}/lisp/url/url-gw.el.gz
 share/emacs/${PKGVERSION}/lisp/url/url-gw.elc
 share/emacs/${PKGVERSION}/lisp/url/url-handlers.el.gz
@@ -3634,6 +3647,8 @@ share/emacs/${PKGVERSION}/lisp/url/url-privacy.el.gz
 share/emacs/${PKGVERSION}/lisp/url/url-privacy.elc
 share/emacs/${PKGVERSION}/lisp/url/url-proxy.el.gz
 share/emacs/${PKGVERSION}/lisp/url/url-proxy.elc
+share/emacs/${PKGVERSION}/lisp/url/url-queue.el.gz
+share/emacs/${PKGVERSION}/lisp/url/url-queue.elc
 share/emacs/${PKGVERSION}/lisp/url/url-util.el.gz
 share/emacs/${PKGVERSION}/lisp/url/url-util.elc
 share/emacs/${PKGVERSION}/lisp/url/url-vars.el.gz
