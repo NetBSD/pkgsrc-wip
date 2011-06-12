@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2011/06/12 09:12:11 ryo-on Exp $
+# $NetBSD: Makefile,v 1.7 2011/06/12 10:17:06 ryo-on Exp $
 
 DISTNAME=		libreoffice3-bin	# overridden below
 PKGNAME=		libreoffice3-bin-${OO_RELEASE}
@@ -47,6 +47,10 @@ RPM2PKG_STAGE=		do-install
 RUN_LDCONFIG=		no
 
 USE_TOOLS+=	patch
+BUILD_DEPENDS+=	binpatch-[0-9]*:../../pkgtools/binpatch
+
+FIND_PREFIX:=	BINPATCHDIR=binpatch
+.include "../../mk/find-prefix.mk"
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -83,5 +87,9 @@ do-install:
 .for i in scalc sdraw simpress smath spadmin swriter
 	${LN} -sf ../opt/libreoffice${OO_BASEVER}/program/${i} ${DESTDIR}${PREFIX}/bin/${i}
 .endfor
+
+post-install:
+	${CHMOD} 755 ${DESTDIR}${PREFIX}/opt/libreoffice3.4/program/oosplash.bin
+	${BINPATCHDIR}/bin/binpatch file=${DESTDIR}${PREFIX}/opt/libreoffice3.4/program/oosplash.bin size=19228 offset=16556 compare=76657273696F6E00 skip=0 replace=637075696E666f
 
 .include "../../mk/bsd.pkg.mk"
