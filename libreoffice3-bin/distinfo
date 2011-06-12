@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2011/03/26 06:14:59 ryo-on Exp $
+$NetBSD: distinfo,v 1.3 2011/06/12 09:12:11 ryo-on Exp $
 
-SHA1 (LibO_3.3.2_Linux_x86_install-rpm_en-US.tar.gz) = f040e2f1b2039b1dfbf74209b831ebc17073277f
-RMD160 (LibO_3.3.2_Linux_x86_install-rpm_en-US.tar.gz) = d7f7d356f373973311d4f60abc1a68f4ee764d2a
-Size (LibO_3.3.2_Linux_x86_install-rpm_en-US.tar.gz) = 153885204 bytes
+SHA1 (LibO_3.4.0_Linux_x86_install-rpm_en-US.tar.gz) = 617308145cb4b3bfe141f6dbbab21e8fc2fdba4a
+RMD160 (LibO_3.4.0_Linux_x86_install-rpm_en-US.tar.gz) = 3c8cb55beffd35ddf73a4f3c369dbdb46d15b872
+Size (LibO_3.4.0_Linux_x86_install-rpm_en-US.tar.gz) = 153493871 bytes
