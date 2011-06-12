@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/06/11 22:47:30 ryo-on Exp $
+# $NetBSD: Makefile,v 1.2 2011/06/12 04:17:47 ryo-on Exp $
 #
 
 DISTNAME=	queequeg-0.91
@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-DEPENDS+=	py-cdb-[0-9]*:../../wip/py-cdb
+DEPENDS+=	${PYPKGPREFIX}-cdb-[0-9]*:../../wip/py-cdb
 BUILD_DEPENDS+=	WordNet-[0-9]*:../../textproc/WordNet
 
 USE_LANGUAGES=	# none

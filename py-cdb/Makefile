@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/06/11 22:43:24 ryo-on Exp $
+# $NetBSD: Makefile,v 1.2 2011/06/12 04:17:47 ryo-on Exp $
 #
 
 DISTNAME=	python-cdb-0.34
-PKGNAME=	${DISTNAME:S/python-/py-/}
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//}
 CATEGORIES=	databases
 MASTER_SITES=	http://pilcrow.madison.wi.us/python-cdb/
 
