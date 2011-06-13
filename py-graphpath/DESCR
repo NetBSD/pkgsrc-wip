@@ -1,0 +1,5 @@
+A little-language for analysing RDF, the syntax of the GraphPath is reminiscent
+of Xpath The graphpath package provides a query evaluator and a
+goal-driven inference engine for this language, which work together to perform
+graph analysis. The package can be teamed up with your favourite python RDF API
+(e.g. Redland, rdflib, or your own API).
