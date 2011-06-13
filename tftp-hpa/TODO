@@ -1,0 +1,6 @@
+CVE-2011-2199
+ The tftp-hpa daemon contained a buffer overflow vulnerability in the
+ function for setting the utimeout option. As the daemon accepts this
+ option from clients, the buffer overflow can be remotely exploited.
+ http://git.kernel.org/?p=network/tftp/tftp-hpa.git;a=commitdiff;h=f3035c45bc50bb5cac87ca01e7ef6a12485184f8
+
