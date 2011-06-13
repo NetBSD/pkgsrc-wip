@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/06/13 20:40:47 jihbed Exp $
+
+SHA1 (uncertainties-1.7.1.tar.gz) = 0fc1c2c71cc695245063f7d807a77d2902ed46f4
+RMD160 (uncertainties-1.7.1.tar.gz) = b35c751914e1302b7ce00816b7904027e08b31a0
+Size (uncertainties-1.7.1.tar.gz) = 42388 bytes
