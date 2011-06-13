@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/06/13 19:15:38 jihbed Exp $
+${PYSITELIB}/ontopy.py
+${PYSITELIB}/ontopy.pyc
+${PYSITELIB}/ontopy.pyo
+${PYSITELIB}/sparql.py
+${PYSITELIB}/sparql.pyc
+${PYSITELIB}/sparql.pyo
