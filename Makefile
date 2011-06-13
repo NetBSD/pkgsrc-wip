@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4360 2011/06/11 22:49:15 ryo-on Exp $
+# $Id: Makefile,v 1.4361 2011/06/13 21:26:05 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1987,6 +1987,7 @@ SUBDIR+=	py-addons
 SUBDIR+=	py-aipy
 SUBDIR+=	py-albatross
 SUBDIR+=	py-algopy
+SUBDIR+=	py-altgraph
 SUBDIR+=	py-amqplib
 SUBDIR+=	py-anyjson
 SUBDIR+=	py-aopython
@@ -2093,6 +2094,8 @@ SUBDIR+=	py-gist
 SUBDIR+=	py-gnm
 SUBDIR+=	py-gnucash
 SUBDIR+=	py-gpaw
+SUBDIR+=	py-graphmin
+SUBDIR+=	py-graphpath
 SUBDIR+=	py-greenlet
 SUBDIR+=	py-griddata
 SUBDIR+=	py-grpy
@@ -2172,6 +2175,7 @@ SUBDIR+=	py-oak
 SUBDIR+=	py-oasa
 SUBDIR+=	py-oauth
 SUBDIR+=	py-omniORBpy
+SUBDIR+=	py-ontopy
 SUBDIR+=	py-openopt
 SUBDIR+=	py-openxmllib
 SUBDIR+=	py-orm
@@ -2230,6 +2234,7 @@ SUBDIR+=	py-qitensor
 SUBDIR+=	py-quaternionarray
 SUBDIR+=	py-qutrub
 SUBDIR+=	py-rcsparse
+SUBDIR+=	py-rdf
 SUBDIR+=	py-rdflib
 SUBDIR+=	py-remctl
 SUBDIR+=	py-repositoryhandler
@@ -2311,6 +2316,7 @@ SUBDIR+=	py-tranquil
 SUBDIR+=	py-transaction
 SUBDIR+=	py-turbojson
 SUBDIR+=	py-twisted-kqueue
+SUBDIR+=	py-uncertainties
 SUBDIR+=	py-utilib_common
 SUBDIR+=	py-utilib_component_app
 SUBDIR+=	py-utilib_component_config
