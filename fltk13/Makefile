@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2010/10/05 22:02:43 christtrekker Exp $
+# $NetBSD: Makefile,v 1.3 2011/06/14 16:20:55 christtrekker Exp $
 #
 
-DISTNAME=	fltk-1.3.x-r7709
+DISTNAME=	fltk-1.3.x-r8800
 PKGNAME=	${DISTNAME:S/fltk/fltk13/:S/x-r/pre/}
 CATEGORIES=	x11
 MASTER_SITES+=	http://ftp.easysw.com/pub/fltk/snapshots/
@@ -37,7 +37,12 @@ CONFIGURE_ARGS+=	--enable-gl
 PLIST.opengl=	yes
 .endif
 CONFIGURE_ARGS+=	--enable-shared
+# Use pkgsrc versions, not package's built-in versions.
+CONFIGURE_ARGS+=	--disable-localjpeg --disable-localzlib --disable-localpng
 
 .include "../../x11/libXext/buildlink3.mk"
+.include "../../mk/jpeg.buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
