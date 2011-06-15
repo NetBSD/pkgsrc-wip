@@ -1,1 +1,2 @@
-* http://bugs.python.org/issue11662
+* conditional PLIST.
+* check-interpreter clean.

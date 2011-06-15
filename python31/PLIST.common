@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.5 2010/12/02 12:16:13 obache Exp $
+@comment $NetBSD: PLIST.common,v 1.6 2011/06/15 08:58:27 obache Exp $
 bin/2to3-${PY_VER_SUFFIX}
 bin/idle3
 bin/pydoc${PY_VER_SUFFIX}
@@ -2303,9 +2303,32 @@ lib/python${PY_VER_SUFFIX}/test/buffer_tests.pyc
 lib/python${PY_VER_SUFFIX}/test/buffer_tests.pyo
 lib/python${PY_VER_SUFFIX}/test/cfgparser.1
 lib/python${PY_VER_SUFFIX}/test/check_soundcard.vbs
-lib/python${PY_VER_SUFFIX}/test/cjkencodings_test.py
-lib/python${PY_VER_SUFFIX}/test/cjkencodings_test.pyc
-lib/python${PY_VER_SUFFIX}/test/cjkencodings_test.pyo
+lib/python${PY_VER_SUFFIX}/test/cjkencodings/big5-utf8.txt
+lib/python${PY_VER_SUFFIX}/test/cjkencodings/big5.txt
+lib/python${PY_VER_SUFFIX}/test/cjkencodings/big5hkscs-utf8.txt
+lib/python${PY_VER_SUFFIX}/test/cjkencodings/big5hkscs.txt
+lib/python${PY_VER_SUFFIX}/test/cjkencodings/cp949-utf8.txt
+lib/python${PY_VER_SUFFIX}/test/cjkencodings/cp949.txt
+lib/python${PY_VER_SUFFIX}/test/cjkencodings/euc_jisx0213-utf8.txt
+lib/python${PY_VER_SUFFIX}/test/cjkencodings/euc_jisx0213.txt
+lib/python${PY_VER_SUFFIX}/test/cjkencodings/euc_jp-utf8.txt
+lib/python${PY_VER_SUFFIX}/test/cjkencodings/euc_jp.txt
+lib/python${PY_VER_SUFFIX}/test/cjkencodings/euc_kr-utf8.txt
+lib/python${PY_VER_SUFFIX}/test/cjkencodings/euc_kr.txt
+lib/python${PY_VER_SUFFIX}/test/cjkencodings/gb18030-utf8.txt
+lib/python${PY_VER_SUFFIX}/test/cjkencodings/gb18030.txt
+lib/python${PY_VER_SUFFIX}/test/cjkencodings/gb2312-utf8.txt
+lib/python${PY_VER_SUFFIX}/test/cjkencodings/gb2312.txt
+lib/python${PY_VER_SUFFIX}/test/cjkencodings/gbk-utf8.txt
+lib/python${PY_VER_SUFFIX}/test/cjkencodings/gbk.txt
+lib/python${PY_VER_SUFFIX}/test/cjkencodings/hz-utf8.txt
+lib/python${PY_VER_SUFFIX}/test/cjkencodings/hz.txt
+lib/python${PY_VER_SUFFIX}/test/cjkencodings/johab-utf8.txt
+lib/python${PY_VER_SUFFIX}/test/cjkencodings/johab.txt
+lib/python${PY_VER_SUFFIX}/test/cjkencodings/shift_jis-utf8.txt
+lib/python${PY_VER_SUFFIX}/test/cjkencodings/shift_jis.txt
+lib/python${PY_VER_SUFFIX}/test/cjkencodings/shift_jisx0213-utf8.txt
+lib/python${PY_VER_SUFFIX}/test/cjkencodings/shift_jisx0213.txt
 lib/python${PY_VER_SUFFIX}/test/cmath_testcases.txt
 lib/python${PY_VER_SUFFIX}/test/curses_tests.py
 lib/python${PY_VER_SUFFIX}/test/curses_tests.pyc
@@ -2546,6 +2569,9 @@ lib/python${PY_VER_SUFFIX}/test/ssl_key.pem
 lib/python${PY_VER_SUFFIX}/test/string_tests.py
 lib/python${PY_VER_SUFFIX}/test/string_tests.pyc
 lib/python${PY_VER_SUFFIX}/test/string_tests.pyo
+lib/python${PY_VER_SUFFIX}/test/subprocessdata/sigchild_ignore.py
+lib/python${PY_VER_SUFFIX}/test/subprocessdata/sigchild_ignore.pyc
+lib/python${PY_VER_SUFFIX}/test/subprocessdata/sigchild_ignore.pyo
 lib/python${PY_VER_SUFFIX}/test/support.py
 lib/python${PY_VER_SUFFIX}/test/support.pyc
 lib/python${PY_VER_SUFFIX}/test/support.pyo
@@ -3094,6 +3120,9 @@ lib/python${PY_VER_SUFFIX}/test/test_module.pyo
 lib/python${PY_VER_SUFFIX}/test/test_modulefinder.py
 lib/python${PY_VER_SUFFIX}/test/test_modulefinder.pyc
 lib/python${PY_VER_SUFFIX}/test/test_modulefinder.pyo
+lib/python${PY_VER_SUFFIX}/test/test_msilib.py
+lib/python${PY_VER_SUFFIX}/test/test_msilib.pyc
+lib/python${PY_VER_SUFFIX}/test/test_msilib.pyo
 lib/python${PY_VER_SUFFIX}/test/test_multibytecodec.py
 lib/python${PY_VER_SUFFIX}/test/test_multibytecodec.pyc
 lib/python${PY_VER_SUFFIX}/test/test_multibytecodec.pyo
@@ -3613,6 +3642,7 @@ lib/python${PY_VER_SUFFIX}/test/warning_tests.pyo
 lib/python${PY_VER_SUFFIX}/test/xmltests.py
 lib/python${PY_VER_SUFFIX}/test/xmltests.pyc
 lib/python${PY_VER_SUFFIX}/test/xmltests.pyo
+lib/python${PY_VER_SUFFIX}/test/zip_cp437_header.zip
 lib/python${PY_VER_SUFFIX}/test/zipdir.zip
 lib/python${PY_VER_SUFFIX}/textwrap.py
 lib/python${PY_VER_SUFFIX}/textwrap.pyc
