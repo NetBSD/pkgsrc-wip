@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2011/06/15 11:53:44 ftigeot Exp $
+# $NetBSD: Makefile,v 1.14 2011/06/15 17:20:20 ftigeot Exp $
 
-VER=			2011-06-05
+VER=			2011-06-15
 DISTNAME=		libreoffice-${VER}
 PKGNAME=		libreoffice-${VER:S/-//g}
 CATEGORIES=		misc
@@ -127,11 +127,6 @@ REPLACE_PERL+=	clone/impress/sd/res/webview/poll.pl
 REPLACE_PERL+=	clone/impress/sd/res/webview/savepic.pl
 REPLACE_PERL+=	clone/impress/sd/res/webview/show.pl
 REPLACE_PERL+=	clone/impress/sd/res/webview/webview.pl
-
-PLIST_VARS+=	adabas
-.if ${OPSYS} == "NetBSD"
-PLIST.adabas=	yes
-.endif
 
 LO_PROGRAMS=	sbase scalc sdraw simpress smath soffice swriter
 

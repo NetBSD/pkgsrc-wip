@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2011/06/06 15:50:02 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.7 2011/06/15 17:20:20 ftigeot Exp $
 bin/sbase
 bin/scalc
 bin/sdraw
@@ -130,7 +130,6 @@ ${PKGNAME}/basis3.4/program/i18nsearch.uno.so
 ${PKGNAME}/basis3.4/program/kde-open-url
 ${PKGNAME}/basis3.4/program/libabplo.so
 ${PKGNAME}/basis3.4/program/libacclo.so
-${PLIST.adabas}${PKGNAME}/basis3.4/program/libadabaslo.so
 ${PKGNAME}/basis3.4/program/libadabasuilo.so
 ${PKGNAME}/basis3.4/program/libanalysislo.so
 ${PKGNAME}/basis3.4/program/libanimcore.so
@@ -198,7 +197,7 @@ ${PKGNAME}/basis3.4/program/libfwllo.so
 ${PKGNAME}/basis3.4/program/libfwmlo.so
 ${PKGNAME}/basis3.4/program/libguesslanglo.so
 ${PKGNAME}/basis3.4/program/libhelplinkerlo.so
-${PKGNAME}/basis3.4/program/libhwp.so
+${PKGNAME}/basis3.4/program/libhwplo.so
 ${PKGNAME}/basis3.4/program/libhyphenlo.so
 ${PKGNAME}/basis3.4/program/libi18nisolang1gcc3.so
 ${PKGNAME}/basis3.4/program/libi18npaperlo.so
@@ -310,6 +309,7 @@ ${PKGNAME}/basis3.4/program/libvcllo.so
 ${PKGNAME}/basis3.4/program/libvclplug_genlo.so
 ${PKGNAME}/basis3.4/program/libvclplug_gtklo.so
 ${PKGNAME}/basis3.4/program/libvclplug_svplo.so
+${PKGNAME}/basis3.4/program/libvisioimportlo.so
 ${PKGNAME}/basis3.4/program/libwpftlo.so
 ${PKGNAME}/basis3.4/program/libwpgimportlo.so
 ${PKGNAME}/basis3.4/program/libwriterfilterlo.so
