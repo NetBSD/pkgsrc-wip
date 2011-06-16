@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2011/01/03 12:23:10 moubctez Exp $
+# $NetBSD: Makefile,v 1.7 2011/06/16 18:45:34 jeremy-c-reed Exp $
 
 .include "dist.mk"
 
@@ -8,6 +8,8 @@ CATEGORIES=	lang python
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.python.org/
 COMMENT=	Interpreted, interactive, object-oriented programming language
+
+LICENSE=	python-software-foundation
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
