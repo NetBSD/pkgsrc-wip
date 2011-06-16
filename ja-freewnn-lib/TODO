@@ -4,7 +4,7 @@
 
 * dict is not split yet (probably OK)
 
-* diff from previous version to PLIST (probably OK)
+* diff from previous version to PLIST is following (probably OK)
 --------------------------
 +include/wnn/wnn_config.h
 
@@ -14,7 +14,3 @@
 -lib/libwnn.a
 +lib/libwnn.la
 --------------------------
-
-* PKGREVISION
- 1.1.1-pl22 is NOT greater than 1.10nb4, but should be
-greater.  1.10-pl22 would be the name ?

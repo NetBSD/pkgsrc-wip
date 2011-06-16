@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/06/01 14:32:11 makoto Exp $
+# $NetBSD: Makefile,v 1.2 2011/06/16 03:08:54 makoto Exp $
 
-PKGNAME=	ja-freewnn-lib-1.1.1_pl22
+PKGNAME=	ja-freewnn-lib-1.11alpha22
 
 CONFIGURE_ARGS+=	--disable-server
 CONFIGURE_ARGS+=	--disable-client

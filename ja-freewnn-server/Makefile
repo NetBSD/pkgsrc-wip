@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/06/01 14:41:31 makoto Exp $
+# $NetBSD: Makefile,v 1.2 2011/06/16 03:08:55 makoto Exp $
 
-PKGNAME=	ja-freewnn-server-1.1.1_pl22
+PKGNAME=	ja-freewnn-server-1.11alpha22
 CONFIGURE_ARGS+=	--disable-libraries
-# Following two lines gives equivalent to previous version
+# Following two lines gives equivalent to previous 1.10 version
 CONFIGURE_ARGS+=	--disable-cWnn
 CONFIGURE_ARGS+=	--disable-kWnn
 
@@ -12,13 +12,9 @@ CONFIGURE_ARGS+=	--disable-sub-bindir
 # use sbin/ instead of bin/
 CONFIGURE_ARGS+=	--disable-traditional-layout
 
-#INSTALL_TARGET=		install install.man
-# install.man
-#MAKE_ENV+=             "DESTDIR=${DESTDIR}"
-
 RCD_SCRIPTS=    ja_freewnn
 
-DEPENDS+=	ja-freewnn-lib>=1.1.1:../../wip/ja-freewnn-lib
+DEPENDS+=	ja-freewnn-lib>=1.11alpha22:../../wip/ja-freewnn-lib
 
 FILESDIR=       ${.CURDIR}/../ja-freewnn-lib/files
 DISTINFO_FILE=  ${.CURDIR}/../ja-freewnn-lib/distinfo
