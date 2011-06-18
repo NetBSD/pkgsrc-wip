@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2011/06/18 05:52:17 obache Exp $
+# $NetBSD: Makefile,v 1.7 2011/06/18 11:29:24 obache Exp $
 
 .include "../../wip/ja-freewnn-lib/Makefile.common"
 
-PKGNAME=	ja-freewnn-server-1.11alpha22
+PKGNAME=	ja-FreeWnn-server-1.11alpha22
 
 COMMENT+=	(Japanese server)
 
