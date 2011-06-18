@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2011/06/18 03:00:39 obache Exp $
+# $NetBSD: Makefile.common,v 1.3 2011/06/18 05:06:54 obache Exp $
 # used by wip/ja-freewnn-server/Makefile
 # used by wip/ja-freewnn-lib/Makefile
 
@@ -26,11 +26,6 @@ PKG_GROUPS=	${FREEWNN_GROUP}
 PKG_USERS=	${FREEWNN_USER}:${FREEWNN_GROUP}
 
 GNU_CONFIGURE=	YES
-
-SPECIAL_PERMS+=	bin/Wnn4/jserver ${FREEWNN_USER} ${FREEWNN_GROUP} 4711
-SPECIAL_PERMS+=	bin/Wnn4/cserver ${FREEWNN_USER} ${FREEWNN_GROUP} 4711
-SPECIAL_PERMS+=	bin/Wnn4/tserver ${FREEWNN_USER} ${FREEWNN_GROUP} 4711
-SPECIAL_PERMS+=	bin/Wnn4/kserver ${FREEWNN_USER} ${FREEWNN_GROUP} 4711
 
 
 #### 1 #####
