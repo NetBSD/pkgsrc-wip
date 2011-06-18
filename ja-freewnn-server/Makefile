@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/06/18 05:08:50 obache Exp $
+# $NetBSD: Makefile,v 1.4 2011/06/18 05:41:19 obache Exp $
 
 .include "../../wip/ja-freewnn-lib/Makefile.common"
 
@@ -22,6 +22,13 @@ RCD_SCRIPTS=    ja_freewnn
 FILESDIR=       ${.CURDIR}/../ja-freewnn-lib/files
 DISTINFO_FILE=  ${.CURDIR}/../ja-freewnn-lib/distinfo
 PATCHDIR=       ${.CURDIR}/../ja-freewnn-lib/patches
+
+BUILD_DEFS=	FREEWNN_USER FREEWNN_GROUP
+
+FREEWNN_USER=	wnn
+FREEWNN_GROUP=	jserver
+PKG_GROUPS=	${FREEWNN_GROUP}
+PKG_USERS=	${FREEWNN_USER}:${FREEWNN_GROUP}
 
 SPECIAL_PERMS+=	bin/Wnn4/jserver ${FREEWNN_USER} ${FREEWNN_GROUP} 4711
 SPECIAL_PERMS+=	bin/Wnn4/cserver ${FREEWNN_USER} ${FREEWNN_GROUP} 4711
