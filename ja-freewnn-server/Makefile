@@ -1,8 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2011/06/18 05:41:19 obache Exp $
+# $NetBSD: Makefile,v 1.5 2011/06/18 05:46:02 obache Exp $
 
 .include "../../wip/ja-freewnn-lib/Makefile.common"
 
 PKGNAME=	ja-freewnn-server-1.11alpha22
+
+COMMENT+=	(Japanese server)
 
 CONFIGURE_ARGS+=	--disable-libraries
 # Following two lines gives equivalent to previous 1.10 version
