@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2011/06/18 05:59:08 obache Exp $
+# $NetBSD: Makefile.common,v 1.11 2011/06/18 13:48:19 obache Exp $
 # used by wip/ja-freewnn-server/Makefile
 # used by wip/ja-freewnn-lib/Makefile
 
@@ -25,3 +25,11 @@ PATCHDIR=       ${.CURDIR}/../../wip/ja-freewnn-lib/patches
 # will be taka care with pkg INSTALL script
 INSTALL_MAKE_FLAGS+=	WNNTOUCH=${TRUE}
 INSTALL_MAKE_FLAGS+=	WNNOWNER=${ROOT_USER}
+
+WNNDICTDIR=		${IMDICTDIR}/wnn
+FILES_SUBST=		WNNDICTDIR=${WNNDICTDIR}
+
+SUBST_CLASSES+=		imdictdir
+SUBST_STAGE.imdictdir=	post-extract
+SUBST_SED.imdictdir=	-e 's|@LIBDIR/@LANG/dic|${WNNDICTDIR}/@LANG|'
+SUBST_FILES.imdictdir=	Wnn/jd/jserverrc

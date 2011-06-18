@@ -1,12 +1,14 @@
-# $NetBSD: DEINSTALL,v 1.1 2011/06/02 00:40:28 makoto Exp $
+# $NetBSD: DEINSTALL,v 1.2 2011/06/18 13:48:20 obache Exp $
 
 case ${STAGE} in
-POST-DEINSTALL)
-	${FIND} ${PREFIX}/${WNNDICDIR} -type f \( -name \*dic -o -name  \*fzk \) | xargs rm -f
-#	for i in `${FIND} ${PREFIX}/${WNNDICDIR} -type f \( -name \*dic -o -name  \*fzk \)`; 
-#	 do
-#	   ${CHMOD} +w ${i};
-#	   ${RM} -f ${i};
-#	 done;
+DEINSTALL)
+	for f in `cd @WNNDICTDIR@/ja_JP && find . -type f`;
+	 do
+	   ${TEST} -f ${PREFIX}/share/wnn/ja_JP/dic/${f} && ( ${RM} -f @WNNDICTDIR@/ja_JP/${f} || ${TRUE});
+	 done
+	for d in `cd @WNNDICTDIR@/ja_JP && find -d . -type d`;
+	 do
+	   ${TEST} ${d} != "." -a -d ${PREFIX}/share/wnn/ja_JP/dic/${d} && (${RMDIR} @WNNDICTDIR@/ja_JP/${d} || ${TRUE});
+	 done
 	;;
 esac
