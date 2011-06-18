@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/06/17 13:29:42 obache Exp $
+# $NetBSD: Makefile,v 1.4 2011/06/18 05:20:55 obache Exp $
 
 .include "../../wip/ja-freewnn-lib/Makefile.common"
 
@@ -10,6 +10,6 @@ CONFIGURE_ARGS+=	--disable-cWnn
 CONFIGURE_ARGS+=	--disable-kWnn
 
 
-INSTALL_TARGET+=	install.man
+INSTALL_TARGET=		install install.man
 
 .include "../../mk/bsd.pkg.mk"

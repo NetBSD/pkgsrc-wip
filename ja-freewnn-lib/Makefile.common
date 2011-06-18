@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2011/06/18 05:11:06 obache Exp $
+# $NetBSD: Makefile.common,v 1.5 2011/06/18 05:20:55 obache Exp $
 # used by wip/ja-freewnn-server/Makefile
 # used by wip/ja-freewnn-lib/Makefile
 
@@ -14,8 +14,6 @@ COMMENT=	Japanese/Chinese/Korean input method (Japanese client library)
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-BUILD_TARGET=	all
-INSTALL_TARGET=	install
 BUILD_DEFS=	FREEWNN_USER FREEWNN_GROUP
 USE_LIBTOOL=	YES
 
