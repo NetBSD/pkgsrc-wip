@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2011/06/18 05:52:17 obache Exp $
+# $NetBSD: Makefile.common,v 1.10 2011/06/18 05:59:08 obache Exp $
 # used by wip/ja-freewnn-server/Makefile
 # used by wip/ja-freewnn-lib/Makefile
 
@@ -6,11 +6,11 @@ DISTNAME=	FreeWnn-1.1.1-a021
 MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE_JP:=freewnn/17724/}   \
                 ftp://ftp.st.ryukoku.ac.jp/pub/japanese-im/FreeWnn/
 CATEGORIES=	inputmethod
-LICENSE=	gnu-gpl-v2
 
 MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
 HOMEPAGE=	http://freewnn.sourceforge.jp/
 COMMENT=	Japanese/Chinese/Korean input method
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
