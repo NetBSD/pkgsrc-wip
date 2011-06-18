@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2011/06/18 05:46:01 obache Exp $
+# $NetBSD: Makefile.common,v 1.9 2011/06/18 05:52:17 obache Exp $
 # used by wip/ja-freewnn-server/Makefile
 # used by wip/ja-freewnn-lib/Makefile
 
@@ -17,6 +17,10 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LIBTOOL=	YES
 
 GNU_CONFIGURE=	YES
+
+FILESDIR=       ${.CURDIR}/../../wip/ja-freewnn-lib/files
+DISTINFO_FILE=  ${.CURDIR}/../../wip/ja-freewnn-lib/distinfo
+PATCHDIR=       ${.CURDIR}/../../wip/ja-freewnn-lib/patches
 
 # will be taka care with pkg INSTALL script
 INSTALL_MAKE_FLAGS+=	WNNTOUCH=${TRUE}

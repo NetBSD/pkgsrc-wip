@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2011/06/18 05:46:02 obache Exp $
+# $NetBSD: Makefile,v 1.6 2011/06/18 05:52:17 obache Exp $
 
 .include "../../wip/ja-freewnn-lib/Makefile.common"
 
@@ -20,10 +20,6 @@ CONFIGURE_ARGS+=	--disable-traditional-layout
 INSTALL_TARGET=	install install.man
 
 RCD_SCRIPTS=    ja_freewnn
-
-FILESDIR=       ${.CURDIR}/../ja-freewnn-lib/files
-DISTINFO_FILE=  ${.CURDIR}/../ja-freewnn-lib/distinfo
-PATCHDIR=       ${.CURDIR}/../ja-freewnn-lib/patches
 
 BUILD_DEFS=	FREEWNN_USER FREEWNN_GROUP
 
