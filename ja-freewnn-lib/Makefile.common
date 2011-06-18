@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2011/06/01 14:32:11 makoto Exp $
+# $NetBSD: Makefile.common,v 1.2 2011/06/18 03:00:39 obache Exp $
 # used by wip/ja-freewnn-server/Makefile
 # used by wip/ja-freewnn-lib/Makefile
 
@@ -11,7 +11,6 @@ LICENSE=	gnu-gpl-v2
 MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
 HOMEPAGE=	http://freewnn.sourceforge.jp/
 COMMENT=	Japanese/Chinese/Korean input method (Japanese client library)
-#WRKSRC=		${WRKDIR}/FreeWnn
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -40,7 +39,6 @@ SUBST_STAGE.chown=      pre-configure
 # SPECIAL_PERMS will take care
 SUBST_MESSAGE.chown=    Replacing 'chown' to harmless 'echo'
 
-SUBST_FILES.chown+=     cdic/Makefile.in
 SUBST_FILES.chown+=     Contrib/dic/gerodic/Makefile.in
 SUBST_FILES.chown+=     cWnn/cdic/Makefile.in
 SUBST_FILES.chown+=     cWnn/tdic/Makefile.in
