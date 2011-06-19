@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/06/19 10:12:18 ryo-on Exp $
+# $NetBSD: Makefile,v 1.2 2011/06/19 10:16:07 ryo-on Exp $
 #
 
 DISTNAME=	moeclock
@@ -8,7 +8,7 @@ MASTER_SITES=	http://moeclock.googlecode.com/files/
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/moeclock/
-COMMENT=	TODO: Short description of the package
+COMMENT=	Wallpaper changing clock
 LICENSE=	gnu-gpl-v3 #AND cc-by-v3.0
 # The time signal voice must not be modified and distributed separately.
 
