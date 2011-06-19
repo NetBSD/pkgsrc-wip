@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2011/06/17 22:11:53 keckhardt Exp $
+@comment $NetBSD: PLIST,v 1.3 2011/06/19 09:44:24 keckhardt Exp $
 bin/cloog
 include/cloog/block.h
 include/cloog/clast.h
@@ -52,15 +52,7 @@ include/isl/union_set.h
 include/isl/vec.h
 include/isl/version.h
 include/isl/vertices.h
-lib/libcloog-isl.a
 lib/libcloog-isl.la
-lib/libcloog-isl.so
-lib/libcloog-isl.so.1
-lib/libcloog-isl.so.1.0.2
-lib/libisl.a
 lib/libisl.la
-lib/libisl.so
-lib/libisl.so.6
-lib/libisl.so.6.0.0
 lib/pkgconfig/cloog-isl.pc
 lib/pkgconfig/isl.pc
