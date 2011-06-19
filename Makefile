@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4362 2011/06/17 01:09:12 jeremy-c-reed Exp $
+# $Id: Makefile,v 1.4363 2011/06/19 10:11:14 obache Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2391,7 +2391,6 @@ SUBDIR+=	qucs
 SUBDIR+=	queequeg
 SUBDIR+=	quickfix
 SUBDIR+=	quickie
-SUBDIR+=	quickml
 SUBDIR+=	quodlibet
 SUBDIR+=	qvamps
 SUBDIR+=	r8s
