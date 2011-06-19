@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/06/19 10:31:11 keckhardt Exp $
+# $NetBSD: Makefile,v 1.3 2011/06/19 12:02:18 keckhardt Exp $
 #
 
 DISTNAME=	ppl-0.11.2
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LIBTOOL=	yes
-USE_TOOLS+=	autoconf:run automake:run gmake perl
+USE_TOOLS+=	autoconf automake gmake perl
 DEPENDS+=	gsed-[0-9]*:../../textproc/gsed
 
 USE_LANGUAGES=	c c++
