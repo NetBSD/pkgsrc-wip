@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/06/18 18:07:15 keckhardt Exp $
+# $NetBSD: Makefile,v 1.2 2011/06/19 10:31:11 keckhardt Exp $
 #
 
 DISTNAME=	ppl-0.11.2
@@ -24,7 +24,7 @@ CONFIGURE_ARGS+=	--with-gmp-prefix=${PREFIX}
 #CONFIGURE_ARGS+=	--enable-interfaces=c,cxx
 
 do-build:
-	cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${GMAKE}
+	set -e; cd ${WRKSRC}; ${SETENV} ${MAKE_ENV} ${GMAKE}
 
 # url2pkg-marker (please do not remove this line.)
 .include "../../devel/gmp/buildlink3.mk"
