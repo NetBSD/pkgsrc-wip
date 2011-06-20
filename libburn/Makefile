@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2011/04/10 15:16:51 ryo-on Exp $
+# $NetBSD: Makefile,v 1.3 2011/06/20 20:01:36 ryo-on Exp $
 #
 
-DISTNAME=	libburn-1.0.6.pl00
+DISTNAME=	libburn-1.1.0.pl01
 PKGNAME=	${DISTNAME:S/pl//}
 CATEGORIES=	sysutils
 MASTER_SITES=	http://files.libburnia-project.org/releases/
@@ -13,7 +13,7 @@ LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-WRKSRC=		${WRKDIR}/${DISTNAME:S/.pl00//}
+WRKSRC=		${WRKDIR}/${DISTNAME:S/.pl01//}
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
