@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2011/03/29 10:44:15 makoto Exp $
+# $NetBSD: Makefile,v 1.53 2011/06/20 12:32:35 makoto Exp $
 #
 
 DISTNAME=	emacs-24.0.50
@@ -15,6 +15,8 @@ LICENSE=	gnu-gpl-v3
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gmake makeinfo gzip autoconf automake
+# for example, Mac OS X 10.6.1 has 2.61 which fails
+AUTOCONF_REQUIRED=	2.65
 
 CONFLICTS+=	emacs-nox11-[0-9]*
 
