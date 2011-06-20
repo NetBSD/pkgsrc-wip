@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2011/04/17 00:18:01 ryo-on Exp $
+$NetBSD: distinfo,v 1.4 2011/06/20 20:06:24 ryo-on Exp $
 
-SHA1 (libisoburn-1.0.8.pl00.tar.gz) = a348eab85ba45e5f7bf504a88b73fb08c3c0344a
-RMD160 (libisoburn-1.0.8.pl00.tar.gz) = 3cf149c44bfa42e14aec50971e9e1ef4a643f52b
-Size (libisoburn-1.0.8.pl00.tar.gz) = 1121830 bytes
+SHA1 (libisoburn-1.1.0.tar.gz) = 1ade50d590d7cbd85718ccd5cf4be4c1095c4d9d
+RMD160 (libisoburn-1.1.0.tar.gz) = 1bb7313e3ab415d9af18d6b1be948e4a70b0a26f
+Size (libisoburn-1.1.0.tar.gz) = 1137900 bytes
