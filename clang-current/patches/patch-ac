@@ -1,0 +1,46 @@
+$NetBSD: patch-ac,v 1.1 2011/06/21 00:01:39 marko_schuetz Exp $
+
+--- Makefile.rules.orig	2011-03-25 06:26:58.000000000 +0000
++++ Makefile.rules
+@@ -564,11 +564,6 @@ ifneq ($(HOST_OS), $(filter $(HOST_OS), 
+ ifneq ($(HOST_OS), Darwin)
+ ifdef TOOLNAME
+   LD.Flags += $(RPATH) -Wl,'$$ORIGIN/../lib'
+-  ifdef EXAMPLE_TOOL
+-    LD.Flags += $(RPATH) -Wl,$(ExmplDir) $(DynamicFlag)
+-  else
+-    LD.Flags += $(RPATH) -Wl,$(ToolDir) $(DynamicFlag)
+-  endif
+ endif
+ else
+ ifneq ($(DARWIN_MAJVERS),4)
+@@ -746,9 +741,6 @@ endif
+ # in the file so they get built before dependencies
+ #---------------------------------------------------------
+ 
+-$(DESTDIR)$(PROJ_bindir) $(DESTDIR)$(PROJ_libdir) $(DESTDIR)$(PROJ_includedir) $(DESTDIR)$(PROJ_etcdir)::
+-	$(Verb) $(MKDIR) $@
+-
+ # To create other directories, as needed, and timestamp their creation
+ %/.dir:
+ 	$(Verb) $(MKDIR) $* > /dev/null
+@@ -876,7 +868,9 @@ install-local::
+ uninstall-local::
+ 	$(Echo) UnInstall circumvented with NO_INSTALL
+ else
+-install-local:: $(DESTDIR)$(PROJ_etcdir) $(CONFIG_FILES)
++PROJ_etcdir=${PREFIX}/share/examples/llvm
++install-local:: $(CONFIG_FILES)
++	$(MKDIR) ${PROJ_etcdir}
+ 	$(Echo) Installing Configuration Files To $(DESTDIR)$(PROJ_etcdir)
+ 	$(Verb)for file in $(CONFIG_FILES); do \
+           if test -f $(PROJ_OBJ_DIR)/$${file} ; then \
+@@ -1298,7 +1292,7 @@ install-local:: $(DestArchiveLib)
+ $(DestArchiveLib): $(LibName.A) $(DESTDIR)$(PROJ_libdir)
+ 	$(Echo) Installing $(BuildMode) Archive Library $(DestArchiveLib)
+ 	$(Verb) $(MKDIR) $(DESTDIR)$(PROJ_libdir)
+-	$(Verb) $(INSTALL) $(LibName.A) $(DestArchiveLib)
++	$(Verb) $(DataInstall) $(LibName.A) $(DestArchiveLib)
+ 
+ uninstall-local::
+ 	$(Echo) Uninstalling $(BuildMode) Archive Library $(DestArchiveLib)

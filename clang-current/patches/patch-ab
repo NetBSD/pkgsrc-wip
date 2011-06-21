@@ -1,0 +1,19 @@
+$NetBSD: patch-ab,v 1.1 2011/06/21 00:01:39 marko_schuetz Exp $
+
+--- docs/Makefile.orig	2011-02-11 07:43:27.000000000 +0000
++++ docs/Makefile
+@@ -53,13 +53,12 @@ endif
+ # 'make generated BUILD_FOR_WEBSITE=1'
+ generated:: $(generated_targets)
+ 
+-install-html: $(PROJ_OBJ_DIR)/html.tar.gz
++install-html:
+ 	$(Echo) Installing HTML documentation
+ 	$(Verb) $(MKDIR) $(DESTDIR)$(PROJ_docsdir)/html
+ 	$(Verb) $(MKDIR) $(DESTDIR)$(PROJ_docsdir)/html/img
+ 	$(Verb) $(DataInstall) $(HTML) $(DESTDIR)$(PROJ_docsdir)/html
+ 	$(Verb) $(DataInstall) $(IMAGES) $(DESTDIR)$(PROJ_docsdir)/html/img
+-	$(Verb) $(DataInstall) $(PROJ_OBJ_DIR)/html.tar.gz $(DESTDIR)$(PROJ_docsdir)
+ 
+ $(PROJ_OBJ_DIR)/html.tar.gz: $(HTML)
+ 	$(Echo) Packaging HTML documentation
