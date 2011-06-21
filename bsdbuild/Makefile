@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2011/05/27 20:42:56 reinoudz70 Exp $
+# $NetBSD: Makefile,v 1.4 2011/06/21 15:38:28 reinoudz70 Exp $
 #
 
-DISTNAME=	bsdbuild-2.8
+DISTNAME=	bsdbuild-2.9
 CATEGORIES=	devel
 MASTER_SITES=	http://stable.hypertriton.com/bsdbuild/
 
