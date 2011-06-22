@@ -1,0 +1,4 @@
+DataTree is a DSL for creating structured documents in python. Inspired by ruby
+builder but with the goal of reducing the amount of line noise associated with
+creating XML documents in python. As an added bonus the tree can be output
+to to any structured format (with XML, JSON and YAML supported in the library)
