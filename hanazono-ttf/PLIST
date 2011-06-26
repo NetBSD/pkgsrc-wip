@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/07/07 15:17:39 ryo-on Exp $
-lib/X11/fonts/TTF/hanazono.ttf
+@comment $NetBSD: PLIST,v 1.2 2011/06/26 11:47:20 ryo-on Exp $
+lib/X11/fonts/TTF/HanaMinA.ttf
+lib/X11/fonts/TTF/HanaMinB.ttf
 share/doc/hanazono-ttf/LICENSE.txt
 share/doc/hanazono-ttf/README.txt
 share/doc/hanazono-ttf/THANKS.txt

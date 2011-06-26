@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.3 2010/10/18 21:09:26 ryo-on Exp $
+# $NetBSD: Makefile,v 1.4 2011/06/26 11:47:20 ryo-on Exp $
 #
 
-DISTNAME=	hanazono-20101013
+DISTNAME=	hanazono-20110516
 PKGNAME=	${DISTNAME:S/-/-ttf-/}
 CATEGORIES=	fonts
 MASTER_SITES=	http://www.fonts.jp/hanazono/
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=	ryo_on@yk.rim.or.jp
+MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://www.fonts.jp/hanazono/
-COMMENT=	Hanazono font (HanaMin)
-# LICENSE=	M+ FONTS License OR open-font-license
+COMMENT=	Hanazono font (HanaMin) contains all UCS CJK glyphs
+LICENSE=	mplusfont OR open-font-license
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -26,7 +26,8 @@ INSTALLATION_DIRS=	lib/X11/fonts/TTF \
 FONTDIR=	${PREFIX}/lib/X11/fonts/TTF
 FONTS_DIRS.ttf=	${FONTDIR}
 
-INSTALL_FONTS=	hanazono.ttf
+INSTALL_FONTS=	HanaMinA.ttf \
+		HanaMinB.ttf
 INSTALL_DOCS=	LICENSE.txt \
 		README.txt \
 		THANKS.txt
