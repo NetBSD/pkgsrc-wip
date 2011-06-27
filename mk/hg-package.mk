@@ -1,4 +1,4 @@
-# $Id: hg-package.mk,v 1.3 2011/06/26 21:35:30 asau Exp $
+# $Id: hg-package.mk,v 1.4 2011/06/27 10:50:24 asau Exp $
 
 # This file provides simple access to Mercurial repositories, so that packages
 # can be created from Mercurial instead of from released tarballs.
@@ -48,8 +48,6 @@ PKGREVISION?=		$(_HG_PKGVERSION:S/.//g)
 . endif
 .endif
 
-HG_TAG?=		tip
-
 #
 # End of the interface part. Start of the implementation part.
 #
@@ -90,6 +88,7 @@ _HG_DISTDIR=		${DISTDIR}/hg-packages
 #
 
 .for repo in ${HG_REPOSITORIES}
+HG_MODULE.${repo}?=	${repo}
 
 # determine appropriate checkout date or tag
 .  if defined(HG_TAG.${repo})
@@ -99,11 +98,11 @@ _HG_TAG.${repo}=	${HG_TAG.${repo}}
 _HG_TAG_FLAG.${repo}=	-r${HG_TAG}
 _HG_TAG.${repo}=	${HG_TAG}
 .  elif defined(CHECKOUT_DATE)
-# _CVS_TAG_FLAG.${repo}=	-D${CHECKOUT_DATE:Q}
-# _CVS_TAG.${repo}=	${CHECKOUT_DATE:Q}
+_HG_TAG_FLAG.${repo}=	-d${CHECKOUT_DATE:Q}
+_HG_TAG.${repo}=	${CHECKOUT_DATE:Q}
 .  else
-# _CVS_TAG_FLAG.${repo}=	'-D${_CVS_TODAY} 00:00 +0000'
-# _CVS_TAG.${repo}=	${_CVS_TODAY:Q}
+_HG_TAG_FLAG.${repo}=	-rtip
+_HG_TAG.${repo}=	tip
 .  endif
 
 .endfor
@@ -115,10 +114,12 @@ do-hg-extract:
 .for _repo_ in ${HG_REPOSITORIES}
 	${RUN} cd ${WRKDIR};						\
 	${SETENV} ${_HG_ENV}						\
-		${_HG_CMD} clone					\
-			${_HG_TAG_FLAG.${repo}:Q}			\
-			${_HG_FLAGS}		 			\
-			${HG_REPO.${_repo_}:Q}
+		${_HG_CMD} clone ${_HG_FLAGS}	 			\
+			${HG_REPO.${_repo_}:Q} ${HG_MODULE.${_repo_}} && \
+	cd ${HG_MODULE.${_repo_}:Q} &&					\
+	${SETENV} ${_HG_ENV}						\
+		${_HG_CMD} update ${_HG_FLAGS}				\
+			 ${_HG_TAG_FLAG.${_repo_}:Q}
 .endfor
 
 .endif
