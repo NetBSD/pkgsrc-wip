@@ -1,0 +1,60 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2011/06/28 20:08:04 guigui2 Exp $
+
+# used by audio/xfce4-mixer/Makefile
+# used by devel/xfce4-dev-tools/Makefile
+# used by devel/xfconf/Makefile
+# used by editors/xfce4-mousepad/Makefile
+# used by graphics/xfce4-icon-theme/Makefile
+# used by print/xfce4-print/Makefile
+# used by sysutils/xfce4-appfinder/Makefile
+# used by sysutils/xfce4-thunar/Makefile
+# used by time/xfce4-datetime-plugin/Makefile
+# used by time/xfce4-orage/Makefile
+# used by wm/xfce4-wm-themes/Makefile
+# used by wm/xfce4-wm/Makefile
+# used by x11/xfce4-desktop/Makefile
+# used by x11/xfce4-exo/Makefile
+# used by x11/xfce4-gtk2-engine/Makefile
+# used by x11/xfce4-panel/Makefile
+# used by x11/libxfce4gui/Makefile
+# used by x11/libxfce4menu/Makefile
+# used by x11/libxfce4ui/Makefile
+# used by x11/libxfce4util/Makefile
+# used by x11/xfce4-session/Makefile
+# used by x11/xfce4-settings/Makefile
+# used by x11/xfce4-terminal/Makefile
+# used by x11/xfce4-utils/Makefile
+
+#ASTER_SITES=		http://www.xfce.org/archive/xfce-4.6.1/src/
+MASTER_SITES=		http://archive.xfce.org/src/xfce/${XFCE_PROJECT:L}/${XFCE4_BRANCH}/
+EXTRACT_SUFX=		.tar.bz2
+
+MAINTAINER=		dieter.NetBSD@pandora.be
+HOMEPAGE=		http://www.xfce.org/
+LICENSE=		gnu-gpl-v2
+
+XFCE4_VERSION=		4.8.0
+XFCE4_BRANCH=		4.8
+
+# Do NOT put a PKGREVISION statement in this file!
+
+USE_PKGLOCALEDIR=	yes
+USE_LIBTOOL=		yes
+GNU_CONFIGURE=		yes
+USE_TOOLS+=		gmake pkg-config msgfmt perl intltool
+
+.if ${MACHINE_ARCH} == "alpha"
+GCC_REQD+=		3.0
+.endif
+
+XFCE4_EGBASE=		${PREFIX}/share/examples/xfce4
+
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
+
+## # Use the latest GNU tar when the native tar is buggy
+## .if !empty(MACHINE_PLATFORM:MNetBSD-1.6*)
+## BUILD_DEPENDS+=		gtar-base-[0-9]*:../../archivers/gtar-base
+## GTAR=			${PREFIX}/bin/${GNU_PROGRAM_PREFIX}tar
+## .endif
