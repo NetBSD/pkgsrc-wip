@@ -4,7 +4,7 @@ Suggested package updates
 	o applewmproto-1.4.1
 	o argouml-0.24
 	o backintime-1.0.6
-	o bsnes-0.78
+	o bsnes-0.80
 	o cairo-java-1.0.8
 	o cclive-0.7.4
 	o ccrypt-1.9
@@ -56,7 +56,7 @@ Suggested package updates
 	o hu-go-2.11
 	o hyena-0.3
 	o i3lock-2.1
-	o icecat-3.6.16
+	o icecat-5.0
 	o jakarta-struts-1.2.4
 	o jalview-2.4
 	o java-asm-3.2
@@ -118,7 +118,7 @@ Suggested package updates
 	o tmw-0.0.29.1
 	o uade-2.13
 	o uptimed-0.3.16
-	o virtualbox-4.0.8
+	o virtualbox-4.0.10
 	o xaralx-bin-0.7.1692
 	o xclipboard-1.1.1
 	o xcowsay-1.3
