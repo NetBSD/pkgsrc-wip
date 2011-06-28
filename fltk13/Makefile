@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.3 2011/06/14 16:20:55 christtrekker Exp $
+# $NetBSD: Makefile,v 1.4 2011/06/28 16:32:11 christtrekker Exp $
 #
 
-DISTNAME=	fltk-1.3.x-r8800
-PKGNAME=	${DISTNAME:S/fltk/fltk13/:S/x-r/pre/}
+DISTNAME=	fltk-1.3.0-source
+PKGNAME=	${DISTNAME:S/fltk/fltk13/:S/-source//}
+WRKSRC=		${WRKDIR}/${DISTNAME:S/-source//}
 CATEGORIES=	x11
-MASTER_SITES+=	http://ftp.easysw.com/pub/fltk/snapshots/
-MASTER_SITES+=	http://ftp2.easysw.com/pub/fltk/snapshots/
-MASTER_SITES+=	http://ftp.funet.fi/pub/mirrors/ftp.easysw.com/pub/fltk/snapshots/
+MASTER_SITES+=	http://ftp.easysw.com/pub/fltk/1.3.0/
+MASTER_SITES+=	http://ftp2.easysw.com/pub/fltk/1.3.0/
+MASTER_SITES+=	http://ftp.funet.fi/pub/mirrors/ftp.easysw.com/pub/fltk/1.3.0/
 
 MAINTAINER=	christtrekker@users.sourceforge.net
 HOMEPAGE=	http://fltk.org/
@@ -30,14 +31,18 @@ PLIST_VARS+=	opengl
 .  include "../../graphics/cairo/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-cairo
 PLIST.cairo=	yes
+.else
+CONFIGURE_ARGS+=	--disable-cairo
 .endif
 .if !empty(PKG_OPTIONS:Mopengl)
 .  include "../../graphics/Mesa/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-gl
 PLIST.opengl=	yes
+.else
+CONFIGURE_ARGS+=	--disable-gl
 .endif
 CONFIGURE_ARGS+=	--enable-shared
-# Use pkgsrc versions, not package's built-in versions.
+# Use pkgsrc versions, not package's bundled versions.
 CONFIGURE_ARGS+=	--disable-localjpeg --disable-localzlib --disable-localpng
 
 .include "../../x11/libXext/buildlink3.mk"

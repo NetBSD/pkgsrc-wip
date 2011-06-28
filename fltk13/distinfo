@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2011/06/14 16:20:55 christtrekker Exp $
+$NetBSD: distinfo,v 1.3 2011/06/28 16:32:11 christtrekker Exp $
 
-SHA1 (fltk-1.3.x-r8800.tar.gz) = 061803fc9be67928f383efd8eb7078ccbfbb3c4f
-RMD160 (fltk-1.3.x-r8800.tar.gz) = a42e50f4bc79ab7b806e31cb91f24c7d51df84fa
-Size (fltk-1.3.x-r8800.tar.gz) = 4194887 bytes
+SHA1 (fltk-1.3.0-source.tar.gz) = 720f2804be6132ebae9909d4e74dedcc00b39d25
+RMD160 (fltk-1.3.0-source.tar.gz) = dea1eb42ae1b81efa22a54198956211367e2945a
+Size (fltk-1.3.0-source.tar.gz) = 4111004 bytes
