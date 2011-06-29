@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2011/06/29 10:33:57 reinoudz70 Exp $
+# $NetBSD: Makefile,v 1.2 2011/06/29 19:48:58 reinoudz70 Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -29,7 +29,7 @@ MAKE_DIRS+=		${PKG_SYSCONFDIR}/xfce4/xfconf/xfce-perchannel-xml/
 #OWN_DIRS+=	${PKG_SYSCONFDIR}/xfce4/xfconf/xfce-perchannel-xml
 
 #.include "../../devel/libglade/buildlink3.mk"
-.include "../../devel/xfconf/buildlink3.mk"
+.include "../../wip/xfconf/buildlink3.mk"
 #.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 #.include "../../textproc/libxml2/buildlink3.mk"
 #.include "../../x11/gtk2/buildlink3.mk"
