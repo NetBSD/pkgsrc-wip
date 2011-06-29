@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2011/06/29 14:35:08 reinoudz70 Exp $
+# $NetBSD: Makefile,v 1.16 2011/06/29 14:37:56 reinoudz70 Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -26,6 +26,8 @@ EGDIR=			${XFCE4_EGBASE}/Thunar
 MAKE_DIRS+=		${PKG_SYSCONFDIR}/Thunar
 
 CONF_FILES=	${EGDIR}/uca.xml ${PKG_SYSCONFDIR}/Thunar/uca.xml
+
+PKG_FAIL_REASON+=	It still crashes, might be an exo problem
 
 #.include "options.mk"
 
