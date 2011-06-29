@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2011/06/29 10:33:57 reinoudz70 Exp $
+
+--- libxfce4kbd-private/Makefile.in.orig	2011-01-16 15:03:08.000000000 +0000
++++ libxfce4kbd-private/Makefile.in
+@@ -400,7 +400,7 @@ top_srcdir = @top_srcdir@
+ @ENABLE_KEYBOARD_LIBRARY_TRUE@	$(LIBXFCE4UTIL_LIBS) \
+ @ENABLE_KEYBOARD_LIBRARY_TRUE@	$(XFCONF_LIBS)
+ 
+-@ENABLE_KEYBOARD_LIBRARY_TRUE@settingsdir = $(sysconfdir)/xdg/xfce4/xfconf/xfce-perchannel-xml
++@ENABLE_KEYBOARD_LIBRARY_TRUE@settingsdir = $(datadir)/examples/xfce4/xfconf/xfce-perchannel-xml
+ @ENABLE_KEYBOARD_LIBRARY_TRUE@settings_DATA = xfce4-keyboard-shortcuts.xml
+ @ENABLE_KEYBOARD_LIBRARY_TRUE@pkgconfigdir = $(libdir)/pkgconfig
+ @ENABLE_KEYBOARD_LIBRARY_TRUE@pkgconfig_DATA = libxfce4kbd-private-2.pc
