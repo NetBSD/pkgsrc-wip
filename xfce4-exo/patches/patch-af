@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1 2011/06/29 11:22:04 reinoudz70 Exp $
+
+--- exo-helper/helpers/Makefile.in.orig	2011-06-04 15:53:11.000000000 +0000
++++ exo-helper/helpers/Makefile.in
+@@ -294,7 +294,7 @@ target_vendor = @target_vendor@
+ top_build_prefix = @top_build_prefix@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+-defaultsdir = $(sysconfdir)/xdg/xfce4
++defaultsdir = $(datadir)/examples/xfce4
+ defaults_DATA = helpers.rc
+ desktopdir = $(datadir)/xfce4/helpers
+ desktop_in_in_files = \

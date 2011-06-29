@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.6 2011/06/29 11:22:04 reinoudz70 Exp $
+
+SHA1 (exo-0.6.2.tar.bz2) = 2486f12c814630068665e22cdf417f0f0f05dab1
+RMD160 (exo-0.6.2.tar.bz2) = f2c2a713144ffe7e73a6b18925f2323abb334e8c
+Size (exo-0.6.2.tar.bz2) = 1692288 bytes
+SHA1 (patch-af) = 42ff6d2dde5fd1ea6001d1f325cb35b28798882e
