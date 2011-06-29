@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2011/06/29 12:41:45 reinoudz70 Exp $
+# $NetBSD: Makefile,v 1.17 2011/06/29 13:13:48 reinoudz70 Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -10,8 +10,6 @@ COMMENT=		Xfce panel
 
 XFCE4_PROJECT=  	xfce4-panel
 XFCE4_BRANCH=		4.8
-
-MASTER_SITES+=		http://archive.xfce.org/src/xfce/xfce4-panel/4.8/
 
 PKGCONFIG_OVERRIDE=	libxfce4panel/libxfce4panel-1.0.pc.in
 PTHREAD_AUTO_VARS=	yes
