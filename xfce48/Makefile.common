@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2011/06/28 20:08:04 guigui2 Exp $
+# $NetBSD: Makefile.common,v 1.2 2011/06/29 09:21:13 reinoudz70 Exp $
 
 # used by audio/xfce4-mixer/Makefile
 # used by devel/xfce4-dev-tools/Makefile
@@ -26,7 +26,7 @@
 # used by x11/xfce4-utils/Makefile
 
 #ASTER_SITES=		http://www.xfce.org/archive/xfce-4.6.1/src/
-MASTER_SITES=		http://archive.xfce.org/src/xfce/${XFCE_PROJECT:L}/${XFCE4_BRANCH}/
+MASTER_SITES=		http://archive.xfce.org/src/xfce/${XFCE4_PROJECT}/${XFCE4_BRANCH}/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		dieter.NetBSD@pandora.be
