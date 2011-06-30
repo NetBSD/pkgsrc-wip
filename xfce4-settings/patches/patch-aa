@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2011/06/30 20:47:40 reinoudz70 Exp $
+
+--- xfsettingsd/Makefile.in.orig	2011-05-19 15:29:37.000000000 +0000
++++ xfsettingsd/Makefile.in
+@@ -377,7 +377,7 @@ top_srcdir = @top_srcdir@
+ @BUILD_XFSETTINGSD_TRUE@	$(LIBXFCE4UTIL_LIBS) \
+ @BUILD_XFSETTINGSD_TRUE@	$(LIBX11_LIBS)
+ 
+-@BUILD_XFSETTINGSD_TRUE@settingsdir = $(sysconfdir)/xdg/xfce4/xfconf/xfce-perchannel-xml
++@BUILD_XFSETTINGSD_TRUE@settingsdir = $(datadir)/examples/xfce4/xfconf/xfce-perchannel-xml
+ @BUILD_XFSETTINGSD_TRUE@settings_DATA = xsettings.xml
+ @BUILD_XFSETTINGSD_TRUE@EXTRA_DIST = \
+ @BUILD_XFSETTINGSD_TRUE@	$(settings_DATA)

@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2011/06/30 20:47:40 reinoudz70 Exp $
+
+--- xfce4-settings-helper/Makefile.in.orig	2011-05-19 15:29:36.000000000 +0000
++++ xfce4-settings-helper/Makefile.in
+@@ -401,7 +401,7 @@ xfce4_settings_helper_LDADD = $(GTK_LIBS
+ 	$(LIBXFCE4UI_LIBS) $(LIBXFCE4KBD_PRIVATE_LIBS) \
+ 	$(LIBXKLAVIER_LIBS) $(XI_LIBS) $(LIBX11_LIBS) \
+ 	$(LIBNOTIFY_LIBS) $(am__append_3)
+-autostartdir = $(sysconfdir)/xdg/autostart
++autostartdir = $(datadir)/examples/xfce4/autostart
+ autostart_DATA = xfce4-settings-helper-autostart.desktop
+ EXTRA_DIST = \
+ 	xfce4-settings-helper-autostart.desktop
