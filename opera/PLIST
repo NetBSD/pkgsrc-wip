@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2011/05/19 07:50:25 obache Exp $
+@comment $NetBSD: PLIST,v 1.10 2011/06/30 09:18:49 obache Exp $
 bin/opera
 bin/opera-widget-manager
 lib/opera/gstreamer/plugins/libgstoperamatroska.so
@@ -90,6 +90,8 @@ share/opera/files.sig
 share/opera/files_old.sig
 share/opera/html40_entities.dtd
 share/opera/lngcode.txt
+share/opera/locale/af/af.lng
+share/opera/locale/az/az.lng
 share/opera/locale/be/be.lng
 share/opera/locale/be/bookmarks.adr
 share/opera/locale/be/search.ini
@@ -98,6 +100,7 @@ share/opera/locale/bg/bg.lng
 share/opera/locale/bg/bookmarks.adr
 share/opera/locale/bg/search.ini
 share/opera/locale/bg/standard_speeddial.ini
+share/opera/locale/bn/bn.lng
 share/opera/locale/cs/bookmarks.adr
 share/opera/locale/cs/cs.lng
 share/opera/locale/cs/search.ini
@@ -148,19 +151,21 @@ share/opera/locale/it/search.ini
 share/opera/locale/it/standard_speeddial.ini
 share/opera/locale/ja/bookmarks.adr
 share/opera/locale/ja/ja.lng
-share/opera/locale/ja/license.txt
 share/opera/locale/ja/search.ini
 share/opera/locale/ja/standard_speeddial.ini
 share/opera/locale/ka/ka.lng
 share/opera/locale/ko/ko.lng
 share/opera/locale/lt/lt.lng
+share/opera/locale/me/me.lng
 share/opera/locale/mk/mk.lng
+share/opera/locale/ms/ms.lng
 share/opera/locale/nb/bookmarks.adr
 share/opera/locale/nb/nb.lng
 share/opera/locale/nb/search.ini
 share/opera/locale/nb/standard_speeddial.ini
 share/opera/locale/nl/nl.lng
 share/opera/locale/nn/nn.lng
+share/opera/locale/pa/pa.lng
 share/opera/locale/pl/bookmarks.adr
 share/opera/locale/pl/pl.lng
 share/opera/locale/pl/search.ini
@@ -187,13 +192,17 @@ share/opera/locale/sr/search.ini
 share/opera/locale/sr/sr.lng
 share/opera/locale/sr/standard_speeddial.ini
 share/opera/locale/sv/sv.lng
+share/opera/locale/sw/sw.lng
 share/opera/locale/ta/ta.lng
 share/opera/locale/te/te.lng
+share/opera/locale/th/th.lng
+share/opera/locale/tl/tl.lng
 share/opera/locale/tr/tr.lng
 share/opera/locale/uk/bookmarks.adr
 share/opera/locale/uk/search.ini
 share/opera/locale/uk/standard_speeddial.ini
 share/opera/locale/uk/uk.lng
+share/opera/locale/uz/uz.lng
 share/opera/locale/vi/vi.lng
 share/opera/locale/zh-cn/bookmarks.adr
 share/opera/locale/zh-cn/browser.js
@@ -204,6 +213,7 @@ share/opera/locale/zh-cn/zh-cn.lng
 share/opera/locale/zh-tw/browser.js
 share/opera/locale/zh-tw/turbosettings.xml
 share/opera/locale/zh-tw/zh-tw.lng
+share/opera/locale/zu/zu.lng
 share/opera/mathml.dtd
 share/opera/package-id.ini
 share/opera/package/lib/binprint.sh
