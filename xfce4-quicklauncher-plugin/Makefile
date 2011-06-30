@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2011/06/29 19:53:29 reinoudz70 Exp $
+# $NetBSD: Makefile,v 1.9 2011/06/30 11:06:42 reinoudz70 Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../wip/xfce48/Makefile.common"
 
 DISTNAME=	xfce4-quicklauncher-plugin-1.9.4
-#PKGREVISION=	1
+PKGREVISION=	7
 CATEGORIES=	sysutils
 MASTER_SITES=	http://archive.xfce.org/src/panel-plugins/xfce4-quicklauncher-plugin/1.9
 COMMENT=	Xfce quicklaunch plugin
