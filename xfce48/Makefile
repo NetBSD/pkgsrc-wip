@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/06/30 10:37:33 reinoudz70 Exp $
+# $NetBSD: Makefile,v 1.4 2011/06/30 11:08:59 reinoudz70 Exp $
 
 META_PACKAGE=	yes
 
@@ -18,6 +18,7 @@ COMMENT=	Xfce
 .include "../../wip/xfce4-panel/buildlink3.mk"
 .include "../../wip/xfce4-thunar/buildlink3.mk"
 .include "../../wip/xfce4-quicklauncher-plugin/buildlink3.mk"
+.include "../../wip/xfce4-fsguard-plugin/buildlink3.mk"
 
 #.include "../../audio/xfce4-mixer/buildlink3.mk"
 #.include "../../editors/xfce4-mousepad/buildlink3.mk"
