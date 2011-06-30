@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2011/06/29 13:13:48 reinoudz70 Exp $
+# $NetBSD: Makefile,v 1.18 2011/06/30 13:49:40 reinoudz70 Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-.include "../../meta-pkgs/xfce4/Makefile.common"
+.include "../../wip/xfce48/Makefile.common"
 
 DISTNAME=		xfce4-panel-4.8.5
 CATEGORIES=		x11
