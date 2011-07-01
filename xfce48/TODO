@@ -1,0 +1,6 @@
+Known bugs and issues:
+
+* The icontheme is not set correctly; running xfce4-settings-manager helps it out
+
+* when starting with `startxfce4' the menu is not working!! when starting with `xfce4-session' it works! Environment variables? xdg stuff?
+
