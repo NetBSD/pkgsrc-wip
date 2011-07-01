@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.7 2011/07/01 10:41:14 reinoudz70 Exp $
+
+--- scripts/Makefile.in.orig	2011-06-18 06:05:47.000000000 +0000
++++ scripts/Makefile.in
+@@ -281,7 +281,7 @@ edit = sed \
+ desktopdir = $(datadir)/applications
+ desktop_in_files = xfhelp4.desktop.in
+ desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
+-conffilesdir = @sysconfdir@/xdg/xfce4
++conffilesdir = @datadir@/examples/xfce4
+ conffiles_DATA = \
+ 	xinitrc \
+ 	Xft.xrdb
+@@ -289,7 +289,7 @@ conffiles_DATA = \
+ @XFCONF_MIGRATION_TRUE@migrationscriptdir = $(HELPER_PATH_PREFIX)/xfce4/xfconf-migration
+ @XFCONF_MIGRATION_TRUE@migrationscript_in_files = xfconf-migration-4.6.pl.in
+ @XFCONF_MIGRATION_TRUE@migrationscript_SCRIPTS = $(migrationscript_in_files:.pl.in=.pl)
+-@XFCONF_MIGRATION_TRUE@autostartdir = $(sysconfdir)/xdg/autostart
++@XFCONF_MIGRATION_TRUE@autostartdir = $(datadir)/examples/xfce4/autostart
+ @XFCONF_MIGRATION_TRUE@autostart_in_files = xfconf-migration-4.6.desktop.in
+ @XFCONF_MIGRATION_TRUE@autostart_DATA = $(autostart_in_files:.desktop.in=.desktop)
+ EXTRA_DIST = \
