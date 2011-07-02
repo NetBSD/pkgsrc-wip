@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4368 2011/06/27 21:00:48 jmmv Exp $
+# $Id: Makefile,v 1.4369 2011/07/02 22:34:17 genolopolis Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2779,6 +2779,7 @@ SUBDIR+=	vagalume
 SUBDIR+=	vale-current
 SUBDIR+=	vamp
 SUBDIR+=	vamps
+SUBDIR+=	varnish
 SUBDIR+=	vcf
 SUBDIR+=	vche
 SUBDIR+=	vdesk
