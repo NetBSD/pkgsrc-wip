@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2011/06/05 21:59:32 gregoire Exp $
+# $NetBSD: options.mk,v 1.5 2011/07/02 11:26:28 gregoire Exp $
 #
 
 #
@@ -15,11 +15,11 @@ PKG_SUGGESTED_OPTIONS=	freetype
 
 PLIST_VARS+=		freetype
 
-UNIFONT_URL=		http://unifoundry.com/unifont-5.1.20080820.pcf.gz
-UNIFONT_EXT=		pcf.gz
+UNIFONT=		unifont-5.1.20080820.pcf
+SITES.${UNIFONT}.gz=	http://unifoundry.com/
 
-post-extract: do-download-unifont
-.PHONY: do-download-unifont
+post-extract: do-move-unifont
+.PHONY: do-move-unifont
 
 .if !empty(PKG_OPTIONS:Mdebug)
 CONFIGURE_ARGS+=	--enable-mm-debug
@@ -30,11 +30,11 @@ CONFIGURE_ARGS+=	--disable-mm-debug
 .if !empty(PKG_OPTIONS:Mfreetype)
 CONFIGURE_ARGS+=	--enable-grub-mkfont
 PLIST.freetype=		yes
-USE_TOOLS+=		ftp
-do-download-unifont:
-	cd ${WRKSRC} && ftp -o unifont.${UNIFONT_EXT} ${UNIFONT_URL}
+DISTFILES+=		${UNIFONT}.gz
+do-move-unifont:
+	${MV} ${WRKDIR}/${UNIFONT} ${WRKSRC}/unifont.pcf
 .include "../../graphics/freetype2/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-grub-mkfont
-do-download-unifont:
+do-move-unifont:
 .endif
