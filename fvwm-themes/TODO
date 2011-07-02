@@ -1,0 +1,2 @@
+- Check to be done (currently OK) .. following path is only for example
+(cd /tmp; rm -rf xx; mkdir xx; cd xx; tar zxf /export/pkgsrc/packages/All/fvwm-themes-0.6.2nb8.tgz; grep -r destdir .)
