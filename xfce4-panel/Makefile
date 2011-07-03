@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2011/06/30 13:49:40 reinoudz70 Exp $
+# $NetBSD: Makefile,v 1.19 2011/07/03 19:26:18 guigui2 Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -33,7 +33,7 @@ MAKE_DIRS+=		${PKG_SYSCONFDIR}/xfce4/panel
 
 .include "../../devel/libwnck/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
-.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../graphics/gnome-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 #.include "../../textproc/libxml2/buildlink3.mk"
 .include "../../wip/garcon/buildlink3.mk"
