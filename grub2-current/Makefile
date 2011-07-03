@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.28 2011/06/05 21:37:01 gregoire Exp $
+# $NetBSD: Makefile,v 1.29 2011/07/03 21:35:40 gregoire Exp $
 #
 
 DISTNAME=		grub-bazaar-snapshot
 PKGNAME=		grub2-${BZR_REVISION}.${TODAY}
 CATEGORIES=		sysutils
+DISTFILES=
 
 MAINTAINER=		gsutre@NetBSD.org
 HOMEPAGE=		http://www.gnu.org/software/grub/

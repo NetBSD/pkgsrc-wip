@@ -1,12 +1,11 @@
-# $NetBSD: download.mk,v 1.14 2011/06/05 21:37:01 gregoire Exp $
+# $NetBSD: download.mk,v 1.15 2011/07/03 21:35:40 gregoire Exp $
 #
 
 #
-# Helper file to access the bazaar repository, download translations and font
-# files, and generate the configure script with autogen.sh.
+# Helper file to access the bazaar repository, download extra stuff (such as
+# translations), and generate the configure script with autogen.sh.
 #
 
-USE_TOOLS+=		ftp
 BUILD_DEPENDS+=		bzr>=1.0:../../devel/bzr
 BUILD_DEPENDS+=		rsync>=3.0:../../net/rsync
 BUILD_DEPENDS+=		autogen>=5.9:../../devel/autogen
@@ -14,8 +13,6 @@ BUILD_DEPENDS+=		autogen>=5.9:../../devel/autogen
 DISTFILES?=		# empty
 BZR_REPOSITORY=		http://bzr.savannah.gnu.org/r/grub/trunk/grub
 BZR_REVISION=		3273
-UNIFONT_URL=		http://unifoundry.com/unifont-5.1.20080820.pcf.gz
-UNIFONT_EXT=		pcf.gz
 
 pre-extract: do-bzr-extract
 
@@ -32,9 +29,6 @@ post-extract: do-extra-downloads
 do-extra-downloads:
 	cd ${WRKSRC} && rsync -Lrtvz translationproject.org::tp/latest/grub/ po
 	cd ${WRKSRC}/po && (ls *.po | sed -e 's,\.po$$,,') > LINGUAS
-.if !empty(PKG_OPTIONS:Mfreetype)
-	cd ${WRKSRC} && ftp -o unifont.${UNIFONT_EXT} ${UNIFONT_URL}
-.endif
 
 pre-configure: do-autogen
 
