@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2011/07/03 21:35:40 gregoire Exp $
+# $NetBSD: Makefile,v 1.30 2011/07/03 23:19:36 gregoire Exp $
 #
 
 DISTNAME=		grub-bazaar-snapshot
@@ -35,7 +35,7 @@ TODAY!=			${DATE} -u +'%Y%m%d'
 #
 # Requirements: GCC >= 4.1.3, Flex >= 2.5.35 and help2man.
 #
-GCC_REQD=		4.1.3
+GCC_REQD=		4.3
 BUILD_DEPENDS+=		flex>=2.5.35:../../devel/flex
 BUILD_DEPENDS+=		help2man>=1.36:../../converters/help2man
 

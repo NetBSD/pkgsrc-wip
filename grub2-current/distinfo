@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.37 2011/07/03 21:35:40 gregoire Exp $
+$NetBSD: distinfo,v 1.38 2011/07/03 23:19:36 gregoire Exp $
 
 SHA1 (unifont-5.1.20080820.pcf.gz) = 87f8600ba24e521b5d20bdf6c4b71af8ae861e3a
 RMD160 (unifont-5.1.20080820.pcf.gz) = ddc87231a7c1e18e81a6f4578a4f0279bcd0c292
 Size (unifont-5.1.20080820.pcf.gz) = 1379965 bytes
-SHA1 (patch-pkglibdir-in-scripts.diff) = 30f0a3eeb2eb67f634cde551d67db0239afe8e7c
+SHA1 (patch-sector-size-from-disklabel) = 192bccc457dd6ab3333d3c9c3358a141f1ca7fe1
