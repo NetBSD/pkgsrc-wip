@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2011/06/30 14:51:34 reinoudz70 Exp $
+# $NetBSD: Makefile,v 1.20 2011/07/03 19:24:21 guigui2 Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -29,16 +29,20 @@ CONF_FILES=	${EGDIR}/uca.xml ${PKG_SYSCONFDIR}/Thunar/uca.xml
 
 #.include "options.mk"
 
+DEPENDS+=	gio-fam:../../sysutils/gio-fam
+# Broken. Needs libsoup24 with gnome option enabled to build gvfs
+# DEPENDS+=	gvfs:../../sysutils/gvfs
+
 #.include "../../devel/GConf/buildlink3.mk"
 #.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
-.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../graphics/gnome-icon-theme/buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"
 #.include "../../graphics/png/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 #.include "../../sysutils/desktop-file-utils/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../sysutils/gnome-vfs/buildlink3.mk"
+#.include "../../sysutils/gnome-vfs/buildlink3.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../wip/libxfce4ui/buildlink3.mk"
 #.include "../../wip/libxfce4util/buildlink3.mk"
