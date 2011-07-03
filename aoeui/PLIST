@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2011/07/03 14:27:56 realzhtw Exp $
+bin/aoeui
+bin/asdfg
+man/man1/aoeui.1
+man/man1/asdfg.1
+share/doc/aoeui/aoeui.txt
+share/doc/aoeui/notes.txt
+share/doc/aoeui/xterm-ctlseqs.txt

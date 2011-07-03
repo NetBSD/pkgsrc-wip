@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2011/07/03 14:27:56 realzhtw Exp $
+
+SHA1 (aoeui-1.5.tgz) = f0368cf55ab75cc359d8b6f55928bbeac3aecaa0
+RMD160 (aoeui-1.5.tgz) = b1bc63a67ab6b1f9fe981d18bc12fea9d5e562c7
+Size (aoeui-1.5.tgz) = 86965 bytes
+SHA1 (patch-Makefile) = 1e4e998bdd63ef76986ad629245491321e764d77
+SHA1 (patch-all.h) = 721a41b12ed0b946e58463ded5eb76f5ae8dfb79
