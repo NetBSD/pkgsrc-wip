@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2011/07/03 10:17:30 gregoire Exp $
-bin/grub2-bin2h
+@comment $NetBSD: PLIST,v 1.23 2011/07/04 00:07:53 gregoire Exp $
 bin/grub2-editenv
 bin/grub2-fstest
 bin/grub2-kbdcomp
@@ -18,10 +17,10 @@ lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/acpi.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/affs.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/afs.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/afs_be.mod
+lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/ahci.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/aout.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/at_keyboard.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/ata.mod
-lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/ata_pthru.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/befs.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/befs_be.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/biosdisk.mod
@@ -60,6 +59,7 @@ lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/ext2.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/extcmd.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/fat.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/font.mod
+lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/freedos.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/fs.lst
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/fshelp.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/functional_test.mod
@@ -121,11 +121,14 @@ lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/memrw.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/minicmd.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/minix.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/minix2.mod
+lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/minix3.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/mmap.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/moddep.lst
+lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/modinfo.sh
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/msdospart.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/multiboot.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/multiboot2.mod
+lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/net.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/nilfs2.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/normal.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/ntfs.mod
@@ -136,6 +139,7 @@ lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/part_acorn.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/part_amiga.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/part_apple.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/part_bsd.mod
+lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/part_dvh.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/part_gpt.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/part_msdos.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/part_sun.mod
@@ -145,6 +149,7 @@ lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/parttool.lst
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/parttool.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/password.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/password_pbkdf2.mod
+lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/pata.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/pbkdf2.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/pci.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/play.mod
@@ -161,6 +166,7 @@ lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/reboot.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/regexp.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/reiserfs.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/relocator.mod
+lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/romfs.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/scsi.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/search.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/search_fs_file.mod
@@ -172,6 +178,7 @@ lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/setjmp.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/setpci.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/sfs.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/sleep.mod
+lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/squash4.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/tar.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/terminal.lst
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/terminal.mod
@@ -179,7 +186,9 @@ lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/terminfo.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/test.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/test_blockarg.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/testload.mod
+lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/tftp.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/tga.mod
+lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/time.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/trig.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/true.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/udf.mod
@@ -210,7 +219,6 @@ lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/xzio.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/zfs.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/zfsinfo.mod
 lib/grub2/update-grub_lib
-man/man1/grub2-bin2h.1
 man/man1/grub2-editenv.1
 man/man1/grub2-fstest.1
 man/man1/grub2-menulst2cfg.1
