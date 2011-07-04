@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2011/05/01 11:01:01 asau Exp $
+# $NetBSD: Makefile,v 1.34 2011/07/04 16:37:15 asau Exp $
 
 DISTNAME=		${PKGNAME_NOREV}-source
 PKGNAME=		sbcl-1.0.47
@@ -92,12 +92,12 @@ PLIST_SUBST+=	SUFX64=
 .endif
 
 
-CVS_REPOSITORIES=	sbcl
-CVS_ROOT.sbcl=		:pserver:anonymous:@sbcl.cvs.sourceforge.net:/cvsroot/sbcl
+GIT_REPOSITORIES=	sbcl
+GIT_REPO.sbcl=		git://sbcl.git.sourceforge.net/gitroot/sbcl/sbcl.git
 WRKSRC=			${WRKDIR}/sbcl
 DISTNAME=
 PKGNAME=		sbcl-1.0.99
 
-.include "../mk/cvs-package.mk"
+.include "../mk/git-package.mk"
 
 .include "../../mk/bsd.pkg.mk"
