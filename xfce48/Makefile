@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2011/07/04 14:18:15 reinoudz70 Exp $
+# $NetBSD: Makefile,v 1.13 2011/07/04 14:26:13 reinoudz70 Exp $
 
 META_PACKAGE=	yes
 
@@ -30,6 +30,7 @@ COMMENT=	Xfce
 
 # Might be added to the xfce4-extras
 .include "../../wip/ristretto/buildlink3.mk"
+.include "../../wip/xfce4-wm-themes/buildlink3.mk"
 
 # Old links
 #   kept for reference
