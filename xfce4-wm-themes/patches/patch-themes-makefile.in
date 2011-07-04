@@ -1,0 +1,12 @@
+$NetBSD: patch-themes-makefile.in,v 1.1 2011/07/04 14:42:15 reinoudz70 Exp $
+
+--- themes/Makefile.in.orig	2009-02-26 00:03:51.000000000 +0000
++++ themes/Makefile.in
+@@ -209,7 +209,6 @@ SUBDIRS = \
+ 	tux								\
+ 	variation							\
+ 	waza								\
+-	wildbush							\
+ 	xfce
+ 
+ all: all-recursive

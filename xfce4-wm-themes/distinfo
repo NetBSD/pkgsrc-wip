@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.14 2011/07/04 14:25:01 reinoudz70 Exp $
+$NetBSD: distinfo,v 1.15 2011/07/04 14:42:15 reinoudz70 Exp $
 
 SHA1 (xfwm4-themes-4.6.0.tar.bz2) = 7e81d00b2b0a7a2b91071b8c3767171bce738af2
 RMD160 (xfwm4-themes-4.6.0.tar.bz2) = 1f6230cdb7626b48671c170234aa97c28ba2eaf9
 Size (xfwm4-themes-4.6.0.tar.bz2) = 508403 bytes
+SHA1 (patch-themes-makefile.in) = 3be5f005f9938355c3995e3eeb117982cb655a2c
