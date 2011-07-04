@@ -56,7 +56,7 @@ P  xfce4-exo
 P  xfce4-fsguard-plugin
 ?  xfce4-genmon-plugin
 ?  xfce4-gtk2-engine
-?  xfce4-icon-theme
+P  xfce4-icon-theme
 U  xfce4-mailwatch-plugin
 ?  xfce4-mixer
 U  xfce4-mount-plugin
