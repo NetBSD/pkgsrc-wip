@@ -1,8 +1,6 @@
 -------------
 Known bugs and issues:
 
-* The icontheme is still not set automatically!
-
 * when starting application finder from the panel it is not working;
 starting it when not using `startxfce4' it will start up but will
 complain about a missing menu.
