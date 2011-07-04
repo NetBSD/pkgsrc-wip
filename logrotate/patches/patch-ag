@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.7 2011/04/22 07:59:42 ahp-nils Exp $
+$NetBSD: patch-ag,v 1.8 2011/07/04 12:54:28 ahp-nils Exp $
 
 Add pkgsrc paths compatibility
 
@@ -9,7 +9,7 @@ Add pkgsrc paths compatibility
  Tells \fBlogrotate\fR to use an alternate state file.  This is useful
  if logrotate is being run as a different user for various sets of
 -log files.  The default state file is \fI/var/lib/logrotate.status\fR.
-+log files.  The default state file is \fI/var/log/logrotate.status\fR.
++log files.  The default state file is \fI@VARBASE@/log/logrotate.status\fR.
  
  .TP
  \fB-\-usage\fR
@@ -18,11 +18,11 @@ Add pkgsrc paths compatibility
  .PD 0
  .TP 27
 -\fI/var/lib/logrotate.status\fR
-+\fI/var/log/logrotate.status\fR
++\fI@VARBASE@/log/logrotate.status\fR
  Default state file.
  .TP 27
 -\fI/etc/logrotate.conf\fR
-+\fI@PREFIX@/etc/logrotate.conf\fR
++\fI@PKG_SYSCONFDIR@/logrotate.conf\fR
  Configuration options.
  
  .SH SEE ALSO

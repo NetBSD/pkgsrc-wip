@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.7 2011/06/10 08:55:05 ahp-nils Exp $
+$NetBSD: patch-ae,v 1.8 2011/07/04 12:54:28 ahp-nils Exp $
 
 Add pkgsrc paths compatibility
 
@@ -14,7 +14,7 @@ Add pkgsrc paths compatibility
 -# RPM packages drop log rotation information into this directory
 -include /etc/logrotate.d
 +# Packages drop log rotation information into this directory
-+include @PREFIX@/etc/logrotate.d
++include @PKG_SYSCONFSUBDIR@
  
 -# no packages own wtmp and btmp -- we'll rotate them here
 -/var/log/wtmp {
