@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2011/06/06 01:42:32 gregoire Exp $
+# $NetBSD: Makefile,v 1.34 2011/07/04 11:58:25 gregoire Exp $
 #
 
 DISTNAME=		hplip-3.11.5
@@ -18,7 +18,7 @@ BUILD_DEFS+=		VARBASE
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
-USE_LANGUAGES+=		c c++ # fortran
+USE_LANGUAGES=		c c++ # fortran
 USE_TOOLS+=		aclocal autoconf automake gmake pkg-config
 USE_TOOLS+=		perl:run
 
@@ -72,14 +72,13 @@ SUBST_FILES.fix-python+=	ui/nodevicesform.py ui/devmgr4.py
 SUBST_FILES.fix-python+=	ui4/nodevicesdialog.py ui4/devmgr5.py
 SUBST_SED.fix-python=	-e 's,\(['\''"]\)python ,\1${PYTHONBIN} ,g'
 
-SUBST_CLASSES+=			fix-paths-0 fix-paths-1 fix-paths-2 fix-paths-3
-SUBST_CLASSES+=			fix-paths-4 fix-paths-5 fix-paths-6
-
+SUBST_CLASSES+=			fix-paths-0
 SUBST_STAGE.fix-paths-0=	pre-configure
 SUBST_MESSAGE.fix-paths-0=	Fixing /var/run in hplip.conf.in.
 SUBST_FILES.fix-paths-0=	hplip.conf.in
 SUBST_SED.fix-paths-0=	-e 's,run=/var/run,run=${VARBASE}/run,g'
 
+SUBST_CLASSES+=			fix-paths-1
 SUBST_STAGE.fix-paths-1=	post-configure
 SUBST_MESSAGE.fix-paths-1=	Fixing /etc and /var paths in Python and C++ files.
 SUBST_FILES.fix-paths-1=	check.py base/codes.py base/g.py base/utils.py
@@ -96,6 +95,7 @@ SUBST_SED.fix-paths-1+=	-e 's,\([ '\''"=]\)/var/lib/hp,\1${VARBASE}/lib/hp,g'
 SUBST_SED.fix-paths-1+=	-e 's,\([ '\''"=]\)/var/log/cups,\1${VARBASE}/log/cups,g'
 SUBST_SED.fix-paths-1+=	-e 's,\([ '\''"=]\)/var/spool/cups,\1${VARBASE}/spool/cups,g'
 
+SUBST_CLASSES+=			fix-paths-2
 SUBST_STAGE.fix-paths-2=	post-configure
 SUBST_MESSAGE.fix-paths-2=	Fixing additional paths in installer/core_install.py.
 SUBST_FILES.fix-paths-2=	installer/core_install.py
@@ -105,17 +105,20 @@ SUBST_SED.fix-paths-2+=	-e 's,"file:///etc/hp,"file://${PKG_SYSCONFDIR}/hp,g'
 SUBST_SED.fix-paths-2+=	-e 's,"/usr/lib/cups/driver,"${PREFIX}/libexec/cups/driver,g'
 SUBST_SED.fix-paths-2+=	-e 's,\([ '\''"=]\)/usr,\1${PREFIX},g'
 
+SUBST_CLASSES+=			fix-paths-3
 SUBST_STAGE.fix-paths-3=	post-configure
 SUBST_MESSAGE.fix-paths-3=	Fixing additional paths in base/pkit.py.
 SUBST_FILES.fix-paths-3=	base/pkit.py
 SUBST_SED.fix-paths-3=	-e 's,\([ '\''"=]\)/usr,\1${PREFIX},g'
 
+SUBST_CLASSES+=			fix-paths-4
 SUBST_STAGE.fix-paths-4=	post-configure
 SUBST_MESSAGE.fix-paths-4=	Fixing default PPD search path in base/g.py and prnt/cups.py.
 SUBST_FILES.fix-paths-4=	base/g.py prnt/cups.py
 SUBST_SED.fix-paths-4=	-e '\,ppd_search_path =, { s,/usr/\([a-z]*\);,/usr/\1;${PREFIX}/\1;,g ; }'
 SUBST_SED.fix-paths-4+=	-e 's,\([ '\''"=]\)/usr/share/ppd,\1${PREFIX}/share/ppd,g'
 
+SUBST_CLASSES+=			fix-paths-5
 SUBST_STAGE.fix-paths-5=	post-configure
 SUBST_MESSAGE.fix-paths-5=	Fixing paths in prnt/hpijs/foomatic-rip-hplip.
 SUBST_FILES.fix-paths-5=	prnt/hpijs/foomatic-rip-hplip
@@ -127,6 +130,7 @@ SUBST_SED.fix-paths-5+=	-e 's,\(path = "/usr/bin:\),\1${PREFIX}/bin:,g'
 SUBST_SED.fix-paths-5+=	-e 's,\(path = "/usr/lib/cups/filter:\),\1${PREFIX}/libexec/cups/filter:,g'
 SUBST_SED.fix-paths-5+=	-e '\,} elsif (-r "/usr/share/ppr, { N ; p ; s,"/usr,"${PREFIX},g ; }'
 
+SUBST_CLASSES+=			fix-paths-6
 SUBST_STAGE.fix-paths-6=	post-configure
 SUBST_MESSAGE.fix-paths-6=	Fixing paths in fax/filters/pstotiff.
 SUBST_FILES.fix-paths-6=	fax/filters/pstotiff
