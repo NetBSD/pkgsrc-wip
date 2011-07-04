@@ -1,6 +1,88 @@
+-------------
 Known bugs and issues:
 
-* The icontheme is not set correctly; running xfce4-settings-manager helps it out
+* The icontheme is still not set automatically!
 
-* when starting with `startxfce4' the menu is not working!! when starting with `xfce4-session' it works! Environment variables? xdg stuff?
+* when starting application finder from the panel it is not working;
+starting it when not using `startxfce4' it will start up but will
+complain about a missing menu.
+
+-------------
+/* Top level references */
+./audio/Makefile
+./devel/Makefile
+./editors/Makefile
+./graphics/Makefile
+./meta-pkgs/Makefile
+./misc/Makefile
+./multimedia/Makefile
+./net/Makefile
+./print/Makefile
+./sysutils/Makefile
+./textproc/Makefile
+./time/Makefile
+./wip/Makefile
+./wm/Makefile
+./x11/Makefile
+
+-------------
+/* status of all packages referencing xfce4 */
+/* P: ported    */
+/* O: obsolete (i.e. compat) */
+/* D: deleted */
+/* U: UNKNOWN, already in pkgsrc-wip */
+
+P  garcon
+PO libxfce4gui
+DO libxfce4menu		(garcon)
+P  libxfce4ui
+P  libxfce4util
+?  ristretto
+P  xfce4-appfinder
+?  xfce4-battery-plugin
+?  xfce4-clipman-plugin
+?  xfce4-cpugraph-plugin
+?  xfce4-datetime-plugin
+P  xfce4-desktop
+P  xfce4-dev-tools
+?  xfce4-dict-plugin
+?  xfce4-diskperf-plugin
+P  xfce4-exo
+?  xfce4-eyes-plugin
+P  xfce4-fsguard-plugin
+?  xfce4-genmon-plugin
+?  xfce4-gtk2-engine
+?  xfce4-icon-theme
+U  xfce4-mailwatch-plugin
+?  xfce4-mixer
+U  xfce4-mount-plugin
+?  xfce4-mousepad
+?  xfce4-mpc-plugin
+?  xfce4-netload-plugin
+?  xfce4-notes-plugin
+?  xfce4-orage
+P  xfce4-panel
+?  xfce4-places-plugin
+?  xfce4-print
+P  xfce4-quicklauncher-plugin
+U  xfce4-radio-plugin
+?  xfce4-screenshooter-plugin
+P  xfce4-session
+P  xfce4-settings
+?  xfce4-systemload-plugin
+U  xfce4-taskmanager
+P  xfce4-terminal
+P  xfce4-thunar
+?  xfce4-timer-plugin
+P  xfce4-utils
+?  xfce4-volman
+?  xfce4-wavelan-plugin
+?  xfce4-weather-plugin
+P  xfce4-wm
+?  xfce4-wm-themes
+?  xfce4-xarchiver
+?  xfce4-xkb-plugin
+?  xfce4-xmms-plugin
+P  xfconf
+?  xfmedia
 
