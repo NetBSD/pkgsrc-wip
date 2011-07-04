@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2010/10/17 18:25:21 asau Exp $
+@comment $NetBSD: PLIST,v 1.15 2011/07/04 18:55:06 asau Exp $
 bin/sbcl
 lib/sbcl/asdf-install/Makefile
 lib/sbcl/asdf-install/README
@@ -124,6 +124,7 @@ lib/sbcl/sb-grovel/test-passed
 lib/sbcl/sb-introspect/Makefile
 lib/sbcl/sb-introspect/introspect.fasl
 lib/sbcl/sb-introspect/introspect.lisp
+lib/sbcl/sb-introspect/load-test.lisp
 lib/sbcl/sb-introspect/sb-introspect.asd
 lib/sbcl/sb-introspect/sb-introspect.fasl
 lib/sbcl/sb-introspect/test-driver.fasl
