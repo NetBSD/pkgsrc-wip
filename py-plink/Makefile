@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/03/07 11:10:04 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2011/07/04 12:48:48 jihbed Exp $
 #
 
 DISTNAME=	plink
 EGG_NAME=	${DISTNAME}-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-${EGG_NAME}
 CATEGORIES=	graphics python
-MASTER_SITES=	http://math.uic.edu/~t3m/plink/
+MASTER_SITES=	http://math.uic.edu/~t3m/
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://math.uic.edu/~t3m/plink/
