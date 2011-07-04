@@ -31,13 +31,14 @@ complain about a missing menu.
 /* O: obsolete (i.e. compat) */
 /* D: deleted */
 /* U: UNKNOWN, already in pkgsrc-wip */
+/* X: broken; needs some TLC to get working */
 
 P  garcon
 PO libxfce4gui
 DO libxfce4menu		(garcon)
 P  libxfce4ui
 P  libxfce4util
-?  ristretto
+P  ristretto
 P  xfce4-appfinder
 ?  xfce4-battery-plugin
 ?  xfce4-clipman-plugin
@@ -70,7 +71,7 @@ U  xfce4-radio-plugin
 P  xfce4-session
 P  xfce4-settings
 ?  xfce4-systemload-plugin
-U  xfce4-taskmanager
+UX xfce4-taskmanager
 P  xfce4-terminal
 P  xfce4-thunar
 ?  xfce4-timer-plugin
