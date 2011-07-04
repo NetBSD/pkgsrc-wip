@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/07/04 19:13:07 guigui2 Exp $
+# $NetBSD: Makefile,v 1.2 2011/07/04 19:28:09 guigui2 Exp $
 #
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -12,7 +12,7 @@ MASTER_SITES=	http://archive.xfce.org/src/thunar-plugins/thunar-archive-plugin/0
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	gls@NetBSD.org
-HOMEPAGE=	http://archive.xfce.org/src/thunar-plugins/thunar-archive-plugin/0.3/
+HOMEPAGE=	http://goodies.xfce.org/projects/thunar-plugins/thunar-archive-plugin/
 COMMENT=	Thunar archive plugin
 
 DEPENDS=	file-roller:../../archivers/file-roller
