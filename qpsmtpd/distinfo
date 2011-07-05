@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/03/06 05:58:55 ficovh Exp $
-
-SHA1 (qpsmtpd-0.40.tar.gz) = 0924166f436b7e18fa257efad7b089046f6d77d9
-RMD160 (qpsmtpd-0.40.tar.gz) = 9ca79daa5afca8f96e66b9ff262833a816c83e34
-Size (qpsmtpd-0.40.tar.gz) = 141147 bytes

@@ -1,6 +1,0 @@
-qpsmtpd is a flexible smtpd daemon written in Perl.
-Apart from the core SMTP features, all functionality is implemented
-in small "extension plugins" using the easy to use object oriented plugin API.
-
-qpsmtpd was originally written as a drop-in qmail-smtpd replacement,
-but now it also includes smtp forward, postfix, exim and maildir "backends".
