@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2011/07/05 14:16:31 asau Exp $
+@comment $NetBSD: PLIST,v 1.31 2011/07/05 15:18:13 asau Exp $
 bin/efricas
 bin/fricas
 lib/fricas/emacs/fricas-cpl.el
@@ -1266,7 +1266,6 @@ ${ecl}lib/fricas/target/${MACHINE_GNU_PLATFORM}/autoload/comp-files.${FASL}
 ${clisp-sbcl}lib/fricas/target/${MACHINE_GNU_PLATFORM}/autoload/compiler.${FASL}
 ${clisp}lib/fricas/target/${MACHINE_GNU_PLATFORM}/autoload/compiler.lib
 ${ecl}lib/fricas/target/${MACHINE_GNU_PLATFORM}/autoload/compiler.o
-${sbcl}lib/fricas/target/${MACHINE_GNU_PLATFORM}/autoload/def.${FASL}
 ${clisp-sbcl}lib/fricas/target/${MACHINE_GNU_PLATFORM}/autoload/define.${FASL}
 ${clisp}lib/fricas/target/${MACHINE_GNU_PLATFORM}/autoload/define.lib
 ${ecl}lib/fricas/target/${MACHINE_GNU_PLATFORM}/autoload/define.o
@@ -1291,30 +1290,24 @@ ${ecl}lib/fricas/target/${MACHINE_GNU_PLATFORM}/autoload/info.o
 ${clisp-sbcl}lib/fricas/target/${MACHINE_GNU_PLATFORM}/autoload/iterator.${FASL}
 ${clisp}lib/fricas/target/${MACHINE_GNU_PLATFORM}/autoload/iterator.lib
 ${ecl}lib/fricas/target/${MACHINE_GNU_PLATFORM}/autoload/iterator.o
-${sbcl}lib/fricas/target/${MACHINE_GNU_PLATFORM}/autoload/mark.${FASL}
 ${clisp-sbcl}lib/fricas/target/${MACHINE_GNU_PLATFORM}/autoload/modemap.${FASL}
 ${clisp}lib/fricas/target/${MACHINE_GNU_PLATFORM}/autoload/modemap.lib
 ${ecl}lib/fricas/target/${MACHINE_GNU_PLATFORM}/autoload/modemap.o
 ${clisp-sbcl}lib/fricas/target/${MACHINE_GNU_PLATFORM}/autoload/nruncomp.${FASL}
 ${clisp}lib/fricas/target/${MACHINE_GNU_PLATFORM}/autoload/nruncomp.lib
 ${ecl}lib/fricas/target/${MACHINE_GNU_PLATFORM}/autoload/nruncomp.o
-${sbcl}lib/fricas/target/${MACHINE_GNU_PLATFORM}/autoload/nspadaux.${FASL}
 ${clisp-sbcl}lib/fricas/target/${MACHINE_GNU_PLATFORM}/autoload/package.${FASL}
 ${clisp}lib/fricas/target/${MACHINE_GNU_PLATFORM}/autoload/package.lib
 ${ecl}lib/fricas/target/${MACHINE_GNU_PLATFORM}/autoload/package.o
 ${clisp-sbcl}lib/fricas/target/${MACHINE_GNU_PLATFORM}/autoload/profile.${FASL}
 ${clisp}lib/fricas/target/${MACHINE_GNU_PLATFORM}/autoload/profile.lib
 ${ecl}lib/fricas/target/${MACHINE_GNU_PLATFORM}/autoload/profile.o
-${sbcl}lib/fricas/target/${MACHINE_GNU_PLATFORM}/autoload/pspad1.${FASL}
-${sbcl}lib/fricas/target/${MACHINE_GNU_PLATFORM}/autoload/pspad2.${FASL}
 ${clisp-sbcl}lib/fricas/target/${MACHINE_GNU_PLATFORM}/autoload/showimp.${FASL}
 ${clisp}lib/fricas/target/${MACHINE_GNU_PLATFORM}/autoload/showimp.lib
 ${ecl}lib/fricas/target/${MACHINE_GNU_PLATFORM}/autoload/showimp.o
 ${clisp-sbcl}lib/fricas/target/${MACHINE_GNU_PLATFORM}/autoload/topics.${FASL}
 ${clisp}lib/fricas/target/${MACHINE_GNU_PLATFORM}/autoload/topics.lib
 ${ecl}lib/fricas/target/${MACHINE_GNU_PLATFORM}/autoload/topics.o
-${sbcl}lib/fricas/target/${MACHINE_GNU_PLATFORM}/autoload/wi1.${FASL}
-${sbcl}lib/fricas/target/${MACHINE_GNU_PLATFORM}/autoload/wi2.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/bin/AXIOMsys
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/bin/asq
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/bin/clef
