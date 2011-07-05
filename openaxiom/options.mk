@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2011/05/02 16:58:34 asau Exp $
+# $NetBSD: options.mk,v 1.8 2011/07/05 15:47:46 asau Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.openaxiom
 PKG_OPTIONS_REQUIRED_GROUPS=	lisp
@@ -60,7 +60,7 @@ CONFIGURE_ARGS+=	--with-x=no
 PRINT_PLIST_AWK+=	{if ($$0 ~ /\/bin\/${_file_}$$/) {$$0 = "$${x11}" $$0;}}
 .endfor
 .for _file_ in hypertex spadbuf view2D view3D viewman
-PRINT_PLIST_AWK+=	{if ($$0 ~ /\/lib\${_file_}$$/) {$$0 = "$${x11}" $$0;}}
+PRINT_PLIST_AWK+=	{if ($$0 ~ /\/lib\/${_file_}$$/) {$$0 = "$${x11}" $$0;}}
 .endfor
 .endif
 
