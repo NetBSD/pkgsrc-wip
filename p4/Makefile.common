@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2011/07/05 21:12:57 bubuchka Exp $
+# $NetBSD: Makefile.common,v 1.2 2011/07/05 21:27:38 bubuchka Exp $
 #
 # used by devel/p4/Makefile
 # used by devel/p4-docs/Makefile
@@ -16,7 +16,7 @@ BUILD_DIRS=	# empty
 WRKSRC=		${WRKDIR}
 DIST_SUBDIR=	perforce-${P4_VERS}
 
-LICENSE=	# p4
+LICENSE=	perforce-license
 
 .if defined(P4BINONLY)
 
@@ -24,8 +24,6 @@ DIST_SUBDIR=	perforce-${P4_VERS}/${P4ARCH}
 MASTER_SITES=	ftp://ftp.perforce.com/pub/perforce/r10.2/bin.${P4ARCH}/
 DISTFILES=	${DISTNAME}
 EXTRACT_ONLY=	# none
-
-_STRIPFLAG_INSTALL=	# none
 
 EMUL_PLATFORMS+=	darwin-i386 darwin-x86_64 darwin-powerpc
 EMUL_PLATFORMS+=	linux-i386 linux-x86_64

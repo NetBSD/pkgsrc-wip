@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/07/05 21:12:57 bubuchka Exp $
+# $NetBSD: Makefile,v 1.2 2011/07/05 21:27:38 bubuchka Exp $
 #
 
 DISTNAME=	p4
@@ -14,7 +14,7 @@ P4BINONLY=	yes
 INSTALLATION_DIRS=	bin
 
 do-install:
-	${INSTALL_PROGRAM} ${DISTDIR}/${DIST_SUBDIR}/${DISTNAME} \
+	${INSTALL_SCRIPT} ${DISTDIR}/${DIST_SUBDIR}/${DISTNAME} \
 		${DESTDIR}${PREFIX}/bin
 
 .include "../../mk/bsd.pkg.mk"
