@@ -1,8 +1,14 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/07/05 21:12:57 bubuchka Exp $
+$NetBSD: distinfo,v 1.2 2011/07/05 22:02:24 bubuchka Exp $
 
 SHA1 (perforce-2010.2/darwin90u/p4) = f47b928f7795964b5da5056080143a5f020285a6
 RMD160 (perforce-2010.2/darwin90u/p4) = 23e03f191490c5926a0e8690ad48eb823fc9fe57
 Size (perforce-2010.2/darwin90u/p4) = 2378688 bytes
+SHA1 (perforce-2010.2/freebsd60x86/p4) = d24ae72ece539efb19cf68e1247fc1af94a5b157
+RMD160 (perforce-2010.2/freebsd60x86/p4) = 96c9772f7f443537cfb2f51195d911fb0c5b8625
+Size (perforce-2010.2/freebsd60x86/p4) = 706148 bytes
+SHA1 (perforce-2010.2/freebsd60x86_64/p4) = e9f09df82fe498b2d1ee3f6f0fe06e93889dad6b
+RMD160 (perforce-2010.2/freebsd60x86_64/p4) = a92730782c97bb42e4f663cf82c2ed993ed996ca
+Size (perforce-2010.2/freebsd60x86_64/p4) = 781912 bytes
 SHA1 (perforce-2010.2/linux26x86/p4) = 5efc5a1bfc1f44c8cc8660550f5dadcc38e9047b
 RMD160 (perforce-2010.2/linux26x86/p4) = e8d49a0a5d1e2aa9a0164aa80c7d48c2bf5d9082
 Size (perforce-2010.2/linux26x86/p4) = 777652 bytes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2011/07/05 21:27:38 bubuchka Exp $
+# $NetBSD: Makefile.common,v 1.3 2011/07/05 22:02:24 bubuchka Exp $
 #
 # used by devel/p4/Makefile
 # used by devel/p4-docs/Makefile
@@ -26,14 +26,19 @@ DISTFILES=	${DISTNAME}
 EXTRACT_ONLY=	# none
 
 EMUL_PLATFORMS+=	darwin-i386 darwin-x86_64 darwin-powerpc
+EMUL_PLATFORMS+=	freebsd-i386 freebsd-x86_64
 EMUL_PLATFORMS+=	linux-i386 linux-x86_64
 EMUL_PLATFORMS+=	netbsd-i386 netbsd-x86_64
 EMUL_REQD=		netbsd>=3.0
 
 .  include "../../mk/bsd.prefs.mk"
 
-.  if ${EMUL_PLATFORM} == "darwin-i386" || ${EMUL_PLATFORM} == "darwin-powerpc"
+.  if ${EMUL_PLATFORM:Mdarwin-*}
 P4ARCH?=	darwin90u
+.  elif ${EMUL_PLATFORM} == "freebsd-i386"
+P4ARCH?=	freebsd60x86
+.  elif ${EMUL_PLATFORM} == "freebsd-x86_64"
+P4ARCH?=	freebsd60x86_64
 .  elif ${EMUL_PLATFORM} == "linux-i386"
 P4ARCH?=	linux26x86
 .  elif ${EMUL_PLATFORM} == "linux-x86_64"
