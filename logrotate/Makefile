@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2011/07/04 13:04:16 ahp-nils Exp $
+# $NetBSD: Makefile,v 1.19 2011/07/05 07:41:22 ahp-nils Exp $
 #
 
 DISTNAME=		logrotate-3.7.9
@@ -39,7 +39,6 @@ SUBST_FILES.confs+=	${WRKSRC}/${EXAMPLES_DIR}/logrotate.cron
 SUBST_VARS.confs=	PREFIX
 SUBST_VARS.confs+=	VARBASE
 SUBST_VARS.confs+=	PKG_SYSCONFDIR
-SUBST_VARS.confs+=	PKG_SYSCONFSUBDIR
 
 SUBST_CLASSES+=		man
 SUBST_STAGE.man=	post-patch
