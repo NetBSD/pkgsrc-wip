@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/07/05 21:27:38 bubuchka Exp $
+# $NetBSD: Makefile,v 1.3 2011/07/05 23:32:27 bubuchka Exp $
 #
 
 DISTNAME=	p4
@@ -8,6 +8,7 @@ COMMENT=	Perforce SCM command-line client
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 P4BINONLY=	yes
+EXTRACT_ONLY=	# none
 
 .include "../../wip/p4/Makefile.common"
 
