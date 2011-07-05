@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2010/04/25 12:15:27 asau Exp $
+# $NetBSD: Makefile,v 1.10 2011/07/05 20:15:56 harenber Exp $
 
-DISTNAME=	zabbix-1.8.1
+DISTNAME=	zabbix-1.8.5
 PKGREVISION=	#
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=zabbix/}
@@ -81,14 +81,14 @@ post-install:
 	mkdir ${DESTDIR}${PREFIX}/$d
 .endfor
 # documentation
-	${INSTALL_DATA} ${WRKSRC}/docs/README ${DESTDIR}${PREFIX}/share/doc/zabbix/
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/zabbix/
 .for f in ${CONFIGURATION_FILES}
 	${INSTALL_DATA} ${WRKSRC}/misc/conf/$f ${DESTDIR}${EGDIR}/$f
 .endfor
 .for f in ${SQL_SCRIPTS}
 	${INSTALL_DATA} ${SQL_SCRIPTS_DIR}/$f ${DESTDIR}${PREFIX}/share/zabbix/$f
 .endfor
-.for f in AUTHORS COPYING FAQ INSTALL NEWS README
+.for f in AUTHORS COPYING INSTALL NEWS README
 	${INSTALL_DATA} ${WRKSRC}/$f ${DESTDIR}${PREFIX}/share/doc/zabbix/$f
 .endfor
 	cd ${WRKSRC}; pax -rw frontends upgrades ${DESTDIR}${PREFIX}/share/zabbix/

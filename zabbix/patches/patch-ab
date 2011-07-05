@@ -1,18 +1,50 @@
-$NetBSD: patch-ab,v 1.1 2007/12/12 21:48:10 asau Exp $
+$NetBSD: patch-ab,v 1.2 2011/07/05 20:15:56 harenber Exp $
 
-Fix hard-coded pathes.
-
---- src/zabbix_agent/zabbix_agent.c.orig	2007/12/12 06:56:45
-+++ src/zabbix_agent/zabbix_agent.c	2007/12/12 06:57:23
-@@ -77,9 +77,9 @@
- }
+--- src/zabbix_server/server.c.orig	2011-07-03 19:18:33.000000000 +0000
++++ src/zabbix_server/server.c
+@@ -319,12 +319,12 @@ static void	init_config()
  
- #ifdef _WINDOWS
--	static char	DEFAULT_CONFIG_FILE[]	= "C:\\zabbix_agent.conf";
-+	static char	DEFAULT_CONFIG_FILE[]	= "@CONFDIR@\\zabbix_agent.conf";
- #else /* not _WINDOWS */
--	static char	DEFAULT_CONFIG_FILE[]	= "/etc/zabbix/zabbix_agent.conf";
-+	static char	DEFAULT_CONFIG_FILE[]	= "@CONFDIR@/zabbix_agent.conf";
- #endif /* _WINDOWS */
+ 	if (NULL == CONFIG_PID_FILE)
+ 	{
+-		CONFIG_PID_FILE = zbx_strdup(CONFIG_PID_FILE, "/tmp/zabbix_server.pid");
++		CONFIG_PID_FILE = zbx_strdup(CONFIG_PID_FILE, "@PIDDIR@/zabbix_server.pid");
+ 	}
  
- void    init_config(void)
+ 	if (NULL == CONFIG_ALERT_SCRIPTS_PATH)
+ 	{
+-		CONFIG_ALERT_SCRIPTS_PATH = zbx_strdup(CONFIG_ALERT_SCRIPTS_PATH, "/home/zabbix/bin");
++		CONFIG_ALERT_SCRIPTS_PATH = zbx_strdup(CONFIG_ALERT_SCRIPTS_PATH, "@HOMEDIR@/bin");
+ 	}
+ 
+ 	if (NULL == CONFIG_TMPDIR)
+@@ -334,18 +334,18 @@ static void	init_config()
+ 
+ 	if (NULL == CONFIG_FPING_LOCATION)
+ 	{
+-		CONFIG_FPING_LOCATION = zbx_strdup(CONFIG_FPING_LOCATION, "/usr/sbin/fping");
++		CONFIG_FPING_LOCATION = zbx_strdup(CONFIG_FPING_LOCATION, "@PREFIX/fping");
+ 	}
+ #ifdef HAVE_IPV6
+ 	if (NULL == CONFIG_FPING6_LOCATION)
+ 	{
+-		CONFIG_FPING6_LOCATION = zbx_strdup(CONFIG_FPING6_LOCATION, "/usr/sbin/fping6");
++		CONFIG_FPING6_LOCATION = zbx_strdup(CONFIG_FPING6_LOCATION, "@PREFIX/fping6");
+ 	}
+ #endif /* HAVE_IPV6 */
+ 
+ 	if (NULL == CONFIG_EXTERNALSCRIPTS)
+ 	{
+-		CONFIG_EXTERNALSCRIPTS = zbx_strdup(CONFIG_EXTERNALSCRIPTS, "/etc/zabbix/externalscripts");
++		CONFIG_EXTERNALSCRIPTS = zbx_strdup(CONFIG_EXTERNALSCRIPTS, "@SCRIPTDIR@/externalscripts");
+ 	}
+ 
+ 	if (0 == CONFIG_NODEID)
+@@ -413,7 +413,7 @@ int	main(int argc, char **argv)
+ 	}
+ 
+ 	if (NULL == CONFIG_FILE)
+-		CONFIG_FILE = zbx_strdup(CONFIG_FILE, "/etc/zabbix/zabbix_server.conf");
++		CONFIG_FILE = zbx_strdup(CONFIG_FILE, "@CONFDIR@/zabbix_server.conf");
+ 
+ 	/* Required for simple checks */
+ 	init_metrics();

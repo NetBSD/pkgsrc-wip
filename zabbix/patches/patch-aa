@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.3 2011/07/05 20:15:56 harenber Exp $
+
+--- src/zabbix_agent/zabbix_agentd.c.orig	2011-07-03 19:16:00.000000000 +0000
++++ src/zabbix_agent/zabbix_agentd.c
+@@ -44,9 +44,9 @@ const char	*progname = NULL;
+ 
+ /* Default config file location */
+ #ifdef _WINDOWS
+-	static char	DEFAULT_CONFIG_FILE[]	= "C:\\zabbix_agentd.conf";
++	static char	DEFAULT_CONFIG_FILE[]	= "@CONFDIR@\\zabbix_agentd.conf";
+ #else /* not _WINDOWS */
+-	static char	DEFAULT_CONFIG_FILE[]	= "/etc/zabbix/zabbix_agentd.conf";
++	static char	DEFAULT_CONFIG_FILE[]	= "@CONFDIR@/zabbix_agentd.conf";
+ #endif /* _WINDOWS */
+ 
+ /* application TITLE */
