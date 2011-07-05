@@ -1,0 +1,50 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2011/07/05 21:12:57 bubuchka Exp $
+#
+# used by devel/p4/Makefile
+# used by devel/p4-docs/Makefile
+# used by devel/p4d/Makefile
+# used by devel/p4web/Makefile
+
+P4_VERS=	2010.2
+PKGNAME=	${DISTNAME}-${P4_VERS}
+CATEGORIES=	devel scm
+MAINTAINER=	schmonz@NetBSD.org
+
+NO_CONFIGURE=	yes
+BUILD_DIRS=	# empty
+
+WRKSRC=		${WRKDIR}
+DIST_SUBDIR=	perforce-${P4_VERS}
+
+LICENSE=	# p4
+
+.if defined(P4BINONLY)
+
+DIST_SUBDIR=	perforce-${P4_VERS}/${P4ARCH}
+MASTER_SITES=	ftp://ftp.perforce.com/pub/perforce/r10.2/bin.${P4ARCH}/
+DISTFILES=	${DISTNAME}
+EXTRACT_ONLY=	# none
+
+_STRIPFLAG_INSTALL=	# none
+
+EMUL_PLATFORMS+=	darwin-i386 darwin-x86_64 darwin-powerpc
+EMUL_PLATFORMS+=	linux-i386 linux-x86_64
+EMUL_PLATFORMS+=	netbsd-i386 netbsd-x86_64
+EMUL_REQD=		netbsd>=3.0
+
+.  include "../../mk/bsd.prefs.mk"
+
+.  if ${EMUL_PLATFORM} == "darwin-i386" || ${EMUL_PLATFORM} == "darwin-powerpc"
+P4ARCH?=	darwin90u
+.  elif ${EMUL_PLATFORM} == "linux-i386"
+P4ARCH?=	linux26x86
+.  elif ${EMUL_PLATFORM} == "linux-x86_64"
+P4ARCH?=	linux26x86_64
+.  elif ${EMUL_PLATFORM} == "netbsd-i386" || ${EMUL_PLATFORM} == "netbsd-x86_64"
+P4ARCH?=	netbsd31x86
+.  else
+P4ARCH?=	none
+PKG_FAIL_REASON=	"no p4 binary available for ${EMUL_PLATFORM}"
+.  endif
+
+.endif	# P4BINONLY
