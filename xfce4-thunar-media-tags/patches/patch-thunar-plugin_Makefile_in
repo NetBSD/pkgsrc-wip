@@ -1,0 +1,33 @@
+$NetBSD: patch-thunar-plugin_Makefile_in,v 1.1.1.1 2011/07/05 19:14:43 guigui2 Exp $
+
+Grab patches from debian to port to thunarx-2.
+Remove dependency on thunar-vfs.
+Patch borrowed from OpenBSD (hi landry@)
+
+--- thunar-plugin/Makefile.in.orig	2007-01-20 15:29:50.000000000 +0000
++++ thunar-plugin/Makefile.in
+@@ -266,7 +266,7 @@ INCLUDES = \
+ 	-DPACKAGE_LOCALE_DIR=\"$(localedir)\"				\
+ 	$(PLATFORM_CPPFLAGS)
+
+-extensionsdir = $(libdir)/thunarx-1
++extensionsdir = $(libdir)/thunarx-2
+ extensions_LTLIBRARIES = \
+ 	thunar-media-tags-plugin.la
+
+@@ -283,7 +283,6 @@ thunar_media_tags_plugin_la_CFLAGS = \
+ 	$(EXO_CFLAGS)							\
+ 	$(PLATFORM_CFLAGS)						\
+ 	$(THUNARX_CFLAGS)						\
+-	$(THUNARVFS_CFLAGS)						\
+ 	$(TAGLIB_CFLAGS)						\
+ 	$(TAGLIBC_CFLAGS)
+
+@@ -292,7 +291,6 @@ thunar_media_tags_plugin_la_LDFLAGS = \
+ 	-export-dynamic							\
+ 	-module								\
+ 	$(THUNARX_LIBS)							\
+-	$(THUNARVFS_LIBS)						\
+ 	$(TAGLIB_LIBS)							\
+ 	$(TAGLIBC_LIBS)							\
+ 	$(PLATFORM_LDFLAGS)
