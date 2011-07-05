@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4371 2011/07/05 21:15:44 bubuchka Exp $
+# $Id: Makefile,v 1.4372 2011/07/05 22:14:40 ficovh Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1738,7 +1738,6 @@ SUBDIR+=	p5-Metadata
 SUBDIR+=	p5-Module-Pluggable-Fast
 SUBDIR+=	p5-Module-Pluggable-Ordered
 SUBDIR+=	p5-Module-Starter-Plugin-CGIApp
-SUBDIR+=	p5-Mojo
 SUBDIR+=	p5-NNTPClient
 SUBDIR+=	p5-Net-DBus-GLib
 SUBDIR+=	p5-Net-Delicious
@@ -2388,7 +2387,6 @@ SUBDIR+=	qico
 SUBDIR+=	qinx
 SUBDIR+=	qmpdclient
 SUBDIR+=	qn-x11
-SUBDIR+=	qpsmtpd
 SUBDIR+=	qrint
 SUBDIR+=	qtcreator
 SUBDIR+=	qtre
