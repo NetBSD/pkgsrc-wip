@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2011/07/03 14:27:56 realzhtw Exp $
+# $NetBSD: Makefile,v 1.2 2011/07/05 15:10:17 realzhtw Exp $
 #
 
 DISTNAME=	aoeui-1.5
@@ -12,6 +12,8 @@ COMMENT=	Lightweight text editor optimized for Dvorak
 LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+USE_TOOLS+=	m4
 
 BUILD_TARGET= default
 
