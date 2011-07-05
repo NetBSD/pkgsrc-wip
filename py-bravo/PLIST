@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2011/06/02 02:01:39 schnoebe Exp $
+@comment $NetBSD: PLIST,v 1.3 2011/07/05 20:56:52 schnoebe Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -79,15 +79,21 @@ ${PYSITELIB}/bravo/plugins/automatons.pyo
 ${PYSITELIB}/bravo/plugins/build_hooks.py
 ${PYSITELIB}/bravo/plugins/build_hooks.pyc
 ${PYSITELIB}/bravo/plugins/build_hooks.pyo
-${PYSITELIB}/bravo/plugins/commands.py
-${PYSITELIB}/bravo/plugins/commands.pyc
-${PYSITELIB}/bravo/plugins/commands.pyo
+${PYSITELIB}/bravo/plugins/commands/__init__.py
+${PYSITELIB}/bravo/plugins/commands/__init__.pyc
+${PYSITELIB}/bravo/plugins/commands/__init__.pyo
+${PYSITELIB}/bravo/plugins/commands/common.py
+${PYSITELIB}/bravo/plugins/commands/common.pyc
+${PYSITELIB}/bravo/plugins/commands/common.pyo
+${PYSITELIB}/bravo/plugins/commands/debug.py
+${PYSITELIB}/bravo/plugins/commands/debug.pyc
+${PYSITELIB}/bravo/plugins/commands/debug.pyo
+${PYSITELIB}/bravo/plugins/commands/warp.py
+${PYSITELIB}/bravo/plugins/commands/warp.pyc
+${PYSITELIB}/bravo/plugins/commands/warp.pyo
 ${PYSITELIB}/bravo/plugins/compound_hooks.py
 ${PYSITELIB}/bravo/plugins/compound_hooks.pyc
 ${PYSITELIB}/bravo/plugins/compound_hooks.pyo
-${PYSITELIB}/bravo/plugins/debug.py
-${PYSITELIB}/bravo/plugins/debug.pyc
-${PYSITELIB}/bravo/plugins/debug.pyo
 ${PYSITELIB}/bravo/plugins/dig_hooks.py
 ${PYSITELIB}/bravo/plugins/dig_hooks.pyc
 ${PYSITELIB}/bravo/plugins/dig_hooks.pyo
@@ -118,9 +124,6 @@ ${PYSITELIB}/bravo/plugins/serializers.pyo
 ${PYSITELIB}/bravo/plugins/tracks.py
 ${PYSITELIB}/bravo/plugins/tracks.pyc
 ${PYSITELIB}/bravo/plugins/tracks.pyo
-${PYSITELIB}/bravo/plugins/warp.py
-${PYSITELIB}/bravo/plugins/warp.pyc
-${PYSITELIB}/bravo/plugins/warp.pyo
 ${PYSITELIB}/bravo/plugins/web.py
 ${PYSITELIB}/bravo/plugins/web.pyc
 ${PYSITELIB}/bravo/plugins/web.pyo
@@ -283,6 +286,9 @@ ${PYSITELIB}/bravo/utilities/spatial.pyo
 ${PYSITELIB}/bravo/utilities/temporal.py
 ${PYSITELIB}/bravo/utilities/temporal.pyc
 ${PYSITELIB}/bravo/utilities/temporal.pyo
+${PYSITELIB}/bravo/weather.py
+${PYSITELIB}/bravo/weather.pyc
+${PYSITELIB}/bravo/weather.pyo
 ${PYSITELIB}/bravo/web.py
 ${PYSITELIB}/bravo/web.pyc
 ${PYSITELIB}/bravo/web.pyo
