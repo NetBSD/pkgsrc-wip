@@ -107,7 +107,7 @@ P thunar-archive-plugin
 P thunar-media-tags-plugin
 NI thunar-shares-plugin
 NI thunar-svn-plugin
-NI thunar-vcs-plugin
+P thunar-vcs-plugin
 NI thunar-wallpaper-plugin
 
 /* panel-plugins */

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2011/07/05 20:08:24 guigui2 Exp $
+# $NetBSD: Makefile.common,v 1.5 2011/07/05 20:40:44 guigui2 Exp $
 
 # used by audio/xfce4-mixer/Makefile
 # used by wip/xfce4-thunar-archive/Makefile
@@ -15,6 +15,7 @@
 # used by wm/xfce4-wm-themes/Makefile
 # used by wm/xfce4-wm/Makefile
 # used by wip/xfce4-thunar-media-tags/Makefile
+# used by wip/xfce4-thunar-vcs/Makefile
 # used by x11/xfce4-desktop/Makefile
 # used by x11/xfce4-exo/Makefile
 # used by x11/xfce4-gtk2-engine/Makefile
