@@ -1,0 +1,2 @@
+Provides an easy way to obtain a connected DBI database handle
+by simply calling the database keyword within your Dancer application
