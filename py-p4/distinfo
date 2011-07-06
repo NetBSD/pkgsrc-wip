@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/07/06 10:12:56 bubuchka Exp $
+$NetBSD: distinfo,v 1.2 2011/07/06 11:18:48 bubuchka Exp $
 
 SHA1 (perforce-2010.2/p4python.tgz) = acd6fb4cd564dda0ca8b5002fb88f754c8c1af26
 RMD160 (perforce-2010.2/p4python.tgz) = 8666f210da6898f8b55f4ba925518928a21cb5b9
 Size (perforce-2010.2/p4python.tgz) = 54184 bytes
+SHA1 (patch-aa) = bec94928491d365181bd07414150171c17ef9725

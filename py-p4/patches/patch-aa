@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1 2011/07/06 11:18:48 bubuchka Exp $
+
+--- setup.py.orig	2010-10-15 16:15:41.000000000 +0000
++++ setup.py
+@@ -245,6 +245,10 @@ class PlatformInfo:
+             release += unameOut[2][2]
+ 
+         platform = self.architecture(unameOut[4])
++      elif unameOut[0] == 'NetBSD':
++        unix = "NETBSD"
++        release = unameOut[2][0] + unameOut[2][2]
++        platform = self.architecture(unameOut[4])
+       elif unameOut[0] == 'CYGWIN_NT-5.1':
+         unix = "CYGWIN"
+         release = ""
