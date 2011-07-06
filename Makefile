@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4373 2011/07/06 02:47:59 ficovh Exp $
+# $Id: Makefile,v 1.4374 2011/07/06 13:30:28 bubuchka Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1604,6 +1604,7 @@ SUBDIR+=	ozymandns
 SUBDIR+=	p2kmoto
 SUBDIR+=	p3nfs
 SUBDIR+=	p4
+SUBDIR+=	p4api
 SUBDIR+=	p5-AI-NeuralNet-Simple
 SUBDIR+=	p5-AI-Prolog
 SUBDIR+=	p5-Aceperl
@@ -2186,6 +2187,7 @@ SUBDIR+=	py-openopt
 SUBDIR+=	py-openxmllib
 SUBDIR+=	py-orm
 SUBDIR+=	py-osd
+SUBDIR+=	py-p4
 SUBDIR+=	py-paida
 SUBDIR+=	py-pandas
 SUBDIR+=	py-papy
