@@ -1,0 +1,20 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/07/06 10:11:29 bubuchka Exp $
+
+SHA1 (perforce-2010.2/darwin90u/p4api.tgz) = 9c6449b5642fea0ba9acbfe44a2de13ed71406f7
+RMD160 (perforce-2010.2/darwin90u/p4api.tgz) = ab040b1fe39ed76ed8d38d1911d6c040cc80a77c
+Size (perforce-2010.2/darwin90u/p4api.tgz) = 2573493 bytes
+SHA1 (perforce-2010.2/freebsd60x86/p4api.tgz) = e515621285d960b8c9c13c9829de67339f0b2832
+RMD160 (perforce-2010.2/freebsd60x86/p4api.tgz) = a211aab63449a98a9af1891c484a70387eb4f904
+Size (perforce-2010.2/freebsd60x86/p4api.tgz) = 846819 bytes
+SHA1 (perforce-2010.2/freebsd60x86_64/p4api.tgz) = b4a1c464508c9df73e3eec2f6e62b6325d7e91ee
+RMD160 (perforce-2010.2/freebsd60x86_64/p4api.tgz) = 5f6490917e53fdc628dbbbb1949bc67c4c7ff97d
+Size (perforce-2010.2/freebsd60x86_64/p4api.tgz) = 875152 bytes
+SHA1 (perforce-2010.2/linux26x86/p4api.tgz) = bf1b495d3b3da9c6e053206f7eb0747a299ca95f
+RMD160 (perforce-2010.2/linux26x86/p4api.tgz) = e54e48b1731c8a86541ce720ef167fb62d577fd9
+Size (perforce-2010.2/linux26x86/p4api.tgz) = 856116 bytes
+SHA1 (perforce-2010.2/linux26x86_64/p4api.tgz) = f7bf728ea165341cbfe88789b83d30a08333568d
+RMD160 (perforce-2010.2/linux26x86_64/p4api.tgz) = ca76d2e652f1ce60fa6ee290bd58fd37ec28d45c
+Size (perforce-2010.2/linux26x86_64/p4api.tgz) = 875547 bytes
+SHA1 (perforce-2010.2/netbsd31x86/p4api.tgz) = ff3f5d0fc04ecf0efb9ed67dc94979d214062995
+RMD160 (perforce-2010.2/netbsd31x86/p4api.tgz) = 12f4816a9153a9db40761418e0238b45c590cbd1
+Size (perforce-2010.2/netbsd31x86/p4api.tgz) = 827114 bytes

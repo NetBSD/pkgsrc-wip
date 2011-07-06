@@ -1,0 +1,4 @@
+The Perforce C/C++ API allows you to write your own Perforce tools
+in C++. It provides you with the same interface that is used by all
+of the Perforce client programs (P4, P4V, P4Web, and the Perforce
+IDE Plug-ins).
