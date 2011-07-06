@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/07/05 17:47:51 ficovh Exp $
+# $NetBSD: Makefile,v 1.2 2011/07/06 01:50:37 ficovh Exp $
 #
 
 DISTNAME=	Dancer-1.3060
 PKGNAME=	p5-${DISTNAME}
-CATEGORIES=	wwww perl5
+CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/S/SU/SUKRIA/}
 
 MAINTAINER=	ficovh@gmail.com
-HOMEPAGE=	http://www.perldancer.org
+HOMEPAGE=	http://www.perldancer.org/
 COMMENT=	Perl 5 lightweight yet powerful web application framework
 
 LICENSE=	${PERL5_LICENSE}
