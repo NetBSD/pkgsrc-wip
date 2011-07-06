@@ -1,9 +1,12 @@
-# $NetBSD: Makefile.common,v 1.5 2011/07/06 10:00:31 bubuchka Exp $
+# $NetBSD: Makefile.common,v 1.6 2011/07/06 13:27:42 bubuchka Exp $
 #
 # used by devel/p4/Makefile
 # used by devel/p4-docs/Makefile
 # used by devel/p4d/Makefile
 # used by devel/p4web/Makefile
+# used by wip/p4/Makefile
+# used by wip/p4api/Makefile
+# used by wip/py-p4/Makefile
 
 P4_VER=		2010.2
 P4_VER_PL=	295040
