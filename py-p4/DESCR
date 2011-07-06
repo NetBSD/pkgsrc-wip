@@ -1,0 +1,2 @@
+P4Python, Perforce's derived API for Python allows you to write
+Python scripts that directly execute Perforce commands.

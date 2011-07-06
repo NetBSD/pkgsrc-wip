@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/07/06 10:12:56 bubuchka Exp $
+${PLIST.eggfile}${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/P4.py
+${PYSITELIB}/P4.pyc
+${PYSITELIB}/P4.pyo
+${PYSITELIB}/P4API.so
