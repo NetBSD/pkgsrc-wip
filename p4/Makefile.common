@@ -1,27 +1,27 @@
-# $NetBSD: Makefile.common,v 1.4 2011/07/05 23:32:27 bubuchka Exp $
+# $NetBSD: Makefile.common,v 1.5 2011/07/06 10:00:31 bubuchka Exp $
 #
 # used by devel/p4/Makefile
 # used by devel/p4-docs/Makefile
 # used by devel/p4d/Makefile
 # used by devel/p4web/Makefile
 
-P4_VERS=	2010.2
-PR_VERID=	295040
-PKGNAME=	${DISTNAME}-${P4_VERS}
+P4_VER=		2010.2
+P4_VER_PL=	295040
+PKGNAME?=	${DISTNAME}-${P4_VER}
 CATEGORIES=	devel scm
-MAINTAINER=	schmonz@NetBSD.org
+MAINTAINER?=	schmonz@NetBSD.org
 
-LICENSE=	perforce-license
+LICENSE?=	perforce-license
 
-NO_CONFIGURE=	yes
+NO_CONFIGURE?=	yes
 BUILD_DIRS=	# empty
 
-WRKSRC=		${WRKDIR}/${DISTNAME}-${P4_VERS}.${PR_VERID}
-DIST_SUBDIR=	perforce-${P4_VERS}
+WRKSRC=		${WRKDIR}/${DISTNAME}-${P4_VER}.${P4_VER_PL}
+DIST_SUBDIR=	perforce-${P4_VER}
 
 .if defined(P4BINONLY)
 
-DIST_SUBDIR=	perforce-${P4_VERS}/${P4ARCH}
+DIST_SUBDIR=	perforce-${P4_VER}/${P4ARCH}
 MASTER_SITES=	ftp://ftp.perforce.com/pub/perforce/r10.2/bin.${P4ARCH}/
 DISTFILES?=	${DISTNAME}
 
