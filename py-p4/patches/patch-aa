@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1 2011/07/06 11:18:48 bubuchka Exp $
+$NetBSD: patch-aa,v 1.2 2011/07/06 11:32:26 bubuchka Exp $
 
 --- setup.py.orig	2010-10-15 16:15:41.000000000 +0000
 +++ setup.py
-@@ -245,6 +245,10 @@ class PlatformInfo:
+@@ -245,6 +245,10 @@
              release += unameOut[2][2]
  
          platform = self.architecture(unameOut[4])
