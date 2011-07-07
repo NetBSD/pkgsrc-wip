@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2011/06/06 00:52:22 khorben Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/07/07 16:14:22 khorben Exp $
 bin/compose
 bin/mailer
 include/Desktop/Mailer.h
@@ -11,6 +11,12 @@ lib/Mailer/account/imap4.so
 lib/Mailer/account/mbox.so
 lib/Mailer/account/pop3.so
 share/applications/mailer.desktop
+share/icons/hicolor/16x16/apps/mailer-accounts.png
+share/icons/hicolor/16x16/apps/mailer-drafts.png
+share/icons/hicolor/16x16/apps/mailer-inbox.png
+share/icons/hicolor/16x16/apps/mailer-outbox.png
+share/icons/hicolor/16x16/apps/mailer-sent.png
+share/icons/hicolor/16x16/apps/mailer.png
 share/icons/hicolor/24x24/apps/mailer-accounts.png
 share/icons/hicolor/24x24/apps/mailer-drafts.png
 share/icons/hicolor/24x24/apps/mailer-inbox.png
