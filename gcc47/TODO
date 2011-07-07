@@ -1,0 +1,4 @@
+
+* TODO make java target work on NetBSD
+* TODO make quadmath work on Linux amd64
+* TODO make test and send patches to gcc
