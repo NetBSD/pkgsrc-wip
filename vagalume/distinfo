@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2009/02/27 07:46:17 roelants Exp $
+$NetBSD: distinfo,v 1.3 2011/07/07 20:43:58 roelants Exp $
 
-SHA1 (vagalume_0.7.1.orig.tar.gz) = b55de63ad1c29aee02fe90d0537fc19c15b19c49
-RMD160 (vagalume_0.7.1.orig.tar.gz) = 1d6dd5f9a3d065b285d59a47f73bd5d9a6542dc3
-Size (vagalume_0.7.1.orig.tar.gz) = 604281 bytes
+SHA1 (vagalume-0.8.5.tar.gz) = ef0c3bc4e62d5a8195ec7ac4f53f17afc00e8cc2
+RMD160 (vagalume-0.8.5.tar.gz) = 6207b6df89dc5c2b801da2ac0c444d7fda7acc8b
+Size (vagalume-0.8.5.tar.gz) = 765345 bytes
