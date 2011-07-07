@@ -103,11 +103,11 @@ N  xfce4-volumed
 N  xfmpc
 
 /* unknown thunar-plugins */
-P thunar-archive-plugin
-P thunar-media-tags-plugin
+P  thunar-archive-plugin
+P  thunar-media-tags-plugin
 NI thunar-shares-plugin
 NI thunar-svn-plugin
-P thunar-vcs-plugin
+P  thunar-vcs-plugin
 NI thunar-wallpaper-plugin
 
 /* panel-plugins */
