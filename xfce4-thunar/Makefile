@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2011/07/03 20:46:13 guigui2 Exp $
+# $NetBSD: Makefile,v 1.22 2011/07/07 20:04:29 reinoudz70 Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -37,7 +37,7 @@ DEPENDS+=	gvfs:../../sysutils/gvfs
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../graphics/gnome-icon-theme/buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"
-#.include "../../graphics/png/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 #.include "../../sysutils/desktop-file-utils/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"

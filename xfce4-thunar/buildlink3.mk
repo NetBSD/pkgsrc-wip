@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2011/06/30 10:24:50 reinoudz70 Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2011/07/07 20:04:29 reinoudz70 Exp $
 
 BUILDLINK_TREE+=	xfce4-thunar
 
@@ -20,6 +20,7 @@ pkgbase := xfce4-thunar
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
