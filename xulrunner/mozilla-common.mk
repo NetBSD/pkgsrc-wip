@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.16 2011/07/07 14:22:13 tnn2 Exp $
+# $NetBSD: mozilla-common.mk,v 1.17 2011/07/07 21:56:32 tnn2 Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 # 
@@ -33,7 +33,6 @@ CONFIGURE_ARGS+=	--enable-system-sqlite
 CONFIGURE_ARGS+=	--disable-crashreporter
 CONFIGURE_ARGS+=	--disable-libnotify
 CONFIGURE_ARGS+=	--disable-necko-wifi
-CONFIGURE_ARGS+=	--disable-ipc	# no chromium platform support on BSD
 
 SUBST_CLASSES+=			fix-paths
 SUBST_STAGE.fix-paths=		pre-configure
