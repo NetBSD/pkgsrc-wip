@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/10/01 06:51:23 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/07/08 09:07:45 phonohawk Exp $
 bin/derive
 lib/derive-${PKGVERSION}/${HASKELL_VERSION}/Data/Derive/All.hi
 lib/derive-${PKGVERSION}/${HASKELL_VERSION}/Data/Derive/All.p_hi
@@ -30,6 +30,8 @@ lib/derive-${PKGVERSION}/${HASKELL_VERSION}/Data/Derive/DSL/SYB.hi
 lib/derive-${PKGVERSION}/${HASKELL_VERSION}/Data/Derive/DSL/SYB.p_hi
 lib/derive-${PKGVERSION}/${HASKELL_VERSION}/Data/Derive/Data.hi
 lib/derive-${PKGVERSION}/${HASKELL_VERSION}/Data/Derive/Data.p_hi
+lib/derive-${PKGVERSION}/${HASKELL_VERSION}/Data/Derive/DataAbstract.hi
+lib/derive-${PKGVERSION}/${HASKELL_VERSION}/Data/Derive/DataAbstract.p_hi
 lib/derive-${PKGVERSION}/${HASKELL_VERSION}/Data/Derive/Default.hi
 lib/derive-${PKGVERSION}/${HASKELL_VERSION}/Data/Derive/Default.p_hi
 lib/derive-${PKGVERSION}/${HASKELL_VERSION}/Data/Derive/Enum.hi
@@ -58,6 +60,8 @@ lib/derive-${PKGVERSION}/${HASKELL_VERSION}/Data/Derive/Internal/Traversal.hi
 lib/derive-${PKGVERSION}/${HASKELL_VERSION}/Data/Derive/Internal/Traversal.p_hi
 lib/derive-${PKGVERSION}/${HASKELL_VERSION}/Data/Derive/Is.hi
 lib/derive-${PKGVERSION}/${HASKELL_VERSION}/Data/Derive/Is.p_hi
+lib/derive-${PKGVERSION}/${HASKELL_VERSION}/Data/Derive/JSON.hi
+lib/derive-${PKGVERSION}/${HASKELL_VERSION}/Data/Derive/JSON.p_hi
 lib/derive-${PKGVERSION}/${HASKELL_VERSION}/Data/Derive/LazySet.hi
 lib/derive-${PKGVERSION}/${HASKELL_VERSION}/Data/Derive/LazySet.p_hi
 lib/derive-${PKGVERSION}/${HASKELL_VERSION}/Data/Derive/Monoid.hi
@@ -66,14 +70,14 @@ lib/derive-${PKGVERSION}/${HASKELL_VERSION}/Data/Derive/NFData.hi
 lib/derive-${PKGVERSION}/${HASKELL_VERSION}/Data/Derive/NFData.p_hi
 lib/derive-${PKGVERSION}/${HASKELL_VERSION}/Data/Derive/Ord.hi
 lib/derive-${PKGVERSION}/${HASKELL_VERSION}/Data/Derive/Ord.p_hi
-lib/derive-${PKGVERSION}/${HASKELL_VERSION}/Data/Derive/PlateTypeable.hi
-lib/derive-${PKGVERSION}/${HASKELL_VERSION}/Data/Derive/PlateTypeable.p_hi
 lib/derive-${PKGVERSION}/${HASKELL_VERSION}/Data/Derive/Read.hi
 lib/derive-${PKGVERSION}/${HASKELL_VERSION}/Data/Derive/Read.p_hi
 lib/derive-${PKGVERSION}/${HASKELL_VERSION}/Data/Derive/Ref.hi
 lib/derive-${PKGVERSION}/${HASKELL_VERSION}/Data/Derive/Ref.p_hi
 lib/derive-${PKGVERSION}/${HASKELL_VERSION}/Data/Derive/Serial.hi
 lib/derive-${PKGVERSION}/${HASKELL_VERSION}/Data/Derive/Serial.p_hi
+lib/derive-${PKGVERSION}/${HASKELL_VERSION}/Data/Derive/Serialize.hi
+lib/derive-${PKGVERSION}/${HASKELL_VERSION}/Data/Derive/Serialize.p_hi
 lib/derive-${PKGVERSION}/${HASKELL_VERSION}/Data/Derive/Set.hi
 lib/derive-${PKGVERSION}/${HASKELL_VERSION}/Data/Derive/Set.p_hi
 lib/derive-${PKGVERSION}/${HASKELL_VERSION}/Data/Derive/Show.hi
@@ -82,12 +86,30 @@ lib/derive-${PKGVERSION}/${HASKELL_VERSION}/Data/Derive/Traversable.hi
 lib/derive-${PKGVERSION}/${HASKELL_VERSION}/Data/Derive/Traversable.p_hi
 lib/derive-${PKGVERSION}/${HASKELL_VERSION}/Data/Derive/Typeable.hi
 lib/derive-${PKGVERSION}/${HASKELL_VERSION}/Data/Derive/Typeable.p_hi
+lib/derive-${PKGVERSION}/${HASKELL_VERSION}/Data/Derive/UniplateDirect.hi
+lib/derive-${PKGVERSION}/${HASKELL_VERSION}/Data/Derive/UniplateDirect.p_hi
+lib/derive-${PKGVERSION}/${HASKELL_VERSION}/Data/Derive/UniplateTypeable.hi
+lib/derive-${PKGVERSION}/${HASKELL_VERSION}/Data/Derive/UniplateTypeable.p_hi
 lib/derive-${PKGVERSION}/${HASKELL_VERSION}/Data/Derive/Update.hi
 lib/derive-${PKGVERSION}/${HASKELL_VERSION}/Data/Derive/Update.p_hi
 lib/derive-${PKGVERSION}/${HASKELL_VERSION}/Data/DeriveDSL.hi
 lib/derive-${PKGVERSION}/${HASKELL_VERSION}/Data/DeriveDSL.p_hi
+lib/derive-${PKGVERSION}/${HASKELL_VERSION}/Data/DeriveMain.hi
+lib/derive-${PKGVERSION}/${HASKELL_VERSION}/Data/DeriveMain.p_hi
 lib/derive-${PKGVERSION}/${HASKELL_VERSION}/Data/DeriveTH.hi
 lib/derive-${PKGVERSION}/${HASKELL_VERSION}/Data/DeriveTH.p_hi
+lib/derive-${PKGVERSION}/${HASKELL_VERSION}/Derive/Derivation.hi
+lib/derive-${PKGVERSION}/${HASKELL_VERSION}/Derive/Derivation.p_hi
+lib/derive-${PKGVERSION}/${HASKELL_VERSION}/Derive/Flags.hi
+lib/derive-${PKGVERSION}/${HASKELL_VERSION}/Derive/Flags.p_hi
+lib/derive-${PKGVERSION}/${HASKELL_VERSION}/Derive/Generate.hi
+lib/derive-${PKGVERSION}/${HASKELL_VERSION}/Derive/Generate.p_hi
+lib/derive-${PKGVERSION}/${HASKELL_VERSION}/Derive/Main.hi
+lib/derive-${PKGVERSION}/${HASKELL_VERSION}/Derive/Main.p_hi
+lib/derive-${PKGVERSION}/${HASKELL_VERSION}/Derive/Test.hi
+lib/derive-${PKGVERSION}/${HASKELL_VERSION}/Derive/Test.p_hi
+lib/derive-${PKGVERSION}/${HASKELL_VERSION}/Derive/Utils.hi
+lib/derive-${PKGVERSION}/${HASKELL_VERSION}/Derive/Utils.p_hi
 lib/derive-${PKGVERSION}/${HASKELL_VERSION}/HSderive-${PKGVERSION}.o
 lib/derive-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell.hi
 lib/derive-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell.p_hi
@@ -95,6 +117,8 @@ lib/derive-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Convert.hi
 lib/derive-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Convert.p_hi
 lib/derive-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/TH/All.hi
 lib/derive-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/TH/All.p_hi
+lib/derive-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/TH/Compat.hi
+lib/derive-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/TH/Compat.p_hi
 lib/derive-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/TH/Data.hi
 lib/derive-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/TH/Data.p_hi
 lib/derive-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/TH/ExpandSynonym.hi
@@ -105,8 +129,6 @@ lib/derive-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/TH/Helper.hi
 lib/derive-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/TH/Helper.p_hi
 lib/derive-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/TH/Peephole.hi
 lib/derive-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/TH/Peephole.p_hi
-lib/derive-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/TH/SYB.hi
-lib/derive-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/TH/SYB.p_hi
 lib/derive-${PKGVERSION}/${HASKELL_VERSION}/libHSderive-${PKGVERSION}.a
 lib/derive-${PKGVERSION}/${HASKELL_VERSION}/libHSderive-${PKGVERSION}_p.a
 lib/derive-${PKGVERSION}/${HASKELL_VERSION}/package-description
