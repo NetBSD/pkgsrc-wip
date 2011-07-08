@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/07/08 09:58:31 phonohawk Exp $
+lib/io-storage-${PKGVERSION}/${HASKELL_VERSION}/HSio-storage-${PKGVERSION}.o
+lib/io-storage-${PKGVERSION}/${HASKELL_VERSION}/System/IO/Storage.hi
+lib/io-storage-${PKGVERSION}/${HASKELL_VERSION}/System/IO/Storage.p_hi
+lib/io-storage-${PKGVERSION}/${HASKELL_VERSION}/libHSio-storage-${PKGVERSION}.a
+lib/io-storage-${PKGVERSION}/${HASKELL_VERSION}/libHSio-storage-${PKGVERSION}_p.a
+lib/io-storage-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/io-storage-${PKGVERSION}/LICENSE
