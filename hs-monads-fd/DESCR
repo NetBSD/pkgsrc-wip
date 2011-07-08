@@ -1,0 +1,4 @@
+This package is obsolete: use mtl instead.
+
+Now that mtl has been upgraded to depend on transformers, this package
+is a backwards compatibility stub re-exporting the mtl package.
