@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2011/06/29 09:27:12 reinoudz70 Exp $
+# $NetBSD: Makefile,v 1.2 2011/07/08 19:39:29 reinoudz70 Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -18,7 +18,7 @@ PKGCONFIG_OVERRIDE+=	garcon/garcon-1.pc.in
 EGDIR=          ${XFCE4_EGBASE}
 PKG_SYSCONFSUBDIR=  xdg
 CONF_FILES=     ${EGDIR}/xfce-applications.menu \
-	${PKG_SYSCONFDIR}/menus/applications.menu
+	${PKG_SYSCONFDIR}/menus/xfce-applications.menu
 
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/menus
 
