@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4380 2011/07/08 09:24:30 phonohawk Exp $
+# $Id: Makefile,v 1.4381 2011/07/08 09:43:55 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -873,6 +873,7 @@ SUBDIR+=	hs-derive
 SUBDIR+=	hs-digest
 SUBDIR+=	hs-dlist
 SUBDIR+=	hs-event-list
+SUBDIR+=	hs-executable-path
 SUBDIR+=	hs-explicit-exception
 SUBDIR+=	hs-explicit-iomodes
 SUBDIR+=	hs-gnuplot
