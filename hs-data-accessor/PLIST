@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/09/23 05:19:11 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/07/08 08:26:09 phonohawk Exp $
 lib/data-accessor-${PKGVERSION}/${HASKELL_VERSION}/Data/Accessor.hi
 lib/data-accessor-${PKGVERSION}/${HASKELL_VERSION}/Data/Accessor.p_hi
 lib/data-accessor-${PKGVERSION}/${HASKELL_VERSION}/Data/Accessor/Basic.hi
@@ -11,6 +11,8 @@ lib/data-accessor-${PKGVERSION}/${HASKELL_VERSION}/Data/Accessor/Example.hi
 lib/data-accessor-${PKGVERSION}/${HASKELL_VERSION}/Data/Accessor/Example.p_hi
 lib/data-accessor-${PKGVERSION}/${HASKELL_VERSION}/Data/Accessor/MonadState.hi
 lib/data-accessor-${PKGVERSION}/${HASKELL_VERSION}/Data/Accessor/MonadState.p_hi
+lib/data-accessor-${PKGVERSION}/${HASKELL_VERSION}/Data/Accessor/MonadStatePrivate.hi
+lib/data-accessor-${PKGVERSION}/${HASKELL_VERSION}/Data/Accessor/MonadStatePrivate.p_hi
 lib/data-accessor-${PKGVERSION}/${HASKELL_VERSION}/Data/Accessor/Private.hi
 lib/data-accessor-${PKGVERSION}/${HASKELL_VERSION}/Data/Accessor/Private.p_hi
 lib/data-accessor-${PKGVERSION}/${HASKELL_VERSION}/Data/Accessor/Show.hi
