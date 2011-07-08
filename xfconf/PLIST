@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2011/06/29 10:03:40 reinoudz70 Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/07/08 19:20:16 guigui2 Exp $
 bin/xfconf-query
 include/xfce4/xfconf-0/xfconf/xfconf-binding.h
 include/xfce4/xfconf-0/xfconf/xfconf-channel.h
@@ -6,16 +6,6 @@ include/xfce4/xfconf-0/xfconf/xfconf-errors.h
 include/xfce4/xfconf-0/xfconf/xfconf-types.h
 include/xfce4/xfconf-0/xfconf/xfconf.h
 lib/libxfconf-0.la
-lib/perl5/5.12.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/perllocal.pod
-lib/perl5/vendor_perl/5.12.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/Xfce4/Xfconf.pm
-lib/perl5/vendor_perl/5.12.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/Xfce4/Xfconf/Install/Files.pm
-lib/perl5/vendor_perl/5.12.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/Xfce4/Xfconf/Install/xfconfperl-autogen.h
-lib/perl5/vendor_perl/5.12.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/Xfce4/Xfconf/Install/xfconfperl.h
-lib/perl5/vendor_perl/5.12.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/Xfce4/Xfconf/Install/xfconfperl.typemap
-lib/perl5/vendor_perl/5.12.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Xfce4/Xfconf/.packlist
-lib/perl5/vendor_perl/5.12.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Xfce4/Xfconf/Xfconf.bs
-lib/perl5/vendor_perl/5.12.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/Xfce4/Xfconf/Xfconf.so
-lib/perl5/vendor_perl/man/man3/Xfce4::Xfconf.3
 lib/pkgconfig/libxfconf-0.pc
 lib/xfce4/xfconf/xfconfd
 share/dbus-1/services/org.xfce.Xfconf.service
