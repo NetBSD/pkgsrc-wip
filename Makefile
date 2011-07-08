@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4377 2011/07/08 08:39:29 phonohawk Exp $
+# $Id: Makefile,v 1.4378 2011/07/08 08:48:42 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -864,6 +864,7 @@ SUBDIR+=	hs-cpphs
 SUBDIR+=	hs-curl
 SUBDIR+=	hs-data-accessor
 SUBDIR+=	hs-data-accessor-monads-fd
+SUBDIR+=	hs-data-accessor-template
 SUBDIR+=	hs-data-default
 SUBDIR+=	hs-dataenc
 SUBDIR+=	hs-deepseq
