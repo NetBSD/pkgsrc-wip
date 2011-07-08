@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/07/08 10:10:44 phonohawk Exp $
+lib/dyre-${PKGVERSION}/${HASKELL_VERSION}/Config/Dyre.hi
+lib/dyre-${PKGVERSION}/${HASKELL_VERSION}/Config/Dyre.p_hi
+lib/dyre-${PKGVERSION}/${HASKELL_VERSION}/Config/Dyre/Compat.hi
+lib/dyre-${PKGVERSION}/${HASKELL_VERSION}/Config/Dyre/Compat.p_hi
+lib/dyre-${PKGVERSION}/${HASKELL_VERSION}/Config/Dyre/Compile.hi
+lib/dyre-${PKGVERSION}/${HASKELL_VERSION}/Config/Dyre/Compile.p_hi
+lib/dyre-${PKGVERSION}/${HASKELL_VERSION}/Config/Dyre/Options.hi
+lib/dyre-${PKGVERSION}/${HASKELL_VERSION}/Config/Dyre/Options.p_hi
+lib/dyre-${PKGVERSION}/${HASKELL_VERSION}/Config/Dyre/Params.hi
+lib/dyre-${PKGVERSION}/${HASKELL_VERSION}/Config/Dyre/Params.p_hi
+lib/dyre-${PKGVERSION}/${HASKELL_VERSION}/Config/Dyre/Paths.hi
+lib/dyre-${PKGVERSION}/${HASKELL_VERSION}/Config/Dyre/Paths.p_hi
+lib/dyre-${PKGVERSION}/${HASKELL_VERSION}/Config/Dyre/Relaunch.hi
+lib/dyre-${PKGVERSION}/${HASKELL_VERSION}/Config/Dyre/Relaunch.p_hi
+lib/dyre-${PKGVERSION}/${HASKELL_VERSION}/HSdyre-${PKGVERSION}.o
+lib/dyre-${PKGVERSION}/${HASKELL_VERSION}/libHSdyre-${PKGVERSION}.a
+lib/dyre-${PKGVERSION}/${HASKELL_VERSION}/libHSdyre-${PKGVERSION}_p.a
+lib/dyre-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/dyre-${PKGVERSION}/LICENSE
