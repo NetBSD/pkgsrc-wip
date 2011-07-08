@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4375 2011/07/08 08:22:42 phonohawk Exp $
+# $Id: Makefile,v 1.4376 2011/07/08 08:34:34 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -900,6 +900,7 @@ SUBDIR+=	hs-mmap
 SUBDIR+=	hs-mmap4
 SUBDIR+=	hs-monad-control
 SUBDIR+=	hs-monad-peel
+SUBDIR+=	hs-monads-fd
 SUBDIR+=	hs-monoid-transformer
 SUBDIR+=	hs-mtl
 SUBDIR+=	hs-network
