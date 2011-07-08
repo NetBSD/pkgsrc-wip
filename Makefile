@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4378 2011/07/08 08:48:42 phonohawk Exp $
+# $Id: Makefile,v 1.4379 2011/07/08 09:16:29 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -821,6 +821,7 @@ SUBDIR+=	hplip
 SUBDIR+=	hplip3
 SUBDIR+=	hpoj
 SUBDIR+=	hs-ConfigFile
+SUBDIR+=	hs-Diff
 SUBDIR+=	hs-FileManip
 SUBDIR+=	hs-GLURaw
 SUBDIR+=	hs-GLUT
