@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST.Darwin,v 1.1.1.1 2011/07/08 09:42:59 phonohawk Exp $
+lib/executable-path-${PKGVERSION}/${HASKELL_VERSION}/HSexecutable-path-${PKGVERSION}.o
+lib/executable-path-${PKGVERSION}/${HASKELL_VERSION}/System/Environment/Executable.hi
+lib/executable-path-${PKGVERSION}/${HASKELL_VERSION}/System/Environment/Executable.p_hi
+lib/executable-path-${PKGVERSION}/${HASKELL_VERSION}/System/Environment/Executable/MacOSX.hi
+lib/executable-path-${PKGVERSION}/${HASKELL_VERSION}/System/Environment/Executable/MacOSX.p_hi
+lib/executable-path-${PKGVERSION}/${HASKELL_VERSION}/libHSexecutable-path-${PKGVERSION}.a
+lib/executable-path-${PKGVERSION}/${HASKELL_VERSION}/libHSexecutable-path-${PKGVERSION}_p.a
+lib/executable-path-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/executable-path-${PKGVERSION}/LICENSE
