@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2011/02/17 15:09:03 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.5 2011/07/08 04:31:22 phonohawk Exp $
 bin/hlint
 lib/${PKGNAME}/${HASKELL_VERSION}/Apply.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Apply.p_hi
@@ -25,6 +25,8 @@ lib/${PKGNAME}/${HASKELL_VERSION}/Hint/All.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Hint/All.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Hint/Bracket.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Hint/Bracket.p_hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Hint/Duplicate.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Hint/Duplicate.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Hint/Extensions.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Hint/Extensions.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Hint/Import.hi
@@ -68,6 +70,7 @@ lib/${PKGNAME}/${HASKELL_VERSION}/Util.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/libHS${PKGNAME}.a
 lib/${PKGNAME}/${HASKELL_VERSION}/libHS${PKGNAME}_p.a
 lib/${PKGNAME}/${HASKELL_VERSION}/package-description
+man/man1/hlint.1
 share/doc/${PKGNAME}/LICENSE
 share/${PKGNAME}/Default.hs
 share/${PKGNAME}/Dollar.hs
