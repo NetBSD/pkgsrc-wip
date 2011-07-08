@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/07/08 09:51:57 phonohawk Exp $
+
+SHA1 (ghc-paths-0.1.0.8.tar.gz) = 1774960daa0c3112edd88d5c6d655785e1510178
+RMD160 (ghc-paths-0.1.0.8.tar.gz) = e398599c07fac31febe1c2be6dacceee0ba26478
+Size (ghc-paths-0.1.0.8.tar.gz) = 2369 bytes
