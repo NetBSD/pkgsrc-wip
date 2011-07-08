@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/11/10 03:44:43 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/07/08 03:37:41 phonohawk Exp $
 bin/HsColour
 lib/hscolour-${PKGVERSION}/${HASKELL_VERSION}/HShscolour-${PKGVERSION}.o
 lib/hscolour-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/HsColour.hi
 lib/hscolour-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/HsColour.p_hi
+lib/hscolour-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/HsColour/ACSS.hi
+lib/hscolour-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/HsColour/ACSS.p_hi
 lib/hscolour-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/HsColour/ANSI.hi
 lib/hscolour-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/HsColour/ANSI.p_hi
 lib/hscolour-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/HsColour/Anchors.hi
@@ -35,4 +37,5 @@ lib/hscolour-${PKGVERSION}/${HASKELL_VERSION}/libHShscolour-${PKGVERSION}.a
 lib/hscolour-${PKGVERSION}/${HASKELL_VERSION}/libHShscolour-${PKGVERSION}_p.a
 lib/hscolour-${PKGVERSION}/${HASKELL_VERSION}/package-description
 share/doc/hscolour-${PKGVERSION}/LICENCE-GPL
+share/hscolour-${PKGVERSION}/data/rgb24-example-.hscolour
 share/hscolour-${PKGVERSION}/hscolour.css

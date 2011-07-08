@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2011/02/17 14:53:10 phonohawk Exp $
+# $NetBSD: Makefile,v 1.4 2011/07/08 03:37:41 phonohawk Exp $
 #
 
-DISTNAME=	hscolour-1.17
+DISTNAME=	hscolour-1.19
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
