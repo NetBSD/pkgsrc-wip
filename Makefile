@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4382 2011/07/08 09:52:32 jmmv Exp $
+# $Id: Makefile,v 1.4383 2011/07/08 09:53:38 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -876,6 +876,7 @@ SUBDIR+=	hs-event-list
 SUBDIR+=	hs-executable-path
 SUBDIR+=	hs-explicit-exception
 SUBDIR+=	hs-explicit-iomodes
+SUBDIR+=	hs-ghc-paths
 SUBDIR+=	hs-gnuplot
 SUBDIR+=	hs-hashed-storage
 SUBDIR+=	hs-hashed-storage3
