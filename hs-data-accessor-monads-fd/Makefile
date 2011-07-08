@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/07/08 08:38:18 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2011/07/08 08:43:52 phonohawk Exp $
 #
 
 DISTNAME=	data-accessor-monads-fd-0.2.0.3
@@ -6,7 +6,7 @@ CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
 HOMEPAGE=	http://www.haskell.org/haskellwiki/Record_access
-COMMENT=	Utilities for accessing and manipulating field of records
+COMMENT=	Use Accessor to access state in monads-fd State monad class
 LICENSE=	modified-bsd
 
 .include "../../wip/mk/haskell.mk"
