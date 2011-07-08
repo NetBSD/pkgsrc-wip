@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2011/07/08 20:10:50 guigui2 Exp $
+# $NetBSD: Makefile,v 1.24 2011/07/08 20:57:33 guigui2 Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -8,6 +8,7 @@ THUNAR_VERSION=	1.3.0
 
 DISTNAME=	Thunar-${THUNAR_VERSION}
 PKGNAME=	xfce4-thunar-${THUNAR_VERSION}
+PKGREVISION=	1
 CATEGORIES=	sysutils
 COMMENT=	Xfce file manager
 
@@ -37,7 +38,7 @@ DEPENDS+=	gvfs:../../sysutils/gvfs
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../graphics/gnome-icon-theme/buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"
-#.include "../../graphics/png/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 #.include "../../sysutils/desktop-file-utils/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
