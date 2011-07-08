@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/07/08 09:23:29 phonohawk Exp $
+lib/dlist-${PKGVERSION}/${HASKELL_VERSION}/Data/DList.hi
+lib/dlist-${PKGVERSION}/${HASKELL_VERSION}/Data/DList.p_hi
+lib/dlist-${PKGVERSION}/${HASKELL_VERSION}/HSdlist-${PKGVERSION}.o
+lib/dlist-${PKGVERSION}/${HASKELL_VERSION}/libHSdlist-${PKGVERSION}.a
+lib/dlist-${PKGVERSION}/${HASKELL_VERSION}/libHSdlist-${PKGVERSION}_p.a
+lib/dlist-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/dlist-${PKGVERSION}/LICENSE
