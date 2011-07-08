@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/07/08 10:03:04 phonohawk Exp $
+lib/xdg-basedir-${PKGVERSION}/${HASKELL_VERSION}/HSxdg-basedir-${PKGVERSION}.o
+lib/xdg-basedir-${PKGVERSION}/${HASKELL_VERSION}/System/Environment/XDG/BaseDir.hi
+lib/xdg-basedir-${PKGVERSION}/${HASKELL_VERSION}/System/Environment/XDG/BaseDir.p_hi
+lib/xdg-basedir-${PKGVERSION}/${HASKELL_VERSION}/libHSxdg-basedir-${PKGVERSION}.a
+lib/xdg-basedir-${PKGVERSION}/${HASKELL_VERSION}/libHSxdg-basedir-${PKGVERSION}_p.a
+lib/xdg-basedir-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/xdg-basedir-${PKGVERSION}/LICENSE
