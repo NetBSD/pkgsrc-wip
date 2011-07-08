@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4381 2011/07/08 09:43:55 phonohawk Exp $
+# $Id: Makefile,v 1.4382 2011/07/08 09:52:32 jmmv Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1149,7 +1149,6 @@ SUBDIR+=	kyotocabinet
 SUBDIR+=	kyototycoon
 SUBDIR+=	kyra
 SUBDIR+=	kyra2
-SUBDIR+=	kyua-cli
 SUBDIR+=	l2tpd
 SUBDIR+=	labyrinth
 SUBDIR+=	lasem
