@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/07/08 08:38:18 phonohawk Exp $
+
+SHA1 (data-accessor-monads-fd-0.2.0.3.tar.gz) = 5805cd4e4e0da65276f11f5f820f51d9d92dcf17
+RMD160 (data-accessor-monads-fd-0.2.0.3.tar.gz) = 52f7f5a718d24ded9ff76d1585b3858d10f34141
+Size (data-accessor-monads-fd-0.2.0.3.tar.gz) = 2103 bytes
