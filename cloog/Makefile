@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/06/29 08:54:01 keckhardt Exp $
+# $NetBSD: Makefile,v 1.3 2011/07/09 09:51:22 asau Exp $
 #
 
 DISTNAME=	cloog-0.16.2
@@ -16,10 +16,6 @@ GNU_CONFIGURE=	yes
 #USE_LANGUAGES=	c fortran
 USE_LANGUAGES=	c
 USE_LIBTOOL=	yes
-
-GENERATE_PLIST+= cd ${DESTDIR}${PREFIX} && ${FIND} . \( -type f -o -type l \) \
--print  | ${SORT} ; 
-
 
 .include "../../math/mpfr/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
