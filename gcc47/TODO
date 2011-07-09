@@ -1,4 +1,24 @@
+-*- outline -*-
 
 * TODO make java target work on NetBSD
 * TODO make quadmath work on Linux amd64
 * TODO make test and send patches to gcc
+* breaks on NetBSD/i386 5.99.54
+gmake[3]: Entering directory `/tmp/wip/gcc47/work/obj/gcc'
+TARGET_CPU_DEFAULT="" \
+HEADERS="auto-host.h ansidecl.h" DEFINES="" \
+/usr/pkg/bin/bash /tmp/wip/gcc47/work/gcc-4.7-20110625/gcc/mkconfig.sh config.h
+TARGET_CPU_DEFAULT="" \
+HEADERS="options.h insn-constants.h config/vxworks-dummy.h config/i386/i386.h config/i386/unix.h config/i386/att.h config/dbxelf.h config/elfos.h config/netbsd.h config/netbsd-elf.h config/i386/netbsd-elf.h config/netbsd-stdint defaults.h" DEFINES="LIBC_GLIBC=1 LIBC_UCLIBC=2 LIBC_BIONIC=3 NETBSD_ENABLE_PTHREADS" \
+/usr/pkg/bin/bash /tmp/wip/gcc47/work/gcc-4.7-20110625/gcc/mkconfig.sh tm.h
+awk -f /tmp/wip/gcc47/work/gcc-4.7-20110625/gcc/opt-gather.awk /tmp/wip/gcc47/work/gcc-4.7-20110625/gcc/ada/gcc-interface/lang.opt /tmp/wip/gcc47/work/gcc-4.7-20110625/gcc/fortran/lang.opt /tmp/wip/gcc47/work/gcc-4.7-20110625/gcc/go/lang.opt /tmp/wip/gcc47/work/gcc-4.7-20110625/gcc/java/lang.opt /tmp/wip/gcc47/work/gcc-4.7-20110625/gcc/lto/lang.opt /tmp/wip/gcc47/work/gcc-4.7-20110625/gcc/c-family/c.opt /tmp/wip/gcc47/work/gcc-4.7-20110625/gcc/common.opt /tmp/wip/gcc47/work/gcc-4.7-20110625/gcc/config/fused-madd.opt /tmp/wip/gcc47/work/gcc-4.7-20110625/gcc/config/i386/i386.opt /tmp/wip/gcc47/work/gcc-4.7-20110625/gcc/config/netbsd.opt /tmp/wip/gcc47/work/gcc-4.7-20110625/gcc/config/netbsd-elf.opt > tmp-optionlist
+gmake[3]: *** No rule to make target `/tmp/wip/gcc47/work/gcc-4.7-20110625/gcc/config/netbsd-stdint', needed by `c-lang.o'.  Stop.
+gmake[3]: *** Waiting for unfinished jobs....
+/usr/pkg/bin/bash /tmp/wip/gcc47/work/gcc-4.7-20110625/gcc/../move-if-change tmp-optionlist optionlist
+echo timestamp > s-options
+gmake[3]: Leaving directory `/tmp/wip/gcc47/work/obj/gcc'
+gmake[2]: *** [all-stage1-gcc] Error 2
+gmake[2]: Leaving directory `/tmp/wip/gcc47/work/obj'
+gmake[1]: *** [stage1-bubble] Error 2
+gmake[1]: Leaving directory `/tmp/wip/gcc47/work/obj'
+gmake: *** [all] Error 2
