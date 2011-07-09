@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2011/06/21 00:01:39 marko_schuetz Exp $
+# $NetBSD: Makefile,v 1.2 2011/07/09 17:38:45 asau Exp $
 
 DISTNAME=	clang-2.9.99
 CATEGORIES=	lang
@@ -10,17 +10,13 @@ HOMEPAGE=	http://llvm.org/
 COMMENT=	Low Level Virtual Machine compiler infrastructure
 LICENSE=	modified-bsd
 
-SVN_REPOSITORIES= 	llvm clang
-SVN_ROOT.llvm=		http://llvm.org/svn/llvm-project/llvm/trunk
-SVN_ROOT.clang=		http://llvm.org/svn/llvm-project/cfe/trunk
-
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/llvm
 
-USE_LANGUAGES=		c c++
-USE_TOOLS+=		chown perl:build gmake
-GNU_CONFIGURE=		yes
+USE_LANGUAGES+=	c c++
+USE_TOOLS+=	gmake perl:build chown
+GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--disable-assertions
 CONFIGURE_ARGS+=	--disable-bindings	# disable OCaml
 CONFIGURE_ARGS+=	--disable-timestamps
@@ -30,7 +26,6 @@ MAKE_DIRS+=		etc/llvm
 
 INSTALLATION_DIRS=	bin lib libexec
 
-CHECK_PORTABILITY_SKIP=	utils/buildit/build_llvm
 
 TEST_TARGET=	check unittests
 
@@ -50,7 +45,16 @@ SUBST_FILES.perl=	tools/llvm-config/llvm-config.in.in
 SUBST_SED.perl=		-e 's,@PERL@,${PERL5},'
 
 post-extract:
-	mv ${WRKDIR}/clang ${WRKSRC}/tools/clang
+	${MV} ${WRKDIR}/clang ${WRKSRC}/tools/clang
+
+# Get it from Subversion repository:
+SVN_REPOSITORIES=	llvm clang
+SVN_ROOT.llvm=		http://llvm.org/svn/llvm-project/llvm/trunk
+SVN_ROOT.clang=		http://llvm.org/svn/llvm-project/cfe/trunk
+
+CHECK_PORTABILITY_SKIP= utils/buildit/.svn/text-base/build_llvm.svn-base \
+			utils/buildit/build_llvm
+
 
 .include "../../wip/mk/svn-package.mk"
 .include "../../mk/bsd.pkg.mk"

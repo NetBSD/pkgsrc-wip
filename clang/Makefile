@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2011/07/09 11:59:13 asau Exp $
+# $NetBSD: Makefile,v 1.7 2011/07/09 17:38:45 asau Exp $
 #
 
 DISTNAME=	llvm-2.6
@@ -8,22 +8,23 @@ MASTER_SITES=	http://llvm.org/releases/${PKGVERSION_NOREV}/
 MAINTAINER=	adam.hoka@gmail.com
 HOMEPAGE=	http://llvm.org/
 COMMENT=	Low Level Virtual Machine compiler infrastructure
+LICENSE=	modified-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-GNU_CONFIGURE=	yes
-USE_TOOLS+=	gmake perl:build chown
 USE_LANGUAGES+=	c c++
+USE_TOOLS+=	gmake perl:build chown
+GNU_CONFIGURE=	yes
 MAKE_DIRS+=	etc/llvm
-USE_LIBTOOL=	yes
-
 CONFIGURE_ARGS=	--enable-bindings=none	# no OCaml, please!
-
-INSTALLATION_DIRS=	bin lib libexec
-
 # This should be changed!
 CONFIGURE_ARGS+= --enable-targets=host-only
 CONFIGURE_ARGS+= --disable-optimized
+
+USE_LIBTOOL=	yes
+
+INSTALLATION_DIRS=	bin lib libexec
+
 
 #CONF_FILES=	share/examples/llvm/c etc/llvm/c
 #CONF_FILES+=	share/examples/llvm/c++ etc/llvm/c++
@@ -36,7 +37,7 @@ CONFIGURE_ARGS+= --disable-optimized
 TEST_TARGET=	check unittests
 
 post-extract:
-	${MV} ${WRKDIR}/clang ${WRKDIR}/llvm/tools/clang
+	${MV} ${WRKDIR}/clang ${WRKSRC}/tools/clang
 
 # Get it from Subversion repository:
 SVN_REPOSITORIES=	llvm clang
