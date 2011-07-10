@@ -65,7 +65,7 @@ P  xfce4-panel
 ?  xfce4-print
 P  xfce4-quicklauncher-plugin
 U  xfce4-radio-plugin
-?  xfce4-screenshooter-plugin
+P  xfce4-screenshooter-plugin
 P  xfce4-session
 P  xfce4-settings
 ?  xfce4-systemload-plugin
