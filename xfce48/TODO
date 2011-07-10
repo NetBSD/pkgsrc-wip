@@ -58,7 +58,7 @@ U  xfce4-mount-plugin
 P  xfce4-mousepad
 ?  xfce4-mpc-plugin
 ?  xfce4-netload-plugin
-?  xfce4-notes-plugin
+P  xfce4-notes-plugin
 P  xfce4-orage
 P  xfce4-panel
 ?  xfce4-places-plugin
