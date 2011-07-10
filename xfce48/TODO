@@ -53,7 +53,7 @@ P  xfce4-fsguard-plugin
 ?  xfce4-gtk2-engine
 P  xfce4-icon-theme
 U  xfce4-mailwatch-plugin
-?  xfce4-mixer
+P  xfce4-mixer
 U  xfce4-mount-plugin
 P  xfce4-mousepad
 ?  xfce4-mpc-plugin
