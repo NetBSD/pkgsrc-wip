@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/01/08 04:59:25 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2011/07/10 07:12:22 phonohawk Exp $
 #
 
-DISTNAME=	vector-0.7.0.1
+DISTNAME=	vector-0.7.1
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
