@@ -1,7 +1,7 @@
-$NetBSD: patch-xfce-desktop-menu.c,v 1.1 2011/07/10 15:05:36 reinoudz70 Exp $
+$NetBSD: patch-xfce-desktop-menu.c,v 1.2 2011/07/10 15:20:59 reinoudz70 Exp $
 
---- /usr/tmp/pkgsrc-diablo/wip/xfce4-desktop/work/xfdesktop-4.8.2/src/xfce-desktop-menu.c.orig	2011-04-22 18:21:52.000000000 +0000
-+++ /usr/tmp/pkgsrc-diablo/wip/xfce4-desktop/work/xfdesktop-4.8.2/src/xfce-desktop-menu.c
+--- src/xfce-desktop-menu.c.orig	2011-04-22 18:21:52.000000000 +0000
++++ src/xfce-desktop-menu.c
 @@ -203,8 +203,13 @@ _generate_menu(XfceDesktopMenu *desktop_
          return FALSE;
      }

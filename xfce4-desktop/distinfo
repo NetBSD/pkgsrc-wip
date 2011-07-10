@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.15 2011/07/10 15:05:35 reinoudz70 Exp $
+$NetBSD: distinfo,v 1.16 2011/07/10 15:20:59 reinoudz70 Exp $
 
 SHA1 (xfdesktop-4.8.2.tar.bz2) = fe7d71bb502197b0353b952947826a5a50ab13bc
 RMD160 (xfdesktop-4.8.2.tar.bz2) = a24a7db72f8cbb2cd98fa248b1695922a188f2e2
 Size (xfdesktop-4.8.2.tar.bz2) = 2686151 bytes
-SHA1 (patch-xfce-desktop-menu.c) = ba4a6bb775c92a778f60d108d7c7f702ef09ca76
+SHA1 (patch-xfce-desktop-menu.c) = dc0636c8facc2a28ae62d7b0b7e6079abbfbd2a6
