@@ -4,6 +4,7 @@ Suggested package updates
 	o applewmproto-1.4.1
 	o argouml-0.24
 	o backintime-1.0.6
+	o boinc-2.15
 	o bsnes-0.80
 	o cairo-java-1.0.8
 	o cclive-0.7.4
@@ -98,7 +99,7 @@ Suggested package updates
 	o pike-7.8.352
 	o py-PyPE-2.9
 	o py-gnucash-0.7.55
-	o py-zeitgeist-0.8.0
+	o py-zeitgeist-0.8.1
 	o python31-3.1.2
 	o qcomicbook-0.7.1
 	o qtcreator-1.3.1
@@ -109,7 +110,7 @@ Suggested package updates
 	o sflphone-0.7.2
 	o siege-2.70
 	o smc-1.8
-	o smproxy-1.0.4
+	o smproxy-1.0.5
 	o spe-0.8.2a
 	o swftools-0.9.1
 	o sxemacs-22.1.10
