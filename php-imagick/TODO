@@ -1,0 +1,9 @@
+
+* Done basic testing, no problem so far with php-5.2/ImageMagick-6.6.9.8
+
+* Compiles with ~50 warnings, not sure if this is expected or not.
+An excerpt:
+warning: 'MagickGetImageMatte' is deprecated (declared at
+/usr/pkgsrc/wip/php-imagick/work/.buildlink/include/ImageMagick/wand/deprecate.h:82)
+/usr/pkgsrc/wip/php-imagick/work/imagick-3.0.1/imagick_class.c:5629: warning:
+passing argument 2 of 'MagickGetImageHistogram' from incompatible pointer type

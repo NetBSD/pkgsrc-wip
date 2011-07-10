@@ -1,0 +1,23 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/07/10 10:50:31 anthony_mallet Exp $
+
+SHA1 (php-imagick/imagick-3.0.1.tgz) = 64dd5c8ff4d43d94e65c3b35ac0b439676ecc746
+RMD160 (php-imagick/imagick-3.0.1.tgz) = 854fafe039e85a43bc1e53c00147099620a0034a
+Size (php-imagick/imagick-3.0.1.tgz) = 93920 bytes
+SHA1 (patch-aa) = 20bc3831e435182d014b11ae9f1f6c537a21af20
+SHA1 (patch-af) = 68c5a31dccf1854ba1aff653e4c524767d6a64f6
+SHA1 (patch-ag) = 5e3e822657925a77fbccaca63f283863a1cc6d94
+SHA1 (patch-ah) = a25cb7fa3d1f5b9fb99493a4348fdba69d3d4728
+SHA1 (patch-aj) = 54812097499c81e5cb0196ab949cc86a4f24a9cc
+SHA1 (patch-al) = 257129124d46a84f7342b1a00f0cab073066e7cb
+SHA1 (patch-an) = 8f4174627b8cb5f8bfbc59413c95f71e26b9e602
+SHA1 (patch-ap) = 5eb0e0e4244a993da93e36f8fcb5553454207fce
+SHA1 (patch-aq) = 0c9d48547da2fa80aa8357d23ad8505d1c0330df
+SHA1 (patch-ar) = 2d74ec926cc00bfbb67d16210af78c33ad9ac38d
+SHA1 (patch-as) = f7ce5caffe2acdd1f8e9fc8ae6c7ba1d8c6a25c1
+SHA1 (patch-ext_exif_exif.c) = 0a6ab268751e633510cb6b334b1bdb84a014b528
+SHA1 (patch-ext_shmop_shmop.c) = 6e11b87dd71ff26357b14b61df626c40b40a022d
+SHA1 (patch-ext_zip_lib_zip__name__locate.c) = 4030e37ae4f93dbcb1a3a937a5407c2c406a49d6
+SHA1 (patch-ext_zip_php__zip.c) = 134fa566a689d72d63a2fa0aa5c96c4595619089
+SHA1 (patch-main_snprintf.c) = cb112df0cadf84aaeee5987169a31460989995a8
+SHA1 (patch-main_snprintf.h) = 86ae4c1c8ae9183254e9914cb56d3df999f719cf
+SHA1 (patch-main_spprintf.c) = 0fe0888b612402c41f040c8781df7f1a7ca66275
