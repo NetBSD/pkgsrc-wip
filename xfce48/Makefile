@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2011/07/10 16:49:22 reinoudz70 Exp $
+# $NetBSD: Makefile,v 1.19 2011/07/10 17:43:37 guigui2 Exp $
 
 META_PACKAGE=	yes
 
@@ -21,6 +21,8 @@ COMMENT=	Xfce
 .include "../../wip/xfce4-wm/buildlink3.mk"
 .include "../../wip/xfce4-desktop/buildlink3.mk"
 .include "../../wip/xfce4-thunar/buildlink3.mk"
+.include "../../wip/xfce4-thunar-archive/buildlink3.mk"
+.include "../../wip/xfce4-thunar-media-tags/buildlink3.mk"
 .include "../../wip/xfce4-appfinder/buildlink3.mk"
 .include "../../wip/xfce4-utils/buildlink3.mk"
 .include "../../wip/xfce4-terminal/buildlink3.mk"
