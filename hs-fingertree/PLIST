@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/07/11 10:20:05 phonohawk Exp $
+lib/fingertree-${PKGVERSION}/${HASKELL_VERSION}/Data/FingerTree.hi
+lib/fingertree-${PKGVERSION}/${HASKELL_VERSION}/Data/FingerTree.p_hi
+lib/fingertree-${PKGVERSION}/${HASKELL_VERSION}/Data/IntervalMap/FingerTree.hi
+lib/fingertree-${PKGVERSION}/${HASKELL_VERSION}/Data/IntervalMap/FingerTree.p_hi
+lib/fingertree-${PKGVERSION}/${HASKELL_VERSION}/Data/PriorityQueue/FingerTree.hi
+lib/fingertree-${PKGVERSION}/${HASKELL_VERSION}/Data/PriorityQueue/FingerTree.p_hi
+lib/fingertree-${PKGVERSION}/${HASKELL_VERSION}/HSfingertree-${PKGVERSION}.o
+lib/fingertree-${PKGVERSION}/${HASKELL_VERSION}/libHSfingertree-${PKGVERSION}.a
+lib/fingertree-${PKGVERSION}/${HASKELL_VERSION}/libHSfingertree-${PKGVERSION}_p.a
+lib/fingertree-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/fingertree-${PKGVERSION}/LICENSE
