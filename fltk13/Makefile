@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/06/28 16:32:11 christtrekker Exp $
+# $NetBSD: Makefile,v 1.5 2011/07/11 14:41:05 thomasklausner Exp $
 #
 
 DISTNAME=	fltk-1.3.0-source
@@ -19,6 +19,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
+
+USE_TOOLS+=	pkg-config
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.fltk13
 PKG_SUPPORTED_OPTIONS=	cairo opengl
