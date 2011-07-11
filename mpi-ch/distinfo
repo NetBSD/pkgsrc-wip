@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.21 2011/03/28 19:46:53 asau Exp $
+$NetBSD: distinfo,v 1.22 2011/07/11 21:16:45 asau Exp $
 
-SHA1 (mpich2-trunk-r8294.tar.gz) = 670c6b8e5a76d5edc7ddc6ce981283efed4c2589
-RMD160 (mpich2-trunk-r8294.tar.gz) = 3fee1d357cd6ba15bd3e74fa3d534cd7ee940fc0
-Size (mpich2-trunk-r8294.tar.gz) = 19676667 bytes
-SHA1 (patch-aa) = 9d7f22f9401687ccf6114b915a26ad67958d8ccd
+SHA1 (mpich2-trunk-r8760.tar.gz) = 2b2f51ea6708c18c61afe18a1e4c6168374e5410
+RMD160 (mpich2-trunk-r8760.tar.gz) = 744c8a4a52a4eb172165f0806fc60bcedae83659
+Size (mpich2-trunk-r8760.tar.gz) = 20175564 bytes
+SHA1 (patch-aa) = a6d995bc759f1d813af178fd4cba2ad86b98d935
 SHA1 (patch-ac) = b956a355ef381d759077288916c40e32b022f178
