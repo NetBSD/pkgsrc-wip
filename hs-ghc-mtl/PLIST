@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/07/12 04:06:28 phonohawk Exp $
+lib/ghc-mtl-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Ghc.hi
+lib/ghc-mtl-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Ghc.p_hi
+lib/ghc-mtl-${PKGVERSION}/${HASKELL_VERSION}/HSghc-mtl-${PKGVERSION}.o
+lib/ghc-mtl-${PKGVERSION}/${HASKELL_VERSION}/libHSghc-mtl-${PKGVERSION}.a
+lib/ghc-mtl-${PKGVERSION}/${HASKELL_VERSION}/libHSghc-mtl-${PKGVERSION}_p.a
+lib/ghc-mtl-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/ghc-mtl-${PKGVERSION}/LICENSE
