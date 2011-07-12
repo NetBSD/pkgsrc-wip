@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4411 2011/07/12 15:56:48 phonohawk Exp $
+# $Id: Makefile,v 1.4412 2011/07/12 15:59:35 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -765,7 +765,6 @@ SUBDIR+=	gtk2-engines-galaxy
 SUBDIR+=	gtk2-engines-magicchicken
 SUBDIR+=	gtk2-engines-qt
 SUBDIR+=	gtk2-theme-pack
-SUBDIR+=	gtk2hs
 SUBDIR+=	gtk2hs-buildtools
 SUBDIR+=	gtkada
 SUBDIR+=	gtkaml
