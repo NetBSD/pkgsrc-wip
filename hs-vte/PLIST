@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/07/12 14:18:16 phonohawk Exp $
+lib/vte-${PKGVERSION}/${HASKELL_VERSION}/Graphics/UI/Gtk/Vte/Signals.chi
+lib/vte-${PKGVERSION}/${HASKELL_VERSION}/Graphics/UI/Gtk/Vte/Signals.hi
+lib/vte-${PKGVERSION}/${HASKELL_VERSION}/Graphics/UI/Gtk/Vte/Signals.p_hi
+lib/vte-${PKGVERSION}/${HASKELL_VERSION}/Graphics/UI/Gtk/Vte/Structs.hi
+lib/vte-${PKGVERSION}/${HASKELL_VERSION}/Graphics/UI/Gtk/Vte/Structs.p_hi
+lib/vte-${PKGVERSION}/${HASKELL_VERSION}/Graphics/UI/Gtk/Vte/Types.chi
+lib/vte-${PKGVERSION}/${HASKELL_VERSION}/Graphics/UI/Gtk/Vte/Types.hi
+lib/vte-${PKGVERSION}/${HASKELL_VERSION}/Graphics/UI/Gtk/Vte/Types.p_hi
+lib/vte-${PKGVERSION}/${HASKELL_VERSION}/Graphics/UI/Gtk/Vte/Vte.chi
+lib/vte-${PKGVERSION}/${HASKELL_VERSION}/Graphics/UI/Gtk/Vte/Vte.hi
+lib/vte-${PKGVERSION}/${HASKELL_VERSION}/Graphics/UI/Gtk/Vte/Vte.p_hi
+lib/vte-${PKGVERSION}/${HASKELL_VERSION}/HSvte-${PKGVERSION}.o
+lib/vte-${PKGVERSION}/${HASKELL_VERSION}/libHSvte-${PKGVERSION}.a
+lib/vte-${PKGVERSION}/${HASKELL_VERSION}/libHSvte-${PKGVERSION}_p.a
+lib/vte-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/vte-${PKGVERSION}/COPYING
+share/vte-${PKGVERSION}/Makefile
+share/vte-${PKGVERSION}/Vte.hs

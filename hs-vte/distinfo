@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/07/12 14:18:16 phonohawk Exp $
+
+SHA1 (vte-0.12.0.tar.gz) = 7371f6140b976ff95e22ee6bdc8663b036e9ad96
+RMD160 (vte-0.12.0.tar.gz) = 54499ededd7d4953b1e0d2a7bc6cdabe4a5a6124
+Size (vte-0.12.0.tar.gz) = 39403 bytes
