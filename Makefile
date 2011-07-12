@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4410 2011/07/12 15:20:43 phonohawk Exp $
+# $Id: Makefile,v 1.4411 2011/07/12 15:56:48 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -947,6 +947,7 @@ SUBDIR+=	hs-regex-tdfa
 SUBDIR+=	hs-regional-pointers
 SUBDIR+=	hs-regions
 SUBDIR+=	hs-rosezipper
+SUBDIR+=	hs-rosezipper1
 SUBDIR+=	hs-safer-file-handles
 SUBDIR+=	hs-semigroups
 SUBDIR+=	hs-split
