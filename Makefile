@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4399 2011/07/12 08:11:25 phonohawk Exp $
+# $Id: Makefile,v 1.4400 2011/07/12 08:18:14 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -942,6 +942,7 @@ SUBDIR+=	hs-regions
 SUBDIR+=	hs-rosezipper
 SUBDIR+=	hs-safer-file-handles
 SUBDIR+=	hs-semigroups
+SUBDIR+=	hs-split
 SUBDIR+=	hs-stm
 SUBDIR+=	hs-storable-record
 SUBDIR+=	hs-storablevector
