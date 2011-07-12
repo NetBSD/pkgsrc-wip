@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/07/12 03:58:57 phonohawk Exp $
+
+SHA1 (MonadCatchIO-mtl-0.3.0.3.tar.gz) = 4a83ef2cda0599cb7eeb2748eb45c98a948addce
+RMD160 (MonadCatchIO-mtl-0.3.0.3.tar.gz) = b892a90eb0089b42067f29c4952deb3a8ff81001
+Size (MonadCatchIO-mtl-0.3.0.3.tar.gz) = 2967 bytes
