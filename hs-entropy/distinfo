@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/07/12 07:21:00 phonohawk Exp $
+
+SHA1 (entropy-0.2.1.tar.gz) = 73bc9da05891d1bb7c1442639efedaa97107d4ef
+RMD160 (entropy-0.2.1.tar.gz) = 0d8f690f77740008fbfafbf7d6ba8ae1ec57b03e
+Size (entropy-0.2.1.tar.gz) = 3109 bytes

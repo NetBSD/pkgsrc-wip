@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/07/12 07:21:00 phonohawk Exp $
+lib/entropy-${PKGVERSION}/${HASKELL_VERSION}/HSentropy-${PKGVERSION}.o
+lib/entropy-${PKGVERSION}/${HASKELL_VERSION}/System/Entropy.hi
+lib/entropy-${PKGVERSION}/${HASKELL_VERSION}/System/Entropy.p_hi
+lib/entropy-${PKGVERSION}/${HASKELL_VERSION}/libHSentropy-${PKGVERSION}.a
+lib/entropy-${PKGVERSION}/${HASKELL_VERSION}/libHSentropy-${PKGVERSION}_p.a
+lib/entropy-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/entropy-${PKGVERSION}/LICENSE
