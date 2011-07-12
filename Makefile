@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4409 2011/07/12 14:39:44 phonohawk Exp $
+# $Id: Makefile,v 1.4410 2011/07/12 15:20:43 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -859,6 +859,7 @@ SUBDIR+=	hs-bindings-librrd
 SUBDIR+=	hs-bytestring-trie
 SUBDIR+=	hs-cabal-query
 SUBDIR+=	hs-cairo
+SUBDIR+=	hs-cautious-file
 SUBDIR+=	hs-cereal
 SUBDIR+=	hs-chalkboard
 SUBDIR+=	hs-chalkboard-viewer
