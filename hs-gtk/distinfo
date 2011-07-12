@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/07/12 13:54:38 phonohawk Exp $
+
+SHA1 (gtk-0.12.0.tar.gz) = 88bacffb306fa16de05a83e36a66fbf2630f37ec
+RMD160 (gtk-0.12.0.tar.gz) = 14df626d8b75fd293a4f0cc7f390e0477fc2e0d9
+Size (gtk-0.12.0.tar.gz) = 655682 bytes
