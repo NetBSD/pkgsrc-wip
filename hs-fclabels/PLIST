@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/07/12 05:06:10 phonohawk Exp $
+lib/fclabels-${PKGVERSION}/${HASKELL_VERSION}/Data/Record/Label.hi
+lib/fclabels-${PKGVERSION}/${HASKELL_VERSION}/Data/Record/Label.p_hi
+lib/fclabels-${PKGVERSION}/${HASKELL_VERSION}/Data/Record/Label/Core.hi
+lib/fclabels-${PKGVERSION}/${HASKELL_VERSION}/Data/Record/Label/Core.p_hi
+lib/fclabels-${PKGVERSION}/${HASKELL_VERSION}/Data/Record/Label/Monadic.hi
+lib/fclabels-${PKGVERSION}/${HASKELL_VERSION}/Data/Record/Label/Monadic.p_hi
+lib/fclabels-${PKGVERSION}/${HASKELL_VERSION}/Data/Record/Label/TH.hi
+lib/fclabels-${PKGVERSION}/${HASKELL_VERSION}/Data/Record/Label/TH.p_hi
+lib/fclabels-${PKGVERSION}/${HASKELL_VERSION}/HSfclabels-${PKGVERSION}.o
+lib/fclabels-${PKGVERSION}/${HASKELL_VERSION}/libHSfclabels-${PKGVERSION}.a
+lib/fclabels-${PKGVERSION}/${HASKELL_VERSION}/libHSfclabels-${PKGVERSION}_p.a
+lib/fclabels-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/fclabels-${PKGVERSION}/LICENCE

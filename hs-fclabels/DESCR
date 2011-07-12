@@ -1,0 +1,10 @@
+First class labels that act as bidirectional record fields.
+
+The labels are implemented as lenses and are fully composable and can
+be used to get, set and modify parts of a datatype in a consistent
+way. The lens datatype, conveniently called `:->', is an instance of
+the Category type class: meaning it has a proper identity and
+composition. The library has support for automatically deriving labels
+from record selectors that start with an underscore. Labels can be
+used in a purely functional setting or be applied to mutable state in
+some state monad.
