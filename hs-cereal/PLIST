@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/07/12 07:13:22 phonohawk Exp $
+lib/cereal-${PKGVERSION}/${HASKELL_VERSION}/Data/Serialize.hi
+lib/cereal-${PKGVERSION}/${HASKELL_VERSION}/Data/Serialize.p_hi
+lib/cereal-${PKGVERSION}/${HASKELL_VERSION}/Data/Serialize/Builder.hi
+lib/cereal-${PKGVERSION}/${HASKELL_VERSION}/Data/Serialize/Builder.p_hi
+lib/cereal-${PKGVERSION}/${HASKELL_VERSION}/Data/Serialize/Get.hi
+lib/cereal-${PKGVERSION}/${HASKELL_VERSION}/Data/Serialize/Get.p_hi
+lib/cereal-${PKGVERSION}/${HASKELL_VERSION}/Data/Serialize/Put.hi
+lib/cereal-${PKGVERSION}/${HASKELL_VERSION}/Data/Serialize/Put.p_hi
+lib/cereal-${PKGVERSION}/${HASKELL_VERSION}/HScereal-${PKGVERSION}.o
+lib/cereal-${PKGVERSION}/${HASKELL_VERSION}/libHScereal-${PKGVERSION}.a
+lib/cereal-${PKGVERSION}/${HASKELL_VERSION}/libHScereal-${PKGVERSION}_p.a
+lib/cereal-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/cereal-${PKGVERSION}/LICENSE
