@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/07/12 09:18:11 phonohawk Exp $
+
+SHA1 (cairo-0.12.0.tar.gz) = bd252fbe6429d28b4f8e2337b2c8be02f1eec251
+RMD160 (cairo-0.12.0.tar.gz) = 599303f5c57a26285a35589dafaa7dc272407f33
+Size (cairo-0.12.0.tar.gz) = 47495 bytes
