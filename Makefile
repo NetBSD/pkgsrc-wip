@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4395 2011/07/12 07:25:53 phonohawk Exp $
+# $Id: Makefile,v 1.4396 2011/07/12 07:35:35 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -864,6 +864,7 @@ SUBDIR+=	hs-chunks
 SUBDIR+=	hs-colorize-haskell
 SUBDIR+=	hs-convertible
 SUBDIR+=	hs-cpphs
+SUBDIR+=	hs-crypto-api
 SUBDIR+=	hs-curl
 SUBDIR+=	hs-data-accessor
 SUBDIR+=	hs-data-accessor-monads-fd
