@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/07/12 08:15:51 phonohawk Exp $
+lib/split-${PKGVERSION}/${HASKELL_VERSION}/Data/List/Split.hi
+lib/split-${PKGVERSION}/${HASKELL_VERSION}/Data/List/Split.p_hi
+lib/split-${PKGVERSION}/${HASKELL_VERSION}/Data/List/Split/Internals.hi
+lib/split-${PKGVERSION}/${HASKELL_VERSION}/Data/List/Split/Internals.p_hi
+lib/split-${PKGVERSION}/${HASKELL_VERSION}/HSsplit-${PKGVERSION}.o
+lib/split-${PKGVERSION}/${HASKELL_VERSION}/libHSsplit-${PKGVERSION}.a
+lib/split-${PKGVERSION}/${HASKELL_VERSION}/libHSsplit-${PKGVERSION}_p.a
+lib/split-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/split-${PKGVERSION}/LICENSE
