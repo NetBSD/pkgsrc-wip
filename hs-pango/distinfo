@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/07/12 10:18:38 phonohawk Exp $
+
+SHA1 (pango-0.12.0.tar.gz) = 9dee7c80a95c59cd54b0afe5e1dac12a4e02c515
+RMD160 (pango-0.12.0.tar.gz) = c15e5ffd9ae7d7ea9a97c52739c187d11b4a1fa1
+Size (pango-0.12.0.tar.gz) = 58732 bytes
+SHA1 (patch-Graphics_Rendering_Pango_Structs.hsc) = 7620121a903894d3497a82c621a80b618d200777
