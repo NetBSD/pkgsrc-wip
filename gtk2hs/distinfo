@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/08/22 05:18:49 phonohawk Exp $
-
-SHA1 (gtk2hs-0.9.13.tar.gz) = 9220d0318f81d31910018dba9bee8650766ad651
-RMD160 (gtk2hs-0.9.13.tar.gz) = a3ebf3703e1ad6c561c7674e2643ad071c04e840
-Size (gtk2hs-0.9.13.tar.gz) = 1132752 bytes

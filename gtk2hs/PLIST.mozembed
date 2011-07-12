@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST.mozembed,v 1.2 2009/10/11 10:44:41 thomasklausner Exp $
-lib/gtk2hs/HSmozembed.o
-lib/gtk2hs/imports/mozembed/Graphics/UI/Gtk/MozEmbed.hi
-lib/gtk2hs/imports/mozembed/Graphics/UI/Gtk/MozEmbed/Types.hi
-lib/gtk2hs/libHSmozembed.a
-lib/gtk2hs/mozembed.package.conf

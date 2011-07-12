@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST.gconf,v 1.2 2009/10/11 10:44:41 thomasklausner Exp $
-lib/gtk2hs/gconf.package.conf
-lib/gtk2hs/HSgconf.o
-lib/gtk2hs/imports/gconf/System/Gnome/GConf.hi
-lib/gtk2hs/imports/gconf/System/Gnome/GConf/GConfClient.hi
-lib/gtk2hs/imports/gconf/System/Gnome/GConf/GConfValue.hi
-lib/gtk2hs/imports/gconf/System/Gnome/GConf/Signals.hi
-lib/gtk2hs/imports/gconf/System/Gnome/GConf/Types.hi
-lib/gtk2hs/libHSgconf.a

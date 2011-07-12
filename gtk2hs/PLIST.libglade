@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST.libglade,v 1.2 2009/10/11 10:44:41 thomasklausner Exp $
-lib/gtk2hs/HSglade.o
-lib/gtk2hs/libHSglade.a
-lib/gtk2hs/glade.package.conf
-lib/gtk2hs/imports/glade/Graphics/UI/Gtk/Glade.hi
-lib/gtk2hs/imports/glade/Graphics/UI/Gtk/Glade/Types.hi

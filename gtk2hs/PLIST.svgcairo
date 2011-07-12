@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST.svgcairo,v 1.2 2009/10/11 10:44:41 thomasklausner Exp $
-lib/gtk2hs/HSsvgcairo.o
-lib/gtk2hs/libHSsvgcairo.a
-lib/gtk2hs/svgcairo.package.conf
-lib/gtk2hs/imports/svgcairo/Graphics/Rendering/Cairo/SVG.hi
