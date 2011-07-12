@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/07/12 08:43:14 phonohawk Exp $
+
+SHA1 (gtk2hs-buildtools-0.12.0.tar.gz) = 85968ed8fe00ac0a84e6b2dd20ec0c0f51713731
+RMD160 (gtk2hs-buildtools-0.12.0.tar.gz) = 5b33088eb4ede90dff5f9e5e3f32a90d980d2082
+Size (gtk2hs-buildtools-0.12.0.tar.gz) = 211213 bytes
