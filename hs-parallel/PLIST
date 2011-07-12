@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:44:45 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.4 2011/07/12 14:26:47 phonohawk Exp $
 lib/parallel-${PKGVERSION}/${HASKELL_VERSION}/Control/Parallel.hi
 lib/parallel-${PKGVERSION}/${HASKELL_VERSION}/Control/Parallel.p_hi
 lib/parallel-${PKGVERSION}/${HASKELL_VERSION}/Control/Parallel/Strategies.hi
 lib/parallel-${PKGVERSION}/${HASKELL_VERSION}/Control/Parallel/Strategies.p_hi
+lib/parallel-${PKGVERSION}/${HASKELL_VERSION}/Control/Seq.hi
+lib/parallel-${PKGVERSION}/${HASKELL_VERSION}/Control/Seq.p_hi
 lib/parallel-${PKGVERSION}/${HASKELL_VERSION}/HSparallel-${PKGVERSION}.o
 lib/parallel-${PKGVERSION}/${HASKELL_VERSION}/libHSparallel-${PKGVERSION}.a
 lib/parallel-${PKGVERSION}/${HASKELL_VERSION}/libHSparallel-${PKGVERSION}_p.a

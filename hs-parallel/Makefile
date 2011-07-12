@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2010/02/09 03:31:31 phonohawk Exp $
+# $NetBSD: Makefile,v 1.6 2011/07/12 14:26:47 phonohawk Exp $
 #
 
-DISTNAME=	parallel-2.2.0.1
+DISTNAME=	parallel-3.1.0.1
 CATEGORIES=	parallel
 
 MAINTAINER=	pho@cielonegro.org
-COMMENT=	Library for parallel haskell programming
+COMMENT=	Library for parallel Haskell programming
 LICENSE=	modified-bsd
 
 .include "../../wip/mk/haskell.mk"
