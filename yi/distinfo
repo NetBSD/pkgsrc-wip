@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/07/12 23:07:44 phonohawk Exp $
+
+SHA1 (yi-0.6.3.0.tar.gz) = 54451513ea63ea46927a01f4f3d5ef7f7de404d2
+RMD160 (yi-0.6.3.0.tar.gz) = f7073575707f670b4ce5c909f4ebe5be91fcef2a
+Size (yi-0.6.3.0.tar.gz) = 295346 bytes
+SHA1 (patch-yi.cabal) = f9057380ec86da6042ae6f88151846bae1833eed
