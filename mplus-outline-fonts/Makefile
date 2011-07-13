@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2011/06/09 04:16:21 obache Exp $
+# $NetBSD: Makefile,v 1.15 2011/07/13 08:43:06 obache Exp $
 #
 
-DISTNAME=	mplus-TESTFLIGHT-040
+DISTNAME=	mplus-TESTFLIGHT-041
 PKGNAME=	${DISTNAME:S/-TESTFLIGHT-/-outline-fonts-0pre/}
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP:=mplus-fonts/6650/}

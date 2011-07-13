@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13 2011/06/09 04:16:21 obache Exp $
+$NetBSD: distinfo,v 1.14 2011/07/13 08:43:06 obache Exp $
 
-SHA1 (mplus-TESTFLIGHT-040.tar.gz) = 28954514b573cb573a6cb153c2497dd4b36cc5eb
-RMD160 (mplus-TESTFLIGHT-040.tar.gz) = 9e31f1734215daf789cf732ac318b39619c6feae
-Size (mplus-TESTFLIGHT-040.tar.gz) = 24481123 bytes
+SHA1 (mplus-TESTFLIGHT-041.tar.gz) = 3406dd411616c7a6713a5796e50fbc696fa8e69b
+RMD160 (mplus-TESTFLIGHT-041.tar.gz) = 66d04c6f945a7c413d77e9de8f011e5d544fea5c
+Size (mplus-TESTFLIGHT-041.tar.gz) = 25398353 bytes
