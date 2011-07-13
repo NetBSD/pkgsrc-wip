@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/07/12 23:07:44 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2011/07/13 07:21:11 phonohawk Exp $
 #
 
 DISTNAME=	yi-0.6.3.0
@@ -20,6 +20,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 .include "options.mk"
 
 .include "../../wip/mk/haskell.mk"
+.include "../../wip/alex/buildlink3.mk"
 .include "../../wip/hs-Diff/buildlink3.mk"
 .include "../../wip/hs-cautious-file/buildlink3.mk"
 .include "../../wip/hs-data-accessor/buildlink3.mk"
