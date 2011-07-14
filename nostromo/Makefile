@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.1 2011/03/24 16:27:50 astforge Exp $
+# $NetBSD: Makefile,v 1.2 2011/07/14 13:20:00 thomasklausner Exp $
 #
 
 DISTNAME=	nostromo-1.9.4
 PKGREVISION=	1
-CATEGORIES=	www ipv6
+CATEGORIES=	www
 MASTER_SITES=	http://www.nazgul.ch/dev/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	ast@marabu.ch
+HOMEPAGE=	http://www.nazgul.ch/dev_nostromo.html
 COMMENT=	A fast, secure HTTP/1.1 CGI/1.1 SSL IPv4/IPv6 webserver
 LICENSE=	modified-bsd
-HOMEPAGE=	http://www.nazgul.ch/dev_nostromo.html
 
 USE_LANGUAGES=	c
 USE_TOOLS=	sed
