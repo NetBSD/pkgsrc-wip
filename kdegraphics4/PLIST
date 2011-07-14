@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2011/05/13 23:25:15 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.20 2011/07/14 12:41:41 mwdavies Exp $
 bin/gwenview
 bin/gwenview_importer
 bin/kbackgroundsnapshot
@@ -283,6 +283,7 @@ share/icons/hicolor/scalable/apps/kolourpaint.svgz
 share/icons/hicolor/scalable/apps/kruler.svgz
 share/icons/hicolor/scalable/apps/ksnapshot.svgz
 share/icons/hicolor/scalable/apps/okular.svgz
+share/kde/apps/cmake/modules/FindKSane.cmake
 share/kde/apps/gvpart/gvpart.rc
 share/kde/apps/gwenview/cursors/zoom.png
 share/kde/apps/gwenview/fullscreenthemes/blackglass/checked.png

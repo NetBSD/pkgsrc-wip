@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.24 2011/05/13 23:25:15 mwdavies Exp $
+$NetBSD: distinfo,v 1.25 2011/07/14 12:41:41 mwdavies Exp $
 
-SHA1 (kdeedu-4.6.3.tar.bz2) = 4b27e6e1670760982dae13dc8c51c814c6853396
-RMD160 (kdeedu-4.6.3.tar.bz2) = 3c417bf3abe85d33bb4d239432b98ddae3aec2aa
-Size (kdeedu-4.6.3.tar.bz2) = 71499808 bytes
-SHA1 (patch-CMakeLists.txt) = f749b603099ae022ea4e42332038e73e2b6f7639
+SHA1 (kdeedu-4.6.5.tar.bz2) = 64247eb68b2710a66baaf824d798e46b34ca4d4f
+RMD160 (kdeedu-4.6.5.tar.bz2) = 78cfdc42f648308477c57bd816f46434bb588449
+Size (kdeedu-4.6.5.tar.bz2) = 71684677 bytes
+SHA1 (patch-CMakeLists.txt) = 7f64387463016444deaba4b5aa2154b9b938d789
 SHA1 (patch-aa) = 8b35c7215409868ac43b611faddb61493602dd94
 SHA1 (patch-ab) = d7848ea5b6973465a43f68b9d1ee610d98e1185c
-SHA1 (patch-af) = 273a56b78c0ec41fb28c19b646af0a33ca71ea1a
 SHA1 (patch-an) = 6073ac996b58a6e1e7504d30938eedd5366f3ac7
 SHA1 (patch-ao) = d1f78ba952270e5dfdb404d9f216bb14f89979a7
 SHA1 (patch-ap) = 8e9e64b89f855d9cb1ebfc52145e90effc838673
+SHA1 (patch-kalgebra_cmake_FindReadline.cmake) = e1bbdb5f3ec302921aa1837fd8bd11d7be67b39c
 SHA1 (patch-kig_config-kig.h.cmake) = 1eac671f7f623627a95b28a784517c75f96f8803
-SHA1 (patch-step_CMakeLists.txt) = a2e2d225c577ef7fb13d99f89afe44a670155560
+SHA1 (patch-step_CMakeLists.txt) = 29dc06daedc3ce653445b7b16f39de0fbedaa5ad

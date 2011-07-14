@@ -1,7 +1,7 @@
-$NetBSD: patch-af,v 1.3 2011/05/13 23:25:15 mwdavies Exp $
+$NetBSD: patch-kalgebra_cmake_FindReadline.cmake,v 1.1 2011/07/14 12:41:41 mwdavies Exp $
 
---- cmake/modules/FindReadline.cmake.orig	2011-04-28 21:53:22.000000000 +0000
-+++ cmake/modules/FindReadline.cmake
+--- kalgebra/cmake/FindReadline.cmake.orig	2011-06-03 21:41:04.000000000 +0000
++++ kalgebra/cmake/FindReadline.cmake
 @@ -7,7 +7,7 @@ else(READLINE_INCLUDE_DIR AND READLINE_L
  	)
  	
