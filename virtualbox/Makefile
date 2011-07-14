@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2011/05/28 11:49:32 asau Exp $
+# $NetBSD: Makefile,v 1.11 2011/07/14 14:01:02 zaydogan Exp $
 #
 
 DISTNAME=	VirtualBox-${VBOX_VER}
@@ -53,6 +53,7 @@ do-build:
 #	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} KBUILD_PATH=${WRKSRC}/kBuild sh -c ". ./env.sh && cd src/VBox/HostDrivers && kmk HostDrivers-src vboxdrv-mod"
 
 #.include "../../audio/pulseaudio/buildlink3.mk"
+.include "../../net/libIDL/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
