@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2011/02/13 21:02:54 mwilhelmy Exp $
+@comment $NetBSD: PLIST,v 1.5 2011/07/14 14:34:04 mwilhelmy Exp $
 bin/sesman
 bin/sesrun
 bin/sessvc
@@ -17,6 +17,8 @@ man/man8/sesman.8
 man/man8/sesrun.8
 man/man8/xrdp.8
 share/examples/pam.d/sesman
+share/examples/rc.d/sesman
+share/examples/rc.d/xrdp
 share/examples/xrdp/rsakeys.ini
 share/examples/xrdp/sesman.ini
 share/examples/xrdp/xrdp.ini

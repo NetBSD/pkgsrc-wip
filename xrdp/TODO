@@ -1,6 +1,34 @@
-Replace hardcoded paths
 Write a rc.d script
-MESSAGE
-fix bugs such as -n one
+ - mostly done, but should sesman (and it's variables) rather be named
+   xrdp_sesman?
+ - is BEFORE: xrdp really required in sesman.sh?
+
+Replace hardcoded paths (see patch-ai and xrdp_control.sh)
+ - patch-ai is tricky, maybe default to what $PATH was before clearing the
+   environment?
+
+Get rid of xrdp_control.sh and startwm.sh (at least in $PREFIX/bin):
+ - startwm.sh could be replaced by ~/.xinitrc
+ - xrdp_control.sh is essentially what the rc-script does
+
 try it
-pam && kerberos optional
+ - it works, but requires further testing, and doesn't seem to find it's fonts
+   and cursors
+
+CFGDIR is duplicate in MAKE_ENV
+
+Add version information to libraries?
+
+Replace build variables in manpages.
+
+Make sesman log to a sane default location (syslog?) rather than ./sesman.log
+
+Old (from lkundrak, the previous maintainer, and not totally clear to me, the
+new maintainer):
+- pam && kerberos optional
+  (why? how?)
+- MESSAGE
+  (I don't know why, but it was here before)
+- fix bugs such as -n one 
+  (I don't know what it means, but I assume it's the mismatch whether the
+  parameter is called -nodaemon (as in reality) or -n (as in the manpage))
