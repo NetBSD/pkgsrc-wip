@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2011/05/13 23:25:13 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.6 2011/07/14 12:00:35 mwdavies Exp $
 bin/akonadi_agent_launcher
 bin/akonadi_agent_server
 bin/akonadi_control
@@ -20,7 +20,7 @@ lib/libakonadiprotocolinternals.so
 lib/libakonadiprotocolinternals.so.1
 lib/libakonadiprotocolinternals.so.${PKGVERSION}
 lib/pkgconfig/akonadi.pc
-lib/qt4/plugins/sqldrivers/libqsqlite3.so
+qt4/plugins/sqldrivers/libqsqlite3.so
 share/config/akonadi/mysql-global-mobile.conf
 share/config/akonadi/mysql-global.conf
 share/dbus-1/interfaces/org.freedesktop.Akonadi.Agent.Control.xml
