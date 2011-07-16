@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/07/07 15:59:57 keckhardt Exp $
+# $NetBSD: Makefile,v 1.2 2011/07/16 13:50:39 keckhardt Exp $
 
 GCC_VERSION=		4.7
 DISTNAME=		gcc-${GCC_VERSION}-20110625
@@ -23,6 +23,7 @@ USE_TOOLS+=		awk:run bash:run perl chmod \
 
 DEPENDS+=		zip-[0-9]*:../../archivers/zip
 DEPENDS+=		libiconv-[0-9]*:../../converters/libiconv
+BUILDLINK_API_DEPENDS.mpfr+=	mpfr>=2.3.1
 
 
 GCC_SUBPREFIX=		gcc47
