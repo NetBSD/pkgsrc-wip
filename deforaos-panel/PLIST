@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2011/05/27 12:30:14 khorben Exp $
+@comment $NetBSD: PLIST,v 1.9 2011/07/16 03:03:28 khorben Exp $
 bin/panel
 bin/panel-settings
 bin/panel_test
@@ -7,6 +7,7 @@ include/Desktop/Panel.h
 lib/Panel/applets/battery.so
 lib/Panel/applets/bluetooth.so
 lib/Panel/applets/clock.so
+lib/Panel/applets/close.so
 lib/Panel/applets/cpu.so
 lib/Panel/applets/cpufreq.so
 lib/Panel/applets/desktop.so
@@ -22,6 +23,7 @@ lib/Panel/applets/phone.so
 lib/Panel/applets/swap.so
 lib/Panel/applets/systray.so
 lib/Panel/applets/tasks.so
+lib/Panel/applets/title.so
 lib/Panel/applets/usb.so
 lib/Panel/applets/volume.so
 lib/Panel/applets/wpa_supplicant.so
