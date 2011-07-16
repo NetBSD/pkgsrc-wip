@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2011/07/07 15:59:57 keckhardt Exp $
+$NetBSD: patch-aa,v 1.2 2011/07/16 13:20:38 keckhardt Exp $
 
 --- gcc/config.gcc.orig
 +++ gcc/config.gcc
@@ -58,7 +58,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2011/07/07 15:59:57 keckhardt Exp $
 +	;;
  i[34567]86-*-netbsdelf*)
 -	tm_file="${tm_file} i386/unix.h i386/att.h dbxelf.h elfos.h netbsd.h netbsd-elf.h i386/netbsd-elf.h"
-+	tm_file="${tm_file} i386/unix.h i386/att.h dbxelf.h elfos.h netbsd.h netbsd-elf.h i386/netbsd-elf.h netbsd-stdint"
++	tm_file="${tm_file} i386/unix.h i386/att.h dbxelf.h elfos.h netbsd.h netbsd-elf.h i386/netbsd-elf.h netbsd-stdint.h"
  	extra_options="${extra_options} netbsd.opt netbsd-elf.opt"
  	;;
  x86_64-*-netbsd*)
