@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2011/03/24 16:27:50 astforge Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/07/20 20:55:42 astforge Exp $
 sbin/crypt
 sbin/nhttpd
 man/man8/nhttpd.8
@@ -9,9 +9,3 @@ nostromo/htdocs/nostromo.gif
 nostromo/htdocs/cgi-bin/printenv
 nostromo/icons/dir.gif
 nostromo/icons/file.gif
-@dirrm nostromo/conf
-@dirrm nostromo/htdocs/cgi-bin
-@dirrm nostromo/htdocs
-@dirrm nostromo/icons
-@dirrm nostromo/logs
-@dirrm nostromo

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/07/14 13:20:00 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2011/07/20 20:55:42 astforge Exp $
 #
 
 DISTNAME=	nostromo-1.9.4
@@ -9,33 +9,36 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	ast@marabu.ch
 HOMEPAGE=	http://www.nazgul.ch/dev_nostromo.html
-COMMENT=	A fast, secure HTTP/1.1 CGI/1.1 SSL IPv4/IPv6 webserver
+COMMENT=	Fast, secure HTTP/1.1 CGI/1.1 SSL IPv4/IPv6 webserver
 LICENSE=	modified-bsd
 
 USE_LANGUAGES=	c
 USE_TOOLS=	sed
 
-NOSTROMO_DIR?=	${PREFIX}/nostromo
+PKG_DESTDIR_SUPPORT=	user-destdir
 
-RCD_SCRIPTS=    nostromo
-EGDIR=		nostromo
-VAR_NOSTROMO=	/var/nostromo
+RCD_SCRIPTS=	nostromo
+EGDIR=		${DESTDIR}/${PREFIX}/nostromo
+
 USR_LOCAL=	/usr/local
-CONF_FILES=     ${EGDIR}/conf/nhttpd.conf-dist ${EGDIR}/conf/nhttpd.conf
+VAR_NOSTROMO=	/var/nostromo
 
-PKG_DESTDIR_SUPPORT=    user-destdir
-INSTALLATION_DIRS=      $(PKGMANDIR)/man8 $(EG_DIR)
+INSTALLATION_DIRS=	sbin
+INSTALLATION_DIRS+=	var/nostromo
+INSTALLATION_DIRS+=	${PKGMANDIR}/man8
+INSTALLATION_DIRS+=	${EGDIR}
+INSTALLATION_DIRS+=	${EGDIR}/logs
+INSTALLATION_DIRS+=	${EGDIR}/icons
+INSTALLATION_DIRS+=	${EGDIR}/htdocs
+INSTALLATION_DIRS+=	${EGDIR}/htdocs/cgi-bin
 
-SUBST_CLASSES+=		usrlocal
-SUBST_FILES.usrlocal=	src/nhttpd/nhttpd.8
-SUBST_SED.usrlocal+=	-e 's,${USR_LOCAL},${PREFIX},g'
-SUBST_STAGE.usrlocal=	post-patch
 
 SUBST_CLASSES+=		nostromo
 SUBST_FILES.nostromo=	src/nhttpd/nhttpd.8 \
 			src/nhttpd/main.c \
 			conf/nhttpd.conf-dist
-SUBST_SED.nostromo+=	-e 's,${VAR_NOSTROMO},${PREFIX}/${EGDIR},g'
+SUBST_SED.nostromo+=	-e 's,${VAR_NOSTROMO},${PREFIX}/nostromo,g'
+SUBST_SED.nostromo+=	-e 's,${USR_LOCAL},${PREFIX},g'
 SUBST_STAGE.nostromo=	post-patch
 
 SUBST_CLASSES+=		perl
@@ -43,26 +46,25 @@ SUBST_FILES.perl=	htdocs/cgi-bin/printenv
 SUBST_SED.perl+=	-e 's,/usr/bin/perl,/usr/bin/env perl,g'
 SUBST_STAGE.perl=	post-patch
 
-USE_RC_SUBR=	nostromo.sh
-
-MAN8=		nhttpd.8
-
 do-install:
-	@${INSTALL_SCRIPT} ${WRKSRC}/src/nhttpd/nhttpd ${PREFIX}/sbin
-	@${INSTALL_SCRIPT} ${WRKSRC}/src/tools/crypt ${PREFIX}/sbin
-	@${INSTALL_MAN} ${WRKSRC}/src/nhttpd/nhttpd.8 ${PREFIX}/man/man8
-	@${MKDIR} -m 0775 ${NOSTROMO_DIR}/logs
-	@${MKDIR} ${NOSTROMO_DIR}/conf
-	@${INSTALL_DATA} ${WRKSRC}/conf/mimes ${NOSTROMO_DIR}/conf
-	@${INSTALL_DATA} ${WRKSRC}/conf/nhttpd.conf-dist ${NOSTROMO_DIR}/conf
-	@${MKDIR} ${NOSTROMO_DIR}/htdocs
-	@${INSTALL_DATA} ${WRKSRC}/htdocs/index.html ${NOSTROMO_DIR}/htdocs
-	@${INSTALL_DATA} ${WRKSRC}/htdocs/nostromo.gif ${NOSTROMO_DIR}/htdocs
-	@${MKDIR} ${NOSTROMO_DIR}/htdocs/cgi-bin
-	@${INSTALL_SCRIPT} ${WRKSRC}/htdocs/cgi-bin/printenv \
-		${NOSTROMO_DIR}/htdocs/cgi-bin
-	@${MKDIR} ${NOSTROMO_DIR}/icons
-	@${INSTALL_DATA} ${WRKSRC}/icons/dir.gif ${NOSTROMO_DIR}/icons
-	@${INSTALL_DATA} ${WRKSRC}/icons/file.gif ${NOSTROMO_DIR}/icons
+	${INSTALL_SCRIPT} ${WRKSRC}/src/nhttpd/nhttpd \
+		${DESTDIR}${PREFIX}/sbin/
+	${INSTALL_SCRIPT} ${WRKSRC}/src/tools/crypt \
+		${DESTDIR}${PREFIX}/sbin/
+	${INSTALL_MAN} ${WRKSRC}/src/nhttpd/nhttpd.8 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/
+	${MKDIR} -m 0775 ${EGDIR}/logs
+	${MKDIR} ${EGDIR}/conf
+	${INSTALL_DATA} ${WRKSRC}/conf/mimes ${EGDIR}/conf/
+	${INSTALL_DATA} ${WRKSRC}/conf/nhttpd.conf-dist ${EGDIR}/conf/
+	${MKDIR} ${EGDIR}/htdocs
+	${INSTALL_DATA} ${WRKSRC}/htdocs/index.html ${EGDIR}/htdocs/
+	${INSTALL_DATA} ${WRKSRC}/htdocs/nostromo.gif ${EGDIR}/htdocs/
+	${MKDIR} ${EGDIR}/htdocs/cgi-bin
+	${INSTALL_SCRIPT} ${WRKSRC}/htdocs/cgi-bin/printenv \
+		${EGDIR}/htdocs/cgi-bin/
+	${MKDIR} ${EGDIR}/icons
+	${INSTALL_DATA} ${WRKSRC}/icons/dir.gif ${EGDIR}/icons/
+	${INSTALL_DATA} ${WRKSRC}/icons/file.gif ${EGDIR}/icons/
 
 .include "../../mk/bsd.pkg.mk"
