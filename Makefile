@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4415 2011/07/15 03:58:33 ryo-on Exp $
+# $Id: Makefile,v 1.4416 2011/07/21 00:54:24 makoto Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2778,6 +2778,7 @@ SUBDIR+=	tw_cli
 SUBDIR+=	twinkle
 SUBDIR+=	twitim
 SUBDIR+=	twitmail
+SUBDIR+=	twittering-mode
 SUBDIR+=	txt2tags
 SUBDIR+=	typespeed
 SUBDIR+=	typhoon
