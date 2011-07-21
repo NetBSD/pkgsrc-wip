@@ -1,3 +1,8 @@
+pkg_digger:
+    - position-dependent -1|-3|-9
+pkg_summary2leaves
+    - error message when no files are given on input (stdin only)
+
 TODO list and thoughts
 
 existing tools:
@@ -35,6 +40,7 @@ existing tools:
     pkg_summary2bb_pkgs:
 
     pkg_digger:
+       - position-dependent -1|-3|-9
 
     pkg_digger_backend:
 
