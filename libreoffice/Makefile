@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2011/06/15 17:20:20 ftigeot Exp $
+# $NetBSD: Makefile,v 1.15 2011/07/21 05:16:36 ftigeot Exp $
 
-VER=			2011-06-15
+VER=			2011-07-17
 DISTNAME=		libreoffice-${VER}
 PKGNAME=		libreoffice-${VER:S/-//g}
 CATEGORIES=		misc
@@ -34,8 +34,8 @@ MORE_DISTFILES= \
 	35efabc239af896dfb79be7ebdd6e6b9-gentiumbasic-fonts-1.10.zip \
 	48a9f787f43a09c0a9b7b00cd1fddbbf-hyphen-2.7.1.tar.gz \
 	ca4870d899fd7e943ffc310a5421ad4d-liberation-fonts-ttf-1.06.0.20100721.tar.gz \
-	763bb9b14eec5ba9a533d7a9279301db-libvisio-0.0.0.tar.gz \
-	7a0dcb3fe1e8c7229ab4fb868b7325e6-mdds_0.5.2.tar.bz2 \
+	979a3f3da4dc176e80fe8c6b759cb7f4-libvisio-0.0.2.tar.bz2 \
+	0ff7d225d087793c8c2c680d77aac3e7-mdds_0.5.3.tar.bz2 \
 	067201ea8b126597670b5eff72e1f66c-mythes-1.2.0.tar.gz \
 	fdb27bfe2dbe2e7b57ae194d9bf36bab-SampleICC-1.3.2.tar.gz
 
