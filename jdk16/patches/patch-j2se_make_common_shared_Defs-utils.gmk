@@ -1,0 +1,12 @@
+$NetBSD: patch-j2se_make_common_shared_Defs-utils.gmk,v 1.1 2011/07/21 16:05:11 ftigeot Exp $
+
+--- j2se/make/common/shared/Defs-utils.gmk.orig	2011-07-20 08:51:24 +0000
++++ j2se/make/common/shared/Defs-utils.gmk
+@@ -179,3 +179,7 @@ endif
+ ifeq ($(SYSTEM_UNAME),Darwin)
+   NAWK = $(USRBIN_PATH)awk
+ endif
++
++ifeq ($(SYSTEM_UNAME),DragonFly)
++  NAWK = $(USRBIN_PATH)awk
++endif

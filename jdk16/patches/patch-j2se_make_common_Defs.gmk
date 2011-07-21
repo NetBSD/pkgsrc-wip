@@ -1,0 +1,15 @@
+$NetBSD: patch-j2se_make_common_Defs.gmk,v 1.1 2011/07/21 16:05:11 ftigeot Exp $
+
+--- j2se/make/common/Defs.gmk.orig	2011-07-21 11:32:53 +0000
++++ j2se/make/common/Defs.gmk
+@@ -120,6 +120,10 @@ ifdef PROGRAM
+     LDLIBS_COMMON =
+   endif
+ 
++  ifeq ($(OS_VENDOR), DragonFly)
++    LDLIBS_COMMON =
++  endif
++
+ endif # PROGRAM
+ 
+ LDLIBS_COMMON += $(EXTRA_LIBS)
