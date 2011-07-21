@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2011/05/30 20:22:51 pallegra Exp $
+# $NetBSD: Makefile,v 1.4 2011/07/21 18:39:16 pallegra Exp $
 #
 
-DISTNAME=	i3-tree-pr3
+DISTNAME=	i3-tree-pr4
 PKGNAME=	${DISTNAME:C/tree-pr/4devel/}
 CATEGORIES=	wm
 MASTER_SITES=	http://i3.zekjur.net/downloads/
@@ -23,6 +23,7 @@ DEPENDS+=		dmenu-[0-9]*:../../x11/dmenu
 PKG_SYSCONFSUBDIR=	i3
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/doc/i3 share/xsessions include/i3
 CONF_FILES=	${PREFIX}/share/doc/i3/config ${PKG_SYSCONFDIR}/config
+CONF_FILES+=	${PREFIX}/share/doc/i3/config.keycodes ${PKG_SYSCONFDIR}/config.keycodes
 
 MAKE_ENV+=	SYSCONFDIR=${PKG_SYSCONFDIR:C/\/i3//}
 MAKE_ENV+=	DEBUG=0
@@ -30,11 +31,13 @@ MAKE_ENV+=	DEBUG=0
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/i3 ${DESTDIR}${PREFIX}/bin/
 	${INSTALL_MAN} ${WRKSRC}/man/i3.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
-.for i in i3-input i3-msg
+.for i in i3-input i3-msg i3-nagbar
 	${INSTALL_PROGRAM} ${WRKSRC}/${i}/${i} ${DESTDIR}${PREFIX}/bin/
 	${INSTALL_MAN} ${WRKSRC}/man/${i}.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
 .endfor
+	${INSTALL_PROGRAM} ${WRKSRC}/i3-config-wizard/i3-config-wizard ${DESTDIR}${PREFIX}/bin/
 	${INSTALL_DATA} ${WRKSRC}/i3.config ${DESTDIR}${PREFIX}/share/doc/i3/config
+	${INSTALL_DATA} ${WRKSRC}/i3.config.keycodes ${DESTDIR}${PREFIX}/share/doc/i3/config.keycodes
 	${INSTALL_DATA} ${WRKSRC}/i3.desktop ${DESTDIR}${PREFIX}/share/xsessions/
 	${INSTALL_DATA} ${WRKSRC}/include/i3/ipc.h ${DESTDIR}${PREFIX}/include/i3/
 

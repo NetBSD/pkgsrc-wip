@@ -1,0 +1,20 @@
+$NetBSD: patch-i3.config.keycodes,v 1.1 2011/07/21 18:39:17 pallegra Exp $
+
+--- i3.config.keycodes.orig	2011-07-16 16:05:27.000000000 +0000
++++ i3.config.keycodes
+@@ -17,13 +17,13 @@ font -misc-fixed-medium-r-normal--13-120
+ floating_modifier $mod
+ 
+ # start a terminal
+-bindcode $mod+36 exec /usr/bin/urxvt
++bindcode $mod+36 exec xterm
+ 
+ # kill focused window
+ bindcode $mod+Shift+24 kill
+ 
+ # start dmenu (a program launcher)
+-bindcode $mod+40 exec /usr/bin/dmenu_run
++bindcode $mod+40 exec dmenu_run
+ 
+ # change focus
+ bindcode $mod+44 focus left
