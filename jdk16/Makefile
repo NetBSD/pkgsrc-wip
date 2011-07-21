@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2011/01/11 17:10:43 marko_schuetz Exp $
+# $NetBSD: Makefile,v 1.23 2011/07/21 05:29:58 ftigeot Exp $
 
 .include "../../wip/jdk16/Makefile.common"
 
@@ -21,9 +21,6 @@ MAKE_JOBS_SAFE=	no
 USE_TOOLS+=		patch
 WRKSRC=			${WRKDIR}
 PLIST_SRC=		PLIST.common
-
-# XXX actually requires -current due to use of getpeereid()
-ONLY_FOR_PLATFORM=	NetBSD-[4-9]*-i386 NetBSD-[4-9]*-x86_64
 
 JAVA_NAME=		jdk16
 JAVA_WRAPPERS=		appletviewer jar java javac javadoc javah javap
