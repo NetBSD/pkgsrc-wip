@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.7 2011/01/02 18:04:16 ftigeot Exp $
+@comment $NetBSD: PLIST.common,v 1.8 2011/07/21 20:15:06 ftigeot Exp $
 bin/jdk16-appletviewer
 bin/jdk16-jar
 bin/jdk16-java
@@ -18,7 +18,6 @@ java/jdk-1.6.0/bin/idlj
 java/jdk-1.6.0/bin/jar
 java/jdk-1.6.0/bin/jarsigner
 java/jdk-1.6.0/bin/java
-java/jdk-1.6.0/bin/java-rmi.cgi
 java/jdk-1.6.0/bin/javac
 java/jdk-1.6.0/bin/javadoc
 java/jdk-1.6.0/bin/javah
