@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.12 2011/07/22 13:19:56 ftigeot Exp $
+$NetBSD: distinfo,v 1.13 2011/07/22 14:10:18 ftigeot Exp $
 
 SHA1 (bsd-jdk16-patches-4.tar.bz2) = 89421fda207c9c63047ed1329c411fdc772537c4
 RMD160 (bsd-jdk16-patches-4.tar.bz2) = b9e8cfda392b9c4fcdeae22cd5e8aa23a8e4d860
@@ -36,6 +36,7 @@ SHA1 (patch-hotspot_src_share_vm_adlc_filebuff.hpp) = 100c06a75a3191ef6a7d1c9014
 SHA1 (patch-j2se_make_common_Defs.gmk) = b54535cb65a3f9b647d749c34da9ea68a09135ee
 SHA1 (patch-j2se_make_common_shared_Defs-utils.gmk) = 23f20f9a208941b2fb8ea12e9016aa4d6e0c7f84
 SHA1 (patch-j2se_src_share_classes_java2d_SunGraphicsEnvironment.java) = ccf1e3d7a54fd4785b26ffba6cb54492d453e33a
+SHA1 (patch-j2se_src_share_classes_sun_awt_FontConfiguration.java) = c25b7e9f3c3c6a623b1c1d7341739be04ae31691
 SHA1 (patch-j2se_src_solaris_native_com_sun_media_sound_engine_HAE_API_BSDOS.c) = c1dd28dc0684d0cd65bae2b9ceabad9c3b1dca39
 SHA1 (patch-j2se_src_solaris_native_com_sun_media_sound_engine_HAE_API_BSDOS_Capture.c) = bc7ff4261f64fb029e4b9a58a9ef16aefee5d5ff
 SHA1 (patch-j2se_src_solaris_native_java_net_NetworkInterface.c) = edca3926df74280fe2c511c0b9ba85e57e29436b
