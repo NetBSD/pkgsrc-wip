@@ -1,16 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/01/10 13:49:53 triaxx Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/07/22 07:29:17 triaxx Exp $
 share/doc/nag/INSTALL
 share/doc/nag/README
 share/doc/nag/RELEASE_NOTES
 share/doc/nag/UPGRADING
 share/examples/nag/nag.conf
-share/horde/nag/config/conf.xml
 share/horde/nag/config/conf.xml.dist
-share/horde/nag/config/hooks.php
 share/horde/nag/config/hooks.php.dist
-share/horde/nag/config/menu.php
 share/horde/nag/config/menu.php.dist
-share/horde/nag/config/prefs.php
 share/horde/nag/config/prefs.php.dist
 share/horde/nag/data.php
 share/horde/nag/ics.php
@@ -221,3 +217,10 @@ share/horde/nag/themes/tango-blue/graphics/tasklists.png
 share/horde/nag/themes/tango-blue/graphics/unchecked.png
 share/horde/nag/themes/tango-blue/themed_graphics
 share/horde/nag/view.php
+@pkgdir themes
+@pkgdir templates
+@pkgdir tasklists
+@pkgdir scripts
+@pkgdir po
+@pkgdir locale
+@pkgdir js
