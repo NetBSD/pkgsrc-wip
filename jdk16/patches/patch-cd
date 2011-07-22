@@ -1,8 +1,8 @@
-$NetBSD: patch-cd,v 1.1 2011/01/02 19:22:32 ftigeot Exp $
+$NetBSD: patch-cd,v 1.2 2011/07/22 13:19:56 ftigeot Exp $
 
---- hotspot/make/Makefile.orig	2011-01-02 19:45:40 +0100
-+++ hotspot/make/Makefile	2011-01-02 19:45:56 +0100
-@@ -115,6 +115,9 @@
+--- hotspot/make/Makefile.orig	2011-07-22 11:42:43 +0000
++++ hotspot/make/Makefile
+@@ -115,6 +115,9 @@ ifeq ($(OS),)
    ifeq (Darwin,$(OS))
      OS=bsd
    endif
@@ -12,3 +12,13 @@ $NetBSD: patch-cd,v 1.1 2011/01/02 19:22:32 ftigeot Exp $
  endif
  
  # Library suffix
+@@ -224,6 +227,9 @@ endif
+ ifeq ($(OSNAME),bsd)
+   SLASH_JAVA=/java
+   ARCH:=$(shell uname -m)
++  ifeq ($(ARCH),x86_64)
++    ARCH=amd64
++  endif
+   PATH_SEP = :
+   ifneq ($(BSD_OVERRIDE_ARCH),)
+     ARCH=$(BSD_OVERRIDE_ARCH)
