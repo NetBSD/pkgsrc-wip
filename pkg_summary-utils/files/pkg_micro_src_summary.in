@@ -55,6 +55,7 @@ OPTIONS:
   -h              display this help message
   -f <fields>     fields to be included to summary,
                   PKGNAME and PKGPATH is the default
+  -s              paexec slave mode
 EOF
 }
 
@@ -64,10 +65,11 @@ set_fields (){
     fields=$(echo "$@" | tr , ' ')
 }
 
-while getopts hf: f; do
+while getopts hsf: f; do
     case "$f" in
 	h)    usage; exit 0;;
 	f)    set_fields "$OPTARG";;
+	s)    slave=1;;
 	?)    printf "Run pkg_micro_src_summary -h for details\n"; exit 2;;
     esac
 done
@@ -104,13 +106,10 @@ pkg_src_fetch (){
 	environ="PSS_SLAVES= BMAKE=$BMAKE PKGSRCDIR=$PKGSRCDIR"
 	environ="$environ PSS_PRE_PATH=$PSS_PRE_PATH PSS_POST_PATH=$PSS_POST_PATH"
 
-	runpipe0 \
-	    paexec -glez $PSS_PAEXEC_EXTRA_OPTS \
-		-n "$PSS_SLAVES" \
-		-t "$PSS_TRANSPORT" \
-		-c "env $environ $SH $0 -s -f '$qfields'" '|' \
-	    paexec_reorder '|' \
-	    sed '/^success$/ d'
+	paexec -z $PSS_PAEXEC_EXTRA_OPTS \
+	    -n "$PSS_SLAVES" \
+	    -t "$PSS_TRANSPORT" \
+	    -c "env $environ $SH $0 -s -f '$qfields'"
     else
 	pkg_src_fetch_var -f "$fields"
     fi
