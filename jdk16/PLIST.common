@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.8 2011/07/21 20:15:06 ftigeot Exp $
+@comment $NetBSD: PLIST.common,v 1.9 2011/07/23 17:38:49 ftigeot Exp $
 bin/jdk16-appletviewer
 bin/jdk16-jar
 bin/jdk16-java
@@ -1633,7 +1633,6 @@ java/jdk-1.6.0/jre/lib/fonts/LucidaTypewriterBold.ttf
 java/jdk-1.6.0/jre/lib/fonts/LucidaTypewriterRegular.ttf
 java/jdk-1.6.0/jre/lib/fonts/fonts.dir
 ${PLIST.client_jvm}java/jdk-1.6.0/jre/lib/${JAVA_MACHINE_ARCH}/client/Xusage.txt
-${PLIST.client_jvm}java/jdk-1.6.0/jre/lib/${JAVA_MACHINE_ARCH}/client/classes.jsa
 ${PLIST.client_jvm}java/jdk-1.6.0/jre/lib/${JAVA_MACHINE_ARCH}/client/libjsig.so
 ${PLIST.client_jvm}java/jdk-1.6.0/jre/lib/${JAVA_MACHINE_ARCH}/client/libjvm.so
 java/jdk-1.6.0/jre/lib/${JAVA_MACHINE_ARCH}/headless/libmawt.so
