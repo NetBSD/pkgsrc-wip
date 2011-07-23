@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.2 2011/07/16 13:50:39 keckhardt Exp $
+# $NetBSD: Makefile,v 1.3 2011/07/23 19:18:25 keckhardt Exp $
 
 GCC_VERSION=		4.7
-DISTNAME=		gcc-${GCC_VERSION}-20110625
+DISTNAME=		gcc-${GCC_VERSION}-20110716
 PKGNAME=		gcc47-${GCC_VERSION}
 CATEGORIES=		wip
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX}
-SITES.gcc-4.7-20110625.tar.bz2= \
-		ftp://ftp.fu-berlin.de/unix/languages/gcc/snapshots/4.7-20110625/
+SITES.gcc-4.7-20110716.tar.bz2= \
+		ftp://ftp.fu-berlin.de/unix/languages/gcc/snapshots/4.7-20110716/
 
 EXTRACT_SUFX=		.tar.bz2
 
@@ -70,7 +70,7 @@ REPLACE_BASH+= libstdc++-v3/scripts/run_doxygen
 BUILD_DEFS+=		BUILD_CXX BUILD_FORTRAN BUILD_JAVA BUILD_OBJC
 BUILD_CXX?=		YES
 BUILD_FORTRAN?=		YES
-BUILD_JAVA?=		YES
+BUILD_JAVA?=		NO
 BUILD_OBJC?=		YES
 
 LANGS= c
@@ -118,6 +118,7 @@ CONFIGURE_ARGS+=	--with-gmp=${BUILDLINK_PREFIX.gmp}
 CONFIGURE_ARGS+=	--with-mpfr=${BUILDLINK_PREFIX.mpfr}
 CONFIGURE_ARGS+=	--with-libiconv-prefix=${PREFIX}
 CONFIGURE_ARGS+=	--with-gxx-include-dir=${GCC_PREFIX}/include/c++/
+CONFIGURE_ARGS+=	--disable-multilib
 CONFIGURE_ARGS+=	--with-tune=generic
 CONFIGURE_ARGS+=	--with-ppl-include=${PREFIX}/include
 CONFIGURE_ARGS+=	--with-ppl-lib=${PREFIX}/lib
