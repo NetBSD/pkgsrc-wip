@@ -1,6 +1,11 @@
-# $NetBSD: DEINSTALL,v 1.5 2011/07/23 13:19:06 ftigeot Exp $
+# $NetBSD: DEINSTALL,v 1.6 2011/07/23 13:32:16 ftigeot Exp $
+
+MACHINE_ARCH=`uname -m`
 
 case ${STAGE} in
 DEINSTALL)
-	${RM} -f @JAVA_HOME@/lib/@MACHINE_ARCH@/client/classes.jsa;;
+	if [ "${MACHINE_ARCH}" = "i386" ]; then
+		${RM} -f @JAVA_HOME@/lib/@MACHINE_ARCH@/client/classes.jsa;;
+	fi
+	;;
 esac
