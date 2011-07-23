@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2011/05/23 09:37:43 ddeus Exp $
+# $NetBSD: Makefile,v 1.3 2011/07/23 09:56:58 ddeus Exp $
 
 DISTNAME=		bzr-${VER}
 CATEGORIES=		devel scm
 MASTER_SITES=		http://launchpad.net/bzr/2.3/${VER}/+download/
-VER=			2.3.3
+VER=			2.3.4
 
 MAINTAINER=		jan.m.danielsson@gmail.com
 HOMEPAGE=		http://bazaar-vcs.org/
