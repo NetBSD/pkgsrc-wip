@@ -1459,23 +1459,14 @@ pkg_src_summary -f PKGNAME,PKGPATH $pkgs 2>"$tmpfn4" |
 tee "$objdir"/summary_full.txt |
 normalize_version |
 cmp 'pkg_src_summary #1' \
-'PKGNAME=distbb-X
-PKGPATH=wip/distbb
-
-PKGNAME=dictem-X
+'PKGNAME=dictem-X
 PKGPATH=textproc/dictem
 
 PKGNAME=checkperms-X
 PKGPATH=sysutils/checkperms
 
-PKGNAME=pkg_online-server-X
-PKGPATH=wip/pkg_online-server
-
 PKGNAME=dict-client-X
 PKGPATH=textproc/dict-client
-
-PKGNAME=pkg_online-client-X
-PKGPATH=wip/pkg_online-client
 
 PKGNAME=libmaa-X
 PKGPATH=devel/libmaa
@@ -1534,9 +1525,15 @@ grep_pss_stderr (){
 grep_pss_stderr "$tmpfn4" |
 cmp 'pkg_src_summary #1 stderr' \
 " ------------------
+Bad package wip/distbb, skipped
+ ------------------
 Bad package wip/pkg_online, skipped
  ------------------
 Bad package wip/dict-server, skipped
+ ------------------
+Bad package wip/pkg_online-server, skipped
+ ------------------
+Bad package wip/pkg_online-client, skipped
  ------------------
 Bad package wip/paexec, skipped
  ------------------
@@ -1552,7 +1549,11 @@ Bad package www/ap2-vhost-ldap:PKG_APACHE=apache2, skipped
 pkg_src_summary -m -fPKGNAME,PKGPATH www/ap2-python |
 grep -v DEPENDS |
 cmp 'pkg_src_summary #2' \
-'ASSIGNMENTS=PKG_APACHE=apache2,PYTHON_VERSION_REQD=27
+'ASSIGNMENTS=PKG_APACHE=apache2,PYTHON_VERSION_REQD=31
+PKGNAME=ap2-py31-python-3.3.1
+PKGPATH=www/ap2-python
+
+ASSIGNMENTS=PKG_APACHE=apache2,PYTHON_VERSION_REQD=27
 PKGNAME=ap2-py27-python-3.3.1
 PKGPATH=www/ap2-python
 
@@ -1566,6 +1567,10 @@ PKGPATH=www/ap2-python
 
 ASSIGNMENTS=PKG_APACHE=apache2,PYTHON_VERSION_REQD=24
 PKGNAME=ap2-py24-python-3.3.1
+PKGPATH=www/ap2-python
+
+ASSIGNMENTS=PYTHON_VERSION_REQD=31
+PKGNAME=ap22-py31-python-3.3.1
 PKGPATH=www/ap2-python
 
 ASSIGNMENTS=PYTHON_VERSION_REQD=27
@@ -1588,7 +1593,11 @@ PKGPATH=www/ap2-python
 pkg_src_summary -m --fields PKGNAME,PKGPATH www/ap2-python:PKG_APACHE=apache2 |
 grep -v DEPENDS |
 cmp 'pkg_src_summary #3' \
-'ASSIGNMENTS=PYTHON_VERSION_REQD=27
+'ASSIGNMENTS=PYTHON_VERSION_REQD=31
+PKGNAME=ap22-py31-python-3.3.1
+PKGPATH=www/ap2-python
+
+ASSIGNMENTS=PYTHON_VERSION_REQD=27
 PKGNAME=ap22-py27-python-3.3.1
 PKGPATH=www/ap2-python
 
@@ -1855,10 +1864,7 @@ pkg_micro_src_summary $pkgs 2>"$tmpfn4" |
 tee "$objdir"/summary_micro.txt |
 normalize_version |
 cmp 'pkg_micro_src_summary #1' \
-'PKGNAME=distbb-X
-PKGPATH=wip/distbb
-
-PKGNAME=checkperms-X
+'PKGNAME=checkperms-X
 PKGPATH=sysutils/checkperms
 
 PKGNAME=dict-client-X
@@ -1912,12 +1918,6 @@ PKGPATH=graphics/jpeg
 PKGNAME=dictem-X
 PKGPATH=textproc/dictem
 
-PKGNAME=pkg_online-server-X
-PKGPATH=wip/pkg_online-server
-
-PKGNAME=pkg_online-client-X
-PKGPATH=wip/pkg_online-client
-
 PKGNAME=ap22-vhost-ldap-X
 PKGPATH=www/ap22-vhost-ldap
 
@@ -1926,9 +1926,15 @@ PKGPATH=www/ap22-vhost-ldap
 grep_pss_stderr "$tmpfn4" |
 cmp 'pkg_micro_src_summary #1 stderr' \
 " ------------------
+Bad package wip/distbb, skipped
+ ------------------
 Bad package wip/pkg_online, skipped
  ------------------
 Bad package wip/dict-server, skipped
+ ------------------
+Bad package wip/pkg_online-server, skipped
+ ------------------
+Bad package wip/pkg_online-client, skipped
  ------------------
 Bad package wip/paexec, skipped
  ------------------
