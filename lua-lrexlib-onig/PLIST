@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2009/01/12 19:10:46 cheusov Exp $
-${LUA_CDIR}/rex_onig.la
