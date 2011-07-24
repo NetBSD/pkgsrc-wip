@@ -1,15 +1,13 @@
-# $NetBSD: Makefile,v 1.2 2010/07/31 00:37:21 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2011/07/24 20:55:33 jihbed Exp $
 #
 
-DISTNAME=	pyflakes-0.4.0.tar
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//S/.tar//}
+DISTNAME=	pyflakes-0.4.0
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	http://pypi.python.org/packages/source/p/pyflakes/
-EXTRACT_SUFX=	.gz
 
 MAINTAINER=	kamel.derouiche@gmail.com
-HOMEPAGE=	http://www.divmod.org/trac/wiki/DivmodPyflakes \
-				
+HOMEPAGE=	http://www.divmod.org/trac/wiki/DivmodPyflakes
 COMMENT=	Passive checker of Python programs
 LICENSE=	mit
 
