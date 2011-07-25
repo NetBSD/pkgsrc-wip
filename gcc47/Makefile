@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/07/23 19:18:25 keckhardt Exp $
+# $NetBSD: Makefile,v 1.4 2011/07/25 18:56:36 asau Exp $
 
 GCC_VERSION=		4.7
 DISTNAME=		gcc-${GCC_VERSION}-20110716
@@ -15,29 +15,30 @@ HOMEPAGE=		http://gcc.gnu.org/
 COMMENT=		GNU Compiler Collection 4.7
 LICENSE=		gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2 AND gnu-lgpl-v3
 
-PKG_DESTDIR_SUPPORT=	user-destdir
-
-USE_TOOLS+=		awk:run bash:run perl chmod \
-			gmake:run makeinfo msgfmt bison flex gm4 \
-			sed:run unzip
+NOT_FOR_PLATFORM=	Interix-*-*
 
 DEPENDS+=		zip-[0-9]*:../../archivers/zip
 DEPENDS+=		libiconv-[0-9]*:../../converters/libiconv
 BUILDLINK_API_DEPENDS.mpfr+=	mpfr>=2.3.1
 
+USE_TOOLS+=		awk:run bash:run perl chmod \
+			gmake:run makeinfo msgfmt bison flex gm4 \
+			sed:run unzip
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+UNLIMIT_RESOURCES+=	datasize
+UNLIMIT_RESOURCES+=	stacksize
 
 GCC_SUBPREFIX=		gcc47
 GCC_PREFIX=		${PREFIX}/${GCC_SUBPREFIX}
 FILES_SUBST+=		PKGNAME=${PKGNAME}
 MESSAGE_SUBST+=		GCC_PREFIX=${GCC_PREFIX}
 
-
-# To avoid GNU surprises
-CONFIG_SHELL=		${TOOLS_PATH.bash}
-
-NOT_FOR_PLATFORM=	Interix-*-*
-UNLIMIT_RESOURCES+=	datasize
-UNLIMIT_RESOURCES+=	stacksize
+GNU_CONFIGURE=		yes
+CONFIG_SHELL=		${TOOLS_PATH.bash}	# to avoid GNU surprises
+CONFIGURE_DIRS=		$(WRKDIR)/obj
+CONFIGURE_SCRIPT=	$(WRKSRC)/configure
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
@@ -174,34 +175,22 @@ CFLAGS+=		-I${BUILDLINK_DIR}/include
 
 LIBS.SunOS+=		-lgmp
 
+TEST_TARGET=	check
+
 pre-configure:
+	${MKDIR} ${WRKDIR}/obj
 .if ${OPSYS} == "DragonFly"
 	${CP} ${FILESDIR}/dragonfly.h ${WRKSRC}/gcc/config/dragonfly.h
 	${CP} ${FILESDIR}/dragonfly-spec.h ${WRKSRC}/gcc/config/dragonfly-spec.h
 	${CP} ${FILESDIR}/i386-dragonfly.h ${WRKSRC}/gcc/config/i386/dragonfly.h
 	${CP} ${FILESDIR}/i386-dragonfly64.h ${WRKSRC}/gcc/config/i386/dragonfly64.h
 .endif
-
 .if ${OPSYS} == "NetBSD"
 	${CP} ${WRKSRC}/gcc/config/freebsd-stdint.h ${WRKSRC}/gcc/config/netbsd-stdint.h
 .endif
 
-do-configure:
-	${MKDIR} ${WRKDIR}/obj
-	cd ${WRKDIR}/obj; ${SETENV} ${CONFIGURE_ENV} ${CONFIG_SHELL} ${WRKSRC}/configure ${CONFIGURE_ARGS}
-
-do-build:
-	(${_ULIMIT_CMD} cd ${WRKDIR}/obj && ${SETENV} ${MAKE_ENV} ${GMAKE} -j${MAKE_JOBS:U1:Q} )
-
-do-test:
-#.if (${MACHINE_GNU_ARCH} == "x86_64")
-#	(cd ${FILESDIR} && ${CP} netbsd64macro.dfs ${WRKSRC}/gcc/testsuite/ada/acats/support/macro.dfs)
-#.endif
-	(cd ${WRKDIR}/obj && ${GMAKE} -k check)
-
-do-install:
-	(cd ${WRKDIR}/obj && ${SETENV} ${MAKE_ENV} ${GMAKE} install DESTDIR=${DESTDIR} \
-	 && ${TEST} -f ${DESTDIR}${GCC_PREFIX}/bin/cc || ${LN} -f ${DESTDIR}${GCC_PREFIX}/bin/gcc ${DESTDIR}${GCC_PREFIX}/bin/cc)
+post-install:
+	${TEST} -f ${DESTDIR}${GCC_PREFIX}/bin/cc || ${LN} -f ${DESTDIR}${GCC_PREFIX}/bin/gcc ${DESTDIR}${GCC_PREFIX}/bin/cc
 
 GENERATE_PLIST+=                                                        \
 	cd ${DESTDIR}${PREFIX} && ${FIND} ${GCC_SUBPREFIX} \( -type f -o -type l \) -print \
