@@ -3,4 +3,21 @@
 * TODO make java target work on NetBSD
 * TODO make quadmath work on Linux amd64
 * TODO make test and send patches to gcc
-* DONE Fixed patch-aa for NetBSD i386
+* Depends on converters/libiconv?
+Check, if buildlink/builtin provides correct PREFIX:
+CONFIGURE_ARGS+=	--with-libiconv-prefix=${PREFIX}
+* Buildlink wip/ppl?
+Check, if buildlink/builtin provides correct PREFIX:
+CONFIGURE_ARGS+=	--with-ppl-include=${PREFIX}/include
+CONFIGURE_ARGS+=	--with-ppl-lib=${PREFIX}/lib
+* Buildlink wip/cloog?
+Check, if buildlink/builtin provides correct PREFIX:
+CONFIGURE_ARGS+=	--with-cloog-include=${PREFIX}/include
+CONFIGURE_ARGS+=	--with-cloog-lib=${PREFIX}/lib
+* Buildlink devel/binutils?
+Check, if buildlink/builtin provides correct PREFIX:
+CONFIGURE_ARGS+=	--with-ld=${PREFIX}/bin/gnu-ld
+CONFIGURE_ARGS+=	--with-libelf=${PREFIX}
+* Convert to static PLIST
+"make print-PLIST" should do the job.
+Check if approach similar to used in lang/erlang fits.
