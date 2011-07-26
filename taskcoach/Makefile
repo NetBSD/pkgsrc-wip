@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2011/04/10 15:09:49 ryo-on Exp $
+# $NetBSD: Makefile,v 1.4 2011/07/26 09:22:06 ryo-on Exp $
 #
 
-DISTNAME=	TaskCoach-1.2.13
+DISTNAME=	TaskCoach-1.2.24
 PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	time
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=taskcoach/}
@@ -19,6 +19,21 @@ DEPENDS+=	${PYPKGPREFIX}-wxWidgets>=2.8.9.1:../../x11/py-wxWidgets
 
 PYDISTUTILSPKG=	YES
 
+FIND_PREFIX:=	LIBXDIR=libSM
+.include "../../mk/find-prefix.mk"
+
+.if exists(/usr/X11R7/lib/libSM.so)
+LIBXDIR=	/usr/X11R7
+.endif
+
+SUBST_CLASSES+=		fix-cdll
+SUBST_STAGE.fix-cdll=	pre-configure
+SUBST_FILES.fix-cdll=	taskcoachlib/powermgt/xsm.py
+SUBST_SED.fix-cdll=	-e 's,libSM.so.6,${LIBXDIR}/lib/libSM.so,'
+SUBST_SED.fix-cdll+=	-e 's,libICE.so.6,${LIBXDIR}/lib/libICE.so,'
+
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
+.include "../../x11/libICE/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
