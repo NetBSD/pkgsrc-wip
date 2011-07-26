@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/07/26 22:50:55 rhialto Exp $
+bin/a68g
+include/algol68g/a68g-config.h
+include/algol68g/a68g.h
+man/man1/a68g.1
+share/doc/a68g/algol68g.pdf

@@ -1,0 +1,43 @@
+$NetBSD: patch-configure.ac,v 1.1.1.1 2011/07/26 22:50:55 rhialto Exp $
+
+Add NetBSD compilation support identical to FreeBSD support.
+
+--- configure.ac.orig	2011-07-06 21:34:24.000000000 +0000
++++ configure.ac
+@@ -67,6 +67,14 @@ AC_DEFINE(HAVE_IEEE_754, 1, [Define this
+ a68g_ac_export=yes
+ ;;
+ #
++# NetBSD.
++#
++*86-*-netbsd* | *86_64-*-netbsd*) 
++AC_DEFINE(HAVE_NETBSD, 1, [Define this if NetBSD was detected]) 
++AC_DEFINE(HAVE_IEEE_754, 1, [Define this if IEEE_754 compliant]) 
++a68g_ac_export=yes
++;;
++#
+ # FreeBSD.
+ #
+ *86-*-freebsd* | *86_64-*-freebsd*) 
+@@ -98,9 +106,10 @@ esac
+ AC_LANG(C)
+ AC_PROG_CC([gcc])
+ 
+-if test "x$CC" = "xgcc"; then
++#if test "x$CC" = "xgcc"; then
++if test "x$GCC" = "xyes"; then
+   AC_DEFINE(HAVE_GCC, 1, [Define this if GCC was detected]) 
+-  GCC="yes"
++  #GCC="yes"
+   CFLAGS="-g"
+   A68G_AC_PROG_CC_CFLAGS([-O2])
+   A68G_AC_PROG_CC_CFLAGS([-Wall])
+@@ -331,7 +340,7 @@ AH_BOTTOM([/* Do we have a compiler? */
+ #undef HAVE_COMPILER
+ #elif ((defined HAVE_LINUX || defined HAVE_MAC_OS_X) && defined HAVE_LIBDL)
+ #define HAVE_COMPILER 1
+-#elif defined HAVE_FREEBSD
++#elif defined HAVE_FREEBSD || defined HAVE_NETBSD
+ #define HAVE_COMPILER 1
+ #else
+ #undef HAVE_COMPILER

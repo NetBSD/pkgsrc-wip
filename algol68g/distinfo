@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/07/26 22:50:55 rhialto Exp $
+
+SHA1 (algol68g-2.2.0.tgz) = 513d6faa865afa0c55b25c419cf22589b4acc9b7
+RMD160 (algol68g-2.2.0.tgz) = 9bd631fa9a2b2c6dd666c275f155a0189ab0d955
+Size (algol68g-2.2.0.tgz) = 506185 bytes
+SHA1 (algol68g.pdf) = dd7b38bdd01c23ff9d182670010acb981af11aad
+RMD160 (algol68g.pdf) = 4ee3eb251e1f876d53ce555e6ea23b45dbac8689
+Size (algol68g.pdf) = 2980830 bytes
+SHA1 (patch-a68g.c) = 6183cb1ba7c9d7e8880a59c6f1a749ed0db680c6
+SHA1 (patch-configure.ac) = cfcd93ba1df7f6c3022dba8e281522af348b56a5
