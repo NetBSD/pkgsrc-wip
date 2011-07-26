@@ -2,3 +2,4 @@ This package is basically finished, note however that it needs to download git w
 Maybe there is a nicer solution, or maybe scmgit will have a shared library in the future?
 
 Security issue: please see http://secunia.com/advisories/43633/
+ http://secunia.com/advisories/45358/
