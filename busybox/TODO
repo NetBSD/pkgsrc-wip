@@ -2,3 +2,7 @@
 - Patch to be multiplatform?
 - Exclude some files from being installed
   (they most likely conflict with other packages)
+
+- This package has known vulnerabilities, please investigate and fix
+  if possible, see:
+  http://secunia.com/advisories/45363/
