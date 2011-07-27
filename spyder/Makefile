@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2011/02/25 09:47:50 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2011/07/27 20:59:36 jihbed Exp $
 #
 
-DISTNAME=	spyder-2.0.5
-EGG_NAME=	${DISTNAME}
+DISTNAME=	spyder-2.0.12
 CATEGORIES=	devel python
 MASTER_SITES=	http://spyderlib.googlecode.com/files/
 EXTRACT_SUFX=	.zip
@@ -12,8 +11,8 @@ HOMEPAGE=	http://code.google.com/p/spyderlib/
 COMMENT=	Scientific Python Development Environment
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-sphinx>=1.0.4:../../textproc/py-sphinx
-DEPENDS+=	${PYPKGPREFIX}-flakes>=0.4.0:../../wip/py-flakes
+DEPENDS+=	${PYPKGPREFIX}-sphinx>=1.0.7:../../textproc/py-sphinx
+#DEPENDS+=	${PYPKGPREFIX}-flakes>=0.4.0:../../wip/py-flakes
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -38,4 +37,6 @@ post-install:
 .include "../../lang/python/extension.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../x11/py-qt4/buildlink3.mk"
+.include "../../x11/py-sip/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
