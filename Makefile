@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4420 2011/07/26 22:52:51 rhialto Exp $
+# $Id: Makefile,v 1.4421 2011/07/27 05:24:43 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -911,6 +911,7 @@ SUBDIR+=	hs-hslogger
 SUBDIR+=	hs-hslogger-template
 SUBDIR+=	hs-html
 SUBDIR+=	hs-hxt
+SUBDIR+=	hs-hxt-charproperties
 SUBDIR+=	hs-hxt-xpath
 SUBDIR+=	hs-iconv
 SUBDIR+=	hs-io-storage
