@@ -1,0 +1,13 @@
+$NetBSD: patch-bj,v 1.1.1.1 2011/07/27 16:26:32 hfath Exp $
+
+--- distrib/initscripts/Makefile.in.orig	2010-02-14 17:47:12.000000000 +0000
++++ distrib/initscripts/Makefile.in
+@@ -455,7 +455,7 @@ info: info-am
+ 
+ info-am:
+ 
+-install-data-am: install-sysvSCRIPTS
++install-data-am:
+ 	@$(NORMAL_INSTALL)
+ 	$(MAKE) $(AM_MAKEFLAGS) install-data-hook
+ 

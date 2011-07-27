@@ -1,0 +1,104 @@
+$NetBSD: patch-aa,v 1.1.1.1 2011/07/27 16:26:32 hfath Exp $
+
+--- configure.orig	2011-03-21 12:45:27.000000000 +0000
++++ configure
+@@ -24512,7 +24512,7 @@ done
+ 
+ 
+ 
+-for ac_func in backtrace_symbols setlocale nl_langinfo strlcpy strlcat setlinebuf dirfd pselect access pread pwrite
++for ac_func in backtrace_symbols setlocale nl_langinfo strlcpy strlcat setlinebuf dirfd pselect access pread pwrite getifaddrs
+ do
+ as_ac_var=`echo "ac_cv_func_$ac_func" | $as_tr_sh`
+ { echo "$as_me:$LINENO: checking for $ac_func" >&5
+@@ -27879,6 +27879,72 @@ fi
+ 
+ done
+ 
++	{ echo "$as_me:${as_lineno-$LINENO}: checking for getfsquota in -lquota" >&5
++echo $ECHO_N "checking for getfsquota in -lquota... " >&6; }
++if "${ac_cv_lib_quota_getfsquota+set}" = set ; then
++  echo $ECHO_N "(cached) " >&6
++else
++  ac_check_lib_save_LIBS=$LIBS
++LIBS="-lquota -lprop -lrpcsvc $LIBS"
++cat confdefs.h - <<_ACEOF >conftest.$ac_ext
++/* end confdefs.h.  */
++
++/* Override any GCC internal prototype to avoid an error.
++   Use char because int might match the return type of a GCC
++   builtin and then its argument prototype would still apply.  */
++#ifdef __cplusplus
++extern "C"
++#endif
++char getfsquota ();
++int
++main ()
++{
++return getfsquota ();
++  ;
++  return 0;
++}
++_ACEOF
++rm -f conftest.$ac_objext conftest$ac_exeext
++if { (ac_try="$ac_link"
++case "(($ac_try" in
++  *\"* | *\`* | *\\*) ac_try_echo=\$ac_try;;
++  *) ac_try_echo=$ac_try;;
++esac
++eval "echo \"\$as_me:$LINENO: $ac_try_echo\"") >&5
++  (eval "$ac_link") 2>conftest.er1
++  ac_status=$?
++  grep -v '^ *+' conftest.er1 >conftest.err
++  rm -f conftest.er1
++  cat conftest.err >&5
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); } && {
++	 test -z "$ac_c_werror_flag" ||
++	 test ! -s conftest.err
++       } && test -s conftest$ac_exeext &&
++       $as_test_x conftest$ac_exeext; then
++  ac_cv_lib_quota_getfsquota=yes
++else
++  echo "$as_me: failed program was:" >&5
++sed 's/^/| /' conftest.$ac_ext >&5
++
++	ac_cv_lib_quota_getfsquota=no
++fi
++
++rm -f core conftest.err conftest.$ac_objext \
++    conftest$ac_exeext conftest.$ac_ext
++LIBS=$ac_check_lib_save_LIBS
++fi
++{ echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_lib_quota_getfsquota" >&5
++echo "${ECHO_T}$ac_cv_lib_quota_getfsquota" >&6; }
++if test "x$ac_cv_lib_quota_getfsquota" = xyes; then :
++  QUOTA_LIBS="-lquota -lprop -lrpcsvc"
++if test $ac_cv_lib_quota_getfsquota = yes; then
++  cat >>confdefs.h <<_ACEOF
++#define HAVE_LIBQUOTA 1
++_ACEOF
++fi
++fi
++
+ 	else
+ 		netatalk_cv_quotasupport="no"
+ 
+@@ -28977,7 +29043,7 @@ fi
+ 		LIBS="$savedLIBS"
+ 	fi
+ 
+-	netatalk_cv_install_pam=yes
++	netatalk_cv_install_pam=no
+ 	if test x"$pam_found" = "xyes" -a "x$PAMDIR" = "xNONE"; then
+ 		{ echo "$as_me:$LINENO: WARNING: PAM support can be compiled, but the install location for the netatalk.pamd file could not be determined. Either install this file by hand or specify the install path." >&5
+ echo "$as_me: WARNING: PAM support can be compiled, but the install location for the netatalk.pamd file could not be determined. Either install this file by hand or specify the install path." >&2;}
+@@ -32012,7 +32078,7 @@ if test "${enable_krbV_uam+set}" = set; 
+ 		if test x"$enableval" = x"yes"; then
+ 
+ 	FOUND_GSSAPI=no
+-	GSSAPI_LIBS=""
++#	GSSAPI_LIBS=""
+ 	GSSAPI_CFLAGS=""
+ 
+ 

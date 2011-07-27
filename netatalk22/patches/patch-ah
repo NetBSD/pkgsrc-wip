@@ -1,0 +1,23 @@
+$NetBSD: patch-ah,v 1.1.1.1 2011/07/27 16:26:32 hfath Exp $
+
+--- config/Makefile.in.orig	2011-03-21 12:45:21.000000000 +0000
++++ config/Makefile.in
+@@ -614,12 +614,14 @@ uninstall-local:
+ 	done
+ @USE_DEBIAN_TRUE@	rm -f $(DESTDIR)/etc/default/netatalk
+ 
++egconfdir = @prefix@/share/examples/netatalk
++
+ install-config-files: $(CONFFILES) $(GENFILES)
+-	$(mkinstalldirs) $(DESTDIR)$(pkgconfdir)
++	$(mkinstalldirs) $(DESTDIR)$(egconfdir)
+ 	for f in $(CONFFILES) $(GENFILES); do \
+-		if test "x$(OVERWRITE_CONFIG)" = "xyes" -o ! -f $(DESTDIR)$(pkgconfdir)/$$f; then \
+-			echo "$(INSTALL_DATA) $$f $(DESTDIR)$(pkgconfdir)"; \
+-			$(INSTALL_DATA) $$f $(DESTDIR)$(pkgconfdir); \
++		if test "x$(OVERWRITE_CONFIG)" = "xyes" -o ! -f $(DESTDIR)$(egconfdir)/$$f; then \
++			echo "$(INSTALL_DATA) $$f $(DESTDIR)$(egconfdir)"; \
++			$(INSTALL_DATA) $$f $(DESTDIR)$(egconfdir); \
+ 		else \
+ 			echo "not overwriting $$f"; \
+ 		fi; \
