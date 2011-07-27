@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/07/27 05:44:33 phonohawk Exp $
+lib/hxt-regex-xmlschema-${PKGVERSION}/${HASKELL_VERSION}/HShxt-regex-xmlschema-${PKGVERSION}.o
+lib/hxt-regex-xmlschema-${PKGVERSION}/${HASKELL_VERSION}/Text/Regex/XMLSchema/String.hi
+lib/hxt-regex-xmlschema-${PKGVERSION}/${HASKELL_VERSION}/Text/Regex/XMLSchema/String.p_hi
+lib/hxt-regex-xmlschema-${PKGVERSION}/${HASKELL_VERSION}/Text/Regex/XMLSchema/String/Regex.hi
+lib/hxt-regex-xmlschema-${PKGVERSION}/${HASKELL_VERSION}/Text/Regex/XMLSchema/String/Regex.p_hi
+lib/hxt-regex-xmlschema-${PKGVERSION}/${HASKELL_VERSION}/Text/Regex/XMLSchema/String/RegexParser.hi
+lib/hxt-regex-xmlschema-${PKGVERSION}/${HASKELL_VERSION}/Text/Regex/XMLSchema/String/RegexParser.p_hi
+lib/hxt-regex-xmlschema-${PKGVERSION}/${HASKELL_VERSION}/libHShxt-regex-xmlschema-${PKGVERSION}.a
+lib/hxt-regex-xmlschema-${PKGVERSION}/${HASKELL_VERSION}/libHShxt-regex-xmlschema-${PKGVERSION}_p.a
+lib/hxt-regex-xmlschema-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/hxt-regex-xmlschema-${PKGVERSION}/LICENSE
