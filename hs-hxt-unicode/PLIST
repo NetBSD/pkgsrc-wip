@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/07/27 05:52:11 phonohawk Exp $
+lib/hxt-unicode-${PKGVERSION}/${HASKELL_VERSION}/Data/Char/IsoLatinTables.hi
+lib/hxt-unicode-${PKGVERSION}/${HASKELL_VERSION}/Data/Char/IsoLatinTables.p_hi
+lib/hxt-unicode-${PKGVERSION}/${HASKELL_VERSION}/Data/String/EncodingNames.hi
+lib/hxt-unicode-${PKGVERSION}/${HASKELL_VERSION}/Data/String/EncodingNames.p_hi
+lib/hxt-unicode-${PKGVERSION}/${HASKELL_VERSION}/Data/String/UTF8.hi
+lib/hxt-unicode-${PKGVERSION}/${HASKELL_VERSION}/Data/String/UTF8.p_hi
+lib/hxt-unicode-${PKGVERSION}/${HASKELL_VERSION}/Data/String/UTF8Decoding.hi
+lib/hxt-unicode-${PKGVERSION}/${HASKELL_VERSION}/Data/String/UTF8Decoding.p_hi
+lib/hxt-unicode-${PKGVERSION}/${HASKELL_VERSION}/Data/String/Unicode.hi
+lib/hxt-unicode-${PKGVERSION}/${HASKELL_VERSION}/Data/String/Unicode.p_hi
+lib/hxt-unicode-${PKGVERSION}/${HASKELL_VERSION}/HShxt-unicode-${PKGVERSION}.o
+lib/hxt-unicode-${PKGVERSION}/${HASKELL_VERSION}/libHShxt-unicode-${PKGVERSION}.a
+lib/hxt-unicode-${PKGVERSION}/${HASKELL_VERSION}/libHShxt-unicode-${PKGVERSION}_p.a
+lib/hxt-unicode-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/hxt-unicode-${PKGVERSION}/LICENSE
