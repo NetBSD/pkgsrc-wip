@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4421 2011/07/27 05:24:43 phonohawk Exp $
+# $Id: Makefile,v 1.4422 2011/07/27 05:46:00 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -912,6 +912,7 @@ SUBDIR+=	hs-hslogger-template
 SUBDIR+=	hs-html
 SUBDIR+=	hs-hxt
 SUBDIR+=	hs-hxt-charproperties
+SUBDIR+=	hs-hxt-regex-xmlschema
 SUBDIR+=	hs-hxt-xpath
 SUBDIR+=	hs-iconv
 SUBDIR+=	hs-io-storage
