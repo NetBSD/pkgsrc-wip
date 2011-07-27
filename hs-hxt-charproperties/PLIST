@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/07/27 05:23:07 phonohawk Exp $
+lib/hxt-charproperties-${PKGVERSION}/${HASKELL_VERSION}/Data/Char/Properties/UnicodeBlocks.hi
+lib/hxt-charproperties-${PKGVERSION}/${HASKELL_VERSION}/Data/Char/Properties/UnicodeBlocks.p_hi
+lib/hxt-charproperties-${PKGVERSION}/${HASKELL_VERSION}/Data/Char/Properties/UnicodeCharProps.hi
+lib/hxt-charproperties-${PKGVERSION}/${HASKELL_VERSION}/Data/Char/Properties/UnicodeCharProps.p_hi
+lib/hxt-charproperties-${PKGVERSION}/${HASKELL_VERSION}/Data/Char/Properties/XMLCharProps.hi
+lib/hxt-charproperties-${PKGVERSION}/${HASKELL_VERSION}/Data/Char/Properties/XMLCharProps.p_hi
+lib/hxt-charproperties-${PKGVERSION}/${HASKELL_VERSION}/Data/Set/CharSet.hi
+lib/hxt-charproperties-${PKGVERSION}/${HASKELL_VERSION}/Data/Set/CharSet.p_hi
+lib/hxt-charproperties-${PKGVERSION}/${HASKELL_VERSION}/HShxt-charproperties-${PKGVERSION}.o
+lib/hxt-charproperties-${PKGVERSION}/${HASKELL_VERSION}/libHShxt-charproperties-${PKGVERSION}.a
+lib/hxt-charproperties-${PKGVERSION}/${HASKELL_VERSION}/libHShxt-charproperties-${PKGVERSION}_p.a
+lib/hxt-charproperties-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/hxt-charproperties-${PKGVERSION}/LICENSE
