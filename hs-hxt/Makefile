@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2010/02/17 15:16:45 phonohawk Exp $
+# $NetBSD: Makefile,v 1.7 2011/07/27 06:22:04 phonohawk Exp $
 #
 
-DISTNAME=	hxt-8.5.0
-PKGREVISION=	1
+DISTNAME=	hxt-9.1.2
 CATEGORIES=	textproc
 
 MAINTAINER=	pho@cielonegro.org
@@ -10,9 +9,11 @@ COMMENT=	Collection of tools for processing XML with Haskell
 LICENSE=	mit
 
 .include "../../wip/mk/haskell.mk"
-.include "../../wip/hs-curl/buildlink3.mk"
+.include "../../wip/hs-binary/buildlink3.mk"
 .include "../../wip/hs-deepseq/buildlink3.mk"
+.include "../../wip/hs-hxt-charproperties/buildlink3.mk"
+.include "../../wip/hs-hxt-regex-xmlschema/buildlink3.mk"
+.include "../../wip/hs-hxt-unicode/buildlink3.mk"
 .include "../../wip/hs-network/buildlink3.mk"
 .include "../../wip/hs-parsec/buildlink3.mk"
-.include "../../wip/hs-tagsoup/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

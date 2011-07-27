@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.4 2010/02/17 15:14:21 phonohawk Exp $
+$NetBSD: patch-aa,v 1.5 2011/07/27 06:22:04 phonohawk Exp $
+
+HUnit seems not to be used at all!
 
 --- hxt.cabal.orig	2010-01-22 11:30:12.000000000 +0000
 +++ hxt.cabal

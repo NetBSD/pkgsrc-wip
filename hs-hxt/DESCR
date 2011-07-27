@@ -5,6 +5,12 @@ representing XML documents, including the DTD subset and the document
 subset, in Haskell. It contains a validating XML parser, a HTML
 parser, namespace support, an XPath expression evaluator, an XSLT
 library, a RelaxNG schema validator and funtions for serialization and
-deserialization of user defined data. The library make extensive use
-of the arrow approach for processing XML. Since version 8.5 XPath and
-XSLT have been moved to separate packages hxt-xpath and hxt-xslt.
+deserialization of user defined data. The library makes extensive use
+of the arrow approach for processing XML.
+
+Since version 9 the toolbox is partitioned into various
+(sub-)packages. This package contains the core functionality,
+hxt-curl, hxt-tagsoup, hxt-relaxng, hxt-xpath, hxt-xslt,
+hxt-regex-xmlschema contain the extensions. hxt-unicode contains
+encoding and decoding functions, hxt-charproperties char properties
+for unicode and XML.
