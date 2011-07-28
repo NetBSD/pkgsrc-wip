@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2010/03/16 05:07:45 phonohawk Exp $
+# $NetBSD: Makefile,v 1.3 2011/07/28 14:14:30 phonohawk Exp $
 #
 
-DISTNAME=	time-w3c-0.1
+DISTNAME=	time-w3c-0.1.0.1
 CATEGORIES=	time
 
 MAINTAINER=	pho@cielonegro.org

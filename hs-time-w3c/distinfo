@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/03/16 04:48:07 phonohawk Exp $
+$NetBSD: distinfo,v 1.2 2011/07/28 14:14:30 phonohawk Exp $
 
-SHA1 (time-w3c-0.1.tar.gz) = 27b97496421a2a71ee2e07d8974b045d15c89ec7
-RMD160 (time-w3c-0.1.tar.gz) = 4308ae86729115373ce142e58f36312d3e9278d7
-Size (time-w3c-0.1.tar.gz) = 5175 bytes
+SHA1 (time-w3c-0.1.0.1.tar.gz) = cf9e1e32f98b1ed6c35aa721a38e84539a0c1b53
+RMD160 (time-w3c-0.1.0.1.tar.gz) = 2e84b32af624ba77cb4755121dcf1b0de5d3fd1d
+Size (time-w3c-0.1.0.1.tar.gz) = 5287 bytes
