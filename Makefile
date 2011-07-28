@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4426 2011/07/28 10:10:25 phonohawk Exp $
+# $Id: Makefile,v 1.4427 2011/07/28 12:36:00 ryo-on Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2426,6 +2426,7 @@ SUBDIR+=	qinx
 SUBDIR+=	qmpdclient
 SUBDIR+=	qn-x11
 SUBDIR+=	qrint
+SUBDIR+=	qrq
 SUBDIR+=	qtcreator
 SUBDIR+=	qtre
 SUBDIR+=	quantlib
