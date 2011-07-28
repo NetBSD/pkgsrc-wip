@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/07/27 16:26:32 hfath Exp $
+# $NetBSD: Makefile,v 1.2 2011/07/28 09:09:33 hfath Exp $
 
 DISTNAME=	netatalk-2.2.0
 CATEGORIES=	net print
@@ -39,7 +39,6 @@ CONFLICTS=	netatalk-asun-[0-9]* netatalk-umich-[0-9]*
 BUILD_DEFS+=		VARBASE
 CONFIGURE_ARGS+=	--enable-netbsd
 CONFIGURE_ARGS+=	--enable-overwrite
-CONFIGURE_ARGS+=	--enable-timelord
 CONFIGURE_ARGS+=	--libexecdir=${PREFIX}/libexec/netatalk
 CONFIGURE_ARGS+=	--sbindir=${PREFIX}/libexec/netatalk
 CONFIGURE_ARGS+=	--with-pkgconfdir=${PKG_SYSCONFDIR}
