@@ -1,8 +1,11 @@
-$NetBSD: patch-aa,v 1.2 2009/11/10 09:17:45 phonohawk Exp $
+$NetBSD: patch-HUnit.cabal,v 1.1 2011/07/28 09:54:12 phonohawk Exp $
 
---- HUnit.cabal.orig	2009-10-11 22:52:17.000000000 +0900
+Don't build/install the test executables.
+It's no use for any library users.
+
+--- HUnit.cabal.orig	2010-09-27 07:52:00.000000000 +0000
 +++ HUnit.cabal
-@@ -46,42 +46,3 @@ Library
+@@ -51,44 +51,3 @@ Library
          Test.HUnit.Text,
          Test.HUnit
      Extensions: CPP
@@ -14,6 +17,7 @@ $NetBSD: patch-aa,v 1.2 2009/11/10 09:17:45 phonohawk Exp $
 -    if flag(base4)
 -        Build-Depends: base >=4
 -        CPP-Options: -DBASE4
+-        GHC-Options: -Wall
 -    else
 -        Build-Depends: base <4
 -    if impl(ghc >= 6.10)
@@ -27,6 +31,7 @@ $NetBSD: patch-aa,v 1.2 2009/11/10 09:17:45 phonohawk Exp $
 -    if flag(base4)
 -        Build-Depends: base >=4
 -        CPP-Options: -DBASE4
+-        GHC-Options: -Wall
 -    else
 -        Build-Depends: base <4
 -    if impl(ghc >= 6.10)
