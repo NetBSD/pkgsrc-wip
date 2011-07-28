@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2010/03/04 12:29:19 lexort Exp $
+# $NetBSD: Makefile,v 1.4 2011/07/28 12:20:35 lexort Exp $
 
 SVNVERSION=	4543
-VERSION=	0.7.5.${SVNVERSION}
+UPSTREAM_VERSION=	0.7.5
+VERSION=	${UPSTREAM_VERSION=}.${SVNVERSION}
 DISTNAME=	TracGraphViz-${VERSION}
 PKGNAME=	trac-plugins-GraphViz-${VERSION}
 # Empty to avoid default setting.
@@ -17,6 +18,8 @@ COMMENT=	Graphviz plugin for Trac
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	{ja-,}trac>=0.11:../../www/trac
+
+EGG_NAME=	graphviz-${UPSTREAM_VERSION}dev
 
 SVN_REPOSITORIES=	plugin
 SVN_ROOT.plugin=	http://trac-hacks.org/svn/graphvizplugin/0.11

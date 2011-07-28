@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.3 2010/03/04 12:27:10 lexort Exp $
-${PYSITELIB}/TracMasterTickets-2.1.3-py2.5.egg-info/PKG-INFO
-${PYSITELIB}/TracMasterTickets-2.1.3-py2.5.egg-info/SOURCES.txt
-${PYSITELIB}/TracMasterTickets-2.1.3-py2.5.egg-info/dependency_links.txt
-${PYSITELIB}/TracMasterTickets-2.1.3-py2.5.egg-info/entry_points.txt
-${PYSITELIB}/TracMasterTickets-2.1.3-py2.5.egg-info/requires.txt
-${PYSITELIB}/TracMasterTickets-2.1.3-py2.5.egg-info/top_level.txt
+@comment $NetBSD: PLIST,v 1.4 2011/07/28 12:26:39 lexort Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/mastertickets/__init__.py
 ${PYSITELIB}/mastertickets/__init__.pyc
 ${PYSITELIB}/mastertickets/__init__.pyo

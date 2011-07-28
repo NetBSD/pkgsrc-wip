@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2010/06/10 14:45:05 lexort Exp $
+# $NetBSD: Makefile,v 1.5 2011/07/28 12:29:30 lexort Exp $
 
-VERSION=	0.1.${SVN_VERSION}
+UPSTREAM_VERSION=	0.1
+VERSION=	${UPSTREAM_VERSION}.${SVN_VERSION}
 SVN_VERSION=	5285
 
 DISTNAME=	TracSensitiveTickets-${VERSION}
@@ -21,6 +22,8 @@ COMMENT=	Ticket dependency plugin for Trac
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	{ja-,}trac>=0.11:../../www/trac
+
+EGG_NAME=	sensitivetickets-${UPSTREAM_VERSION}
 
 SVN_REPOSITORIES=	sensitivetickets
 SVN_ROOT.sensitivetickets=	http://trac-hacks.org/svn/sensitiveticketsplugin/0.11
