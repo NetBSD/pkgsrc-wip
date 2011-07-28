@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/02/09 12:02:07 phonohawk Exp $
+$NetBSD: distinfo,v 1.2 2011/07/28 13:14:13 phonohawk Exp $
 
-SHA1 (hxt-xpath-8.5.0.tar.gz) = 3474e117e84729f538a5c9858ae8f03406bda46c
-RMD160 (hxt-xpath-8.5.0.tar.gz) = e71001038d564168018b74d62458468b34ed7975
-Size (hxt-xpath-8.5.0.tar.gz) = 86991 bytes
+SHA1 (hxt-xpath-9.1.1.tar.gz) = 2b034184ba5eff027df2788a7c2bf3234fb2ca7e
+RMD160 (hxt-xpath-9.1.1.tar.gz) = 85bfde4bc93e6a29b9066c77e528ddf67f5ff2d3
+Size (hxt-xpath-9.1.1.tar.gz) = 84752 bytes

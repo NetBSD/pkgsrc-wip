@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/02/09 12:02:07 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/07/28 13:14:13 phonohawk Exp $
 lib/hxt-xpath-${PKGVERSION}/${HASKELL_VERSION}/HShxt-xpath-${PKGVERSION}.o
 lib/hxt-xpath-${PKGVERSION}/${HASKELL_VERSION}/Text/XML/HXT/XPath.hi
 lib/hxt-xpath-${PKGVERSION}/${HASKELL_VERSION}/Text/XML/HXT/XPath.p_hi
@@ -25,4 +25,4 @@ lib/hxt-xpath-${PKGVERSION}/${HASKELL_VERSION}/Text/XML/HXT/XPath/XPathToString.
 lib/hxt-xpath-${PKGVERSION}/${HASKELL_VERSION}/libHShxt-xpath-${PKGVERSION}.a
 lib/hxt-xpath-${PKGVERSION}/${HASKELL_VERSION}/libHShxt-xpath-${PKGVERSION}_p.a
 lib/hxt-xpath-${PKGVERSION}/${HASKELL_VERSION}/package-description
-share/doc/hxt-xpath-${PKGVERSION}/LICENCE
+share/doc/hxt-xpath-${PKGVERSION}/LICENSE
