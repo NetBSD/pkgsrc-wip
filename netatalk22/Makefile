@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/07/28 09:09:33 hfath Exp $
+# $NetBSD: Makefile,v 1.3 2011/07/28 14:41:18 hfath Exp $
 
 DISTNAME=	netatalk-2.2.0
 CATEGORIES=	net print
@@ -47,6 +47,9 @@ CONFIGURE_ARGS+=	--localstatedir=${VARBASE}/netatalk
 CONFIGURE_ARGS+=	--with-uams-path=${PREFIX}/libexec/netatalk/uams
 CONFIGURE_ARGS+=	--with-bdb=${BDBBASE}
 CONFIGURE_ARGS+=	--with-ssl-dir=${BUILDLINK_PREFIX.openssl}
+
+# Workaround for Netatalk bug #3380785
+CONFIGURE_ARGS+=	--without-ldap
 
 MAKE_DIRS+=		${PKG_SYSCONFDIR}/msg
 

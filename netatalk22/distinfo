@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/07/27 16:26:32 hfath Exp $
+$NetBSD: distinfo,v 1.2 2011/07/28 14:41:18 hfath Exp $
 
 SHA1 (netatalk-2.2.0.tar.bz2) = cee946cca2564ea133f9f6d55e32c9156098cbba
 RMD160 (netatalk-2.2.0.tar.bz2) = 192175b3dbd93c9cb0867110be0bb4a2e05c829f
@@ -22,3 +22,5 @@ SHA1 (patch-at) = 02946db1ffc6eccc1f7925461c39000c0d0845f2
 SHA1 (patch-au) = cff38d7d61af4ee260cead2c741f6aae07be3ddd
 SHA1 (patch-bj) = e1e0fc2be101554a2e0d53c24d113b593556eb41
 SHA1 (patch-include_atalk_dsi.h) = 77c16e42758f1b7db9daadb040337c2c23830c12
+SHA1 (patch-include_atalk_paths.h) = 21f51da5315f756b30acdfb693d99459ac974fdb
+SHA1 (patch-libatalk_util_socket.c) = 9f71ad28aab1b6fd0d8f826e7788ef4d584a9a29
