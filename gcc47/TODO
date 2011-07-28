@@ -6,14 +6,6 @@
 * Depends on converters/libiconv?
 Check, if buildlink/builtin provides correct PREFIX:
 CONFIGURE_ARGS+=	--with-libiconv-prefix=${PREFIX}
-* Buildlink wip/ppl?
-Check, if buildlink/builtin provides correct PREFIX:
-CONFIGURE_ARGS+=	--with-ppl-include=${PREFIX}/include
-CONFIGURE_ARGS+=	--with-ppl-lib=${PREFIX}/lib
-* Buildlink wip/cloog?
-Check, if buildlink/builtin provides correct PREFIX:
-CONFIGURE_ARGS+=	--with-cloog-include=${PREFIX}/include
-CONFIGURE_ARGS+=	--with-cloog-lib=${PREFIX}/lib
 * Buildlink devel/binutils?
 Check, if buildlink/builtin provides correct PREFIX:
 CONFIGURE_ARGS+=	--with-ld=${PREFIX}/bin/gnu-ld
