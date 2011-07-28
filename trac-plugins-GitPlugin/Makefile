@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2010/07/04 19:26:06 rsmarples Exp $
+# $NetBSD: Makefile,v 1.5 2011/07/28 12:37:03 lexort Exp $
 
 DISTNAME=	gitplugin_0.12-r${SVN_REV}
 PKGNAME=	trac-plugins-GitPlugin-0.1pre${SVN_REV}
-EGGNAME=	TracGitPlugin-0.12.0.2dev
+EGG_NAME=	TracGit-0.12.0.2dev
 CATEGORIES=	www
 MASTER_SITES=	-http://trac-hacks.org/changeset/${SVN_REV}/${SVN_MOD}?old_path=/&format=zip
 EXTRACT_SUFX=	.zip

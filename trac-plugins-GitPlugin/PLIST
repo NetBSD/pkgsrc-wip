@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.4 2010/07/04 19:26:07 rsmarples Exp $
-${PYSITELIB}/TracGit-0.12.0.2dev-py2.5-nspkg.pth
-${PYSITELIB}/TracGit-0.12.0.2dev-py2.5.egg-info/PKG-INFO
-${PYSITELIB}/TracGit-0.12.0.2dev-py2.5.egg-info/SOURCES.txt
-${PYSITELIB}/TracGit-0.12.0.2dev-py2.5.egg-info/dependency_links.txt
-${PYSITELIB}/TracGit-0.12.0.2dev-py2.5.egg-info/entry_points.txt
-${PYSITELIB}/TracGit-0.12.0.2dev-py2.5.egg-info/namespace_packages.txt
-${PYSITELIB}/TracGit-0.12.0.2dev-py2.5.egg-info/top_level.txt
+@comment $NetBSD: PLIST,v 1.5 2011/07/28 12:37:03 lexort Exp $
+${PYSITELIB}/TracGit-0.12.0.2dev-py2.6-nspkg.pth
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/namespace_packages.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/tracext/git/PyGIT.py
 ${PYSITELIB}/tracext/git/PyGIT.pyc
 ${PYSITELIB}/tracext/git/PyGIT.pyo
