@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/07/27 03:23:29 phonohawk Exp $
-
-SHA1 (FileManip-0.3.2.tar.gz) = b881051819d0e8c171e03b8c270b01ef3a0baa57
-RMD160 (FileManip-0.3.2.tar.gz) = 548efedd8f433f88cb4b26f4be6fe56e56de44ca
-Size (FileManip-0.3.2.tar.gz) = 10353 bytes
-SHA1 (patch-aa) = dfaecc22071f5ae7da21dc1a58b0cd358c35f9c8
-SHA1 (patch-ab) = 3ed4613cfbf042a4fc766f7fa7904064e5c221cd
-SHA1 (patch-ac) = 17526d572ebc84a65f295a6ef99114e5656d615e
