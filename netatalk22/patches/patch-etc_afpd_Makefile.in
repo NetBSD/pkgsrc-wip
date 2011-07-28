@@ -1,0 +1,12 @@
+$NetBSD: patch-etc_afpd_Makefile.in,v 1.1 2011/07/28 16:08:01 hfath Exp $
+
+--- etc/afpd/Makefile.in.orig	2011-07-27 11:59:24.000000000 +0000
++++ etc/afpd/Makefile.in
+@@ -322,6 +322,7 @@ afpd_LDADD = \
+ afpd_LDFLAGS = -export-dynamic 
+ afpd_CFLAGS = \
+ 	-I$(top_srcdir)/include \
++	-I$(top_srcdir)/include/atalk \
+ 	-I$(top_srcdir)/sys \
+ 	@SLP_CFLAGS@ @ZEROCONF_CFLAGS@ \
+ 	-DAPPLCNAME \
