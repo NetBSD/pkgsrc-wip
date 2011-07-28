@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/07/28 12:34:58 ryo-on Exp $
+bin/qrq
+bin/qrqscore
+man/man1/qrq.1
+share/qrq/callbase.qcb
+share/qrq/english.qcb
+share/qrq/qrqrc
+share/qrq/toplist

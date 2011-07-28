@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/07/28 12:34:58 ryo-on Exp $
+
+SHA1 (qrq-0.2.0.tar.gz) = ff853db52a82f3b6808f179441b59fa74b836f22
+RMD160 (qrq-0.2.0.tar.gz) = 2f5e81d7f16600cfe9f3cea1c1ce2d8784bdbada
+Size (qrq-0.2.0.tar.gz) = 112657 bytes
+SHA1 (patch-Makefile) = d684762f2f16654df77cc29196d63fbb2870608f
