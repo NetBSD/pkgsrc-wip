@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/07/27 04:23:31 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/07/28 12:55:38 phonohawk Exp $
 lib/hslogger-${PKGVERSION}/${HASKELL_VERSION}/HShslogger-${PKGVERSION}.o
 lib/hslogger-${PKGVERSION}/${HASKELL_VERSION}/System/Log.hi
 lib/hslogger-${PKGVERSION}/${HASKELL_VERSION}/System/Log.p_hi
+lib/hslogger-${PKGVERSION}/${HASKELL_VERSION}/System/Log/Formatter.hi
+lib/hslogger-${PKGVERSION}/${HASKELL_VERSION}/System/Log/Formatter.p_hi
 lib/hslogger-${PKGVERSION}/${HASKELL_VERSION}/System/Log/Handler.hi
 lib/hslogger-${PKGVERSION}/${HASKELL_VERSION}/System/Log/Handler.p_hi
 lib/hslogger-${PKGVERSION}/${HASKELL_VERSION}/System/Log/Handler/Growl.hi

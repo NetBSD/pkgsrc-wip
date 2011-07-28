@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/07/27 04:23:31 phonohawk Exp $
+$NetBSD: distinfo,v 1.2 2011/07/28 12:55:38 phonohawk Exp $
 
-SHA1 (hslogger-1.0.7.tar.gz) = 00c1c20096f2c91302c6cc84b6ca07b2293b661b
-RMD160 (hslogger-1.0.7.tar.gz) = c86c3a4e65d96b4fd37eb75def5b9a6b50964360
-Size (hslogger-1.0.7.tar.gz) = 42051 bytes
+SHA1 (hslogger-1.1.4.tar.gz) = ac40ec87f3af4abd3388ccc0c1a17070a2b0e156
+RMD160 (hslogger-1.1.4.tar.gz) = 5f6df20f63a86e80956633bf1bd2c8971b844d13
+Size (hslogger-1.1.4.tar.gz) = 44342 bytes
