@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/07/28 10:09:06 phonohawk Exp $
+lib/filemanip-${PKGVERSION}/${HASKELL_VERSION}/HSfilemanip-${PKGVERSION}.o
+lib/filemanip-${PKGVERSION}/${HASKELL_VERSION}/System/FilePath/Find.hi
+lib/filemanip-${PKGVERSION}/${HASKELL_VERSION}/System/FilePath/Find.p_hi
+lib/filemanip-${PKGVERSION}/${HASKELL_VERSION}/System/FilePath/Glob.hi
+lib/filemanip-${PKGVERSION}/${HASKELL_VERSION}/System/FilePath/Glob.p_hi
+lib/filemanip-${PKGVERSION}/${HASKELL_VERSION}/System/FilePath/GlobPattern.hi
+lib/filemanip-${PKGVERSION}/${HASKELL_VERSION}/System/FilePath/GlobPattern.p_hi
+lib/filemanip-${PKGVERSION}/${HASKELL_VERSION}/System/FilePath/Manip.hi
+lib/filemanip-${PKGVERSION}/${HASKELL_VERSION}/System/FilePath/Manip.p_hi
+lib/filemanip-${PKGVERSION}/${HASKELL_VERSION}/libHSfilemanip-${PKGVERSION}.a
+lib/filemanip-${PKGVERSION}/${HASKELL_VERSION}/libHSfilemanip-${PKGVERSION}_p.a
+lib/filemanip-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/filemanip-${PKGVERSION}/LICENSE
