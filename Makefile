@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4431 2011/07/29 16:20:15 phonohawk Exp $
+# $Id: Makefile,v 1.4432 2011/07/29 16:27:33 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -861,6 +861,7 @@ SUBDIR+=	hs-blaze-builder
 SUBDIR+=	hs-bytestring-trie
 SUBDIR+=	hs-cabal-query
 SUBDIR+=	hs-cairo
+SUBDIR+=	hs-case-insensitive
 SUBDIR+=	hs-cautious-file
 SUBDIR+=	hs-cereal
 SUBDIR+=	hs-chalkboard
