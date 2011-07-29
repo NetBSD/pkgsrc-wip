@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4427 2011/07/28 12:36:00 ryo-on Exp $
+# $Id: Makefile,v 1.4428 2011/07/29 13:37:40 ryo-on Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -563,6 +563,7 @@ SUBDIR+=	firebird
 SUBDIR+=	fireflysung-ttf
 SUBDIR+=	firefox
 SUBDIR+=	firefox-wrapper
+SUBDIR+=	firefox3-bin
 SUBDIR+=	firehose
 SUBDIR+=	fish
 SUBDIR+=	flam3-svn
