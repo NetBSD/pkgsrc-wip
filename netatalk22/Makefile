@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/07/29 12:18:52 hfath Exp $
+# $NetBSD: Makefile,v 1.5 2011/07/29 12:40:00 hfath Exp $
 
 DISTNAME=	netatalk-2.2.0
 CATEGORIES=	net print
@@ -58,9 +58,6 @@ SUBST_FILES.paths=	etc/psf/etc2ps.sh distrib/initscripts/Makefile.in
 SUBST_SED.paths=	-e "s,^\\(DVIPS=\\)\\(/usr/local/tex\\)\\(/bin\\),\\1${PREFIX}\\3,"
 
 RCD_SCRIPTS=		afpd cnid_metad
-.for f in ${RCD_SCRIPTS}
-RCD_SCRIPT_SRC.${f}=	${WRKSRC}/distrib/initscripts/${f}
-.endfor
 
 .include "options.mk"
 
@@ -70,6 +67,10 @@ CONF_FILES+=	${EGDIR}/papd.conf ${PKG_SYSCONFDIR}/papd.conf
 RCD_SCRIPTS+=		atalkd papd timelord
 INSTALLATION_DIRS=	libexec/psffilters
 .endif
+
+.for f in ${RCD_SCRIPTS}
+RCD_SCRIPT_SRC.${f}=	${WRKSRC}/distrib/initscripts/${f}
+.endfor
 
 .if !empty(PKG_OPTIONS:Mpam)
 post-install:
