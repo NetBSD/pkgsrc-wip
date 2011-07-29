@@ -1,5 +1,13 @@
 ----------------------------------------------------------------------
-Version 0.54, by Aleksey Cheusov, Tue, 10 May 2011 00:10:50 +0300
+Version 0.54, by Aleksey Cheusov, Fri, 29 Jul 2011 23:37:41 +0300
+
+  pkg_micro_src_summary:
+     - support for PSS_SLAVES=nnn was added
+
+  pkg_digger:
+     - workaround for buggy shells (set -e; if eval false; ...)
+
+  Regression tests were updated
 
 ----------------------------------------------------------------------
 Version 0.53.2, by Aleksey Cheusov, Wed, 13 Apr 2011 21:33:58 +0300
