@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/07/28 14:41:18 hfath Exp $
+# $NetBSD: Makefile,v 1.4 2011/07/29 12:18:52 hfath Exp $
 
 DISTNAME=	netatalk-2.2.0
 CATEGORIES=	net print
@@ -28,9 +28,7 @@ EGDIR=		${PREFIX}/share/examples/netatalk
 CONF_FILES=	${EGDIR}/AppleVolumes.default ${PKG_SYSCONFDIR}/AppleVolumes.default
 CONF_FILES+=	${EGDIR}/AppleVolumes.system ${PKG_SYSCONFDIR}/AppleVolumes.system
 CONF_FILES+=	${EGDIR}/afpd.conf ${PKG_SYSCONFDIR}/afpd.conf
-CONF_FILES+=	${EGDIR}/atalkd.conf ${PKG_SYSCONFDIR}/atalkd.conf
 CONF_FILES+=	${EGDIR}/netatalk.conf ${PKG_SYSCONFDIR}/netatalk.conf
-CONF_FILES+=	${EGDIR}/papd.conf ${PKG_SYSCONFDIR}/papd.conf
 
 CONFLICTS=	netatalk-asun-[0-9]* netatalk-umich-[0-9]*
 
@@ -59,14 +57,19 @@ SUBST_STAGE.paths=	pre-configure
 SUBST_FILES.paths=	etc/psf/etc2ps.sh distrib/initscripts/Makefile.in
 SUBST_SED.paths=	-e "s,^\\(DVIPS=\\)\\(/usr/local/tex\\)\\(/bin\\),\\1${PREFIX}\\3,"
 
-RCD_SCRIPTS=		afpd atalkd papd timelord cnid_metad
+RCD_SCRIPTS=		afpd cnid_metad
 .for f in ${RCD_SCRIPTS}
 RCD_SCRIPT_SRC.${f}=	${WRKSRC}/distrib/initscripts/${f}
 .endfor
 
 .include "options.mk"
 
+.if !empty(PKG_OPTIONS:Mddp)
+CONF_FILES+=	${EGDIR}/atalkd.conf ${PKG_SYSCONFDIR}/atalkd.conf
+CONF_FILES+=	${EGDIR}/papd.conf ${PKG_SYSCONFDIR}/papd.conf
+RCD_SCRIPTS+=		atalkd papd timelord
 INSTALLATION_DIRS=	libexec/psffilters
+.endif
 
 .if !empty(PKG_OPTIONS:Mpam)
 post-install:

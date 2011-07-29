@@ -1,4 +1,6 @@
-$NetBSD: patch-etc_afpd_Makefile.in,v 1.1 2011/07/28 16:08:01 hfath Exp $
+$NetBSD: patch-etc_afpd_Makefile.in,v 1.2 2011/07/29 12:18:52 hfath Exp $
+
+Add a missing #include path.
 
 --- etc/afpd/Makefile.in.orig	2011-07-27 11:59:24.000000000 +0000
 +++ etc/afpd/Makefile.in

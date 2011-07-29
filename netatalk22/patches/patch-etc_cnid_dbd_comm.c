@@ -1,4 +1,7 @@
-$NetBSD: patch-etc_cnid_dbd_comm.c,v 1.1 2011/07/28 16:08:01 hfath Exp $
+$NetBSD: patch-etc_cnid_dbd_comm.c,v 1.2 2011/07/29 12:18:52 hfath Exp $
+
+Do not #define standards for *BSD since they restrict namespace,
+and things like u_{byte,short} do not get defined.
 
 --- etc/cnid_dbd/comm.c.orig	2011-07-22 04:30:42.000000000 +0000
 +++ etc/cnid_dbd/comm.c

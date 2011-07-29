@@ -1,5 +1,7 @@
-$NetBSD: patch-include_atalk_dsi.h,v 1.1.1.1 2011/07/27 16:26:32 hfath Exp $
+$NetBSD: patch-include_atalk_dsi.h,v 1.2 2011/07/29 12:18:52 hfath Exp $
 
+Add missing #include.
+    
 --- include/atalk/dsi.h.orig	2010-09-20 08:32:27.000000000 +0000
 +++ include/atalk/dsi.h
 @@ -11,6 +11,7 @@

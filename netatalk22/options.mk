@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2011/07/28 09:09:33 hfath Exp $
+# $NetBSD: options.mk,v 1.3 2011/07/29 12:18:52 hfath Exp $
 #
 PKG_OPTIONS_VAR=	PKG_OPTIONS.netatalk
 PKG_SUPPORTED_OPTIONS=	cups ddp kerberos pam slp
@@ -13,11 +13,14 @@ CONFIGURE_ARGS+=	--enable-cups
 CONFIGURE_ARGS+=	--disable-cups
 .endif
 
+PLIST_VARS+=		ddp
 .if !empty(PKG_OPTIONS:Mddp)
 CONFIGURE_ARGS+=	--enable-ddp
 CONFIGURE_ARGS+=	--enable-timelord
+PLIST.ddp=		yes
 .else
 CONFIGURE_ARGS+=	--disable-ddp
+CONFIGURE_ARGS+=	--disable-timelord
 .endif
 
 PLIST_VARS+=		gssapi
