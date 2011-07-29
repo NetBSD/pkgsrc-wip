@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4429 2011/07/29 15:34:20 ryo-on Exp $
+# $Id: Makefile,v 1.4430 2011/07/29 16:11:01 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -857,6 +857,7 @@ SUBDIR+=	hs-bindings-DSL
 SUBDIR+=	hs-bindings-EsounD
 SUBDIR+=	hs-bindings-audiofile
 SUBDIR+=	hs-bindings-librrd
+SUBDIR+=	hs-blaze-builder
 SUBDIR+=	hs-bytestring-trie
 SUBDIR+=	hs-cabal-query
 SUBDIR+=	hs-cairo
