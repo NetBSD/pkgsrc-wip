@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4432 2011/07/29 16:27:33 phonohawk Exp $
+# $Id: Makefile,v 1.4433 2011/07/29 16:32:49 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -850,6 +850,7 @@ SUBDIR+=	hs-SHA
 SUBDIR+=	hs-StateVar
 SUBDIR+=	hs-Tensor
 SUBDIR+=	hs-ansi-terminal
+SUBDIR+=	hs-ascii
 SUBDIR+=	hs-base-unicode-symbols
 SUBDIR+=	hs-binary
 SUBDIR+=	hs-binary-strict
