@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/07/29 16:19:15 phonohawk Exp $
+lib/hashable-${PKGVERSION}/${HASKELL_VERSION}/Data/Hashable.hi
+lib/hashable-${PKGVERSION}/${HASKELL_VERSION}/Data/Hashable.p_hi
+lib/hashable-${PKGVERSION}/${HASKELL_VERSION}/HShashable-${PKGVERSION}.o
+lib/hashable-${PKGVERSION}/${HASKELL_VERSION}/libHShashable-${PKGVERSION}.a
+lib/hashable-${PKGVERSION}/${HASKELL_VERSION}/libHShashable-${PKGVERSION}_p.a
+lib/hashable-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/hashable-${PKGVERSION}/LICENSE
