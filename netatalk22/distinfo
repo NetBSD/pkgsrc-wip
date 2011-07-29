@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2011/07/29 12:18:52 hfath Exp $
+$NetBSD: distinfo,v 1.5 2011/07/29 12:40:35 hfath Exp $
 
 SHA1 (netatalk-2.2.0.tar.bz2) = cee946cca2564ea133f9f6d55e32c9156098cbba
 RMD160 (netatalk-2.2.0.tar.bz2) = 192175b3dbd93c9cb0867110be0bb4a2e05c829f
@@ -21,9 +21,9 @@ SHA1 (patch-as) = db1b120beb2311959b9d012a3d2e13231f59f137
 SHA1 (patch-at) = 02946db1ffc6eccc1f7925461c39000c0d0845f2
 SHA1 (patch-au) = cff38d7d61af4ee260cead2c741f6aae07be3ddd
 SHA1 (patch-bj) = e1e0fc2be101554a2e0d53c24d113b593556eb41
-SHA1 (patch-etc_afpd_Makefile.in) = e87f0c99a34dc4a52af0a7af339388743dab441f
-SHA1 (patch-etc_cnid_dbd_comm.c) = 38075be8bcccde82d6198e2c4b1d56655d158170
-SHA1 (patch-include_atalk_dsi.h) = 77c16e42758f1b7db9daadb040337c2c23830c12
-SHA1 (patch-include_atalk_paths.h) = 21f51da5315f756b30acdfb693d99459ac974fdb
-SHA1 (patch-libatalk_util_socket.c) = 9f71ad28aab1b6fd0d8f826e7788ef4d584a9a29
-SHA1 (patch-man_man_Makefile.in) = bfaec97eea5609bfa59a4028b815c2231edf671b
+SHA1 (patch-etc_afpd_Makefile.in) = f71f8a3111b55fba7c916d3b89411f04df42881a
+SHA1 (patch-etc_cnid_dbd_comm.c) = a7ff6747c4facf17b37a4d2eee913689281fc5a8
+SHA1 (patch-include_atalk_dsi.h) = 884000add66b83babf60e96efaf22edfca26da56
+SHA1 (patch-include_atalk_paths.h) = 3f2a43d80e7b9e01e9aae7ee17e6ef1c5f7b6d46
+SHA1 (patch-libatalk_util_socket.c) = c0b139afea6296b648a41914fbf33c11c483e9eb
+SHA1 (patch-man_man_Makefile.in) = 3466a7643f73dfb65e44b1238b9d01cb7833ccb4
