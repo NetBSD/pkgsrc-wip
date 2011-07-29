@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4434 2011/07/29 20:06:09 phonohawk Exp $
+# $Id: Makefile,v 1.4435 2011/07/29 21:59:44 ryo-on Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -7,7 +7,6 @@ SUBDIR+=	389-ds-base
 SUBDIR+=	Box2D
 SUBDIR+=	Chinput
 SUBDIR+=	ETL
-SUBDIR+=	FlightCrew
 SUBDIR+=	FontManager
 SUBDIR+=	GNUMail-pgp
 SUBDIR+=	GSCommander
