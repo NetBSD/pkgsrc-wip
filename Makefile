@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4428 2011/07/29 13:37:40 ryo-on Exp $
+# $Id: Makefile,v 1.4429 2011/07/29 15:34:20 ryo-on Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -684,7 +684,6 @@ SUBDIR+=	glw
 SUBDIR+=	glx-utils
 SUBDIR+=	gmc2mid
 SUBDIR+=	gmm
-SUBDIR+=	gmock
 SUBDIR+=	gmp-ecm
 SUBDIR+=	gmpc-lyricsplugin
 SUBDIR+=	gmpc-wikipedia
