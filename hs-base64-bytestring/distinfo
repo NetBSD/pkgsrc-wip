@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/07/29 20:04:57 phonohawk Exp $
+
+SHA1 (base64-bytestring-0.1.0.2.tar.gz) = 62f1da2a12706d9f09a12c16a10c0e8aa5f8b1ac
+RMD160 (base64-bytestring-0.1.0.2.tar.gz) = 4911f3d7c09c5ded0b20794f61d9a791b12858e6
+Size (base64-bytestring-0.1.0.2.tar.gz) = 4821 bytes
