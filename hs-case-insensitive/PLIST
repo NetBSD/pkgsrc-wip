@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/07/29 16:25:46 phonohawk Exp $
+lib/case-insensitive-${PKGVERSION}/${HASKELL_VERSION}/Data/CaseInsensitive.hi
+lib/case-insensitive-${PKGVERSION}/${HASKELL_VERSION}/Data/CaseInsensitive.p_hi
+lib/case-insensitive-${PKGVERSION}/${HASKELL_VERSION}/HScase-insensitive-${PKGVERSION}.o
+lib/case-insensitive-${PKGVERSION}/${HASKELL_VERSION}/libHScase-insensitive-${PKGVERSION}.a
+lib/case-insensitive-${PKGVERSION}/${HASKELL_VERSION}/libHScase-insensitive-${PKGVERSION}_p.a
+lib/case-insensitive-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/case-insensitive-${PKGVERSION}/LICENSE
