@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/07/30 05:04:54 phonohawk Exp $
+lib/attoparsec-${PKGVERSION}/${HASKELL_VERSION}/Data/Attoparsec.hi
+lib/attoparsec-${PKGVERSION}/${HASKELL_VERSION}/Data/Attoparsec.p_hi
+lib/attoparsec-${PKGVERSION}/${HASKELL_VERSION}/Data/Attoparsec/Char8.hi
+lib/attoparsec-${PKGVERSION}/${HASKELL_VERSION}/Data/Attoparsec/Char8.p_hi
+lib/attoparsec-${PKGVERSION}/${HASKELL_VERSION}/Data/Attoparsec/Combinator.hi
+lib/attoparsec-${PKGVERSION}/${HASKELL_VERSION}/Data/Attoparsec/Combinator.p_hi
+lib/attoparsec-${PKGVERSION}/${HASKELL_VERSION}/Data/Attoparsec/FastSet.hi
+lib/attoparsec-${PKGVERSION}/${HASKELL_VERSION}/Data/Attoparsec/FastSet.p_hi
+lib/attoparsec-${PKGVERSION}/${HASKELL_VERSION}/Data/Attoparsec/Internal.hi
+lib/attoparsec-${PKGVERSION}/${HASKELL_VERSION}/Data/Attoparsec/Internal.p_hi
+lib/attoparsec-${PKGVERSION}/${HASKELL_VERSION}/Data/Attoparsec/Internal/Types.hi
+lib/attoparsec-${PKGVERSION}/${HASKELL_VERSION}/Data/Attoparsec/Internal/Types.p_hi
+lib/attoparsec-${PKGVERSION}/${HASKELL_VERSION}/Data/Attoparsec/Lazy.hi
+lib/attoparsec-${PKGVERSION}/${HASKELL_VERSION}/Data/Attoparsec/Lazy.p_hi
+lib/attoparsec-${PKGVERSION}/${HASKELL_VERSION}/Data/Attoparsec/Number.hi
+lib/attoparsec-${PKGVERSION}/${HASKELL_VERSION}/Data/Attoparsec/Number.p_hi
+lib/attoparsec-${PKGVERSION}/${HASKELL_VERSION}/Data/Attoparsec/Zepto.hi
+lib/attoparsec-${PKGVERSION}/${HASKELL_VERSION}/Data/Attoparsec/Zepto.p_hi
+lib/attoparsec-${PKGVERSION}/${HASKELL_VERSION}/HSattoparsec-${PKGVERSION}.o
+lib/attoparsec-${PKGVERSION}/${HASKELL_VERSION}/libHSattoparsec-${PKGVERSION}.a
+lib/attoparsec-${PKGVERSION}/${HASKELL_VERSION}/libHSattoparsec-${PKGVERSION}_p.a
+lib/attoparsec-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/attoparsec-${PKGVERSION}/LICENSE
