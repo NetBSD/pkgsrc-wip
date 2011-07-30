@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4436 2011/07/29 22:02:29 ryo-on Exp $
+# $Id: Makefile,v 1.4437 2011/07/30 05:06:06 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -850,6 +850,7 @@ SUBDIR+=	hs-StateVar
 SUBDIR+=	hs-Tensor
 SUBDIR+=	hs-ansi-terminal
 SUBDIR+=	hs-ascii
+SUBDIR+=	hs-attoparsec
 SUBDIR+=	hs-base-unicode-symbols
 SUBDIR+=	hs-base64-bytestring
 SUBDIR+=	hs-binary
