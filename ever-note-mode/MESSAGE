@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2010/11/22 21:01:51 ryo-on Exp $
+$NetBSD: MESSAGE,v 1.3 2011/07/30 21:26:57 ryo-on Exp $
 
 Please add following lines to your ~/.emacs file.
 
@@ -10,4 +10,5 @@ Please add following lines to your ~/.emacs file.
 (global-set-key "\C-ceS" 'evernote-do-saved-search)
 (global-set-key "\C-cew" 'evernote-write-note)
 (global-set-key "\C-cep" 'evernote-post-region)
+(global-set-key "\C-ceb" 'evernote-browser)
 ===========================================================================

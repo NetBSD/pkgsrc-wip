@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2011/04/24 11:45:48 ryo-on Exp $
+# $NetBSD: Makefile,v 1.6 2011/07/30 21:26:57 ryo-on Exp $
 #
 
-DISTNAME=	evernote-mode-0_30
+DISTNAME=	evernote-mode-0_41
 PKGNAME=	${DISTNAME:S/_/./}
 CATEGORIES=	editors net
 MASTER_SITES=	http://emacs-evernote-mode.googlecode.com/files/
@@ -37,6 +37,7 @@ SUBST_CLASSES+=		ruby-cmd
 SUBST_STAGE.ruby-cmd=	pre-configure
 SUBST_FILES.ruby-cmd=	../evernote-mode.el
 SUBST_SED.ruby-cmd=	-e 's/ruby/${RUBY_NAME}/'
+SUBST_SED.ruby-cmd+=	-e 's/"ruby"/"${RUBY_NAME}"/'
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/../evernote-mode.el \
