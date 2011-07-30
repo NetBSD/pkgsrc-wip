@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4437 2011/07/30 05:06:06 phonohawk Exp $
+# $Id: Makefile,v 1.4438 2011/07/30 09:52:52 ryo-on Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -58,12 +58,6 @@ SUBDIR+=	a2ps-sharatype
 SUBDIR+=	abclock
 SUBDIR+=	acpiclient
 SUBDIR+=	acpid
-SUBDIR+=	acroread9
-SUBDIR+=	acroread9-chsfont
-SUBDIR+=	acroread9-chtfont
-SUBDIR+=	acroread9-font-share
-SUBDIR+=	acroread9-jpnfont
-SUBDIR+=	acroread9-korfont
 SUBDIR+=	adamem
 SUBDIR+=	adms
 SUBDIR+=	admsmb
