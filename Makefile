@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4438 2011/07/30 09:52:52 ryo-on Exp $
+# $Id: Makefile,v 1.4439 2011/07/30 11:04:39 ryo-on Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2987,7 +2987,6 @@ SUBDIR+=	zinf
 SUBDIR+=	ziparchive
 SUBDIR+=	zipios
 SUBDIR+=	zope3-unstable
-SUBDIR+=	zsh-snapshot
 SUBDIR+=	zvbi
 
 ${.CURDIR}/PKGDB:
