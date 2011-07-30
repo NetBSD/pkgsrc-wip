@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/09/09 02:32:19 bsadewitz Exp $
-
-SHA1 (zsh-20080908.tar.bz2) = faa350e8821789448eeecb0d0aa8ee0c39b53fa1
-RMD160 (zsh-20080908.tar.bz2) = c4a04fc40689445fa74b2bddbbe1ccfcb5917922
-Size (zsh-20080908.tar.bz2) = 2058215 bytes
-SHA1 (patch-aa) = d3a77c8e2410d3eea5887fe2bc9f8157ac5a3849
-SHA1 (patch-ab) = d354371e76085b1f49feafadb60aac7eab56f94c
-SHA1 (patch-ac) = ef0a9097eb68b675b271da691e98bed41785651c
-SHA1 (patch-ad) = a898afeac6821c5cc75ce46c999933d43ecc14c0
