@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2011/03/16 21:07:32 ryo-on Exp $
+# $NetBSD: Makefile,v 1.7 2011/07/30 06:49:14 ryo-on Exp $
 
 DISTNAME=	acroread9	# overridden below
 PKGNAME=	acroread9-9.4.2
@@ -9,6 +9,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.adobe.com/products/acrobat/readstep2.html
 COMMENT=	View, distribute and print PDF documents
 LICENSE=	adobe-acrobat-license
+
 RESTRICTED=		Original installer required to redistribute.
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
@@ -49,7 +50,7 @@ BIN_PATCH=	${PATCH} --quiet ${_PATCH_BACKUP_ARG} .orig
 BUILD_DEFS+=		ACROREAD_FONTPATH
 ACROREAD_FONTPATH?=	${PREFIX}/lib/X11/fonts/TTF
 
-INSTALLATION_DIRS=	Acrobat9 bin man/man1
+INSTALLATION_DIRS=	Acrobat9 bin ${PKGMANDIR}/man1
 
 do-install:
 	set -e; ( ${ECHO} n; ${ECHO} n ) | InstallDir=${DESTDIR}${PREFIX}/Acrobat9 ${WRKSRC}/INSTALL
@@ -71,8 +72,8 @@ post-install:
 	     ${DESTDIR}${PREFIX}/bin/acroread9
 	${CHMOD} +x ${DESTDIR}${PREFIX}/bin/acroread9
 	${MV} ${DESTDIR}${PREFIX}/Acrobat9/Adobe/Reader9/Resource/Shell/acroread.1 \
-	${DESTDIR}${PREFIX}/man/man1
-	cd ${DESTDIR}${PREFIX}/man/man1 && \
+	${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	cd ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1 && \
 	${LN} -sf acroread.1 acroread9.1
 	@${ECHO_MSG} "Be sure to read the license agreement in"
 	@${ECHO_MSG} "${DESTDIR}${PREFIX}/Acrobat9/Reader/Legal/ENU/License.html"
