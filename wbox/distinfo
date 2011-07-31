@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/12/01 08:27:28 bartoszkuzma Exp $
+$NetBSD: distinfo,v 1.2 2011/07/31 09:54:09 bartoszkuzma Exp $
 
-SHA1 (wbox-4.tar.gz) = 053e7bbc18bd9ea868db7160158b26888072868a
-RMD160 (wbox-4.tar.gz) = a0adf55fbf489a3d064953084cc7e50ee1d5906e
-Size (wbox-4.tar.gz) = 21648 bytes
+SHA1 (wbox-5.tar.gz) = 5f20fca378c8abf53bb6a9069ecdebeb40a74147
+RMD160 (wbox-5.tar.gz) = 9cd031d65a0ca9113ab696a33ec420e8d59da984
+Size (wbox-5.tar.gz) = 16465 bytes
