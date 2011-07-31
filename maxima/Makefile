@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2011/07/04 19:13:40 asau Exp $
+# $NetBSD: Makefile,v 1.29 2011/07/31 20:16:05 asau Exp $
 #
 
 DISTNAME=		maxima-5.24.0
@@ -48,6 +48,7 @@ PYTHON_FOR_BUILD_ONLY=	yes
 ALL_ENV+=	PYTHONBIN=$(PYTHONBIN:Q)
 
 pre-configure:
+	cd ${WRKSRC}/src/ && ../admin/make_share_list
 	cd ${WRKSRC} && ./bootstrap
 
 .include "../../wip/mk/git-package.mk"
