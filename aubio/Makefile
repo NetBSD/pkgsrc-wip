@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/05/11 09:47:09 ryo-on Exp $
+# $NetBSD: Makefile,v 1.4 2011/07/31 13:23:06 ryo-on Exp $
 #
 
 DISTNAME=	aubio-0.3.2
@@ -9,10 +9,6 @@ MAINTAINER=	pho@cielonegro.org
 HOMEPAGE=	http://aubio.org/
 COMMENT=	Extracting annotations from audio signals
 LICENSE=	gnu-gpl-v2
-
-# Python 2.6 claims that there are syntax errors in Python sources. I
-# don't know why.
-#PYTHON_VERSIONS_INCOMPATIBLE=	26
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
