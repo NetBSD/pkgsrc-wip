@@ -2,12 +2,6 @@ TODO list and thoughts
 
 existing tools:
 
-    cvs_checksum:
-
-    pkg_assignments2pkgpath:
-
-    pkg_cleanup_distdir:
-
     pkg_cmp_summary:
        - test for -m
        - -f <p> use pkgpath only for comparison
@@ -15,15 +9,9 @@ existing tools:
        - -f <pn> use pkgbase and pkgpath for comparison
        - automatic removal of #-comments
 
-    pkg_grep_summary:
-
-    pkg_list_all_pkgs:
-
     pkg_micro_src_summary:
        - rewrite it! There is no reason to "emulate" 'make'.
          Sometimes it is enough to run bmake for cut off Makefile.
-
-    pkg_refresh_summary:
 
     pkg_src_fetch_var:
        - remove it, see pkg_micro_src_summary
@@ -32,19 +20,9 @@ existing tools:
        - new option for exit code 0 if everything was done successfully,
          1 otherwise
 
-    pkg_summary2bb_pkgs:
-
-    pkg_digger:
-
-    pkg_digger_backend:
-
-    pkg_summary2deps:
-
     pkg_summary4view:
        - another format for DEPENDS, BUILD_DEPENDS and CONFLICTS,
          (convertors for RHEL yum, Debian apt, OpenSolaris IPS)
-
-    pkg_uniq_summary:
 
     pkg_update_src_summary:
        - use "pkg_grep_summary -t strfile PKGPANA"
