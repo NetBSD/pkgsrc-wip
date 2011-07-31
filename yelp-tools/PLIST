@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/07/31 21:51:14 jihbed Exp $
+bin/yelp-build
+bin/yelp-check
+bin/yelp-new
+share/aclocal/yelp.m4
+share/yelp-tools/templates/task.page
+share/yelp-tools/xslt/mal-rng.xsl
