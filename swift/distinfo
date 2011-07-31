@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/07/31 22:28:23 schnoebe Exp $
+
+SHA1 (swift-1.0.tar.gz) = 9f3780e5dca32c0e0a0ad04e36a3f6214400a1ca
+RMD160 (swift-1.0.tar.gz) = 0acc142119a0b6b1daee081760b1369fa9672767
+Size (swift-1.0.tar.gz) = 7892404 bytes
+SHA1 (patch-BuildTools_SCons_Tools_qt4.py) = d387319e016556c6b4d9ce102fde1a4a1c260e8c
+SHA1 (patch-Swift_QtUI_ChatList_ChatListDelegate.cpp) = d8707a0e31f3495c121da77cfb00a15df7d1286b
+SHA1 (patch-Swiften_Compress_ZLibCompressor.cpp) = 9be306ec444f5edb0c7d233eee6e67133f8f7090
+SHA1 (patch-Swiften_Compress_ZLibDecompressor.cpp) = aead1d1fbc5deb8b7787fd819915cb6cb8c8142e
+SHA1 (patch-Swiften_StringCodecs_Base64.cpp) = 3699e7e124dfde34de534956b1f132ba3f65b68d
