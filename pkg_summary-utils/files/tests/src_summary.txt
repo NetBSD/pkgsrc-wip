@@ -112,6 +112,7 @@ HOMEPAGE=http://sourceforge.net/projects/runawk
 COMMENT=Wrapper that impelements modules for AWK
 MAINTAINER=cheusov@tut.by
 CATEGORIES=lang devel
+EXTRA_FIELD=lalala
 
 PKGNAME=emacs-22.1nb6
 PKGPATH=editors/emacs
