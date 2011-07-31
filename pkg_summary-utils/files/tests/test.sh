@@ -105,7 +105,7 @@ normalize_version (){
     {  print $0  }' "$@"
 }
 
-for t in $tests; do
+for t in ${TESTS-$tests}; do
     . ./test_$t.sh
 done
 

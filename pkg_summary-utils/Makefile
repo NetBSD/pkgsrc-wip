@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2011/05/11 19:21:22 cheusov Exp $
+# $NetBSD: Makefile,v 1.54 2011/07/31 16:52:49 cheusov Exp $
 
 DISTNAME=	pkg_summary-utils-${VERSION}
 CATEGORIES=	pkgtools
@@ -23,6 +23,10 @@ CONFLICTS+=	pkg_src_update_summary-[0-9]*
 CONFLICTS+=	pkg_update_summary-[0-9]*
 CONFLICTS+=	pkg_summary4view-[0-9]*
 
+# usage:
+#    bmake test
+#    bmake test TESTS='show-tests'
+#    bmake test TESTS='pkg_subgraph_deps pkg_bin_summary ...'
 TEST_TARGET=		test
 
 NO_CHECKSUM=		yes
