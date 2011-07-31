@@ -81,3 +81,13 @@ PKGNAME=mk-configure-0.21.0
 automatic=yes
 
 '
+
+pkg_summary2leaves -a 2>&1 |
+cmp 'pkg_summary2leaves #8' \
+'pkg_summary2leaves requires <files...>
+'
+
+pkg_summary2leaves 2>&1 |
+cmp 'pkg_summary2leaves #9' \
+'pkg_summary2leaves requires <files...>
+'

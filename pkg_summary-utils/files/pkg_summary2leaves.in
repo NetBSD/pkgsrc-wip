@@ -62,7 +62,7 @@ BEGIN {
 	invert    = getarg("v")
 	out_pkgs  = getarg("p")
 
-	if (ARGC == 1){
+	if (ARGV [1] == "-"){
 		print "pkg_summary2leaves requires <files...>" > "/dev/stderr"
 		exitnow(1)
 	}
