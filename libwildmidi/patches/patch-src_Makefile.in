@@ -1,0 +1,22 @@
+$NetBSD: patch-src_Makefile.in,v 1.1.1.1 2011/08/01 02:29:45 pallegra Exp $
+
+--- src/Makefile.in.orig	2010-07-30 04:36:20.000000000 +0000
++++ src/Makefile.in
+@@ -35,7 +35,7 @@ PRE_UNINSTALL = :
+ POST_UNINSTALL = :
+ build_triplet = @build@
+ host_triplet = @host@
+-bin_PROGRAMS = wildmidi$(EXEEXT)
++bin_PROGRAMS = #wildmidi$(EXEEXT)
+ subdir = src
+ DIST_COMMON = $(srcdir)/Makefile.am $(srcdir)/Makefile.in COPYING
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+@@ -227,7 +227,7 @@ libWildMidi_la_LDFLAGS = -version-info $
+ libWildMidi_la_LIBADD = -lm -lc
+ wildmidi_libs = ./libWildMidi.la
+ wildmidi_SOURCES = wildmidi.c
+-wildmidi_LDADD = $(AUDDR) $(LDFLAGS) -L./ -lWildMidi
++wildmidi_LDADD = $(AUDDR) $(LDFLAGS) -L./ -lWildMidi $(LIBOSSAUDIO)
+ wildmidi_DEPENDENCIES = ./libWildMidi.la
+ all: all-am
+ 
