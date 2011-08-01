@@ -1,6 +1,6 @@
-$NetBSD: patch-i3.config.keycodes,v 1.1 2011/07/21 18:39:17 pallegra Exp $
+$NetBSD: patch-i3.config.keycodes,v 1.2 2011/08/01 13:03:36 pallegra Exp $
 
---- i3.config.keycodes.orig	2011-07-16 16:05:27.000000000 +0000
+--- i3.config.keycodes.orig	2011-07-31 21:53:47.000000000 +0000
 +++ i3.config.keycodes
 @@ -17,13 +17,13 @@ font -misc-fixed-medium-r-normal--13-120
  floating_modifier $mod
