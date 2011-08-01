@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4441 2011/07/31 22:31:53 schnoebe Exp $
+# $Id: Makefile,v 1.4442 2011/08/01 02:31:38 pallegra Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1239,6 +1239,7 @@ SUBDIR+=	libginac
 SUBDIR+=	libgksu
 SUBDIR+=	libgksuui
 SUBDIR+=	libglade-java
+SUBDIR+=	libgme
 SUBDIR+=	libgnome-java
 SUBDIR+=	libgrass5
 SUBDIR+=	libgtask
@@ -1297,6 +1298,7 @@ SUBDIR+=	libvalhalla
 SUBDIR+=	libvc
 SUBDIR+=	libvg
 SUBDIR+=	libwbxml2-patched
+SUBDIR+=	libwildmidi
 SUBDIR+=	libxc
 SUBDIR+=	libyubikey
 SUBDIR+=	libzdb
