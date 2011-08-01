@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2011/07/29 12:40:00 hfath Exp $
+# $NetBSD: Makefile,v 1.6 2011/08/01 14:55:22 hfath Exp $
 
 DISTNAME=	netatalk-2.2.0
 CATEGORIES=	net print
@@ -51,19 +51,25 @@ CONFIGURE_ARGS+=	--without-ldap
 
 MAKE_DIRS+=		${PKG_SYSCONFDIR}/msg
 
-SUBST_CLASSES+=		paths
-SUBST_MESSAGE.paths=	Fixing hardcoded paths.
-SUBST_STAGE.paths=	pre-configure
-SUBST_FILES.paths=	etc/psf/etc2ps.sh distrib/initscripts/Makefile.in
-SUBST_SED.paths=	-e "s,^\\(DVIPS=\\)\\(/usr/local/tex\\)\\(/bin\\),\\1${PREFIX}\\3,"
-
 RCD_SCRIPTS=		afpd cnid_metad
 
 .include "options.mk"
 
 .if !empty(PKG_OPTIONS:Mddp)
-CONF_FILES+=	${EGDIR}/atalkd.conf ${PKG_SYSCONFDIR}/atalkd.conf
-CONF_FILES+=	${EGDIR}/papd.conf ${PKG_SYSCONFDIR}/papd.conf
+SUBST_CLASSES+=		paths
+SUBST_MESSAGE.paths=	Fixing hardcoded paths in pap scripts.
+SUBST_STAGE.paths=	pre-configure
+SUBST_FILES.paths=	etc/psf/etc2ps.sh distrib/initscripts/Makefile.in
+SUBST_SED.paths=	-e "s,^\\(DVIPS=\\)\\(/usr/local/tex\\)\\(/bin\\),\\1${PREFIX}\\3,"
+
+SUBST_CLASSES+=		deps
+SUBST_MESSAGE.deps=	Adding atalkd dependency to afpd rc.d script.
+SUBST_STAGE.deps=	pre-configure
+SUBST_FILES.deps=	distrib/initscripts/rc.afpd.netbsd.tmpl
+SUBST_SED.deps=		-e 's,^\(\# REQUIRE:\),\1 atalkd,'
+
+CONF_FILES+=		${EGDIR}/atalkd.conf ${PKG_SYSCONFDIR}/atalkd.conf
+CONF_FILES+=		${EGDIR}/papd.conf ${PKG_SYSCONFDIR}/papd.conf
 RCD_SCRIPTS+=		atalkd papd timelord
 INSTALLATION_DIRS=	libexec/psffilters
 .endif
