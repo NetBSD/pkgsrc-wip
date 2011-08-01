@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.43 2011/07/11 13:10:49 asau Exp $
+# $NetBSD: Makefile,v 1.44 2011/08/01 17:39:32 asau Exp $
 
 DISTNAME=	openmpi-1.5.1
-DISTNAME=	openmpi-1.5.4a1r24868
-PKGNAME=	openmpi-1.5.4.24868
+DISTNAME=	openmpi-1.5.4a1r24935
+PKGNAME=	openmpi-1.5.4.24935
 CATEGORIES=	parallel
 MASTER_SITES=	http://www.open-mpi.org/software/ompi/v1.5/downloads/ \
 		http://www.open-mpi.org/nightly/v1.5/
