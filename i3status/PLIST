@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/08/01 14:48:00 pallegra Exp $
+bin/i3status
+man/man1/i3status.1
+share/doc/i3status/i3status.conf
+@pkgdir share/doc/i3-status

@@ -1,0 +1,13 @@
+$NetBSD: patch-Makefile,v 1.1.1.1 2011/08/01 14:48:00 pallegra Exp $
+
+--- Makefile.orig	2011-08-01 13:38:57.000000000 +0000
++++ Makefile
+@@ -10,7 +10,7 @@ ifndef SYSCONFDIR
+ endif
+ 
+ CFLAGS+=-Wall -Wshadow -Wpointer-arith -Wcast-qual -Wsign-compare
+-CFLAGS+=-g
++#CFLAGS+=-g
+ CFLAGS+=-std=gnu99
+ CFLAGS+=-pedantic
+ CPPFLAGS+=-DSYSCONFDIR=\"$(SYSCONFDIR)\"
