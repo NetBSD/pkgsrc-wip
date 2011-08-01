@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2011/03/17 11:28:48 khorben Exp $
+@comment $NetBSD: PLIST,v 1.7 2011/08/01 12:53:47 khorben Exp $
 bin/phone
 bin/phone-contacts
 bin/phone-dialer
@@ -22,6 +22,7 @@ share/applications/phone-log.desktop
 share/applications/phone-messages.desktop
 share/applications/phone-settings.desktop
 share/icons/hicolor/16x16/apps/phone-dialer.png
+share/icons/hicolor/16x16/apps/phone-openmoko.png
 share/icons/hicolor/22x22/apps/phone-dialer.png
 share/icons/hicolor/22x22/apps/phone-signal-00.png
 share/icons/hicolor/22x22/apps/phone-signal-100.png
@@ -29,6 +30,9 @@ share/icons/hicolor/22x22/apps/phone-signal-25.png
 share/icons/hicolor/22x22/apps/phone-signal-50.png
 share/icons/hicolor/22x22/apps/phone-signal-75.png
 share/icons/hicolor/24x24/apps/phone-dialer.png
+share/icons/hicolor/24x24/apps/phone-openmoko.png
 share/icons/hicolor/32x32/apps/phone-dialer.png
+share/icons/hicolor/32x32/apps/phone-openmoko.png
 share/icons/hicolor/48x48/apps/phone-dialer.png
+share/icons/hicolor/48x48/apps/phone-openmoko.png
 share/locale/fr/LC_MESSAGES/Phone.mo
