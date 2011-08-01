@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2011/07/16 03:03:28 khorben Exp $
+# $NetBSD: Makefile,v 1.17 2011/08/01 12:51:06 khorben Exp $
 
 DISTNAME=	Panel-0.2.8
 PKGNAME=	deforaos-panel-0.2.8
@@ -21,4 +21,5 @@ MAKE_FLAGS+=	DESTDIR=${DESTDIR}
 
 .include "../../wip/deforaos-libsystem/buildlink3.mk"
 .include "../../wip/deforaos-libdesktop/buildlink3.mk"
+.include "../../wip/deforaos-keyboard/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
