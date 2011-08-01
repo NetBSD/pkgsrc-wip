@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/08/01 14:48:00 pallegra Exp $
+$NetBSD: distinfo,v 1.2 2011/08/01 15:25:17 pallegra Exp $
 
 SHA1 (i3status-2.3.tar.bz2) = 3d02ae2bc46f5a81453b4cab713211e04d466c16
 RMD160 (i3status-2.3.tar.bz2) = f37cbb61efe274d974bd38686755cd94d45ac230
 Size (i3status-2.3.tar.bz2) = 24814 bytes
-SHA1 (patch-Makefile) = 2ac9fc7763b27d14b55ca6e7f39df48a16f64b99
-SHA1 (patch-src_print__cpu__temperature.c) = da2a5f041a6e81deca94935563908bd4f8c10d57
+SHA1 (patch-Makefile) = 5500a2bac77e249c6c62258a5deed68248afef11
+SHA1 (patch-i3status.conf) = a397f1940b19b7ae288c0fea8784d8f1a3c4e16d
+SHA1 (patch-src_print__cpu__temperature.c) = 9a320735bc899936d81bc3491ad5286799bfe656
