@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1 2011/08/02 23:05:26 khorben Exp $
+bin/bs11_config
+bin/bsc_mgcp
+bin/ipaccess-config
+bin/ipaccess-find
+bin/ipaccess-proxy
+bin/isdnsync
+bin/osmo-gbproxy
+bin/osmo-nitb
+include/openbsc/bsc_api.h
+include/openbsc/gsm_04_08.h
+include/openbsc/meas_rep.h
+lib/pkgconfig/openbsc.pc

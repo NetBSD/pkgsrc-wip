@@ -1,0 +1,14 @@
+$NetBSD: patch-src_osmo-nitb_Makefile.in,v 1.1 2011/08/02 23:05:26 khorben Exp $
+
+--- src/osmo-nitb/Makefile.in.orig	2011-03-05 14:16:50.000000000 +0000
++++ src/osmo-nitb/Makefile.in
+@@ -185,7 +185,8 @@ INCLUDES = $(all_includes) -I$(top_srcdi
+ AM_CFLAGS = -Wall $(LIBOSMOCORE_CFLAGS) $(LIBOSMOVTY_CFLAGS) $(COVERAGE_CFLAGS)
+ AM_LDFLAGS = $(LIBOSMOCORE_LIBS) $(COVERAGE_LDFLAGS)
+ osmo_nitb_SOURCES = bsc_hack.c
+-osmo_nitb_LDADD = -ldl -ldbi $(LIBCRYPT) $(LIBOSMOVTY_LIBS) \
++#osmo_nitb_LDADD = -ldl -ldbi $(LIBCRYPT) $(LIBOSMOVTY_LIBS)
++osmo_nitb_LDADD = -ldbi $(LIBCRYPT) $(LIBOSMOVTY_LIBS) \
+ 		$(top_builddir)/src/libbsc/libbsc.a \
+ 		$(top_builddir)/src/libmsc/libmsc.a \
+ 		$(top_builddir)/src/libbsc/libbsc.a \

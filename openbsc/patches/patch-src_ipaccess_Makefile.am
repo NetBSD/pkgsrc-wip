@@ -1,0 +1,13 @@
+$NetBSD: patch-src_ipaccess_Makefile.am,v 1.1 2011/08/02 23:05:26 khorben Exp $
+
+--- src/ipaccess/Makefile.am.orig	2011-03-05 14:16:19.000000000 +0000
++++ src/ipaccess/Makefile.am
+@@ -15,7 +15,7 @@ ipaccess_config_LDADD = $(top_builddir)/
+ 			$(top_builddir)/src/libbsc/libbsc.a \
+ 			$(top_builddir)/src/libtrau/libtrau.a \
+ 			$(top_builddir)/src/libcommon/libcommon.a \
+-			-ldl -ldbi $(LIBCRYPT)
++			-ldbi $(LIBCRYPT)
+ 
+ ipaccess_proxy_SOURCES = ipaccess-proxy.c
+ ipaccess_proxy_LDADD = $(top_builddir)/src/libcommon/libcommon.a

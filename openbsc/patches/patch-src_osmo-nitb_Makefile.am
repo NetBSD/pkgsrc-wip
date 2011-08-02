@@ -1,0 +1,14 @@
+$NetBSD: patch-src_osmo-nitb_Makefile.am,v 1.1 2011/08/02 23:05:26 khorben Exp $
+
+--- src/osmo-nitb/Makefile.am.orig	2011-03-05 14:16:19.000000000 +0000
++++ src/osmo-nitb/Makefile.am
+@@ -5,7 +5,8 @@ AM_LDFLAGS = $(LIBOSMOCORE_LIBS) $(COVER
+ bin_PROGRAMS = osmo-nitb
+ 
+ osmo_nitb_SOURCES = bsc_hack.c
+-osmo_nitb_LDADD = -ldl -ldbi $(LIBCRYPT) $(LIBOSMOVTY_LIBS) \
++#osmo_nitb_LDADD = -ldl -ldbi $(LIBCRYPT) $(LIBOSMOVTY_LIBS)
++osmo_nitb_LDADD = -ldbi $(LIBCRYPT) $(LIBOSMOVTY_LIBS) \
+ 		$(top_builddir)/src/libbsc/libbsc.a \
+ 		$(top_builddir)/src/libmsc/libmsc.a \
+ 		$(top_builddir)/src/libbsc/libbsc.a \
