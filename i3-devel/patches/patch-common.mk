@@ -1,6 +1,6 @@
-$NetBSD: patch-common.mk,v 1.4 2011/08/01 13:03:36 pallegra Exp $
+$NetBSD: patch-common.mk,v 1.5 2011/08/02 21:35:31 pallegra Exp $
 
---- common.mk.orig	2011-07-31 21:53:54.000000000 +0000
+--- common.mk.orig	2011-08-02 21:23:49.000000000 +0000
 +++ common.mk
 @@ -68,8 +68,8 @@ LIBS += $(call ldflags_for_lib, xcb-rand
  LIBS += $(call ldflags_for_lib, xcb, xcb)
@@ -11,5 +11,5 @@ $NetBSD: patch-common.mk,v 1.4 2011/08/01 13:03:36 pallegra Exp $
 +LIBS += -lyajl
 +LIBS += -lev
  
- ifeq ($(UNAME),NetBSD)
- # We need -idirafter instead of -I to prefer the system’s iconv over GNU libiconv
+ # Please test if -Wl,--as-needed works on your platform and send me a patch.
+ # it is known not to work on Darwin (Mac OS X)

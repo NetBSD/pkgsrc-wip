@@ -1,10 +1,8 @@
-$NetBSD: distinfo,v 1.5 2011/08/01 13:03:36 pallegra Exp $
+$NetBSD: distinfo,v 1.6 2011/08/02 21:35:30 pallegra Exp $
 
-SHA1 (i3-4.0.tar.bz2) = 2d67b31113fe2c9435bf37cc12e545d2ac303676
-RMD160 (i3-4.0.tar.bz2) = e6b0946158d3277de46e4d09437a6f9819b657e7
-Size (i3-4.0.tar.bz2) = 472133 bytes
-SHA1 (patch-common.mk) = ac2a9722a8efc2d892b964ffd6e2d424fee6d244
-SHA1 (patch-i3.config) = 0be80e446c6978b5fed27132dbf33698f111ed64
-SHA1 (patch-i3.config.keycodes) = 0545abff40b61c0aa76e66bcbbfc1a1aadf949c8
-SHA1 (patch-i3bar_Makefile) = c31ffbc7836804455ac4b97ce72988242d25cc19
-SHA1 (patch-i3bar_common.mk) = 6cf5617e59c0e13957ea969e5b5452bf2731158b
+SHA1 (i3-4.0.1.tar.bz2) = 238ef48a652cdb42678e87c777587f2151bf0096
+RMD160 (i3-4.0.1.tar.bz2) = 7e2267c56870b6135a3d71c2102ad3320b58a222
+Size (i3-4.0.1.tar.bz2) = 472222 bytes
+SHA1 (patch-common.mk) = 5b538a0e282d0b383235fbec30d719528d053647
+SHA1 (patch-i3.config) = 4c896f29bbb0ef557ebfc6626d733e71b020cccf
+SHA1 (patch-i3.config.keycodes) = 92d22836a49cb37c3207d9fe3b59d65178ea2082
