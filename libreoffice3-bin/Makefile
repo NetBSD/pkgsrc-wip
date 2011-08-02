@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2011/07/15 09:45:32 ryo-on Exp $
+# $NetBSD: Makefile,v 1.9 2011/08/02 11:49:03 ryo-on Exp $
 
 DISTNAME=		libreoffice3-bin	# overridden below
 PKGNAME=		libreoffice3-bin-${OO_RELEASE}
 CATEGORIES=		misc
-MASTER_SITES=		http://download.documentfoundation.org/libreoffice/stable/3.4.1/rpm/x86/
+MASTER_SITES=		http://download.documentfoundation.org/libreoffice/stable/3.4.2/rpm/x86/
 
 MAINTAINER=		ryoon@NetBSD.org
 HOMEPAGE=		http://www.libreoffice.org/
@@ -21,7 +21,7 @@ CONFLICTS+=		openoffice-linux-[0-9]*
 
 OO_VER=			3
 OO_BASEVER=		3.4
-OO_RELEASE=		3.4.1
+OO_RELEASE=		3.4.2
 PLIST_SUBST+=		VER=${OO_VER:Q} BASEVER=${OO_BASEVER:Q}
 MESSAGE_SUBST+=		VER=${OO_VER:Q}
 FILES_SUBST+=		VER=${OO_VER:Q}
