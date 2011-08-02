@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/07/31 09:54:08 bartoszkuzma Exp $
+# $NetBSD: Makefile,v 1.4 2011/08/02 12:13:31 bartoszkuzma Exp $
 #
 
 DISTNAME=		wbox-5
@@ -9,6 +9,8 @@ MAINTAINER=		bartosz.kuzma@gmail.com
 HOMEPAGE=		http://www.hping.org/wbox/
 COMMENT=		HTTP testing tool
 LICENSE=		modified-bsd
+
+INSTALLATION_DIRS=	bin
 
 PKG_DESTDIR_SUPPORT=    user-destdir
 
