@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1 2011/08/02 22:19:13 khorben Exp $
+
+SHA1 (libosmocore-0.1.30.tar.bz2) = 9270be144a43c07160c58ba5bd67f500c6150129
+RMD160 (libosmocore-0.1.30.tar.bz2) = 7e6c54d3b7a03403f28617555b526f59f7ddd81c
+Size (libosmocore-0.1.30.tar.bz2) = 350305 bytes
+SHA1 (patch-src_Makefile.am) = 3e909d95dd130e9ebd74a5fe0fa2c84933cb243b
+SHA1 (patch-src_Makefile.in) = 9abd36d798f4192abee8bd2c78e435187979fc39
+SHA1 (patch-src_gsm__utils.c) = 9705162ddf34e00d07a2e34df704310741443055
+SHA1 (patch-src_msgfile.c) = 64b14bced24c63731e17bf5bac3dc0f2d6edc44b
+SHA1 (patch-src_talloc.c) = 37d33156f37f5a6854cab54b4ae10003a0ce750d
