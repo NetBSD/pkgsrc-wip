@@ -1,0 +1,12 @@
+$NetBSD: patch-libosmocodec.pc.in,v 1.1 2011/08/03 01:13:17 khorben Exp $
+
+--- libosmocodec.pc.in.orig	2010-11-01 08:36:44.000000000 +0000
++++ libosmocodec.pc.in
+@@ -6,6 +6,6 @@ includedir=@includedir@
+ Name: Osmocom Codec related utilities Library
+ Description: C Utility Library
+ Version: @VERSION@
+-Libs: -L${libdir} -losmocodec
++Libs: -L${libdir} -Wl,-rpath,${libdir} -losmocodec
+ Cflags: -I${includedir}/
+ 
