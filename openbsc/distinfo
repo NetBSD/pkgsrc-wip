@@ -1,15 +1,18 @@
-$NetBSD: distinfo,v 1.1 2011/08/02 23:05:26 khorben Exp $
+$NetBSD: distinfo,v 1.2 2011/08/03 01:27:31 khorben Exp $
 
 SHA1 (openbsc-0.9.13.tar.bz2) = fee3708a165b7a238e9c620eba66270c40c4e5e7
 RMD160 (openbsc-0.9.13.tar.bz2) = e4eaae4e623c8268f6aaba882f3bdfeadb1932db
 Size (openbsc-0.9.13.tar.bz2) = 430206 bytes
+SHA1 (patch-openbsc.pc.in) = 3a37f7dc4f33dc11430249eec8ff3b2518082125
 SHA1 (patch-src_ipaccess_Makefile.am) = a9d558c5d6a1b8d9290576b9fb56e1e3fb993b6d
 SHA1 (patch-src_ipaccess_Makefile.in) = 42b05bdb9d9b816c68ffc937937271efd053058b
 SHA1 (patch-src_ipaccess_ipaccess-find.c) = 8a89b4db7a93396f75c7da239b491667d02a022a
-SHA1 (patch-src_libgb_gprs__ns__frgre.c) = e97d37736838214eb2d92bfc7920f4557bbff975
+SHA1 (patch-src_libgb_gprs__ns__frgre.c) = cc72663cef80ea984a6f55e30fcab3b4491e9c37
 SHA1 (patch-src_libmgcp_mgcp__network.c) = 96867cbc74767d0466c70ccb78c8d463eaae13fe
 SHA1 (patch-src_libtrau_rtp__proxy.c) = 2d011e4b6b1f9cb46a3a72063cd4c345e2b7e272
 SHA1 (patch-src_osmo-nitb_Makefile.am) = 3ad721e5899b5db1cfa30143231fa2394960c757
 SHA1 (patch-src_osmo-nitb_Makefile.in) = 195864c0d05f45cd48a1ef388d0afb019ce9a7f1
+SHA1 (patch-tests_channel_Makefile.am) = 14977386e4b206e4a3712aee76fd193afec5d769
+SHA1 (patch-tests_channel_Makefile.in) = b5ca05d2d9f64c3de81e35840f5c6517d3ddd705
 SHA1 (patch-tests_db_Makefile.am) = 7c79fd48f3c38daa24b3589edcce7f138cfcc42f
 SHA1 (patch-tests_db_Makefile.in) = 0a2f378ed4eec3b36e228ad7af048c601a8427b1
