@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2011/08/02 23:05:26 khorben Exp $
+# $NetBSD: Makefile,v 1.2 2011/08/03 02:40:17 khorben Exp $
 #
 
 DISTNAME=	openbsc-0.9.13
@@ -15,6 +15,8 @@ LICENSE=	gnu-gpl-v2
 PKG_DESTDIR_SUPPORT=	user-destdir
 USE_TOOLS+=	gmake
 USE_TOOLS+=	pkg-config
+
+PKGCONFIG_OVERRIDE+=	openbsc.pc.in
 
 GNU_CONFIGURE=	yes
 

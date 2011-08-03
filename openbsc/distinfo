@@ -1,9 +1,8 @@
-$NetBSD: distinfo,v 1.2 2011/08/03 01:27:31 khorben Exp $
+$NetBSD: distinfo,v 1.3 2011/08/03 02:40:17 khorben Exp $
 
 SHA1 (openbsc-0.9.13.tar.bz2) = fee3708a165b7a238e9c620eba66270c40c4e5e7
 RMD160 (openbsc-0.9.13.tar.bz2) = e4eaae4e623c8268f6aaba882f3bdfeadb1932db
 Size (openbsc-0.9.13.tar.bz2) = 430206 bytes
-SHA1 (patch-openbsc.pc.in) = 3a37f7dc4f33dc11430249eec8ff3b2518082125
 SHA1 (patch-src_ipaccess_Makefile.am) = a9d558c5d6a1b8d9290576b9fb56e1e3fb993b6d
 SHA1 (patch-src_ipaccess_Makefile.in) = 42b05bdb9d9b816c68ffc937937271efd053058b
 SHA1 (patch-src_ipaccess_ipaccess-find.c) = 8a89b4db7a93396f75c7da239b491667d02a022a
