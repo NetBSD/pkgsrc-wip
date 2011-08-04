@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2010/06/13 22:47:14 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2011/08/04 21:37:00 thomasklausner Exp $
 
-DISTNAME=	qca-gnupg-2.0.0-beta2
+DISTNAME=	qca-gnupg-2.0.0-beta3
 PKGNAME=	qca2-gnupg-${DISTNAME:S/-beta/beta/:C/.*-//}
-PKGREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	http://delta.affinix.com/download/qca/2.0/plugins/
 EXTRACT_SUFX=	.tar.bz2
@@ -10,6 +9,9 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	jfranz@bsdprojects.net
 HOMEPAGE=	http://delta.affinix.com/qca/
 COMMENT=	Cross-platform crypto API for QT - GnuPG plugin
+LICENSE=	gnu-lgpl-v2.1
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gmake
 USE_LIBTOOL=	yes
@@ -18,6 +20,7 @@ USE_LANGUAGES=	c c++
 
 CONFIGURE_ARGS+=	--qtdir=${QTDIR}
 CONFIGURE_ARGS+=	--with-qca=${QTDIR}
+CONFIGURE_ARGS+=	--plugins-path=${DESTDIR}${QTDIR}/plugins
 #CONFIGURE_ARGS+=	--with-openssl-inc=${SSLBASE}/include
 #CONFIGURE_ARGS+=	--with-openssl-lib=${SSLBASE}/lib
 

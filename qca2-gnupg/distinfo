@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/12/23 11:53:12 netcap Exp $
+$NetBSD: distinfo,v 1.2 2011/08/04 21:37:00 thomasklausner Exp $
 
-SHA1 (qca-gnupg-2.0.0-beta2.tar.bz2) = d7b7834132f40c73ad6bf589951949b878868906
-RMD160 (qca-gnupg-2.0.0-beta2.tar.bz2) = c28d37a5d045e3f5e2102b1b98d422b4d8d7b310
-Size (qca-gnupg-2.0.0-beta2.tar.bz2) = 34667 bytes
+SHA1 (qca-gnupg-2.0.0-beta3.tar.bz2) = 77e3874b9ed427e281b23b9bf41ecc95e74f7053
+RMD160 (qca-gnupg-2.0.0-beta3.tar.bz2) = 2531d81179e0b78cc3689c7891b4c6c60d56a422
+Size (qca-gnupg-2.0.0-beta3.tar.bz2) = 38177 bytes
