@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4446 2011/08/04 11:51:30 hfath Exp $
+# $Id: Makefile,v 1.4447 2011/08/04 15:42:07 ryo-on Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -656,6 +656,7 @@ SUBDIR+=	gimp-high-pass-filter
 SUBDIR+=	git
 SUBDIR+=	givaro
 SUBDIR+=	gjots2
+SUBDIR+=	gjs
 SUBDIR+=	gksu
 SUBDIR+=	gl
 SUBDIR+=	glade2-nognome
