@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2010/11/17 08:03:41 yhardy Exp $
+$NetBSD: distinfo,v 1.4 2011/08/04 05:12:18 yhardy Exp $
 
 SHA1 (fs2_open_3_6_12_src.tgz) = cc051fb95f36417b99aa7e6c34b8dc4b6a9669c2
 RMD160 (fs2_open_3_6_12_src.tgz) = 1842a4efe1517ac0298bb0f5b5db89330c623b78
@@ -8,3 +8,4 @@ SHA1 (patch-ab) = 4918aa3c488d11fa1132b1659bb7931ddf61669e
 SHA1 (patch-ac) = df7e619c2b8dfef70090149206e64f7b0db35a5f
 SHA1 (patch-ad) = a1c99397bd934224abb8466bbe2bf165a8b7401a
 SHA1 (patch-ae) = 276293d4fb38e4c7042bff30be83f1da1c597516
+SHA1 (patch-af) = 940f4d3f2c7277501b3711219c15e049d10a9b2a
