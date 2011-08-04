@@ -63,3 +63,8 @@ d: not_found perl>=5.10|p5-File-Temp-[0-9]* <- www/p5-Catalyst-Plugin-Session p5
 d: not_found perl>=5.7.3|p5-Digest-MD5-[0-9]* <- databases/p5-DBIx-Class-EncodedColumn p5-DBIx-Class-EncodedColumn-0.00010
 d: not_found perl>=5.7.3|p5-Digest-[0-9]* <- databases/p5-DBIx-Class-EncodedColumn p5-DBIx-Class-EncodedColumn-0.00010
 '
+
+pkg_lint_summary -f bin_summary7.txt |
+cmp 'pkg_lint_summary -f #10' \
+'f: conflict /usr/pkg/lib/libpng15.so wip/aaa aaa-0.9.8qnb1 wip/ccc ccc-2.0.64
+'

@@ -1,6 +1,6 @@
 #!/usr/bin/env runawk
 
-# Copyright (c) 2010, Aleksey Cheusov <vle@gmx.net>
+# Copyright (c) 2010-2011, Aleksey Cheusov <vle@gmx.net>
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -48,7 +48,10 @@
 #   -L      checks that libs from REQUIRES are present on filesystem
 #   -d      checks that dependencies (DEPENDS) are satisfied
 #   -D      checks that dependencies (BUILD_DEPENDS) are satisfied
-#   -c      checks CONFLICTS
+#   -c      checks that summary for packages given on input do not CONFLICTS
+#           with each other
+#   -f      checks that there are no files common for several packages,
+#           PLIST entries are expected in input
 #   -u      checks unicity of PKGBASEs
 #.end-str
 ############################################################
@@ -68,12 +71,13 @@ BEGIN {
 	opt_d = getarg("d")
 	opt_D = getarg("D")
 	opt_c = getarg("c")
+	opt_f = getarg("f")
 	opt_u = getarg("u")
 
 	cnt = 0
 
-	if (!opt_L && !opt_l && !opt_d && !opt_D && !opt_c && !opt_u){
-		print "At least one of the following options should be applied:\n     -L, -l, -d, -D, -c or -u" > "/dev/stderr"
+	if (!opt_L && !opt_l && !opt_d && !opt_D && !opt_c && !opt_f && !opt_u){
+		print "At least one of the following options should be applied:\n     -L, -l, -d, -D, -c, -f or -u" > "/dev/stderr"
 		exitnow(1)
 	}
 
@@ -141,7 +145,20 @@ opt_d || opt_D || opt_c {
 	print > tmp_summary
 }
 
+opt_f && /^PLIST=/ {
+	plist [++plist_cnt] = substr($0, 7)
+}
+
 NF == 0 {
+	for (f in plist){
+		p = plist [f]
+		if (p in all_plist)
+			all_plist [p] = all_plist [p] " " pkgpath ";" pkgname
+		else
+			all_plist [p] = pkgpath ";" pkgname
+	}
+
+	delete plist
 	pkgname = pkgpath = pkgver = assigns = ""
 }
 
@@ -204,6 +221,17 @@ END {
 			if (index(pkgbase2path [pkgbase], " ")){
 				printf "u: unicity %s <- %s\n", pkgbase, pkgbase2path [pkgbase]
 				ex = 1
+			}
+		}
+	}
+
+	# -f
+	if (opt_f){
+		for (f in all_plist){
+			if (index(all_plist [f], " ") > 0){
+				pana = all_plist [f]
+				gsub(/;/, " ", pana)
+				printf "f: conflict %s %s\n", f, pana
 			}
 		}
 	}
