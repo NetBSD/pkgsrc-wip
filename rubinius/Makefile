@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2011/08/04 07:01:39 jafour1 Exp $
+# $NetBSD: Makefile,v 1.6 2011/08/04 07:04:59 jafour1 Exp $
 VERSION=	1.2.3
 DATERELEASE=    20110315
 DISTNAME=	rubinius-${VERSION}-${DATERELEASE}
@@ -29,7 +29,9 @@ DESTDIR=${LOCALBASE}
 
 WRKSRC=		${WRKDIR}/rubinius-${VERSION}
 pre-patch:
-	ln -s /usr/pkg/include/llvm /usr/include/llvm #XXX Ugly hack. Please fix.
+        if ${TEST} ! -f /usr/include/llvm; then \
+	 ln -s /usr/pkg/include/llvm /usr/include/llvm \
+        fi; # Evil hack. Please fix
 
 do-install:
 	if ${TEST} -f ${DESTDIR}/bin/rake18; then \
