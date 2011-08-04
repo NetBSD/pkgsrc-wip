@@ -1,0 +1,15 @@
+$NetBSD: patch-ae,v 1.1.1.1 2011/08/04 11:49:17 hfath Exp $
+
+--- config.h.in.orig	2009-03-29 16:23:57.000000000 +0900
++++ config.h.in
+@@ -188,8 +188,8 @@
+ /* Define to 1 if you have the `gettimeofday' function. */
+ #undef HAVE_GETTIMEOFDAY
+ 
+-/* Define to 1 if you have the `getusershell' function. */
+-#undef HAVE_GETUSERSHELL
++/* Define to 1 if you have the `getifaddrs' function. */
++#undef HAVE_GETIFADDRS
+ 
+ /* Whether to enable GSSAPI support */
+ #undef HAVE_GSSAPI
