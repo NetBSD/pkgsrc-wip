@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4445 2011/08/04 10:40:02 ryo-on Exp $
+# $Id: Makefile,v 1.4446 2011/08/04 11:51:30 hfath Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1541,6 +1541,7 @@ SUBDIR+=	nemo
 SUBDIR+=	nestra
 SUBDIR+=	net-quanta
 SUBDIR+=	net-tools
+SUBDIR+=	netatalk20
 SUBDIR+=	netatalk22
 SUBDIR+=	netbsd-awk
 SUBDIR+=	netbsd-make
