@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/08/04 10:39:02 ryo-on Exp $
+# $NetBSD: Makefile,v 1.2 2011/08/04 15:36:33 ryo-on Exp $
 #
 
 DISTNAME=	js185-1.0.0
@@ -22,6 +22,10 @@ MAKE_JOBS_SAFE=	NO
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--with-system-nspr
+CONFIGURE_ARGS+=	--enable-threadsafe
+
+#XXX workaround for js-config command and mozjs185.pc
+CONFIGURE_ENV+=		MOZILLA_VERSION=4.0
 
 PKGCONFIG_OVERRIDE+=	ctypes/libffi/libffi.pc.in
 PKGCONFIG_OVERRIDE+=	mozjs185.pc.in
