@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2011/01/23 06:59:38 jafour1 Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/08/04 07:13:14 jafour1 Exp $
 rubinius/bin/gem
 rubinius/bin/irb
 rubinius/bin/rake
@@ -1301,7 +1301,6 @@ rubinius/lib/rubinius/documentation/stylesheets/application.css
 rubinius/lib/rubinius/documentation/stylesheets/blueprint/ie.css
 rubinius/lib/rubinius/documentation/stylesheets/blueprint/print.css
 rubinius/lib/rubinius/documentation/stylesheets/blueprint/screen.css
-rubinius/lib/rubinius/documentation/stylesheets/colors.css
 rubinius/lib/rubinius/documentation/stylesheets/ie.css
 rubinius/lib/rubygems.rb
 rubinius/lib/rubygems.rbc
