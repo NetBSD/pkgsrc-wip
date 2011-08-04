@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4444 2011/08/01 14:49:17 pallegra Exp $
+# $Id: Makefile,v 1.4445 2011/08/04 10:40:02 ryo-on Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2603,6 +2603,7 @@ SUBDIR+=	spectrum
 SUBDIR+=	speedx
 SUBDIR+=	spfmilter
 SUBDIR+=	sphinxsearch
+SUBDIR+=	spidermonkey185
 SUBDIR+=	splix
 SUBDIR+=	spyder
 SUBDIR+=	squidview
