@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/08/05 14:16:13 obache Exp $
+# $NetBSD: Makefile,v 1.3 2011/08/05 14:17:29 obache Exp $
 #
 
 DISTNAME=	yelp-xsl-2.31.1
@@ -15,7 +15,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config intltool
-USE_LANGUAGES=	c c++
 
 PKGCONFIG_OVERRIDE+=	yelp-xsl.pc.in
 
