@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.1 2011/05/29 07:06:55 jafour1 Exp $
+$NetBSD: patch-ab,v 1.2 2011/08/05 22:13:02 jafour1 Exp $
 
---- rakelib/blueprint.rb.orig	2011-05-28 16:31:20.000000000 -0500
-+++ rakelib/blueprint.rb	2011-05-28 16:31:36.000000000 -0500
+--- rakelib/blueprint.rb.orig	2011-08-05 10:15:03.000000000 -0500
++++ rakelib/blueprint.rb	2011-08-05 10:15:19.000000000 -0500
 @@ -1,7 +1,7 @@
  Daedalus.blueprint do |i|
    gcc = i.gcc!
  
--  gcc.cflags << "-Ivm -Ivm/test/cxxtest -I. -I/usr/local/include -I/opt/local/include "
-+  gcc.cflags << "-Ivm -Ivm/test/cxxtest -I. -I/usr/pkg/include "
+-  system_includes = "-I/usr/local/include -I/opt/local/include"
++  system_includes = "-I/usr/pkg/include"
+ 
+   gcc.cflags << "-Ivm -Ivm/test/cxxtest -I. "
    gcc.cflags << "-pipe -Wall -fno-omit-frame-pointer"
-   gcc.cflags << "-ggdb3 -Werror"
-   gcc.cflags << "-DRBX_PROFILER"
