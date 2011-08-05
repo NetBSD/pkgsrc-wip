@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2011/08/05 16:03:29 asau Exp $
-VERSION=	1.2.3
-DATERELEASE=    20110315
+# $NetBSD: Makefile,v 1.9 2011/08/05 23:51:06 jafour1 Exp $
+VERSION=	1.2.4
+DATERELEASE=    20110705
 DISTNAME=	rubinius-${VERSION}-${DATERELEASE}
 CATEGORIES=	lang
 MASTER_SITES=	http://asset.rubini.us/
@@ -15,32 +15,21 @@ LICENSE=       modified-bsd
 
 .include "../../mk/bsd.prefs.mk"
 
-NO_CONFIGURE=	yes
-NO_BUILD=	yes
 USE_TOOLS+= 	perl
-USE_TOOLS+=     gmake
+USE_TOOLS+=     gmake rake
 RUBY_REQD=	1.8.7
 RUBY_VERSION=   ${RUBY18_VERSION}
 RUBY_VERSION_SUPPORTED= 18
-#REPLACE_RUBY_DIRS=	bin
-#USE_RUBY_SETUP=	yes
 USE_LANGUAGES+=	c c++
-# DESTDIR=${LOCALBASE}	FIXME!
-
 WRKSRC=		${WRKDIR}/rubinius-${VERSION}
-# FIXME: this may be needed for the build
-# pre-patch:
-#         if ${TEST} ! -f /usr/include/llvm; then \
-# 	 ln -s /usr/pkg/include/llvm /usr/include/llvm \
-#         fi; # Evil hack. Please fix
+CONFIG_SHELL= 	$(RUBY)
 
-do-install:
-	if ${TEST} -f ${DESTDIR}/bin/rake18; then \
-	 if ${TEST} ! -f ${DESTDIR}/bin/rake; then \
-		ln -s ${DESTDIR}/bin/rake18 ${DESTDIR}/bin/rake; \
-	 fi; \
-	fi;
-	cd work/rubinius-${VERSION} && ./configure --prefix=${DESTDIR}/rubinius && ${DESTDIR}/bin/rake install
+HAS_CONFIGURE=		yes
+CONFIGURE_SCRIPT= 	${WRKSRC}/configure
+CONFIGURE_ARGS=	-P ${DESTDIR}/rubinius
+
+#do-install:
+#	cd work/rubinius-${VERSION} && rake18 install
 
 DEPENDS+=	bison>=2.4.3:../../devel/bison
 DEPENDS+=	zlib>=1.2.3:../../devel/zlib
@@ -57,3 +46,5 @@ PLIST_SUBST+=		RUBY_NAME=${RUBY_NAME}
 .include "../../devel/readline/buildlink3.mk"
 .include "../../lang/ruby/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
+
+MAKE_PROGRAM=  ${PREFIX}/bin/rake18
