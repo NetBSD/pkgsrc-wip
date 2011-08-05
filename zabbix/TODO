@@ -1,4 +1,4 @@
-$Id: TODO,v 1.13 2010/08/03 17:50:20 tezdog Exp $
+$Id: TODO,v 1.14 2011/08/05 18:46:47 tezdog Exp $
 
 All this may be obsolete after update to Zabbix 1.8.3
 
@@ -21,3 +21,4 @@ https://support.zabbix.com/browse/ZBX-1032
 https://support.zabbix.com/browse/ZBX-1355
 http://archives.neohapsis.com/archives/fulldisclosure/2010-04/0001.html
 http://secunia.com/advisories/40679
+http://secunia.com/advisories/45502
