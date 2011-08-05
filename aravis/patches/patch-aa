@@ -1,0 +1,30 @@
+$NetBSD: patch-aa,v 1.1.1.1 2011/08/05 10:20:22 jihbed Exp $
+
+--- Makefile.in.orig	2010-05-21 16:03:36.000000000 +0100
++++ Makefile.in	2011-08-05 11:09:17.000000000 +0100
+@@ -38,8 +38,8 @@
+ host_triplet = @host@
+ DIST_COMMON = README $(am__configure_deps) $(srcdir)/Makefile.am \
+ 	$(srcdir)/Makefile.in $(srcdir)/aravis.pc.in \
+-	$(top_srcdir)/Makefile.decl $(top_srcdir)/configure AUTHORS \
+-	COPYING ChangeLog INSTALL NEWS config.guess config.sub depcomp \
++	$(top_srcdir)/Makefile.decl $(top_srcdir)/configure \
++	config.guess config.sub depcomp \
+ 	install-sh ltmain.sh missing mkinstalldirs
+ subdir = .
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
+@@ -303,14 +303,6 @@
+ ACLOCAL_AMFLAGS = -I m4
+ DISTCHECK_CONFIGURE_FLAGS = --enable-introspection --enable-gtk-doc
+ SUBDIRS = src gst po docs
+-aravisdocdir = ${prefix}/doc/aravis
+-aravisdoc_DATA = \
+-	README		\
+-	COPYING		\
+-	ChangeLog 	\
+-	AUTHORS		\
+-	INSTALL		\
+-	NEWS
+ 
+ pkgconfigdir = $(libdir)/pkgconfig
+ pkgconfig_DATA = aravis.pc

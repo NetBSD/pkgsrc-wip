@@ -1,0 +1,3 @@
+Aravis is a glib/gobject based library for the video acquisition of
+Genicam cameras It currently only implements  an ethernet  camera protocol
+ used for industrial cameras
