@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/05/08 18:37:58 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2011/08/05 14:16:13 obache Exp $
 #
 
 DISTNAME=	yelp-xsl-2.31.1
 CATEGORIES=	misc textproc
-MASTER_SITES=	ftp://ftp.gnome.org/pub/gnome/sources/yelp-xsl/2.31/
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/yelp-xsl/2.31/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc.gnome@gmail.com
