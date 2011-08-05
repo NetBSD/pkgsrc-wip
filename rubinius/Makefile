@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2011/08/05 15:56:08 asau Exp $
+# $NetBSD: Makefile,v 1.8 2011/08/05 16:03:29 asau Exp $
 VERSION=	1.2.3
 DATERELEASE=    20110315
 DISTNAME=	rubinius-${VERSION}-${DATERELEASE}
@@ -28,10 +28,11 @@ USE_LANGUAGES+=	c c++
 # DESTDIR=${LOCALBASE}	FIXME!
 
 WRKSRC=		${WRKDIR}/rubinius-${VERSION}
-pre-patch:
-        if ${TEST} ! -f /usr/include/llvm; then \
-	 ln -s /usr/pkg/include/llvm /usr/include/llvm \
-        fi; # Evil hack. Please fix
+# FIXME: this may be needed for the build
+# pre-patch:
+#         if ${TEST} ! -f /usr/include/llvm; then \
+# 	 ln -s /usr/pkg/include/llvm /usr/include/llvm \
+#         fi; # Evil hack. Please fix
 
 do-install:
 	if ${TEST} -f ${DESTDIR}/bin/rake18; then \
