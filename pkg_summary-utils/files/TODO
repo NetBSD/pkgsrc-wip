@@ -1,5 +1,7 @@
 TODO list and thoughts
 
+pkg_bin_summary: no specified packages -- no output
+
 existing tools:
 
     pkg_cmp_summary:
