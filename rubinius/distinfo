@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2011/08/06 02:54:42 jafour1 Exp $
+$NetBSD: distinfo,v 1.7 2011/08/06 02:59:12 jafour1 Exp $
 
 SHA1 (rubinius-1.2.4-20110705.tar.gz) = c39c4fb1e62e0fb418453811636177e6ccf6a936
 RMD160 (rubinius-1.2.4-20110705.tar.gz) = 015540347989167a7f953c6c02ca6b6524d21fa2
@@ -6,4 +6,4 @@ Size (rubinius-1.2.4-20110705.tar.gz) = 9880126 bytes
 SHA1 (patch-aa) = 3398c8f66c83b7a96a42497cf1dee3d3b11fb462
 SHA1 (patch-ab) = 7fcf2bebc5c03c75eb0b260aa4aafd0a33c9e7a7
 SHA1 (patch-ac) = 4dad7fc47158ca39d86b6da6ff05281412ad0148
-SHA1 (patch-ad) = 9bb8b611a86467705d04e0ca55b914bb3d03bb7f
+SHA1 (patch-ad) = 2cf430ef6f86625428e21afb70f29cb436c67bad
