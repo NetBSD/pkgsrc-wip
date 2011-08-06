@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2011/08/06 06:43:53 obache Exp $
+# $NetBSD: Makefile,v 1.5 2011/08/06 06:50:41 obache Exp $
 #
 
 DISTNAME=	yelp-xsl-2.31.1
-CATEGORIES=	misc textproc
+CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/yelp-xsl/2.31/}
 EXTRACT_SUFX=	.tar.bz2
 
