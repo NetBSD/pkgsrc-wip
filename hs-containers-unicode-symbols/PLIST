@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/08/06 04:34:04 phonohawk Exp $
+lib/containers-unicode-symbols-${PKGVERSION}/${HASKELL_VERSION}/Data/IntMap/Unicode.hi
+lib/containers-unicode-symbols-${PKGVERSION}/${HASKELL_VERSION}/Data/IntMap/Unicode.p_hi
+lib/containers-unicode-symbols-${PKGVERSION}/${HASKELL_VERSION}/Data/IntSet/Unicode.hi
+lib/containers-unicode-symbols-${PKGVERSION}/${HASKELL_VERSION}/Data/IntSet/Unicode.p_hi
+lib/containers-unicode-symbols-${PKGVERSION}/${HASKELL_VERSION}/Data/Map/Unicode.hi
+lib/containers-unicode-symbols-${PKGVERSION}/${HASKELL_VERSION}/Data/Map/Unicode.p_hi
+lib/containers-unicode-symbols-${PKGVERSION}/${HASKELL_VERSION}/Data/Sequence/Unicode.hi
+lib/containers-unicode-symbols-${PKGVERSION}/${HASKELL_VERSION}/Data/Sequence/Unicode.p_hi
+lib/containers-unicode-symbols-${PKGVERSION}/${HASKELL_VERSION}/Data/Set/Unicode.hi
+lib/containers-unicode-symbols-${PKGVERSION}/${HASKELL_VERSION}/Data/Set/Unicode.p_hi
+lib/containers-unicode-symbols-${PKGVERSION}/${HASKELL_VERSION}/HScontainers-unicode-symbols-${PKGVERSION}.o
+lib/containers-unicode-symbols-${PKGVERSION}/${HASKELL_VERSION}/libHScontainers-unicode-symbols-${PKGVERSION}.a
+lib/containers-unicode-symbols-${PKGVERSION}/${HASKELL_VERSION}/libHScontainers-unicode-symbols-${PKGVERSION}_p.a
+lib/containers-unicode-symbols-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/containers-unicode-symbols-${PKGVERSION}/LICENSE
