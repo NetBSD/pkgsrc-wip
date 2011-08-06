@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2011/08/05 23:51:06 jafour1 Exp $
+# $NetBSD: Makefile,v 1.10 2011/08/06 00:47:51 jafour1 Exp $
 VERSION=	1.2.4
 DATERELEASE=    20110705
 DISTNAME=	rubinius-${VERSION}-${DATERELEASE}
@@ -20,16 +20,20 @@ USE_TOOLS+=     gmake rake
 RUBY_REQD=	1.8.7
 RUBY_VERSION=   ${RUBY18_VERSION}
 RUBY_VERSION_SUPPORTED= 18
+RAKE_NAME=	rake18
 USE_LANGUAGES+=	c c++
 WRKSRC=		${WRKDIR}/rubinius-${VERSION}
 CONFIG_SHELL= 	$(RUBY)
 
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT= 	${WRKSRC}/configure
-CONFIGURE_ARGS=	-P ${DESTDIR}/rubinius
+CONFIGURE_ARGS=		-P ${PREFIX}/rubinius
 
-#do-install:
-#	cd work/rubinius-${VERSION} && rake18 install
+do-build:
+	cd ${WRKSRC} && ${RAKE_NAME} build
+
+do-install:
+	cd ${WRKSRC} && ${RAKE_NAME} install
 
 DEPENDS+=	bison>=2.4.3:../../devel/bison
 DEPENDS+=	zlib>=1.2.3:../../devel/zlib
@@ -46,5 +50,4 @@ PLIST_SUBST+=		RUBY_NAME=${RUBY_NAME}
 .include "../../devel/readline/buildlink3.mk"
 .include "../../lang/ruby/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
-
-MAKE_PROGRAM=  ${PREFIX}/bin/rake18
+ 
