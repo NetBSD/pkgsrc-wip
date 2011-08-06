@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/06/11 22:47:30 ryo-on Exp $
-
-SHA1 (queequeg-0.91.tar.gz) = e0ceae717a297ee866e38ae7fd10c216df1232e9
-RMD160 (queequeg-0.91.tar.gz) = 2988de90f0dc41c40823745b78ca5b733e1b8708
-Size (queequeg-0.91.tar.gz) = 69449 bytes
