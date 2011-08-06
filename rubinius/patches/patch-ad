@@ -1,0 +1,12 @@
+$NetBSD: patch-ad,v 1.1 2011/08/06 02:49:30 jafour1 Exp $
+--- attach_foreign.rb.orig	2011-08-05 21:46:20.000000000 -0500
++++ attach_foreign.rb	2011-08-05 21:46:52.000000000 -0500
+@@ -25,7 +25,7 @@
+                 }
+                ]
+ 
+-  LIB_PATHS = %w[/usr/lib /usr/local/lib /opt/lib /opt/local/lib]
++  LIB_PATHS = %w[/usr/pkg/lib /usr/lib /usr/local/lib /opt/lib /opt/local/lib]
+   LIB_NAMES = KNOWN_LIBS.map {|l| l[:name] }
+ 
+   # Find a library that we can reliably check against
