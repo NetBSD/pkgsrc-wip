@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2010/08/23 02:37:50 guigui2 Exp $
+@comment $NetBSD: PLIST,v 1.5 2011/08/06 18:49:04 guigui2 Exp $
 bin/mirage
 ${PYSITELIB}/imgfuncs.so
 ${PYSITELIB}/mirage.py
@@ -16,6 +16,7 @@ share/locale/nl/LC_MESSAGES/mirage.mo
 share/locale/pl/LC_MESSAGES/mirage.mo
 share/locale/pt_BR/LC_MESSAGES/mirage.mo
 share/locale/ru/LC_MESSAGES/mirage.mo
+share/locale/ua/LC_MESSAGES/mirage.mo
 share/locale/zh_CN/LC_MESSAGES/mirage.mo
 share/mirage/CHANGELOG
 share/mirage/COPYING
