@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4449 2011/08/05 10:24:12 jihbed Exp $
+# $Id: Makefile,v 1.4450 2011/08/06 04:35:15 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -867,6 +867,7 @@ SUBDIR+=	hs-chalkboard
 SUBDIR+=	hs-chalkboard-viewer
 SUBDIR+=	hs-chunks
 SUBDIR+=	hs-colorize-haskell
+SUBDIR+=	hs-containers-unicode-symbols
 SUBDIR+=	hs-convertible
 SUBDIR+=	hs-cpphs
 SUBDIR+=	hs-crypto-api
