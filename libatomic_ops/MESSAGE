@@ -1,13 +1,13 @@
-$NetBSD: MESSAGE,v 1.1 2007/06/23 08:48:13 bsadewitz Exp $
-==========================================================================
+===========================================================================
+$NetBSD: MESSAGE,v 1.2 2011/08/07 01:40:57 ryo-on Exp $
 There are two kinds of entities in:
 				${PREFIX}/include/libatomic_ops/sysdeps
 
-- Subdirectories corresponding to specific compilers 
+- Subdirectories corresponding to specific compilers
   (or compiler/OS combinations).
 
   Each of these includes one or more architecture-specific headers.
 
 - More generic header files corresponding to a particular ordering and/or
   atomicity property that might be shared by multiple hardware platforms.
-==========================================================================
+===========================================================================

@@ -1,26 +1,16 @@
-$NetBSD: patch-ad,v 1.1 2007/11/05 06:53:56 bsadewitz Exp $
+$NetBSD: patch-ad,v 1.2 2011/08/07 01:40:59 ryo-on Exp $
 
---- tests/Makefile.am.orig	2005-03-09 20:13:11.000000000 -0500
-+++ tests/Makefile.am
-@@ -14,17 +14,17 @@ TESTS=test_atomic test_atomic_pthreads t
- check_PROGRAMS=test_atomic test_atomic_pthreads test_stack test_malloc
+--- src/atomic_ops.h.orig	2010-09-15 19:18:33.000000000 +0000
++++ src/atomic_ops.h
+@@ -325,7 +325,10 @@
+ # endif /* __x86_64 */
+ #endif
  
- test_atomic_SOURCES=test_atomic.c
--test_atomic_LDADD=-lpthread ../src/libatomic_ops.a
-+test_atomic_LDADD=-lpthread ../src/libatomic_ops.la
- 
- test_atomic_pthreads_SOURCES=test_atomic.c 
- test_atomic_pthreads_CPPFLAGS=-DAO_USE_PTHREAD_DEFS $(AM_CPPFLAGS)
--test_atomic_pthreads_LDADD=-lpthread ../src/libatomic_ops.a
-+test_atomic_pthreads_LDADD=-lpthread ../src/libatomic_ops.la
- 
- test_stack_SOURCES=test_stack.c 
--test_stack_LDADD=-lpthread ../src/libatomic_ops_gpl.a ../src/libatomic_ops.a 
-+test_stack_LDADD=-lpthread ../src/libatomic_ops_gpl.la ../src/libatomic_ops.la 
- 
- test_malloc_SOURCES=test_malloc.c 
--test_malloc_LDADD=-lpthread ../src/libatomic_ops_gpl.a ../src/libatomic_ops.a 
-+test_malloc_LDADD=-lpthread ../src/libatomic_ops_gpl.la ../src/libatomic_ops.la 
- 
- test_atomic_include.h: test_atomic.template
- 	sed -e s/XX// $? > $@
+-#if !defined(__GNUC__) && (defined(sparc) || defined(__sparc)) \
++#if defined(__SUNPRO_C) && defined(__i386)
++#   include "atomic_ops/sysdeps/generic_pthread.h"
++#   define AO_CAN_EMUL_CAS
++#elif !defined(__GNUC__) && (defined(sparc) || defined(__sparc)) \
+     && !defined(AO_USE_PTHREAD_DEFS)
+ # include "atomic_ops/sysdeps/sunc/sparc.h"
+ # define AO_CAN_EMUL_CAS

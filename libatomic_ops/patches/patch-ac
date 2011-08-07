@@ -1,25 +1,12 @@
-$NetBSD: patch-ac,v 1.1 2007/11/05 06:53:56 bsadewitz Exp $
+$NetBSD: patch-ac,v 1.2 2011/08/07 01:40:59 ryo-on Exp $
 
---- src/Makefile.am.orig	2005-03-10 23:34:22.000000000 -0500
-+++ src/Makefile.am
-@@ -1,16 +1,14 @@
- SUBDIRS=atomic_ops
+--- configure.ac.orig	2011-06-15 11:41:30.000000000 +0000
++++ configure.ac
+@@ -4,6 +4,7 @@ AC_CANONICAL_TARGET([])
+ AC_CONFIG_SRCDIR(src/atomic_ops.c)
+ AM_INIT_AUTOMAKE
+ AC_PROG_RANLIB
++AC_PROG_LIBTOOL
  
--AM_CFLAGS=@PICFLAG@
--
- include_HEADERS=atomic_ops.h atomic_ops_stack.h atomic_ops_malloc.h
--lib_LIBRARIES = libatomic_ops.a libatomic_ops_gpl.a
-+lib_LTLIBRARIES = libatomic_ops.la libatomic_ops_gpl.la
- if NEED_ASM
--libatomic_ops_a_SOURCES = atomic_ops.c atomic_ops_sysdeps.S
-+libatomic_ops_la_SOURCES = atomic_ops.c atomic_ops_sysdeps.S
- else
--libatomic_ops_a_SOURCES = atomic_ops.c
-+libatomic_ops_la_SOURCES = atomic_ops.c
- endif
- 
--libatomic_ops_gpl_a_SOURCES = atomic_ops_stack.c atomic_ops_malloc.c
-+libatomic_ops_gpl_la_SOURCES = atomic_ops_stack.c atomic_ops_malloc.c
- 
- EXTRA_DIST=Makefile.msft
+ AM_CONFIG_HEADER(src/config.h)
  
