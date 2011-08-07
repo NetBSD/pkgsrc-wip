@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2011/05/11 19:47:08 cheusov Exp $
+# $NetBSD: Makefile,v 1.7 2011/08/07 19:19:06 cheusov Exp $
 #
 
 DISTNAME=	distbb-9
@@ -30,7 +30,7 @@ REPLACE_SH+=		distbb.in distbb_diff.in slave.in stage_*.in
 REPLACE_INTERPRETER+=	runawk
 REPLACE.runawk.old=	/usr/bin/env runawk
 REPLACE.runawk.new=	${PREFIX}/bin/runawk
-REPLACE_FILES.runawk=	gen_weights.in gen_queue.in
+REPLACE_FILES.runawk=	gen_weights.in gen_queue.in pkg_summary2build_deps.in
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
