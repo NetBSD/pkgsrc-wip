@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2011/07/04 16:37:15 asau Exp $
+# $NetBSD: Makefile,v 1.35 2011/08/07 09:50:05 asau Exp $
 
 DISTNAME=		${PKGNAME_NOREV}-source
 PKGNAME=		sbcl-1.0.47
@@ -68,6 +68,8 @@ SUBST_MESSAGE.fix-gtar=		Fixing GNU tar references.
 SUBST_FILES.fix-gtar=		contrib/asdf-install/installer.lisp
 SUBST_SED.fix-gtar=		-e 's,@GTAR@,${GTAR},'
 
+pre-build:
+	cd ${WRKSRC} && ${ECHO} '"1.0.99"' > version.lisp-expr
 do-build:
 	cd ${WRKSRC} && ${SH} make.sh --prefix=${PREFIX} --xc-host=${SBCL_BOOT_SYSTEM:Q}
 post-build:
