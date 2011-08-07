@@ -10,7 +10,7 @@ Suggested package updates
 	o cclive-0.7.4
 	o ccrypt-1.9
 	o chora-2.0.1
-	o cinelerra-4.2
+	o cinelerra-4.3
 	o couchdb-glib-0.6.3
 	o cygwin-1.7.1
 	o d4x-2.5.7.1
@@ -56,8 +56,9 @@ Suggested package updates
 	o httrack-3.43
 	o hu-go-2.11
 	o hyena-0.3
+	o i3-4.0.1
 	o i3lock-2.1
-	o icecat-5.0
+	o icecat-5.0.1
 	o jakarta-struts-1.2.4
 	o jalview-2.4
 	o java-asm-3.2
@@ -81,7 +82,7 @@ Suggested package updates
 	o man-1.6f
 	o mcabber-0.10.1
 	o mcwm-20110721
-	o meta-tracker-0.10.21
+	o meta-tracker-0.10.22
 	o mixxx-1.8.0
 	o mpgedit-0.73dev2
 	o mumble-1.2.3
