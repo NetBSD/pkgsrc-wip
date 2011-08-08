@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/05/04 12:29:11 ryo-on Exp $
+# $NetBSD: Makefile,v 1.3 2011/08/08 13:19:03 ryo-on Exp $
 #
 
 DISTNAME=	libwebp-0.1.2
@@ -6,7 +6,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	http://webp.googlecode.com/files/
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://code.google.com/intl/ja/speed/webp/
+HOMEPAGE=	http://code.google.com/speed/webp/index.html
 COMMENT=	WebP image format library and tools
 LICENSE=	modified-bsd
 
