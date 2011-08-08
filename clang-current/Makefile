@@ -1,28 +1,24 @@
-# $NetBSD: Makefile,v 1.2 2011/07/09 17:38:45 asau Exp $
+# $NetBSD: Makefile,v 1.3 2011/08/08 13:55:24 asau Exp $
 
-DISTNAME=	clang-2.9.99
+DISTNAME=	llvm-2.6
 CATEGORIES=	lang
-MASTER_SITES=	# empty
-DISTFILES=	# empty
+MASTER_SITES=	http://llvm.org/releases/${PKGVERSION_NOREV}/
 
-MAINTAINER=	MarkoSchuetz@web.de
+MAINTAINER=	pkgsrc-wip-discuss@lists.sourceforge.net
 HOMEPAGE=	http://llvm.org/
 COMMENT=	Low Level Virtual Machine compiler infrastructure
 LICENSE=	modified-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-WRKSRC=			${WRKDIR}/llvm
-
 USE_LANGUAGES+=	c c++
 USE_TOOLS+=	gmake perl:build chown
 GNU_CONFIGURE=	yes
+MAKE_DIRS+=	etc/llvm
 CONFIGURE_ARGS+=	--disable-assertions
 CONFIGURE_ARGS+=	--disable-bindings	# disable OCaml
 CONFIGURE_ARGS+=	--disable-timestamps
 CONFIGURE_ARGS+=	--enable-optimized
-
-MAKE_DIRS+=		etc/llvm
 
 INSTALLATION_DIRS=	bin lib libexec
 
@@ -52,9 +48,14 @@ SVN_REPOSITORIES=	llvm clang
 SVN_ROOT.llvm=		http://llvm.org/svn/llvm-project/llvm/trunk
 SVN_ROOT.clang=		http://llvm.org/svn/llvm-project/cfe/trunk
 
+PKGNAME=		clang-2.8.99
+WRKSRC=			$(WRKDIR)/$(SVN_MODULE.llvm)
+
 CHECK_PORTABILITY_SKIP= utils/buildit/.svn/text-base/build_llvm.svn-base \
 			utils/buildit/build_llvm
 
 
 .include "../../wip/mk/svn-package.mk"
+
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

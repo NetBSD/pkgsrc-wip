@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2011/07/09 17:38:45 asau Exp $
-#
+# $NetBSD: Makefile,v 1.8 2011/08/08 13:55:24 asau Exp $
 
 DISTNAME=	llvm-2.6
 CATEGORIES=	lang
 MASTER_SITES=	http://llvm.org/releases/${PKGVERSION_NOREV}/
 
-MAINTAINER=	adam.hoka@gmail.com
+MAINTAINER=	pkgsrc-wip-discuss@lists.sourceforge.net
 HOMEPAGE=	http://llvm.org/
 COMMENT=	Low Level Virtual Machine compiler infrastructure
 LICENSE=	modified-bsd
@@ -42,9 +41,7 @@ post-extract:
 # Get it from Subversion repository:
 SVN_REPOSITORIES=	llvm clang
 SVN_ROOT.llvm=		http://llvm.org/svn/llvm-project/llvm/trunk
-SVN_MODULE.llvm=	llvm
 SVN_ROOT.clang=		http://llvm.org/svn/llvm-project/cfe/trunk
-SVN_MODULE.clang=	clang
 
 PKGNAME=		clang-2.8.99
 WRKSRC=			$(WRKDIR)/$(SVN_MODULE.llvm)
