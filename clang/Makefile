@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2011/08/08 14:15:12 asau Exp $
+# $NetBSD: Makefile,v 1.10 2011/08/08 15:19:08 asau Exp $
 
 DISTNAME=	llvm-2.6
 CATEGORIES=	lang
@@ -15,10 +15,12 @@ USE_LANGUAGES+=	c c++
 USE_TOOLS+=	gmake perl:build chown
 GNU_CONFIGURE=	yes
 MAKE_DIRS+=	etc/llvm
-CONFIGURE_ARGS=	--enable-bindings=none	# no OCaml, please!
+CONFIGURE_ARGS+=	--disable-bindings	# disable OCaml
+CONFIGURE_ARGS+=	--enable-optimized
 # This should be changed!
-CONFIGURE_ARGS+= --enable-targets=host-only
-CONFIGURE_ARGS+= --disable-optimized
+CONFIGURE_ARGS+=	--enable-targets=host-only
+CONFIGURE_ARGS+=	--disable-assertions
+CONFIGURE_ARGS+=	--disable-timestamps
 
 USE_LIBTOOL=	yes
 
