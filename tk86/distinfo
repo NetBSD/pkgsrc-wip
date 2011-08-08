@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2011/05/31 18:59:56 bharder Exp $
+$NetBSD: distinfo,v 1.5 2011/08/08 19:17:51 bharder Exp $
 
-SHA1 (9bc115d8f1) = 982392009e302f83bb5aaf45aed115f300dce259
-RMD160 (9bc115d8f1) = 3841a70e30e3dcf0f1f1317dafaa3dcf456aa4f3
-Size (9bc115d8f1) = 4526387 bytes
+SHA1 (tk8.6b2-src.tar.gz) = 46664613b6b832422df993598204c283b33c4a85
+RMD160 (tk8.6b2-src.tar.gz) = 1629b49e8e319d7f6f4aedee56d39f939fddda15
+Size (tk8.6b2-src.tar.gz) = 4611544 bytes
 SHA1 (patch-aa) = 4d18470381cbcc55505ac5945e319b2c2b3aabf8
