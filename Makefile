@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4454 2011/08/07 15:02:14 ryo-on Exp $
+# $Id: Makefile,v 1.4455 2011/08/09 13:18:10 ryo-on Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -389,6 +389,7 @@ SUBDIR+=	deforaos-player
 SUBDIR+=	deforaos-probe
 SUBDIR+=	deforaos-surfer
 SUBDIR+=	deforaos-todo
+SUBDIR+=	denemo
 SUBDIR+=	depsolver
 SUBDIR+=	deskcribe
 SUBDIR+=	desktop-data-model
