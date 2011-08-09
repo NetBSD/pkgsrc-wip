@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2011/06/20 20:01:36 ryo-on Exp $
+# $NetBSD: Makefile,v 1.4 2011/08/09 13:42:25 ryo-on Exp $
 #
 
-DISTNAME=	libburn-1.1.0.pl01
+DISTNAME=	libburn-1.1.4
 PKGNAME=	${DISTNAME:S/pl//}
 CATEGORIES=	sysutils
 MASTER_SITES=	http://files.libburnia-project.org/releases/
