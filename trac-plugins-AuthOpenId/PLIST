@@ -1,11 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/07/21 13:33:23 rsmarples Exp $
-${PYSITELIB}/TracAuthOpenId-0.2.1-py2.5.egg-info/PKG-INFO
-${PYSITELIB}/TracAuthOpenId-0.2.1-py2.5.egg-info/SOURCES.txt
-${PYSITELIB}/TracAuthOpenId-0.2.1-py2.5.egg-info/dependency_links.txt
-${PYSITELIB}/TracAuthOpenId-0.2.1-py2.5.egg-info/entry_points.txt
-${PYSITELIB}/TracAuthOpenId-0.2.1-py2.5.egg-info/requires.txt
-${PYSITELIB}/TracAuthOpenId-0.2.1-py2.5.egg-info/top_level.txt
-${PYSITELIB}/TracAuthOpenId-0.2.1-py2.5.egg-info/trac_plugin.txt
+@comment $NetBSD: PLIST,v 1.2 2011/08/10 13:41:34 rsmarples Exp $
+${PYSITELIB}/TracAuthOpenId-${PKGVERSION}-py2.5.egg-info/PKG-INFO
+${PYSITELIB}/TracAuthOpenId-${PKGVERSION}-py2.5.egg-info/SOURCES.txt
+${PYSITELIB}/TracAuthOpenId-${PKGVERSION}-py2.5.egg-info/dependency_links.txt
+${PYSITELIB}/TracAuthOpenId-${PKGVERSION}-py2.5.egg-info/entry_points.txt
+${PYSITELIB}/TracAuthOpenId-${PKGVERSION}-py2.5.egg-info/top_level.txt
+${PYSITELIB}/TracAuthOpenId-${PKGVERSION}-py2.5.egg-info/trac_plugin.txt
 ${PYSITELIB}/authopenid/__init__.py
 ${PYSITELIB}/authopenid/__init__.pyc
 ${PYSITELIB}/authopenid/__init__.pyo

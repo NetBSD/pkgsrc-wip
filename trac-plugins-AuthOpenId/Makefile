@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2009/07/21 14:14:44 rsmarples Exp $
+# $NetBSD: Makefile,v 1.3 2011/08/10 13:41:34 rsmarples Exp $
 
-DISTVERS=	0.2.1
+DISTVERS=	0.3.4
 DISTNAME=	TracAuthOpenId-${DISTVERS}
 PKGNAME=	trac-plugins-AuthOpenId-${DISTVERS}
 EGG_NAME=	${PKGNAME}
