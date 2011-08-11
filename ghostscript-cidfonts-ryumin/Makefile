@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2011/05/14 03:08:47 makoto Exp $
+# $NetBSD: Makefile,v 1.6 2011/08/11 03:17:18 makoto Exp $
 
 DISTNAME=	ghostscript-cidfonts-ryumin-${GS_VERSION}
 # Please note  following is a must when building ghostscript
 # for this package to work
 #    PKGOPTION.ghostscipt+= disable-compile-inits
-LICENSE=	generic-nonlicenses
+LICENSE=	generic-nonlicense
 
 CATEGORIES=	print
 DISTFILES=	# empty
