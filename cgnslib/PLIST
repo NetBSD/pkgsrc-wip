@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/08/12 23:35:17 jihbed Exp $
+bin/cgnames
+bin/cgnscheck
+bin/cgnsconvert
+bin/cgnsdiff
+bin/cgnslist
+bin/cgnsupdate
+bin/cgnsversion
+include/cgns_io.h
+include/cgnslib.h
+include/cgnslib_f.h
+include/cgnstypes.h
+include/cgnstypes_f.h
+include/cgnswin_f.h
+lib/libcgns.a
+lib/libcgns.so
+lib/libcgns.so.3.1
