@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2010/07/17 00:49:41 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.3 2011/08/12 12:55:13 asau Exp $
 ${PYSITELIB}/gevent/__init__.py
 ${PYSITELIB}/gevent/__init__.pyc
 ${PYSITELIB}/gevent/__init__.pyo
@@ -24,6 +24,9 @@ ${PYSITELIB}/gevent/greenlet.pyo
 ${PYSITELIB}/gevent/http.py
 ${PYSITELIB}/gevent/http.pyc
 ${PYSITELIB}/gevent/http.pyo
+${PYSITELIB}/gevent/httplib.py
+${PYSITELIB}/gevent/httplib.pyc
+${PYSITELIB}/gevent/httplib.pyo
 ${PYSITELIB}/gevent/hub.py
 ${PYSITELIB}/gevent/hub.pyc
 ${PYSITELIB}/gevent/hub.pyo
