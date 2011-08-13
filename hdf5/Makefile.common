@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2011/07/23 22:42:36 alnsn Exp $
+# $NetBSD: Makefile.common,v 1.2 2011/08/13 13:17:24 alnsn Exp $
 # used by wip/hdf5-c++/Makefile
 
 HDF5_VER=	1.8.7
@@ -16,7 +16,6 @@ USE_TOOLS+=		pax tr
 GNU_CONFIGURE=		yes
 TEST_TARGET=		check
 PKG_DESTDIR_SUPPORT=	user-destdir
-INSTALLATION_DIRS+=	include lib bin share/examples/hdf5/c
 
 PATCHDIR=	${.CURDIR}/../../wip/hdf5/patches
 
@@ -25,15 +24,7 @@ PATCHDIR=	${.CURDIR}/../../wip/hdf5/patches
 CHECK_WRKREF_SKIP=	${PREFIX}/lib/libhdf5.settings
 
 INSTALL_ENV+=		INSTALL_SCRIPT=${INSTALL_SCRIPT:Q}
-INSTALLATION_DIRS+=	share/doc/hdf5
 
 post-extract:
 	${CP} ${WRKSRC}/config/freebsd ${WRKSRC}/config/netbsd
 	${CP} ${WRKSRC}/config/freebsd ${WRKSRC}/config/netbsdelf
-
-post-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/tools/misc/h5cc ${DESTDIR}${PREFIX}/bin
-	${INSTALL_SCRIPT} ${WRKSRC}/tools/misc/h5redeploy.in ${DESTDIR}${PREFIX}/bin/h5redeploy
-	cd ${WRKSRC} && ${INSTALL_DATA} COPYING release_docs/RELEASE.txt \
-		release_docs/HISTORY-1_8.txt release_docs/HISTORY-1_0-1_8_0_rc3.txt \
-		${DESTDIR}${PREFIX}/share/doc/hdf5
