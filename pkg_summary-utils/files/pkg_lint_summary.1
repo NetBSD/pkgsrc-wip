@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkg_lint_summary.1,v 1.12 2011/08/13 11:13:36 cheusov Exp $
+.\"	$NetBSD: pkg_lint_summary.1,v 1.13 2011/08/13 12:38:19 cheusov Exp $
 .\"
 .\" Copyright (c) 2008-2010 by Aleksey Cheusov (vle@gmx.net)
 .\" Absolutely no warranty.
@@ -111,6 +111,32 @@ output in the following format:
 .VB
 
    c: conflict CNFLCT_REQD CNFLCT_PATH CNFLCT_NAME <- PKGPATH PKGNAME
+
+.VE
+.TP
+.B "-n"
+analyses PLIST and CONFLICTS entries in input summary and outputs
+information about unregistered conflicts, i.e. common file
+and conflicting packages. Output format is below.
+.VB
+
+   n: conflict FILE <- PKGPATH1 PKGNAME1 PKGPATH2 PKGNAME2
+
+.VE
+The line above means that (PKGPATH1, PKGNAME1) and (PKGPATH2, PKGNAME2)
+packages have at least one common file FILE but have no appropriate CONFLICTS entry.
+.br
+Example:
+.VB
+
+   # pkg_lint_summary -n pkg_summary.txt
+   n: conflict /usr/pkg/bin/lzgrep <- archivers/xz xz-5.0.3 \\ 
+                  archivers/lzip lzip-1.7
+   n: conflict /usr/pkg/libexec/cpp <- devel/lcc lcc-4.1 \\ 
+                  lang/pcc pcc-1.0.0
+   n: conflict /usr/pkg/sbin/sshd <- security/openssh openssh-5.8.2nb2 \\ 
+                  security/ssh2 ssh2-3.2.9.1nb7
+   #
 
 .VE
 .TP

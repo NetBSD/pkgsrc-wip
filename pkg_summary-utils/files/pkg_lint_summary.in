@@ -36,6 +36,7 @@
 #use "has_prefix.awk"
 #use "tmpfile.awk"
 #use "xclose.awk"
+#use "xgetline.awk"
 
 ############################################################
 #.begin-str help
@@ -53,6 +54,7 @@
 #   -f          checks that there are no files common for several packages,
 #               PLIST entries are expected in input
 #   -u          checks unicity of PKGBASEs
+#   -n          checks for missing CONFLICTS by anayling PLIST entries
 #   =p prefix   specify prefix (e.g. /usr/pkg) which is used by -l
 #.end-str
 ############################################################
@@ -72,16 +74,17 @@ BEGIN {
 	opt_c = getarg("c")
 	opt_f = getarg("f")
 	opt_u = getarg("u")
+	opt_n = getarg("n")
 
 	cnt = 0
 
-	if (!opt_L && !opt_l && !opt_d && !opt_D && !opt_c && !opt_f && !opt_u){
-		print "At least one of the following options should be applied:\n     -L, -l, -d, -D, -c, -f or -u" > "/dev/stderr"
+	if (!opt_L && !opt_l && !opt_d && !opt_D && !opt_c && !opt_f && !opt_u && !opt_n){
+		print "At least one of the following options should be applied:\n     -L, -l, -d, -D, -c, -f, -u or -n" > "/dev/stderr"
 		exitnow(1)
 	}
 
 	tmp_summary = tmpfile()
-	if (opt_d || opt_D || opt_c)
+	if (opt_d || opt_D || opt_c || opt_n)
 		printf "" > tmp_summary
 }
 
@@ -140,11 +143,11 @@ opt_l || opt_L {
 	}
 }
 
-opt_d || opt_D || opt_c {
+opt_d || opt_D || opt_c || opt_n {
 	print > tmp_summary
 }
 
-opt_f && /^PLIST=/ {
+(opt_n || opt_f) && /^PLIST=/ {
 	plist [++plist_cnt] = substr($0, 7)
 }
 
@@ -198,8 +201,8 @@ END {
 		}
 	}
 
-	# -d -D -c
-	if (opt_d || opt_D || opt_c){
+	# -d -D -c -n
+	if (opt_d || opt_D || opt_c || opt_n){
 		if (ex)
 			fflush()
 
@@ -207,11 +210,52 @@ END {
 
 		if (opt_d) opts = "d"
 		if (opt_D) opts = opts "D"
-		if (opt_c) opts = opts "c"
+		if (opt_c || opt_n) opts = opts "c"
 
-		cmd = "pkg_summary2deps -Xnls" opts " " tmp_summary " 2>&1 > /dev/null" 
+		failed_deps_fn = tmpfile()
+		cmd = "pkg_summary2deps -Xnls" opts " " tmp_summary " 2>" failed_deps_fn " > /dev/null" 
 		if (system(cmd))
 			ex = 1
+
+		if (opt_d || opt_D || opt_c)
+			system("cat " failed_deps_fn)
+	}
+
+	# -n
+	if (opt_n){
+		for (f in all_plist){
+			cnt = split(all_plist [f], arr)
+			if (cnt > 1){
+				for (i=1; i < cnt; ++i){
+					for (j=i+1; j <= cnt; ++j){
+						base1 = pkgpana2pkgbase(arr [i])
+						base2 = pkgpana2pkgbase(arr [j])
+						if (base1 != base2){
+							conflicts [arr [i], arr [j]] = f
+#							print "n: conflict", arr [i], arr [j], f, pkgpana2pkgbase(arr [i]), pkgpana2pkgbase(arr [j])
+						}
+					}
+				}
+			}
+		}
+		while (xgetline0(failed_deps_fn)){
+			if ($1 != "c")
+				continue
+
+			pana1 = ($4 ";" $5)
+			pana2 = ($7 ";" $8)
+			delete conflicts [pana1, pana2]
+			delete conflicts [pana2, pana1]
+		}
+
+		for (pair in conflicts){
+			idx = index(pair, SUBSEP)
+			pana1 = substr(pair, 1, idx-1)
+			sub(/;/, " ", pana1)
+			pana2 = substr(pair, idx+1)
+			sub(/;/, " ", pana2)
+			print "n: conflict " conflicts [pair] " <- " pana1, pana2
+		}
 	}
 
 	# -u

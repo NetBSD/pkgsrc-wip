@@ -84,3 +84,19 @@ pkg_lint_summary -f bin_summary7.txt |
 cmp 'pkg_lint_summary -f #10' \
 'f: conflict /usr/pkg/lib/libpng15.so wip/aaa aaa-0.9.8qnb1 wip/ccc ccc-2.0.64
 '
+
+pkg_lint_summary -n bin_summary8.txt | sort |
+cmp 'pkg_lint_summary -n #11' \
+'n: conflict /usr/pkg/bin/lzgrep <- archivers/xz xz-5.0.3 archivers/lzip lzip-1.7
+n: conflict /usr/pkg/bin/ssh <- security/openssh openssh-5.8.2nb2 security/ssh2 ssh2-3.2.9.1nb7
+n: conflict /usr/pkg/libexec/cpp <- lang/pcc pcc-1.0.0 devel/lcc lcc-4.1
+'
+
+pkg_lint_summary -n bin_summary7.txt | sort |
+cmp 'pkg_lint_summary -n #12' \
+'n: conflict /usr/pkg/lib/libpng15.so <- wip/aaa aaa-0.9.8qnb1 wip/ccc ccc-2.0.64
+'
+
+pkg_lint_summary -n bin_summary6.txt | sort |
+cmp 'pkg_lint_summary -n #13' \
+''
