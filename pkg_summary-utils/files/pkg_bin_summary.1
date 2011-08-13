@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkg_bin_summary.1,v 1.3 2011/08/13 10:46:22 cheusov Exp $
+.\"	$NetBSD: pkg_bin_summary.1,v 1.4 2011/08/13 10:55:15 cheusov Exp $
 .\"
 .\" Copyright (c) 2010 by Aleksey Cheusov (vle@gmx.net)
 .\" Absolutely no warranty.
@@ -72,7 +72,7 @@ if PKG_INFO_ARGS is not empty.
 
   pkg_bin_summary -a automatic -r REQUIRES 'lib*'
 
-  pkg_bin_summary -f PKGNAME,PKGPATH,DEPENDS,BUILD_DEPENDS,ASSIGNMENTS |
+  pkg_bin_summary -f PKGNAME,PKGPATH,DEPENDS,ASSIGNMENTS |
   pkg_summary2deps -pdt |
   tsort
 
