@@ -52,6 +52,7 @@ OPTIONS:
                     fields are separated by space or comma
   -r <fields>       remove from output the specified fields,
                     fields are output only specified fields
+  -e                does nothing if no packages were specified
 PKG_INFO_ARGS:
   Options passed to pkg_info(1) that default to -a.
   In addition to these options -X is always applied to pkg_info
@@ -65,13 +66,14 @@ Samples of use:
 EOF
 }
 
-while getopts ha:r:f: f; do
+while getopts hea:r:f: f; do
     case "$f" in 
 	'?')   exit 1;;
 	h)     usage; exit 0;;
 	a)     add_fields="$OPTARG";;
 	r)     rem_fields="$OPTARG";;
 	f)     only_fields="$OPTARG";;
+	e)     explicit_pkgs=1;;
     esac
 done
 shift `expr $OPTIND - 1`
@@ -86,5 +88,13 @@ if echo "$only_fields$add_fields" | grep PLIST > /dev/null; then
     pkg_info_opts="$pkg_info_opts -L"
 fi
 
-$PKG_INFO_CMD $pkg_info_opts "$@" |
+if test -n "$explicit_pkgs"; then
+    if test $# -gt 0; then
+	$PKG_INFO_CMD $pkg_info_opts "$@"
+    else
+	printf ''
+    fi
+else
+    $PKG_INFO_CMD $pkg_info_opts "$@"
+fi |
 $LIBEXECDIR/XB2bin_summary -a "$add_fields" -r "$rem_fields" -f "$only_fields"

@@ -46,3 +46,14 @@ PLIST=/usr/pkg/sbin/pkg_delete
 PLIST=/usr/pkg/sbin/pkg_info
 
 '
+
+pkg_bin_summary -e |
+cmp 'pkg_bin_summary #6' \
+''
+
+pkg_bin_summary -fLICENSE,PKGPATH -e pkg_install |
+cmp 'pkg_bin_summary #7' \
+'LICENSE=modified-bsd
+PKGPATH=pkgtools/pkg_install
+
+'
