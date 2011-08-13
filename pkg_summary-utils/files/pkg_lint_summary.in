@@ -43,16 +43,17 @@
 # usage: pkg_lint_summary -h
 #        pkg_lint_summary [OPTIONS] [files...]
 # OPTIONS:
-#   -h      display this help
-#   -l      checks REQUIRES/PROVIDES consistency
-#   -L      checks that libs from REQUIRES are present on filesystem
-#   -d      checks that dependencies (DEPENDS) are satisfied
-#   -D      checks that dependencies (BUILD_DEPENDS) are satisfied
-#   -c      checks that summary for packages given on input do not CONFLICTS
-#           with each other
-#   -f      checks that there are no files common for several packages,
-#           PLIST entries are expected in input
-#   -u      checks unicity of PKGBASEs
+#   -h          display this help
+#   -l          checks REQUIRES/PROVIDES consistency
+#   -L          checks that libs from REQUIRES are present on filesystem
+#   -d          checks that dependencies (DEPENDS) are satisfied
+#   -D          checks that dependencies (BUILD_DEPENDS) are satisfied
+#   -c          checks that summary for packages given on input do not CONFLICTS
+#               with each other
+#   -f          checks that there are no files common for several packages,
+#               PLIST entries are expected in input
+#   -u          checks unicity of PKGBASEs
+#   =p prefix   specify prefix (e.g. /usr/pkg) which is used by -l
 #.end-str
 ############################################################
 
@@ -62,9 +63,7 @@ BEGIN {
 		exitnow(0)
 	}
 
-	prefix = ENVIRON ["PREFIX"]
-	if (prefix == "")
-		prefix = "@prefix@"
+	prefix = getarg("p", "@prefix@")
 
 	opt_L = getarg("L")
 	opt_l = getarg("l")

@@ -12,6 +12,22 @@ l: not_found /usr/pkg/lib/libz.so.1 wip/dict-client dict-client-1.11.2
 l: not_found /usr/pkg/lib/libz.so.1 wip/dict-server dict-server-1.11.2
 '
 
+pkg_lint_summary -p /usr -l bin_summary1.txt | sort |
+cmp 'pkg_lint_summary #2.1' \
+'l: not_found /usr/lib/libc.so.12 devel/gmake gmake-3.81
+l: not_found /usr/lib/libc.so.12 devel/libmaa libmaa-1.1.0
+l: not_found /usr/lib/libc.so.12 net/netcat netcat-1.10nb2
+l: not_found /usr/lib/libc.so.12 sysutils/checkperms checkperms-1.10
+l: not_found /usr/lib/libc.so.12 wip/dict-client dict-client-1.11.2
+l: not_found /usr/lib/libc.so.12 wip/dict-server dict-server-1.11.2
+l: not_found /usr/lib/libc.so.12 wip/paexec paexec-0.13.0nb1
+l: not_found /usr/lib/libc.so.12 wip/runawk runawk-0.18.0
+l: not_found /usr/lib/libintl.so.0 devel/gmake gmake-3.81
+l: not_found /usr/pkg/lib/libmaa.so.2 wip/dict-client dict-client-1.11.2
+l: not_found /usr/pkg/lib/libz.so.1 wip/dict-client dict-client-1.11.2
+l: not_found /usr/pkg/lib/libz.so.1 wip/dict-server dict-server-1.11.2
+'
+
 pkg_lint_summary -dDu src_summary.txt | sort |
 cmp 'pkg_lint_summary -Ap #3' \
 'd: not_found libmaa>=1.2 <- wip/dict-server dict-server-1.10.11nb2

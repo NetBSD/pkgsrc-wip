@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkg_lint_summary.1,v 1.10 2011/08/04 22:02:07 cheusov Exp $
+.\"	$NetBSD: pkg_lint_summary.1,v 1.11 2011/08/13 10:19:51 cheusov Exp $
 .\"
 .\" Copyright (c) 2008-2010 by Aleksey Cheusov (vle@gmx.net)
 .\" Absolutely no warranty.
@@ -36,8 +36,12 @@ input. Format of the output:
 
 .VE
 This means that the package PKGNAME from PKGPATH requires SO_LIBRARY but
-there is no package that provide it.
-Sample of usage:
+there is no package that provide it. Only files under prefix directory
+are analysed, see option
+.B -p
+for more information.
+.br
+Example:
 .VB
 
    # pkg_info -Xa | pkg_lint_summary -l
@@ -57,7 +61,8 @@ checks that files listed in REQUIRES exist. Format of the output:
 .VE
 This means that the package PKGNAME from PKGPATH requires file ABSENT but
 it doesn't exist.
-Sample of usage:
+.br
+Example:
 .VB
 
    # pkg_delete -f libmaa
@@ -79,7 +84,8 @@ are good to satisfy requirements. Format of the output:
 .VE
 This means that the package PKGBASE from PKGPATH requires package ABSENT but
 it is absent in input summary or requirements are not satisfied.
-Sample of usage:
+.br
+Example:
 .VB
 
    # pkg_delete -f gtk2+
@@ -125,7 +131,7 @@ for several packages.
    f: conflict FILE <- PKGPATH1 PKGNAME1 PKGPATH2 PKGNAME2 ...
 
 .VE
-Sample of usage:
+Example:
 .VB
 
    # pkg_bin_summary -f PKGNAME,PKGPATH,PLIST \\ 
@@ -135,6 +141,23 @@ Sample of usage:
             graphics/tex-metapost tex-metapost-1.211 \\ 
             print/web2c web2c-2011
    # 
+
+.VE
+.TP
+.BI "-p" " prefix"
+specifies prefix used by option
+.BR -l .
+The default value is determined at compile time.
+.br
+Example:
+.VB
+
+   # /usr/pkg/bin/pkg_lint_summary -l summary.txt
+   # /usr/pkg/bin/pkg_lint_summary -p /opt/pkgsrc -l summary.txt
+   l: not_found /opt/pkgsrc/lib/libmaa.so.2 wip/dict dict-1.11.2
+   l: not_found /opt/pkgsrc/lib/libz.so.1 wip/dict dict-1.11.2
+   l: not_found /opt/pkgsrc/lib/libz.so.1 wip/dictd dictd-1.11.2
+   #
 
 .VE
 .SH EXIT STATUS
