@@ -255,6 +255,7 @@ END {
 			pana2 = substr(pair, idx+1)
 			sub(/;/, " ", pana2)
 			print "n: conflict " conflicts [pair] " <- " pana1, pana2
+			ex = 1
 		}
 	}
 
