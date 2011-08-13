@@ -1,4 +1,6 @@
-$NetBSD: patch-hl_c++_examples_run-hlc++-ex.sh.in,v 1.1.1.1 2011/07/23 22:42:36 alnsn Exp $
+$NetBSD: patch-hl_c++_examples_run-hlc++-ex.sh.in,v 1.2 2011/08/13 13:21:26 alnsn Exp $
+
+Fix paths to examples.
 
 --- hl/c++/examples/run-hlc++-ex.sh.in.orig	2011-05-09 16:47:58.000000000 +0000
 +++ hl/c++/examples/run-hlc++-ex.sh.in
