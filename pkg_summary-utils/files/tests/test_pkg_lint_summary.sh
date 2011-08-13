@@ -5,7 +5,7 @@ cmp 'pkg_lint_summary #1' \
 'MandatoryOptionErrorMessage
 '
 
-pkg_lint_summary -l bin_summary1.txt | sort |
+pkg_lint_summary -p /usr/pkg -l bin_summary1.txt | sort |
 cmp 'pkg_lint_summary #2' \
 'l: not_found /usr/pkg/lib/libmaa.so.2 wip/dict-client dict-client-1.11.2
 l: not_found /usr/pkg/lib/libz.so.1 wip/dict-client dict-client-1.11.2

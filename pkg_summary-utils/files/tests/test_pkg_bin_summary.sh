@@ -33,6 +33,7 @@ PKGPATH=pkgtools/pkg_install
 
 pkg_bin_summary -fPKGPATH,PLIST -- bmake pkg_install |
 awk '!/PLIST/ || /\/(s?bin|man)\/pkg_/ || /bmake/' |
+sed "s|$PREFIX|/usr/pkg|" |
 cmp 'pkg_bin_summary #5' \
 'PKGPATH=devel/bmake
 PLIST=/usr/pkg/bin/bmake
