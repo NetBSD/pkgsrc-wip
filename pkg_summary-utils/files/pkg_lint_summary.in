@@ -232,7 +232,6 @@ END {
 						base2 = pkgpana2pkgbase(arr [j])
 						if (base1 != base2){
 							conflicts [arr [i], arr [j]] = f
-#							print "n: conflict", arr [i], arr [j], f, pkgpana2pkgbase(arr [i]), pkgpana2pkgbase(arr [j])
 						}
 					}
 				}
