@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4456 2011/08/10 09:06:23 ryo-on Exp $
+# $Id: Makefile,v 1.4457 2011/08/14 08:22:04 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1530,6 +1530,7 @@ SUBDIR+=	nautilus-open-terminal
 SUBDIR+=	nautilus-search-tool
 SUBDIR+=	nautilus-sound-converter
 SUBDIR+=	nauty
+SUBDIR+=	navi2ch-current
 SUBDIR+=	navigatrix
 SUBDIR+=	nbfc
 SUBDIR+=	ncbi
