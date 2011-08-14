@@ -275,6 +275,7 @@ END {
 				pana = all_plist [f]
 				gsub(/;/, " ", pana)
 				printf "f: conflict %s %s\n", f, pana
+				ex = 1
 			}
 		}
 	}
