@@ -1,6 +1,7 @@
 TODO list and thoughts
 
-pkg_bin_summary: no specified packages -- no output
+pkg_bin_summary: support for field CKSUMS with environment vatiable
+    XXX containing md5, sha1 etc.
 
 existing tools:
 
