@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4457 2011/08/14 08:22:04 phonohawk Exp $
+# $Id: Makefile,v 1.4458 2011/08/16 02:51:29 bubuchka Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -26,6 +26,7 @@ SUBDIR+=	Pythonol
 SUBDIR+=	R-Rdbi
 SUBDIR+=	R-Rdbi.PgSQL
 SUBDIR+=	R-Rserve
+SUBDIR+=	R-bigmemory
 SUBDIR+=	R-digest
 SUBDIR+=	R-entropy
 SUBDIR+=	R-mclust
