@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/08/16 09:41:56 phonohawk Exp $
+
+SHA1 (text-icu-0.6.3.4.tar.gz) = 7ac61b4bf52a9fdfaa5bd59f7440dc874509613c
+RMD160 (text-icu-0.6.3.4.tar.gz) = 84d8e60ee4f3b1c87ff780ba2b3f132e16ddb7cd
+Size (text-icu-0.6.3.4.tar.gz) = 43341 bytes
