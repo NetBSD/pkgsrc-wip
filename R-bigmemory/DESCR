@@ -1,0 +1,3 @@
+Package bigmemory supports the creation, storage, access, and
+manipulation of massive matrices.  These matrices are allocated to
+shared memory and may use memory-mapped files.

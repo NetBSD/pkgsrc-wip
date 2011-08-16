@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/08/16 02:50:08 bubuchka Exp $
+
+SHA1 (R/bigmemory_4.2.11.tar.gz) = 3dd3c3a02dbb6ca742b81bf501e598bb6e0bdc1f
+RMD160 (R/bigmemory_4.2.11.tar.gz) = 7407fa28852f1f7981b45c36a8b7a3b254fb450a
+Size (R/bigmemory_4.2.11.tar.gz) = 1434562 bytes
