@@ -4,7 +4,9 @@
 - sync patch list with dinoex.org
 - provide sample cron entries for user 'news' in share/examples/c-news
 - add DESTDIR support
-- C News breaks on NetBSD-current, since 
-  sizeof(time_t) == 8 != sizeof(long)
 - wrt. the license, make sure that information about the sponsors
   gets installed (just install all the README files)
+- sizeof(time_t) == 8 != sizeof(long) -- make sure the parts that 
+  tinker with time_t can cope with an int64_t (see libcnews/mkinperm.c)
+- run the regression tests
+  o getabsdate test fails
