@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4459 2011/08/16 09:43:03 phonohawk Exp $
+# $Id: Makefile,v 1.4460 2011/08/18 20:51:55 bubuchka Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1649,6 +1649,7 @@ SUBDIR+=	ozymandns
 SUBDIR+=	p2kmoto
 SUBDIR+=	p3nfs
 SUBDIR+=	p4
+SUBDIR+=	p4d
 SUBDIR+=	p4api
 SUBDIR+=	p5-AI-NeuralNet-Simple
 SUBDIR+=	p5-AI-Prolog
