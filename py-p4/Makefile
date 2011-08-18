@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/07/06 10:12:56 bubuchka Exp $
+# $NetBSD: Makefile,v 1.2 2011/08/18 21:00:35 bubuchka Exp $
 #
 
 PKGNAME=	${PYPKGPREFIX}-p4-${P4_VER}
 DISTNAME=	p4python
 DISTFILES=	p4python.tgz
 MASTER_SITES=	ftp://ftp.perforce.com/perforce/r10.2/bin.tools/
-HOMEPAGE=	http://www.perforce.com/perforce/loadsupp.html
+HOMEPAGE=	http://www.perforce.com/product/components/apis
 COMMENT=	Perforce SCM Python API
 
 PKG_DESTDIR_SUPPORT=	user-destdir
