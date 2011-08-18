@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/08/16 02:50:08 bubuchka Exp $
+# $NetBSD: Makefile,v 1.2 2011/08/18 21:34:56 bubuchka Exp $
 
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.bigmemory.org/
-COMMENT=	Manipulation of massive matrices
+COMMENT=	Manage massive matrices with shared memory and memory-mapped files
 
 R_PKGNAME=	bigmemory
 R_PKGVER=	4.2.11

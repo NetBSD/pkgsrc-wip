@@ -1,3 +1,4 @@
-Package bigmemory supports the creation, storage, access, and
-manipulation of massive matrices.  These matrices are allocated to
-shared memory and may use memory-mapped files.
+Create, store, access, and manipulate massive matrices. Matrices
+are allocated to shared memory and may use memory-mapped files.
+Advanced functionality can further be added with biganalytics,
+bigtabulate, synchronicity, and bigalgebra packages.
