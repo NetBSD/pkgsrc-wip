@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2011/08/15 14:21:47 asau Exp $
+@comment $NetBSD: PLIST,v 1.9 2011/08/20 12:34:16 asau Exp $
 bin/bugpoint
 bin/clang
 bin/clang++
@@ -304,14 +304,17 @@ include/clang/Serialization/AttrPCHRead.inc
 include/clang/Serialization/AttrPCHWrite.inc
 include/clang/Serialization/ChainedIncludesSource.h
 include/clang/Serialization/ContinuousRangeMap.h
+include/clang/StaticAnalyzer/Checkers/ClangCheckers.h
 include/clang/StaticAnalyzer/Checkers/DereferenceChecker.h
 include/clang/StaticAnalyzer/Checkers/LocalCheckers.h
 include/clang/StaticAnalyzer/Core/BugReporter/BugReporter.h
+include/clang/StaticAnalyzer/Core/BugReporter/BugReporterVisitor.h
 include/clang/StaticAnalyzer/Core/BugReporter/BugType.h
 include/clang/StaticAnalyzer/Core/BugReporter/PathDiagnostic.h
 include/clang/StaticAnalyzer/Core/Checker.h
 include/clang/StaticAnalyzer/Core/CheckerManager.h
-include/clang/StaticAnalyzer/Core/CheckerProvider.h
+include/clang/StaticAnalyzer/Core/CheckerOptInfo.h
+include/clang/StaticAnalyzer/Core/CheckerRegistry.h
 include/clang/StaticAnalyzer/Core/PathDiagnosticClients.h
 include/clang/StaticAnalyzer/Core/PathSensitive/AnalysisManager.h
 include/clang/StaticAnalyzer/Core/PathSensitive/BasicValueFactory.h
@@ -324,10 +327,10 @@ include/clang/StaticAnalyzer/Core/PathSensitive/Environment.h
 include/clang/StaticAnalyzer/Core/PathSensitive/ExplodedGraph.h
 include/clang/StaticAnalyzer/Core/PathSensitive/ExprEngine.h
 include/clang/StaticAnalyzer/Core/PathSensitive/ExprEngineBuilders.h
-include/clang/StaticAnalyzer/Core/PathSensitive/GRState.h
-include/clang/StaticAnalyzer/Core/PathSensitive/GRStateTrait.h
 include/clang/StaticAnalyzer/Core/PathSensitive/MemRegion.h
 include/clang/StaticAnalyzer/Core/PathSensitive/ObjCMessage.h
+include/clang/StaticAnalyzer/Core/PathSensitive/ProgramState.h
+include/clang/StaticAnalyzer/Core/PathSensitive/ProgramStateTrait.h
 include/clang/StaticAnalyzer/Core/PathSensitive/SValBuilder.h
 include/clang/StaticAnalyzer/Core/PathSensitive/SVals.h
 include/clang/StaticAnalyzer/Core/PathSensitive/Store.h
