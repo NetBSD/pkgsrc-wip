@@ -91,11 +91,18 @@ BEGIN {
 		printf "" > tmp_summary
 
 	if (opt_s){
-		"uname -s" | getline
+		"uname -srm" | getline
 		host_os = $1
 		sub(/[_-].*$/, "", os_ver)
 		host_os_ver = $2
 		host_arch = $3
+
+		if (host_arch == "amd64")
+			host_arch = "x86_64"
+		else if (host_arch ~ /^i.86$/)
+			host_arch = "i386"
+
+		print "host_arch=" host_arch
 	}
 
 	ex = 0
@@ -193,7 +200,7 @@ NF == 0 {
 	}
 
 	delete plist
-	pkgname = pkgpath = pkgver = assigns = ""
+	pkgname = pkgpath = pkgver = assigns = os = os_ver = arch = ""
 }
 
 function print_lib_notfound (prefix, lib,                        i){
