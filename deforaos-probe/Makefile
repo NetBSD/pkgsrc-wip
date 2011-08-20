@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2010/04/15 15:54:57 khorben Exp $
-
+# $NetBSD: Makefile,v 1.2 2011/08/20 22:10:11 khorben Exp $
 
 DISTNAME=	Probe-0.0.2
 PKGNAME=	deforaos-probe-0.0.2
@@ -16,6 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_FLAGS+=	PREFIX=${PREFIX}
 MAKE_FLAGS+=	DESTDIR=${DESTDIR}
 
+PKG_GROUPS+=	probe
 PKG_USERS+=	probe:probe
 PKG_USERS+=	damon:probe
 PKG_HOME.damon=	${VARBASE}/damon
