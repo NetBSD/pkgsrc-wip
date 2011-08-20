@@ -97,6 +97,8 @@ BEGIN {
 		host_os_ver = $2
 		host_arch = $3
 	}
+
+	ex = 0
 }
 
 /^PKGNAME=/{
@@ -186,6 +188,7 @@ NF == 0 {
 	if (opt_s){
 		if (host_os != os || host_os_ver != os_ver || host_arch != arch){
 			print "s: mismatch", pkgpath, pkgname, os, os_ver, arch
+			ex = 1
 		}
 	}
 
@@ -200,8 +203,6 @@ function print_lib_notfound (prefix, lib,                        i){
 }
 
 END {
-	ex = 0
-
 	# -L
 	if (opt_L){
 		for (libdir in syslibdirs){
