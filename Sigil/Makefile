@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/05/13 04:05:18 ryo-on Exp $
+# $NetBSD: Makefile,v 1.2 2011/08/20 21:33:36 thomasklausner Exp $
 #
 
 DISTNAME=	Sigil-0.3.4-Code
@@ -20,6 +20,12 @@ USE_CMAKE=	yes
 BUILDLINK_TRANSFORM+=	l:BoostParts:boost_date_time:boost_filesystem:boost_regex:boost_system:boost_thread:boost_program_options
 BUILDLINK_TRANSFORM+=	l:Xerces:xerces-c
 BUILDLINK_TRANSFORM+=	l:zlib:z
+
+.include "../../mk/compiler.mk"
+# GCC 4.4 and above needs this
+.if !empty(PKGSRC_COMPILER:Mgcc) && !empty(CC_VERSION:Mgcc-4.[4-9]*)
+_WRAP_EXTRA_ARGS.CXX+=	-std=c++0x
+.endif
 
 .include "../../textproc/xerces-c/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
