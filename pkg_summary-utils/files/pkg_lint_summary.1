@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkg_lint_summary.1,v 1.13 2011/08/13 12:38:19 cheusov Exp $
+.\"	$NetBSD: pkg_lint_summary.1,v 1.14 2011/08/20 18:17:38 cheusov Exp $
 .\"
 .\" Copyright (c) 2008-2010 by Aleksey Cheusov (vle@gmx.net)
 .\" Absolutely no warranty.
@@ -115,7 +115,7 @@ output in the following format:
 .VE
 .TP
 .B "-n"
-analyses PLIST and CONFLICTS entries in input summary and outputs
+analyses PLIST and CONFLICTS fields in input summary and outputs
 information about unregistered conflicts, i.e. common file
 and conflicting packages. Output format is below.
 .VB
@@ -150,8 +150,8 @@ problems to stderr in the following format:
 .VE
 .TP
 .B "-f"
-check files in PLIST entries given on input and warns about files common
-for several packages.
+check files in PLIST fields given on input and warns about files common
+for several packages. Format of the output:
 .VB
 
    f: conflict FILE <- PKGPATH1 PKGNAME1 PKGPATH2 PKGNAME2 ...
@@ -166,6 +166,24 @@ Example:
    f: conflict /usr/pkg/bin/mfplain \\ 
             graphics/tex-metapost tex-metapost-1.211 \\ 
             print/web2c web2c-2011
+   # 
+
+.VE
+.TP
+.B "-s"
+check OPSYS, OS_VERSION and MACHINE_ARCH fields given on input
+and warns if they differ from running system (uname -srm).
+Format of the output:
+.VB
+
+   s: mismatch PKGPATH PKGNAME OPSYS OS_VERSION MACHINE_ARCH
+
+.VE
+Example:
+.VB
+
+   # pkg_bin_summary | pkg_lint_summary -s
+   s: mismatch devel/tmake tmake-1.13 NetBSD 5.0 x86_64
    # 
 
 .VE

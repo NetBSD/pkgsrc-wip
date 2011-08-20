@@ -55,6 +55,8 @@
 #               PLIST entries are expected in input
 #   -u          checks unicity of PKGBASEs
 #   -n          checks for missing CONFLICTS by anayling PLIST entries
+#   -s          checks OPSYS, OS_VERSION and MACHINE_ARCH fields given on input
+#               and warns if they differ from shown by "uname -srm"
 #   =p prefix   specify prefix (e.g. /usr/pkg) which is used by -l
 #.end-str
 ############################################################
@@ -75,17 +77,26 @@ BEGIN {
 	opt_f = getarg("f")
 	opt_u = getarg("u")
 	opt_n = getarg("n")
+	opt_s = getarg("s")
 
 	cnt = 0
 
-	if (!opt_L && !opt_l && !opt_d && !opt_D && !opt_c && !opt_f && !opt_u && !opt_n){
-		print "At least one of the following options should be applied:\n     -L, -l, -d, -D, -c, -f, -u or -n" > "/dev/stderr"
+	if (!opt_L && !opt_l && !opt_d && !opt_D && !opt_c && !opt_f && !opt_u && !opt_n && !opt_s){
+		print "At least one of the following options should be applied:\n     -L, -l, -d, -D, -c, -f, -u, -n or -s" > "/dev/stderr"
 		exitnow(1)
 	}
 
 	tmp_summary = tmpfile()
 	if (opt_d || opt_D || opt_c || opt_n)
 		printf "" > tmp_summary
+
+	if (opt_s){
+		"uname -s" | getline
+		host_os = $1
+		sub(/[_-].*$/, "", os_ver)
+		host_os_ver = $2
+		host_arch = $3
+	}
 }
 
 /^PKGNAME=/{
@@ -151,6 +162,17 @@ opt_d || opt_D || opt_c || opt_n {
 	plist [++plist_cnt] = substr($0, 7)
 }
 
+opt_s {
+	if (/^OS_VERSION=/){
+		os_ver = substr($0, 12)
+		sub(/[_-].*$/, "", os_ver)
+	}else if (/^OPSYS=/){
+		os = substr($0, 7)
+	}else if (/^MACHINE_ARCH=/){
+		arch = substr($0, 14)
+	}
+}
+
 NF == 0 {
 	for (f in plist){
 		p = plist [f]
@@ -158,6 +180,13 @@ NF == 0 {
 			all_plist [p] = all_plist [p] " " pkgpath ";" pkgname
 		else
 			all_plist [p] = pkgpath ";" pkgname
+	}
+
+	# opt_s
+	if (opt_s){
+		if (host_os != os || host_os_ver != os_ver || host_arch != arch){
+			print "s: mismatch", pkgpath, pkgname, os, os_ver, arch
+		}
 	}
 
 	delete plist

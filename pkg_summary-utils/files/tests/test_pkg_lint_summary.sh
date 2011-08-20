@@ -100,3 +100,25 @@ cmp 'pkg_lint_summary -n #12' \
 pkg_lint_summary -n bin_summary6.txt | sort |
 cmp 'pkg_lint_summary -n #13' \
 ''
+
+pkg_lint_summary -s bin_summary1.txt |
+cmp 'pkg_lint_summary -s #14' \
+'s: mismatch wip/distbb distbb-0.33.0 CheBSD 1.4 i386
+s: mismatch wip/pkg_online pkg_online-0.9.1 CheBSD 1.4 i386
+s: mismatch wip/pkg_conflicts pkg_conflicts-0.4.0 CheBSD 1.4 i386
+s: mismatch sysutils/checkperms checkperms-1.10 CheBSD 1.4 i386
+s: mismatch devel/libtool-base libtool-base-1.5.26nb2 CheBSD 1.4 i386
+s: mismatch devel/gmake gmake-3.81 CheBSD 1.4 i386
+s: mismatch net/netcat netcat-1.10nb2 CheBSD 1.4 i386
+s: mismatch wip/awk-pkgsrc-dewey awk-pkgsrc-dewey-0.5.6 CheBSD 1.4 i386
+s: mismatch devel/libmaa libmaa-1.1.0 CheBSD 1.4 i386
+s: mismatch wip/pkgnih pkgnih-0.3.1 CheBSD 1.4 i386
+s: mismatch wip/dict-client dict-client-1.11.2 CheBSD 1.4 i386
+s: mismatch wip/dict-server dict-server-1.11.2 CheBSD 1.4 i386
+s: mismatch wip/pkg_summary-utils pkg_summary-utils-0.35rc1 CheBSD 1.4 i386
+s: mismatch devel/pipestatus pipestatus-0.6.0 CheBSD 1.4 i386
+s: mismatch wip/runawk runawk-0.18.0 CheBSD 1.4 i386
+s: mismatch wip/paexec paexec-0.13.0nb1 NetBSD 2.0 i386
+s: mismatch wip/pkg_online-client pkg_online-client-0.9.1 NetBSD 1.6 nih386
+s: mismatch wip/pkg_online-server pkg_online-server-0.9.1 NetBSD 1.5 che386
+'
