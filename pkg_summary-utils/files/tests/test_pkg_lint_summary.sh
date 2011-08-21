@@ -112,7 +112,7 @@ s: mismatch devel/gmake gmake-3.81 CheBSD 1.4 i386
 s: mismatch net/netcat netcat-1.10nb2 CheBSD 1.4 i386
 s: mismatch wip/awk-pkgsrc-dewey awk-pkgsrc-dewey-0.5.6 CheBSD 1.4 i386
 s: mismatch devel/libmaa libmaa-1.1.0 CheBSD 1.4 i386
-s: mismatch wip/pkgnih pkgnih-0.3.1 CheBSD 1.4 i386
+s: mismatch wip/pkgnih pkgnih-0.3.1   
 s: mismatch wip/dict-client dict-client-1.11.2 CheBSD 1.4 i386
 s: mismatch wip/dict-server dict-server-1.11.2 CheBSD 1.4 i386
 s: mismatch wip/pkg_summary-utils pkg_summary-utils-0.35rc1 CheBSD 1.4 i386
