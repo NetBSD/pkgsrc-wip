@@ -101,8 +101,6 @@ BEGIN {
 			host_arch = "x86_64"
 		else if (host_arch ~ /^i.86$/)
 			host_arch = "i386"
-
-		print "host_arch=" host_arch
 	}
 
 	ex = 0
