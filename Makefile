@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4461 2011/08/18 20:53:49 bubuchka Exp $
+# $Id: Makefile,v 1.4462 2011/08/22 12:38:00 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2219,6 +2219,7 @@ SUBDIR+=	py-netcdf
 SUBDIR+=	py-neurolab
 SUBDIR+=	py-neuronpy
 SUBDIR+=	py-nibabel
+SUBDIR+=	py-nltk
 SUBDIR+=	py-nodepy
 SUBDIR+=	py-nose-senario
 SUBDIR+=	py-ntch
