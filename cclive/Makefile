@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.13 2011/05/13 07:36:24 ryo-on Exp $
+# $NetBSD: Makefile,v 1.14 2011/08/22 11:13:52 thomasklausner Exp $
 #
 
-DISTNAME=		cclive-0.7.3.1
+DISTNAME=		cclive-0.7.5.1
 CATEGORIES=		net multimedia www
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=cclive/}
 
 MAINTAINER= 		zecrazytux@zecrazytux.net
-HOMEPAGE=		http://code.google.com/p/cclive/
+HOMEPAGE=		http://cclive.sourceforge.net/
 COMMENT=		Command line video extraction tool for user-uploaded video hosts
 LICENSE=		gnu-gpl-v3
 
@@ -14,13 +14,15 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c++ c
 USE_TOOLS+=		pkg-config
-USE_CMAKE=		yes
+GNU_CONFIGURE=		yes
 
-SUBST_CLASSES+=		man-path
-SUBST_STAGE.man-path+=	pre-configure
-SUBST_FILES.man-path+=	man1/CMakeLists.txt
-SUBST_SED.man-path=	-e s,share/man/man1,${PKGMANDIR}/man1,
+.include "../../mk/compiler.mk"
+# GCC 4.4 and above needs this
+.if !empty(PKGSRC_COMPILER:Mgcc) && !empty(CC_VERSION:Mgcc-4.[4-9]*)
+CXXFLAGS+=		-std=c++0x
+.endif
 
+BUILDLINK_API_DEPENDS.quvi+=	quvi>=0.2.16.1
 .include "../../net/quvi/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
