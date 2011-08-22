@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/08/22 12:37:34 thomasklausner Exp $
+
+SHA1 (nltk-2.0.1rc1.tar.gz) = 4cd2b834875db6df2662a86a35f90d1e9bb8c1ce
+RMD160 (nltk-2.0.1rc1.tar.gz) = 2ae4a490b73a7d0dc49412a621ed8223761619ec
+Size (nltk-2.0.1rc1.tar.gz) = 961720 bytes
