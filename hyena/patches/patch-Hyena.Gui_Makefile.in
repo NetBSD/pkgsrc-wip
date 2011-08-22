@@ -1,0 +1,15 @@
+$NetBSD: patch-Hyena.Gui_Makefile.in,v 1.1 2011/08/22 11:44:08 thomasklausner Exp $
+
+Fix comment character.
+
+--- Hyena.Gui/Makefile.in.orig	2010-10-06 19:46:07.000000000 +0000
++++ Hyena.Gui/Makefile.in
+@@ -486,7 +486,7 @@ uninstall-am: uninstall-local uninstall-
+ 	pdf-am ps ps-am uninstall uninstall-am uninstall-local \
+ 	uninstall-moduleSCRIPTS
+ 
+-dnl SOURCES_BUILD += $(top_srcdir)/src/AssemblyInfo.cs
++# SOURCES_BUILD += $(top_srcdir)/src/AssemblyInfo.cs
+ 
+ all: $(ASSEMBLY_FILE) theme-icons
+ 

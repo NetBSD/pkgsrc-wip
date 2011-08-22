@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/11/24 12:17:46 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/08/22 11:44:08 thomasklausner Exp $
 lib/hyena/Hyena.Data.Sqlite.dll
 lib/hyena/Hyena.Data.Sqlite.dll.mdb
 lib/hyena/Hyena.Gui.dll
 lib/hyena/Hyena.Gui.dll.config
 lib/hyena/Hyena.Gui.dll.mdb
 lib/hyena/Hyena.dll
+lib/hyena/Hyena.dll.config
 lib/hyena/Hyena.dll.mdb
 lib/hyena/Mono.Data.Sqlite.dll
 lib/hyena/Mono.Data.Sqlite.dll.mdb
