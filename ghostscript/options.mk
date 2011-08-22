@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2011/03/30 12:49:24 makoto Exp $
+# $NetBSD: options.mk,v 1.4 2011/08/22 14:15:33 makoto Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ghostscript
 PKG_SUPPORTED_OPTIONS=	x11 cups debug fontconfig disable-compile-inits
@@ -6,7 +6,7 @@ PKG_SUGGESTED_OPTIONS=	x11 fontconfig
 
 .include "../../mk/bsd.options.mk"
 
-# (no_cidfmap)	when --disable-compile-inits selected, 
+# (no_cidfmap)	when --disable-compile-inits selected,
 #		cidfmap is renamed to cidfmap.dist
 PLIST_VARS+=		no_cidfmap
 

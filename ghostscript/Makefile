@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/07/21 23:47:44 makoto Exp $
+# $NetBSD: Makefile,v 1.5 2011/08/22 14:15:33 makoto Exp $
 
 DISTNAME=	ghostscript-${GS_VERSION}
 CATEGORIES=	print
@@ -54,10 +54,6 @@ SUBST_STAGE.resdir=	post-extract
 SUBST_MESSAGE.resdir=	Fixing resource directory path
 SUBST_FILES.resdir=	Resource/Init/gs_res.ps
 SUBST_SED.resdir=	-e "s|/Resource/|${GS_RESOURCEDIR}/|g"
-
-# to switch cidfmap is renamed to cidfmap.dist  (if --disable-compile-inits)
-# or cidfmap is installed ( when above option not specified)
-SUBST_VARS=		GS_COMPILE_INIT
 
 .if ${OPSYS} == "HPUX"
 CONFIGURE_ENV+=		ac_cv_func_fopen64=no

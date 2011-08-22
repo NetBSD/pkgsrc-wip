@@ -1,10 +1,11 @@
-$NetBSD: patch-bf,v 1.1 2011/01/26 13:03:41 makoto Exp $
+$NetBSD: patch-bf,v 1.2 2011/08/22 14:15:33 makoto Exp $
 
---- base/configure.ac~	2010-08-21 17:03:46.000000000 +0900
-+++ base/configure.ac	2011-01-26 18:32:51.000000000 +0900
-@@ -335,7 +335,7 @@
-     ])
+
+--- base/configure.ac.orig	2011-08-05 20:12:20.000000000 +0900
++++ base/configure.ac	2011-08-22 19:10:30.000000000 +0900
+@@ -404,7 +404,7 @@
  fi
+ 
  if test x$with_libpaper != xno; then
 -    LIBS="$LIBS -lpaper"
 +    LIBS="$LIBS -L${LPLIBDIR} -Wl,-R${LPLIBDIR} -lpaper"

@@ -1,8 +1,8 @@
-$NetBSD: patch-ah,v 1.1 2011/01/26 13:03:41 makoto Exp $
+$NetBSD: patch-ah,v 1.2 2011/08/22 14:15:33 makoto Exp $
 
---- configure.orig	2010-09-19 18:01:05.000000000 +0900
-+++ configure	2011-01-26 19:00:10.000000000 +0900
-@@ -758,6 +758,7 @@
+--- configure.orig	2011-08-05 20:12:44.000000000 +0900
++++ configure	2011-08-22 18:54:36.000000000 +0900
+@@ -790,6 +790,7 @@
  LIBS
  CPPFLAGS
  CPP
@@ -10,9 +10,9 @@ $NetBSD: patch-ah,v 1.1 2011/01/26 13:03:41 makoto Exp $
  XMKMF'
  
  
-@@ -5111,7 +5112,7 @@
- 
+@@ -5249,7 +5250,7 @@
  fi
+ 
  if test x$with_libpaper != xno; then
 -    LIBS="$LIBS -lpaper"
 +    LIBS="$LIBS -L${LPLIBDIR} -Wl,-R${LPLIBDIR} -lpaper"

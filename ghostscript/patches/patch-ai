@@ -1,8 +1,9 @@
-$NetBSD: patch-ai,v 1.1.1.1 2011/01/26 08:24:17 makoto Exp $
+$NetBSD: patch-ai,v 1.2 2011/08/22 14:15:33 makoto Exp $
 
---- base/mkromfs.c.orig	2009-02-13 12:20:54.000000000 +0100
-+++ base/mkromfs.c
-@@ -467,7 +467,7 @@ main(int argc, char *argv[])
+
+--- work/ghostscript-9.04/base/mkromfs.c.orig	2011-08-05 20:12:20.000000000 +0900
++++ base/mkromfs.c	2011-08-22 19:15:32.000000000 +0900
+@@ -1033,7 +1033,7 @@
  #endif
      fprintf(out,"\n#include \"stdint_.h\"\n");
      fprintf(out,"\n#include \"time_.h\"\n\n");
@@ -10,4 +11,4 @@ $NetBSD: patch-ai,v 1.1.1.1 2011/01/26 08:24:17 makoto Exp $
 +    fprintf(out,"    time_t gs_romfs_buildtime = %lld;\n\n", (long long)time(NULL));
  
      /* process the remaining arguments (options interspersed with paths) */
-     for (; atarg < argc; atarg++) {  
+     for (; atarg < argc; atarg++) {
