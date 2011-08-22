@@ -1,11 +1,11 @@
-$NetBSD: patch-ad,v 1.3 2011/08/22 13:35:32 thomasklausner Exp $
+$NetBSD: patch-ad,v 1.4 2011/08/22 13:41:00 thomasklausner Exp $
 
-Only check for libdl on Linux. Untested on Linux.
 Fix installation path for man pages for pkgsrc.
+Fix linking with gcc-4.5.
 
---- CMakeLists.txt.orig	2010-11-20 22:45:02.000000000 +0000
+--- CMakeLists.txt.orig	2011-07-24 12:10:13.000000000 +0000
 +++ CMakeLists.txt
-@@ -65,7 +65,7 @@ elseif (${LAYOUT} MATCHES "fhs")
+@@ -78,7 +78,7 @@ elseif (${LAYOUT} MATCHES "fhs")
  	SET_PATH( LIB_DIR ${CMAKE_INSTALL_PREFIX}/lib/gemrb )
  	SET_PATH( PLUGIN_DIR ${LIB_DIR}/plugins )
  	SET_PATH( DATA_DIR ${CMAKE_INSTALL_PREFIX}/share/gemrb )
@@ -14,24 +14,6 @@ Fix installation path for man pages for pkgsrc.
  	SET_PATH( BIN_DIR ${CMAKE_INSTALL_PREFIX}/bin )
  	IF( NOT SYSCONF_DIR )
  		if ( ${CMAKE_INSTALL_PREFIX} STREQUAL "/usr" )
-@@ -140,14 +140,16 @@ ELSE()
- 	MESSAGE(FATAL_ERROR "Please install the Zlib library and headers first!")
- ENDIF()
- 
--IF(UNIX)
-+IF(LINUX)
- 	FIND_LIBRARY(DLD_LIBRARY_PATH dl dld)
- 	IF(DLD_LIBRARY_PATH)
- 		MESSAGE(STATUS "Looking for dl library: found")
- 	ELSE(DLD_LIBRARY_PATH)
- 		MESSAGE(FATAL_ERROR "Looking for dl library: not found!")
- 	ENDIF(DLD_LIBRARY_PATH)
-+ENDIF(LINUX)
- 
-+IF(UNIX)
- 	SET(CMAKE_THREAD_PREFER_PTHREAD true)
- 	FIND_PACKAGE(Threads REQUIRED)
- ENDIF(UNIX)
 @@ -249,6 +251,7 @@ MACRO(ADD_GEMRB_PLUGIN plugin_name)
  		if (NOT UNSAFE_PLUGIN)
  			TARGET_LINK_LIBRARIES(${plugin_name} gemrb_core ${CMAKE_THREAD_LIBS_INIT})

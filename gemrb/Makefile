@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2011/01/24 14:27:21 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2011/08/22 13:41:00 thomasklausner Exp $
 #
 
-DISTNAME=	gemrb-0.6.3
+DISTNAME=	gemrb-0.6.5
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gemrb/}
 
@@ -18,6 +18,8 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake pkg-config
 
 BUILDLINK_TRANSFORM+=	rm:-Werror
+CMAKE_ARGS+=		-DINSOURCEBUILD=1
+CMAKE_ARGS+=		-DSDLMIXER_INCLUDE_DIR=${BUILDLINK_PREFIX.SDL_mixer}/include
 INSTALL_MAKE_FLAGS+=	sysconfdir=${PREFIX}/share/examples/gemrb
 
 #.include "../../audio/freealut/buildlink3.mk"
