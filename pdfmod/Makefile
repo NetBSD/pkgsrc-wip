@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2011/01/06 16:36:32 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2011/08/22 11:45:30 thomasklausner Exp $
 #
 
-DISTNAME=	pdfmod-0.9.0
+DISTNAME=	pdfmod-0.9.1
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/pdfmod/0.9/}
 EXTRACT_SUFX=	.tar.bz2
@@ -24,7 +24,7 @@ INSTALLATION_DIRS+=	lib/pdfmod
 .include "../../lang/mono/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
-BUILDLINK_API_DEPENDS.hyena+=	hyena>=0.3
+BUILDLINK_API_DEPENDS.hyena+=	hyena>=0.5
 .include "../../wip/hyena/buildlink3.mk"
 # gnome-sharp not needed, but gconf-sharp
 .include "../../x11/gnome-sharp/buildlink3.mk"

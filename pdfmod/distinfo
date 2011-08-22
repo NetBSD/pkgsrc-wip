@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.4 2011/01/06 21:12:48 thomasklausner Exp $
+$NetBSD: distinfo,v 1.5 2011/08/22 11:45:30 thomasklausner Exp $
 
-SHA1 (pdfmod-0.9.0.tar.bz2) = f896cfb2ff2fc362545432466dff74cdfa73ca54
-RMD160 (pdfmod-0.9.0.tar.bz2) = 6594923038e109211cb482cbe8dca34d02a661a8
-Size (pdfmod-0.9.0.tar.bz2) = 659370 bytes
-SHA1 (patch-aa) = 427717f5db61540d518b2810aff0e6b11232c44a
-SHA1 (patch-ab) = 740878f4626d4be9be8e8d29e737167695120533
+SHA1 (pdfmod-0.9.1.tar.bz2) = 52cdd996df800efe7fc40bf2f258d7e66abe1a47
+RMD160 (pdfmod-0.9.1.tar.bz2) = 82f1a3a14f426b3174bfaa46ce384cc5de51be28
+Size (pdfmod-0.9.1.tar.bz2) = 667450 bytes
+SHA1 (patch-src_PdfMod_Gui_DocumentIconView.cs) = c2c0e2534627f30660e3f43623c99585d2d80ec4
