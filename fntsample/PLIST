@@ -1,1 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/02/14 21:22:59 christtrekker Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/08/23 12:39:31 christtrekker Exp $
+bin/fntsample
+bin/pdfoutline
+man/man1/fntsample.1
+man/man1/pdfoutline.1
+share/locale/uk/LC_MESSAGES/fntsample.mo
+@pkgdir share/unicode
