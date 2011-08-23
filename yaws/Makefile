@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.12 2011/08/04 11:15:18 bartoszkuzma Exp $
+# $NetBSD: Makefile,v 1.13 2011/08/23 13:20:30 cheusov Exp $
 #
 
-PKGVERSION=		1.91
-
-DISTNAME=		yaws-${PKGVERSION}
+DISTNAME=		yaws-1.91
 CATEGORIES=		www
 MASTER_SITES=		http://yaws.hyber.org/download/
 
 MAINTAINER=		bartosz.kuzma@gmail.com
 HOMEPAGE=		http://yaws.hyber.org/
 COMMENT=		High perfomance HTTP 1.1 webserver written in Erlang
+LICENSE=		modified-bsd
 
 BUILD_DEFS+=		VARBASE
 
@@ -17,6 +16,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake perl pax
 GNU_CONFIGURE=		yes
+AUTOCONF_REQD=		2.50
+USE_TOOLS+=		autoconf
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}/yaws
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
@@ -38,11 +39,18 @@ REPLACE_PYTHON=		www/cgi-bin/foo.py
 #CHECK_INTERPRETER_SKIP=	${WWWDIR}/cgi-bin/foo.py
 CHECK_INTERPRETER_SKIP=	share/yaws/www/cgi-bin/foo.py
 
+INSTALLATION_DIRS+=	bin
+INSTALLATION_DIRS+=	${PKGMANDIR}/man1
+INSTALLATION_DIRS+=	${PKGMANDIR}/man5
+
 post-patch:
 	${RM} ${WRKDIR}/yaws
 	${RM} -Rf ${WRKSRC}/www/.xvpics
 	${RM} -Rf ${WRKSRC}/www/testdir
 	${FIND} ${WRKSRC} -name \*.orig -o -name .empty | ${XARGS} ${RM}
+
+pre-configure:
+	cd ${WRKSRC} && autoconf
 
 post-configure:
 	${SED} -e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g" \
@@ -51,7 +59,6 @@ post-configure:
 		${FILESDIR}/yaws.conf > ${WRKDIR}/yaws.conf
 
 do-install:
-	${INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/bin/yaws ${DESTDIR}${PREFIX}/bin
 	${INSTALL_DATA} ${WRKDIR}/yaws.conf ${DESTDIR}${EGDIR}
 
@@ -61,8 +68,6 @@ do-install:
 
 	cd ${WRKSRC}/www && pax -rw . ${DESTDIR}${WWWDIR}
 
-	${INSTALL_MAN_DIR} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_MAN_DIR} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
 	${INSTALL_MAN} ${WRKSRC}/man/yaws.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_MAN} ${WRKSRC}/man/*.5 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
 
