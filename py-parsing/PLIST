@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/06/26 21:52:12 jihbed Exp $
-lib/python2.5/site-packages/pyparsing.py
-lib/python2.5/site-packages/pyparsing.pyc
-lib/python2.5/site-packages/pyparsing.pyo
-lib/python2.5/site-packages/pyparsing_py3.py
+@comment $NetBSD: PLIST,v 1.2 2011/08/24 15:11:58 marko_schuetz Exp $
+${PYSITELIB}/pyparsing.py
+${PYSITELIB}/pyparsing.pyc
+${PYSITELIB}/pyparsing.pyo
+${PYSITELIB}/pyparsing_py3.py
+${PYSITELIB}/pyparsing_py3.pyc
+${PYSITELIB}/pyparsing_py3.pyo
 share/doc/html/pyparsing/api-objects.txt
 share/doc/html/pyparsing/class-tree.html
 share/doc/html/pyparsing/crarr.png
