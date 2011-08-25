@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2011/08/20 13:26:08 asau Exp $
+@comment $NetBSD: PLIST,v 1.11 2011/08/25 22:49:17 asau Exp $
 bin/bugpoint
 bin/clang
 bin/clang++
@@ -691,6 +691,7 @@ include/llvm/Support/COFF.h
 include/llvm/Support/CallSite.h
 include/llvm/Support/Capacity.h
 include/llvm/Support/Casting.h
+include/llvm/Support/CodeGen.h
 include/llvm/Support/CommandLine.h
 include/llvm/Support/Compiler.h
 include/llvm/Support/ConstantFolder.h
@@ -758,6 +759,8 @@ include/llvm/Support/StringPool.h
 include/llvm/Support/SwapByteOrder.h
 include/llvm/Support/SystemUtils.h
 include/llvm/Support/TargetFolder.h
+include/llvm/Support/TargetRegistry.h
+include/llvm/Support/TargetSelect.h
 include/llvm/Support/ThreadLocal.h
 include/llvm/Support/Threading.h
 include/llvm/Support/TimeValue.h
@@ -790,9 +793,7 @@ include/llvm/Target/TargetMachine.h
 include/llvm/Target/TargetOpcodes.h
 include/llvm/Target/TargetOptions.h
 include/llvm/Target/TargetRegisterInfo.h
-include/llvm/Target/TargetRegistry.h
 include/llvm/Target/TargetSchedule.td
-include/llvm/Target/TargetSelect.h
 include/llvm/Target/TargetSelectionDAG.td
 include/llvm/Target/TargetSelectionDAGInfo.h
 include/llvm/Target/TargetSubtargetInfo.h
