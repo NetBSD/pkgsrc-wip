@@ -32,6 +32,7 @@
 
 #use "pkgsrc-dewey.awk"
 #use "power_getopt.awk"
+#use "trim.awk"
 
 ############################################################
 #.begin-str help
@@ -47,9 +48,7 @@
 #   -P         use PKGPATH only for comparison, ignore PKGNAME
 #   -d         consider packages different
 #              if they have different DEPENDS
-#   -b         consider packages different
-#              if they have different BUILD_DATE, unfortunately pkgsrc
-#              doesn't mark packages with UUID
+#   -b         synonym to '-a BUILD_DATE'
 #   -2         output PKGPATHe from summary1 and from summary2 (<>!=)
 #   -e         normally a number of duplications is output as a result of
 #              comparison if they (duplications) exist.  If -e was
@@ -58,6 +57,12 @@
 #   -u         output A at the end of line for automatically
 #              installed packages and U for packages installed by user.
 #              automatic=yes is expected in summary1
+#   =a <fields>   use the specified fields for comparing packages
+#                 in addition to package versions. Fields are separated
+#                 by space or comma
+#   =A <fields>   imply -a and output different fields in
+#                 the following lines with leading space
+#                
 #.end-str
 ############################################################
 
@@ -75,6 +80,10 @@ BEGIN {
 	use_builddate   = getarg("b")
 	check_existence = getarg("e")
 	user_auto       = getarg("u")
+	add_fields      = add_fields " " getarg("a", "")
+	ADD_fields      = getarg("A", "")
+
+	add_fields = trim_lrc(add_fields " " ADD_fields)
 
 	if (getarg("P")){
 		with_pkgpath = 1
@@ -83,6 +92,19 @@ BEGIN {
 
 	output2 = getarg("2")
 
+	# -a
+	add_fields_cnt = split(add_fields, add_fields_arr, /[ ,]/)
+	for (i=1; i <= add_fields_cnt; ++i)
+		add_fields_hash [add_fields_arr [i]] = 1
+	delete add_fields_arr
+
+	# -A
+	ADD_fields_cnt = split(ADD_fields, ADD_fields_arr, /[ ,]/)
+	for (i=1; i <= ADD_fields_cnt; ++i)
+		ADD_fields_hash [ADD_fields_arr [i]] = 1
+	delete ADD_fields_arr
+
+	#
 	for (ind=1; ind < ARGC && ARGV [ind] == ""; ++ind);
 
 	if (ARGC != ind+2){
@@ -90,6 +112,7 @@ BEGIN {
 		exit 1
 	}
 
+	#
 	file1 = ARGV [ind]
 
 	installed_by_user = 1
@@ -141,6 +164,13 @@ use_dep && /^DEPENDS=/ {
 		}
 	}
 	next
+}
+
+{
+	eq_pos = index($0, "=")
+	field  = substr($0, 1, eq_pos-1)
+	if (field in add_fields_hash)
+		field_val [field] = substr($0, eq_pos+1)
 }
 
 use_builddate && /^BUILD_DATE=/ {
@@ -226,6 +256,10 @@ NF == 0 {
 			if (use_builddate){
 				build_dates [pkgbase] = curr_build_date
 			}
+
+			for (f in field_val){
+				pkgbase_field [pkgbase, f] = field_val [f]
+			}
 		}
 	}else{
 		# second file!
@@ -293,6 +327,22 @@ NF == 0 {
 				res = "!"
 		}
 
+		# -a
+		diff_accu = ""
+		if (add_fields_cnt >= 1 && res == "="){
+			for (f in field_val){
+				if (! ((pkgbase SUBSEP f) in pkgbase_field) ||
+					pkgbase_field [pkgbase, f] != field_val [f])
+				{
+					if (f in ADD_fields_hash)
+						diff_accu = diff_accu \
+					            " " f " " pkgbase_field [pkgbase, f] "\n" \
+						        " " f " " field_val [f] "\n"
+					res = "!"
+				}
+			}
+		}
+
 		# -d
 		if (use_dep && res == "="){
 			if (pkgbase in depends_cnt){
@@ -332,6 +382,8 @@ NF == 0 {
 			else
 				print res, full_pkgbase ua_sufx
 		}
+		if (diff_accu)
+			print diff_accu
 	}
 
 	next
