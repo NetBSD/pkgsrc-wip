@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2011/08/23 13:20:30 cheusov Exp $
+# $NetBSD: Makefile,v 1.14 2011/08/26 13:17:14 thomasklausner Exp $
 #
 
 DISTNAME=		yaws-1.91
@@ -74,5 +74,4 @@ do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PKG_SYSCONFDIR}/yaws
 
 .include "../../lang/erlang/buildlink3.mk"
-.include "../../mk/bsd.prefs.mk"
 .include "../../mk/bsd.pkg.mk"
