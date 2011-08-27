@@ -299,6 +299,7 @@ cmp 'pkg_cmp_summary -a   #19' \
 pkg_cmp_summary -A automatic,try_out bin_summary91.txt bin_summary92.txt |
 cmp 'pkg_cmp_summary -A   #20.1' \
 '= f 3.4.5 3.4.5
+
 + e 0.1.1
  automatic 
  automatic yes
@@ -326,6 +327,7 @@ cmp 'pkg_cmp_summary -A   #20.1' \
  automatic yes
 
 = g 3.4.9 3.4.9
+
 < i 0.1 0.4
  automatic 
  automatic yes
@@ -341,6 +343,7 @@ cmp 'pkg_cmp_summary -A   #20.1' \
 pkg_cmp_summary -a automatic -A try_out bin_summary91.txt bin_summary92.txt |
 cmp 'pkg_cmp_summary -Aa  #20.2' \
 '= f 3.4.5 3.4.5
+
 + e 0.1.1
  try_out 
  try_out yes
@@ -358,17 +361,21 @@ cmp 'pkg_cmp_summary -Aa  #20.2' \
  try_out 
 
 ! c 3.4.5 3.4.5
+
 = g 3.4.9 3.4.9
+
 < i 0.1 0.4
  try_out 
  try_out yes
 
 - d 0.1.1
+
 '
 
 pkg_cmp_summary -A automatic -atry_out bin_summary91.txt bin_summary92.txt |
 cmp 'pkg_cmp_summary -Aa  #20.3' \
 '= f 3.4.5 3.4.5
+
 + e 0.1.1
  automatic 
  automatic yes
@@ -378,6 +385,7 @@ cmp 'pkg_cmp_summary -Aa  #20.3' \
  automatic yes
 
 ! b 2.2.2 2.2.2
+
 ! a 1.1.1 1.1.1
  automatic 
  automatic yes
@@ -387,6 +395,7 @@ cmp 'pkg_cmp_summary -Aa  #20.3' \
  automatic yes
 
 = g 3.4.9 3.4.9
+
 < i 0.1 0.4
  automatic 
  automatic yes

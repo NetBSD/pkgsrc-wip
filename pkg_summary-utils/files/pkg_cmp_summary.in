@@ -189,7 +189,7 @@ function get_str_val (hash, key){
 	return hash [key]
 }
 
-function get_diff_accu (pkgbase,                  diff_accu,f,i,vo,vn){
+function get_diff_accu (pkgbase,                 diff_accu,f,i,vo,vn){
 	# side effect - res variable
 	diff_accu = ""
 	for (i=1; i <= add_fields_cnt; ++i){
@@ -201,9 +201,10 @@ function get_diff_accu (pkgbase,                  diff_accu,f,i,vo,vn){
 		if (vo != vn){
 			if (res == "=")
 				res = "!"
+		}
+		if (vo != vn)
 			if (f in ADD_fields_hash)
 				diff_accu = diff_accu " " f " " vo "\n " f " " vn "\n"
-		}
 	}
 
 	return diff_accu
@@ -318,9 +319,10 @@ NF == 0 {
 			else
 				print "+", full_pkgbase
 
-			diff_accu = get_diff_accu(pkgbase)
-			if (diff_accu)
+			if (ADD_fields_cnt >= 1){
+				diff_accu = get_diff_accu(pkgbase)
 				print diff_accu
+			}
 
 			next
 		}
@@ -374,7 +376,7 @@ NF == 0 {
 				print res, full_pkgbase ua_sufx
 		}
 
-		if (diff_accu)
+		if (ADD_fields_cnt >= 1)
 			print diff_accu
 	}
 
@@ -397,9 +399,10 @@ END {
 			}
 
 			print "-", full_pkgpaths [pkgbase] nm ua_sufx
-			diff_accu = get_diff_accu(pkgbase)
-			if (diff_accu)
+			if (ADD_fields_cnt >= 1){
+				diff_accu = get_diff_accu(pkgbase)
 				print diff_accu
+			}
 
 			delete duplicates [pkgbase]
 		}else if (!check_existence && (pkgbase in duplicates)){
