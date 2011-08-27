@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkg_cmp_summary.1,v 1.20 2011/08/27 08:48:53 cheusov Exp $
+.\"	$NetBSD: pkg_cmp_summary.1,v 1.21 2011/08/27 09:31:50 cheusov Exp $
 .\"
 .\" Copyright (c) 2008-2010 by Aleksey Cheusov (vle@gmx.net)
 .\" Absolutely no warranty.
@@ -105,6 +105,43 @@ First, field and value from
 are output then field and value from
 .IR pkg_summary2
 with single space character between them.
+.SH EXAMPLES
+.VB
+   # pkg_bin_summary -f PKGNAME,automatic runawk > 1
+   # pkg_admin set automatic=yes runawk
+   # pkg_bin_summary -f PKGNAME,automatic runawk > 2 
+   # pkg_cmp_summary 1 2         
+   = runawk 1.3.1nb1 1.3.1nb1
+   # pkg_cmp_summary -a automatic 1 2
+   ! runawk 1.3.1nb1 1.3.1nb1
+   # pkg_cmp_summary -A automatic 1 2 
+   ! runawk 1.3.1nb1 1.3.1nb1
+    automatic 
+    automatic yes
+
+   #
+
+
+   # pkg_bin_summary -f PKGNAME,PKGPATH pkg_summary-utils > 1
+   # pkg_src_summary wip/pkg_summary-utils > 2
+   # pkg_cmp_summary 1 2
+   < pkg_summary-utils 0.54.0 0.55alpha4
+   # pkg_cmp_summary -p 1 2
+   + wip/pkg_summary-utils pkg_summary-utils 0.55alpha4
+   - pkgtools/pkg_summary-utils pkg_summary-utils 0.54.0
+   #
+
+
+   # pkg_info -Q PKGPATH tmux rtorrent ikiwiki > pkgpaths.txt
+   # pkg_micro_src_summary < pkgpaths.txt > summary.txt
+   # pkg_info -X tmux rtorrent ikiwiki > bin_summary.txt
+   # pkg_cmp_summary -p bin_summary.txt summary.txt
+   < misc/tmux tmux 1.4nb1 1.5
+   < net/rtorrent rtorrent 0.8.9 0.8.9nb2
+   < www/ikiwiki ikiwiki 3.20110715 3.20110715nb1
+   # 
+
+.VE
 .SH SEE ALSO
 .BR pkg_summary-utils(7) ,
 .BR pkg_summary(5) ,
