@@ -1,1 +1,1 @@
-VERSION=	0.55alpha3
+VERSION=	0.55.0

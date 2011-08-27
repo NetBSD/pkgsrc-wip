@@ -1,5 +1,45 @@
 ----------------------------------------------------------------------
-Version 0.54, by Aleksey Cheusov, Fri, 29 Jul 2011 23:37:41 +0300
+Version 0.55.0, by Aleksey Cheusov, Sat, 27 Aug 2011 20:14:53 +0300
+
+  pkg_lint_summary:
+    - New option -f option was added that checks files in PLIST
+      fields given on input and warns about files common for several
+      packages.
+    - New option -p option was added for specifying prefix directory
+      used by option -l.
+    - New option -n was added that analyses PLIST and CONFLICTS
+      fields in input summaries and outputs unregistered conflicts.
+    - New option -s was added that checks OPSYS, OS_VERSION and
+      MACHINE_ARCH fields given on input and warns if they differ from
+      that of running system (uname -srm).
+
+  pkg_cmp_summary:
+    - New options -a and -A were added for specifying fields for
+      comparing in addition to package versions.
+    - New option -E was added. It works together with -A and changes
+      its output.
+    - Options -c and -b were reimplemented using more generic -a.
+    - Examples section was added to pkg_cmp_summary.1
+
+  pkg_bin_summary:
+    - New option -e option was added for effectively using
+      pkg_bin_summary with xargs (xargs -r is not portable).
+    - New option -k was added for enriching binary package summaries
+      with checksums using algorithms supported by digest(1)
+
+  pkg_digger_backend:
+    - Mixed -1|-3|-9 options are now handled correctly.
+
+  pkg_summary2leaves:
+    - When no files are given as arguments (stdin),
+      pkg_summary2leaves outputs an error message.
+
+  Regression tests have been reorganized. One test - one file.
+
+  Some manual pages were updated and improved.
+
+----------------------------------------------------------------------
+Version 0.54.0, by Aleksey Cheusov, Fri, 29 Jul 2011 23:37:41 +0300
 
   pkg_micro_src_summary:
      - support for PSS_SLAVES=nnn was added

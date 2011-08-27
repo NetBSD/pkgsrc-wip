@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2011/07/31 16:52:49 cheusov Exp $
+# $NetBSD: Makefile,v 1.55 2011/08/27 17:37:45 cheusov Exp $
 
 DISTNAME=	pkg_summary-utils-${VERSION}
 CATEGORIES=	pkgtools
@@ -12,6 +12,7 @@ LICENSE=	2-clause-bsd
 
 DEPENDS+=	runawk>=1.1.0:../../lang/runawk
 DEPENDS+=	pipestatus-[0-9]*:../../devel/pipestatus
+DEPENDS+=	digest-[0-9]*:../../pkgtools/digest
 
 BUILD_DEPENDS+=	mk-configure>=0.20.0:../../devel/mk-configure
 
