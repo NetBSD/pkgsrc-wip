@@ -1,6 +1,6 @@
 # pkg_cmp_summary
 pkg_cmp_summary src_summary.txt src_summary2.txt | sort -k2,2 |
-cmp 'pkg_cmp_summary #1' \
+cmp 'pkg_cmp_summary      #1' \
 '- ap2-vhost-ldap 1.2.0nb1
 - ap22-vhost-ldap 1.2.0nb1
 = awk-pkgsrc-dewey 0.5.6 0.5.6
@@ -33,7 +33,7 @@ cmp 'pkg_cmp_summary #1' \
 '
 
 pkg_cmp_summary -e src_summary.txt src_summary2.txt | sort -k2,2 |
-cmp 'pkg_cmp_summary #1.1' \
+cmp 'pkg_cmp_summary -e   #1.1' \
 '- ap2-vhost-ldap 1.2.0nb1
 - ap22-vhost-ldap 1.2.0nb1
 = awk-pkgsrc-dewey 0.5.6 0.5.6
@@ -67,7 +67,7 @@ cmp 'pkg_cmp_summary #1.1' \
 '
 
 pkg_cmp_summary -p src_summary.txt src_summary2.txt | sort -k2,2 |
-cmp 'pkg_cmp_summary #2' \
+cmp 'pkg_cmp_summary -p   #2' \
 '= devel/gmake gmake 3.81 3.81
 = devel/libltdl libltdl 1.5.24 1.5.24
 = devel/libmaa libmaa 1.0.1nb1 1.0.1nb1
@@ -101,28 +101,28 @@ cmp 'pkg_cmp_summary #2' \
 '
 
 pkg_cmp_summary src_summary4.txt src_summary5.txt | sort -k2,2 |
-cmp 'pkg_cmp_summary #4' \
+cmp 'pkg_cmp_summary      #4' \
 '= dictem 1.0.0 1.0.0
 '
 
 pkg_cmp_summary -p src_summary4.txt src_summary5.txt | sort -k2,2 |
-cmp 'pkg_cmp_summary #5' \
+cmp 'pkg_cmp_summary -p   #5' \
 '- textproc/dictem dictem 1.0.0
 + wip/dictem dictem 1.0.0
 '
 
 pkg_cmp_summary -c src_summary4.txt src_summary5.txt | sort -k2,2 |
-cmp 'pkg_cmp_summary #7' \
+cmp 'pkg_cmp_summary -c   #7' \
 '! dictem 1.0.0 1.0.0
 '
 
 pkg_cmp_summary -cp src_summary4.txt src_summary6.txt | sort -k2,2 |
-cmp 'pkg_cmp_summary #8' \
+cmp 'pkg_cmp_summary -cp  #8' \
 '! textproc/dictem dictem 1.0.0 1.0.0
 '
 
 pkg_cmp_summary -P src_summary.txt src_summary2.txt | sort -k2,2 |
-cmp 'pkg_cmp_summary #9' \
+cmp 'pkg_cmp_summary -P   #9' \
 '= devel/gmake
 = devel/libltdl
 = devel/libmaa
@@ -158,42 +158,42 @@ cmp 'pkg_cmp_summary #9' \
 if test -f "$objdir"/summary_micro.txt -o -f "$objdir"/summary_full.txt; then
     pkg_cmp_summary -p "$objdir"/summary_micro.txt "$objdir"/summary_full.txt |
     grep -v '^=' |
-    cmp 'pkg_cmp_summary #10' \
+    cmp 'pkg_cmp_summary -p   #10' \
 ''
 fi
 
 pkg_cmp_summary -d summary1.txt summary2.txt |
-cmp 'pkg_cmp_summary #11' \
+cmp 'pkg_cmp_summary -d   #11' \
 '! baz 1.2.3 1.2.3
 '
 
 pkg_cmp_summary -d summary2.txt summary1.txt |
-cmp 'pkg_cmp_summary #12' \
+cmp 'pkg_cmp_summary -d   #12' \
 '! baz 1.2.3 1.2.3
 '
 
 pkg_cmp_summary -d summary1.txt summary4.txt |
-cmp 'pkg_cmp_summary #13' \
+cmp 'pkg_cmp_summary -d   #13' \
 '! baz 1.2.3 1.2.3
 '
 
 pkg_cmp_summary -d summary4.txt summary1.txt |
-cmp 'pkg_cmp_summary #14' \
+cmp 'pkg_cmp_summary -d   #14' \
 '! baz 1.2.3 1.2.3
 '
 
 pkg_cmp_summary -d summary1.txt summary3.txt |
-cmp 'pkg_cmp_summary #15' \
+cmp 'pkg_cmp_summary -d   #15' \
 '= baz 1.2.3 1.2.3
 '
 
 pkg_cmp_summary -d summary3.txt summary1.txt |
-cmp 'pkg_cmp_summary #16' \
+cmp 'pkg_cmp_summary -d   #16' \
 '= baz 1.2.3 1.2.3
 '
 
 pkg_cmp_summary -pe2 src_summary14.txt bin_summary3.txt | sort |
-cmp 'pkg_cmp_summary #17.1' \
+cmp 'pkg_cmp_summary -pe2 #17.1' \
 '! lang/ruby ruby 1.9.2
 = archivers/php-zip archivers/php-zip php5-zip 5.2.15.1.8.11
 = archivers/php-zip:PHP_VERSION_REQD=52 archivers/php-zip php5-zip 5.2.15
@@ -202,7 +202,7 @@ cmp 'pkg_cmp_summary #17.1' \
 '
 
 pkg_cmp_summary -pe src_summary14.txt bin_summary3.txt | sort |
-cmp 'pkg_cmp_summary #17.2' \
+cmp 'pkg_cmp_summary -pe  #17.2' \
 '! lang/ruby ruby 1.9.2
 = archivers/php-zip php5-zip 5.2.15
 = archivers/php-zip php5-zip 5.2.15.1.8.11
@@ -211,14 +211,14 @@ cmp 'pkg_cmp_summary #17.2' \
 '
 
 pkg_cmp_summary -p src_summary14.txt bin_summary3.txt | sort |
-cmp 'pkg_cmp_summary #17.3' \
+cmp 'pkg_cmp_summary -p   #17.3' \
 '2 archivers/php-zip php5-zip
 2 lang/ruby ruby
 = archivers/php-zip php53-zip 5.3.4 5.3.4
 '
 
 pkg_cmp_summary -pe2 src_summary14.txt - < src_summary14.txt | sort |
-cmp 'pkg_cmp_summary #17.4' \
+cmp 'pkg_cmp_summary -pe2 #17.4' \
 '= archivers/php-zip archivers/php-zip php5-zip 5.2.15.1.8.11
 = archivers/php-zip:PHP_VERSION_REQD=52 archivers/php-zip:PHP_VERSION_REQD=52 php5-zip 5.2.15
 = archivers/php-zip:PHP_VERSION_REQD=53 archivers/php-zip:PHP_VERSION_REQD=53 php53-zip 5.3.4 5.3.4
@@ -227,7 +227,7 @@ cmp 'pkg_cmp_summary #17.4' \
 '
 
 pkg_cmp_summary -pe2 bin_summary3.txt - < bin_summary3.txt | sort |
-cmp 'pkg_cmp_summary #17.5' \
+cmp 'pkg_cmp_summary      #17.5' \
 '= archivers/php-zip archivers/php-zip php5-zip 5.2.15
 = archivers/php-zip archivers/php-zip php5-zip 5.2.15.1.8.11
 = archivers/php-zip archivers/php-zip php53-zip 5.3.4 5.3.4
@@ -236,7 +236,7 @@ cmp 'pkg_cmp_summary #17.5' \
 '
 
 pkg_cmp_summary -pu bin_summary2.txt - < bin_summary3.txt | sort |
-cmp 'pkg_cmp_summary #18.1' \
+cmp 'pkg_cmp_summary -pu  #18.1' \
 '+ archivers/php-zip php5-zip 5.2.15
 + archivers/php-zip php5-zip 5.2.15.1.8.11
 + archivers/php-zip php53-zip 5.3.4
@@ -257,7 +257,7 @@ cmp 'pkg_cmp_summary #18.1' \
 '
 
 pkg_cmp_summary -pb bin_summary1.txt bin_summary2.txt | sort |
-cmp 'pkg_cmp_summary #18.2' \
+cmp 'pkg_cmp_summary -pb  #18.2' \
 '! wip/pkgnih pkgnih 0.3.1 0.3.1
 + pkgtools/digest digest 20080510
 + textproc/dict-client dict-client 1.11.2
@@ -284,7 +284,7 @@ cmp 'pkg_cmp_summary #18.2' \
 '
 
 pkg_cmp_summary -a automatic,try_out bin_summary91.txt bin_summary92.txt |
-cmp 'pkg_cmp_summary -a #19' \
+cmp 'pkg_cmp_summary -a   #19' \
 '= f 3.4.5 3.4.5
 + e 0.1.1
 > h 0.0.2 0.0.1
@@ -297,7 +297,7 @@ cmp 'pkg_cmp_summary -a #19' \
 '
 
 pkg_cmp_summary -A automatic,try_out bin_summary91.txt bin_summary92.txt |
-cmp 'pkg_cmp_summary -A #20' \
+cmp 'pkg_cmp_summary -A   #20' \
 '= f 3.4.5 3.4.5
 + e 0.1.1
  automatic 

@@ -42,8 +42,7 @@
 # OPTIONS:
 #   -h         display this help
 #   -p         use PKGPATH:PKGBASE pair for identifing a package
-#   -c         consider packages different
-#              if they have different CVS_CHECKSUM
+#   -c         synonym for '-a CVS_CHECKSUM'
 #   -m         ignored
 #   -P         use PKGPATH only for comparison, ignore PKGNAME
 #   -d         consider packages different
@@ -75,12 +74,16 @@ BEGIN {
 	with_pkgname = 1
 
 	with_pkgpath    = getarg("p")
-	use_checksum    = getarg("c")
 	use_dep         = getarg("d")
-	use_builddate   = getarg("b")
 	check_existence = getarg("e")
 	user_auto       = getarg("u")
+
+	if (getarg("c"))
+		add_fields = "CVS_CHECKSUM"
+	if (getarg("b"))
+		add_fields = add_fields " BUILD_DATE"
 	add_fields      = add_fields " " getarg("a", "")
+
 	ADD_fields      = getarg("A", "")
 
 	add_fields = trim_lrc(add_fields " " ADD_fields)
@@ -128,11 +131,6 @@ with_pkgname && /^PKGNAME=/ {
 	next
 }
 
-use_checksum && /^CVS_CHECKSUM=/ {
-	checksum = trim(substr($0, 14))
-	next
-}
-
 with_pkgpath && /^PKGPATH=/ {
 	pkgpath = trim(substr($0, 9))
 	full_pkgpath = pkgpath
@@ -169,11 +167,6 @@ use_dep && /^DEPENDS=/ {
 	field  = substr($0, 1, eq_pos-1)
 	if (field in add_fields_hash)
 		field_val [field] = substr($0, eq_pos+1)
-}
-
-use_builddate && /^BUILD_DATE=/ {
-	build_date = substr($0, 12)
-	next
 }
 
 function get_ua_sufx (pkgbase){
@@ -241,15 +234,13 @@ NF == 0 {
 		full_pkgbase = pkgname
 	}
 
-	# current checksum, build date
-	curr_checksum   = checksum
-	curr_build_date = build_date
+	# add_fields
 	delete curr_field_val
 	for (f in field_val)
 		curr_field_val [f] = field_val [f]
 
 	# cleaning...
-	pkgname = pkgpath = checksum = build_date = ""
+	pkgname = pkgpath = ""
 	delete field_val
 
 	#
@@ -271,19 +262,11 @@ NF == 0 {
 			names [pkgbase] = ver
 			full_pkgpaths [pkgbase] = full_pkgbase
 
-			if (use_checksum){
-				checksums [pkgbase] = curr_checksum
-			}
-
 			if (use_dep){
 				for (dep in dep1){
 					depends [pkgbase, ++depends_cnt [pkgbase]] = dep
 				}
 				delete dep1
-			}
-
-			if (use_builddate){
-				build_dates [pkgbase] = curr_build_date
 			}
 
 			for (f in curr_field_val){
@@ -350,20 +333,6 @@ NF == 0 {
 
 		# -a|-A
 		diff_accu = get_diff_accu(pkgbase)
-
-		# -c
-		if (use_checksum && res == "="){
-			prev_checksum = checksums [pkgbase]
-			if (prev_checksum != curr_checksum)
-				res = "!"
-		}
-
-		# -b
-		if (use_builddate && res == "="){
-			prev_build_date = build_dates [pkgbase]
-			if (prev_build_date != curr_build_date)
-				res = "!"
-		}
 
 		# -d
 		if (use_dep && res == "="){

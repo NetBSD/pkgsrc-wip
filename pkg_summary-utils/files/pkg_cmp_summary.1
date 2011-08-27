@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkg_cmp_summary.1,v 1.19 2011/08/27 07:39:11 cheusov Exp $
+.\"	$NetBSD: pkg_cmp_summary.1,v 1.20 2011/08/27 08:48:53 cheusov Exp $
 .\"
 .\" Copyright (c) 2008-2010 by Aleksey Cheusov (vle@gmx.net)
 .\" Absolutely no warranty.
@@ -59,10 +59,12 @@ for comparing summaries for multi-variant packages
 (PKGPATH=category/name:variable_assignments format of PKGPATH field).
 .TP
 .B "-c"
-use CVS_CHECKSUM field for comparing in addition to PKGNAME and/or PKGPATH.
+synonym for
+.BR "-a CVS_CHECKSUM" .
 .TP
 .B "-b"
-use BUILD_DATE field for comparing in addition to PKGNAME and/or PKGPATH.
+synonym for
+.BR "-a BUILD_DATE" .
 .TP
 .B "-d"
 use DEPENDS field for comparing in addition to PKGNAME and/or PKGPATH.
