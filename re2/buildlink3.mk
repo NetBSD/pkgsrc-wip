@@ -1,0 +1,12 @@
+# $NetBSD: buildlink3.mk,v 1.1.1.1 2011/08/27 18:45:02 asau Exp $
+
+BUILDLINK_TREE+=	re2
+
+.if !defined(RE2_BUILDLINK3_MK)
+RE2_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.re2+=	re2>=0.99
+BUILDLINK_PKGSRCDIR.re2?=	../../wip/re2
+.endif	# RE2_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-re2
