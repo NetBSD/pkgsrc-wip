@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkg_bin_summary.1,v 1.4 2011/08/13 10:55:15 cheusov Exp $
+.\"	$NetBSD: pkg_bin_summary.1,v 1.5 2011/08/27 17:13:03 cheusov Exp $
 .\"
 .\" Copyright (c) 2010 by Aleksey Cheusov (vle@gmx.net)
 .\" Absolutely no warranty.
@@ -43,17 +43,30 @@ is applied,
 .B pkg_bin_summary
 does nothing in this case and exits immediately.
 .TP
-.B "-a <fields>"
+.BI "-a " fields
 add to the output the specified fields,
 fields are separated by space or comma.
 .TP
-.B "-f <fields>"
+.BI "-f " fields
 output only specified fields,
 fields are separated by space or comma.
 .TP
-.B "-r <fields>"
+.BI "-r " fields
 remove from output the specified fields,
 fields are separated by space or comma.
+.TP
+.BI "-k " algorithms
+Generate checksums for packages using digest(1)
+and make them a part of output summary. CKSUM field is added to summary
+that has the following format:
+.br
+.VB
+  CKSUMS=<ALGO> <CKSUM>
+.VE
+where ALGO is is an
+.I algorithm
+supported by digest(1), for example, md5, sha1 etc.,
+and CKSUM is a checksum.
 .TP
 PKG_INFO_ARGS are
 options passed to pkg_info(1) that default to -a.
@@ -79,9 +92,12 @@ if PKG_INFO_ARGS is not empty.
   find /usr/pkgsrc/packages/All -name '*.tgz' |
   xargs pkg_bin_summary -e -a PLIST
 
+  ls -1 | grep '[.]tgz$' | xargs pkg_bin_summary -e -k 'sha1 rmd160'
+
 .VE
 .SH SEE ALSO
 .BR pkg_summary-utils(7) ,
 .BR pkg_summary(5) ,
+.BR digest(1)
 .SH AUTHOR
 Aleksey Cheusov <vle@gmx.net>

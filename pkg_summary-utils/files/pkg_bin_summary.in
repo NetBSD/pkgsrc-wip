@@ -53,6 +53,8 @@ OPTIONS:
   -r <fields>       remove from output the specified fields,
                     fields are output only specified fields
   -e                does nothing if no packages were specified
+  -k <algorithms>   generate checksums for binary packages
+                    and make them a part of summary (CKSUM)
 PKG_INFO_ARGS:
   Options passed to pkg_info(1) that default to -a.
   In addition to these options -X is always applied to pkg_info
@@ -66,14 +68,16 @@ Samples of use:
 EOF
 }
 
-while getopts hea:r:f: f; do
+while getopts hea:r:f:k: f; do
     case "$f" in 
 	'?')   exit 1;;
-	h)     usage; exit 0;;
-	a)     add_fields="$OPTARG";;
-	r)     rem_fields="$OPTARG";;
-	f)     only_fields="$OPTARG";;
-	e)     explicit_pkgs=1;;
+	h) usage; exit 0;;
+	a) add_fields="$add_fields $OPTARG";;
+	r) rem_fields="$OPTARG";;
+	f) only_fields="$OPTARG";;
+	e) explicit_pkgs=1;;
+	k) cksums="$OPTARG"
+	   add_fields="$add_fields FILE_NAME";;
     esac
 done
 shift `expr $OPTIND - 1`
@@ -97,4 +101,41 @@ if test -n "$explicit_pkgs"; then
 else
     $PKG_INFO_CMD $pkg_info_opts "$@"
 fi |
-$LIBEXECDIR/XB2bin_summary -a "$add_fields" -r "$rem_fields" -f "$only_fields"
+$LIBEXECDIR/XB2bin_summary -a "$add_fields" -r "$rem_fields" -f "$only_fields" |
+if test -z "$cksums"; then
+    cat
+else
+    ## Add CKSUM field to summary
+    tmpdir=`mktemp -d /tmp/bin_summary.XXXXXX`
+    test -n "$tmpdir" || exit 1
+
+    # generate checksums
+    for i in $cksums; do
+	digest $i "$@" >> $tmpdir/cksums
+    done
+
+    # 
+    awk -v cksums="$cksums" '
+    BEGIN { cksums_cnt = split(cksums, cksums_arr) }
+    FILENAME != "-" && $3 == "=" {
+	fn = substr($2, 2, length($2)-2)
+	sub(/^.*\//, "", fn)
+	cksum [fn, tolower($1)] = $4
+    }
+    FILENAME == "-" {
+	if (/^FILE_NAME=/)
+	    fn = substr($0, 11)
+
+	if (NF > 0) {
+	    print
+	    next
+	}
+
+	for (i=1; i <= cksums_cnt; ++i){
+	    cksum_type = cksums_arr [i]
+	    print "CKSUM=" cksum_type " " cksum [fn, cksum_type]
+	}
+	fn = ""
+	print ""
+    }' $tmpdir/cksums -
+fi

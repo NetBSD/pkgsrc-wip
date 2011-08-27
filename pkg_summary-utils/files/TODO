@@ -1,8 +1,5 @@
 TODO list and thoughts
 
-pkg_bin_summary: support for field CKSUMS with environment vatiable
-    XXX containing md5, sha1 etc.
-
 existing tools:
 
     pkg_cmp_summary:
@@ -38,7 +35,6 @@ existing tools:
          - checks for bad patterns like foobar<=1.1.1nb*
          - improve REQUIRES/PROVIDES checks, i.e. use
            PROVIDES from dependencies only
-         - CONFLICTS vs. actual PLISTs in packages
          - distfiles checksums
          - check binaries and their REQUIRES and analyse Makefile
 
