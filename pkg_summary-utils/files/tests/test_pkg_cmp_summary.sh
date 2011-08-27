@@ -284,7 +284,20 @@ cmp 'pkg_cmp_summary -pb  #18.2' \
 '
 
 pkg_cmp_summary -a automatic,try_out bin_summary91.txt bin_summary92.txt |
-cmp 'pkg_cmp_summary -a   #19' \
+cmp 'pkg_cmp_summary -a   #19.1' \
+'= f 3.4.5 3.4.5
++ e 0.1.1
+> h 0.0.2 0.0.1
+! b 2.2.2 2.2.2
+! a 1.1.1 1.1.1
+! c 3.4.5 3.4.5
+= g 3.4.9 3.4.9
+< i 0.1 0.4
+- d 0.1.1
+'
+
+pkg_cmp_summary -a automatic,try_out bin_summary91.txt bin_summary92.txt |
+cmp 'pkg_cmp_summary -Ea  #19.2' \
 '= f 3.4.5 3.4.5
 + e 0.1.1
 > h 0.0.2 0.0.1
@@ -395,6 +408,144 @@ cmp 'pkg_cmp_summary -Aa  #20.3' \
  automatic yes
 
 = g 3.4.9 3.4.9
+
+< i 0.1 0.4
+ automatic 
+ automatic yes
+
+- d 0.1.1
+ automatic yes
+ automatic 
+
+'
+
+pkg_cmp_summary -A automatic,try_out -E bin_summary91.txt bin_summary92.txt |
+cmp 'pkg_cmp_summary -AE  #20.4' \
+'= f 3.4.5 3.4.5
+ automatic yes
+ automatic yes
+ try_out yes
+ try_out yes
+
++ e 0.1.1
+ automatic 
+ automatic yes
+ try_out 
+ try_out yes
+
+> h 0.0.2 0.0.1
+ automatic 
+ automatic yes
+ try_out 
+ try_out yes
+
+! b 2.2.2 2.2.2
+ automatic 
+ automatic 
+ try_out yes
+ try_out 
+
+! a 1.1.1 1.1.1
+ automatic 
+ automatic yes
+ try_out yes
+ try_out 
+
+! c 3.4.5 3.4.5
+ automatic 
+ automatic yes
+ try_out 
+ try_out 
+
+= g 3.4.9 3.4.9
+ automatic 
+ automatic 
+ try_out 
+ try_out 
+
+< i 0.1 0.4
+ automatic 
+ automatic yes
+ try_out 
+ try_out yes
+
+- d 0.1.1
+ automatic yes
+ automatic 
+ try_out 
+ try_out 
+
+'
+
+pkg_cmp_summary -Ea automatic -A try_out bin_summary91.txt bin_summary92.txt |
+cmp 'pkg_cmp_summary -Aa  #20.5' \
+'= f 3.4.5 3.4.5
+ try_out yes
+ try_out yes
+
++ e 0.1.1
+ try_out 
+ try_out yes
+
+> h 0.0.2 0.0.1
+ try_out 
+ try_out yes
+
+! b 2.2.2 2.2.2
+ try_out yes
+ try_out 
+
+! a 1.1.1 1.1.1
+ try_out yes
+ try_out 
+
+! c 3.4.5 3.4.5
+ try_out 
+ try_out 
+
+= g 3.4.9 3.4.9
+ try_out 
+ try_out 
+
+< i 0.1 0.4
+ try_out 
+ try_out yes
+
+- d 0.1.1
+ try_out 
+ try_out 
+
+'
+
+pkg_cmp_summary -EA automatic -atry_out bin_summary91.txt bin_summary92.txt |
+cmp 'pkg_cmp_summary -Aa  #20.6' \
+'= f 3.4.5 3.4.5
+ automatic yes
+ automatic yes
+
++ e 0.1.1
+ automatic 
+ automatic yes
+
+> h 0.0.2 0.0.1
+ automatic 
+ automatic yes
+
+! b 2.2.2 2.2.2
+ automatic 
+ automatic 
+
+! a 1.1.1 1.1.1
+ automatic 
+ automatic yes
+
+! c 3.4.5 3.4.5
+ automatic 
+ automatic yes
+
+= g 3.4.9 3.4.9
+ automatic 
+ automatic 
 
 < i 0.1 0.4
  automatic 

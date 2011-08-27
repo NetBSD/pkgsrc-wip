@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkg_cmp_summary.1,v 1.21 2011/08/27 09:31:50 cheusov Exp $
+.\"	$NetBSD: pkg_cmp_summary.1,v 1.22 2011/08/27 15:06:53 cheusov Exp $
 .\"
 .\" Copyright (c) 2008-2010 by Aleksey Cheusov (vle@gmx.net)
 .\" Absolutely no warranty.
@@ -79,6 +79,10 @@ is expected in
 if it is specified in
 .IR summary2 ,
 it is ignored.
+.br
+.B NOTE:
+This option is deprecated, consider using
+.BI "-EA " automatic
 .TP
 .B "-2"
 output PKGPATHe from summary1 and from summary2 (<>!=).
@@ -105,6 +109,10 @@ First, field and value from
 are output then field and value from
 .IR pkg_summary2
 with single space character between them.
+.TP
+.BI "-E"
+if applied together with -A, field values are output even
+if they are equal in summary1 and summary2.
 .SH EXAMPLES
 .VB
    # pkg_bin_summary -f PKGNAME,automatic runawk > 1

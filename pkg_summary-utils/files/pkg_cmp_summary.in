@@ -47,7 +47,7 @@
 #   -P         use PKGPATH only for comparison, ignore PKGNAME
 #   -d         consider packages different
 #              if they have different DEPENDS
-#   -b         synonym to '-a BUILD_DATE'
+#   -b         synonym for '-a BUILD_DATE'
 #   -2         output PKGPATHe from summary1 and from summary2 (<>!=)
 #   -e         normally a number of duplications is output as a result of
 #              comparison if they (duplications) exist.  If -e was
@@ -61,6 +61,8 @@
 #                 by space or comma
 #   =A <fields>   imply -a and output different fields in
 #                 the following lines with leading space
+#   -E            if -A and -E applied field values are output even
+#                 if they are equal in summary1 and summary2
 #                
 #.end-str
 ############################################################
@@ -77,6 +79,7 @@ BEGIN {
 	use_dep         = getarg("d")
 	check_existence = getarg("e")
 	user_auto       = getarg("u")
+	output_equal    = getarg("E")
 
 	if (getarg("c"))
 		add_fields = "CVS_CHECKSUM"
@@ -202,7 +205,7 @@ function get_diff_accu (pkgbase,                 diff_accu,f,i,vo,vn){
 			if (res == "=")
 				res = "!"
 		}
-		if (vo != vn)
+		if (output_equal || vo != vn)
 			if (f in ADD_fields_hash)
 				diff_accu = diff_accu " " f " " vo "\n " f " " vn "\n"
 	}
