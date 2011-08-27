@@ -478,7 +478,7 @@ cmp 'pkg_cmp_summary -AE  #20.4' \
 '
 
 pkg_cmp_summary -Ea automatic -A try_out bin_summary91.txt bin_summary92.txt |
-cmp 'pkg_cmp_summary -Aa  #20.5' \
+cmp 'pkg_cmp_summary -AaE  #20.5' \
 '= f 3.4.5 3.4.5
  try_out yes
  try_out yes
@@ -518,7 +518,7 @@ cmp 'pkg_cmp_summary -Aa  #20.5' \
 '
 
 pkg_cmp_summary -EA automatic -atry_out bin_summary91.txt bin_summary92.txt |
-cmp 'pkg_cmp_summary -Aa  #20.6' \
+cmp 'pkg_cmp_summary -AaE  #20.6' \
 '= f 3.4.5 3.4.5
  automatic yes
  automatic yes
