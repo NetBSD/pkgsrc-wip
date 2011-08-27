@@ -155,10 +155,12 @@ cmp 'pkg_cmp_summary #9' \
 - www/ap22-vhost-ldap:PKG_APACHE=apache22
 '
 
-pkg_cmp_summary -p "$objdir"/summary_micro.txt "$objdir"/summary_full.txt |
-grep -v '^=' |
-cmp 'pkg_cmp_summary #10' \
+if test -f "$objdir"/summary_micro.txt -o -f "$objdir"/summary_full.txt; then
+    pkg_cmp_summary -p "$objdir"/summary_micro.txt "$objdir"/summary_full.txt |
+    grep -v '^=' |
+    cmp 'pkg_cmp_summary #10' \
 ''
+fi
 
 pkg_cmp_summary -d summary1.txt summary2.txt |
 cmp 'pkg_cmp_summary #11' \
@@ -279,4 +281,59 @@ cmp 'pkg_cmp_summary #18.2' \
 < wip/pkg_summary-utils pkg_summary-utils 0.35rc1 0.49.1nb1
 < wip/runawk runawk 0.18.0 1.2.0
 = devel/pipestatus pipestatus 0.6.0 0.6.0
+'
+
+pkg_cmp_summary -a automatic,try_out bin_summary91.txt bin_summary92.txt |
+cmp 'pkg_cmp_summary -a #19' \
+'= f 3.4.5 3.4.5
++ e 0.1.1
+> h 0.0.2 0.0.1
+! b 2.2.2 2.2.2
+! a 1.1.1 1.1.1
+! c 3.4.5 3.4.5
+= g 3.4.9 3.4.9
+< i 0.1 0.4
+- d 0.1.1
+'
+
+pkg_cmp_summary -A automatic,try_out bin_summary91.txt bin_summary92.txt |
+cmp 'pkg_cmp_summary -A #20' \
+'= f 3.4.5 3.4.5
++ e 0.1.1
+ automatic 
+ automatic yes
+ try_out 
+ try_out yes
+
+> h 0.0.2 0.0.1
+ automatic 
+ automatic yes
+ try_out 
+ try_out yes
+
+! b 2.2.2 2.2.2
+ try_out yes
+ try_out 
+
+! a 1.1.1 1.1.1
+ automatic 
+ automatic yes
+ try_out yes
+ try_out 
+
+! c 3.4.5 3.4.5
+ automatic 
+ automatic yes
+
+= g 3.4.9 3.4.9
+< i 0.1 0.4
+ automatic 
+ automatic yes
+ try_out 
+ try_out yes
+
+- d 0.1.1
+ automatic yes
+ automatic 
+
 '

@@ -96,13 +96,11 @@ BEGIN {
 	add_fields_cnt = split(add_fields, add_fields_arr, /[ ,]/)
 	for (i=1; i <= add_fields_cnt; ++i)
 		add_fields_hash [add_fields_arr [i]] = 1
-	delete add_fields_arr
 
 	# -A
 	ADD_fields_cnt = split(ADD_fields, ADD_fields_arr, /[ ,]/)
 	for (i=1; i <= ADD_fields_cnt; ++i)
 		ADD_fields_hash [ADD_fields_arr [i]] = 1
-	delete ADD_fields_arr
 
 	#
 	for (ind=1; ind < ARGC && ARGV [ind] == ""; ++ind);
@@ -191,6 +189,33 @@ function get_ua_sufx (pkgbase){
 	}
 }
 
+function get_str_val (hash, key){
+	if (!(key in hash))
+		return ""
+
+	return hash [key]
+}
+
+function get_diff_accu (pkgbase,                  diff_accu,f,i,vo,vn){
+	# side effect - res variable
+	diff_accu = ""
+	for (i=1; i <= add_fields_cnt; ++i){
+		f = add_fields_arr [i]
+
+		vo = get_str_val(pkgbase_field, (pkgbase SUBSEP f))
+		vn = get_str_val(curr_field_val, f)
+
+		if (vo != vn){
+			if (res == "=")
+				res = "!"
+			if (f in ADD_fields_hash)
+				diff_accu = diff_accu " " f " " vo "\n " f " " vn "\n"
+		}
+	}
+
+	return diff_accu
+}
+
 NF == 0 {
 	if (assigns != ""){
 		full_pkgpath = full_pkgpath ":" assigns
@@ -217,11 +242,15 @@ NF == 0 {
 	}
 
 	# current checksum, build date
-	curr_checksum = checksum
+	curr_checksum   = checksum
 	curr_build_date = build_date
+	delete curr_field_val
+	for (f in field_val)
+		curr_field_val [f] = field_val [f]
 
 	# cleaning...
 	pkgname = pkgpath = checksum = build_date = ""
+	delete field_val
 
 	#
 	if (FILENAME == file1){
@@ -257,8 +286,8 @@ NF == 0 {
 				build_dates [pkgbase] = curr_build_date
 			}
 
-			for (f in field_val){
-				pkgbase_field [pkgbase, f] = field_val [f]
+			for (f in curr_field_val){
+				pkgbase_field [pkgbase, f] = curr_field_val [f]
 			}
 		}
 	}else{
@@ -296,22 +325,31 @@ NF == 0 {
 			next
 		}
 
+		res = "="
+
+		# -a
+
 		if (! (pkgbase in names)){
 			if (ver != "")
 				print "+", full_pkgbase, ver
 			else
 				print "+", full_pkgbase
 
+			diff_accu = get_diff_accu(pkgbase)
+			if (diff_accu)
+				print diff_accu
+
 			next
 		}
-
-		res = "="
 
 		# ! -P
 		if (with_pkgname){
 			ver1 = names [pkgbase]
 			res = dewey_cmp(ver1, ver)
 		}
+
+		# -a|-A
+		diff_accu = get_diff_accu(pkgbase)
 
 		# -c
 		if (use_checksum && res == "="){
@@ -325,22 +363,6 @@ NF == 0 {
 			prev_build_date = build_dates [pkgbase]
 			if (prev_build_date != curr_build_date)
 				res = "!"
-		}
-
-		# -a
-		diff_accu = ""
-		if (add_fields_cnt >= 1 && res == "="){
-			for (f in field_val){
-				if (! ((pkgbase SUBSEP f) in pkgbase_field) ||
-					pkgbase_field [pkgbase, f] != field_val [f])
-				{
-					if (f in ADD_fields_hash)
-						diff_accu = diff_accu \
-					            " " f " " pkgbase_field [pkgbase, f] "\n" \
-						        " " f " " field_val [f] "\n"
-					res = "!"
-				}
-			}
 		}
 
 		# -d
@@ -382,6 +404,7 @@ NF == 0 {
 			else
 				print res, full_pkgbase ua_sufx
 		}
+
 		if (diff_accu)
 			print diff_accu
 	}
@@ -390,6 +413,8 @@ NF == 0 {
 }
 
 END {
+	delete curr_field_val
+
 	for (pkgbase in names){
 		if (user_auto){
 			ua_sufx = get_ua_sufx(pkgbase)
@@ -403,6 +428,9 @@ END {
 			}
 
 			print "-", full_pkgpaths [pkgbase] nm ua_sufx
+			diff_accu = get_diff_accu(pkgbase)
+			if (diff_accu)
+				print diff_accu
 
 			delete duplicates [pkgbase]
 		}else if (!check_existence && (pkgbase in duplicates)){
