@@ -61,6 +61,8 @@
 #                 by space or comma
 #   =A <fields>   imply -a and output different fields in
 #                 the following lines with leading space
+#   =O <fields>   imply -E and output fields just like -A but
+#                 don't use them for comparison.
 #   -E            if -A and -E applied field values are output even
 #                 if they are equal in summary1 and summary2
 #                
@@ -79,7 +81,6 @@ BEGIN {
 	use_dep         = getarg("d")
 	check_existence = getarg("e")
 	user_auto       = getarg("u")
-	output_equal    = getarg("E")
 
 	if (getarg("c"))
 		add_fields = "CVS_CHECKSUM"
@@ -87,7 +88,10 @@ BEGIN {
 		add_fields = add_fields " BUILD_DATE"
 	add_fields      = add_fields " " getarg("a", "")
 
-	ADD_fields      = getarg("A", "")
+	ADD_fields      = trim_lrc(getarg("A", ""))
+	OUT_fields      = trim_lrc(getarg("O", ""))
+
+	output_equal    = getarg("E") || OUT_fields != ""
 
 	add_fields = trim_lrc(add_fields " " ADD_fields)
 
@@ -108,7 +112,14 @@ BEGIN {
 	for (i=1; i <= ADD_fields_cnt; ++i)
 		ADD_fields_hash [ADD_fields_arr [i]] = 1
 
+	# -O
+	OUT_fields_cnt = split(OUT_fields, OUT_fields_arr, /[ ,]/)
+	for (i=1; i <= OUT_fields_cnt; ++i)
+		OUT_fields_hash [OUT_fields_arr [i]] = 1
+
 	#
+	ADDOUT_fields_cnt = OUT_fields_cnt + ADD_fields_cnt;
+
 	for (ind=1; ind < ARGC && ARGV [ind] == ""; ++ind);
 
 	if (ARGC != ind+2){
@@ -168,7 +179,7 @@ use_dep && /^DEPENDS=/ {
 {
 	eq_pos = index($0, "=")
 	field  = substr($0, 1, eq_pos-1)
-	if (field in add_fields_hash)
+	if ((field in add_fields_hash) || (field in OUT_fields_hash))
 		field_val [field] = substr($0, eq_pos+1)
 }
 
@@ -208,6 +219,14 @@ function get_diff_accu (pkgbase,                 diff_accu,f,i,vo,vn){
 		if (output_equal || vo != vn)
 			if (f in ADD_fields_hash)
 				diff_accu = diff_accu " " f " " vo "\n " f " " vn "\n"
+	}
+	for (i=1; i <= OUT_fields_cnt; ++i){
+		f = OUT_fields_arr [i]
+
+		vo = get_str_val(pkgbase_field, (pkgbase SUBSEP f))
+		vn = get_str_val(curr_field_val, f)
+
+		diff_accu = diff_accu " " f " " vo "\n " f " " vn "\n"
 	}
 
 	return diff_accu
@@ -322,7 +341,7 @@ NF == 0 {
 			else
 				print "+", full_pkgbase
 
-			if (ADD_fields_cnt >= 1){
+			if (ADDOUT_fields_cnt >= 1){
 				diff_accu = get_diff_accu(pkgbase)
 				print diff_accu
 			}
@@ -379,7 +398,7 @@ NF == 0 {
 				print res, full_pkgbase ua_sufx
 		}
 
-		if (ADD_fields_cnt >= 1)
+		if (ADDOUT_fields_cnt >= 1)
 			print diff_accu
 	}
 
@@ -402,7 +421,7 @@ END {
 			}
 
 			print "-", full_pkgpaths [pkgbase] nm ua_sufx
-			if (ADD_fields_cnt >= 1){
+			if (ADDOUT_fields_cnt >= 1){
 				diff_accu = get_diff_accu(pkgbase)
 				print diff_accu
 			}

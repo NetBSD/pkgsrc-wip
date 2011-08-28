@@ -556,3 +556,142 @@ cmp 'pkg_cmp_summary -AaE  #20.6' \
  automatic 
 
 '
+
+pkg_cmp_summary -O automatic,try_out bin_summary91.txt bin_summary92.txt |
+cmp 'pkg_cmp_summary -O  #20.7' \
+'= f 3.4.5 3.4.5
+ automatic yes
+ automatic yes
+ try_out yes
+ try_out yes
+
++ e 0.1.1
+ automatic 
+ automatic yes
+ try_out 
+ try_out yes
+
+> h 0.0.2 0.0.1
+ automatic 
+ automatic yes
+ try_out 
+ try_out yes
+
+= b 2.2.2 2.2.2
+ automatic 
+ automatic 
+ try_out yes
+ try_out 
+
+= a 1.1.1 1.1.1
+ automatic 
+ automatic yes
+ try_out yes
+ try_out 
+
+= c 3.4.5 3.4.5
+ automatic 
+ automatic yes
+ try_out 
+ try_out 
+
+= g 3.4.9 3.4.9
+ automatic 
+ automatic 
+ try_out 
+ try_out 
+
+< i 0.1 0.4
+ automatic 
+ automatic yes
+ try_out 
+ try_out yes
+
+- d 0.1.1
+ automatic yes
+ automatic 
+ try_out 
+ try_out 
+
+'
+
+pkg_cmp_summary -a automatic -O try_out bin_summary91.txt bin_summary92.txt |
+cmp 'pkg_cmp_summary -Oa  #20.8' \
+'= f 3.4.5 3.4.5
+ try_out yes
+ try_out yes
+
++ e 0.1.1
+ try_out 
+ try_out yes
+
+> h 0.0.2 0.0.1
+ try_out 
+ try_out yes
+
+= b 2.2.2 2.2.2
+ try_out yes
+ try_out 
+
+! a 1.1.1 1.1.1
+ try_out yes
+ try_out 
+
+! c 3.4.5 3.4.5
+ try_out 
+ try_out 
+
+= g 3.4.9 3.4.9
+ try_out 
+ try_out 
+
+< i 0.1 0.4
+ try_out 
+ try_out yes
+
+- d 0.1.1
+ try_out 
+ try_out 
+
+'
+
+pkg_cmp_summary -O automatic -atry_out bin_summary91.txt bin_summary92.txt |
+cmp 'pkg_cmp_summary -Oa  #20.9' \
+'= f 3.4.5 3.4.5
+ automatic yes
+ automatic yes
+
++ e 0.1.1
+ automatic 
+ automatic yes
+
+> h 0.0.2 0.0.1
+ automatic 
+ automatic yes
+
+! b 2.2.2 2.2.2
+ automatic 
+ automatic 
+
+! a 1.1.1 1.1.1
+ automatic 
+ automatic yes
+
+= c 3.4.5 3.4.5
+ automatic 
+ automatic yes
+
+= g 3.4.9 3.4.9
+ automatic 
+ automatic 
+
+< i 0.1 0.4
+ automatic 
+ automatic yes
+
+- d 0.1.1
+ automatic yes
+ automatic 
+
+'
+

@@ -1,4 +1,11 @@
 ----------------------------------------------------------------------
+Version 0.56.0, by Aleksey Cheusov, Sun, 28 Aug 2011 12:05:00 +0300
+
+  pkg_cmp_summary:
+    - New option -O was added for specifying fields for
+      output without using them for comparison
+
+----------------------------------------------------------------------
 Version 0.55.0, by Aleksey Cheusov, Sat, 27 Aug 2011 20:14:53 +0300
 
   pkg_lint_summary:
