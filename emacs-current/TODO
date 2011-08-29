@@ -1,1 +1,7 @@
 * GNUStep support is not tested.
+
+* patches/patch-configure.in-2
+  Eliminate or minimize patches/patch-configure.in-2
+  Since 2011/06/29, crtn.o related problem lasts.
+  patch-configure.in-2 is a work around for this problem.
+  The real patch should be very simple but not figured out how yet.
