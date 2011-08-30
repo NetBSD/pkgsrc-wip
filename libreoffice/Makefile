@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.15 2011/07/21 05:16:36 ftigeot Exp $
+# $NetBSD: Makefile,v 1.16 2011/08/30 21:01:50 ftigeot Exp $
 
-VER=			2011-07-17
+VER=			2011-08-30
 DISTNAME=		libreoffice-${VER}
 PKGNAME=		libreoffice-${VER:S/-//g}
 CATEGORIES=		misc
 #MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/
 MASTER_SITES=	http://dl.wolfpond.org/libreoffice/ \
-		http://download.go-oo.org/src/ \
+		http://dev-www.libreoffice.org/src/ \
 		http://www.numbertext.org/linux/
 
 MAINTAINER=		ftigeot@wolfpond.org
@@ -19,11 +19,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 DIST_SUBDIR=	libreoffice
 
 
-LO_BOOTSTRAP=	libreoffice-bootstrap-${VER}
-LO_COMPONENTS=	artwork base calc components extensions extras \
-		filters help impress libs-core libs-extern \
-		libs-extern-sys libs-gui postprocess sdk testing \
-		ure writer
+LO_BOOTSTRAP=	libreoffice-core-${VER}
+LO_COMPONENTS=	dictionaries help
 
 MORE_DISTFILES= \
 	1756c4fa6c616ae15973c104cd8cb256-Adobe-Core35_AFMs-314.tar.gz \
@@ -34,7 +31,7 @@ MORE_DISTFILES= \
 	35efabc239af896dfb79be7ebdd6e6b9-gentiumbasic-fonts-1.10.zip \
 	48a9f787f43a09c0a9b7b00cd1fddbbf-hyphen-2.7.1.tar.gz \
 	ca4870d899fd7e943ffc310a5421ad4d-liberation-fonts-ttf-1.06.0.20100721.tar.gz \
-	979a3f3da4dc176e80fe8c6b759cb7f4-libvisio-0.0.2.tar.bz2 \
+	9b8eb71bf58b006ac0d2f0b464786cee-libvisio-0.0.5.tar.bz2 \
 	0ff7d225d087793c8c2c680d77aac3e7-mdds_0.5.3.tar.bz2 \
 	067201ea8b126597670b5eff72e1f66c-mythes-1.2.0.tar.gz \
 	fdb27bfe2dbe2e7b57ae194d9bf36bab-SampleICC-1.3.2.tar.gz
@@ -87,6 +84,7 @@ PTHREAD_OPTS+=		require
 HAS_CONFIGURE=		yes
 
 CONFIGURE_ARGS+=	--prefix=${DESTDIR}${PREFIX}/${PKGNAME}
+CONFIGURE_ARGS+=	--disable-ccache
 CONFIGURE_ARGS+=	--disable-epm
 CONFIGURE_ARGS+=	--disable-mozilla
 CONFIGURE_ARGS+=	--disable-neon
@@ -96,7 +94,7 @@ CONFIGURE_ARGS+=	--disable-opengl
 CONFIGURE_ARGS+=	--disable-systray
 CONFIGURE_ARGS+=	--with-alloc=system
 CONFIGURE_ARGS+=	--with-fonts
-CONFIGURE_ARGS+=	--with-max-jobs=${MAKE_JOBS}
+CONFIGURE_ARGS+=	--with-num-cpus=${MAKE_JOBS}
 CONFIGURE_ARGS+=	--with-system-headers
 CONFIGURE_ARGS+=	--with-system-libs
 CONFIGURE_ARGS+=	--with-system-libtextcat
@@ -114,7 +112,9 @@ CONFIGURE_ARGS+=	--without-system-mythes
 # and fail with the pkgsrc environment
 # Preset LD_LIBRARY_PATH to sane defaults and avoid complicating them
 # further
-LIBPATH=		${BUILDLINK_DIR}/lib:${WRKSRC}/desktop/unxdfly.pro/lib:${WRKSRC}/desktop/unxnbsd.pro/lib:${X11BASE}/lib
+LIBPATH=	${BUILDLINK_DIR}/lib:${X11BASE}/lib
+LIBPATH+=	${WRKSRC}/desktop/unxdfly.pro/lib:${WRKSRC}/solver/unxdfly.pro/lib:
+LIBPATH+=	${WRKSRC}/desktop/unxnbsd.pro/lib:${WRKSRC}/solver/unxnbsd.pro/lib:
 
 SUBST_CLASSES+=			libpath
 SUBST_STAGE.libpath=	pre-configure
