@@ -1,4 +1,4 @@
-$NetBSD: patch-clone_libs-core_desktop_scripts_soffice.sh,v 1.1 2011/06/23 17:19:38 ftigeot Exp $
+$NetBSD: patch-desktop_scripts_soffice.sh,v 1.1 2011/08/30 20:37:37 ftigeot Exp $
 
 --- clone/libs-core/desktop/scripts/soffice.sh.orig	2011-06-14 22:00:33.000000000 +0000
 +++ clone/libs-core/desktop/scripts/soffice.sh

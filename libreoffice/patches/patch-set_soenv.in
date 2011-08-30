@@ -1,12 +1,12 @@
-$NetBSD: patch-set_soenv.in,v 1.1.1.1 2011/05/18 11:50:18 ftigeot Exp $
+$NetBSD: patch-set_soenv.in,v 1.2 2011/08/30 20:37:37 ftigeot Exp $
 
---- set_soenv.in.orig	2011-05-15 17:02:10 +0000
+--- set_soenv.in.orig	2011-08-23 13:05:22.000000000 +0000
 +++ set_soenv.in
-@@ -1478,6 +1478,7 @@ ToFile( "JDKLIB",            $JAVA_LIB, 
- ToFile( "ASM_PATH",          $ASM_PATH,          "e" );
+@@ -1493,6 +1493,7 @@ ToFile( "ASM_PATH",          $ASM_PATH,
+ ToFile( "ML_EXE",            "@ML_EXE@",         "e" );
  ToFile( "FRAMEWORKSHOME",    $FRAMEWORKSHOME,    "e" );
  ToFile( "Empty",             $empty,             "n" );
-+ToFile( "LD_LIBRARY_PATH",   "@LIBPATH@", "e" );
++ToFile( "LD_LIBRARY_PATH",   "@LIBPATH@",        "e" );
  
  #
  # Writing the platform independent constant values to file.
