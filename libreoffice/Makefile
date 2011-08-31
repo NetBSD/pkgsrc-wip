@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2011/08/30 21:01:50 ftigeot Exp $
+# $NetBSD: Makefile,v 1.17 2011/08/31 07:31:42 ftigeot Exp $
 
 VER=			2011-08-30
 DISTNAME=		libreoffice-${VER}
@@ -113,8 +113,8 @@ CONFIGURE_ARGS+=	--without-system-mythes
 # Preset LD_LIBRARY_PATH to sane defaults and avoid complicating them
 # further
 LIBPATH=	${BUILDLINK_DIR}/lib:${X11BASE}/lib
-LIBPATH+=	${WRKSRC}/desktop/unxdfly.pro/lib:${WRKSRC}/solver/unxdfly.pro/lib:
-LIBPATH+=	${WRKSRC}/desktop/unxnbsd.pro/lib:${WRKSRC}/solver/unxnbsd.pro/lib:
+LIBPATH:=	${LIBPATH}:${WRKSRC}/desktop/unxdfly.pro/lib:${WRKSRC}/solver/unxdfly.pro/lib
+LIBPATH:=	${LIBPATH}:${WRKSRC}/desktop/unxnbsd.pro/lib:${WRKSRC}/solver/unxnbsd.pro/lib
 
 SUBST_CLASSES+=			libpath
 SUBST_STAGE.libpath=	pre-configure
@@ -122,11 +122,11 @@ SUBST_FILES.libpath=	set_soenv.in
 SUBST_SED.libpath=		-e 's,@LIBPATH@,${LIBPATH},g'
 SUBST_MESSAGE.libpath=	Fixing library path for dmake scripts
 
-REPLACE_PERL=	clone/impress/sd/res/webview/editpic.pl
-REPLACE_PERL+=	clone/impress/sd/res/webview/poll.pl
-REPLACE_PERL+=	clone/impress/sd/res/webview/savepic.pl
-REPLACE_PERL+=	clone/impress/sd/res/webview/show.pl
-REPLACE_PERL+=	clone/impress/sd/res/webview/webview.pl
+REPLACE_PERL=	sd/res/webview/editpic.pl
+REPLACE_PERL+=	sd/res/webview/poll.pl
+REPLACE_PERL+=	sd/res/webview/savepic.pl
+REPLACE_PERL+=	sd/res/webview/show.pl
+REPLACE_PERL+=	sd/res/webview/webview.pl
 
 LO_PROGRAMS=	sbase scalc sdraw simpress smath soffice swriter
 
@@ -139,7 +139,6 @@ post-extract:
 .for md in ${MORE_DISTFILES}
 	${LN} -s ${DISTDIR}/${DIST_SUBDIR}/${md} ${WRKSRC}/src/${md}
 .endfor
-	${TOUCH} ${WRKSRC}/clone/repos_changed
 
 do-configure:
 	cd ${WRKSRC} && ./autogen.sh ${CONFIGURE_ARGS}
