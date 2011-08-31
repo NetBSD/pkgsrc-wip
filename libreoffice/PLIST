@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2011/07/21 05:16:36 ftigeot Exp $
+@comment $NetBSD: PLIST,v 1.9 2011/08/31 17:57:19 ftigeot Exp $
 bin/sbase
 bin/scalc
 bin/sdraw
@@ -132,7 +132,7 @@ ${PKGNAME}/basis3.5/program/libabplo.so
 ${PKGNAME}/basis3.5/program/libacclo.so
 ${PKGNAME}/basis3.5/program/libadabasuilo.so
 ${PKGNAME}/basis3.5/program/libanalysislo.so
-${PKGNAME}/basis3.5/program/libanimcore.so
+${PKGNAME}/basis3.5/program/libanimcorelo.so
 ${PKGNAME}/basis3.5/program/libavmediagst.so
 ${PKGNAME}/basis3.5/program/libavmedialo.so
 ${PKGNAME}/basis3.5/program/libbasctllo.so
@@ -201,7 +201,6 @@ ${PKGNAME}/basis3.5/program/libhwplo.so
 ${PKGNAME}/basis3.5/program/libhyphenlo.so
 ${PKGNAME}/basis3.5/program/libi18nisolang1gcc3.so
 ${PKGNAME}/basis3.5/program/libi18npaperlo.so
-${PKGNAME}/basis3.5/program/libi18nregexpgcc3.so
 ${PKGNAME}/basis3.5/program/libi18nutilgcc3.so
 ${PKGNAME}/basis3.5/program/libicdlo.so
 ${PKGNAME}/basis3.5/program/libicglo.so
@@ -229,7 +228,6 @@ ${PKGNAME}/basis3.5/program/libmozbootstrap.so
 ${PKGNAME}/basis3.5/program/libmsfilterlo.so
 ${PKGNAME}/basis3.5/program/libmswordlo.so
 ${PKGNAME}/basis3.5/program/libmsworkslo.so
-${PKGNAME}/basis3.5/program/libmtfrenderer.uno.so
 ${PKGNAME}/basis3.5/program/libmysqllo.so
 ${PKGNAME}/basis3.5/program/libodbcbaselo.so
 ${PKGNAME}/basis3.5/program/libodbclo.so
@@ -336,7 +334,6 @@ ${PKGNAME}/basis3.5/program/pagein-draw
 ${PKGNAME}/basis3.5/program/pagein-impress
 ${PKGNAME}/basis3.5/program/pagein-writer
 ${PKGNAME}/basis3.5/program/passwordcontainer.uno.so
-${PKGNAME}/basis3.5/program/productregistration.uno.so
 ${PKGNAME}/basis3.5/program/pythonloader.py
 ${PKGNAME}/basis3.5/program/pythonloader.uno.so
 ${PKGNAME}/basis3.5/program/pythonloader.unorc
@@ -374,7 +371,6 @@ ${PKGNAME}/basis3.5/program/resource/impen-US.res
 ${PKGNAME}/basis3.5/program/resource/ofaen-US.res
 ${PKGNAME}/basis3.5/program/resource/pcren-US.res
 ${PKGNAME}/basis3.5/program/resource/pdffilteren-US.res
-${PKGNAME}/basis3.5/program/resource/productregistrationen-US.res
 ${PKGNAME}/basis3.5/program/resource/rpten-US.res
 ${PKGNAME}/basis3.5/program/resource/rptuien-US.res
 ${PKGNAME}/basis3.5/program/resource/sanen-US.res
@@ -403,7 +399,6 @@ ${PKGNAME}/basis3.5/program/resource/uuien-US.res
 ${PKGNAME}/basis3.5/program/resource/vclen-US.res
 ${PKGNAME}/basis3.5/program/resource/wzien-US.res
 ${PKGNAME}/basis3.5/program/resource/xsltdlgen-US.res
-${PKGNAME}/basis3.5/program/sax.uno.so
 ${PKGNAME}/basis3.5/program/senddoc
 ${PKGNAME}/basis3.5/program/services.rdb
 ${PKGNAME}/basis3.5/program/simplecanvas.uno.so
