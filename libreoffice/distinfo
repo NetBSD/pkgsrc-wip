@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.16 2011/08/30 23:28:58 thomasklausner Exp $
+$NetBSD: distinfo,v 1.17 2011/08/31 17:56:50 ftigeot Exp $
 
 SHA1 (libreoffice/067201ea8b126597670b5eff72e1f66c-mythes-1.2.0.tar.gz) = 025d5d0d566a23ddb353495c116116c1088ba2e9
 RMD160 (libreoffice/067201ea8b126597670b5eff72e1f66c-mythes-1.2.0.tar.gz) = aefa80476ef8340be84440b61f738f432da51c92
@@ -45,6 +45,7 @@ Size (libreoffice/libreoffice-dictionaries-2011-08-30.tar.bz2) = 39634187 bytes
 SHA1 (libreoffice/libreoffice-help-2011-08-30.tar.bz2) = 2f47f0e4b5debf78baa698d62fcf1055f665fa2a
 RMD160 (libreoffice/libreoffice-help-2011-08-30.tar.bz2) = 7ac3012c8f1c84c62ec931564fe7503d702ed0e6
 Size (libreoffice/libreoffice-help-2011-08-30.tar.bz2) = 1427881 bytes
+SHA1 (patch-Makefile.in) = 5612fb5f9e9f4735b6d91c8d99b6ddd5de752fa3
 SHA1 (patch-bin_distro-install-desktop-integration) = 55806364cfe6894856190893363ee34768a498f6
 SHA1 (patch-desktop_scripts_soffice.sh) = 37dfdd298a131d30580d597f3faa4c2ddbda4299
 SHA1 (patch-sd_Module_sd.mk) = efc6753baeb518e6577c018fe88f0774b307ea60
