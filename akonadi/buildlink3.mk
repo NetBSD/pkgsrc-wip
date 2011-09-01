@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2011/05/13 23:25:13 mwdavies Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2011/09/01 22:45:00 absd Exp $
 
 BUILDLINK_TREE+=	akonadi
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	akonadi
 AKONADI_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.akonadi+=	akonadi>=0.82.0
-BUILDLINK_ABI_DEPENDS.akonadi?=	akonadi>=1.4.0nb3
+BUILDLINK_ABI_DEPENDS.akonadi?=	akonadi>=1.4.81
 BUILDLINK_PKGSRCDIR.akonadi?=	../../mail/akonadi
 
 .include "../../x11/qt4-libs/buildlink3.mk"
