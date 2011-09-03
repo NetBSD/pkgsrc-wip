@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2011/07/14 14:34:04 mwilhelmy Exp $
+# $NetBSD: Makefile,v 1.9 2011/09/03 08:37:17 mwilhelmy Exp $
 
 DISTNAME=		xrdp-0.4.2
 CATEGORIES=		net
@@ -43,6 +43,16 @@ CONF_FILES+=		${EGDIR}/rsakeys.ini	${PKG_SYSCONFDIR}/rsakeys.ini
 CONF_FILES+=		${EGDIR}/xrdp.ini	${PKG_SYSCONFDIR}/xrdp.ini
 
 #PTHREAD_OPTS+=		native
+
+SUBST_CLASSES+=		man
+SUBST_MESSAGE.man=	Fixing variables in man-pages
+SUBST_STAGE.man=	post-patch
+SUBST_FILES.man=	docs/man/sesman.ini.5 docs/man/xrdp.ini.5
+SUBST_FILES.man+=	docs/man/xrdp.8 docs/man/sesman.8 docs/man/sesrun.8
+SUBST_SED.man=		-E -e 's,\$${(SESMAN|XRDP)_BIN_DIR},${BINDIR},g'
+SUBST_SED.man+=		-e 's,\$${(SESMAN|XRDP)_CFG_DIR},${PKG_SYSCONFDIR},g'
+SUBST_SED.man+=		-e 's,\$${(SESMAN|XRDP)_LOG_DIR},.,g' # FIXME
+SUBST_SED.man+=		-e 's,\$${(SESMAN|XRDP)_PID_DIR},/var/run,g'
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
