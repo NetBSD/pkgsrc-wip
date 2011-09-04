@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4463 2011/08/24 15:21:26 othyro Exp $
+# $Id: Makefile,v 1.4464 2011/09/04 03:16:23 jgoamakf Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1852,6 +1852,7 @@ SUBDIR+=	p5-WebService-CIA
 SUBDIR+=	p5-XML-DOM-XPath
 SUBDIR+=	p5-XML-DT
 SUBDIR+=	p5-XML-DTDParser
+SUBDIR+=	p5-XML-RSS-LibXML
 SUBDIR+=	p5-XML-Writer-Simple
 SUBDIR+=	p5-mozldap
 SUBDIR+=	p5-qt3
