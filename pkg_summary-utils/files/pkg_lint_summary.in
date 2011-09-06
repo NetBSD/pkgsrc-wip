@@ -272,12 +272,14 @@ END {
 				}
 			}
 		}
+
 		while (xgetline0(failed_deps_fn)){
-			if ($1 != "c")
+			if ($1 != "c:")
 				continue
 
 			pana1 = ($4 ";" $5)
 			pana2 = ($7 ";" $8)
+
 			delete conflicts [pana1, pana2]
 			delete conflicts [pana2, pana1]
 		}

@@ -88,7 +88,6 @@ cmp 'pkg_lint_summary -f #10' \
 pkg_lint_summary -n bin_summary8.txt | sort |
 cmp 'pkg_lint_summary -n #11' \
 'n: conflict /usr/pkg/bin/lzgrep <- archivers/xz xz-5.0.3 archivers/lzip lzip-1.7
-n: conflict /usr/pkg/bin/ssh <- security/openssh openssh-5.8.2nb2 security/ssh2 ssh2-3.2.9.1nb7
 n: conflict /usr/pkg/libexec/cpp <- lang/pcc pcc-1.0.0 devel/lcc lcc-4.1
 '
 
@@ -101,8 +100,12 @@ pkg_lint_summary -n bin_summary6.txt | sort |
 cmp 'pkg_lint_summary -n #13' \
 ''
 
+pkg_lint_summary -n bin_summary10.txt | sort |
+cmp 'pkg_lint_summary -n #14' \
+''
+
 pkg_lint_summary -s bin_summary1.txt |
-cmp 'pkg_lint_summary -s #14' \
+cmp 'pkg_lint_summary -s #15' \
 's: mismatch wip/distbb distbb-0.33.0 CheBSD 1.4 i386
 s: mismatch wip/pkg_online pkg_online-0.9.1 CheBSD 1.4 i386
 s: mismatch wip/pkg_conflicts pkg_conflicts-0.4.0 CheBSD 1.4 i386
