@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2011/08/27 17:37:45 cheusov Exp $
+# $NetBSD: Makefile,v 1.56 2011/09/06 21:44:28 cheusov Exp $
 
 DISTNAME=	pkg_summary-utils-${VERSION}
 CATEGORIES=	pkgtools
@@ -65,5 +65,6 @@ MAKE_PROGRAM=	mkcmake
 do-extract:
 	${CP} -Rp ${FILESDIR} ${WRKSRC}
 
+.include "../../devel/mk-configure/configure.mk"
 .include "../../wip/pkg_summary-utils/files/version.mk"
 .include "../../mk/bsd.pkg.mk"
