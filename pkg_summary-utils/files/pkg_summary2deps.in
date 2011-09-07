@@ -60,7 +60,6 @@
 #   -a    output all matched dependencies separated by `|' symbol,
 #         not only the first one
 #   -c    analyse CONFLICTS
-#   -a    output
 #   -t    produce output compatible with tsort(1) command
 #   -r    do not strip versions from PKGNAME, imply -n
 #   -R    do not strip versions from dependencies, imply -n
