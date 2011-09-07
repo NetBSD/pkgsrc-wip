@@ -1,20 +1,13 @@
-$NetBSD: patch-i3.config.keycodes,v 1.3 2011/08/02 21:35:31 pallegra Exp $
+$NetBSD: patch-i3.config.keycodes,v 1.4 2011/09/07 09:07:45 pallegra Exp $
 
---- i3.config.keycodes.orig	2011-08-01 21:24:22.000000000 +0000
+--- i3.config.keycodes.orig	2011-08-28 17:48:13.000000000 +0000
 +++ i3.config.keycodes
-@@ -17,13 +17,13 @@ font -misc-fixed-medium-r-normal--13-120
+@@ -17,7 +17,7 @@ font -misc-fixed-medium-r-normal--13-120
  floating_modifier $mod
  
  # start a terminal
--bindcode $mod+36 exec /usr/bin/urxvt
+-bindcode $mod+36 exec urxvt
 +bindcode $mod+36 exec xterm
  
  # kill focused window
  bindcode $mod+Shift+24 kill
- 
- # start dmenu (a program launcher)
--bindcode $mod+40 exec /usr/bin/dmenu_run
-+bindcode $mod+40 exec dmenu_run
- 
- # change focus
- bindcode $mod+44 focus left

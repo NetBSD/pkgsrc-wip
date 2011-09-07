@@ -1,6 +1,6 @@
-$NetBSD: patch-common.mk,v 1.5 2011/08/02 21:35:31 pallegra Exp $
+$NetBSD: patch-common.mk,v 1.6 2011/09/07 09:07:45 pallegra Exp $
 
---- common.mk.orig	2011-08-02 21:23:49.000000000 +0000
+--- common.mk.orig	2011-08-28 17:48:21.000000000 +0000
 +++ common.mk
 @@ -68,8 +68,8 @@ LIBS += $(call ldflags_for_lib, xcb-rand
  LIBS += $(call ldflags_for_lib, xcb, xcb)
