@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.17 2011/08/31 17:56:50 ftigeot Exp $
+$NetBSD: distinfo,v 1.18 2011/09/09 08:31:43 ftigeot Exp $
 
 SHA1 (libreoffice/067201ea8b126597670b5eff72e1f66c-mythes-1.2.0.tar.gz) = 025d5d0d566a23ddb353495c116116c1088ba2e9
 RMD160 (libreoffice/067201ea8b126597670b5eff72e1f66c-mythes-1.2.0.tar.gz) = aefa80476ef8340be84440b61f738f432da51c92
@@ -48,5 +48,7 @@ Size (libreoffice/libreoffice-help-2011-08-30.tar.bz2) = 1427881 bytes
 SHA1 (patch-Makefile.in) = 5612fb5f9e9f4735b6d91c8d99b6ddd5de752fa3
 SHA1 (patch-bin_distro-install-desktop-integration) = 55806364cfe6894856190893363ee34768a498f6
 SHA1 (patch-desktop_scripts_soffice.sh) = 37dfdd298a131d30580d597f3faa4c2ddbda4299
+SHA1 (patch-sc_Module_sc.mk) = 718c6c3924c621903fb105dfec2bc5a95d1a1d5a
 SHA1 (patch-sd_Module_sd.mk) = efc6753baeb518e6577c018fe88f0774b307ea60
 SHA1 (patch-set_soenv.in) = 2c4299e1e5f191c8cb63003f8af9194b4d7bf2e9
+SHA1 (patch-sw_Module_sw.mk) = 701c78fe7bf4064091cdf28bb7ced10159b59e24
