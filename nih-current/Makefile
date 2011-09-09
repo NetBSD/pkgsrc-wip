@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2011/08/28 14:42:03 cheusov Exp $
+# $NetBSD: Makefile,v 1.6 2011/09/09 21:43:48 cheusov Exp $
 
 DISTNAME=	pkgnih-999
 PKGNAME=	nih-999
@@ -59,4 +59,5 @@ DEPENDS+=	tnftp-[0-9]*:../../net/tnftp
 
 MAKE_ENV+= FTP=${FTP_CMD:Q}
 
+.include "../../devel/mk-configure/configure.mk"
 .include "../../mk/bsd.pkg.mk"
