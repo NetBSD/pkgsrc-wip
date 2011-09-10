@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/05/02 20:32:46 asau Exp $
+# $NetBSD: Makefile,v 1.3 2011/09/10 19:57:09 genolopolis Exp $
 
 DISTNAME=		v8
 CATEGORIES=		wip
@@ -22,6 +22,9 @@ NO_CONFIGURE=		yes
 
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/scons debug=true relase=true library=shared PREFIX=${PREFIX}
+
+do-install:
+	cd ${WRKSRC}
 
 .include "../../lang/python26/buildlink3.mk"
 .include "../../wip/mk/svn-package.mk"

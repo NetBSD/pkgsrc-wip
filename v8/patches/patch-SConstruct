@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2011/05/02 20:16:09 genolopolis Exp $
+$NetBSD: patch-SConstruct,v 1.1 2011/09/10 19:57:09 genolopolis Exp $
 
---- SConstruct.orig	2011-05-02 18:01:52.000000000 +0000
-+++ SConstruct
-@@ -137,6 +137,10 @@ LIBRARY_FLAGS = {
+--- /usr/pbulk/scratch/wip/v8/work/v8/SConstruct.orig	2011-09-10 16:22:32.000000000 +0000
++++ /usr/pbulk/scratch/wip/v8/work/v8/SConstruct
+@@ -121,6 +121,10 @@ LIBRARY_FLAGS = {
        'LIBPATH' : ['/usr/local/lib'],
        'CCFLAGS':      ['-ansi'],
      },
@@ -13,7 +13,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2011/05/02 20:16:09 genolopolis Exp $
      'os:solaris': {
        # On Solaris, to get isinf, INFINITY, fpclassify and other macros one
        # needs to define __C99FEATURES__.
-@@ -342,6 +346,9 @@ MKSNAPSHOT_EXTRA_FLAGS = {
+@@ -361,6 +365,9 @@ MKSNAPSHOT_EXTRA_FLAGS = {
      'os:openbsd': {
        'LIBS': ['execinfo', 'pthread']
      },
@@ -23,7 +23,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2011/05/02 20:16:09 genolopolis Exp $
      'os:win32': {
        'LIBS': ['winmm', 'ws2_32'],
      },
-@@ -394,6 +401,9 @@ CCTEST_EXTRA_FLAGS = {
+@@ -425,6 +432,9 @@ CCTEST_EXTRA_FLAGS = {
      'os:openbsd': {
        'LIBS':         ['execinfo', 'pthread']
      },
@@ -33,7 +33,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2011/05/02 20:16:09 genolopolis Exp $
      'os:win32': {
        'LIBS': ['winmm', 'ws2_32']
      },
-@@ -448,6 +458,10 @@ SAMPLE_FLAGS = {
+@@ -484,6 +494,10 @@ SAMPLE_FLAGS = {
        'LIBPATH' :     ['/usr/local/lib'],
        'LIBS':         ['execinfo', 'pthread']
      },
@@ -44,7 +44,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2011/05/02 20:16:09 genolopolis Exp $
      'os:win32': {
        'LIBS':         ['winmm', 'ws2_32']
      },
-@@ -700,6 +714,9 @@ D8_FLAGS = {
+@@ -815,6 +829,9 @@ D8_FLAGS = {
      'os:openbsd': {
        'LIBS': ['pthread'],
      },
@@ -54,12 +54,12 @@ $NetBSD: patch-aa,v 1.1.1.1 2011/05/02 20:16:09 genolopolis Exp $
      'os:win32': {
        'LIBS': ['winmm', 'ws2_32'],
      },
-@@ -779,7 +796,7 @@ PLATFORM_OPTIONS = {
+@@ -951,7 +968,7 @@ PLATFORM_OPTIONS = {
      'help': 'the architecture to build for'
    },
    'os': {
--    'values': ['freebsd', 'linux', 'macos', 'win32', 'android', 'openbsd', 'solaris', 'cygwin'],
-+    'values': ['freebsd', 'linux', 'macos', 'win32', 'android', 'openbsd', 'solaris', 'cygwin', 'netbsd'],
+-    'values': ['freebsd', 'linux', 'macos', 'win32', 'openbsd', 'solaris', 'cygwin'],
++    'values': ['freebsd', 'linux', 'macos', 'win32', 'openbsd', 'solaris', 'cygwin', 'netbsd'],
      'guess': GuessOS,
      'help': 'the os to build for'
    },
