@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1 2011/01/25 14:30:37 ftigeot Exp $
+$NetBSD: patch-aa,v 1.2 2011/09/10 19:53:49 ftigeot Exp $
 
 --- Makefile.config.orig	2009-11-06 14:35:44.000000000 +0000
 +++ Makefile.config
@@ -59,6 +59,17 @@ $NetBSD: patch-aa,v 1.1 2011/01/25 14:30:37 ftigeot Exp $
  
  # The python interpreter to use (used by some plugins)
  PYTHON     := /usr/bin/env python
+@@ -98,8 +98,8 @@ GOODSH     := $(shell PATH=`getconf PATH
+ BASH       := /bin/bash
+ 
+ # Server only - Where to install the perl libraries
+-PERLSITELIB := $(shell $(PERL) -V:sitelib | cut -d"'" -f2)
+-PERLLIB    = $(DESTDIR)$(PERLSITELIB)
++PERLVENDORLIB := $(shell $(PERL) -V:vendorlib | cut -d"'" -f2)
++PERLLIB    = $(DESTDIR)$(PERLVENDORLIB)
+ 
+ # Client only - Install plugins for this architecture
+ OSTYPE     := $(shell uname | tr '[A-Z]' '[a-z]')
 @@ -126,9 +126,10 @@ PLUGINUSER := nobody
  # Which command to use to check if the USER and GROUP to run Munin as, exists.
  # These will work on most modern OSes:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/05/23 18:05:32 ftigeot Exp $
+# $NetBSD: Makefile,v 1.5 2011/09/10 19:53:49 ftigeot Exp $
 #
 
 DISTNAME=	munin-${VER}
@@ -63,7 +63,6 @@ INSTALL_TARGET=	install-node install-node-plugins
 
 BUILD_TARGET=	build
 
-#MAKE_ENV+=	PERL5_SITELIB=${PERL5_SITELIB}
 MAKE_ENV+=	PREFIX=${PREFIX}
 MAKE_ENV+=	CONFDIR=${PKG_SYSCONFDIR}
 MAKE_ENV+=	MUNIN_USER=${MUNIN_USER}
