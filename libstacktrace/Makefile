@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2011/03/16 13:06:16 cheusov Exp $
+# $NetBSD: Makefile,v 1.11 2011/09/10 11:22:16 cheusov Exp $
 #
 
 DISTNAME=	lmdbg-0.16.0
@@ -24,6 +24,7 @@ WRKSRC=			${WRKDIR}/${DISTNAME}/libstacktrace
 MAKE_ENV+=		MKINSTALL=yes
 MAKE_ENV+=		MKPROFILELIB=yes MKPICLIB=yes MKSTATICLIB=yes
 
-.include "../../mk/bsd.pkg.mk"
-
 MAKE_PROGRAM=		${PREFIX}/bin/mkcmake
+
+.include "../../devel/mk-configure/configure.mk"
+.include "../../mk/bsd.pkg.mk"
