@@ -15,8 +15,9 @@ Compared to other DNS tunnel implementations, iodine offers:
 	 iodine runs on many different UNIX-like systems. Tunnels can be set up
     between two hosts no matter their endianness or operating system.
  o Security
-	 iodine uses challenge-response login secured by MD5 hash. It also filters
-    out any packets not coming from the IP and port used when logging in.
+	 iodine uses challenge-response login secured by MD5 hash. It also
+	  filters out any packets not coming from the IP and port used when
+	  logging in.
  o Less setup
-	 iodine handles setting IP number on interfaces automatically, and up to 8
-    users can share one server at the same time.
+	 iodine handles setting IP number on interfaces automatically, and up
+	 to 8 users can share one server at the same time.
