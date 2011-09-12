@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.109 2011/08/29 00:16:46 makoto Exp $
+@comment $NetBSD: PLIST,v 1.110 2011/09/12 10:08:12 makoto Exp $
 bin/ctags
 bin/ebrowse
 bin/emacs
@@ -1035,7 +1035,8 @@ share/emacs/${PKGVERSION}/leim/quail/hebrew.el.gz
 share/emacs/${PKGVERSION}/leim/quail/hebrew.elc
 share/emacs/${PKGVERSION}/leim/quail/indian.el.gz
 share/emacs/${PKGVERSION}/leim/quail/indian.elc
-share/emacs/${PKGVERSION}/leim/quail/ipa-praat.el
+share/emacs/${PKGVERSION}/leim/quail/ipa-praat.el.gz
+share/emacs/${PKGVERSION}/leim/quail/ipa-praat.elc
 share/emacs/${PKGVERSION}/leim/quail/ipa.el.gz
 share/emacs/${PKGVERSION}/leim/quail/ipa.elc
 share/emacs/${PKGVERSION}/leim/quail/japanese.el.gz
