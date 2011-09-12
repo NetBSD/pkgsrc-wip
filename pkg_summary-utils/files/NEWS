@@ -2,7 +2,7 @@
 Version 0.56.1, by Aleksey Cheusov, Wed,  7 Sep 2011 00:40:13 +0300
 
   pkg_lint_summary:
-    - Serious fix in -n option (misprint actually :-/ )
+    - Serious fix in recently added -n option (misprint actually :-/ )
 
 ----------------------------------------------------------------------
 Version 0.56.0, by Aleksey Cheusov, Sun, 28 Aug 2011 12:05:00 +0300
