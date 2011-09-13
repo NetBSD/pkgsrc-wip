@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/08/06 13:52:18 nthauvin Exp $
-bin/run_branches.pl
-bin/run_build.pl
-bin/run_web_txn.pl
-bin/setnotes.pl
-bin/update_personality.pl
-share/examples/pgbuildfarm/build-farm.conf
-${PERL5_SUB_INSTALLVENDORLIB}/PGBuild/Options.pm
-${PERL5_SUB_INSTALLVENDORLIB}/PGBuild/SCM.pm
