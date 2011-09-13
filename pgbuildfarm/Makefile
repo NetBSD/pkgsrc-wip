@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2011/08/07 10:45:31 nthauvin Exp $
+# $NetBSD: Makefile,v 1.3 2011/09/13 10:40:47 thomasklausner Exp $
 #
 
 DISTNAME=		build-farm-4_5
-PKGNAME=		pgbuildfarm-4.5
+PKGNAME=		${DISTNAME:S/build-farm/pgbuildfarm/}
 CATEGORIES=		databases
 MASTER_SITES=		http://pgfoundry.org/frs/download.php/3028/
 EXTRACT_SUFX=		.tgz
@@ -18,7 +18,7 @@ DEPENDS+=		scmgit-base>=1.6:../../devel/scmgit-base
 DEPENDS+=		p5-libwww>=5.0:../../www/p5-libwww
 DEPENDS+=		p5-Digest-SHA1>=2.13:../../security/p5-Digest-SHA1
 
-WRKSRC=			${WRKDIR}/build-farm-4.5
+WRKSRC=			${WRKDIR}/${DISTNAME:S/_/./}
 NO_BUILD=		yes
 USE_LANGUAGES=		# none
 USE_TOOLS+=		perl:run
