@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2011/08/08 19:04:14 bharder Exp $
+# $NetBSD: Makefile,v 1.8 2011/09/13 03:52:38 bharder Exp $
 #
 
 DISTNAME=		tcl8.6b2-src.tar.gz
@@ -34,7 +34,7 @@ CONFIGURE_ARGS+=	"--prefix=${PREFIX}"
 # CONFIGURE_ARGS+=	"--includedir=${PREFIX}/include/tcl${TCL_PKGSRC_PATCHLEVEL}"
 # CONFIGURE_ARGS+=	"--mandir=${PREFIX}/tcl${TCL_PKGSRC_PATCHLEVEL}/man"
 
-INSTALL_TARGET=	install install-private-headers
+INSTALL_TARGET=	install install-private-headers install-packages
 
 # The test target gives better results when not run as root.
 TEST_TARGET=		test
