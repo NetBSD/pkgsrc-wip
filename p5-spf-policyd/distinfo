@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/09/14 16:56:05 shindenmorr Exp $
+
+SHA1 (postfix-policyd-spf-perl-2.007.tar.gz) = 956d6fa598f89438abfb97105864e35735e86575
+RMD160 (postfix-policyd-spf-perl-2.007.tar.gz) = de6a541b1aeec52a754a597113f3a3cbcdda90e3
+Size (postfix-policyd-spf-perl-2.007.tar.gz) = 13460 bytes
