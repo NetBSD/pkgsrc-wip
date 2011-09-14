@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/08/07 14:59:16 ryo-on Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/09/14 14:37:47 ryo-on Exp $
 bin/firefox-${PKGVERSION}
 opt/firefox-${PKGVERSION}/README.txt
 opt/firefox-${PKGVERSION}/Throbber-small.gif
@@ -25,6 +25,7 @@ opt/firefox-${PKGVERSION}/extensions/{972ce4c6-7e08-4474-a285-3208198ce6fd}/inst
 opt/firefox-${PKGVERSION}/extensions/{972ce4c6-7e08-4474-a285-3208198ce6fd}/preview.png
 opt/firefox-${PKGVERSION}/firefox
 opt/firefox-${PKGVERSION}/firefox-bin
+opt/firefox-${PKGVERSION}/hyphenation/hyph_en_US.dic
 opt/firefox-${PKGVERSION}/icons/document.png
 opt/firefox-${PKGVERSION}/icons/mozicon128.png
 opt/firefox-${PKGVERSION}/icons/updater.png

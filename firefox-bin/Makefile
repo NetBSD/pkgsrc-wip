@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/08/07 14:59:16 ryo-on Exp $
+# $NetBSD: Makefile,v 1.2 2011/09/14 14:37:47 ryo-on Exp $
 #
 
 DISTNAME=	firefox-${FIREFOX_VER}
@@ -14,7 +14,7 @@ LICENSE=	mpl-1.1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-FIREFOX_VER=	5.0.1
+FIREFOX_VER=	6.0.2
 
 WRKSRC=		${WRKDIR}/firefox
 USE_LANGUAGES=	# none
