@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/01/03 22:18:53 jihbed Exp $
+$NetBSD: distinfo,v 1.2 2011/09/17 14:46:57 ryo-on Exp $
 
-SHA1 (bodr-8.tar.gz) = ef1b88bafe4a6cc82bd496c13451f69cad9ca96d
-RMD160 (bodr-8.tar.gz) = 741247aa1c1b8c1253864e87bb4fbe811215f31d
-Size (bodr-8.tar.gz) = 344371 bytes
+SHA1 (bodr-9.tar.gz) = 851502a59d8cd03c0a67f70768f97dc8692b2893
+RMD160 (bodr-9.tar.gz) = 9df0c0397f036c9d2f3efc66d3f3b705b5c10b25
+Size (bodr-9.tar.gz) = 286732 bytes
