@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2011/07/04 00:07:53 gregoire Exp $
+@comment $NetBSD: PLIST,v 1.24 2011/09/17 22:20:52 gregoire Exp $
 bin/grub2-editenv
 bin/grub2-fstest
 bin/grub2-kbdcomp
@@ -9,6 +9,7 @@ bin/grub2-mklayout
 bin/grub2-mkpasswd-pbkdf2
 bin/grub2-mkrelpath
 bin/grub2-mkrescue
+bin/grub2-mkstandalone
 bin/grub2-script-check
 info/grub2-dev.info
 info/grub2.info
@@ -44,6 +45,7 @@ lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/cpio.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/cpuid.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/crypto.lst
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/crypto.mod
+lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/cryptodisk.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/cs5536.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/date.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/datehook.mod
@@ -82,6 +84,7 @@ lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/gcry_sha512.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/gcry_tiger.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/gcry_twofish.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/gcry_whirlpool.mod
+lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/geli.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/gettext.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/gfxmenu.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/gfxterm.mod
@@ -113,6 +116,7 @@ lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/lsacpi.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/lsapm.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/lsmmap.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/lspci.mod
+lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/luks.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/lvm.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/mdraid09.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/mdraid1x.mod
@@ -157,7 +161,6 @@ lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/png.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/probe.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/pxe.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/pxeboot.img
-lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/pxecmd.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/raid.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/raid5rec.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/raid6rec.mod
@@ -228,6 +231,7 @@ man/man1/grub2-mklayout.1
 man/man1/grub2-mkpasswd-pbkdf2.1
 man/man1/grub2-mkrelpath.1
 man/man1/grub2-mkrescue.1
+man/man1/grub2-mkstandalone.1
 man/man1/grub2-script-check.1
 man/man8/grub2-install.8
 man/man8/grub2-mkconfig.8
