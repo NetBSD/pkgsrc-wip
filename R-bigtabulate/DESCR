@@ -1,0 +1,3 @@
+This package extends the bigmemory package with table- and split-like
+support for big.matrix objects. The functions may also be used with
+regular R matrices for improving speed and memory-efficiency.
