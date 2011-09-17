@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2011/05/10 10:59:56 ryo-on Exp $
+@comment $NetBSD: PLIST,v 1.4 2011/09/17 22:59:35 ryo-on Exp $
 bin/gchem3d
 bin/gchem3d-0.12
 bin/gchemcalc
@@ -28,8 +28,8 @@ lib/gchemutils/0.12/plugins/paint/selection.la
 lib/gchemutils/0.12/plugins/paint/templates.la
 lib/gchemutils/0.12/plugins/paint/text.la
 lib/gchemutils/0.12/plugins/paint/wikipedia.la
-lib/goffice/0.8.13/plugins/gchemutils/gchemutils.la
-lib/goffice/0.8.13/plugins/gchemutils/plugin.xml
+lib/goffice/0.8.17/plugins/gchemutils/gchemutils.la
+lib/goffice/0.8.17/plugins/gchemutils/plugin.xml
 lib/libgccv-0.12.la
 lib/libgcp-0.12.la
 lib/libgcu-0.12.la
@@ -103,6 +103,10 @@ share/gconf/schemas/gchempaint-arrows.schemas
 share/gconf/schemas/gchempaint.schemas
 share/gconf/schemas/gchemutils.schemas
 share/gconf/schemas/gcrystal.schemas
+share/glib-2.0/schemas/org.gnome.gchemutils.crystal.gschema.xml
+share/glib-2.0/schemas/org.gnome.gchemutils.gschema.xml
+share/glib-2.0/schemas/org.gnome.gchemutils.paint.gschema.xml
+share/glib-2.0/schemas/org.gnome.gchemutils.paint.plugins.arrows.gschema.xml
 share/gnome/help/gchem3d-0.12/C/figures/ball-and-stick.png
 share/gnome/help/gchem3d-0.12/C/figures/cylinders.png
 share/gnome/help/gchem3d-0.12/C/figures/main-window.png
