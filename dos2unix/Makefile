@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/08/17 04:23:52 ryo-on Exp $
+# $NetBSD: Makefile,v 1.5 2011/09/17 23:27:20 ryo-on Exp $
 #
 
 DISTNAME=	dos2unix-5.3.1
@@ -6,7 +6,7 @@ CATEGORIES=	converters
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dos2unix/}
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://www.xs4all.nl/~waterlan/dos2unix.html
+HOMEPAGE=	http://waterlan.home.xs4all.nl/dos2unix.html
 COMMENT=	Convert text files with DOS or Mac line endings to Unix line endings
 LICENSE=	2-clause-bsd
 
