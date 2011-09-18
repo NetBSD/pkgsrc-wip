@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2011/06/06 01:42:32 gregoire Exp $
+@comment $NetBSD: PLIST,v 1.14 2011/09/18 20:23:23 gregoire Exp $
 bin/hp-align
 bin/hp-check
 bin/hp-clean
@@ -1028,6 +1028,8 @@ share/hplip/ppd/HP/hp-deskjet_3000_j310_series-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-deskjet_3000_j310_series.ppd.gz
 share/hplip/ppd/HP/hp-deskjet_3050_j610_series-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-deskjet_3050_j610_series.ppd.gz
+share/hplip/ppd/HP/hp-deskjet_3050a_j611_series-hpijs.ppd.gz
+share/hplip/ppd/HP/hp-deskjet_3050a_j611_series.ppd.gz
 share/hplip/ppd/HP/hp-deskjet_3320-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-deskjet_3320.ppd.gz
 share/hplip/ppd/HP/hp-deskjet_3325-hpijs.ppd.gz
@@ -1326,6 +1328,7 @@ share/hplip/ppd/HP/hp-laserjet_1000-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_1000.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_1005_series-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_1005_series.ppd.gz
+share/hplip/ppd/HP/hp-laserjet_100_color_mfp_m175-ps.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_1010-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_1010.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_1012-hpijs.ppd.gz
@@ -1622,8 +1625,6 @@ share/hplip/ppd/HP/hp-laserjet_cp1025-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_cp1025.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_cp1025nw-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_cp1025nw.ppd.gz
-share/hplip/ppd/HP/hp-laserjet_cp1026nw-hpijs.ppd.gz
-share/hplip/ppd/HP/hp-laserjet_cp1026nw.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_cp1027nw-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_cp1027nw.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_cp1028nw-hpijs.ppd.gz
@@ -1782,8 +1783,12 @@ share/hplip/ppd/HP/hp-laserjet_professional_m1213nf_mfp-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_professional_m1213nf_mfp.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_professional_m1214nfh_mfp-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_professional_m1214nfh_mfp.ppd.gz
+share/hplip/ppd/HP/hp-laserjet_professional_m1216nfh_mfp-hpijs.ppd.gz
+share/hplip/ppd/HP/hp-laserjet_professional_m1216nfh_mfp.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_professional_m1217nfw_mfp-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_professional_m1217nfw_mfp.ppd.gz
+share/hplip/ppd/HP/hp-laserjet_professional_m1219nf_mfp-hpijs.ppd.gz
+share/hplip/ppd/HP/hp-laserjet_professional_m1219nf_mfp.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_professional_p1102-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_professional_p1102.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_professional_p1102w-hpijs.ppd.gz
