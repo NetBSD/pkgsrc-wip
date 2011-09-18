@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/09/18 07:13:34 ryo-on Exp $
+bin/qiviewer
+share/applications/qiviewer.desktop
+share/qiviewer/locale/el.qm
+share/qiviewer/locale/es_AR.qm
+share/qiviewer/locale/es_ES.qm
