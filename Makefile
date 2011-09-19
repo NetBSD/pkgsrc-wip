@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4471 2011/09/19 07:01:46 ryo-on Exp $
+# $Id: Makefile,v 1.4472 2011/09/19 16:01:00 ryo-on Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -309,6 +309,8 @@ SUBDIR+=	clips
 SUBDIR+=	clisp
 SUBDIR+=	cloc
 SUBDIR+=	clockspeed
+SUBDIR+=	clojure
+SUBDIR+=	clojure-contrib
 SUBDIR+=	cloog
 SUBDIR+=	clustalx
 SUBDIR+=	clustershell
