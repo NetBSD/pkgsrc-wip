@@ -1,0 +1,10 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2011/09/19 15:59:06 ryo-on Exp $
+
+To enable this package, you should make .clojure file
+in your working directory.
+And your .closure should be the following.
+
+$ cat .clojure
+${PREFIX}/lib/java/clojure/clojure-contrib.jar
+===========================================================================
