@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/09/19 23:28:41 jihbed Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/jsonrequester/__init__.py
+${PYSITELIB}/jsonrequester/__init__.pyc
+${PYSITELIB}/jsonrequester/__init__.pyo
+${PYSITELIB}/tests/__init__.py
+${PYSITELIB}/tests/__init__.pyc
+${PYSITELIB}/tests/__init__.pyo
+${PYSITELIB}/tests/unit/__init__.py
+${PYSITELIB}/tests/unit/__init__.pyc
+${PYSITELIB}/tests/unit/__init__.pyo
+${PYSITELIB}/tests/unit/test_json_requestor.py
+${PYSITELIB}/tests/unit/test_json_requestor.pyc
+${PYSITELIB}/tests/unit/test_json_requestor.pyo
