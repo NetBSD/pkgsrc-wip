@@ -1,0 +1,11 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2011/09/19 15:57:51 ryo-on Exp $
+
+To enable wip/clojure-contrib, you should make .clojure file
+in your working directory.
+
+For example, .clojure should be the following.
+
+$ cat .clojure
+${PREFIX}/lib/java/clojure/clojure-contrib.jar
+===========================================================================
