@@ -1,17 +1,19 @@
-# $NetBSD: Makefile,v 1.3 2011/02/12 11:08:17 ryo-on Exp $
+# $NetBSD: Makefile,v 1.4 2011/09/19 05:01:00 ryo-on Exp $
 #
 
-DISTNAME=	nodau-0.2.1
+DISTNAME=	nodau-0.2.2
 CATEGORIES=	editors
 MASTER_SITES=	-http://sandbox.ltmnet.com/download/35
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	ryo_on@yk.rim.or.jp
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sandbox.ltmnet.com/nodau
 COMMENT=	Nodau is a simple console based note taking program
 LICENSE=	gnu-gpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+MAKE_JOBS_SAFE=		no
 
 INSTALLATION_DIRS=	bin \
 			${PKGMANDIR}/man1
