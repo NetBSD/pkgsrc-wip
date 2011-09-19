@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/02/18 09:48:30 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2011/09/19 22:41:05 minskim Exp $
 #
 
 DISTNAME=	color-theme-6.6.0
@@ -12,6 +12,7 @@ LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+MAKE_JOBS_SAFE=	no
 USE_LANGUAGES=	# none
 USE_TOOLS+=	gmake
 
