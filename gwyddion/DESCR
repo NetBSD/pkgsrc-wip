@@ -1,0 +1,6 @@
+Gwyddion is a modular program for Scanning Probe Microscopy (SPM) data
+visualization and analysis. It is primarily intended for analysis of height
+field data obtained by microscopy techniques like Atomic Force Microscopy (AFM),
+Magnetic Force Microscopy (MFM), Scanning Tunneling Microscopy (STM),
+Near-field Scanning Optical Microscopy (SNOM or NSOM) and others. However,
+it can be used for arbitrary height field and image analysis.
