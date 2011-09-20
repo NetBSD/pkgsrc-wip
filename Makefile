@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4472 2011/09/19 16:01:00 ryo-on Exp $
+# $Id: Makefile,v 1.4473 2011/09/20 00:00:59 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -154,6 +154,7 @@ SUBDIR+=	ascii2binary
 SUBDIR+=	aspell-dictionaries
 SUBDIR+=	aspell-finnish
 SUBDIR+=	aspell-telugu
+SUBDIR+=	aten
 SUBDIR+=	atftp
 SUBDIR+=	ati-xfree86-bin
 SUBDIR+=	ati-xfree86-bin-unstable
@@ -2176,6 +2177,7 @@ SUBDIR+=	py-jabber-punjab
 SUBDIR+=	py-jabber-yahoo-transport
 SUBDIR+=	py-jabberbot
 SUBDIR+=	py-joblib
+SUBDIR+=	py-jsonrequester
 SUBDIR+=	py-julio
 SUBDIR+=	py-kaa-base
 SUBDIR+=	py-kaa-imlib2
