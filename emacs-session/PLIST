@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/09/21 04:42:53 phonohawk Exp $
+share/doc/emacs-session/README
+${EMACS_LISPPREFIX}/session.el
+${EMACS_LISPPREFIX}/session.elc

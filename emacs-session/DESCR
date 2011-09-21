@@ -1,0 +1,8 @@
+When you start Emacs, package Session restores various variables
+(e.g., input histories) from your last session. It also provides a
+menu containing recently changed/visited files and restores the places
+(e.g., point) of such a file when you revisit it.
+
+As opposed to desktop.el and other packages, Session does not
+automatically revisits all files from your last session, most of which
+are not interesting anymore.

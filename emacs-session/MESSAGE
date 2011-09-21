@@ -1,0 +1,16 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2011/09/21 04:42:53 phonohawk Exp $
+
+Append the following line to your .emacs file:
+
+  (require 'session)
+
+Then use Emacs' customization buffer to enable this package:
+
+  1. Start customization with M-x customize-group RET session RET or
+     the menu [Options][Customize...]...[Data][Session].
+
+  2. Toggle the [Session Use Package] option to "in use".
+
+  3. Save your customization via [Save for future sessions].
+===========================================================================
