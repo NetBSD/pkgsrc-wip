@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/07/20 20:55:42 astforge Exp $
+# $NetBSD: Makefile,v 1.4 2011/09/21 05:05:38 astforge Exp $
 #
 
 DISTNAME=	nostromo-1.9.4
@@ -14,6 +14,8 @@ LICENSE=	modified-bsd
 
 USE_LANGUAGES=	c
 USE_TOOLS=	sed
+# gcc version 4.5.3 (NetBSD nb2 20110806) -O2 causes index out of bounds
+CFLAGS+= -O
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
