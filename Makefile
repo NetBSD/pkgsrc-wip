@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4474 2011/09/20 03:19:17 jgoamakf Exp $
+# $Id: Makefile,v 1.4475 2011/09/21 04:48:34 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -494,6 +494,7 @@ SUBDIR+=	emacs-current-nox11
 SUBDIR+=	emacs-ditz
 SUBDIR+=	emacs-jabber
 SUBDIR+=	emacs-pr-el
+SUBDIR+=	emacs-session
 SUBDIR+=	emacs-w3m-current
 SUBDIR+=	emboss
 SUBDIR+=	emboss-base
