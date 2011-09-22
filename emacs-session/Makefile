@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/09/21 04:42:53 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2011/09/22 16:20:41 phonohawk Exp $
 #
 
 DISTNAME=		session-2.3
@@ -20,7 +20,7 @@ INSTALLATION_DIRS+=		share/doc/${PKGBASE}
 
 do-build:
 	cd ${WRKSRC} && \
-		&& ${EMACS_BIN} -batch -f batch-byte-compile lisp/*.el
+		${EMACS_BIN} -batch -f batch-byte-compile lisp/*.el
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/lisp/*.el  ${DESTDIR}${EMACS_LISPPREFIX}
