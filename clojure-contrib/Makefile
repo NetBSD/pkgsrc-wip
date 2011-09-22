@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/09/19 15:59:06 ryo-on Exp $
+# $NetBSD: Makefile,v 1.2 2011/09/22 03:01:33 ryo-on Exp $
 #
 
 DISTNAME=	clojure-contrib-1.2.0
@@ -22,12 +22,12 @@ FETCH_USING=	curl
 NO_BUILD=	yes
 USE_LANGUAGES=	# none
 
-INSTALLATION_DIRS=	lib/java/clojure share/doc/${PKGNAME}
+INSTALLATION_DIRS=	lib/java/clojure share/doc/${PKGNAME_NOREV}
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/target/${PKGNAME}.jar \
+	${INSTALL_DATA} ${WRKSRC}/target/${PKGNAME_NOREV}.jar \
 		${DESTDIR}${PREFIX}/lib/java/clojure/clojure-contrib.jar
 	${INSTALL_DATA} ${WRKSRC}/README.txt \
-		${DESTDIR}${PREFIX}/share/doc/${PKGNAME}
+		${DESTDIR}${PREFIX}/share/doc/${PKGNAME_NOREV}
 
 .include "../../mk/bsd.pkg.mk"
