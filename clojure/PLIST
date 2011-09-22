@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/09/19 15:57:51 ryo-on Exp $
-bin/clj.sh
+@comment $NetBSD: PLIST,v 1.2 2011/09/22 02:59:50 ryo-on Exp $
+bin/clj
 lib/java/clojure/clojure.jar
 share/doc/${PKGNAME}/CommonLispFormat.markdown
 share/doc/${PKGNAME}/PrettyPrinting.markdown
