@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/09/23 15:27:45 ryo-on Exp $
+# $NetBSD: Makefile,v 1.2 2011/09/23 15:31:55 ryo-on Exp $
 #
 
 DISTNAME=	newlisp-10.3.3
@@ -19,8 +19,6 @@ CONFIGURE_ARGS+=	--prefix=${PREFIX}
 CONFIGURE_ARGS+=	--enable-readline
 
 USE_GNU_READLINE=	yes
-
-MAKE_JOBS_SAFE=	NO
 
 SUBST_CLASSES+=			interpreter
 SUBST_STAGE.interpreter=	pre-configure
