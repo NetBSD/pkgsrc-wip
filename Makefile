@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4475 2011/09/21 04:48:34 phonohawk Exp $
+# $Id: Makefile,v 1.4476 2011/09/23 15:29:06 ryo-on Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1567,6 +1567,7 @@ SUBDIR+=	netwib
 SUBDIR+=	netwox
 SUBDIR+=	netx
 SUBDIR+=	newsbeuter
+SUBDIR+=	newlisp
 SUBDIR+=	nginx
 SUBDIR+=	nicotine+
 SUBDIR+=	nios2
