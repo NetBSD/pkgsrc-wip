@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/09/23 21:19:23 crocusino Exp $
+# $NetBSD: Makefile,v 1.2 2011/09/24 18:20:21 crocusino Exp $
 #
 
 DISTNAME=	ts-0.7.0
@@ -15,5 +15,4 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LANGUAGES=	c
 USE_TOOLS+=	gmake
 
-# url2pkg-marker (please do not remove this line.)
 .include "../../mk/bsd.pkg.mk"
