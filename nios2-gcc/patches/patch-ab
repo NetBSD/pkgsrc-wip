@@ -1,4 +1,7 @@
-$NetBSD: patch-ab,v 1.1.1.1 2010/11/26 12:38:21 makoto Exp $
+$NetBSD: patch-ab,v 1.2 2011/09/27 00:37:02 makoto Exp $
+
+Based on the suggenstion from TNT (www.trans-nt.com)
+Thanks locore64 (at) alkyltechnology.com for the info.
 
 --- gcc/c-parse.y.orig	2006-03-06 12:57:18.000000000 +0900
 +++ gcc/c-parse.y	2010-11-24 12:10:18.000000000 +0900

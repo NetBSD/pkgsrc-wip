@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/11/26 12:38:21 makoto Exp $
+# $NetBSD: Makefile,v 1.2 2011/09/27 00:37:02 makoto Exp $
 
 PKG_VERSION=		2.15
 PKGNAME=		nios2-binutils-${PKG_VERSION}
-#PKGREVISION=		1
 CATEGORIES=		cross
 MASTER_SITES=		ftp://ftp.altera.com/outgoing/download/support/ip/processors/nios2/gnu/
-#EXTRACT_SUFX=		.tar.gz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		GNU binutils for Altera FPGA Nios2 processor
+LICENSE=		gnu-gpl-v2
 
 EXTRACT_ELEMENTS=	binutils
 WRKSRC=			${WRKDIR}/binutils
