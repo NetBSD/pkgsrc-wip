@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/10/12 17:37:30 absd Exp $
+# $NetBSD: Makefile,v 1.4 2011/09/27 10:12:49 jgoamakf Exp $
 
 DISTNAME=	koha-2.2.9
 #PKGREVISION=	0
@@ -25,12 +25,12 @@ DEPENDS+=	p5-XML-Simple>=2.18:../../textproc/p5-XML-Simple
 DEPENDS+=	p5-libwww>=5.808:../../www/p5-libwww
 
 DEPENDS+=	p5-Data-Random>=0.05:../../wip/p5-Data-Random
-DEPENDS+=	p5-GD-Barcode>=1.15:../../wip/p5-GD-Barcode
+DEPENDS+=	p5-GD-Barcode>=1.15:../../graphics/p5-GD-Barcode
 DEPENDS+=	p5-MARC-Record>=2.0.0:../../databases/p5-MARC-Record
-DEPENDS+=	p5-MARC-XML>=0.87:../../wip/p5-MARC-XML
-DEPENDS+=	p5-MARC-Charset>=0.98:../../wip/p5-MARC-Charset
+DEPENDS+=	p5-MARC-XML>=0.87:../../databases/p5-MARC-XML
+DEPENDS+=	p5-MARC-Charset>=0.98:../../converters/p5-MARC-Charset
 DEPENDS+=	p5-Net-Z3950-ZOOM>=1.20:../../net/p5-Net-Z3950-ZOOM
-DEPENDS+=	p5-PDF-Reuse-Barcode>=0.05:../../wip/p5-PDF-Reuse-Barcode
+DEPENDS+=	p5-PDF-Reuse-Barcode>=0.05:../../textproc/p5-PDF-Reuse-Barcode
 
 USE_TOOLS+=	perl:run
 
