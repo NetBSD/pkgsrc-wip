@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4478 2011/09/26 21:21:30 crocusino Exp $
+# $Id: Makefile,v 1.4479 2011/09/27 10:10:49 jgoamakf Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1747,7 +1747,6 @@ SUBDIR+=	p5-Exporter-Tidy
 SUBDIR+=	p5-File-Map
 SUBDIR+=	p5-File-ReadBackwards
 SUBDIR+=	p5-Frontier-RPC
-SUBDIR+=	p5-GD-Barcode
 SUBDIR+=	p5-GPS-Garmin
 SUBDIR+=	p5-Getopt-GUI-Long
 SUBDIR+=	p5-Gtk2-Spell
@@ -1777,8 +1776,6 @@ SUBDIR+=	p5-Lingua-Stem-Snowball-Se
 SUBDIR+=	p5-Lingua-StopWords
 SUBDIR+=	p5-Lingua-Translate
 SUBDIR+=	p5-Log-Dispatch-Array
-SUBDIR+=	p5-MARC-Charset
-SUBDIR+=	p5-MARC-XML
 SUBDIR+=	p5-MKDoc-XML
 SUBDIR+=	p5-MMapDB
 SUBDIR+=	p5-MasonX-Apache2Handler
@@ -1803,7 +1800,6 @@ SUBDIR+=	p5-Net-UPnP
 SUBDIR+=	p5-Net-Whois-RIPE
 SUBDIR+=	p5-News-Newsrc
 SUBDIR+=	p5-PDF-Reuse
-SUBDIR+=	p5-PDF-Reuse-Barcode
 SUBDIR+=	p5-PDF-Table
 SUBDIR+=	p5-PDL
 SUBDIR+=	p5-POD2-IT
