@@ -1,6 +1,0 @@
-PDF-Reuse-Barcode is a sub-module to PDF::Reuse. It creates barcode
-"images" to be used in PDF documents. It uses GD::Barcode and its
-sub-modules: GD::Barcode::Code39, COOP2of5, EAN13 and so on, to
-calculate the barcode pattern. For Code128 it uses Barcode::Code128.
-
-
