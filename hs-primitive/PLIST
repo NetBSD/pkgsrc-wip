@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/01/08 04:42:00 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/09/27 13:50:58 phonohawk Exp $
 lib/primitive-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Primitive.hi
 lib/primitive-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Primitive.p_hi
 lib/primitive-${PKGVERSION}/${HASKELL_VERSION}/Data/Primitive.hi
@@ -9,6 +9,8 @@ lib/primitive-${PKGVERSION}/${HASKELL_VERSION}/Data/Primitive/Array.hi
 lib/primitive-${PKGVERSION}/${HASKELL_VERSION}/Data/Primitive/Array.p_hi
 lib/primitive-${PKGVERSION}/${HASKELL_VERSION}/Data/Primitive/ByteArray.hi
 lib/primitive-${PKGVERSION}/${HASKELL_VERSION}/Data/Primitive/ByteArray.p_hi
+lib/primitive-${PKGVERSION}/${HASKELL_VERSION}/Data/Primitive/Internal/Compat.hi
+lib/primitive-${PKGVERSION}/${HASKELL_VERSION}/Data/Primitive/Internal/Compat.p_hi
 lib/primitive-${PKGVERSION}/${HASKELL_VERSION}/Data/Primitive/MachDeps.hi
 lib/primitive-${PKGVERSION}/${HASKELL_VERSION}/Data/Primitive/MachDeps.p_hi
 lib/primitive-${PKGVERSION}/${HASKELL_VERSION}/Data/Primitive/Types.hi
