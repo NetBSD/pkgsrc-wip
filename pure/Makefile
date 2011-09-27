@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/09/26 21:17:27 crocusino Exp $
+# $NetBSD: Makefile,v 1.2 2011/09/27 21:32:20 crocusino Exp $
 #
 
 DISTNAME=	pure-0.47
@@ -16,7 +16,7 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake flex bison
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+=	--enable-release
+CONFIGURE_ARGS+=	--enable-release --without-elisp
 
 .include "../../lang/clang/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
