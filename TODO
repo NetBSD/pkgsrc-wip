@@ -2,7 +2,7 @@ Suggested package updates
 =========================
 
 	o applewmproto-1.4.1
-	o archimedes-1.2.0
+	o archimedes-1.5.0
 	o argouml-0.24
 	o backintime-1.0.6
 	o boinc-2.15
@@ -81,14 +81,14 @@ Suggested package updates
 	o man-1.6f
 	o mcabber-0.10.1
 	o mcwm-20110818
-	o meta-tracker-0.12.1
+	o meta-tracker-0.12.3
 	o mixxx-1.8.0
 	o mpgedit-0.73dev2
 	o mumble-1.2.3
 	o mupen64-0.5
 	o nautilus-open-terminal-0.19
 	o newsbeuter-2.4
-	o ogmrip-0.13.6
+	o ogmrip-0.13.7
 	o openvrml-0.18.8
 	o osmose-0.9.1
 	o parted-1.9.0
@@ -107,7 +107,7 @@ Suggested package updates
 	o rsyslog-5.8.4
 	o rsyslog6-6.3.6
 	o sakura-2.4.2
-	o samhain-2.8.4
+	o samhain-2.8.6
 	o scantailor-0.9.10
 	o sflphone-0.7.2
 	o siege-2.70
