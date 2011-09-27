@@ -1,5 +1,1 @@
 * GNUStep support is not tested.
-
-* patches/patch-configure.in-2
-  now eliminates if ;then ;fi statement when finding crtn.o
-  Problem report are submitted to emacs-devel ML.
