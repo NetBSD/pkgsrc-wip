@@ -1,0 +1,5 @@
+A library for efficiently rendering Haskell datatypes to bytestrings.
+
+Note: if you use GHCi or Template Haskell, please see the README file
+for important details about building this package, and other packages
+that depend on it: https://github.com/mailrank/blaze-textual#readme
