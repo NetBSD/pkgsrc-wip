@@ -1,7 +1,7 @@
-$NetBSD: patch-SConstruct,v 1.1 2011/09/10 19:57:09 genolopolis Exp $
+$NetBSD: patch-SConstruct,v 1.2 2011/09/28 02:03:39 makoto Exp $
 
 --- /usr/pbulk/scratch/wip/v8/work/v8/SConstruct.orig	2011-09-10 16:22:32.000000000 +0000
-+++ /usr/pbulk/scratch/wip/v8/work/v8/SConstruct
++++ ./SConstruct
 @@ -121,6 +121,10 @@ LIBRARY_FLAGS = {
        'LIBPATH' : ['/usr/local/lib'],
        'CCFLAGS':      ['-ansi'],
