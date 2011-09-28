@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.8 2011/09/28 14:20:29 ryo-on Exp $
+
+SHA1 (allegro-4.4.2.tar.gz) = ae0c15d2cb6b0337ef388dc98cefc620883720df
+RMD160 (allegro-4.4.2.tar.gz) = a6f6a03d6748230dfb5f306d1a05ef45ffa49f42
+Size (allegro-4.4.2.tar.gz) = 4674902 bytes
+SHA1 (patch-CMakeLists.txt) = 3909f98a2156085d8462e779c95c8df3b20bd602
+SHA1 (patch-docs_CMakeLists.txt) = a5a8cbfed0721a37a921c481c9c9295b2be62bb7
