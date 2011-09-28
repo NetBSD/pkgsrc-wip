@@ -67,7 +67,7 @@ _GIT_ENV=		# empty
 _GIT_FLAGS?=		--quiet --depth 1
 _GIT_PKGVERSION_CMD=	${DATE} -u +'%Y.%m.%d'
 _GIT_PKGVERSION=	${_GIT_PKGVERSION_CMD:sh}
-_GIT_DISTDIR=		${DISTDIR}/git-package
+_GIT_DISTDIR=		${DISTDIR}/git-packages
 
 _GIT_TODAY_CMD=         ${DATE} -u +'%Y-%m-%d'
 _GIT_TODAY=             ${_GIT_TODAY_CMD:sh}
