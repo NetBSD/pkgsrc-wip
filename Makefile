@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4483 2011/09/28 14:12:19 ryo-on Exp $
+# $Id: Makefile,v 1.4484 2011/09/28 14:58:29 ryo-on Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2494,6 +2494,8 @@ SUBDIR+=	rootcheck
 SUBDIR+=	rope
 SUBDIR+=	rosegarden-current
 SUBDIR+=	roundcube-skin-mvision2
+SUBDIR+=	rpcemu
+SUBDIR+=	rpcemu-devel
 SUBDIR+=	rpki-svn
 SUBDIR+=	rrdtool
 SUBDIR+=	rsget
