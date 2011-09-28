@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/09/28 12:00:44 ryo-on Exp $
+
+SHA1 (jruby-bin-1.6.4.tar.gz) = 674470bbe4b540a71d8417b97ba996530e6e728a
+RMD160 (jruby-bin-1.6.4.tar.gz) = ced4ee009cec0c67c1600d27d424ee5d6c25e9f5
+Size (jruby-bin-1.6.4.tar.gz) = 15269744 bytes
+SHA1 (patch-bin_jruby) = c0e1e2d03e1f80f6f52846bd2fe4e4b076e3e3d2
+SHA1 (patch-bin_jruby.sh) = fa7590bd98939f2a33ca903454e3e02949fb5b95
