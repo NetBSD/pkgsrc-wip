@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/09/29 11:37:37 khorben Exp $
+
+SHA1 (sofia-sip-1.12.10.tar.gz) = 572db412fbfe1b1f52026fa82d6fbc691bb2d375
+RMD160 (sofia-sip-1.12.10.tar.gz) = 35d3c3d348af1553d1a6fe2e0425efcd5dab8e6f
+Size (sofia-sip-1.12.10.tar.gz) = 2855890 bytes
