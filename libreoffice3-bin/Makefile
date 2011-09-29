@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2011/09/16 10:53:44 ryo-on Exp $
+# $NetBSD: Makefile,v 1.11 2011/09/29 13:40:31 ryo-on Exp $
 
 DISTNAME=		libreoffice3-bin	# overridden below
 PKGNAME=		libreoffice3-bin-${OO_RELEASE}
 CATEGORIES=		misc
-MASTER_SITES=		http://download.documentfoundation.org/libreoffice/stable/3.4.1/rpm/x86/
+MASTER_SITES=		http://download.documentfoundation.org/libreoffice/stable/3.4.3/rpm/x86/
 
 MAINTAINER=		ryoon@NetBSD.org
 HOMEPAGE=		http://www.libreoffice.org/
@@ -21,7 +21,7 @@ CONFLICTS+=		openoffice-linux-[0-9]*
 
 OO_VER=			3
 OO_BASEVER=		3.4
-OO_RELEASE=		3.4.1
+OO_RELEASE=		3.4.3
 PLIST_SUBST+=		VER=${OO_VER:Q} BASEVER=${OO_BASEVER:Q}
 MESSAGE_SUBST+=		VER=${OO_VER:Q}
 FILES_SUBST+=		VER=${OO_VER:Q}
@@ -48,13 +48,18 @@ RUN_LDCONFIG=		no
 
 USE_TOOLS+=	patch
 
+BUILD_DEPENDS+=	binpatch-[0-9]*:../../pkgtools/binpatch
+
+FIND_PREFIX:=	BINPATCHDIR=binpatch
+.include "../../mk/find-prefix.mk"
+
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 
 .if ${EMUL_PLATFORM} == "linux-i386"
 DISTNAME=		LibO_${OO_RELEASE}_Linux_x86_install-rpm_en-US
-WRKSRC=			${WRKDIR}/LibO_${OO_RELEASE}rc3_Linux_x86_install-rpm_en-US
+WRKSRC=			${WRKDIR}/LibO_${OO_RELEASE}rc2_Linux_x86_install-rpm_en-US
 .elif ${EMUL_PLATFORM} == "solaris-i386"
 DISTNAME=		OOo_${OO_RELEASE}_Solaris_x86_install_en-US
 WRKSRC=			${WRKDIR}/OOO320_m18_native_packed-1_en-US.9502/packages
@@ -83,5 +88,9 @@ do-install:
 .for i in scalc sdraw simpress smath spadmin swriter
 	${LN} -sf ../opt/libreoffice${OO_BASEVER}/program/${i} ${DESTDIR}${PREFIX}/bin/${i}
 .endfor
+
+post-install:
+	${CHMOD} 755 ${DESTDIR}${PREFIX}/opt/libreoffice3.4/program/oosplash.bin
+	${BINPATCHDIR}/bin/binpatch file=${DESTDIR}${PREFIX}/opt/libreoffice3.4/program/oosplash.bin size=19084 offset=16442 compare=76657273696F6E00 skip=0 replace=637075696E666f
 
 .include "../../mk/bsd.pkg.mk"
