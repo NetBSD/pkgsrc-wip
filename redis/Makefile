@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2011/03/14 07:11:19 zatmania Exp $
+# $NetBSD: Makefile,v 1.5 2011/09/30 19:30:53 bharder Exp $
 #
 
-DISTNAME=	redis-2.2.2
+DISTNAME=	redis-2.2.3
 CATEGORIES=	databases
 MASTER_SITES=	http://redis.googlecode.com/files/
 
