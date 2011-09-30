@@ -1,0 +1,15 @@
+$NetBSD: patch-rel__files__riak-admin,v 1.1.1.1 2011/09/30 20:25:05 fhajny Exp $
+
+Avoiding sudo -i makes the scripts much more usable.
+--- rel/files/riak-admin.orig	2011-06-01 18:23:36.000000000 +0000
++++ rel/files/riak-admin
+@@ -15,8 +15,7 @@ if [ "$RUNNER_USER" -a "x$LOGNAME" != "x
+         echo "sudo doesn't appear to be installed and your EUID isn't $RUNNER_USER" 1>&2
+         exit 1
+     fi
+-    echo "Attempting to restart script through sudo -u $RUNNER_USER"
+-    exec sudo -u $RUNNER_USER -i $RUNNER_SCRIPT_DIR/$RUNNER_SCRIPT $@
++    exec sudo -u $RUNNER_USER $RUNNER_SCRIPT_DIR/$RUNNER_SCRIPT $@
+ fi
+ 
+ # Make sure CWD is set to runner base dir

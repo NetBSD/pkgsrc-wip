@@ -1,0 +1,14 @@
+$NetBSD: patch-deps__erlang_js__c_src__Makefile,v 1.1.1.1 2011/09/30 20:25:05 fhajny Exp $
+
+Workaround to pass a working patch tool.
+--- deps/erlang_js/c_src/Makefile.orig	2011-04-22 20:00:18.000000000 +0000
++++ deps/erlang_js/c_src/Makefile
+@@ -20,7 +20,7 @@ js: $(LIB_DIR)/libjs.a
+ $(LIB_DIR)/libjs.a: $(LIB_DIR)/libnspr4.a
+ 	$(GUNZIP) -c js-$(SMONKEY_VER).tar.gz | $(TAR) xf -
+ 	@for I in patches/js-*.patch; do \
+-		(patch -p1 < $${I} || echo "Skipping patch"); \
++		(@PATCH@ -p1 < $${I} || echo "Skipping patch"); \
+ 	done
+ 	@$(MAKE) -C $(JS_DIR)/src BUILD_OPT=1 JS_DIST=$(SYSTEM_DIR) \
+ 		JS_THREADSAFE=1 \

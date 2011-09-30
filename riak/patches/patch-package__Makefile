@@ -1,0 +1,42 @@
+$NetBSD: patch-package__Makefile,v 1.1.1.1 2011/09/30 20:25:05 fhajny Exp $
+
+Provide a pkgsrc install target.
+--- package/Makefile.orig	2011-09-07 05:41:19.000000000 +0000
++++ package/Makefile
+@@ -1,27 +1,8 @@
+ OS		= $(shell uname -s)
+ KERNEL		= $(shell uname -r)
+ ERLANG_BIN	= $(shell dirname $(shell which erl))
+-ifeq ($(OS),Linux)
+-PKGER		= $(shell cat /etc/redhat-release 2> /dev/null)
+-ifeq ($(PKGER),)
+-PKGER		= debuild
+-PKGERDIR	= deb
+-else
+-PKGER		= rpmbuild
+-PKGERDIR	= rpm
+-endif
+-endif
+-ifeq ($(OS),SunOS)
+ PKGER		= make
+-PKGERDIR	= solaris
+-DISTRO		= $(shell head -1 /etc/release|awk \
+-                   '{if ($$1 == "OpenSolaris") {print $$1} else {print "Solaris"}}')
+-endif
+-ifeq ($(OS),Darwin)
+-PKGER           = make
+-PKGERDIR        = osx
+-BUILDDIR        = osxbuild
+-endif
++PKGERDIR	= pkgsrc
+ 
+ APP		 = $(shell echo "$(REPO)" | sed -e 's/_/-/g')
+ # Assumes CURDIR is .../$(APP)/package/$(APP)/
+@@ -40,6 +21,6 @@ pkgcheck:
+ 	@echo "Packaging \"$(RIAK_TAG)\""
+ 
+ # The heavy lifting is done by the individual packager Makefiles
+-package: pkgcheck build
++package: build
+ 
+ include $(PKGERDIR)/Makefile
