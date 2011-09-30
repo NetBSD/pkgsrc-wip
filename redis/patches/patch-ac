@@ -1,14 +1,13 @@
-$NetBSD: patch-ac,v 1.1 2011/03/08 10:52:25 zatmania Exp $
+$NetBSD: patch-ac,v 1.2 2011/09/30 20:07:28 bharder Exp $
 
-Change the default config file to something more production like.
---- redis.conf.orig	2011-03-04 15:31:20.000000000 +0000
-+++ redis.conf
+--- ./redis.conf.orig	2011-09-21 16:12:56.000000000 +0000
++++ ./redis.conf
 @@ -14,11 +14,11 @@
  
  # By default Redis does not run as a daemon. Use 'yes' if you need it.
  # Note that Redis will write a pid file in /var/run/redis.pid when daemonized.
 -daemonize no
-+daemonize yes 
++daemonize yes
  
  # When running daemonized, Redis writes a pid file in /var/run/redis.pid by
  # default. You can specify a custom pid file location here.
@@ -22,13 +21,13 @@ Change the default config file to something more production like.
  # notice (moderately verbose, what you want in production probably)
  # warning (only very important / critical messages are logged)
 -loglevel verbose
-+loglevel warning 
++loglevel warning
  
  # Specify the log file name. Also 'stdout' can be used to force
  # Redis to log on the standard output. Note that if you use standard
  # output for logging but daemonize, logs will be sent to /dev/null
 -logfile stdout
-+logfile @@LOGDIR@@/redis.log 
++logfile @@LOGDIR@@/redis.log
  
  # To enable logging to the system logger, just set 'syslog-enabled' to yes,
  # and optionally update the other syslog parameters to suit your needs.
@@ -37,7 +36,7 @@ Change the default config file to something more production like.
  # 
  # Note that you must specify a directory here, not a file name.
 -dir ./
-+dir @@DBDIR@@ 
++dir @@DBDIR@@
  
  ################################# REPLICATION #################################
  

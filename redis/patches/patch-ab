@@ -1,28 +1,29 @@
-$NetBSD: patch-ab,v 1.3 2011/03/08 16:24:51 zatmania Exp $
+$NetBSD: patch-ab,v 1.4 2011/09/30 20:07:28 bharder Exp $
 
-Fix CFLAGS and INSTALL support to pkgsrc standards.
---- src/Makefile.orig	2011-03-04 15:31:20.000000000 +0000
-+++ src/Makefile
-@@ -6,11 +6,11 @@ release_hdr := $(shell sh -c './mkreleas
- uname_S := $(shell sh -c 'uname -s 2>/dev/null || echo not')
- OPTIMIZATION?=-O2
+--- ./src/Makefile.orig	2011-09-21 16:12:56.000000000 +0000
++++ ./src/Makefile
+@@ -19,24 +19,24 @@ QUIET_LINK = @printf '    %b %b\n' $(LIN
+ endif
+ 
  ifeq ($(uname_S),SunOS)
 -  CFLAGS?= -std=c99 -pedantic $(OPTIMIZATION) -Wall -W -D__EXTENSIONS__ -D_XPG6
-+  CCFLAGS= $(CFLAGS) -std=c99 -pedantic $(OPTIMIZATION) -Wall -W -D__EXTENSIONS__ -D_XPG6
++  CCFLAGS?= $(CFLAGS) -std=c99 -pedantic $(OPTIMIZATION) -Wall -W -D__EXTENSIONS__ -D_XPG6
    CCLINK?= -ldl -lnsl -lsocket -lm -lpthread
    DEBUG?= -g -ggdb 
  else
 -  CFLAGS?= -std=c99 -pedantic $(OPTIMIZATION) -Wall -W $(ARCH) $(PROF)
-+  CCFLAGS= $(CFLAGS) -std=c99 -pedantic $(OPTIMIZATION) -Wall -W $(ARCH) $(PROF)
++  CCFLAGS?= $(CFLAGS) -std=c99 -pedantic $(OPTIMIZATION) -Wall -W $(ARCH) $(PROF)
    CCLINK?= -lm -pthread
    DEBUG?= -g -rdynamic -ggdb 
  endif
-@@ -19,11 +19,11 @@ ifeq ($(USE_TCMALLOC),yes)
+ 
+ ifeq ($(USE_TCMALLOC),yes)
    CCLINK+= -ltcmalloc
-   CFLAGS+= -DUSE_TCMALLOC
+-  CFLAGS+= -DUSE_TCMALLOC
++  CCFLAGS+= $(CFLAGS) -DUSE_TCMALLOC
  endif
--CCOPT= $(CFLAGS) $(CCLINK) $(ARCH) $(PROF)
-+CCOPT= $(CCFLAGS) $(CCLINK) $(ARCH) $(PROF)
+-CCOPT= $(CFLAGS) $(ARCH) $(PROF)
++CCOPT= $(CCFLAGS) $(ARCH) $(PROF)
  
 -PREFIX= /usr/local
 -INSTALL_BIN= $(PREFIX)/bin
@@ -31,30 +32,30 @@ Fix CFLAGS and INSTALL support to pkgsrc standards.
 +INSTALL_BIN= $(DESTDIR)$(INSTALL_TOP)/bin
 +INSTALL= $(BSD_INSTALL_PROGRAM)
  
- OBJ = adlist.o ae.o anet.o dict.o redis.o sds.o zmalloc.o lzf_c.o lzf_d.o pqsort.o zipmap.o sha1.o ziplist.o release.o networking.o util.o object.o db.o replication.o rdb.o t_string.o t_list.o t_set.o t_zset.o t_hash.o config.o aof.o vm.o pubsub.o multi.o debug.o sort.o intset.o syncio.o
+ OBJ = adlist.o ae.o anet.o dict.o redis.o sds.o zmalloc.o lzf_c.o lzf_d.o pqsort.o zipmap.o sha1.o ziplist.o release.o networking.o util.o object.o db.o replication.o rdb.o t_string.o t_list.o t_set.o t_zset.o t_hash.o config.o aof.o vm.o pubsub.o multi.o debug.o sort.o intset.o syncio.o slowlog.o
  BENCHOBJ = ae.o anet.o redis-benchmark.o sds.o adlist.o zmalloc.o
-@@ -118,13 +118,13 @@ redis-benchmark: dependencies $(BENCHOBJ
- 	$(CC) -o $(BENCHPRGNAME) $(CCOPT) $(DEBUG) $(BENCHOBJ) ../deps/hiredis/libhiredis.a
+@@ -138,13 +138,13 @@ redis-benchmark: dependencies $(BENCHOBJ
+ 	$(QUIET_LINK)$(CC) -o $(BENCHPRGNAME) $(CCOPT) $(DEBUG) $(BENCHOBJ) ../deps/hiredis/libhiredis.a $(CCLINK)
  
  redis-benchmark.o:
--	$(CC) -c $(CFLAGS) -I../deps/hiredis $(DEBUG) $(COMPILE_TIME) $<
-+	$(CC) -c $(CCFLAGS) -I../deps/hiredis $(DEBUG) $(COMPILE_TIME) $<
+-	$(QUIET_CC)$(CC) -c $(CFLAGS) -I../deps/hiredis $(DEBUG) $(COMPILE_TIME) $<
++	$(QUIET_CC)$(CC) -c $(CCFLAGS) -I../deps/hiredis $(DEBUG) $(COMPILE_TIME) $<
  
  redis-cli: dependencies $(CLIOBJ)
- 	$(CC) -o $(CLIPRGNAME) $(CCOPT) $(DEBUG) $(CLIOBJ) ../deps/hiredis/libhiredis.a ../deps/linenoise/linenoise.o
+ 	$(QUIET_LINK)$(CC) -o $(CLIPRGNAME) $(CCOPT) $(DEBUG) $(CLIOBJ) ../deps/hiredis/libhiredis.a ../deps/linenoise/linenoise.o $(CCLINK)
  
  redis-cli.o:
--	$(CC) -c $(CFLAGS) -I../deps/hiredis -I../deps/linenoise $(DEBUG) $(COMPILE_TIME) $<
-+	$(CC) -c $(CCFLAGS) -I../deps/hiredis -I../deps/linenoise $(DEBUG) $(COMPILE_TIME) $<
+-	$(QUIET_CC)$(CC) -c $(CFLAGS) -I../deps/hiredis -I../deps/linenoise $(DEBUG) $(COMPILE_TIME) $<
++	$(QUIET_CC)$(CC) -c $(CCFLAGS) -I../deps/hiredis -I../deps/linenoise $(DEBUG) $(COMPILE_TIME) $<
  
  redis-check-dump: $(CHECKDUMPOBJ)
- 	$(CC) -o $(CHECKDUMPPRGNAME) $(CCOPT) $(DEBUG) $(CHECKDUMPOBJ)
-@@ -133,7 +133,7 @@ redis-check-aof: $(CHECKAOFOBJ)
- 	$(CC) -o $(CHECKAOFPRGNAME) $(CCOPT) $(DEBUG) $(CHECKAOFOBJ)
+ 	$(QUIET_LINK)$(CC) -o $(CHECKDUMPPRGNAME) $(CCOPT) $(DEBUG) $(CHECKDUMPOBJ) $(CCLINK)
+@@ -153,7 +153,7 @@ redis-check-aof: $(CHECKAOFOBJ)
+ 	$(QUIET_LINK)$(CC) -o $(CHECKAOFPRGNAME) $(CCOPT) $(DEBUG) $(CHECKAOFOBJ) $(CCLINK)
  
  .c.o:
--	$(CC) -c $(CFLAGS) $(DEBUG) $(COMPILE_TIME) $<
-+	$(CC) -c $(CCFLAGS) $(DEBUG) $(COMPILE_TIME) $<
+-	$(QUIET_CC)$(CC) -c $(CFLAGS) $(DEBUG) $(COMPILE_TIME) $<
++	$(QUIET_CC)$(CC) -c $(CCFLAGS) $(DEBUG) $(COMPILE_TIME) $<
  
  clean:
  	rm -rf $(PRGNAME) $(BENCHPRGNAME) $(CLIPRGNAME) $(CHECKDUMPPRGNAME) $(CHECKAOFPRGNAME) *.o *.gcda *.gcno *.gcov

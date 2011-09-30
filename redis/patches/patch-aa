@@ -1,8 +1,7 @@
-$NetBSD: patch-aa,v 1.4 2011/03/08 16:24:51 zatmania Exp $
+$NetBSD: patch-aa,v 1.5 2011/09/30 20:07:28 bharder Exp $
 
-Fix CFLAGS and INSTALL support to pkgsrc standards.
---- deps/hiredis/Makefile.orig	2011-03-04 15:31:20.000000000 +0000
-+++ deps/hiredis/Makefile
+--- ./deps/hiredis/Makefile.orig	2011-09-21 16:12:56.000000000 +0000
++++ ./deps/hiredis/Makefile
 @@ -8,7 +8,7 @@ BINS = hiredis-example hiredis-test
  uname_S := $(shell sh -c 'uname -s 2>/dev/null || echo not')
  OPTIMIZATION?=-O3
@@ -12,16 +11,16 @@ Fix CFLAGS and INSTALL support to pkgsrc standards.
    CCLINK?=-ldl -lnsl -lsocket -lm -lpthread
    LDFLAGS?=-L. -Wl,-R,.
    DYLIBNAME?=libhiredis.so
-@@ -16,7 +16,7 @@ ifeq ($(uname_S),SunOS)
-   STLIBNAME?=libhiredis.a
+@@ -17,7 +17,7 @@ ifeq ($(uname_S),SunOS)
    STLIB_MAKE_CMD?=ar rcs ${STLIBNAME} ${OBJ}
- else ifeq ($(uname_S),Darwin)
+ else
+ ifeq ($(uname_S),Darwin)
 -  CFLAGS?=-std=c99 -pedantic $(OPTIMIZATION) -fPIC -Wall -W -Wwrite-strings $(ARCH) $(PROF)
 +  CCFLAGS?= $(CFLAGS) -std=c99 -pedantic $(OPTIMIZATION) -fPIC -Wall -W -Wwrite-strings $(ARCH) $(PROF)
    CCLINK?=-lm -pthread
    LDFLAGS?=-L. -Wl,-rpath,.
    OBJARCH?=-arch i386 -arch x86_64
-@@ -25,7 +25,7 @@ else ifeq ($(uname_S),Darwin)
+@@ -26,7 +26,7 @@ ifeq ($(uname_S),Darwin)
    STLIBNAME?=libhiredis.a
    STLIB_MAKE_CMD?=libtool -static -o ${STLIBNAME} - ${OBJ}
  else
@@ -30,16 +29,16 @@ Fix CFLAGS and INSTALL support to pkgsrc standards.
    CCLINK?=-lm -pthread
    LDFLAGS?=-L. -Wl,-rpath,.
    DYLIBNAME?=libhiredis.so
-@@ -36,7 +36,7 @@ endif
+@@ -39,7 +39,7 @@ endif
  CCOPT= $(CFLAGS) $(CCLINK)
  DEBUG?= -g -ggdb
  
 -PREFIX?= /usr/local
-+PREFIX?= ./ 
++PREFIX?= ./
  INSTALL_INC= $(PREFIX)/include/hiredis
  INSTALL_LIB= $(PREFIX)/lib
  INSTALL= cp -a
-@@ -83,7 +83,7 @@ test: hiredis-test
+@@ -86,7 +86,7 @@ test: hiredis-test
  	./hiredis-test
  
  .c.o:

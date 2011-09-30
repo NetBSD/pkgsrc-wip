@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2011/03/08 10:52:25 zatmania Exp $
+@comment $NetBSD: PLIST,v 1.3 2011/09/30 20:07:28 bharder Exp $
 bin/redis-benchmark
 bin/redis-check-aof
 bin/redis-check-dump
@@ -177,9 +177,11 @@ share/examples/redis/tests/unit/basic.tcl
 share/examples/redis/tests/unit/cas.tcl
 share/examples/redis/tests/unit/expire.tcl
 share/examples/redis/tests/unit/other.tcl
+share/examples/redis/tests/unit/printver.tcl
 share/examples/redis/tests/unit/protocol.tcl
 share/examples/redis/tests/unit/pubsub.tcl
 share/examples/redis/tests/unit/quit.tcl
+share/examples/redis/tests/unit/slowlog.tcl
 share/examples/redis/tests/unit/sort.tcl
 share/examples/redis/tests/unit/type/hash.tcl
 share/examples/redis/tests/unit/type/list.tcl
