@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4484 2011/09/28 14:58:29 ryo-on Exp $
+# $Id: Makefile,v 1.4485 2011/10/01 19:29:47 shattered Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -663,6 +663,7 @@ SUBDIR+=	giggle
 SUBDIR+=	gimmie
 SUBDIR+=	gimp-high-pass-filter
 SUBDIR+=	git
+SUBDIR+=	gitg
 SUBDIR+=	givaro
 SUBDIR+=	gjots2
 SUBDIR+=	gjs
@@ -1873,6 +1874,7 @@ SUBDIR+=	pan2-git
 SUBDIR+=	panda
 SUBDIR+=	pandoc
 SUBDIR+=	paperbox
+SUBDIR+=	paperkey
 SUBDIR+=	paraview
 SUBDIR+=	parcellite
 SUBDIR+=	parted
