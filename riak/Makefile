@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/09/30 20:25:05 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2011/10/01 12:43:37 fhajny Exp $
 #
 
-DISTNAME=		riak-1.0.0rc2
+DISTNAME=		riak-1.0.0
 CATEGORIES=		databases
-MASTER_SITES=		http://downloads.basho.com/riak/riak-1.0.0rc2/
+MASTER_SITES=		http://downloads.basho.com/riak/riak-1.0.0/
 
 MAINTAINER=		filip@joyent.com
 HOMEPAGE=		http://www.basho.com/products_riak_overview.php
@@ -66,6 +66,8 @@ CHECK_PORTABILITY_SKIP+=	tests/riak_search/run_all.sh
 
 post-extract:
 	${CHMOD} -R u=rwX,g=rX,o=rX ${WRKDIR}/innostore-${INNOVER}
+	cp ${FILESDIR}/disable_visibility_on_sun.patch \
+	  ${WRKDIR}/innostore-${INNOVER}/c_src/patches
 
 do-install:
 	${MKDIR} ${WRKSRC}/package/pkgsrc
