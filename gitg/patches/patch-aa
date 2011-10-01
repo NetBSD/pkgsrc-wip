@@ -1,0 +1,134 @@
+$NetBSD: patch-aa,v 1.1.1.1 2011/10/01 19:24:33 shattered Exp $
+
+--- libgitg/gitg-runner.c.orig	2010-12-23 12:26:14.000000000 +0000
++++ libgitg/gitg-runner.c
+@@ -40,8 +40,8 @@ struct _GitgRunnerPrivate
+ {
+ 	GitgCommand *command;
+ 
+-	GInputStream *stdout;
+-	GOutputStream *stdin;
++	GInputStream *_stdout;
++	GOutputStream *_stdin;
+ 
+ 	GCancellable *cancellable;
+ 	gboolean cancelled;
+@@ -98,20 +98,20 @@ close_streams (GitgRunner *runner)
+ 		g_cancellable_cancel (runner->priv->cancellable);
+ 	}
+ 
+-	if (runner->priv->stdin != NULL)
++	if (runner->priv->_stdin != NULL)
+ 	{
+-		g_output_stream_close (runner->priv->stdin, NULL, NULL);
+-		g_object_unref (runner->priv->stdin);
++		g_output_stream_close (runner->priv->_stdin, NULL, NULL);
++		g_object_unref (runner->priv->_stdin);
+ 
+-		runner->priv->stdin = NULL;
++		runner->priv->_stdin = NULL;
+ 	}
+ 
+-	if (runner->priv->stdout != NULL)
++	if (runner->priv->_stdout != NULL)
+ 	{
+-		g_input_stream_close (runner->priv->stdout, NULL, NULL);
+-		g_object_unref (runner->priv->stdout);
++		g_input_stream_close (runner->priv->_stdout, NULL, NULL);
++		g_object_unref (runner->priv->_stdout);
+ 
+-		runner->priv->stdout = NULL;
++		runner->priv->_stdout = NULL;
+ 	}
+ 
+ 	gitg_io_close (GITG_IO (runner));
+@@ -376,7 +376,7 @@ gitg_runner_stream_close (GitgRunner *ru
+ 	}
+ 	else
+ 	{
+-		g_input_stream_close (runner->priv->stdout, NULL, NULL);
++		g_input_stream_close (runner->priv->_stdout, NULL, NULL);
+ 	}
+ }
+ 
+@@ -406,7 +406,7 @@ process_watch_cb (GPid        pid,
+ 
+ 	runner->priv->watch_id = 0;
+ 
+-	if (runner->priv->stdout == NULL || g_input_stream_is_closed (runner->priv->stdout))
++	if (runner->priv->_stdout == NULL || g_input_stream_is_closed (runner->priv->_stdout))
+ 	{
+ 		runner_done (runner, NULL);
+ 	}
+@@ -416,8 +416,8 @@ void
+ gitg_runner_run (GitgRunner *runner)
+ {
+ 	gboolean ret;
+-	gint stdinf;
+-	gint stdoutf;
++	gint _stdinf;
++	gint _stdoutf;
+ 	GFile *working_directory;
+ 	gchar *wd_path = NULL;
+ 	GInputStream *start_input;
+@@ -450,8 +450,8 @@ gitg_runner_run (GitgRunner *runner)
+ 	                                NULL,
+ 	                                NULL,
+ 	                                &(runner->priv->pid),
+-	                                start_input ? &stdinf : NULL,
+-	                                &stdoutf,
++	                                start_input ? &_stdinf : NULL,
++	                                &_stdoutf,
+ 	                                NULL,
+ 	                                &error);
+ 
+@@ -476,13 +476,13 @@ gitg_runner_run (GitgRunner *runner)
+ 
+ 		runner->priv->cancellable = g_cancellable_new ();
+ 
+-		runner->priv->stdin = G_OUTPUT_STREAM (g_unix_output_stream_new (stdinf,
++		runner->priv->_stdin = G_OUTPUT_STREAM (g_unix_output_stream_new (_stdinf,
+ 		                                              TRUE));
+ 
+ 		data = async_data_new (runner);
+ 
+-		/* Splice the supplied input to stdin of the process */
+-		g_output_stream_splice_async (runner->priv->stdin,
++		/* Splice the supplied input to _stdin of the process */
++		g_output_stream_splice_async (runner->priv->_stdin,
+ 		                              start_input,
+ 		                              G_OUTPUT_STREAM_SPLICE_CLOSE_SOURCE |
+ 		                              G_OUTPUT_STREAM_SPLICE_CLOSE_TARGET,
+@@ -492,12 +492,12 @@ gitg_runner_run (GitgRunner *runner)
+ 		                              data);
+ 	}
+ 
+-	output = G_INPUT_STREAM (g_unix_input_stream_new (stdoutf,
++	output = G_INPUT_STREAM (g_unix_input_stream_new (_stdoutf,
+ 	                                                  TRUE));
+ 
+ 	smart = gitg_smart_charset_converter_new (gitg_encoding_get_candidates ());
+ 
+-	runner->priv->stdout = g_converter_input_stream_new (output,
++	runner->priv->_stdout = g_converter_input_stream_new (output,
+ 	                                                     G_CONVERTER (smart));
+ 
+ 	g_object_unref (smart);
+@@ -518,7 +518,7 @@ gitg_runner_run (GitgRunner *runner)
+ 
+ 		/* Splice output of the process into the provided stream */
+ 		g_output_stream_splice_async (end_output,
+-		                              runner->priv->stdout,
++		                              runner->priv->_stdout,
+ 		                              G_OUTPUT_STREAM_SPLICE_CLOSE_SOURCE |
+ 		                              G_OUTPUT_STREAM_SPLICE_CLOSE_TARGET,
+ 		                              G_PRIORITY_DEFAULT,
+@@ -533,7 +533,7 @@ gitg_runner_get_stream (GitgRunner *runn
+ {
+ 	g_return_val_if_fail (GITG_IS_RUNNER (runner), NULL);
+ 
+-	return runner->priv->stdout;
++	return runner->priv->_stdout;
+ }
+ 
+ void
