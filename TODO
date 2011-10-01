@@ -16,7 +16,7 @@ Suggested package updates
 	o d4x-2.5.7.1
 	o daphne-1.0
 	o desmume-0.9.6
-	o di-4.28
+	o di-4.29
 	o directfb-1.0.0
 	o dmxproto-2.3.1
 	o ecasound-2.8.1
@@ -65,13 +65,13 @@ Suggested package updates
 	o kino-1.0.0
 	o kvirc-3.4.2
 	o libAppleWM-1.4.0
-	o libburn-1.1.4
+	o libburn-1.1.6
 	o libdmx-1.1.1
 	o libexosip-3.5.0
 	o libgksu-2.0.4
 	o libgtk-java-2.10.2
 	o libisoburn-1.1.4
-	o libmemcached-0.52
+	o libmemcached-0.53
 	o libreoffice-3.4.3
 	o libuuid-1.41.14
 	o linphone-3.4.3
