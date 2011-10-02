@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2010/11/05 03:55:12 shattered Exp $
+# $NetBSD: Makefile,v 1.21 2011/10/02 21:23:00 shattered Exp $
 #
 
 DISTNAME=	oops-1.5.24
@@ -10,10 +10,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://oops-cache.org/
 COMMENT=	Multithreaded caching HTTP proxy server
 
-# Oops requires native threads; NetBSD threads are not good enough until
-# ~1.6Z (it compiles and runs, but connections hang).  Even on a 1.6Zx
-# system it will promptly abort with an assertion failure unless run
-# with PTHREAD_DIAGASSERT=AEL.
+# Oops requires working native threads
 NOT_FOR_PLATFORM=	NetBSD-1.*-*
 
 USE_LANGUAGES=		c c++

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2010/11/05 04:17:43 shattered Exp $
+# $NetBSD: Makefile,v 1.9 2011/10/02 21:23:00 shattered Exp $
 
 DISTNAME=	alphamail-1.0.44
 PKGREVISION=	3
@@ -9,7 +9,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://alphamail.sourceforge.net/
 COMMENT=	Highly scalable webmail with middleware component
 
-BROKEN=		"Incompatible with boost 1.34+"
+BROKEN=		Incompatible with boost 1.34+
 
 DEPENDS+=	p5-HTML-Mason>=1.30:../../www/p5-HTML-Mason
 DEPENDS+=	p5-CGI>=3.20:../../www/p5-CGI
@@ -34,8 +34,6 @@ DEPENDS+=	p5-Encode-IMAPUTF7>=1.00:../../wip/p5-Encode-IMAPUTF7
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	perl
-# NetBSD 4.0 make segfaults at install time -- PR 37684?
-USE_TOOLS+=	gmake
 PTHREAD_AUTO_VARS=	yes
 
 REPLACE_PERL=	util/alphamail_genconfig util/alphamail_stats \
