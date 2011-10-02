@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2010/12/13 11:40:51 ryo-on Exp $
+# $NetBSD: Makefile,v 1.3 2011/10/02 14:40:59 thomasklausner Exp $
 #
 
 DISTNAME=	rsget.pl-11838
-PKGNAME=	${DISTNAME:S/-/-r/}
 CATEGORIES=	net
 MASTER_SITES=	http://rsget.pl/download/
 EXTRACT_SUFX=	.tar.bz2
