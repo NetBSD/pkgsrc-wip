@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4485 2011/10/01 19:29:47 shattered Exp $
+# $Id: Makefile,v 1.4486 2011/10/03 11:03:27 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2790,7 +2790,6 @@ SUBDIR+=	treetool
 SUBDIR+=	treeview
 SUBDIR+=	tripwire2
 SUBDIR+=	truecrypt
-SUBDIR+=	ts
 SUBDIR+=	tsh
 SUBDIR+=	tsm
 SUBDIR+=	ttf-indic-fonts
