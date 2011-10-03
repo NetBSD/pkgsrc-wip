@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2011/07/08 04:31:22 phonohawk Exp $
+# $NetBSD: Makefile,v 1.6 2011/10/03 13:00:47 phonohawk Exp $
 #
 
-DISTNAME=	hlint-1.8.13
+DISTNAME=	hlint-1.8.17
 PKGNAME=	${DISTNAME}
 CATEGORIES=	devel
 
