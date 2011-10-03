@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2011/07/08 03:10:52 phonohawk Exp $
+# $NetBSD: Makefile,v 1.7 2011/10/03 12:16:20 phonohawk Exp $
 #
 
-DISTNAME=		cpphs-1.12
+DISTNAME=		cpphs-1.13.1
 CATEGORIES=		lang
 
 MAINTAINER=		esg@sdf.lonestar.org
