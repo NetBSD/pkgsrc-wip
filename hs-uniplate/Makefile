@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2011/02/17 14:58:38 phonohawk Exp $
+# $NetBSD: Makefile,v 1.4 2011/10/03 12:23:34 phonohawk Exp $
 #
 
-DISTNAME=	uniplate-1.6
+DISTNAME=	uniplate-1.6.2
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
