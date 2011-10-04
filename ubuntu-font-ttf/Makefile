@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.7 2011/03/15 20:00:25 ryo-on Exp $
+# $NetBSD: Makefile,v 1.8 2011/10/04 19:42:35 ryo-on Exp $
 #
 
-DISTNAME=	ubuntu-font-family-0.71.2
+DISTNAME=	ubuntu-font-family-0.80
 PKGNAME=	${DISTNAME:S/family-/ttf-/}
 CATEGORIES=	fonts
 MASTER_SITES=	http://font.ubuntu.com/download/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	https://wiki.ubuntu.com/Ubuntu%20Font%20Family
+HOMEPAGE=	http://font.ubuntu.com/
 COMMENT=	Ubuntu font family
 #LICENSE=	UBUNTU FONT LICENCE Version 1.0
 
@@ -31,12 +31,17 @@ FONTS_DIRS.ttf=	${FONTDIR}
 
 INSTALL_FONTS=	Ubuntu-B.ttf \
 		Ubuntu-BI.ttf \
+		Ubuntu-C.ttf \
 		Ubuntu-L.ttf \
 		Ubuntu-LI.ttf \
 		Ubuntu-M.ttf \
 		Ubuntu-MI.ttf \
 		Ubuntu-R.ttf \
-		Ubuntu-RI.ttf
+		Ubuntu-RI.ttf \
+		UbuntuMono-B.ttf \
+		UbuntuMono-BI.ttf \
+		UbuntuMono-R.ttf \
+		UbuntuMono-RI.ttf
 
 INSTALL_DOCS=	CONTRIBUTING.txt \
 		FONTLOG.txt \

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2011/03/15 20:00:25 ryo-on Exp $
+$NetBSD: distinfo,v 1.5 2011/10/04 19:42:35 ryo-on Exp $
 
-SHA1 (ubuntu-font-family-0.71.2.zip) = 113ddacc71e219c39e7114af423425cdd8855ce7
-RMD160 (ubuntu-font-family-0.71.2.zip) = 1aee58eca15fc6d96a21cc6a11212d48a4601aae
-Size (ubuntu-font-family-0.71.2.zip) = 1479191 bytes
+SHA1 (ubuntu-font-family-0.80.zip) = 88276ba9d38d75b33a9640efa15cd80979cb21e2
+RMD160 (ubuntu-font-family-0.80.zip) = 4f50796443dfcb9bec32b7d6b90d5df559626686
+Size (ubuntu-font-family-0.80.zip) = 2091643 bytes
