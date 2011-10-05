@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/07/30 05:04:54 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2011/10/05 06:32:05 phonohawk Exp $
 #
 
-DISTNAME=	attoparsec-0.9.1.1
+DISTNAME=	attoparsec-0.9.1.2
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
