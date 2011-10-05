@@ -1,0 +1,4 @@
+Punicode library to uniquely and reversibly transform a Unicode string
+into an ASCII string. This is a partial implementation of RFC 3492:
+Punycode: A Bootstring encoding of Unicode for Internationalized
+Domain Names in Applications (IDNA).

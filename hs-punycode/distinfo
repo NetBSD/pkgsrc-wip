@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/10/05 06:03:54 phonohawk Exp $
+
+SHA1 (punycode-0.0.1.0.tar.gz) = e030a90638f6be1829b3b75bfe2d429149296813
+RMD160 (punycode-0.0.1.0.tar.gz) = 8ff6479315f11e7f1b57e8d5d57f19fa80c6c7bc
+Size (punycode-0.0.1.0.tar.gz) = 37964 bytes
