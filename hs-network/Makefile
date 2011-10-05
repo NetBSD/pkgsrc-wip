@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2011/07/25 16:27:36 phonohawk Exp $
+# $NetBSD: Makefile,v 1.10 2011/10/05 06:57:47 phonohawk Exp $
 #
 
-DISTNAME=	network-2.3.0.4
+DISTNAME=	network-2.3.0.6
 CATEGORIES=	net
 
 MAINTAINER=	pho@cielonegro.org
