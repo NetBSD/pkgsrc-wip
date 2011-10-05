@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/10/05 11:06:01 ryo-on Exp $
+bin/roxterm
+bin/roxterm-config
+man/man1/roxterm-config.1
+man/man1/roxterm.1
+share/applications/roxterm.desktop
+share/doc/roxterm/en/guide.html
+share/doc/roxterm/en/index.html
+share/doc/roxterm/en/installation.html
+share/doc/roxterm/en/news.html
+share/doc/roxterm/lib/favicon.ico
+share/doc/roxterm/lib/header.png
+share/doc/roxterm/lib/logo_text.png
+share/doc/roxterm/lib/roxterm.css
+share/doc/roxterm/lib/roxterm_ie.css
+share/doc/roxterm/lib/roxterm_logo.png
+share/doc/roxterm/lib/sprites.png
+share/icons/hicolor/scalable/apps/roxterm.svg
+share/roxterm/Config/Colours/GTK
+share/roxterm/Config/Colours/Tango
+share/roxterm/Config/Shortcuts/Default
+share/roxterm/roxterm-config.ui
