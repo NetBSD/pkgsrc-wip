@@ -1,5 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/07/27 05:44:33 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/10/05 06:50:09 phonohawk Exp $
 lib/hxt-regex-xmlschema-${PKGVERSION}/${HASKELL_VERSION}/HShxt-regex-xmlschema-${PKGVERSION}.o
+lib/hxt-regex-xmlschema-${PKGVERSION}/${HASKELL_VERSION}/Text/Regex/Glob/String.hi
+lib/hxt-regex-xmlschema-${PKGVERSION}/${HASKELL_VERSION}/Text/Regex/Glob/String.p_hi
+lib/hxt-regex-xmlschema-${PKGVERSION}/${HASKELL_VERSION}/Text/Regex/Glob/String/RegexParser.hi
+lib/hxt-regex-xmlschema-${PKGVERSION}/${HASKELL_VERSION}/Text/Regex/Glob/String/RegexParser.p_hi
 lib/hxt-regex-xmlschema-${PKGVERSION}/${HASKELL_VERSION}/Text/Regex/XMLSchema/String.hi
 lib/hxt-regex-xmlschema-${PKGVERSION}/${HASKELL_VERSION}/Text/Regex/XMLSchema/String.p_hi
 lib/hxt-regex-xmlschema-${PKGVERSION}/${HASKELL_VERSION}/Text/Regex/XMLSchema/String/Regex.hi
