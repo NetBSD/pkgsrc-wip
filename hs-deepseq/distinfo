@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2011/01/12 02:34:04 phonohawk Exp $
+$NetBSD: distinfo,v 1.3 2011/10/05 04:38:09 phonohawk Exp $
 
-SHA1 (deepseq-1.1.0.2.tar.gz) = 7105596d04d5c730da33280f22379069233585d3
-RMD160 (deepseq-1.1.0.2.tar.gz) = b4c41a1a7a13aedd2f42ba3499e693aa5315ed39
-Size (deepseq-1.1.0.2.tar.gz) = 3619 bytes
+SHA1 (deepseq-1.2.0.1.tar.gz) = 72b19027964faeb8ca6eddabaa8c55282ab82102
+RMD160 (deepseq-1.2.0.1.tar.gz) = d36e9ade5701ba4f11efe9e64fd389decdb7d790
+Size (deepseq-1.2.0.1.tar.gz) = 3789 bytes

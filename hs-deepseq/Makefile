@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2011/01/12 02:34:04 phonohawk Exp $
+# $NetBSD: Makefile,v 1.3 2011/10/05 04:38:09 phonohawk Exp $
 #
 
-DISTNAME=	deepseq-1.1.0.2
+DISTNAME=	deepseq-1.2.0.1
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
-COMMENT=	Fully evaluate data structures
+COMMENT=	Deep evaluation of data structures
 LICENSE=	modified-bsd
 
 .include "../../wip/mk/haskell.mk"
