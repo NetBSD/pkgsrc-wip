@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4488 2011/10/05 11:07:24 ryo-on Exp $
+# $Id: Makefile,v 1.4489 2011/10/06 10:19:00 ryo-on Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -215,7 +215,6 @@ SUBDIR+=	bmp-docklet
 SUBDIR+=	bnr2
 SUBDIR+=	boa
 SUBDIR+=	bochs-snapshot
-SUBDIR+=	bodr
 SUBDIR+=	bogomips
 SUBDIR+=	boinc
 SUBDIR+=	boinc-client
@@ -277,7 +276,6 @@ SUBDIR+=	cgit
 SUBDIR+=	cglib
 SUBDIR+=	cgterm
 SUBDIR+=	chbg
-SUBDIR+=	chemical-mime-data
 SUBDIR+=	chems
 SUBDIR+=	chicken
 SUBDIR+=	chora
@@ -699,7 +697,6 @@ SUBDIR+=	gnomad2
 SUBDIR+=	gnome-activity-journal
 SUBDIR+=	gnome-alsamixer
 SUBDIR+=	gnome-bluetooth
-SUBDIR+=	gnome-chemistry-utils
 SUBDIR+=	gnome-clipboard-daemon
 SUBDIR+=	gnome-do
 SUBDIR+=	gnome-jabber
@@ -1297,6 +1294,7 @@ SUBDIR+=	libpusb
 SUBDIR+=	libraw1394
 SUBDIR+=	libreoffice3-bin
 SUBDIR+=	libscscp
+SUBDIR+=	libsmf
 SUBDIR+=	libsidplay2
 SUBDIR+=	libslab
 SUBDIR+=	libsnappy
@@ -1619,7 +1617,6 @@ SUBDIR+=	opd
 SUBDIR+=	open21xx
 SUBDIR+=	openal-soft
 SUBDIR+=	openaxiom
-SUBDIR+=	openbabel
 SUBDIR+=	openbgpd
 SUBDIR+=	openbgpd-as4byte
 SUBDIR+=	openbsd-input-usbtablet
