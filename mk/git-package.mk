@@ -24,6 +24,7 @@ _PKG_MK_GIT_PACKAGE_MK=	# defined
 
 BUILD_DEPENDS+=		scmgit-base>=1.6.4:../../devel/scmgit-base
 USE_TOOLS+=		pax
+_GIT_TMP_RESULTS=	"/tmp/git-package.$$"
 
 # switch either (from scratch) clone is necessary or (already cloned) checkout is enough
 _GIT_NEED_CLONE=	${WRKDIR}/.need_clone
@@ -141,13 +142,22 @@ do-git-extract:
 	else								\
 	${STEP_MSG} "(3b) git pull origin master from "${GIT_MODULE.${_repo_}:Q} "." ;	\
 		(cd ${GIT_MODULE};					\
-		${_GIT_CMD} pull ${GIT_FLAGS} origin master &&	 	\
-		${_GIT_CMD} checkout --quiet -f master ; )		\
+		${_GIT_CMD} pull ${GIT_FLAGS} origin master 		\
+		 | tee  ${_GIT_TMP_RESULTS};				\
+		${_GIT_CMD} checkout  -f master  		; )     \
 	fi;								\
-	if [ "$$p" != ${_GIT_DISTFILE.${_repo_}:Q} ] || [ -r ${_GIT_NEED_CLONE} ]; then	\
+	if [ -z ${_GIT_TMP_RESULTS} ]; then				\
 	        ${_GIT_CREATE_CACHE.${_repo_}};				\
+	fi;								\
+	r="$$(grep 'Already up-to-date' ${_GIT_TMP_RESULTS} | head -n 1)";	\
+	if [ ! -n "$$r" ]; then						\
+	 if [ "$$p" != ${_GIT_DISTFILE.${_repo_}:Q} ] || [ -r ${_GIT_NEED_CLONE} ]; then \
+	        ${_GIT_CREATE_CACHE.${_repo_}};				\
+	 else								\
+         ${STEP_MSG}    "(5) Skipping write cache, the same date or newly cloned";\
+         fi;								\
 	else								\
-         ${STEP_MSG} "(5) Skipping write cache, the same date or newly cloned";\
+            ${STEP_MSG} "(6) Skipping write cache, said -> Already up-to-date.";\
 	fi
 .endfor
 
