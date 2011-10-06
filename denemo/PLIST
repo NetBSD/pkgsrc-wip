@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/08/09 13:16:38 ryo-on Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/10/06 10:23:06 ryo-on Exp $
 bin/denemo
 share/applications/denemo.desktop
 share/denemo/actions/AllCommands.commands
@@ -9,6 +9,7 @@ share/denemo/actions/Arranger.shortcuts
 share/denemo/actions/Classic.commands
 share/denemo/actions/Classic.shortcuts
 share/denemo/actions/Composer.commands
+share/denemo/actions/Composer.scm
 share/denemo/actions/Composer.shortcuts
 share/denemo/actions/Default.commands
 share/denemo/actions/Default.scm
@@ -18,8 +19,6 @@ share/denemo/actions/LilyPond.shortcuts
 share/denemo/actions/Simple.commands
 share/denemo/actions/Simple.scm
 share/denemo/actions/Simple.shortcuts
-share/denemo/actions/abstractionmovement.scm
-share/denemo/actions/ans.scm
 share/denemo/actions/bitmaps/Barline.png
 share/denemo/actions/bitmaps/BracketedWholeMeasureRest.png
 share/denemo/actions/bitmaps/CheckMark.png
@@ -605,16 +604,25 @@ share/denemo/actions/bitmaps/unmute.png
 share/denemo/actions/bitmaps/z.svg
 share/denemo/actions/bitmaps/zero.svg
 share/denemo/actions/block.l
-share/denemo/actions/commandlist.scm
+share/denemo/actions/denemo-modules/abstractionmovement.scm
+share/denemo/actions/denemo-modules/ans.scm
+share/denemo/actions/denemo-modules/commandlist.scm
+share/denemo/actions/denemo-modules/deprecated.scm
+share/denemo/actions/denemo-modules/directives.scm
+share/denemo/actions/denemo-modules/helpsystem.scm
+share/denemo/actions/denemo-modules/moveandsearch.scm
+share/denemo/actions/denemo-modules/notationmagick.scm
+share/denemo/actions/denemo-modules/rhythmandmeter.scm
+share/denemo/actions/denemo-modules/scheme.scm
+share/denemo/actions/denemo-modules/selection.scm
+share/denemo/actions/denemo-modules/types.scm
 share/denemo/actions/denemo.scm
 share/denemo/actions/editscripts/D.C.AlFine.scm
 share/denemo/actions/editscripts/LHFinger.scm
 share/denemo/actions/editscripts/Mute.scm
 share/denemo/actions/editscripts/StaffSize.scm
 share/denemo/actions/editscripts/StringNum.scm
-share/denemo/actions/editscripts/Tempo.scm
 share/denemo/actions/editscripts/UnknownScoreTag.scm
-share/denemo/actions/helpsystem.scm
 share/denemo/actions/incl.l
 share/denemo/actions/init.denemo
 share/denemo/actions/lalr.scm
@@ -636,6 +644,7 @@ share/denemo/actions/menus/MainMenu/EditMenu/Select/SelectMeasure
 share/denemo/actions/menus/MainMenu/EditMenu/Select/SelectRight
 share/denemo/actions/menus/MainMenu/EditMenu/Select/SelectStaff
 share/denemo/actions/menus/MainMenu/EditMenu/Select/SelectionToEmptyMeasure
+share/denemo/actions/menus/MainMenu/EditMenu/ShowLastChange
 share/denemo/actions/menus/MainMenu/EditMenu/StagedDelete
 share/denemo/actions/menus/MainMenu/Educational/Aural Training/Chord-Comparison/DiminishedOrAugmented
 share/denemo/actions/menus/MainMenu/Educational/Aural Training/Chord-Comparison/DiminishedOrMinor
@@ -681,12 +690,15 @@ share/denemo/actions/menus/MainMenu/FileMenu/Import/Import-MusicXml
 share/denemo/actions/menus/MainMenu/FileMenu/OpenMenu/OpenMyDefaultTemplate
 share/denemo/actions/menus/MainMenu/FileMenu/PrintMenu/Preview4Bars
 share/denemo/actions/menus/MainMenu/FileMenu/PrintMenu/PrintAccompanistsScore
+share/denemo/actions/menus/MainMenu/FileMenu/PrintMenu/PrintBassPartWithoutFigures
+share/denemo/actions/menus/MainMenu/FileMenu/PrintMenu/PrintWithAmbitus
 share/denemo/actions/menus/MainMenu/HelpMenu/IRC
 share/denemo/actions/menus/MainMenu/HelpMenu/Tutorial
 share/denemo/actions/menus/MainMenu/InputMenu/MIDI/AngryDelete
 share/denemo/actions/menus/MainMenu/InputMenu/MIDI/CheckPitches
 share/denemo/actions/menus/MainMenu/InputMenu/MIDI/ChordsOverBass
 share/denemo/actions/menus/MainMenu/InputMenu/MIDI/FiguredBassFilterOn
+share/denemo/actions/menus/MainMenu/InputMenu/MIDI/FootPedalConductor
 share/denemo/actions/menus/MainMenu/InputMenu/MIDI/MidiAdvanceOnEdit
 share/denemo/actions/menus/MainMenu/InputMenu/MIDI/MidiFilterOff
 share/denemo/actions/menus/MainMenu/MoreMenu/LoadDefaultComposerNumberkeys
@@ -728,6 +740,7 @@ share/denemo/actions/menus/MainMenu/NavigationMenu/Seek/MoveToPreviousEmptyMeasu
 share/denemo/actions/menus/MainMenu/NavigationMenu/Seek/NextHigher
 share/denemo/actions/menus/MainMenu/PlaybackMenu/ConvertMidiForBass
 share/denemo/actions/menus/MainMenu/PlaybackMenu/DenemoPlayCursorToEnd
+share/denemo/actions/menus/MainMenu/PlaybackMenu/PitchShift
 share/denemo/actions/menus/MainMenu/PlaybackMenu/RecordAndConvert
 share/denemo/actions/menus/MainMenu/PlaybackMenu/RecreateTimebase
 share/denemo/actions/menus/MainMenu/PlaybackMenu/ToggleConduct
@@ -790,6 +803,12 @@ share/denemo/actions/menus/ObjectMenu/Directives/Barlines/ClosingBarline
 share/denemo/actions/menus/ObjectMenu/Directives/Barlines/DoubleBarline
 share/denemo/actions/menus/ObjectMenu/Directives/Barlines/ForceBarline
 share/denemo/actions/menus/ObjectMenu/Directives/Barlines/HalfBarline
+share/denemo/actions/menus/ObjectMenu/Directives/Barlines/RepeatEnd
+share/denemo/actions/menus/ObjectMenu/Directives/Barlines/RepeatEndStart
+share/denemo/actions/menus/ObjectMenu/Directives/Barlines/RepeatStart
+share/denemo/actions/menus/ObjectMenu/Directives/BeamingOff
+share/denemo/actions/menus/ObjectMenu/Directives/BeamingOn
+share/denemo/actions/menus/ObjectMenu/Directives/BeatChange
 share/denemo/actions/menus/ObjectMenu/Directives/BreathMark
 share/denemo/actions/menus/ObjectMenu/Directives/CadenzaOn
 share/denemo/actions/menus/ObjectMenu/Directives/DynamicsDialog
@@ -824,6 +843,7 @@ share/denemo/actions/menus/ObjectMenu/Directives/MIDI/init.scm
 share/denemo/actions/menus/ObjectMenu/Directives/MetronomeMarking
 share/denemo/actions/menus/ObjectMenu/Directives/OpenFirstTimeBar
 share/denemo/actions/menus/ObjectMenu/Directives/OpenSecondTimeBar
+share/denemo/actions/menus/ObjectMenu/Directives/Ottava
 share/denemo/actions/menus/ObjectMenu/Directives/PageBreak
 share/denemo/actions/menus/ObjectMenu/Directives/Print Transpositions/CloseLilyBlock
 share/denemo/actions/menus/ObjectMenu/Directives/Print Transpositions/OpenOctaveDown
@@ -843,20 +863,22 @@ share/denemo/actions/menus/ObjectMenu/Directives/TypesettingOff
 share/denemo/actions/menus/ObjectMenu/Directives/TypesettingOn
 share/denemo/actions/menus/ObjectMenu/MeasureMenu/AddDuplicateMeasure
 share/denemo/actions/menus/ObjectMenu/MeasureMenu/Anacrusis
+share/denemo/actions/menus/ObjectMenu/MeasureMenu/CheckTupletsInMeasure
 share/denemo/actions/menus/ObjectMenu/MeasureMenu/MergeWithNextMeasure
 share/denemo/actions/menus/ObjectMenu/MeasureMenu/Repeats/CloseReopenRepeat
 share/denemo/actions/menus/ObjectMenu/MeasureMenu/Repeats/CloseRepeat
 share/denemo/actions/menus/ObjectMenu/MeasureMenu/Repeats/EndSecondTimeBar
 share/denemo/actions/menus/ObjectMenu/MeasureMenu/Repeats/FirstTimeBar
 share/denemo/actions/menus/ObjectMenu/MeasureMenu/Repeats/OpenRepeat
-share/denemo/actions/menus/ObjectMenu/MeasureMenu/Repeats/RepeatEnd
-share/denemo/actions/menus/ObjectMenu/MeasureMenu/Repeats/RepeatEndStart
-share/denemo/actions/menus/ObjectMenu/MeasureMenu/Repeats/RepeatStart
 share/denemo/actions/menus/ObjectMenu/MeasureMenu/Repeats/SecondTimeBar
 share/denemo/actions/menus/ObjectMenu/MeasureMenu/ShortMeasure
 share/denemo/actions/menus/ObjectMenu/MeasureMenu/SplitMeasure
 share/denemo/actions/menus/ObjectMenu/MeasureMenu/Upbeat
+share/denemo/actions/menus/ObjectMenu/MovementMenu/CaptureScore/CaptureMeasures
+share/denemo/actions/menus/ObjectMenu/MovementMenu/CaptureScore/DeleteCapturedMeasure
+share/denemo/actions/menus/ObjectMenu/MovementMenu/CaptureScore/InsertCaptureMeasure
 share/denemo/actions/menus/ObjectMenu/MovementMenu/CreateIntro
+share/denemo/actions/menus/ObjectMenu/MovementMenu/EvenOutStaffLengths
 share/denemo/actions/menus/ObjectMenu/MovementMenu/HideMovement
 share/denemo/actions/menus/ObjectMenu/MovementMenu/MovementPageBreak
 share/denemo/actions/menus/ObjectMenu/MovementMenu/MvntComment
@@ -896,6 +918,7 @@ share/denemo/actions/menus/ObjectMenu/NotationMagick/SingleRandomNote/NotationMa
 share/denemo/actions/menus/ObjectMenu/NotationMagick/SingleRandomNote/NotationMagick-RandomWithinClefRangeDiatonic
 share/denemo/actions/menus/ObjectMenu/NotesRests/Augment
 share/denemo/actions/menus/ObjectMenu/NotesRests/Beaming/Beam1234
+share/denemo/actions/menus/ObjectMenu/NotesRests/Beaming/DeleteBeamingDirective
 share/denemo/actions/menus/ObjectMenu/NotesRests/Beaming/EndBeam
 share/denemo/actions/menus/ObjectMenu/NotesRests/Beaming/StartBeam
 share/denemo/actions/menus/ObjectMenu/NotesRests/ChangeDuration/ChangeBreve
@@ -908,6 +931,8 @@ share/denemo/actions/menus/ObjectMenu/NotesRests/EditDuration/Breve
 share/denemo/actions/menus/ObjectMenu/NotesRests/EditDuration/Longa
 share/denemo/actions/menus/ObjectMenu/NotesRests/EditNote/AddDotSelectionSwitcher
 share/denemo/actions/menus/ObjectMenu/NotesRests/EditNote/CautionaryAccidental
+share/denemo/actions/menus/ObjectMenu/NotesRests/EditNote/ChangeEnharmonicDown
+share/denemo/actions/menus/ObjectMenu/NotesRests/EditNote/ChangeEnharmonicUp
 share/denemo/actions/menus/ObjectMenu/NotesRests/EditNote/MoveNoteToCursor
 share/denemo/actions/menus/ObjectMenu/NotesRests/EditNote/ReminderAccidental
 share/denemo/actions/menus/ObjectMenu/NotesRests/EditNote/RemoveDotSelectionSwitcher
@@ -915,6 +940,7 @@ share/denemo/actions/menus/ObjectMenu/NotesRests/FingeringsDoublestroke
 share/denemo/actions/menus/ObjectMenu/NotesRests/GraceNotes/GraceAfter
 share/denemo/actions/menus/ObjectMenu/NotesRests/GraceNotes/GraceNoteSwitcher
 share/denemo/actions/menus/ObjectMenu/NotesRests/GraceNotes/InsertTwoGraceNotesBeamed
+share/denemo/actions/menus/ObjectMenu/NotesRests/GraceNotes/UnGraceAfter
 share/denemo/actions/menus/ObjectMenu/NotesRests/InsertNote/InsertDuration/InsertBreve
 share/denemo/actions/menus/ObjectMenu/NotesRests/InsertNote/InsertDuration/InsertLonga
 share/denemo/actions/menus/ObjectMenu/NotesRests/InsertNote/InsertDuration/InsertOneNote
@@ -924,8 +950,10 @@ share/denemo/actions/menus/ObjectMenu/NotesRests/Markings/Articulations/AccentSe
 share/denemo/actions/menus/ObjectMenu/NotesRests/Markings/Articulations/StaccatissimoSelectionSwitcher
 share/denemo/actions/menus/ObjectMenu/NotesRests/Markings/Articulations/StaccatoSelectionSwitcher
 share/denemo/actions/menus/ObjectMenu/NotesRests/Markings/Articulations/TenutoSelectionSwitcher
+share/denemo/actions/menus/ObjectMenu/NotesRests/Markings/FiguredBass/PlaceFiguredBassBelow
 share/denemo/actions/menus/ObjectMenu/NotesRests/Markings/Ornaments/Trill+Above
 share/denemo/actions/menus/ObjectMenu/NotesRests/Markings/Ornaments/Trill+Below
+share/denemo/actions/menus/ObjectMenu/NotesRests/Markings/Ornaments/Upprall
 share/denemo/actions/menus/ObjectMenu/NotesRests/Markings/Strings/Fingerings/Finger0
 share/denemo/actions/menus/ObjectMenu/NotesRests/Markings/Strings/Fingerings/Finger1
 share/denemo/actions/menus/ObjectMenu/NotesRests/Markings/Strings/Fingerings/Finger2
@@ -969,6 +997,7 @@ share/denemo/actions/menus/ObjectMenu/NotesRests/RestEntry/EnterRest
 share/denemo/actions/menus/ObjectMenu/NotesRests/RestEntry/InsertBreveRest
 share/denemo/actions/menus/ObjectMenu/NotesRests/RestEntry/InsertLongaRest
 share/denemo/actions/menus/ObjectMenu/NotesRests/RestEntry/InsertWholeMeasureRest
+share/denemo/actions/menus/ObjectMenu/NotesRests/RestEntry/MoveRest
 share/denemo/actions/menus/ObjectMenu/NotesRests/RestEntry/MultiMeasureRests
 share/denemo/actions/menus/ObjectMenu/NotesRests/RestEntry/WholeMeasureRest
 share/denemo/actions/menus/ObjectMenu/NotesRests/SelectDuration/SetBreve
@@ -985,6 +1014,9 @@ share/denemo/actions/menus/ObjectMenu/NotesRests/Slurs/SlurUp
 share/denemo/actions/menus/ObjectMenu/NotesRests/Slurs/ToggleBeginPhrasingSlur
 share/denemo/actions/menus/ObjectMenu/NotesRests/Slurs/ToggleEndPhrasingSlur
 share/denemo/actions/menus/ObjectMenu/NotesRests/SplitChord
+share/denemo/actions/menus/ObjectMenu/NotesRests/StaffChange/ChangeStaffBack
+share/denemo/actions/menus/ObjectMenu/NotesRests/StaffChange/ChangeStaffDown
+share/denemo/actions/menus/ObjectMenu/NotesRests/StaffChange/ChangeStaffUp
 share/denemo/actions/menus/ObjectMenu/NotesRests/StemControl/DesignateVoice
 share/denemo/actions/menus/ObjectMenu/NotesRests/StemControl/StartDownStems
 share/denemo/actions/menus/ObjectMenu/NotesRests/StemControl/StartUpStems
@@ -1008,14 +1040,20 @@ share/denemo/actions/menus/ObjectMenu/NotesRests/Tuplets/ToggleTupletNumbering
 share/denemo/actions/menus/ObjectMenu/NotesRests/init.scm
 share/denemo/actions/menus/ObjectMenu/NotesRests/split.scm
 share/denemo/actions/menus/ObjectMenu/Score/AccompanistsScore
+share/denemo/actions/menus/ObjectMenu/Score/CheckScore
 share/denemo/actions/menus/ObjectMenu/Score/DeactivateTimeSignatureStencil
 share/denemo/actions/menus/ObjectMenu/Score/DenemoBar
 share/denemo/actions/menus/ObjectMenu/Score/EditProlog
+share/denemo/actions/menus/ObjectMenu/Score/NormalBeamEndings
 share/denemo/actions/menus/ObjectMenu/Score/Print Layout/HideEmptyStaffs
+share/denemo/actions/menus/ObjectMenu/Score/Print Layout/LimitInterSystemSpace
 share/denemo/actions/menus/ObjectMenu/Score/Print Layout/PaperSize
 share/denemo/actions/menus/ObjectMenu/Score/Print Layout/ScoreIndent
+share/denemo/actions/menus/ObjectMenu/Score/ReduceSystemSpacing
+share/denemo/actions/menus/ObjectMenu/Score/ScoreBlockProlog
 share/denemo/actions/menus/ObjectMenu/Score/ScoreComment
 share/denemo/actions/menus/ObjectMenu/Score/SetFontSize
+share/denemo/actions/menus/ObjectMenu/Score/SetThumbnail
 share/denemo/actions/menus/ObjectMenu/Score/Titles Etc/ScoreArranger
 share/denemo/actions/menus/ObjectMenu/Score/Titles Etc/ScoreBreakbefore
 share/denemo/actions/menus/ObjectMenu/Score/Titles Etc/ScoreComposer
@@ -1034,7 +1072,12 @@ share/denemo/actions/menus/ObjectMenu/Score/Titles Etc/TitlePage
 share/denemo/actions/menus/ObjectMenu/Score/TransposeOctaveUp
 share/denemo/actions/menus/ObjectMenu/Score/TransposeScorePrint
 share/denemo/actions/menus/ObjectMenu/StaffMenu/Ambitus
+share/denemo/actions/menus/ObjectMenu/StaffMenu/CaptureScore/CaptureMeasuresForStaff
+share/denemo/actions/menus/ObjectMenu/StaffMenu/CaptureScore/DeleteCapturedMeasureForStaff
+share/denemo/actions/menus/ObjectMenu/StaffMenu/CaptureScore/InsertCaptureMeasureForStaff
 share/denemo/actions/menus/ObjectMenu/StaffMenu/ChangeStaff
+share/denemo/actions/menus/ObjectMenu/StaffMenu/CheckTiesInStaff
+share/denemo/actions/menus/ObjectMenu/StaffMenu/FixSlursInStaff
 share/denemo/actions/menus/ObjectMenu/StaffMenu/InstrumentName
 share/denemo/actions/menus/ObjectMenu/StaffMenu/NonPrintingStaff
 share/denemo/actions/menus/ObjectMenu/StaffMenu/Numbering/BarNumbers
@@ -1064,6 +1107,7 @@ share/denemo/actions/menus/ObjectMenu/StaffMenu/TinyStaff
 share/denemo/actions/menus/ObjectMenu/StaffMenu/TinyStaffAllMovements
 share/denemo/actions/menus/ObjectMenu/StaffMenu/TransposeStaffPrint
 share/denemo/actions/menus/ObjectMenu/StaffMenu/Voices/CreateParts
+share/denemo/actions/menus/ObjectMenu/StaffMenu/Voices/MergeRests
 share/denemo/actions/menus/ObjectMenu/StaffMenu/Voices/VoicePreset1
 share/denemo/actions/menus/ObjectMenu/StaffMenu/Voices/VoicePreset2
 share/denemo/actions/menus/ObjectMenu/StaffMenu/Voices/VoicePreset3
@@ -1080,7 +1124,6 @@ share/denemo/actions/mxml2ly2denemo/sample.nwctext
 share/denemo/actions/mxml2ly2denemo/silex.pdf
 share/denemo/actions/mxml2ly2denemo/silex.tar.gz
 share/denemo/actions/mytest.ly
-share/denemo/actions/notationmagick.scm
 share/denemo/actions/notes.l
 share/denemo/actions/quote.l
 share/denemo/actions/silex.scm
@@ -1371,16 +1414,24 @@ share/denemo/templates/Accordion/accordion.denemo
 share/denemo/templates/Early Music/BreveLonga.denemo
 share/denemo/templates/band/BrassBand.denemo
 share/denemo/templates/band/BrassTrio.denemo
+share/denemo/templates/band/Makefile
+share/denemo/templates/band/Makefile.in
+share/denemo/templates/chamber/Makefile
+share/denemo/templates/chamber/Makefile.in
 share/denemo/templates/chamber/StringQuartet.denemo
+share/denemo/templates/choral/Makefile
+share/denemo/templates/choral/Makefile.in
 share/denemo/templates/choral/SATB-Piano.denemo
 share/denemo/templates/choral/SATB.denemo
 share/denemo/templates/choral/TTBB.denemo
 share/denemo/templates/drummap.denemo
 share/denemo/templates/jazz/JazzCombo.denemo
+share/denemo/templates/jazz/Makefile
+share/denemo/templates/jazz/Makefile.in
 share/examples/denemo/denemo.conf
 share/fonts/truetype/denemo/Denemo.ttf
-share/fonts/truetype/denemo/LICENSE_OFL.txt
-share/fonts/truetype/denemo/fetta.ttf
+share/fonts/truetype/denemo/emmentaler.ttf
+share/fonts/truetype/denemo/feta.ttf
 share/locale/cs/LC_MESSAGES/denemo.mo
 share/locale/de/LC_MESSAGES/denemo.mo
 share/locale/es/LC_MESSAGES/denemo.mo
