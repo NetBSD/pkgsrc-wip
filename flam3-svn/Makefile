@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2010/12/26 05:01:22 davesainty Exp $
+# $NetBSD: Makefile,v 1.3 2011/10/06 02:02:34 makoto Exp $
 
 PKGNAME=		flam3-2.7
 DISTNAME=		flam3
 CATEGORIES=		x11
 MASTER_SITES=		http://electricsheep.org/
+LICENSE=		gnu-gpl-v2
 
 MAINTAINER=		rhialto@falu.nl
 HOMEPAGE=		http://flam3.com/
