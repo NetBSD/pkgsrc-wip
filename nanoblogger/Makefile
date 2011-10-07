@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2011/10/07 12:43:00 ryo-on Exp $
+# $NetBSD: Makefile,v 1.9 2011/10/07 12:48:56 ryo-on Exp $
 #
 
 DISTNAME=	nanoblogger-3.4.2
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nanoblogger/}
 
-MAINTAINER=	pkgsrc-users@pkgsrc.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://nanoblogger.sourceforge.net/
 COMMENT=	Small weblog engine for the UNIX command line
 LICENSE=	gnu-gpl-v2
