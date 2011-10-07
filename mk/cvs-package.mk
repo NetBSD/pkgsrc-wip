@@ -1,4 +1,4 @@
-# $Id: cvs-package.mk,v 1.38 2011/10/06 03:57:03 makoto Exp $
+# $Id: cvs-package.mk,v 1.39 2011/10/07 02:52:57 makoto Exp $
 #
 # Please update svn-package.mk as well. It is brother Makefile frags.
 #
@@ -148,7 +148,7 @@ _CVS_CMD=		cvs
 _CVS_ENV=		# empty
 _CVS_ENV+=		CVS_PASSFILE=${_CVS_PASSFILE}
 _CVS_ENV+=		CVS_RSH=${_CVS_RSH:Q}
-_CVS_FLAGS=		-z3
+_CVS_FLAGS=		-q -z3
 _CVS_CHECKOUT_FLAGS=	-P
 _CVS_PASSFILE=		${WRKDIR}/.cvs_passwords
 _CVS_TODAY_CMD=		${DATE} -u +'%Y-%m-%d'
