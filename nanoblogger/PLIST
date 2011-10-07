@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2009/10/11 10:44:58 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.6 2011/10/07 12:43:00 ryo-on Exp $
 bin/nb
 share/nanoblogger/copyright
 share/nanoblogger/default/articles/example.txt
@@ -10,6 +10,7 @@ share/nanoblogger/default/styles/feed.css
 share/nanoblogger/default/styles/nb_clean.css
 share/nanoblogger/default/styles/nb_default.css
 share/nanoblogger/default/styles/print.css
+share/nanoblogger/default/templates/archive_index.htm
 share/nanoblogger/default/templates/category_archive.htm
 share/nanoblogger/default/templates/category_entry.htm
 share/nanoblogger/default/templates/day_archive.htm
@@ -62,7 +63,7 @@ share/nanoblogger/plugins/archive/year/year_archive.sh
 share/nanoblogger/plugins/atom.sh
 share/nanoblogger/plugins/calendar.sh
 share/nanoblogger/plugins/entry/category_links.sh
-share/nanoblogger/plugins/entry/format/autobr.sh
+share/nanoblogger/plugins/entry/format/autotag-br.sh
 share/nanoblogger/plugins/entry/format/markdown.sh
 share/nanoblogger/plugins/entry/format/raw.sh
 share/nanoblogger/plugins/makepage/tidy.sh
@@ -80,6 +81,8 @@ share/nanoblogger/plugins/weblog_links.sh
 share/nanoblogger/plugins/weblog_status.sh
 share/nanoblogger/plugins/z001_articles_meta.sh
 share/nanoblogger/welcome-to-nb.txt
-@exec ${MKDIR} %D/share/nanoblogger/default/plugins
-@exec ${MKDIR} %D/share/nanoblogger/default/parts
-@exec ${MKDIR} %D/share/nanoblogger/default/cache
+@pkgdir share/nanoblogger/plugins/page/mod
+@pkgdir share/nanoblogger/plugins/entry/mod
+@pkgdir share/nanoblogger/plugins/archive/category
+@pkgdir share/nanoblogger/default/plugins
+@pkgdir share/nanoblogger/default/cache
