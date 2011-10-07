@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2010/07/31 13:30:31 makoto Exp $
+# $NetBSD: Makefile,v 1.6 2011/10/07 13:04:49 makoto Exp $
 #
 
-DISTNAME=	emacs-nox11-24.0.50
-
+DISTNAME=	emacs-nox11-24.0.90
 PKGREVISION=	${_GIT_PKGVERSION:S/.//g}
 CATEGORIES=	editors
 MASTER_SITES=	#
@@ -14,7 +13,9 @@ LICENSE=	gnu-gpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_TOOLS+=	gmake makeinfo gzip
+USE_TOOLS+=	gmake makeinfo gzip autoconf automake
+# for example, Mac OS X 10.6.1 has 2.61 which fails
+AUTOCONF_REQUIRED=	2.65
 
 CONFLICTS=	emacs-[0-9]*
 
@@ -65,6 +66,9 @@ FILESDIR=	${.CURDIR}/../../editors/emacs/files
 
 post-extract:
 	${CP} ${FILESDIR}/site-init.el ${WRKSRC}/lisp
+
+pre-configure:
+	(cd ${WRKSRC}; ./autogen.sh)
 
 .include "../../wip/mk/git-package.mk"
 .include "../../mk/oss.buildlink3.mk"
