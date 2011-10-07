@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/08/10 07:58:32 obache Exp $
+# $NetBSD: Makefile,v 1.2 2011/10/07 11:30:17 obache Exp $
 #
 
-DISTNAME=	Box2D_v2.1.2
+DISTNAME=	Box2D_v2.2.1
 PKGNAME=	${DISTNAME:S/_v/-/}
 CATEGORIES=	games
 MASTER_SITES=	http://box2d.googlecode.com/files/
@@ -13,7 +13,6 @@ COMMENT=	Box2D Physics Engine for games
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-WRKSRC=		${WRKDIR}/${DISTNAME}/Box2D
 CONFIGURE_DIRS=	Build
 USE_LANGUAGES=	c c++
 USE_CMAKE=	yes

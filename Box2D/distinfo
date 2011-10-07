@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/08/10 07:58:32 obache Exp $
+$NetBSD: distinfo,v 1.2 2011/10/07 11:30:17 obache Exp $
 
-SHA1 (Box2D_v2.1.2.zip) = b1f09f38fc130ae6c17e1767747a3a82bf8e517f
-RMD160 (Box2D_v2.1.2.zip) = 1a9d608ba762863a456cf8e3380bf1e19e3b07fd
-Size (Box2D_v2.1.2.zip) = 3100922 bytes
+SHA1 (Box2D_v2.2.1.zip) = f97e75227a19b01858b1431e5f3eb6b8827bed12
+RMD160 (Box2D_v2.2.1.zip) = 4d68a102567ba2256771bd858d4a58dacf231e27
+Size (Box2D_v2.2.1.zip) = 3637276 bytes
