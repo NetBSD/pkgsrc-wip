@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/11/28 11:00:00 obache Exp $
+# $NetBSD: Makefile,v 1.2 2011/10/07 11:05:07 obache Exp $
 #
 
 DISTNAME=	opendesktop-fonts-1.4.2
 CATEGORIES=	fonts chinese japanese
-MASTER_SITES=	ftp://ftp.opendesktop.org.tw/odp/ODOFonts/OpenFonts/
+MASTER_SITES=	http://www.opendesktop.org.tw/
 
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	ftp://ftp.opendesktop.org.tw/odp/ODOFonts/OpenFonts/
