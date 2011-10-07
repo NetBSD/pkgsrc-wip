@@ -1,16 +1,15 @@
-# $NetBSD: Makefile,v 1.2 2010/06/13 22:47:12 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2011/10/07 13:57:55 ryo-on Exp $
 #
 
 DISTNAME=	noor-1.2.1
 PKGREVISION=	1
 CATEGORIES=	misc python
-MASTER_SITES=	http://garr.dl.sourceforge.net/project/noor/noor/1.2.1/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=noor/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://noor.sourceforge.net/
 COMMENT=	Quran viewer
-#LICENSE=	# TODO: (see mk/license.mk)
-
+LICENSE=	gnu-gpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
