@@ -1,4 +1,0 @@
-- 'tcheck_version' checks fail because they compare configure
-  timestamps and configure flags of the base hdf5 package
-- check if any dependent package needs C++ binding (it's quite
-  unlikely because cxx was off by default in the old version of hdf5)
