@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4493 2011/10/08 09:11:09 alnsn Exp $
+# $Id: Makefile,v 1.4494 2011/10/08 21:10:47 bubuchka Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -314,6 +314,7 @@ SUBDIR+=	clojure-contrib
 SUBDIR+=	cloog
 SUBDIR+=	clustalx
 SUBDIR+=	clustershell
+SUBDIR+=	cm-unicode-ttf
 SUBDIR+=	cmetrics
 SUBDIR+=	codeblocks
 SUBDIR+=	coldfire
