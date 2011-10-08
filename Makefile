@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4491 2011/10/07 09:05:20 ryo-on Exp $
+# $Id: Makefile,v 1.4492 2011/10/08 00:12:51 bubuchka Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2925,6 +2925,7 @@ SUBDIR+=	xcowsay
 SUBDIR+=	xcursor-themes
 SUBDIR+=	xdiskusage
 SUBDIR+=	xdotool
+SUBDIR+=	xdvipdfmx
 SUBDIR+=	xebece
 SUBDIR+=	xesam-glib
 SUBDIR+=	xf86-input-synaptics
