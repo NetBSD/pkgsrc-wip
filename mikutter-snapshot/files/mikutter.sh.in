@@ -1,0 +1,6 @@
+#! /bin/sh
+#
+# $NetBSD: mikutter.sh.in,v 1.1.1.1 2011/10/08 11:12:17 obache Exp $
+#
+
+exec @PREFIX@/share/mikutter/mikutter.rb "$@"
