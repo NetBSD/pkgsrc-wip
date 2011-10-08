@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4492 2011/10/08 00:12:51 bubuchka Exp $
+# $Id: Makefile,v 1.4493 2011/10/08 09:11:09 alnsn Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -808,8 +808,6 @@ SUBDIR+=	haskell-mode
 SUBDIR+=	haydar-fonts
 SUBDIR+=	haze
 SUBDIR+=	hdhomerun_config
-SUBDIR+=	hdf5
-SUBDIR+=	hdf5-c++
 SUBDIR+=	hdparm
 SUBDIR+=	heliodor
 SUBDIR+=	hengband
