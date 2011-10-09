@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2011/05/28 16:20:07 cheusov Exp $
+# $NetBSD: Makefile,v 1.17 2011/10/09 10:05:44 cheusov Exp $
 #
 
 DISTNAME=	netbsd-awk-20110509
@@ -6,7 +6,7 @@ CATEGORIES=	lang sysutils textproc
 MASTER_SITES=	http://mova.org/~cheusov/pub/netbsd-tools/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=		cheusov@tut.by
+MAINTAINER=		cheusov@NetBSD.org
 HOMEPAGE=		http://cvsweb.NetBSD.org/bsdweb.cgi/src/external/historical/nawk/dist/
 COMMENT=		NetBSD version of AWK
 #LICENSE=		mit/bsd?

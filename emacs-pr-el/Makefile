@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/05/14 21:19:21 cheusov Exp $
+# $NetBSD: Makefile,v 1.2 2011/10/09 10:05:45 cheusov Exp $
 
 DISTNAME=		emacs-pr-el-0.0.1
 CATEGORIES=		misc
 MASTER_SITES=		# empty
 DISTFILES=		# empty
 
-MAINTAINER=		vle@gmx.net
+MAINTAINER=		cheusov@NetBSD.org
 HOMEPAGE=		#
 COMMENT=		Modified version of GNATS send-pr.el
 

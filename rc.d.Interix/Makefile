@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/05/10 10:06:42 cheusov Exp $
+# $NetBSD: Makefile,v 1.5 2011/10/09 10:05:43 cheusov Exp $
 #
 
 DISTNAME=		rc.d.Interix-0.0.1
@@ -6,7 +6,7 @@ CATEGORIES=		pkgtools sysutils
 MASTER_SITES=		# empty
 DISTFILES=		# empty
 
-MAINTAINER=		cheusov@tut.by
+MAINTAINER=		cheusov@NetBSD.org
 HOMEPAGE=		#none
 COMMENT=		NetBSD rc.d system for MS Interix
 

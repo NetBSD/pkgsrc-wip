@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2008/11/02 20:21:25 cheusov Exp $
+# $NetBSD: Makefile,v 1.8 2011/10/09 10:05:43 cheusov Exp $
 
 DISTNAME=	xmms-skins-0.10
 CATEGORIES=	meta-pkgs audio
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
-MAINTAINER=	cheusov@tut.by
+MAINTAINER=	cheusov@NetBSD.org
 HOMEPAGE=	http://www.xmms.org/skins.php
 COMMENT=	Skins for XMMS
 

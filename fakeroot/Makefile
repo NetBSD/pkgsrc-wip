@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/01/14 11:16:47 cheusov Exp $
+# $NetBSD: Makefile,v 1.2 2011/10/09 10:05:44 cheusov Exp $
 #
 
 DISTNAME=	fakeroot_1.14.4.orig
@@ -7,7 +7,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/f/fakeroot/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	vle@gmx.net
+MAINTAINER=	cheusov@NetBSD.org
 HOMEPAGE=	http://packages.debian.org/sid/fakeroot
 COMMENT=	Run a command faking root privileges for file manipulation
 

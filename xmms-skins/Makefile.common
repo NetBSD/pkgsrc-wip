@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2008/05/24 15:34:16 tnn2 Exp $
+# $NetBSD: Makefile.common,v 1.5 2011/10/09 10:05:43 cheusov Exp $
 # used by wip/xmms-skin-AdamAmp/Makefile
 # used by wip/xmms-skin-Chaos/Makefile
 # used by wip/xmms-skin-CherryBest/Makefile
@@ -23,7 +23,7 @@
 CATEGORIES=		audio
 MASTER_SITES=		http://www.xmms.org/files/Skins/
 
-MAINTAINER=		cheusov@tut.by
+MAINTAINER=		cheusov@NetBSD.org
 HOMEPAGE=		http://www.xmms.org/skins.php
 COMMENT=		Skin for XMMS
 

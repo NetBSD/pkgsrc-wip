@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2011/05/29 07:53:47 cheusov Exp $
+# $NetBSD: Makefile,v 1.13 2011/10/09 10:05:44 cheusov Exp $
 #
 
 DISTNAME=	bmake-20110505
@@ -6,7 +6,7 @@ PKGNAME=	${DISTNAME:S/bmake/nbmake/}
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.NetBSD.org/pub/NetBSD/misc/sjg/
 
-MAINTAINER=	cheusov@tut.by
+MAINTAINER=	cheusov@NetBSD.org
 HOMEPAGE=	http://www.crufty.net/help/sjg/bmake.html
 COMMENT=	Portable (autoconf) version of NetBSD 'make' utility
 LICENSE=	original-bsd

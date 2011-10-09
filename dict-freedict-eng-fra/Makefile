@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2010/11/11 22:42:06 shattered Exp $
+# $NetBSD: Makefile,v 1.9 2011/10/09 10:05:45 cheusov Exp $
 #
 
 DISTNAME=	eng-fra
@@ -7,7 +7,7 @@ PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=freedict/}
 
-MAINTAINER=	cheusov@tut.by
+MAINTAINER=	cheusov@NetBSD.org
 HOMEPAGE=	http://www.freedict.org/
 COMMENT=	DICTD data for FreeDict English-French dictionary
 

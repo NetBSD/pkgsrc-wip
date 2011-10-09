@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/06/13 22:47:16 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2011/10/09 10:05:43 cheusov Exp $
 #
 
 DISTNAME=	stardict-tools-3.0.1
@@ -7,7 +7,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=stardict/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	vle@gmx.net
+MAINTAINER=	cheusov@NetBSD.org
 HOMEPAGE=	http://stardict.sourceforge.net/
 COMMENT=	StarDict tools for dictionary conversions
 

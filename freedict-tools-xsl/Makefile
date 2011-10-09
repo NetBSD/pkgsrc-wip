@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/07/28 10:16:08 cheusov Exp $
+# $NetBSD: Makefile,v 1.5 2011/10/09 10:05:44 cheusov Exp $
 #
 
 DISTNAME=	freedict-tools-0.2
@@ -7,7 +7,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=freedict/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	cheusov@tut.by
+MAINTAINER=	cheusov@NetBSD.org
 HOMEPAGE=	http://www.freedict.org/
 COMMENT=	XSL files from FreeDict tools
 

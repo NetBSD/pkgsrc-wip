@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2011/09/10 11:22:16 cheusov Exp $
+# $NetBSD: Makefile,v 1.12 2011/10/09 10:05:44 cheusov Exp $
 #
 
 DISTNAME=	lmdbg-0.16.0
@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lmdbg/} \
 		http://mova.org/~cheusov/pub/lmdbg/
 
-MAINTAINER=	vle@gmx.net
+MAINTAINER=	cheusov@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/lmdbg/
 COMMENT=	Stacktracing library similar to glibc backtrace(3)
 LICENSE=	mit

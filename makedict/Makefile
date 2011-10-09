@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/05/25 15:56:04 cheusov Exp $
+# $NetBSD: Makefile,v 1.3 2011/10/09 10:05:44 cheusov Exp $
 #
 
 DISTNAME=	makedict-0.4.1-beta1-Source
@@ -6,7 +6,7 @@ PKGNAME=	${DISTNAME:S/-Source//:S/-beta/beta/}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xdxf/}
 
-MAINTAINER=	vle@gmx.net
+MAINTAINER=	cheusov@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/xdxf/
 COMMENT=	Dictionary converting tool
 

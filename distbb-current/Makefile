@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.10 2011/09/10 15:05:03 cheusov Exp $
+# $NetBSD: Makefile,v 1.11 2011/10/09 10:05:45 cheusov Exp $
 #
 
 DISTNAME=	distbb-9
 CATEGORIES=	pkgtools
 
-MAINTAINER=	cheusov@tut.by
+MAINTAINER=	cheusov@NetBSD.org
 HOMEPAGE=	http://mova.org/~cheusov/pub/distbb/
 COMMENT=	DISTributed Bulk Build tool for pkgsrc
 LICENSE=	2-clause-bsd

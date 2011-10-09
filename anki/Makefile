@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/10/14 18:58:23 cheusov Exp $
+# $NetBSD: Makefile,v 1.2 2011/10/09 10:05:45 cheusov Exp $
 #
 
 DISTNAME=	anki-1.0.1
@@ -6,7 +6,7 @@ CATEGORIES=	x11
 MASTER_SITES=	http://anki.googlecode.com/files/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	cheusov@tut.by
+MAINTAINER=	cheusov@NetBSD.org
 HOMEPAGE=	http://ichi2.net/anki/
 COMMENT=	Flashcard learning program
 LICENSE=	# TODO: (see mk/license.mk)

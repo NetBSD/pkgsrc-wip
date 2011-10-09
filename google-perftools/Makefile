@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2010/06/24 18:07:11 cheusov Exp $
+# $NetBSD: Makefile,v 1.4 2011/10/09 10:05:44 cheusov Exp $
 #
 
 DISTNAME=	google-perftools-1.5
 CATEGORIES=	devel
 MASTER_SITES=	http://google-perftools.googlecode.com/files/
 
-MAINTAINER=	vle@gmx.net
+MAINTAINER=	cheusov@NetBSD.org
 HOMEPAGE=	http://google-perftools.googlecode.com/
 COMMENT=	Multi-threaded malloc() and nifty performance analysis tools
 

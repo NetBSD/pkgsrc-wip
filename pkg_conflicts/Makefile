@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2011/05/16 19:23:24 cheusov Exp $
+# $NetBSD: Makefile,v 1.11 2011/10/09 10:05:44 cheusov Exp $
 
 DISTNAME=	pkg_conflicts-0.4.0
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
-MAINTAINER=	cheusov@tut.by
+MAINTAINER=	cheusov@NetBSD.org
 HOMEPAGE=	# empty http://www.mova.org/~cheusov/pub/pkg_conflicts/
 COMMENT=	Tools for automatic CONFLICTS detection
 LICENSE=	mit
