@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2011/08/22 12:42:15 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.13 2011/10/09 10:45:29 cheusov Exp $
 #
 
 DISTNAME=		PyPanel-2.4
@@ -12,6 +12,8 @@ COMMENT=		Lightweight panel written in Python and C for X11
 
 DEPENDS+=		${PYPKGPREFIX}-Xlib-[0-9]*:../../x11/py-Xlib
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 PYDISTUTILSPKG=		yes
 PY_PATCHPLIST=		yes
 PYTHON_VERSIONS_INCOMPATIBLE=	24 25
@@ -20,9 +22,9 @@ SUBST_CLASSES+=		setup
 SUBST_MESSAGE.setup=	Fixing LOCALBASE and X11BASE paths.
 SUBST_STAGE.setup=	pre-patch
 SUBST_FILES.setup=	setup.py
-SUBST_SED.setup+=	-e 's|/usr/bin|${LOCALBASE}/bin|g'
+SUBST_SED.setup+=	-e 's|/usr/bin|${PREFIX}/bin|g'
 SUBST_SED.setup+=	-e 's|/usr/X11R6|${X11BASE}|g'
-SUBST_SED.setup+=	-e 's|/usr/lib|${LOCALBASE}/lib|g'
+SUBST_SED.setup+=	-e 's|/usr/lib|${PREFIX}/lib|g'
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
