@@ -92,7 +92,7 @@ normalize_version |
 cmp 'pkg_micro_src_summary #2' \
 'PKGNAME=xxkb-X
 PKGPATH=x11/xxkb
-MAINTAINER=vle@gmx.net
+MAINTAINER=cheusov@NetBSD.org
 
 '
 
@@ -101,6 +101,6 @@ normalize_version |
 cmp 'pkg_micro_src_summary #3' \
 'PKGNAME=xxkb-X
 PKGPATH=x11/xxkb
-MAINTAINER=vle@gmx.net
+MAINTAINER=cheusov@NetBSD.org
 
 '

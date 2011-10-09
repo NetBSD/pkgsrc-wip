@@ -303,7 +303,7 @@ normalize_version |
 cmp 'pkg_src_summary #9' \
 'PKGNAME=xxkb-X
 PKGPATH=x11/xxkb
-MAINTAINER=vle@gmx.net
+MAINTAINER=cheusov@NetBSD.org
 
 '
 
@@ -312,7 +312,7 @@ normalize_version |
 cmp 'pkg_src_summary #10' \
 'PKGNAME=xxkb-X
 PKGPATH=x11/xxkb
-MAINTAINER=vle@gmx.net
+MAINTAINER=cheusov@NetBSD.org
 
 '
 
@@ -321,7 +321,7 @@ normalize_version |
 cmp 'pkg_src_summary #11' \
 'PKGNAME=xxkb-X
 PKGPATH=x11/xxkb
-MAINTAINER=vle@gmx.net
+MAINTAINER=cheusov@NetBSD.org
 
 '
 
@@ -330,7 +330,7 @@ normalize_version |
 cmp 'pkg_src_summary #12' \
 'PKGNAME=xxkb-X
 PKGPATH=x11/xxkb
-MAINTAINER=vle@gmx.net
+MAINTAINER=cheusov@NetBSD.org
 
 '
 
