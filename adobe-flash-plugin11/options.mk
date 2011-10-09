@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2011/10/07 23:00:47 ryo-on Exp $
+# $NetBSD: options.mk,v 1.3 2011/10/09 12:13:23 ryo-on Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.adobe-flash-plugin
@@ -13,7 +13,7 @@ PKG_SUPPORTED_OPTIONS=	nspluginwrapper
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} != "Linux"
-.  if ${MACHINE_ARCH} == "i386"# || ${MACHINE_ARCH} == "x86_64"
+.  if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
 PKG_SUGGESTED_OPTIONS=  nspluginwrapper
 .  endif
 .endif
