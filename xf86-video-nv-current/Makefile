@@ -1,11 +1,13 @@
-# $NetBSD: Makefile,v 1.2 2010/03/08 08:06:33 cheusov Exp $
+# $NetBSD: Makefile,v 1.3 2011/10/09 10:28:49 cheusov Exp $
 
 DISTNAME=	xf86-video-nv-2.1.16
 CATEGORIES=	x11
 
-MAINTAINER=	vle@gmx.net
+MAINTAINER=	cheusov@NetBSD.org
 HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	Modular Xorg NVIDIA video driver
+
+LICENSE=	mit
 
 GIT_REPOSITORIES=	master
 GIT_REPO.master=	git://cgit.freedesktop.org/xorg/driver/xf86-video-nv
