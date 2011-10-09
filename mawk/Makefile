@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/08/25 20:00:00 cheusov Exp $
+# $NetBSD: Makefile,v 1.7 2011/10/09 10:49:35 cheusov Exp $
 #
 
 DISTNAME=	mawk-1.3.4-20100625
@@ -7,7 +7,7 @@ CATEGORIES=	lang
 MASTER_SITES=	ftp://invisible-island.net/mawk/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	vle@gmx.net
+MAINTAINER=	cheusov@NetBSD.org
 COMMENT=	AWK clone by Mike Brennan
 LICENSE=	gnu-gpl-v2
 
