@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/10/08 11:12:17 obache Exp $
+# $NetBSD: Makefile,v 1.2 2011/10/10 10:31:56 obache Exp $
 #
 
-DISTNAME=	mikutter.0.0.4.522
+DISTNAME=	mikutter.0.0.4.534
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/./-/}
 CATEGORIES=	net
 MASTER_SITES=	http://mikutter.hachune.net/bin/
@@ -18,7 +18,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 DEPENDS+=	xdg-utils-[0-9]*:../../misc/xdg-utils
 DEPENDS+=	${RUBY_PKGPREFIX}-json>=1.5.1:../../textproc/ruby-json
 DEPENDS+=	${RUBY_PKGPREFIX}-hmac>=0.4.0:../../security/ruby-hmac
-DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-gtk-[0-9]*:../../x11/ruby-gnome2-gtk
+DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-gtk>=1.0.0:../../x11/ruby-gnome2-gtk
 DEPENDS+=	${RUBY_PKGPREFIX}-oauth>=0.3.6:../../security/ruby-oauth
 # need included escape.rb
 #DEPENDS+=	${RUBY_PKGPREFIX}-escape-[0-9]*:../../textproc/ruby-escape

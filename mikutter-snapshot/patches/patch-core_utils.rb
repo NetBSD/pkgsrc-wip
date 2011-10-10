@@ -1,13 +1,13 @@
-$NetBSD: patch-core_utils.rb,v 1.1.1.1 2011/10/08 11:12:17 obache Exp $
+$NetBSD: patch-core_utils.rb,v 1.2 2011/10/10 10:31:56 obache Exp $
 
 * use included escape library instead of system one.
 
---- core/utils.rb.orig	2011-08-27 18:49:12.000000000 +0000
+--- core/utils.rb.orig	2011-10-02 11:08:04.000000000 +0000
 +++ core/utils.rb
-@@ -30,7 +30,7 @@ RUBY_VERSION_ARRAY = RUBY_VERSION.split(
- require File.join(File::dirname(__FILE__), 'miquire')
- 
- Dir::chdir(File::dirname(__FILE__))
+@@ -35,7 +35,7 @@ if RUBY_VERSION >= '1.9.2'
+     $LOAD_PATH.push(File.expand_path(File.join(Dir.pwd, path)))
+   }
+ end
 -miquire :lib, 'escape'
 +miquire :lib, 'miku/escape'
  miquire :lib, 'lazy'

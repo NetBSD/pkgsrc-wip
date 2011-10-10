@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/10/08 11:12:17 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/10/10 10:31:56 obache Exp $
 bin/mikutter
 share/applications/mikutter.desktop
 share/doc/mikutter/README
@@ -17,7 +17,8 @@ share/mikutter/core/addon/extract.rb
 share/mikutter/core/addon/followingcontrol.rb
 share/mikutter/core/addon/friend_timeline.rb
 share/mikutter/core/addon/libnotify/libnotify.rb
-share/mikutter/core/addon/list.rb
+share/mikutter/core/addon/list/list.rb
+share/mikutter/core/addon/list/liststream.rb
 share/mikutter/core/addon/mentions.rb
 share/mikutter/core/addon/notify.rb
 share/mikutter/core/addon/openimg/openimg.rb
@@ -46,6 +47,7 @@ share/mikutter/core/initialize.rb
 share/mikutter/core/lib/lazy.rb
 share/mikutter/core/lib/miku/escape.rb
 share/mikutter/core/lib/piapro.rb
+share/mikutter/core/lib/reserver.rb
 share/mikutter/core/lib/test_unit_extensions.rb
 share/mikutter/core/lib/timelimitedqueue.rb
 share/mikutter/core/lib/timelimitedqueue/test/test_timelimitedqueue.rb
@@ -154,6 +156,7 @@ share/mikutter/core/test/test_message.rb
 share/mikutter/core/test/test_messageconverters.rb
 share/mikutter/core/test/test_miquire.rb
 share/mikutter/core/test/test_plugin.rb
+share/mikutter/core/test/test_post.rb
 share/mikutter/core/test/test_retriever.rb
 share/mikutter/core/test/test_user.rb
 share/mikutter/core/test/test_utils.rb
