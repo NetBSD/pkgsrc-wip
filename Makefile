@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4495 2011/10/11 08:59:14 jihbed Exp $
+# $Id: Makefile,v 1.4496 2011/10/11 12:48:55 ryo-on Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -75,7 +75,6 @@ SUBDIR+=	airsnort
 SUBDIR+=	akonadi
 SUBDIR+=	alberta
 SUBDIR+=	alex
-SUBDIR+=	algol68g
 SUBDIR+=	alive
 SUBDIR+=	allegro
 SUBDIR+=	alphamail
