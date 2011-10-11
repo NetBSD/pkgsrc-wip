@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/10/11 12:37:48 ryo-on Exp $
+# $NetBSD: Makefile,v 1.3 2011/10/11 12:40:48 ryo-on Exp $
 #
 
 DISTNAME=	algol68g-2.3.1
@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v3
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
-USE_LANGUAGES+=	c
+USE_LANGUAGES=	c
 
 .include "options.mk"
 
