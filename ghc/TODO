@@ -6,6 +6,12 @@ wip/ghc TODO
 
 * Build more bootstrapping HC archives to support more platforms.
 
+* Get the package to pass the ghc tests (currently it does not)
+
+* Get the package to be able to build a version of darcs that works
+  (because darcs is the most-desired haskell package, almost always
+  needed by haskell users and needed by others to access code from the
+  haskell world).
 
 --------------------------
 How to build an HC archive
