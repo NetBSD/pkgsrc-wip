@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4494 2011/10/08 21:10:47 bubuchka Exp $
+# $Id: Makefile,v 1.4495 2011/10/11 08:59:14 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2203,6 +2203,7 @@ SUBDIR+=	py-lockfile
 SUBDIR+=	py-logilab-database
 SUBDIR+=	py-logilab-mtconverter
 SUBDIR+=	py-logilab-pigg
+SUBDIR+=	py-louie
 SUBDIR+=	py-magnitude
 SUBDIR+=	py-matplotlib
 SUBDIR+=	py-matplotlib-gtk2
@@ -2375,6 +2376,7 @@ SUBDIR+=	py-traits
 SUBDIR+=	py-traitsgui
 SUBDIR+=	py-tranquil
 SUBDIR+=	py-transaction
+SUBDIR+=	py-datatree
 SUBDIR+=	py-turbojson
 SUBDIR+=	py-twisted-kqueue
 SUBDIR+=	py-uncertainties
