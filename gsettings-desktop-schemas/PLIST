@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/07/29 23:20:50 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/10/12 15:46:56 ryo-on Exp $
 include/gsettings-desktop-schemas/gdesktop-enums.h
 share/GConf/gsettings/gsettings-desktop-schemas.convert
 share/glib-2.0/schemas/org.gnome.desktop.a11y.applications.gschema.xml
@@ -20,8 +20,10 @@ share/glib-2.0/schemas/org.gnome.system.locale.gschema.xml
 share/glib-2.0/schemas/org.gnome.system.proxy.gschema.xml
 share/locale/cs/LC_MESSAGES/gsettings-desktop-schemas.mo
 share/locale/de/LC_MESSAGES/gsettings-desktop-schemas.mo
+share/locale/eo/LC_MESSAGES/gsettings-desktop-schemas.mo
 share/locale/es/LC_MESSAGES/gsettings-desktop-schemas.mo
 share/locale/ja/LC_MESSAGES/gsettings-desktop-schemas.mo
+share/locale/nb/LC_MESSAGES/gsettings-desktop-schemas.mo
 share/locale/pt_BR/LC_MESSAGES/gsettings-desktop-schemas.mo
 share/locale/sl/LC_MESSAGES/gsettings-desktop-schemas.mo
 share/locale/sv/LC_MESSAGES/gsettings-desktop-schemas.mo

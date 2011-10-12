@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/07/29 23:20:50 jihbed Exp $
+$NetBSD: distinfo,v 1.2 2011/10/12 15:46:56 ryo-on Exp $
 
-SHA1 (gsettings-desktop-schemas-3.1.3.tar.bz2) = 92f6883d8c251453025c63c25e6cd0521f9c4328
-RMD160 (gsettings-desktop-schemas-3.1.3.tar.bz2) = 90601e6f9d20e3eeb5db6c25c355f957ccab7170
-Size (gsettings-desktop-schemas-3.1.3.tar.bz2) = 160112 bytes
+SHA1 (gsettings-desktop-schemas-3.2.0.tar.bz2) = 601f1e69a11eabd1dd1d4ded5e694be7e5ab4379
+RMD160 (gsettings-desktop-schemas-3.2.0.tar.bz2) = c13f23ba56bd3c7d368128b8d164d51223532de3
+Size (gsettings-desktop-schemas-3.2.0.tar.bz2) = 174320 bytes
