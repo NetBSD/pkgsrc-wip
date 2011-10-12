@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2007/06/07 08:05:18 koifren Exp $
+$NetBSD: distinfo,v 1.2 2011/10/12 09:04:45 jgoamakf Exp $
 
-SHA1 (String-Similarity-1.02.tar.gz) = 489c08d138d9ffe2ad7118fa1fd4d8b4d8012826
-RMD160 (String-Similarity-1.02.tar.gz) = 3c822c45f923bd434b7643096447427351fd297b
-Size (String-Similarity-1.02.tar.gz) = 15799 bytes
+SHA1 (String-Similarity-1.04.tar.gz) = ce3dbbc52eda2cd874b7c00e52e0e83dfc745adf
+RMD160 (String-Similarity-1.04.tar.gz) = 7a8768d61acc0928f446dad31ba6caebd23acb05
+Size (String-Similarity-1.04.tar.gz) = 15250 bytes
