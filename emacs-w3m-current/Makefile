@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/01/18 14:30:36 makoto Exp $
+# $NetBSD: Makefile,v 1.6 2011/10/12 01:16:43 minskim Exp $
 
 DISTNAME=	emacs-w3m-1.4.50
 PKGNAME=	emacs-w3m-1.4.50
@@ -26,6 +26,13 @@ CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
 CONFIGURE_ENV+=		GAMEOWN=${GAMEOWN:Q}
 BUILD_TARGET=
 WRKSRC=			${WRKDIR}/emacs-w3m
+
+EVAL_PREFIX=	W3MPREFIX=w3m
+
+SUBST_CLASSES+=		paths
+SUBST_FILES.paths+=	w3m.el
+SUBST_SED.paths+=	-e 's,@W3MPREFIX@,${W3MPREFIX},g'
+SUBST_STAGE.paths=	pre-configure
 
 INSTALL_MAKE_FLAGS=	prefix=${DESTDIR}${PREFIX} \
 			infodir=${DESTDIR}${PREFIX}/${PKGINFODIR}
