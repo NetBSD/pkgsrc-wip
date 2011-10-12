@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4497 2011/10/11 19:54:45 minskim Exp $
+# $Id: Makefile,v 1.4498 2011/10/12 13:16:35 ryo-on Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2216,7 +2216,6 @@ SUBDIR+=	py-mois
 SUBDIR+=	py-mpich4py
 SUBDIR+=	py-multichain_mcmc
 SUBDIR+=	py-mwavepy
-SUBDIR+=	py-mx-base
 SUBDIR+=	py-mysqldb-docs
 SUBDIR+=	py-ncomb
 SUBDIR+=	py-netcdf
