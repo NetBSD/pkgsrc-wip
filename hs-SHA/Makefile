@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2009/09/24 02:05:29 phonohawk Exp $
+# $NetBSD: Makefile,v 1.4 2011/10/12 19:02:55 phonohawk Exp $
 #
 
-DISTNAME=	SHA-1.4.0
+DISTNAME=	SHA-1.5.0.0
 CATEGORIES=	security
 
 MAINTAINER=	pho@cielonegro.org
