@@ -1,0 +1,12 @@
+$NetBSD: patch-bc,v 1.5 2011/10/13 15:30:18 makoto Exp $
+
+--- mi/miscrinit.c.orig	2009-10-12 02:52:40.000000000 +0000
++++ mi/miscrinit.c
+@@ -29,6 +29,7 @@ from The Open Group.
+ #ifdef HAVE_DIX_CONFIG_H
+ #include <dix-config.h>
+ #endif
++#include <gcstruct.h>
+ 
+ #include <X11/X.h>
+ #include "servermd.h"
