@@ -1,0 +1,14 @@
+$NetBSD: patch-sb,v 1.1.1.1 2011/10/13 14:57:02 makoto Exp $
+
+
+--- hw/xfree86/common/xf86Configure.c.orig	2011-08-01 08:44:54.000000000 +0900
++++ hw/xfree86/common/xf86Configure.c	2011-10-13 20:09:35.000000000 +0900
+@@ -90,7 +90,7 @@
+             case BUS_PCI:
+                 ret = xf86PciConfigure(busData, DevToConfig[i].pVideo);
+                 break;
+-#if (defined(__sparc__) || defined(__sparc)) && !defined(__OpenBSD__)
++#if (defined(__sparc__) || defined(__sparc)) && !defined(__OpenBSD__) && !defined(__NetBSD__)
+             case BUS_SBUS:
+                 ret = xf86SbusConfigure(busData, DevToConfig[i].sVideo);
+                 break;

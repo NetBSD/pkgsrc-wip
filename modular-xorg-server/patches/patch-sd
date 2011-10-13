@@ -1,0 +1,24 @@
+$NetBSD: patch-sd,v 1.1.1.1 2011/10/13 14:57:02 makoto Exp $
+
+Temporary disable Sbus suport.
+
+--- hw/xfree86/common/xf86Bus.c.orig	2011-03-02 13:09:32.000000000 +0900
++++ hw/xfree86/common/xf86Bus.c	2011-10-13 20:32:01.000000000 +0900
+@@ -196,7 +196,7 @@
+ xf86BusProbe(void)
+ {
+     xf86PciProbe();
+-#if (defined(__sparc__) || defined(__sparc)) && !defined(__OpenBSD__)
++#if (defined(__sparc__) || defined(__sparc)) && !defined(__OpenBSD__) && !defined(__NetBSD__)
+     xf86SbusProbe();
+ #endif
+ }
+@@ -506,7 +506,7 @@
+     int i;
+ 
+     if (fbSlotClaimed && (pciSlotClaimed
+-#if (defined(__sparc__) || defined(__sparc)) && !defined(__OpenBSD__)
++#if (defined(__sparc__) || defined(__sparc)) && !defined(__OpenBSD__) && !defined(__NetBSD__)
+ 	    || sbusSlotClaimed
+ #endif
+ 	    ))
