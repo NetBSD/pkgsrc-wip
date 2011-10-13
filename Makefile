@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4499 2011/10/13 10:56:18 ryo-on Exp $
+# $Id: Makefile,v 1.4500 2011/10/13 11:59:43 ryo-on Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -376,6 +376,7 @@ SUBDIR+=	debian_gtk
 #SUBDIR+=	debian_linux	# not a real package
 SUBDIR+=	debian_x11
 SUBDIR+=	debugger-git
+SUBDIR+=	dee
 SUBDIR+=	deforaos-browser
 SUBDIR+=	deforaos-configure
 SUBDIR+=	deforaos-editor
