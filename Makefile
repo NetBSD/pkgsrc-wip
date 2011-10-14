@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4501 2011/10/14 16:25:48 ryo-on Exp $
+# $Id: Makefile,v 1.4502 2011/10/14 16:34:03 ryo-on Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2519,7 +2519,6 @@ SUBDIR+=	ruby-xmpp4r
 SUBDIR+=	runit
 SUBDIR+=	s3cmd
 SUBDIR+=	s3funnel
-SUBDIR+=	sakura
 SUBDIR+=	samhain
 SUBDIR+=	sara
 SUBDIR+=	saxon
