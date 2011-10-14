@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4500 2011/10/13 11:59:43 ryo-on Exp $
+# $Id: Makefile,v 1.4501 2011/10/14 16:25:48 ryo-on Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1219,7 +1219,6 @@ SUBDIR+=	libSoundTouch
 SUBDIR+=	libanimal
 SUBDIR+=	libargp
 SUBDIR+=	libassa
-SUBDIR+=	libatomic_ops
 SUBDIR+=	libavc1394
 SUBDIR+=	libbrahe
 SUBDIR+=	libbtctl
