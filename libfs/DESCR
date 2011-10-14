@@ -1,0 +1,3 @@
+libFS - X Font Service client library
+This library is used by clients of X Font Servers (xfs), such as
+xfsinfo, xfslsfonts, and the X servers themselves.
