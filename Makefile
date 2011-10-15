@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4502 2011/10/14 16:34:03 ryo-on Exp $
+# $Id: Makefile,v 1.4503 2011/10/15 15:53:15 jgoamakf Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1820,7 +1820,6 @@ SUBDIR+=	p5-Syntax-Highlight-Perl-Improved
 SUBDIR+=	p5-Sys-Syslog
 SUBDIR+=	p5-Task-Catalyst
 SUBDIR+=	p5-Template-Plugin-Class
-SUBDIR+=	p5-Template-Provider-Encoding
 SUBDIR+=	p5-Term-Encoding
 SUBDIR+=	p5-Test-Assertions-TestScript
 SUBDIR+=	p5-Test-WWW-Mechanize-CGIApp
