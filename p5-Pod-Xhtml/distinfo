@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/09/10 05:01:50 ficovh Exp $
+$NetBSD: distinfo,v 1.2 2011/10/15 16:07:18 jgoamakf Exp $
 
-SHA1 (Pod-Xhtml-1.59.tar.gz) = fcd2b4ff57da57b04c34fcfd62f43f06d5f6f0a9
-RMD160 (Pod-Xhtml-1.59.tar.gz) = 900cd9116970112bf4b585c1da330cddac4f6c00
-Size (Pod-Xhtml-1.59.tar.gz) = 26421 bytes
+SHA1 (Pod-Xhtml-1.61.tar.gz) = 8907cc740b00f354d03a65d907f8fd95bef0c618
+RMD160 (Pod-Xhtml-1.61.tar.gz) = 0c02961ce627c23daa8b0edf424d6bf8e93ffc1a
+Size (Pod-Xhtml-1.61.tar.gz) = 26725 bytes
