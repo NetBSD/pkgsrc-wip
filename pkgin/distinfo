@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.44 2011/10/10 20:42:53 imilh Exp $
+$NetBSD: distinfo,v 1.45 2011/10/15 22:53:50 imilh Exp $
 
-SHA1 (pkgin-20111010.tar.gz) = 989c93bac45358048332f4996190497e69a54a10
-RMD160 (pkgin-20111010.tar.gz) = 7e395ef123f79c240755690c319cbef26451e81f
-Size (pkgin-20111010.tar.gz) = 1457825 bytes
+SHA1 (pkgin-20111016.tar.gz) = a13e399efcaabeeed0b433607d2a586ef8777a0f
+RMD160 (pkgin-20111016.tar.gz) = f6931707e02c560d36286a5a6c7322b158a4a9aa
+Size (pkgin-20111016.tar.gz) = 1458189 bytes
