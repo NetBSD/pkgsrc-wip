@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2011/10/16 11:06:41 ryo-on Exp $
+# $NetBSD: Makefile,v 1.6 2011/10/16 11:08:48 ryo-on Exp $
 
 DISTNAME=	wkhtmltopdf-0.11.0_rc1
 CATEGORIES=	textproc
@@ -25,7 +25,7 @@ SUBST_CLASSES+=		target
 SUBST_STAGE.target=	post-build
 SUBST_MESSAGE.target=	Fixing target (make install).
 SUBST_FILES.target=	src/pdf/Makefile src/image/Makefile
-SUBST_SED.target=	-e 's,--mode=install cp "$$(QMAKE_TARGET)",--mode=install ${INSTALL_LIB} "$$(TARGET)",g'
+SUBST_SED.target=	-e 's,--mode=install cp "$$(QMAKE_TARGET)",--mode=install ${INSTALL_LIB:Q} "$$(TARGET)",g'
 
 .include "../../x11/qt4-libs/buildlink3.mk"
 .include "../../x11/qt4-tools/buildlink3.mk"
