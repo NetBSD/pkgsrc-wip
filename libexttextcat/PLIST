@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2011/10/16 21:24:05 ftigeot Exp $
+bin/createfp
+include/libtextcat/common.h
+include/libtextcat/constants.h
+include/libtextcat/exttextcat-version.h
+include/libtextcat/fingerprint.h
+include/libtextcat/textcat.h
+include/libtextcat/utf8misc.h
+lib/libtextcat.la
+lib/pkgconfig/libexttextcat.pc
+share/libexttextcat/fpdb.conf
