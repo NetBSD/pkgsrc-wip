@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2011/10/16 21:24:05 ftigeot Exp $
+# $NetBSD: Makefile,v 1.2 2011/10/16 21:35:51 ftigeot Exp $
 
-VER=		3.1.0
-DISTNAME=	8dc93ffd48cb80b738075ce37df8f915-libexttextcat-${VER}
+VER=		3.1.1
+DISTNAME=	libexttextcat-${VER}
 PKGNAME=	libexttextcat-${VER:S/-//g}
 CATEGORIES=	textproc
 MASTER_SITES=	http://dev-www.libreoffice.org/src/
