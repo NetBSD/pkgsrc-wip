@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2011/08/08 13:52:24 ryo-on Exp $
+# $NetBSD: Makefile,v 1.5 2011/10/16 11:06:41 ryo-on Exp $
 
-DISTNAME=	wkhtmltopdf-0.10.0_rc2
+DISTNAME=	wkhtmltopdf-0.11.0_rc1
 CATEGORIES=	textproc
 MASTER_SITES=	http://wkhtmltopdf.googlecode.com/files/
 EXTRACT_SUFX=	.tar.bz2

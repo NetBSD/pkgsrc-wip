@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2011/08/08 13:00:44 ryo-on Exp $
+$NetBSD: distinfo,v 1.3 2011/10/16 11:06:41 ryo-on Exp $
 
-SHA1 (wkhtmltopdf-0.10.0_rc2.tar.bz2) = d70d7fc610b4f51980d6b0efb7cd6b84621a3182
-RMD160 (wkhtmltopdf-0.10.0_rc2.tar.bz2) = af1de57252b2204127f20e51a6df7203ba415db1
-Size (wkhtmltopdf-0.10.0_rc2.tar.bz2) = 107680 bytes
+SHA1 (wkhtmltopdf-0.11.0_rc1.tar.bz2) = db03922d281856e503b3d562614e3936285728c7
+RMD160 (wkhtmltopdf-0.11.0_rc1.tar.bz2) = e37e090eda708fa8fdc715a7ef9fcbfc5394df8a
+Size (wkhtmltopdf-0.11.0_rc1.tar.bz2) = 97589 bytes
