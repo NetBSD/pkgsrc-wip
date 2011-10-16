@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.15 2011/10/16 08:11:53 ryo-on Exp $
+# $NetBSD: Makefile,v 1.16 2011/10/16 08:13:17 ryo-on Exp $
 #
 
 DISTNAME=		cclive-0.7.6
 CATEGORIES=		net multimedia www
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=cclive/}
 
-MAINTAINER= 		zecrazytux@zecrazytux.net
+MAINTAINER=		zecrazytux@zecrazytux.net
 HOMEPAGE=		http://cclive.sourceforge.net/
 COMMENT=		Command line video extraction tool for user-uploaded video hosts
 LICENSE=		gnu-gpl-v3
