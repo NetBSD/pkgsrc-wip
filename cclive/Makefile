@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2011/08/22 11:13:52 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.15 2011/10/16 08:11:53 ryo-on Exp $
 #
 
-DISTNAME=		cclive-0.7.5.1
+DISTNAME=		cclive-0.7.6
 CATEGORIES=		net multimedia www
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=cclive/}
 
@@ -23,7 +23,7 @@ CXXFLAGS+=		-std=c++0x
 .endif
 
 BUILDLINK_API_DEPENDS.quvi+=	quvi>=0.2.16.1
-.include "../../net/quvi/buildlink3.mk"
+.include "../../net/libquvi/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/pcre++/buildlink3.mk"
