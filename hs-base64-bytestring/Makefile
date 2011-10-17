@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/07/29 20:04:57 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2011/10/17 23:39:29 phonohawk Exp $
 #
 
-DISTNAME=	base64-bytestring-0.1.0.2
+DISTNAME=	base64-bytestring-0.1.0.3
 CATEGORIES=	converters
 
 MAINTAINER=	pho@cielonegro.org
