@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/10/17 02:36:15 makoto Exp $
+bin/xfs
+etc/X11/fs/config
+man/man1/xfs.1
+share/examples/rc.d/xfs

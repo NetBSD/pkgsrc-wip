@@ -1,0 +1,5 @@
+use CONF_FILES is not completed yet, so getting following from pkglint
+
+  ERROR: PLIST:3: Configuration files must not be registered
+  in the PLIST. Please use the CONF_FILES framework, which is
+  described in mk/pkginstall/bsd.pkginstall.mk.
