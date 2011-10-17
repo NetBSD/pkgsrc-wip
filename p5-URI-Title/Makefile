@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/02/13 05:23:14 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.2 2011/10/17 15:28:26 jgoamakf Exp $
 
-DISTNAME=		URI-Title-1.61
+DISTNAME=		URI-Title-1.85
 PKGNAME=		p5-${DISTNAME}
 CATEGORIES=		www perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=URI/}
@@ -8,6 +8,9 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=URI/}
 MAINTAINER=		hiramatu@boreas.dti.ne.jp
 HOMEPAGE=		http://search.cpan.org/dist/URI-Title/
 COMMENT=		Get the titles of things on the web in a sensible way
+LICENSE=		${PERL5_LICENSE}
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		p5-Module-Pluggable>=1.2:../../devel/p5-Module-Pluggable
 DEPENDS+=		p5-HTML-Parser>=3.45:../../www/p5-HTML-Parser
@@ -17,6 +20,8 @@ DEPENDS+=		p5-Image-Size>=1.01:../../graphics/p5-Image-Size
 DEPENDS+=		p5-libwww>=5.805:../../www/p5-libwww
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+REPLACE_PERL=		title.pl
 
 PERL5_PACKLIST=		auto/URI/Title/.packlist
 
