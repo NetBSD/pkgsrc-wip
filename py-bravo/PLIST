@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2011/10/03 00:21:17 schnoebe Exp $
+@comment $NetBSD: PLIST,v 1.5 2011/10/17 23:24:22 schnoebe Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -313,9 +313,15 @@ ${PYSITELIB}/bravo/tests/utilities/test_coords.pyo
 ${PYSITELIB}/bravo/tests/utilities/test_furnace.py
 ${PYSITELIB}/bravo/tests/utilities/test_furnace.pyc
 ${PYSITELIB}/bravo/tests/utilities/test_furnace.pyo
+${PYSITELIB}/bravo/tests/utilities/test_geometry.py
+${PYSITELIB}/bravo/tests/utilities/test_geometry.pyc
+${PYSITELIB}/bravo/tests/utilities/test_geometry.pyo
 ${PYSITELIB}/bravo/tests/utilities/test_maths.py
 ${PYSITELIB}/bravo/tests/utilities/test_maths.pyc
 ${PYSITELIB}/bravo/tests/utilities/test_maths.pyo
+${PYSITELIB}/bravo/tests/utilities/test_paths.py
+${PYSITELIB}/bravo/tests/utilities/test_paths.pyc
+${PYSITELIB}/bravo/tests/utilities/test_paths.pyo
 ${PYSITELIB}/bravo/tests/utilities/test_redstone.py
 ${PYSITELIB}/bravo/tests/utilities/test_redstone.pyc
 ${PYSITELIB}/bravo/tests/utilities/test_redstone.pyo
@@ -352,6 +358,9 @@ ${PYSITELIB}/bravo/utilities/geometry.pyo
 ${PYSITELIB}/bravo/utilities/maths.py
 ${PYSITELIB}/bravo/utilities/maths.pyc
 ${PYSITELIB}/bravo/utilities/maths.pyo
+${PYSITELIB}/bravo/utilities/paths.py
+${PYSITELIB}/bravo/utilities/paths.pyc
+${PYSITELIB}/bravo/utilities/paths.pyo
 ${PYSITELIB}/bravo/utilities/redstone.py
 ${PYSITELIB}/bravo/utilities/redstone.pyc
 ${PYSITELIB}/bravo/utilities/redstone.pyo
@@ -373,30 +382,12 @@ ${PYSITELIB}/bravo/world.pyo
 ${PYSITELIB}/exocet/__init__.py
 ${PYSITELIB}/exocet/__init__.pyc
 ${PYSITELIB}/exocet/__init__.pyo
-${PYSITELIB}/exocet/_components.py
-${PYSITELIB}/exocet/_components.pyc
-${PYSITELIB}/exocet/_components.pyo
 ${PYSITELIB}/exocet/_exocet.py
 ${PYSITELIB}/exocet/_exocet.pyc
 ${PYSITELIB}/exocet/_exocet.pyo
-${PYSITELIB}/exocet/_filepath.py
-${PYSITELIB}/exocet/_filepath.pyc
-${PYSITELIB}/exocet/_filepath.pyo
 ${PYSITELIB}/exocet/_modules.py
 ${PYSITELIB}/exocet/_modules.pyc
 ${PYSITELIB}/exocet/_modules.pyo
-${PYSITELIB}/exocet/_reflect.py
-${PYSITELIB}/exocet/_reflect.pyc
-${PYSITELIB}/exocet/_reflect.pyo
-${PYSITELIB}/exocet/_runtime.py
-${PYSITELIB}/exocet/_runtime.pyc
-${PYSITELIB}/exocet/_runtime.pyo
-${PYSITELIB}/exocet/_win32.py
-${PYSITELIB}/exocet/_win32.pyc
-${PYSITELIB}/exocet/_win32.pyo
-${PYSITELIB}/exocet/_zippath.py
-${PYSITELIB}/exocet/_zippath.pyc
-${PYSITELIB}/exocet/_zippath.pyo
 ${PYSITELIB}/exocet/test/__init__.py
 ${PYSITELIB}/exocet/test/__init__.pyc
 ${PYSITELIB}/exocet/test/__init__.pyo
@@ -409,9 +400,6 @@ ${PYSITELIB}/exocet/test/test_exocet.pyo
 ${PYSITELIB}/exocet/test/test_modules.py
 ${PYSITELIB}/exocet/test/test_modules.pyc
 ${PYSITELIB}/exocet/test/test_modules.pyo
-${PYSITELIB}/exocet/test/test_paths.py
-${PYSITELIB}/exocet/test/test_paths.pyc
-${PYSITELIB}/exocet/test/test_paths.pyo
 ${PYSITELIB}/exocet/test/testpackage/__init__.py
 ${PYSITELIB}/exocet/test/testpackage/__init__.pyc
 ${PYSITELIB}/exocet/test/testpackage/__init__.pyo

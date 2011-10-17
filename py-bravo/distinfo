@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.4 2011/10/03 00:21:17 schnoebe Exp $
+$NetBSD: distinfo,v 1.5 2011/10/17 23:24:22 schnoebe Exp $
 
-SHA1 (MostAwesomeDude-bravo-1.8-0-g3fddb87.tar.gz) = 06bb53cc67255c63df8e0a6f004b3c8d54e4f135
-RMD160 (MostAwesomeDude-bravo-1.8-0-g3fddb87.tar.gz) = dbb61317443a96dca64aa1cbc6b6ebf213fdb92c
-Size (MostAwesomeDude-bravo-1.8-0-g3fddb87.tar.gz) = 302033 bytes
+SHA1 (MostAwesomeDude-bravo-1.8.1-0-gf6cb5fe.tar.gz) = 5bb29d89a1dc25213e128cefbc3e9cacc0470b0d
+RMD160 (MostAwesomeDude-bravo-1.8.1-0-gf6cb5fe.tar.gz) = 461212a7587ee6e755bd7c6c7e8678a6cc0b6551
+Size (MostAwesomeDude-bravo-1.8.1-0-gf6cb5fe.tar.gz) = 279025 bytes
 SHA1 (patch-README.rst) = 4542be2aaa4ddf00b41dd3aa8a1fb1f3cad10419
 SHA1 (patch-bravo-config.py) = 2e6b94119a7445b731e25c9817616a81527fe725
 SHA1 (patch-docs_administration.rst) = dba2225f3a266e19fb100e5a3d887147f6739646
