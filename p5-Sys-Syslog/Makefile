@@ -1,16 +1,15 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/09/01 13:00:14 udontknow Exp $
+# $NetBSD: Makefile,v 1.2 2011/10/17 15:12:34 jgoamakf Exp $
 #
 
-DISTNAME=	Sys-Syslog-0.27
+DISTNAME=	Sys-Syslog-0.29
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/S/SA/SAPER/}
 
 MAINTAINER=	evaldo@gardenali.biz
-HOMEPAGE=	http://search.cpan.org/CPAN/authors/id/S/SA/SAPER/
+#HOMEPAGE=	http://search.cpan.org/CPAN/authors/id/S/SA/SAPER/
+HOMEPAGE=	http://search.cpan.org/dist/Sys-Syslog/
 COMMENT=	Perl interface to the UNIX syslog(3) calls
-
-.include "../../lang/perl5/license.mk"
 LICENSE=        ${PERL5_LICENSE}
 
 PKG_DESTDIR_SUPPORT=	user-destdir
