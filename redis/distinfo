@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.7 2011/10/17 15:57:16 bharder Exp $
+$NetBSD: distinfo,v 1.8 2011/10/18 06:13:56 bharder Exp $
 
-SHA1 (redis-2.2.15.tar.gz) = aa6758590363556e73f8d36bdfccb429011da331
-RMD160 (redis-2.2.15.tar.gz) = 50b9bc1d4545170d39069ab1d1380b848f0a2b29
-Size (redis-2.2.15.tar.gz) = 456185 bytes
-SHA1 (patch-aa) = f91fff72fd0e1c25a4ee177ff169cceb84e25b45
-SHA1 (patch-ab) = c8cf8afeda68d3eaf8f5f60d8cbec116b5d4a37f
+SHA1 (redis-2.4.1.tar.gz) = 8c083e0a0d011b037178720265f58b5882de68cc
+RMD160 (redis-2.4.1.tar.gz) = 147b13f1ce6e5c4ba26bf4a23f9581e9598f6ba6
+Size (redis-2.4.1.tar.gz) = 618821 bytes
+SHA1 (patch-aa) = 0df03c01fb8e2d9099e6a6ae1768501cf9ecb314
+SHA1 (patch-ab) = f6711f419cadc0c179893b7dbd256eb5bfbb03dc
 SHA1 (patch-ac) = 4427eb9c35bae154e7b20fb61e65c0fdc77588cf
-SHA1 (patch-ad) = 96ae3586acedea61089d3004418db05e2325cb64
+SHA1 (patch-ad) = ff20b9737970561bb98a322e77e48c979e350257
