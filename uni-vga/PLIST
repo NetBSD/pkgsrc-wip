@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2011/10/19 18:39:23 mwilhelmy Exp $
+lib/X11/fonts/uni-vga/u_vga16.pcf.gz

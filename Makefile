@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4505 2011/10/19 09:20:55 makoto Exp $
+# $Id: Makefile,v 1.4506 2011/10/19 18:39:23 mwilhelmy Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2816,6 +2816,7 @@ SUBDIR+=	umix
 SUBDIR+=	umph
 SUBDIR+=	umurmur
 SUBDIR+=	undo-tree
+SUBDIR+=	uni-vga
 SUBDIR+=	unix2tcp
 SUBDIR+=	unmo3
 SUBDIR+=	unnethack
