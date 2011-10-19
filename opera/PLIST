@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2011/06/30 09:18:49 obache Exp $
+@comment $NetBSD: PLIST,v 1.11 2011/10/19 11:44:00 obache Exp $
 bin/opera
 bin/opera-widget-manager
 lib/opera/gstreamer/plugins/libgstoperamatroska.so
@@ -197,6 +197,9 @@ share/opera/locale/ta/ta.lng
 share/opera/locale/te/te.lng
 share/opera/locale/th/th.lng
 share/opera/locale/tl/tl.lng
+share/opera/locale/tr/bookmarks.adr
+share/opera/locale/tr/search.ini
+share/opera/locale/tr/standard_speeddial.ini
 share/opera/locale/tr/tr.lng
 share/opera/locale/uk/bookmarks.adr
 share/opera/locale/uk/search.ini
