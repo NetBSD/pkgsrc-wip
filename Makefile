@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4504 2011/10/17 02:16:09 schnoebe Exp $
+# $Id: Makefile,v 1.4505 2011/10/19 09:20:55 makoto Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1459,6 +1459,7 @@ SUBDIR+=	mono-zeroconf
 SUBDIR+=	monodevelop
 SUBDIR+=	monotone-cvsimport
 SUBDIR+=	moonlight
+SUBDIR+=	mop
 SUBDIR+=	mopac7
 SUBDIR+=	moregroupware
 SUBDIR+=	moto4lin
