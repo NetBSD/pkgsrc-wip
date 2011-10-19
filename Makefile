@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4506 2011/10/19 18:39:23 mwilhelmy Exp $
+# $Id: Makefile,v 1.4507 2011/10/19 23:55:51 minskim Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -283,8 +283,6 @@ SUBDIR+=	chrsh
 SUBDIR+=	cinelerra
 SUBDIR+=	cinelerra-cv
 SUBDIR+=	ciwiki
-SUBDIR+=	cjk-latex
-SUBDIR+=	cjk-latex-wadalab
 SUBDIR+=	cl-alexandria
 SUBDIR+=	cl-babel
 SUBDIR+=	cl-bordeaux-threads
@@ -2722,10 +2720,8 @@ SUBDIR+=	testdisk
 SUBDIR+=	tetrinet
 SUBDIR+=	tex-arabxtex
 SUBDIR+=	tex-arabxtex-doc
-SUBDIR+=	tex-baekmuk-ttf
 SUBDIR+=	tex-feynmf
 SUBDIR+=	tex-feynmf-doc
-SUBDIR+=	tex-kochi-ttf
 SUBDIR+=	tex-texdoc
 SUBDIR+=	tex-texdoc-doc
 SUBDIR+=	texlive
