@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2011/10/19 18:39:23 mwilhelmy Exp $
+# $NetBSD: Makefile,v 1.2 2011/10/19 21:56:01 cheusov Exp $
 #
 
 DISTNAME=	uni-vga
 PKGNAME=	${DISTNAME}-1
-EXTRACT_SUFX=	.tgz
 CATEGORIES=	fonts x11
 MASTER_SITES=	http://www.inp.nsk.su/~bolkhov/files/fonts/univga/
+EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	mw+pkgsrc@wzff.de
 HOMEPAGE=	http://www.inp.nsk.su/~bolkhov/files/fonts/univga/
