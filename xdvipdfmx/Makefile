@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/10/08 00:10:16 bubuchka Exp $
+# $NetBSD: Makefile,v 1.2 2011/10/19 19:09:10 bubuchka Exp $
 
-DISTNAME=	texlive-20100720-source
-PKGNAME=	xdvipdfmx-${DISTNAME:C/texlive-([0-9]+)-source/\1/g}
+DISTNAME=	texlive-20110705-source
+PKGNAME=	xdvipdfmx-0.7.8${DISTNAME:C/texlive-([0-9]+)-source/.\1/g}
 CATEGORIES=	print converters
 MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=systems/texlive/Source/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	mishka@NetBSD.org
 HOMEPAGE=	http://scripts.sil.org/XeTeX
-COMMENT=	Extended DVI to PDF converter, mainly used by XeTeX
+COMMENT=	Extended DVI to PDF converter, mainly for use with XeTeX
 
 LICENSE=	gnu-gpl-v2
 
