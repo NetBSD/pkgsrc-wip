@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 2009/10/11 10:44:51 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.6 2011/10/20 00:30:23 minskim Exp $
 bin/lhs2TeX
 man/man1/lhs2TeX.1
-share/doc/${PKGNAME}/Guide2.pdf
 share/doc/lhs2tex/Guide2.pdf
 share/doc/lhs2tex/INSTALL
 share/doc/lhs2tex/RELEASE
@@ -14,8 +13,5 @@ share/lhs2tex/lhs2TeX.fmt
 share/lhs2tex/lhs2TeX.sty
 share/lhs2tex/polycode.fmt
 share/lhs2tex/spacing.fmt
-share/texmf-dist/ls-R
-${PKG_LOCALTEXMFPREFIX}/tex/latex/lazylist/lazylist.sty
-${PKG_LOCALTEXMFPREFIX}/tex/latex/polytable/polytable.sty
-share/texmf-var/ls-R
-share/texmf/ls-R
+share/texmf-dist/tex/latex/lazylist/lazylist.sty
+share/texmf-dist/tex/latex/polytable/polytable.sty
