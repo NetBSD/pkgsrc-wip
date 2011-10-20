@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/10/19 19:09:10 bubuchka Exp $
+# $NetBSD: Makefile,v 1.3 2011/10/20 11:04:48 bubuchka Exp $
 
 DISTNAME=	texlive-20110705-source
 PKGNAME=	xdvipdfmx-0.7.8${DISTNAME:C/texlive-([0-9]+)-source/.\1/g}
@@ -18,7 +18,6 @@ EXTRACT_ELEMENTS=	${DISTNAME}/build-aux \
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
-#XXX do we really need this: USE_TOOLS+=	gs:run ps2pdf:run
 WRKSRC=		${WRKDIR}/${DISTNAME}/texk/xdvipdfmx
 
 CONFIGURE_ARGS+=	--with-system-kpathsea \
