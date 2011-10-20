@@ -1,2 +1,2 @@
 #!/bin/sh
-PERL_SIGNALS=unsafe @TT_PATH@/ttytter
+PERL_SIGNALS=unsafe @TT_PATH@/ttytter $*
