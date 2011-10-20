@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/08/12 22:46:55 thomasklausner Exp $
+$NetBSD: distinfo,v 1.2 2011/10/20 12:20:55 rhialto Exp $
 
-SHA1 (fbida-2.03.tar.gz) = 1c42169f22c666d1de522c028deb8559c932732a
-RMD160 (fbida-2.03.tar.gz) = f2ee360dd7f86c69c9bf482d79ec921dfdf3c65a
-Size (fbida-2.03.tar.gz) = 205955 bytes
-SHA1 (patch-aa) = 9e4dc6dc6dd8f14841873b337b83059e4c48dde7
-SHA1 (patch-ab) = 21ee6f1ecdf41467b75b5cf1c8ba5d8856abe3d6
+SHA1 (fbida-2.08.tar.gz) = 597e0953c68112bf7c363b1ccaa94e72100b116a
+RMD160 (fbida-2.08.tar.gz) = 2740f3bed9d3819eb30dbd48833ad75186ba2136
+Size (fbida-2.08.tar.gz) = 241283 bytes
+SHA1 (patch-aa) = dacfc252e272ad8bc4b7d109dc69635b9318dfb6
+SHA1 (patch-ab) = 8659d8ee2e99ffbca40c200a072db1bb0cd0eeca

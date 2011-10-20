@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/08/12 22:46:55 thomasklausner Exp $
+$NetBSD: patch-aa,v 1.2 2011/10/20 12:20:56 rhialto Exp $
 
---- GNUmakefile.orig	2004-06-30 15:41:54.000000000 +0200
+--- GNUmakefile.orig	2011-06-01 07:31:59.000000000 +0000
 +++ GNUmakefile
-@@ -29,7 +29,7 @@ include $(srcdir)/mk/Autoconf.mk
+@@ -36,7 +36,7 @@ ac_jpeg_ver = $(shell \
  
  define make-config
  LIB		:= $(LIB)

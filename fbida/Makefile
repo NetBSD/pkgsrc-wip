@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2011/05/26 20:34:25 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.11 2011/10/20 12:20:55 rhialto Exp $
 #
 
-DISTNAME=		fbida-2.03
-PKGREVISION=		4
+DISTNAME=		fbida-2.08
 CATEGORIES=		graphics
 MASTER_SITES=		http://dl.bytesex.org/releases/fbida/
 
@@ -13,6 +12,8 @@ COMMENT=		Image viewer and editor
 MAKE_FILE=		GNUmakefile
 MAKE_ENV+=		prefix=${PREFIX:Q}
 USE_TOOLS+=		gmake perl
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 # not used, even though the configure output claims it
 #.include "../../graphics/ImageMagick/buildlink3.mk"
