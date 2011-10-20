@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/10/20 13:08:18 makoto Exp $
+# $NetBSD: Makefile,v 1.4 2011/10/20 14:17:54 makoto Exp $
 
 DISTNAME=	mop-1.9
 CATEGORIES=	graphics
@@ -16,7 +16,7 @@ INSTALLATION_DIRS=	share/${PKGBASE}
 INSTALLATION_DIRS=	bin
 USE_TOOLS+=	pax
 
-DEPENDS+=	ruby-[0-9]*:../../lang/ruby
+DEPENDS+=	${RUBY_BASE}>=${RUBY_REQD}:${RUBY_SRCDIR}
 REPLACE_RUBY=	mop.rb
 .include "../../lang/ruby/replace.mk"
 
