@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/09/02 12:29:08 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2011/10/20 15:19:37 othyro Exp $
 #
 
 DISTNAME=	sexy-python-0.1.9
@@ -16,7 +16,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
-USE_LANGUAGES= c c++
+USE_LANGUAGES=	c c++ fortran
 
 BUILDLINK_PKGSRCDIR.libsexy?=	../../devel/libsexy
 .include "../../devel/libsexy/buildlink3.mk"
