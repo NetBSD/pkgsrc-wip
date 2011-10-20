@@ -1,8 +1,9 @@
-$NetBSD: patch-mob.rb,v 1.2 2011/10/20 12:34:01 makoto Exp $
+$NetBSD: patch-mob.rb,v 1.3 2011/10/20 12:38:39 makoto Exp $
 
 (1) put  homepage link
 (2) add shiftdir tweek to support main program (mop) and
     files in share directory shift
+-- These have been communicated with original author.
 
 --- mop.rb.orig	2007-02-17 07:55:25.000000000 +0900
 +++ mop.rb	2011-10-19 17:33:58.000000000 +0900
