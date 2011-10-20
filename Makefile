@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4508 2011/10/20 11:29:31 thomasklausner Exp $
+# $Id: Makefile,v 1.4509 2011/10/20 14:12:52 ryo-on Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2781,6 +2781,7 @@ SUBDIR+=	ttf-indic-fonts
 SUBDIR+=	ttr
 SUBDIR+=	ttyload
 SUBDIR+=	ttysnoop
+SUBDIR+=	ttytter
 SUBDIR+=	tuareg-mode
 SUBDIR+=	tumble
 SUBDIR+=	tutos
