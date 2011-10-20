@@ -1,4 +1,5 @@
-$NetBSD: patch-mob.rb,v 1.1.1.1 2011/10/19 09:19:28 makoto Exp $
+$NetBSD: patch-mob.rb,v 1.2 2011/10/20 12:34:01 makoto Exp $
+
 (1) put  homepage link
 (2) add shiftdir tweek to support main program (mop) and
     files in share directory shift
