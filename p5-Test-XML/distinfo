@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/03/05 05:52:56 phonohawk Exp $
+$NetBSD: distinfo,v 1.2 2011/10/21 04:12:01 jgoamakf Exp $
 
-SHA1 (Test-XML-0.07.tar.gz) = 6a8d6a532a0574acec83a108e2e4733137243dec
-RMD160 (Test-XML-0.07.tar.gz) = a887ece22ff32dd0c035775570952736b7b8cf5b
-Size (Test-XML-0.07.tar.gz) = 9392 bytes
+SHA1 (Test-XML-0.08.tar.gz) = 0daee71fcf32bb06dcf4b9bc7bd5248d99f9cc38
+RMD160 (Test-XML-0.08.tar.gz) = c3015904b0cc687cbf5ff1928d6390cee799124a
+Size (Test-XML-0.08.tar.gz) = 9448 bytes
