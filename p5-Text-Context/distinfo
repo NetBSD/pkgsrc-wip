@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2005/09/28 06:05:30 rillig Exp $
+$NetBSD: distinfo,v 1.4 2011/10/21 21:24:14 jgoamakf Exp $
 
-SHA1 (Text-Context-3.6.tar.gz) = bde066973828c37f9ede432c20dff268b7c284c5
-RMD160 (Text-Context-3.6.tar.gz) = 587cf42f8837b71de4d460f92a14d4594ae6546f
-Size (Text-Context-3.6.tar.gz) = 6954 bytes
+SHA1 (Text-Context-3.7.tar.gz) = a241ef6bced13f5ab11cb1b737f1bede76aa1da4
+RMD160 (Text-Context-3.7.tar.gz) = 0db44bdec34dcd4ded6ba76d71a6a9cca5529f09
+Size (Text-Context-3.7.tar.gz) = 7039 bytes
