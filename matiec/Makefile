@@ -1,19 +1,22 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/10/20 21:38:56 manuosx Exp $
+# $NetBSD: Makefile,v 1.2 2011/10/22 08:49:01 manuosx Exp $
 #
 
-DISTNAME=tip
+DISTNAME=	matiec-0.1
 CATEGORIES=	devel
-MASTER_SITES=	http://dev.automforge.net/matiec/archive/
-EXTRACT_SUFX=	.zip
+MASTER_SITES=	http://www.beremiz.org/documentation/the-iec-to-c-compiler
 
-MAINTAINER= conti.ma@alice.it
-HOMEPAGE=	http://dev.automforge.net/matiec/archive/
+MAINTAINER=	conti.ma@alice.it
+HOMEPAGE=	http://www.beremiz.org/documentation/the-iec-to-c-compiler
 COMMENT= 	IEC61131-3 Compiler
 LICENSE=	gnu-gpl-v3
 PKG_DESTDIR_SUPPORT=	user-destdir
-DEPENDS+=	bison>=2.4.3:../../devel/bison
-WRKSRC=		${WRKDIR}/matiec-0b81b59f333b
+USE_TOOLS+=	bison
+WRKSRC=		${WRKDIR}/matiec
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
 
+HG_REPOSITORIES=	matiec
+HG_REPO.matiec=	http://dev.automforge.net/matiec
+
+.include "../../mk/hg-package.mk"
 .include "../../mk/bsd.pkg.mk"
