@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2010/08/10 16:27:23 tnn2 Exp $
+# $NetBSD: Makefile,v 1.3 2011/10/24 11:25:32 makoto Exp $
 #
 
-DISTNAME=	mingw-w64-v1.0-snapshot-20100730
+DISTNAME=	mingw-w64-v1.0-snapshot-20110809
 PKGNAME=	mingw-w64-headers-1.0
 CATEGORIES=	cross
 MASTER_SITES=	 ${MASTER_SITE_SOURCEFORGE:=mingw-w64/mingw-w64/mingw-w64-snapshot/}
