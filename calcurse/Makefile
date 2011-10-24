@@ -1,16 +1,23 @@
-# $NetBSD: Makefile,v 1.2 2008/02/02 18:26:07 jdwhite Exp $
+# $NetBSD: Makefile,v 1.3 2011/10/24 21:23:37 crocusino Exp $
+#
 
-DISTNAME=		calcurse-1.9
-CATEGORIES=		devel
-MASTER_SITES=		ftp://ftp2.culot.org/culot/
+DISTNAME=	calcurse-2.9.2
+CATEGORIES=	time
+#MASTER_SITES=	ftp://ftp2.culot.org/culot/
+MASTER_SITES=	http://calcurse.org/files/
 
+MAINTAINER=	jan.smydke@jh-inst.cas.cz
+HOMEPAGE=	http://culot.org/calcurse/
+COMMENT=	Text based calendar and scheduling application
+LICENSE=	2-clause-bsd
 
-MAINTAINER=		jdw-pkgsrc@menelos.com
-HOMEPAGE=		http://culot.org/calcurse/
-COMMENT=		Text-based personal organizer
+PKG_DESTDIR_SUPPORT=	user-destdir
 
-GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake
+USE_TOOLS+=	gmake
+GNU_CONFIGURE=	yes
+
+# force to use ncurses from pkgsrc
+INCOMPAT_CURSES=	NetBSD-*-*
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
