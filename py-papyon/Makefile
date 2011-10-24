@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2011/02/25 09:47:49 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2011/10/24 14:43:16 noud4 Exp $
 #
 
 DISTNAME=	papyon-0.4.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	chat
 MASTER_SITES=	http://www.freedesktop.org/software/papyon/releases/
 
@@ -14,6 +14,7 @@ LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${PYPKGPREFIX}-OpenSSL>=0.7:../../security/py-OpenSSL
 DEPENDS+=	${PYPKGPREFIX}-cElementTree-[0-9]*:../../textproc/py-cElementTree
+DEPENDS+=	${PYPKGPREFIX}-crypto>=2.0:../../security/py-crypto
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
