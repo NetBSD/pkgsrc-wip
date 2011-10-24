@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2010/06/13 22:47:13 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2011/10/24 14:47:09 noud4 Exp $
 #
 
 DISTNAME=	pidgin-rhythmbox-2.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	chat
 MASTER_SITES=	http://jon.oberheide.org/projects/pidgin-rhythmbox/downloads/
 
@@ -21,10 +21,10 @@ BUILD_DEPENDS+=	rhythmbox>=0.11.6:../../audio/rhythmbox
 INSTALLATION_DIRS=	share/pidgin-rhythmbox
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/AUTHORS ${PREFIX}/share/pidgin-rhythmbox
-	${INSTALL_DATA} ${WRKSRC}/NEWS ${PREFIX}/share/pidgin-rhythmbox
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/pidgin-rhythmbox
-
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/pidgin-rhythmbox
+	${INSTALL_DATA} ${WRKSRC}/AUTHORS ${DESTDIR}${PREFIX}/share/pidgin-rhythmbox
+	${INSTALL_DATA} ${WRKSRC}/NEWS ${DESTDIR}${PREFIX}/share/pidgin-rhythmbox
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/pidgin-rhythmbox
 
 .include "../../chat/pidgin/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
