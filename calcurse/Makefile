@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2011/10/24 21:23:37 crocusino Exp $
+# $NetBSD: Makefile,v 1.4 2011/10/24 22:11:54 crocusino Exp $
 #
 
 DISTNAME=	calcurse-2.9.2
 CATEGORIES=	time
-#MASTER_SITES=	ftp://ftp2.culot.org/culot/
 MASTER_SITES=	http://calcurse.org/files/
 
 MAINTAINER=	jan.smydke@jh-inst.cas.cz
-HOMEPAGE=	http://culot.org/calcurse/
+HOMEPAGE=	http://calcurse.org/
 COMMENT=	Text based calendar and scheduling application
 LICENSE=	2-clause-bsd
 
