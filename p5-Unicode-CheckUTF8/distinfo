@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/07/24 10:47:25 cryonator Exp $
+$NetBSD: distinfo,v 1.2 2011/10/24 10:53:40 jgoamakf Exp $
 
-SHA1 (Unicode-CheckUTF8-1.01.tar.gz) = fe0fbb044236e76d7ff18eb75c899a4610f8610c
-RMD160 (Unicode-CheckUTF8-1.01.tar.gz) = 3cf8181970bca945d82d4a736b2961a5f790e9a7
-Size (Unicode-CheckUTF8-1.01.tar.gz) = 25245 bytes
+SHA1 (Unicode-CheckUTF8-1.03.tar.gz) = aa50c4e0164f01328f5187ad26e5282382ce2148
+RMD160 (Unicode-CheckUTF8-1.03.tar.gz) = 10d75f78b06059dbb7e261385f81896e59923928
+Size (Unicode-CheckUTF8-1.03.tar.gz) = 25483 bytes
