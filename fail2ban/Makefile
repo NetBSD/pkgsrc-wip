@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/12/09 16:47:06 rhaamo Exp $
+# $NetBSD: Makefile,v 1.2 2011/10/24 19:47:42 lexort Exp $
 #
 
 DISTNAME=	fail2ban-0.8.4
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fail2ban/}
 EXTRACT_SUFX=	.tar.bz2

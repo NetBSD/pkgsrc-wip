@@ -1,0 +1,9 @@
+* Install default config files in $PREFIX/share/examples
+
+* Install a copy in $PREFIX/etc/fail2ban
+
+* Use above for config
+
+* deal with /var/run/fail2ban not existing somehow
+
+* ? Provide a more sane default config
