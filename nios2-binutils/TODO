@@ -1,4 +1,5 @@
 * Fix following conflict (with wip/cygwin-binutils)
+The item (1) is fixed for the moment, although solution seems adhoc
 (1)
   ===> Install binary package of nios2-binutils-2.15
   pkg_add: Conflicting PLIST with cygwin-binutils-2.20: info/as.info
