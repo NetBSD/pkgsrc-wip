@@ -1,13 +1,18 @@
-$NetBSD: patch-Makefile.in,v 1.1 2011/08/31 17:52:33 ftigeot Exp $
+$NetBSD: patch-Makefile.in,v 1.2 2011/10/24 14:17:46 ftigeot Exp $
 
---- Makefile.in.orig	2011-08-30 15:00:33.000000000 +0000
+--- Makefile.in.orig	2011-10-17 16:49:48.000000000 +0000
 +++ Makefile.in
-@@ -30,8 +30,7 @@ install:
- 	ooinstall "@PREFIXDIR@" && \
+@@ -69,11 +69,11 @@ cross-build-toolset:
+ 
+ install: build
+ 	@. ./Env.Host.sh && \
+-	echo "Installing in @INSTALLDIR@..." && \
+-	ooinstall "@INSTALLDIR@" && \
++	echo "Installing in @PREFIXDIR@..." && \
++	ooinstall "@PREFIXDIR@" && \
  	echo "" && \
  	echo "Installation finished, you can now execute:" && \
--	echo "@PREFIXDIR@/program/soffice" && \
--	install-gdb-printers -a "@PREFIXDIR@"
+-	echo "@INSTALLDIR@/program/soffice"
 +	echo "@PREFIXDIR@/program/soffice"
  
  distro-pack-install: install
