@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4509 2011/10/20 14:12:52 ryo-on Exp $
+# $Id: Makefile,v 1.4510 2011/10/24 21:36:48 crocusino Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -252,7 +252,6 @@ SUBDIR+=	cacti-plugin-weathermap
 SUBDIR+=	cacti-spine
 SUBDIR+=	cairo-java
 SUBDIR+=	calcurse
-SUBDIR+=	calcurse-2.8
 SUBDIR+=	callweaver
 SUBDIR+=	canna
 SUBDIR+=	canna-canuum
