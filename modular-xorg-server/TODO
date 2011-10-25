@@ -1,7 +1,3 @@
--- Following's are to be committed
-  pkg/45462: [PATCH] x11/glproto 1.4.14
-  pkg/45463: [PATCH] x11/fixesproto 4.1.4 to 5.0
-
 -- Following's are to be imported
   wip/dri
   wip/gl 
