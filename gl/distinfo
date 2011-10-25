@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2010/08/18 10:27:27 pallegra Exp $
+$NetBSD: distinfo,v 1.5 2011/10/25 13:37:59 makoto Exp $
 
 SHA1 (MesaDemos-7.8.2.tar.bz2) = 90879578b11b2d043b378818d2c6750fe47518b7
 RMD160 (MesaDemos-7.8.2.tar.bz2) = a815ab8ee22c1a54110c568dcedd10524b00d612
@@ -10,4 +10,4 @@ SHA1 (MesaLib-7.8.2.tar.bz2) = 21de672a1cbe307135d7f172dc6952041a38e1c7
 RMD160 (MesaLib-7.8.2.tar.bz2) = d06c95bc36304b8ef72211b5defd3ac338fe7956
 Size (MesaLib-7.8.2.tar.bz2) = 5138463 bytes
 SHA1 (patch-aa) = 710c912ed216e817b4b9d97c5f39a9be37ddfdb2
-SHA1 (patch-ab) = 28343662e89fab5517db4d3a79cbd441fb3e5507
+SHA1 (patch-ab) = a986a27ddecf7a580369be993da73d10c06ede45
