@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2011/10/25 01:57:18 makoto Exp $
+# $NetBSD: Makefile,v 1.5 2011/10/25 02:03:12 makoto Exp $
 #
 
 DISTNAME=	mingw-w64-v2.0
 PKGNAME=	mingw-w64-headers-2.0
 CATEGORIES=	cross
-MASTER_SITES=	 ${MASTER_SITE_SOURCEFORGE:=mingw-w64/mingw-w64/mingw-w64-snapshot/}
+MASTER_SITES=	 ${MASTER_SITE_SOURCEFORGE:=mingw-w64/mingw-w64/mingw-w64-release/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
