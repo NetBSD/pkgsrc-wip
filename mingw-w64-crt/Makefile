@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2011/10/25 03:02:36 makoto Exp $
+# $NetBSD: Makefile,v 1.4 2011/10/25 04:29:10 makoto Exp $
 #
 
 DISTNAME=	mingw-w64-v2.0
-PKGNAME=	mingw-w64-crt-v2.0
+PKGNAME=	mingw-w64-crt-2.0
 CATEGORIES=	cross
 MASTER_SITES=	 ${MASTER_SITE_SOURCEFORGE:=mingw-w64/mingw-w64/mingw-w64-release/}
 EXTRACT_SUFX=	.tar.bz2
