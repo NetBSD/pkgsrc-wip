@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2008/02/02 15:00:38 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2011/10/26 14:56:49 noud4 Exp $
 #
 
 DISTNAME=		wise2.2.0
 PKGNAME=		wise-2.2.0
+PKGREVISION=		1
 CATEGORIES=		biology
 MASTER_SITES=		ftp://ftp.ebi.ac.uk/pub/software/unix/wise2/
 
