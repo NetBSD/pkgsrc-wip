@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/10/26 22:55:34 phonohawk Exp $
+
+SHA1 (stringsearch-0.3.6.2.tar.gz) = 3d585291b5aef76fa9e97e87653f2a5befccc9f9
+RMD160 (stringsearch-0.3.6.2.tar.gz) = ab380dfb139d045ffaf7b8b86ed14d49a5b42f43
+Size (stringsearch-0.3.6.2.tar.gz) = 38993 bytes
