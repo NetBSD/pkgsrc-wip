@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.1.1.1 2004/11/19 19:27:31 daprice Exp $
+$NetBSD: patch-ae,v 1.2 2011/10/26 13:47:14 noud4 Exp $
 
 --- jemboss/Makefile.in.orig	Thu Jul 15 07:52:05 2004
 +++ jemboss/Makefile.in	Thu Jul 22 12:46:20 2004
@@ -17,8 +17,8 @@ $NetBSD: patch-ae,v 1.1.1.1 2004/11/19 19:27:31 daprice Exp $
  @ISCYGWIN_TRUE@          mv -f org/emboss/jemboss/draw/PrintDNAImage.java org/emboss/jemboss/draw/PrintDNAImage.java_o; \
 -@ISCYGWIN_TRUE@          javac -d . org/emboss/jemboss/draw/DNADraw.java; \
 -@ISCYGWIN_TRUE@	  javac -d . org/emboss/jemboss/Jemboss.java; \
-+@ISCYGWIN_TRUE@          @JAVAC@ -d . org/emboss/jemboss/draw/DNADraw.java; \
-+@ISCYGWIN_TRUE@	  @JAVAC@ -d . org/emboss/jemboss/Jemboss.java; \
++@ISCYGWIN_TRUE@          @JAVAC@ -target 1.3 -source 1.3 -d . org/emboss/jemboss/draw/DNADraw.java; \
++@ISCYGWIN_TRUE@	  @JAVAC@ -target 1.3 -source 1.3 -d . org/emboss/jemboss/Jemboss.java; \
  @ISCYGWIN_TRUE@          mv -f ./org/emboss/jemboss/editor/PrintAlignmentImage.java_o ./org/emboss/jemboss/editor/PrintAlignmentImage.java; \
  @ISCYGWIN_TRUE@          mv -f org/emboss/jemboss/draw/PrintDNAImage.java_o org/emboss/jemboss/draw/PrintDNAImage.java; \
  @ISCYGWIN_TRUE@	  else \
@@ -28,8 +28,8 @@ $NetBSD: patch-ae,v 1.1.1.1 2004/11/19 19:27:31 daprice Exp $
  @ISCYGWIN_TRUE@          mv -f org/emboss/jemboss/draw/PrintDNAImage.java org/emboss/jemboss/draw/PrintDNAImage.java_o; \
 -@ISCYGWIN_TRUE@          javac -d . org/emboss/jemboss/draw/DNADraw.java; \
 -@ISCYGWIN_TRUE@	  javac -d . org/emboss/jemboss/Jemboss.java; \
-+@ISCYGWIN_TRUE@          @JAVAC@ -d . org/emboss/jemboss/draw/DNADraw.java; \
-+@ISCYGWIN_TRUE@	  @JAVAC@ -d . org/emboss/jemboss/Jemboss.java; \
++@ISCYGWIN_TRUE@          @JAVAC@ -target 1.3 -source 1.3 -d . org/emboss/jemboss/draw/DNADraw.java; \
++@ISCYGWIN_TRUE@	  @JAVAC@ -target 1.3 -source 1.3 -d . org/emboss/jemboss/Jemboss.java; \
  @ISCYGWIN_TRUE@          mv -f ./org/emboss/jemboss/editor/PrintAlignmentImage.java_o ./org/emboss/jemboss/editor/PrintAlignmentImage.java; \
  @ISCYGWIN_TRUE@          mv -f org/emboss/jemboss/draw/PrintDNAImage.java_o org/emboss/jemboss/draw/PrintDNAImage.java; \
  @ISCYGWIN_TRUE@	  fi); \
@@ -39,8 +39,8 @@ $NetBSD: patch-ae,v 1.1.1.1 2004/11/19 19:27:31 daprice Exp $
  @ISCYGWIN_FALSE@          mv -f org/emboss/jemboss/draw/PrintDNAImage.java org/emboss/jemboss/draw/PrintDNAImage.java_o; \
 -@ISCYGWIN_FALSE@          javac -d . org/emboss/jemboss/draw/DNADraw.java; \
 -@ISCYGWIN_FALSE@	  javac -d . org/emboss/jemboss/Jemboss.java; \
-+@ISCYGWIN_FALSE@          @JAVAC@ -d . org/emboss/jemboss/draw/DNADraw.java; \
-+@ISCYGWIN_FALSE@	  @JAVAC@ -d . org/emboss/jemboss/Jemboss.java; \
++@ISCYGWIN_FALSE@          @JAVAC@ -target 1.3 -source 1.3 -d . org/emboss/jemboss/draw/DNADraw.java; \
++@ISCYGWIN_FALSE@	  @JAVAC@ -target 1.3 -source 1.3 -d . org/emboss/jemboss/Jemboss.java; \
  @ISCYGWIN_FALSE@          mv -f ./org/emboss/jemboss/editor/PrintAlignmentImage.java_o ./org/emboss/jemboss/editor/PrintAlignmentImage.java; \
  @ISCYGWIN_FALSE@          mv -f org/emboss/jemboss/draw/PrintDNAImage.java_o org/emboss/jemboss/draw/PrintDNAImage.java; \
  @ISCYGWIN_FALSE@	  else \
@@ -50,8 +50,8 @@ $NetBSD: patch-ae,v 1.1.1.1 2004/11/19 19:27:31 daprice Exp $
  @ISCYGWIN_FALSE@          mv -f org/emboss/jemboss/draw/PrintDNAImage.java org/emboss/jemboss/draw/PrintDNAImage.java_o; \
 -@ISCYGWIN_FALSE@          javac -d . org/emboss/jemboss/draw/DNADraw.java; \
 -@ISCYGWIN_FALSE@	  javac -d . org/emboss/jemboss/Jemboss.java; \
-+@ISCYGWIN_FALSE@          @JAVAC@ -d . org/emboss/jemboss/draw/DNADraw.java; \
-+@ISCYGWIN_FALSE@	  @JAVAC@ -d . org/emboss/jemboss/Jemboss.java; \
++@ISCYGWIN_FALSE@          @JAVAC@ -target 1.3 -source 1.3 -d . org/emboss/jemboss/draw/DNADraw.java; \
++@ISCYGWIN_FALSE@	  @JAVAC@ -target 1.3 -source 1.3 -d . org/emboss/jemboss/Jemboss.java; \
  @ISCYGWIN_FALSE@          mv -f ./org/emboss/jemboss/editor/PrintAlignmentImage.java_o ./org/emboss/jemboss/editor/PrintAlignmentImage.java; \
  @ISCYGWIN_FALSE@          mv -f org/emboss/jemboss/draw/PrintDNAImage.java_o org/emboss/jemboss/draw/PrintDNAImage.java; \
  @ISCYGWIN_FALSE@	  fi); \

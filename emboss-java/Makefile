@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2006/10/29 11:23:07 shattered Exp $
+# $NetBSD: Makefile,v 1.7 2011/10/26 13:41:50 noud4 Exp $
 #
 
 DISTNAME=		EMBOSS-2.9.0
 PKGNAME=		emboss-java-0.0.3
+PKGREVISION=		1
 CATEGORIES=		biology
 MASTER_SITES=		ftp://ftp.uk.embnet.org/pub/EMBOSS/
 
@@ -10,45 +11,32 @@ MAINTAINER=		dprice@cs.nmsu.edu
 HOMEPAGE=		http://emboss.sourceforge.net/
 COMMENT=		Interface between emboss and jemboss
 
-DEPENDS+=		emboss-base-2.9.0:../../wip/emboss-base
-DEPENDS+=		cross-i386-linux>=2.0.7.1:../../cross/i386-linux
-DEPENDS+=		cross-binutils>=2.15.0.0:../../cross/binutils
-
-#also need java installed
-#setenv PKG_JAVA_HOME <pkgdir>/java/sun-<version>
-#setenv CROSS_PKG i386-linux
+DEPENDS+=		emboss-base>=2.9.0:../../wip/emboss-base
 
 WRKSRC=			${WRKDIR}/${DISTNAME}
 USE_JAVA=		yes
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
-NO_CONFIGURE=		yes
-USE_CROSS_BINUTILS=	yes
+HAS_CONFIGURE=		yes
 CHECK_SHLIBS=		no
-
+USE_LANGUAGES+=		c c++
 DIST_SUBDIR=		emboss/emboss-2.9.0
 
-CONF_ARGS+=	--with-java=${PKG_JAVA_HOME}/include
-CONF_ARGS+=	--with-javaos=${PKG_JAVA_HOME}/include/linux
-CONF_ARGS+=	--bindir=${PREFIX}/bin
-CONF_ARGS+=	--libdir=${PREFIX}/lib
-CONF_ARGS+=	--x-libraries=${PREFIX}/emul/linux/usr/X11R6/lib/
-CONF_ARGS+=	--host=i386-linux
-CONF_ARGS+=	--build=i386-netbsd
-CONF_ARGS+=	--prefix=${PREFIX}/cross/i386-linux/
+CONFIGUE_ARGS+=	--with-java=${PKG_JAVA_HOME}/include
+CONFIGUE_ARGS+=	--with-javaos=${PKG_JAVA_HOME}/include/netbsd
+CONFIGUE_ARGS+=	--build=i386-netbsd
+CONFIGUE_ARGS+=	--prefix=${PREFIX}
 
 post-patch:
-	${SED} -e 's:@CROSSPKG@:${PREFIX}/cross/i386-linux/lib:' \
+	${SED} -e 's:@CROSSPKG@:${PREFIX}/lib:' \
 		${WRKSRC}/ajax/Makefile.in > \
 		${WRKSRC}/ajax/Makefile.in.bak
 	${MV} ${WRKSRC}/ajax/Makefile.in.bak \
 		${WRKSRC}/ajax/Makefile.in
 
 do-build:
-	CROSS_PKG=i386-linux export CROSS_PKG; && cd ${WRKSRC} && ${PREFIX}/bin/cross-env ./configure ${CONF_ARGS}
-	CROSS_PKG=i386-linux export CROSS_PKG; && cd ${WRKSRC}/ajax && ${PREFIX}/bin/cross-env make
-
+	cd ${WRKSRC}/ajax && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM}
 
 do-install:
 	${CP} ${WRKSRC}/ajax/.libs/libajax.so.0.1.0 ${WRKSRC}/ajax/.libs/libajaxj.so
@@ -58,9 +46,7 @@ do-install:
 	${CP} ${WRKSRC}/ajax/.libs/libajax.la ${WRKSRC}/ajax/.libs/libajaxj.la
 	${CP} ${WRKSRC}/ajax/.libs/libajaxj.la ${PREFIX}/lib/libajaxj.la
 
-
-
 .include "../../wip/emboss-base/buildlink3.mk"
 .include "../../mk/java-vm.mk"
-.include "../../mk/x11.buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

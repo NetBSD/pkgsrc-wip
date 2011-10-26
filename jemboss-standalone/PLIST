@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:44:49 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.4 2011/10/26 13:47:14 noud4 Exp $
 bin/jemboss
 share/EMBOSS/jemboss/LICENSE
 share/EMBOSS/jemboss/README
@@ -119,13 +119,13 @@ share/EMBOSS/jemboss/org/emboss/jemboss/draw/Block$8.class
 share/EMBOSS/jemboss/org/emboss/jemboss/draw/Block$9.class
 share/EMBOSS/jemboss/org/emboss/jemboss/draw/Block.class
 share/EMBOSS/jemboss/org/emboss/jemboss/draw/Block.java
+share/EMBOSS/jemboss/org/emboss/jemboss/draw/DNADraw$1$1.class
 share/EMBOSS/jemboss/org/emboss/jemboss/draw/DNADraw$1.class
 share/EMBOSS/jemboss/org/emboss/jemboss/draw/DNADraw$10.class
 share/EMBOSS/jemboss/org/emboss/jemboss/draw/DNADraw$11.class
 share/EMBOSS/jemboss/org/emboss/jemboss/draw/DNADraw$12.class
 share/EMBOSS/jemboss/org/emboss/jemboss/draw/DNADraw$13.class
 share/EMBOSS/jemboss/org/emboss/jemboss/draw/DNADraw$14.class
-share/EMBOSS/jemboss/org/emboss/jemboss/draw/DNADraw$15.class
 share/EMBOSS/jemboss/org/emboss/jemboss/draw/DNADraw$2.class
 share/EMBOSS/jemboss/org/emboss/jemboss/draw/DNADraw$3.class
 share/EMBOSS/jemboss/org/emboss/jemboss/draw/DNADraw$4.class
@@ -141,7 +141,6 @@ share/EMBOSS/jemboss/org/emboss/jemboss/draw/EmbossCirdnaReader.java
 share/EMBOSS/jemboss/org/emboss/jemboss/draw/GeneticMarker$1.class
 share/EMBOSS/jemboss/org/emboss/jemboss/draw/GeneticMarker$10.class
 share/EMBOSS/jemboss/org/emboss/jemboss/draw/GeneticMarker$11.class
-share/EMBOSS/jemboss/org/emboss/jemboss/draw/GeneticMarker$12.class
 share/EMBOSS/jemboss/org/emboss/jemboss/draw/GeneticMarker$2.class
 share/EMBOSS/jemboss/org/emboss/jemboss/draw/GeneticMarker$3.class
 share/EMBOSS/jemboss/org/emboss/jemboss/draw/GeneticMarker$4.class
@@ -150,6 +149,7 @@ share/EMBOSS/jemboss/org/emboss/jemboss/draw/GeneticMarker$6.class
 share/EMBOSS/jemboss/org/emboss/jemboss/draw/GeneticMarker$7.class
 share/EMBOSS/jemboss/org/emboss/jemboss/draw/GeneticMarker$8.class
 share/EMBOSS/jemboss/org/emboss/jemboss/draw/GeneticMarker$9.class
+share/EMBOSS/jemboss/org/emboss/jemboss/draw/GeneticMarker$ColorEditor$1.class
 share/EMBOSS/jemboss/org/emboss/jemboss/draw/GeneticMarker$ColorEditor.class
 share/EMBOSS/jemboss/org/emboss/jemboss/draw/GeneticMarker$ColorRenderer.class
 share/EMBOSS/jemboss/org/emboss/jemboss/draw/GeneticMarker$MarkerTableModel.class
@@ -173,7 +173,7 @@ share/EMBOSS/jemboss/org/emboss/jemboss/draw/RestrictionEnzyme$5.class
 share/EMBOSS/jemboss/org/emboss/jemboss/draw/RestrictionEnzyme$6.class
 share/EMBOSS/jemboss/org/emboss/jemboss/draw/RestrictionEnzyme$7.class
 share/EMBOSS/jemboss/org/emboss/jemboss/draw/RestrictionEnzyme$8.class
-share/EMBOSS/jemboss/org/emboss/jemboss/draw/RestrictionEnzyme$9.class
+share/EMBOSS/jemboss/org/emboss/jemboss/draw/RestrictionEnzyme$ColorEditor$1.class
 share/EMBOSS/jemboss/org/emboss/jemboss/draw/RestrictionEnzyme$ColorEditor.class
 share/EMBOSS/jemboss/org/emboss/jemboss/draw/RestrictionEnzyme$ColorRenderer.class
 share/EMBOSS/jemboss/org/emboss/jemboss/draw/RestrictionEnzyme$RETableModel.class
@@ -313,14 +313,14 @@ share/EMBOSS/jemboss/org/emboss/jemboss/gui/Browser$6.class
 share/EMBOSS/jemboss/org/emboss/jemboss/gui/Browser$JIconButton.class
 share/EMBOSS/jemboss/org/emboss/jemboss/gui/Browser.class
 share/EMBOSS/jemboss/org/emboss/jemboss/gui/Browser.java
+share/EMBOSS/jemboss/org/emboss/jemboss/gui/BuildProgramMenu$1$1.class
+share/EMBOSS/jemboss/org/emboss/jemboss/gui/BuildProgramMenu$1$2.class
+share/EMBOSS/jemboss/org/emboss/jemboss/gui/BuildProgramMenu$1$3.class
+share/EMBOSS/jemboss/org/emboss/jemboss/gui/BuildProgramMenu$1$4.class
+share/EMBOSS/jemboss/org/emboss/jemboss/gui/BuildProgramMenu$1$5.class
+share/EMBOSS/jemboss/org/emboss/jemboss/gui/BuildProgramMenu$1$6.class
+share/EMBOSS/jemboss/org/emboss/jemboss/gui/BuildProgramMenu$1$7.class
 share/EMBOSS/jemboss/org/emboss/jemboss/gui/BuildProgramMenu$1.class
-share/EMBOSS/jemboss/org/emboss/jemboss/gui/BuildProgramMenu$2.class
-share/EMBOSS/jemboss/org/emboss/jemboss/gui/BuildProgramMenu$3.class
-share/EMBOSS/jemboss/org/emboss/jemboss/gui/BuildProgramMenu$4.class
-share/EMBOSS/jemboss/org/emboss/jemboss/gui/BuildProgramMenu$5.class
-share/EMBOSS/jemboss/org/emboss/jemboss/gui/BuildProgramMenu$6.class
-share/EMBOSS/jemboss/org/emboss/jemboss/gui/BuildProgramMenu$7.class
-share/EMBOSS/jemboss/org/emboss/jemboss/gui/BuildProgramMenu$8.class
 share/EMBOSS/jemboss/org/emboss/jemboss/gui/BuildProgramMenu.class
 share/EMBOSS/jemboss/org/emboss/jemboss/gui/BuildProgramMenu.java
 share/EMBOSS/jemboss/org/emboss/jemboss/gui/ColorMenu$ColorPane.class
@@ -329,8 +329,8 @@ share/EMBOSS/jemboss/org/emboss/jemboss/gui/ColumnData.class
 share/EMBOSS/jemboss/org/emboss/jemboss/gui/DragJTable.class
 share/EMBOSS/jemboss/org/emboss/jemboss/gui/ImageIconJPanel.class
 share/EMBOSS/jemboss/org/emboss/jemboss/gui/ImageIconJPanel.java
+share/EMBOSS/jemboss/org/emboss/jemboss/gui/LaunchJalView$1$1.class
 share/EMBOSS/jemboss/org/emboss/jemboss/gui/LaunchJalView$1.class
-share/EMBOSS/jemboss/org/emboss/jemboss/gui/LaunchJalView$2.class
 share/EMBOSS/jemboss/org/emboss/jemboss/gui/LaunchJalView.class
 share/EMBOSS/jemboss/org/emboss/jemboss/gui/LaunchJalView.java
 share/EMBOSS/jemboss/org/emboss/jemboss/gui/MemoryComboBox.class
@@ -386,8 +386,8 @@ share/EMBOSS/jemboss/org/emboss/jemboss/gui/SetUpMenuBar$9.class
 share/EMBOSS/jemboss/org/emboss/jemboss/gui/SetUpMenuBar.class
 share/EMBOSS/jemboss/org/emboss/jemboss/gui/SetUpMenuBar.java
 share/EMBOSS/jemboss/org/emboss/jemboss/gui/ShowResultSet$1.class
+share/EMBOSS/jemboss/org/emboss/jemboss/gui/ShowResultSet$2$1.class
 share/EMBOSS/jemboss/org/emboss/jemboss/gui/ShowResultSet$2.class
-share/EMBOSS/jemboss/org/emboss/jemboss/gui/ShowResultSet$3.class
 share/EMBOSS/jemboss/org/emboss/jemboss/gui/ShowResultSet$GroutPanelListener.class
 share/EMBOSS/jemboss/org/emboss/jemboss/gui/ShowResultSet.class
 share/EMBOSS/jemboss/org/emboss/jemboss/gui/ShowResultSet.java
@@ -462,7 +462,7 @@ share/EMBOSS/jemboss/org/emboss/jemboss/gui/form/BuildJembossForm$1.class
 share/EMBOSS/jemboss/org/emboss/jemboss/gui/form/BuildJembossForm$2.class
 share/EMBOSS/jemboss/org/emboss/jemboss/gui/form/BuildJembossForm.class
 share/EMBOSS/jemboss/org/emboss/jemboss/gui/form/BuildJembossForm.java
-share/EMBOSS/jemboss/org/emboss/jemboss/gui/form/JembossComboPopup$1.class
+share/EMBOSS/jemboss/org/emboss/jemboss/gui/form/JembossComboPopup$myComboUI$1.class
 share/EMBOSS/jemboss/org/emboss/jemboss/gui/form/JembossComboPopup$myComboUI.class
 share/EMBOSS/jemboss/org/emboss/jemboss/gui/form/JembossComboPopup.class
 share/EMBOSS/jemboss/org/emboss/jemboss/gui/form/JembossComboPopup.java
@@ -490,11 +490,11 @@ share/EMBOSS/jemboss/org/emboss/jemboss/gui/form/Separator.java
 share/EMBOSS/jemboss/org/emboss/jemboss/gui/form/SetInFileCard$1.class
 share/EMBOSS/jemboss/org/emboss/jemboss/gui/form/SetInFileCard$2.class
 share/EMBOSS/jemboss/org/emboss/jemboss/gui/form/SetInFileCard$3.class
+share/EMBOSS/jemboss/org/emboss/jemboss/gui/form/SetInFileCard$4$1.class
+share/EMBOSS/jemboss/org/emboss/jemboss/gui/form/SetInFileCard$4$2.class
+share/EMBOSS/jemboss/org/emboss/jemboss/gui/form/SetInFileCard$4$3.class
+share/EMBOSS/jemboss/org/emboss/jemboss/gui/form/SetInFileCard$4$4.class
 share/EMBOSS/jemboss/org/emboss/jemboss/gui/form/SetInFileCard$4.class
-share/EMBOSS/jemboss/org/emboss/jemboss/gui/form/SetInFileCard$5.class
-share/EMBOSS/jemboss/org/emboss/jemboss/gui/form/SetInFileCard$6.class
-share/EMBOSS/jemboss/org/emboss/jemboss/gui/form/SetInFileCard$7.class
-share/EMBOSS/jemboss/org/emboss/jemboss/gui/form/SetInFileCard$8.class
 share/EMBOSS/jemboss/org/emboss/jemboss/gui/form/SetInFileCard.class
 share/EMBOSS/jemboss/org/emboss/jemboss/gui/form/SetInFileCard.java
 share/EMBOSS/jemboss/org/emboss/jemboss/gui/form/SetOutFileCard$1.class
@@ -573,17 +573,8 @@ share/EMBOSS/jemboss/org/emboss/jemboss/programs/RunEmbossApplication2.java
 share/EMBOSS/jemboss/org/emboss/jemboss/server/AppendToLogFileThread.java
 share/EMBOSS/jemboss/org/emboss/jemboss/server/JembossAuthServer.java
 share/EMBOSS/jemboss/org/emboss/jemboss/server/JembossFileAuthServer.java
-share/EMBOSS/jemboss/org/emboss/jemboss/server/JembossFileServer$1.class
-share/EMBOSS/jemboss/org/emboss/jemboss/server/JembossFileServer.class
 share/EMBOSS/jemboss/org/emboss/jemboss/server/JembossFileServer.java
-share/EMBOSS/jemboss/org/emboss/jemboss/server/JembossServer$1.class
-share/EMBOSS/jemboss/org/emboss/jemboss/server/JembossServer$2.class
-share/EMBOSS/jemboss/org/emboss/jemboss/server/JembossServer$3.class
-share/EMBOSS/jemboss/org/emboss/jemboss/server/JembossServer$4.class
-share/EMBOSS/jemboss/org/emboss/jemboss/server/JembossServer$5.class
-share/EMBOSS/jemboss/org/emboss/jemboss/server/JembossServer.class
 share/EMBOSS/jemboss/org/emboss/jemboss/server/JembossServer.java
-share/EMBOSS/jemboss/org/emboss/jemboss/server/JembossThread.class
 share/EMBOSS/jemboss/org/emboss/jemboss/server/JembossThread.java
 share/EMBOSS/jemboss/org/emboss/jemboss/server/TestPrivateServer.java
 share/EMBOSS/jemboss/org/emboss/jemboss/server/TestPublicServer.java
