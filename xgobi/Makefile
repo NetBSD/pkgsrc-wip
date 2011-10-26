@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2008/11/10 17:21:50 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.14 2011/10/26 15:16:44 noud4 Exp $
 #
 
 DISTNAME=		xgobi
 PKGNAME=		xgobi-20030626
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		graphics
 MASTER_SITES=		http://www.research.att.com/areas/stat/xgobi/
 
@@ -18,9 +18,9 @@ CONFIGURE_DIRS=		src
 USE_IMAKE=		yes
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man1 bin
-INSTALLATION_DIRS+=	share/doc/${PKGNAME}/HELP
-INSTALLATION_DIRS+=	share/examples/${PKGNAME}/data_xgobi
-INSTALLATION_DIRS+=	share/examples/${PKGNAME}/data_xgvis
+INSTALLATION_DIRS+=	share/doc/${PKGNAME_NOREV}/HELP
+INSTALLATION_DIRS+=	share/examples/${PKGNAME_NOREV}/data_xgobi
+INSTALLATION_DIRS+=	share/examples/${PKGNAME_NOREV}/data_xgvis
 
 do-install:
 .for program in xgobi xgvis
@@ -30,12 +30,12 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/manpages/${man} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 .endfor
 .for doc in Changes Readme.install Readme.S Copyright
-	${INSTALL_DATA} ${WRKSRC}/${doc} ${DESTDIR}${PREFIX}/share/doc/${PKGNAME}
+	${INSTALL_DATA} ${WRKSRC}/${doc} ${DESTDIR}${PREFIX}/share/doc/${PKGNAME_NOREV}
 .endfor
-	${INSTALL_DATA} ${WRKSRC}/help/* ${DESTDIR}${PREFIX}/share/doc/${PKGNAME}/HELP
-	${INSTALL_DATA} ${WRKSRC}/XGobi.ex ${DESTDIR}${PREFIX}/share/examples/${PKGNAME}
-	${INSTALL_DATA} ${WRKSRC}/data_xgobi/* ${DESTDIR}${PREFIX}/share/examples/${PKGNAME}/data_xgobi
-	${INSTALL_DATA} ${WRKSRC}/data_xgvis/* ${DESTDIR}${PREFIX}/share/examples/${PKGNAME}/data_xgvis
+	${INSTALL_DATA} ${WRKSRC}/help/* ${DESTDIR}${PREFIX}/share/doc/${PKGNAME_NOREV}/HELP
+	${INSTALL_DATA} ${WRKSRC}/XGobi.ex ${DESTDIR}${PREFIX}/share/examples/${PKGNAME_NOREV}
+	${INSTALL_DATA} ${WRKSRC}/data_xgobi/* ${DESTDIR}${PREFIX}/share/examples/${PKGNAME_NOREV}/data_xgobi
+	${INSTALL_DATA} ${WRKSRC}/data_xgvis/* ${DESTDIR}${PREFIX}/share/examples/${PKGNAME_NOREV}/data_xgvis
 
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXaw/buildlink3.mk"
