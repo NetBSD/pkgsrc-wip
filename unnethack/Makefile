@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/06/07 20:14:13 rhialto Exp $
+# $NetBSD: Makefile,v 1.2 2011/10/26 23:04:35 rhialto Exp $
 #
 
-DISTNAME=	unnethack-3.5.3-20101010
+DISTNAME=	unnethack-3.6.0-20111008
 #PKGREVISION=	0
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=unnethack/}
@@ -45,11 +45,15 @@ BUILD_DEFS+=		GAMES_USER GAMES_GROUP
 GAMEPERM=		${NETHACK_USER} ${NETHACK_GROUP} 2555
 
 GAMEDIR=		${PREFIX}/share/${NETHACK_DIR}
-NETHACK_DIR=		unnethackdir350
-VARDIR=			/var/games/unnethack350
-MAKE_ENV+=		GAMEDIR=${GAMEDIR:Q}
-MAKE_ENV+=		VARDIR=${VARDIR:Q}
+NETHACK_DIR=		unnethackdir360
+VARDIR=			/var/games/unnethack360
+#MAKE_ENV+=		GAMEDIR=${GAMEDIR:Q}
+MAKE_ENV+=		MANDIR=${PREFIX:Q}/${PKGMANDIR:Q}/man6
+#MAKE_ENV+=		VARDIR=${VARDIR:Q}
 MAKE_ENV+=		CURSESLIBDIR=${BUILDLINK_PREFIX.ncurses:Q}/lib
+CONFIGURE_ARGS+=	--with-gamesdir=${VARDIR:Q}
+CONFIGURE_ARGS+=	--with-sharedir=${GAMEDIR:Q}
+CONFIGURE_ARGS+=	--with-unsharedir=${GAMEDIR:Q}
 
 # For X:
 #BUILD_TARGET+=	x11tiles 	# tiles seem to be broken
@@ -75,7 +79,11 @@ CONF_FILES_PERMS+=	/dev/null ${VARDIR}/xlogfile \
 
 REQD_DIRS_PERMS+=	${VARDIR}					\
 			${NETHACK_USER} ${NETHACK_GROUP} 775
-REQD_DIRS_PERMS+=	${VARDIR}/save					\
+REQD_DIRS_PERMS+=	${VARDIR}/bones					\
+			${NETHACK_USER} ${NETHACK_GROUP} 770
+REQD_DIRS_PERMS+=	${VARDIR}/level					\
+			${NETHACK_USER} ${NETHACK_GROUP} 770
+REQD_DIRS_PERMS+=	${VARDIR}/saves					\
 			${NETHACK_USER} ${NETHACK_GROUP} 770
 
 CHECK_FILES_SKIP+=	${VARDIR}/logfile				\
