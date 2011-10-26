@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/09/28 14:24:40 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2011/10/26 13:51:54 noud4 Exp $
 #
 
 .include "../emboss-base/Makefile.common"
@@ -6,6 +6,7 @@
 
 DISTNAME=		HMMER-2.1.1
 PKGNAME=		emboss-hmmer-2.1.1
+PKGREVISION=		1
 
 COMMENT=		A collection of bioinformatic programs that is supplimentary to EMBOSS package
 
