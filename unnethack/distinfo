@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.2 2011/10/26 23:04:35 rhialto Exp $
+$NetBSD: distinfo,v 1.3 2011/10/26 23:07:06 rhialto Exp $
 
 SHA1 (unnethack-3.6.0-20111008.tar.gz) = ccf0f39458c6fa9bbfcceecd9912b853ff47dbd0
 RMD160 (unnethack-3.6.0-20111008.tar.gz) = d1d79fa342aadf4022c046fc022387ff70ff2595
 Size (unnethack-3.6.0-20111008.tar.gz) = 5199981 bytes
+SHA1 (patch-include_config.h) = fbca0bb3b9440d00357921e06ca4ded64aa86fd6
 SHA1 (patch-sys_autoconf_Makefile.doc) = 4074422de8c78729c158c7e52ad5b87dbbd4673e
-SHA1 (patch-sys_autoconf_Makefile.src) = 26298fc474002d835a0308e2ceaf6fcc3d8ce2d5
+SHA1 (patch-sys_autoconf_Makefile.src) = 0a4d8305e96b1d422197326b24d5b701e7062e81
 SHA1 (patch-sys_autoconf_Makefile.top) = f58694f3850e0fc0d52bcf5c405dedd418b79ef6
