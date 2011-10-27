@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/10/20 11:04:48 bubuchka Exp $
+# $NetBSD: Makefile,v 1.4 2011/10/27 21:07:04 minskim Exp $
 
 DISTNAME=	texlive-20110705-source
 PKGNAME=	xdvipdfmx-0.7.8${DISTNAME:C/texlive-([0-9]+)-source/.\1/g}
@@ -42,6 +42,5 @@ CONFIGURE_ENV+=	kpse_cv_have_ApplicationServices=no
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../print/kpathsea/buildlink3.mk"
-.include "../../print/kpathsea/texmf.mk"
 .include "../../print/libpaper/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
