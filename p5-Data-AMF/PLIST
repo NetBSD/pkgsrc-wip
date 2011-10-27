@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/10/27 20:38:45 tomasbodzar Exp $
-lib/perl5/5.14.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/perllocal.pod
+@comment $NetBSD: PLIST,v 1.2 2011/10/27 23:44:59 tomasbodzar Exp $
 lib/perl5/vendor_perl/5.14.0/Data/AMF.pm
 lib/perl5/vendor_perl/5.14.0/Data/AMF/Formatter.pm
 lib/perl5/vendor_perl/5.14.0/Data/AMF/Formatter/AMF0.pm
