@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/10/27 21:42:47 tomasbodzar Exp $
+
+SHA1 (LWP-Protocol-socks-1.5.tar.gz) = 6690a142d86ef139e9311898ad5037de6f57963f
+RMD160 (LWP-Protocol-socks-1.5.tar.gz) = 44dc8ae0219969aafd6e153265f3f7e8330f1c33
+Size (LWP-Protocol-socks-1.5.tar.gz) = 4206 bytes
