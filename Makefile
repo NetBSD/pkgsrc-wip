@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4511 2011/10/26 22:57:16 phonohawk Exp $
+# $Id: Makefile,v 1.4512 2011/10/27 02:49:55 jgoamakf Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1661,7 +1661,6 @@ SUBDIR+=	p5-Apache2-ModSSL
 SUBDIR+=	p5-App-cpanminus
 SUBDIR+=	p5-Arch
 SUBDIR+=	p5-Astro-SpaceTrack
-SUBDIR+=	p5-Authen-Htpasswd
 SUBDIR+=	p5-AxKit
 SUBDIR+=	p5-B-Deobfuscate
 SUBDIR+=	p5-Barcode-Code128
