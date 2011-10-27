@@ -1,9 +1,18 @@
-# $NetBSD: options.mk,v 1.1.1.1 2011/04/18 13:46:22 bartoszkuzma Exp $
+# $NetBSD: options.mk,v 1.2 2011/10/27 10:14:19 fhajny Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.rsyslog
-PKG_SUPPORTED_OPTIONS=	gnutls gssapi mail mysql pgsql snmp
+PKG_SUPPORTED_OPTIONS=	gnutls gssapi mail mysql pgsql snmp file
 
-PLIST_VARS+=		gnutls gssapi mail mysql pgsql snmp
+.if ${OPSYS} == "SunOS"
+PKG_SUGGESTED_OPTIONS+=	solaris
+.else
+PKG_SUGGESTED_OPTIONS+=	klog
+.endif
+
+PKG_OPTIONS_REQUIRED_GROUPS=	sysmod
+PKG_OPTIONS_GROUP.sysmod=	klog solaris
+
+PLIST_VARS+=		gnutls gssapi mail mysql pgsql snmp klog solaris file
 
 .include "../../mk/bsd.options.mk"
 
@@ -40,4 +49,23 @@ PLIST.pgsql=			yes
 .include "../../net/net-snmp/buildlink3.mk"
 CONFIGURE_ARGS+=		--enable-snmp
 PLIST.snmp=			yes
+.endif
+
+.if !empty(PKG_OPTIONS:Mklog)
+CONFIGURE_ARGS+=		--enable-klog
+PLIST.klog=			yes
+RSYSLOG_SYSMOD=			klog
+.else
+CONFIGURE_ARGS+=		--disable-klog
+.endif
+
+.if !empty(PKG_OPTIONS:Msolaris)
+CONFIGURE_ARGS+=		--enable-imsolaris
+PLIST.solaris=			yes
+RSYSLOG_SYSMOD=			solaris
+.endif
+
+.if !empty(PKG_OPTIONS:Mfile)
+CONFIGURE_ARGS+=		--enable-imfile
+PLIST.file=			yes
 .endif
