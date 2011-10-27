@@ -1,0 +1,5 @@
+IO::Socket::Socks connects to a SOCKS proxy, tells it to open a
+connection to a remote host/port when the object is created. The
+object you receive can be used directly as a socket for sending
+and receiving data from the remote host. In addition to create
+socks client this module could be used to create socks server.

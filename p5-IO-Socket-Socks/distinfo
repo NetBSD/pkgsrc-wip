@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/10/27 21:02:35 tomasbodzar Exp $
+
+SHA1 (IO-Socket-Socks-0.51.tar.gz) = 543326e4b06cbbd298f706cd221e9dced40ef066
+RMD160 (IO-Socket-Socks-0.51.tar.gz) = 1c29b111e7f70e27e40bf45e0f953ed0bf5bbd19
+Size (IO-Socket-Socks-0.51.tar.gz) = 27931 bytes

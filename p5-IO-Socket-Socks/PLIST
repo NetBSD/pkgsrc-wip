@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/10/27 21:02:35 tomasbodzar Exp $
+lib/perl5/vendor_perl/5.14.0/IO/Socket/Socks.pm
+lib/perl5/vendor_perl/5.14.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/auto/IO/Socket/Socks/.packlist
+lib/perl5/vendor_perl/man/man3/IO::Socket::Socks.3
