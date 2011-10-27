@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/04/14 09:07:40 bartoszkuzma Exp $
+# $NetBSD: Makefile,v 1.2 2011/10/27 12:04:20 fhajny Exp $
 #
 
-DISTNAME=		libestr-0.1.0
+DISTNAME=		libestr-0.1.2
 CATEGORIES=		sysutils
 MASTER_SITES=		http://libestr.adiscon.com/files/download/
 
 MAINTAINER=		bartosz.kuzma@gmail.com
-HOMEPAGE=		http://libestr.aniscon.com/
+HOMEPAGE=		http://libestr.adiscon.com/
 COMMENT=		Library for some string essentials
 LICENSE=		gnu-gpl-v2
 
