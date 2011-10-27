@@ -2,7 +2,7 @@ Suggested package updates
 =========================
 
 	o applewmproto-1.4.1
-	o archimedes-1.5.0
+	o archimedes-2.0.0
 	o argouml-0.24
 	o backintime-1.0.6
 	o boinc-2.15
@@ -36,7 +36,7 @@ Suggested package updates
 	o gcc43-4.3.4
 	o geant-4.9.4
 	o gforge-4.5.11
-	o giggle-0.6
+	o giggle-0.6.1
 	o glib-java-0.4.2
 	o globulation2-0.9.4
 	o gnokii-0.6.30
@@ -84,7 +84,7 @@ Suggested package updates
 	o man-1.6f
 	o mcabber-0.10.1
 	o mcwm-20110818
-	o meta-tracker-0.12.5
+	o meta-tracker-0.12.7
 	o mixxx-1.8.0
 	o mpgedit-0.73dev2
 	o mumble-1.2.3
