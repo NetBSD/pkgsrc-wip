@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2011/10/27 21:07:38 minskim Exp $
+# $NetBSD: Makefile,v 1.6 2011/10/27 21:10:26 minskim Exp $
 
 DISTNAME=	texlive-20110705-source
 PKGNAME=	xdvipdfmx-0.7.8${DISTNAME:C/texlive-([0-9]+)-source/.\1/g}
@@ -19,6 +19,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
+USE_TOOLS+=	pkg-config
 WRKSRC=		${WRKDIR}/${DISTNAME}/texk/xdvipdfmx
 
 CONFIGURE_ARGS+=	--with-system-kpathsea \
