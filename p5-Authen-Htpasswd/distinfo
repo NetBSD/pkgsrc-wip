@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/03/09 19:51:34 kuli0020 Exp $
-
-SHA1 (Authen-Htpasswd-0.13.tar.gz) = f2371f52a48294c703d00d8aaa919917f5c1b694
-RMD160 (Authen-Htpasswd-0.13.tar.gz) = 8f6cf001e00bd54159c50b96a89f75c1885c7c9c
-Size (Authen-Htpasswd-0.13.tar.gz) = 7029 bytes
