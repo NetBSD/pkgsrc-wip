@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/01/21 15:03:20 ryo-on Exp $
+$NetBSD: distinfo,v 1.2 2011/10/28 21:54:28 ryo-on Exp $
 
-SHA1 (pdfgrep-1.1.tar.gz) = 9ce477ee5017d576834a730d6d0a6321e39287fe
-RMD160 (pdfgrep-1.1.tar.gz) = c77affe0e8b6a559eb738508dc9a3486bb8b5b0c
-Size (pdfgrep-1.1.tar.gz) = 93911 bytes
+SHA1 (pdfgrep-1.2.tar.gz) = b294adc4aadb23f26012b39b3e4ca6955da08532
+RMD160 (pdfgrep-1.2.tar.gz) = 83f6bf428aa800aeb409c14f40dc2317a77d23aa
+Size (pdfgrep-1.2.tar.gz) = 94153 bytes
