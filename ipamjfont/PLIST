@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/10/28 10:11:22 ryo-on Exp $
+lib/X11/fonts/TTF/ipamjm.ttf
+share/doc/ipamjfont/IPA_Font_License_Agreement_v1.0.txt
+share/doc/ipamjfont/Readme_ipamjm001.01.txt
