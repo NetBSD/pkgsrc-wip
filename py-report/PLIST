@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/10/28 18:23:05 jihbed Exp $
+${PLIST.eggfile}${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/pyreport/__init__.py
+${PYSITELIB}/pyreport/__init__.pyc
+${PYSITELIB}/pyreport/__init__.pyo
+${PYSITELIB}/pyreport/code_hasher.py
+${PYSITELIB}/pyreport/code_hasher.pyc
+${PYSITELIB}/pyreport/code_hasher.pyo
+${PYSITELIB}/pyreport/main.py
+${PYSITELIB}/pyreport/main.pyc
+${PYSITELIB}/pyreport/main.pyo
+${PYSITELIB}/pyreport/options.py
+${PYSITELIB}/pyreport/options.pyc
+${PYSITELIB}/pyreport/options.pyo
+${PYSITELIB}/pyreport/pyreport.py
+${PYSITELIB}/pyreport/pyreport.pyc
+${PYSITELIB}/pyreport/pyreport.pyo
+${PYSITELIB}/pyreport/python_parser.py
+${PYSITELIB}/pyreport/python_parser.pyc
+${PYSITELIB}/pyreport/python_parser.pyo
+${PYSITELIB}/pyreport/version.py
+${PYSITELIB}/pyreport/version.pyc
+${PYSITELIB}/pyreport/version.pyo

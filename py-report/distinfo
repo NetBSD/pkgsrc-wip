@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/10/28 18:23:05 jihbed Exp $
+
+SHA1 (pyreport-0.3.4c.tar.gz) = 3a3eddfffe918e348377a6b8c4dfaf90ae72872e
+RMD160 (pyreport-0.3.4c.tar.gz) = a898fc7f2ac7ed83b69201d47f73b983a13dad8a
+Size (pyreport-0.3.4c.tar.gz) = 25076 bytes
