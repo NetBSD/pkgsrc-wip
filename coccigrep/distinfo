@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/10/28 10:16:43 ryo-on Exp $
+
+SHA1 (coccigrep-1.4.tar.gz) = 87a8e8b63d27cc52a4367675456640f21dba3d21
+RMD160 (coccigrep-1.4.tar.gz) = 7c107679d1140f4cd3494ca403117c584ca03179
+Size (coccigrep-1.4.tar.gz) = 31099 bytes
