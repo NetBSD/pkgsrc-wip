@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/10/28 17:53:44 jihbed Exp $
+${PYSITELIB}/anfft/__init__.py
+${PYSITELIB}/anfft/__init__.pyc
+${PYSITELIB}/anfft/__init__.pyo
+${PYSITELIB}/anfft/_fftw.py
+${PYSITELIB}/anfft/_fftw.pyc
+${PYSITELIB}/anfft/_fftw.pyo
+${PYSITELIB}/anfft/_guts.py
+${PYSITELIB}/anfft/_guts.pyc
+${PYSITELIB}/anfft/_guts.pyo
+${PYSITELIB}/anfft/_test.py
+${PYSITELIB}/anfft/_test.pyc
+${PYSITELIB}/anfft/_test.pyo
