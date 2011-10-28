@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/10/28 21:00:52 jihbed Exp $
+bin/socnetv
+man/man1/socnetv.1.gz
+share/applications/socnetv.desktop
+share/doc/socnetv/AUTHORS
+share/doc/socnetv/COPYING
+share/doc/socnetv/ChangeLog
+share/doc/socnetv/NEWS
+share/doc/socnetv/README
+share/doc/socnetv/TODO
+share/doc/socnetv/manual/analysis.html
+share/doc/socnetv/manual/bugs.html
+share/doc/socnetv/manual/credits.html
+share/doc/socnetv/manual/footer.html
+share/doc/socnetv/manual/formats.html
+share/doc/socnetv/manual/gfdl.html
+share/doc/socnetv/manual/gui.html
+share/doc/socnetv/manual/header.html
+share/doc/socnetv/manual/intro.html
+share/doc/socnetv/manual/manual.html
+share/doc/socnetv/manual/socnetv-logo-manual.png
+share/doc/socnetv/manual/socnetv.css
+share/doc/socnetv/manual/toc.html
+share/doc/socnetv/manual/visualisation.html
+share/pixmaps/socnetv.png

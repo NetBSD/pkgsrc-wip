@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/10/28 21:00:52 jihbed Exp $
+
+SHA1 (SocNetV-0.90.tar.gz) = 274cace13e0ff046460656d672f4b818ea8088a3
+RMD160 (SocNetV-0.90.tar.gz) = 2ab92a711d80f5f13d68cde6ab3a7e65fdee1008
+Size (SocNetV-0.90.tar.gz) = 371285 bytes
+SHA1 (patch-Makefile) = 5f50a04504ef01f853e4561b31501a80ebd0b11a
