@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/10/28 17:41:43 jihbed Exp $
+
+SHA1 (pebl-1.0.2.tar.gz) = fe9452ce0e699cda57a90ea009e971b920e0199a
+RMD160 (pebl-1.0.2.tar.gz) = 0d6ef1e18416c27cddb5c5c44099c3c3b6425ab6
+Size (pebl-1.0.2.tar.gz) = 2489864 bytes

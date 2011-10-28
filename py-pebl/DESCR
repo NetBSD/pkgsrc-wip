@@ -1,0 +1,11 @@
+Pebl is a python library and command line application for learning
+ the structure of a Bayesian network given prior knowledge and
+ observations. Pebl includes the following features:
+   * Can learn with observational and interventional data
+   * Handles missing values and hidden variables using exact and heuristic
+     methods
+   * Provides several learning algorithms; makes creating new ones simple
+   * Has facilities for transparent parallel execution using several
+     cluster/grid resources
+   * Calculates edge marginals and consensus networks
+   * Presents results in a variety of formas
