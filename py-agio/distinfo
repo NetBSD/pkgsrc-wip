@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/10/28 17:00:38 jihbed Exp $
+
+SHA1 (AIGO-0.1.0.tar.gz) = 171bc4fc2601741ea6feccb5577537e8eb363b4c
+RMD160 (AIGO-0.1.0.tar.gz) = 416a9234b1955f532137db7c568f33f0ecaf4e70
+Size (AIGO-0.1.0.tar.gz) = 3324616 bytes
+SHA1 (patch-setup.py) = 29c714093f08242fef5d184c2a167210ffbf41df
