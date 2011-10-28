@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4514 2011/10/28 10:17:56 ryo-on Exp $
+# $Id: Makefile,v 1.4515 2011/10/28 13:52:42 ryo-on Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2862,7 +2862,6 @@ SUBDIR+=	wang-ttf
 SUBDIR+=	wbox
 SUBDIR+=	webcleaner
 SUBDIR+=	webkit-sharp
-SUBDIR+=	webp
 SUBDIR+=	weplab
 SUBDIR+=	west
 SUBDIR+=	which
