@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4516 2011/10/28 21:05:28 jihbed Exp $
+# $Id: Makefile,v 1.4517 2011/10/28 21:26:25 ryo-on Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2859,7 +2859,6 @@ SUBDIR+=	vidrioclock
 SUBDIR+=	vidriolib
 SUBDIR+=	viewer
 SUBDIR+=	viewglob
-SUBDIR+=	viewnior
 SUBDIR+=	vino
 SUBDIR+=	virtualbox
 SUBDIR+=	virtualjaguar
