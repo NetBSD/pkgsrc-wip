@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/10/28 20:18:17 jihbed Exp $
+include/siscone/area.h
+include/siscone/circulator.h
+include/siscone/config.h
+include/siscone/defines.h
+include/siscone/geom_2d.h
+include/siscone/hash.h
+include/siscone/momentum.h
+include/siscone/protocones.h
+include/siscone/quadtree.h
+include/siscone/ranlux.h
+include/siscone/reference.h
+include/siscone/siscone.h
+include/siscone/siscone_error.h
+include/siscone/spherical/geom_2d.h
+include/siscone/spherical/hash.h
+include/siscone/spherical/momentum.h
+include/siscone/spherical/protocones.h
+include/siscone/spherical/siscone.h
+include/siscone/spherical/split_merge.h
+include/siscone/spherical/vicinity.h
+include/siscone/split_merge.h
+include/siscone/vicinity.h
+lib/libsiscone.la
+lib/libsiscone_spherical.la
