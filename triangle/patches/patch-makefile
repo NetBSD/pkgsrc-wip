@@ -1,0 +1,31 @@
+$NetBSD: patch-makefile,v 1.1.1.1 2011/10/28 16:38:52 jihbed Exp $
+
+--- makefile.orig	2011-08-07 21:57:54.000000000 +0100
++++ makefile	2011-08-07 22:00:22.000000000 +0100
+@@ -18,7 +18,7 @@
+ 
+ # CC should be set to the name of your favorite C compiler.
+ 
+-CC = cc
++#CC = cc
+ 
+ # CSWITCHES is a list of all switches passed to the C compiler.  I strongly
+ #   recommend using the best level of optimization.  I also strongly
+@@ -73,7 +73,7 @@
+ #
+ #   CSWITCHES = -O -DNO_TIMER -DLINUX -I/usr/X11R6/include -L/usr/X11R6/lib
+ 
+-CSWITCHES = -O -DLINUX -I/usr/X11R6/include -L/usr/X11R6/lib
++CSWITCHES = -O -DNETBSD -I/usr/X11R7/include -L/usr/X11R7/lib
+ 
+ # TRILIBDEFS is a list of definitions used to compile an object code version
+ #   of Triangle (triangle.o) to be called by another program.  The file
+@@ -90,7 +90,7 @@
+ 
+ # RM should be set to the name of your favorite rm (file deletion program).
+ 
+-RM = /bin/rm
++#RM = /bin/rm
+ 
+ # The action starts here.
+ 
