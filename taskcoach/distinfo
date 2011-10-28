@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2011/10/13 11:31:48 ryo-on Exp $
+$NetBSD: distinfo,v 1.6 2011/10/28 15:16:22 ryo-on Exp $
 
-SHA1 (TaskCoach-1.2.29.tar.gz) = d5ee9263617dc47271fc9560049645acec383994
-RMD160 (TaskCoach-1.2.29.tar.gz) = 9d0e931f192b740d407e907d288a7de4e565f426
-Size (TaskCoach-1.2.29.tar.gz) = 2292634 bytes
+SHA1 (TaskCoach-1.2.30.tar.gz) = 4fc43f4e438f7655eb3e0a88f780d49b7837331c
+RMD160 (TaskCoach-1.2.30.tar.gz) = ce0cfae0f822226293e848609b46096b7c0bb361
+Size (TaskCoach-1.2.30.tar.gz) = 2303069 bytes
 SHA1 (patch-setup.py) = e079d6432fe94624a1a9f99dc7eab035cad15742
