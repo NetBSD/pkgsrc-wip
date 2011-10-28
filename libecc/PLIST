@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/10/28 17:37:04 jihbed Exp $
+include/libecc/bitset.h
+include/libecc/debug.h
+include/libecc/fieldmath.h
+include/libecc/polynomial.h
+include/libecc/rds.h
+include/libecc/rng.h
+include/libecc/sha.h
+include/libecc/square.hcc
+lib/libecc.la

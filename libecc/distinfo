@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/10/28 17:37:04 jihbed Exp $
+
+SHA1 (libecc-0.14.0.tar.gz) = 806940844ef78479790c08c36f3473c580c66e8d
+RMD160 (libecc-0.14.0.tar.gz) = fa8a094739212de2127968018928bcc876c9836c
+Size (libecc-0.14.0.tar.gz) = 2477120 bytes
+SHA1 (patch-bitset.h) = 2ca4628bfc608f252bce6e2a79695d726f06371a
