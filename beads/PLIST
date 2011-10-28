@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/10/28 17:05:06 jihbed Exp $
+bin/beads
+bin/qtbeads
+man/man1/beads.1
+share/applications/beads.desktop
+share/beads/beads_blue.conf
+share/beads/beads_icon.svg
+share/beads/beads_silver.conf
+share/beads/beads_silver_small.conf
