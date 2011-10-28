@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/10/28 17:51:07 jihbed Exp $
+lib/libcirce2.la
+share/circe2/data/teslage_500.20bins.circe
+share/circe2/data/teslage_500.circe
+share/circe2/data/teslage_500_polavg.20bins.circe
+share/circe2/data/teslage_500_polavg.circe
+share/circe2/data/teslagg_200.20bins.circe
+share/circe2/data/teslagg_200.circe
+share/circe2/data/teslagg_200_polavg.20bins.circe
+share/circe2/data/teslagg_200_polavg.circe
+share/circe2/data/teslagg_500.20bins.circe
+share/circe2/data/teslagg_500.circe
+share/circe2/data/teslagg_500_polavg.20bins.circe
+share/circe2/data/teslagg_500_polavg.circe
+share/circe2/data/teslagg_800.20bins.circe
+share/circe2/data/teslagg_800.circe
+share/circe2/data/teslagg_800_polavg.20bins.circe
+share/circe2/data/teslagg_800_polavg.circe
+share/doc/circe2/circe2.pdf
