@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2011/10/18 06:13:56 bharder Exp $
+@comment $NetBSD: PLIST,v 1.5 2011/10/29 00:35:30 bharder Exp $
 bin/redis-benchmark
 bin/redis-check-aof
 bin/redis-check-dump
@@ -45,5 +45,8 @@ share/examples/redis/tests/unit/type/list.tcl
 share/examples/redis/tests/unit/type/set.tcl
 share/examples/redis/tests/unit/type/zset.tcl
 share/examples/redis/utils/generate-command-help.rb
+share/examples/redis/utils/install_server.sh
 share/examples/redis/utils/mktarball.sh
+share/examples/redis/utils/redis.conf.tpl
 share/examples/redis/utils/redis_init_script
+share/examples/redis/utils/redis_init_script.tpl
