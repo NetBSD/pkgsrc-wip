@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4517 2011/10/28 21:26:25 ryo-on Exp $
+# $Id: Makefile,v 1.4518 2011/10/29 14:35:12 ryo-on Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1885,7 +1885,6 @@ SUBDIR+=	pcp
 SUBDIR+=	pcsx
 SUBDIR+=	pcsx-df
 SUBDIR+=	pdb2ldif
-SUBDIR+=	pdf2djvu
 SUBDIR+=	pdf2svg
 SUBDIR+=	pdfedit
 SUBDIR+=	pdfgrep
@@ -2008,7 +2007,6 @@ SUBDIR+=	proxyknife
 SUBDIR+=	prozilla
 SUBDIR+=	prtunnel
 SUBDIR+=	psh
-SUBDIR+=	pstreams
 SUBDIR+=	psybnc
 SUBDIR+=	pt-cyrillic-ttf
 SUBDIR+=	pts
