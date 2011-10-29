@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/10/29 06:08:03 errellion Exp $
+bin/digitemp
