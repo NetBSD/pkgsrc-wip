@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: INSTALL.nspluginwrapper,v 1.1.1.1 2011/10/07 08:59:38 ryo-on Exp $
+# $NetBSD: INSTALL.nspluginwrapper,v 1.2 2011/10/29 21:03:11 ryo-on Exp $
 
 PATH=@PREFIX@/bin:$PATH
 
@@ -17,4 +17,3 @@ case $STAGE in
 	done
 	;;
 esac
-
