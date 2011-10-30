@@ -1,20 +1,20 @@
-@comment $NetBSD: PLIST,v 1.2 2010/12/23 20:24:39 noud4 Exp $
+@comment $NetBSD: PLIST,v 1.3 2011/10/30 18:27:38 noud4 Exp $
 bin/evolution-import-rss
-lib/evolution/2.30/plugins/liborg-gnome-evolution-rss.la
-lib/evolution/2.30/plugins/org-gnome-evolution-rss.eplug
-lib/evolution/2.30/plugins/org-gnome-evolution-rss.xml
-share/evolution/2.30/errors/org-gnome-evolution-rss.error
-share/evolution/2.30/images/pix.png
-share/evolution/2.30/images/rss-16.png
-share/evolution/2.30/images/rss-22.png
-share/evolution/2.30/images/rss-24.png
-share/evolution/2.30/images/rss-icon-read.png
-share/evolution/2.30/images/rss-icon-unread.png
-share/evolution/2.30/images/rss-text-html.png
-share/evolution/2.30/images/rss-text-x-generic.png
-share/evolution/2.30/images/rss.png
-share/evolution/2.30/ui/rss-html-rendering.ui
-share/evolution/2.30/ui/rss-main.ui
+lib/evolution/2.32/plugins/liborg-gnome-evolution-rss.la
+lib/evolution/2.32/plugins/org-gnome-evolution-rss.eplug
+lib/evolution/2.32/plugins/org-gnome-evolution-rss.xml
+share/evolution/2.32/errors/org-gnome-evolution-rss.error
+share/evolution/2.32/images/pix.png
+share/evolution/2.32/images/rss-16.png
+share/evolution/2.32/images/rss-22.png
+share/evolution/2.32/images/rss-24.png
+share/evolution/2.32/images/rss-icon-read.png
+share/evolution/2.32/images/rss-icon-unread.png
+share/evolution/2.32/images/rss-text-html.png
+share/evolution/2.32/images/rss-text-x-generic.png
+share/evolution/2.32/images/rss.png
+share/evolution/2.32/ui/rss-html-rendering.ui
+share/evolution/2.32/ui/rss-main.ui
 share/gconf/schemas/evolution-rss.schemas
 share/locale/as/LC_MESSAGES/evolution-rss.mo
 share/locale/bn_IN/LC_MESSAGES/evolution-rss.mo

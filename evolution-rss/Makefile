@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2010/12/23 20:24:39 noud4 Exp $
+# $NetBSD: Makefile,v 1.4 2011/10/30 18:27:38 noud4 Exp $
 #
 
-DISTNAME=	evolution-rss-0.2.0
+DISTNAME=	evolution-rss-0.2.1
 CATEGORIES=	mail gnome
 MASTER_SITES=	http://gnome.eu.org/
 
@@ -18,6 +18,8 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config intltool  gmake msgfmt
 USE_LANGUAGES=	c c++
+
+CFLAGS+=	-DGTK_COMPILATION
 
 GCONF_SCHEMAS+=	evolution-rss.schemas
 
