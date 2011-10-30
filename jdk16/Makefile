@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2011/07/21 05:29:58 ftigeot Exp $
+# $NetBSD: Makefile,v 1.24 2011/10/30 18:57:50 noud4 Exp $
 
 .include "../../wip/jdk16/Makefile.common"
 
@@ -9,7 +9,7 @@ JDK_VERSION_STRING=	b05-jrl-24_sep_2007
 
 DISTNAME=		jdk-6u${JDK_UPDATE}
 PKGNAME=	jdk16-${JDK_VERSION}.${JDK_UPDATE}.${JDK_PATCHSET_VERSION}
-PKGREVISION=		3
+PKGREVISION=		4
 MASTER_SITES+=		# http://download.java.net/jdk6/6u3/
 MASTER_SITES+=		# http://www.eyesbeyond.com/freebsddom/java/jdk16.html
 DISTFILES=		${JRL_SRCFILE} ${JRL_BINFILE} ${PATCHSETFILE}
