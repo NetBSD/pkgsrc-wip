@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2011/03/20 20:40:46 shindenmorr Exp $
+# $NetBSD: Makefile,v 1.3 2011/10/30 14:12:07 genolopolis Exp $
 
-DISTNAME=	haproxy-1.4.13
+DISTNAME=	haproxy-1.4.18
 CATEGORIES=	www
 MASTER_SITES=	http://haproxy.1wt.eu/download/1.4/src/
 
