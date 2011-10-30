@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2011/06/05 16:42:04 ishit Exp $
+# $NetBSD: Makefile,v 1.14 2011/10/30 15:34:29 ishit Exp $
 
 DISTNAME=	bsfilter-1.0.17
 CATEGORIES=	mail
@@ -11,6 +11,8 @@ COMMENT=	Bayesian spam filter written in Ruby
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${RUBY_PKGPREFIX}-gdbm>=${RUBY_VERSION}:../../databases/ruby-gdbm
+
+RUBY_VERSION_SUPPORTED=	18
 
 NO_BUILD=	yes
 REPLACE_RUBY=	bsfilter/bsfilter
