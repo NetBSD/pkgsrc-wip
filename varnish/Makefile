@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/07/02 22:32:43 genolopolis Exp $
+# $NetBSD: Makefile,v 1.2 2011/10/30 13:46:54 genolopolis Exp $
 #
 
-DISTNAME=	varnish-3.0.0
+DISTNAME=	varnish-3.0.2
 PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://repo.varnish-cache.org/source/

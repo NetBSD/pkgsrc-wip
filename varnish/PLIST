@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/07/02 22:32:43 genolopolis Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/10/30 13:46:54 genolopolis Exp $
 bin/varnishadm
 bin/varnishhist
 bin/varnishlog
@@ -36,6 +36,7 @@ man/man1/varnishtop.1
 man/man3/vmod_std.3
 man/man7/varnish-cli.7
 man/man7/vcl.7
+man/man7/varnish-counters.7
 sbin/varnishd
 share/examples/rc.d/varnishd
 share/examples/rc.d/varnishlog
