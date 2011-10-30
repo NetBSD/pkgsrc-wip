@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/10/30 13:46:54 genolopolis Exp $
+# $NetBSD: Makefile,v 1.3 2011/10/30 14:25:29 genolopolis Exp $
 #
 
 DISTNAME=	varnish-3.0.2
@@ -38,7 +38,7 @@ PKG_SHELL.${VRNUSER}=	${SH}
 PKG_GECOS.${VRNUSER}=	Varnish daemon user
 
 RCD_SCRIPTS=		varnishd varnishlog varnishncsa
-PYTHON_FOR_BUILD_ONLY=	1
+PYTHON_FOR_BUILD_ONLY=	yes
 
 REPLACE_PYTHON+=	lib/libvcl/generate.py
 REPLACE_PYTHON+=	lib/libvmod_std/vmod.py

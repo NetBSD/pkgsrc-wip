@@ -1,4 +1,6 @@
-$NetBSD: patch-etc__Makefile.in,v 1.1.1.1 2011/07/02 22:32:43 genolopolis Exp $
+$NetBSD: patch-etc__Makefile.in,v 1.2 2011/10/30 14:25:29 genolopolis Exp $
+
+Put config file in examples
 
 --- etc/Makefile.in.orig	2011-07-02 21:50:03.000000000 +0000
 +++ etc/Makefile.in

@@ -1,4 +1,6 @@
-$NetBSD: patch-bin__varnishd__cache_dir_random.c,v 1.1 2011/10/30 13:46:54 genolopolis Exp $
+$NetBSD: patch-bin__varnishd__cache_dir_random.c,v 1.2 2011/10/30 14:25:29 genolopolis Exp $
+
+deal with missing exp2
 
 --- bin/varnishd/cache_dir_random.c.orig	2011-10-24 07:25:09.000000000 +0000
 +++ bin/varnishd/cache_dir_random.c

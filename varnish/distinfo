@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.2 2011/10/30 13:46:54 genolopolis Exp $
+$NetBSD: distinfo,v 1.3 2011/10/30 14:25:29 genolopolis Exp $
 
 SHA1 (varnish-3.0.2.tar.gz) = 906f1536cb7e728d18d9425677907ae723943df7
 RMD160 (varnish-3.0.2.tar.gz) = 6093839815ba72107fa2b52f0a198167a3a6b79b
 Size (varnish-3.0.2.tar.gz) = 1977852 bytes
-SHA1 (patch-bin__varnishd__cache_dir_random.c) = f9a0f503ad64c7b0e779c29e7b6347f0a31591fe
-SHA1 (patch-configure.ac) = cc52334f8f269b57e3b0c581a815c30eda36f0db
-SHA1 (patch-etc__Makefile.in) = 9bf07b99b011ea7cd7d3e2d5af8cb7c0afeae18e
+SHA1 (patch-bin__varnishd__cache_dir_random.c) = 1f197db3c543d202b2444192dee4c1095cd0ac2f
+SHA1 (patch-configure.ac) = 5614b7a0f5d016884e1b6dcb43c42f59af3611db
+SHA1 (patch-etc__Makefile.in) = 86424950049721ef224facdfbe4cb630a2c46532
