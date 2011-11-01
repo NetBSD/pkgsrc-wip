@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4518 2011/10/29 14:35:12 ryo-on Exp $
+# $Id: Makefile,v 1.4519 2011/11/01 16:48:51 ryo-on Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -722,7 +722,6 @@ SUBDIR+=	gosmore
 SUBDIR+=	gov2
 SUBDIR+=	gpac-devel
 SUBDIR+=	gpak
-SUBDIR+=	gpicview
 SUBDIR+=	gplbasic
 SUBDIR+=	gps
 SUBDIR+=	gpsdrive
