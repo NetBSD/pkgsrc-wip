@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2011/10/29 00:35:30 bharder Exp $
+# $NetBSD: Makefile,v 1.10 2011/11/02 20:19:15 fhajny Exp $
 #
 
 DISTNAME=	redis-2.4.2
@@ -54,6 +54,9 @@ SUBST_FILES.fix-paths=	redis.conf
 SUBST_SED.fix-paths=	-e 's,@@DBDIR@@,${REDIS_DATADIR},g'
 SUBST_SED.fix-paths+=	-e 's,@@LOGDIR@@,${REDIS_LOGDIR},g'
 SUBST_SED.fix-paths+=	-e 's,@@PIDDIR@@,${REDIS_PIDDIR},g'
+
+post-extract:
+	${CHMOD} -R g-w ${WRKSRC}
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/redis.conf ${DESTDIR}${EGDIR}/redis.conf.example

@@ -1,27 +1,25 @@
-$NetBSD: patch-ab,v 1.4 2011/09/30 20:07:28 bharder Exp $
+$NetBSD: patch-ab,v 1.5 2011/11/02 20:19:15 fhajny Exp $
 
---- ./src/Makefile.orig	2011-09-21 16:12:56.000000000 +0000
-+++ ./src/Makefile
-@@ -19,24 +19,24 @@ QUIET_LINK = @printf '    %b %b\n' $(LIN
+--- src/Makefile.orig	2011-10-26 14:16:33.000000000 +0000
++++ src/Makefile
+@@ -25,11 +25,11 @@ ifeq ($(uname_S),Linux)
  endif
  
  ifeq ($(uname_S),SunOS)
--  CFLAGS?= -std=c99 -pedantic $(OPTIMIZATION) -Wall -W -D__EXTENSIONS__ -D_XPG6
-+  CCFLAGS?= $(CFLAGS) -std=c99 -pedantic $(OPTIMIZATION) -Wall -W -D__EXTENSIONS__ -D_XPG6
-   CCLINK?= -ldl -lnsl -lsocket -lm -lpthread
-   DEBUG?= -g -ggdb 
+-  CFLAGS?=-std=c99 -pedantic $(OPTIMIZATION) -Wall -W -D__EXTENSIONS__ -D_XPG6
++  CCFLAGS?=$(CFLAGS) -std=c99 -pedantic $(OPTIMIZATION) -Wall -W -D__EXTENSIONS__ -D_XPG6
+   CCLINK?=-ldl -lnsl -lsocket -lm -lpthread
+   DEBUG?=-g -ggdb
  else
--  CFLAGS?= -std=c99 -pedantic $(OPTIMIZATION) -Wall -W $(ARCH) $(PROF)
-+  CCFLAGS?= $(CFLAGS) -std=c99 -pedantic $(OPTIMIZATION) -Wall -W $(ARCH) $(PROF)
-   CCLINK?= -lm -pthread
-   DEBUG?= -g -rdynamic -ggdb 
+-  CFLAGS?=-std=c99 -pedantic $(OPTIMIZATION) -Wall -W $(ARCH) $(PROF)
++  CCFLAGS?=$(CFLAGS) -std=c99 -pedantic $(OPTIMIZATION) -Wall -W $(ARCH) $(PROF)
+   CCLINK?=-lm -pthread
+   DEBUG?=-g -rdynamic -ggdb
+ endif
+@@ -52,11 +52,11 @@ ifeq ($(USE_JEMALLOC),yes)
+   ALLOC_FLAGS=-DUSE_JEMALLOC -I../deps/jemalloc/include
  endif
  
- ifeq ($(USE_TCMALLOC),yes)
-   CCLINK+= -ltcmalloc
--  CFLAGS+= -DUSE_TCMALLOC
-+  CCFLAGS+= $(CFLAGS) -DUSE_TCMALLOC
- endif
 -CCOPT= $(CFLAGS) $(ARCH) $(PROF)
 +CCOPT= $(CCFLAGS) $(ARCH) $(PROF)
  
@@ -32,30 +30,46 @@ $NetBSD: patch-ab,v 1.4 2011/09/30 20:07:28 bharder Exp $
 +INSTALL_BIN= $(DESTDIR)$(INSTALL_TOP)/bin
 +INSTALL= $(BSD_INSTALL_PROGRAM)
  
- OBJ = adlist.o ae.o anet.o dict.o redis.o sds.o zmalloc.o lzf_c.o lzf_d.o pqsort.o zipmap.o sha1.o ziplist.o release.o networking.o util.o object.o db.o replication.o rdb.o t_string.o t_list.o t_set.o t_zset.o t_hash.o config.o aof.o vm.o pubsub.o multi.o debug.o sort.o intset.o syncio.o slowlog.o
+ OBJ = adlist.o ae.o anet.o dict.o redis.o sds.o zmalloc.o lzf_c.o lzf_d.o pqsort.o zipmap.o sha1.o ziplist.o release.o networking.o util.o object.o db.o replication.o rdb.o t_string.o t_list.o t_set.o t_zset.o t_hash.o config.o aof.o vm.o pubsub.o multi.o debug.o sort.o intset.o syncio.o slowlog.o bio.o
  BENCHOBJ = ae.o anet.o redis-benchmark.o sds.o adlist.o zmalloc.o
-@@ -138,13 +138,13 @@ redis-benchmark: dependencies $(BENCHOBJ
- 	$(QUIET_LINK)$(CC) -o $(BENCHPRGNAME) $(CCOPT) $(DEBUG) $(BENCHOBJ) ../deps/hiredis/libhiredis.a $(CCLINK)
+@@ -159,7 +159,7 @@ dependencies:
+ 	@cd ../deps/jemalloc && ./configure $(JEMALLOC_CFLAGS) --with-jemalloc-prefix=je_ --enable-cc-silence && $(MAKE) lib/libjemalloc.a
  
  redis-benchmark.o:
 -	$(QUIET_CC)$(CC) -c $(CFLAGS) -I../deps/hiredis $(DEBUG) $(COMPILE_TIME) $<
 +	$(QUIET_CC)$(CC) -c $(CCFLAGS) -I../deps/hiredis $(DEBUG) $(COMPILE_TIME) $<
  
- redis-cli: dependencies $(CLIOBJ)
- 	$(QUIET_LINK)$(CC) -o $(CLIPRGNAME) $(CCOPT) $(DEBUG) $(CLIOBJ) ../deps/hiredis/libhiredis.a ../deps/linenoise/linenoise.o $(CCLINK)
+ redis-benchmark: dependencies $(BENCHOBJ)
+ 	@printf '%b %b\n' $(MAKECOLOR)MAKE$(ENDCOLOR) $(BINCOLOR)hiredis$(ENDCOLOR)
+@@ -167,19 +167,19 @@ redis-benchmark: dependencies $(BENCHOBJ
+ 	$(QUIET_LINK)$(CC) -o $(BENCHPRGNAME) $(CCOPT) $(DEBUG) $(BENCHOBJ) ../deps/hiredis/libhiredis.a $(CCLINK) $(ALLOC_LINK)
  
  redis-cli.o:
 -	$(QUIET_CC)$(CC) -c $(CFLAGS) -I../deps/hiredis -I../deps/linenoise $(DEBUG) $(COMPILE_TIME) $<
 +	$(QUIET_CC)$(CC) -c $(CCFLAGS) -I../deps/hiredis -I../deps/linenoise $(DEBUG) $(COMPILE_TIME) $<
  
- redis-check-dump: $(CHECKDUMPOBJ)
- 	$(QUIET_LINK)$(CC) -o $(CHECKDUMPPRGNAME) $(CCOPT) $(DEBUG) $(CHECKDUMPOBJ) $(CCLINK)
-@@ -153,7 +153,7 @@ redis-check-aof: $(CHECKAOFOBJ)
- 	$(QUIET_LINK)$(CC) -o $(CHECKAOFPRGNAME) $(CCOPT) $(DEBUG) $(CHECKAOFOBJ) $(CCLINK)
+ redis-cli: dependencies $(CLIOBJ)
+ 	$(QUIET_LINK)$(CC) -o $(CLIPRGNAME) $(CCOPT) $(DEBUG) $(CLIOBJ) ../deps/hiredis/libhiredis.a ../deps/linenoise/linenoise.o $(CCLINK) $(ALLOC_LINK)
  
- .c.o:
+ redis-check-dump.o:
 -	$(QUIET_CC)$(CC) -c $(CFLAGS) $(DEBUG) $(COMPILE_TIME) $<
 +	$(QUIET_CC)$(CC) -c $(CCFLAGS) $(DEBUG) $(COMPILE_TIME) $<
+ 
+ redis-check-dump: $(CHECKDUMPOBJ)
+ 	$(QUIET_LINK)$(CC) -o $(CHECKDUMPPRGNAME) $(CCOPT) $(DEBUG) $(CHECKDUMPOBJ) $(CCLINK)
+ 
+ redis-check-aof.o:
+-	$(QUIET_CC)$(CC) -c $(CFLAGS) $(DEBUG) $(COMPILE_TIME) $<
++	$(QUIET_CC)$(CC) -c $(CCFLAGS) $(DEBUG) $(COMPILE_TIME) $<
+ 
+ redis-check-aof: $(CHECKAOFOBJ)
+ 	$(QUIET_LINK)$(CC) -o $(CHECKAOFPRGNAME) $(CCOPT) $(DEBUG) $(CHECKAOFOBJ) $(CCLINK)
+@@ -190,7 +190,7 @@ redis-server: $(OBJ)
+ # Because the jemalloc.h header is generated as a part of the jemalloc build
+ # process, building it should complete before building any other object.
+ %.o: %.c $(ALLOC_DEP)
+-	$(QUIET_CC)$(CC) -c $(CFLAGS) $(ALLOC_FLAGS) $(DEBUG) $(COMPILE_TIME) $<
++	$(QUIET_CC)$(CC) -c $(CCFLAGS) $(ALLOC_FLAGS) $(DEBUG) $(COMPILE_TIME) $<
  
  clean:
  	rm -rf $(PRGNAME) $(BENCHPRGNAME) $(CLIPRGNAME) $(CHECKDUMPPRGNAME) $(CHECKAOFPRGNAME) *.o *.gcda *.gcno *.gcov

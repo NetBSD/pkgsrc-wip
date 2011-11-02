@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.5 2011/09/30 20:07:28 bharder Exp $
+$NetBSD: patch-aa,v 1.6 2011/11/02 20:19:15 fhajny Exp $
 
---- ./deps/hiredis/Makefile.orig	2011-09-21 16:12:56.000000000 +0000
-+++ ./deps/hiredis/Makefile
+--- deps/hiredis/Makefile.orig	2011-10-26 14:16:33.000000000 +0000
++++ deps/hiredis/Makefile
 @@ -8,7 +8,7 @@ BINS = hiredis-example hiredis-test
  uname_S := $(shell sh -c 'uname -s 2>/dev/null || echo not')
  OPTIMIZATION?=-O3
  ifeq ($(uname_S),SunOS)
 -  CFLAGS?=-std=c99 -pedantic $(OPTIMIZATION) -fPIC -Wall -W -D__EXTENSIONS__ -D_XPG6 $(ARCH) $(PROF)
-+  CCFLAGS?= $(CFLAGS) -std=c99 -pedantic $(OPTIMIZATION) -fPIC -Wall -W -D__EXTENSIONS__ -D_XPG6 $(ARCH) $(PROF)
++  CCFLAGS?=$(CFLAGS) -std=c99 -pedantic $(OPTIMIZATION) -fPIC -Wall -W -D__EXTENSIONS__ -D_XPG6 $(ARCH) $(PROF)
    CCLINK?=-ldl -lnsl -lsocket -lm -lpthread
    LDFLAGS?=-L. -Wl,-R,.
    DYLIBNAME?=libhiredis.so
@@ -15,8 +15,8 @@ $NetBSD: patch-aa,v 1.5 2011/09/30 20:07:28 bharder Exp $
    STLIB_MAKE_CMD?=ar rcs ${STLIBNAME} ${OBJ}
  else
  ifeq ($(uname_S),Darwin)
--  CFLAGS?=-std=c99 -pedantic $(OPTIMIZATION) -fPIC -Wall -W -Wwrite-strings $(ARCH) $(PROF)
-+  CCFLAGS?= $(CFLAGS) -std=c99 -pedantic $(OPTIMIZATION) -fPIC -Wall -W -Wwrite-strings $(ARCH) $(PROF)
+-  CFLAGS?=-std=c99 -pedantic $(OPTIMIZATION) -fPIC -Wall -W -Wstrict-prototypes -Wwrite-strings $(ARCH) $(PROF)
++  CCFLAGS?=$(CFLAGS) -std=c99 -pedantic $(OPTIMIZATION) -fPIC -Wall -W -Wstrict-prototypes -Wwrite-strings $(ARCH) $(PROF)
    CCLINK?=-lm -pthread
    LDFLAGS?=-L. -Wl,-rpath,.
    OBJARCH?=-arch i386 -arch x86_64
@@ -24,8 +24,8 @@ $NetBSD: patch-aa,v 1.5 2011/09/30 20:07:28 bharder Exp $
    STLIBNAME?=libhiredis.a
    STLIB_MAKE_CMD?=libtool -static -o ${STLIBNAME} - ${OBJ}
  else
--  CFLAGS?=-std=c99 -pedantic $(OPTIMIZATION) -fPIC -Wall -W -Wwrite-strings $(ARCH) $(PROF)
-+  CCFLAGS?= $(CFLAGS) -std=c99 -pedantic $(OPTIMIZATION) -fPIC -Wall -W -Wwrite-strings $(ARCH) $(PROF)
+-  CFLAGS?=-std=c99 -pedantic $(OPTIMIZATION) -fPIC -Wall -W -Wstrict-prototypes -Wwrite-strings $(ARCH) $(PROF)
++  CCFLAGS?=$(CFLAGS) -std=c99 -pedantic $(OPTIMIZATION) -fPIC -Wall -W -Wstrict-prototypes -Wwrite-strings $(ARCH) $(PROF)
    CCLINK?=-lm -pthread
    LDFLAGS?=-L. -Wl,-rpath,.
    DYLIBNAME?=libhiredis.so
