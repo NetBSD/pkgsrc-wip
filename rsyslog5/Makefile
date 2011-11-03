@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/10/27 10:14:19 fhajny Exp $
+# $NetBSD: Makefile,v 1.4 2011/11/03 10:36:42 fhajny Exp $
 #
 
 DISTNAME=		rsyslog-5.8.6
@@ -31,7 +31,7 @@ EGDIR=			${PREFIX}/share/examples/rsyslog
 CONF_FILES=		${EGDIR}/rsyslog.conf ${PKG_SYSCONFDIR}/rsyslog.conf
 RCD_SCRIPTS=		rsyslogd
 
-.include "../../mk/bsd.pkg.mk"
+.include "../../mk/bsd.prefs.mk"
 
 .include "options.mk"
 
