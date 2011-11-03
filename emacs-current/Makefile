@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.54 2011/09/27 04:43:36 makoto Exp $
+# $NetBSD: Makefile,v 1.55 2011/11/03 21:33:00 makoto Exp $
 #
 
-DISTNAME=	emacs-24.0.90
+DISTNAME=	emacs-24.0.91
 #PKGNAME=	emacs-24.0.50
 PKGREVISION=	${_GIT_PKGVERSION:S/.//g}
 CATEGORIES=	editors
