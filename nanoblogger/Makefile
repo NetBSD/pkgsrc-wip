@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2011/10/07 12:48:56 ryo-on Exp $
+# $NetBSD: Makefile,v 1.10 2011/11/05 14:04:09 ryo-on Exp $
 #
 
 DISTNAME=	nanoblogger-3.4.2
@@ -15,7 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 DEPENDS+=	tidy-[0-9]*:../../www/tidy
 
 USE_LANGUAGES=	# none
-USE_TOOLS+=	pax bash:run
+USE_TOOLS+=	pax bash:run grep:run sed:run
 
 NO_BUILD=	yes
 
