@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/08/27 19:00:43 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2011/11/06 17:51:07 othyro Exp $
 
 DISTNAME=		gtuxnes-0.75
 CATEGORIES=		emulators
-MASTER_SITES=		http://nyi.linux.tucows.com/files/
+MASTER_SITES=		http://www12.tucows.com/linux/files/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.scottweber.com/projects/gtk/gtuxnes/
