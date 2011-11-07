@@ -1,4 +1,4 @@
-# $Id: cvs-package.mk,v 1.40 2011/11/07 05:51:45 asau Exp $
+# $Id: cvs-package.mk,v 1.41 2011/11/07 05:53:53 asau Exp $
 #
 # Please update svn-package.mk as well. It is brother Makefile frags.
 #
@@ -148,11 +148,7 @@ _CVS_CMD=		cvs
 _CVS_ENV=		# empty
 _CVS_ENV+=		CVS_PASSFILE=${_CVS_PASSFILE}
 _CVS_ENV+=		CVS_RSH=${_CVS_RSH:Q}
-<<<<<<< cvs-package.mk
 _CVS_FLAGS=		-q -z3
-=======
-_CVS_FLAGS=		-Q -z3
->>>>>>> 1.37
 _CVS_CHECKOUT_FLAGS=	-P
 _CVS_PASSFILE=		${WRKDIR}/.cvs_passwords
 _CVS_TODAY_CMD=		${DATE} -u +'%Y-%m-%d'
