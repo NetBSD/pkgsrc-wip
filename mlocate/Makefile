@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/06/07 16:37:24 emil_s Exp $
+# $NetBSD: Makefile,v 1.2 2011/11/07 15:32:59 emil_s Exp $
 #
 
 DISTNAME=	mlocate-0.24
+PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	https://fedorahosted.org/releases/m/l/mlocate/
 EXTRACT_SUFX=	.tar.xz
@@ -27,5 +28,11 @@ GNU_CONFIGURE=	yes
 PKG_GROUPS=	mlocate
 
 SPECIAL_PERMS+=	bin/locate root mlocate 2755
+
+BUILD_DEFS+=	VARBASE
+
+CONFIGURE_ARGS+=--localstatedir=${VARBASE}
+
+OWN_DIRS+=	${VARBASE}/mlocate
 
 .include "../../mk/bsd.pkg.mk"
