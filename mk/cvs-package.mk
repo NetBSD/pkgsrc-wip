@@ -1,4 +1,4 @@
-# $Id: cvs-package.mk,v 1.39 2011/10/07 02:52:57 makoto Exp $
+# $Id: cvs-package.mk,v 1.40 2011/11/07 05:51:45 asau Exp $
 #
 # Please update svn-package.mk as well. It is brother Makefile frags.
 #
@@ -148,7 +148,11 @@ _CVS_CMD=		cvs
 _CVS_ENV=		# empty
 _CVS_ENV+=		CVS_PASSFILE=${_CVS_PASSFILE}
 _CVS_ENV+=		CVS_RSH=${_CVS_RSH:Q}
+<<<<<<< cvs-package.mk
 _CVS_FLAGS=		-q -z3
+=======
+_CVS_FLAGS=		-Q -z3
+>>>>>>> 1.37
 _CVS_CHECKOUT_FLAGS=	-P
 _CVS_PASSFILE=		${WRKDIR}/.cvs_passwords
 _CVS_TODAY_CMD=		${DATE} -u +'%Y-%m-%d'
@@ -180,36 +184,23 @@ _CVS_TAG_FLAG.${repo}=	'-D${_CVS_TODAY} 00:00 +0000'
 _CVS_TAG.${repo}=	${_CVS_TODAY:Q}
 .  endif
 
-_CVS_TMP_RESULT.${repo}=	'/tmp/cvs-${CVS_MODULE.${repo}}-update'
-
 # Cache support:
-.  if !defined(NO_CVS_CACHE.${repo}) \
-   || defined(NO_CVS_CACHE.${repo}) && empty(NO_CVS_CACHE.${repo}:M[Yy][Ee][Ss])
 #   cache file name
-.  if !defined(CVS_DISTBASE.${repo})
-CVS_DISTBASE.${repo}=	${CVS_MODULE.${repo}}
-.  endif
-_CVS_DISTFILE.${repo}=	${CVS_DISTBASE.${repo}}-${_CVS_TAG.${repo}}.tar.gz
+_CVS_DISTFILE.${repo}=	${PKGBASE}-${CVS_MODULE.${repo}}-${_CVS_TAG.${repo}}.tar.gz
 
 #   command to extract cache file
 _CVS_EXTRACT_CACHED.${repo}=	\
-	p="$$(ls -td ${_CVS_DISTDIR}/${CVS_DISTBASE.${repo}}-*.tar.gz | head -n 1)";	\
-	if [ -n "$$p" ]; then						\
-	  ${STEP_MSG} "(1) Extracting cached CVS archive \"""$$p\".";	\
-	  pax -r -z -f "$$p";				\
-	else								\
-	  ${STEP_MSG} "(1a) No cache file found.";			\
+	if [ -f ${_CVS_DISTDIR}/${_CVS_DISTFILE.${repo}:Q} ]; then		\
+	  ${STEP_MSG} "(1a) Extracting cached CVS archive "${_CVS_DISTFILE.${repo}:Q}"."; \
+	  pax -r -z -f ${_CVS_DISTDIR}/${_CVS_DISTFILE.${repo}:Q};	\
+	  exit 0;							\
 	fi
-
-_CVS_CHECK_UPDATE.${repo}=     \
-	"$$(grep ^[ADMU] ${_CVS_TMP_RESULT.${repo}} | head -n 1)"
 
 #   create cache archive
 _CVS_CREATE_CACHE.${repo}=	\
 	${STEP_MSG} "(5) Creating cached CVS archive "${_CVS_DISTFILE.${repo}:Q}"."; \
 	${MKDIR} ${_CVS_DISTDIR:Q};							\
 	pax -w -z -f ${_CVS_DISTDIR}/${_CVS_DISTFILE.${repo}:Q} ${CVS_MODULE.${repo}:Q}
-.  endif
 .endfor
 
 pre-extract: do-cvs-extract
@@ -219,11 +210,16 @@ do-cvs-extract: .PHONY
 	${RUN} cd ${WRKDIR};						\
 	if [ ! -d ${_CVS_DISTDIR} ]; then mkdir -p ${_CVS_DISTDIR:Q}; fi;	\
 	${_CVS_EXTRACT_CACHED.${repo}};					\
+	p="$$(cd ${_CVS_DISTDIR} && ls -t ${PKGBASE}-${CVS_MODULE.${repo}}-* | head -n 1)";	\
+	if [ -n "$$p" ]; then						\
+	  ${STEP_MSG} "(1b) Extracting cached CVS archive \"""$$p\".";	\
+	  pax -r -z -f ${_CVS_DISTDIR:Q}/"$$p";				\
+	fi;								\
 	case ${CVS_ROOT.${repo}:Q} in					\
 	  :pserver:*)							\
 	    [ -f ${_CVS_PASSFILE} ] || ${TOUCH} ${_CVS_PASSFILE};	\
 	    ${STEP_MSG} "Logging in to "${CVS_ROOT.${repo}:Q}".";	\
-	    ${SETENV} ${_CVS_ENV} ${_CVS_CMD} ${_CVS_FLAGS}		\
+	    ${SETENV} ${_CVS_ENV} ${_CVS_CMD} ${_CVS_FLAGS} 		\
 		-d ${CVS_ROOT.${repo}:Q} login				\
 	  ;;								\
 	  *) ;;								\
@@ -237,20 +233,9 @@ do-cvs-extract: .PHONY
 			checkout ${_CVS_CHECKOUT_FLAGS}			\
 			${_CVS_TAG_FLAG.${repo}}			\
 			-d ${repo} 					\
-			${CVS_MODULE.${repo}:Q} > ${_CVS_TMP_RESULT.${repo}};	\
-	if [	!  "$$p" = 0	];then					\
-	  if [	  ! -z ${_CVS_TMP_RESULT.${repo}} ];then		\
-	    if [    -n ${_CVS_CHECK_UPDATE.${repo}} ]; then		\
+			${CVS_MODULE.${repo}:Q};				\
 	${_CVS_CREATE_CACHE.${repo}};					\
-	    else							\
-	${STEP_MSG} "(6a) Skip creating cache file for no update.";	\
-	    fi;								\
-	  else								\
-	${STEP_MSG} "(6b) Skip creating cache file.";			\
-	  fi;								\
-	else								\
-	${STEP_MSG} "(6c) Skip creating cache file for no update.";	\
-	fi;
+
 .endfor
 
 .endif
