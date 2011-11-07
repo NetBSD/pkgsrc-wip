@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2011/08/01 15:10:56 pallegra Exp $
+# $NetBSD: Makefile,v 1.3 2011/11/07 09:12:20 pallegra Exp $
 #
 
-DISTNAME=	i3lock-2.1
+DISTNAME=	i3lock-2.2
 CATEGORIES=	x11
 MASTER_SITES=	http://i3wm.org/i3lock/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pallegra@gmail.com
 HOMEPAGE=	http://i3wm.org/i3lock/
