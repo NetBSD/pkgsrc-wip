@@ -54,7 +54,7 @@ OPTIONS:
                     fields are output only specified fields
   -e                does nothing if no packages were specified
   -k <algorithms>   generate checksums for binary packages
-                    and make them a part of summary (CKSUM)
+                    and make them a part of summary (FILE_CKSUM)
 PKG_INFO_ARGS:
   Options passed to pkg_info(1) that default to -a.
   In addition to these options -X is always applied to pkg_info
@@ -105,7 +105,7 @@ $LIBEXECDIR/XB2bin_summary -a "$add_fields" -r "$rem_fields" -f "$only_fields" |
 if test -z "$cksums"; then
     cat
 else
-    ## Add CKSUM field to summary
+    ## Add FILE_CKSUM field to summary
     tmpdir=`mktemp -d /tmp/bin_summary.XXXXXX`
     test -n "$tmpdir" || exit 1
 
@@ -133,7 +133,7 @@ else
 
 	for (i=1; i <= cksums_cnt; ++i){
 	    cksum_type = cksums_arr [i]
-	    print "CKSUM=" cksum_type " " cksum [fn, cksum_type]
+	    print "FILE_CKSUM=" cksum_type " " cksum [fn, cksum_type]
 	}
 	fn = ""
 	print ""

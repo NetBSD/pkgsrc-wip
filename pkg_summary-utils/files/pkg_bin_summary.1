@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkg_bin_summary.1,v 1.5 2011/08/27 17:13:03 cheusov Exp $
+.\"	$NetBSD: pkg_bin_summary.1,v 1.6 2011/11/07 23:22:23 cheusov Exp $
 .\"
 .\" Copyright (c) 2010 by Aleksey Cheusov (vle@gmx.net)
 .\" Absolutely no warranty.
@@ -57,11 +57,11 @@ fields are separated by space or comma.
 .TP
 .BI "-k " algorithms
 Generate checksums for packages using digest(1)
-and make them a part of output summary. CKSUM field is added to summary
+and make them a part of output summary. FILE_CKSUM field is added to summary
 that has the following format:
 .br
 .VB
-  CKSUMS=<ALGO> <CKSUM>
+  FILE_CKSUM=<ALGO> <CKSUM>
 .VE
 where ALGO is is an
 .I algorithm
