@@ -1,4 +1,4 @@
-# $Id: cvs-package.mk,v 1.41 2011/11/07 05:53:53 asau Exp $
+# $Id: cvs-package.mk,v 1.42 2011/11/07 05:56:28 asau Exp $
 #
 # Please update svn-package.mk as well. It is brother Makefile frags.
 #
@@ -187,14 +187,14 @@ _CVS_DISTFILE.${repo}=	${PKGBASE}-${CVS_MODULE.${repo}}-${_CVS_TAG.${repo}}.tar.
 #   command to extract cache file
 _CVS_EXTRACT_CACHED.${repo}=	\
 	if [ -f ${_CVS_DISTDIR}/${_CVS_DISTFILE.${repo}:Q} ]; then		\
-	  ${STEP_MSG} "(1a) Extracting cached CVS archive "${_CVS_DISTFILE.${repo}:Q}"."; \
+	  ${STEP_MSG} "Extracting cached CVS archive "${_CVS_DISTFILE.${repo}:Q}"."; \
 	  pax -r -z -f ${_CVS_DISTDIR}/${_CVS_DISTFILE.${repo}:Q};	\
 	  exit 0;							\
 	fi
 
 #   create cache archive
 _CVS_CREATE_CACHE.${repo}=	\
-	${STEP_MSG} "(5) Creating cached CVS archive "${_CVS_DISTFILE.${repo}:Q}"."; \
+	${STEP_MSG} "Creating cached CVS archive "${_CVS_DISTFILE.${repo}:Q}"."; \
 	${MKDIR} ${_CVS_DISTDIR:Q};							\
 	pax -w -z -f ${_CVS_DISTDIR}/${_CVS_DISTFILE.${repo}:Q} ${CVS_MODULE.${repo}:Q}
 .endfor
@@ -208,7 +208,7 @@ do-cvs-extract: .PHONY
 	${_CVS_EXTRACT_CACHED.${repo}};					\
 	p="$$(cd ${_CVS_DISTDIR} && ls -t ${PKGBASE}-${CVS_MODULE.${repo}}-* | head -n 1)";	\
 	if [ -n "$$p" ]; then						\
-	  ${STEP_MSG} "(1b) Extracting cached CVS archive \"""$$p\".";	\
+	  ${STEP_MSG} "Extracting cached CVS archive \"""$$p\".";	\
 	  pax -r -z -f ${_CVS_DISTDIR:Q}/"$$p";				\
 	fi;								\
 	case ${CVS_ROOT.${repo}:Q} in					\
@@ -220,7 +220,7 @@ do-cvs-extract: .PHONY
 	  ;;								\
 	  *) ;;								\
 	esac;								\
-	${STEP_MSG} "(2) Downloading "${CVS_MODULE.${repo}:Q}" from "${CVS_ROOT.${repo}:Q}"."; \
+	${STEP_MSG} "Downloading "${CVS_MODULE.${repo}:Q}" from "${CVS_ROOT.${repo}:Q}"."; \
 	${SETENV} ${_CVS_ENV}						\
 		${_CVS_CMD}						\
 			${_CVS_FLAGS}					\

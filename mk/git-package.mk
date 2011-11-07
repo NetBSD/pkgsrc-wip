@@ -98,13 +98,13 @@ _GIT_DISTFILE.${_repo_}=  ${GIT_MODULE.${_repo_}}-${_GIT_TAG.${_repo_}}.tar
 #   command to extract cache file
 _GIT_EXTRACT_CACHED.${_repo_}=    \
         if [ -f ${_GIT_DISTDIR}/${_GIT_DISTFILE.${_repo_}:Q} ]; then              \
-          ${STEP_MSG} "(1) Extracting cached GIT archive "${_GIT_DISTFILE.${_repo_}:Q}"."; \
+          ${STEP_MSG} "Extracting cached GIT archive "${_GIT_DISTFILE.${_repo_}:Q}"."; \
           pax -r -f ${_GIT_DISTDIR}/${_GIT_DISTFILE.${_repo_}:Q} &&  rm -f ${_GIT_NEED_CLONE}  ; \
         fi
 
 #   create cache archive
 _GIT_CREATE_CACHE.${_repo_}=      \
-        ${STEP_MSG} "(4) Creating cached GIT archive "${_GIT_DISTFILE.${_repo_}:Q} "on" ${_GIT_DISTDIR:Q}"."; \
+        ${STEP_MSG} "Creating cached GIT archive "${_GIT_DISTFILE.${_repo_}:Q} "on" ${_GIT_DISTDIR:Q}"."; \
         ${MKDIR} ${_GIT_DISTDIR:Q};                                     \
         pax -w  -f ${_GIT_DISTDIR}/${_GIT_DISTFILE.${_repo_}:Q} */.git || rm -f ${_GIT_DISTDIR}/${_GIT_DISTFILE.${_repo_}:Q}
 .endfor
@@ -122,25 +122,25 @@ do-git-extract:
 	if [ -n "$$p" ]; then						\
 	    q="$$(cd ${_GIT_DISTDIR} && ls -t ${GIT_MODULE.${_repo_}}-[0-9]*.tar | wc -l)" &&	\
 	    if [ $$(($$q)) -gt 3 ] ; then	    \
-	       ${STEP_MSG} "(1a) more than 3 generation files found in ${_GIT_DISTDIR}, you may";	\
+	       ${STEP_MSG} "     more than 3 generation files found in ${_GIT_DISTDIR}, you may";	\
 	       ${STEP_MSG} "	 delete them manually to avoid getting them fat --> $$p etc" ;		\
 	       ${STEP_MSG} "	 suggesting to leave just any one of these," ;				\
 	       ${STEP_MSG} "	 or delete them all. (But it would take time at next clone.)" ;		\
 	    fi;	\
 	    if [ "$$p" != ${_GIT_DISTFILE.${_repo_}:Q} ]; then		\
-	      ${STEP_MSG} "(2) Extracting cached GIT archive \"""$$p\".";	\
+	      ${STEP_MSG} "Extracting cached GIT archive \"""$$p\".";	\
             pax -r -f ${_GIT_DISTDIR:Q}/"$$p" &&  rm -f ${_GIT_NEED_CLONE};	\
 	    fi								\
 	else								\
 	  touch ${_GIT_NEED_CLONE};					\
         fi;                                                             \
 	if [ -r ${_GIT_NEED_CLONE} ]; then				\
-        ${STEP_MSG} "(3a) git clone from "${GIT_MODULE.${_repo_}:Q}" with "${_GIT_FLAGS}"." ;	\
+        ${STEP_MSG} "git clone from "${GIT_MODULE.${_repo_}:Q}" with "${_GIT_FLAGS}"." ;	\
 		${_GIT_CMD} clone					\
 			${_GIT_FLAGS}		 			\
 			${GIT_REPO.${_repo_}:Q};			\
 	else								\
-	${STEP_MSG} "(3b) git pull origin master from "${GIT_MODULE.${_repo_}:Q} "." ;	\
+	${STEP_MSG} "git pull origin master from "${GIT_MODULE.${_repo_}:Q} "." ;	\
 		(cd ${GIT_MODULE};					\
 		${_GIT_CMD} pull ${GIT_FLAGS} origin master 		\
 		 | tee  ${_GIT_TMP_RESULTS};				\
@@ -154,10 +154,10 @@ do-git-extract:
 	 if [ "$$p" != ${_GIT_DISTFILE.${_repo_}:Q} ] || [ -r ${_GIT_NEED_CLONE} ]; then \
 	        ${_GIT_CREATE_CACHE.${_repo_}};				\
 	 else								\
-         ${STEP_MSG}    "(5) Skipping write cache, the same date or newly cloned";\
+         ${STEP_MSG}    "Skipping write cache, the same date or newly cloned";\
          fi;								\
 	else								\
-            ${STEP_MSG} "(6) Skipping write cache, said -> Already up-to-date.";\
+            ${STEP_MSG} "Skipping write cache, said -> Already up-to-date.";\
 	fi
 .endfor
 
