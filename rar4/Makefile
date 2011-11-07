@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/06/03 00:22:59 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2011/11/07 13:49:53 othyro Exp $
 
-PKGVERSION=		4.0.1
-DISTNAME=		rarbsd-${PKGVERSION}
+PKGVERSION=		4.10beta3
+DISTNAME=		rarbsd-${PKGVERSION:S/0beta/.b/}
 PKGNAME=		rar-${PKGVERSION}
 WRKSRC=			${WRKDIR}/rar
 CATEGORIES=		archivers
@@ -19,7 +19,7 @@ LICENSE_FILE=		${FILESDIR}/rar4-license
 
 EGDIR=			${PREFIX}/share/examples/rar4
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/cat1 share/rar4
+INSTALLATION_DIRS=	bin lib ${PKGMANDIR}/cat1 share/rar4
 
 ONLY_FOR_PLATFORM=	FreeBSD-*-i386 NetBSD-*-i386
 
@@ -36,7 +36,7 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/rar.txt ${DESTDIR}${PREFIX}/${PKGMANDIR}/cat1/rar4.0
 	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/rarfiles.lst ${DESTDIR}${EGDIR}/rarfiles.lst
-	${INSTALL_DATA} ${WRKSRC}/default.sfx ${DESTDIR}${PREFIX}/lib/default.sfx
+	${INSTALL_LIB} ${WRKSRC}/default.sfx ${DESTDIR}${PREFIX}/lib/default.sfx
 	for a in ${DATA_FILES}; do \
 		${INSTALL_DATA} ${WRKSRC}/$$a ${DESTDIR}${PREFIX}/share/rar4/$$a; \
 	done
