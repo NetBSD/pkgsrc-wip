@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2009/06/09 22:34:24 othyro Exp $
+$NetBSD: patch-aa,v 1.2 2011/11/07 23:00:48 othyro Exp $
+
+Making install in po cannot find install.sh. Fixes that issue.
 
 --- po/Makefile.in.in.orig	2008-02-06 09:27:54.000000000 +0000
 +++ po/Makefile.in.in
