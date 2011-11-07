@@ -1,7 +1,5 @@
-# $Id: cvs-package.mk,v 1.42 2011/11/07 05:56:28 asau Exp $
-#
-# Please update svn-package.mk as well. It is brother Makefile frags.
-#
+# $Id: cvs-package.mk,v 1.43 2011/11/07 17:26:53 asau Exp $
+
 # This file provides simple access to CVS repositories, so that packages
 # can be created from CVS instead of from released tarballs. Whenever a
 # package is fetched from CVS, an archive is created from it and saved
@@ -21,8 +19,6 @@
 #	following variables define the details of how to access the
 #	CVS repository.
 #
-#	CVS_ROOT must be defined.
-#
 # CVS_ROOT.${id}
 #	The CVSROOT for the CVS repository, including anoncvs password,
 #	if applicable.
@@ -35,11 +31,6 @@
 #	The CVS module to check out.
 #
 #	Default value: ${id}
-#
-# CVS_DISTBASE.${id}
-#	The prefix for cached archive file name.
-#
-#	Default value: ${PKGBASE}-${CVS_MODULE.${repo}}
 #
 # It may define the following variables:
 #
@@ -99,7 +90,7 @@ _PKG_MK_CVS_PACKAGE_MK=	# defined
 
 DISTFILES?=		# empty
 PKGNAME?=		${DISTNAME:C,-[0-9].*,,}-cvs-${_CVS_PKGVERSION}
-# Enforce PKGREVISION unless CVS_TAG is set
+# Enforce PKGREVISION unless CVS_TAG is set:
 .if empty(CVS_TAG)
 . if defined(CHECKOUT_DATE)
 PKGREVISION?=		$(CHECKOUT_DATE:S/-//g)
@@ -133,7 +124,7 @@ CVS_REPOSITORIES?=	# none
 
 .for repo in ${CVS_REPOSITORIES}
 .  if !defined(CVS_ROOT.${repo})
-PKG_FAIL_REASON+=	"[cvs-package.mk] CVS_ROOT."${repo:Q}" must be set."
+PKG_FAIL_REASON+=	"[cvs-package.mk] CVS_ROOT.${repo} must be set."
 .  endif
 .endfor
 
@@ -148,7 +139,7 @@ _CVS_CMD=		cvs
 _CVS_ENV=		# empty
 _CVS_ENV+=		CVS_PASSFILE=${_CVS_PASSFILE}
 _CVS_ENV+=		CVS_RSH=${_CVS_RSH:Q}
-_CVS_FLAGS=		-q -z3
+_CVS_FLAGS=		-Q -z3
 _CVS_CHECKOUT_FLAGS=	-P
 _CVS_PASSFILE=		${WRKDIR}/.cvs_passwords
 _CVS_TODAY_CMD=		${DATE} -u +'%Y-%m-%d'
@@ -161,7 +152,6 @@ _CVS_DISTDIR=		${DISTDIR}/cvs-packages
 # Generation of repository-specific variables
 #
 
-# determine appropriate checkout date or tag
 .for repo in ${CVS_REPOSITORIES}
 CVS_MODULE.${repo}?=	${repo}
 
@@ -195,7 +185,7 @@ _CVS_EXTRACT_CACHED.${repo}=	\
 #   create cache archive
 _CVS_CREATE_CACHE.${repo}=	\
 	${STEP_MSG} "Creating cached CVS archive "${_CVS_DISTFILE.${repo}:Q}"."; \
-	${MKDIR} ${_CVS_DISTDIR:Q};							\
+	${MKDIR} ${_CVS_DISTDIR:Q};					\
 	pax -w -z -f ${_CVS_DISTDIR}/${_CVS_DISTFILE.${repo}:Q} ${CVS_MODULE.${repo}:Q}
 .endfor
 
@@ -222,16 +212,10 @@ do-cvs-extract: .PHONY
 	esac;								\
 	${STEP_MSG} "Downloading "${CVS_MODULE.${repo}:Q}" from "${CVS_ROOT.${repo}:Q}"."; \
 	${SETENV} ${_CVS_ENV}						\
-		${_CVS_CMD}						\
-			${_CVS_FLAGS}					\
-			-d						\
-			${CVS_ROOT.${repo}:Q}				\
-			checkout ${_CVS_CHECKOUT_FLAGS}			\
-			${_CVS_TAG_FLAG.${repo}}			\
-			-d ${repo} 					\
-			${CVS_MODULE.${repo}:Q};				\
-	${_CVS_CREATE_CACHE.${repo}};					\
-
+	  ${_CVS_CMD} ${_CVS_FLAGS} -d ${CVS_ROOT.${repo}:Q}		\
+	    checkout ${_CVS_CHECKOUT_FLAGS} ${_CVS_TAG_FLAG.${repo}}	\
+	      -d ${repo} ${CVS_MODULE.${repo}:Q};				\
+	${_CVS_CREATE_CACHE.${repo}}
 .endfor
 
 .endif
