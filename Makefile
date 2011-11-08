@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4525 2011/11/08 15:49:40 othyro Exp $
+# $Id: Makefile,v 1.4526 2011/11/08 20:46:27 ryo-on Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -626,7 +626,6 @@ SUBDIR+=	gappa
 SUBDIR+=	gauche-dbd-pg
 SUBDIR+=	gauche-fastcgi
 SUBDIR+=	gbase
-SUBDIR+=	gcap
 SUBDIR+=	gcc42
 SUBDIR+=	gcc43
 SUBDIR+=	gconf-cleaner
@@ -726,7 +725,6 @@ SUBDIR+=	gplbasic
 SUBDIR+=	gps
 SUBDIR+=	gpsdrive
 SUBDIR+=	gpx2shp
-SUBDIR+=	grake
 SUBDIR+=	grandr
 SUBDIR+=	granule
 SUBDIR+=	graphmonkey
@@ -1846,7 +1844,6 @@ SUBDIR+=	p5-Tk-TableMatrix
 SUBDIR+=	p5-UNIVERSAL-exports
 SUBDIR+=	p5-URI-Find-Rule
 SUBDIR+=	p5-URI-Title
-SUBDIR+=	p5-Umph-Prompt
 SUBDIR+=	p5-Unicode-CheckUTF8
 SUBDIR+=	p5-Unicode-Collate
 SUBDIR+=	p5-Unicode-Normalize
@@ -2825,7 +2822,6 @@ SUBDIR+=	uebimiau
 SUBDIR+=	uffizi
 SUBDIR+=	uim-chewing
 SUBDIR+=	umix
-SUBDIR+=	umph
 SUBDIR+=	umurmur
 SUBDIR+=	undo-tree
 SUBDIR+=	unix2tcp
