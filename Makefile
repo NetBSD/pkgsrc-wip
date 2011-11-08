@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4523 2011/11/08 01:51:26 tnn2 Exp $
+# $Id: Makefile,v 1.4524 2011/11/08 11:51:30 ryo-on Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1845,6 +1845,7 @@ SUBDIR+=	p5-Tk-TableMatrix
 SUBDIR+=	p5-UNIVERSAL-exports
 SUBDIR+=	p5-URI-Find-Rule
 SUBDIR+=	p5-URI-Title
+SUBDIR+=	p5-Umph-Prompt
 SUBDIR+=	p5-Unicode-CheckUTF8
 SUBDIR+=	p5-Unicode-Collate
 SUBDIR+=	p5-Unicode-Normalize
