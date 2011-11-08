@@ -1,15 +1,15 @@
-$NetBSD: patch-cpp_CMakeLists.txt,v 1.1.1.1 2011/11/08 01:42:14 tnn2 Exp $
+$NetBSD: patch-cpp_CMakeLists.txt,v 1.2 2011/11/08 02:24:28 tnn2 Exp $
 
---- cpp/CMakeLists.txt.orig	2011-11-06 13:37:37.000000000 +0000
+--- cpp/CMakeLists.txt.orig	2011-11-03 10:51:12.000000000 +0000
 +++ cpp/CMakeLists.txt
 @@ -40,6 +40,10 @@ if (NOT WIN32)
    SET(LIBATTR "attr")
    SET(LIBPTHREAD "pthread")
  endif(NOT WIN32)
-+#IF(NETBSD)
++IF("$ENV{OPSYS}" STREQUAL "NetBSD")
 +  SET(LIBFUSE "refuse")
 +  SET(LIBATTR "")
-+#ENDIF(NETBSD)
++ENDIF(NETBSD)
  IF(APPLE)
    # No libattr on mac.
    SET(LIBATTR "")
