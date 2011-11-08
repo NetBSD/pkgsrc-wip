@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2011/11/08 02:24:28 tnn2 Exp $
+$NetBSD: distinfo,v 1.3 2011/11/08 03:11:32 tnn2 Exp $
 
 SHA1 (XtreemFS-1.3.1.tar.gz) = 2007825dea502f31814a99a073e607d5d60c93e7
 RMD160 (XtreemFS-1.3.1.tar.gz) = 261d606ca18e7234a3543ef2f8ed14cae65bb3a3
@@ -12,9 +12,11 @@ SHA1 (patch-bin_xfts__remove__osd) = cfbdff9fcdbb954620fc2e2e2239d114a856dbb3
 SHA1 (patch-bin_xfts__scrub) = 5a05612922693c8427063ce7cb5859aeb86a64c1
 SHA1 (patch-bin_xfts__snap) = fbd19ea942b357931add84a91010db853f069296
 SHA1 (patch-cpp_CMakeLists.txt) = 9366bb9e3242104fb737dabb1aaee9ed925ee633
+SHA1 (patch-cpp_src_fuse_fuse__adapter.cpp) = 03e1a902bc63e4461e0ec1c96d04612ce89d1617
 SHA1 (patch-cpp_src_fuse_fuse__operations.cpp) = 6eb8c909d5787c479e48b366f3a7cdf9f1f02789
 SHA1 (patch-cpp_src_fuse_mount.xtreemfs.cpp) = 174336f9861412dff9589b97f9cdcfb63104e207
 SHA1 (patch-cpp_src_xtfsutil_xtfsutil.cpp) = f22e8ae85788180616de43ca8710124998b3fb75
+SHA1 (patch-cpp_src_xtfsutil_xtfsutil__server.cpp) = 9735a9cc30f6d91e20503fea246881f9a99a1308
 SHA1 (patch-cpp_thirdparty_gtest-1.5.0_configure) = 5c45c0ee1b368ee4cf1783bb20ae7d98c0c03d23
 SHA1 (patch-cpp_thirdparty_protobuf-2.3.0_configure) = df4eb67d13a3914437407005db6941176db0fac0
 SHA1 (patch-java_flease_nbproject_project.properties) = 1936d31b734e2b696657c335ce50c9c88405cdd4
