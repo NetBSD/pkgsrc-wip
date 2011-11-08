@@ -1,0 +1,15 @@
+$NetBSD: patch-SConstruct,v 1.1.1.1 2011/11/08 15:48:08 othyro Exp $
+
+Make SConstruct use $PATH.
+
+--- SConstruct.orig	2011-11-08 14:44:17.000000000 +0000
++++ SConstruct
+@@ -17,7 +17,7 @@ opts.AddVariables(
+ )
+ 
+ env = Environment(options = opts)
+-
++env['ENV']['PATH'] = os.environ.get('PATH')
+ env.Append(CPPDEFINES=["PUBLIC_RELEASE"])
+ 
+ # LSB_FIRST must be off for PPC to compile

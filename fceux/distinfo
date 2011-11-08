@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/11/08 15:48:08 othyro Exp $
+
+SHA1 (fceux-2.1.5.src.tar.bz2) = 599ef6a261ab1bd24e58468886d7cc303e150feb
+RMD160 (fceux-2.1.5.src.tar.bz2) = 9852e6f0958d0ec8d926257e78b34579ef10af85
+Size (fceux-2.1.5.src.tar.bz2) = 7322199 bytes
+SHA1 (patch-SConstruct) = 09fe149eefd00b6d607462ae82f20544ec11bc01
