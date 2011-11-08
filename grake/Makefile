@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/11/17 10:45:07 ryo-on Exp $
+# $NetBSD: Makefile,v 1.2 2011/11/08 11:32:28 ryo-on Exp $
 #
 
 DISTNAME=	grake-0.0.4
@@ -6,7 +6,7 @@ PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	net www
 MASTER_SITES=	http://grake.googlecode.com/files/
 
-MAINTAINER=	ryo_on@yk.rim.or.jp
+MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/grake/
 COMMENT=	Tool for scanning webpages for Youtube video links
 LICENSE=	gnu-gpl-v3
