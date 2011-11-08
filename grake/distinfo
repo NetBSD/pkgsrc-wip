@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/11/17 10:45:07 ryo-on Exp $
+$NetBSD: distinfo,v 1.2 2011/11/08 19:19:48 ryo-on Exp $
 
-SHA1 (grake-0.0.4.tar.gz) = 3d4c681ba9df5cee263cd4d854b5fd3365758d73
-RMD160 (grake-0.0.4.tar.gz) = 2b0d3e56cabb65c6c7acc74eb96b82067a4eb436
-Size (grake-0.0.4.tar.gz) = 17040 bytes
+SHA1 (grake-0.1.0.tar.gz) = b7b513aba480dca31c1c82bb9abd8e4b8288ac8c
+RMD160 (grake-0.1.0.tar.gz) = 51c7dba4fdd9a5b2d6c2370baec190c4f48c9b55
+Size (grake-0.1.0.tar.gz) = 19336 bytes
