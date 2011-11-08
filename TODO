@@ -56,7 +56,6 @@ Suggested package updates
 	o httrack-3.43
 	o hu-go-2.11
 	o i3-4.0.2
-	o i3lock-2.1
 	o icecat-7.0.1
 	o jakarta-struts-1.2.4
 	o jalview-2.4
@@ -122,7 +121,7 @@ Suggested package updates
 	o tmw-0.0.29.1
 	o uade-2.13
 	o uptimed-0.3.16
-	o virtualbox-4.1.4
+	o virtualbox-4.1.6
 	o xaralx-bin-0.7.1692
 	o xclipboard-1.1.1
 	o xcowsay-1.3
