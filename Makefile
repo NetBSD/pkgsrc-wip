@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4524 2011/11/08 11:51:30 ryo-on Exp $
+# $Id: Makefile,v 1.4525 2011/11/08 15:49:40 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -551,6 +551,7 @@ SUBDIR+=	fastrpc
 SUBDIR+=	fbida
 SUBDIR+=	fbpager
 SUBDIR+=	fbpanel
+SUBDIR+		fceux
 SUBDIR+=	fdm
 SUBDIR+=	feynhiggs
 SUBDIR+=	ffmpeg
