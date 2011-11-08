@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/11/08 01:47:03 tnn2 Exp $
+bin/lsfs.xtreemfs
+bin/mkfs.xtreemfs
+bin/mount.xtreemfs
+bin/rmfs.xtreemfs
+bin/umount.xtreemfs
+bin/xtfsutil
+man/man1/lsfs.xtreemfs.1
+man/man1/mkfs.xtreemfs.1
+man/man1/mount.xtreemfs.1
+man/man1/rmfs.xtreemfs.1
+man/man1/umount.xtreemfs.1
+man/man1/xtfsutil.1
+sbin/mount.xtreemfs
+sbin/umount.xtreemfs
+share/doc/xtreemfs-client/LICENSE
+share/examples/xtreemfs/default_dir

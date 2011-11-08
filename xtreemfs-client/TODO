@@ -1,0 +1,4 @@
+Linux clients can mount XtreemFS servers running on NetBSD without
+problems.
+
+However; the client on NetBSD seems to only work in read-only mode.
