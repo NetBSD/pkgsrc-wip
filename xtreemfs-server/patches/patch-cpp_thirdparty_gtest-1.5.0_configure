@@ -1,0 +1,13 @@
+$NetBSD: patch-cpp_thirdparty_gtest-1.5.0_configure,v 1.1.1.1 2011/11/08 01:42:14 tnn2 Exp $
+
+--- cpp/thirdparty/gtest-1.5.0/configure.orig	2011-11-03 10:51:08.000000000 +0000
++++ cpp/thirdparty/gtest-1.5.0/configure
+@@ -20593,7 +20593,7 @@ ac_compiler_gnu=$ac_cv_cxx_compiler_gnu
+        have_pthreads="$acx_pthread_ok"
+ fi
+ 
+- if test "x$have_pthreads" == "xyes"; then
++ if test "x$have_pthreads" = "xyes"; then
+   HAVE_PTHREADS_TRUE=
+   HAVE_PTHREADS_FALSE='#'
+ else

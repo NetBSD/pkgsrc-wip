@@ -1,0 +1,51 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2011/11/08 01:42:14 tnn2 Exp $
+#
+
+DISTNAME=	XtreemFS-1.3.1
+CATEGORIES=	filesystems
+MASTER_SITES=	http://xtreemfs.googlecode.com/files/
+
+MAINTAINER=	tnn@NetBSD.org
+HOMEPAGE=	http://www.xtreemfs.org/
+COMMENT=	"cloud" file system
+LICENSE=	modified-bsd
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+USE_TOOLS+=		gmake
+
+PATCHDIR=		${.CURDIR}/../../wip/xtreemfs-server/patches
+DISTINFO_FILE=		${.CURDIR}/../../wip/xtreemfs-server/distinfo
+DESCR_SRC=		${.CURDIR}/../../wip/xtreemfs-server/DESCR
+
+MAKE_ENV+=		CMAKE_HOME=${PREFIX}
+
+REPLACE_SH=		bin/umount.xtreemfs
+REPLACE_SH+=		bin/xtfs_chstatus
+REPLACE_SH+=		bin/xtfs_cleanup
+REPLACE_SH+=		bin/xtfs_mrcdbtool
+REPLACE_SH+=		bin/xtfs_remove_osd
+REPLACE_SH+=		bin/xtfs_scrub
+REPLACE_SH+=		bin/xtfs_snap
+
+SUBST_CLASSES+=			java-home
+SUBST_STAGE.java-home=		pre-configure
+SUBST_MESSAGE.java-home=	Fixing JAVA_HOME.
+SUBST_FILES.java-home=		bin/*
+SUBST_FILES.java-home+=		etc/init.d/*
+SUBST_SED.java-home=		-e 's,@JAVA_HOME@,${PKG_JAVA_HOME},g'
+SUBST_SED.java-home+=		-e 's,@XTREEMFS@,${PREFIX}/share/xtreemfs,g'
+SUBST_SED.java-home+=		-e 's,/usr/share/java,${PREFIX}/share/xtreemfs/java/lib,g'
+
+SUBST_CLASSES+=			paths
+SUBST_STAGE.paths=		pre-configure
+SUBST_MESSAGE.paths=		Fixing hard-coded paths.
+SUBST_FILES.paths+=		etc/xos/xtreemfs/*
+SUBST_SED.paths=		-e 's,/etc/xos/xtreemfs,${PKG_SYSCONFDIR},g'
+SUBST_SED.paths+=		-e 's,/var/lib/xtreemfs,${XTREEMFS_HOME},g'
+
+pre-configure:
+	rm -f ${WRKSRC}/bin/*.orig
+
+do-configure:
+	${TRUE}

@@ -1,0 +1,13 @@
+$NetBSD: patch-cpp_thirdparty_protobuf-2.3.0_configure,v 1.1.1.1 2011/11/08 01:42:14 tnn2 Exp $
+
+--- cpp/thirdparty/protobuf-2.3.0/configure.orig	2011-11-03 10:51:11.000000000 +0000
++++ cpp/thirdparty/protobuf-2.3.0/configure
+@@ -16433,7 +16433,7 @@ fi
+ if test "$with_protoc" != "no"; then
+ 
+   PROTOC=$with_protoc
+-  if test "$with_protoc" == "yes"; then
++  if test "$with_protoc" = "yes"; then
+ 
+     # No argument given.  Use system protoc.
+     PROTOC=protoc
