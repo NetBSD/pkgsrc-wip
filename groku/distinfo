@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2007/01/01 01:11:21 mwicks Exp $
+$NetBSD: distinfo,v 1.2 2011/11/09 11:21:18 noud4 Exp $
 
 SHA1 (groku-0.1.tar.gz) = cf931f2f563c7e98a33c23882e4bfebd20bcc6fc
 RMD160 (groku-0.1.tar.gz) = 6309029edd44e3d934d73bd000ae004269a280da
 Size (groku-0.1.tar.gz) = 159220 bytes
 SHA1 (patch-aa) = 36807fa8af7c3cb59f41911982ceb6d1c8178a52
+SHA1 (patch-ab) = 03fb46e698929850362804601fc858a63f3c85dd

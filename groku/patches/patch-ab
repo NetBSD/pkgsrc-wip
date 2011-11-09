@@ -1,0 +1,11 @@
+--- groku.desktop.orig	2011-11-09 10:42:20.000000000 +0000
++++ groku.desktop	2011-11-09 10:43:08.000000000 +0000
+@@ -2,7 +2,7 @@
+ Encoding=UTF-8
+ Name=groku
+ Comment=Roku Soundbridge Control Software
+-Exec=/usr/bin/groku
++Exec=groku
+ Terminal=false
+ Icon=/usr/share/pixmaps/groku.png
+ Type=Application
