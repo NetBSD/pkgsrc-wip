@@ -56,7 +56,7 @@ function pkgname_gt_pkgname (pkgname1, pkgname2,            ver1,ver2){
 	return dewey_cmp(ver1, ver2) == ">"
 }
 
-# ex: dewey_match(1.2.3, ">=1.0")
+# ex: dewey_match("1.2.3", ">=1.0")
 function pattern_match (ver, pattern,           i,j,k){
 	while (match(pattern, /(>|<|=|>=|<=)[^<=>]*/)){
 		assert(RSTART == 1, "failed in dewey_match() function")
