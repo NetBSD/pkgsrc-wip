@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/11/08 15:48:08 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2011/11/09 21:02:53 thomasklausner Exp $
 #
 
 DISTNAME=	fceux-2.1.5.src
@@ -31,4 +31,6 @@ do-install:
 		cd ${WRKSRC} && \
 		${INSTALL_PROGRAM} src/fceux ${DESTDIR}${PREFIX}/bin/fceux
 
+.include "../../devel/SDL/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
