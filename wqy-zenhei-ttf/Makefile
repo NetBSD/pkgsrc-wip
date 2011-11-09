@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/02/12 11:37:45 ryo-on Exp $
+# $NetBSD: Makefile,v 1.2 2011/11/09 16:12:29 noud4 Exp $
 #
 
 DISTNAME=	wqy-zenhei-0.8.38-1
 PKGNAME=	wqy-zenhei-0.8.38.1
+PKGREVISION=	1
 CATEGORIES=	fonts chinese
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wqy/}
 
@@ -43,7 +44,7 @@ INSTALLED_EXAMPLES=	44-wqy-zenhei.conf \
 			66-wqy-zenhei-sharp.conf
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/${INSTALLED_FONTS} ${DESTDIR}${FONTDIR}
+	${INSTALL_DATA} ${WRKSRC}/${INSTALLED_FONTS} ${DESTDIR}${FONTDIR}/wqy-zenhei.ttf
 .for f in ${INSTALLED_DOCS}
 	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${DOCDIR}
 .endfor
