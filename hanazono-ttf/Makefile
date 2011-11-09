@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2011/06/26 11:47:20 ryo-on Exp $
+# $NetBSD: Makefile,v 1.5 2011/11/09 16:31:59 noud4 Exp $
 #
 
-DISTNAME=	hanazono-20110516
+DISTNAME=	hanazono-20110915
 PKGNAME=	${DISTNAME:S/-/-ttf-/}
 CATEGORIES=	fonts
-MASTER_SITES=	http://www.fonts.jp/hanazono/
+MASTER_SITES=	http://kage.sourceforge.jp/hanazono/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	ryoon@NetBSD.org
