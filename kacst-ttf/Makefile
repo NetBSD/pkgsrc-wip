@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/06/21 21:18:55 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2011/11/09 16:38:56 noud4 Exp $
 #
 
 DISTNAME=	kacst_fonts_2.01
 PKGNAME=	kacst-ttf-2.01
+PKGREVISION=	1
 CATEGORIES=	fonts
 MASTER_SITES=	http://garr.dl.sourceforge.net/project/arabeyes/kacst_fonts/
 EXTRACT_SUFX=	.tar.bz2
