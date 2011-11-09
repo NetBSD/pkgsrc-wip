@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2011/08/20 13:26:08 asau Exp $
+# $NetBSD: Makefile,v 1.12 2011/11/09 10:23:46 asau Exp $
 
 DISTNAME=	llvm-2.6
 CATEGORIES=	lang
@@ -61,7 +61,7 @@ SVN_REPOSITORIES=	llvm clang
 SVN_ROOT.llvm=		http://llvm.org/svn/llvm-project/llvm/trunk
 SVN_ROOT.clang=		http://llvm.org/svn/llvm-project/cfe/trunk
 
-PKGNAME=		clang-2.8.99
+PKGNAME=		clang-3.0.99
 WRKSRC=			$(WRKDIR)/$(SVN_MODULE.llvm)
 
 CHECK_PORTABILITY_SKIP= utils/buildit/.svn/text-base/build_llvm.svn-base \
