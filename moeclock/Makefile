@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2011/06/19 10:16:07 ryo-on Exp $
+# $NetBSD: Makefile,v 1.3 2011/11/09 23:19:16 noud4 Exp $
 #
 
 DISTNAME=	moeclock
 PKGNAME=	${DISTNAME}-1.2.0.1
+PKGREVISION=	1
 CATEGORIES=	time
 MASTER_SITES=	http://moeclock.googlecode.com/files/
 
@@ -30,6 +31,12 @@ SUBST_FILES.fix-python+=	moeclock
 SUBST_SED.fix-python+=		-e 's,/usr/bin/env python,${PYTHONBIN},'
 SUBST_SED.fix-python+=		-e 's,python ,${PYTHONBIN} ,'
 SUBST_SED.fix-python+=		-e 's,/usr/share,${PREFIX}/share,'
+
+SUBST_CLASSES+=			prefix
+SUBST_STAGE.prefix=		pre-configure
+SUBST_MESSAGE.prefix=		Fixing pkgsrc prefix
+SUBST_FILES.prefix+=		moeclock.desktop
+SUBST_SED.prefix+=		-e 's,@PREFIX@,${PREFIX},'
 
 CHECK_INTERPRETER_SKIP+=	share/applications/moeclock.desktop
 
