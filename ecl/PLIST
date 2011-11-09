@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2011/03/15 04:15:48 asau Exp $
+@comment $NetBSD: PLIST,v 1.27 2011/11/09 09:44:33 asau Exp $
 bin/ecl
 bin/ecl-config
 include/ecl/bytecodes.h
@@ -25,8 +25,6 @@ lib/${PKGNAME}/LGPL
 lib/${PKGNAME}/TAGS
 lib/${PKGNAME}/asdf.fas
 lib/${PKGNAME}/build-stamp
-lib/${PKGNAME}/bytecmp.asd
-lib/${PKGNAME}/bytecmp.fas
 ${PLIST.clx}lib/${PKGNAME}/clx.asd
 ${PLIST.clx}lib/${PKGNAME}/clx.fas
 lib/${PKGNAME}/cmp.asd
@@ -37,7 +35,6 @@ lib/${PKGNAME}/dpp
 lib/${PKGNAME}/ecl_min
 lib/${PKGNAME}/help.doc
 lib/${PKGNAME}/libasdf.a
-lib/${PKGNAME}/libbytecmp.a
 ${PLIST.clx}lib/${PKGNAME}/libclx.a
 lib/${PKGNAME}/libcmp.a
 lib/${PKGNAME}/libdefsystem.a
