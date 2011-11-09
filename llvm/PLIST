@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2011/10/06 06:16:58 makoto Exp $
+@comment $NetBSD: PLIST,v 1.36 2011/11/09 14:47:48 asau Exp $
 bin/bugpoint
 bin/llc
 bin/lli
@@ -6,6 +6,7 @@ bin/llvm-ar
 bin/llvm-as
 bin/llvm-bcanalyzer
 bin/llvm-config
+bin/llvm-config-2
 bin/llvm-cov
 bin/llvm-diff
 bin/llvm-dis
@@ -21,9 +22,9 @@ bin/llvm-ranlib
 bin/llvm-rtdyld
 bin/llvm-size
 bin/llvm-stub
+bin/llvm-tblgen
 bin/macho-dump
 bin/opt
-bin/tblgen
 include/llvm-c/Analysis.h
 include/llvm-c/BitReader.h
 include/llvm-c/BitWriter.h
@@ -277,7 +278,6 @@ include/llvm/Intrinsics.gen
 include/llvm/Intrinsics.h
 include/llvm/Intrinsics.td
 include/llvm/IntrinsicsARM.td
-include/llvm/IntrinsicsAlpha.td
 include/llvm/IntrinsicsCellSPU.td
 include/llvm/IntrinsicsPTX.td
 include/llvm/IntrinsicsPowerPC.td
@@ -346,6 +346,7 @@ include/llvm/Object/Archive.h
 include/llvm/Object/Binary.h
 include/llvm/Object/COFF.h
 include/llvm/Object/Error.h
+include/llvm/Object/MachO.h
 include/llvm/Object/MachOFormat.h
 include/llvm/Object/MachOObject.h
 include/llvm/Object/ObjectFile.h
@@ -493,6 +494,7 @@ include/llvm/Transforms/Utils/BuildLibCalls.h
 include/llvm/Transforms/Utils/Cloning.h
 include/llvm/Transforms/Utils/FunctionUtils.h
 include/llvm/Transforms/Utils/Local.h
+include/llvm/Transforms/Utils/ModuleUtils.h
 include/llvm/Transforms/Utils/PromoteMemToReg.h
 include/llvm/Transforms/Utils/SSAUpdater.h
 include/llvm/Transforms/Utils/SSAUpdaterImpl.h
@@ -585,6 +587,7 @@ share/doc/llvm/html/CommandGuide/lli.html
 share/doc/llvm/html/CommandGuide/llvm-ar.html
 share/doc/llvm/html/CommandGuide/llvm-as.html
 share/doc/llvm/html/CommandGuide/llvm-bcanalyzer.html
+share/doc/llvm/html/CommandGuide/llvm-build.html
 share/doc/llvm/html/CommandGuide/llvm-config.html
 share/doc/llvm/html/CommandGuide/llvm-diff.html
 share/doc/llvm/html/CommandGuide/llvm-dis.html
@@ -610,8 +613,10 @@ share/doc/llvm/html/GetElementPtr.html
 share/doc/llvm/html/GettingStarted.html
 share/doc/llvm/html/GettingStartedVS.html
 share/doc/llvm/html/GoldPlugin.html
+share/doc/llvm/html/HowToAddABuilder.html
 share/doc/llvm/html/HowToReleaseLLVM.html
 share/doc/llvm/html/HowToSubmitABug.html
+share/doc/llvm/html/LLVMBuild.html
 share/doc/llvm/html/LangRef.html
 share/doc/llvm/html/Lexicon.html
 share/doc/llvm/html/LinkTimeOptimization.html
@@ -626,7 +631,6 @@ share/doc/llvm/html/SourceLevelDebugging.html
 share/doc/llvm/html/SystemLibrary.html
 share/doc/llvm/html/TableGenFundamentals.html
 share/doc/llvm/html/TestingGuide.html
-share/doc/llvm/html/UsingLibraries.html
 share/doc/llvm/html/WritingAnLLVMBackend.html
 share/doc/llvm/html/WritingAnLLVMPass.html
 share/doc/llvm/html/doxygen.css
@@ -641,6 +645,7 @@ share/doc/llvm/html/tutorial/LangImpl1.html
 share/doc/llvm/html/tutorial/LangImpl2.html
 share/doc/llvm/html/tutorial/LangImpl3.html
 share/doc/llvm/html/tutorial/LangImpl4.html
+share/doc/llvm/html/tutorial/LangImpl5-cfg.png
 share/doc/llvm/html/tutorial/LangImpl5.html
 share/doc/llvm/html/tutorial/LangImpl6.html
 share/doc/llvm/html/tutorial/LangImpl7.html
@@ -662,6 +667,7 @@ share/doc/llvm/ps/lli.ps
 share/doc/llvm/ps/llvm-ar.ps
 share/doc/llvm/ps/llvm-as.ps
 share/doc/llvm/ps/llvm-bcanalyzer.ps
+share/doc/llvm/ps/llvm-build.ps
 share/doc/llvm/ps/llvm-config.ps
 share/doc/llvm/ps/llvm-diff.ps
 share/doc/llvm/ps/llvm-dis.ps
