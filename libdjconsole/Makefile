@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/04/20 03:36:49 othyro Exp $
+# $NetBSD: Makefile,v 1.3 2011/11/10 12:55:55 othyro Exp $
 #
 
 DISTNAME=	libdjconsole-0.1.3
@@ -8,6 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=djplay/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://djplay.sourceforge.net/
 COMMENT=	DJ Console access library
+LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
