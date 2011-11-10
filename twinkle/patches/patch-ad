@@ -1,4 +1,6 @@
-$NetBSD: patch-ad,v 1.1 2008/03/08 18:02:00 tnn2 Exp $
+$NetBSD: patch-ad,v 1.2 2011/11/10 13:23:23 othyro Exp $
+
+Defines C as environ if not defined. Better declares and reads buffer.
 
 --- src/call_script.cpp.orig	2007-07-15 19:05:38.000000000 +0200
 +++ src/call_script.cpp

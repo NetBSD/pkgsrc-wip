@@ -1,4 +1,6 @@
-$NetBSD: patch-ac,v 1.1 2007/10/07 08:38:24 thomasklausner Exp $
+$NetBSD: patch-ac,v 1.2 2011/11/10 13:17:00 othyro Exp $
+
+Defines PTHREAD_MUTEX_RECURSIVE_NP and PTHREAD_MUTEX_RECURSIVE if not already.
 
 --- src/threads/mutex.cpp.orig	2007-01-07 07:47:34.000000000 +0000
 +++ src/threads/mutex.cpp

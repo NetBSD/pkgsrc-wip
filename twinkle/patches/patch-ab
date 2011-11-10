@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.1 2007/10/07 08:38:24 thomasklausner Exp $
+$NetBSD: patch-ab,v 1.2 2011/11/10 13:16:18 othyro Exp $
+
+Needs arpa/inet.h.
 
 --- src/audio/rtp_telephone_event.cpp.orig	2007-01-07 07:47:34.000000000 +0000
 +++ src/audio/rtp_telephone_event.cpp
