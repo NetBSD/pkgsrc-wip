@@ -1,6 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2010/04/20 03:13:43 othyro Exp $
+# $NetBSD: Makefile,v 1.5 2011/11/10 01:03:44 othyro Exp $
 
-DISTNAME=		nomadio-0.7
+PKGVERSION=		0.7
+DISTNAME=		nomadio-${PKGVERSION}
+PKGREVISION=		1
 CATEGORIES=		audio
 MASTER_SITES=		ftp://ftp.lucifier.net/pub/nomadio/
 
@@ -9,7 +11,9 @@ HOMEPAGE=		http://nomadio.lucifier.net/
 COMMENT=		Utility to control Creative Nomad II MG
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/cat1
+INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/cat1
+
+WRKSRC=			${WRKDIR}/${DISTNAME:S/-${PKGVERSION_NOREV}//}
 
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE}
