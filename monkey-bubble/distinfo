@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2009/03/28 16:46:33 thomasklausner Exp $
+$NetBSD: distinfo,v 1.6 2011/11/10 13:11:07 noud4 Exp $
 
 SHA1 (monkey-bubble-0.4.0.tar.gz) = 67b6d68f38c0182a676120c49646ab3b8725667d
 RMD160 (monkey-bubble-0.4.0.tar.gz) = 1b01057841062bdefe9bbf5db565a2ee2b22153f
 Size (monkey-bubble-0.4.0.tar.gz) = 5360713 bytes
 SHA1 (patch-aa) = af49e71e6629da7b06b6d50a95f53956bacfe441
+SHA1 (patch-ab) = 8a05f16191ddb4040f9175a6d1436cb92eb4c1d8

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2010/11/01 00:08:22 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.23 2011/11/10 13:11:07 noud4 Exp $
 #
 
 DISTNAME=		monkey-bubble-0.4.0
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		games
 MASTER_SITES=		http://home.gna.org/monkeybubble/downloads/
 
@@ -17,6 +17,7 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake intltool pkg-config
 
+.include "../../audio/esound/buildlink3.mk"
 .include "../../devel/GConf/schemas.mk"
 .include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
