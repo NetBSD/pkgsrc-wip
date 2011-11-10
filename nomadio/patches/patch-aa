@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2007/08/05 03:04:03 othyro Exp $
+$NetBSD: patch-aa,v 1.2 2011/11/10 01:05:27 othyro Exp $
+
+${CC} doesn't know about ident.
 
 --- nomadio.1.orig	2002-05-27 23:46:11.000000000 -0400
 +++ nomadio.1

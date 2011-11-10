@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.1 2010/04/19 00:27:41 othyro Exp $
+$NetBSD: patch-ab,v 1.2 2011/11/10 01:05:58 othyro Exp $
+
+A kludge to fix signedness errors.
 
 --- nomadio.c.orig	2002-05-28 03:46:11.000000000 +0000
 +++ nomadio.c
