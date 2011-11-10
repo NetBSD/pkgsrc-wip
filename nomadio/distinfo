@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.2 2010/04/19 00:28:34 othyro Exp $
+$NetBSD: distinfo,v 1.3 2011/11/10 01:07:01 othyro Exp $
 
-SHA1 (nomadio-0.7.tar.gz) = 717d5293755a8770338d085de6e93e422e40b363
-RMD160 (nomadio-0.7.tar.gz) = 98a56fe143f51b1e91709c0b15b14e95d19d4a8b
-Size (nomadio-0.7.tar.gz) = 7379 bytes
-SHA1 (patch-aa) = 363797ba580c01f267ad36c22a0fe1b0873234fd
-SHA1 (patch-ab) = 23cf0a2a4cc9c82f14c421078491a32194a53146
+SHA1 (nomadio-0.7.tar.gz) = 4299e006ca02849fd94ae1f2e866c6b2eb60718f
+RMD160 (nomadio-0.7.tar.gz) = b00d4ce4126967f7f65d4c34d38caef6e72f88f5
+Size (nomadio-0.7.tar.gz) = 7202 bytes
+SHA1 (patch-aa) = e915dedd6fadecfeb2ab46e8901fe0cb1d377a01
+SHA1 (patch-ab) = d9284cd0c1c7599f18e2c0682cbce6392bedbaa0
