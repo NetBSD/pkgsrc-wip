@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2011/11/09 15:04:02 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2011/11/10 22:55:28 crocusino Exp $
 #
 
 DISTNAME=	octave-3.4.3
@@ -22,6 +22,7 @@ USE_TOOLS+=	autoconf gmake gsed pkg-config perl makeinfo bison
 GNU_CONFIGURE=	yes
 
 USE_LANGUAGES=	c c++ fortran77
+GCC_REQD+=	3.0
 
 CONFIGURE_ARGS+=	--enable-dl
 CONFIGURE_ARGS+=	--disable-static
@@ -31,6 +32,7 @@ CONFIGURE_ARGS+=	--without-hdf5
 CONFIGURE_ARGS+=	--without-qhull
 
 INFO_FILES=yes
+TEXINFO_REQD=		4.12
 
 .include "../../audio/libsndfile/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
