@@ -1,4 +1,15 @@
 ----------------------------------------------------------------------
+Version 0.56.2, by Aleksey Cheusov, Fri, 11 Nov 2011 13:35:07 +0300
+
+  pkg_src_summary:
+    - Mysterious infinite loop was fixed in 'pkg_src_summary -m'
+    - summary2multi_variants script was separated from pkg_src_summary
+
+  pkg_bin_summary:
+    - CKSUM was renamed to FILE_CKSUM (by analogy with FILE_SIZE
+      and FILE_NAME) as suggested by spz@
+
+----------------------------------------------------------------------
 Version 0.56.1, by Aleksey Cheusov, Wed,  7 Sep 2011 00:40:13 +0300
 
   pkg_lint_summary:
