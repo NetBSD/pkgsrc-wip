@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.6 2010/12/22 02:40:41 asau Exp $
+$NetBSD: patch-ad,v 1.7 2011/11/12 14:42:38 asau Exp $
 
 --- dlls/iphlpapi/ipstats.c.orig	2010-12-10 22:33:07.000000000 +0300
 +++ dlls/iphlpapi/ipstats.c	2010-12-22 00:38:30.000000000 +0300

@@ -1,15 +1,13 @@
-$NetBSD: patch-aa,v 1.7 2010/12/22 02:40:41 asau Exp $
+$NetBSD: patch-aa,v 1.8 2011/11/12 14:42:37 asau Exp $
 
---- Make.rules.in.orig	2010-12-10 22:33:07.000000000 +0300
-+++ Make.rules.in	2010-12-22 00:31:08.000000000 +0300
-@@ -28,8 +28,8 @@
- CLEAN_TARGETS = $(IDL_GEN_C_SRCS) $(IDL_GEN_HEADERS) $(IDL_TLB_SRCS:.idl=.tlb) $(IDL_P_SRCS:%=dlldata.c) \
-                 $(BISON_SRCS:.y=.tab.c) $(BISON_SRCS:.y=.tab.h) $(LEX_SRCS:.l=.yy.c) $(MC_SRCS:.mc=.mc.rc)
+--- dlls/ntdll/signal_x86_64.c.orig	2011-04-29 18:04:41.000000000 +0000
++++ dlls/ntdll/signal_x86_64.c
+@@ -2450,7 +2450,7 @@ void signal_init_thread( TEB *teb )
+ #elif defined (__FreeBSD__) || defined (__FreeBSD_kernel__)
+     amd64_set_gsbase( teb );
+ #else
+-# error Please define setting %gs for your architecture
++# warning Please define setting %gs for your architecture
+ #endif
  
--OBJS = $(C_SRCS:.c=.o) $(BISON_SRCS:.y=.tab.o) $(LEX_SRCS:.l=.yy.o) $(IDL_GEN_C_SRCS:.c=.o) \
--       $(IDL_R_SRCS:.idl=_r.res) $(RC_SRCS:.rc=.res) $(MC_SRCS:.mc=.mc.res) $(EXTRA_OBJS)
-+OBJS = $(EXTRA_OBJS) $(C_SRCS:.c=.o) $(BISON_SRCS:.y=.tab.o) $(LEX_SRCS:.l=.yy.o) $(IDL_GEN_C_SRCS:.c=.o) \
-+       $(IDL_R_SRCS:.idl=_r.res) $(RC_SRCS:.rc=.res) $(MC_SRCS:.mc=.mc.res)
- 
- CROSSOBJS = $(OBJS:.o=.cross.o)
- LINTS  = $(C_SRCS:.c=.ln)
+     ss.ss_sp    = (char *)teb + teb_size;
