@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2011/10/09 10:05:44 cheusov Exp $
+# $NetBSD: Makefile,v 1.8 2011/11/12 21:35:07 cheusov Exp $
 
 DISTNAME=	pkgnih-999
 PKGNAME=	nih-999
@@ -43,7 +43,7 @@ REPLACE.runawk.new=	${PREFIX}/bin/runawk
 REPLACE_FILES.runawk=	nih/pkg_update_plan.in nih/cmp2hr.in
 
 MAKE_ENV+=		MANDIR=${PREFIX}/${PKGMANDIR}
-MAKE_ENV+=		VERSION=${_GIT_TODAY:S/-//g}
+MAKE_ENV+=		VERSION=${_GIT_PKGVERSION:S/.//}
 
 MAKE_PROGRAM=		mkcmake
 
