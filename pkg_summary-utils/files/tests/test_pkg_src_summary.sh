@@ -377,6 +377,6 @@ pkg_src_summary -f PKGNAME,PKGPATH,ALLDISTFILES x11/xxkb | hide_distfile_size |
 cmp 'pkg_src_summary #17' \
 'PKGNAME=xxkb-1.11
 PKGPATH=x11/xxkb
-ALLDISTFILES= xxkb-1.11-src.tar.gz:NNN
+ALLDISTFILES=xxkb-1.11-src.tar.gz:NNN 
 
 '

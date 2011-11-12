@@ -83,7 +83,7 @@ EOF
 
 # list of fields for default pkg_src_summary
 if test -z "$PSS_FIELDS"; then
-    PSS_FIELDS='PKGNAME PKGPATH DEPENDS BUILD_DEPENDS CONFLICTS HOMEPAGE COMMENT LICENSE ONLYFOR NOTFOR MAINTAINER CATEGORIES NO_BIN_ON_FTP NO_SRC_ON_FTP NO_BIN_ON_CDROM NO_SRC_ON_CDROM LICENSE ALLSRCFILES DESCRIPTION PLIST' # CVS_CHECKSUM ALLDISTFILES
+    PSS_FIELDS='PKGNAME PKGPATH DEPENDS BUILD_DEPENDS CONFLICTS HOMEPAGE COMMENT LICENSE ONLYFOR NOTFOR MAINTAINER CATEGORIES NO_BIN_ON_FTP NO_SRC_ON_FTP NO_BIN_ON_CDROM NO_SRC_ON_CDROM LICENSE DESCRIPTION PLIST' # CVS_CHECKSUM ALLDISTFILES
 fi
 
 if test -z "$PSS_PPERS"; then
@@ -183,6 +183,7 @@ varnames=`echo $PSS_FIELDS |
          gsub(/ONLYFOR/, "ONLY_FOR_PLATFORM")
          gsub(/NOTFOR/,  "NOT_FOR_PLATFORM")
          gsub(/DESCRIPTION/, "DESCR_SRC")
+         gsub(/ALLDISTFILES/, "DISTINFO_FILE")
          print}'`
 
 if test -n "$debug"; then
@@ -206,13 +207,24 @@ normal_pkgs_fn=$tmp_dir/normal_pkgs.txt
 
 ############################################################
 enrich_summary (){
-    awk -v with_bootstrap="$with_bootstrap" '
+    runawk -f trim.awk -v with_bootstrap="$with_bootstrap" -e '
     with_bootstrap != "" && $0 ~ /^BOOTSTRAP_DEPENDS=/ {\
 	bootstrapdeps = substr($0, 19)
 	next
     }
     with_bootstrap != "" && $0 ~ /^BUILD_DEPENDS=/ {
 	builddeps = substr($0, 15)
+	next
+    }
+    $0 ~ /^DISTINFO_FILE=/ {
+	fn = trim_lrc(substr($0, 15))
+	printf "ALLDISTFILES="
+	while (0 < (ret = (getline < fn))){
+	    if ($1 == "Size")
+		printf "%s:%s ", substr($2, 2, length($2)-2), $4
+	}
+	close(fn)
+	printf "\n"
 	next
     }
     $0 ~ /^DESCR_SRC=/ {
@@ -251,13 +263,6 @@ pkgpath2multivar_opts (){
     sed -e 's|^[^:]*:||' -e 's|,| |g' -e "s|[^ ][^ ]*|'&'|g" -e 's|~| |g'
 }
 
-get_alldistfiles (){
-    awk -F'[ =()]*' \
-	'$1 == "Size" {printf " %s:%s", $2, $3}
-	END {print ""}
-    ' "$@"
-}
-
 cd_and_print_summary (){
     # $1 - pkgpath
     real_pkgpath="`echo $1 | cut -d: -f1`"
@@ -277,23 +282,13 @@ cd_and_print_summary (){
     ( cd "$real_pkgpath" && eval ${BMAKE} -f ./Makefile $extra_mk \
 	-f "$PSS_MKSCRIPTSDIR"/pkg_src_summary.mk my-show-vars \
 	VARNAMES="'_INHER_ASSIGNS _INHER_ASSIGNS_REJ _INHER_ASSIGNS_BAD ASSIGNMENTS $varnames'" \
-	$var_assignments $var_assigns ) > "$tmpfn" || return 1
-
-    enrich_summary "$tmpfn" >"$summaryfn" || return 1
+	$var_assignments $var_assigns ) > "$summaryfn" || return 1
 
     # CVS_CHECKSUM
     if test "$field_cvs_checksum"; then
 	cvs_checksum "$real_pkgpath" > "$tmpfn" || return 1
 	read cksum < "$tmpfn" || return 1
 	printf "CVS_CHECKSUM=%s\n" "$cksum" >>"$summaryfn" || return 1
-    fi
-
-    # alldistfiles
-    if test "$field_alldistfiles"; then
-	distinfo_fns="$(cd $real_pkgpath && ${BMAKE} show-var VARNAME=DISTINFO_FILE)"
-	# /dev/null is a protection against distinfo_fns emptyness
-	alldistfiles=$(get_alldistfiles $distinfo_fns /dev/null)
-	printf "ALLDISTFILES=%s\n" "$alldistfiles" >>"$summaryfn" || return 1
     fi
 
     # PLIST
@@ -528,7 +523,8 @@ remove_internal_fields (){
 }
 
 if test -z "$_PSS_RECURS"; then
-    remove_internal_fields "$partial_summary_fn"
+    enrich_summary "$partial_summary_fn" |
+    remove_internal_fields 
 else
     cat "$partial_summary_fn"
 fi
