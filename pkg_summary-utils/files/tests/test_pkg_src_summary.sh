@@ -138,6 +138,31 @@ PKGPATH=www/ap2-python
 pkg_src_summary -m --fields PKGNAME,PKGPATH www/ap2-python:PKG_APACHE=apache2 |
 grep -v DEPENDS |
 cmp 'pkg_src_summary #3' \
+'ASSIGNMENTS=PKG_APACHE=apache2,PYTHON_VERSION_REQD=31
+PKGNAME=ap2-py31-python-3.3.1
+PKGPATH=www/ap2-python
+
+ASSIGNMENTS=PKG_APACHE=apache2,PYTHON_VERSION_REQD=27
+PKGNAME=ap2-py27-python-3.3.1
+PKGPATH=www/ap2-python
+
+ASSIGNMENTS=PKG_APACHE=apache2
+PKGNAME=ap2-py26-python-3.3.1
+PKGPATH=www/ap2-python
+
+ASSIGNMENTS=PKG_APACHE=apache2,PYTHON_VERSION_REQD=25
+PKGNAME=ap2-py25-python-3.3.1
+PKGPATH=www/ap2-python
+
+ASSIGNMENTS=PKG_APACHE=apache2,PYTHON_VERSION_REQD=24
+PKGNAME=ap2-py24-python-3.3.1
+PKGPATH=www/ap2-python
+
+'
+
+pkg_src_summary -m --fields PKGNAME,PKGPATH www/ap2-python:PKG_APACHE=apache22 |
+grep -v DEPENDS |
+cmp 'pkg_src_summary #3.1' \
 'ASSIGNMENTS=PYTHON_VERSION_REQD=31
 PKGNAME=ap22-py31-python-3.3.1
 PKGPATH=www/ap2-python
@@ -162,6 +187,19 @@ PKGPATH=www/ap2-python
 pkg_src_summary -m --fields='PKGNAME PKGPATH' www/ap2-python:PYTHON_VERSION_REQD=25 |
 grep -v DEPENDS |
 cmp 'pkg_src_summary #4' \
+'ASSIGNMENTS=PYTHON_VERSION_REQD=25,PKG_APACHE=apache2
+PKGNAME=ap2-py25-python-3.3.1
+PKGPATH=www/ap2-python
+
+ASSIGNMENTS=PYTHON_VERSION_REQD=25
+PKGNAME=ap22-py25-python-3.3.1
+PKGPATH=www/ap2-python
+
+'
+
+pkg_src_summary -m --fields='PKGNAME PKGPATH' www/ap2-python:PYTHON_VERSION_REQD=26 |
+grep -v DEPENDS |
+cmp 'pkg_src_summary #4.1' \
 'ASSIGNMENTS=PKG_APACHE=apache2
 PKGNAME=ap2-py26-python-3.3.1
 PKGPATH=www/ap2-python
