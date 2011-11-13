@@ -1,0 +1,8 @@
+Located here is a basic decoder for Apple Lossless Audio Codec
+files (ALAC). ALAC is a proprietary lossless audio compression
+scheme. Apple never released any documents on the format.  What I
+provide here is a C implementation of a decoder, written from
+reverse engineering the file format. It turns out that most of the
+algorithms in the codec are fairly well known. ALAC uses an adaptive
+FIR prediction algorithm and stores the error values using a modified
+rice or golumb algorithm. Further details are in alac.c.

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/11/13 22:03:51 ryo-on Exp $
+
+SHA1 (alac_decoder-0.2.0.tgz) = a620f6293ef2d9490927d21ec341bbeff13eabe8
+RMD160 (alac_decoder-0.2.0.tgz) = 72664dff4eeff6e484314f625f74337e60ba39fb
+Size (alac_decoder-0.2.0.tgz) = 19019 bytes
