@@ -208,37 +208,48 @@ normal_pkgs_fn=$tmp_dir/normal_pkgs.txt
 ############################################################
 enrich_summary (){
     runawk -f trim.awk -v with_bootstrap="$with_bootstrap" -e '
-    with_bootstrap != "" && $0 ~ /^BOOTSTRAP_DEPENDS=/ {\
+    with_bootstrap != "" && /^BOOTSTRAP_DEPENDS=/ {\
 	bootstrapdeps = substr($0, 19)
 	next
     }
-    with_bootstrap != "" && $0 ~ /^BUILD_DEPENDS=/ {
+    with_bootstrap != "" && /^BUILD_DEPENDS=/ {
 	builddeps = substr($0, 15)
 	next
     }
-    $0 ~ /^DISTINFO_FILE=/ {
+    /^DISTINFO_FILE=/ {
 	fn = trim_lrc(substr($0, 15))
 	printf "ALLDISTFILES="
 	while (0 < (ret = (getline < fn))){
 	    if ($1 == "Size")
 		printf "%s:%s ", substr($2, 2, length($2)-2), $4
 	}
+
+	if (ret < 0)
+	    printf "reading from `" fn "` failed\n" > "/dev/stderr"
+
 	close(fn)
 	printf "\n"
 	next
     }
-    $0 ~ /^DESCR_SRC=/ {
+    /^DESCR_SRC=/ {
 	$0 = substr($0, 11)
 	for (i=1; i <= NF; ++i){
 	    while (0 < ret = (getline ln < $i)){
 		print "DESCRIPTION=" ln
 	    }
-	    if (ret < 0){
+
+	    if (ret < 0)
 		printf "reading from `" $i "` failed\n" > "/dev/stderr"
-		exit 1
-	    }
+
 	    close($i)
 	}
+	next
+    }
+    NF == 0 {
+	if (builddeps != "" || bootstrapdeps != "")
+	    print "BUILD_DEPENDS=" builddeps " " bootstrapdeps
+	builddeps = bootstrapdeps = ""
+	print ""
 	next
     }
     {
@@ -246,10 +257,7 @@ enrich_summary (){
 	gsub(/NOT_FOR_PLATFORM/, "NOTFOR")
 	print
     }
-    END {
-	if (builddeps != "" || bootstrapdeps != "")
-	    print "BUILD_DEPENDS=" builddeps " " bootstrapdeps
-    }' "$@"
+    ' "$@"
 }
 
 prepand_PLIST () {
@@ -393,7 +401,9 @@ process_one_by_one (){
 
     while read pkgpaths; do
 	for pkgpath in $pkgpaths; do
-	    generate_summary "$pkgpath" | eval $prepand
+	    generate_summary "$pkgpath" |
+	    enrich_summary |
+	    eval $prepand
 	done
 
 	if test "$slave"; then
@@ -523,8 +533,7 @@ remove_internal_fields (){
 }
 
 if test -z "$_PSS_RECURS"; then
-    enrich_summary "$partial_summary_fn" |
-    remove_internal_fields 
+    remove_internal_fields "$partial_summary_fn"
 else
     cat "$partial_summary_fn"
 fi

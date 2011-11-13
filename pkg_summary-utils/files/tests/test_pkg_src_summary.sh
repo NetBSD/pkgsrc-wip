@@ -418,3 +418,10 @@ PKGPATH=x11/xxkb
 ALLDISTFILES=xxkb-1.11-src.tar.gz:NNN 
 
 '
+
+pkg_src_summary -f PKGNAME,PKGPATH,BUILD_DEPENDS -b x11/xxkb |
+awk '/^BUILD_DEPENDS=.*digest/ {print "ok"}
+     /^BOOTSTRAP_DEPENDS=/ {print "bad"} ' |
+cmp 'pkg_src_summary #18' \
+'ok
+'
