@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/11/14 09:27:45 phonohawk Exp $
+
+SHA1 (hashmap-1.2.0.1.tar.gz) = 76c6e976f86ed8f2e6a8c49129f77dff4e43628b
+RMD160 (hashmap-1.2.0.1.tar.gz) = ae826ac9272964f7214387d7df58ab9fd0cf4711
+Size (hashmap-1.2.0.1.tar.gz) = 10375 bytes

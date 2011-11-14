@@ -1,0 +1,15 @@
+An implementation of persistent Map and Set containers based on
+hashing. The implementation is build on top of Data.IntMap.IntMap and
+Data.IntSet.IntSet, with very similar API. It uses Hashable class from
+the hashable package for hashing.
+
+This package can be used as a drop-in replacement for Data.Map and
+Data.Set modules.
+
+The Map key value is an Data.IntMap.IntMap indexed by the hash value,
+containing either one (key, value) or a Data.Map.Map key value for all
+keys with the same hash value.
+
+The Set elem is an Data.IntMap.IntMap indexed by the hash value,
+containing either one elem or Data.Set.Set elem for all elements with
+the same hash value.
