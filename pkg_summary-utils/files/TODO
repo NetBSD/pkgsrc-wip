@@ -10,6 +10,7 @@ existing tools:
        - automatic removal of #-comments
 
     pkg_micro_src_summary:
+       - support for DESCRIPTION and ALLDISTFILES
        - rewrite it! There is no reason to "emulate" 'make'.
          Sometimes it is enough to run bmake for cut off Makefile.
 

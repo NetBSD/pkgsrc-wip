@@ -1,0 +1,78 @@
+#!/usr/bin/env runawk
+
+#use "trim.awk"
+#use "power_getopt.awk"
+
+#.begin-str help
+# enrich_summary converts DISTINFO_FILE and DESCR_SRC given on input
+# to ALLDISTFILES and DESCRIPTION and
+# optionally adds BOOTSTRAP_DEPENDS to BUILD_DEPENDS
+#
+# usage: enrich_summary [options] [files...]
+# options:
+#   -h         display help message
+#   -b         add BOOTSTRAP_DEPENDS to BUILD_DEPENDS
+#.end-str
+
+BEGIN {
+	if (getarg("h")){
+		print_help()
+		exitnow(0)
+	}
+	with_bootstrap = getarg("b")
+}
+
+with_bootstrap && /^BOOTSTRAP_DEPENDS=/ {	\
+	bootstrapdeps = substr($0, 19)
+	next
+}
+
+with_bootstrap && /^BUILD_DEPENDS=/ {
+	builddeps = substr($0, 15)
+	next
+}
+
+/^DISTINFO_FILE=/ {
+	fn = trim_lrc(substr($0, 15))
+	printf "ALLDISTFILES="
+	while (0 < (ret = (getline < fn))){
+	    if ($1 == "Size")
+			printf "%s:%s ", substr($2, 2, length($2)-2), $4
+	}
+
+	if (ret < 0)
+	    printf "reading from `" fn "` failed\n" > "/dev/stderr"
+
+	close(fn)
+	printf "\n"
+	next
+}
+
+/^DESCR_SRC=/ {
+	$0 = substr($0, 11)
+	for (i=1; i <= NF; ++i){
+	    while (0 < ret = (getline ln < $i)){
+			print "DESCRIPTION=" ln
+	    }
+
+	    if (ret < 0)
+			printf "reading from `" $i "` failed\n" > "/dev/stderr"
+
+	    close($i)
+	}
+	next
+}
+
+NF == 0 {
+	if (builddeps != "" || bootstrapdeps != "")
+	    print "BUILD_DEPENDS=" builddeps " " bootstrapdeps
+	builddeps = bootstrapdeps = ""
+	print ""
+	next
+}
+
+{
+	gsub(/ONLY_FOR_PLATFORM/, "ONLYFOR")
+	gsub(/NOT_FOR_PLATFORM/, "NOTFOR")
+	print
+}

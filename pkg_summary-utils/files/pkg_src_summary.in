@@ -37,11 +37,11 @@ export LC_ALL=C
 
 ############################################################
 # user settable variables
-PKGSRCDIR=${PKGSRCDIR:=@PKGSRCDIR@}
-BMAKE=${BMAKE:=@BMAKE@}
-PSS_MKSCRIPTSDIR=${PSS_MKSCRIPTSDIR:=@mkscriptsdir@}
-LIBEXECDIR=${LIBEXECDIR:=@libexecdir@}
-PKG_INFO_CMD="${PKG_INFO_CMD-@PKG_INFO_CMD@}"
+: ${PKGSRCDIR:=@PKGSRCDIR@}
+: ${BMAKE:=@BMAKE@}
+: ${PSS_MKSCRIPTSDIR:=@mkscriptsdir@}
+: ${LIBEXECDIR:=@libexecdir@}
+: ${PKG_INFO_CMD:=@PKG_INFO_CMD@}
 
 ############################################################
 usage (){
@@ -206,60 +206,6 @@ multi_pkgs_fn=$tmp_dir/multi_pkgs.txt
 normal_pkgs_fn=$tmp_dir/normal_pkgs.txt
 
 ############################################################
-enrich_summary (){
-    runawk -f trim.awk -v with_bootstrap="$with_bootstrap" -e '
-    with_bootstrap != "" && /^BOOTSTRAP_DEPENDS=/ {\
-	bootstrapdeps = substr($0, 19)
-	next
-    }
-    with_bootstrap != "" && /^BUILD_DEPENDS=/ {
-	builddeps = substr($0, 15)
-	next
-    }
-    /^DISTINFO_FILE=/ {
-	fn = trim_lrc(substr($0, 15))
-	printf "ALLDISTFILES="
-	while (0 < (ret = (getline < fn))){
-	    if ($1 == "Size")
-		printf "%s:%s ", substr($2, 2, length($2)-2), $4
-	}
-
-	if (ret < 0)
-	    printf "reading from `" fn "` failed\n" > "/dev/stderr"
-
-	close(fn)
-	printf "\n"
-	next
-    }
-    /^DESCR_SRC=/ {
-	$0 = substr($0, 11)
-	for (i=1; i <= NF; ++i){
-	    while (0 < ret = (getline ln < $i)){
-		print "DESCRIPTION=" ln
-	    }
-
-	    if (ret < 0)
-		printf "reading from `" $i "` failed\n" > "/dev/stderr"
-
-	    close($i)
-	}
-	next
-    }
-    NF == 0 {
-	if (builddeps != "" || bootstrapdeps != "")
-	    print "BUILD_DEPENDS=" builddeps " " bootstrapdeps
-	builddeps = bootstrapdeps = ""
-	print ""
-	next
-    }
-    {
-	gsub(/ONLY_FOR_PLATFORM/, "ONLYFOR")
-	gsub(/NOT_FOR_PLATFORM/, "NOTFOR")
-	print
-    }
-    ' "$@"
-}
-
 prepand_PLIST () {
     awk '/^[^@]/ {print "PLIST=" $0}' "$@"
 }
@@ -402,7 +348,7 @@ process_one_by_one (){
     while read pkgpaths; do
 	for pkgpath in $pkgpaths; do
 	    generate_summary "$pkgpath" |
-	    enrich_summary |
+	    $LIBEXECDIR/enrich_summary $with_bootstrap |
 	    eval $prepand
 	done
 

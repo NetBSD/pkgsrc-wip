@@ -17,7 +17,7 @@ BMAKE ?=	/usr/bin/make
 #############################################################
 
 LIBEXECSCRIPTS =	direct_deps XB2bin_summary get_processed_pkgs \
-	summary2multi_variants
+	summary2multi_variants enrich_summary
 
 INSCRIPTS =	pkg_cmp_summary pkg_list_all_pkgs
 INSCRIPTS +=	pkg_refresh_summary pkg_src_fetch_var
