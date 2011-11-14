@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/11/14 08:33:26 phonohawk Exp $
+lib/collections-base-instances-${PKGVERSION}/${HASKELL_VERSION}/Data/Collections/BaseInstances.hi
+lib/collections-base-instances-${PKGVERSION}/${HASKELL_VERSION}/Data/Collections/BaseInstances.p_hi
+lib/collections-base-instances-${PKGVERSION}/${HASKELL_VERSION}/Data/Map/List.hi
+lib/collections-base-instances-${PKGVERSION}/${HASKELL_VERSION}/Data/Map/List.p_hi
+lib/collections-base-instances-${PKGVERSION}/${HASKELL_VERSION}/Data/Set/List.hi
+lib/collections-base-instances-${PKGVERSION}/${HASKELL_VERSION}/Data/Set/List.p_hi
+lib/collections-base-instances-${PKGVERSION}/${HASKELL_VERSION}/HScollections-base-instances-${PKGVERSION}.o
+lib/collections-base-instances-${PKGVERSION}/${HASKELL_VERSION}/libHScollections-base-instances-${PKGVERSION}.a
+lib/collections-base-instances-${PKGVERSION}/${HASKELL_VERSION}/libHScollections-base-instances-${PKGVERSION}_p.a
+lib/collections-base-instances-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/collections-base-instances-${PKGVERSION}/LICENSE
