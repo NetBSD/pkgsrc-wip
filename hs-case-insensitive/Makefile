@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2011/10/05 06:21:42 phonohawk Exp $
+# $NetBSD: Makefile,v 1.3 2011/11/14 09:51:34 phonohawk Exp $
 #
 
-DISTNAME=	case-insensitive-0.3.0.1
+DISTNAME=	case-insensitive-0.4
 CATEGORIES=	textproc
 
 MAINTAINER=	pho@cielonegro.org
