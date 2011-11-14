@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4532 2011/11/14 09:28:53 phonohawk Exp $
+# $Id: Makefile,v 1.4533 2011/11/14 19:50:45 ryo-on Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -72,7 +72,6 @@ SUBDIR+=	aircrack-ng
 SUBDIR+=	airsnort
 SUBDIR+=	akonadi
 SUBDIR+=	alac_decoder
-SUBDIR+=	alacconvert
 SUBDIR+=	alberta
 SUBDIR+=	alex
 SUBDIR+=	alive
@@ -1223,7 +1222,6 @@ SUBDIR+=	lhs2tex
 SUBDIR+=	libAppleWM
 SUBDIR+=	libGenome
 SUBDIR+=	libSoundTouch
-SUBDIR+=	libalac
 SUBDIR+=	libanimal
 SUBDIR+=	libargp
 SUBDIR+=	libassa
