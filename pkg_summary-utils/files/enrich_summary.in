@@ -33,18 +33,17 @@ with_bootstrap && /^BUILD_DEPENDS=/ {
 }
 
 /^DISTINFO_FILE=/ {
-	fn = trim_lrc(substr($0, 15))
-	printf "ALLDISTFILES="
-	while (0 < (ret = (getline < fn))){
-	    if ($1 == "Size")
-			printf "%s:%s ", substr($2, 2, length($2)-2), $4
-	}
+	distinfo_fn = trim_lrc(substr($0, 15))
+	next
+}
 
-	if (ret < 0)
-	    printf "reading from `" fn "` failed\n" > "/dev/stderr"
+/^DISTINFO_FILE=/ {
+	distinfo_fn = trim_lrc(substr($0, 15))
+	next
+}
 
-	close(fn)
-	printf "\n"
+/^DISTFILES=/ {
+	distfiles = trim_lrc(substr($0, 11))
 	next
 }
 
@@ -64,9 +63,27 @@ with_bootstrap && /^BUILD_DEPENDS=/ {
 }
 
 NF == 0 {
+	# BUILD_DEPENDS
 	if (builddeps != "" || bootstrapdeps != "")
 	    print "BUILD_DEPENDS=" builddeps " " bootstrapdeps
 	builddeps = bootstrapdeps = ""
+
+	# ALLDISTFILES
+	if (distfiles != "" && distinfo_fn != ""){
+		printf "ALLDISTFILES="
+		while (0 < (ret = (getline < distinfo_fn))){
+			if ($1 == "Size")
+				printf "%s:%s ", substr($2, 2, length($2)-2), $4
+		}
+
+		if (ret < 0)
+			printf "reading from `" fn "` failed\n" > "/dev/stderr"
+
+		close(fn)
+		printf "\n"
+	}
+
+	#
 	print ""
 	next
 }

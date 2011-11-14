@@ -183,7 +183,7 @@ varnames=`echo $PSS_FIELDS |
          gsub(/ONLYFOR/, "ONLY_FOR_PLATFORM")
          gsub(/NOTFOR/,  "NOT_FOR_PLATFORM")
          gsub(/DESCRIPTION/, "DESCR_SRC")
-         gsub(/ALLDISTFILES/, "DISTINFO_FILE")
+         gsub(/ALLDISTFILES/, "DISTINFO_FILE DISTFILES")
          print}'`
 
 if test -n "$debug"; then

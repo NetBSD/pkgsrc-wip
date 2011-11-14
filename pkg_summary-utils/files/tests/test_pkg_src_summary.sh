@@ -411,9 +411,10 @@ hide_distfile_size (){
     sed 's/:[0-9]*/:NNN/g' "$@"
 }
 
-pkg_src_summary -f PKGNAME,PKGPATH,ALLDISTFILES x11/xxkb | hide_distfile_size |
+pkg_src_summary -f PKGNAME,PKGPATH,ALLDISTFILES x11/xxkb |
+hide_distfile_size | normalize_version |
 cmp 'pkg_src_summary #17' \
-'PKGNAME=xxkb-1.11
+'PKGNAME=xxkb-X
 PKGPATH=x11/xxkb
 ALLDISTFILES=xxkb-1.11-src.tar.gz:NNN 
 
@@ -425,3 +426,12 @@ awk '/^BUILD_DEPENDS=.*digest/ {print "ok"}
 cmp 'pkg_src_summary #18' \
 'ok
 '
+
+pkg_src_summary -f PKGNAME,PKGPATH,ALLDISTFILES devel/bmake |
+hide_distfile_size | normalize_version |
+cmp 'pkg_src_summary #19' \
+'PKGNAME=bmake-X
+PKGPATH=devel/bmake
+
+'
+
