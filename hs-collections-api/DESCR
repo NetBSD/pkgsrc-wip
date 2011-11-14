@@ -1,0 +1,4 @@
+This package provides classes for a consistent API to data
+structures. The behaviour of the interface is specified by QuickCheck
+properties. It is intended as an evolution of the API of the data
+structures in the containers package.
