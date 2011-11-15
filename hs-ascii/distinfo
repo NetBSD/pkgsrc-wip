@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.2 2011/11/14 10:05:00 phonohawk Exp $
+$NetBSD: distinfo,v 1.3 2011/11/15 22:41:47 phonohawk Exp $
 
-SHA1 (ascii-0.0.3.tar.gz) = 4f77823d7ba5b9b2b50e622c17a380ce35b3fa0d
-RMD160 (ascii-0.0.3.tar.gz) = 83b941b5f22b8494119ba68b358a56c12d3d4e44
-Size (ascii-0.0.3.tar.gz) = 3093 bytes
-SHA1 (patch-ascii.cabal) = df7c7f58a0fc531a6832d5ff9197432cf90cb68e
+SHA1 (ascii-0.0.4.tar.gz) = 70ce7a1eb4ce9967ae8df66cd4ec2084e6d3e339
+RMD160 (ascii-0.0.4.tar.gz) = d3dd741409f3f59353231897ca597637fe84bfea
+Size (ascii-0.0.4.tar.gz) = 3207 bytes
