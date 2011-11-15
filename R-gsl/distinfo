@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/11/15 11:32:46 bubuchka Exp $
+
+SHA1 (R/gsl_1.9-9.tar.gz) = c3b76b80db5b301dd803df8af22e7b51d32cb165
+RMD160 (R/gsl_1.9-9.tar.gz) = a1a8a97e9d8564d778ca79d49186999f725e97b1
+Size (R/gsl_1.9-9.tar.gz) = 338684 bytes
