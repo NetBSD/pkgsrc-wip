@@ -1,10 +1,10 @@
-$NetBSD: patch-bc,v 1.4 2011/11/12 14:42:38 asau Exp $
+$NetBSD: patch-bc,v 1.5 2011/11/15 13:22:12 asau Exp $
 
---- dlls/wineoss.drv/audio.c.orig	2008-12-05 17:57:45.000000000 +0100
-+++ dlls/wineoss.drv/audio.c
-@@ -83,6 +83,12 @@
+--- dlls/wineoss.drv/mmdevdrv.c.orig	2011-11-04 19:02:31.000000000 +0000
++++ dlls/wineoss.drv/mmdevdrv.c
+@@ -54,6 +54,12 @@
+ #include "audioclient.h"
  
- #include "audio.h"
  
 +#ifdef __NetBSD__
 +#define SOUND_DEV	"/dev/sound"
@@ -12,21 +12,18 @@ $NetBSD: patch-bc,v 1.4 2011/11/12 14:42:38 asau Exp $
 +#define SOUND_DEV	"/dev/dsp"
 +#endif
 +
- WINE_DEFAULT_DEBUG_CHANNEL(wave);
+ /* Some implementations of OSS, such as FreeBSD older than 9.0, lack
+    SNDCTL_DSP_HALT which is just a synonym for the older SNDCTL_DSP_RESET. */
+ #ifndef SNDCTL_DSP_HALT
+@@ -312,9 +318,9 @@ static UINT get_default_index(EDataFlow 
+     const char *devnode;
  
- /* Allow 1% deviation for sample rates (some ES137x cards) */
-@@ -1168,12 +1174,12 @@ LRESULT OSS_WaveInit(void)
-     }
+     if(flow == eRender)
+-        fd = open("/dev/dsp", O_WRONLY);
++        fd = open(SOUND_DEV, O_WRONLY);
      else
-     {
--        WOutDev[0].ossdev.dev_name = WInDev[0].ossdev.dev_name = StrDup("/dev/dsp",NULL);
-+        WOutDev[0].ossdev.dev_name = WInDev[0].ossdev.dev_name = StrDup(SOUND_DEV,NULL);
-         WOutDev[0].ossdev.mixer_name = WInDev[0].ossdev.mixer_name = StrDup("/dev/mixer",NULL);
-         for (i = 1; i < MAX_WAVEDRV; ++i)
-         {
-             WOutDev[i].ossdev.dev_name = WInDev[i].ossdev.dev_name = HeapAlloc(GetProcessHeap(),0,11);
--            sprintf(WOutDev[i].ossdev.dev_name, "/dev/dsp%u", i);
-+            sprintf(WOutDev[i].ossdev.dev_name, SOUND_DEV "%u", i);
-             WOutDev[i].ossdev.mixer_name = WInDev[i].ossdev.mixer_name = HeapAlloc(GetProcessHeap(),0,13);
-             sprintf(WOutDev[i].ossdev.mixer_name, "/dev/mixer%u", i);
-         }
+-        fd = open("/dev/dsp", O_RDONLY);
++        fd = open(SOUND_DEV, O_RDONLY);
+ 
+     if(fd < 0){
+         WARN("Couldn't open default device!\n");

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.8 2011/11/12 14:42:37 asau Exp $
+@comment $NetBSD: PLIST.common,v 1.9 2011/11/15 13:22:12 asau Exp $
 bin/fnt2bdf
 bin/function_grep.pl
 bin/msiexec
@@ -135,6 +135,8 @@ include/wine/windows/control.h
 include/wine/windows/control.idl
 include/wine/windows/cor.h
 include/wine/windows/cor.idl
+include/wine/windows/cordebug.h
+include/wine/windows/cordebug.idl
 include/wine/windows/corerror.h
 include/wine/windows/corhdr.h
 include/wine/windows/cpl.h
@@ -259,7 +261,6 @@ include/wine/windows/dplobby.h
 include/wine/windows/dplobby8.h
 include/wine/windows/dpnathlp.h
 include/wine/windows/dsconf.h
-include/wine/windows/dsdriver.h
 include/wine/windows/dsgetdc.h
 include/wine/windows/dshow.h
 include/wine/windows/dsound.h
@@ -352,6 +353,7 @@ include/wine/windows/ksmedia.h
 include/wine/windows/lm.h
 include/wine/windows/lmaccess.h
 include/wine/windows/lmapibuf.h
+include/wine/windows/lmat.h
 include/wine/windows/lmbrowsr.h
 include/wine/windows/lmcons.h
 include/wine/windows/lmerr.h
@@ -389,6 +391,8 @@ include/wine/windows/mimeole.idl
 include/wine/windows/minmax.h
 include/wine/windows/mlang.h
 include/wine/windows/mlang.idl
+include/wine/windows/mmc.h
+include/wine/windows/mmc.idl
 include/wine/windows/mmddk.h
 include/wine/windows/mmdeviceapi.h
 include/wine/windows/mmdeviceapi.idl
@@ -481,6 +485,7 @@ include/wine/windows/oleidl.idl
 include/wine/windows/opnrst.idl
 include/wine/windows/optary.h
 include/wine/windows/optary.idl
+include/wine/windows/patchapi.h
 include/wine/windows/pdh.h
 include/wine/windows/pdhmsg.h
 include/wine/windows/perhist.h
@@ -696,6 +701,7 @@ lib/wine/actxprxy.dll.so
 lib/wine/advapi32.dll.so
 lib/wine/advpack.dll.so
 lib/wine/amstream.dll.so
+lib/wine/apphelp.dll.so
 lib/wine/appwiz.cpl.so
 lib/wine/aspnet_regiis.exe.so
 lib/wine/atl.dll.so
@@ -833,6 +839,7 @@ lib/wine/fakedlls/actxprxy.dll
 lib/wine/fakedlls/advapi32.dll
 lib/wine/fakedlls/advpack.dll
 lib/wine/fakedlls/amstream.dll
+lib/wine/fakedlls/apphelp.dll
 lib/wine/fakedlls/appwiz.cpl
 lib/wine/fakedlls/aspnet_regiis.exe
 lib/wine/fakedlls/atl.dll
@@ -1023,6 +1030,7 @@ lib/wine/fakedlls/mciseq.dll
 lib/wine/fakedlls/mciwave.dll
 lib/wine/fakedlls/midimap.dll
 lib/wine/fakedlls/mlang.dll
+lib/wine/fakedlls/mmcndmgr.dll
 lib/wine/fakedlls/mmdevapi.dll
 lib/wine/fakedlls/mmdevldr.vxd
 lib/wine/fakedlls/mmsystem.dll16
@@ -1126,6 +1134,7 @@ lib/wine/fakedlls/pidgen.dll
 lib/wine/fakedlls/ping.exe
 lib/wine/fakedlls/plugplay.exe
 lib/wine/fakedlls/powrprof.dll
+lib/wine/fakedlls/presentationfontcache.exe
 lib/wine/fakedlls/printui.dll
 lib/wine/fakedlls/progman.exe
 lib/wine/fakedlls/propsys.dll
@@ -1142,6 +1151,7 @@ lib/wine/fakedlls/rasapi32.dll
 lib/wine/fakedlls/rasdlg.dll
 lib/wine/fakedlls/reg.exe
 lib/wine/fakedlls/regapi.dll
+lib/wine/fakedlls/regasm.exe
 lib/wine/fakedlls/regedit.exe
 lib/wine/fakedlls/regsvcs.exe
 lib/wine/fakedlls/regsvr32.exe
@@ -1224,6 +1234,7 @@ lib/wine/fakedlls/vdhcp.vxd
 lib/wine/fakedlls/vdmdbg.dll
 lib/wine/fakedlls/ver.dll16
 lib/wine/fakedlls/version.dll
+lib/wine/fakedlls/view.exe
 lib/wine/fakedlls/vmm.vxd
 lib/wine/fakedlls/vnbt.vxd
 lib/wine/fakedlls/vnetbios.vxd
@@ -1298,6 +1309,7 @@ lib/wine/fakedlls/xinput1_2.dll
 lib/wine/fakedlls/xinput1_3.dll
 lib/wine/fakedlls/xinput9_1_0.dll
 lib/wine/fakedlls/xmllite.dll
+lib/wine/fakedlls/xolehlp.dll
 lib/wine/faultrep.dll.so
 lib/wine/fltlib.dll.so
 lib/wine/fusion.dll.so
@@ -1520,6 +1532,7 @@ lib/wine/mciseq.dll.so
 lib/wine/mciwave.dll.so
 lib/wine/midimap.dll.so
 lib/wine/mlang.dll.so
+lib/wine/mmcndmgr.dll.so
 lib/wine/mmdevapi.dll.so
 lib/wine/mmdevldr.vxd.so
 lib/wine/mmsystem.dll16.so
@@ -1623,6 +1636,7 @@ lib/wine/pidgen.dll.so
 lib/wine/ping.exe.so
 lib/wine/plugplay.exe.so
 lib/wine/powrprof.dll.so
+lib/wine/presentationfontcache.exe.so
 lib/wine/printui.dll.so
 lib/wine/progman.exe.so
 lib/wine/propsys.dll.so
@@ -1639,6 +1653,7 @@ lib/wine/rasapi32.dll.so
 lib/wine/rasdlg.dll.so
 lib/wine/reg.exe.so
 lib/wine/regapi.dll.so
+lib/wine/regasm.exe.so
 lib/wine/regedit.exe.so
 lib/wine/regsvcs.exe.so
 lib/wine/regsvr32.exe.so
@@ -1721,6 +1736,7 @@ lib/wine/vdhcp.vxd.so
 lib/wine/vdmdbg.dll.so
 lib/wine/ver.dll16.so
 lib/wine/version.dll.so
+lib/wine/view.exe.so
 lib/wine/vmm.vxd.so
 lib/wine/vnbt.vxd.so
 lib/wine/vnetbios.vxd.so
@@ -1795,6 +1811,7 @@ lib/wine/xinput1_2.dll.so
 lib/wine/xinput1_3.dll.so
 lib/wine/xinput9_1_0.dll.so
 lib/wine/xmllite.dll.so
+lib/wine/xolehlp.dll.so
 man/de.UTF-8/man1/wine.1
 man/de.UTF-8/man1/winemaker.1
 man/de.UTF-8/man1/wineserver.1

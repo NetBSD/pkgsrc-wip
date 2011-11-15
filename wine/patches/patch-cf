@@ -1,11 +1,11 @@
-$NetBSD: patch-cf,v 1.1 2010/12/21 20:54:24 asau Exp $
+$NetBSD: patch-cf,v 1.2 2011/11/15 13:22:12 asau Exp $
 
---- dlls/riched32/tests/editor.c.orig	2009-02-27 23:21:46.000000000 +0100
-+++ dlls/riched32/tests/editor.c
+--- dlls/riched32/tests/editor.c.orig	2011-11-04 23:02:31.000000000 +0400
++++ dlls/riched32/tests/editor.c	2011-11-11 22:49:49.000000000 +0400
 @@ -23,6 +23,7 @@
  
  #include <stdarg.h>
- #include <assert.h>
+ 
 +#include <winsock2.h>
  #include <windef.h>
  #include <winbase.h>
