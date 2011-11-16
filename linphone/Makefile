@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2011/03/08 22:12:35 gschwarz Exp $
+# $NetBSD: Makefile,v 1.31 2011/11/16 18:36:18 noud4 Exp $
 
 DISTNAME=	linphone-3.4.2
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://download.savannah.gnu.org/releases/linphone/3.4.x/sources/
 
@@ -49,6 +50,7 @@ CPPFLAGS+=	-DDSP_NAME="\"${DEVOSSAUDIO}\""
 .include "../../mk/oss.buildlink3.mk"
 .endif
 
+.include "../../x11/libXv/buildlink3.mk"
 .include "../../audio/speex/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libosip/buildlink3.mk"
