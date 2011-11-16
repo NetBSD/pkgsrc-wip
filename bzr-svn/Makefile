@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/11/16 10:13:06 ddeus Exp $
+# $NetBSD: Makefile,v 1.2 2011/11/16 10:14:40 ddeus Exp $
 
 DISTNAME=	bzr-svn-${VER}
 CATEGORIES=	devel scm
@@ -33,6 +33,6 @@ PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 #TEST_DEPENDS+=	${PYPKGPREFIX}-paramiko-[0-9]*:../../security/py-paramiko
 #TEST_TARGET=	check-verbose
 
-.include "../../devel/bzr/plugin.mk"
+.include "../../wip/bzr/plugin.mk"
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
