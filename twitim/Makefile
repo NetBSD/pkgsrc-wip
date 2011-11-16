@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2010/11/13 13:59:33 ryo-on Exp $
+# $NetBSD: Makefile,v 1.4 2011/11/16 19:13:29 noud4 Exp $
 #
 
 DISTNAME=	twitim_1.5
 PKGNAME=	${DISTNAME:S/_/-/}
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://twitim.googlecode.com/files/
 
@@ -45,6 +46,8 @@ SUBST_STAGE.prefix=	pre-configure
 SUBST_FILES.prefix=	etc/twitim.conf twitim
 SUBST_SED.prefix=	-e 's,/usr,${PREFIX},g'
 SUBST_SED.prefix+=	-e 's,/etc/twitim/twitim.conf,${PREFIX}/etc/twitim.conf,g'
+
+PLIST_SUBST+=		PERL5_INSTALLVENDORLIB=${PERL5_INSTALLVENDORLIB:S|${PREFIX}/||:Q}
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/etc/twitim.desktop ${DESTDIR}${PREFIX}/share/applications
