@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/11/16 10:13:06 ddeus Exp $
+
+SHA1 (bzr-svn-1.1.1.tar.gz) = eb2f13ec2fd078bf4590a0002a842279f6b13187
+RMD160 (bzr-svn-1.1.1.tar.gz) = fb009de7e6c13ecfc6686716b0383d47af2d2760
+Size (bzr-svn-1.1.1.tar.gz) = 292162 bytes
