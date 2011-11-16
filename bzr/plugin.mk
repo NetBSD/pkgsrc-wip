@@ -1,10 +1,10 @@
-# $NetBSD: plugin.mk,v 1.1.1.1 2011/03/01 21:50:00 ddeus Exp $
+# $NetBSD: plugin.mk,v 1.2 2011/11/16 10:10:13 ddeus Exp $
 
 BZR_PLUGIN_NAME?=	${PKGBASE:S/^bzr-//}
 BZR_PLUGIN_TEST?=	yes
 BZR_PLUGIN_TEST_DIR?=	${WRKSRC}/build/lib/bzrlib/plugins
 
-DEPENDS+=		bzr>=1.6:../../devel/bzr
+DEPENDS+=		bzr>=2.4:../../wip/bzr
 
 # stolen from graphics/hicolor-icon-theme
 .include "../../mk/bsd.fast.prefs.mk"
