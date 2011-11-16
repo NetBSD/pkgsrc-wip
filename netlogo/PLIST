@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/08/02 21:31:39 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/11/16 15:17:09 noud4 Exp $
 bin/hubnet
 bin/netlogo
 lib/java/netlogo/HubNet.jar
@@ -868,7 +868,6 @@ share/doc/netlogo/javadoc/org/nlogo/api/PrimitiveManager.html
 share/doc/netlogo/javadoc/org/nlogo/api/Program.html
 share/doc/netlogo/javadoc/org/nlogo/api/Protractor.html
 share/doc/netlogo/javadoc/org/nlogo/api/Protractor3D.html
-share/doc/netlogo/javadoc/org/nlogo/api/RandomSeedGenerator.html
 share/doc/netlogo/javadoc/org/nlogo/api/RandomServices.html
 share/doc/netlogo/javadoc/org/nlogo/api/RemoteFile.html
 share/doc/netlogo/javadoc/org/nlogo/api/RendererInterface.html
