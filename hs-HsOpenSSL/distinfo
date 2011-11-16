@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2011/10/05 07:13:45 phonohawk Exp $
+$NetBSD: distinfo,v 1.7 2011/11/16 01:22:27 phonohawk Exp $
 
-SHA1 (HsOpenSSL-0.10.1.1.tar.gz) = b1810fcbc060ef69f300c99b66c2356d67de1bd2
-RMD160 (HsOpenSSL-0.10.1.1.tar.gz) = 46f2ebcbbd2340064a1deaacc17cf865e37973a4
-Size (HsOpenSSL-0.10.1.1.tar.gz) = 60703 bytes
+SHA1 (HsOpenSSL-0.10.1.2.tar.gz) = 0ea4b8f188ebaa68d61799612abfef7c6df9f2b9
+RMD160 (HsOpenSSL-0.10.1.2.tar.gz) = d1c8a4a110eb8b71c51cb984f213202786f86003
+Size (HsOpenSSL-0.10.1.2.tar.gz) = 60942 bytes
