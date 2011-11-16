@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2011/01/13 09:56:05 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2011/11/16 20:39:06 noud4 Exp $
 #
 
 DISTNAME=	nautilus-search-tool-0.3.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nautsearchtool/}
 
