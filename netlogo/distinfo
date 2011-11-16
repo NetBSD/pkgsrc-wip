@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/08/02 21:31:39 jihbed Exp $
+$NetBSD: distinfo,v 1.2 2011/11/16 15:05:31 noud4 Exp $
 
-SHA1 (netlogo-4.1.tar.gz) = 490efa18ea49d3fea6199d12cd0148f3c576dee1
-RMD160 (netlogo-4.1.tar.gz) = 917f333fe2251b65d7ec24ffb8dbf1817a57da66
-Size (netlogo-4.1.tar.gz) = 43139189 bytes
+SHA1 (netlogo-4.1.3.tar.gz) = cf69ef0ba8fe8bcc1787863f18fbd9e60e7ca9ab
+RMD160 (netlogo-4.1.3.tar.gz) = 36a556a9800542060d23c3bf2cc25ce0864b3122
+Size (netlogo-4.1.3.tar.gz) = 43533959 bytes

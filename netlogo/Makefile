@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/08/02 21:31:38 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2011/11/16 15:05:31 noud4 Exp $
 #
 
-DISTNAME=	netlogo-4.1
+DISTNAME=	netlogo-4.1.3
 CATEGORIES=	devel java
 MASTER_SITES=	http://ccl.northwestern.edu/netlogo/4.1/
 
