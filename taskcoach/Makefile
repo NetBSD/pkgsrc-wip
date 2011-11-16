@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2011/10/28 15:16:22 ryo-on Exp $
+# $NetBSD: Makefile,v 1.8 2011/11/16 13:52:13 ryo-on Exp $
 #
 
-DISTNAME=	TaskCoach-1.2.30
+DISTNAME=	TaskCoach-1.2.31
 PKGNAME=	${DISTNAME:tl}
 CATEGORIES=	time
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=taskcoach/}
