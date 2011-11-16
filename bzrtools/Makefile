@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/03/01 21:52:00 ddeus Exp $
+# $NetBSD: Makefile,v 1.2 2011/11/16 10:16:34 ddeus Exp $
 
 DISTNAME=	bzrtools-${VER}
 CATEGORIES=	devel scm
-MASTER_SITES=	http://launchpad.net/bzrtools/trunk/${VER}/+download/
-VER=		2.3.0
+MASTER_SITES=	http://launchpad.net/bzrtools/stable/${VER}/+download/
+VER=		2.4.1
 
 MAINTAINER=	jan.m.danielsson@gmail.com
 HOMEPAGE=	http://bazaar-vcs.org/BzrTools
@@ -15,6 +15,6 @@ PYDISTUTILSPKG=	yes
 
 WRKSRC=		${WRKDIR}/bzrtools
 
-.include "../../devel/bzr/plugin.mk"
+.include "../../wip/bzr/plugin.mk"
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
