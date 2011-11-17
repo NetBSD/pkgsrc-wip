@@ -366,6 +366,9 @@ if test "$PSS_SLAVES"; then
     qfields="$(echo $PSS_FIELDS | sed 's| |,|g')"
     environ="PSS_SLAVES= BMAKE=$BMAKE CKSUM=$CKSUM PKGSRCDIR=$PKGSRCDIR"
     environ="$environ PSS_PRE_PATH=$PSS_PRE_PATH PSS_POST_PATH=$PSS_POST_PATH"
+    if test -n "$MAKECONF"; then
+	environ="$environ MAKECONF=$MAKECONF"
+    fi
 
     runpipe0 \
 	packages2stdout $pkgpaths '|' \

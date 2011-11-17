@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkg_src_summary.1,v 1.27 2010/11/14 01:04:31 cheusov Exp $
+.\"	$NetBSD: pkg_src_summary.1,v 1.28 2011/11/17 18:34:20 cheusov Exp $
 .\"
 .\" Copyright (c) 2008-2010 by Aleksey Cheusov (vle@gmx.net)
 .\" Absolutely no warranty.
@@ -114,6 +114,11 @@ executable in case a pkg_summary is built in parallel. Example: -Z300
 .BR PSS_PRE_PATH ", " PSS_POST_PATH
 In a distributed mode prepand and append PSS_PRE_PATH and PSS_POST_PATH to
 PATH
+.TP
+.BR MAKECONF
+If MAKECONF and PSS_SLAVES are not empty, MAKECONF is passed to
+.I pkg_src_summary
+processes running on slave hosts.
 .SH EXAMPLES
 .VB
 pkg_src_summary wip/dict-server wip/dict-mueller7 wip/dict-client
