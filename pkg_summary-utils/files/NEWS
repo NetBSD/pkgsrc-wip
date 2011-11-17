@@ -1,4 +1,17 @@
 ----------------------------------------------------------------------
+Version 0.56.3, by Aleksey Cheusov, Thu, 17 Nov 2011 21:34:53 +0300
+
+  pkg_src_summary:
+    - fixed: gathering DESCRIPTION and ALLDISTFILES fields eats
+      too much CPU. Now full summary is gathered drammatically faster.
+      This may significantly speed up distbb bulk builds.
+    - While generating ALLDISTFILES do not try to read "distinfo" files when
+      DISTFILES is empty.
+    - More regression tests.
+    - If MAKECONF and PSS_SLAVES are not empty, MAKECONF is passed to
+      pkg_src_summary processes running on slave hosts.
+
+----------------------------------------------------------------------
 Version 0.56.2, by Aleksey Cheusov, Fri, 11 Nov 2011 13:35:07 +0300
 
   pkg_src_summary:
