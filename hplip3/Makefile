@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2011/10/09 00:31:12 gregoire Exp $
+# $NetBSD: Makefile,v 1.37 2011/11/17 22:09:36 schnoebe Exp $
 #
 
-DISTNAME=		hplip-3.11.7
-PKGREVISION=		1
+DISTNAME=		hplip-3.11.10
 CATEGORIES=		print
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=hplip/}
 
@@ -49,6 +48,8 @@ INSTALL_MAKE_FLAGS+=	mimedir=${EGDIR}/cups
 
 OWN_DIRS+=		${PKG_SYSCONFDIR}/hp
 OWN_DIRS+=		${VARBASE}/lib/hp
+
+PLIST_SRC=		PLIST.base
 
 .include "options.mk"
 
