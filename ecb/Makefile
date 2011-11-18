@@ -1,34 +1,46 @@
-# $NetBSD: Makefile,v 1.2 2009/07/31 22:18:50 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2011/11/18 05:53:34 phonohawk Exp $
 #
 
-DISTNAME=	ecb-2.32
-CATEGORIES=	devel
+DISTNAME=		ecb-2.40
+PKGNAME=		${EMACS_PKGNAME_PREFIX}${DISTNAME}
+CATEGORIES=		devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ecb/}
 
-MAINTAINER=	pho@cielonegro.org
-HOMEPAGE=	http://ecb.sourceforge.net/
-COMMENT=	Emacs Code Browser
+MAINTAINER=		pho@cielonegro.org
+HOMEPAGE=		http://ecb.sourceforge.net/
+COMMENT=		Emacs Code Browser
+LICENSE=		gnu-gpl-v2
 
-USE_TOOLS=      gmake
-INFO_FILES=	yes
+USE_TOOLS=      find gmake makeinfo
+INFO_FILES=		yes
 
-MESSAGE_SUBST+=         LISPDIR=${EMACS_LISPPREFIX:Q}
+MAKE_FLAGS+=		EMACS=${EMACS_BIN}
+MAKE_FLAGS+=		CEDET=${EMACS_LISPPREFIX}/${EMACS_PKGNAME_PREFIX}cedet
+EMACS_MODULES=		base
+#EMACS_BUILDLINK=	yes  # Causes a conflict with Emacs 23's built-in CEDET.
 
-do-build:
-	cd ${WRKSRC} \
-	&& ${MAKE_PROGRAM} ${BUILD_MAKE_FLAGS} \
-		EMACS=${EMACS_BIN} \
-		CEDET=${EMACS_LISPPREFIX}/cedet
+PKG_DESTDIR_SUPPORT=	user-destdir
 
+INSTALLATION_DIRS+=	\
+	${PKGINFODIR} \
+	${EMACS_LISPPREFIX}/${PKGBASE}
+
+# FIXME
 do-install:
-	${INSTALL_DATA_DIR} ${EMACS_LISPPREFIX}/ecb
-	${INSTALL_DATA} ${WRKSRC}/*.el  ${EMACS_LISPPREFIX}/ecb
-	${INSTALL_DATA} ${WRKSRC}/*.elc ${EMACS_LISPPREFIX}/ecb
+	${INSTALL_DATA} ${WRKSRC}/*.el  ${DESTDIR}${EMACS_LISPPREFIX}/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/*.elc ${DESTDIR}${EMACS_LISPPREFIX}/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/info-help/ecb.info* ${DESTDIR}${PREFIX}/${PKGINFODIR}
 
-	${INSTALL_DATA_DIR} ${PREFIX}/info
-	${INSTALL_DATA} ${WRKSRC}/info-help/ecb.info* ${PREFIX}/info
+	cd ${WRKSRC} && \
+		${FIND} ecb-images -print | \
+		while read i; do \
+			if [ -d "$$i" ]; then \
+				${INSTALL_DATA_DIR} ${DESTDIR}${EMACS_LISPPREFIX}/${PKGBASE}/$$i; \
+			else \
+				${INSTALL_DATA} $$i ${DESTDIR}${EMACS_LISPPREFIX}/${PKGBASE}/$$i; \
+			fi; \
+		done
 
-DEPENDS+=	cedet-[0-9]*:../../wip/cedet
-
-.include "../../mk/bsd.pkg.mk"
 .include "../../editors/emacs/modules.mk"
+.include "../../wip/cedet/buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"

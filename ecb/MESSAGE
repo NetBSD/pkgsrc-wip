@@ -1,8 +1,8 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2008/07/16 05:00:08 phonohawk Exp $
+$NetBSD: MESSAGE,v 1.2 2011/11/18 05:53:34 phonohawk Exp $
 
 Append the following line to your .emacs file:
 
-  (add-to-list 'load-path "${LISPDIR}/ecb")
   (require 'ecb-autoloads)
+
 ===========================================================================
