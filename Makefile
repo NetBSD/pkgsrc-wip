@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4533 2011/11/14 19:50:45 ryo-on Exp $
+# $Id: Makefile,v 1.4534 2011/11/18 02:38:04 jgoamakf Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1751,6 +1751,7 @@ SUBDIR+=	p5-Exception-Class-TryCatch
 SUBDIR+=	p5-Exporter-Tidy
 SUBDIR+=	p5-File-Map
 SUBDIR+=	p5-File-ReadBackwards
+SUBDIR+=	p5-File-ShareDir-Install
 SUBDIR+=	p5-Frontier-RPC
 SUBDIR+=	p5-GPS-Garmin
 SUBDIR+=	p5-Getopt-GUI-Long
