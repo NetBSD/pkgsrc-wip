@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2011/10/16 21:35:51 ftigeot Exp $
+# $NetBSD: Makefile,v 1.3 2011/11/19 18:23:29 ftigeot Exp $
 
-VER=		3.1.1
+VER=		3.2.0
 DISTNAME=	libexttextcat-${VER}
 PKGNAME=	libexttextcat-${VER:S/-//g}
 CATEGORIES=	textproc
-MASTER_SITES=	http://dev-www.libreoffice.org/src/
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	http://dev-www.libreoffice.org/src/libexttextcat/
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	ftigeot@wolfpond.org
 HOMEPAGE=	http://cgit.freedesktop.org/libreoffice/libexttextcat/
