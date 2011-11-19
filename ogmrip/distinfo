@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/07/18 15:27:40 thomasklausner Exp $
+$NetBSD: distinfo,v 1.2 2011/11/19 22:33:08 blckmaxima Exp $
 
-SHA1 (ogmrip-0.12.3.tar.gz) = 237a9d59acb6d45189dd31613898ff4ffd09bc43
-RMD160 (ogmrip-0.12.3.tar.gz) = 7f91b5bb763646a67b2f50080f8a3bb36acd13ff
-Size (ogmrip-0.12.3.tar.gz) = 2883021 bytes
-SHA1 (patch-aa) = 7d4daa19a44df2657f2bd28994126fe264ff144c
+SHA1 (ogmrip-0.13.7.tar.gz) = a0097636b2e24b5b40107cad04b10c207c45437b
+RMD160 (ogmrip-0.13.7.tar.gz) = d7822afd1d300ebc9786ea2d3cc6420668ce19b8
+Size (ogmrip-0.13.7.tar.gz) = 3246395 bytes
+SHA1 (patch-libogmdvd_ogmdvd-transport.c) = 2ecf95147874916ab264bd959d75e13caec41240

@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.3 2010/06/13 22:47:12 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2011/11/19 22:33:08 blckmaxima Exp $
 #
 
-DISTNAME=		ogmrip-0.12.3
-PKGREVISION=		2
+DISTNAME=		ogmrip-0.13.7
+#PKGREVISION=		2
 CATEGORIES=		multimedia
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ogmrip/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://ogmrip.sourceforge.net/
-COMMENT=		Application for ripping and encoding DVD into DivX/OGM files
+COMMENT=			Application for ripping and encoding DVD into DivX/OGM files
+LICENSE=			gnu-lgpl-v2.1
 
 DEPENDS+=		mencoder-[0-9]*:../../multimedia/mencoder
 DEPENDS+=		mkvtoolnix-[0-9]*:../../multimedia/mkvtoolnix
@@ -28,7 +29,6 @@ USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake intltool pkg-config gsed
-PKGCONFIG_OVERRIDE+=	${WRKSRC}/data/ogmspawn.pc.in
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/data/ogmdvd.pc.in
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/data/ogmrip.pc.in
 
@@ -44,6 +44,7 @@ BUILDLINK_TRANSFORM+=	rm:-Werror
 #.include "../../devel/libgnome/buildlink3.mk"
 #.include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/libglade/buildlink3.mk"
+.include "../../multimedia/gpac/buildlink3.mk"
 .include "../../multimedia/libdvdread/buildlink3.mk"
 .include "../../multimedia/libtheora/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
