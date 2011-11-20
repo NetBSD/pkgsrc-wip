@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkg_lint_summary.1,v 1.14 2011/08/20 18:17:38 cheusov Exp $
+.\"	$NetBSD: pkg_lint_summary.1,v 1.15 2011/11/20 00:15:35 cheusov Exp $
 .\"
 .\" Copyright (c) 2008-2010 by Aleksey Cheusov (vle@gmx.net)
 .\" Absolutely no warranty.
@@ -56,10 +56,10 @@ Example:
 checks that files listed in REQUIRES exist. Format of the output:
 .VB
 
-   L: not_found SO_LIBRARY PKGPATH PKGNAME
+   L: not_found LIBRARY PKGPATH PKGNAME
 
 .VE
-This means that the package PKGNAME from PKGPATH requires file ABSENT but
+This means that the package PKGNAME from PKGPATH requires file LIBRARY but
 it doesn't exist.
 .br
 Example:
