@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/01/16 23:28:55 poppnk Exp $
+$NetBSD: distinfo,v 1.2 2011/11/20 15:55:28 noud4 Exp $
 
 SHA1 (gksu-1.3.6.tar.gz) = 584f5fa4b4705cf492d04230a5c5cf7f11c7027c
 RMD160 (gksu-1.3.6.tar.gz) = 648ea7e36a8f790f82390ea89a992c538aadc0ee
 Size (gksu-1.3.6.tar.gz) = 607022 bytes
+SHA1 (patch-aa) = 060da1d7373c30057aee946d481af069d44f544b

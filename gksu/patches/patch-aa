@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1 2011/11/20 15:55:28 noud4 Exp $
+
+--- gksu/gksu.c.orig	2011-11-16 23:41:23.000000000 +0000
++++ gksu/gksu.c	2011-11-16 23:42:58.000000000 +0000
+@@ -22,6 +22,10 @@
+ #include <gksuui.h>
+ #include <gksu.h>
+ 
++#ifdef __NetBSD__
++#include <locale.h>
++#endif
++
+ #include "defines.h"
+ #include "../config.h"
+ 
