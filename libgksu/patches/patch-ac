@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2011/11/20 15:52:12 noud4 Exp $
+
+--- po/nl.po.orig	2011-11-20 11:49:22.000000000 +0000
++++ po/nl.po	2011-11-19 21:15:12.000000000 +0000
+@@ -39,7 +39,7 @@
+ #: libgksu/gksu-context.c:657 libgksu/gksu-context.c:816
+ #, c-format
+ msgid "Unable to run /bin/su: %s"
+-msgstr "Kan /bin/su niet uitvoeren: %s"
++msgstr "Kan @SU@ niet uitvoeren: %s"
+ 
+ #: libgksu/gksu-context.c:770
+ msgid "gksu_run needs a command to be run, none was provided."

@@ -1,0 +1,15 @@
+$NetBSD: patch-ad,v 1.1 2011/11/20 15:52:12 noud4 Exp $
+
+the su-t, i would not know.
+
+--- po/hu.po.orig	2011-11-20 14:26:47.000000000 +0000
++++ po/hu.po	2011-11-20 14:27:23.000000000 +0000
+@@ -40,7 +40,7 @@
+ #: libgksu/gksu-context.c:657 libgksu/gksu-context.c:816
+ #, c-format
+ msgid "Unable to run /bin/su: %s"
+-msgstr "Nem lehet futtatni a /bin/su-t: %s"
++msgstr "Nem lehet futtatni a @SU@-t: %s"
+ 
+ #: libgksu/gksu-context.c:770
+ msgid "gksu_run needs a command to be run, none was provided."

@@ -1,0 +1,62 @@
+$NetBSD: patch-aa,v 1.1 2011/11/20 15:52:12 noud4 Exp $
+
+--- libgksu/gksu-context.c.orig	2011-11-16 23:28:00.000000000 +0000
++++ libgksu/gksu-context.c	2011-11-16 23:31:28.000000000 +0000
+@@ -23,7 +23,11 @@
+ #include <unistd.h>
+ #include <string.h>
+ #include <fcntl.h>
++#ifdef __NetBSD__
++#include <util.h>
++#else
+ #include <pty.h>
++#endif
+ #include <pwd.h>
+ #include <sys/types.h>
+ #include <sys/wait.h>
+@@ -414,7 +418,7 @@
+ static gchar *
+ get_process_name (pid_t pid)
+ {
+-#ifdef linux
++#ifdef linux || __NetBSD__
+   FILE *f;
+   char *cmdline = malloc (sizeof(gchar*)*256);
+   char *cmdfile = g_strdup_printf("/proc/%i/status",pid);
+@@ -633,7 +638,7 @@
+     {
+       gchar **cmd = g_malloc (sizeof(gchar*)*7);
+ 
+-      cmd[i] = g_strdup ("/bin/su"); i++;
++      cmd[i] = g_strdup ("@SU@"); i++;
+       if (context->login_shell)
+ 	{
+ 	  cmd[i] = g_strdup ("-"); i++;
+@@ -654,7 +659,7 @@
+       if (execv (cmd[0], cmd) == -1)
+ 	{
+ 	  fprintf (stderr, 
+-		   _("Unable to run /bin/su: %s"),
++		   _("Unable to run @SU@: %s"),
+ 		   strerror(errno));
+ 
+ 	  for (i = 0 ; cmd[i] != NULL ; i++)
+@@ -791,7 +796,7 @@
+     {
+       gchar **cmd = g_malloc (sizeof(gchar*)*7);
+ 
+-      cmd[i] = g_strdup ("/bin/su"); i++;
++      cmd[i] = g_strdup ("@SU@"); i++;
+       if (context->login_shell)
+ 	{
+ 	  cmd[i] = g_strdup ("-"); i++;
+@@ -813,7 +818,7 @@
+       if (execv (cmd[0], cmd) == -1)
+ 	{
+ 	  fprintf (stderr, 
+-		   _("Unable to run /bin/su: %s"),
++		   _("Unable to run @SU@: %s"),
+ 		   strerror(errno));
+ 	}
+ 
+
