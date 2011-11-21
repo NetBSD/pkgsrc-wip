@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/01/09 17:06:57 fulviociriaco Exp $
+# $NetBSD: Makefile,v 1.7 2011/11/21 19:08:56 absd Exp $
 #
 
 DISTNAME=	gcc-${GCC_VERSION}
@@ -249,9 +249,6 @@ post-install:
 	${CP} -f ${PKGDIR}/PLIST ${PLIST_SRC}
 	${FIND} ${GCC_PREFIX} \( -type f -o -type l \) -print	\
 		| ${SORT} | ${SED} -e "s,${PREFIX}/,,g"	\
-		>> ${PLIST_SRC}
-	${FIND} ${GCC_PREFIX} -type d -print	\
-		| ${SORT} -r | ${SED} -e "s,${PREFIX}/,@dirrm ,g"	\
 		>> ${PLIST_SRC}
 
 .include "../../mk/bsd.prefs.mk"

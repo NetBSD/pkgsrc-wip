@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2009/09/20 21:24:29 shindenmorr Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2011/11/21 19:08:57 absd Exp $
 
 BUILDLINK_TREE+=	tcl
 
@@ -18,9 +18,6 @@ BUILDLINK_TRANSFORM+=	l:tcl:tcl8.5
 BUILDLINK_TRANSFORM+=	l:tcl85:tcl8.5
 
 TCLCONFIG_SH?=		${BUILDLINK_PREFIX.tcl}/lib/tcl8.5/tclConfig.sh
-
-PRINT_PLIST_AWK+=	/^@dirrm lib\/tcl$$/ \
-				{ print "@comment in tcl: " $$0; next; }
 
 .include "../../mk/dlopen.buildlink3.mk"
 .endif # TCL_BUILDLINK3_MK

@@ -1,4 +1,4 @@
-# $NetBSD: haskell.mk,v 1.17 2010/12/30 06:52:48 phonohawk Exp $
+# $NetBSD: haskell.mk,v 1.18 2011/11/21 19:08:57 absd Exp $
 #
 # This Makefile fragment handles Haskell Cabal packages.
 # See: http://www.haskell.org/cabal/
@@ -199,8 +199,7 @@ CONFIGURE_ARGS+=	-O2
 
 # package.conf and package.conf.old should be ignored at all.
 PRINT_PLIST_AWK+= \
-	/\/package\.conf(\.old)?$$/ { next; } \
-	/^@dirrm lib\/${_HASKELL_VERSION}$$/ { next; }
+	/\/package\.conf(\.old)?$$/ { next; }
 
 # _HASKELL_VERSION should be substituted in PLIST.
 PLIST_SUBST+=	HASKELL_VERSION=${_HASKELL_VERSION}

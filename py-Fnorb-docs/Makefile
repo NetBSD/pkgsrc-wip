@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/05/26 13:59:45 tnn2 Exp $
+# $NetBSD: Makefile,v 1.5 2011/11/21 19:08:57 absd Exp $
 #
 
 DISTNAME=		Fnorb-Guide.html
@@ -24,7 +24,5 @@ do-install:
 	${CAT} ${PKGDIR}/PLIST.pre >${PLIST_SRC}
 	cd ${WRKSRC} && pax -rw -pe * ${PREFIX}/${HTMLDIR}
 	cd ${PREFIX} && ${FIND} ${HTMLDIR} -type f -print >>${PLIST_SRC}
-	cd ${PREFIX} && ${FIND} -d ${HTMLDIR} -type d -print | \
-	${SED} -e "s/^/@dirrm /" >>${PLIST_SRC}
 
 .include "../../mk/bsd.pkg.mk"

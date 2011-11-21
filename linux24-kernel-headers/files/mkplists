@@ -1,11 +1,10 @@
 #!/bin/sh
 #
-# $NetBSD: mkplists,v 1.1 2004/01/30 13:10:52 marttikuparinen Exp $
+# $NetBSD: mkplists,v 1.2 2011/11/21 19:08:57 absd Exp $
 #
 # Author: Martti Kuparinen <martti@NetBSD.org>
 #
 # This is an ugly script to generate the required PLIST.* files.
-# Make sure you check the generated @dirrm statements!
 #
 # Usage:
 #
@@ -93,26 +92,10 @@ do
     /bin/mv ${i}.new ${i}
 done
 
-echo "Adding @dirrm statements"
-D=`grep -v @ /tmp/PLIST.* | cut -d: -f2 | sort | sed -e 's+\(.*\)/.*+\1+' -e 's+\(include/linux\)/.*+\1+' | sort | uniq`
-for i in ${D}
-do
-    echo "==> ${i}"
-    for j in `grep -l "${i}/" /tmp/PLIST.* | grep -v PLIST.common`
-    do
-        echo "@dirrm ${i}" >> ${j}
-    done
-done
 echo "Removing // and trailing / from PLIST files"
 for i in /tmp/PLIST.*
 do
     sed -e 's+//+/+g' -e 's+/$++' < ${i} > ${i}.new
-    /bin/mv ${i}.new ${i}
-done
-for i in /tmp/PLIST.*
-do
-    [ "${i}" = /tmp/PLIST.common ] && continue
-    grep -v '@dirrm include/asm$' < ${i} > ${i}.new
     /bin/mv ${i}.new ${i}
 done
 

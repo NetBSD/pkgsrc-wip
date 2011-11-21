@@ -6,7 +6,7 @@ diff -N MESSAGE
 +++ MESSAGE	9 Nov 2005 22:12:02 -0000	1.1
 @@ -0,0 +1,21 @@
 +===========================================================================
-+$NetBSD: openldap-package.diff,v 1.3 2005/11/11 01:43:18 aolcarton Exp $
++$NetBSD: openldap-package.diff,v 1.4 2011/11/21 19:08:57 absd Exp $
 +
 + * Before starting the OpenLDAP server slapd, you must either make 
 +   ${VARBASE}/openldap, or else set slapd_chrootdir in /etc/rc.conf to a 
@@ -135,14 +135,11 @@ diff -u -r1.1.1.9 -r1.2
  share/openldap/ucdata/case.dat
  share/openldap/ucdata/cmbcl.dat
  share/openldap/ucdata/comp.dat
-@@ -242,6 +240,7 @@
+@@ -242,3 +240,4 @@
  share/openldap/ucdata/decomp.dat
  share/openldap/ucdata/kdecomp.dat
  share/openldap/ucdata/num.dat
 +@unexec ${RM} -f %D/share/openldap/ucdata/.chroot_timestamp
- @dirrm share/openldap/ucdata
- @dirrm share/openldap
- @dirrm share/examples/openldap/schema
 Index: distinfo
 ===================================================================
 RCS file: /scratch/cvsroot/netbsd/pkgsrc/databases/openldap/distinfo,v
@@ -332,8 +329,8 @@ diff -u -r1.1.1.4 -r1.2
 --- patches/patch-af	29 Aug 2005 20:04:10 -0000	1.1.1.4
 +++ patches/patch-af	9 Nov 2005 22:12:02 -0000	1.2
 @@ -1,8 +1,8 @@
--$NetBSD: openldap-package.diff,v 1.3 2005/11/11 01:43:18 aolcarton Exp $
-+$NetBSD: openldap-package.diff,v 1.3 2005/11/11 01:43:18 aolcarton Exp $
+-$NetBSD: openldap-package.diff,v 1.4 2011/11/21 19:08:57 absd Exp $
++$NetBSD: openldap-package.diff,v 1.4 2011/11/21 19:08:57 absd Exp $
  
 ---- libraries/libldap/Makefile.in.orig	2005-01-20 12:01:01.000000000 -0500
 +--- libraries/libldap/Makefile.in.orig	Thu Jan  1 13:16:29 2004
@@ -368,8 +365,8 @@ diff -u -r1.1.1.4 -r1.2
 --- patches/patch-ag	29 Aug 2005 20:04:10 -0000	1.1.1.4
 +++ patches/patch-ag	9 Nov 2005 22:12:02 -0000	1.2
 @@ -1,8 +1,8 @@
--$NetBSD: openldap-package.diff,v 1.3 2005/11/11 01:43:18 aolcarton Exp $
-+$NetBSD: openldap-package.diff,v 1.3 2005/11/11 01:43:18 aolcarton Exp $
+-$NetBSD: openldap-package.diff,v 1.4 2011/11/21 19:08:57 absd Exp $
++$NetBSD: openldap-package.diff,v 1.4 2011/11/21 19:08:57 absd Exp $
  
  --- servers/slapd/Makefile.in.orig	2004-07-25 18:31:04.000000000 -0400
 -+++ servers/slapd/Makefile.in
@@ -420,8 +417,8 @@ diff -u -r1.1.1.1 -r1.2
 --- patches/patch-ak	2 Apr 2005 21:37:16 -0000	1.1.1.1
 +++ patches/patch-ak	9 Nov 2005 22:12:02 -0000	1.2
 @@ -1,8 +1,8 @@
--$NetBSD: openldap-package.diff,v 1.3 2005/11/11 01:43:18 aolcarton Exp $
-+$NetBSD: openldap-package.diff,v 1.3 2005/11/11 01:43:18 aolcarton Exp $
+-$NetBSD: openldap-package.diff,v 1.4 2011/11/21 19:08:57 absd Exp $
++$NetBSD: openldap-package.diff,v 1.4 2011/11/21 19:08:57 absd Exp $
  
  --- servers/slurpd/Makefile.in.orig	2004-01-01 13:16:42.000000000 -0500
 -+++ servers/slurpd/Makefile.in
@@ -450,7 +447,7 @@ diff -N patches/patch-la
 --- /dev/null	1 Jan 1970 00:00:00 -0000
 +++ patches/patch-la	9 Nov 2005 22:12:02 -0000	1.1
 @@ -0,0 +1,14 @@
-+$NetBSD: openldap-package.diff,v 1.3 2005/11/11 01:43:18 aolcarton Exp $
++$NetBSD: openldap-package.diff,v 1.4 2011/11/21 19:08:57 absd Exp $
 +
 +--- include/ldap_defaults.h.orig	2005-03-11 17:45:45.000000000 -0500
 ++++ include/ldap_defaults.h	2005-03-11 17:46:11.000000000 -0500
@@ -471,7 +468,7 @@ diff -N patches/patch-lb
 --- /dev/null	1 Jan 1970 00:00:00 -0000
 +++ patches/patch-lb	9 Nov 2005 22:12:02 -0000	1.1
 @@ -0,0 +1,15 @@
-+$NetBSD: openldap-package.diff,v 1.3 2005/11/11 01:43:18 aolcarton Exp $
++$NetBSD: openldap-package.diff,v 1.4 2011/11/21 19:08:57 absd Exp $
 +
 +--- libraries/libldap/ldap.conf.orig	2003-05-24 22:09:37.000000000 -0400
 ++++ libraries/libldap/ldap.conf
@@ -493,7 +490,7 @@ diff -N patches/patch-lc
 --- /dev/null	1 Jan 1970 00:00:00 -0000
 +++ patches/patch-lc	9 Nov 2005 22:12:02 -0000	1.1
 @@ -0,0 +1,44 @@
-+$NetBSD: openldap-package.diff,v 1.3 2005/11/11 01:43:18 aolcarton Exp $
++$NetBSD: openldap-package.diff,v 1.4 2011/11/21 19:08:57 absd Exp $
 +
 +--- servers/slapd/slapd.conf.orig	2004-06-29 17:45:50.000000000 -0400
 ++++ servers/slapd/slapd.conf
@@ -544,7 +541,7 @@ diff -N patches/patch-ld
 --- /dev/null	1 Jan 1970 00:00:00 -0000
 +++ patches/patch-ld	11 Nov 2005 01:33:21 -0000	1.1
 @@ -0,0 +1,33 @@
-+$NetBSD: openldap-package.diff,v 1.3 2005/11/11 01:43:18 aolcarton Exp $
++$NetBSD: openldap-package.diff,v 1.4 2011/11/21 19:08:57 absd Exp $
 +
 +--- servers/slapd/daemon.c.orig	Fri Nov 11 01:21:32 2005
 ++++ servers/slapd/daemon.c

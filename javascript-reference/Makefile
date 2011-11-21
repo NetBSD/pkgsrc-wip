@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/05/26 13:59:44 tnn2 Exp $
+# $NetBSD: Makefile,v 1.9 2011/11/21 19:08:56 absd Exp $
 #
 
 DISTNAME=		CoreReferenceJS15
@@ -25,7 +25,5 @@ do-install:
 	cd ${WRKDIR} && pax -rw -pp [a-z]* ${PREFIX}/${HTMLDIR}
 	${CHMOD} -R go-w ${PREFIX}/${HTMLDIR}
 	cd ${PREFIX} && ${FIND} ${HTMLDIR} -type f -print >>${PLIST_SRC}
-	cd ${PREFIX} && ${FIND} -d ${HTMLDIR} -type d -print | \
-	${SED} -e "s/^/@dirrm /" >>${PLIST_SRC}
 
 .include "../../mk/bsd.pkg.mk"

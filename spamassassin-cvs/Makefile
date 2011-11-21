@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2010/01/17 12:03:32 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.16 2011/11/21 19:08:57 absd Exp $
 
 DISTNAME=	Mail-SpamAssassin-${_SA_CVS_VER}
 PKGNAME=	spamassassin-cvs-${_SA_CVS_DATE}
@@ -213,15 +213,12 @@ post-install:
 		fi;							\
 		${ECHO} "${DOC_SUBDIR}/$$f" >> ${PLIST_ADD};		\
 	done;								\
-	{ for d in `${FIND} ${DIR} -type d -print`; do			\
-		${ECHO} "@dirrm ${DOC_SUBDIR}/$$d";			\
-	done; } | ${SORT} -r >> ${PLIST_ADD};
+	 | ${SORT} -r >> ${PLIST_ADD};
 .endfor
 	@cd ${WRKSRC}/rules;						\
 	for f in [0-9]*.cf; do						\
 		${ECHO} "${RULE_SUBDIR}/$$f" >> ${PLIST_ADD};		\
 	done
-	@${ECHO} "@dirrm ${RULE_SUBDIR}" >> ${PLIST_ADD}
 	@# examples are in the static PLIST
 	@${INSTALL_DATA} ${WRKSRC}/procmailrc.example ${EGDIR}/
 	@${INSTALL_DATA} ${WRKSRC}/rules/local.cf ${EGDIR}/

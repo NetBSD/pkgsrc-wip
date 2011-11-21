@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/01/16 23:19:51 hoka_adam Exp $
+# $NetBSD: Makefile,v 1.3 2011/11/21 19:08:56 absd Exp $
 #
 
 DISTNAME=		gcc-${GCC_VERSION}
@@ -118,9 +118,6 @@ post-install:
 	${CP} -f ${PKGDIR}/PLIST ${PLIST_SRC}
 	${FIND} ${GCC_PREFIX} \( -type f -o -type l \) -print	\
 		| ${SORT} | ${SED} -e "s,${PREFIX}/,,g"	\
-		>> ${PLIST_SRC}
-	${FIND} ${GCC_PREFIX} -type d -print	\
-		| ${SORT} -r | ${SED} -e "s,${PREFIX}/,@dirrm ,g"	\
 		>> ${PLIST_SRC}
 
 .include "../../devel/gmp/buildlink3.mk"

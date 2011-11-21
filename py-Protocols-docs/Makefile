@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/05/26 13:59:46 tnn2 Exp $
+# $NetBSD: Makefile,v 1.7 2011/11/21 19:08:57 absd Exp $
 #
 
 DISTNAME=		PyProtocols-0.9.2
@@ -24,7 +24,5 @@ do-install:
 	cd ${DOC_SRCDIR} && pax -rw -pe * ${PREFIX}/${HTMLDIR}
 	cd ${DOC_SRCDIR}/../../ref/ && pax -rw -pe ref ${PREFIX}/${HTMLDIR}
 	cd ${PREFIX} && ${FIND} ${HTMLDIR} -type f -print >>${PLIST_SRC}
-	cd ${PREFIX} && ${FIND} -d ${HTMLDIR} -type d -print | \
-	${SED} -e "s/^/@dirrm /" >>${PLIST_SRC}
 
 .include "../../mk/bsd.pkg.mk"

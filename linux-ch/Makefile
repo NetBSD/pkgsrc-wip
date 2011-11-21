@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2009/05/19 09:00:09 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2011/11/21 19:08:56 absd Exp $
 
 DISTNAME=	chstandard-4.0.0.linux2.2.5.intel
 PKGNAME=	linux-ch-4.0.0
@@ -23,8 +23,6 @@ do-install:
 		${SED} -e "s|^|\$${EMULOPTSUBDIR}/|" >> ${PLIST_SRC}
 	cd ${EMULOPTDIR} && ${FIND} ch4.0.0 -type l | \
 		${SED} -e "s|^|\$${EMULOPTSUBDIR}/|" >> ${PLIST_SRC}
-	cd ${EMULOPTDIR} && ${FIND} -d ch4.0.0  -type d  | \
-	${SED} -e "s/^/@dirrm \$${EMULOPTSUBDIR}\//" >>${PLIST_SRC}
 
 .include "../../wip/mk/linuxbin.pkg.mk"
 .include "../../mk/bsd.pkg.mk"

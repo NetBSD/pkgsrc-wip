@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/05/26 13:59:44 tnn2 Exp $
+# $NetBSD: Makefile,v 1.9 2011/11/21 19:08:56 absd Exp $
 #
 
 DISTNAME=		CoreGuideJS15
@@ -23,7 +23,5 @@ do-install:
 	cat ${PKGDIR}/PLIST.pre >${PLIST_SRC}
 	cd ${WRKDIR} && pax -rw -pp [a-z]* ${PREFIX}/${HTMLDIR}
 	cd ${PREFIX} && find ${HTMLDIR} -type f -print >>${PLIST_SRC}
-	cd ${PREFIX} && find -d ${HTMLDIR} -type d -print | \
-	sed -e "s/^/@dirrm /" >>${PLIST_SRC}
 
 .include "../../mk/bsd.pkg.mk"

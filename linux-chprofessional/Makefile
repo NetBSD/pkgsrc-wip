@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2009/05/19 09:00:09 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.13 2011/11/21 19:08:56 absd Exp $
 
 DISTNAME=	chprofessional-4.0.0.linux2.2.5.intel
 PKGNAME=	linux-chprofessional-4.0.0
@@ -32,7 +32,5 @@ do-install:
 	${CAT} ${PKGDIR}/PLIST.pre >${PLIST_SRC}
 	cd ${PREFIX} && ${FIND} chprofessional4.0.0 -type f -print >>${PLIST_SRC}
 	cd ${PREFIX} && ${FIND} chprofessional4.0.0 -type l -print >>${PLIST_SRC}
-	cd ${PREFIX} && ${FIND} -d chprofessional4.0.0  -type d -print | \
-	${SED} -e "s/^/@dirrm /" >>${PLIST_SRC}
 
 .include "../../mk/bsd.pkg.mk"
