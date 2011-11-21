@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:44 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.3 2011/11/21 18:24:43 absd Exp $
 lib/hopenssl-${PKGVERSION}/${HASKELL_VERSION}/OpenSSL/Digest.hi
 ${PLIST.prof}lib/hopenssl-${PKGVERSION}/${HASKELL_VERSION}/OpenSSL/Digest.p_hi
 lib/hopenssl-${PKGVERSION}/${HASKELL_VERSION}/HShopenssl-${PKGVERSION}.o
@@ -19,4 +19,3 @@ ${PLIST.doc}share/doc/hopenssl-${PKGVERSION}/html/minus.gif
 ${PLIST.doc}share/doc/hopenssl-${PKGVERSION}/html/plus.gif
 ${PLIST.doc}share/doc/hopenssl-${PKGVERSION}/html/hopenssl.haddock
 ${PLIST.doc}share/doc/hopenssl-${PKGVERSION}/html/mini_OpenSSL-Digest.html
-${PLIST.doc}@dirrm share/doc/hopenssl-${PKGVERSION}/html

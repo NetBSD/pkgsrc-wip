@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2010/04/13 18:37:31 emil_s Exp $
+@comment $NetBSD: PLIST,v 1.6 2011/11/21 18:24:43 absd Exp $
 lib/utf8-string-${PKGVERSION}/${HASKELL_VERSION}/Codec/Binary/UTF8/String.hi
 lib/utf8-string-${PKGVERSION}/${HASKELL_VERSION}/Codec/Binary/UTF8/Generic.hi
 lib/utf8-string-${PKGVERSION}/${HASKELL_VERSION}/System/IO/UTF8.hi
@@ -42,4 +42,3 @@ ${PLIST.doc}share/doc/utf8-string-${PKGVERSION}/html/mini_System-Environment-UTF
 ${PLIST.doc}share/doc/utf8-string-${PKGVERSION}/html/mini_Data-String-UTF8.html
 ${PLIST.doc}share/doc/utf8-string-${PKGVERSION}/html/mini_Data-ByteString-UTF8.html
 ${PLIST.doc}share/doc/utf8-string-${PKGVERSION}/html/mini_Data-ByteString-Lazy-UTF8.html
-${PLIST.doc}@dirrm share/doc/utf8-string-${PKGVERSION}/html

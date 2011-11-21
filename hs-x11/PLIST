@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2010/04/13 17:58:46 emil_s Exp $
+@comment $NetBSD: PLIST,v 1.6 2011/11/21 18:24:43 absd Exp $
 lib/X11-${PKGVERSION}/${HASKELL_VERSION}/include/HsAllKeysyms.h
 lib/X11-${PKGVERSION}/${HASKELL_VERSION}/include/HsXlib.h
 lib/X11-${PKGVERSION}/${HASKELL_VERSION}/include/XlibExtras.h
@@ -117,4 +117,3 @@ ${PLIST.doc}share/doc/X11-${PKGVERSION}/html/mini_Graphics-X11-ExtraTypes-HP.htm
 ${PLIST.doc}share/doc/X11-${PKGVERSION}/html/mini_Graphics-X11-ExtraTypes-Sun.html
 ${PLIST.doc}share/doc/X11-${PKGVERSION}/html/mini_Graphics-X11-ExtraTypes-XF86.html
 ${PLIST.doc}share/doc/X11-${PKGVERSION}/html/mini_Graphics-X11-ExtraTypes-XorgDefault.html
-${PLIST.doc}@dirrm share/doc/X11-${PKGVERSION}/html

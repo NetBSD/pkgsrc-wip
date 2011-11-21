@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/04/18 00:46:38 jlamwww Exp $
+@comment $NetBSD: PLIST,v 1.5 2011/11/21 18:24:44 absd Exp $
 bin/chage
 bin/chfn
 bin/chsh
@@ -254,4 +254,3 @@ share/locale/pl/LC_MESSAGES/shadow.mo
 share/locale/ru/LC_MESSAGES/shadow.mo
 share/locale/sv/LC_MESSAGES/shadow.mo
 share/locale/uk/LC_MESSAGES/shadow.mo
-${PAM}@dirrm share/examples/shadow

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/10/22 00:36:55 jeremy-c-reed Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/11/21 18:24:44 absd Exp $
 etc/xdg/menus/lxde-applications.menu
 share/desktop-directories/lxde-audio-video.directory
 share/desktop-directories/lxde-development.directory
@@ -20,6 +20,3 @@ share/desktop-directories/lxde-system-tools.directory
 share/desktop-directories/lxde-system.directory
 share/desktop-directories/lxde-utility-accessibility.directory
 share/desktop-directories/lxde-utility.directory
-@dirrm share/desktop-directories
-@dirrm etc/xdg/menus
-@dirrm etc/xdg

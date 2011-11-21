@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2009/12/06 22:08:19 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.15 2011/11/21 18:24:44 absd Exp $
 bin/xmms2
 bin/xmms2-et
 bin/xmms2-launcher
@@ -128,5 +128,3 @@ share/xmms2/mind.in.a.box-lament_snipplet.ogg
 share/xmms2/scripts/startup.d/xmms2-et-launcher.sh
 share/xmms2/scripts/startup.d/xmms2-mdns-launcher.sh
 ${PLIST.gamin}share/xmms2/scripts/startup.d/xmms2-mlib-updater.sh
-${PLIST.perl}@dirrm /lib/perl5/site_perl/5.10.0/x86_64-netbsd-thread-multi/Audio/XMMSClient
-${PLIST.ruby}@dirrm lib/ruby/site_ruby/1.8/xmmsclient
