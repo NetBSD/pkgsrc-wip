@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4536 2011/11/19 20:34:49 lokivit Exp $
+# $Id: Makefile,v 1.4537 2011/11/21 13:26:16 lexort Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -820,7 +820,6 @@ SUBDIR+=	hijra
 SUBDIR+=	hitori
 SUBDIR+=	hlint
 SUBDIR+=	homebank
-SUBDIR+=	hplip
 SUBDIR+=	hplip3
 SUBDIR+=	hpoj
 SUBDIR+=	hs-ConfigFile
