@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/10/22 00:38:43 jeremy-c-reed Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/11/21 18:23:54 absd Exp $
 bin/lxpanel
 bin/lxpanelctl
 include/lxpanel/plugin.h
@@ -52,12 +52,3 @@ share/lxpanel/images/volume.png
 share/lxpanel/profile/default/config
 share/lxpanel/profile/default/panels/panel
 share/lxpanel/ui/panel-pref.ui
-@dirrm share/lxpanel/ui
-@dirrm share/lxpanel/profile/default/panels
-@dirrm share/lxpanel/profile/default
-@dirrm share/lxpanel/profile
-@dirrm share/lxpanel/images
-@dirrm share/lxpanel
-@dirrm lib/lxpanel/plugins
-@dirrm lib/lxpanel
-@dirrm include/lxpanel
