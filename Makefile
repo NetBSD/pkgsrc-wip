@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4539 2011/11/22 09:51:46 thomasklausner Exp $
+# $Id: Makefile,v 1.4540 2011/11/22 09:53:11 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2206,8 +2206,6 @@ SUBDIR+=	py-logilab-mtconverter
 SUBDIR+=	py-logilab-pigg
 SUBDIR+=	py-louie
 SUBDIR+=	py-magnitude
-SUBDIR+=	py-matplotlib
-SUBDIR+=	py-matplotlib-gtk2
 SUBDIR+=	py-mcview
 SUBDIR+=	py-mdp
 SUBDIR+=	py-memcached
