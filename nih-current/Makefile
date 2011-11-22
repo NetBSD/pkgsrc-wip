@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2011/11/12 21:35:07 cheusov Exp $
+# $NetBSD: Makefile,v 1.9 2011/11/22 21:09:07 cheusov Exp $
 
 DISTNAME=	pkgnih-999
 PKGNAME=	nih-999
@@ -58,6 +58,10 @@ DEPENDS+=	tnftp-[0-9]*:../../net/tnftp
 .endif
 
 MAKE_ENV+= FTP=${FTP_CMD:Q}
+
+.if ${OPSYS} =="SunOS" && empty(OS_VERSION:M5.11*)
+REPLACE_SH+=	nih/nih.in nih/pkg_status.in
+.endif
 
 .include "../../devel/mk-configure/configure.mk"
 .include "../../mk/bsd.pkg.mk"
