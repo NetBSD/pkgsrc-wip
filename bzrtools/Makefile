@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/11/22 09:57:03 ddeus Exp $
+# $NetBSD: Makefile,v 1.4 2011/11/22 20:52:14 ddeus Exp $
 
 DISTNAME=	bzrtools-${VER}
 CATEGORIES=	devel scm
@@ -12,9 +12,11 @@ COMMENT=	Collection of plugins for Bazaar
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG=	yes
+PYTHON_PATCH_SCRIPTS= check-release.py test.py
 
 WRKSRC=		${WRKDIR}/bzrtools
 
 .include "../../wip/bzr/plugin.mk"
+.include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
