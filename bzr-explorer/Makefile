@@ -1,0 +1,25 @@
+# $NetBSD: Makefile,v 1.1.1.1 2011/11/22 08:52:58 ddeus Exp $
+
+DISTNAME=	bzr-explorer-${VER}
+PKGREVISION=	1
+CATEGORIES=	devel
+MASTER_SITES=	http://launchpad.net/bzr-explorer/1.2/${VER}/+download/
+VER=		1.2.1
+
+MAINTAINER=	ddeus.pkgsrc@mailnull.com
+HOMEPAGE=	https://launchpad.net/bzr-explorer
+COMMENT=	GUI frontend to bzr
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+USE_TOOLS+=	msgfmt
+
+DEPENDS+=	qbzr>=0.11:../../wip/qbzr
+DEPENDS+=	${PYPKGPREFIX}-qt4>=4.4:../../x11/py-qt4
+
+PYDISTUTILSPKG=	yes
+PYTHON_VERSIONS_ACCEPTED=	27 26 25
+
+.include "../../wip/bzr/plugin.mk"
+.include "../../lang/python/extension.mk"
+.include "../../mk/bsd.pkg.mk"
