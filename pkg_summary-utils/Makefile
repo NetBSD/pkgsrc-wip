@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2011/11/14 10:24:37 cheusov Exp $
+# $NetBSD: Makefile,v 1.60 2011/11/22 20:45:28 cheusov Exp $
 
 DISTNAME=	pkg_summary-utils-${VERSION}
 CATEGORIES=	pkgtools
@@ -43,6 +43,9 @@ WRKSRC=		${WRKDIR}/files
 EGDIR=		${PREFIX}/share/examples/pkg_summary-utils
 
 CONF_FILES=	${EGDIR}/pkg_digger.conf ${PKG_SYSCONFDIR}/pkg_digger.conf
+
+REPLACE_SH=	tests/test.sh pkg_digger.in pkg_digger_backend.in \
+		pkg_summary2build_graph.in
 
 REPLACE_INTERPRETER+=	runawk
 REPLACE.runawk.old=	.*runawk
