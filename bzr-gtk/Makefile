@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/11/16 11:13:10 ddeus Exp $
+# $NetBSD: Makefile,v 1.2 2011/11/22 09:53:12 ddeus Exp $
 
 DISTNAME=	bzr-gtk-${VER}
 CATEGORIES=	devel
 MASTER_SITES=	http://launchpad.net/bzr-gtk/gtk2/${VER}/+download/
 VER=		0.100.0
 
-MAINTAINER=	jan.m.danielsson@gmail.com
+MAINTAINER=	ddeus.pkgsrc@mailnull.com
 HOMEPAGE=	http://bazaar-vcs.org/bzr-gtk
 COMMENT=	Various GTK+ frontends to Bazaar commands
 
