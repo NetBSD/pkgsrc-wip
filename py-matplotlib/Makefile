@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/06/13 22:47:14 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2011/11/22 09:49:53 thomasklausner Exp $
 #
 
 DISTNAME=		matplotlib-0.98.0
@@ -27,5 +27,5 @@ PYTHON_VERSIONS_ACCEPTED=	25 24
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../wip/py-numpy/buildlink3.mk"
+.include "../../math/py-numpy/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

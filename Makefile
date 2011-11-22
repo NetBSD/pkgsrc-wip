@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4537 2011/11/21 13:26:16 lexort Exp $
+# $Id: Makefile,v 1.4538 2011/11/22 09:49:51 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2230,7 +2230,6 @@ SUBDIR+=	py-nodepy
 SUBDIR+=	py-nose-senario
 SUBDIR+=	py-ntch
 SUBDIR+=	py-numdifftools
-SUBDIR+=	py-numpy
 SUBDIR+=	py-nzmath
 SUBDIR+=	py-oak
 SUBDIR+=	py-oasa
