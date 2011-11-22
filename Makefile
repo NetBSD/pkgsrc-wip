@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4538 2011/11/22 09:49:51 thomasklausner Exp $
+# $Id: Makefile,v 1.4539 2011/11/22 09:51:46 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2323,7 +2323,6 @@ SUBDIR+=	py-scikits_statsmodels
 SUBDIR+=	py-scikits_talkbox
 SUBDIR+=	py-scikits_timeseries
 SUBDIR+=	py-scikits_vectorplot
-SUBDIR+=	py-scipy
 SUBDIR+=	py-scitools
 SUBDIR+=	py-scrobbler
 SUBDIR+=	py-se

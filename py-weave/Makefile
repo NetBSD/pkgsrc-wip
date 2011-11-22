@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2011/10/09 10:47:18 cheusov Exp $
+# $NetBSD: Makefile,v 1.10 2011/11/22 09:51:46 thomasklausner Exp $
 #
 
 DISTNAME=		weave-0.2.3
@@ -10,7 +10,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.scipy.org/Weave
 COMMENT=		Allows the inclusion of C/C++ within Python code
 
-DEPENDS+=		${PYPKGPREFIX}-scipy-[0-9]*:../../wip/py-scipy
+DEPENDS+=		${PYPKGPREFIX}-scipy-[0-9]*:../../math/py-scipy
 
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
