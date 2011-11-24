@@ -83,7 +83,7 @@ do-install:
 	${INSTALL_DATA} ${example} ${DESTDIR}${PREFIX}/share/doc/${LISP_PREFIX}-${SHORTNAME:S/^cl-//}/examples/
 .endfor
 
-.include "../../lang/ecl/buildlink3.mk"
+.include "../../${ECL_DEFAULT_PACKAGE}/buildlink3.mk"
 .else
 .error "Common Lisp system ${COMMON_LISP_SYSTEM} is not supported."
 .endif
