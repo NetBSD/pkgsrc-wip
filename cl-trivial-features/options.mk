@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.2 2011/03/08 13:36:34 ddeus Exp $
+# $NetBSD: options.mk,v 1.3 2011/11/24 08:11:03 ddeus Exp $
 #
 
-PKG_OPTIONS_VAR=                PKG_OPTIONS.${LISP_PREFIX}-${SHORTNAME:S/^cl-//}
+PKG_OPTIONS_VAR=                PKG_OPTIONS.cl-${SHORTNAME:S/^cl-//}
 PKG_OPTIONS_REQUIRED_GROUPS=    lisp
 PKG_OPTIONS_GROUP.lisp=         ecl
 PKG_SUGGESTED_OPTIONS+=         ecl
