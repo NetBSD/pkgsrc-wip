@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/02/22 21:17:07 ddeus Exp $
+$NetBSD: distinfo,v 1.2 2011/11/24 08:39:56 ddeus Exp $
 
-SHA1 (bordeaux-threads-0.8.0.tar.gz) = f4ba04a06bfa26027a326e816e5ad182c9867603
-RMD160 (bordeaux-threads-0.8.0.tar.gz) = 82cbc82535178d2f7fa13a52d83684d12266c979
-Size (bordeaux-threads-0.8.0.tar.gz) = 17721 bytes
+SHA1 (bordeaux-threads-0.8.1.tar.gz) = f093f2dc890b76c8c8f6d1c4481adf4dea0f6262
+RMD160 (bordeaux-threads-0.8.1.tar.gz) = d8f75746478307dffd0d357b21209986ca7d122d
+Size (bordeaux-threads-0.8.1.tar.gz) = 18091 bytes

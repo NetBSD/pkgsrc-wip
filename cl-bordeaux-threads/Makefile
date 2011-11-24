@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2011/03/08 13:36:33 ddeus Exp $
+# $NetBSD: Makefile,v 1.3 2011/11/24 08:39:56 ddeus Exp $
 #
 
-VERSION=        0.8.0
+VERSION=        0.8.1
 SHORTNAME=	bordeaux-threads
 DISTNAME=	${SHORTNAME}-${VERSION}
 CATEGORIES=	devel
