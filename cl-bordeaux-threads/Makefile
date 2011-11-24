@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/11/24 08:39:56 ddeus Exp $
+# $NetBSD: Makefile,v 1.4 2011/11/24 11:31:39 ddeus Exp $
 #
 
 VERSION=        0.8.1
@@ -11,7 +11,7 @@ MAINTAINER=     ddeus.pkgsrc@mailnull.com
 HOMEPAGE=	http://common-lisp.net/project/bordeaux-threads/
 COMMENT=        Portable shared-state concurrency for Common Lisp
 LICENSE=        public-domain
-DEPENDS+=	ecl-alexandria:../../wip/cl-alexandria
+DEPENDS+=	ecl-alexandria-[0-9]*:../../wip/cl-alexandria
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 WRKSRC=			${WRKDIR}/${SHORTNAME}-${VERSION}
