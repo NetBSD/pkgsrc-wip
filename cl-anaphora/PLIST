@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/11/24 08:08:50 ddeus Exp $
+${PLIST.ecl}${ECL_PATH}anaphora.asd
+${PLIST.ecl}${ECL_PATH}anaphora.fas
+share/doc/${LISP}-anaphora/LICENSE

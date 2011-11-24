@@ -1,0 +1,8 @@
+Anaphoric macros provide implicit bindings for various operations. Extensive
+use of anaphoric macros is not good style, and probably makes you go blind as
+well - there's a reason why Anaphora claims to be from Hell.
+
+Anaphora provides two families of anphoric macros, which can be identified by
+their names and packages (both families are also exported from the package
+ANAPHORA). The implicitly-bound symbol ANAPHORA:IT is also exported from all
+three packages.
