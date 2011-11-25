@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/11/24 13:01:58 ddeus Exp $
+# $NetBSD: Makefile,v 1.4 2011/11/25 20:52:37 ddeus Exp $
 
 DISTNAME=	bzr-gtk-${VER}
 CATEGORIES=	devel
@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-cairo>=1.0:../../graphics/py-cairo
 DEPENDS+=	${PYPKGPREFIX}-gtk2>=2.8:../../x11/py-gtk2
 
 PYDISTUTILSPKG=	yes
-REPLACE_PYTHON=	create-credits.py
+REPLACE_PYTHON=	create-credits.py info.py
 # Only this python versions are supported, see:
 # http://doc.bazaar.canonical.com/bzr.dev/en/whats-new/whats-new-in-2.4.html
 PYTHON_VERSIONS_ACCEPTED=	27 26
