@@ -1,0 +1,3 @@
+Aipo is web-based groupware software.
+Currently Aipo has interface written in Japanese only.
+This package requires apache-tomcat and postgresql-server.
