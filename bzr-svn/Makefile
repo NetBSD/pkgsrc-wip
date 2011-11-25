@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2011/11/24 13:01:59 ddeus Exp $
+# $NetBSD: Makefile,v 1.7 2011/11/25 08:20:06 ddeus Exp $
 
 DISTNAME=	bzr-svn-${VER}
 CATEGORIES=	devel scm
@@ -17,7 +17,6 @@ PYTHON_PATCH_SCRIPTS= info.py wiki.py
 # http://doc.bazaar.canonical.com/bzr.dev/en/whats-new/whats-new-in-2.4.html
 PYTHON_VERSIONS_ACCEPTED=	27 26
 
-DEPENDS+=	bzr>=2.4:../../wip/bzr
 DEPENDS+=	${PYPKGPREFIX}-subvertpy>=0.8.8:../../devel/py-subvertpy
 
 .include "../../lang/python/pyversion.mk"
