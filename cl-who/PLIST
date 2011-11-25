@@ -1,5 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/02/22 16:10:33 ddeus Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/11/25 14:01:33 ddeus Exp $
 ${PLIST.ecl}${ECL_PATH}cl-who.asd
 ${PLIST.ecl}${ECL_PATH}cl-who.fas
+${PLIST.sbcl}${SBCL_PATH}cl-who/cl-who.asd
+${PLIST.sbcl}${SBCL_PATH}cl-who/packages.fasl
+${PLIST.sbcl}${SBCL_PATH}cl-who/packages.lisp
+${PLIST.sbcl}${SBCL_PATH}cl-who/specials.fasl
+${PLIST.sbcl}${SBCL_PATH}cl-who/specials.lisp
+${PLIST.sbcl}${SBCL_PATH}cl-who/who.fasl
+${PLIST.sbcl}${SBCL_PATH}cl-who/who.lisp
 share/doc/${LISP}-who/CHANGELOG
 share/doc/${LISP}-who/index.html

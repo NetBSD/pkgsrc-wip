@@ -1,3 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/02/22 16:09:05 ddeus Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/11/25 14:01:32 ddeus Exp $
 ${PLIST.ecl}${ECL_PATH}split-sequence.asd
 ${PLIST.ecl}${ECL_PATH}split-sequence.fas
+${PLIST.sbcl}${SBCL_PATH}split-sequence/README.cCLan-install
+${PLIST.sbcl}${SBCL_PATH}split-sequence/split-sequence.asd
+${PLIST.sbcl}${SBCL_PATH}split-sequence/split-sequence.fasl
+${PLIST.sbcl}${SBCL_PATH}split-sequence/split-sequence.lisp

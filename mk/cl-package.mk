@@ -18,6 +18,10 @@
 #		List of Common Lisp packages provided by this pkgsrc package,
 #		default is ${SHORTNAME}.
 #
+#	COMMON_LISP_EXTRAFILES
+#		Defines files which will be copied from ${FILESDIR} to ${WRKSRC},
+#               for use with COMMON_LISP_DOCFILES or COMMON_LISP_EXAMPLES.
+#
 #	COMMON_LISP_DOCFILES
 #		Defines files which should be installed to
 #		share/doc/<name>.
@@ -40,8 +44,15 @@ COMMON_LISP_DOCFILES?=		# empty
 COMMON_LISP_EXAMPLES?=		# empty
 USE_LANGUAGES?=			# empty
 
-.if !empty(COMMON_LISP_SYSTEM:Mecl)
 LISP_PREFIX=			${COMMON_LISP_SYSTEM}
+.if !empty(COMMON_LISP_DOCFILES)
+INSTALLATION_DIRS+=		share/doc/${LISP_PREFIX}-${SHORTNAME:S/^cl-//}
+.endif
+.if !empty(COMMON_LISP_EXAMPLES)
+INSTALLATION_DIRS+=		share/doc/${LISP_PREFIX}-${SHORTNAME:S/^cl-//}/examples
+.endif
+
+.if !empty(COMMON_LISP_SYSTEM:Mecl)
 USE_LANGUAGES+=			c
 USE_TOOLS+=			install find
 ECL_DEFAULT_PACKAGE?=		lang/ecl
@@ -50,12 +61,6 @@ ECL_CENTRAL_REGISTRY=		lib/ecl-${ECL_VERSION}/
 PLIST_SUBST+=			ECL_PATH="${ECL_CENTRAL_REGISTRY}"
 PLIST_SUBST+=			LISP="${LISP_PREFIX}"
 INSTALLATION_DIRS+=		${ECL_CENTRAL_REGISTRY}
-.if !empty(COMMON_LISP_DOCFILES)
-INSTALLATION_DIRS+=		share/doc/${LISP_PREFIX}-${SHORTNAME:S/^cl-//}
-.endif
-.if !empty(COMMON_LISP_EXAMPLES)
-INSTALLATION_DIRS+=		share/doc/${LISP_PREFIX}-${SHORTNAME:S/^cl-//}/examples
-.endif
 
 do-build:
 .for pkg in ${COMMON_LISP_PACKAGES}
@@ -76,14 +81,52 @@ do-install:
 	${INSTALL_DATA} ${FILESDIR}/ecl-${pkg:S/^cl-//}.asd \
 	    ${DESTDIR}${PREFIX}/${ECL_CENTRAL_REGISTRY}${pkg}.asd
 .endfor
+.for extra in ${COMMON_LISP_EXTRAFILES}
+	${CP} ${FILESDIR}/${extra} ${WRKSRC}/
+.endfor
 .for doc in ${COMMON_LISP_DOCFILES}
-	${INSTALL_DATA} ${doc} ${DESTDIR}${PREFIX}/share/doc/${LISP_PREFIX}-${SHORTNAME:S/^cl-//}/
+	${INSTALL_DATA} ${WRKSRC}/${doc} ${DESTDIR}${PREFIX}/share/doc/${LISP_PREFIX}-${SHORTNAME:S/^cl-//}/
 .endfor
 .for example in ${COMMON_LISP_EXAMPLES}
-	${INSTALL_DATA} ${example} ${DESTDIR}${PREFIX}/share/doc/${LISP_PREFIX}-${SHORTNAME:S/^cl-//}/examples/
+	${INSTALL_DATA} ${WRKSRC}/${example} ${DESTDIR}${PREFIX}/share/doc/${LISP_PREFIX}-${SHORTNAME:S/^cl-//}/examples/
 .endfor
 
 .include "../../${ECL_DEFAULT_PACKAGE}/buildlink3.mk"
 .else
+.if !empty(COMMON_LISP_SYSTEM:Msbcl)
+USE_TOOLS+=			install find mkdir
+SBCL_DEFAULT_PACKAGE?=		lang/sbcl
+SBCL_CENTRAL_REGISTRY=		lib/sbcl/site-systems/
+PLIST_SUBST+=			SBCL_PATH="${SBCL_CENTRAL_REGISTRY}"
+PLIST_SUBST+=			LISP="${LISP_PREFIX}"
+INSTALLATION_DIRS+=		${SBCL_CENTRAL_REGISTRY}
+DEPENDS+=			sbcl-[0-9]*:../../${SBCL_DEFAULT_PACKAGE}
+
+do-build:
+.for pkg in ${COMMON_LISP_PACKAGES}
+	( cd ${WRKSRC} && ${PREFIX}/bin/sbcl --no-userinit  \
+	    --eval "(format t \"### Build package ~S in directory: ~S~%\" \"${pkg}\" #P\"${WRKSRC}/\")" \
+	    --eval "(let ((*load-verbose* nil)) (require 'asdf))" \
+	    --eval "(setf asdf::*user-cache* \"${WRKSRC}/\")" \
+	    --eval "(asdf:compile-system :${pkg})" \
+	    --non-interactive )
+.endfor
+
+do-install:
+	( cd ${WRKSRC} && ${FIND} . -type d -exec ${MKDIR} -p ${DESTDIR}${PREFIX}/${SBCL_CENTRAL_REGISTRY}${SHORTNAME}/{} \; )
+	( cd ${WRKSRC} && ${FIND} * -type f -exec ${INSTALL_DATA} {} ${DESTDIR}${PREFIX}/${SBCL_CENTRAL_REGISTRY}${SHORTNAME}/{} \; )
+.for extra in ${COMMON_LISP_EXTRAFILES}
+	${CP} ${FILESDIR}/${extra} ${DESTDIR}${PREFIX}/${SBCL_CENTRAL_REGISTRY}${SHORTNAME}/
+.endfor
+.for doc in ${COMMON_LISP_DOCFILES}
+	${MV} ${DESTDIR}${PREFIX}/${SBCL_CENTRAL_REGISTRY}${SHORTNAME}/${doc} ${DESTDIR}${PREFIX}/share/doc/${LISP_PREFIX}-${SHORTNAME:S/^cl-//}/
+.endfor
+.for example in ${COMMON_LISP_EXAMPLES}
+	${MV} ${DESTDIR}${PREFIX}/${SBCL_CENTRAL_REGISTRY}${SHORTNAME}/${example} ${DESTDIR}${PREFIX}/share/doc/${LISP_PREFIX}-${SHORTNAME:S/^cl-//}/examples/
+.endfor
+	${FIND} -d ${DESTDIR}${PREFIX}/${SBCL_CENTRAL_REGISTRY}${SHORTNAME} -type d -exec ${RMDIR} {} \; >/dev/null 2>&1 || true
+
+.else
 .error "Common Lisp system ${COMMON_LISP_SYSTEM} is not supported."
+.endif
 .endif

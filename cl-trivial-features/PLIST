@@ -1,5 +1,25 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/02/20 10:18:07 ddeus Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/11/25 14:01:32 ddeus Exp $
 ${PLIST.ecl}${ECL_PATH}trivial-features.asd
 ${PLIST.ecl}${ECL_PATH}trivial-features.fas
-share/doc/${LISP}-trivial-features/README
+${PLIST.sbcl}${SBCL_PATH}trivial-features/SPEC
+${PLIST.sbcl}${SBCL_PATH}trivial-features/release.sh
+${PLIST.sbcl}${SBCL_PATH}trivial-features/src/tf-abcl.lisp
+${PLIST.sbcl}${SBCL_PATH}trivial-features/src/tf-allegro.lisp
+${PLIST.sbcl}${SBCL_PATH}trivial-features/src/tf-clisp.lisp
+${PLIST.sbcl}${SBCL_PATH}trivial-features/src/tf-cmucl.lisp
+${PLIST.sbcl}${SBCL_PATH}trivial-features/src/tf-corman.lisp
+${PLIST.sbcl}${SBCL_PATH}trivial-features/src/tf-ecl.lisp
+${PLIST.sbcl}${SBCL_PATH}trivial-features/src/tf-lispworks.lisp
+${PLIST.sbcl}${SBCL_PATH}trivial-features/src/tf-openmcl.lisp
+${PLIST.sbcl}${SBCL_PATH}trivial-features/src/tf-sbcl.fasl
+${PLIST.sbcl}${SBCL_PATH}trivial-features/src/tf-sbcl.lisp
+${PLIST.sbcl}${SBCL_PATH}trivial-features/src/tf-scl.lisp
+${PLIST.sbcl}${SBCL_PATH}trivial-features/src/tf-xcl.lisp
+${PLIST.sbcl}${SBCL_PATH}trivial-features/tests/package.lisp
+${PLIST.sbcl}${SBCL_PATH}trivial-features/tests/sysinfo.lisp
+${PLIST.sbcl}${SBCL_PATH}trivial-features/tests/tests.lisp
+${PLIST.sbcl}${SBCL_PATH}trivial-features/tests/utsname.lisp
+${PLIST.sbcl}${SBCL_PATH}trivial-features/trivial-features-tests.asd
+${PLIST.sbcl}${SBCL_PATH}trivial-features/trivial-features.asd
 share/doc/${LISP}-trivial-features/COPYRIGHT
+share/doc/${LISP}-trivial-features/README

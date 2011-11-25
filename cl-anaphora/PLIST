@@ -1,4 +1,14 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/11/24 08:08:50 ddeus Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/11/25 14:01:30 ddeus Exp $
 ${PLIST.ecl}${ECL_PATH}anaphora.asd
 ${PLIST.ecl}${ECL_PATH}anaphora.fas
+${PLIST.sbcl}${SBCL_PATH}anaphora/anaphora.asd
+${PLIST.sbcl}${SBCL_PATH}anaphora/anaphora.fasl
+${PLIST.sbcl}${SBCL_PATH}anaphora/anaphora.lisp
+${PLIST.sbcl}${SBCL_PATH}anaphora/early.fasl
+${PLIST.sbcl}${SBCL_PATH}anaphora/early.lisp
+${PLIST.sbcl}${SBCL_PATH}anaphora/packages.fasl
+${PLIST.sbcl}${SBCL_PATH}anaphora/packages.lisp
+${PLIST.sbcl}${SBCL_PATH}anaphora/symbolic.fasl
+${PLIST.sbcl}${SBCL_PATH}anaphora/symbolic.lisp
+${PLIST.sbcl}${SBCL_PATH}anaphora/tests.lisp
 share/doc/${LISP}-anaphora/LICENSE

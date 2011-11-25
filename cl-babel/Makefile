@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/03/08 13:36:33 ddeus Exp $
+# $NetBSD: Makefile,v 1.3 2011/11/25 14:01:30 ddeus Exp $
 #
 
 VERSION=        0.3.0
@@ -11,16 +11,14 @@ MAINTAINER=     ddeus.pkgsrc@mailnull.com
 HOMEPAGE=	http://www.cliki.net/Babel
 COMMENT=        Babel is a character encoding/decoding library for Common Lisp
 LICENSE=        public-domain
-DEPENDS+=	ecl-alexandria-*:../../wip/cl-alexandria
-DEPENDS+=	ecl-trivial-features-*:../../wip/cl-trivial-features
-DEPENDS+=	ecl-trivial-gray-streams-*:../../wip/cl-trivial-gray-streams
+DEPENDS+=	${LISP_PREFIX}-alexandria-*:../../wip/cl-alexandria
+DEPENDS+=	${LISP_PREFIX}-trivial-features-*:../../wip/cl-trivial-features
+DEPENDS+=	${LISP_PREFIX}-trivial-gray-streams-*:../../wip/cl-trivial-gray-streams
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 WRKSRC=			${WRKDIR}/${DISTNAME}
 COMMON_LISP_PACKAGES=	${SHORTNAME} ${SHORTNAME}-streams
-COMMON_LISP_DOCFILES=	\
-	    ${WRKSRC}/README ${WRKSRC}/COPYRIGHT \
-	    ${WRKSRC}/HEADER ${WRKSRC}/NOTES
+COMMON_LISP_DOCFILES=	README COPYRIGHT HEADER NOTES
 
 .include "options.mk"
 .include "../../wip/mk/cl-package.mk"

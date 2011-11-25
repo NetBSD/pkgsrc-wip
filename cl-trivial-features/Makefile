@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/03/08 13:36:33 ddeus Exp $
+# $NetBSD: Makefile,v 1.3 2011/11/25 14:01:32 ddeus Exp $
 #
 
 VERSION=        0.6
@@ -14,7 +14,7 @@ LICENSE=        mit
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 WRKSRC=			${WRKDIR}/${DISTNAME}
-COMMON_LISP_DOCFILES=	${WRKSRC}/README ${WRKSRC}/COPYRIGHT
+COMMON_LISP_DOCFILES=	README COPYRIGHT
 
 .include "options.mk"
 .include "../../wip/mk/cl-package.mk"

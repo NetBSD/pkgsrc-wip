@@ -1,3 +1,35 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/02/22 16:33:55 ddeus Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/11/25 14:01:31 ddeus Exp $
 ${PLIST.ecl}${ECL_PATH}cl-ppcre-unicode.asd
 ${PLIST.ecl}${ECL_PATH}cl-ppcre-unicode.fas
+${PLIST.sbcl}${SBCL_PATH}cl-ppcre-unicode/CHANGELOG
+${PLIST.sbcl}${SBCL_PATH}cl-ppcre-unicode/api.lisp
+${PLIST.sbcl}${SBCL_PATH}cl-ppcre-unicode/charmap.lisp
+${PLIST.sbcl}${SBCL_PATH}cl-ppcre-unicode/charset.lisp
+${PLIST.sbcl}${SBCL_PATH}cl-ppcre-unicode/chartest.lisp
+${PLIST.sbcl}${SBCL_PATH}cl-ppcre-unicode/cl-ppcre-unicode.asd
+${PLIST.sbcl}${SBCL_PATH}cl-ppcre-unicode/cl-ppcre-unicode/packages.lisp
+${PLIST.sbcl}${SBCL_PATH}cl-ppcre-unicode/cl-ppcre-unicode/resolver.lisp
+${PLIST.sbcl}${SBCL_PATH}cl-ppcre-unicode/cl-ppcre.asd
+${PLIST.sbcl}${SBCL_PATH}cl-ppcre-unicode/closures.lisp
+${PLIST.sbcl}${SBCL_PATH}cl-ppcre-unicode/convert.lisp
+${PLIST.sbcl}${SBCL_PATH}cl-ppcre-unicode/doc/index.html
+${PLIST.sbcl}${SBCL_PATH}cl-ppcre-unicode/errors.lisp
+${PLIST.sbcl}${SBCL_PATH}cl-ppcre-unicode/lexer.lisp
+${PLIST.sbcl}${SBCL_PATH}cl-ppcre-unicode/optimize.lisp
+${PLIST.sbcl}${SBCL_PATH}cl-ppcre-unicode/packages.lisp
+${PLIST.sbcl}${SBCL_PATH}cl-ppcre-unicode/parser.lisp
+${PLIST.sbcl}${SBCL_PATH}cl-ppcre-unicode/regex-class-util.lisp
+${PLIST.sbcl}${SBCL_PATH}cl-ppcre-unicode/regex-class.lisp
+${PLIST.sbcl}${SBCL_PATH}cl-ppcre-unicode/repetition-closures.lisp
+${PLIST.sbcl}${SBCL_PATH}cl-ppcre-unicode/scanner.lisp
+${PLIST.sbcl}${SBCL_PATH}cl-ppcre-unicode/specials.lisp
+${PLIST.sbcl}${SBCL_PATH}cl-ppcre-unicode/test/packages.lisp
+${PLIST.sbcl}${SBCL_PATH}cl-ppcre-unicode/test/perl-tests.lisp
+${PLIST.sbcl}${SBCL_PATH}cl-ppcre-unicode/test/perltest.pl
+${PLIST.sbcl}${SBCL_PATH}cl-ppcre-unicode/test/perltestdata
+${PLIST.sbcl}${SBCL_PATH}cl-ppcre-unicode/test/perltestinput
+${PLIST.sbcl}${SBCL_PATH}cl-ppcre-unicode/test/simple
+${PLIST.sbcl}${SBCL_PATH}cl-ppcre-unicode/test/tests.lisp
+${PLIST.sbcl}${SBCL_PATH}cl-ppcre-unicode/test/unicode-tests.lisp
+${PLIST.sbcl}${SBCL_PATH}cl-ppcre-unicode/test/unicodetestdata
+${PLIST.sbcl}${SBCL_PATH}cl-ppcre-unicode/util.lisp
