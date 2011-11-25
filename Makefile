@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4541 2011/11/25 13:08:15 bubuchka Exp $
+# $Id: Makefile,v 1.4542 2011/11/25 21:04:15 ryo-on Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -69,6 +69,7 @@ SUBDIR+=	aeneas
 SUBDIR+=	aespipe
 SUBDIR+=	afflib
 SUBDIR+=	aida
+SUBDIR+=	aipo
 SUBDIR+=	aircrack-ng
 SUBDIR+=	airsnort
 SUBDIR+=	akonadi
