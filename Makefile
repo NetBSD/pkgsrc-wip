@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4540 2011/11/22 09:53:11 thomasklausner Exp $
+# $Id: Makefile,v 1.4541 2011/11/25 13:08:15 bubuchka Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -31,6 +31,7 @@ SUBDIR+=	R-bigmemory
 SUBDIR+=	R-bigtabulate
 SUBDIR+=	R-digest
 SUBDIR+=	R-entropy
+SUBDIR+=	R-gsl
 SUBDIR+=	R-mclust
 SUBDIR+=	R-rgdal
 SUBDIR+=	Radiator
@@ -1667,6 +1668,7 @@ SUBDIR+=	p5-AI-NeuralNet-Simple
 SUBDIR+=	p5-AI-Prolog
 SUBDIR+=	p5-Aceperl
 SUBDIR+=	p5-Algorithm-Cluster
+SUBDIR+=	p5-Algorithm-Combinatorics
 SUBDIR+=	p5-Apache-AuthenNTLM
 SUBDIR+=	p5-Apache2-ModSSL
 SUBDIR+=	p5-App-cpanminus
