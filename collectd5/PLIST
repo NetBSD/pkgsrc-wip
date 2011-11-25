@@ -1,0 +1,44 @@
+@comment $NetBSD: PLIST,v 1.1 2011/11/25 15:09:07 genolopolis Exp $
+bin/collectd-nagios
+bin/collectdctl
+etc/collectd.conf
+include/collectd/client.h
+include/collectd/lcc_features.h
+lib/collectd/csv.la
+lib/collectd/df.la
+lib/collectd/exec.la
+lib/collectd/filecount.la
+lib/collectd/logfile.la
+lib/collectd/memcached.la
+lib/collectd/network.la
+lib/collectd/ntpd.la
+lib/collectd/olsrd.la
+lib/collectd/powerdns.la
+lib/collectd/syslog.la
+lib/collectd/table.la
+lib/collectd/tail.la
+lib/collectd/unixsock.la
+lib/collectd/uptime.la
+lib/libcollectdclient.la
+lib/pkgconfig/libcollectdclient.pc
+man/man1/collectd-nagios.1
+man/man1/collectd.1
+man/man1/collectdctl.1
+man/man1/collectdmon.1
+man/man5/collectd-email.5
+man/man5/collectd-exec.5
+man/man5/collectd-java.5
+man/man5/collectd-perl.5
+man/man5/collectd-python.5
+man/man5/collectd-snmp.5
+man/man5/collectd-threshold.5
+man/man5/collectd-unixsock.5
+man/man5/collectd.conf.5
+man/man5/types.db.5
+sbin/collectd
+sbin/collectdmon
+share/collectd/postgresql_default.conf
+share/collectd/types.db
+@pkgdir var/run
+@pkgdir var/log
+@pkgdir var/lib/collectd
