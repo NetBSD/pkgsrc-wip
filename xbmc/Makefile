@@ -1,112 +1,91 @@
-# $NetBSD: Makefile,v 1.4 2010/12/26 05:01:24 davesainty Exp $
+# $NetBSD: Makefile,v 1.5 2011/11/26 12:45:15 ryo-on Exp $
 #
 
-DISTNAME=	xbmc-9.11
-PKGREVISION=	1
+DISTNAME=	xbmc-10.1
 CATEGORIES=	multimedia
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xbmc/}
+MASTER_SITES=	http://mirrors.xbmc.org/releases/source/
 
 MAINTAINER=	khorben@defora.org
 HOMEPAGE=	http://xbmc.org/
 COMMENT=	Software media player and entertainment hub for digital media
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-WRKSRC=		${WRKDIR}/xbmc-9.11
-USE_TOOLS+=	automake
-USE_TOOLS+=	bash
-USE_TOOLS+=	gawk
-USE_TOOLS+=	gmake
-USE_TOOLS+=	pkg-config
-USE_LANGUAGES=	c c++
+EXTRACT_USING=		bsdtar
 
-#REPLACE_INTERPRETER+=	bash
-#REPLACE.bash.old=	/bin/sh
-#REPLACE.bash.new=	${TOOLS_PATH.bash}
-#REPLACE_FILES.bash=	configure
+USE_TOOLS+=		pkg-config automake
+USE_PKGLOCALEDIR=	yes
+USE_LANGUAGES=		c c++
 
-SUBST_CLASSES+=			fix-interpreter
-SUBST_STAGE.fix-interpreter=	configure
-SUBST_MESSAGE.fix-interpreter=	Forcing use of bash
-SUBST_FILES.fix-interpreter=	configure
-SUBST_SED.fix-interpreter=	-e 's,^/bin/sh,${TOOLS_PATH.bash},'
+DEPENDS+=		gettext-tools>=0.18.1.1:../../devel/gettext-tools
 
-GNU_CONFIGURE=	yes
+HAS_CONFIGURE=		yes
+CONFIGURE_SCRIPT=	./configure
+CONFIGURE_ARGS+=	--prefix=${DESTDIR}${PREFIX}
 CONFIGURE_ARGS+=	--enable-external-libraries
 
-LDFLAGS+=	-L ${BUILDLINK_PREFIX.samba}/lib/samba
-LDFLAGS+=	-Wl,-rpath,${BUILDLINK_PREFIX.samba}/lib/samba
-
-PKGCONFIG_OVERRIDE+=	xbmc/cores/dvdplayer/Codecs/libdvd/libdvdread/misc/dvdread.pc.in
-PKGCONFIG_OVERRIDE+=	xbmc/cores/dvdplayer/Codecs/libdvd/libdvdcss/src/libdvdcss.pc.in
-PKGCONFIG_OVERRIDE+=	xbmc/cores/dvdplayer/Codecs/libdvd/libdvdnav/misc/dvdnavmini.pc.in
-PKGCONFIG_OVERRIDE+=	xbmc/cores/dvdplayer/Codecs/libdvd/libdvdnav/misc/dvdnav.pc.in
-PKGCONFIG_OVERRIDE+=	xbmc/cores/dvdplayer/Codecs/libmpeg2/libmpeg2/libmpeg2.pc.in
-PKGCONFIG_OVERRIDE+=	xbmc/cores/dvdplayer/Codecs/libmpeg2/libmpeg2/convert/libmpeg2convert.pc.in
-PKGCONFIG_OVERRIDE+=	xbmc/cores/dvdplayer/Codecs/libdts/libdts/libdts.pc.in
-PKGCONFIG_OVERRIDE+=	xbmc/cores/paplayer/SIDCodec/libsidplay/unix/libsidplay2.pc.in
-PKGCONFIG_OVERRIDE+=	xbmc/cores/paplayer/vorbisfile/ogg/ogg.pc.in
-PKGCONFIG_OVERRIDE+=	xbmc/cores/paplayer/vorbisfile/libvorbis/vorbisenc.pc.in
-PKGCONFIG_OVERRIDE+=	xbmc/cores/paplayer/vorbisfile/libvorbis/vorbis.pc.in
-PKGCONFIG_OVERRIDE+=	xbmc/cores/paplayer/vorbisfile/libvorbis/vorbisfile.pc.in
-PKGCONFIG_OVERRIDE+=	xbmc/cores/paplayer/FLACCodec/flac-1.2.1/src/libFLAC++/flac++.pc.in
-PKGCONFIG_OVERRIDE+=	xbmc/cores/paplayer/FLACCodec/flac-1.2.1/src/libFLAC/flac.pc.in
-PKGCONFIG_OVERRIDE+=	xbmc/lib/libmms/libmms_win32/pkgconfig/libmms.pc.in
-PKGCONFIG_OVERRIDE+=	xbmc/lib/libass/libass.pc.in
-PKGCONFIG_OVERRIDE+=	xbmc/lib/libcdio/libcdio/libiso9660++.pc.in
-PKGCONFIG_OVERRIDE+=	xbmc/lib/libcdio/libcdio/libcdio_cdda.pc.in
-PKGCONFIG_OVERRIDE+=	xbmc/lib/libcdio/libcdio/libcdio.pc.in
-PKGCONFIG_OVERRIDE+=	xbmc/lib/libcdio/libcdio/libcdio++.pc.in
-PKGCONFIG_OVERRIDE+=	xbmc/lib/libcdio/libcdio/libcdio_paranoia.pc.in
-PKGCONFIG_OVERRIDE+=	xbmc/lib/libcdio/libcdio/libiso9660.pc.in
-PKGCONFIG_OVERRIDE+=	xbmc/lib/libcdio/libcdio/libudf.pc.in
-PKGCONFIG_OVERRIDE+=	xbmc/lib/libcurl/curl-7.19.0/libcurl.pc.in
-PKGCONFIG_OVERRIDE+=	xbmc/lib/libsamplerate/samplerate.pc.in
-PKGCONFIG_OVERRIDE+=	xbmc/visualizations/XBMCProjectM/libprojectM/libprojectM.pc.in
-PKGCONFIG_OVERRIDE+=	xbmc/visualizations/Goom/goom2k4-0/libgoom2.pc.in
+PKGCONFIG_OVERRIDE+=	xbmc-10.1/lib/enca/enca.pc.in
+PKGCONFIG_OVERRIDE+=	xbmc-10.1/lib/fribidi/fribidi.pc.in
+PKGCONFIG_OVERRIDE+=	xbmc-10.1/lib/libass/libass.pc.in
+PKGCONFIG_OVERRIDE+=	xbmc-10.1/lib/libcdio/libcdio.pc.in
+PKGCONFIG_OVERRIDE+=	xbmc-10.1/lib/libcdio/libcdio_cdda.pc.in
+PKGCONFIG_OVERRIDE+=	xbmc-10.1/lib/libcdio/libcdio_paranoia.pc.in
+PKGCONFIG_OVERRIDE+=	xbmc-10.1/lib/libcdio/libiso9660.pc.in
+PKGCONFIG_OVERRIDE+=	xbmc-10.1/lib/libmicrohttpd/libmicrohttpd.pc.in
+PKGCONFIG_OVERRIDE+=	xbmc-10.1/lib/libmodplug/libmodplug.pc.in
+PKGCONFIG_OVERRIDE+=	xbmc-10.1/lib/pcre/libpcre.pc.in
+PKGCONFIG_OVERRIDE+=	xbmc-10.1/lib/pcre/libpcreposix.pc.in
+PKGCONFIG_OVERRIDE+=	xbmc-10.1/lib/pcre/libpcrecpp.pc.in
+PKGCONFIG_OVERRIDE+=	xbmc-10.1/xbmc/lib/libmms/libmms_win32/pkgconfig/libmms.pc.in
+PKGCONFIG_OVERRIDE+=	xbmc-10.1/xbmc/lib/libsamplerate/samplerate.pc.in
+PKGCONFIG_OVERRIDE+=	xbmc-10.1/xbmc/cores/dvdplayer/Codecs/libdts/libdts/libdts.pc.in
+PKGCONFIG_OVERRIDE+=	xbmc-10.1/xbmc/cores/dvdplayer/Codecs/libdvd/libdvdcss/src/libdvdcss.pc.in
+PKGCONFIG_OVERRIDE+=	xbmc-10.1/xbmc/cores/dvdplayer/Codecs/libdvd/libdvdnav/misc/dvdnavmini.pc.in
+PKGCONFIG_OVERRIDE+=	xbmc-10.1/xbmc/cores/dvdplayer/Codecs/libdvd/libdvdnav/misc/dvdnav.pc.in
+PKGCONFIG_OVERRIDE+=	xbmc-10.1/xbmc/cores/dvdplayer/Codecs/libdvd/libdvdread/misc/dvdread.pc.in
+PKGCONFIG_OVERRIDE+=	xbmc-10.1/xbmc/cores/dvdplayer/Codecs/libmpeg2/libmpeg2/convert/libmpeg2convert.pc.in
+PKGCONFIG_OVERRIDE+=	xbmc-10.1/xbmc/cores/dvdplayer/Codecs/libmpeg2/libmpeg2/libmpeg2.pc.in
+PKGCONFIG_OVERRIDE+=	xbmc-10.1/xbmc/cores/paplayer/FLACCodec/flac-1.2.1/src/libFLAC++/flac++.pc.in
+PKGCONFIG_OVERRIDE+=	xbmc-10.1/xbmc/cores/paplayer/FLACCodec/flac-1.2.1/src/libFLAC/flac.pc.in
+PKGCONFIG_OVERRIDE+=	xbmc-10.1/xbmc/cores/paplayer/SIDCodec/libsidplay/unix/libsidplay2.pc.in
+PKGCONFIG_OVERRIDE+=	xbmc-10.1/xbmc/cores/paplayer/vorbisfile/libvorbis/vorbis.pc.in
+PKGCONFIG_OVERRIDE+=	xbmc-10.1/xbmc/cores/paplayer/vorbisfile/libvorbis/vorbisenc.pc.in
+PKGCONFIG_OVERRIDE+=	xbmc-10.1/xbmc/cores/paplayer/vorbisfile/libvorbis/vorbisfile.pc.in
+PKGCONFIG_OVERRIDE+=	xbmc-10.1/xbmc/cores/paplayer/vorbisfile/ogg/ogg.pc.in
+PKGCONFIG_OVERRIDE+=	xbmc-10.1/xbmc/visualizations/Goom/goom2k4-0/libgoom2.pc.in
+PKGCONFIG_OVERRIDE+=	xbmc-10.1/xbmc/visualizations/XBMCProjectM/libprojectM/libprojectM.pc.in
 
 pre-configure:
-	cd ${WRKSRC} && autoreconf -vif
+	cd ${WRKSRC} && env ${CONFIGURE_ENV} ./bootstrap
 
-.include "../../devel/boost-headers/buildlink3.mk"
+.include "../../devel/boost-libs/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
-.include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/glew/buildlink3.mk"
 .include "../../audio/libmad/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../audio/libsamplerate/buildlink3.mk"
-.include "../../databases/mysql5-client/buildlink3.mk"
+.include "../../multimedia/libogg/buildlink3.mk"
 .include "../../archivers/lzo/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../audio/wavpack/buildlink3.mk"
+.include "../../multimedia/libmpeg2/buildlink3.mk"
+.include "../../multimedia/libass/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../converters/fribidi/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../misc/libcdio/buildlink3.mk"
-.include "../../devel/glib2/buildlink3.mk"
 .include "../../net/libmms/buildlink3.mk"
-.include "../../graphics/freetype2/buildlink3.mk"
-.include "../../multimedia/libogg/buildlink3.mk"
-.include "../../audio/libvorbis/buildlink3.mk"
+.include "../../mk/mysql.buildlink3.mk"
+.include "../../audio/libmodplug/buildlink3.mk"
 .include "../../audio/faad2/buildlink3.mk"
-.include "../../net/samba/buildlink3.mk"
+.include "../../net/samba35/buildlink3.mk"
 .include "../../audio/SDL_mixer/buildlink3.mk"
-.include "../../graphics/SDL_image/buildlink3.mk"
 .include "../../graphics/jasper/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
-.include "../../audio/alsa-lib/buildlink3.mk"
-.include "../../textproc/enca/buildlink3.mk"
-.include "../../x11/libXtst/buildlink3.mk"
-.include "../../x11/libXmu/buildlink3.mk"
-.include "../../x11/libXinerama/buildlink3.mk"
-.include "../../www/curl/buildlink3.mk"
-.include "../../sysutils/dbus/buildlink3.mk"
-.include "../../sysutils/hal/buildlink3.mk"
-.include "../../multimedia/ffmpeg/buildlink3.mk"
-.include "../../audio/liba52/buildlink3.mk"
-.include "../../audio/libdca/buildlink3.mk"
-.include "../../multimedia/libmpeg2/buildlink3.mk"
-.include "../../audio/wavpack/buildlink3.mk"
-.include "../../lang/python/application.mk"
+.include "../../graphics/SDL_image/buildlink3.mk"
+
 .include "../../mk/bsd.pkg.mk"
