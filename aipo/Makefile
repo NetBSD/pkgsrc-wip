@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/11/26 18:57:15 ryo-on Exp $
+# $NetBSD: Makefile,v 1.4 2011/11/26 19:21:32 ryo-on Exp $
 #
 
 DISTNAME=	aipo6020ja_linux32
@@ -9,7 +9,7 @@ MASTER_SITES=	http://aipo.googlecode.com/files/
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://www.aipo.com/
 COMMENT=	Web-based groupware that supports Japanese interface
-#LICENSE=	gnu-agpl-v3 # GNU Affero General Public License Version 3
+LICENSE=	gnu-agpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
