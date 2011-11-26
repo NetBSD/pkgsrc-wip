@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2011/11/25 20:57:55 ryo-on Exp $
+$NetBSD: MESSAGE,v 1.2 2011/11/26 18:57:15 ryo-on Exp $
 
 To use aipo, you will need to perform the following steps.
 
@@ -67,5 +67,12 @@ To use aipo, you will need to perform the following steps.
         </Context>
 	in <Host> tag
 
-11. Start apache tomcat and access http://localhost/aipo/portal
+11. Regenerate securityTokenKey.txt files.
+
+	$ sudo cat /dev/urandom | tr -dc "a-z0-9" | fold -w 64 | head -n 1 \
+		> ${PREFIX}/share/aipo/webapps/aipo/WEB-INF/conf/securityTokenKey.txt
+	$ sudo cp ${PREFIX}/share/aipo/webapps/aipo/WEB-INF/conf/securityTokenKey.txt \
+		${PREFIX}/share/aipo/webapps/ROOT/WEB-INF/classes/aipo/securityTokenKey.txt
+
+12. Start apache tomcat and access http://localhost/aipo/portal
 ===========================================================================

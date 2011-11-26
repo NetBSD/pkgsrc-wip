@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/11/25 23:03:12 ryo-on Exp $
+# $NetBSD: Makefile,v 1.3 2011/11/26 18:57:15 ryo-on Exp $
 #
 
 DISTNAME=	aipo6020ja_linux32
@@ -49,12 +49,6 @@ do-install:
 			${DESTDIR}${PREFIX}/${TOMCAT_DIR}/lib
 	${INSTALL_DATA} ${WRKSRC}/aipo/src/tools.jar \
 			${DESTDIR}${PREFIX}/${TOMCAT_DIR}/lib
-
-post-install:
-	cat /dev/urandom|tr -dc "a-z0-9"|fold -w 64|head -n 1 \
-	> ${DESTDIR}${PREFIX}/${AIPO_DIR}/webapps/aipo/WEB-INF/conf/securityTokenKey.txt
-	${CP} ${DESTDIR}${PREFIX}/${AIPO_DIR}/webapps/aipo/WEB-INF/conf/securityTokenKey.txt \
-	${DESTDIR}${PREFIX}/${AIPO_DIR}/webapps/ROOT/WEB-INF/classes/aipo/securityTokenKey.txt
 
 .include "../../mk/pgsql.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
