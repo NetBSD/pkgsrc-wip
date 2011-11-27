@@ -92,6 +92,7 @@ do-install:
 .endfor
 
 .include "../../${ECL_DEFAULT_PACKAGE}/buildlink3.mk"
+.include "../../devel/libffi/buildlink3.mk"
 .else
 .if !empty(COMMON_LISP_SYSTEM:Msbcl)
 USE_TOOLS+=			install find mkdir
@@ -127,6 +128,42 @@ do-install:
 	${FIND} -d ${DESTDIR}${PREFIX}/${SBCL_CENTRAL_REGISTRY}${SHORTNAME} -type d -exec ${RMDIR} {} \; >/dev/null 2>&1 || true
 
 .else
+.if !empty(COMMON_LISP_SYSTEM:Mclisp)
+USE_TOOLS+=			install find mkdir
+CLISP_DEFAULT_PACKAGE?=		lang/clisp
+CLISP_CENTRAL_REGISTRY=		lib/clisp/asdfmod/
+PLIST_SUBST+=			CLISP_PATH="${CLISP_CENTRAL_REGISTRY}"
+PLIST_SUBST+=			LISP="${LISP_PREFIX}"
+INSTALLATION_DIRS+=		${CLISP_CENTRAL_REGISTRY}
+DEPENDS+=			clisp-[0-9]*:../../${CLISP_DEFAULT_PACKAGE}
+DEPENDS+=			clisp-asdf-[0-9]*:../../wip/clisp-asdf
+
+do-build:
+.for pkg in ${COMMON_LISP_PACKAGES}
+	( cd ${WRKSRC} && ${PREFIX}/bin/clisp -q -norc \
+	    -x "(format t \"### Build package ~S in directory: ~S~%\" \"${pkg}\" #P\"${WRKSRC}/\")" \
+	    -x "(let ((*load-verbose* nil)) (require \"asdf\"))" \
+	    -x "(setf asdf::*user-cache* \"${WRKSRC}/\")" \
+	    -x "(asdf:compile-system :${pkg})" \
+	    -on-error exit )
+.endfor
+
+do-install:
+	( cd ${WRKSRC} && ${FIND} . -type d -exec ${MKDIR} -p ${DESTDIR}${PREFIX}/${CLISP_CENTRAL_REGISTRY}${SHORTNAME}/{} \; )
+	( cd ${WRKSRC} && ${FIND} * -type f ! -name "ASDF-TMP*" -exec ${INSTALL_DATA} {} ${DESTDIR}${PREFIX}/${CLISP_CENTRAL_REGISTRY}${SHORTNAME}/{} \; )
+.for extra in ${COMMON_LISP_EXTRAFILES}
+	${CP} ${FILESDIR}/${extra} ${DESTDIR}${PREFIX}/${CLISP_CENTRAL_REGISTRY}${SHORTNAME}/
+.endfor
+.for doc in ${COMMON_LISP_DOCFILES}
+	${MV} ${DESTDIR}${PREFIX}/${CLISP_CENTRAL_REGISTRY}${SHORTNAME}/${doc} ${DESTDIR}${PREFIX}/share/doc/${LISP_PREFIX}-${SHORTNAME:S/^cl-//}/
+.endfor
+.for example in ${COMMON_LISP_EXAMPLES}
+	${MV} ${DESTDIR}${PREFIX}/${CLISP_CENTRAL_REGISTRY}${SHORTNAME}/${example} ${DESTDIR}${PREFIX}/share/doc/${LISP_PREFIX}-${SHORTNAME:S/^cl-//}/examples/
+.endfor
+	${FIND} -d ${DESTDIR}${PREFIX}/${CLISP_CENTRAL_REGISTRY}${SHORTNAME} -type d -exec ${RMDIR} {} \; >/dev/null 2>&1 || true
+
+.else
 .error "Common Lisp system ${COMMON_LISP_SYSTEM} is not supported."
+.endif
 .endif
 .endif
