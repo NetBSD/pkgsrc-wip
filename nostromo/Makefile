@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2011/09/21 05:05:38 astforge Exp $
+# $NetBSD: Makefile,v 1.5 2011/11/27 13:16:41 astforge Exp $
 #
 
-DISTNAME=	nostromo-1.9.4
+DISTNAME=	nostromo-1.9.5
 PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://www.nazgul.ch/dev/
