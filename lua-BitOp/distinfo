@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/11/27 10:13:59 alnsn Exp $
+
+SHA1 (LuaBitOp-1.0.1.tar.gz) = 126d387d8129db7477f814c6228f68b1326989d1
+RMD160 (LuaBitOp-1.0.1.tar.gz) = 018d7643c7ca2bf87a1dc0e79b03fb60e4a03523
+Size (LuaBitOp-1.0.1.tar.gz) = 22984 bytes
+SHA1 (patch-Makefile) = fbafe9a6a69d852bd153d7e5af56899dba642e04

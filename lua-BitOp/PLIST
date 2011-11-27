@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/11/27 10:13:59 alnsn Exp $
+${LUA_CDIR}/bit.so
+share/doc/lua-BitOp/api.html
+share/doc/lua-BitOp/bluequad-print.css
+share/doc/lua-BitOp/bluequad.css
+share/doc/lua-BitOp/changes.html
+share/doc/lua-BitOp/contact.html
+share/doc/lua-BitOp/img/contact.png
+share/doc/lua-BitOp/index.html
+share/doc/lua-BitOp/install.html
+share/doc/lua-BitOp/semantics.html
