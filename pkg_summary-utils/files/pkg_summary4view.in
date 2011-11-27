@@ -73,6 +73,8 @@ BEGIN {
 	special ["PROVIDES"]    = 0
 	special ["REQUIRES"]    = 0
 
+	depends_like ["TARGET_BUILD_DEPENDS"] = 0
+	depends_like ["_ALL_DEPENDS"] = 0
 	depends_like ["BUILD_DEPENDS"] = 0
 	depends_like ["DEPENDS"]       = 0
 	depends_like ["CONFLICTS"]     = 0
