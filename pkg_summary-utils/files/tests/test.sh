@@ -3,7 +3,7 @@
 LC_ALL=C
 export LC_ALL
 
-DIFF_PROG=${DIFF_PROG-diff -U20}
+: ${DIFF_PROG:=diff -U20}
 
 #
 srcdir="`pwd`/.."
