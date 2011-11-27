@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2011/11/20 08:51:15 obache Exp $
+# $NetBSD: Makefile,v 1.7 2011/11/27 02:35:26 obache Exp $
 #
 
-DISTNAME=	mikutter.0.1.0.592
+DISTNAME=	mikutter.0.1.0.603
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/./-/}
 CATEGORIES=	net
 MASTER_SITES=	http://mikutter.hachune.net/bin/
@@ -18,7 +18,6 @@ RUBY_VERSION_SUPPORTED=	19
 .include "../../lang/ruby/rubyversion.mk"
 
 DEPENDS+=	xdg-utils-[0-9]*:../../misc/xdg-utils
-DEPENDS+=	${RUBY_PKGPREFIX}-json>=1.5.1:../../textproc/ruby-json
 DEPENDS+=	${RUBY_PKGPREFIX}-hmac>=0.4.0:../../security/ruby-hmac
 DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-gtk>=1.0.0:../../x11/ruby-gnome2-gtk
 DEPENDS+=	${RUBY_PKGPREFIX}-oauth>=0.3.6:../../security/ruby-oauth
@@ -31,6 +30,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-addressable>=2.2.6nb1:../../net/ruby-addressable
 # notif-send
 DEPENDS+=	libnotify-[0-9]*:../../sysutils/libnotify
 
+RUBY_JSON_REQD=	1.5.1
 WRKSRC=		${WRKDIR}/mikutter
 USE_LANGUAGES=	# none
 USE_TOOLS+=	pax
@@ -55,5 +55,6 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/mikutter.sh ${DESTDIR}${PREFIX}/bin/mikutter
 	${INSTALL_DATA} ${WRKDIR}/desktop ${DESTDIR}${PREFIX}/share/applications/mikutter.desktop
 
+.include "../../lang/ruby/json.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
