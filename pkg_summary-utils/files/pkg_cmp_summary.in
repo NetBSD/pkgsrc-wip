@@ -133,32 +133,25 @@ BEGIN {
 	installed_by_user = 1
 }
 
-function trim (s){
-	sub(/^[ \t]+/, "", s)
-	sub(/[ \t]+$/, "", s)
-
-	return s
-}
-
 with_pkgname && /^PKGNAME=/ {
-	pkgname = trim(substr($0, 9))
+	pkgname = trim_lr(substr($0, 9))
 	next
 }
 
 with_pkgpath && /^PKGPATH=/ {
-	pkgpath = trim(substr($0, 9))
+	pkgpath = trim_lr(substr($0, 9))
 	full_pkgpath = pkgpath
 	sub(/:.*$/, "", pkgpath)
 	next
 }
 
 user_auto && FILENAME == file1 && /^automatic=/ {
-	installed_by_user = tolower(trim(substr($0, 11))) != "yes"
+	installed_by_user = tolower(trim_lr(substr($0, 11))) != "yes"
 	next
 }
 
 with_pkgpath && /^ASSIGNMENTS=/ {
-	assigns = trim(substr($0, 13))
+	assigns = trim_lr(substr($0, 13))
 	next
 }
 
