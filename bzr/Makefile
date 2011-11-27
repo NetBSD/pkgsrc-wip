@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2011/11/27 10:22:12 cheusov Exp $
+# $NetBSD: Makefile,v 1.10 2011/11/27 10:58:36 ddeus Exp $
 
 DISTNAME=		bzr-${VER}
 CATEGORIES=		devel scm
@@ -33,6 +33,7 @@ PYTHON_PATCH_SCRIPTS+=		bzrlib/tests/ssl_certs/create_ssls.py
 
 .if !empty(PKGSRC_RUN_TEST:M[Yy][Ee][Ss])
 DEPENDS+=		${PYPKGPREFIX}-medusa>=0:../../net/py-medusa
+DEPENDS+=		${PYPKGPREFIX}-testtools>=0:../../devel/py-testtools
 .endif
 
 SUBST_CLASSES+=			python
