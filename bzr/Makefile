@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2011/11/24 13:01:59 ddeus Exp $
+# $NetBSD: Makefile,v 1.9 2011/11/27 10:22:12 cheusov Exp $
 
 DISTNAME=		bzr-${VER}
 CATEGORIES=		devel scm
-MASTER_SITES=		http://launchpad.net/bzr/2.4/${VER}/+download/
+MASTER_SITES=		http://launchpad.net/bzr/${VER:R}/${VER}/+download/
 VER=			2.4.2
 
 MAINTAINER=		ddeus.pkgsrc@mailnull.com
