@@ -1,0 +1,6 @@
+ASDF is Another System Definition Facility: a tool for specifying how systems
+of Common Lisp software are comprised of components (sub-systems and files),
+and how to operate on these components in the right order so that they can be
+compiled, loaded, tested, etc.
+
+This pkgsrc package is created for clisp.
