@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/11/26 10:23:37 cheusov Exp $
+# $NetBSD: Makefile,v 1.3 2011/11/27 17:29:27 cheusov Exp $
 #
 
 PKGNAME=	lmdbg-${_CVS_PKGVERSION:S/.//g}
@@ -31,6 +31,8 @@ TEST_TARGET=		test
 
 DOCDIR=			share/doc/lmdbg
 DOCFILES=		README NEWS
+
+REPLACE_SH=		scripts/lmdbg*.in tests/test.sh
 
 REPLACE_INTERPRETER+=	runawk
 REPLACE.runawk.old=	.*runawk
