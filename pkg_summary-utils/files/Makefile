@@ -56,6 +56,7 @@ MAN +=		pkg_digger.1 pkg_summary2leaves.1 # pkg_digger_backend.1
 FILES =		README NEWS TODO
 FILES +=	pkg_grep_summary.awk pkg_src_summary.mk psu_funcs.awk
 FILES +=	pkgsrc-dewey.awk pkg_digger.conf
+FILES +=	sig_handler.sh
 
 FILESDIR =			${DOCDIR}
 FILESDIR_pkg_grep_summary.awk =	${AWKMODDIR}
@@ -63,6 +64,7 @@ FILESDIR_psu_funcs.awk =	${AWKMODDIR}
 FILESDIR_pkgsrc-dewey.awk =	${AWKMODDIR}
 FILESDIR_pkg_src_summary.mk =	${MKSCRIPTSDIR}
 FILESDIR_pkg_digger.conf =	${EGDIR}
+FILESDIR_sig_handler.sh =	${LIBEXECDIR}
 
 BIRTHDATE =	2008-04-06
 

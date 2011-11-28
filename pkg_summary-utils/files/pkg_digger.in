@@ -26,11 +26,13 @@
 # (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 # OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-#LIBEXECDIR=${LIBEXECDIR-@libexecdir@}
-#. "$LIBEXECDIR"/pkg_digger_backend.env
 . pipestatus
 
 export LC_ALL=C
+
+LIBEXECDIR=${LIBEXECDIR-@libexecdir@}
+. ${LIBEXECDIR}/sig_handler.sh
+on_exit () { rm -rf $tmp_dir; }
 
 PKGDIG_SYSCONFDIR=${PKGDIG_SYSCONFDIR-@sysconfdir@}
 
@@ -89,7 +91,6 @@ fi
 
 # temp dir
 tmp_dir="/tmp/pkg_digger.$$"
-trap "rm -rf $tmp_dir" 0 1 2 3 15
 mkdir -m 700 "$tmp_dir"
 
 # highligting defaults

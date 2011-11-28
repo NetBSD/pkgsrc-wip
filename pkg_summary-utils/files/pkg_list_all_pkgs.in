@@ -31,6 +31,10 @@ set -e
 
 . pipestatus
 
+LIBEXECDIR=${LIBEXECDIR-@libexecdir@}
+. ${LIBEXECDIR}/sig_handler.sh
+on_exit () { rm -rf $tmp_dir; }
+
 ############################################################
 usage (){
     cat 1>&2 <<EOF
@@ -64,7 +68,6 @@ fi
 cd $PKGSRCDIR
 
 tmp_dir=`mktemp -d /tmp/pkg_list_all_pkgs.XXXXXX`
-trap "rm -rf $tmp_dir" 0 1 2 15
 test -n "$tmp_dir" || exit 1
 
 ############################################################

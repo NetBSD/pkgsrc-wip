@@ -78,8 +78,11 @@ cd $PKGSRCDIR
 
 new_summary=$summary.new
 
+LIBEXECDIR=${LIBEXECDIR-@libexecdir@}
+. ${LIBEXECDIR}/sig_handler.sh
+on_exit () { rm -rf $tmp_dir $new_summary; }
+
 tmp_dir=`mktemp -d /tmp/pkg_update_src_summary.XXXXXX`
-trap "rm -rf $tmp_dir $new_summary" 0 1 2 15
 test -n "$tmp_dir" || exit 1
 
 allpkgs_fn=$tmp_dir/allpkgs

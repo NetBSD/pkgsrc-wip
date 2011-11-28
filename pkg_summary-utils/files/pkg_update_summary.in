@@ -128,7 +128,9 @@ tmpfinal="$tmpbase.final"
 tmp2="$tmpbase.tmp2"
 
 if test -z "$TRACE"; then
-    trap "rm -f $tmpfinal $tmp2" 0 1 2 15
+    LIBEXECDIR=${LIBEXECDIR-@libexecdir@}
+    . ${LIBEXECDIR}/sig_handler.sh
+    on_exit () { rm -f $tmpfinal $tmp2; }
 fi
 
 filter_unchanged (){

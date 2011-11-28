@@ -38,8 +38,11 @@ export BMAKE=${BMAKE:=@BMAKE@}
 SH=${SH-@SH@}
 
 ############################################################
+LIBEXECDIR=${LIBEXECDIR-@libexecdir@}
+. ${LIBEXECDIR}/sig_handler.sh
+on_exit () { rm -rf $tmpdir; }
+
 tmpdir=`mktemp -d /tmp/pkg_micro_src_summary.XXXXXX`
-trap "rm -rf $tmpdir" 0 1 2 15
 test -n $tmpdir || exit 1
 
 errsfn=$tmpdir/errors.txt
