@@ -1,5 +1,5 @@
 DISTNAME=       collectd-5.0.1
-PKGNAME=	collectd-rrdtool
+PKGNAME=	collectd-rrdtool-5.0.1
 CATEGORIES=     wip
 MASTER_SITES=   http://collectd.org/files/
 CATEGORIES=     net
@@ -27,7 +27,7 @@ BUILD_TARGET=		rrdtool.la
 INSTALL_DIRS=		src
 INSTALL_TARGET=		install-pkglibLTLIBRARIES
 
-DEPENDS+=		collectd>=5
+DEPENDS+=		collectd>=5:../../wip/collectd5
 
 .include "../../databases/rrdtool/buildlink3.mk"
 
