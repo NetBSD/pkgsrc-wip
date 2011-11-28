@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/11/27 22:28:15 ddeus Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/11/28 08:28:11 ddeus Exp $
 ${INFODIR}/asdf.info
 lib/clisp/source-registry.conf
+lib/clisp/asdf-output-translations.conf
 lib/clisp/dynmod/asdf.fas
 lib/clisp/dynmod/asdf.lisp
 share/doc/${NAME}/README

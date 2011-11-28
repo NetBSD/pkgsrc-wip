@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/11/27 22:28:15 ddeus Exp $
+# $NetBSD: Makefile,v 1.2 2011/11/28 08:28:11 ddeus Exp $
 
 PKGNAME=	clisp-${SHORTNAME}-${VER}
 SHORTNAME=	asdf
@@ -31,6 +31,7 @@ do-build:
 	    ${SED} "s+#p\"/etc/common-lisp/\"+#p\"${PREFIX}/lib/clisp/\"+" asdf.lisp.orig > asdf.lisp && \
 	    ${PREFIX}/bin/clisp -c asdf.lisp )
 	echo "(:source-registry (:tree \"${PREFIX}/lib/clisp/asdfmod/\") :inherit-configuration)" >${WRKSRC}/source-registry.conf
+	echo "(:output-translations (t t) :inherit-configuration)" >${WRKSRC}/asdf-output-translations.conf
 	( cd ${WRKSRC}/doc && ${MAKEINFO} --html --no-split --no-headers -o asdf.html asdf.texinfo )
 	( cd ${WRKSRC}/doc && ${MAKEINFO} asdf.texinfo )
 
@@ -38,6 +39,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/asdf.lisp ${DESTDIR}${PREFIX}/lib/clisp/dynmod/asdf.lisp
 	${INSTALL_DATA} ${WRKSRC}/asdf.fas ${DESTDIR}${PREFIX}/lib/clisp/dynmod/asdf.fas
 	${INSTALL_DATA} ${WRKSRC}/source-registry.conf ${DESTDIR}${PREFIX}/lib/clisp/source-registry.conf
+	${INSTALL_DATA} ${WRKSRC}/asdf-output-translations.conf ${DESTDIR}${PREFIX}/lib/clisp/asdf-output-translations.conf
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/${PKGNAME}/README
 	${INSTALL_DATA} ${WRKSRC}/doc/asdf.html ${DESTDIR}${PREFIX}/share/doc/${PKGNAME}/asdf.html
 	${INSTALL_DATA} ${WRKSRC}/doc/asdf.info ${DESTDIR}${PREFIX}/${PKGINFODIR}/asdf.info
