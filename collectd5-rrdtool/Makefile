@@ -24,11 +24,10 @@ CONFIGURE_ARGS+=        --with-librrd=${LOCALBASE}
 
 BUILD_DIRS=		src
 BUILD_TARGET=		rrdtool.la
-#do-build:
-#	echo "build"; cd ${WRKSRC}/src && ${MAKE_PROGRAM} rrdtool.la
+INSTALL_DIRS=		src
+INSTALL_TARGET=		install-pkglibLTLIBRARIES
 
-#do-install:
-#	echo "install"
+DEPENDS+=		collectd>=5
 
 .include "../../databases/rrdtool/buildlink3.mk"
 
