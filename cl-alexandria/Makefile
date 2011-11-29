@@ -1,21 +1,17 @@
-# $NetBSD: Makefile,v 1.4 2011/11/25 14:01:29 ddeus Exp $
+# $NetBSD: Makefile,v 1.5 2011/11/29 22:54:53 ddeus Exp $
 #
 
 SHORTNAME=	alexandria
-DISTNAME=	${SHORTNAME}
-PKGNAME=        ${LISP_PREFIX}-${SHORTNAME}-${_GIT_PKGVERSION:S/.//g}
-PKGREVISION=	0
+DISTNAME=	${SHORTNAME}-${VERSION}
+VERSION=	20111129
+PKGNAME=        ${LISP_PREFIX}-${SHORTNAME}-${VERSION}
 CATEGORIES=	devel
-MASTER_SITES=	# none
+MASTER_SITES=	http://www.kozachuk.info/netbsd/contrib/
 
 MAINTAINER=     ddeus.pkgsrc@mailnull.com
 HOMEPAGE=	http://common-lisp.net/project/alexandria/
 COMMENT=        Alexandria is a collection utilities for Common Lisp
 LICENSE=        public-domain
-
-GIT_REPOSITORIES=   master
-GIT_REPO.master=    git://common-lisp.net/projects/alexandria/alexandria.git
-GIT_MODULE=	    alexandria
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 WRKSRC=			${WRKDIR}/${DISTNAME}
@@ -23,6 +19,5 @@ COMMON_LISP_EXTRAFILES= alexandria.html
 COMMON_LISP_DOCFILES=	README AUTHORS LICENCE alexandria.html
 
 .include "options.mk"
-.include "../../wip/mk/git-package.mk"
 .include "../../wip/mk/cl-package.mk"
 .include "../../mk/bsd.pkg.mk"
