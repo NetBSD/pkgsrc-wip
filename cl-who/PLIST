@@ -1,19 +1,12 @@
-@comment $NetBSD: PLIST,v 1.3 2011/11/27 22:35:46 ddeus Exp $
-${PLIST.ecl}${ECL_PATH}cl-who.asd
-${PLIST.ecl}${ECL_PATH}cl-who.fas
-${PLIST.sbcl}${SBCL_PATH}cl-who/cl-who.asd
-${PLIST.sbcl}${SBCL_PATH}cl-who/packages.fasl
-${PLIST.sbcl}${SBCL_PATH}cl-who/packages.lisp
-${PLIST.sbcl}${SBCL_PATH}cl-who/specials.fasl
-${PLIST.sbcl}${SBCL_PATH}cl-who/specials.lisp
-${PLIST.sbcl}${SBCL_PATH}cl-who/who.fasl
-${PLIST.sbcl}${SBCL_PATH}cl-who/who.lisp
-${PLIST.clisp}${CLISP_PATH}cl-who/cl-who.asd
-${PLIST.clisp}${CLISP_PATH}cl-who/packages.fas
-${PLIST.clisp}${CLISP_PATH}cl-who/packages.lisp
-${PLIST.clisp}${CLISP_PATH}cl-who/specials.fas
-${PLIST.clisp}${CLISP_PATH}cl-who/specials.lisp
-${PLIST.clisp}${CLISP_PATH}cl-who/who.fas
-${PLIST.clisp}${CLISP_PATH}cl-who/who.lisp
+@comment $NetBSD: PLIST,v 1.4 2011/11/29 09:25:13 ddeus Exp $
+${ECL}${CL_PATH}cl-who.asd
+${ECL}${CL_PATH}cl-who.fas
+${CL}${CL_PATH}cl-who/cl-who.asd
+${CL}${CL_PATH}cl-who/packages.${EXT}
+${CL}${CL_PATH}cl-who/packages.lisp
+${CL}${CL_PATH}cl-who/specials.${EXT}
+${CL}${CL_PATH}cl-who/specials.lisp
+${CL}${CL_PATH}cl-who/who.${EXT}
+${CL}${CL_PATH}cl-who/who.lisp
 share/doc/${LISP}-who/CHANGELOG
 share/doc/${LISP}-who/index.html

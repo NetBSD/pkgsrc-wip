@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/11/24 11:31:40 ddeus Exp $
+# $NetBSD: Makefile,v 1.4 2011/11/29 09:25:13 ddeus Exp $
 #
 
 VERSION=        2.0.3
@@ -14,8 +14,8 @@ LICENSE=        modified-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 WRKSRC=			${WRKDIR}/${DISTNAME}-${VERSION}
-DEPENDS+=		ecl-ppcre-${VERSION}:../../wip/cl-ppcre
-DEPENDS+=		ecl-unicode-[0-9]*:../../wip/cl-unicode
+DEPENDS+=		${LISP_PREFIX}-ppcre-${VERSION}:../../wip/cl-ppcre
+DEPENDS+=		${LISP_PREFIX}-unicode-[0-9]*:../../wip/cl-unicode
 
 .include "options.mk"
 .include "../../wip/mk/cl-package.mk"

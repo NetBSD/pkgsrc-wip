@@ -58,8 +58,13 @@ USE_TOOLS+=			install find
 ECL_DEFAULT_PACKAGE?=		lang/ecl
 ECL_VERSION!=			cd ../../${ECL_DEFAULT_PACKAGE} && ${MAKE} show-var VARNAME=PKGVERSION_NOREV
 ECL_CENTRAL_REGISTRY=		lib/ecl-${ECL_VERSION}/
-PLIST_SUBST+=			ECL_PATH="${ECL_CENTRAL_REGISTRY}"
+PLIST_SUBST+=			CL_PATH="${ECL_CENTRAL_REGISTRY}"
 PLIST_SUBST+=			LISP="${LISP_PREFIX}"
+PLIST_SUBST+=			ECL=""
+PLIST_SUBST+=			SBCL="@comment "
+PLIST_SUBST+=			CLISP="@comment "
+PLIST_SUBST+=			CL="@comment "
+PLIST_SUBST+=			EXT="fas"
 INSTALLATION_DIRS+=		${ECL_CENTRAL_REGISTRY}
 
 do-build:
@@ -67,6 +72,7 @@ do-build:
 	( cd ${WRKSRC} && ${PREFIX}/bin/ecl -q -norc \
 	    -eval "(format t \"### Build package ~S in directory: ~S~%\" \"${pkg}\" #P\"${WRKSRC}/\")" \
 	    -eval "(let ((*load-verbose* nil)) (require 'asdf))" \
+	    -eval "(setf asdf:*asdf-verbose* t *compile-verbose* t *load-verbose* t)" \
 	    -eval "(setf asdf::*user-cache* \"${WRKSRC}/build/\")" \
 	    -eval "(push #P\"${WRKSRC}/\" asdf::*central-registry*)" \
 	    -eval "(asdf:oos 'asdf:load-fasl-op :${pkg})" \
@@ -98,8 +104,13 @@ do-install:
 USE_TOOLS+=			install find mkdir
 SBCL_DEFAULT_PACKAGE?=		lang/sbcl
 SBCL_CENTRAL_REGISTRY=		lib/sbcl/site-systems/
-PLIST_SUBST+=			SBCL_PATH="${SBCL_CENTRAL_REGISTRY}"
+PLIST_SUBST+=			CL_PATH="${SBCL_CENTRAL_REGISTRY}"
 PLIST_SUBST+=			LISP="${LISP_PREFIX}"
+PLIST_SUBST+=			ECL="@comment "
+PLIST_SUBST+=			SBCL=""
+PLIST_SUBST+=			CLISP="@comment "
+PLIST_SUBST+=			CL=""
+PLIST_SUBST+=			EXT="fasl"
 INSTALLATION_DIRS+=		${SBCL_CENTRAL_REGISTRY}
 DEPENDS+=			sbcl-[0-9]*:../../${SBCL_DEFAULT_PACKAGE}
 
@@ -108,6 +119,8 @@ do-build:
 	( cd ${WRKSRC} && ${PREFIX}/bin/sbcl --no-userinit  \
 	    --eval "(format t \"### Build package ~S in directory: ~S~%\" \"${pkg}\" #P\"${WRKSRC}/\")" \
 	    --eval "(let ((*load-verbose* nil)) (require 'asdf))" \
+	    --eval "(setf asdf:*asdf-verbose* t *compile-verbose* t *load-verbose* t)" \
+	    --eval "(setf asdf:*central-registry* '(#P\"${PREFIX}/${SBCL_CENTRAL_REGISTRY}\" #P\"${WRKSRC}/\"))" \
 	    --eval "(setf asdf::*user-cache* \"${WRKSRC}/\")" \
 	    --eval "(asdf:compile-system :${pkg})" \
 	    --non-interactive )
@@ -132,8 +145,13 @@ do-install:
 USE_TOOLS+=			install find mkdir
 CLISP_DEFAULT_PACKAGE?=		lang/clisp
 CLISP_CENTRAL_REGISTRY=		lib/clisp/asdfmod/
-PLIST_SUBST+=			CLISP_PATH="${CLISP_CENTRAL_REGISTRY}"
+PLIST_SUBST+=			CL_PATH="${CLISP_CENTRAL_REGISTRY}"
 PLIST_SUBST+=			LISP="${LISP_PREFIX}"
+PLIST_SUBST+=			ECL="@comment "
+PLIST_SUBST+=			SBCL="@comment "
+PLIST_SUBST+=			CLISP=""
+PLIST_SUBST+=			CL=""
+PLIST_SUBST+=			EXT="fas"
 INSTALLATION_DIRS+=		${CLISP_CENTRAL_REGISTRY}
 DEPENDS+=			clisp-[0-9]*:../../${CLISP_DEFAULT_PACKAGE}
 DEPENDS+=			clisp-asdf-[0-9]*:../../wip/clisp-asdf
@@ -143,6 +161,8 @@ do-build:
 	( cd ${WRKSRC} && ${PREFIX}/bin/clisp -q -norc \
 	    -x "(format t \"### Build package ~S in directory: ~S~%\" \"${pkg}\" #P\"${WRKSRC}/\")" \
 	    -x "(let ((*load-verbose* nil)) (require \"asdf\"))" \
+	    -x "(setf asdf:*asdf-verbose* t *compile-verbose* t *load-verbose* t)" \
+	    -x "(setf asdf:*central-registry* '(#P\"${PREFIX}/${CLISP_CENTRAL_REGISTRY}\" #P\"${WRKSRC}/\"))" \
 	    -x "(setf asdf::*user-cache* \"${WRKSRC}/\")" \
 	    -x "(asdf:compile-system :${pkg})" \
 	    -on-error exit )
