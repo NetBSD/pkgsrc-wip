@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/08/25 22:18:03 leot1990 Exp $
+$NetBSD: distinfo,v 1.2 2011/11/29 17:41:18 egavilan Exp $
 
 SHA1 (splix-2.0.0.tar.bz2) = d40b9fcfd03efd7a9b6b2700fbb0af96569f095b
 RMD160 (splix-2.0.0.tar.bz2) = 7f194de23d465a3acbf5c0eec979b194f016a8b5
 Size (splix-2.0.0.tar.bz2) = 101197 bytes
 SHA1 (patch-aa) = 41567ad79d6f832498d135f393cbafd7de523313
+SHA1 (patch-src_ppdfile.cpp) = d873ed0cddee54def48100f8e9df978ca9d0c0fb
