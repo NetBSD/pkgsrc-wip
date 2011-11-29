@@ -1,10 +1,10 @@
-$NetBSD: patch-ag,v 1.8 2011/07/04 12:54:28 ahp-nils Exp $
+$NetBSD: patch-ag,v 1.9 2011/11/29 07:38:05 ahp-nils Exp $
 
 Add pkgsrc paths compatibility
 
---- logrotate.8.orig	2010-06-28 08:04:56.000000000 +0000
+--- logrotate.8.orig	2011-08-31 12:39:04.000000000 +0000
 +++ logrotate.8
-@@ -55,7 +55,7 @@ and mail it to the recipient. The defaul
+@@ -59,7 +59,7 @@ and mail it to the recipient. The defaul
  \fB-s, -\-state <statefile>\fR
  Tells \fBlogrotate\fR to use an alternate state file.  This is useful
  if logrotate is being run as a different user for various sets of
@@ -13,7 +13,7 @@ Add pkgsrc paths compatibility
  
  .TP
  \fB-\-usage\fR
-@@ -473,10 +473,10 @@ Log files are rotated if the current yea
+@@ -499,10 +499,10 @@ Log files are rotated if the current yea
  .SH FILES
  .PD 0
  .TP 27

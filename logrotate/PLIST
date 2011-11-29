@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2010/11/03 10:38:24 ahp-nils Exp $
+@comment $NetBSD: PLIST,v 1.7 2011/11/29 07:38:05 ahp-nils Exp $
 man/man5/logrotate.conf.5
 man/man8/logrotate.8
 sbin/logrotate
@@ -16,6 +16,8 @@ share/doc/logrotate/test/test-config.11.in
 share/doc/logrotate/test/test-config.12.in
 share/doc/logrotate/test/test-config.13.in
 share/doc/logrotate/test/test-config.14.in
+share/doc/logrotate/test/test-config.15.in
+share/doc/logrotate/test/test-config.16.in
 share/doc/logrotate/test/test-config.2.in
 share/doc/logrotate/test/test-config.3.in
 share/doc/logrotate/test/test-config.4.in

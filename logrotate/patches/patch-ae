@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.8 2011/07/04 12:54:28 ahp-nils Exp $
+$NetBSD: patch-ae,v 1.9 2011/11/29 07:38:05 ahp-nils Exp $
 
 Add pkgsrc paths compatibility
 
---- examples/logrotate-default.orig	2010-06-28 08:04:56.000000000 +0000
+--- examples/logrotate-default.orig	2011-08-31 12:39:04.000000000 +0000
 +++ examples/logrotate-default
 @@ -12,20 +12,14 @@ create
  dateext
@@ -14,7 +14,7 @@ Add pkgsrc paths compatibility
 -# RPM packages drop log rotation information into this directory
 -include /etc/logrotate.d
 +# Packages drop log rotation information into this directory
-+include @PKG_SYSCONFSUBDIR@
++include @PKG_SYSCONFDIR@/logrotate.d
  
 -# no packages own wtmp and btmp -- we'll rotate them here
 -/var/log/wtmp {
