@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4545 2011/11/30 13:49:58 thomasklausner Exp $
+# $Id: Makefile,v 1.4546 2011/11/30 14:12:45 pettai Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1869,6 +1869,7 @@ SUBDIR+=	packman
 SUBDIR+=	pagetools
 SUBDIR+=	pal
 SUBDIR+=	palp
+SUBDIR+=	pam-krb5
 SUBDIR+=	pam-pkcs11
 SUBDIR+=	pam-pop3
 SUBDIR+=	pam-pwdfile
