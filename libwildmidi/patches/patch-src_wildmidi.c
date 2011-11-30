@@ -1,4 +1,7 @@
-$NetBSD: patch-src_wildmidi.c,v 1.1.1.1 2011/08/01 02:29:45 pallegra Exp $
+$NetBSD: patch-src_wildmidi.c,v 1.2 2011/11/30 13:45:24 thomasklausner Exp $
+
+On NetBSD, FNONBLOCK is only defined for the kernel.
+Fix device name in printf.
 
 --- src/wildmidi.c.orig	2010-07-30 00:33:46.000000000 +0000
 +++ src/wildmidi.c
