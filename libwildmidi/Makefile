@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/08/01 02:29:45 pallegra Exp $
+# $NetBSD: Makefile,v 1.2 2011/11/30 13:46:41 thomasklausner Exp $
 #
 
 DISTNAME=	wildmidi-0.2.3.4
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wildmidi/}
 
 MAINTAINER=	pallegra@gmail.com
 HOMEPAGE=	http://wildmidi.sourceforge.net/
-COMMENT=	Midi processing library and a midi player using the gus patch set
+COMMENT=	Midi processing library and a midi player using the GUS patch set
 LICENSE=	gnu-lgpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
