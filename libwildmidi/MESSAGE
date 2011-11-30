@@ -1,9 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2011/08/01 02:29:45 pallegra Exp $
-
-  To use this program, you'll have to install one of the following:
-	* pkgsrc/audio/eawpatches
-	* pkgsrc/audio/freepats
-	* pkgsrc/audio/guspatches
-
-===========================================================================

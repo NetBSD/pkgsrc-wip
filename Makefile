@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4544 2011/11/27 10:20:09 alnsn Exp $
+# $Id: Makefile,v 1.4545 2011/11/30 13:49:58 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1316,7 +1316,6 @@ SUBDIR+=	libvalhalla
 SUBDIR+=	libvc
 SUBDIR+=	libvg
 SUBDIR+=	libwbxml2-patched
-SUBDIR+=	libwildmidi
 SUBDIR+=	libxc
 SUBDIR+=	libyubikey
 SUBDIR+=	libzdb
