@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2011/05/14 21:12:30 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.17 2011/11/30 17:19:24 gschwarz Exp $
 #
 
-DISTNAME=	tacacs+-F4.0.4.19
+DISTNAME=	tacacs+-F4.0.4.20
 PKGNAME=	${DISTNAME:S,-F,-,}
 CATEGORIES=	net security
 MASTER_SITES=	ftp://ftp.shrubbery.net/pub/tac_plus/
@@ -46,7 +46,6 @@ do-install:
 	${LIBTOOL} --mode=install ${INSTALL_LIB} ${WRKSRC}/libtacacs.la ${DESTDIR}${PREFIX}/lib
 	${INSTALL_PROGRAM} ${WRKSRC}/tac_pwd ${DESTDIR}${PREFIX}/sbin
 	${INSTALL_SCRIPT} ${WRKSRC}/tac_convert ${DESTDIR}${PREFIX}/sbin
-	${INSTALL_MAN} ${WRKSRC}/regexp.3 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man3
 	${INSTALL_MAN} ${WRKSRC}/tac_plus.conf.5 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
 	${INSTALL_MAN} ${WRKSRC}/tac_plus.8 ${WRKSRC}/tac_pwd.8 \
 	${DESTDIR}${PREFIX}/${PKGMANDIR}/man8

@@ -1,7 +1,7 @@
-$NetBSD: patch-am,v 1.3 2011/01/19 21:28:37 gschwarz Exp $
+$NetBSD: patch-am,v 1.4 2011/11/30 17:19:24 gschwarz Exp $
 
---- pwlib.c.orig	2009-07-17 19:34:31.000000000 +0200
-+++ pwlib.c	2011-01-19 22:19:08.000000000 +0100
+--- pwlib.c.orig	2011-11-30 18:02:45.000000000 +0100
++++ pwlib.c	2011-11-30 18:02:54.000000000 +0100
 @@ -31,7 +31,7 @@
  #endif
  
@@ -21,8 +21,8 @@ $NetBSD: patch-am,v 1.3 2011/01/19 21:28:37 gschwarz Exp $
  /* Adjust data->status depending on whether a user has expired or not */
  void
  set_expiration_status(char *exp_date, struct authen_data *data)
-@@ -488,10 +491,13 @@
- 		report(LOG_ERR, "%s %s: PAM_PROMPT_ECHO_OFF", session.peer,
+@@ -490,10 +493,13 @@
+ 		report(LOG_DEBUG, "%s %s: PAM_PROMPT_ECHO_OFF", session.peer,
  		       session.port);
  
 -	    send_authen_reply(TAC_PLUS_AUTHEN_STATUS_GETPASS,
@@ -39,7 +39,7 @@ $NetBSD: patch-am,v 1.3 2011/01/19 21:28:37 gschwarz Exp $
  	    reply = get_authen_continue();
  	    if (!reply) {
  		/* Typically due to a premature connection close */
-@@ -511,6 +517,7 @@
+@@ -513,6 +519,7 @@
  	    prpp[i]->resp[acp->user_msg_len] = '\0';
  
  	    free(reply);
@@ -47,7 +47,7 @@ $NetBSD: patch-am,v 1.3 2011/01/19 21:28:37 gschwarz Exp $
  	    break;
  	case PAM_PROMPT_ECHO_ON:
  	    if (debug & DEBUG_PASSWD_FLAG)
-@@ -586,6 +593,7 @@
+@@ -588,6 +595,7 @@
      int			pam_flag;
      struct pam_conv	conv = { pam_tacacs, NULL };
      pam_handle_t	*pamh = NULL;

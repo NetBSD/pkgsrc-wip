@@ -1,8 +1,8 @@
-$NetBSD: patch-ak,v 1.5 2009/04/19 21:10:37 gschwarz Exp $
+$NetBSD: patch-ak,v 1.6 2011/11/30 17:19:24 gschwarz Exp $
 
---- configure.orig	2009-04-19 12:36:18.000000000 +0200
-+++ configure	2009-04-19 12:38:44.000000000 +0200
-@@ -2553,8 +2553,8 @@
+--- configure.orig	2011-11-30 18:01:46.000000000 +0100
++++ configure	2011-11-30 18:01:54.000000000 +0100
+@@ -3262,8 +3262,8 @@
  	# XXX: not sure if /usr/local is necessary.
  	# XXX: linux libwrap needs -lnsl. configure should check for
  	#      existence of libnsl instead of hard-coding
@@ -11,9 +11,9 @@ $NetBSD: patch-ak,v 1.5 2009/04/19 21:10:37 gschwarz Exp $
 +	# CPPFLAGS="$CFLAGS -I/usr/local/include"; export CPPFLAGS
 +	# LDFLAGS="$LDFLAGS -L/usr/local/lib -L/lib"; export LDFLAGS
  	LIBS="-lnsl -lcrypt $LIBS"; export LIBS
-         cat >>confdefs.h <<\_ACEOF
- #define LINUX 1
-@@ -2564,8 +2564,8 @@
+         $as_echo "#define LINUX 1" >>confdefs.h
+ 
+@@ -3271,15 +3271,15 @@
  	# XXX: does linux need glibc: -DGLIBC
      ;;
      *mips* )
@@ -22,9 +22,7 @@ $NetBSD: patch-ak,v 1.5 2009/04/19 21:10:37 gschwarz Exp $
 +	# CPPFLAGS="$CFLAGS -I/usr/local/include"; export CPPFLAGS
 +	# LDFLAGS="$LDFLAGS -L/usr/local/lib"; export LDFLAGS
  	LIBS="-lcrypt $LIBS"; export LIBS
-         cat >>confdefs.h <<\_ACEOF
- #define MIPS 1
-@@ -2573,8 +2573,8 @@
+         $as_echo "#define MIPS 1" >>confdefs.h
  
      ;;
      * )
