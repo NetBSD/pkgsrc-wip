@@ -1,5 +1,6 @@
-$NetBSD: patch-aa,v 1.4 2011/05/16 12:45:21 fhajny Exp $
+$NetBSD: patch-aa,v 1.5 2011/11/30 11:10:31 fhajny Exp $
 
+Provide a new installation target for pkgsrc DESTDIR install.
 --- build/packaging.rb.orig	2011-04-11 10:22:53.000000000 +0000
 +++ build/packaging.rb
 @@ -191,3 +191,77 @@ task 'package:debian' => 'package:check'
@@ -15,8 +16,8 @@ $NetBSD: patch-aa,v 1.4 2011/05/16 12:45:21 fhajny Exp $
 +        destdir = ENV['DESTDIR'].nil? ? '' : ENV['DESTDIR']
 +        prefix = ENV['PREFIX']
 +        
-+        fake_libdir = "#{destdir}#{prefix}/lib/ruby/vendor_ruby/1.8"
-+        fake_native_support_dir = "#{destdir}#{prefix}/lib/ruby/vendor_ruby/1.8/i386-solaris2"
++        fake_libdir = "#{destdir}#{prefix}/@RUBY_VENDORLIB@"
++        fake_native_support_dir = "#{destdir}#{prefix}/@RUBY_VENDORARCHLIB@"
 +        fake_agents_dir = "#{destdir}#{NATIVELY_PACKAGED_AGENTS_DIR}"
 +        fake_helper_scripts_dir = "#{destdir}#{NATIVELY_PACKAGED_HELPER_SCRIPTS_DIR}"
 +        fake_docdir = "#{destdir}#{NATIVELY_PACKAGED_DOCDIR}"
