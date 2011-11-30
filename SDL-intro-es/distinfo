@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2005/05/31 09:38:28 ianzag Exp $
+$NetBSD: distinfo,v 1.2 2011/11/30 12:53:00 noud4 Exp $
 
-SHA1 (SDL-1.0-spanish-intro.tar.gz) = bfba73637eb83cb22e4f7533fa22b49c1883ff7d
-RMD160 (SDL-1.0-spanish-intro.tar.gz) = 412a3143fc689f23f1bb4745718b5c9fe6ff07fe
-Size (SDL-1.0-spanish-intro.tar.gz) = 14435 bytes
+SHA1 (SDL-1.0-spanish-intro.tar.gz) = 2c48c586700cbe7aca3d62fe85c403c45c73e78e
+RMD160 (SDL-1.0-spanish-intro.tar.gz) = 7f11ae4e7147dc54fbda1340164c9055f8d76f4f
+Size (SDL-1.0-spanish-intro.tar.gz) = 14542 bytes
