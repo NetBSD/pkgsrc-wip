@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2011/08/18 14:34:12 asau Exp $
+$NetBSD: distinfo,v 1.7 2011/11/30 20:47:27 gschwarz Exp $
 
-SHA1 (archimedes-1.0.0.tar.bz2) = 2b7196e8fb51740788606032378b414b6cd6e99d
-RMD160 (archimedes-1.0.0.tar.bz2) = a07c4e80922101310a327c761da5d18e76a8f571
-Size (archimedes-1.0.0.tar.bz2) = 538329 bytes
-SHA1 (patch-aa) = febe039c25ed81d6edf821ef6e8022157fdf4081
+SHA1 (archimedes-2.0.0.tar.bz2) = 8097d32e812fb48e1ef9a7b55c05145fd59bb7e4
+RMD160 (archimedes-2.0.0.tar.bz2) = 6a300fc46a4ebbdf20fe9123624a2e2ed32f0bf3
+Size (archimedes-2.0.0.tar.bz2) = 545733 bytes
+SHA1 (patch-aa) = 8452dbe8f677f2e2c091e976d19d9673841fd7af
