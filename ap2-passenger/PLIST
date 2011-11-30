@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2011/11/30 11:10:31 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.7 2011/11/30 11:13:45 fhajny Exp $
 bin/passenger
 bin/passenger-config
 bin/passenger-install-apache2-module
@@ -373,7 +373,7 @@ share/phusion-passenger/source/ext/boost/config/compiler/mpw.hpp
 share/phusion-passenger/source/ext/boost/config/compiler/nvcc.hpp
 share/phusion-passenger/source/ext/boost/config/compiler/pgi.hpp
 share/phusion-passenger/source/ext/boost/config/compiler/sgi_mipspro.hpp
-share/phusion-passenger/source/ext/boost/config/compiler/${LOWER_VENDOR}pro_cc.hpp
+share/phusion-passenger/source/ext/boost/config/compiler/sunpro_cc.hpp
 share/phusion-passenger/source/ext/boost/config/compiler/vacpp.hpp
 share/phusion-passenger/source/ext/boost/config/compiler/visualc.hpp
 share/phusion-passenger/source/ext/boost/config/no_tr1/cmath.hpp
@@ -391,7 +391,7 @@ share/phusion-passenger/source/ext/boost/config/platform/irix.hpp
 share/phusion-passenger/source/ext/boost/config/platform/linux.hpp
 share/phusion-passenger/source/ext/boost/config/platform/macos.hpp
 share/phusion-passenger/source/ext/boost/config/platform/qnxnto.hpp
-share/phusion-passenger/source/ext/boost/config/platform/${LOWER_OPSYS}.hpp
+share/phusion-passenger/source/ext/boost/config/platform/solaris.hpp
 share/phusion-passenger/source/ext/boost/config/platform/symbian.hpp
 share/phusion-passenger/source/ext/boost/config/platform/vxworks.hpp
 share/phusion-passenger/source/ext/boost/config/platform/win32.hpp
@@ -780,7 +780,7 @@ share/phusion-passenger/source/ext/boost/smart_ptr/detail/atomic_count.hpp
 share/phusion-passenger/source/ext/boost/smart_ptr/detail/atomic_count_gcc.hpp
 share/phusion-passenger/source/ext/boost/smart_ptr/detail/atomic_count_gcc_x86.hpp
 share/phusion-passenger/source/ext/boost/smart_ptr/detail/atomic_count_pthreads.hpp
-share/phusion-passenger/source/ext/boost/smart_ptr/detail/atomic_count_${LOWER_OPSYS}.hpp
+share/phusion-passenger/source/ext/boost/smart_ptr/detail/atomic_count_solaris.hpp
 share/phusion-passenger/source/ext/boost/smart_ptr/detail/atomic_count_sync.hpp
 share/phusion-passenger/source/ext/boost/smart_ptr/detail/atomic_count_win32.hpp
 share/phusion-passenger/source/ext/boost/smart_ptr/detail/operator_bool.hpp
@@ -797,7 +797,7 @@ share/phusion-passenger/source/ext/boost/smart_ptr/detail/sp_counted_base_gcc_sp
 share/phusion-passenger/source/ext/boost/smart_ptr/detail/sp_counted_base_gcc_x86.hpp
 share/phusion-passenger/source/ext/boost/smart_ptr/detail/sp_counted_base_nt.hpp
 share/phusion-passenger/source/ext/boost/smart_ptr/detail/sp_counted_base_pt.hpp
-share/phusion-passenger/source/ext/boost/smart_ptr/detail/sp_counted_base_${LOWER_OPSYS}.hpp
+share/phusion-passenger/source/ext/boost/smart_ptr/detail/sp_counted_base_solaris.hpp
 share/phusion-passenger/source/ext/boost/smart_ptr/detail/sp_counted_base_spin.hpp
 share/phusion-passenger/source/ext/boost/smart_ptr/detail/sp_counted_base_sync.hpp
 share/phusion-passenger/source/ext/boost/smart_ptr/detail/sp_counted_base_w32.hpp
