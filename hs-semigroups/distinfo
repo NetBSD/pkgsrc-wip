@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/05/10 23:24:47 phonohawk Exp $
+$NetBSD: distinfo,v 1.2 2011/12/01 23:03:39 phonohawk Exp $
 
-SHA1 (semigroups-0.5.0.tar.gz) = 47d7c38d33fcff4382e521744399a476a1efab24
-RMD160 (semigroups-0.5.0.tar.gz) = 294fe869e37e8c5bff290d3da72478ddac606450
-Size (semigroups-0.5.0.tar.gz) = 7351 bytes
+SHA1 (semigroups-0.8.tar.gz) = e839a77814d70c89a69dbe25ee9002ad6e11a694
+RMD160 (semigroups-0.8.tar.gz) = 7d8a0ad800354768a38c0f58387387a32d97d0e4
+Size (semigroups-0.8.tar.gz) = 9181 bytes
