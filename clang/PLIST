@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2011/11/09 10:24:33 asau Exp $
+@comment $NetBSD: PLIST,v 1.14 2011/12/01 15:57:04 asau Exp $
 bin/bugpoint
 bin/c-index-test
 bin/clang
@@ -10,7 +10,6 @@ bin/llvm-ar
 bin/llvm-as
 bin/llvm-bcanalyzer
 bin/llvm-config
-bin/llvm-config-2
 bin/llvm-cov
 bin/llvm-diff
 bin/llvm-dis
@@ -156,6 +155,7 @@ include/clang/Basic/LangOptions.def
 include/clang/Basic/LangOptions.h
 include/clang/Basic/Linkage.h
 include/clang/Basic/MacroBuilder.h
+include/clang/Basic/Module.h
 include/clang/Basic/OnDiskHashTable.h
 include/clang/Basic/OpenCL.h
 include/clang/Basic/OpenCLExtensions.def
@@ -260,6 +260,7 @@ include/clang/Lex/Lexer.h
 include/clang/Lex/LiteralSupport.h
 include/clang/Lex/MacroInfo.h
 include/clang/Lex/ModuleLoader.h
+include/clang/Lex/ModuleMap.h
 include/clang/Lex/MultipleIncludeOpt.h
 include/clang/Lex/PPCallbacks.h
 include/clang/Lex/PTHLexer.h
@@ -357,6 +358,8 @@ include/clang/StaticAnalyzer/Core/PathSensitive/StoreRef.h
 include/clang/StaticAnalyzer/Core/PathSensitive/SubEngine.h
 include/clang/StaticAnalyzer/Core/PathSensitive/SummaryManager.h
 include/clang/StaticAnalyzer/Core/PathSensitive/SymbolManager.h
+include/clang/StaticAnalyzer/Core/PathSensitive/TaintManager.h
+include/clang/StaticAnalyzer/Core/PathSensitive/TaintTag.h
 include/clang/StaticAnalyzer/Core/PathSensitive/WorkList.h
 include/clang/StaticAnalyzer/Frontend/CheckerRegistration.h
 include/clang/StaticAnalyzer/Frontend/FrontendActions.h
@@ -847,6 +850,7 @@ lib/LLVMHello.so
 lib/clang/3.1/include/altivec.h
 lib/clang/3.1/include/arm_neon.h
 lib/clang/3.1/include/avxintrin.h
+lib/clang/3.1/include/cpuid.h
 lib/clang/3.1/include/emmintrin.h
 lib/clang/3.1/include/float.h
 lib/clang/3.1/include/immintrin.h
@@ -869,7 +873,6 @@ lib/clang/3.1/include/varargs.h
 lib/clang/3.1/include/wmmintrin.h
 lib/clang/3.1/include/x86intrin.h
 lib/clang/3.1/include/xmmintrin.h
-lib/libEnhancedDisassembly.a
 lib/libLLVMAnalysis.a
 lib/libLLVMArchive.a
 lib/libLLVMAsmParser.a
@@ -938,6 +941,7 @@ man/man1/llvm-ar.1
 man/man1/llvm-as.1
 man/man1/llvm-bcanalyzer.1
 man/man1/llvm-config.1
+man/man1/llvm-cov.1
 man/man1/llvm-diff.1
 man/man1/llvm-dis.1
 man/man1/llvm-extract.1
@@ -949,6 +953,7 @@ man/man1/llvm-ranlib.1
 man/man1/opt.1
 man/man1/tblgen.1
 share/doc/llvm/html.tar.gz
+share/doc/llvm/html/AddressSanitizer.html
 share/doc/llvm/html/AliasAnalysis.html
 share/doc/llvm/html/AnalyzerRegions.html
 share/doc/llvm/html/Atomics.html
@@ -971,6 +976,7 @@ share/doc/llvm/html/CommandGuide/llvm-as.html
 share/doc/llvm/html/CommandGuide/llvm-bcanalyzer.html
 share/doc/llvm/html/CommandGuide/llvm-build.html
 share/doc/llvm/html/CommandGuide/llvm-config.html
+share/doc/llvm/html/CommandGuide/llvm-cov.html
 share/doc/llvm/html/CommandGuide/llvm-diff.html
 share/doc/llvm/html/CommandGuide/llvm-dis.html
 share/doc/llvm/html/CommandGuide/llvm-extract.html
@@ -1060,6 +1066,7 @@ share/doc/llvm/ps/llvm-as.ps
 share/doc/llvm/ps/llvm-bcanalyzer.ps
 share/doc/llvm/ps/llvm-build.ps
 share/doc/llvm/ps/llvm-config.ps
+share/doc/llvm/ps/llvm-cov.ps
 share/doc/llvm/ps/llvm-diff.ps
 share/doc/llvm/ps/llvm-dis.ps
 share/doc/llvm/ps/llvm-extract.ps
