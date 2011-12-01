@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2011/11/30 14:12:45 pettai Exp $
-lib/security/pam_krb5.la
-man/man5/pam_krb5.5
