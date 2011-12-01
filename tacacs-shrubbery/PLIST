@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.5 2011/11/30 17:19:24 gschwarz Exp $
-lib/libtacacs.la
-man/man5/tac_plus.conf.5
-man/man8/tac_plus.8
-man/man8/tac_pwd.8
-sbin/tac_convert
-sbin/tac_plus
-sbin/tac_pwd
-share/doc/tacacs/users_guide
