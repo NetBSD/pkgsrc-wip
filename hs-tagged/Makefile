@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2011/05/10 23:30:31 phonohawk Exp $
+# $NetBSD: Makefile,v 1.3 2011/12/01 23:05:07 phonohawk Exp $
 #
 
-DISTNAME=	tagged-0.2.2
+DISTNAME=	tagged-0.2.3.1
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
