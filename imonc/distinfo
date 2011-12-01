@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2009/11/22 15:00:18 gschwarz Exp $
+$NetBSD: distinfo,v 1.7 2011/12/01 14:34:36 gschwarz Exp $
 
-SHA1 (fli4l-3.4.0.tar.gz) = 5c0b54919bdcf22377db5f09209eb45ba90f0e8b
-RMD160 (fli4l-3.4.0.tar.gz) = 35569bbd3c2c1ec859bce0698977c32b4a9060e3
-Size (fli4l-3.4.0.tar.gz) = 10485838 bytes
-SHA1 (patch-aa) = cbdae2ca4abeca8d55f888516cfdb888d0b1b05a
+SHA1 (fli4l-3.6.1.tar.gz) = 8b4f54ab770599b01eced8288072b9d40368a0fa
+RMD160 (fli4l-3.6.1.tar.gz) = bd6236d0db837353537cede8d4f1519e2819e5de
+Size (fli4l-3.6.1.tar.gz) = 17994526 bytes
+SHA1 (patch-aa) = 65141c5201c349e0f53b17840e455c4ab66ed8aa
