@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2011/11/02 20:19:15 fhajny Exp $
+# $NetBSD: Makefile,v 1.11 2011/12/01 00:17:58 bharder Exp $
 #
 
-DISTNAME=	redis-2.4.2
+DISTNAME=	redis-2.4.4
 CATEGORIES=	databases
 MASTER_SITES=	http://redis.googlecode.com/files/
 
@@ -22,7 +22,7 @@ RCD_SCRIPT_SRC.redis=	${FILESDIR}/redis.sh
 
 DOCDIR=			share/doc/redis
 DOCFILES+=		00-RELEASENOTES BUGS COPYING \
-			Changelog README
+			README
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 INSTALLATION_DIRS+=	bin ${DOCDIR} ${EGDIR} ${EGDIR}/utils ${EGDIR}/tests
 CONF_FILES=		${EGDIR}/redis.conf.example ${PKG_SYSCONFDIR}/redis.conf
