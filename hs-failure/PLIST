@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/12/02 04:56:52 phonohawk Exp $
+lib/failure-${PKGVERSION}/${HASKELL_VERSION}/Control/Failure.hi
+lib/failure-${PKGVERSION}/${HASKELL_VERSION}/Control/Failure.p_hi
+lib/failure-${PKGVERSION}/${HASKELL_VERSION}/HSfailure-${PKGVERSION}.o
+lib/failure-${PKGVERSION}/${HASKELL_VERSION}/libHSfailure-${PKGVERSION}.a
+lib/failure-${PKGVERSION}/${HASKELL_VERSION}/libHSfailure-${PKGVERSION}_p.a
+lib/failure-${PKGVERSION}/${HASKELL_VERSION}/package-description
