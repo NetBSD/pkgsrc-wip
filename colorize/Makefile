@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/12/02 12:47:50 ivaniclixx Exp $
-#
+# $NetBSD: Makefile,v 1.2 2011/12/02 14:50:50 ivaniclixx Exp $
 
-DISTNAME=	colorize-0.1
-DISTFILES=	colorize-0.1-src.tar.gz
+DISTNAME=	colorize-0.1-src
+PKGNAME=	colorize-0.1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://deic.uab.cat/~iblanes/
 
