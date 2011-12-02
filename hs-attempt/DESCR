@@ -1,0 +1,2 @@
+Defines a data type, Attempt, which has a Success and Failure
+constructor. Failure contains an extensible exception.

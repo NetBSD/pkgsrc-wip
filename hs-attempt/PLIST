@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/12/02 06:08:39 phonohawk Exp $
+lib/attempt-${PKGVERSION}/${HASKELL_VERSION}/Data/Attempt.hi
+lib/attempt-${PKGVERSION}/${HASKELL_VERSION}/Data/Attempt.p_hi
+lib/attempt-${PKGVERSION}/${HASKELL_VERSION}/HSattempt-${PKGVERSION}.o
+lib/attempt-${PKGVERSION}/${HASKELL_VERSION}/libHSattempt-${PKGVERSION}.a
+lib/attempt-${PKGVERSION}/${HASKELL_VERSION}/libHSattempt-${PKGVERSION}_p.a
+lib/attempt-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/attempt-${PKGVERSION}/LICENSE
