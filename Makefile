@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4549 2011/12/01 09:59:55 phonohawk Exp $
+# $Id: Makefile,v 1.4550 2011/12/02 04:58:22 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -896,6 +896,7 @@ SUBDIR+=	hs-event-list
 SUBDIR+=	hs-executable-path
 SUBDIR+=	hs-explicit-exception
 SUBDIR+=	hs-explicit-iomodes
+SUBDIR+=	hs-failure
 SUBDIR+=	hs-fclabels
 SUBDIR+=	hs-filemanip
 SUBDIR+=	hs-fingertree
