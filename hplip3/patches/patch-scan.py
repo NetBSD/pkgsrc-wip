@@ -1,4 +1,6 @@
-$NetBSD: patch-scan.py,v 1.2 2011/11/17 22:09:36 schnoebe Exp $
+$NetBSD: patch-scan.py,v 1.3 2011/12/02 02:46:34 schnoebe Exp $
+
+Try to work better with multiple versions of Python
 
 --- scan.py.orig	2011-10-02 03:06:19.000000000 +0000
 +++ scan.py

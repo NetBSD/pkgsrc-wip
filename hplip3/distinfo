@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.16 2011/11/17 22:09:36 schnoebe Exp $
+$NetBSD: distinfo,v 1.17 2011/12/02 02:46:34 schnoebe Exp $
 
 SHA1 (hplip-3.11.10.tar.gz) = 716dea09c1570356b359e5b6d4a50f8b2654d760
 RMD160 (hplip-3.11.10.tar.gz) = d5e7bd065f1fea5f536b4bf47c8962374de95591
@@ -9,4 +9,4 @@ SHA1 (patch-ac) = 82e2951ec3edf44dd78dae9ac6abb307eb60b9fc
 SHA1 (patch-ad) = 468fbf167e1f20bb8617e444977969e46b19f3be
 SHA1 (patch-ae) = cd7499667e20aa42d13fb83f783895c910a191cf
 SHA1 (patch-io_hpmud_pml.c) = 9bd341140afbc9ddb8eb8dff7eee05365231f94f
-SHA1 (patch-scan.py) = b027c3f5cce33266a5ba1b8818094add85d499e1
+SHA1 (patch-scan.py) = 3db0f55a915812fa9535fcf1fa2eaebd9daa93e3

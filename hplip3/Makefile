@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.37 2011/11/17 22:09:36 schnoebe Exp $
+# $NetBSD: Makefile,v 1.38 2011/12/02 02:46:34 schnoebe Exp $
 #
 
 DISTNAME=		hplip-3.11.10
 CATEGORIES=		print
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=hplip/}
 
-MAINTAINER=		gsutre@NetBSD.org
+MAINTAINER=		schnoebe@NetBSD.org
 HOMEPAGE=		http://hplipopensource.com/
 COMMENT=		HP Linux Imaging and Printing
 LICENSE=		gnu-gpl-v2 AND mit AND modified-bsd
