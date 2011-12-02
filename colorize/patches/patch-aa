@@ -1,0 +1,37 @@
+$NetBSD: patch-aa,v 1.1.1.1 2011/12/02 12:47:50 ivaniclixx Exp $
+
+--- colorize.c	2010-10-31 17:19:43.000000000 +0100
++++ /root/colorize/colorize.c	2011-12-02 10:53:34.000000000 +0100
+@@ -17,7 +17,24 @@
+  * Copyright (C) 2010 Ian Blanes
+  */
+ 
++#ifdef __linux__
+ #include <pty.h>
++#include <error.h>
++#endif
++
++#ifdef __NetBSD__
++#include <util.h>
++#include "error.h"
++#endif
++
++#ifdef __OpenBSD__
++#include <util.h>
++#endif
++
++#ifdef __FreeBSD__
++#include <libutil.h>
++#endif
++
+ #include <poll.h>
+ #include <sys/types.h>
+ #include <unistd.h>
+@@ -27,7 +44,6 @@
+ #include <string.h>
+ #include <termios.h>
+ #include <errno.h>
+-#include <error.h>
+ #include <sys/mman.h>
+ #include <signal.h>
+ #include <fcntl.h>

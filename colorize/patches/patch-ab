@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2011/12/02 12:47:50 ivaniclixx Exp $
+
+--- ansi_escape_sequence.c	2010-10-31 17:12:54.000000000 +0100
++++ /root/colorize/ansi_escape_sequence.c	2011-12-02 10:30:28.000000000 +0100
+@@ -22,7 +22,7 @@
+ #include <sys/types.h>
+ #include <unistd.h>
+ #include <errno.h>
+-#include <error.h>
++/*#include <error.h>*/
+ #include <stdlib.h>
+ #include <stdio.h>
+ #include <string.h>
