@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/12/03 20:27:00 mrampke Exp $
+# $NetBSD: Makefile,v 1.2 2011/12/03 20:39:58 mrampke Exp $
 
 # fetching by tag from GitHub needs some special treatment
 DISTNAME=       ${GHUSER}-${GHNAME}-${GHTAG}-${GHREV}-g${GHCOMMIT}
@@ -28,7 +28,7 @@ LICENSE=	modified-bsd
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	autoreconf
+USE_TOOLS+=	automake autoreconf
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf -i
