@@ -1,4 +1,15 @@
 ----------------------------------------------------------------------
+Version 0.56.4, by Aleksey Cheusov, Sat,  3 Dec 2011 16:53:34 +0300
+
+  FIX: Shell scripts now use "trap" corectly.
+
+  Minor correction in pkg_lint_summary.1.
+
+  pkg_summary4view:
+    - TARGET_BUILD_DEPENDS and _ALL_DEPENDS are formatted
+      just like DEPENDS.
+
+----------------------------------------------------------------------
 Version 0.56.3, by Aleksey Cheusov, Thu, 17 Nov 2011 21:34:53 +0300
 
   pkg_src_summary:
