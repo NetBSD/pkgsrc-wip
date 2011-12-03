@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2011/11/17 19:00:01 cheusov Exp $
+# $NetBSD: Makefile,v 1.13 2011/12/03 20:08:46 cheusov Exp $
 #
 
 DISTNAME=	distbb-9
@@ -10,7 +10,7 @@ COMMENT=	DISTributed Bulk Build tool for pkgsrc
 LICENSE=	2-clause-bsd
 
 GIT_REPOSITORIES=	master
-GIT_REPO.master=	git@github.com:cheusov/distbb.git
+GIT_REPO.master=	git://github.com/cheusov/distbb.git
 .include "../../wip/mk/git-package.mk"
 
 DEPENDS+=	pkg_summary-utils>=0.56.3:../../pkgtools/pkg_summary-utils
