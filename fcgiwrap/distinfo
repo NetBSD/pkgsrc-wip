@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/12/03 20:27:00 mrampke Exp $
+
+SHA1 (gnosek-fcgiwrap-1.0.3-4-g58ec209.tar.gz) = 3bc4d449fa20813df15e9ccefbeea41d8b7d4d4c
+RMD160 (gnosek-fcgiwrap-1.0.3-4-g58ec209.tar.gz) = d494194570e124786014b94ea1459282cdcaf3ab
+Size (gnosek-fcgiwrap-1.0.3-4-g58ec209.tar.gz) = 8846 bytes
+SHA1 (patch-Makefile.in) = 1e56483f348dda497be6fc1116fd54e626f186ed
