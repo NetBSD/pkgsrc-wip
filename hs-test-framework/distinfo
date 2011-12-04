@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/12/04 13:11:59 phonohawk Exp $
+
+SHA1 (test-framework-0.4.1.1.tar.gz) = 13121d45a64e49a82a05f1c22431e06bd037c694
+RMD160 (test-framework-0.4.1.1.tar.gz) = 3eeb324bcb2f1ad08ee987d21ddff10e64a75b71
+Size (test-framework-0.4.1.1.tar.gz) = 19054 bytes
