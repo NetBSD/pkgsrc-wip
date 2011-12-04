@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4553 2011/12/04 12:34:11 phonohawk Exp $
+# $Id: Makefile,v 1.4554 2011/12/04 12:51:28 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -923,6 +923,7 @@ SUBDIR+=	hs-haskelldb-hdbc-sqlite3
 SUBDIR+=	hs-haskore
 SUBDIR+=	hs-hinstaller
 SUBDIR+=	hs-hopenssl
+SUBDIR+=	hs-hostname
 SUBDIR+=	hs-hscolour
 SUBDIR+=	hs-hslogger
 SUBDIR+=	hs-hslogger-template
