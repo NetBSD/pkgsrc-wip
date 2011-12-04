@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/12/04 12:50:17 phonohawk Exp $
+lib/hostname-${PKGVERSION}/${HASKELL_VERSION}/HShostname-${PKGVERSION}.o
+lib/hostname-${PKGVERSION}/${HASKELL_VERSION}/Network/HostName.hi
+lib/hostname-${PKGVERSION}/${HASKELL_VERSION}/Network/HostName.p_hi
+lib/hostname-${PKGVERSION}/${HASKELL_VERSION}/libHShostname-${PKGVERSION}.a
+lib/hostname-${PKGVERSION}/${HASKELL_VERSION}/libHShostname-${PKGVERSION}_p.a
+lib/hostname-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/hostname-${PKGVERSION}/LICENSE
