@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4558 2011/12/04 13:41:17 phonohawk Exp $
+# $Id: Makefile,v 1.4559 2011/12/04 20:41:58 ryo-on Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -16,8 +16,6 @@ SUBDIR+=	LabPlot
 SUBDIR+=	Mesa
 SUBDIR+=	MesaLib
 SUBDIR+=	MoleInvasion
-SUBDIR+=	OmegaT-bin
-SUBDIR+=	OmegaT-devel-bin
 SUBDIR+=	OpenGLUT
 SUBDIR+=	PHPUnit
 SUBDIR+=	PPower4
