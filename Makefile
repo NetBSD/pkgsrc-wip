@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4556 2011/12/04 13:12:57 phonohawk Exp $
+# $Id: Makefile,v 1.4557 2011/12/04 13:34:21 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -988,6 +988,7 @@ SUBDIR+=	hs-tagsoup
 SUBDIR+=	hs-tar
 SUBDIR+=	hs-terminfo
 SUBDIR+=	hs-test-framework
+SUBDIR+=	hs-test-framework-hunit
 SUBDIR+=	hs-text
 SUBDIR+=	hs-text-icu
 SUBDIR+=	hs-tfp
