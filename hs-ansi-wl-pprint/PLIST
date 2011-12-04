@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/12/04 12:32:54 phonohawk Exp $
+lib/ansi-wl-pprint-${PKGVERSION}/${HASKELL_VERSION}/HSansi-wl-pprint-${PKGVERSION}.o
+lib/ansi-wl-pprint-${PKGVERSION}/${HASKELL_VERSION}/Text/PrettyPrint/ANSI/Leijen.hi
+lib/ansi-wl-pprint-${PKGVERSION}/${HASKELL_VERSION}/Text/PrettyPrint/ANSI/Leijen.p_hi
+lib/ansi-wl-pprint-${PKGVERSION}/${HASKELL_VERSION}/libHSansi-wl-pprint-${PKGVERSION}.a
+lib/ansi-wl-pprint-${PKGVERSION}/${HASKELL_VERSION}/libHSansi-wl-pprint-${PKGVERSION}_p.a
+lib/ansi-wl-pprint-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/ansi-wl-pprint-${PKGVERSION}/LICENSE
