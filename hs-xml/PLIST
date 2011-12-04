@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/12/04 13:04:14 phonohawk Exp $
+lib/xml-${PKGVERSION}/${HASKELL_VERSION}/HSxml-${PKGVERSION}.o
+lib/xml-${PKGVERSION}/${HASKELL_VERSION}/Text/XML/Light.hi
+lib/xml-${PKGVERSION}/${HASKELL_VERSION}/Text/XML/Light.p_hi
+lib/xml-${PKGVERSION}/${HASKELL_VERSION}/Text/XML/Light/Cursor.hi
+lib/xml-${PKGVERSION}/${HASKELL_VERSION}/Text/XML/Light/Cursor.p_hi
+lib/xml-${PKGVERSION}/${HASKELL_VERSION}/Text/XML/Light/Input.hi
+lib/xml-${PKGVERSION}/${HASKELL_VERSION}/Text/XML/Light/Input.p_hi
+lib/xml-${PKGVERSION}/${HASKELL_VERSION}/Text/XML/Light/Lexer.hi
+lib/xml-${PKGVERSION}/${HASKELL_VERSION}/Text/XML/Light/Lexer.p_hi
+lib/xml-${PKGVERSION}/${HASKELL_VERSION}/Text/XML/Light/Output.hi
+lib/xml-${PKGVERSION}/${HASKELL_VERSION}/Text/XML/Light/Output.p_hi
+lib/xml-${PKGVERSION}/${HASKELL_VERSION}/Text/XML/Light/Proc.hi
+lib/xml-${PKGVERSION}/${HASKELL_VERSION}/Text/XML/Light/Proc.p_hi
+lib/xml-${PKGVERSION}/${HASKELL_VERSION}/Text/XML/Light/Types.hi
+lib/xml-${PKGVERSION}/${HASKELL_VERSION}/Text/XML/Light/Types.p_hi
+lib/xml-${PKGVERSION}/${HASKELL_VERSION}/libHSxml-${PKGVERSION}.a
+lib/xml-${PKGVERSION}/${HASKELL_VERSION}/libHSxml-${PKGVERSION}_p.a
+lib/xml-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/xml-${PKGVERSION}/LICENSE

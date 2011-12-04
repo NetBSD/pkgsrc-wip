@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/12/04 13:04:14 phonohawk Exp $
+
+SHA1 (xml-1.3.10.tar.gz) = eb7ec8fdb5283c226d9b53dbc399e1ce269fab66
+RMD160 (xml-1.3.10.tar.gz) = ffbd14920a844649baaf6febfd68d90aca5525af
+Size (xml-1.3.10.tar.gz) = 11895 bytes
