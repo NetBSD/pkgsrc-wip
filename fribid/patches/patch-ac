@@ -1,0 +1,32 @@
+$NetBSD: patch-ac,v 1.1.1.1 2011/12/05 15:13:33 oht Exp $
+patch-ac
+--- common/pipe.c.orig	2011-09-25 13:59:56.000000000 +0200
++++ common/pipe.c	2011-12-02 09:44:27.000000000 +0100
+@@ -101,10 +101,25 @@
+     }
+ }
+ 
++char *strdup(const char *str)
++{
++    int n = strlen(str) + 1;
++    char *dup = malloc(n);
++    if(dup)
++    {
++        strcpy(dup, str);
++    }
++    return dup;
++}
++
++
+ char *pipe_readString(FILE *in) {
+     int length = pipe_readInt(in);
+-    if (length <= 0) return strdup("");
+-    
++    if (length <= 0) {
++	char a = '\0';
++	char *pa = &a;
++	return strdup(pa);
++     }
+     char *data = malloc(length +1);
+     if (!data) {
+         pipeError();

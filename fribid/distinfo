@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/12/05 15:13:33 oht Exp $
+
+SHA1 (fribid-1.0.0.tar.bz2) = c105a49bdf94328618c9a2b5f324169f2591f04d
+RMD160 (fribid-1.0.0.tar.bz2) = c31f23215d6e39f9e6cbbf7af10b175bd446290a
+Size (fribid-1.0.0.tar.bz2) = 117355 bytes
+SHA1 (patch-aa) = 6de2154d486a38b7f464b1414db64e56a38a18c0
+SHA1 (patch-ab) = 27bfed21bf932d21822b2d990670f186ddd23b80
+SHA1 (patch-ac) = 641fadafc8340a1a2c2ed202799ef89be63e5a32

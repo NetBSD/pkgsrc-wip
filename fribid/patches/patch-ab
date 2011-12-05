@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1.1.1 2011/12/05 15:13:33 oht Exp $
+patch-ab
+--- Makefile.orig	2011-09-25 13:59:56.000000000 +0200
++++ Makefile	2011-12-02 09:41:12.000000000 +0100
+@@ -20,7 +20,8 @@
+ #  THE SOFTWARE.
+ #
+ 
+-SUBDIRS=client plugin translations doc
++#SUBDIRS=client plugin translations doc
++SUBDIRS=client plugin doc
+ 
+ DISTNAME=`./configure --internal--get-define=BINNAME`-`./configure --internal--get-define=PACKAGEVERSION`
+ 
