@@ -118,10 +118,13 @@ pre-extract: do-git-extract
 do-git-extract:
 .for _repo_ in ${GIT_REPOSITORIES}
 	${RUN} cd ${WRKDIR};						\
+	if [ ! -d ${_GIT_DISTDIR:Q} ]; then mkdir -p ${_GIT_DISTDIR:Q}; fi;	\
+	${_GIT_EXTRACT_CACHED.${_repo_}};				\
 	${SETENV} ${_GIT_ENV}						\
 		${_GIT_CMD} clone					\
 			${_GIT_FLAGS}		 			\
-			${GIT_REPO.${_repo_}:Q}
+			${GIT_REPO.${_repo_}:Q};			\
+	${_GIT_CREATE_CACHE.${_repo_}}
 .endfor
 
 .endif
