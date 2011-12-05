@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/12/02 06:26:41 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2011/12/05 04:57:58 phonohawk Exp $
 #
 
-DISTNAME=	convertible-text-0.3.0.10
+DISTNAME=	convertible-text-0.4.0
 CATEGORIES=	textproc
 
 MAINTAINER=	pho@cielonegro.org
