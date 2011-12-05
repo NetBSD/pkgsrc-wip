@@ -1,4 +1,4 @@
-# $Id: hg-package.mk,v 1.7 2011/12/05 13:29:18 asau Exp $
+# $Id: hg-package.mk,v 1.8 2011/12/05 14:00:43 asau Exp $
 
 # This file provides simple access to Mercurial repositories, so that packages
 # can be created from Mercurial instead of from released tarballs.
@@ -109,8 +109,8 @@ _HG_TAG.${repo}=	${HG_TAG}
 _HG_TAG_FLAG.${repo}=	-d${CHECKOUT_DATE:Q}
 _HG_TAG.${repo}=	${CHECKOUT_DATE:Q}
 .  else
-_HG_TAG_FLAG.${repo}=	-rtip
-_HG_TAG.${repo}=	tip
+_HG_TAG_FLAG.${repo}=	-d<${_HG_TODAY} 00:00:00
+_HG_TAG.${repo}=	${_HG_TODAY:Q}
 .  endif
 
 # Cache support:
