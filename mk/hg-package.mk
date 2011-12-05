@@ -1,4 +1,4 @@
-# $Id: hg-package.mk,v 1.5 2011/12/05 12:29:57 asau Exp $
+# $Id: hg-package.mk,v 1.6 2011/12/05 12:40:14 asau Exp $
 
 # This file provides simple access to Mercurial repositories, so that packages
 # can be created from Mercurial instead of from released tarballs.
@@ -113,6 +113,23 @@ _HG_TAG_FLAG.${repo}=	-rtip
 _HG_TAG.${repo}=	tip
 .  endif
 
+# Cache support:
+#   cache file name
+_HG_DISTFILE.${repo}=	${PKGBASE}-${HG_REPO.${repo}}-${_CVS_TAG.${repo}}.tar.gz
+
+#   command to extract cache file
+_HG_EXTRACT_CACHED.${repo}=	\
+	if [ -f ${_HG_DISTDIR}/${_HG_DISTFILE.${repo}:Q} ]; then		\
+	  ${STEP_MSG} "Extracting cached Mercurial archive "${_HG_DISTFILE.${repo}:Q}"."; \
+	  pax -r -z -f ${_HG_DISTDIR}/${_HG_DISTFILE.${repo}:Q};	\
+	  exit 0;							\
+	fi
+
+#   create cache archive
+_HG_CREATE_CACHE.${repo}=	\
+	${STEP_MSG} "Creating cached Mercurial archive "${_HG_DISTFILE.${repo}:Q}"."; \
+	${MKDIR} ${_HG_DISTDIR:Q};					\
+	pax -w -z -f ${_HG_DISTDIR}/${_HG_DISTFILE.${repo}:Q} ${HG_REPO.${repo}:Q}
 .endfor
 
 pre-extract: do-hg-extract
