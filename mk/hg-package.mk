@@ -1,4 +1,4 @@
-# $Id: hg-package.mk,v 1.4 2011/06/27 10:50:24 asau Exp $
+# $Id: hg-package.mk,v 1.5 2011/12/05 12:29:57 asau Exp $
 
 # This file provides simple access to Mercurial repositories, so that packages
 # can be created from Mercurial instead of from released tarballs.
@@ -47,6 +47,14 @@ PKGREVISION?=		$(CHECKOUT_DATE:S/-//g)
 PKGREVISION?=		$(_HG_PKGVERSION:S/.//g)
 . endif
 .endif
+
+#
+# definition of user-visible output variables
+#
+
+# commonly used repositories
+HG_ROOT_SOURCEFORGE?=	http://${HG_PROJECT}.hg.sourceforge.net:/cvsroot/${HG_PROJECT}
+HG_PROJECT?=		${PKGBASE}
 
 #
 # End of the interface part. Start of the implementation part.
