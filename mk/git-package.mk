@@ -64,8 +64,7 @@ pre-extract: do-git-extract
 .PHONY: do-git-extract
 do-git-extract:
 .for _repo_ in ${GIT_REPOSITORIES}
-	${_PKG_SILENT}${_PKG_DEBUG}set -e;				\
-	cd ${WRKDIR};							\
+	${RUN}; cd ${WRKDIR};						\
 	${SETENV} ${_GIT_ENV}						\
 		${_GIT_CMD} clone					\
 			${_GIT_FLAGS}		 			\
