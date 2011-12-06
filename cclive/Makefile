@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2011/10/23 13:23:19 ryo-on Exp $
+# $NetBSD: Makefile,v 1.18 2011/12/06 21:54:56 guigui2 Exp $
 #
 
-DISTNAME=		cclive-0.7.7
+DISTNAME=		cclive-0.7.8
 CATEGORIES=		net multimedia www
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=cclive/}
 
