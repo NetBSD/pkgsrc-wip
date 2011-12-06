@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2010/11/17 10:43:31 obache Exp $
+$NetBSD: distinfo,v 1.3 2011/12/06 10:58:02 obache Exp $
 
-SHA1 (uim-chewing-0.0.4.2.tar.gz) = 935ebb29670bf59d6b8a721454c0eb2d636cf6a1
-RMD160 (uim-chewing-0.0.4.2.tar.gz) = ff28abc4580a8ad60fbbc57b6bdbd7bee866eb97
-Size (uim-chewing-0.0.4.2.tar.gz) = 304304 bytes
+SHA1 (uim-chewing-0.1.0.tar.gz) = c3c7aeda314b3f74e9e201417a836bb0e6ac1f13
+RMD160 (uim-chewing-0.1.0.tar.gz) = 3e2014262dce9f98f23f097cb926b7aa3fce4b9d
+Size (uim-chewing-0.1.0.tar.gz) = 317292 bytes

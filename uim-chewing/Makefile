@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2010/11/17 10:43:31 obache Exp $
+# $NetBSD: Makefile,v 1.4 2011/12/06 10:58:02 obache Exp $
 #
 
-DISTNAME=	uim-chewing-0.0.4.2
+DISTNAME=	uim-chewing-0.1.0
 CATEGORIES=	inputmethod
 MASTER_SITES=	http://uim.googlecode.com/files/
 
