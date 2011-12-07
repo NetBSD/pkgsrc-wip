@@ -2,3 +2,39 @@ This is the gcc 4.7 compiler suite.
 
 This package has a test target. For testing (only), this
 package requires devel/dejagnu and devel/autogen.
+
+NetBSD current needs two patches before building gcc47 (toolchain/45673):
+
+ 
+--- /usr/include/x86/lock.h.orig	2011-12-02 11:07:39.000000000 +0100
++++ /usr/include/x86/lock.h	2011-12-02 11:08:18.000000000 +0100
+@@ -106,8 +106,8 @@
+ 
+ 	val = __SIMPLELOCK_LOCKED;
+ 	__asm volatile ("xchgb %0,(%2)" : 
+-	    "=r" (val)
+-	    :"0" (val), "r" (lockp));
++	    "=q" (val)
++	    :"0" (val), "q" (lockp));
+ 	__insn_barrier();
+ 	return val == __SIMPLELOCK_UNLOCKED;
+ }
+
+
+--- /usr/include/sys/sdt.h.orig	2011-12-02 15:10:48.000000000 +0100
++++ /usr/include/sys/sdt.h	2011-12-02 15:12:14.000000000 +0100
+@@ -34,10 +34,13 @@
+ #ifndef _SDT_H_
+ #define _SDT_H_
+ 
++#include <stdint.h>
++
+ #if defined(_KERNEL_OPT)
+ #include "opt_dtrace.h"
+ #endif
+ 
++
+ #define SDT_MAX_PROVIDER	1024	/* max number of SDT providers */
+ #define SDT_MAX_ARGS		5	/* max number of probe arguments */
+ #define SDT_MAX_NAME_SIZE	64	/* max size of provider name */
+

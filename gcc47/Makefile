@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.6 2011/07/28 14:11:56 asau Exp $
+# $NetBSD: Makefile,v 1.7 2011/12/07 13:42:27 keckhardt Exp $
 
 GCC_VERSION=		4.7
-DISTNAME=		gcc-${GCC_VERSION}-20110716
+DISTNAME=		gcc-${GCC_VERSION}-20111126
 PKGNAME=		gcc47-${GCC_VERSION}
 CATEGORIES=		wip
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX}
-SITES.gcc-4.7-20110716.tar.bz2= \
-		ftp://ftp.fu-berlin.de/unix/languages/gcc/snapshots/4.7-20110716/
+SITES.gcc-4.7-20111126.tar.bz2= \
+		ftp://ftp.fu-berlin.de/unix/languages/gcc/snapshots/4.7-20111126/
 
 EXTRACT_SUFX=		.tar.bz2
 
@@ -187,8 +187,29 @@ pre-configure:
 	${CP} ${WRKSRC}/gcc/config/freebsd-stdint.h ${WRKSRC}/gcc/config/netbsd-stdint.h
 .endif
 
-# post-install:
-# 	${TEST} -f ${DESTDIR}${GCC_PREFIX}/bin/cc || ${LN} -f ${DESTDIR}${GCC_PREFIX}/bin/gcc ${DESTDIR}${GCC_PREFIX}/bin/cc
+
+do-configure:
+	${MKDIR} ${WRKDIR}/obj
+	cd ${WRKDIR}/obj; ${SETENV} ${CONFIGURE_ENV} ${CONFIG_SHELL} ${WRKSRC}/configure ${CONFIGURE_ARGS} --prefix=${GCC_PREFIX} --mandir=${GCC_PREFIX}/man --infodir=${GCC_PREFIX}/info
+
+do-build:
+	(${_ULIMIT_CMD} cd ${WRKDIR}/obj && ${SETENV} ${MAKE_ENV} ${GMAKE} -j${MAKE_JOBS:U1:Q} )
+
+
+do-install:
+	(cd ${WRKDIR}/obj && ${SETENV} ${MAKE_ENV} ${GMAKE} install DESTDIR=${DESTDIR} \
+	 && ${TEST} -f ${DESTDIR}${GCC_PREFIX}/bin/cc || ${LN} -f ${DESTDIR}${GCC_PREFIX}/bin/gcc ${DESTDIR}${GCC_PREFIX}/bin/cc)
+
+.if ${OPSYS} == "SunOS" && ${OS_VERSION} != "5.11" && !empty(MACHINE_ARCH:M*86*)
+post-install:
+	-${SH} files/values.c ${DESTDIR}${GCC_PREFIX}/bin/gcc -m32
+	-${SH} files/values.c ${DESTDIR}${GCC_PREFIX}/bin/gcc -m64
+.endif
+
+GENERATE_PLIST+=                                                        \
+	cd ${DESTDIR}${PREFIX} && ${FIND} ${GCC_SUBPREFIX} \( -type f -o -type l \) -print \
+	| ${SORT} ;
+
 
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../math/mpcomplex/buildlink3.mk"
