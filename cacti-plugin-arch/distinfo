@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.6 2009/07/19 22:33:37 pettai Exp $
-
-SHA1 (cacti-plugin-0.8.7e-PA-v2.5.zip) = af6adbe6d2ee83b0ea5a21fdd005ffa518a1e4f5
-RMD160 (cacti-plugin-0.8.7e-PA-v2.5.zip) = b9cee4dcfea1c6e344f6068b5b92babef23433c1
-Size (cacti-plugin-0.8.7e-PA-v2.5.zip) = 208458 bytes
-SHA1 (patch-aa) = 93ff81f1c0e8bae460b42f930a44026222b4ca40

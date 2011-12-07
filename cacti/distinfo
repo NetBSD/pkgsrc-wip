@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2009/07/19 21:48:10 pettai Exp $
-
-SHA1 (cacti-0.8.7e.tar.gz) = 6ba93e200e0fbbddfbc5a9a98a9cf0f70842d904
-RMD160 (cacti-0.8.7e.tar.gz) = b6e4bb937e69337113d014d4a802455a852e7baf
-Size (cacti-0.8.7e.tar.gz) = 2232297 bytes
-SHA1 (patch-aa) = cdd1a4085da2be01020d4806a1a9fbdc9848b01b

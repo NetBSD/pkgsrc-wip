@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4560 2011/12/07 12:31:40 bubuchka Exp $
+# $Id: Makefile,v 1.4561 2011/12/07 20:49:28 tezdog Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -242,8 +242,6 @@ SUBDIR+=	bzrtools
 SUBDIR+=	c-news
 SUBDIR+=	c2hs
 SUBDIR+=	cabal-install
-SUBDIR+=	cacti
-SUBDIR+=	cacti-plugin-arch
 SUBDIR+=	cacti-plugin-hostinfo
 SUBDIR+=	cacti-plugin-monitor
 SUBDIR+=	cacti-plugin-settings

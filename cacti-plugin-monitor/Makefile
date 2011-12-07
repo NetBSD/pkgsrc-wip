@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/09/29 22:58:48 pettai Exp $
+# $NetBSD: Makefile,v 1.3 2011/12/07 20:49:29 tezdog Exp $
 #
 
 DISTNAME=		monitor-0.8.2
@@ -16,7 +16,7 @@ NO_BUILD=		yes
 WRKSRC=			${WRKDIR}/monitor
 
 BUILD_DEPENDS+=		gtar-[0-9]*:../../archivers/gtar
-DEPENDS+=		cacti-plugin-arch-[0-9]*:../../wip/cacti-plugin-arch
+DEPENDS+=		cacti>=0.8.7h:../../net/cacti
 
 USE_TOOLS+=		gtar
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/09/29 23:24:21 pettai Exp $
+# $NetBSD: Makefile,v 1.2 2011/12/07 20:49:29 tezdog Exp $
 #
 
 DISTNAME=		settings-0.5
@@ -15,7 +15,7 @@ NO_BUILD=		yes
 WRKSRC=			${WRKDIR}/settings
 
 BUILD_DEPENDS+=		gtar-[0-9]*:../../archivers/gtar
-DEPENDS+=		cacti-plugin-arch-[0-9]*:../../wip/cacti-plugin-arch
+DEPENDS+=		cacti>=0.8.7h:../../net/cacti
 
 USE_TOOLS+=		gtar
 
