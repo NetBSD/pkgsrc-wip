@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/12/07 12:12:23 bubuchka Exp $
+
+SHA1 (Proc-Fork-0.71.tar.gz) = f92161b35a7a76585bb98d5f8151f3f5470966ff
+RMD160 (Proc-Fork-0.71.tar.gz) = 687c48e142620435fea3f6d69bc0d4d2c5307dda
+Size (Proc-Fork-0.71.tar.gz) = 7919 bytes
