@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4559 2011/12/04 20:41:58 ryo-on Exp $
+# $Id: Makefile,v 1.4560 2011/12/07 12:31:40 bubuchka Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1828,6 +1828,7 @@ SUBDIR+=	p5-Plucene-Plugin-Analyzer-SnowballAnalyzer
 SUBDIR+=	p5-PluceneSimple
 SUBDIR+=	p5-Pod-Constants
 SUBDIR+=	p5-Pod-Xhtml
+SUBDIR+=	p5-Proc-Fork
 SUBDIR+=	p5-Quota
 SUBDIR+=	p5-RTF-Writer
 SUBDIR+=	p5-Spread
