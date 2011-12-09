@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.9 2011/11/15 13:22:12 asau Exp $
+@comment $NetBSD: PLIST.common,v 1.10 2011/12/09 12:47:54 asau Exp $
 bin/fnt2bdf
 bin/function_grep.pl
 bin/msiexec
@@ -200,6 +200,7 @@ include/wine/windows/dbt.h
 include/wine/windows/dciddi.h
 include/wine/windows/dciman.h
 include/wine/windows/dde.h
+include/wine/windows/dde.rh
 include/wine/windows/ddeml.h
 include/wine/windows/ddk/compstui.h
 include/wine/windows/ddk/hidsdi.h
@@ -231,6 +232,7 @@ include/wine/windows/digitalv.h
 include/wine/windows/dimm.h
 include/wine/windows/dimm.idl
 include/wine/windows/dinput.h
+include/wine/windows/dinputd.h
 include/wine/windows/dispdib.h
 include/wine/windows/dispex.h
 include/wine/windows/dispex.idl
@@ -608,6 +610,7 @@ include/wine/windows/uuids.h
 include/wine/windows/uxtheme.h
 include/wine/windows/vdmdbg.h
 include/wine/windows/ver.h
+include/wine/windows/verrsrc.h
 include/wine/windows/vfw.h
 include/wine/windows/vfwmsgs.h
 include/wine/windows/vmr9.h
@@ -627,6 +630,8 @@ include/wine/windows/wia_xp.idl
 include/wine/windows/winbase.h
 include/wine/windows/wincodec.h
 include/wine/windows/wincodec.idl
+include/wine/windows/wincodecsdk.h
+include/wine/windows/wincodecsdk.idl
 include/wine/windows/wincon.h
 include/wine/windows/wincred.h
 include/wine/windows/wincrypt.h
@@ -645,6 +650,7 @@ include/wine/windows/winnetwk.h
 include/wine/windows/winnls.h
 include/wine/windows/winnls32.h
 include/wine/windows/winnt.h
+include/wine/windows/winnt.rh
 include/wine/windows/winperf.h
 include/wine/windows/winreg.h
 include/wine/windows/winresrc.h
@@ -1172,6 +1178,7 @@ lib/wine/fakedlls/sc.exe
 lib/wine/fakedlls/scarddlg.dll
 lib/wine/fakedlls/sccbase.dll
 lib/wine/fakedlls/schannel.dll
+lib/wine/fakedlls/scrrun.dll
 lib/wine/fakedlls/secedit.exe
 lib/wine/fakedlls/secur32.dll
 lib/wine/fakedlls/security.dll
@@ -1674,6 +1681,7 @@ lib/wine/sc.exe.so
 lib/wine/scarddlg.dll.so
 lib/wine/sccbase.dll.so
 lib/wine/schannel.dll.so
+lib/wine/scrrun.dll.so
 lib/wine/secedit.exe.so
 lib/wine/secur32.dll.so
 lib/wine/security.dll.so
