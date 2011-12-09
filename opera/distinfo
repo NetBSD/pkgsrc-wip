@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.14 2011/10/19 11:44:00 obache Exp $
+$NetBSD: distinfo,v 1.15 2011/12/09 09:04:21 obache Exp $
 
-SHA1 (opera-11.52-1100.amd64.freebsd.tar.bz2) = d2cab39aa7625f1cbfa2011d39636ca46dc4e185
-RMD160 (opera-11.52-1100.amd64.freebsd.tar.bz2) = 8bfa68220c00e8d1ab710144c9a42b798669aed9
-Size (opera-11.52-1100.amd64.freebsd.tar.bz2) = 13613365 bytes
-SHA1 (opera-11.52-1100.i386.freebsd.tar.bz2) = 561ad70fed69d53774e9976d4c328564b252568c
-RMD160 (opera-11.52-1100.i386.freebsd.tar.bz2) = a53a229c8ceb212eb71169fcf78199e4ad513448
-Size (opera-11.52-1100.i386.freebsd.tar.bz2) = 12864605 bytes
-SHA1 (opera-11.52-1100.i386.linux.tar.bz2) = ba9a3166cc7b5e18f40bd67e29e973884a400401
-RMD160 (opera-11.52-1100.i386.linux.tar.bz2) = da8811214dca8ef58f411fadfe9a25c2c3cf72e5
-Size (opera-11.52-1100.i386.linux.tar.bz2) = 12869174 bytes
-SHA1 (opera-11.52-1100.x86_64.linux.tar.bz2) = e36c5403e510aecb09f85e4e6f1e391ee148f989
-RMD160 (opera-11.52-1100.x86_64.linux.tar.bz2) = f7e2b677a92539fd07f028ff266944330887da2b
-Size (opera-11.52-1100.x86_64.linux.tar.bz2) = 14206410 bytes
+SHA1 (opera-11.60-1185.amd64.freebsd.tar.xz) = d675bb6367e04f8e4af1c130db0768837a26cce4
+RMD160 (opera-11.60-1185.amd64.freebsd.tar.xz) = 8d05a82c9d8359bc82e1bee81a1942187750e327
+Size (opera-11.60-1185.amd64.freebsd.tar.xz) = 12095468 bytes
+SHA1 (opera-11.60-1185.i386.freebsd.tar.xz) = befc0d908b76d930bf9a0ac753ccfc2b086189fb
+RMD160 (opera-11.60-1185.i386.freebsd.tar.xz) = 9b8dc467f698cf540c0f537a98677930a077a0c4
+Size (opera-11.60-1185.i386.freebsd.tar.xz) = 11537236 bytes
+SHA1 (opera-11.60-1185.i386.linux.tar.xz) = 96e3366afff3b738db9fadbd1046623827afaf00
+RMD160 (opera-11.60-1185.i386.linux.tar.xz) = f645c292f34a08a2bc44107f3ca57f4f0a1a55bd
+Size (opera-11.60-1185.i386.linux.tar.xz) = 11505432 bytes
+SHA1 (opera-11.60-1185.x86_64.linux.tar.xz) = dc6d2cf74ed98dfb3625529a03a6d9107a4d01cf
+RMD160 (opera-11.60-1185.x86_64.linux.tar.xz) = 50de639af506a0493843763cadc2c8e74d201538
+Size (opera-11.60-1185.x86_64.linux.tar.xz) = 12347432 bytes

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.17 2011/10/19 11:44:00 obache Exp $
+# $NetBSD: Makefile,v 1.18 2011/12/09 09:04:21 obache Exp $
 
 DISTNAME=		opera-${OPERA_PKG_VERSION}-${OPERA_PKG_BUILD}.${OPERA_ARCH}.${EMUL_OPSYS}
 PKGNAME=		opera-${OPERA_PKG_VERSION:S/u/pl/}
 CATEGORIES=		www
 MASTER_SITES+=		${MASTER_SITE_OPERA:=${OPERA_DIR}/}
-EXTRACT_SUFX=		.tar.bz2
+EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.opera.com/
@@ -31,17 +31,14 @@ MASTER_SITE_OPERA+=	http://ftp.yz.yamagata-u.ac.jp/pub/opera/
 USE_LANGUAGES=		# empty
 NO_BUILD=		yes
 
-OPERA_PKG_BUILD=	1100
-OPERA_PKG_VERSION=	11.52
-OPERA_PKG_VERSION_DIR=	1152
+OPERA_PKG_BUILD=	1185
+OPERA_PKG_VERSION=	11.60
+OPERA_PKG_VERSION_DIR=	1160
 
 .if ${EMUL_OPSYS} == "linux"
 EMUL_MODULES.linux=	base x11 fontconfig
-# need gstreamer0.10?
-#EMUL_MODULES.linux+=	xml2 gstreamer
 EMUL_REQD=		suse>=10.0
 OPERA_ARCH.x86_64=	x86_64
-OPERA_ARCH.powerpc=	ppc
 OPERA_OPSYS_SUBDIR=	linux
 .if !defined(EMUL_IS_NATIVE) && ${OPSYS} == "NetBSD"
 TOOLS_CREATE+=		md5
