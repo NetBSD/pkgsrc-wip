@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2011/12/09 13:17:41 makoto Exp $
+# $NetBSD: Makefile,v 1.7 2011/12/09 14:31:26 makoto Exp $
 
 DISTNAME=	ghostscript-${GS_VERSION}
 CATEGORIES=	print
@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v3
 
 .include	"Makefile.common"
 
-DEPENDS+=		ghostscript-fonts-[0-9]*>=6.0:../../fonts/ghostscript-fonts
+DEPENDS+=		ghostscript-fonts>=6.0:../../fonts/ghostscript-fonts
 
 CONFLICTS+=		ghostscript-afpl-[0-9]*
 CONFLICTS+=		ghostscript-esp{,-nox11}-[0-9]*
