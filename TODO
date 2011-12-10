@@ -75,7 +75,7 @@ Suggested package updates
 	o libuuid-1.41.14
 	o linphone-3.4.3
 	o lirc-0.8.6
-	o lives-1.4.8
+	o lives-1.4.9
 	o llvm-3.0
 	o man-1.6f
 	o mcabber-0.10.1
@@ -104,7 +104,7 @@ Suggested package updates
 	o rezound-0.12.3beta
 	o rosegarden-current-1.4.0
 	o rsyslog6-6.3.6
-	o samhain-3.0.0
+	o samhain-3.0.1
 	o scantailor-0.9.10
 	o sflphone-0.7.2
 	o siege-2.70
