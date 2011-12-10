@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.17 2011/09/30 05:01:39 obache Exp $
+# $NetBSD: Makefile,v 1.18 2011/12/10 13:37:18 obache Exp $
 #
 
-DISTNAME=	mplus-TESTFLIGHT-043
+DISTNAME=	mplus-TESTFLIGHT-045
 PKGNAME=	${DISTNAME:S/-TESTFLIGHT-/-outline-fonts-0pre/}
 CATEGORIES=	fonts
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP:=mplus-fonts/6650/}
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://mplus-fonts.sourceforge.jp/mplus-outline-fonts/index-en.html
