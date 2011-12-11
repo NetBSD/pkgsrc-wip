@@ -1,4 +1,4 @@
-# $Id: Makefile.multinode-NetBSD,v 1.1.1.1 2011/12/11 04:11:20 ryo-on Exp $
+# $Id: Makefile.multinode-NetBSD,v 1.2 2011/12/11 04:14:46 ryo-on Exp $
 # Source: http://mail-index.NetBSD.org/netbsd-help/2005/03/25/0005.html
 #
 # Starts up two qemu instances and networks bridges them to the local
