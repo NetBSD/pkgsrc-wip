@@ -67,6 +67,8 @@
 #   -l    output to stderr the error messages
 #         compatible with pkg_lint_summary, e.g.,
 #         d: not_found foo-[0-9]*:../../devel/foo <- lang/bar bar
+#   -2    separate DEPENDS and BUILD_DEPENDS and prepand output lines with
+#         "DEPENDS" or "BUILD_DEPENDS"
 #   =P <pkgpaths>
 #         find dependencies for specified PKGPATHs.
 #         If pkgpaths starts with `/' or `.', it is treated as a
@@ -147,6 +149,8 @@ BEGIN {
 	show_all_deps = getarg("a")
 
 	opt_exit_status = getarg("X")
+
+	diff_deps = !mode_tsort && getarg("2")
 
 	all_packages = 1
 
@@ -369,7 +373,7 @@ END {
 					}
 
 					if (foundcnt == 1 && !mode_strict && id != 3){
-						final_deps [pair, found [1]] = depname
+						final_deps [id, pair, found [1]] = depname
 						break
 					}
 
@@ -422,7 +426,7 @@ END {
 						continue
 					}
 
-					final_deps [pair, matched] = depname
+					final_deps [id, pair, matched] = depname
 
 					break
 				}
@@ -431,13 +435,21 @@ END {
 	}
 
 	# output PKGNAMESs/PKGPATHs
-	for (pair in final_deps){
-		split(pair, arr, SUBSEP)
+	prepand = ""
+	for (triple in final_deps){
+		split(triple, arr, SUBSEP)
 
-		pair1 = arr [2]
-		pair2 = arr [1]
+		pair1 = arr [3]
+		pair2 = arr [2]
 		path1 = pair2path(pair1)
 		path2 = pair2path(pair2)
+
+		id = arr [1]
+		if (diff_deps){
+			if (id == 1) prepand = "DEPENDS "
+			else if (id == 2) prepand = "BUILD_DEPENDS "
+			else abort("bad id")
+		}
 
 		# right part
 		if (out_pkgname){
@@ -487,9 +499,9 @@ END {
 		}
 		if (left != ""){
 			if (keep_depver)
-				print left, right, "(", final_deps [pair], ")"
+				print prepand left, right, "(", final_deps [triple], ")"
 			else
-				print left, right
+				print prepand left, right
 		}
 
 		already_printed [path1] = already_printed [path2] = 1

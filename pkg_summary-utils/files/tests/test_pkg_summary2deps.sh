@@ -76,6 +76,84 @@ www/ap2-vhost-ldap:PKG_APACHE=apache2
 www/ap22-vhost-ldap:PKG_APACHE=apache22
 '
 
+# pkg_summary2deps -Ap
+pkg_summary2deps -Apa -2 src_summary.txt | sort |
+cmp 'pkg_summary2deps #1.1' \
+'BUILD_DEPENDS devel/gmake devel/libmaa
+BUILD_DEPENDS devel/gmake editors/emacs
+BUILD_DEPENDS devel/gmake textproc/dict-client
+BUILD_DEPENDS devel/gmake wip/dict-client
+BUILD_DEPENDS devel/gmake wip/dict-server
+BUILD_DEPENDS devel/libtool-base devel/libltdl
+BUILD_DEPENDS devel/libtool-base devel/libmaa
+BUILD_DEPENDS devel/libtool-base devel/pkg-config
+BUILD_DEPENDS devel/libtool-base graphics/jpeg
+BUILD_DEPENDS devel/libtool-base graphics/libungif
+BUILD_DEPENDS devel/libtool-base graphics/png
+BUILD_DEPENDS devel/libtool-base graphics/tiff
+BUILD_DEPENDS devel/libtool-base wip/dict-client
+BUILD_DEPENDS devel/libtool-base wip/dict-server
+BUILD_DEPENDS devel/pkg-config editors/emacs
+BUILD_DEPENDS pkgtools/x11-links editors/emacs
+BUILD_DEPENDS sysutils/checkperms devel/gmake
+BUILD_DEPENDS sysutils/checkperms devel/libltdl
+BUILD_DEPENDS sysutils/checkperms devel/libmaa
+BUILD_DEPENDS sysutils/checkperms devel/libtool-base
+BUILD_DEPENDS sysutils/checkperms devel/pipestatus
+BUILD_DEPENDS sysutils/checkperms devel/pkg-config
+BUILD_DEPENDS sysutils/checkperms editors/emacs
+BUILD_DEPENDS sysutils/checkperms graphics/jpeg
+BUILD_DEPENDS sysutils/checkperms graphics/libungif
+BUILD_DEPENDS sysutils/checkperms graphics/png
+BUILD_DEPENDS sysutils/checkperms graphics/tiff
+BUILD_DEPENDS sysutils/checkperms lang/perl5
+BUILD_DEPENDS sysutils/checkperms net/netcat
+BUILD_DEPENDS sysutils/checkperms pkgtools/x11-links
+BUILD_DEPENDS sysutils/checkperms textproc/dict-client
+BUILD_DEPENDS sysutils/checkperms textproc/dictem
+BUILD_DEPENDS sysutils/checkperms wip/awk-pkgsrc-dewey
+BUILD_DEPENDS sysutils/checkperms wip/dict-client
+BUILD_DEPENDS sysutils/checkperms wip/dict-server
+BUILD_DEPENDS sysutils/checkperms wip/distbb
+BUILD_DEPENDS sysutils/checkperms wip/paexec
+BUILD_DEPENDS sysutils/checkperms wip/pkg_online
+BUILD_DEPENDS sysutils/checkperms wip/pkg_online-client
+BUILD_DEPENDS sysutils/checkperms wip/pkg_online-server
+BUILD_DEPENDS sysutils/checkperms wip/pkg_summary-utils
+BUILD_DEPENDS sysutils/checkperms wip/runawk
+DEPENDS devel/libltdl textproc/dict-client
+DEPENDS devel/libmaa wip/dict-client
+DEPENDS devel/libmaa wip/dict-server
+DEPENDS devel/libmaa wip/paexec
+DEPENDS devel/pipestatus wip/pkg_online-client
+DEPENDS devel/pipestatus wip/pkg_online-server
+DEPENDS devel/pipestatus wip/pkg_summary-utils
+DEPENDS editors/emacs textproc/dictem
+DEPENDS graphics/jpeg editors/emacs
+DEPENDS graphics/jpeg graphics/tiff
+DEPENDS graphics/libungif editors/emacs
+DEPENDS graphics/png editors/emacs
+DEPENDS graphics/tiff editors/emacs
+DEPENDS lang/perl5 editors/emacs
+DEPENDS lang/perl5 graphics/libungif
+DEPENDS net/netcat wip/pkg_online-client
+DEPENDS textproc/dict-client|wip/dict-client textproc/dictem
+DEPENDS wip/awk-pkgsrc-dewey wip/pkg_summary-utils
+DEPENDS wip/dict-client wip/pkg_online-client
+DEPENDS wip/dict-server wip/pkg_online-server
+DEPENDS wip/paexec wip/distbb
+DEPENDS wip/pkg_online-client wip/pkg_online
+DEPENDS wip/pkg_online-server wip/pkg_online
+DEPENDS wip/pkg_summary-utils wip/distbb
+DEPENDS wip/pkg_summary-utils wip/pkg_online-client
+DEPENDS wip/pkg_summary-utils wip/pkg_online-server
+DEPENDS wip/runawk wip/awk-pkgsrc-dewey
+DEPENDS wip/runawk wip/distbb
+DEPENDS wip/runawk wip/pkg_summary-utils
+www/ap2-vhost-ldap:PKG_APACHE=apache2
+www/ap22-vhost-ldap:PKG_APACHE=apache22
+'
+
 pkg_summary2deps -Ap -s src_summary.txt 2>&1 >/dev/null | sort |
 cmp 'pkg_summary2deps #2' \
 'Cannot find dependency libmaa>=1.2 for package wip/dict-server (dict-server-1.10.11nb2)
@@ -107,6 +185,35 @@ wip/distbb
 wip/paexec
 wip/pkg_online-client wip/pkg_online
 wip/pkg_online-server wip/pkg_online
+wip/pkg_summary-utils
+wip/runawk
+'
+
+pkg_summary2deps -Ap -2 src_summary2.txt | sort |
+cmp 'pkg_summary2deps #3.1' \
+'BUILD_DEPENDS devel/libmaa wip/dict-client
+DEPENDS wip/dict-client wip/pkg_online-client
+DEPENDS wip/pkg_online-client wip/pkg_online
+DEPENDS wip/pkg_online-server wip/pkg_online
+devel/gmake
+devel/libltdl
+devel/libtool-base
+devel/pipestatus
+devel/pkg-config
+editors/emacs
+graphics/jpeg
+graphics/libungif
+graphics/png
+graphics/tiff
+lang/perl5
+pkgtools/digest
+sysutils/checkperms
+textproc/dict-client
+textproc/dictem
+wip/awk-pkgsrc-dewey
+wip/dict-server
+wip/distbb
+wip/paexec
 wip/pkg_summary-utils
 wip/runawk
 '
@@ -175,6 +282,63 @@ textproc/p5-Pod-Readme devel/p5-Module-Build
 textproc/p5-Regexp-Common textproc/p5-Pod-Readme
 textproc/p5-Text-Diff archivers/p5-Archive-Tar
 textproc/p5-YAML devel/p5-Module-Build
+'
+
+pkg_summary2deps -2Ap src_summary8.txt | sort | uniq |
+cmp 'pkg_summary2deps #6.1' \
+'BUILD_DEPENDS lang/perl5 devel/p5-ExtUtils-CBuilder
+BUILD_DEPENDS lang/perl5 devel/p5-ExtUtils-ParseXS
+BUILD_DEPENDS lang/perl5 devel/p5-Module-Build
+BUILD_DEPENDS lang/perl5 devel/p5-version
+BUILD_DEPENDS sysutils/checkperms archivers/p5-Archive-Tar
+BUILD_DEPENDS sysutils/checkperms devel/p5-Algorithm-Diff
+BUILD_DEPENDS sysutils/checkperms devel/p5-Compress-Raw-Bzip2
+BUILD_DEPENDS sysutils/checkperms devel/p5-Compress-Raw-Zlib
+BUILD_DEPENDS sysutils/checkperms devel/p5-ExtUtils-CBuilder
+BUILD_DEPENDS sysutils/checkperms devel/p5-ExtUtils-ParseXS
+BUILD_DEPENDS sysutils/checkperms devel/p5-IO-Compress
+BUILD_DEPENDS sysutils/checkperms devel/p5-IO-String
+BUILD_DEPENDS sysutils/checkperms devel/p5-IO-Zlib
+BUILD_DEPENDS sysutils/checkperms devel/p5-Module-Build
+BUILD_DEPENDS sysutils/checkperms devel/p5-version
+BUILD_DEPENDS sysutils/checkperms lang/perl5
+BUILD_DEPENDS sysutils/checkperms textproc/p5-Filter
+BUILD_DEPENDS sysutils/checkperms textproc/p5-Pod-Readme
+BUILD_DEPENDS sysutils/checkperms textproc/p5-Regexp-Common
+BUILD_DEPENDS sysutils/checkperms textproc/p5-Text-Diff
+BUILD_DEPENDS sysutils/checkperms textproc/p5-YAML
+BUILD_DEPENDS textproc/p5-YAML devel/p5-Module-Build
+DEPENDS archivers/p5-Archive-Tar devel/p5-Module-Build
+DEPENDS devel/p5-Algorithm-Diff textproc/p5-Text-Diff
+DEPENDS devel/p5-Compress-Raw-Bzip2 devel/p5-IO-Compress
+DEPENDS devel/p5-Compress-Raw-Zlib devel/p5-IO-Compress
+DEPENDS devel/p5-ExtUtils-CBuilder devel/p5-Module-Build
+DEPENDS devel/p5-ExtUtils-ParseXS devel/p5-Module-Build
+DEPENDS devel/p5-IO-Compress archivers/p5-Archive-Tar
+DEPENDS devel/p5-IO-Compress devel/p5-IO-Zlib
+DEPENDS devel/p5-IO-String archivers/p5-Archive-Tar
+DEPENDS devel/p5-IO-Zlib archivers/p5-Archive-Tar
+DEPENDS devel/p5-version devel/p5-Module-Build
+DEPENDS lang/perl5 archivers/p5-Archive-Tar
+DEPENDS lang/perl5 devel/p5-Algorithm-Diff
+DEPENDS lang/perl5 devel/p5-Compress-Raw-Bzip2
+DEPENDS lang/perl5 devel/p5-Compress-Raw-Zlib
+DEPENDS lang/perl5 devel/p5-ExtUtils-CBuilder
+DEPENDS lang/perl5 devel/p5-ExtUtils-ParseXS
+DEPENDS lang/perl5 devel/p5-IO-Compress
+DEPENDS lang/perl5 devel/p5-IO-String
+DEPENDS lang/perl5 devel/p5-IO-Zlib
+DEPENDS lang/perl5 devel/p5-Module-Build
+DEPENDS lang/perl5 devel/p5-version
+DEPENDS lang/perl5 textproc/p5-Filter
+DEPENDS lang/perl5 textproc/p5-Pod-Readme
+DEPENDS lang/perl5 textproc/p5-Regexp-Common
+DEPENDS lang/perl5 textproc/p5-Text-Diff
+DEPENDS lang/perl5 textproc/p5-YAML
+DEPENDS textproc/p5-Filter textproc/p5-YAML
+DEPENDS textproc/p5-Pod-Readme devel/p5-Module-Build
+DEPENDS textproc/p5-Regexp-Common textproc/p5-Pod-Readme
+DEPENDS textproc/p5-Text-Diff archivers/p5-Archive-Tar
 '
 
 
@@ -566,6 +730,38 @@ runawk pkg_conflicts
 runawk pkg_summary-utils
 '
 
+pkg_summary2deps -dn2 bin_summary1.txt | sort |
+cmp 'pkg_summary2deps #17.1' \
+'DEPENDS awk-pkgsrc-dewey pkg_summary-utils
+DEPENDS dict-client pkg_online-client
+DEPENDS dict-server pkg_online-server
+DEPENDS libmaa dict-client
+DEPENDS libmaa dict-server
+DEPENDS libmaa paexec
+DEPENDS netcat pkg_online-client
+DEPENDS paexec distbb
+DEPENDS pipestatus distbb
+DEPENDS pipestatus pkg_online-client
+DEPENDS pipestatus pkg_online-server
+DEPENDS pipestatus pkg_summary-utils
+DEPENDS pkg_online-client pkg_conflicts
+DEPENDS pkg_online-client pkg_online
+DEPENDS pkg_online-server pkg_online
+DEPENDS pkg_summary-utils distbb
+DEPENDS pkg_summary-utils pkg_conflicts
+DEPENDS pkg_summary-utils pkg_online-client
+DEPENDS pkg_summary-utils pkg_online-server
+DEPENDS runawk awk-pkgsrc-dewey
+DEPENDS runawk distbb
+DEPENDS runawk paexec
+DEPENDS runawk pkg_conflicts
+DEPENDS runawk pkg_summary-utils
+checkperms
+gmake
+libtool-base
+pkgnih
+'
+
 pkg_summary2deps -Apn bin_summary1.txt | sort |
 cmp 'pkg_summary2deps #18' \
 'devel/gmake;gmake
@@ -646,6 +842,7 @@ editors/emacs21 textproc/dictem:EMACS_TYPE=emacs21
 editors/emacs22 textproc/dictem
 editors/emacs|editors/emacs22|editors/emacs21|editors/emacs20 wip/emterm
 lang/f2c devel/libtool-base
+lang/perl5 devel/p5-ExtUtils-CBuilder
 lang/perl5 devel/p5-ExtUtils-CBuilder
 sysutils/checkperms devel/gmake
 sysutils/checkperms devel/libmaa
