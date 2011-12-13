@@ -1,0 +1,59 @@
+$NetBSD: patch-source_mupen64plus-core_projects_unix_Makefile,v 1.1.1.1 2011/12/13 15:11:47 othyro Exp $
+
+Adding NetBSD support. Setting TARGET, CFLAGS, LDFLAGS, LIBS, etc.
+
+--- source/mupen64plus-core/projects/unix/Makefile.orig	2010-11-23 02:15:08.000000000 +0000
++++ source/mupen64plus-core/projects/unix/Makefile
+@@ -39,6 +39,9 @@ endif
+ ifeq ("$(UNAME)","FreeBSD")
+   OS = FREEBSD
+ endif
++ifeq ("$(UNAME)","NetBSD")
++  OS = NETBSD
++endif
+ ifneq ("$(filter GNU/kFreeBSD kfreebsd,$(UNAME))","")
+   OS = LINUX
+ endif
+@@ -77,9 +80,9 @@ ifeq ("$(CPU)","NONE")
+ endif
+ 
+ # base CFLAGS, LIBS, and LDFLAGS
+-CFLAGS += -Wall -ffast-math -funroll-loops -fexpensive-optimizations -fno-strict-aliasing -fvisibility=hidden -I../../src
++CFLAGS += -Wall -ffast-math -funroll-loops -fexpensive-optimizations -fno-strict-aliasing -fvisibility=hidden -I../../src $(shell cpuflags)
+ CXXFLAGS += -fvisibility-inlines-hidden
+-LIBS += -lpng -lz -lm -lfreetype
++LIBS += $(shell pkg-config --libs libpng freetype2) -lz -lm
+ 
+ # Since we are building a shared library, we must compile with -fPIC for x86_64 CPUs.
+ # On 32-bit systems we do not want to use -fPIC because we don't have to and it has a big performance penalty on this arch
+@@ -102,6 +105,13 @@ ifeq ($(OS), FREEBSD)
+   LDFLAGS += -Wl,-Bsymbolic -shared -Wl,-export-dynamic -Wl,-soname,$(SONAME)
+   LIBS += -L${LOCALBASE}/lib -lGL -lGLU -lc
+ endif
++ifeq ($(OS), NETBSD)
++  TARGET = libmupen64plus.so.2.0.0
++  SONAME = libmupen64plus.so.2
++  CFLAGS += -I${PREFIX}/include -I../../src/
++  LDFLAGS += -Wl,-rpath,${LIBDIR} -shared -Wl,-export-dynamic -Wl,-soname,$(SONAME)
++  LIBS += $(shell pkg-config --libs gl glu libpng freetype2) -lz -lm
++endif
+ ifeq ($(OS), LINUX)
+   TARGET = libmupen64plus.so.2.0.0
+   SONAME = libmupen64plus.so.2
+@@ -362,11 +372,12 @@ targets:
+ all: $(TARGET)
+ 
+ install: $(TARGET)
+-	$(INSTALL) -d -v "$(DESTDIR)$(LIBDIR)"
+-	$(INSTALL) -m 0644 $(TARGET) "$(DESTDIR)$(LIBDIR)"
+-	$(INSTALL) -d -v "$(DESTDIR)$(SHAREDIR)"
++	$(INSTALL) -d "$(DESTDIR)$(LIBDIR)"
++	$(INSTALL) -m 0755 $(TARGET) "$(DESTDIR)$(LIBDIR)"
++	$(INSTALL) -m 0755 $(SONAME) "$(DESTDIR)$(LIBDIR)"
++	$(INSTALL) -d "$(DESTDIR)$(SHAREDIR)"
+ 	$(INSTALL) -m 0644 ../../data/* "$(DESTDIR)$(SHAREDIR)"
+-	$(INSTALL) -d -v "$(DESTDIR)$(INCDIR)"
++	$(INSTALL) -d "$(DESTDIR)$(INCDIR)"
+ 	$(INSTALL) -m 0644 ../../src/api/m64p_*.h "$(DESTDIR)$(INCDIR)"
+ 	if [ `id -u` -eq 0 ]; then $(LDCONFIG); fi
+ 
