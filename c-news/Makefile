@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2011/08/17 19:56:09 hfath Exp $
+# $NetBSD: Makefile,v 1.24 2011/12/13 13:10:47 hfath Exp $
 
 DISTNAME=	c-news
 PKGNAME=	c-news-CR-7
@@ -31,6 +31,9 @@ COMMENT=	The 3rd generation USENET news server
 LICENSE=	c-news-license
 LICENSE_FILE=	c-news-license
 
+# Not 64 bit time_t safe
+NOT_FOR_PLATFORM=	NetBSD-5_99_*-* NetBSD-[6-9]*-*
+
 CONFLICTS+=	nntpclnt-[0-9]* inn-[0-9]*
 
 WRKSRC=		${WRKDIR}
@@ -42,7 +45,8 @@ PKG_SYSCONFDIR.c-news=	${CNEWSDATA}/etc
 EGDIR=		${PREFIX}/share/examples/c-news
 
 # Debugging aids
-CFLAGS+=	-g
+CFLAGS+=	-Wall -Wno-error
+DBG=		-O -g3
 INSTALL_UNSTRIPPED = yes
 
 .include "../../mk/bsd.prefs.mk"
