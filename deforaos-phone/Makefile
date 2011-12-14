@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.9 2011/08/01 12:53:47 khorben Exp $
+# $NetBSD: Makefile,v 1.10 2011/12/14 23:46:39 khorben Exp $
 
-DISTNAME=	Phone-0.2.9
-PKGNAME=	deforaos-phone-0.2.9
+DISTNAME=	Phone-0.3.8
+PKGNAME=	deforaos-phone-0.3.8
 CATEGORIES=	comms
-MASTER_SITES=	http://www.defora.org/os/download/download/3521/
+MASTER_SITES=	http://www.defora.org/os/download/download/3603/
 
 MAINTAINER=	khorben@defora.org
 HOMEPAGE=	http://www.defora.org/
-COMMENT=	DeforaOS GSM telephony application
+COMMENT=	DeforaOS telephony application
 
 LICENSE=	gnu-gpl-v3
 
@@ -22,5 +22,8 @@ MAKE_FLAGS+=	DESTDIR=${DESTDIR}
 .include "../../wip/deforaos-libsystem/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../audio/pulseaudio/buildlink3.mk"
+.include "../../chat/libpurple/buildlink3.mk"
+.include "../../wip/deforaos-locker/buildlink3.mk"
+.include "../../wip/sofia-sip/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
