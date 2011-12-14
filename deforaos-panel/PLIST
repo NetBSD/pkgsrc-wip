@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2011/10/29 13:13:15 khorben Exp $
+@comment $NetBSD: PLIST,v 1.11 2011/12/14 23:18:37 khorben Exp $
 bin/panel
 bin/panel_test
 bin/panelctl
@@ -29,6 +29,7 @@ lib/Panel/applets/title.so
 lib/Panel/applets/usb.so
 lib/Panel/applets/volume.so
 lib/Panel/applets/wpa_supplicant.so
+lib/pkgconfig/Panel.pc
 share/applications/panel-settings.desktop
 share/icons/hicolor/16x16/apps/panel-applet-bluetooth.png
 share/icons/hicolor/16x16/apps/panel-applet-desktop.png
