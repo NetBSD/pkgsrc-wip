@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2011/08/01 12:58:19 khorben Exp $
+# $NetBSD: Makefile,v 1.3 2011/12/14 23:32:02 khorben Exp $
 
-DISTNAME=	Locker-0.0.2
-PKGNAME=	deforaos-locker-0.0.2
+DISTNAME=	Locker-0.1.1
+PKGNAME=	deforaos-locker-0.1.1
 CATEGORIES=	x11
-MASTER_SITES=	http://www.defora.org/os/download/download/3520/
+MASTER_SITES=	http://www.defora.org/os/download/download/3604/
 
 MAINTAINER=	khorben@defora.org
 HOMEPAGE=	http://www.defora.org/
@@ -18,6 +18,7 @@ MAKE_FLAGS+=	PREFIX=${PREFIX}
 MAKE_FLAGS+=	DESTDIR=${DESTDIR}
 
 .include "../../wip/deforaos-libsystem/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
+.include "../../wip/deforaos-libdesktop/buildlink3.mk"
 .include "../../x11/libXScrnSaver/buildlink3.mk"
+.include "../../wip/deforaos-panel/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
