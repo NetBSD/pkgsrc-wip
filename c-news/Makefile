@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2011/12/13 13:10:47 hfath Exp $
+# $NetBSD: Makefile,v 1.25 2011/12/15 17:01:46 hfath Exp $
 
 DISTNAME=	c-news
 PKGNAME=	c-news-CR-7
@@ -31,8 +31,8 @@ COMMENT=	The 3rd generation USENET news server
 LICENSE=	c-news-license
 LICENSE_FILE=	c-news-license
 
-# Not 64 bit time_t safe
-NOT_FOR_PLATFORM=	NetBSD-5_99_*-* NetBSD-[6-9]*-*
+# Not yet 64 bit time_t safe
+NOT_FOR_PLATFORM=	NetBSD-5.99.*-* NetBSD-[6-9]*-*
 
 CONFLICTS+=	nntpclnt-[0-9]* inn-[0-9]*
 
