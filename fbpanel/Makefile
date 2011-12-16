@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2010/06/13 22:47:04 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.21 2011/12/16 15:50:05 seanboudreau Exp $
 #
 
 DISTNAME=		fbpanel-4.12
@@ -32,4 +32,5 @@ MANCOMPRESSED=		yes
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../graphics/gdk-pixbuf2-xlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
