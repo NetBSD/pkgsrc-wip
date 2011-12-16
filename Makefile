@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4563 2011/12/13 15:13:52 othyro Exp $
+# $Id: Makefile,v 1.4564 2011/12/16 16:28:49 ryo-on Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1130,7 +1130,6 @@ SUBDIR+=	jc
 SUBDIR+=	jdk15
 SUBDIR+=	jdk16
 SUBDIR+=	jemboss-standalone
-SUBDIR+=	jetty
 SUBDIR+=	jgloss
 SUBDIR+=	jlibtool
 SUBDIR+=	jmol
