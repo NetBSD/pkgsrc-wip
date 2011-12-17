@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4564 2011/12/16 16:28:49 ryo-on Exp $
+# $Id: Makefile,v 1.4565 2011/12/17 20:24:00 ishit Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2797,6 +2797,7 @@ SUBDIR+=	treeview
 SUBDIR+=	triangle
 SUBDIR+=	tripwire2
 SUBDIR+=	truecrypt
+SUBDIR+=	tscreen
 SUBDIR+=	tsh
 SUBDIR+=	tsm
 SUBDIR+=	ttf-indic-fonts
