@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/12/17 20:18:48 ishit Exp $
+bin/tscreen
+bin/${PKGNAME}
+info/tscreen.info
+man/man1/tscreen.1
+share/examples/tscreen/etcscreenrc
+share/examples/tscreen/tscreenrc
+share/tscreen/utf8encodings/01
+share/tscreen/utf8encodings/02
+share/tscreen/utf8encodings/03
+share/tscreen/utf8encodings/04
+share/tscreen/utf8encodings/18
+share/tscreen/utf8encodings/19
+share/tscreen/utf8encodings/a1
+share/tscreen/utf8encodings/bf
+share/tscreen/utf8encodings/c2
+share/tscreen/utf8encodings/c3
+share/tscreen/utf8encodings/c4
+share/tscreen/utf8encodings/c6
+share/tscreen/utf8encodings/c7
+share/tscreen/utf8encodings/c8
+share/tscreen/utf8encodings/cc
+share/tscreen/utf8encodings/cd
+share/tscreen/utf8encodings/d6

@@ -1,0 +1,17 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/12/17 20:18:48 ishit Exp $
+
+SHA1 (tscreen-0.4.9.tar.gz) = 9cda106252b6abc459568d99905c96c63e842d73
+RMD160 (tscreen-0.4.9.tar.gz) = e5b0a8d6702df9724332251cda68eaa701ca0343
+Size (tscreen-0.4.9.tar.gz) = 856586 bytes
+SHA1 (patch-aa) = 35a212da286e974fec94328f32980beabd241657
+SHA1 (patch-ab) = 41832d6c98e599ea27be7ddbc2b5123038d85c74
+SHA1 (patch-ae) = dcdbb1ca08e36308f5659a90a5b6f31fb3a45691
+SHA1 (patch-ai) = 0775c95da8bab6d0c9218328aadcd30e3aa81885
+SHA1 (patch-aj) = 6bcaa02c3c86b6bb33a86e47ca488b8378da1f7d
+SHA1 (patch-ak) = d0020dc06c81ae2146c02369551a57ef2aed62de
+SHA1 (patch-al) = 2f042d43030a9166f4c1bf19e4d473d1031aba4e
+SHA1 (patch-am) = 5fdc32f33ebbb5385292919f6cd01bedc30491d9
+SHA1 (patch-an) = be65fde94f0d90f184ec596d9c9c78ff4c58ab14
+SHA1 (patch-ao) = 81b0d64dd5918cd4d6fbc02dff0470a441a200d4
+SHA1 (patch-ap) = 1303178477457b62104081f1a72d05a0e0b90092
+SHA1 (patch-doc_Makefile.in) = b10f724bb22cd6a5c90a33b09649a90b5558dc17

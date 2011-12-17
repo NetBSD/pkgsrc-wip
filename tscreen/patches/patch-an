@@ -1,0 +1,29 @@
+$NetBSD: patch-an,v 1.1.1.1 2011/12/17 20:18:49 ishit Exp $
+
+--- Makefile.in.orig	2006-10-23 15:06:32.000000000 +0200
++++ Makefile.in	2009-03-05 11:40:26.000000000 +0100
+@@ -58,12 +58,12 @@ CFILES=	screen.c ansi.c fileio.c mark.c 
+ 	search.c tty.c term.c window.c utmp.c loadav.c putenv.c help.c \
+ 	termcap.c input.c attacher.c pty.c process.c display.c comm.c \
+ 	kmapdef.c acls.c braille.c braille_tsi.c logfile.c layer.c \
+-	sched.c teln.c encoding.c
++	sched.c teln.c encoding.c utmp-netbsd.c
+ OFILES=	screen.o ansi.o fileio.o mark.o misc.o resize.o socket.o \
+ 	search.o tty.o term.o window.o utmp.o loadav.o putenv.o help.o \
+ 	termcap.o input.o attacher.o pty.o process.o display.o comm.o \
+ 	kmapdef.o acls.o braille.o braille_tsi.o logfile.o layer.o \
+-	sched.o teln.o encoding.o
++	sched.o teln.o encoding.o utmp-netbsd.o
+ 
+ all:	tscreen
+ 
+@@ -78,9 +78,6 @@ install_bin: .version tscreen
+ 	-if [ -f $(DESTDIR)$(bindir)/$(SCREEN) ] && [ ! -f $(DESTDIR)$(bindir)/$(SCREEN).old ]; \
+ 		then mv $(DESTDIR)$(bindir)/$(SCREEN) $(DESTDIR)$(bindir)/$(SCREEN).old; fi
+ 	$(INSTALL_PROGRAM) tscreen $(DESTDIR)$(bindir)/$(SCREEN)
+-	-chown root $(DESTDIR)$(bindir)/$(SCREEN) && chmod 4755 $(DESTDIR)$(bindir)/$(SCREEN)
+-# This doesn't work if $(bindir)/screen is a symlink
+-	-if [ -f $(DESTDIR)$(bindir)/tscreen ] && [ ! -f $(DESTDIR)$(bindir)/tscreen.old ]; then mv $(DESTDIR)$(bindir)/tscreen $(DESTDIR)$(bindir)/tscreen.old; fi
+ 	rm -f $(DESTDIR)$(bindir)/tscreen
+ 	(cd $(DESTDIR)$(bindir) && ln -f -s $(SCREEN) tscreen)
+ 	cp $(srcdir)/utf8encodings/?? $(DESTDIR)$(SCREENENCODINGS)

@@ -1,0 +1,376 @@
+$NetBSD: patch-ap,v 1.1.1.1 2011/12/17 20:18:49 ishit Exp $
+
+--- doc/tscreen.1.orig	2008-10-24 14:22:38.000000000 +0000
++++ doc/tscreen.1
+@@ -83,7 +83,7 @@ This creates a new window running a shel
+ window immediately, regardless of the state of the process running
+ in the current window.
+ Similarly, you can create a new window with a custom command in it by
+-first binding the command to a keystroke (in your .screenrc file or at the
++first binding the command to a keystroke (in your .tscreenrc file or at the
+ \*QC-a :\*U command line) and
+ then using it just like the \*QC-a c\*U command.
+ In addition, new windows can be created by running a command like:
+@@ -126,7 +126,7 @@ Typing these two characters will display
+ .I screen
+ commands and their bindings. Each keystroke is discussed in
+ the section \*QDEFAULT KEY BINDINGS\*U. The manual section \*QCUSTOMIZATION\*U
+-deals with the contents of your .screenrc.
++deals with the contents of your .tscreenrc.
+ .PP
+ If your terminal is a \*Qtrue\*U auto-margin terminal (it doesn't allow
+ the last position on the screen to be updated without scrolling the
+@@ -162,7 +162,7 @@ tries to restore its old window sizes wh
+ (those with \*QWS\*U in its description, e.g. suncmd or some xterm).
+ .TP 5
+ .BI "\-c " file
+-override the default configuration file from \*Q$HOME/.screenrc\*U
++override the default configuration file from \*Q$HOME/.tscreenrc\*U
+ to \fIfile\fP.
+ .TP 5
+ .BR \-d | \-D " [" \fIpid.tty.host ]
+@@ -216,7 +216,7 @@ This option is equivalent to either the 
+ .TP 5
+ .BR \-f\fP ", " \-fn ", and " \-fa
+ turns flow-control on, off, or \*Qautomatic switching mode\*U.
+-This can also be defined through the \*Qdefflow\*U .screenrc command.
++This can also be defined through the \*Qdefflow\*U .tscreenrc command.
+ .TP 5
+ .BI "\-h " num
+ Specifies the history scrollback buffer to be \fInum\fP lines high.
+@@ -224,12 +224,12 @@ Specifies the history scrollback buffer 
+ .B \-i
+ will cause the interrupt key (usually C-c) to interrupt the display
+ immediately when flow-control is on.
+-See the \*Qdefflow\*U .screenrc command for details.
++See the \*Qdefflow\*U .tscreenrc command for details.
+ The use of this option is discouraged.
+ .TP 5
+ .BR \-l " and " \-ln
+ turns login mode on or off (for /etc/utmp updating).
+-This can also be defined through the \*Qdeflogin\*U .screenrc command.
++This can also be defined through the \*Qdeflogin\*U .tscreenrc command.
+ .TP 5
+ .BR \-ls " and " \-list
+ does not start
+@@ -279,7 +279,7 @@ a new process. The command exits if the 
+ .B \-O
+ selects a more optimal output mode for your terminal rather than true VT100
+ emulation (only affects auto-margin terminals without `LP').
+-This can also be set in your .screenrc by specifying `OP' in a \*Qtermcap\*U
++This can also be set in your .tscreenrc by specifying `OP' in a \*Qtermcap\*U
+ command.
+ .TP 5
+ .BI "\-p " number_or_name
+@@ -329,7 +329,7 @@ For combinations with the \fB\-d\fP/\fB\
+ .B \-s
+ sets the default shell to the program specified, instead of the value
+ in the environment variable $SHELL (or \*Q/bin/sh\*U if not defined).
+-This can also be defined through the \*Qshell\*U .screenrc command.
++This can also be defined through the \*Qshell\*U .tscreenrc command.
+ .TP 5
+ .BI "\-S " sessionname
+ When creating a new session, this option can be used to specify a
+@@ -339,7 +339,7 @@ default [\fItty.host\fP] suffix.
+ .TP 5
+ .BI "\-t " name
+ sets the title (a.\|k.\|a.) for the default shell or specified program.
+-See also the \*Qshelltitle\*U .screenrc command.
++See also the \*Qshelltitle\*U .tscreenrc command.
+ .TP 5
+ .B \-U
+ Run screen in UTF-8 mode. This option tells screen that your terminal
+@@ -588,7 +588,7 @@ Show a listing of all currently attached
+ 
+ .SH CUSTOMIZATION
+ The \*Qsocket directory\*U defaults either to $HOME/.screen or simply to
+-/tmp/screens or preferably to /usr/local/screens chosen at compile-time. If
++/tmp/screens. This is chosen at compile-time. If
+ .I screen
+ is installed setuid-root, then the administrator
+ should compile
+@@ -601,16 +601,16 @@ in the environment variable $SCREENDIR.
+ When
+ .I screen
+ is invoked, it executes initialization commands from the files
+-\*Q/usr/local/etc/screenrc\*U and
+-\*Q.screenrc\*U in the user's home directory. These are the \*Qprogrammer's
++\*Q@PKG_SYSCONFDIR@/tscreenrc\*U and
++\*Q.tscreenrc\*U in the user's home directory. These are the \*Qprogrammer's
+ defaults\*U that can be overridden in the following ways: for the
+-global screenrc file
++global tscreenrc file
+ .I screen
+ searches for the environment variable $SYSSCREENRC (this override feature
+ may be disabled at compile-time). The user specific
+-screenrc file is searched in $SCREENRC, then $HOME/.screenrc.
++tscreenrc file is searched in $SCREENRC, then $HOME/.tscreenrc.
+ The command line option \fB-c\fP takes
+-precedence over the above user screenrc files.
++precedence over the above user tscreenrc files.
+ .PP
+ Commands in these files are used to set options, bind functions to
+ keys, and to automatically establish one or more windows at the
+@@ -631,7 +631,7 @@ variable substitution shall be performed
+ protected from variable substitution.
+ .PP
+ Two configuration files are shipped as examples with your screen distribution:
+-\*Qetc/screenrc\*U and \*Qetc/etcscreenrc\*U. They contain a number of
++\*Q@EXAMPLES@/tscreenrc\*U and \*Q@EXAMPLES@/etcscreenrc\*U. They contain a number of
+ useful examples for various commands.
+ .PP
+ Customization can also be done 'on-line'. To enter the command mode type
+@@ -1174,7 +1174,7 @@ Change the \fIcurrent directory\fP of
+ to the specified directory or, if called without an argument,
+ to your home directory (the value of the environment variable $HOME).
+ All windows that are created by means of the \*Qscreen\*U command
+-from within \*Q.screenrc\*U or by means of \*QC-a : screen ...\*U
++from within \*Q.tscreenrc\*U or by means of \*QC-a : screen ...\*U
+ or \*QC-a c\*U use this as their default directory.
+ Without a chdir command, this would be the directory from which
+ .I screen
+@@ -1182,7 +1182,7 @@ was invoked.
+ Hardcopy and log files are always written to the \fIwindow's\fP default
+ directory, \fInot\fP the current directory of the process running in the
+ window.
+-You can use this command multiple times in your .screenrc to start various
++You can use this command multiple times in your .tscreenrc to start various
+ windows in different default directories, but the last chdir value will
+ affect all the windows you create interactively.
+ .sp
+@@ -1195,7 +1195,7 @@ Clears the current window and saves its 
+ .B colon
+ .RI [ prefix ]
+ .PP
+-Allows you to enter \*Q.screenrc\*U command lines. Useful
++Allows you to enter \*Q.tscreenrc\*U command lines. Useful
+ for on-the-fly modification of key bindings,
+ specific window creation and changing settings. Note that the \*Qset\*U
+ keyword no longer exists! Usually commands affect the current window rather
+@@ -1292,7 +1292,7 @@ lines while preserving the cursor positi
+ 
+ .IR Note :
+ .br
+-Emacs style movement keys can be customized by a .screenrc command.
++Emacs style movement keys can be customized by a .tscreenrc command.
+ (E.\|g. markkeys "h=^B:l=^F:$=^E") There is no simple method for a full
+ emacs-style keymap, as this involves multi-character codes.
+ 
+@@ -1684,7 +1684,7 @@ and then compile the entry with
+ The echo command may be used to annoy
+ .I screen
+ users with a 'message of the
+-day'. Typically installed in a global /local/etc/screenrc.
++day'. Typically installed in a global /local/etc/tscreenrc.
+ The option \*Q-n\*U may be used to suppress the line feed.
+ See also \*Qsleep\*U.
+ Echo is also useful for online checking of environment variables.
+@@ -2344,7 +2344,7 @@ Default is `off', of course.  This defau
+ .ne 3
+ .BR "password " [ \fIcrypted_pw ]
+ .PP
+-Present a crypted password in your \*Q.screenrc\*U file and
++Present a crypted password in your \*Q.tscreenrc\*U file and
+ .I screen
+ will ask
+ for it, whenever someone attempts to resume a detached. This is useful
+@@ -2564,10 +2564,10 @@ number \fIn\fP is assigned to the newly 
+ number is already in-use, the next available number).
+ If a command is specified after \*Qscreen\*U, this command (with the given
+ arguments) is started in the window; otherwise, a shell is created.
+-Thus, if your \*Q.screenrc\*U contains the lines
++Thus, if your \*Q.tscreenrc\*U contains the lines
+ .sp
+ .nf
+-	# example for .screenrc:
++	# example for .tscreenrc:
+ 	screen 1
+ 	screen -fn -t foobar -L 2 telnet foobar
+ .fi
+@@ -2580,9 +2580,9 @@ session.
+ Note, that unlike previous versions of
+ .I screen
+ no additional default window is created when \*Qscreen\*U commands are
+-included in your \*Q.screenrc\*U file. When the initialization is completed,
++included in your \*Q.tscreenrc\*U file. When the initialization is completed,
+ .I screen
+-switches to the last window specified in your .screenrc file or, if none,
++switches to the last window specified in your .tscreenrc file or, if none,
+ opens a default window #0.
+ .br
+ Screen has built in some functionality of \*Qcu\*U and \*Qtelnet\*U.
+@@ -2678,7 +2678,7 @@ displaying a message. Default 30 seconds
+ .ne
+ .B "sleep \fP\fInum\fP"
+ .PP
+-This command will pause the execution of a .screenrc file for \fInum\fP seconds.
++This command will pause the execution of a .tscreenrc file for \fInum\fP seconds.
+ Keyboard activity will end the sleep.
+ It may be used to give users a chance to read the messages output by \*Qecho\*U.
+ .sp
+@@ -2705,7 +2705,7 @@ for the new command file before screen's
+ 
+ Note that termcap/terminfo/termcapinfo commands only work at
+ startup and reattach time, so they must be reached via the
+-default screenrc files to have an effect.
++default tscreenrc files to have an effect.
+ .sp
+ .ne 3
+ .B sorendition
+@@ -2805,7 +2805,7 @@ rlogin othermachine\*U rather than setti
+ Use this command to modify your terminal's termcap entry without going
+ through all the hassles involved in creating a custom termcap entry.
+ Plus, you can optionally customize the termcap generated for the windows.
+-You have to place these commands in one of the screenrc startup files, as
++You have to place these commands in one of the tscreenrc startup files, as
+ they are meaningless once the terminal emulator is booted.
+ .br
+ If your system works uses the terminfo database rather than termcap,
+@@ -3483,7 +3483,7 @@ that intercepts these characters.
+ .PP
+ Each window has an initial flow-control value set with either the
+ .B \-f
+-option or the \*Qdefflow\*U .screenrc command. Per default the windows
++option or the \*Qdefflow\*U .tscreenrc command. Per default the windows
+ are set to automatic flow-switching.
+ It can then be toggled between the three states 'fixed on', 'fixed off'
+ and 'automatic' interactively with the \*Qflow\*U command bound to "C-a f".
+@@ -3503,7 +3503,7 @@ interrupt key (usually C-c) does not int
+ .I screen
+ with the \*Qinterrupt\*U
+ option (add the \*Qinterrupt\*U flag to the \*Qflow\*U command in
+-your .screenrc, or use the
++your .tscreenrc, or use the
+ .B \-i
+ command-line option).
+ This causes the output that
+@@ -3536,7 +3536,7 @@ name or to change the name on-the-fly to
+ the window.
+ .PP
+ The default name for all shell windows can be set with the \*Qshelltitle\*U
+-command in the .screenrc file, while all other windows are created with
++command in the .tscreenrc file, while all other windows are created with
+ a \*Qscreen\*U command and thus can have their name set with the
+ .B \-t
+ option.
+@@ -3580,11 +3580,11 @@ the just-found name.
+ This helps csh users get better command names when using job control or
+ history recall commands.
+ .PP
+-Here's some .screenrc examples:
++Here's some .tscreenrc examples:
+ .IP
+ screen -t top 2 nice top
+ .PP
+-Adding this line to your .screenrc would start a nice-d version of the
++Adding this line to your .tscreenrc would start a nice-d version of the
+ \*Qtop\*U command in window 2 named \*Qtop\*U rather than \*Qnice\*U.
+ .sp
+ .nf
+@@ -3604,7 +3604,7 @@ running, and revert to \*Qcsh\*U upon co
+ .IP
+ bind R screen -t '% |root:' su
+ .PP
+-Having this command in your .screenrc would bind the key
++Having this command in your .tscreenrc would bind the key
+ sequence \*QC-a R\*U to the \*Qsu\*U command and give it an
+ auto-title name of \*Qroot:\*U.
+ For this auto-title to work, the screen could look something
+@@ -3726,7 +3726,7 @@ does not run on hardcopy terminals or on
+ .PP
+ Also, you can customize the $TERMCAP value used by
+ .I screen
+-by using the \*Qtermcap\*U .screenrc command, or
++by using the \*Qtermcap\*U .tscreenrc command, or
+ by defining the variable $SCREENCAP prior to startup.
+ When the is latter defined, its value will be copied verbatim into each
+ window's $TERMCAP variable.
+@@ -3735,7 +3735,7 @@ terminal \*Qscreen\*U (and/or \*Qscreen-
+ .PP
+ Note that
+ .I screen
+-honors the \*Qterminfo\*U .screenrc command if the system uses the
++honors the \*Qterminfo\*U .tscreenrc command if the system uses the
+ terminfo database rather than termcap.
+ .PP
+ When the boolean `G0' capability is present in the termcap entry
+@@ -3797,7 +3797,7 @@ the session is reattached on a different
+ of $TERMCAP cannot be modified by parent processes.
+ .PP
+ The "alternate screen" capability is not enabled by default.
+-Set the \fBaltscreen\fP .screenrc command to enable it.
++Set the \fBaltscreen\fP .tscreenrc command to enable it.
+ .PP
+ The following is a list of control sequences recognized by
+ .IR screen .
+@@ -4260,7 +4260,7 @@ that are recognized by
+ and are not in the termcap(5) manual.
+ You can place these capabilities in your termcap entries (in
+ `/etc/termcap') or use them with the commands `termcap', `terminfo' and
+-`termcapinfo' in your screenrc files. It is often not possible to place
++`termcapinfo' in your tscreenrc files. It is often not possible to place
+ these capabilities in the terminfo database.
+ .PP
+ .ta 5n
+@@ -4411,7 +4411,7 @@ to '\e304', '\e' to '\e326', and ']' to 
+ .IP COLUMNS 15
+ Number of columns on the terminal (overrides termcap entry).
+ .IP HOME
+-Directory in which to look for .screenrc.
++Directory in which to look for .tscreenrc.
+ .IP LINES
+ Number of lines on the terminal (overrides termcap entry).
+ .IP LOCKPRG
+@@ -4425,13 +4425,13 @@ For customizing a terminal's TERMCAP val
+ .IP SCREENDIR
+ Alternate socket directory.
+ .IP SCREENRC
+-Alternate user screenrc file.
++Alternate user tscreenrc file.
+ .IP SHELL
+ Default shell program for opening windows (default \*Q/bin/sh\*U).
+ .IP STY
+ Alternate socket name.
+ .IP SYSSCREENRC
+-Alternate system screenrc file.
++Alternate system tscreenrc file.
+ .IP TERM
+ Terminal name.
+ .IP TERMCAP
+@@ -4441,20 +4441,20 @@ Window number of a window (at creation t
+ 
+ .SH FILES
+ .PD 0
+-.IP .../screen-4.?.??/etc/screenrc 34
++.IP .../screen-4.?.??/etc/tscreenrc 34
+ .IP .../screen-4.?.??/etc/etcscreenrc
+ Examples in the
+ .I screen
+ distribution package for private and global initialization files.
+ .IP $SYSSCREENRC
+-.IP /usr/local/etc/screenrc
++.IP @PKG_SYSCONFDIR@/etc/tscreenrc
+ .I screen
+ initialization commands
+ .IP $SCREENRC
+-.IP $HOME/.screenrc
+-Read in after /usr/local/etc/screenrc
++.IP $HOME/.tscreenrc
++Read in after @PKG_SYSCONFDIR@/etc/tscreenrc
+ .IP $SCREENDIR/S-<login>
+-.IP /local/screens/S-<login>
++.IP /tmp/screens/S-<login>
+ Socket directories (default)
+ .IP /usr/tmp/screens/S-<login>
+ Alternate socket directories.
+@@ -4613,8 +4613,8 @@ method used by all terminal devices. The
+ specific setting, where the latter should change only the default for new
+ windows.
+ .IP \(bu
+-When attaching to a multiuser session, the user's .screenrc file is not
+-sourced. Each user's personal settings have to be included in the .screenrc
++When attaching to a multiuser session, the user's .tscreenrc file is not
++sourced. Each user's personal settings have to be included in the .tscreenrc
+ file from which the session is booted, or have to be changed manually.
+ .IP \(bu
+ A weird imagination is most useful to gain full advantage of all the features.

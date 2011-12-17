@@ -1,0 +1,43 @@
+$NetBSD: patch-aj,v 1.1.1.1 2011/12/17 20:18:48 ishit Exp $
+
+Detect getutent correctly on NetBSD with utmpx.
+Include curses header when testing tgetent in order to prevent
+crash on 64-bit architectures.
+
+--- configure.in.orig	2008-10-31 13:08:15.000000000 +0000
++++ configure.in
+@@ -672,6 +672,8 @@ AC_TRY_LINK(,tgetent((char *)0, (char *)
+ AC_MSG_ERROR(!!! no tgetent - no screen)))))))
+ 
+ AC_TRY_RUN([
++#include <curses.h>
++
+ main()
+ {
+  exit(strcmp(tgoto("%p1%d", 0, 1), "1") ? 0 : 1);
+@@ -825,9 +827,16 @@ AC_CHECKING(getutent)
+ AC_TRY_LINK([
+ #include <time.h> /* to get time_t on SCO */
+ #include <sys/types.h>
+-#if defined(SVR4) && !defined(DGUX)
++#include <sys/param.h>
++#if (defined(SVR4) && !defined(DGUX)) \
++ || (defined(__NetBSD_Version__) && (__NetBSD_Version__ >= 106050000)) \
++ || (defined(__DragonFly__) && (__DragonFly_version >= 200902))
+ #include <utmpx.h>
+ #define utmp utmpx
++# if defined(__NetBSD__) || defined(__DragonFly__)
++#  define pututline pututxline
++#  define getutent  getutxent
++# endif
+ #else
+ #include <utmp.h>
+ #endif
+@@ -1219,6 +1228,7 @@ AC_MSG_CHECKING(for vsprintf)
+ AC_TRY_LINK(,[vsprintf(0,0,0);], AC_MSG_RESULT(yes);AC_DEFINE(USEVARARGS), AC_MSG_RESULT(no))
+ 
+ AC_HEADER_DIRENT
++AC_CHECK_HEADERS(sys/stropts.h)
+ 
+ AC_MSG_CHECKING(for setenv)
+ if test -z "$ac_setenv_args"; then

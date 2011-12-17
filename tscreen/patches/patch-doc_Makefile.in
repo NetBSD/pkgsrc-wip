@@ -1,0 +1,13 @@
+$NetBSD: patch-doc_Makefile.in,v 1.1.1.1 2011/12/17 20:18:48 ishit Exp $
+
+--- doc/Makefile.in.orig	2008-11-02 19:55:03.000000000 +0000
++++ doc/Makefile.in
+@@ -31,7 +31,7 @@ info tscreen.info: tscreen.texinfo
+ 	$(MAKEINFO) $(srcdir)/tscreen.texinfo -o tscreen.info
+ 
+ install: installdirs
+-	$(INSTALL_DATA) $(srcdir)/tscreen.1 $(DESTDIR)$(mandir)/man1/rscreen.1
++	$(INSTALL_DATA) $(srcdir)/tscreen.1 $(DESTDIR)$(mandir)/man1/tscreen.1
+ 	-$(MAKE) tscreen.info
+ 	-if test -f tscreen.info; then d=.; else d=$(srcdir); fi; \
+ 	if test -f $$d/tscreen.info; then \
