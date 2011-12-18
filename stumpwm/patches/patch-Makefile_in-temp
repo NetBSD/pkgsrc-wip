@@ -1,0 +1,50 @@
+$NetBSD: patch-Makefile_in-temp,v 1.1 2011/12/18 18:06:16 dukzcry Exp $
+
+Creation of temporary linking set using clisp-link is written by
+Dirk Sondermann <ds-stumpwm@dyximaq.de> and was posted under
+"Building with CLISP" topic in Stumpwm-devel mailing list.
+--- Makefile.in.orig	2011-12-01 14:10:15.577366000 +0400
++++ Makefile.in	2011-12-01 14:17:47.663231000 +0400
+@@ -1,11 +1,11 @@
+ LISP=@LISP_PROGRAM@
+ 
+-clisp_BUILDOPTS=-K full -on-error exit ./make-image.lisp
++clisp_BUILDOPTS=-on-error exit ./make-image.lisp
+ sbcl_BUILDOPTS=--load ./make-image.lisp
+ ccl_BUILDOPTS=--load ./make-image.lisp
+ ecl_BUILDOPTS=-norc -shell ./make-image.lisp
+ 
+-clisp_INFOOPTS=-K full -on-error exit -x "(require 'asdf '(\"asdf.lisp\")) (load \"stumpwm.asd\") (load \"@PPCRE_PATH@/cl-ppcre.asd\") (asdf:operate 'asdf:load-op :stumpwm) (load (compile-file \"manual.lisp\")) (stumpwm::generate-manual) (ext:exit)"
++clisp_INFOOPTS=-on-error exit -x "(require 'asdf '(\"asdf.lisp\")) (load \"stumpwm.asd\") (load \"@PPCRE_PATH@/cl-ppcre.asd\") (asdf:operate 'asdf:load-op :stumpwm) (load (compile-file \"manual.lisp\")) (stumpwm::generate-manual) (ext:exit)"
+ sbcl_INFOOPTS=--eval "(progn (require 'asdf) (require 'stumpwm) (load \"manual.lisp\"))" --eval "(progn (stumpwm::generate-manual) (sb-ext:quit))"
+ ccl_INFOOPTS=--eval "(progn (require 'asdf) (require 'stumpwm))" --load manual.lisp --eval "(progn (stumpwm::generate-manual) (quit))"
+ ecl_INFOOPTS=-eval "(progn (require 'asdf) (load \"@PPCRE_PATH@/cl-ppcre.asd\") (require 'stumpwm) (load \"manual.lisp\"))" -eval "(progn (stumpwm::generate-manual) (ext:quit))"
+@@ -33,10 +33,10 @@ stumpwm.info: stumpwm.texi
+ 	makeinfo stumpwm.texi
+ 
+ # FIXME: This rule is too hardcoded
+-stumpwm.texi: stumpwm.texi.in
++stumpwm.texi: stumpwm.texi.in @LISP_CORE@
+ 	$(LISP) $(@LISP@_INFOOPTS)
+ 
+-stumpwm: $(FILES)
++stumpwm: $(FILES) @LISP_CORE@
+ 	$(LISP) $(@LISP@_BUILDOPTS)
+ 
+ release:
+@@ -58,6 +58,7 @@ clean:
+ 	rm -f *.fasl *.fas *.lib *.*fsl
+ 	rm -f *.log *.fns *.fn *.aux *.cp *.ky *.log *.toc *.pg *.tp *.vr *.vrs
+ 	rm -f stumpwm stumpwm.texi stumpwm.info
++	rm -fr clisp-core/
+ 
+ install: stumpwm.info stumpwm
+ 	test -z "$(destdir)$(bindir)" || mkdir -p "$(destdir)$(bindir)"
+@@ -71,4 +72,7 @@ uninstall:
+ 	install-info --info-dir="$(destdir)$(infodir)" --remove "$(destdir)$(infodir)/stumpwm.info"
+ 	rm "$(destdir)$(infodir)/stumpwm.info"
+ 
++clisp-core:
++	MAKE=: with_dynamic_modules=no @LISP_LINK@ add "`$(LISP) -b`/base" $@ "`$(LISP) -b`/clx/new-clx"
++
+ # End of file

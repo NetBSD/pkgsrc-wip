@@ -1,0 +1,41 @@
+$NetBSD: patch-configure_ac-temp,v 1.1 2011/12/18 18:06:16 dukzcry Exp $
+
+Creation of temporary linking set using clisp-link is written by
+Dirk Sondermann <ds-stumpwm@dyximaq.de> and was posted under
+"Building with CLISP" topic in Stumpwm-devel mailing list.
+--- configure.ac.orig	2010-05-18 23:09:32.000000000 +0400
++++ configure.ac	2011-12-01 14:26:57.337461000 +0400
+@@ -6,6 +6,8 @@ AC_INIT(Stump Window Manager, 0.9.7-git,
+ 
+ AC_SUBST(CONTRIB_DIR)
+ AC_SUBST(LISP_PROGRAM)
++AC_SUBST(LISP_CORE)
++AC_SUBST(LISP_LINK)
+ AC_SUBST(LISP)
+ AC_SUBST(PPCRE_PATH)
+ 
+@@ -105,6 +107,17 @@ fi
+ 
+ if test "$LISP" = "clisp"; then
+    AC_CHECK_FILE([$PPCRE_PATH/cl-ppcre.asd],,AC_MSG_ERROR([Cannot find ppcre. When using clisp you must specify its location using --with-ppcre]))
++   AC_MSG_CHECKING([whether clisp is built with dynamic modules support])
++   result=$($LISP_PROGRAM -q -q -x '(nth-value 0 (find-symbol "DYNLOAD-MODULES" "SYS"))')
++   if test "x$result" = "xNIL"; then
++	AC_MSG_RESULT([no])
++	LISP_PROGRAM="$LISP_PROGRAM -K full"
++   else
++	AC_MSG_RESULT([yes])
++	LISP_CORE="clisp-core"
++	LISP_LINK="$LISP_PROGRAM-link"
++	LISP_PROGRAM="$LISP_PROGRAM -K `pwd`/$LISP_CORE"
++   fi
+ fi
+ 
+ # XXX How to do an OR ?
+@@ -122,4 +135,4 @@ fi
+ AC_OUTPUT(Makefile)
+ AC_OUTPUT(make-image.lisp)
+ AC_OUTPUT(version.lisp)
+-AC_OUTPUT(module.lisp)
+\ No newline at end of file
++AC_OUTPUT(module.lisp)

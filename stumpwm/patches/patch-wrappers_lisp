@@ -1,0 +1,12 @@
+$NetBSD: patch-wrappers_lisp,v 1.1 2011/12/18 18:06:16 dukzcry Exp $
+
+--- wrappers.lisp.orig	2011-12-01 13:51:15.728626000 +0400
++++ wrappers.lisp	2011-12-01 13:52:19.669116000 +0400
+@@ -275,6 +275,7 @@ they should be windows. So use this func
+     (cond
+       ((string= osname "Linux") (pushnew :linux *features*))
+       ((string= osname "FreeBSD") (pushnew :freebsd *features*))
++      ((string= osname "DragonFly") (pushnew :freebsd *features*))
+       (t (warn "Your operating system is not recognized.")))))
+ 
+ ;;; On GNU/Linux some contribs use sysfs to figure out useful info for
