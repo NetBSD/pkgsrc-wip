@@ -1,0 +1,2 @@
+CLFSWM is a 100% Common Lisp X11 window manager (based on Tinywm and Stumpwm).
+It can be driven only with the keyboard or with mouse.

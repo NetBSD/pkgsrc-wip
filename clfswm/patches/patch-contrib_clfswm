@@ -1,0 +1,27 @@
+$NetBSD: patch-contrib_clfswm,v 1.1.1.1 2011/12/18 18:09:04 dukzcry Exp $
+
+--- clfswm.orig	2011-12-11 20:05:08.194157000 +0400
++++ contrib/clfswm	2011-12-11 20:33:57.117984000 +0400
+@@ -151,11 +151,9 @@ do
+     shift
+ done
+ 
+-if [ "x$lisp_bin" == "x" ]; then
+-    lisp_bin=$lisp
+-fi
++null=${lisp_bin:=$lisp}
+ 
+-dump_image="$dump_path/clfswm-$(cksum $(type -p $lisp) | cut -d ' ' -f 1).core"
++dump_image="$dump_path/clfswm-$(cksum `which $lisp` | cut -d ' ' -f 1).core"
+ 
+ if test yes = "$force" && test -e "$dump_image"
+ then
+@@ -176,7 +174,7 @@ done
+ if test ! -e "$dump_image" || test $older_image -eq 1
+ then
+     echo "Image is nonexistent or older than sources. Rebuilding clfswm."
+-    test -x $(type -p "$lisp") || die "$lisp can't be found."
++    test -x `which $lisp` || die "$lisp can't be found."
+     test -e "$clfswm_asd_path"/clfswm.asd || die "can't find clfswm.asd in $clfswm_asd_path"
+     test -e "$asdf_path"/asdf.lisp || die "can't find asdf.lisp in $asdf_path"
+ 

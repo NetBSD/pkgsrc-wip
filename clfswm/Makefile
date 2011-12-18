@@ -1,0 +1,62 @@
+# $NetBSD: Makefile,v 1.1.1.1 2011/12/18 18:09:04 dukzcry Exp $
+#
+
+DISTNAME=		clfswm-1106-2
+PKGNAME=		${DISTNAME:S/-2/.2/}
+CATEGORIES=		wm
+MASTER_SITES=		${HOMEPAGE:Q}
+
+MAINTAINER=		lomka@gero.in
+HOMEPAGE=		http://common-lisp.net/project/clfswm/
+COMMENT=		A(nother) Common Lisp FullScreen Window Manager
+LICENSE=		gnu-gpl-v3
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+INSTALLATION_DIRS+=	bin share/doc/clfswm
+HAS_CONFIGURE=		yes
+INSTALL_UNSTRIPPED=	yes
+# clisp-core linking set, until CLISP 2.50 release
+USE_GNU_READLINE=	yes
+
+## Why CLISP?
+# Wide arch support, although no native machine code generation (only byte-code, JIT).
+
+# X11 bindings
+BUILD_DEPENDS+=		clisp-new-clx>=2.43:../../x11/clisp-new-clx
+CONFIGURE_ARGS=		-l clisp
+CONFIGURE_ARGS+=	-d ${WRKSRC}/dump/
+CONFIGURE_ARGS+=	--with-clfswm ${WRKSRC}
+CONFIGURE_ARGS+=	--with-asdf ${WRKSRC}/contrib
+
+.include "../../mk/compiler.mk"
+post-patch:
+.if ${OPSYS} == "DragonFly" || ${OPSYS} == "FreeBSD"
+SUBST_CLASSES+=		sysconf
+SUBST_STAGE.sysconf=	post-patch
+SUBST_FILES.sysconf=	src/clfswm-info.lisp
+SUBST_SED.sysconf=	-e "/info-on-shell.*\".*CPU.*\"/{N; s/\\n//; s/\\(\".*CPU.*:\".*\"\\).*\\(\"\\)/\\1\
+				ps -w -r  -ax -o 'user,pid,start,%cpu,%mem,command'\
+				\\2/g;}"
+SUBST_SED.sysconf+=	-e "/info-on-shell.*\".*MEMORY.*\"/{N; s/\\n//; s/\\(\".*MEMORY.*:\".*\"\\).*\\(\"\\)/\\1\
+				ps -w -m  -ax -o 'user,pid,start,%cpu,%mem,command'\
+				\\2/g;}"
+.endif
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/src/clfswm ${DESTDIR}${PREFIX}/bin/clfswm
+	cp ${WRKSRC}/doc/* ${DESTDIR}${PREFIX}/share/doc/clfswm
+	${INSTALL_MAN} ${WRKSRC}/AUTHORS ${DESTDIR}${PREFIX}/share/doc/clfswm/AUTHORS
+	${INSTALL_MAN} ${WRKSRC}/COPYING ${DESTDIR}${PREFIX}/share/doc/clfswm/COPYING
+	${INSTALL_MAN} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/clfswm/README
+	${INSTALL_MAN} ${WRKSRC}/TODO ${DESTDIR}${PREFIX}/share/doc/clfswm/TODO
+	${INSTALL_MAN} ${WRKSRC}/ChangeLog ${DESTDIR}${PREFIX}/share/doc/clfswm/ChangeLog
+
+do-build:
+	cd ${WRKSRC} && ${SH} ./clfswm -n --rebuild && cp dump/clfswm-*.core src/clfswm
+
+# clisp-core linking set
+CONFIGURE_ARGS+=	-o "-K ${WRKSRC}/clisp-core"
+.include "../../wip/mk/clisp-temp.mk"
+
+.include "../../mk/bsd.pkg.mk"

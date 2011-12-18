@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/12/18 18:09:04 dukzcry Exp $
+
+SHA1 (clfswm-1106-2.tar.gz) = b088c0ab7f896ccadee1647aa5e8b39c1cf5e4b3
+RMD160 (clfswm-1106-2.tar.gz) = ec8a5349dbc0ac7bf8d61611c66a14a8ba1e0d70
+Size (clfswm-1106-2.tar.gz) = 250463 bytes
+SHA1 (patch-contrib_clfswm) = 386dc61ee58f3b92a4fba19a328e88935b66d14c
+SHA1 (patch-contrib_clfswm-temp) = f535f4bb1c0303adbf9d790266dc59eb295bd3c8
