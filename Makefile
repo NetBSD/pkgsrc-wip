@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4565 2011/12/17 20:24:00 ishit Exp $
+# $Id: Makefile,v 1.4566 2011/12/18 21:47:29 dukzcry Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -299,6 +299,7 @@ SUBDIR+=	clamassassin
 SUBDIR+=	clang
 SUBDIR+=	classgen
 SUBDIR+=	classic-mac-font-pack
+SUBDIR+=	clfswm
 SUBDIR+=	clhep
 SUBDIR+=	clips
 SUBDIR+=	clisp
