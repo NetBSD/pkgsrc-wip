@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2011/05/27 13:23:09 rxg Exp $
+# $NetBSD: Makefile,v 1.12 2011/12/18 14:02:50 absd Exp $
 
 DISTNAME=	chromium-11.0.696.72
 CATEGORIES=	www
@@ -14,6 +14,7 @@ USE_TOOLS+=	bash bison flex:pkgsrc gmake pax perl pkg-config
 USE_LANGUAGES=	c c++
 
 BUILD_DEPENDS+=	gperf>=3.0.1:../../devel/gperf
+BUILD_DEPENDS+=	yasm>=0:../../devel/yasm
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
