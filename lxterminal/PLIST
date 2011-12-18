@@ -1,1 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/10/12 15:51:22 christtrekker Exp $
+@comment $NetBSD: PLIST,v 1.2 2011/12/18 14:09:00 absd Exp $
+bin/lxterminal
+man/man1/lxterminal.1
+share/applications/lxterminal.desktop
+share/lxterminal/lxterminal.conf
+share/pixmaps/lxterminal.png
