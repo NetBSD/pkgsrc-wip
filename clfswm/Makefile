@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/12/18 18:09:04 dukzcry Exp $
+# $NetBSD: Makefile,v 1.2 2011/12/18 19:29:50 dukzcry Exp $
 #
 
 DISTNAME=		clfswm-1106-2
@@ -29,7 +29,7 @@ CONFIGURE_ARGS+=	-d ${WRKSRC}/dump/
 CONFIGURE_ARGS+=	--with-clfswm ${WRKSRC}
 CONFIGURE_ARGS+=	--with-asdf ${WRKSRC}/contrib
 
-.include "../../mk/compiler.mk"
+.include "../../mk/bsd.prefs.mk"
 post-patch:
 .if ${OPSYS} == "DragonFly" || ${OPSYS} == "FreeBSD"
 SUBST_CLASSES+=		sysconf
