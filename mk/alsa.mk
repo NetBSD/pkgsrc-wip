@@ -1,4 +1,4 @@
-# $Id: alsa.mk,v 1.1 2008/01/16 19:43:56 ondratu Exp $
+# $Id: alsa.mk,v 1.1.1.1 2011/12/18 17:46:25 dukzcry Exp $
 # from "Id: oshavercd.mk,v 1.4 2003/11/19 21:28:47 bubuchka Exp"
 #
 #
