@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2010/09/05 11:38:09 gschwarz Exp $
+# $NetBSD: Makefile,v 1.7 2011/12/19 21:44:24 gschwarz Exp $
 
 DISTNAME=	sipbomber_0.8
 PKGNAME=	${DISTNAME:S/_/-/}
 PKGREVISION=	2
 CATEGORIES=	net
-MASTER_SITES=	http://metalinkltd.com/wp-content/uploads/
+MASTER_SITES=	http://www.sourcefiles.org/Internet/Communications/Telephony/
 
 MAINTAINER=	schwarz@NetBSD.org
 HOMEPAGE=	http://www.metalinkltd.com/downloads.php
