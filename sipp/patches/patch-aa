@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.7 2009/12/25 21:18:24 gschwarz Exp $
+$NetBSD: patch-aa,v 1.8 2011/12/20 16:46:02 gschwarz Exp $
 
---- Makefile.orig	2008-04-11 14:26:37.000000000 +0200
-+++ Makefile	2008-07-12 16:35:34.000000000 +0200
-@@ -29,15 +29,6 @@
- OBJ= xp_parser.o message.o scenario.o screen.o call.o comp.o sipp.o stat.o \
-      actions.o variables.o infile.o deadcall.o task.o socketowner.o listener.o
+--- Makefile.orig	2011-12-20 16:06:37.000000000 +0100
++++ Makefile	2011-12-20 16:15:27.000000000 +0100
+@@ -30,15 +30,6 @@
+      actions.o variables.o infile.o deadcall.o task.o socketowner.o listener.o \
+      opentask.o reporttask.o watchdog.o
  
 -# Libraries directories
 -LIBDIR_linux=
@@ -18,7 +18,7 @@ $NetBSD: patch-aa,v 1.7 2009/12/25 21:18:24 gschwarz Exp $
  # Archive file created in your home directory when building the archive target
  # ARCHIVE= $(HOME)/$(OUTPUT).tgz
  ARCHIVE= $(OUTPUT).tgz
-@@ -49,102 +40,9 @@
+@@ -50,102 +41,9 @@
  
  ###################################################################
  # Generic Rules
@@ -124,18 +124,18 @@ $NetBSD: patch-aa,v 1.7 2009/12/25 21:18:24 gschwarz Exp $
  
  # Include directories
  INCDIR_linux=-I. -I/usr/include/openssl
-@@ -159,8 +57,7 @@
+@@ -160,8 +58,7 @@
  -include local.mk
  
  # Building without TLS and authentication (no openssl pre-requisite)
 -all:
--	make OSNAME=`uname|sed -e "s/CYGWIN.*/CYGWIN/"` MODELNAME=`uname -m|sed "s/Power Macintosh/ppc/"` $(OUTPUT)
+-	$(MAKE) OSNAME=`uname|sed -e "s/CYGWIN.*/CYGWIN/"` MODELNAME=`uname -m|sed "s/Power Macintosh/ppc/"` $(OUTPUT)
 +all: ${OUTPUT}
  
  # Building with TLS and authentication
  ossl:
-@@ -186,7 +83,7 @@
- 	make OSNAME=`uname|sed -e "s/CYGWIN.*/CYGWIN/"` MODELNAME=`uname -m|sed "s/Power Macintosh/ppc/"` OBJ_TLS="auth.o sslinit.o sslthreadsafe.o  milenage.o rijndael.o" TLS_LIBS="-lssl -lcrypto" TLS="-D_USE_OPENSSL -DOPENSSL_NO_KRB5"  OBJ_PCAPPLAY="send_packets.o prepare_pcap.o" PCAPPLAY_LIBS="-lwpcap" PCAPPLAY="-DPCAPPLAY" $(OUTPUT)
+@@ -187,7 +84,7 @@
+ 	$(MAKE) OSNAME=`uname|sed -e "s/CYGWIN.*/CYGWIN/"` MODELNAME=`uname -m|sed "s/Power Macintosh/ppc/"` OBJ_TLS="auth.o sslinit.o sslthreadsafe.o  milenage.o rijndael.o" TLS_LIBS="-lssl -lcrypto" TLS="-D_USE_OPENSSL -DOPENSSL_NO_KRB5"  OBJ_PCAPPLAY="send_packets.o prepare_pcap.o" PCAPPLAY_LIBS="-lwpcap" PCAPPLAY="-DPCAPPLAY" $(OUTPUT)
  
  $(OUTPUT): $(OBJ_TLS) $(OBJ_PCAPPLAY) $(OBJ)
 -	$(CCLINK) $(LFLAGS) $(MFLAGS) $(LIBDIR_$(SYSTEM)) \
@@ -143,7 +143,7 @@ $NetBSD: patch-aa,v 1.7 2009/12/25 21:18:24 gschwarz Exp $
  	$(DEBUG_FLAGS) -o $@ $(OBJ_TLS) $(OBJ_PCAPPLAY) $(OBJ) $(LIBS) $(TLS_LIBS) $(PCAPPLAY_LIBS) $(EXTRAENDLIBS)
  
  debug:
-@@ -217,10 +114,10 @@
+@@ -221,14 +118,14 @@
  *.o: *.h *.hpp
  
  .C.o:
@@ -157,3 +157,9 @@ $NetBSD: patch-aa,v 1.7 2009/12/25 21:18:24 gschwarz Exp $
  .c.o:
 -	$(CC) $(CFLAGS) $(MFLAGS) $(DEBUG_FLAGS) $(_HPUX_LI_FLAG) $(INCDIR) -c -o $*.o $<
 +	$(CC) $(CFLAGS) $(DEBUG_FLAGS) $(_HPUX_LI_FLAG) $(INCDIR) -c -o $*.o $<
+ 
+ fortune.so: fortune.cpp
+-	g++ -fPIC $(CPPFLAGS) $(MFLAGS) $(DEBUG_FLAGS) $(_HPUX_LI_FLAG) $(INCDIR) -c -o fortune.o $<
+-	gcc -shared -Wl,-soname,fortune.so -o $@ fortune.o
++	$(CXX) -fPIC $(CXXFLAGS) $(DEBUG_FLAGS) $(_HPUX_LI_FLAG) $(INCDIR) -c -o fortune.o $<
++	$(CC) -shared -Wl,-soname,fortune.so -o $@ fortune.o

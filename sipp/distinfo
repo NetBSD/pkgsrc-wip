@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.9 2009/12/25 21:18:24 gschwarz Exp $
+$NetBSD: distinfo,v 1.10 2011/12/20 16:46:02 gschwarz Exp $
 
-SHA1 (sipp.3.1.src.tar.gz) = 781e50a74844abbdff1b90781fa24d062f0c1352
-RMD160 (sipp.3.1.src.tar.gz) = bd89c94b3a006fdc5717d43765776901976dbf71
-Size (sipp.3.1.src.tar.gz) = 9428792 bytes
-SHA1 (patch-aa) = 770b01682dcc0ac3e22e0baea0848453d65db3f1
+SHA1 (sipp.svn.tar.gz) = cef9e061b3223b228ae403f897edc192b3ce2ce7
+RMD160 (sipp.svn.tar.gz) = bb929337be299c3d9e279097f3a232a3aedfcdc0
+Size (sipp.svn.tar.gz) = 9447097 bytes
+SHA1 (patch-aa) = def63f0af45587d996629313fc0c44c3d575171b
 SHA1 (patch-ab) = af7df29abfc0ae49e2e52a138e3a0c5c156b2a30
-SHA1 (patch-ac) = 16ecd2344318b4af570cc062bf357dfde0676831
+SHA1 (patch-ac) = 373c80b62a903daaf26436bbc2a4a2db1407912a
 SHA1 (patch-ad) = c5927fd3026bccc344e9a0b095435b5a3dd72aa0
-SHA1 (patch-ae) = 2ec35d0077019a3cb0915e1f428750b0eee4aea7
-SHA1 (patch-af) = c7e48619f39d10bb94c891aba27c5aba7313c376
+SHA1 (patch-ae) = 1e335811d12c2c71549a6ff5986164cea4940b8a
+SHA1 (patch-af) = fcf048fadbf0767df5536c5bc28457e3aa32a77b

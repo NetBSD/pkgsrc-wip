@@ -1,7 +1,7 @@
-$NetBSD: patch-af,v 1.2 2009/12/06 18:45:25 gschwarz Exp $
+$NetBSD: patch-af,v 1.3 2011/12/20 16:46:02 gschwarz Exp $
 
---- sipp.hpp.orig	2008-04-11 14:26:37.000000000 +0200
-+++ sipp.hpp	2009-11-09 18:02:01.560006000 +0100
+--- sipp.hpp.orig	2011-12-20 16:05:24.000000000 +0100
++++ sipp.hpp	2011-12-20 16:05:32.000000000 +0100
 @@ -25,6 +25,9 @@
  
  #include <stdio.h>
@@ -12,7 +12,7 @@ $NetBSD: patch-af,v 1.2 2009/12/06 18:45:25 gschwarz Exp $
  #include <string.h>
  #include <pthread.h>
  #include <sys/types.h>
-@@ -52,6 +55,9 @@
+@@ -53,6 +56,9 @@
  #else
  #include <stdarg.h>
  #endif

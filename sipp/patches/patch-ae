@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.1 2008/07/12 15:08:49 gschwarz Exp $
+$NetBSD: patch-ae,v 1.2 2011/12/20 16:46:02 gschwarz Exp $
 
---- call.cpp.orig	2008-07-12 16:46:12.000000000 +0200
-+++ call.cpp	2008-07-12 17:00:24.000000000 +0200
-@@ -124,7 +124,14 @@
+--- call.cpp.orig	2011-12-20 16:51:43.000000000 +0100
++++ call.cpp	2011-12-20 16:59:12.000000000 +0100
+@@ -133,7 +133,14 @@
      char pattern[] = "c=IN IP4 ";
      char *begin, *end;
      char ip[32];
@@ -18,7 +18,7 @@ $NetBSD: patch-ae,v 1.1 2008/07/12 15:08:49 gschwarz Exp $
      if (!begin) {
        /* Can't find what we're looking at -> return no address */
        return INADDR_NONE;
-@@ -133,8 +140,11 @@
+@@ -142,8 +149,11 @@
      end = strstr(begin, "\r\n");
      if (!end)
        return INADDR_NONE;
@@ -31,13 +31,13 @@ $NetBSD: patch-ae,v 1.1 2008/07/12 15:08:49 gschwarz Exp $
      return inet_addr(ip);
  }
  
-@@ -147,11 +157,13 @@
+@@ -156,11 +166,13 @@
      char pattern[] = "c=IN IP6 ";
      char *begin, *end;
      char ip[128];
 +    char *tmp = strdup(msg);
  
-     memset(&addr, 0, sizeof(addr));
+     memset(addr, 0, sizeof(*addr));
      memset(ip, 0, 128);
  
 -    begin = strstr(msg, pattern);
@@ -46,20 +46,20 @@ $NetBSD: patch-ae,v 1.1 2008/07/12 15:08:49 gschwarz Exp $
      if (!begin) {
        /* Can't find what we're looking at -> return no address */
        return 0;
-@@ -160,7 +172,11 @@
+@@ -169,7 +181,11 @@
      end = strstr(begin, "\r\n");
      if (!end)
        return 0;
 -    strncpy(ip, begin, end - begin);
-+    
++
 +    *end = 0;
 +    strncpy(ip, begin, sizeof(ip) - 1);
 +    ip[sizeof(ip) - 1] = 0;
 +    free(tmp);
-     if (!inet_pton(AF_INET6, ip, &addr)) {
+     if (!inet_pton(AF_INET6, ip, addr)) {
        return 0;
      }
-@@ -187,7 +203,10 @@
+@@ -196,7 +212,10 @@
  	ERROR("Internal error: Undefined media pattern %d\n", 3);
      }
  
@@ -71,7 +71,7 @@ $NetBSD: patch-ae,v 1.1 2008/07/12 15:08:49 gschwarz Exp $
      if (!begin) {
        /* m=audio not found */
        return 0;
-@@ -196,8 +215,11 @@
+@@ -205,8 +224,11 @@
      end = strstr(begin, "\r\n");
      if (!end)
        ERROR("get_remote_port_media: no CRLF found");
