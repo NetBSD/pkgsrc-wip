@@ -19,9 +19,14 @@ extra_commands="reload"
 
 load_rc_config ${name}
 
+start_precmd="fail2ban_precmd"
 start_cmd="${client} ${fail2ban_flags} start"
 stop_cmd="${client} ${fail2ban_flags} stop"
 status_cmd="${client} ${fail2ban_flags} status"
 reload_cmd="${client} ${fail2ban_flags} reload"
+
+fail2ban_precmd () {
+    mkdir -p /var/run/fail2ban
+}
 
 run_rc_command "$1"
