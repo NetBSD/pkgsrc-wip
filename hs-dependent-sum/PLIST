@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/12/21 15:31:47 phonohawk Exp $
+lib/dependent-sum-${PKGVERSION}/${HASKELL_VERSION}/Data/Dependent/Sum.hi
+lib/dependent-sum-${PKGVERSION}/${HASKELL_VERSION}/Data/Dependent/Sum.p_hi
+lib/dependent-sum-${PKGVERSION}/${HASKELL_VERSION}/Data/Dependent/Sum/Typeable.hi
+lib/dependent-sum-${PKGVERSION}/${HASKELL_VERSION}/Data/Dependent/Sum/Typeable.p_hi
+lib/dependent-sum-${PKGVERSION}/${HASKELL_VERSION}/Data/GADT/Compare.hi
+lib/dependent-sum-${PKGVERSION}/${HASKELL_VERSION}/Data/GADT/Compare.p_hi
+lib/dependent-sum-${PKGVERSION}/${HASKELL_VERSION}/Data/GADT/Show.hi
+lib/dependent-sum-${PKGVERSION}/${HASKELL_VERSION}/Data/GADT/Show.p_hi
+lib/dependent-sum-${PKGVERSION}/${HASKELL_VERSION}/HSdependent-sum-${PKGVERSION}.o
+lib/dependent-sum-${PKGVERSION}/${HASKELL_VERSION}/libHSdependent-sum-${PKGVERSION}.a
+lib/dependent-sum-${PKGVERSION}/${HASKELL_VERSION}/libHSdependent-sum-${PKGVERSION}_p.a
+lib/dependent-sum-${PKGVERSION}/${HASKELL_VERSION}/package-description
