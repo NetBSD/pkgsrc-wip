@@ -1,4 +1,6 @@
-$NetBSD: TODO,v 1.1.1.1 2004/02/10 12:09:32 adrian_p Exp $
+$NetBSD: TODO,v 1.2 2011/12/21 21:25:04 tezdog Exp $
 
 Add more database support ?
 Needs more testing.
+
+Need to fix http://secunia.com/advisories/47272/
