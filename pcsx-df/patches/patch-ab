@@ -1,6 +1,8 @@
-$NetBSD: patch-ab,v 1.1.1.1 2009/10/11 10:04:42 thomasklausner Exp $
+$NetBSD: patch-ab,v 1.2 2011/12/23 00:09:19 othyro Exp $
 
---- libpcsxcore/ix86_64/iR3000A-64.c.orig	2007-11-09 17:47:44.000000000 +0000
+Fix "MAP_ANONYMOUS' undeclared" error on amd64.
+
+--- libpcsxcore/ix86_64/iR3000A-64.c.orig	2009-02-23 10:17:23.000000000 +0000
 +++ libpcsxcore/ix86_64/iR3000A-64.c
 @@ -29,6 +29,10 @@
  //For mmap
