@@ -1,2 +1,1 @@
 Plugins need to be ported for non-Linux.
-Dumps core when looking for plugins in /usr/lib.
