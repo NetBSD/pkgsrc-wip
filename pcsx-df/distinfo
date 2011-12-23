@@ -1,10 +1,11 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/10/11 10:04:42 thomasklausner Exp $
+$NetBSD: distinfo,v 1.2 2011/12/23 00:10:51 othyro Exp $
 
 SHA1 (pcsx-df-1.10.tar.gz) = e4eaf30ef66fdc56778f475b4b1002e2a93bea31
 RMD160 (pcsx-df-1.10.tar.gz) = 7a78aa5dedd9a8bfe913cbb0a2851837d1b6e834
 Size (pcsx-df-1.10.tar.gz) = 3379907 bytes
-SHA1 (patch-aa) = a353199fc663da29e9b9312e18f91c3758fdc46d
-SHA1 (patch-ab) = 98e0bf4c6e9556d30c536df628d2cc7d74cf0d1b
-SHA1 (patch-ac) = f6e198bee462d33215bd09d0e03d0e308ed1a8e4
-SHA1 (patch-ad) = 44c431d3996c92f52e778e8a154fdf3ff9cc1b94
-SHA1 (patch-ae) = b06d8f265f331e26e169cd2c07e54c8f5d25584b
+SHA1 (patch-aa) = 65be84cf4e071219409cb1152279a7137f91d340
+SHA1 (patch-ab) = 137f3d101f9c8c9d6d17e4f5dc768b91cfe126ff
+SHA1 (patch-ac) = 2ee2fabb990336caffdf835c859a4f68276f056f
+SHA1 (patch-ad) = dae17b24071db225bcfa10c92e3f2d6db56e9d87
+SHA1 (patch-ae) = 621df29a680334a09ea73dcb0695878d730c7462
+SHA1 (patch-libpcsxcore_ix86_iR3000A.c) = 86e6684e327a8fcefffcd1a91452a3e3cb16843d
