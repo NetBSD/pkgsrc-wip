@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2011/05/10 18:34:20 silasdb Exp $
+$NetBSD: distinfo,v 1.3 2011/12/24 11:36:58 haad Exp $
 
-SHA1 (buildbot-slave-0.8.3.tar.gz) = f42d29ac0d3d630f277f13e39296578abb1d16ac
-RMD160 (buildbot-slave-0.8.3.tar.gz) = d556acd364e98d8677c484729211947c3087870f
-Size (buildbot-slave-0.8.3.tar.gz) = 86438 bytes
+SHA1 (buildbot-slave-0.8.5.tar.gz) = b30189a5a9e773f430c2794dd73bdc74388a1627
+RMD160 (buildbot-slave-0.8.5.tar.gz) = f3247de750772c6e0c1137063388dd96efa1542e
+Size (buildbot-slave-0.8.5.tar.gz) = 98133 bytes

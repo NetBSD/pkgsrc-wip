@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2011/05/10 18:34:20 silasdb Exp $
+# $NetBSD: Makefile,v 1.3 2011/12/24 11:36:58 haad Exp $
 #
 
-DISTNAME=		buildbot-slave-0.8.3
+DISTNAME=		buildbot-slave-0.8.5
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
+EGGNAME=		${DISTNAME}-${PYPKGPREFIX}
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=buildbot/}
 
@@ -25,5 +26,5 @@ DEPENDS+=               ${PYPKGPREFIX}-jinja2-[0-9]*:../../textproc/py-jinja2
 DEPENDS+=               ${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 DEPENDS+=               ${PYPKGPREFIX}-ZopeInterface-[0-9]*:../../devel/py-ZopeInterface
 
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
