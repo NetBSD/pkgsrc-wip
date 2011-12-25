@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2011/05/29 21:18:35 asau Exp $
+@comment $NetBSD: PLIST,v 1.15 2011/12/25 18:34:15 asau Exp $
 bin/mpiCC
 bin/mpic++
 bin/mpicc
@@ -107,6 +107,7 @@ lib/openmpi/mca_iof_hnp.la
 lib/openmpi/mca_iof_orted.la
 lib/openmpi/mca_iof_tool.la
 lib/openmpi/mca_maffinity_first_use.la
+lib/openmpi/mca_maffinity_hwloc.la
 lib/openmpi/mca_mpool_fake.la
 lib/openmpi/mca_mpool_rdma.la
 lib/openmpi/mca_mpool_sm.la
@@ -142,6 +143,8 @@ lib/openmpi/mca_routed_direct.la
 lib/openmpi/mca_routed_linear.la
 lib/openmpi/mca_routed_radix.la
 lib/openmpi/mca_routed_slave.la
+lib/openmpi/mca_shmem_mmap.la
+lib/openmpi/mca_shmem_sysv.la
 lib/openmpi/mca_topo_unity.la
 lib/openmpi/mca_vprotocol_pessimist.la
 lib/pkgconfig/ompi-c.pc
@@ -524,7 +527,10 @@ share/openmpi/help-oob-tcp.txt
 share/openmpi/help-opal-carto-file.txt
 share/openmpi/help-opal-crs-base.txt
 share/openmpi/help-opal-crs-none.txt
+share/openmpi/help-opal-maffinity-hwloc.txt
 share/openmpi/help-opal-runtime.txt
+share/openmpi/help-opal-shmem-mmap.txt
+share/openmpi/help-opal-shmem-sysv.txt
 share/openmpi/help-opal-util.txt
 share/openmpi/help-opal-wrapper.txt
 share/openmpi/help-orte-clean.txt
