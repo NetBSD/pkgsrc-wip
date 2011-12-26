@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2011/11/27 02:35:26 obache Exp $
+@comment $NetBSD: PLIST,v 1.6 2011/12/26 05:41:57 obache Exp $
 bin/mikutter
 share/applications/mikutter.desktop
 share/doc/mikutter/README
@@ -17,6 +17,8 @@ share/mikutter/core/addon/extract.rb
 share/mikutter/core/addon/followingcontrol.rb
 share/mikutter/core/addon/friend_timeline.rb
 share/mikutter/core/addon/libnotify/libnotify.rb
+share/mikutter/core/addon/libnotify/notify-send.rb
+share/mikutter/core/addon/libnotify/rnotify.rb
 share/mikutter/core/addon/list/list.rb
 share/mikutter/core/addon/list/liststream.rb
 share/mikutter/core/addon/mentions.rb
@@ -109,6 +111,10 @@ share/mikutter/core/mui/gtk_selectbox.rb
 share/mikutter/core/mui/gtk_skin.rb
 share/mikutter/core/mui/gtk_timeline_utils.rb
 share/mikutter/core/mui/gtk_userlist.rb
+share/mikutter/core/mui/gtk_web_image_loader.rb
+share/mikutter/core/mui/gtk_web_image_loader_image_cache.rb
+share/mikutter/core/mui/gtk_web_image_loader_image_cache_pixbuf.rb
+share/mikutter/core/mui/gtk_web_image_loader_image_cache_raw.rb
 share/mikutter/core/mui/gtk_webicon.rb
 share/mikutter/core/plugin.rb
 share/mikutter/core/plugin/ChangeLog
@@ -158,9 +164,11 @@ share/mikutter/core/skin/data/tab-bg.png
 share/mikutter/core/skin/data/timeline.png
 share/mikutter/core/skin/data/underconstruction.png
 share/mikutter/core/skin/data/unfav.png
+share/mikutter/core/test/icon_test.png
 share/mikutter/core/test/test_cairo_markup_generator.rb
 share/mikutter/core/test/test_cairo_textselector.rb
 share/mikutter/core/test/test_entity.rb
+share/mikutter/core/test/test_gtk_webicon.rb
 share/mikutter/core/test/test_message.rb
 share/mikutter/core/test/test_messageconverters.rb
 share/mikutter/core/test/test_miquire.rb
@@ -169,6 +177,7 @@ share/mikutter/core/test/test_post.rb
 share/mikutter/core/test/test_retriever.rb
 share/mikutter/core/test/test_user.rb
 share/mikutter/core/test/test_utils.rb
+share/mikutter/core/test/test_web_image_loader.rb
 share/mikutter/core/twitter.rb
 share/mikutter/core/twitter_api.rb
 share/mikutter/core/user.rb
