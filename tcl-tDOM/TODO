@@ -1,0 +1,7 @@
+mwilhelmy:
+- figure out why the shared object is called libtdom082.so on NetBSD and
+  libtdom0.8.2.so on Linux because it breaks PLIST. 
+- try to avoid in-tree expat (I'm making a patch for their autoconf which
+  defaults to system-expat)
+- fix download links (Project has moved to github, but I'm not commiting any
+  files other than TODO until I hear from phonohawk, the maintainer)

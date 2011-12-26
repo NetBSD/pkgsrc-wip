@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/03/24 08:46:31 phonohawk Exp $
+$NetBSD: distinfo,v 1.2 2011/12/26 22:42:22 mwilhelmy Exp $
 
 SHA1 (tDOM-0.8.2.tgz) = c4ee4e013b084f8af57f35a2a06eb0a428508978
 RMD160 (tDOM-0.8.2.tgz) = a0ca4c2e45b97c5a7bdfeee20165a537b7fe6d8b
 Size (tDOM-0.8.2.tgz) = 969804 bytes
+SHA1 (patch-aa) = 9eea8920abaf8d539d9f6528b420d525f9c273fd
+SHA1 (patch-ab) = 879305e6e1692365a14c7f0fb582e35d6ef246b8
