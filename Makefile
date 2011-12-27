@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4567 2011/12/21 15:34:29 phonohawk Exp $
+# $Id: Makefile,v 1.4568 2011/12/27 15:44:08 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2053,6 +2053,7 @@ SUBDIR+=	py-RXP
 SUBDIR+=	py-SQLObject
 SUBDIR+=	py-Soya
 SUBDIR+=	py-addons
+SUBDIR+=	py-aesthete
 SUBDIR+=	py-agio
 SUBDIR+=	py-aipy
 SUBDIR+=	py-albatross
