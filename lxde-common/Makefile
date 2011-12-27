@@ -1,15 +1,20 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/10/22 00:33:32 jeremy-c-reed Exp $
-#
+# $NetBSD: Makefile,v 1.2 2011/12/27 10:02:34 absd Exp $
 
 DISTNAME=	lxde-common-0.3.2.1
 CATEGORIES=	devel x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lxde/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	INSERT_YOUR_MAIL_ADDRESS_HERE
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://lxde.sourceforge.net/
-COMMENT=	SHORT_DESCRIPTION_OF_THE_PACKAGE
+COMMENT=	Default configuration settings for LXDE
+LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
+USE_TOOLS+=	pkg-config
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
