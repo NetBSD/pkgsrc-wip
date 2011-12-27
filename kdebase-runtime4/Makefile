@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2011/12/05 10:18:28 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.15 2011/12/27 10:08:50 absd Exp $
 
 DISTNAME=	kdebase-runtime-${_KDE_VERSION}
 PKGREVISION=	1
@@ -19,12 +19,13 @@ USE_TOOLS+=		gmake
 
 .include "options.mk"
 
-SUBST_CLASSES+=		htdig paths
+SUBST_CLASSES+=		htdig
 SUBST_STAGE.htdig=	post-patch
 SUBST_MESSAGE.htdig=	Fix htdig paths.
 SUBST_FILES.htdig=	khelpcenter/searchhandlers/khc_htsearch.pl
 SUBST_SED.htdig=	-e s:/srv/www/cgi-bin:${PREFIX}/libexec/cgi-bin:
 
+SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	kioslave/info/kde-info2html.conf
 SUBST_SED.paths=	-e 's,@LOCALBASE@,${LOCALBASE},g'
 SUBST_STAGE.paths=	post-patch
@@ -45,6 +46,10 @@ INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 
 .include "../../wip/kde4/kde4.mk"
 
+.include "../../audio/pulseaudio/buildlink3.mk"
+.include "../../audio/libcanberra/buildlink3.mk"
+.include "../../security/libssh/buildlink3.mk"
+.include "../../wip/phonon/buildlink3.mk"
 .include "../../archivers/xz/buildlink3.mk"
 .include "../../graphics/exiv2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"

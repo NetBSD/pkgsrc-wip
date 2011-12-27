@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2011/05/13 23:25:14 mwdavies Exp $
+# $NetBSD: Makefile,v 1.11 2011/12/27 10:08:50 absd Exp $
 
 DISTNAME=	kdebase-${_KDE_VERSION}
 CATEGORIES=	x11
@@ -8,8 +8,13 @@ COMMENT=	Base modules for the KDE 4 integrated X11 desktop
 
 # BUILD_MAKE_FLAGS+= VERBOSE=1
 
-REPLACE_RUBY+=	apps/dolphin/src/khns/servicemenudeinstallation
-REPLACE_RUBY+=	apps/dolphin/src/khns/servicemenuinstallation
+REPLACE_RUBY+=	dolphin/src/settings/services/servicemenuinstallation
+REPLACE_RUBY+=	dolphin/src/settings/services/servicemenudeinstallation
+
+REPLACE_INTERPRETER+=	xdg-open
+REPLACE.scheme.old=	.*/bin/env xdg-open
+REPLACE.scheme.new=	${PREFIX}/bin/xdg-open
+REPLACE_FILES.scheme=	lib/konq/Templates/Program.desktop
 
 .include "../../lang/ruby/replace.mk"
 

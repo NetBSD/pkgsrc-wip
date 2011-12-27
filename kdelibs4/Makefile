@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2011/05/23 11:37:08 mwdavies Exp $
+# $NetBSD: Makefile,v 1.26 2011/12/27 10:08:50 absd Exp $
 
 DISTNAME=	kdelibs-${_KDE_VERSION}
 CATEGORIES=	x11
@@ -16,7 +16,7 @@ CONFLICTS=	kdelibs-[0-9]*
 
 CMAKE_DEPENDENCIES_REWRITE= _KDE_build/KDELibsDependencies.cmake
 CMAKE_DEPENDENCIES_REWRITE+= _KDE_build/KDELibsDependenciesInternal.cmake
-CMAKE_MODULE_PATH_OVERRIDE+=	kjsembed/qtonly/CMakeLists.txt
+CMAKE_MODULE_PATH_OVERRIDE+= kjsembed/qtonly/CMakeLists.txt
 
 CMAKE_ARGS+=	-DKDE_DISTRIBUTION_TEXT:STRING="NetBSD pkgsrc"
 CMAKE_ARGS+=	-DWITH_Avahi:BOOL=off
@@ -51,6 +51,13 @@ SUBST_FILES.kdelibsfix= \
 	kde3support/kdeui/k3sconfig.cpp \
 	kio/kssl/kopenssl.cpp
 SUBST_SED.kdelibsfix=		-e 's:@LOCALBASE@:${LOCALBASE}:g'
+
+# XXX this is an ugly hack to avoid the WRKDIR path in the installed cmake file
+SUBST_CLASSES+=			phononrelpath
+SUBST_STAGE.phononrelpath=	post-configure
+SUBST_MESSAGE.phononrelpath=	Fixing phonon RELWITHDEBINFO path
+SUBST_FILES.phononrelpath=	_KDE_build/CMakeFiles/Export/_usr/pkg/share/kde/apps/cmake/modules/KDELibs4LibraryTargets-relwithdebinfo.cmake
+SUBST_SED.phononrelpath=	-e 's:[^"]*/\.buildlink/lib/libphonon\.so::'
 
 USE_TOOLS+=	flex gmake
 
@@ -99,6 +106,6 @@ BUILDLINK_API_DEPENDS.shared-desktop-ontologies+=	shared-desktop-ontologies>=0.4
 .include "../../x11/libXinerama/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
-
 .include "../../mk/krb5.buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"

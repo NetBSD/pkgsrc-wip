@@ -1,7 +1,8 @@
-# $NetBSD: options.mk,v 1.3 2011/05/13 23:25:14 mwdavies Exp $
+# $NetBSD: options.mk,v 1.4 2011/12/27 10:08:50 absd Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.kdebase-runtime4
-PKG_SUPPORTED_OPTIONS=  samba alsa
+PKG_SUPPORTED_OPTIONS=	samba alsa
+PKG_DEFAULT_OPTIONS=	samba alsa
 
 .include "../../mk/bsd.options.mk"
 

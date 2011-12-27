@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2011/05/13 23:25:14 mwdavies Exp $
+# $NetBSD: Makefile,v 1.30 2011/12/27 10:08:50 absd Exp $
 
 DISTNAME=	kdebase-workspace-${_KDE_VERSION}
 CATEGORIES=	x11
-COMMENT=	base workspace for the KDE 4 integrated X11 desktop
+COMMENT=	Base workspace for the KDE 4 integrated X11 desktop
 
 .include "../../wip/kde4/Makefile.kde4"
 
@@ -54,15 +54,17 @@ PY_PATCHPLIST=	yes
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
 
-SUBST_CLASSES+=		paths qtpath isocodes
+SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	kcontrol/kdm/main.cpp
 SUBST_SED.paths=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
 SUBST_STAGE.paths=	post-patch
 
+SUBST_CLASSES+=		qtpath
 SUBST_FILES.qtpath=	startkde.cmake
 SUBST_VARS.qtpath=	QTDIR
 SUBST_STAGE.qtpath=	post-patch
 
+SUBST_CLASSES+=		isocodes
 SUBST_FILES.isocodes=	kcontrol/keyboard/iso_codes.h
 SUBST_SED.isocodes=	-e 's,/usr/share/xml/iso-codes,${BUILDLINK_PREFIX.iso-codes}/share/xml/iso-codes,g'
 SUBST_STAGE.isocodes=	post-patch
@@ -114,6 +116,7 @@ PYTHON_VERSIONS_ACCEPTED= 27 26 25 # because kdebindings4-python
 #.include "../../sysutils/consolekit/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/iso-codes/buildlink3.mk"
+.include "../../wip/phonon/buildlink3.mk"
 .include "../../wip/kdebindings4-python/buildlink3.mk"
 .include "../../wip/kdelibs4/buildlink3.mk"
 .include "../../wip/kdepimlibs4/buildlink3.mk"
