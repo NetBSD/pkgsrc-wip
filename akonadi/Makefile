@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2011/09/01 22:45:00 absd Exp $
+# $NetBSD: Makefile,v 1.10 2011/12/27 10:06:13 absd Exp $
 
 DISTNAME=	akonadi-1.5.3
 CATEGORIES=	mail
@@ -16,23 +16,12 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEPENDS+=	automoc4>=0.9.87:../../devel/automoc4
 BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
-DEPENDS+=	qt4-mysql-[0-9]*:../../x11/qt4-mysql
-.include "../../mk/mysql.buildlink3.mk"
-.if ${_MYSQL_VERSION} == "55"
-DEPENDS+=	mysql-server-[0-9]*:../../databases/mysql55-server
-.elif ${_MYSQL_VERSION} == "51"
-DEPENDS+=	mysql-server-[0-9]*:../../databases/mysql51-server
-.else
-DEPENDS+=	mysql-server-[0-9]*:../../databases/mysql5-server
-.endif
 
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 USE_CMAKE=	yes
 CMAKE_ARG_PATH=	..
 CONFIGURE_DIRS=	_build
-CMAKE_ARGS+=	-DDATABASE_BACKEND=SQLITE
-CMAKE_ARGS+=	-DINSTALL_QSQLITE_IN_QT_PREFIX=true
 
 pre-configure:
 	${LN} -sf ${QTDIR}/bin/qmake ${BUILDLINK_DIR}/bin/
@@ -40,14 +29,7 @@ pre-configure:
 
 PKGCONFIG_OVERRIDE+=	akonadi.pc.cmake
 
-SUBST_CLASSES+=		mysql
-SUBST_STAGE.mysql=	post-patch
-SUBST_MESSAGE.mysql=	Fix mysqld path.
-SUBST_FILES.mysql=	server/CMakeLists.txt
-SUBST_SED.mysql=	-e "s:MYSQLD_EXECUTABLE mysqld:MYSQLD_EXECUTABLE mysqld ${PREFIX}/libexec:"
-
 .include "../../databases/shared-mime-info/buildlink3.mk"
-.include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../textproc/soprano/buildlink3.mk"
 .include "../../x11/qt4-libs/buildlink3.mk"
