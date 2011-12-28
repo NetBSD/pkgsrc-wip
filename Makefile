@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4568 2011/12/27 15:44:08 jihbed Exp $
+# $Id: Makefile,v 1.4569 2011/12/28 06:58:01 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2858,6 +2858,7 @@ SUBDIR+=	vale-current
 SUBDIR+=	vamp
 SUBDIR+=	vamps
 SUBDIR+=	varnish
+SUBDIR+=	vba-m
 SUBDIR+=	vcf
 SUBDIR+=	vche
 SUBDIR+=	vdesk
