@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2011/07/27 20:59:36 jihbed Exp $
+# $NetBSD: Makefile,v 1.4 2011/12/28 09:52:36 jihbed Exp $
 #
 
-DISTNAME=	spyder-2.0.12
+DISTNAME=	spyder-2.1.6
 CATEGORIES=	devel python
 MASTER_SITES=	http://spyderlib.googlecode.com/files/
 EXTRACT_SUFX=	.zip
@@ -11,12 +11,16 @@ HOMEPAGE=	http://code.google.com/p/spyderlib/
 COMMENT=	Scientific Python Development Environment
 LICENSE=	mit
 
+### Recommende dependency###
+DEPENDS+=	${PYPKGPREFIX}-scipy>=0.7.2:../../math/py-scipy
+DEPENDS+=	${PYPKGPREFIX}-cElementTree-[0-9]*:../../textproc/py-cElementTree 
 DEPENDS+=	${PYPKGPREFIX}-sphinx>=1.0.7:../../textproc/py-sphinx
-#DEPENDS+=	${PYPKGPREFIX}-flakes>=0.4.0:../../wip/py-flakes
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_LANGUAGES=	# none
+USE_PKGLOCALEDIR=	yes
+USE_LANGUAGES=		# none
+
 PYTHON_VERSIONS_ACCEPTED= 27 26 25
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 PYDISTUTILSPKG=	yes
@@ -29,14 +33,16 @@ post-extract:
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/spyder.desktop ${DESTDIR}${PREFIX}/share/applications
 
-
+### Recommende dependency ###
 .include "../../devel/py-ctypes/buildlink3.mk"
 .include "../../devel/py-rope/buildlink3.mk"
 .include "../../graphics/py-imaging/buildlink3.mk"
 .include "../../graphics/py-matplotlib/buildlink3.mk"
-.include "../../lang/python/extension.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../x11/py-Tk/buildlink3.mk"
+###Requirements dependency ###
 .include "../../x11/py-qt4/buildlink3.mk"
 .include "../../x11/py-sip/buildlink3.mk"
+.include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
