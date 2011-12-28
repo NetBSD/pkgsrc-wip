@@ -78,6 +78,8 @@ BEGIN {
 		exitnow(1)
 	}
 
+	assert(!opt_1 || !opt_invert || !opt_excl, "pkg_subgraph_deps: -xv1 is not allowed!")
+
 	if (pkgs != ""){
 		split(pkgs, pkgs_arr)
 		for (i in pkgs_arr)
@@ -128,9 +130,15 @@ function rec (pkg,                    i,to){
 
 function print_edge (from, to,               ok){
 #	print "?", from, to
-	ok = ((from in result) && (to in result))
-	if (ok && opt_1 && !opt_invert)
-		ok = ((from SUBSEP to) in result_edge)
+	if (opt_1 && opt_invert){
+		ok = !((from SUBSEP to) in result_edge)
+	}else{
+		ok = ((from in result) && (to in result))
+		if (ok && opt_1){
+			if (!opt_invert)
+				ok = ((from SUBSEP to) in result_edge)
+		}
+	}
 
 	if (ok){
 		if (opt_deps)

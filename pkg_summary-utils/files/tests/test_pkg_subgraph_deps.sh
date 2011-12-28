@@ -96,6 +96,38 @@ wip/heirloom-libcommon wip/libuxre
 wip/runawk
 '
 
+pkg_subgraph_deps -1v -f src_pkgs.txt src_deps.txt | sort |
+cmp 'pkg_subgraph_deps #5.1' \
+'devel/gmake textproc/dict-client
+devel/gmake textproc/dict-server
+devel/libjudy
+devel/libmaa textproc/dict-client
+devel/libmaa textproc/dict-server
+devel/libmaa wip/paexec
+devel/libtool-base devel/libmaa
+devel/libtool-base textproc/dict-client
+devel/libtool-base textproc/dict-server
+devel/libtool-base wip/libuxre
+devel/pipestatus wip/distbb
+devel/pipestatus wip/pkg_online-client
+devel/pipestatus wip/pkg_online-server
+devel/pipestatus wip/pkg_summary-utils
+lang/f2c devel/libtool-base
+net/netcat wip/pkg_online-client
+textproc/dict-client wip/pkg_online-client
+textproc/dict-server wip/pkg_online-server
+wip/awk-pkgsrc-dewey wip/pkg_summary-utils
+wip/heirloom-common wip/heirloom-doc
+wip/heirloom-doc wip/heirloom-awk
+wip/heirloom-doc wip/heirloom-libcommon
+wip/heirloom-libcommon wip/heirloom-awk
+wip/heirloom-libcommon wip/libuxre
+wip/paexec wip/distbb
+wip/pkg_summary-utils wip/distbb
+wip/pkg_summary-utils wip/pkg_online-client
+wip/pkg_summary-utils wip/pkg_online-server
+'
+
 pkg_subgraph_deps -xvt -f src_pkgs.txt src_deps.txt | sort |
 cmp 'pkg_subgraph_deps #6' \
 'devel/gmake textproc/dict-client
@@ -176,4 +208,10 @@ wip/paexec wip/distbb
 wip/pkg_summary-utils wip/distbb
 wip/pkg_summary-utils wip/pkg_online-client
 wip/runawk wip/distbb
+'
+
+pkg_subgraph_deps -rtxv1 -p'wip/distbb' src_deps.txt 2>&1 |
+head -n1 |
+cmp 'pkg_subgraph_deps #9' \
+'error: assertion failed: pkg_subgraph_deps: -xv1 is not allowed!
 '
