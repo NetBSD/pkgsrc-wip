@@ -1,21 +1,22 @@
-# $NetBSD: Makefile,v 1.6 2010/08/13 16:41:29 jihbed Exp $
+# $NetBSD: Makefile,v 1.7 2011/12/28 23:39:10 jihbed Exp $
 #
 
-DISTNAME=	d-feet-0.1.11
-EGG_NAME=	d_feet-0.1.11
+DISTNAME=	d-feet-0.1.14
+EGG_NAME=	d_feet-0.1.14
 PKGREVISION=	1
 CATEGORIES=	devel python
-MASTER_SITES=	http://johnp.fedorapeople.org/downloads/d-feet/
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/d-feet/0.1/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	kamel.derouiche@gmail.com
-HOMEPAGE=	https://fedorahosted.org/d-feet/
+MAINTAINER=	pkgsrc-gnome@gmail.com
+HOMEPAGE=	http://live.gnome.org/d-feet/
 COMMENT=	D-Feet is a powerful dbus debugger
 LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
+
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 
 SUBST_CLASSES+=		paths
@@ -34,9 +35,11 @@ post-extract:
 .include "../../devel/pango/buildlink3.mk"
 .include "../../devel/py-gobject/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../lang/python/egg.mk"
+.include "../../graphics/librsvg/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 BUILDLINK_API_DEPENDS.py-dbus+=	${PYPKGPREFIX}-dbus>=0.23.4
 .include "../../sysutils/py-dbus/buildlink3.mk"
-.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/py-gtk2/buildlink3.mk"
+.include "../../lang/python/egg.mk"
+.include "../../mk/omf-scrollkeeper.mk"
 .include "../../mk/bsd.pkg.mk"
