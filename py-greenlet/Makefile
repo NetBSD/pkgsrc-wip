@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2011/08/12 13:10:08 asau Exp $
+# $NetBSD: Makefile,v 1.5 2011/12/28 23:52:22 jihbed Exp $
+#
 
-DISTNAME=	greenlet-0.3.1
+DISTNAME=	greenlet-0.3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	http://pypi.python.org/packages/source/g/greenlet/
+EXTRACT_SUFX=	.zip#md5=96b99f659d466ce1c5b3d72bc25dddac
 
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://undefined.org/python/#greenlet
