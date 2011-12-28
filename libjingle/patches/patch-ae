@@ -1,0 +1,31 @@
+$NetBSD: patch-ae,v 1.1 2011/12/28 01:25:34 mwilhelmy Exp $
+
+--- talk/base/systeminfo.cc.orig	2011-12-14 16:58:28.000000000 +0100
++++ talk/base/systeminfo.cc	2011-12-28 02:16:46.000000000 +0100
+@@ -37,7 +37,7 @@
+ #include <CoreServices/CoreServices.h>
+ #include <sys/sysctl.h>
+ #include "talk/base/macconversion.h"
+-#elif defined(IOS)
++#elif defined(IOS) || defined(__NetBSD__)
+ #include <sys/sysctl.h>
+ #elif defined(LINUX) || defined(ANDROID)
+ #include <unistd.h>
+@@ -116,7 +116,7 @@
+   cpu_family_ = si.wProcessorLevel;
+   cpu_model_ = si.wProcessorRevision >> 8;
+   cpu_stepping_ = si.wProcessorRevision & 0xFF;
+-#elif defined(OSX) || defined(IOS)
++#elif defined(OSX) || defined(IOS) || defined(__NetBSD__)
+   uint32_t sysctl_value;
+   size_t length = sizeof(sysctl_value);
+   if (!sysctlbyname("hw.physicalcpu_max", &sysctl_value, &length, NULL, 0)) {
+@@ -313,7 +313,7 @@
+     memory_ = -1;
+   }
+ 
+-#elif defined(OSX) || defined(IOS)
++#elif defined(OSX) || defined(IOS) || defined(__NetBSD__)
+   size_t len = sizeof(memory_);
+   int error = sysctlbyname("hw.memsize", &memory_, &len, NULL, 0);
+   if (error || memory_ == 0) {
