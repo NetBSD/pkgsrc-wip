@@ -40,7 +40,7 @@ Suggested package updates
 	o globulation2-0.9.4
 	o gnokii-0.6.31
 	o gnome-bluetooth-2.30.0
-	o gnunet-0.9.0
+	o gnunet-0.9.1
 	o gnupod-0.99.8
 	o gobject-introspection-0.9.12
 	o grass-6.4.1
@@ -55,7 +55,7 @@ Suggested package updates
 	o httrack-3.43
 	o hu-go-2.11
 	o i3-4.0.2
-	o icecat-7.0.1
+	o icecat-9.0.1
 	o jakarta-struts-1.2.4
 	o jalview-2.4
 	o java-asm-3.2
@@ -72,7 +72,7 @@ Suggested package updates
 	o libmemcached-0.53
 	o libreoffice-3.4.3
 	o libuuid-1.41.14
-	o linphone-3.4.3
+	o linphone-3.5.0
 	o lirc-0.8.6
 	o lives-1.4.9
 	o llvm-3.0
@@ -124,7 +124,7 @@ Suggested package updates
 	o xcursor-themes-1.0.3
 	o xdotool-2.20110530.1
 	o xf86-input-synaptics-1.4.0
-	o xf86-video-geode-2.11.12
+	o xf86-video-geode-2.11.13
 	o xinetd-2.3.14
 	o xmms2-0.6
 	o zinf-2.2.5
