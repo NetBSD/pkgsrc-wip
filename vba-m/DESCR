@@ -1,0 +1,15 @@
+VBA-M is a fork from the now inactive VisualBoy Advance project, with goals to
+improve the compatibility and features of the emulator with:
+
+* Improved Save Handling
+* Improved Archive Support
+* Improved Input Capabilities
+* New built-in Pixel Filters
+* KEGA Fusion Filter Plugin Support
+* Multithreaded Direct3D
+* Fixed Vsync for Direct3D
+* ARM Thumb Optimised
+* Blargg's GB_APU
+* OpenAL and XAudio support
+* UPS Patch support
+* JoyBus support

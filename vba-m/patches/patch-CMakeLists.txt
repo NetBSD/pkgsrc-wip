@@ -1,0 +1,15 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1.1.1 2011/12/28 06:56:35 othyro Exp $
+
+Install config file to ${EGDIR}, then let ${CONF_FILES} handle it.
+
+--- CMakeLists.txt.orig	2011-12-27 21:02:22.000000000 +0000
++++ CMakeLists.txt
+@@ -414,7 +414,7 @@ IF( ENABLE_SDL )
+ 
+     INSTALL(PROGRAMS ${CMAKE_CURRENT_BINARY_DIR}/vbam DESTINATION bin)
+     INSTALL(FILES ${CMAKE_CURRENT_SOURCE_DIR}/src/sdl/vbam.cfg-example
+-            DESTINATION ${SYSCONFDIR}
++            DESTINATION ${CMAKE_INSTALL_PREFIX}/share/examples/vbam
+             RENAME vbam.cfg)
+ ENDIF( ENABLE_SDL )
+ 

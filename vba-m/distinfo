@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/12/28 06:56:35 othyro Exp $
+
+SHA1 (vbam-1.8.0.1054-src.tar.gz) = 952889a9b5e6f819537d0e9049f23048ff9f7107
+RMD160 (vbam-1.8.0.1054-src.tar.gz) = 7832d8a01391b0d1ec37c2663b1eada96edeb76c
+Size (vbam-1.8.0.1054-src.tar.gz) = 1163135 bytes
+SHA1 (patch-CMakeLists.txt) = 76f84acfc46ac6f413289ea3d80703d952ad6785
