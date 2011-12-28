@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4571 2011/12/28 21:02:28 jihbed Exp $
+# $Id: Makefile,v 1.4572 2011/12/28 22:24:52 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2115,7 +2115,6 @@ SUBDIR+=	py-dana
 SUBDIR+=	py-datarray
 SUBDIR+=	py-dbglog
 SUBDIR+=	py-dbutils
-SUBDIR+=	py-decorator
 SUBDIR+=	py-decoratortools
 SUBDIR+=	py-delny
 SUBDIR+=	py-dexml
