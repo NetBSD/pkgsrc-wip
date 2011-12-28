@@ -1,9 +1,5 @@
-$NetBSD: distinfo,v 1.3 2009/09/13 15:09:47 yacht Exp $
+$NetBSD: distinfo,v 1.4 2011/12/28 00:13:14 mwilhelmy Exp $
 
-SHA1 (libjingle-0.3.12.tar.gz) = 7435366a5f9c228dc7fa7e47e94a7702ede0bc2e
-RMD160 (libjingle-0.3.12.tar.gz) = b0b823a405e75b2c952bd638087647cee7aeef26
-Size (libjingle-0.3.12.tar.gz) = 526316 bytes
-SHA1 (patch-aa) = 3084bd45b88540c381c964c39b58f6fbbbfbf3df
-SHA1 (patch-ab) = 9c7e002e4386ae49c07dcfde18de99ceda616424
-SHA1 (patch-ac) = 59d8e51b4491f711b24cd8d5d7a1e47ca8f74b3c
-SHA1 (patch-ad) = 14697dbdeb867296e2aaf95226ad973fb541ec0b
+SHA1 (libjingle-0.6.6.zip) = d62c0d456662245020127453f4e218cd8e09b279
+RMD160 (libjingle-0.6.6.zip) = 8ba62866b0aa065470f5d5efe8aabf68180c29c1
+Size (libjingle-0.6.6.zip) = 8243577 bytes
