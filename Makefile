@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4570 2011/12/28 10:10:13 jihbed Exp $
+# $Id: Makefile,v 1.4571 2011/12/28 21:02:28 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2289,7 +2289,6 @@ SUBDIR+=	py-pyecm
 SUBDIR+=	py-pyentropy
 SUBDIR+=	py-pyevolve
 SUBDIR+=	py-pyexiv2
-SUBDIR+=	py-pyfits
 SUBDIR+=	py-pygi
 SUBDIR+=	py-pygr
 SUBDIR+=	py-pygraphviz
