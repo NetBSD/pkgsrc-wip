@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/08/29 10:01:30 jihbed Exp $
+$NetBSD: distinfo,v 1.2 2011/12/28 22:38:56 jihbed Exp $
 
-SHA1 (simplegeneric-0.7.zip) = 66971181b2543171c81334255d4163cbd56587d7
-RMD160 (simplegeneric-0.7.zip) = ee7ef016d824b8f9471a4e53f6112d0c2497156a
-Size (simplegeneric-0.7.zip) = 15972 bytes
+SHA1 (simplegeneric-0.8.zip) = 0bd3e0f6f8cedfc39a8dc63a5251e104da597b7b
+RMD160 (simplegeneric-0.8.zip) = 1e7bbee6a280e2271f5249b10aa3062d5d9b74d5
+Size (simplegeneric-0.8.zip) = 16114 bytes
