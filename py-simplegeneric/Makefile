@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/12/28 22:38:56 jihbed Exp $
+# $NetBSD: Makefile,v 1.4 2011/12/28 22:48:58 jihbed Exp $
 #
 
 DISTNAME=	simplegeneric-0.8
@@ -15,6 +15,11 @@ LICENSE=	zpl
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
+
+EGG_INFODIR= ${EGG_NAME}-py${PYVERSSUFFIX}.egg-info
+
+post-install:
+	${CHMOD} -R og-w ${DESTDIR}${PREFIX}/${PYSITELIB}/${EGG_INFODIR}/*
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
