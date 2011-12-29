@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/12/29 22:40:18 tonnerre Exp $
+include/boost/threadpool.hpp
+include/boost/threadpool/detail/future.hpp
+include/boost/threadpool/detail/locking_ptr.hpp
+include/boost/threadpool/detail/pool_core.hpp
+include/boost/threadpool/detail/scope_guard.hpp
+include/boost/threadpool/detail/worker_thread.hpp
+include/boost/threadpool/future.hpp
+include/boost/threadpool/pool.hpp
+include/boost/threadpool/pool_adaptors.hpp
+include/boost/threadpool/scheduling_policies.hpp
+include/boost/threadpool/shutdown_policies.hpp
+include/boost/threadpool/size_policies.hpp
+include/boost/threadpool/task_adaptors.hpp
