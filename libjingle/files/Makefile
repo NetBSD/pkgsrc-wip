@@ -14,8 +14,9 @@ CPPFLAGS=	-I../.. -I..			\
     		-D_REENTRANT
 CFLAGS=		-Wall -Werror -Wno-switch -fno-exceptions -fvisibility=hidden -gdwarf-2
 CXXFLAGS=	-Wno-non-virtual-dtor -Wno-ctor-dtor-privacy -fno-rtti
-LTCOMP=		libtool --mode=compile --silent
+LTCOMP=		libtool --mode=compile
 CXX=		${LTCOMP} c++
+CC=		${LTCOMP} --tag=CC cc
 
 #SRCS=		$(wildcard *.cc)
 #SRCS=		$(shell find . \( -name "*.cc" -a \! -name "*unittest*" -a \! -name "mac*" -a \! -name "win32*" \))
@@ -31,14 +32,26 @@ SRCS=		stringutils.cc latebindingsymboltable.cc linux.cc unixfilesystem.cc		\
 		socketaddress.cc socketaddresspair.cc socketpool.cc socketstream.cc		\
 		ssladapter.cc sslsocketfactory.cc stream.cc stringdigest.cc stringencode.cc	\
 		task.cc taskparent.cc taskrunner.cc thread.cc time.cc urlencode.cc worker.cc	\
-		schanneladapter.cc winfirewall.cc winping.cc json.cc asyncpacketsocket.cc	\
 		httpserver.cc bandwidthsmoother.cc cpuid.cc cpumonitor.cc filelock.cc		\
 		ipaddress.cc multipart.cc natserver.cc natsocketfactory.cc nattypes.cc		\
 		optionsfile.cc proxyserver.cc sharedexclusivelock.cc systeminfo.cc		\
 		testclient.cc timeutils.cc timing.cc versionparsing.cc virtualsocketserver.cc
-OBJS=		$(SRCS:.cc=.o)
+
+### TODO: figure out what's wrong with the following files: #############################
+# json.cc: 	requires json-cpp which is not present in-tree nor packaged but
+# 		also not mentioned in README and not used elsewhere.
+# asyncpacketsocket.cc:
+# 		Windows only? How does scons figure out which files to build
+# 		for which platform?
+#########################################################################################
+
+OBJS=		$(SRCS:.cc=.o) md5c.o
 
 all: $(OBJS)
 
 .cc.o:
-	${CXX} ${CPPFLAGS} ${CXXFLAGS} -c $< -o $@
+	@${CXX} ${CPPFLAGS} ${CXXFLAGS} -c $< -o $@
+.c.o:
+	@${CC} ${CPPFLAGS} ${CFLAGS} -c $< -o $@
+clean:
+	rm -f *.o *.lo
