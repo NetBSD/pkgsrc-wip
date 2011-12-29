@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/12/29 21:52:39 jihbed Exp $
+${PYSITELIB}/algebraic/__init__.py
+${PYSITELIB}/algebraic/__init__.pyc
+${PYSITELIB}/algebraic/__init__.pyo
+${PYSITELIB}/algebraic/expression.py
+${PYSITELIB}/algebraic/expression.pyc
+${PYSITELIB}/algebraic/expression.pyo
+${PYSITELIB}/algebraic/variable.py
+${PYSITELIB}/algebraic/variable.pyc
+${PYSITELIB}/algebraic/variable.pyo
+${PYSITELIB}/python_algebraic-0.3.dev_${PKGVERSION}-py2.7.egg-info/PKG-INFO
+${PYSITELIB}/python_algebraic-0.3.dev_${PKGVERSION}-py2.7.egg-info/SOURCES.txt
+${PYSITELIB}/python_algebraic-0.3.dev_${PKGVERSION}-py2.7.egg-info/dependency_links.txt
+${PYSITELIB}/python_algebraic-0.3.dev_${PKGVERSION}-py2.7.egg-info/top_level.txt
+${PYSITELIB}/python_algebraic-0.3.dev_${PKGVERSION}-py2.7.egg-info/zip-safe
