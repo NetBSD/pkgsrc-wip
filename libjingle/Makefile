@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/12/28 00:13:14 mwilhelmy Exp $
+# $NetBSD: Makefile,v 1.4 2011/12/29 19:48:18 asau Exp $
 #
 
 DISTNAME=	libjingle-0.6.6
@@ -14,12 +14,17 @@ LICENSE=	modified-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-GNU_CONFIGURE=	yes
+#GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake pkg-config
 USE_LANGUAGES=	c c++
 
 #PKGCONFIG_OVERRIDE+=	pkgconfig/jinglep2p.pc.in
 #PKGCONFIG_OVERRIDE+=	pkgconfig/jinglebase.pc.in
+
+BUILD_DIRS=	talk/base
+
+post-extract:
+	$(CP) $(FILESDIR)/Makefile $(WRKSRC)/talk/base/
 
 .include "../../mk/bsd.pkg.mk"
