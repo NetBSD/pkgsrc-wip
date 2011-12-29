@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4572 2011/12/28 22:24:52 jihbed Exp $
+# $Id: Makefile,v 1.4573 2011/12/29 00:31:43 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -651,7 +651,6 @@ SUBDIR+=	ggz-gtk-games
 SUBDIR+=	ggz-server
 SUBDIR+=	ghc
 SUBDIR+=	ghc-core
-SUBDIR+=	ghemical
 SUBDIR+=	ghostpcl-urwfonts-ttf
 SUBDIR+=	ghostscript
 SUBDIR+=	ghostscript-cidfonts
