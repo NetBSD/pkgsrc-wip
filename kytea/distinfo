@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/12/29 08:43:36 obache Exp $
+
+SHA1 (kytea-0.3.2.tar.gz) = d88fcf6ee9cb92b220f72e8e23c8b56c0bb66e02
+RMD160 (kytea-0.3.2.tar.gz) = 6781728df9261f9accd54266879bdd6bd924230a
+Size (kytea-0.3.2.tar.gz) = 12576124 bytes

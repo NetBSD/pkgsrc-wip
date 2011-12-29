@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/12/29 08:43:36 obache Exp $
+bin/api-example
+bin/kytea
+bin/train-kytea
+include/kytea/config.h
+include/kytea/corpus-io.h
+include/kytea/dictionary.h
+include/kytea/feature-io.h
+include/kytea/general-io.h
+include/kytea/kytea-config.h
+include/kytea/kytea-lm.h
+include/kytea/kytea-model.h
+include/kytea/kytea-string.h
+include/kytea/kytea-struct.h
+include/kytea/kytea.h
+include/kytea/model-io.h
+include/kytea/string-util.h
+lib/libkytea.la
+share/kytea/model.bin
