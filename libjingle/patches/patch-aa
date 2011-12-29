@@ -1,12 +1,12 @@
-$NetBSD: patch-aa,v 1.2 2009/09/13 15:09:47 yacht Exp $
+$NetBSD: patch-aa,v 1.3 2011/12/29 19:05:10 asau Exp $
 
 Depending on the declared type of ifconf:ifc_buf, it cannot be used with
 delete []. Store the dynamically allocated storage in a separate variable
 of the correct type and use that with delete[].
 
---- talk/base/network.cc.orig	2008-09-16 14:55:22.000000000 +0100
+--- talk/base/network.cc.orig	2011-12-14 15:58:28.000000000 +0000
 +++ talk/base/network.cc
-@@ -185,7 +185,8 @@ void NetworkManager::CreateNetworks(std:
+@@ -150,7 +150,8 @@ bool BasicNetworkManager::CreateNetworks
  
    struct ifconf ifc;
    ifc.ifc_len = 64 * sizeof(struct ifreq);
@@ -15,10 +15,10 @@ of the correct type and use that with delete[].
 +  ifc.ifc_buf = ifcbuf;
  
    if (ioctl(fd, SIOCGIFCONF, &ifc) < 0) {
-     PLOG(LERROR, errno) << "ioctl";
-@@ -193,9 +194,9 @@ void NetworkManager::CreateNetworks(std:
+     LOG_ERR(LERROR) << "ioctl";
+@@ -158,9 +159,9 @@ bool BasicNetworkManager::CreateNetworks
    }
-   assert(ifc.ifc_len < static_cast<int>(64 * sizeof(struct ifreq)));
+   ASSERT(ifc.ifc_len < static_cast<int>(64 * sizeof(struct ifreq)));
  
 -  struct ifreq* ptr = reinterpret_cast<struct ifreq*>(ifc.ifc_buf);
 +  struct ifreq* ptr = reinterpret_cast<struct ifreq*>(ifcbuf);
@@ -28,12 +28,12 @@ of the correct type and use that with delete[].
  
    while (ptr < end) {
      struct sockaddr_in* inaddr =
-@@ -212,7 +213,7 @@ void NetworkManager::CreateNetworks(std:
+@@ -183,7 +184,7 @@ bool BasicNetworkManager::CreateNetworks
  #endif
    }
  
 -  delete [] ifc.ifc_buf;
 +  delete [] ifcbuf;
    close(fd);
+   return true;
  }
- #endif
