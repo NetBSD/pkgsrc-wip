@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/12/29 22:01:01 jihbed Exp $
+${PYSITELIB}/sciproc/__init__.py
+${PYSITELIB}/sciproc/__init__.pyc
+${PYSITELIB}/sciproc/__init__.pyo
+${PYSITELIB}/sciproc/dtrange.py
+${PYSITELIB}/sciproc/dtrange.pyc
+${PYSITELIB}/sciproc/dtrange.pyo
+${PYSITELIB}/sciproc/scimulti-old.py
+${PYSITELIB}/sciproc/scimulti-old.pyc
+${PYSITELIB}/sciproc/scimulti-old.pyo
+${PYSITELIB}/sciproc/scimulti-old2.py
+${PYSITELIB}/sciproc/scimulti-old2.pyc
+${PYSITELIB}/sciproc/scimulti-old2.pyo
+${PYSITELIB}/sciproc/scimulti.py
+${PYSITELIB}/sciproc/scimulti.pyc
+${PYSITELIB}/sciproc/scimulti.pyo
+${PYSITELIB}/sciproc/scisel.py
+${PYSITELIB}/sciproc/scisel.pyc
+${PYSITELIB}/sciproc/scisel.pyo
+${PYSITELIB}/sciproc/scistat.py
+${PYSITELIB}/sciproc/scistat.pyc
+${PYSITELIB}/sciproc/scistat.pyo
