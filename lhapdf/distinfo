@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2011/12/29 22:34:50 jihbed Exp $
+
+SHA1 (lhapdf-5.8.7b2.tar.gz) = e4a69dfc6e2bd3d531d88cb6f1d6c9167ad0a7dc
+RMD160 (lhapdf-5.8.7b2.tar.gz) = 55c42d31e12762c69d06709e8fd6942658747d36
+Size (lhapdf-5.8.7b2.tar.gz) = 1166621 bytes
