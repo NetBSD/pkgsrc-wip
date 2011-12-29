@@ -1,0 +1,22 @@
+$NetBSD: patch-am,v 1.1 2011/12/29 21:07:34 mwilhelmy Exp $
+
+--- talk/base/cpumonitor.h.orig	2011-12-29 20:41:21.000000000 +0000
++++ talk/base/cpumonitor.h
+@@ -32,7 +32,7 @@
+ #include "talk/base/messagehandler.h"
+ #include "talk/base/scoped_ptr.h"
+ #include "talk/base/sigslot.h"
+-#if defined(LINUX) || defined(ANDROID)
++#if defined(LINUX) || defined(ANDROID) || defined(__NetBSD__)
+ #include "talk/base/stream.h"
+ #endif // defined(LINUX) || defined(ANDROID)
+ 
+@@ -101,7 +101,7 @@ class CpuSampler {
+   void* nt_query_system_information_;
+   bool force_fallback_;
+ #endif
+-#if defined(LINUX) || defined(ANDROID)
++#if defined(LINUX) || defined(ANDROID) || defined(__NetBSD__)
+   // File for reading /proc/stat
+   scoped_ptr<FileStream> sfile_;
+ #endif // defined(LINUX) || defined(ANDROID)

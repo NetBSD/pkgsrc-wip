@@ -1,0 +1,40 @@
+$NetBSD: patch-al,v 1.1 2011/12/29 21:07:34 mwilhelmy Exp $
+
+--- talk/base/cpumonitor.cc.orig	2011-12-29 20:39:58.000000000 +0000
++++ talk/base/cpumonitor.cc
+@@ -52,7 +52,7 @@
+ #include <mach/task.h>
+ #endif  // defined(IOS) || defined(OSX)
+ 
+-#if defined(LINUX) || defined(ANDROID)
++#if defined(LINUX) || defined(ANDROID) || defined(__NetBSD__)
+ #include <sys/resource.h>
+ #include <errno.h>
+ #include <stdio.h>
+@@ -136,7 +136,7 @@ bool CpuSampler::Init() {
+     return false;
+   }
+ #endif
+-#if defined(LINUX) || defined(ANDROID)
++#if defined(LINUX) || defined(ANDROID) || defined(__NetBSD__)
+   Pathname sname("/proc/stat");
+   sfile_.reset(Filesystem::OpenFile(sname, "rb"));
+   if (sfile_.get() == NULL) {
+@@ -256,7 +256,7 @@ float CpuSampler::GetSystemLoad() {
+   const uint64 total_times = cpu_times + cpu_info.cpu_ticks[CPU_STATE_IDLE];
+ #endif  // defined(IOS) || defined(OSX)
+ 
+-#if defined(LINUX) || defined(ANDROID)
++#if defined(LINUX) || defined(ANDROID) || defined(__NetBSD__) // NetBSD has /proc/stat, but I don't know whether it's just "compatible" enough
+   if (sfile_.get() == NULL) {
+     LOG(LS_ERROR) << "Invalid handle for proc/stat";
+     return 0.f;
+@@ -348,7 +348,7 @@ float CpuSampler::GetProcessLoad() {
+       TimeValueTToInt64(task_term_info.system_time));
+ #endif  // defined(IOS) || defined(OSX)
+ 
+-#if defined(LINUX) || defined(ANDROID)
++#if defined(LINUX) || defined(ANDROID) || defined(__NetBSD__)
+   rusage usage;
+   if (getrusage(RUSAGE_SELF, &usage) < 0) {
+     LOG_ERR(LS_ERROR) << "getrusage failed";
