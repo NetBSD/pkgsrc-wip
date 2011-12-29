@@ -1,12 +1,13 @@
-$NetBSD: distinfo,v 1.8 2011/12/29 19:48:11 mwilhelmy Exp $
+$NetBSD: distinfo,v 1.9 2011/12/29 20:15:09 mwilhelmy Exp $
 
 SHA1 (libjingle-0.6.6.zip) = d62c0d456662245020127453f4e218cd8e09b279
 RMD160 (libjingle-0.6.6.zip) = 8ba62866b0aa065470f5d5efe8aabf68180c29c1
 Size (libjingle-0.6.6.zip) = 8243577 bytes
 SHA1 (patch-aa) = 83b9ebb13c76cd61b5472ec896d4f3eed7f8871d
-SHA1 (patch-ae) = a7e01c562aab794bddf7fc3237c304c29c02abd2
-SHA1 (patch-af) = cc2338bdcd96eeb1814e13bb9081d17122804016
-SHA1 (patch-ag) = aebea55f14d0979ace472d8721a7384040918e4f
-SHA1 (patch-ah) = 853de5c83256eceb1fb637fadd2c5f39205531ed
-SHA1 (patch-ai) = 6c068c930ac50ba5e8182877b0b1f84390737519
-SHA1 (patch-aj) = 1a836201461a17e0d750cab712c4f3ecb66ada04
+SHA1 (patch-ae) = 7b29479067372e781de09e8f9e36c00961f6cf0c
+SHA1 (patch-af) = 886e2d4cab09de063f4d0a3a6d24fdfd9cf0cd5b
+SHA1 (patch-ag) = d7083430cc79d78f5c9c7e945812be3777f211b5
+SHA1 (patch-ah) = cd4014cfcb11ac7766c77dab7f242f9bbb4496e4
+SHA1 (patch-ai) = 873d012b6f708235c7932b01f31bc68a4a7c63a3
+SHA1 (patch-aj) = 037b03a5b44de69999e5f774508e3ec890d15721
+SHA1 (patch-ak) = 065b0fa32cab888b62716b3c189802861435351c

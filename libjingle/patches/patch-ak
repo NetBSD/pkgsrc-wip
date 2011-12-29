@@ -1,0 +1,13 @@
+$NetBSD: patch-ak,v 1.1 2011/12/29 20:15:09 mwilhelmy Exp $
+
+--- talk/base/socketaddress.cc.orig	2011-12-14 15:58:28.000000000 +0000
++++ talk/base/socketaddress.cc
+@@ -31,7 +31,7 @@
+ #include <sys/types.h>
+ #include <sys/socket.h>
+ #include <netinet/in.h>
+-#if defined(OPENBSD)
++#if defined(OPENBSD) || defined(__NetBSD__)
+ #include <netinet/in_systm.h>
+ #endif
+ #include <netinet/ip.h>
