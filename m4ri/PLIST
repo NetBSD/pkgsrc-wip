@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/12/29 22:29:49 jihbed Exp $
+include/m4ri/brilliantrussian.h
+include/m4ri/debug_dump.h
+include/m4ri/echelonform.h
+include/m4ri/grayflex.h
+include/m4ri/io.h
+include/m4ri/m4ri.h
+include/m4ri/m4ri_config.h
+include/m4ri/misc.h
+include/m4ri/mmc.h
+include/m4ri/packedmatrix.h
+include/m4ri/parity.h
+include/m4ri/permutation.h
+include/m4ri/pls.h
+include/m4ri/pls_mmpf.h
+include/m4ri/solve.h
+include/m4ri/strassen.h
+include/m4ri/trsm.h
+include/m4ri/xor.h
+lib/libm4ri.la
+lib/pkgconfig/m4ri.pc
