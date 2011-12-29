@@ -1,0 +1,22 @@
+$NetBSD: patch-ah,v 1.1 2011/12/29 18:21:14 mwilhelmy Exp $
+
+--- nethelpers.cc.orig	2011-12-14 16:58:28.000000000 +0100
++++ nethelpers.cc	2011-12-29 17:07:38.000000000 +0100
+@@ -57,7 +57,7 @@
+   }
+ }
+ 
+-#if defined(WIN32) || defined(ANDROID) || defined(OPENBSD)
++#if defined(WIN32) || defined(ANDROID) || defined(OPENBSD) || defined(__NetBSD__)
+ static hostent* DeepCopyHostent(const hostent* ent) {
+   // Get the total number of bytes we need to copy, and allocate our buffer.
+   int num_aliases = 0, num_addrs = 0;
+@@ -168,7 +168,7 @@
+ #elif defined(OSX) || defined(IOS) || defined(FREEBSD)
+   // Mac OS returns an object with everything allocated.
+   result = getipnodebyname(hostname, AF_INET, AI_DEFAULT, herrno);
+-#elif defined(OPENBSD)
++#elif defined(OPENBSD) || defined(__NetBSD__)
+   hostent* ent = gethostbyname(hostname);
+   if (!ent) {
+     return NULL;
