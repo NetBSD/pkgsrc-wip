@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/12/29 14:39:01 keckhardt Exp $
+lib/liblapack340.la
+lib/librefblas340.la

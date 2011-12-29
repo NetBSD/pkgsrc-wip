@@ -1,0 +1,20 @@
+$NetBSD: patch-INSTALL_Makefile,v 1.1.1.1 2011/12/29 14:39:01 keckhardt Exp $
+
+--- INSTALL/Makefile.orig	2011-10-01 02:37:03.000000000 +0000
++++ INSTALL/Makefile
+@@ -28,8 +28,11 @@ testversion: ilaver.o LAPACK_version.o
+ 
+ clean:
+ 	rm -f *.o
+-.f.o: 
+-	$(FORTRAN) $(OPTS) -c $< -o $@
+ 
+-slamch.o: slamch.f ; $(FORTRAN) $(NOOPT) -c $< -o $@
+-dlamch.o: dlamch.f ; $(FORTRAN) $(NOOPT) -c $< -o $@
++.f.o:
++	${LIBTOOL} --mode=compile --tag=CC ${FC} ${FFLAGS} -c $<
++
++slamch.o: slamch.f
++	${LIBTOOL} --mode=compile --tag=CC $(FC) $(NOOPT) -c $< -o $@
++dlamch.o: dlamch.f
++	${LIBTOOL} --mode=compile --tag=CC $(FC) $(NOOPT) -c $< -o $@

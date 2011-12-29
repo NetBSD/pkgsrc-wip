@@ -1,0 +1,13 @@
+# $NetBSD: buildlink3.mk,v 1.1.1.1 2011/12/29 14:39:01 keckhardt Exp $
+
+BUILDLINK_TREE+=	lapack340
+
+.if !defined(LAPACK340_BUILDLINK3_MK)
+LAPACK340_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.lapack340+=	lapack>=3.4.0
+BUILDLINK_ABI_DEPENDS.lapack340+=	lapack>=3.4.0
+BUILDLINK_PKGSRCDIR.lapack340?=	../../wip/lapack340
+.endif # LAPACK340_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-lapack340
