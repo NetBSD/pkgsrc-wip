@@ -1,7 +1,7 @@
-$NetBSD: patch-ag,v 1.1 2011/12/29 18:21:14 mwilhelmy Exp $
+$NetBSD: patch-ag,v 1.2 2011/12/29 18:52:06 mwilhelmy Exp $
 
---- latebindingsymboltable.h.orig	2011-12-29 16:58:00.000000000 +0100
-+++ latebindingsymboltable.h	2011-12-29 16:58:42.000000000 +0100
+--- talk/base/latebindingsymboltable.h.orig	2011-12-29 16:58:00.000000000 +0100
++++ talk/base/latebindingsymboltable.h	2011-12-29 16:58:42.000000000 +0100
 @@ -40,7 +40,7 @@
  
  namespace talk_base {
