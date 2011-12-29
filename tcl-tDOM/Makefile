@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/12/26 22:42:22 mwilhelmy Exp $
+# $NetBSD: Makefile,v 1.3 2011/12/29 01:47:51 mwilhelmy Exp $
 #
 
 DISTNAME=	tDOM-0.8.2
@@ -8,7 +8,7 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pho@cielonegro.org
 HOMEPAGE=	http://tdom.github.com/
-COMMENT=	High performance XML data processing for Tcl
+COMMENT=	High performance XML data handling library for Tcl using Expat
 LICENSE=	mpl-1.1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
