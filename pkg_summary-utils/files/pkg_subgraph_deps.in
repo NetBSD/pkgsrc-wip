@@ -97,13 +97,34 @@ NF == 1 || (NF == 2 && $1 == $2) {
 	next
 }
 
-NF == 2 {
-	if (opt_deps)
-		edge [$2, ++count [$2]] = $1
-	else
-		edge [$1, ++count [$1]] = $2
+NF == 3 {
+	dep_type = $1
+	$1 = $2
+	$2 = $3
+	NF = 2
+}
 
-	nodes [$1] = nodes [$2] = 1
+NF == 2 {
+	if (opt_deps){
+		from = $2
+		to   = $1
+	}else{
+		from = $1
+		to   = $2
+	}
+
+	if (dep_type)
+		edge_types [from, to] = edge_types [from, to] " " dep_type
+	dep_type = ""
+
+	if (edge_set [from, to]++)
+		next
+
+	edge [from, ++count [from]] = to
+
+	nodes [from] = nodes [to] = 1
+
+#	print "!", dep_type, from, to
 	next
 }
 
@@ -128,7 +149,21 @@ function rec (pkg,                    i,to){
 	}
 }
 
-function print_edge (from, to,               ok){
+function do_print_edge (type, from, to,            v){
+	if (opt_deps){
+		# swap from and to
+		v = to
+		to = from
+		from = v
+	}
+
+	if (type)
+		print type, from, to
+	else
+		print from, to
+}
+
+function print_edge (from, to,               ok,arr,i){
 #	print "?", from, to
 	if (opt_1 && opt_invert){
 		ok = !((from SUBSEP to) in result_edge)
@@ -141,16 +176,23 @@ function print_edge (from, to,               ok){
 	}
 
 	if (ok){
-		if (opt_deps)
-			print to, from
-		else
-			print from, to
+#		print "ft:", from, to
+		if (!((from SUBSEP to) in edge_types)){
+			do_print_edge("", from, to)
+		}else{
+			split(edge_types [from, to], arr)
+			for (i in arr){
+				do_print_edge(arr [i], from, to)
+			}
+		}
 
 		printed [from] = printed [to] = 1
 	}
 }
 
 END {
+	delete edge_set
+
 	for (i in list){
 		rec(i)
 		result [i] = 1

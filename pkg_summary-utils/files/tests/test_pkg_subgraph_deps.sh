@@ -215,3 +215,23 @@ head -n1 |
 cmp 'pkg_subgraph_deps #9' \
 'error: assertion failed: pkg_subgraph_deps: -xv1 is not allowed!
 '
+
+pkg_subgraph_deps -r -f src_pkgs2.txt src_deps2.txt |
+sort |
+cmp 'pkg_subgraph_deps #10' \
+'BUILD_DEPENDS devel/gmake textproc/dict-server
+BUILD_DEPENDS devel/libtool-base devel/libmaa
+BUILD_DEPENDS devel/libtool-base textproc/dict-server
+BUILD_DEPENDS devel/libtool-base wip/libuxre
+BUILD_DEPENDS lang/perl5 textproc/dict-mueller7
+BUILD_DEPENDS sysutils/coreutils textproc/dict-mueller7
+BUILD_DEPENDS textproc/dict-server textproc/dict-mueller7
+BUILD_DEPENDS wip/heirloom-libcommon wip/libuxre
+DEPENDS devel/libmaa textproc/dict-server
+DEPENDS lang/f2c devel/libtool-base
+DEPENDS textproc/dict-server textproc/dict-mueller7
+DEPENDS wip/heirloom-common wip/heirloom-doc
+DEPENDS wip/heirloom-doc wip/heirloom-libcommon
+textproc/dictem
+wip/runawk
+'

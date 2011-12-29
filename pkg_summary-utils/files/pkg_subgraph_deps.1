@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkg_subgraph_deps.1,v 1.3 2011/12/28 09:32:57 cheusov Exp $
+.\"	$NetBSD: pkg_subgraph_deps.1,v 1.4 2011/12/29 14:54:57 cheusov Exp $
 .\"
 .\" Copyright (c) 2010 by Aleksey Cheusov (cheusov@tut.by)
 .\" Absolutely no warranty.
@@ -24,7 +24,12 @@ takes a dependency graph of packages on input and outputs subgraph
 .B pkg_subgraph_deps
 takes a dependency graph of packages on input and outputs a subgraph
 consisting of dependent (by default) packages, that is packages that depend
-on listed ones directly or indirectly. Sample of input is below
+on listed ones directly or indirectly. The dependency graph is represented
+as a list or graph edges (one per line) or isolated nodes (one per line).
+Graph edge consists of package pair with optional dependency type (first token).
+By default the dependency type is output if given on input.
+.EXAMPLE
+Example of input graph
 .VB
 
    jpeg emacs
@@ -38,6 +43,24 @@ on listed ones directly or indirectly. Sample of input is below
    perl libungif
    libjudy
    runawk
+
+.VE
+.EXAMPLE
+Example of input graph
+.VB
+
+DEPENDS lang/runawk parallel/paexec
+BUILD_DEPENDS devel/mk-configure parallel/paexec
+BUILD_DEPENDS sysutils/checkperms lang/runawk
+BUILD_DEPENDS sysutils/checkperms devel/libmaa
+DEPENDS devel/libmaa parallel/paexec
+BUILD_DEPENDS devel/mk-configure lang/runawk
+BUILD_DEPENDS sysutils/checkperms devel/libtool-base
+BUILD_DEPENDS lang/f2c devel/libtool-base
+BUILD_DEPENDS sysutils/checkperms devel/mk-configure
+BUILD_DEPENDS sysutils/checkperms parallel/paexec
+BUILD_DEPENDS devel/libtool-base devel/libmaa
+BUILD_DEPENDS sysutils/checkperms lang/f2c
 
 .VE
 .SH OPTIONS
