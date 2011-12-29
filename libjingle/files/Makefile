@@ -24,4 +24,4 @@ OBJS=		$(SRCS:.cc=.o)
 all: $(OBJS)
 
 .cc.o:
-	-${CXX} ${CPPFLAGS} ${CXXFLAGS} -c $< -o $@
+	${CXX} ${CPPFLAGS} ${CXXFLAGS} -c $< -o $@

@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.7 2011/12/29 19:23:21 asau Exp $
+$NetBSD: distinfo,v 1.8 2011/12/29 19:48:11 mwilhelmy Exp $
 
 SHA1 (libjingle-0.6.6.zip) = d62c0d456662245020127453f4e218cd8e09b279
 RMD160 (libjingle-0.6.6.zip) = 8ba62866b0aa065470f5d5efe8aabf68180c29c1
@@ -9,3 +9,4 @@ SHA1 (patch-af) = cc2338bdcd96eeb1814e13bb9081d17122804016
 SHA1 (patch-ag) = aebea55f14d0979ace472d8721a7384040918e4f
 SHA1 (patch-ah) = 853de5c83256eceb1fb637fadd2c5f39205531ed
 SHA1 (patch-ai) = 6c068c930ac50ba5e8182877b0b1f84390737519
+SHA1 (patch-aj) = 1a836201461a17e0d750cab712c4f3ecb66ada04
