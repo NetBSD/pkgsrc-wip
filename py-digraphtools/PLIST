@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/12/29 21:54:57 jihbed Exp $
+${PYSITELIB}/digraphtools/__init__.py
+${PYSITELIB}/digraphtools/__init__.pyc
+${PYSITELIB}/digraphtools/__init__.pyo
+${PYSITELIB}/digraphtools/digraphtools.py
+${PYSITELIB}/digraphtools/digraphtools.pyc
+${PYSITELIB}/digraphtools/digraphtools.pyo
+${PYSITELIB}/digraphtools/predicate.py
+${PYSITELIB}/digraphtools/predicate.pyc
+${PYSITELIB}/digraphtools/predicate.pyo
+${PYSITELIB}/digraphtools/test/__init__.py
+${PYSITELIB}/digraphtools/test/__init__.pyc
+${PYSITELIB}/digraphtools/test/__init__.pyo
+${PYSITELIB}/digraphtools/test/test_digraphtools.py
+${PYSITELIB}/digraphtools/test/test_digraphtools.pyc
+${PYSITELIB}/digraphtools/test/test_digraphtools.pyo
+${PYSITELIB}/digraphtools/test/test_topsort.py
+${PYSITELIB}/digraphtools/test/test_topsort.pyc
+${PYSITELIB}/digraphtools/test/test_topsort.pyo
+${PYSITELIB}/digraphtools/topsort.py
+${PYSITELIB}/digraphtools/topsort.pyc
+${PYSITELIB}/digraphtools/topsort.pyo
