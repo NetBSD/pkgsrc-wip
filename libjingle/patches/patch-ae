@@ -1,7 +1,7 @@
-$NetBSD: patch-ae,v 1.1 2011/12/28 01:25:34 mwilhelmy Exp $
+$NetBSD: patch-ae,v 1.2 2011/12/29 20:13:14 mwilhelmy Exp $
 
---- talk/base/systeminfo.cc.orig	2011-12-14 16:58:28.000000000 +0100
-+++ talk/base/systeminfo.cc	2011-12-28 02:16:46.000000000 +0100
+--- talk/base/systeminfo.cc.orig	2011-12-14 15:58:28.000000000 +0000
++++ talk/base/systeminfo.cc
 @@ -37,7 +37,7 @@
  #include <CoreServices/CoreServices.h>
  #include <sys/sysctl.h>
@@ -11,7 +11,7 @@ $NetBSD: patch-ae,v 1.1 2011/12/28 01:25:34 mwilhelmy Exp $
  #include <sys/sysctl.h>
  #elif defined(LINUX) || defined(ANDROID)
  #include <unistd.h>
-@@ -116,7 +116,7 @@
+@@ -116,7 +116,7 @@ SystemInfo::SystemInfo()
    cpu_family_ = si.wProcessorLevel;
    cpu_model_ = si.wProcessorRevision >> 8;
    cpu_stepping_ = si.wProcessorRevision & 0xFF;
@@ -20,7 +20,7 @@ $NetBSD: patch-ae,v 1.1 2011/12/28 01:25:34 mwilhelmy Exp $
    uint32_t sysctl_value;
    size_t length = sizeof(sysctl_value);
    if (!sysctlbyname("hw.physicalcpu_max", &sysctl_value, &length, NULL, 0)) {
-@@ -313,7 +313,7 @@
+@@ -313,7 +313,7 @@ int64 SystemInfo::GetMemorySize() {
      memory_ = -1;
    }
  
