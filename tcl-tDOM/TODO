@@ -1,3 +1,0 @@
-mwilhelmy:
-- figure out why the shared object is called libtdom082.so on NetBSD and
-  libtdom0.8.2.so on Linux because it breaks PLIST. 

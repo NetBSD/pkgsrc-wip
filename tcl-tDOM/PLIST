@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2011/12/26 22:42:22 mwilhelmy Exp $
+@comment $NetBSD: PLIST,v 1.3 2011/12/29 02:29:04 mwilhelmy Exp $
 include/tdom.h
-lib/tdom${PKGVERSION}/libtdom082.so
-lib/tdom${PKGVERSION}/libtdomstub082.a
+lib/tdom${PKGVERSION}/libtdom${PKGVERSION}.so
+lib/tdom${PKGVERSION}/libtdomstub${PKGVERSION}.a
 lib/tdom${PKGVERSION}/pkgIndex.tcl
 lib/tdom${PKGVERSION}/tdom.tcl
 lib/tdomConfig.sh
