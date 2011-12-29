@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2011/12/29 22:08:13 jihbed Exp $
+bin/Ptangle
+bin/Pweave
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/pweave/__init__.py
+${PYSITELIB}/pweave/__init__.pyc
+${PYSITELIB}/pweave/__init__.pyo
+${PYSITELIB}/pweave/formatters.py
+${PYSITELIB}/pweave/formatters.pyc
+${PYSITELIB}/pweave/formatters.pyo
+${PYSITELIB}/pweave/pweb.py
+${PYSITELIB}/pweave/pweb.pyc
+${PYSITELIB}/pweave/pweb.pyo
+${PYSITELIB}/pweave/scripts.py
+${PYSITELIB}/pweave/scripts.pyc
+${PYSITELIB}/pweave/scripts.pyo
