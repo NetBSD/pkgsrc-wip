@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2011/10/29 01:45:28 othyro Exp $
+$NetBSD: distinfo,v 1.6 2011/12/30 01:20:00 othyro Exp $
 
-SHA1 (ccrtp-2.0.1.tar.gz) = f86e7960eee8a5821b4f6e8b3f47be4963fe3403
-RMD160 (ccrtp-2.0.1.tar.gz) = 4b759c59ca992de36f09deb93c655d60d862f642
-Size (ccrtp-2.0.1.tar.gz) = 695610 bytes
+SHA1 (ccrtp-2.0.2.tar.gz) = dcc106700b63966d7c225b55a0d546fc5bcd134d
+RMD160 (ccrtp-2.0.2.tar.gz) = 92eee3ece1d8507feb091918de9db4294a2b5d1e
+Size (ccrtp-2.0.2.tar.gz) = 724321 bytes
