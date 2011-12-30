@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/12/28 06:56:35 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2011/12/30 13:48:52 thomasklausner Exp $
 #
 
 PKGVERSION=	1.8.0.1054
@@ -17,6 +17,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 WRKSRC=		${WRKDIR}/vbam-${PKGVERSION_NOREV}
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
+USE_TOOLS+=	pkg-config
+
 CMAKE_ARGS+=	-DVERSION=${PKGVERSION}
 CMAKE_ARGS+=	-DENABLE_WX=OFF # "wx is not even beta state at present"
 CMAKE_ARGS+=	-DSYSCONFDIR=${PKG_SYSCONFDIR}
