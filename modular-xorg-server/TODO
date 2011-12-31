@@ -1,29 +1,5 @@
 -- Following's are to be imported
   wip/dri
   wip/gl 
-
--- Following errors are probably not fatal, but nice to be fixed.
-
-Entity: line 1: 
- %defs; 
-       ^
-/export/pkgsrc/wip/modular-xorg-server/work/xorg-server-1.11.1/doc/Xserver-spec.xml:42: parser error : Entity 'xserver.reldate' not defined
-    <pubdate>&xserver.reldate;</pubdate>
-                              ^
-/export/pkgsrc/wip/modular-xorg-server/work/xorg-server-1.11.1/doc/Xserver-spec.xml:43: parser error : Entity 'xserver.version' not defined
-    <releaseinfo>X server version &xserver.version;</releaseinfo>
-                                                   ^
-  GEN    Xinput.html
-  GEN    Xserver-spec.txt
-/export/pkgsrc/wip/modular-xorg-server/work/xorg-server-1.11.1/doc/Xserver-spec.xml:4: warning: failed to load external entity "/xserver/doc/xml/xserver.ent"
- <!ENTITY % defs SYSTEM "/xserver/doc/xml/xserver.ent"> %defs;
-                                                              ^
-Entity: line 1: 
- %defs; 
-       ^
-/export/pkgsrc/wip/modular-xorg-server/work/xorg-server-1.11.1/doc/Xserver-spec.xml:42: parser error : Entity 'xserver.reldate' not defined
-    <pubdate>&xserver.reldate;</pubdate>
-                              ^
-/export/pkgsrc/wip/modular-xorg-server/work/xorg-server-1.11.1/doc/Xserver-spec.xml:43: parser error : Entity 'xserver.version' not defined
-    <releaseinfo>X server version &xserver.version;</releaseinfo>
-^Z
+-- Following PR to be applied
+  o x11/xproto-7.0.22 [pkg/45465]
