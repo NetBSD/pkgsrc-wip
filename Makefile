@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4577 2012/01/01 14:43:55 shattered Exp $
+# $Id: Makefile,v 1.4578 2012/01/01 15:20:19 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -548,6 +548,7 @@ SUBDIR+=	fasm
 SUBDIR+=	fasta
 SUBDIR+=	fastbit
 SUBDIR+=	fastrpc
+SUBDIR+=	faast
 SUBDIR+=	fbida
 SUBDIR+=	fbpager
 SUBDIR+=	fbpanel
