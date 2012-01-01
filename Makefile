@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4576 2012/01/01 14:22:31 jihbed Exp $
+# $Id: Makefile,v 1.4577 2012/01/01 14:43:55 shattered Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1307,7 +1307,6 @@ SUBDIR+=	libpar2
 SUBDIR+=	libparsifal
 SUBDIR+=	libpcap-latest
 SUBDIR+=	libpeas
-SUBDIR+=	libplist
 SUBDIR+=	libpthread-stubs
 SUBDIR+=	libpusb
 SUBDIR+=	libraw1394
