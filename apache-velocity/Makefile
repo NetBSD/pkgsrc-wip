@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/09/09 00:57:34 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/01/01 15:38:09 jihbed Exp $
 #
 
 DISTNAME=	velocity-1.6.4
@@ -6,7 +6,7 @@ PKGNAME=	apache-${DISTNAME}
 CATEGORIES=	textproc java
 MASTER_SITES=	http://www.gtlib.gatech.edu/pub/apache//velocity/engine/1.6.4/
 
-MAINTAINER=	kamelderouiche@yahoo.com
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://velocity.apache.org/
 COMMENT=	Java-based template engine for web application
 LICENSE=	apache-2.0

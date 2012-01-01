@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/09/13 08:46:06 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/01/01 15:35:43 jihbed Exp $
 #
 
 DISTNAME=	commons-pool-1.5.5-bin
@@ -6,7 +6,7 @@ PKGNAME=	apache-${DISTNAME:S/-bin//}
 CATEGORIES=	devel java
 MASTER_SITES=	${MASTER_SITE_APACHE:=/commons/pool/binaries/}
 
-MAINTAINER=	kamel.derouiche@gmail.com
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://commons.apache.org/pool/
 COMMENT=	Pooling implementation for Java objects
 LICENSE=	apache-2.0
