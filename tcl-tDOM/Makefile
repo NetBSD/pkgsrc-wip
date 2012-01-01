@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2011/12/29 15:16:14 mwilhelmy Exp $
+# $NetBSD: Makefile,v 1.7 2012/01/01 22:23:49 mwilhelmy Exp $
 #
 
-DISTNAME=	tDOM-0.8.2
+DISTNAME=	tDOM-0.8.3
 PKGNAME=	tcl-${DISTNAME}
 CATEGORIES=	textproc
 MASTER_SITES=	http://github.com/downloads/tDOM/tdom/
