@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/09/09 00:24:52 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/01/01 15:31:15 jihbed Exp $
 #
 
 DISTNAME=	commons-digester-2.0-bin
@@ -6,7 +6,7 @@ PKGNAME=	apache-${DISTNAME:S/-bin//}
 CATEGORIES=	devel java
 MASTER_SITES=	http://mirrors.axint.net/apache//commons/digester/binaries/
 
-MAINTAINER=	kamel.derouiche@gmail.com
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://commons.apache.org/digester/
 COMMENT=	Rule based XML Java object mapping tool
 LICENSE=	apache-2.0

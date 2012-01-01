@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/09/08 23:59:12 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/01/01 15:25:13 jihbed Exp $
 #
 
 DISTNAME=	commons-codec-1.4-bin
@@ -6,7 +6,7 @@ PKGNAME=	apache-${DISTNAME:S/-bin//}
 CATEGORIES=	devel java
 MASTER_SITES=	http://apache.multihomed.net//commons/codec/binaries/
 
-MAINTAINER=	kamel.derouiche@gmail.com
+MAINTAINER=	pgksrc-users@NetBSD.org
 HOMEPAGE=	http://commons.apache.org/codec/
 COMMENT=	Encoder and decoders such as Base64 and hexadecimal codec
 LICENSE=	apache-2.0

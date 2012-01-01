@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/09/08 23:37:42 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/01/01 15:27:40 jihbed Exp $
 #
 
 DISTNAME=	commons-collections-3.2.1-bin
@@ -6,7 +6,7 @@ PKGNAME=	apache-${DISTNAME:S/-bin//}
 CATEGORIES=	devel java
 MASTER_SITES=	http://www.motorlogy.com/apachemirror//commons/collections/binaries/
 
-MAINTAINER=	kamel.derouiche@gmail.com
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://commons.apache.org/collections/
 COMMENT=	Set of abstract data type interfaces and implementations
 LICENSE=	apache-2.0

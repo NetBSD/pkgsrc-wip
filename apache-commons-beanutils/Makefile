@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/09/08 23:14:10 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/01/01 15:26:32 jihbed Exp $
 #
 
 DISTNAME=	commons-beanutils-1.8.3-bin
@@ -6,7 +6,7 @@ PKGNAME=	apache-${DISTNAME:S/-bin//}
 CATEGORIES=	devel java
 MASTER_SITES=	http://mirrors.axint.net/apache//commons/beanutils/binaries/
 
-MAINTAINER=	kamel.derouiche@gmail.com
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://commons.apache.org/beanutils/
 COMMENT=	Utility for manipulating JavaBeans
 LICENSE=	apache-2.0

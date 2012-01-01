@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/09/13 09:46:50 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/01/01 15:29:54 jihbed Exp $
 #
 
 DISTNAME=	commons-dbcp-1.4-bin
@@ -6,7 +6,7 @@ PKGNAME=	apache-${DISTNAME:S/-bin//}
 CATEGORIES=	databases  java
 MASTER_SITES=	http://mirror.cloudera.com/apache//commons/dbcp/binaries/
 
-MAINTAINER=	kamel.derouiche@gmail.com
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://commons.apache.org/dbcp/
 COMMENT=	Database Connection Pooling Services
 LICENSE=	apache-2.0

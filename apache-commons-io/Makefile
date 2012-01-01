@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/09/08 23:29:47 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/01/01 15:32:17 jihbed Exp $
 #
 
 DISTNAME=	commons-io-1.4-bin
@@ -6,7 +6,7 @@ PKGNAME=	apache-${DISTNAME:S/-bin//}
 CATEGORIES=	devel java
 MASTER_SITES=	http://apache.multihomed.net//commons/io/binaries/
 
-MAINTAINER=	kamel.derouiche@gmail.com
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://commons.apache.org/io/
 COMMENT=	Common useful IO related classes
 LICENSE=	apache-2.0

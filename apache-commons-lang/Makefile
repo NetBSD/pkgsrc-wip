@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/09/08 23:46:13 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/01/01 15:33:28 jihbed Exp $
 #
 
 DISTNAME=	commons-lang-2.5-bin
@@ -6,7 +6,7 @@ PKGNAME=	apache-${DISTNAME:S/-bin//}
 CATEGORIES=	devel java
 MASTER_SITES=	http://apache.inetbridge.net//commons/lang/binaries/
 
-MAINTAINER=	kamel.derouiche@gmail.com
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://commons.apache.org/lang/
 COMMENT=	Extension of the java.lang package
 LICENSE=	apache-2.0
