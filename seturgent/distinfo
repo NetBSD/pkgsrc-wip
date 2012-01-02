@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/01/02 03:39:00 rubengonzalez Exp $
+
+SHA1 (seturgent-1.4.tar.gz) = acd1e764b074494e18a99a66fa2ed7461e08ac99
+RMD160 (seturgent-1.4.tar.gz) = dd3f4c2aae6f053931676186491cdb68f797f24b
+Size (seturgent-1.4.tar.gz) = 2483 bytes
