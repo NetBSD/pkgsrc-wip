@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.6 2011/12/19 13:05:35 gschwarz Exp $
+$NetBSD: distinfo,v 1.7 2012/01/03 12:47:43 othyro Exp $
 
 SHA1 (libeXosip2-3.6.0.tar.gz) = a53d699208a22a4edf2d239e1dc3a2f4c1fee0d2
 RMD160 (libeXosip2-3.6.0.tar.gz) = 330b5c922c3791505f57fb363a91600ffd56c857
 Size (libeXosip2-3.6.0.tar.gz) = 489574 bytes
-SHA1 (patch-aa) = 009ada5507805083b8046212e5d7f396e7f6340f
-SHA1 (patch-ab) = ad157939ac3076783e0cae2aa0da67c4366eab3f
+SHA1 (patch-aa) = 21e58e6788622a87dafe3a42e61f4c4a73178656
+SHA1 (patch-ab) = b05adc5b20490d947b00ba39a31679f894147435
