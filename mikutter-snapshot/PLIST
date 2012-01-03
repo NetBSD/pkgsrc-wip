@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2011/12/26 05:41:57 obache Exp $
+@comment $NetBSD: PLIST,v 1.7 2012/01/03 11:40:52 obache Exp $
 bin/mikutter
 share/applications/mikutter.desktop
 share/doc/mikutter/README
@@ -16,6 +16,7 @@ share/mikutter/core/addon/directmessage/userlist.rb
 share/mikutter/core/addon/extract.rb
 share/mikutter/core/addon/followingcontrol.rb
 share/mikutter/core/addon/friend_timeline.rb
+share/mikutter/core/addon/image_file_cache/image_file_cache.rb
 share/mikutter/core/addon/libnotify/libnotify.rb
 share/mikutter/core/addon/libnotify/notify-send.rb
 share/mikutter/core/addon/libnotify/rnotify.rb
