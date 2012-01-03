@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2011/10/29 11:18:56 othyro Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2012/01/03 19:55:58 othyro Exp $
 
 BUILDLINK_TREE+=	ccrtp
 
@@ -9,7 +9,6 @@ BUILDLINK_API_DEPENDS.ccrtp+=	ccrtp>=2.0.0
 BUILDLINK_PKGSRCDIR.ccrtp?=	../../wip/ccrtp
 
 .include "../../wip/ucommon/buildlink3.mk"
-.include "../../wip/commoncpp2/buildlink3.mk"
 .endif # CCRTP_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-ccrtp
