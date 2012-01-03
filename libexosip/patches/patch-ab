@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.1 2009/11/22 15:30:22 gschwarz Exp $
+$NetBSD: patch-ab,v 1.2 2012/01/03 12:43:19 othyro Exp $
+
+Pull in NetBSD compatibility headers for use with other headers.
 
 --- tools/sip_reg.c.orig	2008-10-26 16:00:31.000000000 +0100
 +++ tools/sip_reg.c	2009-11-22 16:28:03.000000000 +0100
