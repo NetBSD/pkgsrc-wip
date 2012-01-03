@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/12/31 17:07:01 shattered Exp $
+# $NetBSD: Makefile,v 1.2 2012/01/03 13:29:51 shattered Exp $
 #
 
 DISTNAME=	get_iplayer-2.80
@@ -14,8 +14,8 @@ DEPENDS+=	p5-HTML-Parser>=3.0:../../www/p5-HTML-Parser
 DEPENDS+=	p5-HTTP-Cookies>=6.0:../../www/p5-HTTP-Cookies
 DEPENDS+=	p5-HTTP-Date>=6.0:../../www/p5-HTTP-Date
 DEPENDS+=	p5-libwww>=6.0:../../www/p5-libwww
-# can also work with flvstreamer
 DEPENDS+=	rtmpdump>=1.8:../../net/rtmpdump
+DEPENDS+=	flvstreamer>=1.8:../../wip/flvstreamer
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
