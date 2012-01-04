@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4579 2012/01/04 17:57:42 thomasklausner Exp $
+# $Id: Makefile,v 1.4580 2012/01/04 19:09:16 noud4 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -544,6 +544,7 @@ SUBDIR+=	ezstream
 SUBDIR+=	fail2ban
 SUBDIR+=	fakenes
 SUBDIR+=	fakeroot
+SUBDIR+=	fala
 SUBDIR+=	farsi-ttf
 SUBDIR+=	fasm
 SUBDIR+=	fasta
