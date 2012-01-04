@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1 2012/01/04 21:21:32 noud4 Exp $
+
+given it's web states "Python >= 2.5" this should go upstream
+
+--- configure.orig	2012-01-04 21:11:52.000000000 +0000
++++ configure	2012-01-04 21:12:39.000000000 +0000
+@@ -1711,7 +1711,7 @@
+ 
+ 
+    PYTHON=""
+-   for python in python python2 python2.5; do
++   for python in python python2 python2.5 python2.6; do
+               unset ac_cv_path_PYTHON
+        for ac_prog in $python
+ do
