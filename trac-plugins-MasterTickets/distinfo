@@ -1,3 +1,4 @@
-$NetBSD: distinfo,v 1.1 2009/08/04 20:09:12 lexort Exp $
+$NetBSD: distinfo,v 1.2 2012/01/04 21:43:23 lexort Exp $
 
-SHA1 (patch-aa) = 01dca0c03a693097942aa3540f8629f6c801f34e
+SHA1 (patch-aa) = cf9222551af599f85c7d1475b4ecce577778d986
+SHA1 (patch-mastertickets_web__ui.py) = 360764177d91accf6d5ea3d67a94d837c25b99eb
