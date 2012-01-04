@@ -1,0 +1,12 @@
+$NetBSD: patch-LINK_LIBGCC_SPEC,v 1.1 2012/01/04 06:33:39 keckhardt Exp $
+
+--- gcc/Makefile.in.orig	2012-01-03 23:12:51.000000000 +0000
++++ gcc/Makefile.in
+@@ -2073,6 +2073,7 @@ prefix.o: prefix.c $(CONFIG_H) $(SYSTEM_
+ # Language-independent files.
+ 
+ DRIVER_DEFINES = \
++  -DLINK_LIBGCC_SPEC="\"%D $(LINKER_RPATH_FLAG) $(exec_prefix)/lib\"" \
+   -DSTANDARD_STARTFILE_PREFIX=\"$(unlibsubdir)/\" \
+   -DSTANDARD_EXEC_PREFIX=\"$(libdir)/gcc/\" \
+   -DSTANDARD_LIBEXEC_PREFIX=\"$(libexecdir)/gcc/\" \

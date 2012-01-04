@@ -1,11 +1,12 @@
-$NetBSD: distinfo,v 1.5 2011/12/21 21:41:42 keckhardt Exp $
+$NetBSD: distinfo,v 1.6 2012/01/04 06:33:39 keckhardt Exp $
 
 SHA1 (gcc-4.7-20111126.tar.bz2) = 98513592f42fbafeddd1a09cdd6aa0b085db2a88
 RMD160 (gcc-4.7-20111126.tar.bz2) = b224b033de5af53d3de0b43644d6b4ecf12f14ef
 Size (gcc-4.7-20111126.tar.bz2) = 76758735 bytes
+SHA1 (patch-LINK_LIBGCC_SPEC) = 102bc523fb33b1a7044ad9ca3d3976246d70f07d
 SHA1 (patch-aa) = 44eb5094e45b46d3d88743115834b05a4f2b8a7d
 SHA1 (patch-ab) = bfe54f4c83be2367eae7fcec4be02b4ded2a4174
-SHA1 (patch-ad) = 097600e84a7b499475ca9efbcfd4cc38b6c1ffa3
+SHA1 (patch-ad) = cd560eba165fe0c8d43a336d6674bdc95cd00fb1
 SHA1 (patch-af) = fb06bce10adc88d3f6829f41a91f4612a72434fd
 SHA1 (patch-ag) = 4b82b06880bdccc3f967c8633e957fef4509dbc1
 SHA1 (patch-ah) = 7bddb8424dfcbce3e0cf1d856f851d827b66303c
