@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2011/07/28 12:26:39 lexort Exp $
+@comment $NetBSD: PLIST,v 1.5 2012/01/04 23:04:42 lexort Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -26,9 +26,6 @@ ${PYSITELIB}/mastertickets/model.py
 ${PYSITELIB}/mastertickets/model.pyc
 ${PYSITELIB}/mastertickets/model.pyo
 ${PYSITELIB}/mastertickets/templates/depgraph.html
-${PYSITELIB}/mastertickets/util.py
-${PYSITELIB}/mastertickets/util.pyc
-${PYSITELIB}/mastertickets/util.pyo
 ${PYSITELIB}/mastertickets/web_ui.py
 ${PYSITELIB}/mastertickets/web_ui.pyc
 ${PYSITELIB}/mastertickets/web_ui.pyo
