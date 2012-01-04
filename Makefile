@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4578 2012/01/01 15:20:19 jihbed Exp $
+# $Id: Makefile,v 1.4579 2012/01/04 17:57:42 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -252,6 +252,7 @@ SUBDIR+=	cacti-spine
 SUBDIR+=	cairo-java
 SUBDIR+=	calcurse
 SUBDIR+=	callweaver
+SUBDIR+=	calypso
 SUBDIR+=	canna
 SUBDIR+=	canna-canuum
 SUBDIR+=	canna-dict
@@ -552,13 +553,13 @@ SUBDIR+=	faast
 SUBDIR+=	fbida
 SUBDIR+=	fbpager
 SUBDIR+=	fbpanel
-SUBDIR+	fceux
+SUBDIR+=	fceux
 SUBDIR+=	fdm
 SUBDIR+=	feynedit
 SUBDIR+=	feynhiggs
 SUBDIR+=	ffmpeg
 SUBDIR+=	ffmpeg-snapshot
-SUBDIR+=	fftjet]
+SUBDIR+=	fftjet
 SUBDIR+=	ficl
 SUBDIR+=	filelight
 SUBDIR+=	filepp
