@@ -1,0 +1,5 @@
+A simple software that speaks a text.
+You can type the text or appoint a file.
+Fala is just a frontend to festival.
+It's designed for GNOME, but if you have gtk,
+pyhton and festival you are able to run it.

@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2012/01/04 19:05:15 noud4 Exp $
+
+so a XDG sub-menu is able to group TTS applications.
+
+--- data/fala.desktop.orig	2011-12-15 14:00:29.000000000 +0000
++++ data/fala.desktop	2011-12-15 14:00:44.000000000 +0000
+@@ -9,4 +9,4 @@
+ Terminal=false
+ Type=Application
+ StartupNotify=false
+-Categories=GNOME;Application;AudioVideo;GTK;
++Categories=GNOME;Application;AudioVideo;GTK;TTS;
