@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2012/01/04 21:21:32 noud4 Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/01/04 22:06:10 noud4 Exp $
 bin/eyeD3
 ${PYSITELIB}/eyeD3/__init__.py
 ${PYSITELIB}/eyeD3/__init__.pyc
@@ -13,3 +13,6 @@ ${PYSITELIB}/eyeD3/tag.pyc
 ${PYSITELIB}/eyeD3/utils.py
 ${PYSITELIB}/eyeD3/utils.pyc
 man/man1/eyeD3.1
+share/doc/eyeD3-${PKGVERSION}/AUTHORS
+share/doc/eyeD3-${PKGVERSION}/COPYING
+share/doc/eyeD3-${PKGVERSION}/README

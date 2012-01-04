@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2012/01/04 21:21:32 noud4 Exp $
+# $NetBSD: Makefile,v 1.3 2012/01/04 22:06:10 noud4 Exp $
 #
 
 DISTNAME=	eyeD3-0.6.18
 PKGNAME=	${PYPKGPREFIX}-eyed3-0.6.18
+PKGREVISION=	1
 CATEGORIES=	audio python
 MASTER_SITES=	http://eyed3.nicfit.net/releases/
 

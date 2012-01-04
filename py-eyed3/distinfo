@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.2 2012/01/04 21:21:32 noud4 Exp $
+$NetBSD: distinfo,v 1.3 2012/01/04 22:06:10 noud4 Exp $
 
 SHA1 (eyeD3-0.6.18.tar.gz) = d8887f7b75306bd293e0b0d46a977e73225ae7b5
 RMD160 (eyeD3-0.6.18.tar.gz) = da94054d67d124f560d8fad2caaca88b4b71a408
 Size (eyeD3-0.6.18.tar.gz) = 117002 bytes
-SHA1 (patch-aa) = deee92225b931ff82060dbc56bdcc9b9e461b51a
+SHA1 (patch-aa) = 02b4d90721b87b349a0e92ee17116b1f80d5915d
 SHA1 (patch-ab) = 3ecc97d70cba8e0dad14c0a9af227c50fc0c4e9f
