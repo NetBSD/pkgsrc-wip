@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/01/05 14:03:36 phonohawk Exp $
+lib/arrow-list-${PKGVERSION}/${HASKELL_VERSION}/Control/Arrow/ArrowKleisli.hi
+lib/arrow-list-${PKGVERSION}/${HASKELL_VERSION}/Control/Arrow/ArrowKleisli.p_hi
+lib/arrow-list-${PKGVERSION}/${HASKELL_VERSION}/Control/Arrow/ArrowList.hi
+lib/arrow-list-${PKGVERSION}/${HASKELL_VERSION}/Control/Arrow/ArrowList.p_hi
+lib/arrow-list-${PKGVERSION}/${HASKELL_VERSION}/Control/Arrow/List.hi
+lib/arrow-list-${PKGVERSION}/${HASKELL_VERSION}/Control/Arrow/List.p_hi
+lib/arrow-list-${PKGVERSION}/${HASKELL_VERSION}/HSarrow-list-${PKGVERSION}.o
+lib/arrow-list-${PKGVERSION}/${HASKELL_VERSION}/libHSarrow-list-${PKGVERSION}.a
+lib/arrow-list-${PKGVERSION}/${HASKELL_VERSION}/libHSarrow-list-${PKGVERSION}_p.a
+lib/arrow-list-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/arrow-list-${PKGVERSION}/LICENSE
