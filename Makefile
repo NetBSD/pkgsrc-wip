@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4584 2012/01/06 10:59:36 jihbed Exp $
+# $Id: Makefile,v 1.4585 2012/01/06 11:08:02 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2177,6 +2177,7 @@ SUBDIR+=	py-gccxml
 SUBDIR+=	py-generateDS
 SUBDIR+=	py-gettext-tools
 SUBDIR+=	py-gevent
+SUBDIR+=	py-gitdb
 SUBDIR+=	py-gist
 SUBDIR+=	py-ghalatawi
 SUBDIR+=	py-gnm
