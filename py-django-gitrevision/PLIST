@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/01/06 11:35:47 jihbed Exp $
+${PYSITELIB}/django_gitrevision-${PKGVERSION}-py2.7.egg-info/PKG-INFO
+${PYSITELIB}/django_gitrevision-${PKGVERSION}-py2.7.egg-info/SOURCES.txt
+${PYSITELIB}/django_gitrevision-${PKGVERSION}-py2.7.egg-info/dependency_links.txt
+${PYSITELIB}/django_gitrevision-${PKGVERSION}-py2.7.egg-info/requires.txt
+${PYSITELIB}/django_gitrevision-${PKGVERSION}-py2.7.egg-info/top_level.txt
+${PYSITELIB}/gitrevision/__init__.py
+${PYSITELIB}/gitrevision/__init__.pyc
+${PYSITELIB}/gitrevision/__init__.pyo
+${PYSITELIB}/gitrevision/context_processors.py
+${PYSITELIB}/gitrevision/context_processors.pyc
+${PYSITELIB}/gitrevision/context_processors.pyo
+${PYSITELIB}/gitrevision/middleware.py
+${PYSITELIB}/gitrevision/middleware.pyc
+${PYSITELIB}/gitrevision/middleware.pyo
+${PYSITELIB}/gitrevision/models.py
+${PYSITELIB}/gitrevision/models.pyc
+${PYSITELIB}/gitrevision/models.pyo
+${PYSITELIB}/gitrevision/settings.py
+${PYSITELIB}/gitrevision/settings.pyc
+${PYSITELIB}/gitrevision/settings.pyo
+${PYSITELIB}/gitrevision/utils.py
+${PYSITELIB}/gitrevision/utils.pyc
+${PYSITELIB}/gitrevision/utils.pyo
