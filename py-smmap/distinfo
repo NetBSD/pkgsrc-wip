@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/01/06 10:48:28 jihbed Exp $
+
+SHA1 (smmap-0.8.1.tar.gz) = 97f5ffc9927b107f1b9def2980220918a35a6378
+RMD160 (smmap-0.8.1.tar.gz) = bc812502328d68fa5db60f8907ce8037e3dee3f1
+Size (smmap-0.8.1.tar.gz) = 19205 bytes
