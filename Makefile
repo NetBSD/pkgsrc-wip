@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4586 2012/01/06 11:19:53 jihbed Exp $
+# $Id: Makefile,v 1.4587 2012/01/06 11:37:02 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2139,6 +2139,7 @@ SUBDIR+=	py-distutils-extra
 SUBDIR+=	py-divisi2
 SUBDIR+=	py-divmod-axiom
 SUBDIR+=	py-divmod-epsilon
+SUBDIR+=	py-django-gitrevision
 SUBDIR+=	py-divmod-mantissa
 SUBDIR+=	py-divmod-vertex
 SUBDIR+=	py-django-diario
