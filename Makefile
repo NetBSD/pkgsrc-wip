@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4582 2012/01/05 14:04:49 phonohawk Exp $
+# $Id: Makefile,v 1.4583 2012/01/06 10:49:14 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2372,6 +2372,7 @@ SUBDIR+=	py-siginterrupt
 SUBDIR+=	py-simplegeneric
 SUBDIR+=	py-simpleparse-mxtexttools
 SUBDIR+=	py-smop
+SUBDIR+=	py-smmap
 SUBDIR+=	py-snmp
 SUBDIR+=	py-sofa
 SUBDIR+=	py-spambayes
