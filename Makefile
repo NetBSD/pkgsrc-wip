@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4583 2012/01/06 10:49:14 jihbed Exp $
+# $Id: Makefile,v 1.4584 2012/01/06 10:59:36 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2084,6 +2084,7 @@ SUBDIR+=	py-aspects
 SUBDIR+=	py-aspell
 SUBDIR+=	py-aspyct
 SUBDIR+=	py-astropysics
+SUBDIR+=	py-async
 SUBDIR+=	py-behaviour
 SUBDIR+=	py-bidict
 SUBDIR+=	py-bigfloat
