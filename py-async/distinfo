@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/01/06 10:58:51 jihbed Exp $
+
+SHA1 (async-0.6.1.tar.gz) = cd0cb903a938b67391109cd5471585f07b63ff9f
+RMD160 (async-0.6.1.tar.gz) = 1d53687379756dfd05a98b1a13ed18e40538e8be
+Size (async-0.6.1.tar.gz) = 36243 bytes
