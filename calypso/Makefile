@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/01/04 17:55:50 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2012/01/06 13:47:13 thomasklausner Exp $
 
 DISTNAME=	calypso-0.5
 CATEGORIES=	net
@@ -9,6 +9,7 @@ COMMENT=	CardDAV/CalDAV server
 LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-vobject>=0.8.1c:../../textproc/py-vobject
+DEPENDS+=	scmgit-base-[0-9]*:../../devel/scmgit-base
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
