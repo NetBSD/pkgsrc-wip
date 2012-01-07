@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2011/10/12 01:16:43 minskim Exp $
+# $NetBSD: Makefile,v 1.7 2012/01/07 12:12:07 makoto Exp $
 
 DISTNAME=	emacs-w3m-1.4.50
 PKGNAME=	emacs-w3m-1.4.50
@@ -33,9 +33,6 @@ SUBST_CLASSES+=		paths
 SUBST_FILES.paths+=	w3m.el
 SUBST_SED.paths+=	-e 's,@W3MPREFIX@,${W3MPREFIX},g'
 SUBST_STAGE.paths=	pre-configure
-
-INSTALL_MAKE_FLAGS=	prefix=${DESTDIR}${PREFIX} \
-			infodir=${DESTDIR}${PREFIX}/${PKGINFODIR}
 
 #REPLACE_PERL=		lib-src/grep-changelog
 
