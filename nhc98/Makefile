@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/01/07 20:58:49 bubuchka Exp $
+# $NetBSD: Makefile,v 1.2 2012/01/07 21:41:36 bubuchka Exp $
 
 DISTNAME=		nhc98src-1.22
 PKGNAME=		nhc98-1.22
@@ -22,7 +22,8 @@ HAS_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--buildwith=gcc --installdir=${DESTDIR}${PREFIX:Q} \
 			+docs --docdir=${DESTDIR}${PREFIX}/share/doc/nhc98
 
-PKG_DESTDIR_SUPPORT=	user-destdir
+# XXX Doesn't yet supported
+#PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake
 
