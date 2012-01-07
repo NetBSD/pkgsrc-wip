@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/10/13 11:58:12 ryo-on Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/01/07 21:50:33 noud4 Exp $
 include/dee-1.0/dee-analyzers.h
 include/dee-1.0/dee-file-resource-manager.h
 include/dee-1.0/dee-filter-model.h
@@ -18,9 +18,9 @@ include/dee-1.0/dee-term-list.h
 include/dee-1.0/dee.h
 lib/libdee-1.0.la
 lib/pkgconfig/dee-1.0.pc
-lib/python2.7/site-packages/gi/overrides/Dee.py
-lib/python2.7/site-packages/gi/overrides/Dee.pyc
-lib/python2.7/site-packages/gi/overrides/Dee.pyo
+${PYSITELIB}/gi/overrides/Dee.py
+${PYSITELIB}/gi/overrides/Dee.pyc
+${PYSITELIB}/gi/overrides/Dee.pyo
 share/gtk-doc/html/dee-1.0/DeeFileResourceManager.html
 share/gtk-doc/html/dee-1.0/DeeFilterModel.html
 share/gtk-doc/html/dee-1.0/DeeHashIndex.html

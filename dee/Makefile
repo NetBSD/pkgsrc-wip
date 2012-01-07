@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/10/13 11:58:12 ryo-on Exp $
+# $NetBSD: Makefile,v 1.2 2012/01/07 21:50:33 noud4 Exp $
 #
 
 DISTNAME=	dee-0.5.22
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://launchpad.net/dee/0.5/0.5.22/+download/
 
@@ -17,6 +18,8 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config gmake
 
 PKGCONFIG_OVERRIDE+=	dee-1.0.pc.in
+
+PY_PATCHPLIST=	yes
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../lang/python/extension.mk"
