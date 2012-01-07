@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2011/02/26 11:56:25 ryo-on Exp $
+# $NetBSD: Makefile,v 1.8 2012/01/07 22:34:07 noud4 Exp $
 #
 
 DISTNAME=	gwibber-2.91.90
+PKGREVISION=	1
 CATEGORIES=	net
-MASTER_SITES=	http://launchpad.net/gwibber/trunk/2.91.90/+download/
+MASTER_SITES=	http://launchpad.net/gwibber/3.0/2.91.90/+download/
 
 MAINTAINER=	ryo_on@yk.rim.or.jp
 HOMEPAGE=	http://gwibber.com/
@@ -25,7 +26,7 @@ DEPENDS+=	${PYPKGPREFIX}-imaging>=1.1.6:../../graphics/py-imaging
 DEPENDS+=	${PYPKGPREFIX}-notify>=0.1.1:../../sysutils/py-notify
 DEPENDS+=	${PYPKGPREFIX}-webkitgtk>=1.0.1:../../wip/py-webkit
 DEPENDS+=	${PYPKGPREFIX}-simplejson>=1.9.1:../../converters/py-simplejson
-DEPENDS+=	${PYPKGPREFIX}-mx-base>=3.0.0:../../wip/py-mx-base
+DEPENDS+=	${PYPKGPREFIX}-mxDateTime>=:../../time/py-mxDateTime
 DEPENDS+=	${PYPKGPREFIX}-distutils-extra-[0-9]*:../../wip/py-distutils-extra
 DEPENDS+=	${PYPKGPREFIX}-feedparser-[0-9]*:../../textproc/py-feedparser
 DEPENDS+=	${PYPKGPREFIX}-xdg>=0.15:../../devel/py-xdg
