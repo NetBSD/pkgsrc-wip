@@ -1,0 +1,6 @@
+MPIBZIP2 is a parallel implementation of the bzip2 block-sorting file compressor
+that uses MPI and achieves significant speedup on cluster machines.
+The output of this version is fully compatible with bzip2 v1.0.2 or newer
+(ie: anything compressed with mpibzip2 can be decompressed with bzip2).
+MPIBZIP2 should work on any system that has a pthreads compatible C++ compiler
+(such as gcc). It has been tested on: Linux and Solaris.

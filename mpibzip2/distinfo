@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/01/08 04:31:15 noud4 Exp $
+
+SHA1 (mpibzip2-0.6.tar.gz) = 6053e5d6b39c160c5da23e73075a57b08ea712e7
+RMD160 (mpibzip2-0.6.tar.gz) = 7d542b6ed2172471835208f581ff0e00be0a02e0
+Size (mpibzip2-0.6.tar.gz) = 18348 bytes
+SHA1 (patch-aa) = 0c4a3df3a0693f405393d6b32bba850384732868
