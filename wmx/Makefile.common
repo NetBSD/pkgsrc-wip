@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2011/05/05 13:07:00 ishit Exp $
+# $NetBSD: Makefile.common,v 1.2 2012/01/08 03:14:00 ishit Exp $
 # used by wip/wmx/Makefile
 # used by wip/wmx-gnome/Makefile
 
@@ -9,6 +9,8 @@ MASTER_SITES=	http://www.all-day-breakfast.com/wmx/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.all-day-breakfast.com/wmx/
+# XXX "BSD License" ??? cf.http://sourceforge.net/projects/wm2/
+LICENSE=	generic-nonlicense
 
 CONFLICTS+=	wmx-[0-9]* wmx-gnome-[0-9]*
 
