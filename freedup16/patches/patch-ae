@@ -1,0 +1,22 @@
+$NetBSD: patch-ae,v 1.1.1.1 2012/01/08 13:25:19 draga Exp $
+
+--- freedup.c.orig	2011-02-04 07:22:15.000000000 +0000
++++ freedup.c
+@@ -22,7 +22,7 @@ This file is part of FreeDup.
+ #include "sha1.h"
+ #include "freedup.h"
+ #include "helper.h"
+-#include "web.h"
++//#include "web.h"
+ #include "config.h"
+ #include <signal.h>
+ #include <assert.h>
+@@ -1844,7 +1844,7 @@ main (int argc, char *argv[])
+ 	  case 'v': showmode	= 1-showmode;	break;
+ 	  case 'V': version();                exit(0);
+ 	  case 'w': weaklink	= 1-weaklink;	break;
+-	  case 'W': dolisten();			break;
++//	  case 'W': dolisten();			break;
+ 	  case 'x': extratyp	= selectextra(optarg);
+ 						break;
+ #ifdef HASHSUM

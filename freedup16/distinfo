@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/01/08 13:25:19 draga Exp $
+
+SHA1 (freedup-1.6-2-src.tar.bz2) = cd19055232f14c5a8192580d06b50586f7e518bf
+RMD160 (freedup-1.6-2-src.tar.bz2) = ea1aa7496477048630a974612ffa6d5cc4db106e
+Size (freedup-1.6-2-src.tar.bz2) = 221427 bytes
+SHA1 (patch-aa) = 4ccd642134ed7fd911b774562407fd5ff837a6d2
+SHA1 (patch-ac) = a06653d2d9a1ac47adc09781155172c305a3788e
+SHA1 (patch-ad) = c7cfae1c109bcdcfbc0d4b6b7b0850f2a0552b3d
+SHA1 (patch-ae) = a9ddc445909cf64be183c4c18190b3be01db23dd

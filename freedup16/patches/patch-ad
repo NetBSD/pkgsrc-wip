@@ -1,0 +1,42 @@
+$NetBSD: patch-ad,v 1.1.1.1 2012/01/08 13:25:19 draga Exp $
+
+--- config.c.orig	2011-02-04 07:22:15.000000000 +0000
++++ config.c
+@@ -369,12 +369,14 @@ int readconfigline(char *buffer)
+ 	        if(ptr[strlen(ptr)-1]=='\n') ptr[strlen(ptr)-1]=0;
+ 		if( StrNCmp(token,"globalkey") == 0 )
+ 		{
+-		    globalkey = *webtrans(ptr);
++//		    globalkey = *webtrans(ptr);
++;;
+ 		} else
+ 		if( StrNCmp(token,"findoptions") == 0 )
+ 		{
+-		    findopta = calloc( strlen(ptr)+2, sizeof(char) );
+-		    strcpy( findopta, webtrans(ptr) );
++//		    findopta = calloc( strlen(ptr)+2, sizeof(char) );
++//		    strcpy( findopta, webtrans(ptr) );
++;;
+ 		} else
+ 		if( StrNCmp(token,"prghash") == 0 )
+ 		{
+@@ -420,7 +422,7 @@ fprintf(stderr,"\n#######%s######\n",ptr
+ 		{
+ 		    if( pwd!=NULL ) free(pwd);
+ 		    pwd = calloc( strlen(ptr)+2, sizeof(char) );
+-		    strcpy( pwd, webtrans(ptr) );
++//		    strcpy( pwd, webtrans(ptr) );
+ 		    chdir(pwd);
+ 		} else
+ 		if( StrNCmp(token,"directory") == 0 )
+@@ -428,8 +430,8 @@ fprintf(stderr,"\n#######%s######\n",ptr
+ 		    FILE*liste=NULL;
+ 		    if(strlen(ptr)>0)
+ 		    {
+-			sprintf(pbuffer,"find \"%s\" -type f %s -print", 
+-				webtrans(ptr), (findopta==NULL)?"":findopta );
++//			sprintf(pbuffer,"find \"%s\" -type f %s -print", 
++//				webtrans(ptr), (findopta==NULL)?"":findopta );
+ 			liste = popen (pbuffer, "r");
+ 			if(liste == 0)
+ 			{
