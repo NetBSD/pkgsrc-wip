@@ -1,4 +1,13 @@
 ----------------------------------------------------------------------
+Version 0.57.0, by Aleksey Cheusov, Sat,  3 Dec 2011 16:53:34 +0300
+
+  pkg_subgraph_deps:
+    - Support for dependency type
+
+  pkg_summary2deps:
+    - Options -1 and -2 were added
+
+----------------------------------------------------------------------
 Version 0.56.4, by Aleksey Cheusov, Sat,  3 Dec 2011 16:53:34 +0300
 
   FIX: Shell scripts now use "trap" corectly.
