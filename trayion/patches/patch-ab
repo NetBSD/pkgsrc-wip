@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.2 2012/01/09 17:05:23 thomasklausner Exp $
+$NetBSD: patch-ab,v 1.3 2012/01/09 17:13:17 thomasklausner Exp $
 
 X11_PREFIX set from pkgsrc Makefile; add rpath to binary.
 
@@ -9,7 +9,7 @@ X11_PREFIX set from pkgsrc Makefile; add rpath to binary.
  #
  # X11 install location.
 -X11_PREFIX = /usr/X11R6
-+#X11_PREFIX = /usr/X11R6
++X11_PREFIX = ${X11BASE}
  
  #
  # X compiler and linker flags.

@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.2 2012/01/09 17:05:22 thomasklausner Exp $
+$NetBSD: distinfo,v 1.3 2012/01/09 17:13:17 thomasklausner Exp $
 
 SHA1 (trayion-0.1.2.tar.gz) = a8501fd1451991d90adc532ec3f895b0377fb764
 RMD160 (trayion-0.1.2.tar.gz) = 6bd1e266ef57c11cfa960025216a5983255dd3ff
 Size (trayion-0.1.2.tar.gz) = 15681 bytes
 SHA1 (patch-aa) = 4a3e3306a15d50a7cb8ce33fbd985623ebea94d5
-SHA1 (patch-ab) = c482b20c617e107a3cb67d1fc76e10049fced3e6
+SHA1 (patch-ab) = 1b30debe9dbbb9264bdd86893b11709159413cb3

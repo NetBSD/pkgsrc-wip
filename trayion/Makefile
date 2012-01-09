@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/01/09 17:05:22 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2012/01/09 17:13:17 thomasklausner Exp $
 #
 
 DISTNAME=	trayion-0.1.2
@@ -11,7 +11,6 @@ COMMENT=	FreeDesktop trayicon area for Ion3
 LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-MAKE_FLAGS+=	X11_PREFIX=${BUILDLINK_PREFIX.libX11}
 
 USE_TOOLS+=	gmake
 
