@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2011/08/01 12:46:52 khorben Exp $
+# $NetBSD: Makefile,v 1.14 2012/01/09 16:11:52 khorben Exp $
 
-DISTNAME=	Browser-0.4.1
-PKGNAME=	deforaos-browser-0.4.1
+DISTNAME=	Browser-0.4.4
+PKGNAME=	deforaos-browser-0.4.4
 CATEGORIES=	sysutils
-MASTER_SITES=	http://www.defora.org/os/download/download/3560/
+MASTER_SITES=	http://www.defora.org/os/download/download/3614/
 
 MAINTAINER=	khorben@defora.org
 HOMEPAGE=	http://www.defora.org/

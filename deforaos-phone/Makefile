@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2011/12/14 23:46:39 khorben Exp $
+# $NetBSD: Makefile,v 1.11 2012/01/09 16:11:53 khorben Exp $
 
-DISTNAME=	Phone-0.3.8
-PKGNAME=	deforaos-phone-0.3.8
+DISTNAME=	Phone-0.3.9
+PKGNAME=	deforaos-phone-0.3.9
 CATEGORIES=	comms
-MASTER_SITES=	http://www.defora.org/os/download/download/3603/
+MASTER_SITES=	http://www.defora.org/os/download/download/3612/
 
 MAINTAINER=	khorben@defora.org
 HOMEPAGE=	http://www.defora.org/
