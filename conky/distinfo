@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/01/09 17:47:49 thomasklausner Exp $
+
+SHA1 (conky-1.8.1.tar.bz2) = 9581419b1a53a8a7e37b0291cd4e55ab166d221a
+RMD160 (conky-1.8.1.tar.bz2) = f3203131e2d8f3756eb29f5c5a9034b9c269fdc6
+Size (conky-1.8.1.tar.bz2) = 612481 bytes
+SHA1 (patch-configure) = 44d4b1315af362975ac1d022f7bc7dbcb1ff84b3
+SHA1 (patch-src_config.h.in) = 6247f30ae90af4782be111c3970e5e8f4b3d0947
+SHA1 (patch-src_conky.c) = 85a4f64b59db10b0d29ce97f5a0b35d481b24fd2
+SHA1 (patch-src_core.c) = 31c98c7d020571b5f654d9084e61042d187aa4c1
+SHA1 (patch-src_fs.c) = df2eeae49ad23e3facc90a78750ce11d5a4ba665
