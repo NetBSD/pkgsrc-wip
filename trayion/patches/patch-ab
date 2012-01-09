@@ -1,10 +1,18 @@
-$NetBSD: patch-ab,v 1.1.1.1 2008/05/31 16:18:58 pmatias Exp $
+$NetBSD: patch-ab,v 1.2 2012/01/09 17:05:23 thomasklausner Exp $
 
---- Rules.make.orig	2008-05-27 16:36:55.000000000 -0300
+X11_PREFIX set from pkgsrc Makefile; add rpath to binary.
+
+--- Rules.make.orig	2008-05-27 19:36:55.000000000 +0000
 +++ Rules.make
-@@ -10,4 +10,4 @@ X11_PREFIX = /usr/X11R6
+@@ -5,9 +5,9 @@ TRACE_LEVEL = 0
+ 
+ #
+ # X11 install location.
+-X11_PREFIX = /usr/X11R6
++#X11_PREFIX = /usr/X11R6
+ 
  #
  # X compiler and linker flags.
  X11CFLAGS = -I${X11_PREFIX}/include
 -X11LDFLAGS = -L${X11_PREFIX}/lib -lX11
-+X11LDFLAGS = -L${X11_PREFIX}/lib -R${X11_PREFIX}/lib -lX11
++X11LDFLAGS = -L${X11_PREFIX}/lib ${LINKER_RPATH_FLAG}${X11_PREFIX}/lib -lX11

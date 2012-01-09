@@ -1,14 +1,16 @@
-$NetBSD: patch-aa,v 1.1.1.1 2008/05/31 16:18:58 pmatias Exp $
+$NetBSD: patch-aa,v 1.2 2012/01/09 17:05:23 thomasklausner Exp $
 
---- Makefile.orig	2008-05-27 17:05:24.000000000 -0300
+Add destdir support.
+
+--- Makefile.orig	2008-05-27 20:05:24.000000000 +0000
 +++ Makefile
 @@ -1,7 +1,6 @@
 -prefix=/usr
 -bindir = ${prefix}/bin
 -mandir = ${prefix}/share/man
 -INSTALL = /bin/install
-+bindir = ${PREFIX}/bin
-+mandir = ${PREFIX}/man
++bindir = ${DESTDIR}${PREFIX}/bin
++mandir = ${DESTDIR}${PREFIX}/man
 +INSTALL = install
  INSTALLPROG = ${INSTALL} -m 0755
  INSTALLMAN = ${INSTALL} -m 0644
