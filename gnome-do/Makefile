@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/06/13 22:47:05 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2012/01/09 23:05:26 thomasklausner Exp $
 #
 
 DISTNAME=	gnome-do-0.8.2
@@ -16,6 +16,9 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake intltool pkg-config
+
+# has too long file names
+EXTRACT_USING=	gtar
 
 GCONF_SCHEMAS+=	data/gnome-do.schemas
 
