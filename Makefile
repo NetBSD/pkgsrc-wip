@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4593 2012/01/10 10:14:12 triaxx Exp $
+# $Id: Makefile,v 1.4594 2012/01/10 15:59:23 noud4 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2035,6 +2035,7 @@ SUBDIR+=	prover9
 SUBDIR+=	proxychains
 SUBDIR+=	proxyknife
 SUBDIR+=	prozilla
+SUBDIR+=	prpltwtr
 SUBDIR+=	prtunnel
 SUBDIR+=	psh
 SUBDIR+=	psybnc
