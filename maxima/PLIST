@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.39 2011/12/01 15:58:52 asau Exp $
+@comment $NetBSD: PLIST,v 1.40 2012/01/10 01:40:09 asau Exp $
 bin/maxima
 bin/rmaxima
 bin/xmaxima
@@ -119,6 +119,7 @@ share/maxima/${PKGVERSION}/doc/html/maxima.hhp
 share/maxima/${PKGVERSION}/doc/html/maxima.html
 share/maxima/${PKGVERSION}/doc/html/maxima_1.html
 share/maxima/${PKGVERSION}/doc/html/maxima_10.html
+share/maxima/${PKGVERSION}/doc/html/maxima_100.html
 share/maxima/${PKGVERSION}/doc/html/maxima_11.html
 share/maxima/${PKGVERSION}/doc/html/maxima_12.html
 share/maxima/${PKGVERSION}/doc/html/maxima_13.html
@@ -607,9 +608,11 @@ share/maxima/${PKGVERSION}/share/contrib/gentran/test/type.output
 share/maxima/${PKGVERSION}/share/contrib/gentran/vaxinit.lisp
 share/maxima/${PKGVERSION}/share/contrib/gentran/vaxlsp.lisp
 share/maxima/${PKGVERSION}/share/contrib/gf/gf.mac
+share/maxima/${PKGVERSION}/share/contrib/gf/gf_hard_test.ERR
 share/maxima/${PKGVERSION}/share/contrib/gf/gf_hard_test.mac
 share/maxima/${PKGVERSION}/share/contrib/gf/gf_manual.pdf
 share/maxima/${PKGVERSION}/share/contrib/gf/gf_manual.tex
+share/maxima/${PKGVERSION}/share/contrib/gf/gf_test.ERR
 share/maxima/${PKGVERSION}/share/contrib/gf/gf_test.mac
 share/maxima/${PKGVERSION}/share/contrib/gf/whatsnew.txt
 share/maxima/${PKGVERSION}/share/contrib/ggf.mac
@@ -1592,6 +1595,7 @@ share/maxima/${PKGVERSION}/src/numerical/slatec/dqag.lisp
 share/maxima/${PKGVERSION}/src/numerical/slatec/dqage.lisp
 share/maxima/${PKGVERSION}/src/numerical/slatec/dqagi.lisp
 share/maxima/${PKGVERSION}/src/numerical/slatec/dqagie.lisp
+share/maxima/${PKGVERSION}/src/numerical/slatec/dqagp.lisp
 share/maxima/${PKGVERSION}/src/numerical/slatec/dqagpe.lisp
 share/maxima/${PKGVERSION}/src/numerical/slatec/dqags.lisp
 share/maxima/${PKGVERSION}/src/numerical/slatec/dqagse.lisp
