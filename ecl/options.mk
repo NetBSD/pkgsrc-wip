@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2011/01/16 13:29:03 asau Exp $
+# $NetBSD: options.mk,v 1.4 2012/01/10 04:04:37 asau Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.ecl
 PKG_SUPPORTED_OPTIONS+=		threads unicode ffi clx
@@ -27,6 +27,8 @@ CONFIGURE_ARGS+=	--with-__thread=no
 .if !empty(PKG_OPTIONS:Municode)
 CONFIGURE_ARGS+=	--enable-unicode
 PLIST_SRC+=		PLIST.unicode
+.else
+CONFIGURE_ARGS+=	--disable-unicode
 .endif
 
 .if !empty(PKG_OPTIONS:Mffi)
