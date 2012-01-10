@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/12/08 00:58:29 thomasklausner Exp $
+$NetBSD: distinfo,v 1.2 2012/01/10 14:21:29 thomasklausner Exp $
 
-SHA1 (gnome-do-0.8.2.tar.gz) = 4a92714a483341a8e31a8a04627e725fa5594851
-RMD160 (gnome-do-0.8.2.tar.gz) = 50a963dce07a3f0ba295fecfa8389a8ecff15211
-Size (gnome-do-0.8.2.tar.gz) = 1253578 bytes
+SHA1 (gnome-do-0.8.5.tar.gz) = 690d4713f7b818e92717a6e5addeb36a5c9d9162
+RMD160 (gnome-do-0.8.5.tar.gz) = 214397277dd0618050b3e99aeb3e7f98ee2fd4cd
+Size (gnome-do-0.8.5.tar.gz) = 904470 bytes
 SHA1 (patch-aa) = cc24de1d6d45ce8eb99c0e4b58f84cfc39d2112d

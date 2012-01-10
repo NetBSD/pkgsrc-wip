@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2012/01/09 23:05:26 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2012/01/10 14:21:29 thomasklausner Exp $
 #
 
-DISTNAME=	gnome-do-0.8.2
-PKGREVISION=	3
+DISTNAME=	gnome-do-0.8.5
 CATEGORIES=	sysutils
-MASTER_SITES=	http://launchpad.net/do/0.8/0.8.2/+download/
+MASTER_SITES=	http://launchpad.net/do/trunk/0.8.5/+download/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://do.davebsd.com/
@@ -20,7 +19,7 @@ USE_TOOLS+=	gmake intltool pkg-config
 # has too long file names
 EXTRACT_USING=	gtar
 
-GCONF_SCHEMAS+=	data/gnome-do.schemas
+GCONF_SCHEMAS+=	gnome-do.schemas
 
 PKGCONFIG_OVERRIDE+=	Do.Platform/do.platform.pc.in
 PKGCONFIG_OVERRIDE+=	Do.Platform.Linux/do.platform.linux.pc.in
@@ -34,6 +33,7 @@ PKGCONFIG_OVERRIDE+=	Do.Interface.Linux.AnimationBase/do.interface.linux.animati
 .include "../../devel/mono-addins/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../lang/mono/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/ndesk-dbus/buildlink3.mk"
 .include "../../sysutils/ndesk-dbus-glib/buildlink3.mk"
 .include "../../x11/gnome-desktop-sharp/buildlink3.mk"
