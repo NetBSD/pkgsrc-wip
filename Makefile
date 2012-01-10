@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4592 2012/01/09 17:54:12 thomasklausner Exp $
+# $Id: Makefile,v 1.4593 2012/01/10 10:14:12 triaxx Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2594,6 +2594,7 @@ SUBDIR+=	scx
 SUBDIR+=	sdd
 SUBDIR+=	sdict-tools
 SUBDIR+=	seeks
+SUBDIR+=	semanticscuttle
 SUBDIR+=	send-pr
 SUBDIR+=	sendmailX
 SUBDIR+=	serendipity
