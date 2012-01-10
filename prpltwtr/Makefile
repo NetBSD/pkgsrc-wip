@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/01/10 15:56:38 noud4 Exp $
+# $NetBSD: Makefile,v 1.2 2012/01/10 19:08:54 noud4 Exp $
 #
 
 DISTNAME=		prpltwtr-0.11.0
@@ -17,9 +17,6 @@ USE_TOOLS+=		perl
 USE_LIBTOOL=		yes
 CFLAGS+=		-I${BUILDLINK_DIR}/include/glib/glib-2.0 \
 			-I${BUILDLINK_DIR}/lib/glib-2.0/include
-
-PLIST_SUBST+=		DISTNAME=${DISTNAME}
-PLIST_SUBST+=		EXTRACT_SUFX=${EXTRACT_SUFX}
 
 INSTALLATION_DIRS+=	lib/pidgin lib/purple-2 \
 			share/pixmaps/pidgin/protocols/16 \
