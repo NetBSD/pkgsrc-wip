@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.33 2011/12/29 11:04:30 asau Exp $
+@comment $NetBSD: PLIST,v 1.34 2012/01/10 02:28:18 asau Exp $
 bin/efricas
 bin/fricas
 lib/fricas/emacs/fricas-cpl.el
@@ -216,6 +216,7 @@ lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/ELEMFUN-.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/ELEMFUN.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/ELFUTS.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/ELINSOL.${FASL}
+lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/ELIPIDF.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/ELTAB.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/ELTAGG-.${FASL}
 lib/fricas/target/${MACHINE_GNU_PLATFORM}/algebra/ELTAGG.${FASL}
