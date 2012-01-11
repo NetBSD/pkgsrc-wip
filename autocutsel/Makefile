@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/11/10 17:21:50 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2012/01/11 19:54:00 thomasklausner Exp $
 #
 
 DISTNAME=		autocutsel-0.9.0
@@ -10,6 +10,7 @@ MASTER_SITES=		http://savannah.nongnu.org/download/autocutsel/ \
 MAINTAINER=		reed@reedmedia.net
 HOMEPAGE=		http://www.lepton.fr/tools/autocutsel/
 COMMENT=		Synchronizes the X11 cutbuffer and CLIPBOARD selection
+LICENSE=		gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
