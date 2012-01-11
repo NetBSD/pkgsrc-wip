@@ -1,0 +1,16 @@
+GNU SIP Witch is a secure peer-to-peer VoIP server that uses the SIP protocol.
+Calls can be made peer-to-peer behind NAT firewalls, and without needing a
+service provider. GNU SIP Witch does not perform codec operations and thereby
+enables SIP endpoints to directly peer negotiate call setting and process peer
+to peer media streaming even when when multiple SIP Witch call nodes at multiple
+locations are involved. This means GNU SIP Witch operates without introducing
+additional media latency or offering a central point for media intercept or
+capture. GNU SIP Witch can be used to build secure and intercept-free telephone
+systems that can operate over the public Internet.
+
+GNU SIP Witch is designed to support network scaling of telephony services,
+rather than the heavily compute-bound solutions we find in use today. This means
+a call node has a local authentication/registration database, and this will be
+mirrored, so that any active call node in a cluster will be able to accept and
+service a call. This allows for the possibility of live failover support in the
+future as well.

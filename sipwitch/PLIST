@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/01/11 23:30:24 othyro Exp $
+bin/sippasswd
+bin/sipwitch
+bin/sipwitch-cgi
+include/sipwitch/cdr.h
+include/sipwitch/control.h
+include/sipwitch/db.h
+include/sipwitch/events.h
+include/sipwitch/mapped.h
+include/sipwitch/modules.h
+include/sipwitch/namespace.h
+include/sipwitch/service.h
+include/sipwitch/sipwitch.h
+include/sipwitch/stats.h
+include/sipwitch/uri.h
+lib/libsipwitch.so
+lib/libsipwitch.so.1
+lib/libsipwitch.so.${PKGVERSION}
