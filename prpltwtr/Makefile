@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2012/01/10 19:08:54 noud4 Exp $
+# $NetBSD: Makefile,v 1.3 2012/01/11 23:02:17 noud4 Exp $
 #
 
 DISTNAME=		prpltwtr-0.11.0
+PKGREVISION=		1
 CATEGORIES=		chat net
 MASTER_SITES=		http://prpltwtr.googlecode.com/files/
 
@@ -24,6 +25,7 @@ INSTALLATION_DIRS+=	lib/pidgin lib/purple-2 \
 			share/pixmaps/pidgin/protocols/48
 
 .include "../../x11/gtk2/buildlink3.mk"
+.include "../../devel/libidn/buildlink3.mk"
 .include "../../chat/pidgin/buildlink3.mk"
 .include "../../chat/libpurple/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
