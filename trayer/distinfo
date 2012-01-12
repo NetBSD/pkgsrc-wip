@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2008/08/02 10:20:05 milosn Exp $
+$NetBSD: distinfo,v 1.3 2012/01/12 23:15:24 thomasklausner Exp $
 
 SHA1 (trayer-1.0.tar.gz) = f2657693d196578e3776b0812952dfa1c25878cc
 RMD160 (trayer-1.0.tar.gz) = e8d762aaee3e7cc6df353c93aa984d8857415770
 Size (trayer-1.0.tar.gz) = 29713 bytes
-SHA1 (patch-aa) = 52a169a081a8ddaa350bcd67e1e2204e43217d18
+SHA1 (patch-aa) = 4745859064e7fbb5fdb43c1b32940cf68479592f
