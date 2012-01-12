@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.zenmap,v 1.2 2011/06/08 15:24:27 pettai Exp $
+@comment $NetBSD: PLIST.zenmap,v 1.3 2012/01/12 22:48:36 pettai Exp $
 bin/nmapfe
 bin/uninstall_zenmap
 bin/xnmap
@@ -71,8 +71,6 @@ ${PYSITELIB}/radialnet/util/misc.py
 ${PYSITELIB}/radialnet/util/misc.pyc
 ${PYSITELIB}/zenmapCore/BasePaths.py
 ${PYSITELIB}/zenmapCore/BasePaths.pyc
-${PYSITELIB}/zenmapCore/BugRegister.py
-${PYSITELIB}/zenmapCore/BugRegister.pyc
 ${PYSITELIB}/zenmapCore/Diff.py
 ${PYSITELIB}/zenmapCore/Diff.pyc
 ${PYSITELIB}/zenmapCore/I18N.py
