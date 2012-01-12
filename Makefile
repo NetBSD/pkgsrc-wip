@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4598 2012/01/12 02:25:52 noud4 Exp $
+# $Id: Makefile,v 1.4599 2012/01/12 04:46:04 noud4 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1980,6 +1980,7 @@ SUBDIR+=	pidgin-festival
 SUBDIR+=	pidgin-guifications
 SUBDIR+=	pidgin-rhythmbox
 SUBDIR+=	pidgin-sipe
+SUBDIR+=	pidgin-status-to-twitter
 SUBDIR+=	pidgin-twitterstatus
 SUBDIR+=	pike
 SUBDIR+=	pike-Gettext
