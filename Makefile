@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4597 2012/01/11 23:39:52 noud4 Exp $
+# $Id: Makefile,v 1.4598 2012/01/12 02:25:52 noud4 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1445,6 +1445,7 @@ SUBDIR+=	metasploit
 SUBDIR+=	metatheme
 SUBDIR+=	mg-lsh
 SUBDIR+=	mic-paren
+SUBDIR+=	microblog-purple
 SUBDIR+=	microcom
 SUBDIR+=	microtetris
 SUBDIR+=	mid2gmc
