@@ -1,0 +1,4 @@
+Detect MTU with sending various size of ICMP ECHO-REQUEST packets,
+and set MTU size on routing table.
+useful for setting MTU automatically on over 1500 MTU (jumboframe)
+network.
