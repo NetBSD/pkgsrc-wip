@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2012/01/13 15:17:00 genolopolis Exp $
+
+SHA1 (libinotify-20120113.tar.gz) = 604a66984f735212de0c0f7741764ffad30a3bdd
+RMD160 (libinotify-20120113.tar.gz) = 8d7b6cd00944f21de62910fb50d8beb792858c8a
+Size (libinotify-20120113.tar.gz) = 290589 bytes
