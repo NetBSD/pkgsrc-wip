@@ -1,10 +1,9 @@
-$NetBSD: distinfo,v 1.38 2011/12/25 18:34:15 asau Exp $
+$NetBSD: distinfo,v 1.39 2012/01/13 00:00:56 asau Exp $
 
-SHA1 (openmpi-1.5.5rc2r25683.tar.bz2) = c38a3221abf2011d64e89830b820cd83ea6c0a16
-RMD160 (openmpi-1.5.5rc2r25683.tar.bz2) = cf976a2bdb4a16e614394f881305450aed949dc7
-Size (openmpi-1.5.5rc2r25683.tar.bz2) = 9959352 bytes
+SHA1 (openmpi-1.5.5rc2r25705.tar.bz2) = 827fa01d41505b9f0ac8f0e1db6a1fe65ff28fa5
+RMD160 (openmpi-1.5.5rc2r25705.tar.bz2) = d08ed1aa4c941b8aa4df0940b7ff06a481802e1a
+Size (openmpi-1.5.5rc2r25705.tar.bz2) = 9962086 bytes
 SHA1 (patch-aa) = 1c0b8dd74825e3dfa63913990bed588df8ab942a
 SHA1 (patch-ai) = b7917cdf448106fc8f971c09b4c0646a7383511c
 SHA1 (patch-aj) = dc85e6c9eb6db0eb40bb896a11c223afeda63c2f
 SHA1 (patch-ak) = f6ea4220d51dd0c84ac2067d695c265f00904a0f
-SHA1 (patch-opal_mca_backtrace_execinfo_backtrace__execinfo.c) = da39a3ee5e6b4b0d3255bfef95601890afd80709

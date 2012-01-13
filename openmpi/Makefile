@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.45 2011/12/25 18:34:15 asau Exp $
+# $NetBSD: Makefile,v 1.46 2012/01/13 00:00:56 asau Exp $
 
 DISTNAME=	openmpi-1.5.1
-DISTNAME=	openmpi-1.5.5rc2r25683
-PKGNAME=	openmpi-1.5.4.25683
+DISTNAME=	openmpi-1.5.5rc2r25705
+PKGNAME=	openmpi-1.5.4.25705
 CATEGORIES=	parallel
 MASTER_SITES=	http://www.open-mpi.org/software/ompi/v1.5/downloads/ \
 		http://www.open-mpi.org/nightly/v1.5/
@@ -32,6 +32,7 @@ CONFIGURE_ARGS+=	--with-libltdl=external # use our libltdl
 CONFIGURE_ARGS+=	--with-wrapper-ldflags="-L${PREFIX}/lib ${LINKER_RPATH_FLAG}${PREFIX}/lib"
 CONFIGURE_ENV+=		ompi_cv_f77_have_INTEGERp8=no	# no "INTEGER*8"??
 CONFIGURE_ARGS+=	OPAL_HAVE_LTDL_ADVISE=0
+BUILDLINK_TRANSFORM=	rm:-fopenmp
 
 USE_TOOLS+=		perl:run
 
