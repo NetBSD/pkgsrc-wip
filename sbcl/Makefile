@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.35 2011/08/07 09:50:05 asau Exp $
+# $NetBSD: Makefile,v 1.36 2012/01/15 22:02:42 dukzcry Exp $
 
 DISTNAME=		${PKGNAME_NOREV}-source
-PKGNAME=		sbcl-1.0.47
+PKGNAME=		sbcl-1.0.55
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=sbcl/}
 EXTRACT_SUFX=		.tar.bz2
@@ -17,13 +17,14 @@ COMMENT=		SBCL, a Common Lisp implementation
 # 1) change the PKGNAME variable above as desired
 # 2) make fetch && make makesum && make package
 
-USE_TOOLS+=		gmake gtar:run
+USE_TOOLS+=		gmake gtar:run patch
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
 .include "../../mk/bsd.prefs.mk"
+.include "options.mk"
 
 #
 # Bootstrap section.
@@ -68,8 +69,14 @@ SUBST_MESSAGE.fix-gtar=		Fixing GNU tar references.
 SUBST_FILES.fix-gtar=		contrib/asdf-install/installer.lisp
 SUBST_SED.fix-gtar=		-e 's,@GTAR@,${GTAR},'
 
+.if ${OPSYS} == "DragonFly"
+post-patch:
+	cd ${WRKSRC} && patch < ${FILESDIR}/patch-make-config_sh
+.endif
 pre-build:
+.if empty(PKG_OPTIONS:Mrelease)
 	cd ${WRKSRC} && ${ECHO} '"1.0.99"' > version.lisp-expr
+.endif
 do-build:
 	cd ${WRKSRC} && ${SH} make.sh --prefix=${PREFIX} --xc-host=${SBCL_BOOT_SYSTEM:Q}
 post-build:
@@ -96,10 +103,12 @@ PLIST_SUBST+=	SUFX64=
 
 GIT_REPOSITORIES=	sbcl
 GIT_REPO.sbcl=		git://sbcl.git.sourceforge.net/gitroot/sbcl/sbcl.git
+.if empty(PKG_OPTIONS:Mrelease)
 WRKSRC=			${WRKDIR}/sbcl
 DISTNAME=
 PKGNAME=		sbcl-1.0.99
 
 .include "../mk/git-package.mk"
+.endif
 
 .include "../../mk/bsd.pkg.mk"
