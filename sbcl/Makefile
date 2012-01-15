@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2012/01/15 22:02:42 dukzcry Exp $
+# $NetBSD: Makefile,v 1.37 2012/01/15 22:11:08 asau Exp $
 
 DISTNAME=		${PKGNAME_NOREV}-source
 PKGNAME=		sbcl-1.0.55
@@ -69,14 +69,8 @@ SUBST_MESSAGE.fix-gtar=		Fixing GNU tar references.
 SUBST_FILES.fix-gtar=		contrib/asdf-install/installer.lisp
 SUBST_SED.fix-gtar=		-e 's,@GTAR@,${GTAR},'
 
-.if ${OPSYS} == "DragonFly"
-post-patch:
-	cd ${WRKSRC} && patch < ${FILESDIR}/patch-make-config_sh
-.endif
 pre-build:
-.if empty(PKG_OPTIONS:Mrelease)
 	cd ${WRKSRC} && ${ECHO} '"1.0.99"' > version.lisp-expr
-.endif
 do-build:
 	cd ${WRKSRC} && ${SH} make.sh --prefix=${PREFIX} --xc-host=${SBCL_BOOT_SYSTEM:Q}
 post-build:
@@ -103,12 +97,10 @@ PLIST_SUBST+=	SUFX64=
 
 GIT_REPOSITORIES=	sbcl
 GIT_REPO.sbcl=		git://sbcl.git.sourceforge.net/gitroot/sbcl/sbcl.git
-.if empty(PKG_OPTIONS:Mrelease)
 WRKSRC=			${WRKDIR}/sbcl
 DISTNAME=
 PKGNAME=		sbcl-1.0.99
 
 .include "../mk/git-package.mk"
-.endif
 
 .include "../../mk/bsd.pkg.mk"
