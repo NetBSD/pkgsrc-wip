@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2011/11/07 13:49:53 othyro Exp $
+# $NetBSD: Makefile,v 1.3 2012/01/15 18:15:28 othyro Exp $
 
-PKGVERSION=		4.10beta3
+PKGVERSION=		4.10beta5
 DISTNAME=		rarbsd-${PKGVERSION:S/0beta/.b/}
 PKGNAME=		rar-${PKGVERSION}
 WRKSRC=			${WRKDIR}/rar
