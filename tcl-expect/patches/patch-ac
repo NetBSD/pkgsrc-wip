@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2012/01/15 21:46:25 bharder Exp $
+
+--- exp_command.c.orig	2004-08-20 17:18:01.000000000 +0000
++++ exp_command.c
+@@ -790,7 +790,7 @@ when trapping, see below in child half o
+ 	 * process "-open $channel"
+ 	 */
+ 	int mode;
+-	int rfd, wfd;
++	long rfd, wfd;
+ 	ClientData rfdc, wfdc;
+ 	
+ 	if (echo) {
