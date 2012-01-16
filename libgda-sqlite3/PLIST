@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/01/16 14:44:01 noud4 Exp $
+lib/libgda-3.0/providers/libgda-sqlite.la
+lib/pkgconfig/libgda-sqlite-3.0.pc
+share/gtk-doc/html/libgda-3.0/limitations_sqlite.html
+share/libgda-3.0/sqlite_specs_add_column.xml
+share/libgda-3.0/sqlite_specs_create_db.xml
+share/libgda-3.0/sqlite_specs_create_index.xml
+share/libgda-3.0/sqlite_specs_create_table.xml
+share/libgda-3.0/sqlite_specs_drop_db.xml
+share/libgda-3.0/sqlite_specs_drop_index.xml
+share/libgda-3.0/sqlite_specs_drop_table.xml
+share/libgda-3.0/sqlite_specs_dsn.xml
+share/libgda-3.0/sqlite_specs_rename_table.xml
