@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/01/16 05:49:35 phonohawk Exp $
+lib/control-monad-failure-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Failure.hi
+lib/control-monad-failure-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Failure.p_hi
+lib/control-monad-failure-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Failure/Transformers.hi
+lib/control-monad-failure-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Failure/Transformers.p_hi
+lib/control-monad-failure-${PKGVERSION}/${HASKELL_VERSION}/HScontrol-monad-failure-${PKGVERSION}.o
+lib/control-monad-failure-${PKGVERSION}/${HASKELL_VERSION}/libHScontrol-monad-failure-${PKGVERSION}.a
+lib/control-monad-failure-${PKGVERSION}/${HASKELL_VERSION}/libHScontrol-monad-failure-${PKGVERSION}_p.a
+lib/control-monad-failure-${PKGVERSION}/${HASKELL_VERSION}/package-description
