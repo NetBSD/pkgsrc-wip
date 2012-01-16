@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2011/12/05 04:57:58 phonohawk Exp $
+$NetBSD: distinfo,v 1.3 2012/01/16 05:56:00 phonohawk Exp $
 
-SHA1 (convertible-text-0.4.0.tar.gz) = 9f95dc52349eb31747bbaec4303ae6642c2dbe86
-RMD160 (convertible-text-0.4.0.tar.gz) = 0b1c430edc0971eec226ac55f35703b881ea1c30
-Size (convertible-text-0.4.0.tar.gz) = 14350 bytes
+SHA1 (convertible-text-0.4.0.1.tar.gz) = 929f003d044f3e88befd09ca52e7f48aeb415764
+RMD160 (convertible-text-0.4.0.1.tar.gz) = 5d37ebf1ec4c65e429dde4c1d49fec986ac04e86
+Size (convertible-text-0.4.0.1.tar.gz) = 14348 bytes
