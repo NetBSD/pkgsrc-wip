@@ -1,0 +1,2 @@
+This package provides the bdb plugin for libgda,
+which lets it act as a bdb client.

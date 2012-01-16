@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/01/16 14:10:38 noud4 Exp $
+lib/libgda-3.0/providers/libgda-bdb.la
+lib/pkgconfig/libgda-bdb-3.0.pc
+share/libgda-3.0/bdb_specs_dsn.xml
