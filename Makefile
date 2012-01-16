@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4601 2012/01/14 14:35:11 thomasklausner Exp $
+# $Id: Makefile,v 1.4602 2012/01/16 01:02:42 dukzcry Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -291,6 +291,7 @@ SUBDIR+=	cl-bordeaux-threads
 SUBDIR+=	cl-cffi
 SUBDIR+=	cl-fad
 SUBDIR+=	cl-flexi-streams
+SUBDIR+=	cl-portable-clx
 SUBDIR+=	cl-ppcre
 SUBDIR+=	cl-ppcre-unicode
 SUBDIR+=	cl-split-sequence
