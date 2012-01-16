@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2012/01/16 11:10:49 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/01/16 11:18:38 asau Exp $
 
-PKGNAME=	clisp-${SHORTNAME}-${VER}
-SHORTNAME=	asdf
+DISTNAME=	asdf-2.018.19
+PKGNAME=	clisp-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	http://www.kozachuk.info/netbsd/contrib/
-VER=		2.018.19
-DISTNAME=	${SHORTNAME}-${VER}
 
 MAINTAINER=	ddeus.pkgsrc@mailnull.com
 HOMEPAGE=	http://common-lisp.net/project/asdf/
@@ -13,10 +11,12 @@ COMMENT=	Another System Definition Facility for Common Lisp
 LICENSE=	mit
 
 DEPENDS+=	clisp>=2.49:../../lang/clisp
+
 PKG_DESTDIR_SUPPORT= user-destdir
-CHECK_PORTABILITY_SKIP= bin/asdf-version bin/make-tarball
+
 USE_TOOLS+=	makeinfo
 INFO_FILES=	yes
+
 INSTALLATION_DIRS= \
 		lib/clisp/dynmod \
 		lib/clisp/asdfmod \
@@ -24,6 +24,8 @@ INSTALLATION_DIRS= \
 		${PKGINFODIR}
 PLIST_SUBST+=	NAME="${PKGNAME}"
 PLIST_SUBST+=	INFODIR="${PKGINFODIR}"
+
+CHECK_PORTABILITY_SKIP= bin/asdf-version bin/make-tarball
 
 do-build:
 	( cd ${WRKSRC} && \
