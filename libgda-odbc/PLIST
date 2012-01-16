@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/01/16 14:13:41 noud4 Exp $
+lib/libgda-3.0/providers/libgda-odbc.la
+lib/pkgconfig/libgda-odbc-3.0.pc
+share/libgda-3.0/odbc_specs_dsn.xml
+@comment in libgda: @dirrm lib/libgda/providers
