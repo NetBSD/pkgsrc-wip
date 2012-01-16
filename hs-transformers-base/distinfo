@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/01/16 05:10:39 phonohawk Exp $
+
+SHA1 (transformers-base-0.4.1.tar.gz) = 643c9bfe70ec19f9db94bcb335cb15e2b943595a
+RMD160 (transformers-base-0.4.1.tar.gz) = 3ee07e324b4a90732b70717ec9b41f6acc0852a7
+Size (transformers-base-0.4.1.tar.gz) = 2449 bytes

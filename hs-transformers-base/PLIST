@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/01/16 05:10:39 phonohawk Exp $
+lib/transformers-base-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Base.hi
+lib/transformers-base-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Base.p_hi
+lib/transformers-base-${PKGVERSION}/${HASKELL_VERSION}/HStransformers-base-${PKGVERSION}.o
+lib/transformers-base-${PKGVERSION}/${HASKELL_VERSION}/libHStransformers-base-${PKGVERSION}.a
+lib/transformers-base-${PKGVERSION}/${HASKELL_VERSION}/libHStransformers-base-${PKGVERSION}_p.a
+lib/transformers-base-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/transformers-base-${PKGVERSION}/LICENSE
