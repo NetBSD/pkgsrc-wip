@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/11/28 08:28:11 ddeus Exp $
+# $NetBSD: Makefile,v 1.3 2012/01/16 11:10:49 asau Exp $
 
 PKGNAME=	clisp-${SHORTNAME}-${VER}
 SHORTNAME=	asdf
@@ -29,7 +29,7 @@ do-build:
 	( cd ${WRKSRC} && \
 	    ${MV} asdf.lisp asdf.lisp.orig && \
 	    ${SED} "s+#p\"/etc/common-lisp/\"+#p\"${PREFIX}/lib/clisp/\"+" asdf.lisp.orig > asdf.lisp && \
-	    ${PREFIX}/bin/clisp -c asdf.lisp )
+	    ${PREFIX}/bin/clisp -q -norc -c asdf.lisp )
 	echo "(:source-registry (:tree \"${PREFIX}/lib/clisp/asdfmod/\") :inherit-configuration)" >${WRKSRC}/source-registry.conf
 	echo "(:output-translations (t t) :inherit-configuration)" >${WRKSRC}/asdf-output-translations.conf
 	( cd ${WRKSRC}/doc && ${MAKEINFO} --html --no-split --no-headers -o asdf.html asdf.texinfo )
