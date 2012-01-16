@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.8 2011/05/13 23:25:15 mwdavies Exp $
+$NetBSD: patch-ac,v 1.9 2012/01/16 22:23:51 absd Exp $
 
---- kio/kssl/kopenssl.cpp.orig	2009-11-13 10:59:08.000000000 +0000
+--- kio/kssl/kopenssl.cpp.orig	2011-04-01 13:55:51.000000000 +0000
 +++ kio/kssl/kopenssl.cpp
 @@ -236,7 +236,7 @@ void KOpenSSLProxy::destroy() {
     delete x;
