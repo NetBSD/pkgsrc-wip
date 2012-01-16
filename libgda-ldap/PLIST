@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/01/16 14:12:08 noud4 Exp $
+lib/libgda-3.0/providers/libgda-ldap.la
+lib/pkgconfig/libgda-ldap-3.0.pc
+share/libgda-3.0/ldap_specs_dsn.xml

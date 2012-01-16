@@ -1,0 +1,2 @@
+This package provides the LDAP plugin for libgda,
+which lets it act as a LDAP client.
