@@ -1,10 +1,10 @@
-$NetBSD: patch-configure_ac-temp,v 1.1 2011/12/18 18:06:16 dukzcry Exp $
+$NetBSD: patch-configure_ac-temp,v 1.2 2012/01/16 01:35:57 dukzcry Exp $
 
 Creation of temporary linking set using clisp-link is written by
 Dirk Sondermann <ds-stumpwm@dyximaq.de> and was posted under
 "Building with CLISP" topic in Stumpwm-devel mailing list.
---- configure.ac.orig	2010-05-18 23:09:32.000000000 +0400
-+++ configure.ac	2011-12-01 14:26:57.337461000 +0400
+--- configure.ac.orig	2010-05-18 19:09:32.000000000 +0000
++++ configure.ac
 @@ -6,6 +6,8 @@ AC_INIT(Stump Window Manager, 0.9.7-git,
  
  AC_SUBST(CONTRIB_DIR)
@@ -32,10 +32,3 @@ Dirk Sondermann <ds-stumpwm@dyximaq.de> and was posted under
  fi
  
  # XXX How to do an OR ?
-@@ -122,4 +135,4 @@ fi
- AC_OUTPUT(Makefile)
- AC_OUTPUT(make-image.lisp)
- AC_OUTPUT(version.lisp)
--AC_OUTPUT(module.lisp)
-\ No newline at end of file
-+AC_OUTPUT(module.lisp)

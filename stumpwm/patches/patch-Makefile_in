@@ -1,0 +1,25 @@
+$NetBSD: patch-Makefile_in,v 1.1 2012/01/16 01:35:57 dukzcry Exp $
+
+Creation of temporary linking set using clisp-link is written by
+Dirk Sondermann <ds-stumpwm@dyximaq.de> and was posted under
+--- Makefile.in.orig	2010-05-18 19:09:32.000000000 +0000
++++ Makefile.in
+@@ -29,8 +29,8 @@ time.lisp color.lisp module.lisp stumpwm
+ 
+ all: stumpwm stumpwm.info
+ 
+-stumpwm.info: stumpwm.texi
+-	makeinfo stumpwm.texi
++stumpwm.info:
++	makeinfo stumpwm.texi.in -o stumpwm.info
+ 
+ # FIXME: This rule is too hardcoded
+ stumpwm.texi: stumpwm.texi.in
+@@ -71,4 +71,7 @@ uninstall:
+ 	install-info --info-dir="$(destdir)$(infodir)" --remove "$(destdir)$(infodir)/stumpwm.info"
+ 	rm "$(destdir)$(infodir)/stumpwm.info"
+ 
++clisp-core:
++	MAKE=: with_dynamic_modules=no @LISP_LINK@ add "`$(LISP) -b`/base" $@ "`$(LISP) -b`/clx/new-clx"
++
+ # End of file

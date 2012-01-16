@@ -1,7 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2011/12/18 18:06:16 dukzcry Exp $
+# $NetBSD: Makefile,v 1.8 2012/01/16 01:35:56 dukzcry Exp $
 #
 
-DISTNAME=		stumpwm-0.9.7
+SHORTNAME=		stumpwm
+VERSION=		0.9.7
+PKGNAME=		${SHORTNAME}-${VERSION}
+DISTNAME=		${PKGNAME}
 CATEGORIES=		wm
 DISTFILES=		${DISTNAME}.tgz
 SITES.${DISTNAME}.tgz=	http://download.savannah.nongnu.org/releases/stumpwm/
@@ -13,37 +16,101 @@ LICENSE=		gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_TOOLS+=		autoconf makeinfo install-info
-INSTALLATION_DIRS+=	bin ${PKGINFODIR}
-HAS_CONFIGURE=		yes
+.include "options.mk"
+
+USE_TOOLS+=		autoconf make makeinfo install-info
+.if !empty(PKG_OPTIONS:Mclisp)
+# clisp-core target, until CLISP 2.50 release
+USE_LANGUAGES=		c
+USE_GNU_READLINE=	yes
+.endif
+INSTALLATION_DIRS+=	${PKGINFODIR} bin
 INFO_FILES=		yes
 INSTALL_UNSTRIPPED=	yes
-# clisp-core target, until CLISP 2.50 release
-USE_GNU_READLINE=	yes
 
-## Why CLISP?
-# 1) No needance to tune the prealloc heap, like with SBCL, or with CCL on 64bit platforms;
-# 2) No needance to build with threads disabled like with SBCL.
-#	CLISP threads support is still experimental and not enabled by default;
-# 3) Wide arch support, although no native machine code generation (only byte-code, JIT).
-
+DEPENDS=		sudo:../../security/sudo
+.if !empty(PKG_OPTIONS:Mclisp)
+LISP_CENTRAL_REGISTRY=	${CLISP_CENTRAL_REGISTRY}
 # X11 bindings
-BUILD_DEPENDS+=		clisp-new-clx>=2.42:../../x11/clisp-new-clx
-## Use ppcre supplied with Stumpwm distfile tarball for now
-#DEPENDS_TARGET+=	PKG_OPTIONS.cl-ppcre=clisp install clean-depends clean	# Ugly! Correct me
-#BUILD_DEPENDS+=	clisp-ppcre:../../wip/cl-ppcre
-#CONFIGURE_ARGS=	--with-ppcre=${PREFIX}/lib/clisp/cl-ppcre
+DEPENDS+=		clisp-new-clx>=2.42:../../x11/clisp-new-clx
+.endif
+.if !empty(PKG_OPTIONS:Msbcl)
+LISP_CENTRAL_REGISTRY=	${SBCL_CENTRAL_REGISTRY}
+DEPENDS+=		sbcl-portable-clx:../../wip/cl-portable-clx
+.endif
+.if !empty(PKG_OPTIONS:Mclisp)
 CONFIGURE_ARGS=		--with-lisp=clisp
-CONFIGURE_ARGS+=	--with-clisp=${PREFIX}/bin/clisp
+.endif
 
-pre-configure:
-	cd ${WRKSRC} && autoconf
+SUBST_CLASSES+=		sysconf
+SUBST_STAGE.sysconf=	post-extract
+SUBST_FILES.sysconf=	stumpwm.asd
+SUBST_SED.sysconf=	-e 's/version "CVS"/version "${VERSION}"/'
 
-do-install:
+SED_EXPRS=		-e "s\#asdf_path\#${PREFIX}/${LISP_CENTRAL_REGISTRY}\#"
+.if !empty(PKG_OPTIONS:Mclisp)
+SED_EXPRS+=		-e "s/expr_param/-x/"
+SED_EXPRS+=		-e "s/mem_param/-M/"
+SED_EXPRS+=		-e "s/lisp_comp/clisp/"
+SED_EXPRS+=		-e "s\#lisp_cmd\#-q -norc -x '(require \\\\\"clx\\\\\")'\#"
+# clisp-core target
+SED_EXPRS+=		-e "s\#\(clisp_core_temp=\"\)\#\1-K${PREFIX}/${LISP_CENTRAL_REGISTRY}${SHORTNAME}/clisp-core\#"
+SED_EXPRS+=		-e "s/used_save_cmd/clisp_save_cmd/"
+.endif
+.if !empty(PKG_OPTIONS:Msbcl)
+SED_EXPRS+=		-e "s/expr_param/--eval/"
+SED_EXPRS+=		-e "s/mem_param/--core/"
+SED_EXPRS+=		-e "s/lisp_comp/sbcl/"
+SED_EXPRS+=		-e "s/lisp_cmd/--disable-debugger --non-interactive/"
+SED_EXPRS+=		-e "s/used_save_cmd/sbcl_save_cmd/"
+.endif
+
+post-extract:
+	${LN} -s ${WRKSRC}/cl-ppcre/cl-ppcre.asd ${WRKSRC}/cl-ppcre.asd
+.if !empty(PKG_OPTIONS:Mclisp)
+	${RM} ${WRKSRC}/asdf.lisp
+	@${ECHO} '(progn (require "clx"))' >> ${WRKSRC}/stumpwm.asd
+	${LN} -s ${PREFIX}/lib/clisp/dynmod/clx.lisp ${WRKSRC}/clx.lisp
+.endif
+
+do-configure:
+	cd ${WRKSRC} && autoconf && \
+		./configure ${CONFIGURE_ARGS} && ${MAKE} stumpwm.info
+
+	${SED} ${SED_EXPRS} ${FILESDIR}/${SHORTNAME} > ${WRKSRC}/stumpwm
+.if !empty(PKG_OPTIONS:Mclisp)
+	cd ${WRKSRC} && ${MAKE} clisp-core
+.endif
+
+post-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/stumpwm ${DESTDIR}${PREFIX}/bin/stumpwm
 	${INSTALL_MAN} ${WRKSRC}/stumpwm.info ${DESTDIR}${PREFIX}/${PKGINFODIR}/stumpwm.info
+	# Stumpwm is distributed not like just cl package, but like normal software, so move out the junk
+	mkdir -p ${DESTDIR}${PREFIX}/${LISP_CENTRAL_REGISTRY}/${SHORTNAME}-dest/cl-ppcre
+	cd ${DESTDIR}${PREFIX}/${LISP_CENTRAL_REGISTRY}${SHORTNAME} && ${MV} stumpwm.asd *.lisp *.fas* contrib ../${SHORTNAME}-dest/ && \
+		${MV} cl-ppcre/cl-ppcre.asd cl-ppcre/*.lisp cl-ppcre/*.fas* ../${SHORTNAME}-dest/cl-ppcre/
+	# ASDF requires .fasl files write dates to be more fresh than .lisp ones, or recompilation will be done.
+	# Do hardlinks of *.lisp from sources directory to return original dates.
+.if !empty(PKG_OPTIONS:Mclisp)
+	# As we don't need it after the build is done, remove it to prevent possible "cross-device link" error
+	${RM} ${WRKSRC}/clx.lisp
+.endif
+	${LN} -f ${WRKSRC}/cl-ppcre/*.lisp ${DESTDIR}${PREFIX}/${LISP_CENTRAL_REGISTRY}/${SHORTNAME}-dest/cl-ppcre/
+	${LN} -f ${WRKSRC}/*.lisp ${DESTDIR}${PREFIX}/${LISP_CENTRAL_REGISTRY}/${SHORTNAME}-dest/
+.if !empty(PKG_OPTIONS:Mclisp)
+	mkdir ${DESTDIR}${PREFIX}/${CLISP_CENTRAL_REGISTRY}/${SHORTNAME}-dest/clisp-core
+	cd ${DESTDIR}${PREFIX}/${CLISP_CENTRAL_REGISTRY}${SHORTNAME} && ${MV} clisp-core/lispinit.mem \
+		../${SHORTNAME}-dest/clisp-core
+.endif
+	${RM} -r ${DESTDIR}${PREFIX}/${LISP_CENTRAL_REGISTRY}${SHORTNAME}/*
+	${MV} ${DESTDIR}${PREFIX}/${LISP_CENTRAL_REGISTRY}/${SHORTNAME}-dest/* ${DESTDIR}${PREFIX}/${LISP_CENTRAL_REGISTRY}${SHORTNAME}/
+	${RM} -r ${DESTDIR}${PREFIX}/${LISP_CENTRAL_REGISTRY}/${SHORTNAME}-dest/
+.if !empty(PKG_OPTIONS:Mclisp)
+	${INSTALL_PROGRAM} ${WRKSRC}/clisp-core/lisp.run \
+		${DESTDIR}${PREFIX}/${CLISP_CENTRAL_REGISTRY}${SHORTNAME}/clisp-core/lisp.run
 
 # clisp-core target
 .include "../../wip/mk/clisp-temp.mk"
-
+.endif
+.include "../../wip/mk/cl-package.mk"
 .include "../../mk/bsd.pkg.mk"

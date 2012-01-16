@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.5 2011/12/18 19:36:12 dukzcry Exp $
+$NetBSD: distinfo,v 1.6 2012/01/16 01:35:56 dukzcry Exp $
 
 SHA1 (stumpwm-0.9.7.tgz) = bd7785f44f70c7c64775737bdb9f2d42ce9d8d9f
 RMD160 (stumpwm-0.9.7.tgz) = 7e0d521a12a0d0f28097d3756dd8ebcb01ce528b
 Size (stumpwm-0.9.7.tgz) = 497663 bytes
-SHA1 (patch-Makefile_in-temp) = 0f872789680af0681401e7ab1ea0480f386f63f9
-SHA1 (patch-configure_ac-temp) = c5b9e35e248a3ed8a4faeaf6c1b274210ac27c0b
-SHA1 (patch-wrappers_lisp) = cacc3c6d8c2eba461f03703f439b233ca8d17c2f
+SHA1 (patch-Makefile_in) = bdea5edf57a39fdac279eee3a788bbc90a134357
+SHA1 (patch-configure_ac-temp) = 89f80222425b6209175895800f7a7bf50fb16f3f
+SHA1 (patch-wrappers_lisp) = e7eb984e1a03fe4f8d6d2d0b7592d146795256d8
