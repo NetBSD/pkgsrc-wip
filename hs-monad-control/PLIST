@@ -1,8 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/05/10 12:56:48 phonohawk Exp $
-lib/monad-control-${PKGVERSION}/${HASKELL_VERSION}/Control/Exception/Control.hi
-lib/monad-control-${PKGVERSION}/${HASKELL_VERSION}/Control/Exception/Control.p_hi
-lib/monad-control-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/IO/Control.hi
-lib/monad-control-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/IO/Control.p_hi
+@comment $NetBSD: PLIST,v 1.2 2012/01/16 05:16:09 phonohawk Exp $
 lib/monad-control-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Trans/Control.hi
 lib/monad-control-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Trans/Control.p_hi
 lib/monad-control-${PKGVERSION}/${HASKELL_VERSION}/HSmonad-control-${PKGVERSION}.o

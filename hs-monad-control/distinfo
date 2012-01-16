@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/05/10 12:56:48 phonohawk Exp $
+$NetBSD: distinfo,v 1.2 2012/01/16 05:16:09 phonohawk Exp $
 
-SHA1 (monad-control-0.2.0.1.tar.gz) = c9ce069dbf69670345a9217ce446aaa53231a896
-RMD160 (monad-control-0.2.0.1.tar.gz) = e80ba450f92448cd41772552aaf7280bdff87ea8
-Size (monad-control-0.2.0.1.tar.gz) = 9598 bytes
+SHA1 (monad-control-0.3.1.tar.gz) = 73e4261ba9051d415a8482b2708a3909c7202527
+RMD160 (monad-control-0.3.1.tar.gz) = f3d4142feabb26528c301877f86172c48ac69e58
+Size (monad-control-0.3.1.tar.gz) = 10269 bytes
