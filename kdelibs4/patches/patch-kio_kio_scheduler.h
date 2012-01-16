@@ -1,4 +1,4 @@
-$NetBSD: patch-kio_kio_scheduler.h,v 1.1 2012/01/16 22:23:51 absd Exp $
+$NetBSD: patch-kio_kio_scheduler.h,v 1.2 2012/01/16 22:53:39 absd Exp $
 Work around https://bugs.kde.org/show_bug.cgi?id=275584
 adjusted from http://old.nabble.com/attachment/31751497/0/kio_scheduler.patch
 
@@ -13,7 +13,7 @@ adjusted from http://old.nabble.com/attachment/31751497/0/kio_scheduler.patch
  namespace KIO {
  
      class Slave;
-@@ -287,16 +289,19 @@ namespace KIO {
+@@ -287,16 +289,17 @@ namespace KIO {
  
          static Scheduler *self();
  
@@ -28,8 +28,6 @@ adjusted from http://old.nabble.com/attachment/31751497/0/kio_scheduler.patch
          // connected to D-Bus signal:
 -        Q_PRIVATE_SLOT(schedulerPrivate, void slotReparseSlaveConfiguration(const QString &, const QDBusMessage&))
 +        void slotReparseSlaveConfiguration(const QString &, const QDBusMessage&);
-+        void slotSlaveOnHoldListChanged();
-+
 +        void slotSlaveConnected();
 +        void slotSlaveError(int error, const QString &errorMsg);
 +        void slotUnregisterWindow(QObject *);
