@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4606 2012/01/16 14:49:50 noud4 Exp $
+# $Id: Makefile,v 1.4607 2012/01/17 13:31:33 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2436,6 +2436,7 @@ SUBDIR+=	py-traits
 SUBDIR+=	py-traitsgui
 SUBDIR+=	py-tranquil
 SUBDIR+=	py-transaction
+SUBDIR+=	py-ttk
 SUBDIR+=	py-datatree
 SUBDIR+=	py-turbojson
 SUBDIR+=	py-twisted-kqueue
@@ -2819,6 +2820,7 @@ SUBDIR+=	tk85
 SUBDIR+=	tk86
 SUBDIR+=	tkpng
 SUBDIR+=	tktable
+SUBDIR+=	tktile
 SUBDIR+=	tleenx2
 SUBDIR+=	tleenx3
 SUBDIR+=	tmuni-ttf
