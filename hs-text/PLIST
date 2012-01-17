@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2011/07/27 09:55:14 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.4 2012/01/17 13:06:45 phonohawk Exp $
 lib/text-${PKGVERSION}/${HASKELL_VERSION}/Data/Text.hi
 lib/text-${PKGVERSION}/${HASKELL_VERSION}/Data/Text.p_hi
 lib/text-${PKGVERSION}/${HASKELL_VERSION}/Data/Text/Array.hi
@@ -61,6 +61,8 @@ lib/text-${PKGVERSION}/${HASKELL_VERSION}/Data/Text/Lazy/Read.hi
 lib/text-${PKGVERSION}/${HASKELL_VERSION}/Data/Text/Lazy/Read.p_hi
 lib/text-${PKGVERSION}/${HASKELL_VERSION}/Data/Text/Lazy/Search.hi
 lib/text-${PKGVERSION}/${HASKELL_VERSION}/Data/Text/Lazy/Search.p_hi
+lib/text-${PKGVERSION}/${HASKELL_VERSION}/Data/Text/Private.hi
+lib/text-${PKGVERSION}/${HASKELL_VERSION}/Data/Text/Private.p_hi
 lib/text-${PKGVERSION}/${HASKELL_VERSION}/Data/Text/Read.hi
 lib/text-${PKGVERSION}/${HASKELL_VERSION}/Data/Text/Read.p_hi
 lib/text-${PKGVERSION}/${HASKELL_VERSION}/Data/Text/Search.hi
