@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/01/16 05:08:33 dukzcry Exp $
+# $NetBSD: Makefile,v 1.10 2012/01/17 08:33:08 dukzcry Exp $
 #
 
 SHORTNAME=		stumpwm
@@ -103,9 +103,8 @@ post-install:
 	cd ${DESTDIR}${PREFIX}/${CLISP_CENTRAL_REGISTRY}${SHORTNAME} && ${MV} clisp-core/lispinit.mem \
 		../${SHORTNAME}-dest/clisp-core
 .endif
-	${RM} -r ${DESTDIR}${PREFIX}/${LISP_CENTRAL_REGISTRY}${SHORTNAME}/*
-	${MV} ${DESTDIR}${PREFIX}/${LISP_CENTRAL_REGISTRY}/${SHORTNAME}-dest/* ${DESTDIR}${PREFIX}/${LISP_CENTRAL_REGISTRY}${SHORTNAME}/
-	${RM} -r ${DESTDIR}${PREFIX}/${LISP_CENTRAL_REGISTRY}/${SHORTNAME}-dest/
+	${RM} -r ${DESTDIR}${PREFIX}/${LISP_CENTRAL_REGISTRY}${SHORTNAME}/
+	${MV} ${DESTDIR}${PREFIX}/${LISP_CENTRAL_REGISTRY}/${SHORTNAME}-dest/ ${DESTDIR}${PREFIX}/${LISP_CENTRAL_REGISTRY}${SHORTNAME}
 .if !empty(PKG_OPTIONS:Mclisp)
 	${INSTALL_PROGRAM} ${WRKSRC}/clisp-core/lisp.run \
 		${DESTDIR}${PREFIX}/${CLISP_CENTRAL_REGISTRY}${SHORTNAME}/clisp-core/lisp.run
