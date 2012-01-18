@@ -1,3 +1,5 @@
+$NetBSD: patch-aa,v 1.2 2012/01/18 15:02:39 moubctez Exp $
+
 Support spamfilter for trac-0.12
 http://trac-hacks.org/ticket/7329
 
