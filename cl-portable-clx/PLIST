@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/01/16 00:15:10 dukzcry Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/01/18 11:38:57 dukzcry Exp $
 info/clx.info
+share/doc/${LISP}-clx/NEWS
+share/doc/${LISP}-clx/README
 ${CL}${CL_PATH}clx/attributes.fasl
 ${CL}${CL_PATH}clx/attributes.lisp
 ${CL}${CL_PATH}clx/big-requests.fasl
@@ -74,8 +76,6 @@ ${CL}${CL_PATH}clx/xtest.fasl
 ${CL}${CL_PATH}clx/xtest.lisp
 ${CL}${CL_PATH}clx/xvidmode.fasl
 ${CL}${CL_PATH}clx/xvidmode.lisp
-share/doc/${LISP}-clx/NEWS
-share/doc/${LISP}-clx/README
 ${CL}${CL_PATH}clx/demo/bezier.fasl
 ${CL}${CL_PATH}clx/demo/bezier.lisp
 ${CL}${CL_PATH}clx/demo/beziertest.fasl
