@@ -1,7 +1,8 @@
-$NetBSD: patch-Makefile_in,v 1.1 2012/01/16 01:35:57 dukzcry Exp $
+$NetBSD: patch-Makefile_in,v 1.2 2012/01/18 08:58:58 dukzcry Exp $
 
 Creation of temporary linking set using clisp-link is written by
 Dirk Sondermann <ds-stumpwm@dyximaq.de> and was posted under
+"Building with CLISP" topic in Stumpwm-devel mailing list.
 --- Makefile.in.orig	2010-05-18 19:09:32.000000000 +0000
 +++ Makefile.in
 @@ -29,8 +29,8 @@ time.lisp color.lisp module.lisp stumpwm
