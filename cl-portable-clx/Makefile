@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/01/16 00:15:10 dukzcry Exp $
+# $NetBSD: Makefile,v 1.2 2012/01/18 12:44:59 dukzcry Exp $
 #
 
 SHORTNAME=		clx
@@ -35,9 +35,10 @@ SUBST_SED.sysconf+=	-e "s/\\(parse-integer (read-short-length-string stream)\\)\
 					:junk-allowed t\\2/"
 
 post-extract:
-	# Remove legacy & useless things. Legacy files are defined in clx.asd
-	cd ${WRKSRC} && rm CHANGES README-R5 excl* cmudep.lisp dep-allegro.lisp dep-openmcl.lisp \
-		sockcl.lisp socket.c defsystem.lisp provide.lisp
+# Remove legacy & useless things. Legacy files are defined in clx.asd
+.for f in CHANGES README-R5 excl* cmudep.lisp dep-* sock* defsystem.lisp provide.lisp
+	rm ${WRKSRC}/${f}
+.endfor
 
 post-install:
 	cd ${WRKSRC} && ${MAKEINFO} --no-split ./manual/clx.texinfo -o ./clx.info 2>/dev/null && \
