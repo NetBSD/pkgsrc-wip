@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2011/01/17 10:48:04 emil_s Exp $
+# $NetBSD: Makefile,v 1.13 2012/01/18 07:14:29 helgoman Exp $
 #
 
-DISTNAME=	task-1.9.3
+DISTNAME=	task-1.9.4
 CATEGORIES=	time
 MASTER_SITES=	http://www.taskwarrior.org/download/
 

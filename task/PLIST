@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2010/11/09 10:46:19 emil_s Exp $
+@comment $NetBSD: PLIST,v 1.7 2012/01/18 07:14:29 helgoman Exp $
 bin/task
 man/man1/task.1
 man/man5/task-color.5
@@ -9,6 +9,7 @@ man/man5/taskrc.5
 share/doc/task/AUTHORS
 share/doc/task/COPYING
 share/doc/task/ChangeLog
+share/doc/task/INSTALL
 share/doc/task/NEWS
 share/doc/task/README
 share/doc/task/i18n/strings.de-DE
@@ -23,21 +24,34 @@ share/doc/task/i18n/tips.sv-SE
 share/doc/task/rc/dark-16.theme
 share/doc/task/rc/dark-256.theme
 share/doc/task/rc/dark-blue-256.theme
+share/doc/task/rc/dark-gray-256.theme
 share/doc/task/rc/dark-green-256.theme
 share/doc/task/rc/dark-red-256.theme
 share/doc/task/rc/dark-violets-256.theme
 share/doc/task/rc/dark-yellow-green.theme
+share/doc/task/rc/holidays-AT.rc
 share/doc/task/rc/holidays-CA.rc
 share/doc/task/rc/holidays-DE.rc
+share/doc/task/rc/holidays-DK.rc
 share/doc/task/rc/holidays-ES.rc
 share/doc/task/rc/holidays-FR.rc
+share/doc/task/rc/holidays-IT.rc
 share/doc/task/rc/holidays-NL.rc
+share/doc/task/rc/holidays-NO.rc
+share/doc/task/rc/holidays-NZ.rc
 share/doc/task/rc/holidays-SE.rc
 share/doc/task/rc/holidays-UK.rc
 share/doc/task/rc/holidays-US.rc
 share/doc/task/rc/light-16.theme
 share/doc/task/rc/light-256.theme
+share/doc/task/scripts/add-ons/export-csv.pl
+share/doc/task/scripts/add-ons/export-ical.pl
+share/doc/task/scripts/add-ons/export-xml.pl
+share/doc/task/scripts/add-ons/export-xml.py
+share/doc/task/scripts/add-ons/export-xml.rb
+share/doc/task/scripts/add-ons/export-yaml.pl
 share/doc/task/scripts/bash/task_completion.sh
+share/doc/task/scripts/fish/task.fish
 share/doc/task/scripts/vim/README
 share/doc/task/scripts/vim/ftdetect/task.vim
 share/doc/task/scripts/vim/syntax/taskdata.vim
