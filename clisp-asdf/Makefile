@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/01/16 11:18:38 asau Exp $
+# $NetBSD: Makefile,v 1.5 2012/01/18 10:32:57 asau Exp $
 
 DISTNAME=	asdf-2.018.19
 PKGNAME=	clisp-${DISTNAME}
@@ -20,10 +20,8 @@ INFO_FILES=	yes
 INSTALLATION_DIRS= \
 		lib/clisp/dynmod \
 		lib/clisp/asdfmod \
-		share/doc/${PKGNAME} \
+		share/doc/${PKGNAME_NOREV} \
 		${PKGINFODIR}
-PLIST_SUBST+=	NAME="${PKGNAME}"
-PLIST_SUBST+=	INFODIR="${PKGINFODIR}"
 
 CHECK_PORTABILITY_SKIP= bin/asdf-version bin/make-tarball
 
@@ -42,8 +40,8 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/asdf.fas ${DESTDIR}${PREFIX}/lib/clisp/dynmod/asdf.fas
 	${INSTALL_DATA} ${WRKSRC}/source-registry.conf ${DESTDIR}${PREFIX}/lib/clisp/source-registry.conf
 	${INSTALL_DATA} ${WRKSRC}/asdf-output-translations.conf ${DESTDIR}${PREFIX}/lib/clisp/asdf-output-translations.conf
-	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/${PKGNAME}/README
-	${INSTALL_DATA} ${WRKSRC}/doc/asdf.html ${DESTDIR}${PREFIX}/share/doc/${PKGNAME}/asdf.html
-	${INSTALL_DATA} ${WRKSRC}/doc/asdf.info ${DESTDIR}${PREFIX}/${PKGINFODIR}/asdf.info
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/${PKGNAME_NOREV}/README
+	${INSTALL_DATA} ${WRKSRC}/doc/asdf.html ${DESTDIR}${PREFIX}/share/doc/${PKGNAME_NOREV}/asdf.html
+	${INSTALL_INFO} ${WRKSRC}/doc/asdf.info ${DESTDIR}${PREFIX}/${PKGINFODIR}/asdf.info
 
 .include "../../mk/bsd.pkg.mk"

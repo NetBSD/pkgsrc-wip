@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2011/11/28 08:28:11 ddeus Exp $
-${INFODIR}/asdf.info
+@comment $NetBSD: PLIST,v 1.3 2012/01/18 10:32:57 asau Exp $
+info/asdf.info
 lib/clisp/source-registry.conf
 lib/clisp/asdf-output-translations.conf
 lib/clisp/dynmod/asdf.fas
 lib/clisp/dynmod/asdf.lisp
-share/doc/${NAME}/README
-share/doc/${NAME}/asdf.html
+share/doc/${PKGNAME}/README
+share/doc/${PKGNAME}/asdf.html
