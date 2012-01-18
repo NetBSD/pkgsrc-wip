@@ -1,7 +1,7 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2012/01/10 10:09:14 triaxx Exp $
+$NetBSD: MESSAGE,v 1.2 2012/01/18 20:20:57 triaxx Exp $
 
-Copy ${EGDIR}/config.php to ${PREFIX}/share/semanticscuttle/data and edit
-it.
+Copy ${PREFIX}/share/examples/semanticscuttle/config.php to
+${PREFIX}/share/semanticscuttle/data and edit it.
 
 ===========================================================================

@@ -1,7 +1,28 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/01/10 10:09:14 triaxx Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/01/18 20:20:57 triaxx Exp $
+share/doc/semanticscuttle/AUTHORS
+share/doc/semanticscuttle/ChangeLog
+share/doc/semanticscuttle/INSTALL.txt
+share/doc/semanticscuttle/LICENSE.txt
+share/doc/semanticscuttle/README.rst
+share/doc/semanticscuttle/UPGRADE.txt
+share/doc/semanticscuttle/allinone.rst
+share/doc/semanticscuttle/authentication.rst
+share/doc/semanticscuttle/configuration.rst
+share/doc/semanticscuttle/developers/TODO.rst
+share/doc/semanticscuttle/developers/api.rst
+share/doc/semanticscuttle/developers/debugging.rst
+share/doc/semanticscuttle/developers/doc-TODO.rst
+share/doc/semanticscuttle/developers/release-new-version.rst
+share/doc/semanticscuttle/developers/rules.rst
+share/doc/semanticscuttle/developers/running-unit-tests.rst
+share/doc/semanticscuttle/developers/translation.rst
+share/doc/semanticscuttle/index.rst
+share/doc/semanticscuttle/ssl-client-certificates.rst
+share/doc/semanticscuttle/themes.rst
 share/examples/semanticscuttle/apache.conf
 share/examples/semanticscuttle/config.php
 share/examples/semanticscuttle/mysql.inittables.sql
+share/examples/semanticscuttle/pgsql.inittables.sql
 share/semanticscuttle/data/config.default.php
 share/semanticscuttle/data/locales/de_AT/LC_MESSAGES/messages.mo
 share/semanticscuttle/data/locales/de_DE/LC_MESSAGES/messages.mo
@@ -262,4 +283,3 @@ share/semanticscuttle/www/watch.php
 share/semanticscuttle/www/watchlist.php
 share/semanticscuttle/www/widgetUWA.php
 share/semanticscuttle/www/www-header.php
-@pkgdir share/doc/semanticscuttle
