@@ -1,16 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/12/18 18:09:04 dukzcry Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/01/18 12:25:35 dukzcry Exp $
 bin/clfswm
 share/doc/clfswm/AUTHORS
 share/doc/clfswm/COPYING
 share/doc/clfswm/ChangeLog
 share/doc/clfswm/README
 share/doc/clfswm/TODO
-share/doc/clfswm/corner.html
 share/doc/clfswm/corner.txt
-share/doc/clfswm/dot-clfswmrc
-share/doc/clfswm/keys.html
 share/doc/clfswm/keys.txt
-share/doc/clfswm/menu.html
 share/doc/clfswm/menu.txt
-share/doc/clfswm/variables.html
 share/doc/clfswm/variables.txt
+share/examples/clfswm/clfswmrc

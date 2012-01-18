@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/12/18 19:29:50 dukzcry Exp $
+# $NetBSD: Makefile,v 1.3 2012/01/18 12:25:35 dukzcry Exp $
 #
 
 DISTNAME=		clfswm-1106-2
@@ -13,7 +13,6 @@ LICENSE=		gnu-gpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-INSTALLATION_DIRS+=	bin share/doc/clfswm
 HAS_CONFIGURE=		yes
 INSTALL_UNSTRIPPED=	yes
 # clisp-core linking set, until CLISP 2.50 release
@@ -28,6 +27,8 @@ CONFIGURE_ARGS=		-l clisp
 CONFIGURE_ARGS+=	-d ${WRKSRC}/dump/
 CONFIGURE_ARGS+=	--with-clfswm ${WRKSRC}
 CONFIGURE_ARGS+=	--with-asdf ${WRKSRC}/contrib
+
+INSTALLATION_DIRS+=	bin share/doc/clfswm share/examples/clfswm
 
 .include "../../mk/bsd.prefs.mk"
 post-patch:
@@ -45,12 +46,11 @@ SUBST_SED.sysconf+=	-e "/info-on-shell.*\".*MEMORY.*\"/{N; s/\\n//; s/\\(\".*MEM
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/clfswm ${DESTDIR}${PREFIX}/bin/clfswm
-	cp ${WRKSRC}/doc/* ${DESTDIR}${PREFIX}/share/doc/clfswm
-	${INSTALL_MAN} ${WRKSRC}/AUTHORS ${DESTDIR}${PREFIX}/share/doc/clfswm/AUTHORS
-	${INSTALL_MAN} ${WRKSRC}/COPYING ${DESTDIR}${PREFIX}/share/doc/clfswm/COPYING
-	${INSTALL_MAN} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/clfswm/README
-	${INSTALL_MAN} ${WRKSRC}/TODO ${DESTDIR}${PREFIX}/share/doc/clfswm/TODO
-	${INSTALL_MAN} ${WRKSRC}/ChangeLog ${DESTDIR}${PREFIX}/share/doc/clfswm/ChangeLog
+	cp ${WRKSRC}/doc/*.txt ${DESTDIR}${PREFIX}/share/doc/clfswm
+	${INSTALL_DATA} ${WRKSRC}/doc/dot-clfswmrc ${DESTDIR}${PREFIX}/share/examples/clfswm/clfswmrc
+.for f in AUTHORS COPYING README TODO ChangeLog
+	${INSTALL_MAN} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/share/doc/clfswm
+.endfor
 
 do-build:
 	cd ${WRKSRC} && ${SH} ./clfswm -n --rebuild && cp dump/clfswm-*.core src/clfswm
