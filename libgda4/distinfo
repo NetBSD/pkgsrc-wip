@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2012/01/19 13:31:22 drochner Exp $
+
+SHA1 (libgda-4.2.12.tar.xz) = a7fb768ddb58742dbe102c112eb44bb08fafd708
+RMD160 (libgda-4.2.12.tar.xz) = e15139cec3b843ca4d927482850de6b4527e676b
+Size (libgda-4.2.12.tar.xz) = 11238088 bytes
+SHA1 (patch-ab) = 574f75157ffd29e06cac243e10951987ed9ccf8c
+SHA1 (patch-al) = f284640fd76f2ba28a509da9205a96bb3d83918a

@@ -1,0 +1,22 @@
+$NetBSD: patch-al,v 1.1 2012/01/19 13:31:22 drochner Exp $
+
+--- providers/mysql/Makefile.in.orig	2010-11-27 13:39:18.000000000 +0000
++++ providers/mysql/Makefile.in
+@@ -78,7 +78,7 @@ am__installdirs = "$(DESTDIR)$(providerd
+ 	"$(DESTDIR)$(pkgconfigdir)" "$(DESTDIR)$(xmldir)"
+ LTLIBRARIES = $(provider_LTLIBRARIES)
+ am__DEPENDENCIES_1 =
+-libgda_mysql_la_DEPENDENCIES = $(top_builddir)/libgda/libgda-4.0.la \
++libgda_mysql_la_DEPENDENCIES = \
+ 	$(top_builddir)/providers/reuseable/mysql/libgda-mysql.la \
+ 	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1)
+ am_libgda_mysql_la_OBJECTS = gda-mysql-blob-op.lo gda-mysql-ddl.lo \
+@@ -403,7 +403,7 @@ libgda_mysql_la_SOURCES = \
+ 
+ libgda_mysql_la_LDFLAGS = -export-dynamic -module -avoid-version $(NO_UNDEFINED) $(LIBTOOL_PROV_EXPORT_OPTIONS)
+ libgda_mysql_la_LIBADD = \
+-	$(top_builddir)/libgda/libgda-4.0.la \
++	-lgda-4.0 \
+ 	$(top_builddir)/providers/reuseable/mysql/libgda-mysql.la \
+ 	$(LIBGDA_LIBS) $(MYSQL_LIBS)
+ 
