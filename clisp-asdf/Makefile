@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/01/18 13:11:17 ddeus Exp $
+# $NetBSD: Makefile,v 1.7 2012/01/19 08:05:40 asau Exp $
 
 DISTNAME=	asdf-2.018.19
 PKGNAME=	clisp-${DISTNAME}
@@ -26,10 +26,11 @@ INSTALLATION_DIRS= \
 		share/doc/${PKGNAME_NOREV} \
 		share/examples/${PKGBASE} \
 		${PKGINFODIR}
-CONF_FILES+=    share/examples/${PKGBASE}/source-registry.conf \
-                ${PKG_SYSCONFDIR}/source-registry.conf
-CONF_FILES+=    share/examples/${PKGBASE}/asdf-output-translations.conf \
-                ${PKG_SYSCONFDIR}/asdf-output-translations.conf
+
+CONF_FILES+=	share/examples/${PKGBASE}/source-registry.conf \
+		${PKG_SYSCONFDIR}/source-registry.conf
+CONF_FILES+=	share/examples/${PKGBASE}/asdf-output-translations.conf \
+		${PKG_SYSCONFDIR}/asdf-output-translations.conf
 
 CHECK_PORTABILITY_SKIP= bin/asdf-version bin/make-tarball
 
