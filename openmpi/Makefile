@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.46 2012/01/13 00:00:56 asau Exp $
+# $NetBSD: Makefile,v 1.47 2012/01/19 20:13:14 asau Exp $
 
-DISTNAME=	openmpi-1.5.1
-DISTNAME=	openmpi-1.5.5rc2r25705
-PKGNAME=	openmpi-1.5.4.25705
+DISTNAME=	openmpi-1.5.5rc2r25719
+PKGNAME=	openmpi-1.5.4.25719
 CATEGORIES=	parallel
 MASTER_SITES=	http://www.open-mpi.org/software/ompi/v1.5/downloads/ \
 		http://www.open-mpi.org/nightly/v1.5/
@@ -28,6 +27,7 @@ SHLIBTOOL_OVERRIDE=	${WRKSRC}/config/libtool.m4 \
 			${WRKSRC}/opal/libltdl/m4/libtool.m4
 
 CONFIGURE_ARGS+=	--disable-mpi-f90
+CONFIGURE_ARGS+=	--without-slurm
 CONFIGURE_ARGS+=	--with-libltdl=external # use our libltdl
 CONFIGURE_ARGS+=	--with-wrapper-ldflags="-L${PREFIX}/lib ${LINKER_RPATH_FLAG}${PREFIX}/lib"
 CONFIGURE_ENV+=		ompi_cv_f77_have_INTEGERp8=no	# no "INTEGER*8"??

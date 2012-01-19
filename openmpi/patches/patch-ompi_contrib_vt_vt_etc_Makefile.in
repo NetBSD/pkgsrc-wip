@@ -1,0 +1,53 @@
+$NetBSD: patch-ompi_contrib_vt_vt_etc_Makefile.in,v 1.1 2012/01/19 20:13:14 asau Exp $
+
+--- ompi/contrib/vt/vt/etc/Makefile.in.orig	2012-01-17 04:30:11.000000000 +0000
++++ ompi/contrib/vt/vt/etc/Makefile.in
+@@ -458,6 +458,7 @@ vtsysconf_DATA = \
+ 	vt-setup-config.xml
+ 
+ vtsysconfdir = $(sysconfdir)
++vtsysconfexampledir = $(pkgdatadir)/examples
+ EXTRA_DIST = \
+ 	vt-java-default-filter.spec \
+ 	vt-setup-config.dtd
+@@ -505,24 +506,24 @@ clean-libtool:
+ 	-rm -rf .libs _libs
+ install-vtsysconfDATA: $(vtsysconf_DATA)
+ 	@$(NORMAL_INSTALL)
+-	test -z "$(vtsysconfdir)" || $(MKDIR_P) "$(DESTDIR)$(vtsysconfdir)"
+-	@list='$(vtsysconf_DATA)'; test -n "$(vtsysconfdir)" || list=; \
++	test -z "$(vtsysconfexampledir)" || $(MKDIR_P) "$(DESTDIR)$(vtsysconfexampledir)"
++	@list='$(vtsysconf_DATA)'; test -n "$(vtsysconfexampledir)" || list=; \
+ 	for p in $$list; do \
+ 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+ 	  echo "$$d$$p"; \
+ 	done | $(am__base_list) | \
+ 	while read files; do \
+-	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(vtsysconfdir)'"; \
+-	  $(INSTALL_DATA) $$files "$(DESTDIR)$(vtsysconfdir)" || exit $$?; \
++	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(vtsysconfexampledir)'"; \
++	  $(INSTALL_DATA) $$files "$(DESTDIR)$(vtsysconfexampledir)" || exit $$?; \
+ 	done
+ 
+ uninstall-vtsysconfDATA:
+ 	@$(NORMAL_UNINSTALL)
+-	@list='$(vtsysconf_DATA)'; test -n "$(vtsysconfdir)" || list=; \
++	@list='$(vtsysconf_DATA)'; test -n "$(vtsysconfexampledir)" || list=; \
+ 	files=`for p in $$list; do echo $$p; done | sed -e 's|^.*/||'`; \
+ 	test -n "$$files" || exit 0; \
+-	echo " ( cd '$(DESTDIR)$(vtsysconfdir)' && rm -f" $$files ")"; \
+-	cd "$(DESTDIR)$(vtsysconfdir)" && rm -f $$files
++	echo " ( cd '$(DESTDIR)$(vtsysconfexampledir)' && rm -f" $$files ")"; \
++	cd "$(DESTDIR)$(vtsysconfexampledir)" && rm -f $$files
+ tags: TAGS
+ TAGS:
+ 
+@@ -564,7 +565,7 @@ check-am: all-am
+ check: check-am
+ all-am: Makefile $(DATA)
+ installdirs:
+-	for dir in "$(DESTDIR)$(vtsysconfdir)"; do \
++	for dir in "$(DESTDIR)$(vtsysconfexampledir)"; do \
+ 	  test -z "$$dir" || $(MKDIR_P) "$$dir"; \
+ 	done
+ install: install-am
