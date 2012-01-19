@@ -1,0 +1,19 @@
+- test mysql
+- build for other db providers
+
+postgres is checked and does work:
+Gnome->System->Database Access Properties,
+create Data Source,
+double-click created Data Source,
+push Test or Browse.
+
+that build was done w/ these options:
+PKG_OPTIONS.libgda4+=-bdb -jdbc -ldap mysql postgres
+PKG_OPTIONS.libgda4+=fam gui ui
+
+- i can image people want them non-inline libgda-db_name pkgs,
+  given existing pkg distribution and deploy|install systems.
+  for now i'd say, get them providers working from an inline build first.
+  given, i think, the libgda build process changed itself,
+  into a 2step build process
+  (first supporting libs, then actual provider, this all in-tree).

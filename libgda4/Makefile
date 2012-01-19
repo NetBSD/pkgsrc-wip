@@ -1,5 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2012/01/19 13:31:22 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2012/01/19 16:28:54 noud4 Exp $
 #
+
+LICENSE=		gnu-gpl-v2 AND gnu-lgpl-v2
+# XXX			tools AND libraries
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -9,14 +12,14 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 PKGCONFIG_OVERRIDE=	libgda-4.0.pc.in
 PKGCONFIG_OVERRIDE+=	libgda-report-4.0.pc.in
-PKGCONFIG_OVERRIDE+=	libgda-sqlite-4.0.pc.in
+PKGCONFIG_OVERRIDE+=	libgda-ui-4.0.pc.in
 PKGCONFIG_OVERRIDE+=	libgda-xslt-4.0.pc.in
 
 PKG_SYSCONFSUBDIR=	libgda
 EGDIR=			${PREFIX}/share/examples/libgda-4.0
 CONF_FILES+=		${EGDIR}/config ${PKG_SYSCONFDIR}/config
 
-CONFIGURE_ARGS+=	--with-odbc=no --with-bdb=no
+#CONFIGURE_ARGS+=	--with-bdb=no
 CONFIGURE_ARGS+=	--disable-crypto
 CONFIG_SHELL=	bash
 
@@ -26,8 +29,5 @@ REPLACE_PYTHON+=	libgda-report/RML/trml2html/trml2html.py
 
 TEST_TARGET=		check
 
-.include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../x11/gtk2/buildlink3.mk"
-.include "../../security/libgcrypt/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
