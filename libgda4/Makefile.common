@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2012/01/19 16:28:54 noud4 Exp $
+# $NetBSD: Makefile.common,v 1.3 2012/01/19 16:43:00 noud4 Exp $
 #
 
 DISTNAME=		libgda-4.2.12
@@ -10,8 +10,8 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnome-db.org/
 COMMENT=		GNU database access library
 
-DISTINFO_FILE=		${.CURDIR}/../../GDA4/libgda4/distinfo
-PATCHDIR=		${.CURDIR}/../../GDA4/libgda4/patches
+DISTINFO_FILE=		${.CURDIR}/../../wip/libgda4/distinfo
+PATCHDIR=		${.CURDIR}/../../wip/libgda4/patches
 
 USE_TOOLS+=		gmake intltool pkg-config msgfmt
 USE_LIBTOOL=		YES
@@ -51,7 +51,7 @@ BUILD_DIRS=		. providers/${LIBGDA_PROVIDER}
 
 #SUBST_FILES.libs=	providers/${LIBGDA_PROVIDER}/Makefile.in	# XXX given a not inline build this could be needed again lateron.
 
-.include "../../GDA4/libgda4/buildlink3.mk"
+.include "../../wip/libgda4/buildlink3.mk"
 .else
 .include "../../textproc/libxml2/buildlink3.mk"
 USE_BUILTIN.readline=no
