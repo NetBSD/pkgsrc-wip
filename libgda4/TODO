@@ -1,7 +1,6 @@
-- test mysql
 - build for other db providers
 
-postgres is checked and does work:
+mysql and postgres is checked and does work:
 Gnome->System->Database Access Properties,
 create Data Source,
 double-click created Data Source,
