@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2011/07/14 12:41:41 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.7 2012/01/22 12:39:10 mwdavies Exp $
 share/icons/oxygen/128x128/actions/address-book-new.png
 share/icons/oxygen/128x128/actions/application-exit.png
 share/icons/oxygen/128x128/actions/appointment-new.png
@@ -16,7 +16,7 @@ share/icons/oxygen/128x128/actions/document-preview-archive.png
 share/icons/oxygen/128x128/actions/document-preview.png
 share/icons/oxygen/128x128/actions/edit-bomb.png
 share/icons/oxygen/128x128/actions/edit-find.png
-share/icons/oxygen/128x128/actions/folder-new.png
+share/icons/oxygen/128x128/actions/edit-paste.png
 share/icons/oxygen/128x128/actions/go-bottom.png
 share/icons/oxygen/128x128/actions/go-down.png
 share/icons/oxygen/128x128/actions/go-first-view-page.png
@@ -118,7 +118,6 @@ share/icons/oxygen/128x128/apps/kbruch.png
 share/icons/oxygen/128x128/apps/kbugbuster.png
 share/icons/oxygen/128x128/apps/kchart.png
 share/icons/oxygen/128x128/apps/kcolorchooser.png
-share/icons/oxygen/128x128/apps/kde-telepathy.png
 share/icons/oxygen/128x128/apps/kde-windows.png
 share/icons/oxygen/128x128/apps/kde.png
 share/icons/oxygen/128x128/apps/kdevelop.png
@@ -213,6 +212,7 @@ share/icons/oxygen/128x128/apps/system-file-manager.png
 share/icons/oxygen/128x128/apps/system-software-update.png
 share/icons/oxygen/128x128/apps/system-users.png
 share/icons/oxygen/128x128/apps/tagua.png
+share/icons/oxygen/128x128/apps/telepathy-kde.png
 share/icons/oxygen/128x128/apps/utilities-desktop-extra.png
 share/icons/oxygen/128x128/apps/utilities-file-archiver.png
 share/icons/oxygen/128x128/apps/utilities-log-viewer.png
@@ -221,6 +221,7 @@ share/icons/oxygen/128x128/apps/utilities-terminal.png
 share/icons/oxygen/128x128/apps/wine.png
 share/icons/oxygen/128x128/apps/xorg.png
 share/icons/oxygen/128x128/apps/yakuake.png
+share/icons/oxygen/128x128/apps/zanshin.png
 share/icons/oxygen/128x128/categories/applications-accessories.png
 share/icons/oxygen/128x128/categories/applications-development-translation.png
 share/icons/oxygen/128x128/categories/applications-development-web.png
@@ -252,6 +253,7 @@ share/icons/oxygen/128x128/categories/preferences-system-network.png
 share/icons/oxygen/128x128/categories/preferences-system.png
 share/icons/oxygen/128x128/categories/system-help.png
 share/icons/oxygen/128x128/devices/audio-card.png
+share/icons/oxygen/128x128/devices/audio-headphones.png
 share/icons/oxygen/128x128/devices/audio-headset.png
 share/icons/oxygen/128x128/devices/audio-input-line.png
 share/icons/oxygen/128x128/devices/audio-input-microphone.png
@@ -335,6 +337,7 @@ share/icons/oxygen/128x128/mimetypes/application-relaxng.png
 share/icons/oxygen/128x128/mimetypes/application-rss+xml.png
 share/icons/oxygen/128x128/mimetypes/application-rtf.png
 share/icons/oxygen/128x128/mimetypes/application-sxw.png
+share/icons/oxygen/128x128/mimetypes/application-vnd-google-earth-kml.png
 share/icons/oxygen/128x128/mimetypes/application-vnd.iccprofile.png
 share/icons/oxygen/128x128/mimetypes/application-vnd.ms-access.png
 share/icons/oxygen/128x128/mimetypes/application-vnd.ms-excel.png
@@ -935,12 +938,19 @@ share/icons/oxygen/16x16/actions/help-feedback.png
 share/icons/oxygen/16x16/actions/help-hint.png
 share/icons/oxygen/16x16/actions/im-ban-kick-user.png
 share/icons/oxygen/16x16/actions/im-ban-user.png
+share/icons/oxygen/16x16/actions/im-facebook.png
+share/icons/oxygen/16x16/actions/im-icq.png
+share/icons/oxygen/16x16/actions/im-identi.ca.png
 share/icons/oxygen/16x16/actions/im-invisible-user.png
+share/icons/oxygen/16x16/actions/im-jabber.png
 share/icons/oxygen/16x16/actions/im-kick-user.png
+share/icons/oxygen/16x16/actions/im-skype.png
+share/icons/oxygen/16x16/actions/im-twitter.png
 share/icons/oxygen/16x16/actions/im-user-away.png
 share/icons/oxygen/16x16/actions/im-user-busy.png
 share/icons/oxygen/16x16/actions/im-user-offline.png
 share/icons/oxygen/16x16/actions/im-user.png
+share/icons/oxygen/16x16/actions/im-yahoo.png
 share/icons/oxygen/16x16/actions/insert-button.png
 share/icons/oxygen/16x16/actions/insert-horizontal-rule.png
 share/icons/oxygen/16x16/actions/insert-image.png
@@ -954,6 +964,7 @@ share/icons/oxygen/16x16/actions/irc-operator.png
 share/icons/oxygen/16x16/actions/irc-remove-operator.png
 share/icons/oxygen/16x16/actions/irc-unvoice.png
 share/icons/oxygen/16x16/actions/irc-voice.png
+share/icons/oxygen/16x16/actions/key-enter.png
 share/icons/oxygen/16x16/actions/kmix-master.png
 share/icons/oxygen/16x16/actions/layer-visible-off.png
 share/icons/oxygen/16x16/actions/layer-visible-on.png
@@ -1176,6 +1187,7 @@ share/icons/oxygen/16x16/actions/view-form-table.png
 share/icons/oxygen/16x16/actions/view-form.png
 share/icons/oxygen/16x16/actions/view-fullscreen.png
 share/icons/oxygen/16x16/actions/view-grid.png
+share/icons/oxygen/16x16/actions/view-group.png
 share/icons/oxygen/16x16/actions/view-history.png
 share/icons/oxygen/16x16/actions/view-ldap-resource.png
 share/icons/oxygen/16x16/actions/view-left-close.png
@@ -1278,7 +1290,6 @@ share/icons/oxygen/16x16/apps/kbruch.png
 share/icons/oxygen/16x16/apps/kbugbuster.png
 share/icons/oxygen/16x16/apps/kchart.png
 share/icons/oxygen/16x16/apps/kcolorchooser.png
-share/icons/oxygen/16x16/apps/kde-telepathy.png
 share/icons/oxygen/16x16/apps/kde-windows.png
 share/icons/oxygen/16x16/apps/kde.png
 share/icons/oxygen/16x16/apps/kdevelop.png
@@ -1380,6 +1391,7 @@ share/icons/oxygen/16x16/apps/system-file-manager.png
 share/icons/oxygen/16x16/apps/system-software-update.png
 share/icons/oxygen/16x16/apps/system-users.png
 share/icons/oxygen/16x16/apps/tagua.png
+share/icons/oxygen/16x16/apps/telepathy-kde.png
 share/icons/oxygen/16x16/apps/utilities-desktop-extra.png
 share/icons/oxygen/16x16/apps/utilities-file-archiver.png
 share/icons/oxygen/16x16/apps/utilities-log-viewer.png
@@ -1419,6 +1431,7 @@ share/icons/oxygen/16x16/categories/preferences-system-network.png
 share/icons/oxygen/16x16/categories/preferences-system.png
 share/icons/oxygen/16x16/categories/system-help.png
 share/icons/oxygen/16x16/devices/audio-card.png
+share/icons/oxygen/16x16/devices/audio-headphones.png
 share/icons/oxygen/16x16/devices/audio-headset.png
 share/icons/oxygen/16x16/devices/audio-input-line.png
 share/icons/oxygen/16x16/devices/audio-input-microphone.png
@@ -1515,6 +1528,7 @@ share/icons/oxygen/16x16/mimetypes/application-relaxng.png
 share/icons/oxygen/16x16/mimetypes/application-rss+xml.png
 share/icons/oxygen/16x16/mimetypes/application-rtf.png
 share/icons/oxygen/16x16/mimetypes/application-sxw.png
+share/icons/oxygen/16x16/mimetypes/application-vnd-google-earth-kml.png
 share/icons/oxygen/16x16/mimetypes/application-vnd.iccprofile.png
 share/icons/oxygen/16x16/mimetypes/application-vnd.ms-access.png
 share/icons/oxygen/16x16/mimetypes/application-vnd.ms-excel.png
@@ -1529,6 +1543,8 @@ share/icons/oxygen/16x16/mimetypes/application-vnd.oasis.opendocument.presentati
 share/icons/oxygen/16x16/mimetypes/application-vnd.oasis.opendocument.presentation.png
 share/icons/oxygen/16x16/mimetypes/application-vnd.oasis.opendocument.spreadsheet-template.png
 share/icons/oxygen/16x16/mimetypes/application-vnd.oasis.opendocument.spreadsheet.png
+share/icons/oxygen/16x16/mimetypes/application-vnd.oasis.opendocument.text-master.png
+share/icons/oxygen/16x16/mimetypes/application-vnd.oasis.opendocument.text-template.png
 share/icons/oxygen/16x16/mimetypes/application-vnd.oasis.opendocument.text.png
 share/icons/oxygen/16x16/mimetypes/application-vnd.openxmlformats-officedocument.wordprocessingml.document.png
 share/icons/oxygen/16x16/mimetypes/application-vnd.rn-realmedia.png
@@ -1541,7 +1557,12 @@ share/icons/oxygen/16x16/mimetypes/application-vnd.sun.xml.calc.png
 share/icons/oxygen/16x16/mimetypes/application-vnd.sun.xml.calc.template.png
 share/icons/oxygen/16x16/mimetypes/application-vnd.sun.xml.draw.png
 share/icons/oxygen/16x16/mimetypes/application-vnd.sun.xml.draw.template.png
+share/icons/oxygen/16x16/mimetypes/application-vnd.sun.xml.impress.png
+share/icons/oxygen/16x16/mimetypes/application-vnd.sun.xml.impress.template.png
 share/icons/oxygen/16x16/mimetypes/application-vnd.sun.xml.math.png
+share/icons/oxygen/16x16/mimetypes/application-vnd.sun.xml.writer.global.png
+share/icons/oxygen/16x16/mimetypes/application-vnd.sun.xml.writer.png
+share/icons/oxygen/16x16/mimetypes/application-vnd.sun.xml.writer.template.png
 share/icons/oxygen/16x16/mimetypes/application-vnd.wordperfect.png
 share/icons/oxygen/16x16/mimetypes/application-x-7z-compressed.png
 share/icons/oxygen/16x16/mimetypes/application-x-abiword.png
@@ -2160,7 +2181,7 @@ share/icons/oxygen/22x22/actions/im-aim.png
 share/icons/oxygen/22x22/actions/im-ban-kick-user.png
 share/icons/oxygen/22x22/actions/im-ban-user.png
 share/icons/oxygen/22x22/actions/im-facebook.png
-share/icons/oxygen/22x22/actions/im-gadu-gadu.png
+share/icons/oxygen/22x22/actions/im-gadugadu.png
 share/icons/oxygen/22x22/actions/im-google-talk.png
 share/icons/oxygen/22x22/actions/im-google.png
 share/icons/oxygen/22x22/actions/im-icq.png
@@ -2188,6 +2209,7 @@ share/icons/oxygen/22x22/actions/irc-operator.png
 share/icons/oxygen/22x22/actions/irc-remove-operator.png
 share/icons/oxygen/22x22/actions/irc-unvoice.png
 share/icons/oxygen/22x22/actions/irc-voice.png
+share/icons/oxygen/22x22/actions/key-enter.png
 share/icons/oxygen/22x22/actions/layer-visible-off.png
 share/icons/oxygen/22x22/actions/layer-visible-on.png
 share/icons/oxygen/22x22/actions/list-add-font.png
@@ -2272,6 +2294,7 @@ share/icons/oxygen/22x22/actions/object-flip-horizontal.png
 share/icons/oxygen/22x22/actions/object-flip-vertical.png
 share/icons/oxygen/22x22/actions/object-rotate-left.png
 share/icons/oxygen/22x22/actions/object-rotate-right.png
+share/icons/oxygen/22x22/actions/office-chart-area-focus-peak-node.png
 share/icons/oxygen/22x22/actions/office-chart-area-percentage.png
 share/icons/oxygen/22x22/actions/office-chart-area-stacked.png
 share/icons/oxygen/22x22/actions/office-chart-area.png
@@ -2423,6 +2446,7 @@ share/icons/oxygen/22x22/actions/view-form-table.png
 share/icons/oxygen/22x22/actions/view-form.png
 share/icons/oxygen/22x22/actions/view-fullscreen.png
 share/icons/oxygen/22x22/actions/view-grid.png
+share/icons/oxygen/22x22/actions/view-group.png
 share/icons/oxygen/22x22/actions/view-history.png
 share/icons/oxygen/22x22/actions/view-ldap-resource.png
 share/icons/oxygen/22x22/actions/view-left-close.png
@@ -2528,7 +2552,6 @@ share/icons/oxygen/22x22/apps/kbruch.png
 share/icons/oxygen/22x22/apps/kbugbuster.png
 share/icons/oxygen/22x22/apps/kchart.png
 share/icons/oxygen/22x22/apps/kcolorchooser.png
-share/icons/oxygen/22x22/apps/kde-telepathy.png
 share/icons/oxygen/22x22/apps/kde-windows.png
 share/icons/oxygen/22x22/apps/kde.png
 share/icons/oxygen/22x22/apps/kdevelop.png
@@ -2627,6 +2650,7 @@ share/icons/oxygen/22x22/apps/system-file-manager.png
 share/icons/oxygen/22x22/apps/system-software-update.png
 share/icons/oxygen/22x22/apps/system-users.png
 share/icons/oxygen/22x22/apps/tagua.png
+share/icons/oxygen/22x22/apps/telepathy-kde.png
 share/icons/oxygen/22x22/apps/utilities-desktop-extra.png
 share/icons/oxygen/22x22/apps/utilities-file-archiver.png
 share/icons/oxygen/22x22/apps/utilities-log-viewer.png
@@ -2666,6 +2690,7 @@ share/icons/oxygen/22x22/categories/preferences-system-network.png
 share/icons/oxygen/22x22/categories/preferences-system.png
 share/icons/oxygen/22x22/categories/system-help.png
 share/icons/oxygen/22x22/devices/audio-card.png
+share/icons/oxygen/22x22/devices/audio-headphones.png
 share/icons/oxygen/22x22/devices/audio-headset.png
 share/icons/oxygen/22x22/devices/audio-input-line.png
 share/icons/oxygen/22x22/devices/audio-input-microphone.png
@@ -2807,6 +2832,7 @@ share/icons/oxygen/22x22/mimetypes/application-relaxng.png
 share/icons/oxygen/22x22/mimetypes/application-rss+xml.png
 share/icons/oxygen/22x22/mimetypes/application-rtf.png
 share/icons/oxygen/22x22/mimetypes/application-sxw.png
+share/icons/oxygen/22x22/mimetypes/application-vnd-google-earth-kml.png
 share/icons/oxygen/22x22/mimetypes/application-vnd.iccprofile.png
 share/icons/oxygen/22x22/mimetypes/application-vnd.ms-access.png
 share/icons/oxygen/22x22/mimetypes/application-vnd.ms-excel.png
@@ -2961,7 +2987,6 @@ share/icons/oxygen/22x22/mimetypes/image-x-xfig.png
 share/icons/oxygen/22x22/mimetypes/inode-directory.png
 share/icons/oxygen/22x22/mimetypes/mail-message-new-list.png
 share/icons/oxygen/22x22/mimetypes/message-news.png
-share/icons/oxygen/22x22/mimetypes/message-news.svgz.png
 share/icons/oxygen/22x22/mimetypes/message-partial.png
 share/icons/oxygen/22x22/mimetypes/message-rfc822.png
 share/icons/oxygen/22x22/mimetypes/message-x-gnu-rmail.png
@@ -3204,7 +3229,6 @@ share/icons/oxygen/256x256/apps/k3b.png
 share/icons/oxygen/256x256/apps/karbon.png
 share/icons/oxygen/256x256/apps/kbruch.png
 share/icons/oxygen/256x256/apps/kchart.png
-share/icons/oxygen/256x256/apps/kde-telepathy.png
 share/icons/oxygen/256x256/apps/kde-windows.png
 share/icons/oxygen/256x256/apps/kdevelop.png
 share/icons/oxygen/256x256/apps/kdf.png
@@ -3236,8 +3260,10 @@ share/icons/oxygen/256x256/apps/qelectrotech.png
 share/icons/oxygen/256x256/apps/quassel.png
 share/icons/oxygen/256x256/apps/strigi.png
 share/icons/oxygen/256x256/apps/system-diagnosis.png
+share/icons/oxygen/256x256/apps/telepathy-kde.png
 share/icons/oxygen/256x256/apps/timevault.png
 share/icons/oxygen/256x256/apps/yakuake.png
+share/icons/oxygen/256x256/apps/zanshin.png
 share/icons/oxygen/256x256/categories/applications-engineering.png
 share/icons/oxygen/256x256/categories/applications-graphics.png
 share/icons/oxygen/256x256/categories/applications-internet.png
@@ -3251,6 +3277,7 @@ share/icons/oxygen/256x256/categories/preferences-other.png
 share/icons/oxygen/256x256/categories/preferences-system-network.png
 share/icons/oxygen/256x256/categories/preferences-system.png
 share/icons/oxygen/256x256/devices/audio-card.png
+share/icons/oxygen/256x256/devices/audio-headphones.png
 share/icons/oxygen/256x256/devices/camera-photo.png
 share/icons/oxygen/256x256/devices/computer-laptop.png
 share/icons/oxygen/256x256/devices/computer.png
@@ -3302,6 +3329,7 @@ share/icons/oxygen/256x256/mimetypes/application-relaxng.png
 share/icons/oxygen/256x256/mimetypes/application-rss+xml.png
 share/icons/oxygen/256x256/mimetypes/application-rtf.png
 share/icons/oxygen/256x256/mimetypes/application-sxw.png
+share/icons/oxygen/256x256/mimetypes/application-vnd-google-earth-kml.png
 share/icons/oxygen/256x256/mimetypes/application-vnd.iccprofile.png
 share/icons/oxygen/256x256/mimetypes/application-vnd.ms-access.png
 share/icons/oxygen/256x256/mimetypes/application-vnd.ms-excel.png
@@ -3848,7 +3876,8 @@ share/icons/oxygen/32x32/actions/im-aim.png
 share/icons/oxygen/32x32/actions/im-ban-kick-user.png
 share/icons/oxygen/32x32/actions/im-ban-user.png
 share/icons/oxygen/32x32/actions/im-facebook.png
-share/icons/oxygen/32x32/actions/im-gadu-gadu.png
+share/icons/oxygen/32x32/actions/im-gadugadu.png
+share/icons/oxygen/32x32/actions/im-google-talk.png
 share/icons/oxygen/32x32/actions/im-google.png
 share/icons/oxygen/32x32/actions/im-icq.png
 share/icons/oxygen/32x32/actions/im-identi.ca.png
@@ -3856,7 +3885,6 @@ share/icons/oxygen/32x32/actions/im-invisible-user.png
 share/icons/oxygen/32x32/actions/im-jabber.png
 share/icons/oxygen/32x32/actions/im-kick-user.png
 share/icons/oxygen/32x32/actions/im-msn.png
-share/icons/oxygen/32x32/actions/im-protocol-msn.png
 share/icons/oxygen/32x32/actions/im-qq.png
 share/icons/oxygen/32x32/actions/im-skype.png
 share/icons/oxygen/32x32/actions/im-twitter.png
@@ -3877,6 +3905,7 @@ share/icons/oxygen/32x32/actions/irc-remove-operator.png
 share/icons/oxygen/32x32/actions/irc-unvoice.png
 share/icons/oxygen/32x32/actions/irc-voice.png
 share/icons/oxygen/32x32/actions/journal-new.png
+share/icons/oxygen/32x32/actions/key-enter.png
 share/icons/oxygen/32x32/actions/layer-visible-off.png
 share/icons/oxygen/32x32/actions/layer-visible-on.png
 share/icons/oxygen/32x32/actions/list-add-font.png
@@ -3941,6 +3970,7 @@ share/icons/oxygen/32x32/actions/object-flip-horizontal.png
 share/icons/oxygen/32x32/actions/object-flip-vertical.png
 share/icons/oxygen/32x32/actions/object-rotate-left.png
 share/icons/oxygen/32x32/actions/object-rotate-right.png
+share/icons/oxygen/32x32/actions/office-chart-area-focus-peak-node.png
 share/icons/oxygen/32x32/actions/office-chart-area-percentage.png
 share/icons/oxygen/32x32/actions/office-chart-area-stacked.png
 share/icons/oxygen/32x32/actions/office-chart-area.png
@@ -4109,6 +4139,7 @@ share/icons/oxygen/32x32/actions/view-form-table.png
 share/icons/oxygen/32x32/actions/view-form.png
 share/icons/oxygen/32x32/actions/view-fullscreen.png
 share/icons/oxygen/32x32/actions/view-grid.png
+share/icons/oxygen/32x32/actions/view-group.png
 share/icons/oxygen/32x32/actions/view-history.png
 share/icons/oxygen/32x32/actions/view-income-categories.png
 share/icons/oxygen/32x32/actions/view-investment.png
@@ -4219,7 +4250,6 @@ share/icons/oxygen/32x32/apps/kbruch.png
 share/icons/oxygen/32x32/apps/kbugbuster.png
 share/icons/oxygen/32x32/apps/kchart.png
 share/icons/oxygen/32x32/apps/kcolorchooser.png
-share/icons/oxygen/32x32/apps/kde-telepathy.png
 share/icons/oxygen/32x32/apps/kde-windows.png
 share/icons/oxygen/32x32/apps/kde.png
 share/icons/oxygen/32x32/apps/kdevelop.png
@@ -4321,6 +4351,7 @@ share/icons/oxygen/32x32/apps/system-file-manager.png
 share/icons/oxygen/32x32/apps/system-software-update.png
 share/icons/oxygen/32x32/apps/system-users.png
 share/icons/oxygen/32x32/apps/tagua.png
+share/icons/oxygen/32x32/apps/telepathy-kde.png
 share/icons/oxygen/32x32/apps/utilities-desktop-extra.png
 share/icons/oxygen/32x32/apps/utilities-file-archiver.png
 share/icons/oxygen/32x32/apps/utilities-log-viewer.png
@@ -4329,6 +4360,7 @@ share/icons/oxygen/32x32/apps/utilities-terminal.png
 share/icons/oxygen/32x32/apps/wine.png
 share/icons/oxygen/32x32/apps/xorg.png
 share/icons/oxygen/32x32/apps/yakuake.png
+share/icons/oxygen/32x32/apps/zanshin.png
 share/icons/oxygen/32x32/categories/applications-accessories.png
 share/icons/oxygen/32x32/categories/applications-development-translation.png
 share/icons/oxygen/32x32/categories/applications-development-web.png
@@ -4360,6 +4392,7 @@ share/icons/oxygen/32x32/categories/preferences-system-network.png
 share/icons/oxygen/32x32/categories/preferences-system.png
 share/icons/oxygen/32x32/categories/system-help.png
 share/icons/oxygen/32x32/devices/audio-card.png
+share/icons/oxygen/32x32/devices/audio-headphones.png
 share/icons/oxygen/32x32/devices/audio-headset.png
 share/icons/oxygen/32x32/devices/audio-input-line.png
 share/icons/oxygen/32x32/devices/audio-input-microphone.png
@@ -4464,6 +4497,7 @@ share/icons/oxygen/32x32/mimetypes/application-relaxng.png
 share/icons/oxygen/32x32/mimetypes/application-rss+xml.png
 share/icons/oxygen/32x32/mimetypes/application-rtf.png
 share/icons/oxygen/32x32/mimetypes/application-sxw.png
+share/icons/oxygen/32x32/mimetypes/application-vnd-google-earth-kml.png
 share/icons/oxygen/32x32/mimetypes/application-vnd.iccprofile.png
 share/icons/oxygen/32x32/mimetypes/application-vnd.ms-access.png
 share/icons/oxygen/32x32/mimetypes/application-vnd.ms-excel.png
@@ -4478,6 +4512,8 @@ share/icons/oxygen/32x32/mimetypes/application-vnd.oasis.opendocument.presentati
 share/icons/oxygen/32x32/mimetypes/application-vnd.oasis.opendocument.presentation.png
 share/icons/oxygen/32x32/mimetypes/application-vnd.oasis.opendocument.spreadsheet-template.png
 share/icons/oxygen/32x32/mimetypes/application-vnd.oasis.opendocument.spreadsheet.png
+share/icons/oxygen/32x32/mimetypes/application-vnd.oasis.opendocument.text-master.png
+share/icons/oxygen/32x32/mimetypes/application-vnd.oasis.opendocument.text-template.png
 share/icons/oxygen/32x32/mimetypes/application-vnd.oasis.opendocument.text.png
 share/icons/oxygen/32x32/mimetypes/application-vnd.openxmlformats-officedocument.wordprocessingml.document.png
 share/icons/oxygen/32x32/mimetypes/application-vnd.rn-realmedia.png
@@ -4490,7 +4526,12 @@ share/icons/oxygen/32x32/mimetypes/application-vnd.sun.xml.calc.png
 share/icons/oxygen/32x32/mimetypes/application-vnd.sun.xml.calc.template.png
 share/icons/oxygen/32x32/mimetypes/application-vnd.sun.xml.draw.png
 share/icons/oxygen/32x32/mimetypes/application-vnd.sun.xml.draw.template.png
+share/icons/oxygen/32x32/mimetypes/application-vnd.sun.xml.impress.png
+share/icons/oxygen/32x32/mimetypes/application-vnd.sun.xml.impress.template.png
 share/icons/oxygen/32x32/mimetypes/application-vnd.sun.xml.math.png
+share/icons/oxygen/32x32/mimetypes/application-vnd.sun.xml.writer.global.png
+share/icons/oxygen/32x32/mimetypes/application-vnd.sun.xml.writer.png
+share/icons/oxygen/32x32/mimetypes/application-vnd.sun.xml.writer.template.png
 share/icons/oxygen/32x32/mimetypes/application-vnd.wordperfect.png
 share/icons/oxygen/32x32/mimetypes/application-x-7z-compressed.png
 share/icons/oxygen/32x32/mimetypes/application-x-abiword.png
@@ -5076,7 +5117,7 @@ share/icons/oxygen/48x48/actions/im-aim.png
 share/icons/oxygen/48x48/actions/im-ban-kick-user.png
 share/icons/oxygen/48x48/actions/im-ban-user.png
 share/icons/oxygen/48x48/actions/im-facebook.png
-share/icons/oxygen/48x48/actions/im-gadu-gadu.png
+share/icons/oxygen/48x48/actions/im-gadugadu.png
 share/icons/oxygen/48x48/actions/im-google-talk.png
 share/icons/oxygen/48x48/actions/im-google.png
 share/icons/oxygen/48x48/actions/im-icq.png
@@ -5104,6 +5145,7 @@ share/icons/oxygen/48x48/actions/irc-operator.png
 share/icons/oxygen/48x48/actions/irc-remove-operator.png
 share/icons/oxygen/48x48/actions/irc-unvoice.png
 share/icons/oxygen/48x48/actions/irc-voice.png
+share/icons/oxygen/48x48/actions/key-enter.png
 share/icons/oxygen/48x48/actions/layer-visible-off.png
 share/icons/oxygen/48x48/actions/layer-visible-on.png
 share/icons/oxygen/48x48/actions/list-add-font.png
@@ -5167,6 +5209,7 @@ share/icons/oxygen/48x48/actions/object-flip-horizontal.png
 share/icons/oxygen/48x48/actions/object-flip-vertical.png
 share/icons/oxygen/48x48/actions/object-rotate-left.png
 share/icons/oxygen/48x48/actions/object-rotate-right.png
+share/icons/oxygen/48x48/actions/office-chart-area-focus-peak-node.png
 share/icons/oxygen/48x48/actions/office-chart-area-percentage.png
 share/icons/oxygen/48x48/actions/office-chart-area-stacked.png
 share/icons/oxygen/48x48/actions/office-chart-area.png
@@ -5328,6 +5371,7 @@ share/icons/oxygen/48x48/actions/view-form-table.png
 share/icons/oxygen/48x48/actions/view-form.png
 share/icons/oxygen/48x48/actions/view-fullscreen.png
 share/icons/oxygen/48x48/actions/view-grid.png
+share/icons/oxygen/48x48/actions/view-group.png
 share/icons/oxygen/48x48/actions/view-history.png
 share/icons/oxygen/48x48/actions/view-income-categories.png
 share/icons/oxygen/48x48/actions/view-investment-account.png
@@ -5435,7 +5479,6 @@ share/icons/oxygen/48x48/apps/kbruch.png
 share/icons/oxygen/48x48/apps/kbugbuster.png
 share/icons/oxygen/48x48/apps/kchart.png
 share/icons/oxygen/48x48/apps/kcolorchooser.png
-share/icons/oxygen/48x48/apps/kde-telepathy.png
 share/icons/oxygen/48x48/apps/kde-windows.png
 share/icons/oxygen/48x48/apps/kde.png
 share/icons/oxygen/48x48/apps/kdevelop.png
@@ -5537,6 +5580,7 @@ share/icons/oxygen/48x48/apps/system-file-manager.png
 share/icons/oxygen/48x48/apps/system-software-update.png
 share/icons/oxygen/48x48/apps/system-users.png
 share/icons/oxygen/48x48/apps/tagua.png
+share/icons/oxygen/48x48/apps/telepathy-kde.png
 share/icons/oxygen/48x48/apps/utilities-desktop-extra.png
 share/icons/oxygen/48x48/apps/utilities-file-archiver.png
 share/icons/oxygen/48x48/apps/utilities-log-viewer.png
@@ -5576,6 +5620,7 @@ share/icons/oxygen/48x48/categories/preferences-system-network.png
 share/icons/oxygen/48x48/categories/preferences-system.png
 share/icons/oxygen/48x48/categories/system-help.png
 share/icons/oxygen/48x48/devices/audio-card.png
+share/icons/oxygen/48x48/devices/audio-headphones.png
 share/icons/oxygen/48x48/devices/audio-headset.png
 share/icons/oxygen/48x48/devices/audio-input-line.png
 share/icons/oxygen/48x48/devices/audio-input-microphone.png
@@ -5664,6 +5709,7 @@ share/icons/oxygen/48x48/mimetypes/application-relaxng.png
 share/icons/oxygen/48x48/mimetypes/application-rss+xml.png
 share/icons/oxygen/48x48/mimetypes/application-rtf.png
 share/icons/oxygen/48x48/mimetypes/application-sxw.png
+share/icons/oxygen/48x48/mimetypes/application-vnd-google-earth-kml.png
 share/icons/oxygen/48x48/mimetypes/application-vnd.iccprofile.png
 share/icons/oxygen/48x48/mimetypes/application-vnd.ms-access.png
 share/icons/oxygen/48x48/mimetypes/application-vnd.ms-excel.png
@@ -5678,6 +5724,8 @@ share/icons/oxygen/48x48/mimetypes/application-vnd.oasis.opendocument.presentati
 share/icons/oxygen/48x48/mimetypes/application-vnd.oasis.opendocument.presentation.png
 share/icons/oxygen/48x48/mimetypes/application-vnd.oasis.opendocument.spreadsheet-template.png
 share/icons/oxygen/48x48/mimetypes/application-vnd.oasis.opendocument.spreadsheet.png
+share/icons/oxygen/48x48/mimetypes/application-vnd.oasis.opendocument.text-master.png
+share/icons/oxygen/48x48/mimetypes/application-vnd.oasis.opendocument.text-template.png
 share/icons/oxygen/48x48/mimetypes/application-vnd.oasis.opendocument.text.png
 share/icons/oxygen/48x48/mimetypes/application-vnd.openxmlformats-officedocument.wordprocessingml.document.png
 share/icons/oxygen/48x48/mimetypes/application-vnd.rn-realmedia.png
@@ -5690,7 +5738,12 @@ share/icons/oxygen/48x48/mimetypes/application-vnd.sun.xml.calc.png
 share/icons/oxygen/48x48/mimetypes/application-vnd.sun.xml.calc.template.png
 share/icons/oxygen/48x48/mimetypes/application-vnd.sun.xml.draw.png
 share/icons/oxygen/48x48/mimetypes/application-vnd.sun.xml.draw.template.png
+share/icons/oxygen/48x48/mimetypes/application-vnd.sun.xml.impress.png
+share/icons/oxygen/48x48/mimetypes/application-vnd.sun.xml.impress.template.png
 share/icons/oxygen/48x48/mimetypes/application-vnd.sun.xml.math.png
+share/icons/oxygen/48x48/mimetypes/application-vnd.sun.xml.writer.global.png
+share/icons/oxygen/48x48/mimetypes/application-vnd.sun.xml.writer.png
+share/icons/oxygen/48x48/mimetypes/application-vnd.sun.xml.writer.template.png
 share/icons/oxygen/48x48/mimetypes/application-vnd.wordperfect.png
 share/icons/oxygen/48x48/mimetypes/application-x-7z-compressed.png
 share/icons/oxygen/48x48/mimetypes/application-x-abiword.png
@@ -6050,7 +6103,7 @@ share/icons/oxygen/64x64/actions/document-preview-archive.png
 share/icons/oxygen/64x64/actions/document-preview.png
 share/icons/oxygen/64x64/actions/edit-bomb.png
 share/icons/oxygen/64x64/actions/edit-find.png
-share/icons/oxygen/64x64/actions/folder-new.png
+share/icons/oxygen/64x64/actions/edit-paste.png
 share/icons/oxygen/64x64/actions/go-bottom.png
 share/icons/oxygen/64x64/actions/go-down.png
 share/icons/oxygen/64x64/actions/go-first-view-page.png
@@ -6140,7 +6193,6 @@ share/icons/oxygen/64x64/apps/kbruch.png
 share/icons/oxygen/64x64/apps/kbugbuster.png
 share/icons/oxygen/64x64/apps/kchart.png
 share/icons/oxygen/64x64/apps/kcolorchooser.png
-share/icons/oxygen/64x64/apps/kde-telepathy.png
 share/icons/oxygen/64x64/apps/kde-windows.png
 share/icons/oxygen/64x64/apps/kde.png
 share/icons/oxygen/64x64/apps/kdevelop.png
@@ -6230,6 +6282,7 @@ share/icons/oxygen/64x64/apps/system-file-manager.png
 share/icons/oxygen/64x64/apps/system-software-update.png
 share/icons/oxygen/64x64/apps/system-users.png
 share/icons/oxygen/64x64/apps/tagua.png
+share/icons/oxygen/64x64/apps/telepathy-kde.png
 share/icons/oxygen/64x64/apps/utilities-desktop-extra.png
 share/icons/oxygen/64x64/apps/utilities-file-archiver.png
 share/icons/oxygen/64x64/apps/utilities-log-viewer.png
@@ -6238,6 +6291,7 @@ share/icons/oxygen/64x64/apps/utilities-terminal.png
 share/icons/oxygen/64x64/apps/wine.png
 share/icons/oxygen/64x64/apps/xorg.png
 share/icons/oxygen/64x64/apps/yakuake.png
+share/icons/oxygen/64x64/apps/zanshin.png
 share/icons/oxygen/64x64/categories/applications-accessories.png
 share/icons/oxygen/64x64/categories/applications-development-translation.png
 share/icons/oxygen/64x64/categories/applications-development-web.png
@@ -6269,6 +6323,7 @@ share/icons/oxygen/64x64/categories/preferences-system-network.png
 share/icons/oxygen/64x64/categories/preferences-system.png
 share/icons/oxygen/64x64/categories/system-help.png
 share/icons/oxygen/64x64/devices/audio-card.png
+share/icons/oxygen/64x64/devices/audio-headphones.png
 share/icons/oxygen/64x64/devices/audio-headset.png
 share/icons/oxygen/64x64/devices/audio-input-line.png
 share/icons/oxygen/64x64/devices/audio-input-microphone.png
@@ -6352,6 +6407,7 @@ share/icons/oxygen/64x64/mimetypes/application-relaxng.png
 share/icons/oxygen/64x64/mimetypes/application-rss+xml.png
 share/icons/oxygen/64x64/mimetypes/application-rtf.png
 share/icons/oxygen/64x64/mimetypes/application-sxw.png
+share/icons/oxygen/64x64/mimetypes/application-vnd-google-earth-kml.png
 share/icons/oxygen/64x64/mimetypes/application-vnd.iccprofile.png
 share/icons/oxygen/64x64/mimetypes/application-vnd.ms-access.png
 share/icons/oxygen/64x64/mimetypes/application-vnd.ms-excel.png
