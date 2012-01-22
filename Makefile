@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4609 2012/01/17 14:22:48 phonohawk Exp $
+# $Id: Makefile,v 1.4610 2012/01/22 12:57:39 mwdavies Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1183,7 +1183,7 @@ SUBDIR+=	kde4-l10n-ar
 SUBDIR+=	kdeaccessibility4
 SUBDIR+=	kdeadmin4
 SUBDIR+=	kdeartwork4
-SUBDIR+=	kdebase-runtime4
+SUBDIR+=	kde-runtime4
 SUBDIR+=	kdebase-workspace4
 SUBDIR+=	kdebase4
 SUBDIR+=	kdebindings4-python
@@ -2525,7 +2525,9 @@ SUBDIR+=	rabbitmq
 SUBDIR+=	radare
 SUBDIR+=	radiotray
 SUBDIR+=	ranmacgen
+SUBDIR+=	raptor2
 SUBDIR+=	rar4
+SUBDIR+=	rasqal
 SUBDIR+=	rast
 SUBDIR+=	raster3d
 SUBDIR+=	ratpoints
@@ -2539,6 +2541,7 @@ SUBDIR+=	realtimebattle
 SUBDIR+=	realvnc
 SUBDIR+=	redfang
 SUBDIR+=	redis
+SUBDIR+=	redland
 SUBDIR+=	reduze
 SUBDIR+=	regexxer
 SUBDIR+=	reinteract
@@ -2621,6 +2624,7 @@ SUBDIR+=	sflphoned
 SUBDIR+=	sgmltools-lite
 SUBDIR+=	shadow
 SUBDIR+=	shaper
+SUBDIR+=	shared-desktop-ontologies
 SUBDIR+=	sharif-univ-ttf
 SUBDIR+=	shed
 SUBDIR+=	shell-fm
