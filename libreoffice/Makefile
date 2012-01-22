@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.18 2011/10/24 14:17:45 ftigeot Exp $
+# $NetBSD: Makefile,v 1.19 2012/01/22 08:47:00 ftigeot Exp $
 
-VER=			2011-10-17
+VER=			3.5.0.1
 DISTNAME=		libreoffice-${VER}
 PKGNAME=		libreoffice-${VER:S/-//g}
 CATEGORIES=		misc
-#MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/
-MASTER_SITES=	http://dl.wolfpond.org/libreoffice/ \
+MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/3.5.0/ \
 		http://dev-www.libreoffice.org/src/ \
 		http://www.numbertext.org/linux/
 
@@ -24,24 +23,25 @@ LO_COMPONENTS=	dictionaries help
 
 MORE_DISTFILES= \
 	1756c4fa6c616ae15973c104cd8cb256-Adobe-Core35_AFMs-314.tar.gz \
-	30c468d0c27ae4784195b53f78bc6f64-LinLibertineG-20110922.zip \
+	e7a384790b13c29113e22e596ade9687-LinLibertineG-20120116.zip \
 	f02578f5218f217a9f20e9c30e119c6a-boost_1_44_0.tar.bz2 \
 	d70951c80dabecc2892c919ff5d07172-db-4.7.25.NC-custom.tar.gz \
-	37282537d0ed1a087b1c8f050dc812d9-dejavu-fonts-ttf-2.32.zip \
+	f872f4ac066433d8ff92f5e316b36ff9-dejavu-fonts-ttf-2.33.zip \
 	35efabc239af896dfb79be7ebdd6e6b9-gentiumbasic-fonts-1.10.zip \
 	48a9f787f43a09c0a9b7b00cd1fddbbf-hyphen-2.7.1.tar.gz \
 	7c2549f6b0a8bb604e6c4c729ffdcfe6-libcmis-0.1.0.tar.gz \
-	ca4870d899fd7e943ffc310a5421ad4d-liberation-fonts-ttf-1.06.0.20100721.tar.gz \
-	3c9c6cba49387e9b8e2bced5f2eba4e3-libvisio-0.0.8.tar.bz2 \
+	0be45d54cc5e1c2e3102e32b8c190346-liberation-fonts-ttf-1.07.1.tar.gz \
+	adb5c5c8398fd89ebee2d9b4e90e061e-libvisio-0.0.13.tar.bz2 \
 	0ff7d225d087793c8c2c680d77aac3e7-mdds_0.5.3.tar.bz2 \
 	067201ea8b126597670b5eff72e1f66c-mythes-1.2.0.tar.gz \
-	fdb27bfe2dbe2e7b57ae194d9bf36bab-SampleICC-1.3.2.tar.gz
+	fdb27bfe2dbe2e7b57ae194d9bf36bab-SampleICC-1.3.2.tar.gz \
+	1f24ab1d39f4a51faf22244c94a6203f-xmlsec1-1.2.14.tar.gz
 
-DISTFILES=		${LO_BOOTSTRAP}.tar.bz2
-EXTRACT_ONLY=	${LO_BOOTSTRAP}.tar.bz2
+DISTFILES=		${LO_BOOTSTRAP}.tar.xz
+EXTRACT_ONLY=	${LO_BOOTSTRAP}.tar.xz
 .for component in ${LO_COMPONENTS}
-DISTFILES+=		libreoffice-${component}-${VER}.tar.bz2
-EXTRACT_ONLY+=	libreoffice-${component}-${VER}.tar.bz2
+DISTFILES+=		libreoffice-${component}-${VER}.tar.xz
+EXTRACT_ONLY+=	libreoffice-${component}-${VER}.tar.xz
 .endfor
 
 .for md in ${MORE_DISTFILES}
@@ -90,7 +90,6 @@ CONFIGURE_ARGS+=	--disable-epm
 CONFIGURE_ARGS+=	--disable-ext-presenter-console
 CONFIGURE_ARGS+=	--disable-mozilla
 CONFIGURE_ARGS+=	--disable-neon
-CONFIGURE_ARGS+=	--disable-nss-module
 CONFIGURE_ARGS+=	--disable-odk
 CONFIGURE_ARGS+=	--disable-opengl
 CONFIGURE_ARGS+=	--disable-systray
@@ -108,7 +107,9 @@ CONFIGURE_ARGS+=	--without-system-jars
 CONFIGURE_ARGS+=	--without-system-libcmis
 CONFIGURE_ARGS+=	--without-system-libvisio
 CONFIGURE_ARGS+=	--without-system-mdds
+CONFIGURE_ARGS+=	--without-system-mozilla-headers
 CONFIGURE_ARGS+=	--without-system-mythes
+CONFIGURE_ARGS+=	--without-system-sampleicc
 
 # Some LibreOffice build scripts do strange things with library paths
 # and fail with the pkgsrc environment
@@ -163,6 +164,7 @@ post-install:
 .include "../../devel/gperf/buildlink3.mk"
 .include "../../devel/GConf/buildlink3.mk"
 .include "../../devel/cppunit/buildlink3.mk"
+.include "../../devel/nss/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
