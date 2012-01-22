@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.11 2009/08/26 21:55:50 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.12 2012/01/22 13:21:47 airhead Exp $
 
-DISTNAME=	stfl-0.21
+MAJOR=		0
+MINOR=		22
+DISTNAME=	stfl-${MAJOR}.${MINOR}
 CATEGORIES=	devel
 MASTER_SITES=	http://www.clifford.at/stfl/
 
-MAINTAINER=	clamiax@gmail.com
+MAINTAINER=	pkgsrc-users@netbsd.org
 HOMEPAGE=	http://www.clifford.at/stfl/
 COMMENT=	Library which implements a curses-based widget set for text terminals
 LICENSE=	gnu-gpl-v3
@@ -24,7 +26,9 @@ SUBST_CLASSES+=		makefile
 SUBST_STAGE.makefile=	pre-build
 SUBST_MESSAGE.makefile=	Fixing distribution Makefile...
 SUBST_FILES.makefile=	${MAKE_FILE}
-SUBST_SED.makefile=	-e 's/LDLIBS.*/& -liconv/'
+SUBST_SED.makefile=	-e "s|LDLIBS.*|& -liconv -Wl,-R${PREFIX}/lib|"
+
+PLIST_SUBST+=	MAJOR=${MAJOR:Q} MINOR=${MINOR:Q}
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/ncursesw/buildlink3.mk"

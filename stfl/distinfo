@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.2 2009/07/17 20:35:54 smoppy Exp $
+$NetBSD: distinfo,v 1.3 2012/01/22 13:21:47 airhead Exp $
 
-SHA1 (stfl-0.21.tar.gz) = 0313eafa1fe4dcfea1f2edd34d453baaa46df277
-RMD160 (stfl-0.21.tar.gz) = d8b56cc97b4d76adba8034ce9bbae631e6e9d17e
-Size (stfl-0.21.tar.gz) = 41093 bytes
+SHA1 (stfl-0.22.tar.gz) = 226488be2b33867dfb233f0fa2dde2d066e494bd
+RMD160 (stfl-0.22.tar.gz) = d76a0ef7a86efcf7c4b25033958f161a7dcc3220
+Size (stfl-0.22.tar.gz) = 41412 bytes
+SHA1 (patch-aa) = 6cb74b444a7923f37e95fd72e48d479175bac462
+SHA1 (patch-ab) = 2edda8ea591b6ff161284112e3f9e0446dfe6b12
