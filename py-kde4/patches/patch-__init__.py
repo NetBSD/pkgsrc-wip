@@ -1,9 +1,9 @@
-$NetBSD: patch-ab,v 1.3 2011/05/13 23:25:15 mwdavies Exp $
+$NetBSD: patch-__init__.py,v 1.1 2012/01/22 22:02:17 mwdavies Exp $
 
 deal with possible lack of DLFCN package as its only on Linux and Solaris
 
---- python/pykde4/__init__.py.orig	2008-07-22 12:00:52.000000000 +1200
-+++ python/pykde4/__init__.py
+--- __init__.py.orig	2008-07-22 12:00:52.000000000 +1200
++++ __init__.py
 @@ -1,4 +1,22 @@
 -import sys,DLFCN
 +import sys
