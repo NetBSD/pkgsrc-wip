@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.27 2012/01/16 22:23:51 absd Exp $
+# $NetBSD: Makefile,v 1.28 2012/01/22 12:45:35 mwdavies Exp $
 
 DISTNAME=	kdelibs-${_KDE_VERSION}
-PKGREVISION=	1
 CATEGORIES=	x11
 COMMENT=	Support libraries for the KDE integrated X11 desktop
 
@@ -74,7 +73,7 @@ BUILDLINK_DEPMETHOD.qt4-tools=		full
 
 BUILDLINK_API_DEPENDS.strigi+=	strigi>=0.5.11
 BUILDLINK_API_DEPENDS.soprano+=	soprano>=2.5.60
-BUILDLINK_API_DEPENDS.shared-desktop-ontologies+=	shared-desktop-ontologies>=0.4
+BUILDLINK_API_DEPENDS.shared-desktop-ontologies+=	shared-desktop-ontologies>=0.6.5
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../archivers/xz/buildlink3.mk"
@@ -102,7 +101,7 @@ BUILDLINK_API_DEPENDS.shared-desktop-ontologies+=	shared-desktop-ontologies>=0.4
 .include "../../textproc/enchant/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
-.include "../../textproc/shared-desktop-ontologies/buildlink3.mk"
+.include "../../wip/shared-desktop-ontologies/buildlink3.mk"
 .include "../../x11/libXScrnSaver/buildlink3.mk"
 .include "../../x11/libXinerama/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"

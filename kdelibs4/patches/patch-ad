@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.4 2012/01/16 22:23:51 absd Exp $
+$NetBSD: patch-ad,v 1.5 2012/01/22 12:45:35 mwdavies Exp $
 
 --- kde3support/kdeui/k3sconfig.cpp.orig	2011-04-01 13:55:50.000000000 +0000
 +++ kde3support/kdeui/k3sconfig.cpp
@@ -6,7 +6,7 @@ $NetBSD: patch-ad,v 1.4 2012/01/16 22:23:51 absd Exp $
    // dictionary path
    QFileInfo dir ("/usr/lib/ispell");
    if (!dir.exists() || !dir.isDir())
-+    dir.setFile ("/usr/pkg/lib");
++    dir.setFile ("@LOCALBASE@/lib");
 +  if (!dir.exists() || !dir.isDir())
      dir.setFile ("/usr/local/lib/ispell");
    if (!dir.exists() || !dir.isDir())
@@ -15,7 +15,7 @@ $NetBSD: patch-ad,v 1.4 2012/01/16 22:23:51 absd Exp $
    if (!dir.exists() || !dir.isDir())
      dir.setFile ("/usr/lib" KDELIBSUFF "/aspell-0.60");
    if (!dir.exists() || !dir.isDir())
-+    dir.setFile ("/usr/pkg/lib");
++    dir.setFile ("@LOCALBASE@/lib");
 +  if (!dir.exists() || !dir.isDir())
      dir.setFile ("/usr/local/lib" KDELIBSUFF "/aspell");
    if (!dir.exists() || !dir.isDir())
@@ -24,7 +24,7 @@ $NetBSD: patch-ad,v 1.4 2012/01/16 22:23:51 absd Exp $
        // dictionary path
        QFileInfo dir ("/usr/lib/ispell");
        if (!dir.exists() || !dir.isDir())
-+        dir.setFile ("/usr/pkg/lib");
++        dir.setFile ("@LOCALBASE@/lib");
 +      if (!dir.exists() || !dir.isDir())
          dir.setFile ("/usr/local/lib/ispell");
        if (!dir.exists() || !dir.isDir())
@@ -33,7 +33,7 @@ $NetBSD: patch-ad,v 1.4 2012/01/16 22:23:51 absd Exp $
        if (!dir.exists() || !dir.isDir())
          dir.setFile ("/usr/lib" KDELIBSUFF "/aspell-0.60");
        if (!dir.exists() || !dir.isDir())
-+        dir.setFile ("/usr/pkg/lib");
++        dir.setFile ("@LOCALBASE@/lib");
 +      if (!dir.exists() || !dir.isDir())
          dir.setFile ("/usr/local/lib" KDELIBSUFF "/aspell");
        if (!dir.exists() || !dir.isDir())
