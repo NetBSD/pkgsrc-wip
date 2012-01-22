@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4611 2012/01/22 22:05:02 mwdavies Exp $
+# $Id: Makefile,v 1.4612 2012/01/22 23:15:13 mwdavies Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1170,6 +1170,7 @@ SUBDIR+=	k3b
 SUBDIR+=	k4dirstat
 SUBDIR+=	kBuild
 SUBDIR+=	kacst-ttf
+SUBDIR+=	kactivities
 SUBDIR+=	kaffe
 SUBDIR+=	kaffe-x11
 SUBDIR+=	kahakai
