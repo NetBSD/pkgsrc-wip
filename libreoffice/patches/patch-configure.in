@@ -1,7 +1,16 @@
-$NetBSD: patch-configure.in,v 1.1 2012/01/22 08:47:00 ftigeot Exp $
+$NetBSD: patch-configure.in,v 1.2 2012/01/22 11:38:17 thomasklausner Exp $
 
---- configure.in.orig	2012-01-13 07:57:46.000000000 +0000
+--- configure.in.orig	2012-01-17 21:49:18.000000000 +0000
 +++ configure.in
+@@ -8883,7 +8883,7 @@ dnl        this should be unified into u
+ 
+ AC_MSG_CHECKING([whether to use the system libjpeg])
+ 
+-if test "$SYSTEM_JPEG" == "YES"; then
++if test "$SYSTEM_JPEG" = "YES"; then
+     SYSTEM_LIBJPEG=YES
+     AC_MSG_RESULT([yes])
+ else
 @@ -9462,7 +9462,7 @@ AC_MSG_RESULT([$DOCDIR])
  AC_SUBST(DOCDIR)
  
