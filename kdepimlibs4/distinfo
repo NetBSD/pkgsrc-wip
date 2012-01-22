@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.26 2011/07/14 12:41:42 mwdavies Exp $
+$NetBSD: distinfo,v 1.27 2012/01/22 12:47:43 mwdavies Exp $
 
-SHA1 (kdepimlibs-4.6.5.tar.bz2) = 6bf82a0934d5a16223f193e848bf3696a40e4820
-RMD160 (kdepimlibs-4.6.5.tar.bz2) = fb3943a0d6c477cd48bf39c3a339c208656475ab
-Size (kdepimlibs-4.6.5.tar.bz2) = 3201672 bytes
+SHA1 (kdepimlibs-4.8.0.tar.bz2) = 01f0b51817715369b78ca804720b945eb8ce9bd3
+RMD160 (kdepimlibs-4.8.0.tar.bz2) = 9c9d2af34ad5f7ac83d9a81c346561635ebc409a
+Size (kdepimlibs-4.8.0.tar.bz2) = 3306836 bytes
 SHA1 (patch-gpgmexx_config-gpgmexx.h.cmake) = bd8fd1e9a619d6bd52185f37adb5dc7f7b97423c

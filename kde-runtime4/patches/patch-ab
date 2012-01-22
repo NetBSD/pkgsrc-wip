@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.4 2011/05/13 23:25:14 mwdavies Exp $
+$NetBSD: patch-ab,v 1.1 2012/01/22 12:53:29 mwdavies Exp $
 
 dont install hicolor/index.theme as hicolor-icon-theme pkg will
 

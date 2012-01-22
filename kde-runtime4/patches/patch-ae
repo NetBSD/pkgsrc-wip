@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.3 2011/05/13 23:25:14 mwdavies Exp $
+$NetBSD: patch-ae,v 1.1 2012/01/22 12:53:30 mwdavies Exp $
 
 --- khelpcenter/searchhandlers/khc_mansearch.pl.orig	2007-12-07 01:20:24.000000000 +1300
 +++ khelpcenter/searchhandlers/khc_mansearch.pl

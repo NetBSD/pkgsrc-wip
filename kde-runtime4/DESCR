@@ -1,4 +1,4 @@
-The kdebase-runtime package is the second mandatory package (besides kdelibs)
+The kde-runtime package is the second mandatory package (besides kdelibs)
 for the K Desktop Environment. Here we have various applications and
 infrastructure files and libraries. Here is an overview of the directories:
 

@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.4 2011/05/13 23:25:14 mwdavies Exp $
+$NetBSD: patch-ag,v 1.1 2012/01/22 12:53:30 mwdavies Exp $
 
 --- khelpcenter/searchhandlers/khc_htdig.pl.cmake.orig	2008-01-31 12:51:37.000000000 +1300
 +++ khelpcenter/searchhandlers/khc_htdig.pl.cmake

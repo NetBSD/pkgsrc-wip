@@ -1,4 +1,4 @@
-$NetBSD: patch-ai,v 1.3 2011/05/13 23:25:14 mwdavies Exp $
+$NetBSD: patch-ai,v 1.1 2012/01/22 12:53:30 mwdavies Exp $
 
 --- kdeeject/kdeeject.orig	2007-12-24 08:03:03.000000000 +1300
 +++ kdeeject/kdeeject

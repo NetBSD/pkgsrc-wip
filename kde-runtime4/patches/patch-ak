@@ -1,4 +1,4 @@
-$NetBSD: patch-ak,v 1.1 2011/05/13 23:25:14 mwdavies Exp $
+$NetBSD: patch-ak,v 1.1 2012/01/22 12:53:30 mwdavies Exp $
 
 To pull in strsignal() on NetBSD<5.99
 
