@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2009/06/21 15:56:38 smoppy Exp $
+$NetBSD: distinfo,v 1.5 2012/01/22 13:29:08 airhead Exp $
 
-SHA1 (newsbeuter-2.0.tar.gz) = b25fb3d742c3f975140365e64861e653026ca12d
-RMD160 (newsbeuter-2.0.tar.gz) = fd860542ca547d9d41cbfa3a12eac38f633830fa
-Size (newsbeuter-2.0.tar.gz) = 335576 bytes
+SHA1 (newsbeuter-2.4.tar.gz) = 7ec6b1d7e390544b4852ce8c8b8b6e3bfe097512
+RMD160 (newsbeuter-2.4.tar.gz) = 5dc6bdf6ec3e1dbc0653649c4a3cb290ee4cdbfb
+Size (newsbeuter-2.4.tar.gz) = 380170 bytes
