@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4610 2012/01/22 12:57:39 mwdavies Exp $
+# $Id: Makefile,v 1.4611 2012/01/22 22:05:02 mwdavies Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1186,7 +1186,6 @@ SUBDIR+=	kdeartwork4
 SUBDIR+=	kde-runtime4
 SUBDIR+=	kdebase-workspace4
 SUBDIR+=	kdebase4
-SUBDIR+=	kdebindings4-python
 SUBDIR+=	kdeedu4
 SUBDIR+=	kdegames4
 SUBDIR+=	kdegraphics4
@@ -2236,6 +2235,7 @@ SUBDIR+=	py-kaa-base
 SUBDIR+=	py-kaa-imlib2
 SUBDIR+=	py-kaa-metadata
 SUBDIR+=	py-kcs11
+SUBDIR+=	py-kde4
 SUBDIR+=	py-keyczar
 SUBDIR+=	py-keyring
 SUBDIR+=	py-kivy
