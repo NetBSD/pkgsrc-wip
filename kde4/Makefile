@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2012/01/23 00:34:17 mwdavies Exp $
+# $NetBSD: Makefile,v 1.32 2012/01/23 11:22:01 mwdavies Exp $
 
 DISTNAME=	kde4-4.8.0
 CATEGORIES=	meta-pkgs x11 kde
@@ -36,10 +36,14 @@ DEPENDS+=	kdelibs4-4.8.0{,nb[0-9]*}:../../wip/kdelibs4
 DEPENDS+=	kdepimlibs4-4.8.0{,nb[0-9]*}:../../wip/kdepimlibs4
 DEPENDS+=	kde-runtime4-4.8.0{,nb[0-9]*}:../../wip/kde-runtime4
 DEPENDS+=	kde-workspace4-4.8.0{,nb[0-9]*}:../../wip/kde-workspace4
-DEPENDS+=	kdebase4-4.6.5{,nb[0-9]*}:../../wip/kdebase4
-DEPENDS+=	kdeaccessibility4-4.6.5{,nb[0-9]*}:../../wip/kdeaccessibility4
+DEPENDS+=	kde-wallpapers4-4.8.0{,nb[0-9]*}:../../wip/kde-wallpapers4
+DEPENDS+=	kde-baseapps4-4.8.0{,nb[0-9]*}:../../wip/kde-baseapps4
+DEPENDS+=	konsole-4.8.0{,nb[0-9]*}:../../wip/konsole
+DEPENDS+=	kmag-4.8.0{,nb[0-9]*}:../../wip/kmag
+DEPENDS+=	kmouth-4.8.0{,nb[0-9]*}:../../wip/kmouth
+DEPENDS+=	kmousetool-4.8.0{,nb[0-9]*}:../../wip/kmousetool
 DEPENDS+=	kdeadmin4-4.6.5{,nb[0-9]*}:../../wip/kdeadmin4
-DEPENDS+=	kdeartwork4-4.6.5{,nb[0-9]*}:../../wip/kdeartwork4
+DEPENDS+=	kdeartwork4-4.8.0{,nb[0-9]*}:../../wip/kdeartwork4
 DEPENDS+=	kdeedu4-4.6.5{,nb[0-9]*}:../../wip/kdeedu4
 DEPENDS+=	kdegames4-4.6.5{,nb[0-9]*}:../../wip/kdegames4
 DEPENDS+=	kdegraphics4-4.6.5{,nb[0-9]*}:../../wip/kdegraphics4
