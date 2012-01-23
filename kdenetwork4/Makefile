@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2011/05/13 23:25:15 mwdavies Exp $
+# $NetBSD: Makefile,v 1.18 2012/01/23 21:00:37 mwdavies Exp $
 
 DISTNAME=	kdenetwork-${_KDE_VERSION}
+PKGNAME=	${DISTNAME:S/-4/4-4/}
 CATEGORIES=	net
 COMMENT=	Network modules for the KDE integrated X11 desktop
 
@@ -17,6 +18,8 @@ CMAKE_ARGS+=	-DWITH_Xmms:BOOL=OFF
 #CMAKE_ARGS+=	-DWITH_LibV4L2:BOOL=OFF
 
 REPLACE_PERL+= \
+	kget/conf/kget_limitdownloads.pl \
+	kget/conf/kget_sensitive.pl \
 	kopete/kopete/kconf_update/kopete-account-0.10.pl \
 	kopete/kopete/kconf_update/kopete-gaim_to_pidgin_style.pl \
 	kopete/kopete/kconf_update/kopete-initialstatus.pl \
@@ -30,6 +33,7 @@ REPLACE_SH+= \
 
 .include "../../wip/kde4/kde4.mk"
 
+.include "../../audio/alsa-lib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libmsn+=  libmsn>=4.1
 .include "../../chat/libmsn/buildlink3.mk"
 .include "../../chat/libotr/buildlink3.mk"
@@ -41,15 +45,18 @@ BUILDLINK_API_DEPENDS.libmsn+=  libmsn>=4.1
 .include "../../graphics/libv4l/buildlink3.mk"
 .include "../../graphics/qimageblitz/buildlink3.mk"
 .include "../../wip/kdepimlibs4/buildlink3.mk"
+# libmms-0.6 has a broken header file. comment out till 0.6.2 in pkgsrc
+BUILDLINK_API_DEPENDS.libmms+=  libmms>=0.6.2
+#.include "../../net/libmms/buildlink3.mk"
 .include "../../net/libvncserver/buildlink3.mk"
 .include "../../net/openslp/buildlink3.mk"
 .include "../../net/ortp/buildlink3.mk"
 .include "../../security/qca2/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../wip/kdelibs4/buildlink3.mk"
-.include "../../wip/kdebase4/buildlink3.mk"
-.include "../../wip/kdebase-runtime4/buildlink3.mk"
-.include "../../wip/kdebase-workspace4/buildlink3.mk"
+.include "../../wip/kde-baseapps4/buildlink3.mk"
+.include "../../wip/kde-runtime4/buildlink3.mk"
+.include "../../wip/kde-workspace4/buildlink3.mk"
 .include "../../x11/libXScrnSaver/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
