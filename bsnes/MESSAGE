@@ -1,0 +1,8 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2012/01/23 09:31:10 thomasklausner Exp $
+
+To use the cheats database, copy it to your config directory:
+	mkdir -p ~/.config/bsnes
+	cp ${PREFIX}/share/doc/bsnes/cheats.xml ~/.config/bsnes/cheats.xml
+
+===========================================================================
