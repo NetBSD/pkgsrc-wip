@@ -16,15 +16,3 @@ where thread stacks cannot grow arbitrarily large.
 On large inputs, RE2 is often much faster than backtracking
 engines; its use of automata theory lets it apply optimizations
 that the others cannot.
-
-Unlike most automata-based engines, RE2 implements almost all
-the common Perl and PCRE features and syntactic sugars. It also
-finds the leftmost-first match, the same match that Perl would,
-and can return submatch information. The one significant
-exception is that RE2 drops support for backreferences¹ and
-generalized zero-width assertions, because they cannot be
-implemented efficiently. The syntax page gives full details.
-
-For those who want a simpler syntax, RE2 has a POSIX mode that
-accepts only the POSIX egrep operators and implements
-leftmost-longest overall matching.

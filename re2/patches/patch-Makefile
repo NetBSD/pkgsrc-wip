@@ -1,14 +1,16 @@
-$NetBSD: patch-Makefile,v 1.1.1.1 2011/08/27 18:45:02 asau Exp $
+$NetBSD: patch-Makefile,v 1.2 2012/01/23 11:57:34 thomasklausner Exp $
 
---- Makefile.orig	2011-07-04 11:58:03.000000000 +0000
+Change some settings so they can be overridden by pkgsrc.
+
+--- Makefile.orig	2012-01-23 11:51:01.000000000 +0000
 +++ Makefile
 @@ -9,25 +9,25 @@ all: obj/libre2.a obj/so/libre2.so
  # CCPCRE=-I/usr/local/include -DUSEPCRE
  # LDPCRE=-L/usr/local/lib -lpcre
  
--CC=g++
+-CXX=g++
 -CXXFLAGS=-Wall -O3 -g -pthread  # can override
-+CC?=g++
++CXX?=g++
 +CXXFLAGS?=-Wall -O3 -g -pthread  # can override
  RE2_CXXFLAGS=-Wno-sign-compare -c -I. $(CCPCRE)  # required
 -LDFLAGS=-pthread
@@ -25,7 +27,7 @@ $NetBSD: patch-Makefile,v 1.1.1.1 2011/08/27 18:45:02 asau Exp $
  # Variables mandated by GNU, the arbiter of all good taste on the internet.
  # http://www.gnu.org/prep/standards/standards.html
 -prefix=/usr/local
-+prefix=	$(PREFIX)
++prefix=$(PREFIX)
  exec_prefix=$(prefix)
  bindir=$(exec_prefix)/bin
  includedir=$(prefix)/include
