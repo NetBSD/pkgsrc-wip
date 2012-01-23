@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4615 2012/01/23 10:21:05 mwdavies Exp $
+# $Id: Makefile,v 1.4616 2012/01/23 11:13:08 mwdavies Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1215,6 +1215,7 @@ SUBDIR+=	kmymoney-svn
 SUBDIR+=	knutclient
 SUBDIR+=	koffice
 SUBDIR+=	koha
+SUBDIR+=	konsole
 SUBDIR+=	korelib
 SUBDIR+=	kpanta
 SUBDIR+=	kplayer
