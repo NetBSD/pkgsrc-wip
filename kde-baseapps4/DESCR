@@ -15,8 +15,6 @@ Environment.
     File find utility (standalone and in Konqueror's file manager).
 * konqueror
     The file manager and web browser you get easily used to.
-* konsole
-    A shell program similar to xterm.
 * kdepasswd
     A KDE frontend for passwd. Also contains the "Password & User
     Information" KCM.
