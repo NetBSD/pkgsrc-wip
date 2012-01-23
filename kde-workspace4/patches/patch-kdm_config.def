@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.5 2011/05/13 23:25:14 mwdavies Exp $
+$NetBSD: patch-kdm_config.def,v 1.1 2012/01/23 00:30:35 mwdavies Exp $
 
 NetBSD server args
 

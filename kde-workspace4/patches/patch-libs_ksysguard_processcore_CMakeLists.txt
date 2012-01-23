@@ -1,4 +1,4 @@
-$NetBSD: patch-ca,v 1.3 2011/05/13 23:25:14 mwdavies Exp $
+$NetBSD: patch-libs_ksysguard_processcore_CMakeLists.txt,v 1.1 2012/01/23 00:30:35 mwdavies Exp $
 
 --- libs/ksysguard/processcore/CMakeLists.txt.orig	2010-06-16 12:02:57.000000000 +0000
 +++ libs/ksysguard/processcore/CMakeLists.txt

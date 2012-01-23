@@ -1,4 +1,4 @@
-$NetBSD: patch-be,v 1.5 2011/05/13 23:25:14 mwdavies Exp $
+$NetBSD: patch-ksysguard_ksysguardd_NetBSD_Memory.h,v 1.1 2012/01/23 00:30:35 mwdavies Exp $
 
 --- ksysguard/ksysguardd/NetBSD/Memory.h.orig	2008-01-05 12:55:45.000000000 +1300
 +++ ksysguard/ksysguardd/NetBSD/Memory.h

@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.4 2011/05/13 23:25:14 mwdavies Exp $
+$NetBSD: patch-startkde.cmake,v 1.1 2012/01/23 00:30:35 mwdavies Exp $
 
 --- startkde.cmake.orig	2007-11-29 02:29:24.000000000 +1300
 +++ startkde.cmake

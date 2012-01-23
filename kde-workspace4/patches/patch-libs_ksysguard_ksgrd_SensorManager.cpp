@@ -1,7 +1,7 @@
-$NetBSD: patch-bb,v 1.6 2011/05/13 23:25:14 mwdavies Exp $
+$NetBSD: patch-libs_ksysguard_ksgrd_SensorManager.cpp,v 1.1 2012/01/23 00:30:35 mwdavies Exp $
 
---- ksysguard/gui/ksgrd/SensorManager.cpp.orig	2011-04-01 10:52:43.000000000 +0000
-+++ ksysguard/gui/ksgrd/SensorManager.cpp
+--- libs/ksysguard/ksgrd/SensorManager.cpp.orig	2011-04-01 10:52:43.000000000 +0000
++++ libs/ksysguard/ksgrd/SensorManager.cpp
 @@ -81,6 +81,7 @@ void SensorManager::retranslate()
    mDict.insert( QLatin1String( "wired" ), i18n( "Wired Memory" ) );
    mDict.insert( QLatin1String( "execpages" ), i18n( "Exec Pages" ) );

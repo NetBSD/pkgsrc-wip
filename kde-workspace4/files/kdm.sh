@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: kdm.sh,v 1.3 2011/05/13 23:25:14 mwdavies Exp $
+# $NetBSD: kdm.sh,v 1.1 2012/01/23 00:30:35 mwdavies Exp $
 #
 
 # PROVIDE: kdm

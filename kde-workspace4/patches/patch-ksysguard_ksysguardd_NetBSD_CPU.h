@@ -1,4 +1,4 @@
-$NetBSD: patch-bo,v 1.3 2011/05/13 23:25:14 mwdavies Exp $
+$NetBSD: patch-ksysguard_ksysguardd_NetBSD_CPU.h,v 1.1 2012/01/23 00:30:35 mwdavies Exp $
 
 --- ksysguard/ksysguardd/NetBSD/CPU.h.save	2006-10-26 15:12:41.000000000 +1300
 +++ ksysguard/ksysguardd/NetBSD/CPU.h

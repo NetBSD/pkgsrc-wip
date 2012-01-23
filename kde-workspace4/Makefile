@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2011/12/27 10:08:50 absd Exp $
+# $NetBSD: Makefile,v 1.1 2012/01/23 00:30:35 mwdavies Exp $
 
-DISTNAME=	kdebase-workspace-${_KDE_VERSION}
+DISTNAME=	kde-workspace-${_KDE_VERSION}
+PKGNAME=	${DISTNAME:S/-4/4-4/}
 CATEGORIES=	x11
 COMMENT=	Base workspace for the KDE 4 integrated X11 desktop
 
@@ -28,7 +29,7 @@ CONF_FILES=		${PREFIX}/share/kde/config/kdm/kdmrc \
 			${PKG_SYSCONFDIR}/kdm/kdmrc
 OWN_DIRS=		${PKG_SYSCONFDIR}/kdm
 
-CONF_FILES+=		${PREFIX}/share/examples/kdebase-workspace4/ksysguarddrc \
+CONF_FILES+=		${PREFIX}/share/examples/kde-workspace4/ksysguarddrc \
 			${PKG_SYSCONFDIR}/ksysguarddrc
 CONF_FILES+=		${PREFIX}/share/examples/kde4-dbus/org.kde.ksysguard.processlisthelper.conf \
 			${PKG_SYSCONFDIR}/dbus-1/system.d/org.kde.ksysguard.processlisthelper.conf
@@ -110,14 +111,16 @@ PYTHON_VERSIONS_ACCEPTED= 27 26 25 # because kdebindings4-python
 .include "../../devel/libusb/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/qimageblitz/buildlink3.mk"
+.include "../../wip/kactivities/buildlink3.mk"
 .include "../../security/polkit-qt/buildlink3.mk"
 # not yet - causes kdm logins to fail, presumably because
 #  I don't know how consolekit works
 #.include "../../sysutils/consolekit/buildlink3.mk"
+.include "../../sysutils/pciutils/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/iso-codes/buildlink3.mk"
 .include "../../wip/phonon/buildlink3.mk"
-.include "../../wip/kdebindings4-python/buildlink3.mk"
+.include "../../wip/py-kde4/buildlink3.mk"
 .include "../../wip/kdelibs4/buildlink3.mk"
 .include "../../wip/kdepimlibs4/buildlink3.mk"
 .include "../../x11/libxklavier/buildlink3.mk"

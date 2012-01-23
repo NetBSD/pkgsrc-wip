@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.4 2011/05/13 23:25:14 mwdavies Exp $
+$NetBSD: patch-kdm_kcm_main.cpp,v 1.1 2012/01/23 00:30:35 mwdavies Exp $
 
 Allow $PKG_SYSCONFDIR/kdm/kdmrc to override the one under $PREFIX
 

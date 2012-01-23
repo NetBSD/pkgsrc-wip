@@ -1,4 +1,4 @@
-$NetBSD: patch-ah,v 1.3 2011/05/13 23:25:14 mwdavies Exp $
+$NetBSD: patch-kcontrol_keyboard_xkb_rules.cpp,v 1.1 2012/01/23 00:30:35 mwdavies Exp $
 
 Handle location of xkb/rules in NetBSD's intree X11R7
 (/usr/X11R7/lib/X11/xkb/rules)

@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.7 2011/05/13 23:25:14 mwdavies Exp $
+$NetBSD: patch-kdm_kfrontend_CMakeLists.txt,v 1.1 2012/01/23 00:30:35 mwdavies Exp $
 
 --- kdm/kfrontend/CMakeLists.txt.orig	2010-03-10 10:42:50.000000000 +0000
 +++ kdm/kfrontend/CMakeLists.txt

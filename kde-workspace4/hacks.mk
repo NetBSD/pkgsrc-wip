@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.3 2011/05/13 23:25:14 mwdavies Exp $
+# $NetBSD: hacks.mk,v 1.1 2012/01/23 00:30:35 mwdavies Exp $
 
 .if !defined(KDEBASE4_HACKS_MK)
 KDEBASE4_HACKS_MK=	# defined
@@ -13,3 +13,7 @@ post-wrapper:
 .endif
 
 .endif
+
+# fix up buildlinks failure to build link tree correctly
+post-wrapper:
+	ln -s netbsd-g++ ${BUILDLINK_DIR}/qt4/mkspecs/default
