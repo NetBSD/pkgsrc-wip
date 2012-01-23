@@ -1,16 +1,17 @@
-$NetBSD: distinfo,v 1.4 2011/12/05 11:34:37 fhajny Exp $
+$NetBSD: distinfo,v 1.5 2012/01/23 14:04:24 fhajny Exp $
 
 SHA1 (innostore-1.0.3.tar.gz) = 4b2c883ae454aae7bee9b79d4b479f0040c4e104
 RMD160 (innostore-1.0.3.tar.gz) = be4134c2176dbc8078f120767c8bb14b4a346928
 Size (innostore-1.0.3.tar.gz) = 1646491 bytes
-SHA1 (riak-1.0.2.tar.gz) = 252ab9a198816c892ba98a66d91e629778624e23
-RMD160 (riak-1.0.2.tar.gz) = a5f96575cf5665a99e10fb36c9a2587ae408bfb2
-Size (riak-1.0.2.tar.gz) = 9151355 bytes
+SHA1 (riak-1.0.3.tar.gz) = 863533b78b2bb9ada1dab9865177d0d351dea25c
+RMD160 (riak-1.0.3.tar.gz) = a16638d5809fa492213deed902c0c6b4142b02bb
+Size (riak-1.0.3.tar.gz) = 8902174 bytes
+SHA1 (patch-__innostore-1.0.3__rebar.config) = 809025397932bd53b7fd433187721e53e7c7b7e5
 SHA1 (patch-deps__ebloom__rebar.config) = 02dcb813fc5853ad7d321231ddcec58c349ab6ca
 SHA1 (patch-deps__erlang_js__c_src__Makefile) = 0bbf2572e377218394a3ee2c06a05ce64ff3128e
 SHA1 (patch-package__Makefile) = 789b7da173addf076ab5de30dc718031feaeef96
-SHA1 (patch-rebar.config) = 809025397932bd53b7fd433187721e53e7c7b7e5
+SHA1 (patch-rebar.config) = 861d3159da5489fd30995ea0ca6aa1dd3b845547
 SHA1 (patch-rel__files__app.config) = 6af20d11cd68c29fcb2175d8838e3b93cd54929a
 SHA1 (patch-rel__files__riak) = 2fee6c5e4c6fa11e89c5d9f432a7a51619924bec
 SHA1 (patch-rel__files__riak-admin) = ae90938e0e67f9241eb5285ef14393c28a1bf50b
-SHA1 (patch-rel__vars.config) = 883397c1d5a21b8224bcf88c63043cc36bc42dd4
+SHA1 (patch-rel__vars.config) = 6b1dc9c415ac31e6b1657e03b17442de113cc0b4
