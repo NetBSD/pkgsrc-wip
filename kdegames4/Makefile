@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2011/05/13 23:25:15 mwdavies Exp $
+# $NetBSD: Makefile,v 1.10 2012/01/23 20:50:09 mwdavies Exp $
 
 DISTNAME=	kdegames-${_KDE_VERSION}
+PKGNAME=	${DISTNAME:S/-4/4-4/}
 CATEGORIES=	games
 COMMENT=	Games for the KDE integrated X11 desktop
 
@@ -22,6 +23,8 @@ REPLACE_PYTHON+=	kajongg/src/server.py
 
 .include "../../wip/kde4/kde4.mk"
 
+.include "../../audio/openal/buildlink3.mk"
+.include "../../audio/libsndfile/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../lang/python/application.mk"
 # don't add python include dir to include path
@@ -32,7 +35,7 @@ BUILDLINK_INCDIRS.${PYPACKAGE}=
 .include "../../security/qca2/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../wip/kdelibs4/buildlink3.mk"
-.include "../../wip/kdebase-runtime4/buildlink3.mk"
-.include "../../wip/kdebindings4-python/buildlink3.mk"
+.include "../../wip/kde-runtime4/buildlink3.mk"
+.include "../../wip/py-kde4/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2011/05/13 23:25:15 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.17 2012/01/23 20:50:09 mwdavies Exp $
 bin/bomber
 bin/bovo
 bin/granatier
@@ -39,7 +39,6 @@ bin/ksudoku
 bin/ktron
 bin/ktuberling
 bin/kubrick
-bin/libpala-puzzlebuilder
 bin/lskat
 bin/palapeli
 include/KDE/KCardDialog
@@ -178,19 +177,19 @@ lib/libkdegames.so.5
 lib/libkdegames.so.5.1.0
 lib/libkggzgames.so
 lib/libkggzgames.so.4
-lib/libkggzgames.so.4.6.0
+lib/libkggzgames.so.4.8.0
 lib/libkggzmod.so
 lib/libkggzmod.so.4
-lib/libkggzmod.so.4.6.0
+lib/libkggzmod.so.4.8.0
 lib/libkggznet.so
 lib/libkggznet.so.4
-lib/libkggznet.so.4.6.0
+lib/libkggznet.so.4.8.0
 lib/libkmahjongglib.so
 lib/libkmahjongglib.so.4
-lib/libkmahjongglib.so.4.6.0
+lib/libkmahjongglib.so.4.8.0
 lib/libkolfprivate.so
 lib/libkolfprivate.so.4
-lib/libkolfprivate.so.4.6.0
+lib/libkolfprivate.so.4.8.0
 lib/libpala.so
 lib/libpala.so.0
 lib/libpala.so.0.2.0
@@ -515,6 +514,7 @@ share/doc/kde/HTML/en/palapeli/puzzletable1.png
 share/icons/hicolor/128x128/apps/bomber.png
 share/icons/hicolor/128x128/apps/bovo.png
 share/icons/hicolor/128x128/apps/granatier.png
+share/icons/hicolor/128x128/apps/kajongg.png
 share/icons/hicolor/128x128/apps/kapman.png
 share/icons/hicolor/128x128/apps/katomic.png
 share/icons/hicolor/128x128/apps/kbattleship.png
@@ -555,6 +555,7 @@ share/icons/hicolor/128x128/mimetypes/application-x-palapeli.png
 share/icons/hicolor/128x128/mimetypes/application-x-tuberling.png
 share/icons/hicolor/16x16/apps/bovo.png
 share/icons/hicolor/16x16/apps/granatier.png
+share/icons/hicolor/16x16/apps/kajongg.png
 share/icons/hicolor/16x16/apps/kapman.png
 share/icons/hicolor/16x16/apps/katomic.png
 share/icons/hicolor/16x16/apps/kbattleship.png
@@ -595,6 +596,7 @@ share/icons/hicolor/16x16/mimetypes/application-x-palapeli.png
 share/icons/hicolor/16x16/mimetypes/application-x-tuberling.png
 share/icons/hicolor/22x22/apps/bovo.png
 share/icons/hicolor/22x22/apps/granatier.png
+share/icons/hicolor/22x22/apps/kajongg.png
 share/icons/hicolor/22x22/apps/kapman.png
 share/icons/hicolor/22x22/apps/katomic.png
 share/icons/hicolor/22x22/apps/kbattleship.png
@@ -638,6 +640,7 @@ share/icons/hicolor/256x256/apps/kpat.png
 share/icons/hicolor/32x32/apps/bomber.png
 share/icons/hicolor/32x32/apps/bovo.png
 share/icons/hicolor/32x32/apps/granatier.png
+share/icons/hicolor/32x32/apps/kajongg.png
 share/icons/hicolor/32x32/apps/kapman.png
 share/icons/hicolor/32x32/apps/katomic.png
 share/icons/hicolor/32x32/apps/kbattleship.png
@@ -679,6 +682,7 @@ share/icons/hicolor/32x32/mimetypes/application-x-tuberling.png
 share/icons/hicolor/48x48/apps/bomber.png
 share/icons/hicolor/48x48/apps/bovo.png
 share/icons/hicolor/48x48/apps/granatier.png
+share/icons/hicolor/48x48/apps/kajongg.png
 share/icons/hicolor/48x48/apps/kapman.png
 share/icons/hicolor/48x48/apps/katomic.png
 share/icons/hicolor/48x48/apps/kbattleship.png
@@ -719,6 +723,7 @@ share/icons/hicolor/48x48/mimetypes/application-x-tuberling.png
 share/icons/hicolor/64x64/apps/bomber.png
 share/icons/hicolor/64x64/apps/bovo.png
 share/icons/hicolor/64x64/apps/granatier.png
+share/icons/hicolor/64x64/apps/kajongg.png
 share/icons/hicolor/64x64/apps/kapman.png
 share/icons/hicolor/64x64/apps/katomic.png
 share/icons/hicolor/64x64/apps/kbattleship.png
@@ -1060,6 +1065,8 @@ share/kde/apps/kajongg/humanclient.pyc
 share/kde/apps/kajongg/kajongg.py
 share/kde/apps/kajongg/kajonggserver.py
 share/kde/apps/kajongg/kajonggui.rc
+share/kde/apps/kajongg/kde.py
+share/kde/apps/kajongg/kde.pyc
 share/kde/apps/kajongg/meld.py
 share/kde/apps/kajongg/meld.pyc
 share/kde/apps/kajongg/message.py
@@ -1068,6 +1075,8 @@ share/kde/apps/kajongg/modeltest.py
 share/kde/apps/kajongg/modeltest.pyc
 share/kde/apps/kajongg/move.py
 share/kde/apps/kajongg/move.pyc
+share/kde/apps/kajongg/player.py
+share/kde/apps/kajongg/player.pyc
 share/kde/apps/kajongg/playerlist.py
 share/kde/apps/kajongg/playerlist.pyc
 share/kde/apps/kajongg/playfield.py
@@ -1099,6 +1108,8 @@ share/kde/apps/kajongg/tileset.pyc
 share/kde/apps/kajongg/tilesetselector.py
 share/kde/apps/kajongg/tilesetselector.pyc
 share/kde/apps/kajongg/tilesetselector.ui
+share/kde/apps/kajongg/tree.py
+share/kde/apps/kajongg/tree.pyc
 share/kde/apps/kajongg/uiwall.py
 share/kde/apps/kajongg/uiwall.pyc
 share/kde/apps/kajongg/util.py
@@ -1217,6 +1228,8 @@ share/kde/apps/kfourinline/grafix/yellow_reflection.rc
 share/kde/apps/kfourinline/kfourinlineui.rc
 share/kde/apps/kgoldrunner/kgoldrunnerui.rc
 share/kde/apps/kgoldrunner/system/game_CM.txt
+share/kde/apps/kgoldrunner/system/game_GMEP.txt
+share/kde/apps/kgoldrunner/system/game_GMGR.txt
 share/kde/apps/kgoldrunner/system/game_MAZ.txt
 share/kde/apps/kgoldrunner/system/game_cnt.txt
 share/kde/apps/kgoldrunner/system/game_ende.txt
@@ -1240,16 +1253,16 @@ share/kde/apps/kgoldrunner/themes/black-on-white.desktop
 share/kde/apps/kgoldrunner/themes/default.desktop
 share/kde/apps/kgoldrunner/themes/default/actors.svg
 share/kde/apps/kgoldrunner/themes/default/climb.wav
-share/kde/apps/kgoldrunner/themes/default/completed.ogg
-share/kde/apps/kgoldrunner/themes/default/death.ogg
-share/kde/apps/kgoldrunner/themes/default/dig.ogg
-share/kde/apps/kgoldrunner/themes/default/falling.ogg
-share/kde/apps/kgoldrunner/themes/default/gameover.ogg
-share/kde/apps/kgoldrunner/themes/default/gold.ogg
-share/kde/apps/kgoldrunner/themes/default/ladder.ogg
+share/kde/apps/kgoldrunner/themes/default/completed.wav
+share/kde/apps/kgoldrunner/themes/default/death.wav
+share/kde/apps/kgoldrunner/themes/default/dig.wav
+share/kde/apps/kgoldrunner/themes/default/falling.wav
+share/kde/apps/kgoldrunner/themes/default/gameover.wav
+share/kde/apps/kgoldrunner/themes/default/gold.wav
+share/kde/apps/kgoldrunner/themes/default/ladder.wav
 share/kde/apps/kgoldrunner/themes/default/set.svg
 share/kde/apps/kgoldrunner/themes/default/step.wav
-share/kde/apps/kgoldrunner/themes/default/victory.ogg
+share/kde/apps/kgoldrunner/themes/default/victory.wav
 share/kde/apps/kgoldrunner/themes/egypt.desktop
 share/kde/apps/kgoldrunner/themes/egypt/actors.svgz
 share/kde/apps/kgoldrunner/themes/egypt/egypt_kgr.svgz
@@ -1269,6 +1282,9 @@ share/kde/apps/kigo/kigoui.rc
 share/kde/apps/kigo/themes/default.desktop
 share/kde/apps/kigo/themes/kigo_default.png
 share/kde/apps/kigo/themes/kigo_default.svgz
+share/kde/apps/kigo/themes/kigo_plain.png
+share/kde/apps/kigo/themes/kigo_plain.svgz
+share/kde/apps/kigo/themes/plain.desktop
 share/kde/apps/killbots/killbotsui.rc
 share/kde/apps/killbots/rulesets/classic.desktop
 share/kde/apps/killbots/rulesets/daleks.desktop
@@ -1914,8 +1930,6 @@ share/kde/apps/palapeli/collection/european-honey-bee.desktop
 share/kde/apps/palapeli/collection/european-honey-bee.jpg
 share/kde/apps/palapeli/collection/panther-chameleon-female.desktop
 share/kde/apps/palapeli/collection/panther-chameleon-female.jpg
-share/kde/apps/palapeli/palapeli-collectionui.rc
-share/kde/apps/palapeli/palapeli-puzzletableui.rc
 share/kde/apps/palapeli/palapeli.kcfg
 share/kde/apps/palapeli/palapeli.notifyrc
 share/kde/apps/palapeli/palapeliui.rc
@@ -1955,6 +1969,7 @@ share/kde4/services/palapeli_jigsawslicer.desktop
 share/kde4/services/palapeli_rectslicer.desktop
 share/kde4/services/palathumbcreator.desktop
 share/kde4/servicetypes/libpala-slicerplugin.desktop
+share/mime/packages/kpatience.xml
 share/mime/packages/palapeli-mimetypes.xml
 share/sounds/KDiamond-Stone-Drop.ogg
 share/sounds/KDiamond-Stone-Swap.ogg
