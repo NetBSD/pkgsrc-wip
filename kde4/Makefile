@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2012/01/23 11:22:01 mwdavies Exp $
+# $NetBSD: Makefile,v 1.33 2012/01/23 20:54:27 mwdavies Exp $
 
 DISTNAME=	kde4-4.8.0
 CATEGORIES=	meta-pkgs x11 kde
@@ -42,19 +42,19 @@ DEPENDS+=	konsole-4.8.0{,nb[0-9]*}:../../wip/konsole
 DEPENDS+=	kmag-4.8.0{,nb[0-9]*}:../../wip/kmag
 DEPENDS+=	kmouth-4.8.0{,nb[0-9]*}:../../wip/kmouth
 DEPENDS+=	kmousetool-4.8.0{,nb[0-9]*}:../../wip/kmousetool
-DEPENDS+=	kdeadmin4-4.6.5{,nb[0-9]*}:../../wip/kdeadmin4
+DEPENDS+=	kdeadmin4-4.8.0{,nb[0-9]*}:../../wip/kdeadmin4
 DEPENDS+=	kdeartwork4-4.8.0{,nb[0-9]*}:../../wip/kdeartwork4
-DEPENDS+=	kdeedu4-4.6.5{,nb[0-9]*}:../../wip/kdeedu4
-DEPENDS+=	kdegames4-4.6.5{,nb[0-9]*}:../../wip/kdegames4
-DEPENDS+=	kdegraphics4-4.6.5{,nb[0-9]*}:../../wip/kdegraphics4
+#DEPENDS+=	kdeedu4-4.6.5{,nb[0-9]*}:../../wip/kdeedu4
+DEPENDS+=	kdegames4-4.8.0{,nb[0-9]*}:../../wip/kdegames4
+#DEPENDS+=	kdegraphics4-4.6.5{,nb[0-9]*}:../../wip/kdegraphics4
 DEPENDS+=	kdemultimedia4-4.6.5{,nb[0-9]*}:../../wip/kdemultimedia4
-DEPENDS+=	kdenetwork4-4.6.5{,nb[0-9]*}:../../wip/kdenetwork4
+DEPENDS+=	kdenetwork4-4.8.0{,nb[0-9]*}:../../wip/kdenetwork4
 DEPENDS+=	kdepim4-4.4.11.1{,nb[0-9]*}:../../wip/kdepim4
 DEPENDS+=	kdepim-runtime4-4.4.11.1{,nb[0-9]*}:../../wip/kdepim-runtime4
 DEPENDS+=	kdeplasma-addons4-4.6.5{,nb[0-9]*}:../../wip/kdeplasma-addons4
 DEPENDS+=	kdesdk4-4.6.5{,nb[0-9]*}:../../wip/kdesdk4
-DEPENDS+=	kdetoys4-4.6.5{,nb[0-9]*}:../../wip/kdetoys4
-DEPENDS+=	kdeutils4-4.6.5{,nb[0-9]*}:../../wip/kdeutils4
+DEPENDS+=	kdetoys4-4.8.0{,nb[0-9]*}:../../wip/kdetoys4
+#DEPENDS+=	kdeutils4-4.6.5{,nb[0-9]*}:../../wip/kdeutils4
 DEPENDS+=	kdewebdev4-4.6.5{,nb[0-9]*}:../../wip/kdewebdev4
 
 META_PACKAGE=	yes
