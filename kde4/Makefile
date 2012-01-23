@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2012/01/22 12:36:12 mwdavies Exp $
+# $NetBSD: Makefile,v 1.31 2012/01/23 00:34:17 mwdavies Exp $
 
 DISTNAME=	kde4-4.8.0
 CATEGORIES=	meta-pkgs x11 kde
@@ -35,8 +35,8 @@ DEPENDS+=	oxygen-icons-4.8.0{,nb[0-9]*}:../../wip/oxygen-icons
 DEPENDS+=	kdelibs4-4.8.0{,nb[0-9]*}:../../wip/kdelibs4
 DEPENDS+=	kdepimlibs4-4.8.0{,nb[0-9]*}:../../wip/kdepimlibs4
 DEPENDS+=	kde-runtime4-4.8.0{,nb[0-9]*}:../../wip/kde-runtime4
+DEPENDS+=	kde-workspace4-4.8.0{,nb[0-9]*}:../../wip/kde-workspace4
 DEPENDS+=	kdebase4-4.6.5{,nb[0-9]*}:../../wip/kdebase4
-DEPENDS+=	kdebase-workspace4-4.6.5{,nb[0-9]*}:../../wip/kdebase-workspace4
 DEPENDS+=	kdeaccessibility4-4.6.5{,nb[0-9]*}:../../wip/kdeaccessibility4
 DEPENDS+=	kdeadmin4-4.6.5{,nb[0-9]*}:../../wip/kdeadmin4
 DEPENDS+=	kdeartwork4-4.6.5{,nb[0-9]*}:../../wip/kdeartwork4
