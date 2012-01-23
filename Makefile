@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4613 2012/01/23 00:31:57 mwdavies Exp $
+# $Id: Makefile,v 1.4614 2012/01/23 10:20:12 mwdavies Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1184,7 +1184,9 @@ SUBDIR+=	kde4-l10n-ar
 SUBDIR+=	kdeaccessibility4
 SUBDIR+=	kdeadmin4
 SUBDIR+=	kdeartwork4
+SUBDIR+=	kde-baseapps4
 SUBDIR+=	kde-runtime4
+SUBDIR+=	kde-wallpapers4
 SUBDIR+=	kde-workspace4
 SUBDIR+=	kdebase4
 SUBDIR+=	kdeedu4
@@ -1303,6 +1305,7 @@ SUBDIR+=	libisoburn
 SUBDIR+=	libisofs
 SUBDIR+=	libitl
 SUBDIR+=	libjingle
+SUBDIR+=	libkexiv2
 SUBDIR+=	liblingoteach
 SUBDIR+=	liblo
 SUBDIR+=	liblognorm
