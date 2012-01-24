@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2011/07/14 12:41:42 mwdavies Exp $
+# $NetBSD: Makefile,v 1.19 2012/01/24 11:37:02 mwdavies Exp $
 
 DISTNAME=	kdesdk-${_KDE_VERSION}
+PKGNAME=	${DISTNAME:S/-4/4-4/}
 CATEGORIES=	devel
 COMMENT=	Support applications and tools used by KDE developers
 
@@ -104,8 +105,8 @@ BUILDLINK_DEPMETHOD.qt4-tools=	full
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/hunspell/buildlink3.mk"
 .include "../../wip/kdelibs4/buildlink3.mk"
-.include "../../wip/kdebase4/buildlink3.mk"
-.include "../../wip/kdebase-runtime4/buildlink3.mk"
-.include "../../wip/kdebase-workspace4/buildlink3.mk"
+.include "../../wip/kde-baseapps4/buildlink3.mk"
+.include "../../wip/kde-runtime4/buildlink3.mk"
+.include "../../wip/kde-workspace4/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

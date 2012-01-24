@@ -15,4 +15,3 @@ a new KDE application.
 * scheck: An interface style to highlight accel and style guide conflicts
 * kuiviewer: A KPart that lets you view .ui files.
 * umbrello: A UML modeller.
-* kate: A fast and advanced text editor, extensible with nice plugins.
