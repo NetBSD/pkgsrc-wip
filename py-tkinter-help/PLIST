@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/01/24 21:29:24 jihbed Exp $
+${PYSITELIB}/tkhelp.py
+${PYSITELIB}/tkhelp.pyc
+${PYSITELIB}/tkhelp.pyo
