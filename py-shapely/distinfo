@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/01/24 11:03:52 jihbed Exp $
+
+SHA1 (Shapely-1.2.14.tar.gz) = d582d3698144dfb076b02aef0d439cc347897366
+RMD160 (Shapely-1.2.14.tar.gz) = 97c4c393bdf74ca8cf84370a7ad96884264be44a
+Size (Shapely-1.2.14.tar.gz) = 93366 bytes
