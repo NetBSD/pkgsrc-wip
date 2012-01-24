@@ -1,0 +1,13 @@
+pyFormex is a program for generating, transforming and manipulating large
+geometrical models of 3D structures by sequences of mathematical operations.
+Thanks to a powerful (Python based) scripting language, pyFormex is very well
+suited for the automated design of spatial frame structures. It provides a wide
+range of operations on surface meshes, like STL type triangulated surfaces.
+There are provisions to import medical scan images. pyFormex can also be used
+as a pre- and post-processor for Finite  Element analysis programs. Finally,
+it might be used just for creating some nice graphics. Using pyFormex,
+the topology of the elements and the final geometrical form can be decoupled.
+Often, topology is created first and then mapped onto the geometry. Through the
+scripting language, the user can define any sequence of transformations, built
+from provided or user defined functions. This way, building parametric models
+becomes a natural thing

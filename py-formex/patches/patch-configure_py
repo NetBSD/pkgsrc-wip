@@ -1,0 +1,13 @@
+$NetBSD: patch-configure_py,v 1.1.1.1 2012/01/24 21:40:35 jihbed Exp $
+
+--- pyformex/lib/configure_py.orig	2011-12-04 21:24:46.000000000 +0100
++++ pyformex/lib/configure_py	2012-01-06 22:09:22.000000000 +0100
+@@ -50,7 +50,5 @@
+ 
+     for a in sys.argv[1:]:
+ 
+-        if a == '-P':
+-            print find_Python_headers()
+-        elif a == '-N':
++        if a == '-N':
+             print find_Numpy_headers()
