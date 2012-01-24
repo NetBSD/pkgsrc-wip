@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/01/24 21:38:11 jihbed Exp $
+
+SHA1 (pylith-1.6.2.tgz) = 1a543f728e910fb531e9a08212082d70d6f6608b
+RMD160 (pylith-1.6.2.tgz) = c77a9b9219118975391f35c9ca2a6957d527f19c
+Size (pylith-1.6.2.tgz) = 5514934 bytes
+SHA1 (patch-aa) = 87bdea54b54105aaa6d51b026a2dc312cd07568e

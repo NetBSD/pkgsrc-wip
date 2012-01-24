@@ -1,0 +1,29 @@
+--- configure.orig	2011-05-16 23:22:41.000000000 +0100
++++ configure	2011-05-16 23:24:39.000000000 +0100
+@@ -15969,7 +15969,7 @@
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking for numpy python module" >&5
+ $as_echo_n "checking for numpy python module... " >&6; }
+ $PYTHON -c "import numpy" 2>/dev/null
+-if test $? == 0; then
++if test $? = 0; then
+   { $as_echo "$as_me:${as_lineno-$LINENO}: result: found" >&5
+ $as_echo "found" >&6; }
+ else
+@@ -16440,7 +16440,7 @@
+ fi
+ rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
+ 
+-  if test "$set_function_name" == no; then
++  if test "$set_function_name" = no; then
+     { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether C++ compiler defines __FUNCTION__" >&5
+ $as_echo_n "checking whether C++ compiler defines __FUNCTION__... " >&6; }
+     cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+@@ -16468,7 +16468,7 @@
+ rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
+     fi
+ 
+-  if test "$set_function_name" == no; then
++  if test "$set_function_name" = no; then
+     { $as_echo "$as_me:${as_lineno-$LINENO}: checking whether C++ compiler defines __func__" >&5
+ $as_echo_n "checking whether C++ compiler defines __func__... " >&6; }
+     cat confdefs.h - <<_ACEOF >conftest.$ac_ext
