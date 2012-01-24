@@ -1,0 +1,53 @@
+# $NetBSD: apache.conf.dist,v 1.1.1.1 2012/01/24 09:13:07 triaxx Exp $
+#
+# SemanticScuttle configuration file fragment for Apache
+
+<IfModule mod_alias.c>
+  Alias "/bookmarks" "@RCDIR@"
+</IfModule>
+
+<Directory "@RCDIR@">
+  Order allow,deny
+  Allow from all
+</Directory>
+
+<Directory "@RCDIR@/images">
+  Order allow,deny
+  Allow from all
+</Directory>
+
+<Directory "@RCDIR@/inc">
+  Order allow,deny
+  Allow from all
+</Directory>
+
+<Directory "@RCDIR@/tpl">
+  Order deny,allow
+  Deny from all
+</Directory>
+
+#<VirtualHost *:80>
+#  ServerName "bookmarks.example.org"
+#  ServerAdmin "admin@example.org"
+#  DocumentRoot "@RCDIR@"
+#
+#  <Directory "@RCDIR@">
+#    Order allow,deny
+#    Allow from all
+#  </Directory>
+#
+#  <Directory "@RCDIR@/images">
+#    Order allow,deny
+#    Allow from all
+#  </Directory>
+#  
+#  <Directory "@RCDIR@/inc">
+#    Order allow,deny
+#    Allow from all
+#  </Directory>
+#  
+#  <Directory "@RCDIR@/tpl">
+#    Order deny,allow
+#    Deny from all
+#  </Directory>
+#</VirtualHost>

@@ -1,0 +1,17 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2012/01/24 09:13:07 triaxx Exp $
+
+For pkgsrc installations the shaarli package is installed in non-default
+locations:
+
+  Data files:       ${VARBASE}/shaarli/data/
+  Cache directory:  ${VARBASE}/shaarli/tmp/
+  Document root:    ${PREFIX}/share/shaarli/
+
+You will also need to make shaarli accessible through your HTTP server.
+If you are running Apache and ap-php, then you can add the following lines
+to httpd.conf:
+
+	Include ${PKG_SYSCONFDIR}/roundcube.conf
+
+===========================================================================
