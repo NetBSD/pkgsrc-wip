@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.8 2012/01/24 19:40:55 mwdavies Exp $
+# $NetBSD: Makefile,v 1.1 2012/01/24 19:40:55 mwdavies Exp $
 
-DISTNAME=	filelight-${_KDE_VERSION}
-CATEGORIES=	sysutils
-COMMENT=	Graphical filesystem usage monitor
-LICENSE=	gnu-gpl-v3
+DISTNAME=	kate-${_KDE_VERSION}
+CATEGORIES=	devel
+COMMENT=	KDE advanced text editor
 
 .include "../../wip/kde4/Makefile.kde4"
+
+CHECK_PORTABILITY_SKIP+= part/tests/hl/highlight.sh
 
 .include "../../wip/kde4/kde4.mk"
 

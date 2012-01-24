@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2012/01/23 20:54:27 mwdavies Exp $
+# $NetBSD: Makefile,v 1.34 2012/01/24 19:40:54 mwdavies Exp $
 
 DISTNAME=	kde4-4.8.0
 CATEGORIES=	meta-pkgs x11 kde
@@ -47,15 +47,21 @@ DEPENDS+=	kdeartwork4-4.8.0{,nb[0-9]*}:../../wip/kdeartwork4
 #DEPENDS+=	kdeedu4-4.6.5{,nb[0-9]*}:../../wip/kdeedu4
 DEPENDS+=	kdegames4-4.8.0{,nb[0-9]*}:../../wip/kdegames4
 #DEPENDS+=	kdegraphics4-4.6.5{,nb[0-9]*}:../../wip/kdegraphics4
-DEPENDS+=	kdemultimedia4-4.6.5{,nb[0-9]*}:../../wip/kdemultimedia4
+DEPENDS+=	kdemultimedia4-4.8.0{,nb[0-9]*}:../../wip/kdemultimedia4
 DEPENDS+=	kdenetwork4-4.8.0{,nb[0-9]*}:../../wip/kdenetwork4
 DEPENDS+=	kdepim4-4.4.11.1{,nb[0-9]*}:../../wip/kdepim4
 DEPENDS+=	kdepim-runtime4-4.4.11.1{,nb[0-9]*}:../../wip/kdepim-runtime4
 DEPENDS+=	kdeplasma-addons4-4.6.5{,nb[0-9]*}:../../wip/kdeplasma-addons4
-DEPENDS+=	kdesdk4-4.6.5{,nb[0-9]*}:../../wip/kdesdk4
+DEPENDS+=	kdesdk4-4.8.0{,nb[0-9]*}:../../wip/kdesdk4
+DEPENDS+=	kate-4.8.0{,nb[0-9]*}:../../wip/kate
 DEPENDS+=	kdetoys4-4.8.0{,nb[0-9]*}:../../wip/kdetoys4
 #DEPENDS+=	kdeutils4-4.6.5{,nb[0-9]*}:../../wip/kdeutils4
-DEPENDS+=	kdewebdev4-4.6.5{,nb[0-9]*}:../../wip/kdewebdev4
+DEPENDS+=	ark-4.8.0{,nb[0-9]*}:../../wip/ark
+DEPENDS+=	filelight-4.8.0{,nb[0-9]*}:../../wip/filelight
+DEPENDS+=	kcalc-4.8.0{,nb[0-9]*}:../../wip/kcalc
+DEPENDS+=	kcharselect-4.8.0{,nb[0-9]*}:../../wip/kcharselect
+DEPENDS+=	kdf-4.8.0{,nb[0-9]*}:../../wip/kdf
+DEPENDS+=	kdewebdev4-4.8.0{,nb[0-9]*}:../../wip/kdewebdev4
 
 META_PACKAGE=	yes
 

@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4617 2012/01/24 09:19:14 triaxx Exp $
+# $Id: Makefile,v 1.4618 2012/01/24 19:40:54 mwdavies Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -143,6 +143,7 @@ SUBDIR+=	arcem-current
 SUBDIR+=	archimedes
 SUBDIR+=	argouml
 SUBDIR+=	arista
+SUBDIR+=	ark
 SUBDIR+=	arla-3.99.14
 SUBDIR+=	armagetronad
 SUBDIR+=	arora
@@ -1178,7 +1179,10 @@ SUBDIR+=	kahua
 SUBDIR+=	kannel-gateway
 SUBDIR+=	kapital
 SUBDIR+=	katapult
+SUBDIR+=	kate
 SUBDIR+=	kawa
+SUBDIR+=	kcalc
+SUBDIR+=	kcharselect
 SUBDIR+=	kde4
 SUBDIR+=	kde4-l10n-ar
 SUBDIR+=	kdeaccessibility4
@@ -1202,6 +1206,7 @@ SUBDIR+=	kdesdk4
 SUBDIR+=	kdetoys4
 SUBDIR+=	kdeutils4
 SUBDIR+=	kdewebdev4
+SUBDIR+=	kdf
 SUBDIR+=	kdiff3
 SUBDIR+=	kgrab
 SUBDIR+=	kgraphviewer

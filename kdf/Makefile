@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2012/01/24 19:40:55 mwdavies Exp $
+# $NetBSD: Makefile,v 1.1 2012/01/24 19:40:55 mwdavies Exp $
 
-DISTNAME=	filelight-${_KDE_VERSION}
+DISTNAME=	kdf-${_KDE_VERSION}
 CATEGORIES=	sysutils
-COMMENT=	Graphical filesystem usage monitor
-LICENSE=	gnu-gpl-v3
+COMMENT=	show mount points and disk usage under KDE desktop
 
 .include "../../wip/kde4/Makefile.kde4"
 
