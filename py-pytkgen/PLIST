@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/01/24 21:32:21 jihbed Exp $
+${PYSITELIB}/tkgen/__init__.py
+${PYSITELIB}/tkgen/__init__.pyc
+${PYSITELIB}/tkgen/__init__.pyo
+${PYSITELIB}/tkgen/gengui.py
+${PYSITELIB}/tkgen/gengui.pyc
+${PYSITELIB}/tkgen/gengui.pyo
