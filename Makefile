@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4621 2012/01/25 11:00:26 mwdavies Exp $
+# $Id: Makefile,v 1.4622 2012/01/25 19:23:38 mwdavies Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1195,7 +1195,6 @@ SUBDIR+=	kde-wallpapers4
 SUBDIR+=	kde-workspace4
 SUBDIR+=	kdeedu4
 SUBDIR+=	kdegames4
-SUBDIR+=	kdegraphics4
 SUBDIR+=	kdelibs4
 SUBDIR+=	kdemultimedia4
 SUBDIR+=	kdenetwork4
@@ -1318,8 +1317,10 @@ SUBDIR+=	libisoburn
 SUBDIR+=	libisofs
 SUBDIR+=	libitl
 SUBDIR+=	libjingle
+SUBDIR+=	libkdcraw
 SUBDIR+=	libkexiv2
 SUBDIR+=	libkipi
+SUBDIR+=	libksane
 SUBDIR+=	liblingoteach
 SUBDIR+=	liblo
 SUBDIR+=	liblognorm
@@ -1665,6 +1666,7 @@ SUBDIR+=	octave
 SUBDIR+=	ode
 SUBDIR+=	ogmrip
 SUBDIR+=	ogre
+SUBDIR+=	okular
 SUBDIR+=	olsrd
 SUBDIR+=	omega
 SUBDIR+=	omniORB
