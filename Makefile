@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4620 2012/01/25 09:23:40 mwdavies Exp $
+# $Id: Makefile,v 1.4621 2012/01/25 11:00:26 mwdavies Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -799,6 +799,7 @@ SUBDIR+=	gupnp-vala
 SUBDIR+=	gurlchecker
 SUBDIR+=	gvariant
 SUBDIR+=	gwget
+SUBDIR+=	gwenview
 SUBDIR+=	gwhois
 SUBDIR+=	gwibber
 SUBDIR+=	gwsmhg
@@ -1183,6 +1184,7 @@ SUBDIR+=	kate
 SUBDIR+=	kawa
 SUBDIR+=	kcalc
 SUBDIR+=	kcharselect
+SUBDIR+=	kcolorchooser
 SUBDIR+=	kde4
 SUBDIR+=	kde4-l10n-ar
 SUBDIR+=	kdeadmin4
@@ -1220,12 +1222,15 @@ SUBDIR+=	kmymoney-svn
 SUBDIR+=	knutclient
 SUBDIR+=	koffice
 SUBDIR+=	koha
+SUBDIR+=	kolourpaint
 SUBDIR+=	konsole
 SUBDIR+=	korelib
 SUBDIR+=	kpanta
 SUBDIR+=	kplayer
 SUBDIR+=	kremotecontrol
+SUBDIR+=	kruler
 SUBDIR+=	krusader
+SUBDIR+=	ksnapshot
 SUBDIR+=	ktimer
 SUBDIR+=	ktjet
 SUBDIR+=	kuickshow
@@ -1314,6 +1319,7 @@ SUBDIR+=	libisofs
 SUBDIR+=	libitl
 SUBDIR+=	libjingle
 SUBDIR+=	libkexiv2
+SUBDIR+=	libkipi
 SUBDIR+=	liblingoteach
 SUBDIR+=	liblo
 SUBDIR+=	liblognorm
