@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2012/01/25 09:30:25 mwdavies Exp $
+# $NetBSD: Makefile,v 1.36 2012/01/25 19:27:28 mwdavies Exp $
 
 DISTNAME=	kde4-4.8.0
 CATEGORIES=	meta-pkgs x11 kde
@@ -46,7 +46,12 @@ DEPENDS+=	kdeadmin4-4.8.0{,nb[0-9]*}:../../wip/kdeadmin4
 DEPENDS+=	kdeartwork4-4.8.0{,nb[0-9]*}:../../wip/kdeartwork4
 #DEPENDS+=	kdeedu4-4.6.5{,nb[0-9]*}:../../wip/kdeedu4
 DEPENDS+=	kdegames4-4.8.0{,nb[0-9]*}:../../wip/kdegames4
-#DEPENDS+=	kdegraphics4-4.6.5{,nb[0-9]*}:../../wip/kdegraphics4
+DEPENDS+=	gwenview-4.8.0{,nb[0-9]*}:../../wip/gwenview
+DEPENDS+=	ksnapshot-4.8.0{,nb[0-9]*}:../../wip/ksnapshot
+DEPENDS+=	kcolorchooser-4.8.0{,nb[0-9]*}:../../wip/kcolorchooser
+DEPENDS+=	kruler-4.8.0{,nb[0-9]*}:../../wip/kruler
+DEPENDS+=	kolourpaint-4.8.0{,nb[0-9]*}:../../wip/kolourpaint
+DEPENDS+=	okular-4.8.0{,nb[0-9]*}:../../wip/okular
 DEPENDS+=	kdemultimedia4-4.8.0{,nb[0-9]*}:../../wip/kdemultimedia4
 DEPENDS+=	kdenetwork4-4.8.0{,nb[0-9]*}:../../wip/kdenetwork4
 DEPENDS+=	kdepim4-4.4.11.1{,nb[0-9]*}:../../wip/kdepim4
