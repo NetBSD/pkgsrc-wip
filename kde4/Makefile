@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2012/01/24 19:40:54 mwdavies Exp $
+# $NetBSD: Makefile,v 1.35 2012/01/25 09:30:25 mwdavies Exp $
 
 DISTNAME=	kde4-4.8.0
 CATEGORIES=	meta-pkgs x11 kde
@@ -55,12 +55,18 @@ DEPENDS+=	kdeplasma-addons4-4.6.5{,nb[0-9]*}:../../wip/kdeplasma-addons4
 DEPENDS+=	kdesdk4-4.8.0{,nb[0-9]*}:../../wip/kdesdk4
 DEPENDS+=	kate-4.8.0{,nb[0-9]*}:../../wip/kate
 DEPENDS+=	kdetoys4-4.8.0{,nb[0-9]*}:../../wip/kdetoys4
-#DEPENDS+=	kdeutils4-4.6.5{,nb[0-9]*}:../../wip/kdeutils4
 DEPENDS+=	ark-4.8.0{,nb[0-9]*}:../../wip/ark
 DEPENDS+=	filelight-4.8.0{,nb[0-9]*}:../../wip/filelight
 DEPENDS+=	kcalc-4.8.0{,nb[0-9]*}:../../wip/kcalc
 DEPENDS+=	kcharselect-4.8.0{,nb[0-9]*}:../../wip/kcharselect
 DEPENDS+=	kdf-4.8.0{,nb[0-9]*}:../../wip/kdf
+DEPENDS+=	kfloppy-4.8.0{,nb[0-9]*}:../../wip/kfloppy
+DEPENDS+=	kremotecontrol-4.8.0{,nb[0-9]*}:../../wip/kremotecontrol
+DEPENDS+=	ktimer-4.8.0{,nb[0-9]*}:../../wip/ktimer
+DEPENDS+=	kwallet-4.8.0{,nb[0-9]*}:../../wip/kwallet
+DEPENDS+=	printer-applet-4.8.0{,nb[0-9]*}:../../wip/printer-applet
+DEPENDS+=	superkaramba-4.8.0{,nb[0-9]*}:../../wip/superkaramba
+DEPENDS+=	sweeper-4.8.0{,nb[0-9]*}:../../wip/sweeper
 DEPENDS+=	kdewebdev4-4.8.0{,nb[0-9]*}:../../wip/kdewebdev4
 
 META_PACKAGE=	yes
