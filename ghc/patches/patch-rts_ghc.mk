@@ -1,4 +1,4 @@
-$NetBSD: patch-rts_ghc.mk,v 1.1 2011/05/06 02:30:25 phonohawk Exp $
+$NetBSD: patch-rts_ghc.mk,v 1.2 2012/01/25 14:09:06 phonohawk Exp $
 
 The first section:
   HC bootstrapping has bitrotted further. We need to build RtsProbes.h
@@ -23,7 +23,7 @@ The second section:
  $(eval $(call build-dependencies,rts,dist,1))
  
  $(rts_dist_depfile_c_asm) : libffi/dist-install/build/ffi.h $(DTRACEPROBES_H)
-+rts/dist/build/Capability.o : $(DTRACEPROBES_H)
++$(patsubst rts/%.c,rts/dist/build/%.o,$(rts_C_SRCS)) : $(DTRACEPROBES_H)
  
  #-----------------------------------------------------------------------------
  # libffi stuff

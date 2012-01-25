@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.14 2011/05/06 02:30:25 phonohawk Exp $
+$NetBSD: distinfo,v 1.15 2012/01/25 14:09:06 phonohawk Exp $
 
 SHA1 (ghc-7.0.3-boot-i386-unknown-freebsd.tar.bz2) = b5cc84b72599dcc8e10295081d6b428ffdd56fcf
 RMD160 (ghc-7.0.3-boot-i386-unknown-freebsd.tar.bz2) = b94b0b8484ea0d1f640f88b8b687804e93671d12
@@ -15,4 +15,4 @@ Size (ghc-7.0.3-src.tar.bz2) = 24201117 bytes
 SHA1 (patch-aa) = 7bf8ef1cdefbb931fd21811a2a2f6fc46cc5a564
 SHA1 (patch-aj) = 7055cdcf6df0b2ea16ba18824fdf804a4bc14938
 SHA1 (patch-configure) = 445b02ac6d9d280460306392722520b3416fba7c
-SHA1 (patch-rts_ghc.mk) = f20f543f06add384236d4be434c63a0bc42ebfa4
+SHA1 (patch-rts_ghc.mk) = 498df608a3709e9b8955b67bede9ba937500ac51
