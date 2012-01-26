@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/12/29 08:43:36 obache Exp $
+# $NetBSD: Makefile,v 1.2 2012/01/26 04:56:23 obache Exp $
 #
 
 DISTNAME=	kytea-0.3.2
@@ -6,7 +6,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	http://www.phontron.com/kytea/download/
 
 MAINTAINER=	obache@users.sourceforge.net
-HOMEPAGE=	http://www.phontron.com/
+HOMEPAGE=	http://www.phontron.com/kytea/
 COMMENT=	Kyoto Text Analysis Toolkit
 LICENSE=	apache-2.0
 
