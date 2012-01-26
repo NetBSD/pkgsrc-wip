@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2012/01/25 19:27:28 mwdavies Exp $
+# $NetBSD: Makefile,v 1.37 2012/01/26 11:14:53 mwdavies Exp $
 
 DISTNAME=	kde4-4.8.0
 CATEGORIES=	meta-pkgs x11 kde
@@ -45,6 +45,16 @@ DEPENDS+=	kmousetool-4.8.0{,nb[0-9]*}:../../wip/kmousetool
 DEPENDS+=	kdeadmin4-4.8.0{,nb[0-9]*}:../../wip/kdeadmin4
 DEPENDS+=	kdeartwork4-4.8.0{,nb[0-9]*}:../../wip/kdeartwork4
 #DEPENDS+=	kdeedu4-4.6.5{,nb[0-9]*}:../../wip/kdeedu4
+DEPENDS+=	marble-4.8.0{,nb[0-9]*}:../../wip/marble
+DEPENDS+=	blinken-4.8.0{,nb[0-9]*}:../../wip/blinken
+DEPENDS+=	analitza-4.8.0{,nb[0-9]*}:../../wip/analitza
+DEPENDS+=	cantor-4.8.0{,nb[0-9]*}:../../wip/cantor
+DEPENDS+=	kalgebra-4.8.0{,nb[0-9]*}:../../wip/kalgebra
+DEPENDS+=	kalzium-4.8.0{,nb[0-9]*}:../../wip/kalzium
+DEPENDS+=	kanagram-4.8.0{,nb[0-9]*}:../../wip/kanagram
+DEPENDS+=	kbruch-4.8.0{,nb[0-9]*}:../../wip/kbruch
+DEPENDS+=	kgeography-4.8.0{,nb[0-9]*}:../../wip/kgeography
+DEPENDS+=	khangman-4.8.0{,nb[0-9]*}:../../wip/khangman
 DEPENDS+=	kdegames4-4.8.0{,nb[0-9]*}:../../wip/kdegames4
 DEPENDS+=	gwenview-4.8.0{,nb[0-9]*}:../../wip/gwenview
 DEPENDS+=	ksnapshot-4.8.0{,nb[0-9]*}:../../wip/ksnapshot
@@ -56,7 +66,7 @@ DEPENDS+=	kdemultimedia4-4.8.0{,nb[0-9]*}:../../wip/kdemultimedia4
 DEPENDS+=	kdenetwork4-4.8.0{,nb[0-9]*}:../../wip/kdenetwork4
 DEPENDS+=	kdepim4-4.4.11.1{,nb[0-9]*}:../../wip/kdepim4
 DEPENDS+=	kdepim-runtime4-4.4.11.1{,nb[0-9]*}:../../wip/kdepim-runtime4
-DEPENDS+=	kdeplasma-addons4-4.6.5{,nb[0-9]*}:../../wip/kdeplasma-addons4
+DEPENDS+=	kdeplasma-addons4-4.8.0{,nb[0-9]*}:../../wip/kdeplasma-addons4
 DEPENDS+=	kdesdk4-4.8.0{,nb[0-9]*}:../../wip/kdesdk4
 DEPENDS+=	kate-4.8.0{,nb[0-9]*}:../../wip/kate
 DEPENDS+=	kdetoys4-4.8.0{,nb[0-9]*}:../../wip/kdetoys4
