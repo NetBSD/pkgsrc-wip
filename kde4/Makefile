@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2012/01/26 11:14:53 mwdavies Exp $
+# $NetBSD: Makefile,v 1.38 2012/01/27 21:34:38 mwdavies Exp $
 
 DISTNAME=	kde4-4.8.0
 CATEGORIES=	meta-pkgs x11 kde
@@ -44,7 +44,6 @@ DEPENDS+=	kmouth-4.8.0{,nb[0-9]*}:../../wip/kmouth
 DEPENDS+=	kmousetool-4.8.0{,nb[0-9]*}:../../wip/kmousetool
 DEPENDS+=	kdeadmin4-4.8.0{,nb[0-9]*}:../../wip/kdeadmin4
 DEPENDS+=	kdeartwork4-4.8.0{,nb[0-9]*}:../../wip/kdeartwork4
-#DEPENDS+=	kdeedu4-4.6.5{,nb[0-9]*}:../../wip/kdeedu4
 DEPENDS+=	marble-4.8.0{,nb[0-9]*}:../../wip/marble
 DEPENDS+=	blinken-4.8.0{,nb[0-9]*}:../../wip/blinken
 DEPENDS+=	analitza-4.8.0{,nb[0-9]*}:../../wip/analitza
@@ -55,6 +54,16 @@ DEPENDS+=	kanagram-4.8.0{,nb[0-9]*}:../../wip/kanagram
 DEPENDS+=	kbruch-4.8.0{,nb[0-9]*}:../../wip/kbruch
 DEPENDS+=	kgeography-4.8.0{,nb[0-9]*}:../../wip/kgeography
 DEPENDS+=	khangman-4.8.0{,nb[0-9]*}:../../wip/khangman
+DEPENDS+=	kig-4.8.0{,nb[0-9]*}:../../wip/kig
+DEPENDS+=	kiten-4.8.0{,nb[0-9]*}:../../wip/kiten
+DEPENDS+=	klettres-4.8.0{,nb[0-9]*}:../../wip/klettres
+DEPENDS+=	kstars-4.8.0{,nb[0-9]*}:../../wip/kstars
+DEPENDS+=	ktouch-4.8.0{,nb[0-9]*}:../../wip/ktouch
+DEPENDS+=	kturtle-4.8.0{,nb[0-9]*}:../../wip/kturtle
+DEPENDS+=	kwordquiz-4.8.0{,nb[0-9]*}:../../wip/kwordquiz
+DEPENDS+=	parley-4.8.0{,nb[0-9]*}:../../wip/parley
+DEPENDS+=	rocs-4.8.0{,nb[0-9]*}:../../wip/rocs
+DEPENDS+=	step-4.8.0{,nb[0-9]*}:../../wip/step
 DEPENDS+=	kdegames4-4.8.0{,nb[0-9]*}:../../wip/kdegames4
 DEPENDS+=	gwenview-4.8.0{,nb[0-9]*}:../../wip/gwenview
 DEPENDS+=	ksnapshot-4.8.0{,nb[0-9]*}:../../wip/ksnapshot
