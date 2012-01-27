@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2012/01/27 21:34:38 mwdavies Exp $
+# $NetBSD: Makefile,v 1.39 2012/01/27 22:02:38 mwdavies Exp $
 
 DISTNAME=	kde4-4.8.0
 CATEGORIES=	meta-pkgs x11 kde
@@ -71,6 +71,9 @@ DEPENDS+=	kcolorchooser-4.8.0{,nb[0-9]*}:../../wip/kcolorchooser
 DEPENDS+=	kruler-4.8.0{,nb[0-9]*}:../../wip/kruler
 DEPENDS+=	kolourpaint-4.8.0{,nb[0-9]*}:../../wip/kolourpaint
 DEPENDS+=	okular-4.8.0{,nb[0-9]*}:../../wip/okular
+DEPENDS+=	kdegraphics-mobipocket-4.8.0{,nb[0-9]*}:../../wip/kdegraphics-mobipocket
+DEPENDS+=	kdegraphics-strigi-analyzer-4.8.0{,nb[0-9]*}:../../wip/kdegraphics-strigi-analyzer
+DEPENDS+=	kdegraphics-thumbnailers-4.8.0{,nb[0-9]*}:../../wip/kdegraphics-thumbnailers
 DEPENDS+=	kdemultimedia4-4.8.0{,nb[0-9]*}:../../wip/kdemultimedia4
 DEPENDS+=	kdenetwork4-4.8.0{,nb[0-9]*}:../../wip/kdenetwork4
 DEPENDS+=	kdepim4-4.4.11.1{,nb[0-9]*}:../../wip/kdepim4
