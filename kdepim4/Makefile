@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2011/05/13 23:25:15 mwdavies Exp $
+# $NetBSD: Makefile,v 1.17 2012/01/27 20:40:10 mwdavies Exp $
 
 #DISTNAME=	kdepim-${_KDE_VERSION}
 DISTNAME=	kdepim-4.4.11.1
+PKGNAME=	${DISTNAME:S/-4/4-4/}
 MASTER_SITES=	${MASTER_SITE_KDE:=kdepim-4.4.11.1/src/}
 CATEGORIES=	misc
 COMMENT=	Personal Information Management tools for the KDE desktop
@@ -68,8 +69,8 @@ BUILDLINK_DEPMETHOD.qt4-tools=full
 .include "../../security/qca2/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../wip/kdelibs4/buildlink3.mk"
-.include "../../wip/kdebase-runtime4/buildlink3.mk"
-.include "../../wip/kdebase-workspace4/buildlink3.mk"
+.include "../../wip/kde-runtime4/buildlink3.mk"
+.include "../../wip/kde-workspace4/buildlink3.mk"
 .include "../../x11/libXScrnSaver/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
