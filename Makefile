@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4623 2012/01/26 11:22:51 mwdavies Exp $
+# $Id: Makefile,v 1.4624 2012/01/27 20:33:15 mwdavies Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1224,7 +1224,9 @@ SUBDIR+=	kicad
 SUBDIR+=	kile
 SUBDIR+=	kino
 SUBDIR+=	kissme
+SUBDIR+=	kiten
 SUBDIR+=	klamav
+SUBDIR+=	klettres
 SUBDIR+=	kmymoney-devel
 SUBDIR+=	kmymoney-svn
 SUBDIR+=	knutclient
@@ -1241,9 +1243,12 @@ SUBDIR+=	krusader
 SUBDIR+=	ksnapshot
 SUBDIR+=	ktimer
 SUBDIR+=	ktjet
+SUBDIR+=	ktouch
+SUBDIR+=	kturtle
 SUBDIR+=	kuickshow
 SUBDIR+=	kvirc
 SUBDIR+=	kwallet
+SUBDIR+=	kwordquiz
 SUBDIR+=	kxmleditor
 SUBDIR+=	kyotocabinet
 SUBDIR+=	kyototycoon
@@ -1948,6 +1953,7 @@ SUBDIR+=	paperbox
 SUBDIR+=	paperkey
 SUBDIR+=	paraview
 SUBDIR+=	parcellite
+SUBDIR+=	parley
 SUBDIR+=	parted
 SUBDIR+=	partonevolution
 SUBDIR+=	pasmo
@@ -2599,6 +2605,7 @@ SUBDIR+=	ripe-rpsl-objectlibrary
 SUBDIR+=	ripit
 SUBDIR+=	ripole
 SUBDIR+=	rnc-mode
+SUBDIR+=	rocs
 SUBDIR+=	rolo
 SUBDIR+=	rootcheck
 SUBDIR+=	rope
@@ -2756,6 +2763,7 @@ SUBDIR+=	ssid
 SUBDIR+=	ssu
 SUBDIR+=	stardict
 SUBDIR+=	stardict-tools
+SUBDIR+=	step
 SUBDIR+=	stfl
 SUBDIR+=	stksolver
 SUBDIR+=	stmpclean
