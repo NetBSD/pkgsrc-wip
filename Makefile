@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4624 2012/01/27 20:33:15 mwdavies Exp $
+# $Id: Makefile,v 1.4625 2012/01/27 21:33:31 mwdavies Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1200,7 +1200,6 @@ SUBDIR+=	kde-baseapps4
 SUBDIR+=	kde-runtime4
 SUBDIR+=	kde-wallpapers4
 SUBDIR+=	kde-workspace4
-SUBDIR+=	kdeedu4
 SUBDIR+=	kdegames4
 SUBDIR+=	kdelibs4
 SUBDIR+=	kdemultimedia4
@@ -1221,6 +1220,7 @@ SUBDIR+=	kgrab
 SUBDIR+=	kgraphviewer
 SUBDIR+=	khangman
 SUBDIR+=	kicad
+SUBDIR+=	kig
 SUBDIR+=	kile
 SUBDIR+=	kino
 SUBDIR+=	kissme
@@ -1241,6 +1241,7 @@ SUBDIR+=	kremotecontrol
 SUBDIR+=	kruler
 SUBDIR+=	krusader
 SUBDIR+=	ksnapshot
+SUBDIR+=	kstars
 SUBDIR+=	ktimer
 SUBDIR+=	ktjet
 SUBDIR+=	ktouch
