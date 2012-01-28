@@ -1,13 +1,22 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/01/24 09:13:07 triaxx Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/01/28 14:42:42 triaxx Exp $
 share/examples/shaarli/apache.conf
+share/shaarli/images/50pc_transparent.png
+share/shaarli/images/Paper_texture_v5_by_bashcorpo_w1000.jpg
 share/shaarli/images/calendar.png
 share/shaarli/images/delete_icon.png
 share/shaarli/images/edit_icon.png
 share/shaarli/images/favicon.ico
+share/shaarli/images/floral_left.png
+share/shaarli/images/floral_right.png
 share/shaarli/images/logo.png
 share/shaarli/images/private.png
+share/shaarli/images/qrcode.png
+share/shaarli/images/squiggle.png
+share/shaarli/images/squiggle2.png
+share/shaarli/images/squiggle_closing.png
 share/shaarli/images/tag_blue.png
-share/shaarli/inc/jquery-ui.custom.min.js
+share/shaarli/inc/jquery-MIT-LICENSE.txt
+share/shaarli/inc/jquery-ui.min.js
 share/shaarli/inc/jquery.min.js
 share/shaarli/inc/rain.tpl.class.php
 share/shaarli/inc/shaarli.css
@@ -16,6 +25,7 @@ share/shaarli/tpl/addlink.html
 share/shaarli/tpl/changepassword.html
 share/shaarli/tpl/changetag.html
 share/shaarli/tpl/configure.html
+share/shaarli/tpl/daily.html
 share/shaarli/tpl/editlink.html
 share/shaarli/tpl/export.html
 share/shaarli/tpl/import.html

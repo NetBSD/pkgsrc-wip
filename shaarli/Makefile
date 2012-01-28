@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/01/24 09:13:07 triaxx Exp $
+# $NetBSD: Makefile,v 1.2 2012/01/28 14:42:41 triaxx Exp $
 #
 
 PKGNAME=	shaarli-${VERSION}
 DISTNAME=	shaarli_${VERSION}
-VERSION=	0.0.33beta
+VERSION=	0.0.36beta
 CATEGORIES=	www
 MASTER_SITES=	http://sebsauvage.net/files/
 EXTRACT_SUFX=	.zip
