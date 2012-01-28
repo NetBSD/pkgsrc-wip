@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2011/11/18 06:06:09 phonohawk Exp $
+# $NetBSD: Makefile,v 1.8 2012/01/28 14:11:06 phonohawk Exp $
 #
 
-DISTNAME=		cedet-1.0
+DISTNAME=		cedet-1.0.1
 PKGNAME=		${EMACS_PKGNAME_PREFIX}${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=		devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cedet/}
 
