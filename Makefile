@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4627 2012/01/28 19:17:44 mwdavies Exp $
+# $Id: Makefile,v 1.4628 2012/01/28 19:50:31 mwdavies Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1174,6 +1174,7 @@ SUBDIR+=	jython
 SUBDIR+=	k3b
 SUBDIR+=	k4dirstat
 SUBDIR+=	kBuild
+SUBDIR+=	kaccessible
 SUBDIR+=	kacst-ttf
 SUBDIR+=	kactivities
 SUBDIR+=	kaffe
@@ -1218,6 +1219,7 @@ SUBDIR+=	kdewebdev4
 SUBDIR+=	kdf
 SUBDIR+=	kdiff3
 SUBDIR+=	kfloppy
+SUBDIR+=	kgamma
 SUBDIR+=	kgeography
 SUBDIR+=	kgpg
 SUBDIR+=	kgrab
@@ -1244,6 +1246,7 @@ SUBDIR+=	kplayer
 SUBDIR+=	kremotecontrol
 SUBDIR+=	kruler
 SUBDIR+=	krusader
+SUBDIR+=	ksaneplugin
 SUBDIR+=	ksecrets
 SUBDIR+=	ksnapshot
 SUBDIR+=	kstars
