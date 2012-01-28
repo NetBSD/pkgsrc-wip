@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2012/01/27 22:02:38 mwdavies Exp $
+# $NetBSD: Makefile,v 1.40 2012/01/28 19:13:52 mwdavies Exp $
 
 DISTNAME=	kde4-4.8.0
 CATEGORIES=	meta-pkgs x11 kde
@@ -65,6 +65,7 @@ DEPENDS+=	parley-4.8.0{,nb[0-9]*}:../../wip/parley
 DEPENDS+=	rocs-4.8.0{,nb[0-9]*}:../../wip/rocs
 DEPENDS+=	step-4.8.0{,nb[0-9]*}:../../wip/step
 DEPENDS+=	kdegames4-4.8.0{,nb[0-9]*}:../../wip/kdegames4
+DEPENDS+=	kamera-4.8.0{,nb[0-9]*}:../../wip/kamera
 DEPENDS+=	gwenview-4.8.0{,nb[0-9]*}:../../wip/gwenview
 DEPENDS+=	ksnapshot-4.8.0{,nb[0-9]*}:../../wip/ksnapshot
 DEPENDS+=	kcolorchooser-4.8.0{,nb[0-9]*}:../../wip/kcolorchooser
@@ -74,6 +75,7 @@ DEPENDS+=	okular-4.8.0{,nb[0-9]*}:../../wip/okular
 DEPENDS+=	kdegraphics-mobipocket-4.8.0{,nb[0-9]*}:../../wip/kdegraphics-mobipocket
 DEPENDS+=	kdegraphics-strigi-analyzer-4.8.0{,nb[0-9]*}:../../wip/kdegraphics-strigi-analyzer
 DEPENDS+=	kdegraphics-thumbnailers-4.8.0{,nb[0-9]*}:../../wip/kdegraphics-thumbnailers
+DEPENDS+=	svgpart-4.8.0{,nb[0-9]*}:../../wip/svgpart
 DEPENDS+=	kdemultimedia4-4.8.0{,nb[0-9]*}:../../wip/kdemultimedia4
 DEPENDS+=	kdenetwork4-4.8.0{,nb[0-9]*}:../../wip/kdenetwork4
 DEPENDS+=	kdepim4-4.4.11.1{,nb[0-9]*}:../../wip/kdepim4
@@ -89,6 +91,7 @@ DEPENDS+=	kcharselect-4.8.0{,nb[0-9]*}:../../wip/kcharselect
 DEPENDS+=	kdf-4.8.0{,nb[0-9]*}:../../wip/kdf
 DEPENDS+=	kfloppy-4.8.0{,nb[0-9]*}:../../wip/kfloppy
 DEPENDS+=	kremotecontrol-4.8.0{,nb[0-9]*}:../../wip/kremotecontrol
+DEPENDS+=	ksecrets-4.8.0{,nb[0-9]*}:../../wip/ksecrets
 DEPENDS+=	ktimer-4.8.0{,nb[0-9]*}:../../wip/ktimer
 DEPENDS+=	kwallet-4.8.0{,nb[0-9]*}:../../wip/kwallet
 DEPENDS+=	printer-applet-4.8.0{,nb[0-9]*}:../../wip/printer-applet
