@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4626 2012/01/27 22:04:44 mwdavies Exp $
+# $Id: Makefile,v 1.4627 2012/01/28 19:17:44 mwdavies Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1182,6 +1182,7 @@ SUBDIR+=	kahakai
 SUBDIR+=	kahua
 SUBDIR+=	kalgebra
 SUBDIR+=	kalzium
+SUBDIR+=	kamera
 SUBDIR+=	kanagram
 SUBDIR+=	kannel-gateway
 SUBDIR+=	kapital
@@ -1243,6 +1244,7 @@ SUBDIR+=	kplayer
 SUBDIR+=	kremotecontrol
 SUBDIR+=	kruler
 SUBDIR+=	krusader
+SUBDIR+=	ksecrets
 SUBDIR+=	ksnapshot
 SUBDIR+=	kstars
 SUBDIR+=	ktimer
@@ -2791,6 +2793,7 @@ SUBDIR+=	suse100_glut
 SUBDIR+=	suse100_gmp4
 SUBDIR+=	suse113_libgmp3
 SUBDIR+=	svgalib
+SUBDIR+=	svgpart
 SUBDIR+=	svrcore
 SUBDIR+=	swami
 SUBDIR+=	swarp
