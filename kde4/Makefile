@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2012/01/28 19:13:52 mwdavies Exp $
+# $NetBSD: Makefile,v 1.41 2012/01/28 19:48:15 mwdavies Exp $
 
 DISTNAME=	kde4-4.8.0
 CATEGORIES=	meta-pkgs x11 kde
@@ -39,6 +39,7 @@ DEPENDS+=	kde-workspace4-4.8.0{,nb[0-9]*}:../../wip/kde-workspace4
 DEPENDS+=	kde-wallpapers4-4.8.0{,nb[0-9]*}:../../wip/kde-wallpapers4
 DEPENDS+=	kde-baseapps4-4.8.0{,nb[0-9]*}:../../wip/kde-baseapps4
 DEPENDS+=	konsole-4.8.0{,nb[0-9]*}:../../wip/konsole
+DEPENDS+=	kaccessible-4.8.0{,nb[0-9]*}:../../wip/kaccessible
 DEPENDS+=	kmag-4.8.0{,nb[0-9]*}:../../wip/kmag
 DEPENDS+=	kmouth-4.8.0{,nb[0-9]*}:../../wip/kmouth
 DEPENDS+=	kmousetool-4.8.0{,nb[0-9]*}:../../wip/kmousetool
@@ -67,8 +68,10 @@ DEPENDS+=	step-4.8.0{,nb[0-9]*}:../../wip/step
 DEPENDS+=	kdegames4-4.8.0{,nb[0-9]*}:../../wip/kdegames4
 DEPENDS+=	kamera-4.8.0{,nb[0-9]*}:../../wip/kamera
 DEPENDS+=	gwenview-4.8.0{,nb[0-9]*}:../../wip/gwenview
+DEPENDS+=	ksaneplugin-4.8.0{,nb[0-9]*}:../../wip/ksaneplugin
 DEPENDS+=	ksnapshot-4.8.0{,nb[0-9]*}:../../wip/ksnapshot
 DEPENDS+=	kcolorchooser-4.8.0{,nb[0-9]*}:../../wip/kcolorchooser
+DEPENDS+=	kgamma-4.8.0{,nb[0-9]*}:../../wip/kgamma
 DEPENDS+=	kruler-4.8.0{,nb[0-9]*}:../../wip/kruler
 DEPENDS+=	kolourpaint-4.8.0{,nb[0-9]*}:../../wip/kolourpaint
 DEPENDS+=	okular-4.8.0{,nb[0-9]*}:../../wip/okular
