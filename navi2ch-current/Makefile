@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/08/14 08:20:06 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2012/01/28 06:47:28 phonohawk Exp $
 
 DISTNAME=	navi2ch-2.0.0
 PKGNAME=	${EMACS_PKGNAME_PREFIX}navi2ch-current-2.0.0
@@ -16,6 +16,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GIT_REPOSITORIES=	master
 GIT_REPO.master=	git://navi2ch.git.sourceforge.net/gitroot/navi2ch/navi2ch
+GIT_MODULE.master=	navi2ch
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake

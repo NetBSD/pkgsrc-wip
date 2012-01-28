@@ -1,20 +1,21 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/02/10 16:33:59 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2012/01/28 06:44:13 phonohawk Exp $
 #
 
 DISTNAME=	darcs-to-git-0.1
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
-HOMEPAGE=	http://github.com/purcell/darcs-to-git
+HOMEPAGE=	http://github.com/purcell/${PKGBASE}
 COMMENT=	Convert a Darcs repository into a Git repository
 LICENSE=	mit
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GIT_REPOSITORIES=	master
-GIT_REPO.master=	git://github.com/purcell/darcs-to-git.git
+GIT_REPO.master=	git://github.com/purcell/${PKGBASE}.git
+GIT_MODULE.master=	darcs-to-git
 
-WRKSRC=			${WRKDIR}/darcs-to-git
+WRKSRC=			${WRKDIR}/${PKGBASE}
 NO_BUILD=		yes
 USE_LANGUAGES=	# none
 
