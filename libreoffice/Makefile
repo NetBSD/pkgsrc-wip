@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2012/01/22 08:47:00 ftigeot Exp $
+# $NetBSD: Makefile,v 1.20 2012/01/28 09:42:04 ftigeot Exp $
 
-VER=			3.5.0.1
+VER=			3.5.0.2
 DISTNAME=		libreoffice-${VER}
 PKGNAME=		libreoffice-${VER:S/-//g}
 CATEGORIES=		misc
@@ -31,7 +31,7 @@ MORE_DISTFILES= \
 	48a9f787f43a09c0a9b7b00cd1fddbbf-hyphen-2.7.1.tar.gz \
 	7c2549f6b0a8bb604e6c4c729ffdcfe6-libcmis-0.1.0.tar.gz \
 	0be45d54cc5e1c2e3102e32b8c190346-liberation-fonts-ttf-1.07.1.tar.gz \
-	adb5c5c8398fd89ebee2d9b4e90e061e-libvisio-0.0.13.tar.bz2 \
+	776ad69a63ac1e99abed176e54ce25d9-libvisio-0.0.14.tar.bz2 \
 	0ff7d225d087793c8c2c680d77aac3e7-mdds_0.5.3.tar.bz2 \
 	067201ea8b126597670b5eff72e1f66c-mythes-1.2.0.tar.gz \
 	fdb27bfe2dbe2e7b57ae194d9bf36bab-SampleICC-1.3.2.tar.gz \
@@ -92,6 +92,7 @@ CONFIGURE_ARGS+=	--disable-mozilla
 CONFIGURE_ARGS+=	--disable-neon
 CONFIGURE_ARGS+=	--disable-odk
 CONFIGURE_ARGS+=	--disable-opengl
+CONFIGURE_ARGS+=	--disable-postgresql-sdbc
 CONFIGURE_ARGS+=	--disable-systray
 CONFIGURE_ARGS+=	--with-alloc=system
 CONFIGURE_ARGS+=	--with-fonts
