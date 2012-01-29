@@ -1,7 +1,9 @@
-$NetBSD: TODO,v 1.7 2011/11/01 21:43:34 guigui2 Exp $
+$NetBSD: TODO,v 1.8 2012/01/29 15:20:45 guigui2 Exp $
 
 * debug
 * test on Linux/FreeBSD/OpenBSD
 * use libtool
 
-When updating this package, please have a look at http://secunia.com/advisories/46636/
+When updating this package, please have a look at:
+- http://secunia.com/advisories/46636/
+- http://secunia.com/advisories/47694/
