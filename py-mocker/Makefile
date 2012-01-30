@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/08/02 23:50:32 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/01/30 06:34:53 noud4 Exp $
 #
 
 DISTNAME=	mocker-0.10.1
 PKGNAME=	${PYPKGPREFIX}-mocker-0.10.1
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	http://launchpad.net/mocker/trunk/0.10.1/+download/
 EXTRACT_SUFX=	.tar.bz2
@@ -18,6 +19,7 @@ USE_LANGUAGES=	# none
 
 PYDISTUTILSPKG= yes
 PY_PATCHPLIST=		yes
+PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX:Q}
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
