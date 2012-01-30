@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2005/09/28 06:41:38 rillig Exp $
+$NetBSD: distinfo,v 1.3 2012/01/30 08:04:38 noud4 Exp $
 
-SHA1 (rlcompleter2-0.95.tar.gz) = 2960ca1822991ac7edb50e5b0a97cf080a9bd8eb
-RMD160 (rlcompleter2-0.95.tar.gz) = 80ec3306a84c9fe6a5c8ab5a37d2dbef0a8d27ad
-Size (rlcompleter2-0.95.tar.gz) = 10692 bytes
+SHA1 (rlcompleter2-0.96.tar.gz) = ad242546156ea538f9d5ddc89a0f136a72513866
+RMD160 (rlcompleter2-0.96.tar.gz) = 8a1d1d941c385a1cef2bab24efe4b9d73e33b4a7
+Size (rlcompleter2-0.96.tar.gz) = 10964 bytes

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2010/08/05 14:03:34 jihbed Exp $
+# $NetBSD: Makefile,v 1.5 2012/01/30 08:04:39 noud4 Exp $
 #
 
 DISTNAME=	rlcompleter2-0.96
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://codespeak.net/rlcompleter2/download/
 
