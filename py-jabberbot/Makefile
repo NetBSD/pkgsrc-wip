@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2011/03/11 05:25:20 schnoebe Exp $
+# $NetBSD: Makefile,v 1.4 2012/01/30 04:22:36 schnoebe Exp $
 #
 
-DISTNAME=	jabberbot-0.12
+DISTNAME=	jabberbot-0.14
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	chat python
 MASTER_SITES=	http://thp.io/2007/python-jabberbot/
