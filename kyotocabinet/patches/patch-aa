@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.2 2011/04/30 15:55:31 genolopolis Exp $
+$NetBSD: patch-aa,v 1.3 2012/01/30 23:41:55 bubuchka Exp $
+
+Compensate absense of long double functions in the NetBSD libm.
 
 --- kccommon.h.orig	2011-04-30 15:52:25.000000000 +0000
 +++ kccommon.h
