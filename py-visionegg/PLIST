@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2010/01/05 18:43:22 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.4 2012/01/30 03:49:47 noud4 Exp $
 ${PYSITELIB}/VisionEgg/Configuration.py
 ${PYSITELIB}/VisionEgg/Configuration.pyc
 ${PYSITELIB}/VisionEgg/Configuration.pyo
@@ -157,16 +157,16 @@ ${PYSITELIB}/VisionEgg/win32_getrefresh.pyo
 ${PYSITELIB}/VisionEgg/win32_maxpriority.py
 ${PYSITELIB}/VisionEgg/win32_maxpriority.pyc
 ${PYSITELIB}/VisionEgg/win32_maxpriority.pyo
-share/VisionEgg-2.5/LICENSE.txt
-share/VisionEgg-2.5/README.txt
-share/VisionEgg-2.5/VisionEgg.cfg
-share/VisionEgg-2.5/check-config.py
-share/VisionEgg-2.5/data/az_el.png
-share/VisionEgg-2.5/data/panorama.jpg
-share/VisionEgg-2.5/data/visionegg.bmp
-share/VisionEgg-2.5/data/visionegg.tif
-share/VisionEgg-2.5/data/water.mov
-share/VisionEgg-2.5/test/conform.py
-share/VisionEgg-2.5/test/display_dc_restoration.py
-share/VisionEgg-2.5/test/display_voltage_regulation.py
-share/VisionEgg-2.5/test/opengl_info.py
+share/VisionEgg-${PYVERSSUFFIX}/LICENSE.txt
+share/VisionEgg-${PYVERSSUFFIX}/README.txt
+share/VisionEgg-${PYVERSSUFFIX}/VisionEgg.cfg
+share/VisionEgg-${PYVERSSUFFIX}/check-config.py
+share/VisionEgg-${PYVERSSUFFIX}/data/az_el.png
+share/VisionEgg-${PYVERSSUFFIX}/data/panorama.jpg
+share/VisionEgg-${PYVERSSUFFIX}/data/visionegg.bmp
+share/VisionEgg-${PYVERSSUFFIX}/data/visionegg.tif
+share/VisionEgg-${PYVERSSUFFIX}/data/water.mov
+share/VisionEgg-${PYVERSSUFFIX}/test/conform.py
+share/VisionEgg-${PYVERSSUFFIX}/test/display_dc_restoration.py
+share/VisionEgg-${PYVERSSUFFIX}/test/display_voltage_regulation.py
+share/VisionEgg-${PYVERSSUFFIX}/test/opengl_info.py
