@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2009/08/28 10:50:49 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2012/01/30 05:53:23 noud4 Exp $
 #
 
 DISTNAME=	amqplib-0.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	http://pypi.python.org/packages/source/a/amqplib/
 EXTRACT_SUFX=	.tgz
