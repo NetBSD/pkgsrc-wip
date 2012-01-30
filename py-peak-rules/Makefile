@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/07/14 13:13:17 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/01/30 08:27:26 noud4 Exp $
 #
 
-DISTNAME=	PEAK-Rules-0.5a1.dev-r2600
-EGG_NAME=	PEAK_Rules-0.5a1.dev_r2600
+DISTNAME=	PEAK-Rules-0.5a1.dev-r2707
+EGG_NAME=	PEAK_Rules-0.5a1.dev_r2707
 PKGNAME=	${PYPKGPREFIX}-peak-rules-0.5a1
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	http://peak.telecommunity.com/snapshots/
 
@@ -12,7 +13,7 @@ HOMEPAGE=	http://peak.telecommunity.com/snapshots/
 COMMENT=	Generic functions and business rules support systems
 
 DEPENDS+=	${PYPKGPREFIX}-addons>=0.7:../../wip/py-addons
-DEPENDS+=	${PYPKGPREFIX}-bytecodeassembler>=0.5.11:../../wip/py-bytecodeassembler
+DEPENDS+=	${PYPKGPREFIX}-bytecodeassembler>=0.5.1:../../wip/py-bytecodeassembler
 DEPENDS+=	${PYPKGPREFIX}-decoratortools>=1.8:../../wip/py-decoratortools
 DEPENDS+=	${PYPKGPREFIX}-extremes>=1.1.1:../../wip/py-extremes
 
