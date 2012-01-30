@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2009/08/28 22:05:50 jihbed Exp $
+# $NetBSD: Makefile,v 1.4 2012/01/30 04:05:46 noud4 Exp $
 #
 
 DISTNAME=	py-1.0.2.tar
 PKGNAME=	${PYPKGPREFIX}-lib-1.0.2
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	http://pypi.python.org/packages/source/p/py/
 EXTRACT_SUFX=	.gz#md5=d64444015bac78e0c73ac285f9423750
@@ -12,13 +13,14 @@ HOMEPAGE=	http://pylib.org/
 COMMENT=	Agile development and test support library
 LICENSE=	mit
 
+DEPENDS+=	${PYPKGPREFIX}-ctypes>=1.0.2:../../devel/py-ctypes
 DEPENDS+=	${PYPKGPREFIX}-docutils>=0.5:../../textproc/py-docutils
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/py-1.0.2
 USE_LANGUAGES=	# none
+PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX:Q}
 
-.include "../../devel/py-ctypes/buildlink3.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
