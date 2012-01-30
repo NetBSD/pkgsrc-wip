@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/08/09 21:52:59 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/01/30 01:19:17 noud4 Exp $
 #
 
 DISTNAME=	pypol-0.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	http://garr.dl.sourceforge.net/project/pypol/pypol/0.5%20Eratosthenes/
 
@@ -17,5 +18,5 @@ USE_LANGUAGES=	# none
 PYDISTUTILSPKG=	yes
 
 .include "../../lang/python/extension.mk"
-.include "../../wip/py-gmpy/buildlink3.mk"
+.include "../../math/py-gmpy/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
