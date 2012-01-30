@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/06/14 13:13:53 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/01/30 07:19:57 noud4 Exp $
 #
 
 DISTNAME=	asciidata-1.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	http://www.stecf.org/software/PYTHONtools/astroasciidata/source/
 
@@ -11,7 +12,7 @@ HOMEPAGE=	http://www.stecf.org/software/PYTHONtools/astroasciidata/
 COMMENT=	Asciidata , to handle (read/modify/write) ASCII tables
 LICENSE=	gnu-lgpl-v3
 
-DEPENDS+=	${PYPKGPREFIX}-pyfits>=2.3.1:../../wip/py-pyfits
+DEPENDS+=	${PYPKGPREFIX}-pyfits>=2.3.1:../../graphics/py-pyfits
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
