@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/04/02 22:40:52 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/01/30 07:53:59 noud4 Exp $
 #
 
 DISTNAME=	BIP-0.5.4
@@ -15,7 +15,7 @@ LICENSE=	gnu-gpl-v3
 DEPENDS+=	${PYPKGPREFIX}-nose>=0.11.3:../../devel/py-nose
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.7.0:../../math/py-scipy
 DEPENDS+=	${PYPKGPREFIX}-liveplots>=0.7.1:../../wip/py-liveplots
-DEPENDS+=	${PYPKGPREFIX}-openopt>=0.31:../../wip/py-openop
+DEPENDS+=	${PYPKGPREFIX}-openopt>=0.31:../../wip/py-openopt
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
