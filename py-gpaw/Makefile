@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/03/07 10:12:56 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/01/30 06:25:01 noud4 Exp $
 #
 
 DISTNAME=	gpaw-0.7.2.6974
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	biology python
 MASTER_SITES=	https://wiki.fysik.dtu.dk/gpaw-files/
 
@@ -20,6 +21,7 @@ FETCH_BEFORE_ARGS=	--no-check-certificate
 
 USE_LANGUAGES=	c c99
 PYDISTUTILSPKG=	yes
+PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX:Q}
 
 post-extract:
 	${MV} ${WRKSRC}/tools/gpaw ${WRKSRC}/tools/gpaw${PYVERSSUFFIX}

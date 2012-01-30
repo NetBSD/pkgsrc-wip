@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/03/07 10:12:58 jihbed Exp $
-bin/gpaw
-bin/gpaw-basis
-bin/gpaw-mpisim
-bin/gpaw-setup
-bin/gpaw-test
+@comment $NetBSD: PLIST,v 1.2 2012/01/30 06:25:01 noud4 Exp $
+bin/gpaw${PYVERSSUFFIX}
+bin/gpaw-basis${PYVERSSUFFIX}
+bin/gpaw-mpisim${PYVERSSUFFIX}
+bin/gpaw-setup${PYVERSSUFFIX}
+bin/gpaw-test${PYVERSSUFFIX}
 ${PYSITELIB}/_gpaw.so
 ${PYSITELIB}/gpaw/__init__.py
 ${PYSITELIB}/gpaw/__init__.pyc
