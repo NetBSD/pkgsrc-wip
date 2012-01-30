@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/06/17 23:39:46 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/01/30 06:16:26 noud4 Exp $
 #
 
 DISTNAME=	fs-0.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	http://pyfilesystem.googlecode.com/files/
 
