@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2011/02/25 09:47:49 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2012/01/30 02:30:02 noud4 Exp $
 #
 
 DISTNAME=	scitools-0.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	science python
 MASTER_SITES=	http://scitools.googlecode.com/files/
 
@@ -12,6 +13,7 @@ COMMENT=	Python library for scientific computing
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.7.0:../../math/py-scipy
+DEPENDS+=	${PYPKGPREFIX}-Pmw>=1.3.2:../../x11/py-Pmw
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -34,6 +36,5 @@ do-test:
 .include "../../math/py-Numeric/buildlink3.mk"
 .include "../../math/py-numarray/buildlink3.mk"
 .include "../../math/py-numpy/buildlink3.mk"
-.include "../../x11/py-Pmw/buildlink3.mk"
 .include "../../x11/py-Tk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
