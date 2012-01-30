@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/01/30 03:49:47 noud4 Exp $
+# $NetBSD: Makefile,v 1.14 2012/01/30 03:58:53 noud4 Exp $
 #
 
 DISTNAME=	visionegg-0.9.9
@@ -24,8 +24,7 @@ PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
 MAKE_ENV+=		PYVERSSUFFIX=${PYVERSSUFFIX:Q}
 PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX:Q}
-t:
-	echo ${PYVERSSUFFIX:Q}
+
 .include "../../devel/py-game/buildlink3.mk"
 .include "../../math/py-Numeric/buildlink3.mk"
 .include "../../x11/py-Tk/buildlink3.mk"
