@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/03/07 11:01:56 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/01/30 07:53:01 noud4 Exp $
 #
 
-VERSION=	0.31
+VERSION=	0.37
 DISTNAME=	OpenOpt
 EGG_NAME=	openopt-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-${EGG_NAME}
@@ -18,6 +18,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	fortran
 PYTHON_VERSIONS_ACCEPTED= 26 25
+PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX:Q}
 
 .include "../../lang/python/egg.mk"
 .include "../../math/py-numpy/buildlink3.mk"

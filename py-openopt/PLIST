@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/03/07 11:01:56 jihbed Exp $
-${PYSITELIB}/openopt-0.31-py2.6.egg-info/PKG-INFO
-${PYSITELIB}/openopt-0.31-py2.6.egg-info/SOURCES.txt
-${PYSITELIB}/openopt-0.31-py2.6.egg-info/dependency_links.txt
-${PYSITELIB}/openopt-0.31-py2.6.egg-info/not-zip-safe
-${PYSITELIB}/openopt-0.31-py2.6.egg-info/requires.txt
-${PYSITELIB}/openopt-0.31-py2.6.egg-info/top_level.txt
+@comment $NetBSD: PLIST,v 1.2 2012/01/30 07:53:01 noud4 Exp $
+${PYSITELIB}/openopt-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/PKG-INFO
+${PYSITELIB}/openopt-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/SOURCES.txt
+${PYSITELIB}/openopt-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/dependency_links.txt
+${PYSITELIB}/openopt-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/not-zip-safe
+${PYSITELIB}/openopt-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/requires.txt
+${PYSITELIB}/openopt-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/top_level.txt
 ${PYSITELIB}/openopt/__init__.py
 ${PYSITELIB}/openopt/__init__.pyc
 ${PYSITELIB}/openopt/__init__.pyo
@@ -119,9 +119,6 @@ ${PYSITELIB}/openopt/examples/socp_1.pyo
 ${PYSITELIB}/openopt/kernel/DFP.py
 ${PYSITELIB}/openopt/kernel/DFP.pyc
 ${PYSITELIB}/openopt/kernel/DFP.pyo
-${PYSITELIB}/openopt/kernel/FDmisc.py
-${PYSITELIB}/openopt/kernel/FDmisc.pyc
-${PYSITELIB}/openopt/kernel/FDmisc.pyo
 ${PYSITELIB}/openopt/kernel/GLP.py
 ${PYSITELIB}/openopt/kernel/GLP.pyc
 ${PYSITELIB}/openopt/kernel/GLP.pyo
@@ -188,9 +185,9 @@ ${PYSITELIB}/openopt/kernel/baseSolver.pyo
 ${PYSITELIB}/openopt/kernel/check.py
 ${PYSITELIB}/openopt/kernel/check.pyc
 ${PYSITELIB}/openopt/kernel/check.pyo
-${PYSITELIB}/openopt/kernel/graphics.py
-${PYSITELIB}/openopt/kernel/graphics.pyc
-${PYSITELIB}/openopt/kernel/graphics.pyo
+${PYSITELIB}/openopt/kernel/fdmisc.py
+${PYSITELIB}/openopt/kernel/fdmisc.pyc
+${PYSITELIB}/openopt/kernel/fdmisc.pyo
 ${PYSITELIB}/openopt/kernel/iterPrint.py
 ${PYSITELIB}/openopt/kernel/iterPrint.pyc
 ${PYSITELIB}/openopt/kernel/iterPrint.pyo
@@ -209,6 +206,9 @@ ${PYSITELIB}/openopt/kernel/ooMisc.pyo
 ${PYSITELIB}/openopt/kernel/ooRun.py
 ${PYSITELIB}/openopt/kernel/ooRun.pyc
 ${PYSITELIB}/openopt/kernel/ooRun.pyo
+${PYSITELIB}/openopt/kernel/oographics.py
+${PYSITELIB}/openopt/kernel/oographics.pyc
+${PYSITELIB}/openopt/kernel/oographics.pyo
 ${PYSITELIB}/openopt/kernel/oologfcn.py
 ${PYSITELIB}/openopt/kernel/oologfcn.pyc
 ${PYSITELIB}/openopt/kernel/oologfcn.pyo
