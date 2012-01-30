@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/05/09 20:43:28 jihbed Exp $
-${PYSITELIB}/pydec-1.0.0.dev14-py2.6.egg-info
+@comment $NetBSD: PLIST,v 1.2 2012/01/30 06:43:49 noud4 Exp $
+${PYSITELIB}/pydec-1.0.0.dev24-py${PYVERSSUFFIX}.egg-info
 ${PYSITELIB}/pydec/LICENSE.txt
 ${PYSITELIB}/pydec/__init__.py
 ${PYSITELIB}/pydec/__init__.pyc
@@ -183,5 +183,5 @@ ${PYSITELIB}/pydec/vis/info.pyo
 ${PYSITELIB}/pydec/vis/setup.py
 ${PYSITELIB}/pydec/vis/setup.pyc
 ${PYSITELIB}/pydec/vis/setup.pyo
-@pkgdir lib/python2.6/site-packages/pydec/vis/tests
-@pkgdir lib/python2.6/site-packages/pydec/util/tests
+@pkgdir lib/python${PYVERSSUFFIX}/site-packages/pydec/vis/tests
+@pkgdir lib/python${PYVERSSUFFIX}/site-packages/pydec/util/tests
