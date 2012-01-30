@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2011/05/01 02:57:50 genolopolis Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/01/30 23:37:40 bubuchka Exp $
 bin/kccachetest
 bin/kcdirmgr
 bin/kcdirtest
@@ -32,12 +32,13 @@ include/kcpolydb.h
 include/kcprotodb.h
 include/kcregex.h
 include/kcstashdb.h
+include/kctextdb.h
 include/kcthread.h
 include/kcutil.h
+lib/libkyotocabinet.16.9.0.so
+lib/libkyotocabinet.16.so
 lib/libkyotocabinet.a
 lib/libkyotocabinet.so
-lib/libkyotocabinet.so.9
-lib/libkyotocabinet.so.9.13.0
 lib/pkgconfig/kyotocabinet.pc
 man/man1/kccachetest.1
 man/man1/kcdirmgr.1
@@ -60,6 +61,7 @@ share/doc/kyotocabinet/COPYING
 share/doc/kyotocabinet/ChangeLog
 share/doc/kyotocabinet/FOSSEXCEPTION
 share/doc/kyotocabinet/doc/api/annotated.html
+share/doc/kyotocabinet/doc/api/bc_s.png
 share/doc/kyotocabinet/doc/api/classes.html
 share/doc/kyotocabinet/doc/api/classkyotocabinet_1_1ArcfourCompressor-members.html
 share/doc/kyotocabinet/doc/api/classkyotocabinet_1_1ArcfourCompressor.html
@@ -87,6 +89,8 @@ share/doc/kyotocabinet/doc/api/classkyotocabinet_1_1Comparator-members.html
 share/doc/kyotocabinet/doc/api/classkyotocabinet_1_1Comparator.html
 share/doc/kyotocabinet/doc/api/classkyotocabinet_1_1Compressor-members.html
 share/doc/kyotocabinet/doc/api/classkyotocabinet_1_1Compressor.html
+share/doc/kyotocabinet/doc/api/classkyotocabinet_1_1CondMap-members.html
+share/doc/kyotocabinet/doc/api/classkyotocabinet_1_1CondMap.html
 share/doc/kyotocabinet/doc/api/classkyotocabinet_1_1CondVar-members.html
 share/doc/kyotocabinet/doc/api/classkyotocabinet_1_1CondVar.html
 share/doc/kyotocabinet/doc/api/classkyotocabinet_1_1DB-members.html
@@ -131,8 +135,8 @@ share/doc/kyotocabinet/doc/api/classkyotocabinet_1_1LinkedHashMap_1_1Iterator-me
 share/doc/kyotocabinet/doc/api/classkyotocabinet_1_1LinkedHashMap_1_1Iterator.html
 share/doc/kyotocabinet/doc/api/classkyotocabinet_1_1MapReduce-members.html
 share/doc/kyotocabinet/doc/api/classkyotocabinet_1_1MapReduce.html
-share/doc/kyotocabinet/doc/api/classkyotocabinet_1_1MapReduce_1_1MapEmitter-members.html
-share/doc/kyotocabinet/doc/api/classkyotocabinet_1_1MapReduce_1_1MapEmitter.html
+share/doc/kyotocabinet/doc/api/classkyotocabinet_1_1MapReduce_1_1ReduceTaskQueue_1_1ReduceTask-members.html
+share/doc/kyotocabinet/doc/api/classkyotocabinet_1_1MapReduce_1_1ReduceTaskQueue_1_1ReduceTask.html
 share/doc/kyotocabinet/doc/api/classkyotocabinet_1_1MapReduce_1_1ValueIterator-members.html
 share/doc/kyotocabinet/doc/api/classkyotocabinet_1_1MapReduce_1_1ValueIterator.html
 share/doc/kyotocabinet/doc/api/classkyotocabinet_1_1Mutex-members.html
@@ -185,6 +189,10 @@ share/doc/kyotocabinet/doc/api/classkyotocabinet_1_1TaskQueue-members.html
 share/doc/kyotocabinet/doc/api/classkyotocabinet_1_1TaskQueue.html
 share/doc/kyotocabinet/doc/api/classkyotocabinet_1_1TaskQueue_1_1Task-members.html
 share/doc/kyotocabinet/doc/api/classkyotocabinet_1_1TaskQueue_1_1Task.html
+share/doc/kyotocabinet/doc/api/classkyotocabinet_1_1TextDB-members.html
+share/doc/kyotocabinet/doc/api/classkyotocabinet_1_1TextDB.html
+share/doc/kyotocabinet/doc/api/classkyotocabinet_1_1TextDB_1_1Cursor-members.html
+share/doc/kyotocabinet/doc/api/classkyotocabinet_1_1TextDB_1_1Cursor.html
 share/doc/kyotocabinet/doc/api/classkyotocabinet_1_1Thread-members.html
 share/doc/kyotocabinet/doc/api/classkyotocabinet_1_1Thread.html
 share/doc/kyotocabinet/doc/api/classkyotocabinet_1_1TinyArrayList-members.html
@@ -199,6 +207,7 @@ share/doc/kyotocabinet/doc/api/classkyotocabinet_1_1ZLIB-members.html
 share/doc/kyotocabinet/doc/api/classkyotocabinet_1_1ZLIB.html
 share/doc/kyotocabinet/doc/api/classkyotocabinet_1_1ZLIBCompressor-members.html
 share/doc/kyotocabinet/doc/api/classkyotocabinet_1_1ZLIBCompressor.html
+share/doc/kyotocabinet/doc/api/closed.png
 share/doc/kyotocabinet/doc/api/doxygen.css
 share/doc/kyotocabinet/doc/api/doxygen.png
 share/doc/kyotocabinet/doc/api/files.html
@@ -277,6 +286,7 @@ share/doc/kyotocabinet/doc/api/kcplantdb_8h.html
 share/doc/kyotocabinet/doc/api/kcpolydb_8h.html
 share/doc/kyotocabinet/doc/api/kcprotodb_8h.html
 share/doc/kyotocabinet/doc/api/kcregex_8h.html
+share/doc/kyotocabinet/doc/api/kctextdb_8h.html
 share/doc/kyotocabinet/doc/api/kcthread_8h.html
 share/doc/kyotocabinet/doc/api/kcutil_8h.html
 share/doc/kyotocabinet/doc/api/namespacekyotocabinet.html
@@ -285,6 +295,9 @@ share/doc/kyotocabinet/doc/api/namespacemembers_func.html
 share/doc/kyotocabinet/doc/api/namespacemembers_type.html
 share/doc/kyotocabinet/doc/api/namespacemembers_vars.html
 share/doc/kyotocabinet/doc/api/namespaces.html
+share/doc/kyotocabinet/doc/api/nav_f.png
+share/doc/kyotocabinet/doc/api/nav_h.png
+share/doc/kyotocabinet/doc/api/open.png
 share/doc/kyotocabinet/doc/api/structKCCUR-members.html
 share/doc/kyotocabinet/doc/api/structKCCUR.html
 share/doc/kyotocabinet/doc/api/structKCDB-members.html
@@ -305,14 +318,16 @@ share/doc/kyotocabinet/doc/api/structKCSTR-members.html
 share/doc/kyotocabinet/doc/api/structKCSTR.html
 share/doc/kyotocabinet/doc/api/structkyotocabinet_1_1File_1_1Status-members.html
 share/doc/kyotocabinet/doc/api/structkyotocabinet_1_1File_1_1Status.html
-share/doc/kyotocabinet/doc/api/tab_b.gif
-share/doc/kyotocabinet/doc/api/tab_l.gif
-share/doc/kyotocabinet/doc/api/tab_r.gif
+share/doc/kyotocabinet/doc/api/tab_a.png
+share/doc/kyotocabinet/doc/api/tab_b.png
+share/doc/kyotocabinet/doc/api/tab_h.png
+share/doc/kyotocabinet/doc/api/tab_s.png
 share/doc/kyotocabinet/doc/api/tabs.css
 share/doc/kyotocabinet/doc/command.html
 share/doc/kyotocabinet/doc/common.css
 share/doc/kyotocabinet/doc/icon16.png
 share/doc/kyotocabinet/doc/index.html
+share/doc/kyotocabinet/doc/index.ja.html
 share/doc/kyotocabinet/doc/logo.png
 share/doc/kyotocabinet/doc/spex.html
 share/doc/kyotocabinet/kyotocabinet.idl

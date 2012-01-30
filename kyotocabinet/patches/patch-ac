@@ -1,0 +1,32 @@
+$NetBSD: patch-ac,v 1.1 2012/01/30 23:37:40 bubuchka Exp $
+
+* Let pkgsrc decide whether to use platform specific compiler.
+* When doing --disable-opt do not populate optimization flags anymore.
+
+--- configure.orig	2011-12-15 13:23:05.000000000 +0000
++++ configure
+@@ -3969,15 +3969,6 @@ $as_echo "#define AC_APPLE_UNIVERSAL_BUI
+ 
+ 
+ # System-depending optimization
+-printf 'checking for 64-bit availability... '
+-if printf 'main() {}' | $CC -xc -m64 -o config.tmp - >config.tmp 2>&1
+-then
+-  MYCFLAGS="-m64 $MYCFLAGS"
+-  MYCXXFLAGS="-m64 $MYCXXFLAGS"
+-  printf 'yes\n'
+-else
+-  printf 'no\n'
+-fi
+ if test "$enable_opt" != "no"
+ then
+   printf 'checking for CPU optimization availability... '
+@@ -4543,7 +4534,7 @@ then
+ fi
+ 
+ # Work around of bugs of some environments
+-if uname | grep Darwin >config.tmp
++if test "$enable_opt" != "no" && uname | grep Darwin >config.tmp
+ then
+   MYCFLAGS="$MYCFLAGS -Os"
+   MYCXXFLAGS="$MYCXXFLAGS -Os"
