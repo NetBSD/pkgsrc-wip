@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2011/02/25 09:47:49 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2012/01/30 06:50:36 noud4 Exp $
 #
 
 DISTNAME=	srpy-0.2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	http://srpy.googlecode.com/files/
 EXTRACT_SUFX=	.zip
@@ -24,6 +25,8 @@ PYTHON_VERSIONS_ACCEPTED= 27 26 25
 HTMLDIR=	${PREFIX}/share/doc/html/py-srpy
 
 INSTALLATION_DIRS+=	share/doc/py-srpy ${HTMLDIR}
+
+PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX:Q}
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/README.txt \

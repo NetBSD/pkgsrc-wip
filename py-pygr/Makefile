@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2011/02/25 09:47:49 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2012/01/30 06:46:59 noud4 Exp $
 #
 
 DISTNAME=	pygr-0.8.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	biology python
 MASTER_SITES=	http://pygr.googlecode.com/files/
 
@@ -19,6 +20,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES= c c++
 PYTHON_VERSIONS_ACCEPTED= 27 26 25 24
+PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX:Q}
 
 .include "../../databases/py-bsddb3/buildlink3.mk"
 .include "../../lang/python/egg.mk"

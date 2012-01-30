@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/12/05 20:54:04 jihbed Exp $
-${PYSITELIB}/pygr-0.8.0-py2.5.egg-info/PKG-INFO
-${PYSITELIB}/pygr-0.8.0-py2.5.egg-info/SOURCES.txt
-${PYSITELIB}/pygr-0.8.0-py2.5.egg-info/dependency_links.txt
-${PYSITELIB}/pygr-0.8.0-py2.5.egg-info/top_level.txt
+@comment $NetBSD: PLIST,v 1.2 2012/01/30 06:46:59 noud4 Exp $
+${PYSITELIB}/pygr-0.8.0-py${PYVERSSUFFIX}.egg-info/PKG-INFO
+${PYSITELIB}/pygr-0.8.0-py${PYVERSSUFFIX}.egg-info/SOURCES.txt
+${PYSITELIB}/pygr-0.8.0-py${PYVERSSUFFIX}.egg-info/dependency_links.txt
+${PYSITELIB}/pygr-0.8.0-py${PYVERSSUFFIX}.egg-info/top_level.txt
 ${PYSITELIB}/pygr/Data.py
 ${PYSITELIB}/pygr/Data.pyc
 ${PYSITELIB}/pygr/Data.pyo

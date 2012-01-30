@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/08/02 23:53:08 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/01/30 06:50:36 noud4 Exp $
 bin/srpyapp.py
-${PYSITELIB}/SRPy-0.2.3-py2.5.egg-info/PKG-INFO
-${PYSITELIB}/SRPy-0.2.3-py2.5.egg-info/SOURCES.txt
-${PYSITELIB}/SRPy-0.2.3-py2.5.egg-info/dependency_links.txt
-${PYSITELIB}/SRPy-0.2.3-py2.5.egg-info/top_level.txt
+${PYSITELIB}/SRPy-0.2.3-py${PYVERSSUFFIX}.egg-info/PKG-INFO
+${PYSITELIB}/SRPy-0.2.3-py${PYVERSSUFFIX}.egg-info/SOURCES.txt
+${PYSITELIB}/SRPy-0.2.3-py${PYVERSSUFFIX}.egg-info/dependency_links.txt
+${PYSITELIB}/SRPy-0.2.3-py${PYVERSSUFFIX}.egg-info/top_level.txt
 ${PYSITELIB}/srpy/Pyro/EventService/Clients.py
 ${PYSITELIB}/srpy/Pyro/EventService/Clients.pyc
 ${PYSITELIB}/srpy/Pyro/EventService/Clients.pyo
