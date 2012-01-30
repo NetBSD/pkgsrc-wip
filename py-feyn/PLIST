@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/12/29 21:58:32 jihbed Exp $
-bin/mkfeyndiag2.7
+@comment $NetBSD: PLIST,v 1.2 2012/01/30 06:10:51 noud4 Exp $
+bin/mkfeyndiag${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt

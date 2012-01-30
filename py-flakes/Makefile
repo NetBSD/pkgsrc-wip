@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2011/07/24 22:00:13 jihbed Exp $
+# $NetBSD: Makefile,v 1.5 2012/01/30 06:14:01 noud4 Exp $
 #
 
 DISTNAME=	pyflakes-0.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	http://pypi.python.org/packages/source/p/pyflakes/
 

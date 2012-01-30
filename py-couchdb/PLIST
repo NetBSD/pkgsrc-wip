@@ -1,15 +1,15 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/12/03 20:12:55 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/01/30 06:04:35 noud4 Exp $
 bin/couchdb-dump
 bin/couchdb-load
 bin/couchdb-replicate
 bin/couchpy
-${PYSITELIB}/CouchDB-0.6-py2.5.egg-info/PKG-INFO
-${PYSITELIB}/CouchDB-0.6-py2.5.egg-info/SOURCES.txt
-${PYSITELIB}/CouchDB-0.6-py2.5.egg-info/dependency_links.txt
-${PYSITELIB}/CouchDB-0.6-py2.5.egg-info/entry_points.txt
-${PYSITELIB}/CouchDB-0.6-py2.5.egg-info/requires.txt
-${PYSITELIB}/CouchDB-0.6-py2.5.egg-info/top_level.txt
-${PYSITELIB}/CouchDB-0.6-py2.5.egg-info/zip-safe
+${PYSITELIB}/CouchDB-0.6-py${PYVERSSUFFIX}.egg-info/PKG-INFO
+${PYSITELIB}/CouchDB-0.6-py${PYVERSSUFFIX}.egg-info/SOURCES.txt
+${PYSITELIB}/CouchDB-0.6-py${PYVERSSUFFIX}.egg-info/dependency_links.txt
+${PYSITELIB}/CouchDB-0.6-py${PYVERSSUFFIX}.egg-info/entry_points.txt
+${PYSITELIB}/CouchDB-0.6-py${PYVERSSUFFIX}.egg-info/requires.txt
+${PYSITELIB}/CouchDB-0.6-py${PYVERSSUFFIX}.egg-info/top_level.txt
+${PYSITELIB}/CouchDB-0.6-py${PYVERSSUFFIX}.egg-info/zip-safe
 ${PYSITELIB}/couchdb/__init__.py
 ${PYSITELIB}/couchdb/__init__.pyc
 ${PYSITELIB}/couchdb/__init__.pyo
