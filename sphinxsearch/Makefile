@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2010/04/21 10:07:20 fhajny Exp $
+# $NetBSD: Makefile,v 1.6 2012/01/31 12:56:40 fhajny Exp $
 #
 
-PKGNAME=	sphinxsearch-${PKGVERSION}
-DISTNAME=	sphinx-${PKGVERSION}
-PKGVERSION=	0.9.9
+DISTNAME=	sphinx-2.0.3-release
+PKGNAME=	${DISTNAME:S/-/search-/:S/-release//}
 CATEGORIES=	databases textproc
-MASTER_SITES=	http://www.sphinxsearch.com/downloads/
+MASTER_SITES=	http://www.sphinxsearch.com/files/
 
 MAINTAINER=	filip@joyent.com
 HOMEPAGE=	http://www.sphinxsearch.com/
@@ -19,13 +18,14 @@ BUILD_DEFS+=	VARBASE
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+.include "../../mk/bsd.prefs.mk"
+
 SPHINX_USER?=	sphinx
 SPHINX_GROUP?=	sphinx
 SPHINX_DIR?=	${VARBASE}/db/sphinx
 SPHINX_RUN?=	${VARBASE}/spool/sphinx
 SPHINX_LOG?=	${VARBASE}/log/sphinx
 
-.include "../../mk/bsd.prefs.mk"
 .include "options.mk"
 
 EGDIR=		${PREFIX}/share/examples/sphinx
@@ -43,13 +43,14 @@ PKG_USERS+=		${SPHINX_USER}:${SPHINX_GROUP}
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Setting standard paths
 SUBST_STAGE.paths=	post-patch
-SUBST_FILES.paths=	sphinx.conf.in sphinx-min.conf.in Makefile.in
+SUBST_FILES.paths=	sphinx.conf.in sphinx-min.conf.in Makefile.in src/searchd.cpp
 SUBST_SED.paths+=	-e 's,@CONFDIR@/log/searchd.pid,${SPHINX_RUN}/searchd.pid,g'
 SUBST_SED.paths+=	-e 's,@CONFDIR@/log/query.log,${SPHINX_LOG}/query.log,g'
 SUBST_SED.paths+=	-e 's,@CONFDIR@/log/searchd.log,${SPHINX_LOG}/searchd.log,g'
 SUBST_SED.paths+=	-e 's,@CONFDIR@,${SPHINX_DIR},g'
 SUBST_SED.paths+=	-e 's,@localstatedir@,${SPHINX_DIR},g'
 SUBST_SED.paths+=	-e 's,@egdir@,${EGDIR},g'
+SUBST_SED.paths+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
 
 CONFIGURE_DIRS=		.
 CONFIGURE_DIRS+=	api/libsphinxclient
@@ -61,4 +62,5 @@ post-install:
 	${MV} ${DESTDIR}${EGDIR}/sphinx-min.conf.dist ${DESTDIR}${EGDIR}/sphinx-min.conf
 
 .include "../../textproc/expat/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

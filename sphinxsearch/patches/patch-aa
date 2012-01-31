@@ -1,51 +1,57 @@
-$NetBSD: patch-aa,v 1.2 2009/12/15 11:51:51 fhajny Exp $
+$NetBSD: patch-aa,v 1.3 2012/01/31 12:56:40 fhajny Exp $
 
---- Makefile.in.orig	2009-01-20 14:03:09.000000000 +0000
+Force pkgsrc compatible locations.
+--- Makefile.in.orig	2010-06-09 14:24:08.000000000 +0000
 +++ Makefile.in
-@@ -61,7 +61,7 @@ am__vpath_adj = case $$p in \
-     *) f=$$p;; \
-   esac;
- am__strip_dir = `echo $$p | sed -e 's|^.*/||'`;
+@@ -79,7 +79,7 @@ am__nobase_list = $(am__nobase_strip_set
+ am__base_list = \
+   sed '$$!N;$$!N;$$!N;$$!N;$$!N;$$!N;$$!N;s/\n/ /g' | \
+   sed '$$!N;$$!N;$$!N;$$!N;s/\n/ /g'
 -am__installdirs = "$(DESTDIR)$(sysconfdir)"
 +am__installdirs = "$(DESTDIR)$(egdir)"
- sysconfDATA_INSTALL = $(INSTALL_DATA)
  DATA = $(sysconf_DATA)
  RECURSIVE_CLEAN_TARGETS = mostlyclean-recursive clean-recursive	\
-@@ -174,6 +174,7 @@ sbindir = @sbindir@
+   distclean-recursive maintainer-clean-recursive
+@@ -220,6 +220,7 @@ sbindir = @sbindir@
  sharedstatedir = @sharedstatedir@
  srcdir = @srcdir@
  sysconfdir = @sysconfdir@
 +egdir = @egdir@
  target_alias = @target_alias@
+ top_build_prefix = @top_build_prefix@
  top_builddir = @top_builddir@
- top_srcdir = @top_srcdir@
-@@ -240,20 +241,20 @@ sphinx-min.conf.dist: $(top_builddir)/co
+@@ -288,24 +289,24 @@ sphinx-min.conf.dist: $(top_builddir)/co
  	cd $(top_builddir) && $(SHELL) ./config.status $@
  install-sysconfDATA: $(sysconf_DATA)
  	@$(NORMAL_INSTALL)
 -	test -z "$(sysconfdir)" || $(MKDIR_P) "$(DESTDIR)$(sysconfdir)"
 +	test -z "$(egdir)" || $(MKDIR_P) "$(DESTDIR)$(egdir)"
- 	@list='$(sysconf_DATA)'; for p in $$list; do \
+ 	@list='$(sysconf_DATA)'; test -n "$(sysconfdir)" || list=; \
+ 	for p in $$list; do \
  	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
- 	  f=$(am__strip_dir) \
--	  echo " $(sysconfDATA_INSTALL) '$$d$$p' '$(DESTDIR)$(sysconfdir)/$$f'"; \
--	  $(sysconfDATA_INSTALL) "$$d$$p" "$(DESTDIR)$(sysconfdir)/$$f"; \
-+	  echo " $(sysconfDATA_INSTALL) '$$d$$p' '$(DESTDIR)$(egdir)/$$f'"; \
-+	  $(sysconfDATA_INSTALL) "$$d$$p" "$(DESTDIR)$(egdir)/$$f"; \
+ 	  echo "$$d$$p"; \
+ 	done | $(am__base_list) | \
+ 	while read files; do \
+-	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(sysconfdir)'"; \
+-	  $(INSTALL_DATA) $$files "$(DESTDIR)$(sysconfdir)" || exit $$?; \
++	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(egdir)'"; \
++	  $(INSTALL_DATA) $$files "$(DESTDIR)$(egdir)" || exit $$?; \
  	done
  
  uninstall-sysconfDATA:
  	@$(NORMAL_UNINSTALL)
- 	@list='$(sysconf_DATA)'; for p in $$list; do \
- 	  f=$(am__strip_dir) \
--	  echo " rm -f '$(DESTDIR)$(sysconfdir)/$$f'"; \
--	  rm -f "$(DESTDIR)$(sysconfdir)/$$f"; \
-+	  echo " rm -f '$(DESTDIR)$(egdir)/$$f'"; \
-+	  rm -f "$(DESTDIR)$(egdir)/$$f"; \
- 	done
+-	@list='$(sysconf_DATA)'; test -n "$(sysconfdir)" || list=; \
++	@list='$(sysconf_DATA)'; test -n "$(egdir)" || list=; \
+ 	files=`for p in $$list; do echo $$p; done | sed -e 's|^.*/||'`; \
+ 	test -n "$$files" || exit 0; \
+-	echo " ( cd '$(DESTDIR)$(sysconfdir)' && rm -f" $$files ")"; \
+-	cd "$(DESTDIR)$(sysconfdir)" && rm -f $$files
++	echo " ( cd '$(DESTDIR)$(egdir)' && rm -f" $$files ")"; \
++	cd "$(DESTDIR)$(egdir)" && rm -f $$files
  
  # This directory's subdirectories are mostly independent; you can cd
-@@ -539,7 +540,7 @@ check: check-recursive
+ # into them and run `make' without going through this Makefile.
+@@ -622,7 +623,7 @@ check: check-recursive
  all-am: Makefile $(DATA)
  installdirs: installdirs-recursive
  installdirs-am:
@@ -54,29 +60,29 @@ $NetBSD: patch-aa,v 1.2 2009/12/15 11:51:51 fhajny Exp $
  	  test -z "$$dir" || $(MKDIR_P) "$$dir"; \
  	done
  install: install-recursive
-@@ -587,7 +588,6 @@ info-am:
+@@ -673,7 +674,6 @@ info-am:
  
  install-data-am:
  	@$(NORMAL_INSTALL)
 -	$(MAKE) $(AM_MAKEFLAGS) install-data-hook
- 
  install-dvi: install-dvi-recursive
  
-@@ -635,7 +635,7 @@ uninstall-am: uninstall-sysconfDATA
- 	distclean-generic distclean-hdr distclean-tags distcleancheck \
- 	distdir distuninstallcheck dvi dvi-am html html-am info \
- 	info-am install install-am install-data install-data-am \
--	install-data-hook install-dvi install-dvi-am install-exec \
-+	install-dvi install-dvi-am install-exec \
- 	install-exec-am install-html install-html-am install-info \
- 	install-info-am install-man install-pdf install-pdf-am \
- 	install-ps install-ps-am install-strip install-sysconfDATA \
-@@ -645,8 +645,6 @@ uninstall-am: uninstall-sysconfDATA
- 	uninstall uninstall-am uninstall-sysconfDATA
+ install-dvi-am:
+@@ -730,7 +730,7 @@ uninstall-am: uninstall-sysconfDATA
+ 	distclean distclean-generic distclean-hdr distclean-tags \
+ 	distcleancheck distdir distuninstallcheck dvi dvi-am html \
+ 	html-am info info-am install install-am install-data \
+-	install-data-am install-data-hook install-dvi install-dvi-am \
++	install-data-am install-dvi install-dvi-am \
+ 	install-exec install-exec-am install-html install-html-am \
+ 	install-info install-info-am install-man install-pdf \
+ 	install-pdf-am install-ps install-ps-am install-strip \
+@@ -740,8 +740,6 @@ uninstall-am: uninstall-sysconfDATA
+ 	tags-recursive uninstall uninstall-am uninstall-sysconfDATA
  
  
 -install-data-hook:
 -	mkdir -p $(DESTDIR)$(localstatedir)/data && mkdir -p $(DESTDIR)$(localstatedir)/log
+ 
  # Tell versions [3.59,3.63) of GNU make to not export all variables.
  # Otherwise a system limit (for SysV at least) may be exceeded.
- .NOEXPORT:
