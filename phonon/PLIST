@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2011/05/13 23:25:13 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.5 2012/01/31 19:52:09 mwdavies Exp $
 include/KDE/Phonon/AbstractAudioOutput
 include/KDE/Phonon/AbstractMediaStream
 include/KDE/Phonon/AbstractVideoOutput
@@ -157,10 +157,10 @@ include/phonon/volumefaderinterface.h
 include/phonon/volumeslider.h
 lib/libphonon.so
 lib/libphonon.so.4
-lib/libphonon.so.4.5.0
+lib/libphonon.so.${PKGVERSION}
 lib/libphononexperimental.so
 lib/libphononexperimental.so.4
-lib/libphononexperimental.so.4.5.0
+lib/libphononexperimental.so.${PKGVERSION}
 lib/pkgconfig/phonon.pc
 qt4/mkspecs/modules/qt_phonon.pri
 qt4/plugins/designer/libphononwidgets.so
