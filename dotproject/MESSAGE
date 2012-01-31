@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2008/03/15 11:51:08 ahallmann Exp $
+$NetBSD: MESSAGE,v 1.2 2012/01/31 08:14:42 noud4 Exp $
 
 dotproject was NOT installed.  You'll need manual configurations to actually
 activate it. 

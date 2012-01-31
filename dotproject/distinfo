@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2008/03/15 11:42:52 ahallmann Exp $
+$NetBSD: distinfo,v 1.2 2012/01/31 08:14:42 noud4 Exp $
 
-SHA1 (dotproject-2.1.1.tar.gz) = ab0fc80f503a9904acdec901147185461fba928c
-RMD160 (dotproject-2.1.1.tar.gz) = 3d59c52cde6c606287f7340c7166e371c5e84431
-Size (dotproject-2.1.1.tar.gz) = 3571276 bytes
+SHA1 (dotproject-2.1.4.tar.gz) = 3a6d046528ad9459c29b09d488b76bd027dcf2e5
+RMD160 (dotproject-2.1.4.tar.gz) = fbe9e90bd12ac3bde550769bc619f5eb5dfba930
+Size (dotproject-2.1.4.tar.gz) = 4117045 bytes
