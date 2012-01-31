@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1.1.1 2010/03/10 19:12:52 marttikuparinen Exp $
+# $NetBSD: options.mk,v 1.2 2012/01/31 02:18:04 noud4 Exp $
 
 .if defined(DSPAM_DELIVERY_AGENT) && !empty(DSPAM_DELIVERY_AGENT:Mcustom)
 DSPAM_DELIVERY_AGENT:=	${DSPAM_DELIVERY_AGENT_ARGS}
@@ -178,7 +178,7 @@ DSPAM_PSFLAGS?=		aux
 ###
 .if !empty(PKG_OPTIONS:Mclamav)
 CONFIGURE_ARGS+=	--enable-clamav
-.include "../../mail/clamav/buildlink3.mk"
+.include "../../security/clamav/buildlink3.mk"
 .endif
 
 ###

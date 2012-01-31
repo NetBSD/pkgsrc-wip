@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/05/29 19:21:48 tnn2 Exp $
+# $NetBSD: Makefile,v 1.9 2012/01/31 02:17:33 noud4 Exp $
 
 DISTNAME=	clamassassin-1.2.2
 CATEGORIES=	mail
@@ -8,7 +8,7 @@ MAINTAINER=	ura@jp.NetBSD.org
 HOMEPAGE=	http://jameslick.com/clamassassin/
 COMMENT=	Simple virus filter wrapper for ClamAV
 
-DEPENDS+=	clamav>=0.84:../../mail/clamav
+DEPENDS+=	clamav>=0.84:../../security/clamav
 DEPENDS+=	procmail>=3.22nb1:../../mail/procmail
 
 GNU_CONFIGURE=	yes
