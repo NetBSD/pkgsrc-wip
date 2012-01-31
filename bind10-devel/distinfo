@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2012/01/31 22:59:46 pettai Exp $
+
+SHA1 (bind10-devel-20120119.tar.gz) = 65987db0a9b338fd58e83f6e39ac21be1cd60987
+RMD160 (bind10-devel-20120119.tar.gz) = a015f8844051c278a3275e07c09f706bc1ad91f3
+Size (bind10-devel-20120119.tar.gz) = 3308849 bytes
