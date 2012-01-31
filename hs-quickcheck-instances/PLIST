@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/01/17 14:21:07 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/01/31 13:09:06 phonohawk Exp $
 lib/quickcheck-instances-${PKGVERSION}/${HASKELL_VERSION}/HSquickcheck-instances-${PKGVERSION}.o
 lib/quickcheck-instances-${PKGVERSION}/${HASKELL_VERSION}/Test/QuickCheck/Instances.hi
 lib/quickcheck-instances-${PKGVERSION}/${HASKELL_VERSION}/Test/QuickCheck/Instances.p_hi
+lib/quickcheck-instances-${PKGVERSION}/${HASKELL_VERSION}/Test/QuickCheck/Instances/LegacyNumeric.hi
+lib/quickcheck-instances-${PKGVERSION}/${HASKELL_VERSION}/Test/QuickCheck/Instances/LegacyNumeric.p_hi
 lib/quickcheck-instances-${PKGVERSION}/${HASKELL_VERSION}/libHSquickcheck-instances-${PKGVERSION}.a
 lib/quickcheck-instances-${PKGVERSION}/${HASKELL_VERSION}/libHSquickcheck-instances-${PKGVERSION}_p.a
 lib/quickcheck-instances-${PKGVERSION}/${HASKELL_VERSION}/package-description

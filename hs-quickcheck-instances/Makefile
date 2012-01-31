@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/01/17 14:21:07 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2012/01/31 13:09:05 phonohawk Exp $
 #
 
-DISTNAME=	quickcheck-instances-0.1.0
+DISTNAME=	quickcheck-instances-0.2.0
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
