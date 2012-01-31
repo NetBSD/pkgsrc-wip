@@ -19,7 +19,7 @@ Suggested package updates
 	o directfb-1.0.0
 	o dmxproto-2.3.1
 	o dos2unix-5.3.2
-	o duff-0.5.1
+	o duff-0.5.2
 	o ecasound-2.8.1
 	o ecb-2.40
 	o editline-20110227.3.0
@@ -70,6 +70,7 @@ Suggested package updates
 	o kvirc-3.4.2
 	o lasem-0.3.1
 	o libAppleWM-1.4.0
+	o libburn-1.2.0
 	o libdmx-1.1.1
 	o libgksu-2.0.4
 	o libgtk-java-2.10.2
