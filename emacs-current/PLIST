@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.111 2011/09/24 12:13:55 makoto Exp $
+@comment $NetBSD: PLIST,v 1.112 2012/01/31 23:47:16 makoto Exp $
 bin/ctags
 bin/ebrowse
 bin/emacs
@@ -828,6 +828,9 @@ share/emacs/${PKGVERSION}/etc/nxml/E0000-E007F.el
 share/emacs/${PKGVERSION}/etc/nxml/README
 share/emacs/${PKGVERSION}/etc/nxml/test-invalid.xml
 share/emacs/${PKGVERSION}/etc/nxml/test-valid.xml
+share/emacs/${PKGVERSION}/etc/org/OrgOdtContentTemplate.xml
+share/emacs/${PKGVERSION}/etc/org/OrgOdtStyles.xml
+share/emacs/${PKGVERSION}/etc/org/README
 share/emacs/${PKGVERSION}/etc/ps-prin0.ps
 share/emacs/${PKGVERSION}/etc/ps-prin1.ps
 share/emacs/${PKGVERSION}/etc/refcards/Makefile
@@ -2948,6 +2951,8 @@ share/emacs/${PKGVERSION}/lisp/org/ob-eval.el.gz
 share/emacs/${PKGVERSION}/lisp/org/ob-eval.elc
 share/emacs/${PKGVERSION}/lisp/org/ob-exp.el.gz
 share/emacs/${PKGVERSION}/lisp/org/ob-exp.elc
+share/emacs/${PKGVERSION}/lisp/org/ob-fortran.el.gz
+share/emacs/${PKGVERSION}/lisp/org/ob-fortran.elc
 share/emacs/${PKGVERSION}/lisp/org/ob-gnuplot.el.gz
 share/emacs/${PKGVERSION}/lisp/org/ob-gnuplot.elc
 share/emacs/${PKGVERSION}/lisp/org/ob-haskell.el.gz
@@ -2982,6 +2987,8 @@ share/emacs/${PKGVERSION}/lisp/org/ob-org.el.gz
 share/emacs/${PKGVERSION}/lisp/org/ob-org.elc
 share/emacs/${PKGVERSION}/lisp/org/ob-perl.el.gz
 share/emacs/${PKGVERSION}/lisp/org/ob-perl.elc
+share/emacs/${PKGVERSION}/lisp/org/ob-picolisp.el.gz
+share/emacs/${PKGVERSION}/lisp/org/ob-picolisp.elc
 share/emacs/${PKGVERSION}/lisp/org/ob-plantuml.el.gz
 share/emacs/${PKGVERSION}/lisp/org/ob-plantuml.elc
 share/emacs/${PKGVERSION}/lisp/org/ob-python.el.gz
@@ -2998,6 +3005,8 @@ share/emacs/${PKGVERSION}/lisp/org/ob-screen.el.gz
 share/emacs/${PKGVERSION}/lisp/org/ob-screen.elc
 share/emacs/${PKGVERSION}/lisp/org/ob-sh.el.gz
 share/emacs/${PKGVERSION}/lisp/org/ob-sh.elc
+share/emacs/${PKGVERSION}/lisp/org/ob-shen.el.gz
+share/emacs/${PKGVERSION}/lisp/org/ob-shen.elc
 share/emacs/${PKGVERSION}/lisp/org/ob-sql.el.gz
 share/emacs/${PKGVERSION}/lisp/org/ob-sql.elc
 share/emacs/${PKGVERSION}/lisp/org/ob-sqlite.el.gz
@@ -3042,6 +3051,8 @@ share/emacs/${PKGVERSION}/lisp/org/org-docview.el.gz
 share/emacs/${PKGVERSION}/lisp/org/org-docview.elc
 share/emacs/${PKGVERSION}/lisp/org/org-entities.el.gz
 share/emacs/${PKGVERSION}/lisp/org/org-entities.elc
+share/emacs/${PKGVERSION}/lisp/org/org-eshell.el.gz
+share/emacs/${PKGVERSION}/lisp/org/org-eshell.elc
 share/emacs/${PKGVERSION}/lisp/org/org-exp-blocks.el.gz
 share/emacs/${PKGVERSION}/lisp/org/org-exp-blocks.elc
 share/emacs/${PKGVERSION}/lisp/org/org-exp.el.gz
@@ -3080,6 +3091,8 @@ share/emacs/${PKGVERSION}/lisp/org/org-latex.el.gz
 share/emacs/${PKGVERSION}/lisp/org/org-latex.elc
 share/emacs/${PKGVERSION}/lisp/org/org-list.el.gz
 share/emacs/${PKGVERSION}/lisp/org/org-list.elc
+share/emacs/${PKGVERSION}/lisp/org/org-lparse.el.gz
+share/emacs/${PKGVERSION}/lisp/org/org-lparse.elc
 share/emacs/${PKGVERSION}/lisp/org/org-mac-message.el.gz
 share/emacs/${PKGVERSION}/lisp/org/org-mac-message.elc
 share/emacs/${PKGVERSION}/lisp/org/org-macs.el.gz
@@ -3094,6 +3107,8 @@ share/emacs/${PKGVERSION}/lisp/org/org-mobile.el.gz
 share/emacs/${PKGVERSION}/lisp/org/org-mobile.elc
 share/emacs/${PKGVERSION}/lisp/org/org-mouse.el.gz
 share/emacs/${PKGVERSION}/lisp/org/org-mouse.elc
+share/emacs/${PKGVERSION}/lisp/org/org-odt.el.gz
+share/emacs/${PKGVERSION}/lisp/org/org-odt.elc
 share/emacs/${PKGVERSION}/lisp/org/org-pcomplete.el.gz
 share/emacs/${PKGVERSION}/lisp/org/org-pcomplete.elc
 share/emacs/${PKGVERSION}/lisp/org/org-plot.el.gz

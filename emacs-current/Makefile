@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.56 2011/12/08 20:37:23 makoto Exp $
+# $NetBSD: Makefile,v 1.57 2012/01/31 23:47:16 makoto Exp $
 #
 
-DISTNAME=	emacs-24.0.92
+DISTNAME=	emacs-24.0.93
 #PKGNAME=	emacs-24.0.50
 PKGREVISION=	${_GIT_PKGVERSION:S/.//g}
 CATEGORIES=	editors
@@ -63,6 +63,7 @@ pre-configure:
 
 .include "../../wip/mk/git-package.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../wip/gl/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
