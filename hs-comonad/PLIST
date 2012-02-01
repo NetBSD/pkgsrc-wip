@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/02/01 16:03:07 phonohawk Exp $
+lib/comonad-${PKGVERSION}/${HASKELL_VERSION}/Control/Comonad.hi
+lib/comonad-${PKGVERSION}/${HASKELL_VERSION}/Control/Comonad.p_hi
+lib/comonad-${PKGVERSION}/${HASKELL_VERSION}/Data/Functor/Extend.hi
+lib/comonad-${PKGVERSION}/${HASKELL_VERSION}/Data/Functor/Extend.p_hi
+lib/comonad-${PKGVERSION}/${HASKELL_VERSION}/HScomonad-${PKGVERSION}.o
+lib/comonad-${PKGVERSION}/${HASKELL_VERSION}/libHScomonad-${PKGVERSION}.a
+lib/comonad-${PKGVERSION}/${HASKELL_VERSION}/libHScomonad-${PKGVERSION}_p.a
+lib/comonad-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/comonad-${PKGVERSION}/LICENSE
