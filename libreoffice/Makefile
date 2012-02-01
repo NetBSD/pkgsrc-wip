@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2012/01/28 09:42:04 ftigeot Exp $
+# $NetBSD: Makefile,v 1.21 2012/02/01 23:21:12 ftigeot Exp $
 
 VER=			3.5.0.2
 DISTNAME=		libreoffice-${VER}
@@ -83,6 +83,7 @@ USE_TOOLS+=		automake bash bison gmake perl pkg-config unzip
 PTHREAD_OPTS+=		require
 
 HAS_CONFIGURE=		yes
+CHECK_PORTABILITY_SKIP=	configure
 
 CONFIGURE_ARGS+=	--prefix=${DESTDIR}${PREFIX}/${PKGNAME}
 CONFIGURE_ARGS+=	--disable-ccache
