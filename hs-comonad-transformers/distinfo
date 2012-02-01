@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/02/01 16:38:18 phonohawk Exp $
+
+SHA1 (comonad-transformers-2.0.2.tar.gz) = 71c2426bccd2772938f772a618cdedd2a7c77e2e
+RMD160 (comonad-transformers-2.0.2.tar.gz) = c33a227872195ff0a69b05b2b8bde833890fccb4
+Size (comonad-transformers-2.0.2.tar.gz) = 8636 bytes
