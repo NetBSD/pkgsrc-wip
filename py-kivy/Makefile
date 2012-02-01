@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/02/01 00:04:53 noud4 Exp $
+# $NetBSD: Makefile,v 1.4 2012/02/01 13:41:02 jihbed Exp $
 #
 
 VERSION=	1.0.9
@@ -18,9 +18,14 @@ DEPENDS+=	${PYPKGPREFIX}-multiprocessing>=2.6.2.1:../../devel/py-multiprocessing
 DEPENDS+=	${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
 DEPENDS+=	${PYPKGPREFIX}-enchant>=1.6.5:../../textproc/py-enchant
 
+# py-ctypes is included in Python 2.5 and higher (Thank you ndb)
+#DEPENDS+=	${PYPKGPREFIX}-ctypes>=1.0.2:../../devel/py-ctypes
+
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES= c
+
+PYTHON_VERSIONS_ACCEPTED= 27 26
 PYDISTUTILSPKG=		yes
 
 .include "../../devel/py-cython/buildlink3.mk"
@@ -30,7 +35,4 @@ PYDISTUTILSPKG=		yes
 .include "../../graphics/py-imaging/buildlink3.mk"
 .include "../../multimedia/py-gstreamer0.10/buildlink3.mk"
 .include "../../lang/python/extension.mk"
-.if ${PYVERSSUFFIX} == "2.4"
-DEPENDS+=	${PYPKGPREFIX}-ctypes>=1.0.2:../../devel/py-ctypes
-.endif
 .include "../../mk/bsd.pkg.mk"
