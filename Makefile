@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4633 2012/02/01 06:14:40 noud4 Exp $
+# $Id: Makefile,v 1.4634 2012/02/01 06:23:07 noud4 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1350,7 +1350,6 @@ SUBDIR+=	libmrss
 SUBDIR+=	libmusclecard
 SUBDIR+=	libneural
 SUBDIR+=	libnfo
-SUBDIR+=	liboauth
 SUBDIR+=	libode
 SUBDIR+=	liboglappth
 SUBDIR+=	libopenmodeller
