@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4632 2012/02/01 00:59:34 noud4 Exp $
+# $Id: Makefile,v 1.4633 2012/02/01 06:14:40 noud4 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1653,7 +1653,7 @@ SUBDIR+=	newsbeuter
 SUBDIR+=	nginx
 SUBDIR+=	nhc98
 SUBDIR+=	nicotine+
-SUBDIR+=	nios2
+#SUBDIR+=	nios2		# not a package
 SUBDIR+=	nios2-binutils
 SUBDIR+=	nios2-gcc
 SUBDIR+=	njb-sharp
