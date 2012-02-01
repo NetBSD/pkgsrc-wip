@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2012/01/30 03:31:42 noud4 Exp $
+# $NetBSD: Makefile,v 1.4 2012/02/01 00:04:54 noud4 Exp $
 #
 
 DISTNAME=	telepathy-butterfly-0.5.4
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	chat
 MASTER_SITES=	http://telepathy.freedesktop.org/releases/telepathy-butterfly/
 
@@ -11,7 +11,6 @@ HOMEPAGE=	http://telepathy.freedesktop.org/releases/telepathy-butterfly/
 COMMENT=	Telepathy-butterfly is the MSN connection manager for telepathy
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	${PYPKGPREFIX}-ctypes>=1.0.2:../../devel/py-ctypes
 DEPENDS+=	${PYPKGPREFIX}-papyon>=0.4.4:../../wip/py-papyon
 DEPENDS+=	${PYPKGPREFIX}-telepathy>=0.15.15:../../wip/py-telepathy
 

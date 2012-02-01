@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2012/01/30 04:51:22 noud4 Exp $
+# $NetBSD: Makefile,v 1.3 2012/02/01 00:04:52 noud4 Exp $
 #
 
 DISTNAME=	pycvf-0.2.0
 EGG_NAME=	pycvf-0.2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics python
 MASTER_SITES=	http://master.dl.sourceforge.net/project/pycvf/0.2/
 
@@ -15,7 +15,6 @@ LICENSE=	gnu-lgpl-v3
 
 
 DEPENDS+=	${PYPKGPREFIX}-Pyro>=3.4:../../devel/py-Pyro
-DEPENDS+=	${PYPKGPREFIX}-ctypes>=1.0.2:../../devel/py-ctypes
 DEPENDS+=	${PYPKGPREFIX}-multiprocessing>=2.6.2.1:../../devel/py-multiprocessing
 #DEPENDS+=	${PYPKGPREFIX}-scipy>=0.7.0:../../math/py-scipy
 
@@ -30,6 +29,9 @@ BUILDLINK_API_DEPENDS.pycython+= ${PYPKGPREFIX}-cython>=0.12.1
 BUILDLINK_API_DEPENDS.pymatplotlib+=	${PYPKGPREFIX}-matplotlib>=0.87.2
 .include "../../graphics/py-matplotlib/buildlink3.mk"
 .include "../../lang/python/egg.mk"
+.if ${PYVERSSUFFIX} == "2.4"
+DEPENDS+=	${PYPKGPREFIX}-ctypes>=1.0.2:../../devel/py-ctypes
+.endif
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../x11/py-qt4/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

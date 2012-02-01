@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2012/01/30 03:08:03 noud4 Exp $
+# $NetBSD: Makefile,v 1.6 2012/02/01 00:04:53 noud4 Exp $
 #
 
 DISTNAME=	python-ptrace-0.6.3
 PKGNAME=	${PYPKGPREFIX}${DISTNAME:S/python//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils python
 MASTER_SITES=	http://pypi.python.org/packages/source/p/python-ptrace/
 
@@ -14,11 +14,12 @@ LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-DEPENDS+=	${PYPKGPREFIX}-ctypes>=1.0.2:../../devel/py-ctypes
-
 WRKSRC=	${WRKDIR}/python-ptrace-0.6.3
 
 PYDISTUTILSPKG= 	yes
 
 .include "../../lang/python/extension.mk"
+.if ${PYVERSSUFFIX} == "2.4"
+DEPENDS+=	${PYPKGPREFIX}-ctypes>=1.0.2:../../devel/py-ctypes
+.endif
 .include "../../mk/bsd.pkg.mk"

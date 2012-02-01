@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2012/01/30 03:28:25 noud4 Exp $
+# $NetBSD: Makefile,v 1.18 2012/02/01 00:04:54 noud4 Exp $
 #
 
 DISTNAME=	quodlibet-2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	audio
 MASTER_SITES=	http://quodlibet.googlecode.com/files/
 
@@ -15,7 +15,6 @@ LICENSE=	gnu-gpl-v2
 DEPENDS+=	gst-plugins0.10-mad>=0.10.0:../../audio/gst-plugins0.10-mad
 DEPENDS+=	${PYPKGPREFIX}-mutagen>=1.8:../../audio/py-mutagen
 DEPENDS+=	gst-plugins0.10-vorbis>=0.10.0:../../audio/gst-plugins0.10-vorbis
-DEPENDS+=	${PYPKGPREFIX}-ctypes>=1.0.2:../../devel/py-ctypes
 DEPENDS+=	gst-plugins0.10-ogg>=0.10.0:../../multimedia/gst-plugins0.10-ogg
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -36,5 +35,8 @@ PYTHON_PATCH_SCRIPTS=	exfalso.py quodlibet.py
 .include "../../sysutils/py-dbus/buildlink3.mk"
 .include "../../x11/py-gtk2/buildlink3.mk"
 .include "../../lang/python/extension.mk"
+.if ${PYVERSSUFFIX} == "2.4"
+DEPENDS+=	${PYPKGPREFIX}-ctypes>=1.0.2:../../devel/py-ctypes
+.endif
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2012/01/30 03:04:41 noud4 Exp $
+# $NetBSD: Makefile,v 1.3 2012/02/01 00:04:53 noud4 Exp $
 #
 
 DISTNAME=	processing-0.52
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	parallel python
 MASTER_SITES=	http://pypi.python.org/packages/source/p/processing/
 EXTRACT_SUFX=	.zip#md5=62772fa3002d003b2395ed669072d51d
@@ -15,12 +15,13 @@ COMMENT=	Library for running multiple Python processes using the threading API
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-DEPENDS+=	${PYPKGPREFIX}-ctypes>=1.0.2:../../devel/py-ctypes
-
 #python section
 PYTHON_VERSIONS_INCOMPATIBLE=  \
 			23 22 21 20 15
 PYDISTUTILSPKG=	yes
 
 .include "../../lang/python/extension.mk"
+.if ${PYVERSSUFFIX} == "2.4"
+DEPENDS+=	${PYPKGPREFIX}-ctypes>=1.0.2:../../devel/py-ctypes
+.endif
 .include "../../mk/bsd.pkg.mk"

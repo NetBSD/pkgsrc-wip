@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2012/01/30 02:23:22 noud4 Exp $
+# $NetBSD: Makefile,v 1.4 2012/02/01 00:04:53 noud4 Exp $
 #
 
 DISTNAME=	papy-1.0b1.tar
 PKGNAME= ${PYPKGPREFIX}-${DISTNAME:S/.tar//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	parallel python
 MASTER_SITES=	http://pypi.python.org/packages/source/p/papy/
 EXTRACT_SUFX=	.gz#md5=2cfa9ac9791eea16fdf8e3c34940e924
@@ -16,7 +16,6 @@ LICENSE=	gnu-gpl-v3
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	${PYPKGPREFIX}-Pmw>=1.3.2:../../x11/py-Pmw
-DEPENDS+=	${PYPKGPREFIX}-ctypes>=1.0.2:../../devel/py-ctypes
 
 WRKSRC=		${WRKDIR}/papy-1.0b1
 USE_TOOLS+=	pax
