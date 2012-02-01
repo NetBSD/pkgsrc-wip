@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2011/12/09 09:04:21 obache Exp $
+@comment $NetBSD: PLIST,v 1.13 2012/02/01 11:40:53 obache Exp $
 bin/opera
 bin/opera-widget-manager
 lib/opera/gstreamer/plugins/libgstoperamatroska.so
@@ -116,12 +116,9 @@ share/opera/locale/de/search.ini
 share/opera/locale/de/standard_speeddial.ini
 share/opera/locale/el/el.lng
 share/opera/locale/en-GB/en-GB.lng
-share/opera/locale/en/bookmarks.adr
 share/opera/locale/en/en.lng
 share/opera/locale/en/en.zip
 share/opera/locale/en/license.txt
-share/opera/locale/en/search.ini
-share/opera/locale/en/standard_speeddial.ini
 share/opera/locale/es-ES/bookmarks.adr
 share/opera/locale/es-ES/es-ES.lng
 share/opera/locale/es-ES/search.ini
@@ -142,10 +139,7 @@ share/opera/locale/hu/bookmarks.adr
 share/opera/locale/hu/hu.lng
 share/opera/locale/hu/search.ini
 share/opera/locale/hu/standard_speeddial.ini
-share/opera/locale/id/bookmarks.adr
 share/opera/locale/id/id.lng
-share/opera/locale/id/search.ini
-share/opera/locale/id/standard_speeddial.ini
 share/opera/locale/it/bookmarks.adr
 share/opera/locale/it/it.lng
 share/opera/locale/it/search.ini
@@ -231,6 +225,9 @@ share/opera/pubsuffix.xml
 share/opera/region/cis/en/bookmarks.adr
 share/opera/region/cis/en/search.ini
 share/opera/region/cis/en/standard_speeddial.ini
+share/opera/region/cis/ru/bookmarks.adr
+share/opera/region/cis/ru/search.ini
+share/opera/region/cis/ru/standard_speeddial.ini
 share/opera/region/cn/browser.js
 share/opera/region/cn/en/bookmarks.adr
 share/opera/region/cn/en/search.ini
@@ -247,6 +244,9 @@ share/opera/region/id/standard_speeddial.ini
 share/opera/region/in/bookmarks.adr
 share/opera/region/in/search.ini
 share/opera/region/in/standard_speeddial.ini
+share/opera/region/latin_america/bookmarks.adr
+share/opera/region/latin_america/search.ini
+share/opera/region/latin_america/standard_speeddial.ini
 share/opera/region/middle_east/bookmarks.adr
 share/opera/region/middle_east/search.ini
 share/opera/region/middle_east/standard_speeddial.ini
