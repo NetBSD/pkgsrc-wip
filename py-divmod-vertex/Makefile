@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2010/07/25 13:40:09 lexort Exp $
+# $NetBSD: Makefile,v 1.7 2012/02/01 00:34:38 noud4 Exp $
 
 VERTEX_VERSION=	0.2.0
 DISTNAME=	Vertex-${VERTEX_VERSION}
 PKGNAME=	${PYPKGPREFIX}-divmod-vertex-${VERTEX_VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	python net
 MASTER_SITES=	http://milosn.no-ip.org/files/
 #MASTER_SITES=	ftp://ftp.osuosl.org/pub/nslu2/sources/
@@ -14,12 +14,14 @@ MAINTAINER=         pkgsrc-wip-users@sourceforge.net
 HOMEPAGE=	http://divmod.org/trac/wiki/DivmodVertex
 COMMENT=	An implementation of the Q2Q protocol
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 DEPENDS+=	${PYPKGPREFIX}-OpenSSL>=0.6:../../security/py-OpenSSL
-DEPENDS+=	${PYPKGPREFIX}-twisted>=2.4.0:../../wip/py-twisted
+DEPENDS+=	${PYPKGPREFIX}-twisted>=2.4.0:../../net/py-twisted
 DEPENDS+=	${PYPKGPREFIX}-divmod-epsilon>=0.5.0:../../wip/py-divmod-epsilon
 
 PYDISTUTILSPKG=		yes
-PYTHON_VERSIONS_ACCEPTED=	25 24
+PYTHON_VERSIONS_ACCEPTED=	26 25 24
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

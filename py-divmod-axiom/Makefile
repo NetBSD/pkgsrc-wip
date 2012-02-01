@@ -1,23 +1,27 @@
-# $NetBSD: Makefile,v 1.8 2010/07/25 13:40:09 lexort Exp $
+# $NetBSD: Makefile,v 1.9 2012/02/01 00:34:38 noud4 Exp $
 
 AXIOM_VERSION=	0.5.20
 DISTNAME=	Axiom-${AXIOM_VERSION}
 PKGNAME=	${PYPKGPREFIX}-divmod-axiom-${AXIOM_VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	python
 MASTER_SITES=	ftp://ftp.osuosl.org/pub/nslu2/sources/
 EXTRACT_SUFX=	.tar.gz
 
-MAINTAINER=         pkgsrc-wip-users@sourceforge.net
+MAINTAINER=	pkgsrc-wip-users@sourceforge.net
 HOMEPAGE=	http://divmod.org/trac/wiki/DivmodAxiom
 COMMENT=	An object database implemented on top of SQLite
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 DEPENDS+=	${PYPKGPREFIX}-sqlite2>=2.0:../../databases/py-sqlite2
-DEPENDS+=	${PYPKGPREFIX}-twisted>=2.4.0:../../wip/py-twisted
+DEPENDS+=	${PYPKGPREFIX}-twisted>=2.4.0:../../net/py-twisted
 DEPENDS+=	${PYPKGPREFIX}-divmod-epsilon>=0.5.6:../../wip/py-divmod-epsilon
 
 PYDISTUTILSPKG=		yes
-PYTHON_VERSIONS_ACCEPTED=	25 24
+PYTHON_VERSIONS_ACCEPTED=	26 25 24
+REPLACE_PYTHON+=	bin/axiomatic
 
+.include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

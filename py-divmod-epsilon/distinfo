@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2007/03/22 21:00:27 milosn Exp $
+$NetBSD: distinfo,v 1.3 2012/02/01 00:34:37 noud4 Exp $
 
-SHA1 (Epsilon-0.5.6.tar.gz) = eb979a9e6b36073e0173eb380b11c185af74146f
-RMD160 (Epsilon-0.5.6.tar.gz) = 01866b3f2bc549d97dbc6a51d8ece31baef043c4
-Size (Epsilon-0.5.6.tar.gz) = 64733 bytes
+SHA1 (Epsilon-0.5.12.tar.gz) = a56f406269dab406131c84de9ba69f26b06c6506
+RMD160 (Epsilon-0.5.12.tar.gz) = 6996521b1d973b98c2421e906c93a57b5083f840
+Size (Epsilon-0.5.12.tar.gz) = 204090 bytes
