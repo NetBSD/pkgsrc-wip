@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/02/01 16:51:30 phonohawk Exp $
+
+SHA1 (transformers-abort-0.4.tar.gz) = 2b52ca46f2900ebf30d6269f9ac89fe30d26c529
+RMD160 (transformers-abort-0.4.tar.gz) = 03d46f2edf76d593434717e856452dcde106c1f8
+Size (transformers-abort-0.4.tar.gz) = 2881 bytes
