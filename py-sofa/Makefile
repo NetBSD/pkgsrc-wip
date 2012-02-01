@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/02/01 00:04:53 noud4 Exp $
+# $NetBSD: Makefile,v 1.4 2012/02/01 13:14:29 jihbed Exp $
 #
 
 DISTNAME=	pysofa-0.1.0a2
@@ -7,7 +7,7 @@ PKGREVISION=	2
 CATEGORIES=	astronomy python
 MASTER_SITES=	http://pypi.python.org/packages/source/p/pysofa/
 
-MAINTAINER=	Ijihbed.research@gmail.com
+MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://code.google.com/p/pysofa/
 COMMENT=	Python ctypes wrapper around the SOFA astronomical library
 LICENSE=	mit
