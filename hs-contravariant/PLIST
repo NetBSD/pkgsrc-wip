@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/02/01 16:11:36 phonohawk Exp $
+lib/contravariant-${PKGVERSION}/${HASKELL_VERSION}/Data/Functor/Contravariant.hi
+lib/contravariant-${PKGVERSION}/${HASKELL_VERSION}/Data/Functor/Contravariant.p_hi
+lib/contravariant-${PKGVERSION}/${HASKELL_VERSION}/Data/Functor/Contravariant/Compose.hi
+lib/contravariant-${PKGVERSION}/${HASKELL_VERSION}/Data/Functor/Contravariant/Compose.p_hi
+lib/contravariant-${PKGVERSION}/${HASKELL_VERSION}/HScontravariant-${PKGVERSION}.o
+lib/contravariant-${PKGVERSION}/${HASKELL_VERSION}/libHScontravariant-${PKGVERSION}.a
+lib/contravariant-${PKGVERSION}/${HASKELL_VERSION}/libHScontravariant-${PKGVERSION}_p.a
+lib/contravariant-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/contravariant-${PKGVERSION}/LICENSE
