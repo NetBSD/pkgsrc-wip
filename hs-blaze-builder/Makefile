@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2012/01/17 12:47:29 phonohawk Exp $
+# $NetBSD: Makefile,v 1.3 2012/02/02 13:38:05 phonohawk Exp $
 #
 
-DISTNAME=	blaze-builder-0.3.0.2
+DISTNAME=	blaze-builder-0.3.1.0
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
