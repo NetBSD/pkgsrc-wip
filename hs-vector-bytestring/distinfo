@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/02/02 13:11:52 phonohawk Exp $
+
+SHA1 (vector-bytestring-0.0.0.1.tar.gz) = 8abb7dcd3dedd982df8df10332ca7ff786b35772
+RMD160 (vector-bytestring-0.0.0.1.tar.gz) = ba79679fc68ca3aea7ebb3d16fea6fa2ddaa604b
+Size (vector-bytestring-0.0.0.1.tar.gz) = 405541 bytes
+SHA1 (patch-vector-bytestring.cabal) = 5bd5ce4ab2fd0ed37854f4ccbf55a975812798a2

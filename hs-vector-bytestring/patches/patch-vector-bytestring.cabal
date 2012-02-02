@@ -1,0 +1,36 @@
+$NetBSD: patch-vector-bytestring.cabal,v 1.1.1.1 2012/02/02 13:11:52 phonohawk Exp $
+
+Don't build nor install the benchmarking suite.
+
+--- vector-bytestring.cabal.orig	2012-01-03 19:30:14.000000000 +0000
++++ vector-bytestring.cabal
+@@ -28,10 +28,6 @@ source-repository head
+   Type:     git
+   Location: git://github.com/basvandijk/vector-bytestring.git
+ 
+-flag benchmark
+-  Description: Build the benchmark executable
+-  Default:     False
+-
+ Library
+   build-depends: base       >= 4     && < 4.6
+                , primitive  >= 0.3.1 && < 0.5
+@@ -70,18 +66,3 @@ test-suite prop-compiled
+                , QuickCheck >= 2.3   && < 3
+ 
+   ghc-options: -fno-enable-rewrite-rules
+-
+-executable bench
+-  if !flag(benchmark)
+-    buildable: False
+-
+-  main-is:        bench.hs
+-  hs-source-dirs: bench
+-
+-  build-depends: vector-bytestring
+-               , base       >= 4     && < 4.6
+-               , deepseq    >= 1.1   && < 1.4
+-               , bytestring >= 0.9   && < 0.10
+-               , criterion  >= 0.5   && < 0.7
+-
+-  ghc-options: -Wall -O2 -funbox-strict-fields
