@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/09/17 12:01:44 fhajny Exp $
+# $NetBSD: Makefile,v 1.4 2012/02/02 10:40:08 fhajny Exp $
 #
 
 MODNAME=		memcached
@@ -8,6 +8,7 @@ CATEGORIES+=		devel
 MAINTAINER=		filip@joyent.com
 HOMEPAGE=		http://github.com/andreiz/php-memcached
 COMMENT=		PHP extension for interfacing with memcached via libmemcached library
+LICENSE=		php
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
