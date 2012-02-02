@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2011/12/01 00:17:58 bharder Exp $
+@comment $NetBSD: PLIST,v 1.7 2012/02/02 08:52:50 fhajny Exp $
 bin/redis-benchmark
 bin/redis-check-aof
 bin/redis-check-dump
@@ -11,6 +11,7 @@ share/doc/redis/README
 share/examples/rc.d/redis
 share/examples/redis/redis.conf.example
 share/examples/redis/tests/assets/default.conf
+share/examples/redis/tests/helpers/gen_write_load.tcl
 share/examples/redis/tests/integration/aof-race.tcl
 share/examples/redis/tests/integration/aof.tcl
 share/examples/redis/tests/integration/redis-cli.tcl
@@ -28,6 +29,7 @@ share/examples/redis/tests/unit/auth.tcl
 share/examples/redis/tests/unit/basic.tcl
 share/examples/redis/tests/unit/cas.tcl
 share/examples/redis/tests/unit/expire.tcl
+share/examples/redis/tests/unit/introspection.tcl
 share/examples/redis/tests/unit/maxmemory.tcl
 share/examples/redis/tests/unit/other.tcl
 share/examples/redis/tests/unit/printver.tcl
