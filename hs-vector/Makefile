@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2011/09/27 14:24:34 phonohawk Exp $
+# $NetBSD: Makefile,v 1.4 2012/02/02 12:58:31 phonohawk Exp $
 #
 
-DISTNAME=	vector-0.9
+DISTNAME=	vector-0.9.1
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
-COMMENT=	Efficient Arrays in Haskell
+COMMENT=	Efficient Arrays for Haskell
 LICENSE=	modified-bsd
 
 .include "../../wip/mk/haskell.mk"
