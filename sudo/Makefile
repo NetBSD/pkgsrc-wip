@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/02/02 23:54:18 mrampke Exp $
+# $NetBSD: Makefile,v 1.2 2012/02/03 08:13:29 mrampke Exp $
 #
 
 DISTNAME=		sudo-1.8.3p2
 CATEGORIES=		security
-MASTER_SITES=		http://www.courtesan.com/sudo/dist/ \
-			ftp://ftp.courtesan.com/pub/sudo/ \
+MASTER_SITES=		http://www.sudo.ws/sudo/dist/ \
+    			ftp://ftp.sudo.ws/pub/sudo/ \
 			ftp://ftp.uwsg.indiana.edu/pub/security/sudo/ \
 			ftp://ftp.twaren.net/Unix/Security/Sudo/ \
 			http://ftp.tux.org/pub/security/sudo/
 
 MAINTAINER=		kim@tac.nyc.ny.us
-HOMEPAGE=		http://sudo.ws/
+HOMEPAGE=		http://www.sudo.ws/
 COMMENT=		Allow others to run commands as root
 LICENSE=		modified-bsd
 
