@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.2 2011/07/05 15:10:17 realzhtw Exp $
+# $NetBSD: Makefile,v 1.3 2012/02/03 17:07:30 realzhtw Exp $
 #
 
-DISTNAME=	aoeui-1.5
+DISTNAME=	aoeui-1.6
 CATEGORIES=	editors
 MASTER_SITES=	http://aoeui.googlecode.com/files/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	a@umc8.ru
+MAINTAINER=	a@zta.lk
 HOMEPAGE=	http://code.google.com/p/aoeui/
 COMMENT=	Lightweight text editor optimized for Dvorak
 LICENSE=	gnu-gpl-v2
