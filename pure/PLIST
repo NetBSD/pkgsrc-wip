@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/09/26 21:17:27 crocusino Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/02/03 02:53:54 jgoamakf Exp $
 bin/pure
 include/pure/runtime.h
 lib/libpure.so
-lib/libpure.so.7
-lib/libpure.so.7.0
+lib/libpure.so.8
+lib/libpure.so.8.0
 lib/pkgconfig/pure.pc
 lib/pure/array.pure
 lib/pure/avltrees.pure
@@ -13,6 +13,7 @@ lib/pure/getopt.pure
 lib/pure/heap.pure
 lib/pure/math.pure
 lib/pure/matrices.pure
+lib/pure/pointers.pure
 lib/pure/posix.pure
 lib/pure/prelude.pure
 lib/pure/primitives.pure
@@ -21,6 +22,7 @@ lib/pure/pure_main.o
 lib/pure/quasiquote1.pure
 lib/pure/quasiquote.pure
 lib/pure/records.pure
+lib/pure/regex.pure
 lib/pure/set.pure
 lib/pure/strings.pure
 lib/pure/system.pure
