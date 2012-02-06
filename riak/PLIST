@@ -1,4 +1,7 @@
-@comment $NetBSD: PLIST,v 1.4 2012/01/23 14:04:24 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.5 2012/02/06 12:41:36 fhajny Exp $
+man/man1/riak-admin.1
+man/man1/riak.1
+man/man1/search-cmd.1
 riak/erts-5.8.5/bin/beam
 riak/erts-5.8.5/bin/beam.smp
 riak/erts-5.8.5/bin/child_setup
