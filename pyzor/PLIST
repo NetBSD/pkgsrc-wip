@@ -1,3 +1,13 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/23 20:36:32 tomhensel Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/02/06 22:56:35 fhajny Exp $
 bin/pyzor
 bin/pyzord
+${PYSITELIB}/pyzor/__init__.py
+${PYSITELIB}/pyzor/__init__.pyc
+${PYSITELIB}/pyzor/__init__.pyo
+${PYSITELIB}/pyzor/client.py
+${PYSITELIB}/pyzor/client.pyc
+${PYSITELIB}/pyzor/client.pyo
+${PYSITELIB}/pyzor/server.py
+${PYSITELIB}/pyzor/server.pyc
+${PYSITELIB}/pyzor/server.pyo
+share/doc/pyzor/usage.html
