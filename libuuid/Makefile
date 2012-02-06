@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.13 2008/11/06 19:24:27 cheusov Exp $
-# $Id: Makefile,v 1.13 2008/11/06 19:24:27 cheusov Exp $
+# $NetBSD: Makefile,v 1.14 2012/02/06 20:15:18 fhajny Exp $
+# $Id: Makefile,v 1.14 2012/02/06 20:15:18 fhajny Exp $
 
 .include "../../wip/e2fsprogs/Makefile.common"
 
@@ -11,6 +11,7 @@ MASTER_SITES=		${E2FSPROGS_MASTER_SITES}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://e2fsprogs.sourceforge.net/
 COMMENT=		Standalone libuuid from e2fsprogs package
+LICENSE=		modified-bsd
 
 DISTINFO_FILE=		${.CURDIR}/distinfo
 
