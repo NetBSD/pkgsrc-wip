@@ -1,6 +1,6 @@
-#! /bin/bash
+#! /bin/sh
 #
-# $Id: import-package.sh,v 1.4 2012/02/06 12:41:36 fhajny Exp $
+# $Id: import-package.sh,v 1.5 2012/02/06 12:48:43 fhajny Exp $
 #
 # Script designed to make initial imports into wip easier.
 #
