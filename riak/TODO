@@ -1,7 +1,3 @@
 Current status:
 
 - Only tested on SmartOS/Solaris so far.
-- innostore is fetched/extracted at all times, but only compiled and
-  installed as per PKG_OPTIONS.riak. The reason to use innostore
-  instead of bitcask would be e.g. poor performance of Bitcask on
-  Solaris/ZFS zones

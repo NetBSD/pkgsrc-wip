@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/02/06 12:41:36 fhajny Exp $
+# $NetBSD: Makefile,v 1.6 2012/02/06 14:22:06 fhajny Exp $
 #
 
 DISTNAME=		riak-1.0.3
@@ -25,6 +25,7 @@ EXTRACT_ONLY+=		${INNOSTORE}
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
+.include "../../lang/erlang/Makefile.versions"
 
 RIAK_USER?=		riak
 RIAK_GROUP?=		${RIAK_USER}
