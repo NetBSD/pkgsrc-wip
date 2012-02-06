@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2012/02/02 10:12:21 triaxx Exp $
+@comment $NetBSD: PLIST,v 1.4 2012/02/06 19:53:44 triaxx Exp $
 share/examples/shaarli/apache.conf
 share/shaarli/images/50pc_transparent.png
 share/shaarli/images/Paper_texture_v5_by_bashcorpo_w1000.jpg
@@ -12,6 +12,7 @@ share/shaarli/images/floral_right.png
 share/shaarli/images/logo.png
 share/shaarli/images/private.png
 share/shaarli/images/private_16x16.png
+share/shaarli/images/private_16x16_active.png
 share/shaarli/images/qrcode.png
 share/shaarli/images/squiggle.png
 share/shaarli/images/squiggle2.png
