@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2011/10/20 14:17:54 makoto Exp $
+# $NetBSD: Makefile,v 1.5 2012/02/07 08:01:01 noud4 Exp $
 
 DISTNAME=	mop-1.9
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.gentei.org/~yuuji/software/mop/
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -16,7 +17,6 @@ INSTALLATION_DIRS=	share/${PKGBASE}
 INSTALLATION_DIRS=	bin
 USE_TOOLS+=	pax
 
-DEPENDS+=	${RUBY_BASE}>=${RUBY_REQD}:${RUBY_SRCDIR}
 REPLACE_RUBY=	mop.rb
 .include "../../lang/ruby/replace.mk"
 
@@ -24,4 +24,5 @@ do-install:
 	(cd ${WRKSRC} && pax -rwpp -s '/.*\.orig//' .  ${DESTDIR}${PREFIX}/share/${PKGBASE})
 	(set -e ; cd ${DESTDIR}${PREFIX}; ln share/${PKGBASE}/mop.rb bin/${PKGBASE})
 
+.include "../../lang/ruby/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
