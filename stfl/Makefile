@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/02/07 19:43:48 mwilhelmy Exp $
+# $NetBSD: Makefile,v 1.14 2012/02/07 19:54:21 mwilhelmy Exp $
 
 MAJOR=		0
 MINOR=		22
@@ -6,7 +6,7 @@ DISTNAME=	stfl-${MAJOR}.${MINOR}
 CATEGORIES=	devel
 MASTER_SITES=	http://www.clifford.at/stfl/
 
-MAINTAINER=	pkgsrc-users@netbsd.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.clifford.at/stfl/
 COMMENT=	Library which implements a curses-based widget set for text terminals
 LICENSE=	gnu-lgpl-v3
