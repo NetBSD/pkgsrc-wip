@@ -1,0 +1,15 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/02/07 03:15:19 makoto Exp $
+
+SHA1 (binutils-2.22.tar.bz2) = 65b304a0b9a53a686ce50a01173d1f40f8efe404
+RMD160 (binutils-2.22.tar.bz2) = 34cebe4cdca9480d5dc6f6b00b052c48c8ac30dc
+Size (binutils-2.22.tar.bz2) = 19973532 bytes
+SHA1 (patch-aa) = c9697ed369d718be281915d5f89b58d9696a5980
+SHA1 (patch-ab) = e2bc22866d8e04b0d670509f3295da5f0e535ac8
+SHA1 (patch-ac) = bc14fc9142e259b5fb24cd8f5b35a05e2eac2084
+SHA1 (patch-ad) = 6d1acfd834c692abcc4f454db5f5107b7f77e34e
+SHA1 (patch-ae) = fff6693a610b26aa60e1d96ad634d15d11afbe05
+SHA1 (patch-af) = 5fa08da0b31da042eb30cce683f7b7b1feb3196b
+SHA1 (patch-ag) = 2c7ea42eff9be490267f3bfa02317d74191cef08
+SHA1 (patch-ah) = b6e91279475c41bc78b3df227938a91948fc377c
+SHA1 (patch-ai) = 3cd298ac0364f913c1261fc87f7f474281bae9cf
+SHA1 (patch-aj) = bd6c955e6d9845560a433706c7b5631b17cf3085
