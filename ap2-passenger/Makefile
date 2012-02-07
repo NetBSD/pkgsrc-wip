@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2012/02/06 11:52:43 fhajny Exp $
+# $NetBSD: Makefile,v 1.9 2012/02/07 13:49:48 noud4 Exp $
 
 DISTNAME=		passenger-3.0.11
 PKGNAME=		${APACHE_PKG_PREFIX}-${RUBY_PKGPREFIX}-${DISTNAME}
+PKGREVISION=		1
 CATEGORIES=		www
 
 MASTER_SITES=		http://rubyforge.org/frs/download.php/75548/
@@ -23,6 +24,8 @@ BUILD_DEFS+=		VARBASE
 
 BUILD_DEPENDS+=		asciidoc-[0-9]*:../../textproc/asciidoc
 DEPENDS+=		${RUBY_PKGPREFIX}-rack-[0-9]*:../../www/ruby-rack
+
+.include "../../lang/ruby/rubyversion.mk"
 
 .if ${RUBY_VERSION_DEFAULT} == 18
 BUILD_DEPENDS+=		${RUBY_PKGPREFIX}-rake>=0.8.1:../../devel/rake
