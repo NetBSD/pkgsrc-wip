@@ -1,0 +1,49 @@
+- DESCR is a little bit outdated (2003), needs update probably.
+- Please note also "wip/avr-gcc" path is at following line
+   .include "../../wip/avr-gcc/buildlink3.mk"
+  in Makefile.
+
+
+(Summary of NEWS since 1.6.0, See NEWS for detail.)
+-----------------------------------------------
+*** Changes in avr-libc-1.7.1:
+* Bugs fixed:   (7 line)
+
+* New devices supported:
+
+  ATTiny84a
+  ATMega16HVB RevB
+  ATMega32HVB RevB
+
+*** Changes in avr-libc-1.7.0:
+
+* Bugs fixed: ( 138 line)
+
+* Other changes:
+
+  - Added 'avr35' architecture.
+  - Function vfscanf() is rewriten. 
+  - EEPROM functions are rewriten.  
+  - Added support for XMEGA architectures.
+  - The Postscript documentation build has been removed in favour of
+    building only the PDF (and HTML and man page) versions. 
+  - A sleeping BOD API was added to <avr/sleep.h>. 
+  - The note about signbit() implementation is removed from documenatation.
+  - Signature API added in <avr/signature.h>.
+  - All functions are now placed in the .text.avr-libc section, and the 
+    floating point functions are placed in the .text.avr-libc.fplib section.
+  - The port/pin assignments of the HD44780 LCD controller in the
+    stdiodemo example can now be distributed across more than a single
+    AVR port. 
+  - Added support for avrtiny10 architecture, to support the ATtiny10 Family.
+  - Added new headerfile: <avr/cpufunc.h>; currently contains _NOP() and
+    _MemoryBarrier().
+  - The twidemo can now optionally address 24C32 and larger EEPROMs
+    that require 16-bit word addressing.
+  - Add a "memory barrier" to the cli() and sei() macros.
+
+* New devices supported: (76)
+
+* Optimized functions:   (13)
+
+* New functions:	 (30)
