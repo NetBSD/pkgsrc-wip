@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/02/07 12:33:39 makoto Exp $
+# $NetBSD: Makefile,v 1.7 2012/02/07 13:31:35 makoto Exp $
 
 PKG_VERSION=		2.20
 PKGNAME=		nios2-binutils-${PKG_VERSION}
@@ -18,15 +18,13 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_TOOLS+=		gmake makeinfo perl
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
-#BUILD_DEFS+=		CROSSBASE	#included in ../nios2/Makefile.common
 BUILD_DEFS+=		${NIOS_INFO_DIR}
 INFO_FILES=		yes
 
 .include		"../../wip/nios2/Makefile.common"
+DISTNAME=		nios2_gnu_gcc4_11.0
 
 CONFIGURE_ARGS+=	--disable-nls
-# following line is not necessary for binutils-2.18
-# CONFIGURE_ARGS+=	--disable-werror
 # install libiberty by architecture
 CONFIGURE_ARGS+=	--libdir=${PREFIX}/${NIOS2_TARGET}/lib
 
