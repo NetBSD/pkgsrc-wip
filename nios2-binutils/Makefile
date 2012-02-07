@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2011/10/24 15:07:24 makoto Exp $
+# $NetBSD: Makefile,v 1.4 2012/02/07 09:46:30 makoto Exp $
 
 PKG_VERSION=		2.15
 PKGNAME=		nios2-binutils-${PKG_VERSION}
-PKG_REVISION=		1
+PKG_REVISION=		2
 CATEGORIES=		cross
 MASTER_SITES=		ftp://ftp.altera.com/outgoing/download/support/ip/processors/nios2/gnu/
 
@@ -27,6 +27,8 @@ INFO_FILES=		yes
 CONFIGURE_ARGS+=	--disable-nls
 # following line is not necessary for binutils-2.18
 CONFIGURE_ARGS+=	--disable-werror
+# install libiberty by architecture
+CONFIGURE_ARGS+=	--libdir=${PREFIX}/${NIOS2_TARGET}/lib
 
 # To avoid conflict with other cross/native info files,
 NIOS_INFO_DIR=		${PREFIX}/info/${NIOS2_TARGET}
@@ -38,7 +40,7 @@ INFO_DIR?=		${NIOS_INFO_DIR}
 #  see mk/configure/gnu-configure.mk
 GNU_CONFIGURE_INFODIR=	${NIOS_INFO_DIR}
 
-# following file is reference only, not used at all for the moment
+# following file installed is reference only, not used at all for the moment
 post-install:
 	${INSTALL_DATA} files/nios2elf-netbsd.x ${DESTDIR}${CROSSBASE}/${NIOS2_TARGET}/lib/ldscripts
 
