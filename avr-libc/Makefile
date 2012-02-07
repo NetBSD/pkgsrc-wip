@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/02/07 03:01:20 makoto Exp $
+# $NetBSD: Makefile,v 1.2 2012/02/07 04:44:08 makoto Exp $
 
 DISTNAME=		avr-libc-1.7.1
 CATEGORIES=		cross
@@ -12,8 +12,8 @@ LICENSE=		modified-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-BUILD_DEPENDS+=		avr-binutils-[0-9]*:../../cross/avr-binutils
-BUILD_DEPENDS+=		avr-gcc-[0-9]*:../../cross/avr-gcc
+BUILD_DEPENDS+=		avr-binutils-[0-9]*:../../wip/avr-binutils
+BUILD_DEPENDS+=		avr-gcc-[0-9]*:../../wip/avr-gcc
 BUILD_DEPENDS+=		doxygen>=1.6.3nb1:../../devel/doxygen
 BUILD_DEPENDS+=		transfig-[0-9]*:../../print/transfig
 BUILD_DEPENDS+=		netpbm-[0-9]*:../../graphics/netpbm

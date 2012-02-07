@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/02/06 07:41:56 makoto Exp $
+# $NetBSD: Makefile,v 1.2 2012/02/07 04:44:08 makoto Exp $
 
 DISTNAME=		gcc-4.5.3
 PKGNAME=		avr-gcc-4.5.3
@@ -14,7 +14,7 @@ LICENSE=		gnu-gpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-DEPENDS+=		avr-binutils-[0-9]*:../../cross/avr-binutils
+DEPENDS+=		avr-binutils-[0-9]*:../../wip/avr-binutils
 
 .include "../../mk/bsd.prefs.mk"
 
