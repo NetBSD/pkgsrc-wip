@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2010/06/13 22:47:10 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2012/02/08 16:54:45 noud4 Exp $
 #
 
 DISTNAME=	ldtp-2.0.6
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel x11 python
 MASTER_SITES=	http://download.freedesktop.org/ldtp/2.x/2.0.x/
 
@@ -12,6 +12,7 @@ COMMENT=	GNU/Linux Desktop Testing Project
 LICENSE=	gnu-lgpl-v2
 
 DEPENDS+=	${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
+DEPENDS+=	${PYPKGPREFIX}-at-spi-[0-9]*:../../devel/py-at-spi
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -20,7 +21,6 @@ USE_LANGUAGES=	# none
 PYDISTUTILSPKG=	yes
 REPLACE_PYTHON+=	bin/ldtp
 
-.include "../../devel/py-at-spi/buildlink3.mk"
 .include "../../devel/py-gobject/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
