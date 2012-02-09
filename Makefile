@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4645 2012/02/04 09:46:33 shattered Exp $
+# $Id: Makefile,v 1.4646 2012/02/09 09:08:53 slitvinov Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1439,6 +1439,7 @@ SUBDIR+=	lorder
 SUBDIR+=	lpdsrv
 SUBDIR+=	lrslib
 SUBDIR+=	lsw
+SUBDIR+=	lsyncd
 SUBDIR+=	ltrace
 SUBDIR+=	lua-BitOp
 SUBDIR+=	lua-filesystem
