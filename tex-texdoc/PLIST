@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/07/06 18:49:31 minskim Exp $
-bin/texdoc
-bin/texdoctk
-share/texmf/texdoc/texdoc.cnf
-share/texmf/texdoctk/texdocrc-win32.defaults
-share/texmf/texdoctk/texdocrc.defaults
-share/texmf/texdoctk/texdoctk.dat
