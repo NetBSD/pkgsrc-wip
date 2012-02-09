@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/01/06 11:35:47 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/02/09 09:13:35 noud4 Exp $
 #
 
 DISTNAME=	django-gitrevision-0.1.4
 EGG_NAME=	django_gitrevision
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	http://pypi.python.org/packages/source/d/django-gitrevision/
 
@@ -13,7 +14,7 @@ COMMENT=	TODO: Short description of the package
 LICENSE=	gnu-lgpl-v2.1
 
 DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django
-DEPENDS+=	${PYPKGPREFIX}-git-[0-9]:../../wip/py-git
+DEPENDS+=	${PYPKGPREFIX}-git-[0-9]*:../../wip/py-git
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -22,6 +23,9 @@ WRKSRC=		${WRKDIR}/django-gitrevision-0.1.4
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_ACCEPTED= 31 27 26 25
+
+PLIST_SUBST+=	PKGVERSION_NOREV=${PKGVERSION_NOREV}
+PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
