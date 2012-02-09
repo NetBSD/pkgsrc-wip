@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2012/01/03 13:29:51 shattered Exp $
+# $NetBSD: Makefile,v 1.3 2012/02/09 19:23:52 shattered Exp $
 #
 
 DISTNAME=	get_iplayer-2.80
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.infradead.org/pub/get_iplayer/
 
@@ -24,8 +25,20 @@ USE_LANGUAGES=	# none
 NO_BUILD=	yes
 REPLACE_PERL=	get_iplayer
 
+SUBST_CLASSES+=		prefix
+SUBST_STAGE.prefix=	post-patch
+SUBST_MESSAGE.prefix=	Fixup config and plugin paths
+SUBST_FILES.prefix=	get_iplayer
+SUBST_SED.prefix=	-e s:@PREFIX@:${PREFIX}:
+
+PKG_SYSCONFSUBDIR=	get_iplayer
+EGDIR=			${PREFIX}/share/examples/get_iplayer
+CONF_FILES=		${EGDIR}/options ${PKG_SYSCONFDIR}/options
+INSTALLATION_DIRS+=	${EGDIR}
+
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/get_iplayer ${DESTDIR}${PREFIX}/bin/
 	${INSTALL_MAN} ${WRKSRC}/get_iplayer.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
+	${INSTALL_DATA} ${FILESDIR}/options.default ${DESTDIR}${EGDIR}/options
 
 .include "../../mk/bsd.pkg.mk"
