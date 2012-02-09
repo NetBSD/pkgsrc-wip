@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2012/02/09 09:13:35 noud4 Exp $
-${PYSITELIB}/django_gitrevision-${PKGVERSION_NOREV}-py${PYVERSSUFFIX}.egg-info/PKG-INFO
-${PYSITELIB}/django_gitrevision-${PKGVERSION_NOREV}-py${PYVERSSUFFIX}.egg-info/SOURCES.txt
-${PYSITELIB}/django_gitrevision-${PKGVERSION_NOREV}-py${PYVERSSUFFIX}.egg-info/dependency_links.txt
-${PYSITELIB}/django_gitrevision-${PKGVERSION_NOREV}-py${PYVERSSUFFIX}.egg-info/requires.txt
-${PYSITELIB}/django_gitrevision-${PKGVERSION_NOREV}-py${PYVERSSUFFIX}.egg-info/top_level.txt
+@comment $NetBSD: PLIST,v 1.3 2012/02/09 16:42:37 noud4 Exp $
+${PYSITELIB}/django_gitrevision-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/PKG-INFO
+${PYSITELIB}/django_gitrevision-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/SOURCES.txt
+${PYSITELIB}/django_gitrevision-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/dependency_links.txt
+${PYSITELIB}/django_gitrevision-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/requires.txt
+${PYSITELIB}/django_gitrevision-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/top_level.txt
 ${PYSITELIB}/gitrevision/__init__.py
 ${PYSITELIB}/gitrevision/__init__.pyc
 ${PYSITELIB}/gitrevision/__init__.pyo

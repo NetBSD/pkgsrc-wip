@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2012/02/09 09:13:35 noud4 Exp $
+# $NetBSD: Makefile,v 1.3 2012/02/09 16:42:37 noud4 Exp $
 #
 
 DISTNAME=	django-gitrevision-0.1.4
 EGG_NAME=	django_gitrevision
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	http://pypi.python.org/packages/source/d/django-gitrevision/
 
@@ -24,7 +24,6 @@ USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_ACCEPTED= 31 27 26 25
 
-PLIST_SUBST+=	PKGVERSION_NOREV=${PKGVERSION_NOREV}
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 
 .include "../../lang/python/egg.mk"
