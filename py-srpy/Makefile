@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2012/01/30 06:50:36 noud4 Exp $
+# $NetBSD: Makefile,v 1.4 2012/02/10 09:01:10 noud4 Exp $
 #
 
 DISTNAME=	srpy-0.2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	http://srpy.googlecode.com/files/
 EXTRACT_SUFX=	.zip

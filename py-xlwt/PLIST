@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/08/31 19:51:17 helgoman Exp $
-${PYSITELIB}/xlwt-0.7.2-py2.6.egg-info
+@comment $NetBSD: PLIST,v 1.2 2012/02/10 09:01:10 noud4 Exp $
+${PYSITELIB}/xlwt-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info
 ${PYSITELIB}/xlwt/BIFFRecords.py
 ${PYSITELIB}/xlwt/BIFFRecords.pyc
 ${PYSITELIB}/xlwt/BIFFRecords.pyo

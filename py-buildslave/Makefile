@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2011/12/24 11:36:58 haad Exp $
+# $NetBSD: Makefile,v 1.4 2012/02/10 09:01:09 noud4 Exp $
 #
 
 DISTNAME=		buildbot-slave-0.8.5
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=		1
 EGGNAME=		${DISTNAME}-${PYPKGPREFIX}
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=buildbot/}
@@ -25,6 +26,8 @@ DEPENDS+=               ${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 DEPENDS+=               ${PYPKGPREFIX}-jinja2-[0-9]*:../../textproc/py-jinja2
 DEPENDS+=               ${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools
 DEPENDS+=               ${PYPKGPREFIX}-ZopeInterface-[0-9]*:../../devel/py-ZopeInterface
+
+PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX:Q}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

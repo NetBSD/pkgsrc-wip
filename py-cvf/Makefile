@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2012/02/01 00:04:52 noud4 Exp $
+# $NetBSD: Makefile,v 1.4 2012/02/10 09:01:10 noud4 Exp $
 #
 
 DISTNAME=	pycvf-0.2.0
-EGG_NAME=	pycvf-0.2.0
+EGG_NAME=	${DISTNAME}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	graphics python
 MASTER_SITES=	http://master.dl.sourceforge.net/project/pycvf/0.2/
 
@@ -22,6 +22,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 
+PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 
 BUILDLINK_API_DEPENDS.pycython+= ${PYPKGPREFIX}-cython>=0.12.1
 .include "../../devel/py-cython/buildlink3.mk"

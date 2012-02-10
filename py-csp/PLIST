@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.5 2010/05/08 19:41:02 jihbed Exp $
-${PYSITELIB}/pycsp-0.7.0-py2.6.egg-info/PKG-INFO
-${PYSITELIB}/pycsp-0.7.0-py2.6.egg-info/SOURCES.txt
-${PYSITELIB}/pycsp-0.7.0-py2.6.egg-info/dependency_links.txt
-${PYSITELIB}/pycsp-0.7.0-py2.6.egg-info/top_level.txt
+@comment $NetBSD: PLIST,v 1.6 2012/02/10 09:01:10 noud4 Exp $
+${PYSITELIB}/pycsp-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/PKG-INFO
+${PYSITELIB}/pycsp-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/SOURCES.txt
+${PYSITELIB}/pycsp-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/dependency_links.txt
+${PYSITELIB}/pycsp-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/top_level.txt
 ${PYSITELIB}/pycsp/__init__.py
 ${PYSITELIB}/pycsp/__init__.pyc
 ${PYSITELIB}/pycsp/__init__.pyo

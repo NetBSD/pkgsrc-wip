@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/04/02 22:40:52 jihbed Exp $
-${PYSITELIB}/BIP-0.5.4-py2.6.egg-info/PKG-INFO
-${PYSITELIB}/BIP-0.5.4-py2.6.egg-info/PKG-INFO.before_restore_2010-04-21_14.39.58.289369
-${PYSITELIB}/BIP-0.5.4-py2.6.egg-info/SOURCES.txt
-${PYSITELIB}/BIP-0.5.4-py2.6.egg-info/dependency_links.txt
-${PYSITELIB}/BIP-0.5.4-py2.6.egg-info/not-zip-safe
-${PYSITELIB}/BIP-0.5.4-py2.6.egg-info/requires.txt
-${PYSITELIB}/BIP-0.5.4-py2.6.egg-info/top_level.txt
+@comment $NetBSD: PLIST,v 1.2 2012/02/10 09:01:10 noud4 Exp $
+${PYSITELIB}/BIP-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/PKG-INFO
+${PYSITELIB}/BIP-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/PKG-INFO.before_restore_2010-04-21_14.39.58.289369
+${PYSITELIB}/BIP-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/SOURCES.txt
+${PYSITELIB}/BIP-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/dependency_links.txt
+${PYSITELIB}/BIP-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/not-zip-safe
+${PYSITELIB}/BIP-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/requires.txt
+${PYSITELIB}/BIP-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/top_level.txt
 ${PYSITELIB}/BIP/Bayes/Melding.py
 ${PYSITELIB}/BIP/Bayes/Melding.pyc
 ${PYSITELIB}/BIP/Bayes/Melding.pyo

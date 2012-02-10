@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/01/22 13:37:27 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/02/10 09:01:10 noud4 Exp $
 #
 
 DISTNAME=	tappy-0.8.3
 EGG_NAME=	${DISTNAME}
 PKGNAME=	${PYPKGPREFIX}-${EGG_NAME}
+PKGREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tappy/}
 

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/03/23 20:12:40 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/02/10 09:01:10 noud4 Exp $
 bin/igraph
 ${PYSITELIB}/igraph/__init__.py
 ${PYSITELIB}/igraph/__init__.pyc
@@ -91,7 +91,7 @@ ${PYSITELIB}/igraph/test/structural.pyo
 ${PYSITELIB}/igraph/test/vertexseq.py
 ${PYSITELIB}/igraph/test/vertexseq.pyc
 ${PYSITELIB}/igraph/test/vertexseq.pyo
-${PYSITELIB}/python_igraph-0.5.3-py2.6.egg-info/PKG-INFO
-${PYSITELIB}/python_igraph-0.5.3-py2.6.egg-info/SOURCES.txt
-${PYSITELIB}/python_igraph-0.5.3-py2.6.egg-info/dependency_links.txt
-${PYSITELIB}/python_igraph-0.5.3-py2.6.egg-info/top_level.txt
+${PYSITELIB}/python_igraph-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/PKG-INFO
+${PYSITELIB}/python_igraph-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/SOURCES.txt
+${PYSITELIB}/python_igraph-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/dependency_links.txt
+${PYSITELIB}/python_igraph-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/top_level.txt

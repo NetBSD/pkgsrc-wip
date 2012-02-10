@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2012/01/30 02:30:02 noud4 Exp $
+# $NetBSD: Makefile,v 1.4 2012/02/10 09:01:10 noud4 Exp $
 #
 
 DISTNAME=	scitools-0.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	science python
 MASTER_SITES=	http://scitools.googlecode.com/files/
 

@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2011/03/20 22:55:54 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2012/02/10 09:01:10 noud4 Exp $
 #
 
 DISTNAME=	mwavepy-1.0
 EGG_NAME=	${DISTNAME}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	science
 MASTER_SITES=	http://mwavepy.googlecode.com/files/
 
@@ -19,6 +20,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_ACCEPTED= 26 25
+
+PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 
 .include "../../graphics/py-matplotlib/buildlink3.mk"
 .include "../../lang/python/egg.mk"

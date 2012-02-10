@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/05/22 23:12:12 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/02/10 09:01:10 noud4 Exp $
 bin/psychopy_post_inst.py
-${PYSITELIB}/PsychoPy-1.61.01-py2.6.egg-info/PKG-INFO
-${PYSITELIB}/PsychoPy-1.61.01-py2.6.egg-info/SOURCES.txt
-${PYSITELIB}/PsychoPy-1.61.01-py2.6.egg-info/dependency_links.txt
-${PYSITELIB}/PsychoPy-1.61.01-py2.6.egg-info/top_level.txt
+${PYSITELIB}/PsychoPy-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/PKG-INFO
+${PYSITELIB}/PsychoPy-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/SOURCES.txt
+${PYSITELIB}/PsychoPy-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/dependency_links.txt
+${PYSITELIB}/PsychoPy-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/top_level.txt
 ${PYSITELIB}/psychopy/CHANGELOG.txt
 ${PYSITELIB}/psychopy/LICENSE.txt
 ${PYSITELIB}/psychopy/LICENSES.txt

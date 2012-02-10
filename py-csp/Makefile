@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2012/02/01 00:04:52 noud4 Exp $
+# $NetBSD: Makefile,v 1.10 2012/02/10 09:01:10 noud4 Exp $
 #
 
 DISTNAME=	pycsp-0.7.0
 EGG_NAME=	${DISTNAME}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel python
 MASTER_SITES=	http://pycsp.googlecode.com/files/
 
@@ -19,7 +19,7 @@ DEPENDS+=	${PYPKGPREFIX}-uuid>=1.30:../../wip/py-uuid
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-PLIST_SUBST+=		PYVERSSUFFIX="-${PYVERSSUFFIX}"
+PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX}
 
 EDGDIR=	${PREFIX}/share/examples/py-csp
 
