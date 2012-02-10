@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/04/13 09:42:44 bartoszkuzma Exp $
+# $NetBSD: Makefile,v 1.2 2012/02/10 08:40:25 bartoszkuzma Exp $
 #
 
-DISTNAME=	duff-0.5
+DISTNAME=	duff-0.5.2
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=duff/}
 EXTRACT_SUFX=	.tar.bz2
