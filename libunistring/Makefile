@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/02/03 18:31:06 realzhtw Exp $
+# $NetBSD: Makefile,v 1.2 2012/02/11 07:17:20 realzhtw Exp $
 #
 
 DISTNAME=	libunistring-0.9.3
@@ -13,5 +13,7 @@ LICENSE=	gnu-lgpl-v3
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
+
+.include "../../converters/libiconv/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
