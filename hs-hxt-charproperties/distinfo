@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/07/27 05:23:07 phonohawk Exp $
+$NetBSD: distinfo,v 1.2 2012/02/11 03:45:46 phonohawk Exp $
 
-SHA1 (hxt-charproperties-9.1.0.tar.gz) = da02d32aa63c8ccc07d6810db7bfa8960dd88ed5
-RMD160 (hxt-charproperties-9.1.0.tar.gz) = ff8d45a7eb9eb1936736f594bc0f9b4ad6843d94
-Size (hxt-charproperties-9.1.0.tar.gz) = 225351 bytes
+SHA1 (hxt-charproperties-9.1.1.tar.gz) = d5d73aa72cefb32d5c467ab3086bad72b28768fd
+RMD160 (hxt-charproperties-9.1.1.tar.gz) = 868167efa052ed28d85e96a536721a49de32c9bc
+Size (hxt-charproperties-9.1.1.tar.gz) = 225490 bytes
