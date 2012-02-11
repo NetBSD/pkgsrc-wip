@@ -1,6 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/07/29 20:04:57 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/02/11 04:43:19 phonohawk Exp $
 lib/base64-bytestring-${PKGVERSION}/${HASKELL_VERSION}/Data/ByteString/Base64.hi
 lib/base64-bytestring-${PKGVERSION}/${HASKELL_VERSION}/Data/ByteString/Base64.p_hi
+lib/base64-bytestring-${PKGVERSION}/${HASKELL_VERSION}/Data/ByteString/Base64/Internal.hi
+lib/base64-bytestring-${PKGVERSION}/${HASKELL_VERSION}/Data/ByteString/Base64/Internal.p_hi
+lib/base64-bytestring-${PKGVERSION}/${HASKELL_VERSION}/Data/ByteString/Base64/URL.hi
+lib/base64-bytestring-${PKGVERSION}/${HASKELL_VERSION}/Data/ByteString/Base64/URL.p_hi
 lib/base64-bytestring-${PKGVERSION}/${HASKELL_VERSION}/HSbase64-bytestring-${PKGVERSION}.o
 lib/base64-bytestring-${PKGVERSION}/${HASKELL_VERSION}/libHSbase64-bytestring-${PKGVERSION}.a
 lib/base64-bytestring-${PKGVERSION}/${HASKELL_VERSION}/libHSbase64-bytestring-${PKGVERSION}_p.a
