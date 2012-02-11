@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2011/10/05 06:50:09 phonohawk Exp $
+# $NetBSD: Makefile,v 1.3 2012/02/11 04:15:36 phonohawk Exp $
 #
 
-DISTNAME=	hxt-regex-xmlschema-9.0.1
+DISTNAME=	hxt-regex-xmlschema-9.0.4
 CATEGORIES=	textproc
 
 MAINTAINER=	pho@cielonegro.org

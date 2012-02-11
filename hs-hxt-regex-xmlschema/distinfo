@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2011/10/05 06:50:09 phonohawk Exp $
+$NetBSD: distinfo,v 1.3 2012/02/11 04:15:36 phonohawk Exp $
 
-SHA1 (hxt-regex-xmlschema-9.0.1.tar.gz) = ea4231c32b4d05217828b13152a66925787de44b
-RMD160 (hxt-regex-xmlschema-9.0.1.tar.gz) = 27e347e5b1459ab0745ec5db7005e3437d7f5896
-Size (hxt-regex-xmlschema-9.0.1.tar.gz) = 27021 bytes
+SHA1 (hxt-regex-xmlschema-9.0.4.tar.gz) = 104050847a4ab13867b5baeb5f30ef4843c8ff6c
+RMD160 (hxt-regex-xmlschema-9.0.4.tar.gz) = b288e0a5b3e61dba26ad8a6fad8ea516ccf8429c
+Size (hxt-regex-xmlschema-9.0.4.tar.gz) = 27212 bytes
