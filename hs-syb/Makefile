@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2011/10/03 12:20:48 phonohawk Exp $
+# $NetBSD: Makefile,v 1.4 2012/02/11 04:44:54 phonohawk Exp $
 #
 
-DISTNAME=	syb-0.3.3
+DISTNAME=	syb-0.3.6
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
-HOMEPAGE=	http://www.cs.uu.nl/wiki/GenericProgramming/SYB
 COMMENT=	Haskell "Scrap Your Boilerplate" Library
 LICENSE=	modified-bsd
 
