@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:45 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/02/11 04:13:14 phonohawk Exp $
 lib/parsec-${PKGVERSION}/${HASKELL_VERSION}/HSparsec-${PKGVERSION}.o
 lib/parsec-${PKGVERSION}/${HASKELL_VERSION}/Text/Parsec.hi
 lib/parsec-${PKGVERSION}/${HASKELL_VERSION}/Text/Parsec.p_hi
@@ -24,6 +24,10 @@ lib/parsec-${PKGVERSION}/${HASKELL_VERSION}/Text/Parsec/Prim.hi
 lib/parsec-${PKGVERSION}/${HASKELL_VERSION}/Text/Parsec/Prim.p_hi
 lib/parsec-${PKGVERSION}/${HASKELL_VERSION}/Text/Parsec/String.hi
 lib/parsec-${PKGVERSION}/${HASKELL_VERSION}/Text/Parsec/String.p_hi
+lib/parsec-${PKGVERSION}/${HASKELL_VERSION}/Text/Parsec/Text.hi
+lib/parsec-${PKGVERSION}/${HASKELL_VERSION}/Text/Parsec/Text.p_hi
+lib/parsec-${PKGVERSION}/${HASKELL_VERSION}/Text/Parsec/Text/Lazy.hi
+lib/parsec-${PKGVERSION}/${HASKELL_VERSION}/Text/Parsec/Text/Lazy.p_hi
 lib/parsec-${PKGVERSION}/${HASKELL_VERSION}/Text/Parsec/Token.hi
 lib/parsec-${PKGVERSION}/${HASKELL_VERSION}/Text/Parsec/Token.p_hi
 lib/parsec-${PKGVERSION}/${HASKELL_VERSION}/Text/ParserCombinators/Parsec.hi
