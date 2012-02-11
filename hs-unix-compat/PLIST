@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2011/07/28 10:05:18 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/02/11 03:35:33 phonohawk Exp $
 lib/unix-compat-${PKGVERSION}/${HASKELL_VERSION}/HSunix-compat-${PKGVERSION}.o
 lib/unix-compat-${PKGVERSION}/${HASKELL_VERSION}/System/PosixCompat.hi
 lib/unix-compat-${PKGVERSION}/${HASKELL_VERSION}/System/PosixCompat.p_hi
@@ -6,6 +6,8 @@ lib/unix-compat-${PKGVERSION}/${HASKELL_VERSION}/System/PosixCompat/Extensions.h
 lib/unix-compat-${PKGVERSION}/${HASKELL_VERSION}/System/PosixCompat/Extensions.p_hi
 lib/unix-compat-${PKGVERSION}/${HASKELL_VERSION}/System/PosixCompat/Files.hi
 lib/unix-compat-${PKGVERSION}/${HASKELL_VERSION}/System/PosixCompat/Files.p_hi
+lib/unix-compat-${PKGVERSION}/${HASKELL_VERSION}/System/PosixCompat/Temp.hi
+lib/unix-compat-${PKGVERSION}/${HASKELL_VERSION}/System/PosixCompat/Temp.p_hi
 lib/unix-compat-${PKGVERSION}/${HASKELL_VERSION}/System/PosixCompat/Time.hi
 lib/unix-compat-${PKGVERSION}/${HASKELL_VERSION}/System/PosixCompat/Time.p_hi
 lib/unix-compat-${PKGVERSION}/${HASKELL_VERSION}/System/PosixCompat/Types.hi
