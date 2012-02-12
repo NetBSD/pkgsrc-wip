@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/10/01 05:48:10 helgoman Exp $
+# $NetBSD: Makefile,v 1.2 2012/02/12 21:41:54 helgoman Exp $
 #
 
-VERS=			1.0
+VERS=			1.1
 DISTNAME=		pygraphviz-${VERS}
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=		graphics

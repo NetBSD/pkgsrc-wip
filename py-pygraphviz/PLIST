@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/10/01 05:48:10 helgoman Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/02/12 21:41:54 helgoman Exp $
 ${PYSITELIB}/pygraphviz/__init__.py
 ${PYSITELIB}/pygraphviz/__init__.pyc
 ${PYSITELIB}/pygraphviz/__init__.pyo
@@ -21,6 +21,7 @@ ${PYSITELIB}/pygraphviz/tests/layout_draw.txt
 ${PYSITELIB}/pygraphviz/tests/test.py
 ${PYSITELIB}/pygraphviz/tests/test.pyc
 ${PYSITELIB}/pygraphviz/tests/test.pyo
+${PYSITELIB}/pygraphviz/tests/unicode.txt
 ${PYSITELIB}/pygraphviz/version.py
 ${PYSITELIB}/pygraphviz/version.pyc
 ${PYSITELIB}/pygraphviz/version.pyo
@@ -32,3 +33,4 @@ share/doc/pygraphviz-${PKGVERSION}/examples/miles.py
 share/doc/pygraphviz-${PKGVERSION}/examples/simple.py
 share/doc/pygraphviz-${PKGVERSION}/examples/star.py
 share/doc/pygraphviz-${PKGVERSION}/examples/subgraph.py
+share/doc/pygraphviz-${PKGVERSION}/examples/utf8_encoding.py
