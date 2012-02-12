@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2012/02/11 11:40:49 noud4 Exp $
+# $NetBSD: Makefile,v 1.3 2012/02/12 16:02:14 noud4 Exp $
 #
 
 DISTNAME=	AIGO-0.1.0
 PKGNAME=	${PYPKGPREFIX}-aigo-0.1.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://pypi.python.org/packages/source/A/AIGO/
 
@@ -15,6 +15,8 @@ LICENSE=	gnu-gpl-v3
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=	 ${PYPKGPREFIX}-creole-[0-9]*
+
+DIST_SUBDIR=	${PKGNAME_NOREV}
 
 PYDISTUTILSPKG=	yes
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
