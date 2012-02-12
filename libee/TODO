@@ -1,9 +1,0 @@
-Fix the following error:
-
---- convert ---
-  CCLD   convert
-.: Can't open ../src/libee.la
-libtool: link: cannot find the library `../src/libee.la' or unhandled argument `../src/libee.la'
-*** [convert] Error code 1
-
-if build is performed without "cd ${WRKSRC} && ${MAKE}"
