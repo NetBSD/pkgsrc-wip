@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/02/12 19:58:29 noud4 Exp $
+# $NetBSD: Makefile,v 1.5 2012/02/12 20:16:33 noud4 Exp $
 #
 
 DISTNAME=	mwavepy-1.0
@@ -20,8 +20,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_ACCEPTED= 26 25
-
-PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 
 .include "../../graphics/py-matplotlib/buildlink3.mk"
 .include "../../lang/python/egg.mk"

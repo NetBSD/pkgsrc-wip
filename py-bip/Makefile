@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/02/12 19:58:28 noud4 Exp $
+# $NetBSD: Makefile,v 1.5 2012/02/12 20:16:33 noud4 Exp $
 #
 
 DISTNAME=	BIP-0.5.4
@@ -23,8 +23,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LANGUAGES=	# none
 
 INSTALLATION_DIRS=	share/doc/py-bip/html
-
-PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/html/* ${DESTDIR}${PREFIX}/share/doc/py-bip/html
