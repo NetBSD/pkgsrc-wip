@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2011/07/03 23:19:36 gregoire Exp $
+# $NetBSD: Makefile,v 1.31 2012/02/12 10:05:07 gregoire Exp $
 #
 
 DISTNAME=		grub-bazaar-snapshot
@@ -38,6 +38,18 @@ TODAY!=			${DATE} -u +'%Y%m%d'
 GCC_REQD=		4.3
 BUILD_DEPENDS+=		flex>=2.5.35:../../devel/flex
 BUILD_DEPENDS+=		help2man>=1.36:../../converters/help2man
+
+#
+# Disable some warnings so that the package builds.
+#
+CFLAGS+=		-Wno-unused-label
+CFLAGS+=		-Wno-unused-function
+CFLAGS+=		-Wno-char-subscripts
+CFLAGS+=		-Wno-unsafe-loop-optimizations
+CFLAGS+=		-Wno-uninitialized
+CFLAGS+=		-Wno-format
+CFLAGS+=		-Wno-missing-noreturn
+CFLAGS+=		-Wno-shadow
 
 #
 # The configure script sets the variables `target_cpu' and `platform', which

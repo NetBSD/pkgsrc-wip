@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2011/09/17 22:20:52 gregoire Exp $
+@comment $NetBSD: PLIST,v 1.25 2012/02/12 10:05:07 gregoire Exp $
 bin/grub2-editenv
 bin/grub2-fstest
 bin/grub2-kbdcomp
@@ -13,17 +13,15 @@ bin/grub2-mkstandalone
 bin/grub2-script-check
 info/grub2-dev.info
 info/grub2.info
-lib/grub2/grub-mkconfig_lib
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/acpi.mod
+lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/adler32.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/affs.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/afs.mod
-lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/afs_be.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/ahci.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/aout.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/at_keyboard.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/ata.mod
-lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/befs.mod
-lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/befs_be.mod
+lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/bfs.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/biosdisk.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/bitmap.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/bitmap_scale.mod
@@ -42,7 +40,9 @@ lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/command.lst
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/config.h
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/configfile.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/cpio.mod
+lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/cpio_be.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/cpuid.mod
+lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/crc64.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/crypto.lst
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/crypto.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/cryptodisk.mod
@@ -51,12 +51,15 @@ lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/date.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/datehook.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/datetime.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/diskboot.img
+lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/diskfilter.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/dm_nv.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/drivemap.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/echo.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/efiemu.mod
+lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/ehci.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/elf.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/example_functional_test.mod
+lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/exfat.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/ext2.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/extcmd.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/fat.mod
@@ -98,6 +101,7 @@ lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/help.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/hexdump.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/hfs.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/hfsplus.mod
+lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/http.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/iorw.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/iso9660.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/jfs.mod
@@ -105,6 +109,7 @@ lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/jpeg.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/kernel.img
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/keylayouts.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/keystatus.mod
+lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/ldm.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/legacycfg.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/linux.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/linux16.mod
@@ -118,6 +123,8 @@ lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/lsmmap.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/lspci.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/luks.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/lvm.mod
+lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/lzma_decompress.img
+lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/lzopio.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/mdraid09.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/mdraid1x.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/memdisk.mod
@@ -133,11 +140,13 @@ lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/msdospart.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/multiboot.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/multiboot2.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/net.mod
+lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/newc.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/nilfs2.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/normal.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/ntfs.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/ntfscomp.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/ntldr.mod
+lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/odc.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/ohci.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/part_acorn.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/part_amiga.mod
@@ -146,6 +155,7 @@ lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/part_bsd.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/part_dvh.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/part_gpt.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/part_msdos.mod
+lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/part_plan.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/part_sun.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/part_sunpc.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/partmap.lst
@@ -156,12 +166,14 @@ lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/password_pbkdf2.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/pata.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/pbkdf2.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/pci.mod
+lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/plan9.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/play.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/png.mod
+lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/priority_queue.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/probe.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/pxe.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/pxeboot.img
-lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/raid.mod
+lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/pxechain.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/raid5rec.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/raid6rec.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/read.mod
@@ -220,10 +232,11 @@ lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/xnu.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/xnu_uuid.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/xzio.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/zfs.mod
+lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/zfscrypt.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/zfsinfo.mod
-lib/grub2/update-grub_lib
 man/man1/grub2-editenv.1
 man/man1/grub2-fstest.1
+man/man1/grub2-kbdcomp.1
 man/man1/grub2-menulst2cfg.1
 ${PLIST.freetype}man/man1/grub2-mkfont.1
 man/man1/grub2-mkimage.1
@@ -235,7 +248,6 @@ man/man1/grub2-mkstandalone.1
 man/man1/grub2-script-check.1
 man/man8/grub2-install.8
 man/man8/grub2-mkconfig.8
-man/man8/grub2-mkdevicemap.8
 man/man8/grub2-mknetdir.8
 man/man8/grub2-probe.8
 man/man8/grub2-reboot.8
@@ -243,7 +255,6 @@ man/man8/grub2-set-default.8
 man/man8/grub2-setup.8
 sbin/grub2-install
 sbin/grub2-mkconfig
-sbin/grub2-mkdevicemap
 sbin/grub2-mknetdir
 sbin/grub2-probe
 sbin/grub2-reboot
@@ -252,6 +263,7 @@ sbin/grub2-setup
 share/examples/grub2/00_header
 share/examples/grub2/05_pkgsrc_theme
 share/examples/grub2/10_hurd
+share/examples/grub2/10_illumos
 share/examples/grub2/10_kfreebsd
 share/examples/grub2/10_linux
 share/examples/grub2/10_netbsd
@@ -268,6 +280,7 @@ ${PLIST.freetype}share/grub2/ascii.pf2
 ${PLIST.freetype}share/grub2/euro.pf2
 ${PLIST.freetype}share/grub2/unicode.pf2
 ${PLIST.freetype}share/grub2/widthspec.h
+share/grub2/grub-mkconfig_lib
 share/locale/ast/LC_MESSAGES/grub2.mo
 share/locale/ca/LC_MESSAGES/grub2.mo
 share/locale/da/LC_MESSAGES/grub2.mo
@@ -277,6 +290,7 @@ share/locale/fr/LC_MESSAGES/grub2.mo
 share/locale/hu/LC_MESSAGES/grub2.mo
 share/locale/id/LC_MESSAGES/grub2.mo
 share/locale/it/LC_MESSAGES/grub2.mo
+share/locale/ja/LC_MESSAGES/grub2.mo
 share/locale/ko/LC_MESSAGES/grub2.mo
 share/locale/nl/LC_MESSAGES/grub2.mo
 share/locale/pl/LC_MESSAGES/grub2.mo
