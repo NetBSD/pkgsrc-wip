@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: rsyslogd.sh,v 1.1.1.1 2011/04/14 09:44:42 bartoszkuzma Exp $
+# $NetBSD: rsyslogd.sh,v 1.2 2012/02/12 20:03:44 bartoszkuzma Exp $
 # NetBSD: syslogd,v 1.15 2004/10/11 13:29:52 lukem Exp
 #
 
@@ -17,7 +17,6 @@ rcvar=$name
 command="@PREFIX@/sbin/${name}"
 pidfile="/var/run/${name}.pid"
 required_files="@PKG_SYSCONFDIR@/rsyslog.conf"
-start_precmd="rsyslogd_precmd"
 extra_commands="reload"
 
 load_rc_config $name
