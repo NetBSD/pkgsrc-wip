@@ -1,0 +1,9 @@
+Fix the following error:
+
+--- normalizer ---
+  CCLD   normalizer
+.: Can't open ../src/liblognorm.la
+libtool: link: cannot find the library `../src/liblognorm.la' or unhandled argument `../src/liblognorm.la'
+*** [normalizer] Error code 1
+
+if build is performed without "cd ${WRKSRC} && ${MAKE}".
