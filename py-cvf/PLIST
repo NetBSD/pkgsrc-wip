@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2012/02/10 09:01:10 noud4 Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/02/12 19:58:28 noud4 Exp $
 bin/pycvf
 bin/pycvf-admin
 bin/pycvf_dbshow
@@ -12,10 +12,10 @@ data/LICENSE
 data/addpkgpath.txt
 data/pycvf-aliases
 data/pycvf64.png
-${PYSITELIB}/pycvf-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/PKG-INFO
-${PYSITELIB}/pycvf-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/SOURCES.txt
-${PYSITELIB}/pycvf-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/dependency_links.txt
-${PYSITELIB}/pycvf-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/pycvf/__init__.py
 ${PYSITELIB}/pycvf/__init__.pyc
 ${PYSITELIB}/pycvf/__init__.pyo

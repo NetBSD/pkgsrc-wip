@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.10 2012/02/10 09:01:10 noud4 Exp $
+# $NetBSD: Makefile,v 1.11 2012/02/12 19:58:28 noud4 Exp $
 #
 
 DISTNAME=	pycsp-0.7.0
 EGG_NAME=	${DISTNAME}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel python
 MASTER_SITES=	http://pycsp.googlecode.com/files/
 

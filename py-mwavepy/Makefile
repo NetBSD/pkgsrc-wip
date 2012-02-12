@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2012/02/10 09:01:10 noud4 Exp $
+# $NetBSD: Makefile,v 1.4 2012/02/12 19:58:29 noud4 Exp $
 #
 
 DISTNAME=	mwavepy-1.0
 EGG_NAME=	${DISTNAME}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	science
 MASTER_SITES=	http://mwavepy.googlecode.com/files/
 

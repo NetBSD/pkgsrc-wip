@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2012/02/10 09:01:10 noud4 Exp $
-${PYSITELIB}/mwavepy-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/PKG-INFO
-${PYSITELIB}/mwavepy-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/SOURCES.txt
-${PYSITELIB}/mwavepy-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/dependency_links.txt
-${PYSITELIB}/mwavepy-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/top_level.txt
+@comment $NetBSD: PLIST,v 1.3 2012/02/12 19:58:29 noud4 Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/mwavepy/__init__.py
 ${PYSITELIB}/mwavepy/__init__.pyc
 ${PYSITELIB}/mwavepy/__init__.pyo

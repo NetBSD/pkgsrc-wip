@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2012/02/10 09:01:10 noud4 Exp $
+# $NetBSD: Makefile,v 1.4 2012/02/12 19:58:28 noud4 Exp $
 #
 
 DISTNAME=	BIP-0.5.4
 EGG_NAME=	${DISTNAME}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/BIP/bip/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	math python
 MASTER_SITES=	http://pypi.python.org/packages/source/B/BIP/
 

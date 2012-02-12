@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2012/02/10 09:01:10 noud4 Exp $
+# $NetBSD: Makefile,v 1.5 2012/02/12 19:58:28 noud4 Exp $
 #
 
 DISTNAME=	pycvf-0.2.0
 EGG_NAME=	${DISTNAME}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	graphics python
 MASTER_SITES=	http://master.dl.sourceforge.net/project/pycvf/0.2/
 
