@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/10/06 12:57:53 makoto Exp $
+# $NetBSD: Makefile,v 1.2 2012/02/13 01:55:46 makoto Exp $
 
-DISTNAME=	binutils-2.21.1a
-PKGNAME=	binutils-2.21.1
-
+DISTNAME=	binutils-2.22
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=binutils/}
 
@@ -11,7 +9,6 @@ HOMEPAGE=	http://directory.fsf.org/project/binutils/
 COMMENT=	GNU binary utilities
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2
 EXTRACT_SUFX=	.tar.bz2
-WRKSRC=		${WRKDIR}/binutils-2.21.1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -31,8 +28,8 @@ MAKEFLAGS+=		TEXINFO_LOCALE=no
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-lib-path='/lib:/usr/lib'
 GNU_PROGRAM_PREFIX?=	gnu-
-CONFIGURE_ARGS+=	--program-prefix=${GNU_PROGRAM_PREFIX:Q}
-PLIST_SUBST+=		GNU_PROGRAM_PREFIX=${GNU_PROGRAM_PREFIX:Q}
+CONFIGURE_ARGS+=	--program-prefix=${GNU_PROGRAM_PREFIX}
+PLIST_SUBST+=		GNU_PROGRAM_PREFIX=${GNU_PROGRAM_PREFIX}
 BUILD_DEFS+=		GNU_PROGRAM_PREFIX
 BINUTILS_PREFIX=	${PREFIX}/${MACHINE_GNU_PLATFORM}
 
@@ -66,7 +63,7 @@ post-configure:
 .endfor
 
 post-install:
-	cd ${DESTDIR}${PREFIX} && find ${MACHINE_GNU_PLATFORM}/lib/ldscripts -type f -print	\
+	cd ${DESTDIR}${PREFIX} && find ${MACHINE_GNU_PLATFORM:Q}/lib/ldscripts -type f -print	\
 		| sort -r						\
 		> ${WRKDIR}/PLIST_DYNAMIC
 

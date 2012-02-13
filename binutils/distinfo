@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/10/06 12:57:53 makoto Exp $
+$NetBSD: distinfo,v 1.2 2012/02/13 01:55:46 makoto Exp $
 
-SHA1 (binutils-2.21.1a.tar.bz2) = 525255ca6874b872540c9967a1d26acfbc7c8230
-RMD160 (binutils-2.21.1a.tar.bz2) = de5ce1d7cb0d44e3ec18c557beefb2a292d59a60
-Size (binutils-2.21.1a.tar.bz2) = 18997755 bytes
-SHA1 (patch-configure) = d4a7d8237f901dedc6eeacab4eff9e38e2d650c4
+SHA1 (binutils-2.22.tar.bz2) = 65b304a0b9a53a686ce50a01173d1f40f8efe404
+RMD160 (binutils-2.22.tar.bz2) = 34cebe4cdca9480d5dc6f6b00b052c48c8ac30dc
+Size (binutils-2.22.tar.bz2) = 19973532 bytes
+SHA1 (patch-configure) = 1a127f82c807cbd1ac6fee073c618f3fb48667f6
+SHA1 (patch-configure.ac) = 7bd7b90e57d850705286f2cc6464ecc45e0657c0

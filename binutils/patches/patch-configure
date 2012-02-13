@@ -1,15 +1,15 @@
-$NetBSD: patch-configure,v 1.1.1.1 2011/10/06 12:57:53 makoto Exp $
+$NetBSD: patch-configure,v 1.2 2012/02/13 01:55:46 makoto Exp $
 
-remove etc 
+Remove etc
 
---- configure.orig	2011-06-27 16:39:00.000000000 +0900
-+++ configure	2011-10-05 23:34:15.000000000 +0900
-@@ -2670,7 +2670,7 @@
+--- configure.orig	2011-08-14 21:28:15.000000000 +0900
++++ configure	2012-02-13 10:34:04.000000000 +0900
+@@ -2667,7 +2667,7 @@
  # binutils, gas and ld appear in that order because it makes sense to run
  # "make check" in that particular order.
  # If --enable-gold is used, "gold" may replace "ld".
--host_tools="texinfo byacc flex bison binutils gas ld fixincludes gcc cgen sid sim gdb make patch prms send-pr gprof etc expect dejagnu ash bash bzip2 m4 autoconf automake libtool diff rcs fileutils shellutils time textutils wdiff find uudecode hello tar gzip indent recode release sed utils guile perl gawk findutils gettext zip fastjar gnattools"
-+host_tools="texinfo byacc flex bison binutils gas ld fixincludes gcc cgen sid sim gdb make patch prms send-pr gprof expect dejagnu ash bash bzip2 m4 autoconf automake libtool diff rcs fileutils shellutils time textutils wdiff find uudecode hello tar gzip indent recode release sed utils guile perl gawk findutils gettext zip fastjar gnattools"
+-host_tools="texinfo flex bison binutils gas ld fixincludes gcc cgen sid sim gdb gprof etc expect dejagnu m4 utils guile fastjar gnattools"
++host_tools="texinfo flex bison binutils gas ld fixincludes gcc cgen sid sim gdb gprof expect dejagnu m4 utils guile fastjar gnattools"
  
  # libgcj represents the runtime libraries only used by gcj.
  libgcj="target-libffi \

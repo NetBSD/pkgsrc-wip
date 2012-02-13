@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.1.1.1 2011/10/06 12:57:53 makoto Exp $
+@comment $NetBSD: PLIST.common,v 1.2 2012/02/13 01:55:46 makoto Exp $
 ${MACHINE_GNU_PLATFORM}/bin/ar
 ${MACHINE_GNU_PLATFORM}/bin/as
 ${MACHINE_GNU_PLATFORM}/bin/ld
@@ -66,6 +66,7 @@ share/locale/da/LC_MESSAGES/ld.mo
 share/locale/da/LC_MESSAGES/opcodes.mo
 ${PLIST.gprof}share/locale/de/LC_MESSAGES/gprof.mo
 share/locale/de/LC_MESSAGES/opcodes.mo
+${PLIST.gprof}share/locale/eo/LC_MESSAGES/gprof.mo
 share/locale/es/LC_MESSAGES/bfd.mo
 share/locale/es/LC_MESSAGES/binutils.mo
 share/locale/es/LC_MESSAGES/gas.mo
@@ -74,6 +75,7 @@ share/locale/es/LC_MESSAGES/ld.mo
 share/locale/es/LC_MESSAGES/opcodes.mo
 share/locale/fi/LC_MESSAGES/bfd.mo
 share/locale/fi/LC_MESSAGES/binutils.mo
+share/locale/fi/LC_MESSAGES/gas.mo
 ${PLIST.gprof}share/locale/fi/LC_MESSAGES/gprof.mo
 share/locale/fi/LC_MESSAGES/ld.mo
 share/locale/fi/LC_MESSAGES/opcodes.mo
@@ -94,8 +96,6 @@ share/locale/id/LC_MESSAGES/ld.mo
 share/locale/id/LC_MESSAGES/opcodes.mo
 share/locale/ja/LC_MESSAGES/bfd.mo
 share/locale/ja/LC_MESSAGES/binutils.mo
-share/locale/ja/LC_MESSAGES/gas.mo
-${PLIST.gprof}share/locale/ja/LC_MESSAGES/gprof.mo
 share/locale/ja/LC_MESSAGES/ld.mo
 ${PLIST.gprof}share/locale/ms/LC_MESSAGES/gprof.mo
 ${PLIST.gprof}share/locale/nl/LC_MESSAGES/gprof.mo

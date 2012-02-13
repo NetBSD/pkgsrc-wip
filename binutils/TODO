@@ -1,5 +1,10 @@
 (At least) 
+* Missing COMMIT_MSG (2.17 to 2.22)
 * test on DragonFly
+
+* pkglint	  0 errors and 7 warnings found.
+* pkglint -Wall   0 errors and 38 warnings found.
+
 * test with gcc-4.5 (or gcc-4.7 ?)
 
 Currently tested on 
@@ -11,4 +16,4 @@ I -- package-install (include P)
 D -- pkg_delete      (include P/I)
             NetBSD-5.1
             amd64 i386
-gcc-4.1.3   P     D
+gcc-4.1.3   P
