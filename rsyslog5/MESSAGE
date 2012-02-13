@@ -1,11 +1,19 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2011/04/18 13:46:22 bartoszkuzma Exp $
+$NetBSD: MESSAGE,v 1.2 2012/02/13 13:50:13 bartoszkuzma Exp $
 
-For simple replacement for syslogd(8), you may put the following lines
-into your /etc/rc.conf:
+If you want to run rsyslogd as replacement for syslogd(8), you should
+copy rsyslogd script to /etc/rc.d and change your /etc/rc.conf:
 
     syslogd=NO
     rsyslogd=YES
-    rsyslogd_flags="-f /etc/syslog.conf"
 
+Then you can stop syslogd by
+
+    /etc/rc.d/syslogd onestop
+
+and start rsyslogd with
+
+    /etc/rc.d/rsyslogd start
+
+For more details, read ${PREFIX}/share/doc/rsyslog/rsyslog_conf.html.
 ===========================================================================

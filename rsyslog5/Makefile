@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/02/12 20:37:01 bartoszkuzma Exp $
+# $NetBSD: Makefile,v 1.6 2012/02/13 13:50:13 bartoszkuzma Exp $
 #
 
 DISTNAME=		rsyslog-5.8.7
@@ -17,7 +17,9 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-testbench
 
-USE_TOOLS+=		pkg-config
+USE_TOOLS+=		pax pkg-config
+
+BUILD_DEFS+=		VARBASE
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
@@ -35,15 +37,21 @@ RCD_SCRIPTS=		rsyslogd
 
 .include "options.mk"
 
-SUBST_CLASSES+=		sysmod
-SUBST_STAGE.sysmod=	post-patch
-SUBST_MESSAGE.sysmod=	Setting system/kernel logging module
-SUBST_FILES.sysmod=	rsyslog.conf
-SUBST_SED.sysmod=	-e 's,@RSYSLOG_SYSMOD@,im${RSYSLOG_SYSMOD},'
+SUBST_CLASSES+=		conf
+SUBST_STAGE.conf=	post-patch
+SUBST_MESSAGE.conf=	Adjust configuration file
+SUBST_FILES.conf=	rsyslog.conf
+SUBST_SED.conf=		-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},'
+SUBST_SED.conf+=	-e 's,@PREFIX@,${PREFIX},'
+SUBST_SED.conf+=	-e 's,@RSYSLOG_SYSMOD@,im${RSYSLOG_SYSMOD},'
+SUBST_SED.conf+=	-e 's,@VARBASE@,${VARBASE},'
+
+post-extract:
+	${RUN} ${CP} ${FILESDIR}/rsyslog.conf ${WRKSRC}
 
 post-install:
-	# ${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
-	# cd ${WRKSRC}/doc && pax -rw *.html ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
+	cd ${WRKSRC}/doc && pax -rw *.html ${DESTDIR}${DOCDIR}
 	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/rsyslog.conf ${DESTDIR}${EGDIR}/rsyslog.conf
 .	if !empty(PKG_OPTIONS:Mmysql)
