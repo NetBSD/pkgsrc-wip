@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/02/14 10:15:13 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2012/02/14 13:30:25 fhajny Exp $
 #
 
 DISTNAME=	gearmand-0.28
@@ -27,4 +27,5 @@ LIBS.SunOS+=	-ldladm
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../security/libssh2/buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
