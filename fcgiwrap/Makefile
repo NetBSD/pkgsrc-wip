@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/12/03 23:27:48 cheusov Exp $
+# $NetBSD: Makefile,v 1.4 2012/02/14 17:26:32 fhajny Exp $
 
 # fetching by tag from GitHub needs some special treatment
 DISTNAME=	gnosek-fcgiwrap-${VERSION}-4-g58ec209
@@ -24,6 +24,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	automake autoreconf
+
+LDFLAGS.SunOS+=	-lsocket -lnsl
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf -i
