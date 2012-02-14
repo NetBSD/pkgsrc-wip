@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2012/02/14 17:08:31 realzhtw Exp $
+
+SHA1 (guile-2.0.5.tar.gz) = 0cf94962ab637975bf2ad00afa15638dcc67408f
+RMD160 (guile-2.0.5.tar.gz) = 51deb23e2ab26e89e9b97f3937ada1609b0329fd
+Size (guile-2.0.5.tar.gz) = 6924159 bytes
