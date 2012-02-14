@@ -1,0 +1,32 @@
+$NetBSD: patch-configure,v 1.1.1.1 2012/02/14 10:15:13 fhajny Exp $
+
+Fix test operator.
+--- configure.orig	2012-01-27 07:31:47.000000000 +0000
++++ configure
+@@ -22247,7 +22247,7 @@ fi
+ done
+ test -n "$CURL_CONFIG" || CURL_CONFIG="no"
+ 
+-    if test "$CURL_CONFIG" == "no"; then :
++    if test "$CURL_CONFIG" = "no"; then :
+ 
+       :
+ 
+@@ -22259,7 +22259,7 @@ $as_echo "#define HAVE_LIBCURL  0 " >>co
+ 
+ else
+ 
+-            if test x"" == x; then :
++            if test x"" = x; then :
+ 
+ 	CURL_CFLAGS="`$CURL_CONFIG $curl_config_args --cflags`"
+ 
+@@ -22269,7 +22269,7 @@ else
+ 
+ fi
+ 
+-            if test x"" == x; then :
++            if test x"" = x; then :
+ 
+ 	CURL_LIBS="`$CURL_CONFIG $curl_config_args --libs`"
+ 

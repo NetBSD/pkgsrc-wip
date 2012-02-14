@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/02/14 10:15:13 fhajny Exp $
+
+SHA1 (gearmand-0.28.tar.gz) = c7772a52b4eb68a4dfd7623e1d5d5ec63becd910
+RMD160 (gearmand-0.28.tar.gz) = 531c9e0d4e186f8a09fbb8bb375cbee6dfd9e39c
+Size (gearmand-0.28.tar.gz) = 774456 bytes
+SHA1 (patch-configure) = c4414d967d5932099fb0c9eb0c9cda477f9db516
