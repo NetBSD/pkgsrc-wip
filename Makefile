@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4652 2012/02/12 19:18:52 bartoszkuzma Exp $
+# $Id: Makefile,v 1.4653 2012/02/15 15:11:37 slitvinov Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -516,6 +516,7 @@ SUBDIR+=	emerald-themes
 SUBDIR+=	emirror
 SUBDIR+=	emovix
 SUBDIR+=	enet
+SUBDIR+=	engauge-digitizer
 SUBDIR+=	enigma2000
 SUBDIR+=	enigmail
 SUBDIR+=	ent
