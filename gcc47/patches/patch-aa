@@ -1,14 +1,6 @@
-$NetBSD: patch-aa,v 1.3 2011/12/07 13:42:27 keckhardt Exp $
-
---- gcc/config.gcc.orig	2011-11-07 10:17:44.000000000 +0000
-+++ gcc/config.gcc
-@@ -1,4 +1,4 @@
--# GCC target-specific configuration file.
-+ GCC target-specific configuration file.
- # Copyright 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007,
- # 2008, 2009, 2010, 2011 Free Software Foundation, Inc.
- 
-@@ -571,6 +571,33 @@ case ${target} in
+--- gcc/config.gcc.orig	2012-02-02 11:20:32.000000000 +0100
++++ gcc/config.gcc	2012-02-15 17:28:10.000000000 +0100
+@@ -570,6 +570,33 @@
    # need_64bit_hwint=yes # system compiler has this for all arch!
    use_gcc_stdint=wrap
    ;;
@@ -42,7 +34,7 @@ $NetBSD: patch-aa,v 1.3 2011/12/07 13:42:27 keckhardt Exp $
  *-*-linux* | frv-*-*linux* | *-*-kfreebsd*-gnu | *-*-knetbsd*-gnu | *-*-gnu* | *-*-kopensolaris*-gnu)
    extra_options="$extra_options gnu-user.opt"
    gas=yes
-@@ -654,6 +681,7 @@ case ${target} in
+@@ -653,6 +680,7 @@
        default_use_cxa_atexit=yes
        ;;
    esac
@@ -50,7 +42,7 @@ $NetBSD: patch-aa,v 1.3 2011/12/07 13:42:27 keckhardt Exp $
    ;;
  *-*-openbsd*)
    tmake_file="t-openbsd"
-@@ -1178,12 +1206,18 @@ i[34567]86-*-freebsd*)
+@@ -1183,12 +1211,18 @@
  x86_64-*-freebsd*)
  	tm_file="${tm_file} i386/unix.h i386/att.h dbxelf.h elfos.h ${fbsd_tm_file} i386/x86-64.h i386/freebsd.h i386/freebsd64.h"
  	;;
