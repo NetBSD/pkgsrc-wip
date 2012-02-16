@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4653 2012/02/15 15:11:37 slitvinov Exp $
+# $Id: Makefile,v 1.4654 2012/02/16 15:31:13 christtrekker Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -159,6 +159,7 @@ SUBDIR+=	atftp
 SUBDIR+=	ati-xfree86-bin
 SUBDIR+=	ati-xfree86-bin-unstable
 SUBDIR+=	atlas
+SUBDIR+=	atque
 SUBDIR+=	aubio
 SUBDIR+=	auctex-current
 SUBDIR+=	audacity-devel
@@ -1473,7 +1474,9 @@ SUBDIR+=	manatee
 SUBDIR+=	manifold
 SUBDIR+=	map-browse
 SUBDIR+=	mapnik
+SUBDIR+=	marathon-evil
 SUBDIR+=	marathon-scenarios
+SUBDIR+=	marathon-tempus-irae
 SUBDIR+=	marble
 SUBDIR+=	marsyas
 SUBDIR+=	matanza
@@ -3012,6 +3015,7 @@ SUBDIR+=	wang-ttf
 SUBDIR+=	wbox
 SUBDIR+=	webcleaner
 SUBDIR+=	webkit-sharp
+SUBDIR+=	weland
 SUBDIR+=	weplab
 SUBDIR+=	west
 SUBDIR+=	which
