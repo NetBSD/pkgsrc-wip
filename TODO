@@ -73,7 +73,7 @@ Suggested package updates
 	o libgksu-2.0.4
 	o libgtk-java-2.10.2
 	o libmemcached-0.53
-	o libreoffice-3.4.3
+	o libreoffice-3.5
 	o libuuid-1.41.14
 	o linphone-3.5.0
 	o lirc-0.8.6
@@ -81,7 +81,7 @@ Suggested package updates
 	o llvm-3.0
 	o man-1.6f
 	o mcabber-0.10.1
-	o meta-tracker-0.12.9
+	o meta-tracker-0.12.10
 	o mixxx-1.9.2
 	o mpgedit-0.73dev2
 	o mumble-1.2.3
@@ -109,7 +109,7 @@ Suggested package updates
 	o samhain-3.0.1
 	o scantailor-0.9.11
 	o sflphone-0.7.2
-	o siege-2.71
+	o siege-2.72
 	o sleuthkit-3.2.3
 	o smc-1.8
 	o smproxy-1.0.5
