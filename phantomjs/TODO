@@ -1,0 +1,2 @@
+PhantomJS is still not entirely headless, but works fine with
+e.g. Xfvb from x11/modular-xorg-server.

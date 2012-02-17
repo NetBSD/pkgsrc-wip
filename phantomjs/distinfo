@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/02/17 22:38:01 fhajny Exp $
+
+SHA1 (phantomjs-1.4.1-source.tar.gz) = d9386aa3e36bdd31f069f5301e315a9c5d91f06a
+RMD160 (phantomjs-1.4.1-source.tar.gz) = a4eb71436c014903b8312006daa3b1e7b0294550
+Size (phantomjs-1.4.1-source.tar.gz) = 497856 bytes
