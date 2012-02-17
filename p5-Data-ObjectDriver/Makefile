@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2010/03/24 05:02:08 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.3 2012/02/17 10:10:31 jgoamakf Exp $
 
-DISTNAME=	Data-ObjectDriver-0.07
+DISTNAME=	Data-ObjectDriver-0.09
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Data/}
@@ -19,7 +19,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Data/ObjectDriver/.packlist
-PERL5_MODULE_TYPE=	Module::Install
+PERL5_MODULE_TYPE=	Module::Install::Bundled
 
 BUILDLINK_API_DEPENDS.p5-DBI+=	p5-DBI>=1.605
 
