@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4655 2012/02/17 07:58:43 jgoamakf Exp $
+# $Id: Makefile,v 1.4656 2012/02/18 15:22:32 shattered Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2605,6 +2605,7 @@ SUBDIR+=	redland
 SUBDIR+=	reduze
 SUBDIR+=	regexxer
 SUBDIR+=	reinteract
+SUBDIR+=	rejik
 SUBDIR+=	rekall
 SUBDIR+=	relaydb
 SUBDIR+=	remctl
