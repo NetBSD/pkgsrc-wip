@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4656 2012/02/18 15:22:32 shattered Exp $
+# $Id: Makefile,v 1.4657 2012/02/18 16:05:05 jgoamakf Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1894,8 +1894,6 @@ SUBDIR+=	p5-Net-Twitter-Lite
 SUBDIR+=	p5-Net-UPnP
 SUBDIR+=	p5-Net-Whois-RIPE
 SUBDIR+=	p5-News-Newsrc
-SUBDIR+=	p5-PDF-Reuse
-SUBDIR+=	p5-PDF-Table
 SUBDIR+=	p5-PDL
 SUBDIR+=	p5-POD2-IT
 SUBDIR+=	p5-POSIX-strptime
