@@ -1,0 +1,74 @@
+$NetBSD: patch-aa,v 1.1.1.1 2012/02/18 15:17:30 shattered Exp $
+
+--- Makefile.orig	2010-07-23 10:19:48.000000000 +0000
++++ Makefile
+@@ -1,11 +1,10 @@
+ ### Edit this:
+-INSTALL_PATH=/usr/local/rejik3
+-SQUID_USER=nobody
+-SQUID_GROUP=nogroup
+-
+-CC=gcc -Wall
+-INCLUDE=-I/usr/include -I/usr/local/include -I/usr/include/pcre
+-LIBS=-L/lib `pcre-config --libs`
++INSTALL_PATH=${PREFIX}
++SQUID_USER?=nobody
++SQUID_GROUP?=nogroup
++
++INCLUDE=`pcre-config --cflags`
++LIBS=`pcre-config --libs`
+ 
+ ### Don't edit
+ COMMON_OBJ=err_mes.o now.o get_opt.o parse_urls.o cache2url.o ip.o id.o comparing.o 
+@@ -38,37 +37,28 @@ cygwin: clean cygwin_vars ${REDIRECTOR_O
+ 	zip -r rejik3.zip rejik3
+ 
+ install:
+-# Make dirs
+-	mkdir -p ${INSTALL_PATH}/tools
+-
+ # Install redirector
+-	cp make-cache ${INSTALL_PATH}
+-	cp redirector ${INSTALL_PATH}
+-	cp redirector.conf.dist ${INSTALL_PATH}
++	${BSD_INSTALL_PROGRAM} make-cache ${INSTALL_PATH}/bin/rejik-make-cache
++	${BSD_INSTALL_PROGRAM} redirector ${INSTALL_PATH}/bin/rejik
++	${BSD_INSTALL_DATA} redirector.conf.dist ${INSTALL_PATH}/share/examples/rejik
+ 
+ # Install tools	
+-	echo "#!/bin/sh" > ${INSTALL_PATH}/tools/check-redirector
+-	echo 'su ${SQUID_USER} -c "echo \"http://sex.ru 127.0.0.1/- - GET\" | ${INSTALL_PATH}/redirector ${INSTALL_PATH}/redirector.conf;"' >> ${INSTALL_PATH}/tools/check-redirector
+-	chmod 755  ${INSTALL_PATH}/tools/check-redirector
++	echo "#!/bin/sh" > ${INSTALL_PATH}/libexec/rejik/check-redirector
++	echo 'su ${SQUID_USER} -c "echo \"http://sex.ru 127.0.0.1/- - GET\" | ${INSTALL_PATH}/bin/rejik ${INSTALL_PATH}/etc/rejik/redirector.conf;"' >> ${INSTALL_PATH}/libexec/rejik/check-redirector
++	chmod 755  ${INSTALL_PATH}/libexec/rejik/check-redirector
+ 
+-	echo "#!/bin/sh" > ${INSTALL_PATH}/tools/set-permissions
+-	echo 'chown -R ${SQUID_USER}:${SQUID_GROUP} ${INSTALL_PATH}' >> ${INSTALL_PATH}/tools/set-permissions
+-	chmod 755  ${INSTALL_PATH}/tools/set-permissions
++	echo "#!/bin/sh" > ${INSTALL_PATH}/libexec/rejik/set-permissions
++	echo 'chown ${SQUID_USER}:${SQUID_GROUP} ${INSTALL_PATH}/bin/rejik' >> ${INSTALL_PATH}/libexec/rejik/set-permissions
++	chmod 755  ${INSTALL_PATH}/libexec/rejik/set-permissions
+ 
+ 
+-	cp tools/kill-cache ${INSTALL_PATH}/tools
+-	chmod 755  ${INSTALL_PATH}/tools/kill-cache
++	${BSD_INSTALL_SCRIPT} tools/kill-cache ${INSTALL_PATH}/libexec/rejik
+ 
+-	cp tools/benchmark ${INSTALL_PATH}/tools	
+-	chmod 755  ${INSTALL_PATH}/tools/benchmark
++	${BSD_INSTALL_SCRIPT} tools/benchmark ${INSTALL_PATH}/libexec/rejik	
+ 
+-	cp tools/IN.gz ${INSTALL_PATH}/tools
+-	chmod 644 ${INSTALL_PATH}/tools/IN.gz
++	${BSD_INSTALL_DATA} tools/IN.gz ${INSTALL_PATH}/libexec/rejik
+ 
+ # Set permissions
+-	chown -R ${SQUID_USER}:${SQUID_GROUP} ${INSTALL_PATH}
+-	chmod 770 ${INSTALL_PATH}
+-	chmod 644 ${INSTALL_PATH}/redirector.conf.dist 
+-	chmod 755 ${INSTALL_PATH}/redirector 
+-	chmod 755 ${INSTALL_PATH}/make-cache
++	chown ${SQUID_USER}:${SQUID_GROUP} ${INSTALL_PATH}/bin/rejik
++	chmod 755 ${INSTALL_PATH}/bin/rejik-make-cache
+ 

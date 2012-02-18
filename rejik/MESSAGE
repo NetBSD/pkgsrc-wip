@@ -1,0 +1,12 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2012/02/18 15:17:30 shattered Exp $
+
+The 'ban lists' are not provided with this package.  Up-to-date lists are
+available to members of DBL project.
+
+MVPS HOSTS file from http://winhelp2002.mvps.org/ can alse be used, after
+postprocessing: 
+
+awk '/^127/ && !/localhost/ { print $2 }' HOSTS
+
+===========================================================================

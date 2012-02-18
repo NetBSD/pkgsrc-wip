@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/02/18 15:17:30 shattered Exp $
+
+SHA1 (redirector-3.2.8.tgz) = 668b716ef8040e8fd0e043725fd192bd813d2f42
+RMD160 (redirector-3.2.8.tgz) = 08452416f972a80a32c7ecce97b527bf7efabb9e
+Size (redirector-3.2.8.tgz) = 45857 bytes
+SHA1 (patch-aa) = 5ddfc0a0a8bb28dd6587769e1cee88464cb38c1b
