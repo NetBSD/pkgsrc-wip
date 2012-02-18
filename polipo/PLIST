@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2009/10/11 10:45:06 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.5 2012/02/18 21:31:43 ishit Exp $
 bin/polipo
+info/polipo.info
 man/man1/polipo.1
 share/examples/rc.d/polipo
 share/polipo/README

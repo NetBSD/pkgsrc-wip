@@ -1,15 +1,18 @@
-# $NetBSD: Makefile,v 1.5 2012/02/18 20:20:37 ishit Exp $
+# $NetBSD: Makefile,v 1.6 2012/02/18 21:31:43 ishit Exp $
 #
 
-DISTNAME=		polipo-1.0.4
-PKGREVISION=		1
+DISTNAME=		polipo-1.0.4.1
 CATEGORIES=		www
-MASTER_SITES=		http://www.pps.jussieu.fr/~jch/software/files/polipo/
+MASTER_SITES=		http://freehaven.net/~chrisd/polipo/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.pps.jussieu.fr/~jch/software/polipo/
 COMMENT=		Small and fast caching web proxy
 
-USE_TOOLS+=	makeinfo install-info
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+USE_TOOLS+=	makeinfo
+
+INFO_FILES=	# PLIST
 
 BUILD_DEFS+=	VARBASE
 
@@ -18,10 +21,16 @@ BUILD_DEFS+=	VARBASE
 # PKG_USERS_VARS+=	POLIPO_USER
 # PKG_GROUPS_VARS+=	POLIPO_GROUP
 
-RCD_SCRIPTS=	polipo
+MAKE_DIRS=		${VARBASE}/cache/polipo	${VARBASE}/log/polipo
+MAKE_DIRS+=		${VARBASE}/run/polipo
+# MAKE_DIRS_PERMS+=	${VARBASE}/cache/polipo ${POLIPO_USER} ${POLIPO_GROUP} 0750
+# MAKE_DIRS_PERMS+=	${VARBASE}/log/polipo ${POLIPO_USER} ${POLIPO_GROUP} 0755
+# MAKE_DIRS_PERMS+=	${VARBASE}/run/polipo ${POLIPO_USER} ${POLIPO_GROUP} 0755
 
-MAKE_DIRS=		${VARBASE}/cache/polipo
-# OWN_DIRS_PERMS+=        ${VARBASE}/cache/polipo ${POLIPO_USER} ${POLIPO_GROUP} 0750
+PKG_SYSCONFSUBDIR=	polipo
+CONF_FILES=		${PREFIX}/share/polipo/config.sample ${PKG_SYSCONFDIR}/config
+
+RCD_SCRIPTS=		polipo
 
 SUBST_CLASSES+=			fix-paths
 SUBST_STAGE.fix-paths=		pre-configure
@@ -29,23 +38,20 @@ SUBST_MESSAGE.fix-paths=	Fixing absolute paths.
 SUBST_FILES.fix-paths=		Makefile *.sample polipo.man polipo.texi *.c
 SUBST_SED.fix-paths=		-e 's,/usr/local,${PREFIX},g'
 SUBST_SED.fix-paths+=		-e 's,/var/cache,${VARBASE}/cache,g'
-SUBST_SED.fix-paths+=		-e 's,/etc/polipo,${PKG_SYSCONFDIR}/polipo,g'
+SUBST_SED.fix-paths+=		-e 's,/etc/polipo,${PKG_SYSCONFDIR},g'
+SUBST_SED.fix-paths+=		-e 's,/var/log/polipo,/var/log/polipo/polipo.log,g'
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/polipo/www etc/polipo
-
-# PKG_GROUPS=	${POLIPO_GROUP}
-# PKG_USERS=	${POLIPO_USER}:${POLIPO_GROUP}::polipo\ user
+INSTALLATION_DIRS=	bin info ${PKGMANDIR}/man1 share/polipo/www
 
 post-build:
 	${CP} ${WRKSRC}/polipo.man ${WRKSRC}/polipo.1
 
 do-install:
-	${INSTALL_DATA_DIR} ${VARBASE}/cache/polipo
-	${INSTALL_PROGRAM} ${WRKSRC}/polipo ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/polipo.1 ${PREFIX}/${PKGMANDIR}/man1
-	install-info --info-dir=${PREFIX}/${PKGINFODIR} ${WRKSRC}/polipo.info
-	${INSTALL_DATA} ${WRKSRC}/*.sample ${PREFIX}/share/polipo
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/polipo
-	${INSTALL_DATA} ${WRKSRC}/html/* ${PREFIX}/share/polipo/www
+	${INSTALL_PROGRAM} ${WRKSRC}/polipo ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/polipo.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_DATA} ${WRKSRC}/*.sample ${DESTDIR}${PREFIX}/share/polipo
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/polipo
+	${INSTALL_DATA} ${WRKSRC}/html/* ${DESTDIR}${PREFIX}/share/polipo/www
+	${INSTALL_DATA} ${WRKSRC}/polipo.info ${DESTDIR}${PREFIX}/info
 
 .include "../../mk/bsd.pkg.mk"
