@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2008/08/16 19:36:54 leot1990 Exp $
+# $NetBSD: Makefile,v 1.6 2012/02/18 15:56:31 jgoamakf Exp $
 
-DISTNAME=	Net-Delicious-1.13
+DISTNAME=	Net-Delicious-1.14
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	net perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
