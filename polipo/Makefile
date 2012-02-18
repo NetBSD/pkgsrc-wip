@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2008/02/10 16:48:02 ishit Exp $
+# $NetBSD: Makefile,v 1.5 2012/02/18 20:20:37 ishit Exp $
 #
 
 DISTNAME=		polipo-1.0.4
-CATEGORIES=		www wip
+PKGREVISION=		1
+CATEGORIES=		www
 MASTER_SITES=		http://www.pps.jussieu.fr/~jch/software/files/polipo/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.pps.jussieu.fr/~jch/software/polipo/
