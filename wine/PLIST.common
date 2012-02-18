@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.10 2011/12/09 12:47:54 asau Exp $
+@comment $NetBSD: PLIST.common,v 1.11 2012/02/18 23:01:46 asau Exp $
 bin/fnt2bdf
 bin/function_grep.pl
 bin/msiexec
@@ -312,6 +312,8 @@ include/wine/windows/guiddef.h
 include/wine/windows/hlguids.h
 include/wine/windows/hlink.h
 include/wine/windows/hlink.idl
+include/wine/windows/htiface.h
+include/wine/windows/htiface.idl
 include/wine/windows/htiframe.h
 include/wine/windows/htiframe.idl
 include/wine/windows/htmlhelp.h
@@ -330,6 +332,7 @@ include/wine/windows/idispids.h
 include/wine/windows/iextag.h
 include/wine/windows/iextag.idl
 include/wine/windows/ifdef.h
+include/wine/windows/ifmib.h
 include/wine/windows/imagehlp.h
 include/wine/windows/imm.h
 include/wine/windows/imnact.h
@@ -345,6 +348,7 @@ include/wine/windows/intshcut.h
 include/wine/windows/ipexport.h
 include/wine/windows/iphlpapi.h
 include/wine/windows/ipifcons.h
+include/wine/windows/ipmib.h
 include/wine/windows/iprtrmib.h
 include/wine/windows/iptypes.h
 include/wine/windows/isguids.h
@@ -446,6 +450,7 @@ include/wine/windows/netcon.h
 include/wine/windows/netcon.idl
 include/wine/windows/netfw.h
 include/wine/windows/netfw.idl
+include/wine/windows/nldef.h
 include/wine/windows/npapi.h
 include/wine/windows/nspapi.h
 include/wine/windows/ntddcdrm.h
@@ -589,15 +594,19 @@ include/wine/windows/svrapi.h
 include/wine/windows/t2embapi.h
 include/wine/windows/tapi.h
 include/wine/windows/tchar.h
+include/wine/windows/tcpmib.h
 include/wine/windows/textserv.h
 include/wine/windows/textstor.h
 include/wine/windows/textstor.idl
 include/wine/windows/tlhelp32.h
+include/wine/windows/tlogstg.h
+include/wine/windows/tlogstg.idl
 include/wine/windows/tmschema.h
 include/wine/windows/tom.h
 include/wine/windows/tom.idl
 include/wine/windows/traffic.h
 include/wine/windows/twain.h
+include/wine/windows/udpmib.h
 include/wine/windows/unknwn.h
 include/wine/windows/unknwn.idl
 include/wine/windows/urlhist.h
@@ -743,6 +752,7 @@ lib/wine/cryptdlg.dll.so
 lib/wine/cryptdll.dll.so
 lib/wine/cryptnet.dll.so
 lib/wine/cryptui.dll.so
+lib/wine/cscript.exe.so
 lib/wine/ctapi32.dll.so
 lib/wine/ctl3d.dll16.so
 lib/wine/ctl3d32.dll.so
@@ -803,6 +813,7 @@ lib/wine/ddeml.dll16.so
 lib/wine/ddraw.dll.so
 lib/wine/ddrawex.dll.so
 lib/wine/devenum.dll.so
+lib/wine/dhcpcsvc.dll.so
 lib/wine/dinput.dll.so
 lib/wine/dinput8.dll.so
 lib/wine/dispdib.dll16.so
@@ -881,6 +892,7 @@ lib/wine/fakedlls/cryptdlg.dll
 lib/wine/fakedlls/cryptdll.dll
 lib/wine/fakedlls/cryptnet.dll
 lib/wine/fakedlls/cryptui.dll
+lib/wine/fakedlls/cscript.exe
 lib/wine/fakedlls/ctapi32.dll
 lib/wine/fakedlls/ctl3d.dll16
 lib/wine/fakedlls/ctl3d32.dll
@@ -941,6 +953,7 @@ lib/wine/fakedlls/ddeml.dll16
 lib/wine/fakedlls/ddraw.dll
 lib/wine/fakedlls/ddrawex.dll
 lib/wine/fakedlls/devenum.dll
+lib/wine/fakedlls/dhcpcsvc.dll
 lib/wine/fakedlls/dinput.dll
 lib/wine/fakedlls/dinput8.dll
 lib/wine/fakedlls/dispdib.dll16
@@ -1136,6 +1149,7 @@ lib/wine/fakedlls/olethk32.dll
 lib/wine/fakedlls/oleview.exe
 ${PLIST.opengl}lib/wine/fakedlls/opengl32.dll
 lib/wine/fakedlls/pdh.dll
+lib/wine/fakedlls/photometadatahandler.dll
 lib/wine/fakedlls/pidgen.dll
 lib/wine/fakedlls/ping.exe
 lib/wine/fakedlls/plugplay.exe
@@ -1272,9 +1286,9 @@ lib/wine/fakedlls/winemine.exe
 lib/wine/fakedlls/winemsibuilder.exe
 lib/wine/fakedlls/winepath.exe
 lib/wine/fakedlls/wineps.drv
-${PLIST.x11}lib/wine/fakedlls/winex11.drv
 lib/wine/fakedlls/wineps16.drv16
 lib/wine/fakedlls/winevdm.exe
+${PLIST.x11}lib/wine/fakedlls/winex11.drv
 lib/wine/fakedlls/wing.dll16
 lib/wine/fakedlls/wing32.dll
 lib/wine/fakedlls/winhelp.exe16
@@ -1317,6 +1331,7 @@ lib/wine/fakedlls/xinput1_3.dll
 lib/wine/fakedlls/xinput9_1_0.dll
 lib/wine/fakedlls/xmllite.dll
 lib/wine/fakedlls/xolehlp.dll
+lib/wine/fakedlls/xpsprint.dll
 lib/wine/faultrep.dll.so
 lib/wine/fltlib.dll.so
 lib/wine/fusion.dll.so
@@ -1639,6 +1654,7 @@ lib/wine/olethk32.dll.so
 lib/wine/oleview.exe.so
 ${PLIST.opengl}lib/wine/opengl32.dll.so
 lib/wine/pdh.dll.so
+lib/wine/photometadatahandler.dll.so
 lib/wine/pidgen.dll.so
 lib/wine/ping.exe.so
 lib/wine/plugplay.exe.so
@@ -1775,9 +1791,9 @@ lib/wine/winemine.exe.so
 lib/wine/winemsibuilder.exe.so
 lib/wine/winepath.exe.so
 lib/wine/wineps.drv.so
-${PLIST.x11}lib/wine/winex11.drv.so
 lib/wine/wineps16.drv16.so
 lib/wine/winevdm.exe.so
+${PLIST.x11}lib/wine/winex11.drv.so
 lib/wine/wing.dll16.so
 lib/wine/wing32.dll.so
 lib/wine/winhelp.exe16.so
@@ -1820,6 +1836,7 @@ lib/wine/xinput1_3.dll.so
 lib/wine/xinput9_1_0.dll.so
 lib/wine/xmllite.dll.so
 lib/wine/xolehlp.dll.so
+lib/wine/xpsprint.dll.so
 man/de.UTF-8/man1/wine.1
 man/de.UTF-8/man1/winemaker.1
 man/de.UTF-8/man1/wineserver.1
