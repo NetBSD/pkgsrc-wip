@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2011/07/10 15:39:27 reinoudz70 Exp $
+@comment $NetBSD: PLIST,v 1.9 2012/02/19 17:45:45 guigui2 Exp $
 bin/globaltime
 bin/orage
 libexec/xfce4/panel-plugins/xfce4-orageclock-plugin
@@ -10,7 +10,13 @@ share/applications/xfcalendar.desktop
 share/applications/xfce-xfcalendar-settings.desktop
 share/dbus-1/services/org.xfce.calendar.service
 share/dbus-1/services/org.xfce.orage.service
+share/icons/hicolor/160x160/apps/orage.xpm
+share/icons/hicolor/160x160/apps/orage_ice.xpm
+share/icons/hicolor/160x160/apps/orage_round.xpm
+share/icons/hicolor/160x160/apps/orage_sun.xpm
+share/icons/hicolor/48x48/apps/orage_globaltime.png
 share/icons/hicolor/48x48/apps/xfcalendar.png
+share/icons/hicolor/scalable/apps/orage_globaltime.svg
 share/icons/hicolor/scalable/apps/xfcalendar.svg
 share/locale/am/LC_MESSAGES/orage.mo
 share/locale/ar/LC_MESSAGES/orage.mo
@@ -38,12 +44,14 @@ share/locale/gl/LC_MESSAGES/orage.mo
 share/locale/gu/LC_MESSAGES/orage.mo
 share/locale/he/LC_MESSAGES/orage.mo
 share/locale/hi/LC_MESSAGES/orage.mo
+share/locale/hr/LC_MESSAGES/orage.mo
 share/locale/hu/LC_MESSAGES/orage.mo
 share/locale/hy/LC_MESSAGES/orage.mo
 share/locale/id/LC_MESSAGES/orage.mo
 share/locale/it/LC_MESSAGES/orage.mo
 share/locale/ja/LC_MESSAGES/orage.mo
 share/locale/ka/LC_MESSAGES/orage.mo
+share/locale/kk/LC_MESSAGES/orage.mo
 share/locale/ko/LC_MESSAGES/orage.mo
 share/locale/ku/LC_MESSAGES/orage.mo
 share/locale/lt/LC_MESSAGES/orage.mo
@@ -59,11 +67,13 @@ share/locale/pt/LC_MESSAGES/orage.mo
 share/locale/pt_BR/LC_MESSAGES/orage.mo
 share/locale/ro/LC_MESSAGES/orage.mo
 share/locale/ru/LC_MESSAGES/orage.mo
+share/locale/si/LC_MESSAGES/orage.mo
 share/locale/sk/LC_MESSAGES/orage.mo
 share/locale/sq/LC_MESSAGES/orage.mo
 share/locale/sv/LC_MESSAGES/orage.mo
 share/locale/ta/LC_MESSAGES/orage.mo
 share/locale/tr/LC_MESSAGES/orage.mo
+share/locale/ug/LC_MESSAGES/orage.mo
 share/locale/uk/LC_MESSAGES/orage.mo
 share/locale/ur/LC_MESSAGES/orage.mo
 share/locale/ur_PK/LC_MESSAGES/orage.mo

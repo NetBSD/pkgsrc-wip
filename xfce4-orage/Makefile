@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2011/07/10 15:39:27 reinoudz70 Exp $
+# $NetBSD: Makefile,v 1.5 2012/02/19 17:45:45 guigui2 Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../wip/xfce48/Makefile.common"
 
-ORAGE_VERSION=	4.8.1
+ORAGE_VERSION=	4.8.3
 
 DISTNAME=	orage-${ORAGE_VERSION}
 PKGNAME=	xfce4-orage-${ORAGE_VERSION}
