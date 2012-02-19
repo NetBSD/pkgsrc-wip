@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2011/06/29 09:27:12 reinoudz70 Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/02/19 17:03:11 guigui2 Exp $
 include/garcon-1/garcon/garcon-config.h
 include/garcon-1/garcon/garcon-environment.h
 include/garcon-1/garcon/garcon-marshal.h
@@ -25,22 +25,21 @@ share/desktop-directories/xfce-multimedia.directory
 share/desktop-directories/xfce-network.directory
 share/desktop-directories/xfce-office.directory
 share/desktop-directories/xfce-other.directory
-share/desktop-directories/xfce-science.directory
 share/desktop-directories/xfce-screensavers.directory
 share/desktop-directories/xfce-settings.directory
 share/desktop-directories/xfce-system.directory
 share/examples/xfce4/xfce-applications.menu
-share/gtk-doc/html/garcon/GarconMenu.html
-share/gtk-doc/html/garcon/GarconMenuDirectory.html
-share/gtk-doc/html/garcon/GarconMenuElement.html
-share/gtk-doc/html/garcon/GarconMenuItem.html
-share/gtk-doc/html/garcon/GarconMenuItemCache.html
-share/gtk-doc/html/garcon/GarconMenuMerger.html
-share/gtk-doc/html/garcon/GarconMenuParser.html
-share/gtk-doc/html/garcon/GarconMenuSeparator.html
-share/gtk-doc/html/garcon/GarconMenuTreeProvider.html
 share/gtk-doc/html/garcon/api-index-full.html
 share/gtk-doc/html/garcon/garcon-Desktop-Environment-Configuration.html
+share/gtk-doc/html/garcon/garcon-GarconMenu.html
+share/gtk-doc/html/garcon/garcon-GarconMenuDirectory.html
+share/gtk-doc/html/garcon/garcon-GarconMenuElement.html
+share/gtk-doc/html/garcon/garcon-GarconMenuItem.html
+share/gtk-doc/html/garcon/garcon-GarconMenuItemCache.html
+share/gtk-doc/html/garcon/garcon-GarconMenuMerger.html
+share/gtk-doc/html/garcon/garcon-GarconMenuParser.html
+share/gtk-doc/html/garcon/garcon-GarconMenuSeparator.html
+share/gtk-doc/html/garcon/garcon-GarconMenuTreeProvider.html
 share/gtk-doc/html/garcon/garcon-Version-Information.html
 share/gtk-doc/html/garcon/garcon-garcon-menu-item-pool.html
 share/gtk-doc/html/garcon/garcon-garcon-menu-node.html
@@ -82,6 +81,7 @@ share/locale/kk/LC_MESSAGES/garcon.mo
 share/locale/ku/LC_MESSAGES/garcon.mo
 share/locale/lt/LC_MESSAGES/garcon.mo
 share/locale/lv/LC_MESSAGES/garcon.mo
+share/locale/ms/LC_MESSAGES/garcon.mo
 share/locale/nb/LC_MESSAGES/garcon.mo
 share/locale/nb_NO/LC_MESSAGES/garcon.mo
 share/locale/nl/LC_MESSAGES/garcon.mo
@@ -92,8 +92,10 @@ share/locale/pt_BR/LC_MESSAGES/garcon.mo
 share/locale/pt_PT/LC_MESSAGES/garcon.mo
 share/locale/ro/LC_MESSAGES/garcon.mo
 share/locale/ru/LC_MESSAGES/garcon.mo
+share/locale/sk/LC_MESSAGES/garcon.mo
 share/locale/sq/LC_MESSAGES/garcon.mo
 share/locale/sv/LC_MESSAGES/garcon.mo
+share/locale/te/LC_MESSAGES/garcon.mo
 share/locale/tr/LC_MESSAGES/garcon.mo
 share/locale/ug/LC_MESSAGES/garcon.mo
 share/locale/uk/LC_MESSAGES/garcon.mo
