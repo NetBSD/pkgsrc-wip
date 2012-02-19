@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/07/05 20:38:01 guigui2 Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/02/19 17:37:50 guigui2 Exp $
 lib/thunarx-2/thunar-vcs-plugin.la
 libexec/tvp-git-helper
+libexec/tvp-svn-helper
 share/icons/hicolor/24x24/apps/git.png
 share/icons/hicolor/24x24/apps/subversion.png
 share/icons/hicolor/48x48/apps/git.png
