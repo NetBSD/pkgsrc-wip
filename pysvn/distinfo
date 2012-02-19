@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2012/02/18 21:35:23 helgoman Exp $
-
-SHA1 (pysvn-1.7.5.tar.gz) = 912d7081a8294a578f822e03d60747154cf8532d
-RMD160 (pysvn-1.7.5.tar.gz) = d412aab74737d371a184a327ceadc971a00340ab
-Size (pysvn-1.7.5.tar.gz) = 333366 bytes

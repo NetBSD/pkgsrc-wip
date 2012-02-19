@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4657 2012/02/18 16:05:05 jgoamakf Exp $
+# $Id: Makefile,v 1.4658 2012/02/19 14:03:42 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2552,7 +2552,6 @@ SUBDIR+=	pynfo
 SUBDIR+=	pypanel
 SUBDIR+=	pypod
 SUBDIR+=	pysite
-SUBDIR+=	pysvn
 SUBDIR+=	pythia6
 SUBDIR+=	pythoncad
 SUBDIR+=	pythontoolkit

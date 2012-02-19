@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2012/02/18 21:35:23 helgoman Exp $
-${PYSITELIB}/pysvn/__init__.py
-${PYSITELIB}/pysvn/_pysvn.so
