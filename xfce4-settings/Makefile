@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2011/06/30 20:47:40 reinoudz70 Exp $
+# $NetBSD: Makefile,v 1.2 2012/02/19 17:16:07 guigui2 Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../wip/xfce48/Makefile.common"
 
-SETTINGS_VERSION=	4.8.2
+SETTINGS_VERSION=	4.8.3
 
 DISTNAME=		xfce4-settings-${SETTINGS_VERSION}
 #PKGREVISION=		1
