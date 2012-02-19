@@ -1,9 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/07/05 19:14:43 guigui2 Exp $
+$NetBSD: distinfo,v 1.2 2012/02/19 17:30:42 guigui2 Exp $
 
-SHA1 (thunar-media-tags-plugin-0.1.2.tar.bz2) = 5f7fab5e647a2678629cc297a367611715ad8a57
-RMD160 (thunar-media-tags-plugin-0.1.2.tar.bz2) = 31b3e1719be7983d33541fb62bb8e9920341ad32
-Size (thunar-media-tags-plugin-0.1.2.tar.bz2) = 282877 bytes
-SHA1 (patch-configure) = 5cddc8ecf567fb3effa94a41adc62b741e146c6c
-SHA1 (patch-thunar-plugin_Makefile_in) = 243b8d72ac5904e6412a969711a271ef74588c3f
-SHA1 (patch-thunar-plugin_audio-tags-page.c) = f16bddb85ee1a36a0b5c66f8c020724dadcdba2e
-SHA1 (patch-thunar-plugin_tag-renamer.c) = 78b14a6e9090ece2f1df28213e0e522fd57ec2db
+SHA1 (thunar-media-tags-plugin-0.2.0.tar.bz2) = 1111b4dae10156ab91adb4eadb26586593b1b023
+RMD160 (thunar-media-tags-plugin-0.2.0.tar.bz2) = a85523e3e4d40aefbdad558566a5331be6c85c0c
+Size (thunar-media-tags-plugin-0.2.0.tar.bz2) = 321001 bytes
