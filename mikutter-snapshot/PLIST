@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.8 2012/02/01 11:20:53 obache Exp $
+@comment $NetBSD: PLIST,v 1.9 2012/02/19 05:29:00 obache Exp $
 bin/mikutter
 share/applications/mikutter.desktop
 share/doc/mikutter/README
 share/mikutter/core/addon/addon.rb
 share/mikutter/core/addon/alsa/alsa.rb
 share/mikutter/core/addon/api_request_file_cache.rb
+share/mikutter/core/addon/aspectframe/aspectframe.rb
 share/mikutter/core/addon/bitly/bitly.rb
 share/mikutter/core/addon/bitly/test.bitly.rb
 share/mikutter/core/addon/bugreport.rb
@@ -79,6 +80,7 @@ share/mikutter/core/lib/mikutwitter/test/list_member.json
 share/mikutter/core/lib/mikutwitter/test/list_member_1380555359495881433.json
 share/mikutter/core/lib/mikutwitter/test/list_member_1380555797979069262.json
 share/mikutter/core/lib/mikutwitter/test/list_member_2.json
+share/mikutter/core/lib/mikutwitter/test/list_memberships.json
 share/mikutter/core/lib/mikutwitter/test/list_subscriptions.json
 share/mikutter/core/lib/mikutwitter/test/lists_all.json
 share/mikutter/core/lib/mikutwitter/test/search.json
@@ -157,6 +159,7 @@ share/mikutter/core/mui/gtk_web_image_loader_image_cache_raw.rb
 share/mikutter/core/mui/gtk_webicon.rb
 share/mikutter/core/plugin.rb
 share/mikutter/core/plugin/ChangeLog
+share/mikutter/core/plugin/core.rb
 share/mikutter/core/plugin/gui.rb
 share/mikutter/core/plugin/template
 share/mikutter/core/retriever.rb
