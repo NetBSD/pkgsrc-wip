@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2011/06/30 20:18:24 reinoudz70 Exp $
+@comment $NetBSD: PLIST,v 1.16 2012/02/19 17:20:38 guigui2 Exp $
 bin/xfwm4
 bin/xfwm4-settings
 bin/xfwm4-tweaks-settings
@@ -42,11 +42,17 @@ share/doc/xfwm4/html/it/images/titlebar.png
 share/doc/xfwm4/html/it/images/workspace_margins.png
 share/doc/xfwm4/html/it/images/xfwm_workspaces.png
 share/doc/xfwm4/html/it/index.html
+share/doc/xfwm4/html/ru/images
+share/doc/xfwm4/html/ru/index.html
 share/doc/xfwm4/html/sv/images
 share/doc/xfwm4/html/sv/index.html
+share/doc/xfwm4/html/tr/images
+share/doc/xfwm4/html/tr/index.html
 share/doc/xfwm4/html/ug/images
 share/doc/xfwm4/html/ug/index.html
 share/doc/xfwm4/html/xfwm4.css
+share/doc/xfwm4/html/zh_CN/images
+share/doc/xfwm4/html/zh_CN/index.html
 share/icons/hicolor/48x48/apps/wmtweaks.png
 share/icons/hicolor/48x48/apps/xfce4-workspaces.png
 share/icons/hicolor/48x48/apps/xfwm4.png
@@ -83,6 +89,7 @@ share/locale/hi/LC_MESSAGES/xfwm4.mo
 share/locale/hr/LC_MESSAGES/xfwm4.mo
 share/locale/hu/LC_MESSAGES/xfwm4.mo
 share/locale/id/LC_MESSAGES/xfwm4.mo
+share/locale/is/LC_MESSAGES/xfwm4.mo
 share/locale/it/LC_MESSAGES/xfwm4.mo
 share/locale/ja/LC_MESSAGES/xfwm4.mo
 share/locale/ka/LC_MESSAGES/xfwm4.mo
@@ -106,6 +113,7 @@ share/locale/sk/LC_MESSAGES/xfwm4.mo
 share/locale/sq/LC_MESSAGES/xfwm4.mo
 share/locale/sv/LC_MESSAGES/xfwm4.mo
 share/locale/ta/LC_MESSAGES/xfwm4.mo
+share/locale/te/LC_MESSAGES/xfwm4.mo
 share/locale/tr/LC_MESSAGES/xfwm4.mo
 share/locale/ug/LC_MESSAGES/xfwm4.mo
 share/locale/uk/LC_MESSAGES/xfwm4.mo
