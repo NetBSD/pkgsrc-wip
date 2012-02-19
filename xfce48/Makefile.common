@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2011/07/05 20:40:44 guigui2 Exp $
+# $NetBSD: Makefile.common,v 1.6 2012/02/19 20:16:39 guigui2 Exp $
 
 # used by audio/xfce4-mixer/Makefile
 # used by wip/xfce4-thunar-archive/Makefile
@@ -7,6 +7,7 @@
 # used by devel/xfconf/Makefile
 # used by editors/xfce4-mousepad/Makefile
 # used by graphics/xfce4-icon-theme/Makefile
+# used by graphics/tumbler
 # used by print/xfce4-print/Makefile
 # used by sysutils/xfce4-appfinder/Makefile
 # used by sysutils/xfce4-thunar/Makefile
@@ -27,7 +28,9 @@
 # used by x11/xfce4-session/Makefile
 # used by x11/xfce4-settings/Makefile
 # used by x11/xfce4-terminal/Makefile
+# used by wip/xfce4-tumbler/Makefile
 # used by x11/xfce4-utils/Makefile
+# used by wip/xfce4-orage/Makefile
 
 #ASTER_SITES=		http://www.xfce.org/archive/xfce-4.6.1/src/
 MASTER_SITES=		http://archive.xfce.org/src/xfce/${XFCE4_PROJECT}/${XFCE4_BRANCH}/
