@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2011/06/30 21:38:41 reinoudz70 Exp $
+@comment $NetBSD: PLIST,v 1.18 2012/02/19 17:25:57 guigui2 Exp $
 bin/xfdesktop
 bin/xfdesktop-settings
 man/man1/xfdesktop.1
@@ -110,6 +110,7 @@ share/locale/sk/LC_MESSAGES/xfdesktop.mo
 share/locale/sq/LC_MESSAGES/xfdesktop.mo
 share/locale/sv/LC_MESSAGES/xfdesktop.mo
 share/locale/ta/LC_MESSAGES/xfdesktop.mo
+share/locale/te/LC_MESSAGES/xfdesktop.mo
 share/locale/tr/LC_MESSAGES/xfdesktop.mo
 share/locale/ug/LC_MESSAGES/xfdesktop.mo
 share/locale/uk/LC_MESSAGES/xfdesktop.mo
