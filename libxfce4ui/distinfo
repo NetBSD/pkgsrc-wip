@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2011/06/29 10:33:57 reinoudz70 Exp $
+$NetBSD: distinfo,v 1.2 2012/02/19 16:56:01 guigui2 Exp $
 
-SHA1 (libxfce4ui-4.8.0.tar.bz2) = 107f9d8e3e583f3cf5330074e89ea72eb2a82888
-RMD160 (libxfce4ui-4.8.0.tar.bz2) = 60ab88a663b1f1a41967837ecc6630fd0fb2a3a8
-Size (libxfce4ui-4.8.0.tar.bz2) = 434180 bytes
+SHA1 (libxfce4ui-4.8.1.tar.bz2) = 408645581e589135aa03d2e9b84f4eede68596b2
+RMD160 (libxfce4ui-4.8.1.tar.bz2) = c6b235d43ea73a8aed89a0a646e4c5d0340bdfd8
+Size (libxfce4ui-4.8.1.tar.bz2) = 426831 bytes
 SHA1 (patch-aa) = 189dd4ce2c0c1849282a8882b962377dbe416610

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/06/29 19:48:58 reinoudz70 Exp $
+# $NetBSD: Makefile,v 1.3 2012/02/19 16:56:01 guigui2 Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -11,6 +11,7 @@ COMMENT=	Xfce widget library
 
 XFCE4_PROJECT=  libxfce4ui
 XFCE4_BRANCH=   4.8
+XFCE4_VERSION=	4.8.1
 
 PKGCONFIG_OVERRIDE=	libxfce4kbd-private/libxfce4kbd-private-2.pc.in
 PKGCONFIG_OVERRIDE+=	libxfce4ui/libxfce4ui-1.pc.in
