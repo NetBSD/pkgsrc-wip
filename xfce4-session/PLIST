@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2011/06/30 21:13:52 reinoudz70 Exp $
+@comment $NetBSD: PLIST,v 1.8 2012/02/19 17:18:17 guigui2 Exp $
 bin/xfce4-session
 bin/xfce4-session-logout
 bin/xfce4-session-settings
@@ -23,7 +23,9 @@ share/doc/xfce4-session/html/C/images/xfsm-splash.png
 share/doc/xfce4-session/html/C/index.html
 share/doc/xfce4-session/html/da/images
 share/doc/xfce4-session/html/da/index.html
-share/doc/xfce4-session/html/el/images
+share/doc/xfce4-session/html/el/images/xfsm-advanced.png
+share/doc/xfce4-session/html/el/images/xfsm-general.png
+share/doc/xfce4-session/html/el/images/xfsm-splash.png
 share/doc/xfce4-session/html/el/index.html
 share/doc/xfce4-session/html/gl/images
 share/doc/xfce4-session/html/gl/index.html
@@ -35,9 +37,13 @@ share/doc/xfce4-session/html/ru/images
 share/doc/xfce4-session/html/ru/index.html
 share/doc/xfce4-session/html/sv/images
 share/doc/xfce4-session/html/sv/index.html
+share/doc/xfce4-session/html/tr/images
+share/doc/xfce4-session/html/tr/index.html
 share/doc/xfce4-session/html/ug/images
 share/doc/xfce4-session/html/ug/index.html
 share/doc/xfce4-session/html/xfce4-session.css
+share/doc/xfce4-session/html/zh_CN/images
+share/doc/xfce4-session/html/zh_CN/index.html
 share/examples/xfce4/autostart/xfce4-tips-autostart.desktop
 share/examples/xfce4/xfconf/xfce-perchannel-xml/xfce4-session.xml
 share/icons/hicolor/128x128/apps/xfce4-session.png
@@ -106,6 +112,7 @@ share/locale/sk/LC_MESSAGES/xfce4-session.mo
 share/locale/sq/LC_MESSAGES/xfce4-session.mo
 share/locale/sv/LC_MESSAGES/xfce4-session.mo
 share/locale/ta/LC_MESSAGES/xfce4-session.mo
+share/locale/te/LC_MESSAGES/xfce4-session.mo
 share/locale/tr/LC_MESSAGES/xfce4-session.mo
 share/locale/ug/LC_MESSAGES/xfce4-session.mo
 share/locale/uk/LC_MESSAGES/xfce4-session.mo
