@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4658 2012/02/19 14:03:42 thomasklausner Exp $
+# $Id: Makefile,v 1.4659 2012/02/19 20:35:09 guigui2 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -636,6 +636,7 @@ SUBDIR+=	gambas2
 SUBDIR+=	gambc
 SUBDIR+=	gaphor
 SUBDIR+=	gappa
+SUBDIR+=	garcon
 SUBDIR+=	gauche-dbd-pg
 SUBDIR+=	gauche-fastcgi
 SUBDIR+=	gbase
@@ -1396,6 +1397,9 @@ SUBDIR+=	libvc
 SUBDIR+=	libvg
 SUBDIR+=	libwbxml2-patched
 SUBDIR+=	libxc
+SUBDIR+=	libxfce4gui
+SUBDIR+=	libxfce4util
+SUBDIR+=	libxfce4ui
 SUBDIR+=	libyubikey
 SUBDIR+=	libzdb
 SUBDIR+=	libzn-poly
@@ -3071,10 +3075,29 @@ SUBDIR+=	xf86-video-geode
 SUBDIR+=	xf86-video-nouveau
 SUBDIR+=	xf86-video-nv-current
 SUBDIR+=	xf86rushproto
+SUBDIR+=	xfce4-appfinder
+SUBDIR+=	xfce4-desktop
+SUBDIR+=	xfce4-dev-tools
+SUBDIR+=	xfce4-exo
 SUBDIR+=	xfce4-mailwatch-plugin
+SUBDIR+=	xfce4-mixer
 SUBDIR+=	xfce4-mount-plugin
+SUBDIR+=	xfce4-mousepad
+SUBDIR+=	xfce4-orage
+SUBDIR+=	xfce4-panel
 SUBDIR+=	xfce4-radio-plugin
+SUBDIR+=	xfce4-screenshooter-plugin
+SUBDIR+=	xfce4-session
+SUBDIR+=	xfce4-settings
 SUBDIR+=	xfce4-taskmanager
+SUBDIR+=	xfce4-terminal
+SUBDIR+=	xfce4-thunar
+SUBDIR+=	xfce4-thunar-archive
+SUBDIR+=	xfce4-thunar-media-tags
+SUBDIR+=	xfce4-thunar-vcs
+SUBDIR+=	xfce4-utils
+SUBDIR+=	xfce4-wm
+SUBDIR+=	xfconf
 SUBDIR+=	xgfe
 SUBDIR+=	xgobi
 SUBDIR+=	xhkeys1
