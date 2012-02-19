@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2011/07/01 10:41:14 reinoudz70 Exp $
+@comment $NetBSD: PLIST,v 1.14 2012/02/19 17:41:51 guigui2 Exp $
 bin/startxfce4
 bin/xfbrowser4
 bin/xfce4-about
@@ -60,6 +60,13 @@ share/doc/xfce-utils/html/ja/images
 share/doc/xfce-utils/html/ja/index.html
 share/doc/xfce-utils/html/ja/xfce-user-guide.html
 share/doc/xfce-utils/html/ja/xfce-utils.html
+share/doc/xfce-utils/html/ru/BSD.html
+share/doc/xfce-utils/html/ru/GPL.html
+share/doc/xfce-utils/html/ru/LGPL.html
+share/doc/xfce-utils/html/ru/images
+share/doc/xfce-utils/html/ru/index.html
+share/doc/xfce-utils/html/ru/xfce-user-guide.html
+share/doc/xfce-utils/html/ru/xfce-utils.html
 share/doc/xfce-utils/html/sv/BSD.html
 share/doc/xfce-utils/html/sv/GPL.html
 share/doc/xfce-utils/html/sv/LGPL.html
