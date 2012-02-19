@@ -1,0 +1,15 @@
+$NetBSD: patch-WindowMaker_Defaults_Makefile.in,v 1.1.1.1 2012/02/19 19:25:49 khorben Exp $
+
+Install the default configuration into the examples directory.
+
+--- WindowMaker/Defaults/Makefile.in.orig	2012-02-14 19:36:52.000000000 +0000
++++ WindowMaker/Defaults/Makefile.in
+@@ -235,7 +235,7 @@ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+ wprefs_bindir = @wprefs_bindir@
+ wprefs_datadir = @wprefs_datadir@
+-defsdatadir = $(sysconfdir)/WindowMaker
++defsdatadir = $(datadir)/examples/WindowMaker
+ defsdata_DATA = WMRootMenu WMWindowAttributes WindowMaker WMState WMGLOBAL
+ wpexecbindir = @wprefs_bindir@
+ EXTRA_DIST = WMGLOBAL WMWindowAttributes.in WindowMaker.in WMState.in

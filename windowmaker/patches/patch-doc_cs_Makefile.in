@@ -1,0 +1,31 @@
+$NetBSD: patch-doc_cs_Makefile.in,v 1.1.1.1 2012/02/19 19:25:49 khorben Exp $
+
+Install manual pages into section 1.
+
+--- doc/cs/Makefile.in.orig	2012-02-14 19:36:53.000000000 +0000
++++ doc/cs/Makefile.in
+@@ -237,15 +237,15 @@ top_srcdir = @top_srcdir@
+ wprefs_bindir = @wprefs_bindir@
+ wprefs_datadir = @wprefs_datadir@
+ man_MANS = \
+-	geticonset.1x \
+-	setstyle.1x \
+-	wxpaste.1x \
+-	getstyle.1x \
+-	wdwrite.1x \
+-	wmsetbg.1x \
+-	seticons.1x \
+-	wmaker.1x \
+-	wxcopy.1x
++	geticonset.1 \
++	setstyle.1 \
++	wxpaste.1 \
++	getstyle.1 \
++	wdwrite.1 \
++	wmsetbg.1 \
++	seticons.1 \
++	wmaker.1 \
++	wxcopy.1
+ 
+ EXTRA_DIST = $(man_MANS)
+ all: all-am

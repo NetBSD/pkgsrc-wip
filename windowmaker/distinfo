@@ -1,0 +1,14 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/02/19 19:25:49 khorben Exp $
+
+SHA1 (WindowMaker-0.95.2.tar.bz2) = 771eacec9081226df99bf151ecccab226ccf96ec
+RMD160 (WindowMaker-0.95.2.tar.bz2) = 482c38694dd2b6c815a14af387587b2c304915c4
+Size (WindowMaker-0.95.2.tar.bz2) = 2190825 bytes
+SHA1 (patch-WindowMaker_Defaults_Makefile.in) = c651c66647d5bc967eb15ade36f13064d6cdbe63
+SHA1 (patch-doc_Makefile.in) = 79e8bc47cea001941f0e3ce4c2259c8f6369d9d7
+SHA1 (patch-doc_cs_Makefile.in) = b584b0128d78e6a0a2b2de2296da0e024aac8bba
+SHA1 (patch-doc_ru_Makefile.in) = b1702678748dc5802717d511d318c74c0868a137
+SHA1 (patch-doc_sk_Makefile.in) = 4dd246f8a2bb48da57288858886f90ca94e95892
+SHA1 (patch-src_main.c) = efbcbd8cf68294c31f7a6fb29f2aca810660bcb7
+SHA1 (patch-src_switchpanel.c) = 8be0f12e967087b592c3bcbdb6d91b18087632b1
+SHA1 (patch-util_Makefile.in) = 9b50626ca67fd52bbc131ef7838fb758f26eaaae
+SHA1 (patch-wrlib_Makefile.in) = 08e42b5faee509460c86c489c8422f0814ce7557

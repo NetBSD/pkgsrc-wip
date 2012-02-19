@@ -1,0 +1,32 @@
+$NetBSD: patch-util_Makefile.in,v 1.1.1.1 2012/02/19 19:25:49 khorben Exp $
+
+--- util/Makefile.in.orig	2012-02-14 19:36:53.000000000 +0000
++++ util/Makefile.in
+@@ -374,21 +374,21 @@ INCLUDES = $(DFLAGS) -I$(top_srcdir)/WIN
+ 	-DETCDIR=\"sysconfdir\" -DDATADIR=\"pkgdatadir\"
+ 
+ liblist = @LIBRARY_SEARCH_PATH@ @INTLIBS@
+-wdwrite_LDADD = $(top_builddir)/WINGs/libWUtil.la $(liblist)
+-wdread_LDADD = $(top_builddir)/WINGs/libWUtil.la $(liblist)
++wdwrite_LDADD = $(top_builddir)/WINGs/libWUtil.la @XLFLAGS@ @XLIBS@ $(liblist)
++wdread_LDADD = $(top_builddir)/WINGs/libWUtil.la @XLFLAGS@ @XLIBS@ $(liblist)
+ wxcopy_LDADD = @XLFLAGS@ @XLIBS@ 
+ wxpaste_LDADD = @XLFLAGS@ @XLIBS@
+-getstyle_LDADD = $(top_builddir)/WINGs/libWUtil.la $(liblist)
++getstyle_LDADD = $(top_builddir)/WINGs/libWUtil.la @XLFLAGS@ @XLIBS@ $(liblist)
+ getstyle_SOURCES = getstyle.c fontconv.c
+ setstyle_LDADD = \
+ 	$(top_builddir)/WINGs/libWUtil.la \
+ 	@XLFLAGS@ @XLIBS@ $(liblist)
+ 
+ setstyle_SOURCES = setstyle.c fontconv.c
+-convertfonts_LDADD = $(top_builddir)/WINGs/libWUtil.la $(liblist)
++convertfonts_LDADD = $(top_builddir)/WINGs/libWUtil.la @XLFLAGS@ @XLIBS@ $(liblist)
+ convertfonts_SOURCES = convertfonts.c fontconv.c
+-seticons_LDADD = $(top_builddir)/WINGs/libWUtil.la $(liblist)
+-geticonset_LDADD = $(top_builddir)/WINGs/libWUtil.la $(liblist)
++seticons_LDADD = $(top_builddir)/WINGs/libWUtil.la @XLFLAGS@ @XLIBS@ $(liblist)
++geticonset_LDADD = $(top_builddir)/WINGs/libWUtil.la @XLFLAGS@ @XLIBS@ $(liblist)
+ wmagnify_LDADD = \
+ 	$(top_builddir)/WINGs/libWINGs.la \
+ 	$(top_builddir)/WINGs/libWUtil.la \
