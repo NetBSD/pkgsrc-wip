@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4659 2012/02/19 20:35:09 guigui2 Exp $
+# $Id: Makefile,v 1.4660 2012/02/20 16:30:36 christtrekker Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -585,7 +585,6 @@ SUBDIR+=	flexdump
 SUBDIR+=	flimp
 SUBDIR+=	flimsel
 SUBDIR+=	flpsed
-SUBDIR+=	fltk13
 SUBDIR+=	fluxbox
 SUBDIR+=	fluxspace
 SUBDIR+=	flv2mpeg4
