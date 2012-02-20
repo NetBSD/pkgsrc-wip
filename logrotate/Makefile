@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2012/02/20 13:00:03 obache Exp $
+# $NetBSD: Makefile,v 1.22 2012/02/20 13:07:36 obache Exp $
 #
 
 DISTNAME=		logrotate-3.8.1
@@ -14,17 +14,18 @@ COMMENT=		Daemon to rotate, compress, remove and mail system log files
 LICENSE=		gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-.include "../../devel/popt/buildlink3.mk"
 
 USE_TOOLS+=		gmake
 USE_LIBTOOL=		yes
 NO_EXPORT_CPP=		yes
+
 MAKE_ENV+=		BASEDIR=${PREFIX}
 MAKE_ENV+=		INSTALL_PROGRAM=${INSTALL_PROGRAM:Q}
 MAKE_ENV+=		INSTALL_MAN=${INSTALL_MAN:Q}
 
 BUILD_DEFS+=		VARBASE
 BUILD_DEFS+=		PKG_SYSCONFBASE
+
 DOCDIR=			share/doc/logrotate
 TESTDIR=		test
 EXAMPLES_DIR=		examples
@@ -63,4 +64,5 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/logrotate.conf.5 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
 	${INSTALL_MAN} ${WRKSRC}/logrotate.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
 
+.include "../../devel/popt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
