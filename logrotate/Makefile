@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.20 2011/11/29 07:38:05 ahp-nils Exp $
+# $NetBSD: Makefile,v 1.21 2012/02/20 13:00:03 obache Exp $
 #
 
 DISTNAME=		logrotate-3.8.1
 #PKGREVISION=		1
 CATEGORIES=		sysutils
-MASTER_SITES=		${MASTER_SITE_GENTOO:=distfiles/}
+MASTER_SITES=		https://fedorahosted.org/releases/l/o/logrotate/
+MASTER_SITES+=		${MASTER_SITE_GENTOO:=distfiles/}
 MASTER_SITES+=		${MASTER_SITE_FREEBSD:=distfiles/}
 
 MAINTAINER=		ahp-nils@users.sourceforge.net
