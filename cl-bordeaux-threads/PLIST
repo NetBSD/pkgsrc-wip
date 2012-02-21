@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.3 2011/11/29 09:25:11 ddeus Exp $
+@comment $NetBSD: PLIST,v 1.4 2012/02/21 11:53:15 ddeus Exp $
 ${ECL}${CL_PATH}bordeaux-threads.asd
 ${ECL}${CL_PATH}bordeaux-threads.fas
+${ECL}${CL_PATH}libbordeaux-threads.a
 ${CL}${CL_PATH}bordeaux-threads/bordeaux-threads-test.asd
 ${CL}${CL_PATH}bordeaux-threads/bordeaux-threads.asd
 ${CL}${CL_PATH}bordeaux-threads/src/bordeaux-threads.${EXT}

@@ -79,11 +79,14 @@ do-build:
 	    -eval "(quit)" </dev/null )
 .endfor
 	${FIND} ${WRKSRC} -name '*.fasb' -exec ${CP} {} ${WRKSRC}/build/ \;
+	${FIND} ${WRKSRC} -name 'lib*.a' -exec ${CP} {} ${WRKSRC}/build/ \;
 
 do-install:
 .for pkg in ${COMMON_LISP_PACKAGES}
 	${INSTALL_PROGRAM} ${WRKSRC}/build/${pkg}.fasb \
 	    ${DESTDIR}${PREFIX}/${ECL_CENTRAL_REGISTRY}${pkg}.fas
+	${INSTALL_DATA} ${WRKSRC}/build/lib${pkg}.a \
+	    ${DESTDIR}${PREFIX}/${ECL_CENTRAL_REGISTRY}lib${pkg}.a
 	${INSTALL_DATA} ${FILESDIR}/ecl-${pkg:S/^cl-//}.asd \
 	    ${DESTDIR}${PREFIX}/${ECL_CENTRAL_REGISTRY}${pkg}.asd
 .endfor

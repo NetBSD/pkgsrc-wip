@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.3 2011/11/29 09:25:09 ddeus Exp $
+@comment $NetBSD: PLIST,v 1.4 2012/02/21 11:50:53 ddeus Exp $
 ${ECL}${CL_PATH}alexandria.asd
 ${ECL}${CL_PATH}alexandria.fas
+${ECL}${CL_PATH}libalexandria.a
 ${CL}${CL_PATH}alexandria/alexandria-tests.asd
 ${CL}${CL_PATH}alexandria/alexandria.asd
 ${CL}${CL_PATH}alexandria/arrays.${EXT}

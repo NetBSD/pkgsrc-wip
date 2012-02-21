@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.3 2011/11/29 09:25:13 ddeus Exp $
+@comment $NetBSD: PLIST,v 1.4 2012/02/21 11:54:34 ddeus Exp $
 ${ECL}${CL_PATH}cl-fad.asd
 ${ECL}${CL_PATH}cl-fad.fas
+${ECL}${CL_PATH}libcl-fad.a
 ${CL}${CL_PATH}cl-fad/cl-fad.asd
 ${CL}${CL_PATH}cl-fad/cl-fad.system
 ${CL}${CL_PATH}cl-fad/corman.lisp

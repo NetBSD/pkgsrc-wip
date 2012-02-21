@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2011/11/29 09:25:13 ddeus Exp $
+@comment $NetBSD: PLIST,v 1.4 2012/02/21 11:55:32 ddeus Exp $
 ${CL}${CL_PATH}cl-ppcre-unicode/CHANGELOG
 ${CL}${CL_PATH}cl-ppcre-unicode/api.${EXT}
 ${CL}${CL_PATH}cl-ppcre-unicode/api.lisp
@@ -52,3 +52,4 @@ ${CL}${CL_PATH}cl-ppcre-unicode/util.${EXT}
 ${CL}${CL_PATH}cl-ppcre-unicode/util.lisp
 ${ECL}${CL_PATH}cl-ppcre-unicode.asd
 ${ECL}${CL_PATH}cl-ppcre-unicode.fas
+${ECL}${CL_PATH}libcl-ppcre-unicode.a

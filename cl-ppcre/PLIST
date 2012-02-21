@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.3 2011/11/29 09:25:13 ddeus Exp $
+@comment $NetBSD: PLIST,v 1.4 2012/02/21 11:55:13 ddeus Exp $
 ${ECL}${CL_PATH}cl-ppcre.asd
 ${ECL}${CL_PATH}cl-ppcre.fas
+${ECL}${CL_PATH}libcl-ppcre.a
 ${CL}${CL_PATH}cl-ppcre/api.${EXT}
 ${CL}${CL_PATH}cl-ppcre/api.lisp
 ${CL}${CL_PATH}cl-ppcre/charmap.${EXT}

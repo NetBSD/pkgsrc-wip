@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.4 2011/11/29 09:25:13 ddeus Exp $
+@comment $NetBSD: PLIST,v 1.5 2012/02/21 11:57:09 ddeus Exp $
 ${ECL}${CL_PATH}cl-who.asd
 ${ECL}${CL_PATH}cl-who.fas
+${ECL}${CL_PATH}libcl-who.a
 ${CL}${CL_PATH}cl-who/cl-who.asd
 ${CL}${CL_PATH}cl-who/packages.${EXT}
 ${CL}${CL_PATH}cl-who/packages.lisp

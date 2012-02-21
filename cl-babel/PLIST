@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2011/11/29 09:25:11 ddeus Exp $
+@comment $NetBSD: PLIST,v 1.4 2012/02/21 11:52:34 ddeus Exp $
 ${CL}${CL_PATH}babel/src/enc-ascii.${EXT}
 ${CL}${CL_PATH}babel/src/enc-ebcdic.${EXT}
 ${CL}${CL_PATH}babel/src/enc-iso-8859.${EXT}
@@ -46,8 +46,10 @@ ${CL}${CL_PATH}babel/tests/utf-8.txt
 ${CL}${CL_PATH}babel/tests/utf-8.txt-utf8
 ${ECL}${CL_PATH}babel-streams.asd
 ${ECL}${CL_PATH}babel-streams.fas
+${ECL}${CL_PATH}libbabel-streams.a
 ${ECL}${CL_PATH}babel.asd
 ${ECL}${CL_PATH}babel.fas
+${ECL}${CL_PATH}libbabel.a
 share/doc/${LISP}-babel/COPYRIGHT
 share/doc/${LISP}-babel/HEADER
 share/doc/${LISP}-babel/NOTES

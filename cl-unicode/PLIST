@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.3 2011/11/29 09:25:13 ddeus Exp $
+@comment $NetBSD: PLIST,v 1.4 2012/02/21 11:56:48 ddeus Exp $
 ${ECL}${CL_PATH}cl-unicode.asd
 ${ECL}${CL_PATH}cl-unicode.fas
+${ECL}${CL_PATH}libcl-unicode.a
 ${CL}${CL_PATH}cl-unicode/alias.${EXT}
 ${CL}${CL_PATH}cl-unicode/alias.lisp
 ${CL}${CL_PATH}cl-unicode/api.${EXT}
