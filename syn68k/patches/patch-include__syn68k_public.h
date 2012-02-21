@@ -1,6 +1,5 @@
-$NetBSD: patch-ab,v 1.2 2009/11/12 21:10:37 christtrekker Exp $
---- include/syn68k_public.h.orig	Mon Jun 22 23:38:05 2009
-+++ include/syn68k_public.h	Thu Aug 27 09:48:57 2009
+--- syn68k_public.h.orig	2009-12-05 18:36:04.000000000 -0600
++++ syn68k_public.h	2012-02-21 08:52:13.000000000 -0600
 @@ -1,7 +1,12 @@
  #if !defined (_syn68k_public_h_)
  #define _syn68k_public_h_

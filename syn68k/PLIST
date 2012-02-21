@@ -1,1 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/08/26 19:26:01 christtrekker Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/02/21 15:17:05 christtrekker Exp $
+include/syn68k_public.h
+lib/libsyn68k.a
