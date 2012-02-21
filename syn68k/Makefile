@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/02/21 15:17:05 christtrekker Exp $
+# $NetBSD: Makefile,v 1.7 2012/02/21 17:51:21 christtrekker Exp $
 #
 
 DISTNAME=	ctm-syn68k-8821995
@@ -20,6 +20,7 @@ REPLACE_PERL=	runtime/fold.pl runtime/i486-cleanup.pl \
 		runtime/i486-optimize.pl runtime/sched.pl \
 		runtime/x86_recog.pl test/maketestbattery.pl
 GNU_CONFIGURE=	yes
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 SUBST_CLASSES+=	replace_bash_early
 SUBST_STAGE.replace_bash_early=	pre-configure
