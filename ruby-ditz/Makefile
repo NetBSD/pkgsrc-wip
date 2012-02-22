@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/02/22 14:17:49 phonohawk Exp $
+# $NetBSD: Makefile,v 1.5 2012/02/22 14:39:43 phonohawk Exp $
 #
 
 DISTNAME=	ditz-0.5
@@ -19,7 +19,7 @@ WRKSRC=				${WRKDIR}/${GIT_MODULE.ruby19}
 .else
 GIT_REPOSITORIES=	mainline
 GIT_REPO.mainline=	git://gitorious.org/ditz/mainline.git
-WRKSRC=				${WRKDIR}/${GIT_REPO.mainline}
+WRKSRC=				${WRKDIR}/${GIT_MODULE.mainline}
 .endif
 
 GEM_SPECFILE=	${WRKSRC}/ditz.gemspec
