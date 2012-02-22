@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/04/14 09:06:55 bartoszkuzma Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/02/22 21:38:56 bartoszkuzma Exp $
 include/libee/apache.h
 include/libee/ctx.h
 include/libee/event.h
@@ -22,4 +22,4 @@ include/libee/value.h
 include/libee/valuetype.h
 lib/libee.la
 lib/pkgconfig/libee.pc
-sbin/convert
+sbin/libee-convert
