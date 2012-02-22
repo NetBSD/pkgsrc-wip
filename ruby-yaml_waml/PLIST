@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/02/22 13:43:00 phonohawk Exp $
+${GEM_HOME}/cache/${GEM_NAME}.gem
+${GEM_LIBDIR}/.document
+${GEM_LIBDIR}/.gitignore
+${GEM_LIBDIR}/History.txt
+${GEM_LIBDIR}/MIT-LICENSE
+${GEM_LIBDIR}/README.rdoc
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/VERSION
+${GEM_LIBDIR}/benchmark/huge_yaml_dump.rb
+${GEM_LIBDIR}/init.rb
+${GEM_LIBDIR}/install.rb
+${GEM_LIBDIR}/lib/yaml_waml.rb
+${GEM_LIBDIR}/spec/spec_helper.rb
+${GEM_LIBDIR}/spec/to_yaml_spec.rb
+${GEM_LIBDIR}/tasks/yaml_waml_tasks.rake
+${GEM_LIBDIR}/yaml_waml.gemspec
+${GEM_HOME}/specifications/${GEM_NAME}.gemspec
