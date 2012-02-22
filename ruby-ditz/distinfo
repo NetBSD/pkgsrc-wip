@@ -1,6 +1,1 @@
-$NetBSD: distinfo,v 1.2 2011/05/12 04:42:02 phonohawk Exp $
-
-SHA1 (ditz-0.5.gem) = 9b9d8b082262be0b3a8705142f5203b028a5957d
-RMD160 (ditz-0.5.gem) = 1094bbfdf1378030ddbdc7d3058ba57e49a43809
-Size (ditz-0.5.gem) = 78848 bytes
-SHA1 (patch-bin_ditz) = 2e1385324fd91b1188f147adaf96dc30e76b3f4a
+$NetBSD: distinfo,v 1.3 2012/02/22 14:17:49 phonohawk Exp $
