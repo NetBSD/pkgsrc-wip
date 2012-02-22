@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4660 2012/02/20 16:30:36 christtrekker Exp $
+# $Id: Makefile,v 1.4661 2012/02/22 13:44:27 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2647,6 +2647,7 @@ SUBDIR+=	ruby-git
 SUBDIR+=	ruby-teamocil
 SUBDIR+=	ruby-term-ansicolor
 SUBDIR+=	ruby-trollop
+SUBDIR+=	ruby-yaml_waml
 SUBDIR+=	ruby-xmpp4r
 SUBDIR+=	runit
 SUBDIR+=	s3cmd
