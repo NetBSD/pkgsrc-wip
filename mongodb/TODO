@@ -1,0 +1,6 @@
+Add ssl support. As option?
+Change /data/db to VARBASE/mongodb or any user setting variable.
+Provide rc.d script.
+Create mongodb user
+Shared client library?
+Separate client and server packages?

@@ -1,48 +1,49 @@
-# $NetBSD: Makefile,v 1.4 2011/10/02 14:40:01 thomasklausner Exp $
-DISTNAME=	mongodb-src-r1.6.5
+# $NetBSD: Makefile,v 1.5 2012/02/22 11:36:26 bartoszkuzma Exp $
+
+DISTNAME=	mongodb-src-r2.0.2
 PKGNAME=	${DISTNAME:S/src-r//}
-CATEGORIES=	database
+CATEGORIES=	databases
 MASTER_SITES=	http://downloads.mongodb.org/src
 
-MAINTAINER=	ober@netbsd.org
+MAINTAINER=	bartosz.kuzma@gmail.com
 HOMEPAGE=	http://mongodb.org/
-COMMENT=	A NOSQL distributed document-oriented database
-EXTRACT_SUFX=	.tar.gz
-
+COMMENT=	NOSQL distributed document-oriented database
+LICENSE=	gnu-agpl-v3 # Client and tools licensed under apache-2.0
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-.include "../../mk/bsd.prefs.mk"
-
 NO_CONFIGURE=	yes
-NO_BUILD=	yes
-#USE_TOOLS+= 	perl
-USE_LANGUAGES+=	c c++
-DESTDIR=${LOCALBASE}
 
-DEPENDS+=       boost-build:../../devel/boost-build
-DEPENDS+=       boost-docs:../../devel/boost-docs
-DEPENDS+=       boost-headers:../../devel/boost-headers
-DEPENDS+=       boost-jam:../../devel/boost-jam
-DEPENDS+=       boost-libs:../../devel/boost-libs
-DEPENDS+=       boost-python:../../devel/boost-python
-DEPENDS+=       pcre:../../devel/pcre
-DEPENDS+=       libexecinfo:../../wip/libexecinfo
-DEPENDS+=       spidermonkey:../../lang/spidermonkey
+BUILD_DEPENDS+=	scons:../../devel/scons
 
-SCONS_BIN=			${PREFIX}/bin/scons
-SCONS_ARGS= "--prefix=/usr/pkg"
-SCONS_INSTALL_TARGET= "install"
-SCONS_TARGET=	all
-SCONS_ARGS= 	--prefix=${PREFIX}
-SCONS_ARGS+=	--full
-SCONS_ARGS+= 	--libpath=${LIBPATH}
+SCONS_BIN=	${PREFIX}/bin/scons
+SCONS_ARGS=	${_MAKE_JOBS}
+SCONS_ARGS+=	--use-system-all
+
+# XXX No better idea how to pass CXXFLAGS and LDFLAGS to scons
+SUBST_CLASSES+=		scons
+SUBST_STAGE.scons=	post-patch
+SUBST_FILES.scons=	SConstruct
+SUBST_SED.scons=	-e "s|%PREFIX%|${PREFIX}|g"
+SUBST_SED.scons+=	-e "s|%CXXFLAGS%|${CXXFLAGS}|g"
+SUBST_SED.scons+=	-e "s|%LINKFLAGS%|${LDFLAGS}|g"
+
+INSTALLATION_DIRS=	share/doc/mongodb
 
 do-build:
-	cd ${WRKSRC} && ${SETENV} ${SCONS_BUILDENV} ${SCONS_BIN} ${SCONS_ENV} ${SCONS_ARGS} ${SCONS_TARGET}
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${SCONS_BIN} ${SCONS_ARGS} all
 
 do-install:
-	cd ${WRKSRC} && ${SETENV} ${SCONS_BUILDENV} ${SCONS_BIN} ${SCONS_ENV} ${SCONS_ARGS} ${SCONS_TARGET} ${SCONS_INSTALL_TARGET}
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${SCONS_BIN} \
+		${SCONS_ARGS} --full --prefix ${DESTDIR}${PREFIX} install
 
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/mongodb
+
+.include "../../devel/boost-headers/buildlink3.mk"
+.include "../../devel/boost-libs/buildlink3.mk"
+.include "../../devel/boost-python/buildlink3.mk"
+.include "../../devel/pcre/buildlink3.mk"
+.include "../../lang/spidermonkey/buildlink3.mk"
+.include "../../net/libpcap/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
-
