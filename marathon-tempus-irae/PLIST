@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/02/16 15:20:19 christtrekker Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/02/22 20:24:47 christtrekker Exp $
 share/AlephOne/Scenarios/TempusIrae/Fonts
 share/AlephOne/Scenarios/TempusIrae/Images.imgA
 share/AlephOne/Scenarios/TempusIrae/Map - The Lost Levels.sceA
@@ -378,6 +378,3 @@ share/doc/marathon-tempus-irae/Read Me First.txt
 share/doc/marathon-tempus-irae/Shots Fired Read Me.txt
 share/doc/marathon-tempus-irae/Tempus_Irae_Read_Me.pdf
 share/doc/marathon-tempus-irae/The_Lost_Levels_Read_Me.pdf
-@pkgdir share/AlephOne/Scenarios/TempusIrae/docs
-@pkgdir share/AlephOne/Scenarios/TempusIrae/Tracks
-@pkgdir share/AlephOne/Scenarios/TempusIrae/Extras

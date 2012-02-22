@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/02/16 15:20:19 christtrekker Exp $
+# $NetBSD: Makefile,v 1.2 2012/02/22 20:24:47 christtrekker Exp $
 
 DISTNAME=	marathon-tempus-irae-20060613
 CATEGORIES=	games
@@ -10,7 +10,7 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	christtrekker@users.sourceforge.net
 HOMEPAGE=	http://nardo.bungie.org/
 COMMENT=	Game data for Tempus Irae scenario, playable with Aleph One
-LICENSE=	cc-by-nc-nd-v3.0
+LICENSE=	cc-by-nc-nd-v2.5-license
 
 # There is no true dependency on Aleph One.  These scenarios cannot be
 # played without it, though.
@@ -18,14 +18,16 @@ LICENSE=	cc-by-nc-nd-v3.0
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-SCENARIO_BASE=		share/AlephOne/Scenarios
-INSTALLATION_DIRS=	${SCENARIO_BASE}/TempusIrae ${SCENARIO_BASE}/TempusIrae/docs ${SCENARIO_BASE}/TempusIrae/Extras ${SCENARIO_BASE}/TempusIrae/Scripts ${SCENARIO_BASE}/TempusIrae/tex ${SCENARIO_BASE}/TempusIrae/Themes ${SCENARIO_BASE}/TempusIrae/Tracks
+.include "../../games/alephone/scenario.mk"
+INSTALLATION_DIRS=	${SCENARIO_BASE}/TempusIrae ${SCENARIO_BASE}/TempusIrae/Scripts ${SCENARIO_BASE}/TempusIrae/tex ${SCENARIO_BASE}/TempusIrae/Themes
 INSTALLATION_DIRS+=	share/doc/${PKGBASE}
 
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
 post-extract:
+	# .orig files are kept in order to satisfy even a rigorous
+	# interpretation of the "ND" part of the license
 	${MV} ${WRKDIR}/Tempus_Irae/tex/landscapes ${WRKDIR}/Tempus_Irae/tex/landscapes.orig
 	${MV} ${WRKDIR}/Tempus_Irae/Scripts/TempusLandscapes.mml ${WRKDIR}/Tempus_Irae/Scripts/TempusLandscapes.mml.orig
 	${MV} ${WRKDIR}/Tempus_Irae/Scripts/Transparent_Sprites.mml ${WRKDIR}/Tempus_Irae/Scripts/Transparent_Sprites.mml.orig
