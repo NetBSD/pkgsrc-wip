@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2010/11/13 00:03:44 cheusov Exp $
+# $NetBSD: Makefile,v 1.3 2012/02/22 13:47:41 phonohawk Exp $
 #
 
 DISTNAME=	trollop-1.15
-PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
