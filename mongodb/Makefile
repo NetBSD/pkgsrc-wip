@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/02/22 11:36:26 bartoszkuzma Exp $
+# $NetBSD: Makefile,v 1.6 2012/02/23 19:11:40 bartoszkuzma Exp $
 
 DISTNAME=	mongodb-src-r2.0.2
 PKGNAME=	${DISTNAME:S/src-r//}
@@ -20,6 +20,27 @@ SCONS_BIN=	${PREFIX}/bin/scons
 SCONS_ARGS=	${_MAKE_JOBS}
 SCONS_ARGS+=	--use-system-all
 
+.include "options.mk"
+
+BUILD_DEFS+=		VARBASE
+BUILD_DEFS+=		MONGODB_DBPATH
+
+MONGODB_USER?=		mongodb
+MONGODB_GROUP?=		mongodb
+MONGODB_DBPATH?=	${VARBASE}/mongodb
+
+PKG_USERS_VARS+=	MONGODB_USER
+PKG_GROUPS_VARS+=	MONGODB_GROUP
+
+PKG_GROUPS=		${MONGODB_GROUP}
+PKG_USERS=		${MONGODB_USER}:${MONGODB_GROUP}
+
+PKG_GECOS.${MONGODB_USER}=	MongoDB database administrator
+PKG_HOME.${MONGODB_USER}=	${MONGODB_DBPATH}
+PKG_SHELL.${MONGODB_USER}=	${SH}
+
+OWN_DIRS_PERMS+=	${MONGODB_DBPATH} ${MONGODB_USER} ${MONGODB_GROUP} 0755
+
 # XXX No better idea how to pass CXXFLAGS and LDFLAGS to scons
 SUBST_CLASSES+=		scons
 SUBST_STAGE.scons=	post-patch
@@ -27,6 +48,11 @@ SUBST_FILES.scons=	SConstruct
 SUBST_SED.scons=	-e "s|%PREFIX%|${PREFIX}|g"
 SUBST_SED.scons+=	-e "s|%CXXFLAGS%|${CXXFLAGS}|g"
 SUBST_SED.scons+=	-e "s|%LINKFLAGS%|${LDFLAGS}|g"
+
+SUBST_CLASSES+=		dbpath
+SUBST_STAGE.dbpath=	post-patch
+SUBST_FILES.dbpath=	db/db.cpp db/flushtest.cpp db/pdfile.cpp
+SUBST_SED.dbpath=	-e "s|/data/db|${MONGODB_DBPATH}|g"
 
 INSTALLATION_DIRS=	share/doc/mongodb
 
