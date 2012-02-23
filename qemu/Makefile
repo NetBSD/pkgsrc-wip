@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2011/12/11 04:14:46 ryo-on Exp $
+# $NetBSD: Makefile,v 1.7 2012/02/23 13:43:15 ryo-on Exp $
 
-DISTNAME=		qemu-1.0
+DISTNAME=		qemu-1.0.1
 CATEGORIES=		emulators
 MASTER_SITES=		http://wiki.qemu.org/download/
 
