@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/02/15 19:25:38 keckhardt Exp $
+# $NetBSD: Makefile,v 1.9 2012/02/24 17:35:21 thomasklausner Exp $
 
 GCC_VERSION=		4.7
 DISTNAME=		gcc-${GCC_VERSION}-20120211
@@ -10,7 +10,7 @@ SITES.gcc-4.7-20120211.tar.bz2= \
 
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		kuehro@gmx.de
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://gcc.gnu.org/
 COMMENT=		GNU Compiler Collection 4.7
 LICENSE=		gnu-gpl-v2 AND gnu-gpl-v3 AND gnu-lgpl-v2 AND gnu-lgpl-v3
