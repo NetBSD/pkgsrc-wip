@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/02/24 07:47:51 bartoszkuzma Exp $
+# $NetBSD: Makefile,v 1.8 2012/02/24 12:40:55 bartoszkuzma Exp $
 
 DISTNAME=	mongodb-src-r2.0.2
 PKGNAME=	${DISTNAME:S/src-r//}
@@ -41,6 +41,10 @@ PKG_SHELL.${MONGODB_USER}=	${SH}
 
 OWN_DIRS_PERMS+=	${MONGODB_DBPATH} ${MONGODB_USER} ${MONGODB_GROUP} 0755
 
+FILES_SUBST+=		MONGODB_USER=${MONGODB_USER}
+FILES_SUBST+=		MONGODB_GROUP=${MONGODB_GROUP}
+FILES_SUBST+=		MONGODB_DBPATH=${MONGODB_DBPATH}
+
 # XXX No better idea how to pass CXXFLAGS and LDFLAGS to scons
 SUBST_CLASSES+=		scons
 SUBST_STAGE.scons=	post-patch
@@ -53,6 +57,8 @@ SUBST_CLASSES+=		dbpath
 SUBST_STAGE.dbpath=	post-patch
 SUBST_FILES.dbpath=	db/db.cpp db/flushtest.cpp db/pdfile.cpp
 SUBST_SED.dbpath=	-e "s|/data/db|${MONGODB_DBPATH}|g"
+
+RCD_SCRIPTS=		mongodb
 
 INSTALLATION_DIRS=	share/doc/mongodb
 

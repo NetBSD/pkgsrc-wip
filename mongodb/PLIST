@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2012/02/22 11:36:26 bartoszkuzma Exp $
+@comment $NetBSD: PLIST,v 1.4 2012/02/24 12:40:55 bartoszkuzma Exp $
 bin/bsondump
 bin/mongo
 bin/mongod
@@ -12,6 +12,7 @@ bin/mongosniff
 bin/mongostat
 bin/mongotop
 share/doc/mongodb/README
+share/examples/rc.d/mongodb
 include/mongo/bson/bson-inl.h
 include/mongo/bson/bson.h
 include/mongo/bson/bson_db.h
