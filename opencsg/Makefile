@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2012/02/24 17:51:31 reinoudz70 Exp $
+# $NetBSD: Makefile,v 1.2 2012/02/24 21:17:45 reinoudz70 Exp $
 #
 
+PKGNAME=	opencsg-1.3.2
 DISTNAME=	OpenCSG-1.3.2
 CATEGORIES=	wip
 MASTER_SITES=	http://www.opencsg.org/
