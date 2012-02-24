@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4663 2012/02/24 15:15:31 asau Exp $
+# $Id: Makefile,v 1.4664 2012/02/24 17:51:31 reinoudz70 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1721,6 +1721,7 @@ SUBDIR+=	openca
 SUBDIR+=	opencascade
 SUBDIR+=	opencobol
 SUBDIR+=	openconnect
+SUBDIR+=	opencsg
 SUBDIR+=	opendchub
 SUBDIR+=	opendesktop-fonts
 SUBDIR+=	opendnssec
