@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/02/23 19:11:40 bartoszkuzma Exp $
+# $NetBSD: Makefile,v 1.7 2012/02/24 07:47:51 bartoszkuzma Exp $
 
 DISTNAME=	mongodb-src-r2.0.2
 PKGNAME=	${DISTNAME:S/src-r//}
@@ -23,7 +23,7 @@ SCONS_ARGS+=	--use-system-all
 .include "options.mk"
 
 BUILD_DEFS+=		VARBASE
-BUILD_DEFS+=		MONGODB_DBPATH
+BUILD_DEFS+=		MONGODB_USER MONGODB_GROUP MONGODB_DBPATH
 
 MONGODB_USER?=		mongodb
 MONGODB_GROUP?=		mongodb
