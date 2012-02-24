@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.5 2007/09/04 17:00:46 ghen Exp $
-
-SHA1 (opera-9.50-20070903.1-static-qt.i386.freebsd-1567.tar.bz2) = ea85c7b5e44f146e770e35fa260f061751449c48
-RMD160 (opera-9.50-20070903.1-static-qt.i386.freebsd-1567.tar.bz2) = 4d4a0b0157bd6e43a78a2beec77b3ac30caaeb9b
-Size (opera-9.50-20070903.1-static-qt.i386.freebsd-1567.tar.bz2) = 7464480 bytes
-SHA1 (opera-9.50-20070903.10-static-qt.i386.rpm) = 7fe891dfac20a0b13bbe3b7bfedbf34efdeb7876
-RMD160 (opera-9.50-20070903.10-static-qt.i386.rpm) = 94a9c6934311d3ed62bbd3041d4c5d8887f52846
-Size (opera-9.50-20070903.10-static-qt.i386.rpm) = 7908986 bytes
