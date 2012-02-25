@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/12/30 01:13:23 othyro Exp $
+# $NetBSD: Makefile,v 1.4 2012/02/25 19:05:19 thomasklausner Exp $
 #
 
 DISTNAME=	ucommon-5.0.7
@@ -21,7 +21,6 @@ CMAKE_ARGS=	-DINSTALL_MANDIR=${PKGMANDIR}
 
 PKGCONFIG_OVERRIDE+=	commoncpp.pc.in
 PKGCONFIG_OVERRIDE+=	ucommon.pc.in
-
 
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../wip/commoncpp2/buildlink3.mk"
