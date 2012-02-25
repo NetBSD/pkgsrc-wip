@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2011/04/03 02:48:41 ishit Exp $
+# $NetBSD: Makefile,v 1.11 2012/02/25 19:02:44 ishit Exp $
 
-DISTNAME=	mathopd-1.5p6
+DISTNAME=	mathopd-1.5p8
 CATEGORIES=	www
 MASTER_SITES=	http://www.mathopd.org/dist/
 
@@ -9,27 +9,37 @@ HOMEPAGE=	http://www.mathopd.org/
 COMMENT=	Very small, yet very fast HTTP server
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-
 .include "../../mk/bsd.prefs.mk"
 
-BUILD_DEFS=	VARBASE MATHOPD_USER MATHOPD_GROUP
+WRKSRC=		${WRKDIR}/${DISTNAME}/src
 
 MATHOPD_USER?=		mathopd
 MATHOPD_GROUP?=		mathopd
+MATHOPD_DOCDIR?=	${PREFIX}/share/doc/mathopd
+MATHOPD_LOGDIR?=	${VARBASE}/log/mathopd
+MATHOPD_PIDDIR?=	${VARBASE}/run
+
+BUILD_DEFS=	VARBASE MATHOPD_DOCDIR MATHOPD_LOGDIR MATHOPD_PIDDIR
+
 PKG_USERS_VARS+=	MATHOPD_USER
 PKG_GROUPS_VARS+=	MATHOPD_GROUP
+PKG_GROUPS=		${MATHOPD_GROUP}
+PKG_USERS=		${MATHOPD_USER}:${MATHOPD_GROUP}
 
-WRKSRC=		${WRKDIR}/${DISTNAME}/src
+PKG_GECOS.${MATHOPD_USER}=mathopd server user
+#PKG_HOME.${MATHOPD_USER}=
+PKG_SHELL.${MATHOPD_USER}=${NOLOGIN}
+
+USE_PKGLOCALEDIR=	yes
+
 EGDIR=		${PREFIX}/share/examples/mathopd
-DOCDIR=		${PREFIX}/share/doc/mathopd
 CONF_FILES=	${EGDIR}/mathopd.conf ${PKG_SYSCONFDIR}/mathopd.conf
 RCD_SCRIPTS=	mathopd
 
-MAKE_DIRS=		${VARBASE}/log/mathopd
-OWN_DIRS_PERMS+=	${VARBASE}/log/mathopd ${MATHOPD_USER} ${MATHOPD_GROUP} 0755
-
-PKG_GROUPS=	${MATHOPD_GROUP}
-PKG_USERS=	${MATHOPD_USER}:${MATHOPD_GROUP}::mathopd\ user
+INSTALLATION_DIRS=	sbin share/examples/mathopd share/doc/mathopd
+MAKE_DIRS+=		${MATHOPD_PIDDIR}
+OWN_DIRS=		${MATHOPD_LOGDIR}
+#OWN_DIRS_PERMS+=	${MATHOPD_LOGDIR} ${MATHOPD_USER} ${MATHOPD_GROUP} 0755
 
 DOCS=	CHANGES cgi.txt config.txt running.txt sample.cfg syntax.txt
 
@@ -39,10 +49,10 @@ SUBST_MESSAGE.fix-paths=	Fixing absolute paths.
 SUBST_FILES.fix-paths=		Makefile
 SUBST_FILES.fix-paths+=		../doc/sample.cfg
 SUBST_SED.fix-paths=		-e 's,/usr/local,${PREFIX},g'
-SUBST_SED.fix-paths+=		-e 's,/var/mathopd/pid,${VARBASE}/run/mathopd.pid,g'
-SUBST_SED.fix-paths+=		-e 's,/var/mathopd/log,${VARBASE}/log/mathopd/access_log,g'
-SUBST_SED.fix-paths+=		-e 's,/var/mathopd/errorlog,${VARBASE}/log/mathopd/error_log,g'
-SUBST_SED.fix-paths+=		-e 's,/var/mathopd/childlog,${VARBASE}/log/mathopd/child_log,g'
+SUBST_SED.fix-paths+=		-e 's,/var/mathopd/pid,${MATHOPD_PIDDIR}/mathopd.pid,g'
+SUBST_SED.fix-paths+=		-e 's,/var/mathopd/log,${MATHOPD_LOGDIR}/mathopd/access_log,g'
+SUBST_SED.fix-paths+=		-e 's,/var/mathopd/errorlog,${MATHOPD_LOGDIR}/mathopd/error_log,g'
+SUBST_SED.fix-paths+=		-e 's,/var/mathopd/childlog,${MATHOPD_LOGDIR}/mathopd/child_log,g'
 SUBST_SED.fix-paths+=		-e 's,/home/boland/\*,${PREFIX}/share/httpd/htdocs/\*,g'
 SUBST_SED.fix-paths+=		-e 's,/home/boland/cgi-bin,${PREFIX}/libexec/cgi-bin,g'
 
@@ -58,7 +68,7 @@ CPPFLAGS+=	-D_FILE_OFFSET_BITS=64
 EXTRA_OBJS+=	sendfile.o
 .endif
 
-.if ${OPSYS} == "FreeBSD"
+.if ${OPSYS} == "FreeBSD" || ${OPSYS} == "DragonFly"
 BUILD_DEFS+=	EXTRA_OBJS
 CPPFLAGS+=	-DFREEBSD_SENDFILE
 EXTRA_OBJS+=	sendfile.o
@@ -77,20 +87,21 @@ pre-configure:
 	> ${WRKSRC}/Makefile
 .endif
 
-pre-install:
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA_DIR} ${DOCDIR}
+#pre-install:
+#	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
+#	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
 
 post-install:
-	${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/doc/sample.cfg ${EGDIR}/mathopd.conf
+	${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/doc/sample.cfg ${DESTDIR}${EGDIR}/mathopd.conf
+	#${MV} ${DESTDIR}${EGDIR}/sample.cfg ${DESTDIR}${EGDIR}
 
-	${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/COPYING ${DOCDIR}
-	${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/README  ${DOCDIR}
+	${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/COPYING ${DESTDIR}${MATHOPD_DOCDIR}
+	${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/README  ${DESTDIR}${MATHOPD_DOCDIR}
 	for df in ${DOCS}; do	\
-		${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/doc/$${df}  ${DOCDIR};	\
+		${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/doc/$${df} ${DESTDIR}${MATHOPD_DOCDIR};	\
 	done
 
-	${TOUCH} ${VARBASE}/run/mathopd.pid
-	${CHOWN} ${MATHOPD_USER}:${MATHOPD_GROUP} ${VARBASE}/run/mathopd.pid
+#	${TOUCH} ${DESTDIR}${VARBASE}/run/mathopd.pid
+#	${CHOWN} ${MATHOPD_USER}:${MATHOPD_GROUP} ${DESTDIR}${MATHOPD_PIDDIR}/mathopd.pid
 
 .include "../../mk/bsd.pkg.mk"
