@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.3 2012/02/26 01:42:15 bubuchka Exp $
+$NetBSD: distinfo,v 1.4 2012/02/26 01:47:20 bubuchka Exp $
 
 SHA1 (kicad_sources-2012-01-19-BZR3256-stable.zip) = 9dba9ddc7ec9064a72359ec6fe4f8e0b2a5319ab
 RMD160 (kicad_sources-2012-01-19-BZR3256-stable.zip) = 8fd542a9eb16c3bbbdf33edf5bf81c2cfaf76443
 Size (kicad_sources-2012-01-19-BZR3256-stable.zip) = 14010518 bytes
 SHA1 (patch-CMakeLists.txt) = a3a91c4629a64815adf7c10724902163947482bb
-SHA1 (patch-CMakeModules_config.h.cmake) = 993abc24375dc3305e2194454e5e63bbdd62304c
+SHA1 (patch-CMakeModules_config.h.cmake) = e4e2e96f9923a73d60e0141a1f1de3a7c4dffed7
 SHA1 (patch-common-edaappl.cpp) = fa12458026cedc5a94ab661805f7994b0c14ab48
 SHA1 (patch-include-kicad_string.h) = 8165630c230a361567472fbce911e383512c944f
