@@ -1,31 +1,46 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/06/11 12:56:32 jathis Exp $
+# $NetBSD: Makefile,v 1.2 2012/02/26 01:21:00 bubuchka Exp $
 #
 
-V=	2010-05-05
-S=	BZR2356-stable
-DISTNAME=	kicad-sources-${V}-${S}
-PKGNAME= kicad-${V:S/-//g}
+V=		2012-01-19
+S=		BZR3256-stable
+DISTNAME=	kicad_sources-${V}-${S}
+PKGNAME=	kicad-${V:S/-//g}
 CATEGORIES=	cad
 MASTER_SITES=	ftp://iut-tice.ujf-grenoble.fr/cao/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	jonathan.gabris@gmail.com
-HOMEPAGE=	ftp://iut-tice.ujf-grenoble.fr/cao/
+HOMEPAGE=	http://iut-tice.ujf-grenoble.fr/kicad/
 COMMENT=	Schematic and PCB CAD software
 LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-WRKSRC=			${WRKDIR}/kicad-sources-${V}-${S:S/-stable//}
+WRKSRC=			${WRKDIR}/KiCad_sources
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
-USE_CMAKE=	yes
+USE_CMAKE=		yes
 
-.include "../../x11/wxGTK28/buildlink3.mk"
-.include "../../devel/cmake/buildlink3.mk"
+CMAKE_ARGS+=		-DKICAD_STABLE_VERSION=ON
+CMAKE_ARGS+=		-DCMAKE_BUILD_TYPE=Release
+
+SUBST_CLASSES+=		macosx
+SUBST_STAGE.macosx=	pre-configure
+SUBST_MESSAGE.macosx=	Eliminating Mac OS X build specific for ${PKGNAME}
+SUBST_FILES.macosx=	bitmap2component/CMakeLists.txt			\
+			eeschema/CMakeLists.txt				\
+			cvpcb/CMakeLists.txt				\
+			gerbview/CMakeLists.txt				\
+			kicad/CMakeLists.txt				\
+			pcb_calculator/CMakeLists.txt			\
+			pcbnew/CMakeLists.txt
+SUBST_SED.macosx=	-e 's/[[:<:]]MACOSX_BUNDLE[[:>:]]//'
+
 .include "../../devel/boost-libs/buildlink3.mk"
+.include "../../devel/cmake/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/Mesa/buildlink3.mk"
-
+.include "../../x11/wxGTK28/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/bsd.pkg.mk"
