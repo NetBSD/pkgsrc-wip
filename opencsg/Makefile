@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/02/24 21:17:45 reinoudz70 Exp $
+# $NetBSD: Makefile,v 1.3 2012/02/26 19:55:46 reinoudz70 Exp $
 #
 
 PKGNAME=	opencsg-1.3.2
@@ -24,4 +24,6 @@ do-install:
 
 .include "../../mk/x11.buildlink3.mk"
 .include "../../graphics/glew/buildlink3.mk"
+.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../x11/libXmu/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
