@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2012/01/23 00:30:35 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/02/27 09:02:03 mwdavies Exp $
 bin/genkdmconf
 bin/kaccess
 bin/kapplymousetheme
@@ -29,7 +29,7 @@ bin/ksysguard
 bin/ksysguardd
 bin/ksystraycmd
 bin/kwin
-bin/kwrited
+${PLIST.noutempter}bin/kwrited
 bin/oxygen-demo
 bin/oxygen-settings
 bin/oxygen-shadow-demo
@@ -219,6 +219,7 @@ lib/kde4/kded_freespacenotifier.so
 lib/kde4/kded_kephal.so
 lib/kde4/kded_keyboard.so
 lib/kde4/kded_khotkeys.so
+${PLIST.utempter}lib/kde4/kded_kwrited.so
 lib/kde4/kded_powerdevil.so
 lib/kde4/kded_randrmonitor.so
 lib/kde4/kded_statusnotifierwatcher.so
@@ -1559,7 +1560,7 @@ share/kde/apps/systemsettings/systemsettings.kcfg
 share/kde/apps/systemsettings/systemsettingsui.rc
 share/kde/autostart/klipper.desktop
 share/kde/autostart/krunner.desktop
-share/kde/autostart/kwrited-autostart.desktop
+${PLIST.noutempter}share/kde/autostart/kwrited-autostart.desktop
 share/kde/autostart/plasma-desktop.desktop
 share/kde/autostart/plasma.desktop
 share/kde/config.kcfg/freespacenotifier.kcfg
@@ -1631,6 +1632,7 @@ share/kde4/services/kded/freespacenotifier.desktop
 share/kde4/services/kded/kephal.desktop
 share/kde4/services/kded/keyboard.desktop
 share/kde4/services/kded/khotkeys.desktop
+${PLIST.utempter}share/kde4/services/kded/kwrited.desktop
 share/kde4/services/kded/powerdevil.desktop
 share/kde4/services/kded/randrmonitor.desktop
 share/kde4/services/kded/statusnotifierwatcher.desktop

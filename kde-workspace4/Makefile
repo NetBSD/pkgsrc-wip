@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/01/23 00:30:35 mwdavies Exp $
+# $NetBSD: Makefile,v 1.2 2012/02/27 09:02:03 mwdavies Exp $
 
 DISTNAME=	kde-workspace-${_KDE_VERSION}
 PKGNAME=	${DISTNAME:S/-4/4-4/}
@@ -55,8 +55,15 @@ PY_PATCHPLIST=	yes
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
 
+PLIST_VARS+=	utempter noutempter
+.if ${OPSYS} == "Linux"
+PLIST.utempter=		yes
+.else
+PLIST.noutempter=	yes
+.endif
+
 SUBST_CLASSES+=		paths
-SUBST_FILES.paths=	kcontrol/kdm/main.cpp
+SUBST_FILES.paths=	kdm/kcm/main.cpp
 SUBST_SED.paths=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
 SUBST_STAGE.paths=	post-patch
 

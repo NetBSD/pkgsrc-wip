@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2012/01/23 18:55:57 mwdavies Exp $
+$NetBSD: distinfo,v 1.3 2012/02/27 09:02:03 mwdavies Exp $
 
 SHA1 (Daemon.README) = eb1e6af52adc02ded77af17e8953134b7e60d23b
 RMD160 (Daemon.README) = 39edd92ed4314397080f32a8caff0ac3f716ecf4
@@ -26,4 +26,5 @@ SHA1 (patch-libs_ksysguard_processcore_CMakeLists.txt) = 61b886388aa5d0831581eac
 SHA1 (patch-libs_ksysguard_processcore_processes.cpp) = 8bfcc8b7e91eafd6b444f4103d3860fb6434a535
 SHA1 (patch-mkpamserv) = 736fc439a34298f51c9fb09200b9dc8628eabc43
 SHA1 (patch-plasma_generic_applets_digital-clock_clock.cpp) = 75f8a7baf99151232e4f29c71da51be61efc6c4a
+SHA1 (patch-plasma_generic_dataengines_rss_CMakeLists.txt) = 6a12cb3cb54a8b1899f29e7f50a1171862dce66e
 SHA1 (patch-startkde.cmake) = 415b06854b02d8dd0e2807d9c02a5cc754b59540
