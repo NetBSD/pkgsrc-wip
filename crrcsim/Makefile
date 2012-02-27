@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.5 2012/02/27 14:26:25 hfath Exp $
+# $NetBSD: Makefile,v 1.6 2012/02/27 14:34:25 hfath Exp $
 #
 
 DISTNAME=	crrcsim-0.9.11
 CATEGORIES=	games
-MASTER_SITES=	http://download.berlios.de/crrcsim/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=crrcsim.berlios/}
 
 MAINTAINER=	hauke@NetBSD.org
-HOMEPAGE=	http://crrcsim.berlios.de/wiki/
+HOMEPAGE=	http://crrcsim.sourceforge.net/apps/mediawiki/crrcsim/
 COMMENT=	Crrcsim is a model-airplane flight simulation program
 LICENSE=	gnu-gpl-v2
 
