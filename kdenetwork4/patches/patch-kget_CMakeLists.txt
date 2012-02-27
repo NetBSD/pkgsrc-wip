@@ -1,0 +1,12 @@
+$NetBSD: patch-kget_CMakeLists.txt,v 1.1 2012/02/27 09:11:26 mwdavies Exp $
+
+--- kget/CMakeLists.txt.orig	2011-09-26 11:25:46.000000000 +0000
++++ kget/CMakeLists.txt
+@@ -1,5 +1,7 @@
+ project(kget)
+ 
++add_definitions(${KDE4_ENABLE_EXCEPTIONS})
++
+ set(kget_adaptor_SRCS
+     dbus/dbuskgetwrapper.cpp
+ )
