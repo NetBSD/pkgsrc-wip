@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2012/02/04 13:54:47 ftigeot Exp $
+# $NetBSD: Makefile,v 1.23 2012/02/27 09:18:18 ftigeot Exp $
 
 VER=			3.5.0.3
 DISTNAME=		libreoffice-${VER}
@@ -14,6 +14,7 @@ COMMENT=		Office productivity suite
 LICENSE=		gnu-lgpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+CHECK_SHLIBS_SUPPORTED=	no
 
 DIST_SUBDIR=	libreoffice
 
@@ -104,7 +105,6 @@ CONFIGURE_ARGS+=	--with-system-libs
 CONFIGURE_ARGS+=	--with-vendor="The LibreOffice pkgsrc team"
 CONFIGURE_ARGS+=	--without-java
 CONFIGURE_ARGS+=	--without-system-altlinuxhyph
-CONFIGURE_ARGS+=	--without-system-boost
 CONFIGURE_ARGS+=	--without-system-db
 CONFIGURE_ARGS+=	--without-system-jars
 CONFIGURE_ARGS+=	--without-system-libcmis
@@ -166,6 +166,7 @@ post-install:
 .include "../../databases/unixodbc/buildlink3.mk"
 .include "../../devel/gperf/buildlink3.mk"
 .include "../../devel/GConf/buildlink3.mk"
+.include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/cppunit/buildlink3.mk"
 .include "../../devel/nss/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
