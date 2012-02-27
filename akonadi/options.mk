@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2011/12/27 10:06:13 absd Exp $
+# $NetBSD: options.mk,v 1.2 2012/02/27 08:46:09 mwdavies Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.akonadi
 
@@ -16,6 +16,7 @@ PKG_SUGGESTED_OPTIONS=		sqlite
 .	include "../../mk/mysql.buildlink3.mk"
 .include "../../mk/mysql.buildlink3.mk"
 DEPENDS+=	qt4-mysql-[0-9]*:../../x11/qt4-mysql
+CMAKE_ARGS+=	-DAKONADI_BUILD_QSQLITE=off
 .  if ${_MYSQL_VERSION} == "55"
 .    include "../../databases/mysql55-server/buildlink3.mk"
 .  elif ${_MYSQL_VERSION} == "51"
@@ -41,8 +42,10 @@ SUBST_SED.mysql=	-e "s:MYSQLD_EXECUTABLE mysqld:MYSQLD_EXECUTABLE mysqld ${PREFI
 ###
 ### Use sqlite backend
 ###
+PLIST_VARS+=	sqlite
 .if !empty(PKG_OPTIONS:Msqlite)
 .	include "../../databases/sqlite3/buildlink3.mk"
 CMAKE_ARGS+=	-DDATABASE_BACKEND=SQLITE
 CMAKE_ARGS+=	-DINSTALL_QSQLITE_IN_QT_PREFIX=true
+PLIST.sqlite=	yes
 .endif

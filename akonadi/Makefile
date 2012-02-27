@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/01/25 07:12:15 mwdavies Exp $
+# $NetBSD: Makefile,v 1.13 2012/02/27 08:46:08 mwdavies Exp $
 
 DISTNAME=	akonadi-1.7.0
 CATEGORIES=	mail
@@ -16,6 +16,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEPENDS+=	automoc4>=0.9.87:../../devel/automoc4
 BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
+
+.include "options.mk"
 
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
