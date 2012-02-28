@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/09/13 13:56:57 bartoszkuzma Exp $
+$NetBSD: distinfo,v 1.2 2012/02/28 20:35:19 bartoszkuzma Exp $
 
-SHA1 (sxid_4.0.4.tar.gz) = b0096e41b66acd72c4c8e145aa20002425f731dd
-RMD160 (sxid_4.0.4.tar.gz) = 6e3bfeed85b51425ead6a5dd05c3bde2d8e0b179
-Size (sxid_4.0.4.tar.gz) = 45277 bytes
-SHA1 (patch-aa) = 7897c313a3bb906314583b422d558f4be748225b
+SHA1 (sxid-4.2.tar.gz) = 3fdf38b18b344c65fed2a733f0a0055a25508165
+RMD160 (sxid-4.2.tar.gz) = e3e8543ede2b7a160ea766d89067429b5316a785
+Size (sxid-4.2.tar.gz) = 41827 bytes
