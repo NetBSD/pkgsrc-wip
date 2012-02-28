@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2011/02/27 08:40:19 slitvinov Exp $
+# $NetBSD: Makefile,v 1.3 2012/02/28 18:57:25 slitvinov Exp $
 #
 
-DISTNAME=	QuantLib-1.0.1
+DISTNAME=	QuantLib-1.1
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=quantlib/}
 
@@ -15,6 +15,8 @@ HOMEPAGE=	http://quantlib.sourceforge.net/
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
+
+CHECK_PORTABILITY_SKIP=	configure
 
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
