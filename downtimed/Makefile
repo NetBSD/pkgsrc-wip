@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.2 2012/02/28 11:34:25 errellion Exp $
+# $NetBSD: Makefile,v 1.1.1.3 2012/02/28 12:19:04 errellion Exp $
 #
 
 DISTNAME=	downtimed-0.5
@@ -17,3 +17,4 @@ GNU_CONFIGURE=	yes
 
 BUILD_DEFS+=            VARBASE
 MAKE_DIRS_PERMS+=         ${VARBASE}/db/downtimed ${ROOT_USER} ${ROOT_GROUP} 0700
+RCD_SCRIPTS+=	downtimed
