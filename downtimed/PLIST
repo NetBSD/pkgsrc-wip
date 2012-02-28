@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/02/28 11:16:33 errellion Exp $
+bin/downtimes
+man/man1/downtimes.1
+man/man8/downtimed.8
+sbin/downtimed
