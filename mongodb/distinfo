@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.4 2012/02/22 11:36:26 bartoszkuzma Exp $
+$NetBSD: distinfo,v 1.5 2012/02/28 19:57:46 bartoszkuzma Exp $
 
 SHA1 (mongodb-src-r2.0.2.tar.gz) = f1d260a6845f761a1abfa27053bf7c1efdae353f
 RMD160 (mongodb-src-r2.0.2.tar.gz) = 29a7052638236bffec5dff1d53bd5b870b8df3ef
 Size (mongodb-src-r2.0.2.tar.gz) = 2956087 bytes
-SHA1 (patch-SConstruct) = fc2133c5c945a1fe551d35a101eae1ab600aee3c
+SHA1 (patch-SConstruct) = 726fe4ac15790929c3646b45d04b2dbbf5bad49c
 SHA1 (patch-db__nonce.cpp) = ca5f6a10d8364d41f08720dcc1c4704e9930f7a1
-SHA1 (patch-shell__dbshell.cpp) = fcca2f78553714ff2a951b07ff58754621136f99
+SHA1 (patch-shell__dbshell.cpp) = 81f6e3291caa9afdaf487589576b8ad21f67873c
 SHA1 (patch-util__file_allocator.cpp) = 245c969f69bf99e78fcd64273305c025542003b9
 SHA1 (patch-util__goodies.h) = e2f647a54001d847bc61f7043fa406a8f8b43a7e

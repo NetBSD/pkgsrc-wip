@@ -1,16 +1,33 @@
-$NetBSD: patch-SConstruct,v 1.1 2012/02/22 11:36:26 bartoszkuzma Exp $
+$NetBSD: patch-SConstruct,v 1.2 2012/02/28 19:57:46 bartoszkuzma Exp $
 
 --- SConstruct.orig	2011-12-14 17:18:48.000000000 +0000
 +++ SConstruct
-@@ -209,6 +209,7 @@ linux64  = False
+@@ -208,7 +208,9 @@ linux = False
+ linux64  = False
  darwin = False
  windows = False
++dragonfly = False
  freebsd = False
 +netbsd = False
  openbsd = False
  solaris = False
  force64 = has_option( "force64" )
-@@ -540,6 +541,14 @@ elif os.sys.platform.startswith( "freebs
+@@ -533,6 +535,14 @@ elif "sunos5" == os.sys.platform:
+      env.Append( CPPDEFINES=[ "__sunos__" ] )
+      env.Append( LIBS=["socket","resolv"] )
+ 
++elif os.sys.platform.startswith( "dragonfly" ):
++    nix = True
++    dragonfly = True
++    env.Append( CPPPATH=[ "%PREFIX%/include" ] )
++    env.Append( LIBPATH=[ "%PREFIX%/lib" ] )
++    env.Append( LIBS=[ "m" ] )
++    env.Append( CPPDEFINES=[ "__dragonfly__" ] )
++
+ elif os.sys.platform.startswith( "freebsd" ):
+     nix = True
+     freebsd = True
+@@ -540,6 +550,14 @@ elif os.sys.platform.startswith( "freebs
      env.Append( LIBPATH=[ "/usr/local/lib" ] )
      env.Append( CPPDEFINES=[ "__freebsd__" ] )
  
@@ -25,7 +42,7 @@ $NetBSD: patch-SConstruct,v 1.1 2012/02/22 11:36:26 bartoszkuzma Exp $
  elif os.sys.platform.startswith( "openbsd" ):
      nix = True
      openbsd = True
-@@ -697,7 +706,9 @@ if nix:
+@@ -697,7 +715,9 @@ if nix:
  
      env.Append( CPPDEFINES="_FILE_OFFSET_BITS=64" )
      env.Append( CXXFLAGS=" -Wnon-virtual-dtor " )
