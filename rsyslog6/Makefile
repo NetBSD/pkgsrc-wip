@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2012/02/12 20:03:44 bartoszkuzma Exp $
+# $NetBSD: Makefile,v 1.4 2012/02/28 21:52:30 bartoszkuzma Exp $
 #
 
 DISTNAME=		rsyslog-6.2.0
 CATEGORIES=		sysutils
-MASTER_SITES=		http://download.rsyslog.com/rsyslog/
+MASTER_SITES=		http://www.rsyslog.com/files/download/rsyslog/
 
 MAINTAINER=		bartosz.kuzma@gmail.com
 HOMEPAGE=		http://www.rsyslog.com/
