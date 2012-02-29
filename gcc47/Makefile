@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.9 2012/02/24 17:35:21 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.10 2012/02/29 07:14:23 keckhardt Exp $
 
 GCC_VERSION=		4.7
-DISTNAME=		gcc-${GCC_VERSION}-20120211
+DISTNAME=		gcc-${GCC_VERSION}-20120225
 PKGNAME=		gcc47-${GCC_VERSION}
 CATEGORIES=		wip
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX}
-SITES.gcc-4.7-20120211.tar.bz2= \
-		ftp://ftp.fu-berlin.de/unix/languages/gcc/snapshots/4.7-20120211/
+SITES.gcc-4.7-20120225.tar.bz2= \
+		ftp://ftp.fu-berlin.de/unix/languages/gcc/snapshots/4.7-20120225/
 
 EXTRACT_SUFX=		.tar.bz2
 

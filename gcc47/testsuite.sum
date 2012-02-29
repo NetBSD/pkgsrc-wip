@@ -1,0 +1,39 @@
+Testresults on NetBSD 6.0_BETA amd64:
+
+		=== gfortran Summary ===
+
+# of expected passes		40566
+# of unexpected failures	1
+# of expected failures		56
+# of unsupported tests		241
+/usr/pkgsrc/wip/gcc47/work/obj/gcc/testsuite/gfortran/../../gfortran  version 4.7.0 20120225 (experimental) (GCC) 
+
+
+		=== gcc Summary ===
+
+# of expected passes		84964
+# of unexpected failures	193
+# of unexpected successes	37
+# of expected failures		271
+# of unsupported tests		1635
+/usr/pkgsrc/wip/gcc47/work/obj/gcc/xgcc  version 4.7.0 20120225 (experimental) (GCC) 
+
+
+		=== g++ Summary ===
+
+# of expected passes		47868
+# of unexpected failures	9
+# of expected failures		286
+# of unresolved testcases	28
+# of unsupported tests		606
+/usr/pkgsrc/wip/gcc47/work/obj/gcc/testsuite/g++/../../g++  version 4.7.0 20120225 (experimental) (GCC) 
+
+
+		=== objc Summary ===
+
+# of expected passes		2985
+# of unexpected failures	3
+# of expected failures		6
+# of unsupported tests		74
+/usr/pkgsrc/wip/gcc47/work/obj/gcc/xgcc  version 4.7.0 20120225 (experimental) (GCC) 
+
