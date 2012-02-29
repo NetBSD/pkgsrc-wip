@@ -1,18 +1,21 @@
-$NetBSD: patch-ab,v 1.5 2011/11/02 20:19:15 fhajny Exp $
+$NetBSD: patch-ab,v 1.6 2012/02/29 11:34:43 fhajny Exp $
 
---- src/Makefile.orig	2011-10-26 14:16:33.000000000 +0000
+* Embrace existing CFLAGS rather than overwrite them.
+* Add DESTDIR support.
+
+--- src/Makefile.orig	2012-02-22 13:23:43.000000000 +0000
 +++ src/Makefile
 @@ -25,11 +25,11 @@ ifeq ($(uname_S),Linux)
  endif
  
  ifeq ($(uname_S),SunOS)
 -  CFLAGS?=-std=c99 -pedantic $(OPTIMIZATION) -Wall -W -D__EXTENSIONS__ -D_XPG6
-+  CCFLAGS?=$(CFLAGS) -std=c99 -pedantic $(OPTIMIZATION) -Wall -W -D__EXTENSIONS__ -D_XPG6
++  REAL_CFLAGS?=-std=c99 -pedantic $(OPTIMIZATION) -Wall -W -D__EXTENSIONS__ -D_XPG6 $(CFLAGS)
    CCLINK?=-ldl -lnsl -lsocket -lm -lpthread
    DEBUG?=-g -ggdb
  else
 -  CFLAGS?=-std=c99 -pedantic $(OPTIMIZATION) -Wall -W $(ARCH) $(PROF)
-+  CCFLAGS?=$(CFLAGS) -std=c99 -pedantic $(OPTIMIZATION) -Wall -W $(ARCH) $(PROF)
++  REAL_CFLAGS?=-std=c99 -pedantic $(OPTIMIZATION) -Wall -W $(ARCH) $(PROF) $(CFLAGS)
    CCLINK?=-lm -pthread
    DEBUG?=-g -rdynamic -ggdb
  endif
@@ -21,13 +24,13 @@ $NetBSD: patch-ab,v 1.5 2011/11/02 20:19:15 fhajny Exp $
  endif
  
 -CCOPT= $(CFLAGS) $(ARCH) $(PROF)
-+CCOPT= $(CCFLAGS) $(ARCH) $(PROF)
++CCOPT= $(REAL_CFLAGS) $(ARCH) $(PROF)
  
 -PREFIX= /usr/local
 -INSTALL_BIN= $(PREFIX)/bin
--INSTALL= cp -p
-+INSTALL_TOP= $(PREFIX)
-+INSTALL_BIN= $(DESTDIR)$(INSTALL_TOP)/bin
+-INSTALL= cp -pf
++PREFIX?= /usr/local
++INSTALL_BIN= $(DESTDIR)$(PREFIX)/bin
 +INSTALL= $(BSD_INSTALL_PROGRAM)
  
  OBJ = adlist.o ae.o anet.o dict.o redis.o sds.o zmalloc.o lzf_c.o lzf_d.o pqsort.o zipmap.o sha1.o ziplist.o release.o networking.o util.o object.o db.o replication.o rdb.o t_string.o t_list.o t_set.o t_zset.o t_hash.o config.o aof.o vm.o pubsub.o multi.o debug.o sort.o intset.o syncio.o slowlog.o bio.o
@@ -37,7 +40,7 @@ $NetBSD: patch-ab,v 1.5 2011/11/02 20:19:15 fhajny Exp $
  
  redis-benchmark.o:
 -	$(QUIET_CC)$(CC) -c $(CFLAGS) -I../deps/hiredis $(DEBUG) $(COMPILE_TIME) $<
-+	$(QUIET_CC)$(CC) -c $(CCFLAGS) -I../deps/hiredis $(DEBUG) $(COMPILE_TIME) $<
++	$(QUIET_CC)$(CC) -c $(REAL_CFLAGS) -I../deps/hiredis $(DEBUG) $(COMPILE_TIME) $<
  
  redis-benchmark: dependencies $(BENCHOBJ)
  	@printf '%b %b\n' $(MAKECOLOR)MAKE$(ENDCOLOR) $(BINCOLOR)hiredis$(ENDCOLOR)
@@ -46,21 +49,21 @@ $NetBSD: patch-ab,v 1.5 2011/11/02 20:19:15 fhajny Exp $
  
  redis-cli.o:
 -	$(QUIET_CC)$(CC) -c $(CFLAGS) -I../deps/hiredis -I../deps/linenoise $(DEBUG) $(COMPILE_TIME) $<
-+	$(QUIET_CC)$(CC) -c $(CCFLAGS) -I../deps/hiredis -I../deps/linenoise $(DEBUG) $(COMPILE_TIME) $<
++	$(QUIET_CC)$(CC) -c $(REAL_CFLAGS) -I../deps/hiredis -I../deps/linenoise $(DEBUG) $(COMPILE_TIME) $<
  
  redis-cli: dependencies $(CLIOBJ)
  	$(QUIET_LINK)$(CC) -o $(CLIPRGNAME) $(CCOPT) $(DEBUG) $(CLIOBJ) ../deps/hiredis/libhiredis.a ../deps/linenoise/linenoise.o $(CCLINK) $(ALLOC_LINK)
  
  redis-check-dump.o:
 -	$(QUIET_CC)$(CC) -c $(CFLAGS) $(DEBUG) $(COMPILE_TIME) $<
-+	$(QUIET_CC)$(CC) -c $(CCFLAGS) $(DEBUG) $(COMPILE_TIME) $<
++	$(QUIET_CC)$(CC) -c $(REAL_CFLAGS) $(DEBUG) $(COMPILE_TIME) $<
  
  redis-check-dump: $(CHECKDUMPOBJ)
  	$(QUIET_LINK)$(CC) -o $(CHECKDUMPPRGNAME) $(CCOPT) $(DEBUG) $(CHECKDUMPOBJ) $(CCLINK)
  
  redis-check-aof.o:
 -	$(QUIET_CC)$(CC) -c $(CFLAGS) $(DEBUG) $(COMPILE_TIME) $<
-+	$(QUIET_CC)$(CC) -c $(CCFLAGS) $(DEBUG) $(COMPILE_TIME) $<
++	$(QUIET_CC)$(CC) -c $(REAL_CFLAGS) $(DEBUG) $(COMPILE_TIME) $<
  
  redis-check-aof: $(CHECKAOFOBJ)
  	$(QUIET_LINK)$(CC) -o $(CHECKAOFPRGNAME) $(CCOPT) $(DEBUG) $(CHECKAOFOBJ) $(CCLINK)
@@ -69,7 +72,7 @@ $NetBSD: patch-ab,v 1.5 2011/11/02 20:19:15 fhajny Exp $
  # process, building it should complete before building any other object.
  %.o: %.c $(ALLOC_DEP)
 -	$(QUIET_CC)$(CC) -c $(CFLAGS) $(ALLOC_FLAGS) $(DEBUG) $(COMPILE_TIME) $<
-+	$(QUIET_CC)$(CC) -c $(CCFLAGS) $(ALLOC_FLAGS) $(DEBUG) $(COMPILE_TIME) $<
++	$(QUIET_CC)$(CC) -c $(REAL_CFLAGS) $(ALLOC_FLAGS) $(DEBUG) $(COMPILE_TIME) $<
  
  clean:
  	rm -rf $(PRGNAME) $(BENCHPRGNAME) $(CLIPRGNAME) $(CHECKDUMPPRGNAME) $(CHECKAOFPRGNAME) *.o *.gcda *.gcno *.gcov
