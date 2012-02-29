@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.5 2012/02/28 14:09:14 errellion Exp $
+# $NetBSD: Makefile,v 1.6 2012/02/29 19:29:31 errellion Exp $
 #
 
 DISTNAME=	downtimed-0.5
-CATEGORIES=	wip
+CATEGORIES=	sysutils
 MASTER_SITES=	http://dist.epipe.com/downtimed/
 
 MAINTAINER=	bartosz@maciejewski.org
 HOMEPAGE=	http://dist.epipe.com/downtimed/
-COMMENT=	Downtimed monitors system downtim
-LICENSE=	original-bsd
+COMMENT=	Downtimed is monitoring system downtime
+LICENSE=	2-clause-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
