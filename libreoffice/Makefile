@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2012/02/27 09:18:18 ftigeot Exp $
+# $NetBSD: Makefile,v 1.24 2012/02/29 16:39:17 ftigeot Exp $
 
 VER=			3.5.0.3
 DISTNAME=		libreoffice-${VER}
@@ -25,8 +25,6 @@ LO_COMPONENTS=	dictionaries help
 MORE_DISTFILES= \
 	1756c4fa6c616ae15973c104cd8cb256-Adobe-Core35_AFMs-314.tar.gz \
 	e7a384790b13c29113e22e596ade9687-LinLibertineG-20120116.zip \
-	f02578f5218f217a9f20e9c30e119c6a-boost_1_44_0.tar.bz2 \
-	d70951c80dabecc2892c919ff5d07172-db-4.7.25.NC-custom.tar.gz \
 	f872f4ac066433d8ff92f5e316b36ff9-dejavu-fonts-ttf-2.33.zip \
 	35efabc239af896dfb79be7ebdd6e6b9-gentiumbasic-fonts-1.10.zip \
 	48a9f787f43a09c0a9b7b00cd1fddbbf-hyphen-2.7.1.tar.gz \
@@ -105,7 +103,6 @@ CONFIGURE_ARGS+=	--with-system-libs
 CONFIGURE_ARGS+=	--with-vendor="The LibreOffice pkgsrc team"
 CONFIGURE_ARGS+=	--without-java
 CONFIGURE_ARGS+=	--without-system-altlinuxhyph
-CONFIGURE_ARGS+=	--without-system-db
 CONFIGURE_ARGS+=	--without-system-jars
 CONFIGURE_ARGS+=	--without-system-libcmis
 CONFIGURE_ARGS+=	--without-system-libvisio
@@ -163,6 +160,7 @@ post-install:
 .include "../../converters/libwpd/buildlink3.mk"
 .include "../../converters/libwpg/buildlink3.mk"
 .include "../../converters/libwps/buildlink3.mk"
+.include "../../databases/db4/buildlink3.mk"
 .include "../../databases/unixodbc/buildlink3.mk"
 .include "../../devel/gperf/buildlink3.mk"
 .include "../../devel/GConf/buildlink3.mk"

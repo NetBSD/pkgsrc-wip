@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2012/02/27 09:18:18 ftigeot Exp $
+@comment $NetBSD: PLIST,v 1.13 2012/02/29 16:39:17 ftigeot Exp $
 bin/sbase
 bin/scalc
 bin/sdraw
@@ -153,7 +153,6 @@ ${PKGNAME}/program/libcppcanvaslo.so
 ${PKGNAME}/program/libctllo.so
 ${PKGNAME}/program/libcuilo.so
 ${PKGNAME}/program/libdatelo.so
-${PKGNAME}/program/libdb-4.7.so
 ${PKGNAME}/program/libdbalo.so
 ${PKGNAME}/program/libdbaselo.so
 ${PKGNAME}/program/libdbaxmllo.so

@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.25 2012/02/04 13:54:47 ftigeot Exp $
+$NetBSD: distinfo,v 1.26 2012/02/29 16:39:17 ftigeot Exp $
 
 SHA1 (libreoffice/067201ea8b126597670b5eff72e1f66c-mythes-1.2.0.tar.gz) = 025d5d0d566a23ddb353495c116116c1088ba2e9
 RMD160 (libreoffice/067201ea8b126597670b5eff72e1f66c-mythes-1.2.0.tar.gz) = aefa80476ef8340be84440b61f738f432da51c92
@@ -27,15 +27,9 @@ Size (libreoffice/776ad69a63ac1e99abed176e54ce25d9-libvisio-0.0.14.tar.bz2) = 38
 SHA1 (libreoffice/7c2549f6b0a8bb604e6c4c729ffdcfe6-libcmis-0.1.0.tar.gz) = 9575aad04e4476236ab6f490b583f996c6632ab4
 RMD160 (libreoffice/7c2549f6b0a8bb604e6c4c729ffdcfe6-libcmis-0.1.0.tar.gz) = 76de5c1037f5d48f15a5d4a9fb92cf10e158d8e6
 Size (libreoffice/7c2549f6b0a8bb604e6c4c729ffdcfe6-libcmis-0.1.0.tar.gz) = 373519 bytes
-SHA1 (libreoffice/d70951c80dabecc2892c919ff5d07172-db-4.7.25.NC-custom.tar.gz) = 87cf5615dc9a27413442ad1bc5656e530a461831
-RMD160 (libreoffice/d70951c80dabecc2892c919ff5d07172-db-4.7.25.NC-custom.tar.gz) = fb97fd2ab8fb5361e63d76cf5b30ec75fe0566f8
-Size (libreoffice/d70951c80dabecc2892c919ff5d07172-db-4.7.25.NC-custom.tar.gz) = 5515376 bytes
 SHA1 (libreoffice/e7a384790b13c29113e22e596ade9687-LinLibertineG-20120116.zip) = 9ab6ee07f70fa8143b5c9cc48a52602b368cc976
 RMD160 (libreoffice/e7a384790b13c29113e22e596ade9687-LinLibertineG-20120116.zip) = 061ce85689f99eb670229c4c52a27adcf48282f4
 Size (libreoffice/e7a384790b13c29113e22e596ade9687-LinLibertineG-20120116.zip) = 6651982 bytes
-SHA1 (libreoffice/f02578f5218f217a9f20e9c30e119c6a-boost_1_44_0.tar.bz2) = 0dfeaad7a316ddfdcdb8a7e42443ef048ad18c01
-RMD160 (libreoffice/f02578f5218f217a9f20e9c30e119c6a-boost_1_44_0.tar.bz2) = 1fe1bf83ce5699dc43cbfc3d5a6997722c34c938
-Size (libreoffice/f02578f5218f217a9f20e9c30e119c6a-boost_1_44_0.tar.bz2) = 38806420 bytes
 SHA1 (libreoffice/f872f4ac066433d8ff92f5e316b36ff9-dejavu-fonts-ttf-2.33.zip) = 93229e2cde05bc305d992b239364796d1aa45ebd
 RMD160 (libreoffice/f872f4ac066433d8ff92f5e316b36ff9-dejavu-fonts-ttf-2.33.zip) = 520007a159b9ee425e368c9bba09ba6b32b30680
 Size (libreoffice/f872f4ac066433d8ff92f5e316b36ff9-dejavu-fonts-ttf-2.33.zip) = 5008644 bytes
