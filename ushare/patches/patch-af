@@ -1,7 +1,8 @@
-$NetBSD: patch-af,v 1.3 2011/01/20 08:27:11 obache Exp $
+$NetBSD: patch-af,v 1.4 2012/02/29 12:21:53 obache Exp $
 
 * Treat NetBSD same as FreeBSD.
 * Move sys/param.h and config.h header files before using conditions.
+* libupnp>=1.6.7 support.
 
 --- src/ushare.c.orig	2007-12-09 13:03:36.000000000 +0000
 +++ src/ushare.c
@@ -18,13 +19,7 @@ $NetBSD: patch-af,v 1.3 2011/01/20 08:27:11 obache Exp $
  #include <sys/socket.h>
  #include <sys/sysctl.h>
  #include <net/if_dl.h>
-@@ -44,23 +48,21 @@
- #include <sys/stat.h>
- #include <stdbool.h>
- #include <fcntl.h>
-+#include <netdb.h>
- 
- #ifdef HAVE_IFADDRS_H
+@@ -49,18 +53,19 @@
  #include <ifaddrs.h>
  #endif
  
@@ -35,6 +30,10 @@ $NetBSD: patch-af,v 1.3 2011/01/20 08:27:11 obache Exp $
  #include <upnp/upnp.h>
  #include <upnp/upnptools.h>
  
++#if UPNP_VERSION >= 10607
++#include <netdb.h>
++#endif
++
 +#include "config.h"
 +
  #if (defined(HAVE_SETLOCALE) && defined(CONFIG_NLS))
@@ -45,39 +44,48 @@ $NetBSD: patch-af,v 1.3 2011/01/20 08:27:11 obache Exp $
  #include "ushare.h"
  #include "services.h"
  #include "http.h"
-@@ -177,7 +179,7 @@ handle_action_request (struct Upnp_Actio
+@@ -177,7 +182,11 @@ handle_action_request (struct Upnp_Actio
    struct service_t *service;
    struct service_action_t *action;
    char val[256];
--  uint32_t ip;
++#if UPNP_VERSION < 10607
+   uint32_t ip;
++#else
 +  int error;
++#endif
  
    if (!request || !ut)
      return;
-@@ -188,10 +190,9 @@ handle_action_request (struct Upnp_Actio
+@@ -188,10 +197,16 @@ handle_action_request (struct Upnp_Actio
    if (strcmp (request->DevUDN + 5, ut->udn))
      return;
  
--  ip = request->CtrlPtIPAddr.s_addr;
--  ip = ntohl (ip);
--  sprintf (val, "%d.%d.%d.%d",
--           (ip >> 24) & 0xFF, (ip >> 16) & 0xFF, (ip >> 8) & 0xFF, ip & 0xFF);
++#if UPNP_VERSION < 10607
+   ip = request->CtrlPtIPAddr.s_addr;
+   ip = ntohl (ip);
+   sprintf (val, "%d.%d.%d.%d",
+            (ip >> 24) & 0xFF, (ip >> 16) & 0xFF, (ip >> 8) & 0xFF, ip & 0xFF);
++#else
 +  error = getnameinfo((struct sockaddr *)&(request->CtrlPtIPAddr),
 +                      request->CtrlPtIPAddr.ss_len,
 +                      val, sizeof(val), NULL, 0, NI_NUMERICHOST);
++#endif
  
    if (ut->verbose)
    {
-@@ -348,7 +349,7 @@ init_upnp (struct ushare_t *ut)
+@@ -348,7 +363,11 @@ init_upnp (struct ushare_t *ut)
  
    UpnpEnableWebserver (TRUE);
  
--  res = UpnpSetVirtualDirCallbacks (&virtual_dir_callbacks);
++#if UPNP_VERSION < 10607
+   res = UpnpSetVirtualDirCallbacks (&virtual_dir_callbacks);
++#else
 +  res = set_virtual_dir_callbacks();
++#endif
    if (res != UPNP_E_SUCCESS)
    {
      log_error (_("Cannot set virtual directory callbacks\n"));
-@@ -505,7 +506,7 @@ create_udn (char *interface)
+@@ -505,7 +524,7 @@ create_udn (char *interface)
    char *buf;
    unsigned char *ptr;
  
@@ -86,7 +94,7 @@ $NetBSD: patch-af,v 1.3 2011/01/20 08:27:11 obache Exp $
    int mib[6];
    size_t len;
    struct if_msghdr *ifm;
-@@ -517,7 +518,7 @@ create_udn (char *interface)
+@@ -517,7 +536,7 @@ create_udn (char *interface)
    if (!interface)
      return NULL;
  
@@ -95,7 +103,7 @@ $NetBSD: patch-af,v 1.3 2011/01/20 08:27:11 obache Exp $
    mib[0] = CTL_NET;
    mib[1] = AF_ROUTE;
    mib[2] = 0;
-@@ -568,7 +569,7 @@ create_udn (char *interface)
+@@ -568,7 +587,7 @@ create_udn (char *interface)
    buf = (char *) malloc (64 * sizeof (char));
    memset (buf, 0, 64);
    ptr = (unsigned char *) ifr.ifr_hwaddr.sa_data;
@@ -104,7 +112,7 @@ $NetBSD: patch-af,v 1.3 2011/01/20 08:27:11 obache Exp $
  
    snprintf (buf, 64, "%s-%02x%02x%02x%02x%02x%02x", DEFAULT_UUID,
              (ptr[0] & 0377), (ptr[1] & 0377), (ptr[2] & 0377),
-@@ -734,11 +735,8 @@ setup_i18n(void)
+@@ -734,11 +753,8 @@ setup_i18n(void)
  #ifdef HAVE_SETLOCALE
    setlocale (LC_ALL, "");
  #endif
@@ -116,7 +124,7 @@ $NetBSD: patch-af,v 1.3 2011/01/20 08:27:11 obache Exp $
  }
  
  #define SHUTDOWN_MSG _("Server is shutting down: other clients will be notified soon, Bye bye ...\n")
-@@ -845,6 +843,9 @@ main (int argc, char **argv)
+@@ -845,6 +861,9 @@ main (int argc, char **argv)
  
    signal (SIGINT, UPnPBreak);
    signal (SIGHUP, reload_config);

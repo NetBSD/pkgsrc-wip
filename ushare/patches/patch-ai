@@ -1,12 +1,17 @@
-$NetBSD: patch-ai,v 1.1 2011/01/20 08:27:11 obache Exp $
+$NetBSD: patch-ai,v 1.2 2012/02/29 12:21:53 obache Exp $
+
+*libupnp>=1.6.7 support.
 
 --- src/http.h.orig	2007-12-09 13:03:36.000000000 +0000
 +++ src/http.h
-@@ -25,6 +25,6 @@
+@@ -25,6 +25,10 @@
  #include <upnp/upnp.h>
  #include <upnp/upnptools.h>
  
--struct UpnpVirtualDirCallbacks virtual_dir_callbacks;
++#if UPNP_VERSION < 10607
+ struct UpnpVirtualDirCallbacks virtual_dir_callbacks;
++#else
 +int set_virtual_dir_callbacks();
++#endif
  
  #endif /* _HTTP_H_ */

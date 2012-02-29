@@ -1,4 +1,6 @@
-$NetBSD: patch-ah,v 1.1 2011/01/20 08:27:11 obache Exp $
+$NetBSD: patch-ah,v 1.2 2012/02/29 12:21:53 obache Exp $
+
+*libupnp>=1.6.7 support.
 
 --- src/http.c.orig	2007-12-09 13:03:36.000000000 +0000
 +++ src/http.c
@@ -10,19 +12,19 @@ $NetBSD: patch-ah,v 1.1 2011/01/20 08:27:11 obache Exp $
  
  #include <upnp/upnp.h>
  #include <upnp/upnptools.h>
-@@ -403,12 +404,15 @@ http_close (UpnpWebFileHandle fh)
+@@ -403,6 +404,7 @@ http_close (UpnpWebFileHandle fh)
    return 0;
  }
  
--struct UpnpVirtualDirCallbacks virtual_dir_callbacks =
--  {
--    http_get_info,
--    http_open,
--    http_read,
--    http_write,
--    http_seek,
--    http_close
--  };
++#if UPNP_VERSION < 10607
+ struct UpnpVirtualDirCallbacks virtual_dir_callbacks =
+   {
+     http_get_info,
+@@ -412,3 +414,17 @@ struct UpnpVirtualDirCallbacks virtual_d
+     http_seek,
+     http_close
+   };
++#else
 +int
 +set_virtual_dir_callbacks ()
 +{
@@ -35,3 +37,4 @@ $NetBSD: patch-ah,v 1.1 2011/01/20 08:27:11 obache Exp $
 +  if((ret = UpnpVirtualDir_set_CloseCallback(http_close)) != UPNP_E_SUCCESS) return ret;
 +  return ret;
 +}
++#endif
