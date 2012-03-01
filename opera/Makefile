@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2012/03/01 12:21:49 asau Exp $
+# $NetBSD: Makefile,v 1.21 2012/03/01 17:06:39 asau Exp $
 
 DISTNAME=		opera-${OPERA_PKG_VERSION}-${OPERA_PKG_BUILD}.${OPERA_ARCH}.${EMUL_OPSYS}
 PKGNAME=		opera-${OPERA_PKG_VERSION:S/u/pl/}
@@ -58,12 +58,6 @@ SUBST_CLASSES+=		plugin
 SUBST_STAGE.plugin=	post-install
 SUBST_FILES.plugin=	${DESTDIR}${PREFIX}/share/opera/defaults/pluginpath.ini
 SUBST_SED.plugin=	-e 's,/usr/local/,${PREFIX}/,g'
-
-#SUBST_CLASSES+=		prefix
-#SUBST_STAGE.prefix=	post-extract
-#SUBST_FILES.prefix=	install
-#SUBST_SED.prefix=	-e 's,/usr/local,${PREFIX},g'
-#SUBST_SED.prefix+=	-e 's,dest=,dest=${DESTDIR},g'
 
 .if ${PKGMANDIR} != "share/man"
 post-extract:
