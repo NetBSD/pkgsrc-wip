@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2012/02/01 11:40:53 obache Exp $
+# $NetBSD: Makefile,v 1.20 2012/03/01 12:21:49 asau Exp $
 
 DISTNAME=		opera-${OPERA_PKG_VERSION}-${OPERA_PKG_BUILD}.${OPERA_ARCH}.${EMUL_OPSYS}
 PKGNAME=		opera-${OPERA_PKG_VERSION:S/u/pl/}
@@ -8,25 +8,25 @@ EXTRACT_SUFX=		.tar.xz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.opera.com/
-COMMENT=		Stanards-compliant graphical Web browser
+COMMENT=		Standards-compliant graphical Web browser
 LICENSE=		opera-1100-license
 LICENSE_FILE=		opera-1100-license
 
-EMUL_PLATFORMS=		freebsd-i386 freebsd-x86_64
-EMUL_PLATFORMS+=	linux-i386 linux-x86_64
+EMUL_PLATFORMS=		freebsd-i386 freebsd-x86_64 \
+			linux-i386 linux-x86_64
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 
-MASTER_SITE_OPERA+=	ftp://get.opera.com/pub/opera/
-MASTER_SITE_OPERA+=	http://ftp.sunet.se/pub/www/clients/Opera/
-MASTER_SITE_OPERA+=	ftp://ftp.hu-berlin.de/pub/www/opera/
-MASTER_SITE_OPERA+=	ftp://ftp.task.gda.pl/pub/opera/
-MASTER_SITE_OPERA+=	ftp://ftp.tuwien.ac.at/infosys/browsers/opera/
-MASTER_SITE_OPERA+=	ftp://opera.nsc.no/pub/nsc.no/mirrors/operasoftware/
-MASTER_SITE_OPERA+=	ftp://ftp.opera.com/pub/opera/
-MASTER_SITE_OPERA+=	http://ftp.yz.yamagata-u.ac.jp/pub/opera/
+MASTER_SITE_OPERA+=	ftp://get.opera.com/pub/opera/ \
+			http://ftp.sunet.se/pub/www/clients/Opera/ \
+			ftp://ftp.hu-berlin.de/pub/www/opera/ \
+			ftp://ftp.task.gda.pl/pub/opera/ \
+			ftp://ftp.tuwien.ac.at/infosys/browsers/opera/ \
+			ftp://opera.nsc.no/pub/nsc.no/mirrors/operasoftware/ \
+			ftp://ftp.opera.com/pub/opera/ \
+			http://ftp.yz.yamagata-u.ac.jp/pub/opera/
 
 USE_LANGUAGES=		# empty
 NO_BUILD=		yes
