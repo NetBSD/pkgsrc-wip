@@ -1,2 +1,2 @@
 NetBSD-5.1:
-* PR#44464: kernel panic
+* PR#44464: crash(?) - check it again
