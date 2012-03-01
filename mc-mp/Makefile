@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/09/03 22:08:22 cheusov Exp $
+# $NetBSD: Makefile,v 1.6 2012/03/01 22:42:42 thomasklausner Exp $
 #
 
 DISTNAME=		mc-4.1.40-pre9
@@ -7,7 +7,7 @@ PKGREVISION=		1
 CATEGORIES=		sysutils
 MASTER_SITES=		http://mc.linuxinside.com/Releases/
 
-MAINTAINER=		rillig@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://mc.linuxinside.com/cgi-bin/dir.cgi
 COMMENT=		Midnight Commander clone
 

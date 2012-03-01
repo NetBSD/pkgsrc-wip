@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/09/21 13:06:50 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2012/03/01 22:42:41 thomasklausner Exp $
 #
 
 DISTNAME=	Bastille-3.0.9
@@ -6,7 +6,7 @@ CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bastille-linux/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	rillig@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://bastille-linux.sourceforge.net/
 COMMENT=	System hardening tool focusing on educating the user
 
