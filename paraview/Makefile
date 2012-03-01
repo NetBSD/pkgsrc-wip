@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2010/12/26 05:01:23 davesainty Exp $
+# $NetBSD: Makefile,v 1.4 2012/03/01 10:17:44 slitvinov Exp $
 #
 
-PKGNAME=	paraview-3.8.0
-DISTNAME=	ParaView-3.8.0
+PKGNAME=	paraview-3.12.0
+DISTNAME=	ParaView-3.12.0
 CATEGORIES=	graphics
-MASTER_SITES=	http://www.paraview.org/files/v3.8/
+MASTER_SITES=	http://www.paraview.org/files/v3.12/
 
 MAINTAINER=	pouya@san-serriffe.org
 HOMEPAGE=	http://www.paraview.org/
@@ -13,17 +13,17 @@ LICENSE=	paraview-license
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_LANGUAGES=			c c++ fortran
-USE_TOOLS+=				gmake
-DEPENDS+=				qt4-sqlite3:../../x11/qt4-sqlite3
+USE_LANGUAGES=		c c++ fortran
+USE_TOOLS+=		gmake
+DEPENDS+=		qt4-sqlite3:../../x11/qt4-sqlite3
 
 USE_CMAKE=				yes
+CHECK_PORTABILITY_SKIP=		Utilities/protobuf/configure
 
-CMAKE_ARGS+=			-DCMAKE_INSTALL_PREFIX:STRING=${PREFIX:Q}
 CMAKE_ARGS+=			-DCMAKE_BUILD_TYPE=Release
 CMAKE_ARGS+=			-DBUILD_SHARED_LIBS=ON
 CMAKE_ARGS+=			-DPARAVIEW_USE_MPI=OFF
-CMAKE_ARGS+=			-DPARAVIEW_USE_SYSTEM_HDF5=ON
+CMAKE_ARGS+=			-DVTK_USE_SYSTEM_HDF5=ON
 CMAKE_ARGS+=			-DPARAVIEW_ENABLE_PYTHON=ON
 CMAKE_ARGS+=			-DPARAVIEW_BUILD_QT_GUI=ON
 CMAKE_ARGS+=			-DPARAVIEW_INSTALL_DEVELOPMENT=ON
@@ -46,6 +46,10 @@ CONFIGURE_DIRS= 		_ParaView_build
 PY_PATCHPLIST=			yes
 #PYDISTUTILSPKG=         yes
 #PLIST_SUBST+=           PYVERSSUFFIX=${PYVERSSUFFIX}
+
+# to make protoc work during installation
+# http://paraview.org/Bug/view.php?id=12852
+MAKE_ENV+=			LD_LIBRARY_PATH=${WRKSRC}/_ParaView_build/bin/
 
 pre-configure:
 	${MKDIR} ${WRKSRC}/_ParaView_build
