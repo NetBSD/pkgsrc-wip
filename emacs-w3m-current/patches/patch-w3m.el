@@ -1,4 +1,6 @@
-$NetBSD: patch-w3m.el,v 1.1 2011/10/12 01:16:43 minskim Exp $
+$NetBSD: patch-w3m.el,v 1.2 2012/03/02 23:52:39 makoto Exp $
+
+Use an absolute path in invoking w3m.
 
 --- w3m.el.orig	2011-09-07 23:15:48.000000000 +0000
 +++ w3m.el
