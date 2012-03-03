@@ -1,0 +1,39 @@
+- test if each DEPENDENCY is correct, say, really necessary
+- To work this package correctly, two set of patches,
+ * PKG/46133 for print/pdvipsk
+ * And following one are necessary (otherwise conflicts)
+
+Index: print/teTeX3-texmf/Makefile
+===================================================================
+RCS file: /e/cvsync/cvsync/pkgsrc/print/teTeX3-texmf/Makefile,v
+retrieving revision 1.49
+diff -u -r1.49 Makefile
+--- print/teTeX3-texmf/Makefile	22 Jan 2011 23:54:25 -0000	1.49
++++ print/teTeX3-texmf/Makefile	24 Feb 2011 13:37:47 -0000
+@@ -467,6 +467,8 @@
+ 	rm -rf ${WRKSRC}/tex/plain/pdfcolor
+ 	rm -rf ${WRKSRC}/tex/plain/[r-u]*
+ 	rm -rf ${WRKSRC}/tex/plain/[w-z]*
++	rm -f  ${WRKSRC}/tex/platex/config/hyphen.cfg
++	rm -f  ${WRKSRC}/tex/platex/config/platex.ini
+ 
+ do-install:
+ 	cd ${WRKSRC} && pax -wr -s ',.*\.orig$$,,' * ${DESTDIR}${PREFIX}/share/texmf-dist
+Index: print/teTeX3-texmf/PLIST
+===================================================================
+RCS file: /e/cvsync/cvsync/pkgsrc/print/teTeX3-texmf/PLIST,v
+retrieving revision 1.26
+diff -u -r1.26 PLIST
+--- print/teTeX3-texmf/PLIST	22 Jan 2011 23:54:25 -0000	1.26
++++ print/teTeX3-texmf/PLIST	24 Feb 2011 13:38:09 -0000
+@@ -8088,10 +8088,8 @@
+ share/texmf-dist/tex/plain/vietnam/plnfss.tex
+ share/texmf-dist/tex/plain/vietnam/t5cmr.pfd
+ share/texmf-dist/tex/plain/vietnam/t5code.tex
+-share/texmf-dist/tex/platex/config/hyphen.cfg
+ share/texmf-dist/tex/platex/config/language.dat
+ share/texmf-dist/tex/platex/config/pdfplatex.ini
+-share/texmf-dist/tex/platex/config/platex.ini
+ share/texmf-dist/tex/texinfo/texinfo.ini
+ share/texmf-dist/tex/texinfo/texinfo.tex
+ share/texmf-dist/tex/texinfo/txi-cs.tex

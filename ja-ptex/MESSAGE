@@ -1,0 +1,10 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2012/03/03 11:09:53 makoto Exp $
+To preview with ghostscript, you may need two more packages to be installed,
+   (wip)/ghostscript-cidfonts-ryumin
+   {print,wip}/ghostscript
+
+To preview with pdf format for Japanese documents have following two.
+   print/xpdf
+   print/xpdf-japanese
+===========================================================================
