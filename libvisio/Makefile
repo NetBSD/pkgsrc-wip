@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/03/03 10:47:42 ftigeot Exp $
+# $NetBSD: Makefile,v 1.2 2012/03/03 11:02:27 ftigeot Exp $
 
 VER=		0.0.15
 DISTNAME=	libvisio-${VER}
@@ -10,9 +10,7 @@ EXTRACT_SUFX=	.tar.xz
 MAINTAINER=	ftigeot@wolfpond.org
 HOMEPAGE=	http://www.freedesktop.org/wiki/Software/libvisio/
 COMMENT=	Library and tools for parsing the visio file format
-LICENSE=	gnu-lgpl-v2.1
-#LICENSE+=	mpl-1.1
-#LICENSE+=	gnu-gpl-v2
+LICENSE=	gnu-lgpl-v2.1 OR mpl-1.1 OR gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
