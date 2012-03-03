@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/11/19 18:23:29 ftigeot Exp $
+# $NetBSD: Makefile,v 1.4 2012/03/03 15:28:15 ftigeot Exp $
 
 VER=		3.2.0
 DISTNAME=	libexttextcat-${VER}
@@ -14,7 +14,7 @@ LICENSE=	modified-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-WRKSRC=		${WRKDIR}/${PKGNAME}
+WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
 CONFLICTS+=	libtextcat-[0-9]*
 
