@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/07/08 09:42:59 phonohawk Exp $
+$NetBSD: distinfo,v 1.2 2012/03/04 07:47:44 phonohawk Exp $
 
-SHA1 (executable-path-0.0.2.tar.gz) = b072d28510b552112a751414b878fad980747e30
-RMD160 (executable-path-0.0.2.tar.gz) = 898b51efcf29c4912a7c2ade2e5613745c412a3b
-Size (executable-path-0.0.2.tar.gz) = 6261 bytes
+SHA1 (executable-path-0.0.3.tar.gz) = d00899c45ea4e128a36391e674dd7a1e0b74586e
+RMD160 (executable-path-0.0.3.tar.gz) = b6a77ff472fa2c1358f3a059274a4f6d261b10ba
+Size (executable-path-0.0.3.tar.gz) = 6619 bytes

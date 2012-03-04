@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/07/08 09:42:59 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2012/03/04 07:47:44 phonohawk Exp $
 #
 
-DISTNAME=	executable-path-0.0.2
+DISTNAME=	executable-path-0.0.3
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
