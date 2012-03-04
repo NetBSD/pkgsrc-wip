@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2012/02/29 16:39:17 ftigeot Exp $
+@comment $NetBSD: PLIST,v 1.14 2012/03/04 07:38:52 ftigeot Exp $
 bin/sbase
 bin/scalc
 bin/sdraw
@@ -122,6 +122,8 @@ ${PKGNAME}/program/fsstorage.uno.so
 ${PKGNAME}/program/fundamentalrc
 ${PKGNAME}/program/gconfbe1.uno.so
 ${PKGNAME}/program/gdbtrace
+${PKGNAME}/program/gengal
+${PKGNAME}/program/gengal.bin
 ${PKGNAME}/program/gnome-open-url
 ${PKGNAME}/program/gnome-open-url.bin
 ${PKGNAME}/program/hatchwindowfactory.uno.so
