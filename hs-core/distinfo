@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/03/04 08:59:45 phonohawk Exp $
+
+SHA1 (core-0.5.tar.gz) = 09a0cd3607f2aa9f5ddaf2ab15085408ca798e4e
+RMD160 (core-0.5.tar.gz) = 81ed03da1e53e9bd67e4b07d32a74ec8f0791b7c
+Size (core-0.5.tar.gz) = 7461 bytes
