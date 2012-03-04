@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/07/12 07:34:24 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2012/03/04 08:14:38 phonohawk Exp $
 #
 
-DISTNAME=	crypto-api-0.6.3
+DISTNAME=	crypto-api-0.9
 CATEGORIES=	security
 
 MAINTAINER=	pho@cielonegro.org
