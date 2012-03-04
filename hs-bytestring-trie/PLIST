@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:43 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/03/04 05:54:43 phonohawk Exp $
 lib/bytestring-trie-${PKGVERSION}/${HASKELL_VERSION}/Data/Trie.hi
 lib/bytestring-trie-${PKGVERSION}/${HASKELL_VERSION}/Data/Trie.p_hi
 lib/bytestring-trie-${PKGVERSION}/${HASKELL_VERSION}/Data/Trie/BitTwiddle.hi
@@ -7,6 +7,8 @@ lib/bytestring-trie-${PKGVERSION}/${HASKELL_VERSION}/Data/Trie/ByteStringInterna
 lib/bytestring-trie-${PKGVERSION}/${HASKELL_VERSION}/Data/Trie/ByteStringInternal.p_hi
 lib/bytestring-trie-${PKGVERSION}/${HASKELL_VERSION}/Data/Trie/Convenience.hi
 lib/bytestring-trie-${PKGVERSION}/${HASKELL_VERSION}/Data/Trie/Convenience.p_hi
+lib/bytestring-trie-${PKGVERSION}/${HASKELL_VERSION}/Data/Trie/Errors.hi
+lib/bytestring-trie-${PKGVERSION}/${HASKELL_VERSION}/Data/Trie/Errors.p_hi
 lib/bytestring-trie-${PKGVERSION}/${HASKELL_VERSION}/Data/Trie/Internal.hi
 lib/bytestring-trie-${PKGVERSION}/${HASKELL_VERSION}/Data/Trie/Internal.p_hi
 lib/bytestring-trie-${PKGVERSION}/${HASKELL_VERSION}/HSbytestring-trie-${PKGVERSION}.o

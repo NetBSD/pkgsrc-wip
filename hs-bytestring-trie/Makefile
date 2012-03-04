@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/10/02 03:26:52 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2012/03/04 05:54:43 phonohawk Exp $
 #
 
-DISTNAME=	bytestring-trie-0.1.4
+DISTNAME=	bytestring-trie-0.2.3
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
 COMMENT=	Efficient finite map from (byte)strings to values
 
 .include "../../wip/mk/haskell.mk"
-.include "../../wip/hs-binary/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
