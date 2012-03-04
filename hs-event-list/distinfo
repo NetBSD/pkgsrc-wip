@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2010/02/19 08:20:55 phonohawk Exp $
+$NetBSD: distinfo,v 1.3 2012/03/04 08:37:16 phonohawk Exp $
 
-SHA1 (event-list-0.0.10.1.tar.gz) = 58bb71aab597b3a6d1d62536d56d070101773817
-RMD160 (event-list-0.0.10.1.tar.gz) = 472f103172cc991946c7beb3995b3f3046f59b91
-Size (event-list-0.0.10.1.tar.gz) = 50784 bytes
+SHA1 (event-list-0.1.tar.gz) = 9286fcfa72c9732772f9cb57d096a81562ed6d38
+RMD160 (event-list-0.1.tar.gz) = 06e52d9354fc3092aef4e17342f682fc47abe739
+Size (event-list-0.1.tar.gz) = 54339 bytes
