@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.26 2012/02/29 16:39:17 ftigeot Exp $
+$NetBSD: distinfo,v 1.27 2012/03/04 00:29:11 ftigeot Exp $
 
 SHA1 (libreoffice/067201ea8b126597670b5eff72e1f66c-mythes-1.2.0.tar.gz) = 025d5d0d566a23ddb353495c116116c1088ba2e9
 RMD160 (libreoffice/067201ea8b126597670b5eff72e1f66c-mythes-1.2.0.tar.gz) = aefa80476ef8340be84440b61f738f432da51c92
@@ -21,9 +21,6 @@ Size (libreoffice/35efabc239af896dfb79be7ebdd6e6b9-gentiumbasic-fonts-1.10.zip) 
 SHA1 (libreoffice/48a9f787f43a09c0a9b7b00cd1fddbbf-hyphen-2.7.1.tar.gz) = 5149507aee5807c04c34a82b18bcd54a8cb61213
 RMD160 (libreoffice/48a9f787f43a09c0a9b7b00cd1fddbbf-hyphen-2.7.1.tar.gz) = a0cfdade91eba06441faea5292c4653b128e4a67
 Size (libreoffice/48a9f787f43a09c0a9b7b00cd1fddbbf-hyphen-2.7.1.tar.gz) = 612842 bytes
-SHA1 (libreoffice/776ad69a63ac1e99abed176e54ce25d9-libvisio-0.0.14.tar.bz2) = 37f9a9ebb71bb2d9e14016b0d3decbe3be86b714
-RMD160 (libreoffice/776ad69a63ac1e99abed176e54ce25d9-libvisio-0.0.14.tar.bz2) = cc605c3d1aeda3e0628fe11006ba22dc12421b9f
-Size (libreoffice/776ad69a63ac1e99abed176e54ce25d9-libvisio-0.0.14.tar.bz2) = 380641 bytes
 SHA1 (libreoffice/7c2549f6b0a8bb604e6c4c729ffdcfe6-libcmis-0.1.0.tar.gz) = 9575aad04e4476236ab6f490b583f996c6632ab4
 RMD160 (libreoffice/7c2549f6b0a8bb604e6c4c729ffdcfe6-libcmis-0.1.0.tar.gz) = 76de5c1037f5d48f15a5d4a9fb92cf10e158d8e6
 Size (libreoffice/7c2549f6b0a8bb604e6c4c729ffdcfe6-libcmis-0.1.0.tar.gz) = 373519 bytes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2012/02/29 16:39:17 ftigeot Exp $
+# $NetBSD: Makefile,v 1.25 2012/03/04 00:29:10 ftigeot Exp $
 
 VER=			3.5.0.3
 DISTNAME=		libreoffice-${VER}
@@ -30,7 +30,6 @@ MORE_DISTFILES= \
 	48a9f787f43a09c0a9b7b00cd1fddbbf-hyphen-2.7.1.tar.gz \
 	7c2549f6b0a8bb604e6c4c729ffdcfe6-libcmis-0.1.0.tar.gz \
 	0be45d54cc5e1c2e3102e32b8c190346-liberation-fonts-ttf-1.07.1.tar.gz \
-	776ad69a63ac1e99abed176e54ce25d9-libvisio-0.0.14.tar.bz2 \
 	0ff7d225d087793c8c2c680d77aac3e7-mdds_0.5.3.tar.bz2 \
 	067201ea8b126597670b5eff72e1f66c-mythes-1.2.0.tar.gz \
 	fdb27bfe2dbe2e7b57ae194d9bf36bab-SampleICC-1.3.2.tar.gz \
@@ -105,7 +104,6 @@ CONFIGURE_ARGS+=	--without-java
 CONFIGURE_ARGS+=	--without-system-altlinuxhyph
 CONFIGURE_ARGS+=	--without-system-jars
 CONFIGURE_ARGS+=	--without-system-libcmis
-CONFIGURE_ARGS+=	--without-system-libvisio
 CONFIGURE_ARGS+=	--without-system-mdds
 CONFIGURE_ARGS+=	--without-system-mozilla-headers
 CONFIGURE_ARGS+=	--without-system-mythes
@@ -192,6 +190,7 @@ post-install:
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../textproc/redland/buildlink3.mk"
 .include "../../wip/libexttextcat/buildlink3.mk"
+.include "../../wip/libvisio/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
