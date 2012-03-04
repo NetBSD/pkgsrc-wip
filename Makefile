@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4666 2012/03/04 06:47:25 phonohawk Exp $
+# $Id: Makefile,v 1.4667 2012/03/04 07:35:56 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1008,6 +1008,7 @@ SUBDIR+=	hs-storablevector
 SUBDIR+=	hs-stream-fusion
 SUBDIR+=	hs-strict
 SUBDIR+=	hs-stringsearch
+SUBDIR+=	hs-stringtable-atom
 SUBDIR+=	hs-syb
 SUBDIR+=	hs-tagged
 SUBDIR+=	hs-tagsoup
