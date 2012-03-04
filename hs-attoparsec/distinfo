@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2011/12/16 13:06:15 phonohawk Exp $
+$NetBSD: distinfo,v 1.4 2012/03/04 05:05:57 phonohawk Exp $
 
-SHA1 (attoparsec-0.10.1.0.tar.gz) = 6770c375254b61e4a69cad78f36a4b7af3213624
-RMD160 (attoparsec-0.10.1.0.tar.gz) = fc39e9b0d256cebecce840208e624b2ec6e62e6e
-Size (attoparsec-0.10.1.0.tar.gz) = 28234 bytes
+SHA1 (attoparsec-0.10.1.1.tar.gz) = 6ed60e385ebda97529df1a5477ae819976d1db07
+RMD160 (attoparsec-0.10.1.1.tar.gz) = 044ab9c7144c165ddb39e77581e94a25273e192e
+Size (attoparsec-0.10.1.1.tar.gz) = 29290 bytes
