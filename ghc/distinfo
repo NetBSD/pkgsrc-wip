@@ -1,18 +1,25 @@
-$NetBSD: distinfo,v 1.15 2012/01/25 14:09:06 phonohawk Exp $
+$NetBSD: distinfo,v 1.16 2012/03/04 04:37:13 phonohawk Exp $
 
-SHA1 (ghc-7.0.3-boot-i386-unknown-freebsd.tar.bz2) = b5cc84b72599dcc8e10295081d6b428ffdd56fcf
-RMD160 (ghc-7.0.3-boot-i386-unknown-freebsd.tar.bz2) = b94b0b8484ea0d1f640f88b8b687804e93671d12
-Size (ghc-7.0.3-boot-i386-unknown-freebsd.tar.bz2) = 21775017 bytes
-SHA1 (ghc-7.0.3-boot-i386-unknown-netbsd.tar.bz2) = 41ff14243042a7be9401e55d2f8fae6e8f4657c0
-RMD160 (ghc-7.0.3-boot-i386-unknown-netbsd.tar.bz2) = 72e8c135312f47150fb8e89aeb6465dcd69c4457
-Size (ghc-7.0.3-boot-i386-unknown-netbsd.tar.bz2) = 21680558 bytes
-SHA1 (ghc-7.0.3-boot-powerpc-apple-darwin.tar.bz2) = 7bc52c4d444b688aa25625d355ee49ceb4a569ae
-RMD160 (ghc-7.0.3-boot-powerpc-apple-darwin.tar.bz2) = 82a98c65a286aeafaac5855a9fc4c934a753faea
-Size (ghc-7.0.3-boot-powerpc-apple-darwin.tar.bz2) = 21726984 bytes
-SHA1 (ghc-7.0.3-src.tar.bz2) = 222eed949413723b1f45218a908d5ee6930fda1b
-RMD160 (ghc-7.0.3-src.tar.bz2) = bdf9b358bc98524cc8d01d8e31b0197be47124e1
-Size (ghc-7.0.3-src.tar.bz2) = 24201117 bytes
-SHA1 (patch-aa) = 7bf8ef1cdefbb931fd21811a2a2f6fc46cc5a564
-SHA1 (patch-aj) = 7055cdcf6df0b2ea16ba18824fdf804a4bc14938
-SHA1 (patch-configure) = 445b02ac6d9d280460306392722520b3416fba7c
-SHA1 (patch-rts_ghc.mk) = 498df608a3709e9b8955b67bede9ba937500ac51
+SHA1 (ghc-7.4.1-boot-i386-unknown-freebsd8.0.tar.bz2) = ecc5b1469f20ffd2dd49b201711519ed91bca280
+RMD160 (ghc-7.4.1-boot-i386-unknown-freebsd8.0.tar.bz2) = 3306d8a0e1c7510598b7ac2ef1a6b6e640823258
+Size (ghc-7.4.1-boot-i386-unknown-freebsd8.0.tar.bz2) = 26476045 bytes
+SHA1 (ghc-7.4.1-boot-i386-unknown-netbsdelf6.99.1.tar.bz2) = 039ff76ca33d2aea59d1d2cdee35d8ff797301ba
+RMD160 (ghc-7.4.1-boot-i386-unknown-netbsdelf6.99.1.tar.bz2) = 05e4318a6f1df52991210f1674c1cd5ad26c24ec
+Size (ghc-7.4.1-boot-i386-unknown-netbsdelf6.99.1.tar.bz2) = 26558836 bytes
+SHA1 (ghc-7.4.1-boot-powerpc-apple-darwin9.8.0.tar.bz2) = 0165e30fb357ff487afa3b31d9eac5d8ea3374fe
+RMD160 (ghc-7.4.1-boot-powerpc-apple-darwin9.8.0.tar.bz2) = 35340e832a6202949c35c72492dff8185b1e852c
+Size (ghc-7.4.1-boot-powerpc-apple-darwin9.8.0.tar.bz2) = 26636237 bytes
+SHA1 (ghc-7.4.1-src.tar.bz2) = 66c5a027fef1ed01c35c3493e964fb3657efc936
+RMD160 (ghc-7.4.1-src.tar.bz2) = 00c6a4df54e55559812b0e289dbc6fe8523d18da
+Size (ghc-7.4.1-src.tar.bz2) = 25272609 bytes
+SHA1 (patch-aclocal.m4) = 6d392d96debdee3a61ee662a0d120ca72ab8c8a9
+SHA1 (patch-compiler_main_SysTools.lhs) = 085c58fda9495f6a7357502e51c3e69945a01d97
+SHA1 (patch-compiler_nativeGen_AsmCodeGen.lhs) = 892a6b12a57426e2e2d97414b5d6d7ad4ab2d398
+SHA1 (patch-compiler_utils_Platform.hs) = be8dab6220da56be1a8d585fb92d1c7cef462f63
+SHA1 (patch-configure.ac) = d6049344dc3baeee30eedb6bdae06622ab5f70d2
+SHA1 (patch-libraries_integer-gmp_configure.ac) = 1f8565310363614d0c6b4856041777655067ecdd
+SHA1 (patch-rts_ghc.mk) = 16f48b8f69c07357bec4ea3ab0ae40869768fc54
+SHA1 (patch-rules_build-prog.mk) = ac3bccad40bb9ed7562a3b5c08c5894cd617e008
+SHA1 (patch-rules_hs-suffix-rules-srcdir.mk) = 97cbea3cbf55339272655f1aff3630a0262d1e33
+SHA1 (patch-settings.in) = 14643ecf4b5d4dc992e5b65f9e8b041433f926f5
+SHA1 (patch-utils_ghc-pkg_ghc.mk) = 130e296771a8ba347eaf85c9882f0b2620ecba9a

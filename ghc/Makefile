@@ -1,41 +1,40 @@
-# $NetBSD: Makefile,v 1.30 2011/05/06 02:30:25 phonohawk Exp $
+# $NetBSD: Makefile,v 1.31 2012/03/04 04:37:12 phonohawk Exp $
 
-DISTNAME=		ghc-${VERSION}
-VERSION=		7.0.3
-CATEGORIES=		lang
+DISTNAME=	ghc-${VERSION}
+VERSION=	7.4.1
+CATEGORIES=	lang
 MASTER_SITES=	http://www.haskell.org/ghc/dist/${VERSION}/
-MAINTAINER=		kristerw@NetBSD.org
-HOMEPAGE=		http://www.haskell.org/ghc/
-COMMENT=		Compiler for the functional language Haskell
-LICENSE=		modified-bsd
+MAINTAINER=	kristerw@NetBSD.org
+HOMEPAGE=	http://www.haskell.org/ghc/
+COMMENT=	Compiler for the functional language Haskell
+LICENSE=	modified-bsd
 
-DISTFILES=		${DISTNAME}-src.tar.bz2
-DISTFILES+=		${DISTNAME}-boot-i386-unknown-freebsd.tar.bz2
-DISTFILES+=		${DISTNAME}-boot-i386-unknown-netbsd.tar.bz2
-DISTFILES+=		${DISTNAME}-boot-powerpc-apple-darwin.tar.bz2
+DISTFILES=	${DISTNAME}-src.tar.bz2
+DISTFILES+=	${DISTNAME}-boot-i386-unknown-freebsd8.0.tar.bz2
+DISTFILES+=	${DISTNAME}-boot-i386-unknown-netbsdelf6.99.1.tar.bz2
+DISTFILES+=	${DISTNAME}-boot-powerpc-apple-darwin9.8.0.tar.bz2
 
-
-SITES.${DISTNAME}-boot-i386-unknown-netbsd.tar.bz2	= http://static.cielonegro.org/archive/
-SITES.${DISTNAME}-boot-i386-unknown-freebsd.tar.bz2	= http://static.cielonegro.org/archive/
-SITES.${DISTNAME}-boot-powerpc-apple-darwin.tar.bz2	= http://static.cielonegro.org/archive/
+.for i in ${DISTFILES:M*-boot-*}
+SITES.${i}=	http://static.cielonegro.org/archive/
+.endfor
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-.include "../../mk/bsd.prefs.mk"
-
-# Unregisterised HC packages are architecture dependent. We have to
-# create more HC packages to support more architectures. Note that
-# these packages are built with integer-simple, not integer-gmp, to
-# reduce some complexity by not depending on the GMP. The resulting
-# registerised GHC uses integer-gmp so this won't be a problem.
+# Unregisterised HC packages are platform-dependent C sources. Yes,
+# they are C sources but are totally non-portable. We have to create
+# more HC packages to support more platforms. Note that those packages
+# are built with integer-simple, not integer-gmp, to reduce some
+# complexity by not depending on the GMP. The resulting registerised
+# GHC uses integer-gmp so this won't be a problem.
 #
 # If you want to build HC packages yourself, follow instructions in
 # the ./TODO file.
 ONLY_FOR_PLATFORM= NetBSD-*-i386 FreeBSD-*-i386 Darwin-*-powerpc
 
-# We must provide the real pass to gcc to the ./configure script,
+# We must provide the real path to gcc to the ./configure script,
 # because GHC has a runtime dependency on it. Aren't there any ways
 # better than this?
+.include "../../mk/bsd.prefs.mk"
 .include "../../mk/compiler.mk"
 .if empty(CCPATH)
 WARNINGS+= "This package depends on pkgsrc's undocumented variable \
@@ -46,8 +45,8 @@ CONFIGURE_ARGS+= --with-gcc=/usr/bin/gcc
 CONFIGURE_ARGS+= --with-gcc=${CCPATH}
 .endif
 
-USE_TOOLS+=	gmake bsdtar perl:run
-CONFIGURE_ENV+=		PerlCmd=${PERL5:Q}
+USE_TOOLS+=	autoconf date gmake gtar perl perl:run
+CONFIGURE_ENV+=	PerlCmd=${PERL5:Q}
 
 # We don't want to extract all of the DISTFILEs.
 EXTRACT_ONLY=	${DISTNAME}-src.tar.bz2
@@ -63,95 +62,10 @@ CONFIGURE_ARGS += \
 	--with-iconv-includes=${PREFIX}/include \
 	--with-iconv-libraries=${PREFIX}/lib
 
-# Build an unregisterised bootstrap compiler and install it directly
-# into the .buildlink directory. But we can't use "make install"
-# because we don't build it in a standard way (./configure && make).
-#
-# To install it, we just copy ghc and ghc-pkg from
-# "work/bootstrap/ghc-${VERSION}/inplace/bin" to
-# "${BUILDLINK_DIR}/bin". Note that in-place ghc isn't usable before
-# running "ghc-pkg recache".
-
-.if ${MACHINE_ARCH} == "i386" && ${OPSYS} == "NetBSD"
-BOOTSTRAP_BUILD_MK = ${PKGDIR}/files/bootstrap-bsd.mk
-PLATFORM           = i386-unknown-netbsd
-
-.elif ${MACHINE_ARCH} == "i386" && ${OPSYS} == "FreeBSD"
-BOOTSTRAP_BUILD_MK = ${PKGDIR}/files/bootstrap-bsd.mk
-PLATFORM           = i386-unknown-freebsd
-
-.elif ${MACHINE_ARCH} == "powerpc" && ${OPSYS} == "Darwin"
-BOOTSTRAP_BUILD_MK = ${PKGDIR}/files/bootstrap.mk
-PLATFORM           = powerpc-apple-darwin
-# Existence of libelf makes LeadingUnderscore being "NO", which is
-# incorrect for this platform. See ghc-6.12.1/aclocal.m4
-# (FP_LEADING_UNDERSCORE)
-CONFLICTS=	libelf-[0-9]*
-
-.else
-PKG_FAIL_REASON+=	"internal error: unsupported platform"
-.endif
-
-BOOTSTRAP_TARBALL = ${DISTNAME}-boot-${PLATFORM}.tar.bz2
-
-pre-configure: ${WRKDIR}/stamp-bootstrap-ghc
-
-${WRKDIR}/stamp-prepare-bootstrap:
-	${RUN} cd ${WRKDIR} && \
-		${ECHO} "====> Preparing bootstrap compiler" && \
-		${RM} -rf bootstrap && \
-		${MKDIR} -p bootstrap && \
-		${CP} -r ${DISTNAME} bootstrap && \
-		cd bootstrap/${DISTNAME} && \
-		${MKDIR} -p utils/ghc-pwd/dist-boot && \
-		${LN} -sf ${PWD_CMD} utils/ghc-pwd/dist-boot/ghc-pwd && \
-		${TOUCH} $@
-
-${WRKDIR}/stamp-configure-hc-boot: ${WRKDIR}/stamp-prepare-bootstrap
-	${RUN} cd ${WRKDIR}/bootstrap/${DISTNAME} && \
-		${ECHO} "====> Configuring for bootstrap compiler" && \
-		${SETENV} ${CONFIGURE_ENV} ./configure --enable-hc-boot --with-ghc="" ${CONFIGURE_ARGS} && \
-		${TOUCH} $@
-
-${WRKDIR}/stamp-extract-hc: ${WRKDIR}/stamp-configure-hc-boot
-	${RUN} cd ${WRKDIR}/bootstrap/${DISTNAME} && \
-		${ECHO} "====> Extracting bootstrap HC archive" && \
-		(cd .. && bsdtar jxfm ${DISTDIR}/${BOOTSTRAP_TARBALL}) && \
-		${SH} mkfiles && \
-		${TOUCH} $@
-
-${WRKDIR}/stamp-rewrite-hc-paths: ${WRKDIR}/stamp-extract-hc
-	${RUN} cd ${WRKDIR}/bootstrap/${DISTNAME} && \
-		${ECHO} "====> Rewriting GHC source paths" && \
-		${SED} -e "s#\\[\\[PREFIX\\]\\]#${PREFIX}#g" ${BOOTSTRAP_BUILD_MK} > mk/build.mk && \
-		for c in libraries/*/configure; do \
-			(cd `${DIRNAME} $$c` && ${SETENV} ${CONFIGURE_ENV} ${SH} configure ${CONFIGURE_ARGS}); \
-		done && \
-		for i in inplace/lib/package.conf.d/*.conf */*/package-data.mk */*/*/package-data.mk; do \
-			${SED} -e "s#\\[\\[PREFIX\\]\\]#${PREFIX}#g" \
-				   -e "s#\\[\\[GHC_SOURCE_PATH\\]\\]#`${PWD_CMD}`#g" $$i > $$i.tmp; \
-			${MV} -f $$i.tmp $$i; \
-		done && \
-		${TOUCH} -r inplace/lib/package.conf.d */*/package-data.mk */*/*/package-data.mk && \
-		${TOUCH} $@
-
-${WRKDIR}/stamp-bootstrap-ghc: ${WRKDIR}/stamp-rewrite-hc-paths
-	${RUN} cd ${WRKDIR}/bootstrap/${DISTNAME} && \
-		${ECHO} "====> Building bootstrap compiler" && \
-		${GMAKE} bootstrapping-files && \
-		${GMAKE} all_ghc_stage2 && \
-		${GMAKE} inplace/bin/ghc-pkg && \
-		${GMAKE} inplace/lib/unlit && \
-		inplace/bin/ghc-pkg recache && \
-		${CP} -f inplace/bin/ghc-stage2 ${BUILDLINK_DIR}/bin/ghc && \
-		${CP} -f inplace/bin/ghc-pkg ${BUILDLINK_DIR}/bin/ghc-pkg && \
-		${TOUCH} $@
+# Define ${PLATFORM} and the target "pre-configure".
+.include "../../wip/ghc/stage0.mk"
 
 do-configure:
-# Seemingly by mistake, ghc-7.0.3 has a prebuilt
-# utils/ghc-pwd/dist-boot/ghc-pwd for amd64 GNU/Linux.
-	${RUN} cd ${WRKSRC} && \
-		rm -rf utils/ghc-pwd/dist-boot
 	${RUN} cd ${WRKSRC} && \
 		${SETENV} ${CONFIGURE_ENV} ./configure ${CONFIGURE_ARGS}
 # We need to tell the libraries/terminfo/configure that our ncurses is
@@ -172,12 +86,6 @@ do-configure:
 # If we don't explicitly disable HsColour, PLIST gets changed
 # depending on whether we have installed it or not.
 	${RUN} ${ECHO} "HSCOLOUR_SRCS = NO" >> ${WRKSRC}/mk/build.mk
-# To avoid powerpc crash...
-# See http://hackage.haskell.org/trac/ghc/ticket/4034
-#.if ${MACHINE_ARCH} == "powerpc" && ${OPSYS} == "Darwin"
-#	${RUN} ${ECHO} "GhcRtsHcOpts = -optc-O0 -optc-g" >> ${WRKSRC}/mk/build.mk
-#	${RUN} ${ECHO} "GhcRtsCcOpts = -O0 -g" >> ${WRKSRC}/mk/build.mk
-#.endif
 
 # Substitutions for INSTALL and DEINSTALL.
 FILES_SUBST+=	DISTNAME=${DISTNAME}

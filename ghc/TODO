@@ -1,15 +1,46 @@
 .. -*- rst -*-
 
-============
 wip/ghc TODO
 ============
 
+* Send hunks #3 and #4 of patch-aclocal.m4 to the upstream.
+* Send patch-configure.ac to the upstream.
+* Send patch-libraries-integer-gmp_configure.ac to the upstream.
+* Send patch-rules_hs-suffix-rules-srcdir.mk to the upstream.
+* Modify configure.ac and rules/build-package-data.mk to allow
+  ``--with-curses-{includes,libraries}`` to be passed to the top-level
+  ``configure``, and send a patch to the upstream.
+* Explain about files/bootstrap-main.c and files/capi-wrappers-*.c
+  in this guide, and fix the upstream to throw them away.
 * Build more bootstrapping HC archives to support more platforms.
 
 
---------------------------
 How to build an HC archive
 --------------------------
+
+A preferred, automated way
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+I've written an automation tool to build one: `build-hc-pkg
+<http://git.cielonegro.org/gitweb.cgi?p=build-hc-pkg.git>`_
+
+To use it, clone the repository, run ``./build-hc-pkg``, and then
+follow the instruction it shows::
+
+    $ git clone git://git.cielonegro.org/build-hc-pkg.git
+    ...
+    $ cd build-hc-pkg
+    $ ./build-hc-pkg
+    ...
+    This is build-hc-pkg, running on powerpc-apple-darwin9.8.0 with 2 processors.
+    Enter the file path to ghc-x.y.z-src.tar.bz2: _
+
+Note that you need Bash, Automake, GNU make, GNU sed, and GNU tar to
+use it.
+
+
+A manual way
+^^^^^^^^^^^^
 
 It's basically the same as the `Porting Guide
 <http://hackage.haskell.org/trac/ghc/wiki/Building/Porting>`_, plus
@@ -25,7 +56,6 @@ Extract the source archive and duplicate the source tree, one for
 Build some configuration files::
 
     $ cd ghc-{VERSION}-target
-    $ ln -s /bin/pwd utils/ghc-pwd/ghc-pwd
     $ ./configure --enable-hc-boot
     $ echo "INTEGER_LIBRARY = integer-simple" > mk/build.mk
     $ gmake bootstrapping-files
@@ -63,7 +93,8 @@ contents::
 
 Copy some configuration files from the ``-target`` tree::
 
-    $ cp ../ghc-{VERSION}-target/includes/{ghcautoconf.h,DerivedConstants.h,GHCConstants.h} includes/
+    $ cp -r ../ghc-{VERSION}-target/includes/dist-{ghcconstants,derivedconstants} includes/
+    $ cp ../ghc-{VERSION}-target/includes/ghcautoconf.h includes/
 
 Build it::
 
@@ -96,13 +127,15 @@ Then extract it again, in a different directory::
 Modify hard-coded paths in inplace ``.conf`` files, and then
 re-archive the HC tree::
 
-    $ gsed -i.bak \
+    $ gsed -i \
           -e 's#/usr/pkg#[[PREFIX]]#g' \
           -e 's#'`dirname \`pwd\``'#[[GHC_SOURCE_PATH]]#g' \
           inplace/lib/package.conf.d/*.conf \
+          */package.conf.inplace \
           */*/package-data.mk \
-          */*/*/package-data.mk
+          */*/*/package-data.mk \
+          */*/*/*/package-data.mk
     $ cd ..
-    $ tar jcf ghc-{VERSION}-boot-{PLATFORM}.tar.bz2 ghc-{VERSION}
+    $ tar jcvf ghc-{VERSION}-boot-{PLATFORM}.tar.bz2 ghc-{VERSION}
 
 Done. Upload the archive to some host and add it to the ``Makefile``.

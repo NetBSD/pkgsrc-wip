@@ -1,0 +1,16 @@
+$NetBSD: patch-settings.in,v 1.1 2012/03/04 04:37:14 phonohawk Exp $
+
+For systems having as(1) that doesn't recognise .ident
+directives. (Already merged to the upstream)
+
+
+--- settings.in.orig	2012-02-01 18:10:32.000000000 +0000
++++ settings.in
+@@ -12,6 +12,7 @@
+  ("target arch", "@HaskellTargetArch@"),
+  ("target word size", "@WordSize@"),
+  ("target has GNU nonexec stack", "@HaskellHaveGnuNonexecStack@"),
++ ("target has .ident directive", "@HaskellHaveIdentDirective@"),
+  ("target has subsections via symbols", "@HaskellHaveSubsectionsViaSymbols@")
+  ]
+ 
