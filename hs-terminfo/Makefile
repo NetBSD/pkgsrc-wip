@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2011/01/07 09:48:12 phonohawk Exp $
+# $NetBSD: Makefile,v 1.5 2012/03/04 07:40:02 phonohawk Exp $
 #
 
-DISTNAME=	terminfo-0.3.1.3
+DISTNAME=	terminfo-0.3.2.3
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
