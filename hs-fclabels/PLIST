@@ -1,12 +1,18 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/07/12 05:06:10 phonohawk Exp $
-lib/fclabels-${PKGVERSION}/${HASKELL_VERSION}/Data/Record/Label.hi
-lib/fclabels-${PKGVERSION}/${HASKELL_VERSION}/Data/Record/Label.p_hi
-lib/fclabels-${PKGVERSION}/${HASKELL_VERSION}/Data/Record/Label/Core.hi
-lib/fclabels-${PKGVERSION}/${HASKELL_VERSION}/Data/Record/Label/Core.p_hi
-lib/fclabels-${PKGVERSION}/${HASKELL_VERSION}/Data/Record/Label/Monadic.hi
-lib/fclabels-${PKGVERSION}/${HASKELL_VERSION}/Data/Record/Label/Monadic.p_hi
-lib/fclabels-${PKGVERSION}/${HASKELL_VERSION}/Data/Record/Label/TH.hi
-lib/fclabels-${PKGVERSION}/${HASKELL_VERSION}/Data/Record/Label/TH.p_hi
+@comment $NetBSD: PLIST,v 1.2 2012/03/04 07:06:36 phonohawk Exp $
+lib/fclabels-${PKGVERSION}/${HASKELL_VERSION}/Data/Label.hi
+lib/fclabels-${PKGVERSION}/${HASKELL_VERSION}/Data/Label.p_hi
+lib/fclabels-${PKGVERSION}/${HASKELL_VERSION}/Data/Label/Abstract.hi
+lib/fclabels-${PKGVERSION}/${HASKELL_VERSION}/Data/Label/Abstract.p_hi
+lib/fclabels-${PKGVERSION}/${HASKELL_VERSION}/Data/Label/Derive.hi
+lib/fclabels-${PKGVERSION}/${HASKELL_VERSION}/Data/Label/Derive.p_hi
+lib/fclabels-${PKGVERSION}/${HASKELL_VERSION}/Data/Label/Maybe.hi
+lib/fclabels-${PKGVERSION}/${HASKELL_VERSION}/Data/Label/Maybe.p_hi
+lib/fclabels-${PKGVERSION}/${HASKELL_VERSION}/Data/Label/MaybeM.hi
+lib/fclabels-${PKGVERSION}/${HASKELL_VERSION}/Data/Label/MaybeM.p_hi
+lib/fclabels-${PKGVERSION}/${HASKELL_VERSION}/Data/Label/Pure.hi
+lib/fclabels-${PKGVERSION}/${HASKELL_VERSION}/Data/Label/Pure.p_hi
+lib/fclabels-${PKGVERSION}/${HASKELL_VERSION}/Data/Label/PureM.hi
+lib/fclabels-${PKGVERSION}/${HASKELL_VERSION}/Data/Label/PureM.p_hi
 lib/fclabels-${PKGVERSION}/${HASKELL_VERSION}/HSfclabels-${PKGVERSION}.o
 lib/fclabels-${PKGVERSION}/${HASKELL_VERSION}/libHSfclabels-${PKGVERSION}.a
 lib/fclabels-${PKGVERSION}/${HASKELL_VERSION}/libHSfclabels-${PKGVERSION}_p.a

@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/07/12 05:06:10 phonohawk Exp $
+$NetBSD: distinfo,v 1.2 2012/03/04 07:06:36 phonohawk Exp $
 
-SHA1 (fclabels-0.11.1.1.tar.gz) = 5dc0a2b22c4676a5e02c7a1c483f8dad8a00f669
-RMD160 (fclabels-0.11.1.1.tar.gz) = 747b264a7129c60aba10365c92f2cdf315bd956d
-Size (fclabels-0.11.1.1.tar.gz) = 5921 bytes
+SHA1 (fclabels-1.0.4.tar.gz) = 0b72c936e013dd0406d690b840133828a0a2a3be
+RMD160 (fclabels-1.0.4.tar.gz) = 52e2921a497bc8a85e5accf46f9deeca702734e9
+Size (fclabels-1.0.4.tar.gz) = 8625 bytes
+SHA1 (patch-fclabels.cabal) = b423e547ccc9696818685613115fb21d12791859
