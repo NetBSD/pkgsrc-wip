@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/03/04 07:34:47 phonohawk Exp $
+
+SHA1 (stringtable-atom-0.0.6.1.tar.gz) = d5637f52c1d6aa23cf1b969b0d1d73c59a66a129
+RMD160 (stringtable-atom-0.0.6.1.tar.gz) = 40d354f768322bf5778ef3ba935800be2bd9ecaf
+Size (stringtable-atom-0.0.6.1.tar.gz) = 9961 bytes
