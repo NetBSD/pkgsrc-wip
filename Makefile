@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4668 2012/03/04 08:30:40 phonohawk Exp $
+# $Id: Makefile,v 1.4669 2012/03/04 09:00:59 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -900,6 +900,7 @@ SUBDIR+=	hs-control-monad-failure
 SUBDIR+=	hs-convertible
 SUBDIR+=	hs-convertible-ascii
 SUBDIR+=	hs-convertible-text
+SUBDIR+=	hs-core
 SUBDIR+=	hs-cpphs
 SUBDIR+=	hs-crypto-api
 SUBDIR+=	hs-curl
