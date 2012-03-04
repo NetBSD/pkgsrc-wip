@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/07/12 07:25:01 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2012/03/04 08:02:28 phonohawk Exp $
 #
 
-DISTNAME=	largeword-1.0.0
+DISTNAME=	largeword-1.0.1
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
