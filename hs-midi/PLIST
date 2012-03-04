@@ -1,7 +1,13 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/09/23 07:11:21 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/03/04 08:48:21 phonohawk Exp $
 lib/midi-${PKGVERSION}/${HASKELL_VERSION}/HSmidi-${PKGVERSION}.o
 lib/midi-${PKGVERSION}/${HASKELL_VERSION}/Sound/MIDI/Bit.hi
 lib/midi-${PKGVERSION}/${HASKELL_VERSION}/Sound/MIDI/Bit.p_hi
+lib/midi-${PKGVERSION}/${HASKELL_VERSION}/Sound/MIDI/Controller.hi
+lib/midi-${PKGVERSION}/${HASKELL_VERSION}/Sound/MIDI/Controller.p_hi
+lib/midi-${PKGVERSION}/${HASKELL_VERSION}/Sound/MIDI/ControllerPrivate.hi
+lib/midi-${PKGVERSION}/${HASKELL_VERSION}/Sound/MIDI/ControllerPrivate.p_hi
+lib/midi-${PKGVERSION}/${HASKELL_VERSION}/Sound/MIDI/Example/ControllerRamp.hi
+lib/midi-${PKGVERSION}/${HASKELL_VERSION}/Sound/MIDI/Example/ControllerRamp.p_hi
 lib/midi-${PKGVERSION}/${HASKELL_VERSION}/Sound/MIDI/File.hi
 lib/midi-${PKGVERSION}/${HASKELL_VERSION}/Sound/MIDI/File.p_hi
 lib/midi-${PKGVERSION}/${HASKELL_VERSION}/Sound/MIDI/File/Event.hi
@@ -28,6 +34,8 @@ lib/midi-${PKGVERSION}/${HASKELL_VERSION}/Sound/MIDI/Message/Channel/Mode.hi
 lib/midi-${PKGVERSION}/${HASKELL_VERSION}/Sound/MIDI/Message/Channel/Mode.p_hi
 lib/midi-${PKGVERSION}/${HASKELL_VERSION}/Sound/MIDI/Message/Channel/Voice.hi
 lib/midi-${PKGVERSION}/${HASKELL_VERSION}/Sound/MIDI/Message/Channel/Voice.p_hi
+lib/midi-${PKGVERSION}/${HASKELL_VERSION}/Sound/MIDI/Message/Class/Check.hi
+lib/midi-${PKGVERSION}/${HASKELL_VERSION}/Sound/MIDI/Message/Class/Check.p_hi
 lib/midi-${PKGVERSION}/${HASKELL_VERSION}/Sound/MIDI/Message/System.hi
 lib/midi-${PKGVERSION}/${HASKELL_VERSION}/Sound/MIDI/Message/System.p_hi
 lib/midi-${PKGVERSION}/${HASKELL_VERSION}/Sound/MIDI/Message/System/Common.hi

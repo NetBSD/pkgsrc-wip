@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2010/02/22 09:07:18 phonohawk Exp $
+$NetBSD: distinfo,v 1.3 2012/03/04 08:48:21 phonohawk Exp $
 
-SHA1 (midi-0.1.5.tar.gz) = 2691306fceb3890d43ce7112499e8d406a305b8f
-RMD160 (midi-0.1.5.tar.gz) = b86c08f3879dbef52a62024aaba7ae82dceff5d1
-Size (midi-0.1.5.tar.gz) = 50615 bytes
+SHA1 (midi-0.1.7.1.tar.gz) = b9e3348bb52dee423c7a48268cabd1c9eec530b8
+RMD160 (midi-0.1.7.1.tar.gz) = 28c9ef02e2431b1d658c6985bd4d5fecb1a6128e
+Size (midi-0.1.7.1.tar.gz) = 55949 bytes
