@@ -1,0 +1,16 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/03/04 07:21:44 obache Exp $
+
+SHA1 (Python-3.2.3rc1.tar.bz2) = 733edc49d7dd7b53d46a1bf121101f6584d5ea55
+RMD160 (Python-3.2.3rc1.tar.bz2) = 7d707c40c571e3fe06a3fdc32a146b44a01fda58
+Size (Python-3.2.3rc1.tar.bz2) = 10780671 bytes
+SHA1 (patch-aa) = ae156c486007cfd14d378dd211108d3af4b841b1
+SHA1 (patch-ab) = 1c0a25bf7ec6ee76e84c799619ec7cd8910f16e1
+SHA1 (patch-ah) = 1db1e3c53a0e8edd2749d475942a082c0f53deee
+SHA1 (patch-al) = 79433658ffb0e6ca7f931e09de36720fab70ee8e
+SHA1 (patch-am) = f28ae81884b81de62842934b54018fc6f24dc425
+SHA1 (patch-an) = 933acde107b735931d26ace4eef251000b9f07ba
+SHA1 (patch-ao) = 3dca4a62bebcfc6465a527b2e44323b8ef10d399
+SHA1 (patch-au) = cca8cc6c0bd6e4f746b45bfdba6beaeccd8f4a0a
+SHA1 (patch-av) = 9b44f339f65f029b7f17dbc654739a7ae3c12780
+SHA1 (patch-aw) = 598e4710c426110012048946786a6d72f050e0fc
+SHA1 (patch-pyconfig.h.in) = 7ebc0ed9ca9a37c5a6c8e04cc3f7fca4a5c90e8c
