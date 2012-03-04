@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4669 2012/03/04 09:00:59 phonohawk Exp $
+# $Id: Makefile,v 1.4670 2012/03/04 22:29:27 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -47,7 +47,6 @@ SUBDIR+=	SDL-intro-it
 SUBDIR+=	SDL-intro-jp
 SUBDIR+=	SDL-intro-pt
 SUBDIR+=	SDL-intro-ru
-SUBDIR+=	SDL_Pango
 SUBDIR+=	Siesta
 SUBDIR+=	StepTalk
 SUBDIR+=	Terminal
@@ -610,7 +609,6 @@ SUBDIR+=	freevrrpd
 SUBDIR+=	fricas
 SUBDIR+=	frobby
 SUBDIR+=	froggymicroblog
-SUBDIR+=	frozen-bubble
 SUBDIR+=	fs2open
 SUBDIR+=	fslsfonts
 SUBDIR+=	fstobdf

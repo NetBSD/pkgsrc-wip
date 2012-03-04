@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/12/20 12:26:05 leot1990 Exp $
-include/SDL_Pango.h
-lib/libSDL_Pango.la
-lib/pkgconfig/SDL_Pango.pc
