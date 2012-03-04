@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4667 2012/03/04 07:35:56 phonohawk Exp $
+# $Id: Makefile,v 1.4668 2012/03/04 08:30:40 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -989,6 +989,7 @@ SUBDIR+=	hs-primitive
 SUBDIR+=	hs-punycode
 SUBDIR+=	hs-pureMD5
 SUBDIR+=	hs-quickcheck-instances
+SUBDIR+=	hs-random
 SUBDIR+=	hs-readline
 SUBDIR+=	hs-regex-base
 SUBDIR+=	hs-regex-compat
