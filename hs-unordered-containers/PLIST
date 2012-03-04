@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/03/04 06:45:47 phonohawk Exp $
+lib/unordered-containers-${PKGVERSION}/${HASKELL_VERSION}/Data/FullList/Lazy.hi
+lib/unordered-containers-${PKGVERSION}/${HASKELL_VERSION}/Data/FullList/Lazy.p_hi
+lib/unordered-containers-${PKGVERSION}/${HASKELL_VERSION}/Data/FullList/Strict.hi
+lib/unordered-containers-${PKGVERSION}/${HASKELL_VERSION}/Data/FullList/Strict.p_hi
+lib/unordered-containers-${PKGVERSION}/${HASKELL_VERSION}/Data/HashMap/Common.hi
+lib/unordered-containers-${PKGVERSION}/${HASKELL_VERSION}/Data/HashMap/Common.p_hi
+lib/unordered-containers-${PKGVERSION}/${HASKELL_VERSION}/Data/HashMap/Lazy.hi
+lib/unordered-containers-${PKGVERSION}/${HASKELL_VERSION}/Data/HashMap/Lazy.p_hi
+lib/unordered-containers-${PKGVERSION}/${HASKELL_VERSION}/Data/HashMap/Lazy/Internal.hi
+lib/unordered-containers-${PKGVERSION}/${HASKELL_VERSION}/Data/HashMap/Lazy/Internal.p_hi
+lib/unordered-containers-${PKGVERSION}/${HASKELL_VERSION}/Data/HashMap/Strict.hi
+lib/unordered-containers-${PKGVERSION}/${HASKELL_VERSION}/Data/HashMap/Strict.p_hi
+lib/unordered-containers-${PKGVERSION}/${HASKELL_VERSION}/Data/HashMap/Strict/Internal.hi
+lib/unordered-containers-${PKGVERSION}/${HASKELL_VERSION}/Data/HashMap/Strict/Internal.p_hi
+lib/unordered-containers-${PKGVERSION}/${HASKELL_VERSION}/Data/HashSet.hi
+lib/unordered-containers-${PKGVERSION}/${HASKELL_VERSION}/Data/HashSet.p_hi
+lib/unordered-containers-${PKGVERSION}/${HASKELL_VERSION}/HSunordered-containers-${PKGVERSION}.o
+lib/unordered-containers-${PKGVERSION}/${HASKELL_VERSION}/libHSunordered-containers-${PKGVERSION}.a
+lib/unordered-containers-${PKGVERSION}/${HASKELL_VERSION}/libHSunordered-containers-${PKGVERSION}_p.a
+lib/unordered-containers-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/unordered-containers-${PKGVERSION}/LICENSE
