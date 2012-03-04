@@ -1,4 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2011/05/10 12:36:51 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/03/04 08:22:29 phonohawk Exp $
+lib/utility-ht-${PKGVERSION}/${HASKELL_VERSION}/Control/Functor/HT.hi
+lib/utility-ht-${PKGVERSION}/${HASKELL_VERSION}/Control/Functor/HT.p_hi
 lib/utility-ht-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/HT.hi
 lib/utility-ht-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/HT.p_hi
 lib/utility-ht-${PKGVERSION}/${HASKELL_VERSION}/Data/Bool/HT.hi
