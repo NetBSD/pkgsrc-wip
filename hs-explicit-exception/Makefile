@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/09/23 06:48:34 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2012/03/04 08:40:09 phonohawk Exp $
 #
 
-DISTNAME=	explicit-exception-0.1.4
+DISTNAME=	explicit-exception-0.1.6
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
