@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/10/23 05:19:31 phonohawk Exp $
-${EMACS_LISPPREFIX}/css-mode.el
-${EMACS_LISPPREFIX}/css-mode.elc

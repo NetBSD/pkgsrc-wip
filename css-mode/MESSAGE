@@ -1,8 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2008/10/23 05:19:31 phonohawk Exp $
-
-Append the following line to your .emacs file:
-
-  (autoload 'css-mode "css-mode")
-  (add-to-list 'auto-mode-alist '("\\.css\\'" . css-mode))
-===========================================================================
