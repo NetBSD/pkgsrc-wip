@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2012/03/02 23:52:39 makoto Exp $
+# $NetBSD: Makefile,v 1.9 2012/03/05 13:23:53 makoto Exp $
 
 DISTNAME=	emacs-w3m-1.4.50
+PKGNAME=	emacs-w3m-1.4.50
 CATEGORIES=	www
 MASTER_SITES=	#
 
