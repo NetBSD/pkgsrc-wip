@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/03/05 06:59:32 phonohawk Exp $
+
+SHA1 (csv-mode.el) = 05729844c91f9b30e93b3794e385f5a1489e1d1b
+RMD160 (csv-mode.el) = 65fc0dc34c5efe97f5ca8a280a23e2f22c229636
+Size (csv-mode.el) = 51527 bytes
+SHA1 (patch-csv-mode.el) = 0d5ee5236caf4dfd57c9dcd7c3205200624aa908
