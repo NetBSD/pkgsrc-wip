@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2010/06/13 22:47:13 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.16 2012/03/06 23:16:02 minskim Exp $
 #
 
 DISTNAME=		pointless-0.5
@@ -22,6 +22,8 @@ DEPENDS+=		Mesa>=6.0:../../graphics/Mesa
 DEPENDS+=		ghostscript>=7.0:../../print/ghostscript
 
 USE_PKGLOCALEDIR=	yes
+
+CONFIGURE_ARGS+=	--enable-sdl=no
 
 INSTALL_TARGET=		${INSTALL} install-modules
 
