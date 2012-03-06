@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4671 2012/03/06 04:12:46 phonohawk Exp $
+# $Id: Makefile,v 1.4672 2012/03/06 04:40:16 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -3167,6 +3167,7 @@ SUBDIR+=	xyssl
 SUBDIR+=	yafray
 SUBDIR+=	yajl
 SUBDIR+=	yakuake
+SUBDIR+=	yaml-mode
 SUBDIR+=	yauap
 SUBDIR+=	yelp-tools
 SUBDIR+=	yelp-xsl
