@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/10/08 23:03:39 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.4 2012/03/06 21:52:15 minskim Exp $
 bin/ppower4
 share/texmf/java/ppower4/pp4p.jar
 share/texmf/tex/latex/ppower4/background.sty
@@ -7,5 +7,3 @@ share/texmf/tex/latex/ppower4/pause.sty
 share/texmf/tex/latex/ppower4/pp4link.sty
 share/texmf/tex/latex/ppower4/pp4slide.sty
 share/texmf/tex/latex/ppower4/texpause.sty
-@exec mktexlsr
-@unexec mktexlsr
