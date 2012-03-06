@@ -19,3 +19,9 @@ utils/ghc-pkg_dist-install_v_EXTRA_CC_OPTS += -L[[PREFIX]]/lib -lm -liconv -lncu
 
 SRC_CC_OPTS += -I[[PREFIX]]/include
 INTEGER_LIBRARY = integer-simple
+
+# Unregisterised stage0 compiler runs way too slow without GCC's
+# optimisation. The stage1 (which is also unregisterised) is still
+# slow, but then we have to append CONF_CC_OPTS_STAGE1="-O2" to
+# CONFIGURE_ENV as well.
+EXTRA_CC_OPTS += -O2

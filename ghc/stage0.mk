@@ -1,4 +1,4 @@
-# $NetBSD: stage0.mk,v 1.1 2012/03/04 04:37:13 phonohawk Exp $
+# $NetBSD: stage0.mk,v 1.2 2012/03/06 00:06:26 phonohawk Exp $
 
 # Build an unregisterised bootstrap compiler and install it directly
 # into the .buildlink directory. But we can't use "make install"
@@ -75,21 +75,7 @@ ${WRKDIR}/stamp-extract-hc: ${WRKDIR}/stamp-configure-hc-boot
 ${WRKDIR}/stamp-rewrite-hc-paths: ${WRKDIR}/stamp-extract-hc
 	${RUN} cd ${WRKDIR}/bootstrap/${DISTNAME} && \
 		${PHASE_MSG} "Rewriting source paths in bootstrapping compiler for ${PKGNAME}" && \
-		${SED} -e "s#\\[\\[PREFIX\\]\\]#${PREFIX}#g" ${BOOTSTRAP_BUILD_MK} > mk/build.mk
-.if ${MACHINE_ARCH} == "i386" && ${OPSYS} == "NetBSD"
-#   Unregisterised stage0 compiler gets too large (.text section being
-# over 64 MiB) without dead-code elimination, exceeding NetBSD/i386's
-# kernel default limitation.
-#   Note that stage1 currently doesn't bloat that much (about 42.6
-# MiB), but when it does we have to append
-# CONF_CC_OPTS_STAGE1="-fdata..." and
-# CONF_GCC_LINKER_OPTS_STAGE1="-Wl,--gc-sections" to CONFIGURE_ENV as
-# well. I guess that's a matter of time :(
-	${RUN} cd ${WRKDIR}/bootstrap/${DISTNAME} && \
-		${ECHO} "EXTRA_CC_OPTS += -fdata-sections -ffunction-sections" >> mk/build.mk && \
-		${ECHO} "EXTRA_CC_OPTS += -Wl,--gc-sections" >> mk/build.mk
-.endif
-	${RUN} cd ${WRKDIR}/bootstrap/${DISTNAME} && \
+		${SED} -e "s#\\[\\[PREFIX\\]\\]#${PREFIX}#g" ${BOOTSTRAP_BUILD_MK} > mk/build.mk && \
 		for c in libraries/*/configure; do \
 			(cd `${DIRNAME} $$c` && ${SETENV} ${CONFIGURE_ENV} ${SH} configure ${CONFIGURE_ARGS}); \
 		done && \
