@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/03/06 23:26:32 minskim Exp $
+# $NetBSD: Makefile,v 1.18 2012/03/06 23:29:15 minskim Exp $
 #
 
 DISTNAME=		pointless-0.5
@@ -31,6 +31,6 @@ INSTALL_TARGET=		${INSTALL} install-modules
 
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../x11/libXt.buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/tex.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
