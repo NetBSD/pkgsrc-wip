@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4672 2012/03/06 04:40:16 phonohawk Exp $
+# $Id: Makefile,v 1.4673 2012/03/06 12:07:03 ftigeot Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1323,6 +1323,7 @@ SUBDIR+=	libepc
 SUBDIR+=	libestr
 SUBDIR+=	libexecinfo
 SUBDIR+=	libexosip
+SUBDIR+=	libexttextcat
 SUBDIR+=	libfplll
 SUBDIR+=	libgadu
 SUBDIR+=	libgda-bdb
@@ -1362,6 +1363,7 @@ SUBDIR+=	libmemcached
 SUBDIR+=	libmpg123
 SUBDIR+=	libmrss
 SUBDIR+=	libmusclecard
+SUBDIR+=	libmythes
 SUBDIR+=	libneural
 SUBDIR+=	libnfo
 SUBDIR+=	libode
@@ -1378,6 +1380,7 @@ SUBDIR+=	libpeas
 SUBDIR+=	libpthread-stubs
 SUBDIR+=	libpusb
 SUBDIR+=	libraw1394
+SUBDIR+=	libreoffice
 SUBDIR+=	libreoffice3-bin
 SUBDIR+=	libscscp
 SUBDIR+=	libsidplay2
@@ -1397,6 +1400,7 @@ SUBDIR+=	libuuid
 SUBDIR+=	libvalhalla
 SUBDIR+=	libvc
 SUBDIR+=	libvg
+SUBDIR+=	libvisio
 SUBDIR+=	libwbxml2-patched
 SUBDIR+=	libxc
 SUBDIR+=	libxfce4gui
