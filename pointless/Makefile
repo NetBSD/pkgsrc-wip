@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2012/03/06 23:30:19 minskim Exp $
+# $NetBSD: Makefile,v 1.20 2012/03/06 23:48:46 minskim Exp $
 #
 
 DISTNAME=		pointless-0.5
@@ -22,6 +22,7 @@ DEPENDS+=		ghostscript>=7.0:../../print/ghostscript
 
 USE_PKGLOCALEDIR=	yes
 
+CPPFLAGS=		-DHAVE_PYTHON${PYVERSSUFFIX:S/./_/}
 CONFIGURE_ARGS+=	--enable-sdl=no
 
 INSTALL_TARGET=		${INSTALL} install-modules
