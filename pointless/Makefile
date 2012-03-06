@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2012/03/06 23:48:46 minskim Exp $
+# $NetBSD: Makefile,v 1.21 2012/03/06 23:54:35 minskim Exp $
 #
 
 DISTNAME=		pointless-0.5
@@ -14,11 +14,15 @@ GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
 
 DEPENDS+=		a2ps>=4.1:../../print/a2ps
+DEPENDS+=		dvipsk-[0-9]*:../../print/dvipsk
 DEPENDS+=		pdflib>=4.0.3:../../print/pdflib
 DEPENDS+=		plotutils>=2.4.1:../../graphics/plotutils
 DEPENDS+=		gnuplot>=3.7:../../graphics/gnuplot
 DEPENDS+=		freetype2>=2.1:../../graphics/freetype2
 DEPENDS+=		ghostscript>=7.0:../../print/ghostscript
+DEPENDS+=		tex-latex-[0-9]*:../../print/tex-latex
+DEPENDS+=		tex-latex-bin-[0-9]*:../../print/tex-latex-bin
+DEPENDS+=		tex-tex-[0-9]*:../../print/tex-tex
 
 USE_PKGLOCALEDIR=	yes
 
@@ -33,5 +37,4 @@ INSTALL_TARGET=		${INSTALL} install-modules
 .include "../../graphics/Mesa/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
-.include "../../mk/tex.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
