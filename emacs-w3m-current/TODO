@@ -1,1 +1,3 @@
-Test on previous Emacs. Currently on Emacs-24 only.
+- Test on previous Emacs. Currently on Emacs-24 only.
+- Existing two patches handle the same file, the naming is
+  to be corrected.
