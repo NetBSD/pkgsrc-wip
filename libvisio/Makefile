@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/03/03 11:02:27 ftigeot Exp $
+# $NetBSD: Makefile,v 1.3 2012/03/06 09:38:44 thomasklausner Exp $
 
 VER=		0.0.15
 DISTNAME=	libvisio-${VER}
@@ -11,6 +11,8 @@ MAINTAINER=	ftigeot@wolfpond.org
 HOMEPAGE=	http://www.freedesktop.org/wiki/Software/libvisio/
 COMMENT=	Library and tools for parsing the visio file format
 LICENSE=	gnu-lgpl-v2.1 OR mpl-1.1 OR gnu-gpl-v2
+
+BUILD_DEPENDS+=	doxygen-[0-9]*:../../devel/doxygen
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 

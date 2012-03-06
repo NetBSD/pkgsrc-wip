@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/03/03 10:47:42 ftigeot Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/03/06 09:38:44 thomasklausner Exp $
 bin/vsd2raw
 bin/vsd2xhtml
 include/libvisio-0.0/libvisio/VSDStringVector.h
 include/libvisio-0.0/libvisio/VisioDocument.h
 include/libvisio-0.0/libvisio/libvisio.h
 lib/libvisio-0.0.la
-lib/pkgconfig/libvisio-0.0.${LOWER_VENDOR}
+lib/pkgconfig/libvisio-0.0.pc
 share/doc/libvisio/html/VSD11Parser_8cpp.html
 share/doc/libvisio/html/VSD11Parser_8h.html
 share/doc/libvisio/html/VSD11Parser_8h_source.html
