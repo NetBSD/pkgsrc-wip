@@ -100,6 +100,7 @@ Suggested package updates
 	o pike-7.8.352
 	o py-PyPE-2.9
 	o py-gnucash-0.7.55
+	o py-rpyc-3.2.1
 	o py-zeitgeist-0.8.1
 	o python31-3.1.2
 	o qcomicbook-0.8.1
