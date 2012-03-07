@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2012/03/05 19:09:58 ftigeot Exp $
+# $NetBSD: Makefile,v 1.28 2012/03/07 07:03:28 ftigeot Exp $
 
 VER=			3.5.1.1
 DISTNAME=		libreoffice-${VER}
@@ -104,7 +104,6 @@ CONFIGURE_ARGS+=	--without-system-altlinuxhyph
 CONFIGURE_ARGS+=	--without-system-jars
 CONFIGURE_ARGS+=	--without-system-libcmis
 CONFIGURE_ARGS+=	--without-system-mozilla-headers
-CONFIGURE_ARGS+=	--without-system-mythes
 CONFIGURE_ARGS+=	--without-system-sampleicc
 
 # Some LibreOffice build scripts do strange things with library paths
@@ -189,6 +188,7 @@ post-install:
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../textproc/redland/buildlink3.mk"
 .include "../../wip/libexttextcat/buildlink3.mk"
+.include "../../wip/libmythes/buildlink3.mk"
 .include "../../wip/libvisio/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
