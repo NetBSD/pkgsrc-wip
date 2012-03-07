@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/03/07 14:57:07 thomasklausner Exp $
+
+SHA1 (pkg-config-0.26.tar.gz) = fd71a70b023b9087c8a7bb76a0dc135a61059652
+RMD160 (pkg-config-0.26.tar.gz) = face3d16ec338b9b1ab41d56d6e4d1a5624b52d0
+Size (pkg-config-0.26.tar.gz) = 396399 bytes
+SHA1 (patch-configure) = 6d936a40351077cf905aaf9ab9561fc813e03899

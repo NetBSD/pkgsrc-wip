@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1.1.1 2012/03/07 14:57:07 thomasklausner Exp $
+
+Arbitrary strings should not be passed to "eval".
+
+--- configure.orig	2011-08-06 14:17:45.000000000 +0000
++++ configure
+@@ -13439,7 +13439,7 @@ echo use_indirect_deps=$use_indirect_dep
+ $as_echo_n "checking whether to list both direct and indirect dependencies... " >&6; }
+ case $use_indirect_deps in
+   auto)
+-    deplibs_check_method=`(./libtool --config; echo eval echo '\"$deplibs_check_method\"') | sh`
++    deplibs_check_method=`(./libtool --config; echo '\"$deplibs_check_method\"') | sh`
+     if test "X$deplibs_check_method" = Xnone; then
+     echo "foo: $deplibs_check_method" >&5
+       use_indirect_deps=yes
