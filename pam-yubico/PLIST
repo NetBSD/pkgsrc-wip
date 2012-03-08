@@ -1,2 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/04/06 06:06:14 marttikuparinen Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/03/08 23:02:20 pettai Exp $
+bin/ykpamcfg
+include/drop_privs.h
+include/util.h
 lib/security/pam_yubico.la
+man/man1/ykpamcfg.1
