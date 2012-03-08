@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/03/07 23:12:15 pettai Exp $
+# $NetBSD: Makefile,v 1.2 2012/03/08 23:05:46 pettai Exp $
 #
 
 DISTNAME=	ykpers-1.6.3
@@ -7,7 +7,7 @@ MASTER_SITES=	http://yubikey-personalization.googlecode.com/files/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/yubikey-personalization/
-COMMENT=	TODO: Short description of the package
+COMMENT=	Yubico's YubiKey re-programming toolkit
 LICENSE=	modified-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
