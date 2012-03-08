@@ -1,0 +1,34 @@
+# $NetBSD: Makefile.versions,v 1.1 2012/03/08 13:51:09 fhajny Exp $
+
+_RIAK_VERSIONS+=			\
+	basho_metrics	1.0.0		\
+	basho_stats	1.0.2		\
+	bitcask		1.5.1		\
+	cluster_info	1.2.1		\
+	dtrace		0.8		\
+	ebloom		1.1.1		\
+	eleveldb	1.1.0		\
+	eper		0.61		\
+	erlang_js	1.0.1		\
+	innostore	${INNOVER}	\
+	lager		1.0.0		\
+	lucene_parser	1		\
+	luke		0.2.5		\
+	merge_index	1.1.0		\
+	mochiweb	1.5.1		\
+	poolboy		0.6.1		\
+	protobuffs	0.6.0		\
+	riak_control	0.1.0		\
+	riak_core	1.1.1		\
+	riak_kv		1.1.1		\
+	riak_pipe	1.1.1		\
+	riak_search	1.1.1		\
+	riak_sysmon	1.1.0		\
+	riakc		1.2.1		\
+	sext		0.4.1		\
+	webmachine	1.9.1
+
+.for name version in ${_RIAK_VERSIONS}
+VERSION.${name}=${version}
+PLIST_SUBST+=	VERSION.${name}=${version}
+.endfor

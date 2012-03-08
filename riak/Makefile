@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2012/02/06 14:22:06 fhajny Exp $
+# $NetBSD: Makefile,v 1.7 2012/03/08 13:51:09 fhajny Exp $
 #
 
-DISTNAME=		riak-1.0.3
+DISTNAME=		riak-1.1.1
 CATEGORIES=		databases
 MASTER_SITES=		http://downloads.basho.com/riak/${DISTNAME}/
 
@@ -17,7 +17,7 @@ USE_TOOLS=		gmake
 
 DISTFILES=		${DEFAULT_DISTFILES}
 EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
-INNOVER=		1.0.3
+INNOVER=		1.0.4
 INNOSTORE=		innostore-${INNOVER}.tar.gz
 SITES.${INNOSTORE}=	http://downloads.basho.com/innostore/innostore-${INNOVER}/
 DISTFILES+=		${INNOSTORE}
@@ -26,6 +26,7 @@ EXTRACT_ONLY+=		${INNOSTORE}
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
 .include "../../lang/erlang/Makefile.versions"
+.include "Makefile.versions"
 
 RIAK_USER?=		riak
 RIAK_GROUP?=		${RIAK_USER}
@@ -46,15 +47,18 @@ CONF_FILES+=		share/examples/riak/app.config ${PKG_SYSCONFDIR}/app.config
 CONF_FILES+=		share/examples/riak/vm.args ${PKG_SYSCONFDIR}/vm.args
 
 BUILD_TARGET=		rel
-PLIST_VARS+=		innostore
-PLIST_SUBST+=		INNOVER=${INNOVER}
+PLIST_VARS+=		innostore dtrace
+
+.if !empty(PKG_BUILD_OPTIONS.erlang:Mdtrace)
+PLIST.dtrace=		yes
+.endif
 
 SUBST_CLASSES+=		pkgsrc
 SUBST_STAGE.pkgsrc=	post-patch
 SUBST_MESSAGE.pkgsrc=	Fixing pkgsrc locations and tools
 SUBST_FILES.pkgsrc=	deps/erlang_js/c_src/Makefile
 SUBST_FILES.pkgsrc+=	rel/vars.config
-SUBST_VARS.pkgsrc=	PATCH PREFIX PKG_SYSCONFDIR
+SUBST_VARS.pkgsrc=	PREFIX PKG_SYSCONFDIR
 SUBST_VARS.pkgsrc+=	RIAK_USER RIAK_DATA RIAK_LOG
 
 REPLACE_INTERPRETER+=	escript
@@ -65,6 +69,8 @@ REPLACE_FILES.escript+=	${WRKDIR}/innostore-${INNOVER}/priv/innodump
 REPLACE_FILES.escript+=	${WRKDIR}/innostore-${INNOVER}/priv/innoload
 
 CHECK_PORTABILITY_SKIP+=	tests/riak_search/run_all.sh
+
+MAKE_ENV+=		PATCH=${PATCH:Q}
 
 INSTALL_ENV+=		REPO=riak
 INSTALL_ENV+=		REVISION=${PKGVERSION_NOREV}
