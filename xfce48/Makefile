@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2012/02/19 20:16:39 guigui2 Exp $
+# $NetBSD: Makefile,v 1.22 2012/03/08 15:18:39 reinoudz70 Exp $
 
 META_PACKAGE=	yes
 
@@ -65,5 +65,5 @@ COMMENT=	Xfce
 #.include "../../x11/xfce4-terminal/buildlink3.mk"
 #.include "../../x11/xfce4-utils/buildlink3.mk"
 
-DEPENDS+=	tumbler:../../wip/xfce4-tumbler
+DEPENDS+=	xfce4-tumbler:../../wip/xfce4-tumbler
 .include "../../mk/bsd.pkg.mk"
