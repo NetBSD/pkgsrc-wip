@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4675 2012/03/07 22:52:22 pettai Exp $
+# $Id: Makefile,v 1.4676 2012/03/08 09:57:09 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -591,7 +591,6 @@ SUBDIR+=	fcgiwrap
 SUBDIR+=	fdm
 SUBDIR+=	feynedit
 SUBDIR+=	feynhiggs
-SUBDIR+=	ffmpeg
 SUBDIR+=	ffmpeg-snapshot
 SUBDIR+=	fftjet
 SUBDIR+=	ficl
@@ -3085,7 +3084,6 @@ SUBDIR+=	virus
 SUBDIR+=	vis
 SUBDIR+=	vista-fonts
 SUBDIR+=	vkeybd
-SUBDIR+=	vlc
 SUBDIR+=	vlevel
 SUBDIR+=	vm-pop3d
 SUBDIR+=	vmsbackup
