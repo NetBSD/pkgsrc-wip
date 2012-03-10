@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/11/27 17:29:27 cheusov Exp $
+# $NetBSD: Makefile,v 1.4 2012/03/10 06:43:11 cheusov Exp $
 #
 
 PKGNAME=	lmdbg-${_CVS_PKGVERSION:S/.//g}
@@ -29,9 +29,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 TEST_TARGET=		test
 
-DOCDIR=			share/doc/lmdbg
-DOCFILES=		README NEWS
-
 REPLACE_SH=		scripts/lmdbg*.in tests/test.sh
 
 REPLACE_INTERPRETER+=	runawk
@@ -39,16 +36,12 @@ REPLACE.runawk.old=	.*runawk
 REPLACE.runawk.new=	${PREFIX}/bin/runawk
 REPLACE_FILES.runawk=	scripts/lmdbg-*.in
 
-INSTALLATION_DIRS=	${DOCDIR}
-
-MAKE_PROGRAM=	${PREFIX}/bin/mkcmake
-
 post-install:
-.for f in ${DOCFILES}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/${DOCDIR}
-.endfor
+	cd ${WRKSRC} && \
+	${MAKE_ENV} ${MAKE_PROGRAM} ${INSTALL_MAKE_FLAGS} install-doc
+
+.include "../../devel/mk-configure/mk-c.mk"
 
 .include "../../wip/mk/cvs-package.mk"
-.include "../../devel/mk-configure/configure.mk"
 .include "../../devel/libjudy/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
