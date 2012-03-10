@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/02/06 23:13:02 cheusov Exp $
+# $NetBSD: Makefile,v 1.11 2012/03/10 06:35:36 cheusov Exp $
 
 DISTNAME=	pkgnih-999
 PKGNAME=	nih-999
@@ -44,8 +44,6 @@ REPLACE_FILES.runawk=	nih/pkg_update_plan.in nih/cmp2hr.in
 MAKE_ENV+=		MANDIR=${PREFIX}/${PKGMANDIR}
 MAKE_ENV+=		VERSION=${_GIT_PKGVERSION:S/.//}
 
-MAKE_PROGRAM=		mkcmake
-
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == NetBSD || ${OPSYS} == FreeBSD || ${OPSYS} == OpenBSD || \
@@ -62,5 +60,5 @@ MAKE_ENV+= FTP=${FTP_CMD:Q}
 REPLACE_SH+=	nih/nih.in nih/pkg_status.in
 .endif
 
-.include "../../devel/mk-configure/configure.mk"
+.include "../../devel/mk-configure/mk-c.mk"
 .include "../../mk/bsd.pkg.mk"
