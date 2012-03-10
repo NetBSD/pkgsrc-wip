@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/05/22 23:02:15 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/03/10 12:29:38 genolopolis Exp $
 #
 
-DISTNAME=	selenium-1.0.1.tar
-EGG_NAME=  selenium-1.0.1
+DISTNAME=	selenium-2.20.0.tar
+EGG_NAME=  selenium-2.20.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/Py//S/.tar//}
 CATEGORIES=	devel
 MASTER_SITES=	http://pypi.python.org/packages/source/s/selenium/
@@ -15,7 +15,7 @@ COMMENT=	Python binding to selenium Remote Control
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-WRKSRC=		${WRKDIR}/selenium-1.0.1
+WRKSRC=		${WRKDIR}/selenium-2.20.0
 USE_LANGUAGES=	# none
 
 SUBST_CLASSES+=		paths
