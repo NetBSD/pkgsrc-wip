@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/01/04 06:04:43 cheusov Exp $
+# $NetBSD: Makefile,v 1.16 2012/03/10 06:33:50 cheusov Exp $
 #
 
 DISTNAME=	distbb-9
@@ -30,7 +30,8 @@ REPLACE_SH+=		distbb.in distbb_diff.in slave.in stage_*.in
 REPLACE_INTERPRETER+=	runawk
 REPLACE.runawk.old=	/usr/bin/env runawk
 REPLACE.runawk.new=	${PREFIX}/bin/runawk
-REPLACE_FILES.runawk=	gen_weights.in gen_queue.in pkg_summary2build_deps.in
+REPLACE_FILES.runawk=	gen_weights.in gen_queue.in pkg_summary2build_deps.in \
+			distbb_grep.in
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -44,14 +45,12 @@ DOCFILES=		README NEWS TODO
 
 MAKE_FLAGS+=		EGDIR=${EGDIR}
 
-AUTO_MKDIRS=		yes
+INSTALLATION_DIRS=	${DOCDIR}
 
 post-install:
 .for f in ${DOCFILES}
 	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${DOCDIR}
 .endfor
 
-MAKE_PROGRAM=		mkcmake
-
-.include "../../devel/mk-configure/configure.mk"
+.include "../../devel/mk-configure/mk-c.mk"
 .include "../../mk/bsd.pkg.mk"
