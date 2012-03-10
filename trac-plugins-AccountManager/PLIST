@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2011/03/04 08:13:14 obache Exp $
+@comment $NetBSD: PLIST,v 1.6 2012/03/10 14:36:56 obache Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -25,7 +25,6 @@ ${PYSITELIB}/acct_mgr/hashlib_compat.py
 ${PYSITELIB}/acct_mgr/hashlib_compat.pyc
 ${PYSITELIB}/acct_mgr/hashlib_compat.pyo
 ${PYSITELIB}/acct_mgr/htdocs/acct_mgr.css
-${PYSITELIB}/acct_mgr/htdocs/acct_mgr_login.css
 ${PYSITELIB}/acct_mgr/htdocs/locked.png
 ${PYSITELIB}/acct_mgr/htdocs/time-locked.png
 ${PYSITELIB}/acct_mgr/htfile.py
@@ -38,8 +37,12 @@ ${PYSITELIB}/acct_mgr/locale/.placeholder
 ${PYSITELIB}/acct_mgr/locale/cs/LC_MESSAGES/acct_mgr.mo
 ${PYSITELIB}/acct_mgr/locale/de/LC_MESSAGES/acct_mgr.mo
 ${PYSITELIB}/acct_mgr/locale/es/LC_MESSAGES/acct_mgr.mo
+${PYSITELIB}/acct_mgr/locale/fr/LC_MESSAGES/acct_mgr.mo
+${PYSITELIB}/acct_mgr/locale/it/LC_MESSAGES/acct_mgr.mo
 ${PYSITELIB}/acct_mgr/locale/ja/LC_MESSAGES/acct_mgr.mo
+${PYSITELIB}/acct_mgr/locale/nl/LC_MESSAGES/acct_mgr.mo
 ${PYSITELIB}/acct_mgr/locale/ru/LC_MESSAGES/acct_mgr.mo
+${PYSITELIB}/acct_mgr/locale/sv/LC_MESSAGES/acct_mgr.mo
 ${PYSITELIB}/acct_mgr/md5crypt.py
 ${PYSITELIB}/acct_mgr/md5crypt.pyc
 ${PYSITELIB}/acct_mgr/md5crypt.pyo

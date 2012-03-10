@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2011/03/04 08:13:14 obache Exp $
+# $NetBSD: Makefile,v 1.12 2012/03/10 14:36:56 obache Exp $
 
-DISTNAME=	accountmanagerplugin_trnk-r${SVN_REV}
-PKGNAME=	trac-plugins-AccountManager-0.3pre${SVN_REV}
-EGG_NAME=	TracAccountManager-0.3dev
+DISTNAME=	accountmanagerplugin_0.11-r${SVN_REV}
+PKGNAME=	trac-plugins-AccountManager-0.3.2
+EGG_NAME=	TracAccountManager-0.3.2
 CATEGORIES=	www
 MASTER_SITES=	-http://trac-hacks.org/changeset/${SVN_REV}/${SVN_MOD}?old_path=/&format=zip
 EXTRACT_SUFX=	.zip
@@ -15,10 +15,11 @@ COMMENT=	User account management plugin for Trac
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	{,ja-}trac>=0.12:../../www/trac
+DEPENDS+=	${PYPKGPREFIX}-genshi>=0.5:../../www/py-genshi
 DEPENDS+=	${PYPKGPREFIX}-babel>=0.9.5:../../devel/py-babel
 
-SVN_REV=	9927
-SVN_MOD=	accountmanagerplugin/trunk
+SVN_REV=	10618
+SVN_MOD=	accountmanagerplugin/0.11
 WRKSRC=		${WRKDIR}/${SVN_MOD}
 
 post-extract:
