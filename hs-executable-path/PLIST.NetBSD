@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST.NetBSD,v 1.1 2012/03/10 16:49:11 phonohawk Exp $
+lib/executable-path-${PKGVERSION}/${HASKELL_VERSION}/HSexecutable-path-${PKGVERSION}.o
+lib/executable-path-${PKGVERSION}/${HASKELL_VERSION}/System/Environment/Executable.hi
+lib/executable-path-${PKGVERSION}/${HASKELL_VERSION}/System/Environment/Executable.p_hi
+lib/executable-path-${PKGVERSION}/${HASKELL_VERSION}/System/Environment/Executable/BSD.hi
+lib/executable-path-${PKGVERSION}/${HASKELL_VERSION}/System/Environment/Executable/BSD.p_hi
+lib/executable-path-${PKGVERSION}/${HASKELL_VERSION}/libHSexecutable-path-${PKGVERSION}.a
+lib/executable-path-${PKGVERSION}/${HASKELL_VERSION}/libHSexecutable-path-${PKGVERSION}_p.a
+lib/executable-path-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/executable-path-${PKGVERSION}/LICENSE
