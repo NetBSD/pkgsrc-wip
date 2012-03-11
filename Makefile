@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4677 2012/03/09 16:06:07 mayureshw Exp $
+# $Id: Makefile,v 1.4678 2012/03/11 05:50:16 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -926,6 +926,7 @@ SUBDIR+=	hs-collections-base-instances
 SUBDIR+=	hs-colorize-haskell
 SUBDIR+=	hs-comonad
 SUBDIR+=	hs-comonad-transformers
+SUBDIR+=	hs-concrete-typerep
 SUBDIR+=	hs-containers-unicode-symbols
 SUBDIR+=	hs-contravariant
 SUBDIR+=	hs-control-monad-failure
