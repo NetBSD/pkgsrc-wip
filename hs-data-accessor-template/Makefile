@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/07/08 08:47:08 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2012/03/11 05:53:51 phonohawk Exp $
 #
 
-DISTNAME=	data-accessor-template-0.2.1.7
+DISTNAME=	data-accessor-template-0.2.1.9
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
-HOMEPAGE=	http://www.haskell.org/haskellwiki/Record_access
 COMMENT=	Utilities for accessing and manipulating fields of records
 LICENSE=	modified-bsd
 

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/07/08 08:47:08 phonohawk Exp $
+$NetBSD: distinfo,v 1.2 2012/03/11 05:53:51 phonohawk Exp $
 
-SHA1 (data-accessor-template-0.2.1.7.tar.gz) = 932fa1a01329b4e9a54b0470e70a25e843bfe05c
-RMD160 (data-accessor-template-0.2.1.7.tar.gz) = 437659a2ae9b8471b5ddf05cda52849297a32a61
-Size (data-accessor-template-0.2.1.7.tar.gz) = 4002 bytes
+SHA1 (data-accessor-template-0.2.1.9.tar.gz) = 4d1795661782db6f69c6cddc1acef7b572ac6fa2
+RMD160 (data-accessor-template-0.2.1.9.tar.gz) = de18cf8def2e26990204efb3f432b490cd3f9baf
+Size (data-accessor-template-0.2.1.9.tar.gz) = 4051 bytes
