@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4678 2012/03/11 05:50:16 phonohawk Exp $
+# $Id: Makefile,v 1.4679 2012/03/11 08:40:51 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -960,6 +960,7 @@ SUBDIR+=	hs-filemanip
 SUBDIR+=	hs-fingertree
 SUBDIR+=	hs-ghc-mtl
 SUBDIR+=	hs-ghc-paths
+SUBDIR+=	hs-ghc-syb-utils
 SUBDIR+=	hs-gio
 SUBDIR+=	hs-glib
 SUBDIR+=	hs-gnuplot
