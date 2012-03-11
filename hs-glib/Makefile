@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2011/07/12 09:51:22 phonohawk Exp $
+# $NetBSD: Makefile,v 1.3 2012/03/11 07:39:34 phonohawk Exp $
 #
 
-DISTNAME=	glib-0.12.0
+DISTNAME=	glib-0.12.3
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org

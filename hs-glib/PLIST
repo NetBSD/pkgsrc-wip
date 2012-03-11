@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/07/12 09:47:40 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/03/11 07:39:34 phonohawk Exp $
 lib/glib-${PKGVERSION}/${HASKELL_VERSION}/HSglib-${PKGVERSION}.o
 lib/glib-${PKGVERSION}/${HASKELL_VERSION}/System/Glib.hi
 lib/glib-${PKGVERSION}/${HASKELL_VERSION}/System/Glib.p_hi
@@ -22,6 +22,9 @@ lib/glib-${PKGVERSION}/${HASKELL_VERSION}/System/Glib/GObject.hi
 lib/glib-${PKGVERSION}/${HASKELL_VERSION}/System/Glib/GObject.p_hi
 lib/glib-${PKGVERSION}/${HASKELL_VERSION}/System/Glib/GParameter.hi
 lib/glib-${PKGVERSION}/${HASKELL_VERSION}/System/Glib/GParameter.p_hi
+lib/glib-${PKGVERSION}/${HASKELL_VERSION}/System/Glib/GString.chi
+lib/glib-${PKGVERSION}/${HASKELL_VERSION}/System/Glib/GString.hi
+lib/glib-${PKGVERSION}/${HASKELL_VERSION}/System/Glib/GString.p_hi
 lib/glib-${PKGVERSION}/${HASKELL_VERSION}/System/Glib/GType.chi
 lib/glib-${PKGVERSION}/${HASKELL_VERSION}/System/Glib/GType.hi
 lib/glib-${PKGVERSION}/${HASKELL_VERSION}/System/Glib/GType.p_hi
