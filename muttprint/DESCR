@@ -1,0 +1,4 @@
+Muttprint formats the output of mail clients to a good-looking printing. It
+uses the typesetting system LaTeX, which is normally part of every Linux
+distribution and which is also available for other operating systems like *BSD
+and Solaris.

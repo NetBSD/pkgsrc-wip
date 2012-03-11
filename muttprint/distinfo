@@ -1,0 +1,12 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/03/11 15:19:53 mayureshw Exp $
+
+SHA1 (muttprint-0.72d.tar.gz) = 532a1c7ed019b0b50c78caf7eeb17f5cd34d3d1e
+RMD160 (muttprint-0.72d.tar.gz) = cb6f40c892de0142584969e7b0ca60b4f3fed140
+Size (muttprint-0.72d.tar.gz) = 746660 bytes
+SHA1 (patch-Makefile) = a1c2fb0b1fcbacdf9afc35c94ffb7ad46a4b1495
+SHA1 (patch-doc_manual_de_Makefile) = 719f29559ab735b37de90180dedacc4b0c2d2cb5
+SHA1 (patch-doc_manual_en_Makefile) = db12df8b663e25ef41ae7807b0e217a46be5755a
+SHA1 (patch-doc_manual_es_Makefile) = ae33f38f92b760a8748fb5fa6e5a9b6422eed10d
+SHA1 (patch-doc_manual_it_Makefile) = 82506463797ee8fe2f9865d51311f08f8f109847
+SHA1 (patch-doc_manual_sl_Makefile) = e8d578ff588f9b4617581f1cd0126dbbb8fdc63e
+SHA1 (patch-muttprint) = 167f125e809260a94d1336021338cce8024268a8
