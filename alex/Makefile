@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2011/01/17 10:48:03 emil_s Exp $
+# $NetBSD: Makefile,v 1.9 2012/03/11 07:21:10 phonohawk Exp $
 #
 
-DISTNAME=	alex-2.3.5
+DISTNAME=	alex-3.0.1
 PKGNAME=	${DISTNAME}
 CATEGORIES=	devel
 MAINTAINER=	esg@sdf.lonestar.org
@@ -12,4 +12,5 @@ LICENSE=	modified-bsd
 USE_TOOLS+=	perl
 
 .include "../../wip/mk/haskell.mk"
+.include "../../wip/hs-QuickCheck/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,0 +1,15 @@
+$NetBSD: patch-alex.cabal,v 1.1 2012/03/11 07:21:10 phonohawk Exp $
+
+templates/GenericTemplate.hs uses BangPatterns but it doesn't says so.
+
+--- alex.cabal.orig	2011-08-10 10:22:38.000000000 +0000
++++ alex.cabal
+@@ -76,7 +76,7 @@ executable alex
+   -- build-depends: Ranged-sets
+   build-depends: QuickCheck >=2
+ 
+-  extensions: CPP
++  extensions: BangPatterns, CPP
+   ghc-options: -Wall -rtsopts
+   other-modules:
+         AbsSyn
