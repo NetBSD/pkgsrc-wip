@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/07/12 08:15:51 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2012/03/11 07:00:57 phonohawk Exp $
 #
 
-DISTNAME=	split-0.1.4
+DISTNAME=	split-0.1.4.2
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
