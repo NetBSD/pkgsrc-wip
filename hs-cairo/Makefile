@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/07/12 09:18:11 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2012/03/11 07:35:05 phonohawk Exp $
 #
 
-DISTNAME=	cairo-0.12.0
+DISTNAME=	cairo-0.12.3
 CATEGORIES=	graphics
 
 MAINTAINER=	pho@cielonegro.org
