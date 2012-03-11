@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/07/12 13:54:38 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2012/03/11 08:17:52 phonohawk Exp $
 #
 
-DISTNAME=	gtk-0.12.0
+DISTNAME=	gtk-0.12.3
 CATEGORIES=	x11
 
 MAINTAINER=	pho@cielonegro.org
