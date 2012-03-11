@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/03/05 13:23:53 makoto Exp $
+# $NetBSD: Makefile,v 1.10 2012/03/11 02:18:22 makoto Exp $
 
 DISTNAME=	emacs-w3m-1.4.50
 PKGNAME=	emacs-w3m-1.4.50
@@ -47,7 +47,7 @@ SUBST_SED.fix-icondir+=		-e 's|images/w3m|w3m|g'
 EMACS_BUILDLINK=
 EMACS_VERSIONS_ACCEPTED=	emacs22 emacs22nox emacs21 emacs21nox emacs20 \
 				xemacs215 xemacs214 \
-				emacs24
+				emacs23 emacs24 
 
 EVAL_PREFIX+=		W3MPREFIX=w3m
 
