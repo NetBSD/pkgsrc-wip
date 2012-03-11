@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/07/12 04:06:28 phonohawk Exp $
+$NetBSD: distinfo,v 1.2 2012/03/11 06:06:25 phonohawk Exp $
 
-SHA1 (ghc-mtl-1.0.1.0.tar.gz) = b7b91a1732dbe7b202d4f6ffb9535bfbdf5f1f33
-RMD160 (ghc-mtl-1.0.1.0.tar.gz) = a1930280c7c5964fe06837d728103458622ee073
-Size (ghc-mtl-1.0.1.0.tar.gz) = 2239 bytes
+SHA1 (ghc-mtl-1.0.1.1.tar.gz) = 558f6a52812d4e26aafeac16377ed12faf5dca53
+RMD160 (ghc-mtl-1.0.1.1.tar.gz) = 8155580c98a74331fda9a5203c5d5b0943c3844f
+Size (ghc-mtl-1.0.1.1.tar.gz) = 2307 bytes
