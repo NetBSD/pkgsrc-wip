@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/07/12 10:18:38 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2012/03/11 07:47:23 phonohawk Exp $
 #
 
-DISTNAME=	pango-0.12.0
+DISTNAME=	pango-0.12.3
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
