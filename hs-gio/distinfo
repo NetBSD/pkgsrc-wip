@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/07/12 13:00:06 phonohawk Exp $
+$NetBSD: distinfo,v 1.2 2012/03/11 07:54:16 phonohawk Exp $
 
-SHA1 (gio-0.12.0.tar.gz) = 320c3cd4743964196eeaa3248b880edce41b0a8e
-RMD160 (gio-0.12.0.tar.gz) = 0c51ee244d461340d873d1e90d859cd0e8531c06
-Size (gio-0.12.0.tar.gz) = 76629 bytes
+SHA1 (gio-0.12.3.tar.gz) = 8bcb5f4ebbb4a1e0862b0dc263930c7a7731fee4
+RMD160 (gio-0.12.3.tar.gz) = 4f2e7970ceff86f5957a12de349dce3f5ddffd23
+Size (gio-0.12.3.tar.gz) = 77997 bytes
