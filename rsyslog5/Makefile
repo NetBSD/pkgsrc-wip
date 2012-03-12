@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2012/02/13 13:50:13 bartoszkuzma Exp $
+# $NetBSD: Makefile,v 1.7 2012/03/12 13:32:55 bartoszkuzma Exp $
 #
 
-DISTNAME=		rsyslog-5.8.7
+DISTNAME=		rsyslog-5.8.8
 CATEGORIES=		sysutils
 MASTER_SITES=		http://www.rsyslog.com/files/download/rsyslog/
 
