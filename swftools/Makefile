@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2011/03/15 01:54:34 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.15 2012/03/12 14:43:06 thomasklausner Exp $
 #
 
 DISTNAME=	swftools-0.9.1
+PKGREVISION=	1
 CATEGORIES=	graphics multimedia converters
 MASTER_SITES=	http://www.swftools.org/
 
@@ -17,7 +18,7 @@ USE_TOOLS+=		gmake yacc
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 
-# png2swf already installed as part of ming>=0.4.3. 
+# png2swf already installed as part of ming>=0.4.3.
 CONFIGURE_ENV+=		DISABLEPNG2SWF=true
 
 .include "options.mk"
@@ -26,6 +27,11 @@ INSTALL_MAKE_FLAGS=	prefix=${DESTDIR}${PREFIX}
 INSTALL_MAKE_FLAGS+=	mandir=${DESTDIR}/${PREFIX}/${PKGMANDIR}
 
 BUILDLINK_INCDIRS.fontconfig=	include/fontconfig
+
+# remove empty man page -- delete this target if it ever gets filled in
+post-extract:
+	${RM} ${WRKSRC}/src/swfrender.1
+
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/giflib.buildlink3.mk"

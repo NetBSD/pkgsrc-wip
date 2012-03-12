@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2010/01/01 23:08:05 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.6 2012/03/12 14:43:06 thomasklausner Exp $
 ${PLIST.avifile}bin/avi2swf
 bin/as3compile
 bin/font2swf
@@ -24,7 +24,6 @@ man/man1/swfc.1
 man/man1/swfcombine.1
 man/man1/swfdump.1
 man/man1/swfextract.1
-man/man1/swfrender.1
 man/man1/swfstrings.1
 man/man1/wav2swf.1
 share/swftools/swfs/PreLoaderTemplate.swf
