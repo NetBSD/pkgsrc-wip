@@ -18,6 +18,7 @@ Suggested package updates
 	o di-4.31
 	o directfb-1.0.0
 	o dmxproto-2.3.1
+	o dos2unix-5.3.3
 	o ecasound-2.8.1
 	o ecb-2.40
 	o editline-20110227.3.0
@@ -86,6 +87,7 @@ Suggested package updates
 	o mpgedit-0.73dev2
 	o mumble-1.2.3
 	o mupen64-0.5
+	o mupen64plus-1.99.5
 	o nautilus-open-terminal-0.19
 	o netwmpager-2.04
 	o newsbeuter-2.4
