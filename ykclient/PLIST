@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2012/03/07 23:01:05 pettai Exp $
-bin/ykclient
-include/ykclient.h
-include/ykclient_server_response.h
-lib/libykclient.la

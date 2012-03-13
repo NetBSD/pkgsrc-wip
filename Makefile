@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4679 2012/03/11 08:40:51 phonohawk Exp $
+# $Id: Makefile,v 1.4680 2012/03/13 16:13:52 pettai Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1456,7 +1456,6 @@ SUBDIR+=	libxc
 SUBDIR+=	libxfce4gui
 SUBDIR+=	libxfce4ui
 SUBDIR+=	libxfce4util
-SUBDIR+=	libyubikey
 SUBDIR+=	libzdb
 SUBDIR+=	libzn-poly
 SUBDIR+=	libzrtpcpp
@@ -2024,7 +2023,6 @@ SUBDIR+=	palp
 SUBDIR+=	pam-pkcs11
 SUBDIR+=	pam-pop3
 SUBDIR+=	pam-pwdfile
-SUBDIR+=	pam-yubico
 SUBDIR+=	pan2-git
 SUBDIR+=	panda
 SUBDIR+=	pandoc
@@ -3263,7 +3261,6 @@ SUBDIR+=	yelp-tools
 SUBDIR+=	yelp-xsl
 SUBDIR+=	yersinia
 SUBDIR+=	yi
-SUBDIR+=	ykclient
 SUBDIR+=	yp-tools
 SUBDIR+=	ypbind-mt
 SUBDIR+=	ypserv
