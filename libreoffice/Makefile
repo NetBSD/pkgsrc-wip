@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2012/03/12 10:17:25 ftigeot Exp $
+# $NetBSD: Makefile,v 1.30 2012/03/14 17:38:26 ftigeot Exp $
 
 VER=			3.5.1.2
 DISTNAME=		libreoffice-${VER}
@@ -86,6 +86,7 @@ CONFIGURE_ARGS+=	--prefix=${DESTDIR}${PREFIX}/${PKGNAME}
 CONFIGURE_ARGS+=	--disable-ccache
 CONFIGURE_ARGS+=	--disable-epm
 CONFIGURE_ARGS+=	--disable-ext-presenter-console
+CONFIGURE_ARGS+=	--disable-gnome-vfs
 CONFIGURE_ARGS+=	--disable-mozilla
 CONFIGURE_ARGS+=	--disable-neon
 CONFIGURE_ARGS+=	--disable-odk
@@ -180,7 +181,6 @@ post-install:
 .include "../../print/poppler-cpp/buildlink3.mk"
 .include "../../print/poppler-includes/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../sysutils/gnome-vfs/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../textproc/hunspell/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"

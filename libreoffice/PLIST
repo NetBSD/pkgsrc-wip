@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2012/03/04 07:38:52 ftigeot Exp $
+@comment $NetBSD: PLIST,v 1.15 2012/03/14 17:38:26 ftigeot Exp $
 bin/sbase
 bin/scalc
 bin/sdraw
@@ -438,7 +438,6 @@ ${PKGNAME}/program/types/oovbaapi.rdb
 ${PKGNAME}/program/ucpcmis1.uno.so
 ${PKGNAME}/program/ucpexpand1.uno.so
 ${PKGNAME}/program/ucpext.uno.so
-${PKGNAME}/program/ucpgvfs1.uno.so
 ${PKGNAME}/program/ucptdoc1.uno.so
 ${PKGNAME}/program/uno.py
 ${PKGNAME}/program/unohelper.py
