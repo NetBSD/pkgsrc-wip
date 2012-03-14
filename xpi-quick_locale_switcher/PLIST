@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/03/14 13:36:37 obache Exp $
+lib/firefox/extensions/{25A1388B-6B18-46c3-BEBA-A81915D0DE8F}
+lib/firefox36/extensions/{25A1388B-6B18-46c3-BEBA-A81915D0DE8F}
+lib/seamonkey/extensions/{25A1388B-6B18-46c3-BEBA-A81915D0DE8F}
+lib/thunderbird/extensions/{25A1388B-6B18-46c3-BEBA-A81915D0DE8F}
+lib/xpi/extensions/{25A1388B-6B18-46c3-BEBA-A81915D0DE8F}/chrome.manifest
+lib/xpi/extensions/{25A1388B-6B18-46c3-BEBA-A81915D0DE8F}/chrome/qls.jar
+lib/xpi/extensions/{25A1388B-6B18-46c3-BEBA-A81915D0DE8F}/defaults/preferences/prefs.js
+lib/xpi/extensions/{25A1388B-6B18-46c3-BEBA-A81915D0DE8F}/install.rdf
+lib/xpi/extensions/{25A1388B-6B18-46c3-BEBA-A81915D0DE8F}/license.txt
