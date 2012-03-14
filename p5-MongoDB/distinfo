@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/03/14 21:51:11 bubuchka Exp $
+
+SHA1 (MongoDB-0.45.tar.gz) = 0ba77fb1be382d8255618b2ae4fcd51fc829e7b1
+RMD160 (MongoDB-0.45.tar.gz) = 23842c33bdd81b4dc7fd6dc24cd85508b1cdca05
+Size (MongoDB-0.45.tar.gz) = 1421684 bytes
