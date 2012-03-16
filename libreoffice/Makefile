@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2012/03/16 17:32:17 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.32 2012/03/16 17:42:13 thomasklausner Exp $
 
 VER=			3.5.1.2
 DISTNAME=		libreoffice-${VER}
@@ -153,6 +153,7 @@ post-install:
 	done
 
 
+.include "../../converters/libvisio/buildlink3.mk"
 .include "../../converters/libwpd/buildlink3.mk"
 .include "../../converters/libwpg/buildlink3.mk"
 .include "../../converters/libwps/buildlink3.mk"
@@ -189,7 +190,6 @@ post-install:
 .include "../../textproc/redland/buildlink3.mk"
 .include "../../textproc/libexttextcat/buildlink3.mk"
 .include "../../wip/libmythes/buildlink3.mk"
-.include "../../wip/libvisio/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
