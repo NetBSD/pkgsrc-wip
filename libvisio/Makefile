@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2012/03/06 09:38:44 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2012/03/16 17:37:17 thomasklausner Exp $
 
-VER=		0.0.15
-DISTNAME=	libvisio-${VER}
-PKGNAME=	libvisio-${VER:S/-//g}
+DISTNAME=	libvisio-0.0.15
 CATEGORIES=	textproc
 MASTER_SITES=	http://dev-www.libreoffice.org/src/
 EXTRACT_SUFX=	.tar.xz
@@ -22,9 +20,9 @@ USE_TOOLS+=	pkg-config
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-werror
+PKGCONFIG_OVERRIDE=	libvisio-0.0.pc.in
 
 .include "../../converters/libwpd/buildlink3.mk"
 .include "../../converters/libwpg/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"
