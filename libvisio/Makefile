@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2012/03/16 17:37:17 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2012/03/16 17:39:13 thomasklausner Exp $
 
 DISTNAME=	libvisio-0.0.15
-CATEGORIES=	textproc
+CATEGORIES=	converters
 MASTER_SITES=	http://dev-www.libreoffice.org/src/
 EXTRACT_SUFX=	.tar.xz
 
