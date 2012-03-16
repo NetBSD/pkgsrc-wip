@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2012/03/03 15:28:15 ftigeot Exp $
+# $NetBSD: Makefile,v 1.5 2012/03/16 11:47:03 thomasklausner Exp $
 
-VER=		3.2.0
-DISTNAME=	libexttextcat-${VER}
-PKGNAME=	libexttextcat-${VER:S/-//g}
+DISTNAME=	libexttextcat-3.2.0
 CATEGORIES=	textproc
 MASTER_SITES=	http://dev-www.libreoffice.org/src/libexttextcat/
 EXTRACT_SUFX=	.tar.xz
@@ -14,9 +12,9 @@ LICENSE=	modified-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
-
 CONFLICTS+=	libtextcat-[0-9]*
+
+PKGCONFIG_OVERRIDE=	libexttextcat.pc.in
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
