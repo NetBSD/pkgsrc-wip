@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4682 2012/03/14 21:52:50 bubuchka Exp $
+# $Id: Makefile,v 1.4683 2012/03/16 17:32:16 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1368,7 +1368,6 @@ SUBDIR+=	libepc
 SUBDIR+=	libestr
 SUBDIR+=	libexecinfo
 SUBDIR+=	libexosip
-SUBDIR+=	libexttextcat
 SUBDIR+=	libfplll
 SUBDIR+=	libfs
 SUBDIR+=	libgadu
@@ -1675,6 +1674,7 @@ SUBDIR+=	muscle-pkcs11
 SUBDIR+=	muscletool
 SUBDIR+=	musepack
 SUBDIR+=	mutt-ng
+SUBDIR+=	muttprint
 SUBDIR+=	muttvcquery
 SUBDIR+=	mvsis
 SUBDIR+=	mwf-designer
@@ -3235,6 +3235,7 @@ SUBDIR+=	xmoto
 SUBDIR+=	xoo
 SUBDIR+=	xpde
 SUBDIR+=	xpdq
+SUBDIR+=	xpi-quick_locale_switcher
 SUBDIR+=	xpilot-ng
 SUBDIR+=	xplore
 SUBDIR+=	xrdp
