@@ -1,6 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/03/11 15:19:53 mayureshw Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/03/16 17:52:37 thomasklausner Exp $
 bin/muttprint
 bin/muttprint-langinfo
+man/de/man1/muttprint.1
+man/es/man1/muttprint.1
+man/it/man1/muttprint.1
+man/man1/muttprint.1
 share/doc/muttprint/CHANGES
 share/doc/muttprint/COPYING
 share/doc/muttprint/INSTALL
@@ -43,10 +47,6 @@ share/doc/muttprint/sample-muttprintrc-fr
 share/doc/muttprint/sample-muttprintrc-it
 share/doc/muttprint/sample-muttprintrc-nl
 share/doc/muttprint/sample-muttprintrc-si
-man/de/man1/muttprint.1
-man/es/man1/muttprint.1
-man/it/man1/muttprint.1
-man/man1/muttprint.1
 share/muttprint/BabyTuX.eps
 share/muttprint/BabyTuX_color.eps
 share/muttprint/Debian.eps
