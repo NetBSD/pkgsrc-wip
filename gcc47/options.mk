@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.3 2012/03/17 15:38:29 keckhardt Exp $
+# $NetBSD: options.mk,v 1.4 2012/03/17 15:39:44 keckhardt Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gcc47
 PKG_SUPPORTED_OPTIONS=	nls gcc-quadmath
-PKG_SUGGESTED_OPTIONS=  
+PKG_SUGGESTED_OPTIONS=	gcc-quadmath  
 .if ${OPSYS} == "NetBSD"
 PKG_SUGGESTED_OPTIONS+=	nls
 .endif
