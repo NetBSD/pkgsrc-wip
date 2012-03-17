@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/03/17 14:27:45 roelants Exp $
+
+SHA1 (fancy-0.9.15.tar.gz) = b42fb5ad3c4388930f9b1a11c049fdf5733ddaec
+RMD160 (fancy-0.9.15.tar.gz) = b1f8a7836235c4dae7df09494f1f4ed4d2c0f7f4
+Size (fancy-0.9.15.tar.gz) = 396969 bytes
