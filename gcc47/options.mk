@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.2 2012/03/17 14:43:01 keckhardt Exp $
+# $NetBSD: options.mk,v 1.3 2012/03/17 15:38:29 keckhardt Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gcc47
-PKG_SUPPORTED_OPTIONS=	nls noquadmath
+PKG_SUPPORTED_OPTIONS=	nls gcc-quadmath
 PKG_SUGGESTED_OPTIONS=  
 .if ${OPSYS} == "NetBSD"
 PKG_SUGGESTED_OPTIONS+=	nls
@@ -23,7 +23,7 @@ CONFIGURE_ARGS+=	--disable-nls
 ###
 ### quadmath 
 ###
-.if !empty(PKG_OPTIONS:Mnoquadmath)
+.if empty(PKG_OPTIONS:Mgcc-quadmath)
 CONFIGURE_ARGS+=	--disable-libquadmath --disable-libquadmath-support
 .endif
 
