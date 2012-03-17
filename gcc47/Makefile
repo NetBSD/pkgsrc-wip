@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.10 2012/02/29 07:14:23 keckhardt Exp $
+# $NetBSD: Makefile,v 1.11 2012/03/17 14:43:01 keckhardt Exp $
 
-GCC_VERSION=		4.7
-DISTNAME=		gcc-${GCC_VERSION}-20120225
+GCC_VERSION=		4.7.0-RC
+DISTNAME=		gcc-${GCC_VERSION}-20120314
 PKGNAME=		gcc47-${GCC_VERSION}
 CATEGORIES=		wip
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX}
-SITES.gcc-4.7-20120225.tar.bz2= \
-		ftp://ftp.fu-berlin.de/unix/languages/gcc/snapshots/4.7-20120225/
+SITES.gcc-4.7.0-RC-20120314.tar.bz2= \
+		ftp://ftp.fu-berlin.de/unix/languages/gcc/snapshots/4.7.0-RC-20120314/
 
 EXTRACT_SUFX=		.tar.bz2
 
@@ -120,17 +120,14 @@ CONFIGURE_ARGS+=	--with-mpfr=${BUILDLINK_PREFIX.mpfr}
 CONFIGURE_ARGS+=	--with-libiconv-prefix=${PREFIX}
 CONFIGURE_ARGS+=	--with-gxx-include-dir=${GCC_PREFIX}/include/c++/
 CONFIGURE_ARGS+=	--disable-multilib
-CONFIGURE_ARGS+=	--with-tune=generic
+#CONFIGURE_ARGS+=	--with-arch_32=i486
 CONFIGURE_ARGS+=	--with-ppl=${BUILDLINK_PREFIX.ppl}
 CONFIGURE_ARGS+=	--with-cloog=${BUILDLINK_PREFIX.cloog}
 CONFIGURE_ARGS+=	--enable-cloog-backend=isl
 .if ${OPSYS} == "NetBSD"
-CONFIGURE_ARGS+=	--with-ld=${PREFIX}/bin/gnu-ld
-CONFIGURE_ARGS+=	--with-libelf=${PREFIX}
+CONFIGURE_ARGS+=	--with-gnu-ld --with-ld=/usr/bin/ld
+CONFIGURE_ARGS+=	--with-gnu-as --with-as=/usr/bin/as
 MAKE_ENV+=		ac_cv_func_clock_gettime=yes
-.endif
-.if ${OPSYS} == "Linux"
-CONFIGURE_ARGS+=	--disable-libquadmath --disable-libquadmath-support
 .endif
 
 CONFIGURE_ENV+=		CONFIG_SHELL=${CONFIG_SHELL}
@@ -173,7 +170,7 @@ CFLAGS+=		-I${BUILDLINK_DIR}/include
 
 LIBS.SunOS+=		-lgmp
 
-TEST_TARGET=	check
+#TEST_TARGET=	check
 
 pre-configure:
 	${MKDIR} ${WRKDIR}/obj
@@ -195,6 +192,9 @@ do-configure:
 do-build:
 	(${_ULIMIT_CMD} cd ${WRKDIR}/obj && ${SETENV} ${MAKE_ENV} ${GMAKE} -j${MAKE_JOBS:U1:Q} )
 
+do-test:
+	(${_ULIMIT_CMD} cd ${WRKDIR}/obj && ${SETENV} ${MAKE_ENV} ${GMAKE} -k check)
+
 
 do-install:
 	(cd ${WRKDIR}/obj && ${SETENV} ${MAKE_ENV} ${GMAKE} install DESTDIR=${DESTDIR} \
@@ -215,8 +215,6 @@ GENERATE_PLIST+=                                                        \
 .include "../../math/mpcomplex/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../math/mpfr/buildlink3.mk"
-.include "../../devel/binutils/buildlink3.mk"
-.include "../../devel/libelf/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../wip/cloog/buildlink3.mk"
 .include "../../wip/ppl/buildlink3.mk"

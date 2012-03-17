@@ -14,8 +14,8 @@ needs this patch before building gcc47 (toolchain/45673):
  	__asm volatile ("xchgb %0,(%2)" : 
 -	    "=r" (val)
 -	    :"0" (val), "r" (lockp));
-+	    "=q" (val)
-+	    :"0" (val), "q" (lockp));
++	    "=qQ" (val)
++	    :"0" (val), "qQ" (lockp));
  	__insn_barrier();
  	return val == __SIMPLELOCK_UNLOCKED;
  }

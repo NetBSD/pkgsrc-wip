@@ -1,8 +1,6 @@
 -*- outline -*-
 
 * TODO make java target work on NetBSD
-* TODO make quadmath work on Linux amd64
-* TODO make test and send patches to gcc
 * Depends on converters/libiconv?
 Check, if buildlink/builtin provides correct PREFIX:
 CONFIGURE_ARGS+=	--with-libiconv-prefix=${PREFIX}
