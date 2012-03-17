@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/03/17 11:37:19 bubuchka Exp $
+# $NetBSD: Makefile,v 1.2 2012/03/17 11:45:47 bubuchka Exp $
 
 DISTNAME=	leveldb
 PKGNAME=	${DISTNAME}-0
@@ -26,7 +26,7 @@ INSTALLATION_DIRS+=	bin include/leveldb lib
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/include/leveldb/* ${DESTDIR}${PREFIX}/include/leveldb
 	${INSTALL_LIB} ${WRKSRC}/libleveldb.a ${DESTDIR}${PREFIX}/lib
-	${INSTALL_PROGRAM} ${WRKSRC}/db_bench ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/db_bench ${DESTDIR}${PREFIX}/bin/leveldb_bench
 
 .include "../../wip/mk/git-package.mk"
 _GIT_FLAGS=	--quiet
