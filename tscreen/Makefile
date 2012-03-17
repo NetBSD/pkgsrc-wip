@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/12/17 20:18:48 ishit Exp $
+# $NetBSD: Makefile,v 1.2 2012/03/17 17:27:24 ishit Exp $
 
 DISTNAME=	tscreen-0.4.9
 CATEGORIES=	misc shells
@@ -22,7 +22,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-sys-screenrc=${PKG_SYSCONFDIR}/tscreenrc
 CONFIGURE_ARGS+=	--enable-telnet
 
-PKG_SHELL=		bin/screen
+PKG_SHELL=		bin/tscreen
 INFO_FILES=		YES
 
 .include "../../mk/bsd.prefs.mk"
