@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2012/03/17 10:59:48 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.34 2012/03/17 11:20:39 ftigeot Exp $
 
 VER=			3.5.1.2
 DISTNAME=		libreoffice-${VER}
@@ -85,6 +85,7 @@ CONFIGURE_ARGS+=	--prefix=${DESTDIR}${PREFIX}/${PKGNAME}
 CONFIGURE_ARGS+=	--disable-ccache
 CONFIGURE_ARGS+=	--disable-epm
 CONFIGURE_ARGS+=	--disable-ext-presenter-console
+CONFIGURE_ARGS+=	--disable-gconf
 CONFIGURE_ARGS+=	--disable-gnome-vfs
 CONFIGURE_ARGS+=	--disable-mozilla
 CONFIGURE_ARGS+=	--disable-neon
@@ -159,7 +160,6 @@ post-install:
 .include "../../databases/db4/buildlink3.mk"
 .include "../../databases/unixodbc/buildlink3.mk"
 .include "../../devel/gperf/buildlink3.mk"
-.include "../../devel/GConf/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/cppunit/buildlink3.mk"
 .include "../../devel/mdds/buildlink3.mk"
