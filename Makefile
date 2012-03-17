@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4684 2012/03/16 17:42:12 thomasklausner Exp $
+# $Id: Makefile,v 1.4685 2012/03/17 10:59:47 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1410,7 +1410,6 @@ SUBDIR+=	libmemcached
 SUBDIR+=	libmpg123
 SUBDIR+=	libmrss
 SUBDIR+=	libmusclecard
-SUBDIR+=	libmythes
 SUBDIR+=	libneural
 SUBDIR+=	libnfo
 SUBDIR+=	libode

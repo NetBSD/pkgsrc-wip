@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2012/03/16 17:42:13 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.33 2012/03/17 10:59:48 thomasklausner Exp $
 
 VER=			3.5.1.2
 DISTNAME=		libreoffice-${VER}
@@ -30,7 +30,6 @@ MORE_DISTFILES= \
 	48a9f787f43a09c0a9b7b00cd1fddbbf-hyphen-2.7.1.tar.gz \
 	7c2549f6b0a8bb604e6c4c729ffdcfe6-libcmis-0.1.0.tar.gz \
 	0be45d54cc5e1c2e3102e32b8c190346-liberation-fonts-ttf-1.07.1.tar.gz \
-	067201ea8b126597670b5eff72e1f66c-mythes-1.2.0.tar.gz \
 	fdb27bfe2dbe2e7b57ae194d9bf36bab-SampleICC-1.3.2.tar.gz \
 	1f24ab1d39f4a51faf22244c94a6203f-xmlsec1-1.2.14.tar.gz
 
@@ -189,7 +188,7 @@ post-install:
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../textproc/redland/buildlink3.mk"
 .include "../../textproc/libexttextcat/buildlink3.mk"
-.include "../../wip/libmythes/buildlink3.mk"
+.include "../../textproc/mythes/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
