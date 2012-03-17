@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/03/17 17:27:24 ishit Exp $
+# $NetBSD: Makefile,v 1.3 2012/03/17 17:53:26 ishit Exp $
 
 DISTNAME=	tscreen-0.4.9
 CATEGORIES=	misc shells
@@ -19,7 +19,6 @@ NOT_FOR_PLATFORM=	Interix-*-* # user auth and username size fixes needed
 PLIST_SUBST+=		DISTNAME=${DISTNAME:Q}
 
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-sys-screenrc=${PKG_SYSCONFDIR}/tscreenrc
 CONFIGURE_ARGS+=	--enable-telnet
 
 PKG_SHELL=		bin/tscreen
