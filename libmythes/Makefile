@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/03/16 17:35:43 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2012/03/17 10:47:45 ftigeot Exp $
 
 DISTNAME=	mythes-1.2.2
 PKGNAME=	lib${DISTNAME}
@@ -22,5 +22,6 @@ REPLACE_PERL=	th_gen_idx.pl
 
 PKGCONFIG_OVERRIDE=	mythes.pc.in
 
+.include "../../lang/perl5/buildlink3.mk"
 .include "../../textproc/hunspell/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
