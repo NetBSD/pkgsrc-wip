@@ -1,38 +1,44 @@
-- test if each DEPENDENCY is correct, say, really necessary
-- To work this package correctly, two set of patches,
- * PKG/46133 for print/pdvipsk
- * And following one are necessary (otherwise conflicts)
+- To build this meta-pkgs,
+ following are necessary (otherwise conflicts) to tex-ptex-3.*
 
 Index: print/teTeX3-texmf/Makefile
 ===================================================================
 RCS file: /e/cvsync/cvsync/pkgsrc/print/teTeX3-texmf/Makefile,v
-retrieving revision 1.49
-diff -u -r1.49 Makefile
---- print/teTeX3-texmf/Makefile	22 Jan 2011 23:54:25 -0000	1.49
-+++ print/teTeX3-texmf/Makefile	24 Feb 2011 13:37:47 -0000
-@@ -467,6 +467,8 @@
+retrieving revision 1.53
+diff -u -r1.53 Makefile
+--- print/teTeX3-texmf/Makefile	6 Nov 2011 08:46:11 -0000	1.53
++++ print/teTeX3-texmf/Makefile	18 Mar 2012 08:23:20 -0000
+@@ -3,7 +3,7 @@
+ 
+ DISTNAME=	tetex-texmf-3.0
+ PKGNAME=	${DISTNAME:C/tetex/teTeX/}
+-PKGREVISION=	33
++PKGREVISION=	34
+ CATEGORIES=	print
+ MASTER_SITES=	${MASTER_SITE_TEX_CTAN:=obsolete/systems/unix/teTeX/3.0/distrib/}
+ 
+@@ -536,6 +536,7 @@
  	rm -rf ${WRKSRC}/tex/plain/pdfcolor
  	rm -rf ${WRKSRC}/tex/plain/[r-u]*
  	rm -rf ${WRKSRC}/tex/plain/[w-z]*
-+	rm -f  ${WRKSRC}/tex/platex/config/hyphen.cfg
-+	rm -f  ${WRKSRC}/tex/platex/config/platex.ini
++	rm -rf ${WRKSRC}/tex/platex/config
  
  do-install:
  	cd ${WRKSRC} && pax -wr -s ',.*\.orig$$,,' * ${DESTDIR}${PREFIX}/share/texmf-dist
 Index: print/teTeX3-texmf/PLIST
 ===================================================================
 RCS file: /e/cvsync/cvsync/pkgsrc/print/teTeX3-texmf/PLIST,v
-retrieving revision 1.26
-diff -u -r1.26 PLIST
---- print/teTeX3-texmf/PLIST	22 Jan 2011 23:54:25 -0000	1.26
-+++ print/teTeX3-texmf/PLIST	24 Feb 2011 13:38:09 -0000
-@@ -8088,10 +8088,8 @@
+retrieving revision 1.30
+diff -u -r1.30 PLIST
+--- print/teTeX3-texmf/PLIST	6 Nov 2011 08:46:11 -0000	1.30
++++ print/teTeX3-texmf/PLIST	18 Mar 2012 08:05:29 -0000
+@@ -6746,10 +6746,6 @@
  share/texmf-dist/tex/plain/vietnam/plnfss.tex
  share/texmf-dist/tex/plain/vietnam/t5cmr.pfd
  share/texmf-dist/tex/plain/vietnam/t5code.tex
 -share/texmf-dist/tex/platex/config/hyphen.cfg
- share/texmf-dist/tex/platex/config/language.dat
- share/texmf-dist/tex/platex/config/pdfplatex.ini
+-share/texmf-dist/tex/platex/config/language.dat
+-share/texmf-dist/tex/platex/config/pdfplatex.ini
 -share/texmf-dist/tex/platex/config/platex.ini
  share/texmf-dist/tex/texinfo/texinfo.ini
  share/texmf-dist/tex/texinfo/texinfo.tex
