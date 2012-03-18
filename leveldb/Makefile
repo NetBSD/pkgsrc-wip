@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2012/03/17 11:45:47 bubuchka Exp $
+# $NetBSD: Makefile,v 1.3 2012/03/18 20:56:56 bubuchka Exp $
 
 DISTNAME=	leveldb
-PKGNAME=	${DISTNAME}-0
+PKGNAME=	${DISTNAME}-1.2
 PKGREVISION=	${_GIT_PKGVERSION:S/.//g}
 CATEGORIES=	databases
 MASTER_SITES=	#
