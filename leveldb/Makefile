@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/03/18 21:01:18 bubuchka Exp $
+# $NetBSD: Makefile,v 1.5 2012/03/18 21:04:26 bubuchka Exp $
 
 DISTNAME=	leveldb
 PKGNAME=	${DISTNAME}-1.2
@@ -9,7 +9,7 @@ MASTER_SITES=	#
 MAINTAINER=	mishka@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/leveldb/
 COMMENT=	Fast and lightweight key/value database library by Google
-LICENSE=	2-clause-bsd
+LICENSE=	modified-bsd
 
 GIT_REPOSITORIES=	leveldb
 GIT_REPO.leveldb=	http://code.google.com/p/leveldb
