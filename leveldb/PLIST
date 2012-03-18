@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2012/03/17 11:45:47 bubuchka Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/03/18 21:29:38 bubuchka Exp $
 bin/leveldb_bench
 include/leveldb/c.h
 include/leveldb/cache.h
@@ -13,3 +13,11 @@ include/leveldb/table.h
 include/leveldb/table_builder.h
 include/leveldb/write_batch.h
 lib/libleveldb.a
+share/doc/leveldb/bench/db_bench_sqlite3.cc
+share/doc/leveldb/bench/db_bench_tree_db.cc
+share/doc/leveldb/benchmark.html
+share/doc/leveldb/doc.css
+share/doc/leveldb/impl.html
+share/doc/leveldb/index.html
+share/doc/leveldb/log_format.txt
+share/doc/leveldb/table_format.txt

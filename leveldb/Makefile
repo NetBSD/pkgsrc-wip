@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/03/18 21:04:26 bubuchka Exp $
+# $NetBSD: Makefile,v 1.6 2012/03/18 21:29:38 bubuchka Exp $
 
 DISTNAME=	leveldb
 PKGNAME=	${DISTNAME}-1.2
@@ -21,12 +21,15 @@ USE_TOOLS+=	gmake
 
 BUILD_TARGET=	libleveldb.a db_bench
 
-INSTALLATION_DIRS+=	bin include/leveldb lib
+INSTALLATION_DIRS+=	bin include/leveldb lib share/doc/leveldb
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/include/leveldb/* ${DESTDIR}${PREFIX}/include/leveldb
+	${INSTALL_PROGRAM} ${WRKSRC}/db_bench 				\
+		${DESTDIR}${PREFIX}/bin/leveldb_bench
+	${INSTALL_DATA} ${WRKSRC}/include/leveldb/*			\
+		${DESTDIR}${PREFIX}/include/leveldb
 	${INSTALL_LIB} ${WRKSRC}/libleveldb.a ${DESTDIR}${PREFIX}/lib
-	${INSTALL_PROGRAM} ${WRKSRC}/db_bench ${DESTDIR}${PREFIX}/bin/leveldb_bench
+	cd ${WRKSRC}/doc && pax -rw . ${DESTDIR}${PREFIX}/share/doc/leveldb
 
 .include "../../wip/mk/git-package.mk"
 # ignore --depth - it won't work with Google HTTP
