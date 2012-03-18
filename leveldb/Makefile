@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/03/18 20:56:56 bubuchka Exp $
+# $NetBSD: Makefile,v 1.4 2012/03/18 21:01:18 bubuchka Exp $
 
 DISTNAME=	leveldb
 PKGNAME=	${DISTNAME}-1.2
@@ -29,6 +29,7 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/db_bench ${DESTDIR}${PREFIX}/bin/leveldb_bench
 
 .include "../../wip/mk/git-package.mk"
+# ignore --depth - it won't work with Google HTTP
 _GIT_FLAGS=	--quiet
 
 .include "../../mk/bsd.pkg.mk"
