@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/03/14 13:36:37 obache Exp $
+# $NetBSD: Makefile,v 1.2 2012/03/19 01:55:30 obache Exp $
 #
 
 DISTNAME=	quick_locale_switcher-1.7.8
@@ -16,7 +16,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_BUILD=	yes
 
-USE_TOOLS+=	pax
+USE_TOOLS+=	pax unzip
 
 EXTRACT_OPTS+=	-f zip
 EXTRACT_DIR=	${WRKSRC}
