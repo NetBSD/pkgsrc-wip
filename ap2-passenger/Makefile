@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/02/07 13:49:48 noud4 Exp $
+# $NetBSD: Makefile,v 1.10 2012/03/19 12:00:29 ftigeot Exp $
 
 DISTNAME=		passenger-3.0.11
 PKGNAME=		${APACHE_PKG_PREFIX}-${RUBY_PKGPREFIX}-${DISTNAME}
@@ -28,7 +28,7 @@ DEPENDS+=		${RUBY_PKGPREFIX}-rack-[0-9]*:../../www/ruby-rack
 .include "../../lang/ruby/rubyversion.mk"
 
 .if ${RUBY_VERSION_DEFAULT} == 18
-BUILD_DEPENDS+=		${RUBY_PKGPREFIX}-rake>=0.8.1:../../devel/rake
+BUILD_DEPENDS+=		${RUBY_PKGPREFIX}-rake>=0.8.1:../../devel/ruby-rake
 DEPENDS+=		${RUBY_PKGPREFIX}-rubygems>=1.2.0:../../misc/rubygems
 .endif
 
