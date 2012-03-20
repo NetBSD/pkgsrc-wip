@@ -1,42 +1,23 @@
-$NetBSD: patch-aa,v 1.2 2008/04/02 13:45:03 pmatias Exp $
+$NetBSD: patch-aa,v 1.3 2012/03/20 21:46:56 khorben Exp $
 
---- Makefile.orig	2008-02-21 07:18:37.000000000 -0300
-+++ Makefile
-@@ -15,6 +15,7 @@ CFLAGS = -fPIC -O -Wall -DNDEBUG
- INSTALL = install
+Always define RM and user-destdir support.
+
+--- /home/netbsd/pkgsrc/work/wip/miniupnpc/work/miniupnpc-1.6/Makefile.orig	2011-06-21 15:24:14.000000000 +0000
++++ /home/netbsd/pkgsrc/work/wip/miniupnpc/work/miniupnpc-1.6/Makefile
+@@ -21,6 +21,7 @@ JAVA = java
+ JNAERATOR = jnaerator-0.9.3.jar
  #following libs are needed on Solaris
  #LDLIBS=-lsocket -lnsl -lresolv
 +RM = rm
  
  # APIVERSION is used to build SONAME
- APIVERSION = 2
-@@ -39,9 +40,10 @@ SONAME = $(SHAREDLIBRARY).$(APIVERSION)
- EXECUTABLES = upnpc-static upnpc-shared \
-               testminixml minixmlvalid testupnpreplyparse
+ APIVERSION = 8
+@@ -81,7 +82,7 @@ TESTIGDDESCPARSE := $(TESTIGDDESCPARSE) 
+ endif
  
+ # install directories
 -INSTALLPREFIX ?= $(PREFIX)/usr
-+INSTALLPREFIX ?= $(PREFIX)
++INSTALLPREFIX ?= $(DESTDIR)$(PREFIX)
  INSTALLDIRINC = $(INSTALLPREFIX)/include/miniupnpc
  INSTALLDIRLIB = $(INSTALLPREFIX)/lib
-+INSTALLDIRBIN = $(INSTALLPREFIX)/bin
- 
- .PHONY:	install clean depend all installpythonmodule
- 
-@@ -64,12 +66,13 @@ clean:
- 
- install:	$(LIBRARY) $(SHAREDLIBRARY)
- 	$(INSTALL) -d $(INSTALLDIRINC)
--	$(INSTALL) --mode=644 $(HEADERS) $(INSTALLDIRINC)
-+	$(INSTALL) -m 644 $(HEADERS) $(INSTALLDIRINC)
- 	$(INSTALL) -d $(INSTALLDIRLIB)
--	$(INSTALL) --mode=644 $(LIBRARY) $(INSTALLDIRLIB)
--	$(INSTALL) --mode=644 $(SHAREDLIBRARY) $(INSTALLDIRLIB)/$(SONAME)
-+	$(INSTALL) -m 644 $(LIBRARY) $(INSTALLDIRLIB)
-+	$(INSTALL) -m 644 $(SHAREDLIBRARY) $(INSTALLDIRLIB)/$(SONAME)
- 	#ln --symbolic $(INSTALLDIRLIB)/$(SONAME) $(INSTALLDIRLIB)/$(SHAREDLIBRARY)
--	ln --symbolic --force $(SONAME) $(INSTALLDIRLIB)/$(SHAREDLIBRARY)
-+	ln -sf $(SONAME) $(INSTALLDIRLIB)/$(SHAREDLIBRARY)
-+	$(INSTALL) -m 755 upnpc-static $(INSTALLDIRBIN)/upnpc
- 
- cleaninstall:
- 	$(RM) -r $(INSTALLDIRINC)
+ INSTALLDIRBIN = $(INSTALLPREFIX)/bin

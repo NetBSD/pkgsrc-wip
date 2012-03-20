@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2008/04/02 13:45:03 pmatias Exp $
+$NetBSD: distinfo,v 1.3 2012/03/20 21:46:56 khorben Exp $
 
-SHA1 (miniupnpc-1.0.tar.gz) = 41203a96a335f9223385d3cafec949b2aacfd7f5
-RMD160 (miniupnpc-1.0.tar.gz) = 0976edbce8cc0f902f35eb828f481e2f5691fc89
-Size (miniupnpc-1.0.tar.gz) = 36223 bytes
-SHA1 (patch-aa) = 2a9dd9e826f4f6f7476c048692b724f157710acc
+SHA1 (miniupnpc-1.6.tar.gz) = ef8f2edb17f2e7c5b8dc67ee80a65c199d823e0a
+RMD160 (miniupnpc-1.6.tar.gz) = d86b75b331a3fb5525c71708548f311977c0598f
+Size (miniupnpc-1.6.tar.gz) = 66454 bytes
+SHA1 (patch-aa) = b3e94dbd99276f0dceb5d2fbb8198b7db80993c8
