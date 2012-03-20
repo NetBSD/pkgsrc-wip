@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2012/01/26 04:56:23 obache Exp $
+# $NetBSD: Makefile,v 1.3 2012/03/20 08:59:24 obache Exp $
 #
 
-DISTNAME=	kytea-0.3.2
+DISTNAME=	kytea-0.4.0
 CATEGORIES=	textproc
 MASTER_SITES=	http://www.phontron.com/kytea/download/
 
@@ -18,8 +18,13 @@ NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
+PKGCONFIG_OVERRIDE+=	kytea.pc.in
+
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
+
+do-test:
+	${RUN}cd ${WRKSRC}/src/test; ${SETENV} ${TEST_ENV} ./test-kytea
 
 .include "../../mk/bsd.pkg.mk"
