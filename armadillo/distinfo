@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/03/22 19:53:47 outpaddling Exp $
+
+SHA1 (armadillo-2.2.1.tar.gz) = 65ab922627c5c411fa9795131caad189cbfb8689
+RMD160 (armadillo-2.2.1.tar.gz) = 25a43b91e7b2c084e003b168a4fdd1234c4e613d
+Size (armadillo-2.2.1.tar.gz) = 2888669 bytes
