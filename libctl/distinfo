@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/03/22 21:16:11 outpaddling Exp $
+
+SHA1 (libctl-3.1.tar.gz) = 1b2fd33a4aac7e759fee5ce501d846753f4d93de
+RMD160 (libctl-3.1.tar.gz) = b60182dcaab3abfa3b47eb67ace826c4d672e0c6
+Size (libctl-3.1.tar.gz) = 460108 bytes
