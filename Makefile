@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4689 2012/03/22 19:57:01 outpaddling Exp $
+# $Id: Makefile,v 1.4690 2012/03/22 20:26:36 outpaddling Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -648,6 +648,7 @@ SUBDIR+=	fuse-smbfs
 SUBDIR+=	fusefs-btfs
 SUBDIR+=	fusefs-sshfs
 SUBDIR+=	fusil
+SUBDIR+=	fvcom2
 SUBDIR+=	fvcool
 SUBDIR+=	fvwm-crystal
 SUBDIR+=	fvwm1-tch
