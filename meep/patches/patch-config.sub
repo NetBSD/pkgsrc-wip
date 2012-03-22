@@ -1,0 +1,10 @@
+$NetBSD: patch-config.sub,v 1.1.1.1 2012/03/22 21:07:44 outpaddling Exp $
+
+--- config.sub.orig	2009-05-19 15:38:16.000000000 +0000
++++ config.sub
+@@ -1,4 +1,4 @@
+-#! /bin/sh
++#!/usr/bin/env bash
+ # Configuration validation subroutine script.
+ #   Copyright (C) 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999,
+ #   2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008
