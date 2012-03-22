@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4690 2012/03/22 20:26:36 outpaddling Exp $
+# $Id: Makefile,v 1.4691 2012/03/22 21:08:51 outpaddling Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1557,6 +1557,7 @@ SUBDIR+=	mcpp
 SUBDIR+=	mcwm
 SUBDIR+=	mdadm
 SUBDIR+=	mdbtools
+SUBDIR+=	meep
 SUBDIR+=	memcached14
 SUBDIR+=	memdump
 SUBDIR+=	memgrep
