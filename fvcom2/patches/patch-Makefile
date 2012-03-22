@@ -1,0 +1,80 @@
+$NetBSD: patch-Makefile,v 1.1.1.1 2012/03/22 20:25:21 outpaddling Exp $
+
+--- Makefile.orig	2009-09-22 19:45:57.000000000 +0000
++++ Makefile
+@@ -45,14 +45,17 @@
+ #                           UNCOMMENT TO INCLUDE MPI PARALLEL CAPABILITY
+ #--------------------------------------------------------------------------
+ 
+-              FLAG_4 = -DMULTIPROCESSOR
++#              FLAG_4 = -DMULTIPROCESSOR
+ 
+ # For em64t computers at SMAST (guppy)
+ #              PARLIB = -L/hosts/salmon01/data00/medm/em64t/lib64 -lmetis 
+ 
+ # For i386 computers at SMAST (salmon and minke)
+ #              PARLIB = -L/hosts/salmon01/data00/medm/lib -lmetis 
+-              PARLIB = -L../METIS_source -lmetis 
++
++# Why does this fail on NetBSD?
++#              PARLIB = -L${LOCALBASE}/lib -lmetis
++              PARLIB = ${LOCALBASE}/lib/libmetis.a
+ 
+ # For Typhoeus and Hydra
+ #              PARLIB = -L/usr/local/lib -lmetis 
+@@ -78,9 +81,9 @@
+ #                           DEFAULT: NO NETCDF OUTPUT
+ #                           UNCOMMENT TO INCLUDE NETCDF OUTPUT CAPABILITY
+ #--------------------------------------------------------------------------
+-           FLAG_6       =  -DNETCDF_IO
+-             IOLIBS       =  -L/hosts/mao/usr/medm/install/netcdf/3.6.3/em64t/lib  -lnetcdf
+-             IOINCS       =  -I/hosts/mao/usr/medm/install/netcdf/3.6.3/em64t/include
++#           FLAG_6       =  -DNETCDF_IO
++#             IOLIBS       =  -L${LOCALBASE}/lib  -lnetcdf
++#             IOINCS       =  -I${LOCALBASE}/include
+ 
+ # For em64t computers at SMAST (guppy)
+ #             IOLIBS       =  -L/hosts/salmon01/data00/medm/em64t/lib64  -lnetcdf
+@@ -381,10 +384,10 @@
+ #--------------------------------------------------------------------------
+ #  Intel/MPI Compiler Definitions (SMAST)      
+ #--------------------------------------------------------------------------
+-          CPP      = /usr/bin/cpp
+-          CPPFLAGS = $(DEF_FLAGS) -DINTEL   
+-          FC       = mpif90 
+-         DEBFLGS  = #-check all
++#          CPP      = /usr/bin/cpp
++#          CPPFLAGS = $(DEF_FLAGS) -DINTEL   
++#          FC       = mpif90 
++#         DEBFLGS  = #-check all
+ # Use 'OPT = -O0 -g'  for fast compile to test the make 
+ # Use 'OPT = -xP'      for fast run on em64t (Hydra, Typhoeus and Guppy)
+ # Use 'OPT = -xN'      for fast run on em64t (Salmon and Minke)
+@@ -398,12 +401,12 @@
+ #--------------------------------------------------------------------------
+ #  gfortran defs 
+ #--------------------------------------------------------------------------
+-#         CPP      = /usr/bin/cpp 
+-#         CPPFLAGS = $(DEF_FLAGS)  -DGFORTRAN
+-#         FC       = gfortran  -O3 
+-#         DEBFLGS  = 
+-#         OPT      = 
+-#         CLIB     = 
++         CPP      = cpp 
++         CPPFLAGS = $(DEF_FLAGS)  -DGFORTRAN
++         FC       = g95
++         DEBFLGS  = 
++         OPT      = -O
++         CLIB     = 
+ #--------------------------------------------------------------------------
+ #  absoft / mac os x defs
+ #--------------------------------------------------------------------------
+@@ -539,6 +542,8 @@ BIOGEN	= mod_bio_3D.F	mod_onedtide.F
+ #  Linking Directives
+ #--------------------------------------------------------------------------
+ 
++all:	$(EXEC)
++
+ $(EXEC):	$(OBJS)
+ 		$(FC) $(FFLAGS) $(VISOPT) $(LDFLAGS) $(OBJS) $(LIBS) -o $(EXEC)
+ 

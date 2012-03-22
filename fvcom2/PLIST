@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/03/22 20:25:21 outpaddling Exp $
+bin/fvcom
