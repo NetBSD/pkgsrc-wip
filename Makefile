@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4691 2012/03/22 21:08:51 outpaddling Exp $
+# $Id: Makefile,v 1.4692 2012/03/22 21:18:20 outpaddling Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1358,6 +1358,7 @@ SUBDIR+=	libcli
 SUBDIR+=	libcm
 SUBDIR+=	libcmt
 SUBDIR+=	libcpu
+SUBDIR+=	libctl
 SUBDIR+=	libcuba
 SUBDIR+=	libdbglog
 SUBDIR+=	libdialog
