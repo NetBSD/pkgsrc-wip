@@ -24,6 +24,6 @@ INTEGER_LIBRARY = integer-simple
 # over 64 MiB) without -Os, exceeding NetBSD/i386's kernel default
 # limitation.
 #   Note that stage1 currently doesn't bloat that much (about 42.6
-# MiB), but when it does we have to append CONF_CC_OPTS_STAGE1="-Os"
-# to CONFIGURE_ENV as well. I guess that's a matter of time :(
+# MiB), but when it does we have to append CONF_CC_OPTS_STAGE0="-Os"
+# to CONFIGURE_ARGS as well. I guess that's a matter of time :(
 EXTRA_CC_OPTS += -Os

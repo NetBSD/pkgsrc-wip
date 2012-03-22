@@ -1,4 +1,4 @@
-# $NetBSD: stage0.mk,v 1.2 2012/03/06 00:06:26 phonohawk Exp $
+# $NetBSD: stage0.mk,v 1.3 2012/03/22 23:24:57 phonohawk Exp $
 
 # Build an unregisterised bootstrap compiler and install it directly
 # into the .buildlink directory. But we can't use "make install"
@@ -30,6 +30,12 @@ PLATFORM           = powerpc-apple-darwin
 # incorrect for this platform. See ghc-6.12.1/aclocal.m4
 # (FP_LEADING_UNDERSCORE)
 CONFLICTS=	libelf-[0-9]*
+
+.elif ${MACHINE_ARCH} == "x86_64" && ${OPSYS} == "Linux"
+BOOTSTRAP_BUILD_MK = ${PKGDIR}/files/bootstrap-linux.mk
+BOOTSTRAP_CAPI_C   = ${PKGDIR}/files/capi-wrappers-linux-x86_64.c
+BOOTSTRAP_TARBALL  = ${DISTNAME}-boot-x86_64-unknown-linux-gnu.tar.bz2
+PLATFORM           = x86_64-unknown-linux
 
 .else
 PKG_FAIL_REASON+=	"internal error: unsupported platform"

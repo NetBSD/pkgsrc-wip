@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2012/03/04 04:37:12 phonohawk Exp $
+# $NetBSD: Makefile,v 1.32 2012/03/22 23:24:57 phonohawk Exp $
 
 DISTNAME=	ghc-${VERSION}
 VERSION=	7.4.1
@@ -13,6 +13,7 @@ DISTFILES=	${DISTNAME}-src.tar.bz2
 DISTFILES+=	${DISTNAME}-boot-i386-unknown-freebsd8.0.tar.bz2
 DISTFILES+=	${DISTNAME}-boot-i386-unknown-netbsdelf6.99.1.tar.bz2
 DISTFILES+=	${DISTNAME}-boot-powerpc-apple-darwin9.8.0.tar.bz2
+DISTFILES+=	${DISTNAME}-boot-x86_64-unknown-linux-gnu.tar.bz2
 
 .for i in ${DISTFILES:M*-boot-*}
 SITES.${i}=	http://static.cielonegro.org/archive/
@@ -29,7 +30,11 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 #
 # If you want to build HC packages yourself, follow instructions in
 # the ./TODO file.
-ONLY_FOR_PLATFORM= NetBSD-*-i386 FreeBSD-*-i386 Darwin-*-powerpc
+ONLY_FOR_PLATFORM= \
+	Darwin-*-powerpc \
+	FreeBSD-*-i386 \
+	Linux-*-x86_64 \
+	NetBSD-*-i386
 
 # We must provide the real path to gcc to the ./configure script,
 # because GHC has a runtime dependency on it. Aren't there any ways
@@ -96,7 +101,7 @@ CHECK_PORTABILITY_SKIP+=	distrib/prep-bin-dist-mingw
 # GHC currently *requires* ${PREFIX}/lib to be in
 # "/etc/ld-elf.so.conf". See
 # http://hackage.haskell.org/trac/ghc/ticket/2933
-CHECK_SHLIBS_SUPPORTED= 	no
+CHECK_SHLIBS_SUPPORTED=	no
 
 # I guess pdcurses works well but not tested.
 USE_NCURSES=	yes
