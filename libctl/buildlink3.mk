@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2012/03/22 21:16:11 outpaddling Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2012/03/22 21:21:32 outpaddling Exp $
 
 BUILDLINK_TREE+=	libctl
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	libctl
 LIBCTL_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libctl+=	libctl>=3.1
-BUILDLINK_PKGSRCDIR.libctl?=	../../jb-wip/libctl
+BUILDLINK_PKGSRCDIR.libctl?=	../../wip/libctl
 
 # CONFIGURE_ARGS+=	--with-libctl=${PREFIX}
 
