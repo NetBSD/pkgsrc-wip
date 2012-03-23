@@ -1,4 +1,6 @@
-# $NetBSD: stage0.mk,v 1.3 2012/03/22 23:24:57 phonohawk Exp $
+# $NetBSD: bootstrap.mk,v 1.1 2012/03/23 00:17:21 phonohawk Exp $
+
+USE_TOOLS+=	autoconf date gtar perl
 
 # Build an unregisterised bootstrap compiler and install it directly
 # into the .buildlink directory. But we can't use "make install"
@@ -10,32 +12,28 @@
 # run "ghc-pkg recache".
 
 .if ${MACHINE_ARCH} == "i386" && ${OPSYS} == "NetBSD"
-BOOTSTRAP_BUILD_MK = ${PKGDIR}/files/bootstrap-bsd.mk
-BOOTSTRAP_CAPI_C   = ${PKGDIR}/files/capi-wrappers-netbsd-i386.c
-BOOTSTRAP_TARBALL  = ${DISTNAME}-boot-i386-unknown-netbsdelf6.99.1.tar.bz2
-PLATFORM           = i386-unknown-netbsd
+BOOTSTRAP_CAPI_C=	${PKGDIR}/files/capi-wrappers-netbsd-i386.c
+BOOTSTRAP_TARBALL=	${DISTNAME}-boot-i386-unknown-netbsdelf6.99.1.tar.bz2
+PLATFORM		= i386-unknown-netbsd
 
 .elif ${MACHINE_ARCH} == "i386" && ${OPSYS} == "FreeBSD"
-BOOTSTRAP_BUILD_MK = ${PKGDIR}/files/bootstrap-bsd.mk
-BOOTSTRAP_CAPI_C   = ${PKGDIR}/files/capi-wrappers-freebsd-i386.c
-BOOTSTRAP_TARBALL  = ${DISTNAME}-boot-i386-unknown-freebsd8.0.tar.bz2
-PLATFORM           = i386-unknown-freebsd
+BOOTSTRAP_CAPI_C=	${PKGDIR}/files/capi-wrappers-freebsd-i386.c
+BOOTSTRAP_TARBALL=	${DISTNAME}-boot-i386-unknown-freebsd8.0.tar.bz2
+PLATFORM=		i386-unknown-freebsd
 
 .elif ${MACHINE_ARCH} == "powerpc" && ${OPSYS} == "Darwin"
-BOOTSTRAP_BUILD_MK = ${PKGDIR}/files/bootstrap.mk
-BOOTSTRAP_CAPI_C   = ${PKGDIR}/files/capi-wrappers-darwin-powerpc.c
-BOOTSTRAP_TARBALL  = ${DISTNAME}-boot-i386-unknown-darwin9.8.0.tar.bz2
-PLATFORM           = powerpc-apple-darwin
+BOOTSTRAP_CAPI_C=	${PKGDIR}/files/capi-wrappers-darwin-powerpc.c
+BOOTSTRAP_TARBALL=	${DISTNAME}-boot-powerpc-apple-darwin9.8.0.tar.bz2
+PLATFORM=		powerpc-apple-darwin
 # Existence of libelf makes LeadingUnderscore being "NO", which is
 # incorrect for this platform. See ghc-6.12.1/aclocal.m4
 # (FP_LEADING_UNDERSCORE)
-CONFLICTS=	libelf-[0-9]*
+CONFLICTS=		libelf-[0-9]*
 
 .elif ${MACHINE_ARCH} == "x86_64" && ${OPSYS} == "Linux"
-BOOTSTRAP_BUILD_MK = ${PKGDIR}/files/bootstrap-linux.mk
-BOOTSTRAP_CAPI_C   = ${PKGDIR}/files/capi-wrappers-linux-x86_64.c
-BOOTSTRAP_TARBALL  = ${DISTNAME}-boot-x86_64-unknown-linux-gnu.tar.bz2
-PLATFORM           = x86_64-unknown-linux
+BOOTSTRAP_CAPI_C=	${PKGDIR}/files/capi-wrappers-linux-x86_64.c
+BOOTSTRAP_TARBALL=	${DISTNAME}-boot-x86_64-unknown-linux-gnu.tar.bz2
+PLATFORM=		x86_64-unknown-linux
 
 .else
 PKG_FAIL_REASON+=	"internal error: unsupported platform"
@@ -57,8 +55,8 @@ ${WRKDIR}/stamp-prepare-bootstrap: ${WRKDIR}/stamp-autoreconf
 		${RM} -rf bootstrap && \
 		${MKDIR} bootstrap && \
 		${GTAR} -cf - ${DISTNAME} | ${GTAR} -C bootstrap -xf - && \
-		${CP} ${BOOTSTRAP_MAIN_C} bootstrap/${DISTNAME}/rts/bootstrap-main.c && \
-		${CP} ${BOOTSTRAP_CAPI_C} bootstrap/${DISTNAME}/rts/capi-wrappers.c  && \
+		${CP} -f ${BOOTSTRAP_MAIN_C} bootstrap/${DISTNAME}/rts/bootstrap-main.c && \
+		${CP} -f ${BOOTSTRAP_CAPI_C} bootstrap/${DISTNAME}/rts/capi-wrappers.c  && \
 		${TOUCH} ${.TARGET}
 
 ${WRKDIR}/stamp-configure-hc-boot: ${WRKDIR}/stamp-prepare-bootstrap
@@ -78,10 +76,35 @@ ${WRKDIR}/stamp-extract-hc: ${WRKDIR}/stamp-configure-hc-boot
 		(cd ${DISTNAME} && ${SH} mkfiles) && \
 		${TOUCH} ${.TARGET}
 
-${WRKDIR}/stamp-rewrite-hc-paths: ${WRKDIR}/stamp-extract-hc
+${WRKDIR}/bootstrap/${DISTNAME}/mk/build.mk: ${WRKDIR}/stamp-extract-hc
+	${RUN} ${PHASE_MSG} "Creating bootstrapping configuration file for ${PKGNAME}"
+	${RUN} ${CP} -f ${PKGDIR}/files/build.bootstrap.common.mk ${.TARGET}
+	${RUN} ${ECHO} "SRC_CC_OPTS += -I${PREFIX}/include" >> ${.TARGET}
+.if ${OPSYS} == "Darwin"
+	${RUN} ${ECHO} "ghc_stage2_v_EXTRA_CC_OPTS += -L${PREFIX}/lib -lm -liconv" >> ${.TARGET}
+	${RUN} ${ECHO} "utils/ghc-pkg_dist-install_v_EXTRA_CC_OPTS += -L${PREFIX}/lib -lm -liconv -lncurses" >> ${.TARGET}
+	${RUN} ${ECHO} "EXTRA_CC_OPTS += -O2" >> ${.TARGET}
+.elif ${OPSYS} == "FreeBSD" || ${OPSYS} == "NetBSD"
+	${RUN} ${ECHO} "ghc_stage2_v_EXTRA_CC_OPTS += -L${PREFIX}/lib -lm -liconv -lutil -lrt" >> ${.TARGET}
+	${RUN} ${ECHO} "utils/ghc-pkg_dist-install_v_EXTRA_CC_OPTS += -L${PREFIX}/lib -lm -liconv -lutil -lrt -lncurses" >> ${.TARGET}
+#   Unregisterised stage0 compiler gets too large (.text section being
+# over 64 MiB) without -Os, exceeding NetBSD/i386's kernel default
+# limitation.
+#   Note that stage1 currently doesn't bloat that much (about 42.6
+# MiB), but when it does we have to append CONF_CC_OPTS_STAGE0="-Os"
+# to CONFIGURE_ARGS as well. I guess that's a matter of time :(
+	${RUN} ${ECHO} "EXTRA_CC_OPTS += -Os" >> ${.TARGET}
+.elif ${OPSYS} == "Linux"
+	${RUN} ${ECHO} "ghc_stage2_v_EXTRA_CC_OPTS += -L${PREFIX}/lib -lm -liconv -lrt -ldl" >> ${.TARGET}
+	${RUN} ${ECHO} "utils/ghc-pkg_dist-install_v_EXTRA_CC_OPTS += -L${PREFIX}/lib -lm -liconv -lrt -ldl -lncurses" >> ${.TARGET}
+	${RUN} ${ECHO} "EXTRA_CC_OPTS += -O2" >> ${.TARGET}
+.else
+PKG_FAIL_REASON+=	"internal error: unsupported platform"
+.endif
+
+${WRKDIR}/stamp-rewrite-hc-paths: ${WRKDIR}/stamp-extract-hc ${WRKDIR}/bootstrap/${DISTNAME}/mk/build.mk
 	${RUN} cd ${WRKDIR}/bootstrap/${DISTNAME} && \
 		${PHASE_MSG} "Rewriting source paths in bootstrapping compiler for ${PKGNAME}" && \
-		${SED} -e "s#\\[\\[PREFIX\\]\\]#${PREFIX}#g" ${BOOTSTRAP_BUILD_MK} > mk/build.mk && \
 		for c in libraries/*/configure; do \
 			(cd `${DIRNAME} $$c` && ${SETENV} ${CONFIGURE_ENV} ${SH} configure ${CONFIGURE_ARGS}); \
 		done && \

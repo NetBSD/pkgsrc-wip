@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2012/03/22 23:24:57 phonohawk Exp $
+# $NetBSD: Makefile,v 1.33 2012/03/23 00:17:21 phonohawk Exp $
 
 DISTNAME=	ghc-${VERSION}
 VERSION=	7.4.1
@@ -50,7 +50,7 @@ CONFIGURE_ARGS+= --with-gcc=/usr/bin/gcc
 CONFIGURE_ARGS+= --with-gcc=${CCPATH}
 .endif
 
-USE_TOOLS+=	autoconf date gmake gtar perl perl:run
+USE_TOOLS+=	gmake perl:run
 CONFIGURE_ENV+=	PerlCmd=${PERL5:Q}
 
 # We don't want to extract all of the DISTFILEs.
@@ -68,7 +68,7 @@ CONFIGURE_ARGS += \
 	--with-iconv-libraries=${PREFIX}/lib
 
 # Define ${PLATFORM} and the target "pre-configure".
-.include "../../wip/ghc/stage0.mk"
+.include "../../wip/ghc/bootstrap.mk"
 
 do-configure:
 	${RUN} cd ${WRKSRC} && \
