@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2012/03/02 20:26:08 outpaddling Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2012/03/23 02:26:48 outpaddling Exp $
 
 BUILDLINK_TREE+=	arpack
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	arpack
 ARPACK_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.arpack+=	arpack>=96
-BUILDLINK_PKGSRCDIR.arpack?=	../../jb-wip/arpack
+BUILDLINK_PKGSRCDIR.arpack?=	../../wip/arpack
 .endif	# ARPACK_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-arpack
