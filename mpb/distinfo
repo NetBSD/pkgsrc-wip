@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/03/23 02:21:07 outpaddling Exp $
+
+SHA1 (mpb-1.4.2.tar.gz) = 2d4052566cff6c6befd31183253a908654b534f8
+RMD160 (mpb-1.4.2.tar.gz) = 6440f0e19d4b5b8354c135034429ea2031c4301d
+Size (mpb-1.4.2.tar.gz) = 686488 bytes

@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/03/23 02:21:07 outpaddling Exp $
+bin/mpb
+bin/mpb-data
+bin/mpb-split
+man/man1/mpb-data.1
+man/man1/mpb-split.1
+man/man1/mpb.1
+share/libctl/specs/mpb.scm
