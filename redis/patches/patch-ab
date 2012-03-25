@@ -1,9 +1,9 @@
-$NetBSD: patch-ab,v 1.6 2012/02/29 11:34:43 fhajny Exp $
+$NetBSD: patch-ab,v 1.7 2012/03/25 19:03:20 fhajny Exp $
 
 * Embrace existing CFLAGS rather than overwrite them.
 * Add DESTDIR support.
 
---- src/Makefile.orig	2012-02-22 13:23:43.000000000 +0000
+--- src/Makefile.orig	2012-03-18 21:14:28.000000000 +0000
 +++ src/Makefile
 @@ -25,11 +25,11 @@ ifeq ($(uname_S),Linux)
  endif
@@ -33,7 +33,7 @@ $NetBSD: patch-ab,v 1.6 2012/02/29 11:34:43 fhajny Exp $
 +INSTALL_BIN= $(DESTDIR)$(PREFIX)/bin
 +INSTALL= $(BSD_INSTALL_PROGRAM)
  
- OBJ = adlist.o ae.o anet.o dict.o redis.o sds.o zmalloc.o lzf_c.o lzf_d.o pqsort.o zipmap.o sha1.o ziplist.o release.o networking.o util.o object.o db.o replication.o rdb.o t_string.o t_list.o t_set.o t_zset.o t_hash.o config.o aof.o vm.o pubsub.o multi.o debug.o sort.o intset.o syncio.o slowlog.o bio.o
+ OBJ = adlist.o ae.o anet.o dict.o redis.o sds.o zmalloc.o lzf_c.o lzf_d.o pqsort.o zipmap.o sha1.o ziplist.o release.o networking.o util.o object.o db.o replication.o rdb.o t_string.o t_list.o t_set.o t_zset.o t_hash.o config.o aof.o vm.o pubsub.o multi.o debug.o sort.o intset.o syncio.o slowlog.o bio.o memtest.o
  BENCHOBJ = ae.o anet.o redis-benchmark.o sds.o adlist.o zmalloc.o
 @@ -159,7 +159,7 @@ dependencies:
  	@cd ../deps/jemalloc && ./configure $(JEMALLOC_CFLAGS) --with-jemalloc-prefix=je_ --enable-cc-silence && $(MAKE) lib/libjemalloc.a
