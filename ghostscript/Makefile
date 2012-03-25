@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2011/12/09 14:31:26 makoto Exp $
+# $NetBSD: Makefile,v 1.8 2012/03/25 14:26:16 makoto Exp $
 
 DISTNAME=	ghostscript-${GS_VERSION}
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ghostscript/}
 MASTER_SITES+=	http://ghostscript.com/releases/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ghostscript.sourceforge.net/
@@ -81,7 +82,7 @@ post-extract:
 	${MKDIR} ${WRKSRC}/obj
 #	${RM} -rf ${WRKSRC}/jasper
 	${RM} -rf ${WRKSRC}/libpng
-	${RM} -rf ${WRKSRC}/tiff
+#	${RM} -rf ${WRKSRC}/tiff
 #	${RM} -rf ${WRKSRC}/zlib
 #
 #  To allow outside customization, rename cidfmap

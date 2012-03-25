@@ -1,17 +1,15 @@
-$NetBSD: distinfo,v 1.5 2011/12/09 13:17:41 makoto Exp $
+$NetBSD: distinfo,v 1.6 2012/03/25 14:26:16 makoto Exp $
 
-SHA1 (ghostscript-9.04.tar.gz) = 75370060d0a272e66be20152a058e4135976f2e5
-RMD160 (ghostscript-9.04.tar.gz) = 30a49c1cc12e3b449117762b3edbb121d5d2766c
-Size (ghostscript-9.04.tar.gz) = 34488256 bytes
-SHA1 (patch-ab) = 7a98cad37f94394f172bdac23f5dd73fb1f08006
-SHA1 (patch-af) = d2b0d943da0aadbc03a3c33c6284f82e67ef464b
+SHA1 (ghostscript-9.05.tar.bz2) = 1a54a846e90ae95b5307f4f0459d044b9597d8cf
+RMD160 (ghostscript-9.05.tar.bz2) = 27935f60083b788b2793b19ee42f3663082ba084
+Size (ghostscript-9.05.tar.bz2) = 28279634 bytes
+SHA1 (patch-af) = 3bd083f7422ea97a5b627409628ed7bad7dd5796
 SHA1 (patch-ah) = 11bd25c0df574a720169f3b0b65505112c7be8d0
 SHA1 (patch-ai) = 17a6f52cc591b20029c78efdbfe1222c80683ad6
 SHA1 (patch-aj) = 620d921210b5c0efec0a84e33bc416e4ab4bd11c
 SHA1 (patch-al) = 86489b704c60320385794c3eb68170d9b9f1f6cc
 SHA1 (patch-an) = 46b0a9f0f949c11a579d2aa44ce9f7a7aa2add8c
 SHA1 (patch-base_gdevpng.c) = 24120e26bd2a846f6d4c8ab9753dfe91f151343f
-SHA1 (patch-base_unixinst.mak) = dfb7af9b8d00a644e42222f85326d175f170f4e7
-SHA1 (patch-be) = 3bebc842f1b9d54ab5ac7df75bd77e43ca206b0f
+SHA1 (patch-be) = fde64bd096a6e6f94005c8352a6295df06c19bae
 SHA1 (patch-bf) = 8d6c232221f76fa9fb7110b8b01ae8baf1ac15a9
 SHA1 (patch-freetype_include_freetype_internal_t1types.h) = 2f56641fb51555b83fd313534bd618764365aee0
