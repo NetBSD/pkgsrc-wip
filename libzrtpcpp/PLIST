@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2011/06/02 19:40:09 othyro Exp $
+@comment $NetBSD: PLIST,v 1.5 2012/03/26 14:04:51 othyro Exp $
 include/libzrtpcpp/TimeoutProvider.h
 include/libzrtpcpp/ZrtpCWrapper.h
 include/libzrtpcpp/ZrtpCallback.h
@@ -7,5 +7,7 @@ include/libzrtpcpp/ZrtpConfigure.h
 include/libzrtpcpp/ZrtpQueue.h
 include/libzrtpcpp/ZrtpUserCallback.h
 include/libzrtpcpp/zrtpccrtp.h
-lib/libzrtpcpp.la
+lib/libzrtpcpp.so
+lib/libzrtpcpp.so.2
+lib/libzrtpcpp.so.${PKGVERSION}
 lib/pkgconfig/libzrtpcpp.pc
