@@ -1,0 +1,32 @@
+$NetBSD: patch-aa,v 1.1.1.1 2012/03/27 16:40:14 outpaddling Exp $
+
+--- Makefile.in.orig	1998-10-02 21:28:35.000000000 +0000
++++ Makefile.in
+@@ -1,21 +1,21 @@
+ 
+ # Which compiler to use
+-CC = cc
++#CC = cc
+ 
+ # What optimization level to use
+-OPTFLAGS = -O2 
++#OPTFLAGS = -O2 
+ 
+ # What options to be used by the compiler
+-COPTIONS = 
++#COPTIONS = 
+ 
+ # What options to be used by the loader
+-LDOPTIONS = 
++LDOPTIONS = $(LDFLAGS)
+ 
+ # What archiving to use
+-AR = ar rv
++#AR = ar rv
+ 
+ # What to use for indexing the archive
+-RANLIB = ranlib
++#RANLIB = ranlib
+ #RANLIB = ar -ts
+ #RANLIB = 
+ 

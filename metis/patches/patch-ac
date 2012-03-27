@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2012/03/27 16:40:14 outpaddling Exp $
+
+--- Programs/Makefile.orig	1998-09-22 12:06:47.000000000 +0000
++++ Programs/Makefile
+@@ -3,7 +3,7 @@ include ../Makefile.in
+ BINDIR = ..
+ 
+ INCLUDES = -I../Lib 
+-CFLAGS = $(COPTIONS) $(OPTFLAGS) $(INCLUDES)
++CFLAGS += $(COPTIONS) $(OPTFLAGS) $(INCLUDES)
+ 
+ LIBS = -lmetis -lm
+ LD = $(CC) $(LDOPTIONS) -L. -L..

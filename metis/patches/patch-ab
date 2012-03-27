@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.1.1.1 2012/03/27 16:40:14 outpaddling Exp $
+
+--- Lib/Makefile.orig	1998-09-22 12:08:29.000000000 +0000
++++ Lib/Makefile
+@@ -2,7 +2,7 @@ include ../Makefile.in
+ 
+ INCLUDES = -I.
+ 
+-CFLAGS = $(COPTIONS) $(OPTFLAGS) $(INCLUDES)
++CFLAGS += $(COPTIONS) $(OPTFLAGS) $(INCLUDES)
+ LD = $(CC) -L. 
+ 
+ 
+@@ -21,7 +21,7 @@ OBJS = coarsen.o fm.o initpart.o match.o
+ 	$(CC) $(CFLAGS) -c $*.c
+ 
+ ../libmetis.a: $(OBJS)
+-	$(AR) $@ $(OBJS)
++	$(AR) rv $@ $(OBJS)
+ 	$(RANLIB) $@
+ 
+ clean:

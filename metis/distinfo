@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/03/27 16:40:14 outpaddling Exp $
+
+SHA1 (metis-4.0.tar.gz) = 580568308e1fa40e5a7a77cacbf27f865d6c01af
+RMD160 (metis-4.0.tar.gz) = 21dc1451b9385d292afa428f0c17e8283b00f6b7
+Size (metis-4.0.tar.gz) = 508601 bytes
+SHA1 (patch-aa) = 5ee0835734585ac2d75ff506dfa469749ff6c9cf
+SHA1 (patch-ab) = 6f601a47d0f729319d2831e30d46c8e0d6d9abc5
+SHA1 (patch-ac) = 93639d37ea3c280f33dcb08b80d42336c5cef893
