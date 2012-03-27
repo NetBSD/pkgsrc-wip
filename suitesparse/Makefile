@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/03/27 16:19:22 outpaddling Exp $
+# $NetBSD: Makefile,v 1.2 2012/03/27 17:48:00 outpaddling Exp $
 # FreeBSD Id: ports/math/suitesparse/Makefile,v 1.38 2011/07/20 16:17:35 bf Exp
 
 DISTNAME=	SuiteSparse-3.6.1
@@ -101,6 +101,6 @@ do-install:
 .include "../../math/blas/buildlink3.mk"
 .include "../../math/lapack/buildlink3.mk"
 .if defined (WITH_METIS)
-.include "../../jb-wip/metis/buildlink3.mk"
+.include "../../wip/metis/buildlink3.mk"
 .endif
 .include "../../mk/bsd.pkg.mk"

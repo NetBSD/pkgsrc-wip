@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/03/27 14:28:22 outpaddling Exp $
+# $NetBSD: Makefile,v 1.5 2012/03/27 17:47:59 outpaddling Exp $
 #
 
 DISTNAME=	meep-1.1.1
@@ -20,7 +20,7 @@ CONFIGURE_ARGS+=--with-libctl=${PREFIX}/share/libctl
 
 DEPENDS+=	bash:../../shells/bash
 
-.include "../../jb-wip/harminv/buildlink3.mk"
+.include "../../wip/harminv/buildlink3.mk"
 .include "../../wip/libctl/buildlink3.mk"
 .include "../../math/gsl/buildlink3.mk"
 .include "../../devel/hdf5/buildlink3.mk"
