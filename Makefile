@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4699 2012/03/27 15:50:59 outpaddling Exp $
+# $Id: Makefile,v 1.4700 2012/03/27 15:57:01 outpaddling Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2598,6 +2598,7 @@ SUBDIR+=	py-utilib_misc
 SUBDIR+=	py-utilib_ply
 SUBDIR+=	py-uuid
 SUBDIR+=	py-van.testing
+SUBDIR+=	py-viper
 SUBDIR+=	py-visionegg
 SUBDIR+=	py-visionegg-contrib
 SUBDIR+=	py-visionegg-demos
