@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/03/27 15:56:16 outpaddling Exp $
+
+SHA1 (viper-1.0.0.tar.gz) = e70051ac2653b2dd3ee5f1f21451e7faa55c5754
+RMD160 (viper-1.0.0.tar.gz) = 7e02e5a9ea24757d413175c46e64045742178ada
+Size (viper-1.0.0.tar.gz) = 192727 bytes
