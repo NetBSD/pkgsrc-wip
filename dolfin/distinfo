@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/03/27 17:06:52 outpaddling Exp $
+
+SHA1 (dolfin-1.0.0.tar.gz) = 1eed4ed0af470da73e1f5e3ecb30911733800746
+RMD160 (dolfin-1.0.0.tar.gz) = d17768ec2e876042c716b46a5ffb8f43e30cce0f
+Size (dolfin-1.0.0.tar.gz) = 9444169 bytes
+SHA1 (patch-dolfin_adaptivity_ErrorControl.h) = 696e7b3516b04efac311831e0a5397ef810f4f83
+SHA1 (patch-dolfin_fem_LinearVariationalProblem.h) = e6d53cd3c43d2498358680d4877fd6900d97e148
+SHA1 (patch-dolfin_la_uBLASKrylovSolver.cpp) = 0ff9ce16aa7288425ff14f7e4cdd0e8d06e83f4a
