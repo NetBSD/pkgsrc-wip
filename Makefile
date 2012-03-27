@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4697 2012/03/27 15:23:09 outpaddling Exp $
+# $Id: Makefile,v 1.4698 2012/03/27 15:45:05 outpaddling Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2350,6 +2350,7 @@ SUBDIR+=	py-hfk
 SUBDIR+=	py-httplib2
 SUBDIR+=	py-igraph
 SUBDIR+=	py-imgSeek
+SUBDIR+=	py-instant
 SUBDIR+=	py-ipaddr
 SUBDIR+=	py-ipython
 SUBDIR+=	py-jabber-aimt
