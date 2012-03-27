@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/03/27 15:20:10 outpaddling Exp $
+
+SHA1 (fiat-1.0.0.tar.gz) = f013d8a8289b20000f8c4dbee94d49098f2574f9
+RMD160 (fiat-1.0.0.tar.gz) = cc44878f4bdd6e56685b14688b70f33983b46d0e
+Size (fiat-1.0.0.tar.gz) = 2809920 bytes
