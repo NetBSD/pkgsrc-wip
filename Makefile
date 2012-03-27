@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4694 2012/03/23 09:43:59 thomasklausner Exp $
+# $Id: Makefile,v 1.4695 2012/03/27 09:24:38 jihbed Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2368,6 +2368,7 @@ SUBDIR+=	py-kcs11
 SUBDIR+=	py-kde4
 SUBDIR+=	py-keyczar
 SUBDIR+=	py-keyring
+SUBDIR+=	py-khayyam
 SUBDIR+=	py-kivy
 SUBDIR+=	py-knockknock
 SUBDIR+=	py-kyra
