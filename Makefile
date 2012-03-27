@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4704 2012/03/27 16:41:34 outpaddling Exp $
+# $Id: Makefile,v 1.4705 2012/03/27 17:08:03 outpaddling Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -466,6 +466,7 @@ SUBDIR+=	dnscheck-engine
 SUBDIR+=	dnswalk
 SUBDIR+=	docbook-xsl-ko
 SUBDIR+=	docbook2X
+SUBDIR+=	dolfin
 SUBDIR+=	doorman
 SUBDIR+=	dos2unix
 SUBDIR+=	dotconf
