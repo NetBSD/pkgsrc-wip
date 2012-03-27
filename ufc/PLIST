@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/03/27 16:00:57 outpaddling Exp $
+include/ufc.h
+lib/pkgconfig/ufc-1.pc
+lib/python2.6/site-packages/ufc_utils/__init__.py
+lib/python2.6/site-packages/ufc_utils/build.py
+lib/python2.6/site-packages/ufc_utils/dofmap.py
+lib/python2.6/site-packages/ufc_utils/finite_element.py
+lib/python2.6/site-packages/ufc_utils/form.py
+lib/python2.6/site-packages/ufc_utils/function.py
+lib/python2.6/site-packages/ufc_utils/integrals.py
+share/ufc/UFCConfig.cmake
+share/ufc/UFCConfigVersion.cmake
