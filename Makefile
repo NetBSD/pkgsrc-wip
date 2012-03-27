@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4703 2012/03/27 16:20:46 outpaddling Exp $
+# $Id: Makefile,v 1.4704 2012/03/27 16:41:34 outpaddling Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1567,6 +1567,7 @@ SUBDIR+=	meta-tracker
 SUBDIR+=	metalog
 SUBDIR+=	metasploit
 SUBDIR+=	metatheme
+SUBDIR+=	metis
 SUBDIR+=	mg-lsh
 SUBDIR+=	mic-paren
 SUBDIR+=	microblog-purple
