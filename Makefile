@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4698 2012/03/27 15:45:05 outpaddling Exp $
+# $Id: Makefile,v 1.4699 2012/03/27 15:50:59 outpaddling Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2583,6 +2583,7 @@ SUBDIR+=	py-transaction
 SUBDIR+=	py-ttk
 SUBDIR+=	py-turbojson
 SUBDIR+=	py-twisted-kqueue
+SUBDIR+=	py-ufl
 SUBDIR+=	py-uncertainties
 SUBDIR+=	py-utilib_common
 SUBDIR+=	py-utilib_component_app
