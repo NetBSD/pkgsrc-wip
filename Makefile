@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4696 2012/03/27 15:03:30 outpaddling Exp $
+# $Id: Makefile,v 1.4697 2012/03/27 15:23:09 outpaddling Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2312,6 +2312,7 @@ SUBDIR+=	py-fdm
 SUBDIR+=	py-feyn
 SUBDIR+=	py-ffc
 SUBDIR+=	py-fftw
+SUBDIR+=	py-fiat
 SUBDIR+=	py-figleaf
 SUBDIR+=	py-fipy
 SUBDIR+=	py-fitsarray
