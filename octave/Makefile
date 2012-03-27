@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2011/11/10 22:55:28 crocusino Exp $
+# $NetBSD: Makefile,v 1.9 2012/03/27 16:31:30 outpaddling Exp $
 #
 
 DISTNAME=	octave-3.4.3
@@ -42,7 +42,8 @@ TEXINFO_REQD=		4.12
 .include "../../math/blas/buildlink3.mk"
 .include "../../math/fftw/buildlink3.mk"
 .include "../../math/lapack/buildlink3.mk"
-.include "../../www/curl/buildlink3.mk"
+#.include "../../math/arpack/buildlink3.mk"
+#.include "../../www/curl/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
