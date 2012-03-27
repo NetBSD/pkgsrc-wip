@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4695 2012/03/27 09:24:38 jihbed Exp $
+# $Id: Makefile,v 1.4696 2012/03/27 15:03:30 outpaddling Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2310,6 +2310,7 @@ SUBDIR+=	py-ezPyCrypto
 SUBDIR+=	py-fastaudio
 SUBDIR+=	py-fdm
 SUBDIR+=	py-feyn
+SUBDIR+=	py-ffc
 SUBDIR+=	py-fftw
 SUBDIR+=	py-figleaf
 SUBDIR+=	py-fipy
