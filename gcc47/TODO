@@ -9,8 +9,6 @@ Check, if buildlink/builtin provides correct PREFIX:
 CONFIGURE_ARGS+=	--with-ld=${PREFIX}/bin/gnu-ld
 CONFIGURE_ARGS+=	--with-libelf=${PREFIX}
 * fix installation
-The package installs few binaries to $(LOCALBASE)/bin (cpp, gcc, c++, gcov...)
-Manual and info pages may need tweaking to avoid possible conflicts.
 * Fix PLIST
 Tweak version to avoid "${PKGVERSION}.0" (?)
 Automatize variable substitution in PLIST (see approach used in lang/erlang).
