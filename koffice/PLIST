@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.8 2011/01/08 21:30:23 mwdavies Exp $
+@comment $NetBSD: PLIST,v 1.9 2012/03/28 09:04:12 mwdavies Exp $
 bin/karbon
 bin/kexi
-bin/kformula
 bin/koconverter
 bin/kplato
 bin/kplatowork
@@ -424,7 +423,6 @@ lib/kde4/kexirelationdesignshape.so
 lib/kde4/kformdesigner_containers.so
 lib/kde4/kformdesigner_kexidbwidgets.so
 lib/kde4/kformdesigner_stdwidgets.so
-lib/kde4/kformulapart.so
 lib/kde4/kodocinfopropspage.so
 lib/kde4/kofficedockers.so
 lib/kde4/kofficescan.so
@@ -489,7 +487,6 @@ lib/kde4/kritajp2export.so
 lib/kde4/kritajp2import.so
 lib/kde4/kritajpegexport.so
 lib/kde4/kritajpegimport.so
-lib/kde4/kritakscolorspacesplugin.so
 lib/kde4/kritalayercompose.so
 lib/kde4/kritalevelfilter.so
 lib/kde4/kritametadataeditor.so
@@ -586,9 +583,6 @@ lib/kde4/wmfexport.so
 lib/kde4/wmfimport.so
 lib/kde4/wmlexport.so
 lib/kde4/wmlimport.so
-lib/kde4/wpexport.so
-lib/kde4/wpgimport.so
-lib/kde4/wpimport.so
 lib/kde4/xlsximport.so
 lib/kde4/xsltexport.so
 lib/kde4/xsltimport.so
@@ -615,7 +609,6 @@ lib/libkdeinit4_krita.so
 lib/libkdeinit4_kspread.so
 lib/libkdeinit4_kthesaurus.so
 lib/libkdeinit4_kword.so
-lib/libkdeinit_kformula.so
 lib/libkexicore.so
 lib/libkexicore.so.8
 lib/libkexicore.so.8.0.0
@@ -748,7 +741,6 @@ lib/libpigmentcms.so.8.0.0
 share/applications/kde4/KThesaurus.desktop
 share/applications/kde4/karbon.desktop
 share/applications/kde4/kexi.desktop
-share/applications/kde4/kformula.desktop
 share/applications/kde4/koffice.desktop
 share/applications/kde4/kplato.desktop
 share/applications/kde4/kplatowork.desktop
@@ -1329,9 +1321,6 @@ share/kde/apps/kexi/icons/oxygen/scalable/mimetypes/small/16x16/application-x-ke
 share/kde/apps/kexi/icons/oxygen/scalable/mimetypes/small/22x22/application-x-kexiproject-sqlite.svgz
 share/kde/apps/kexi/icons/oxygen/scalable/mimetypes/small/22x22/application-x-kexiproject-sqlite2.svgz
 share/kde/apps/kexi/icons/oxygen/scalable/mimetypes/small/22x22/application-x-kexiproject-sqlite3.svgz
-share/kde/apps/kformula/kformula.rc
-share/kde/apps/kformula/kformula_readonly.rc
-share/kde/apps/kformula/tips
 share/kde/apps/koffice/autocorrect/autocorrect.xml
 share/kde/apps/koffice/autocorrect/en_US.xml
 share/kde/apps/koffice/icons/hicolor/16x16/actions/abs.png
@@ -1954,14 +1943,6 @@ share/kde/apps/krita/icons/hicolor/48x48/actions/template_cmyk_empty.png
 share/kde/apps/krita/icons/hicolor/48x48/actions/template_comics_empty.png
 share/kde/apps/krita/icons/hicolor/48x48/actions/template_gray_empty.png
 share/kde/apps/krita/icons/hicolor/48x48/actions/template_rgb_empty.png
-share/kde/apps/krita/illuminants/ASP_per-wavelength_111_10001.xll
-share/kde/apps/krita/illuminants/ASP_per-wavelength_111_10004.xll
-share/kde/apps/krita/illuminants/ASP_per-wavelength_111_10005.xll
-share/kde/apps/krita/illuminants/ASP_per-wavelength_111_10008.xll
-share/kde/apps/krita/illuminants/ASP_per-wavelength_121_10003.xll
-share/kde/apps/krita/illuminants/ASP_per-wavelength_222_10002.xll
-share/kde/apps/krita/illuminants/ASP_per-wavelength_222_10006.xll
-share/kde/apps/krita/illuminants/ASP_per-wavelength_343_10007.xll
 share/kde/apps/krita/images/krita-curve.png
 share/kde/apps/krita/images/krita-deform.png
 share/kde/apps/krita/images/krita-duplicate.png
@@ -2555,7 +2536,6 @@ share/kde4/services/karbon_svg_import.desktop
 share/kde4/services/karbon_svgz_import.desktop
 share/kde4/services/karbon_wmf_export.desktop
 share/kde4/services/karbon_wmf_import.desktop
-share/kde4/services/karbon_wpg_import.desktop
 share/kde4/services/karbonfiltereffects.desktop
 share/kde4/services/karbonpart.desktop
 share/kde4/services/karbontools.desktop
@@ -2577,7 +2557,6 @@ share/kde4/services/kexirelationdesignshape.desktop
 share/kde4/services/kformdesigner/kformdesigner_containers.desktop
 share/kde4/services/kformdesigner/kformdesigner_kexidbfactory.desktop
 share/kde4/services/kformdesigner/kformdesigner_stdwidgets.desktop
-share/kde4/services/kformulapart.desktop
 share/kde4/services/kodocinfopropspage.desktop
 share/kde4/services/kofficedockers.desktop
 share/kde4/services/kofficethumbnail.desktop
@@ -2656,7 +2635,6 @@ share/kde4/services/kritahatchingpaintop.desktop
 share/kde4/services/kritahistogram.desktop
 share/kde4/services/kritaimageenhancement.desktop
 share/kde4/services/kritaimagesize.desktop
-share/kde4/services/kritakscolorspacesplugin.desktop
 share/kde4/services/kritalayercompose.desktop
 share/kde4/services/kritalevelfilter.desktop
 share/kde4/services/kritametadataeditor.desktop
@@ -2741,8 +2719,6 @@ share/kde4/services/kword_rtf_export.desktop
 share/kde4/services/kword_rtf_import.desktop
 share/kde4/services/kword_wml_export.desktop
 share/kde4/services/kword_wml_import.desktop
-share/kde4/services/kword_wp_export.desktop
-share/kde4/services/kword_wp_import.desktop
 share/kde4/services/kwordpart.desktop
 share/kde4/services/libokularGenerator_odp.desktop
 share/kde4/services/musicshape.desktop
