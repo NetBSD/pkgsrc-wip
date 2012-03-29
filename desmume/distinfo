@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2010/01/20 11:52:35 thomasklausner Exp $
+$NetBSD: distinfo,v 1.4 2012/03/29 21:18:27 thomasklausner Exp $
 
 SHA1 (desmume-0.9.5.tar.gz) = 27174becda0551ec231ff18c5e95266a95825524
 RMD160 (desmume-0.9.5.tar.gz) = 9eb537cde87cdba78b39480c6196f60702fcf208
 Size (desmume-0.9.5.tar.gz) = 935073 bytes
 SHA1 (patch-aa) = 8f51d0d746065b6b4be6cee62b1fa74f914c849a
+SHA1 (patch-src_GPU.cpp) = 970d9bcd9eabc4898f760b2968618cb386b6f446
