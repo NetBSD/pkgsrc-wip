@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2010/06/13 22:46:59 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2012/03/29 21:18:53 thomasklausner Exp $
 #
 
 DISTNAME=	desmume-0.9.5
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=desmume/}
 
@@ -22,5 +22,6 @@ PKG_DESTDIR_SUPPORT=user-destdir
 .include "../../graphics/agg/buildlink3.mk"
 BUILDLINK_API_DEPENDS.gtkglext+=	gtkglext>=1.2.0nb4
 .include "../../graphics/gtkglext/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
