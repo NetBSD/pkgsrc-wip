@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/03/29 02:11:14 makoto Exp $
+# $NetBSD: Makefile,v 1.4 2012/03/29 11:25:42 makoto Exp $
 
 DISTNAME=	mu-cite-201202272330
 CATEGORIES=	mail
@@ -20,6 +20,7 @@ SUBST_FILES.dest+=	Makefile
 .include "../../editors/emacs/modules.mk"
 
 DEPENDS+=		flim-[0-9]*:../../devel/flim
+DEPENDS+=		bbdb-[0-9]*:../../misc/bbdb
 MAKE_DIRS+=		${PREFIX}/share/doc/mu-cite
 AUTO_MKDIRS=		yes
 
