@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/03/16 14:20:57 makoto Exp $
+# $NetBSD: Makefile,v 1.3 2012/03/29 02:11:14 makoto Exp $
 
 DISTNAME=	mu-cite-201202272330
 CATEGORIES=	mail
@@ -17,6 +17,9 @@ SUBST_MESSAGE.dest=	replacing for dest-dir
 SUBST_SED.dest=		-e 's|@@PREFIX@@|${DESTDIR}${PREFIX}|'
 SUBST_FILES.dest+=	Makefile
 
+.include "../../editors/emacs/modules.mk"
+
+DEPENDS+=		flim-[0-9]*:../../devel/flim
 MAKE_DIRS+=		${PREFIX}/share/doc/mu-cite
 AUTO_MKDIRS=		yes
 
