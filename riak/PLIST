@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2012/03/08 13:51:09 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.8 2012/03/29 12:16:27 fhajny Exp $
 man/man1/riak-admin.1
 man/man1/riak.1
 man/man1/search-cmd.1
@@ -40,10 +40,10 @@ riak/erts-${VERSION.erts}/include/internal/ethread.mk
 riak/erts-${VERSION.erts}/include/internal/ethread_header_config.h
 riak/erts-${VERSION.erts}/include/internal/gcc/ethr_atomic.h
 riak/erts-${VERSION.erts}/include/internal/gcc/ethread.h
-riak/erts-${VERSION.erts}/include/internal/${MACHINE_ARCH}/atomic.h
-riak/erts-${VERSION.erts}/include/internal/${MACHINE_ARCH}/ethread.h
-riak/erts-${VERSION.erts}/include/internal/${MACHINE_ARCH}/rwlock.h
-riak/erts-${VERSION.erts}/include/internal/${MACHINE_ARCH}/spinlock.h
+riak/erts-${VERSION.erts}/include/internal/i386/atomic.h
+riak/erts-${VERSION.erts}/include/internal/i386/ethread.h
+riak/erts-${VERSION.erts}/include/internal/i386/rwlock.h
+riak/erts-${VERSION.erts}/include/internal/i386/spinlock.h
 riak/erts-${VERSION.erts}/include/internal/libatomic_ops/ethr_atomic.h
 riak/erts-${VERSION.erts}/include/internal/libatomic_ops/ethread.h
 riak/erts-${VERSION.erts}/include/internal/ppc32/atomic.h

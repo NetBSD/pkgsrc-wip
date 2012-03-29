@@ -1,9 +1,10 @@
-$NetBSD: patch-rel__files__riak,v 1.1.1.1 2011/09/30 20:25:05 fhajny Exp $
+$NetBSD: patch-rel__files__riak,v 1.2 2012/03/29 12:16:27 fhajny Exp $
 
-Avoiding sudo -i makes the scripts much more usable.
---- rel/files/riak.orig	2011-06-01 18:23:36.000000000 +0000
+Avoid sudo -i to make the scripts much more usable.
+Make sure the Erlang cookie file is locked down.
+--- rel/files/riak.orig	2012-03-07 22:08:10.000000000 +0000
 +++ rel/files/riak
-@@ -18,8 +18,7 @@ if [ "$RUNNER_USER" -a "x$LOGNAME" != "x
+@@ -23,8 +23,7 @@ if [ "$RUNNER_USER" -a "x$LOGNAME" != "x
          echo "sudo doesn't appear to be installed and your EUID isn't $RUNNER_USER" 1>&2
          exit 1
      fi
@@ -13,3 +14,16 @@ Avoiding sudo -i makes the scripts much more usable.
  fi
  
  # Warn the user if ulimit -n is less than 1024
+@@ -98,6 +97,12 @@ case "$1" in
+             echo "Node is already running!"
+             exit 1
+         fi
++
++        # Cookie file should exist now, set proper permissions
++        if [ -f $PLATFORM_DATA_DIR/.erlang.cookie ]; then
++            chmod 400 $PLATFORM_DATA_DIR/.erlang.cookie
++        fi
++
+         # Sanity check the app.config file
+         RES=`$NODETOOL_LITE chkconfig $RUNNER_ETC_DIR/app.config`
+         if [ "$RES" != "ok" ]; then
