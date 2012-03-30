@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/03/30 19:54:21 outpaddling Exp $
+bin/dlpoly-classic
+bin/dlpoly-classic-mpi

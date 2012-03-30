@@ -1,0 +1,32 @@
+$NetBSD: patch-build_MakePAR,v 1.1.1.1 2012/03/30 19:54:21 outpaddling Exp $
+
+--- build/MakePAR.orig	2011-02-22 11:46:11.000000000 +0000
++++ build/MakePAR
+@@ -7,7 +7,7 @@
+ 
+ BINROOT = ../execute
+ CC  = gcc
+-EX = DLPOLY.X
++EX = dlpoly-classic-mpi
+ EXE = $(BINROOT)/$(EX)
+ FC=undefined
+ SHELL=/bin/sh
+@@ -54,15 +54,15 @@ all:
+ 
+ #================== GNU Fortran, MPI version ==============================
+ gfortran:
+-	$(MAKE) FC="mpif90" LD="mpif90 -o" \
++	$(MAKE) FC="mpif77" LD="mpif77 -o" \
+ 	LDFLAGS="-O2 -ffast-math" \
+ 	FFLAGS="-c -O2 -ffast-math" \
+ 	EX=$(EX) BINROOT=$(BINROOT) $(TYPE)
+ 
+ #================= Woodcrest =========================================
+ woodcrest:
+-	$(MAKE) LD="mpif90 -o" LDFLAGS="" \
+-	FC=mpif90 FFLAGS="-c -O3" \
++	$(MAKE) LD="mpif77 -o" LDFLAGS="" \
++	FC=mpif77 FFLAGS="-c -O3" \
+ 	EX=$(EX) BINROOT=$(BINROOT) $(TYPE)
+ 
+ #=====================================================================

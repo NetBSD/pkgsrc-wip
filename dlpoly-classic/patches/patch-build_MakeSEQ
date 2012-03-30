@@ -1,0 +1,13 @@
+$NetBSD: patch-build_MakeSEQ,v 1.1.1.1 2012/03/30 19:54:21 outpaddling Exp $
+
+--- build/MakeSEQ.orig	2011-02-22 11:46:11.000000000 +0000
++++ build/MakeSEQ
+@@ -7,7 +7,7 @@
+ 
+ BINROOT = ../execute
+ CC  = gcc
+-EX = DLPOLY.X
++EX = dlpoly-classic
+ EXE = $(BINROOT)/$(EX)
+ FC=undefined
+ SHELL=/bin/sh
