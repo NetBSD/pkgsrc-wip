@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4705 2012/03/27 17:08:03 outpaddling Exp $
+# $Id: Makefile,v 1.4706 2012/03/30 12:53:23 fhajny Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2424,7 +2424,6 @@ SUBDIR+=	py-numpydoc
 SUBDIR+=	py-nzmath
 SUBDIR+=	py-oak
 SUBDIR+=	py-oasa
-SUBDIR+=	py-oauth
 SUBDIR+=	py-omniORBpy
 SUBDIR+=	py-ontopy
 SUBDIR+=	py-openopt
