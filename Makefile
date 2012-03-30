@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4706 2012/03/30 12:53:23 fhajny Exp $
+# $Id: Makefile,v 1.4707 2012/03/30 13:00:53 fhajny Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1506,11 +1506,9 @@ SUBDIR+=	lsw
 SUBDIR+=	lsyncd
 SUBDIR+=	ltrace
 SUBDIR+=	lua-BitOp
-SUBDIR+=	lua-filesystem
 SUBDIR+=	lua-pgsql
 SUBDIR+=	luacheia
 SUBDIR+=	luaposix
-SUBDIR+=	luasec
 SUBDIR+=	luasocket
 SUBDIR+=	lucene
 SUBDIR+=	lwc
@@ -2092,7 +2090,6 @@ SUBDIR+=	php-doc-sl
 SUBDIR+=	php-doc-sv
 SUBDIR+=	php-dtrace
 SUBDIR+=	php-fileinfo
-SUBDIR+=	php-fpm
 SUBDIR+=	php-gtk2
 SUBDIR+=	php-http
 SUBDIR+=	php-igbinary
@@ -2167,7 +2164,6 @@ SUBDIR+=	probcons
 SUBDIR+=	probe
 SUBDIR+=	procps
 SUBDIR+=	progreiserfs
-SUBDIR+=	prosody
 SUBDIR+=	protobuf
 SUBDIR+=	prover9
 SUBDIR+=	proxychains

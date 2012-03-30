@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.2 2010/02/12 12:36:10 fhajny Exp $
-
-SHA1 (luasec-0.4.tar.gz) = b7fe55fd2a75e0233c1d5bd858e48366422901d6
-RMD160 (luasec-0.4.tar.gz) = 61b613ac8d767545a327adc88f1dce70ceb8f64b
-Size (luasec-0.4.tar.gz) = 27829 bytes
-SHA1 (patch-aa) = 446cb231401e19d8c42a88858530fa8644a45368
-SHA1 (patch-ab) = 3e8946f26f5fbf6489888107f702e9b7ca2eea96

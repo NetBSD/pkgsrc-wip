@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/09/30 19:53:43 fhajny Exp $
-${LUA_CDIR}/ssl.so
-${LUA_LDIR}/ssl.lua
