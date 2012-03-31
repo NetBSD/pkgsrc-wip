@@ -6,4 +6,4 @@ be used as a key and a value.  Each key must be unique within a
 database.  There is neither concept of data tables nor data types.
 Records are organized in hash table or B+ tree.
 
-The package provides Perl binding of Kyoto Cabinet library.
+The package provides Perl binding for Kyoto Cabinet database.

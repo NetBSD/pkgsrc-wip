@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/03/16 00:23:23 bubuchka Exp $
+# $NetBSD: Makefile,v 1.6 2012/03/31 21:45:06 bubuchka Exp $
 #
 
 DISTNAME=	kyotocabinet-1.2.73
@@ -17,7 +17,7 @@ USE_TOOLS+=	pkg-config
 USE_TOOLS+=	gmake
 USE_LANGUAGES=	c c++
 
-# The TC seem very tight to 64-bit machines;
+# Kyoto Cabinet seem very tied to 64-bit machines;
 # the listed platforms are known as suffering from that
 .include "../../mk/bsd.prefs.mk"
 .if !empty(MACHINE_PLATFORM:MDarwin-*-i386)
