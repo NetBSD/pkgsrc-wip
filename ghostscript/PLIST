@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2012/03/25 13:55:09 makoto Exp $
+@comment $NetBSD: PLIST,v 1.6 2012/03/31 12:15:55 makoto Exp $
 bin/dumphint
 bin/dvipdf
 bin/eps2eps
@@ -37,9 +37,8 @@ include/ghostscript/ierrors.h
 lib/libgs.so
 lib/libgs.so.9
 lib/libgs.so.${PKGVERSION}
-${PLIST.cups}libexec/cups/filter/pdftoraster
-${PLIST.cups}libexec/cups/filter/pstopxl
-${PLIST.cups}libexec/cups/filter/pstoraster
+${PLIST.cups}libexec/cups/filter/gstopxl
+${PLIST.cups}libexec/cups/filter/gstoraster
 man/de/man1/dvipdf.1
 man/de/man1/eps2eps.1
 man/de/man1/font2c.1
@@ -82,10 +81,9 @@ man/man1/ps2ps.1
 man/man1/wftopfa.1
 ${PLIST.cups}share/cups/model/pxlcolor.ppd
 ${PLIST.cups}share/cups/model/pxlmono.ppd
-${PLIST.cups}share/examples/cups/pdftoraster.convs
-${PLIST.cups}share/examples/cups/pstoraster.convs
-share/ghostscript/${PKGVERSION}/Resource/CIDFSubst/DroidSansFallback.ttf
-share/ghostscript/${PKGVERSION}/Resource/CIDFont/ArtifexBullet
+${PLIST.cups}share/examples/cups/gstoraster.convs
+${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/CIDFSubst/DroidSansFallback.ttf
+${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/CIDFont/ArtifexBullet
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/CMap/78-EUC-H
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/CMap/78-EUC-V
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/Resource/CMap/78-H
@@ -443,7 +441,7 @@ share/ghostscript/${PKGVERSION}/examples/waterfal.ps
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/iccprofiles/default_cmyk.icc
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/iccprofiles/default_gray.icc
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/iccprofiles/default_rgb.icc
-share/ghostscript/${PKGVERSION}/iccprofiles/gray_to_k.icc
+${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/iccprofiles/gray_to_k.icc
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/iccprofiles/lab.icc
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/iccprofiles/ps_cmyk.icc
 ${PLIST.no_cidfmap}share/ghostscript/${PKGVERSION}/iccprofiles/ps_gray.icc

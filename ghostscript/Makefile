@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/03/25 14:26:16 makoto Exp $
+# $NetBSD: Makefile,v 1.9 2012/03/31 12:15:55 makoto Exp $
 
 DISTNAME=	ghostscript-${GS_VERSION}
 CATEGORIES=	print
@@ -24,6 +24,7 @@ CONFLICTS+=		ghostscript-gnu{,-nox11,-x11}-[0-9]*
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake perl:run lex pkg-config
+USE_LANGUAGES+=		c c++
 GNU_CONFIGURE=		yes
 UNLIMIT_RESOURCES+=	datasize	# gsromfs1.c
 

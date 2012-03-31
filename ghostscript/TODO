@@ -1,11 +1,28 @@
-$NetBSD: TODO,v 1.1 2012/03/25 14:26:16 makoto Exp $
+$NetBSD: TODO,v 1.2 2012/03/31 12:15:55 makoto Exp $
 - Review patches/patch-af carefully
+- All the combinations of options and PLIST relations are
+  checked, but some out of 32 combinations fail to build, with
+  the message:
+   ------
+   freetype/include/freetype/internal/t1types.h:113:5: error:
+   expected specifier-qualifier-list before 'T1_EncodingType'
+   ------
+  Seems fontconfig needs x11 always ?
+
+- pdftoraster seems gone compared to 9.0.4, (with cups only)
+  -${PLIST.cups}libexec/cups/filter/pdftoraster
+  -${PLIST.cups}share/examples/cups/pdftoraster.convs
+  But is it intentional or not: unknown yet (to me, mef@)
+  Having tried to add pdf with FEATURE_DEV as
+    patches/patch-base_unix-gcc.mak
+  But no luck yet.
+
 - To fix a problem with one particular combination:
 
 (1) the option at 
 wip/ghostscrip-cidfonts-ryumin
 set
-PKG_OPTION.gcr_type= ipa
+PKG_OPTIONS.gcr_type= ipa
 
 (2) and only if gs invoked from dvipdfmx via following sequence:
     ps2pdf
@@ -18,7 +35,7 @@ gs failed to find the font Ryumin-Light-EUC-H
 
 Meaning that 
 (a) if
-PKG_OPTION.gcr_type= adobe-cidfonts
+PKG_OPTIONS.gcr_type= adobe-cidfonts
 set -> OK
 
 (b) 
@@ -26,5 +43,5 @@ gs alone invoked command line, the same file
 (included in *.eps used above (2) problem)
 can be processed successfully even if
 following line in /etc/mk.conf mentioned in (1)
-PKG_OPTION.gcr_type= ipa
+PKG_OPTIONS.gcr_type= ipa
 is set.

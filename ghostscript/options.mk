@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2011/08/22 14:15:33 makoto Exp $
+# $NetBSD: options.mk,v 1.5 2012/03/31 12:15:55 makoto Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ghostscript
 PKG_SUPPORTED_OPTIONS=	x11 cups debug fontconfig disable-compile-inits
@@ -17,6 +17,7 @@ CONFIGURE_ARGS+=	--with-x
 .include "../../x11/libXext/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-x
+CONFIGURE_ARGS+=	--disable-freetype
 .endif
 
 PLIST_VARS+=		cups
@@ -27,7 +28,7 @@ INSTALL_TARGET+=	install-cups
 
 CUPS_CONFDIR?=	${PKG_SYSCONFBASEDIR}/cups
 CUPS_EGDIR=	${PREFIX}/share/examples/cups
-CONF_FILES+=	${CUPS_EGDIR}/pstoraster.convs ${CUPS_CONFDIR}/pstoraster.convs
+CONF_FILES+=	${CUPS_EGDIR}/gstoraster.convs ${CUPS_CONFDIR}/gstoraster.convs
 
 SUBST_CLASSES+=		cupsetc
 SUBST_STAGE.cupsetc=	post-extract
@@ -49,6 +50,7 @@ CONFIGURE_ARGS+=	--enable-debug
 .include "../../fonts/fontconfig/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-fontconfig
+CONFIGURE_ARGS+=	--disable-freetype
 .endif
 
 # Please note the same if cond is in post-install: target in Makefile
