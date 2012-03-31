@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/03/31 21:45:07 bubuchka Exp $
+# $NetBSD: Makefile,v 1.3 2012/03/31 22:15:26 bubuchka Exp $
 #
 
 DISTNAME=	kyotocabinet-perl-1.19
@@ -10,6 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://fallabs.com/kyotocabinet/
 COMMENT=	Perl binding for Kyoto Cabinet
 LICENSE=	gnu-gpl-v3
+
+REPLACE_PERL=	*.pl
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
