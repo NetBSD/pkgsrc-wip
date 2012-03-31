@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.5 2012/03/31 15:01:17 makoto Exp $
+$NetBSD: patch-af,v 1.6 2012/03/31 15:22:35 makoto Exp $
 
 
 --- base/unix-dll.mak.orig	2012-02-08 17:48:48.000000000 +0900
@@ -19,7 +19,7 @@ $NetBSD: patch-af,v 1.5 2012/03/31 15:01:17 makoto Exp $
 -LDFLAGS_SO_MAC=-dynamiclib -install_name $(GS_SONAME_MAJOR_MINOR)
 -#LDFLAGS_SO=-dynamiclib -install_name $(FRAMEWORK_NAME)
 +#Darwin#LDFLAGS_SO_MAC=-dynamiclib -install_name $(GS_SONAME_MAJOR_MINOR)
-+#Darwin#LDFLAGS_SO=-dynamiclib -install_name $(FRAMEWORK_NAME)
++#LDFLAGS_SO=-dynamiclib -install_name $(FRAMEWORK_NAME)
  
  GS_SO=$(BINDIR)/$(GS_SONAME)
  GS_SO_MAJOR=$(BINDIR)/$(GS_SONAME_MAJOR) 
