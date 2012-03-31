@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4707 2012/03/30 13:00:53 fhajny Exp $
+# $Id: Makefile,v 1.4708 2012/03/31 19:26:36 bubuchka Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1930,6 +1930,7 @@ SUBDIR+=	p5-IO-Socket-Socks
 SUBDIR+=	p5-Image-EXIF
 SUBDIR+=	p5-Imager
 SUBDIR+=	p5-JavaScript-SpiderMonkey
+SUBDIR+=	p5-KyotoCabinet
 SUBDIR+=	p5-LWP-Protocol-socks
 SUBDIR+=	p5-Libencode-Arabic
 SUBDIR+=	p5-Lingua-PT-Stemmer
