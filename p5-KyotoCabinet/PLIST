@@ -1,0 +1,9 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/03/31 19:23:48 bubuchka Exp $
+${PERL5_SUB_INSTALLVENDORARCH}/KyotoCabinet.pm
+${PERL5_SUB_INSTALLVENDORARCH}/KyotoCabinet.pod
+${PERL5_SUB_INSTALLVENDORARCH}/auto/KyotoCabinet/.packlist
+${PERL5_SUB_INSTALLVENDORARCH}/auto/KyotoCabinet/KyotoCabinet.bs
+${PERL5_SUB_INSTALLVENDORARCH}/auto/KyotoCabinet/KyotoCabinet.bundle
+${PERL5_SUB_INSTALLVENDORARCH}/kctest.pl
+${PERL5_SUB_INSTALLVENDORARCH}/makedoc.pl
+${PERL5_SUB_INSTALLVENDORMAN3DIR}/KyotoCabinet.3
