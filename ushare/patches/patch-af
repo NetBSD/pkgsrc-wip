@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.4 2012/02/29 12:21:53 obache Exp $
+$NetBSD: patch-af,v 1.5 2012/04/01 01:35:33 obache Exp $
 
 * Treat NetBSD same as FreeBSD.
 * Move sys/param.h and config.h header files before using conditions.
@@ -73,19 +73,7 @@ $NetBSD: patch-af,v 1.4 2012/02/29 12:21:53 obache Exp $
  
    if (ut->verbose)
    {
-@@ -348,7 +363,11 @@ init_upnp (struct ushare_t *ut)
- 
-   UpnpEnableWebserver (TRUE);
- 
-+#if UPNP_VERSION < 10607
-   res = UpnpSetVirtualDirCallbacks (&virtual_dir_callbacks);
-+#else
-+  res = set_virtual_dir_callbacks();
-+#endif
-   if (res != UPNP_E_SUCCESS)
-   {
-     log_error (_("Cannot set virtual directory callbacks\n"));
-@@ -505,7 +524,7 @@ create_udn (char *interface)
+@@ -505,7 +520,7 @@ create_udn (char *interface)
    char *buf;
    unsigned char *ptr;
  
@@ -94,7 +82,7 @@ $NetBSD: patch-af,v 1.4 2012/02/29 12:21:53 obache Exp $
    int mib[6];
    size_t len;
    struct if_msghdr *ifm;
-@@ -517,7 +536,7 @@ create_udn (char *interface)
+@@ -517,7 +532,7 @@ create_udn (char *interface)
    if (!interface)
      return NULL;
  
@@ -103,7 +91,7 @@ $NetBSD: patch-af,v 1.4 2012/02/29 12:21:53 obache Exp $
    mib[0] = CTL_NET;
    mib[1] = AF_ROUTE;
    mib[2] = 0;
-@@ -568,7 +587,7 @@ create_udn (char *interface)
+@@ -568,7 +583,7 @@ create_udn (char *interface)
    buf = (char *) malloc (64 * sizeof (char));
    memset (buf, 0, 64);
    ptr = (unsigned char *) ifr.ifr_hwaddr.sa_data;
@@ -112,7 +100,7 @@ $NetBSD: patch-af,v 1.4 2012/02/29 12:21:53 obache Exp $
  
    snprintf (buf, 64, "%s-%02x%02x%02x%02x%02x%02x", DEFAULT_UUID,
              (ptr[0] & 0377), (ptr[1] & 0377), (ptr[2] & 0377),
-@@ -734,11 +753,8 @@ setup_i18n(void)
+@@ -734,11 +749,8 @@ setup_i18n(void)
  #ifdef HAVE_SETLOCALE
    setlocale (LC_ALL, "");
  #endif
@@ -124,7 +112,7 @@ $NetBSD: patch-af,v 1.4 2012/02/29 12:21:53 obache Exp $
  }
  
  #define SHUTDOWN_MSG _("Server is shutting down: other clients will be notified soon, Bye bye ...\n")
-@@ -845,6 +861,9 @@ main (int argc, char **argv)
+@@ -845,6 +857,9 @@ main (int argc, char **argv)
  
    signal (SIGINT, UPnPBreak);
    signal (SIGHUP, reload_config);
