@@ -1,0 +1,13 @@
+$NetBSD: patch-METIS__source_makefile,v 1.1 2012/04/02 20:38:52 outpaddling Exp $
+
+--- METIS_source/makefile.orig	2005-01-25 17:27:40.000000000 +0000
++++ METIS_source/makefile
+@@ -2,7 +2,7 @@ INCLUDES = -I.
+ AR = ar rv
+ RANLIB = ranlib
+ # add path to c compiler 
+-CC = icc 
++CC = gcc 
+ # add c compiler optimization flags
+ OPTFLAGS = -O2
+ CFLAGS = $(COPTIONS) $(OPTFLAGS) $(INCLUDES)

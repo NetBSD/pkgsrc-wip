@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.2 2012/04/02 19:42:31 outpaddling Exp $
+$NetBSD: distinfo,v 1.3 2012/04/02 20:38:52 outpaddling Exp $
 
 SHA1 (sourcecode1.tar.gz) = efc6545f073e25ecab0b0fb172e06ccd072bb945
 RMD160 (sourcecode1.tar.gz) = cbb865ebd3d594a5b450b49ef3f5e4a9ce7087b4
 Size (sourcecode1.tar.gz) = 6162463 bytes
+SHA1 (patch-METIS__source_makefile) = e89ffbd93143a3a8216275b15c055f2150c492ca
+SHA1 (patch-Makefile) = 5bb7c66dd6a521bba5e98eb5bfac2572b09d14a2

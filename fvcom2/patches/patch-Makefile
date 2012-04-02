@@ -1,7 +1,25 @@
-$NetBSD: patch-Makefile,v 1.1.1.1 2012/03/22 20:25:21 outpaddling Exp $
+$NetBSD: patch-Makefile,v 1.2 2012/04/02 20:38:52 outpaddling Exp $
 
 --- Makefile.orig	2009-09-22 19:45:57.000000000 +0000
 +++ Makefile
+@@ -17,7 +17,7 @@
+ #                           UNCOMMENT TO SELECT DOUBLE PRECISION
+ #--------------------------------------------------------------------------
+ 
+-#            FLAG_1 =  -DDOUBLE_PRECISION 
++            FLAG_1 =  -DDOUBLE_PRECISION 
+ 
+ #--------------------------------------------------------------------------
+ #        SPHERICAL          SELECT SPHERICAL COORDINATES FOR INTEGRATION
+@@ -35,7 +35,7 @@
+ #                           UNCOMMENT TO INCLUDE FLOODYING/DRYING
+ #--------------------------------------------------------------------------
+ 
+-#             FLAG_3 = -DWET_DRY
++             FLAG_3 = -DWET_DRY
+ 
+ #--------------------------------------------------------------------------
+ #        MULTI_PROCESSOR    INCLUDES PARALLELIZATION WITH MPI
 @@ -45,14 +45,17 @@
  #                           UNCOMMENT TO INCLUDE MPI PARALLEL CAPABILITY
  #--------------------------------------------------------------------------
@@ -18,10 +36,19 @@ $NetBSD: patch-Makefile,v 1.1.1.1 2012/03/22 20:25:21 outpaddling Exp $
 +
 +# Why does this fail on NetBSD?
 +#              PARLIB = -L${LOCALBASE}/lib -lmetis
-+              PARLIB = ${LOCALBASE}/lib/libmetis.a
++              PARLIB = ${WRKSRC}/METIS_source/libmetis.a
  
  # For Typhoeus and Hydra
  #              PARLIB = -L/usr/local/lib -lmetis 
+@@ -67,7 +70,7 @@
+ #                           UNCOMMENT TO INCLUDE WATER QUALITY MODEL
+ #--------------------------------------------------------------------------
+ 
+-#             FLAG_5 = -DWATER_QUALITY
++             FLAG_5 = -DWATER_QUALITY
+ 
+ #--------------------------------------------------------------------------
+ #        NETCDF OUTPUT      DUMP OUTPUT INTO NETCDF FILES (yes/no)
 @@ -78,9 +81,9 @@
  #                           DEFAULT: NO NETCDF OUTPUT
  #                           UNCOMMENT TO INCLUDE NETCDF OUTPUT CAPABILITY
