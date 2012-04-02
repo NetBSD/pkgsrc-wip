@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/04/02 20:38:52 outpaddling Exp $
+# $NetBSD: Makefile,v 1.4 2012/04/02 23:11:20 outpaddling Exp $
 #
 
 PKGNAME=	fvcom-2.7.1
@@ -17,6 +17,7 @@ WRKSRC=		${WRKDIR}/FVCOM2.7.1/FVCOM_source
 
 USE_TOOLS+=	make
 USE_LANGUAGES=	c fortran
+FC=		gfortran
 
 DEPENDS+=	metis>=4.0:../../math/metis
 
