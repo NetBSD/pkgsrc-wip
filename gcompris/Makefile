@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/03/11 07:03:10 mayureshw Exp $
+# $NetBSD: Makefile,v 1.12 2012/04/03 18:00:32 thomasklausner Exp $
 
 DISTNAME=	gcompris-12.01
 CATEGORIES=	games
@@ -38,17 +38,18 @@ post-extract:
 	${CHMOD} -R go-w ${WRKSRC}
 
 .include "../../audio/SDL_mixer/buildlink3.mk"
-.include "../../graphics/py-cairo/buildlink3.mk"
-.include "../../graphics/librsvg/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../databases/py-sqlite2/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
+.include "../../graphics/librsvg/buildlink3.mk"
+.include "../../graphics/py-cairo/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../multimedia/gstreamer0.10/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
-.include "../../x11/py-gtk2/buildlink3.mk"
 .include "../../x11/libXxf86vm/buildlink3.mk"
+.include "../../x11/py-gtk2/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
-.include "../../textproc/libxml2/buildlink3.mk"
