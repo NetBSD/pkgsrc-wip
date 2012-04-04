@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2011/04/19 13:05:47 makoto Exp $
+# $NetBSD: Makefile,v 1.5 2012/04/04 21:59:13 makoto Exp $
 
 DISTNAME=	wl-2.15.9
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
-PKGREVISION=	${_CVS_PKGVERSION:S/.//g}
+PKGREVISION=	${_GIT_PKGVERSION:S/.//g}
 
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.gohome.org/wl/stable/
@@ -40,8 +40,10 @@ INSTALLATION_DIRS=	${DOCDIR}/en ${DOCDIR}/ja \
 
 EMACS_BUILDLINK=	# empty
 
-CVS_ROOT.wanderlust=	:pserver:anonymous:@cvs.m17n.org:/cvs/root
-CVS_REPOSITORIES=	wanderlust
+GIT_REPOSITORIES=       master
+GIT_REPO.master=        git://github.com/wanderlust/wanderlust.git
+_GIT_FLAGS?=            --depth 1
+
 
 post-install:
 	set -e; \
@@ -55,7 +57,7 @@ post-install:
 .include "../../editors/emacs/modules.mk"
 
 .include "options.mk"
-.include "../../wip/mk/cvs-package.mk"
+.include "../../wip/mk/git-package.mk"
 
 .include "../../devel/apel/buildlink3.mk"
 .include "../../devel/semi/buildlink3.mk"
