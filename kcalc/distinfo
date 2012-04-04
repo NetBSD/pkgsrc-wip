@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.1 2012/01/24 19:40:55 mwdavies Exp $
-
-SHA1 (kcalc-4.8.0.tar.bz2) = b832aadd21906a7bdad323b8f1cbfb59bf1b7c63
-RMD160 (kcalc-4.8.0.tar.bz2) = f9f0b2034f8fde73de0739c325f7bbe4607790d5
-Size (kcalc-4.8.0.tar.bz2) = 91894 bytes
-SHA1 (patch-aa) = 077789370273eebbe7920434d7c3b2bb92c4c3fb
-SHA1 (patch-ab) = e81209a5b8d0d11ce4d67cff43a46f7f7efafee9
-SHA1 (patch-src_app_mainWindow.cpp) = 5a9c1ddb9ee50824d7af5dbe11a8fc6c5a5d2d22
-SHA1 (patch-src_part_radialMap_widget.cpp) = 6a85a3767b9d5d59d0d104bd9b561a6316bfa0cc

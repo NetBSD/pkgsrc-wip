@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2012/01/27 22:02:38 mwdavies Exp $
-lib/strigi/strigiea_dvi.so
-lib/strigi/strigiea_tiff.so

@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2012/01/25 09:10:22 mwdavies Exp $
-bin/sweeper
-share/applications/kde4/sweeper.desktop
-share/dbus-1/interfaces/org.kde.sweeper.xml
-share/doc/kde/HTML/en/sweeper/common
-share/doc/kde/HTML/en/sweeper/index.cache.bz2
-share/doc/kde/HTML/en/sweeper/index.docbook
-share/doc/kde/HTML/en/sweeper/sweeper.png
-share/kde/apps/sweeper/sweeperui.rc
