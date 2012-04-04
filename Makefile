@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4710 2012/04/04 10:24:07 mwdavies Exp $
+# $Id: Makefile,v 1.4711 2012/04/04 10:33:08 mwdavies Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1232,7 +1232,6 @@ SUBDIR+=	katapult
 SUBDIR+=	kawa
 SUBDIR+=	kde4-l10n-ar
 SUBDIR+=	kdiff3
-SUBDIR+=	kgpg
 SUBDIR+=	kgrab
 SUBDIR+=	kgraphviewer
 SUBDIR+=	kicad
@@ -1343,11 +1342,6 @@ SUBDIR+=	libisoburn
 SUBDIR+=	libisofs
 SUBDIR+=	libitl
 SUBDIR+=	libjingle
-SUBDIR+=	libkdcraw
-SUBDIR+=	libkdeedu
-SUBDIR+=	libkexiv2
-SUBDIR+=	libkipi
-SUBDIR+=	libksane
 SUBDIR+=	liblingoteach
 SUBDIR+=	liblo
 SUBDIR+=	liblognorm

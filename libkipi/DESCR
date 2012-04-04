@@ -1,4 +1,0 @@
-KIPI (KDE Image Plugin Interface) is an effort to develop a common plugin
-structure for digiKam (http://www.digikam.org), Gwenview, KimDaBa, and
-ShowImg. Of course, other applications are welcomed to implement KIPI
-support.
