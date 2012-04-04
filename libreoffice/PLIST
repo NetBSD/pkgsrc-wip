@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2012/03/14 17:38:26 ftigeot Exp $
+@comment $NetBSD: PLIST,v 1.16 2012/04/04 06:42:25 ftigeot Exp $
 bin/sbase
 bin/scalc
 bin/sdraw
@@ -120,7 +120,6 @@ ${PKGNAME}/program/fpicker.uno.so
 ${PKGNAME}/program/fps_office.uno.so
 ${PKGNAME}/program/fsstorage.uno.so
 ${PKGNAME}/program/fundamentalrc
-${PKGNAME}/program/gconfbe1.uno.so
 ${PKGNAME}/program/gdbtrace
 ${PKGNAME}/program/gengal
 ${PKGNAME}/program/gengal.bin

@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.32 2012/04/03 19:14:26 ftigeot Exp $
+$NetBSD: distinfo,v 1.33 2012/04/04 06:42:25 ftigeot Exp $
 
 SHA1 (libreoffice/067201ea8b126597670b5eff72e1f66c-mythes-1.2.0.tar.gz) = 025d5d0d566a23ddb353495c116116c1088ba2e9
 RMD160 (libreoffice/067201ea8b126597670b5eff72e1f66c-mythes-1.2.0.tar.gz) = aefa80476ef8340be84440b61f738f432da51c92
@@ -30,15 +30,15 @@ Size (libreoffice/f872f4ac066433d8ff92f5e316b36ff9-dejavu-fonts-ttf-2.33.zip) = 
 SHA1 (libreoffice/fdb27bfe2dbe2e7b57ae194d9bf36bab-SampleICC-1.3.2.tar.gz) = 6e836945719e137596df1ca82f0afa809e8a2e88
 RMD160 (libreoffice/fdb27bfe2dbe2e7b57ae194d9bf36bab-SampleICC-1.3.2.tar.gz) = 6443438ddf0bb5cd277c96108aa2671213edf8df
 Size (libreoffice/fdb27bfe2dbe2e7b57ae194d9bf36bab-SampleICC-1.3.2.tar.gz) = 547217 bytes
-SHA1 (libreoffice/libreoffice-core-3.5.1.2.tar.xz) = 7102d6856e7e0c618291b9625f80f3cec8ce22eb
-RMD160 (libreoffice/libreoffice-core-3.5.1.2.tar.xz) = 8579119afbc70aeb2b9ceebde4c2c857c8081bb9
-Size (libreoffice/libreoffice-core-3.5.1.2.tar.xz) = 103107276 bytes
-SHA1 (libreoffice/libreoffice-dictionaries-3.5.1.2.tar.xz) = d5cabab401bda241bb170c2c7fe7bf14094677de
-RMD160 (libreoffice/libreoffice-dictionaries-3.5.1.2.tar.xz) = 3d198aa693f99babb6a2eae30c0ee3d2f8abb765
-Size (libreoffice/libreoffice-dictionaries-3.5.1.2.tar.xz) = 32760952 bytes
-SHA1 (libreoffice/libreoffice-help-3.5.1.2.tar.xz) = 64a19653624624593357d0c03f53537ae26d35ee
-RMD160 (libreoffice/libreoffice-help-3.5.1.2.tar.xz) = fa95c366a0c0c5b3bc4f65204fae3467d829eed1
-Size (libreoffice/libreoffice-help-3.5.1.2.tar.xz) = 1857800 bytes
+SHA1 (libreoffice/libreoffice-core-3.5.2.2.tar.xz) = ab0cfa84a11ec4d18afe7095235a4b4c904e9649
+RMD160 (libreoffice/libreoffice-core-3.5.2.2.tar.xz) = 8e1b87e2ea35683ee31e0a2b209d85f14ba85753
+Size (libreoffice/libreoffice-core-3.5.2.2.tar.xz) = 103296172 bytes
+SHA1 (libreoffice/libreoffice-dictionaries-3.5.2.2.tar.xz) = 9beba8f411a08897a3d10edc814418af965977a9
+RMD160 (libreoffice/libreoffice-dictionaries-3.5.2.2.tar.xz) = 6067147b66da92673429f3fcfee967dcae27d4cd
+Size (libreoffice/libreoffice-dictionaries-3.5.2.2.tar.xz) = 32759748 bytes
+SHA1 (libreoffice/libreoffice-help-3.5.2.2.tar.xz) = de75c698482f7710ece1f48cf05a8355d33160b2
+RMD160 (libreoffice/libreoffice-help-3.5.2.2.tar.xz) = d82f5c2b8e11ac1246ffeaa9b152961c8ffeb931
+Size (libreoffice/libreoffice-help-3.5.2.2.tar.xz) = 1857620 bytes
 SHA1 (patch-configure.in) = f401c6bfbe795feadfcbb4779005938175f424a3
 SHA1 (patch-lotuswordpro_Module_lotuswordpro.mk) = 73a115b02ff8e6b88a8a980210065f7cae6f86ef
 SHA1 (patch-sc_Module_sc.mk) = e10e49334efb507d20f41fbf0f0f21d1605230c2
