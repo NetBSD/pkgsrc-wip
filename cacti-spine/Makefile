@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/03/26 09:09:50 ahp-nils Exp $
+# $NetBSD: Makefile,v 1.7 2012/04/04 15:43:41 ahp-nils Exp $
 #
 
 DISTNAME=	cacti-spine-0.8.7i
@@ -9,7 +9,7 @@ MASTER_SITES=	http://www.cacti.net/downloads/spine/
 MAINTAINER=	pettai@nordu.net
 HOMEPAGE=	http://www.cacti.net/spine_info.php
 COMMENT=	Spine is a poller for Cacti for large installations
-LICENSE=	gnu-gpl-v2
+LICENSE=	gnu-lgpl-v2.1
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
 USE_LANGUAGES=	c c++
