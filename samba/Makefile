@@ -1,17 +1,17 @@
-# $NetBSD: Makefile,v 1.2 2011/12/09 18:02:49 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/04/05 12:39:29 asau Exp $
 
 .include "../../net/samba/Makefile.mirrors"
 
 DISTNAME=	samba-${VERSION}
 CATEGORIES=	net
-MASTER_SITES=	${SAMBA_MIRRORS:=stable/}
+MASTER_SITES=	${SAMBA_MIRRORS:=samba4/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.samba.org/
 COMMENT=	SMB/CIFS protocol server suite
 LICENSE=	gnu-gpl-v3
 
-VERSION=	3.6.1
+VERSION=	4.0.0alpha16
 CONFLICTS+=	ja-samba-[0-9]* pam-smbpass-[0-9]* tdb-[0-9]* winbind-[0-9]*
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -19,7 +19,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 FILESDIR=		${PKGDIR}/../../net/samba/files
 DESCR_SRC=		${PKGDIR}/../../net/samba/DESCR
 MESSAGE_SRC=		${PKGDIR}/../../net/samba/MESSAGE
-WRKSRC=			${WRKDIR}/${DISTNAME}/source3
 BUILD_DEFS+=		VARBASE
 
 .include "../../mk/bsd.prefs.mk"
@@ -52,34 +51,42 @@ REPLACE_PERL=		script/findsmb.in
 
 BROKEN_GETTEXT_DETECTION=yes
 USE_GNU_READLINE=	yes
-GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--with-libiconv=${BUILDLINK_PREFIX.iconv}
-CONFIGURE_ARGS+=	--with-readline=${BUILDLINK_PREFIX.readline}
-CONFIGURE_ARGS+=	--with-configdir=${SAMBA_ETCDIR}
+
+HAS_CONFIGURE=		yes
+GNU_CONFIGURE_LIBDIR=	${SAMBA_LIBDIR}
+CONFIG_SHELL=		$(PYTHONBIN)
+CONFIGURE_SCRIPT=	$(WRKSRC)/buildtools/bin/waf
+CONFIGURE_ARGS+=	configure
+CONFIGURE_ARGS+=	--prefix=$(PREFIX:Q)
+#CONFIGURE_ARGS+=	--with-libiconv=${BUILDLINK_PREFIX.iconv}
+#CONFIGURE_ARGS+=	--with-readline=${BUILDLINK_PREFIX.readline}
+#CONFIGURE_ARGS+=	--with-configdir=${SAMBA_ETCDIR}
 CONFIGURE_ARGS+=	--libdir=${SAMBA_LIBDIR}
 CONFIGURE_ARGS+=	--with-lockdir=${SAMBA_LOCKDIR}
-CONFIGURE_ARGS+=	--with-logfilebase=${SAMBA_LOGDIR}
+#CONFIGURE_ARGS+=	--with-logfilebase=${SAMBA_LOGDIR}
 CONFIGURE_ARGS+=	--with-modulesdir=${SAMBA_MODULESDIR}
 CONFIGURE_ARGS+=	--with-piddir=${SAMBA_PIDDIR}
 CONFIGURE_ARGS+=	--with-privatedir=${SAMBA_PRIVATE:Q}
-CONFIGURE_ARGS+=	--with-statedir=${SAMBA_STATEDIR}
+#CONFIGURE_ARGS+=	--with-statedir=${SAMBA_STATEDIR}
 CONFIGURE_ARGS+=	--localstatedir=${SAMBA_VARDIR}
-CONFIGURE_ARGS+=	--with-mandir=${PREFIX}/${PKGMANDIR}
-CONFIGURE_ARGS+=	--with-swatdir=${PREFIX}/share/samba/swat
+#CONFIGURE_ARGS+=	--with-mandir=${PREFIX}/${PKGMANDIR}
+#CONFIGURE_ARGS+=	--with-swatdir=${PREFIX}/share/samba/swat
 #
 # Explicitly disable samba4 merged-build option which is broken.
 #
-CONFIGURE_ARGS+=	--enable-merged-build=no
+#CONFIGURE_ARGS+=	--enable-merged-build=no
 
-.include "../../net/samba/options.mk"
+#CONFIGURE_ARGS+=	--enable-rpath
+CONFIGURE_ARGS+=	--bundled-libraries=com_err
 
-PLIST_VARS+=		cifsmount macosx
+CHECK_PORTABILITY_SKIP=	source3/configure
 
-# Only Linux supports mount.cifs for mounting a CIFS share into the filesystem.
-.if ${OPSYS} == "Linux"
-CONFIGURE_ARGS+=	--with-cifsmount --with-cifsumount
-PLIST.cifsmount=	yes
-.endif
+do-build:
+	$(RUN) cd $(WRKSRC) && $(PYTHONBIN) ./buildtools/bin/waf build -v
+
+#.include "../../net/samba/options.mk"
+
+PLIST_VARS+=		macosx
 
 .if ${OPSYS} == "Darwin"
 PLIST.macosx=		yes
@@ -102,10 +109,10 @@ FILES_SUBST+=	MKTEMP=${MKTEMP:Q}
 FILES_SUBST+=	PWD_MKDB=${PWD_MKDB:Q}
 
 .if ${OPSYS} == "NetBSD"
-.if !empty(PKG_OPTIONS:Mwinbind)
+.  if !empty(PKG_OPTIONS:Mwinbind)
 # Install a /usr/lib/nss_winbind.so.0 -> ${PREFIX}/lib/nss_winbind.so.0 symlink
 INSTALL_TEMPLATES+=	INSTALL.nss_winbind
-.endif
+.  endif
 .endif
 
 INSTALLATION_DIRS+=	${DOCDIR} ${EGDIR}
@@ -133,46 +140,42 @@ post-extract:
 	${CP} ${FILESDIR}/adduser.sh ${FILESDIR}/deluser.sh ${WRKDIR}
 
 post-install:
-	${RMDIR} ${DESTDIR}${PREFIX}/share/samba/swat/js
-	${RMDIR} ${DESTDIR}${PREFIX}/share/samba/swat/lang/ja/include
-	${RMDIR} ${DESTDIR}${PREFIX}/share/samba/swat/lang/ja/images
-	${RMDIR} ${DESTDIR}${PREFIX}/share/samba/swat/lang/ja/js
-	${RMDIR} ${DESTDIR}${PREFIX}/share/samba/swat/lang/tr/include
-	${RMDIR} ${DESTDIR}${PREFIX}/share/samba/swat/lang/tr/js
-	${RMDIR} ${DESTDIR}${SAMBA_MODULESDIR}/gpext
-	${RMDIR} ${DESTDIR}${SAMBA_MODULESDIR}/nss_info
-	${RMDIR} ${DESTDIR}${SAMBA_MODULESDIR}/pdb
-	${RMDIR} ${DESTDIR}${SAMBA_MODULESDIR}/perfcount
-	set -e ; cd ${WRKDIR}/${DISTNAME}/docs/registry; for f in *.reg; do \
+	# ${RMDIR} ${DESTDIR}${PREFIX}/share/samba/swat/js
+	# ${RMDIR} ${DESTDIR}${PREFIX}/share/samba/swat/lang/ja/include
+	# ${RMDIR} ${DESTDIR}${PREFIX}/share/samba/swat/lang/ja/images
+	# ${RMDIR} ${DESTDIR}${PREFIX}/share/samba/swat/lang/ja/js
+	# ${RMDIR} ${DESTDIR}${PREFIX}/share/samba/swat/lang/tr/include
+	# ${RMDIR} ${DESTDIR}${PREFIX}/share/samba/swat/lang/tr/js
+	# ${RMDIR} ${DESTDIR}${SAMBA_MODULESDIR}/gpext
+	# ${RMDIR} ${DESTDIR}${SAMBA_MODULESDIR}/nss_info
+	# ${RMDIR} ${DESTDIR}${SAMBA_MODULESDIR}/pdb
+	# ${RMDIR} ${DESTDIR}${SAMBA_MODULESDIR}/perfcount
+	set -e ; cd ${WRKSRC}/docs-xml/registry; for f in *.reg; do \
 		${INSTALL_DATA} $${f} ${DESTDIR}${PREFIX}/${DOCDIR}/$${f}; \
 	done
 	${INSTALL_SCRIPT} ${WRKDIR}/adduser.sh \
 		${DESTDIR}${PREFIX}/${EGDIR}/adduser.sh
 	${INSTALL_SCRIPT} ${WRKDIR}/deluser.sh \
 		${DESTDIR}${PREFIX}/${EGDIR}/deluser.sh
-	${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/examples/LDAP/samba.schema \
+	${INSTALL_DATA} ${WRKSRC}/examples/LDAP/samba.schema \
 		${DESTDIR}${PREFIX}/${EGDIR}
-	${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/examples/smb.conf.default \
+	${INSTALL_DATA} ${WRKSRC}/examples/smb.conf.default \
 		${DESTDIR}${PREFIX}/${EGDIR}
-	${INSTALL_SCRIPT} ${WRKSRC}/script/mknissmbpasswd.sh \
-		${DESTDIR}${PREFIX}/${EGDIR}
-	${INSTALL_SCRIPT} ${WRKSRC}/script/mknissmbpwdtbl.sh \
-		${DESTDIR}${PREFIX}/${EGDIR}
-	${INSTALL_SCRIPT} ${WRKSRC}/script/mksmbpasswd.sh \
-		${DESTDIR}${PREFIX}/${EGDIR}
-	${INSTALL_SCRIPT} ${WRKSRC}/script/updatesmbpasswd.sh \
-		${DESTDIR}${PREFIX}/${EGDIR}
-	${CHMOD} ${SHAREMODE} ${DESTDIR}${PREFIX}/include/*.h
-.if ${OPSYS} == "NetBSD"
-.if !empty(PKG_OPTIONS:Mwinbind)
-	${INSTALL_LIB} ${WRKDIR}/${DISTNAME}/nsswitch/nss_winbind.${SAMBA_LIBEXT} \
-		${DESTDIR}${PREFIX}/lib/nss_winbind.${SAMBA_LIBEXT}.0
-.endif
-.endif
+	# $(WRKSRC)/examples/scripts/...
+	# ${CHMOD} ${SHAREMODE} ${DESTDIR}${PREFIX}/include/*.h
 
+.include "../../lang/python/pyversion.mk"
+
+PY_PATCHPLIST=	yes
+.include "../../lang/python/extension.mk"
+
+.if ${OPSYS} == "Linux"
+.include "../../devel/libuuid/buildlink3.mk"
+.endif
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
