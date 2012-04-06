@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2011/12/19 21:44:24 gschwarz Exp $
+# $NetBSD: Makefile,v 1.8 2012/04/06 18:46:25 gschwarz Exp $
 
 DISTNAME=	sipbomber_0.8
 PKGNAME=	${DISTNAME:S/_/-/}
@@ -7,7 +7,7 @@ CATEGORIES=	net
 MASTER_SITES=	http://www.sourcefiles.org/Internet/Communications/Telephony/
 
 MAINTAINER=	schwarz@NetBSD.org
-HOMEPAGE=	http://www.metalinkltd.com/downloads.php
+HOMEPAGE=	http://www.sourcefiles.org/Internet/Communications/Telephony/sipbomber_0.8.tar.gz.shtml
 COMMENT=	SipBomber is a SIP protocol testing tool
 LICENSE=	gnu-gpl-v2
 
