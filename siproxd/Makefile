@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2010/09/05 11:43:59 gschwarz Exp $
+# $NetBSD: Makefile,v 1.20 2012/04/07 10:13:28 gschwarz Exp $
 
-DISTNAME=	siproxd-0.8.0
+DISTNAME=	siproxd-0.8.1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=siproxd/}
 
@@ -28,13 +28,6 @@ INSTALLATION_DIRS=	sbin share/examples/siproxd
 .include "../../mk/pthread.buildlink3.mk"
 PTHREAD_LIBS+=	${PTHREAD_LDFLAGS}
 # needed since siproxd's configure does not check for PTHREAD_LDFLAGS
-
-# work around a bug present in siproxd 0.8.0's Makefile
-# probably no longer needed for later versions
-SUBST_CLASSES+=	libltdl
-SUBST_STAGE.libltdl=	post-patch
-SUBST_FILES.libltdl=	Makefile.in
-SUBST_SED.libltdl=	-e 's/libltdl //g'
 
 .include "../../devel/libosip/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"

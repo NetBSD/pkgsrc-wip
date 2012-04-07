@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.10 2010/06/20 20:46:54 gschwarz Exp $
+$NetBSD: distinfo,v 1.11 2012/04/07 10:13:28 gschwarz Exp $
 
-SHA1 (siproxd-0.8.0.tar.gz) = d2f23a01ea60e3648efd46136e02bc84d1e934a1
-RMD160 (siproxd-0.8.0.tar.gz) = 447bc8891632dc23a7685af8d2e958fb5ee9cfb2
-Size (siproxd-0.8.0.tar.gz) = 824404 bytes
-SHA1 (patch-aa) = 79337bc117ae7e63698530dac680af055aae36b6
+SHA1 (siproxd-0.8.1.tar.gz) = 6226ee04b6f0080bb323cb7364ed758d1cbcbba1
+RMD160 (siproxd-0.8.1.tar.gz) = ac2f3ec40e539e69fa801fc56e6be6fd576a3570
+Size (siproxd-0.8.1.tar.gz) = 833170 bytes
+SHA1 (patch-aa) = ce1dc6126985cb906cb379d87d6002089497f8be
+SHA1 (patch-src_plugins.h) = 8938d324a6e3bf4f22155c7b1b7379d2eff3e793
