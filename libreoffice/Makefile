@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2012/04/04 06:42:25 ftigeot Exp $
+# $NetBSD: Makefile,v 1.37 2012/04/07 11:46:46 ftigeot Exp $
 
 VER=			3.5.2.2
 DISTNAME=		libreoffice-${VER}
@@ -185,6 +185,7 @@ post-install:
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../textproc/hunspell/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
+.include "../../textproc/libclucene/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../textproc/redland/buildlink3.mk"
