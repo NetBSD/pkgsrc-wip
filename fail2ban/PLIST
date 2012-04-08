@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2011/10/24 19:47:42 lexort Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/04/08 20:22:11 thomasklausner Exp $
 bin/fail2ban-client
 bin/fail2ban-regex
 bin/fail2ban-server
@@ -47,7 +47,7 @@ ${PYSITELIB}/common/protocol.pyo
 ${PYSITELIB}/common/version.py
 ${PYSITELIB}/common/version.pyc
 ${PYSITELIB}/common/version.pyo
-${PLIST.eggfile}${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/server/__init__.py
 ${PYSITELIB}/server/__init__.pyc
 ${PYSITELIB}/server/__init__.pyo

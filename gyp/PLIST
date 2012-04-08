@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/11/26 08:20:00 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/04/08 20:22:11 thomasklausner Exp $
 bin/gyp
-${PLIST.eggfile}${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/gyp/MSVSNew.py
 ${PYSITELIB}/gyp/MSVSNew.pyc
 ${PYSITELIB}/gyp/MSVSNew.pyo
