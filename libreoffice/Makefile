@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2012/04/08 15:28:41 ftigeot Exp $
+# $NetBSD: Makefile,v 1.39 2012/04/08 19:18:00 ftigeot Exp $
 
 VER=			3.5.2.2
 DISTNAME=		libreoffice-${VER}
@@ -12,6 +12,8 @@ MAINTAINER=		ftigeot@wolfpond.org
 HOMEPAGE=		http://www.libreoffice.org/
 COMMENT=		Office productivity suite
 LICENSE=		gnu-lgpl-v3
+
+NOT_FOR_PLATFORM=	NetBSD-6.*-*
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 CHECK_SHLIBS_SUPPORTED=	no
