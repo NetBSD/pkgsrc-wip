@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4714 2012/04/08 21:08:25 thomasklausner Exp $
+# $Id: Makefile,v 1.4715 2012/04/08 21:24:36 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -246,11 +246,6 @@ SUBDIR+=	bunny
 SUBDIR+=	busybox
 SUBDIR+=	bwm-ng
 SUBDIR+=	bwping
-SUBDIR+=	bzr
-SUBDIR+=	bzr-explorer
-SUBDIR+=	bzr-gtk
-SUBDIR+=	bzr-svn
-SUBDIR+=	bzrtools
 SUBDIR+=	c-news
 SUBDIR+=	c2hs
 SUBDIR+=	cabal-install
@@ -2566,7 +2561,6 @@ SUBDIR+=	pythontoolkit
 SUBDIR+=	pywm
 SUBDIR+=	pyzor
 SUBDIR+=	q3-urbanterror
-SUBDIR+=	qbzr
 SUBDIR+=	qcomicbook
 SUBDIR+=	qdevelop
 SUBDIR+=	qemu
