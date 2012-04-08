@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.34 2012/04/08 06:59:48 ftigeot Exp $
+$NetBSD: distinfo,v 1.35 2012/04/08 15:28:41 ftigeot Exp $
 
 SHA1 (libreoffice/067201ea8b126597670b5eff72e1f66c-mythes-1.2.0.tar.gz) = 025d5d0d566a23ddb353495c116116c1088ba2e9
 RMD160 (libreoffice/067201ea8b126597670b5eff72e1f66c-mythes-1.2.0.tar.gz) = aefa80476ef8340be84440b61f738f432da51c92
@@ -39,7 +39,7 @@ Size (libreoffice/libreoffice-dictionaries-3.5.2.2.tar.xz) = 32759748 bytes
 SHA1 (libreoffice/libreoffice-help-3.5.2.2.tar.xz) = de75c698482f7710ece1f48cf05a8355d33160b2
 RMD160 (libreoffice/libreoffice-help-3.5.2.2.tar.xz) = d82f5c2b8e11ac1246ffeaa9b152961c8ffeb931
 Size (libreoffice/libreoffice-help-3.5.2.2.tar.xz) = 1857620 bytes
-SHA1 (patch-configure.in) = c363c905f9a225115df35e8488af312e1d9b873a
+SHA1 (patch-configure.in) = 2a6c1696d2e9ffb4ee9c41bc42813a98699c5a39
 SHA1 (patch-lotuswordpro_Module_lotuswordpro.mk) = 73a115b02ff8e6b88a8a980210065f7cae6f86ef
 SHA1 (patch-sc_Module_sc.mk) = e10e49334efb507d20f41fbf0f0f21d1605230c2
 SHA1 (patch-sd_Module_sd.mk) = f89c964816947864c59857f478758c58192c87e9

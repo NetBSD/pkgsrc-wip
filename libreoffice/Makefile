@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2012/04/07 11:46:46 ftigeot Exp $
+# $NetBSD: Makefile,v 1.38 2012/04/08 15:28:41 ftigeot Exp $
 
 VER=			3.5.2.2
 DISTNAME=		libreoffice-${VER}
@@ -121,6 +121,12 @@ SUBST_STAGE.libpath=	pre-configure
 SUBST_FILES.libpath=	set_soenv.in
 SUBST_SED.libpath=		-e 's,@LIBPATH@,${LIBPATH},g'
 SUBST_MESSAGE.libpath=	Fixing library path for dmake scripts
+
+SUBST_CLASSES+=			localbase
+SUBST_STAGE.localbase=		pre-configure
+SUBST_FILES.localbase=		configure.in
+SUBST_SED.localbase=		-e 's,@LOCALBASE@,${PREFIX},'
+SUBST_MESSAGE.localbase=	Fixing executable path for configure script
 
 REPLACE_PERL=	sd/res/webview/editpic.pl
 REPLACE_PERL+=	sd/res/webview/poll.pl
