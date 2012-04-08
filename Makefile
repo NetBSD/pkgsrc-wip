@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4712 2012/04/08 20:50:33 thomasklausner Exp $
+# $Id: Makefile,v 1.4713 2012/04/08 20:55:50 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2084,7 +2084,6 @@ SUBDIR+=	postgresql-uniqueidentifier
 SUBDIR+=	postoffice
 SUBDIR+=	postr
 SUBDIR+=	pound
-SUBDIR+=	ppl
 SUBDIR+=	ppp
 SUBDIR+=	ppr
 SUBDIR+=	premake
