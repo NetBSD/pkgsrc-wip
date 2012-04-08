@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4715 2012/04/08 21:24:36 thomasklausner Exp $
+# $Id: Makefile,v 1.4716 2012/04/08 22:01:37 bubuchka Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1871,6 +1871,7 @@ SUBDIR+=	p5-MKDoc-XML
 SUBDIR+=	p5-MMapDB
 SUBDIR+=	p5-MasonX-Apache2Handler
 SUBDIR+=	p5-Math-FixedPrecision
+SUBDIR+=	p5-Math-Gauss
 SUBDIR+=	p5-Math-IntervalSearch
 SUBDIR+=	p5-Maypole
 SUBDIR+=	p5-MediaWiki-API
