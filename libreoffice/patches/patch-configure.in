@@ -1,4 +1,4 @@
-$NetBSD: patch-configure.in,v 1.4 2012/04/08 15:28:41 ftigeot Exp $
+$NetBSD: patch-configure.in,v 1.5 2012/04/08 15:48:32 ftigeot Exp $
 
 --- configure.in.orig	2012-03-27 16:22:01.000000000 +0000
 +++ configure.in
@@ -20,7 +20,7 @@ $NetBSD: patch-configure.in,v 1.4 2012/04/08 15:28:41 ftigeot Exp $
      CXXFLAGS=$save_CXXFLAGS
      AC_LANG_POP([C++])
  else
-@@ -6196,7 +6199,7 @@ if test "$with_system_icu" = "yes"; then
+@@ -6196,11 +6199,11 @@ if test "$with_system_icu" = "yes"; then
          if test -z "$SYSTEM_GENBRK"; then
              AC_MSG_ERROR([\'genbrk\' not found in \$PATH, install the icu development tool \'genbrk\'])
          fi
@@ -28,6 +28,11 @@ $NetBSD: patch-configure.in,v 1.4 2012/04/08 15:28:41 ftigeot Exp $
 +        AC_PATH_PROG(SYSTEM_GENCCODE, genccode, [], [$PATH:/usr/sbin:/sbin:@LOCALBASE@/sbin])
          if test -z "$SYSTEM_GENCCODE"; then
              AC_MSG_ERROR([\'genccode\' not found in \$PATH, install the icu development tool \'genccode\'])
+         fi
+-        AC_PATH_PROG(SYSTEM_GENCMN, gencmn, [], [$PATH:/usr/sbin:/sbin:/usr/local/sbin])
++        AC_PATH_PROG(SYSTEM_GENCMN, gencmn, [], [$PATH:/usr/sbin:/sbin:@LOCALBASE@/sbin])
+         if test -z "$SYSTEM_GENCMN"; then
+             AC_MSG_ERROR([\'gencmn\' not found in \$PATH, install the icu development tool \'gencmn\'])
          fi
 @@ -8910,7 +8913,7 @@ dnl        this should be unified into u
  
