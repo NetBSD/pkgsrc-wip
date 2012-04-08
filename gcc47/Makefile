@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/03/28 05:25:21 keckhardt Exp $
+# $NetBSD: Makefile,v 1.13 2012/04/08 20:50:34 thomasklausner Exp $
 
 GCC_VERSION=		4.7
 DISTNAME=		gcc-${GCC_VERSION}-20120324
@@ -216,7 +216,7 @@ GENERATE_PLIST+=                                                        \
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../math/mpfr/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
-.include "../../wip/cloog/buildlink3.mk"
+.include "../../math/cloog/buildlink3.mk"
 .include "../../wip/ppl/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
