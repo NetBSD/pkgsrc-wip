@@ -1,8 +1,26 @@
-$NetBSD: patch-configure.in,v 1.2 2012/01/22 11:38:17 thomasklausner Exp $
+$NetBSD: patch-configure.in,v 1.3 2012/04/08 06:59:48 ftigeot Exp $
 
---- configure.in.orig	2012-01-17 21:49:18.000000000 +0000
+--- configure.in.orig	2012-03-27 16:22:01.000000000 +0000
 +++ configure.in
-@@ -8883,7 +8883,7 @@ dnl        this should be unified into u
+@@ -5717,7 +5717,9 @@ if test "$with_system_mdds" = "yes"; the
+         [AC_MSG_ERROR(mdds/mixed_type_matrix.hpp not found. install mdds >= 0.4.0)], [])
+     CPPFLAGS="$save_CPPFLAGS"
+     save_CXXFLAGS="$CXXFLAGS"
++    save_LIBS="$LIBS"
+     CXXFLAGS="$CXXFLAGS $MDDS_CPPFLAGS"
++    LIBS=""
+     AC_MSG_CHECKING([for correct signature of ::mdds::flat_segment_tree])
+     AC_RUN_IFELSE([AC_LANG_SOURCE([[#include <mdds/flat_segment_tree.hpp>
+ 
+@@ -5735,6 +5737,7 @@ if test "$with_system_mdds" = "yes"; the
+     else
+         AC_MSG_ERROR([no, install mdds >= 0.5.0])
+     fi
++    LIBS="$save_LIBS"
+     CXXFLAGS=$save_CXXFLAGS
+     AC_LANG_POP([C++])
+ else
+@@ -8910,7 +8913,7 @@ dnl        this should be unified into u
  
  AC_MSG_CHECKING([whether to use the system libjpeg])
  
@@ -11,7 +29,7 @@ $NetBSD: patch-configure.in,v 1.2 2012/01/22 11:38:17 thomasklausner Exp $
      SYSTEM_LIBJPEG=YES
      AC_MSG_RESULT([yes])
  else
-@@ -9462,7 +9462,7 @@ AC_MSG_RESULT([$DOCDIR])
+@@ -9489,7 +9492,7 @@ AC_MSG_RESULT([$DOCDIR])
  AC_SUBST(DOCDIR)
  
  AC_MSG_CHECKING([for install dir])
