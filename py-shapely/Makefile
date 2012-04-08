@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/02/01 00:04:53 noud4 Exp $
+# $NetBSD: Makefile,v 1.4 2012/04/08 19:09:51 thomasklausner Exp $
 #
 
 DISTNAME=	Shapely-1.2.14
@@ -13,8 +13,6 @@ COMMENT=	Geometric objects, predicates, and operations
 LICENSE=	2-clause-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-
-PYTHON_VERSIONS_ACCEPTED= 27 26 25
 
 WRKSRC=	${WRKDIR}/Shapely-1.2.14
 

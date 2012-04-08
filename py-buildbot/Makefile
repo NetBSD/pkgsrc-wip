@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2011/12/24 11:36:58 haad Exp $
+# $NetBSD: Makefile,v 1.12 2012/04/08 19:09:45 thomasklausner Exp $
 #
 
 DISTNAME=		buildbot-0.8.5
@@ -16,7 +16,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
-PYTHON_VERSIONS_ACCEPTED=	27 26 25
 
 ALL_ENV+=               NO_INSTALL_REQS=1
 

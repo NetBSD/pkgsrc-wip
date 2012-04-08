@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2011/05/07 21:25:41 ryo-on Exp $
+# $NetBSD: Makefile,v 1.9 2012/04/08 19:09:46 thomasklausner Exp $
 #
 DISTNAME=	python-djvulibre-0.3.3
 EGG_NAME=	${DISTNAME:S/python-/python_/}
@@ -21,7 +21,6 @@ USE_TOOLS+=	pkg-config #gsed
 
 USE_LANGUAGES=	c
 
-PYTHON_VERSIONS_ACCEPTED=	27 26 25
 PYDISTUTILSPKG=	yes
 
 SUBST_CLASSES+=		setup

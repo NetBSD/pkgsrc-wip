@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/02/25 09:47:50 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2012/04/08 19:09:52 thomasklausner Exp $
 
 DISTNAME=				ssh4py-0.6.9
 EXTRACT_SUFX=			.zip
@@ -15,8 +15,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 WRKSRC=					${WRKDIR}/ssh4py-0.6.9
 
 NO_CONFIGURE=			yes
-
-#PYTHON_VERSIONS_ACCEPTED= 27 26 25 24 23
 
 PYDISTUTILSPKG=	yes
 #PYBINMODULE=	yes

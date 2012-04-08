@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/02/25 09:47:48 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2012/04/08 19:09:46 thomasklausner Exp $
 #
 
 DISTNAME=	pygsl-0.9.5
@@ -13,7 +13,6 @@ LICENSE=	gnu-gpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-PYTHON_VERSIONS_ACCEPTED= 27 26 25 24 23 22 20
 PYDISTUTILSPKG=	yes
 
 do-test:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2009/09/09 11:17:56 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.11 2012/04/08 19:09:42 thomasklausner Exp $
 #
 
 # Created using instructions from:
@@ -44,7 +44,6 @@ GNU_CONFIGURE=		yes
 
 # Bring in libpython2.5 and the python interpreter.
 .include "../../lang/python25/buildlink3.mk"
-#PYTHON_VERSIONS_INCOMPATIBLE=24
 #.include "../../lang/python/pyversion.mk"
 
 # Bring in libbfd.

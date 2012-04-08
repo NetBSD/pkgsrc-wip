@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2011/02/25 09:47:50 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2012/04/08 19:09:53 thomasklausner Exp $
 #
 
 DISTNAME=	pydb-1.26
@@ -28,8 +28,6 @@ PKG_SUGGESTED_OPTIONS=          pyreadline
 CONFIGURE_ARGS+=	--enable-pyreadline
 .endif
 
-
-PYTHON_VERSIONS_ACCEPTED= 27 26 25
 PY_PATCHPLIST=	yes
 
 .include "../../lang/python/extension.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2010/06/13 22:47:14 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2012/04/08 19:09:53 thomasklausner Exp $
 #
 
 DISTNAME=	zeitgeist-0.3.2
@@ -15,7 +15,7 @@ LICENSE=		gnu-lgpl-v3
 DEPENDS+=	${PYPKGPREFIX}-xdg-[0-9]*:../../devel/py-xdg
 DEPENDS+=	${PYPKGPREFIX}-storm-[0-9]*:../../wip/py-storm
 
-PYTHON_VERSIONS_INCOMPATIBLE=	25 24
+PYTHON_VERSIONS_INCOMPATIBLE=	25
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/05/24 15:34:14 tnn2 Exp $
+# $NetBSD: Makefile,v 1.5 2012/04/08 19:09:47 thomasklausner Exp $
 #
 
 DISTNAME=		kaa-metadata-0.7.2
@@ -12,7 +12,7 @@ COMMENT=		Media metadata parser for the Kaa multimedia framework
 
 PYDISTUTILSPKG=		yes
 
-PYTHON_VERSIONS_ACCEPTED=	25 24
+PYTHON_VERSIONS_ACCEPTED=	25
 
 .include "../../lang/python/extension.mk"
 .include "../../multimedia/libdvdread/buildlink3.mk"

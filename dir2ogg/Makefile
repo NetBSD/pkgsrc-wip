@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2011/08/06 19:13:34 guigui2 Exp $
+# $NetBSD: Makefile,v 1.13 2012/04/08 19:09:42 thomasklausner Exp $
 #
 
 DISTNAME=			dir2ogg-0.11.8
@@ -13,7 +13,6 @@ LICENSE=			gnu-gpl-v2
 PKG_DESTDIR_SUPPORT=		user-destdir
 
 USE_LANGUAGES=			# none
-PYTHON_VERSIONS_ACCEPTED=	27 26 25 24
 INSTALLATION_DIRS=		bin ${PKGMANDIR}/man1
 REPLACE_PYTHON+=		${WRKSRC}/dir2ogg
 NO_BUILD=			yes

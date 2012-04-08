@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/02/25 09:47:48 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2012/04/08 19:09:44 thomasklausner Exp $
 #
 
 DISTNAME=	pdfminer-20100424.tar
@@ -17,7 +17,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 WRKSRC=		${WRKDIR}/pdfminer-20100424
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_ACCEPTED= 27 26 25 24
 PYDISTUTILSPKG=	yes
 
 DOCDIR=	${PREFIX}/share/doc/pdfminer

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/01/02 14:07:32 netcap Exp $
+# $NetBSD: Makefile,v 1.2 2012/04/08 19:09:47 thomasklausner Exp $
 #
 
 DISTNAME=	py-libmpdclient2-1.0
@@ -13,7 +13,6 @@ COMMENT=	Python bindings to the mpd access library
 
 WRKSRC=		${WRKDIR}/py-libmpdclient2
 
-PYTHON_VERSIONS_ACCEPTED=	24
 PY_PATCHPLIST=	yes
 PYDISTUTILSPKG= yes
 

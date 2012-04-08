@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/06/13 22:47:14 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2012/04/08 19:09:47 thomasklausner Exp $
 #
 
 DISTNAME=		imgSeek-0.8.6
@@ -14,7 +14,7 @@ COMMENT=		Photo collection manager and viewer
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-PYTHON_VERSIONS_ACCEPTED=	25 24
+PYTHON_VERSIONS_ACCEPTED=	25
 
 USE_LANGUAGES=		c c++
 PYDISTUTILSPKG=		yes

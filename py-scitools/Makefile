@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/02/10 09:01:10 noud4 Exp $
+# $NetBSD: Makefile,v 1.5 2012/04/08 19:09:51 thomasklausner Exp $
 #
 
 DISTNAME=	scitools-0.7
@@ -20,7 +20,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_TOOLS+=	gzip
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_ACCEPTED= 27 26 25
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 
 post-extract:

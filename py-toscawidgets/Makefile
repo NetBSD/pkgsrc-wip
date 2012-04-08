@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/02/25 09:47:50 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2012/04/08 19:09:52 thomasklausner Exp $
 #
 
 DISTNAME=	ToscaWidgets-0.9.9.tar
@@ -17,8 +17,6 @@ DEPENDS+=	${PYPKGPREFIX}-simplejson>=2.1.1:../../converters/py-simplejson
 DEPENDS+=	${PYPKGPREFIX}-webob>=0.9.8:../../wip/py-webob
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-
-PYTHON_VERSIONS_ACCEPTED= 27 26 25 24
 
 WRKSRC=		${WRKDIR}/ToscaWidgets-0.9.9
 USE_LANGUAGES=	# none

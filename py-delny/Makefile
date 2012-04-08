@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/04/27 22:22:34 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/04/08 19:09:45 thomasklausner Exp $
 #
 
 DISTNAME=	Delny-0.4.1
@@ -16,7 +16,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 WRKSRC=	${WRKDIR}/Delny-0.4.1
 
 PYDISTUTILSPKG=	yes
-PYTHON_VERSIONS_ACCEPTED= 27 26 25 24 23
 
 do-test:
 	${RUN} cd ${WRKSRC}/test ; ${SETENV} ${TEST_ENV} ${PYTHONBIN} all.py

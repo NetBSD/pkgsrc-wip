@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/02/25 09:47:49 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2012/04/08 19:09:50 thomasklausner Exp $
 #
 
 DISTNAME=	repositoryhandler-0.3
@@ -23,7 +23,6 @@ USE_LANGUAGES=	# none
 
 PKGCONFIG_OVERRIDE+=	repositoryhandler.pc.in
 
-PYTHON_VERSIONS_ACCEPTED= 27 26 25 24
 PY_PATCHPLIST=		yes
 CONFIGURE_ENV+=		PYTHON=${PYTHONBIN}
 

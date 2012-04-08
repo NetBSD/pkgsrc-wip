@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/02/01 13:41:02 jihbed Exp $
+# $NetBSD: Makefile,v 1.5 2012/04/08 19:09:47 thomasklausner Exp $
 #
 
 VERSION=	1.0.9
@@ -17,9 +17,6 @@ DEPENDS+=	${PYPKGPREFIX}-simplejson>=2.1.1:../../converters/py-simplejson
 DEPENDS+=	${PYPKGPREFIX}-multiprocessing>=2.6.2.1:../../devel/py-multiprocessing
 DEPENDS+=	${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
 DEPENDS+=	${PYPKGPREFIX}-enchant>=1.6.5:../../textproc/py-enchant
-
-# py-ctypes is included in Python 2.5 and higher (Thank you ndb)
-#DEPENDS+=	${PYPKGPREFIX}-ctypes>=1.0.2:../../devel/py-ctypes
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 

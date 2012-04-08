@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/02/25 09:47:49 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2012/04/08 19:09:49 thomasklausner Exp $
 #
 
 DISTNAME=	pyecm-2.0
@@ -15,8 +15,6 @@ COMMENT=	Integer factorization with the Elliptic Curve Method (ECM)
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_ACCEPTED= 27 26 25 24
 
 NO_BUILD=yes
 

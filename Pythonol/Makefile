@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2010/06/13 22:46:56 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.16 2012/04/08 19:09:41 thomasklausner Exp $
 #
 
 DISTNAME=		Pythonol-2.0_i586
@@ -15,7 +15,7 @@ COMMENT=		Learn Spanish (with a little help of Python)
 
 DEPENDS+=		${PYPKGPREFIX}-sqlite>=0.4.3:../../databases/py-sqlite
 
-PYTHON_VERSIONS_ACCEPTED=	25 24
+PYTHON_VERSIONS_ACCEPTED=	25
 PY_PATCHPLIST=		yes
 
 TARGET_DIR=		${PREFIX}/${PYSITELIB}/Pythonol

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/02/25 09:47:47 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2012/04/08 19:09:43 thomasklausner Exp $
 #
 
 PKGNAME=	${DISTNAME:S/^M/m/}
@@ -20,7 +20,6 @@ USE_LANGUAGES=	# none
 PYDISTUTILSPKG=	yes
 PY_PATCHPLIST=	yes
 PLIST_SUBST+=	DISTNAME=${DISTNAME}
-PYTHON_VERSIONS_ACCEPTED= 27 26 25 24
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

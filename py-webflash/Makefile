@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/07/14 13:20:55 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/04/08 19:09:52 thomasklausner Exp $
 #
 
 DISTNAME=	WebFlash-0.1a9.tar
@@ -19,7 +19,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 WRKSRC=		${WRKDIR}/WebFlash-0.1a9
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_INCOMPATIBLE= 25 24 23 22 21 20 15
+PYTHON_VERSIONS_INCOMPATIBLE= 25
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

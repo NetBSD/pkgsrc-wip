@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/01/30 07:18:05 noud4 Exp $
+# $NetBSD: Makefile,v 1.4 2012/04/08 19:09:44 thomasklausner Exp $
 #
 
 DISTNAME=	aipy-0.9.1
@@ -21,7 +21,6 @@ WRKSRC=		${WRKDIR}/aipy-0.9.1
 
 USE_LANGUAGES=	c c++
 
-PYTHON_VERSIONS_ACCEPTED= 27 26 25 24
 PYDISTUTILSPKG=	yes
 
 BUILDLINK_API_DEPENDS.pynumpy+=	${PYPKGPREFIX}-numpy>=1.0

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/02/12 20:16:33 noud4 Exp $
+# $NetBSD: Makefile,v 1.13 2012/04/08 19:09:45 thomasklausner Exp $
 #
 
 DISTNAME=	pycsp-0.7.0
@@ -27,7 +27,4 @@ post-install:
 		${DESTDIR}${EDGDIR}
 
 .include "../../lang/python/egg.mk"
-.if ${PYVERSSUFFIX} == "2.4"
-DEPENDS+=	${PYPKGPREFIX}-ctypes>=1.0.2:../../devel/py-ctypes
-.endif
 .include "../../mk/bsd.pkg.mk"

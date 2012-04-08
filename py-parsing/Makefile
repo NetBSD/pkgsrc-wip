@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/02/25 09:47:49 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2012/04/08 19:09:49 thomasklausner Exp $
 #
 
 DISTNAME=	pyparsing-1.5.2
@@ -17,8 +17,6 @@ USE_LANGUAGES=	# none
 
 PYDISTUTILSPKG=		yes
 PY_PATCHPLIST=		yes
-
-PYTHON_VERSIONS_ACCEPTED=  27 26 25 24
 
 INSTALLATION_DIRS+=	share/doc/pyparsing share/doc/html/pyparsing share/examples/pyparsing
 

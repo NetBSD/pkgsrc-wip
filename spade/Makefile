@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2010/08/21 14:51:03 cheusov Exp $
+# $NetBSD: Makefile,v 1.15 2012/04/08 19:09:53 thomasklausner Exp $
 #
 
 DISTNAME=	spade-2.0rc4
@@ -20,7 +20,7 @@ DEPENDS+=	jython>=2.5.1:../../wip/jython
 PKG_DESTDIR_SUPPORT=	user-destdir
 WRKSRC=	${WRKDIR}/spade
 
-PYTHON_VERSIONS_INCOMPATIBLE= 15 20 21 22 23 24 25
+PYTHON_VERSIONS_INCOMPATIBLE= 25
 PYDISTUTILSPKG=	yes
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 

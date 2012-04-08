@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/05/09 20:39:37 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/04/08 19:09:46 thomasklausner Exp $
 #
 
 DISTNAME=	fwrap-0.1.1
@@ -15,7 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_ACCEPTED= 26 25 24
+PYTHON_VERSIONS_ACCEPTED= 26 25
 PYDISTUTILSPKG=	yes
 
 do-test:

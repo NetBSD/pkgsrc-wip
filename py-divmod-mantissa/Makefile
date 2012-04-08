@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/02/01 00:34:38 noud4 Exp $
+# $NetBSD: Makefile,v 1.7 2012/04/08 19:09:46 thomasklausner Exp $
 
 MANTISSA_VERSION=	0.6.1
 DISTNAME=	Mantissa-${MANTISSA_VERSION}
@@ -21,7 +21,7 @@ DEPENDS+=	${PYPKGPREFIX}-divmod-axiom>=0.5.0:../../wip/py-divmod-axiom
 DEPENDS+=	${PYPKGPREFIX}-divmod-vertex>=0.2.0:../../wip/py-divmod-vertex
 
 PYDISTUTILSPKG=			yes
-PYTHON_VERSIONS_ACCEPTED=	26 25 24
+PYTHON_VERSIONS_ACCEPTED=	26 25
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

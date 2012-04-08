@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/01/30 08:15:58 noud4 Exp $
+# $NetBSD: Makefile,v 1.4 2012/04/08 19:09:52 thomasklausner Exp $
 #
 
 DISTNAME=	symeig-1.5
@@ -15,7 +15,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c fortran
 PYDISTUTILSPKG=	yes
-PYTHON_VERSIONS_ACCEPTED= 27 26 25 24
 
 TEST_ENV+=	PYTHONPATH=${WRKSRC}/test/
 do-test:

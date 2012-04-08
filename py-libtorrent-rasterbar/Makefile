@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/02/25 09:47:48 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2012/04/08 19:09:47 thomasklausner Exp $
 #
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c c++
 
-PYTHON_VERSIONS_ACCEPTED=	27 26 25 24
 PYDISTUTILSPKG=	yes
 PYSETUPSUBDIR=	bindings/python
 

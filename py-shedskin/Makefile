@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/02/25 09:47:49 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2012/04/08 19:09:51 thomasklausner Exp $
 #
 
 DISTNAME=	shedskin-0.5
@@ -16,7 +16,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c++
 
-PYTHON_VERSIONS_ACCEPTED= 27 26 25
 PYDISTUTILSPKG=yes
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 

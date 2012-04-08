@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/04/18 10:30:13 jihbed Exp $
+# $NetBSD: Makefile,v 1.7 2012/04/08 19:09:54 thomasklausner Exp $
 #
 
 DISTNAME=	txt2tags-2.5
@@ -13,7 +13,7 @@ COMMENT=			Text formatting and conversion tool
 PKG_DESTDIR_SUPPORT=  user-destdir
 
 PYTHON_PATCH_SCRIPTS=		txt2tags
-PYTHON_VERSIONS_ACCEPTED=	25 24
+PYTHON_VERSIONS_ACCEPTED=	25
 
 USE_PKGLOCALEDIR=	yes
 NO_BUILD=			yes

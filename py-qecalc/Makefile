@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/02/25 09:47:49 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2012/04/08 19:09:50 thomasklausner Exp $
 #
 
 DISTNAME=	qecalc-0.2.3
@@ -16,8 +16,6 @@ DEPENDS+=	${PYPKGPREFIX}-diffpy-structure-[0-9]*:../../wip/py-diffpy-structure
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_ACCEPTED= 27 26 25
 
 .include "../../lang/python/egg.mk"
 .include "../../math/py-numpy/buildlink3.mk"

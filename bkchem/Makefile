@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/01/30 02:18:14 noud4 Exp $
+# $NetBSD: Makefile,v 1.4 2012/04/08 19:09:41 thomasklausner Exp $
 #
 
 DISTNAME=	bkchem-0.13.0
@@ -19,7 +19,6 @@ USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=	intltool msgfmt
 USE_LANGUAGES=		# none
 
-PYTHON_VERSIONS_ACCEPTED= 27 26 25 24 23
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 PYDISTUTILSPKG=	yes
 

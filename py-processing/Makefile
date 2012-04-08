@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/02/01 00:04:53 noud4 Exp $
+# $NetBSD: Makefile,v 1.4 2012/04/08 19:09:49 thomasklausner Exp $
 #
 
 DISTNAME=	processing-0.52
@@ -15,13 +15,7 @@ COMMENT=	Library for running multiple Python processes using the threading API
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-#python section
-PYTHON_VERSIONS_INCOMPATIBLE=  \
-			23 22 21 20 15
 PYDISTUTILSPKG=	yes
 
 .include "../../lang/python/extension.mk"
-.if ${PYVERSSUFFIX} == "2.4"
-DEPENDS+=	${PYPKGPREFIX}-ctypes>=1.0.2:../../devel/py-ctypes
-.endif
 .include "../../mk/bsd.pkg.mk"

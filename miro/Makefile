@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2011/05/11 09:23:40 ryo-on Exp $
+# $NetBSD: Makefile,v 1.7 2012/04/08 19:09:44 thomasklausner Exp $
 #
 
 DISTNAME=	miro-3.5.1
@@ -29,7 +29,6 @@ SUBST_SED.fix-paths+=		-e 's,/usr/X11R6/lib,${X11BASE}/lib,g'
 DEPENDS=	${PYPKGPREFIX}-curl-[0-9]*:../../www/py-curl
 DEPENDS+=	${PYPKGPREFIX}-libtorrent-rasterbar-[0-9]*:../../www/py-libtorrent-rasterbar
 
-PYTHON_VERSIONS_ACCEPTED=	27 26 25
 PYDISTUTILSPKG=	yes
 PYSETUPSUBDIR=	linux
 

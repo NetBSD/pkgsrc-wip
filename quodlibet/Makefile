@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2012/02/01 00:04:54 noud4 Exp $
+# $NetBSD: Makefile,v 1.19 2012/04/08 19:09:53 thomasklausner Exp $
 #
 
 DISTNAME=	quodlibet-2.1
@@ -35,8 +35,5 @@ PYTHON_PATCH_SCRIPTS=	exfalso.py quodlibet.py
 .include "../../sysutils/py-dbus/buildlink3.mk"
 .include "../../x11/py-gtk2/buildlink3.mk"
 .include "../../lang/python/extension.mk"
-.if ${PYVERSSUFFIX} == "2.4"
-DEPENDS+=	${PYPKGPREFIX}-ctypes>=1.0.2:../../devel/py-ctypes
-.endif
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"

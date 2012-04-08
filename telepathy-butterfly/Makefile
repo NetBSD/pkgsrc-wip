@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/02/01 00:04:54 noud4 Exp $
+# $NetBSD: Makefile,v 1.5 2012/04/08 19:09:54 thomasklausner Exp $
 #
 
 DISTNAME=	telepathy-butterfly-0.5.4
@@ -19,7 +19,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 HAS_CONFIGURE=	yes
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_ACCEPTED= 27 26 25
 PY_PATCHPLIST=	yes
 
 REPLACE_PYTHON+=	waf telepathy-butterfly

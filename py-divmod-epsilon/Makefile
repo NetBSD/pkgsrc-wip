@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/02/01 00:34:37 noud4 Exp $
+# $NetBSD: Makefile,v 1.10 2012/04/08 19:09:45 thomasklausner Exp $
 
 EPSILON_VERSION=	0.5.12
 DISTNAME=	Epsilon-${EPSILON_VERSION}
@@ -17,7 +17,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 DEPENDS+=	${PYPKGPREFIX}-twisted>=2.4.0:../../net/py-twisted
 
 PYDISTUTILSPKG=		yes
-PYTHON_VERSIONS_ACCEPTED=	26 25 24
+PYTHON_VERSIONS_ACCEPTED=	26 25
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

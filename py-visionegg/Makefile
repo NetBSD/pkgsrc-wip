@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/02/01 00:04:54 noud4 Exp $
+# $NetBSD: Makefile,v 1.16 2012/04/08 19:09:52 thomasklausner Exp $
 #
 
 DISTNAME=	visionegg-0.9.9
@@ -28,7 +28,4 @@ PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX:Q}
 .include "../../math/py-Numeric/buildlink3.mk"
 .include "../../x11/py-Tk/buildlink3.mk"
 .include "../../lang/python/extension.mk"
-.if ${PYVERSSUFFIX} == "2.4"
-DEPENDS+=	${PYPKGPREFIX}-ctypes>=1.0.2:../../devel/py-ctypes
-.endif
 .include "../../mk/bsd.pkg.mk"

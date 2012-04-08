@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/05/16 15:50:56 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/04/08 19:09:50 thomasklausner Exp $
 #
 
 DISTNAME=	rpyc-3.0.7.tar
@@ -17,9 +17,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/rpyc-3.0.7
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE= \
-											23 22 21 20 15
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

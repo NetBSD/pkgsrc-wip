@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/02/01 00:04:53 noud4 Exp $
+# $NetBSD: Makefile,v 1.6 2012/04/08 19:09:47 thomasklausner Exp $
 #
 
 DISTNAME=	py-1.0.2.tar
@@ -22,7 +22,4 @@ USE_LANGUAGES=	# none
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX:Q}
 
 .include "../../lang/python/egg.mk"
-.if ${PYVERSSUFFIX} == "2.4"
-DEPENDS+=	${PYPKGPREFIX}-ctypes>=1.0.2:../../devel/py-ctypes
-.endif
 .include "../../mk/bsd.pkg.mk"

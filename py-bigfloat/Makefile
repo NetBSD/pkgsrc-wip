@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/02/01 00:04:52 noud4 Exp $
+# $NetBSD: Makefile,v 1.4 2012/04/08 19:09:45 thomasklausner Exp $
 #
 
 DISTNAME=	bigfloat-0.2.1
@@ -23,8 +23,5 @@ do-test:
 	${RUN} cd ${WRKSRC}/bigfloat; ${SETENV} ${TEST_ENV} ${PYTHONBIN} test/test_bigfloat.py
 
 .include "../../lang/python/extension.mk"
-.if ${PYVERSSUFFIX} == "2.4"
-DEPENDS+=	${PYPKGPREFIX}-ctypes>=1.0.2:../../devel/py-ctypes
-.endif
 .include "../../math/mpfr/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

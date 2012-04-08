@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/04/18 14:07:21 jihbed Exp $
+# $NetBSD: Makefile,v 1.4 2012/04/08 19:09:42 thomasklausner Exp $
 #
 
 DISTNAME=	ConvertToMP3_0.6.3
@@ -18,7 +18,7 @@ DEPENDS+=	mplayer-[0-9]*:../../multimedia/mplayer
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=			# none
-PYTHON_VERSIONS_ACCEPTED=	25 24
+PYTHON_VERSIONS_ACCEPTED=	25
 NO_BUILD=			yes
 WRKSRC=				${WRKDIR}
 

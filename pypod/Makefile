@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/05/11 15:18:18 shattered Exp $
+# $NetBSD: Makefile,v 1.2 2012/04/08 19:09:53 thomasklausner Exp $
 #
 
 DISTNAME=		pypod-0.6.0
@@ -14,8 +14,6 @@ COMMENT=		Python tools for manipluating iPod data
 
 PYDISTUTILSPKG=		yes
 PYTHON_PATCH_SCRIPTS=	*.py */*.py
-PYTHON_VERSIONS_INCOMPATIBLE=\
-			15 20 21 22 23
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"

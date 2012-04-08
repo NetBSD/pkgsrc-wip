@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2011/10/09 10:45:29 cheusov Exp $
+# $NetBSD: Makefile,v 1.14 2012/04/08 19:09:53 thomasklausner Exp $
 #
 
 DISTNAME=		PyPanel-2.4
@@ -16,7 +16,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG=		yes
 PY_PATCHPLIST=		yes
-PYTHON_VERSIONS_INCOMPATIBLE=	24 25
+PYTHON_VERSIONS_INCOMPATIBLE=	25
 
 SUBST_CLASSES+=		setup
 SUBST_MESSAGE.setup=	Fixing LOCALBASE and X11BASE paths.

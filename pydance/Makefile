@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2011/06/18 10:57:09 shattered Exp $
+# $NetBSD: Makefile,v 1.14 2012/04/08 19:09:53 thomasklausner Exp $
 #
 
 DISTNAME=		pydance-1.0.3
@@ -20,8 +20,6 @@ CONF_FILES+=		${EXAMPLESDIR}/pydance.cfg ${PKG_SYSCONFDIR}/pydance.cfg
 INSTALLATION_DIRS=	${PKGMANDIR}/man6
 
 PYTHON_PATCH_SCRIPTS=	pydance.py utils/findbpm.py
-PYTHON_VERSIONS_INCOMPATIBLE=\
-			15 20 21 22
 
 do-build:
 	cd ${WRKSRC} && env ${MAKE_ENV} ${PYTHONBIN} setup.py

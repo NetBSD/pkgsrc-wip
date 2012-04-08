@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/05/24 15:34:14 tnn2 Exp $
+# $NetBSD: Makefile,v 1.5 2012/04/08 19:09:47 thomasklausner Exp $
 #
 
 DISTNAME=		kaa-base-0.3.0
@@ -14,7 +14,7 @@ USE_TOOLS+=		pkg-config
 
 PYDISTUTILSPKG=		yes
 
-PYTHON_VERSIONS_ACCEPTED=	25 24
+PYTHON_VERSIONS_ACCEPTED=	25
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../lang/python/extension.mk"

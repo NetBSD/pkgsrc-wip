@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/09/20 00:00:37 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/04/08 19:09:43 thomasklausner Exp $
 #
 
 DISTNAME=	gwyddion-2.20
@@ -19,8 +19,6 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config intltool msgfmt gmake perl
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
-
-PYTHON_VERSIONS_ACCEPTED= 26 25 24 23 22
 
 GCONF_SCHEMAS+=		data/gwyddion-thumbnailer.schemas
 PKGCONFIG_OVERRIDE+=	data/gwyddion.pc.in

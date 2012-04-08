@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/08/09 21:41:36 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/04/08 19:09:52 thomasklausner Exp $
 #
 
 DISTNAME=	pyswarmsdk-0.7.1-sdist-20070501
@@ -19,7 +19,6 @@ USE_LANGUAGES=	# none
 
 PYDISTUTILSPKG=	yes
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
-PYTHON_VERSIONS_INCOMPATIBLE= 22 21 20 15
 
 post-extract:
 	${MV} ${WRKSRC}/pyswarm/pyswarm-copy.py ${WRKSRC}/pyswarm/pyswarm-copy${PYVERSSUFFIX}

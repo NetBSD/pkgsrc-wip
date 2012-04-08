@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/07/17 01:00:17 jihbed Exp $
+# $NetBSD: Makefile,v 1.4 2012/04/08 19:09:50 thomasklausner Exp $
 #
 
 DISTNAME=	restkit-2.0.4.tar
@@ -23,8 +23,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/restkit-2.0.4
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_INCOMPATIBLE= 24 23 22 21 20
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

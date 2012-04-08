@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/10/27 18:10:04 shattered Exp $
+# $NetBSD: Makefile,v 1.6 2012/04/08 19:09:52 thomasklausner Exp $
 #
 
 DISTNAME=		pytagger-0.5
@@ -16,9 +16,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
-
-PYTHON_VERSIONS_INCOMPATIBLE=\
-			15 20 21 22
 
 HTMLDIR=	${PREFIX}/share/doc/html/${PKGNAME}
 

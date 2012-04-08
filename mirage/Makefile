@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2011/08/06 18:49:04 guigui2 Exp $
+# $NetBSD: Makefile,v 1.9 2012/04/08 19:09:44 thomasklausner Exp $
 #
 
 DISTNAME=			mirage-0.9.5.2
@@ -13,7 +13,6 @@ LICENSE=			gnu-gpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-PYTHON_VERSIONS_ACCEPTED=	27 26 25 24
 PY_PATCHPLIST=			yes
 PYDISTUTILSPKG=			yes
 

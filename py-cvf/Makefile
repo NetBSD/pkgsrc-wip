@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/02/12 20:16:33 noud4 Exp $
+# $NetBSD: Makefile,v 1.7 2012/04/08 19:09:45 thomasklausner Exp $
 #
 
 DISTNAME=	pycvf-0.2.0
@@ -28,9 +28,6 @@ BUILDLINK_API_DEPENDS.pycython+= ${PYPKGPREFIX}-cython>=0.12.1
 BUILDLINK_API_DEPENDS.pymatplotlib+=	${PYPKGPREFIX}-matplotlib>=0.87.2
 .include "../../graphics/py-matplotlib/buildlink3.mk"
 .include "../../lang/python/egg.mk"
-.if ${PYVERSSUFFIX} == "2.4"
-DEPENDS+=	${PYPKGPREFIX}-ctypes>=1.0.2:../../devel/py-ctypes
-.endif
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../x11/py-qt4/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

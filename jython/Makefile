@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/02/25 09:47:47 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2012/04/08 19:09:43 thomasklausner Exp $
 #
 
 VERSION=	2.5.2b1
@@ -31,7 +31,6 @@ MAKE_ENV+=	JAVA_HOME=${PKG_JAVA_HOME:Q}
 REPLACE_PYTHON+=	jython
 
 PY_PATCHPLIST=	yes
-PYTHON_VERSIONS_ACCEPTED=  27 26 25
 
 TMPJYTHON=	${WRKDIR}/temp.jython
 TARGET_NAME=	${PREFIX}/${PYSITELIB}/${JYTHON_NAME}/Lib

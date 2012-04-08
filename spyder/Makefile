@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/02/01 00:04:54 noud4 Exp $
+# $NetBSD: Makefile,v 1.7 2012/04/08 19:09:53 thomasklausner Exp $
 #
 
 DISTNAME=	spyder-2.1.6
@@ -22,7 +22,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		# none
 
-PYTHON_VERSIONS_ACCEPTED= 27 26 25
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 PYDISTUTILSPKG=	yes
 

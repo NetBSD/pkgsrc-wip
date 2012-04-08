@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2008/05/24 15:34:14 tnn2 Exp $
+# $NetBSD: Makefile,v 1.8 2012/04/08 19:09:53 thomasklausner Exp $
 #
 
 DISTNAME=		qemu-neo1973-4412
@@ -20,7 +20,6 @@ HAS_CONFIGURE=		yes
 BUILD_DEPENDS+=		subversion-base>=1.4.2:../../devel/subversion-base
 DEPENDS+=		wget>=1.10.2:../../net/wget
 DEPENDS+=		lynx>=2.8.5.5:../../www/lynx
-DEPENDS+=		python24>=2.4.3:../../lang/python24
 DEPENDS+=		netpbm>=10.34:../../graphics/netpbm
 BUILD_DEPENDS+=		texi2html-[0-9]*:../../textproc/texi2html
 
@@ -102,9 +101,10 @@ post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/openmoko/flash.sh ${NEO1973_PREFIX:Q}/libexec/openmoko
 
 .include "../../devel/SDL/buildlink3.mk"
+.include "../../lang/python/application.mk"
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
 
-# ln -s /usr/pkg/bin/python2.4  /usr/pkg/bin/python
+# ln -s /usr/pkg/bin/python2.X  /usr/pkg/bin/python
 # cd /usr/pkg/qemu-neo1973/libexec; ../bin/qemu-neo1973  openmoko/openmoko-flash.image -kernel openmoko/openmoko-kernel.bin -show-cursor -monitor stdio -M gta01 -m 130 -mtdblock openmoko/openmoko-flash.image -kernel openmoko/openmoko-kernel.bin -usb -usbdevice host:07a6:8511 -show-cursor -monitor stdio -usbdevice keyboard -serial telnet:localhost:1200,server

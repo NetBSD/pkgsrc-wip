@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2012/02/01 00:04:53 noud4 Exp $
+# $NetBSD: Makefile,v 1.22 2012/04/08 19:09:47 thomasklausner Exp $
 #
 
 DISTNAME=	ipython-0.10
@@ -70,13 +70,8 @@ DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 
 DEPENDS+=	zope3-[0-9]*:../../www/zope3
 
-PYTHON_VERSIONS_ACCEPTED= 27 26 25 24
-
 PLIST_SRC+=	PLIST
 PLIST_SRC+=	${PKGDIR}/PLIST.doc
 
 .include "../../lang/python/extension.mk"
-.if ${PYVERSSUFFIX} == "2.4"
-DEPENDS+=	${PYPKGPREFIX}-ctypes>=1.0.2:../../devel/py-ctypes
-.endif
 .include "../../mk/bsd.pkg.mk"

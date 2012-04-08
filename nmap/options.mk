@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2012/01/12 22:48:36 pettai Exp $
+# $NetBSD: options.mk,v 1.4 2012/04/08 19:09:44 thomasklausner Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.nmap
 
@@ -20,7 +20,6 @@ CONFIGURE_ARGS+=	--disable-ipv6
 .if !empty(PKG_OPTIONS:Mzenmap)
 CONFIGURE_ARGS+=		--with-zenmap
 PLIST_SRC+=			${PKGDIR}/PLIST.zenmap
-PYTHON_VERSIONS_ACCEPTED=	27 26 25 24
 PY_PATCHPLIST=			yes
 REPLACE_PYTHON=			zenmap/zenmapCore/*.py
 REPLACE_PYTHON+=		zenmap/zenmapGUI/*.py
@@ -38,7 +37,6 @@ CONFIGURE_ARGS+=	--without-zenmap
 .if !empty(PKG_OPTIONS:Mndiff)
 CONFIGURE_ARGS+=		--with-ndiff
 PLIST_SRC+=			${PKGDIR}/PLIST.ndiff
-PYTHON_VERSIONS_ACCEPTED=	27 26 25 24
 .else
 CONFIGURE_ARGS+=		--without-ndiff
 .endif
