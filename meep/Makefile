@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/03/27 17:47:59 outpaddling Exp $
+# $NetBSD: Makefile,v 1.6 2012/04/09 21:26:18 asau Exp $
 #
 
 DISTNAME=	meep-1.1.1
@@ -12,13 +12,13 @@ LICENSE=	gnu-gpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+DEPENDS+=	bash-[0-9]*:../../shells/bash
+
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++ fortran
 
 CONFIGURE_ARGS+=--with-libctl=${PREFIX}/share/libctl
-
-DEPENDS+=	bash:../../shells/bash
 
 .include "../../wip/harminv/buildlink3.mk"
 .include "../../wip/libctl/buildlink3.mk"
