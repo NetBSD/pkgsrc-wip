@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2012/04/09 00:44:45 silasdb Exp $
+$NetBSD: distinfo,v 1.2 2012/04/09 01:10:20 silasdb Exp $
 
 SHA1 (abntex-0.9-beta2.tar.gz) = 44e2db35191cf7950b4977c10dfdcd7f8941362f
 RMD160 (abntex-0.9-beta2.tar.gz) = 2187a4b2543530786cb37ab9ca16178516c90502
 Size (abntex-0.9-beta2.tar.gz) = 159150 bytes
-SHA1 (patch-aa) = 042c98b6d2c90b958a105a01b547d00cbb110e5b
+SHA1 (patch-aa) = 7294b073afab94889f3252f5ed3ebb88829e78b5
