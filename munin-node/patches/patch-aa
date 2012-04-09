@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2011/09/10 19:53:49 ftigeot Exp $
+$NetBSD: patch-aa,v 1.3 2012/04/09 14:08:01 ftigeot Exp $
 
 --- Makefile.config.orig	2009-11-06 14:35:44.000000000 +0000
 +++ Makefile.config
@@ -59,8 +59,12 @@ $NetBSD: patch-aa,v 1.2 2011/09/10 19:53:49 ftigeot Exp $
  
  # The python interpreter to use (used by some plugins)
  PYTHON     := /usr/bin/env python
-@@ -98,8 +98,8 @@ GOODSH     := $(shell PATH=`getconf PATH
- BASH       := /bin/bash
+@@ -95,11 +95,11 @@ JAVALIBDIR:= $(LIBDIR)
+ GOODSH     := $(shell PATH=`getconf PATH` sh -c 'type sh | sed "s/.* //"')
+ 
+ # Path of bash for bash specific plugins
+-BASH       := /bin/bash
++BASH       := $(UPREFIX)/bin/bash
  
  # Server only - Where to install the perl libraries
 -PERLSITELIB := $(shell $(PERL) -V:sitelib | cut -d"'" -f2)

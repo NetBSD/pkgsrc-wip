@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2011/09/10 19:53:49 ftigeot Exp $
+# $NetBSD: Makefile,v 1.6 2012/04/09 14:08:00 ftigeot Exp $
 #
 
 DISTNAME=	munin-${VER}
@@ -20,7 +20,7 @@ DEPENDS+=	munin-common>=1.4:../../wip/munin-common
 
 .include "../../mk/bsd.prefs.mk"
 
-USE_TOOLS+=	perl:run tar
+USE_TOOLS+=	bash:run perl:run tar
 USE_TOOLS+=	gmake
 USE_PKGINSTALL=	YES
 
@@ -38,8 +38,13 @@ PKG_USERS=	${MUNIN_USER}:${MUNIN_GROUP}
 PKG_GECOS.${MUNIN_USER}=	Munin user
 PKG_SYSCONFSUBDIR?=	munin
 
+REPLACE_BASH+=	plugins/node.d/multigraph_tester.in
+
 REPLACE_PERL+=	node/sbin/munin-node
+REPLACE_PERL+=	node/sbin/munin-node-configure
+REPLACE_PERL+=	node/sbin/munin-run
 REPLACE_PERL+=	node/node.d/*.in
+REPLACE_PERL+=	plugins/node.d/slony_lag_.in
 
 STATEDIR?=	${VARBASE}/munin/plugin-state
 MUNIN_RUN?=	${VARBASE}/run/munin
