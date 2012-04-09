@@ -1,0 +1,19 @@
+# $NetBSD: Makefile,v 1.1 2012/04/09 00:44:45 silasdb Exp $
+#
+
+DISTNAME=	abntex-0.9-beta2
+CATEGORIES=	print
+MASTER_SITES=	http://codigolivre.org.br/frs/download.php/5337/
+
+MAINTAINER=	silasdb@gmail.com
+HOMEPAGE=	http://abntex.codigolivre.org.br/
+COMMENT=	Support for ABNT documentation standards
+
+USE_TOOLS+=	gmake
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+WRKSRC=		${WRKDIR}/abntex-0.9
+
+.include "../../mk/bsd.pkg.mk"
+.include "../../print/kpathsea/texmf.mk"
