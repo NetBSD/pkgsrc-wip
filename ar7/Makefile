@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2010/09/05 09:13:38 gschwarz Exp $
+# $NetBSD: Makefile,v 1.5 2012/04/09 20:47:30 gschwarz Exp $
 
 DISTNAME=	ar7-0.1
 CATEGORIES=	net
 MASTER_SITES=	http://home.arcor.de/volpol/ar7/ \
-		http://ftp.backschues.net/pub/driver/sphairon_ar860/
+		ftp://ftp.backschues.net/pub/driver/sphairon_ar860/
 
 MAINTAINER=	schwarz@NetBSD.org
 HOMEPAGE=	${MASTER_SITES}
