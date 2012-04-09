@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2012/04/09 01:10:20 silasdb Exp $
+$NetBSD: patch-aa,v 1.3 2012/04/09 01:29:16 silasdb Exp $
 
 --- Makefile.orig	2006-09-10 00:25:16.000000000 +0000
 +++ Makefile
@@ -7,7 +7,7 @@ $NetBSD: patch-aa,v 1.2 2012/04/09 01:10:20 silasdb Exp $
  #pelo comando kpsewich, na dúvida faça um "make test"
  #TEXDIR= /tmp/test
 -export TEXDIR= ${shell kpsewhich --expand-path='$$TEXMFMAIN'}
-+export TEXDIR=${DESTDIR}/${PREFIX}/share/texmf
++export TEXDIR=${DESTDIR}/${PREFIX}/share/texmf-dist
  
 -export USRLOCAL=/usr/local/bin
 +export USRLOCAL=${DESTDIR}/${PREFIX}/bin
