@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/04/09 00:44:45 silasdb Exp $
+# $NetBSD: Makefile,v 1.2 2012/04/09 01:36:42 silasdb Exp $
 #
 
 DISTNAME=	abntex-0.9-beta2
@@ -15,5 +15,5 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/abntex-0.9
 
-.include "../../mk/bsd.pkg.mk"
 .include "../../print/kpathsea/texmf.mk"
+.include "../../mk/bsd.pkg.mk"
