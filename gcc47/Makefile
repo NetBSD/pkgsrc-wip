@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/04/08 20:55:50 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.15 2012/04/10 18:37:35 keckhardt Exp $
 
 GCC_VERSION=		4.7
 DISTNAME=		gcc-${GCC_VERSION}-20120324
@@ -128,6 +128,10 @@ CONFIGURE_ARGS+=	--enable-cloog-backend=isl
 CONFIGURE_ARGS+=	--with-gnu-ld --with-ld=/usr/bin/ld
 CONFIGURE_ARGS+=	--with-gnu-as --with-as=/usr/bin/as
 MAKE_ENV+=		ac_cv_func_clock_gettime=yes
+.endif
+.if ${OPSYS} == "Linux"
+CONFIGURE_ARGS+=	--with-gnu-ld --with-ld=/usr/bin/ld
+CONFIGURE_ARGS+=	--with-gnu-as --with-as=/usr/bin/as
 .endif
 
 CONFIGURE_ENV+=		CONFIG_SHELL=${CONFIG_SHELL}
