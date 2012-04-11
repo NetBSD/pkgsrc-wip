@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2011/11/30 11:13:45 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.8 2012/04/11 11:27:26 ftigeot Exp $
 bin/passenger
 bin/passenger-config
 bin/passenger-install-apache2-module
@@ -10,10 +10,6 @@ lib/phusion-passenger/agents/apache2/PassengerHelperAgent
 lib/phusion-passenger/agents/nginx/PassengerHelperAgent
 ${RUBY_VENDORARCHLIB}/passenger_native_support.${RUBY_DLEXT}
 ${RUBY_VENDORLIB}/phusion_passenger.rb
-${RUBY_VENDORLIB}/phusion_passenger/._constants.rb
-${RUBY_VENDORLIB}/phusion_passenger/._message_channel.rb
-${RUBY_VENDORLIB}/phusion_passenger/._message_client.rb
-${RUBY_VENDORLIB}/phusion_passenger/._public_api.rb
 ${RUBY_VENDORLIB}/phusion_passenger/abstract_installer.rb
 ${RUBY_VENDORLIB}/phusion_passenger/abstract_request_handler.rb
 ${RUBY_VENDORLIB}/phusion_passenger/abstract_server.rb
@@ -23,17 +19,10 @@ ${RUBY_VENDORLIB}/phusion_passenger/admin_tools/memory_stats.rb
 ${RUBY_VENDORLIB}/phusion_passenger/admin_tools/server_instance.rb
 ${RUBY_VENDORLIB}/phusion_passenger/analytics_logger.rb
 ${RUBY_VENDORLIB}/phusion_passenger/app_process.rb
-${RUBY_VENDORLIB}/phusion_passenger/classic_rails/._request_handler.rb
 ${RUBY_VENDORLIB}/phusion_passenger/classic_rails/application_spawner.rb
 ${RUBY_VENDORLIB}/phusion_passenger/classic_rails/cgi_fixed.rb
 ${RUBY_VENDORLIB}/phusion_passenger/classic_rails/framework_spawner.rb
 ${RUBY_VENDORLIB}/phusion_passenger/classic_rails/request_handler.rb
-${RUBY_VENDORLIB}/phusion_passenger/classic_rails_extensions/._init.rb
-${RUBY_VENDORLIB}/phusion_passenger/classic_rails_extensions/analytics_logging/._ac_benchmarking_extension.rb
-${RUBY_VENDORLIB}/phusion_passenger/classic_rails_extensions/analytics_logging/._ac_rescue_extension.rb
-${RUBY_VENDORLIB}/phusion_passenger/classic_rails_extensions/analytics_logging/._ar_abstract_adapter_extension.rb
-${RUBY_VENDORLIB}/phusion_passenger/classic_rails_extensions/analytics_logging/._as_cache_extension.rb
-${RUBY_VENDORLIB}/phusion_passenger/classic_rails_extensions/analytics_logging/._av_benchmark_helper_extension.rb
 ${RUBY_VENDORLIB}/phusion_passenger/classic_rails_extensions/analytics_logging/ac_base_extension.rb
 ${RUBY_VENDORLIB}/phusion_passenger/classic_rails_extensions/analytics_logging/ac_benchmarking_extension.rb
 ${RUBY_VENDORLIB}/phusion_passenger/classic_rails_extensions/analytics_logging/ac_rescue_extension.rb
@@ -52,8 +41,6 @@ ${RUBY_VENDORLIB}/phusion_passenger/message_client.rb
 ${RUBY_VENDORLIB}/phusion_passenger/native_support.rb
 ${RUBY_VENDORLIB}/phusion_passenger/packaging.rb
 ${RUBY_VENDORLIB}/phusion_passenger/platform_info.rb
-${RUBY_VENDORLIB}/phusion_passenger/platform_info/._curl.rb
-${RUBY_VENDORLIB}/phusion_passenger/platform_info/._linux.rb
 ${RUBY_VENDORLIB}/phusion_passenger/platform_info/apache.rb
 ${RUBY_VENDORLIB}/phusion_passenger/platform_info/binary_compatibility.rb
 ${RUBY_VENDORLIB}/phusion_passenger/platform_info/compiler.rb
@@ -67,7 +54,6 @@ ${RUBY_VENDORLIB}/phusion_passenger/plugin.rb
 ${RUBY_VENDORLIB}/phusion_passenger/public_api.rb
 ${RUBY_VENDORLIB}/phusion_passenger/rack/application_spawner.rb
 ${RUBY_VENDORLIB}/phusion_passenger/rack/request_handler.rb
-${RUBY_VENDORLIB}/phusion_passenger/rails3_extensions/._init.rb
 ${RUBY_VENDORLIB}/phusion_passenger/rails3_extensions/init.rb
 ${RUBY_VENDORLIB}/phusion_passenger/simple_benchmarking.rb
 ${RUBY_VENDORLIB}/phusion_passenger/spawn_manager.rb
@@ -119,7 +105,6 @@ ${RUBY_VENDORLIB}/phusion_passenger/templates/standalone/welcome.txt.erb
 ${RUBY_VENDORLIB}/phusion_passenger/templates/standalone_default_root/index.html
 ${RUBY_VENDORLIB}/phusion_passenger/templates/version_not_found.html.erb
 ${RUBY_VENDORLIB}/phusion_passenger/utils.rb
-${RUBY_VENDORLIB}/phusion_passenger/utils/._tmpdir.rb
 ${RUBY_VENDORLIB}/phusion_passenger/utils/file_system_watcher.rb
 ${RUBY_VENDORLIB}/phusion_passenger/utils/hosts_file_parser.rb
 ${RUBY_VENDORLIB}/phusion_passenger/utils/rewindable_input.rb
