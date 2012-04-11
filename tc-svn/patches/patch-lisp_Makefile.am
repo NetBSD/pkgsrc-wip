@@ -1,0 +1,18 @@
+$NetBSD: patch-lisp_Makefile.am,v 1.1 2012/04/11 08:12:50 makoto Exp $
+
+Divide the *.el files (1) To be byte compiled and (2) not to be compiled
+
+--- lisp/Makefile.am.orig	2012-04-11 11:32:43.000000000 +0900
++++ lisp/Makefile.am	2012-04-11 16:18:09.000000000 +0900
+@@ -10,9 +10,8 @@
+ 	tc-inst.el tc-stat.el tc-ja-alnum.el \
+ 	try-tbl.el try-etbl.el ttc-tbl.el ttc-rtbl.el ttc-ltbl.el
+ 
+-lisp_LISP = tc-sysdep.el $(COMMON_EL_FILES) tc-is18.el tc-is19.el tc-is20.el tc-is22.el \
+-	tc-image.el tc-mkmzdic.el $(PREFILE)
+-lisp_DATA = tc-bitmap.el
++lisp_LISP = $(COMMON_EL_FILES) tc-image.el tc-mkmzdic.el $(PREFILE)
++lisp_DATA = tc-bitmap.el tc-sysdep.el tc-is18.el tc-is19.el tc-is20.el tc-is22.el 
+ ELCFILES = compile.log
+ noinst_LISP = make-elc guess tc-pre-base
+ 
