@@ -1,1 +1,3 @@
+* It immediately Segfault at least on amd64, needs 
+  investigation.
 * GNUStep support is not tested.

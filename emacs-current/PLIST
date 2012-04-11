@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.112 2012/01/31 23:47:16 makoto Exp $
+@comment $NetBSD: PLIST,v 1.113 2012/04/11 15:53:12 makoto Exp $
 bin/ctags
 bin/ebrowse
 bin/emacs
@@ -24,6 +24,7 @@ info/eieio.gz
 info/eintr.gz
 info/elisp.gz
 info/emacs-mime.gz
+info/emacs-gnutls.gz
 info/emacs.gz
 info/epa.gz
 info/erc.gz
@@ -82,6 +83,7 @@ share/emacs/${PKGVERSION}/etc/DEBUG
 share/emacs/${PKGVERSION}/etc/DEVEL.HUMOR
 share/emacs/${PKGVERSION}/etc/DISTRIB
 share/emacs/${PKGVERSION}/etc/DOC-${PKGVERSION}.1
+share/emacs/${PKGVERSION}/etc/DOC-${PKGVERSION}.2
 share/emacs/${PKGVERSION}/etc/ERC-NEWS
 share/emacs/${PKGVERSION}/etc/ETAGS.EBNF
 share/emacs/${PKGVERSION}/etc/ETAGS.README
@@ -115,6 +117,7 @@ share/emacs/${PKGVERSION}/etc/TERMS
 share/emacs/${PKGVERSION}/etc/THE-GNU-PROJECT
 share/emacs/${PKGVERSION}/etc/TODO
 share/emacs/${PKGVERSION}/etc/WHY-FREE
+share/emacs/${PKGVERSION}/etc/publicsuffix.txt
 share/emacs/${PKGVERSION}/etc/celibacy.1
 share/emacs/${PKGVERSION}/etc/charsets/8859-10.map
 share/emacs/${PKGVERSION}/etc/charsets/8859-11.map
@@ -2675,8 +2678,6 @@ share/emacs/${PKGVERSION}/lisp/mouse-copy.el.gz
 share/emacs/${PKGVERSION}/lisp/mouse-copy.elc
 share/emacs/${PKGVERSION}/lisp/mouse-drag.el.gz
 share/emacs/${PKGVERSION}/lisp/mouse-drag.elc
-share/emacs/${PKGVERSION}/lisp/mouse-sel.el.gz
-share/emacs/${PKGVERSION}/lisp/mouse-sel.elc
 share/emacs/${PKGVERSION}/lisp/mouse.el.gz
 share/emacs/${PKGVERSION}/lisp/mouse.elc
 share/emacs/${PKGVERSION}/lisp/mpc.el.gz
@@ -2887,6 +2888,8 @@ share/emacs/${PKGVERSION}/lisp/obsolete/lmenu.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/lmenu.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/lucid.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/lucid.elc
+share/emacs/${PKGVERSION}/lisp/obsolete/mouse-sel.el.gz
+share/emacs/${PKGVERSION}/lisp/obsolete/mouse-sel.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/old-emacs-lock.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/old-emacs-lock.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/old-whitespace.el.gz
@@ -3652,6 +3655,8 @@ share/emacs/${PKGVERSION}/lisp/url/url-dav.el.gz
 share/emacs/${PKGVERSION}/lisp/url/url-dav.elc
 share/emacs/${PKGVERSION}/lisp/url/url-dired.el.gz
 share/emacs/${PKGVERSION}/lisp/url/url-dired.elc
+share/emacs/${PKGVERSION}/lisp/url/url-domsuf.el.gz
+share/emacs/${PKGVERSION}/lisp/url/url-domsuf.elc
 share/emacs/${PKGVERSION}/lisp/url/url-expand.el.gz
 share/emacs/${PKGVERSION}/lisp/url/url-expand.elc
 share/emacs/${PKGVERSION}/lisp/url/url-file.el.gz
