@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2011/11/10 13:11:44 othyro Exp $
+# $NetBSD: Makefile,v 1.15 2012/04/11 02:53:13 mayureshw Exp $
 #
 
 DISTNAME=		twinkle-1.4.2
@@ -32,6 +32,7 @@ SUBST_SED.boost+=	-e 's,boost_regex-gcc,boost_regex-mt,'
 
 LDFLAGS+=		${BUILDLINK_LDADD.oss}
 
+.include "../../security/libgcrypt/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
 .include "../../audio/libsndfile/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
