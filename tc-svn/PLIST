@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2011/09/13 08:32:01 makoto Exp $
+@comment $NetBSD: PLIST,v 1.5 2012/04/11 07:33:29 makoto Exp $
 bin/tcinput
 info/tc.info
 ${EMACS_LISPPREFIX}/tc-2.3.1/eelll.el
@@ -11,17 +11,13 @@ ${EMACS_LISPPREFIX}/tc-2.3.1/tc-complete.elc
 ${EMACS_LISPPREFIX}/tc-2.3.1/tc-help.el
 ${EMACS_LISPPREFIX}/tc-2.3.1/tc-help.elc
 ${EMACS_LISPPREFIX}/tc-2.3.1/tc-image.el
+${EMACS_LISPPREFIX}/tc-2.3.1/tc-image.elc
 ${EMACS_LISPPREFIX}/tc-2.3.1/tc-inst.el
 ${EMACS_LISPPREFIX}/tc-2.3.1/tc-inst.elc
 ${EMACS_LISPPREFIX}/tc-2.3.1/tc-is18.el
 ${EMACS_LISPPREFIX}/tc-2.3.1/tc-is19.el
 ${EMACS_LISPPREFIX}/tc-2.3.1/tc-is20.el
 ${EMACS_LISPPREFIX}/tc-2.3.1/tc-is22.el
-${FOR_emacs20}${EMACS_LISPPREFIX}/tc-2.3.1/tc-is20.elc
-${FOR_emacs21}${EMACS_LISPPREFIX}/tc-2.3.1/tc-is20.elc
-${FOR_emacs22}${EMACS_LISPPREFIX}/tc-2.3.1/tc-is20.elc
-${FOR_emacs23}${EMACS_LISPPREFIX}/tc-2.3.1/tc-is22.elc
-${FOR_emacs24}${EMACS_LISPPREFIX}/tc-2.3.1/tc-is22.elc
 ${EMACS_LISPPREFIX}/tc-2.3.1/tc-ja-alnum.el
 ${EMACS_LISPPREFIX}/tc-2.3.1/tc-ja-alnum.elc
 ${EMACS_LISPPREFIX}/tc-2.3.1/tc-jiscode.el
@@ -29,7 +25,9 @@ ${EMACS_LISPPREFIX}/tc-2.3.1/tc-jiscode.elc
 ${EMACS_LISPPREFIX}/tc-2.3.1/tc-mazegaki.el
 ${EMACS_LISPPREFIX}/tc-2.3.1/tc-mazegaki.elc
 ${EMACS_LISPPREFIX}/tc-2.3.1/tc-mkmzdic.el
+${EMACS_LISPPREFIX}/tc-2.3.1/tc-mkmzdic.elc
 ${EMACS_LISPPREFIX}/tc-2.3.1/tc-pre.el
+${EMACS_LISPPREFIX}/tc-2.3.1/tc-pre.elc
 ${EMACS_LISPPREFIX}/tc-2.3.1/tc-setup.el
 ${EMACS_LISPPREFIX}/tc-2.3.1/tc-setup.elc
 ${EMACS_LISPPREFIX}/tc-2.3.1/tc-stat.el

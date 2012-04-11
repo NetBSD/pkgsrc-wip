@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/05/23 13:37:52 makoto Exp $
+# $NetBSD: Makefile,v 1.2 2012/04/11 07:33:29 makoto Exp $
 
 DISTNAME=		tc-2.3.1
 PKGNAME=		${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -21,7 +21,7 @@ INSTALLATION_DIRS=	${EMACS_INFOPREFIX} \
 EMACS_MODULES=		base
 
 # Instead of USE_TOOLS+=, avoid to conflict with autoconf
-USE_TOOLS=		aclocal automake14 autoconf213 gmake
+USE_TOOLS=		aclocal automake autoconf gmake
 GNU_CONFIGURE=		YES
 
 CONFIGURE_ARGS+=	${CONFIGURE_ARGS.${EMACS_FLAVOR}}
@@ -53,9 +53,19 @@ SUBST_SED.tc+=		-e s\|@PERL@\|${PERL5:Q}\|g
 pre-configure:
 		( cd ${WRKSRC} && \
 		aclocal ;\
-		automake-1.4 --add-missing; \
+		automake --add-missing; \
 		autoconf ; \
 		)
+# To avoid byte-compile error 'Invalid syntax ?', convert EUC-JP to UTF-8
+# Just one file is to be converted now,
+.if !empty(EMACS_TYPE:Memacs24)
+post-patch:
+	(cd ${WRKSRC}/lisp; \
+	for i in tc-bushu.el;  \
+	do ${MV} $$i $$i.bak; \
+	iconv -f euc-jp -t utf-8 < $$i.bak >$$i ; \
+	done )
+.endif
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/README    		${DESTDIR}${PREFIX}/share/tc/README.euc
