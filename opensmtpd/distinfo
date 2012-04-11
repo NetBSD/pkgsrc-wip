@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/04/11 07:25:50 ftigeot Exp $
+
+SHA1 (opensmtpd-201203192144.tar.gz) = ed1ad526f56f1222a399ad06390fe7c595fcd000
+RMD160 (opensmtpd-201203192144.tar.gz) = 85fb97b1bc0970b0cf34d1fba26228a1e2598232
+Size (opensmtpd-201203192144.tar.gz) = 929796 bytes
