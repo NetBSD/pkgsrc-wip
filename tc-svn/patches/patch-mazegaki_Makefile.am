@@ -1,4 +1,4 @@
-$NetBSD: patch-mazegaki_Makefile.am,v 1.1.1.1 2011/05/23 13:37:52 makoto Exp $
+$NetBSD: patch-mazegaki_Makefile.am,v 1.2 2012/04/12 09:18:24 makoto Exp $
 
 To sort mazegaki.dic in emacs-internal-code order
 
@@ -15,7 +15,7 @@ To sort mazegaki.dic in emacs-internal-code order
  	$(RM) -f $@
  	$(EMACS) -q -no-site-file -batch -l $(srcdir)/mk-mzdic
 +	mv mazegaki.dic mazegaki.dic.tmp
-+	$(EMACS) -q -no-site-file -batch -l $(BATCH_SORT) -f batch-sort-file mazegaki.dic.tmp mazegaki.dic
++	$(EMACS) -q -no-site-file -batch -l $(BATCH_SORT) -f batch-sort-file mazegaki.dic.tmp mazegaki.dic euc-japan euc-japan
  
  # pd_kihon.yom: step1
  # 	./step2.pl

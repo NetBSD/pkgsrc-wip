@@ -1,16 +1,18 @@
-$NetBSD: patch-BATCH-SORT,v 1.1.1.1 2011/05/23 13:37:52 makoto Exp $
+$NetBSD: patch-BATCH-SORT,v 1.2 2012/04/12 09:18:24 makoto Exp $
 
-Emacs code for batch-sort in emacs-internal-code
- 
---- BATCH-SORT.orig	2011-04-14 07:32:32.000000000 +0000
-+++ BATCH-SORT
-@@ -0,0 +1,39 @@
+Install time only elisp files to sort by Emacs internal
+code order. 
+
+
+--- BATCH-SORT.orig	2012-04-12 17:33:04.000000000 +0900
++++ BATCH-SORT	2012-04-12 17:34:25.000000000 +0900
+@@ -0,0 +1,45 @@
 +;  -*- emacs-lisp -*-
-+;;; batch-sort-file.el --- 
++;;; BATCH-SORT --- 
 +
-+;; Copyright (C) 2010  Makoto Fujiwara
++;; Copyright (C) 2010,2012  Makoto Fujiwara
 +
-+;; Author: Makoto Fujiwara <makoto@modena.i.ki.nu>
++;; Author: Makoto Fujiwara <makoto@ki.nu>
 +;; Keywords: 
 +
 +;; This program is free software; you can redistribute it and/or modify
@@ -31,16 +33,22 @@ Emacs code for batch-sort in emacs-internal-code
 +;;; Code:
 +(provide 'batch-sort-file)
 +
-+(defun batch-sort-file()
++(defun batch-sort-file ( )
 +  "Just sort file, important thing is: done by emacs internal code order"
 +   (interactive)
-+   (set 'in_file (car command-line-args-left))
-+   (set 'out_file(car (cdr command-line-args-left)))
-+   (message (concat " *** sorting `" in_file "' to `" out_file "' by internal code order"))
-+   (setq coding-system-for-read 'euc-japan)
++   (set 'in_file                            (car command-line-args-left))
++   (set 'out_file                          (cadr command-line-args-left))
++   (set 'in_file_coding_system        (car (cddr command-line-args-left)))
++   (set 'out_file_coding_system  (car (cdr (cddr command-line-args-left))))
++   (message (concat 
++      " *** sorting `" in_file  " " in_file_coding_system 
++      "' to `"         out_file " " out_file_coding_system 
++      "' by internal code order"))
++   (setq coding-system-for-read in_file_coding_system)
 +   (insert-file-contents in_file)
 +   (sort-lines nil (point-min) (point-max))
-+   (set-buffer-file-coding-system 'euc-japan)
++   (set-buffer-file-coding-system out_file_coding_system)
 +   (write-file out_file)
-+)
-+;;; batch-sort-file.el ends here
++   )
++;;; BATCH-SORT ends here
++
