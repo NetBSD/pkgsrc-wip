@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/12/19 22:07:24 gschwarz Exp $
+# $NetBSD: Makefile,v 1.5 2012/04/12 18:06:32 gschwarz Exp $
 
 DISTNAME=	tctool-0.9.7
 CATEGORIES=	net
@@ -20,6 +20,8 @@ NO_CONFIGURE=	YES
 USE_TOOLS+=	gmake
 USE_LANGUAGES=	c++
 INSTALLATION_DIRS=	bin
+
+CXXFLAGS.Linux+=	-DCSTDLIB
 
 BUILD_TARGET=	tctool
 
