@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4717 2012/04/11 08:18:21 ftigeot Exp $
+# $Id: Makefile,v 1.4718 2012/04/13 23:59:10 obache Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1374,7 +1374,6 @@ SUBDIR+=	libtlen2
 SUBDIR+=	libtogl
 SUBDIR+=	libtorrent-rasterbar
 SUBDIR+=	libunistring
-SUBDIR+=	libupnp
 SUBDIR+=	libuuid
 SUBDIR+=	libvalhalla
 SUBDIR+=	libvc
