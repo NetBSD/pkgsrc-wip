@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/11/26 08:20:00 obache Exp $
+# $NetBSD: Makefile,v 1.2 2012/04/13 22:38:16 ryo-on Exp $
 
-SVN_REVISION=	1101
+SVN_REVISION=	1326
 DIST_VERSION=	0.1
 DISTNAME=	gyp-${DIST_VERSION}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}pre${SVN_REVISION}
@@ -25,9 +25,9 @@ WRKSRC=		${WRKDIR}/gyp
 
 # for test
 USE_TOOLS+=	gmake
-USE_LANUAGES=	c c++
+USE_LANGUAGES=	c c++
 do-test:
-	${RUN}cd ${WRKSRC}; ${SETENV} ${TEST_ENV} ${PYTHONBIN} gyptest.py -a -f make
+	${RUN}cd ${WRKSRC}; ${SETENV} ${TEST_ENV} LINK=c++ ${PYTHONBIN} gyptest.py -a --path ${WRKSRC}/test/lib -f make
 
 .include "../../lang/python/distutils.mk"
 .include "../../wip/mk/svn-package.mk"

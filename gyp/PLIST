@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2012/04/08 20:22:11 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/04/13 22:38:16 ryo-on Exp $
 bin/gyp
-${PYSITELIB}/${EGG_FILE}
+${PYSITELIB}/gyp-0.1-py2.7.egg-info
 ${PYSITELIB}/gyp/MSVSNew.py
 ${PYSITELIB}/gyp/MSVSNew.pyc
 ${PYSITELIB}/gyp/MSVSNew.pyo
@@ -61,6 +61,9 @@ ${PYSITELIB}/gyp/generator/msvs_test.pyo
 ${PYSITELIB}/gyp/generator/ninja.py
 ${PYSITELIB}/gyp/generator/ninja.pyc
 ${PYSITELIB}/gyp/generator/ninja.pyo
+${PYSITELIB}/gyp/generator/ninja_test.py
+${PYSITELIB}/gyp/generator/ninja_test.pyc
+${PYSITELIB}/gyp/generator/ninja_test.pyo
 ${PYSITELIB}/gyp/generator/scons.py
 ${PYSITELIB}/gyp/generator/scons.pyc
 ${PYSITELIB}/gyp/generator/scons.pyo
@@ -73,6 +76,9 @@ ${PYSITELIB}/gyp/input.pyo
 ${PYSITELIB}/gyp/mac_tool.py
 ${PYSITELIB}/gyp/mac_tool.pyc
 ${PYSITELIB}/gyp/mac_tool.pyo
+${PYSITELIB}/gyp/msvs_emulation.py
+${PYSITELIB}/gyp/msvs_emulation.pyc
+${PYSITELIB}/gyp/msvs_emulation.pyo
 ${PYSITELIB}/gyp/ninja_syntax.py
 ${PYSITELIB}/gyp/ninja_syntax.pyc
 ${PYSITELIB}/gyp/ninja_syntax.pyo
@@ -82,6 +88,12 @@ ${PYSITELIB}/gyp/sun_tool.pyo
 ${PYSITELIB}/gyp/system_test.py
 ${PYSITELIB}/gyp/system_test.pyc
 ${PYSITELIB}/gyp/system_test.pyo
+${PYSITELIB}/gyp/win_tool.py
+${PYSITELIB}/gyp/win_tool.pyc
+${PYSITELIB}/gyp/win_tool.pyo
+${PYSITELIB}/gyp/xcode_emulation.py
+${PYSITELIB}/gyp/xcode_emulation.pyc
+${PYSITELIB}/gyp/xcode_emulation.pyo
 ${PYSITELIB}/gyp/xcodeproj_file.py
 ${PYSITELIB}/gyp/xcodeproj_file.pyc
 ${PYSITELIB}/gyp/xcodeproj_file.pyo
