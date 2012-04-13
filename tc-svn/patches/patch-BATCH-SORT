@@ -1,13 +1,9 @@
-$NetBSD: patch-BATCH-SORT,v 1.2 2012/04/12 09:18:24 makoto Exp $
+$NetBSD: patch-BATCH-SORT,v 1.3 2012/04/13 06:49:11 makoto Exp $
 
-Install time only elisp files to sort by Emacs internal
-code order. 
-
-
---- BATCH-SORT.orig	2012-04-12 17:33:04.000000000 +0900
-+++ BATCH-SORT	2012-04-12 17:34:25.000000000 +0900
-@@ -0,0 +1,45 @@
-+;  -*- emacs-lisp -*-
+--- BATCH-SORT.orig	2012-04-12 23:11:23.000000000 +0900
++++ BATCH-SORT	2012-04-12 23:16:56.000000000 +0900
+@@ -0,0 +1,44 @@
++;;;  -*- emacs-lisp -*-
 +;;; BATCH-SORT --- 
 +
 +;; Copyright (C) 2010,2012  Makoto Fujiwara
@@ -44,11 +40,10 @@ code order.
 +      " *** sorting `" in_file  " " in_file_coding_system 
 +      "' to `"         out_file " " out_file_coding_system 
 +      "' by internal code order"))
-+   (setq coding-system-for-read in_file_coding_system)
++   (setq coding-system-for-read (coding-system-from-name in_file_coding_system))
 +   (insert-file-contents in_file)
 +   (sort-lines nil (point-min) (point-max))
-+   (set-buffer-file-coding-system out_file_coding_system)
++   (setq coding-system-for-write (coding-system-from-name out_file_coding_system))
 +   (write-file out_file)
 +   )
 +;;; BATCH-SORT ends here
-+
