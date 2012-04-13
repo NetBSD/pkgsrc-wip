@@ -1,12 +1,11 @@
-$NetBSD: distinfo,v 1.13 2011/03/15 01:48:54 thomasklausner Exp $
+$NetBSD: distinfo,v 1.14 2012/04/13 20:02:17 gschwarz Exp $
 
-SHA1 (linphone-3.4.2.tar.gz) = e18916bf104151f0a210f43394614fcbbdbadd31
-RMD160 (linphone-3.4.2.tar.gz) = d67eb725a7c5a29cdb23adc864ad47a6196d43cf
-Size (linphone-3.4.2.tar.gz) = 8158296 bytes
-SHA1 (patch-aa) = 2903b34bd089e6e7886b48faf7139578d4de64c5
-SHA1 (patch-ab) = 78cecaa1bb6ce09eeda6fb9cc708369167248435
-SHA1 (patch-ac) = ecbe601328316c61fcc8b572b518ed875a366044
-SHA1 (patch-ae) = f659be2ba40800af5411b5fb1f9836d0227d9a09
-SHA1 (patch-ah) = 28c82f675bcd21dd398285600ff8468a0fb883f4
-SHA1 (patch-ai) = 95867a7b5fec6a08c0a3353165b3f5ecac25ec0e
-SHA1 (patch-mediastreamer2_configure) = 4d757ffb2df0f4fd7666debe843a963a221b3ed9
+SHA1 (linphone-3.5.2.tar.gz) = d0dde9d421b7cf6893c8e5acb969d5bd4a04a231
+RMD160 (linphone-3.5.2.tar.gz) = baca1927172df5b57beb6a46c62999fcac65ba48
+Size (linphone-3.5.2.tar.gz) = 8338517 bytes
+SHA1 (patch-aa) = d27f9fe2c7f86fbf30e9a8a76b8c2c23f001b331
+SHA1 (patch-ab) = fd1174da58b5610b6c92cae784f4623aaa03c71c
+SHA1 (patch-ac) = 9a5c1d478d3ce94cbbc1e19dd01c7fbea4639f9e
+SHA1 (patch-ae) = d4655225c52533e25d8ae0bf1e998afcc4965237
+SHA1 (patch-ah) = 508ffa2d7ffc97d7c202a94c672a8aec0b7cd42e
+SHA1 (patch-mediastreamer2_tests_Makefile.in) = e6530f576de41a5d5053afaca8a029f21412c58e
