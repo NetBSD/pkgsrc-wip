@@ -1,12 +1,13 @@
-$NetBSD: distinfo,v 1.11 2008/07/29 02:56:21 obache Exp $
+$NetBSD: distinfo,v 1.12 2012/04/14 00:03:34 obache Exp $
 
 SHA1 (linuxigd-1.0.tar.gz) = 0dd71fd7c5b8a3b0609164618314f4c110aff100
 RMD160 (linuxigd-1.0.tar.gz) = b05fe11d99766119779839766e323cfb6ada6977
 Size (linuxigd-1.0.tar.gz) = 35396 bytes
 SHA1 (patch-aa) = 516a29044a4a76077324a380b80eefdeb6a146ea
 SHA1 (patch-ab) = 788639edb5735a48818536ff31ada38874973737
-SHA1 (patch-ac) = c03725bd45871f5e1dc86e529fe592412a89aa53
-SHA1 (patch-af) = bed6bd9acd706ab6b66c1aeff155df1fd788f243
+SHA1 (patch-ac) = 5afe38c11117f1718a8d808d0e324df92ffce744
+SHA1 (patch-af) = a47e7b909620f834d5a6b0e0a8f1e9766c1f7b6f
 SHA1 (patch-ag) = 4d7cacb7de0e6071f23323283da5a1278fc8b908
 SHA1 (patch-ah) = 3736ab2a844fe5643d40d16aaceccfe537e6f589
 SHA1 (patch-ai) = 333ff680565c97958a2617b00a5cc1262af095f4
+SHA1 (patch-aj) = d8eda025e659ddf00590c9acc5f208589e412910

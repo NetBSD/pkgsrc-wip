@@ -1,8 +1,26 @@
-$NetBSD: patch-af,v 1.10 2008/07/29 00:35:15 obache Exp $
+$NetBSD: patch-af,v 1.11 2012/04/14 00:03:35 obache Exp $
 
---- pmlist.c.orig	2006-10-02 00:58:32.000000000 +0900
+--- pmlist.c.orig	2006-10-01 15:58:32.000000000 +0000
 +++ pmlist.c
-@@ -249,7 +249,7 @@ int pmlist_AddPortMapping (int enabled, 
+@@ -1,5 +1,6 @@
+ #include <stdlib.h>
+ #include <sys/wait.h>
++#include <string.h>
+ #include <unistd.h>
+ #include <upnp/upnp.h>
+ #include "globals.h"
+@@ -12,6 +13,10 @@
+ #include "iptc.h"
+ #endif
+ 
++#if defined(USE_PF) || defined(USE_IPFILTER)
++#include <stdio.h>
++#endif
++
+ struct portMap* pmlist_NewNode(int enabled, long int duration, char *remoteHost,
+ 			       char *externalPort, char *internalPort,
+ 			       char *protocol, char *internalClient, char *desc)
+@@ -249,7 +254,7 @@ int pmlist_AddPortMapping (int enabled, 
  
  	iptc_add_rule("nat", g_vars.preroutingChainName, protocol, g_vars.extInterfaceName, NULL, NULL, NULL, NULL, externalPort, "DNAT", buffer, TRUE);
  	free(buffer);
@@ -11,7 +29,7 @@ $NetBSD: patch-af,v 1.10 2008/07/29 00:35:15 obache Exp $
  	char command[COMMAND_LEN];
  	int status;
  	
-@@ -281,6 +281,26 @@ int pmlist_AddPortMapping (int enabled, 
+@@ -281,6 +286,26 @@ int pmlist_AddPortMapping (int enabled, 
  	    wait(&status);		
  	  }
  	}
@@ -38,7 +56,7 @@ $NetBSD: patch-af,v 1.10 2008/07/29 00:35:15 obache Exp $
  #endif
      }
      return 1;
-@@ -301,7 +321,7 @@ int pmlist_DeletePortMapping(int enabled
+@@ -301,7 +326,7 @@ int pmlist_DeletePortMapping(int enabled
  
  	iptc_delete_rule("nat", g_vars.preroutingChainName, protocol, g_vars.extInterfaceName, NULL, NULL, NULL, NULL, externalPort, "DNAT", buffer);
  	free(buffer);
@@ -47,7 +65,7 @@ $NetBSD: patch-af,v 1.10 2008/07/29 00:35:15 obache Exp $
  	char command[COMMAND_LEN];
  	int status;
  	
-@@ -335,6 +355,28 @@ int pmlist_DeletePortMapping(int enabled
+@@ -335,6 +360,28 @@ int pmlist_DeletePortMapping(int enabled
  	    wait(&status);		
  	  }
  	}

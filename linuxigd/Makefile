@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2008/02/03 02:59:44 obache Exp $
+# $NetBSD: Makefile,v 1.13 2012/04/14 00:03:34 obache Exp $
 #
 
 DISTNAME=	linuxigd-1.0
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=linux-igd/}
 
