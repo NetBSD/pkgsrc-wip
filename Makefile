@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4718 2012/04/13 23:59:10 obache Exp $
+# $Id: Makefile,v 1.4719 2012/04/14 00:00:46 obache Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2985,7 +2985,6 @@ SUBDIR+=	uptimed
 SUBDIR+=	uqm
 SUBDIR+=	uqwk
 SUBDIR+=	uschedule
-SUBDIR+=	ushare
 SUBDIR+=	using-mpi
 SUBDIR+=	ussp-push
 SUBDIR+=	util-linux
