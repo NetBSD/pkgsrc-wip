@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2008/05/23 10:32:36 tnn2 Exp $
+# $NetBSD: Makefile,v 1.8 2012/04/14 16:27:53 moubctez Exp $
 #
 
 DISTNAME=		uebimiau-2.7.2
@@ -17,7 +17,7 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/httpd/htdocs/uebimiau
 	${CP} -R ${WRKSRC}/* ${PREFIX}/share/httpd/htdocs/uebimiau
 
-.include "../../mk/apachever.mk"
+.include "../../mk/apache.mk"
 .include "../../lang/php/phpversion.mk"
 
 .include "../../mk/bsd.pkg.mk"

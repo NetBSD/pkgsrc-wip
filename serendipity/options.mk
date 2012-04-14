@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1.1.1 2010/06/08 08:48:25 tonnerre Exp $
+# $NetBSD: options.mk,v 1.2 2012/04/14 16:27:53 moubctez Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.serendipity
 
@@ -19,7 +19,7 @@ DEPENDS+=	php>=5.2.4:../../lang/php5
 .endif
 
 .if !empty(PKG_OPTIONS:Map-php)
-.  include "../../mk/apachever.mk"
+.  include "../../mk/apache.mk"
 DEPENDS+=	${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}>=4.3.0:../../www/ap-php
 .endif
 

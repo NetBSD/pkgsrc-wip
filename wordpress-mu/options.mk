@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2009/11/08 23:12:34 pettai Exp $
+# $NetBSD: options.mk,v 1.3 2012/04/14 16:27:53 moubctez Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.wordpress-mu
 
@@ -20,7 +20,7 @@ DEPENDS+=	php>=5.2.4:../../lang/php5
 .endif
 
 .if !empty(PKG_OPTIONS:Map-php)
-.  include "../../mk/apachever.mk"
+.  include "../../mk/apache.mk"
 .  include "../../lang/php/phpversion.mk"
 DEPENDS+=	${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}>=4.3.0:../../www/ap-php
 .endif

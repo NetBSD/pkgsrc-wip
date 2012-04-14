@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/01/18 20:20:57 triaxx Exp $
+# $NetBSD: Makefile,v 1.3 2012/04/14 16:27:53 moubctez Exp $
 #
 
 PKGNAME=      semanticscuttle-${VERSION}
@@ -17,7 +17,7 @@ LICENSE=      gnu-gpl-v2
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/php/phpversion.mk"
-.include "../../mk/apachever.mk"
+.include "../../mk/apache.mk"
 DEPENDS+=	${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}:../../www/ap-php
 
 USE_TOOLS+= pax
