@@ -1,6 +1,6 @@
-$NetBSD: patch-am,v 1.1.1.1 2012/03/04 07:21:44 obache Exp $
+$NetBSD: patch-am,v 1.2 2012/04/14 12:11:13 obache Exp $
 
---- setup.py.orig	2012-02-23 20:22:49.000000000 +0000
+--- setup.py.orig	2012-04-11 06:54:08.000000000 +0000
 +++ setup.py
 @@ -21,7 +21,7 @@ from distutils.spawn import find_executa
  COMPILED_WITH_PYDEBUG = hasattr(sys, 'gettotalrefcount')
@@ -98,3 +98,12 @@ $NetBSD: patch-am,v 1.1.1.1 2012/03/04 07:21:44 obache Exp $
          else:                                   # Linux and other unices
              macros = dict()
              libraries = ['rt']
+@@ -1891,7 +1925,7 @@ def main():
+           # If you change the scripts installed here, you also need to
+           # check the PyBuildScripts command above, and change the links
+           # created by the bininstall target in Makefile.pre.in
+-          scripts = ["Tools/scripts/pydoc3", "Tools/scripts/idle3",
++          scripts = ["Tools/scripts/pydoc3",
+                      "Tools/scripts/2to3"]
+         )
+ 

@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/03/04 07:21:44 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/04/14 12:11:13 obache Exp $
 bin/2to3-${PY_VER_SUFFIX}
-bin/idle${PY_VER_SUFFIX}
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}-config
@@ -1913,9 +1912,9 @@ lib/python${PY_VER_SUFFIX}/lib-dynload/unicodedata.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/xxlimited.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/zlib.so
 lib/python${PY_VER_SUFFIX}/lib2to3/Grammar.txt
-lib/python${PY_VER_SUFFIX}/lib2to3/Grammar3.2.3.candidate.1.pickle
+lib/python${PY_VER_SUFFIX}/lib2to3/Grammar${PKGVERSION}.final.0.pickle
 lib/python${PY_VER_SUFFIX}/lib2to3/PatternGrammar.txt
-lib/python${PY_VER_SUFFIX}/lib2to3/PatternGrammar3.2.3.candidate.1.pickle
+lib/python${PY_VER_SUFFIX}/lib2to3/PatternGrammar${PKGVERSION}.final.0.pickle
 lib/python${PY_VER_SUFFIX}/lib2to3/__init__.py
 lib/python${PY_VER_SUFFIX}/lib2to3/__pycache__/__init__.cpython-32.pyc
 lib/python${PY_VER_SUFFIX}/lib2to3/__pycache__/__init__.cpython-32.pyo

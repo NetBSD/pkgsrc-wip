@@ -1,6 +1,6 @@
-# $NetBSD: dist.mk,v 1.1.1.1 2012/03/04 07:21:44 obache Exp $
+# $NetBSD: dist.mk,v 1.2 2012/04/14 12:11:13 obache Exp $
 
-PY_DISTVERSION=	3.2.3rc1
+PY_DISTVERSION=	3.2.3
 DISTNAME=	Python-${PY_DISTVERSION}
 EXTRACT_SUFX=	.tar.bz2
 DISTINFO_FILE=	${.CURDIR}/../../wip/python32/distinfo
