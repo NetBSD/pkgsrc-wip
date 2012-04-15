@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.11 2011/03/16 08:52:51 mwdavies Exp $
-
-SHA1 (k3b-2.0.2.tar.bz2) = 8b30a4d07942e82559b01bc07dea6bcf2defd532
-RMD160 (k3b-2.0.2.tar.bz2) = a0289eb9ccec9607c2bdac3fc7c69102eec5ee40
-Size (k3b-2.0.2.tar.bz2) = 12833321 bytes
-SHA1 (patch-ae) = 124d5ba1a3384d012a8b471f55fd624ffe9df5d4
-SHA1 (patch-af) = f2326f21219178443535fc4a80b8bdd46479b1ad
-SHA1 (patch-ag) = 8533f0c08551ef9b8429792f607a52675f79e419

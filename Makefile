@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4722 2012/04/15 20:26:34 mwdavies Exp $
+# $Id: Makefile,v 1.4723 2012/04/15 20:50:24 mwdavies Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1209,11 +1209,8 @@ SUBDIR+=	junit
 SUBDIR+=	jupp
 SUBDIR+=	just
 SUBDIR+=	jython
-SUBDIR+=	k3b
-SUBDIR+=	k4dirstat
 SUBDIR+=	kBuild
 SUBDIR+=	kacst-ttf
-SUBDIR+=	kactivities
 SUBDIR+=	kaffe
 SUBDIR+=	kaffe-x11
 SUBDIR+=	kahakai
@@ -1223,7 +1220,6 @@ SUBDIR+=	kapital
 SUBDIR+=	katapult
 SUBDIR+=	kawa
 SUBDIR+=	kde4-l10n-ar
-SUBDIR+=	kdiff3
 SUBDIR+=	kgrab
 SUBDIR+=	kgraphviewer
 SUBDIR+=	kicad
