@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4720 2012/04/15 15:41:23 thomasklausner Exp $
+# $Id: Makefile,v 1.4721 2012/04/15 15:42:39 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2287,7 +2287,6 @@ SUBDIR+=	py-kaa-base
 SUBDIR+=	py-kaa-imlib2
 SUBDIR+=	py-kaa-metadata
 SUBDIR+=	py-kcs11
-SUBDIR+=	py-kde4
 SUBDIR+=	py-keyczar
 SUBDIR+=	py-keyring
 SUBDIR+=	py-khayyam
