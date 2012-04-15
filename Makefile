@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4721 2012/04/15 15:42:39 thomasklausner Exp $
+# $Id: Makefile,v 1.4722 2012/04/15 20:26:34 mwdavies Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2688,7 +2688,6 @@ SUBDIR+=	sgmltools-lite
 SUBDIR+=	shaarli
 SUBDIR+=	shadow
 SUBDIR+=	shaper
-SUBDIR+=	shared-desktop-ontologies
 SUBDIR+=	sharif-univ-ttf
 SUBDIR+=	shed
 SUBDIR+=	shell-fm
