@@ -1,5 +1,9 @@
-$NetBSD: TODO,v 1.3 2012/03/31 12:21:22 makoto Exp $
-- Review patches/patch-af carefully
+$NetBSD: TODO,v 1.4 2012/04/18 15:28:46 makoto Exp $
+- Review patches/patch-af carefully for Darwin
+  (Actually Mac OS X has problem making libgs.9.05.dynlib)
+
+- Build on DragonFly BSD is not tested
+  for the patch-openjpeg_libopenjpeg_opj_malloc_h
 
 - pdftoraster seems gone compared to 9.0.4, (with cups only)
   -${PLIST.cups}libexec/cups/filter/pdftoraster
