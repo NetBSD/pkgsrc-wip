@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.50 2012/04/16 11:11:06 imilh Exp $
+# $NetBSD: Makefile,v 1.51 2012/04/18 16:44:27 imilh Exp $
 #
 
-DISTNAME=		pkgin-20120416
+DISTNAME=		pkgin-20120418
 CATEGORIES=		pkgtools
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=pkgin/}
 
