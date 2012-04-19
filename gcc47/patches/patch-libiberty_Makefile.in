@@ -1,0 +1,13 @@
+$NetBSD: patch-libiberty_Makefile.in,v 1.1 2012/04/19 05:28:14 keckhardt Exp $
+
+--- libiberty/Makefile.in.orig	2012-04-18 20:32:57.000000000 +0000
++++ libiberty/Makefile.in
+@@ -910,7 +910,7 @@ $(CONFIGURED_OFILES): stamp-picdir
+ ./physmem.$(objext): $(srcdir)/physmem.c config.h $(INCDIR)/ansidecl.h \
+ 	$(INCDIR)/libiberty.h
+ 	if [ x"$(PICFLAG)" != x ]; then \
+-	  $(COMPILE.c) $(PICFLAG) $(srcdir)/physmem.c -o pic/$@; \
++	  $(COMPILE.c) $(PICFLAG) -g -O2 $(srcdir)/physmem.c -o pic/$@; \
+ 	else true; fi
+ 	$(COMPILE.c) $(srcdir)/physmem.c $(OUTPUT_OPTION)
+ 
