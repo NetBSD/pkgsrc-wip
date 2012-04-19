@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.36 2012/04/08 15:48:32 ftigeot Exp $
+$NetBSD: distinfo,v 1.37 2012/04/19 19:15:06 ftigeot Exp $
 
 SHA1 (libreoffice/067201ea8b126597670b5eff72e1f66c-mythes-1.2.0.tar.gz) = 025d5d0d566a23ddb353495c116116c1088ba2e9
 RMD160 (libreoffice/067201ea8b126597670b5eff72e1f66c-mythes-1.2.0.tar.gz) = aefa80476ef8340be84440b61f738f432da51c92
@@ -44,5 +44,10 @@ SHA1 (patch-lotuswordpro_Module_lotuswordpro.mk) = 73a115b02ff8e6b88a8a980210065
 SHA1 (patch-sc_Module_sc.mk) = e10e49334efb507d20f41fbf0f0f21d1605230c2
 SHA1 (patch-sd_Module_sd.mk) = f89c964816947864c59857f478758c58192c87e9
 SHA1 (patch-set_soenv.in) = 2c4299e1e5f191c8cb63003f8af9194b4d7bf2e9
+SHA1 (patch-sfx2_source_doc_objstor.cxx) = 97f0d936b39d78237899f8dc057f3708beb87987
 SHA1 (patch-sw_Module_sw.mk) = 7b8b9b16b950d28d4bf2af435d4d5dbb3c4ea427
+SHA1 (patch-sw_source_core_docnode_ndtbl.cxx) = 2e268b19082af80352018b21f2feee4749fbec25
+SHA1 (patch-sw_source_core_unocore_unotext.cxx) = 5e4da6beec7b71dd98ed6355009f80e964b9ebff
 SHA1 (patch-writerfilter_Module_writerfilter.mk) = dd0a3649e018f27f5b3edc738f4133827773e445
+SHA1 (patch-writerfilter_source_dmapper_DomainMapperTableManager.cxx) = 8bef7ebecbefdc7c76d0677f969dd3381c0d36a3
+SHA1 (patch-writerfilter_source_rtftok_rtftokenizer.cxx) = d9f1bd589bb4a3b67ccafba1cf4436b46e460675
