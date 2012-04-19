@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2012/01/09 16:11:52 khorben Exp $
+# $NetBSD: Makefile,v 1.15 2012/04/19 13:16:22 khorben Exp $
 
-DISTNAME=	Browser-0.4.4
-PKGNAME=	deforaos-browser-0.4.4
+DISTNAME=	Browser-0.4.5
+PKGNAME=	deforaos-browser-0.4.5
 CATEGORIES=	sysutils
-MASTER_SITES=	http://www.defora.org/os/download/download/3614/
+MASTER_SITES=	http://www.defora.org/os/download/download/3667/
 
 MAINTAINER=	khorben@defora.org
 HOMEPAGE=	http://www.defora.org/
@@ -21,6 +21,7 @@ MAKE_FLAGS+=	DESTDIR=${DESTDIR}
 
 .include "../../wip/deforaos-libsystem/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/libXrandr/buildlink3.mk"
 .include "../../wip/deforaos-libdesktop/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
