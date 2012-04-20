@@ -1,7 +1,6 @@
-$NetBSD: distinfo,v 1.4 2012/03/29 21:18:27 thomasklausner Exp $
+$NetBSD: distinfo,v 1.5 2012/04/20 08:33:55 othyro Exp $
 
-SHA1 (desmume-0.9.5.tar.gz) = 27174becda0551ec231ff18c5e95266a95825524
-RMD160 (desmume-0.9.5.tar.gz) = 9eb537cde87cdba78b39480c6196f60702fcf208
-Size (desmume-0.9.5.tar.gz) = 935073 bytes
-SHA1 (patch-aa) = 8f51d0d746065b6b4be6cee62b1fa74f914c849a
-SHA1 (patch-src_GPU.cpp) = 970d9bcd9eabc4898f760b2968618cb386b6f446
+SHA1 (desmume-0.9.8.tar.gz) = aae63473b79df0fd80a13ef2c6a2813d3d6e605e
+RMD160 (desmume-0.9.8.tar.gz) = 5af92926f335dd5823f34dd60ff2001b7e0e6b19
+Size (desmume-0.9.8.tar.gz) = 3645764 bytes
+SHA1 (patch-src_firmware.cpp) = 11ce0975793299e8a02a7db2d7bf0298fa3dccde
