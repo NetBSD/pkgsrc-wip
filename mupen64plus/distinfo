@@ -1,12 +1,13 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/12/13 15:11:47 othyro Exp $
+$NetBSD: distinfo,v 1.2 2012/04/20 19:36:25 othyro Exp $
 
-SHA1 (mupen64plus-bundle-src-1.99.4.tar.gz) = a2e2e7733c6b09e5c484df5637597ca7fefb79e4
-RMD160 (mupen64plus-bundle-src-1.99.4.tar.gz) = afeed87d92f5c26310c7b32e95325780c72cf45b
-Size (mupen64plus-bundle-src-1.99.4.tar.gz) = 1703878 bytes
-SHA1 (patch-m64p__build.sh) = 519ef633b913b81906f6a628b4eabfbb3d3f8de9
-SHA1 (patch-source_mupen64plus-audio-sdl_projects_unix_Makefile) = 630a0e7cc664e245770a2ae15e70ab72229c8e78
-SHA1 (patch-source_mupen64plus-core_projects_unix_Makefile) = 2ad17fbda08cff530ed00d27b3d88ecbbc71aa3d
-SHA1 (patch-source_mupen64plus-input-sdl_projects_unix_Makefile) = 6b7b40faf4bacd9db7955695187956045babe6f3
-SHA1 (patch-source_mupen64plus-rsp-hle_projects_unix_Makefile) = 8bc8510577fa31bf58ad2d542a08500fc3a4698e
-SHA1 (patch-source_mupen64plus-ui-console_projects_unix_Makefile) = 26d7da8454d105bfd3bf39dc8545250adb6c0c32
-SHA1 (patch-source_mupen64plus-video-rice_projects_unix_Makefile) = 3578da7b9bce8b0ceffa0b6e223250d70a285017
+SHA1 (mupen64plus-bundle-src-1.99.5.tar.gz) = ca80ae446c9591e272e3ec93f0a2a8b01cfcd34e
+RMD160 (mupen64plus-bundle-src-1.99.5.tar.gz) = 9e5aec09f73e70e9010d18d67756e3204e580307
+Size (mupen64plus-bundle-src-1.99.5.tar.gz) = 1732468 bytes
+SHA1 (patch-m64p__build.sh) = 0a154241aa2e4cb8be922f642d6112b35f027f2a
+SHA1 (patch-source_mupen64plus-audio-sdl_projects_unix_Makefile) = 53f84a0fdd4d6546345b73b75094ec27beac1206
+SHA1 (patch-source_mupen64plus-audio-sdl_src_main.c) = d12d692398138e2ac2afb22ad462bea1201e364c
+SHA1 (patch-source_mupen64plus-core_projects_unix_Makefile) = c8e094f166d99d7c4dee6de846c22a9670b55df7
+SHA1 (patch-source_mupen64plus-input-sdl_projects_unix_Makefile) = 0ed9651ecb6df6659a027b1d5b0aedf315e06779
+SHA1 (patch-source_mupen64plus-rsp-hle_projects_unix_Makefile) = 286318c16f10ff10feccab08732cd20de537e85b
+SHA1 (patch-source_mupen64plus-ui-console_projects_unix_Makefile) = f9f86b18fb4d88a6cffd97bc2c865a248babb07f
+SHA1 (patch-source_mupen64plus-video-rice_projects_unix_Makefile) = 572f28af608af4da3b716bfcf7ff5aaca24e6286
