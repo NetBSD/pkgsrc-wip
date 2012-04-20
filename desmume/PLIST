@@ -1,13 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2009/08/16 12:00:05 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/04/20 08:17:29 othyro Exp $
 bin/desmume
 bin/desmume-cli
-bin/desmume-glade
 man/man1/desmume-cli.1
-man/man1/desmume-glade.1
 man/man1/desmume.1
-share/applications/desmume-glade.desktop
 share/applications/desmume.desktop
-share/desmume/glade/DeSmuME.xpm
-share/desmume/glade/DeSmuMe.glade
-share/desmume/glade/DeSmuMe_Dtools.glade
 share/pixmaps/DeSmuME.xpm
