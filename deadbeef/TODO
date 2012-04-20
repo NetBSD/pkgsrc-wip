@@ -1,0 +1,7 @@
+* Check if/why perl-modules checked for in configure are needed.
+* Check why configure fails to detect right way to link with libintl.
+  Adding it to LDADD in the Makefile may not work on all platforms?
+* Turn some plugins into options, e.g. pulseaudio.
+* Enable alsa plugin optionally/when on linux? (Need someone to test.)
+* Check if plugins/converter Makefile can be patched to specify
+  filenames with parens in a way make can handle them.
