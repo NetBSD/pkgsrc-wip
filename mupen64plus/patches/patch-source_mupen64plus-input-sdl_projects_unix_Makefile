@@ -1,10 +1,10 @@
-$NetBSD: patch-source_mupen64plus-input-sdl_projects_unix_Makefile,v 1.1.1.1 2011/12/13 15:11:47 othyro Exp $
+$NetBSD: patch-source_mupen64plus-input-sdl_projects_unix_Makefile,v 1.2 2012/04/20 19:46:43 othyro Exp $
 
 Adding NetBSD support. Setting CFLAGS, LDFLAGS, etc.
 
---- source/mupen64plus-input-sdl/projects/unix/Makefile.orig	2010-11-23 02:15:13.000000000 +0000
+--- source/mupen64plus-input-sdl/projects/unix/Makefile.orig	2012-03-10 18:31:38.000000000 +0000
 +++ source/mupen64plus-input-sdl/projects/unix/Makefile
-@@ -48,6 +48,11 @@ ifeq ("$(UNAME)","FreeBSD")
+@@ -59,6 +59,11 @@ ifneq ("$(filter GNU/kFreeBSD kfreebsd,$
    SO_EXTENSION = so
    SHARED = -shared
  endif
@@ -13,39 +13,35 @@ Adding NetBSD support. Setting CFLAGS, LDFLAGS, etc.
 +  SO_EXTENSION = so
 +  SHARED = -shared
 +endif
- ifneq ("$(filter GNU/kFreeBSD kfreebsd,$(UNAME))","")
-   OS = LINUX
-   SO_EXTENSION = so
-@@ -87,7 +92,7 @@ ifeq ("$(CPU)","NONE")
+ ifeq ("$(OS)","NONE")
+   $(error OS type "$(UNAME)" not supported.  Please file bug report at 'http://code.google.com/p/mupen64plus/issues')
  endif
+@@ -102,7 +107,7 @@ endif
  
- # base CFLAGS, LIBS, and LDFLAGS
--CFLAGS += -ffast-math -funroll-loops -fexpensive-optimizations -fno-strict-aliasing -fvisibility=hidden -I../../src
-+CFLAGS += -ffast-math -funroll-loops -fexpensive-optimizations -fno-strict-aliasing -fvisibility=hidden -I../../src $(shell cpuflags)
- ifneq ($(OS), FREEBSD)
-   CFLAGS += -pipe -O3
- endif
-@@ -139,6 +144,10 @@ endif
- ifeq ($(shell which sdl-config 2>/dev/null),)
-   $(error No SDL development libraries found!)
+ # base CFLAGS, LDLIBS, and LDFLAGS
+ OPTFLAGS ?= -O3
+-CFLAGS += $(OPTFLAGS) -ffast-math -fno-strict-aliasing -fvisibility=hidden -I../../src
++CFLAGS += $(OPTFLAGS) -ffast-math -fno-strict-aliasing -fvisibility=hidden -I../../src $(shell cpuflags)
+ LDFLAGS += $(SHARED)
+ 
+ # Since we are building a shared library, we must compile with -fPIC on some architectures
+@@ -146,6 +151,10 @@ ifeq ($(OS), OSX)
+     endif
+   endif
  endif
 +ifeq ($(OS),NETBSD)
 +    CFLAGS  += $(shell sdl-config --cflags)
 +    LDFLAGS += -Wl,-rpath,${LIBDIR} $(shell sdl-config --libs)
 +endif
- ifeq ("$(UNAME)","Darwin")
-     CFLAGS  += $(shell sdl-config --cflags)
-     # sdl-config on mac screws up when we're trying to build a library and not an executable
-@@ -255,9 +264,9 @@ targets:
- all: $(TARGET)
+ 
+ # test for presence of SDL
+ ifeq ($(shell which sdl-config 2>/dev/null),)
+@@ -275,7 +284,7 @@ all: $(TARGET)
  
  install: $(TARGET)
--	$(INSTALL) -d -v "$(DESTDIR)$(LIBDIR)"
--	$(INSTALL) -m 0644 $(TARGET) "$(DESTDIR)$(LIBDIR)"
--	$(INSTALL) -d -v "$(DESTDIR)$(SHAREDIR)"
-+	$(INSTALL) -d "$(DESTDIR)$(LIBDIR)"
-+	$(INSTALL) -m 0755 $(TARGET) "$(DESTDIR)$(LIBDIR)"
-+	$(INSTALL) -d "$(DESTDIR)$(SHAREDIR)"
+ 	$(INSTALL) -d "$(DESTDIR)$(PLUGINDIR)"
+-	$(INSTALL) -m 0644 $(INSTALL_STRIP_FLAG) $(TARGET) "$(DESTDIR)$(PLUGINDIR)"
++	$(INSTALL) -m 0755 $(INSTALL_STRIP_FLAG) $(TARGET) "$(DESTDIR)$(PLUGINDIR)"
+ 	$(INSTALL) -d "$(DESTDIR)$(SHAREDIR)"
  	$(INSTALL) -m 0644 "../../data/InputAutoCfg.ini" "$(DESTDIR)$(SHAREDIR)"
  
- uninstall:
