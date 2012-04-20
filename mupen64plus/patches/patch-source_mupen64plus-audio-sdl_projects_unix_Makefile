@@ -1,59 +1,48 @@
-$NetBSD: patch-source_mupen64plus-audio-sdl_projects_unix_Makefile,v 1.1.1.1 2011/12/13 15:11:47 othyro Exp $
+$NetBSD: patch-source_mupen64plus-audio-sdl_projects_unix_Makefile,v 1.2 2012/04/20 19:44:18 othyro Exp $
 
-Adding NetBSD support. Setting CFLAGS, LDFLAGS, and STRIP.
+Adding NetBSD support. Setting OS, SO_NAME, CFLAGS, LDFLAGS, LIBS, etc.
 
---- source/mupen64plus-audio-sdl/projects/unix/Makefile.orig	2010-11-23 02:15:11.000000000 +0000
+--- source/mupen64plus-audio-sdl/projects/unix/Makefile.orig	2012-03-10 18:31:34.000000000 +0000
 +++ source/mupen64plus-audio-sdl/projects/unix/Makefile
-@@ -49,6 +49,11 @@ ifeq ("$(UNAME)","FreeBSD")
-   SHARED = -shared
+@@ -55,6 +55,12 @@ ifeq ("$(UNAME)","OpenBSD")
    SO_EXTENSION = so
+   $(warning OS type "$(UNAME)" not officially supported.')
  endif
 +ifeq ("$(UNAME)","NetBSD")
 +  OS = NETBSD
 +  SHARED = -shared
 +  SO_EXTENSION = so
++  $(warning OS type "$(UNAME)" not officially supported.')
 +endif
  ifneq ("$(filter GNU/kFreeBSD kfreebsd,$(UNAME))","")
    OS = LINUX
    SHARED = -shared
-@@ -88,7 +93,7 @@ ifeq ("$(CPU)","NONE")
- endif
+@@ -103,7 +109,7 @@ endif
  
- # base CFLAGS, LIBS, and LDFLAGS
--CFLAGS += -ffast-math -funroll-loops -fexpensive-optimizations -fno-strict-aliasing -fvisibility=hidden -I../../src
-+CFLAGS += -ffast-math -funroll-loops -fexpensive-optimizations -fno-strict-aliasing -fvisibility=hidden -I../../src $(shell cpuflags)
+ # base CFLAGS, LDLIBS, and LDFLAGS
+ OPTFLAGS ?= -O3
+-CFLAGS += $(OPTFLAGS) -ffast-math -fno-strict-aliasing -fvisibility=hidden -I../../src
++CFLAGS += $(OPTFLAGS) -ffast-math -fno-strict-aliasing -fvisibility=hidden -I../../src $(shell cpuflags)
+ LDFLAGS += $(SHARED)
  
- # Since we are building a shared library, we must compile with -fPIC for x86_64 CPUs.
- # On 32-bit systems we do not want to use -fPIC because we don't have to and it has a big performance penalty on this arch
-@@ -150,6 +155,10 @@ ifeq ($(OS),LINUX)
+ # Since we are building a shared library, we must compile with -fPIC on some architectures
+@@ -165,6 +171,10 @@ ifeq ($(OS),LINUX)
      CFLAGS  += $(shell sdl-config --cflags)
-     LDFLAGS += $(shell sdl-config --libs)
+     LDLIBS += $(shell sdl-config --libs)
  endif
-+ifeq ($(OS),NETBSD)
++ifeq ($OS),NETBSD)
 +    CFLAGS  += $(shell sdl-config --cflags)
-+    LDFLAGS += -Wl,-rpath,${LIBDIR} $(shell sdl-config --libs)
++    LDLIBS += -Wl,-rpath,${LIBDIR} $(shell sdl-config --libs)
 +endif
  
  # test for presence of libsamplerate
  ifneq ($(strip $(shell pkg-config samplerate --modversion 2> /dev/null)),)
-@@ -199,6 +208,9 @@ endif
- ifeq ($(OS),FREEBSD)
-   STRIP	+= strip -s
- endif
-+ifeq ($(OS),NETBSD)
-+  STRIP ?= strip -s
-+endif
- 
- # set special flags for given Makefile parameters
- ifeq ($(DEBUG),1)
-@@ -265,8 +277,8 @@ targets:
- all: $(TARGET)
+@@ -284,7 +294,7 @@ all: $(TARGET)
  
  install: $(TARGET)
--	$(INSTALL) -d -v "$(DESTDIR)$(LIBDIR)"
--	$(INSTALL) -m 0644 $(TARGET) "$(DESTDIR)$(LIBDIR)"
-+	$(INSTALL) -d "$(DESTDIR)$(LIBDIR)"
-+	$(INSTALL) -m 0755 $(TARGET) "$(DESTDIR)$(LIBDIR)"
+ 	$(INSTALL) -d "$(DESTDIR)$(PLUGINDIR)"
+-	$(INSTALL) -m 0644 $(INSTALL_STRIP_FLAG) $(TARGET) "$(DESTDIR)$(PLUGINDIR)"
++	$(INSTALL) -m 0755 $(INSTALL_STRIP_FLAG) $(TARGET) "$(DESTDIR)$(PLUGINDIR)"
  
  uninstall:
- 	rm -f "$(DESTDIR)$(LIBDIR)/$(TARGET)"
+ 	$(RM) "$(DESTDIR)$(PLUGINDIR)/$(TARGET)"
