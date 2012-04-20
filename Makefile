@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4724 2012/04/18 11:55:44 bubuchka Exp $
+# $Id: Makefile,v 1.4725 2012/04/20 14:54:09 roelants Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -133,7 +133,6 @@ SUBDIR+=	apachebench2
 SUBDIR+=	applewmproto
 SUBDIR+=	apstget
 SUBDIR+=	apvlv
-SUBDIR+=	armadillo
 SUBDIR+=	ar7
 SUBDIR+=	arabeyes-qr-ttf
 SUBDIR+=	arandr
@@ -143,6 +142,7 @@ SUBDIR+=	archimedes
 SUBDIR+=	argouml
 SUBDIR+=	arista
 SUBDIR+=	arla-3.99.14
+SUBDIR+=	armadillo
 SUBDIR+=	armagetronad
 SUBDIR+=	arora
 SUBDIR+=	arpack
@@ -388,6 +388,7 @@ SUBDIR+=	db1
 SUBDIR+=	dbf
 SUBDIR+=	dbus-explorer
 SUBDIR+=	ddate
+SUBDIR+=	deadbeef
 SUBDIR+=	debian_base
 SUBDIR+=	debian_glib
 SUBDIR+=	debian_gtk
