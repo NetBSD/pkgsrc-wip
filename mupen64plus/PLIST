@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/12/13 15:11:47 othyro Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/04/20 19:35:38 othyro Exp $
 bin/mupen64plus
 include/mupen64plus/m64p_common.h
 include/mupen64plus/m64p_config.h
@@ -7,8 +7,8 @@ include/mupen64plus/m64p_frontend.h
 include/mupen64plus/m64p_plugin.h
 include/mupen64plus/m64p_types.h
 include/mupen64plus/m64p_vidext.h
-lib/libmupen64plus.so.2.0.0
 lib/libmupen64plus.so.2
+lib/libmupen64plus.so.2.0.0
 lib/mupen64plus/mupen64plus-audio-sdl.so
 lib/mupen64plus/mupen64plus-input-sdl.so
 lib/mupen64plus/mupen64plus-rsp-hle.so
