@@ -1,0 +1,13 @@
+$NetBSD: patch-j2se_make_sun_awt_mawt.gmk,v 1.1 2012/04/21 15:33:38 ftigeot Exp $
+
+--- j2se/make/sun/awt/mawt.gmk.orig	2012-04-21 08:24:01.973634000 +0000
++++ j2se/make/sun/awt/mawt.gmk
+@@ -236,7 +236,7 @@ CPPFLAGS += -I$(SHARE_SRC)/native/$(PKGD
+ 	    $(EVENT_MODEL)
+ 
+ ifeq ($(LINUX_OR_BSD), true)
+-  X11DIR ?= /usr/X11R6
++  X11DIR ?= $(X11BASE)
+   LOCALDIR ?= /usr/local
+   CPPFLAGS += -I$(X11DIR)/include -I$(X11DIR)/include/X11/extensions \
+               -DX11DIR=\"$(X11DIR)\" -DLOCALDIR=\"$(LOCALDIR)\"

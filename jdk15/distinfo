@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.29 2011/07/21 19:15:31 ftigeot Exp $
+$NetBSD: distinfo,v 1.30 2012/04/21 15:33:37 ftigeot Exp $
 
 SHA1 (bsd-jdk15-patches-9.tar.bz2) = 410de93e19d15a1f45b825b9751b0482b70bdf7f
 RMD160 (bsd-jdk15-patches-9.tar.bz2) = ff8cc31c3735b33ec8072e6764fd165a775f1fe6
@@ -44,5 +44,7 @@ SHA1 (patch-bm) = 79f011e4c2196efdbc59ee682df476cc9ee3a926
 SHA1 (patch-bn) = 6f2610391ab33b675e7560aa651d94110b29216c
 SHA1 (patch-hotspot_src_share_vm_adlc_adlc.hpp) = bc68d5bc27c28ed2b47498afc134b3418161c984
 SHA1 (patch-hotspot_src_share_vm_adlc_filebuff.hpp) = 50e232123bb114411e47f8a5595e0a6e243d7d5f
+SHA1 (patch-j2se_make_sun_awt_mawt.gmk) = b42d7230f1a8d12ce025f1c9ce65bfa7e0891550
 SHA1 (patch-j2se_make_sun_javac_recompile_library_Makefile) = 76b56626213195d2e9a1722d793711b2516f6052
+SHA1 (patch-j2se_make_sun_motif21_Makefile) = 3aca20acaca3933baee7469ef5b52df065658d66
 SHA1 (patch-j2se_src_share_classes_java_lang_ClassLoader_java) = 71c7cb8cbfc0cbb7d1f8eb00d73cd570bedc7d11

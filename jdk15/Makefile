@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2011/10/30 18:56:10 noud4 Exp $
+# $NetBSD: Makefile,v 1.52 2012/04/21 15:33:37 ftigeot Exp $
 
 .include "../../wip/jdk16/Makefile.common"
 
@@ -198,6 +198,7 @@ do-install:
 #		${DESTDIR}${JAVA_HOME}/jre/javaws/cacerts
 
 .include "../../mk/java-env.mk"
+.include "../../x11/libXft/buildlink3.mk"
 .include "../../x11/libXi/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
 .include "../../x11/xextproto/buildlink3.mk"
