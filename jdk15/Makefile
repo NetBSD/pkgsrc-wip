@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2012/04/21 15:33:37 ftigeot Exp $
+# $NetBSD: Makefile,v 1.53 2012/04/21 18:19:14 ftigeot Exp $
 
 .include "../../wip/jdk16/Makefile.common"
 
@@ -109,15 +109,6 @@ FETCH_MESSAGE+= "       ${JRL_DOWNLOAD}"
 FETCH_MESSAGE+= " and place them as:"
 FETCH_MESSAGE+= "       ${DISTDIR}/${JRL_SRCFILE}"
 FETCH_MESSAGE+= "       ${DISTDIR}/${JRL_BINFILE}"
-.if !empty(PKG_OPTIONS:Mjdk15-jce)
-FETCH_MESSAGE+= ""
-FETCH_MESSAGE+= " Additionally, for the Java Cryptography Extension"
-FETCH_MESSAGE+= " please download jce_policy-1_5_0.zip from"
-FETCH_MESSAGE+= "   http://java.sun.com/javase/downloads/index_jdk5.jsp"
-FETCH_MESSAGE+= " via the link named Java Cryptography Extension (JCE)"
-FETCH_MESSAGE+= " Unlimited Strength Jurisdiction Policy Files 5.0"
-FETCH_MESSAGE+= " and place it in ${DISTDIR}"
-.endif
 FETCH_MESSAGE+= ""
 FETCH_MESSAGE+= " Please download the BSD JDK 1.5 Patchset ${JDK_PATCHSET_VERSION}"
 FETCH_MESSAGE+= " (${PATCHSETFILE}) from:"
@@ -155,7 +146,7 @@ SUBST_SED.paths+=	-e 's,%%JVM_HOME%%,${JVM_HOME},g'
 
 .include "options.mk"
 
-PLIST_VARS+=    jce client_jvm
+PLIST_VARS+=    client_jvm
 PLIST_SUBST+=	JAVA_MACHINE_ARCH=${JAVA_MACHINE_ARCH:Q}
 
 .if ${MACHINE_ARCH} == "i386"

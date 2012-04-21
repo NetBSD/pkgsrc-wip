@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2011/07/23 13:19:06 ftigeot Exp $
+@comment $NetBSD: PLIST,v 1.12 2012/04/21 18:19:14 ftigeot Exp $
 bin/jdk15-appletviewer
 bin/jdk15-jar
 bin/jdk15-java
@@ -1487,6 +1487,4 @@ java/jdk-1.5.0/sample/nio/server/Server.java
 java/jdk-1.5.0/sample/nio/server/StringContent.java
 java/jdk-1.5.0/sample/nio/server/URLDumper.java
 java/jdk-1.5.0/src.zip
-${PLIST.jce}java/jdk-1.5.0/jre/lib/security/COPYRIGHT.html
-${PLIST.jce}java/jdk-1.5.0/jre/lib/security/README.txt
 @pkgdir java/jdk-1.5.0/jre/lib/applet
