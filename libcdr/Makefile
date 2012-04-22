@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/04/22 16:06:42 ftigeot Exp $
+# $NetBSD: Makefile,v 1.2 2012/04/22 16:28:15 thomasklausner Exp $
 
 DISTNAME=	libcdr-0.0.6
 CATEGORIES=	converters
@@ -9,6 +9,8 @@ MAINTAINER=	ftigeot@wolfpond.org
 HOMEPAGE=	http://www.freedesktop.org/wiki/Software/libcdr/
 COMMENT=	Corel Draw file format importer library
 LICENSE=	gnu-lgpl-v2.1 OR mpl-1.1 OR gnu-gpl-v2
+
+BUILD_DEPENDS+=	doxygen-[0-9]*:../../devel/doxygen
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
