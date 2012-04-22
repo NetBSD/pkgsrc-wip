@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/04/11 07:33:29 makoto Exp $
+# $NetBSD: Makefile,v 1.3 2012/04/22 12:57:56 makoto Exp $
 
 DISTNAME=		tc-2.3.1
 PKGNAME=		${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -46,7 +46,12 @@ SUBST_FILES.tc+=	bushu-util/where
 SUBST_FILES.tc+=	mazegaki/mkcertain.pl
 SUBST_SED.tc+=		-e s\|@PERL@\|${PERL5:Q}\|g
 
-##BUILD_DEPENDS+=		automake14
+# fix hardcoded PATH, interim solution, upstream fix may differ.
+# This edit should be applied before byte compile
+SUBST_CLASSES+=		tc-pre
+SUBST_STAGE.tc-pre=	pre-configure
+SUBST_FILES.tc-pre+=	lisp/tc-pre.el
+SUBST_SED.tc-pre+=	-e s\|/usr/local/share\|${PREFIX}/share\|g
 
 .include "options.mk"
 
