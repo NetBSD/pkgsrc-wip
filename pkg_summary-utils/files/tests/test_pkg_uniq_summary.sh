@@ -112,3 +112,151 @@ PKGNAME=distbb-0.22.0
 PKGPATH=wip/distbb
 
 '
+
+pkg_uniq_summary -Fb summary4.txt |
+cmp 'pkg_uniq_summary -Fb #6' \
+'BUILD_DEPENDS=  bar-[0-9]*   foo>10.0 
+PKGNAME=baz-1.2.3
+
+'
+
+pkg_uniq_summary -Fn src_summary9.txt |
+grep -E '^PKGNAME=|^$' |
+cmp 'pkg_uniq_summary -Fn #7.1' \
+'PKGNAME=distbb-0.38.2
+
+PKGNAME=pkg_status-0.11
+
+PKGNAME=pkgnih-0.0.1
+
+PKGNAME=paexec-0.14.0
+
+PKGNAME=runawk-0.21beta1
+
+PKGNAME=digest-20080510
+
+PKGNAME=pipestatus-0.5.0
+
+PKGNAME=pkg_summary-utils-0.45
+
+PKGNAME=libmaa-1.0.0
+
+PKGNAME=dictem-1.0.2nb1
+
+PKGNAME=emacs-23.2nb2
+
+PKGNAME=emacs-21.4anb19
+
+PKGNAME=emacs-22.3nb10
+
+'
+
+pkg_uniq_summary -Fb src_summary9.txt |
+grep -E '^PKGNAME=|^$' |
+cmp 'pkg_uniq_summary -Fb #7.2' \
+'PKGNAME=distbb-0.38.2
+
+PKGNAME=pkg_status-0.11
+
+PKGNAME=pkgnih-0.0.1
+
+PKGNAME=paexec-0.14.0
+
+PKGNAME=runawk-0.21beta1
+
+PKGNAME=digest-20080510
+
+PKGNAME=pipestatus-0.5.0
+
+PKGNAME=pkg_summary-utils-0.45
+
+PKGNAME=libmaa-1.0.0
+
+PKGNAME=dictem-1.0.2nb1
+
+PKGNAME=emacs-23.2nb2
+
+'
+
+pkg_uniq_summary -Fpa src_summary7.txt |
+grep -E '^(PKGPATH|ASSIGNMENTS)=|^$' |
+cmp 'pkg_uniq_summary -Fpa #8.1' \
+'PKGPATH=audio/py-karaoke:PYTHON_VERSION_REQD=26
+
+PKGPATH=audio/py-mutagen:PYTHON_VERSION_REQD=26
+
+PKGPATH=audio/py-karaoke
+ASSIGNMENTS=PYTHON_VERSION_REQD=24
+
+ASSIGNMENTS=PYTHON_VERSION_REQD=24
+PKGPATH=audio/py-mutagen
+
+PKGPATH=audio/py-karaoke
+
+PKGPATH=audio/py-mutagen
+
+'
+
+pkg_uniq_summary -Fp src_summary7.txt |
+grep -E '^(PKGPATH|ASSIGNMENTS)=|^$' |
+cmp 'pkg_uniq_summary -Fp #8.2' \
+'PKGPATH=audio/py-karaoke:PYTHON_VERSION_REQD=26
+
+PKGPATH=audio/py-mutagen:PYTHON_VERSION_REQD=26
+
+'
+
+pkg_uniq_summary -Fpb src_summary7.txt |
+grep -E '^(PKGPATH|ASSIGNMENTS)=|^$' |
+cmp 'pkg_uniq_summary -Fpb #8.3' \
+'PKGPATH=audio/py-karaoke:PYTHON_VERSION_REQD=26
+
+PKGPATH=audio/py-mutagen:PYTHON_VERSION_REQD=26
+
+PKGPATH=audio/py-karaoke
+ASSIGNMENTS=PYTHON_VERSION_REQD=24
+
+ASSIGNMENTS=PYTHON_VERSION_REQD=24
+PKGPATH=audio/py-mutagen
+
+PKGPATH=audio/py-karaoke
+
+PKGPATH=audio/py-mutagen
+
+'
+
+pkg_uniq_summary -Fpa src_summary3.txt |
+grep -E '^(PKGPATH|ASSIGNMENTS)=|^$' |
+cmp 'pkg_uniq_summary -Fpa #9.1' \
+'ASSIGNMENTS=OPT1=1,OPT2=2
+PKGPATH=wip/distbb
+
+PKGPATH=wip/distbb:OPT=1,OPT2=3
+
+'
+
+pkg_uniq_summary -Fpa src_summary3.1.txt |
+grep -E '^(PKGPATH|ASSIGNMENTS)=|^$' |
+cmp 'pkg_uniq_summary -Fpa #9.2' \
+'PKGPATH=wip/distbb:OPT=1,OPT2=3
+
+ASSIGNMENTS=OPT1=1,OPT2=2
+PKGPATH=wip/distbb
+
+ASSIGNMENTS=OPT1=1,OPT2=3
+PKGPATH=wip/distbb
+
+'
+
+pkg_uniq_summary -Fpa src_summary3.1.txt |
+grep -E '^(PKGPATH|ASSIGNMENTS)=|^$' |
+cmp 'pkg_uniq_summary -Fpa #9.3' \
+'PKGPATH=wip/distbb:OPT=1,OPT2=3
+
+ASSIGNMENTS=OPT1=1,OPT2=2
+PKGPATH=wip/distbb
+
+ASSIGNMENTS=OPT1=1,OPT2=3
+PKGPATH=wip/distbb
+
+'

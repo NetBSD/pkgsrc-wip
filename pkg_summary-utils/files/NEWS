@@ -1,4 +1,10 @@
 ----------------------------------------------------------------------
+Version 0.58.0, by Aleksey Cheusov, Sun, 22 Apr 2012 19:17:11 +0300
+
+  pkg_uniq_summary:
+    - New option -F was added
+
+----------------------------------------------------------------------
 Version 0.57.0, by Aleksey Cheusov, Sat,  3 Dec 2011 16:53:34 +0300
 
   pkg_subgraph_deps:

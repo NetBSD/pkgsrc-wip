@@ -4,6 +4,10 @@ pkg_lint4view:
 
 existing tools:
 
+    pkg_uniq_summary:
+       - -f for normal fields
+       - reimplement -F via -f
+
     pkg_cmp_summary:
        - test for -m
        - -f <p> use pkgpath only for comparison

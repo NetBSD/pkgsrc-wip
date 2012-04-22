@@ -40,8 +40,10 @@
 # usage: pkg_uniq_summary -h
 #       pkg_uniq_summary [OPTIONS] [files...]
 # OPTIONS:
-#   -h      display this help
-#   -n      only PKGBASE is analysed
+#   -h              display this help
+#   -n              only PKGBASE is analysed
+#   =F <fields>     fields to compare (b-PKGBASE, n-PKGNAME, p-PKGPATH,
+#                   a-ASSIGNMENTS)
 #.end-str
 ############################################################
 
@@ -54,17 +56,33 @@ BEGIN {
 	skip       = 0
 	line_count = 0
 
-	opt_n      = getarg("n")
+	field_pkgname = field_pkgbase = field_pkgpath = field_assign = 0
+
+	opt_F = getarg("F")
+	if (opt_F){
+		if (opt_F ~ /a/) field_assign  = 1
+		if (opt_F ~ /p/) field_pkgpath = 1
+		if (opt_F ~ /n/) field_pkgname = 1
+		if (opt_F ~ /b/) field_pkgbase = 1
+
+		if (match(opt_F, /[^apnb]/))
+			abort("Invalid field specifier `" substr(opt_F, RSTART) "'")
+	}else if (getarg("n")){
+		field_pkgbase = 1
+		field_pkgname = field_pkgpath = field_assign = 0
+	}else{
+		field_pkgname = field_pkgpath = field_assign = 1
+	}
 }
 
 NF == 0 {
-	if (!pkgs [pkgbase, pkgpath, assigns]++){
+	if (!pkgs [pkgname, pkgbase, pkgpath, assigns]++){
 		for (i=0; i < line_count; ++i){
 			print lines [i]
 		}
 		print ""
 	}
-	assigns = pkgbase = pkgpath = ""
+	pkgname = pkgbase = pkgpath = assigns = ""
 	line_count = 0
 	next
 }
@@ -73,22 +91,28 @@ NF == 0 {
 	lines [line_count++] = $0
 }
 
-$0 ~ /^PKGNAME=/ {
-	pkgbase = substr($0, 9)
-	sub(/-[^-]+$/, "", pkgbase)
+(field_pkgname || field_pkgbase) && $0 ~ /^PKGNAME=/ {
+	_pkgname = substr($0, 9)
+	if (field_pkgname){
+		pkgname = _pkgname
+	}
+	if (field_pkgbase){
+		pkgbase = _pkgname
+		sub(/-[^-]+$/, "", pkgbase)
+	}
 	next
 }
 
-!opt_n && $0 ~ /^PKGPATH=/ {
+field_pkgpath && $0 ~ /^PKGPATH=/ {
 	pkgpath = substr($0, 9)
-	if (sub(/:.*$/, "", pkgpath)){
+	if (sub(/:.*$/, "", pkgpath) && field_assign){
 		assigns = substr($0, 9)
 		sub(/^[^:]*:/, "", assigns)
 	}
 	next
 }
 
-!opt_n && $0 ~ /^ASSIGNMENTS=/ {
+field_assign && $0 ~ /^ASSIGNMENTS=/ {
 	assigns = substr($0, 13)
 	next
 }
