@@ -11,6 +11,7 @@ Suggested package updates
 	o cgal-4.0
 	o chora-2.0.1
 	o cinelerra-4.3
+	o clojure-1.4
 	o couchdb-glib-0.6.3
 	o cygwin-1.7.1
 	o d4x-2.5.7.1
@@ -28,8 +29,8 @@ Suggested package updates
 	o evolution-couchdb-0.4.4
 	o fakenes-0.5.7
 	o firebird-2.5
-	o fslsfonts-1.0.3
-	o fstobdf-1.0.4
+	o fslsfonts-1.0.4
+	o fstobdf-1.0.5
 	o gambas2-2.23.0
 	o gcc42-4.2.4
 	o gcc43-4.3.4
@@ -83,6 +84,7 @@ Suggested package updates
 	o llvm-3.0
 	o man-1.6f
 	o meta-tracker-0.14.0
+	o miro-4.0.6
 	o mixxx-1.9.2
 	o mpgedit-0.73dev2
 	o mumble-1.2.3
@@ -101,7 +103,7 @@ Suggested package updates
 	o py-PyPE-2.9
 	o py-gnucash-0.7.55
 	o py-rpyc-3.2.1
-	o py-zeitgeist-0.8.1
+	o py-zeitgeist-0.9
 	o python31-3.1.2
 	o python32-3.2.3
 	o qcomicbook-0.8.1
