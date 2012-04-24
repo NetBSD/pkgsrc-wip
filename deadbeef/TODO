@@ -5,3 +5,5 @@
 * Enable alsa plugin optionally/when on linux? (Need someone to test.)
 * Check if plugins/converter Makefile can be patched to specify
   filenames with parens in a way make can handle them.
+* Fix unresolved symbols in plugins.
+* Make it find its icon.
