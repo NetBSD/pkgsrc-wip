@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4727 2012/04/22 19:03:31 cmfuhrman Exp $
+# $Id: Makefile,v 1.4728 2012/04/24 15:55:33 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -3032,6 +3032,7 @@ SUBDIR+=	wise2
 SUBDIR+=	wkf
 SUBDIR+=	wkhtmltopdf
 SUBDIR+=	wl-current
+SUBDIR+=	wmc2d
 SUBDIR+=	wmii-devel
 SUBDIR+=	wmitime
 SUBDIR+=	wmname
