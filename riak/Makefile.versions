@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.versions,v 1.1 2012/03/08 13:51:09 fhajny Exp $
+# $NetBSD: Makefile.versions,v 1.2 2012/04/24 13:49:35 fhajny Exp $
 
 _RIAK_VERSIONS+=			\
 	basho_metrics	1.0.0		\
@@ -9,7 +9,7 @@ _RIAK_VERSIONS+=			\
 	ebloom		1.1.1		\
 	eleveldb	1.1.0		\
 	eper		0.61		\
-	erlang_js	1.0.1		\
+	erlang_js	1.0.2		\
 	innostore	${INNOVER}	\
 	lager		1.0.0		\
 	lucene_parser	1		\
@@ -19,11 +19,11 @@ _RIAK_VERSIONS+=			\
 	poolboy		0.6.1		\
 	protobuffs	0.6.0		\
 	riak_control	0.1.0		\
-	riak_core	1.1.1		\
-	riak_kv		1.1.1		\
-	riak_pipe	1.1.1		\
-	riak_search	1.1.1		\
-	riak_sysmon	1.1.0		\
+	riak_core	1.1.2		\
+	riak_kv		1.1.2		\
+	riak_pipe	1.1.2		\
+	riak_search	1.1.2		\
+	riak_sysmon	1.1.2		\
 	riakc		1.2.1		\
 	sext		0.4.1		\
 	webmachine	1.9.1
