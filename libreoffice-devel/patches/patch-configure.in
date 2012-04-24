@@ -1,0 +1,13 @@
+$NetBSD: patch-configure.in,v 1.1.1.1 2012/04/24 21:38:28 ftigeot Exp $
+
+--- configure.in.orig	2012-04-22 18:44:29.000000000 +0000
++++ configure.in
+@@ -11047,7 +11047,7 @@ AC_MSG_RESULT([$DOCDIR])
+ AC_SUBST(DOCDIR)
+ 
+ AC_MSG_CHECKING([for install dir])
+-INSTALLDIR="$LIBDIR/$INSTALLDIRNAME"
++INSTALLDIR="$PREFIXDIR"
+ AC_MSG_RESULT([$INSTALLDIR])
+ AC_SUBST(INSTALLDIR)
+ 
