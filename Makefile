@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4729 2012/04/24 21:43:09 ftigeot Exp $
+# $Id: Makefile,v 1.4730 2012/04/26 19:31:30 outpaddling Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -446,6 +446,7 @@ SUBDIR+=	ditz-commander
 SUBDIR+=	diveintopython
 SUBDIR+=	djview4
 SUBDIR+=	dk-milter
+SUBDIR+=	dlpoly-classic
 SUBDIR+=	dmd
 SUBDIR+=	dmd-bin
 SUBDIR+=	dmt-ux
