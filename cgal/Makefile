@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/10/28 14:31:48 hfath Exp $
+# $NetBSD: Makefile,v 1.3 2012/04/26 20:20:24 outpaddling Exp $
 #
 
 DISTNAME=	CGAL-${DISTVERS}
@@ -15,8 +15,9 @@ LICENSE=	qpl-v1.0 AND gnu-lgpl-v2
 
 # pkgsrc is not currently able to fetch distfiles from https web servers
 # (see mk/fetch/fetch.mk), so you have to use a browser for now.
-FETCH_USING=		wget
-FETCH_BEFORE_ARGS=	--no-check-certificate
+FETCH_USING=		curl
+# FETCH_USING=		wget
+# FETCH_BEFORE_ARGS=	--no-check-certificate
 
 USE_CMAKE=      yes
 USE_LANGUAGES=  c c++

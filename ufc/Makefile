@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/04/26 19:31:30 outpaddling Exp $
+# $NetBSD: Makefile,v 1.3 2012/04/26 20:20:24 outpaddling Exp $
 #
 
 DISTNAME=	ufc-2.0.5
@@ -21,4 +21,6 @@ PKGCONFIG_OVERRIDE+=	cmake/ufc-1.pc.in
 FETCH_USING=	curl
 
 .include "../../lang/python/application.mk"
+.include "../../devel/boost-libs/buildlink3.mk"
+.include "../../wip/swig2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
