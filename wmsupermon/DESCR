@@ -1,0 +1,14 @@
+Universal Monitoring Dockapp.
+Can be used to monitor:
+1. CPU usage
+2. Disk I/O
+3. Memory
+4. Swap
+5. Filesystems - space utilization
+6. Network traffic
+7. Wireless link quality
+8. CPU frequency
+9. CPU temperature, fan speed, voltages (no lm_sensors required!)
+10. Battery status (with actual - not guessed - discharge rate!)
+11. Traffic from yuor router
+12. Anything else :)

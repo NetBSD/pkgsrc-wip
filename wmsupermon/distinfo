@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/04/28 17:56:38 othyro Exp $
+
+SHA1 (wmsupermon-1.2.2.tar.gz) = 7aa0408811e77553794aa2093b9e0fe549f08486
+RMD160 (wmsupermon-1.2.2.tar.gz) = 34f8ce8fb5b4c54d6e0e7ceb02621647b9665fc0
+Size (wmsupermon-1.2.2.tar.gz) = 28372 bytes
+SHA1 (patch-expr.y) = 03ac0822788a39300f8c550b39e4eae3534b7d43
