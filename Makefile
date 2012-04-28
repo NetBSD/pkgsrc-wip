@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4730 2012/04/26 19:31:30 outpaddling Exp $
+# $Id: Makefile,v 1.4731 2012/04/28 18:02:47 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -3038,6 +3038,7 @@ SUBDIR+=	wmii-devel
 SUBDIR+=	wmitime
 SUBDIR+=	wmname
 SUBDIR+=	wmnetload
+SUBDIR+=	wmsupermon
 SUBDIR+=	wmx
 SUBDIR+=	wmx-gnome
 SUBDIR+=	wordcut
