@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/04/20 14:50:11 roelants Exp $
+# $NetBSD: Makefile,v 1.2 2012/04/29 15:06:26 roelants Exp $
 #
 
 DISTNAME=	deadbeef-0.5.2
 CATEGORIES=	audio
 MASTER_SITES=	http://sourceforge.net/projects/deadbeef/files/
 EXTRACT_SUFX=	.tar.bz2
+PKGREVISION=	1
 
 MAINTAINER=	dieter.NetBSD@pandora.be
 HOMEPAGE=	http://deadbeef.sourceforge.net/
@@ -19,6 +20,7 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake intltool pkg-config
 
 LDFLAGS+=	-lintl
+MAKE_ENV+=	OSS_LIBS=${LIBOSSAUDIO}
 
 BUILD_DEPENDS+=	yasm-[0-9]*:../../devel/yasm
 
@@ -40,5 +42,6 @@ BUILD_DEPENDS+=	yasm-[0-9]*:../../devel/yasm
 .include "../../x11/gtk2/buildlink3.mk"
 
 .include "../../mk/jpeg.buildlink3.mk"
+.include "../../mk/oss.buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
