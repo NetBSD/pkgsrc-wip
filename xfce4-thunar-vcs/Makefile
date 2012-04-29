@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/02/19 17:37:50 guigui2 Exp $
+# $NetBSD: Makefile,v 1.3 2012/04/29 20:10:33 guigui2 Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -8,7 +8,7 @@ DISTNAME=	thunar-vcs-plugin-0.1.4
 PKGNAME=	xfce4-${DISTNAME}
 PKGREVISION=	1
 CATEGORIES=	devel
-MASTER_SITES=	http://www.xfce.org/archive/src/thunar-plugins/thunar-vcs-plugin/0.1/
+MASTER_SITES=	http://archive.xfce.org/src/thunar-plugins/thunar-vcs-plugin/0.1/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	gls@NetBSD.org
