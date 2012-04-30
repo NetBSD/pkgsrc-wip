@@ -1,7 +1,2 @@
-* Breaks on DragonFly/x86_64 3.1 :
-
---- smtpd ---
-smtpd-auth_pwd.o: In function `auth_pwd':
-auth_pwd.c:(.text+0x41): undefined reference to `crypt'
-*** [smtpd] Error code 1
-
+* The autoconf build system is broken; hardcoded paths are used
+  to work around the issue for now.
