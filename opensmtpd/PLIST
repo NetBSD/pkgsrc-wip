@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/04/11 07:25:50 ftigeot Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/04/30 17:04:12 ftigeot Exp $
 bin/mailq
 bin/newaliases
 libexec/mail.local
@@ -8,6 +8,7 @@ man/man8/makemap.8
 man/man8/newaliases.8
 man/man8/smtpctl.8
 man/man8/smtpd.8
+share/examples/opensmtpd/smtpd.conf
 sbin/makemap
 sbin/smtpctl
 sbin/smtpd

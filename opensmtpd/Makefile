@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/04/30 15:11:56 ftigeot Exp $
+# $NetBSD: Makefile,v 1.3 2012/04/30 17:04:12 ftigeot Exp $
 
 DISTNAME=	opensmtpd-201204120900
 CATEGORIES=	mail net
@@ -19,8 +19,14 @@ USE_TOOLS+=	automake aclocal autoheader autoconf
 
 GNU_CONFIGURE=	yes
 
-SMTPD_CONF=	${PKG_SYSCONFDIR}/smtpd.conf
-CONF_FILES=	${PREFIX}/etc/mail/smtpd.conf ${PKG_SYSCONFDIR}/mail/smtpd.conf
+EXAMPLEDIR=	${PREFIX}/share/examples/opensmtpd
+CONF_FILES=	${EXAMPLEDIR}/smtpd.conf ${PKG_SYSCONFDIR}/smtpd.conf
+
+SUBST_CLASSES+=			exampledir
+SUBST_STAGE.exampledir=		pre-configure
+SUBST_MESSAGE.exampledir=	Fixing exampledir path
+SUBST_FILES.exampledir=		src/Makefile.am
+SUBST_SED.exampledir+=		-e 's,@EXAMPLE_DIR@,${EXAMPLEDIR},'
 
 pre-configure:
 	set -e; cd ${WRKSRC}; \
