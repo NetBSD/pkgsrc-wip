@@ -1,0 +1,13 @@
+$NetBSD: patch-unix_configure,v 1.1 2012/05/01 20:22:45 bsiegert Exp $
+
+--- unix/configure.orig	2011-11-04 12:48:09.000000000 +0000
++++ unix/configure
+@@ -11167,7 +11167,7 @@ echo "${ECHO_T}static library" >&6
+     fi
+ 
+     TK_SHLIB_LD_EXTRAS="-compatibility_version ${TK_VERSION} -current_version ${TK_VERSION}`echo ${TK_PATCH_LEVEL} | awk '{match($0, "\\\.[0-9]+"); print substr($0,RSTART,RLENGTH)}'`"
+-    TK_SHLIB_LD_EXTRAS="${TK_SHLIB_LD_EXTRAS}"' -install_name "${DYLIB_INSTALL_DIR}"/${TK_LIB_FILE} -unexported_symbols_list $$(f=$(TCL_STUB_LIB_FILE).E && nm -gjp "$(TCL_BIN_DIR)"/$(TCL_STUB_LIB_FILE) | grep ^_[^_] > $$f && echo $$f)'
++    TK_SHLIB_LD_EXTRAS="${TK_SHLIB_LD_EXTRAS}"' -install_name "${DYLIB_INSTALL_DIR}"/${TK_LIB_FILE} -unexported_symbols_list $$(f=$(TCL_STUB_LIB_FILE).E && nm -gjp "$(prefix)/lib"/$(TCL_STUB_LIB_FILE) | grep ^_[^_] > $$f && echo $$f)'
+     echo "$LDFLAGS " | grep -q -- '-prebind ' && TK_SHLIB_LD_EXTRAS="${TK_SHLIB_LD_EXTRAS}"' -seg1addr 0xb000000'
+     TK_SHLIB_LD_EXTRAS="${TK_SHLIB_LD_EXTRAS}"' -sectcreate __TEXT __info_plist Tk-Info.plist'
+     EXTRA_WISH_LIBS='-sectcreate __TEXT __info_plist Wish-Info.plist'

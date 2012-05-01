@@ -1,0 +1,13 @@
+$NetBSD: patch-unix_Makefile.in,v 1.1 2012/05/01 20:22:45 bsiegert Exp $
+
+--- unix/Makefile.in.orig	2012-05-01 20:15:56.000000000 +0000
++++ unix/Makefile.in
+@@ -154,7 +154,7 @@ AQUA_INCLUDES		= -I$(MAC_OSX_DIR) -I$(XL
+ # Linker switch(es) to use to link with the X11 library archive (the
+ # configure script will try to set this value automatically, but you
+ # can override it).
+-X11_LIB_SWITCHES	= @XLIBSW@ $(XFT_LIBS)
++X11_LIB_SWITCHES	= @XLIBSW@ $(XFT_LIBS) -lfontconfig
+ 
+ 
+ # To turn off the security checks that disallow incoming sends when
