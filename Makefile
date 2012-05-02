@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4731 2012/04/28 18:02:47 othyro Exp $
+# $Id: Makefile,v 1.4732 2012/05/02 08:46:59 noud4 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1307,6 +1307,7 @@ SUBDIR+=	libfs
 SUBDIR+=	libgadu
 SUBDIR+=	libgda-bdb
 SUBDIR+=	libgda-ldap
+SUBDIR+=	libgda-mdb
 SUBDIR+=	libgda-odbc
 #SUBDIR+=	libgda-sqlite3	# PR pkg/45845
 SUBDIR+=	libgda4
