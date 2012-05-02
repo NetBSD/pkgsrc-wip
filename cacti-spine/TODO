@@ -1,3 +1,2 @@
-- Investigate if WARNING: netinet/ip.h & netinet/ip_icmp.h have any impact
-- Fix configure output errors
-- Fix installation output error
+- add manpage http://manpages.ubuntu.com/manpages/precise/man1/spine.1.html
+- upgrade to 0.8.8a
