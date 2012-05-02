@@ -1,1 +1,3 @@
-mdbtools-gui
+MDB Tools library extension (shrext_cmds=".so"?).
+Gettext-lib in a correct way.
+Test ODBC driver and try to build with iODBC as well.

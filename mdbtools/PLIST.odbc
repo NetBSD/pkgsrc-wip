@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.odbc,v 1.1 2012/05/02 08:21:29 noud4 Exp $
+lib/libmdbodbc.la
