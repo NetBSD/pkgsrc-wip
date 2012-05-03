@@ -1,12 +1,11 @@
-$NetBSD: patch-pylib_gyp_common.py,v 1.1 2012/04/13 22:38:16 ryo-on Exp $
+$NetBSD: patch-pylib_gyp_common.py,v 1.2 2012/05/03 02:29:16 obache Exp $
 
---- pylib/gyp/common.py.orig	2012-04-13 19:31:34.000000000 +0000
+--- pylib/gyp/common.py.orig	2012-05-03 02:20:39.000000000 +0000
 +++ pylib/gyp/common.py
-@@ -355,6 +355,9 @@ def GetFlavor(params):
-     'sunos5': 'solaris',
+@@ -356,6 +356,8 @@ def GetFlavor(params):
      'freebsd7': 'freebsd',
      'freebsd8': 'freebsd',
-+    'freebsd9': 'freebsd',
+     'freebsd9': 'freebsd',
 +    'netbsd5': 'netbsd',
 +    'netbsd6': 'netbsd',
    }
