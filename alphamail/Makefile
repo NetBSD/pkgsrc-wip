@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2011/10/02 21:23:00 shattered Exp $
+# $NetBSD: Makefile,v 1.10 2012/05/04 19:58:51 noud4 Exp $
 
 DISTNAME=	alphamail-1.0.44
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=alphamail/}
 
@@ -20,7 +20,7 @@ DEPENDS+=	p5-MIME-Types>=1.16:../../mail/p5-MIME-Types
 DEPENDS+=	p5-HTML-Parser>=3.45:../../www/p5-HTML-Parser
 DEPENDS+=	p5-Log-Log4perl>=0.47:../../devel/p5-Log-Log4perl
 DEPENDS+=	p5-Unicode-String>=2.0:../../converters/p5-Unicode-String
-DEPENDS+=	p5-Unicode-Collate>=0.52:../../wip/p5-Unicode-Collate
+DEPENDS+=	p5-Unicode-Collate>=0.52:../../converters/p5-Unicode-Collate
 DEPENDS+=	p5-Crypt-CBC>=2.14:../../security/p5-Crypt-CBC
 DEPENDS+=	p5-Crypt-CAST5>=0.04:../../wip/p5-Crypt-CAST5
 DEPENDS+=	p5-Text-Aspell>=0.04:../../textproc/p5-Text-Aspell
