@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/05/04 11:22:07 ryo-on Exp $
+# $NetBSD: Makefile,v 1.4 2012/05/04 11:28:38 ryo-on Exp $
 #
 
 DISTNAME=	clojure-1.4.0
@@ -33,6 +33,7 @@ SUBST_STAGE.java=	pre-install
 SUBST_MESSAGE.java=	Set Java
 SUBST_FILES.java=	clj.sh
 SUBST_SED.java=		-e 's,@JAVA_HOME@,${PKG_JAVA_HOME},g'
+SUBST_SED.java+=	-e 's,@SH@,${SH},'
 
 pre-patch:
 	${INSTALL_DATA} ${FILESDIR}/clj.sh ${WRKSRC}

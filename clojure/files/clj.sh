@@ -1,4 +1,4 @@
-#!/bin/sh
+#!@SH@
 
 # clj - Clojure launcher script
 # Borrowed from https://trac.macports.org/changeset/69628
