@@ -1,0 +1,28 @@
+$NetBSD: patch-configure.ac,v 1.1 2012/05/04 10:57:24 imilh Exp $
+
+--- configure.ac.orig	2010-10-05 22:27:06.000000000 +0000
++++ configure.ac
+@@ -61,10 +61,10 @@ case $uname in
+     WANT_KVM=yes
+     WANT_DEVSTAT=yes
+     ;;
+-#  NetBSD*)
+-#    WANT_KVM=yes
+-#    WANT_OSSLIB=yes
+-#    ;;
++  NetBSD*)
++    WANT_KVM=yes
++    WANT_OSSLIB=yes
++    ;;
+ 
+   OpenBSD*)
+     WANT_KVM=yes
+@@ -86,7 +86,7 @@ esac
+ AM_CONDITIONAL(BUILD_LINUX, test x$uname = xLinux)
+ #AM_CONDITIONAL(BUILD_SOLARIS, test x$uname = xSunOS)
+ AM_CONDITIONAL(BUILD_FREEBSD, test x$uname = xFreeBSD -o x$uname = xGNU/kFreeBSD)
+-#AM_CONDITIONAL(BUILD_NETBSD, test x$uname = xNetBSD)
++AM_CONDITIONAL(BUILD_NETBSD, test x$uname = xNetBSD)
+ AM_CONDITIONAL(BUILD_OPENBSD, test x$uname = xOpenBSD)
+ 
+ BUILD_DATE=$(LANG=en_US LC_ALL=en_US LOCALE=en_US date)

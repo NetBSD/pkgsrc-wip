@@ -1,1 +1,1 @@
-Fails linking since much stuff is not ported to NetBSD yet.
+Now builds, still lots of work in netbsd.c for this to work correctly

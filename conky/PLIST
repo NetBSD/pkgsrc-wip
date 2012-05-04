@@ -1,1 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/01/09 17:47:49 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/05/04 10:57:24 imilh Exp $
+bin/conky
+etc/conky/conky.conf
+etc/conky/conky_no_x11.conf
+man/man1/conky.1
+@pkgdir lib/conky

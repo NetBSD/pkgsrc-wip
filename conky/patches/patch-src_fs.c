@@ -1,15 +1,16 @@
-$NetBSD: patch-src_fs.c,v 1.1.1.1 2012/01/09 17:47:49 thomasklausner Exp $
+$NetBSD: patch-src_fs.c,v 1.2 2012/05/04 10:57:24 imilh Exp $
 
 Use statvfs interface on NetBSD.
 
 --- src/fs.c.orig	2010-10-05 21:29:36.000000000 +0000
 +++ src/fs.c
-@@ -44,6 +44,12 @@
+@@ -44,6 +44,13 @@
  #include <sys/statfs.h>
  #endif
  
 +/* NetBSD, Solaris */
-+#ifdef HAVE_SYS_STATVFS_H
++/* #ifdef HAVE_SYS_STATVFS_H */
++#ifdef __NetBSD__ /* this this is ugly anyway... */
 +#include <sys/statvfs.h>
 +#define statfs statvfs
 +#endif
@@ -17,7 +18,7 @@ Use statvfs interface on NetBSD.
  /* freebsd && netbsd */
  #ifdef HAVE_SYS_PARAM_H
  #include <sys/param.h>
-@@ -52,7 +58,7 @@
+@@ -52,7 +59,7 @@
  #include <sys/mount.h>
  #endif
  
@@ -26,7 +27,7 @@ Use statvfs interface on NetBSD.
  #include <mntent.h>
  #endif
  
-@@ -138,7 +144,7 @@ static void update_fs_stat(struct fs_sta
+@@ -138,7 +145,7 @@ static void update_fs_stat(struct fs_sta
  void get_fs_type(const char *path, char *result)
  {
  

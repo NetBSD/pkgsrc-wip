@@ -1,16 +1,26 @@
-$NetBSD: patch-src_config.h.in,v 1.1.1.1 2012/01/09 17:47:49 thomasklausner Exp $
+$NetBSD: patch-src_config.h.in,v 1.2 2012/05/04 10:57:24 imilh Exp $
 
 Check for sys/statvfs.h.
 
 --- src/config.h.in.orig	2010-10-05 22:27:22.000000000 +0000
 +++ src/config.h.in
-@@ -204,6 +204,9 @@
- /* Define to 1 if you have the <sys/statfs.h> header file. */
- #undef HAVE_SYS_STATFS_H
+@@ -102,9 +102,6 @@
+ /* Define to 1 if you have the <glib-object.h> header file. */
+ #undef HAVE_GLIB_OBJECT_H
  
-+/* Define to 1 if you have the <sys/statfs.h> header file. */
-+#undef HAVE_SYS_STATVFS_H
-+
- /* Define to 1 if you have the <sys/stat.h> header file. */
- #undef HAVE_SYS_STAT_H
+-/* Define if you have the iconv() function and it works. */
+-#undef HAVE_ICONV
+-
+ /* Define to 1 if you have the <inttypes.h> header file. */
+ #undef HAVE_INTTYPES_H
+ 
+@@ -231,9 +228,6 @@
+ /* Define if you want support for IBM/Lenovo notebooks (SMAPI) */
+ #undef IBM
+ 
+-/* Define as const if the declaration of iconv() needs const. */
+-#undef ICONV_CONST
+-
+ /* Define if you want Imlib2 support */
+ #undef IMLIB2
  

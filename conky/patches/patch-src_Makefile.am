@@ -1,0 +1,17 @@
+$NetBSD: patch-src_Makefile.am,v 1.1 2012/05/04 10:57:24 imilh Exp $
+
+--- src/Makefile.am.orig	2010-10-05 21:29:36.000000000 +0000
++++ src/Makefile.am
+@@ -119,9 +119,9 @@ endif
+ if BUILD_FREEBSD
+ optional_sources += $(freebsd)
+ endif
+-#if BUILD_NETBSD
+-#optional_sources += $(netbsd)
+-#endif
++if BUILD_NETBSD
++optional_sources += $(netbsd)
++endif
+ if BUILD_OPENBSD
+ optional_sources += $(openbsd)
+ endif
