@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2012/02/22 21:38:56 bartoszkuzma Exp $
+$NetBSD: distinfo,v 1.6 2012/05/04 07:48:31 bartoszkuzma Exp $
 
-SHA1 (libee-0.4.0.tar.gz) = a8df29b7571fcfacb5ac3cac4ebf48d357cfdf21
-RMD160 (libee-0.4.0.tar.gz) = e36317c931998c19f8934055a9ffd872c41be99e
-Size (libee-0.4.0.tar.gz) = 356998 bytes
+SHA1 (libee-0.4.1.tar.gz) = 06bcd1be5c60e60a1e8d9a5844b3e9edc76b14e3
+RMD160 (libee-0.4.1.tar.gz) = fdd462e0c177684646788cc8adf8158128ccd7eb
+Size (libee-0.4.1.tar.gz) = 357116 bytes
 SHA1 (patch-include__libee__libee.h) = 017d978d0406f53507656a2f9b52d4d9152147b6

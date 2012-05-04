@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2012/02/22 21:38:56 bartoszkuzma Exp $
+# $NetBSD: Makefile,v 1.6 2012/05/04 07:48:31 bartoszkuzma Exp $
 #
 
-DISTNAME=		libee-0.4.0
+DISTNAME=		libee-0.4.1
 CATEGORIES=		sysutils
 MASTER_SITES=		http://www.libee.org/files/download/
 
