@@ -1,21 +1,17 @@
-# $NetBSD: Makefile,v 1.2 2011/09/22 02:59:50 ryo-on Exp $
+# $NetBSD: Makefile,v 1.3 2012/05/04 11:22:07 ryo-on Exp $
 #
 
-DISTNAME=	clojure-1.2.1
+DISTNAME=	clojure-1.4.0
 CATEGORIES=	lang
-MASTER_SITES=	https://github.com/downloads/clojure/clojure/
+MASTER_SITES=	http://repo1.maven.org/maven2/org/clojure/clojure/1.4.0/
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	https://github.com/downloads/clojure/clojure/
+MAINTAINER=	ryoon@NetBSD.org
+HOMEPAGE=	http://clojure.org/
 COMMENT=	Dynamic programming language that targets the Java VM
 #LICENSE=	eclipse-1.0 # http://opensource.org/licenses/eclipse-1.0.php
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-
-# Force using "curl" for fetching the distribution file. It is only available
-# over HTTPS and "curl" is the only fetch program which always supports HTTPS.
-FETCH_USING=	curl
 
 NO_BUILD=	yes
 USE_JAVA=	run
@@ -28,7 +24,7 @@ INSTALLATION_DIRS=	bin \
 			lib/java/clojure \
 			share/examples/${PKGNAME_NOREV}
 
-CLOJURE_DOCS=	changes.txt epl-v10.html readme.txt \
+CLOJURE_DOCS=	changes.md epl-v10.html readme.txt \
 		doc/clojure/pprint/CommonLispFormat.markdown \
 		doc/clojure/pprint/PrettyPrinting.markdown
 
@@ -42,12 +38,12 @@ pre-patch:
 	${INSTALL_DATA} ${FILESDIR}/clj.sh ${WRKSRC}
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/clojure.jar \
-		${DESTDIR}${PREFIX}/lib/java/clojure
+	${INSTALL_DATA} ${WRKSRC}/${PKGNAME_NOREV}.jar \
+		${DESTDIR}${PREFIX}/lib/java/clojure/clojure.jar
 
 	cd ${WRKSRC}/test/clojure && pax -rw -pmp test_clojure \
 		${DESTDIR}${PREFIX}/share/examples/${PKGNAME_NOREV}/
-	${INSTALL_DATA} ${WRKSRC}/test/clojure/test_clojure.clj \
+	${INSTALL_DATA} ${WRKSRC}/test/clojure/test_helper.clj \
 		${DESTDIR}${PREFIX}/share/examples/${PKGNAME_NOREV}
 
 .for f in ${CLOJURE_DOCS}
