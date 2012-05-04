@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2012/04/20 08:22:35 othyro Exp $
+# $NetBSD: Makefile,v 1.10 2012/05/04 15:38:34 noud4 Exp $
 #
 
 DISTNAME=	desmume-0.9.8
+PKGREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=desmume/}
 
