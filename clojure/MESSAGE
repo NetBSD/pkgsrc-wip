@@ -1,6 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.2 2012/05/04 11:22:07 ryo-on Exp $
-
-To enable additional modules, you should create .clojure file
-in your working directory, not in home directory.
-===========================================================================
