@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/05/05 22:47:24 pettai Exp $
+# $NetBSD: Makefile,v 1.3 2012/05/05 23:21:21 pettai Exp $
 #
 
 DISTNAME=	bind10-devel-20120329
@@ -6,7 +6,7 @@ CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.isc.org/isc/bind10/devel-20120329/
 
 MAINTAINER=	pettai@NetBSD.org
-HOMEPAGE=	ftp://ftp.isc.org/isc/bind10/devel-20120119/
+HOMEPAGE=	http://www.isc.org/bind10
 COMMENT=	ISC Bind 10 devel-20120119 (snapshot #19)
 LICENSE=	isc
 
@@ -23,6 +23,7 @@ DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
+USE_TOOLS+=	pkg-config
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
 
