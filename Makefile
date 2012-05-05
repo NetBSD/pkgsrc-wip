@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4737 2012/05/05 15:07:11 noud4 Exp $
+# $Id: Makefile,v 1.4738 2012/05/05 22:25:59 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -89,7 +89,6 @@ SUBDIR+=	amanda3-server
 SUBDIR+=	amarok
 SUBDIR+=	analizo
 SUBDIR+=	and
-SUBDIR+=	anki
 SUBDIR+=	ann
 SUBDIR+=	anthy-dic-jis34
 SUBDIR+=	aoeui
