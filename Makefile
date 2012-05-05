@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4738 2012/05/05 22:25:59 thomasklausner Exp $
+# $Id: Makefile,v 1.4739 2012/05/05 23:35:45 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1212,6 +1212,7 @@ SUBDIR+=	just
 SUBDIR+=	jython
 SUBDIR+=	kBuild
 SUBDIR+=	kacst-ttf
+SUBDIR+=	kactivities
 SUBDIR+=	kaffe
 SUBDIR+=	kaffe-x11
 SUBDIR+=	kahakai
@@ -1614,6 +1615,7 @@ SUBDIR+=	nag
 SUBDIR+=	naqsh-ttf
 SUBDIR+=	natali
 SUBDIR+=	naturaldocs
+SUBDIR+=	nautilus-dropbox
 SUBDIR+=	nautilus-image-converter
 SUBDIR+=	nautilus-open-terminal
 SUBDIR+=	nautilus-search-tool
@@ -2868,6 +2870,7 @@ SUBDIR+=	tenshi
 SUBDIR+=	termit
 SUBDIR+=	testdisk
 SUBDIR+=	tetrinet
+SUBDIR+=	tex-abntex
 SUBDIR+=	tex-arabxtex
 SUBDIR+=	tex-arabxtex-doc
 SUBDIR+=	tex-feynmf
@@ -3194,6 +3197,8 @@ SUBDIR+=	zathura
 SUBDIR+=	zinf
 SUBDIR+=	ziparchive
 SUBDIR+=	zipios
+SUBDIR+=	zookeeper-client
+SUBDIR+=	zookeeper-server
 SUBDIR+=	zope3-unstable
 SUBDIR+=	zvbi
 
