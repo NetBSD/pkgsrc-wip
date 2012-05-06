@@ -1,9 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2012/01/31 22:59:46 pettai Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/05/06 08:17:05 pettai Exp $
+bin/b10-dbutil
 bin/b10-host
 bin/b10-loadzone
 bin/bindctl
 include/dns/edns.h
 include/dns/exceptions.h
+include/dns/labelsequence.h
 include/dns/message.h
 include/dns/messagerenderer.h
 include/dns/name.h
@@ -143,6 +145,9 @@ ${PYSITELIB}/isc/log_messages/cmdctl_messages.pyo
 ${PYSITELIB}/isc/log_messages/config_messages.py
 ${PYSITELIB}/isc/log_messages/config_messages.pyc
 ${PYSITELIB}/isc/log_messages/config_messages.pyo
+${PYSITELIB}/isc/log_messages/dbutil_messages.py
+${PYSITELIB}/isc/log_messages/dbutil_messages.pyc
+${PYSITELIB}/isc/log_messages/dbutil_messages.pyo
 ${PYSITELIB}/isc/log_messages/ddns_messages.py
 ${PYSITELIB}/isc/log_messages/ddns_messages.pyc
 ${PYSITELIB}/isc/log_messages/ddns_messages.pyo
@@ -152,6 +157,9 @@ ${PYSITELIB}/isc/log_messages/libxfrin_messages.pyo
 ${PYSITELIB}/isc/log_messages/notify_out_messages.py
 ${PYSITELIB}/isc/log_messages/notify_out_messages.pyc
 ${PYSITELIB}/isc/log_messages/notify_out_messages.pyo
+${PYSITELIB}/isc/log_messages/server_common_messages.py
+${PYSITELIB}/isc/log_messages/server_common_messages.pyc
+${PYSITELIB}/isc/log_messages/server_common_messages.pyo
 ${PYSITELIB}/isc/log_messages/stats_httpd_messages.py
 ${PYSITELIB}/isc/log_messages/stats_httpd_messages.pyc
 ${PYSITELIB}/isc/log_messages/stats_httpd_messages.pyo
@@ -182,16 +190,22 @@ ${PYSITELIB}/isc/notify/__init__.pyo
 ${PYSITELIB}/isc/notify/notify_out.py
 ${PYSITELIB}/isc/notify/notify_out.pyc
 ${PYSITELIB}/isc/notify/notify_out.pyo
+${PYSITELIB}/isc/server_common/__init__.py
+${PYSITELIB}/isc/server_common/__init__.pyc
+${PYSITELIB}/isc/server_common/__init__.pyo
+${PYSITELIB}/isc/server_common/tsig_keyring.py
+${PYSITELIB}/isc/server_common/tsig_keyring.pyc
+${PYSITELIB}/isc/server_common/tsig_keyring.pyo
 ${PYSITELIB}/isc/util/__init__.py
 ${PYSITELIB}/isc/util/__init__.pyc
 ${PYSITELIB}/isc/util/__init__.pyo
+${PYSITELIB}/isc/util/cio/__init__.py
+${PYSITELIB}/isc/util/cio/__init__.pyc
+${PYSITELIB}/isc/util/cio/__init__.pyo
+${PYSITELIB}/isc/util/cio/socketsession.la
 ${PYSITELIB}/isc/util/file.py
 ${PYSITELIB}/isc/util/file.pyc
 ${PYSITELIB}/isc/util/file.pyo
-${PYSITELIB}/isc/util/io/__init__.py
-${PYSITELIB}/isc/util/io/__init__.pyc
-${PYSITELIB}/isc/util/io/__init__.pyo
-${PYSITELIB}/isc/util/io/socketsession.la
 ${PYSITELIB}/isc/util/process.py
 ${PYSITELIB}/isc/util/process.pyc
 ${PYSITELIB}/isc/util/process.pyo
@@ -229,6 +243,7 @@ man/man8/b10-auth.8
 man/man8/b10-cfgmgr.8
 man/man8/b10-cmdctl-usermgr.8
 man/man8/b10-cmdctl.8
+man/man8/b10-dbutil.8
 man/man8/b10-ddns.8
 man/man8/b10-dhcp4.8
 man/man8/b10-dhcp6.8
