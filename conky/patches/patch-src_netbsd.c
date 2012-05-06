@@ -1,8 +1,8 @@
-$NetBSD: patch-src_netbsd.c,v 1.3 2012/05/06 11:32:35 imilh Exp $
+$NetBSD: patch-src_netbsd.c,v 1.4 2012/05/06 16:47:01 imilh Exp $
 
 --- src/netbsd.c.orig	2010-10-05 21:29:36.000000000 +0000
 +++ src/netbsd.c
-@@ -30,239 +30,206 @@
+@@ -30,239 +30,210 @@
  
  #include "netbsd.h"
  #include "net_stat.h"
@@ -117,9 +117,11 @@ $NetBSD: patch-src_netbsd.c,v 1.3 2012/05/06 11:32:35 imilh Exp $
 +
 +	nbmount = getmntinfo(&mntbuf, MNT_NOWAIT);
 +
-+	for (i = 0; i < nbmount; i++)
-+		if (strcmp(mntbuf[i].f_mntonname, mp) == 0)
++	for (i = 0; i < nbmount; i++) {
++		if (strcmp(mntbuf[i].f_mntonname, mp) == 0) {
 +			return 1;
++		}
++	}
 +
  	return 0;
  }
@@ -158,22 +160,23 @@ $NetBSD: patch-src_netbsd.c,v 1.3 2012/05/06 11:32:35 imilh Exp $
 -	total_pages = uvmexp.npages;
 -	free_pages = uvmexp.free;
 -	inactive_pages = uvmexp.inactive;
--
++	info.memmax = uvmexp.npages * uvmexp.pagesize / 1024;
++	info.memfree = uvmexp.inactive * uvmexp.pagesize / 1024;
+ 
 -	info.memmax = (total_pages * pagesize) >> 10;
 -	info.mem = ((total_pages - free_pages - inactive_pages) * pagesize) >> 10;
 -	info.memeasyfree = info.memfree = info.memmax - info.mem;
-+	info.memmax = uvmexp.npages * uvmexp.pagesize / 1024;
-+	info.memfree = uvmexp.free * uvmexp.pagesize / 1024;
 +	info.swapmax = uvmexp.swpages * uvmexp.pagesize / 1024;
-+	info.swap = uvmexp.swpages * uvmexp.pagesize / 1024;
 +	info.swapfree = (uvmexp.swpages - uvmexp.swpginuse) * \
 +		uvmexp.pagesize / 1024;
++
 +	info.buffers = uvmexp.filepages * uvmexp.pagesize / 1024;
 +	info.cached = uvmexp.execpages * uvmexp.pagesize / 1024;
 +
 +	info.mem = info.memmax - info.memfree;
 +	info.memeasyfree = info.memfree;
 +	info.bufmem = info.cached + info.buffers;
++	info.swap = info.swapmax - info.swapfree;
  
 -	if (swapmode(&swap_avail, &swap_free) >= 0) {
 -		info.swapmax = swap_avail;
@@ -272,7 +275,8 @@ $NetBSD: patch-src_netbsd.c,v 1.3 2012/05/06 11:32:35 imilh Exp $
 +			if (ifa->ifa_addr->sa_family != AF_LINK) {
 +				continue;
 +			}
-+
+ 
+-		ns->last_read_trans = ifnet.if_obytes;
 +			for (iftmp = ifa->ifa_next;
 +				 iftmp != NULL && strcmp(ifa->ifa_name, iftmp->ifa_name) == 0;
 +				 iftmp = iftmp->ifa_next) {
@@ -294,17 +298,16 @@ $NetBSD: patch-src_netbsd.c,v 1.3 2012/05/06 11:32:35 imilh Exp $
 +
 +			ns->last_read_recv = r;
  
+-		ns->recv += (ifnet.if_ibytes - ns->last_read_recv);
+-		ns->last_read_recv = ifnet.if_ibytes;
+-		ns->trans += (ifnet.if_obytes - ns->last_read_trans);
 -		ns->last_read_trans = ifnet.if_obytes;
 +			if (t < ns->last_read_trans) {
 +				ns->trans += (long long) 4294967295U - ns->last_read_trans + t;
 +			} else {
 +				ns->trans += (t - ns->last_read_trans);
 +			}
- 
--		ns->recv += (ifnet.if_ibytes - ns->last_read_recv);
--		ns->last_read_recv = ifnet.if_ibytes;
--		ns->trans += (ifnet.if_obytes - ns->last_read_trans);
--		ns->last_read_trans = ifnet.if_obytes;
++
 +			ns->last_read_trans = t;
  
 -		ns->recv_speed = (ns->recv - last_recv) / delta;
@@ -389,7 +392,7 @@ $NetBSD: patch-src_netbsd.c,v 1.3 2012/05/06 11:32:35 imilh Exp $
  }
  
  struct cpu_load_struct {
-@@ -275,13 +242,18 @@ struct cpu_load_struct fresh = {
+@@ -275,13 +246,18 @@ struct cpu_load_struct fresh = {
  
  long cpu_used, oldtotal, oldused;
  
@@ -410,7 +413,7 @@ $NetBSD: patch-src_netbsd.c,v 1.3 2012/05/06 11:32:35 imilh Exp $
  
  	if (sysctlbyname("kern.cp_time", &cp_time, &len, NULL, 0) < 0) {
  		warn("cannot get kern.cp_time");
-@@ -297,17 +269,19 @@ void update_cpu_usage()
+@@ -297,17 +273,19 @@ void update_cpu_usage()
  	total = fresh.load[0] + fresh.load[1] + fresh.load[2] + fresh.load[3];
  
  	if ((total - oldtotal) != 0) {
@@ -434,7 +437,7 @@ $NetBSD: patch-src_netbsd.c,v 1.3 2012/05/06 11:32:35 imilh Exp $
  {
  	double v[3];
  
-@@ -316,6 +290,8 @@ void update_load_average()
+@@ -316,6 +294,8 @@ void update_load_average()
  	info.loadavg[0] = (float) v[0];
  	info.loadavg[1] = (float) v[1];
  	info.loadavg[2] = (float) v[2];
@@ -443,7 +446,7 @@ $NetBSD: patch-src_netbsd.c,v 1.3 2012/05/06 11:32:35 imilh Exp $
  }
  
  double get_acpi_temperature(int fd)
-@@ -364,3 +340,155 @@ int get_entropy_poolsize(unsigned int *v
+@@ -364,3 +344,155 @@ int get_entropy_poolsize(unsigned int *v
  {
  	return 1;
  }

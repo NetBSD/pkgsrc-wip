@@ -1,24 +1,22 @@
-$NetBSD: patch-src_fs.c,v 1.2 2012/05/04 10:57:24 imilh Exp $
+$NetBSD: patch-src_fs.c,v 1.3 2012/05/06 16:47:01 imilh Exp $
 
 Use statvfs interface on NetBSD.
 
 --- src/fs.c.orig	2010-10-05 21:29:36.000000000 +0000
 +++ src/fs.c
-@@ -44,6 +44,13 @@
+@@ -44,6 +44,11 @@
  #include <sys/statfs.h>
  #endif
  
 +/* NetBSD, Solaris */
-+/* #ifdef HAVE_SYS_STATVFS_H */
-+#ifdef __NetBSD__ /* this this is ugly anyway... */
++#ifdef HAVE_SYS_STATVFS_H
 +#include <sys/statvfs.h>
-+#define statfs statvfs
 +#endif
 +
  /* freebsd && netbsd */
  #ifdef HAVE_SYS_PARAM_H
  #include <sys/param.h>
-@@ -52,7 +59,7 @@
+@@ -52,7 +57,7 @@
  #include <sys/mount.h>
  #endif
  
@@ -27,12 +25,47 @@ Use statvfs interface on NetBSD.
  #include <mntent.h>
  #endif
  
-@@ -138,7 +145,7 @@ static void update_fs_stat(struct fs_sta
+@@ -118,13 +123,23 @@ struct fs_stat *prepare_fs_stat(const ch
+ 
+ static void update_fs_stat(struct fs_stat *fs)
+ {
++#ifdef HAVE_SYS_STATFS_H
+ 	struct statfs s;
+ 
+ 	if (statfs(fs->path, &s) == 0) {
++		fs->free = (long long)s.f_bfree * s.f_bsize;
+ 		fs->size = (long long)s.f_blocks * s.f_bsize;
+ 		/* bfree (root) or bavail (non-roots) ? */
+ 		fs->avail = (long long)s.f_bavail * s.f_bsize;
+-		fs->free = (long long)s.f_bfree * s.f_bsize;
++#else
++	struct statvfs s;
++
++	if (statvfs(fs->path, &s) == 0) {
++		fs->free = (long long)s.f_bfree * s.f_frsize;
++		fs->size = (long long)s.f_blocks * s.f_frsize;
++		/* bfree (root) or bavail (non-roots) ? */
++		fs->avail = (long long)s.f_bavail * s.f_frsize;
++#endif
+ 		get_fs_type(fs->path, fs->type);
+ 	} else {
+ 		fs->size = 0;
+@@ -138,10 +153,17 @@ static void update_fs_stat(struct fs_sta
  void get_fs_type(const char *path, char *result)
  {
  
 -#if defined(HAVE_STRUCT_STATFS_F_FSTYPENAME) || defined(__FreeBSD__) || defined (__OpenBSD__)
 +#if defined(HAVE_STRUCT_STATFS_F_FSTYPENAME) || defined(__FreeBSD__) || defined (__OpenBSD__) || defined(__NetBSD__)
  
++#ifdef HAVE_SYS_STATFS_H
  	struct statfs s;
++
  	if (statfs(path, &s) == 0) {
++#else
++	struct statvfs s;
++
++	if (statvfs(path, &s) == 0) {
++#endif
+ 		strncpy(result, s.f_fstypename, DEFAULT_TEXT_BUFFER_SIZE);
+ 	} else {
+ 		NORM_ERR("statfs '%s': %s", path, strerror(errno));
