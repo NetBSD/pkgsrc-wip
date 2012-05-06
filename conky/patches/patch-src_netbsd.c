@@ -1,8 +1,8 @@
-$NetBSD: patch-src_netbsd.c,v 1.2 2012/05/06 10:46:15 imilh Exp $
+$NetBSD: patch-src_netbsd.c,v 1.3 2012/05/06 11:32:35 imilh Exp $
 
 --- src/netbsd.c.orig	2010-10-05 21:29:36.000000000 +0000
 +++ src/netbsd.c
-@@ -30,239 +30,205 @@
+@@ -30,239 +30,206 @@
  
  #include "netbsd.h"
  #include "net_stat.h"
@@ -15,13 +15,15 @@ $NetBSD: patch-src_netbsd.c,v 1.2 2012/05/06 10:46:15 imilh Exp $
 -int kd_init = 0, nkd_init = 0;
  u_int32_t sensvalue;
  char errbuf[_POSIX2_LINE_MAX];
++static short cpu_setup = 0;
  
 -static int init_kvm(void)
 -{
 -	if (kd_init) {
 -		return 0;
 -	}
--
++inline void proc_find_top(struct process **cpu, struct process **mem);
+ 
 -	kd = kvm_openfiles(NULL, NULL, NULL, KVM_NO_FILES, errbuf);
 -	if (kd == NULL) {
 -		warnx("cannot kvm_openfiles: %s", errbuf);
@@ -30,8 +32,7 @@ $NetBSD: patch-src_netbsd.c,v 1.2 2012/05/06 10:46:15 imilh Exp $
 -	kd_init = 1;
 -	return 0;
 -}
-+inline void proc_find_top(struct process **cpu, struct process **mem);
- 
+-
 -static int swapmode(int *retavail, int *retfree)
 +void
 +prepare_update(void)
@@ -157,6 +158,10 @@ $NetBSD: patch-src_netbsd.c,v 1.2 2012/05/06 10:46:15 imilh Exp $
 -	total_pages = uvmexp.npages;
 -	free_pages = uvmexp.free;
 -	inactive_pages = uvmexp.inactive;
+-
+-	info.memmax = (total_pages * pagesize) >> 10;
+-	info.mem = ((total_pages - free_pages - inactive_pages) * pagesize) >> 10;
+-	info.memeasyfree = info.memfree = info.memmax - info.mem;
 +	info.memmax = uvmexp.npages * uvmexp.pagesize / 1024;
 +	info.memfree = uvmexp.free * uvmexp.pagesize / 1024;
 +	info.swapmax = uvmexp.swpages * uvmexp.pagesize / 1024;
@@ -170,10 +175,6 @@ $NetBSD: patch-src_netbsd.c,v 1.2 2012/05/06 10:46:15 imilh Exp $
 +	info.memeasyfree = info.memfree;
 +	info.bufmem = info.cached + info.buffers;
  
--	info.memmax = (total_pages * pagesize) >> 10;
--	info.mem = ((total_pages - free_pages - inactive_pages) * pagesize) >> 10;
--	info.memeasyfree = info.memfree = info.memmax - info.mem;
--
 -	if (swapmode(&swap_avail, &swap_free) >= 0) {
 -		info.swapmax = swap_avail;
 -		info.swap = (swap_avail - swap_free);
@@ -271,8 +272,7 @@ $NetBSD: patch-src_netbsd.c,v 1.2 2012/05/06 10:46:15 imilh Exp $
 +			if (ifa->ifa_addr->sa_family != AF_LINK) {
 +				continue;
 +			}
- 
--		ns->last_read_trans = ifnet.if_obytes;
++
 +			for (iftmp = ifa->ifa_next;
 +				 iftmp != NULL && strcmp(ifa->ifa_name, iftmp->ifa_name) == 0;
 +				 iftmp = iftmp->ifa_next) {
@@ -294,16 +294,17 @@ $NetBSD: patch-src_netbsd.c,v 1.2 2012/05/06 10:46:15 imilh Exp $
 +
 +			ns->last_read_recv = r;
  
--		ns->recv += (ifnet.if_ibytes - ns->last_read_recv);
--		ns->last_read_recv = ifnet.if_ibytes;
--		ns->trans += (ifnet.if_obytes - ns->last_read_trans);
 -		ns->last_read_trans = ifnet.if_obytes;
 +			if (t < ns->last_read_trans) {
 +				ns->trans += (long long) 4294967295U - ns->last_read_trans + t;
 +			} else {
 +				ns->trans += (t - ns->last_read_trans);
 +			}
-+
+ 
+-		ns->recv += (ifnet.if_ibytes - ns->last_read_recv);
+-		ns->last_read_recv = ifnet.if_ibytes;
+-		ns->trans += (ifnet.if_obytes - ns->last_read_trans);
+-		ns->last_read_trans = ifnet.if_obytes;
 +			ns->last_read_trans = t;
  
 -		ns->recv_speed = (ns->recv - last_recv) / delta;
@@ -388,7 +389,7 @@ $NetBSD: patch-src_netbsd.c,v 1.2 2012/05/06 10:46:15 imilh Exp $
  }
  
  struct cpu_load_struct {
-@@ -275,13 +241,13 @@ struct cpu_load_struct fresh = {
+@@ -275,13 +242,18 @@ struct cpu_load_struct fresh = {
  
  long cpu_used, oldtotal, oldused;
  
@@ -400,11 +401,16 @@ $NetBSD: patch-src_netbsd.c,v 1.2 2012/05/06 10:46:15 imilh Exp $
  	size_t len = sizeof(cp_time);
  
 -	info.cpu_usage = 0;
++	if ((cpu_setup == 0) || (!info.cpu_usage)) {
++		get_cpu_count();
++		cpu_setup = 1;
++	}
++
 +	info.cpu_usage[0] = 0;
  
  	if (sysctlbyname("kern.cp_time", &cp_time, &len, NULL, 0) < 0) {
  		warn("cannot get kern.cp_time");
-@@ -297,17 +263,19 @@ void update_cpu_usage()
+@@ -297,17 +269,19 @@ void update_cpu_usage()
  	total = fresh.load[0] + fresh.load[1] + fresh.load[2] + fresh.load[3];
  
  	if ((total - oldtotal) != 0) {
@@ -428,7 +434,7 @@ $NetBSD: patch-src_netbsd.c,v 1.2 2012/05/06 10:46:15 imilh Exp $
  {
  	double v[3];
  
-@@ -316,6 +284,8 @@ void update_load_average()
+@@ -316,6 +290,8 @@ void update_load_average()
  	info.loadavg[0] = (float) v[0];
  	info.loadavg[1] = (float) v[1];
  	info.loadavg[2] = (float) v[2];
@@ -437,7 +443,7 @@ $NetBSD: patch-src_netbsd.c,v 1.2 2012/05/06 10:46:15 imilh Exp $
  }
  
  double get_acpi_temperature(int fd)
-@@ -364,3 +334,155 @@ int get_entropy_poolsize(unsigned int *v
+@@ -364,3 +340,155 @@ int get_entropy_poolsize(unsigned int *v
  {
  	return 1;
  }
