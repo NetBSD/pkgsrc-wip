@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4739 2012/05/05 23:35:45 thomasklausner Exp $
+# $Id: Makefile,v 1.4740 2012/05/06 13:19:15 obache Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2555,7 +2555,6 @@ SUBDIR+=	pypanel
 SUBDIR+=	pypod
 SUBDIR+=	pysite
 SUBDIR+=	pythia6
-SUBDIR+=	python32
 SUBDIR+=	pythoncad
 SUBDIR+=	pythontoolkit
 SUBDIR+=	pywm
