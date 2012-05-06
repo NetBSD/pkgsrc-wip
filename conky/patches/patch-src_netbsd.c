@@ -1,4 +1,4 @@
-$NetBSD: patch-src_netbsd.c,v 1.4 2012/05/06 16:47:01 imilh Exp $
+$NetBSD: patch-src_netbsd.c,v 1.5 2012/05/06 19:16:53 imilh Exp $
 
 --- src/netbsd.c.orig	2010-10-05 21:29:36.000000000 +0000
 +++ src/netbsd.c
@@ -267,7 +267,8 @@ $NetBSD: patch-src_netbsd.c,v 1.4 2012/05/06 16:47:01 imilh Exp $
 -		}
 +		if (ifa->ifa_flags & IFF_UP) {
 +			struct ifaddrs *iftmp;
-+
+ 
+-		ns->last_read_trans = ifnet.if_obytes;
 +			ns->up = 1;
 +			last_recv = ns->recv;
 +			last_trans = ns->trans;
@@ -275,8 +276,7 @@ $NetBSD: patch-src_netbsd.c,v 1.4 2012/05/06 16:47:01 imilh Exp $
 +			if (ifa->ifa_addr->sa_family != AF_LINK) {
 +				continue;
 +			}
- 
--		ns->last_read_trans = ifnet.if_obytes;
++
 +			for (iftmp = ifa->ifa_next;
 +				 iftmp != NULL && strcmp(ifa->ifa_name, iftmp->ifa_name) == 0;
 +				 iftmp = iftmp->ifa_next) {
@@ -295,13 +295,15 @@ $NetBSD: patch-src_netbsd.c,v 1.4 2012/05/06 16:47:01 imilh Exp $
 +			} else {
 +				ns->recv += (r - ns->last_read_recv);
 +			}
-+
-+			ns->last_read_recv = r;
  
 -		ns->recv += (ifnet.if_ibytes - ns->last_read_recv);
 -		ns->last_read_recv = ifnet.if_ibytes;
 -		ns->trans += (ifnet.if_obytes - ns->last_read_trans);
 -		ns->last_read_trans = ifnet.if_obytes;
++			ns->last_read_recv = r;
+ 
+-		ns->recv_speed = (ns->recv - last_recv) / delta;
+-		ns->trans_speed = (ns->trans - last_trans) / delta;
 +			if (t < ns->last_read_trans) {
 +				ns->trans += (long long) 4294967295U - ns->last_read_trans + t;
 +			} else {
@@ -309,9 +311,7 @@ $NetBSD: patch-src_netbsd.c,v 1.4 2012/05/06 16:47:01 imilh Exp $
 +			}
 +
 +			ns->last_read_trans = t;
- 
--		ns->recv_speed = (ns->recv - last_recv) / delta;
--		ns->trans_speed = (ns->trans - last_trans) / delta;
++
 +			/* calculate speeds */
 +			ns->recv_speed = (ns->recv - last_recv) / delta;
 +			ns->trans_speed = (ns->trans - last_trans) / delta;
@@ -446,7 +446,7 @@ $NetBSD: patch-src_netbsd.c,v 1.4 2012/05/06 16:47:01 imilh Exp $
  }
  
  double get_acpi_temperature(int fd)
-@@ -364,3 +344,155 @@ int get_entropy_poolsize(unsigned int *v
+@@ -364,3 +344,156 @@ int get_entropy_poolsize(unsigned int *v
  {
  	return 1;
  }
@@ -555,50 +555,51 @@ $NetBSD: patch-src_netbsd.c,v 1.4 2012/05/06 16:47:01 imilh Exp $
 +        processes = malloc(n_processes * sizeof(struct process));
 +
 +        for (i = 0; i < n_processes; i++) {
-+                if (!((p[i].p_flag & P_SYSTEM)) && p[i].p_comm != NULL) {
-+                        processes[j].pid = p[i].p_pid;
-+                        processes[j].name = strndup(p[i].p_comm, text_buffer_size);
-+                        processes[j].amount = 100.0 * p[i].p_pctcpu / FSCALE;
-+                        j++;
-+                }
++			if (!((p[i].p_flag & P_SYSTEM)) && p[i].p_comm != NULL) {
++				processes[j].pid = p[i].p_pid;
++				processes[j].name = strndup(p[i].p_comm, text_buffer_size);
++				processes[j].amount = 100.0 * p[i].p_pctcpu / FSCALE;
++				processes[j].rss = p[i].p_vm_rssize;
++				j++;
++			}
 +        }
 +
 +        qsort(processes, j - 1, sizeof(struct process), comparemem);
 +        for (i = 0; i < 10; i++) {
-+                struct process *tmp, *ttmp;
-+
-+                tmp = malloc(sizeof(struct process));
-+                tmp->pid = processes[i].pid;
-+                tmp->amount = processes[i].amount;
-+                tmp->name = strndup(processes[i].name, text_buffer_size);
-+
-+                ttmp = mem[i];
-+                mem[i] = tmp;
-+                if (ttmp != NULL) {
-+                        free(ttmp->name);
-+                        free(ttmp);
-+                }
++			struct process *tmp, *ttmp;
++				
++			tmp = malloc(sizeof(struct process));
++			tmp->pid = processes[i].pid;
++			tmp->amount = processes[i].amount;
++			tmp->name = strndup(processes[i].name, text_buffer_size);
++			
++			ttmp = mem[i];
++			mem[i] = tmp;
++			if (ttmp != NULL) {
++				free(ttmp->name);
++				free(ttmp);
++			}
 +        }
 +
 +        qsort(processes, j - 1, sizeof(struct process), comparecpu);
 +        for (i = 0; i < 10; i++) {
-+                struct process *tmp, *ttmp;
++			struct process *tmp, *ttmp;
 +
-+                tmp = malloc(sizeof(struct process));
-+                tmp->pid = processes[i].pid;
-+                tmp->amount = processes[i].amount;
-+                tmp->name = strndup(processes[i].name, text_buffer_size);
-+
-+                ttmp = cpu[i];
-+                cpu[i] = tmp;
-+                if (ttmp != NULL) {
-+                        free(ttmp->name);
-+                        free(ttmp);
-+                }
++			tmp = malloc(sizeof(struct process));
++			tmp->pid = processes[i].pid;
++			tmp->amount = processes[i].amount;
++			tmp->name = strndup(processes[i].name, text_buffer_size);
++			
++			ttmp = cpu[i];
++			cpu[i] = tmp;
++			if (ttmp != NULL) {
++				free(ttmp->name);
++				free(ttmp);
++			}
 +        }
 +
 +        for (i = 0; i < j; i++) {
-+                free(processes[i].name);
++			free(processes[i].name);
 +        }
 +        free(processes);
 +}
