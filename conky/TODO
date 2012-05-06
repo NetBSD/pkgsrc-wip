@@ -1,1 +1,1 @@
-Now builds, still lots of work in netbsd.c for this to work correctly
+Basic sensors now working. Still needs cleanup work plus ACPI and APM.

@@ -1,4 +1,4 @@
-$NetBSD: patch-src_core.c,v 1.2 2012/05/04 10:57:24 imilh Exp $
+$NetBSD: patch-src_core.c,v 1.3 2012/05/06 10:46:15 imilh Exp $
 
 NetBSD's curses are good enough, use portable header file name.
 
@@ -13,15 +13,16 @@ NetBSD's curses are good enough, use portable header file name.
  #endif
  
  /* check for OS and include appropriate headers */
-@@ -75,6 +75,7 @@
+@@ -75,6 +75,8 @@
  #include "freebsd.h"
  #elif defined(__OpenBSD__)
  #include "openbsd.h"
 +#elif defined(__NetBSD__)
++#include "netbsd.h"
  #endif
  
  #include <string.h>
-@@ -237,7 +238,7 @@ struct text_object *construct_text_objec
+@@ -237,7 +239,7 @@ struct text_object *construct_text_objec
  
  #endif /* __linux__ */
  
@@ -30,3 +31,21 @@ NetBSD's curses are good enough, use portable header file name.
  	END OBJ(acpifan, 0)
  	END OBJ(battery, 0)
  		char bat[64];
+@@ -1364,7 +1366,7 @@ void free_text_objects(struct text_objec
+ 	for (obj = root->prev; obj; obj = root->prev) {
+ 		root->prev = obj->prev;
+ 		switch (obj->type) {
+-#ifndef __OpenBSD__
++#if !defined(__OpenBSD__) && !defined(__NetBSD__)
+ 			case OBJ_acpitemp:
+ 				close(data.i);
+ 				break;
+@@ -1638,7 +1640,7 @@ void free_text_objects(struct text_objec
+ #endif /* HAVE_LUA */
+ 			case OBJ_pre_exec:
+ 				break;
+-#ifndef __OpenBSD__
++#if !defined(__OpenBSD__) && !defined(__NetBSD__)
+ 			case OBJ_battery:
+ 				free(data.s);
+ 				break;
