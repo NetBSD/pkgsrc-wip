@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/05/04 10:57:24 imilh Exp $
+# $NetBSD: Makefile,v 1.3 2012/05/06 20:15:01 thomasklausner Exp $
 #
 
 DISTNAME=	conky-1.8.1
@@ -15,7 +15,12 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config autoconf automake
+USE_TOOLS+=	pkg-config aclocal autoconf autoheader automake
+
+EGDIR=		share/examples/conky
+OWN_DIRS=	${PKG_SYSCONFDIR}/conky
+CONF_FILES=	${EGDIR}/conky.conf ${PKG_SYSCONFDIR}/conky/conky.conf
+CONF_FILES+=	${EGDIR}/conky_no_x11.conf ${PKG_SYSCONFDIR}/conky/conky_no_x11.conf
 
 .include "../../mk/bsd.prefs.mk"
 
