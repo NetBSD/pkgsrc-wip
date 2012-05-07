@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4741 2012/05/07 00:07:56 thomasklausner Exp $
+# $Id: Makefile,v 1.4742 2012/05/07 11:53:06 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1079,6 +1079,7 @@ SUBDIR+=	hydrogen-current
 SUBDIR+=	hyena
 SUBDIR+=	hylafax
 SUBDIR+=	hylafax-devel
+SUBDIR+=	hyperrogue
 SUBDIR+=	hztool
 SUBDIR+=	i3
 SUBDIR+=	i3-devel
