@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/05/07 11:09:31 thomasklausner Exp $
+
+SHA1 (hyperrogue-35.zip) = 867393f85c2d72dac0d07c908e45d617a893ae5c
+RMD160 (hyperrogue-35.zip) = 268be944ea6bd23dd82fb4b13f675d371da1c095
+Size (hyperrogue-35.zip) = 588364 bytes
+SHA1 (patch-Makefile) = b175e10285e1acafccbabacb81bc78dbf31b731d

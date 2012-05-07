@@ -1,0 +1,10 @@
+$NetBSD: patch-Makefile,v 1.1.1.1 2012/05/07 11:09:31 thomasklausner Exp $
+
+Fix linking with support libraries (missing rpath).
+
+--- Makefile.orig	2012-05-03 12:14:38.000000000 +0000
++++ Makefile
+@@ -1,2 +1,2 @@
+ hyper: hyper.cpp graph.cpp hyperpoint.cpp geometry.cpp cell.cpp heptagon.cpp game.cpp classes.cpp polygons.cpp
+-	g++ hyper.cpp -o hyper -lSDL -lSDL_ttf -DFHS -Wall -g -lSDL_gfx -O3
++	g++ hyper.cpp -o hyper `pkg-config --libs sdl` `pkg-config --libs SDL_ttf` -DFHS -Wall -g `pkg-config --libs SDL_gfx` -O3
