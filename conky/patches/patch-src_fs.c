@@ -1,4 +1,6 @@
-$NetBSD: patch-src_fs.c,v 1.4 2012/05/07 08:45:17 imilh Exp $
+$NetBSD: patch-src_fs.c,v 1.5 2012/05/07 09:19:36 thomasklausner Exp $
+
+Check for sys/statvfs.h.
 
 --- src/fs.c.orig	2012-05-03 21:08:27.000000000 +0000
 +++ src/fs.c
