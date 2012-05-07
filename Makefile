@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4740 2012/05/06 13:19:15 obache Exp $
+# $Id: Makefile,v 1.4741 2012/05/07 00:07:56 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -466,6 +466,7 @@ SUBDIR+=	downtimed
 SUBDIR+=	dpic
 SUBDIR+=	dragbox
 SUBDIR+=	dri
+SUBDIR+=	dropbox
 SUBDIR+=	drow
 SUBDIR+=	drpython
 SUBDIR+=	drumpiler
