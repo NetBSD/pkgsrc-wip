@@ -1,0 +1,10 @@
+Two issues on NetBSD:
+a) hangs on 6.99.6/amd64 during the setup step
+b) I read it needs inotify support, so making it upload will probably be hard;
+   it might auto-download though
+
+One general issue:
+It complains about the non-standard installation location.
+I think the only problem that this could cause is if it wants to
+write in its own directory. I don't know if it does though.
+If it does, I suggest removing the package, since there's no point...

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/05/07 00:02:38 thomasklausner Exp $
+
+SHA1 (dropbox-lnx.x86-1.4.0.tar.gz) = 42a78134d8cd08defcb8cde52571ee75e3331ee6
+RMD160 (dropbox-lnx.x86-1.4.0.tar.gz) = 4219766bdd50b909becf81b51ea24dcc7cb2d68e
+Size (dropbox-lnx.x86-1.4.0.tar.gz) = 17917651 bytes
