@@ -1,8 +1,6 @@
-$NetBSD: patch-src_fs.c,v 1.3 2012/05/06 16:47:01 imilh Exp $
+$NetBSD: patch-src_fs.c,v 1.4 2012/05/07 08:45:17 imilh Exp $
 
-Use statvfs interface on NetBSD.
-
---- src/fs.c.orig	2010-10-05 21:29:36.000000000 +0000
+--- src/fs.c.orig	2012-05-03 21:08:27.000000000 +0000
 +++ src/fs.c
 @@ -44,6 +44,11 @@
  #include <sys/statfs.h>
@@ -25,32 +23,30 @@ Use statvfs interface on NetBSD.
  #include <mntent.h>
  #endif
  
-@@ -118,13 +123,23 @@ struct fs_stat *prepare_fs_stat(const ch
+@@ -118,6 +123,7 @@ struct fs_stat *prepare_fs_stat(const ch
  
  static void update_fs_stat(struct fs_stat *fs)
  {
 +#ifdef HAVE_SYS_STATFS_H
- 	struct statfs s;
+ 	struct statfs64 s;
  
- 	if (statfs(fs->path, &s) == 0) {
-+		fs->free = (long long)s.f_bfree * s.f_bsize;
- 		fs->size = (long long)s.f_blocks * s.f_bsize;
+ 	if (statfs64(fs->path, &s) == 0) {
+@@ -125,6 +131,14 @@ static void update_fs_stat(struct fs_sta
  		/* bfree (root) or bavail (non-roots) ? */
  		fs->avail = (long long)s.f_bavail * s.f_bsize;
--		fs->free = (long long)s.f_bfree * s.f_bsize;
+ 		fs->free = (long long)s.f_bfree * s.f_bsize;
 +#else
 +	struct statvfs s;
 +
 +	if (statvfs(fs->path, &s) == 0) {
 +		fs->free = (long long)s.f_bfree * s.f_frsize;
 +		fs->size = (long long)s.f_blocks * s.f_frsize;
-+		/* bfree (root) or bavail (non-roots) ? */
 +		fs->avail = (long long)s.f_bavail * s.f_frsize;
 +#endif
  		get_fs_type(fs->path, fs->type);
  	} else {
- 		fs->size = 0;
-@@ -138,10 +153,17 @@ static void update_fs_stat(struct fs_sta
+ 		NORM_ERR("statfs64 '%s': %s", fs->path, strerror(errno));
+@@ -138,10 +152,17 @@ static void update_fs_stat(struct fs_sta
  void get_fs_type(const char *path, char *result)
  {
  

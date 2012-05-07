@@ -1,6 +1,6 @@
-$NetBSD: patch-src_netbsd.c,v 1.6 2012/05/06 20:54:11 imilh Exp $
+$NetBSD: patch-src_netbsd.c,v 1.7 2012/05/07 08:45:17 imilh Exp $
 
---- src/netbsd.c.orig	2010-10-05 21:29:36.000000000 +0000
+--- src/netbsd.c.orig	2012-05-03 21:08:27.000000000 +0000
 +++ src/netbsd.c
 @@ -30,239 +30,210 @@
  

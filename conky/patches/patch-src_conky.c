@@ -1,8 +1,6 @@
-$NetBSD: patch-src_conky.c,v 1.3 2012/05/06 10:46:15 imilh Exp $
+$NetBSD: patch-src_conky.c,v 1.4 2012/05/07 08:45:17 imilh Exp $
 
-NetBSD's curses are good enough, use portable header file name.
-
---- src/conky.c.orig	2010-10-05 21:29:36.000000000 +0000
+--- src/conky.c.orig	2012-05-03 21:22:21.000000000 +0000
 +++ src/conky.c
 @@ -65,7 +65,7 @@
  #include <fcntl.h>
@@ -25,7 +23,7 @@ NetBSD's curses are good enough, use portable header file name.
  #if defined(__FreeBSD_kernel__)
  #include <bsd/bsd.h>
  #endif
-@@ -804,7 +807,7 @@ void generate_text_internal(char *p, int
+@@ -784,7 +787,7 @@ void generate_text_internal(char *p, int
  			OBJ(read_tcp) {
  				print_read_tcp(obj, p, p_max_size);
  			}
@@ -34,7 +32,7 @@ NetBSD's curses are good enough, use portable header file name.
  			OBJ(acpitemp) {
  				temp_print(p, p_max_size, get_acpi_temperature(obj->data.i), TEMP_CELSIUS);
  			}
-@@ -819,7 +822,7 @@ void generate_text_internal(char *p, int
+@@ -799,7 +802,7 @@ void generate_text_internal(char *p, int
  			OBJ(freq_g) {
  				static int ok = 1;
  				if (ok) {
@@ -43,7 +41,7 @@ NetBSD's curses are good enough, use portable header file name.
  					ok = get_freq(p, p_max_size, "%'.2f", 1000,
  							obj->data.i);
  #else
-@@ -866,7 +869,7 @@ void generate_text_internal(char *p, int
+@@ -846,7 +849,7 @@ void generate_text_internal(char *p, int
  
  #endif /* __linux__ */
  
@@ -52,7 +50,7 @@ NetBSD's curses are good enough, use portable header file name.
  			OBJ(acpifan) {
  				get_acpi_fan(p, p_max_size);
  			}
-@@ -3531,6 +3534,9 @@ static void main_loop(void)
+@@ -3493,6 +3496,9 @@ static void main_loop(void)
  	next_update_time = get_time();
  	info.looped = 0;
  	while (terminate == 0 && (total_run_times == 0 || info.looped < total_run_times)) {
@@ -62,7 +60,7 @@ NetBSD's curses are good enough, use portable header file name.
  		if(update_interval_bat != NOBATTERY && update_interval_bat != update_interval_old) {
  			char buf[max_user_text];
  
-@@ -3541,6 +3547,7 @@ static void main_loop(void)
+@@ -3503,6 +3509,7 @@ static void main_loop(void)
  				update_interval = update_interval_old;
  			}
  		}
@@ -70,9 +68,9 @@ NetBSD's curses are good enough, use portable header file name.
  		info.looped++;
  
  #ifdef SIGNAL_BLOCKING
-@@ -5717,6 +5724,10 @@ void initialisation(int argc, char **arg
- 		CRIT_ERR(NULL, NULL, "cannot read kvm");
+@@ -5680,6 +5687,10 @@ void initialisation(int argc, char **arg
  	}
+ 	pthread_mutex_init(&kvm_proc_mutex, NULL);
  #endif
 +#if defined(__NetBSD__)
 +	if ((kd = kvm_openfiles(NULL, NULL, NULL, KVM_NO_FILES, NULL)) == NULL)
@@ -81,12 +79,17 @@ NetBSD's curses are good enough, use portable header file name.
  
  	while (1) {
  		int c = getopt_long(argc, argv, getopt_string, longopts, NULL);
-@@ -5997,7 +6008,7 @@ int main(int argc, char **argv)
+@@ -5960,10 +5971,12 @@ int main(int argc, char **argv)
  	curl_global_cleanup();
  #endif
  
 -#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__)
 +#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__NetBSD__)
  	kvm_close(kd);
++#ifndef __NetBSD__
+ 	pthread_mutex_destroy(&kvm_proc_mutex);
  #endif
++#endif
+ 
+ 	return 0;
  

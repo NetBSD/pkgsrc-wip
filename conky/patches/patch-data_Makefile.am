@@ -1,8 +1,6 @@
-$NetBSD: patch-data_Makefile.am,v 1.1 2012/05/06 20:15:01 thomasklausner Exp $
+$NetBSD: patch-data_Makefile.am,v 1.2 2012/05/07 08:45:17 imilh Exp $
 
-Install config into example directory.
-
---- data/Makefile.am.orig	2010-03-25 17:42:11.000000000 +0000
+--- data/Makefile.am.orig	2010-10-20 00:32:27.000000000 +0000
 +++ data/Makefile.am
 @@ -25,7 +25,7 @@
  # along with this program.  If not, see <http://www.gnu.org/licenses/>.

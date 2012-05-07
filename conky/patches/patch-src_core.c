@@ -1,8 +1,6 @@
-$NetBSD: patch-src_core.c,v 1.3 2012/05/06 10:46:15 imilh Exp $
+$NetBSD: patch-src_core.c,v 1.4 2012/05/07 08:45:17 imilh Exp $
 
-NetBSD's curses are good enough, use portable header file name.
-
---- src/core.c.orig	2010-10-05 21:29:36.000000000 +0000
+--- src/core.c.orig	2012-05-03 21:08:27.000000000 +0000
 +++ src/core.c
 @@ -65,7 +65,7 @@
  #include "top.h"
@@ -31,7 +29,7 @@ NetBSD's curses are good enough, use portable header file name.
  	END OBJ(acpifan, 0)
  	END OBJ(battery, 0)
  		char bat[64];
-@@ -1364,7 +1366,7 @@ void free_text_objects(struct text_objec
+@@ -1371,7 +1373,7 @@ void free_text_objects(struct text_objec
  	for (obj = root->prev; obj; obj = root->prev) {
  		root->prev = obj->prev;
  		switch (obj->type) {
@@ -40,7 +38,7 @@ NetBSD's curses are good enough, use portable header file name.
  			case OBJ_acpitemp:
  				close(data.i);
  				break;
-@@ -1638,7 +1640,7 @@ void free_text_objects(struct text_objec
+@@ -1645,7 +1647,7 @@ void free_text_objects(struct text_objec
  #endif /* HAVE_LUA */
  			case OBJ_pre_exec:
  				break;
