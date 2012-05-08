@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/05/07 08:45:17 imilh Exp $
+# $NetBSD: Makefile,v 1.5 2012/05/08 09:45:11 imilh Exp $
 #
 
 DISTNAME=	conky-1.9.0
@@ -17,6 +17,9 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config aclocal autoconf autoheader automake
 
+CONFIGURE_ARGS+=	--enable-imlib2 --enable-lua-imlib2
+CONFIGURE_ARGS+=	--enable-lua-cairo
+
 EGDIR=		share/examples/conky
 OWN_DIRS=	${PKG_SYSCONFDIR}/conky
 CONF_FILES=	${EGDIR}/conky.conf ${PKG_SYSCONFDIR}/conky/conky.conf
@@ -32,9 +35,11 @@ pre-configure:
 	aclocal; autoheader; automake -a --foreign -i; autoconf
 
 .include "../../devel/ncurses/buildlink3.mk"
-.include "../../lang/lua/buildlink3.mk"
+.include "../../devel/tolua++/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXdamage/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
+.include "../../graphics/cairo/buildlink3.mk"
+.include "../../graphics/imlib2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
