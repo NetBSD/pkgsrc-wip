@@ -1,10 +1,25 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/03/09 01:42:02 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/05/09 22:24:41 noud4 Exp $
 bin/parcellite
+etc/xdg/autostart/parcellite-startup.desktop
 man/man1/parcellite.1
 share/applications/parcellite.desktop
+share/locale/cs/LC_MESSAGES/parcellite.mo
+share/locale/da/LC_MESSAGES/parcellite.mo
 share/locale/de/LC_MESSAGES/parcellite.mo
 share/locale/es/LC_MESSAGES/parcellite.mo
+share/locale/fr/LC_MESSAGES/parcellite.mo
 share/locale/hu/LC_MESSAGES/parcellite.mo
 share/locale/it/LC_MESSAGES/parcellite.mo
 share/locale/ja/LC_MESSAGES/parcellite.mo
+share/locale/nb/LC_MESSAGES/parcellite.mo
+share/locale/pl/LC_MESSAGES/parcellite.mo
+share/locale/pl_PL/LC_MESSAGES/parcellite.mo
+share/locale/pt_BR/LC_MESSAGES/parcellite.mo
+share/locale/ro/LC_MESSAGES/parcellite.mo
 share/locale/ru/LC_MESSAGES/parcellite.mo
+share/locale/sv/LC_MESSAGES/parcellite.mo
+share/locale/tr/LC_MESSAGES/parcellite.mo
+share/locale/zh_CN/LC_MESSAGES/parcellite.mo
+share/pixmaps/parcellite.png
+share/pixmaps/parcellite.svg
+share/pixmaps/parcellite.xpm

@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2012/05/09 22:18:08 noud4 Exp $
+# $NetBSD: Makefile,v 1.5 2012/05/09 22:24:41 noud4 Exp $
 #
 
-DISTNAME=	parcellite-0.9
-PKGREVISION=	2
+DISTNAME=	parcellite-1.0.1
 CATEGORIES=	editors
-MASTER_SITES=	http://xyhthyx.googlecode.com/files/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=parcellite/}
 
 MAINTAINER=	pkgsrc-users@netbsd.org
 HOMEPAGE=	http://parcellite.sourceforge.net/
