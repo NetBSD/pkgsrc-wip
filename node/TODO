@@ -5,3 +5,7 @@ with 'undefined reference to `v8::internal::ThreadHandle'
 
 these should be defined in platform_netbsd.cc, but we probably need
 another patch to convince the compilation to use it.
+
+- This package has known vulnerabilities, please investigate and fix
+  if possible. see:
+    http://secunia.com/advisories/49066/
