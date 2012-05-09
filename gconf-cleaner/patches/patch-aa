@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1 2012/05/09 22:38:23 noud4 Exp $
+
+glib2
+
+--- src/main.c.orig	2012-05-09 22:34:59.000000000 +0000
++++ src/main.c	2012-05-09 22:35:09.000000000 +0000
+@@ -27,8 +27,8 @@
+ #include <errno.h>
+ #include <string.h>
+ #include <sys/stat.h>
+ #include <glib/gi18n.h>
+-#include <glib/gmain.h>
++#include <glib.h>
+ #include <gtk/gtk.h>
+ #include <gconf/gconf.h>
+ #include "gconf-cleaner.h"

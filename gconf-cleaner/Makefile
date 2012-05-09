@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2010/06/13 22:47:04 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2012/05/09 22:38:23 noud4 Exp $
 #
 
 DISTNAME=	gconf-cleaner-0.0.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	http://gconf-cleaner.googlecode.com/files/
 
