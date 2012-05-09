@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2010/06/13 22:47:12 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2012/05/09 22:18:08 noud4 Exp $
 #
 
 DISTNAME=	parcellite-0.9
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	editors
 MASTER_SITES=	http://xyhthyx.googlecode.com/files/
 

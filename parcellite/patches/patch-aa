@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1 2012/05/09 22:18:08 noud4 Exp $
+
+glib2
+
+--- src/keybinder.h.orig	2012-05-09 21:47:20.000000000 +0000
++++ src/keybinder.h	2012-05-09 21:47:32.000000000 +0000
+@@ -20,7 +20,7 @@
+ #ifndef __KEY_BINDER_H__
+ #define __KEY_BINDER_H__
+ 
+-#include <glib/gtypes.h>
++#include <glib.h>
+ 
+ G_BEGIN_DECLS
+ 
