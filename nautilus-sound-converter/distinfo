@@ -1,6 +1,9 @@
-$NetBSD: distinfo,v 1.3 2010/07/17 13:08:34 jihbed Exp $
+$NetBSD: distinfo,v 1.4 2012/05/09 19:35:45 noud4 Exp $
 
 SHA1 (nautilus-sound-converter-1.0.5.tar.bz2) = f131919db7ead4ebc82e1373277a9c0f867fbce4
 RMD160 (nautilus-sound-converter-1.0.5.tar.bz2) = 85f7cb4cd9b0e709bf0ae8299aa4e97d3857257d
 Size (nautilus-sound-converter-1.0.5.tar.bz2) = 278884 bytes
 SHA1 (patch-aa) = 49f0611175013da866ffb04fac265bf868026296
+SHA1 (patch-ab) = 478c35f4c6d54fdbde7970c48b01760c3c9c9261
+SHA1 (patch-ac) = b61298663692bcf7207472847b2d9905a9c93341
+SHA1 (patch-ad) = 484d017770c6281c3fbe570f229b677733154c8b
