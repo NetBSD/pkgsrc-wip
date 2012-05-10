@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2010/07/04 19:39:18 rsmarples Exp $
+# $NetBSD: Makefile,v 1.3 2012/05/10 20:11:34 noud4 Exp $
 
 DISTNAME=	fullblognotification_0.11-r${SVN_REV}
 PKGNAME=	trac-plugins-FullBlogNotification-0.1pre${SVN_REV}
-PKGREVISION=	# blank on purpose even though pkglint moans
-EGG_NAME=	TracFullBlogNotification-0.1dev
+PKGREVISION=	1
+EGG_NAME=	TracFullBlogNotificationPlugin-0.1
 CATEGORIES=	www
 MASTER_SITES=	-http://trac-hacks.org/changeset/${SVN_REV}/${SVN_MOD}?old_path=/&format=zip
 EXTRACT_SUFX=	.zip

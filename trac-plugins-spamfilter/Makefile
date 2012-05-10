@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2010/07/04 20:55:12 rsmarples Exp $
+# $NetBSD: Makefile,v 1.6 2012/05/10 20:11:34 noud4 Exp $
 
 SVNREV=		9935
 DISTNAME=	TracSpamFilter-0.3.2dev
 PKGNAME=	trac-plugins-spamfilter-0.3.2pre${SVNREV}
-PKGREVISION=	# blank on purpose even though pkglint moans
+PKGREVISION=	1
 EGG_NAME=	${DISTNAME}
 CATEGORIES=	www
 

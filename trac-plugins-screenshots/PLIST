@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:45:22 thomasklausner Exp $
-${PYSITELIB}/TracScreenshots-0.7-py2.5.egg-info/PKG-INFO
-${PYSITELIB}/TracScreenshots-0.7-py2.5.egg-info/SOURCES.txt
-${PYSITELIB}/TracScreenshots-0.7-py2.5.egg-info/dependency_links.txt
-${PYSITELIB}/TracScreenshots-0.7-py2.5.egg-info/entry_points.txt
-${PYSITELIB}/TracScreenshots-0.7-py2.5.egg-info/requires.txt
-${PYSITELIB}/TracScreenshots-0.7-py2.5.egg-info/top_level.txt
+@comment $NetBSD: PLIST,v 1.3 2012/05/10 20:11:34 noud4 Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/tracscreenshots/__init__.py
 ${PYSITELIB}/tracscreenshots/__init__.pyc
 ${PYSITELIB}/tracscreenshots/__init__.pyo
