@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4745 2012/05/09 14:08:26 bsiegert Exp $
+# $Id: Makefile,v 1.4746 2012/05/10 11:08:58 bubuchka Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -21,16 +21,20 @@ SUBDIR+=	PHPUnit
 SUBDIR+=	PPower4
 SUBDIR+=	PyBabelFish
 SUBDIR+=	Pythonol
+SUBDIR+=	R-BiocGenerics
 SUBDIR+=	R-Rdbi
 SUBDIR+=	R-Rdbi.PgSQL
+SUBDIR+=	R-Rgraphviz
 SUBDIR+=	R-Rserve
 SUBDIR+=	R-biganalytics
 SUBDIR+=	R-bigmemory
 SUBDIR+=	R-bigtabulate
+SUBDIR+=	R-bnlearn
 SUBDIR+=	R-digest
 SUBDIR+=	R-doParallel
 SUBDIR+=	R-entropy
 SUBDIR+=	R-foreach
+SUBDIR+=	R-graph
 SUBDIR+=	R-gsl
 SUBDIR+=	R-iterators
 SUBDIR+=	R-mclust
