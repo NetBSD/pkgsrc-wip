@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2011/01/09 13:56:21 rubengonzalez Exp $
+@comment $NetBSD: PLIST,v 1.4 2012/05/10 20:28:34 noud4 Exp $
 bin/wicd-client
 bin/wicd-curses
 ${PYSITELIB}/wicd/backend.pyc
@@ -43,7 +43,7 @@ ${PYSITELIB}/wicd/wnettools.pyo
 ${PYSITELIB}/wicd/wpath.py
 ${PYSITELIB}/wicd/wpath.pyc
 ${PYSITELIB}/wicd/wpath.pyo
-${PYSITELIB}/Wicd-1.6.2.2-py2.6.egg-info
+${PYSITELIB}/${EGG_INFODIR}
 lib/wicd/curses_misc.py
 lib/wicd/autoconnect.py
 lib/wicd/configscript_curses.py

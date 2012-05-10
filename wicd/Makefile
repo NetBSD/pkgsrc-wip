@@ -1,7 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2012/04/08 19:09:54 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2012/05/10 20:28:34 noud4 Exp $
 #
 
 DISTNAME=	wicd-1.6.2.2
+EGG_NAME=	${DISTNAME:S|w|W|}
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wicd/}
 
@@ -16,6 +18,7 @@ DEPENDS+=	${PYPKGPREFIX}-urwid>=0.9.9:../../devel/py-urwid
 
 PY_PATCHPLIST = YES
 PYSETUP = setup.py
+PLIST_SUBST+=	EGG_INFODIR=${EGG_NAME}-py${PYVERSSUFFIX}.egg-info
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -38,7 +41,7 @@ SUBST_SED.setup+=	-e 's,/usr/bin/,${PREFIX}/bin/,g'
 SUBST_SED.setup+=	-e 's,/usr/sbin/,${PREFIX}/sbin/,g'
 SUBST_SED.setup+=	-e 's,/usr/bin/python,${PYTHONBIN},g'
 
-ONLY_FOR_PLATFORM= Linux-*-*
+#ONLY_FOR_PLATFORM= Linux-*-*
 
 do-configure:
 	cd ${WRKSRC}; \
