@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/05/10 10:31:32 bubuchka Exp $
+
+SHA1 (R/BiocGenerics_0.2.0.tar.gz) = 8e5730cf520cc60efcc751cc5b3141838a49286d
+RMD160 (R/BiocGenerics_0.2.0.tar.gz) = fa9a0f6b6c490b5bd37f896122b916e9a5be06c3
+Size (R/BiocGenerics_0.2.0.tar.gz) = 23034 bytes
