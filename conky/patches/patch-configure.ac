@@ -1,8 +1,8 @@
-$NetBSD: patch-configure.ac,v 1.3 2012/05/07 08:45:17 imilh Exp $
+$NetBSD: patch-configure.ac,v 1.4 2012/05/10 21:35:34 imilh Exp $
 
 --- configure.ac.orig	2012-05-03 21:47:32.000000000 +0000
 +++ configure.ac
-@@ -62,10 +62,10 @@ case $uname in
+@@ -62,10 +62,11 @@ case $uname in
      WANT_DEVSTAT=yes
      WANT_OPTRESET=yes
      ;;
@@ -13,11 +13,12 @@ $NetBSD: patch-configure.ac,v 1.3 2012/05/07 08:45:17 imilh Exp $
 +  NetBSD*)
 +    WANT_KVM=yes
 +    WANT_OSSLIB=yes
++    WANT_PROPLIB=yes
 +    ;;
  
    OpenBSD*)
      WANT_KVM=yes
-@@ -87,7 +87,7 @@ esac
+@@ -87,7 +88,7 @@ esac
  AM_CONDITIONAL(BUILD_LINUX, test x$uname = xLinux)
  #AM_CONDITIONAL(BUILD_SOLARIS, test x$uname = xSunOS)
  AM_CONDITIONAL(BUILD_FREEBSD, test x$uname = xFreeBSD -o x$uname = xGNU/kFreeBSD)
@@ -26,7 +27,25 @@ $NetBSD: patch-configure.ac,v 1.3 2012/05/07 08:45:17 imilh Exp $
  AM_CONDITIONAL(BUILD_OPENBSD, test x$uname = xOpenBSD)
  
  BUILD_DATE=$(LANG=en_US LC_ALL=en_US LOCALE=en_US date)
-@@ -784,7 +784,7 @@ dnl
+@@ -734,6 +735,17 @@ if test x$WANT_KVM = xyes; then
+ fi
+ 
+ dnl
++dnl PROPLIB for NetBSD
++dnl
++
++if test x$WANT_PROPLIB = xyes; then
++  AC_CHECK_LIB(prop, prop_dictionary_create,
++  conky_LIBS="$conky_LIBS -lprop",
++  AC_MSG_ERROR([Could not find prop_dictionary_create in -lprop.])
++  )
++fi
++
++dnl
+ dnl optreset
+ dnl
+ 
+@@ -784,7 +796,7 @@ dnl
  dnl Some headers
  dnl
  

@@ -1,4 +1,4 @@
-$NetBSD: patch-src_netbsd.h,v 1.2 2012/05/07 08:45:17 imilh Exp $
+$NetBSD: patch-src_netbsd.h,v 1.3 2012/05/10 21:35:34 imilh Exp $
 
 --- src/netbsd.h.orig	2010-03-25 17:42:39.000000000 +0000
 +++ src/netbsd.h
@@ -11,10 +11,24 @@ $NetBSD: patch-src_netbsd.h,v 1.2 2012/05/07 08:45:17 imilh Exp $
  #include <sys/time.h>
  #include <sys/sysctl.h>
  #include <sys/types.h>
-@@ -33,4 +35,6 @@
+@@ -27,10 +29,20 @@
+ 
+ #include <machine/param.h>
+ 
++#include <prop/proplib.h>
++
+ #include "conky.h"
+ #include "common.h"
+ 
++#define _DEV_SYSMON	"/dev/sysmon"
++
  int get_entropy_avail(unsigned int *);
  int get_entropy_poolsize(unsigned int *);
  
-+kvm_t *kd;
++void sysmon_open(void);
++void sysmon_close(void);
++
++kvm_t			*kd;
++extern int		sysmon_fd;
 +
  #endif /*NETBSD_H_*/

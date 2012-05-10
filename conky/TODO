@@ -1,1 +1,1 @@
-Basic sensors now working. Still needs cleanup work plus ACPI and APM.
+Basic sensors + APM now working. Still needs cleanup work plus temperature.

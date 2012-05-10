@@ -1,8 +1,8 @@
-$NetBSD: patch-src_netbsd.c,v 1.7 2012/05/07 08:45:17 imilh Exp $
+$NetBSD: patch-src_netbsd.c,v 1.8 2012/05/10 21:35:34 imilh Exp $
 
 --- src/netbsd.c.orig	2012-05-03 21:08:27.000000000 +0000
 +++ src/netbsd.c
-@@ -30,239 +30,210 @@
+@@ -30,239 +30,226 @@
  
  #include "netbsd.h"
  #include "net_stat.h"
@@ -13,17 +13,19 @@ $NetBSD: patch-src_netbsd.c,v 1.7 2012/05/07 08:45:17 imilh Exp $
  
 -static kvm_t *kd = NULL;
 -int kd_init = 0, nkd_init = 0;
- u_int32_t sensvalue;
- char errbuf[_POSIX2_LINE_MAX];
-+static short cpu_setup = 0;
+-u_int32_t sensvalue;
+-char errbuf[_POSIX2_LINE_MAX];
++#define P_BOOL		0
++#define P_UINT8		1
++#define P_INT64		2
++#define P_STRING	3
  
 -static int init_kvm(void)
 -{
 -	if (kd_init) {
 -		return 0;
 -	}
-+inline void proc_find_top(struct process **cpu, struct process **mem);
- 
+-
 -	kd = kvm_openfiles(NULL, NULL, NULL, KVM_NO_FILES, errbuf);
 -	if (kd == NULL) {
 -		warnx("cannot kvm_openfiles: %s", errbuf);
@@ -34,9 +36,7 @@ $NetBSD: patch-src_netbsd.c,v 1.7 2012/05/07 08:45:17 imilh Exp $
 -}
 -
 -static int swapmode(int *retavail, int *retfree)
-+void
-+prepare_update(void)
- {
+-{
 -	int n;
 -	struct swapent *sep;
 -
@@ -44,19 +44,29 @@ $NetBSD: patch-src_netbsd.c,v 1.7 2012/05/07 08:45:17 imilh Exp $
 -	*retfree = 0;
 -
 -	n = swapctl(SWAP_NSWAP, 0, 0);
--
++typedef struct Devquery {
++	int			type;
++	char		*dev;
++	char		*key;
++	char		*row;
++} Devquery;
+ 
 -	if (n < 1) {
 -		warn("could not get swap information");
 -		return 0;
 -	}
 -
 -	sep = (struct swapent *) malloc(n * (sizeof(*sep)));
--
++u_int32_t		sensvalue;
++char			errbuf[_POSIX2_LINE_MAX];
++static short	cpu_setup = 0;
+ 
 -	if (sep == NULL) {
 -		warn("memory allocation failed");
 -		return 0;
 -	}
--
++int				sysmon_fd;
+ 
 -	if (swapctl(SWAP_STATS, (void *) sep, n) < n) {
 -		warn("could not get swap stats");
 -		return 0;
@@ -67,26 +77,31 @@ $NetBSD: patch-src_netbsd.c,v 1.7 2012/05/07 08:45:17 imilh Exp $
 -	}
 -	*retavail = (int) (*retavail / 1024);
 -	*retfree = (int) (*retfree / 1024);
--
++inline void proc_find_top(struct process **cpu, struct process **mem);
+ 
 -	return 1;
- }
+-}
++int8_t envsys_get_val(Devquery, void *);
  
 -void prepare_update()
++void
++prepare_update(void)
+ {
+ }
+ 
+-void update_uptime()
 +int
 +update_uptime(void)
  {
--}
-+	int 			mib[2] = { CTL_KERN, KERN_BOOTTIME };
-+	struct timeval	boottime;
-+	time_t			now;
-+	size_t			size;
- 
--void update_uptime()
--{
 -	int mib[2] = { CTL_KERN, KERN_BOOTTIME };
 -	struct timeval boottime;
 -	time_t now;
 -	int size = sizeof(boottime);
++	int 			mib[2] = { CTL_KERN, KERN_BOOTTIME };
++	struct timeval	boottime;
++	time_t			now;
++	size_t			size;
++
 +	size = sizeof(boottime);
  
 -	if ((sysctl(mib, 2, &boottime, &size, NULL, 0) != -1)
@@ -267,12 +282,12 @@ $NetBSD: patch-src_netbsd.c,v 1.7 2012/05/07 08:45:17 imilh Exp $
 -		}
 +		if (ifa->ifa_flags & IFF_UP) {
 +			struct ifaddrs *iftmp;
- 
--		ns->last_read_trans = ifnet.if_obytes;
++
 +			ns->up = 1;
 +			last_recv = ns->recv;
 +			last_trans = ns->trans;
-+
+ 
+-		ns->last_read_trans = ifnet.if_obytes;
 +			if (ifa->ifa_addr->sa_family != AF_LINK) {
 +				continue;
 +			}
@@ -285,7 +300,11 @@ $NetBSD: patch-src_netbsd.c,v 1.7 2012/05/07 08:45:17 imilh Exp $
 +						iftmp->ifa_addr->sa_len);
 +				}
 +			}
-+
+ 
+-		ns->recv += (ifnet.if_ibytes - ns->last_read_recv);
+-		ns->last_read_recv = ifnet.if_ibytes;
+-		ns->trans += (ifnet.if_obytes - ns->last_read_trans);
+-		ns->last_read_trans = ifnet.if_obytes;
 +			ifd = (struct if_data *) ifa->ifa_data;
 +			r = ifd->ifi_ibytes;
 +			t = ifd->ifi_obytes;
@@ -295,11 +314,7 @@ $NetBSD: patch-src_netbsd.c,v 1.7 2012/05/07 08:45:17 imilh Exp $
 +			} else {
 +				ns->recv += (r - ns->last_read_recv);
 +			}
- 
--		ns->recv += (ifnet.if_ibytes - ns->last_read_recv);
--		ns->last_read_recv = ifnet.if_ibytes;
--		ns->trans += (ifnet.if_obytes - ns->last_read_trans);
--		ns->last_read_trans = ifnet.if_obytes;
++
 +			ns->last_read_recv = r;
  
 -		ns->recv_speed = (ns->recv - last_recv) / delta;
@@ -392,7 +407,7 @@ $NetBSD: patch-src_netbsd.c,v 1.7 2012/05/07 08:45:17 imilh Exp $
  }
  
  struct cpu_load_struct {
-@@ -275,13 +246,18 @@ struct cpu_load_struct fresh = {
+@@ -275,13 +262,18 @@ struct cpu_load_struct fresh = {
  
  long cpu_used, oldtotal, oldused;
  
@@ -413,7 +428,7 @@ $NetBSD: patch-src_netbsd.c,v 1.7 2012/05/07 08:45:17 imilh Exp $
  
  	if (sysctlbyname("kern.cp_time", &cp_time, &len, NULL, 0) < 0) {
  		warn("cannot get kern.cp_time");
-@@ -297,17 +273,19 @@ void update_cpu_usage()
+@@ -297,17 +289,19 @@ void update_cpu_usage()
  	total = fresh.load[0] + fresh.load[1] + fresh.load[2] + fresh.load[3];
  
  	if ((total - oldtotal) != 0) {
@@ -437,7 +452,7 @@ $NetBSD: patch-src_netbsd.c,v 1.7 2012/05/07 08:45:17 imilh Exp $
  {
  	double v[3];
  
-@@ -316,6 +294,8 @@ void update_load_average()
+@@ -316,6 +310,8 @@ void update_load_average()
  	info.loadavg[0] = (float) v[0];
  	info.loadavg[1] = (float) v[1];
  	info.loadavg[2] = (float) v[2];
@@ -446,14 +461,26 @@ $NetBSD: patch-src_netbsd.c,v 1.7 2012/05/07 08:45:17 imilh Exp $
  }
  
  double get_acpi_temperature(int fd)
-@@ -364,3 +344,155 @@ int get_entropy_poolsize(unsigned int *v
+@@ -323,10 +319,6 @@ double get_acpi_temperature(int fd)
+ 	return -1;
+ }
+ 
+-void get_battery_stuff(char *buf, unsigned int n, const char *bat, int item)
+-{
+-}
+-
+ int open_acpi_temperature(const char *name)
+ {
+ 	return -1;
+@@ -364,3 +356,313 @@ int get_entropy_poolsize(unsigned int *v
  {
  	return 1;
  }
 +
 +/* void */
-+char get_freq(char *p_client_buffer, size_t client_buffer_size,
-+                const char *p_format, int divisor, unsigned int cpu)
++char
++get_freq(char *p_client_buffer, size_t client_buffer_size,
++	const char *p_format, int divisor, unsigned int cpu)
 +{
 +        int freq = cpu;
 +
@@ -601,4 +628,161 @@ $NetBSD: patch-src_netbsd.c,v 1.7 2012/05/07 08:45:17 imilh Exp $
 +			free(processes[i].name);
 +        }
 +        free(processes);
++}
++
++char *
++get_apm_adapter()
++{
++	char *out;
++	bool connected = false, charging = false;
++	Devquery dq_ac = { P_BOOL, "acpiacad0", "connected", "cur-value" };
++	Devquery dq_charging = { P_BOOL, "acpibat0", "charge state", "cur-value" };
++
++	/* get AC state */
++	if (envsys_get_val(dq_ac, (void *)&connected) < 0)
++		/* did not get any information from envsys */
++		return strdup("N/A");
++
++	/* is the battery charging ? */
++	(void)envsys_get_val(dq_charging, (void *)&charging);
++	
++	if (connected)
++		if (charging)
++			out = strdup("charging");
++		else
++			out = strdup("on-line");
++	else
++		out = strdup("off-line");
++
++	return out;
++}
++
++char *
++get_apm_battery_life()
++{
++	char row[32], *out;
++	int64_t cur_charge, max_charge;
++	Devquery dq_charge = { P_INT64, "acpibat0", "charge", NULL};
++
++	strcpy(row, "max-value");
++	dq_charge.row = &row[0];
++
++	if (envsys_get_val(dq_charge, (void *)&max_charge) < 0)
++		/* did not get any information from envsys */
++		return strdup("N/A");
++
++	strcpy(row, "cur-value");
++	dq_charge.row = &row[0];
++
++	if (envsys_get_val(dq_charge, (void *)&cur_charge) < 0)
++		/* did not get any information from envsys */
++		return strdup("N/A");
++
++	out = malloc(8 * sizeof(char));
++
++	snprintf(out, 8, "%d%%", (int)(((float) cur_charge / max_charge) * 100));
++
++	return out;
++}
++
++char *
++get_apm_battery_time()
++{
++	int64_t charge, discharge;
++	int	hours, minutes;
++	char *out;
++	Devquery dq_discharge = { P_INT64, "acpibat0", "discharge rate",
++							  "cur-value"};
++	Devquery dq_charge = { P_INT64, "acpibat0", "charge", "cur-value"};
++
++	if (envsys_get_val(dq_discharge, (void *)&discharge) < 0)
++		return strdup("N/A");
++	if (envsys_get_val(dq_charge, (void *)&charge) < 0)
++		return strdup("N/A");
++
++	hours = (int)((float) charge / discharge);
++	minutes = (int)((((float) charge / discharge) - hours) * 60);
++
++	out = malloc(8 * sizeof(char));
++
++	snprintf(out, 8, "%d:%02d", hours, minutes);
++
++	return out;
++}
++
++/*
++ * Here comes the mighty envsys backend
++ */
++void
++sysmon_open()
++{
++    sysmon_fd = open(_DEV_SYSMON, O_RDONLY);
++}
++
++void
++sysmon_close()
++{
++	if (sysmon_fd > -1)
++		close(sysmon_fd);
++}
++
++int8_t
++envsys_get_val(Devquery dq, void *val)
++{
++	char *descr;
++	const char *cval;
++	prop_dictionary_t dict;
++	prop_object_t device;
++	prop_object_iterator_t iter;
++	prop_object_t obj;
++	bool rc = false;
++
++	if (sysmon_fd < 0)
++		return -1;
++
++    if (prop_dictionary_recv_ioctl(sysmon_fd, ENVSYS_GETDICTIONARY, &dict)
++		!= 0)
++		return -1;
++
++	if ((device = prop_dictionary_get(dict, dq.dev)) == NULL)
++		return -1;
++      
++    iter = prop_array_iterator(device);
++
++    while((obj = prop_object_iterator_next(iter)))  {
++        descr = (char *)prop_string_cstring_nocopy(prop_dictionary_get(obj,
++				"description"));
++		if (descr != NULL && *descr) {
++			if(strcmp(descr, dq.key) == 0) {
++				switch(dq.type) {
++				case P_BOOL:
++					rc = prop_dictionary_get_bool(obj,
++						dq.row, (bool *)val);
++				case P_UINT8:
++					rc = prop_dictionary_get_uint8(obj,
++						dq.row, (uint8_t *)val);
++					break;
++				case P_INT64:
++					rc = prop_dictionary_get_int64(obj, dq.row,
++						(int64_t *)val);
++					break;
++				case P_STRING:
++					rc = prop_dictionary_get_cstring_nocopy(obj,
++						dq.row, &cval);
++					val = (void *)cval;
++					break;
++				}
++			}
++		}
++    }
++
++	prop_object_iterator_release(iter);
++	prop_object_release(dict);
++
++	if (rc == false) {
++		val = NULL;
++		return -1;
++	}
++
++	return 0;
 +}
