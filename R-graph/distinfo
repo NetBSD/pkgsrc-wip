@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/05/10 10:44:48 bubuchka Exp $
+
+SHA1 (R/graph_1.34.0.tar.gz) = 6aa0be3e23d40c02aed39e01bbee1b4403915ce4
+RMD160 (R/graph_1.34.0.tar.gz) = 5f25b7837f18f382522fb6929fd0e86333b7df11
+Size (R/graph_1.34.0.tar.gz) = 947047 bytes
