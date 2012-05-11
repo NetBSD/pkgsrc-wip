@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/05/11 09:39:41 fhajny Exp $
+# $NetBSD: Makefile,v 1.3 2012/05/11 10:15:43 fhajny Exp $
 
 PKGNAME=		${DISTNAME:S/mysql-/mysql-sphinxse-/}.${SPHINX_VER}
 
@@ -16,7 +16,7 @@ USE_TOOLS+=		automake
 MYSQL_VERSION=		${MYSQL_VERSION_DEFAULT}
 
 SPHINX=			sphinx-${SPHINX_VER}-release
-SPHINX_VER=		2.0.3
+SPHINX_VER=		2.0.4
 DISTFILES=		${DEFAULT_DISTFILES} ${SPHINX}.tar.gz
 SITES.${SPHINX}.tar.gz=	http://sphinxsearch.com/files/
 IGNOREFILES+=		${SPHINX}.tar.gz
