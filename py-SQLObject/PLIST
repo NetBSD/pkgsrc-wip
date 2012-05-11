@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.4 2012/02/09 16:42:37 noud4 Exp $
+@comment $NetBSD: PLIST,v 1.5 2012/05/11 12:48:40 noud4 Exp $
 bin/sqlobject-admin
-${PYSITELIB}/SQLObject-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/PKG-INFO
-${PYSITELIB}/SQLObject-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/SOURCES.txt
-${PYSITELIB}/SQLObject-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/dependency_links.txt
-${PYSITELIB}/SQLObject-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/entry_points.txt
-${PYSITELIB}/SQLObject-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/requires.txt
-${PYSITELIB}/SQLObject-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/sqlobject/__init__.py
 ${PYSITELIB}/sqlobject/__init__.pyc
 ${PYSITELIB}/sqlobject/__init__.pyo

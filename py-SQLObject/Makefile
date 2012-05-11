@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.8 2012/02/09 16:42:37 noud4 Exp $
+# $NetBSD: Makefile,v 1.9 2012/05/11 12:48:40 noud4 Exp $
 #
 
 DISTNAME=	SQLObject-0.12.2.tar
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/.tar//}
-PKGREVISION=	2
+EGG_NAME=	${DISTNAME:S|.tar||:Q}
+PKGREVISION=	3
 CATEGORIES=	databases python
 MASTER_SITES=	http://pypi.python.org/packages/source/S/SQLObject/
 EXTRACT_SUFX=	.gz
@@ -20,7 +21,7 @@ USE_LANGUAGES=	# none
 
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
-PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX:Q}
+PLIST_SUBST+=	EGG_INFODIR=${EGG_NAME}-py${PYVERSSUFFIX}.egg-info
 
 .include "options.mk"
 
