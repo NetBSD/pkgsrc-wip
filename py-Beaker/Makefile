@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2010/02/18 12:29:44 uccwen Exp $
+# $NetBSD: Makefile,v 1.3 2012/05/11 12:47:07 noud4 Exp $
 #
 
 DISTNAME=	Beaker-1.5.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 EGG_NAME=	${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	http://pypi.python.org/packages/source/B/Beaker/
 

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2012/02/09 16:42:37 noud4 Exp $
+# $NetBSD: Makefile,v 1.4 2012/05/11 12:47:07 noud4 Exp $
 #
 
 DISTNAME=	django-gitrevision-0.1.4
-EGG_NAME=	django_gitrevision
+EGG_NAME=	${DISTNAME:S|o-|o_|:Q}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel python
 MASTER_SITES=	http://pypi.python.org/packages/source/d/django-gitrevision/
 

@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2012/01/30 07:53:01 noud4 Exp $
+# $NetBSD: Makefile,v 1.3 2012/05/11 12:47:08 noud4 Exp $
 #
 
 VERSION=	0.37
 DISTNAME=	OpenOpt
 EGG_NAME=	openopt-${VERSION}
 PKGNAME=	${PYPKGPREFIX}-${EGG_NAME}
+PKGREVISION=	1
 CATEGORIES=	math python
 MASTER_SITES=	http://openopt.org/images/3/33/
 EXTRACT_SUFX=	.zip

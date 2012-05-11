@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.2 2012/02/10 09:01:10 noud4 Exp $
-${PYSITELIB}/xlwt-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info
+@comment $NetBSD: PLIST,v 1.3 2012/05/11 12:47:08 noud4 Exp $
+${PYSITELIB}/${EGG_INFODIR}
 ${PYSITELIB}/xlwt/BIFFRecords.py
 ${PYSITELIB}/xlwt/BIFFRecords.pyc
 ${PYSITELIB}/xlwt/BIFFRecords.pyo

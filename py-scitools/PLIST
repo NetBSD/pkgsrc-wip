@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2012/02/10 09:01:10 noud4 Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/05/11 12:47:08 noud4 Exp $
 bin/pyreport${PYVERSSUFFIX}
 bin/scitools${PYVERSSUFFIX}
-${PYSITELIB}/SciTools-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info
+${PYSITELIB}/${EGG_INFODIR}
 ${PYSITELIB}/scitools/BoxField.py
 ${PYSITELIB}/scitools/BoxField.pyc
 ${PYSITELIB}/scitools/BoxField.pyo

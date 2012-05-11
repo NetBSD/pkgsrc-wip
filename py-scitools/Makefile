@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2012/04/08 19:09:51 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2012/05/11 12:47:08 noud4 Exp $
 #
 
 DISTNAME=	scitools-0.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
+EGG_NAME=	${DISTNAME:S|scitools|SciTools|:Q}
+PKGREVISION=	3
 CATEGORIES=	science python
 MASTER_SITES=	http://scitools.googlecode.com/files/
 
@@ -21,6 +22,7 @@ USE_TOOLS+=	gzip
 USE_LANGUAGES=	# none
 
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
+PLIST_SUBST+=	EGG_INFODIR=${EGG_NAME}-py${PYVERSSUFFIX}.egg-info
 
 post-extract:
 	gzip -d ${WRKSRC}/doc/man/man1/*.gz

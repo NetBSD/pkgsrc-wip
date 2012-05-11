@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2012/04/08 19:09:51 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2012/05/11 12:47:08 noud4 Exp $
 #
 
 DISTNAME=	srpy-0.2.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	2
+EGG_NAME=	${DISTNAME:S|srp|SRP|:Q}
+PKGREVISION=	3
 CATEGORIES=	devel python
 MASTER_SITES=	http://srpy.googlecode.com/files/
 EXTRACT_SUFX=	.zip
