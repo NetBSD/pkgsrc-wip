@@ -1,4 +1,4 @@
-$NetBSD: patch-src_netbsd.c,v 1.8 2012/05/10 21:35:34 imilh Exp $
+$NetBSD: patch-src_netbsd.c,v 1.9 2012/05/11 13:34:47 imilh Exp $
 
 --- src/netbsd.c.orig	2012-05-03 21:08:27.000000000 +0000
 +++ src/netbsd.c
@@ -25,7 +25,13 @@ $NetBSD: patch-src_netbsd.c,v 1.8 2012/05/10 21:35:34 imilh Exp $
 -	if (kd_init) {
 -		return 0;
 -	}
--
++typedef struct Devquery {
++	int			type;
++	char		*dev;
++	char		*key;
++	char		*row;
++} Devquery;
+ 
 -	kd = kvm_openfiles(NULL, NULL, NULL, KVM_NO_FILES, errbuf);
 -	if (kd == NULL) {
 -		warnx("cannot kvm_openfiles: %s", errbuf);
@@ -34,7 +40,10 @@ $NetBSD: patch-src_netbsd.c,v 1.8 2012/05/10 21:35:34 imilh Exp $
 -	kd_init = 1;
 -	return 0;
 -}
--
++u_int32_t		sensvalue;
++char			errbuf[_POSIX2_LINE_MAX];
++static short	cpu_setup = 0;
+ 
 -static int swapmode(int *retavail, int *retfree)
 -{
 -	int n;
@@ -44,29 +53,22 @@ $NetBSD: patch-src_netbsd.c,v 1.8 2012/05/10 21:35:34 imilh Exp $
 -	*retfree = 0;
 -
 -	n = swapctl(SWAP_NSWAP, 0, 0);
-+typedef struct Devquery {
-+	int			type;
-+	char		*dev;
-+	char		*key;
-+	char		*row;
-+} Devquery;
++int				sysmon_fd;
  
 -	if (n < 1) {
 -		warn("could not get swap information");
 -		return 0;
 -	}
--
++inline void proc_find_top(struct process **cpu, struct process **mem);
+ 
 -	sep = (struct swapent *) malloc(n * (sizeof(*sep)));
-+u_int32_t		sensvalue;
-+char			errbuf[_POSIX2_LINE_MAX];
-+static short	cpu_setup = 0;
++int8_t envsys_get_val(Devquery, void *);
  
 -	if (sep == NULL) {
 -		warn("memory allocation failed");
 -		return 0;
 -	}
-+int				sysmon_fd;
- 
+-
 -	if (swapctl(SWAP_STATS, (void *) sep, n) < n) {
 -		warn("could not get swap stats");
 -		return 0;
@@ -77,12 +79,10 @@ $NetBSD: patch-src_netbsd.c,v 1.8 2012/05/10 21:35:34 imilh Exp $
 -	}
 -	*retavail = (int) (*retavail / 1024);
 -	*retfree = (int) (*retfree / 1024);
-+inline void proc_find_top(struct process **cpu, struct process **mem);
- 
+-
 -	return 1;
 -}
-+int8_t envsys_get_val(Devquery, void *);
- 
+-
 -void prepare_update()
 +void
 +prepare_update(void)
@@ -101,11 +101,11 @@ $NetBSD: patch-src_netbsd.c,v 1.8 2012/05/10 21:35:34 imilh Exp $
 +	struct timeval	boottime;
 +	time_t			now;
 +	size_t			size;
-+
-+	size = sizeof(boottime);
  
 -	if ((sysctl(mib, 2, &boottime, &size, NULL, 0) != -1)
 -			&& (boottime.tv_sec != 0)) {
++	size = sizeof(boottime);
++
 +	if (sysctl(mib, 2, &boottime, &size, NULL, 0) < 0) {
 +		warn("sysctl kern.boottime failed");
 +		info.uptime = 0;
@@ -286,12 +286,12 @@ $NetBSD: patch-src_netbsd.c,v 1.8 2012/05/10 21:35:34 imilh Exp $
 +			ns->up = 1;
 +			last_recv = ns->recv;
 +			last_trans = ns->trans;
- 
--		ns->last_read_trans = ifnet.if_obytes;
++
 +			if (ifa->ifa_addr->sa_family != AF_LINK) {
 +				continue;
 +			}
-+
+ 
+-		ns->last_read_trans = ifnet.if_obytes;
 +			for (iftmp = ifa->ifa_next;
 +				 iftmp != NULL && strcmp(ifa->ifa_name, iftmp->ifa_name) == 0;
 +				 iftmp = iftmp->ifa_next) {
@@ -300,11 +300,7 @@ $NetBSD: patch-src_netbsd.c,v 1.8 2012/05/10 21:35:34 imilh Exp $
 +						iftmp->ifa_addr->sa_len);
 +				}
 +			}
- 
--		ns->recv += (ifnet.if_ibytes - ns->last_read_recv);
--		ns->last_read_recv = ifnet.if_ibytes;
--		ns->trans += (ifnet.if_obytes - ns->last_read_trans);
--		ns->last_read_trans = ifnet.if_obytes;
++
 +			ifd = (struct if_data *) ifa->ifa_data;
 +			r = ifd->ifi_ibytes;
 +			t = ifd->ifi_obytes;
@@ -316,17 +312,21 @@ $NetBSD: patch-src_netbsd.c,v 1.8 2012/05/10 21:35:34 imilh Exp $
 +			}
 +
 +			ns->last_read_recv = r;
- 
--		ns->recv_speed = (ns->recv - last_recv) / delta;
--		ns->trans_speed = (ns->trans - last_trans) / delta;
++
 +			if (t < ns->last_read_trans) {
 +				ns->trans += (long long) 4294967295U - ns->last_read_trans + t;
 +			} else {
 +				ns->trans += (t - ns->last_read_trans);
 +			}
-+
+ 
+-		ns->recv += (ifnet.if_ibytes - ns->last_read_recv);
+-		ns->last_read_recv = ifnet.if_ibytes;
+-		ns->trans += (ifnet.if_obytes - ns->last_read_trans);
+-		ns->last_read_trans = ifnet.if_obytes;
 +			ns->last_read_trans = t;
-+
+ 
+-		ns->recv_speed = (ns->recv - last_recv) / delta;
+-		ns->trans_speed = (ns->trans - last_trans) / delta;
 +			/* calculate speeds */
 +			ns->recv_speed = (ns->recv - last_recv) / delta;
 +			ns->trans_speed = (ns->trans - last_trans) / delta;
@@ -407,43 +407,100 @@ $NetBSD: patch-src_netbsd.c,v 1.8 2012/05/10 21:35:34 imilh Exp $
  }
  
  struct cpu_load_struct {
-@@ -275,13 +262,18 @@ struct cpu_load_struct fresh = {
+@@ -273,41 +260,78 @@ struct cpu_load_struct fresh = {
+ 	{0, 0, 0, 0, 0}
+ };
  
- long cpu_used, oldtotal, oldused;
+-long cpu_used, oldtotal, oldused;
++long oldtotal[8], oldused[8];
++
++void
++get_cpu_count()
++{
++	static int mib[] = { CTL_HW, HW_NCPU };
++	size_t len = sizeof(int);
++	int cpu_count;
++
++	if (sysctl(mib, 2, &cpu_count, &len, NULL, 0) < 0)
++		cpu_count = 1;
++
++	info.cpu_count = cpu_count;
  
 -void update_cpu_usage()
-+int update_cpu_usage(void)
++	info.cpu_usage = malloc(info.cpu_count * sizeof(float));
++
++	if (info.cpu_usage == NULL)
++		warn("malloc");
++}
++
++int
++update_cpu_usage(void)
  {
++	typedef uint64_t cp_time_t[CPUSTATES];
++	static int mib[] = { CTL_KERN, KERN_CP_TIME };
++	static cp_time_t *cp_time = NULL;
++	int i;
  	long used, total;
- 	static u_int64_t cp_time[CPUSTATES];
- 	size_t len = sizeof(cp_time);
- 
--	info.cpu_usage = 0;
+-	static u_int64_t cp_time[CPUSTATES];
+-	size_t len = sizeof(cp_time);
++	size_t len;
++
 +	if ((cpu_setup == 0) || (!info.cpu_usage)) {
 +		get_cpu_count();
 +		cpu_setup = 1;
 +	}
-+
+ 
+-	info.cpu_usage = 0;
++	cp_time = malloc(info.cpu_count * sizeof(cp_time_t));
+ 
+-	if (sysctlbyname("kern.cp_time", &cp_time, &len, NULL, 0) < 0) {
 +	info.cpu_usage[0] = 0;
- 
- 	if (sysctlbyname("kern.cp_time", &cp_time, &len, NULL, 0) < 0) {
++
++	if (sysctl(mib, 2, cp_time, &len, NULL, 0) < 0) {
  		warn("cannot get kern.cp_time");
-@@ -297,17 +289,19 @@ void update_cpu_usage()
- 	total = fresh.load[0] + fresh.load[1] + fresh.load[2] + fresh.load[3];
- 
- 	if ((total - oldtotal) != 0) {
--		info.cpu_usage = ((double) (used - oldused)) /
--			(double) (total - oldtotal);
-+		info.cpu_usage[0] = ((double) (used - oldused)) /
-+				(double) (total - oldtotal);
- 	} else {
--		info.cpu_usage = 0;
-+		info.cpu_usage[0] = 0;
++		free(cp_time);
++		return 1;
  	}
  
- 	oldused = used;
- 	oldtotal = total;
+-	fresh.load[0] = cp_time[CP_USER];
+-	fresh.load[1] = cp_time[CP_NICE];
+-	fresh.load[2] = cp_time[CP_SYS];
+-	fresh.load[3] = cp_time[CP_IDLE];
+-	fresh.load[4] = cp_time[CP_IDLE];
+-
+-	used = fresh.load[0] + fresh.load[1] + fresh.load[2];
+-	total = fresh.load[0] + fresh.load[1] + fresh.load[2] + fresh.load[3];
+-
+-	if ((total - oldtotal) != 0) {
+-		info.cpu_usage = ((double) (used - oldused)) /
+-			(double) (total - oldtotal);
+-	} else {
+-		info.cpu_usage = 0;
++	for (i = 0; i < info.cpu_count; i++) {
 +
++		fresh.load[0] = cp_time[i][CP_USER];
++		fresh.load[1] = cp_time[i][CP_NICE];
++		fresh.load[2] = cp_time[i][CP_SYS];
++		fresh.load[3] = cp_time[i][CP_IDLE];
++		fresh.load[4] = cp_time[i][CP_IDLE];
++
++		used = fresh.load[0] + fresh.load[1] + fresh.load[2];
++		total = fresh.load[0] + fresh.load[1] + fresh.load[2] + fresh.load[3];
++
++		if ((total - oldtotal[i]) != 0) {
++			info.cpu_usage[i] = ((double) (used - oldused[i])) /
++				(double) (total - oldtotal[i]);
++		} else {
++			info.cpu_usage[i] = 0;
++		}
++
++		oldused[i] = used;
++		oldtotal[i] = total;
+ 	}
+ 
+-	oldused = used;
+-	oldtotal = total;
++	free(cp_time); /* XXX: really not optimal... */
 +	return 0;
  }
  
@@ -452,7 +509,7 @@ $NetBSD: patch-src_netbsd.c,v 1.8 2012/05/10 21:35:34 imilh Exp $
  {
  	double v[3];
  
-@@ -316,6 +310,8 @@ void update_load_average()
+@@ -316,6 +340,8 @@ void update_load_average()
  	info.loadavg[0] = (float) v[0];
  	info.loadavg[1] = (float) v[1];
  	info.loadavg[2] = (float) v[2];
@@ -461,7 +518,7 @@ $NetBSD: patch-src_netbsd.c,v 1.8 2012/05/10 21:35:34 imilh Exp $
  }
  
  double get_acpi_temperature(int fd)
-@@ -323,10 +319,6 @@ double get_acpi_temperature(int fd)
+@@ -323,10 +349,6 @@ double get_acpi_temperature(int fd)
  	return -1;
  }
  
@@ -472,7 +529,7 @@ $NetBSD: patch-src_netbsd.c,v 1.8 2012/05/10 21:35:34 imilh Exp $
  int open_acpi_temperature(const char *name)
  {
  	return -1;
-@@ -364,3 +356,313 @@ int get_entropy_poolsize(unsigned int *v
+@@ -364,3 +386,301 @@ int get_entropy_poolsize(unsigned int *v
  {
  	return 1;
  }
@@ -501,18 +558,6 @@ $NetBSD: patch-src_netbsd.c,v 1.8 2012/05/10 21:35:34 imilh Exp $
 +        }
 +
 +        return 1;
-+}
-+
-+void get_cpu_count()
-+{
-+		int cpu_count = 1; /* default to 1 cpu */
-+
-+		info.cpu_count = cpu_count;
-+
-+		info.cpu_usage = malloc(info.cpu_count * sizeof(float));
-+
-+		if (info.cpu_usage == NULL)
-+			warn("malloc");
 +}
 +
 +void update_diskio()

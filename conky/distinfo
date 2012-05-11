@@ -1,16 +1,15 @@
-$NetBSD: distinfo,v 1.11 2012/05/10 21:35:34 imilh Exp $
+$NetBSD: distinfo,v 1.12 2012/05/11 13:34:47 imilh Exp $
 
 SHA1 (conky-1.9.0.tar.bz2) = 2069cbdb8e7224fcbf3c6b1ddebf64a51634b4cc
 RMD160 (conky-1.9.0.tar.bz2) = 2df0e60d4236ed667bdae876e11ba28d05914e25
 Size (conky-1.9.0.tar.bz2) = 626555 bytes
 SHA1 (patch-configure.ac) = 1796a860ac6e436d8432cea1cfab5b3ee2f8bc23
-SHA1 (patch-configure.ac.in) = 1da4c05f35fe13e003690d0f160df1b025d03dce
 SHA1 (patch-data_Makefile.am) = af8df32076b8a389ee98e2550342dbb343f7bff3
 SHA1 (patch-src_Makefile.am) = a4c0f5d207fccf5f6acdb60fbb02228835eb3053
-SHA1 (patch-src_config.h.in) = 31aa9cd4bd4ab775e6da633f86415ee8f5383538
+SHA1 (patch-src_config.h.in) = afe6e3925d2ef36e19c01e171c27ff2f0a8f4bc6
 SHA1 (patch-src_conky.c) = 16216e5bf6090aa414af253a66dd99d89c6fc7f9
 SHA1 (patch-src_core.c) = 2d1febb6d3c8a158c002cbea83c6eea74a8face2
 SHA1 (patch-src_fs.c) = 104fd3788f319689026702d6a149410184072e24
-SHA1 (patch-src_netbsd.c) = c78fb57c3c69d0e5214869e865721693676f82bb
+SHA1 (patch-src_netbsd.c) = babe58f3c180456a3327f245be912b31e2f2f811
 SHA1 (patch-src_netbsd.h) = 5f53ade04f70cc1f4bea0a573e9af2215a4f08d4
-SHA1 (patch-src_text__object.h) = 9a0a33f8410a6105d1f7015a635245d168f6605e
+SHA1 (patch-src_text__object.h) = 7503276fa0a4ea26bd4afbebc26a96425ba884ab

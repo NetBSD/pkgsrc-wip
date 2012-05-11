@@ -1,6 +1,6 @@
-$NetBSD: patch-src_text__object.h,v 1.1 2012/05/11 07:20:25 imilh Exp $
+$NetBSD: patch-src_text__object.h,v 1.2 2012/05/11 13:34:47 imilh Exp $
 
---- src/text_object.h.orig	2012-05-10 21:11:13.000000000 +0000
+--- src/text_object.h.orig	2012-05-03 21:08:27.000000000 +0000
 +++ src/text_object.h
 @@ -311,7 +311,8 @@ enum text_object_type {
  	OBJ_pop3_unseen,
