@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4746 2012/05/10 11:08:58 bubuchka Exp $
+# $Id: Makefile,v 1.4747 2012/05/11 09:01:32 triaxx Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1983,12 +1983,16 @@ SUBDIR+=	pdftk
 SUBDIR+=	pdnsd
 SUBDIR+=	pdq
 SUBDIR+=	pear-DB_DataObject
+SUBDIR+=	pear-Horde_Exception
+SUBDIR+=	pear-Horde_Translation
+SUBDIR+=	pear-Horde_Url
 SUBDIR+=	pear-HTML_Table
 SUBDIR+=	pear-HTTP_Client
 SUBDIR+=	pear-HTTP_Request2
 SUBDIR+=	pear-Math_BigInteger
 SUBDIR+=	pear-Net_URL2
 SUBDIR+=	pear-XML_Parser
+SUBDIR+=	pear-channel-horde
 SUBDIR+=	pear-channel-phpunit
 SUBDIR+=	pessulus
 SUBDIR+=	petsc
