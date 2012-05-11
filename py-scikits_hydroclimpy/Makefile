@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/03/22 08:19:47 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/05/11 13:19:28 noud4 Exp $
 #
 
-DISTNAME=	${PYPKGPREFIX}-scikits_hydroclimpy-0.67.0
+DISTNAME=	${PYPKGPREFIX}-scikits_hydroclimpy-0.67.1
+EGG_NAME=	${DISTNAME:S|${PYPKGPREFIX}-||:S|kits_|kits.|:Q}
 CATEGORIES=	science python
 
 MAINTAINER=	jihbed.research@gmail.com
@@ -20,6 +21,8 @@ SVN_ROOT.hydroclimpy= http://svn.scipy.org/svn/scikits/trunk/hydroclimpy
 SVN_MODULE.hydroclimpy=	hydroclimpy
 
 WRKSRC=			${WRKDIR}/hydroclimpy
+
+PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 
 .include "../../graphics/py-matplotlib/buildlink3.mk"
 .include "../../lang/python/egg.mk"

@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/01/17 22:17:27 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/05/11 13:19:28 noud4 Exp $
 #
 
 DISTNAME=	scikits.learn-0.5
-EGG_NAME=	scikits.learn-0.5
-PKGNAME=	${PYPKGPREFIX}-scikits_learn-0.5
+EGG_NAME=	${DISTNAME}
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S|s.|s_|}
+PKGREVISION=	2
 CATEGORIES=	math
 MASTER_SITES=	http://garr.dl.sourceforge.net/project/scikit-learn/
 
@@ -17,6 +18,8 @@ LICENSE=	modified-bsd
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c c++ fortran
+
+PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 
 .include "../../graphics/py-matplotlib/buildlink3.mk"
 .include "../../lang/python/egg.mk"

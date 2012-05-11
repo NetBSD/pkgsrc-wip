@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/03/22 08:19:47 jihbed Exp $
-${PYSITELIB}/scikits.hydroclimpy-0.67.1-py2.6-nspkg.pth
-${PYSITELIB}/scikits.hydroclimpy-0.67.1-py2.6.egg-info/PKG-INFO
-${PYSITELIB}/scikits.hydroclimpy-0.67.1-py2.6.egg-info/SOURCES.txt
-${PYSITELIB}/scikits.hydroclimpy-0.67.1-py2.6.egg-info/dependency_links.txt
-${PYSITELIB}/scikits.hydroclimpy-0.67.1-py2.6.egg-info/namespace_packages.txt
-${PYSITELIB}/scikits.hydroclimpy-0.67.1-py2.6.egg-info/requires.txt
-${PYSITELIB}/scikits.hydroclimpy-0.67.1-py2.6.egg-info/top_level.txt
+@comment $NetBSD: PLIST,v 1.2 2012/05/11 13:19:28 noud4 Exp $
+${PYSITELIB}/${EGG_NAME}-nspkg.pth
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/namespace_packages.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/scikits/__init__.py
 ${PYSITELIB}/scikits/hydroclimpy/__init__.py
 ${PYSITELIB}/scikits/hydroclimpy/__init__.pyc
