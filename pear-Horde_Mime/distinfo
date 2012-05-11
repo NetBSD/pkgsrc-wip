@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/05/11 14:31:33 triaxx Exp $
+
+SHA1 (pear/Horde_Mime-1.6.0.tgz) = d4df08200c110814f7546b9657516c7128f89d9d
+RMD160 (pear/Horde_Mime-1.6.0.tgz) = 90fd6fec61deac512d2eadfb90ecbdead5efd691
+Size (pear/Horde_Mime-1.6.0.tgz) = 84992 bytes
