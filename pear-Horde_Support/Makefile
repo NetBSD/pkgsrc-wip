@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/05/11 12:22:51 triaxx Exp $
+# $NetBSD: Makefile,v 1.2 2012/05/11 12:34:17 triaxx Exp $
 #
 
 DISTNAME=	Horde_Support-1.0.2
@@ -8,7 +8,7 @@ MASTER_SITES=	http://pear.horde.org/get/
 MAINTAINER=	frederic@fauberteau.org
 HOMEPAGE=	http://pear.horde.org/
 COMMENT=	Support classes
-LICENSE=	gnu-lgpl-v2.1
+LICENSE=	2-clause-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
