@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/05/11 08:23:42 triaxx Exp $
+lib/php/.channels/.alias/horde.txt
+lib/php/.registry/.channel.pear.horde.org/horde_translation.reg
+lib/php/Horde/Translation.php
+lib/php/Horde/Translation/Exception.php
+lib/php/Horde/Translation/Handler.php
+lib/php/Horde/Translation/Handler/Gettext.php
+lib/php/doc/Horde_Translation/COPYING
+lib/php/test/Horde_Translation/Horde/Translation/AllTests.php
+lib/php/test/Horde_Translation/Horde/Translation/GettextTest.php
+lib/php/test/Horde_Translation/Horde/Translation/TestBase.php
+lib/php/test/Horde_Translation/Horde/Translation/WrapperTest.php
+lib/php/test/Horde_Translation/Horde/Translation/locale/de/LC_MESSAGES/Horde_Other.mo
+lib/php/test/Horde_Translation/Horde/Translation/locale/de/LC_MESSAGES/Horde_Other.po
+lib/php/test/Horde_Translation/Horde/Translation/locale/de/LC_MESSAGES/Horde_Translation.mo
+lib/php/test/Horde_Translation/Horde/Translation/locale/de/LC_MESSAGES/Horde_Translation.po
