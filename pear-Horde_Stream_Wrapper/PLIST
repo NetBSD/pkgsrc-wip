@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/05/11 12:16:15 triaxx Exp $
+lib/php/.registry/.channel.pear.horde.org/horde_stream_wrapper.reg
+lib/php/Horde/Stream/Wrapper/Combine.php
+lib/php/Horde/Stream/Wrapper/CombineStream.php
+lib/php/Horde/Stream/Wrapper/String.php
+lib/php/Horde/Stream/Wrapper/StringStream.php
+lib/php/doc/Horde_Stream_Wrapper/COPYING
