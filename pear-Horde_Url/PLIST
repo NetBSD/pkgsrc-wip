@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/05/11 08:58:24 triaxx Exp $
+lib/php/Horde/Url.php
+lib/php/Horde/Url/Exception.php
+lib/php/doc/Horde_Url/COPYING
+lib/php/test/Horde_Url/Horde/Url/AddTest.php
+lib/php/test/Horde_Url/Horde/Url/AllTests.php
+lib/php/test/Horde_Url/Horde/Url/CallbackTest.php
+lib/php/test/Horde_Url/Horde/Url/LinkTest.php
+lib/php/test/Horde_Url/Horde/Url/RawTest.php
+lib/php/test/Horde_Url/Horde/Url/RedirectTest.php
+lib/php/test/Horde_Url/Horde/Url/RemoveTest.php
+lib/php/test/Horde_Url/Horde/Url/TostringTest.php
