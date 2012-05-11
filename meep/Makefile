@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/04/09 21:26:18 asau Exp $
+# $NetBSD: Makefile,v 1.7 2012/05/11 20:05:59 outpaddling Exp $
 #
 
 DISTNAME=	meep-1.1.1
@@ -20,10 +20,17 @@ USE_LANGUAGES=	c c++ fortran
 
 CONFIGURE_ARGS+=--with-libctl=${PREFIX}/share/libctl
 
-.include "../../wip/harminv/buildlink3.mk"
-.include "../../wip/libctl/buildlink3.mk"
+DEPENDS+=	bash:../../shells/bash
+
+.include "../../wip/mpb/buildlink3.mk"
+#.include "../../math/blas/buildlink3.mk"
+#.include "../../math/lapack/buildlink3.mk"
+#.include "../../devel/hdf5/buildlink3.mk"
+#.include "../../math/fftw2/buildlink3.mk"
+#.include "../../devel/readline/buildlink3.mk"
+#.include "../../wip/libctl/buildlink3.mk"
 .include "../../math/gsl/buildlink3.mk"
-.include "../../devel/hdf5/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
+.include "../../wip/harminv/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
