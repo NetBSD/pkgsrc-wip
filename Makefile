@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4748 2012/05/11 12:40:09 triaxx Exp $
+# $Id: Makefile,v 1.4749 2012/05/11 13:34:07 triaxx Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1984,6 +1984,13 @@ SUBDIR+=	pdnsd
 SUBDIR+=	pdq
 SUBDIR+=	pear-DB_DataObject
 SUBDIR+=	pear-Horde_ActiveSync
+SUBDIR+=	pear-Horde_Alarm
+SUBDIR+=	pear-Horde_Auth
+SUBDIR+=	pear-Horde_Autoloader
+SUBDIR+=	pear-Horde_Browser
+SUBDIR+=	pear-Horde_Cache
+SUBDIR+=	pear-Horde_Cli
+SUBDIR+=	pear-Horde_Compress
 SUBDIR+=	pear-Horde_Date
 SUBDIR+=	pear-Horde_Exception
 SUBDIR+=	pear-Horde_Nls
