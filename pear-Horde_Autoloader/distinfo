@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/05/11 12:56:25 triaxx Exp $
+
+SHA1 (pear/Horde_Autoloader-1.0.1.tgz) = c8fcd69a8c4e01aa900b4e043b54657e1409235a
+RMD160 (pear/Horde_Autoloader-1.0.1.tgz) = 8a36fdeccebdea3dafbe6c955a6370fa874857a0
+Size (pear/Horde_Autoloader-1.0.1.tgz) = 13652 bytes

@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/05/11 12:56:25 triaxx Exp $
+lib/php/.registry/.channel.pear.horde.org/horde_autoloader.reg
+lib/php/Horde/Autoloader.php
+lib/php/Horde/Autoloader/ClassPathMapper.php
+lib/php/Horde/Autoloader/ClassPathMapper/Application.php
+lib/php/Horde/Autoloader/ClassPathMapper/Default.php
+lib/php/Horde/Autoloader/ClassPathMapper/Prefix.php
+lib/php/Horde/Autoloader/Default.php
+lib/php/doc/Horde_Autoloader/COPYING
+lib/php/test/Horde_Autoloader/Horde/Autoloader/AllTests.php
+lib/php/test/Horde_Autoloader/Horde/Autoloader/AutoloaderTest.php
+lib/php/test/Horde_Autoloader/Horde/Autoloader/ClassPathMapper/ApplicationTest.php
+lib/php/test/Horde_Autoloader/Horde/Autoloader/ClassPathMapper/DefaultTest.php
+lib/php/test/Horde_Autoloader/Horde/Autoloader/ClassPathMapper/PrefixTest.php
