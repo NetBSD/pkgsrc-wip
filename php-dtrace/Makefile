@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/10/08 10:36:26 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2012/05/11 09:38:07 fhajny Exp $
 
 MODNAME=		dtrace
 PECL_VERSION=		1.0.3
@@ -10,6 +10,8 @@ COMMENT=		PHP extension for DTrace for Solaris
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=		php-dtrace-[0-9]*
+
+MAKE_JOBS_SAFE=		no
 
 .include "../../lang/php/ext.mk"
 .include "../../mk/bsd.pkg.mk"
