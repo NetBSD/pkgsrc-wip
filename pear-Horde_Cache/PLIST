@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/05/11 13:08:36 triaxx Exp $
+lib/php/.registry/.channel.pear.horde.org/horde_cache.reg
+lib/php/Horde/Cache.php
+lib/php/Horde/Cache/Exception.php
+lib/php/Horde/Cache/Storage/Apc.php
+lib/php/Horde/Cache/Storage/Base.php
+lib/php/Horde/Cache/Storage/Eaccelerator.php
+lib/php/Horde/Cache/Storage/File.php
+lib/php/Horde/Cache/Storage/Memcache.php
+lib/php/Horde/Cache/Storage/Mock.php
+lib/php/Horde/Cache/Storage/Null.php
+lib/php/Horde/Cache/Storage/Session.php
+lib/php/Horde/Cache/Storage/Sql.php
+lib/php/Horde/Cache/Storage/Stack.php
+lib/php/Horde/Cache/Storage/Xcache.php
+lib/php/data/Horde_Cache/cache.sql
+lib/php/data/Horde_Cache/migration/1_horde_cache_base_tables.php
+lib/php/doc/Horde_Cache/COPYING
