@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/03/23 12:54:35 outpaddling Exp $
+# $NetBSD: Makefile,v 1.3 2012/05/11 19:59:46 outpaddling Exp $
 #
 
 DISTNAME=	mpb-1.4.2
@@ -24,19 +24,17 @@ CONFIGURE_ARGS+=--with-libctl=${PREFIX}/share/libctl
 # I've tried configuring with --prefix=${DESTDIR}${PREFIX}, but my override
 # gets overridden by pkgsrc.  Also tried some vars like INSTALL_MAKE_FLAGS,
 # INSTALL_ROOT, PREFIX.
-post-configure:
-	gsed -i'' -e 's|$$(prefix)|${DESTDIR}$$(prefix)|' \
-		  -e 's|$$(mandir)|${DESTDIR}$$(mandir)|' \
-		${WRKSRC}/mpb-ctl/Makefile
-	gsed -i'' -e 's|$$(prefix)|${DESTDIR}$$(prefix)|' \
-		  -e 's|$$(mandir)|${DESTDIR}$$(mandir)|' \
-		${WRKSRC}/utils/Makefile
+SUBST_CLASSES+=	install-prefix
+SUBST_FILES.install-prefix=	mpb-ctl/Makefile utils/Makefile
+SUBST_STAGE.install-prefix=	post-configure
+SUBST_MESSAGE.install-prefix=	Patching install prefix.
+SUBST_SED.install-prefix=	-e 's|$$(prefix)|${DESTDIR}$$(prefix)|g' \
+				-e 's|$$(mandir)|${DESTDIR}$$(mandir)|g'
 
 .include "../../math/blas/buildlink3.mk"
 .include "../../math/lapack/buildlink3.mk"
 .include "../../devel/hdf5/buildlink3.mk"
 .include "../../math/fftw2/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
-.include "../../lang/guile/buildlink3.mk"
 .include "../../wip/libctl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
