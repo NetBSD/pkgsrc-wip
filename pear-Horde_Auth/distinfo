@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/05/11 12:52:45 triaxx Exp $
+
+SHA1 (pear/Horde_Auth-1.4.9.tgz) = 7f7c16a49e555569a10c29343a5df4ab87664665
+RMD160 (pear/Horde_Auth-1.4.9.tgz) = 0db6020fe7a9e5cf3fc885a5a441455509bc5abd
+Size (pear/Horde_Auth-1.4.9.tgz) = 50814 bytes
