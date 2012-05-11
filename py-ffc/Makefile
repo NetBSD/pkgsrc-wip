@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/03/27 15:02:24 outpaddling Exp $
+# $NetBSD: Makefile,v 1.2 2012/05/11 22:28:33 outpaddling Exp $
 #
 
 DISTNAME=	ffc-1.0.0
@@ -10,9 +10,11 @@ MAINTAINER=	jwbacon@tds.net
 HOMEPAGE=	https://launchpad.net/ffc
 COMMENT=	C++ code generator for multilinear forms
 
-PKG_DESTDIR_SUPPORT=	user-destdir
-
 LICENSE=	gnu-lgpl-v3
+
+FETCH_USING=	curl
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG=	yes
 

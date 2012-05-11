@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/03/27 15:20:10 outpaddling Exp $
+# $NetBSD: Makefile,v 1.2 2012/05/11 22:29:07 outpaddling Exp $
 #
 
 DISTNAME=	fiat-1.0.0
@@ -9,6 +9,8 @@ PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 MAINTAINER=	jwbacon@tds.net
 HOMEPAGE=	https://launchpad.net/fiat
 COMMENT=	FInite element Automatic Tabulator
+
+FETCH_USING=	curl
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
