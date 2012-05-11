@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/05/11 08:58:24 triaxx Exp $
+# $NetBSD: Makefile,v 1.2 2012/05/11 12:11:01 triaxx Exp $
 #
 
 DISTNAME=	Horde_Url-1.0.2
@@ -14,5 +14,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEPENDS+=	${PHP_PKG_PREFIX}-pear-channel-horde-[0-9]*:../../wip/pear-channel-horde
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-Horde_Exception-[0-9]*:../../wip/pear-Horde_Exception
+
 .include "../../lang/php/pear.mk"
 .include "../../mk/bsd.pkg.mk"

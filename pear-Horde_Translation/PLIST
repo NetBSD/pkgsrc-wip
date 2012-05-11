@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.2 2012/05/11 08:45:36 triaxx Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/05/11 12:10:26 triaxx Exp $
+lib/php/.registry/.channel.pear.horde.org/horde_translation.reg
 lib/php/Horde/Translation.php
 lib/php/Horde/Translation/Exception.php
 lib/php/Horde/Translation/Handler.php
