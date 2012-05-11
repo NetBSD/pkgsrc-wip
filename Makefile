@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4749 2012/05/11 13:34:07 triaxx Exp $
+# $Id: Makefile,v 1.4750 2012/05/11 14:45:54 triaxx Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1991,11 +1991,19 @@ SUBDIR+=	pear-Horde_Browser
 SUBDIR+=	pear-Horde_Cache
 SUBDIR+=	pear-Horde_Cli
 SUBDIR+=	pear-Horde_Compress
+SUBDIR+=	pear-Horde_Constraint
+SUBDIR+=	pear-Horde_Controller
 SUBDIR+=	pear-Horde_Date
 SUBDIR+=	pear-Horde_Exception
+SUBDIR+=	pear-Horde_Icalenda
+SUBDIR+=	pear-Horde_Injector
+SUBDIR+=	pear-Horde_Log
+SUBDIR+=	pear-Horde_Mime
 SUBDIR+=	pear-Horde_Nls
+SUBDIR+=	pear-Horde_Stream_Filte
 SUBDIR+=	pear-Horde_Stream_Wrapper
 SUBDIR+=	pear-Horde_Support
+SUBDIR+=	pear-Horde_Text_Flowed
 SUBDIR+=	pear-Horde_Translation
 SUBDIR+=	pear-Horde_Url
 SUBDIR+=	pear-Horde_Util
