@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2012/04/11 11:27:26 ftigeot Exp $
+@comment $NetBSD: PLIST,v 1.9 2012/05/11 09:14:39 fhajny Exp $
 bin/passenger
 bin/passenger-config
 bin/passenger-install-apache2-module
@@ -200,6 +200,7 @@ share/phusion-passenger/source/build/rpm.rb
 share/phusion-passenger/source/build/ruby_extension.rb
 share/phusion-passenger/source/build/ruby_tests.rb
 share/phusion-passenger/source/build/test_basics.rb
+share/phusion-passenger/source/configure
 share/phusion-passenger/source/debian/README.Debian
 share/phusion-passenger/source/debian/changelog
 share/phusion-passenger/source/debian/compat
@@ -224,7 +225,6 @@ share/phusion-passenger/source/doc/Security of user switching support.html
 share/phusion-passenger/source/doc/Security of user switching support.txt
 share/phusion-passenger/source/doc/Users guide Apache with comments.html
 share/phusion-passenger/source/doc/Users guide Apache.html
-share/phusion-passenger/source/doc/Users guide Apache.idmap.txt
 share/phusion-passenger/source/doc/Users guide Apache.txt
 share/phusion-passenger/source/doc/Users guide Nginx.html
 share/phusion-passenger/source/doc/Users guide Nginx.txt

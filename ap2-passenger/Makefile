@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.10 2012/03/19 12:00:29 ftigeot Exp $
+# $NetBSD: Makefile,v 1.11 2012/05/11 09:14:39 fhajny Exp $
 
-DISTNAME=		passenger-3.0.11
+DISTNAME=		passenger-3.0.12
 PKGNAME=		${APACHE_PKG_PREFIX}-${RUBY_PKGPREFIX}-${DISTNAME}
-PKGREVISION=		1
 CATEGORIES=		www
 
-MASTER_SITES=		http://rubyforge.org/frs/download.php/75548/
+MASTER_SITES=		http://rubyforge.org/frs/download.php/76005/
 MAINTAINER=		filip@joyent.com
 HOMEPAGE=		http://www.modrails.com/
 COMMENT=		Apache module for easy and robust deployment of Rails applications
@@ -70,19 +69,11 @@ SUBST_SED.rake+=	-e 's,@PASSENGER_LOGDIR@,${PASSENGER_LOGDIR},'
 
 .include "../../mk/compiler.mk"
 
-# GCC 4.6 enforces C99 compliance on C++ code, which implies _XOPEN_SOURCE=600
-# or later on SunOS, and fails if earlier set is requested
-
-.if ${OPSYS} == "SunOS" && !empty(CC_VERSION:Mgcc-4.6.*)
-SUBST_CLASSES+=		xopen
-SUBST_MESSAGE.xopen=	Fixing _XOPEN_SOURCE for GCC 4.6
-SUBST_STAGE.xopen=	post-patch
-SUBST_FILES.xopen=	lib/phusion_passenger/platform_info/compiler.rb
-SUBST_SED.xopen=	-e 's,-D_XOPEN_SOURCE=500 -D_XPG4_2,,'
-.endif
-
 post-patch:
-	rm ${WRKSRC}/lib/phusion_passenger/admin_tools/memory_stats.rb.orig
+	${RM} -f ${WRKSRC}/lib/phusion_passenger/admin_tools/memory_stats.rb.orig \
+		${WRKSRC}/ext/boost/config/stdlib/libstdcpp3.hpp.orig \
+		${WRKSRC}/lib/phusion_passenger/platform_info/compiler.rb.orig \
+		${WRKSRC}/lib/phusion_passenger/utils/._tmpdir.rb
 
 do-build:
 	cd ${WRKSRC} && ./bin/passenger-install-apache2-module -a
