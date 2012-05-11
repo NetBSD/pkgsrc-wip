@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/02/01 15:41:33 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2012/05/11 09:39:41 fhajny Exp $
 
 PKGNAME=		${DISTNAME:S/mysql-/mysql-sphinxse-/}.${SPHINX_VER}
 
@@ -41,6 +41,8 @@ DEPENDS+=		mysql-server-5.5.*:../../databases/mysql55-server
 PKG_FAIL_REASON=	"Dynamic plugin loading requires MySQL >= 5.1."
 .endif
 
+BUILDLINK_DEPMETHOD.readline=	build
+
 BUILD_DIRS=		storage/sphinx
 INSTALLATION_DIRS=	lib/mysql/plugin
 
@@ -50,4 +52,5 @@ post-extract:
 post-patch:
 	cd ${WRKSRC} && ${SH} BUILD/autorun.sh
 
+.include "../../devel/readline/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
