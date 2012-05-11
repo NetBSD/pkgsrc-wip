@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.2 2012/04/25 09:07:49 fhajny Exp $
+$NetBSD: distinfo,v 1.3 2012/05/11 12:03:12 fhajny Exp $
 
-SHA1 (gearmand-0.28.tar.gz) = c7772a52b4eb68a4dfd7623e1d5d5ec63becd910
-RMD160 (gearmand-0.28.tar.gz) = 531c9e0d4e186f8a09fbb8bb375cbee6dfd9e39c
-Size (gearmand-0.28.tar.gz) = 774456 bytes
+SHA1 (gearmand-0.33.tar.gz) = 94dc8b9eddcdb79ee25aed94f301cda0d57710f6
+RMD160 (gearmand-0.33.tar.gz) = 993c48fd7dc8fecefa052cd9a7d2e13945a58ee9
+Size (gearmand-0.33.tar.gz) = 813193 bytes
 SHA1 (patch-configure) = c4414d967d5932099fb0c9eb0c9cda477f9db516
 SHA1 (patch-examples__reverse_worker.cc) = 87e34c4d14742c163e2177709b2dacc571b324d9
 SHA1 (patch-util__logfile.hpp) = abdfb365fed39402c95a716fd40a5b70b3e66fe0

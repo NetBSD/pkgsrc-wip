@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2012/02/14 13:30:25 fhajny Exp $
+# $NetBSD: Makefile,v 1.3 2012/05/11 12:03:12 fhajny Exp $
 #
 
-DISTNAME=	gearmand-0.28
+DISTNAME=	gearmand-0.33
 CATEGORIES=	devel
-MASTER_SITES=	http://launchpadlibrarian.net/91215774/
+MASTER_SITES=	http://launchpadlibrarian.net/104788829/
 
 MAINTAINER=	filip@joyent.com
 HOMEPAGE=	http://gearman.org/
