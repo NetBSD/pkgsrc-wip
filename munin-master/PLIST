@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2011/01/24 21:37:18 ftigeot Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/05/11 10:56:32 fhajny Exp $
 ${PERL5_SUB_INSTALLVENDORLIB}/Munin/Master/Config.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/Munin/Master/GraphOld.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/Munin/Master/Group.pm
@@ -35,7 +35,9 @@ lib/munin/munin-limits
 lib/munin/munin-update
 share/examples/munin/munin.conf
 share/examples/munin/templates/definitions.html
+share/examples/munin/templates/favicon.ico
 share/examples/munin/templates/logo.png
+share/examples/munin/templates/logo-h.png
 share/examples/munin/templates/munin-comparison-day.tmpl
 share/examples/munin/templates/munin-comparison-month.tmpl
 share/examples/munin/templates/munin-comparison-week.tmpl
@@ -44,6 +46,14 @@ share/examples/munin/templates/munin-domainview.tmpl
 share/examples/munin/templates/munin-nodeview.tmpl
 share/examples/munin/templates/munin-overview.tmpl
 share/examples/munin/templates/munin-serviceview.tmpl
+share/examples/munin/templates/partial/bottom_navigation.tmpl
+share/examples/munin/templates/partial/generated_by.tmpl
+share/examples/munin/templates/partial/head.tmpl
+share/examples/munin/templates/partial/logo_navigation.tmpl
+share/examples/munin/templates/partial/logo_navigation_comparison.tmpl
+share/examples/munin/templates/partial/logo_path.tmpl
+share/examples/munin/templates/partial/path.tmpl
 share/examples/munin/templates/style.css
+share/examples/munin/templates/style-1.2.css
 www/cgi-bin/munin-cgi-graph
 www/cgi-bin/munin-fastcgi-graph

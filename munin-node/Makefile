@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/04/09 14:08:00 ftigeot Exp $
+# $NetBSD: Makefile,v 1.7 2012/05/11 10:56:32 fhajny Exp $
 #
 
 DISTNAME=	munin-${VER}
@@ -28,7 +28,6 @@ WRKSRC=		${WRKDIR}/${DISTNAME}
 
 PKG_GROUPS_VARS+=	MUNIN_GROUP
 PKG_USERS_VARS+=	MUNIN_USER
-USERGROUP_PHASE=	pre-install
 
 MUNIN_GROUP?=	munin
 MUNIN_USER?=	munin
@@ -43,26 +42,24 @@ REPLACE_BASH+=	plugins/node.d/multigraph_tester.in
 REPLACE_PERL+=	node/sbin/munin-node
 REPLACE_PERL+=	node/sbin/munin-node-configure
 REPLACE_PERL+=	node/sbin/munin-run
-REPLACE_PERL+=	node/node.d/*.in
 REPLACE_PERL+=	plugins/node.d/slony_lag_.in
+CHECK_INTERPRETER_SKIP+=	lib/munin/plugins/tomcat_
 
-STATEDIR?=	${VARBASE}/munin/plugin-state
-MUNIN_RUN?=	${VARBASE}/run/munin
+MUNIN_DBDIR?=		${VARBASE}/munin
+MUNIN_LOGDIR?=		${VARBASE}/log/munin
+MUNIN_PLUGSTATE?=	${MUNIN_DBDIR}/plugin-state
+MUNIN_SPOOLDIR?=	${VARBASE}/spool/munin
+MUNIN_STATEDIR?=	${VARBASE}/run/munin
 
-MAKE_DIRS=	${VARBASE}/munin
-MAKE_DIRS+=	${VARBASE}/run/munin
-MAKE_DIRS+=	${VARBASE}/log/munin
-MAKE_DIRS+=	${STATEDIR}
-
-OWN_DIRS=	${VARBASE}/munin
-OWN_DIRS+=	${VARBASE}/run/munin
-OWN_DIRS+=	${VARBASE}/log/munin
-OWN_DIRS+=	${VARBASE}/munin/plugin-state
-
-OWN_DIRS_PERMS+=${VARBASE}/munin ${MUNIN_USER} ${MUNIN_GROUP} 0755
-OWN_DIRS_PERMS+=${VARBASE}/run/munin ${MUNIN_USER} ${MUNIN_GROUP} 0755
-OWN_DIRS_PERMS+=${VARBASE}/log/munin ${MUNIN_USER} ${MUNIN_GROUP} 0755
-OWN_DIRS_PERMS+=${VARBASE}/munin/plugin-state ${MUNIN_USER} ${MUNIN_GROUP} 0775
+OWN_DIRS=		${PKG_SYSCONFDIR}/plugins
+OWN_DIRS+=		${PKG_SYSCONFDIR}/plugin-conf.d
+OWN_DIRS+=		${MUNIN_DBDIR} ${MUNIN_LOGDIR} ${MUNIN_PLUGSTATE}
+OWN_DIRS+=		${MUNIN_SPOOLDIR} ${MUNIN_STATEDIR}
+OWN_DIRS_PERMS+=	${MUNIN_DBDIR} ${MUNIN_USER} ${MUNIN_GROUP} 0755
+OWN_DIRS_PERMS+=	${MUNIN_LOGDIR} ${MUNIN_USER} ${MUNIN_GROUP} 0755
+OWN_DIRS_PERMS+=	${MUNIN_PLUGSTATE} nobody ${MUNIN_GROUP} 0775
+OWN_DIRS_PERMS+=	${MUNIN_SPOOLDIR} ${MUNIN_USER} ${MUNIN_GROUP} 0775
+OWN_DIRS_PERMS+=	${MUNIN_STATEDIR} ${MUNIN_USER} ${MUNIN_GROUP} 0755
 
 INSTALL_TARGET=	install-node install-node-plugins
 
@@ -73,6 +70,9 @@ MAKE_ENV+=	CONFDIR=${PKG_SYSCONFDIR}
 MAKE_ENV+=	MUNIN_USER=${MUNIN_USER}
 MAKE_ENV+=	MUNIN_GROUP=${MUNIN_GROUP}
 MAKE_ENV+=	PERL5=${PERL5:Q}
+MAKE_ENV+=	PYTHONBIN=${PYTHONBIN:Q}
+MAKE_ENV+=	RUBY=${RUBY:Q}
+MAKE_ENV+=	BASH=${BASH:Q}
 
 FILES_SUBST+=	PERL=${PERL5:Q}
 FILES_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
@@ -99,4 +99,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/build/node/munin-node.conf ${DESTDIR}${EGDIR}
 
 .include "../../lang/python/application.mk"
+.include "../../lang/ruby/rubyversion.mk"
 .include "../../mk/bsd.pkg.mk"

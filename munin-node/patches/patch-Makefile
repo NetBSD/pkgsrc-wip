@@ -1,0 +1,79 @@
+$NetBSD: patch-Makefile,v 1.1 2012/05/11 10:56:32 fhajny Exp $
+
+Fix installation according to pkgsrc standards.
+--- Makefile.orig	2009-12-29 16:03:49.000000000 +0000
++++ Makefile
+@@ -65,41 +65,32 @@ install: install-master-prime install-co
+ endif
+ 
+ install-pre: Makefile Makefile.config
+-	@$(CHECKUSER)
+-	mkdir -p $(LOGDIR)
+-	mkdir -p $(STATEDIR)
+-	mkdir -p $(CONFDIR)
+-	$(CHOWN) $(USER) $(LOGDIR) $(STATEDIR)
++	mkdir -p $(EGDIR)
+ 
+ install-master-prime: $(INFILES_MASTER) install-pre install-master
+-	mkdir -p $(CONFDIR)/templates
+-	mkdir -p $(CONFDIR)/templates/partial
+-	mkdir -p $(CONFDIR)/munin-conf.d
++	mkdir -p $(EGDIR)/templates
++	mkdir -p $(EGDIR)/templates/partial
++	mkdir -p $(EGDIR)/munin-conf.d
+ 	mkdir -p $(LIBDIR)
+ 	mkdir -p $(BINDIR)
+ 	mkdir -p $(PERLLIB)
+ 	mkdir -p $(PERLLIB)/Munin/Master
+ 	mkdir -p $(HTMLDIR)
+-	mkdir -p $(DBDIR)
+ 	mkdir -p $(CGIDIR)
+ 
+-	$(CHOWN) $(USER) $(HTMLDIR) $(DBDIR) 
+-	$(CHMOD) 0755 $(DBDIR)
+-
+ 	for p in master/www/*.tmpl master/www/*.png master/www/*.css resources/favicon.ico; do \
+-		$(INSTALL) -m 0644 "$$p" $(CONFDIR)/templates/ ; \
++		$(INSTALL) -m 0644 "$$p" $(EGDIR)/templates/ ; \
+ 	done
+ 
+ 	for p in master/www/partial/*.tmpl; do \
+-		$(INSTALL) -m 0644 "$$p" $(CONFDIR)/templates/partial/ ; \
++		$(INSTALL) -m 0644 "$$p" $(EGDIR)/templates/partial/ ; \
+ 	done
+ 
+-	$(INSTALL) -m 0644 master/www/definitions.html $(CONFDIR)/templates/
++	$(INSTALL) -m 0644 master/www/definitions.html $(EGDIR)/templates/
+ 	$(INSTALL) -m 0755 master/DejaVuSansMono.ttf $(LIBDIR)/
+ 	$(INSTALL) -m 0755 master/DejaVuSans.ttf $(LIBDIR)/
+ 
+-	test -f $(HTMLDIR)/.htaccess || $(INSTALL) -m 0644 build/master/www/munin-htaccess $(HTMLDIR)/.htaccess
+-	test -f "$(CONFDIR)/munin.conf"  || $(INSTALL) -m 0644 build/master/munin.conf $(CONFDIR)/
++	$(INSTALL) -m 0644 build/master/munin.conf $(EGDIR)/
+ 
+ 	$(INSTALL) -m 0755 build/master/_bin/munin-cron $(BINDIR)/
+ 	$(INSTALL) -m 0755 build/master/_bin/munin-check $(BINDIR)/
+@@ -122,14 +113,7 @@ install-node-plugins: install-plugins-pr
+ install-plugins-prime: install-plugins build $(PLUGINS) Makefile Makefile.config
+ 	@$(CHECKGROUP)
+ 
+-	mkdir -p $(CONFDIR)/plugins
+-	mkdir -p $(CONFDIR)/plugin-conf.d
+ 	mkdir -p $(LIBDIR)/plugins
+-	mkdir -p $(PLUGSTATE)
+-
+-	$(CHOWN) $(PLUGINUSER):$(GROUP) $(PLUGSTATE)
+-	$(CHMOD) 0775 $(PLUGSTATE)
+-	$(CHMOD) 0755 $(CONFDIR)/plugin-conf.d
+ 
+ 	for p in build/plugins/node.d/* build/plugins/node.d.$(OSTYPE)/* ; do \
+ 	    if test -f "$$p" ; then                            \
+@@ -152,7 +136,7 @@ install-plugins-java: build-plugins-java
+ install-node-prime: install-node-pre install-node
+ 
+ install-node-pre: build/node/munin-node.conf install-pre
+-	test -f "$(CONFDIR)/munin-node.conf" || $(INSTALL) -m 0644 build/node/munin-node.conf $(CONFDIR)/
++	$(INSTALL) -m 0644 build/node/munin-node.conf $(EGDIR)/
+ 
+ 
+ install-common-prime: build-common install-common

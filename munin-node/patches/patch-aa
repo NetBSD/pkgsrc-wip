@@ -1,8 +1,9 @@
-$NetBSD: patch-aa,v 1.4 2012/04/09 14:28:20 ftigeot Exp $
+$NetBSD: patch-aa,v 1.5 2012/05/11 10:56:32 fhajny Exp $
 
+Fix default config.
 --- Makefile.config.orig	2009-11-06 14:35:44.000000000 +0000
 +++ Makefile.config
-@@ -17,29 +17,29 @@
+@@ -17,62 +17,65 @@
  #
  # the base of the Munin installation.
  # 
@@ -12,6 +13,9 @@ $NetBSD: patch-aa,v 1.4 2012/04/09 14:28:20 ftigeot Exp $
  # Where Munin keeps its configurations (server.conf, client.conf, ++)
 -CONFDIR    = $(DESTDIR)/etc/opt/munin
 +CONFDIR   ?= $(UPREFIX)/etc/munin
++
++# Where NetBSD pkgsrc installs example config files
++EGDIR      = $(UPREFIX)/share/examples/munin
  
  # Server only - where to put munin-cron
 -BINDIR     = $(PREFIX)/bin
@@ -41,17 +45,31 @@ $NetBSD: patch-aa,v 1.4 2012/04/09 14:28:20 ftigeot Exp $
  
  # Server only - spool directory for data gathered from nodes by
  # munin-gather - experimental.  Place on ramdisk to make munin
-@@ -52,7 +52,7 @@ SSPOOLDIR  = $(PREFIX)/spool
+ # scale better.  On many versions of Linux as well as on Solaris
+ # /tmp will be a ramdisk.
+ 
+-SSPOOLDIR  = $(PREFIX)/spool
++SSPOOLDIR  = ${MUNIN_SPOOLDIR}
+ 
+ # Suggested directory name for a pulic ramdisk based tmp directory.
  # SSPOOLDIR := /tmp/muninspool
  
  # Client only - Where to put RRD files and other intenal data
 -DBDIR      = $(DESTDIR)/var/opt/munin
-+DBDIR      = $(DESTDIR)/var/munin
++DBDIR      = ${MUNIN_DBDIR}
  
  # Client only - Where plugins should put their states. Must be writable by
  # group "munin", and should be preserved between reboots
-@@ -66,13 +66,13 @@ LOGDIR     = $(PREFIX)/log/munin
- STATEDIR   = $(DESTDIR)/var/run/munin
+ PLUGSTATE  = $(DBDIR)/plugin-state
+ 
+ # Where Munin should place its logs.
+-LOGDIR     = $(PREFIX)/log/munin
++LOGDIR     = ${MUNIN_LOGDIR}
+ 
+ # Location of PID files and other statefiles. On the server, must be
+ # writable by the user "munin".
+-STATEDIR   = $(DESTDIR)/var/run/munin
++STATEDIR   = ${MUNIN_STATEDIR}
  
  # The perl interpreter to use
 -PERL       := $(shell which perl)
@@ -67,12 +85,12 @@ $NetBSD: patch-aa,v 1.4 2012/04/09 14:28:20 ftigeot Exp $
  
  # The java runtime to use (used by some plugins)
  JAVARUN    := /usr/bin/java
-@@ -95,11 +95,11 @@ JAVALIBDIR:= $(LIBDIR)
+@@ -95,11 +98,11 @@ JAVALIBDIR:= $(LIBDIR)
  GOODSH     := $(shell PATH=`getconf PATH` sh -c 'type sh | sed "s/.* //"')
  
  # Path of bash for bash specific plugins
 -BASH       := /bin/bash
-+BASH       := $(UPREFIX)/bin/bash
++BASH       := ${BASH}
  
  # Server only - Where to install the perl libraries
 -PERLSITELIB := $(shell $(PERL) -V:sitelib | cut -d"'" -f2)
@@ -82,7 +100,18 @@ $NetBSD: patch-aa,v 1.4 2012/04/09 14:28:20 ftigeot Exp $
  
  # Client only - Install plugins for this architecture
  OSTYPE     := $(shell uname | tr '[A-Z]' '[a-z]')
-@@ -126,9 +126,10 @@ PLUGINUSER := nobody
+@@ -117,8 +120,8 @@ MKTEMP     := $(shell ./test-mktemp)
+ VERSION    := $(shell ./getversion)
+ 
+ # User to run munin as
+-USER       := munin
+-GROUP      := munin
++USER       := ${MUNIN_USER}
++GROUP      := ${MUNIN_GROUP}
+ 
+ # Default user to run the plugins as
+ PLUGINUSER := nobody
+@@ -126,9 +129,10 @@ PLUGINUSER := nobody
  # Which command to use to check if the USER and GROUP to run Munin as, exists.
  # These will work on most modern OSes:
  #
