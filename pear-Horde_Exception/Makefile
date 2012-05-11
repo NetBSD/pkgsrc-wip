@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/05/11 08:43:46 triaxx Exp $
+# $NetBSD: Makefile,v 1.2 2012/05/11 08:56:27 triaxx Exp $
 #
 
 DISTNAME=	Horde_Exception-1.0.9
-CATEGORIES=	local
+CATEGORIES=	devel
 MASTER_SITES=	http://pear.horde.org/get/
 
 MAINTAINER=	frederic@fauberteau.org
