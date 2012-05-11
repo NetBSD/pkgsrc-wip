@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2012/05/11 07:45:47 triaxx Exp $
+$NetBSD: distinfo,v 1.2 2012/05/11 08:02:17 triaxx Exp $
 
-SHA1 (pear/channels/pear.horde.org/1/channel.xml) = cf27c2ef7b7d9249e99f93eebec856b052bc92a9
-RMD160 (pear/channels/pear.horde.org/1/channel.xml) = c616c26f32941ae54aca7c6177c535f6e93f535d
-Size (pear/channels/pear.horde.org/1/channel.xml) = 794 bytes
+SHA1 (pear/channels/pear.horde.org/2012.05.11/channel.xml) = cf27c2ef7b7d9249e99f93eebec856b052bc92a9
+RMD160 (pear/channels/pear.horde.org/2012.05.11/channel.xml) = c616c26f32941ae54aca7c6177c535f6e93f535d
+Size (pear/channels/pear.horde.org/2012.05.11/channel.xml) = 794 bytes
