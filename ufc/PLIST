@@ -1,12 +1,16 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/03/27 16:00:57 outpaddling Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/05/12 00:58:47 outpaddling Exp $
+include/swig/ufc.i
 include/ufc.h
 lib/pkgconfig/ufc-1.pc
-lib/python2.6/site-packages/ufc_utils/__init__.py
-lib/python2.6/site-packages/ufc_utils/build.py
-lib/python2.6/site-packages/ufc_utils/dofmap.py
-lib/python2.6/site-packages/ufc_utils/finite_element.py
-lib/python2.6/site-packages/ufc_utils/form.py
-lib/python2.6/site-packages/ufc_utils/function.py
-lib/python2.6/site-packages/ufc_utils/integrals.py
+${PYSITELIB}/ufc/__init__.py
+${PYSITELIB}/ufc/_ufc.so
+${PYSITELIB}/ufc/ufc.py
+${PYSITELIB}/ufc_utils/__init__.py
+${PYSITELIB}/ufc_utils/build.py
+${PYSITELIB}/ufc_utils/dofmap.py
+${PYSITELIB}/ufc_utils/finite_element.py
+${PYSITELIB}/ufc_utils/form.py
+${PYSITELIB}/ufc_utils/function.py
+${PYSITELIB}/ufc_utils/integrals.py
 share/ufc/UFCConfig.cmake
 share/ufc/UFCConfigVersion.cmake
