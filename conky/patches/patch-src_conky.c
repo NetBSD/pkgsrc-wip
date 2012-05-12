@@ -1,4 +1,4 @@
-$NetBSD: patch-src_conky.c,v 1.5 2012/05/10 21:35:34 imilh Exp $
+$NetBSD: patch-src_conky.c,v 1.6 2012/05/12 12:49:49 imilh Exp $
 
 --- src/conky.c.orig	2012-05-03 21:22:21.000000000 +0000
 +++ src/conky.c
@@ -58,39 +58,34 @@ $NetBSD: patch-src_conky.c,v 1.5 2012/05/10 21:35:34 imilh Exp $
  #endif /* __linux__ */
  
 -#ifndef __OpenBSD__
-+#if !defined(__OpenBSD__) && !defined(__NetBSD__)
++#if !defined(__OpenBSD__)
  			OBJ(acpifan) {
  				get_acpi_fan(p, p_max_size);
  			}
-@@ -1899,7 +1905,8 @@ void generate_text_internal(char *p, int
+@@ -1015,13 +1021,11 @@ void generate_text_internal(char *p, int
+ 				get_powerbook_batt_info(p, p_max_size, obj->data.i);
+ 			}
+ #endif /* __linux__ */
+-#if (defined(__FreeBSD__) || defined(__linux__))
+ 			OBJ(if_up) {
+ 				if (!interface_up(obj)) {
+ 					DO_JUMP;
+ 				}
+ 			}
+-#endif
+ #ifdef __OpenBSD__
+ 			OBJ(obsd_sensors_temp) {
+ 				print_obsd_sensors_temp(obj, p, p_max_size);
+@@ -1899,7 +1903,7 @@ void generate_text_internal(char *p, int
  			}
  #endif /* __linux__ */
  #if (defined(__FreeBSD__) || defined(__FreeBSD_kernel__) \
 -		|| defined(__OpenBSD__)) && (defined(i386) || defined(__i386__))
-+	|| defined(__OpenBSD__)) && (defined(i386) || defined(__i386__)) \
-+	|| defined(__NetBSD__)
++	|| defined(__OpenBSD__)) && (defined(i386) || defined(__i386__))
  			OBJ(apm_adapter) {
  				char *msg;
  
-@@ -3493,6 +3500,9 @@ static void main_loop(void)
- 	next_update_time = get_time();
- 	info.looped = 0;
- 	while (terminate == 0 && (total_run_times == 0 || info.looped < total_run_times)) {
-+#ifdef __NetBSD__
-+		update_interval = update_interval_old;
-+#else
- 		if(update_interval_bat != NOBATTERY && update_interval_bat != update_interval_old) {
- 			char buf[max_user_text];
- 
-@@ -3503,6 +3513,7 @@ static void main_loop(void)
- 				update_interval = update_interval_old;
- 			}
- 		}
-+#endif
- 		info.looped++;
- 
- #ifdef SIGNAL_BLOCKING
-@@ -5680,6 +5691,13 @@ void initialisation(int argc, char **arg
+@@ -5680,6 +5684,13 @@ void initialisation(int argc, char **arg
  	}
  	pthread_mutex_init(&kvm_proc_mutex, NULL);
  #endif
@@ -104,7 +99,7 @@ $NetBSD: patch-src_conky.c,v 1.5 2012/05/10 21:35:34 imilh Exp $
  
  	while (1) {
  		int c = getopt_long(argc, argv, getopt_string, longopts, NULL);
-@@ -5960,9 +5978,13 @@ int main(int argc, char **argv)
+@@ -5960,9 +5971,13 @@ int main(int argc, char **argv)
  	curl_global_cleanup();
  #endif
  
