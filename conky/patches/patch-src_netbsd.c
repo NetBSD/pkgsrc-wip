@@ -1,4 +1,4 @@
-$NetBSD: patch-src_netbsd.c,v 1.11 2012/05/12 12:49:49 imilh Exp $
+$NetBSD: patch-src_netbsd.c,v 1.12 2012/05/12 18:43:11 imilh Exp $
 
 --- src/netbsd.c.orig	2012-05-03 21:08:27.000000000 +0000
 +++ src/netbsd.c
@@ -510,7 +510,7 @@ $NetBSD: patch-src_netbsd.c,v 1.11 2012/05/12 12:49:49 imilh Exp $
  {
  	double v[3];
  
-@@ -316,51 +341,441 @@ void update_load_average()
+@@ -316,51 +341,445 @@ void update_load_average()
  	info.loadavg[0] = (float) v[0];
  	info.loadavg[1] = (float) v[1];
  	info.loadavg[2] = (float) v[2];
@@ -696,12 +696,45 @@ $NetBSD: patch-src_netbsd.c,v 1.11 2012/05/12 12:49:49 imilh Exp $
 +	return (temp / 1000000.0) - 273.15;
 +}
 +
++void
++get_bat_life(char *bat, char *buf)
++{
++	char row[32];
++	int64_t cur_charge, max_charge;
++	Devquery dq_charge = { P_INT64, bat, "charge", NULL};
++
++	strcpy(row, "max-value");
++	dq_charge.row = &row[0];
++
++	if (envsys_get_val(dq_charge, (void *)&max_charge) < 0) {
++		/* did not get any information from envsys */
++		strcpy(buf, "N/A");
+ 		return;
+ 	}
+ 
+-	/* not implemented */
+-	memset(p_client_buffer, 0, client_buffer_size);
++	strcpy(row, "cur-value");
++	dq_charge.row = &row[0];
++
++	if (envsys_get_val(dq_charge, (void *)&cur_charge) < 0) {
++		/* did not get any information from envsys */
++		strcpy(buf, "N/A");
++		return;
++	}
++
++	snprintf(buf, 8, "%d%%", (int)(((float) cur_charge / max_charge) * 100));
+ }
+ 
+-/* char *get_acpi_fan() */
+-void get_acpi_fan(char *p_client_buffer, size_t client_buffer_size)
 +int
 +get_bat_state(char *bat, char *buf)
-+{
+ {
 +	bool connected = false, charging = false;
++	char curcap[8];
 +	Devquery dq_ac = { P_BOOL, "acpiacad0", "connected", "cur-value" };
-+	Devquery dq_charging = { P_BOOL, bat, "charge state", "cur-value" };
++	Devquery dq_charging = { P_BOOL, bat, "charging", "cur-value" };
 +
 +	/* get AC state */
 +	if (envsys_get_val(dq_ac, (void *)&connected) < 0) {
@@ -716,14 +749,17 @@ $NetBSD: patch-src_netbsd.c,v 1.11 2012/05/12 12:49:49 imilh Exp $
 +
 +	/* is the battery charging ? */
 +	(void)envsys_get_val(dq_charging, (void *)&charging);
-+	
++
++	/* get its current cap */
++	get_bat_life(bat, &curcap[0]);
++
 +	if (connected)
 +		if (charging)
-+			strcpy(buf, "charging");
++			snprintf(buf, 256, "charging (%s)", curcap);
 +		else
 +			strcpy(buf, "on-line");
 +	else
-+		strcpy(buf, "off-line");
++		snprintf(buf, 256, "off-line (%s)", curcap);
 +
 +	return 0;
 +}
@@ -737,51 +773,19 @@ $NetBSD: patch-src_netbsd.c,v 1.11 2012/05/12 12:49:49 imilh Exp $
 +							  "cur-value"};
 +	Devquery dq_charge = { P_INT64, bat, "charge", "cur-value"};
 +
-+	if (envsys_get_val(dq_discharge, (void *)&discharge) < 0) {
++	if ((envsys_get_val(dq_discharge, (void *)&discharge) < 0) || !discharge) {
 +		strcpy(buf, "N/A");
 +		return;
 +	}
 +	if (envsys_get_val(dq_charge, (void *)&charge) < 0) {
 +		strcpy(buf, "N/A");
- 		return;
- 	}
- 
--	/* not implemented */
--	memset(p_client_buffer, 0, client_buffer_size);
++		return;
++	}
++
 +	hours = (int)((float) charge / discharge);
 +	minutes = (int)((((float) charge / discharge) - hours) * 60);
 +
 +	snprintf(buf, n, "%d:%02d", hours, minutes);
- }
- 
--/* char *get_acpi_fan() */
--void get_acpi_fan(char *p_client_buffer, size_t client_buffer_size)
-+void
-+get_apm_battery_life(char *bat, char *buf)
- {
-+	char row[32];
-+	int64_t cur_charge, max_charge;
-+	Devquery dq_charge = { P_INT64, bat, "charge", NULL};
-+
-+	strcpy(row, "max-value");
-+	dq_charge.row = &row[0];
-+
-+	if (envsys_get_val(dq_charge, (void *)&max_charge) < 0) {
-+		/* did not get any information from envsys */
-+		strcpy(buf, "N/A");
-+		return;
-+	}
-+
-+	strcpy(row, "cur-value");
-+	dq_charge.row = &row[0];
-+
-+	if (envsys_get_val(dq_charge, (void *)&cur_charge) < 0) {
-+		/* did not get any information from envsys */
-+		strcpy(buf, "N/A");
-+		return;
-+	}
-+
-+	snprintf(buf, 8, "%d%%", (int)(((float) cur_charge / max_charge) * 100));
 +}
 +
 +void
