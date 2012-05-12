@@ -96,6 +96,7 @@ Suggested package updates
 	o netwmpager-2.04
 	o newsbeuter-2.4
 	o ogmrip-0.13.7
+	o omega-1.2.10
 	o openvrml-0.18.9
 	o osmose-0.9.1
 	o parted-1.9.0
@@ -136,10 +137,10 @@ Suggested package updates
 	o xclipboard-1.1.2
 	o xcowsay-1.3
 	o xcursor-themes-1.0.3
-	o xf86-input-synaptics-1.6.0
+	o xf86-input-synaptics-1.6.1
 	o xf86-video-geode-2.11.13
 	o xfs-1.1.2
-	o xinetd-2.3.14
+	o xinetd-2.3.15
 	o xmms2-0.6
 	o zinf-2.2.5
 
