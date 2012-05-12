@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/05/12 00:58:47 outpaddling Exp $
+# $NetBSD: Makefile,v 1.5 2012/05/12 01:25:57 outpaddling Exp $
 #
 
 DISTNAME=	ufc-2.0.5
@@ -19,18 +19,19 @@ USE_LANGUAGES=	c c++ python
 USE_CMAKE=	yes
 
 .include "../../mk/bsd.prefs.mk"
-.include "../../lang/python/application.mk"
 
 CMAKE_ARGS+=	-DCMAKE_VERBOSE_MAKEFILE:BOOL=ON
 
-# CXXFLAGS+=	-I${LOCALBASE}/include/python${PYVERSSUFFIX}
-CXXFLAGS+=	-I${PYINC}
+# Needed on OS X
+# Not needed on NetBSD
+CXXFLAGS+=	-I${LOCALBASE}/${PYINC}
 
 PKGCONFIG_OVERRIDE+=	cmake/ufc-1.pc.in
 
-# PYDISTUTILSPKG= yes
+# Stolen from lang/python/extension.mk
 PLIST_SUBST+=   PYINC=${PYINC} PYLIB=${PYLIB} PYSITELIB=${PYSITELIB}
 
+.include "../../lang/python/application.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../wip/swig2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
