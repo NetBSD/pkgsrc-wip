@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/04/26 19:31:30 outpaddling Exp $
+# $NetBSD: Makefile,v 1.3 2012/05/12 02:04:11 outpaddling Exp $
 #
 
 DISTNAME=	dolfin-1.0.0
@@ -15,7 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 # Don't add gsed yet: Causes ../../mk/tools/replace.mk to override the
 # gsed command and use sed
 USE_TOOLS+=	pkg-config
-USE_LANGUAGES=	c c++
+USE_LANGUAGES=	c c++ python
 USE_CMAKE=	yes
 
 REPLACE_PYTHON+=	scripts/dolfin-plot/dolfin-plot
@@ -37,16 +37,24 @@ PKGCONFIG_OVERRIDE+=	cmake/templates/dolfin.pc.in
 
 FETCH_USING=	curl
 
-post-configure:
-	gsed -i'' -e 's|/bin/bash|/usr/pkg/bin/bash|' ${WRKSRC}/dolfin-version
+SUBST_CLASSES+=		bash
+SUBST_STAGE.bash=	post-configure
+SUBST_FILES.bash=	dolfin-version
+SUBST_SED.bash=		-e 's|/bin/bash|/usr/pkg/bin/bash|'
+
+#post-configure:
+#	gsed -i'' -e 's|/bin/bash|/usr/pkg/bin/bash|' ${WRKSRC}/dolfin-version
 #.for file in unordered_set.hpp unordered_map.hpp
 #	gsed -i'' -e 's|!defined(BOOST_NO_0X_HDR_INITIALIZER_LIST)|0|g' ${WRKDIR}/.buildlink/include/boost/unordered/${file}
 #.endfor
 
+# Stolen from lang/python/extension.mk
+PLIST_SUBST+=   PYSITELIB=${PYSITELIB}
+
 # Hack to work around PYSITELIB error in package creation
 # Apparently it's not being expanded properly
-pre-install:
-	gsed -e 's|$${PYSITELIB}|${PYSITELIB}|g' files/PLIST.in > PLIST
+#pre-install:
+#	gsed -e 's|$${PYSITELIB}|${PYSITELIB}|g' files/PLIST.in > PLIST
 
 .include "../../lang/python/application.mk"
 .include "../../wip/armadillo/buildlink3.mk"
@@ -64,4 +72,5 @@ pre-install:
 .include "../../wip/suitesparse/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../wip/cgal/buildlink3.mk"
+.include "../../wip/petsc/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

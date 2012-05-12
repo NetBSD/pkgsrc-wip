@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/03/22 19:53:47 outpaddling Exp $
+# $NetBSD: Makefile,v 1.2 2012/05/12 02:04:11 outpaddling Exp $
 
 DISTNAME=	armadillo-2.2.1
 CATEGORIES=	math
@@ -9,7 +9,7 @@ HOMEPAGE=	http://sourceforge.net/projects/arma/
 COMMENT=	C++ template matrix library
 LICENSE=	gnu-lgpl-v3
 
-USE_LANGUAGES+= c c++ fortran
+USE_LANGUAGES+= c c++
 USE_CMAKE=	yes
 
 PKG_DESTDIR_SUPPORT=	user-destdir
