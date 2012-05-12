@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/03/27 17:48:00 outpaddling Exp $
+# $NetBSD: Makefile,v 1.3 2012/05/12 13:15:49 outpaddling Exp $
 # FreeBSD Id: ports/math/suitesparse/Makefile,v 1.38 2011/07/20 16:17:35 bf Exp
 
 DISTNAME=	SuiteSparse-3.6.1
@@ -79,11 +79,13 @@ do-build:
 	cd ${WRKSRC_SHARED} ; ${SETENV} ${MAKE_ENV} PICFLAG=${PICFLAG} \
 		${GMAKE} ${_MAKE_JOBS} ${MAKE_ARGS}
 
-post-build:
-	for i in `find ${WRKSRC_SHARED} -type f -name '*.a'` ; do \
-		j=$${i##*/} ; ${LD} -Bshareable -o $${i%.a}.so.${SVERSION} -x \
-		-soname $${j%.a}.so.${SVERSION} --whole-archive $${i} ; \
-	done
+# OS X ld does not support -Bshareable or --whole-archive
+# Find a portable way to add sonames
+#post-build:
+#	for i in `find ${WRKSRC_SHARED} -type f -name '*.a'` ; do \
+#		j=$${i##*/} ; ${LD} -Bshareable -o $${i%.a}.so.${SVERSION} -x \
+#		-soname $${j%.a}.so.${SVERSION} --whole-archive $${i} ; \
+#	done
 
 do-install:
 .for d in AMD BTF CAMD CCOLAMD CHOLMOD COLAMD CXSparse KLU SPQR UMFPACK
