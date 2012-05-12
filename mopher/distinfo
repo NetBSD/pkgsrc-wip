@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/05/12 13:29:06 pebog Exp $
+
+SHA1 (mopher-0.1.tar.gz) = a4dbab1c4d66087073482a51046c63b9b6f0aad3
+RMD160 (mopher-0.1.tar.gz) = 509dce96eb9da9dd91dc650bccca27193ef9d0f5
+Size (mopher-0.1.tar.gz) = 115061 bytes
+SHA1 (patch-Makefile.common.in) = 0b2a5d9d59b3f60f0bff24dddf36e7ad7893749d
+SHA1 (patch-Makefile.in) = 1d6715117cdc4cbd36842b002f57698883167a53
+SHA1 (patch-src_mopherd.c) = 3370cb937f485c54e39f49feabac04fa6c4886e9
+SHA1 (patch-src_util.c) = baa99971a4fc9ae6be5f7d66e31024d50a228b98

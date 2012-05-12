@@ -1,0 +1,27 @@
+$NetBSD: patch-Makefile.common.in,v 1.1.1.1 2012/05/12 13:29:06 pebog Exp $
+
+--- Makefile.common.in.orig	2012-01-24 12:19:08.000000000 +0000
++++ Makefile.common.in
+@@ -4,8 +4,8 @@ exec_prefix=@exec_prefix@
+ sbindir=@sbindir@
+ libdir=@libdir@
+ sysconfdir=@sysconfdir@
+-mandir=@datarootdir@/man
+-man1dir=$(mandir)/man1
++mandir=@mandir@
++man8dir=$(mandir)/man8
+ man5dir=$(mandir)/man5
+ 
+ # Program paths
+@@ -38,8 +38,9 @@ CONF_DIR=@sysconfdir@/mopher
+ # Paths (defs.c)
+ 
+ MOPHERD_DIR=@libdir@/mopher
+-MOPHERD_CONF=@sysconfdir@/mopher/mopherd.conf
+-MAIL_ACL=@sysconfdir@/mopher/mail.acl
++MOPHERD_EGDIR=@datarootdir@/examples/mopher
++MOPHERD_CONF=@sysconfdir@/mopherd.conf
++MAIL_ACL=@sysconfdir@/mail.acl
+ 
+ 
+ # Files

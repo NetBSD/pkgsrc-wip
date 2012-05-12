@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/05/12 13:29:06 pebog Exp $
+${PLIST.bdb}lib/mopher/modules/bdb.so
+${PLIST.mysql}lib/mopher/modules/sakila.so
+${PLIST.spf}lib/mopher/modules/spf.so
+lib/mopher/modules/cast.so
+lib/mopher/modules/counter.so
+lib/mopher/modules/list.so
+lib/mopher/modules/memdb.so
+lib/mopher/modules/rbl.so
+lib/mopher/modules/regex.so
+lib/mopher/modules/spamd.so
+lib/mopher/modules/string.so
+man/man5/mail.acl.5
+man/man5/mopherd.conf.5
+man/man8/mopherd.8
+sbin/mopherd
+share/examples/mopher/mail.acl
+share/examples/mopher/mopherd.conf
+share/examples/rc.d/mopherd
+@pkgdir lib/mopher/db

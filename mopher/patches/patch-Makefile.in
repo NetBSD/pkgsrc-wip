@@ -1,0 +1,48 @@
+$NetBSD: patch-Makefile.in,v 1.1.1.1 2012/05/12 13:29:06 pebog Exp $
+
+--- Makefile.in.orig	2012-01-24 12:19:08.000000000 +0000
++++ Makefile.in
+@@ -23,26 +23,27 @@ all: $(SUBDIRS)
+ install: all
+ 	@echo 
+ 	@echo creating directories
+-	$(INSTALL) -m 755 -o 0 -g 0 -d $(sysconfdir)/mopher
+-	$(INSTALL) -m 755 -o 0 -g 0 -d $(MOPHERD_DIR)
+-	$(INSTALL) -m 755 -o 0 -g 0 -d $(MOPHERD_DIR)/db
+-	$(INSTALL) -m 755 -o 0 -g 0 -d $(MOPHERD_DIR)/modules
++	$(INSTALL) -m 755 -o 0 -g 0 -d $(DESTDIR)$(sbindir)
++	$(INSTALL) -m 755 -o 0 -g 0 -d $(DESTDIR)$(MOPHERD_EGDIR)
++	$(INSTALL) -m 755 -o 0 -g 0 -d $(DESTDIR)$(MOPHERD_DIR)/db
++	$(INSTALL) -m 755 -o 0 -g 0 -d $(DESTDIR)$(MOPHERD_DIR)/modules
+ 	@echo 
+-	@echo installing mopherd in $(sbindir)
+-	$(INSTALL) -m 755 -o 0 -g 0 @top_srcdir@/src/mopherd $(sbindir)
++	@echo installing mopherd in $(DESTDIR)$(sbindir)
++	$(INSTALL) -m 755 -o 0 -g 0 @top_srcdir@/src/mopherd $(DESTDIR)$(sbindir)
+ 	@echo 
+-	@echo installing modules in $(MOPHERD_DIR)
+-	-$(INSTALL) -m 755 -o 0 -g 0 @top_srcdir@/src/modules/*.so $(MOPHERD_DIR)/modules
++	@echo installing modules in $(DESTDIR)$(MOPHERD_DIR)
++	-$(INSTALL) -m 755 -o 0 -g 0 @top_srcdir@/src/modules/*.so $(DESTDIR)$(MOPHERD_DIR)/modules
+ 	@echo 
+-	@echo installing configuration files in $(sysconfdir)
+-	$(INSTALL) -m 640 -o 0 -g 0 @top_srcdir@/config/mopherd.conf $(sysconfdir)/mopher
+-	$(INSTALL) -m 640 -o 0 -g 0 @top_srcdir@/config/mail.acl $(sysconfdir)/mopher
++	@echo installing configuration files in $(DESTDIR)$(sysconfdir)
++	$(INSTALL) -m 640 -o 0 -g 0 @top_srcdir@/config/mopherd.conf $(DESTDIR)$(MOPHERD_EGDIR)
++	$(INSTALL) -m 640 -o 0 -g 0 @top_srcdir@/config/mail.acl $(DESTDIR)$(MOPHERD_EGDIR)
+ 	@echo
+-	@echo installing man pages in $(mandir)
+-	$(INSTALL) -m 755 -o 0 -g 0 -d $(man1dir)
+-	$(INSTALL) -m 755 -o 0 -g 0 -d $(man5dir)
+-	$(INSTALL) -m 644 -o 0 -g 0 @top_srcdir@/man/*.1.gz $(man1dir)
+-	$(INSTALL) -m 644 -o 0 -g 0 @top_srcdir@/man/*.5.gz $(man5dir)
++	@echo installing man pages in $(DESTDIR)$(mandir)
++	$(INSTALL) -m 755 -o 0 -g 0 -d $(DESTDIR)$(man8dir)
++	$(INSTALL) -m 755 -o 0 -g 0 -d $(DESTDIR)$(man5dir)
++	$(INSTALL) -m 644 -o 0 -g 0 @top_srcdir@/man/mopherd.1.man $(DESTDIR)$(man8dir)/mopherd.8
++	$(INSTALL) -m 644 -o 0 -g 0 @top_srcdir@/man/mopherd.conf.5.man $(DESTDIR)$(man5dir)/mopherd.conf.5
++	$(INSTALL) -m 644 -o 0 -g 0 @top_srcdir@/man/mail.acl.5.man $(DESTDIR)$(man5dir)/mail.acl.5
+ 
+ uninstall:
+ 	@echo removing $(DIST) files
