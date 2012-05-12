@@ -1,12 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.3 2012/05/12 02:04:12 outpaddling Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2012/05/12 14:33:38 outpaddling Exp $
 
-BUILDLINK_TREE+=	py26-ffc
+BUILDLINK_TREE+=	ffc
 
-.if !defined(PY26_FFC_BUILDLINK3_MK)
-PY26_FFC_BUILDLINK3_MK:=
+.if !defined(PY_FFC_BUILDLINK3_MK)
+PY_FFC_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.ffc+=	${PYPKGPREFIX}-ffc>=1.0.0
 BUILDLINK_PKGSRCDIR.ffc?=	../../wip/py-ffc
-.endif	# PY26_FFC_BUILDLINK3_MK
+.endif	# PY_FFC_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-ffc
