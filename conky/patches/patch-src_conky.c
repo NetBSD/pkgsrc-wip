@@ -1,4 +1,4 @@
-$NetBSD: patch-src_conky.c,v 1.6 2012/05/12 12:49:49 imilh Exp $
+$NetBSD: patch-src_conky.c,v 1.7 2012/05/12 14:39:41 imilh Exp $
 
 --- src/conky.c.orig	2012-05-03 21:22:21.000000000 +0000
 +++ src/conky.c
@@ -11,7 +11,7 @@ $NetBSD: patch-src_conky.c,v 1.6 2012/05/12 12:49:49 imilh Exp $
  #endif
  #ifdef XOAP
  #include <libxml/parser.h>
-@@ -117,16 +117,22 @@
+@@ -117,15 +117,18 @@
  #include "freebsd.h"
  #elif defined(__OpenBSD__)
  #include "openbsd.h"
@@ -27,24 +27,20 @@ $NetBSD: patch-src_conky.c,v 1.6 2012/05/12 12:49:49 imilh Exp $
  /* FIXME: apm_getinfo is unused here. maybe it's meant for common.c */
  #if (defined(__FreeBSD__) || defined(__FreeBSD_kernel__) \
 -		|| defined(__OpenBSD__)) && (defined(i386) || defined(__i386__))
-+	|| defined(__OpenBSD__)) && (defined(i386) || defined(__i386__))	\
-+	|| defined(__NetBSD__)
-+#ifndef __NetBSD__
++	|| defined(__OpenBSD__)) && (defined(i386) || defined(__i386__))
  int apm_getinfo(int fd, apm_info_t aip);
-+#endif
  char *get_apm_adapter(void);
  char *get_apm_battery_life(void);
- char *get_apm_battery_time(void);
-@@ -784,7 +790,7 @@ void generate_text_internal(char *p, int
+@@ -784,7 +787,7 @@ void generate_text_internal(char *p, int
  			OBJ(read_tcp) {
  				print_read_tcp(obj, p, p_max_size);
  			}
 -#ifndef __OpenBSD__
-+#if !defined(__OpenBSD__) && !defined(__NetBSD__)
++#if !defined(__OpenBSD__)
  			OBJ(acpitemp) {
  				temp_print(p, p_max_size, get_acpi_temperature(obj->data.i), TEMP_CELSIUS);
  			}
-@@ -799,7 +805,7 @@ void generate_text_internal(char *p, int
+@@ -799,7 +802,7 @@ void generate_text_internal(char *p, int
  			OBJ(freq_g) {
  				static int ok = 1;
  				if (ok) {
@@ -53,7 +49,7 @@ $NetBSD: patch-src_conky.c,v 1.6 2012/05/12 12:49:49 imilh Exp $
  					ok = get_freq(p, p_max_size, "%'.2f", 1000,
  							obj->data.i);
  #else
-@@ -846,7 +852,7 @@ void generate_text_internal(char *p, int
+@@ -846,7 +849,7 @@ void generate_text_internal(char *p, int
  
  #endif /* __linux__ */
  
@@ -62,7 +58,7 @@ $NetBSD: patch-src_conky.c,v 1.6 2012/05/12 12:49:49 imilh Exp $
  			OBJ(acpifan) {
  				get_acpi_fan(p, p_max_size);
  			}
-@@ -1015,13 +1021,11 @@ void generate_text_internal(char *p, int
+@@ -1015,13 +1018,11 @@ void generate_text_internal(char *p, int
  				get_powerbook_batt_info(p, p_max_size, obj->data.i);
  			}
  #endif /* __linux__ */
@@ -76,7 +72,7 @@ $NetBSD: patch-src_conky.c,v 1.6 2012/05/12 12:49:49 imilh Exp $
  #ifdef __OpenBSD__
  			OBJ(obsd_sensors_temp) {
  				print_obsd_sensors_temp(obj, p, p_max_size);
-@@ -1899,7 +1903,7 @@ void generate_text_internal(char *p, int
+@@ -1899,7 +1900,7 @@ void generate_text_internal(char *p, int
  			}
  #endif /* __linux__ */
  #if (defined(__FreeBSD__) || defined(__FreeBSD_kernel__) \
@@ -85,7 +81,7 @@ $NetBSD: patch-src_conky.c,v 1.6 2012/05/12 12:49:49 imilh Exp $
  			OBJ(apm_adapter) {
  				char *msg;
  
-@@ -5680,6 +5684,13 @@ void initialisation(int argc, char **arg
+@@ -5680,6 +5681,13 @@ void initialisation(int argc, char **arg
  	}
  	pthread_mutex_init(&kvm_proc_mutex, NULL);
  #endif
@@ -99,7 +95,7 @@ $NetBSD: patch-src_conky.c,v 1.6 2012/05/12 12:49:49 imilh Exp $
  
  	while (1) {
  		int c = getopt_long(argc, argv, getopt_string, longopts, NULL);
-@@ -5960,9 +5971,13 @@ int main(int argc, char **argv)
+@@ -5960,9 +5968,13 @@ int main(int argc, char **argv)
  	curl_global_cleanup();
  #endif
  

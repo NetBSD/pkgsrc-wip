@@ -1,4 +1,4 @@
-$NetBSD: patch-src_core.c,v 1.5 2012/05/12 12:49:49 imilh Exp $
+$NetBSD: patch-src_core.c,v 1.6 2012/05/12 14:39:41 imilh Exp $
 
 --- src/core.c.orig	2012-05-03 21:08:27.000000000 +0000
 +++ src/core.c
@@ -54,7 +54,7 @@ $NetBSD: patch-src_core.c,v 1.5 2012/05/12 12:49:49 imilh Exp $
  		root->prev = obj->prev;
  		switch (obj->type) {
 -#ifndef __OpenBSD__
-+#if !defined(__OpenBSD__) && !defined(__NetBSD__)
++#if !defined(__OpenBSD__)
  			case OBJ_acpitemp:
  				close(data.i);
  				break;
@@ -63,7 +63,7 @@ $NetBSD: patch-src_core.c,v 1.5 2012/05/12 12:49:49 imilh Exp $
  			case OBJ_pre_exec:
  				break;
 -#ifndef __OpenBSD__
-+#if !defined(__OpenBSD__) && !defined(__NetBSD__)
++#if !defined(__OpenBSD__)
  			case OBJ_battery:
  				free(data.s);
  				break;
