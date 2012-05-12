@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/05/11 15:00:08 imilh Exp $
+# $NetBSD: Makefile,v 1.7 2012/05/12 22:54:39 imilh Exp $
 #
 
 DISTNAME=	conky-1.9.0
@@ -33,6 +33,9 @@ PREFER_PKGSRC+=	ncurses
 pre-configure:
 	set -e; cd ${WRKSRC};	\
 	aclocal; autoheader; automake -a --foreign -i; autoconf
+
+post-install:
+	${INSTALL_DATA} files/conkyrc ${DESTDIR}${PREFIX}/${EGDIR}
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/tolua++/buildlink3.mk"

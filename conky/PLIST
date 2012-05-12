@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.4 2012/05/08 09:45:11 imilh Exp $
+@comment $NetBSD: PLIST,v 1.5 2012/05/12 22:54:39 imilh Exp $
 bin/conky
 lib/conky/libcairo.la
 lib/conky/libimlib2.la
 man/man1/conky.1
 share/examples/conky/conky.conf
 share/examples/conky/conky_no_x11.conf
+share/examples/conky/conkyrc
