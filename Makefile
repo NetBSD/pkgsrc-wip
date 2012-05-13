@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4751 2012/05/12 13:37:06 pebog Exp $
+# $Id: Makefile,v 1.4752 2012/05/13 08:00:20 ryo-on Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -697,6 +697,7 @@ SUBDIR+=	ghostscript-cidfonts-ryumin
 SUBDIR+=	giggle
 SUBDIR+=	gimmie
 SUBDIR+=	gimp-high-pass-filter
+SUBDIR+=	gin
 SUBDIR+=	git
 SUBDIR+=	gitg
 SUBDIR+=	givaro
