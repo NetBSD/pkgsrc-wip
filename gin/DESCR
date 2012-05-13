@@ -1,0 +1,5 @@
+GIN (GWT INjection) brings automatic dependency injection to Google
+Web Toolkit client-side code. GIN is built on top of Guice and uses
+(a subset of) Guice's binding language. By using GWT's compile-time
+Generator support, GIN has little-to-no runtime overhead compared
+to manual DI.
