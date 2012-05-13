@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/05/13 08:02:10 ryo-on Exp $
+
+SHA1 (rstudio-rstudio-v0.95.264-0-ge31bd49.tar.gz) = 88bea662949d399dc818f6507a46940efc4c7510
+RMD160 (rstudio-rstudio-v0.95.264-0-ge31bd49.tar.gz) = c6a6bd17865668b1ddcf78162151b85086ce6861
+Size (rstudio-rstudio-v0.95.264-0-ge31bd49.tar.gz) = 9144593 bytes
