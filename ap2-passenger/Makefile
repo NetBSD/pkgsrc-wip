@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/05/11 09:14:39 fhajny Exp $
+# $NetBSD: Makefile,v 1.12 2012/05/13 07:57:19 ftigeot Exp $
 
 DISTNAME=		passenger-3.0.12
 PKGNAME=		${APACHE_PKG_PREFIX}-${RUBY_PKGPREFIX}-${DISTNAME}
@@ -14,7 +14,7 @@ USE_LANGUAGES=		c c++
 USE_TOOLS+=		pax:build
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-PKG_APACHE_ACCEPTED=	apache2 apache22
+PKG_APACHE_ACCEPTED=	apache2 apache22 apache24
 APACHE_MODULE=		YES
 
 .include "../../mk/bsd.prefs.mk"
