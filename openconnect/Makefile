@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/05/14 13:05:39 hfath Exp $
+# $NetBSD: Makefile,v 1.4 2012/05/14 14:57:42 hfath Exp $
 #
 
 DISTNAME=	openconnect-3.18
@@ -20,7 +20,7 @@ USE_TOOLS+=	gmake pkg-config
 DEPENDS+=	vpnc-script:../../wip/vpnc-script
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+=	--with-vpnc-script=${PKG_SYSCONFDIR}/vpn/vpnc-script
+CONFIGURE_ARGS+=	--with-vpnc-script=${PKG_SYSCONFDIR}/vpnc-script
 CONFIGURE_ARGS+=	--disable-nls
 
 INSTALLATION_DIRS=	sbin include lib ${PKGMANDIR}/man8
