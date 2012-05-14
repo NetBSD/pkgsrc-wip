@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.gui,v 1.1 2011/11/17 22:09:36 schnoebe Exp $
+@comment $NetBSD: PLIST.gui,v 1.2 2012/05/14 15:10:39 schnoebe Exp $
 bin/hp-toolbox
 share/PolicyKit/policy/com.hp.hplip.policy
 share/dbus-1/system-services/com.hp.hplip.service
@@ -172,6 +172,7 @@ share/hplip/data/images/devices/LASERJET_5550DTN.png
 share/hplip/data/images/devices/OFFICEJET_PRO_1150C.png
 share/hplip/data/images/devices/OfficeJet_5105.png
 share/hplip/data/images/devices/OfficeJet_6100_Series.png
+share/hplip/data/images/devices/OfficeJet_8500_a910.png
 share/hplip/data/images/devices/OfficeJet_G85.png
 share/hplip/data/images/devices/OfficeJet_Series_300.png
 share/hplip/data/images/devices/Officejet_6150_Series.png
@@ -386,6 +387,10 @@ share/hplip/ui4/nodevicesdialog.py
 share/hplip/ui4/nodevicesdialog.pyc
 share/hplip/ui4/nodevicesdialog_base.py
 share/hplip/ui4/nodevicesdialog_base.pyc
+share/hplip/ui4/plugindiagnose.py
+share/hplip/ui4/plugindiagnose.pyc
+share/hplip/ui4/plugindiagnose_base.py
+share/hplip/ui4/plugindiagnose_base.pyc
 share/hplip/ui4/plugindialog.py
 share/hplip/ui4/plugindialog.pyc
 share/hplip/ui4/plugindialog_base.py
@@ -414,6 +419,8 @@ share/hplip/ui4/printtestpagedialog.py
 share/hplip/ui4/printtestpagedialog.pyc
 share/hplip/ui4/printtestpagedialog_base.py
 share/hplip/ui4/printtestpagedialog_base.pyc
+share/hplip/ui4/queuesconf.py
+share/hplip/ui4/queuesconf.pyc
 share/hplip/ui4/readonlyradiobutton.py
 share/hplip/ui4/readonlyradiobutton.pyc
 share/hplip/ui4/sendfaxdialog.py
@@ -436,8 +443,11 @@ share/hplip/ui4/systrayframe_base.py
 share/hplip/ui4/systrayframe_base.pyc
 share/hplip/ui4/ui_utils.py
 share/hplip/ui4/ui_utils.pyc
+share/hplip/ui4/upgradedialog.py
+share/hplip/ui4/upgradedialog.pyc
+share/hplip/ui4/upgradedialog_base.py
+share/hplip/ui4/upgradedialog_base.pyc
 share/hplip/ui4/wifisetupdialog.py
 share/hplip/ui4/wifisetupdialog.pyc
 share/hplip/ui4/wifisetupdialog_base.py
 share/hplip/ui4/wifisetupdialog_base.pyc
-@pkgdir share/hplip/ui4/plugins

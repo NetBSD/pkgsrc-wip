@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2011/12/02 02:46:34 schnoebe Exp $
+# $NetBSD: Makefile,v 1.39 2012/05/14 15:10:39 schnoebe Exp $
 #
 
-DISTNAME=		hplip-3.11.10
+DISTNAME=		hplip-3.12.4
 CATEGORIES=		print
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=hplip/}
 
@@ -14,7 +14,13 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=		hpijs-[0-9]*
 
-BUILD_DEFS+=		VARBASE
+FILES_SUBST+=           CUPS_USER=${CUPS_USER}
+FILES_SUBST+=           CUPS_GROUP=${CUPS_GROUP}
+
+PKG_GROUPS_VARS+=       CUPS_GROUP 
+PKG_USERS_VARS+=        CUPS_USER
+
+BUILD_DEFS+=            CUPS_USER CUPS_GROUP VARBASE
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
@@ -48,6 +54,9 @@ INSTALL_MAKE_FLAGS+=	mimedir=${EGDIR}/cups
 
 OWN_DIRS+=		${PKG_SYSCONFDIR}/hp
 OWN_DIRS+=		${VARBASE}/lib/hp
+OWN_DIRS+=		${PREFIX}/share/examples/hplip/log/hp
+
+OWN_DIRS_PERMS+=	${PREFIX}/share/examples/hplip/log/hp ${CUPS_USER} ${CUPS_GROUP} 0774
 
 PLIST_SRC=		PLIST.base
 
@@ -56,13 +65,19 @@ PLIST_SRC=		PLIST.base
 .for file in ${EGFILES}
 CONF_FILES+=		${EGDIR}/${file} ${PKG_SYSCONFDIR}/${file}
 .endfor
-CONF_FILES+=		${EGDIR}/lib/hp/hplip.state ${VARBASE}/lib/hp/hplip.state
+CONF_FILES+=
 
 REPLACE_PYTHON=		*.py */*.py */*/*.py
 REPLACE_PYTHON+=	fax/filters/pstotiff
 REPLACE_PERL=		prnt/filters/hpcac prnt/hpijs/foomatic-rip-hplip
 
 PY_PATCHPLIST=		yes
+
+SUBST_CLASSES+=			strip-cr
+SUBST_STAGE.strip-cr=		post-extract
+SUBST_MESSAGE.strip-cr=		Strip trailing carriage returns
+SUBST_FILES.strip-cr=		prnt/hpcups/HPCupsFilter.cpp
+SUBST_FILTER_CMD.strip-cr=	${TR} -d '\r'
 
 SUBST_CLASSES+=			fix-python
 SUBST_STAGE.fix-python=		post-configure

@@ -1,9 +1,13 @@
-@comment $NetBSD: PLIST.base,v 1.1 2011/11/17 22:09:36 schnoebe Exp $
+@comment $NetBSD: PLIST.base,v 1.2 2012/05/14 15:10:39 schnoebe Exp $
 bin/hp-align
 bin/hp-check
+bin/hp-check-plugin
 bin/hp-clean
 bin/hp-colorcal
+bin/hp-config_usb_printer
 bin/hp-devicesettings
+bin/hp-diagnose_plugin
+bin/hp-diagnose_queues
 bin/hp-fab
 bin/hp-faxsetup
 bin/hp-firmware
@@ -26,7 +30,9 @@ bin/hp-setup
 bin/hp-systray
 bin/hp-testpage
 bin/hp-timedate
+bin/hp-uninstall
 bin/hp-unload
+bin/hp-upgrade
 bin/hp-wificonfig
 bin/hpijs
 lib/libhpip.la
@@ -80,9 +86,10 @@ share/doc/${PKGNAME}/troubleshooting.html
 share/doc/${PKGNAME}/uninstalling.html
 share/doc/${PKGNAME}/upgrading.html
 share/examples/hplip/hp/hplip.conf
-share/examples/hplip/lib/hp/hplip.state
 share/examples/hplip/udev/rules.d/55-hpmud.rules
+share/examples/hplip/udev/rules.d/56-hpmud_add_printer.rules
 share/examples/hplip/udev/rules.d/56-hpmud_support.rules
+share/examples/hplip/udev/rules.d/86-hpmud_plugin.rules
 share/examples/hplip/xdg/autostart/hplip-systray.desktop
 share/hal/fdi/preprobe/10osvendor/20-hplip-devices.fdi
 share/hplip/__init__.py
@@ -141,12 +148,16 @@ share/hplip/base/vcard.py
 share/hplip/base/vcard.pyc
 share/hplip/base/wifi.py
 share/hplip/base/wifi.pyc
+share/hplip/check-plugin.py
+share/hplip/check-plugin.pyc
 share/hplip/check.py
 share/hplip/check.pyc
 share/hplip/clean.py
 share/hplip/clean.pyc
 share/hplip/colorcal.py
 share/hplip/colorcal.pyc
+share/hplip/config_usb_printer.py
+share/hplip/config_usb_printer.pyc
 share/hplip/copier/__init__.py
 share/hplip/copier/__init__.pyc
 share/hplip/copier/copier.py
@@ -188,6 +199,10 @@ share/hplip/data/ps/clean_page.pdf.gz
 share/hplip/data/ps/testpage.ps.gz
 share/hplip/devicesettings.py
 share/hplip/devicesettings.pyc
+share/hplip/diagnose_plugin.py
+share/hplip/diagnose_plugin.pyc
+share/hplip/diagnose_queues.py
+share/hplip/diagnose_queues.pyc
 share/hplip/fab.py
 share/hplip/fab.pyc
 share/hplip/faxsetup.py
@@ -403,6 +418,8 @@ share/hplip/ppd/HP/hp-color_laserjet_cm6049_mfp-ps.ppd.gz
 share/hplip/ppd/HP/hp-color_laserjet_cm6049_mfp.ppd.gz
 share/hplip/ppd/HP/hp-color_laserjet_cp1215-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-color_laserjet_cp1215.ppd.gz
+share/hplip/ppd/HP/hp-color_laserjet_cp1217-hpijs.ppd.gz
+share/hplip/ppd/HP/hp-color_laserjet_cp1217.ppd.gz
 share/hplip/ppd/HP/hp-color_laserjet_cp1514n-hpijs-pcl3.ppd.gz
 share/hplip/ppd/HP/hp-color_laserjet_cp1514n-pcl3.ppd.gz
 share/hplip/ppd/HP/hp-color_laserjet_cp1514n-ps.ppd.gz
@@ -884,6 +901,7 @@ share/hplip/ppd/HP/hp-laserjet_1320nw.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_1320tn-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_1320tn-ps.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_1320tn.ppd.gz
+share/hplip/ppd/HP/hp-laserjet_200_colormfp_m275-ps.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_2100-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_2100-ps.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_2100.ppd.gz
@@ -1035,6 +1053,7 @@ share/hplip/ppd/HP/hp-laserjet_5si-ps.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_5si_mopier-hpijs-pcl3.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_5si_mopier-pcl3.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_5si_mopier-ps.ppd.gz
+share/hplip/ppd/HP/hp-laserjet_600_m601_m602_m603-ps.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_6l-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_6l.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_6mp-hpijs-pcl3.ppd.gz
@@ -1101,21 +1120,15 @@ share/hplip/ppd/HP/hp-laserjet_cm1417fnw-hpijs-pcl3.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_cm1417fnw-pcl3.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_cm1418fnw-hpijs-pcl3.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_cm1418fnw-pcl3.ppd.gz
-share/hplip/ppd/HP/hp-laserjet_cp1021-hpijs.ppd.gz
-share/hplip/ppd/HP/hp-laserjet_cp1021.ppd.gz
-share/hplip/ppd/HP/hp-laserjet_cp1022-hpijs.ppd.gz
-share/hplip/ppd/HP/hp-laserjet_cp1022.ppd.gz
-share/hplip/ppd/HP/hp-laserjet_cp1023-hpijs.ppd.gz
-share/hplip/ppd/HP/hp-laserjet_cp1023.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_cp1025-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_cp1025.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_cp1025nw-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_cp1025nw.ppd.gz
-share/hplip/ppd/HP/hp-laserjet_cp1027nw-hpijs.ppd.gz
-share/hplip/ppd/HP/hp-laserjet_cp1027nw.ppd.gz
-share/hplip/ppd/HP/hp-laserjet_cp1028nw-hpijs.ppd.gz
-share/hplip/ppd/HP/hp-laserjet_cp1028nw.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_cp1520_series-ps.ppd.gz
+share/hplip/ppd/HP/hp-laserjet_cp_1025-hpijs.ppd.gz
+share/hplip/ppd/HP/hp-laserjet_cp_1025.ppd.gz
+share/hplip/ppd/HP/hp-laserjet_cp_1025nw-hpijs.ppd.gz
+share/hplip/ppd/HP/hp-laserjet_cp_1025nw.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_m1005-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_m1005.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_m1120_mfp-hpijs.ppd.gz
@@ -1279,12 +1292,18 @@ share/hplip/ppd/HP/hp-laserjet_professional_p1102-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_professional_p1102.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_professional_p1102w-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_professional_p1102w.ppd.gz
+share/hplip/ppd/HP/hp-laserjet_professional_p1106-hpijs.ppd.gz
+share/hplip/ppd/HP/hp-laserjet_professional_p1106.ppd.gz
+share/hplip/ppd/HP/hp-laserjet_professional_p1108-hpijs.ppd.gz
+share/hplip/ppd/HP/hp-laserjet_professional_p1108.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_professional_p1566-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_professional_p1566.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_professional_p1606dn-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_professional_p1606dn.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_professional_p_1102w-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-laserjet_professional_p_1102w.ppd.gz
+share/hplip/ppd/HP/hp-lj_300_400_color_m351_m451-ps.ppd.gz
+share/hplip/ppd/HP/hp-lj_300_400_color_mfp_m375_m475-ps.ppd.gz
 share/hplip/ppd/HP/hp-mopier_240-hpijs-pcl3.ppd.gz
 share/hplip/ppd/HP/hp-mopier_240-pcl3.ppd.gz
 share/hplip/ppd/HP/hp-mopier_240-ps.ppd.gz
@@ -1335,6 +1354,8 @@ share/hplip/ppd/HP/hp-officejet_6000_e609a-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-officejet_6000_e609a.ppd.gz
 share/hplip/ppd/HP/hp-officejet_6000_e609n-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-officejet_6000_e609n.ppd.gz
+share/hplip/ppd/HP/hp-officejet_6100-hpijs.ppd.gz
+share/hplip/ppd/HP/hp-officejet_6100.ppd.gz
 share/hplip/ppd/HP/hp-officejet_6100_series-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-officejet_6100_series.ppd.gz
 share/hplip/ppd/HP/hp-officejet_6150_series-hpijs.ppd.gz
@@ -1351,6 +1372,10 @@ share/hplip/ppd/HP/hp-officejet_6500_e710a-f-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-officejet_6500_e710a-f.ppd.gz
 share/hplip/ppd/HP/hp-officejet_6500_e710n-z-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-officejet_6500_e710n-z.ppd.gz
+share/hplip/ppd/HP/hp-officejet_6600-hpijs.ppd.gz
+share/hplip/ppd/HP/hp-officejet_6600.ppd.gz
+share/hplip/ppd/HP/hp-officejet_6700-hpijs.ppd.gz
+share/hplip/ppd/HP/hp-officejet_6700.ppd.gz
 share/hplip/ppd/HP/hp-officejet_7000_e809a-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-officejet_7000_e809a.ppd.gz
 share/hplip/ppd/HP/hp-officejet_7000_e809a_series-hpijs.ppd.gz
@@ -1472,8 +1497,6 @@ share/hplip/ppd/HP/hp-officejet_series_330-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-officejet_series_330.ppd.gz
 share/hplip/ppd/HP/hp-officejet_series_350-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-officejet_series_350.ppd.gz
-share/hplip/ppd/HP/hp-officejet_series_500-hpijs.ppd.gz
-share/hplip/ppd/HP/hp-officejet_series_500.ppd.gz
 share/hplip/ppd/HP/hp-officejet_series_520-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-officejet_series_520.ppd.gz
 share/hplip/ppd/HP/hp-officejet_series_570-hpijs.ppd.gz
@@ -1550,6 +1573,8 @@ share/hplip/ppd/HP/hp-photosmart_470_series-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-photosmart_470_series.ppd.gz
 share/hplip/ppd/HP/hp-photosmart_5510_series-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-photosmart_5510_series.ppd.gz
+share/hplip/ppd/HP/hp-photosmart_5510d_series-hpijs.ppd.gz
+share/hplip/ppd/HP/hp-photosmart_5510d_series.ppd.gz
 share/hplip/ppd/HP/hp-photosmart_6510_series-hpijs.ppd.gz
 share/hplip/ppd/HP/hp-photosmart_6510_series.ppd.gz
 share/hplip/ppd/HP/hp-photosmart_7150-hpijs.ppd.gz
@@ -1806,15 +1831,12 @@ share/hplip/timedate.py
 share/hplip/timedate.pyc
 share/hplip/toolbox.py
 share/hplip/toolbox.pyc
+share/hplip/uninstall.py
+share/hplip/uninstall.pyc
 share/hplip/unload.py
 share/hplip/unload.pyc
+share/hplip/upgrade.py
+share/hplip/upgrade.pyc
 share/hplip/wificonfig.py
 share/hplip/wificonfig.pyc
-@pkgdir share/hplip/data/images/other
-@pkgdir share/hplip/data/images/devices
-@pkgdir share/hplip/data/images/64x64
-@pkgdir share/hplip/data/images/32x32
-@pkgdir share/hplip/data/images/256x256
-@pkgdir share/hplip/data/images/24x24
-@pkgdir share/hplip/data/images/16x16
-@pkgdir share/hplip/data/images/128x128
+@pkgdir share/examples/hplip/log/hp
