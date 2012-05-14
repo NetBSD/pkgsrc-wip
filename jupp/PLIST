@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:50 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/05/14 20:03:58 bsiegert Exp $
 bin/jmacs
 bin/joe
 bin/jpico
@@ -6,7 +6,12 @@ bin/jstar
 bin/jupp
 bin/rjoe
 bin/termidx
+man/man1/jmacs.1
 man/man1/joe.1
+man/man1/jpico.1
+man/man1/jstar.1
+man/man1/jupp.1
+man/man1/rjoe.1
 share/examples/joe/charmaps/klingon
 share/examples/joe/jmacsrc
 share/examples/joe/joerc
