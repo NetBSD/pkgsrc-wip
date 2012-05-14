@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/05/14 07:54:31 triaxx Exp $
+lib/php/.registry/.channel.pear.horde.org/horde_group.reg
+lib/php/Horde/Group/Base.php
+lib/php/Horde/Group/Contactlists.php
+lib/php/Horde/Group/Exception.php
+lib/php/Horde/Group/Kolab.php
+lib/php/Horde/Group/Ldap.php
+lib/php/Horde/Group/Mock.php
+lib/php/Horde/Group/Sql.php
+lib/php/data/Horde_Group/migration/1_horde_group_base_tables.php
+lib/php/data/Horde_Group/migration/2_horde_group_upgrade_autoincrement.php
+lib/php/doc/Horde_Group/COPYING
+lib/php/test/Horde_Group/Horde/Group/AllTests.php
+lib/php/test/Horde_Group/Horde/Group/Autoload.php
+lib/php/test/Horde_Group/Horde/Group/Base.php
+lib/php/test/Horde_Group/Horde/Group/ContactlistTest.php
+lib/php/test/Horde_Group/Horde/Group/LdapTest.php
+lib/php/test/Horde_Group/Horde/Group/MockTest.php
+lib/php/test/Horde_Group/Horde/Group/Sql/Base.php
+lib/php/test/Horde_Group/Horde/Group/Sql/MysqlTest.php
+lib/php/test/Horde_Group/Horde/Group/Sql/MysqliTest.php
+lib/php/test/Horde_Group/Horde/Group/Sql/Pdo/MysqlTest.php
+lib/php/test/Horde_Group/Horde/Group/Sql/Pdo/PgsqlTest.php
+lib/php/test/Horde_Group/Horde/Group/Sql/Pdo/SqliteTest.php
+lib/php/test/Horde_Group/Horde/Group/Stub/Api.php
+lib/php/test/Horde_Group/Horde/Group/conf.php.dist
