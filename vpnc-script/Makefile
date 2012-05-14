@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2010/05/09 11:24:22 pdtafti Exp $
+# $NetBSD: Makefile,v 1.5 2012/05/14 14:56:59 hfath Exp $
 
-DISTNAME=	vpnc-script-20100223
+DISTNAME=	vpnc-script-2012-05-14
 CATEGORIES=	net security
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -14,15 +14,11 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 NO_BUILD=	YES
 WRKSRC=		${WRKDIR}
 
-PKG_SYSCONFSUBDIR?=	vpn
-EGDIR=				${PREFIX}/share/examples/vpnc-script
-
-INSTALLATION_DIRS=	${PKG_SYSCONFDIR} share/examples/vpnc-script
-OWN_DIRS=			${PKG_SYSCONFDIR} share/examples/vpnc-script
-
-CONF_FILES_PERMS+=	${EGDIR}/vpnc-script \
-					${PKG_SYSCONFDIR}/vpnc-script \
-					${ROOT_USER} ${ROOT_GROUP} 555
+EGDIR=			${PREFIX}/share/examples/vpnc-script
+INSTALLATION_DIRS=	${EGDIR}
+CONF_FILES_PERMS=	${EGDIR}/vpnc-script \
+				${PKG_SYSCONFDIR}/vpnc-script \
+				${ROOT_USER} ${ROOT_GROUP} 555
 
 do-extract:
 	${CP} ${FILESDIR}/vpnc-script ${WRKSRC}

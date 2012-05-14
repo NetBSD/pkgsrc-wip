@@ -3,8 +3,8 @@ script with IPv6 support and bug fixes.  It can be used in
 conjunction with net/vpnc and/or wip/openconnect.
 
 The git repository for vpnc-script is located at
-<git://git.infradead.org/~dwmw2/vpnc-scripts.git> 
+<git://git.infradead.org/~dwmw2/vpnc-scripts.git>
 (viewable in gitweb at
 <http://git.infradead.org/users/dwmw2/vpnc-scripts.git>).
 
-The included vpnc-script is from git commit #9239bd81.
+The included vpnc-script is from git commit #1b65c39e.

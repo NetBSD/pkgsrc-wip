@@ -1,13 +1,18 @@
 #!/bin/sh
+# List of parameters passed through environment
 #* reason                       -- why this script was called, one of: pre-init connect disconnect
 #* VPNGATEWAY                   -- vpn gateway address (always present)
 #* TUNDEV                       -- tunnel device (always present)
 #* INTERNAL_IP4_ADDRESS         -- address (always present)
+#* INTERNAL_IP4_MTU             -- mtu (often unset)
 #* INTERNAL_IP4_NETMASK         -- netmask (often unset)
 #* INTERNAL_IP4_NETMASKLEN      -- netmask length (often unset)
 #* INTERNAL_IP4_NETADDR         -- address of network (only present if netmask is set)
-#* INTERNAL_IP4_DNS             -- list of dns serverss
+#* INTERNAL_IP4_DNS             -- list of dns servers
 #* INTERNAL_IP4_NBNS            -- list of wins servers
+#* INTERNAL_IP6_ADDRESS         -- IPv6 address
+#* INTERNAL_IP6_NETMASK         -- IPv6 netmask
+#* INTERNAL_IP6_DNS             -- IPv6 list of dns servers
 #* CISCO_DEF_DOMAIN             -- default domain name
 #* CISCO_BANNER                 -- banner from server
 #* CISCO_SPLIT_INC              -- number of networks in split-network-list
@@ -17,6 +22,9 @@
 #* CISCO_SPLIT_INC_%d_PROTOCOL  -- protocol (often just 0)
 #* CISCO_SPLIT_INC_%d_SPORT     -- source port (often just 0)
 #* CISCO_SPLIT_INC_%d_DPORT     -- destination port (often just 0)
+#* CISCO_IPV6_SPLIT_INC         -- number of networks in IPv6 split-network-list
+#* CISCO_IPV6_SPLIT_INC_%d_ADDR -- IPv6 network address
+#* CISCO_IPV6_SPLIT_INC_$%d_MASKLEN -- IPv6 subnet masklen
 
 # FIXMEs:
 
@@ -48,6 +56,7 @@ PATH=/sbin:/usr/sbin:$PATH
 
 OS="`uname -s`"
 
+HOOKS_DIR=/etc/vpnc
 DEFAULT_ROUTE_FILE=/var/run/vpnc/defaultroute
 RESOLV_CONF_BACKUP=/var/run/vpnc/resolv.conf-backup
 SCRIPTNAME=`basename $0`
@@ -55,10 +64,17 @@ SCRIPTNAME=`basename $0`
 # some systems, eg. Darwin & FreeBSD, prune /var/run on boot
 if [ ! -d "/var/run/vpnc" ]; then
 	mkdir -p /var/run/vpnc
+	[ -x /sbin/restorecon ] && /sbin/restorecon /var/run/vpnc
 fi
 
 # stupid SunOS: no blubber in /usr/local/bin ... (on stdout)
-IPROUTE="`which ip | grep '^/' 2> /dev/null`"
+IPROUTE="`which ip | grep '^/'`" 2> /dev/null
+
+if ifconfig --help 2>&1 | grep BusyBox > /dev/null; then
+	ifconfig_syntax_inet=""
+else
+	ifconfig_syntax_inet="inet"
+fi
 
 if [ "$OS" = "Linux" ]; then
 	ifconfig_syntax_ptp="pointopoint"
@@ -72,16 +88,24 @@ else
 	route_syntax_netmask="-netmask"
 fi
 if [ "$OS" = "SunOS" ]; then
-    route_syntax_interface="-interface"
-    route_syntax_plumb="plumb"
+	route_syntax_interface="-interface"
+	ifconfig_syntax_ptpv6="$INTERNAL_IP6_ADDRESS"
 else
-    route_syntax_interface=""
-    route_syntax_plumb=""
+	route_syntax_interface=""
+	ifconfig_syntax_ptpv6=""
 fi
 
-if [ -x /sbin/resolvconf ]; then # Optional tool on Debian, Ubuntu, Gentoo
+if [ -r /etc/openwrt_release ] && [ -n "$OPENWRT_INTERFACE" ]; then
+        . /etc/functions.sh
+	include /lib/network
+	MODIFYRESOLVCONF=modify_resolvconf_openwrt
+	RESTORERESOLVCONF=restore_resolvconf_openwrt
+elif [ -x /sbin/resolvconf ]; then # Optional tool on Debian, Ubuntu, Gentoo
 	MODIFYRESOLVCONF=modify_resolvconf_manager
 	RESTORERESOLVCONF=restore_resolvconf_manager
+elif [ -x /sbin/netconfig ]; then # tool on Suse after 11.1
+	MODIFYRESOLVCONF=modify_resolvconf_suse_netconfig
+	RESTORERESOLVCONF=restore_resolvconf_suse_netconfig
 elif [ -x /sbin/modify_resolvconf ]; then # Mandatory tool on Suse earlier than 11.1
 	MODIFYRESOLVCONF=modify_resolvconf_suse
 	RESTORERESOLVCONF=restore_resolvconf_suse
@@ -90,34 +114,63 @@ else # Generic for any OS
 	RESTORERESOLVCONF=restore_resolvconf_generic
 fi
 
+
+# =========== script hooks =================================================
+
+run_hooks() {
+	HOOK="$1"
+
+	if [ -d ${HOOKS_DIR}/${HOOK}.d ]; then
+	    for script in ${HOOKS_DIR}/${HOOK}.d/* ; do
+		[ -f $script ] && . $script
+	    done
+	fi
+}
+
 # =========== tunnel interface handling ====================================
 
 do_ifconfig() {
 	if [ -n "$INTERNAL_IP4_MTU" ]; then
 		MTU=$INTERNAL_IP4_MTU
 	elif [ -n "$IPROUTE" ]; then
-		MTU=$(($($IPROUTE route get "$VPNGATEWAY" | sed -ne 's/^.*mtu \([[:digit:]]\+\).*$/\1/p') - 88))
-	else
+		MTUDEV=`$IPROUTE route get "$VPNGATEWAY" | sed -ne 's/^.*dev \([a-z0-9]*\).*$/\1/p'`
+		MTU=`$IPROUTE link show "$MTUDEV" | sed -ne 's/^.*mtu \([[:digit:]]\+\).*$/\1/p'`
+		if [ -n "$MTU" ]; then
+			MTU=`expr $MTU - 88`
+		fi
+	fi
+
+	if [ -z "$MTU" ]; then
 		MTU=1412
 	fi
 
 	# Point to point interface require a netmask of 255.255.255.255 on some systems
-	ifconfig "$TUNDEV" inet "$INTERNAL_IP4_ADDRESS" $ifconfig_syntax_ptp "$INTERNAL_IP4_ADDRESS" netmask 255.255.255.255 mtu ${MTU} up
+	if [ -n "$IPROUTE" ]; then
+		$IPROUTE link set dev "$TUNDEV" up mtu "$MTU"
+		$IPROUTE addr add "$INTERNAL_IP4_ADDRESS/255.255.255.255" peer "$INTERNAL_IP4_ADDRESS" dev "$TUNDEV"
+	else
+		ifconfig "$TUNDEV" ${ifconfig_syntax_inet} "$INTERNAL_IP4_ADDRESS" $ifconfig_syntax_ptp "$INTERNAL_IP4_ADDRESS" netmask 255.255.255.255 mtu ${MTU} up
+	fi
 
 	if [ -n "$INTERNAL_IP4_NETMASK" ]; then
 		set_network_route $INTERNAL_IP4_NETADDR $INTERNAL_IP4_NETMASK $INTERNAL_IP4_NETMASKLEN
 	fi
 
 	# If the netmask is provided, it contains the address _and_ netmask
-	if [ -n "$IPROUTE" ]; then
-	    if [ -n "$INTERNAL_IP6_NETMASK" ]; then
+	if [ -n "$INTERNAL_IP6_ADDRESS" ] && [ -z "$INTERNAL_IP6_NETMASK" ]; then
+	    INTERNAL_IP6_NETMASK="$INTERNAL_IP6_ADDRESS/128"
+	fi
+	if [ -n "$INTERNAL_IP6_NETMASK" ]; then
+	    if [ -n "$IPROUTE" ]; then
 		$IPROUTE -6 addr add $INTERNAL_IP6_NETMASK dev $TUNDEV
-	    elif [ -n "$INTERNAL_IP6_ADDRESS" ]; then
-		$IPROUTE -6 addr add $INTERNAL_IP6_ADDRESS/128 dev $TUNDEV
-	    fi
-	else
-	    if [ -n "$INTERNAL_IP6_ADDRESS" ]; then
-	        ifconfig "$TUNDEV" inet6 $route_syntax_plumb $INTERNAL_IP6_ADDRESS/128 $ifconfig_syntax_ptp $INTERNAL_IP6_ADDRESS mtu $MTU up
+	    else
+		# Unlike for Legacy IP, we don't specify the dest_address
+		# here on *BSD. OpenBSD for one will refuse to accept
+		# incoming packets to that address if we do.
+		# OpenVPN does the same (gives dest_address for Legacy IP
+		# but not for IPv6).
+		# Only Solaris needs it; hence $ifconfig_syntax_ptpv6
+	        ifconfig "$TUNDEV" inet6 $INTERNAL_IP6_NETMASK $ifconfig_syntax_ptpv6 mtu $MTU up
 	    fi
 	fi
 }
@@ -127,11 +180,6 @@ destroy_tun_device() {
 	NetBSD|FreeBSD) # and probably others...
 		ifconfig "$TUNDEV" destroy
 		;;
-        SunOS)
-		if [ -n "$INTERNAL_IP6_ADDRESS" ]; then
-		    ifconfig "$TUNDEV" inet6 unplumb
-		fi
-		;;
 	esac
 }
 
@@ -139,7 +187,8 @@ destroy_tun_device() {
 
 if [ -n "$IPROUTE" ]; then
 	fix_ip_get_output () {
-		sed 's/cache//;s/metric \?[0-9]\+ [0-9]\+//g;s/hoplimit [0-9]\+//g'
+		sed -e 's/ /\n/g' | \
+		    sed -ne '1p;/via/{N;p};/dev/{N;p};/src/{N;p};/mtu/{N;p}'
 	}
 
 	set_vpngateway_route() {
@@ -219,14 +268,13 @@ else # use route command
 	}
 
 	del_vpngateway_route() {
-	        vpngw_route=`netstat -r -n | awk '/:/ { next; } /^(default|0\.0\.0\.0)/ { print $2; }'`
-		route $route_syntax_del -host "$VPNGATEWAY" $route_syntax_gw "$vpngw_route"
+		route $route_syntax_del -host "$VPNGATEWAY" $route_syntax_gw "`get_default_gw`"
 	}
 
 	set_default_route() {
 		DEFAULTGW="`get_default_gw`"
 		echo "$DEFAULTGW" > "$DEFAULT_ROUTE_FILE"
-		route $route_syntax_del default $route_syntax_gw "`get_default_gw`"
+		route $route_syntax_del default $route_syntax_gw "$DEFAULTGW"
 		route add default $route_syntax_gw "$INTERNAL_IP4_ADDRESS" $route_syntax_interface
 	}
 
@@ -394,7 +442,7 @@ search $CISCO_DEF_DOMAIN"
 }
 
 restore_resolvconf_generic() {
-	if [ ! -e "$RESOLV_CONF_BACKUP" ]; then
+	if [ ! -f "$RESOLV_CONF_BACKUP" ]; then
 		return
 	fi
 	grep '^#@VPNC_GENERATED@' /etc/resolv.conf > /dev/null 2>&1 && cat "$RESOLV_CONF_BACKUP" > /etc/resolv.conf
@@ -417,6 +465,25 @@ restore_resolvconf_generic() {
 		esac
 	fi
 }
+# === resolv.conf handling via /sbin/netconfig (Suse 11.1) =====================
+
+# Suse provides a script that modifies resolv.conf. Use it because it will
+# restart/reload all other services that care about it (e.g. lwresd).  [unclear if this is still true, but probably --mlk]
+
+modify_resolvconf_suse_netconfig()
+{
+	/sbin/netconfig modify -s vpnc -i "$TUNDEV" <<-EOF
+		INTERFACE='$TUNDEV'
+		DNSSERVERS='$INTERNAL_IP4_DNS'
+		DNSDOMAIN='$CISCO_DEF_DOMAIN'
+		EOF
+}
+# Restore resolv.conf to old contents on Suse
+restore_resolvconf_suse_netconfig()
+{
+	/sbin/netconfig remove -s vpnc -i "$TUNDEV"
+}
+
 # === resolv.conf handling via /sbin/modify_resolvconf (Suse) =====================
 
 # Suse provides a script that modifies resolv.conf. Use it because it will
@@ -428,7 +495,7 @@ modify_resolvconf_suse()
 	RESOLV_OPTS=''
 	test -n "$INTERNAL_IP4_DNS" && RESOLV_OPTS="-n \"$INTERNAL_IP4_DNS\""
 	test -n "$CISCO_DEF_DOMAIN" && RESOLV_OPTS="$RESOLV_OPTS -d $CISCO_DEF_DOMAIN"
-	test -n "$RESOLV_OPTS" && eval /sbin/modify_resolvconf modify -s $SCRIPTNAME -p $SCRIPTNAME -f $FULL_SCRIPTNAME -e $TUNDEV $RESOLV_OPTS -t \"This file was created by $SCRIPTNAME\"
+	test -n "$RESOLV_OPTS" && eval /sbin/modify_resolvconf modify -s vpnc -p $SCRIPTNAME -f $FULL_SCRIPTNAME -e $TUNDEV $RESOLV_OPTS -t \"This file was created by $SCRIPTNAME\"
 }
 
 # Restore resolv.conf to old contents on Suse
@@ -438,6 +505,15 @@ restore_resolvconf_suse()
 	/sbin/modify_resolvconf restore -s vpnc -p $SCRIPTNAME -f $FULL_SCRIPTNAME -e $TUNDEV
 }
 
+# === resolv.conf handling via UCI (OpenWRT) =========
+
+modify_resolvconf_openwrt() {
+	add_dns $OPENWRT_INTERFACE $INTERNAL_IP4_DNS
+}
+
+restore_resolvconf_openwrt() {
+	remove_dns $OPENWRT_INTERFACE
+}
 # === resolv.conf handling via /sbin/resolvconf (Debian, Ubuntu, Gentoo)) =========
 
 modify_resolvconf_manager() {
@@ -485,6 +561,7 @@ do_pre_init() {
 			if [ ! -e /dev/net/tun ]; then
 				mkdir -p /dev/net
 				mknod -m 0640 /dev/net/tun c 10 200
+				[ -x /sbin/restorecon ] && /sbin/restorecon /dev/net/tun
 			fi
 			# workaround for a possible latency caused by udev, sleep max. 10s
 			if kernel_is_2_6_or_above ; then
@@ -536,9 +613,8 @@ do_connect() {
 			i=`expr $i + 1`
 		done
 		for i in $INTERNAL_IP4_DNS ; do
-			if ! echo "$i" | grep : >/dev/null; then
+			echo "$i" | grep : >/dev/null || \
 				set_network_route "$i" "255.255.255.255" "32"
-			fi
 		done
 	elif [ -n "$INTERNAL_IP4_ADDRESS" ]; then
 		set_default_route
@@ -627,13 +703,21 @@ fi
 
 case "$reason" in
 	pre-init)
+		run_hooks pre-init
 		do_pre_init
 		;;
 	connect)
+		run_hooks connect
 		do_connect
+		run_hooks post-connect
 		;;
 	disconnect)
+		run_hooks disconnect
 		do_disconnect
+		run_hooks post-disconnect
+		;;
+	reconnect)
+		run_hooks reconnect
 		;;
 	*)
 		echo "unknown reason '$reason'. Maybe vpnc-script is out of date" 1>&2
