@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2012/05/09 11:47:11 ftigeot Exp $
+# $NetBSD: Makefile,v 1.42 2012/05/14 09:57:44 ftigeot Exp $
 
 VER=			3.5.3.2
 DISTNAME=		libreoffice-${VER}
@@ -46,6 +46,9 @@ EXTRACT_ONLY+=	libreoffice-${component}-${VER}.tar.xz
 .for md in ${MORE_DISTFILES}
 DISTFILES+=		${md}
 .endfor
+
+# ftp: Unsupported URL scheme `https'
+FETCH_USING=		curl
 
 # tar: Invalid header, starting valid header search.
 EXTRACT_USING=		gtar
