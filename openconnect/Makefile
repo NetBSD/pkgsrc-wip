@@ -1,29 +1,29 @@
-# $NetBSD: Makefile,v 1.2 2010/05/15 09:31:23 pdtafti Exp $
+# $NetBSD: Makefile,v 1.3 2012/05/14 13:05:39 hfath Exp $
 #
 
-DISTNAME=	openconnect-2.25
+DISTNAME=	openconnect-3.18
 CATEGORIES=	net security
-MASTER_SITES=	ftp://ftp.infradead.org/pub/openconnect/
+MASTER_SITES=	ftp://ftp.infradead.org/pub/openconnect/ \
+		http://mirrors.rit.edu/zi/
 
-MAINTAINER=	pouya@san-serriffe.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.infradead.org/openconnect.html
 COMMENT=	Client for Cisco AnyConnect VPN
 LICENSE=	gnu-lgpl-v2.1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_TOOLS+= 		gmake
+GNU_CONFIGURE=	yes
+USE_LIBTOOL=	yes
+USE_TOOLS+=	gmake pkg-config
 
-DEPENDS+=		vpnc-script:../../wip/vpnc-script
+DEPENDS+=	vpnc-script:../../wip/vpnc-script
 
-INSTALLATION_DIRS=	sbin ${PKGMANDIR}/man8 share/doc/openconnect
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--with-vpnc-script=${PKG_SYSCONFDIR}/vpn/vpnc-script
+CONFIGURE_ARGS+=	--disable-nls
 
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/openconnect ${DESTDIR}${PREFIX}/sbin
-	${INSTALL_MAN} ${WRKSRC}/openconnect.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
-	${INSTALL_DATA} ${WRKSRC}/README.SecurID ${DESTDIR}${PREFIX}/share/doc/openconnect
-	${INSTALL_DATA} ${WRKSRC}/README.DTLS ${DESTDIR}${PREFIX}/share/doc/openconnect
-	${INSTALL_DATA} ${WRKSRC}/openconnect.html ${DESTDIR}${PREFIX}/share/doc/openconnect
+INSTALLATION_DIRS=	sbin include lib ${PKGMANDIR}/man8
 
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
