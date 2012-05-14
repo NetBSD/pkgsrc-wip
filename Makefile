@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4753 2012/05/13 08:03:18 ryo-on Exp $
+# $Id: Makefile,v 1.4754 2012/05/14 08:40:11 triaxx Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1995,8 +1995,10 @@ SUBDIR+=	pear-Horde_Cli
 SUBDIR+=	pear-Horde_Compress
 SUBDIR+=	pear-Horde_Constraint
 SUBDIR+=	pear-Horde_Controller
+SUBDIR+=	pear-Horde_Data
 SUBDIR+=	pear-Horde_Date
 SUBDIR+=	pear-Horde_Exception
+SUBDIR+=	pear-Horde_Group
 SUBDIR+=	pear-Horde_Icalenda
 SUBDIR+=	pear-Horde_Injector
 SUBDIR+=	pear-Horde_Log
