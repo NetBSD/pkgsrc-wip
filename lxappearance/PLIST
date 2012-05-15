@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/05/15 03:24:18 jeremy-c-reed Exp $
+bin/lxappearance
+man/man1/lxappearance.1
+share/applications/lxappearance.desktop
+share/lxappearance/install-icon-theme.sh
