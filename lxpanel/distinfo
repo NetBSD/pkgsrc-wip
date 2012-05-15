@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/10/22 00:38:43 jeremy-c-reed Exp $
+$NetBSD: distinfo,v 1.2 2012/05/15 03:12:41 jeremy-c-reed Exp $
 
-SHA1 (lxpanel-0.3.999.tar.gz) = fa45e78e11e047322ee7725d95e3814e2b9fc80e
-RMD160 (lxpanel-0.3.999.tar.gz) = c6a7c908841b3341b1f4c0901f589251fb0f6542
-Size (lxpanel-0.3.999.tar.gz) = 714940 bytes
+SHA1 (lxpanel-0.5.9.tar.gz) = c607bf93b7941d21f9b29e6d6429b48fe2f7e388
+RMD160 (lxpanel-0.5.9.tar.gz) = c3b1f2036f94d6af4659a12434e6bf5f7bdc8b65
+Size (lxpanel-0.5.9.tar.gz) = 1315892 bytes
