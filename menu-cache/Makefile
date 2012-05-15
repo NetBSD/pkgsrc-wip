@@ -1,13 +1,15 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/10/22 00:44:47 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2012/05/15 03:18:31 jeremy-c-reed Exp $
 #
 
-DISTNAME=	menu-cache-0.2.3
+DISTNAME=	menu-cache-0.3.2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lxde/}
 
 MAINTAINER=	INSERT_YOUR_MAIL_ADDRESS_HERE
 HOMEPAGE=	http://lxde.sourceforge.net/
 COMMENT=	Cache for freedesktop.org menu spec
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
