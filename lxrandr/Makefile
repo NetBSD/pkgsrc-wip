@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2010/06/13 22:47:11 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2012/05/15 03:14:17 jeremy-c-reed Exp $
 
-DISTNAME=		lxrandr-0.1.1
-PKGREVISION=		1
+DISTNAME=		lxrandr-0.1.2
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=lxde/}
 
@@ -12,7 +11,7 @@ COMMENT=		Simple graphical front end to the xrandr extension
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
-USE_TOOLS+=		pkg-config gmake
+USE_TOOLS+=		gmake intltool pkg-config
 
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
