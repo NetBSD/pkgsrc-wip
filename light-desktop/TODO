@@ -92,7 +92,7 @@ X gnome-time-admin		included in gnome-system-tools
 X gnumeric
 X gpicview
 gucharmap
-guvcview
+guvcview		http://guvcview.sourceforge.net/
 hardinfo
 ibus
 jockey-gtk		searches for hardware drivers, gui
@@ -112,12 +112,12 @@ modemmanager
 mtpaint				need to package http://mtpaint.sourceforge.net/
 network-manager-gnome		provides applet
 X ntp			in base
-obconf
+obconf				http://gnats.netbsd.org/46090
 osmo				need to package http://clayo.org/osmo/
 X pidgin
 pidgin-microblog
 scrot
-simple-scan
+simple-scan			wip/simple-scan
 software-properties-gtk
 sylpheed
 sylpheed-doc
@@ -139,17 +139,17 @@ bluez
 bluez-alsa
 bluez-cups
 X cups
-cups-bsd
-cups-client
+X cups-bsd		included in cups
+X cups-client		included in cups
 fonts-kacst-one
 fonts-khmeros-core
 fonts-lao
 fonts-takao-pgothic
 fonts-thai-tlwg
-hplip
+hplip			wip/hplip3
 kerneloops-daemon
 laptop-detect		uses dmidecode
-libnss-mdns
+libnss-mdns		http://0pointer.de/lennart/projects/nss-mdns/
 pcmciautils
 policykit-desktop-privileges
 printer-driver-c2esp
