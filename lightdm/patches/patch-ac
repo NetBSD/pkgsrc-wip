@@ -1,0 +1,16 @@
+$NetBSD: patch-ac,v 1.1.1.1 2012/05/15 03:29:36 jeremy-c-reed Exp $
+
+--- src/process.c.orig	2012-05-14 19:24:13.000000000 -0500
++++ src/process.c	2012-05-14 19:28:56.000000000 -0500
+@@ -158,7 +158,11 @@
+     }
+ 
+     if (process->priv->clear_environment)
++#ifdef HAVE_CLEARENV
+         clearenv ();
++#else
++         putenv ("environ=NULL");
++#endif
+ 
+     g_hash_table_iter_init (&iter, process->priv->env);
+     while (g_hash_table_iter_next (&iter, &key, &value))

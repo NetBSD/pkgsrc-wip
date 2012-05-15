@@ -1,0 +1,3 @@
+LightDM is a cross-desktop display manager that aims is to be the
+standard display manager for the X.org X server. This also provides 
+the LightDM client library allowing multiple GUIs and plugin support.

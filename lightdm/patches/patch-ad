@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1.1.1 2012/05/15 03:29:36 jeremy-c-reed Exp $
+
+--- src/vt.c.orig	2012-05-14 20:12:26.000000000 -0500
++++ src/vt.c	2012-05-14 20:12:41.000000000 -0500
+@@ -30,7 +30,7 @@
+ {
+     int fd;
+ 
+-    fd = g_open ("/dev/console", O_RDONLY | O_NOCTTY);
++    fd = g_open ("/dev/console", O_RDONLY | O_NOCTTY, 0);
+     if (fd < 0)
+         g_warning ("Error opening /dev/console: %s", strerror (errno));
+     return fd;

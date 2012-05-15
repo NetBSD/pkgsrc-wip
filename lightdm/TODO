@@ -1,0 +1,24 @@
+libsystem.c:959: error: 'PAM_BAD_ITEM' undeclared (first use in this function)
+libsystem.c:979: error: 'PAM_CONV_AGAIN' undeclared (first use in this function)
+libsystem.c:981: error: 'PAM_INCOMPLETE' undeclared (first use in this function)
+*** Error code 1
+
+
+lightdm-privileges.o: In function `privileges_reclaim':
+privileges.c:(.text+0x23): undefined reference to `setresuid'
+privileges.c:(.text+0x37): undefined reference to `setresgid'
+lightdm-privileges.o: In function `privileges_drop':
+privileges.c:(.text+0xc6): undefined reference to `setresgid'
+privileges.c:(.text+0xec): undefined reference to `setresuid'
+lightdm-process.o: In function `process_run':
+process.c:(.text+0xbb8): undefined reference to `clearenv'
+
+
+lightdm/greeter.h:15:25: error: glib-object.h: No such file or directory
+
+https://bugs.launchpad.net/lightdm/+bug/790186
+
+
+layout.c:125: error: too many arguments to function 'xkl_config_registry_load'
+https://bugs.launchpad.net/lightdm/+bug/972297
+

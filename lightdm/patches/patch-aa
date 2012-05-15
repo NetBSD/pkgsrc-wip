@@ -1,0 +1,27 @@
+$NetBSD: patch-aa,v 1.1.1.1 2012/05/15 03:29:36 jeremy-c-reed Exp $
+
+--- src/session-child.c.orig	2012-05-14 19:03:56.000000000 -0500
++++ src/session-child.c	2012-05-14 19:05:18.000000000 -0500
+@@ -255,11 +255,14 @@
+     }
+     if (xdisplay)
+     {
++#ifdef PAM_XDISPLAY
+         pam_set_item (pam_handle, PAM_XDISPLAY, xdisplay);
++#endif
+         pam_set_item (pam_handle, PAM_TTY, xdisplay);
+     }
+     else if (tty)
+         pam_set_item (pam_handle, PAM_TTY, tty);    
++#ifdef PAM_XAUTHDATA
+     if (xauthority)
+     {
+         struct pam_xauth_data value;
+@@ -270,6 +273,7 @@
+         value.datalen = xauth_get_authorization_data_length (xauthority);
+         pam_set_item (pam_handle, PAM_XAUTHDATA, &value);
+     }
++#endif
+ 
+     /* Authenticate */
+     if (do_authenticate)
