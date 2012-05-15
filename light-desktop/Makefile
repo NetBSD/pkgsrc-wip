@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/05/15 03:34:45 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2012/05/15 14:48:32 jeremy-c-reed Exp $
 #
 
 DISTNAME=	light-desktop-0.0
@@ -41,15 +41,15 @@ DEPENDS+=	gnumeric>=1.10:../../math/gnumeric110
 DEPENDS+=	gpicview>=0:../../graphics/gpicview
 DEPENDS+=	gutenprint-lib>=0:../../print/gutenprint-lib
 DEPENDS+=	liberation-ttf>=0:../../fonts/liberation-ttf
-DEPENDS+=	lightdm>=0:../../new/lightdm
-DEPENDS+=	lightdm-gtk-greeter>=0:../../new/lightdm-gtk-greeter
-DEPENDS+=	lxappearance>=0:../../new/lxappearance
-DEPENDS+=	lxlauncher>=0.2.2:../../new/lxlauncher
-DEPENDS+=	lxsession>=0:../../new/lxsession
-DEPENDS+=	lxsession-edit>=0:../../new/lxsession-edit
-DEPENDS+=	lxshortcut>=0:../../new/lxshortcut
+DEPENDS+=	lightdm>=0:../../wip/lightdm
+DEPENDS+=	lightdm-gtk-greeter>=0:../../wip/lightdm-gtk-greeter
+DEPENDS+=	lxappearance>=0:../../wip/lxappearance
+DEPENDS+=	lxlauncher>=0.2.2:../../wip/lxlauncher
+DEPENDS+=	lxsession>=0:../../wip/lxsession
+DEPENDS+=	lxsession-edit>=0:../../wip/lxsession-edit
+DEPENDS+=	lxshortcut>=0:../../wip/lxshortcut
 DEPENDS+=	lxrandr>=0.1:../../wip/lxrandr
-DEPENDS+=	lxtask>=0.1:../../new/lxtask
+DEPENDS+=	lxtask>=0.1:../../wip/lxtask
 DEPENDS+=	pidgin>=2.9:../../chat/pidgin
 DEPENDS+=	xpad>=0:../../x11/xpad
 
