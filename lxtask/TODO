@@ -1,0 +1,9 @@
+nothing displayed
+This  uses xfce-taskmanager-linux.c  and /proc
+
+This has no data displayed and has errors:
+
+(lxtask:15213): Gtk-CRITICAL **: IA__gtk_progress_set_percentage: assertion `percentage >= 0 && percentage <= 1.0' failed
+
+(lxtask:15213): Gtk-CRITICAL **: IA__gtk_progress_set_percentage: assertion `percentage >= 0 && percentage <= 1.0' failed
+
