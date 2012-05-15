@@ -1,0 +1,166 @@
+Lubuntu package			notes
+---------------			------------------------
+
+desktop-file-utils		via dependencies, but check
+X gvfs-backends
+gvfs-fuse
+X leafpad
+(lubuntu-core meta package)
+alsa-base
+alsa-utils
+anacron
+X bc				in base
+ca-certificates
+dbus-x11
+foomatic-db-compressed-ppds
+X foomatic-filters
+genisoimage
+x ghostscript-x
+inputattach
+libpam-ck-connector
+libsasl2-modules
+libxp6
+X lightdm
+X lightdm-gtk-greeter 		the only use of gtk3?
+(lubuntu-artwork)
+X gtk2-engines-murrine
+gtk3-engines-unico
+(lubuntu-default-settings)
+lubuntu-icon-theme
+X lxsession
+X pcmanfm
+ttf-ubuntu-font-family
+X lxpanel
+nvidia-common
+X openbox
+openprinting-ppds		need to package
+plymouth-theme-lubuntu-logo
+plymouth-theme-lubuntu-text
+X printer-driver-pnm2ppa
+rfkill
+X ttf-dejavu-core
+X ttf-freefont
+ubuntu-extras-keyring
+apt				use pkgin
+(gnupg for apt?)
+unzip
+wireless-tools			not a gui? Linux specific?
+X wpasupplicant			in base install
+X xkb-data			is xkeyboard-config?
+xorg (many packages)
+libgl1-mesa-glx
+libgl1-mesa-dri
+zip
+lubuntu-software-center
+X lxlauncher
+lxterminal
+pm-utils
+synaptic
+update-notifier
+wvdial
+x11-utils
+X xdg-user-dirs
+lxde-common provides:
+  bin/startlxde
+  bin/lxde-logout
+  bin/openbsd-lxde
+  menus and configurations and wallpapers and images etc
+
+Recommends:
+
+X abiword
+ace-of-penguins
+apport-gtk
+X audacious
+X audacious-plugins
+blueman
+chromium-browser
+X cups-driver-gutenprint
+dmz-cursor-theme
+X evince
+X file-roller
+X fonts-liberation
+fonts-nanum
+X galculator
+gdebi
+gecko-mediaplayer
+gnome-disk-utility
+gnome-keyring
+gnome-mplayer
+X gnome-system-tools		requires nautilus, change to use nautilus-extensions?
+X gnome-time-admin		included in gnome-system-tools
+X gnumeric
+X gpicview
+gucharmap
+guvcview
+hardinfo
+ibus
+jockey-gtk		searches for hardware drivers, gui
+language-selector-gnome
+linux-headers-generic
+X lxappearance
+lxappearance-obconf
+lxinput
+lxkeymap
+lxpanel-indicator-applet-plugin
+X lxrandr
+X lxsession-edit
+X lxshortcut
+X lxtask
+mobile-broadband-provider-info
+modemmanager
+mtpaint				need to package http://mtpaint.sourceforge.net/
+network-manager-gnome		provides applet
+X ntp			in base
+obconf
+osmo				need to package http://clayo.org/osmo/
+X pidgin
+pidgin-microblog
+scrot
+simple-scan
+software-properties-gtk
+sylpheed
+sylpheed-doc
+sylpheed-i18n
+sylpheed-plugins
+system-config-printer-gnome
+transmission			need to package http://www.transmissionbt.com/
+ttf-wqy-microhei
+usb-modeswitch
+xfburn
+xfce4-power-manager
+X xpad
+xscreensaver
+xterm
+xz-lzma
+acpi-support
+X avahi-daemon
+bluez
+bluez-alsa
+bluez-cups
+X cups
+cups-bsd
+cups-client
+fonts-kacst-one
+fonts-khmeros-core
+fonts-lao
+fonts-takao-pgothic
+fonts-thai-tlwg
+hplip
+kerneloops-daemon
+laptop-detect		uses dmidecode
+libnss-mdns
+pcmciautils
+policykit-desktop-privileges
+printer-driver-c2esp
+printer-driver-foo2zjs
+printer-driver-min12xxw
+printer-driver-ptouch
+printer-driver-pxljr
+printer-driver-sag-gdi
+printer-driver-splix
+ttf-indic-fonts-core
+ttf-punjabi-fonts
+ttf-ubuntu-font-family
+amixer
+
