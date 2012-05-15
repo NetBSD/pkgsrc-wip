@@ -1,0 +1,9 @@
+seg fault when click cancel or ok (lxsession was not running)
+
+#0  0x00007f7ff40643fe in g_slice_alloc () from /usr/pkg/lib/libglib-2.0.so.0
+(gdb) bt
+#0  0x00007f7ff40643fe in g_slice_alloc () from /usr/pkg/lib/libglib-2.0.so.0
+#1  0x0000000000000000 in ?? ()
+
+
+
