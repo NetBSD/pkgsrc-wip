@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/10/22 00:36:55 jeremy-c-reed Exp $
+$NetBSD: distinfo,v 1.2 2012/05/15 03:09:39 jeremy-c-reed Exp $
 
-SHA1 (lxmenu-data-0.1.tar.gz) = a502376d2cbb66e40a6e4678d18f53e44b20309c
-RMD160 (lxmenu-data-0.1.tar.gz) = f1f071ea696dac947e6723e92cbe8a52787db873
-Size (lxmenu-data-0.1.tar.gz) = 217934 bytes
+SHA1 (lxmenu-data-0.1.2.tar.gz) = 57490607f67d43167beb326ebc927524dd6dd1ab
+RMD160 (lxmenu-data-0.1.2.tar.gz) = 2c51e5c1cb17a0bd367d2ed040d904525033077a
+Size (lxmenu-data-0.1.2.tar.gz) = 298734 bytes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/10/22 00:36:55 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2012/05/15 03:09:39 jeremy-c-reed Exp $
 #
 
 
@@ -8,7 +8,7 @@
 # So, please make sure that lxde-applications.menu is installed in /etc/xdg/menus.
 
 
-DISTNAME=	lxmenu-data-0.1
+DISTNAME=	lxmenu-data-0.1.2
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lxde/}
 
@@ -19,5 +19,7 @@ COMMENT=	LXDE menu data
 GNU_CONFIGURE=	yes
 #USE_LANGUAGES=	# none
 USE_TOOLS+=	gmake intltool
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.pkg.mk"
