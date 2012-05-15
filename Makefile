@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4754 2012/05/14 08:40:11 triaxx Exp $
+# $Id: Makefile,v 1.4755 2012/05/15 12:15:26 shattered Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -3003,6 +3003,7 @@ SUBDIR+=	uebimiau
 SUBDIR+=	ufc
 SUBDIR+=	uffizi
 SUBDIR+=	uim-chewing
+SUBDIR+=	ukncbtl
 SUBDIR+=	umix
 SUBDIR+=	umurmur
 SUBDIR+=	undo-tree
