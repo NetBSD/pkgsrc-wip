@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2012/01/19 16:28:54 noud4 Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/05/15 14:08:40 noud4 Exp $
 bin/gda-list-config
 bin/gda-list-config-4.0
 ${PLIST.jdbc}bin/gda-list-jdbc-providers-4.0
@@ -110,16 +110,21 @@ ${PLIST.bdb}lib/libgda-4.0/providers/libgda-bdb.la
 ${PLIST.jdbc}lib/libgda-4.0/providers/gdaprovider-4.0.jar
 ${PLIST.jdbc}lib/libgda-4.0/providers/libgda-jdbc.la
 ${PLIST.ldap}lib/libgda-4.0/providers/libgda-ldap.la
+${PLIST.mdb}lib/libgda-4.0/providers/libgda-mdb.la
 ${PLIST.mysql}lib/libgda-4.0/providers/libgda-mysql.la
 ${PLIST.postgres}lib/libgda-4.0/providers/libgda-postgres.la
+${PLIST.web}lib/libgda-4.0/providers/libgda-web.la
 lib/libgda-4.0/providers/libgda-sqlite.la
 lib/libgda-report-4.0.la
 lib/pkgconfig/libgda-4.0.pc
 ${PLIST.bdb}lib/pkgconfig/libgda-bdb-4.0.pc
 ${PLIST.jdbc}lib/pkgconfig/libgda-jdbc-4.0.pc
 ${PLIST.ldap}lib/pkgconfig/libgda-ldap-4.0.pc
+${PLIST.mdb}lib/pkgconfig/libgda-mdb-4.0.pc
 ${PLIST.mysql}lib/pkgconfig/libgda-mysql-4.0.pc
 ${PLIST.postgres}lib/pkgconfig/libgda-postgres-4.0.pc
+${PLIST.web}lib/pkgconfig/libgda-web-4.0.pc
+${PLIST.xslt}lib/pkgconfig/libgda-xslt-4.0.pc
 lib/pkgconfig/libgda-report-4.0.pc
 lib/pkgconfig/libgda-sqlite-4.0.pc
 man/man1/gda-sql-4.0.1

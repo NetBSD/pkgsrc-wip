@@ -1,11 +1,25 @@
-$NetBSD: patch-ad,v 1.1 2012/01/19 16:28:54 noud4 Exp $
-
-first, i didn't get the 'enable_introspection', so for now cut the whole out.
-second, BDB version adoption.
-third, Java adoption.
+$NetBSD: patch-ad,v 1.2 2012/05/15 14:08:40 noud4 Exp $
 
 --- configure.orig	2011-12-14 15:07:14.000000000 +0000
-+++ configure	2012-01-17 07:12:51.000000000 +0000
++++ configure	2012-01-23 03:15:10.000000000 +0000
+@@ -558,7 +558,7 @@
+ #
+ # Initializations.
+ #
+-ac_default_prefix=/usr/local
++ac_default_prefix=@LOCAL@
+ ac_clean_files=
+ ac_config_libobj_dir=.
+ LIBOBJS=
+@@ -12765,7 +12765,7 @@
+   esac
+   sys_lib_search_path_spec=`$ECHO "$lt_search_path_spec" | $lt_NL2SP`
+ else
+-  sys_lib_search_path_spec="/lib /usr/lib /usr/local/lib"
++  sys_lib_search_path_spec="/lib /usr/lib @LOCAL@/lib"
+ fi
+ library_names_spec=
+ libname_spec='lib$name'
 @@ -20219,87 +20219,8 @@
  
  
@@ -96,15 +110,104 @@ third, Java adoption.
  
  
  
+@@ -21119,7 +21040,7 @@
+     bdb_found=no
+     try_bdb=true
+     BDB_LIBS=""
+-    bdb_test_dir="/usr /usr/local /local"
++    bdb_test_dir="/usr @LOCAL@ /local"
+ 
+ # Check whether --with-bdb was given.
+ if test "${with_bdb+set}" = set; then :
 @@ -21155,7 +21076,7 @@
  	    bdbdir=""
  	    { $as_echo "$as_me:${as_lineno-$LINENO}: checking for Berkeley DB files in $d" >&5
  $as_echo_n "checking for Berkeley DB files in $d... " >&6; }
 -	    for version in "" 5.1 5.0 4.9 4.8 4.7
-+	    for version in "" 5.3 5.2 5.1 5.0 4.9 4.8 4.7
++	    for version in "" 5 5.3 5.2 5.1 5.0 4.9 4.8 4.7
  	    do
  	        if test $platform_win32 = yes
  		then
+@@ -21165,9 +21086,9 @@
+ 		fi
+ 		if test -z $version
+ 		then
+-		    db_libfilename="libdb$bdb_libext"
+-        	    db_lib="-ldb"
+-		    db_libfile="$d/$bdb_loclibdir/libdb$bdb_libext"
++		    db_libfilename="libdb5$bdb_libext"
++        	    db_lib="-ldb5"
++		    db_libfile="$d/$bdb_loclibdir/libdb5$bdb_libext"
+ 		    try_headers="db.h"
+     		else
+ 		    if test $platform_win32 = yes
+@@ -21186,10 +21107,10 @@
+ 
+ 		for db_hdr in $try_headers
+ 		do
+-		    if test -f $d/include/$db_hdr -a -f $db_libfile
++		    if test -f $d/include/db5/$db_hdr -a -f $db_libfile
+ 		    then
+   	                save_CFLAGS="$CFLAGS"
+-	                CFLAGS="$CFLAGS -I$d/include"
++	                CFLAGS="$CFLAGS -I$d/include/db5"
+   	                save_LIBS="$LIBS"
+ 	                LIBS="$LIBS -L$d/$bdb_loclibdir $db_lib"
+    	                cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+@@ -21230,7 +21151,7 @@
+ 		    { $as_echo "$as_me:${as_lineno-$LINENO}: result: found version $version" >&5
+ $as_echo "found version $version" >&6; }
+ 		fi
+-		BDB_CFLAGS=-I${bdbdir}/include
++		BDB_CFLAGS=-I${bdbdir}/include/db5
+ 	    	BDB_LIBS="-L${bdbdir}/$bdb_loclibdir $db_lib"
+ 		BDB_LIB=$db_libfilename
+ 		BDB_DIR="$bdbdir"
+@@ -21461,7 +21382,7 @@
+ 	    MYSQL_CFLAGS=`$MYSQL_CONFIG --cflags`
+ 	    MYSQL_LIBS=`$MYSQL_CONFIG --libs`
+ 	else
+-	    mysql_test_dir="/usr /usr/local /opt/gnome"
++	    mysql_test_dir="/usr @LOCAL@ /opt/gnome"
+ 	fi
+     fi
+ 
+@@ -21733,7 +21654,7 @@
+ 	    POSTGRES_CFLAGS="-I`$PG_CONFIG --includedir`"
+ 	    POSTGRES_LIBS="-L`$PG_CONFIG --libdir` -lpq"
+ 	else
+-	    postgres_test_dir="/usr /usr/local /opt/gnome"
++	    postgres_test_dir="/usr @LOCAL@ /opt/gnome"
+ 	fi
+     fi
+ 
+@@ -22020,7 +21941,7 @@
+     java_found=no
+     try_java=true
+     JAVA_LIBS=""
+-    java_test_dir="$JAVA_HOME /usr /opt /local"
++    java_test_dir="$JAVA_HOME /usr /opt @JAVA_HOME@"
+ 
+ # Check whether --with-java was given.
+ if test "${with_java+set}" = set; then :
+@@ -22036,7 +21957,7 @@
+ 				 else
+   	  			     JAVA_PATH=${JAVA_HOME}:${JAVA_HOME}/bin:${PATH}
+ 				 fi
+-				 JAVA_PATH=${JAVA_PATH}:/usr/java/bin:/usr/jdk/bin:/usr/lib/java/bin:/usr/lib/jdk/bin:/usr/local/java/bin:/usr/local/jdk/bin:/usr/local/lib/java/bin:/usr/local/lib/jdk/bin
++				 JAVA_PATH=${JAVA_PATH}:/usr/java/bin:/usr/jdk/bin:/usr/lib/java/bin:/usr/lib/jdk/bin:/usr/local/java/bin:/usr/local/jdk/bin:/usr/local/lib/java/bin:/usr/local/lib/jdk/bin:@JAVA_HOME@/bin
+ 			     else
+ 			         JAVA_PATH=$withval
+ 			         java_test_dir=$withval
+@@ -22049,7 +21970,7 @@
+ 			     else
+   	  		         JAVA_PATH=${JAVA_HOME}:${JAVA_HOME}/bin:${PATH}
+ 			     fi
+-			     JAVA_PATH=${JAVA_PATH}:/usr/java/bin:/usr/jdk/bin:/usr/lib/java/bin:/usr/lib/jdk/bin:/usr/local/java/bin:/usr/local/jdk/bin:/usr/local/lib/java/bin:/usr/local/lib/jdk/bin
++			     JAVA_PATH=${JAVA_PATH}:/usr/java/bin:/usr/jdk/bin:/usr/lib/java/bin:/usr/lib/jdk/bin:/usr/local/java/bin:/usr/local/jdk/bin:/usr/local/lib/java/bin:/usr/local/lib/jdk/bin:@JAVA_HOME@/bin
+ 
+ fi
+ 
 @@ -22316,6 +22237,11 @@
  		    JTYPE="Sun JRE 1.6"
  		    JFLAGS="-Xlint:unchecked -Xlint:deprecation"
@@ -117,3 +220,77 @@ third, Java adoption.
                  JREgcj-4*)
  		    try_java=true
  		    JTYPE="GCJ"
+@@ -22513,7 +22439,7 @@
+ 	# (well, those are presumably the only platforms supported by Sun's JDK and others don't need this
+ 	# at least as of now - 01/2004)
+ 	jac_found_md=no
+-	for mddir in . linux solaris ppc irix alpha aix hp-ux genunix cygwin win32 freebsd
++	for mddir in . linux solaris ppc irix alpha aix hp-ux genunix cygwin win32 freebsd netbsd
+ 	do
+ 	    as_ac_File=`$as_echo "ac_cv_file_${JNI_H}/$mddir/jni_md.h" | $as_tr_sh`
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking for ${JNI_H}/$mddir/jni_md.h" >&5
+@@ -22624,7 +22550,7 @@
+ 
+ 
+ 	JAVA_CFLAGS="-I${JNI_H}"
+-	for mddir in . linux solaris ppc irix alpha aix hp-ux genunix cygwin win32 freebsd
++	for mddir in . linux solaris ppc irix alpha aix hp-ux genunix cygwin win32 freebsd netbsd
+ 	do
+ 	    if test -e ${JNI_H}/$mddir/jni_md.h
+ 	    then
+@@ -22673,7 +22599,7 @@
+     ldap_found=no
+     try_ldap=true
+     LDAP_LIBS=""
+-    ldap_test_dir="/usr /usr/local /local"
++    ldap_test_dir="/usr @LOCAL@ /local"
+ 
+ # Check whether --with-ldap was given.
+ if test "${with_ldap+set}" = set; then :
+@@ -22795,7 +22721,7 @@
+ 	try_firebird=false
+ elif test $withval = yes
+ then
+-	dir="/usr/local"
++	dir="@LOCAL@"
+ else
+ 	dir=$withval
+ fi
+@@ -22806,7 +22732,7 @@
+ then
+ 	{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for FireBird installation" >&5
+ $as_echo_n "checking for FireBird installation... " >&6; }
+-	for d in $dir /usr/local/firebird /usr/local /usr /opt/firebird
++	for d in $dir /usr/local/firebird @LOCAL@ /usr /opt/firebird
+ 	do
+ 		if test -f $d/include/ibase.h
+ 		then
+@@ -23362,7 +23288,7 @@
+             if test "X$additional_includedir" != "X"; then
+                                                                                                                 if test "X$additional_includedir" != "X/usr/include"; then
+                 haveit=
+-                if test "X$additional_includedir" = "X/usr/local/include"; then
++                if test "X$additional_includedir" = "X@LOCAL@/include"; then
+                   if test -n "$GCC"; then
+                     case $host_os in
+                       linux* | gnu* | k*bsd*-gnu) haveit=yes;;
+@@ -23407,8 +23333,8 @@
+                                                                                                                                                                 if test "X$additional_libdir" != "X/usr/$acl_libdirstem" \
+                        && test "X$additional_libdir" != "X/usr/$acl_libdirstem2"; then
+                       haveit=
+-                      if test "X$additional_libdir" = "X/usr/local/$acl_libdirstem" \
+-                         || test "X$additional_libdir" = "X/usr/local/$acl_libdirstem2"; then
++                      if test "X$additional_libdir" = "X@LOCAL@/$acl_libdirstem" \
++                         || test "X$additional_libdir" = "X@LOCAL@/$acl_libdirstem2"; then
+                         if test -n "$GCC"; then
+                           case $host_os in
+                             linux* | gnu* | k*bsd*-gnu) haveit=yes;;
+@@ -23947,7 +23873,7 @@
+ fi
+ 	if test $pkgmdb = no
+ 	then
+-	    mdb_test_dir="/usr /usr/local /opt/gnome"
++	    mdb_test_dir="/usr @LOCAL@ /opt/gnome"
+ 	fi
+     fi
+ 

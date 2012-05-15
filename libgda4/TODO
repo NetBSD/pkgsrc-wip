@@ -1,14 +1,17 @@
 - build for other db providers
 
-mysql and postgres is checked and does work:
+bdb does contact but not browse the data,
+in a readable form after "select * from data;".
+
+ldap, mdb, mysql and postgres is checked and does work:
 Gnome->System->Database Access Properties,
 create Data Source,
 double-click created Data Source,
 push Test or Browse.
 
 that build was done w/ these options:
-PKG_OPTIONS.libgda4+=-bdb -jdbc -ldap mysql postgres
-PKG_OPTIONS.libgda4+=fam gui ui
+PKG_OPTIONS.libgda4+=bdb jdbc ldap mdb mysql postgres web
+PKG_OPTIONS.libgda4+=fam gui ui xslt
 
 - i can image people want them non-inline libgda-db_name pkgs,
   given existing pkg distribution and deploy|install systems.
@@ -16,3 +19,9 @@ PKG_OPTIONS.libgda4+=fam gui ui
   given, i think, the libgda build process changed itself,
   into a 2step build process
   (first supporting libs, then actual provider, this all in-tree).
+
+Only built against Berkeley DB 5.
+
+The GDA provider for MDB is checked to work but
+does not show during configure and
+GNU gettext Intl libraries should be handled.

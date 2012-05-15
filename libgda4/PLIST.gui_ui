@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.gui_ui,v 1.1 2012/01/19 16:28:54 noud4 Exp $
+@comment $NetBSD: PLIST.gui_ui,v 1.2 2012/05/15 14:08:40 noud4 Exp $
 bin/gda-browser-4.0
 bin/gda-control-center-4.0
 bin/gdaui-demo-4.0
@@ -84,6 +84,7 @@ share/gtk-doc/html/gda-browser/style.css
 share/gtk-doc/html/gda-browser/up.png
 share/gtk-doc/html/gda-browser/why.html
 share/gtk-doc/html/gda-browser/windows.html
+share/icons/gda-control-center.png
 share/libgda-4.0/icons/hicolor/16x16/actions/bookmark-view.png
 share/libgda-4.0/icons/hicolor/16x16/actions/glade.png
 share/libgda-4.0/icons/hicolor/16x16/actions/history-view.png
