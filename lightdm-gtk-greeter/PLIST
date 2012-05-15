@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/05/15 03:32:12 jeremy-c-reed Exp $
+etc/lightdm/lightdm-gtk-greeter.conf
+sbin/lightdm-gtk-greeter
+share/lightdm-gtk-greeter/greeter.ui
+share/lightdm-gtk-greeter/hicolor/scalable/apps/accessibility.svg
+share/lightdm-gtk-greeter/hicolor/scalable/apps/system-shutdown.svg
+share/xgreeters/lightdm-gtk-greeter.desktop

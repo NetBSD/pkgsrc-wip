@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2012/05/15 03:32:12 jeremy-c-reed Exp $
+
+--- src/lightdm-gtk-greeter.c.orig	2012-05-14 21:36:33.000000000 -0500
++++ src/lightdm-gtk-greeter.c	2012-05-14 21:36:55.000000000 -0500
+@@ -10,6 +10,7 @@
+  */
+ 
+ #include <stdlib.h>
++#include <locale.h>
+ #include <gtk/gtk.h>
+ #include <glib/gi18n.h>
+ #include <cairo-xlib.h>
