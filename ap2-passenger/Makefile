@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/05/16 14:59:28 fhajny Exp $
+# $NetBSD: Makefile,v 1.15 2012/05/16 20:26:11 fhajny Exp $
 
 PKGNAME=		${APACHE_PKG_PREFIX}-${RUBY_PKGPREFIX}-${DISTNAME}
 PKGREVISION=		1
@@ -11,6 +11,8 @@ PKG_APACHE_ACCEPTED=	apache24 apache22 apache2
 APACHE_MODULE=		YES
 
 DEPENDS+=		${RUBY_PKGPREFIX}-${DISTNAME}:../../wip/ruby-passenger
+
+INSTALLATION_DIRS+=	lib/httpd
 
 do-build:
 	cd ${WRKSRC}/build && ${RAKE} apache2:clean apache2
