@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/05/16 07:03:31 triaxx Exp $
+lib/php/.registry/.channel.pear.horde.org/horde_lock.reg
+lib/php/Horde/Lock.php
+lib/php/Horde/Lock/Exception.php
+lib/php/Horde/Lock/Null.php
+lib/php/Horde/Lock/Sql.php
+lib/php/data/Horde_Lock/migration/1_horde_lock_base_tables.php
+lib/php/data/Horde_Lock/migration/2_horde_lock_upgrade_column_types.php
+lib/php/data/Horde_Lock/migration/3_horde_lock_fix_owner_width.php
+lib/php/doc/Horde_Lock/COPYING
