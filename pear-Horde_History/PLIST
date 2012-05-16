@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/05/16 07:02:18 triaxx Exp $
+lib/php/.registry/.channel.pear.horde.org/horde_history.reg
+lib/php/Horde/History.php
+lib/php/Horde/History/Exception.php
+lib/php/Horde/History/Log.php
+lib/php/Horde/History/Mock.php
+lib/php/Horde/History/Sql.php
+lib/php/data/Horde_History/migration/1_horde_history_base_tables.php
+lib/php/data/Horde_History/migration/2_horde_history_upgrade_autoincrement.php
+lib/php/doc/Horde_History/COPYING
+lib/php/test/Horde_History/Horde/History/AllTests.php
+lib/php/test/Horde_History/Horde/History/Autoload.php
+lib/php/test/Horde_History/Horde/History/InterfaceTest.php
+lib/php/test/Horde_History/Horde/History/phpunit.xml
