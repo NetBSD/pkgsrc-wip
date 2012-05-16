@@ -1,5 +1,0 @@
-The package only builds/installs the Apache module for now. The Nginx port
-should be implemented via OPTION framework inside www/nginx instead. The
-new 'Passenger Lite' embedded server requires two gems currently not in
-pkgsrc, and while it's officially built using the 'passenger' script contained
-in this package, it could become a separate package on its own.
