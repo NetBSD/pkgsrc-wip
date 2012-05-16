@@ -1,0 +1,65 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2012/05/16 14:08:19 fhajny Exp $
+# used by wip/ap2-passenger/Makefile
+#
+DISTNAME=		passenger-3.0.12
+CATEGORIES=		www
+
+MASTER_SITES=		http://rubyforge.org/frs/download.php/76005/
+MAINTAINER=		filip@joyent.com
+HOMEPAGE=		http://www.modrails.com/
+LICENSE=		mit
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		pax:build
+USE_RAKE=		yes
+
+PATCHDIR=		${.CURDIR}/../../wip/ruby-passenger/patches
+DISTINFO_FILE=		${.CURDIR}/../../wip/ruby-passenger/distinfo
+
+.include "../../mk/bsd.prefs.mk"
+
+BUILD_DEFS+=		VARBASE
+
+PASSENGER_LOGDIR?=	${VARBASE}/log/passenger
+PASSENGER_VARDIR?=	${VARBASE}/spool/passenger
+
+REPLACE_RUBY=		bin/passenger
+REPLACE_RUBY+=		bin/passenger-config
+REPLACE_RUBY+=		bin/passenger-install-apache2-module
+REPLACE_RUBY+=		bin/passenger-install-nginx-module
+REPLACE_RUBY+=		bin/passenger-make-enterprisey
+REPLACE_RUBY+=		bin/passenger-memory-stats
+REPLACE_RUBY+=		bin/passenger-status
+REPLACE_RUBY+=		helper-scripts/passenger-spawn-server
+REPLACE_RUBY+=		helper-scripts/prespawn
+
+CHECK_INTERPRETER_SKIP+=	share/phusion-passenger/source/*
+CHECK_INTERPRETER_SKIP+=	${RUBY_VENDORLIB}/phusion_passenger/wsgi/request_handler.py
+
+SUBST_CLASSES+=		rake
+SUBST_STAGE.rake=	post-patch
+SUBST_MESSAGE.rake=	Fixing installation directories
+SUBST_FILES.rake=	build/packaging.rb ext/apache2/Configuration.hpp
+SUBST_FILES.rake+=	ext/common/ResourceLocator.h ext/nginx/Configuration.c
+SUBST_FILES.rake+=	lib/phusion_passenger/admin_tools/memory_stats.rb
+SUBST_FILES.rake+=	lib/phusion_passenger.rb
+SUBST_SED.rake=		-e 's,@PREFIX@,${PREFIX},'
+SUBST_SED.rake+=	-e 's,@RUBY_VERSION@,${RUBY_VERSION},'
+SUBST_SED.rake+=	-e 's,@RUBY_ARCH@,${RUBY_ARCH},'
+SUBST_SED.rake+=	-e 's,@RUBY_VENDORLIB@,${RUBY_VENDORLIB},'
+SUBST_SED.rake+=	-e 's,@RUBY_VENDORARCHLIB@,${RUBY_VENDORARCHLIB},'
+SUBST_SED.rake+=	-e 's,@PASSENGER_VARDIR@,${PASSENGER_VARDIR},'
+SUBST_SED.rake+=	-e 's,@PASSENGER_LOGDIR@,${PASSENGER_LOGDIR},'
+
+.include "../../mk/compiler.mk"
+
+post-patch:
+	${RM} -f ${WRKSRC}/lib/phusion_passenger/admin_tools/memory_stats.rb.orig \
+		${WRKSRC}/ext/boost/config/stdlib/libstdcpp3.hpp.orig \
+		${WRKSRC}/lib/phusion_passenger/platform_info/compiler.rb.orig \
+		${WRKSRC}/lib/phusion_passenger/utils/._tmpdir.rb
+
+.include "../../www/curl/buildlink3.mk"
+.include "../../lang/ruby/modules.mk"
