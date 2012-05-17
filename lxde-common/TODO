@@ -1,0 +1,33 @@
+lubuntu patches in
+http://archive.ubuntu.com/ubuntu/pool/universe/l/lxde-common/lxde-common_0.5.0-4ubuntu3.debian.tar.gz
+
+
+-=-=-=-
+
+check that these work; notice complaint:
+
+Error: sysconfdir is not /etc.
+Please consider passing --sysconfdir=/etc to configure.
+Otherwise default config files will be installed to wrong place.
+
+
+-=-=-=-=
+
+
+http://sourceforge.net/tracker/index.php?func=detail&aid=3398771&group_id=180858&atid=894869
+is patch-aa
+but need to patch Makefile.in also
+maybe just wait
+
+
+/usr/share/lxde/openbox/rc.xml
+lxsession
+openbox
+pcmanfm config
+xprop
+dbus-launch
+xscreensaver
+xterm
+firefox
+
+the lubuntu version also references scrot, amixer, xblacklight, galculator

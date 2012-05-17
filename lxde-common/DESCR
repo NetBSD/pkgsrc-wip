@@ -1,6 +1,2 @@
-lxde-common package provides a set of default configuration for LXDE.
-
-lxde-settings is the XSettings daemon of LXDE.
-It read config file ~/.config/lxde/config or /usr/share/lxde/config if
-user-specific config file is not available, and presents the config values
-to other programs via XSETTINGS protocol defined by freedesktop.org.
+lxde-common package provides a set of default configurations
+and startup and logout scripts for LXDE.

@@ -1,1 +1,20 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/10/22 00:33:32 jeremy-c-reed Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/05/17 04:20:52 jeremy-c-reed Exp $
+bin/lxde-logout
+bin/openbox-lxde
+bin/startlxde
+etc/xdg/lxsession/LXDE/autostart
+etc/xdg/lxsession/LXDE/desktop.conf
+etc/xdg/pcmanfm/LXDE/pcmanfm.conf
+man/man1/lxde-logout.1
+man/man1/openbox-lxde.1
+man/man1/startlxde.1
+share/lxde/images/logout-banner.png
+share/lxde/images/lxde-icon.png
+share/lxde/openbox/menu.xml
+share/lxde/openbox/rc.xml
+share/lxde/wallpapers/lxde_blue.jpg
+share/lxde/wallpapers/lxde_green.jpg
+share/lxde/wallpapers/lxde_red.jpg
+share/lxpanel/profile/LXDE/config
+share/lxpanel/profile/LXDE/panels/panel
+share/xsessions/LXDE.desktop
