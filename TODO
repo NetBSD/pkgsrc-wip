@@ -25,7 +25,7 @@ Suggested package updates
 	o ecb-2.40
 	o editline-20120311.3.0
 	o emboss-base-6.0.1
-	o emelfm2-0.8.0
+	o emelfm2-0.8.1
 	o endeavour-3.1.3
 	o evilvte-0.5.1
 	o evolution-couchdb-0.4.4
@@ -126,7 +126,7 @@ Suggested package updates
 	o spe-0.8.2a
 	o sxemacs-22.1.10
 	o task-1.9.4
-	o taskcoach-1.3.13
+	o taskcoach-1.3.14
 	o tint2-0.7.1
 	o tmw-0.0.29.1
 	o torcs-1.3.3
