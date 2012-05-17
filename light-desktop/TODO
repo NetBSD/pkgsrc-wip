@@ -22,11 +22,28 @@ libsasl2-modules
 libxp6
 X lightdm
 X lightdm-gtk-greeter 		the only use of gtk3?
-(lubuntu-artwork)
+lubuntu-artwork
+plus need some netbsd-artwork like:
+	352x125 logout-banner.png
+	1280x1024 netbsd-default-wallpaper.png
+	64x26 (64 width includes 20+ pixels of transparency on right)
+		or 36x36 netbsd-logo.png for panel menu button
 X gtk2-engines-murrine
 gtk3-engines-unico
 (lubuntu-default-settings)
-lubuntu-icon-theme
+ provides replacements for lxde-common for example for openbox/rc.xml
+need replacement for lubuntu-icon-theme		call it netbsd-icon-theme?
+					but also offer pkgsrc-icon-theme?
+for:
+	gnome-main-menu.svg
+	novell-button.svg
+	start-here.svg
+	distributor-logo.svg
+	/usr/share/icons/netbsd/index.theme
+		which has:
+			Inherits=elementary-mono-dark
+	or pkgsrc
+X elementary-icon-theme
 X lxsession
 X pcmanfm
 ttf-ubuntu-font-family
@@ -60,7 +77,7 @@ update-notifier
 wvdial
 x11-utils
 X xdg-user-dirs
-lxde-common provides:
+X lxde-common provides:
   bin/startlxde
   bin/lxde-logout
   bin/openbsd-lxde
@@ -116,7 +133,7 @@ obconf				http://gnats.netbsd.org/46090
 osmo				need to package http://clayo.org/osmo/
 X pidgin
 pidgin-microblog
-scrot
+X scrot
 simple-scan			wip/simple-scan
 software-properties-gtk
 sylpheed

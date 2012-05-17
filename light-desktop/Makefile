@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2012/05/15 14:48:32 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.3 2012/05/17 04:43:49 jeremy-c-reed Exp $
 #
 
 DISTNAME=	light-desktop-0.0
+PKGREVISION=	1
 CATEGORIES=	meta-pkgs x11
 MASTER_SITES=	# empty
 
@@ -10,6 +11,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Fast and lightweight desktop
 
 DEPENDS=	dejavu-ttf>2.28:../../fonts/dejavu-ttf
+DEPENDS+=	elementary-icon-theme>=0:../../wip/elementary-icon-theme
 DEPENDS+=	foomatic-filters>=4.0.9:../../print/foomatic4-filters
 DEPENDS+=	freefont-ttf>0:../../fonts/freefont-ttf
 DEPENDS+=	ghostscript>=8.71:../../print/ghostscript
@@ -17,6 +19,7 @@ DEPENDS+=	gtk2-engines-murrine>=0:../../x11/gtk2-engines-murrine
 ##DEPENDS+=	gvfs>=1.2.3:../../sysutils/gvfs
 #DEPENDS+=	hplip>=3:../../wip/hplip3
 DEPENDS+=	leafpad>=0.8.17:../../editors/leafpad
+DEPENDS+=	lxde-common>=0.5:../../wip/lxde-common
 DEPENDS+=	lxpanel>=0:../../wip/lxpanel
 DEPENDS+=	openbox>0:../../wm/openbox
 DEPENDS+=	pcmanfm>=0.5:../../sysutils/pcmanfm
@@ -50,6 +53,7 @@ DEPENDS+=	lxsession-edit>=0:../../wip/lxsession-edit
 DEPENDS+=	lxshortcut>=0:../../wip/lxshortcut
 DEPENDS+=	lxrandr>=0.1:../../wip/lxrandr
 DEPENDS+=	lxtask>=0.1:../../wip/lxtask
+DEPENDS+=	scrot>=0:../../graphics/scrot
 DEPENDS+=	pidgin>=2.9:../../chat/pidgin
 DEPENDS+=	xpad>=0:../../x11/xpad
 
