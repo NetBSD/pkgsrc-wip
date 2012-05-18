@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/05/12 14:31:48 outpaddling Exp $
+# $NetBSD: Makefile,v 1.5 2012/05/18 02:19:45 outpaddling Exp $
 #
 
 DISTNAME=	dolfin-1.0.0
@@ -70,5 +70,6 @@ PLIST_SUBST+=   PYSITELIB=${PYSITELIB}
 .include "../../wip/suitesparse/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../wip/cgal/buildlink3.mk"
-.include "../../wip/petsc/buildlink3.mk"
+# Broken package
+#.include "../../wip/petsc/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
