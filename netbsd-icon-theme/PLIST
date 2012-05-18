@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/05/18 23:55:47 jeremy-c-reed Exp $
+share/icons/netbsd/index.theme
+@comment share/icons/netbsd/places/128/gnome-main-menu.svg
+@comment share/icons/netbsd/places/128/novell-button.svg
+@comment share/icons/netbsd/places/128/start-here.svg
+@comment share/icons/netbsd/places/22/gnome-main-menu.svg
+@comment share/icons/netbsd/places/22/novell-button.svg
+@comment share/icons/netbsd/places/22/start-here.svg
+@comment share/icons/netbsd/places/24/distributor-logo.svg
+@comment share/icons/netbsd/places/24/gnome-main-menu.svg
+@comment share/icons/netbsd/places/24/novell-button.svg
+@comment share/icons/netbsd/places/24/start-here.svg
+@comment share/icons/netbsd/places/48/gnome-main-menu.svg
+@comment share/icons/netbsd/places/48/novell-button.svg
+@comment share/icons/netbsd/places/48/start-here.svg
+@comment share/icons/netbsd/places/64/distributor-logo.svg
+@comment share/icons/netbsd/places/64/gnome-main-menu.svg
+@comment share/icons/netbsd/places/64/novell-button.svg
+@comment share/icons/netbsd/places/64/start-here.svg

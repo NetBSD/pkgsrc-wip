@@ -1,0 +1,4 @@
+This package contains the NetBSD icon theme. It provides specific icons
+for the main menu and distributor icons.
+
+** NOTE: This package is incomplete; it does not provide the graphics. **
