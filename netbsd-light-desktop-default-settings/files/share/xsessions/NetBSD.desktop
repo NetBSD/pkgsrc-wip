@@ -1,0 +1,10 @@
+[Desktop Entry]
+# The names/descriptions should really be better
+Name=NetBSD
+Comment=NetBSD - Lightweight X11 desktop environment based on LXDE
+Comment[zh_TW]=NetBSD - 輕量級的 X11 桌面環境
+Comment[fi]=NetBSD - kevyt X11-työpöytäympäristö
+Comment[ja]=NetBSD - 軽量な X11 デスクトップ環境
+Exec=@PREFIX@/bin/start-netbsd-light-desktop
+# Icon=
+Type=Application

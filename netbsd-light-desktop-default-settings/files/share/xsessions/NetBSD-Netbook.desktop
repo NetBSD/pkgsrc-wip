@@ -1,0 +1,7 @@
+[Desktop Entry]
+# The names/descriptions should really be better
+Name=NetBSD Netbook
+Comment=NetBSD Netbook - Lightweight X11 desktop environment based on LXDE
+Exec=@PREFIX@/bin/start-netbsd-light-desktop-netbook
+# Icon=
+Type=Application

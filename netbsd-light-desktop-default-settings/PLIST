@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/05/19 00:04:53 jeremy-c-reed Exp $
+bin/netbsd-light-desktop-logout
+bin/openbox-netbsd-light-desktop
+bin/start-netbsd-light-desktop
+bin/start-netbsd-light-desktop-netbook
+share/applications/netbsd-light-desktop-logout.desktop
+share/applications/netbsd-light-desktop-screenlock.desktop
+share/examples/netbsd-light-desktop/xdg/lxsession/NetBSD-Netbook/autostart
+share/examples/netbsd-light-desktop/xdg/lxsession/NetBSD-Netbook/desktop.conf
+share/examples/netbsd-light-desktop/xdg/lxsession/NetBSD/autostart
+share/examples/netbsd-light-desktop/xdg/lxsession/NetBSD/desktop.conf
+share/examples/netbsd-light-desktop/xdg/netbsd-light-desktop/applications/defaults.list
+share/examples/netbsd-light-desktop/xdg/netbsd-light-desktop/libfm/libfm.conf
+share/examples/netbsd-light-desktop/xdg/netbsd-light-desktop/lxdm/lxdm.conf
+share/examples/netbsd-light-desktop/xdg/netbsd-light-desktop/menus/lxde-applications.menu
+share/examples/netbsd-light-desktop/xdg/pcmanfm/netbsd-light-desktop/pcmanfm.conf
+share/gdm/autostart/LoginWindow/lxsession.desktop
+share/lxpanel/profile/NetBSD/config
+share/lxpanel/profile/NetBSD/panels/panel
+share/netbsd-light-desktop/leafpad/leafpadrc
+share/netbsd-light-desktop/openbox/menu.xml
+share/netbsd-light-desktop/openbox/rc.xml
+share/netbsd-light-desktop/pcmanfm/main.lubuntu
+share/netbsd-light-desktop/qt/Trolltech.conf
+share/xsessions/NetBSD-Netbook.desktop
+share/xsessions/NetBSD.desktop

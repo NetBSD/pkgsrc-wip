@@ -1,0 +1,7 @@
+[General]
+terminal=lxterminal
+
+[Desktop]
+show_wallpaper=1
+wallpaper=@PREFIX@/share/netbsd-light-desktop/wallpapers/netbsd-light-desktop-default-wallpaper.png
+show_wm_menu=1
