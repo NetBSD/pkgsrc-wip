@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/05/16 19:38:55 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/05/19 04:11:34 outpaddling Exp $
 #
 
 DISTNAME=	petsc-3.1-p2
@@ -17,7 +17,8 @@ HAS_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		perl
 CONFIG_SHELL=		${PYTHONBIN}
-CONFIGURE_SCRIPT=	config/configure.py
+# CONFIGURE_SCRIPT=	config/configure.py
+CONFIGURE_ARGS+=	--prefix=${DESTDIR}${PREFIX}
 
 MAKE_FILE=		makefile
 BUILD_MAKE_FLAGS+=	PETSC_DIR=${WRKSRC}
@@ -25,5 +26,5 @@ BUILD_MAKE_FLAGS+=	PETSC_DIR=${WRKSRC}
 .include "../../lang/python/pyversion.mk" # get python
 .include "../../math/lapack/buildlink3.mk"
 .include "../../math/blas/buildlink3.mk"
-.include "../../mk/mpi.buildlink3.mk"
+# .include "../../mk/mpi.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
