@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/10/12 15:51:22 christtrekker Exp $
+$NetBSD: distinfo,v 1.2 2012/05/19 05:29:49 jeremy-c-reed Exp $
 
-SHA1 (lxterminal-0.1.6.tar.gz) = f2109f42d72ef43ab293128469dc561c2a4ce09b
-RMD160 (lxterminal-0.1.6.tar.gz) = a7927674a8efe8898ebdc46c47ce7daece65501d
-Size (lxterminal-0.1.6.tar.gz) = 238164 bytes
+SHA1 (lxterminal-0.1.11.tar.gz) = 3914c8e0552f7b8e1e32fde69244f90c16072df4
+RMD160 (lxterminal-0.1.11.tar.gz) = 5c953c31a5c827122cdf656c400faa76e48decbd
+Size (lxterminal-0.1.11.tar.gz) = 304025 bytes
