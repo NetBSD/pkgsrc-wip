@@ -1,5 +1,5 @@
-# $NetBSD: Makefile.template,v 1.8 2011/11/21 19:08:57 absd Exp $
-# $Id: Makefile.template,v 1.8 2011/11/21 19:08:57 absd Exp $
+# $NetBSD: Makefile.template,v 1.9 2012/05/19 16:21:18 noud4 Exp $
+# $Id: Makefile.template,v 1.9 2012/05/19 16:21:18 noud4 Exp $
 
 #####################################################################
 # If the checksum does not match, please regen and bump the version.#
@@ -7,7 +7,6 @@
 #####################################################################
 
 DISTNAME=		php_manual_${PHP_DOC_LANG}
-PKGNAME=       		php-doc-${PHP_DOC_LANG}-20071125
 WRKSRC=	       		${WRKDIR}
 CATEGORIES=    		misc
 MASTER_SITES=  		${PHP_DOC_MASTER_SITES}

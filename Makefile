@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4756 2012/05/16 07:06:04 triaxx Exp $
+# $Id: Makefile,v 1.4757 2012/05/19 16:28:57 noud4 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2032,24 +2032,17 @@ SUBDIR+=	phonon
 SUBDIR+=	phonon-backend-gstreamer
 SUBDIR+=	phonon-backend-xine
 #SUBDIR+=	php-doc			# not a package
-SUBDIR+=	php-doc-ar
 SUBDIR+=	php-doc-br
 SUBDIR+=	php-doc-de
 SUBDIR+=	php-doc-en
 SUBDIR+=	php-doc-es
-SUBDIR+=	php-doc-fi
 SUBDIR+=	php-doc-fr
-SUBDIR+=	php-doc-hk
-SUBDIR+=	php-doc-hu
-SUBDIR+=	php-doc-it
 SUBDIR+=	php-doc-ja
-SUBDIR+=	php-doc-kr
-SUBDIR+=	php-doc-nl
+SUBDIR+=	php-doc-pl
 SUBDIR+=	php-doc-ro
 SUBDIR+=	php-doc-ru
-SUBDIR+=	php-doc-sk
-SUBDIR+=	php-doc-sl
-SUBDIR+=	php-doc-sv
+SUBDIR+=	php-doc-tr
+SUBDIR+=	php-doc-zh
 SUBDIR+=	php-dtrace
 SUBDIR+=	php-fileinfo
 SUBDIR+=	php-gtk2

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2009/06/02 12:37:22 noud4 Exp $
+$NetBSD: distinfo,v 1.3 2012/05/19 16:21:18 noud4 Exp $
 
-SHA1 (php_manual_ru.tar.gz) = cea1d02f959bd3c20d693dafde9dea2f55dd4768
-RMD160 (php_manual_ru.tar.gz) = 335d36f8837baceb0e9039ae9e220cb2a941b101
-Size (php_manual_ru.tar.gz) = 4814308 bytes
+SHA1 (php_manual_ru.tar.gz) = 124c061afd188bb5b76cdef8e536095274ed09f8
+RMD160 (php_manual_ru.tar.gz) = b6dcfe4b38a7ec58973cb08f550bfec6d87c62c1
+Size (php_manual_ru.tar.gz) = 8309658 bytes
