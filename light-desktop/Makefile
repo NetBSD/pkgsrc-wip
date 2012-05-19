@@ -1,14 +1,16 @@
-# $NetBSD: Makefile,v 1.3 2012/05/17 04:43:49 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.4 2012/05/19 00:11:19 jeremy-c-reed Exp $
 #
 
 DISTNAME=	light-desktop-0.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	meta-pkgs x11
 MASTER_SITES=	# empty
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 #HOMEPAGE=
 COMMENT=	Fast and lightweight desktop
+
+META_PACKAGE=	yes
 
 DEPENDS=	dejavu-ttf>2.28:../../fonts/dejavu-ttf
 DEPENDS+=	elementary-icon-theme>=0:../../wip/elementary-icon-theme
@@ -26,6 +28,12 @@ DEPENDS+=	pcmanfm>=0.5:../../sysutils/pcmanfm
 DEPENDS+=	pnm2ppa>=1.12:../../print/pnm2ppa
 DEPENDS+=	xdg-user-dirs>=0.10:../../x11/xdg-user-dirs
 DEPENDS+=	xkeyboard-config>=0:../../x11/xkeyboard-config
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD"
+DEPENDS+=	netbsd-light-desktop-default-settings>=0:../../wip/netbsd-light-desktop-default-settings
+.endif
 
 # Suggestions
 
@@ -58,7 +66,5 @@ DEPENDS+=	pidgin>=2.9:../../chat/pidgin
 DEPENDS+=	xpad>=0:../../x11/xpad
 
 ####
-
-META_PACKAGE=	yes
 
 .include "../../mk/bsd.pkg.mk"

@@ -30,9 +30,10 @@ plus need some netbsd-artwork like:
 		or 36x36 netbsd-logo.png for panel menu button
 X gtk2-engines-murrine
 gtk3-engines-unico
-(lubuntu-default-settings)
+X (lubuntu-default-settings)		wip/netbsd-light-desktop-default-settings
  provides replacements for lxde-common for example for openbox/rc.xml
-need replacement for lubuntu-icon-theme		call it netbsd-icon-theme?
+X lubuntu-icon-theme			wip/netbsd-icon-theme
+					still need the graphics
 					but also offer pkgsrc-icon-theme?
 for:
 	gnome-main-menu.svg
@@ -180,4 +181,12 @@ ttf-indic-fonts-core
 ttf-punjabi-fonts
 ttf-ubuntu-font-family
 amixer
+
+-=-=-=-
+
+don't do these impossible checks:
+=> Checking file-check results for light-desktop-0.0nb2
+=> Checking for non-existent script interpreters in light-desktop-0.0nb2
+=> Checking for missing run-time search paths in light-desktop-0.0nb2
+=> Checking for work-directory references in light-desktop-0.0nb2
 
