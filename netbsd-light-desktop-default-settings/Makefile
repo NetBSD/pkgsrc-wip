@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/05/19 00:04:53 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2012/05/20 04:17:08 jeremy-c-reed Exp $
 #
 
 DISTNAME=	netbsd-light-desktop-default-settings-0.0
@@ -17,7 +17,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 DEPENDS+=	lightdm-gtk-greeter>=0:../../wip/lightdm-gtk-greeter
 DEPENDS+=	lxsession>=0:../../wip/lxsession
 DEPENDS+	netbsd-icon-theme>=0:../../wip/netbsd-icon-theme
-DEPENDS+=	pcmanfm>=0.5:../../sysutils/pcmanfm
+DEPENDS+=	pcmanfm>=0.5:../../wip/pcmanfm
 
 NO_CHECKSUM=	yes
 NO_BUILD=	yes

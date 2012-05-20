@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/05/19 05:34:15 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.6 2012/05/20 04:17:08 jeremy-c-reed Exp $
 #
 
 DISTNAME=	light-desktop-0.0
@@ -7,7 +7,7 @@ CATEGORIES=	meta-pkgs x11
 MASTER_SITES=	# empty
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-#HOMEPAGE=
+HOMEPAGE=	http://wiki.netbsd.org/light-desktop/
 COMMENT=	Fast and lightweight desktop
 
 META_PACKAGE=	yes
@@ -25,7 +25,7 @@ DEPENDS+=	lxde-common>=0.5:../../wip/lxde-common
 DEPENDS+=	lxpanel>=0:../../wip/lxpanel
 DEPENDS+=	lxterminal>=0:../../wip/lxterminal
 DEPENDS+=	openbox>0:../../wm/openbox
-DEPENDS+=	pcmanfm>=0.5:../../sysutils/pcmanfm
+DEPENDS+=	pcmanfm>=0.5:../../wip/pcmanfm
 DEPENDS+=	pnm2ppa>=1.12:../../print/pnm2ppa
 DEPENDS+=	xdg-user-dirs>=0.10:../../x11/xdg-user-dirs
 DEPENDS+=	xkeyboard-config>=0:../../x11/xkeyboard-config
