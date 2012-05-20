@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1.1.1 2012/05/20 04:06:16 jeremy-c-reed Exp $
+
+--- src/pcmanfm.c.orig	2012-05-14 12:42:26.000000000 -0500
++++ src/pcmanfm.c	2012-05-14 12:43:50.000000000 -0500
+@@ -182,7 +182,9 @@
+         // signal( SIGPIPE, SIG_IGN );
+         signal( SIGHUP, unix_signal_handler );
+         signal( SIGTERM, unix_signal_handler );
++#ifdef SIGPOLL
+         signal( SIGPOLL, unix_signal_handler );
++#endif
+         signal( SIGHUP, unix_signal_handler );
+     }
+ 
