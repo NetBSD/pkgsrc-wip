@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/03/19 01:55:30 obache Exp $
+# $NetBSD: Makefile,v 1.3 2012/05/21 11:54:04 obache Exp $
 #
 
 DISTNAME=	quick_locale_switcher-1.7.8
@@ -25,7 +25,7 @@ XPI_APPS=		firefox firefox36 thunderbird seamonkey
 XPI_ID=			{25A1388B-6B18-46c3-BEBA-A81915D0DE8F}
 XPI_DIR=		lib/xpi/extensions/${XPI_ID}
 
-INSTALLATION_DIRS+=	${EXTENSIONS_DIR}
+INSTALLATION_DIRS+=	${XPI_DIR}
 
 do-install:
 	cd ${WRKSRC} && pax -rw . ${DESTDIR}${PREFIX}/${XPI_DIR}
