@@ -1,0 +1,4 @@
+mtPaint is a GTK based painting program designed for creating icons
+and pixel based artwork. It can edit indexed palette or 24 bit RGB
+images and offers basic painting and palette manipulation tools.
+It can handle PNG, JPEG, GIF, TIFF, BMP, XPM, and XBM files.
