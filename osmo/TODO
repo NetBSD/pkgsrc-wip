@@ -1,0 +1,22 @@
+libical's pkg-config pc is probably wrong since its headers
+include its owner headers with <foo> instead of "foo" and don't have
+the path it is in.
+
+-=-=-=-=
+
+(osmo:26090): GLib-CRITICAL **: g_strlcpy: assertion `src != NULL' failed
+
+-=-=-=-
+
+This happens repeatedly:
+
+(osmo:26090): GLib-GObject-WARNING **: invalid uninstantiatable type `(null)' in cast to `GtkLabel'
+
+(osmo:26090): Gtk-CRITICAL **: IA__gtk_label_set_markup: assertion `GTK_IS_LABEL (label)' failed
+
+seen when I closed window but still running in background (in system tray)
+
+maybe see debian package for the patches
+
+-=-=-=-
+

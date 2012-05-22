@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/05/22 02:24:17 jeremy-c-reed Exp $
+
+SHA1 (osmo-0.2.10.tar.gz) = aa4b3dda78aa6982e5bc580caa58d8c540495406
+RMD160 (osmo-0.2.10.tar.gz) = fa8e7f71c268c5246c48d6cea92cee390607b786
+Size (osmo-0.2.10.tar.gz) = 851833 bytes
