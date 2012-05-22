@@ -23,18 +23,12 @@ or just package that font too
 
  (lxpanel:13863): GLib-WARNING **: pthread_mutex_unlock
  Openbox-Message: Requested key "XF86Terminal" does not exist on the display
- ObRender-Message: Unable to load the theme 'NetBSD-default'
- ObRender-Message: Falling back to the default theme 'Clearlooks'
  Openbox-Message: Unable to find a valid menu file "/usr/pkg/share/netbsd-light-desktop/openbox/menu.xml"
  Openbox-Message: Requested key "XF86Terminal" does not exist on the display
 
 maybe wrong openbox version?
 for
 /usr/pkg/share/netbsd-light-desktop/openbox/menu.xml
-
-the Lubuntu-default theme comes from the lubuntu-artwork package
-so make a netbsd-artwork package like it for NetBSD-default
-
 
 on install:
 libexec/lightdm/lightdm-set-defaults --keep-old --session=NetBSD
@@ -43,4 +37,3 @@ libexec/lightdm/lightdm-set-defaults --keep-old --greeter=lightdm-gtk-greeter
 on deinstall:
 libexec/lightdm/lightdm-set-defaults --remove --session=NetBSD
 libexec/lightdm/lightdm-set-defaults --remove --greeter=lightdm-gtk-greeter
-

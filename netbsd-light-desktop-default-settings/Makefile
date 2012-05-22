@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2012/05/20 04:17:08 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.3 2012/05/22 02:28:15 jeremy-c-reed Exp $
 #
 
 DISTNAME=	netbsd-light-desktop-default-settings-0.0
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	# none
 DISTFILES=	# none
@@ -17,6 +18,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 DEPENDS+=	lightdm-gtk-greeter>=0:../../wip/lightdm-gtk-greeter
 DEPENDS+=	lxsession>=0:../../wip/lxsession
 DEPENDS+	netbsd-icon-theme>=0:../../wip/netbsd-icon-theme
+DEPENDS+=	netbsd-light-desktop-artwork>=0:../../wip/netbsd-light-desktop-artwork
 DEPENDS+=	pcmanfm>=0.5:../../wip/pcmanfm
 
 NO_CHECKSUM=	yes
@@ -72,7 +74,6 @@ do-install:
 	pax -rw -s ',CVS,,' -s ',.*.orig$$,,' xdg \
 		${DESTDIR}${PREFIX}/share/examples/netbsd-light-desktop/
 
-#         netbsd-artwork
 #         ttf-ubuntu-font-family
 #Recommends: amixer,
 #            scrot,
