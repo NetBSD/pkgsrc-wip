@@ -22,7 +22,7 @@ libsasl2-modules
 libxp6
 X lightdm
 X lightdm-gtk-greeter 		the only use of gtk3?
-lubuntu-artwork
+X lubuntu-artwork			wip/netbsd-light-desktop-artwork
 plus need some netbsd-artwork like:
 	352x125 logout-banner.png
 	1280x1024 netbsd-default-wallpaper.png
@@ -52,6 +52,7 @@ X lxpanel
 nvidia-common
 X openbox
 openprinting-ppds		need to package
+plymouth is graphical boot animation while booting in background
 plymouth-theme-lubuntu-logo
 plymouth-theme-lubuntu-text
 X printer-driver-pnm2ppa
@@ -127,11 +128,11 @@ X lxshortcut
 X lxtask
 mobile-broadband-provider-info
 modemmanager
-mtpaint				need to package http://mtpaint.sourceforge.net/
+X mtpaint			wip/mtpaint
 network-manager-gnome		provides applet
 X ntp			in base
 obconf				http://gnats.netbsd.org/46090
-osmo				need to package http://clayo.org/osmo/
+X osmo				wip/osmo
 X pidgin
 pidgin-microblog
 X scrot
