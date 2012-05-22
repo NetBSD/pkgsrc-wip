@@ -1,0 +1,12 @@
+maybe split this up into files not specific to light-desktop?
+
+note: I didn't include LXDM themes:
+usr/share/lxdm/themes/Lubuntu
+
+I can't tell if I recognize the system theme in use.
+Would be good to check each of these
+
+-=-=-=-
+
+/usr/pkg/share/themes/NetBSD-default/gtk-2.0/panel.rc:65: error: unexpected identifier `textstyle', expected character `}'
+/usr/pkg/share/themes/NetBSD-default/gtk-2.0/panel.rc:65: error: unexpected identifier `textstyle', expected character `}'

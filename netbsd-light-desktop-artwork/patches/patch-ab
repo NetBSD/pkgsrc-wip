@@ -1,0 +1,21 @@
+$NetBSD: patch-ab,v 1.1.1.1 2012/05/22 02:15:24 jeremy-c-reed Exp $
+
+--- usr/share/themes/Lubuntu-default/index.theme.orig	2012-05-21 16:42:21.000000000 -0500
++++ usr/share/themes/Lubuntu-default/index.theme	2012-05-21 16:43:23.000000000 -0500
+@@ -1,11 +1,11 @@
+ [Desktop Entry]
+-Name=lubuntu
++Name=netbsd-light-desktop
+ Type=X-GNOME-Metatheme
+-Comment=Default theme for Lubuntu 12.04 Precise Pangolin
++Comment=Default theme for Light Desktop
+ 
+ [X-GNOME-Metatheme]
+-GtkTheme=lubuntu
+-IconTheme=lubuntu
++GtkTheme=netbsd-light-desktop
++IconTheme=netbsd-light-desktop
+ CursorTheme=DMZ-Black
+ CursorSize=24
+-NotificationTheme=ubuntu
++NotificationTheme=netbsd-light-desktop
