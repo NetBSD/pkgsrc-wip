@@ -10,3 +10,12 @@ Would be good to check each of these
 
 /usr/pkg/share/themes/NetBSD-default/gtk-2.0/panel.rc:65: error: unexpected identifier `textstyle', expected character `}'
 /usr/pkg/share/themes/NetBSD-default/gtk-2.0/panel.rc:65: error: unexpected identifier `textstyle', expected character `}'
+
+-=-=-=
+
+Need some NetBSD-themed artwork:
+        352x125 logout-banner.png  
+	1280x1024 netbsd-default-wallpaper.png
+	64x26 (64 width includes 20+ pixels of transparency on right)
+		or 36x36 netbsd-logo.png for panel menu button
+
