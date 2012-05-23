@@ -1,0 +1,13 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/05/23 15:37:12 hfath Exp $
+
+SHA1 (patch-config.c) = 64bc61d440d6cd9ad207690317519ecd1f2a12b6
+SHA1 (patch-config.h) = 1e73b3a064cefd4e7dc7816456a664a824cf111e
+SHA1 (patch-makeman.pl) = 3b746d36f4168c74a5a23816ec14fcd710ee5c4d
+SHA1 (patch-pcf2vpnc) = 4341b3c6aed524b32a5bcc41ddba6f43e50f9d6a
+SHA1 (patch-sysdep.c) = 69bac52506c09ed4c68dcb27f6f7872ca472e2a5
+SHA1 (patch-sysdep.h) = c23e871f16f691b5a7278169b5b31b7ecc2a8676
+SHA1 (patch-tunip.c) = 157b8b54f49411da0fe2e9873e7aa1bce2cba31e
+SHA1 (patch-vpnc.c) = d637a91e1e3cf0c54af155ed2d9ee38d459b9219
+SHA1 (patch-vpnc_8.template) = 92a85838ed052e239116d4cc9ffc5921d25dccc0
+SHA1 (patch-vpnc_disconnect) = 4f8896bf56fe70ad0096f3e398f3d1db0bcb65c9
+SHA1 (patch-vpnc_script) = e675cd89e4c85b472db182059ffe5cc4a83b17c7
