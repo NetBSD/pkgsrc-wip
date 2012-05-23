@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2012/05/15 03:32:12 jeremy-c-reed Exp $
+$NetBSD: patch-aa,v 1.2 2012/05/23 09:36:59 absd Exp $
+
+Uses LC_ALL, so should include locale.h
 
 --- src/lightdm-gtk-greeter.c.orig	2012-05-14 21:36:33.000000000 -0500
 +++ src/lightdm-gtk-greeter.c	2012-05-14 21:36:55.000000000 -0500
