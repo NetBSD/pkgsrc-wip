@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1.1.1 2012/05/23 15:37:12 hfath Exp $
+# $NetBSD: options.mk,v 1.2 2012/05/23 15:58:00 hfath Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.openvpnc
 PKG_SUPPORTED_OPTIONS=	openssl		# off by default
@@ -6,6 +6,7 @@ PKG_SUGGESTED_OPTIONS=
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/bsd.options.mk"
+
 .if !empty(PKG_OPTIONS:Mopenssl)
 .include "../../security/openssl/buildlink3.mk"
 SUBST_CLASSES+=		openssl
@@ -14,4 +15,6 @@ SUBST_STAGE.openssl=	post-patch
 SUBST_FILES.openssl=	Makefile
 SUBST_SED.openssl=	-e 's/^.OPENSSL_GPL_VIOLATION/OPENSSL_GPL_VIOLATION/'
 SUBST_SED.openssl+=	-e 's/^.OPENSSLLIBS/OPENSSLLIBS/'
+.else
+.include "../../security/gnutls/buildlink3.mk"
 .endif

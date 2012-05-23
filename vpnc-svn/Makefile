@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/05/23 15:37:12 hfath Exp $
+# $NetBSD: Makefile,v 1.2 2012/05/23 15:58:00 hfath Exp $
 #
 
 DISTNAME=		vpnc-0.5.3
@@ -72,6 +72,5 @@ CFLAGS.SunOS=	-DLOG_PERROR=0
 .endif
 
 .include "../../security/libgcrypt/buildlink3.mk"
-.include "../../security/gnutls/buildlink3.mk"
 .include "../../wip/mk/svn-package.mk"
 .include "../../mk/bsd.pkg.mk"
