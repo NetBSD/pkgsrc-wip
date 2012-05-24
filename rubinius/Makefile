@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2011/08/06 00:47:51 jafour1 Exp $
+# $NetBSD: Makefile,v 1.11 2012/05/24 06:12:13 thomasklausner Exp $
 VERSION=	1.2.4
 DATERELEASE=    20110705
 DISTNAME=	rubinius-${VERSION}-${DATERELEASE}
@@ -38,7 +38,7 @@ do-install:
 DEPENDS+=	bison>=2.4.3:../../devel/bison
 DEPENDS+=	zlib>=1.2.3:../../devel/zlib
 DEPENDS+=	ruby>=1.8.7:../../lang/ruby
-DEPENDS+=	llvm>=2.8:../../wip/llvm28
+DEPENDS+=	clang>=2.8:../../lang/clang
 DEPENDS+=	${RUBY_PKGPREFIX}-rubygems>=1.3.7:../../misc/rubygems
 DEPENDS+=	${RUBY_PKGPREFIX}-rake>=0.8.3:../../devel/rake
 
