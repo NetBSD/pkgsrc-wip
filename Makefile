@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4758 2012/05/23 15:39:22 hfath Exp $
+# $Id: Makefile,v 1.4759 2012/05/24 06:11:48 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1422,8 +1422,6 @@ SUBDIR+=	lirc
 SUBDIR+=	lire
 SUBDIR+=	lissac
 SUBDIR+=	lives
-SUBDIR+=	llvm
-SUBDIR+=	llvm28
 SUBDIR+=	lmdbg-current
 SUBDIR+=	lmfit
 SUBDIR+=	lmtp2nntp
