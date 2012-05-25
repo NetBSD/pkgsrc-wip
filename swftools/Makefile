@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/04/09 04:54:58 obache Exp $
+# $NetBSD: Makefile,v 1.17 2012/05/25 14:12:52 obache Exp $
 #
 
 DISTNAME=	swftools-0.9.2
@@ -9,6 +9,9 @@ MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://www.swftools.org/
 COMMENT=	Collection of SWF manipulation and creation utilities
 LICENSE=	gnu-gpl-v2
+
+# missing fmax(3)
+NOT_FOR_PLATFORM=	NetBSD-[0-4].*-* NetBSD-5.0*-*
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
