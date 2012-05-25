@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/05/22 02:15:24 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2012/05/25 10:12:21 jeremy-c-reed Exp $
 #
 
 PKGNAME=	netbsd-light-desktop-artwork-0.0
+PKGREVISION=	1
 DISTNAME=	lubuntu-artwork_0.27
 CATEGORIES=	graphics
 MASTER_SITES=	http://archive.ubuntu.com/ubuntu/pool/universe/l/lubuntu-artwork/

@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2012/05/22 02:15:24 jeremy-c-reed Exp $
+$NetBSD: patch-aa,v 1.2 2012/05/25 10:12:21 jeremy-c-reed Exp $
 
---- usr/share/themes/Lubuntu-default/gtk-2.0/gtkrc.orig	2012-05-21 16:44:22.000000000 -0500
-+++ usr/share/themes/Lubuntu-default/gtk-2.0/gtkrc	2012-05-21 16:44:34.000000000 -0500
+--- usr/share/themes/NetBSD-default/gtk-2.0/gtkrc.orig	2012-05-21 16:44:22.000000000 -0500
++++ usr/share/themes/NetBSD-default/gtk-2.0/gtkrc	2012-05-21 16:44:34.000000000 -0500
 @@ -28,7 +28,7 @@
  gtk-icon-sizes = "gtk-button=16,16"
  gtk-auto-mnemonics = 1
