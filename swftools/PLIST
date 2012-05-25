@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2012/03/12 14:43:06 thomasklausner Exp $
-${PLIST.avifile}bin/avi2swf
+@comment $NetBSD: PLIST,v 1.7 2012/05/25 14:19:26 obache Exp $
 bin/as3compile
 bin/font2swf
 bin/gif2swf
@@ -14,7 +13,6 @@ bin/swfrender
 bin/swfstrings
 bin/wav2swf
 man/man1/as3compile.1
-${PLIST.avifile}man/man1/avi2swf.1
 man/man1/font2swf.1
 man/man1/gif2swf.1
 man/man1/jpeg2swf.1
