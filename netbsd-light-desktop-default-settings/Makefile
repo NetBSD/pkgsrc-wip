@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/05/22 02:28:15 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.4 2012/05/25 10:03:28 jeremy-c-reed Exp $
 #
 
 DISTNAME=	netbsd-light-desktop-default-settings-0.0
@@ -69,9 +69,9 @@ do-configure:
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
 	cd  ${WRKSRC:Q} &&	\
-	pax -rw -s ',CVS,,' -s ',.*.orig$$,,' bin share ${DESTDIR}${PREFIX}/
+	pax -rw -s ',.*/CVS.*,,' -s ',.*.orig$$,,' bin share ${DESTDIR}${PREFIX}/
 	cd  ${WRKSRC:Q}/etc &&	\
-	pax -rw -s ',CVS,,' -s ',.*.orig$$,,' xdg \
+	pax -rw -s ',.*/CVS.*,,' -s ',.*.orig$$,,' xdg \
 		${DESTDIR}${PREFIX}/share/examples/netbsd-light-desktop/
 
 #         ttf-ubuntu-font-family
