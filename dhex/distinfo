@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.2 2012/03/01 18:07:51 amoibos Exp $
+$NetBSD: distinfo,v 1.3 2012/05/26 09:29:58 amoibos Exp $
 
-SHA1 (dhex_0.66.tar.gz) = 381329493383e70714fd8e3c76805652af56f950
-RMD160 (dhex_0.66.tar.gz) = ed2ee7198429d8b4cfb5f6709f9766dee67482c9
-Size (dhex_0.66.tar.gz) = 56060 bytes
+SHA1 (dhex_0.67.tar.gz) = e46310cd10ca76066ce49474a742ca196a5b1bed
+RMD160 (dhex_0.67.tar.gz) = aa5ffe6fc7baf7d2af5b5eb439ea99828eb2ca90
+Size (dhex_0.67.tar.gz) = 56687 bytes
 SHA1 (patch-aa) = 23b61ff3abf12831a0f7bfb2f12d9f5be962098a
-SHA1 (patch-ab) = 42e0d68c0848929e2ee695a7c6285a6152f80abe
+SHA1 (patch-ab) = dec078585866025cdbae0283246be86772b7e34c
 SHA1 (patch-ac) = 6cff750da487a36a1f9c52f8eaddd789fe005cb3

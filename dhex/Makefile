@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2012/03/01 18:07:51 amoibos Exp $
+# $NetBSD: Makefile,v 1.4 2012/05/26 09:29:58 amoibos Exp $
 
-DISTNAME=	dhex_0.66
-PKGNAME=	dhex-0.66
+DISTNAME=	dhex_0.67
+PKGNAME=	dhex-0.67
 CATEGORIES=	editors
 MASTER_SITES=	http://dettus.net/dhex/
 
