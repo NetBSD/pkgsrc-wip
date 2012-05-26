@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.42 2012/05/14 09:57:44 ftigeot Exp $
+# $NetBSD: Makefile,v 1.43 2012/05/26 12:22:02 ftigeot Exp $
 
-VER=			3.5.3.2
+VER=			3.5.4.2
 DISTNAME=		libreoffice-${VER}
 PKGNAME=		libreoffice-${VER:S/-//g}
 CATEGORIES=		misc
-MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/3.5.3/ \
+MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/3.5.4/ \
 		http://dev-www.libreoffice.org/src/ \
 		http://www.numbertext.org/linux/
 
@@ -196,7 +196,6 @@ post-install:
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../textproc/hunspell/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
-.include "../../textproc/libclucene/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../textproc/redland/buildlink3.mk"
