@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.11 2012/05/19 05:49:15 lokivit Exp $
+$NetBSD: distinfo,v 1.12 2012/05/26 17:30:13 lokivit Exp $
 
-SHA1 (audacious-3.2.2.tar.bz2) = 50d2ef08d3dd48c2efb194a9fdf216fa4f8afd24
-RMD160 (audacious-3.2.2.tar.bz2) = 1f6a268613455f07bd209f0488aa0f2dbaf7b5b4
-Size (audacious-3.2.2.tar.bz2) = 675192 bytes
+SHA1 (audacious-3.2.3.tar.bz2) = 23be0fcb0a7d5ec2bc4d4fee436e77f2138903ef
+RMD160 (audacious-3.2.3.tar.bz2) = e29b42df08138ed1e4fcbab8324bf7683c4e26dc
+Size (audacious-3.2.3.tar.bz2) = 695917 bytes

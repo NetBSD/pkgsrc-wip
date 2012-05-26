@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2012/05/19 06:11:15 lokivit Exp $
+# $NetBSD: Makefile,v 1.35 2012/05/26 17:31:15 lokivit Exp $
 #
 
-DISTNAME=	audacious-plugins-3.2.2
+DISTNAME=	audacious-plugins-3.2.3
 CATEGORIES=	wip
 MASTER_SITES=	http://distfiles.audacious-media-player.org/
 EXTRACT_SUFX=	.tar.bz2
