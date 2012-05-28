@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2012/05/26 12:22:02 ftigeot Exp $
+# $NetBSD: Makefile,v 1.44 2012/05/28 11:04:36 ftigeot Exp $
 
 VER=			3.5.4.2
 DISTNAME=		libreoffice-${VER}
@@ -47,8 +47,12 @@ EXTRACT_ONLY+=	libreoffice-${component}-${VER}.tar.xz
 DISTFILES+=		${md}
 .endfor
 
+.include "../../mk/bsd.prefs.mk"
+
 # ftp: Unsupported URL scheme `https'
+.if ${OPSYS} == "NetBSD"
 FETCH_USING=		curl
+.endif
 
 # tar: Invalid header, starting valid header search.
 EXTRACT_USING=		gtar
@@ -66,8 +70,6 @@ BUILD_DEPENDS+=		zip-[0-9]*:../../archivers/zip
 # dmake is slowly beeing removed from the LibreOffice build process
 # and this option will hopefully become unneeded in the future
 WRAPPER_SKIP_TRANSFORM=yes
-
-.include "../../mk/bsd.prefs.mk"
 
 USE_LANGUAGES+=		c c++
 
