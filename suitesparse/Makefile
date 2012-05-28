@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/05/12 13:15:49 outpaddling Exp $
+# $NetBSD: Makefile,v 1.4 2012/05/28 13:51:06 outpaddling Exp $
 # FreeBSD Id: ports/math/suitesparse/Makefile,v 1.38 2011/07/20 16:17:35 bf Exp
 
 DISTNAME=	SuiteSparse-3.6.1
@@ -38,7 +38,7 @@ LAPACK=		-llapack
 USE_TOOLS+=	gmake gsed
 TOOLS_PLATFORM.gsed=	#empty
 
-USE_LANGUAGES=	c c++ fortran fortran77
+USE_LANGUAGES=	c c++ fortran77
 
 WRKSRC=${WRKDIR}/SuiteSparse
 WRKSRC_SHARED=${WRKSRC}_shared
