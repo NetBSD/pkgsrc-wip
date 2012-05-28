@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2012/03/22 21:21:32 outpaddling Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2012/05/28 14:09:28 outpaddling Exp $
 
 BUILDLINK_TREE+=	libctl
 
@@ -10,7 +10,7 @@ BUILDLINK_PKGSRCDIR.libctl?=	../../wip/libctl
 
 # CONFIGURE_ARGS+=	--with-libctl=${PREFIX}
 
-.include "../../lang/guile/buildlink3.mk"
+.include "../../lang/guile16/buildlink3.mk"
 .endif	# LIBCTL_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-libctl
