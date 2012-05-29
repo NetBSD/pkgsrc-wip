@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/05/28 05:17:23 outpaddling Exp $
+# $NetBSD: Makefile,v 1.3 2012/05/29 16:15:38 asau Exp $
 #
 
 DISTNAME=	arpack96
@@ -16,21 +16,15 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/ARPACK
 USE_LANGUAGES=	fortran77
-
 MAKE_ENV+=	WRKSRC=${WRKSRC}
 
-USE_TOOLS+=	gmake gsed tar
-TOOLS_PLATFORM.gsed=	#empty
+INSTALLATION_DIRS=	lib
 
 # Patches must be extracted AFTER the main dist to overwrite files
 post-extract:
-	(cd ${WRKDIR} && ${TAR} zxf ${DISTDIR}/patch.tar.gz)
-
-post-patch:
-	sed -i'' -e 's|$$(HOME)/ARPACK|${WRKSRC}|g' ${WRKSRC}/ARmake.inc
+	cd ${WRKDIR} && ${TAR} -zxf ${DISTDIR}/patch.tar.gz
 
 do-install:
-	${MKDIR} ${DESTDIR}${PREFIX}/lib
 	${INSTALL_DATA} ${WRKSRC}/libarpack.a ${DESTDIR}${PREFIX}/lib
 
 .include "../../mk/bsd.pkg.mk"
