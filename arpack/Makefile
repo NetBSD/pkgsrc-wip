@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/05/29 16:15:38 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/05/29 16:26:53 asau Exp $
 #
 
 DISTNAME=	arpack96
@@ -9,7 +9,7 @@ DISTFILES=	arpack96.tar.gz patch.tar.gz
 
 MAINTAINER=	jwbacon@tds.net
 HOMEPAGE=	http://www.caam.rice.edu/software/ARPACK/SRC/
-COMMENT=	TODO: Short description of the package
+COMMENT=	Library of subroutines to solve eigenvalue problems
 LICENSE=	original-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
