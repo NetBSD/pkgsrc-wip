@@ -1,4 +1,6 @@
-# $NetBSD: buildlink3.mk,v 1.2 2012/03/23 02:26:48 outpaddling Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2012/05/29 16:21:58 asau Exp $
+
+BUILDLINK_DEPMETHOD.arpack?=	build
 
 BUILDLINK_TREE+=	arpack
 
