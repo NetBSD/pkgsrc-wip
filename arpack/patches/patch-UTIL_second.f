@@ -1,6 +1,4 @@
-$NetBSD: patch-UTIL_second.f,v 1.2 2012/03/23 02:26:48 outpaddling Exp $
-
-#
+$NetBSD: patch-UTIL_second.f,v 1.3 2012/05/29 16:31:28 asau Exp $
 
 --- UTIL/second.f.orig	1995-10-02 18:56:44.000000000 +0000
 +++ UTIL/second.f

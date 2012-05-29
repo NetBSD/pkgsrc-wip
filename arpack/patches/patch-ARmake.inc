@@ -1,6 +1,4 @@
-$NetBSD: patch-ARmake.inc,v 1.1.1.1 2012/03/02 20:26:08 outpaddling Exp $
-
-#
+$NetBSD: patch-ARmake.inc,v 1.2 2012/05/29 16:31:28 asau Exp $
 
 --- ARmake.inc.orig	1996-04-26 19:12:57.000000000 +0000
 +++ ARmake.inc
