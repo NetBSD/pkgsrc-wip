@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/05/29 16:26:53 asau Exp $
-#
+# $NetBSD: Makefile,v 1.5 2012/05/29 16:37:47 asau Exp $
 
 DISTNAME=	arpack96
 PKGNAME=	arpack-96
