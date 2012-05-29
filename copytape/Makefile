@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2008/02/03 14:16:51 tnn2 Exp $
+# $NetBSD: Makefile,v 1.10 2012/05/29 23:04:07 cheusov Exp $
 
 DISTNAME=		copytape
 PKGNAME=		${DISTNAME}-1.0
@@ -19,7 +19,7 @@ BUILD_DEPENDS+=	gsharutils>=4.2.1nb2:../../archivers/gsharutils
 WRKSRC=			${WRKDIR}
 BUILD_TARGET=		copytape
 
-EXTRACT_CMD=		${GZCAT} ${DOWNLOADED_DISTFILE} | ${PREFIX}/bin/${GNU_PROGRAM_PREFIX}unshar
+EXTRACT_CMD=		${GZCAT} ${DOWNLOADED_DISTFILE} | ${PREFIX}/bin/gunshar
 
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5
 

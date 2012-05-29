@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2007/05/27 06:53:43 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.2 2012/05/29 23:04:07 cheusov Exp $
 #
 
 DISTNAME=	emerald-themes-0.2.1
@@ -17,7 +17,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 REPLACE_BASH=	themes/import.sh
 
 SUBST_CLASSES+=	gtar
-SUBST_SED.gtar+= -e "s,tar,${LOCALBASE}/bin/${GNU_PROGRAM_PREFIX}tar,g"
+SUBST_SED.gtar+= -e "s,tar,${LOCALBASE}/bin/gtar,g"
 SUBST_MESSAGE.gtar+= replacing tar
 SUBST_FILES.gtar+= themes/import.sh
 SUBST_STAGE.gtar+=post-configure

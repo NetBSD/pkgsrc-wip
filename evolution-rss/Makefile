@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/10/30 18:27:38 noud4 Exp $
+# $NetBSD: Makefile,v 1.5 2012/05/29 23:04:07 cheusov Exp $
 #
 
 DISTNAME=	evolution-rss-0.2.1
@@ -23,8 +23,7 @@ CFLAGS+=	-DGTK_COMPILATION
 
 GCONF_SCHEMAS+=	evolution-rss.schemas
 
-.include "../../mk/bsd.prefs.mk"
-GSED=${PREFIX}/bin/${GNU_PROGRAM_PREFIX}sed
+GSED=			${PREFIX}/bin/gsed
 
 SUBST_CLASSES+=		paths
 SUBST_STAGE.paths=	pre-configure
