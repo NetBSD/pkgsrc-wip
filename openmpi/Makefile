@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2012/03/03 22:54:01 asau Exp $
+# $NetBSD: Makefile,v 1.51 2012/05/29 23:46:25 asau Exp $
 
 DISTNAME=	openmpi-1.5.5rc4r26069
 PKGNAME=	openmpi-1.5.5.26069
@@ -27,6 +27,7 @@ SHLIBTOOL_OVERRIDE=	${WRKSRC}/config/libtool.m4 \
 			${WRKSRC}/opal/libltdl/m4/libtool.m4
 
 CONFIGURE_ARGS+=	--disable-mpi-f90
+CONFIGURE_ARGS+=	--without-sge
 CONFIGURE_ARGS+=	--without-slurm
 CONFIGURE_ARGS+=	--with-libltdl=external # use our libltdl
 CONFIGURE_ARGS+=	--with-wrapper-ldflags="-L${PREFIX}/lib ${LINKER_RPATH_FLAG}${PREFIX}/lib"
