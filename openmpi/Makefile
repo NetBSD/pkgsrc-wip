@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2012/05/30 15:41:44 asau Exp $
+# $NetBSD: Makefile,v 1.53 2012/05/30 16:21:45 asau Exp $
 
 DISTNAME=	openmpi-1.6
 CATEGORIES=	parallel
@@ -47,5 +47,7 @@ TEST_TARGET=	check
 # pre-configure:	replace-interpreter
 # 	cd $(WRKSRC) && $(BASH) autogen.sh
 
+LIBLTDL_CONVENIENCE_SUBDIR=	opal/libltdl
+.include "../../devel/libltdl/convenience.mk" # for "test" target to work
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
