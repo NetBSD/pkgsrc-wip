@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:45:06 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.4 2012/05/30 11:27:23 imilh Exp $
 bin/pkgin
 man/man1/pkgin.1
 share/examples/pkgin/repositories.conf.example
-@exec ${MKDIR} %D/etc/pkgin
