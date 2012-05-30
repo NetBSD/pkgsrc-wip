@@ -1,4 +1,6 @@
-$NetBSD: patch-vfe_unix_platformbase.cpp,v 1.1.1.1 2012/05/30 11:42:50 thomasklausner Exp $
+$NetBSD: patch-vfe_unix_platformbase.cpp,v 1.2 2012/05/30 11:59:06 thomasklausner Exp $
+
+Add missing #define for NetBSD, and handle NetBSD the same as FreeBSD.
 
 --- vfe/unix/platformbase.cpp.orig	2010-12-21 06:17:01.000000000 +0000
 +++ vfe/unix/platformbase.cpp

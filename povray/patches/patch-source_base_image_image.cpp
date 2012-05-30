@@ -1,4 +1,6 @@
-$NetBSD: patch-source_base_image_image.cpp,v 1.1.1.1 2012/05/30 11:42:50 thomasklausner Exp $
+$NetBSD: patch-source_base_image_image.cpp,v 1.2 2012/05/30 11:59:06 thomasklausner Exp $
+
+At least on NetBSD, lseek is 64-bit ready and lseek64 doesn't exist.
 
 --- source/base/image/image.cpp.orig	2011-01-22 05:31:21.000000000 +0000
 +++ source/base/image/image.cpp

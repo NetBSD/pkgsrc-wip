@@ -1,4 +1,6 @@
-$NetBSD: patch-unix_Makefile.in,v 1.1.1.1 2012/05/30 11:42:50 thomasklausner Exp $
+$NetBSD: patch-unix_Makefile.in,v 1.2 2012/05/30 11:59:06 thomasklausner Exp $
+
+Add missing library.
 
 --- unix/Makefile.in.orig	2011-01-22 05:36:18.000000000 +0000
 +++ unix/Makefile.in
