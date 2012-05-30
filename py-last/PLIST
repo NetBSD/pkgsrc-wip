@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2012/05/30 13:47:59 thomasklausner Exp $
-${PYSITELIB}/${EGG_FILE}
-${PYSITELIB}/pylast.py
-${PYSITELIB}/pylast.pyc
-${PYSITELIB}/pylast.pyo
