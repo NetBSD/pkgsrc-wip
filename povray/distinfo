@@ -1,0 +1,10 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/05/30 11:42:50 thomasklausner Exp $
+
+SHA1 (povray-3.7.0.RC3.tar.bz2) = 778765eaea22270bacd2938a33b0ca3778932065
+RMD160 (povray-3.7.0.RC3.tar.bz2) = b1ceeef850fa5876230a7fbfb8e14254802ef7d0
+Size (povray-3.7.0.RC3.tar.bz2) = 11226551 bytes
+SHA1 (patch-Makefile.in) = e10195fecea171eee693a125947edeaf05062985
+SHA1 (patch-source_base_image_image.cpp) = 4271346f98b46e36d0effc1a69526db2613c913d
+SHA1 (patch-unix_Makefile.in) = ebb886a6892e8f8ebbc3dc9907be458272be4834
+SHA1 (patch-vfe_unix_platformbase.cpp) = f20aa18d147f827370d3b728aa92cbfb895d64d6
+SHA1 (patch-vfe_unix_vfeplatform.cpp) = afac7f8bc1db7b1203e8ecabf4ccb830c28a79ad

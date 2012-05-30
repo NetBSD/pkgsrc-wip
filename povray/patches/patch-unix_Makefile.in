@@ -1,0 +1,13 @@
+$NetBSD: patch-unix_Makefile.in,v 1.1.1.1 2012/05/30 11:42:50 thomasklausner Exp $
+
+--- unix/Makefile.in.orig	2011-01-22 05:36:18.000000000 +0000
++++ unix/Makefile.in
+@@ -95,7 +95,7 @@ am__installdirs = "$(DESTDIR)$(bindir)"
+ PROGRAMS = $(bin_PROGRAMS)
+ am_povray_OBJECTS = disp_sdl.$(OBJEXT) disp_text.$(OBJEXT)
+ povray_OBJECTS = $(am_povray_OBJECTS)
+-povray_LDADD = $(LDADD)
++povray_LDADD = $(LDADD) -lboost_thread
+ povray_DEPENDENCIES = $(top_builddir)/vfe/libvfe.a \
+ 	$(top_builddir)/source/backend/libbackend.a \
+ 	$(top_builddir)/source/frontend/libfrontend.a \
