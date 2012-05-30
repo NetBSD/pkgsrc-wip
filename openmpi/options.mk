@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2012/01/19 20:13:14 asau Exp $
+# $NetBSD: options.mk,v 1.4 2012/05/30 15:41:44 asau Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.openmpi
 PKG_SUPPORTED_OPTIONS=	debug openmpi-vampirtrace
@@ -17,10 +17,6 @@ PLIST_SRC+=	PLIST.vt
 
 CONF_FILES+=		share/vampirtrace/VampirTrace/examples/vt-java-default-filter.spec \
 			$(PKG_SYSCONFDIR)/vt-java-default-filter.spec
-CONF_FILES+=		share/vampirtrace/VampirTrace/examples/vt-setup-config.dtd \
-			$(PKG_SYSCONFDIR)/vt-setup-config.dtd
-CONF_FILES+=		share/vampirtrace/VampirTrace/examples/vt-setup-config.xml \
-			$(PKG_SYSCONFDIR)/vt-setup-config.xml
 
 .include "../../graphics/freetype2/buildlink3.mk"
 .else
