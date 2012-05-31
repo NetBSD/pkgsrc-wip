@@ -1,4 +1,7 @@
-$NetBSD: patch-configure.in,v 1.5 2012/04/08 15:48:32 ftigeot Exp $
+$NetBSD: patch-configure.in,v 1.6 2012/05/31 06:40:50 ftigeot Exp $
+
+Fix a few configure and portability issues
+Force the installation into a single directory in /usr/pkg
 
 --- configure.in.orig	2012-03-27 16:22:01.000000000 +0000
 +++ configure.in

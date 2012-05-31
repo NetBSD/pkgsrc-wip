@@ -1,4 +1,7 @@
-$NetBSD: patch-i18npool_source_breakiterator_data_char_in.txt,v 1.1 2012/05/09 09:20:00 ftigeot Exp $
+$NetBSD: patch-i18npool_source_breakiterator_data_char_in.txt,v 1.2 2012/05/31 06:40:50 ftigeot Exp $
+
+Fix an issue with ICU > 4.8
+https://bugs.gentoo.org/show_bug.cgi?id=410307
 
 --- i18npool/source/breakiterator/data/char_in.txt.orig	2012-04-24 14:08:03.000000000 +0000
 +++ i18npool/source/breakiterator/data/char_in.txt

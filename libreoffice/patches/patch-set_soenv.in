@@ -1,4 +1,7 @@
-$NetBSD: patch-set_soenv.in,v 1.2 2011/08/30 20:37:37 ftigeot Exp $
+$NetBSD: patch-set_soenv.in,v 1.3 2012/05/31 06:40:50 ftigeot Exp $
+
+Force the use of LD_LIBRARY_PATH to work around runpath issues
+when shared libraries are moved around by the build process
 
 --- set_soenv.in.orig	2011-08-23 13:05:22.000000000 +0000
 +++ set_soenv.in
