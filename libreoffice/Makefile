@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2012/05/31 06:20:26 ftigeot Exp $
+# $NetBSD: Makefile,v 1.46 2012/05/31 06:35:44 ftigeot Exp $
 
 VER=			3.5.4.2
 DISTNAME=		libreoffice-${VER}
@@ -144,7 +144,7 @@ REPLACE_PERL+=	sd/res/webview/webview.pl
 LO_PROGRAMS=		sbase scalc sdraw simpress smath soffice swriter
 # Base depends on java, we don't install the icon
 LO_DESKTOP_FILES=	calc.desktop draw.desktop impress.desktop math.desktop \
-					printeradmin.desktop startcenter.desktop writer.desktop 
+					printeradmin.desktop startcenter.desktop writer.desktop
 
 post-extract:
 	${MKDIR} -p ${WRKSRC}/clone
@@ -171,7 +171,7 @@ post-install:
 	${LN} -s ${DESTDIR}${PREFIX}/${PKGNAME}/program/soffice ${DESTDIR}${PREFIX}/bin/libreoffice3.5
 	${MKDIR} -p ${DESTDIR}${PREFIX}/share/applications
 	for f in ${LO_DESKTOP_FILES}; do \
-		${CP} ${DESTDIR}${PREFIX}/${PKGNAME}/share/xdg/$$f ${DESTDIR}${PREFIX}/share/applications; \
+		${LN} -s ${DESTDIR}${PREFIX}/${PKGNAME}/share/xdg/$$f ${DESTDIR}${PREFIX}/share/applications; \
 	done
 
 
