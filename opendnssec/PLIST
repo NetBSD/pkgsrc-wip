@@ -1,22 +1,9 @@
-@comment $NetBSD: PLIST,v 1.13 2010/11/17 11:12:00 pettai Exp $
-bin/ods-auditor
+@comment $NetBSD: PLIST,v 1.14 2012/05/31 05:38:16 pettai Exp $
 bin/ods-hsmspeed
 bin/ods-hsmutil
 bin/ods-kasp2html
 bin/ods-kaspcheck
 bin/ods-ksmutil
-lib/opendnssec/kasp_auditor.rb
-lib/opendnssec/kasp_auditor/auditor.rb
-lib/opendnssec/kasp_auditor/changed_config.rb
-lib/opendnssec/kasp_auditor/commands.rb
-lib/opendnssec/kasp_auditor/config.rb
-lib/opendnssec/kasp_auditor/key_tracker.rb
-lib/opendnssec/kasp_auditor/parse.rb
-lib/opendnssec/kasp_auditor/partial_auditor.rb
-lib/opendnssec/kasp_auditor/preparser.rb
-lib/opendnssec/kasp_checker.rb
-lib/opendnssec/time_shift.rb
-man/man1/ods-auditor.1
 man/man1/ods-hsmspeed.1
 man/man1/ods-hsmutil.1
 man/man1/ods-kaspcheck.1
@@ -31,25 +18,29 @@ sbin/ods-control
 sbin/ods-enforcerd
 sbin/ods-signer
 sbin/ods-signerd
+share/examples/opendnssec/addns.xml
+share/examples/opendnssec/addns.xml.sample
 share/examples/opendnssec/conf.xml
 share/examples/opendnssec/conf.xml.sample
 share/examples/opendnssec/kasp.xml
 share/examples/opendnssec/kasp.xml.sample
-share/examples/opendnssec/zonefetch.xml
-share/examples/opendnssec/zonefetch.xml.sample
 share/examples/opendnssec/zonelist.xml
 share/examples/opendnssec/zonelist.xml.sample
+share/opendnssec/addns.rnc
+share/opendnssec/addns.rng
 share/opendnssec/conf.rnc
 share/opendnssec/conf.rng
 share/opendnssec/database_create.sqlite3
+share/opendnssec/enforcerstate.rnc
+share/opendnssec/enforcerstate.rng
 share/opendnssec/kasp.rnc
 share/opendnssec/kasp.rng
 share/opendnssec/kasp2html.xsl
 share/opendnssec/signconf.rnc
 share/opendnssec/signconf.rng
-share/opendnssec/zonefetch.rnc
-share/opendnssec/zonefetch.rng
 share/opendnssec/zonelist.rnc
 share/opendnssec/zonelist.rng
+@pkgdir share/doc/opendnssec
 @pkgdir lib/opendnssec/signer
+@pkgdir lib/opendnssec/kasp_auditor
 @pkgdir etc/opendnssec

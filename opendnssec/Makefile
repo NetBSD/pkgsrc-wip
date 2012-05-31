@@ -1,18 +1,18 @@
-# $NetBSD: Makefile,v 1.32 2011/06/12 17:38:49 pettai Exp $
+# $NetBSD: Makefile,v 1.33 2012/05/31 05:38:16 pettai Exp $
 #
 
-DISTNAME=	opendnssec-1.3.0rc3
+DISTNAME=	opendnssec-1.4.0a2
 CATEGORIES=	net security
-MASTER_SITES=	http://www.opendnssec.org/files/source/
+MASTER_SITES=	http://www.opendnssec.org/files/source/testing/
 
-MAINTAINER=	pettai@nordu.net
+MAINTAINER=	pettai@NetBSD.org
 HOMEPAGE=	http://www.opendnssec.org/
 COMMENT=	OSS for a fast and easy DNSSEC deployment
 LICENSE=	2-clause-bsd
 
-DEPENDS+=	ldns>=1.6.9:../../net/ldns
+DEPENDS+=	ldns>=1.6.12:../../net/ldns
 DEPENDS+=	${RUBY_PKGPREFIX}-rubygems-[0-9]*:../../misc/rubygems
-DEPENDS+=	${RUBY_PKGPREFIX}-dnsruby>=1.52:../../net/ruby-dnsruby
+DEPENDS+=	${RUBY_PKGPREFIX}-dnsruby>=1.53:../../net/ruby-dnsruby
 BUILD_DEPENDS+=	CUnit-[0-9]*:../../devel/cunit
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -51,12 +51,12 @@ SUBST_SED.paths=	-e 's,@EGDIR@,${EGDIR},'
 
 CXXFLAGS.NetBSD+=	-D_NETBSD_SOURCE
 
+CONF_FILES=	${EGDIR}/addns.xml.sample \
+			${ODS_SYSCONFDIR}/addns.xml
 CONF_FILES=	${EGDIR}/conf.xml.sample \
 			${ODS_SYSCONFDIR}/conf.xml
 CONF_FILES+=	${EGDIR}/kasp.xml.sample \
 			${ODS_SYSCONFDIR}/kasp.xml
-CONF_FILES+=	${EGDIR}/zonefetch.xml.sample \
-			${ODS_SYSCONFDIR}/zonefetch.xml
 CONF_FILES+=	${EGDIR}/zonelist.xml.sample \
 			${ODS_SYSCONFDIR}/zonelist.xml
 
