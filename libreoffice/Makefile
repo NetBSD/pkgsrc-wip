@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2012/05/31 06:35:44 ftigeot Exp $
+# $NetBSD: Makefile,v 1.47 2012/05/31 15:39:31 ftigeot Exp $
 
 VER=			3.5.4.2
 DISTNAME=		libreoffice-${VER}
@@ -163,13 +163,12 @@ post-configure:
 	cd ${WRKSRC} && ./bin/create_bootstrap_links
 	${TOUCH} ${WRKSRC}/src.downloaded
 
+AUTO_MKDIRS=	yes
 post-install:
-	${MKDIR} -p ${DESTDIR}${PREFIX}/bin
 	for f in ${LO_PROGRAMS}; do \
 		${LN} -s ${DESTDIR}${PREFIX}/${PKGNAME}/program/$$f ${DESTDIR}${PREFIX}/bin/$$f; \
 	done
 	${LN} -s ${DESTDIR}${PREFIX}/${PKGNAME}/program/soffice ${DESTDIR}${PREFIX}/bin/libreoffice3.5
-	${MKDIR} -p ${DESTDIR}${PREFIX}/share/applications
 	for f in ${LO_DESKTOP_FILES}; do \
 		${LN} -s ${DESTDIR}${PREFIX}/${PKGNAME}/share/xdg/$$f ${DESTDIR}${PREFIX}/share/applications; \
 	done
