@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/06/01 15:26:59 hfath Exp $
+bin/bon_csv2html
+bin/bon_csv2txt
+bin/generate_randfile
+man/man1/bon_csv2html.1
+man/man1/bon_csv2txt.1
+man/man1/generate_randfile.1
+man/man8/bonnie++.8
+man/man8/getc_putc.8
+man/man8/zcav.8
+sbin/bonnie++
+sbin/getc_putc
+sbin/getc_putc_helper
+sbin/zcav
+share/doc/bonnie++/readme.html
