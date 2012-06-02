@@ -1,0 +1,11 @@
+paxmirabilis (based on paxtar), is an implementation of an archiving
+utility that reads and writes several formats -- traditional ones, the
+extended formats specified in IEEE 1003.1, and the ar(5) format used by
+deb(5) packages (MirBSD specific paxtar extension). The pax interface
+was designed by IEEE 1003.2 as a compromise in the chronic controversy
+over which of tar or cpio is best, but this implementation offers
+paxcpio and paxtar for easy calling.
+
+This software is developed as part of The MirOS Project, in the form of
+one of the portable subprojects, similar to mksh. It is now the default
+pax implementation in Debian GNU/Linux.
