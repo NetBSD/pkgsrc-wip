@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4767 2012/06/01 15:28:56 hfath Exp $
+# $Id: Makefile,v 1.4768 2012/06/02 11:05:21 slitvinov Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2648,6 +2648,7 @@ SUBDIR+=	re2
 SUBDIR+=	readseq
 SUBDIR+=	realtimebattle
 SUBDIR+=	realvnc
+SUBDIR+=	recoll
 SUBDIR+=	recutils
 SUBDIR+=	redfang
 SUBDIR+=	redis
