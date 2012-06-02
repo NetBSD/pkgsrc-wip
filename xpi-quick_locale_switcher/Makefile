@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/05/21 11:58:05 obache Exp $
+# $NetBSD: Makefile,v 1.5 2012/06/02 11:32:25 ryo-on Exp $
 #
 
 DISTNAME=	quick_locale_switcher-1.7.8
@@ -28,6 +28,12 @@ XPI_ID=			{25A1388B-6B18-46c3-BEBA-A81915D0DE8F}
 XPI_DIR=		lib/xpi/extensions/${XPI_ID}
 
 INSTALLATION_DIRS+=	${XPI_DIR}
+
+SUBST_CLASSES+=		gui
+SUBST_STAGE.gui=	pre-configure
+SUBST_MESSAGE.gui=	Change GUI locale by default
+SUBST_FILES.gui+=	defaults/preferences/prefs.js
+SUBST_SED.gui+=          -e 's/pref("extensions.qls.switch_gulocale", false);/pref("extensions.qls.switch_gulocale", true);/'
 
 do-install:
 	cd ${WRKSRC} && pax -rw . ${DESTDIR}${PREFIX}/${XPI_DIR}
