@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/06/02 11:02:13 slitvinov Exp $
+
+SHA1 (recoll-1.17.3.tar.gz) = 3229963cc1098ecd90ed6d998dbb53e798d74865
+RMD160 (recoll-1.17.3.tar.gz) = 85a84f4f9e19b4126b3eff35faf91ba3b8a1a66a
+Size (recoll-1.17.3.tar.gz) = 1757278 bytes
