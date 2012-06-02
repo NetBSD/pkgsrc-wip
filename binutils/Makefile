@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/02/13 01:55:46 makoto Exp $
+# $NetBSD: Makefile,v 1.3 2012/06/02 13:10:14 cheusov Exp $
 
 DISTNAME=	binutils-2.22
 CATEGORIES=	devel
@@ -27,16 +27,15 @@ MAKEFLAGS+=		TEXINFO_LOCALE=no
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-lib-path='/lib:/usr/lib'
-GNU_PROGRAM_PREFIX?=	gnu-
-CONFIGURE_ARGS+=	--program-prefix=${GNU_PROGRAM_PREFIX}
-PLIST_SUBST+=		GNU_PROGRAM_PREFIX=${GNU_PROGRAM_PREFIX}
-BUILD_DEFS+=		GNU_PROGRAM_PREFIX
+CONFIGURE_ARGS+=	--program-prefix=g
 BINUTILS_PREFIX=	${PREFIX}/${MACHINE_GNU_PLATFORM}
 
 PLIST_SRC=	${PKGDIR}/PLIST.common
 PLIST_SRC+=	${WRKDIR}/PLIST_DYNAMIC
 
 INFO_FILES=	yes
+
+INSTALLATION_DIRS=	gnu/bin gnu/man/man1
 
 # gprof (XXX: and others?) cannot be built on all platforms
 #
@@ -57,6 +56,7 @@ CFLAGS+=	-Wno-unused-value -Wno-format-security \
 #
 post-configure:
 .for f in ld/ldver.texi ld/ld.1 gas/doc/gasver.texi gas/doc/as.1
+	set -e; \
 	if [ -f ${WRKSRC}/${f} ]; then					\
 		touch ${WRKSRC}/${f};					\
 	fi
@@ -66,5 +66,15 @@ post-install:
 	cd ${DESTDIR}${PREFIX} && find ${MACHINE_GNU_PLATFORM:Q}/lib/ldscripts -type f -print	\
 		| sort -r						\
 		> ${WRKDIR}/PLIST_DYNAMIC
+.for f in addr2line ar as c++filt dlltool elfedit gprof ld ld.bfd nlmconv nm \
+	  objcopy objdump ranlib readelf size strings strip windmc windres
+	set -e; \
+	if ${TEST} -f ${DESTDIR}${PREFIX}/bin/g${f:Q}; then \
+	   ${LN} -sf ${PREFIX}/bin/g${f} ${DESTDIR}${PREFIX}/gnu/bin/${f}; \
+	fi
+	if ${TEST} -f ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/g${f:Q}.1; then \
+	   ${LN} -sf ${PREFIX}/${PKGMANDIR}/man1/g${f}.1 ${DESTDIR}${PREFIX}/gnu/man/man1/${f}.1; \
+	fi
+.endfor
 
 .include "../../mk/bsd.pkg.mk"
