@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4768 2012/06/02 11:05:21 slitvinov Exp $
+# $Id: Makefile,v 1.4769 2012/06/02 15:42:24 bsiegert Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1779,7 +1779,6 @@ SUBDIR+=	p5-Arch
 SUBDIR+=	p5-Astro-SpaceTrack
 SUBDIR+=	p5-AxKit
 SUBDIR+=	p5-B-Deobfuscate
-SUBDIR+=	p5-BSD-arc4random
 SUBDIR+=	p5-Bit-Vector-Minimal
 SUBDIR+=	p5-CGI-Application-Dispatch
 SUBDIR+=	p5-CGI-Application-Plugin-AutoRunmode
@@ -1989,6 +1988,7 @@ SUBDIR+=	parted
 SUBDIR+=	partonevolution
 SUBDIR+=	pasmo
 SUBDIR+=	passepartout
+SUBDIR+=	paxmirabilis
 SUBDIR+=	pbbuttonsd
 SUBDIR+=	pcmanfm
 SUBDIR+=	pcp
