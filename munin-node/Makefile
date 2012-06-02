@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2012/05/12 16:46:50 fhajny Exp $
+# $NetBSD: Makefile,v 1.9 2012/06/02 13:24:41 ftigeot Exp $
 #
 
 DISTNAME=	munin-${VER}
 PKGNAME=	munin-node-${VER}
-VER=		1.4.5
+VER=		2.0.0
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=munin/}
 
@@ -15,6 +15,8 @@ LICENSE=	gnu-gpl-v2
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Net-Server>=0:../../net/p5-Net-Server
+DEPENDS+=	p5-Socket6>=0:../../net/p5-Socket6
+DEPENDS+=	p5-IO-Socket-INET6>=0:../../net/p5-IO-Socket-INET6
 DEPENDS+=	munin-common>=1.4:../../wip/munin-common
 #DEPENDS+=	munin-doc>=1.3.1:../../sysutils/munin-doc
 
@@ -42,6 +44,7 @@ REPLACE_BASH+=	plugins/node.d/multigraph_tester.in
 REPLACE_PERL+=	node/sbin/munin-node
 REPLACE_PERL+=	node/sbin/munin-node-configure
 REPLACE_PERL+=	node/sbin/munin-run
+REPLACE_PERL+=	node/sbin/munin-sched
 REPLACE_PERL+=	plugins/node.d/slony_lag_.in
 CHECK_INTERPRETER_SKIP+=	lib/munin/plugins/tomcat_
 

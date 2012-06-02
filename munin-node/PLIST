@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2011/09/10 19:53:49 ftigeot Exp $
+@comment $NetBSD: PLIST,v 1.7 2012/06/02 13:24:41 ftigeot Exp $
 bin/munindoc
 lib/munin/plugins/amavis
 lib/munin/plugins/apache_accesses
@@ -17,7 +17,6 @@ lib/munin/plugins/asterisk_voicemail
 lib/munin/plugins/bind9
 lib/munin/plugins/bind9_rndc
 lib/munin/plugins/cmc_tc_sensor_
-lib/munin/plugins/colour_tester
 lib/munin/plugins/courier_
 lib/munin/plugins/courier_mta_mailqueue
 lib/munin/plugins/courier_mta_mailstats
@@ -28,11 +27,9 @@ lib/munin/plugins/df_inode
 lib/munin/plugins/dhcpd3
 lib/munin/plugins/digitemp_
 lib/munin/plugins/ejabberd_
-lib/munin/plugins/env
 lib/munin/plugins/exim_mailqueue
 lib/munin/plugins/exim_mailqueue_alt
 lib/munin/plugins/exim_mailstats
-lib/munin/plugins/extinfo_tester
 lib/munin/plugins/fail2ban
 lib/munin/plugins/foldingathome
 lib/munin/plugins/foldingathome_rank
@@ -42,17 +39,19 @@ lib/munin/plugins/freeradius_auth
 lib/munin/plugins/freeradius_proxy_acct
 lib/munin/plugins/freeradius_proxy_auth
 lib/munin/plugins/haproxy_
+lib/munin/plugins/haproxy_ng
 lib/munin/plugins/hddtemp
 lib/munin/plugins/hddtemp2
 lib/munin/plugins/hddtemp_smartctl
 lib/munin/plugins/hddtempd
+lib/munin/plugins/hp2000_
 lib/munin/plugins/http_loadtime
-lib/munin/plugins/id
 lib/munin/plugins/ifx_concurrent_sessions_
 lib/munin/plugins/ipac-ng
 lib/munin/plugins/ipmi_sensor_
 lib/munin/plugins/ircu
 lib/munin/plugins/jmx_
+lib/munin/plugins/jmx_tomcat_dbpools
 lib/munin/plugins/loggrep
 lib/munin/plugins/lpstat
 lib/munin/plugins/mailman
@@ -60,7 +59,6 @@ lib/munin/plugins/mailscanner
 lib/munin/plugins/mbmon_
 lib/munin/plugins/memcached_
 lib/munin/plugins/mhttping
-lib/munin/plugins/multigraph_tester
 lib/munin/plugins/multiping
 lib/munin/plugins/multips
 lib/munin/plugins/multips_memory
@@ -91,6 +89,8 @@ lib/munin/plugins/nutups_
 lib/munin/plugins/nvidia_
 lib/munin/plugins/openvpn
 lib/munin/plugins/perdition
+lib/munin/plugins/pgbouncer_connections
+lib/munin/plugins/pgbouncer_requests
 lib/munin/plugins/ping_
 lib/munin/plugins/plugin.sh
 lib/munin/plugins/plugins.history
@@ -99,15 +99,19 @@ lib/munin/plugins/pop_stats
 lib/munin/plugins/postfix_mailqueue
 lib/munin/plugins/postfix_mailstats
 lib/munin/plugins/postfix_mailvolume
+lib/munin/plugins/postgres_autovacuum
 lib/munin/plugins/postgres_bgwriter
 lib/munin/plugins/postgres_cache_
 lib/munin/plugins/postgres_checkpoints
 lib/munin/plugins/postgres_connections_
 lib/munin/plugins/postgres_connections_db
 lib/munin/plugins/postgres_locks_
+lib/munin/plugins/postgres_oldest_prepared_xact_
+lib/munin/plugins/postgres_prepared_xacts_
 lib/munin/plugins/postgres_querylength_
 lib/munin/plugins/postgres_scans_
 lib/munin/plugins/postgres_size_
+lib/munin/plugins/postgres_streaming_
 lib/munin/plugins/postgres_transactions_
 lib/munin/plugins/postgres_tuples_
 lib/munin/plugins/postgres_users
@@ -129,6 +133,7 @@ lib/munin/plugins/slony_lag_
 lib/munin/plugins/smart_
 lib/munin/plugins/snmp__cpuload
 lib/munin/plugins/snmp__df
+lib/munin/plugins/snmp__df_ram
 lib/munin/plugins/snmp__fc_if_
 lib/munin/plugins/snmp__fc_if_err_
 lib/munin/plugins/snmp__if_
@@ -178,7 +183,6 @@ lib/munin/plugins/tomcat_volume
 lib/munin/plugins/users
 lib/munin/plugins/varnish_
 lib/munin/plugins/vmstat
-lib/munin/plugins/warning_tester
 lib/munin/plugins/zimbra_
 ${PERL5_SUB_INSTALLVENDORLIB}/Munin/Node/Config.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/Munin/Node/Configure/Debug.pm
@@ -188,10 +192,13 @@ ${PERL5_SUB_INSTALLVENDORLIB}/Munin/Node/Configure/Plugin.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/Munin/Node/Configure/PluginList.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/Munin/Node/Logger.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/Munin/Node/OS.pm
+${PERL5_SUB_INSTALLVENDORLIB}/Munin/Node/ProxySpooler.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/Munin/Node/SNMPConfig.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/Munin/Node/Server.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/Munin/Node/Service.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/Munin/Node/Session.pm
+${PERL5_SUB_INSTALLVENDORLIB}/Munin/Node/SpoolReader.pm
+${PERL5_SUB_INSTALLVENDORLIB}/Munin/Node/SpoolWriter.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/Munin/Node/Utils.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/Munin/Plugin.pm
 ${PERL5_SUB_INSTALLVENDORLIB}/Munin/Plugin/Pgsql.pm
@@ -200,6 +207,7 @@ man/man1/munin-node-configure.1
 man/man1/munin-node.1
 man/man1/munin-run.1
 man/man1/munindoc.1
+man/man1/munin-sched.1
 man/man3/Munin::Node::Config.3
 man/man3/Munin::Node::Configure::Debug.3
 man/man3/Munin::Node::Configure::History.3
@@ -208,10 +216,13 @@ man/man3/Munin::Node::Configure::Plugin.3
 man/man3/Munin::Node::Configure::PluginList.3
 man/man3/Munin::Node::Logger.3
 man/man3/Munin::Node::OS.3
+man/man3/Munin::Node::ProxySpooler.3
 man/man3/Munin::Node::SNMPConfig.3
 man/man3/Munin::Node::Server.3
 man/man3/Munin::Node::Service.3
 man/man3/Munin::Node::Session.3
+man/man3/Munin::Node::SpoolReader.3
+man/man3/Munin::Node::SpoolWriter.3
 man/man3/Munin::Node::Utils.3
 man/man3/Munin::Plugin.3
 man/man3/Munin::Plugin::Pgsql.3
@@ -219,6 +230,7 @@ man/man3/Munin::Plugin::SNMP.3
 sbin/munin-node
 sbin/munin-node-configure
 sbin/munin-run
+sbin/munin-sched
 share/examples/munin/munin-node.conf
 share/examples/rc.d/munin-node
 @pkgdir etc/munin/plugin-conf.d
