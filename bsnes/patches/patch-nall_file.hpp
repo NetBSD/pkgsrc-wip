@@ -1,12 +1,12 @@
-$NetBSD: patch-nall_file.hpp,v 1.1 2012/01/23 09:31:11 thomasklausner Exp $
+$NetBSD: patch-nall_file.hpp,v 1.2 2012/06/03 12:39:10 othyro Exp $
 
 Work around Linuxism.
 
---- nall/file.hpp.orig	2012-01-02 11:07:59.000000000 +0000
+--- nall/file.hpp.orig	2012-05-11 19:58:15.000000000 +0000
 +++ nall/file.hpp
-@@ -7,6 +7,10 @@
- #include <nall/utility.hpp>
+@@ -8,6 +8,10 @@
  #include <nall/windows/utf8.hpp>
+ #include <nall/stream/memory.hpp>
  
 +#ifndef stat64
 +#define stat64 stat
