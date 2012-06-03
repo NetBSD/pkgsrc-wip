@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2012/06/03 23:36:43 othyro Exp $
+# $NetBSD: Makefile,v 1.4 2012/06/03 23:41:35 othyro Exp $
 
 DISTNAME=	HTTP_Client-1.2.1
 CATEGORIES+=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-COMMENT=	A simple HTTP client class in PHP
+COMMENT=	Simple HTTP client class in PHP
+LICENSE=	2-clause-bsd
 
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-Net_URL>=1.0.12:../../net/pear-Net_URL
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-Net_Socket>=1.0.2:../../net/pear-Net_Socket
