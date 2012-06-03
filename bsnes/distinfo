@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.4 2012/03/07 17:34:06 thomasklausner Exp $
+$NetBSD: distinfo,v 1.5 2012/06/03 12:39:57 othyro Exp $
 
-SHA1 (bsnes_v087-source.tar.bz2) = 632e00ff1ae2d76a38db17ea75c38014217f2595
-RMD160 (bsnes_v087-source.tar.bz2) = 76175e21db8005ee41a23b196e2a38bfb0dd5113
-Size (bsnes_v087-source.tar.bz2) = 1173031 bytes
-SHA1 (patch-Makefile) = f586d126145cb500e4fca344e4a9fea32de5c6dc
-SHA1 (patch-nall_file.hpp) = 1374f5f4073182a2002e40fdd6f25135dc00618c
+SHA1 (bsnes_v089.tar.xz) = eac0b64a989e76006a31f99ef722a68cd7acdf5d
+RMD160 (bsnes_v089.tar.xz) = f03333d797d12a5412b7d6e4da53be4a871d7f35
+Size (bsnes_v089.tar.xz) = 899600 bytes
+SHA1 (patch-Makefile) = 5917b9bf7500fff38370e64ec810ecb4b9c8eaf5
+SHA1 (patch-nall_file.hpp) = 7e75ebeaf3376a04d1a27771e6183c7d5d9188b1
