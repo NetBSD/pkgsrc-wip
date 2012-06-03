@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2011/06/02 22:01:55 othyro Exp $
+# $NetBSD: Makefile,v 1.10 2012/06/03 23:07:35 othyro Exp $
 #
 
-DISTNAME=	flimsel-0.0.7
-PKGREVISION=	2
+DISTNAME=	flimsel-0.0.9
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.ecademix.com/JohannesHofmann/
 
@@ -18,5 +17,5 @@ USE_LANGUAGES=		c c++
 
 .include "../../graphics/epeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../x11/fltk/buildlink3.mk"
+.include "../../x11/fltk13/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
