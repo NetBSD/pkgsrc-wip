@@ -1,3 +1,4 @@
 A simple HTTP client class.
 
-The class wraps around HTTP_Request providing a higher-level API for performing multiple HTTP requests.
+The class wraps around HTTP_Request providing a higher-level API for performing
+multiple HTTP requests.
