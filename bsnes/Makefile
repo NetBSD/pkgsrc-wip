@@ -1,19 +1,20 @@
-# $NetBSD: Makefile,v 1.6 2012/03/07 17:34:06 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2012/06/03 12:37:06 othyro Exp $
 #
 
-DISTNAME=	bsnes_v087-source
-PKGNAME=	${DISTNAME:S/_v0/-0./:S/-source//}
+DISTNAME=	bsnes_v089
+PKGNAME=	${DISTNAME:S/_v0/-0./}
 CATEGORIES=	emulators
 MASTER_SITES=	http://bsnes.googlecode.com/files/
-EXTRACT_SUFX=	.tar.bz2
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.byuu.org/
+HOMEPAGE=	http://www.byuu.org/bsnes/
 COMMENT=	SNES emulator
+LICENSE=	gnu-gpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-WRKSRC=		${WRKDIR}/${DISTNAME}/bsnes
+WRKSRC=		${WRKDIR}/bsnes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake pkg-config
 MAKE_FLAGS+=	platform=x compiler=gcc enable_gzip=true
@@ -31,6 +32,8 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/data/bsnes.png ${DESTDIR}${PREFIX}/share/icons
 	${INSTALL_DATA} ${WRKSRC}/data/cheats.xml ${DESTDIR}${PREFIX}/share/doc/bsnes
 
+.include "../../x11/libXv/buildlink3.mk"
+.include "../../x11/videoproto/buildlink3.mk"
 .include "../../audio/alsa-lib/buildlink3.mk"
 .include "../../audio/libao/buildlink3.mk"
 .include "../../audio/openal/buildlink3.mk"
