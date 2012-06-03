@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/01/11 23:30:24 othyro Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/06/03 22:25:48 othyro Exp $
 bin/sippasswd
 bin/sipwitch
 bin/sipwitch-cgi
+${PLIST.qt}bin/switchview
+include/sipwitch/cache.h
 include/sipwitch/cdr.h
 include/sipwitch/control.h
 include/sipwitch/db.h
