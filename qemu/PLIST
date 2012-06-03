@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2011/12/11 04:14:46 ryo-on Exp $
+@comment $NetBSD: PLIST,v 1.6 2012/06/03 09:00:55 ryo-on Exp $
 ${PLIST.alpha}bin/qemu-alpha
 ${PLIST.arm}bin/qemu-arm
 ${PLIST.armeb}bin/qemu-armeb
@@ -53,9 +53,11 @@ man/man8/qemu-nbd.8
 share/doc/qemu/Makefile.multinode-NetBSD
 share/doc/qemu/qemu-doc.html
 share/doc/qemu/qemu-tech.html
+share/examples/qemu/cpus-x86_64.conf
 share/examples/qemu/target-x86_64.conf
 share/qemu/bamboo.dtb
 share/qemu/bios.bin
+share/qemu/kvmvapic.bin
 share/qemu/palcode-clipper
 share/qemu/sgabios.bin
 share/qemu/keymaps/ar
@@ -108,6 +110,7 @@ share/qemu/pxe-ne2k_pci.rom
 share/qemu/pxe-pcnet.rom
 share/qemu/pxe-rtl8139.rom
 share/qemu/pxe-virtio.rom
+share/qemu/qemu-icon.bmp
 share/qemu/s390-zipl.rom
 share/qemu/slof.bin
 share/qemu/spapr-rtas.bin

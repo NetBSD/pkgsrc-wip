@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2012/02/23 13:43:15 ryo-on Exp $
+# $NetBSD: Makefile,v 1.8 2012/06/03 09:00:55 ryo-on Exp $
 
-DISTNAME=		qemu-1.0.1
+DISTNAME=		qemu-1.1.0
 CATEGORIES=		emulators
 MASTER_SITES=		http://wiki.qemu.org/download/
+EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.qemu.org/
@@ -33,6 +34,8 @@ CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 
 CONF_FILES=		${EGDIR}/target-x86_64.conf \
 			${PKG_SYSCONFDIR}/target-x86_64.conf
+CONF_FILES+=		${EGDIR}//cpus-x86_64.conf \
+			${PKG_SYSCONFDIR}/cpus-x86_64.conf
 EGDIR=			${PREFIX}/share/examples/qemu
 INSTALL_MAKE_FLAGS=	egdir=${EGDIR}
 PKG_SYSCONFSUBDIR=	qemu
@@ -64,6 +67,7 @@ SUBST_FILES.qaudio=	arch_init.c monitor.c savevm.c vl.c \
 			hw/sb16.c \
 			hw/spitz.c \
 			hw/tsc210x.c \
+			hw/usb/dev-audio.c \
 			hw/wm8750.c \
 			hw/z2.c \
 			ui/vnc.h

@@ -1,8 +1,8 @@
-$NetBSD: patch-hw_xilinx__axienet.c,v 1.1.1.1 2011/12/11 04:11:20 ryo-on Exp $
+$NetBSD: patch-hw_xilinx__axienet.c,v 1.2 2012/06/03 09:00:55 ryo-on Exp $
 
 Avoid conflicts with SSP read() macro in NetBSD's <ssp/unistd.h>
 
---- hw/xilinx_axienet.c.orig	2011-08-08 18:28:42 +0000
+--- hw/xilinx_axienet.c.orig	2012-06-01 09:13:13.000000000 +0000
 +++ hw/xilinx_axienet.c
 @@ -189,7 +189,7 @@ static uint16_t mdio_read_req(struct MDI
  

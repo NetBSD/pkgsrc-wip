@@ -1,8 +1,8 @@
-$NetBSD: patch-ioport.c,v 1.1.1.1 2011/12/11 04:11:20 ryo-on Exp $
+$NetBSD: patch-ioport.c,v 1.2 2012/06/03 09:00:55 ryo-on Exp $
 
---- ioport.c.orig	2011-12-01 20:07:34.000000000 +0000
+--- ioport.c.orig	2012-06-01 09:13:13.000000000 +0000
 +++ ioport.c
-@@ -182,7 +182,7 @@ static uint32_t ioport_readb_thunk(void 
+@@ -183,7 +183,7 @@ static uint32_t ioport_readb_thunk(void 
      IORange *ioport = opaque;
      uint64_t data;
  
@@ -11,7 +11,7 @@ $NetBSD: patch-ioport.c,v 1.1.1.1 2011/12/11 04:11:20 ryo-on Exp $
      return data;
  }
  
-@@ -191,7 +191,7 @@ static uint32_t ioport_readw_thunk(void 
+@@ -192,7 +192,7 @@ static uint32_t ioport_readw_thunk(void 
      IORange *ioport = opaque;
      uint64_t data;
  
@@ -20,7 +20,7 @@ $NetBSD: patch-ioport.c,v 1.1.1.1 2011/12/11 04:11:20 ryo-on Exp $
      return data;
  }
  
-@@ -200,7 +200,7 @@ static uint32_t ioport_readl_thunk(void 
+@@ -201,7 +201,7 @@ static uint32_t ioport_readl_thunk(void 
      IORange *ioport = opaque;
      uint64_t data;
  
