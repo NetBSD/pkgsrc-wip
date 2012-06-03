@@ -1,13 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2012/06/02 15:53:28 uccwen Exp $
+# $NetBSD: Makefile,v 1.3 2012/06/03 11:18:05 uccwen Exp $
 #
 
 DISTNAME=	Net_URL2-2.0.0
 CATEGORIES=	www
-MASTER_SITES=	http://download.pear.php.net/package/
-EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://download.pear.php.net/package/
+HOMEPAGE=	http://pear.php.net/package/Net_URL2
 COMMENT=	Class for parsing and handling URL
 LICENSE=	2-clause-bsd
 
