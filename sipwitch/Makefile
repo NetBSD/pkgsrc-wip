@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/01/11 23:30:24 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2012/06/03 22:18:00 othyro Exp $
 #
 
-DISTNAME=	sipwitch-1.2.0
+DISTNAME=	sipwitch-1.2.4
 CATEGORIES=	net
 MASTER_SITES=	http://ftp.gnu.org/gnu/sipwitch/
 
@@ -18,7 +18,15 @@ USE_LANGUAGES=	c c++
 
 PKGCONFIG_OVERRIDE+=	libsipwitch.pc.in
 
+PLIST_VARS=		qt
+
 .include "options.mk"
+
+SUBST_CLASSES+=		libdir
+SUBST_STAGE.libdir=	post-configure
+SUBST_MESSAGE.libdir=	Fixing libdir path.
+SUBST_FILES.libdir=	cmake_install.cmake
+SUBST_SED.libdir=	-e 's,lib64,lib,g'
 
 .include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../net/avahi/buildlink3.mk"
