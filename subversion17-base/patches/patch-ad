@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1.1.1 2012/06/04 06:23:04 ftigeot Exp $
+
+--- Makefile.in.orig	2011-07-16 11:50:53.000000000 +0000
++++ Makefile.in
+@@ -736,7 +736,7 @@ $(SWIG_PL_DIR)/native/Makefile.PL: $(SWI
+ 	./config.status subversion/bindings/swig/perl/native/Makefile.PL
+ 
+ $(SWIG_PL_DIR)/native/Makefile: $(SWIG_PL_DIR)/native/Makefile.PL
+-	cd $(SWIG_PL_DIR)/native; $(PERL) Makefile.PL
++	cd $(SWIG_PL_DIR)/native; $(PERL) Makefile.PL INSTALLDIRS=vendor
+ 
+ # There is a "readlink -f" command on some systems for the same purpose,
+ # but it's not as portable (e.g. Mac OS X doesn't have it).  These should

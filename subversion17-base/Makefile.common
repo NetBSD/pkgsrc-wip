@@ -1,0 +1,41 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2012/06/04 06:23:04 ftigeot Exp $
+# used by devel/java-subversion/Makefile
+# used by devel/p5-subversion/Makefile
+# used by devel/py-subversion/Makefile
+# used by devel/ruby-subversion/Makefile
+# used by devel/subversion-base/Makefile
+# used by devel/subversion/Makefile
+# used by www/ap2-subversion/Makefile
+
+DISTNAME=		subversion-${SVNVER}
+CATEGORIES=		devel scm
+MASTER_SITES=		${MASTER_SITE_APACHE:=subversion/}
+
+MAINTAINER=		pkgsrc-users@NetBSD.org
+HOMEPAGE=		http://subversion.apache.org/
+LICENSE=		apache-1.1
+
+.include "Makefile.version"
+
+SVNEXAMPLES=		${PREFIX}/share/examples/subversion
+SVNDOC=			${PREFIX}/share/doc/subversion
+
+USE_LIBTOOL=		YES
+USE_PKGLOCALEDIR=	YES
+GNU_CONFIGURE=		YES
+
+.include "../../mk/bsd.prefs.mk"
+.include "../../devel/subversion-base/options.mk"
+
+.if !empty(PKG_OPTIONS:Mserf)
+CONFIGURE_ARGS+=	--with-serf=${BUILDLINK_PREFIX.serf} --without-neon
+.else
+CONFIGURE_ARGS+=	--with-neon=${BUILDLINK_PREFIX.neon}
+.endif
+
+# workaround: does not install info file, but does create directory
+CONFIGURE_ARGS+=	--infodir=${PREFIX}/${PKGINFODIR}
+
+BUILDLINK_API_DEPENDS.subversion-base+=	subversion-base>=${SVNVER}
+
+.include "../../devel/gettext-lib/buildlink3.mk"

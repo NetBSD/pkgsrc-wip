@@ -1,0 +1,16 @@
+$NetBSD: patch-ae,v 1.1.1.1 2012/06/04 06:23:04 ftigeot Exp $
+
+--- subversion/bindings/swig/perl/native/Makefile.PL.in.orig	2011-07-16 11:47:59.000000000 +0000
++++ subversion/bindings/swig/perl/native/Makefile.PL.in
+@@ -35,9 +35,10 @@ my $svnlib_srcdir = "${top_srcdir}/subve
+ my $svnlib_builddir = "${top_builddir}/subversion";
+ my $swig_srcdir = "${svnlib_srcdir}/bindings/swig";
+ my $swig_builddir = "${svnlib_builddir}/bindings/swig";
++my $subversion_base_lib = $ENV{SUBVERSION_BASE_PREFIX} . "/lib";
+ 
+ my @modules = qw/client delta fs ra repos wc/;
+-my @ldpaths = (abs_path($swig_builddir) . "/perl/libsvn_swig_perl/.libs",
++my @ldpaths = (abs_path($swig_builddir) . "/perl/libsvn_swig_perl/.libs", $subversion_base_lib,
+                map { abs_path($svnlib_builddir) . "/libsvn_$_/.libs" }
+                    @modules, qw/diff subr ra_local ra_svn ra_neon
+                                 ra_serf fs_base fs_util fs_fs/);
