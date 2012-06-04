@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2010/04/21 14:51:42 uccwen Exp $
+# $NetBSD: Makefile,v 1.3 2012/06/04 00:05:10 othyro Exp $
 #
 
-DISTNAME=	HTTP_Request2-0.5.2
+DISTNAME=	HTTP_Request2-2.1.1
 CATEGORIES=	www
 MASTER_SITES=	http://download.pear.php.net/package/
 EXTRACT_SUFX=	.tgz
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://download.pear.php.net/package/
 COMMENT=	Provides an easy way to perform HTTP requests
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	2-clause-bsd
 
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-Net_URL2>=0.2.0:../../wip/pear-Net_URL2
 
