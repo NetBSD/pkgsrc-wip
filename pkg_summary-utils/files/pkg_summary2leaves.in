@@ -35,6 +35,7 @@
 #use "shquote.awk"
 #use "xclose.awk"
 #use "xgetline.awk"
+#use "psu_funcs.awk"
 
 ############################################################
 #.begin-str help
@@ -46,7 +47,7 @@
 #   -r    select leaf packages recursively, implies -a
 #   -a    output only automatically installed leaves,
 #         a field 'automatic' is expected on input
-#   -p    output PKGPATHs instead summaries
+#   -p    output PKGPATHs instead of summaries
 #   -v    PKGPATHs or summaries of non-leaf packages are output
 #.end-str
 ############################################################
@@ -75,7 +76,7 @@ BEGIN {
 # build dependency graph
 BEGIN {
 	deps_fn = tmpfile()
-	system("pkg_summary2deps -dpa " files " 2>/dev/null > " deps_fn)
+	system("pkg_summary2deps -dpnra " files " 2>/dev/null > " deps_fn)
 }
 
 # obtaining automatically installed packages
@@ -84,12 +85,11 @@ BEGIN {
 	while ((pipe | getline) > 0){
 		if (/^PKGPATH=/){
 			pkgpath = substr($0, 9)
-		}else if (/^ASSIGNMENTS=/){
-			assigns = substr($0, 13)
+		}else if (/^PKGNAME=/){
+			pkgname = substr($0, 9)
 		}else if (NF == 0){
-			if (assigns) pkgpath = pkgpath ":" assigns
-			auto [pkgpath] = 0
-			pkgpath = assigns = ""
+			auto [pkgpath ";" pkgname] = 0
+			pkgpath = pkgname = ""
 		}
 	}
 	close(pipe)
@@ -155,12 +155,15 @@ BEGIN {
 
 	for (i=1; i < head; ++i){
 		if (out_pkgs)
-			print queue [i]
+			print pkgpana2pkgpath(queue [i])
 		else
 			pkgpaths = pkgpaths " " queue [i]
 	}
-	if (out_pkgs)
+
+	if (out_pkgs){
 		exitnow(0)
-	else
-		system("cat " files " | pkg_grep_summary -t strlist PKGPATHe '" pkgpaths "'")
+	}else{
+		gsub(/;/, ",", pkgpaths)
+		system("cat " files " | pkg_grep_summary -t strlist PKGPANA " shquote(pkgpaths))
+	}
 }

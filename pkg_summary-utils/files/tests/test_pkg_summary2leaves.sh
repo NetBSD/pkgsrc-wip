@@ -91,3 +91,18 @@ pkg_summary2leaves 2>&1 |
 cmp 'pkg_summary2leaves #9' \
 'pkg_summary2leaves requires <files...>
 '
+
+pkg_summary2leaves -a bin_summary11.txt |
+cmp 'pkg_summary2leaves #10.1' \
+'PKGNAME=py26-gtk2-2.24.0nb4
+PKGPATH=x11/py-gtk2
+FILE_NAME=py26-gtk2-2.24.0nb4.tgz
+force_update=yes
+automatic=yes
+
+'
+
+pkg_summary2leaves -ap bin_summary11.txt |
+cmp 'pkg_summary2leaves #10.2' \
+'x11/py-gtk2
+'
