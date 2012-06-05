@@ -1,0 +1,27 @@
+PKGNAME=pidgin-2.10.3
+DEPENDS=farsight2>=0.0.26nb6
+COMMENT=Multi-protocol Instant Messaging client GTK frontend
+BUILD_DATE=2012-04-19 04:00:06 +0000
+PKGPATH=chat/pidgin
+
+PKGNAME=farsight2-0.0.26nb6
+DEPENDS=py27-gtk2>=2.24.0nb4
+COMMENT=Audio/video communications framework
+BUILD_DATE=2012-04-09 05:12:04 +0000
+PKGPATH=multimedia/farsight2
+FILE_NAME=farsight2-0.0.26nb6.tgz
+force_update=yes
+automatic=yes
+
+CONFLICTS=py27-gtk<0.6.10
+PKGNAME=py27-gtk2-2.24.0nb4
+PKGPATH=x11/py-gtk2
+force_update=yes
+automatic=yes
+
+PKGNAME=py26-gtk2-2.24.0nb4
+PKGPATH=x11/py-gtk2
+FILE_NAME=py26-gtk2-2.24.0nb4.tgz
+force_update=yes
+automatic=yes
+

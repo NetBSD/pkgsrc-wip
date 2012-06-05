@@ -843,7 +843,6 @@ editors/emacs22 textproc/dictem
 editors/emacs|editors/emacs22|editors/emacs21|editors/emacs20 wip/emterm
 lang/f2c devel/libtool-base
 lang/perl5 devel/p5-ExtUtils-CBuilder
-lang/perl5 devel/p5-ExtUtils-CBuilder
 sysutils/checkperms devel/gmake
 sysutils/checkperms devel/libmaa
 sysutils/checkperms devel/libtool-base
@@ -962,8 +961,6 @@ d: not_found tiff>=3.9.2nb1 <- editors/emacs emacs-23.2nb2
 d: not_found tiff>=3.9.2nb1 <- editors/emacs21 emacs-21.4anb19
 d: not_found tiff>=3.9.2nb1 <- editors/emacs22 emacs-22.3nb10
 digest distbb
-emacs
-emacs
 emacs dictem
 libmaa
 pipestatus pkg_status
@@ -1031,8 +1028,6 @@ egcs-current
 f2c libtool-base
 glibtool
 libmaa paexec
-libtool
-libtool
 libtool
 libtool-base libmaa
 pipestatus distbb
@@ -1271,10 +1266,7 @@ wip/runawk wip/distbb
 pkg_summary2deps -dn bin_summary5.txt | sort |
 cmp 'pkg_summary2deps #41' \
 'php php-extensions
-php php-extensions
 php php5-exif
-php php5-exif
-php php53-exif
 php php53-exif
 php5-exif php-extensions
 php53-exif php-extensions
@@ -1282,9 +1274,11 @@ php53-exif php-extensions
 
 pkg_summary2deps -dnr bin_summary5.txt | sort |
 cmp 'pkg_summary2deps #42' \
-'php-5.2.17nb2 php-extensions-5.2.17
+'php-5.2.17
+php-5.2.17nb2 php-extensions-5.2.17
 php-5.2.17nb2 php5-exif-5.2.17
 php-5.2.17nb2 php5-exif-5.2.17nb2
+php-5.3.5
 php-5.3.5nb1 php-extensions-5.3.5
 php-5.3.5nb1 php53-exif-5.3.5
 php-5.3.5nb1 php53-exif-5.3.5nb2
@@ -1321,9 +1315,7 @@ cmp 'pkg_summary2deps #45' \
 'graphics/php-exif|graphics/php-exif meta-pkgs/php5-extensions
 graphics/php-exif|graphics/php-exif meta-pkgs/php53-extensions
 lang/php53|lang/php53 graphics/php-exif
-lang/php53|lang/php53 graphics/php-exif
 lang/php53|lang/php53 meta-pkgs/php53-extensions
-lang/php5|lang/php5 graphics/php-exif
 lang/php5|lang/php5 graphics/php-exif
 lang/php5|lang/php5 meta-pkgs/php5-extensions
 '
@@ -1376,4 +1368,38 @@ x11/qt4-libs x11/qt4-qscintilla
 x11/qt4-libs x11/qt4-sqlite3
 x11/qt4-libs x11/qt4-tiff
 x11/qt4-libs x11/qt4-tools
+'
+
+pkg_summary2deps -dp bin_summary11.txt | sort -k1 -k2 |
+cmp 'pkg_summary2deps #47.1' \
+'multimedia/farsight2 chat/pidgin
+x11/py-gtk2 multimedia/farsight2
+'
+
+pkg_summary2deps -dn bin_summary11.txt | sort -k1 -k2 |
+cmp 'pkg_summary2deps #47.2' \
+'farsight2 pidgin
+py26-gtk2
+py27-gtk2 farsight2
+'
+
+pkg_summary2deps -dnr bin_summary11.txt | sort -k1 -k2 |
+cmp 'pkg_summary2deps #47.3' \
+'farsight2-0.0.26nb6 pidgin-2.10.3
+py26-gtk2-2.24.0nb4
+py27-gtk2-2.24.0nb4 farsight2-0.0.26nb6
+'
+
+pkg_summary2deps -dpnr bin_summary11.txt | sort -k1 -k2 |
+cmp 'pkg_summary2deps #47.3' \
+'multimedia/farsight2;farsight2-0.0.26nb6 chat/pidgin;pidgin-2.10.3
+x11/py-gtk2;py26-gtk2-2.24.0nb4
+x11/py-gtk2;py27-gtk2-2.24.0nb4 multimedia/farsight2;farsight2-0.0.26nb6
+'
+
+pkg_summary2deps -dpn bin_summary11.txt | sort -k1 -k2 |
+cmp 'pkg_summary2deps #47.3' \
+'multimedia/farsight2;farsight2 chat/pidgin;pidgin
+x11/py-gtk2;py26-gtk2
+x11/py-gtk2;py27-gtk2 multimedia/farsight2;farsight2
 '

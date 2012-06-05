@@ -90,7 +90,6 @@
 #   pkgbase    - PKGNAME=<...> with pkg version stripped
 #   g_basecnt2path   - array: pkgbase, g_basecnt2path_cnt [base] -> PKGPATH:ASSIGNMENTS
 #   g_pair2name   - array: PKGPATH:ASSIGNMENTS,PKGNAME -> pkgname
-#   g_pair2base   - array: PKGPATH:ASSIGNMENTS,PKGNAME -> pkgbase
 #   g_paircnt2namedeps    - array: PKGPATH:ASSIGNMENTS,PKGNAME , [1..3] , g_paircnt2namedeps_cnt [PKGPATH:ASSIGNMENTS. [1..3]] ->
 #                e.g. suse32_base-10.0|suse32_base-10.0nb*
 #   allbases   - set: PKGBASE
@@ -263,7 +262,6 @@ NF == 0 {
 
 	g_basecnt2path [pkgbase, ++g_basecnt2path_cnt [pkgbase]] = pair
 	g_pair2name [pair] = pkgname
-	g_pair2base [pair] = pkgbase
 	allbases [pkgbase] = 1
 
 	if (all_packages || (pkgpath in PKGPATHs) || (pkgname in PKGNAMEs)){
@@ -339,17 +337,82 @@ function pkgmatch_all (pair, matched_pkg, pattern,
 	return 1
 }
 
+function name2base (pair){
+	gsub(/-[^|-]*([|]|$)/, "|", pair)
+	return substr(pair, 1, length(pair)-1)
+}
+
 function pair2path (pair){
-	sub(/;.*$/, "", pair)
+	gsub(/;[^|]*/, "", pair)
 	return pair
+}
+
+function pair2name (pair){
+	gsub(/[^;|]*;/, "", pair)
+	return pair
+}
+
+function pair2xxx (pair)
+{
+	if (pair == "")
+		return ""
+
+	if (!out_pkgname){
+		return pair2path(pair)
+	}else if (!out_pkgpath){
+		pair  = pair2name(pair)
+
+		if (!keep_ver)
+			pair = name2base(pair)
+
+		return pair
+	}else{
+		if (!keep_ver)
+			pair = name2base(pair)
+
+		return pair
+	}
+
+}
+
+function print_pair (prepand, left, right, deps){
+	left  = pair2xxx(left)
+
+	# node
+	if (right == ""){
+		if (left in already_printed)
+			return
+
+		already_printed [left] = 1
+
+		if (mode_tsort)
+			print left, left
+		else
+			print left
+
+		return
+	}
+
+	# edge
+	right = pair2xxx(right)
+	if ((left SUBSEP right SUBSEP prepand) in already_printed)
+		return
+
+	already_printed [left, right, prepand] = 1
+	already_printed [left] = 1
+	already_printed [right] = 1
+
+	if (keep_depver)
+		print prepand left, right, "(", final_deps [triple], ")"
+	else
+		print prepand left, right
 }
 
 END {
 	# building dependency graph
-	for (pair in g_pair2base){
+	for (pair in g_pair2name){
 		path = pair2path(pair)
 		name = g_pair2name [pair]
-		base = g_pair2base [pair]
 		for (id=1; id <= 3; ++id){
 			depscnt = g_paircnt2namedeps_cnt [pair, id]
 			for (i=1; i <= depscnt; ++i){
@@ -452,45 +515,17 @@ END {
 		}
 
 		# right part
-		if (out_pkgname){
-			if (keep_ver)
-				name2 = g_pair2name [pair2]
-			else
-				name2 = g_pair2base [pair2]
-		}
-
-		if (!out_pkgname){
-			if (out_pkgpath)
-				right = path2
-		}else if (!out_pkgpath){
-			right = name2
-		}else{
-			right = path2 ";" name2
-		}
+		right = pair2
 
 		# left part
 		path1_cnt = split(pair1, pair1_arr, /[|]/)
 		left = ""
 		for (i=1; i <= path1_cnt; ++i){
 			p1 = pair1_arr [i]
-			l = ""
-			if (out_pkgname){
-				if (keep_ver)
-					name1 = g_pair2name [p1]
-				else
-					name1 = g_pair2base [p1]
-			}
-
-			if (!out_pkgname){
-				if (out_pkgpath)
-					l = pair2path(p1)
-			}else if (!out_pkgpath){
-				l = name1
-			}else{
-				l = pair2path(p1) ";" name1
-			}
+			l = p1
 
 			if (l != ""){
+				already_printed [l] = 1
 				if (left == "")
 					left = l
 				else
@@ -498,48 +533,27 @@ END {
 			}
 		}
 		if (left != ""){
-			if (keep_depver)
-				print prepand left, right, "(", final_deps [triple], ")"
-			else
-				print prepand left, right
+			print_pair(prepand, left, right, final_deps [triple])
 		}
 
-		already_printed [path1] = already_printed [path2] = 1
+		already_printed [pair2] = 1
 	}
 
 	# printing packages with no dependencies
-	for (pair in g_pair2base){
-		path = pair2path(pair)
+	if (dep_builddep || dep_depends){
+		for (pair in g_pair2name){
+			path = pair2path(pair)
 
-		if (path in already_printed)
-			continue
+			if (pair in already_printed)
+				continue
 
-		name = g_pair2name [pair]
-		base = g_pair2base [pair]
-		if (!all_packages && !(path in PKGPATHs) && !(name in PKGNAMEs))
-			continue
+			name = pair2name(pair)
+			if (!all_packages && !(path in PKGPATHs) && !(name in PKGNAMEs))
+				continue
 
-		# main action
-		if (out_pkgname){
-			if (!keep_ver)
-				name = base
-		}
-
-		p = ""
-		if (!out_pkgname){
-			if (out_pkgpath)
-				p = path
-		}else if (!out_pkgpath){
-			p = name
-		}else{
-			p = path ";" name
-		}
-
-		if (p != ""){
-			if (mode_tsort)
-				print p, p
-			else
-				print p
+			# main action
+			if (pair != "")
+				print_pair("", pair, "", "")
 		}
 	}
 
