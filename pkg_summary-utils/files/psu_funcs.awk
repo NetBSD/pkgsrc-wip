@@ -22,6 +22,12 @@ function pkgpana2pkgbase (pkgpana,         idx){
 	return substr(pkgpana, idx, pkgver_position(pkgpana)-idx)
 }
 
+# strip PKGNAME from PKGPANA
+function pkgpana2pkgpath (pkgpana){
+	idx = index(pkgpana, ";")
+	return substr(pkgpana, 1, idx-1)
+}
+
 # extract version from PKGNAME, e.g. -1.2.3, -[0-9]*, >=1.0 etc.
 function pkgname2version (pkgname,       pos){
 	pos = pkgver_position(pkgname)

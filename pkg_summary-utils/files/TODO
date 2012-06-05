@@ -1,5 +1,9 @@
 TODO list and thoughts
 
+pkg_summary2leaves:
+  -n -- print PKGNAME
+  -r -- print version
+
 pkg_lint4view:
 
 existing tools:

@@ -1,4 +1,23 @@
 ----------------------------------------------------------------------
+Version 0.58.1, by Aleksey Cheusov, Wed,  6 Jun 2012 01:32:08 +0300
+
+  pkg_summary2deps:
+    - Fix in 'pkg_summary2deps -dn'
+      (missing pkgname if multivariant packages are present,
+      for example py26-gtk2 and py27-gtk2)
+
+  pkg_summary2leaves:
+    - Fix. 'pkg_summary2deps -dpnra' should be used
+      instead of 'pkg_summary2deps -dpa'
+
+  More regression tests for pkg_summary2leaves and pkg_summary2deps
+
+  Minor fix in pkg_uniq_summary.1
+
+  psu_funcs.awk:
+    - new function pkgpana2pkgpath
+
+----------------------------------------------------------------------
 Version 0.58.0, by Aleksey Cheusov, Sun, 22 Apr 2012 19:17:11 +0300
 
   pkg_uniq_summary:
