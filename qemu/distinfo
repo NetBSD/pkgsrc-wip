@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.8 2012/06/03 09:00:55 ryo-on Exp $
+$NetBSD: distinfo,v 1.9 2012/06/06 21:23:41 ryo-on Exp $
 
 SHA1 (qemu-1.1.0.tar.bz2) = 9f761d17bee8b6e7737fbcabbbaac50bc999a0ee
 RMD160 (qemu-1.1.0.tar.bz2) = f2066f9b28298cfe6c7df7d3210fa95b177cc420
 Size (qemu-1.1.0.tar.bz2) = 9629317 bytes
+SHA1 (patch-audio_audio.c) = 1963858a0ce7701842881f937ec1699c12347524
 SHA1 (patch-eg) = f06b9c675717fd54afba0cf2714158b358078a15
 SHA1 (patch-eh) = 9425da879c4809abe6959b402cb98de370f9ceb6
 SHA1 (patch-en) = 01f74603909474d222f9c8bc75c831b5c7393045
