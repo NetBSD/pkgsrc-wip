@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.3 2012/06/07 14:29:36 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/06/07 16:57:52 asau Exp $
 
-DISTNAME=	chicken-4.7.4
+DISTNAME=	chicken-4.7.4 # development snapshot
 CATEGORIES=	lang
 MASTER_SITES=	http://code.call-cc.org/releases/${PKGVERSION_NOREV}/ \
 		http://code.call-cc.org/dev-snapshots/2012/02/07/
 
 MAINTAINER=	asau@inbox.ru #, airhead@users.sourceforge.net
 HOMEPAGE=	http://www.call-cc.org/
-COMMENT=	Scheme to C compiler, handling R5RS
+COMMENT=	Scheme to C compiler, handling R5RS (development snapshot)
 LICENSE=	modified-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
