@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4772 2012/06/07 18:02:20 slitvinov Exp $
+# $Id: Makefile,v 1.4773 2012/06/07 18:13:26 slitvinov Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2491,6 +2491,7 @@ SUBDIR+=	py-scikits_vectorplot
 SUBDIR+=	py-scimath
 SUBDIR+=	py-sciproc
 SUBDIR+=	py-scitools
+SUBDIR+=	py-scrapy
 SUBDIR+=	py-scrobbler
 SUBDIR+=	py-se
 SUBDIR+=	py-selenium
