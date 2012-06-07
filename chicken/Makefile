@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/06/07 16:57:52 asau Exp $
+# $NetBSD: Makefile,v 1.5 2012/06/07 16:59:25 asau Exp $
 
 DISTNAME=	chicken-4.7.4 # development snapshot
 CATEGORIES=	lang
@@ -20,7 +20,7 @@ MAKE_FILE=		GNUmakefile
 UNLIMIT_RESOURCES=	datasize
 
 INSTALLATION_DIRS=	share/chicken
-OWN_DIRS=		${PREFIX}/lib/chicken ${PREFIX}/lib/chicken/5
+OWN_DIRS=		${PREFIX}/lib/chicken ${PREFIX}/lib/chicken/6
 
 BUILD_TARGET=		all
 
