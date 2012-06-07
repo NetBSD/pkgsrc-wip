@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2010/10/06 20:04:18 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/06/07 14:29:36 asau Exp $
 
-DISTNAME=	chicken-4.6.2
+DISTNAME=	chicken-4.7.4
 CATEGORIES=	lang
 MASTER_SITES=	http://code.call-cc.org/releases/${PKGVERSION_NOREV}/ \
-		http://code.call-cc.org/dev-snapshots/2010/10/06/
+		http://code.call-cc.org/dev-snapshots/2012/02/07/
 
 MAINTAINER=	asau@inbox.ru #, airhead@users.sourceforge.net
 HOMEPAGE=	http://www.call-cc.org/
@@ -16,6 +16,7 @@ MAKE_JOBS_SAFE=		no
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
+MAKE_FILE=		GNUmakefile
 UNLIMIT_RESOURCES=	datasize
 
 INSTALLATION_DIRS=	share/chicken
