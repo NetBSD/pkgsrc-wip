@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/06/07 18:11:03 slitvinov Exp $
+
+SHA1 (Scrapy-0.14.4.tar.gz) = 927ead539873f04aba36ff01f784b270501e44f0
+RMD160 (Scrapy-0.14.4.tar.gz) = 34ad6566f726379c7f07476e0d8d1c5528ecff2d
+Size (Scrapy-0.14.4.tar.gz) = 726253 bytes
