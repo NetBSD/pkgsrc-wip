@@ -1,0 +1,2 @@
+A library of web-related functions. It can remove comments, extract
+base URL, convert HTTP headers to dicts and vice-versa.
