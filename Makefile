@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4771 2012/06/06 18:27:19 leot1990 Exp $
+# $Id: Makefile,v 1.4772 2012/06/07 18:02:20 slitvinov Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2575,6 +2575,7 @@ SUBDIR+=	py-visionegg-demos
 SUBDIR+=	py-visionegg-docs
 SUBDIR+=	py-vo
 SUBDIR+=	py-vtkmodule
+SUBDIR+=	py-w3lib
 SUBDIR+=	py-wadllib
 SUBDIR+=	py-wafo
 SUBDIR+=	py-wally
