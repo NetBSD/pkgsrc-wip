@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.5 2012/05/14 20:03:58 bsiegert Exp $
+# $NetBSD: Makefile,v 1.6 2012/06/09 11:09:27 bsiegert Exp $
 #
 
-DISTNAME=	joe-3.1jupp18.cpio
-PKGNAME=	jupp-3.1.18
+DISTNAME=	joe-3.1jupp20
+PKGNAME=	${DISTNAME:S/jupp/./:S/joe/jupp/}
 CATEGORIES=	editors
 MASTER_SITES=	http://www.mirbsd.org/MirOS/dist/jupp/ \
 		http://pub.allbsd.org/MirOS/dist/jupp/
-EXTRACT_SUFX=	.gz
+EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	adam.hoka@gmail.com
 HOMEPAGE=	http://www.mirbsd.org/jupp.htm
