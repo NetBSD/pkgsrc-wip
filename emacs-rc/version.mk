@@ -1,0 +1,7 @@
+# $NetBSD: version.mk,v 1.1.1.1 2012/06/09 15:14:43 makoto Exp $
+
+_EMACS_FLAVOR=	emacs
+_EMACS_REQD=	emacs>=23.2<24
+
+_EMACS_VERSION_MAJOR=	24
+_EMACS_VERSION_MINOR=	1
