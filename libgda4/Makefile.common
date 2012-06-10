@@ -1,7 +1,8 @@
-# $NetBSD: Makefile.common,v 1.4 2012/05/15 14:08:40 noud4 Exp $
+# $NetBSD: Makefile.common,v 1.5 2012/06/10 10:16:22 noud4 Exp $
 #
 
 DISTNAME=		libgda-4.2.13
+PKGNAME=		${DISTNAME:S|-4|4-4|}
 CATEGORIES=		databases gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libgda/4.2/}
 EXTRACT_SUFX=		.tar.xz

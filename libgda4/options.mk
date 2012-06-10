@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2012/05/15 14:08:40 noud4 Exp $
+# $NetBSD: options.mk,v 1.4 2012/06/10 10:16:22 noud4 Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.libgda4				# XXX libgda4, to have mk.conf options on a per libgda basis.
 PKG_SUPPORTED_OPTIONS=	bdb jdbc ldap mdb mysql postgres web
@@ -118,6 +118,14 @@ CONFIGURE_ARGS+=	--enable-json
 
 .if !empty(PKG_OPTIONS:Mui) || !empty(PKG_OPTIONS:Mgui)
 PLIST_SRC+=		${PKGDIR}/PLIST ${PKGDIR}/PLIST.gui_ui
+
+post-install:
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/icons
+	${CP} ${DESTDIR}${PREFIX}/share/libgda-4.0/pixmaps/gda-control-center.png ${DESTDIR}${PREFIX}/share/icons
+	# XXX needed for gnumeric-1.10.17nb5
+	${INSTALL_DATA_DIR} ${DESTDIR}/${PREFIX}/include/libgda-4.0/libgda/control-center
+	${INSTALL_DATA} ${WRKSRC}/control-center/gdaui-login-dialog.h ${DESTDIR}/${PREFIX}/include/libgda-4.0/libgda/control-center
+
 .  include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .  include "../../security/libgcrypt/buildlink3.mk"
 .  include "../../x11/gtk2/buildlink3.mk"
