@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/06/13 22:47:21 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2012/06/10 12:07:00 leot1990 Exp $
 #
 
 DISTNAME=	xcowsay-1.2
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	http://www.nickg.me.uk/files/
 
-MAINTAINER=	leot1990@users.sourceforge.net
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.doof.me.uk/xcowsay/
 COMMENT=	Display a cow and message on your desktop
 LICENSE=	gnu-gpl-v3

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/09/12 12:12:54 rhialto Exp $
+# $NetBSD: Makefile,v 1.6 2012/06/10 12:06:59 leot1990 Exp $
 #
 
 DISTNAME=	splix-2.0.0
@@ -7,7 +7,7 @@ CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=splix/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	leot1990@users.sourceforge.net
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://splix.sourceforge.net/
 COMMENT=	Driver for SPL printers (Samsung and Xerox)
 LICENSE=	gnu-gpl-v2

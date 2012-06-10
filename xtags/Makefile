@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/05/19 09:00:14 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2012/06/10 12:06:59 leot1990 Exp $
 #
 
 DISTNAME=	xtags-0.5
@@ -6,7 +6,7 @@ CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xtags/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	leot1990@users.sourceforge.net
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://xtags.sourceforge.net/
 COMMENT=	Little keyboard-driven Window Manager for X11
 LICENSE=	gnu-gpl-v3

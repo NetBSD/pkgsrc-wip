@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2009/09/11 20:30:52 leot1990 Exp $
+# $NetBSD: Makefile,v 1.13 2012/06/10 12:07:00 leot1990 Exp $
 #
 
 DISTNAME=	MediaWiki-API-0.28
@@ -6,7 +6,7 @@ PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/E/EX/EXOBUZZ/}
 
-MAINTAINER=	leot1990@users.sourceforge.net
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/MediaWiki-API/
 COMMENT=	Perl interface to the MediaWiki API
 LICENSE=	gnu-gpl-v3

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/08/29 21:19:45 leot1990 Exp $
+# $NetBSD: Makefile,v 1.2 2012/06/10 12:07:00 leot1990 Exp $
 #
 
 DISTNAME=	Pod-Constants-0.16
@@ -6,7 +6,7 @@ PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/S/SA/SAMV/}
 
-MAINTAINER=	leot1990@users.sourceforge.net
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Pod-Constants/
 COMMENT=	Include constants from POD
 LICENSE=	artistic-2.0 # OR gnu-gpl-v2
