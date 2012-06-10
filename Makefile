@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4773 2012/06/07 18:13:26 slitvinov Exp $
+# $Id: Makefile,v 1.4774 2012/06/10 12:42:21 leot1990 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2868,6 +2868,7 @@ SUBDIR+=	swig2
 SUBDIR+=	sword
 SUBDIR+=	sxemacs
 SUBDIR+=	sxid
+SUBDIR+=	sxiv
 SUBDIR+=	symmetrica
 SUBDIR+=	symon
 SUBDIR+=	sympow
