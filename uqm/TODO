@@ -1,2 +1,0 @@
-. destdir support broken: destdir is leaked into bin/uqm
-. missing rpath: with native X, libGL.so.2 isn't found

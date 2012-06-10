@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2009/10/11 10:45:23 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.5 2012/06/10 11:54:47 leot1990 Exp $
 bin/uqm
 lib/uqm/uqm
 share/doc/uqm/manual.txt
-share/uqm/content/packages/uqm-0.6.0-content.uqm
+share/uqm/content/packages/${PKGNAME}-content.uqm
 share/uqm/content/version

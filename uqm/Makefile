@@ -1,44 +1,52 @@
-# $NetBSD: Makefile,v 1.16 2010/06/13 22:47:21 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.17 2012/06/10 11:54:47 leot1990 Exp $
 #
 
-DISTNAME=	uqm-0.6.2-source
+DISTNAME=	uqm-0.7.0-source
 PKGNAME=	${DISTNAME:S/-source//}
-PKGREVISION=	2
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sc2/}
 EXTRACT_SUFX=	.tgz
-DISTFILES=		${DEFAULT_DISTFILES} uqm-0.6.0-content.uqm
+DISTFILES=		${DEFAULT_DISTFILES} uqm-0.7.0-content.uqm
 
-MAINTAINER=	leot1990@users.sourceforge.net
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sc2.sourceforge.net/
 COMMENT=	Ur-Quan Masters
-# GPL and Creative Commons Attribution-NonCommercial-ShareAlike 2.5
+# FIXME: GPL and Creative Commons Attribution-NonCommercial-ShareAlike 2.5
 #LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 DIST_SUBDIR=		uqm
 EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
+INTERACTIVE_STAGE=	configure
 USE_TOOLS=		gmake pkg-config
-WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}/sc2
+WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
+
+SUBST_CLASSES+=		nomenu
+SUBST_STAGE.nomenu=	pre-configure
+SUBST_MESSAGE.nomenu=	Make configure process non-interactive.
+SUBST_FILES.nomenu=	build/unix/menu_functions
+SUBST_SED.nomenu+=	-e 's/read /\#read /'
 
 SUBST_CLASSES+=		config
 SUBST_STAGE.config=	post-configure
-SUBST_MESSAGE.config=	Fixing config.state...
+SUBST_MESSAGE.config=	Fixing config.state.
 SUBST_FILES.config=	config.state
+SUBST_SED.config+=	-e 's;opengl;pure;' # Disable OpenGL support
 SUBST_SED.config+=	-e 's;/usr/local/games;${DESTDIR}${PREFIX};'
+
 
 INSTALLATION_DIRS=	bin lib share/uqm/content/packages share/doc/uqm
 
 do-configure:
-	cd ${WRKSRC} && ./build.sh uqm config
+	cd ${WRKSRC} &&./build.sh uqm config
 
 do-build:
 	cd ${WRKSRC} && ./build.sh uqm reprocess_config && ./build.sh uqm
 
 do-install:
 	cd ${WRKSRC} && ./build.sh uqm install
-	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/uqm-0.6.0-content.uqm \
+	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/uqm-0.7.0-content.uqm \
 		${DESTDIR}${PREFIX}/share/uqm/content/packages
 	${INSTALL_DATA} ${WRKSRC}/doc/users/manual.txt \
 		${DESTDIR}${PREFIX}/share/doc/uqm

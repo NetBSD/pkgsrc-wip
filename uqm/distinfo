@@ -1,9 +1,8 @@
-$NetBSD: distinfo,v 1.3 2008/10/08 19:57:50 leot1990 Exp $
+$NetBSD: distinfo,v 1.4 2012/06/10 11:54:47 leot1990 Exp $
 
-SHA1 (uqm/uqm-0.6.0-content.uqm) = f4b374d2029f0e2d26c0eaf5ed97fd157b53e4f5
-RMD160 (uqm/uqm-0.6.0-content.uqm) = d56d06c377e44288d5bd41f8d68d59c87b58ccdb
-Size (uqm/uqm-0.6.0-content.uqm) = 11580000 bytes
-SHA1 (uqm/uqm-0.6.2-source.tgz) = 79e393ba8ad2c786d4e633ba855859dc039bacd2
-RMD160 (uqm/uqm-0.6.2-source.tgz) = 3f36fdc750607fddb68d52195f079e31860020a7
-Size (uqm/uqm-0.6.2-source.tgz) = 1497342 bytes
-SHA1 (patch-aa) = 4fb661fdb2479b8458b9e08bc1b0adad902681bf
+SHA1 (uqm/uqm-0.7.0-content.uqm) = 2dea07390708790779ae25886e9331b5eb0bdf68
+RMD160 (uqm/uqm-0.7.0-content.uqm) = 92d0e6bde471fd3c6b9147211f09263c1a9482f7
+Size (uqm/uqm-0.7.0-content.uqm) = 11538533 bytes
+SHA1 (uqm/uqm-0.7.0-source.tgz) = 55e5257690650e63f131024ab8fdfdddcf5627bc
+RMD160 (uqm/uqm-0.7.0-source.tgz) = b760ad256075e4e225e44e5a738a013a9a5e6483
+Size (uqm/uqm-0.7.0-source.tgz) = 1562003 bytes
