@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/08/25 22:53:54 leot1990 Exp $
+# $NetBSD: Makefile,v 1.2 2012/06/11 09:45:17 leot1990 Exp $
 #
 
 DISTNAME=	twitmail-0.42
 CATEGORIES=	net
 MASTER_SITES=	http://www.hardakers.net/twitmail/releases/
 
-MAINTAINER=	leot1990@users.sourceforge.net
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.hardakers.net/twitmail/
 COMMENT=	Curses-based mail-like interface to twitter
 LICENSE=	gnu-gpl-v2

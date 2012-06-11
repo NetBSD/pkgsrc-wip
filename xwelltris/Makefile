@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/01/01 08:50:03 leot1990 Exp $
+# $NetBSD: Makefile,v 1.4 2012/06/11 09:45:17 leot1990 Exp $
 #
 
 DISTNAME=	xwelltris-1.0.1.src
@@ -6,7 +6,7 @@ PKGNAME=	${DISTNAME:S/.src//}
 CATEGORIES=	games
 MASTER_SITES=	http://xnc.jinr.ru/xwelltris/src/
 
-MAINTAINER=	leot1990@users.sourceforge.net
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://xnc.jinr.ru/xwelltris/
 COMMENT=	Tetris like popular game
 
