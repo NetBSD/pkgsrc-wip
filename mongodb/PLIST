@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2012/02/24 12:40:55 bartoszkuzma Exp $
+@comment $NetBSD: PLIST,v 1.5 2012/06/11 08:21:47 bartoszkuzma Exp $
 bin/bsondump
 bin/mongo
 bin/mongod
@@ -210,6 +210,7 @@ include/mongo/util/processinfo.h
 include/mongo/util/ramlog.h
 include/mongo/util/signal_handlers.h
 include/mongo/util/queue.h
+include/mongo/util/scopeguard.h
 include/mongo/util/stringutils.h
 include/mongo/util/time_support.h
 include/mongo/util/timer.h

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2012/02/24 12:40:55 bartoszkuzma Exp $
+# $NetBSD: Makefile,v 1.9 2012/06/11 08:21:47 bartoszkuzma Exp $
 
-DISTNAME=	mongodb-src-r2.0.2
+DISTNAME=	mongodb-src-r2.0.6
 PKGNAME=	${DISTNAME:S/src-r//}
 CATEGORIES=	databases
-MASTER_SITES=	http://downloads.mongodb.org/src
+MASTER_SITES=	http://downloads.mongodb.org/src/
 
 MAINTAINER=	bartosz.kuzma@gmail.com
 HOMEPAGE=	http://mongodb.org/
@@ -76,6 +76,7 @@ post-install:
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/boost-python/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
+.include "../../devel/snappy/buildlink3.mk"
 .include "../../lang/spidermonkey/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
