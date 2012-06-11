@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2012/02/23 19:35:32 bartoszkuzma Exp $
+# $NetBSD: Makefile,v 1.2 2012/06/11 08:31:50 bartoszkuzma Exp $
 #
 
 MODNAME=	mongo
-PECL_VERSION=	1.2.9
+PECL_VERSION=	1.2.10
 CATEGORIES=	databases
 
 MAINTAINER=	bartosz.kuzma@gmail.com
