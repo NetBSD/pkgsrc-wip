@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2010/06/13 22:47:15 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2012/06/12 12:31:45 othyro Exp $
 #
 
-DISTNAME=	qt-creator-1.3.1-src
-PKGNAME=	qt-creator-1.3.1
-#PKGREVISION=	1
-PKGREVISION=	1
+DISTNAME=	qt-creator-2.5.0-src
+PKGNAME=	${DISTNAME:S/qt-/qt/:S/-src//}
 CATEGORIES=	devel
 MASTER_SITES=	http://get.qt.nokia.com/qtcreator/
 EXTRACT_SUFX=	.zip
@@ -19,7 +17,7 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake
 
 INSTALLATION_DIRS=      bin lib/qtcreator lib/qtcreator/plugins/Nokia \
-			share/doc/qtcreator share/pixmaps share/qtcreator \
+			share/pixmaps share/qtcreator \
 			share/qtcreator/translations
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -30,14 +28,23 @@ BUILD_TARGET=	make_default qch_docs
 MAKE_ENV+=	PREFIX=${PREFIX}
 
 do-configure:
-	cd ${WRKSRC} && env ${CONFIGURE_ENV} ${QTDIR}/bin/qmake
+	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} ${QTDIR}/bin/qmake
 
 do-install:
 	${LIBTOOL} --mode=install \
-		${INSTALL_PROGRAM} ${WRKSRC}/bin/qtcreator.bin \
-		${DESTDIR}${PREFIX}/bin/qtcreator
+		${INSTALL_SCRIPT} ${WRKSRC}/bin/qtcreator.sh \
+		${DESTDIR}${PREFIX}/bin/
+	${LIBTOOL} --mode=install \
+		${INSTALL_PROGRAM} ${WRKSRC}/bin/qmlprofiler \
+		${DESTDIR}${PREFIX}/bin/
+	${LIBTOOL} --mode=install \
+		${INSTALL_PROGRAM} ${WRKSRC}/bin/qtcreator \
+		${DESTDIR}${PREFIX}/bin/
 	${LIBTOOL} --mode=install \
 		${INSTALL_PROGRAM} ${WRKSRC}/bin/qtcreator_process_stub \
+		${DESTDIR}${PREFIX}/bin/
+	${LIBTOOL} --mode=install \
+		${INSTALL_PROGRAM} ${WRKSRC}/bin/qtpromaker \
 		${DESTDIR}${PREFIX}/bin/
 	${LIBTOOL} --mode=install \
 		${INSTALL_LIB} ${WRKSRC}/lib/qtcreator/*.la \
@@ -49,18 +56,16 @@ do-install:
 		${INSTALL_DATA} ${WRKSRC}/lib/qtcreator/plugins/Nokia/*.pluginspec \
 		${DESTDIR}${PREFIX}/lib/qtcreator/plugins/Nokia/
 	${INSTALL_DATA} \
-		 ${WRKSRC}/src/plugins/coreplugin/images/qtcreator_logo*.png \
+		${WRKSRC}/src/plugins/coreplugin/images/logo/48/qtcreator.png \
 		${DESTDIR}${PREFIX}/share/pixmaps/
-	${INSTALL_DATA} ${WRKSRC}/share/doc/qtcreator/qtcreator.qch \
-		${DESTDIR}${PREFIX}/share/doc/qtcreator/
 	${INSTALL_DATA} ${WRKSRC}/share/qtcreator/translations/*.qm \
 		${DESTDIR}${PREFIX}/share/qtcreator/translations/
-	cd ${WRKSRC}/share/qtcreator && ${FIND} designer gdbmacros \
-		schemes snippets templates -type d -exec \
+	cd ${WRKSRC}/share/qtcreator && ${FIND} designer schemes snippets \
+		templates -type d -exec \
                 ${INSTALL_DATA_DIR} "${WRKSRC}/share/qtcreator/{}" \
 		"${DESTDIR}${PREFIX}/share/qtcreator/{}" ";"
-	cd ${WRKSRC}/share/qtcreator && ${FIND} designer gdbmacros \
-		schemes snippets templates -type f \! -name "*.orig" -exec \
+	cd ${WRKSRC}/share/qtcreator && ${FIND} designer schemes snippets \
+		templates -type f \! -name "*.orig" -exec \
                 ${INSTALL_DATA} "${WRKSRC}/share/qtcreator/{}" \
 		"${DESTDIR}${PREFIX}/share/qtcreator/{}" ";"
 
