@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.2 2010/03/17 06:02:11 uccwen Exp $
+# $NetBSD: options.mk,v 1.3 2012/06/12 15:10:40 uccwen Exp $
 
 PKG_OPTIONS_VAR =	PKG_OPTIONS.SQLObject
-PKG_SUPPORTED_OPTIONS=	firebird mysql psycopg2 sqlite sybase
+PKG_SUPPORTED_OPTIONS=	mysql psycopg2 sqlite sybase
 PKG_SUGGESTED_OPTIONS=	psycopg2
 
 .include "../../mk/bsd.options.mk"

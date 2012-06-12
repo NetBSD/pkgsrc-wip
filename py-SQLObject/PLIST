@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2012/05/11 12:48:40 noud4 Exp $
+@comment $NetBSD: PLIST,v 1.6 2012/06/12 15:10:40 uccwen Exp $
 bin/sqlobject-admin
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -9,6 +9,9 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/sqlobject/__init__.py
 ${PYSITELIB}/sqlobject/__init__.pyc
 ${PYSITELIB}/sqlobject/__init__.pyo
+${PYSITELIB}/sqlobject/__version__.py
+${PYSITELIB}/sqlobject/__version__.pyc
+${PYSITELIB}/sqlobject/__version__.pyo
 ${PYSITELIB}/sqlobject/boundattributes.py
 ${PYSITELIB}/sqlobject/boundattributes.pyc
 ${PYSITELIB}/sqlobject/boundattributes.pyo
@@ -51,6 +54,9 @@ ${PYSITELIB}/sqlobject/firebird/firebirdconnection.pyo
 ${PYSITELIB}/sqlobject/include/__init__.py
 ${PYSITELIB}/sqlobject/include/__init__.pyc
 ${PYSITELIB}/sqlobject/include/__init__.pyo
+${PYSITELIB}/sqlobject/include/hashcol.py
+${PYSITELIB}/sqlobject/include/hashcol.pyc
+${PYSITELIB}/sqlobject/include/hashcol.pyo
 ${PYSITELIB}/sqlobject/include/pydispatch/__init__.py
 ${PYSITELIB}/sqlobject/include/pydispatch/__init__.pyc
 ${PYSITELIB}/sqlobject/include/pydispatch/__init__.pyo
@@ -114,6 +120,12 @@ ${PYSITELIB}/sqlobject/postgres/__init__.pyo
 ${PYSITELIB}/sqlobject/postgres/pgconnection.py
 ${PYSITELIB}/sqlobject/postgres/pgconnection.pyc
 ${PYSITELIB}/sqlobject/postgres/pgconnection.pyo
+${PYSITELIB}/sqlobject/rdbhost/__init__.py
+${PYSITELIB}/sqlobject/rdbhost/__init__.pyc
+${PYSITELIB}/sqlobject/rdbhost/__init__.pyo
+${PYSITELIB}/sqlobject/rdbhost/rdbhostconnection.py
+${PYSITELIB}/sqlobject/rdbhost/rdbhostconnection.pyc
+${PYSITELIB}/sqlobject/rdbhost/rdbhostconnection.pyo
 ${PYSITELIB}/sqlobject/sqlbuilder.py
 ${PYSITELIB}/sqlobject/sqlbuilder.pyc
 ${PYSITELIB}/sqlobject/sqlbuilder.pyo
