@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.2 2008/11/01 07:37:45 gschwarz Exp $
+# $NetBSD: options.mk,v 1.3 2012/06/12 15:46:34 thomasklausner Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.tftp-hpa
 PKG_SUPPORTED_OPTIONS=	tcpwrappers remap inet6
-PKG_SUGGESTED_OPTIONS=
+PKG_SUGGESTED_OPTIONS=	inet6
 
 .include "../../mk/bsd.options.mk"
 

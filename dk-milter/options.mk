@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.2 2007/08/06 19:47:29 jukka Exp $
+# $NetBSD: options.mk,v 1.3 2012/06/12 15:46:34 thomasklausner Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.dk-milter
-PKG_SUPPORTED_OPTIONS=	inet6 arlib
-PKG_SUGGESTED_OPTIONS=	arlib
+PKG_SUPPORTED_OPTIONS=	arlib inet6
+PKG_SUGGESTED_OPTIONS=	arlib inet6
 
 .include "../../mk/bsd.options.mk"
 

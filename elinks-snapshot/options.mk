@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2007/11/17 23:56:59 adrian_p Exp $
+# $NetBSD: options.mk,v 1.5 2012/06/12 15:46:34 thomasklausner Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.elinks
 PKG_SUPPORTED_OPTIONS+=	bittorrent nntp spidermonkey finger gopher
@@ -8,7 +8,7 @@ PKG_SUPPORTED_OPTIONS+= elinks-use-alloca boehm-gc
 PKG_OPTIONS_GROUP.tls=	gnutls ssl
 PKG_OPTIONS_REQUIRED_GROUPS=	tls
 PKG_SUGGESTED_OPTIONS=	ssl spidermonkey x11 elinks-exmode boehm-gc expat
-PKG_SUGGESTED_OPTIONS+= elinks-html-highlight bittorrent
+PKG_SUGGESTED_OPTIONS+= elinks-html-highlight bittorrent inet6
 
 .include "../../mk/bsd.options.mk"
 

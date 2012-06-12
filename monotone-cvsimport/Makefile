@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/02/28 14:53:17 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2012/06/12 15:46:34 thomasklausner Exp $
 #
 
 DISTNAME=	monotone-cvsimport-20080325
@@ -26,6 +26,7 @@ CONFIGURE_ARGS+=	--with-system-pcre
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.monotone
 PKG_SUPPORTED_OPTIONS=	inet6
+PKG_SUGGESTED_OPTIONS=	inet6
 
 CHECK_INTERPRETER_SKIP+=	share/monotone/contrib/*
 CHECK_PORTABILITY_SKIP+=	debian/*

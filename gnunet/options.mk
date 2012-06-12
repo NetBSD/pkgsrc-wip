@@ -1,10 +1,11 @@
-# $NetBSD: options.mk,v 1.4 2006/12/16 10:58:14 thomasklausner Exp $
+# $NetBSD: options.mk,v 1.5 2012/06/12 15:46:34 thomasklausner Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gnunet
 PKG_OPTIONS_REQUIRED_GROUPS=	security
 PKG_OPTIONS_GROUP.security=	libgcrypt ssl
 PKG_SUPPORTED_OPTIONS=	bdb gdbm inet6 tdb
+PKG_SUGGESTED_OPTIONS=	inet6
 
 # some sane defaults to use base OS functionality where appropriate
 .if !empty(OPSYS:M*BSD)

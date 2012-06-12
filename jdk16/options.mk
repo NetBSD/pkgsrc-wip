@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.5 2009/10/20 10:24:22 absd Exp $
+# $NetBSD: options.mk,v 1.6 2012/06/12 15:46:34 thomasklausner Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.jdk16
 PKG_SUPPORTED_OPTIONS=		sun-jre-jce inet6 debug fastdebug # jdk16-plugin
-PKG_SUGGESTED_OPTIONS=		# jdk16-plugin
+PKG_SUGGESTED_OPTIONS=		inet6 # jdk16-plugin
 
 # fixme
 #.include "../../www/seamonkey/gecko-options.mk"

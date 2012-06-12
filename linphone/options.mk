@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.4 2011/03/08 22:12:35 gschwarz Exp $
+# $NetBSD: options.mk,v 1.5 2012/06/12 15:46:34 thomasklausner Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.linphone
 PKG_SUPPORTED_OPTIONS=	alsa inet6 linphone-gui linphone-video gsm
-PKG_SUGGESTED_OPTIONS=	linphone-gui linphone-video gsm
+PKG_SUGGESTED_OPTIONS=	inet6 linphone-gui linphone-video gsm
 
 .include "../../mk/bsd.options.mk"
 

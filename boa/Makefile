@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2010/09/05 09:10:47 gschwarz Exp $
+# $NetBSD: Makefile,v 1.17 2012/06/12 15:46:33 thomasklausner Exp $
 #
 
 DISTNAME=	boa-0.94.14rc21
@@ -26,8 +26,9 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 CPPFLAGS+=	-Dsocklen_t=int
 .endif
 
-PKG_SUPPORTED_OPTIONS=	inet6
 PKG_OPTIONS_VAR=	PKG_OPTIONS.boa
+PKG_SUPPORTED_OPTIONS=	inet6
+PKG_SUGGESTED_OPTIONS=	inet6
 
 .include "../../mk/bsd.options.mk"
 

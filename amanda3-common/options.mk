@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.1.1.1 2010/08/24 02:40:36 schnoebe Exp $
-
-# Since amanda's ipv6 usage is broken, turn it off by default.
+# $NetBSD: options.mk,v 1.2 2012/06/12 15:46:33 thomasklausner Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.amanda
 PKG_SUPPORTED_OPTIONS=	inet6 ssh fqdn readline smbclient dump-snap
+# Since amanda's ipv6 usage is broken, turn it off by default.
+#PKG_SUGGESTED_OPTIONS=	inet6
 
 .include "../../mk/bsd.options.mk"
 
