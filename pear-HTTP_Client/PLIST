@@ -1,5 +1,1 @@
-@comment $NetBSD: PLIST,v 1.2 2012/06/03 23:42:21 othyro Exp $
-lib/php/HTTP/Client.php
-lib/php/HTTP/Client/CookieManager.php
-lib/php/doc/HTTP_Client/examples/link-checker.php
-lib/php/.registry/http_client.reg
+@comment $NetBSD: PLIST,v 1.3 2012/06/12 12:49:50 othyro Exp $
