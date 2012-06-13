@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2009/05/08 20:50:16 cheusov Exp $
+# $NetBSD: Makefile,v 1.11 2012/06/13 19:44:18 othyro Exp $
 
 DISTNAME=		boost-test-suite-20090305
 CATEGORIES=		devel
@@ -8,6 +8,7 @@ DISTFILES=		# empty
 MAINTAINER?=		brook@nmsu.edu
 HOMEPAGE?=		http://www.boost.org/
 COMMENT?=		Run the Boost test suite
+LICENSE=		boost-license
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -18,7 +19,7 @@ FTP=			${TOOLS_PLATFORM.ftp}
 HOSTNAME=		${TOOLS_PLATFORM.hostname}
 TEE=			${TOOLS_PLATFORM.tee}
 
-BOOST_TEST_BASEDIR?=	/var/boost
+BOOST_TEST_BASEDIR?=	${VARBASE}/boost
 
 CHECK_PERMS=		no
 NO_BUILD=		yes
