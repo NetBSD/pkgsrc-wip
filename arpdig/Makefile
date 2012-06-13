@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/01/06 02:18:50 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2012/06/13 06:57:22 othyro Exp $
 #
 
 DISTNAME=	arpdig-0.5.2
@@ -6,8 +6,9 @@ CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=arpdig/}
 
 MAINTAINER=	prudhvi-krishna-bsd@surapaneni.in
-HOMEPAGE=	http://downloads.sourceforge.net/sourceforge/arpdig/
+HOMEPAGE=	http://arpdig.sourceforge.net/
 COMMENT=	Arp digger utility
+LICENSE=	2-clause-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
