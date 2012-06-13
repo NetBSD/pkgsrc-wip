@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/05/26 13:59:43 tnn2 Exp $
+# $NetBSD: Makefile,v 1.7 2012/06/13 07:07:14 othyro Exp $
 #
 
 DISTNAME=		artemis_compiled_v6
@@ -10,6 +10,9 @@ MASTER_SITES=		ftp://ftp.sanger.ac.uk/pub/pathogens/software/artemis/v6/
 MAINTAINER=		dprice@cs.nmsu.edu
 HOMEPAGE=		http://www.sanger.ac.uk/Software/Artemis/
 COMMENT=		Genome viewer and annotation too
+LICENSE=		gnu-gpl-v2
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/artemis
 USE_JAVA=		yes
