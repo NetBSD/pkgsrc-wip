@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2009/12/03 00:49:39 jihbed Exp $
+$NetBSD: distinfo,v 1.4 2012/06/13 16:50:08 othyro Exp $
 
 SHA1 (bleachbit-0.7.2.tar.bz2) = 1fff4832b2d1d514c44254392a6fac5e5ad7a057
 RMD160 (bleachbit-0.7.2.tar.bz2) = 6b6125520900619b0501f55cad8c825f383f1270
 Size (bleachbit-0.7.2.tar.bz2) = 197750 bytes
-SHA1 (patch-aa) = 265205080a22cdf01876bbab1bc09bc21879399f
+SHA1 (patch-aa) = cf6bfd87d8007e35bf569dfe173bc3349916977a
