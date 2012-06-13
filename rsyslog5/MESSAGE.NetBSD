@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2012/02/13 13:50:13 bartoszkuzma Exp $
+$NetBSD: MESSAGE.NetBSD,v 1.1 2012/06/13 09:44:31 bartoszkuzma Exp $
 
 If you want to run rsyslogd as replacement for syslogd(8), you should
 copy rsyslogd script to /etc/rc.d and change your /etc/rc.conf:

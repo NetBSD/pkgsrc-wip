@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/06/11 08:43:57 bartoszkuzma Exp $
+# $NetBSD: Makefile,v 1.10 2012/06/13 09:44:31 bartoszkuzma Exp $
 #
 
 DISTNAME=		rsyslog-5.8.12
@@ -47,7 +47,11 @@ SUBST_SED.conf+=	-e 's,@RSYSLOG_SYSMOD@,im${RSYSLOG_SYSMOD},'
 SUBST_SED.conf+=	-e 's,@VARBASE@,${VARBASE},'
 
 post-extract:
+.	if exists(${FILESDIR}/rsyslog.conf.${OPSYS})
+	${RUN} ${CP} ${FILESDIR}/rsyslog.conf.${OPSYS} ${WRKSRC}/rsyslog.conf
+.	else
 	${RUN} ${CP} ${FILESDIR}/rsyslog.conf ${WRKSRC}
+.	endif
 
 post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}

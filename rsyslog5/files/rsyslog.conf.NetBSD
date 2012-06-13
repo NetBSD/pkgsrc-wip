@@ -1,0 +1,50 @@
+# @PKG_SYSCONFDIR@/rsyslog.conf
+
+# For more information see @PREFIX@/share/rsyslog/doc/rsyslog_conf.html
+# If you experience problems, check http://www.rsyslog.com/troubleshoot
+
+#### MODULES ####
+
+$ModLoad imuxsock # provides support for local system logging
+$IncludeConfig /var/run/rsyslogd.sockets
+
+$ModLoad immark   # provides --MARK-- message capability
+$ModLoad @RSYSLOG_SYSMOD@
+
+# Provides TCP syslog reception
+#$ModLoad imtcp.so
+#$InputTCPServerRun 514
+
+# Provides UDP syslog reception
+#$ModLoad imudp.so
+#$UDPServerRun 514
+
+#### GLOBAL DIRECTIVES ####
+
+# Use default timestamp format
+$ActionFileDefaultTemplate RSYSLOG_TraditionalFileFormat
+
+# Include all config files in @PKG_SYSCONFDIR@/rsyslog.d/
+# $IncludeConfig @PKG_SYSCONFDIR@/rsyslog.d/
+
+#### RULES ####
+
+# NetBSD: syslog.conf,v 1.9 2004/07/23 03:45:42 mycroft Exp
+
+*.err;kern.*;auth.notice;authpriv.none;mail.crit	/dev/console
+*.info;auth,authpriv,cron,ftp,kern,lpr,mail.none	/var/log/messages
+kern.debug						/var/log/messages
+
+# The authpriv log file should be restricted access; these
+# messages shouldn't go to terminals or publically-readable
+# files.
+auth,authpriv.info					/var/log/authlog
+
+cron.info						/var/log/cron
+ftp.info						/var/log/xferlog
+lpr.info						/var/log/lpd-errs
+mail.info						/var/log/maillog
+#uucp.info						/var/spool/uucp/ERRORS
+
+*.emerg							*
+#*.notice						root
