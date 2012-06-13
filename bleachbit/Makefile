@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/04/08 19:09:41 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2012/06/13 16:48:19 othyro Exp $
 #
 
 DISTNAME=	bleachbit-0.7.2
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc.gnome@gmail.com
 HOMEPAGE=	http://bleachbit.sourceforge.net/
 COMMENT=	Bleachbit is a privacy and cleaning tool
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 DEPENDS+=	${PYPKGPREFIX}-gobject>=2.18.0:../../devel/py-gobject
