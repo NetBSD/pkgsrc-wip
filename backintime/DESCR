@@ -21,9 +21,3 @@ In order to reduce disk space, it use the following rules:
     is different from the current directories state
     * when a new snapshot is created, it use hard-links (if possible)
     for files that are not modified
-
-When you restore a file "A", if it already exists on the file system
-it will be renamed to "A.backup.<current data>".
-
-For automatic backup it use "cron" so there is no need for a daemon,
-but "cron" must be running.
