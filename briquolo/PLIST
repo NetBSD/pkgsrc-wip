@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:44:30 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.4 2012/06/13 22:50:26 othyro Exp $
 bin/briquolo
+share/applications/briquolo.desktop
 share/briquolo/${PKGVERSION}
-share/briquolo/briquolo.svg
 share/briquolo/data/.directory
 share/briquolo/data/.xvpics/Environment.4.png
 share/briquolo/data/.xvpics/double.png
@@ -21,9 +21,6 @@ share/briquolo/data/Flare1.xcf
 share/briquolo/data/Flare2.bmp
 share/briquolo/data/Flare3.bmp
 share/briquolo/data/Flare4.bmp
-share/briquolo/data/Makefile
-share/briquolo/data/Makefile.am
-share/briquolo/data/Makefile.in
 share/briquolo/data/Shine1.bmp
 share/briquolo/data/Shine1.png
 share/briquolo/data/Shine2.bmp
@@ -104,8 +101,14 @@ share/briquolo/data/vie.ftx
 share/briquolo/data/vuesubjective.png
 share/briquolo/data/vuesubjective.xcf
 share/locale/be/LC_MESSAGES/briquolo.mo
+share/locale/de/LC_MESSAGES/briquolo.mo
+share/locale/fi/LC_MESSAGES/briquolo.mo
 share/locale/fr/LC_MESSAGES/briquolo.mo
 share/locale/nl/LC_MESSAGES/briquolo.mo
+share/locale/pl/LC_MESSAGES/briquolo.mo
+share/locale/pt/LC_MESSAGES/briquolo.mo
 share/locale/ru/LC_MESSAGES/briquolo.mo
-@exec ${MKDIR} %D/share/briquolo/tableau/old
-@exec ${MKDIR} %D/share/briquolo/tableau/new
+share/locale/sk/LC_MESSAGES/briquolo.mo
+share/pixmaps/briquolo.svg
+@pkgdir share/briquolo/tableau/old
+@pkgdir share/briquolo/tableau/new
