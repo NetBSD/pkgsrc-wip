@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2010/06/13 22:46:57 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2012/06/13 22:49:02 othyro Exp $
 #
 
-DISTNAME=		briquolo-0.5.2
-PKGREVISION=		2
+DISTNAME=		briquolo-0.5.7
 CATEGORIES=		games
 MASTER_SITES=		http://briquolo.free.fr/download/
 EXTRACT_SUFX=		.tar.bz2
@@ -10,14 +9,33 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://briquolo.free.fr/en/
 COMMENT=		3D breakout based on OpenGL
+LICENSE=		gnu-gpl-v3
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+INSTALLATION_DIRS+=	share/applications share/briquolo/data/.xvpics
+INSTALLATION_DIRS+=	share/pixmaps
 
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
+USE_TOOLS+=		grep intltool
+CONFIGURE_ARGS+=	--with-x --x-includes=${BUILDLINK_PREFIX.libX11}/include
+CONFIGURE_ARGS+=	--x-libraries=${BUILDLINK_PREFIX.libX11}/lib
+CONFIGURE_ARGS+=	--includedir=${BUILDLINK_PREFIX.MesaLib}/include/GL
 
 post-install:
-	${CP} -rf ${WRKSRC}/data/data ${PREFIX}/share/briquolo/
+	cd ${WRKSRC}/data/data; set -e; \
+	for FILE in `ls -1 | ${GREP} -v -E '(.xvpics|Makefile)'`; do \
+		${INSTALL_DATA} "$$FILE" ${DESTDIR:Q}${PREFIX:Q}/share/briquolo/data/; \
+	done; \
+	for FILE in .xvpics/*; do \
+		${INSTALL_DATA} $$FILE ${DESTDIR:Q}${PREFIX:Q}/share/briquolo/data/$$FILE; \
+	done
 
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../devel/SDL_ttf/buildlink3.mk"
