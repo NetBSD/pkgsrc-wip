@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/06/13 22:46:56 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2012/06/13 06:33:08 othyro Exp $
 #
 
 DISTNAME=	mod-chxj_0.12.12.src
@@ -10,6 +10,9 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP:=modchxj/32266/}
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://sourceforge.jp/projects/modchxj/wiki/FrontPage
 COMMENT=	CHTML to HDML,XHTML,JHTML convert module for apache2
+LICENSE=	apache-2.0
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake
