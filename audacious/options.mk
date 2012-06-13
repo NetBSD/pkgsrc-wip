@@ -1,6 +1,8 @@
+# $NetBSD: options.mk,v 1.2 2012/06/13 07:34:31 othyro Exp $
+
 PKG_OPTIONS_VAR=        PKG_OPTIONS.audacious
 PKG_SUPPORTED_OPTIONS=  gtk3
-PKG_SUGGESTED_OPTIONS=  
+PKG_SUGGESTED_OPTIONS=  # blank
 
 .include "../../mk/bsd.options.mk"
 
