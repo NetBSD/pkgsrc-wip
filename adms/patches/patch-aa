@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.1 2008/03/08 20:07:58 hoka_adam Exp $
+$NetBSD: patch-aa,v 1.2 2012/06/13 05:35:30 othyro Exp $
+
+Remove forcing the use of flex/bison.
 
 --- configure.ac.orig	2007-12-21 10:10:57.000000000 +0000
 +++ configure.ac
