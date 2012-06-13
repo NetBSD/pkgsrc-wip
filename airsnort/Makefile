@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2010/06/13 22:46:56 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2012/06/13 05:55:03 othyro Exp $
 #
 
 DISTNAME=		airsnort-0.2.7e
@@ -9,7 +9,9 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=airsnort/}
 MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://airsnort.shmoo.com/
 COMMENT=		WLAN sniffer and realtime WEP cracker
+LICENSE=		gnu-gpl-v2
 
+PKG_DESTDIR_SUPPORT=	user-destdir
 DEPENDS+=		linux-wlan-ng>=0.2:../../wip/linux-wlan-ng
 
 USE_PKGLOCALEDIR=	yes
