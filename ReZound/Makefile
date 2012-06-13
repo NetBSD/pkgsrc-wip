@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2010/06/13 22:46:56 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.14 2012/06/13 05:08:05 othyro Exp $
 #
 
 DISTNAME=		rezound-0.12.0beta
@@ -9,7 +9,9 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=rezound/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://rezound.sourceforge.net/
 COMMENT=		Audio editor with graphical interface
+LICENSE=		gnu-gpl-v2
 
+PKG_DESTDIR_SUPPORT=	user-destdir
 # needs real bison and not yacc
 #BUILD_DEPENDS+= 	bison-[0-9]*:../../devel/bison
 
