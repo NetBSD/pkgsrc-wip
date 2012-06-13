@@ -1,5 +1,13 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/04/02 19:40:34 poppnk Exp $
+$NetBSD: distinfo,v 1.2 2012/06/13 22:51:34 othyro Exp $
 
-SHA1 (briquolo-0.5.2.tar.bz2) = 27848aec1a544a5f2159e7daddbb6a137f95de7e
-RMD160 (briquolo-0.5.2.tar.bz2) = 2bd6d65ba32b9326f4e122042aa8948ac81cd7e2
-Size (briquolo-0.5.2.tar.bz2) = 2548510 bytes
+SHA1 (briquolo-0.5.7.tar.bz2) = 72823b6548e0b76bbf5fdf63fe1803eec89a1cba
+RMD160 (briquolo-0.5.7.tar.bz2) = 47f100dd842050f033dbe0efce29b5fef4be3e42
+Size (briquolo-0.5.7.tar.bz2) = 2588084 bytes
+SHA1 (patch-desktop_Makefile.in) = 3dd85c473d1227a5a50b17c9dc75c38fc33930ef
+SHA1 (patch-src_Constante.cpp) = cca2533e943951578f3922b0873a5c686ea73351
+SHA1 (patch-src_MOGL_MOGL__EnsembleObjet.cpp) = b93addbc466c9c8a67fef5df8eadab26844e2609
+SHA1 (patch-src_MOGL_MOGL__GenerateurParticule.h) = 88fb7acafa408a0c6e4f47590625f635b67f743e
+SHA1 (patch-src_MOGL_MOGL__GestionnaireObjet.cpp) = 94024ef24baf6e7811cfb7ea5886d171277eb37c
+SHA1 (patch-src_MOGL_MOGL__Image.cpp) = 1832807782b30248ff0da7191a084cc0f5391868
+SHA1 (patch-src_MOGL_MOGL__Objet.cpp) = 5cb36a5a4586069283c5fd95d64d1b0143d103cd
+SHA1 (patch-src_MOGL_MOGL__Peau.cpp) = 00dbc6fd5de460b165a48b4275bb029ec47c7344
