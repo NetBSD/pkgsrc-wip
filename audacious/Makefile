@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.22 2012/05/26 17:30:13 lokivit Exp $
+# $NetBSD: Makefile,v 1.23 2012/06/13 07:35:56 othyro Exp $
 #
 
 DISTNAME=	audacious-3.2.3
-CATEGORIES=	wip
+CATEGORIES=	audio
 MASTER_SITES=	http://distfiles.audacious-media-player.org/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	loki.vt@gmail.com
 HOMEPAGE=	http://audacious-media-player.org/
 COMMENT=	Media player based on BMP and XMMS
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	gnu-gpl-v3 public-domain
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -28,6 +28,7 @@ PKGCONFIG_OVERRIDE+=	audclient.pc.in
 
 LDFLAGS.DragonFly=      -lm -lX11 -lgmodule-2.0
 
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../devel/atk/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
