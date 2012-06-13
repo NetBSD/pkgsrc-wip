@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.3 2012/06/12 23:40:58 makoto Exp $
+@comment $NetBSD: PLIST,v 1.4 2012/06/13 04:49:48 makoto Exp $
 bin/ctags
 bin/ebrowse
 bin/emacs
-bin/emacs-24.1
+bin/emacs-${EMACS_VERSION}
 bin/emacsclient
 bin/etags
 bin/grep-changelog
@@ -29,7 +29,7 @@ share/emacs/${EMACS_VERSION}/etc/COPYING
 share/emacs/${EMACS_VERSION}/etc/DEBUG
 share/emacs/${EMACS_VERSION}/etc/DEVEL.HUMOR
 share/emacs/${EMACS_VERSION}/etc/DISTRIB
-share/emacs/${EMACS_VERSION}/etc/DOC-24.1.1
+share/emacs/${EMACS_VERSION}/etc/DOC-${EMACS_VERSION}.1
 share/emacs/${EMACS_VERSION}/etc/ERC-NEWS
 share/emacs/${EMACS_VERSION}/etc/ETAGS.EBNF
 share/emacs/${EMACS_VERSION}/etc/ETAGS.README

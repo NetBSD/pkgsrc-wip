@@ -1,7 +1,10 @@
-$NetBSD: patch-ag,v 1.1.1.1 2012/06/09 15:14:43 makoto Exp $
+$NetBSD: patch-ag,v 1.2 2012/06/13 04:49:48 makoto Exp $
 
+When running terminfo but compiled for termcap, we cannot assume
+that we actually have anything useable in termcap_term_buffer so just
+use the terminfo fixed size defined ealier.
 
---- src/term.c.orig	2012-05-14 21:00:02.000000000 +0900
+--- src/term.c 2010-01-06 10:11:04.000000000 +0000
 +++ src/term.c	2012-06-09 13:23:09.000000000 +0900
 @@ -3161,11 +3161,6 @@
                     terminal_type);

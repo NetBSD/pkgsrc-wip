@@ -1,14 +1,11 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2012/06/09 15:14:41 makoto Exp $
+# $NetBSD: Makefile.common,v 1.2 2012/06/13 04:49:48 makoto Exp $
 #
 # used by editors/emacs/Makefile
 # used by editors/emacs-nox11/Makefile
 
-DISTNAME=	emacs-${EMACS_VERSION}-rc
-# The name supposed be 24.1-rc, but it may be bigger than 24.1 so,
-PKGNAME=	emacs-24.0.99-rc
+DISTNAME=	emacs-${EMACS_VERSION}
 CATEGORIES=	editors
-#MASTER_SITES=	${MASTER_SITE_GNU:=emacs/}
-MASTER_SITES=	http://alpha.gnu.org/gnu/emacs/pretest/
+MASTER_SITES=	${MASTER_SITE_GNU:=emacs/}
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/emacs/emacs.html
@@ -18,7 +15,6 @@ LICENSE=	gnu-gpl-v3
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/b$//}
-WRKSRC=		${WRKDIR}/emacs-24.1
 MAKE_JOBS_SAFE=		no
 
 CONFLICTS+=	emacs-nox11-[0-9]*
@@ -41,7 +37,7 @@ PLIST_SRC+=		PLIST
 
 BUILD_TARGET=		bootstrap
 EMACS_VERSION=		${_EMACS_VERSION_MAJOR}.${_EMACS_VERSION_MINOR}
-PLIST_SUBST+=		EMACS_VERSION=${EMACS_VERSION:S/-rc//}
+PLIST_SUBST+=		EMACS_VERSION=${EMACS_VERSION}
 
 REPLACE_PERL=		lib-src/grep-changelog
 CHECK_INTERPRETER_SKIP=	bin/grep-changelog
