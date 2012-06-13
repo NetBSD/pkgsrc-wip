@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/11/19 11:39:31 ryo-on Exp $
+# $NetBSD: Makefile,v 1.3 2012/06/13 07:47:55 othyro Exp $
 #
 
 DISTNAME=	audiere-1.9.4
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=audiere/}
 MAINTAINER=	ryo_on@yk.rim.or.jp
 HOMEPAGE=	http://audiere.sourceforge.net/
 COMMENT=	Audiere is a high-level audio API
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	gnu-lgpl-v2.1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
