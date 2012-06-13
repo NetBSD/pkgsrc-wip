@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2010/06/13 22:46:57 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2012/06/13 17:08:12 othyro Exp $
 #
 
 DISTNAME=		bluez-gnome-0.4
@@ -9,9 +9,11 @@ MASTER_SITES=		http://bluez.sourceforge.net/download/
 MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://bluez.sourceforge.net/
 COMMENT=		BlueZ helpers for Gnome
-USE_LANGUAGES=	c
-USE_PERL=	YES
-USE_TOOLS+=	intltool pkg-config gmake
+LICENSE=		gnu-gpl-v2 gnu-lgpl-v2.1
+
+USE_LANGUAGES=		c
+USE_PERL=		YES
+USE_TOOLS+=		intltool pkg-config gmake
 OWN_DIRS+=		${PKG_SYSCONFDIR}/xdg
 
 PKG_DESTDIR_SUPPORT=	user-destdir
