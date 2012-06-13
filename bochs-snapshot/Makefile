@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/02/12 11:22:29 ryo-on Exp $
+# $NetBSD: Makefile,v 1.4 2012/06/13 19:30:38 othyro Exp $
 
 DISTNAME=		bochs-20110125
 CATEGORIES=		emulators
@@ -7,6 +7,7 @@ MASTER_SITES=		http://bochs.sourceforge.net/cvs-snapshot/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://bochs.sourceforge.net/
 COMMENT=		IA32 and AMD64 PC emulator
+LICENSE=		gnu-lgpl-v2.1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 

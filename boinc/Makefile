@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/05/01 19:40:57 asau Exp $
+# $NetBSD: Makefile,v 1.6 2012/06/13 19:34:46 othyro Exp $
 
 DISTNAME=		boinc-6.10.50
 CATEGORIES=		parallel
@@ -8,6 +8,7 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		asau@inbox.ru
 HOMEPAGE=		http://boinc.berkeley.edu/
 COMMENT=		Middleware system for volunteer and grid computing
+LICENSE=		gnu-lgpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
