@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2009/03/18 11:04:01 cheusov Exp $
+# $NetBSD: Makefile,v 1.14 2012/06/13 17:37:37 othyro Exp $
 #
 
 DISTNAME=		bluez-hcidump-1.32
@@ -8,6 +8,7 @@ MASTER_SITES=		http://bluez.sourceforge.net/download/
 MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://www.bluez.org/
 COMMENT=		Bluetooth packet analyzer
+LICENSE=		gnu-gpl-v2
 
 USE_LANGUAGES=		c
 
