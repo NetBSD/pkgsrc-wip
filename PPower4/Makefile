@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/03/06 21:52:15 minskim Exp $
+# $NetBSD: Makefile,v 1.12 2012/06/13 03:31:53 othyro Exp $
 
 DISTNAME=	# empty
 PKGNAME=	PPower4-0.9.4
@@ -9,6 +9,7 @@ DISTFILES=	pp4sty.zip pp4p.jar
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www-sp.iti.informatik.tu-darmstadt.de/software/ppower4/
 COMMENT=	PDF presentation post processor
+LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	tex-eso-pic-[0-9]*:../../print/tex-eso-pic
 DEPENDS+=	tex-graphics-[0-9]*:../../print/tex-graphics
