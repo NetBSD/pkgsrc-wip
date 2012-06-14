@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/06/23 14:24:21 smoppy Exp $
+# $NetBSD: Makefile,v 1.4 2012/06/14 03:47:25 othyro Exp $
 
 DISTNAME=	chems-0x04
 CATEGORIES=	www
@@ -8,6 +8,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	clamiax@gmail.com
 HOMEPAGE=	http://chems.sourceforge.net/
 COMMENT=	The geekest content helper management system
+LICENSE=	gnu-gpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
