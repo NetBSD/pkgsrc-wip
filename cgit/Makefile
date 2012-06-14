@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2009/09/20 16:23:43 mstapelberg Exp $
+# $NetBSD: Makefile,v 1.8 2012/06/14 03:28:50 othyro Exp $
 
 DISTNAME=	cgit-0.8.3
 PKGREVISION=	1
@@ -9,6 +9,7 @@ EXTRACT_SUFX=	.tar.bz2
 HOMEPAGE=	http://hjemli.net/git/cgit
 COMMENT=	Fast web interface for git
 MAINTAINER=	pkgsrc-wip-discuss@lists.sourceforge.net
+LICENSE=	gnu-gpl-v2
 
 BUILD_DEPENDS+=	curl>=7.19.2:../../www/curl
 
