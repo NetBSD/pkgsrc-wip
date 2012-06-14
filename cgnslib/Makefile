@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/08/12 23:35:17 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/06/14 03:37:20 othyro Exp $
 #
 
 DISTNAME=	cgnslib_3.1.3-2
 PKGNAME=	cgnslib-3.1.3-2
-CATEGORIES=	science
+CATEGORIES=	math
 MASTER_SITES=	http://garr.dl.sourceforge.net/project/cgns/cgnslib_3.1/
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://www.cgns.org/
 COMMENT=	CFD General Notation System library code
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	png-license
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
