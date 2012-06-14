@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2010/09/15 09:43:19 mwdavies Exp $
+# $NetBSD: Makefile,v 1.8 2012/06/14 14:36:54 othyro Exp $
 #
 
 PKGVERSION=	10.05
@@ -13,6 +13,7 @@ BUILD_DEPENDS+=	zip-[0-9]*:../../archivers/zip
 MAINTAINER=	pkgsrc@blackmouse.biz
 HOMEPAGE=	http://www.codeblocks.org/
 COMMENT=	Open source, cross platform, free C++ IDE
+LICENSE=	gnu-gpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -27,6 +28,7 @@ CONFIGURE_ARGS+=	--with-contrib-plugins=AutoVersioning,BrowseTracker,byogames,cb
 
 PKGCONFIG_OVERRIDE+=	codeblocks.pc.in
 
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../databases/shared-mime-info/mimedb.mk"
 .include "../../x11/wxGTK28/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
