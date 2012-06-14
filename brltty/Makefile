@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/06/13 22:46:57 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2012/06/14 00:33:25 othyro Exp $
 #
 
 DISTNAME=		brltty-3.7
@@ -7,8 +7,11 @@ CATEGORIES=		misc
 MASTER_SITES=		http://www.mielke.cc/brltty/releases/
 
 MAINTAINER=		tonio@NetBSD.org
-HOMEPAGE=		http://www.mielke.cc/brltty/releases/
+HOMEPAGE=		http://www.mielke.cc/brltty/
 COMMENT=		Access software for a blind person using a soft braille terminal
+LICENSE=		gnu-gpl-v2
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
