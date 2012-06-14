@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2008/05/24 15:34:09 tnn2 Exp $
+# $NetBSD: Makefile,v 1.6 2012/06/14 23:42:45 othyro Exp $
 #
 
 DISTNAME=		dfu-util-4412
-CATEGORIES=		wip
+CATEGORIES=		comms
 MASTER_SITES=		http://wiki.openmoko.org/
 SVN_REPOSITORY=		https://svn.openmoko.org/trunk/src/host/dfu-util/
 NO_CHECKSUM=		yes
@@ -10,7 +10,9 @@ NO_CHECKSUM=		yes
 MAINTAINER=		noud4@home.nl
 HOMEPAGE=		http://wiki.openmoko.org/wiki/Dfu-util
 COMMENT=		Host side of the USB DFU protocol
+LICENSE=		gnu-gpl-v2
 
+PKG_DESTDIR_SUPPORT=	user-destdir
 BUILD_DEPENDS+=		subversion-base>=1.4.2:../../devel/subversion-base
 
 SUBDIR=			${PKGNAME}
