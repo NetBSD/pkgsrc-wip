@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/06/19 09:19:46 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2012/06/14 15:13:31 othyro Exp $
 
 PKGNAME=		crm114-20070810
 DISTNAME=		${PKGNAME}-BlameTheSegfault.src
@@ -7,6 +7,9 @@ CATEGORIES=		mail
 MAINTAINER=		bsd@cs.ubc.ca
 HOMEPAGE=		http://crm114.sourceforge.net/
 COMMENT=		Fast and accurate learning classifier, good for spam
+LICENSE=		gnu-gpl-v2
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 # For some reason, later versions are just being placed on the home page
 #   MASTER_SITES=		${MASTER_SITE_SOURCEFORGET:=crm114/}
