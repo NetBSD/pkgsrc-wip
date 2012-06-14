@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2011/01/17 10:48:03 emil_s Exp $
+# $NetBSD: Makefile,v 1.7 2012/06/14 01:48:50 othyro Exp $
 #
 
 DISTNAME=	c2hs-0.14.5
@@ -9,7 +9,9 @@ MASTER_SITES=	http://www.cse.unsw.edu.au/~chak/haskell/c2hs/
 MAINTAINER=	esg@sdf.lonestar.org
 HOMEPAGE=	http://www.cse.unsw.edu.au/~chak/haskell/c2hs/
 COMMENT=	C->Haskell, an Interface Generator for Haskell
+LICENSE=	gnu-gpl-v2
 
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 EGDIR=		${PREFIX}/share/examples/${PKGBASE}
 
