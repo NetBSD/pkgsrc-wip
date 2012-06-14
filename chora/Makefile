@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2007/05/29 02:02:57 schmonz Exp $
+# $NetBSD: Makefile,v 1.7 2012/06/14 03:52:03 othyro Exp $
 #
 
 DISTNAME=	chora-1.2.3
@@ -8,6 +8,9 @@ MASTER_SITES=	ftp://ftp.horde.org/pub/chora/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.horde.org/chora/
 COMMENT=	Another CVS-via-web system
+LICENSE=	gnu-gpl-v2
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 #DEPENDS+=	cvs>=1.11.20:../../devel/scmcvs
 DEPENDS+=	horde>=2.2.4:../../www/horde
