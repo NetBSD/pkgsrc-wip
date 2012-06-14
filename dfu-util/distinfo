@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.4 2008/05/01 14:30:09 noud4 Exp $
+$NetBSD: distinfo,v 1.5 2012/06/14 23:43:59 othyro Exp $
 
 SHA1 (dfu-util-4412.tar.gz) = ae1aedd8d19e9e52aa57c90f9d0b5310b4bdf416
 RMD160 (dfu-util-4412.tar.gz) = ac9f41b448f60ee268e5f803231ee0aa23f60815
 Size (dfu-util-4412.tar.gz) = 22074 bytes
 SHA1 (patch-aa) = e11ccf4df2585c0974599b60d46b5267d0a7b955
-SHA1 (patch-ab) = 79527e6d07c137d96c20b20c98f7ca471a60f7c8
+SHA1 (patch-ab) = dadedf845b7faf9c80ae763866765c8d871374a1
