@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2009/09/05 20:48:45 asau Exp $
+# $NetBSD: Makefile,v 1.10 2012/06/14 03:13:23 othyro Exp $
 #
 
 DISTNAME=	cdpr-2.3
@@ -9,6 +9,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.monkeymental.com/
 COMMENT=	Cisco Discovery Protocol Reporter
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
