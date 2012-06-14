@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2009/09/05 20:48:45 asau Exp $
+$NetBSD: distinfo,v 1.7 2012/06/14 03:15:31 othyro Exp $
 
 SHA1 (cdpr-2.3.tgz) = 2d453bfacf653aeba079f135128f5242c7ccd0c0
 RMD160 (cdpr-2.3.tgz) = d26524fad4f05b8962ad98341d22202d3e6c735d
 Size (cdpr-2.3.tgz) = 25492 bytes
-SHA1 (patch-aa) = 08a62cb3757623e257ed9bb2457391fa34aac77e
+SHA1 (patch-aa) = 8832fbcd5cf9a3fadc4d4186d04d711b27a4701a
