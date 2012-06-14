@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/10/29 08:32:41 shattered Exp $
+# $NetBSD: Makefile,v 1.3 2012/06/14 16:15:33 othyro Exp $
 
 DISTNAME=		csstidy-source-1.2
 PKGNAME=		csstidy-1.2
@@ -9,6 +9,9 @@ EXTRACT_SUFX=		.zip
 MAINTAINER=		kh.p@no-log.org
 HOMEPAGE=		http://csstidy.sourceforge.net/
 COMMENT=		Opensource CSS parser
+LICENSE=		gnu-lgpl-v2.1
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}
 NO_CONFIGURE=		yes
