@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2007/01/15 10:08:03 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2012/06/14 01:19:28 othyro Exp $
 #
 
 DISTNAME=	busybox-1.3.1
@@ -8,6 +8,9 @@ MASTER_SITES=	http://www.busybox.net/downloads/
 MAINTAINER=	pancake@phreaker.net
 HOMEPAGE=	http://www.busybox.net/
 COMMENT=	The Swiss Army Knife of Embedded Linux
+LICENSE=	gnu-gpl-v2
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 ONLY_FOR_PLATFORM=	Linux-*-*
 # See crunchgen(1) on BSD-systems for similar functionality.
