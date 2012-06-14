@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/06/13 22:46:59 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2012/06/14 20:28:31 othyro Exp $
 #
 
 DISTNAME=	deskscribe-0.4.2
@@ -10,6 +10,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc.gnome@gmail.com
 HOMEPAGE=	https://launchpad.net/deskscribe
 COMMENT=	DeskScribe is a usability testing suite
+LICENSE=	gnu-gpl-v2 gnu-lgpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
