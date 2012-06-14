@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2010/01/13 18:46:28 asau Exp $
+# $NetBSD: Makefile,v 1.13 2012/06/14 04:21:16 othyro Exp $
 #
 
 DISTNAME=	clhep-2.0.4.5
@@ -9,6 +9,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	hugor@users.sourceforge.net
 HOMEPAGE=	http://proj-clhep.web.cern.ch/proj-clhep/
 COMMENT=	Class library for high energy physics
+LICENSE=	gnu-gpl-v3 gnu-lgpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
