@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:44:30 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.4 2012/06/14 01:16:12 othyro Exp $
 games/bubbros/BubBob.icns
 games/bubbros/BubBob.py
 games/bubbros/BubBob.pyo
@@ -291,7 +291,6 @@ games/bubbros/display/puremixer.pyo
 games/bubbros/display/pythonxlibintf.py
 games/bubbros/display/pythonxlibintf.pyo
 games/bubbros/display/setup.py
-games/bubbros/display/setup.py.orig
 games/bubbros/display/setup.py.pre
 games/bubbros/display/setup.pyo
 games/bubbros/display/snd_linux.py
