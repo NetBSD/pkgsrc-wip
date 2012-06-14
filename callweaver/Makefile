@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2010/08/01 14:57:08 asau Exp $
+# $NetBSD: Makefile,v 1.8 2012/06/14 02:13:00 othyro Exp $
 
 DISTNAME=	callweaver-1.2.1
 PKGREVISION=	2
@@ -9,6 +9,9 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	x400@msfu.ru
 HOMEPAGE=	http://www.callweaver.org/
 COMMENT=	The Callweaver Software PBX
+LICENSE=	gnu-gpl-v2
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
