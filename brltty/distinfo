@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/10/25 13:51:03 jtonio Exp $
+$NetBSD: distinfo,v 1.2 2012/06/14 00:34:26 othyro Exp $
 
 SHA1 (brltty-3.7.tar.gz) = d10d98ebc672cdd9672b4bb7c929829dd919fe73
 RMD160 (brltty-3.7.tar.gz) = e902d658fbde51fb4c55e587715b06fa1641621e
 Size (brltty-3.7.tar.gz) = 1192368 bytes
-SHA1 (patch-aa) = daf22ce78dca65cf8f3f7d8f87dcdb6d1697ff95
+SHA1 (patch-aa) = aaeda33e93015acf2257f28428fa23645af8fae6
