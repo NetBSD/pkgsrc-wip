@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/09/11 09:57:26 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/06/15 00:01:34 othyro Exp $
 #
 
 DISTNAME=	freedict-eng-ara-0.0.2
@@ -9,6 +9,7 @@ MASTER_SITES=	http://garr.dl.sourceforge.net/project/freedict/English%20-%20Arab
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://www.freedict.org/ar/
 COMMENT=	Dict package for English-Arabic Freedict dictionary
+LICENSE=	gnu-gpl-v2
 
 DEPENDS+=		dict-server>=1.9.14:../../textproc/dict-server
 BUILD_DEPENDS+=		dict-server>=1.10.2:../../textproc/dict-server

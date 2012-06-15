@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2011/10/09 10:05:45 cheusov Exp $
+# $NetBSD: Makefile,v 1.10 2012/06/15 00:03:02 othyro Exp $
 #
 
 DISTNAME=	eng-fra
@@ -10,6 +10,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=freedict/}
 MAINTAINER=	cheusov@NetBSD.org
 HOMEPAGE=	http://www.freedict.org/
 COMMENT=	DICTD data for FreeDict English-French dictionary
+LICENSE=	gnu-gpl-v2
 
 DICTSRCNAME=	${DISTNAME}
 
