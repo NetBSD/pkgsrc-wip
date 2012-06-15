@@ -1,5 +1,6 @@
-diff --git a/common.gypi b/common.gypi
-index 8b3e7c2..8c2166c 100644
+$NetBSD: patch-common.gypi,v 1.2 2012/06/15 11:33:29 fhajny Exp $
+
+Add support for NetBSD.
 --- common.gypi
 +++ common.gypi
 @@ -136,7 +136,7 @@

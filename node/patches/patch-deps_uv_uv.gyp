@@ -1,5 +1,6 @@
-diff --git a/deps/uv/uv.gyp b/deps/uv/uv.gyp
-index f53e18e..ff5a55b 100644
+$NetBSD: patch-deps_uv_uv.gyp,v 1.2 2012/06/15 11:33:29 fhajny Exp $
+
+Add support for NetBSD.
 --- deps/uv/uv.gyp
 +++ deps/uv/uv.gyp
 @@ -279,6 +279,19 @@

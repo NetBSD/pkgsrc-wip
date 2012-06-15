@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2012/05/27 21:28:14 genolopolis Exp $
+# $NetBSD: Makefile,v 1.6 2012/06/15 11:33:28 fhajny Exp $
 #
 
-DISTNAME=	node-v0.7.9-RC0
-CATEGORIES=	wip
-MASTER_SITES=	http://nodejs.org/dist/v0.7.9/
+DISTNAME=	node-v0.7.10
+CATEGORIES=	devel
+MASTER_SITES=	http://nodejs.org/dist/${DISTNAME:S/node-//}/
 PKGNAME=	${DISTNAME:S/-v/js-/}
-#needed because of -RC0
-WRKSRC=		${WRKDIR}/node-v0.7.9
 
 MAINTAINER=	msporleder@gmail.com
 HOMEPAGE=	http://nodejs.org/
@@ -20,13 +18,13 @@ HAS_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config
 USE_TOOLS+=	gmake
 USE_LANGUAGES=	c c++
-CONFIGURE_ARGS+=	"--prefix=${PREFIX}"
-
-PKGCONFIG_OVERRIDE+=	tools/nodejs.pc.in
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
+
+.if ${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "OpenBSD"
 DEPENDS+=		libexecinfo>=1:../../wip/libexecinfo
+.endif
 
 NODE_USER?=		node
 NODE_GROUP?=		node
@@ -40,19 +38,25 @@ PKG_SHELL.${NODE_USER}=	${COMMAND_SHELL}
 OWN_DIRS+=		${NODE_HOME}
 OWN_DIRS_PERMS+=	${NODE_HOME} ${NODE_USER} ${NODE_GROUP} 0750
 
-#post-extract:
-#	cp -r ${WRKSRC}/deps/c-ares/openbsd-x64 ${WRKSRC}/deps/c-ares/netbsd-x64
-#	cp -r ${WRKSRC}/deps/c-ares/openbsd-ia32 ${WRKSRC}/deps/c-ares/netbsd-ia32
+SUBST_CLASSES+=		python
+SUBST_STAGE.python=	post-patch
+SUBST_MESSAGE.python=	Fixing Python references
+SUBST_FILES.python=	deps/v8/tools/gyp/v8.gyp
+SUBST_VARS.python=	PYTHONBIN
 
-do-configure:
-	cd ${WRKSRC} && export GYP_DEFINES="OS=netbsd"; ./configure ${CONFIGURE_ARGS}
+CONFIG_SHELL=		${PYTHONBIN}
+CONFIGURE_ARGS+=	--prefix=${PREFIX}
 
-REPLACE_PYTHON+=	tools/waf-light
+.if ${OPSYS} == "NetBSD"
+CONFIGURE_ENV+=		GYP_DEFINES="OS=netbsd"
+.endif
+
+REPLACE_PYTHON+=	configure
+REPLACE_PYTHON+=	tools/gyp_node
 REPLACE_PYTHON+=	tools/node-waf
+REPLACE_PYTHON+=	tools/waf-light
 REPLACE_PYTHON+=	tools/wafadmin/*.py
 REPLACE_PYTHON+=	tools/wafadmin/Tools/*.py
-REPLACE_PYTHON+=	configure
 
-.include "../../lang/python26/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"

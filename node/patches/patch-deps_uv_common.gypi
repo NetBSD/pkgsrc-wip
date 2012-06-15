@@ -1,5 +1,6 @@
-diff --git a/deps/uv/common.gypi b/deps/uv/common.gypi
-index c2df528..5d9633a 100644
+$NetBSD: patch-deps_uv_common.gypi,v 1.2 2012/06/15 11:33:29 fhajny Exp $
+
+Add support for NetBSD.
 --- deps/uv/common.gypi
 +++ deps/uv/common.gypi
 @@ -113,11 +113,12 @@
