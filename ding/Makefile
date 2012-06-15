@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/03/08 17:18:02 asau Exp $
+# $NetBSD: Makefile,v 1.11 2012/06/15 00:04:47 othyro Exp $
 
 DISTNAME=	ding-1.5
 CATEGORIES=	x11
@@ -10,6 +10,7 @@ DISTFILES=	ding-1.5.tar.gz		\
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www-user.tu-chemnitz.de/~fri/ding/
 COMMENT=	Ding is a Dictionary lookup program for the X window system
+LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	tk>=8.3.2:../../x11/tk
 DEPENDS+=	aspell-german>=0.50:../../textproc/aspell-german
