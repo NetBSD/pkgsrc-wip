@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.10 2011/09/03 08:53:28 mwilhelmy Exp $
+# $NetBSD: Makefile,v 1.11 2012/06/16 20:09:35 mwilhelmy Exp $
 
 DISTNAME=		xrdp-0.4.2
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=xrdp/}
 
-MAINTAINER=		moritz+NetBSD@wzff.de
+MAINTAINER=		mwilhelmy@users.sourceforge.net
 HOMEPAGE=		http://xrdp.sourceforge.net/
 COMMENT=		Remote Desktop Protocol server
 LICENSE=		gnu-gpl-v2
