@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2012/01/10 04:04:37 asau Exp $
+# $NetBSD: options.mk,v 1.5 2012/06/17 15:26:51 asau Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.ecl
 PKG_SUPPORTED_OPTIONS+=		threads unicode ffi clx
@@ -22,6 +22,8 @@ CONFIGURE_ARGS+=	--with-__thread=yes
 CONFIGURE_ARGS+=	--with-__thread=no
 .endif
 .include "../../mk/pthread.buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-threads
 .endif
 
 .if !empty(PKG_OPTIONS:Municode)
