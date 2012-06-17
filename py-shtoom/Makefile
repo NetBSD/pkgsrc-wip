@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2009/06/20 13:02:14 jihbed Exp $
+# $NetBSD: Makefile,v 1.6 2012/06/17 12:56:23 spzeidler Exp $
 #
 
 DISTNAME=		shtoom-0.2
 PKGNAME=		${PYPKGPREFIX}-shtoom-0.2
+PKGREVISION=		1
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=shtoom/}
 
