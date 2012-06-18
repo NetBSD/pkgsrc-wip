@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2012/03/10 06:33:50 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.8 2012/06/18 22:22:33 cheusov Exp $
 bin/distbb
 bin/distbb_diff
 libexec/distbb/common
@@ -10,6 +10,7 @@ libexec/distbb/make-depends
 libexec/distbb/pkg_summary2build_deps
 libexec/distbb/slave
 libexec/distbb/stage_build
+libexec/distbb/stage_checks
 libexec/distbb/stage_checksum
 libexec/distbb/stage_gen_report
 libexec/distbb/stage_gen_report_data
