@@ -4,4 +4,4 @@
 (DEFSYSTEM "trivial-gray-streams"
     :CLASS ASDF::PREBUILT-SYSTEM
     :LIB "SYS:trivial-gray-streams"
-    :COMPONENTS ((:COMPILED-FILE "trivial-gray-streams")))
+    :COMPONENTS ((:COMPILED-FILE "trivial-gray-streams" :PATHNAME #P"SYS:trivial-gray-streams.fas")))

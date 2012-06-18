@@ -2,4 +2,4 @@
     :DEPENDS-ON (:cl-ppcre :flexi-streams)
     :CLASS ASDF::PREBUILT-SYSTEM
     :LIB "SYS:cl-unicode"
-    :COMPONENTS ((:COMPILED-FILE "cl-unicode")))
+    :COMPONENTS ((:COMPILED-FILE "cl-unicode" :PATHNAME #P"SYS:cl-unicode.fas")))
