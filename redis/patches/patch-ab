@@ -1,9 +1,9 @@
-$NetBSD: patch-ab,v 1.7 2012/03/25 19:03:20 fhajny Exp $
+$NetBSD: patch-ab,v 1.8 2012/06/18 10:26:04 asau Exp $
 
 * Embrace existing CFLAGS rather than overwrite them.
 * Add DESTDIR support.
 
---- src/Makefile.orig	2012-03-18 21:14:28.000000000 +0000
+--- src/Makefile.orig	2012-05-23 09:32:58.000000000 +0000
 +++ src/Makefile
 @@ -25,11 +25,11 @@ ifeq ($(uname_S),Linux)
  endif
@@ -26,10 +26,9 @@ $NetBSD: patch-ab,v 1.7 2012/03/25 19:03:20 fhajny Exp $
 -CCOPT= $(CFLAGS) $(ARCH) $(PROF)
 +CCOPT= $(REAL_CFLAGS) $(ARCH) $(PROF)
  
--PREFIX= /usr/local
+ PREFIX?=/usr/local
 -INSTALL_BIN= $(PREFIX)/bin
 -INSTALL= cp -pf
-+PREFIX?= /usr/local
 +INSTALL_BIN= $(DESTDIR)$(PREFIX)/bin
 +INSTALL= $(BSD_INSTALL_PROGRAM)
  
