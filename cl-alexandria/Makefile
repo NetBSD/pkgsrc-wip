@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2011/11/29 22:54:53 ddeus Exp $
+# $NetBSD: Makefile,v 1.6 2012/06/18 12:25:38 ddeus Exp $
 #
 
 SHORTNAME=	alexandria
 DISTNAME=	${SHORTNAME}-${VERSION}
-VERSION=	20111129
+VERSION=	20120615
 PKGNAME=        ${LISP_PREFIX}-${SHORTNAME}-${VERSION}
 CATEGORIES=	devel
 MASTER_SITES=	http://www.kozachuk.info/netbsd/contrib/

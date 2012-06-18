@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2011/11/29 22:54:53 ddeus Exp $
+$NetBSD: distinfo,v 1.3 2012/06/18 12:25:38 ddeus Exp $
 
-SHA1 (alexandria-20111129.tar.gz) = 42348b3bf30e52e1b8b3597d2720f27dc965a384
-RMD160 (alexandria-20111129.tar.gz) = ea05d3acec70d2440b2d5880eebc095bed8b9fd9
-Size (alexandria-20111129.tar.gz) = 48146 bytes
+SHA1 (alexandria-20120615.tar.gz) = 09bedbd1970f8fca82dc09185a060a12cc6e78d8
+RMD160 (alexandria-20120615.tar.gz) = 89bdc257d92fcb35d3ddf60586a9f9b1800736d4
+Size (alexandria-20120615.tar.gz) = 49198 bytes
