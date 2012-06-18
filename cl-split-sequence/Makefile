@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2011/03/08 13:36:33 ddeus Exp $
+# $NetBSD: Makefile,v 1.3 2012/06/18 12:32:24 ddeus Exp $
 #
 
-VERSION=        20011114.1
+VERSION=        1.0
 SHORTNAME=	split-sequence
-DISTNAME=	${SHORTNAME}
+DISTNAME=	${SHORTNAME}-${VERSION}
 CATEGORIES=	devel
-MASTER_SITES=	http://ftp.linux.org.uk/pub/lisp/experimental/cclan/
+MASTER_SITES= 	http://common-lisp.net/~sionescu/files/
 
 MAINTAINER=     ddeus.pkgsrc@mailnull.com
 HOMEPAGE=	http://www.cliki.net/SPLIT-SEQUENCE
