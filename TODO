@@ -18,7 +18,7 @@ Suggested package updates
 	o di-4.31
 	o directfb-1.0.0
 	o dmxproto-2.3.1
-	o ecasound-2.8.1
+	o ecasound-2.9
 	o ecb-2.40
 	o editline-20120311.3.0
 	o emboss-base-6.0.1
@@ -70,7 +70,7 @@ Suggested package updates
 	o kino-1.0.0
 	o kmymoney4-4.6.2
 	o kvirc-3.4.2
-	o lasem-0.3.1
+	o lasem-0.3.2
 	o libAppleWM-1.4.0
 	o libburn-1.2.2
 	o libdmx-1.1.2
@@ -130,6 +130,7 @@ Suggested package updates
 	o xcursor-themes-1.0.3
 	o xf86-input-synaptics-1.6.2
 	o xf86-video-geode-2.11.13
+	o xf86-video-nouveau-1.0
 	o xfs-1.1.2
 	o xinetd-2.3.15
 	o xmms2-0.6
