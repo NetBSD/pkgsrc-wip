@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2012/03/02 23:52:39 makoto Exp $
+@comment $NetBSD: PLIST,v 1.8 2012/06/19 06:12:25 makoto Exp $
 ${EMACS_INFOPREFIX}/emacs-w3m-ja.info
 ${EMACS_INFOPREFIX}/emacs-w3m.info
 ${EMACS_LISPPREFIX}/w3m/ChangeLog
@@ -112,6 +112,8 @@ ${EMACS_LISPPREFIX}/w3m/sb-bbdb-ml.el
 ${EMACS_LISPPREFIX}/w3m/sb-bbdb-ml.elc
 ${EMACS_LISPPREFIX}/w3m/sb-cgi-board.el
 ${EMACS_LISPPREFIX}/w3m/sb-cgi-board.elc
+${EMACS_LISPPREFIX}/w3m/sb-chise.el
+${EMACS_LISPPREFIX}/w3m/sb-chise.elc
 ${EMACS_LISPPREFIX}/w3m/sb-cnet-jp.el
 ${EMACS_LISPPREFIX}/w3m/sb-cnet-jp.elc
 ${EMACS_LISPPREFIX}/w3m/sb-cnet.el
