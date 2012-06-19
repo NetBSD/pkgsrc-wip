@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2012/06/19 07:34:54 bsadewitz Exp $
+
+SHA1 (fusefs-google-drive-06052012.tar.gz) = f8eb51202a86c05d2bcde59e1543e4a508fb1701
+RMD160 (fusefs-google-drive-06052012.tar.gz) = 396831f656e4b3da38474bd562925a67908e20dc
+Size (fusefs-google-drive-06052012.tar.gz) = 24314 bytes
