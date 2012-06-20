@@ -1,4 +1,11 @@
 ----------------------------------------------------------------------
+Version 0.58.2, by Aleksey Cheusov, Wed, 20 Jun 2012 11:35:05 +0300
+
+  pkg_src_summary:
+    - Fix. pkg_src_summary in distributed mode now works correctly
+      if a master host doesn't have $PKGSRCDIR directory.
+
+----------------------------------------------------------------------
 Version 0.58.1, by Aleksey Cheusov, Wed,  6 Jun 2012 01:32:08 +0300
 
   pkg_summary2deps:

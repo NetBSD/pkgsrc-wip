@@ -192,10 +192,8 @@ if test -n "$debug"; then
 fi
 
 ############################################################
-cd $PKGSRCDIR
-
-. ${LIBEXECDIR}/sig_handler.sh
 on_exit () { rm -rf $tmp_dir; }
+. ${LIBEXECDIR}/sig_handler.sh
 
 tmp_dir=`mktemp -d /tmp/pkg_src_summary.XXXXXX`
 test -n "$tmp_dir" || exit 1
@@ -381,9 +379,11 @@ if test "$PSS_SLAVES"; then
 	paexec_reorder -S '|' \
 	sed -e '/^success$/ d' -e '/^failure$/ d' > "$partial_summary_fn"
 elif test "$slave"; then
+    cd $PKGSRCDIR
     process_one_by_one
     exit 0
 else
+    cd $PKGSRCDIR
     PSS_PPERS=1 # one package per line for local running
 
     runpipe0 \
