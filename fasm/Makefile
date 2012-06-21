@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2011/02/19 01:54:44 athaba Exp $
+# $NetBSD: Makefile,v 1.13 2012/06/21 09:54:07 athaba Exp $
 #
 
-DISTNAME=		fasm-1.69.31
+DISTNAME=		fasm-1.70.02
 CATEGORIES=		devel
 MASTER_SITES=		http://flatassembler.net/
 
@@ -20,7 +20,7 @@ NO_CONFIGURE=		yes
 INSTALLATION_DIRS=	bin share/doc/fasm
 
 do-build:
-	cd ${WRKSRC} && ${CC} ${CFLAGS} fasm.o -o fasm
+	cd ${WRKSRC} && ${CC} -m32 ${CFLAGS} fasm.o -o fasm
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/fasm ${DESTDIR}${PREFIX}/bin
