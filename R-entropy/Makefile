@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/06/13 05:00:28 othyro Exp $
+# $NetBSD: Makefile,v 1.4 2012/06/21 21:03:06 bubuchka Exp $
 
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
@@ -9,7 +9,7 @@ COMMENT=	Entropy and Mutual Information Estimation
 LICENSE=	gnu-gpl-v3
 
 R_PKGNAME=	entropy
-R_PKGVER=	1.1.6
+R_PKGVER=	1.1.7
 
 .include "../../math/R/Makefile.extension"
 .include "../../mk/bsd.pkg.mk"
