@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2012/05/03 08:17:58 fhajny Exp $
+# $NetBSD: Makefile,v 1.11 2012/06/23 09:52:36 fhajny Exp $
 #
 
-DISTNAME=		riak-1.1.2
+DISTNAME=		riak-1.1.4
 CATEGORIES=		databases
 MASTER_SITES=		http://downloads.basho.com/riak/${DISTNAME}/
 
@@ -77,9 +77,14 @@ INSTALL_ENV+=		OPSYS=${OPSYS}
 INSTALL_ENV+=		MACHINE_ARCH=${MACHINE_ARCH}
 
 post-extract:
-	${CHMOD} -R u=rwX,g=rX,o=rX ${WRKDIR}/innostore-${INNOVER}
+	${CHMOD} -R u=rwX,g=rX,o=rX \
+	  ${WRKDIR}/innostore-${INNOVER} ${WRKSRC}
+	${CHOWN} -R ${ROOT_USER}:${ROOT_GROUP} \
+	  ${WRKDIR}/innostore-${INNOVER} ${WRKSRC}
 	cp ${FILESDIR}/disable_visibility_on_sun.patch \
 	  ${WRKDIR}/innostore-${INNOVER}/c_src/patches
+	cp ${FILESDIR}/js-src-jslock.c.patch \
+	  ${WRKSRC}/deps/erlang_js/c_src/patches
 
 do-install:
 	${MKDIR} ${WRKSRC}/package/pkgsrc
