@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/06/11 09:41:36 leot1990 Exp $
+# $NetBSD: Makefile,v 1.7 2012/06/27 17:35:21 drochner Exp $
 #
 
 DISTNAME=	xcowsay-1.3
@@ -16,10 +16,7 @@ GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=			pkg-config
 
-# FIXME: the dbus option doesn't work on NetBSD due a
-# pthread_mutex_unlock(3) error (probably this is a devel/glib2 problem
-# and it should be fixed).
-#.include "options.mk"
+.include "options.mk"
 
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
