@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.4 2012/05/11 12:47:07 noud4 Exp $
+@comment $NetBSD: PLIST,v 1.5 2012/06/27 14:42:29 uccwen Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
 ${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
 ${PYSITELIB}/${EGG_INFODIR}/requires.txt
 ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
-${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
 ${PYSITELIB}/beaker/__init__.py
 ${PYSITELIB}/beaker/__init__.pyc
 ${PYSITELIB}/beaker/__init__.pyo
@@ -24,12 +24,15 @@ ${PYSITELIB}/beaker/crypto/__init__.pyo
 ${PYSITELIB}/beaker/crypto/jcecrypto.py
 ${PYSITELIB}/beaker/crypto/jcecrypto.pyc
 ${PYSITELIB}/beaker/crypto/jcecrypto.pyo
-${PYSITELIB}/beaker/crypto/pycrypto.py
-${PYSITELIB}/beaker/crypto/pycrypto.pyc
-${PYSITELIB}/beaker/crypto/pycrypto.pyo
 ${PYSITELIB}/beaker/crypto/pbkdf2.py
 ${PYSITELIB}/beaker/crypto/pbkdf2.pyc
 ${PYSITELIB}/beaker/crypto/pbkdf2.pyo
+${PYSITELIB}/beaker/crypto/pycrypto.py
+${PYSITELIB}/beaker/crypto/pycrypto.pyc
+${PYSITELIB}/beaker/crypto/pycrypto.pyo
+${PYSITELIB}/beaker/crypto/util.py
+${PYSITELIB}/beaker/crypto/util.pyc
+${PYSITELIB}/beaker/crypto/util.pyo
 ${PYSITELIB}/beaker/exceptions.py
 ${PYSITELIB}/beaker/exceptions.pyc
 ${PYSITELIB}/beaker/exceptions.pyo
