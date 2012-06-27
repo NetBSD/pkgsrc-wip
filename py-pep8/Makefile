@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2012/06/18 14:03:44 uccwen Exp $
+# $NetBSD: Makefile,v 1.6 2012/06/27 13:58:44 uccwen Exp $
 #
 
-DISTNAME=	pep8-1.3.1
+DISTNAME=	pep8-1.3.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	http://pypi.python.org/packages/source/p/pep8/
