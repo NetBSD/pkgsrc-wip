@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4775 2012/06/19 22:42:17 othyro Exp $
+# $Id: Makefile,v 1.4776 2012/07/02 13:36:12 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -151,7 +151,6 @@ SUBDIR+=	arla-3.99.14
 SUBDIR+=	armadillo
 SUBDIR+=	armagetronad
 SUBDIR+=	arora
-SUBDIR+=	arpack
 SUBDIR+=	arpdig
 SUBDIR+=	arphic-ukai-ttf
 SUBDIR+=	arphic-uming-ttf
@@ -266,6 +265,7 @@ SUBDIR+=	cacti-plugin-weathermap
 SUBDIR+=	cacti-spine
 SUBDIR+=	cairo-java
 SUBDIR+=	calcurse
+SUBDIR+=	calligra
 SUBDIR+=	callweaver
 SUBDIR+=	calypso
 SUBDIR+=	canna
@@ -525,6 +525,7 @@ SUBDIR+=	emacs-current-nox11
 SUBDIR+=	emacs-ditz
 SUBDIR+=	emacs-jabber
 SUBDIR+=	emacs-pr-el
+SUBDIR+=	emacs-rc
 SUBDIR+=	emacs-session
 SUBDIR+=	emacs-w3m-current
 SUBDIR+=	emboss
@@ -641,6 +642,7 @@ SUBDIR+=	fstobdf
 SUBDIR+=	ftgl
 SUBDIR+=	ftpd-tls
 SUBDIR+=	ftpsesame
+SUBDIR+=	fuse-google-drive
 SUBDIR+=	fuse-smbfs
 SUBDIR+=	fusefs-btfs
 SUBDIR+=	fusefs-sshfs
@@ -2839,6 +2841,7 @@ SUBDIR+=	stmpclean
 SUBDIR+=	stonx
 SUBDIR+=	stumpwm
 SUBDIR+=	stunnel3
+SUBDIR+=	subversion17-base
 SUBDIR+=	sudo
 SUBDIR+=	sudoscript
 SUBDIR+=	sugarCRM
