@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2012/07/02 13:34:33 thomasklausner Exp $
+
+SHA1 (calligra-2.4.3.tar.bz2) = 6a91cb4d91296efeac915712fc895b0981b7be96
+RMD160 (calligra-2.4.3.tar.bz2) = 8c9e1608ecc227f784fc23bf04cabe477420a8b9
+Size (calligra-2.4.3.tar.bz2) = 119351575 bytes
+SHA1 (patch-plugins_chartshape_kdchart_kdablibfakes_src_KDABLibFakes.h) = 0aa53f49c26d36d3b9a7be076a809e658408f89b
