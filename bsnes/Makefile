@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2012/06/03 12:37:06 othyro Exp $
+# $NetBSD: Makefile,v 1.8 2012/07/02 13:37:54 moubctez Exp $
 #
 
 DISTNAME=	bsnes_v089
 PKGNAME=	${DISTNAME:S/_v0/-0./}
+PKGREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	http://bsnes.googlecode.com/files/
 EXTRACT_SUFX=	.tar.xz

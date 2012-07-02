@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2006/09/14 18:34:40 dhowland Exp $
+# $NetBSD: Makefile,v 1.8 2012/07/02 13:37:56 moubctez Exp $
 #
 
 DISTNAME=		kahakai-0.6.2
+PKGREVISION=		1
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=kahakai/}
 EXTRACT_SUFX=		.tar.bz2

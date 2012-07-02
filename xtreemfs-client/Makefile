@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/11/08 01:47:03 tnn2 Exp $
-#
+# $NetBSD: Makefile,v 1.2 2012/07/02 13:38:10 moubctez Exp $
 
-PKGNAME=		${DISTNAME:S/XtreemFS/xtreemfs-client/}
+PKGNAME=	${DISTNAME:S/XtreemFS/xtreemfs-client/}
+PKGREVISION=	1
 
 USE_LANGUAGES+=		c c++
 

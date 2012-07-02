@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2012/05/12 01:25:57 outpaddling Exp $
+# $NetBSD: Makefile,v 1.6 2012/07/02 13:38:09 moubctez Exp $
 #
 
 DISTNAME=	ufc-2.0.5
+PKGREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	http://launchpad.net/ufc/2.0.x/2.0.5/+download/
 

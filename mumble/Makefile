@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/11/05 16:01:32 ggergely Exp $
+# $NetBSD: Makefile,v 1.2 2012/07/02 13:38:01 moubctez Exp $
 #
 
 DISTNAME=	mumble-1.2.2
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	http://downloads.sourceforge.net/project/mumble/Mumble/1.2.2/
 

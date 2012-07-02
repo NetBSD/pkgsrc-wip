@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2012/05/30 11:56:18 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2012/07/02 13:38:06 moubctez Exp $
 
 DISTNAME=	povray-3.7.0.RC5
 PKGNAME=	${DISTNAME:S/.RC/rc/}
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.povray.org/beta/source/
 

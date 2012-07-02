@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2012/02/26 01:21:00 bubuchka Exp $
+# $NetBSD: Makefile,v 1.3 2012/07/02 13:37:57 moubctez Exp $
 #
 
 V=		2012-01-19
 S=		BZR3256-stable
 DISTNAME=	kicad_sources-${V}-${S}
 PKGNAME=	kicad-${V:S/-//g}
+PKGREVISION=	1
 CATEGORIES=	cad
 MASTER_SITES=	ftp://iut-tice.ujf-grenoble.fr/cao/
 EXTRACT_SUFX=	.zip

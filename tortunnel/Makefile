@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2010/01/27 20:33:03 pettai Exp $
+# $NetBSD: Makefile,v 1.2 2012/07/02 13:38:09 moubctez Exp $
 #
 
 DISTNAME=	tortunnel-0.2
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://www.thoughtcrime.org/software/tortunnel/
 

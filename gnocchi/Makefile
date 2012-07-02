@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2009/03/26 19:37:25 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2012/07/02 13:37:56 moubctez Exp $
 #
 
 DISTNAME=	gnocchi-0.35
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gnocchi/}
 

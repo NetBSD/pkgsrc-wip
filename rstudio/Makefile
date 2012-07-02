@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/05/13 08:02:10 ryo-on Exp $
+# $NetBSD: Makefile,v 1.2 2012/07/02 13:38:06 moubctez Exp $
 #
 
 DISTNAME=	rstudio-rstudio-v0.95.264-0-ge31bd49
 PKGNAME=	rstudio-0.95.264
+PKGREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	-https://github.com/rstudio/rstudio/tarball/v0.95.265
 

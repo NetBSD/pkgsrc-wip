@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2012/06/13 06:05:17 othyro Exp $
+# $NetBSD: Makefile,v 1.12 2012/07/02 13:37:54 moubctez Exp $
 
 DISTNAME=	alphamail-1.0.44
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=alphamail/}
 

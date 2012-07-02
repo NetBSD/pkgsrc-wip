@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2011/11/26 12:45:15 ryo-on Exp $
+# $NetBSD: Makefile,v 1.6 2012/07/02 13:38:09 moubctez Exp $
 #
 
 DISTNAME=	xbmc-10.1
+PKGREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	http://mirrors.xbmc.org/releases/source/
 

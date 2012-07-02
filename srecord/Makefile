@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/07/14 09:10:12 yhardy Exp $
+# $NetBSD: Makefile,v 1.2 2012/07/02 13:38:06 moubctez Exp $
 #
 
 DISTNAME=	srecord-1.50
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://srecord.sourceforge.net/
 

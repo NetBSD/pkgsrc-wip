@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2010/12/26 05:01:22 davesainty Exp $
+# $NetBSD: Makefile,v 1.6 2012/07/02 13:38:00 moubctez Exp $
 #
 
 DISTNAME=	mapnik-0.4.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	geography
 MASTER_SITES=	http://download.berlios.de/mapnik/
 

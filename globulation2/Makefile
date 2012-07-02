@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2010/06/13 22:47:05 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2012/07/02 13:37:56 moubctez Exp $
 #
 
 PKGNAME=		globulation2-0.8.21
 DISTNAME=		glob2-0.8.21
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		games
 MASTER_SITES=		http://globulation2.org/releases/0.8.21/
 

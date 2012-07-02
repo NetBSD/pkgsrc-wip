@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2012/02/27 14:34:25 hfath Exp $
+# $NetBSD: Makefile,v 1.7 2012/07/02 13:37:55 moubctez Exp $
 #
 
 DISTNAME=	crrcsim-0.9.11
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=crrcsim.berlios/}
 

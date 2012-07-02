@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2012/04/26 20:20:24 outpaddling Exp $
+# $NetBSD: Makefile,v 1.4 2012/07/02 13:37:55 moubctez Exp $
 #
 
 DISTNAME=	CGAL-${DISTVERS}
 DISTVERS=	3.7
 PKGNAME=	cgal-${DISTVERS}
 #PKGREVISION=	1
+PKGREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	https://gforge.inria.fr/frs/download.php/27641/
 

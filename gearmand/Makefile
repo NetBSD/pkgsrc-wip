@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2012/05/11 12:03:12 fhajny Exp $
+# $NetBSD: Makefile,v 1.4 2012/07/02 13:37:55 moubctez Exp $
 #
 
 DISTNAME=	gearmand-0.33
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://launchpadlibrarian.net/104788829/
 

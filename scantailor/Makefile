@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/02/28 18:32:39 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2012/07/02 13:38:06 moubctez Exp $
 #
 
 DISTNAME=	scantailor-0.9.9.2
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=scantailor/0.9.9.2/}
 
