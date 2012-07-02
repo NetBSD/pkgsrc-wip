@@ -1,8 +1,8 @@
 #! /bin/sh
 #
-# $Id: import-package.sh,v 1.5 2012/02/06 12:48:43 fhajny Exp $
+# $Id: import-package.sh,v 1.6 2012/07/02 13:41:35 thomasklausner Exp $
 #
-# Script designed to make initial imports into wip easier.
+# Script designed to make add packages into wip easier.
 #
 # Just cd to the package directory and run ../import-package.sh
 #
@@ -35,14 +35,6 @@ DESCR_SRC="$(${MAKE} show-var VARNAME=DESCR_SRC) /dev/null"
 
 DASH70=----------------------------------------------------------------------
 
-if echo ${CVSROOT} | grep -i pkgsrc-wip > /dev/null; then
-  TAGS="${USER_UPPER} ${USER_UPPER}_$(date +%Y%m%d)"
-  ROOTDIR=
-else
-  TAGS="TNF pkgsrc-base"
-  ROOTDIR=pkgsrc/
-fi
-
 echo "Import ${PKGNAME} as ${CATEGORY}/${PACKAGE}." > ${MSG}
 echo "" >> ${MSG}
 cat ${DESCR_SRC} >> ${MSG}
@@ -53,7 +45,7 @@ echo "CVS: Did you remember to run pkglint(1) before importing?" >> ${MSG}
 echo "CVS:" >> ${MSG}
 echo "CVS: Lines starting with CVS: will be automatically removed." >> ${MSG}
 echo "CVS:" >> ${MSG}
-find . | sed "s|^.|CVS: will import: ${ROOTDIR}${PKGPATH}|" >> ${MSG}
+find . | grep -v -e CVS -e orig$ | sed "s|^.|CVS: will add: ${PKGPATH}|" >> ${MSG}
 
 ${EDITOR} ${MSG}
 
@@ -62,23 +54,26 @@ echo ${DASH70}
 grep -v '^CVS:.*$' < ${MSG}
 echo ${DASH70}
 echo 	"CVSROOT:	${CVSROOT}"
-echo 	"ROOTDIR:	${ROOTDIR}"
 echo 	"PKGPATH:	${PKGPATH}"
-echo 	"TAGS:		${TAGS}"
 echo ""
 printf "y, enter to import, ctrl-c to abort> "
 read ANS
 
 if [ "${ANS}" = "y" ]; then
-  CVS_RSH=ssh cvs -d ${CVSROOT} import -m "$(cat ${MSG} | grep -v '^CVS:.*$')" ${ROOTDIR}${PKGPATH} ${TAGS}
+    (CVS_RSH=ssh cd .. && cvs add ${PACKAGE}) || exit 1
+    find . -type d | grep -v -e CVS -e '^\.$' | while read d
+    do
+        CVS_RSH=ssh cvs add "$d"
+    done
+    find . -type f | grep -v -e CVS -e orig$ | while read f
+    do
+        CVS_RSH=ssh cvs add "$f"
+    done
+    CVS_RSH=ssh cvs commit -m "$(grep -v '^CVS:.*$' ${MSG})"
 fi
 
 echo ${DASH70}
-echo "If the import went OK, move away the ${PKGPATH} directory"
-echo "and run \"cvs update -dPA ${PACKAGE}\" in ${CATEGORY} to complete"
-echo "the import. If you got conflict errors, just cvs add the"
-echo "conflicting files and cvs commit them."
-echo ""
-echo "Don't forget to add the package to ${CATEGORY}/Makefile and remove"
-echo "it from the TODO list."
+echo "Don't forget to add the package to ${CATEGORY}/Makefile."
+echo "When imported to pkgsrc itself, please update the CHANGES-*"
+echo "file and possibly remove the package from the TODO list."
 echo ""
