@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/07/02 10:35:04 jihbed Exp $
+
+SHA1 (pysb-0.1.5.tar.gz) = 97a497fe86f98c4808f1f965c26e056266bc2e34
+RMD160 (pysb-0.1.5.tar.gz) = a94e608520619841e9c13e63568c2992769a0739
+Size (pysb-0.1.5.tar.gz) = 63518 bytes
