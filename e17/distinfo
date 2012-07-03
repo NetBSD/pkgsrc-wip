@@ -1,14 +1,5 @@
-$NetBSD: distinfo,v 1.15 2010/01/18 19:34:13 jsonn Exp $
+$NetBSD: distinfo,v 1.16 2012/07/03 06:35:37 lokivit Exp $
 
-SHA1 (enlightenment-0.16.999.063.tar.bz2) = c2da7dc3c756f01cb823559bfdf4c06a7eb8e40b
-RMD160 (enlightenment-0.16.999.063.tar.bz2) = 2d7ac37d38991c76acc887b9b2aa3e23d4e4d7ed
-Size (enlightenment-0.16.999.063.tar.bz2) = 5776979 bytes
-SHA1 (patch-aa) = 70e28f1d31e334a0d3ba2c58232835f2cd40ea48
-SHA1 (patch-ab) = 7924bdaf7053f4026be405a4a6c2a15717b98f1f
-SHA1 (patch-ac) = 278ff1d840d28bd76148796c6ae8a6ea4ba06ff4
-SHA1 (patch-ad) = 80be9e296c5d68cf7978cf092e22f21ac860e51e
-SHA1 (patch-ae) = 1c280cdf3bb2a67985a8e94ffb11ab0cf124532f
-SHA1 (patch-af) = 785db672d1d771770d5d96efb77b34b94d403a43
-SHA1 (patch-ag) = 99ec8af1686937f345b8337ea963fcd6be71768b
-SHA1 (patch-ah) = 917f385d4c1e8ee3065cceb90b822c3e09bda61f
-SHA1 (patch-ai) = 44256f7bc3982fb474dad8be24420363718469b3
+SHA1 (enlightenment-0.16.999.55225.tar.bz2) = 4bd9cfdb5f360ed62b6881948af1c278388b27af
+RMD160 (enlightenment-0.16.999.55225.tar.bz2) = d3b1356b6983bd715ea3130cc1c7cc8b7b4e5661
+Size (enlightenment-0.16.999.55225.tar.bz2) = 5988716 bytes

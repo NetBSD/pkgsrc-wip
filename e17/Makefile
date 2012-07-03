@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2010/01/18 19:34:13 jsonn Exp $
+# $NetBSD: Makefile,v 1.27 2012/07/03 06:35:37 lokivit Exp $
 #
 
-DISTNAME=	enlightenment-0.16.999.063
+DISTNAME=	enlightenment-0.16.999.55225
 PKGNAME=	${DISTNAME:S/enlightenment/e17/}
 CATEGORIES=	x11
 MASTER_SITES=	http://download.enlightenment.org/snapshots/2009-12-02/
@@ -11,9 +11,9 @@ MAINTAINER=	yazzy@yazzy.org
 HOMEPAGE=	http://enlightenment.org/
 COMMENT=	Enlightenment Window Manager, Development Release
 
-DEPENDS+=	evas-eet>=0.9.9:../../graphics/evas-eet
-DEPENDS+=	evas-jpeg>=0.9.9:../../graphics/evas-jpeg
-DEPENDS+=	evas-png>=0.9.9:../../graphics/evas-png
+DEPENDS+=	evas-eet>=1.1.0:../../graphics/evas-eet
+DEPENDS+=	evas-jpeg>=1.1.0:../../graphics/evas-jpeg
+DEPENDS+=	evas-png>=1.1.0:../../graphics/evas-png
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -38,11 +38,11 @@ pre-install:
 
 PKGCONFIG_OVERRIDE=	enlightenment.pc.in
 
-.include "../../wip/ecore/buildlink3.mk"
-.include "../../wip/edbus/buildlink3.mk"
-.include "../../wip/edje/buildlink3.mk"
+.include "../../devel/ecore/buildlink3.mk"
+.include "../../sysutils/edbus/buildlink3.mk"
+.include "../../graphics/edje/buildlink3.mk"
 .include "../../devel/eet/buildlink3.mk"
-.include "../../wip/efreet/buildlink3.mk"
+.include "../../sysutils/efreet/buildlink3.mk"
 .include "../../graphics/evas/buildlink3.mk"
 .include "../../graphics/evas-buffer/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
