@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/12/29 22:28:17 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/07/03 23:22:33 othyro Exp $
 #
 
 DISTNAME=	DISPred-2.0
 PKGNAME=	dispred-2.0
-CATEGORIES=	physics
+CATEGORIES=	math
 MASTER_SITES=	http://www.hepforge.org/archive/dispred/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://www.hepforge.org/archive/dispred/
-COMMENT=	TODO: Short description of the package
+HOMEPAGE=	http://dispred.hepforge.org/
+COMMENT=	Tools for calculating DIS cross sections at LO and NLO in QCD
 #LICENSE=	# TODO: (see mk/license.mk)
 
 PKG_DESTDIR_SUPPORT=	user-destdir
