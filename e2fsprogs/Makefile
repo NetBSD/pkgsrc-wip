@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.11 2008/02/21 05:40:39 tnn2 Exp $
-# $Id: Makefile,v 1.11 2008/02/21 05:40:39 tnn2 Exp $
+# $NetBSD: Makefile,v 1.12 2012/07/05 15:13:25 othyro Exp $
+# $Id: Makefile,v 1.12 2012/07/05 15:13:25 othyro Exp $
 
 DISTNAME=	${E2FSPROGS_DISTNAME}
 CATEGORIES=	sysutils
@@ -8,6 +8,9 @@ MASTER_SITES=	${E2FSPROGS_MASTER_SITES}
 MAINTAINER=	reed@reedmedia.net
 HOMEPAGE=	http://e2fsprogs.sourceforge.net/
 COMMENT=	Filesystem utilities for the ext2 and ext3 filesystems
+LICENSE=	gnu-gpl-v2 gnu-lgpl-v2 modified-bsd mit
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 # needs msginit
 #BUILD_DEPENDS+=	gettext>=0.10.35nb1:../../devel/gettext
