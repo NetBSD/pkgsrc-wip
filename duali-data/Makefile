@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/11/25 11:44:18 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/07/05 14:40:30 othyro Exp $
 #
 
 DISTNAME=	duali-data-0.1b
@@ -9,7 +9,7 @@ MASTER_SITES=	http://switch.dl.sourceforge.net/project/arabeyes/Duali/data-0.1b/
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://www.arabeyes.org/project.php?proj=Duali
 COMMENT=	Arabic dictionary
-#LICENSE=	gnu-lgpl-v2.1
+LICENSE=	modified-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
