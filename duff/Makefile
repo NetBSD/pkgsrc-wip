@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/02/10 08:40:25 bartoszkuzma Exp $
+# $NetBSD: Makefile,v 1.3 2012/07/05 14:50:18 othyro Exp $
 #
 
 DISTNAME=	duff-0.5.2
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	bartosz.kuzma@gmail.com
 HOMEPAGE=	http://duff.sourceforge.net/
 COMMENT=	Quickly finds duplicates in a given set of files
-# LICENSE=	zlib-license http://www.opensource.org/licenses/zlib-license.php
+LICENSE=	png-license
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
