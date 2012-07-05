@@ -1,15 +1,18 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/01/30 16:56:58 netcap Exp $
+# $NetBSD: Makefile,v 1.2 2012/07/05 14:32:16 othyro Exp $
 #
 
 DISTNAME=	drumpiler-0.9.0
 CATEGORIES=	audio
-MASTER_SITES= ${MASTER_SITE_SOURCEFORGE:=drumpiler/}
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=drumpiler/}
 
 MAINTAINER=	jfranz@bsdprojects.net
 HOMEPAGE=	http://drumpiler.sourceforge.net/
 COMMENT=	Drum machine compiler
+LICENSE=	gnu-gpl-v2
 
-BUILD_DEPENDS+=		SDL-1.2.[0-9]*:../../devel/SDL
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+BUILD_DEPENDS+=	SDL-1.2.[0-9]*:../../devel/SDL
 
 SDL_CONFIG=	${PREFIX}/bin/sdl-config
 CFLAGS+=	`${SDL_CONFIG} --cflags`
