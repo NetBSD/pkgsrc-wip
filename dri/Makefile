@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/08/18 10:28:25 pallegra Exp $
+# $NetBSD: Makefile,v 1.3 2012/07/05 14:15:28 othyro Exp $
 #
 
 .include "../../wip/gl/Makefile.common"
@@ -12,7 +12,7 @@ COMPONENT=	dri
 MAINTAINER=	pallegra@gmail.com
 HOMEPAGE=	http://www.mesa3d.org/
 COMMENT=	OpenGL hardware acceleration drivers for the DRI
-#LICENSE=	mit # ???
+LICENSE=	mit
 
 CONFLICTS=	MesaLib<=7.6
 
