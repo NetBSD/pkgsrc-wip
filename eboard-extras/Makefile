@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2007/06/30 14:11:48 tnn2 Exp $
+# $NetBSD: Makefile,v 1.7 2012/07/05 15:42:16 othyro Exp $
 #
 
 DISTNAME=		eboard-extras-2
@@ -6,8 +6,11 @@ CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=eboard/}
 
 MAINTAINER=		zul@netbsd-fr.org
-HOMEPAGE=		http://eboard.sourceforge.net/
+HOMEPAGE=		http://www.bergo.eng.br/eboard/
 COMMENT=		Extras sets, pieces and sound or eboard
+LICENSE=		gnu-gpl-v2
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_BUILD=YES
 
@@ -24,7 +27,7 @@ do-configure:
 	cd ${WRKDIR}/${EXTRA2} && ./configure
 
 do-install:
-	cd ${WRKDIR}/${EXTRA1} && make install
-	cd ${WRKDIR}/${EXTRA2} && make install
+	cd ${WRKDIR}/${EXTRA1} && ${MAKE_PROGRAM} install
+	cd ${WRKDIR}/${EXTRA2} && ${MAKE_PROGRAM} install
 
 .include "../../mk/bsd.pkg.mk"
