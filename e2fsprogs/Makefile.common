@@ -1,5 +1,5 @@
-# $NetBSD: Makefile.common,v 1.17 2008/05/24 15:34:09 tnn2 Exp $
-# $Id: Makefile.common,v 1.17 2008/05/24 15:34:09 tnn2 Exp $
+# $NetBSD: Makefile.common,v 1.18 2012/07/05 15:12:36 othyro Exp $
+# $Id: Makefile.common,v 1.18 2012/07/05 15:12:36 othyro Exp $
 #
 # used by wip/com_err/Makefile
 # used by wip/e2fsprogs/Makefile
@@ -15,7 +15,7 @@ GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake makeinfo msgfmt
 USE_PKGLOCALEDIR=	YES
 
-CONFIGURE_ENV+=		ac_cv_path_MSGFMT=${LOCALBASE}/bin/msgfmt
+CONFIGURE_ENV+=		ac_cv_path_MSGFMT=${PREFIX}/bin/msgfmt
 CONFIGURE_ARGS+=	--enable-elf-shlibs
 
 DISTINFO_FILE=		${.CURDIR}/../../wip/e2fsprogs/distinfo
