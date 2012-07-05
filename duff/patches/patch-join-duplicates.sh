@@ -1,4 +1,6 @@
-$NetBSD: patch-join-duplicates.sh,v 1.1.1.1 2011/04/13 09:42:44 bartoszkuzma Exp $
+$NetBSD: patch-join-duplicates.sh,v 1.2 2012/07/05 14:47:43 othyro Exp $
+
+Using = instead of == for comparison.
 
 --- join-duplicates.sh.orig	2011-04-10 13:17:26.000000000 +0000
 +++ join-duplicates.sh
