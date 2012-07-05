@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2011/01/17 22:52:15 asau Exp $
+# $NetBSD: Makefile,v 1.38 2012/07/05 15:44:19 asau Exp $
 #
 
 DISTNAME=		ecl-11.1.1
@@ -36,7 +36,7 @@ PLIST_SUBST=	PKGVERSION_MAJOR_MINOR=${PKGVERSION_NOREV:R} \
 #.if defined(USE_CVS) && !empty(USE_CVS:M[Yy][Ee][Ss])
 ## CVS part:
 
-PKGNAME=		ecl-11.1.99
+PKGNAME=		ecl-12.99
 WRKSRC=			${WRKDIR}/ecl
 
 CVS_REPOSITORIES=	ecl
