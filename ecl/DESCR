@@ -8,13 +8,15 @@ The current ECL implementation features:
   * A translator to C.
   * An interface to foreign functions.
   * A dynamic loader.
-  * The possibility to build standalone executables.
+  * The possibility to build standalone executables and shared libraries.
   * The Common-Lisp Object System (CLOS).
+  * Most of the Meta Object Protocol (MOP).
   * Conditions and restarts for handling errors.
   * Sockets as ordinary streams.
   * The Gnu Multiprecision library for fast bignum operations.
   * A simple conservative mark & sweep garbage collector.
   * The Boehm-Weiser garbage collector.
-  * Threads using the POSIX threads library.
+  * Object finalizers, weak references and weak hash tables.
+  * Threads using the POSIX threads library (with optional TLS).
   * CLX, an X11 client not needing extra X11 libraries.
   * Unicode.
