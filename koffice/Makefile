@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/07/02 13:37:59 moubctez Exp $
+# $NetBSD: Makefile,v 1.18 2012/07/07 11:47:20 mwdavies Exp $
 #
 
 DISTNAME=	koffice-2.3.3
@@ -63,5 +63,6 @@ REPLACE_PYTHON+= \
 .include "../../x11/kdelibs4/buildlink3.mk"
 # CMake doesn't find it
 #.include "../../mk/pgsql.buildlink3.mk"
+BUILDLINK_DEPMETHOD.qt4-tools=	full
 .include "../../meta-pkgs/kde4/kde4.mk"
 .include "../../mk/bsd.pkg.mk"
