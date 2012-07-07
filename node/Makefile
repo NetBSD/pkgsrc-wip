@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/07/03 08:49:00 fhajny Exp $
+# $NetBSD: Makefile,v 1.8 2012/07/07 14:58:08 genolopolis Exp $
 #
 
 DISTNAME=	node-v0.8.1
@@ -53,6 +53,9 @@ REPLACE_PYTHON+=	tools/wafadmin/Tools/*.py
 
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "OpenBSD"
 . include "../../wip/libexecinfo/buildlink3.mk"
+.endif
+.if ${OPSYS} == "NetBSD"
+BUILD_DEPENDS+=	lockf-[0-9]*:../../wip/lockf
 .endif
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
