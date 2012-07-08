@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2012/05/03 02:28:13 obache Exp $
+@comment $NetBSD: PLIST,v 1.5 2012/07/08 14:17:20 ryo-on Exp $
 bin/gyp
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/gyp/MSVSNew.py
@@ -31,6 +31,9 @@ ${PYSITELIB}/gyp/__init__.pyo
 ${PYSITELIB}/gyp/common.py
 ${PYSITELIB}/gyp/common.pyc
 ${PYSITELIB}/gyp/common.pyo
+${PYSITELIB}/gyp/common_test.py
+${PYSITELIB}/gyp/common_test.pyc
+${PYSITELIB}/gyp/common_test.pyo
 ${PYSITELIB}/gyp/easy_xml.py
 ${PYSITELIB}/gyp/easy_xml.pyc
 ${PYSITELIB}/gyp/easy_xml.pyo
@@ -40,9 +43,15 @@ ${PYSITELIB}/gyp/easy_xml_test.pyo
 ${PYSITELIB}/gyp/generator/__init__.py
 ${PYSITELIB}/gyp/generator/__init__.pyc
 ${PYSITELIB}/gyp/generator/__init__.pyo
+${PYSITELIB}/gyp/generator/android.py
+${PYSITELIB}/gyp/generator/android.pyc
+${PYSITELIB}/gyp/generator/android.pyo
 ${PYSITELIB}/gyp/generator/dump_dependency_json.py
 ${PYSITELIB}/gyp/generator/dump_dependency_json.pyc
 ${PYSITELIB}/gyp/generator/dump_dependency_json.pyo
+${PYSITELIB}/gyp/generator/eclipse.py
+${PYSITELIB}/gyp/generator/eclipse.pyc
+${PYSITELIB}/gyp/generator/eclipse.pyo
 ${PYSITELIB}/gyp/generator/gypd.py
 ${PYSITELIB}/gyp/generator/gypd.pyc
 ${PYSITELIB}/gyp/generator/gypd.pyo
