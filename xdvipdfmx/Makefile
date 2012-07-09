@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/07/09 01:14:51 minskim Exp $
+# $NetBSD: Makefile,v 1.8 2012/07/09 01:16:07 minskim Exp $
 
 DISTNAME=	texlive-20110705-source
 PKGNAME=	xdvipdfmx-0.7.8${DISTNAME:C/texlive-([0-9]+)-source/.\1/g}
@@ -9,7 +9,6 @@ EXTRACT_SUFX=	.tar.xz
 MAINTAINER=	mishka@NetBSD.org
 HOMEPAGE=	http://scripts.sil.org/XeTeX
 COMMENT=	Extended DVI to PDF converter, mainly for use with XeTeX
-
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	dvipdfmx-[0-9]*:../../print/dvipdfmx
