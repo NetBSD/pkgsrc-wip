@@ -1,0 +1,2 @@
+Meta package to check doxygen dependent packages.
+The PLIST of those packages may vary depending on doxygen versions.
