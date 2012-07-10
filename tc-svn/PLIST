@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2012/04/11 07:33:29 makoto Exp $
+@comment $NetBSD: PLIST,v 1.6 2012/07/10 07:10:25 makoto Exp $
 bin/tcinput
 info/tc.info
 ${EMACS_LISPPREFIX}/tc-2.3.1/eelll.el
@@ -15,9 +15,13 @@ ${EMACS_LISPPREFIX}/tc-2.3.1/tc-image.elc
 ${EMACS_LISPPREFIX}/tc-2.3.1/tc-inst.el
 ${EMACS_LISPPREFIX}/tc-2.3.1/tc-inst.elc
 ${EMACS_LISPPREFIX}/tc-2.3.1/tc-is18.el
+${EMACS_LISPPREFIX}/tc-2.3.1/tc-is18.elc
 ${EMACS_LISPPREFIX}/tc-2.3.1/tc-is19.el
+${EMACS_LISPPREFIX}/tc-2.3.1/tc-is19.elc
 ${EMACS_LISPPREFIX}/tc-2.3.1/tc-is20.el
+${EMACS_LISPPREFIX}/tc-2.3.1/tc-is20.elc
 ${EMACS_LISPPREFIX}/tc-2.3.1/tc-is22.el
+${EMACS_LISPPREFIX}/tc-2.3.1/tc-is22.elc
 ${EMACS_LISPPREFIX}/tc-2.3.1/tc-ja-alnum.el
 ${EMACS_LISPPREFIX}/tc-2.3.1/tc-ja-alnum.elc
 ${EMACS_LISPPREFIX}/tc-2.3.1/tc-jiscode.el

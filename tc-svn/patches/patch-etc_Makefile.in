@@ -1,4 +1,6 @@
-$NetBSD: patch-etc_Makefile.in,v 1.1 2012/04/13 06:49:11 makoto Exp $
+$NetBSD: patch-etc_Makefile.in,v 1.2 2012/07/10 07:10:25 makoto Exp $
+Supporing to add following argment for configure
+ --enable-symbol-rev 
 
 --- etc/Makefile.in.orig	2012-04-12 09:42:33.000000000 +0900
 +++ etc/Makefile.in	2012-04-12 23:49:23.000000000 +0900
