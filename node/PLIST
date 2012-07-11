@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2012/07/03 08:49:00 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.6 2012/07/11 11:06:56 fhajny Exp $
 bin/node
 bin/node-waf
 bin/npm
@@ -641,6 +641,8 @@ lib/node_modules/npm/node_modules/read/lib/read.js
 lib/node_modules/npm/node_modules/read/LICENCE
 lib/node_modules/npm/node_modules/read/package.json
 lib/node_modules/npm/node_modules/read/README.md
+lib/node_modules/npm/node_modules/request/aws.js
+lib/node_modules/npm/node_modules/request/aws2.js
 lib/node_modules/npm/node_modules/request/forever.js
 lib/node_modules/npm/node_modules/request/LICENSE
 lib/node_modules/npm/node_modules/request/main.js
