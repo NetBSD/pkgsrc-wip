@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2012/07/12 14:04:24 khorben Exp $
+${PYSITELIB}/magic.py
+${PYSITELIB}/magic.pyc
+${PYSITELIB}/magic.pyo
+${PYSITELIB}/python_magic-${PKGVERSION}-py2.7.egg-info/PKG-INFO
+${PYSITELIB}/python_magic-${PKGVERSION}-py2.7.egg-info/SOURCES.txt
+${PYSITELIB}/python_magic-${PKGVERSION}-py2.7.egg-info/dependency_links.txt
+${PYSITELIB}/python_magic-${PKGVERSION}-py2.7.egg-info/top_level.txt

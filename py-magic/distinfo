@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2012/07/12 14:04:24 khorben Exp $
+
+SHA1 (python-magic-0.4.2.tar.gz) = b6f539f52cd5255e9b1a97d9a80fead2ee8b77cc
+RMD160 (python-magic-0.4.2.tar.gz) = 2289823ce2499130551673c31c5cf99fddb393ed
+Size (python-magic-0.4.2.tar.gz) = 3259 bytes
