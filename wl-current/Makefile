@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/04/04 21:59:13 makoto Exp $
+# $NetBSD: Makefile,v 1.6 2012/07/12 02:18:02 makoto Exp $
 
 DISTNAME=	wl-2.15.9
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -42,6 +42,7 @@ EMACS_BUILDLINK=	# empty
 
 GIT_REPOSITORIES=       master
 GIT_REPO.master=        git://github.com/wanderlust/wanderlust.git
+GIT_MODULE.master=      wanderlust 
 _GIT_FLAGS?=            --depth 1
 
 
