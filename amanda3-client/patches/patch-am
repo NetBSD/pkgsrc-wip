@@ -1,10 +1,10 @@
-$NetBSD: patch-am,v 1.1.1.1 2010/08/24 02:43:11 schnoebe Exp $
+$NetBSD: patch-am,v 1.2 2012/07/12 06:53:11 schnoebe Exp $
 
 use the version of libamanda installed by amanda3-common
 
---- application-src/Makefile.in.orig	2010-08-11 22:21:59.000000000 +0000
+--- application-src/Makefile.in.orig	2012-02-21 11:37:54.000000000 +0000
 +++ application-src/Makefile.in
-@@ -341,21 +341,21 @@ PROGRAMS = $(amlibexec_PROGRAMS) $(appli
+@@ -353,21 +353,21 @@ PROGRAMS = $(amlibexec_PROGRAMS) $(appli
  amgtar_SOURCES = amgtar.c
  amgtar_OBJECTS = amgtar.$(OBJEXT)
  amgtar_LDADD = $(LDADD)
@@ -35,7 +35,7 @@ use the version of libamanda installed by amanda3-common
  am__vpath_adj_setup = srcdirstrip=`echo "$(srcdir)" | sed 's|.|.|g'`;
  am__vpath_adj = case $$p in \
      $(srcdir)/*) f=`echo "$$p" | sed "s|^$$srcdirstrip/||"`;; \
-@@ -705,7 +705,7 @@ INTLLIBS = @INTLLIBS@
+@@ -871,7 +871,7 @@ INTLLIBS = @INTLLIBS@
  INTL_MACOSX_LIBS = @INTL_MACOSX_LIBS@
  KRB5_SECURITY = @KRB5_SECURITY@
  LD = @LD@
@@ -44,7 +44,7 @@ use the version of libamanda installed by amanda3-common
  LEX = @LEX@
  LEXLIB = @LEXLIB@
  LEX_OUTPUT_ROOT = @LEX_OUTPUT_ROOT@
-@@ -1024,11 +1024,9 @@ SCRIPTS_SHELL = $(amlibexec_SCRIPTS)
+@@ -1289,11 +1289,9 @@ SCRIPTS_SHELL = $(amlibexec_SCRIPTS)
  applicationexecdir = $(APPLICATION_DIR)
  applicationdir = $(APPLICATION_DIR)
  applicationexec_SCRIPTS = $(SCRIPTS_PERL)
@@ -57,5 +57,5 @@ use the version of libamanda installed by amanda3-common
 +	../gnulib/libgnu.la \
 +	-lamandad -lamanda
  
- INSTALLPERMS_exec = dest=$(amlibexecdir) chown=amanda \
- 	$(amlibexec_PROGRAMS) dest=$(applicationdir) chown=amanda \
+ @WANT_SETUID_CLIENT_TRUE@INSTALLPERMS_exec = dest=$(applicationdir) chown=root:setuid chmod=04750 \
+ @WANT_SETUID_CLIENT_TRUE@		    amgtar amstar

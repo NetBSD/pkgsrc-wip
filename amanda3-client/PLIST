@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/08/24 02:43:11 schnoebe Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/07/12 06:53:11 schnoebe Exp $
 lib/amanda/libamclient.la
 libexec/amanda/amandad
 libexec/amanda/application/amgtar
@@ -22,14 +22,17 @@ libexec/amanda/sendbackup
 libexec/amanda/sendsize
 libexec/amanda/teecount
 man/man7/amanda-applications.7
+man/man8/amdump_client.8
 man/man8/amgtar.8
 man/man8/ampgsql.8
 man/man8/amraw.8
+man/man8/amrecover.8
 man/man8/amsamba.8
 man/man8/amstar.8
 man/man8/amsuntar.8
 man/man8/amzfs-sendrecv.8
 man/man8/amzfs-snapshot.8
+sbin/amdump_client
 sbin/amoldrecover
 sbin/amrecover
 @pkgdir share/amanda

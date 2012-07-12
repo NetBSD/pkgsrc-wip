@@ -1,4 +1,4 @@
-$NetBSD: patch-aj,v 1.1.1.1 2010/08/24 02:43:11 schnoebe Exp $
+$NetBSD: patch-aj,v 1.2 2012/07/12 06:53:11 schnoebe Exp $
 
 Remove build-directory library dependencies and link against the ones
 installed by amanda-common instead.
@@ -9,9 +9,18 @@ amanda-common.
 Add the @amlibdir@ to the loader search path so everything might be
 found.
 
---- amandad-src/Makefile.in.orig	2010-08-11 22:21:58.000000000 +0000
+--- amandad-src/Makefile.in.orig	2012-02-21 11:37:53.000000000 +0000
 +++ amandad-src/Makefile.in
-@@ -293,8 +293,7 @@ PROGRAMS = $(amlibexec_PROGRAMS)
+@@ -298,7 +298,7 @@ am__base_list = \
+   sed '$$!N;$$!N;$$!N;$$!N;s/\n/ /g'
+ am__installdirs = "$(DESTDIR)$(amlibdir)" "$(DESTDIR)$(amlibexecdir)"
+ LTLIBRARIES = $(amlib_LTLIBRARIES)
+-libamandad_la_DEPENDENCIES = ../common-src/libamanda.la
++libamandad_la_DEPENDENCIES = 
+ am_libamandad_la_OBJECTS = amandad_util.lo
+ libamandad_la_OBJECTS = $(am_libamandad_la_OBJECTS)
+ libamandad_la_LINK = $(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) \
+@@ -308,8 +308,7 @@ PROGRAMS = $(amlibexec_PROGRAMS)
  amandad_SOURCES = amandad.c
  amandad_OBJECTS = amandad.$(OBJEXT)
  amandad_LDADD = $(LDADD)
@@ -21,7 +30,7 @@ found.
  DEFAULT_INCLUDES = -I.@am__isrc@ -I$(top_builddir)/config
  depcomp = $(SHELL) $(top_srcdir)/config/depcomp
  am__depfiles_maybe = depfiles
-@@ -623,7 +622,7 @@ INTLLIBS = @INTLLIBS@
+@@ -792,7 +791,7 @@ INTLLIBS = @INTLLIBS@
  INTL_MACOSX_LIBS = @INTL_MACOSX_LIBS@
  KRB5_SECURITY = @KRB5_SECURITY@
  LD = @LD@
@@ -30,16 +39,20 @@ found.
  LEX = @LEX@
  LEXLIB = @LEXLIB@
  LEX_OUTPUT_ROOT = @LEX_OUTPUT_ROOT@
-@@ -914,7 +913,7 @@ AM_CFLAGS = $(AMANDA_WARNING_CFLAGS)
- AM_LDFLAGS = $(AMANDA_STATIC_LDFLAGS)
+@@ -1182,10 +1181,10 @@ AM_CFLAGS = $(AMANDA_WARNING_CFLAGS)
+ AM_LDFLAGS = $(AMANDA_STATIC_LDFLAGS) $(AS_NEEDED_FLAGS)
  LINT = $(AMLINT)
  LINTFLAGS = $(AMLINTFLAGS)
 -amlib_LTLIBRARIES = libamandad.la
-+# amlib_LTLIBRARIES = libamandad.la
++amlib_LTLIBRARIES = 
  libamandad_la_SOURCES = amandad_util.c
- libamandad_la_LDFLAGS = -release $(VERSION)
- libamandad_la_LIBADD = ../common-src/libamanda.la
-@@ -926,10 +925,7 @@ noinst_HEADERS = amandad.h
+ libamandad_la_LDFLAGS = -release $(VERSION) $(AS_NEEDED_FLAGS)
+-libamandad_la_LIBADD = ../common-src/libamanda.la
++libamandad_la_LIBADD = -lamanda
+ noinst_HEADERS = amandad.h
+ 
+ ###
+@@ -1194,10 +1193,7 @@ noinst_HEADERS = amandad.h
  # need to list libamanda twice here, first to override the system library
  # routines, and second to pick up any references in the other libraries.
  ###
@@ -49,5 +62,5 @@ found.
 -	../gnulib/libgnu.la
 +LDADD = ../gnulib/libgnu.la -lamanda -lamandad
  
- INSTALLPERMS_exec = \
- 	dest=$(amlibexecdir) chown=amanda \
+ all: $(BUILT_SOURCES)
+ 	$(MAKE) $(AM_MAKEFLAGS) all-am
