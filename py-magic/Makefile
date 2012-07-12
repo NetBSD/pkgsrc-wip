@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/07/12 14:48:27 khorben Exp $
+# $NetBSD: Makefile,v 1.4 2012/07/12 21:05:02 thomasklausner Exp $
 
 DISTNAME=	python-magic-0.4.2
 PKGNAME=	${PYPKGPREFIX}-magic-0.4.2
@@ -12,9 +12,9 @@ LICENSE=	python-software-foundation
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-PYDISTUTILSPKG= yes
+EGG_NAME=	${DISTNAME:S/-magic/_magic/}
 
 USE_LANGUAGES=	# none
 
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
