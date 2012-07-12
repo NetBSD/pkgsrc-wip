@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/07/12 02:28:56 makoto Exp $
+# $NetBSD: Makefile,v 1.3 2012/07/12 10:03:51 makoto Exp $
 
 # M-x twittering-mode-version shows twittering-mode-vHEAD,
 # but just for convenience:
@@ -15,6 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GIT_REPOSITORIES=	master
 GIT_REPO.master=	https://github.com/hayamiz/twittering-mode.git
 GIT_MODULE.master=	twittering-mode
+PKGSRC_SETENV+=		GIT_SSL_NO_VERIFY=true
 
 WRKSRC=		${WRKDIR}/twittering-mode
 NO_BUILD=	yes
