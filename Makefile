@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4777 2012/07/09 01:24:54 minskim Exp $
+# $Id: Makefile,v 1.4778 2012/07/12 14:06:37 khorben Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2363,6 +2363,7 @@ SUBDIR+=	py-logilab-database
 SUBDIR+=	py-logilab-mtconverter
 SUBDIR+=	py-logilab-pigg
 SUBDIR+=	py-louie
+SUBDIR+=	py-magic
 SUBDIR+=	py-magnitude
 SUBDIR+=	py-mark
 SUBDIR+=	py-mcint
