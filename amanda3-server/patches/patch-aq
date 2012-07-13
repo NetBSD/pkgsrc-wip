@@ -1,10 +1,10 @@
-$NetBSD: patch-aq,v 1.1.1.1 2010/08/24 03:28:51 schnoebe Exp $
+$NetBSD: patch-aq,v 1.2 2012/07/13 05:32:07 schnoebe Exp $
 
 Fix the bash-isms.
 
---- configure.orig	2010-08-15 03:16:02.000000000 +0000
+--- configure.orig	2012-02-21 11:37:52.000000000 +0000
 +++ configure
-@@ -17353,7 +17353,7 @@ fi
+@@ -21201,7 +21201,7 @@ fi
  
  # Check whether --with-xsltproc-flags was given.
  if test "${with_xsltproc_flags+set}" = set; then :
@@ -13,3 +13,12 @@ Fix the bash-isms.
  	XSLTPROC_FLAGS=''
      else
  	if test "x$withval" != "xyes"; then
+@@ -26620,7 +26620,7 @@ if test "${with_suntar+set}" = set; then
+ 
+ else
+ 
+-	    if test "x$SUNTAR" == "x"; then
++	    if test "x$SUNTAR" = "x"; then
+ 		SUNTAR="/usr/sbin/tar"
+ 	    fi
+ 

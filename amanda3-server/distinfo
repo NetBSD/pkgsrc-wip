@@ -1,18 +1,17 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/08/24 03:28:51 schnoebe Exp $
+$NetBSD: distinfo,v 1.2 2012/07/13 05:32:07 schnoebe Exp $
 
-SHA1 (amanda-3.1.2.tar.gz) = 826348395540d17f5da17ecad00036b81fab939b
-RMD160 (amanda-3.1.2.tar.gz) = 80d6423e76ec93b03462eb5f029a2eac32d85a97
-Size (amanda-3.1.2.tar.gz) = 3941255 bytes
-SHA1 (patch-aa) = 10d3ad453ba44d78d09b3f2b57ef3f686237f1e0
+SHA1 (amanda-3.3.1.tar.gz) = 22273381f61319e46e1da9d7029ca2b3991eee98
+RMD160 (amanda-3.3.1.tar.gz) = 0d66ad25fd905901a1afd3651bd6c1e00db9af8d
+Size (amanda-3.3.1.tar.gz) = 4328574 bytes
 SHA1 (patch-ab) = 65cb40ed972ecaf22c9dafdac5c465d0b667c6c5
 SHA1 (patch-ac) = 605b9be56f8ccc546e062f02825fa539073854e3
-SHA1 (patch-ae) = 790174003473a389146a5960c6b82784555dc782
-SHA1 (patch-af) = 729b27493f3672226d233f5e6217a3509dfde21d
-SHA1 (patch-ah) = 701f1204420ad4865d76098ae3113b961b2a063c
-SHA1 (patch-ai) = 81d271230e19615abe47b463dafd166d5451ab7e
+SHA1 (patch-af) = 9269d1f4338149ac2fdde941085ec42f0c1495cb
+SHA1 (patch-ah) = 2afe48d2dd23723dd90702a338aa47d69e845cdc
 SHA1 (patch-ak) = 3f213db400844e88a1c64ac767bd3791af806eda
 SHA1 (patch-al) = bd3d1dbdba3ec1ee1b768d9555f731ee398f2d0c
 SHA1 (patch-ap) = f1ec4fba2606e357d453efcc57b7ab72cf2df680
-SHA1 (patch-aq) = 02201e130bd246fbeefc850ec599249d14d13c83
+SHA1 (patch-aq) = ed63d28dc74d88e0eb8f480c7d5a6fefc5e43166
 SHA1 (patch-ar) = 73e9d74c15e729a83070733c868b7d5efe43af82
-SHA1 (patch-as) = c43ec9a4f5f061bfd322959c852d53c58ecb6e2d
+SHA1 (patch-as) = 19fcd0e923396497f985cd2a74d8d56086385dcf
+SHA1 (patch-common-src_glib-util.c) = 9429c375f0199e75fa3f3f019b8b1ae0d233a6dc
+SHA1 (patch-common-src_glib-util.h) = 205977a4e2d70979639e7a38c8d60b9ea04e2387

@@ -1,30 +1,20 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/08/24 03:28:51 schnoebe Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/07/13 05:32:07 schnoebe Exp $
 lib/amanda/libamdevice.la
 lib/amanda/libamserver.la
 lib/amanda/libndmjob.la
 lib/amanda/libndmlib.la
 libexec/amanda/amcheck-device
-libexec/amanda/amcleanupdisk
+libexec/amanda/amdumpd
 libexec/amanda/amidxtaped
 libexec/amanda/amindexd
 libexec/amanda/amlogroll
 libexec/amanda/amndmjob
 libexec/amanda/amtrmidx
 libexec/amanda/amtrmlog
-libexec/amanda/chg-chio
-libexec/amanda/chg-chs
 libexec/amanda/chg-disk
-libexec/amanda/chg-iomega
-libexec/amanda/chg-juke
 libexec/amanda/chg-lib.sh
 libexec/amanda/chg-manual
-libexec/amanda/chg-mcutil
-libexec/amanda/chg-mtx
 libexec/amanda/chg-multi
-libexec/amanda/chg-null
-libexec/amanda/chg-rait
-libexec/amanda/chg-rth
-libexec/amanda/chg-scsi
 libexec/amanda/chg-zd-mtx
 libexec/amanda/chunker
 libexec/amanda/driver
@@ -37,6 +27,7 @@ man/man5/tapelist.5
 man/man7/amanda-changers.7
 man/man7/amanda-compatibility.7
 man/man7/amanda-devices.7
+man/man7/amanda-interactivity.7
 man/man7/amanda-taperscan.7
 man/man8/amaddclient.8
 man/man8/amadmin.8
@@ -45,6 +36,7 @@ man/man8/amcheck.8
 man/man8/amcheckdb.8
 man/man8/amcheckdump.8
 man/man8/amcleanup.8
+man/man8/amcleanupdisk.8
 man/man8/amcrypt-ossl-asym.8
 man/man8/amcrypt-ossl.8
 man/man8/amcrypt.8
@@ -61,7 +53,6 @@ man/man8/amreport.8
 man/man8/amrestore.8
 man/man8/amrmtape.8
 man/man8/amserverconfig.8
-man/man8/amservice.8
 man/man8/amstatus.8
 man/man8/amtape.8
 man/man8/amtapetype.8
@@ -74,6 +65,7 @@ sbin/amcheck
 sbin/amcheckdb
 sbin/amcheckdump
 sbin/amcleanup
+sbin/amcleanupdisk
 sbin/amcrypt
 sbin/amcrypt-ossl
 sbin/amcrypt-ossl-asym

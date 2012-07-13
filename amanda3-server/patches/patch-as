@@ -1,8 +1,8 @@
-$NetBSD: patch-as,v 1.1.1.1 2010/08/24 03:28:51 schnoebe Exp $
+$NetBSD: patch-as,v 1.2 2012/07/13 05:32:07 schnoebe Exp $
 
---- common-src/Makefile.in.orig	2010-08-11 22:22:00.000000000 +0000
+--- common-src/Makefile.in.orig	2012-02-21 11:37:54.000000000 +0000
 +++ common-src/Makefile.in
-@@ -1243,7 +1243,7 @@ SCRIPTS_INCLUDE = \
+@@ -1514,7 +1514,7 @@ SCRIPTS_INCLUDE = \
  
  SCRIPTS_PERL = $(sbin_SCRIPTS_PERL) $(amlibexec_SCRIPTS_PERL)
  SCRIPTS_SHELL = $(sbin_SCRIPTS_SHELL) $(amlibexec_SCRIPTS_SHELL)
@@ -10,8 +10,8 @@ $NetBSD: patch-as,v 1.1.1.1 2010/08/24 03:28:51 schnoebe Exp $
 +amlibexec_DATA = # $(SCRIPTS_INCLUDE)
  amlibexec_SCRIPTS = $(amlibexec_SCRIPTS_PERL) $(amlibexec_SCRIPTS_SHELL)
  sbin_SCRIPTS = $(sbin_SCRIPTS_PERL) $(sbin_SCRIPTS_SHELL)
- 
-@@ -1746,7 +1746,7 @@ install-data: install-data-am
+ all: $(BUILT_SOURCES)
+@@ -2055,7 +2055,7 @@ install-data: install-data-am
  uninstall: uninstall-am
  
  install-am: all-am
