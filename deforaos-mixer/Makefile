@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/03/21 17:48:27 khorben Exp $
+# $NetBSD: Makefile,v 1.9 2012/07/13 13:50:31 khorben Exp $
 
 DISTNAME=	Mixer-0.1.0
 PKGNAME=	deforaos-mixer-0.1.0
@@ -16,6 +16,8 @@ USE_TOOLS+=	pkg-config
 PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_FLAGS+=	PREFIX=${PREFIX}
 MAKE_FLAGS+=	DESTDIR=${DESTDIR}
+
+.include "options.mk"
 
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../wip/deforaos-libdesktop/buildlink3.mk"
