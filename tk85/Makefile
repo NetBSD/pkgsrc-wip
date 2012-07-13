@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/06/07 23:05:30 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/07/13 00:48:17 makoto Exp $
 
 DISTNAME=	tk${TK_VERSION}-src
 PKGNAME=	tk-${TK_VERSION}
@@ -20,6 +20,9 @@ CONFIGURE_DIRS=		unix
 BUILD_DIRS=		${CONFIGURE_DIRS}
 
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
+# The next line seems to be redundent, but on some arch's, 
+# this is not default, at least for Mac OS X 10.6.1 (mef@)
+CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib
 CONFIGURE_ARGS+=	--with-tcl=${BUILDLINK_PREFIX.tcl}/lib/tcl${TCL_VERSION:C/.[0-9]*$//}
 
 TEST_TARGET=		test
