@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/07/13 18:31:58 mwilhelmy Exp $
+# $NetBSD: Makefile,v 1.14 2012/07/13 21:02:35 mwilhelmy Exp $
 
 DISTNAME=		xrdp-0.4.2
 CATEGORIES=		net
@@ -26,6 +26,7 @@ MAKE_ENV+=		MANDIR=${PREFIX:Q}/${PKGMANDIR:Q}
 MAKE_ENV+=		DOCDIR=${PREFIX:Q}/share/doc/xrdp
 MAKE_ENV+=		DLLIB=${BUILDLINK_LDADD.dl:Q}
 MAKE_ENV+=		CFGDIR=${PKG_SYSCONFDIR}
+MAKE_ENV+=		SHAREDIR=${PREFIX}/share
 
 INSTALL_ENV+=		BINDIR=${PREFIX}/bin
 INSTALL_ENV+=		LIBDIR=${PREFIX}/lib
