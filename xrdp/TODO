@@ -21,7 +21,7 @@ Add version information to libraries?
 
 Make sesman log to a sane default location (syslog?) rather than ./sesman.log
 
-patch-am does not apply anymore, line 644 is behind EOF.
+Linux: Figure out why DLLIB or any other -ldl specific variable is never set.
 
 Old (from lkundrak, the previous maintainer, and not totally clear to me, the
 new maintainer):

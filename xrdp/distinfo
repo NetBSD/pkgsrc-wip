@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2011/09/03 08:53:28 mwilhelmy Exp $
+$NetBSD: distinfo,v 1.9 2012/07/13 20:28:20 mwilhelmy Exp $
 
 SHA1 (xrdp-0.4.2.tar.gz) = 82bb858661ada174faf88d3b273cd8c5f39238f3
 RMD160 (xrdp-0.4.2.tar.gz) = 294c26a1d8dde6c0aae490a1db0ee6b16c07e662
@@ -14,7 +14,7 @@ SHA1 (patch-ah) = aec77f37c5be739dcaaac3e91eb43fa3316bf949
 SHA1 (patch-ai) = 6256f46c49482a1d6a77c0befe84f0f668b93b60
 SHA1 (patch-ak) = 5530baf35d6162293f6028cb4ca8b543e5267d63
 SHA1 (patch-al) = 8fab338adeedaef4fc601dff0f97f5e86e973f11
-SHA1 (patch-am) = 7687456a5d7a4125964df430874b5dd9bb98fad4
+SHA1 (patch-am) = b20b9431394510f084b3b7b9d32842dac6e16aee
 SHA1 (patch-an) = 9f4c57521dae4c7a2b29d1c1f7b2a306bc9428d2
 SHA1 (patch-ao) = 708ecedee131f65e9198cff216368b72d341a724
 SHA1 (patch-ap) = 7549e9ddfc5645f1d1ece10ded78c17d6608f592
