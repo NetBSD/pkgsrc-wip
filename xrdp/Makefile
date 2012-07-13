@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/07/13 13:58:32 mwilhelmy Exp $
+# $NetBSD: Makefile,v 1.13 2012/07/13 18:31:58 mwilhelmy Exp $
 
 DISTNAME=		xrdp-0.4.2
 CATEGORIES=		net
@@ -13,7 +13,7 @@ USE_TOOLS+=		gmake
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-RCD_SCRIPTS=            xrdp sesman
+RCD_SCRIPTS=		xrdp sesman
 # FIXME: are these really needed?
 #RCD_SCRIPT_SRC.xrdp=	files/xrdp.sh
 #RCD_SCRIPT_SRC.sesman=	files/sesman.sh
@@ -49,7 +49,7 @@ SUBST_MESSAGE.man=	Fixing variables in man-pages
 SUBST_STAGE.man=	post-patch
 SUBST_FILES.man=	docs/man/sesman.ini.5 docs/man/xrdp.ini.5
 SUBST_FILES.man+=	docs/man/xrdp.8 docs/man/sesman.8 docs/man/sesrun.8
-SUBST_SED.man=		-E -e 's,\$$\{(SESMAN|XRDP)_BIN_DIR\},${BINDIR},g'
+SUBST_SED.man=		-E -e 's,\$$\{(SESMAN|XRDP)_BIN_DIR\},${PREFIX:Q}/bin,g'
 SUBST_SED.man+=		-e 's,\$$\{(SESMAN|XRDP)_CFG_DIR\},${PKG_SYSCONFDIR},g'
 SUBST_SED.man+=		-e 's,\$$\{(SESMAN|XRDP)_LOG_DIR\},.,g' # FIXME
 SUBST_SED.man+=		-e 's,\$$\{(SESMAN|XRDP)_PID_DIR\},/var/run,g'
