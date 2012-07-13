@@ -12,8 +12,8 @@ Get rid of xrdp_control.sh and startwm.sh (at least in $PREFIX/bin):
  - xrdp_control.sh is essentially what the rc-script does
 
 try it
- - it works, but requires further testing, and doesn't seem to find it's fonts
-   and cursors
+ - it works, but requires further testing, and login is still not possible
+   (testing this on Debian testing right now)
 
 CFGDIR is duplicate in MAKE_ENV
 
