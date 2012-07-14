@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4781 2012/07/14 22:02:52 thomasklausner Exp $
+# $Id: Makefile,v 1.4782 2012/07/14 22:06:34 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2162,6 +2162,7 @@ SUBDIR+=	py-CVSToys
 SUBDIR+=	py-Climate
 SUBDIR+=	py-DNS
 SUBDIR+=	py-DirectoryStorage
+SUBDIR+=	py-EMpy
 SUBDIR+=	py-EditObj2
 SUBDIR+=	py-Fnorb
 SUBDIR+=	py-Fnorb-docs
@@ -2274,7 +2275,6 @@ SUBDIR+=	py-duali
 SUBDIR+=	py-ecspy
 SUBDIR+=	py-embedc
 SUBDIR+=	py-emmsa
-SUBDIR+=	py-empy
 SUBDIR+=	py-errorhandler
 SUBDIR+=	py-event
 SUBDIR+=	py-eventlet
