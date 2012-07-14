@@ -1,5 +1,0 @@
-This package should probably be renamed py-empy and the current
-wip/py-empy should be renamed to something else to avoid confusion :)
-
-In all other package system I've checked (rpm, deb, macports, portage,
-freebsd...), this package is named py-empy or python-empy.
