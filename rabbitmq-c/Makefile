@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/07/15 14:02:00 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2012/07/15 14:31:04 fhajny Exp $
 #
 
 DISTNAME=	rabbitmq-c
@@ -32,6 +32,9 @@ pre-configure:
 	cd ${WRKSRC} && autoreconf -i
 
 .include "../../wip/mk/git-package.mk"
+# Init and update submodules too
+_GIT_FLAGS+=		--recursive
+
 .include "../../lang/python/application.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
