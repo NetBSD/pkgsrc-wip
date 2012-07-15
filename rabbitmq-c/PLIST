@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1 2012/07/15 14:02:00 fhajny Exp $
+bin/amqp-consume
+bin/amqp-declare-queue
+bin/amqp-delete-queue
+bin/amqp-get
+bin/amqp-publish
+include/amqp.h
+include/amqp_framing.h
+lib/librabbitmq.la
+lib/pkgconfig/librabbitmq.pc
+man/man1/amqp-consume.1
+man/man1/amqp-declare-queue.1
+man/man1/amqp-delete-queue.1
+man/man1/amqp-get.1
+man/man1/amqp-publish.1
+man/man7/librabbitmq-tools.7
