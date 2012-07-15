@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4782 2012/07/14 22:06:34 thomasklausner Exp $
+# $Id: Makefile,v 1.4783 2012/07/15 14:03:47 fhajny Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2638,6 +2638,7 @@ SUBDIR+=	quickie
 SUBDIR+=	quodlibet
 SUBDIR+=	qvamps
 SUBDIR+=	r8s
+SUBDIR+=	rabbitmq-c
 SUBDIR+=	radare
 SUBDIR+=	radiotray
 SUBDIR+=	ranmacgen
