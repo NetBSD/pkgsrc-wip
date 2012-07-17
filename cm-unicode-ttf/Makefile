@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/10/08 21:08:27 bubuchka Exp $
+# $NetBSD: Makefile,v 1.2 2012/07/17 23:51:10 bubuchka Exp $
 #
 
 CMU_VERSION=	0.7.0
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cm-unicode/}
 EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	mishka@NetBSD.org
-HOMEPAGE=	http://canopus.iacp.dvo.ru/~panov/cm-unicode/
+HOMEPAGE=	http://cm-unicode.sourceforge.net/
 COMMENT=	Computer Modern Unicode fonts
 LICENSE=	open-font-license
 
