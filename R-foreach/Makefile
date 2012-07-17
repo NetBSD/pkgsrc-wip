@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/05/03 22:37:49 bubuchka Exp $
+# $NetBSD: Makefile,v 1.2 2012/07/17 23:43:44 bubuchka Exp $
 
 CATEGORIES=	math devel
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	mishka@NetBSD.org
 HOMEPAGE=	http://cran.r-project.org/web/packages/foreach/index.html
 COMMENT=	Foreach looping construct for R
 

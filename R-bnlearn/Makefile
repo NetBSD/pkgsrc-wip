@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2012/07/10 13:48:50 bubuchka Exp $
+# $NetBSD: Makefile,v 1.3 2012/07/17 23:43:44 bubuchka Exp $
 
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	mishka@NetBSD.org
 HOMEPAGE=	http://www.bnlearn.com/
 COMMENT=	Bayesian network structure learning, parameter learning and inference
 
