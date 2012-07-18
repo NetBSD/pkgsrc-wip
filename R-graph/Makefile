@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/07/18 11:23:42 bubuchka Exp $
+# $NetBSD: Makefile,v 1.6 2012/07/18 11:34:49 bubuchka Exp $
 
 CATEGORIES=	math
 MASTER_SITES=	http://www.bioconductor.org/packages/release/bioc/src/contrib/
@@ -18,7 +18,7 @@ REPLACE_SH+=	inst/unitTests/*.sh
 
 USE_LANGUAGES=	c
 
+.include "../../math/R/Makefile.extension"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../wip/R-BiocGenerics/buildlink3.mk"
-.include "../../math/R/Makefile.extension"
 .include "../../mk/bsd.pkg.mk"
