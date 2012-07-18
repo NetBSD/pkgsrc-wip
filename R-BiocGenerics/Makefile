@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2012/07/18 11:14:48 bubuchka Exp $
+# $NetBSD: Makefile,v 1.4 2012/07/18 11:23:41 bubuchka Exp $
 
 
-CATEGORIES=	math devel
+CATEGORIES=	devel math
 MASTER_SITES=	http://www.bioconductor.org/packages/release/bioc/src/contrib/
 
 MAINTAINER=	mishka@NetBSD.org

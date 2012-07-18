@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2012/07/17 23:43:44 bubuchka Exp $
+# $NetBSD: Makefile,v 1.3 2012/07/18 11:23:42 bubuchka Exp $
 
-CATEGORIES=	math devel parallel
+CATEGORIES=	devel math parallel
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
 
 MAINTAINER=	mishka@NetBSD.org
