@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2012/01/10 04:05:41 asau Exp $
+@comment $NetBSD: PLIST,v 1.30 2012/07/18 15:58:21 asau Exp $
 bin/ecl
 bin/ecl-config
 include/ecl/bytecodes.h
@@ -42,6 +42,8 @@ lib/${PKGNAME}/ecl-curl.asd
 lib/${PKGNAME}/ecl-curl.fas
 lib/${PKGNAME}/ecl-help.asd
 lib/${PKGNAME}/ecl-help.fas
+lib/${PKGNAME}/ecl-quicklisp.asd
+lib/${PKGNAME}/ecl-quicklisp.fas
 lib/${PKGNAME}/ecl_min
 lib/${PKGNAME}/help.doc
 lib/${PKGNAME}/libasdf.a
@@ -52,6 +54,7 @@ lib/${PKGNAME}/libdefsystem.a
 lib/${PKGNAME}/libecl-cdb.a
 lib/${PKGNAME}/libecl-curl.a
 lib/${PKGNAME}/libecl-help.a
+lib/${PKGNAME}/libecl-quicklisp.a
 lib/${PKGNAME}/libprofile.a
 lib/${PKGNAME}/libql-minitar.a
 lib/${PKGNAME}/librt.a
