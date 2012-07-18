@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/07/17 23:43:44 bubuchka Exp $
+# $NetBSD: Makefile,v 1.4 2012/07/18 11:14:49 bubuchka Exp $
 
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
@@ -9,6 +9,8 @@ COMMENT=	Model-based clustering and normal mixture modeling
 
 R_PKGNAME=	mclust
 R_PKGVER=	3.4.8
+
+BUILDLINK_API_DEPENDS.R+=	R>=2.2.0
 
 USE_LANGUAGES=	fortran77
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/07/17 23:43:43 bubuchka Exp $
+# $NetBSD: Makefile,v 1.3 2012/07/18 11:14:48 bubuchka Exp $
 
 
 CATEGORIES=	math devel
@@ -10,8 +10,6 @@ COMMENT=	Generic functions for Bioconductor
 
 R_PKGNAME=	BiocGenerics
 R_PKGVER=	0.2.0
-
-BUILDLINK_API_DEPENDS.R+=       R>=2.10.0
 
 LICENSE=	artistic-2.0
 
