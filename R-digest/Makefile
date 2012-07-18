@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/07/18 11:14:48 bubuchka Exp $
+# $NetBSD: Makefile,v 1.4 2012/07/18 13:06:35 bubuchka Exp $
 
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
@@ -12,7 +12,7 @@ R_PKGVER=	0.4.2
 
 BUILDLINK_API_DEPENDS.R+=	R>=2.4.1
 
-USE_LANGUAGES=	fortran77
+USE_LANGUAGES=	c fortran
 
 .include "../../math/R/Makefile.extension"
 .include "../../mk/bsd.pkg.mk"
