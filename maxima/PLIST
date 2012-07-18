@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.43 2012/04/08 07:59:25 asau Exp $
+@comment $NetBSD: PLIST,v 1.44 2012/07/18 15:48:21 asau Exp $
 bin/maxima
 bin/rmaxima
 bin/xmaxima
@@ -528,11 +528,11 @@ share/maxima/${PKGVERSION}/share/contrib/fresnel/randil.mac
 share/maxima/${PKGVERSION}/share/contrib/fresnel/readme.txt
 share/maxima/${PKGVERSION}/share/contrib/gentran/convmac.lisp
 share/maxima/${PKGVERSION}/share/contrib/gentran/fdata.lisp
+share/maxima/${PKGVERSION}/share/contrib/gentran/gentran.lisp
 share/maxima/${PKGVERSION}/share/contrib/gentran/global.lisp
 share/maxima/${PKGVERSION}/share/contrib/gentran/gtfix.lisp
 share/maxima/${PKGVERSION}/share/contrib/gentran/init.lisp
 share/maxima/${PKGVERSION}/share/contrib/gentran/intrfc.lisp
-share/maxima/${PKGVERSION}/share/contrib/gentran/local.gtload.lisp
 share/maxima/${PKGVERSION}/share/contrib/gentran/lspc.lisp
 share/maxima/${PKGVERSION}/share/contrib/gentran/lspfor.lisp
 share/maxima/${PKGVERSION}/share/contrib/gentran/lsprat.lisp
@@ -1493,7 +1493,6 @@ share/maxima/${PKGVERSION}/src/intl.lisp
 share/maxima/${PKGVERSION}/src/intpol.lisp
 share/maxima/${PKGVERSION}/src/invert.lisp
 share/maxima/${PKGVERSION}/src/irinte.lisp
-share/maxima/${PKGVERSION}/src/kclmac.lisp
 share/maxima/${PKGVERSION}/src/laplac.lisp
 share/maxima/${PKGVERSION}/src/ldisp.lisp
 share/maxima/${PKGVERSION}/src/lesfac.lisp
@@ -1690,7 +1689,6 @@ share/maxima/${PKGVERSION}/src/rat3d.lisp
 share/maxima/${PKGVERSION}/src/rat3e.lisp
 share/maxima/${PKGVERSION}/src/ratmac.lisp
 share/maxima/${PKGVERSION}/src/ratout.lisp
-share/maxima/${PKGVERSION}/src/ratpoi.lisp
 share/maxima/${PKGVERSION}/src/residu.lisp
 share/maxima/${PKGVERSION}/src/result.lisp
 share/maxima/${PKGVERSION}/src/risch.lisp
