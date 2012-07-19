@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4783 2012/07/15 14:03:47 fhajny Exp $
+# $Id: Makefile,v 1.4784 2012/07/19 01:05:32 bubuchka Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2376,6 +2376,7 @@ SUBDIR+=	py-mlstats
 SUBDIR+=	py-mocker
 SUBDIR+=	py-model-builder
 SUBDIR+=	py-mois
+SUBDIR+=	py-mongo
 SUBDIR+=	py-mpich4py
 SUBDIR+=	py-multichain_mcmc
 SUBDIR+=	py-musicbrainz-ngs
