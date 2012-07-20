@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/07/20 17:11:44 asau Exp $
+# $NetBSD: Makefile,v 1.5 2012/07/20 18:58:40 asau Exp $
 
 .include "../../net/samba/Makefile.mirrors"
 
@@ -167,13 +167,10 @@ post-install:
 	# ${CHMOD} ${SHAREMODE} ${DESTDIR}${PREFIX}/include/*.h
 
 REPLACE_PERL=	pidl/pidl
+REPLACE_PYTHON=	source4/setup/* source4/scripting/bin/*
+# tevent.py sample-script.py sample-two-script.py
 
-REPLACE_PYTHON=	source4/setup/provision source4/scripting/bin/*
-# tevent.py samba-tool samba_kcc provision samba_dnsupdate samba_spnupdate samba_upgradedns upgradeprovision
-
-CHECK_INTERPRETER_SKIP=	$(PYSITELIB)/samba/*
-
-.include "../../lang/python/pyversion.mk"
+.include "../../lang/python/application.mk"
 
 PY_PATCHPLIST=	yes
 .include "../../lang/python/extension.mk"
