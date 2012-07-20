@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/04/05 12:39:29 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/07/20 17:11:44 asau Exp $
 
 .include "../../net/samba/Makefile.mirrors"
 
@@ -11,8 +11,10 @@ HOMEPAGE=	http://www.samba.org/
 COMMENT=	SMB/CIFS protocol server suite
 LICENSE=	gnu-gpl-v3
 
-VERSION=	4.0.0alpha16
+VERSION=	4.0.0beta4
 CONFLICTS+=	ja-samba-[0-9]* pam-smbpass-[0-9]* tdb-[0-9]* winbind-[0-9]*
+
+# DEPENDS=	xsltproc
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -163,6 +165,13 @@ post-install:
 		${DESTDIR}${PREFIX}/${EGDIR}
 	# $(WRKSRC)/examples/scripts/...
 	# ${CHMOD} ${SHAREMODE} ${DESTDIR}${PREFIX}/include/*.h
+
+REPLACE_PERL=	pidl/pidl
+
+REPLACE_PYTHON=	source4/setup/provision source4/scripting/bin/*
+# tevent.py samba-tool samba_kcc provision samba_dnsupdate samba_spnupdate samba_upgradedns upgradeprovision
+
+CHECK_INTERPRETER_SKIP=	$(PYSITELIB)/samba/*
 
 .include "../../lang/python/pyversion.mk"
 

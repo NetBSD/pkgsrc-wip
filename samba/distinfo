@@ -1,31 +1,5 @@
-$NetBSD: distinfo,v 1.3 2012/04/05 12:39:29 asau Exp $
+$NetBSD: distinfo,v 1.4 2012/07/20 17:11:44 asau Exp $
 
-SHA1 (samba-4.0.0alpha16.tar.gz) = 7d91cfbe38e7709fa4240e72c455b5e8af8b7827
-RMD160 (samba-4.0.0alpha16.tar.gz) = 21453cd84e021f73ca28b1c524f58906bb619a99
-Size (samba-4.0.0alpha16.tar.gz) = 18909369 bytes
-SHA1 (patch-aa) = da39a3ee5e6b4b0d3255bfef95601890afd80709
-SHA1 (patch-ab) = da39a3ee5e6b4b0d3255bfef95601890afd80709
-SHA1 (patch-ac) = da39a3ee5e6b4b0d3255bfef95601890afd80709
-SHA1 (patch-ad) = da39a3ee5e6b4b0d3255bfef95601890afd80709
-SHA1 (patch-ae) = da39a3ee5e6b4b0d3255bfef95601890afd80709
-SHA1 (patch-af) = da39a3ee5e6b4b0d3255bfef95601890afd80709
-SHA1 (patch-ag) = da39a3ee5e6b4b0d3255bfef95601890afd80709
-SHA1 (patch-ah) = da39a3ee5e6b4b0d3255bfef95601890afd80709
-SHA1 (patch-ai) = da39a3ee5e6b4b0d3255bfef95601890afd80709
-SHA1 (patch-aj) = da39a3ee5e6b4b0d3255bfef95601890afd80709
-SHA1 (patch-ak) = da39a3ee5e6b4b0d3255bfef95601890afd80709
-SHA1 (patch-an) = da39a3ee5e6b4b0d3255bfef95601890afd80709
-SHA1 (patch-ao) = da39a3ee5e6b4b0d3255bfef95601890afd80709
-SHA1 (patch-aq) = da39a3ee5e6b4b0d3255bfef95601890afd80709
-SHA1 (patch-ar) = da39a3ee5e6b4b0d3255bfef95601890afd80709
-SHA1 (patch-as) = da39a3ee5e6b4b0d3255bfef95601890afd80709
-SHA1 (patch-at) = da39a3ee5e6b4b0d3255bfef95601890afd80709
-SHA1 (patch-au) = da39a3ee5e6b4b0d3255bfef95601890afd80709
-SHA1 (patch-av) = da39a3ee5e6b4b0d3255bfef95601890afd80709
-SHA1 (patch-aw) = da39a3ee5e6b4b0d3255bfef95601890afd80709
-SHA1 (patch-ba) = da39a3ee5e6b4b0d3255bfef95601890afd80709
-SHA1 (patch-bb) = da39a3ee5e6b4b0d3255bfef95601890afd80709
-SHA1 (patch-bc) = da39a3ee5e6b4b0d3255bfef95601890afd80709
-SHA1 (patch-bd) = da39a3ee5e6b4b0d3255bfef95601890afd80709
-SHA1 (patch-be) = da39a3ee5e6b4b0d3255bfef95601890afd80709
-SHA1 (patch-bf) = da39a3ee5e6b4b0d3255bfef95601890afd80709
+SHA1 (samba-4.0.0beta4.tar.gz) = 3eb4a1ff7a67e3a62cb4c7630762650c168cd2dc
+RMD160 (samba-4.0.0beta4.tar.gz) = 401957be4a89dc5292cfc52df851efe4a4902adb
+Size (samba-4.0.0beta4.tar.gz) = 21012555 bytes
