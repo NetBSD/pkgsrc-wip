@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2012/06/18 10:27:22 asau Exp $
+# $NetBSD: Makefile,v 1.19 2012/07/20 11:06:46 fhajny Exp $
 #
 
 DISTNAME=	redis-2.4.14
@@ -67,6 +67,6 @@ post-install:
 	cd ${WRKSRC}/tests && pax -rwpp . ${DESTDIR}${EGDIR}/tests/
 
 do-test:
-	cd $(WRKSRC) && $(SH) runtest
+	cd ${WRKSRC} && ${SH} runtest
 
 .include "../../mk/bsd.pkg.mk"
