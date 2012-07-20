@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4784 2012/07/19 01:05:32 bubuchka Exp $
+# $Id: Makefile,v 1.4785 2012/07/20 08:37:32 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1499,6 +1499,7 @@ SUBDIR+=	mcpp
 SUBDIR+=	mcwm
 SUBDIR+=	mdadm
 SUBDIR+=	mdbtools
+SUBDIR+=	mediawiki-mode
 SUBDIR+=	meep
 SUBDIR+=	meep-mpi
 SUBDIR+=	memcached14
