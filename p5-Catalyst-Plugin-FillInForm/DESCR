@@ -11,5 +11,3 @@ a required field, or with errors in fields having specified constraints.
 FillInForm is used to redisplay the HTML form with all the form elements
 containing the submitted info. FillInForm can also be used to fill forms with
 data from any source, e.g. directly from your database.
-
-WWW: http://search.cpan.org/dist/Catalyst-Plugin-FillInForm/

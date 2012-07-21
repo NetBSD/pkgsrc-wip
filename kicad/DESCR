@@ -19,6 +19,3 @@ To get the latest libraries:
 bzr clone http://bazaar.launchpad.net/~kicad-lib-commiters/kicad/library \
   [destination]
     * Copy the library and modules directories to /usr/pkg/share/kicad/
-
-WWW: http://iut-tice.ujf-grenoble.fr/kicad/
-WWW: http://www.lis.inpg.fr/realise_au_lis/kicad/index.html
