@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2012/07/21 19:06:41 ryo-on Exp $
+bin/felica_dump
+bin/pasori_test
+include/libpafe/felica_command.h
+include/libpafe/libpafe.h
+include/libpafe/pasori_command.h
+lib/libpafe.la
