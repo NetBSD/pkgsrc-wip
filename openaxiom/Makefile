@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2012/02/21 09:31:20 asau Exp $
+# $NetBSD: Makefile,v 1.18 2012/07/21 20:21:40 asau Exp $
 #
 
 DISTNAME=		open-axiom-1.3.0
-PKGNAME=		openaxiom-1.99	# VCS-based
 CATEGORIES=		math
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=open-axiom/}
 EXTRACT_SUFX=		.tar.bz2
@@ -11,13 +10,6 @@ MAINTAINER=		asau@inbox.ru
 HOMEPAGE=		http://www.open-axiom.org/
 # http://open-axiom.sourceforge.net/index.html
 COMMENT=		Platform for symbolic, algebraic, and numerical computations
-
-# Get it from Subversion repository:
-SVN_REPOSITORIES=	open-axiom
-SVN_ROOT.open-axiom=	http://open-axiom.svn.sf.net/svnroot/open-axiom/trunk
-SVN_MODULE.open-axiom=	open-axiom
-
-WRKSRC=			${WRKDIR}/open-axiom
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_JOBS_SAFE=		no
@@ -55,6 +47,16 @@ pre-configure:
 
 # Skip these checks for now:
 CHECK_WRKREF_SKIP=     lib/*/hypertex lib/*/viewAlone lib/*/view2D lib/*/view3D lib/*/viewman
+
+
+# Get it from Subversion repository:
+SVN_REPOSITORIES=	open-axiom
+SVN_ROOT.open-axiom=	http://open-axiom.svn.sf.net/svnroot/open-axiom/trunk
+SVN_MODULE.open-axiom=	open-axiom
+
+WRKSRC=			${WRKDIR}/open-axiom
+
+PKGNAME=		openaxiom-1.99	# VCS-based
 
 .include "../mk/svn-package.mk"
 .include "../../mk/bsd.pkg.mk"
