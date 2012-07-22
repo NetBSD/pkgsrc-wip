@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.5 2012/07/21 20:24:23 asau Exp $
+$NetBSD: distinfo,v 1.6 2012/07/22 16:43:57 asau Exp $
 
 SHA1 (open-axiom-1.4.1.tar.bz2) = 52a6791c31125507f33b48d4ea38e7a9c7918cb5
 RMD160 (open-axiom-1.4.1.tar.bz2) = 172f21ce6bfde933a51e0fdfdeae19617a611d1e
 Size (open-axiom-1.4.1.tar.bz2) = 10023493 bytes
+SHA1 (patch-src_hyper_htadd.c) = 14ac6ab0e8c503fc79125826c28453b2d0e7f3b7
+SHA1 (patch-src_hyper_lex.c) = 8773e29f924600302c5bb2f26c0b7202b86057f5
