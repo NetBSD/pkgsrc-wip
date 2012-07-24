@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2012/04/04 22:13:52 gregoire Exp $
+@comment $NetBSD: PLIST,v 1.27 2012/07/24 12:09:03 gregoire Exp $
 bin/grub2-editenv
 bin/grub2-fstest
 bin/grub2-kbdcomp
@@ -104,10 +104,10 @@ lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/ehci.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/ehci.module
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/elf.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/elf.module
-lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/example_functional_test.mod
-lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/example_functional_test.module
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/exfat.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/exfat.module
+lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/exfctest.mod
+lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/exfctest.module
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/ext2.mod
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/ext2.module
 lib/grub2/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/extcmd.mod
@@ -499,6 +499,7 @@ share/examples/grub2/10_kfreebsd
 share/examples/grub2/10_linux
 share/examples/grub2/10_netbsd
 share/examples/grub2/10_windows
+share/examples/grub2/10_xnu
 share/examples/grub2/20_linux_xen
 share/examples/grub2/30_os-prober
 share/examples/grub2/40_custom
@@ -524,7 +525,11 @@ share/grub2/themes/starfield/boot_menu_s.png
 share/grub2/themes/starfield/boot_menu_se.png
 share/grub2/themes/starfield/boot_menu_sw.png
 share/grub2/themes/starfield/boot_menu_w.png
-share/grub2/themes/starfield/dejavu.pf2
+share/grub2/themes/starfield/dejavu_10.pf2
+share/grub2/themes/starfield/dejavu_12.pf2
+share/grub2/themes/starfield/dejavu_14.pf2
+share/grub2/themes/starfield/dejavu_16.pf2
+share/grub2/themes/starfield/dejavu_bold_14.pf2
 share/grub2/themes/starfield/slider_c.png
 share/grub2/themes/starfield/slider_n.png
 share/grub2/themes/starfield/slider_s.png
@@ -543,6 +548,7 @@ share/locale/ast/LC_MESSAGES/grub2.mo
 share/locale/ca/LC_MESSAGES/grub2.mo
 share/locale/da/LC_MESSAGES/grub2.mo
 share/locale/de/LC_MESSAGES/grub2.mo
+share/locale/eo/LC_MESSAGES/grub2.mo
 share/locale/fi/LC_MESSAGES/grub2.mo
 share/locale/fr/LC_MESSAGES/grub2.mo
 share/locale/hu/LC_MESSAGES/grub2.mo
@@ -551,6 +557,7 @@ share/locale/it/LC_MESSAGES/grub2.mo
 share/locale/ja/LC_MESSAGES/grub2.mo
 share/locale/ko/LC_MESSAGES/grub2.mo
 share/locale/nl/LC_MESSAGES/grub2.mo
+share/locale/pa/LC_MESSAGES/grub2.mo
 share/locale/pl/LC_MESSAGES/grub2.mo
 share/locale/ru/LC_MESSAGES/grub2.mo
 share/locale/sv/LC_MESSAGES/grub2.mo
