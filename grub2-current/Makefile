@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2012/07/24 12:09:02 gregoire Exp $
+# $NetBSD: Makefile,v 1.34 2012/07/24 15:28:31 gregoire Exp $
 #
 
 DISTNAME=		grub-bazaar-snapshot
@@ -102,8 +102,8 @@ SUBST_CLASSES+=			fix-paths-1
 SUBST_STAGE.fix-paths-1=	post-patch
 SUBST_MESSAGE.fix-paths-1=	Fixing configuration paths in scripts.
 SUBST_FILES.fix-paths-1=	util/grub-install.in util/grub-mkconfig.in
-SUBST_SED.fix-paths-1=		-e 's,\$${sysconfdir}/grub.d,\$${sysconfdir},g'
-SUBST_SED.fix-paths-1+=		-e 's,\$${sysconfdir}/default/grub,\$${sysconfdir}/default.conf,g'
+SUBST_SED.fix-paths-1=		-e 's,\(\$${sysconfdir}"\{0\,1\}\)/grub.d,\1,g'
+SUBST_SED.fix-paths-1+=		-e 's,\(\$${sysconfdir}"\{0\,1\}\)/default/grub,\1/default.conf,g'
 
 #
 # Adjust the package name (GRUB2) in configure.
