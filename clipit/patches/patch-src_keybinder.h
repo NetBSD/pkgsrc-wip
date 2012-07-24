@@ -1,4 +1,6 @@
-$NetBSD: patch-src_keybinder.h,v 1.1 2012/07/24 23:03:45 khorben Exp $
+$NetBSD: patch-src_keybinder.h,v 1.2 2012/07/24 23:53:31 khorben Exp $
+
+Fixes build with recent versions of glib
 
 --- src/keybinder.h.orig	2010-12-12 14:31:47.000000000 +0000
 +++ src/keybinder.h

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2012/07/24 23:03:45 khorben Exp $
+$NetBSD: distinfo,v 1.3 2012/07/24 23:53:31 khorben Exp $
 
 SHA1 (clipit-1.4.1.tar.gz) = 4a9d20e1809ab08bc30d49a84a20492326caf6ce
 RMD160 (clipit-1.4.1.tar.gz) = e8d93f8fbc03828596c6b61f808d8a89e8ee0ea4
 Size (clipit-1.4.1.tar.gz) = 278804 bytes
-SHA1 (patch-src_keybinder.h) = e1a7c19c1d79a139c3eaf2d6f488bef035c244b2
+SHA1 (patch-src_keybinder.h) = 57e211028857ca84c659705424491349d4fc8245
