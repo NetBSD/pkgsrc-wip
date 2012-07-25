@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2012/07/24 15:28:31 gregoire Exp $
+# $NetBSD: Makefile,v 1.35 2012/07/25 12:45:25 gregoire Exp $
 #
 
 DISTNAME=		grub-bazaar-snapshot
@@ -146,6 +146,15 @@ SUBST_STAGE.fix-dejavu=		pre-configure
 SUBST_MESSAGE.fix-dejavu=	Fixing dejavu search paths in configure.
 SUBST_FILES.fix-dejavu=		configure
 SUBST_SED.fix-dejavu=		-e 's, \(/usr/share/fonts/dejavu\);, \1 ${LOCALBASE}/lib/X11/fonts/TTF;,g'
+
+#
+# Do not use `\t' with sed, as it's not portable.
+#
+SUBST_CLASSES+=			fix-sed-tabs
+SUBST_STAGE.fix-sed-tabs=	post-patch
+SUBST_MESSAGE.fix-sed-tabs=	Fixing tabulations for sed in scripts.
+SUBST_FILES.fix-sed-tabs=	util/grub.d/*.in
+SUBST_SED.fix-sed-tabs=		-e 's,\\t,	,g'
 
 post-patch: do-move-texinfo
 
