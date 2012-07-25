@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2012/07/25 15:27:37 gregoire Exp $
+# $NetBSD: Makefile,v 1.38 2012/07/25 16:13:02 gregoire Exp $
 #
 
 DISTNAME=		grub-bazaar-snapshot
@@ -11,6 +11,8 @@ HOMEPAGE=		http://www.gnu.org/software/grub/
 COMMENT=		GRand Unified Bootloader, version 2 (development snapshot)
 LICENSE=		gnu-gpl-v3
 
+CONFLICTS=		grub-[0-9]*
+
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 ONLY_FOR_PLATFORM=	*-*-i386 *-*-x86_64
@@ -20,7 +22,6 @@ USE_TOOLS+=		gmake bison makeinfo
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
-CONFIGURE_ARGS+=	--program-transform-name='s,grub-,grub2-,'
 CONFIGURE_ARGS+=	--disable-efiemu
 CONFIGURE_ARGS+=	--disable-grub-emu-usb
 CONFIGURE_ARGS+=	--disable-grub-emu-sdl
@@ -60,11 +61,11 @@ PLIST_SUBST+=		GRUB_PLATFORM=${GRUB_PLATFORM}
 #
 # Configuration files.
 #
-PKG_SYSCONFSUBDIR=	${PKGBASE}
-EGDIR=			${PREFIX}/share/examples/${PKGBASE}
+PKG_SYSCONFSUBDIR=	grub
+EGDIR=			${PREFIX}/share/examples/grub
 INSTALL_MAKE_FLAGS+=	grubconfdir=${EGDIR}
 INSTALL_MAKE_FLAGS+=	bashcompletiondir=${EGDIR}
-INSTALL_MAKE_FLAGS+=	bash_completion_script=grub2-bash-completion.sh
+INSTALL_MAKE_FLAGS+=	bash_completion_script=grub-bash-completion.sh
 
 EGFILES=		00_header 05_pkgsrc_theme 30_os-prober 40_custom 41_custom
 .if ${OPSYS} == "FreeBSD"
@@ -107,39 +108,6 @@ SUBST_SED.fix-paths-1=		-e 's,\(\$${sysconfdir}"\{0\,1\}\)/grub.d,\1,g'
 SUBST_SED.fix-paths-1+=		-e 's,\(\$${sysconfdir}"\{0\,1\}\)/default/grub,\1/default.conf,g'
 
 #
-# Adjust the package name (GRUB2) in configure.
-#
-SUBST_CLASSES+=			fix-name-1
-SUBST_STAGE.fix-name-1=		post-patch
-SUBST_MESSAGE.fix-name-1=	Fixing package name in configure.ac.
-SUBST_FILES.fix-name-1=		configure.ac
-SUBST_SED.fix-name-1=		-e 's,^AC_INIT(\[GRUB\],AC_INIT(\[GRUB2\],g'
-
-#
-# Fix the command names in man pages.
-#
-SUBST_CLASSES+=			fix-name-2
-SUBST_STAGE.fix-name-2=		post-build
-SUBST_MESSAGE.fix-name-2=	Fixing command names in man pages.
-SUBST_FILES.fix-name-2=		grub-*.[1-9]
-SUBST_SED.fix-name-2=		-e '\,^\.TH , { s,GRUB-,GRUB2-,g ; s,grub-,grub2-,g ; }'
-SUBST_SED.fix-name-2+=		-e '\,^\.SH NAME, { n ; s,^grub-,grub2-,g ; }'
-SUBST_SED.fix-name-2+=		-e '\,^\.SH SYNOPSIS, { n ; s,\.B grub-,\.B grub2-,g ; }'
-
-#
-# Adjust the name of the generated info files.
-#
-SUBST_CLASSES+=			fix-name-3
-SUBST_STAGE.fix-name-3=		post-patch
-SUBST_MESSAGE.fix-name-3=	Fixing package name for texinfo manual.
-SUBST_FILES.fix-name-3=		docs/Makefile.am docs/grub2.texi docs/grub2-dev.texi
-SUBST_SED.fix-name-3=		-e 's,grub\.info,grub2\.info,g'
-SUBST_SED.fix-name-3+=		-e 's,grub\.texi,grub2\.texi,g'
-SUBST_SED.fix-name-3+=		-e 's,grub-dev\.info,grub2-dev\.info,g'
-SUBST_SED.fix-name-3+=		-e 's,grub-dev\.texi,grub2-dev\.texi,g'
-SUBST_SED.fix-name-3+=		-e 's,grub_TEXINFOS,grub2_TEXINFOS,g'
-
-#
 # Adjust the search paths for DejaVu fonts in configure.
 #
 SUBST_CLASSES+=			fix-dejavu
@@ -156,13 +124,6 @@ SUBST_STAGE.fix-sed-tabs=	post-patch
 SUBST_MESSAGE.fix-sed-tabs=	Fixing tabulations for sed in scripts.
 SUBST_FILES.fix-sed-tabs=	util/grub.d/*.in
 SUBST_SED.fix-sed-tabs=		-e 's,\\t,	,g'
-
-post-patch: do-move-texinfo
-
-.PHONY: do-move-texinfo
-do-move-texinfo:
-	${MV} ${WRKSRC}/docs/grub.texi ${WRKSRC}/docs/grub2.texi
-	${MV} ${WRKSRC}/docs/grub-dev.texi ${WRKSRC}/docs/grub2-dev.texi
 
 #
 # Includes.
