@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2012/07/25 16:13:02 gregoire Exp $
+# $NetBSD: Makefile,v 1.39 2012/07/26 09:20:48 gregoire Exp $
 #
 
 DISTNAME=		grub-bazaar-snapshot
@@ -124,6 +124,13 @@ SUBST_STAGE.fix-sed-tabs=	post-patch
 SUBST_MESSAGE.fix-sed-tabs=	Fixing tabulations for sed in scripts.
 SUBST_FILES.fix-sed-tabs=	util/grub.d/*.in
 SUBST_SED.fix-sed-tabs=		-e 's,\\t,	,g'
+
+#
+# Remove executable bit from non-executable files.
+#
+post-install:
+	${CHMOD} a-x ${DESTDIR}${PREFIX}/lib/grub/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/gdb_grub
+	${CHMOD} a-x ${DESTDIR}${PREFIX}/lib/grub/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/gmodule.pl
 
 #
 # Includes.
