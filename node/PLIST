@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2012/07/24 13:40:34 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.8 2012/07/26 15:23:20 fhajny Exp $
 bin/node
 bin/node-waf
 bin/npm
@@ -728,6 +728,7 @@ lib/node_modules/npm/node_modules/nopt/.npmignore
 lib/node_modules/npm/node_modules/nopt/LICENSE
 lib/node_modules/npm/node_modules/nopt/README.md
 lib/node_modules/npm/node_modules/nopt/bin/nopt.js
+lib/node_modules/npm/node_modules/nopt/examples/my-program.js
 lib/node_modules/npm/node_modules/nopt/lib/nopt.js
 lib/node_modules/npm/node_modules/nopt/package.json
 lib/node_modules/npm/node_modules/npm-registry-client/.npmignore
@@ -776,12 +777,19 @@ lib/node_modules/npm/node_modules/read-package-json/README.md
 lib/node_modules/npm/node_modules/read-package-json/package.json
 lib/node_modules/npm/node_modules/read-package-json/read-json.js
 lib/node_modules/npm/node_modules/read-package-json/test/basic.js
+lib/node_modules/npm/node_modules/read/.npmignore
 lib/node_modules/npm/node_modules/read/LICENCE
 lib/node_modules/npm/node_modules/read/README.md
 lib/node_modules/npm/node_modules/read/example/example.js
 lib/node_modules/npm/node_modules/read/lib/read.js
+lib/node_modules/npm/node_modules/read/node_modules/mute-stream/LICENSE
+lib/node_modules/npm/node_modules/read/node_modules/mute-stream/README.md
+lib/node_modules/npm/node_modules/read/node_modules/mute-stream/mute.js
+lib/node_modules/npm/node_modules/read/node_modules/mute-stream/package.json
+lib/node_modules/npm/node_modules/read/node_modules/mute-stream/test/basic.js
 lib/node_modules/npm/node_modules/read/package.json
 lib/node_modules/npm/node_modules/read/test/basic.js
+lib/node_modules/npm/node_modules/read/test/defaults.js
 lib/node_modules/npm/node_modules/request/LICENSE
 lib/node_modules/npm/node_modules/request/README.md
 lib/node_modules/npm/node_modules/request/aws.js
