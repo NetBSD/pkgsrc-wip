@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2012/07/02 13:38:00 moubctez Exp $
+# $NetBSD: Makefile,v 1.11 2012/07/26 11:08:46 fhajny Exp $
 
 DISTNAME=	mongodb-src-r2.0.6
 PKGNAME=	${DISTNAME:S/src-r//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	databases
 MASTER_SITES=	http://downloads.mongodb.org/src/
 
@@ -14,12 +14,15 @@ LICENSE=	gnu-agpl-v3 # Client and tools licensed under apache-2.0
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CONFIGURE=	yes
+USE_LANGUAGES=	c c++
 
 BUILD_DEPENDS+=	scons:../../devel/scons
 
 SCONS_BIN=	${PREFIX}/bin/scons
 SCONS_ARGS=	${_MAKE_JOBS}
 SCONS_ARGS+=	--use-system-all
+SCONS_ARGS+=	--cc=${WRAPPER_BINDIR}/${CC}
+SCONS_ARGS+=	--cxx=${WRAPPER_BINDIR}/${CXX}
 
 .include "options.mk"
 
@@ -50,9 +53,7 @@ FILES_SUBST+=		MONGODB_DBPATH=${MONGODB_DBPATH}
 SUBST_CLASSES+=		scons
 SUBST_STAGE.scons=	post-patch
 SUBST_FILES.scons=	SConstruct
-SUBST_SED.scons=	-e "s|%PREFIX%|${PREFIX}|g"
-SUBST_SED.scons+=	-e "s|%CXXFLAGS%|${CXXFLAGS}|g"
-SUBST_SED.scons+=	-e "s|%LINKFLAGS%|${LDFLAGS}|g"
+SUBST_VARS.scons=	PREFIX CXXFLAGS LDFLAGS
 
 SUBST_CLASSES+=		dbpath
 SUBST_STAGE.dbpath=	post-patch
@@ -62,6 +63,9 @@ SUBST_SED.dbpath=	-e "s|/data/db|${MONGODB_DBPATH}|g"
 RCD_SCRIPTS=		mongodb
 
 INSTALLATION_DIRS=	share/doc/mongodb
+
+post-extract:
+	chmod -R g-w ${WRKSRC}
 
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${SCONS_BIN} ${SCONS_ARGS} all
