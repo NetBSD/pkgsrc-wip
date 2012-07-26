@@ -1,4 +1,4 @@
-$Id: TODO,v 1.15 2011/12/17 11:32:42 obache Exp $
+$Id: TODO,v 1.16 2012/07/26 05:53:33 shindenmorr Exp $
 
 All this may be obsolete after update to Zabbix 1.8.3
 
@@ -23,3 +23,4 @@ http://archives.neohapsis.com/archives/fulldisclosure/2010-04/0001.html
 http://secunia.com/advisories/40679
 http://secunia.com/advisories/45502
 http://secunia.com/advisories/47216
+http://secunia.com/advisories/49809
