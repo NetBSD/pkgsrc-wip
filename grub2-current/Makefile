@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2012/07/26 09:20:48 gregoire Exp $
+# $NetBSD: Makefile,v 1.40 2012/07/26 15:46:34 gregoire Exp $
 #
 
 DISTNAME=		grub-bazaar-snapshot
@@ -57,6 +57,13 @@ GRUB_TARGET_CPU=	i386
 .endif
 PLIST_SUBST+=		GRUB_TARGET_CPU=${GRUB_TARGET_CPU}
 PLIST_SUBST+=		GRUB_PLATFORM=${GRUB_PLATFORM}
+
+#
+# Unset ABI to prevent pkgsrc's gcc wrapper from messing with -m flags.
+#
+.if defined(ABI) && !empty(ABI)
+ABI=
+.endif
 
 #
 # Configuration files.

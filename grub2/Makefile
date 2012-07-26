@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2012/07/26 11:27:23 gregoire Exp $
+# $NetBSD: Makefile,v 1.20 2012/07/26 15:46:33 gregoire Exp $
 #
 
 DISTNAME=		grub-2.00
@@ -55,6 +55,13 @@ GRUB_TARGET_CPU=	i386
 .endif
 PLIST_SUBST+=		GRUB_TARGET_CPU=${GRUB_TARGET_CPU}
 PLIST_SUBST+=		GRUB_PLATFORM=${GRUB_PLATFORM}
+
+#
+# Unset ABI to prevent pkgsrc's gcc wrapper from messing with -m flags.
+#
+.if defined(ABI) && !empty(ABI)
+ABI=
+.endif
 
 #
 # Configuration files.
