@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2012/07/26 20:47:09 ftigeot Exp $
+
+SHA1 (libcmis-0.2.3.tar.gz) = 9cc8d29cc129d1aca1a1f24e799eebd6f2f1b93d
+RMD160 (libcmis-0.2.3.tar.gz) = 8ba8ab4302bc9d94aeabc0dccdc56a2157b7bfaa
+Size (libcmis-0.2.3.tar.gz) = 432064 bytes

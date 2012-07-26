@@ -1,0 +1,11 @@
+Configure checks fail to handle Boost::Date_Time:
+
+configure: WARNING: boost/date_time/posix_time/posix_time.hpp: present but cannot be compiled
+configure: WARNING: boost/date_time/posix_time/posix_time.hpp:     check for missing prerequisite headers?
+configure: WARNING: boost/date_time/posix_time/posix_time.hpp: see the Autoconf documentation
+configure: WARNING: boost/date_time/posix_time/posix_time.hpp:     section "Present But Cannot Be Compiled"
+configure: WARNING: boost/date_time/posix_time/posix_time.hpp: proceeding with the compiler's result
+checking for boost/date_time/posix_time/posix_time.hpp... no
+configure: error: cannot find boost/date_time/posix_time/posix_time.hpp
+*** Error code 1
+
