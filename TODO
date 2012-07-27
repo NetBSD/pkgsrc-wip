@@ -38,7 +38,7 @@ Suggested package updates
 	o gcc43-4.3.4
 	o gcc47-4.7.0
 	o geant-4.9.5p1
-	o gemrb-0.7.0
+	o gemrb-0.7.1
 	o gforge-4.5.11
 	o giggle-0.6.1
 	o gjs-1.30.1
@@ -63,7 +63,7 @@ Suggested package updates
 	o hu-go-2.11
 	o i3-4.1.1
 	o i3status-2.4
-	o icecat-12.0
+	o icecat-13.0.1
 	o jakarta-struts-1.2.4
 	o jalview-2.4
 	o java-asm-3.2
@@ -75,7 +75,7 @@ Suggested package updates
 	o kvirc-3.4.2
 	o lasem-0.3.2
 	o libAppleWM-1.4.0
-	o libburn-1.2.2
+	o libburn-1.2.4
 	o libdmx-1.1.2
 	o libgksu-2.0.4
 	o libgtk-java-2.10.2
@@ -113,7 +113,7 @@ Suggested package updates
 	o rezound-0.12.3beta
 	o rosegarden-current-1.4.0
 	o rsyslog6-6.3.6
-	o samhain-3.0.4
+	o samhain-3.0.5
 	o scantailor-0.9.11.1
 	o sflphone-0.7.2
 	o showfont-1.0.3
