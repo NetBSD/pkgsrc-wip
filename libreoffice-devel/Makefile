@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2012/07/02 13:38:00 moubctez Exp $
+# $NetBSD: Makefile,v 1.3 2012/07/27 18:53:58 ftigeot Exp $
 
-VER=			2012-04-23
+VER=			3.6.0.2
 DISTNAME=		libreoffice-${VER}
 PKGNAME=		libreoffice-devel-${VER:S/-//g}
-PKGREVISION=		1
 CATEGORIES=		misc
-MASTER_SITES=	http://dl.wolfpond.org/libreoffice/ \
+MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/3.6.0/ \
 		http://dev-www.libreoffice.org/src/ \
 		http://www.numbertext.org/linux/
 
@@ -32,7 +31,7 @@ MORE_DISTFILES= \
 	f872f4ac066433d8ff92f5e316b36ff9-dejavu-fonts-ttf-2.33.zip \
 	35efabc239af896dfb79be7ebdd6e6b9-gentiumbasic-fonts-1.10.zip \
 	86261f06c097d3e425a2f6d0b0635380-hyphen-2.8.3.tar.gz \
-	7c2549f6b0a8bb604e6c4c729ffdcfe6-libcmis-0.1.0.tar.gz \
+	0d2dcdfbf28d6208751b33057f5361f0-libcmis-0.2.3.tar.gz \
 	0be45d54cc5e1c2e3102e32b8c190346-liberation-fonts-ttf-1.07.1.tar.gz \
 	e1e255dc43dbcbb34cb19e8a0eba90ae-mythes-1.2.2.tar.gz \
 	fdb27bfe2dbe2e7b57ae194d9bf36bab-SampleICC-1.3.2.tar.gz \
