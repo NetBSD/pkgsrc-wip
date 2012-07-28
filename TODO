@@ -85,6 +85,7 @@ Suggested package updates
 	o libuuid-1.41.14
 	o lirc-0.8.6
 	o lives-1.6.2
+	o lucene-3.6.1
 	o man-1.6f
 	o meta-tracker-0.14.2
 	o miro-5.0
@@ -105,6 +106,7 @@ Suggested package updates
 	o pessulus-2.30.4
 	o pike-7.8.352
 	o py-PyPE-2.9
+	o py-beets-1.0b15
 	o py-gnucash-0.7.55
 	o py-rpyc-3.2.1
 	o py-zeitgeist-0.9
