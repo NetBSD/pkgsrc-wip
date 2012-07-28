@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/07/28 08:52:15 ftigeot Exp $
+# $NetBSD: Makefile,v 1.5 2012/07/28 08:58:30 ftigeot Exp $
 
 VER=			3.6.0.2
 DISTNAME=		libreoffice-${VER}
@@ -102,6 +102,7 @@ CONFIGURE_ARGS+=	--with-fonts
 CONFIGURE_ARGS+=	--with-num-cpus=${MAKE_JOBS}
 CONFIGURE_ARGS+=	--with-system-headers
 CONFIGURE_ARGS+=	--with-system-libs
+CONFIGURE_ARGS+=	--with-boost-libdir=${BUILDLINK_DIR}/lib
 CONFIGURE_ARGS+=	--with-vendor="The LibreOffice pkgsrc team"
 CONFIGURE_ARGS+=	--without-java
 CONFIGURE_ARGS+=	--without-system-altlinuxhyph
