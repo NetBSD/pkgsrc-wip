@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2012/07/26 15:46:34 gregoire Exp $
+# $NetBSD: Makefile,v 1.41 2012/07/28 17:29:28 gregoire Exp $
 #
 
 DISTNAME=		grub-bazaar-snapshot
@@ -17,8 +17,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 ONLY_FOR_PLATFORM=	*-*-i386 *-*-x86_64
 
-USE_TOOLS+=		autoconf automake
-USE_TOOLS+=		gmake bison makeinfo
+USE_TOOLS+=		gmake flex bison gettext:run
+USE_TOOLS+=		autoconf automake makeinfo
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
@@ -34,12 +34,23 @@ USE_PKGLOCALEDIR=	yes
 TODAY!=			${DATE} -u +'%Y%m%d'
 
 #
-# Requirements: GCC >= 4.1.3, Flex >= 2.5.35, gettext >= 0.17, and help2man.
+# Build requirements, taken from the INSTALL file in GRUB's distribution:
 #
-GCC_REQD=		4.1.3
-BUILD_DEPENDS+=		flex>=2.5.35:../../devel/flex
+# - GCC >= 4.1.3	(in fact >= 4.4 is required for a successful build)
+# - Flex >= 2.5.35
+# - gettext >= 0.17	(the need for >= 0.17 seems to only concern msgfmt)
+#
+# Additionnaly, help2man is required to generate the manual pages.
+#
+GCC_REQD=		4.4
+FLEX_REQD=		2.5.35
 DEPENDS+=		gettext>=0.17:../../devel/gettext
 BUILD_DEPENDS+=		help2man>=1.36:../../converters/help2man
+
+# XXX Force use of pkgsrc's flex on NetBSD to prevent build failure.
+.if ${OPSYS} == "NetBSD"
+FLEX_REQD=		9
+.endif
 
 #
 # The configure script sets the variables `target_cpu' and `platform', which
