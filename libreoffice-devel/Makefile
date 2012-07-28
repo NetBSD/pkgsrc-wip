@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/07/28 08:58:30 ftigeot Exp $
+# $NetBSD: Makefile,v 1.6 2012/07/28 09:04:19 ftigeot Exp $
 
 VER=			3.6.0.2
 DISTNAME=		libreoffice-${VER}
@@ -111,20 +111,6 @@ CONFIGURE_ARGS+=	--without-system-jars
 CONFIGURE_ARGS+=	--without-system-libcmis
 CONFIGURE_ARGS+=	--without-system-mozilla-headers
 CONFIGURE_ARGS+=	--without-system-sampleicc
-
-# Some LibreOffice build scripts do strange things with library paths
-# and fail with the pkgsrc environment
-# Preset LD_LIBRARY_PATH to sane defaults and avoid complicating them
-# further
-LIBPATH=	${BUILDLINK_DIR}/lib:${X11BASE}/lib
-LIBPATH:=	${LIBPATH}:${WRKSRC}/desktop/unxdfly.pro/lib:${WRKSRC}/solver/unxdfly.pro/lib
-LIBPATH:=	${LIBPATH}:${WRKSRC}/desktop/unxnbsd.pro/lib:${WRKSRC}/solver/unxnbsd.pro/lib
-
-SUBST_CLASSES+=			libpath
-SUBST_STAGE.libpath=		pre-configure
-SUBST_FILES.libpath=		set_soenv.in
-SUBST_SED.libpath=		-e 's,@LIBPATH@,${LIBPATH},g'
-SUBST_MESSAGE.libpath=		Fixing library path for dmake scripts
 
 SUBST_CLASSES+=			localbase
 SUBST_STAGE.localbase=		pre-configure
