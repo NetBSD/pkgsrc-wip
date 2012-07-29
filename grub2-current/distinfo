@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.46 2012/07/29 11:07:08 gregoire Exp $
+$NetBSD: distinfo,v 1.47 2012/07/29 13:47:23 gregoire Exp $
 
 SHA1 (unifont-5.1.20080820.pcf.gz) = 87f8600ba24e521b5d20bdf6c4b71af8ae861e3a
 RMD160 (unifont-5.1.20080820.pcf.gz) = ddc87231a7c1e18e81a6f4578a4f0279bcd0c292
@@ -8,4 +8,4 @@ SHA1 (patch-grub-core_lib_posix__wrap_sys_types.h) = 7510953e7bbed347f5d53e4535c
 SHA1 (patch-grub-core_lib_posix__wrap_wchar.h) = 6509696c2d5e008634b710c63cb836664d0f8a89
 SHA1 (patch-grub-core_loader_i386_pc_plan9.c) = 07c909c02210ef59647185cd9b7f43b35d58515c
 SHA1 (patch-stpcpy-1.diff) = d31f8d607900fdde950d3828279d5b3b09812a39
-SHA1 (patch-util_grub.d_10__netbsd.in) = c089e4a36f2fedda8c285ad62fe85ae0ca75c2dd
+SHA1 (patch-util_grub.d_10__netbsd.in) = c7ad93fc60594233d71962e625320091d8cc67e5
