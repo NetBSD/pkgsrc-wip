@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2012/07/28 17:29:28 gregoire Exp $
+# $NetBSD: Makefile,v 1.42 2012/07/29 10:49:48 gregoire Exp $
 #
 
 DISTNAME=		grub-bazaar-snapshot
@@ -17,7 +17,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 ONLY_FOR_PLATFORM=	*-*-i386 *-*-x86_64
 
-USE_TOOLS+=		gmake flex bison gettext:run
+USE_TOOLS+=		gmake flex bison
 USE_TOOLS+=		autoconf automake makeinfo
 
 GNU_CONFIGURE=		yes
@@ -44,7 +44,7 @@ TODAY!=			${DATE} -u +'%Y%m%d'
 #
 GCC_REQD=		4.4
 FLEX_REQD=		2.5.35
-DEPENDS+=		gettext>=0.17:../../devel/gettext
+DEPENDS+=		gettext-tools>=0.17:../../devel/gettext-tools
 BUILD_DEPENDS+=		help2man>=1.36:../../converters/help2man
 
 # XXX Force use of pkgsrc's flex on NetBSD to prevent build failure.
