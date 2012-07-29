@@ -1,4 +1,6 @@
-$NetBSD: patch-grub-core_lib_posix__wrap_sys_types.h,v 1.1 2012/07/28 23:20:28 gregoire Exp $
+$NetBSD: patch-grub-core_lib_posix__wrap_sys_types.h,v 1.2 2012/07/29 11:02:32 gregoire Exp $
+
+Include stddef rather than defining size_t to avoid conflict.
 
 --- grub-core/lib/posix_wrap/sys/types.h.orig	2012-05-28 15:52:37.000000000 +0000
 +++ grub-core/lib/posix_wrap/sys/types.h

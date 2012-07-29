@@ -1,4 +1,6 @@
-$NetBSD: patch-grub-core_lib_posix__wrap_wchar.h,v 1.1 2012/07/28 23:20:28 gregoire Exp $
+$NetBSD: patch-grub-core_lib_posix__wrap_wchar.h,v 1.2 2012/07/29 11:02:31 gregoire Exp $
+
+Include stddef rather than defining wchar_t to avoid conflict.
 
 --- grub-core/lib/posix_wrap/wchar.h.orig	2012-02-08 20:34:24.000000000 +0000
 +++ grub-core/lib/posix_wrap/wchar.h
