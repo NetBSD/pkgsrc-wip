@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/07/26 15:23:20 fhajny Exp $
+# $NetBSD: Makefile,v 1.12 2012/07/30 15:10:57 jonperkin Exp $
 #
 
 DISTNAME=	node-v0.8.4
@@ -23,13 +23,13 @@ USE_LANGUAGES=	c c++
 .include "options.mk"
 
 SUBST_CLASSES+=		python
-SUBST_STAGE.python=	post-patch
+SUBST_STAGE.python=	pre-configure
 SUBST_MESSAGE.python=	Fixing Python references
 SUBST_FILES.python=	node.gyp deps/v8/tools/gyp/v8.gyp
 SUBST_VARS.python=	PYTHONBIN
 
 SUBST_CLASSES+=		man
-SUBST_STAGE.man=	post-patch
+SUBST_STAGE.man=	pre-configure
 SUBST_MESSAGE.man=	Fixing man path
 SUBST_FILES.man=	tools/installer.js
 SUBST_VARS.man=		PKGMANDIR

@@ -1,4 +1,4 @@
-$NetBSD: patch-tools_installer.js,v 1.2 2012/07/29 20:12:38 genolopolis Exp $
+$NetBSD: patch-tools_installer.js,v 1.3 2012/07/30 15:10:58 jonperkin Exp $
 
 --- tools/installer.js.orig	2012-07-29 18:47:12.000000000 +0000
 +++ tools/installer.js
@@ -7,7 +7,7 @@ $NetBSD: patch-tools_installer.js,v 1.2 2012/07/29 20:12:38 genolopolis Exp $
  
    // man page
 -  copy(['doc/node.1'], 'share/man/man1/');
-+  copy(['doc/node.1'], 'man/man1/');
++  copy(['doc/node.1'], '@PKGMANDIR@/man1/');
  
    // dtrace
    if (!process.platform.match(/^linux/)) {
