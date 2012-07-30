@@ -1,13 +1,19 @@
-# $NetBSD: options.mk,v 1.4 2012/07/30 14:20:27 jonperkin Exp $
+# $NetBSD: options.mk,v 1.5 2012/07/30 14:25:26 jonperkin Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.node
 PKG_SUPPORTED_OPTIONS=	openssl dtrace
 PKG_SUGGESTED_OPTIONS=	openssl
 
+.if ${OPSYS} == "SunOS" && exists(/usr/sbin/dtrace)
+PKG_SUGGESTED_OPTIONS+=	dtrace
+.endif
+
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mdtrace)
 CONFIGURE_ARGS+=	--with-dtrace
+.else
+CONFIGURE_ARGS+=	--without-dtrace
 .endif
 
 .if !empty(PKG_OPTIONS:Mopenssl)
