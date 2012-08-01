@@ -1,20 +1,6 @@
-$NetBSD: distinfo,v 1.10 2012/07/13 21:02:35 mwilhelmy Exp $
+$NetBSD: distinfo,v 1.11 2012/08/01 20:00:30 mwilhelmy Exp $
 
-SHA1 (xrdp-0.4.2.tar.gz) = 82bb858661ada174faf88d3b273cd8c5f39238f3
-RMD160 (xrdp-0.4.2.tar.gz) = 294c26a1d8dde6c0aae490a1db0ee6b16c07e662
-Size (xrdp-0.4.2.tar.gz) = 196679 bytes
-SHA1 (patch-aa) = 062f647d021b69f03b2eea4a3a2286279e4aae2e
-SHA1 (patch-ab) = 586044054cd3aea211a0b0d1d43473997e872c45
-SHA1 (patch-ac) = 22def3cabb61647784dd1be1d9f180729b86a320
-SHA1 (patch-ad) = c5bcb92a2256221c9d9e3db4bca0c34b93a4a489
-SHA1 (patch-ae) = 37e46bf3c84fbfa67fc8152f1136efce5deaddd8
-SHA1 (patch-af) = b1e821597bdd51be8aac18368e94ed0805efc565
-SHA1 (patch-ag) = 23c1982cf21709ee2d523305b87167f3eb603013
-SHA1 (patch-ah) = aec77f37c5be739dcaaac3e91eb43fa3316bf949
+SHA1 (xrdp-0.5.0.tar.gz) = c63f23068572af891c0a7cec18622e555de5a658
+RMD160 (xrdp-0.5.0.tar.gz) = 4d3108ef09685c269740810f2e7b15941e05b93e
+Size (xrdp-0.5.0.tar.gz) = 324913 bytes
 SHA1 (patch-ai) = 6256f46c49482a1d6a77c0befe84f0f668b93b60
-SHA1 (patch-ak) = 5530baf35d6162293f6028cb4ca8b543e5267d63
-SHA1 (patch-al) = 8fab338adeedaef4fc601dff0f97f5e86e973f11
-SHA1 (patch-am) = b20b9431394510f084b3b7b9d32842dac6e16aee
-SHA1 (patch-an) = 9f4c57521dae4c7a2b29d1c1f7b2a306bc9428d2
-SHA1 (patch-ao) = 708ecedee131f65e9198cff216368b72d341a724
-SHA1 (patch-ap) = 7549e9ddfc5645f1d1ece10ded78c17d6608f592
