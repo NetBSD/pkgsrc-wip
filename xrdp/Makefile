@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/08/01 20:00:30 mwilhelmy Exp $
+# $NetBSD: Makefile,v 1.16 2012/08/02 00:26:08 asau Exp $
 
 DISTNAME=		xrdp-0.5.0
 CATEGORIES=		net x11
@@ -72,5 +72,6 @@ pre-configure:
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/pam.buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXfixes/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
