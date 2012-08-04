@@ -1,0 +1,28 @@
+# $NetBSD: Makefile,v 1.1 2012/08/04 22:00:41 othyro Exp $
+#
+
+DISTNAME=	glyr-1.0.0
+CATEGORIES=	audio
+MASTER_SITES=	https://github.com/downloads/sahib/glyr/
+EXTRACT_SUFX=	.tar.bz2
+FETCH_USING=	curl
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	https://github.com/sahib/glyr/
+COMMENT=	Music related metadata search engine with CLI and C API
+LICENSE=	gnu-gpl-v3
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+WRKSRC=		${WRKDIR}/glyr
+USE_TOOLS+=	pkg-config
+USE_CMAKE=	yes
+
+PKGCONFIG_OVERRIDE+=	glyr/libglyr.pc.in
+
+.include "../../devel/libgetopt/buildlink3.mk"
+.include "../../wip/libexecinfo/buildlink3.mk"
+.include "../../databases/sqlite3/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"
