@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2012/04/22 12:57:56 makoto Exp $
+# $NetBSD: Makefile,v 1.4 2012/08/05 15:01:04 makoto Exp $
 
-DISTNAME=		tc-2.3.1
+DISTNAME=		tc-2.99.1
 PKGNAME=		${EMACS_PKGNAME_PREFIX}${DISTNAME}
 PKGREVISION=		${_SVN_PKGVERSION:S/.//g}
 

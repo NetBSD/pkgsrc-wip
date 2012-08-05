@@ -1,14 +1,14 @@
-$NetBSD: distinfo,v 1.8 2012/08/02 14:38:50 makoto Exp $
+$NetBSD: distinfo,v 1.9 2012/08/05 15:01:04 makoto Exp $
 
 SHA1 (patch-BATCH-SORT) = 64a390e3ca3b5031941b45489a155da67e4e59df
 SHA1 (patch-bushu-util_bushu2canna) = 9573de81b6f9ef7a225fc954b618f7905e648821
 SHA1 (patch-bushu-util_where) = 07bd3faf178ef57b9cc0afae20f56dbf83cc1d6d
-SHA1 (patch-configure.in) = a49449a060880a7cc2bb8b3ccc2b239c585aab76
+SHA1 (patch-configure.ac) = 4174e3674e2cc7dbb6daf5de56fa76f24273edf9
 SHA1 (patch-etc_Makefile.am) = b548b182497ad5e2460a2df7ee15f57d83dae71e
 SHA1 (patch-etc_Makefile.in) = e7b088f7b3365f45bb3a475448b7faa8fb47486b
 SHA1 (patch-etc_bushu.rev) = 53259ef27da2b3e57ff9834957c8ee9b2fe4f833
-SHA1 (patch-lisp_Makefile.am) = 74daf6aa285142872fba5af92b0dfb2bfdc2c452
-SHA1 (patch-lisp_Makefile.in) = f126b86f9e37e3c62c49313d2a0483c3405254d3
+SHA1 (patch-lisp_Makefile.am) = 5aea2c748f6c39133a6daf0753b2a2eaf2ad3494
+SHA1 (patch-lisp_Makefile.in) = 15b210f0a0582af037492e3491778b01b5b15ef0
 SHA1 (patch-lisp_eelll.el) = b443a434b0d21454a23d66be073c96d0fcad5324
 SHA1 (patch-lisp_tc-ja-alnum.el) = b407f45c48e2371c1266403409938e6ec4e0a340
 SHA1 (patch-lisp_tc-mazegaki.el) = 8bd88487ebb81269f564e4e71214e1f6bae8ded9

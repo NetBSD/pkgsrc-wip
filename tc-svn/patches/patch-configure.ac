@@ -1,9 +1,9 @@
-$NetBSD: patch-configure.in,v 1.1.1.1 2011/05/23 13:37:52 makoto Exp $
+$NetBSD: patch-configure.ac,v 1.1 2012/08/05 15:01:05 makoto Exp $
 
 Add --enable-symbol-rev for configure (by mef@)
 
---- configure.in.orig	2011-04-16 11:35:11.000000000 +0900
-+++ configure.in	2011-04-16 16:51:55.000000000 +0900
+--- configure.ac.orig	2011-04-16 11:35:11.000000000 +0900
++++ configure.ac	2011-04-16 16:51:55.000000000 +0900
 @@ -35,6 +35,18 @@
    --with-lispdir=DIR      Emacs Lisp files in DIR,
  lispdir=${withval})
