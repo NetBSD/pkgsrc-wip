@@ -1,7 +1,4 @@
-XySSL features:
-*  AES, Triple-DES, DES, ARC4
-* MD2, MD4, MD5, SHA-1, SHA-256
-* HAVEGE random number generator
-* RSA with PKCS#1 v1.5 padding
-* SSLv3 and TLSv1 client support
-* X.509 certificate reading
+PolarSSL is an SSL library written in ANSI C. PolarSSL makes it easy for
+developers to include cryptographic and SSL/TLS capabilities in their
+(embedded) products with as little hassle as possible. It is designed to be
+readable, documented, tested, loosely coupled and portable.

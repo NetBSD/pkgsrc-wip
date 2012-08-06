@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2012/08/06 13:42:44 mwilhelmy Exp $
+$NetBSD: distinfo,v 1.2 2012/08/06 15:04:46 mwilhelmy Exp $
 
-SHA1 (xyssl-0.8-bsd.tgz) = d566f86a17a90b280805b84a54672c020f80891f
-RMD160 (xyssl-0.8-bsd.tgz) = 9ecbe59bf3f502fcb08178ce203604fd0673ff8b
-Size (xyssl-0.8-bsd.tgz) = 184753 bytes
-SHA1 (patch-aa) = 6cf6790263e7f74791cc4b7dc95e17e7694725a1
+SHA1 (polarssl-1.1.4-gpl.tgz) = 3dd10bd1a8f7f58e0ef8c91cfa5ea7efd5d5f4bc
+RMD160 (polarssl-1.1.4-gpl.tgz) = da5e218d1462561006841baff747f60bb4655f08
+Size (polarssl-1.1.4-gpl.tgz) = 611340 bytes
+SHA1 (patch-library_net.c) = ee7e48284ed913bd3b53ccfb8f4ac8dce3f3a21a
