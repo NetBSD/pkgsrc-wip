@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/08/06 14:50:36 asau Exp $
+# $NetBSD: Makefile,v 1.18 2012/08/06 17:24:32 mwilhelmy Exp $
 
 DISTNAME=		xrdp-0.5.0
 CATEGORIES=		net x11
@@ -15,37 +15,19 @@ USE_LIBTOOL=		yes
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 RCD_SCRIPTS=		xrdp sesman
-# FIXME: are these really needed?
-#RCD_SCRIPT_SRC.xrdp=	files/xrdp.sh
-#RCD_SCRIPT_SRC.sesman=	files/sesman.sh
+RCD_SCRIPT_SRC.xrdp=	files/xrdp.sh
+RCD_SCRIPT_SRC.sesman=	files/sesman.sh
 
 WRKSRC=			${WRKDIR}/xrdp
 EGDIR=			${PREFIX}/share/examples/xrdp
-#MAKE_ENV+=		DESTDIR=${DESTDIR:Q}${PREFIX:Q}
-#MAKE_ENV+=		CFGDIR=${EGDIR:Q}
-#MAKE_ENV+=		PIDDIR=/var/run
-#MAKE_ENV+=		MANDIR=${PREFIX:Q}/${PKGMANDIR:Q}
-#MAKE_ENV+=		DOCDIR=${PREFIX:Q}/share/doc/xrdp
-#MAKE_ENV+=		DLLIB=${BUILDLINK_LDADD.dl:Q}
-#MAKE_ENV+=		CFGDIR=${PKG_SYSCONFDIR}
-#MAKE_ENV+=		SHAREDIR=${PREFIX}/share
-#
-#INSTALL_ENV+=		BINDIR=${PREFIX}/bin
-#INSTALL_ENV+=		LIBDIR=${PREFIX}/lib
-#INSTALL_ENV+=		MANDIR=${PREFIX}/${PKGMANDIR}
-#INSTALL_ENV+=		ETCDIR=${PREFIX}/share/examples/xrdp
-#INSTALL_ENV+=		PAMDIR=${PREFIX}/share/examples/pam.d
-#INSTALL_ENV+=		SHAREDIR=${PREFIX}/share
-INSTALL_ENV+=		sysconfdir=${EGDIR}
-#AUTO_MKDIRS=		yes
+AUTO_MKDIRS=		yes
+MAKE_DIRS=		share/examples/pam.d
 INSTALLATION_DIRS=	share/xrdp share/examples/xrdp
 
 PKG_SYSCONFSUBDIR=	xrdp
 CONF_FILES+=		${EGDIR}/sesman.ini	${PKG_SYSCONFDIR}/sesman.ini
 CONF_FILES+=		${EGDIR}/rsakeys.ini	${PKG_SYSCONFDIR}/rsakeys.ini
 CONF_FILES+=		${EGDIR}/xrdp.ini	${PKG_SYSCONFDIR}/xrdp.ini
-
-#PTHREAD_OPTS+=		native
 
 SUBST_CLASSES+=		man
 SUBST_MESSAGE.man=	Fixing variables in man-pages
@@ -66,7 +48,7 @@ SUBST_VARS.paths=	PREFIX
 GNU_CONFIGURE=		yes
 
 pre-configure:
-	cd ${WRKSRC}; $(CONFIG_SHELL) bootstrap
+	set -e; cd ${WRKSRC}; ${CONFIG_SHELL} bootstrap
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
