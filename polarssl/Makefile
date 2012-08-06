@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/08/06 15:04:46 mwilhelmy Exp $
+# $NetBSD: Makefile,v 1.3 2012/08/06 15:16:51 asau Exp $
 #
 
 DISTNAME=		polarssl-1.1.4-gpl
@@ -20,7 +20,5 @@ USE_LANGUAGES=		c c++
 
 WRKSRC=			${WRKDIR}/${PKGNAME}
 REPLACE_PERL=		tests/scripts/*.pl
-
-#USE_BSD_MAKEFILE=	yes
 
 .include "../../mk/bsd.pkg.mk"
