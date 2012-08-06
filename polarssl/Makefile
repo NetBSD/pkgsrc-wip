@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2012/08/06 15:18:12 asau Exp $
+# $NetBSD: Makefile,v 1.5 2012/08/06 15:22:46 asau Exp $
 #
 
 DISTNAME=		polarssl-1.1.4-gpl
-PKGNAME=		polarssl-1.1.4
+PKGNAME=		${DISTNAME:-gpl=}
 CATEGORIES=		security devel
 MASTER_SITES=		http://polarssl.org/code/download/
 EXTRACT_SUFX=		.tgz
@@ -14,10 +14,9 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+WRKSRC=			${WRKDIR}/${PKGNAME}
 USE_TOOLS+=		gmake perl
 USE_LANGUAGES=		c c++
-
-WRKSRC=			${WRKDIR}/${PKGNAME}
 REPLACE_PERL=		tests/scripts/*.pl
 
 .include "../../mk/bsd.pkg.mk"
