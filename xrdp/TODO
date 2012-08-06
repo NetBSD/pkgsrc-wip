@@ -22,11 +22,13 @@ Add version information to libraries?
 Make sesman log to a sane default location (syslog?) rather than ./sesman.log
 
 Linux: Figure out why DLLIB or any other -ldl specific variable is never set.
+- might have been fixed by update to 0.5.0, because autoconf may autodetect it; needs testing
 
 Old (from lkundrak, the previous maintainer, and not totally clear to me, the
 new maintainer):
 - pam && kerberos optional
   (why? how?)
+  - Might work by using the options framework and tweaking autoconf parameters
 - MESSAGE
   (I don't know why, but it was here before)
 - fix bugs such as -n one 
