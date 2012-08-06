@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/02/17 22:38:01 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2012/08/06 17:25:29 mayureshw Exp $
 #
 
 DISTNAME=	phantomjs-1.4.1-source
@@ -23,6 +23,9 @@ do-configure:
 
 do-install:
 	cd ${WRKSRC} && ${INSTALL_PROGRAM} bin/phantomjs ${DESTDIR}${PREFIX}/bin/
+
+.include "../../mk/dlopen.buildlink3.mk"
+BUILDLINK_TRANSFORM+=   opt:-ldl:${BUILDLINK_LDADD.dl:M*}
 
 .include "../../x11/qt4-libs/buildlink3.mk"
 .include "../../x11/qt4-tools/buildlink3.mk"
