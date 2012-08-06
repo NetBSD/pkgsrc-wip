@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2012/08/05 15:01:04 makoto Exp $
+@comment $NetBSD: PLIST,v 1.8 2012/08/06 03:58:26 makoto Exp $
 bin/tcinput
 info/tc.info
 ${EMACS_LISPPREFIX}/tc-${PKGVERSION}/eelll.el
@@ -31,6 +31,7 @@ ${EMACS_LISPPREFIX}/tc-${PKGVERSION}/tc-mazegaki.elc
 ${EMACS_LISPPREFIX}/tc-${PKGVERSION}/tc-mkmzdic.el
 ${EMACS_LISPPREFIX}/tc-${PKGVERSION}/tc-mkmzdic.elc
 ${EMACS_LISPPREFIX}/tc-${PKGVERSION}/tc-pre.el
+${EMACS_LISPPREFIX}/tc-${PKGVERSION}/tc-pre.elc
 ${EMACS_LISPPREFIX}/tc-${PKGVERSION}/tc-setup.el
 ${EMACS_LISPPREFIX}/tc-${PKGVERSION}/tc-setup.elc
 ${EMACS_LISPPREFIX}/tc-${PKGVERSION}/tc-stat.el
