@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/08/02 00:26:08 asau Exp $
+# $NetBSD: Makefile,v 1.17 2012/08/06 14:50:36 asau Exp $
 
 DISTNAME=		xrdp-0.5.0
 CATEGORIES=		net x11
@@ -66,7 +66,7 @@ SUBST_VARS.paths=	PREFIX
 GNU_CONFIGURE=		yes
 
 pre-configure:
-	cd ${WRKSRC}; ./bootstrap
+	cd ${WRKSRC}; $(CONFIG_SHELL) bootstrap
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
