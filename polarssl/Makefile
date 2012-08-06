@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/08/06 15:16:51 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/08/06 15:18:12 asau Exp $
 #
 
 DISTNAME=		polarssl-1.1.4-gpl
@@ -14,7 +14,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-NO_CONFIGURE=		yes
 USE_TOOLS+=		gmake perl
 USE_LANGUAGES=		c c++
 
