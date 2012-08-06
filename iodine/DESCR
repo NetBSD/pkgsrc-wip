@@ -7,17 +7,16 @@ device. The bandwidth is assymetrical with limited upstream and up to 1 Mbit/s
 downstream.
 
 Compared to other DNS tunnel implementations, iodine offers:
- o Higher performance
-	 iodine uses the NULL type that allows the downstream data to be sent
-    without encoding. Each DNS reply can contain nearly a kilobyte of payload
-    data.
- o Portability
-	 iodine runs on many different UNIX-like systems. Tunnels can be set up
-    between two hosts no matter their endianness or operating system.
- o Security
-	 iodine uses challenge-response login secured by MD5 hash. It also
-	  filters out any packets not coming from the IP and port used when
-	  logging in.
- o Less setup
-	 iodine handles setting IP number on interfaces automatically, and up
-	 to 8 users can share one server at the same time.
+ * Higher performance: iodine uses the NULL type that allows the downstream
+   data to be sent without encoding. Each DNS reply can contain nearly a
+   kilobyte of payload data.
+
+ * Portability: iodine runs on many different UNIX-like systems. Tunnels can be
+   set up between two hosts no matter their endianness or operating system.
+
+ * Security: iodine uses challenge-response login secured by MD5 hash. It also
+   filters out any packets not coming from the IP and port used when logging
+   in.
+
+ * Less setup: iodine handles setting IP number on interfaces automatically,
+   and up to 8 users can share one server at the same time.
