@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4788 2012/08/04 22:03:01 othyro Exp $
+# $Id: Makefile,v 1.4789 2012/08/06 13:42:44 mwilhelmy Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2125,6 +2125,7 @@ SUBDIR+=	pngnq
 SUBDIR+=	pnmcurve
 SUBDIR+=	pointfree
 SUBDIR+=	pointless
+SUBDIR+=	polarssl
 SUBDIR+=	polipo
 SUBDIR+=	polylib
 SUBDIR+=	polymul
@@ -3246,7 +3247,6 @@ SUBDIR+=	xvmware
 SUBDIR+=	xwelltris
 SUBDIR+=	xwindiff
 SUBDIR+=	xxdiff
-SUBDIR+=	xyssl
 SUBDIR+=	yafray
 SUBDIR+=	yajl
 SUBDIR+=	yakuake

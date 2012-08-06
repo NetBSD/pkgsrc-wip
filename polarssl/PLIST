@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/10/11 10:45:27 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.1 2012/08/06 13:42:44 mwilhelmy Exp $
 bin/xyssl_aescrypt2
 bin/xyssl_benchmark
 bin/xyssl_dh_client

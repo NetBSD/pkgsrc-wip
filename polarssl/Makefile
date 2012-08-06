@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/11/11 22:42:07 shattered Exp $
+# $NetBSD: Makefile,v 1.1 2012/08/06 13:42:44 mwilhelmy Exp $
 #
 
 DISTNAME=		xyssl-0.8-bsd

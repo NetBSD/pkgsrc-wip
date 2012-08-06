@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2008/03/08 21:56:50 tnn2 Exp $
+$NetBSD: distinfo,v 1.1 2012/08/06 13:42:44 mwilhelmy Exp $
 
 SHA1 (xyssl-0.8-bsd.tgz) = d566f86a17a90b280805b84a54672c020f80891f
 RMD160 (xyssl-0.8-bsd.tgz) = 9ecbe59bf3f502fcb08178ce203604fd0673ff8b
