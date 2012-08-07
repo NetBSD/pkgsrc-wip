@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4789 2012/08/06 13:42:44 mwilhelmy Exp $
+# $Id: Makefile,v 1.4790 2012/08/07 19:49:32 fhajny Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2223,6 +2223,7 @@ SUBDIR+=	py-buildslave
 SUBDIR+=	py-bytecodeassembler
 SUBDIR+=	py-calverter
 SUBDIR+=	py-captcha
+SUBDIR+=	py-carbon
 SUBDIR+=	py-cclib
 SUBDIR+=	py-ccuracy
 SUBDIR+=	py-cdecimal
@@ -2314,6 +2315,7 @@ SUBDIR+=	py-gitdb
 SUBDIR+=	py-gnm
 SUBDIR+=	py-gnucash
 SUBDIR+=	py-gpaw
+SUBDIR+=	py-graphite-web
 SUBDIR+=	py-graphmin
 SUBDIR+=	py-graphpath
 SUBDIR+=	py-greenlet
@@ -2563,6 +2565,7 @@ SUBDIR+=	py-transaction
 SUBDIR+=	py-ttk
 SUBDIR+=	py-turbojson
 SUBDIR+=	py-twisted-kqueue
+SUBDIR+=	py-txamqp
 SUBDIR+=	py-ufl
 SUBDIR+=	py-uncertainties
 SUBDIR+=	py-utilib_common
@@ -2595,6 +2598,7 @@ SUBDIR+=	py-webflash
 SUBDIR+=	py-webhelpers
 SUBDIR+=	py-webkit
 SUBDIR+=	py-webob
+SUBDIR+=	py-whisper
 SUBDIR+=	py-willow
 SUBDIR+=	py-workerpool
 SUBDIR+=	py-wsgi-intercept
