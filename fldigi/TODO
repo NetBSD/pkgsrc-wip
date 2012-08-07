@@ -1,7 +1,2 @@
    ham/fldigi (3.03) segfaults on NetBSD/amd64 6_BETA2
    while this package runs fine there.
-
-(1) https:// of MASTER_SITES may not work for the moment.
-   Manually doing following fine.
-   wget  --no-check-certificate https://api.opensuse.org/public/source/hamradio/fldigi/fldigi-3.21.49.tar.bz2
-

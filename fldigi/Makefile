@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2012/08/07 14:05:13 makoto Exp $
+# $NetBSD: Makefile,v 1.2 2012/08/07 15:09:23 makoto Exp $
 
-DISTNAME=	fldigi-3.21.49
+DISTNAME=	fldigi-3.21.50
 CATEGORIES=	ham
-MASTER_SITES=	https://api.opensuse.org/public/source/hamradio/fldigi
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	http://www.w1hkj.com/downloads/fldigi/
 LICENSE=	gnu-gpl-v3
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -18,11 +17,19 @@ GNU_CONFIGURE=	yes
 # To find _oss_ioctl
 LDFLAGS+=	-lossaudio
 
+BUILD_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
+
 SUBST_CLASSES+=		perl
 SUBST_STAGE.perl=	post-configure
 SUBST_FILES.perl=	scripts/fldigi-shell
 SUBST_MESSAGE.perl=	Replacing Perl PATH
-SUBST_SED.perl+=	-e s\|/usr/bin/perl\|${PERL5:Q}\|g
+SUBST_SED.perl=		-e s\|/usr/bin/perl\|${PERL5:Q}\|g
+
+SUBST_CLASSES+=		asciidoc
+SUBST_STAGE.asciidoc=	post-configure
+SUBST_FILES.asciidoc=	doc/Makefile.am doc/Makefile.in doc/Makefile
+SUBST_MESSAGE.asciidoc=	Replacing asciidoc PATH
+SUBST_SED.asciidoc=	-e s\|/usr/share\|${PREFIX}/share\|g
 
 # Following binary contains configure parameter, which is OK.
 CHECK_WRKREF_SKIP+=	bin/flarq

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2012/08/07 14:05:13 makoto Exp $
+$NetBSD: distinfo,v 1.2 2012/08/07 15:09:23 makoto Exp $
 
-SHA1 (fldigi-3.21.49.tar.bz2) = febf63aeda9a081b4e33fac9e5587f5ed37ca358
-RMD160 (fldigi-3.21.49.tar.bz2) = 1ae33803e5176550c155dd9970bf3765df590319
-Size (fldigi-3.21.49.tar.bz2) = 1485283 bytes
+SHA1 (fldigi-3.21.50.tar.gz) = 9de2b489185851c9b378034fdaa2aa57e6d2747f
+RMD160 (fldigi-3.21.50.tar.gz) = 6fe4b5e5dbe07765c0f4beab7738669ddbf635da
+Size (fldigi-3.21.50.tar.gz) = 1790564 bytes
