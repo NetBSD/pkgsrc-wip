@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2012/08/05 15:01:04 makoto Exp $
+# $NetBSD: Makefile,v 1.5 2012/08/07 01:15:21 makoto Exp $
 
 DISTNAME=		tc-2.99.1
 PKGNAME=		${EMACS_PKGNAME_PREFIX}${DISTNAME}
 PKGREVISION=		${_SVN_PKGVERSION:S/.//g}
-
 CATEGORIES=		inputmethod
 
 MAINTAINER=		makoto@ki.nu
@@ -12,8 +11,9 @@ COMMENT=		2-stroke non associative direct input for Kanji
 # tc is in GPL2, kw is unknown for the moment
 LICENSE=		gnu-gpl-v2
 
-WRKSRC=			${WRKDIR}/tcode/tc
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+WRKSRC=			${WRKDIR}/tcode/tc
 INSTALLATION_DIRS=	${EMACS_INFOPREFIX} \
 			${EMACS_LISPPREFIX}/${DISTNAME} \
 			share/examples/tc
@@ -40,6 +40,7 @@ CONFIGURE_ARGS.emacs+=	--datadir=${PREFIX}/share
 PLIST_SUBST+=		DISTNAME=${DISTNAME}
 
 SUBST_CLASSES+=		tc
+SUBST_MESSAGE.tc=	Replacing Perl PATH (@PERL@) to ${PERL5:Q}
 SUBST_STAGE.tc=		post-configure
 SUBST_FILES.tc+=	bushu-util/bushu2canna
 SUBST_FILES.tc+=	bushu-util/where
@@ -49,6 +50,7 @@ SUBST_SED.tc+=		-e s\|@PERL@\|${PERL5:Q}\|g
 # fix hardcoded PATH, interim solution, upstream fix may differ.
 # This edit should be applied before byte compile
 SUBST_CLASSES+=		tc-pre
+SUBST_MESSAGE.tc-pre=	Replacing tc-pre.el PATH /usr/loca/share to ${PREFIX}/share
 SUBST_STAGE.tc-pre=	pre-configure
 SUBST_FILES.tc-pre+=	lisp/tc-pre.el
 SUBST_SED.tc-pre+=	-e s\|/usr/local/share\|${PREFIX}/share\|g
