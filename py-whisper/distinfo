@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2012/08/07 19:37:24 fhajny Exp $
+
+SHA1 (whisper-0.9.10.tar.gz) = 09694480231a25545029ed493ae9569db06de2d3
+RMD160 (whisper-0.9.10.tar.gz) = 569344a5e4f6fcf3747d966b00c1ed3a9ca3a2c8
+Size (whisper-0.9.10.tar.gz) = 10661 bytes
