@@ -1,2 +1,37 @@
    ham/fldigi (3.03) segfaults on NetBSD/amd64 6_BETA2
    while this package runs fine there.
+
+- Verify on N/5.1
+- Check if STRIP line is really unnecessary (probably no, necessary)
+- -lossaudio line ... replace with mk/oss.buildlink3.mk
+- portaudio  is needed ? (See INSTALL and configure results)
+- pulseaudio is needed ? (See INSTALL and configure results)
+- jpeg is dropped ?
+- WRKREF issue
+- patches/patch-a? in ham/ is really unnecessary ?
+
+-----------------------------------
+Configuration summary:
+
+  Version ..................... 3.21.50
+
+  Static linking .............. no
+  CPU optimizations ........... none
+  Debugging ................... no
+
+  fldigi ...................... yes
+  flarq ....................... yes
+
+  i18n ........................ yes
+
+ fldigi build options:
+
+  sndfile ..................... yes
+  oss ......................... yes
+  portaudio ................... yes
+  pulseaudio .................. yes
+
+  hamlib ...................... yes
+  xmlrpc ...................... yes
+
+(Thanks Greg)
