@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/08/08 00:22:45 lexort Exp $
+# $NetBSD: Makefile,v 1.4 2012/08/08 14:25:03 makoto Exp $
 #
 
 DISTNAME=	fldigi-3.21.50
@@ -16,8 +16,9 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_TOOLS+=	gmake pkg-config
 USE_LANGUAGES=	c c++
 GNU_CONFIGURE=	yes
-# To find _oss_ioctl
-LDFLAGS+=	-lossaudio
+
+# NetBSD 5.1 fails to find strip - install: exec of strip failed: 
+CONFIGURE_ENV+=		STRIP=${STRIP}
 
 BUILD_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
 
@@ -43,6 +44,7 @@ CHECK_WRKREF_SKIP+=	bin/fldigi
 .include "../../audio/pulseaudio/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../ham/hamlib/buildlink3.mk"
+.include "../../mk/oss.buildlink3.mk"
 .include "../../textproc/xmlrpc-c/buildlink3.mk"
 .include "../../x11/fltk/buildlink3.mk"
 

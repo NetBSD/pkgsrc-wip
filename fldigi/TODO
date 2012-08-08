@@ -1,11 +1,8 @@
    ham/fldigi (3.03) segfaults on NetBSD/amd64 6_BETA2
    while this package runs fine there.
 
-- Verify on N/5.1
-- Check if STRIP line is really unnecessary (probably no, necessary)
-- -lossaudio line ... replace with mk/oss.buildlink3.mk
-- portaudio  is needed ? (See INSTALL and configure results)
-- pulseaudio is needed ? (See INSTALL and configure results)
+- portaudio  is needed ? (See INSTALL and configure results) ,probably yes
+- pulseaudio is needed ? (See INSTALL and configure results) ,probably yes
 - jpeg is dropped ?
 - WRKREF issue
 - patches/patch-a? in ham/ is really unnecessary ?
@@ -35,3 +32,15 @@ Configuration summary:
   xmlrpc ...................... yes
 
 (Thanks Greg)
+-----------------------------------
+
+(NetBSD/5.1.2 has following line at pbulk)
+[130/130] Starting build of  fldigi-3.21.50
+Aug  8 22:54:45 i386-5 /netbsd: pid 23150 (conftest), uid 2029: exited on signal 11 (core dumped)
+[130/130] Successfully built fldigi-3.21.50
+
+
+(common symptom)
+-----------------------------------
+sh: cannot open 1.3: no such file
+
