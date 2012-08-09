@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/05/26 13:59:47 tnn2 Exp $
+# $NetBSD: Makefile,v 1.4 2012/08/09 13:53:12 fhajny Exp $
 #
 
 PKGVERSION=	2.0.0
@@ -33,7 +33,7 @@ SUBST_MESSAGE.conf=	Fixing configuration file paths.
 
 pre-build:
 	cd ${WRKSRC}/doc/reference && \
-		pax -O -zrf ${WRKSRC}/doc/reference/syslog-ng.html.tar.gz
+		gzip -d -c ${WRKSRC}/doc/reference/syslog-ng.html.tar.gz | pax -r
 
 post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}

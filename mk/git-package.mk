@@ -101,7 +101,7 @@ _GIT_DISTFILE.${repo}=	${PKGBASE}-${GIT_MODULE.${repo}}-${_GIT_TAG.${repo}}.tar.
 _GIT_EXTRACT_CACHED.${repo}=	\
 	if [ -f ${_GIT_DISTDIR}/${_GIT_DISTFILE.${repo}:Q} ]; then		\
 	  ${STEP_MSG} "Extracting cached GIT archive "${_GIT_DISTFILE.${repo}:Q}"."; \
-	  pax -r -z -f ${_GIT_DISTDIR}/${_GIT_DISTFILE.${repo}:Q};	\
+	  gzip -d -c ${_GIT_DISTDIR}/${_GIT_DISTFILE.${repo}:Q} | pax -r;	\
 	  exit 0;							\
 	fi
 
@@ -109,7 +109,7 @@ _GIT_EXTRACT_CACHED.${repo}=	\
 _GIT_CREATE_CACHE.${repo}=	\
 	${STEP_MSG} "Creating cached GIT archive "${_GIT_DISTFILE.${repo}:Q}"."; \
 	${MKDIR} ${_GIT_DISTDIR:Q};					\
-	pax -w -z -f ${_GIT_DISTDIR}/${_GIT_DISTFILE.${repo}:Q} ${GIT_MODULE.${repo}:Q}
+	pax -w ${GIT_MODULE.${repo}:Q} | gzip > ${_GIT_DISTDIR}/${_GIT_DISTFILE.${repo}:Q}
 .endfor
 
 pre-extract: do-git-extract
