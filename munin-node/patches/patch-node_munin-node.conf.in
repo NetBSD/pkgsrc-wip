@@ -1,0 +1,14 @@
+$NetBSD: patch-node_munin-node.conf.in,v 1.1 2012/08/09 14:00:21 fhajny Exp $
+
+Remove pattern that breaks Munin at least on SunOS.
+--- node/munin-node.conf.in.orig	2012-05-30 10:05:21.000000000 +0000
++++ node/munin-node.conf.in
+@@ -14,7 +14,7 @@ group root
+ 
+ 
+ # Regexps for files to ignore
+-ignore_file [\#~]$
++ignore_file ~$
+ ignore_file DEADJOE$
+ ignore_file \.bak$
+ ignore_file %$

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/06/02 13:24:41 ftigeot Exp $
+# $NetBSD: Makefile,v 1.10 2012/08/09 14:00:20 fhajny Exp $
 #
 
 DISTNAME=	munin-${VER}
@@ -38,8 +38,6 @@ PKG_GROUPS=	${MUNIN_GROUP}
 PKG_USERS=	${MUNIN_USER}:${MUNIN_GROUP}
 PKG_GECOS.${MUNIN_USER}=	Munin user
 PKG_SYSCONFSUBDIR?=	munin
-
-REPLACE_BASH+=	plugins/node.d/multigraph_tester.in
 
 REPLACE_PERL+=	node/sbin/munin-node
 REPLACE_PERL+=	node/sbin/munin-node-configure
