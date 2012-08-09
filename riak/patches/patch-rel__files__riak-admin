@@ -1,15 +1,39 @@
-$NetBSD: patch-rel__files__riak-admin,v 1.1.1.1 2011/09/30 20:25:05 fhajny Exp $
+$NetBSD: patch-rel__files__riak-admin,v 1.2 2012/08/09 16:32:24 fhajny Exp $
 
-Avoiding sudo -i makes the scripts much more usable.
---- rel/files/riak-admin.orig	2011-06-01 18:23:36.000000000 +0000
+Substitute whoami for id across SunOS platforms.
+Silence sudo (unneeded screen waste).
+--- rel/files/riak-admin.orig	2012-08-06 22:02:45.000000000 +0000
 +++ rel/files/riak-admin
-@@ -15,8 +15,7 @@ if [ "$RUNNER_USER" -a "x$LOGNAME" != "x
+@@ -4,10 +4,10 @@
+ if [ `uname -s` = 'SunOS' -a "${POSIX_SHELL}" != "true" ]; then
+     POSIX_SHELL="true"
+     export POSIX_SHELL
+-    # To support 'whoami' add /usr/ucb to path
+-    PATH=/usr/ucb:$PATH
+-    export PATH
++    WHOAMI_PROG="/usr/xpg4/bin/id -un"
+     exec /usr/bin/ksh $0 "$@"
++else
++    WHOAMI_PROG="whoami"
+ fi
+ unset POSIX_SHELL # clear it so if we invoke other scripts, they run as ksh as well
+ 
+@@ -20,7 +20,7 @@ RUNNER_LIB_DIR={{platform_lib_dir}}
+ RUNNER_LOG_DIR={{runner_log_dir}}
+ RUNNER_USER={{runner_user}}
+ 
+-WHOAMI=$(whoami)
++WHOAMI=$(${WHOAMI_PROG})
+ 
+ # Make sure this script is running as the appropriate user
+ if ([ "$RUNNER_USER" ] && [ "x$WHOAMI" != "x$RUNNER_USER" ]); then
+@@ -29,8 +29,7 @@ if ([ "$RUNNER_USER" ] && [ "x$WHOAMI" !
          echo "sudo doesn't appear to be installed and your EUID isn't $RUNNER_USER" 1>&2
          exit 1
      fi
--    echo "Attempting to restart script through sudo -u $RUNNER_USER"
--    exec sudo -u $RUNNER_USER -i $RUNNER_SCRIPT_DIR/$RUNNER_SCRIPT $@
-+    exec sudo -u $RUNNER_USER $RUNNER_SCRIPT_DIR/$RUNNER_SCRIPT $@
+-    echo "Attempting to restart script through sudo -H -u $RUNNER_USER"
+-    exec sudo -H -u $RUNNER_USER -i $RUNNER_SCRIPT_DIR/$RUNNER_SCRIPT $@
++    exec sudo -H -u $RUNNER_USER $RUNNER_SCRIPT_DIR/$RUNNER_SCRIPT $@
  fi
  
  # Make sure CWD is set to runner base dir

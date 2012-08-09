@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2012/06/23 09:52:36 fhajny Exp $
+# $NetBSD: Makefile,v 1.12 2012/08/09 16:32:24 fhajny Exp $
 #
 
-DISTNAME=		riak-1.1.4
+DISTNAME=		riak-1.2.0
 CATEGORIES=		databases
-MASTER_SITES=		http://downloads.basho.com/riak/${DISTNAME}/
+MASTER_SITES=		http://s3.amazonaws.com/downloads.basho.com/riak/1.2/${PKGVERSION}/
 
 MAINTAINER=		filip@joyent.com
 HOMEPAGE=		http://www.basho.com/products_riak_overview.php
@@ -25,18 +25,22 @@ EXTRACT_ONLY+=		${INNOSTORE}
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
+
 .include "../../lang/erlang/Makefile.versions"
 .include "Makefile.versions"
+
+BUILD_DEFS+=		VARBASE RIAK_USER RIAK_GROUP
+BUILD_DEFS+=		RIAK_DATA RIAK_LOG
 
 RIAK_USER?=		riak
 RIAK_GROUP?=		${RIAK_USER}
 RIAK_DATA?=		${VARBASE}/db/riak
 RIAK_LOG?=		${VARBASE}/log/riak
-RIAK_HOME?=		${RIAK_DATA}
 
 PKG_GROUPS+=		${RIAK_GROUP}
 PKG_USERS+=		${RIAK_USER}:${RIAK_GROUP}
 PKG_HOME.${RIAK_USER}=	${RIAK_DATA}
+PKG_GECOS.${RIAK_USER}=	Riak daemon user
 
 OWN_DIRS+=		${RIAK_DATA} ${RIAK_LOG}
 OWN_DIRS_PERMS+=	${RIAK_DATA} ${RIAK_USER} ${RIAK_GROUP} 0770
@@ -67,14 +71,15 @@ REPLACE_FILES.escript=	rel/files/nodetool
 REPLACE_FILES.escript+=	${WRKDIR}/innostore-${INNOVER}/priv/innodump
 REPLACE_FILES.escript+=	${WRKDIR}/innostore-${INNOVER}/priv/innoload
 
-CHECK_PORTABILITY_SKIP+=	tests/riak_search/run_all.sh
+CHECK_PORTABILITY_SKIP+=	tests/riak_search/run_all.sh	\
+				deps/riak_search/tests/riak_search/run_all.sh
 
 MAKE_ENV+=		PATCH=${PATCH:Q}
 
 INSTALL_ENV+=		REPO=riak
 INSTALL_ENV+=		PKG_VERSION=${PKGVERSION_NOREV}
-INSTALL_ENV+=		OPSYS=${OPSYS}
-INSTALL_ENV+=		MACHINE_ARCH=${MACHINE_ARCH}
+INSTALL_ENV+=		OSNAME=${OPSYS}
+INSTALL_ENV+=		ARCH=${MACHINE_ARCH}
 
 post-extract:
 	${CHMOD} -R u=rwX,g=rX,o=rX \

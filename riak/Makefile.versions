@@ -1,34 +1,40 @@
-# $NetBSD: Makefile.versions,v 1.3 2012/06/23 09:52:37 fhajny Exp $
+# $NetBSD: Makefile.versions,v 1.4 2012/08/09 16:32:24 fhajny Exp $
 
 _RIAK_VERSIONS+=			\
 	appmon		2.1.14.1	\
 	asn1		1.7		\
 	basho_metrics	1.0.0		\
 	basho_stats	1.0.2		\
+	bear		0.1-0-g7ef9a7b	\
 	bitcask		1.5.1		\
-	cluster_info	1.2.1		\
+	cluster_info	1.2.2		\
 	dtrace		0.8		\
 	ebloom		1.1.1		\
-	eleveldb	1.1.0		\
+	eleveldb	1.2.2		\
 	eper		0.61		\
-	erlang_js	1.0.2		\
+	erlang_js	1.2.0		\
+	erlydtl		0.7.0		\
+	folsom		0.7-0-g64b24d3	\
+	getopt		0.4.3		\
 	innostore	${INNOVER}	\
-	lager		1.0.0		\
+	lager		1.2.0		\
 	lucene_parser	1		\
 	luke		0.2.5		\
-	merge_index	1.1.0		\
+	merge_index	1.2.0		\
 	mochiweb	1.5.1		\
 	poolboy		0.6.1		\
-	protobuffs	0.6.0		\
-	riak_control	0.1.0		\
-	riak_core	1.1.2		\
-	riak_kv		1.1.4		\
-	riak_pipe	1.1.2		\
-	riak_search	1.1.2		\
+	protobuffs	0.7.0		\
+	riak_api	1.2.0		\
+	riak_control	1.2.0		\
+	riak_core	1.2.0		\
+	riak_kv		1.2.0		\
+	riak_pb		1.2.0		\
+	riak_pipe	1.2.0		\
+	riak_search	1.2.0		\
 	riak_sysmon	1.1.2		\
 	riakc		1.2.1		\
-	sext		0.4.1		\
-	webmachine	1.9.1
+	sext		0.4.1-0-g362bdd1 \
+	webmachine	1.9.2
 
 .for name version in ${_RIAK_VERSIONS}
 VERSION.${name}=${version}
