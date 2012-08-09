@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2012/07/30 15:10:57 jonperkin Exp $
+# $NetBSD: Makefile,v 1.13 2012/08/09 13:03:45 fhajny Exp $
 #
 
-DISTNAME=	node-v0.8.4
+DISTNAME=	node-v0.8.6
 CATEGORIES=	devel
 MASTER_SITES=	http://nodejs.org/dist/${DISTNAME:S/node-//}/
 PKGNAME=	${DISTNAME:S/-v/js-/}
@@ -31,7 +31,7 @@ SUBST_VARS.python=	PYTHONBIN
 SUBST_CLASSES+=		man
 SUBST_STAGE.man=	pre-configure
 SUBST_MESSAGE.man=	Fixing man path
-SUBST_FILES.man=	tools/installer.js
+SUBST_FILES.man=	tools/install.py
 SUBST_VARS.man=		PKGMANDIR
 
 CONFIG_SHELL=		${PYTHONBIN}
