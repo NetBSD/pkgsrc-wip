@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2012/05/16 20:26:11 fhajny Exp $
+# $NetBSD: Makefile,v 1.16 2012/08/10 11:37:24 fhajny Exp $
 
 PKGNAME=		${APACHE_PKG_PREFIX}-${RUBY_PKGPREFIX}-${DISTNAME}
-PKGREVISION=		1
 
 COMMENT=		Passenger module for running Rails and Rack applications on Apache2
 

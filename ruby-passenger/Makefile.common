@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2012/05/16 14:08:19 fhajny Exp $
+# $NetBSD: Makefile.common,v 1.2 2012/08/10 11:37:23 fhajny Exp $
 # used by wip/ap2-passenger/Makefile
 #
-DISTNAME=		passenger-3.0.12
+DISTNAME=		passenger-3.0.15
 CATEGORIES=		www
 
-MASTER_SITES=		http://rubyforge.org/frs/download.php/76005/
+MASTER_SITES=		http://rubyforge.org/frs/download.php/76337/
 MAINTAINER=		filip@joyent.com
 HOMEPAGE=		http://www.modrails.com/
 LICENSE=		mit

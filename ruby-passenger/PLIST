@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/05/16 14:08:19 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/08/10 11:37:23 fhajny Exp $
 bin/passenger
 bin/passenger-config
 bin/passenger-install-apache2-module
@@ -44,7 +44,6 @@ ${RUBY_VENDORLIB}/phusion_passenger/platform_info/apache.rb
 ${RUBY_VENDORLIB}/phusion_passenger/platform_info/binary_compatibility.rb
 ${RUBY_VENDORLIB}/phusion_passenger/platform_info/compiler.rb
 ${RUBY_VENDORLIB}/phusion_passenger/platform_info/curl.rb
-${RUBY_VENDORLIB}/phusion_passenger/platform_info/documentation_tools.rb
 ${RUBY_VENDORLIB}/phusion_passenger/platform_info/linux.rb
 ${RUBY_VENDORLIB}/phusion_passenger/platform_info/operating_system.rb
 ${RUBY_VENDORLIB}/phusion_passenger/platform_info/ruby.rb
@@ -113,10 +112,8 @@ ${RUBY_VENDORLIB}/phusion_passenger/wsgi/application_spawner.rb
 ${RUBY_VENDORLIB}/phusion_passenger/wsgi/request_handler.py
 man/man1/passenger-config.1
 man/man1/passenger-stress-test.1
-man/man8/passenger-make-enterprisey.8
 man/man8/passenger-memory-stats.8
 man/man8/passenger-status.8
-sbin/passenger-make-enterprisey
 sbin/passenger-memory-stats
 sbin/passenger-status
 share/doc/phusion-passenger/Architectural overview.html
@@ -124,6 +121,7 @@ share/doc/phusion-passenger/Security of user switching support.html
 share/doc/phusion-passenger/Users guide Apache.html
 share/doc/phusion-passenger/Users guide Nginx.html
 share/doc/phusion-passenger/Users guide Standalone.html
+share/doc/phusion-passenger/images/._phusion_banner.png
 share/doc/phusion-passenger/images/by_sa.png
 share/doc/phusion-passenger/images/conservative_spawning.png
 share/doc/phusion-passenger/images/conservative_spawning.svg
@@ -153,9 +151,11 @@ share/doc/phusion-passenger/images/icons/prev.png
 share/doc/phusion-passenger/images/icons/tip.png
 share/doc/phusion-passenger/images/icons/up.png
 share/doc/phusion-passenger/images/icons/warning.png
+share/doc/phusion-passenger/images/many_web_framework_protocols.png
 share/doc/phusion-passenger/images/passenger_architecture.png
 share/doc/phusion-passenger/images/passenger_architecture.svg
 share/doc/phusion-passenger/images/phusion_banner.png
+share/doc/phusion-passenger/images/rack.png
 share/doc/phusion-passenger/images/smart-lv2.png
 share/doc/phusion-passenger/images/smart-lv2.svg
 share/doc/phusion-passenger/images/spawn_server_architecture.png
@@ -176,7 +176,6 @@ share/phusion-passenger/source/bin/passenger
 share/phusion-passenger/source/bin/passenger-config
 share/phusion-passenger/source/bin/passenger-install-apache2-module
 share/phusion-passenger/source/bin/passenger-install-nginx-module
-share/phusion-passenger/source/bin/passenger-make-enterprisey
 share/phusion-passenger/source/bin/passenger-memory-stats
 share/phusion-passenger/source/bin/passenger-status
 share/phusion-passenger/source/build/agents.rb
@@ -219,15 +218,19 @@ share/phusion-passenger/source/dev/find_owner_pipe_leaks.rb
 share/phusion-passenger/source/dev/render_error_pages.rb
 share/phusion-passenger/source/doc/ApplicationPool algorithm.txt
 share/phusion-passenger/source/doc/Architectural overview.html
+share/phusion-passenger/source/doc/Architectural overview.idmap.txt
 share/phusion-passenger/source/doc/Architectural overview.txt
 share/phusion-passenger/source/doc/Security of user switching support.html
+share/phusion-passenger/source/doc/Security of user switching support.idmap.txt
 share/phusion-passenger/source/doc/Security of user switching support.txt
-share/phusion-passenger/source/doc/Users guide Apache with comments.html
 share/phusion-passenger/source/doc/Users guide Apache.html
+share/phusion-passenger/source/doc/Users guide Apache.idmap.txt
 share/phusion-passenger/source/doc/Users guide Apache.txt
 share/phusion-passenger/source/doc/Users guide Nginx.html
+share/phusion-passenger/source/doc/Users guide Nginx.idmap.txt
 share/phusion-passenger/source/doc/Users guide Nginx.txt
 share/phusion-passenger/source/doc/Users guide Standalone.html
+share/phusion-passenger/source/doc/Users guide Standalone.idmap.txt
 share/phusion-passenger/source/doc/Users guide Standalone.txt
 share/phusion-passenger/source/doc/definitions.h
 share/phusion-passenger/source/doc/images/by_sa.png
@@ -259,9 +262,11 @@ share/phusion-passenger/source/doc/images/icons/prev.png
 share/phusion-passenger/source/doc/images/icons/tip.png
 share/phusion-passenger/source/doc/images/icons/up.png
 share/phusion-passenger/source/doc/images/icons/warning.png
+share/phusion-passenger/source/doc/images/many_web_framework_protocols.png
 share/phusion-passenger/source/doc/images/passenger_architecture.png
 share/phusion-passenger/source/doc/images/passenger_architecture.svg
 share/phusion-passenger/source/doc/images/phusion_banner.png
+share/phusion-passenger/source/doc/images/rack.png
 share/phusion-passenger/source/doc/images/smart-lv2.png
 share/phusion-passenger/source/doc/images/smart-lv2.svg
 share/phusion-passenger/source/doc/images/spawn_server_architecture.png
@@ -375,7 +380,7 @@ share/phusion-passenger/source/ext/boost/config/platform/irix.hpp
 share/phusion-passenger/source/ext/boost/config/platform/linux.hpp
 share/phusion-passenger/source/ext/boost/config/platform/macos.hpp
 share/phusion-passenger/source/ext/boost/config/platform/qnxnto.hpp
-share/phusion-passenger/source/ext/boost/config/platform/solaris.hpp
+share/phusion-passenger/source/ext/boost/config/platform/${LOWER_OPSYS}.hpp
 share/phusion-passenger/source/ext/boost/config/platform/symbian.hpp
 share/phusion-passenger/source/ext/boost/config/platform/vxworks.hpp
 share/phusion-passenger/source/ext/boost/config/platform/win32.hpp
@@ -764,7 +769,7 @@ share/phusion-passenger/source/ext/boost/smart_ptr/detail/atomic_count.hpp
 share/phusion-passenger/source/ext/boost/smart_ptr/detail/atomic_count_gcc.hpp
 share/phusion-passenger/source/ext/boost/smart_ptr/detail/atomic_count_gcc_x86.hpp
 share/phusion-passenger/source/ext/boost/smart_ptr/detail/atomic_count_pthreads.hpp
-share/phusion-passenger/source/ext/boost/smart_ptr/detail/atomic_count_solaris.hpp
+share/phusion-passenger/source/ext/boost/smart_ptr/detail/atomic_count_${LOWER_OPSYS}.hpp
 share/phusion-passenger/source/ext/boost/smart_ptr/detail/atomic_count_sync.hpp
 share/phusion-passenger/source/ext/boost/smart_ptr/detail/atomic_count_win32.hpp
 share/phusion-passenger/source/ext/boost/smart_ptr/detail/operator_bool.hpp
@@ -781,7 +786,7 @@ share/phusion-passenger/source/ext/boost/smart_ptr/detail/sp_counted_base_gcc_sp
 share/phusion-passenger/source/ext/boost/smart_ptr/detail/sp_counted_base_gcc_x86.hpp
 share/phusion-passenger/source/ext/boost/smart_ptr/detail/sp_counted_base_nt.hpp
 share/phusion-passenger/source/ext/boost/smart_ptr/detail/sp_counted_base_pt.hpp
-share/phusion-passenger/source/ext/boost/smart_ptr/detail/sp_counted_base_solaris.hpp
+share/phusion-passenger/source/ext/boost/smart_ptr/detail/sp_counted_base_${LOWER_OPSYS}.hpp
 share/phusion-passenger/source/ext/boost/smart_ptr/detail/sp_counted_base_spin.hpp
 share/phusion-passenger/source/ext/boost/smart_ptr/detail/sp_counted_base_sync.hpp
 share/phusion-passenger/source/ext/boost/smart_ptr/detail/sp_counted_base_w32.hpp
@@ -1112,7 +1117,6 @@ share/phusion-passenger/source/lib/phusion_passenger/platform_info/apache.rb
 share/phusion-passenger/source/lib/phusion_passenger/platform_info/binary_compatibility.rb
 share/phusion-passenger/source/lib/phusion_passenger/platform_info/compiler.rb
 share/phusion-passenger/source/lib/phusion_passenger/platform_info/curl.rb
-share/phusion-passenger/source/lib/phusion_passenger/platform_info/documentation_tools.rb
 share/phusion-passenger/source/lib/phusion_passenger/platform_info/linux.rb
 share/phusion-passenger/source/lib/phusion_passenger/platform_info/operating_system.rb
 share/phusion-passenger/source/lib/phusion_passenger/platform_info/ruby.rb
@@ -1180,7 +1184,6 @@ share/phusion-passenger/source/lib/phusion_passenger/utils/unseekable_socket.rb
 share/phusion-passenger/source/lib/phusion_passenger/wsgi/application_spawner.rb
 share/phusion-passenger/source/lib/phusion_passenger/wsgi/request_handler.py
 share/phusion-passenger/source/man/passenger-config.1
-share/phusion-passenger/source/man/passenger-make-enterprisey.8
 share/phusion-passenger/source/man/passenger-memory-stats.8
 share/phusion-passenger/source/man/passenger-status.8
 share/phusion-passenger/source/man/passenger-stress-test.1
@@ -1542,7 +1545,6 @@ share/phusion-passenger/source/test/stub/rails_apps/3.0/empty/config/locales/en.
 share/phusion-passenger/source/test/stub/rails_apps/3.0/empty/config/routes.rb
 share/phusion-passenger/source/test/stub/rails_apps/3.0/empty/db/seeds.rb
 share/phusion-passenger/source/test/stub/rails_apps/3.0/empty/doc/README_FOR_APP
-share/phusion-passenger/source/test/stub/rails_apps/3.0/empty/log/development.log
 share/phusion-passenger/source/test/stub/rails_apps/3.0/empty/public/404.html
 share/phusion-passenger/source/test/stub/rails_apps/3.0/empty/public/422.html
 share/phusion-passenger/source/test/stub/rails_apps/3.0/empty/public/500.html
@@ -1567,7 +1569,6 @@ share/phusion-passenger/source/test/stub/vendor_rails/minimal/railties/lib/dispa
 share/phusion-passenger/source/test/stub/vendor_rails/minimal/railties/lib/initializer.rb
 share/phusion-passenger/source/test/stub/vendor_rails/minimal/railties/lib/ruby_version_check.rb
 share/phusion-passenger/source/test/stub/wsgi/passenger_wsgi.py
-share/phusion-passenger/source/test/stub/wsgi/passenger_wsgi.pyc
 share/phusion-passenger/source/test/stub/wsgi/public/wsgi-snake.jpg
 share/phusion-passenger/source/test/stub/zsfa/header.png
 share/phusion-passenger/source/test/stub/zsfa/index.html
