@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/08/10 12:15:03 fhajny Exp $
+# $NetBSD: Makefile,v 1.4 2012/08/10 15:13:40 fhajny Exp $
 
 PKGNAME=		${RUBY_PKGPREFIX}-${DISTNAME}
 
@@ -14,7 +14,7 @@ DEPENDS+=		${RUBY_PKGPREFIX}-rubygems>=1.2.0:../../misc/rubygems
 .endif
 
 do-build:
-	cd ${WRKSRC}/build && ${RAKE} common:clean agents
+	cd ${WRKSRC}/build && ${PKGSRC_SETENV} ${MAKE_ENV} ${RAKE} common:clean agents
 
 do-install:
 	cd ${WRKSRC} && DESTDIR=${DESTDIR} PREFIX=${PREFIX} MANDIR=${PKGMANDIR} ${RAKE} pkgsrc

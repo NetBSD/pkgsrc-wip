@@ -1,10 +1,11 @@
-$NetBSD: distinfo,v 1.2 2012/08/10 11:37:23 fhajny Exp $
+$NetBSD: distinfo,v 1.3 2012/08/10 15:13:40 fhajny Exp $
 
 SHA1 (passenger-3.0.15.tar.gz) = 4e75c177cb92acec0064c85ac87a5671b354d9ba
 RMD160 (passenger-3.0.15.tar.gz) = d66c9105ce73952fbff2090a4dc35550add5fe01
 Size (passenger-3.0.15.tar.gz) = 2665076 bytes
 SHA1 (patch-build__agents.rb) = 44a30eb0830fceeeee3dfe298a5ab25d1a15b948
 SHA1 (patch-build__packaging.rb) = 0ed7a252d9ceed22c6ed131aa0f6c81eb613ff07
+SHA1 (patch-build_config.rb) = 6bba4bb01aabbbecd455d407856e8c6a1c5d5865
 SHA1 (patch-ext__apache__Configuration.hpp) = 0d297d7c322900ed4e9f4e6dadacb0d3997c9d69
 SHA1 (patch-ext__common__ResourceLocator.rb) = 3dee1f76b17e72da91ceeb97c3376c822139eb48
 SHA1 (patch-ext__nginx__Configuration.c) = c7fda683b859a8b66e0e6d17fcaf183e7fdab40c

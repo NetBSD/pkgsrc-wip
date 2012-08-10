@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2012/08/10 11:37:23 fhajny Exp $
+# $NetBSD: Makefile.common,v 1.3 2012/08/10 15:13:40 fhajny Exp $
 # used by wip/ap2-passenger/Makefile
 #
 DISTNAME=		passenger-3.0.15
@@ -20,7 +20,7 @@ DISTINFO_FILE=		${.CURDIR}/../../wip/ruby-passenger/distinfo
 
 .include "../../mk/bsd.prefs.mk"
 
-BUILD_DEFS+=		VARBASE
+BUILD_DEFS+=		VARBASE PASSENGER_LOGDIR PASSENGER_VARDIR
 
 PASSENGER_LOGDIR?=	${VARBASE}/log/passenger
 PASSENGER_VARDIR?=	${VARBASE}/spool/passenger
@@ -29,7 +29,6 @@ REPLACE_RUBY=		bin/passenger
 REPLACE_RUBY+=		bin/passenger-config
 REPLACE_RUBY+=		bin/passenger-install-apache2-module
 REPLACE_RUBY+=		bin/passenger-install-nginx-module
-REPLACE_RUBY+=		bin/passenger-make-enterprisey
 REPLACE_RUBY+=		bin/passenger-memory-stats
 REPLACE_RUBY+=		bin/passenger-status
 REPLACE_RUBY+=		helper-scripts/passenger-spawn-server
@@ -53,7 +52,7 @@ SUBST_SED.rake+=	-e 's,@RUBY_VENDORARCHLIB@,${RUBY_VENDORARCHLIB},'
 SUBST_SED.rake+=	-e 's,@PASSENGER_VARDIR@,${PASSENGER_VARDIR},'
 SUBST_SED.rake+=	-e 's,@PASSENGER_LOGDIR@,${PASSENGER_LOGDIR},'
 
-.include "../../mk/compiler.mk"
+MAKE_ENV+=		EXTRA_LDFLAGS=${COMPILER_RPATH_FLAG}${PREFIX}/lib
 
 post-patch:
 	${RM} -f ${WRKSRC}/lib/phusion_passenger/admin_tools/memory_stats.rb.orig \
