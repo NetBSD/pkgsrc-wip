@@ -1,11 +1,10 @@
-$NetBSD: distinfo,v 1.8 2012/07/31 22:27:59 fhajny Exp $
+$NetBSD: distinfo,v 1.9 2012/08/10 18:55:59 bartoszkuzma Exp $
 
-SHA1 (mongodb-src-r2.0.6.tar.gz) = bad1da30f8aeaa5d1ca7994e8f9def07725da7e5
-RMD160 (mongodb-src-r2.0.6.tar.gz) = b9224e56096c4b1755a4e407060de449f5022d77
-Size (mongodb-src-r2.0.6.tar.gz) = 2973489 bytes
+SHA1 (mongodb-src-r2.0.7.tar.gz) = d72fee81b17dc933e30f129bd40e9f4cafecbeb3
+RMD160 (mongodb-src-r2.0.7.tar.gz) = 7a80f463ea2f7f1de80972fcded3fbe982e6f8f0
+Size (mongodb-src-r2.0.7.tar.gz) = 2982999 bytes
 SHA1 (patch-SConstruct) = 5d736dee049d6a78f2013a3480bc972916437d0f
 SHA1 (patch-db__nonce.cpp) = ca5f6a10d8364d41f08720dcc1c4704e9930f7a1
-SHA1 (patch-db_db.cpp) = 7a884218e9e1b5988d5ad1805c3aabe740b736f2
 SHA1 (patch-debian_mongodb.conf) = d52115eadf871ee1d68073f26ceb7ed90aeeb9ef
 SHA1 (patch-shell__dbshell.cpp) = 81f6e3291caa9afdaf487589576b8ad21f67873c
 SHA1 (patch-third_party__pcre.py) = f818c2ebbb7417b4748e25c1358ac17780f51c21
