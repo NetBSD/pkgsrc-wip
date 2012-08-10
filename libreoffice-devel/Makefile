@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2012/07/28 09:04:19 ftigeot Exp $
+# $NetBSD: Makefile,v 1.7 2012/08/10 14:04:28 ftigeot Exp $
 
-VER=			3.6.0.2
+VER=			3.6.0.4
 DISTNAME=		libreoffice-${VER}
 PKGNAME=		libreoffice-devel-${VER:S/-//g}
 CATEGORIES=		misc
@@ -75,6 +75,7 @@ CONFLICTS+=		openoffice2-bin-[0-9]*
 CONFLICTS+=		openoffice3-[0-9]*
 CONFLICTS+=		openoffice3-bin-[0-9]*
 CONFLICTS+=		openoffice-linux-[0-9]*
+CONFLICTS+=		libreoffice-[0-9]*
 CONFLICTS+=		libreoffice3-bin-[0-9]*
 
 USE_TOOLS+=		automake bash bison gmake perl pkg-config unzip
