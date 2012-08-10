@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2009/10/11 10:45:06 thomasklausner Exp $
-bin/proxychains
-lib/libproxychains.la
+@comment $NetBSD: PLIST,v 1.5 2012/08/10 00:09:47 haad Exp $
+bin/proxychains4
+lib/libproxychains4.so
 share/examples/proxychains/proxychains.conf

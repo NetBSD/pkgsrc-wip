@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2005/09/28 06:41:34 rillig Exp $
+$NetBSD: distinfo,v 1.3 2012/08/10 00:09:47 haad Exp $
 
-SHA1 (proxychains-2.1.tar.gz) = 2b07dde6ac4b9a47935f69a88cb9c8da7b4ca1b6
-RMD160 (proxychains-2.1.tar.gz) = 2758c716847749c00429019e514b82b4cf6cf558
-Size (proxychains-2.1.tar.gz) = 181095 bytes
+SHA1 (proxychains-4.2.0.tar.bz2) = 15b713f18530fbf4a8cc6502f4df5c4498385e50
+RMD160 (proxychains-4.2.0.tar.bz2) = 7c056a1c360659c307a60cdb080850ad7ec8ac4b
+Size (proxychains-4.2.0.tar.bz2) = 23550 bytes

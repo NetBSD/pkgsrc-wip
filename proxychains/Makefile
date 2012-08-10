@@ -1,38 +1,33 @@
-# $NetBSD: Makefile,v 1.7 2005/11/03 13:01:52 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2012/08/10 00:09:47 haad Exp $
 #
 
-DISTNAME=		proxychains-2.1
+DISTNAME=		proxychains-4.2.0
 CATEGORIES=		net
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=proxychains/}
+MASTER_SITES=		http://github.com/downloads/haad/proxychains/
+PROXYCHAINS_VERSION=	4.2.0
+PKGNAME=		proxychains-${PROXYCHAINS_VERSION}
+EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		pancake@phreaker.net
-HOMEPAGE=		http://proxychains.sourceforge.net/
-COMMENT=			Chain multiple proxies in a transparent way
+MAINTAINER=		haad@netbsd.org
+HOMEPAGE=		http://haad.github.com/proxychains/
+COMMENT=		Chain multiple proxies in a transparent way
+
+# pkgsrc is not currently able to fetch distfiles from https web servers
+# (see mk/fetch/fetch.mk), so you have to use a browser for now.
+FETCH_USING=		wget
+FETCH_BEFORE_ARGS=	--no-check-certificate
+
+WRKSRC=		${WRKDIR}/proxychains
 
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=	gmake
+USE_TOOLS+=		gmake
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool
 GNU_CONFIGURE=		yes
 
-SUBST_CLASSES+=ooo
-SUBST_STAGE.ooo=pre-build
-SUBST_FILES.ooo=proxychains/Makefile
-SUBST_SED.ooo=-e s!OBJEXT\ =!OBJEXT=o!
-
-SUBST_CLASSES+=pfx
-SUBST_STAGE.pfx=pre-build
-SUBST_FILES.pfx=proxychains/main.c
-SUBST_SED.pfx=-e s!/usr!${PREFIX}!
-
-SUBST_CLASSES+=etc
-SUBST_STAGE.etc=pre-build
-SUBST_FILES.etc=proxychains/libproxychains.c
-SUBST_SED.etc=-e s!/etc!${PREFIX}/etc!
-
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/proxychains/
-	${INSTALL_DATA} ${WRKSRC}/proxychains/proxychains.conf \
+	${INSTALL_DATA} ${WRKSRC}/src/proxychains.conf \
 		${PREFIX}/share/examples/proxychains/
 
 .include "../../mk/bsd.pkg.mk"
