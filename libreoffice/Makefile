@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.49 2012/07/16 13:02:21 ftigeot Exp $
+# $NetBSD: Makefile,v 1.50 2012/08/10 07:42:19 ftigeot Exp $
 
-VER=			3.5.5.3
+VER=			3.5.6.2
 DISTNAME=		libreoffice-${VER}
 PKGNAME=		libreoffice-${VER:S/-//g}
 CATEGORIES=		misc
