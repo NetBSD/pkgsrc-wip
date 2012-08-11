@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2012/08/10 07:42:19 ftigeot Exp $
+# $NetBSD: Makefile,v 1.51 2012/08/11 17:24:27 thomasklausner Exp $
 
 VER=			3.5.6.2
 DISTNAME=		libreoffice-${VER}
@@ -12,8 +12,6 @@ MAINTAINER=		ftigeot@wolfpond.org
 HOMEPAGE=		http://www.libreoffice.org/
 COMMENT=		Office productivity suite
 LICENSE=		gnu-lgpl-v3
-
-NOT_FOR_PLATFORM=	NetBSD-6.*-*
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 CHECK_SHLIBS_SUPPORTED=	no
@@ -59,7 +57,7 @@ EXTRACT_USING=		gtar
 
 WRKSRC=		${WRKDIR}/${LO_BOOTSTRAP}
 
-BUILD_DEPENDS+=		cppunit>1.12:../../devel/cppunit
+BUILD_DEPENDS+=		cppunit>=1.12.1:../../devel/cppunit
 BUILD_DEPENDS+=		gperf-[0-9]*:../../devel/gperf
 BUILD_DEPENDS+=		hunspell>=1.2.8:../../textproc/hunspell
 BUILD_DEPENDS+=		p5-Archive-Zip-[0-9]*:../../archivers/p5-Archive-Zip
@@ -89,7 +87,7 @@ PTHREAD_OPTS+=		require
 HAS_CONFIGURE=		yes
 CHECK_PORTABILITY_SKIP=	configure
 
-CONFIGURE_ARGS+=	--prefix=${DESTDIR}${PREFIX}/${PKGNAME}
+CONFIGURE_ARGS+=	--prefix=${DESTDIR}${PREFIX}/${PKGNAME_NOREV}
 CONFIGURE_ARGS+=	--disable-ccache
 CONFIGURE_ARGS+=	--disable-epm
 CONFIGURE_ARGS+=	--disable-ext-presenter-console
@@ -166,11 +164,11 @@ post-configure:
 AUTO_MKDIRS=	yes
 post-install:
 	for f in ${LO_PROGRAMS}; do \
-		${LN} -s ${DESTDIR}${PREFIX}/${PKGNAME}/program/$$f ${DESTDIR}${PREFIX}/bin/$$f; \
+		${LN} -s ${DESTDIR}${PREFIX}/${PKGNAME_NOREV}/program/$$f ${DESTDIR}${PREFIX}/bin/$$f; \
 	done
-	${LN} -s ${DESTDIR}${PREFIX}/${PKGNAME}/program/soffice ${DESTDIR}${PREFIX}/bin/libreoffice3.5
+	${LN} -s ${DESTDIR}${PREFIX}/${PKGNAME_NOREV}/program/soffice ${DESTDIR}${PREFIX}/bin/libreoffice3.5
 	for f in ${LO_DESKTOP_FILES}; do \
-		${LN} -s ${DESTDIR}${PREFIX}/${PKGNAME}/share/xdg/$$f ${DESTDIR}${PREFIX}/share/applications; \
+		${LN} -s ${DESTDIR}${PREFIX}/${PKGNAME_NOREV}/share/xdg/$$f ${DESTDIR}${PREFIX}/share/applications; \
 	done
 
 
