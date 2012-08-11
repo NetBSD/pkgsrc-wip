@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2010/07/25 05:34:42 schnoebe Exp $
+# $NetBSD: options.mk,v 1.7 2012/08/11 22:10:11 schnoebe Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.spectrum
 PKG_OPTIONS_REQUIRED_GROUPS=	storage
@@ -13,12 +13,12 @@ PKG_SUGGESTED_OPTIONS=		sqlite
 PLIST_VARS+=			sqlite mysql
 
 .if !empty(PKG_OPTIONS:Msqlite)
-. include "../../wip/poco-data-sqlite/buildlink3.mk"
+. include "../../databases/poco-data-sqlite/buildlink3.mk"
 PLIST.sqlite=	yes
 .endif
 
 .if !empty(PKG_OPTIONS:Mmysql)
-. include "../../wip/poco-data-mysql/buildlink3.mk"
+. include "../../databases/poco-data-mysql/buildlink3.mk"
 PLIST.mysql=	yes
 .endif
 
