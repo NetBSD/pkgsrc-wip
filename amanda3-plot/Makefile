@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/08/24 03:39:50 schnoebe Exp $
+# $NetBSD: Makefile,v 1.3 2012/08/11 22:06:31 schnoebe Exp $
 #
 
 PKGNAME=		amanda-plot-${VERS}
@@ -8,7 +8,7 @@ COMMENT=		Visualizes the behavior of Amanda, a network backup system
 
 PKG_DESTDIR_SUPPORT=	destdir
 
-DEPENDS+=		gnuplot{,-nox11}>=3.7:../../graphics/gnuplot-nox11
+DEPENDS+=		gnuplot>=3.7:../../graphics/gnuplot
 DEPENDS+=		amanda-server>=3.1.*:../../wip/amanda3-server
 
 
