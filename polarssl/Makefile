@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/08/09 23:12:49 mwilhelmy Exp $
+# $NetBSD: Makefile,v 1.9 2012/08/12 21:56:42 mwilhelmy Exp $
 #
 
 DISTNAME=		polarssl-1.1.4-gpl
@@ -14,7 +14,7 @@ LICENSE=		gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-WRKSRC=			${WRKDIR}/${DISTNAME:-gpl=}
+WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 USE_TOOLS+=		gmake perl
 USE_LANGUAGES=		c
 REPLACE_PERL=		tests/scripts/*.pl
