@@ -1,1 +1,4 @@
 words(21902)/koffice (lib kopageapp) KoOdfLoadingContext::KoOdfLoadingContext: could not parse manifest document 
+
+When updating this package, please have a look at the following advisories:
+- http://secunia.com/advisories/50050/
