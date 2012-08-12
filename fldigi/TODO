@@ -2,8 +2,8 @@
    while this package runs fine there.
 
 - portaudio  is needed ? (See INSTALL and configure results) ,probably yes
-- pulseaudio is needed ? (See INSTALL and configure results) ,probably yes
-- jpeg is dropped ?
+  [gdt think pulseaudio is normal, and portaudio is atypical, so it's best
+  to not link portaudio, unless some pkgsrc/fldigi user explains why]
 - WRKREF issue
 - patches/patch-a? in ham/ is really unnecessary ?
 
