@@ -1,4 +1,6 @@
-$NetBSD: patch-library_net.c,v 1.1 2012/08/06 15:04:47 mwilhelmy Exp $
+$NetBSD: patch-library_net.c,v 1.2 2012/08/12 20:28:46 mwilhelmy Exp $
+
+NetBSD also has endian.h located in include/sys
 
 --- library/net.c.orig	2011-12-22 10:06:27.000000000 +0000
 +++ library/net.c
