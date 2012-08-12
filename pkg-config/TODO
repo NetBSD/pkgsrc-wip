@@ -1,4 +1,0 @@
-There is pushback against having pkg-config depend on glib2,
-so for now this version is only in wip, but available for those
-who want to use it.
--- wiz 20120307
