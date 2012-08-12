@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/12/08 12:24:10 khorben Exp $
+# $NetBSD: Makefile,v 1.2 2012/08/12 00:31:49 khorben Exp $
 
 MODNAME=		php_gtk2
 PECL_VERSION=		2.0.1
@@ -6,6 +6,7 @@ PECL_DISTNAME=		php-gtk-${PECL_VERSION}
 CATEGORIES+=		x11
 COMMENT=		PHP extension for writing GUI applications with Gtk+
 MASTER_SITES=		http://gtk.php.net/do_download.php?download_file=
+EXTRACT_SUFX=		.tar.gz
 
 MAINTAINER=		khorben@defora.org
 HOMEPAGE=		http://gtk.php.net/
