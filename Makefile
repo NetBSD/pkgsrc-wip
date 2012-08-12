@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4790 2012/08/07 19:49:32 fhajny Exp $
+# $Id: Makefile,v 1.4791 2012/08/12 10:06:52 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -90,7 +90,6 @@ SUBDIR+=	amanda3-client
 SUBDIR+=	amanda3-common
 SUBDIR+=	amanda3-plot
 SUBDIR+=	amanda3-server
-SUBDIR+=	amarok
 SUBDIR+=	analizo
 SUBDIR+=	and
 SUBDIR+=	ann
