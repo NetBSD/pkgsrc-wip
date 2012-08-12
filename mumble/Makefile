@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/07/02 13:38:01 moubctez Exp $
+# $NetBSD: Makefile,v 1.3 2012/08/12 17:36:47 thomasklausner Exp $
 #
 
 DISTNAME=	mumble-1.2.2
@@ -13,7 +13,7 @@ COMMENT=	Low latency VOIP software used mostly during computer games
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-BUILD_DEPENDS+=	boost-headers:../../devel/boost-headers
+BUILD_DEPENDS+=	boost-headers-[0-9]*:../../devel/boost-headers
 USE_TOOLS+= 	pkg-config
 USE_LANGUAGES=	c c++
 
