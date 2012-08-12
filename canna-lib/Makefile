@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/01/02 08:49:59 makoto Exp $
+# $NetBSD: Makefile,v 1.2 2012/08/12 07:43:21 makoto Exp $
 
 CANNA_MODULE=	lib
 
@@ -23,4 +23,10 @@ post-patch:
 post-configure:
 	@${LN} -s ${WRKSRC}/server/*.h ${WRKSRC}/include
 
+# forcpp and kpdic needed for build, but not to install
+post-install:
+.for f in forcpp kpdic
+	${RM} ${DESTDIR}${PREFIX}/bin/${f}
+.endfor	
+	
 .include "../../mk/bsd.pkg.mk"
