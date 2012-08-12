@@ -1,8 +1,12 @@
-$NetBSD: patch-an,v 1.1.1.1 2011/01/02 08:49:59 makoto Exp $
+$NetBSD: patch-an,v 1.2 2012/08/12 12:47:24 makoto Exp $
 
---- canuum/canna.c.orig	2005-12-30 14:56:11.000000000 +0000
-+++ canuum/canna.c
-@@ -92,8 +92,6 @@ static char rcsid[] = "$Id: canna.c,v 1.
+(1)
+(2) Replace obsolete function for curses 
+    resetterm -> reset_shell_mode
+
+--- canuum/canna.c.orig	2003-09-17 17:50:52.000000000 +0900
++++ canuum/canna.c	2012-08-12 17:44:59.000000000 +0900
+@@ -94,8 +94,6 @@
  #define PARTIALREDRAW 1
  #define NOREDRAW      0
  
@@ -11,3 +15,12 @@ $NetBSD: patch-an,v 1.1.1.1 2011/01/02 08:49:59 makoto Exp $
  static int maxmodelen;
  static int maxwidth = 0;
  
+@@ -1270,7 +1268,7 @@
+   cannakeyentry(key_end,   CANNA_KEY_End);
+ #endif
+ 
+-  resetterm();
++  reset_shell_mode();
+ #endif
+ 
+   if (terminalname = malloc(strlen(term) + 1)) {
