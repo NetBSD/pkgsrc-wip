@@ -1,0 +1,12 @@
+This package builds and installs fine.
+
+Things which still need to be done:
+1.) Create a user "radicale" under which to run the server.
+2.) Write a "rc.d" script:
+    - It will have to use "su" to start the daemon as the desired user.
+    - As the pid file will be created by the unpriviliged user account
+      it needs to be created before the "su" using "root" privileges.
+3.) The example/default config file might need some tweaking.
+
+    
+
