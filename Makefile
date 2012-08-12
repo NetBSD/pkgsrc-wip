@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4791 2012/08/12 10:06:52 thomasklausner Exp $
+# $Id: Makefile,v 1.4792 2012/08/12 10:10:05 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1224,7 +1224,6 @@ SUBDIR+=	just
 SUBDIR+=	jython
 SUBDIR+=	kBuild
 SUBDIR+=	kacst-ttf
-SUBDIR+=	kactivities
 SUBDIR+=	kaffe
 SUBDIR+=	kaffe-x11
 SUBDIR+=	kahakai
