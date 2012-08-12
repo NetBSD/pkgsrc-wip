@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/04/08 19:09:45 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2012/08/12 10:12:15 thomasklausner Exp $
 #
 
 DISTNAME=	cryptoIDlib-0.3.3
@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-amkCrypto>=2.0.1:../../security/py-amkCrypto
 DEPENDS+=	${PYPKGPREFIX}-m2crypto>=0.13:../../security/py-m2crypto
 DEPENDS+=	${PYPKGPREFIX}-tlslite>=0.3.8:../../security/py-tlslite
 DEPENDS+=	jython>=2.5.1:../../wip/jython
-DEPENDS+=	${PYPKGPREFIX}-gmpy>=1.04:../../wip/py-gmpy
+DEPENDS+=	${PYPKGPREFIX}-gmpy>=1.04:../../math/py-gmpy
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
