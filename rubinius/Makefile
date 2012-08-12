@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/05/24 06:12:13 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.12 2012/08/12 10:13:24 thomasklausner Exp $
 VERSION=	1.2.4
 DATERELEASE=    20110705
 DISTNAME=	rubinius-${VERSION}-${DATERELEASE}
@@ -40,7 +40,7 @@ DEPENDS+=	zlib>=1.2.3:../../devel/zlib
 DEPENDS+=	ruby>=1.8.7:../../lang/ruby
 DEPENDS+=	clang>=2.8:../../lang/clang
 DEPENDS+=	${RUBY_PKGPREFIX}-rubygems>=1.3.7:../../misc/rubygems
-DEPENDS+=	${RUBY_PKGPREFIX}-rake>=0.8.3:../../devel/rake
+DEPENDS+=	${RUBY_PKGPREFIX}-rake>=0.8.3:../../devel/ruby-rake
 
 SO_SUFFIX=		so
 RUBY_NAME=		ruby18
