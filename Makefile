@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4794 2012/08/12 17:38:42 trontor Exp $
+# $Id: Makefile,v 1.4795 2012/08/12 19:21:44 trontor Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2647,7 +2647,6 @@ SUBDIR+=	qvamps
 SUBDIR+=	r8s
 SUBDIR+=	rabbitmq-c
 SUBDIR+=	radare
-SUBDIR+=	radicale
 SUBDIR+=	radiotray
 SUBDIR+=	ranmacgen
 SUBDIR+=	rar4
