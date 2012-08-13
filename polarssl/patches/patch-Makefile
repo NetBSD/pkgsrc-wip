@@ -1,14 +1,13 @@
-$NetBSD: patch-Makefile,v 1.5 2012/08/13 20:41:30 mwilhelmy Exp $
+$NetBSD: patch-Makefile,v 1.6 2012/08/13 21:17:42 mwilhelmy Exp $
 
 Fix ``all'' and ``install'' targets of upstream Makefile:
 
-* fixes to make them work with pkgsrc (s/PREFIX/BINPREFIX, BSD_INSTALL_...)
-* disable building and installing of demonstrational programs if not desired
-* disable running tests if not desired
+ * fixes to make them work with pkgsrc (s/PREFIX/BINPREFIX, BSD_INSTALL_...)
+ * disable building and installing of demonstrational programs if not desired
 
 --- Makefile.orig	2011-06-21 08:59:00.000000000 +0000
 +++ Makefile
-@@ -1,29 +1,36 @@
+@@ -1,29 +1,33 @@
 -
  DESTDIR=/usr/local
 -PREFIX=polarssl_
@@ -20,9 +19,7 @@ Fix ``all'' and ``install'' targets of upstream Makefile:
  	cd library  && $(MAKE) all && cd ..
 +ifneq ($(ONLY_LIB),yes)
  	cd programs && $(MAKE) all && cd ..
-+endif
-+ifeq ($(RUN_TESTS),yes)
- 	cd tests    && $(MAKE) all && cd ..
+-	cd tests    && $(MAKE) all && cd ..
 +endif
  
  install:
