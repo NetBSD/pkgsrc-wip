@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.5 2012/08/12 20:30:25 mwilhelmy Exp $
+$NetBSD: distinfo,v 1.6 2012/08/13 19:20:34 mwilhelmy Exp $
 
 SHA1 (polarssl-1.1.4-gpl.tgz) = 3dd10bd1a8f7f58e0ef8c91cfa5ea7efd5d5f4bc
 RMD160 (polarssl-1.1.4-gpl.tgz) = da5e218d1462561006841baff747f60bb4655f08
 Size (polarssl-1.1.4-gpl.tgz) = 611340 bytes
-SHA1 (patch-Makefile) = 5818fe86278126ac2c912e960f5178b53f44e27b
+SHA1 (patch-Makefile) = 3669b4831226c94c645beec110c28fbbcfd6c284
 SHA1 (patch-library_Makefile) = 4e9e8e87ebf1c14d25cb73ce2e90f3bcce862219
 SHA1 (patch-library_net.c) = 19c97957a389764754d9046fb071b83ef88498d9
