@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/08/07 19:43:37 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2012/08/14 20:48:50 fhajny Exp $
 #
 
 DISTNAME=	graphite-web-0.9.10
@@ -34,9 +34,7 @@ SUBST_VARS.dirs=	GRAPHITE_DIR GRAPHITE_EGDIR PREFIX
 
 PKG_SYSCONFSUBDIR=	graphite
 
-GRAPHITE_CONF_FILES=	share/examples/graphite/dashboard.conf	\
-			share/examples/graphite/graphite.wsgi	\
-			share/examples/graphite/graphTemplates.conf
+GRAPHITE_CONF_FILES=	dashboard.conf graphite.wsgi graphTemplates.conf
 
 .for file in ${GRAPHITE_CONF_FILES}
 CONF_FILES+=		${GRAPHITE_EGDIR}/${file}.example	\
