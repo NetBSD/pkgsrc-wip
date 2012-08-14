@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4796 2012/08/14 13:59:51 asau Exp $
+# $Id: Makefile,v 1.4797 2012/08/14 17:46:21 asau Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -316,6 +316,7 @@ SUBDIR+=	cl-trivial-gray-streams
 SUBDIR+=	cl-unicode
 SUBDIR+=	cl-who
 SUBDIR+=	clamassassin
+SUBDIR+=	clang
 SUBDIR+=	classgen
 SUBDIR+=	classic-mac-font-pack
 SUBDIR+=	claws-mail-fancy
