@@ -1,19 +1,18 @@
-# $NetBSD: Makefile,v 1.5 2010/08/16 12:18:16 jihbed Exp $
+# $NetBSD: Makefile,v 1.6 2012/08/14 12:02:28 imilh Exp $
 #
 
 DISTNAME=	python-daemon-1.5.5
 EGG_NAME=	python_daemon-1.5.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/python-//}
-CATEGORIES=	sysutils python
+CATEGORIES=	devel python
 MASTER_SITES=	http://pypi.python.org/packages/source/p/python-daemon/
-EXTRACT_SUFX=	.tar.gz
 
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://pypi.python.org/pypi/python-daemon/
 COMMENT=	Library to implement a well-behaved Unix daemon process
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	${PYPKGPREFIX}-lockfile>=0.8:../../wip/py-lockfile
+DEPENDS+=	${PYPKGPREFIX}-lockfile>=0.9:../../wip/py-lockfile
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
