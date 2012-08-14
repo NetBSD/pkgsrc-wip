@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/08/07 19:41:18 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2012/08/14 18:35:45 fhajny Exp $
 #
 
 DISTNAME=	carbon-0.9.10
@@ -14,7 +14,7 @@ LICENSE=	apache-2.0
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
-DEPENDS+=	${PYPKGPREFIX}-whisper-${PKGVERSION_NOREV}*:../../wip/py-whisper
+DEPENDS+=	${PYPKGPREFIX}-whisper>=${PKGVERSION_NOREV}*:../../wip/py-whisper
 
 USE_LANGUAGES=	# none
 
