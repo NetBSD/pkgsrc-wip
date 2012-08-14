@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/07/04 22:38:25 jihbed Exp $
+$NetBSD: distinfo,v 1.2 2012/08/14 11:59:59 imilh Exp $
 
-SHA1 (lockfile-0.8.tar.gz) = 207f69953de1584fa77f82580eabf4c2b11401f0
-RMD160 (lockfile-0.8.tar.gz) = 340a0089cc896af374a57fff4def94aaceca1372
-Size (lockfile-0.8.tar.gz) = 8825 bytes
+SHA1 (lockfile-0.9.1.tar.gz) = 1eebaee375641c9f29aeb21768f917dd2b985752
+RMD160 (lockfile-0.9.1.tar.gz) = c94c1a638f2a11181063d6025a6c5acc8c9d09e6
+Size (lockfile-0.9.1.tar.gz) = 16949 bytes
