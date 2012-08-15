@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2012/08/14 20:48:50 fhajny Exp $
+# $NetBSD: Makefile,v 1.3 2012/08/15 07:16:40 fhajny Exp $
 #
 
 DISTNAME=	graphite-web-0.9.10
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www
 MASTER_SITES=	http://launchpadlibrarian.net/106575888/
 
