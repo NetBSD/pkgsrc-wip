@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/08/09 21:36:25 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/08/17 17:27:19 slitvinov Exp $
 #
 
-DISTNAME=	Sumatra-0.2.1.tar
+DISTNAME=	Sumatra-0.3.0.tar
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/S/s/S/.tar//}
 CATEGORIES=	biology python
 MASTER_SITES=	http://pypi.python.org/packages/source/S/Sumatra/
@@ -23,7 +23,7 @@ DEPENDS+=	${PYPKGPREFIX}-mpi4py>=1.2.1:../../wip/py-mpich4py
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-WRKSRC=		${WRKDIR}/Sumatra-0.2.1
+WRKSRC=		${WRKDIR}/Sumatra-0.3.0
 USE_LANGUAGES=	# none
 
 PYDISTUTILSPKG=	yes
@@ -32,8 +32,8 @@ PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 INSTALLATION_DIRS=	share/doc/py-sumatra
 
 post-extract:
-	${MV} ${WRKSRC}/src/smt ${WRKSRC}/src/smt${PYVERSSUFFIX}
-	${MV} ${WRKSRC}/src/smtweb ${WRKSRC}/src/smtweb${PYVERSSUFFIX}
+	${MV} ${WRKSRC}/bin/smt ${WRKSRC}/bin/smt${PYVERSSUFFIX}
+	${MV} ${WRKSRC}/bin/smtweb ${WRKSRC}/bin/smtweb${PYVERSSUFFIX}
 
 do-test:
 	${RUN} cd ${WRKSRC}; ${TEST_ENV} ${SH} test/unittests/all_tests.sh
