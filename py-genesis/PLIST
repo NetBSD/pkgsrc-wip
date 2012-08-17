@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1 2012/08/17 18:03:26 slitvinov Exp $
+bin/genesis
+${PYSITELIB}/acceptancetests/__init__.py
+${PYSITELIB}/acceptancetests/__init__.pyc
+${PYSITELIB}/acceptancetests/__init__.pyo
+${PYSITELIB}/acceptancetests/test01_happy_day.py
+${PYSITELIB}/acceptancetests/test01_happy_day.pyc
+${PYSITELIB}/acceptancetests/test01_happy_day.pyo
+${PYSITELIB}/genesis-${PKGVERSION}-py2.7.egg-info/PKG-INFO
+${PYSITELIB}/genesis-${PKGVERSION}-py2.7.egg-info/SOURCES.txt
+${PYSITELIB}/genesis-${PKGVERSION}-py2.7.egg-info/dependency_links.txt
+${PYSITELIB}/genesis-${PKGVERSION}-py2.7.egg-info/entry_points.txt
+${PYSITELIB}/genesis-${PKGVERSION}-py2.7.egg-info/top_level.txt
+${PYSITELIB}/genesis-${PKGVERSION}-py2.7.egg-info/zip-safe
+${PYSITELIB}/genesis/__init__.py
+${PYSITELIB}/genesis/__init__.pyc
+${PYSITELIB}/genesis/__init__.pyo
+${PYSITELIB}/genesis/main.py
+${PYSITELIB}/genesis/main.pyc
+${PYSITELIB}/genesis/main.pyo

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2012/08/17 18:03:26 slitvinov Exp $
+
+SHA1 (genesis-0.1.0.tar.gz) = dd1b06e140fa82a2bd57436b05248c7d5c1b33b9
+RMD160 (genesis-0.1.0.tar.gz) = 80a8d9508d9046ec049a1f6f13abfcd50e7e7e14
+Size (genesis-0.1.0.tar.gz) = 6524 bytes

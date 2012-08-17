@@ -1,0 +1,3 @@
+Genesis searches the specified directory (defaulting to the current
+working directory), and its subdirectories, replacing tags of the form
+G{name} with values specified on the command-line.
