@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2012/08/17 18:03:53 mwilhelmy Exp $
+lib/Img${PKGVERSION}.9/Img.so
+lib/Img${PKGVERSION}.9/pkgIndex.tcl
+@dirrm lib/Img${PKGVERSION}.9
