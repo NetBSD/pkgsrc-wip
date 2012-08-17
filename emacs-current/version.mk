@@ -1,4 +1,4 @@
-# $NetBSD: version.mk,v 1.4 2012/04/11 15:53:12 makoto Exp $
+# $NetBSD: version.mk,v 1.5 2012/08/17 05:11:10 makoto Exp $
 
 _EMACS_FLAVOR=	emacs
 _EMACS_REQD=	emacs>=24
@@ -6,5 +6,5 @@ _EMACS_PKGDEP.base=
 _EMACS_PKGDEP.leim=
 
 _EMACS_VERSION_MAJOR=	24
-_EMACS_VERSION_MINOR=	1
+_EMACS_VERSION_MINOR=	2
 _EMACS_VERSION_MICRO=	50
