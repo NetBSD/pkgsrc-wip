@@ -1,19 +1,20 @@
-# $NetBSD: Makefile,v 1.18 2012/08/17 20:06:50 leot1990 Exp $
+# $NetBSD: Makefile,v 1.19 2012/08/18 10:06:55 leot1990 Exp $
 #
 
 DISTNAME=	uqm-0.7.0-source
 PKGNAME=	${DISTNAME:S/-source//}
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sc2/}
 EXTRACT_SUFX=	.tgz
-DISTFILES=		${DEFAULT_DISTFILES} uqm-0.7.0-content.uqm
+DISTFILES=	${DEFAULT_DISTFILES} uqm-0.7.0-content.uqm
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sc2.sourceforge.net/
 COMMENT=	Ur-Quan Masters
-# FIXME: GPL and Creative Commons Attribution-NonCommercial-ShareAlike 2.5
-#     At the moment cc-by-nc-sa-2.5v-license is not present in
-#     pkgsrc/licenses/, this is why LICENSE is commented.
+# GPL and Creative Commons Attribution-NonCommercial-ShareAlike 2.5
+# At the moment cc-by-nc-sa-2.5v-license is not present in pkgsrc/licenses/,
+# this is why LICENSE is commented out.
 #LICENSE=	gnu-gpl-v2 AND cc-by-nc-sa-2.5v-license
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -23,6 +24,17 @@ EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
 USE_TOOLS=		gmake pkg-config
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
+# Do not ignore custom CFLAGS and LDFLAGS
+SUBST_CLASSES+=		build
+SUBST_STAGE.build=	pre-configure
+SUBST_MESSAGE.build=	Fixing build.vars.in
+SUBST_FILES.build=	build.vars.in
+SUBST_SED.build+=	-e '/CFLAGS/ s;@CFLAGS@;${CFLAGS:Q} @CFLAGS@;'
+SUBST_SED.build+=	-e '/LDFLAGS/ s;@LDFLAGS@;${LDFLAGS:Q} @LDFLAGS@;'
+
+# The procedure described in ${WRKSRC}/build/unix/README.packages
+# to make the configure process non-interactive does not work so as a
+# workaround we comment out the sh(1) read built-in command.
 SUBST_CLASSES+=		nomenu
 SUBST_STAGE.nomenu=	pre-configure
 SUBST_MESSAGE.nomenu=	Make configure process non-interactive.
@@ -34,10 +46,9 @@ SUBST_STAGE.config=	post-configure
 SUBST_MESSAGE.config=	Fixing config.state.
 SUBST_FILES.config=	config.state
 SUBST_SED.config+=	-e 's;opengl;pure;' # Disable OpenGL support
-SUBST_SED.config+=	-e 's;/usr/local/games;${DESTDIR}${PREFIX};'
+SUBST_SED.config+=	-e 's;/usr/local/games;${PREFIX};'
 
-
-INSTALLATION_DIRS=	bin lib share/uqm/content/packages share/doc/uqm
+INSTALLATION_DIRS=	bin lib/uqm share/uqm/content/packages share/doc/uqm
 
 do-configure:
 	cd ${WRKSRC} && ./build.sh uqm config
@@ -46,7 +57,7 @@ do-build:
 	cd ${WRKSRC} && ./build.sh uqm reprocess_config && ./build.sh uqm
 
 do-install:
-	cd ${WRKSRC} && ./build.sh uqm install
+	cd ${WRKSRC} && env DESTDIR=${DESTDIR} ./build.sh uqm install
 	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/uqm-0.7.0-content.uqm \
 		${DESTDIR}${PREFIX}/share/uqm/content/packages
 	${INSTALL_DATA} ${WRKSRC}/doc/users/manual.txt \
