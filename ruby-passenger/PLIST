@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2012/08/10 12:22:34 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.4 2012/08/18 15:35:53 ftigeot Exp $
 bin/passenger
 bin/passenger-config
 bin/passenger-install-apache2-module
@@ -121,7 +121,6 @@ share/doc/phusion-passenger/Security of user switching support.html
 share/doc/phusion-passenger/Users guide Apache.html
 share/doc/phusion-passenger/Users guide Nginx.html
 share/doc/phusion-passenger/Users guide Standalone.html
-share/doc/phusion-passenger/images/._phusion_banner.png
 share/doc/phusion-passenger/images/by_sa.png
 share/doc/phusion-passenger/images/conservative_spawning.png
 share/doc/phusion-passenger/images/conservative_spawning.svg
