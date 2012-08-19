@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2012/06/14 15:03:26 othyro Exp $
+# $NetBSD: Makefile,v 1.13 2012/08/19 14:08:44 noud4 Exp $
 #
 
 DISTNAME=		cream-0.41
+PKGREVISION=		1
 CATEGORIES=		editors
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=cream/}
 
@@ -17,9 +18,9 @@ DEPENDS+=		{vim-gtk2,vim-gtk,vim-kde,vim-motif}>=7.0:../../editors/vim-gtk2
 NO_BUILD=		yes
 
 .include "../../editors/vim-share/version.mk"
-VIMRUNTIME=		${PREFIX}/share/vim/${VIM_SUBDIR}
+VIMRUNTIME=		${DESTDIR}${PREFIX}/share/vim/${VIM_SUBDIR}
 PLIST_SUBST+=		VIM_SUBDIR=${VIM_SUBDIR:Q}
-INSTALLATION_DIRS+=	share/icons/cream
+INSTALLATION_DIRS+=	bin share/applications share/icons/cream
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -43,11 +44,11 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/filetypes/*.vim ${VIMRUNTIME}/cream/filetypes/
 	${INSTALL_DATA} ${WRKSRC}/help/*.txt ${VIMRUNTIME}/cream/help/
 	${INSTALL_DATA} ${WRKSRC}/lang/*.vim ${VIMRUNTIME}/cream/lang/
-	${INSTALL_DATA} ${WRKSRC}/cream.ico ${PREFIX}/share/icons/cream/
-	${INSTALL_DATA} ${WRKSRC}/cream.png ${PREFIX}/share/icons/cream/
-	${INSTALL_DATA} ${WRKSRC}/cream.svg ${PREFIX}/share/icons/cream/
-	${INSTALL_DATA} ${WRKSRC}/cream.desktop ${PREFIX}/share/applications
-	${INSTALL_SCRIPT} ${WRKSRC}/cream ${PREFIX}/bin/
+	${INSTALL_DATA} ${WRKSRC}/cream.ico ${DESTDIR}${PREFIX}/share/icons/cream/
+	${INSTALL_DATA} ${WRKSRC}/cream.png ${DESTDIR}${PREFIX}/share/icons/cream/
+	${INSTALL_DATA} ${WRKSRC}/cream.svg ${DESTDIR}${PREFIX}/share/icons/cream/
+	${INSTALL_DATA} ${WRKSRC}/cream.desktop ${DESTDIR}${PREFIX}/share/applications
+	${INSTALL_SCRIPT} ${WRKSRC}/cream ${DESTDIR}${PREFIX}/bin/
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
