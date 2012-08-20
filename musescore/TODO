@@ -1,0 +1,11 @@
+cannot open audio device
+
+stdout:
+Init midi driver failed
+no audio output found
+init audio driver failed
+sequencer init failed
+registerPlugin: add action idx 5
+Load plugin: no menu property
+preferences.checkUpdateStartup: 168
+lastupdate: 20.08.2012 13:17:32.709

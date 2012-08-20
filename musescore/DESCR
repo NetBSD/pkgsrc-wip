@@ -1,0 +1,15 @@
+MuseScore Score Typesetter
+
+Features:
+      - WYSIWYG design, notes are entered on a "virtual notepaper"
+      - TrueType font(s) for printing & display allows for high quality
+        scaling to all sizes
+      - easy & fast note entry
+      - many editing functions
+      - MusicXML import/export
+      - Midi (SMF) import/export
+      - MuseData import
+      - Midi input for note entry
+      - integrated sequencer and software synthesizer to
+        play the score
+      - print or create pdf files
