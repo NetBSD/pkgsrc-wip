@@ -1,4 +1,6 @@
-$NetBSD: patch-ag,v 1.2 2009/08/31 09:32:16 moubctez Exp $
+$NetBSD: patch-ag,v 1.3 2012/08/20 13:23:18 imilh Exp $
+
+Set ap channel to iface channel
 
 --- src/aireplay-ng.c.orig	2009-07-22 21:45:51.000000000 +0200
 +++ src/aireplay-ng.c
