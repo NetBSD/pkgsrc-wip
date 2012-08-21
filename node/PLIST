@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2012/08/09 13:03:45 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.10 2012/08/21 09:42:21 fhajny Exp $
 bin/node
 bin/node-waf
 bin/npm
@@ -333,13 +333,11 @@ lib/node_modules/npm/lib/utils/completion/installed-deep.js
 lib/node_modules/npm/lib/utils/completion/installed-shallow.js
 lib/node_modules/npm/lib/utils/completion/remote-packages.js
 lib/node_modules/npm/lib/utils/completion/users.js
-lib/node_modules/npm/lib/utils/config-defs.js
 lib/node_modules/npm/lib/utils/error-handler.js
 lib/node_modules/npm/lib/utils/exec.js
 lib/node_modules/npm/lib/utils/fetch.js
 lib/node_modules/npm/lib/utils/find-prefix.js
 lib/node_modules/npm/lib/utils/gently-rm.js
-lib/node_modules/npm/lib/utils/ini.js
 lib/node_modules/npm/lib/utils/lifecycle.js
 lib/node_modules/npm/lib/utils/link.js
 lib/node_modules/npm/lib/utils/sha.js
@@ -595,6 +593,7 @@ lib/node_modules/npm/node_modules/mkdirp/package.json
 lib/node_modules/npm/node_modules/node-gyp/.npmignore
 lib/node_modules/npm/node_modules/node-gyp/LICENSE
 lib/node_modules/npm/node_modules/node-gyp/README.md
+lib/node_modules/npm/node_modules/node-gyp/addon.gypi
 lib/node_modules/npm/node_modules/node-gyp/bin/node-gyp.js
 lib/node_modules/npm/node_modules/node-gyp/legacy/common.gypi
 lib/node_modules/npm/node_modules/node-gyp/legacy/tools/addon.gypi
@@ -664,7 +663,6 @@ lib/node_modules/npm/node_modules/node-gyp/lib/node-gyp.js
 lib/node_modules/npm/node_modules/node-gyp/lib/rebuild.js
 lib/node_modules/npm/node_modules/node-gyp/lib/remove.js
 lib/node_modules/npm/node_modules/node-gyp/package.json
-lib/node_modules/npm/node_modules/node-gyp/updateLegacy.sh
 lib/node_modules/npm/node_modules/node-uuid/.npmignore
 lib/node_modules/npm/node_modules/node-uuid/LICENSE.md
 lib/node_modules/npm/node_modules/node-uuid/README.md
@@ -690,19 +688,33 @@ lib/node_modules/npm/node_modules/npm-registry-client/lib/tag.js
 lib/node_modules/npm/node_modules/npm-registry-client/lib/unpublish.js
 lib/node_modules/npm/node_modules/npm-registry-client/lib/upload.js
 lib/node_modules/npm/node_modules/npm-registry-client/package.json
+lib/node_modules/npm/node_modules/npmconf/.npmignore
+lib/node_modules/npm/node_modules/npmconf/README.md
+lib/node_modules/npm/node_modules/npmconf/config-defs.js
+lib/node_modules/npm/node_modules/npmconf/node_modules/config-chain/.npmignore
+lib/node_modules/npm/node_modules/npmconf/node_modules/config-chain/LICENCE
+lib/node_modules/npm/node_modules/npmconf/node_modules/config-chain/index.js
+lib/node_modules/npm/node_modules/npmconf/node_modules/config-chain/node_modules/proto-list/LICENSE
+lib/node_modules/npm/node_modules/npmconf/node_modules/config-chain/node_modules/proto-list/README.md
+lib/node_modules/npm/node_modules/npmconf/node_modules/config-chain/node_modules/proto-list/package.json
+lib/node_modules/npm/node_modules/npmconf/node_modules/config-chain/node_modules/proto-list/proto-list.js
+lib/node_modules/npm/node_modules/npmconf/node_modules/config-chain/package.json
+lib/node_modules/npm/node_modules/npmconf/node_modules/config-chain/readme.markdown
+lib/node_modules/npm/node_modules/npmconf/npmconf.js
+lib/node_modules/npm/node_modules/npmconf/package.json
 lib/node_modules/npm/node_modules/npmlog/LICENSE
 lib/node_modules/npm/node_modules/npmlog/README.md
 lib/node_modules/npm/node_modules/npmlog/example.js
 lib/node_modules/npm/node_modules/npmlog/log.js
 lib/node_modules/npm/node_modules/npmlog/package.json
+lib/node_modules/npm/node_modules/once/LICENSE
+lib/node_modules/npm/node_modules/once/README.md
+lib/node_modules/npm/node_modules/once/once.js
+lib/node_modules/npm/node_modules/once/package.json
 lib/node_modules/npm/node_modules/osenv/LICENSE
 lib/node_modules/npm/node_modules/osenv/README.md
 lib/node_modules/npm/node_modules/osenv/osenv.js
 lib/node_modules/npm/node_modules/osenv/package.json
-lib/node_modules/npm/node_modules/proto-list/LICENSE
-lib/node_modules/npm/node_modules/proto-list/README.md
-lib/node_modules/npm/node_modules/proto-list/package.json
-lib/node_modules/npm/node_modules/proto-list/proto-list.js
 lib/node_modules/npm/node_modules/read-installed/README.md
 lib/node_modules/npm/node_modules/read-installed/package.json
 lib/node_modules/npm/node_modules/read-installed/read-installed.js
