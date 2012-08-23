@@ -1,0 +1,3 @@
+ffmpeg-php is a PHP extension that adds functions for accessing and
+retrieving information from movies and audio files. ffmpeg-php provides
+access to the many audio and video formats supported by ffmpeg.
