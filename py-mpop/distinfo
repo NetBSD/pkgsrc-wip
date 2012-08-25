@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/08/25 16:24:23 jihbed Exp $
+
+SHA1 (mpop-v0.11.5.tar.gz) = 0f57edaffddbb78d6d6d539acc70c90136afabc9
+RMD160 (mpop-v0.11.5.tar.gz) = 9ff4baae0266794f282126cfd9b6577acb1a5a4b
+Size (mpop-v0.11.5.tar.gz) = 5065866 bytes
