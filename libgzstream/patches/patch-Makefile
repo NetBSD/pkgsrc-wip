@@ -1,0 +1,63 @@
+$NetBSD: patch-Makefile,v 1.1.1.1 2012/08/25 18:20:52 jihbed Exp $
+
+--- Makefile.orig	2003-01-08 15:41:27.000000000 +0100
++++ Makefile	2012-02-04 18:16:08.000000000 +0100
+@@ -37,7 +37,7 @@
+ 
+ CPPFLAGS = -I. -O
+ LDFLAGS  = -L. -lgzstream -lz
+-AR       = ar cr
++AR       = ar cru
+ 
+ # ----------------------------------------------------------------------------
+ # plain simple rules to make and cleanup the library:
+@@ -49,33 +49,33 @@
+ 
+ default: libgzstream.a
+ 
+-test:    test_gzip test_gunzip
+-	./test_gzip COPYING.LIB gz.tmp.gz
+-	gunzip gz.tmp.gz
+-	diff COPYING.LIB gz.tmp
+-	gzip gz.tmp
+-	./test_gunzip gz.tmp.gz gz.tmp
+-	diff COPYING.LIB gz.tmp
+-	rm gz.tmp.gz gz.tmp
++#test:    test_gzip test_gunzip
++#	./test_gzip COPYING.LIB gz.tmp.gz
++#	gunzip gz.tmp.gz
++#	diff COPYING.LIB gz.tmp
++#	gzip gz.tmp
++#	./test_gunzip gz.tmp.gz gz.tmp
++#	diff COPYING.LIB gz.tmp
++#	rm gz.tmp.gz gz.tmp
+ 	# *** O.K. Test finished successfully. ***
+ 
+ gzstream.o : gzstream.C gzstream.h
+ 	${CXX} ${CPPFLAGS} -c -o gzstream.o gzstream.C
+ 
+-test_gzip.o : test_gzip.C gzstream.h
+-	${CXX} ${CPPFLAGS} -c -o test_gzip.o test_gzip.C
++#test_gzip.o : test_gzip.C gzstream.h
++#	${CXX} ${CPPFLAGS} -c -o test_gzip.o test_gzip.C
+ 
+-test_gunzip.o : test_gunzip.C gzstream.h
+-	${CXX} ${CPPFLAGS} -c -o test_gunzip.o test_gunzip.C
++#test_gunzip.o : test_gunzip.C gzstream.h
++#	${CXX} ${CPPFLAGS} -c -o test_gunzip.o test_gunzip.C
+ 
+ libgzstream.a : gzstream.o
+ 	${AR} libgzstream.a gzstream.o
+ 
+-test_gzip : test_gzip.o libgzstream.a
+-	${CXX} -o test_gzip test_gzip.o ${LDFLAGS}
++#test_gzip : test_gzip.o libgzstream.a
++#	${CXX} -o test_gzip test_gzip.o ${LDFLAGS}
+ 
+-test_gunzip : test_gunzip.o libgzstream.a
+-	${CXX} -o test_gunzip test_gunzip.o ${LDFLAGS}
++#test_gunzip : test_gunzip.o libgzstream.a
++#	${CXX} -o test_gunzip test_gunzip.o ${LDFLAGS}
+ 
+ clean :
+ 	rm *.o
