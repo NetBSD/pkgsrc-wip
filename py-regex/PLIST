@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/08/25 16:26:23 jihbed Exp $
+${PYSITELIB}/_regex.so
+${PYSITELIB}/_regex_core.py
+${PYSITELIB}/_regex_core.pyc
+${PYSITELIB}/_regex_core.pyo
+${PYSITELIB}/regex.py
+${PYSITELIB}/regex.pyc
+${PYSITELIB}/regex.pyo
+${PYSITELIB}/test_regex.py
+${PYSITELIB}/test_regex.pyc
+${PYSITELIB}/test_regex.pyo

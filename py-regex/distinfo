@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2012/08/25 16:26:23 jihbed Exp $
+
+SHA1 (regex-0.1.20120803.tar.gz) = f9d7a52737b5d7fce6a7e83aebbd65ea94f31fdf
+RMD160 (regex-0.1.20120803.tar.gz) = 7bfa4aafa6759582e0bf5aead1b085eebb0d1eb3
+Size (regex-0.1.20120803.tar.gz) = 1136512 bytes
