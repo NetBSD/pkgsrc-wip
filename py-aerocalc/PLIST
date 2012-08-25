@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2012/08/25 17:16:29 jihbed Exp $
+${PYSITELIB}/aerocalc/__init__.py
+${PYSITELIB}/aerocalc/__init__.pyc
+${PYSITELIB}/aerocalc/__init__.pyo
+${PYSITELIB}/aerocalc/airspeed.py
+${PYSITELIB}/aerocalc/airspeed.pyc
+${PYSITELIB}/aerocalc/airspeed.pyo
+${PYSITELIB}/aerocalc/default_units.py
+${PYSITELIB}/aerocalc/default_units.pyc
+${PYSITELIB}/aerocalc/default_units.pyo
+${PYSITELIB}/aerocalc/ssec.py
+${PYSITELIB}/aerocalc/ssec.pyc
+${PYSITELIB}/aerocalc/ssec.pyo
+${PYSITELIB}/aerocalc/std_atm.py
+${PYSITELIB}/aerocalc/std_atm.pyc
+${PYSITELIB}/aerocalc/std_atm.pyo
+${PYSITELIB}/aerocalc/unit_conversion.py
+${PYSITELIB}/aerocalc/unit_conversion.pyc
+${PYSITELIB}/aerocalc/unit_conversion.pyo
+${PYSITELIB}/aerocalc/val_input.py
+${PYSITELIB}/aerocalc/val_input.pyc
+${PYSITELIB}/aerocalc/val_input.pyo
