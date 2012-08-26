@@ -1,0 +1,8 @@
+Dvegas facilitates adaptive Monte Carlo integration based on an enhanced and
+extended version of Peter Lepage's VEGAS algorithm. It allows to automatically
+take into account correlations between sets of dimensions and to fully adapt the
+sampling of sums of integrals. The code is genuinely object-oriented and written
+in ISO/ANSI standard C++. Parallel computation is supported through
+an interface to omniORB, a high-performance, open-source CORBA implementation
+from AT&T Laboratories Cambridge. Notably, it does not require thread-safe
+integrand implementations.
