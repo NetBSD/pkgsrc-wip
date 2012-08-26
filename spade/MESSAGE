@@ -1,10 +1,10 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2010/07/14 00:38:02 jihbed Exp $
+$NetBSD: MESSAGE,v 1.2 2012/08/26 12:50:07 noud4 Exp $
 
 Create file configuration using configure.py:
 
-	/usr/pkg/etc/spade.xml
-	/usr/pkg/etc/xmppd.xml
+	${PREFIX}/etc/spade/spade.xml
+	${PREFIX}/etc/spade/xmppd.xml
 
 
 

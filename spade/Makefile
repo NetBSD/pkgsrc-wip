@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2012/04/08 19:09:53 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.16 2012/08/26 12:50:07 noud4 Exp $
 #
 
 DISTNAME=	spade-2.0rc4
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	http://spade2.googlecode.com/files/
 
@@ -11,6 +12,7 @@ COMMENT=	SPADE is an agent platform based on the XMPP/Jabber technology
 LICENSE=	gnu-lgpl-v2.1
 
 DEPENDS+=	${PYPKGPREFIX}-psyco>=1.6:../../lang/py-psyco
+DEPENDS+=	${PYPKGPREFIX}-gmpy>=1.01:../../math/py-gmpy
 DEPENDS+=	${PYPKGPREFIX}-dns-[0-9]*:../../net/py-dns
 DEPENDS+=	${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
 DEPENDS+=	${PYPKGPREFIX}-m2crypto>=0.13:../../security/py-m2crypto
@@ -47,5 +49,4 @@ do-test:
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .include "../../security/py-amkCrypto/buildlink3.mk"
-.include "../../math/py-gmpy/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
