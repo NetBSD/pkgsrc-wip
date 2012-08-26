@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/06/06 15:44:24 leot1990 Exp $
+# $NetBSD: Makefile,v 1.2 2012/08/26 14:02:09 thomasklausner Exp $
 #
 
 DISTNAME=	irssi-xmpp-0.52
@@ -16,6 +16,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 .include "../../mk/bsd.prefs.mk"
 .include "../../chat/irssi/Makefile.common"
 
+MAKE_JOBS_SAFE=	no
 USE_TOOLS+=	pkg-config
 WRKSRC=		${WRKDIR}/${IRSSI_DISTNAME}/${DISTNAME}
 
