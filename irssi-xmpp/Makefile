@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/08/26 14:02:09 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2012/08/26 14:04:53 thomasklausner Exp $
 #
 
 DISTNAME=	irssi-xmpp-0.52
@@ -10,6 +10,8 @@ MAINTAINER=	leot1990@users.sourceforge.net
 HOMEPAGE=	http://cybione.org/~irssi-xmpp/
 COMMENT=	Irssi plugin to connect to the Jabber network
 LICENSE=	gnu-gpl-v2
+
+DEPENDS+=	irssi>=${IRSSI_VERSION}:../../chat/irssi
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -27,8 +29,6 @@ SUBST_STAGE.makefile=	pre-build
 SUBST_MESSAGE.makefile=	Fixing doc-install Makefile target.
 SUBST_FILES.makefile=	Makefile
 SUBST_SED.makefile+=	-e '/docs/s/install/install -m 644/'
-
-DEPENDS+=	irssi>=${IRSSI_VERSION}:../../chat/irssi
 
 post-extract:
 	${MV} ${WRKDIR}/${DISTNAME} ${WRKDIR}/${IRSSI_DISTNAME}
