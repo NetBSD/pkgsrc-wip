@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4806 2012/08/26 14:07:38 thomasklausner Exp $
+# $Id: Makefile,v 1.4807 2012/08/26 19:58:40 kristerw Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -145,7 +145,6 @@ SUBDIR+=	aravis
 SUBDIR+=	arcem-current
 SUBDIR+=	archimedes
 SUBDIR+=	argouml
-SUBDIR+=	argtable2
 SUBDIR+=	arista
 SUBDIR+=	arla-3.99.14
 SUBDIR+=	armadillo
@@ -791,10 +790,8 @@ SUBDIR+=	grisbi
 SUBDIR+=	groku
 SUBDIR+=	groovy
 SUBDIR+=	grsync
-SUBDIR+=	grub2
 SUBDIR+=	grub2-current
 SUBDIR+=	gsdpdf
-SUBDIR+=	gsettings-desktop-schemas
 SUBDIR+=	gst-inspector
 SUBDIR+=	gst-plugins0.10-farsight
 SUBDIR+=	gstat
@@ -3141,7 +3138,6 @@ SUBDIR+=	x264-devel
 SUBDIR+=	xace
 SUBDIR+=	xar
 SUBDIR+=	xaralx-bin
-SUBDIR+=	xautomation
 SUBDIR+=	xbase
 SUBDIR+=	xbelmark
 SUBDIR+=	xbmc
