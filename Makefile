@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4808 2012/08/26 20:01:29 kristerw Exp $
+# $Id: Makefile,v 1.4809 2012/08/26 20:17:43 kristerw Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -607,6 +607,7 @@ SUBDIR+=	fish
 SUBDIR+=	flam3-svn
 SUBDIR+=	flasm
 SUBDIR+=	flc
+SUBDIR+=	fldigi
 SUBDIR+=	flexdump
 SUBDIR+=	flimp
 SUBDIR+=	flimsel
@@ -1352,6 +1353,7 @@ SUBDIR+=	libmemcached
 SUBDIR+=	libmpg123
 SUBDIR+=	libmrss
 SUBDIR+=	libmusclecard
+SUBDIR+=	libncl
 SUBDIR+=	libneural
 SUBDIR+=	libnfo
 SUBDIR+=	libode
@@ -1436,6 +1438,7 @@ SUBDIR+=	llvm
 SUBDIR+=	lmdbg-current
 SUBDIR+=	lmfit
 SUBDIR+=	lmtp2nntp
+SUBDIR+=	lockf
 SUBDIR+=	logfmon-devel
 SUBDIR+=	logrotate
 SUBDIR+=	lorder
@@ -2068,6 +2071,7 @@ SUBDIR+=	php-doc-ru
 SUBDIR+=	php-doc-tr
 SUBDIR+=	php-doc-zh
 SUBDIR+=	php-dtrace
+SUBDIR+=	php-ffmpeg
 SUBDIR+=	php-fileinfo
 SUBDIR+=	php-gtk2
 SUBDIR+=	php-http
