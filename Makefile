@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4809 2012/08/26 20:17:43 kristerw Exp $
+# $Id: Makefile,v 1.4810 2012/08/27 07:45:44 kristerw Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2175,7 +2175,6 @@ SUBDIR+=	py-Fnorb
 SUBDIR+=	py-Fnorb-docs
 SUBDIR+=	py-Genetic
 SUBDIR+=	py-Impacket
-SUBDIR+=	py-MayaVi
 SUBDIR+=	py-OpenAL
 SUBDIR+=	py-PEAK
 SUBDIR+=	py-PEAK-docs
@@ -2590,7 +2589,6 @@ SUBDIR+=	py-visionegg-contrib
 SUBDIR+=	py-visionegg-demos
 SUBDIR+=	py-visionegg-docs
 SUBDIR+=	py-vo
-SUBDIR+=	py-vtkmodule
 SUBDIR+=	py-w3lib
 SUBDIR+=	py-wadllib
 SUBDIR+=	py-wafo
