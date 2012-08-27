@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4810 2012/08/27 07:45:44 kristerw Exp $
+# $Id: Makefile,v 1.4811 2012/08/27 08:20:24 kristerw Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -406,6 +406,7 @@ SUBDIR+=	deforaos-asm
 SUBDIR+=	deforaos-browser
 SUBDIR+=	deforaos-configure
 SUBDIR+=	deforaos-cpp
+SUBDIR+=	deforaos-desktop
 SUBDIR+=	deforaos-editor
 SUBDIR+=	deforaos-framer
 SUBDIR+=	deforaos-init
@@ -468,6 +469,7 @@ SUBDIR+=	dotconf
 SUBDIR+=	dotproject
 SUBDIR+=	dovecot-antispam
 SUBDIR+=	downtimed
+SUBDIR+=	doxygen-depend
 SUBDIR+=	dpic
 SUBDIR+=	dragbox
 SUBDIR+=	dri
@@ -484,6 +486,7 @@ SUBDIR+=	dumb
 SUBDIR+=	duplo
 SUBDIR+=	dvbsnoop
 SUBDIR+=	dvd2xvid
+SUBDIR+=	dvegas
 SUBDIR+=	dwepcrack
 SUBDIR+=	dxmake
 SUBDIR+=	dzen2
@@ -1338,6 +1341,7 @@ SUBDIR+=	libgtk-java
 SUBDIR+=	libgtkhtml-java
 SUBDIR+=	libgtksourceviewmm
 SUBDIR+=	libgxim
+SUBDIR+=	libgzstream
 SUBDIR+=	libharu
 SUBDIR+=	libhttpd
 SUBDIR+=	libinotify
@@ -3050,6 +3054,7 @@ SUBDIR+=	undo-tree
 SUBDIR+=	unix2tcp
 SUBDIR+=	unmo3
 SUBDIR+=	unnethack
+SUBDIR+=	unpaper
 SUBDIR+=	unrealtournament-server
 SUBDIR+=	ups-nut
 SUBDIR+=	uptimed
