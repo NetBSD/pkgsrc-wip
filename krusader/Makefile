@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2010/06/13 22:47:09 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2012/08/27 11:35:33 kristerw Exp $
 #
 
 DISTNAME=	krusader-2.1.0-beta1
@@ -22,5 +22,5 @@ USE_CMAKE=	yes
 .include "../../meta-pkgs/kde4/kde4.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../x11/kdelibs4/buildlink3.mk"
-.include "../../x11/kdebase4/buildlink3.mk"
+.include "../../x11/kde-baseapps4/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

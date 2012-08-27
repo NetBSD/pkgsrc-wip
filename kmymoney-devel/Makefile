@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/07/02 13:37:57 moubctez Exp $
+# $NetBSD: Makefile,v 1.8 2012/08/27 11:29:42 kristerw Exp $
 
 DISTNAME=	kmymoney-3.98.0
 PKGREVISION=	3
@@ -39,7 +39,7 @@ REPLACE_PERL+=	kmymoney/misc/financequote.pl
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxml++/buildlink3.mk"
 .include "../../time/libical/buildlink3.mk"
-.include "../../x11/kdebase4/buildlink3.mk"
+.include "../../x11/kde-baseapps4/buildlink3.mk"
 BUILDLINK_API_DEPENDS.kdelibs+=	kdelibs4>=4.5.0
 .include "../../x11/kdelibs4/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
