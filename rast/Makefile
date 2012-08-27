@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/02/21 11:36:58 obache Exp $
+# $NetBSD: Makefile,v 1.2 2012/08/27 15:42:03 kristerw Exp $
 #
 
 DISTNAME=	rast-0.3.1
@@ -12,8 +12,8 @@ HOMEPAGE=	http://projects.netlab.jp/rast/
 COMMENT=	Full-text search system
 LICENSE=	2-clause-bsd
 
-DEPENDS+=	${RUBY_PKGPREFIX}-bz2-[0-9]*:../../archives/ruby-bz2
-DEPENDS+=	${RUBY_PKGPREFIX}-zip-[0-9]*:../../archives/ruby-zip
+DEPENDS+=	${RUBY_PKGPREFIX}-bz2-[0-9]*:../../archivers/ruby-bz2
+DEPENDS+=	${RUBY_PKGPREFIX}-zip-[0-9]*:../../archivers/ruby-zip
 DEPENDS+=	${RUBY_PKGPREFIX}-mp3info-[0-9]*:../../audio/ruby-mp3info
 DEPENDS+=	${RUBY_PKGPREFIX}-tmail-[0-9]*:../../mail/ruby-tmail
 DEPENDS+=	${RUBY_PKGPREFIX}-htree-[0-9]*:../../textproc/ruby-htree
