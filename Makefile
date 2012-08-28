@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4814 2012/08/28 19:31:25 kristerw Exp $
+# $Id: Makefile,v 1.4815 2012/08/28 19:50:15 kristerw Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2192,6 +2192,7 @@ SUBDIR+=	py-RXP
 SUBDIR+=	py-SQLObject
 SUBDIR+=	py-Soya
 SUBDIR+=	py-addons
+SUBDIR+=	py-aerocalc
 SUBDIR+=	py-aesthete
 SUBDIR+=	py-agio
 SUBDIR+=	py-aipy
@@ -2211,6 +2212,7 @@ SUBDIR+=	py-aspell
 SUBDIR+=	py-aspyct
 SUBDIR+=	py-astropysics
 SUBDIR+=	py-async
+SUBDIR+=	py-atpy
 SUBDIR+=	py-beets
 SUBDIR+=	py-behaviour
 SUBDIR+=	py-bidict
@@ -2243,6 +2245,7 @@ SUBDIR+=	py-clnum
 SUBDIR+=	py-clonedigger
 SUBDIR+=	py-codepy
 SUBDIR+=	py-cogent
+SUBDIR+=	py-complexsystems
 SUBDIR+=	py-configobj
 SUBDIR+=	py-construct
 SUBDIR+=	py-corebio
@@ -2282,10 +2285,12 @@ SUBDIR+=	py-django-quran
 SUBDIR+=	py-django-tagging
 SUBDIR+=	py-djvulibre
 SUBDIR+=	py-djvusmooth
+SUBDIR+=	py-dreampie
 SUBDIR+=	py-duali
 SUBDIR+=	py-ecspy
 SUBDIR+=	py-embedc
 SUBDIR+=	py-emmsa
+SUBDIR+=	py-enre
 SUBDIR+=	py-errorhandler
 SUBDIR+=	py-event
 SUBDIR+=	py-eventlet
