@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2012/08/28 14:42:04 bubuchka Exp $
+
+SHA1 (R/gmp_0.5-2.tar.gz) = 335c6ab177bcdf10ceb94e354b954d782a0bb22b
+RMD160 (R/gmp_0.5-2.tar.gz) = 3713a89c7f253d4cabfa3baeec6c4fcff19aea21
+Size (R/gmp_0.5-2.tar.gz) = 112271 bytes
