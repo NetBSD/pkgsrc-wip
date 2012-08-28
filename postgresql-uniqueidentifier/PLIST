@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/10 19:13:03 mpasternak Exp $
-share/uniqueidentifier/README
-share/uniqueidentifier/uniqueidentifier.sql
-lib/postgresql/uniqueidentifier.so

@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4813 2012/08/28 15:26:01 bubuchka Exp $
+# $Id: Makefile,v 1.4814 2012/08/28 19:31:25 kristerw Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2139,7 +2139,6 @@ SUBDIR+=	polymul
 SUBDIR+=	pop-before-smtp
 SUBDIR+=	pop3.proxy
 SUBDIR+=	postal2-mpdemo-bin
-SUBDIR+=	postgresql-uniqueidentifier
 SUBDIR+=	postoffice
 SUBDIR+=	postr
 SUBDIR+=	pound

@@ -1,7 +1,0 @@
-This is a PostgreSQL contrib package. It extends basic PostgreSQL server
-functionality, but may be not available everywhere.
-
-uniqueidentifier:
-This data type is a 16-byte uniqueidentifier widely used to unique identify
-entities across Universe. This implementation depends on libuuid from
-e2fsprogs package (http://e2fsprogs.sourceforge.net) by Theodore Ts'o.
