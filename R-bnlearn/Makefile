@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/07/18 11:34:49 bubuchka Exp $
+# $NetBSD: Makefile,v 1.6 2012/08/28 15:39:17 bubuchka Exp $
 
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
@@ -14,7 +14,7 @@ BUILDLINK_API_DEPENDS.R+=	R>=2.10.0
 
 LICENSE=	gnu-gpl-v2 OR gnu-gpl-v3
 
-USE_LANGUAGES=  c fortran
+USE_LANGUAGES=	c fortran
 
 .include "../../math/R/Makefile.extension"
 .include "../../devel/gettext-lib/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/07/18 13:06:34 bubuchka Exp $
+# $NetBSD: Makefile,v 1.6 2012/08/28 15:39:17 bubuchka Exp $
 
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
@@ -12,7 +12,7 @@ R_PKGVER=	4.2.11
 
 LICENSE=	gnu-lgpl-v3
 
-USE_LANGUAGES=  c++
+USE_LANGUAGES=	c++
 
 .include "../../math/R/Makefile.extension"
 .include "../../devel/gettext-lib/buildlink3.mk"

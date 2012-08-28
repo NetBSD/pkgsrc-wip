@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/07/18 11:23:41 bubuchka Exp $
-
+# $NetBSD: Makefile,v 1.5 2012/08/28 15:39:17 bubuchka Exp $
 
 CATEGORIES=	devel math
 MASTER_SITES=	http://www.bioconductor.org/packages/release/bioc/src/contrib/

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/07/18 11:34:48 bubuchka Exp $
+# $NetBSD: Makefile,v 1.6 2012/08/28 15:39:17 bubuchka Exp $
 
 CATEGORIES=	graphics math
 MASTER_SITES=	http://www.bioconductor.org/packages/release/bioc/src/contrib/
@@ -14,7 +14,7 @@ BUILDLINK_API_DEPENDS.R+=	R>=2.6.0
 
 LICENSE=	artistic-2.0
 
-USE_LANGUAGES=  c
+USE_LANGUAGES=	c
 
 .include "../../math/R/Makefile.extension"
 .include "../../devel/gettext-lib/buildlink3.mk"
