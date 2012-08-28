@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4811 2012/08/27 08:20:24 kristerw Exp $
+# $Id: Makefile,v 1.4812 2012/08/28 11:41:21 kristerw Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2377,6 +2377,7 @@ SUBDIR+=	py-logilab-database
 SUBDIR+=	py-logilab-mtconverter
 SUBDIR+=	py-logilab-pigg
 SUBDIR+=	py-louie
+SUBDIR+=	py-lxmlproc
 SUBDIR+=	py-magic
 SUBDIR+=	py-magnitude
 SUBDIR+=	py-mark
@@ -2391,6 +2392,7 @@ SUBDIR+=	py-model-builder
 SUBDIR+=	py-mois
 SUBDIR+=	py-mongo
 SUBDIR+=	py-mpich4py
+SUBDIR+=	py-mpop
 SUBDIR+=	py-multichain_mcmc
 SUBDIR+=	py-musicbrainz-ngs
 SUBDIR+=	py-mwavepy
@@ -2413,6 +2415,7 @@ SUBDIR+=	py-oasa
 SUBDIR+=	py-omniORBpy
 SUBDIR+=	py-ontopy
 SUBDIR+=	py-openopt
+SUBDIR+=	py-opentmm
 SUBDIR+=	py-openxmllib
 SUBDIR+=	py-orm
 SUBDIR+=	py-osd
@@ -2456,6 +2459,7 @@ SUBDIR+=	py-pyecm
 SUBDIR+=	py-pyentropy
 SUBDIR+=	py-pyevolve
 SUBDIR+=	py-pyexiv2
+SUBDIR+=	py-pyflation
 SUBDIR+=	py-pygi
 SUBDIR+=	py-pygr
 SUBDIR+=	py-pygraphviz
@@ -2464,9 +2468,12 @@ SUBDIR+=	py-pylons
 SUBDIR+=	py-pymc
 SUBDIR+=	py-pymvpa
 SUBDIR+=	py-pypedal
+SUBDIR+=	py-pyphant
 SUBDIR+=	py-pypol
 SUBDIR+=	py-pyqu
 SUBDIR+=	py-pyquante
+SUBDIR+=	py-pysal
+SUBDIR+=	py-pysb
 SUBDIR+=	py-pyslha
 SUBDIR+=	py-pysph
 SUBDIR+=	py-pythics
@@ -2480,6 +2487,7 @@ SUBDIR+=	py-qutrub
 SUBDIR+=	py-rcsparse
 SUBDIR+=	py-rdf
 SUBDIR+=	py-rdflib
+SUBDIR+=	py-regex
 SUBDIR+=	py-remctl
 SUBDIR+=	py-report
 SUBDIR+=	py-repositoryhandler
@@ -2510,6 +2518,7 @@ SUBDIR+=	py-sciproc
 SUBDIR+=	py-scitools
 SUBDIR+=	py-scrapy
 SUBDIR+=	py-scrobbler
+SUBDIR+=	py-sdt_metrics
 SUBDIR+=	py-se
 SUBDIR+=	py-selenium
 SUBDIR+=	py-sempy
@@ -2562,6 +2571,7 @@ SUBDIR+=	py-theano
 SUBDIR+=	py-thermopy
 SUBDIR+=	py-tkinter-help
 SUBDIR+=	py-topkapi
+SUBDIR+=	py-tornado
 SUBDIR+=	py-toscawidgets
 SUBDIR+=	py-tracks
 SUBDIR+=	py-traits
@@ -3337,4 +3347,3 @@ limited_list: .PHONY
 .else
 .include "../mk/bsd.pkg.subdir.mk"
 .endif
-
