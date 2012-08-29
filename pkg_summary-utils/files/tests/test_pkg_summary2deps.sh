@@ -1403,3 +1403,11 @@ cmp 'pkg_summary2deps #47.3' \
 x11/py-gtk2;py26-gtk2
 x11/py-gtk2;py27-gtk2 multimedia/farsight2;farsight2
 '
+
+pkg_summary2deps -Aps2 src_summary15.txt | sort -k1 -k2 |
+cmp 'pkg_summary2deps #48' \
+'BUILD_DEPENDS lang/perl5 devel/p5-Parse-CPAN-Meta
+DEPENDS devel/p5-CPAN-Meta devel/p5-ExtUtils-MakeMaker
+DEPENDS devel/p5-CPAN-Meta-YAML devel/p5-Parse-CPAN-Meta
+DEPENDS devel/p5-Parse-CPAN-Meta devel/p5-CPAN-Meta
+'
