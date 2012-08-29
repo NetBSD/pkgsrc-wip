@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/07/13 03:16:09 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2012/08/29 07:28:27 kristerw Exp $
 #
 
 DISTNAME=	pib-0.3.1
@@ -20,7 +20,9 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 .include "../../mk/bsd.pkg.mk"
 
 # Substitute the path to sitelibdir in the PLIST.
+.if exists(${PREFIX:Q}/bin/gauche-config)
 GAUCHE_SITE_LIB_DIR!=	${PREFIX:Q}/bin/gauche-config --sitelibdir
+.endif
 PLIST_SUBST+=		GAUCHE_SITE_LIB_DIR=${GAUCHE_SITE_LIB_DIR:S|${PREFIX}/||:Q}
 PRINT_PLIST_AWK+= \
 	{ gsub(/${GAUCHE_SITE_LIB_DIR:S|${PREFIX}/||:S|/|\\/|g}/, \
