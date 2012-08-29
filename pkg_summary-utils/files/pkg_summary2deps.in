@@ -289,10 +289,26 @@ function print_nodep_node (node){
 
 function find_by_glob (pattern, strict,           base_i,i){
 	for (base_i in allbases){
-		if (glob(base_i, depbase)){
+		if (glob(base_i, pattern)){
 #			found [++foundcnt] = base_i
 			for (i=1; i <= g_basecnt2path_cnt [base_i]; ++i)
 				found [++foundcnt] = g_basecnt2path [base_i, i]
+		}
+	}
+}
+
+function find_pkg (pattern,           base,basecnt,j,curr){
+	base = pkgname2pkgbase(pattern)
+	if (base ~ /[*?\[\]]/){
+		# glob pattern
+		find_by_glob(base, 0)
+	}else if (base in allbases){
+		# plain PKGBASE
+		basecnt = g_basecnt2path_cnt [base]
+		for (j=1; j <= basecnt; ++j){
+			curr = g_basecnt2path [base, j]
+			if (!mode_strict || pkgmatch(curr, pattern))
+				found [++foundcnt] = curr
 		}
 	}
 }
@@ -304,31 +320,20 @@ function pkgmatch (pkg, pattern){
 	return pattern_match(pkg, pattern)
 }
 
-function pkgmatch_all (pair, matched_pkg, pattern, id,
-					   depscnt,deps,j,k,depname,arr,all_matched)
+function pkgmatch_all (pair, matched_pkg, id,
+					   depscnt,j,k,depname,deps,all_matched)
 {
-	if (!pkgmatch(matched_pkg, pattern))
-		return 0
-
 	depscnt = g_paircnt2namedeps_cnt [pair, id]
 	for (j=1; j <= depscnt; ++j){
 		deps = g_paircnt2namedeps [pair, id, j]
-		altdepscnt = split(deps, arr, /[|]/)
-		all_matched = 1
-		for (k=1; k <= altdepscnt; ++k){
-			depname = arr [k]
-			if (pkgname2pkgbase(matched_pkg) \
-				!= pkgname2pkgbase(depname))
-				continue
+		if (deps ~ /[|]/)
+			continue
 
-			if (pkgmatch(matched_pkg, depname)){
-				all_matched = 1
-				break
-			}else{
-				all_matched = 0
-			}
-		}
-		if (!all_matched)
+		if (pkgname2pkgbase(matched_pkg)		\
+			!= pkgname2pkgbase(deps))
+			continue
+
+		if (!pkgmatch(matched_pkg, deps))
 			return 0
 	}
 
@@ -419,19 +424,9 @@ END {
 				altdepscnt = split(deps, arr, /[|]/)
 				for (k=1; k <= altdepscnt; ++k){
 					depname = arr [k]
-					depbase = pkgname2pkgbase(depname)
 
 					foundcnt = 0
-					if (depbase ~ /[*?\[\]]/){
-						# glob pattern
-						find_by_glob(depbase, 0)
-					}else if (depbase in allbases){
-						# plain PKGBASE
-						basecnt = g_basecnt2path_cnt [depbase]
-						for (j=1; j <= basecnt; ++j){
-							found [++foundcnt] = g_basecnt2path [depbase, j]
-						}
-					}
+					find_pkg(depname)
 
 					if (foundcnt == 1 && !mode_strict && id != 3){
 						final_deps [id, pair, found [1]] = depname
@@ -441,13 +436,11 @@ END {
 					matched = ""
 					for (j=1; j <= foundcnt; ++j){
 						f = found [j]
-
 						if (depname ~ /[<>].*(\[|\]|[*])/){
-#							print "bad pattern", depname > "/dev/stderr"
 							continue
 						}
 
-						if (pkgmatch_all(pair, g_pair2name [f], depname, id)){
+						if (!mode_strict || pkgmatch_all(pair, g_pair2name [f], id)){
 							if (id != 3){
 								if (matched == ""){
 									matched = f

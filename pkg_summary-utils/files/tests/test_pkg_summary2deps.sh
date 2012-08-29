@@ -60,8 +60,8 @@ sysutils/checkperms wip/pkg_online-server
 sysutils/checkperms wip/pkg_summary-utils
 sysutils/checkperms wip/runawk
 textproc/dict-client|wip/dict-client textproc/dictem
+textproc/dict-client|wip/dict-client wip/pkg_online-client
 wip/awk-pkgsrc-dewey wip/pkg_summary-utils
-wip/dict-client wip/pkg_online-client
 wip/dict-server wip/pkg_online-server
 wip/paexec wip/distbb
 wip/pkg_online-client wip/pkg_online
@@ -138,8 +138,8 @@ DEPENDS lang/perl5 editors/emacs
 DEPENDS lang/perl5 graphics/libungif
 DEPENDS net/netcat wip/pkg_online-client
 DEPENDS textproc/dict-client|wip/dict-client textproc/dictem
+DEPENDS textproc/dict-client|wip/dict-client wip/pkg_online-client
 DEPENDS wip/awk-pkgsrc-dewey wip/pkg_summary-utils
-DEPENDS wip/dict-client wip/pkg_online-client
 DEPENDS wip/dict-server wip/pkg_online-server
 DEPENDS wip/paexec wip/distbb
 DEPENDS wip/pkg_online-client wip/pkg_online
@@ -407,8 +407,8 @@ sysutils/checkperms;checkperms wip/pkg_online;pkg_online
 sysutils/checkperms;checkperms wip/pkg_summary-utils;pkg_summary-utils
 sysutils/checkperms;checkperms wip/runawk;runawk
 textproc/dict-client;dict-client|wip/dict-client;dict-client textproc/dictem;dictem
+textproc/dict-client;dict-client|wip/dict-client;dict-client wip/pkg_online-client;pkg_online-client
 wip/awk-pkgsrc-dewey;awk-pkgsrc-dewey wip/pkg_summary-utils;pkg_summary-utils
-wip/dict-client;dict-client wip/pkg_online-client;pkg_online-client
 wip/dict-server;dict-server wip/pkg_online-server;pkg_online-server
 wip/paexec;paexec wip/distbb;distbb
 wip/pkg_online-client;pkg_online-client wip/pkg_online;pkg_online
@@ -429,8 +429,8 @@ cmp 'pkg_summary2deps #8' \
 ap22-vhost-ldap ap22-vhost-ldap
 awk-pkgsrc-dewey pkg_summary-utils
 checkperms checkperms
-dict-client pkg_online-client
 dict-client|dict-client dictem
+dict-client|dict-client pkg_online-client
 dict-server pkg_online-server
 emacs dictem
 gmake gmake
@@ -583,8 +583,8 @@ sysutils/checkperms;checkperms wip/pkg_online;pkg_online ( checkperms>=1.1 )
 sysutils/checkperms;checkperms wip/pkg_summary-utils;pkg_summary-utils ( checkperms>=1.1 )
 sysutils/checkperms;checkperms wip/runawk;runawk ( checkperms>=1.1 )
 textproc/dict-client;dict-client|wip/dict-client;dict-client textproc/dictem;dictem ( dict-client>=1.9.14 )
+textproc/dict-client;dict-client|wip/dict-client;dict-client wip/pkg_online-client;pkg_online-client ( dict-client>=1.10.9 )
 wip/awk-pkgsrc-dewey;awk-pkgsrc-dewey wip/pkg_summary-utils;pkg_summary-utils ( awk-pkgsrc-dewey>=0.5.6 )
-wip/dict-client;dict-client wip/pkg_online-client;pkg_online-client ( dict-client>=1.10.9 )
 wip/dict-server;dict-server wip/pkg_online-server;pkg_online-server ( dict-server>=1.10.10nb2 )
 wip/paexec;paexec wip/distbb;distbb ( paexec>=0.10.0 )
 wip/pkg_online-client;pkg_online-client wip/pkg_online;pkg_online ( pkg_online-client-[0-9]* )
@@ -605,8 +605,8 @@ cmp 'pkg_summary2deps #13' \
 ap22-vhost-ldap ap22-vhost-ldap
 awk-pkgsrc-dewey pkg_summary-utils ( awk-pkgsrc-dewey>=0.5.6 )
 checkperms checkperms
-dict-client pkg_online-client ( dict-client>=1.10.9 )
 dict-client|dict-client dictem ( dict-client>=1.9.14 )
+dict-client|dict-client pkg_online-client ( dict-client>=1.10.9 )
 dict-server pkg_online-server ( dict-server>=1.10.10nb2 )
 emacs dictem ( emacs>=22 )
 gmake gmake
@@ -836,6 +836,41 @@ devel/gmake textproc/dict-client
 devel/libmaa textproc/dict-client
 devel/libtool-base devel/libmaa
 devel/libtool-base textproc/dict-client
+editors/emacs|editors/emacs22|editors/emacs21|editors/emacs20 textproc/dictem
+editors/emacs|editors/emacs22|editors/emacs21|editors/emacs20 textproc/dictem:EMACS_TYPE=emacs20
+editors/emacs|editors/emacs22|editors/emacs21|editors/emacs20 textproc/dictem:EMACS_TYPE=emacs21
+editors/emacs|editors/emacs22|editors/emacs21|editors/emacs20 textproc/dictem:EMACS_TYPE=emacs23
+editors/emacs|editors/emacs22|editors/emacs21|editors/emacs20 wip/emterm
+lang/f2c devel/libtool-base
+lang/perl5 devel/p5-ExtUtils-CBuilder
+sysutils/checkperms devel/gmake
+sysutils/checkperms devel/libmaa
+sysutils/checkperms devel/libtool-base
+sysutils/checkperms devel/p5-ExtUtils-CBuilder
+sysutils/checkperms editors/emacs20
+sysutils/checkperms lang/f2c
+sysutils/checkperms lang/perl5
+sysutils/checkperms textproc/dict-client
+sysutils/checkperms textproc/dictem
+sysutils/checkperms textproc/dictem:EMACS_TYPE=emacs20
+sysutils/checkperms textproc/dictem:EMACS_TYPE=emacs21
+sysutils/checkperms textproc/dictem:EMACS_TYPE=emacs23
+textproc/dict-client textproc/dictem
+textproc/dict-client textproc/dictem:EMACS_TYPE=emacs20
+textproc/dict-client textproc/dictem:EMACS_TYPE=emacs21
+textproc/dict-client textproc/dictem:EMACS_TYPE=emacs23
+'
+
+pkg_summary2deps -Apas src_summary11.txt | sort |
+cmp 'pkg_summary2deps #20.1' \
+'audio/libao audio/libao-oss
+audio/libao audio/vorbis-tools
+audio/libao-oss audio/vorbis-tools
+devel/gmake editors/emacs20
+devel/gmake textproc/dict-client
+devel/libmaa textproc/dict-client
+devel/libtool-base devel/libmaa
+devel/libtool-base textproc/dict-client
 editors/emacs textproc/dictem:EMACS_TYPE=emacs23
 editors/emacs20 textproc/dictem:EMACS_TYPE=emacs20
 editors/emacs21 textproc/dictem:EMACS_TYPE=emacs21
@@ -984,6 +1019,21 @@ c: conflict emacs-[0-9]* editors/emacs21 emacs-21.4anb19 <- editors/emacs22 emac
 
 pkg_summary2deps -cl src_summary12.txt 2>&1 >/dev/null | sort |
 cmp 'pkg_summary2deps #30' \
+'c: conflict awk-pkgsrc-dewey-[0-9]* wip/awk-pkgsrc-dewey awk-pkgsrc-dewey-0.5.6 <- wip/pkg_summary-utils pkg_summary-utils-0.49beta2
+c: conflict egcs-current-19980608 somewhere/egcs-current egcs-current-19980608 <- lang/f2c f2c-20090411nb5
+c: conflict glibtool-[0-9]* somewhere/glibtool glibtool-1.2.3 <- devel/libtool-base libtool-base-2.2.6bnb4
+c: conflict libtool<=1.3.5nb11 somewhere/libtool libtool-1.3.4 <- devel/libtool-base libtool-base-2.2.6bnb4
+c: conflict libtool<=1.3.5nb11 somewhere/libtool133 libtool-1.3.3 <- devel/libtool-base libtool-base-2.2.6bnb4
+c: conflict libtool<=1.3.5nb11 somewhere/libtool136 libtool-1.3.6 <- devel/libtool-base libtool-base-2.2.6bnb4
+c: conflict paexec<0.15.0 wip/paexec paexec-0.13.0 <- wip/pkg_summary-utils pkg_summary-utils-0.49beta2
+c: conflict pkg_cmp_summary-[0-9]* somewhere/pkg_cmp_summary pkg_cmp_summary-0.0.1 <- wip/pkg_summary-utils pkg_summary-utils-0.49beta2
+c: conflict pkg_src_update_summary-[0-9]* somewhere/pkg_src_update_summary pkg_src_update_summary-0.0.2 <- wip/pkg_summary-utils pkg_summary-utils-0.49beta2
+c: conflict pkg_summary4view-[0-9]* somewhere/pkg_summary4view pkg_summary4view-0.0.4 <- wip/pkg_summary-utils pkg_summary-utils-0.49beta2
+c: conflict pkg_update_summary-[0-9]* somewhere/pkg_update_summary pkg_update_summary-0.0.3 <- wip/pkg_summary-utils pkg_summary-utils-0.49beta2
+'
+
+pkg_summary2deps -cls src_summary12.txt 2>&1 >/dev/null | sort |
+cmp 'pkg_summary2deps #30.1' \
 'c: conflict awk-pkgsrc-dewey-[0-9]* wip/awk-pkgsrc-dewey awk-pkgsrc-dewey-0.5.6 <- wip/pkg_summary-utils pkg_summary-utils-0.49beta2
 c: conflict egcs-current-19980608 somewhere/egcs-current egcs-current-19980608 <- lang/f2c f2c-20090411nb5
 c: conflict glibtool-[0-9]* somewhere/glibtool glibtool-1.2.3 <- devel/libtool-base libtool-base-2.2.6bnb4
@@ -1275,6 +1325,21 @@ php53-exif php-extensions
 pkg_summary2deps -dnr bin_summary5.txt | sort |
 cmp 'pkg_summary2deps #42' \
 'php-5.2.17
+php-5.2.17nb2
+php-5.3.5
+php-5.3.5nb1 php-extensions-5.2.17
+php-5.3.5nb1 php-extensions-5.3.5
+php-5.3.5nb1 php5-exif-5.2.17
+php-5.3.5nb1 php5-exif-5.2.17nb2
+php-5.3.5nb1 php53-exif-5.3.5
+php-5.3.5nb1 php53-exif-5.3.5nb2
+php5-exif-5.2.17nb2 php-extensions-5.2.17
+php53-exif-5.3.5nb2 php-extensions-5.3.5
+'
+
+pkg_summary2deps -dnrs bin_summary5.txt | sort |
+cmp 'pkg_summary2deps #42.1' \
+'php-5.2.17
 php-5.2.17nb2 php-extensions-5.2.17
 php-5.2.17nb2 php5-exif-5.2.17
 php-5.2.17nb2 php5-exif-5.2.17nb2
@@ -1288,6 +1353,18 @@ php53-exif-5.3.5nb2 php-extensions-5.3.5
 
 pkg_summary2deps -dnra bin_summary5.txt | sort |
 cmp 'pkg_summary2deps #43' \
+'php-5.2.17|php-5.2.17nb2|php-5.3.5|php-5.3.5nb1 php-extensions-5.2.17
+php-5.2.17|php-5.2.17nb2|php-5.3.5|php-5.3.5nb1 php-extensions-5.3.5
+php-5.2.17|php-5.2.17nb2|php-5.3.5|php-5.3.5nb1 php5-exif-5.2.17
+php-5.2.17|php-5.2.17nb2|php-5.3.5|php-5.3.5nb1 php5-exif-5.2.17nb2
+php-5.2.17|php-5.2.17nb2|php-5.3.5|php-5.3.5nb1 php53-exif-5.3.5
+php-5.2.17|php-5.2.17nb2|php-5.3.5|php-5.3.5nb1 php53-exif-5.3.5nb2
+php5-exif-5.2.17|php5-exif-5.2.17nb2 php-extensions-5.2.17
+php53-exif-5.3.5|php53-exif-5.3.5nb2 php-extensions-5.3.5
+'
+
+pkg_summary2deps -dnras bin_summary5.txt | sort |
+cmp 'pkg_summary2deps #43.1' \
 'php-5.2.17|php-5.2.17nb2 php-extensions-5.2.17
 php-5.2.17|php-5.2.17nb2 php5-exif-5.2.17
 php-5.2.17|php-5.2.17nb2 php5-exif-5.2.17nb2
@@ -1302,6 +1379,18 @@ pkg_summary2deps -dpnra bin_summary5.txt | sort |
 cmp 'pkg_summary2deps #44' \
 'graphics/php-exif;php5-exif-5.2.17|graphics/php-exif;php5-exif-5.2.17nb2 meta-pkgs/php5-extensions;php-extensions-5.2.17
 graphics/php-exif;php53-exif-5.3.5|graphics/php-exif;php53-exif-5.3.5nb2 meta-pkgs/php53-extensions;php-extensions-5.3.5
+lang/php5;php-5.2.17|lang/php5;php-5.2.17nb2|lang/php53;php-5.3.5|lang/php53;php-5.3.5nb1 graphics/php-exif;php5-exif-5.2.17
+lang/php5;php-5.2.17|lang/php5;php-5.2.17nb2|lang/php53;php-5.3.5|lang/php53;php-5.3.5nb1 graphics/php-exif;php5-exif-5.2.17nb2
+lang/php5;php-5.2.17|lang/php5;php-5.2.17nb2|lang/php53;php-5.3.5|lang/php53;php-5.3.5nb1 graphics/php-exif;php53-exif-5.3.5
+lang/php5;php-5.2.17|lang/php5;php-5.2.17nb2|lang/php53;php-5.3.5|lang/php53;php-5.3.5nb1 graphics/php-exif;php53-exif-5.3.5nb2
+lang/php5;php-5.2.17|lang/php5;php-5.2.17nb2|lang/php53;php-5.3.5|lang/php53;php-5.3.5nb1 meta-pkgs/php5-extensions;php-extensions-5.2.17
+lang/php5;php-5.2.17|lang/php5;php-5.2.17nb2|lang/php53;php-5.3.5|lang/php53;php-5.3.5nb1 meta-pkgs/php53-extensions;php-extensions-5.3.5
+'
+
+pkg_summary2deps -dpnras bin_summary5.txt | sort |
+cmp 'pkg_summary2deps #44.1' \
+'graphics/php-exif;php5-exif-5.2.17|graphics/php-exif;php5-exif-5.2.17nb2 meta-pkgs/php5-extensions;php-extensions-5.2.17
+graphics/php-exif;php53-exif-5.3.5|graphics/php-exif;php53-exif-5.3.5nb2 meta-pkgs/php53-extensions;php-extensions-5.3.5
 lang/php53;php-5.3.5|lang/php53;php-5.3.5nb1 graphics/php-exif;php53-exif-5.3.5
 lang/php53;php-5.3.5|lang/php53;php-5.3.5nb1 graphics/php-exif;php53-exif-5.3.5nb2
 lang/php53;php-5.3.5|lang/php53;php-5.3.5nb1 meta-pkgs/php53-extensions;php-extensions-5.3.5
@@ -1314,6 +1403,15 @@ pkg_summary2deps -dpa bin_summary5.txt | sort |
 cmp 'pkg_summary2deps #45' \
 'graphics/php-exif|graphics/php-exif meta-pkgs/php5-extensions
 graphics/php-exif|graphics/php-exif meta-pkgs/php53-extensions
+lang/php5|lang/php5|lang/php53|lang/php53 graphics/php-exif
+lang/php5|lang/php5|lang/php53|lang/php53 meta-pkgs/php5-extensions
+lang/php5|lang/php5|lang/php53|lang/php53 meta-pkgs/php53-extensions
+'
+
+pkg_summary2deps -dpas bin_summary5.txt | sort |
+cmp 'pkg_summary2deps #45.1' \
+'graphics/php-exif|graphics/php-exif meta-pkgs/php5-extensions
+graphics/php-exif|graphics/php-exif meta-pkgs/php53-extensions
 lang/php53|lang/php53 graphics/php-exif
 lang/php53|lang/php53 meta-pkgs/php53-extensions
 lang/php5|lang/php5 graphics/php-exif
@@ -1322,6 +1420,56 @@ lang/php5|lang/php5 meta-pkgs/php5-extensions
 
 pkg_summary2deps -dpa bin_summary6.txt 2>/dev/null | sort -k2 -k1 |
 cmp 'pkg_summary2deps #46' \
+'lang/ruby18-base lang/ruby
+security/openssl lang/ruby
+lang/ruby18-base lang/ruby18
+security/openssl lang/ruby18
+security/openssl lang/ruby18-base
+lang/ruby19-base lang/ruby19
+security/openssl lang/ruby19
+security/openssl lang/ruby19-base
+lang/ruby19-base lang/ruby:RUBY_VERSION_REQD=19
+security/openssl lang/ruby:RUBY_VERSION_REQD=19
+lang/ruby18-base textproc/ruby-eruby
+security/openssl textproc/ruby-eruby
+lang/ruby18-base www/ap-ruby
+security/openssl www/ap-ruby
+textproc/ruby-eruby www/ap-ruby
+www/apache|www/apache2|www/apache22 www/ap-ruby
+lang/ruby18-base www/ap-ruby:PKG_APACHE=apache13
+security/openssl www/ap-ruby:PKG_APACHE=apache13
+textproc/ruby-eruby www/ap-ruby:PKG_APACHE=apache13
+www/apache|www/apache2|www/apache22 www/ap-ruby:PKG_APACHE=apache13
+lang/ruby18-base www/ap-ruby:PKG_APACHE=apache2
+security/openssl www/ap-ruby:PKG_APACHE=apache2
+textproc/ruby-eruby www/ap-ruby:PKG_APACHE=apache2
+www/apache|www/apache2|www/apache22 www/ap-ruby:PKG_APACHE=apache2
+security/openssl www/apache2
+security/openssl www/apache22
+x11/qt3-docs x11/qt3
+x11/qt3-libs x11/qt3
+x11/qt3-tools x11/qt3
+x11/qt3-libs x11/qt3-docs
+x11/qt3-libs x11/qt3-mysql
+x11/qt3-libs x11/qt3-pgsql
+x11/qt3-libs x11/qt3-qscintilla
+x11/qt3-libs x11/qt3-tools
+x11/qt4-docs x11/qt4
+x11/qt4-libs x11/qt4
+x11/qt4-tools x11/qt4
+x11/qt4-libs x11/qt4-docs
+x11/qt4-libs x11/qt4-mng
+x11/qt4-libs x11/qt4-mysql
+x11/qt4-libs x11/qt4-pgsql
+x11/qt4-libs x11/qt4-qdbus
+x11/qt4-libs x11/qt4-qscintilla
+x11/qt4-libs x11/qt4-sqlite3
+x11/qt4-libs x11/qt4-tiff
+x11/qt4-libs x11/qt4-tools
+'
+
+pkg_summary2deps -dpas bin_summary6.txt 2>/dev/null | sort -k2 -k1 |
+cmp 'pkg_summary2deps #46.1' \
 'lang/ruby18-base lang/ruby
 security/openssl lang/ruby
 lang/ruby18-base lang/ruby18
