@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2012/03/10 06:43:11 cheusov Exp $
+# $NetBSD: Makefile,v 1.5 2012/08/29 07:08:59 cheusov Exp $
 #
 
-PKGNAME=	lmdbg-${_CVS_PKGVERSION:S/.//g}
-PKGREVISION=	1
+PKGNAME=	lmdbg-9
 CATEGORIES=	devel
 MASTER_SITES=	#
 DISTNAME=	#
@@ -12,13 +11,14 @@ HOMEPAGE=	http://sourceforge.net/projects/lmdbg/
 COMMENT=	Lightweight Modular malloc Debugger
 LICENSE=	mit
 
+GIT_REPOSITORIES=	lmdbg
+GIT_REPO.lmdbg=		git://github.com/cheusov/lmdbg.git
+.include "../../wip/mk/git-package.mk"
+
 BUILD_DEPENDS+=		mk-configure>=0.20.0:../../devel/mk-configure
 DEPENDS+=		pipestatus-[0-9]*:../../devel/pipestatus
 DEPENDS+=		runawk>=1.3.1:../../lang/runawk
 #DEPENDS+=		gdb-[0-9]*:../../devel/gdb
-
-CVS_ROOT.lmdbg=		:pserver:anonymous:@mova.org:/home/cvsroot
-CVS_REPOSITORIES=	lmdbg
 
 WRKSRC=			${WRKDIR}/lmdbg
 
@@ -41,7 +41,5 @@ post-install:
 	${MAKE_ENV} ${MAKE_PROGRAM} ${INSTALL_MAKE_FLAGS} install-doc
 
 .include "../../devel/mk-configure/mk-c.mk"
-
-.include "../../wip/mk/cvs-package.mk"
 .include "../../devel/libjudy/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
