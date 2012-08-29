@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/08/10 14:04:28 ftigeot Exp $
+# $NetBSD: Makefile,v 1.8 2012/08/29 08:12:44 ftigeot Exp $
 
 VER=			3.6.0.4
 DISTNAME=		libreoffice-${VER}
@@ -126,6 +126,9 @@ REPLACE_PERL+=	sd/res/webview/show.pl
 REPLACE_PERL+=	sd/res/webview/webview.pl
 
 LO_PROGRAMS=	sbase scalc sdraw simpress smath soffice swriter
+# Base depends on java, we don't install the icon
+LO_DESKTOP_FILES=	calc.desktop draw.desktop impress.desktop math.desktop \
+			printeradmin.desktop startcenter.desktop writer.desktop
 
 post-extract:
 	${MKDIR} -p ${WRKSRC}/clone
@@ -143,12 +146,20 @@ do-configure:
 post-configure:
 	cd ${WRKSRC} && ./bin/create_bootstrap_links
 
+AUTO_MKDIRS=	yes
 post-install:
 	${MKDIR} -p ${DESTDIR}${PREFIX}/bin
 	for f in ${LO_PROGRAMS}; do \
-		${LN} -s ${DESTDIR}${PREFIX}/${PKGNAME}/program/$$f ${DESTDIR}${PREFIX}/bin/$$f; \
+		${LN} -s ${DESTDIR}${PREFIX}/${PKGNAME}/program/$$f \
+			${DESTDIR}${PREFIX}/bin/$$f; \
 	done
-
+	${LN} -s ${DESTDIR}${PREFIX}/${PKGNAME_NOREV}/program/soffice \
+		${DESTDIR}${PREFIX}/bin/libreoffice3.6
+	${MKDIR} -p ${DESTDIR}${PREFIX}/share/applications
+	for f in ${LO_DESKTOP_FILES}; do \
+		${LN} -s ${DESTDIR}${PREFIX}/${PKGNAME_NOREV}/share/xdg/$$f \
+			${DESTDIR}${PREFIX}/share/applications; \
+	done
 
 .include "../../converters/libcdr/buildlink3.mk"
 .include "../../converters/libvisio/buildlink3.mk"
