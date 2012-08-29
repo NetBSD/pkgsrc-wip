@@ -1411,3 +1411,10 @@ DEPENDS devel/p5-CPAN-Meta devel/p5-ExtUtils-MakeMaker
 DEPENDS devel/p5-CPAN-Meta-YAML devel/p5-Parse-CPAN-Meta
 DEPENDS devel/p5-Parse-CPAN-Meta devel/p5-CPAN-Meta
 '
+
+pkg_summary2deps -Aps2 src_summary16.txt | sort -k1 -k2 |
+cmp 'pkg_summary2deps #49' \
+'DEPENDS devel/CCC devel/AAA
+DEPENDS devel/EEE devel/AAA
+devel/DDD
+'

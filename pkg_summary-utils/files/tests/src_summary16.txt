@@ -1,0 +1,13 @@
+PKGPATH=devel/AAA
+PKGNAME=AAA-0.0
+DEPENDS={CCC>=1.2,EEE>=1.1}:../../devel/CCC {CCC>=0.5,DDD>=1.1}:../../devel/CCC CCC>=0.1.2:../../devel/CCC
+
+PKGNAME=CCC-1.1
+PKGPATH=devel/CCC
+
+PKGNAME=DDD-1.1
+PKGPATH=devel/DDD
+
+PKGNAME=EEE-1.1
+PKGPATH=devel/EEE
+
