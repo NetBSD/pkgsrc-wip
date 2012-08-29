@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2012/02/06 19:53:44 triaxx Exp $
+# $NetBSD: Makefile,v 1.5 2012/08/29 13:32:33 triaxx Exp $
 #
 
 PKGNAME=	shaarli-${VERSION}
 DISTNAME=	shaarli_${VERSION}
-VERSION=	0.0.38beta
+VERSION=	0.0.40beta
 CATEGORIES=	www
 MASTER_SITES=	http://sebsauvage.net/files/
 EXTRACT_SUFX=	.zip
@@ -57,11 +57,11 @@ SUBST_SED.files+=	-e "s|@CACHEDIR@|${VARBASE}/shaarli/tmp|g"
 SUBST_MESSAGE.files=	Fixing configuration files.
 
 post-extract:
-	${MKDIR} ${WRKSRC}
-	${MV} ${WRKDIR}/index.php ${WRKSRC}
-.for d in ${PAXDIRS}
-		${MV} ${WRKDIR}/${d} ${WRKSRC}
-.endfor
+#	${MKDIR} ${WRKSRC}
+#	${MV} ${WRKDIR}/index.php ${WRKSRC}
+#.for d in ${PAXDIRS}
+#		${MV} ${WRKDIR}/${d} ${WRKSRC}
+#.endfor
 	${CP} ${FILESDIR}/apache.conf.dist ${WRKSRC}/apache.conf.dist
 
 INSTALLATION_DIRS+= ${RCDIR} ${EGDIR}
