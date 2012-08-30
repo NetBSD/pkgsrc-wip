@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/08/28 15:34:26 bubuchka Exp $
+# $NetBSD: Makefile,v 1.5 2012/08/30 19:03:42 bubuchka Exp $
 
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
@@ -7,10 +7,10 @@ MAINTAINER=	mishka@NetBSD.org
 HOMEPAGE=	http://cran.r-project.org/web/packages/gsl/
 COMMENT=	R wrapper for the Gnu Scientific Library
 
-LICENSE=	gnu-gpl-v2
-
 R_PKGNAME=	gsl
 R_PKGVER=	1.9-9
+
+LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	c
 
