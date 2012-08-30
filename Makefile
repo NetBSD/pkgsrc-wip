@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4815 2012/08/28 19:50:15 kristerw Exp $
+# $Id: Makefile,v 1.4816 2012/08/30 18:53:08 bubuchka Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -26,6 +26,7 @@ SUBDIR+=	R-Rdbi
 SUBDIR+=	R-Rdbi.PgSQL
 SUBDIR+=	R-Rgraphviz
 SUBDIR+=	R-Rserve
+SUBDIR+=	R-VGAM
 SUBDIR+=	R-biganalytics
 SUBDIR+=	R-bigmemory
 SUBDIR+=	R-bigtabulate
