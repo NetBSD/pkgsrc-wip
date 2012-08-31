@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/01/09 19:53:05 cheusov Exp $
+# $NetBSD: Makefile,v 1.14 2012/08/31 19:45:30 cheusov Exp $
 #
 
 DISTNAME=	lmdbg-1.0.0
@@ -26,5 +26,5 @@ MAKE_ENV+=		MKPROFILELIB=yes MKPICLIB=yes MKSTATICLIB=yes
 
 MAKE_PROGRAM=		${PREFIX}/bin/mkcmake
 
-.include "../../devel/mk-configure/configure.mk"
+.include "../../devel/mk-configure/mk-c.mk"
 .include "../../mk/bsd.pkg.mk"
