@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2012/08/31 18:23:40 jihbed Exp $
+include/myfitter/comparison.hpp
+include/myfitter/fitter.hpp
+include/myfitter/grids/gridinterpolator.hpp
+include/myfitter/likelihoodcomponents.hpp
+include/myfitter/likelihoodfunction.hpp
+include/myfitter/model.hpp
+include/myfitter/ublasutils/determinant.hpp
+include/myfitter/ublasutils/eigen.hpp
+include/myfitter/ublasutils/invert.hpp
+include/myfitter/ublasutils/matrix_vector_print.hpp
+include/myfitter/ublasutils/orthonormalize.hpp
+lib/libmyFitter.la
+lib/pkgconfig/myFitter.pc
+@pkgdir share/info
