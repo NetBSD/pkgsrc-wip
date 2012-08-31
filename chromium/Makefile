@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2011/12/18 14:02:50 absd Exp $
+# $NetBSD: Makefile,v 1.13 2012/08/31 14:35:24 erinlalouve Exp $
 
 DISTNAME=	chromium-11.0.696.72
 CATEGORIES=	www
-MASTER_SITES=	http://build.chromium.org/buildbot/official/
+MASTER_SITES=	http://build.chromium.org/buildbot/official/obsolete/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	rxg@NetBSD.org
