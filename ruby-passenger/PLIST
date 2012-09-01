@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2012/08/18 15:35:53 ftigeot Exp $
+@comment $NetBSD: PLIST,v 1.5 2012/09/01 20:53:40 fhajny Exp $
 bin/passenger
 bin/passenger-config
 bin/passenger-install-apache2-module
@@ -121,6 +121,7 @@ share/doc/phusion-passenger/Security of user switching support.html
 share/doc/phusion-passenger/Users guide Apache.html
 share/doc/phusion-passenger/Users guide Nginx.html
 share/doc/phusion-passenger/Users guide Standalone.html
+share/doc/phusion-passenger/images/._phusion_banner.png
 share/doc/phusion-passenger/images/by_sa.png
 share/doc/phusion-passenger/images/conservative_spawning.png
 share/doc/phusion-passenger/images/conservative_spawning.svg
@@ -276,6 +277,7 @@ share/phusion-passenger/source/doc/users_guide_snippets/analysis_and_system_main
 share/phusion-passenger/source/doc/users_guide_snippets/appendix_a_about.txt
 share/phusion-passenger/source/doc/users_guide_snippets/appendix_b_terminology.txt
 share/phusion-passenger/source/doc/users_guide_snippets/appendix_c_spawning_methods.txt
+share/phusion-passenger/source/doc/users_guide_snippets/enterprise_only.txt
 share/phusion-passenger/source/doc/users_guide_snippets/global_queueing_explained.txt
 share/phusion-passenger/source/doc/users_guide_snippets/passenger_spawn_method.txt
 share/phusion-passenger/source/doc/users_guide_snippets/rackup_specifications.txt
