@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2012/04/23 13:22:54 khorben Exp $
+# $NetBSD: Makefile,v 1.17 2012/09/01 16:58:16 khorben Exp $
 
-DISTNAME=	Browser-0.4.6
-PKGNAME=	deforaos-browser-0.4.6
+DISTNAME=	Browser-0.4.7
+PKGNAME=	deforaos-browser-0.4.7
 CATEGORIES=	sysutils
-MASTER_SITES=	http://www.defora.org/os/download/download/3669/
+MASTER_SITES=	http://www.defora.org/os/download/download/3684/
 
 MAINTAINER=	khorben@defora.org
 HOMEPAGE=	http://www.defora.org/
@@ -13,9 +13,26 @@ LICENSE=	gnu-gpl-v3
 
 USE_TOOLS+=	pkg-config
 
+BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
+BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
+
 PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_FLAGS+=	PREFIX=${PREFIX}
 MAKE_FLAGS+=	DESTDIR=${DESTDIR}
+AUTO_MKDIRS=	yes
+
+post-install:
+	${MV} ${DESTDIR}${PREFIX}/share/man/man1/browser.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/browser.1
+	${MV} ${DESTDIR}${PREFIX}/share/man/man1/copy.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/copy.1
+	${MV} ${DESTDIR}${PREFIX}/share/man/man1/delete.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/delete.1
+	${MV} ${DESTDIR}${PREFIX}/share/man/man1/desktop.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/desktop.1
+	${MV} ${DESTDIR}${PREFIX}/share/man/man1/desktopctl.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/desktopctl.1
+	${MV} ${DESTDIR}${PREFIX}/share/man/man1/move.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/move.1
+	${MV} ${DESTDIR}${PREFIX}/share/man/man1/open.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/open.1
+	${MV} ${DESTDIR}${PREFIX}/share/man/man1/properties.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/properties.1
+	${MV} ${DESTDIR}${PREFIX}/share/man/man1/view.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/view.1
+	${RMDIR} ${DESTDIR}${PREFIX}/share/man/man1
+	${RMDIR} ${DESTDIR}${PREFIX}/share/man
 
 .include "options.mk"
 
