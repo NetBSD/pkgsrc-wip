@@ -1,11 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.4 2012/01/09 16:11:52 khorben Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2012/09/01 16:16:35 khorben Exp $
 
 BUILDLINK_TREE+=	deforaos-libdesktop
 
 .if !defined(DEFORAOS_LIBDESKTOP_BUILDLINK3_MK)
 DEFORAOS_LIBDESKTOP_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.deforaos-libdesktop+=	deforaos-libdesktop>=0.0.6
+BUILDLINK_API_DEPENDS.deforaos-libdesktop+=	deforaos-libdesktop>=0.0.7
 BUILDLINK_PKGSRCDIR.deforaos-libdesktop?=	../../wip/deforaos-libdesktop
 
 .include "../../wip/deforaos-libsystem/buildlink3.mk"
