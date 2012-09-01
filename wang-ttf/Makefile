@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2010/12/25 12:45:45 noud4 Exp $
+# $NetBSD: Makefile,v 1.7 2012/09/01 08:24:18 noud4 Exp $
 
 DISTNAME=	wang-ttf-1.3
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	fonts chinese
 MASTER_SITES=	${MASTER_SITE_FREEBSD:=zh-wangttf/} \
 		ftp://cle.linux.org.tw/pub/fonts/wangfonts/ \
@@ -12,6 +12,8 @@ DISTFILES=	${FONT_FILES} ${MISC_FILES}
 
 MAINTAINER=	rxg@NetBSD.org
 COMMENT=	Chinese TrueType fonts made by Dr. Hann-Tzong Wang
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 FONT_FILES=	wp010-05.ttf wp010-08.ttf wp110-05.ttf wp110-08.ttf \
 		wp210-05.ttf wp210-08.ttf wp310-05.ttf wp310-08.ttf \
@@ -35,13 +37,13 @@ REQD_DIRS+=		${PREFIX}/lib/X11/fonts/TTF
 DOCDIR=		${PREFIX}/share/doc/wang-ttf
 
 do-install:
-	${INSTALL_DATA_DIR} ${FONTS_DIRS.ttf}
+	${INSTALL_DATA_DIR} ${DESTDIR}${FONTS_DIRS.ttf}
 	for f in ${FONT_FILES}; do \
-		${INSTALL_DATA} ${_DISTDIR}/$$f ${FONTS_DIRS.ttf}; \
+		${INSTALL_DATA} ${_DISTDIR}/$$f ${DESTDIR}${FONTS_DIRS.ttf}; \
 	done
-	${INSTALL_DATA_DIR} ${DOCDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
 	for f in ${MISC_FILES}; do \
-		${INSTALL_DATA} ${_DISTDIR}/$$f ${DOCDIR}; \
+		${INSTALL_DATA} ${_DISTDIR}/$$f ${DESTDIR}${DOCDIR}; \
 	done
 
 .include "../../x11/libX11/buildlink3.mk"
