@@ -1,1 +1,9 @@
 - This package has known vulnerabilities, please investigate and fix if possible. (see: CVE-2009-2146, CVE-2009-2978, SA36942, SA37464, SA50384, SA50388).
+
+CVE-2009-2146 before 5.2f
+CVE-2009-2978 5.2.0g and earlier
+SA36942 Update to version 5.2.0j
+SA37464 Update to version 5.2.0k, also addressed in version 5.5.0.RC4
+
+SA50384 Update to version 6.5.3
+SA50388 confirmed in version 6.5.4 No official solution

@@ -1,32 +1,35 @@
-# $NetBSD: Makefile,v 1.5 2009/05/17 18:23:45 rewts Exp $
+# $NetBSD: Makefile,v 1.6 2012/09/02 07:27:57 noud4 Exp $
 #
 
 DISTNAME=	SugarCE-${VERSION}
 PKGNAME=	sugarCRM-${VERSION}
 CATEGORIES=	misc
-MASTER_SITES=	http://www.sugarforge.org/frs/download.php/5446/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sugarcrm/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	derv0@nubisci.net
 HOMEPAGE=	http://www.sugarcrm.com/
 COMMENT=	SugarCRM is a php based CRM system
+LICENSE=	gnu-gpl-v3
+
+PKG_DESTDIR_SUPPORT= 	user-destdir
 
 DEPENDS+=	${PHP_PKG_PREFIX}-mysql>=4.3.3:../../databases/php-mysql
 
-VERSION=	5.2.0e
+VERSION=	5.2.0l
 
 USE_LANGUAGES=	# empty
 NO_BUILD=	yes
-WRKSRC=	${WRKDIR}/SugarCE-Full-5.2.0e
+WRKSRC=		${WRKDIR}/${DISTNAME:S|CE|CE-Full|}
+AUTO_MKDIRS=	yes
 
 APACHE_USER?=	www
 APACHE_GROUP?=	www
 BUILD_DEFS+=	APACHE_USER APACHE_GROUP
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/sugarCRM
-	${CP} -R ${WRKSRC}/* ${PREFIX}/share/sugarCRM
-	${CHOWN} -R ${APACHE_USER}:${APACHE_GROUP} ${PREFIX}/share/sugarCRM
+	${CP} -R ${WRKSRC}/* ${DESTDIR}${PREFIX}/share/sugarCRM
+	${CHOWN} -R ${APACHE_USER}:${APACHE_GROUP} ${DESTDIR}${PREFIX}/share/sugarCRM
 
 .include "../../lang/php/phpversion.mk"
 .include "../../mk/bsd.pkg.mk"
