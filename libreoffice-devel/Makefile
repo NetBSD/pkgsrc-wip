@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/09/02 16:48:11 ftigeot Exp $
+# $NetBSD: Makefile,v 1.10 2012/09/02 18:52:06 ftigeot Exp $
 
 VER=			3.6.1.2
 DISTNAME=		libreoffice-${VER}
@@ -46,8 +46,15 @@ EXTRACT_ONLY+=	libreoffice-${component}-${VER}.tar.xz
 DISTFILES+=	${md}
 .endfor
 
+.include "../../mk/bsd.prefs.mk"
+
+# ftp: Unsupported URL scheme `https'
+.if ${OPSYS} == "NetBSD"
+FETCH_USING=		curl
+.endif
+
 # tar: Invalid header, starting valid header search.
-EXTRACT_USING=	gtar
+EXTRACT_USING=		gtar
 
 WRKSRC=		${WRKDIR}/${LO_BOOTSTRAP}
 
@@ -78,7 +85,7 @@ CONFLICTS+=		openoffice-linux-[0-9]*
 CONFLICTS+=		libreoffice-[0-9]*
 CONFLICTS+=		libreoffice3-bin-[0-9]*
 
-USE_TOOLS+=		automake bash bison gmake perl pkg-config unzip
+USE_TOOLS+=		automake bash bison gmake pax perl pkg-config unzip
 PTHREAD_OPTS+=		require
 
 HAS_CONFIGURE=		yes
@@ -125,10 +132,11 @@ REPLACE_PERL+=	sd/res/webview/savepic.pl
 REPLACE_PERL+=	sd/res/webview/show.pl
 REPLACE_PERL+=	sd/res/webview/webview.pl
 
-LO_PROGRAMS=	sbase scalc sdraw simpress smath soffice swriter
+LO_PROGRAMS=		sbase scalc sdraw simpress smath soffice swriter
 # Base depends on java, we don't install the icon
 LO_DESKTOP_FILES=	calc.desktop draw.desktop impress.desktop math.desktop \
 			printeradmin.desktop startcenter.desktop writer.desktop
+LO_ICONS=		calc draw impress math printeradmin startcenter writer
 
 post-extract:
 	${MKDIR} -p ${WRKSRC}/clone
@@ -150,16 +158,20 @@ AUTO_MKDIRS=	yes
 post-install:
 	${MKDIR} -p ${DESTDIR}${PREFIX}/bin
 	for f in ${LO_PROGRAMS}; do \
-		${LN} -s ${DESTDIR}${PREFIX}/${PKGNAME}/program/$$f \
+		${LN} -s ${DESTDIR}${PREFIX}/${PKGNAME_NOREV}/program/$$f \
 			${DESTDIR}${PREFIX}/bin/$$f; \
 	done
 	${LN} -s ${DESTDIR}${PREFIX}/${PKGNAME_NOREV}/program/soffice \
 		${DESTDIR}${PREFIX}/bin/libreoffice3.6
+	# Install .desktop files
 	${MKDIR} -p ${DESTDIR}${PREFIX}/share/applications
 	for f in ${LO_DESKTOP_FILES}; do \
 		${LN} -s ${DESTDIR}${PREFIX}/${PKGNAME_NOREV}/share/xdg/$$f \
 			${DESTDIR}${PREFIX}/share/applications; \
 	done
+	# Install desktop icons
+	cd ${WRKSRC}/sysui/desktop/icons/hicolor && \
+		${PAX} -rw . ${DESTDIR}${PREFIX}/share/icons/hicolor
 
 .include "../../converters/libcdr/buildlink3.mk"
 .include "../../converters/libvisio/buildlink3.mk"
