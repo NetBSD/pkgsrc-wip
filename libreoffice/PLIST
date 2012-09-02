@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2012/09/02 14:27:56 ftigeot Exp $
+@comment $NetBSD: PLIST,v 1.19 2012/09/02 21:17:14 ftigeot Exp $
 bin/libreoffice3.5
 bin/sbase
 bin/scalc
@@ -120,26 +120,6 @@ share/icons/hicolor/16x16/mimetypes/spreadsheet-template.png
 share/icons/hicolor/16x16/mimetypes/oasis-formula.png
 share/icons/hicolor/16x16/mimetypes/formula.png
 share/icons/hicolor/16x16/mimetypes/oasis-master-document.png
-share/icons/hicolor/scalable/apps/impress.svg
-share/icons/hicolor/scalable/apps/writer.svg
-share/icons/hicolor/scalable/apps/math.svg
-share/icons/hicolor/scalable/apps/main.svg
-share/icons/hicolor/scalable/apps/startcenter.svg
-share/icons/hicolor/scalable/apps/base.svg
-share/icons/hicolor/scalable/apps/calc.svg
-share/icons/hicolor/scalable/apps/draw.svg
-share/icons/hicolor/scalable/mimetypes/oasis-drawing.svg
-share/icons/hicolor/scalable/mimetypes/oasis-presentation.svg
-share/icons/hicolor/scalable/mimetypes/oasis-web-template.svg
-share/icons/hicolor/scalable/mimetypes/oasis-drawing-template.svg
-share/icons/hicolor/scalable/mimetypes/oasis-presentation-template.svg
-share/icons/hicolor/scalable/mimetypes/oasis-text.svg
-share/icons/hicolor/scalable/mimetypes/oasis-spreadsheet.svg
-share/icons/hicolor/scalable/mimetypes/oasis-database.svg
-share/icons/hicolor/scalable/mimetypes/oasis-text-template.svg
-share/icons/hicolor/scalable/mimetypes/oasis-spreadsheet-template.svg
-share/icons/hicolor/scalable/mimetypes/oasis-formula.svg
-share/icons/hicolor/scalable/mimetypes/oasis-master-document.svg
 share/icons/hicolor/48x48/apps/impress.png
 share/icons/hicolor/48x48/apps/writer.png
 share/icons/hicolor/48x48/apps/math.png
@@ -2546,9 +2526,12 @@ ${PKGNAME}/ure/share/misc/types.rdb
 @pkgdir ${PKGNAME}/presets/temp
 @pkgdir ${PKGNAME}/presets/template
 @pkgdir ${PKGNAME}/presets/uno_packages/cache
+@pkgdir ${PKGNAME}/share/uno_packages/cache/uno_packages
 @pkgdir ${PKGNAME}/presets/wordbook
 @pkgdir ${PKGNAME}/program/addin
 @pkgdir ${PKGNAME}/program/plugin
 @pkgdir ${PKGNAME}/share/prereg
 @pkgdir ${PKGNAME}/share/samples/en-US
 @pkgdir ${PKGNAME}/share/uno_packages/cache
+@pkgdir share/icons/hicolor/scalable/apps
+@pkgdir share/icons/hicolor/scalable/mimetypes
