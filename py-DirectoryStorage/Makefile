@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2011/10/09 10:48:28 cheusov Exp $
+# $NetBSD: Makefile,v 1.10 2012/09/02 13:53:53 noud4 Exp $
 #
 
 DISTNAME=		DirectoryStorage_1_1_7
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME:S/_1_1_7/-1.1.7/}
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=dirstorage/}
 EXTRACT_SUFX=		.tgz
@@ -11,14 +12,18 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://dirstorage.sourceforge.net/
 COMMENT=		Storage for ZODB, that uses files and directories
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 NO_CONFIGURE=		yes
 PYTHON_PATCH_SCRIPTS=	${TOOLS}
 PY_PATCHPLIST=		yes
 
+AUTO_MKDIRS=		yes
+
 # package settings
 
-TARGET_DIR=		${PREFIX}/${PYSITELIB}/DirectoryStorage
-DOCS_DIR=		${PREFIX}/share/doc/DirectoryStorage
+TARGET_DIR=		${DESTDIR}${PREFIX}/${PYSITELIB}/DirectoryStorage
+DOCS_DIR=		${DESTDIR}${PREFIX}/share/doc/DirectoryStorage
 
 TOOLS=			replica.py mkds.py snapshot.py checkds.py \
 			backup.py dumpdsf.py whatsnew.py
@@ -55,7 +60,7 @@ do-install:
 	#
 	set -e; cd ${WRKSRC}; \
 	for a in ${TOOLS}; do \
-		${INSTALL_SCRIPT} "$$a" ${PREFIX}/bin/"$$a"${PYPKGSUFFIX}; \
+		${INSTALL_SCRIPT} "$$a" ${DESTDIR}${PREFIX}/bin/"$$a"${PYPKGSUFFIX}; \
 	done
 	#
 	# install documentation
