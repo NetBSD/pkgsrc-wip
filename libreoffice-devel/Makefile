@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.8 2012/08/29 08:12:44 ftigeot Exp $
+# $NetBSD: Makefile,v 1.9 2012/09/02 16:48:11 ftigeot Exp $
 
-VER=			3.6.0.4
+VER=			3.6.1.2
 DISTNAME=		libreoffice-${VER}
 PKGNAME=		libreoffice-devel-${VER:S/-//g}
 CATEGORIES=		misc
-MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/3.6.0/ \
+MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/3.6.1/ \
 		http://dev-www.libreoffice.org/src/ \
 		http://www.numbertext.org/linux/
 
@@ -51,7 +51,7 @@ EXTRACT_USING=	gtar
 
 WRKSRC=		${WRKDIR}/${LO_BOOTSTRAP}
 
-BUILD_DEPENDS+=		cppunit>1.12:../../devel/cppunit
+BUILD_DEPENDS+=		cppunit>=1.12.1:../../devel/cppunit
 BUILD_DEPENDS+=		gperf-[0-9]*:../../devel/gperf
 BUILD_DEPENDS+=		hunspell>=1.2.8:../../textproc/hunspell
 BUILD_DEPENDS+=		p5-Archive-Zip-[0-9]*:../../archivers/p5-Archive-Zip
@@ -84,7 +84,7 @@ PTHREAD_OPTS+=		require
 HAS_CONFIGURE=		yes
 CHECK_PORTABILITY_SKIP=	configure
 
-CONFIGURE_ARGS+=	--prefix=${DESTDIR}${PREFIX}/${PKGNAME}
+CONFIGURE_ARGS+=	--prefix=${DESTDIR}${PREFIX}/${PKGNAME_NOREV}
 CONFIGURE_ARGS+=	--disable-ccache
 CONFIGURE_ARGS+=	--disable-epm
 CONFIGURE_ARGS+=	--disable-ext-presenter-console

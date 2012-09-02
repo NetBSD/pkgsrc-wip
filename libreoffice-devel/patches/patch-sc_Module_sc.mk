@@ -1,4 +1,6 @@
-$NetBSD: patch-sc_Module_sc.mk,v 1.1.1.1 2012/04/24 21:38:28 ftigeot Exp $
+$NetBSD: patch-sc_Module_sc.mk,v 1.2 2012/09/02 16:48:11 ftigeot Exp $
+
+Disable unit tests crashing on DragonFly and NetBSD
 
 --- sc/Module_sc.mk.orig	2012-04-22 18:44:29.000000000 +0000
 +++ sc/Module_sc.mk
