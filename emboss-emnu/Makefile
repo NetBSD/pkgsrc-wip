@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.4 2006/10/29 08:32:42 shattered Exp $
+# $NetBSD: Makefile,v 1.5 2012/09/02 11:14:10 noud4 Exp $
 #
 
 .include "../emboss-base/Makefile.common"
 .include "../emboss/Makefile.common"
+
 DISTNAME=		EMNU-1.05
 PKGNAME=		emboss-emnu-1.05
+PKGREVISION=		1
 
 COMMENT=		Simple menu for EMBOSS applications
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/12/14 18:38:40 daprice Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/02 11:14:10 noud4 Exp $
 #
 
 .include "../emboss-base/Makefile.common"
@@ -6,6 +6,7 @@
 
 DISTNAME=		MEME-2.3.1
 PKGNAME=		emboss-meme-2.3.1
+PKGREVISION=		1
 
 COMMENT=		Motif detection tool for EMBOSS
 

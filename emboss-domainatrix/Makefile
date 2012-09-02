@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.2 2004/12/14 17:45:10 daprice Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/02 11:14:10 noud4 Exp $
 #
 
 .include "../emboss-base/Makefile.common"
 .include "../emboss/Makefile.common"
+
 DISTNAME=		DOMAINATRIX-1.0.0
 PKGNAME=		emboss-domainatrix-1.0.0
+PKGREVISION=		1
 
 COMMENT=		Collection of bioinformatic programs for EMBOSS
 

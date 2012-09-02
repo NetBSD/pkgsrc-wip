@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2011/10/26 13:48:17 noud4 Exp $
+# $NetBSD: Makefile.common,v 1.11 2012/09/02 11:14:10 noud4 Exp $
 # used by wip/emboss-domainatrix/Makefile
 # used by wip/emboss-emnu/Makefile
 # used by wip/emboss-hmmer/Makefile
@@ -12,6 +12,8 @@ MASTER_SITES=		ftp://emboss.open-bio.org/pub/EMBOSS/old/2.9.0/
 
 MAINTAINER=		dprice@cs.nmsu.edu
 HOMEPAGE=		http://emboss.sourceforge.net/
+
+PKG_DESTDIR_SUPPORT= 	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
@@ -28,6 +30,7 @@ CONFIGURE_ARGS+=	--infodir=${PREFIX}/doc
 CONFIGURE_ARGS+=	--with-pngdriver=${BUILDLINK_PREFIX.png}/lib
 
 PKG_DISTFILES_DIR=	emboss
+AUTO_MKDIRS=	yes
 
 .include "../../graphics/gd/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
