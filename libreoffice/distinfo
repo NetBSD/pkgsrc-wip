@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.47 2012/08/12 15:56:30 thomasklausner Exp $
+$NetBSD: distinfo,v 1.48 2012/09/02 14:27:56 ftigeot Exp $
 
 SHA1 (libreoffice/067201ea8b126597670b5eff72e1f66c-mythes-1.2.0.tar.gz) = 025d5d0d566a23ddb353495c116116c1088ba2e9
 RMD160 (libreoffice/067201ea8b126597670b5eff72e1f66c-mythes-1.2.0.tar.gz) = aefa80476ef8340be84440b61f738f432da51c92
@@ -50,4 +50,5 @@ SHA1 (patch-set_soenv.in) = 754a82444bab39d5d51f2a033da153479f33d2ae
 SHA1 (patch-solenv_gbuild_Module.mk) = f16443d43be20bffce957b0a4ea16964d942b06b
 SHA1 (patch-solenv_inc_unxgcc.mk) = f5914c651e54da7a4e0ac1ec0e00be4c43579d98
 SHA1 (patch-sw_Module_sw.mk) = 358f7172278267cccfa6a624f49b1047af1a5788
+SHA1 (patch-sysui_desktop_share_makefile.mk) = 2217271110f10b9fd44918910382e9af8af25d28
 SHA1 (patch-writerfilter_Module_writerfilter.mk) = 1eb3caa50258be5f8b5e2bb19e5f5d039b5eb7a0
