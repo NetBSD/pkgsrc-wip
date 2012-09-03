@@ -1,0 +1,4 @@
+ColorPy is a Python package to convert physical descriptions of light - spectra
+of light intensity vs. wavelength - into RGB colors that can be drawn on a
+computer screen. It provides a nice set of attractive plots that you can make
+of such spectra, and some other color related functions as well.

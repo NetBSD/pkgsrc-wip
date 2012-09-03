@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2012/09/03 22:56:09 jihbed Exp $
+
+SHA1 (colorpy-0.1.0.tar.gz) = c7c18286102110975a2710f230cdf357a2a24bb1
+RMD160 (colorpy-0.1.0.tar.gz) = 294daf3271baca7295c2d45ad80242d5fe8cbbd3
+Size (colorpy-0.1.0.tar.gz) = 86533 bytes
