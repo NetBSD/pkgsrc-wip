@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/06/14 16:31:33 othyro Exp $
+# $NetBSD: Makefile,v 1.6 2012/09/03 15:57:31 shindenmorr Exp $
 
 DISTNAME=	util-linux-2.12r
 VERSION=	2.12r
@@ -17,6 +17,7 @@ COMMENT=		The enhanced Discordian date program
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake
 CONFLICTS+=		util-linux-[0-9]*
+DOCDIR=			${PREFIX}/share/doc/ddate
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1 share/doc/ddate
 
 do-build:
