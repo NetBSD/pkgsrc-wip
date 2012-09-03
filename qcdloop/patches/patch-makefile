@@ -1,0 +1,12 @@
+$NetBSD: patch-makefile,v 1.1 2012/09/03 23:03:22 jihbed Exp $
+
+--- makefile.orig	2012-09-02 23:23:16.000000000 +0100
++++ makefile	2012-09-02 23:24:27.000000000 +0100
+@@ -1,5 +1,5 @@
+-FC = g77
+-FFLAGS = -O 
++#FC = g77
++#FFLAGS = -O 
+ HERE   = $(PWD)
+ QLDIR  = $(HERE)/ql
+ FFDIR  = $(HERE)/ff

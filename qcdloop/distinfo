@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2012/09/03 23:03:22 jihbed Exp $
+
+SHA1 (QCDLoop-1.9.tar.gz) = d0dde124fc52f6f3e50863b88a9c25fc5080b3e9
+RMD160 (QCDLoop-1.9.tar.gz) = a3aa6b36a6dba485b2fd7f2eacbada79682ff635
+Size (QCDLoop-1.9.tar.gz) = 421050 bytes
+SHA1 (patch-makefile) = db5f1f622e3a0082bfed198d5ef23ca885cd65d1
