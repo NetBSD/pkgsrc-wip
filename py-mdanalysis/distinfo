@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2012/09/03 22:59:11 jihbed Exp $
+
+SHA1 (MDAnalysis-0.7.6.tar.gz) = 2dc9c89175cdec01ffd4ebe6cc5c489a948b15fc
+RMD160 (MDAnalysis-0.7.6.tar.gz) = e6591baa2e556f065585ca10accabcf96b09bac3
+Size (MDAnalysis-0.7.6.tar.gz) = 3096061 bytes
