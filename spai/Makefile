@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/05/09 21:29:38 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/03 14:44:27 jihbed Exp $
 #
 
 DISTNAME=	spai-3.2
@@ -6,7 +6,7 @@ CATEGORIES=	math
 MASTER_SITES=	http://www.computational.unibas.ch/software/spai/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	jihbed.resarch@gmail.com
+MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://www.computational.unibas.ch/software/spai/
 COMMENT=	Sparse Approximate Inverses 
 LICENSE=	gnu-gpl-v2
