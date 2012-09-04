@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2012/09/02 18:52:06 ftigeot Exp $
+$NetBSD: distinfo,v 1.9 2012/09/04 16:52:14 ftigeot Exp $
 
 SHA1 (libreoffice/0be45d54cc5e1c2e3102e32b8c190346-liberation-fonts-ttf-1.07.1.tar.gz) = 935bf5d6748b465d2d540884af67fb5dfd59fc4a
 RMD160 (libreoffice/0be45d54cc5e1c2e3102e32b8c190346-liberation-fonts-ttf-1.07.1.tar.gz) = d4dd5ad660ba5747de8e65892583427014aebaa2
@@ -42,7 +42,9 @@ Size (libreoffice/libreoffice-dictionaries-3.6.1.2.tar.xz) = 34798480 bytes
 SHA1 (libreoffice/libreoffice-help-3.6.1.2.tar.xz) = d03a78d7c634fbfa1fb1aab2d7d7673a71a42280
 RMD160 (libreoffice/libreoffice-help-3.6.1.2.tar.xz) = 780f70201b89e52dd048dc7ab4ae3913086367fa
 Size (libreoffice/libreoffice-help-3.6.1.2.tar.xz) = 1863760 bytes
+SHA1 (patch-clucene_configs_clucene-config-generic.h) = e8cb4a70e217b1594cdab68dd4e39fedbe0a6ea7
 SHA1 (patch-configure.in) = 0003e9da27bbfc0f78d12057e42c75c82a463fc1
+SHA1 (patch-extensions_Library_npsoplugin.mk) = 2cd965083a3aad541d1776ac83e441f84723db7d
 SHA1 (patch-lotuswordpro_Module_lotuswordpro.mk) = 15f65e86c7b47f2113b68561a9a361ca69405000
 SHA1 (patch-sc_Module_sc.mk) = 1a6fe40e491ce5d24dd755ae726ab98bb6de247c
 SHA1 (patch-sdext_Module_sdext.mk) = c08c8ec10a521f27dcbeb885883be4191e2f808f
