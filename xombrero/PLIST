@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2012/09/04 09:42:59 zplay Exp $
+bin/xombrero
+man/man1/xombrero.1
+share/xombrero/hsts-preload
+share/xombrero/style.css
+share/xombrero/tld-rules
+share/xombrero/xombrero.css
+share/xombrero/xombreroicon128.png
+share/xombrero/xombreroicon16.png
+share/xombrero/xombreroicon32.png
+share/xombrero/xombreroicon48.png
+share/xombrero/xombreroicon64.png

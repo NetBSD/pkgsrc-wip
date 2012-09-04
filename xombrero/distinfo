@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2012/09/04 09:42:59 zplay Exp $
+
+SHA1 (xombrero-XOMBRERO_1_3_0-4-g323af97.tar.gz) = b2859fc585a8ae3afb2757acdbb1a4066d8c5356
+RMD160 (xombrero-XOMBRERO_1_3_0-4-g323af97.tar.gz) = ccce710dd7440f1efafcb32c40edb80b88d1efd0
+Size (xombrero-XOMBRERO_1_3_0-4-g323af97.tar.gz) = 254147 bytes
+SHA1 (patch-aa) = d2cf7f7ee36a9879587d70febcc0ec6d3349f55d
