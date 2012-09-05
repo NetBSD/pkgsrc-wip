@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2012/09/05 08:09:26 zplay Exp $
+$NetBSD: distinfo,v 1.3 2012/09/05 15:54:20 zplay Exp $
 
-SHA1 (xombrero-1.3.0-5.tar.gz) = 8a317177d07a99dcac08bf798c5db9cc38e094c0
-RMD160 (xombrero-1.3.0-5.tar.gz) = 4419f72090e9c5baa6d0e1a489b9b9592c66fda9
-Size (xombrero-1.3.0-5.tar.gz) = 267256 bytes
+SHA1 (xombrero-1.3.0-5.tar.gz) = 962962701c2b0521342e28df15a86100bcdb54ca
+RMD160 (xombrero-1.3.0-5.tar.gz) = 0522d35b0463076796e30469858ee75fdf441abc
+Size (xombrero-1.3.0-5.tar.gz) = 267253 bytes
 SHA1 (patch-aa) = d2cf7f7ee36a9879587d70febcc0ec6d3349f55d
