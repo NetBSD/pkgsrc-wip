@@ -1,6 +1,6 @@
-$NetBSD: patch-plugins_gg_pubdir50.c,v 1.1 2011/12/06 10:21:43 shindenmorr Exp $
+$NetBSD: patch-plugins_gg_pubdir50.c,v 1.2 2012/09/05 08:48:22 shindenmorr Exp $
 
---- plugins/gg/pubdir50.c.orig	2011-02-16 10:16:03.000000000 +0000
+--- plugins/gg/pubdir50.c.orig	2011-03-17 17:08:11.000000000 +0000
 +++ plugins/gg/pubdir50.c
 @@ -36,6 +36,7 @@
  COMMAND(gg_command_find)

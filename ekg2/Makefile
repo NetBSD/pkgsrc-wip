@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2011/12/06 10:21:42 shindenmorr Exp $
+# $NetBSD: Makefile,v 1.15 2012/09/05 08:48:22 shindenmorr Exp $
 #
 
 DISTNAME=	ekg2-0.3.1
@@ -45,4 +45,5 @@ CONFIGURE_ARGS+=	--enable-shared \
 .include "../../devel/ncursesw/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
