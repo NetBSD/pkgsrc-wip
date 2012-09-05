@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2012/09/05 11:17:55 jihbed Exp $
+
+SHA1 (sector_decomposition-1.1.0.tar.gz) = d06ea985cf5cc6c0a951c17be100cf5726050f9c
+RMD160 (sector_decomposition-1.1.0.tar.gz) = c394a671e864ff3056d3efa77524a44fc8bfc221
+Size (sector_decomposition-1.1.0.tar.gz) = 339605 bytes
+SHA1 (patch-Makefile.in) = a14670a3e39f21ae40d9de0b2a233ccd48ade5e5

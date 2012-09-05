@@ -1,0 +1,18 @@
+$NetBSD: patch-Makefile.in,v 1.1 2012/09/05 11:17:55 jihbed Exp $
+
+--- sector_decomposition/Makefile.in.orig	2007-12-10 14:59:01.000000000 +0100
++++ sector_decomposition/Makefile.in	2012-09-05 11:56:32.000000000 +0100
+@@ -76,11 +76,11 @@
+ @AMDEP_TRUE@	./$(DEPDIR)/polyhedra.Plo
+ CXXCOMPILE = $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) \
+ 	$(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CXXFLAGS) $(CXXFLAGS)
+-LTCXXCOMPILE = $(LIBTOOL) --mode=compile $(CXX) $(DEFS) \
++LTCXXCOMPILE = $(LIBTOOL) --mode=compile --tag CXX $(CXX) $(DEFS) \
+ 	$(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) \
+ 	$(AM_CXXFLAGS) $(CXXFLAGS)
+ CXXLD = $(CXX)
+-CXXLINK = $(LIBTOOL) --mode=link $(CXXLD) $(AM_CXXFLAGS) $(CXXFLAGS) \
++CXXLINK = $(LIBTOOL) --mode=link --tag CXX  $(CXXLD) $(AM_CXXFLAGS) $(CXXFLAGS) \
+ 	$(AM_LDFLAGS) $(LDFLAGS) -o $@
+ SOURCES = $(libsector_decomposition_la_SOURCES)
+ DIST_SOURCES = $(libsector_decomposition_la_SOURCES)
