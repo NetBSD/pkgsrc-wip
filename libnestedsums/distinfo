@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2012/09/05 12:40:16 jihbed Exp $
+
+SHA1 (nestedsums-1.4.12.tar.gz) = 07c19f2bf6a2cd43555deb9f5d16ec7ea7a97f65
+RMD160 (nestedsums-1.4.12.tar.gz) = 381256ed0aa4c55d1f3ea87f493b83e6a5befae1
+Size (nestedsums-1.4.12.tar.gz) = 415265 bytes
