@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2010/06/13 22:47:13 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.10 2012/09/05 03:27:50 othyro Exp $
 #
 
-DISTNAME=	PcsxSrc-1.5
+DISTNAME=	PcsxSrc-1.6beta
 PKGNAME=	${DISTNAME:S/PcsxSrc/pcsx/}
-PKGREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	http://www.pcsx.net/downloads/
 EXTRACT_SUFX=	.tgz
