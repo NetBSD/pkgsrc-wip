@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.3 2012/01/23 09:31:10 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.4 2012/09/06 02:37:24 othyro Exp $
 bin/bsnes
 share/applications/bsnes.desktop
 share/doc/bsnes/cheats.xml
+share/icons/bsnes.ico
 share/icons/bsnes.png
