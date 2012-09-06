@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2012/07/02 13:37:54 moubctez Exp $
+# $NetBSD: Makefile,v 1.9 2012/09/06 02:36:40 othyro Exp $
 #
 
-DISTNAME=	bsnes_v089
-PKGNAME=	${DISTNAME:S/_v0/-0./}
-PKGREVISION=	1
+DISTNAME=	bsnes_v091-source
+PKGNAME=	${DISTNAME:S/_v0/-0./:S/-source//}
 CATEGORIES=	emulators
 MASTER_SITES=	http://bsnes.googlecode.com/files/
 EXTRACT_SUFX=	.tar.xz
@@ -15,7 +14,6 @@ LICENSE=	gnu-gpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-WRKSRC=		${WRKDIR}/bsnes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake pkg-config
 MAKE_FLAGS+=	platform=x compiler=gcc enable_gzip=true
@@ -23,15 +21,19 @@ CPPFLAGS+=	-I${PREFIX}/include
 CXXFLAGS+=	-I${PREFIX}/include
 
 # nullptr
-GCC_REQD=	4.6
+GCC_REQD=	4.7
 
 INSTALLATION_DIRS=	bin share/applications share/icons share/doc/bsnes
 
+do-build:
+	cd ${WRKSRC}/bsnes && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM}
+
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/out/bsnes ${DESTDIR}${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/data/bsnes.desktop ${DESTDIR}${PREFIX}/share/applications
-	${INSTALL_DATA} ${WRKSRC}/data/bsnes.png ${DESTDIR}${PREFIX}/share/icons
-	${INSTALL_DATA} ${WRKSRC}/data/cheats.xml ${DESTDIR}${PREFIX}/share/doc/bsnes
+	${INSTALL_PROGRAM} ${WRKSRC}/bsnes/out/bsnes ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/bsnes/data/bsnes.desktop ${DESTDIR}${PREFIX}/share/applications
+	${INSTALL_DATA} ${WRKSRC}/bsnes/data/bsnes.ico ${DESTDIR}${PREFIX}/share/icons
+	${INSTALL_DATA} ${WRKSRC}/bsnes/data/bsnes.png ${DESTDIR}${PREFIX}/share/icons
+	${INSTALL_DATA} ${WRKSRC}/bsnes/data/cheats.xml ${DESTDIR}${PREFIX}/share/doc/bsnes
 
 .include "../../x11/libXv/buildlink3.mk"
 .include "../../x11/videoproto/buildlink3.mk"
