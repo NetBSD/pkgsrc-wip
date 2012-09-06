@@ -1,0 +1,25 @@
+$NetBSD: patch-bsnes_Makefile,v 1.1 2012/09/06 02:40:23 othyro Exp $
+
+Add path to boost headers.
+Use pkgsrc infrastructure for libdl.
+
+--- bsnes/Makefile.orig	2012-08-09 23:55:13.000000000 +0000
++++ bsnes/Makefile
+@@ -16,7 +16,7 @@ target  := ethos
+ # compiler
+ c       := $(compiler) -std=gnu99
+ cpp     := $(subst cc,++,$(compiler)) -std=gnu++0x
+-flags   := -I. -O3 -fomit-frame-pointer
++flags   := -I. -O3 -fomit-frame-pointer -I${PREFIX}/include/boost
+ link    := -s
+ objects := libco
+ 
+@@ -34,7 +34,7 @@ endif
+ # platform
+ ifeq ($(platform),x)
+   flags += -march=native
+-  link += -ldl -lX11 -lXext
++  link += ${DL_LIBS} -lX11 -lXext
+ else ifeq ($(platform),osx)
+ else ifeq ($(platform),win)
+   ifeq ($(arch),win32)
