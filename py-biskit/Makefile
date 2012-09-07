@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/08/09 21:40:36 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/07 21:27:50 noud4 Exp $
 #
 
 DISTNAME=	biskit-2.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	biology python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=biskit/}
 

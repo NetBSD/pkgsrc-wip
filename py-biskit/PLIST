@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/08/09 21:40:36 jihbed Exp $
-bin/bis2.6
+@comment $NetBSD: PLIST,v 1.2 2012/09/07 21:27:50 noud4 Exp $
+bin/bis${PYVERSSUFFIX}
 ${PYSITELIB}/Biskit/AmberCrdEntropist.py
 ${PYSITELIB}/Biskit/AmberCrdEntropist.pyc
 ${PYSITELIB}/Biskit/AmberCrdEntropist.pyo
@@ -580,7 +580,7 @@ ${PYSITELIB}/Biskit/scripts/Biskit/amberConcat.py
 ${PYSITELIB}/Biskit/scripts/Biskit/amber_ensembleMD.py
 ${PYSITELIB}/Biskit/scripts/Biskit/amber_pdb2parm.py
 ${PYSITELIB}/Biskit/scripts/Biskit/averageASA.py
-${PYSITELIB}/Biskit/scripts/Biskit/bis2.6
+${PYSITELIB}/Biskit/scripts/Biskit/bis${PYVERSSUFFIX}
 ${PYSITELIB}/Biskit/scripts/Biskit/castPdbs.py
 ${PYSITELIB}/Biskit/scripts/Biskit/cvsrm.py
 ${PYSITELIB}/Biskit/scripts/Biskit/dope.py
