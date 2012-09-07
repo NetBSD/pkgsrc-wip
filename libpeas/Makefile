@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/08/04 20:40:25 ryo-on Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/07 12:55:57 othyro Exp $
 #
 
-DISTNAME=	libpeas-1.0.0
+DISTNAME=	libpeas-1.5.0
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libpeas/1.0/}
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libpeas/1.5/}
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://live.gnome.org/Libpeas
-COMMENT=	gobject-based plugins engine
+COMMENT=	Gobject-based plugins engine
 LICENSE=	gnu-lgpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
