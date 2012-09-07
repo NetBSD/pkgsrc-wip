@@ -287,21 +287,28 @@ function print_nodep_node (node){
 		print node
 }
 
-function find_by_glob (pattern, strict,           base_i,i){
+function find_by_glob (pattern, ver,           base_i,i,pair){
 	for (base_i in allbases){
 		if (glob(base_i, pattern)){
-#			found [++foundcnt] = base_i
-			for (i=1; i <= g_basecnt2path_cnt [base_i]; ++i)
-				found [++foundcnt] = g_basecnt2path [base_i, i]
+			for (i=1; i <= g_basecnt2path_cnt [base_i]; ++i){
+				pair = g_basecnt2path [base_i, i]
+				if (!mode_strict ||
+					pattern_match(pkgname2version(pair), ver))
+				{
+					found [++foundcnt] = pair
+				}
+			}
 		}
 	}
 }
 
-function find_pkg (pattern,           base,basecnt,j,curr){
+function find_pkg (pattern,           base,basecnt,ver,j,curr){
 	base = pkgname2pkgbase(pattern)
+	ver  = pkgname2version(pattern)
+
 	if (base ~ /[*?\[\]]/){
 		# glob pattern
-		find_by_glob(base, 0)
+		find_by_glob(base, ver)
 	}else if (base in allbases){
 		# plain PKGBASE
 		basecnt = g_basecnt2path_cnt [base]

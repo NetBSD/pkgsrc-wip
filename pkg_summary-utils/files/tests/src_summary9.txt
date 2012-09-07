@@ -59,3 +59,13 @@ DEPENDS=  perl>=5.0:../../lang/perl5  jpeg>=8nb1:../../graphics/jpeg tiff>=3.6.1
 PKGPATH=editors/emacs22
 CONFLICTS=elisp-manual-[0-9]* emacs-[0-9]* emacs-nox11-[0-9]* mule-[0-9]*
 
+PKGNAME=py27-dbus-0.83.1nb3
+COMMENT=Python bindings for the D-BUS message bus system
+PKGPATH=sysutils/py-dbus
+
+CONFLICTS=dbus-glib<0.71
+CONFLICTS=py*-dbus<0.71
+PKGNAME=dbus-1.2.4.6nb4
+COMMENT=Message bus system
+PKGPATH=sysutils/dbus
+

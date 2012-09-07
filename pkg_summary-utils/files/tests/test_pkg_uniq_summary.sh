@@ -149,6 +149,10 @@ PKGNAME=emacs-21.4anb19
 
 PKGNAME=emacs-22.3nb10
 
+PKGNAME=py27-dbus-0.83.1nb3
+
+PKGNAME=dbus-1.2.4.6nb4
+
 '
 
 pkg_uniq_summary -Fb src_summary9.txt |
@@ -175,6 +179,10 @@ PKGNAME=libmaa-1.0.0
 PKGNAME=dictem-1.0.2nb1
 
 PKGNAME=emacs-23.2nb2
+
+PKGNAME=py27-dbus-0.83.1nb3
+
+PKGNAME=dbus-1.2.4.6nb4
 
 '
 

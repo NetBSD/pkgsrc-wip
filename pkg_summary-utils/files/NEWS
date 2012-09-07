@@ -1,4 +1,11 @@
 ----------------------------------------------------------------------
+Version 0.58.4, by Aleksey Cheusov, Fri,  7 Sep 2012 17:49:14 +0300
+
+  pkg_summary2deps:
+    - Mode -cs now works correctly with patterns like
+      "py*-dbus<0.71". A few regression test for this case were added.
+
+----------------------------------------------------------------------
 Version 0.58.3, by Aleksey Cheusov, Sat,  1 Sep 2012 11:59:16 +0300
 
   pkg_summary2deps:

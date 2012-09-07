@@ -934,8 +934,7 @@ d: not_found pkg_online-server-0.5.0nb2 <- wip/pkg_online pkg_online-0.5.0nb2
 
 pkg_summary2deps -dlns src_summary9.txt 2>&1 | sort |
 cmp 'pkg_summary2deps #27' \
-'d: not_found dbus>=0.91 <- editors/emacs emacs-23.2nb2
-d: not_found desktop-file-utils>=0.10nb1 <- editors/emacs emacs-23.2nb2
+'d: not_found desktop-file-utils>=0.10nb1 <- editors/emacs emacs-23.2nb2
 d: not_found desktop-file-utils>=0.8 <- editors/emacs emacs-23.2nb2
 d: not_found dict-client>=1.9.14 <- textproc/dictem dictem-1.0.2nb1
 d: not_found fontconfig>=2.1nb2 <- editors/emacs emacs-23.2nb2
@@ -995,6 +994,7 @@ d: not_found tiff>=3.6.1 <- editors/emacs22 emacs-22.3nb10
 d: not_found tiff>=3.9.2nb1 <- editors/emacs emacs-23.2nb2
 d: not_found tiff>=3.9.2nb1 <- editors/emacs21 emacs-21.4anb19
 d: not_found tiff>=3.9.2nb1 <- editors/emacs22 emacs-22.3nb10
+dbus emacs
 digest distbb
 emacs dictem
 libmaa
@@ -1002,6 +1002,7 @@ pipestatus pkg_status
 pipestatus pkg_summary-utils
 pipestatus pkgnih
 pkg_status pkgnih
+py27-dbus
 runawk paexec
 '
 
@@ -1009,10 +1010,24 @@ pkg_summary2deps -c src_summary9.txt 2>&1 | sort |
 cmp 'pkg_summary2deps #28' \
 'editors/emacs22 (emacs-22.3nb10) conflicts (emacs-[0-9]*) with editors/emacs (emacs-23.2nb2)
 editors/emacs22 (emacs-22.3nb10) conflicts (emacs-[0-9]*) with editors/emacs21 (emacs-21.4anb19)
+sysutils/dbus (dbus-1.2.4.6nb4) conflicts (py*-dbus<0.71) with sysutils/py-dbus (py27-dbus-0.83.1nb3)
+'
+
+pkg_summary2deps -cs src_summary9.txt 2>&1 | sort |
+cmp 'pkg_summary2deps #28.1' \
+'editors/emacs22 (emacs-22.3nb10) conflicts (emacs-[0-9]*) with editors/emacs (emacs-23.2nb2)
+editors/emacs22 (emacs-22.3nb10) conflicts (emacs-[0-9]*) with editors/emacs21 (emacs-21.4anb19)
 '
 
 pkg_summary2deps -cl src_summary9.txt 2>&1 | sort |
 cmp 'pkg_summary2deps #29' \
+'c: conflict emacs-[0-9]* editors/emacs emacs-23.2nb2 <- editors/emacs22 emacs-22.3nb10
+c: conflict emacs-[0-9]* editors/emacs21 emacs-21.4anb19 <- editors/emacs22 emacs-22.3nb10
+c: conflict py*-dbus<0.71 sysutils/py-dbus py27-dbus-0.83.1nb3 <- sysutils/dbus dbus-1.2.4.6nb4
+'
+
+pkg_summary2deps -cls src_summary9.txt 2>&1 | sort |
+cmp 'pkg_summary2deps #29.1' \
 'c: conflict emacs-[0-9]* editors/emacs emacs-23.2nb2 <- editors/emacs22 emacs-22.3nb10
 c: conflict emacs-[0-9]* editors/emacs21 emacs-21.4anb19 <- editors/emacs22 emacs-22.3nb10
 '
