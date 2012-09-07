@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2011/02/28 14:53:18 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.15 2012/09/07 19:29:56 noud4 Exp $
 #
 
 DISTNAME=	albatross-1.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	http://www.object-craft.com.au/projects/albatross/download/
 
@@ -10,13 +11,16 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.object-craft.com.au/projects/albatross/
 COMMENT=	Toolkit for Stateful Web Applications
 
+PKG_DESTDIR_SUPPORT= 	user-destdir
+
 PYDISTUTILSPKG=	yes
 PY_PATCHPLIST=	yes
 USE_TOOLS+=	pax
+AUTO_MKDIRS=	yes
 
 RUNTIME_DIR?=	/var/run/albatross
 LOGDIR?=	/var/log/albatross
-EXAMPLEDIR=	${PREFIX}/share/examples/albatross
+EXAMPLEDIR=	${DESTDIR}${PREFIX}/share/examples/albatross
 LOGFILE?=	${LOGDIR}/al-session-daemon.log
 PIDFILE?=	${RUNTIME_DIR}/session-daemon.pid
 
