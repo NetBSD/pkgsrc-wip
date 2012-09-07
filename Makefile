@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4842 2012/09/07 23:22:54 othyro Exp $
+# $Id: Makefile,v 1.4843 2012/09/07 23:42:15 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1272,6 +1272,8 @@ SUBDIR+=	kde4-l10n-ru
 SUBDIR+=	kde4-l10n-si
 SUBDIR+=	kde4-l10n-sk
 SUBDIR+=	kde4-l10n-sl
+SUBDIR+=	kde4-l10n-sr
+SUBDIR+=	kde4-l10n-tg
 SUBDIR+=	kgrab
 SUBDIR+=	kgraphviewer
 SUBDIR+=	kicad
