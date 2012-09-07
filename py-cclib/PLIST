@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/09/02 12:20:28 jihbed Exp $
-bin/ccget2.6
-bin/cda2.6
+@comment $NetBSD: PLIST,v 1.2 2012/09/07 21:54:37 noud4 Exp $
+bin/ccget${PYVERSSUFFIX}
+bin/cda${PYVERSSUFFIX}
 ${PYSITELIB}/cclib/ANNOUNCE
 ${PYSITELIB}/cclib/CHANGELOG
 ${PYSITELIB}/cclib/INSTALL

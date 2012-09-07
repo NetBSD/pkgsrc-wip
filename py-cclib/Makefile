@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/09/02 12:20:27 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/07 21:54:37 noud4 Exp $
 #
 
 DISTNAME=	cclib-1.0.tar
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/.tar//}
+PKGREVISION=	1
 CATEGORIES=	biology python
 MASTER_SITES=	http://pypi.python.org/packages/source/c/cclib/
 EXTRACT_SUFX=	.gz
