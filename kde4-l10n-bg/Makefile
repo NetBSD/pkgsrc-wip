@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/09/07 19:02:02 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/07 19:11:22 othyro Exp $
 
 KDE_LANGUAGE=	Bulgarian
 KDE_LANGCODE=	bg

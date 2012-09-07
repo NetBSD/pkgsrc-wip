@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/09/07 18:50:27 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/07 19:11:22 othyro Exp $
 
 KDE_LANGUAGE=	Spanish
 KDE_LANGCODE=	es
