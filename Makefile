@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4819 2012/09/04 09:45:00 zplay Exp $
+# $Id: Makefile,v 1.4820 2012/09/07 18:52:49 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1235,6 +1235,7 @@ SUBDIR+=	kapital
 SUBDIR+=	katapult
 SUBDIR+=	kawa
 SUBDIR+=	kde4-l10n-ar
+SUBDIR+=	kde4-l10n-es
 SUBDIR+=	kgrab
 SUBDIR+=	kgraphviewer
 SUBDIR+=	kicad
