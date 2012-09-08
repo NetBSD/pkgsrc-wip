@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4852 2012/09/08 17:57:12 genolopolis Exp $
+# $Id: Makefile,v 1.4853 2012/09/08 22:22:24 kristerw Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1281,7 +1281,7 @@ SUBDIR+=	kde4-l10n-tr
 SUBDIR+=	kde4-l10n-ug
 SUBDIR+=	kde4-l10n-uk
 SUBDIR+=	kde4-l10n-vi
-SUBDIR++	kde4-l10n-wa
+SUBDIR+=	kde4-l10n-wa
 SUBDIR+=	kde4-l10n-zh_CN
 SUBDIR+=	kde4-l10n-zh_TW
 SUBDIR+=	kgrab
