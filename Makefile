@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4850 2012/09/08 00:44:27 othyro Exp $
+# $Id: Makefile,v 1.4851 2012/09/08 15:13:20 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1228,6 +1228,7 @@ SUBDIR+=	kBuild
 SUBDIR+=	kacst-ttf
 SUBDIR+=	kaffe
 SUBDIR+=	kaffe-x11
+SUBDIR+=	kaffeine
 SUBDIR+=	kahakai
 SUBDIR+=	kahua
 SUBDIR+=	kannel-gateway
