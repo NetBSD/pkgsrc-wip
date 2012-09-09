@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2012/09/09 17:01:23 othyro Exp $
+
+SHA1 (AriaSrc-1.4.4.tar.bz2) = b89c210d93e5dac47eb07445e48b83331718cdd8
+RMD160 (AriaSrc-1.4.4.tar.bz2) = 64e3b18e99f99e15f764841729d3375721d67692
+Size (AriaSrc-1.4.4.tar.bz2) = 2636886 bytes
+SHA1 (patch-SConstruct) = 6bef956eca50b09580337d66f76acf02fce737be
