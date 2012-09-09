@@ -1,14 +1,17 @@
-# $NetBSD: Makefile,v 1.5 2009/07/22 09:53:11 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2012/09/09 10:19:11 noud4 Exp $
 #
 
 DISTNAME=	backintime-0.9.2_src
 PKGNAME=	${DISTNAME:S/_src//}
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.le-web.org/download/backintime/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.le-web.org/back-in-time/
 COMMENT=	Simple backup system for the GNOME desktop
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	${PYPKGPREFIX}-gnome2-[0-9]*:../../x11/py-gnome2
 DEPENDS+=	rsync-[0-9]*:../../net/rsync
@@ -26,7 +29,7 @@ SUBST_FILES.path+=	config.py
 SUBST_FILES.path+=	docbook/C/backintime-C.omf
 SUBST_FILES.path+=	install-common.sh
 SUBST_FILES.path+=	install-gnome.sh
-SUBST_SED.path=		-e "s,/usr,${PREFIX},"
+SUBST_SED.path=		-e "s,/usr,${DESTDIR}${PREFIX},"
 SUBST_SED.path+=	-e "s,--mode=,-m ,"
 SUBST_SED.path+=	-e "s,share/man/man1,${PKGMANDIR}/man1,"
 SUBST_SED.path+=	-e "s,python ,${PYTHONBIN} ,"
