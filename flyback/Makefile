@@ -1,14 +1,17 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/04/14 23:33:01 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/09 10:29:58 noud4 Exp $
 #
 
 DISTNAME=	flyback_0.4.0
 PKGNAME=	${DISTNAME:S/_/-/}
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://flyback.googlecode.com/files/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/flyback/
 COMMENT=	Backup software inspired by Apple's Time Machine
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	${PYPKGPREFIX}-gnome2-[0-9]*:../../x11/py-gnome2
 DEPENDS+=	${PYPKGPREFIX}-sqlite2-[0-9]*:../../databases/py-sqlite2
@@ -25,10 +28,10 @@ do-build:
 		>> ${WRKSRC}/flyback
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/flyback ${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/*glade ${PREFIX}/share/flyback
-	${INSTALL_DATA} ${WRKSRC}/*py ${PREFIX}/share/flyback
-	${INSTALL_DATA} ${WRKSRC}/*txt ${PREFIX}/share/flyback
+	${INSTALL_SCRIPT} ${WRKSRC}/flyback ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/*glade ${DESTDIR}${PREFIX}/share/flyback
+	${INSTALL_DATA} ${WRKSRC}/*py ${DESTDIR}${PREFIX}/share/flyback
+	${INSTALL_DATA} ${WRKSRC}/*txt ${DESTDIR}${PREFIX}/share/flyback
 
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
