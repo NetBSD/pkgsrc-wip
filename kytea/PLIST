@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2012/03/20 08:59:24 obache Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/09/09 08:29:50 obache Exp $
 bin/api-example
 bin/kytea
-bin/test-kytea
 bin/train-kytea
 include/kytea/config.h
 include/kytea/corpus-io.h
@@ -17,6 +16,9 @@ include/kytea/kytea-struct.h
 include/kytea/kytea-util.h
 include/kytea/kytea.h
 include/kytea/model-io.h
+include/kytea/string-util-map-euc.h
+include/kytea/string-util-map-sjis.h
+include/kytea/string-util-map-utf8.h
 include/kytea/string-util.h
 lib/libkytea.la
 lib/pkgconfig/kytea.pc

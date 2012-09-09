@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2012/03/20 08:59:24 obache Exp $
+# $NetBSD: Makefile,v 1.4 2012/09/09 08:29:50 obache Exp $
 #
 
-DISTNAME=	kytea-0.4.0
+DISTNAME=	kytea-0.4.2
 CATEGORIES=	textproc
 MASTER_SITES=	http://www.phontron.com/kytea/download/
 
