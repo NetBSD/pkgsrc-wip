@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/06/17 23:22:44 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/09 21:20:48 jihbed Exp $
 #
 
-DISTNAME=	PyKCS11-1.2.1
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	security python
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pkcs11wrap/}
+DISTNAME=	PyKCS11-1.2.4
+CATEGORIES=	wip
+MASTER_SITES=	http://garr.dl.sourceforge.net/project/pkcs11wrap/pykcs11/pykcs11-1.2.4/
 
-MAINTAINER=	kamel.derouiche@gmail.com
+MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://www.bit4id.org/trac/pykcs11
 COMMENT=	PKCS\#11 wrapper for Python
 LICENSE=	gnu-gpl-v2
