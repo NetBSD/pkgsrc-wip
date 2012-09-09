@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4853 2012/09/08 22:22:24 kristerw Exp $
+# $Id: Makefile,v 1.4854 2012/09/09 17:13:35 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -147,6 +147,7 @@ SUBDIR+=	aravis
 SUBDIR+=	arcem-current
 SUBDIR+=	archimedes
 SUBDIR+=	argouml
+SUBDIR+=	ariamaestosa
 SUBDIR+=	arista
 SUBDIR+=	arla-3.99.14
 SUBDIR+=	armadillo
@@ -2059,6 +2060,7 @@ SUBDIR+=	pcmanfm
 SUBDIR+=	pcp
 SUBDIR+=	pcsx
 SUBDIR+=	pcsx-df
+SUBDIR+=	pcsx2
 SUBDIR+=	pdb2ldif
 SUBDIR+=	pdf2svg
 SUBDIR+=	pdfedit
