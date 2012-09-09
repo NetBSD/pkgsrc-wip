@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.5 2010/07/18 21:50:12 jihbed Exp $
-bin/ppserver2.6
+@comment $NetBSD: PLIST,v 1.6 2012/09/09 22:06:48 jihbed Exp $
+bin/ppserver2.7
 ${PYSITELIB}/pp.py
 ${PYSITELIB}/pp.pyc
 ${PYSITELIB}/pp.pyo
@@ -17,10 +17,3 @@ ${PYSITELIB}/ppworker.pyc
 ${PYSITELIB}/ppworker.pyo
 man/man1/ppserver.1
 share/doc/py-pp/ppdoc.html
-share/examples/py-pp/auto_diff.py
-share/examples/py-pp/callback.py
-share/examples/py-pp/dynamic_ncpus.py
-share/examples/py-pp/quicksort.py
-share/examples/py-pp/reverse_md5.py
-share/examples/py-pp/sum_primes.py
-share/examples/py-pp/sum_primes_functor.py
