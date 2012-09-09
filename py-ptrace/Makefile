@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2012/04/08 19:09:49 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2012/09/09 22:46:51 jihbed Exp $
 #
 
-DISTNAME=	python-ptrace-0.6.3
+DISTNAME=	python-ptrace-0.6.4
 PKGNAME=	${PYPKGPREFIX}${DISTNAME:S/python//}
 PKGREVISION=	2
 CATEGORIES=	sysutils python
@@ -9,14 +9,21 @@ MASTER_SITES=	http://pypi.python.org/packages/source/p/python-ptrace/
 
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	https://bitbucket.org/haypo/python-ptrace/wiki/Home
-COMMENT=	python-ptrace is a Python binding of ptrace library
+COMMENT=	Python binding of ptrace
 LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-WRKSRC=	${WRKDIR}/python-ptrace-0.6.3
+ONLY_FOR_PLATFORM=	FreeBSD-*-x86_64  FreeBSD-*-i386 Linux-*-*
 
+PYTHON_VERSIONS_INCLUDE_3X= yes
+PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 PYDISTUTILSPKG= 	yes
 
+post-extract:
+	${MV} ${WRKSRC}/strace.py ${WRKSRC}/strace.py${PYVERSSUFFIX}
+	${MV} ${WRKSRC}/gdb.py ${WRKSRC}/gdb.py${PYVERSSUFFIX}
+
+.include "../../devel/py-readline/buildlink3.mk"
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
