@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/04/08 19:09:45 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/09 16:10:32 jihbed Exp $
 #
 
 DISTNAME=	Delny-0.4.1
@@ -7,7 +7,7 @@ CATEGORIES=	math python
 MASTER_SITES=	http://pypi.python.org/packages/source/D/Delny/
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://flub.stuffwillmade.org/delny
+HOMEPAGE=	https://bitbucket.org/flub/delny
 COMMENT=	Python module for delaunay triangulation
 LICENSE=	gnu-gpl-v3
 
