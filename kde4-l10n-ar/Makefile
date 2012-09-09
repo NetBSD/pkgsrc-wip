@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/06/12 23:34:26 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/09 20:54:01 othyro Exp $
 #
 
-KDE_LANGUAGE=	Arabic (Arab)
+KDE_LANGUAGE=	Arabic
 KDE_LANGCODE=	ar
 
 .include "../../meta-pkgs/kde4/l10n.mk"
