@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/06/13 19:20:24 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/09 21:08:13 jihbed Exp $
 #
 
 DISTNAME=	rdf-0.9a6
@@ -7,7 +7,7 @@ CATEGORIES=	www python
 MASTER_SITES=	http://pypi.python.org/packages/source/r/rdf/
 
 MAINTAINER=	kamel.derouiche@gmail.com
-HOMEPAGE=	http://pypi.python.org/packages/source/r/rdf/
+HOMEPAGE=	http://rdflib.net/
 COMMENT=	Pure Python package providing the core RDF constructs
 LICENSE=	modified-bsd
 
