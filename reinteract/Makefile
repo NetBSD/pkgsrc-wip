@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/09/10 00:16:43 jihbed Exp $
+# $NetBSD: Makefile,v 1.5 2012/09/10 00:18:08 jihbed Exp $
 #
 
 DISTNAME=	reinteract-0.5.10
@@ -17,6 +17,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=	yes
 
 REPLACE_PYTHON+=	bin/reinteract.in
+PYTHON_VERSIONS_ACCEPTED= 27 26
 PY_PATCHPLIST=	yes
 
 .include "../../devel/py-gobject/buildlink3.mk"
