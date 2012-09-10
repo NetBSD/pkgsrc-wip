@@ -1,16 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/12/29 22:10:18 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/09/10 15:44:55 jihbed Exp $
 ${PYSITELIB}/tashaphyne/__init__.py
 ${PYSITELIB}/tashaphyne/__init__.pyc
 ${PYSITELIB}/tashaphyne/__init__.pyo
 ${PYSITELIB}/tashaphyne/arabic_const.py
 ${PYSITELIB}/tashaphyne/arabic_const.pyc
 ${PYSITELIB}/tashaphyne/arabic_const.pyo
-${PYSITELIB}/tashaphyne/module1.py
-${PYSITELIB}/tashaphyne/module1.pyc
-${PYSITELIB}/tashaphyne/module1.pyo
-${PYSITELIB}/tashaphyne/module2.py
-${PYSITELIB}/tashaphyne/module2.pyc
-${PYSITELIB}/tashaphyne/module2.pyo
 ${PYSITELIB}/tashaphyne/normalize.py
 ${PYSITELIB}/tashaphyne/normalize.pyc
 ${PYSITELIB}/tashaphyne/normalize.pyo
@@ -20,6 +14,3 @@ ${PYSITELIB}/tashaphyne/stem_const.pyo
 ${PYSITELIB}/tashaphyne/stemming.py
 ${PYSITELIB}/tashaphyne/stemming.pyc
 ${PYSITELIB}/tashaphyne/stemming.pyo
-${PYSITELIB}/tashaphyne/testdoc.py
-${PYSITELIB}/tashaphyne/testdoc.pyc
-${PYSITELIB}/tashaphyne/testdoc.pyo
