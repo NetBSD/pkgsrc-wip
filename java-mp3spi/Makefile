@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/09/08 22:31:33 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/10 15:04:15 jihbed Exp $
 #
 
 DISTNAME=	mp3spi1.9.4
@@ -6,7 +6,7 @@ PKGNAME=	java-mp3spi-1.9.4
 CATEGORIES=	audio java
 MASTER_SITES=	http://www.javazoom.net/mp3spi/sources/
 
-MAINTAINER=	kamelderouiche@yahoo.com
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.javazoom.net/mp3spi/
 COMMENT=	Interface to support MP3 (MPEG 1/2/2.5 Layer 1/2/3) audio format
 LICENSE=	gnu-lgpl-v2.1

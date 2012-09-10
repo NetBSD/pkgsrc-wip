@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/09/09 02:38:36 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/10 15:02:50 jihbed Exp $
 #
 
 DISTNAME=	jlayer1.0.1
@@ -7,7 +7,7 @@ CATEGORIES=	audio java
 MASTER_SITES=	http://garr.dl.sourceforge.net/project/javalayer/
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=	kamelderouiche@yahoo.com
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.javazoom.net/javalayer/javalayer.html
 COMMENT=	Library to decode, convert and play MP3 files
 LICENSE=	gnu-lgpl-v2.1
