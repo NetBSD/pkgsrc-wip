@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2011/04/25 21:00:36 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/10 23:23:09 jihbed Exp $
 #
 
-DISTNAME=	algopy-0.3.0
-EGG_NAME=	${DISTNAME}
-PKGNAME=	${PYPKGPREFIX}-${EGG_NAME}
+DISTNAME=	algopy-0.3.1
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	http://pypi.python.org/packages/source/a/algopy/
 
@@ -12,14 +11,13 @@ HOMEPAGE=	http://packages.python.org/algopy
 COMMENT=	Taylor Arithmetic Computation and Algorithmic Differentiation
 LICENSE=	modified-bsd
 
-#DEPENDS+=	${PYPKGPREFIX}-nose>=0.11.3:../../devel/py-nose
-
 PKG_DESTDIR_SUPPORT=	user-destdir
-
-WRKSRC=		${WRKDIR}/algopy-0.3.0
 
 USE_LANGUAGES=	# none
 
+do-test:
+	${RUN} cd ${WRKSRC}/algopy; ${SETENV} ${TEST_ENV} ${PYTHONBIN} test_utils.py
+
 .include "../../math/py-numpy/buildlink3.mk"
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
