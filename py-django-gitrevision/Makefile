@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/05/11 12:47:07 noud4 Exp $
+# $NetBSD: Makefile,v 1.5 2012/09/10 09:22:59 jihbed Exp $
 #
 
 DISTNAME=	django-gitrevision-0.1.4
@@ -10,7 +10,7 @@ MASTER_SITES=	http://pypi.python.org/packages/source/d/django-gitrevision/
 
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://github.com/klen/django-gitrevision.git
-COMMENT=	TODO: Short description of the package
+COMMENT=	Django git revision
 LICENSE=	gnu-lgpl-v2.1
 
 DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django
