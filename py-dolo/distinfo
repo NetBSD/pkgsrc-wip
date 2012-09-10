@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2012/09/10 22:11:34 jihbed Exp $
+
+SHA1 (dolo-0.4-dev.tar.gz) = 88496806cea821bc662d81b665d2abe33f9d494d
+RMD160 (dolo-0.4-dev.tar.gz) = cac6617e5915b0ecd84f71586311118558def98a
+Size (dolo-0.4-dev.tar.gz) = 100303 bytes
+SHA1 (patch-setup.py) = 4d32fcc1948dbb7103855abd0214a98e566f221e
