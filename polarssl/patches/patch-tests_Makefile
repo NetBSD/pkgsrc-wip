@@ -1,0 +1,16 @@
+$NetBSD: patch-tests_Makefile,v 1.1 2012/09/10 12:51:34 mwilhelmy Exp $
+
+Link tests against the static library to make them work without a global
+polarssl installation
+
+--- tests/Makefile.orig	2011-11-27 14:46:59.000000000 +0000
++++ tests/Makefile
+@@ -7,7 +7,7 @@ CFLAGS	+= -I../include -D_FILE_OFFSET_BI
+ 			-Wno-unused-function -Wno-unused-value
+ 
+ OFLAGS	= -O
+-LDFLAGS	+= -L../library -lpolarssl $(SYS_LDFLAGS)
++LDFLAGS	+= ../library/libpolarssl.a $(SYS_LDFLAGS)
+ 
+ APPS =	test_suite_aes			test_suite_arc4			\
+ 		test_suite_base64		test_suite_camellia		\

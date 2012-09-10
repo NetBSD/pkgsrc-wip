@@ -1,9 +1,6 @@
-$NetBSD: patch-Makefile,v 1.6 2012/08/13 21:17:42 mwilhelmy Exp $
+$NetBSD: patch-Makefile,v 1.7 2012/09/10 12:51:34 mwilhelmy Exp $
 
-Fix ``all'' and ``install'' targets of upstream Makefile:
-
- * fixes to make them work with pkgsrc (s/PREFIX/BINPREFIX, BSD_INSTALL_...)
- * disable building and installing of demonstrational programs if not desired
+Fix install target of upstream Makefile
 
 --- Makefile.orig	2011-06-21 08:59:00.000000000 +0000
 +++ Makefile
