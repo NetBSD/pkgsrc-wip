@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2012/09/10 23:52:19 othyro Exp $
+
+SHA1 (mono-dbus-sharp-glib-v0.5-1-gf73a286.tar.gz) = 8f97ef77247d220fec7593db5d44d0aa8e4cb1ee
+RMD160 (mono-dbus-sharp-glib-v0.5-1-gf73a286.tar.gz) = 396190db1dcf8e662027936dafa54b4016a219c4
+Size (mono-dbus-sharp-glib-v0.5-1-gf73a286.tar.gz) = 9271 bytes
