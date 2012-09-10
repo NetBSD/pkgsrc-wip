@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/09/09 03:13:56 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/10 15:12:33 jihbed Exp $
 #
 
 DISTNAME=	tritonus_share-0.3.6
@@ -7,9 +7,9 @@ CATEGORIES=	audio java
 MASTER_SITES=	http://tritonus.org/
 EXTRACT_SUFX=	.jar
 
-MAINTAINER=	kamelderouiche@yahoo.com
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://tritonus.org/plugins.html
-COMMENT=		Shared classes required by all other Tritonus plug-ins
+COMMENT=	Shared classes required by all other Tritonus plug-ins
 LICENSE=	gnu-lgpl-v2.1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
