@@ -1,22 +1,23 @@
-# $NetBSD: Makefile,v 1.2 2012/04/08 19:09:50 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/10 11:22:44 jihbed Exp $
 #
 
-DISTNAME=	rpyc-3.0.7.tar
-EGG_NAME=	rpyc-3.0.7
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/.tar//}
-CATEGORIES=	devel
-MASTER_SITES=	http://pypi.python.org/packages/source/R/RPyC/
-EXTRACT_SUFX=	.gz#md5=49ad8821f990eaf74f483bb0387dd4bf
+DISTNAME=	rpyc-3.2.2
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+CATEGORIES=	net
+MASTER_SITES=	http://pypi.python.org/packages/source/r/rpyc/
 
 MAINTAINER=	kamel.derouiche@gmail.com
-HOMEPAGE=	http://rpyc.wikidot.com/
-COMMENT=	Remote Python Call
+HOMEPAGE=	http://rpyc.sourceforge.net/
+COMMENT= Remote Python Call (RPyC), a transparent and symmetric RPC library
 LICENSE=	mit
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-WRKSRC=		${WRKDIR}/rpyc-3.0.7
-USE_LANGUAGES=	# none
+WRKSRC=		${WRKDIR}/rpyc-3.2.2
 
-.include "../../lang/python/egg.mk"
+
+USE_LANGUAGES=	# none
+PYTHON_VERSIONS_ACCEPTED= 27 26 25
+
+.include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
