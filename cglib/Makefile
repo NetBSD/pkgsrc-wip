@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/09/02 12:10:01 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/10 11:05:23 jihbed Exp $
 #
 
 DISTNAME=	cglib-2.2
@@ -6,7 +6,7 @@ CATEGORIES=	devel java
 MASTER_SITES=	http://garr.dl.sourceforge.net/project/cglib/cglib2/2.2/
 EXTRACT_SUFX=	.jar
 
-MAINTAINER=	kamel.derouiche@gmail.com
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://cglib.sourceforge.net/
 COMMENT=	Code generation library for Java
 LICENSE=	apache-2.0

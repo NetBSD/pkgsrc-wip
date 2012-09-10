@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/08/03 18:55:39 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/10 11:03:29 jihbed Exp $
 #
 
 DISTNAME=	java-cup-11a-runtime
@@ -7,7 +7,7 @@ CATEGORIES=	textproc java
 MASTER_SITES=	http://www2.cs.tum.edu/projects/cup/
 EXTRACT_SUFX=	.jar
 
-MAINTAINER=	kamel.derouiche@gmail.com
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www2.cs.tum.edu/projects/cup/
 COMMENT=	LALR parser generator for java
 
