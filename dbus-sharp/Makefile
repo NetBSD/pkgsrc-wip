@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2012/09/10 22:46:09 othyro Exp $
+# $NetBSD: Makefile,v 1.4 2012/09/10 22:51:57 othyro Exp $
 #
 
 DISTNAME=	dbus-sharp-0.7.0
-CATEGORIES=	devel
+CATEGORIES=	sysutils
 MASTER_SITES=	https://github.com/downloads/mono/dbus-sharp/
 FETCH_USING=	curl
 
