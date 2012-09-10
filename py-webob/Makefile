@@ -1,24 +1,24 @@
-# $NetBSD: Makefile,v 1.2 2011/02/25 09:47:50 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/10 15:26:22 jihbed Exp $
 #
 
-DISTNAME=	WebOb-0.9.8.tar
-EGG_NAME=	${DISTNAME:S/.tar//}
-PKGNAME=	${PYPKGPREFIX}-webob-0.9.8
+DISTNAME=	WebOb-1.2b3
+PKGNAME=	${PYPKGPREFIX}-webob-1.2b3
 CATEGORIES=	 www python
 MASTER_SITES=	http://pypi.python.org/packages/source/W/WebOb/
-EXTRACT_SUFX=	.gz#md5=07d1a1a4b0bf0faa67cb6638c632ea61
+EXTRACT_SUFX=	.zip
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://pypi.python.org/packages/source/W/WebOb/
 COMMENT=	Python module providing WSGI request and response objects
-LICENSE=		mit
+LICENSE=	mit
 
 DEPENDS+=		${PYPKGPREFIX}-simplejson>=2.0.9:../../converters/py-simplejson
 
-WRKSRC=	${WRKDIR}/WebOb-0.9.8
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-PYTHON_VERSIONS_ACCEPTED= 27 26 2
+USE_LANGUAGES=	# none
+
+PYTHON_VERSIONS_ACCEPTED= 27 26
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
