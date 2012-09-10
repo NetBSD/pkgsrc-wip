@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/10/11 11:18:15 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.4 2012/09/10 00:16:43 jihbed Exp $
 bin/reinteract
 ${PYSITELIB}/reinteract/__init__.py
 ${PYSITELIB}/reinteract/__init__.pyc
@@ -36,6 +36,9 @@ ${PYSITELIB}/reinteract/custom_result.pyo
 ${PYSITELIB}/reinteract/data_format.py
 ${PYSITELIB}/reinteract/data_format.pyc
 ${PYSITELIB}/reinteract/data_format.pyo
+${PYSITELIB}/reinteract/destroyable.py
+${PYSITELIB}/reinteract/destroyable.pyc
+${PYSITELIB}/reinteract/destroyable.pyo
 ${PYSITELIB}/reinteract/doc_format.py
 ${PYSITELIB}/reinteract/doc_format.pyc
 ${PYSITELIB}/reinteract/doc_format.pyo
@@ -54,6 +57,9 @@ ${PYSITELIB}/reinteract/file_list.pyo
 ${PYSITELIB}/reinteract/format_escaped.py
 ${PYSITELIB}/reinteract/format_escaped.pyc
 ${PYSITELIB}/reinteract/format_escaped.pyo
+${PYSITELIB}/reinteract/gc_utils.py
+${PYSITELIB}/reinteract/gc_utils.pyc
+${PYSITELIB}/reinteract/gc_utils.pyo
 ${PYSITELIB}/reinteract/global_settings.py
 ${PYSITELIB}/reinteract/global_settings.pyc
 ${PYSITELIB}/reinteract/global_settings.pyo
@@ -99,6 +105,9 @@ ${PYSITELIB}/reinteract/recorded_object.pyo
 ${PYSITELIB}/reinteract/retokenize.py
 ${PYSITELIB}/reinteract/retokenize.pyc
 ${PYSITELIB}/reinteract/retokenize.pyo
+${PYSITELIB}/reinteract/reunicode.py
+${PYSITELIB}/reinteract/reunicode.pyc
+${PYSITELIB}/reinteract/reunicode.pyo
 ${PYSITELIB}/reinteract/rewrite.py
 ${PYSITELIB}/reinteract/rewrite.pyc
 ${PYSITELIB}/reinteract/rewrite.pyo
@@ -114,12 +123,18 @@ ${PYSITELIB}/reinteract/shell_buffer.pyo
 ${PYSITELIB}/reinteract/shell_view.py
 ${PYSITELIB}/reinteract/shell_view.pyc
 ${PYSITELIB}/reinteract/shell_view.pyo
+${PYSITELIB}/reinteract/sidebar.py
+${PYSITELIB}/reinteract/sidebar.pyc
+${PYSITELIB}/reinteract/sidebar.pyo
 ${PYSITELIB}/reinteract/statement.py
 ${PYSITELIB}/reinteract/statement.pyc
 ${PYSITELIB}/reinteract/statement.pyo
 ${PYSITELIB}/reinteract/stdout_capture.py
 ${PYSITELIB}/reinteract/stdout_capture.pyc
 ${PYSITELIB}/reinteract/stdout_capture.pyo
+${PYSITELIB}/reinteract/style.py
+${PYSITELIB}/reinteract/style.pyc
+${PYSITELIB}/reinteract/style.pyo
 ${PYSITELIB}/reinteract/test_utils.py
 ${PYSITELIB}/reinteract/test_utils.pyc
 ${PYSITELIB}/reinteract/test_utils.pyo
@@ -132,6 +147,9 @@ ${PYSITELIB}/reinteract/tokenized_statement.pyo
 ${PYSITELIB}/reinteract/undo_stack.py
 ${PYSITELIB}/reinteract/undo_stack.pyc
 ${PYSITELIB}/reinteract/undo_stack.pyo
+${PYSITELIB}/reinteract/view_sidebar_layout.py
+${PYSITELIB}/reinteract/view_sidebar_layout.pyc
+${PYSITELIB}/reinteract/view_sidebar_layout.pyo
 ${PYSITELIB}/reinteract/window_builder.py
 ${PYSITELIB}/reinteract/window_builder.pyc
 ${PYSITELIB}/reinteract/window_builder.pyo
@@ -141,6 +159,9 @@ ${PYSITELIB}/reinteract/worksheet.pyo
 ${PYSITELIB}/reinteract/worksheet_editor.py
 ${PYSITELIB}/reinteract/worksheet_editor.pyc
 ${PYSITELIB}/reinteract/worksheet_editor.pyo
+${PYSITELIB}/reinteract/worksheet_print.py
+${PYSITELIB}/reinteract/worksheet_print.pyc
+${PYSITELIB}/reinteract/worksheet_print.pyo
 ${PYSITELIB}/replay.py
 ${PYSITELIB}/replay.pyc
 ${PYSITELIB}/replay.pyo
@@ -157,6 +178,7 @@ share/reinteract/dialogs/open-notebook.xml
 share/reinteract/dialogs/preferences.xml
 share/reinteract/dialogs/save-file.xml
 share/reinteract/examples/basics.rws
+share/reinteract/examples/build.rws
 share/reinteract/examples/imshow.rws
 share/reinteract/examples/index.rnb
 share/reinteract/examples/play.rws
