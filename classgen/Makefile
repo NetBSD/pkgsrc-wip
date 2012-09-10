@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/08/02 21:40:41 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/10 09:19:35 jihbed Exp $
 #
 
 DISTNAME=	classgen-1.4-bin
@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	http://classgen.sourceforge.net/downloads/
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=	kamel.derouiche@gmail.com
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://classgen.sourceforge.net/
 COMMENT=	Java tool to generate class frameworks and visitor patterns
 LICENSE=	gnu-gpl-v2
