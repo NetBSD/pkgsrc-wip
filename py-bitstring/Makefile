@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2011/02/25 09:47:48 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.10 2012/09/10 10:56:53 jihbed Exp $
 #
 
-DISTNAME=	bitstring-2.0.1_beta_2
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/_beta_2//}
+DISTNAME=	bitstring-3.0.2
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	http://python-bitstring.googlecode.com/files/
 EXTRACT_SUFX=	.zip
@@ -12,9 +12,11 @@ HOMEPAGE=	http://code.google.com/p/python-bitstring/
 COMMENT=	Tools for analysis and modification of binary data in python
 LICENSE=	mit
 
+
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
+
 PYTHON_VERSIONS_ACCEPTED= 27 26
 
 PYDISTUTILSPKG=	yes
