@@ -1,19 +1,16 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/01/06 10:48:28 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/10 09:29:43 jihbed Exp $
 #
 
-DISTNAME=	smmap-0.8.1
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	devel python
+DISTNAME=	smmap-0.8.2
+CATEGORIES=	wip
 MASTER_SITES=	http://pypi.python.org/packages/source/s/smmap/
 
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	https://github.com/Byron/smmap
 COMMENT=	Git implementation of a sliding window memory map manager
-LICENSE=	modified-bsd #Probably
+LICENSE=	2-clause-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-
-WRKSRC=		${WRKDIR}/smmap-0.8.1
 
 USE_LANGUAGES=	# none
 
