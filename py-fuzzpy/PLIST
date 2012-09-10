@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/05/07 10:57:59 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/09/10 23:04:42 jihbed Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -22,3 +22,6 @@ ${PYSITELIB}/fuzz/graph.pyo
 ${PYSITELIB}/fuzz/iset.py
 ${PYSITELIB}/fuzz/iset.pyc
 ${PYSITELIB}/fuzz/iset.pyo
+${PYSITELIB}/fuzz/plot.py
+${PYSITELIB}/fuzz/plot.pyc
+${PYSITELIB}/fuzz/plot.pyo
