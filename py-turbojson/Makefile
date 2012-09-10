@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/07/14 13:21:37 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/10 23:37:21 jihbed Exp $
 #
 
-DISTNAME=	TurboJson-1.2.1.tar
-EGG_NAME=	${DISTNAME:S/.tar//}
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/T/t/S/J/j/S/.tar//}
+DISTNAME=	TurboJson-1.2.1
+EGG_NAME=	${DISTNAME}
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/T/t/S/J/j/}
 CATEGORIES=	www
 MASTER_SITES=	http://pypi.python.org/packages/source/T/TurboJson/
-EXTRACT_SUFX=	.gz
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://pypi.python.org/pypi/TurboJson

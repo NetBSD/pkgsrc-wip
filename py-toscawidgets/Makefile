@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2012/04/08 19:09:52 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2012/09/10 23:34:22 jihbed Exp $
 #
 
-DISTNAME=	ToscaWidgets-0.9.9.tar
-EGG_NAME=	${DISTNAME:S/.tar//}
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/T/t/S/W/w/S/.tar//}
+DISTNAME=	ToscaWidgets-0.9.9
+EGG_NAME=	${DISTNAME}
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/T/t/S/W/w/}
 CATEGORIES=	www python
 MASTER_SITES=	http://pypi.python.org/packages/source/T/ToscaWidgets/
 EXTRACT_SUFX=	.gz

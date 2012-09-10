@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2012/01/30 08:34:45 noud4 Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/10 23:43:45 jihbed Exp $
 #
 
-DISTNAME=	transaction-1.1.1.tar
-EGG_NAME=	${DISTNAME:S/.tar//}
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/.tar//}
+DISTNAME=	transaction-1.1.1
+EGG_NAME=	${DISTNAME}
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	http://pypi.python.org/packages/source/t/transaction/
-EXTRACT_SUFX=	.gz
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://www.zope.org/Products/ZODB
