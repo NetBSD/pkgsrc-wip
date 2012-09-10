@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/09/09 01:23:35 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/10 08:41:12 jihbed Exp $
 #
 
 DISTNAME=	vorbisspi1.0.3
@@ -6,7 +6,7 @@ PKGNAME=	java-vorbisspi-1.0.3
 CATEGORIES=	audio java
 MASTER_SITES=	http://www.javazoom.net/vorbisspi/sources/
 
-MAINTAINER=	kamelderouiche@yahoo.com
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.javazoom.net/vorbisspi/
 COMMENT=	Java Service Provider Interface for the OGG Vorbis audio format
 LICENSE=	gnu-lgpl-v2.1
