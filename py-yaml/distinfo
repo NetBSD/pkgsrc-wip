@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2012/09/10 21:58:17 jihbed Exp $
+
+SHA1 (PyYAML-3.10.tar.gz) = 476dcfbcc6f4ebf3c06186229e8e2bd7d7b20e73
+RMD160 (PyYAML-3.10.tar.gz) = 0fe20d93030c15b0ea6dcfc8dfee0f1f0d418aeb
+Size (PyYAML-3.10.tar.gz) = 241524 bytes
