@@ -1,8 +1,5 @@
-@comment $NetBSD: PLIST,v 1.2 2012/01/30 06:32:14 noud4 Exp $
-${PYSITELIB}/joblib-0.4.6.dev-py${PYVERSSUFFIX}.egg-info/PKG-INFO
-${PYSITELIB}/joblib-0.4.6.dev-py${PYVERSSUFFIX}.egg-info/SOURCES.txt
-${PYSITELIB}/joblib-0.4.6.dev-py${PYVERSSUFFIX}.egg-info/dependency_links.txt
-${PYSITELIB}/joblib-0.4.6.dev-py${PYVERSSUFFIX}.egg-info/top_level.txt
+@comment $NetBSD: PLIST,v 1.3 2012/09/10 09:03:05 jihbed Exp $
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/joblib/__init__.py
 ${PYSITELIB}/joblib/__init__.pyc
 ${PYSITELIB}/joblib/__init__.pyo
@@ -39,6 +36,9 @@ ${PYSITELIB}/joblib/test/__init__.pyo
 ${PYSITELIB}/joblib/test/common.py
 ${PYSITELIB}/joblib/test/common.pyc
 ${PYSITELIB}/joblib/test/common.pyo
+${PYSITELIB}/joblib/test/test_disk.py
+${PYSITELIB}/joblib/test/test_disk.pyc
+${PYSITELIB}/joblib/test/test_disk.pyo
 ${PYSITELIB}/joblib/test/test_format_stack.py
 ${PYSITELIB}/joblib/test/test_format_stack.pyc
 ${PYSITELIB}/joblib/test/test_format_stack.pyo
@@ -63,6 +63,9 @@ ${PYSITELIB}/joblib/test/test_numpy_pickle.pyo
 ${PYSITELIB}/joblib/test/test_parallel.py
 ${PYSITELIB}/joblib/test/test_parallel.pyc
 ${PYSITELIB}/joblib/test/test_parallel.pyo
+${PYSITELIB}/joblib/test/tmp.py
+${PYSITELIB}/joblib/test/tmp.pyc
+${PYSITELIB}/joblib/test/tmp.pyo
 ${PYSITELIB}/joblib/testing.py
 ${PYSITELIB}/joblib/testing.pyc
 ${PYSITELIB}/joblib/testing.pyo
