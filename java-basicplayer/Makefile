@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/09/08 22:27:03 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/10 08:36:36 jihbed Exp $
 #
 
 DISTNAME=	basicplayer3.0
@@ -7,7 +7,7 @@ CATEGORIES=	audio java
 MASTER_SITES=	http://www.javazoom.net/jlgui/sources/
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=	kamelderouiche@yahoo.com
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.javazoom.net/
 COMMENT=	Threaded simple player class based on JavaSound API
 LICENSE=	gnu-lgpl-v2.1
