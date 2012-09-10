@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2010/08/16 11:17:13 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/09/10 15:17:33 jihbed Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -10,20 +10,23 @@ ${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/xmiparser/__init__.py
 ${PYSITELIB}/xmiparser/__init__.pyc
 ${PYSITELIB}/xmiparser/__init__.pyo
+${PYSITELIB}/xmiparser/doc/umlsample.zargo
 ${PYSITELIB}/xmiparser/interfaces.py
 ${PYSITELIB}/xmiparser/interfaces.pyc
 ${PYSITELIB}/xmiparser/interfaces.pyo
-${PYSITELIB}/xmiparser/odict.py
-${PYSITELIB}/xmiparser/odict.pyc
-${PYSITELIB}/xmiparser/odict.pyo
+${PYSITELIB}/xmiparser/tests/__init__.py
+${PYSITELIB}/xmiparser/tests/__init__.pyc
+${PYSITELIB}/xmiparser/tests/__init__.pyo
+${PYSITELIB}/xmiparser/tests/test_doctest.py
+${PYSITELIB}/xmiparser/tests/test_doctest.pyc
+${PYSITELIB}/xmiparser/tests/test_doctest.pyo
+${PYSITELIB}/xmiparser/tests/xmiparser.txt
 ${PYSITELIB}/xmiparser/utils.py
 ${PYSITELIB}/xmiparser/utils.pyc
 ${PYSITELIB}/xmiparser/utils.pyo
 ${PYSITELIB}/xmiparser/xmiparser.py
 ${PYSITELIB}/xmiparser/xmiparser.pyc
 ${PYSITELIB}/xmiparser/xmiparser.pyo
-${PYSITELIB}/xmiparser/xmiparser.txt
 ${PYSITELIB}/xmiparser/zargoparser.py
 ${PYSITELIB}/xmiparser/zargoparser.pyc
 ${PYSITELIB}/xmiparser/zargoparser.pyo
-share/doc/py-xmiparser/xmiparser.txt
