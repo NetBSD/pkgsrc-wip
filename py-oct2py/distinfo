@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2012/09/11 14:01:44 jihbed Exp $
+
+SHA1 (oct2py-0.3.4.tar.gz) = d0c4ff3aba732dd276520ae0146962b856081226
+RMD160 (oct2py-0.3.4.tar.gz) = 41a6731b9627c5299bfbf4b761ecc2c14b44de7c
+Size (oct2py-0.3.4.tar.gz) = 109025 bytes
