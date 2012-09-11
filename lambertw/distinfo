@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2012/09/11 08:21:56 jihbed Exp $
+
+SHA1 (LambertW-1.1.tar.gz) = 029a40053ade4ad204413619444d413ddef5b596
+RMD160 (LambertW-1.1.tar.gz) = cb37780a6f11431bba13f53b0f53fd85aff7be4d
+Size (LambertW-1.1.tar.gz) = 25223 bytes
+SHA1 (patch-LambertW.cc) = b259daa7975e2b55d10720e6b5fafa9fc373f839
