@@ -1,6 +1,6 @@
 #!/usr/bin/env runawk
 
-# Copyright (c) 2007-2010, Aleksey Cheusov <vle@gmx.net>
+# Copyright (c) 2007-2012, Aleksey Cheusov <vle@gmx.net>
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -30,16 +30,29 @@
 
 #env "LC_ALL=C"
 
-#use "alt_getopt.awk"
+#use "power_getopt.awk"
 
-###############################################################
+#.begin-str help
+# pkg_src_fetch_var - hack for fetching variable values from package,
+#   (partially(!!!) emulates bmake). ../../mk/* and bl3.mk are ignored.
+#
+# usage: pkg_src_fetch_var [OPTIONS] [files...]
+# OPTIONS:
+# -h               display this help message
+# =f <varnames>    list of variable names separated by space.
+#                  PKGNAME and PKGPATH are fetched by default
+# -s               slave mode for paexec(1)
+# PKGPATHs are read from files or stdin, one PKGPATH per line
+#
 # output format:
 #    for success:
 #       + <TAB> FIELD1 <TAB> FIELD2 ...FIELD-N
 #    for failure:
 #       - <TAB> RAW_FIELD1 <TAB> RAW_FIELD2 ... RAW_FIELD-N PKGPATH
 #    PKGNAME means PKGNAME[nbPKGREVISION]
+#.end-str
 
+###############################################################
 BEGIN {
 	good_pkgname_re = "^[^${}()]+$" #"^[[:alnum:]_-]+-[[:digit:]]+([.][[:digit:]]+)*$"
 }
@@ -79,35 +92,15 @@ function get_var_value (varname,                 value, pkgrev){
 	}
 }
 
-function usage (){
-	printf "\
-pkg_src_fetch_var - hack for obtaining variable values from package,\n\
-   (partially(!!!) emulates bmake)\n\
-\n\
-usage: pkg_src_fetch_var [OPTIONS] [files...]\n\
-OPTIONS:\n\
-  -h                  display this help message\n\
-  -v|-f <varnames>    list of variable names\n\
-                      separated by space.\n\
-               PKGNAME and PKGPATH are fetched by default\n\
-PKGPATHs are read from files or stdin, one PKGPATH per line\n\
-" > "/dev/stderr"
-}
-
 BEGIN {
 	# options and fields
-	while (getopt("hf:v:s")){
-		if (optopt == "h"){
-			usage()
-			exit 0
-		}else if (optopt == "f" || optopt == "v"){
-			fields = optarg
-		}else if (optopt == "s"){
-			slave_mode = 1
-		}else{
-			abort()
-		}
+	if (getarg("h")){
+		print_help()
+		exitnow(0)
 	}
+
+	fields     = getarg("f")
+	slave_mode = getarg("s")
 
 	if (fields == "")
 		fields = "PKGNAME PKGPATH"
