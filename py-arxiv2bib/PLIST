@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2012/09/12 18:01:16 jihbed Exp $
+bin/arxiv2bib
+${PYSITELIB}/arxiv2bib.py
+${PYSITELIB}/arxiv2bib.pyc
+${PYSITELIB}/arxiv2bib.pyo
