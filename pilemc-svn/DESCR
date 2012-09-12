@@ -1,0 +1,6 @@
+ PileMC is a tool for the simulation of pile-up events at HepMC level.
+Technically, PileMC reads two HepMC files, one of which contains signal events
+and the other one contains minimum-bias events. The program generates a HepMC
+file containing signal events superimposed with min-bias events,
+yielding an event-generator-level approximation to the presence
+of pile-up in high-luminosity collisions.
