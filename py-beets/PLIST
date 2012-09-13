@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.2 2012/06/15 06:55:19 thomasklausner Exp $
-bin/beet${PYVERSSUFFIX}
+@comment $NetBSD: PLIST,v 1.3 2012/09/13 13:49:32 thomasklausner Exp $
+bin/beet2.7
 ${PYSITELIB}/${EGG_NAME}-nspkg.pth
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -14,9 +14,6 @@ ${PYSITELIB}/beets/__init__.pyo
 ${PYSITELIB}/beets/autotag/__init__.py
 ${PYSITELIB}/beets/autotag/__init__.pyc
 ${PYSITELIB}/beets/autotag/__init__.pyo
-${PYSITELIB}/beets/autotag/art.py
-${PYSITELIB}/beets/autotag/art.pyc
-${PYSITELIB}/beets/autotag/art.pyo
 ${PYSITELIB}/beets/autotag/hooks.py
 ${PYSITELIB}/beets/autotag/hooks.pyc
 ${PYSITELIB}/beets/autotag/hooks.pyo
@@ -47,6 +44,9 @@ ${PYSITELIB}/beets/ui/commands.pyo
 ${PYSITELIB}/beets/util/__init__.py
 ${PYSITELIB}/beets/util/__init__.pyc
 ${PYSITELIB}/beets/util/__init__.pyo
+${PYSITELIB}/beets/util/bluelet.py
+${PYSITELIB}/beets/util/bluelet.pyc
+${PYSITELIB}/beets/util/bluelet.pyo
 ${PYSITELIB}/beets/util/enumeration.py
 ${PYSITELIB}/beets/util/enumeration.pyc
 ${PYSITELIB}/beets/util/enumeration.pyo
@@ -65,9 +65,6 @@ ${PYSITELIB}/beetsplug/bench.pyo
 ${PYSITELIB}/beetsplug/bpd/__init__.py
 ${PYSITELIB}/beetsplug/bpd/__init__.pyc
 ${PYSITELIB}/beetsplug/bpd/__init__.pyo
-${PYSITELIB}/beetsplug/bpd/bluelet.py
-${PYSITELIB}/beetsplug/bpd/bluelet.pyc
-${PYSITELIB}/beetsplug/bpd/bluelet.pyo
 ${PYSITELIB}/beetsplug/bpd/gstplayer.py
 ${PYSITELIB}/beetsplug/bpd/gstplayer.pyc
 ${PYSITELIB}/beetsplug/bpd/gstplayer.pyo
@@ -77,6 +74,9 @@ ${PYSITELIB}/beetsplug/chroma.pyo
 ${PYSITELIB}/beetsplug/embedart.py
 ${PYSITELIB}/beetsplug/embedart.pyc
 ${PYSITELIB}/beetsplug/embedart.pyo
+${PYSITELIB}/beetsplug/fetchart.py
+${PYSITELIB}/beetsplug/fetchart.pyc
+${PYSITELIB}/beetsplug/fetchart.pyo
 ${PYSITELIB}/beetsplug/importfeeds.py
 ${PYSITELIB}/beetsplug/importfeeds.pyc
 ${PYSITELIB}/beetsplug/importfeeds.pyo
@@ -86,9 +86,6 @@ ${PYSITELIB}/beetsplug/info.pyo
 ${PYSITELIB}/beetsplug/inline.py
 ${PYSITELIB}/beetsplug/inline.pyc
 ${PYSITELIB}/beetsplug/inline.pyo
-${PYSITELIB}/beetsplug/joke.py
-${PYSITELIB}/beetsplug/joke.pyc
-${PYSITELIB}/beetsplug/joke.pyo
 ${PYSITELIB}/beetsplug/lastgenre/__init__.py
 ${PYSITELIB}/beetsplug/lastgenre/__init__.pyc
 ${PYSITELIB}/beetsplug/lastgenre/__init__.pyo
@@ -100,9 +97,6 @@ ${PYSITELIB}/beetsplug/lyrics.pyo
 ${PYSITELIB}/beetsplug/mbcollection.py
 ${PYSITELIB}/beetsplug/mbcollection.pyc
 ${PYSITELIB}/beetsplug/mbcollection.pyo
-${PYSITELIB}/beetsplug/mbsync.py
-${PYSITELIB}/beetsplug/mbsync.pyc
-${PYSITELIB}/beetsplug/mbsync.pyo
 ${PYSITELIB}/beetsplug/mpdupdate.py
 ${PYSITELIB}/beetsplug/mpdupdate.pyc
 ${PYSITELIB}/beetsplug/mpdupdate.pyo

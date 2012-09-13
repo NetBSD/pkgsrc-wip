@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2012/06/15 06:55:19 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2012/09/13 13:49:32 thomasklausner Exp $
 #
 
-DISTNAME=	beets-1.0b14
+DISTNAME=	beets-1.0b15
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	audio
 MASTER_SITES=	http://beets.googlecode.com/files/
