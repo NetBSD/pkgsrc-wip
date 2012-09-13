@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2012/09/13 01:47:02 outpaddling Exp $
+bin/behead
+bin/gcol
+bin/index
+bin/index.cgi
+bin/mongoose
+bin/pbrowse
+bin/pbrowse.cgi
+bin/pseq
+bin/tab2vcf
+lib/libplinkseq.la
