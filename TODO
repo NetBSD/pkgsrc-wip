@@ -18,7 +18,6 @@ Suggested package updates
 	o dhex-0.68
 	o di-4.31
 	o directfb-1.0.0
-	o dmxproto-2.3.1
 	o ecasound-2.9
 	o ecb-2.40
 	o editline-20120311.3.0
@@ -30,9 +29,6 @@ Suggested package updates
 	o evolution-couchdb-0.4.4
 	o fakenes-0.5.7
 	o firebird-2.5
-	o fonttosfnt-1.0.4
-	o fslsfonts-1.0.4
-	o fstobdf-1.0.5
 	o gambas2-2.23.0
 	o gcc42-4.2.4
 	o gcc43-4.3.4
@@ -74,9 +70,7 @@ Suggested package updates
 	o kmymoney4-4.6.2
 	o kvirc-3.4.2
 	o lasem-0.3.2
-	o libAppleWM-1.4.0
 	o libburn-1.2.4
-	o libdmx-1.1.2
 	o libgksu-2.0.4
 	o libgtk-java-2.10.2
 	o libmemcached-0.53
@@ -94,7 +88,6 @@ Suggested package updates
 	o mumble-1.2.3
 	o mupen64-0.5
 	o nautilus-open-terminal-0.19
-	o netwmpager-2.04
 	o newsbeuter-2.4
 	o ogmrip-0.13.7
 	o omega-1.2.10
@@ -106,7 +99,6 @@ Suggested package updates
 	o pessulus-2.30.4
 	o pike-7.8.352
 	o py-PyPE-2.9
-	o py-beets-1.0b15
 	o py-gnucash-0.7.55
 	o py-rpyc-3.2.1
 	o py-zeitgeist-0.9
@@ -118,11 +110,9 @@ Suggested package updates
 	o samhain-3.0.5
 	o scantailor-0.9.11.1
 	o sflphone-0.7.2
-	o showfont-1.0.3
 	o siege-2.72
 	o sleuthkit-3.2.3
 	o smc-1.8
-	o smproxy-1.0.5
 	o spe-0.8.2a
 	o sxemacs-22.1.10
 	o task-1.9.4
@@ -133,13 +123,9 @@ Suggested package updates
 	o uptimed-0.3.17
 	o virtualbox-4.1.22
 	o xaralx-bin-0.7.1692
-	o xclipboard-1.1.2
-	o xcursor-themes-1.0.3
 	o xf86-input-synaptics-1.6.2
 	o xf86-video-geode-2.11.13
 	o xf86-video-nouveau-1.0.2
-	o xf86rushproto-1.1.2
-	o xfs-1.1.2
 	o xinetd-2.3.15
 	o xmms2-0.6
 
