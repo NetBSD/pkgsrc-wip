@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4860 2012/09/13 01:16:56 outpaddling Exp $
+# $Id: Makefile,v 1.4861 2012/09/13 01:47:58 outpaddling Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2180,6 +2180,7 @@ SUBDIR+=	pkgmanager
 SUBDIR+=	plasti
 SUBDIR+=	plconfig
 SUBDIR+=	plink
+SUBDIR+=	plinkseq
 SUBDIR+=	plod
 SUBDIR+=	plplot
 SUBDIR+=	plugger
