@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2009/11/09 19:37:39 tnn2 Exp $
+# $NetBSD: Makefile,v 1.4 2012/09/13 13:41:20 thomasklausner Exp $
 #
 
-DISTNAME=	fstobdf-1.0.3
+DISTNAME=	fstobdf-1.0.5
 CATEGORIES=	fonts x11
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=	.tar.bz2
