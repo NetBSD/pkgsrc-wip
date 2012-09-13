@@ -32,7 +32,6 @@ Suggested package updates
 	o gambas2-2.23.0
 	o gcc42-4.2.4
 	o gcc43-4.3.4
-	o gcc47-4.7.0
 	o geant-4.9.5p1
 	o gforge-4.5.11
 	o giggle-0.6.1
@@ -99,7 +98,6 @@ Suggested package updates
 	o pessulus-2.30.4
 	o pike-7.8.352
 	o py-PyPE-2.9
-	o py-gnucash-0.7.55
 	o py-rpyc-3.2.1
 	o py-zeitgeist-0.9
 	o qcomicbook-0.8.1
