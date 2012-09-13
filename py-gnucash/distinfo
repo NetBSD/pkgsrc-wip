@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/01/17 21:19:21 thomasklausner Exp $
-
-SHA1 (python-gnucash-0.7.10.tar.gz) = 0afd8734605d71ad4856d22bfbe5d598260010e4
-RMD160 (python-gnucash-0.7.10.tar.gz) = 28ec7968e40277e799aac2970e698ca342a5c999
-Size (python-gnucash-0.7.10.tar.gz) = 39936 bytes

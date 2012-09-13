@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/01/17 21:19:21 thomasklausner Exp $
-${PYSITELIB}/_gnucash_.so
-${PYSITELIB}/gnucash.py
-${PYSITELIB}/gnucash.pyc
-${PYSITELIB}/gnucash.pyo
-${PYSITELIB}/gnucash_.py
-${PYSITELIB}/gnucash_.pyc
-${PYSITELIB}/gnucash_.pyo
