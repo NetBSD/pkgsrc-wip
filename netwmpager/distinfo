@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2012/01/14 14:34:05 thomasklausner Exp $
+$NetBSD: distinfo,v 1.2 2012/09/13 13:45:21 thomasklausner Exp $
 
-SHA1 (netwmpager-2.03.tar.bz2) = df997a95917d4f36029822d998fd27aabc1b5561
-RMD160 (netwmpager-2.03.tar.bz2) = b7b4008650ba0f25b685b9f29046680fc453fde0
-Size (netwmpager-2.03.tar.bz2) = 175101 bytes
+SHA1 (netwmpager-2.04.tar.bz2) = e6ebacdfd14844eabdc7448948bc6c57185e7442
+RMD160 (netwmpager-2.04.tar.bz2) = a7b7f3f6131764e3d2fae80cf9b201482d97f50c
+Size (netwmpager-2.04.tar.bz2) = 175696 bytes
