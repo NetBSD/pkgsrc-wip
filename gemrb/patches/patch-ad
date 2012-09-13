@@ -1,19 +1,9 @@
-$NetBSD: patch-ad,v 1.4 2011/08/22 13:41:00 thomasklausner Exp $
+$NetBSD: patch-ad,v 1.5 2012/09/13 12:31:34 thomasklausner Exp $
 
-Fix installation path for man pages for pkgsrc.
 Fix linking with gcc-4.5.
 
 --- CMakeLists.txt.orig	2011-07-24 12:10:13.000000000 +0000
 +++ CMakeLists.txt
-@@ -78,7 +78,7 @@ elseif (${LAYOUT} MATCHES "fhs")
- 	SET_PATH( LIB_DIR ${CMAKE_INSTALL_PREFIX}/lib/gemrb )
- 	SET_PATH( PLUGIN_DIR ${LIB_DIR}/plugins )
- 	SET_PATH( DATA_DIR ${CMAKE_INSTALL_PREFIX}/share/gemrb )
--	SET_PATH( MAN_DIR ${CMAKE_INSTALL_PREFIX}/share/man/man6 )
-+	SET_PATH( MAN_DIR ${CMAKE_INSTALL_PREFIX}/man/man6 )
- 	SET_PATH( BIN_DIR ${CMAKE_INSTALL_PREFIX}/bin )
- 	IF( NOT SYSCONF_DIR )
- 		if ( ${CMAKE_INSTALL_PREFIX} STREQUAL "/usr" )
 @@ -249,6 +251,7 @@ MACRO(ADD_GEMRB_PLUGIN plugin_name)
  		if (NOT UNSAFE_PLUGIN)
  			TARGET_LINK_LIBRARIES(${plugin_name} gemrb_core ${CMAKE_THREAD_LIBS_INIT})

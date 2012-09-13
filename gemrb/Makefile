@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2011/08/22 13:41:00 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2012/09/13 12:31:33 thomasklausner Exp $
 #
 
 DISTNAME=	gemrb-0.6.5
@@ -17,8 +17,9 @@ USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake pkg-config
 
-BUILDLINK_TRANSFORM+=	rm:-Werror
+CMAKE_ARGS+=		-DDISABLE_WERROR=1
 CMAKE_ARGS+=		-DINSOURCEBUILD=1
+CMAKE_ARGS+=		-DMAN_DIR:PATH=${PREFIX}/${PKGMANDIR}/man6
 CMAKE_ARGS+=		-DSDLMIXER_INCLUDE_DIR=${BUILDLINK_PREFIX.SDL_mixer}/include
 INSTALL_MAKE_FLAGS+=	sysconfdir=${PREFIX}/share/examples/gemrb
 
