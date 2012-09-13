@@ -1,29 +1,28 @@
-# $NetBSD: Makefile,v 1.1 2012/09/13 01:15:34 outpaddling Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/13 01:20:59 outpaddling Exp $
 #
 
 DISTNAME=	plink-1.07-src
-CATEGORIES=	science
+CATEGORIES=	biology science
 MASTER_SITES=	http://pngu.mgh.harvard.edu/~purcell/plink/dist/
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=	INSERT_YOUR_MAIL_ADDRESS_HERE
+MAINTAINER=	jwbacon@tds.net
 HOMEPAGE=	http://pngu.mgh.harvard.edu/~purcell/plink/dist/
 COMMENT=	TODO: Short description of the package
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c c++ fortran77
-# USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake
 
 CXXFLAGS+=	-Dfopen64=fopen
 
 .include "../../mk/bsd.prefs.mk"
 
+# Temporary hack to build on our RHEL cluster.  Make f2c a dep?
 .if ${OPSYS} != "Linux"
 MAKE_FLAGS+=	LIBDL=""
-# Temporary hack.  Make f2c a dep?
 LIB_LAPACK=	"${LOCALBASE}/lib/liblapack.a ${LOCALBASE}/lib/libblas.a ${LOCALBASE}/lib/libf2c.a"
 .else
 LIB_LAPACK=	"-L${LOCALBASE}/lib -llapack -lblas -lgfortran"
