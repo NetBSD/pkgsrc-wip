@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:27 thomasklausner Exp $
-include/X11/extensions/applewm.h
-include/X11/extensions/applewmstr.h
-lib/pkgconfig/applewmproto.pc
