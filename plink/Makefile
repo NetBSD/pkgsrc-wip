@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/09/14 15:48:12 asau Exp $
+# $NetBSD: Makefile,v 1.8 2012/09/14 16:06:26 asau Exp $
 #
 
 DISTNAME=	plink-1.07-src
@@ -34,6 +34,7 @@ do-test:
 	cd $(WRKSRC) && ./plink --file test --make-bed
 
 .include "../../devel/libf2c/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../math/lapack/buildlink3.mk"
 .include "../../math/blas/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
