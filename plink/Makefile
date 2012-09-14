@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/09/14 15:06:55 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/09/14 15:19:39 asau Exp $
 #
 
 DISTNAME=	plink-1.07-src
@@ -18,11 +18,12 @@ USE_TOOLS+=	gmake
 
 CXXFLAGS+=	-Dfopen64=fopen
 
+MAKE_FLAGS+=	LIBDL=${DL_LIBS:Q}
+
 .include "../../mk/bsd.prefs.mk"
 
 # Temporary hack to build on our RHEL cluster.  Make f2c a dep?
 .if ${OPSYS} != "Linux"
-MAKE_FLAGS+=	LIBDL=""
 LIB_LAPACK=	"${LOCALBASE}/lib/liblapack.a ${LOCALBASE}/lib/libblas.a ${LOCALBASE}/lib/libf2c.a"
 .else
 LIB_LAPACK=	"-L${LOCALBASE}/lib -llapack -lblas -lgfortran"
