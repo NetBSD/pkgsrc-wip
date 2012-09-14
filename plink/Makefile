@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/09/14 15:29:22 asau Exp $
+# $NetBSD: Makefile,v 1.6 2012/09/14 15:43:16 asau Exp $
 #
 
 DISTNAME=	plink-1.07-src
@@ -20,17 +20,8 @@ CXXFLAGS+=	-Dfopen64=fopen
 
 MAKE_FLAGS+=	LIBDL=${DL_LIBS:Q}
 
-.include "../../mk/bsd.prefs.mk"
-
-# Temporary hack to build on our RHEL cluster.  Make f2c a dep?
-.if ${OPSYS} != "Linux"
-LIB_LAPACK=	"${LOCALBASE}/lib/liblapack.a ${LOCALBASE}/lib/libblas.a ${LOCALBASE}/lib/libf2c.a"
-.else
-LIB_LAPACK=	"-L${LOCALBASE}/lib -llapack -lblas -lgfortran"
-.endif
-
-MAKE_FLAGS+=	WITH_LAPACK=1 \
-		LIB_LAPACK=${LIB_LAPACK}
+LIB_LAPACK=	-L${LOCALBASE}/lib ${COMPILER_RPATH_FLAG}${LOCALBASE}/lib -llapack -lblas -lf2c
+MAKE_FLAGS+=	WITH_LAPACK=1 LIB_LAPACK=${LIB_LAPACK:Q}
 
 do-install:
 	${MKDIR} ${DESTDIR}${PREFIX}/bin
