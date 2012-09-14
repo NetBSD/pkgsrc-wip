@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/09/14 15:19:39 asau Exp $
+# $NetBSD: Makefile,v 1.5 2012/09/14 15:29:22 asau Exp $
 #
 
 DISTNAME=	plink-1.07-src
@@ -35,6 +35,12 @@ MAKE_FLAGS+=	WITH_LAPACK=1 \
 do-install:
 	${MKDIR} ${DESTDIR}${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/plink ${DESTDIR}${PREFIX}/bin
+
+do-test:
+	cd $(WRKSRC) && ./plink --file test
+	cd $(WRKSRC) && ./plink --file test --freq
+	cd $(WRKSRC) && ./plink --file test --assoc
+	cd $(WRKSRC) && ./plink --file test --make-bed
 
 .include "../../devel/libf2c/buildlink3.mk"
 .include "../../math/lapack/buildlink3.mk"
