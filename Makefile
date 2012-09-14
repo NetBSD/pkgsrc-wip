@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4864 2012/09/13 14:13:28 thomasklausner Exp $
+# $Id: Makefile,v 1.4865 2012/09/14 17:44:04 kristerw Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1843,10 +1843,9 @@ SUBDIR+=	p5-Arch
 SUBDIR+=	p5-Astro-SpaceTrack
 SUBDIR+=	p5-AxKit
 SUBDIR+=	p5-B-Deobfuscate
-SUBDIR+=	p5-biblatex-biber
 SUBDIR+=	p5-Bit-Vector-Minimal
-SUBDIR+=	p5-Business-ISSN
 SUBDIR+=	p5-Business-ISMN
+SUBDIR+=	p5-Business-ISSN
 SUBDIR+=	p5-CGI-Application-Dispatch
 SUBDIR+=	p5-CGI-Application-Plugin-AutoRunmode
 SUBDIR+=	p5-CGI-Application-Plugin-ConfigAuto
@@ -2019,8 +2018,8 @@ SUBDIR+=	p5-Text-Quote
 SUBDIR+=	p5-Text-Trim
 SUBDIR+=	p5-Text-VimColor
 SUBDIR+=	p5-TheSchwartz
-SUBDIR+=	p5-Tie-DB_Lock
 SUBDIR+=	p5-Tie-Cycle
+SUBDIR+=	p5-Tie-DB_Lock
 SUBDIR+=	p5-Time-Piece-Range
 SUBDIR+=	p5-Tk-TableMatrix
 SUBDIR+=	p5-UNIVERSAL-exports
@@ -2035,6 +2034,7 @@ SUBDIR+=	p5-XML-DT
 SUBDIR+=	p5-XML-DTDParser
 SUBDIR+=	p5-XML-RSS-LibXML
 SUBDIR+=	p5-XML-Writer-Simple
+SUBDIR+=	p5-biblatex-biber
 SUBDIR+=	p5-mozldap
 SUBDIR+=	p5-qt3
 SUBDIR+=	p5-spf-policyd
