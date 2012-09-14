@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/09/14 17:08:00 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/14 17:30:35 asau Exp $
 #
 
 DISTNAME=	plinkseq-0.08
@@ -9,8 +9,6 @@ MAINTAINER=	jwbacon@tds.net
 HOMEPAGE=	http://atgu.mgh.harvard.edu/plinkseq/
 COMMENT=	C/C++ library for working with human genetic variation data
 LICENSE=	gnu-gpl-v2	# Assuming same as plink.  No info on web.
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
