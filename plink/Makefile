@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/09/14 16:08:58 asau Exp $
+# $NetBSD: Makefile,v 1.10 2012/09/14 17:37:37 asau Exp $
 #
 
 DISTNAME=	plink-1.07-src
@@ -7,11 +7,9 @@ MASTER_SITES=	http://pngu.mgh.harvard.edu/~purcell/plink/dist/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	jwbacon@tds.net
-HOMEPAGE=	http://pngu.mgh.harvard.edu/~purcell/plink/dist/
+HOMEPAGE=	http://pngu.mgh.harvard.edu/~purcell/plink/
 COMMENT=	Whole-genome association analysis toolset
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c c++ fortran77
 USE_TOOLS+=	gmake
@@ -23,8 +21,9 @@ MAKE_FLAGS+=	LIBDL=${DL_LIBS:Q}
 LIB_LAPACK=	-L${LOCALBASE}/lib ${COMPILER_RPATH_FLAG}${LOCALBASE}/lib -llapack -lblas -lf2c
 MAKE_FLAGS+=	WITH_LAPACK=1 LIB_LAPACK=${LIB_LAPACK:Q}
 
+INSTALLATION_DIRS=	bin
+
 do-install:
-	${MKDIR} ${DESTDIR}${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/plink ${DESTDIR}${PREFIX}/bin
 
 do-test:
