@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/09/14 15:43:16 asau Exp $
+# $NetBSD: Makefile,v 1.7 2012/09/14 15:48:12 asau Exp $
 #
 
 DISTNAME=	plink-1.07-src
@@ -8,7 +8,7 @@ EXTRACT_SUFX=	.zip
 
 MAINTAINER=	jwbacon@tds.net
 HOMEPAGE=	http://pngu.mgh.harvard.edu/~purcell/plink/dist/
-COMMENT=	TODO: Short description of the package
+COMMENT=	Whole-genome association analysis toolset
 LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
