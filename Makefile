@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4865 2012/09/14 17:44:04 kristerw Exp $
+# $Id: Makefile,v 1.4866 2012/09/14 17:48:15 kristerw Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -654,7 +654,6 @@ SUBDIR+=	fuse-google-drive
 SUBDIR+=	fuse-smbfs
 SUBDIR+=	fusefs-btfs
 SUBDIR+=	fusefs-sshfs
-SUBDIR+=	fusil
 SUBDIR+=	fvcom2
 SUBDIR+=	fvcool
 SUBDIR+=	fvwm-crystal
@@ -2315,7 +2314,6 @@ SUBDIR+=	py-csp
 SUBDIR+=	py-cvf
 SUBDIR+=	py-cvxopt
 SUBDIR+=	py-cythongsl
-SUBDIR+=	py-daemon
 SUBDIR+=	py-dana
 SUBDIR+=	py-datarray
 SUBDIR+=	py-datatree
@@ -2433,7 +2431,6 @@ SUBDIR+=	py-libtextcat
 SUBDIR+=	py-libtorrent-rasterbar
 SUBDIR+=	py-libtunepimp
 SUBDIR+=	py-liveplots
-SUBDIR+=	py-lockfile
 SUBDIR+=	py-logilab-database
 SUBDIR+=	py-logilab-mtconverter
 SUBDIR+=	py-logilab-pigg
