@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/09/13 01:20:59 outpaddling Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/14 15:06:55 asau Exp $
 #
 
 DISTNAME=	plink-1.07-src
@@ -35,6 +35,8 @@ do-install:
 	${MKDIR} ${DESTDIR}${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/plink ${DESTDIR}${PREFIX}/bin
 
+.include "../../devel/libf2c/buildlink3.mk"
 .include "../../math/lapack/buildlink3.mk"
 .include "../../math/blas/buildlink3.mk"
+.include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
