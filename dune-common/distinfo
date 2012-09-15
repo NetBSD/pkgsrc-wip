@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2012/09/15 23:57:55 jihbed Exp $
+
+SHA1 (dune-common-2.2.0.tar.gz) = bde2947eeec1d118169094575bbb2f350c090f58
+RMD160 (dune-common-2.2.0.tar.gz) = 8fb5a33954f171c080d0f52417a149e6294425d1
+Size (dune-common-2.2.0.tar.gz) = 3931743 bytes

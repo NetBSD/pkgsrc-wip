@@ -1,0 +1,3 @@
+contains the basic classes used by all DUNE modules. It provides some
+infrastructural classes for debugging and exception handling as well as a
+library to handle dense matrices and vectors.
