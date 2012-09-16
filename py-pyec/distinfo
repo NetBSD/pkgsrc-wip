@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2012/09/16 23:00:46 jihbed Exp $
+
+SHA1 (PyEC-0.2.5.tar.gz) = 6e1ff658f5b6a8c85dc0f84285b95c303f02fc2c
+RMD160 (PyEC-0.2.5.tar.gz) = 3d1d556822a2f412f0b7c1308b9847b88056c3cb
+Size (PyEC-0.2.5.tar.gz) = 1256991 bytes
