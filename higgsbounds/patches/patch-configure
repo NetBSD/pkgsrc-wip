@@ -1,0 +1,48 @@
+$NetBSD: patch-configure,v 1.1 2012/09/16 13:29:47 jihbed Exp $
+
+--- configure.orig	2012-05-18 11:42:21.000000000 +0100
++++ configure	2012-09-16 11:58:05.000000000 +0100
+@@ -28,25 +28,15 @@
+ # e.g.
+ 
+ #  a) GNU compiler (http://gcc.gnu.org/wiki/GFortran): 
+-F90C = gfortran
+-F77C = gfortran
+-F90FLAGS = -fbounds-check
+ # use the compiler flag -fopenmp for parallel processing
+ 
+ #  b) g95 compiler (www.g95.org):
+-#F90C = g95
+-#F77C = g95
+-#F90FLAGS = -fbounds-check -ffree-line-length-huge
++F90C = g95
++F77C = g95
++F90FLAGS = -fbounds-check -ffree-line-length-huge
+ 
+ #  c)  Portland Group Inc. compiler: 
+-#F90C = pgf90
+-#F77C = pgf90
+-#F90FLAGS = -C -Ktrap=fp -Mbounds
+-
+-#  d) Intel compiler:
+-#F90C = ifort
+-#F77C = ifort
+-#F90FLAGS = -C 
++
+ 
+ #if using the NAG compiler, you need the compiler flag -DNAGf90Fortran
+ #because the subroutines flush,iargc,getarg need to use modules
+@@ -61,10 +51,10 @@
+ 
+ # for example:
+ 
+-FHINCLUDE = -I/blah/blah/FeynHiggs-2.x.x/i586-linux/include
+-FHLIBS = -L/blah/blah/FeynHiggs-2.x.x/i586-linux/lib -lFH
++#FHINCLUDE = -I/blah/blah/FeynHiggs-2.x.x/i586-linux/include
++#FHLIBS = -L/blah/blah/FeynHiggs-2.x.x/i586-linux/lib -lFH
+ 
+-CPSUPERHLIBS = -L/blah/blah/CPsuperH2 -lcpsuperh2 
++#CPSUPERHLIBS = -L/blah/blah/CPsuperH2 -lcpsuperh2 
+ 
+ # Note that care must be taken to ensure that consistent compilers are used
+ # If you get error messages similar to 
