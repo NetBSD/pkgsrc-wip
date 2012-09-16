@@ -1,5 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/12/05 21:06:58 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/09/16 08:56:35 jihbed Exp $
+include/libxc_funcs_m.mod
 include/xc.h
 include/xc_config.h
+include/xc_f90_lib_m.mod
+include/xc_f90_types_m.mod
 include/xc_funcs.h
-lib/libxc.a
+lib/libxc.la
+lib/pkgconfig/libxc.pc
