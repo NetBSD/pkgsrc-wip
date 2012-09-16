@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2012/09/16 00:02:17 jihbed Exp $
+
+SHA1 (mplabs-1.1.tar.gz) = e71ab914b2917ee017fae97556578166648ca87c
+RMD160 (mplabs-1.1.tar.gz) = 2b9df56d9f6c25149dffc6f93b055cd878b99909
+Size (mplabs-1.1.tar.gz) = 2616550 bytes
+SHA1 (patch-install.sh) = b80a5a34a1279dbd20a5bd84ddccf2b1fa2f518d
