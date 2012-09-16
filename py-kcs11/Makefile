@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2012/09/09 21:20:48 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/16 09:22:44 noud4 Exp $
 #
 
 DISTNAME=	PyKCS11-1.2.4
+PKGREVISION=	1
 CATEGORIES=	wip
 MASTER_SITES=	http://garr.dl.sourceforge.net/project/pkcs11wrap/pykcs11/pykcs11-1.2.4/
 

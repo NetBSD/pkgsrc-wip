@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2012/09/10 09:03:05 jihbed Exp $
+# $NetBSD: Makefile,v 1.4 2012/09/16 09:16:53 noud4 Exp $
 #
 
 DISTNAME=	joblib-0.6.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
-PKGREVISION=	1
+PKGREVISION=	2
 MASTER_SITES=	http://pypi.python.org/packages/source/j/joblib/
 
 MAINTAINER=	jihbed.research@gmail.com
