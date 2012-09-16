@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2012/09/16 21:22:13 jihbed Exp $
+
+SHA1 (bigdft-1.6.0.tar.gz) = b4c75d0bf95ddf66d8cade96f4c1c625a2b71f1b
+RMD160 (bigdft-1.6.0.tar.gz) = 6cc9f8c87447d540e0677311dfb9a1da6c7f0150
+Size (bigdft-1.6.0.tar.gz) = 8876759 bytes
