@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2012/07/07 11:47:20 mwdavies Exp $
+# $NetBSD: Makefile,v 1.19 2012/09/17 05:20:55 thomasklausner Exp $
 #
 
 DISTNAME=	koffice-2.3.3
@@ -44,6 +44,7 @@ REPLACE_PYTHON+= \
 .include "../../devel/libgsf/buildlink3.mk"
 .include "../../graphics/exiv2/buildlink3.mk"
 .include "../../graphics/glew/buildlink3.mk"
+.include "../../graphics/lcms/buildlink3.mk"
 #.include "../../graphics/libkexiv2/buildlink3.mk"
 .include "../../graphics/libkdcraw/buildlink3.mk"
 .include "../../graphics/openjpeg/buildlink3.mk"
