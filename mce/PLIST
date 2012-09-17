@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2012/09/17 22:24:25 jihbed Exp $
+include/mce/dbus-names.h
+include/mce/mode-names.h
+lib/pkgconfig/mce.pc

@@ -1,0 +1,2 @@
+This package contains headers defining the DBus method calls provided by the
+Mode Control Entity, and the signals emitted by it.
