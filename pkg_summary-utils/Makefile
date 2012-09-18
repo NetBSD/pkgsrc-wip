@@ -1,14 +1,18 @@
-# $NetBSD: Makefile,v 1.61 2012/04/22 08:30:59 cheusov Exp $
+# $NetBSD: Makefile,v 1.62 2012/09/18 17:46:21 cheusov Exp $
 
-DISTNAME=	pkg_summary-utils-${VERSION}
+DISTNAME=	pkg_summary-utils-9
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
 MAINTAINER=	cheusov@NetBSD.org
-HOMEPAGE=	http://www.mova.org/~cheusov/pub/pkg_summary-utils/
+HOMEPAGE=	https://github.com/cheusov/pkg_summary-utils
 COMMENT=	Utilities for manipulating pkg_summary(5) files
 LICENSE=	2-clause-bsd
+
+GIT_REPOSITORIES=		pkg_summary-utils
+GIT_REPO.pkg_summary-utils=	git://github.com/cheusov/pkg_summary-utils.git
+.include "../../wip/mk/git-package.mk"
 
 DEPENDS+=	runawk>=1.1.0:../../lang/runawk
 DEPENDS+=	pipestatus-[0-9]*:../../devel/pipestatus
@@ -30,15 +34,13 @@ CONFLICTS+=	pkg_summary4view-[0-9]*
 #    bmake test TESTS='pkg_subgraph_deps pkg_bin_summary ...'
 TEST_TARGET=		test
 
-NO_CHECKSUM=		yes
-
 USE_LANGUAGES=		#empty
 USE_TOOLS+=		gzip:run
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-WRKSRC=		${WRKDIR}/files
+WRKSRC=		${WRKDIR}/pkg_summary-utils
 
 EGDIR=		${PREFIX}/share/examples/pkg_summary-utils
 
@@ -66,9 +68,5 @@ AUTO_MKDIRS=	yes
 
 MAKE_PROGRAM=	mkcmake
 
-do-extract:
-	${CP} -Rp ${FILESDIR} ${WRKSRC}
-
 .include "../../devel/mk-configure/mk-c.mk"
-.include "../../wip/pkg_summary-utils/files/version.mk"
 .include "../../mk/bsd.pkg.mk"
