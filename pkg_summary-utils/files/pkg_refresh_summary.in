@@ -72,19 +72,15 @@ newest_fn=$tmp_dir/newest
 
 ############################################################
 find_newest (){
-    runawk -e '
-#use "pkgsrc-dewey.awk"
-
+    runawk -f pkgsrc-dewey.awk -e '
 BEGIN {
    FS = "="
 }
 
 $1 == "PKGNAME" {
-   pkgbase = $2
-   sub(/-[^-]*$/, "", pkgbase)
-
-   pkgver = $2
-   sub(/^.*-/, "", pkgver)
+   idx = match($2, /-[^-]*$/)
+   pkgbase = substr($2, 1, idx-1)
+   pkgver = substr($2, idx+1)
 
    next
 }
