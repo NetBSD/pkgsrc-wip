@@ -1,63 +1,51 @@
-# $NetBSD: Makefile,v 1.22 2012/02/20 13:07:36 obache Exp $
+# $NetBSD: Makefile,v 1.23 2012/09/18 16:26:45 ahp-nils Exp $
 #
 
-DISTNAME=		logrotate-3.8.1
-#PKGREVISION=		1
+DISTNAME=		logrotate-3.8.2
 CATEGORIES=		sysutils
-MASTER_SITES=		https://fedorahosted.org/releases/l/o/logrotate/
-MASTER_SITES+=		${MASTER_SITE_GENTOO:=distfiles/}
+MASTER_SITES=		${MASTER_SITE_GENTOO:=distfiles/}
 MASTER_SITES+=		${MASTER_SITE_FREEBSD:=distfiles/}
 
-MAINTAINER=		ahp-nils@users.sourceforge.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://fedorahosted.org/logrotate/
 COMMENT=		Daemon to rotate, compress, remove and mail system log files
 LICENSE=		gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_TOOLS+=		gmake
-USE_LIBTOOL=		yes
+USE_TOOLS+=		gmake gzip:run gunzip:run mail:run
 NO_EXPORT_CPP=		yes
 
-MAKE_ENV+=		BASEDIR=${PREFIX}
-MAKE_ENV+=		INSTALL_PROGRAM=${INSTALL_PROGRAM:Q}
-MAKE_ENV+=		INSTALL_MAN=${INSTALL_MAN:Q}
+CFLAGS+=		-DSTATEFILE=\"${VARBASE}/db/logrotate.status\"
+CFLAGS+=		-DDEFAULT_MAIL_COMMAND=\"${MAIL_CMD:Q}\"
+CFLAGS+=		-DCOMPRESS_COMMAND=\"${GZIP_CMD:[1]:Q}\"
+CFLAGS+=		-DUNCOMPRESS_COMMAND=\"${GUNZIP_CMD:[1]:Q}\"
+
+MAKE_ENV+=		RPM_OPT_FLAGS=${CFLAGS:Q}
 
 BUILD_DEFS+=		VARBASE
-BUILD_DEFS+=		PKG_SYSCONFBASE
+EGDIR=			${PREFIX}/share/examples/logrotate
+CONF_FILES=		${EGDIR}/logrotate.conf ${PKG_SYSCONFDIR}/logrotate.conf
+OWN_DIRS=		${PKG_SYSCONFDIR}/logrotate.d
+MESSAGE_SUBST+=		EGDIR=${EGDIR}
+INSTALLATION_DIRS+=	${EGDIR} ${PKG_SYSCONFDIR} ${OWN_DIRS}
+AUTO_MKDIRS=		yes
+
+SUBST_CLASSES+=		paths
+SUBST_STAGE.paths=	pre-build
+SUBST_MESSAGE.paths=	Substituting paths variables.
+SUBST_FILES.paths=	examples/logrotate-default
+SUBST_FILES.paths+=	examples/logrotate.cron
+SUBST_FILES.paths+=	logrotate.8
+SUBST_VARS.paths=	PREFIX
+SUBST_VARS.paths+=	VARBASE
+SUBST_VARS.paths+=	PKG_SYSCONFDIR
 
 DOCDIR=			share/doc/logrotate
-TESTDIR=		test
-EXAMPLES_DIR=		examples
-EGDIR=			${PREFIX}/${DOCDIR}/${EXAMPLES_DIR}
-CONF_FILES=		${EGDIR}/logrotate-default ${PKG_SYSCONFDIR}/logrotate.conf
-INSTALLATION_DIRS=	sbin ${DOCDIR} ${DOCDIR}/${EXAMPLES_DIR} ${DOCDIR}/${TESTDIR} ${PKGMANDIR}/man8 ${PKGMANDIR}/man5 ${PKG_SYSCONFDIR} ${PKG_SYSCONFDIR}/logrotate.d
-
-SUBST_CLASSES+=		confs
-SUBST_STAGE.confs=	post-patch
-SUBST_MESSAGE.confs=	Fixing configuration files.
-SUBST_FILES.confs=	${WRKSRC}/${EXAMPLES_DIR}/logrotate-default
-SUBST_FILES.confs+=	${WRKSRC}/${EXAMPLES_DIR}/logrotate.cron
-SUBST_VARS.confs=	PREFIX
-SUBST_VARS.confs+=	VARBASE
-SUBST_VARS.confs+=	PKG_SYSCONFDIR
-
-SUBST_CLASSES+=		man
-SUBST_STAGE.man=	post-patch
-SUBST_MESSAGE.man=	Fixing man page.
-SUBST_FILES.man+=	${WRKSRC}/logrotate.8
-SUBST_VARS.man+=	PREFIX
-SUBST_VARS.man+=	VARBASE
-SUBST_VARS.man+=	PKG_SYSCONFDIR
-
-MESSAGE_SUBST+=		DOCDIR=${DOCDIR}
-MESSAGE_SUBST+=		EXAMPLES_DIR=${EXAMPLES_DIR}
-
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/logrotate ${DESTDIR}${PREFIX}/sbin
-	${INSTALL_DATA} ${WRKSRC}/${EXAMPLES_DIR}/logrotate-default ${DESTDIR}${PREFIX}/${DOCDIR}/${EXAMPLES_DIR}
-	${INSTALL_DATA} ${WRKSRC}/${EXAMPLES_DIR}/logrotate.cron ${DESTDIR}${PREFIX}/${DOCDIR}/${EXAMPLES_DIR}
-	${INSTALL_DATA} ${WRKSRC}/test/* ${DESTDIR}${PREFIX}/${DOCDIR}/${TESTDIR}
+	${INSTALL_DATA} ${WRKSRC}/examples/logrotate-default ${DESTDIR}${EGDIR}/logrotate.conf
+	${INSTALL_DATA} ${WRKSRC}/examples/logrotate.cron ${DESTDIR}/${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/README.* ${DESTDIR}${PREFIX}/${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/CHANGES ${DESTDIR}${PREFIX}/${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/COPYING ${DESTDIR}${PREFIX}/${DOCDIR}

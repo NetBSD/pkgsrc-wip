@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2011/11/29 07:38:05 ahp-nils Exp $
+@comment $NetBSD: PLIST,v 1.8 2012/09/18 16:26:45 ahp-nils Exp $
 man/man5/logrotate.conf.5
 man/man8/logrotate.8
 sbin/logrotate
@@ -6,24 +6,6 @@ share/doc/logrotate/CHANGES
 share/doc/logrotate/COPYING
 share/doc/logrotate/README.HPUX
 share/doc/logrotate/README.Solaris
-share/doc/logrotate/examples/logrotate-default
-share/doc/logrotate/examples/logrotate.cron
-share/doc/logrotate/test/mailer
-share/doc/logrotate/test/test
-share/doc/logrotate/test/test-config.1.in
-share/doc/logrotate/test/test-config.10.in
-share/doc/logrotate/test/test-config.11.in
-share/doc/logrotate/test/test-config.12.in
-share/doc/logrotate/test/test-config.13.in
-share/doc/logrotate/test/test-config.14.in
-share/doc/logrotate/test/test-config.15.in
-share/doc/logrotate/test/test-config.16.in
-share/doc/logrotate/test/test-config.2.in
-share/doc/logrotate/test/test-config.3.in
-share/doc/logrotate/test/test-config.4.in
-share/doc/logrotate/test/test-config.5.in
-share/doc/logrotate/test/test-config.6.in
-share/doc/logrotate/test/test-config.7.in
-share/doc/logrotate/test/test-config.8.in
-share/doc/logrotate/test/test-config.9.in
+share/examples/logrotate/logrotate.conf
+share/examples/logrotate/logrotate.cron
 @pkgdir etc/logrotate.d
