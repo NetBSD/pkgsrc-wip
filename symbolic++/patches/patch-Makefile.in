@@ -1,0 +1,17 @@
+$NetBSD: patch-Makefile.in,v 1.1 2012/09/18 00:15:15 jihbed Exp $
+
+--- Makefile.in.orig	2012-09-18 01:02:27.000000000 +0100
++++ Makefile.in	2012-09-18 01:03:21.000000000 +0100
+@@ -953,9 +953,9 @@
+ 
+ 
+ install-data-local:
+-	$(MKDIR_P) $(datadir)/doc
+-	$(INSTALL_DATA) README $(datadir)/doc/README.SymbolicC++
+-	$(INSTALL_DATA) doc/introsymb.pdf $(datadir)/doc/SymbolicC++.pdf
++	$(MKDIR_P) $(DESTDIR)$(datadir)/doc
++	$(INSTALL_DATA) README $(DESTDIR)$(datadir)/doc/README.SymbolicC++
++	$(INSTALL_DATA) doc/introsymb.pdf $(DESTDIR)$(datadir)/doc/SymbolicC++.pdf
+ 
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.

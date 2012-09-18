@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2012/09/18 00:15:15 jihbed Exp $
+
+SHA1 (SymbolicC++3-3.35-ac.tar.gz) = 5625b894da05e69cafaff94b34991f447a991bfd
+RMD160 (SymbolicC++3-3.35-ac.tar.gz) = 665203e5958b4b6ab75b828c7ee8cd14b6cd495e
+Size (SymbolicC++3-3.35-ac.tar.gz) = 703144 bytes
+SHA1 (patch-Makefile.in) = 0264bcbe0d2ce2c66d6159b6eb933297315ff3b2
