@@ -73,6 +73,8 @@ BEGIN {
 	}else{
 		field_pkgname = field_pkgpath = field_assign = 1
 	}
+
+	FS = "="
 }
 
 NF == 0 {
@@ -91,7 +93,7 @@ NF == 0 {
 	lines [line_count++] = $0
 }
 
-(field_pkgname || field_pkgbase) && $0 ~ /^PKGNAME=/ {
+(field_pkgname || field_pkgbase) && $1 == "PKGNAME" {
 	_pkgname = substr($0, 9)
 	if (field_pkgname){
 		pkgname = _pkgname
@@ -103,7 +105,7 @@ NF == 0 {
 	next
 }
 
-field_pkgpath && $0 ~ /^PKGPATH=/ {
+field_pkgpath && $1 == "PKGPATH" {
 	pkgpath = substr($0, 9)
 	if (sub(/:.*$/, "", pkgpath) && field_assign){
 		assigns = substr($0, 9)
@@ -112,7 +114,7 @@ field_pkgpath && $0 ~ /^PKGPATH=/ {
 	next
 }
 
-field_assign && $0 ~ /^ASSIGNMENTS=/ {
+field_assign && $1 == "ASSIGNMENTS" {
 	assigns = substr($0, 13)
 	next
 }
