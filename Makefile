@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4869 2012/09/14 18:22:59 kristerw Exp $
+# $Id: Makefile,v 1.4870 2012/09/19 14:56:13 ahp-nils Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1545,6 +1545,7 @@ SUBDIR+=	marathon-evil
 SUBDIR+=	marathon-scenarios
 SUBDIR+=	marathon-tempus-irae
 SUBDIR+=	marsyas
+SUBDIR+=	mashpodder
 SUBDIR+=	matanza
 SUBDIR+=	mathopd
 SUBDIR+=	matiec
