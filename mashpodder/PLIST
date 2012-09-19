@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2012/09/19 14:54:02 ahp-nils Exp $
+bin/mashpodder
+share/examples/mashpodder/mp.conf
+share/examples/mashpodder/sample-wrapper-for-cron.sh
+share/mashpodder/parse_enclosure.xsl
