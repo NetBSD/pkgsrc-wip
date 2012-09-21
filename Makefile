@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4872 2012/09/21 17:43:06 kristerw Exp $
+# $Id: Makefile,v 1.4873 2012/09/21 17:46:38 kristerw Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -168,6 +168,7 @@ SUBDIR+=	atftp
 SUBDIR+=	ati-xfree86-bin
 SUBDIR+=	ati-xfree86-bin-unstable
 SUBDIR+=	atlas
+SUBDIR+=	atompaw
 SUBDIR+=	atque
 SUBDIR+=	aubio
 SUBDIR+=	auctex-current
@@ -211,6 +212,7 @@ SUBDIR+=	beryl-settings-bindings
 SUBDIR+=	beryl-settings-simple
 SUBDIR+=	bibliographer
 SUBDIR+=	bicho
+SUBDIR+=	bigdft
 SUBDIR+=	bind10-devel
 SUBDIR+=	bindgraph
 SUBDIR+=	binutils
@@ -490,6 +492,9 @@ SUBDIR+=	dssi
 SUBDIR+=	duali-data
 SUBDIR+=	duff
 SUBDIR+=	dumb
+SUBDIR+=	dune-common
+SUBDIR+=	dune-geometry
+SUBDIR+=	dune-istl
 SUBDIR+=	duplo
 SUBDIR+=	dvbsnoop
 SUBDIR+=	dvd2xvid
