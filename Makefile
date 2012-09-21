@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4870 2012/09/19 14:56:13 ahp-nils Exp $
+# $Id: Makefile,v 1.4871 2012/09/21 17:38:24 kristerw Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2640,7 +2640,6 @@ SUBDIR+=	py-tappy
 SUBDIR+=	py-tashaphyne
 SUBDIR+=	py-tasphyne
 SUBDIR+=	py-telepathy
-SUBDIR+=	py-tempita
 SUBDIR+=	py-teng
 SUBDIR+=	py-texml
 SUBDIR+=	py-theano
