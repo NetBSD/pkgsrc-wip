@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4873 2012/09/21 17:46:38 kristerw Exp $
+# $Id: Makefile,v 1.4874 2012/09/22 16:55:40 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2082,6 +2082,7 @@ SUBDIR+=	pcp
 SUBDIR+=	pcsx
 SUBDIR+=	pcsx-df
 SUBDIR+=	pcsx2
+SUBDIR+=	pcsxr
 SUBDIR+=	pdb2ldif
 SUBDIR+=	pdf2svg
 SUBDIR+=	pdfedit
