@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2010/06/13 22:46:57 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2012/09/24 18:26:52 asau Exp $
 #
 
 DISTNAME=		chbg-1.5
@@ -12,6 +12,8 @@ HOMEPAGE=		http://chbg.sourceforge.net/
 COMMENT=		Changes destop background pictures with some period
 
 DEPENDS+=		ImageMagick>=6.0.2.7:../../graphics/ImageMagick
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes

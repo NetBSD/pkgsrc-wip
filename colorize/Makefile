@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/12/02 14:50:50 ivaniclixx Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/24 18:26:55 asau Exp $
 
 DISTNAME=	colorize-0.1-src
 PKGNAME=	colorize-0.1
@@ -9,8 +9,6 @@ MAINTAINER=	ivaniclixx@gmail.com
 HOMEPAGE=	http://deic.uab.cat/~iblanes/
 COMMENT=	Command colorizer useful to distinguish remote shells
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=	${WRKDIR}/colorize
 

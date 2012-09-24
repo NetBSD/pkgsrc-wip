@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/06/14 17:18:09 othyro Exp $
+# $NetBSD: Makefile,v 1.4 2012/09/24 18:26:56 asau Exp $
 #
 
 DISTNAME=		cvs2darcs-0.7.1
@@ -9,8 +9,6 @@ MAINTAINER=		esg@sdf.lonestar.org
 HOMEPAGE=		http://ab-initio.mit.edu/cvs2darcs/
 COMMENT=		Convert CVS repositories to Darcs version control
 LICENSE=		gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		perl:run

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/02/18 11:39:11 rodo6510 Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/24 18:26:52 asau Exp $
 #
 
 DISTNAME=	cgterm-1.7b2
@@ -11,8 +11,6 @@ COMMENT=	Commodore Graphics Telnet Client
 #LICENSE=	# TODO: (see mk/license.mk)
 
 LICENSE=                2-clause-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CONFIGURE=   yes
 

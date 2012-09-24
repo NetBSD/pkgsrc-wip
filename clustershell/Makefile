@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/06/09 08:06:42 uccwen Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/24 18:26:54 asau Exp $
 #
 
 DISTNAME=	clustershell-1.2.83
@@ -9,8 +9,6 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	wenheping@gmail.com
 HOMEPAGE=	http://clustershell.sourceforge.net/
 COMMENT=	Python library to execute commands on local or distant cluster nodes
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG= yes
 

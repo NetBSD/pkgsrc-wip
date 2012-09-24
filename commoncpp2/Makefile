@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2011/06/02 19:15:11 othyro Exp $
+# $NetBSD: Makefile,v 1.18 2012/09/24 18:26:55 asau Exp $
 #
 
 DISTNAME=		commoncpp2-1.8.1
@@ -10,8 +10,6 @@ MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://cplusplus.sourceforge.net/
 COMMENT=		Portable and highly optimized class framework for C++
 LICENSE=		gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 INFO_FILES=		yes

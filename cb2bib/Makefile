@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/06/14 02:25:45 othyro Exp $
+# $NetBSD: Makefile,v 1.13 2012/09/24 18:26:52 asau Exp $
 #
 
 DISTNAME=		cb2bib-0.7.2
@@ -10,8 +10,6 @@ MAINTAINER=		dhowland@users.sourceforge.net
 HOMEPAGE=		http://www.molspaces.com/cb2bib/
 COMMENT=		Extract and organize bibliographic references
 LICENSE=		gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes

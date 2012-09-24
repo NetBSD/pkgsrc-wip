@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/11/25 14:01:31 ddeus Exp $
+# $NetBSD: Makefile,v 1.4 2012/09/24 18:26:53 asau Exp $
 #
 
 VERSION=        0.6.4
@@ -12,7 +12,6 @@ HOMEPAGE=	http://weitz.de/cl-fad/
 COMMENT=        CL-FAD is a thin layer atop Common Lisp standard pathname functions
 LICENSE=        modified-bsd
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 WRKSRC=			${WRKDIR}/${DISTNAME}-${VERSION}
 COMMON_LISP_DOCFILES=	README CHANGELOG doc/index.html
 

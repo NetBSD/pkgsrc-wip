@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/02/24 10:05:59 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/24 18:26:52 asau Exp $
 #
 
 DISTNAME=	cddlib-094f
@@ -10,8 +10,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://www.ifor.math.ethz.ch/~fukuda/cdd_home/
 COMMENT=	Library for finding vertices of convex polytopes
 LICENSE=		gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake

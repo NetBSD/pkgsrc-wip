@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/06/14 14:44:04 othyro Exp $
+# $NetBSD: Makefile,v 1.6 2012/09/24 18:26:55 asau Exp $
 #
 
 DISTNAME=	ConvertToMP3_0.6.3
@@ -15,8 +15,6 @@ LICENSE=	gnu-gpl-v3
 DEPENDS+=	id3v2-[0-9]*:../../audio/id3v2
 DEPENDS+=	lame-[0-9]*:../../audio/lame
 DEPENDS+=	mplayer-[0-9]*:../../multimedia/mplayer
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=			# none
 PYTHON_VERSIONS_ACCEPTED=	25

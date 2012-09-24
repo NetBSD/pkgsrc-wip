@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/08/31 11:42:52 yacht Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/24 18:26:55 asau Exp $
 
 DISTNAME=	${E2FSPROGS_DISTNAME}
 PKGREVISION=	1
@@ -14,6 +14,8 @@ MAINTAINER=	reed@reedmedia.net
 COMMENT=	Common Error Description Library
 
 CONFLICTS+=	e2fsprogs<=1.35
+
+PKG_DESTDIR_SUPPORT=	none
 
 TEST_TARGET=	check
 

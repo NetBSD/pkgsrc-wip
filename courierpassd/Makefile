@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/02/26 18:54:19 dzoe Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/24 18:26:55 asau Exp $
 #
 
 DISTNAME=		courierpassd-1.1.2
@@ -8,6 +8,8 @@ MASTER_SITES=		http://www.arda.homeunix.net/store/
 MAINTAINER=		joe@joe.cz
 HOMEPAGE=		http://www.arda.homeunix.net/store/
 COMMENT=		Password changing daemon using courier-authlib
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes

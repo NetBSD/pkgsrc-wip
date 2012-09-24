@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/06/14 03:28:50 othyro Exp $
+# $NetBSD: Makefile,v 1.9 2012/09/24 18:26:52 asau Exp $
 
 DISTNAME=	cgit-0.8.3
 PKGREVISION=	1
@@ -12,8 +12,6 @@ MAINTAINER=	pkgsrc-wip-discuss@lists.sourceforge.net
 LICENSE=	gnu-gpl-v2
 
 BUILD_DEPENDS+=	curl>=7.19.2:../../www/curl
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=		no
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/03/05 06:59:32 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/24 18:26:56 asau Exp $
 #
 
 DISTNAME=	csv-mode
@@ -16,7 +16,6 @@ WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	# none
 NO_CONFIGURE=	YES
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS+=	${EMACS_LISPPREFIX}
 
 do-build:

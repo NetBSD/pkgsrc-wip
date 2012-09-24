@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/01/17 22:07:32 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/24 18:26:56 asau Exp $
 #
 
 VERSION=	3.5
@@ -13,8 +13,6 @@ HOMEPAGE=	http://www-math.univ-poitiers.fr/~maavl/CWEBx/
 COMMENT=	CWEBx system is a system for Structured Software Documentation
 
 DEPENDS+=	web2c-[0-9]*:../../print/web2c
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=	${WRKDIR}/cwebx
 

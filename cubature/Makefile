@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/05/09 20:18:03 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/24 18:26:56 asau Exp $
 #
 
 DISTNAME=	cubature-20101018
@@ -10,8 +10,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://ab-initio.mit.edu/cubature/
 COMMENT=	Multi-dimensional integration
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_BUILD=	yes
 

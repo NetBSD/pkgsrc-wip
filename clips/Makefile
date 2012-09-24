@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/11/29 09:10:27 obache Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/24 18:26:54 asau Exp $
 #
 
 DISTNAME=	clips-6.24
@@ -11,8 +11,6 @@ MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://clipsrules.sourceforge.net/
 COMMENT=	Tool for Building Expert Systems
 LICENSE=	public-domain
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c
 

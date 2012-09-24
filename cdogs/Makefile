@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/06/14 02:32:07 othyro Exp $
+# $NetBSD: Makefile,v 1.5 2012/09/24 18:26:52 asau Exp $
 #
 
 DISTNAME=		cdogs-sdl-0.4
@@ -13,8 +13,6 @@ MAINTAINER=		dhowland@users.sourceforge.net
 HOMEPAGE=		http://lumaki.com/code/cdogs/
 COMMENT=		SDL port of the classic DOS arcade game
 LICENSE=		gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/src
 

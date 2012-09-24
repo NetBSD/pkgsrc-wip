@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/06/18 12:32:24 ddeus Exp $
+# $NetBSD: Makefile,v 1.4 2012/09/24 18:26:53 asau Exp $
 #
 
 VERSION=        1.0
@@ -12,7 +12,6 @@ HOMEPAGE=	http://www.cliki.net/SPLIT-SEQUENCE
 COMMENT=        Common Lisp utility to split sequences
 LICENSE=        public-domain
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 WRKSRC=			${WRKDIR}/${DISTNAME}
 
 .include "options.mk"

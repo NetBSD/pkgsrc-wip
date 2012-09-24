@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/08/31 14:35:24 erinlalouve Exp $
+# $NetBSD: Makefile,v 1.14 2012/09/24 18:26:53 asau Exp $
 
 DISTNAME=	chromium-11.0.696.72
 CATEGORIES=	www
@@ -15,8 +15,6 @@ USE_LANGUAGES=	c c++
 
 BUILD_DEPENDS+=	gperf>=3.0.1:../../devel/gperf
 BUILD_DEPENDS+=	yasm>=0:../../devel/yasm
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 ONLY_FOR_PLATFORM=	*-*-arm *-*-i386 *-*-x86_64
 TOOLS_PLATFORM.flex=	# override the platform definition to use pkgsrc's flex.

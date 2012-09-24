@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/09/13 10:28:43 ryo-on Exp $
+# $NetBSD: Makefile,v 1.7 2012/09/24 18:26:53 asau Exp $
 #
 
 DISTNAME=	ciwiki-1.7.0.1
@@ -10,8 +10,6 @@ HOMEPAGE=	http://ciwiki.sourceforge.net/
 COMMENT=	CiWiki is a small and simple WikiWikiWeb implementation written in C
 
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 #WRKSRC=		${WRKDIR}/ciwiki-1.6.0 # 1.6.1 archive is broken.
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/09/10 11:05:23 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/24 18:26:52 asau Exp $
 #
 
 DISTNAME=	cglib-2.2
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://cglib.sourceforge.net/
 COMMENT=	Code generation library for Java
 LICENSE=	apache-2.0
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/cglib-2.2.jar
 

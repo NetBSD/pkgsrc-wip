@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/09/24 17:59:15 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/09/24 18:26:56 asau Exp $
 #
 
 VERS=					4.2
@@ -10,9 +10,6 @@ MAINTAINER=				helgoman@users.sourceforge.net
 HOMEPAGE=				http://cx-freeze.sourceforge.net/
 COMMENT=				Freezing python scripts into executables
 LICENSE=				python-software-foundation
-
-PKG_DESTDIR_SUPPORT=	user-destdir
-
 
 USE_LANGUAGES=      	c c++
 

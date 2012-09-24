@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/06/14 14:36:54 othyro Exp $
+# $NetBSD: Makefile,v 1.9 2012/09/24 18:26:54 asau Exp $
 #
 
 PKGVERSION=	10.05
@@ -14,8 +14,6 @@ MAINTAINER=	pkgsrc@blackmouse.biz
 HOMEPAGE=	http://www.codeblocks.org/
 COMMENT=	Open source, cross platform, free C++ IDE
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}-release
 GNU_CONFIGURE=	yes

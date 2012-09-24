@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/03/04 21:12:27 christtrekker Exp $
+# $NetBSD: Makefile,v 1.6 2012/09/24 18:26:54 asau Exp $
 #
 
 DISTNAME=	classic-mac-font-pack-0.1
@@ -64,7 +64,6 @@ FONTS_DIRS.ttf+=	${PREFIX}/${TTFPATH}
 INSTALLATION_DIRS=	${TTFPATH}
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 # OPTIONS
 PKG_OPTIONS_VAR=	PKG_OPTIONS.classic-mac-font-pack

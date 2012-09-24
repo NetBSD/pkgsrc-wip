@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/03/17 14:27:45 roelants Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/24 18:26:54 asau Exp $
 #
 
 DISTNAME=	fancy-0.9.15
@@ -10,8 +10,6 @@ MAINTAINER=	dieter.NetBSD@pandora.be
 HOMEPAGE=	http://www.claws-mail.org/downloads/plugins/
 COMMENT=	Renders HTML e-mail using the WebKit library
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes

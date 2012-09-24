@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/08/21 14:22:34 cheusov Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/24 18:26:56 asau Exp $
 #
 
 DISTNAME=	cvsanaly2-2.0.0
@@ -12,8 +12,6 @@ LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${PYPKGPREFIX}-mysqldb-[0-9]*:../../databases/py-mysqldb
 DEPENDS+=	scmgit>=1.7.0.5:../../devel/scmgit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	# none

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2011/12/07 20:49:29 tezdog Exp $
+# $NetBSD: Makefile,v 1.6 2012/09/24 18:26:51 asau Exp $
 #
 
 DISTNAME=		thold-0.4.1
@@ -19,8 +19,6 @@ DEPENDS+=		cacti>=0.8.7h:../../net/cacti
 DEPENDS+=		cacti-plugin-settings-[0-9]*:../../wip/cacti-plugin-settings
 
 USE_TOOLS+=		gtar
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CACTIDIR=		${PREFIX}/share/cacti
 PLUGINDIR=		${CACTIDIR}/plugins/thold

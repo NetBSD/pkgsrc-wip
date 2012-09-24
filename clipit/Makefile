@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/07/24 23:53:31 khorben Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/24 18:26:54 asau Exp $
 #
 
 DISTNAME=	clipit-1.4.1
@@ -12,8 +12,6 @@ HOMEPAGE=	http://clipit.rspwn.com/
 COMMENT=	Lightweight, fully featured GTK+ clipboard manager
 
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+= --sysconfdir=${PKG_SYSCONFDIR}

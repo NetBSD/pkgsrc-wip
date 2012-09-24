@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/08/08 10:57:18 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/24 18:26:55 asau Exp $
 #
 
 DISTNAME=	coxeter_3.0_beta3
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://math.univ-lyon1.fr/~ducloux/coxeter/coxeter3/english/coxeter3_e.html
 COMMENT=	Computer program for the study of Coxeter group theory
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_FILE=	makefile
 USE_TOOLS+=	gmake

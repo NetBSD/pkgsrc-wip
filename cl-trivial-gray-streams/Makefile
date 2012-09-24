@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/11/25 14:01:33 ddeus Exp $
+# $NetBSD: Makefile,v 1.4 2012/09/24 18:26:53 asau Exp $
 #
 
 VERSION=        2008.11.02
@@ -12,7 +12,6 @@ HOMEPAGE=	http://www.cliki.net/trivial-gray-streams
 COMMENT=        Trivial-gray-streams is a compatibility layer for Gray streams
 LICENSE=        mit
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 WRKSRC=			${WRKDIR}/${DISTNAME}
 COMMON_LISP_DOCFILES=	README COPYING
 

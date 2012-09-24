@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/03/20 22:26:13 jihbed Exp $
+# $NetBSD: Makefile,v 1.4 2012/09/24 18:26:55 asau Exp $
 #
 
 DISTNAME=		cryptcat-unix-1.2.1
@@ -9,8 +9,6 @@ EXTRACT_SUFX=		.tar
 MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://sourceforge.net/projects/cryptcat/
 COMMENT=		Standard netcat enhanced with twofish encryption
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake
 WRKSRC=		${WRKDIR}/unix

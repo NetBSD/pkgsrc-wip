@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/01/04 19:10:40 noud4 Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/24 18:26:52 asau Exp $
 #
 
 DISTNAME=		carnival-1.03-src
@@ -11,8 +11,6 @@ MAINTAINER=		noud4@home.nl
 HOMEPAGE=		http://carnival.sourceforge.net/
 COMMENT=		GUI for Festival
 LICENSE=		gnu-gpl-v1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/
 USE_LANGUAGES=  	c++

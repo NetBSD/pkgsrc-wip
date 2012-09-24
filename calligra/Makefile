@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/07/02 13:34:33 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/24 18:26:51 asau Exp $
 #
 
 DISTNAME=	calligra-2.4.3
@@ -16,8 +16,6 @@ DEPENDS+=	pstoedit>=3.0:../../graphics/pstoedit
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 REPLACE_INTERPRETER+=	kross
 REPLACE.kross.old=	.*kross

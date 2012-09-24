@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/01/19 08:05:40 asau Exp $
+# $NetBSD: Makefile,v 1.8 2012/09/24 18:26:54 asau Exp $
 
 DISTNAME=	asdf-2.018.19
 PKGNAME=	clisp-${DISTNAME}
@@ -12,8 +12,6 @@ COMMENT=	Another System Definition Facility for Common Lisp
 LICENSE=	mit
 
 DEPENDS+=	clisp>=2.49:../../lang/clisp
-
-PKG_DESTDIR_SUPPORT= user-destdir
 
 USE_TOOLS+=	makeinfo
 INFO_FILES=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/04/23 20:02:41 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/24 18:26:54 asau Exp $
 #
 
 DISTNAME=	cmetrics-0.11
@@ -9,8 +9,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://tools.libresoft.es/cmetrics
 COMMENT=	Size and complexity metrics for C source code files
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	flex

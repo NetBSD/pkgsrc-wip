@@ -9,7 +9,6 @@ HOMEPAGE=       http://collectd.org/
 COMMENT=        statistics collection daemon - rrdtool plugin
 LICENSE=        gnu-gpl-v2
 
-PKG_DESTDIR_SUPPORT=    user-destdir
 GNU_CONFIGURE=          yes
 USE_LIBTOOL=            yes
 USE_TOOLS+=             pkg-config

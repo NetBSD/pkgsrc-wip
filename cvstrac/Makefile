@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/08/06 16:21:24 schmonz Exp $
+# $NetBSD: Makefile,v 1.4 2012/09/24 18:26:56 asau Exp $
 #
 
 DISTNAME=	cvstrac-2.0.1
@@ -13,8 +13,6 @@ LICENSE=	gnu-gpl-v2
 .if !exists(/usr/bin/rlog)
 DEPENDS+=	rcs-[0-9]*:../../devel/rcs
 .endif
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_FILE=		bsd-gcc.mk
 

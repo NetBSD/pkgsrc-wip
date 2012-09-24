@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/06/18 12:28:39 ddeus Exp $
+# $NetBSD: Makefile,v 1.7 2012/09/24 18:26:53 asau Exp $
 #
 
 VERSION=        0.10.7.1
@@ -15,7 +15,6 @@ DEPENDS+=	${LISP_PREFIX}-trivial-features-[0-9]*:../../wip/cl-trivial-features
 DEPENDS+=	${LISP_PREFIX}-alexandria-[0-9]*:../../wip/cl-alexandria
 DEPENDS+=	${LISP_PREFIX}-babel-[0-9]*:../../wip/cl-babel
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 WRKSRC=			${WRKDIR}/${DISTNAME}
 COMMON_LISP_PACKAGES=	${SHORTNAME} ${SHORTNAME}-grovel ${SHORTNAME}-uffi-compat
 COMMON_LISP_DOCFILES:=	README COPYRIGHT HEADER TODO

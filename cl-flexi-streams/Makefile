@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/11/25 14:01:31 ddeus Exp $
+# $NetBSD: Makefile,v 1.5 2012/09/24 18:26:53 asau Exp $
 #
 
 VERSION=        1.0.7
@@ -13,7 +13,6 @@ COMMENT=        FLEXI-STREAMS - Flexible bivalent streams for Common Lisp
 LICENSE=        modified-bsd
 DEPENDS+=	${LISP_PREFIX}-trivial-gray-streams-[0-9]*:../../wip/cl-trivial-gray-streams
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 WRKSRC=			${WRKDIR}/${DISTNAME}-${VERSION}
 COMMON_LISP_DOCFILES=	CHANGELOG doc/index.html
 

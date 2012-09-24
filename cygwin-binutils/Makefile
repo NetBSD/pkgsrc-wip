@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.3 2011/06/03 08:36:36 makoto Exp $
-# $Id: Makefile,v 1.3 2011/06/03 08:36:36 makoto Exp $
+# $NetBSD: Makefile,v 1.4 2012/09/24 18:26:56 asau Exp $
+# $Id: Makefile,v 1.4 2012/09/24 18:26:56 asau Exp $
 
 DISTNAME=	binutils-2.20
 PKGNAME=	cygwin-${DISTNAME:S/-src//}
@@ -15,8 +15,6 @@ LICENSE=	gnu-gpl-v2
 MAINTAINER=	makoto@ki.nu
 HOMEPAGE=	http://www.cygwin.com/
 COMMENT=	GNU binutils ported to Win32/Cygwin environment
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes

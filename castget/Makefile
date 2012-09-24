@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2010/06/05 10:00:40 obache Exp $
+# $NetBSD: Makefile,v 1.15 2012/09/24 18:26:52 asau Exp $
 #
 
 DISTNAME=	castget-1.1.0
@@ -10,8 +10,6 @@ MAINTAINER=	netbsd@guigui2.net
 HOMEPAGE=	http://castget.nongnu.org/
 COMMENT=	Command-line RSS enclosures dowloader
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

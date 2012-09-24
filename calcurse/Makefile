@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2011/11/11 16:06:04 emil_s Exp $
+# $NetBSD: Makefile,v 1.6 2012/09/24 18:26:51 asau Exp $
 #
 
 DISTNAME=	calcurse-2.9.2
@@ -9,8 +9,6 @@ MAINTAINER=	jan.smydke@jh-inst.cas.cz
 HOMEPAGE=	http://calcurse.org/
 COMMENT=	Text based calendar and scheduling application
 LICENSE=	2-clause-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gmake msgfmt msgmerge xgettext
 GNU_CONFIGURE=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/12/29 22:38:49 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/24 18:26:56 asau Exp $
 #
 
 DISTNAME=	csmith-2.1.0
@@ -10,13 +10,10 @@ HOMEPAGE=	http://embed.cs.utah.edu/csmith/
 COMMENT=	Random generator of C programs
 LICENSE=	modified-bsd
 
-PKG_DESTDIR_SUPPORT=	user-destdir
-
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gm4 gmake perl
 USE_LANGUAGES=	c c++
 
 REPLACE_PERL+=	scripts/compiler_test.pl scripts/launchn.pl scripts/test_csmith.pl \
-					
 
 .include "../../mk/bsd.pkg.mk"

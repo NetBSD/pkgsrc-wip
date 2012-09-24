@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/08/15 12:37:50 jihbed Exp $
+# $NetBSD: Makefile,v 1.4 2012/09/24 18:26:56 asau Exp $
 #
 
 DISTNAME=	csp2B1.2
@@ -10,8 +10,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://users.ecs.soton.ac.uk/mjb/csp2B/
 COMMENT=	The csp2B Tool written in Moscow ML
 #LICENSE=	LICENSE
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=	${WRKDIR}/${DISTNAME}
 

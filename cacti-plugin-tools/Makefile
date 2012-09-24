@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/12/07 20:49:29 tezdog Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/24 18:26:51 asau Exp $
 #
 
 DISTNAME=		tools-0.3
@@ -18,8 +18,6 @@ BUILD_DEPENDS+=		gtar-[0-9]*:../../archivers/gtar
 DEPENDS+=		cacti>=0.8.7h:../../net/cacti
 
 USE_TOOLS+=		gtar
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CACTIDIR=		${PREFIX}/share/cacti
 PLUGINDIR=		${CACTIDIR}/plugins/tools

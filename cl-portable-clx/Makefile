@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/01/18 12:44:59 dukzcry Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/24 18:26:53 asau Exp $
 #
 
 SHORTNAME=		clx
@@ -13,7 +13,6 @@ HOMEPAGE=		http://gitorious.org/clx
 COMMENT=		CLX module which is mostly used with SBCL
 #LICENSE=		other/multiple
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 COMMON_LISP_DOCFILES=	README NEWS
 #COMMON_LISP_EXAMPLES=	demo
 

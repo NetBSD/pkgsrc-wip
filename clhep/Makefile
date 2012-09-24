@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/06/14 04:21:16 othyro Exp $
+# $NetBSD: Makefile,v 1.14 2012/09/24 18:26:54 asau Exp $
 #
 
 DISTNAME=	clhep-2.0.4.5
@@ -10,8 +10,6 @@ MAINTAINER=	hugor@users.sourceforge.net
 HOMEPAGE=	http://proj-clhep.web.cern.ch/proj-clhep/
 COMMENT=	Class library for high energy physics
 LICENSE=	gnu-gpl-v3 gnu-lgpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 TMPEXT_DIR=	${WRKDIR}/${PKGVERSION_NOREV}/CLHEP
 AUTOCONF_REQD=	2.59

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/12/26 05:01:21 davesainty Exp $
+# $NetBSD: Makefile,v 1.5 2012/09/24 18:26:53 asau Exp $
 #
 
 DISTNAME=	cinelerra-cv-2.1
@@ -14,8 +14,6 @@ GIT_REPO.master=	git://git.cinelerra.org/j6t/cinelerra.git
 GIT_MODULE=		cinelerra
 .include "../../wip/mk/git-package.mk"
 _GIT_FLAGS= # The repository is very large. We don't want git to be quiet.
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/cinelerra
 GNU_CONFIGURE=		yes

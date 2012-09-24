@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2011/11/25 15:09:07 genolopolis Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/24 18:26:55 asau Exp $
 #
 
 DISTNAME=	collectd-5.0.1
@@ -11,7 +11,6 @@ HOMEPAGE=	http://collectd.org/
 COMMENT=	statistics collection daemon - base
 LICENSE=	gnu-gpl-v2
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/06/18 12:25:38 ddeus Exp $
+# $NetBSD: Makefile,v 1.7 2012/09/24 18:26:53 asau Exp $
 #
 
 SHORTNAME=	alexandria
@@ -13,7 +13,6 @@ HOMEPAGE=	http://common-lisp.net/project/alexandria/
 COMMENT=        Alexandria is a collection utilities for Common Lisp
 LICENSE=        public-domain
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 WRKSRC=			${WRKDIR}/${DISTNAME}
 COMMON_LISP_EXTRAFILES= alexandria.html
 COMMON_LISP_DOCFILES=	README AUTHORS LICENCE alexandria.html

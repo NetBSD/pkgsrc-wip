@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/07/02 13:37:55 moubctez Exp $
+# $NetBSD: Makefile,v 1.5 2012/09/24 18:26:52 asau Exp $
 #
 
 DISTNAME=	CGAL-${DISTVERS}
@@ -22,8 +22,6 @@ FETCH_USING=		curl
 
 USE_CMAKE=      yes
 USE_LANGUAGES=  c c++
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../math/mpfr/buildlink3.mk"

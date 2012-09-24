@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2011/05/02 10:41:57 asau Exp $
+# $NetBSD: Makefile,v 1.30 2012/09/24 18:26:54 asau Exp $
 #
 
 DISTNAME=		clisp-2.49
@@ -21,8 +21,6 @@ NOT_FOR_PLATFORM=	*-*-sparc64
 NOT_FOR_PLATFORM+=	*-*-arm
 
 PKG_INSTALLATION_TYPES= overwrite pkgviews
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=		no
 

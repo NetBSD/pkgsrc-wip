@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/06/13 22:46:57 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2012/09/24 18:26:51 asau Exp $
 #
 
 DISTNAME=		cairo-java-1.0.1
@@ -9,8 +9,6 @@ MASTER_SITES=		${MASTER_SITE_GNOME:=sources/cairo-java/1.0/}
 MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://java-gnome.sourceforge.net/
 COMMENT=		Cairo bindings for Java
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake pkg-config

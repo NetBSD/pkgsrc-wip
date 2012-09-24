@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/07/02 13:37:55 moubctez Exp $
+# $NetBSD: Makefile,v 1.8 2012/09/24 18:26:55 asau Exp $
 #
 
 DISTNAME=	crrcsim-0.9.11
@@ -12,8 +12,6 @@ COMMENT=	Crrcsim is a model-airplane flight simulation program
 LICENSE=	gnu-gpl-v2
 
 #USE_TOOLS+=	gmake
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFGURE_ARGS+=	--with-GLU
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2012/07/02 13:37:55 moubctez Exp $
+# $NetBSD: Makefile,v 1.20 2012/09/24 18:26:52 asau Exp $
 #
 
 DISTNAME=		cclive-0.7.8
@@ -10,8 +10,6 @@ MAINTAINER=		zecrazytux@zecrazytux.net
 HOMEPAGE=		http://cclive.sourceforge.net/
 COMMENT=		Command line video extraction tool for user-uploaded video hosts
 LICENSE=		gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c++ c
 USE_TOOLS+=		pkg-config

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2011/02/28 14:53:17 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2012/09/24 18:26:55 asau Exp $
 #
 
 DISTNAME=	common-1.2.18r4122
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www-mice.cs.ucl.ac.uk/multimedia/software/common/
 COMMENT=	Common multimedia library required by mbone tools
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes

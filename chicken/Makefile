@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/08/11 18:22:47 asau Exp $
+# $NetBSD: Makefile,v 1.7 2012/09/24 18:26:52 asau Exp $
 
 DISTNAME=	chicken-4.8.0rc2 # development snapshot
 CATEGORIES=	lang
@@ -9,8 +9,6 @@ MAINTAINER=	asau@inbox.ru #, airhead@users.sourceforge.net
 HOMEPAGE=	http://www.call-cc.org/
 COMMENT=	Scheme to C compiler, handling R5RS (development snapshot)
 LICENSE=	modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=		no
 

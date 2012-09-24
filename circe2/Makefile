@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/10/28 17:51:07 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/24 18:26:53 asau Exp $
 #
 
 DISTNAME=	circe2-2.0.5
@@ -9,8 +9,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://www.hepforge.org/archive/whizard/
 COMMENT=	CIRCE1 is WHIZARD's generator for lepton collider beamstrahlung
 #LICENSE=	# TODO: (see mk/license.mk)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

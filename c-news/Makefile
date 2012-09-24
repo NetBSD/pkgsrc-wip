@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2011/12/15 17:01:46 hfath Exp $
+# $NetBSD: Makefile,v 1.26 2012/09/24 18:26:51 asau Exp $
 
 DISTNAME=	c-news
 PKGNAME=	c-news-CR-7
@@ -33,6 +33,8 @@ LICENSE_FILE=	c-news-license
 
 # Not yet 64 bit time_t safe
 NOT_FOR_PLATFORM=	NetBSD-5.99.*-* NetBSD-[6-9]*-*
+
+PKG_DESTDIR_SUPPORT=	none
 
 CONFLICTS+=	nntpclnt-[0-9]* inn-[0-9]*
 

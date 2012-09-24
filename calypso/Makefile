@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/04/08 19:09:42 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2012/09/24 18:26:51 asau Exp $
 
 DISTNAME=	calypso-0.5
 CATEGORIES=	net
@@ -10,8 +10,6 @@ LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-vobject>=0.8.1c:../../textproc/py-vobject
 DEPENDS+=	scmgit-base-[0-9]*:../../devel/scmgit-base
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GIT_REPOSITORIES=	calypso
 GIT_REPO.calypso=	git://keithp.com/git/calypso.git

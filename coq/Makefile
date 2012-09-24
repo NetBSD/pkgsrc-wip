@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/06/13 22:46:58 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/24 18:26:55 asau Exp $
 #
 
 DISTNAME=		coq-8.2pl1
@@ -10,8 +10,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://coq.inria.fr/
 COMMENT=		Coq is a formal proof management system
 LICENSE=		gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "options.mk"
 

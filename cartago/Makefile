@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/08/03 18:53:20 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/24 18:26:52 asau Exp $
 #
 
 DISTNAME=	cartago-1.4.0
@@ -10,8 +10,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://alice.unibo.it/xwiki/bin/view/CARTAGO/
 COMMENT= Framework for programming and executing environments in multi-agent
 #LICENSE=	# TODO: (see mk/license.mk)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	pax
 NO_BUILD=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/06/14 03:37:20 othyro Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/24 18:26:52 asau Exp $
 #
 
 DISTNAME=	cgnslib_3.1.3-2
@@ -10,8 +10,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://www.cgns.org/
 COMMENT=	CFD General Notation System library code
 LICENSE=	png-license
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/cgnslib_3.1.3
 

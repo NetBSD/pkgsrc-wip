@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/12/07 20:49:29 tezdog Exp $
+# $NetBSD: Makefile,v 1.5 2012/09/24 18:26:51 asau Exp $
 #
 
 DISTNAME=		php-weathermap-0.96a
@@ -17,8 +17,6 @@ USE_LANGUAGES=		# none
 NO_BUILD=		yes
 
 DEPENDS+=		cacti>=0.8.7h:../../net/cacti
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CACTI_USER?=		cacti
 CACTI_GROUP?=		cacti

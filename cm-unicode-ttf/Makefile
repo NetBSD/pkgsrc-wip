@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/07/17 23:51:10 bubuchka Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/24 18:26:54 asau Exp $
 #
 
 CMU_VERSION=	0.7.0
@@ -12,8 +12,6 @@ MAINTAINER=	mishka@NetBSD.org
 HOMEPAGE=	http://cm-unicode.sourceforge.net/
 COMMENT=	Computer Modern Unicode fonts
 LICENSE=	open-font-license
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/cm-unicode-${CMU_VERSION}
 NO_BUILD=		yes

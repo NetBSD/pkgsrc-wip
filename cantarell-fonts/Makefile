@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/07/15 03:57:17 ryo-on Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/24 18:26:52 asau Exp $
 #
 
 DISTNAME=	cantarell-fonts-0.0.6
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://live.gnome.org/CantarellFonts
 COMMENT=	Contemporary Humanist sans serif designed for on-screen reading
 LICENSE=	open-font-license
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_X11BASE=	YES
 NO_CONFIGURE=	YES

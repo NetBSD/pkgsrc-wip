@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/03/26 13:27:07 othyro Exp $
+# $NetBSD: Makefile,v 1.15 2012/09/24 18:26:52 asau Exp $
 #
 
 DISTNAME=		ccrtp-2.0.3
@@ -9,8 +9,6 @@ MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://www.gnu.org/software/ccrtp/
 COMMENT=		RTP and RTSP protocol implementation using GNU CommonCpp
 LICENSE=		gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes

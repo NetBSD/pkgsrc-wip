@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/01/18 12:25:35 dukzcry Exp $
+# $NetBSD: Makefile,v 1.4 2012/09/24 18:26:54 asau Exp $
 #
 
 DISTNAME=		clfswm-1106-2
@@ -10,8 +10,6 @@ MAINTAINER=		lomka@gero.in
 HOMEPAGE=		http://common-lisp.net/project/clfswm/
 COMMENT=		A(nother) Common Lisp FullScreen Window Manager
 LICENSE=		gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 HAS_CONFIGURE=		yes
 INSTALL_UNSTRIPPED=	yes

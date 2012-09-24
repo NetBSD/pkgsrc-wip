@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2011/05/23 19:05:26 marko_schuetz Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/24 18:26:56 asau Exp $
 #
 
 DISTNAME=	cvc3-2.2
@@ -13,7 +13,6 @@ GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
 
 USE_TOOLS+=	gmake bash perl
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 SUBST_CLASSES+=                 fix-bash
 SUBST_STAGE.fix-bash=          	pre-configure

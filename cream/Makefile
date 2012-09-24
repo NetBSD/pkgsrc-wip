@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/08/19 14:08:44 noud4 Exp $
+# $NetBSD: Makefile,v 1.14 2012/09/24 18:26:55 asau Exp $
 #
 
 DISTNAME=		cream-0.41
@@ -10,8 +10,6 @@ MAINTAINER=		dhowland@users.sourceforge.net
 HOMEPAGE=		http://cream.sourceforge.net/
 COMMENT=		Usability add-on for Vim
 LICENSE=		gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		{vim-gtk2,vim-gtk,vim-kde,vim-motif}>=7.0:../../editors/vim-gtk2
 

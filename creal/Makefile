@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/04/28 03:54:13 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/24 18:26:55 asau Exp $
 #
 
 DISTNAME=	creal-0.7
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.lri.fr/~filliatr/creal.en.html
 COMMENT=	Exact real arithmetic library (constructive reals) for ocaml
 LICENSE=	gnu-lgpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 

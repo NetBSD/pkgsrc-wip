@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2010/06/13 22:46:58 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.14 2012/09/24 18:26:55 asau Exp $
 #
 
 DISTNAME=	compiz-0.5.0
@@ -18,8 +18,6 @@ USE_TOOLS+=		pkg-config msgfmt gmake
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 # Let's kick it up a notch!
 

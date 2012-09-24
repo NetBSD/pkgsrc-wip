@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2011/01/02 13:04:30 makoto Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/24 18:26:52 asau Exp $
 
 CANNA_MODULE=	dict
 
 MAKE_JOBS_SAFE=	no
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../wip/canna/Makefile.common"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2010/06/13 22:46:58 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.12 2012/09/24 18:26:54 asau Exp $
 #
 
 DISTNAME=		clustalx-2.0.12
@@ -12,7 +12,6 @@ COMMENT=	General purpose multiple alignment program for DNA or proteins (X11)
 LICENSE=	clustal-license
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES+=		c++
 MESSAGE_SUBST+=		PREFIX=${PREFIX}

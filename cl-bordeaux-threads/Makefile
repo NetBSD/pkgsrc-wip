@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/06/18 12:27:33 ddeus Exp $
+# $NetBSD: Makefile,v 1.7 2012/09/24 18:26:53 asau Exp $
 #
 
 VERSION=        0.8.2
@@ -13,7 +13,6 @@ COMMENT=        Portable shared-state concurrency for Common Lisp
 LICENSE=        public-domain
 DEPENDS+=	${LISP_PREFIX}-alexandria-[0-9]*:../../wip/cl-alexandria
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 WRKSRC=			${WRKDIR}/${SHORTNAME}-${VERSION}
 COMMON_LISP_DOCFILES=	LICENSE CONTRIBUTORS site/index.html site/style.css
 

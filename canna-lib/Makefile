@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2012/08/12 07:43:21 makoto Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/24 18:26:52 asau Exp $
 
 CANNA_MODULE=	lib
-
-PKG_DESTDIR_SUPPORT= user-destdir
 
 .include "../../wip/canna/Makefile.common"
 

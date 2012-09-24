@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/12/28 21:45:18 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/24 18:26:54 asau Exp $
 #
 
 DISTNAME=	cloc-1.55
@@ -13,8 +13,6 @@ LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	p5-Getopt-Long>=2.38:../../devel/p5-Getopt-Long
 DEPENDS+=	p5-IO>=1.25:../../devel/p5-IO
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 

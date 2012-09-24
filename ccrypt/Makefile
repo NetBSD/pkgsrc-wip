@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/03/12 18:09:58 jihbed Exp $
+# $NetBSD: Makefile,v 1.7 2012/09/24 18:26:52 asau Exp $
 #
 
 DISTNAME=	ccrypt-1.9
@@ -9,8 +9,6 @@ MAINTAINER=	poff@sixbit.org
 HOMEPAGE=	http://www.mathstat.dal.ca/~selinger/ccrypt/
 COMMENT=	Encrypts/decrypts files using Rijndael block cipher
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_TOOLS=		perl intltool
