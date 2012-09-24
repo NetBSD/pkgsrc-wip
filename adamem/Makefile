@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/09/24 16:19:18 asau Exp $
+# $NetBSD: Makefile,v 1.10 2012/09/24 16:20:20 asau Exp $
 #
 
 DISTNAME=		adamem
@@ -39,7 +39,7 @@ do-install:
 .for f in adamem cvem z80dasm snapedit
 	${INSTALL_PROGRAM} ${WRKSRC:Q}/${f:Q} ${DESTDIR}${PREFIX:Q}/bin
 .endfor
-	${INSTALL_DATA_DIR} ${PREFIX:Q}/share/adamem
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX:Q}/share/adamem
 	${INSTALL_DATA} ${WRKSRC:Q}/adamem.txt ${DESTDIR}${PREFIX:Q}/share/adamem
 	${INSTALL_DATA} ${WRKSRC:Q}/adamem.snd ${DESTDIR}${PREFIX:Q}/share/adamem
 .for f in OS7 EOS WP
