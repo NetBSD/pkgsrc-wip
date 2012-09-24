@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/09/09 02:49:32 obache Exp $
+# $NetBSD: Makefile,v 1.9 2012/09/24 16:19:18 asau Exp $
 #
 
 DISTNAME=		adamem
@@ -37,17 +37,17 @@ post-extract:
 
 do-install:
 .for f in adamem cvem z80dasm snapedit
-	${INSTALL_PROGRAM} ${WRKSRC:Q}/${f:Q} ${PREFIX:Q}/bin
+	${INSTALL_PROGRAM} ${WRKSRC:Q}/${f:Q} ${DESTDIR}${PREFIX:Q}/bin
 .endfor
 	${INSTALL_DATA_DIR} ${PREFIX:Q}/share/adamem
-	${INSTALL_DATA} ${WRKSRC:Q}/adamem.txt ${PREFIX:Q}/share/adamem
-	${INSTALL_DATA} ${WRKSRC:Q}/adamem.snd ${PREFIX:Q}/share/adamem
+	${INSTALL_DATA} ${WRKSRC:Q}/adamem.txt ${DESTDIR}${PREFIX:Q}/share/adamem
+	${INSTALL_DATA} ${WRKSRC:Q}/adamem.snd ${DESTDIR}${PREFIX:Q}/share/adamem
 .for f in OS7 EOS WP
-	${INSTALL_DATA} ${WRKSRC:Q}/${f:Q}.rom ${PREFIX:Q}/share/adamem
+	${INSTALL_DATA} ${WRKSRC:Q}/${f:Q}.rom ${DESTDIR}${PREFIX:Q}/share/adamem
 .endfor
-	${INSTALL_SCRIPT} ${WRKSRC:Q}/adam ${PREFIX:Q}/bin/adam
-	${RM} -f ${PREFIX:Q}/bin/coleco
-	${LN} -s adam ${PREFIX:Q}/bin/coleco
+	${INSTALL_SCRIPT} ${WRKSRC:Q}/adam ${DESTDIR}${PREFIX:Q}/bin/adam
+	${RM} -f ${DESTDIR}${PREFIX:Q}/bin/coleco
+	${LN} -s adam ${DESTDIR}${PREFIX:Q}/bin/coleco
 
 .include "../../devel/allegro/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
