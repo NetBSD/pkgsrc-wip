@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/06/14 03:47:25 othyro Exp $
+# $NetBSD: Makefile,v 1.5 2012/09/24 17:35:29 asau Exp $
 
 DISTNAME=	chems-0x04
 CATEGORIES=	www
@@ -15,7 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
-CHEMSDIR=	${PREFIX}/share/chems
+CHEMSDIR=	${DESTDIR}${PREFIX}/share/chems
 
 do-install:
 	${INSTALL_DATA_DIR} ${CHEMSDIR}
