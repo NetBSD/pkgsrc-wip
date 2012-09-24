@@ -1,18 +1,13 @@
-# $NetBSD: Makefile,v 1.7 2012/03/19 00:28:17 bubuchka Exp $
+# $NetBSD: Makefile,v 1.8 2012/09/24 01:03:24 bubuchka Exp $
 
-DISTNAME=	leveldb
-PKGNAME=	${DISTNAME}-1.2
-PKGREVISION=	${_GIT_PKGVERSION:S/.//g}
+DISTNAME=	leveldb-1.5.0
 CATEGORIES=	databases
-MASTER_SITES=	#
+MASTER_SITES=	http://leveldb.googlecode.com/files/
 
 MAINTAINER=	mishka@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/leveldb/
 COMMENT=	Fast and lightweight key/value database library by Google
 LICENSE=	modified-bsd
-
-GIT_REPOSITORIES=	leveldb
-GIT_REPO.leveldb=	http://code.google.com/p/leveldb
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -32,9 +27,4 @@ do-install:
 	cd ${WRKSRC}/doc && ${PAX} -rw . ${DESTDIR}${PREFIX}/share/doc/leveldb
 
 .include "options.mk"
-
-.include "../../wip/mk/git-package.mk"
-# ignore --depth - it won't work with Google HTTP
-_GIT_FLAGS=	--quiet
-
 .include "../../mk/bsd.pkg.mk"
