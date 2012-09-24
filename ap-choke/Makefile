@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/06/13 00:09:07 kristerw Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/24 16:47:36 asau Exp $
 #
 
 DISTNAME=		mod_choke-0.06
@@ -15,7 +15,7 @@ APACHE_MODULE_NAME=	mod_choke.so
 .include "../../www/apache/module.mk"
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mod_choke && \
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/mod_choke
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/mod_choke && \
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/mod_choke
 
 .include "../../mk/bsd.pkg.mk"

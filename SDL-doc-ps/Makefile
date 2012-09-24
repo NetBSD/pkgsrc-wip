@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2005/05/31 12:20:02 ianzag Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/24 16:43:02 asau Exp $
 #
 
 DISTNAME=		sdldoc-ps
@@ -11,7 +11,7 @@ HOMEPAGE=		http://www.libsdl.org/docs.php
 COMMENT=		Simple DirectMedia Layer documentation
 
 WRKSRC=			${WRKDIR}
-DEST=			${PREFIX}/share/doc/SDL-doc/ps
+DEST=			${DESTDIR}${PREFIX}/share/doc/SDL-doc/ps
 
 NO_CONFIGURE=	YES
 NO_BUILD=		YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/01/13 01:45:31 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2012/09/24 16:43:56 asau Exp $
 
 DISTNAME=		WEPCrack-0.1.0
 CATEGORIES=		security
@@ -17,7 +17,7 @@ REPLACE_PERL+=		*.pl
 do-install:
 	set -e;								\
 	cd ${WRKSRC:Q} && for f in *.pl; do				\
-		${INSTALL_SCRIPT} "./$$f" ${PREFIX:Q}/bin/;		\
+		${INSTALL_SCRIPT} "./$$f" ${DESTDIR}${PREFIX:Q}/bin/;		\
 	done
 
 .include "../../mk/bsd.pkg.mk"
