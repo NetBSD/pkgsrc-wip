@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/09/19 14:22:17 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/24 16:56:37 asau Exp $
 #
 
 DISTNAME=	mod_authz_ldap-0.29
@@ -10,8 +10,6 @@ MAINTAINER=	filip@joyent.com
 HOMEPAGE=	http://authzldap.othello.ch/
 COMMENT=	Apache LDAP Authorization module
 LICENSE=	apache-2.0
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PKG_APACHE_ACCEPTED=	apache22
 

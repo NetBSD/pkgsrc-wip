@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/06/13 05:16:03 othyro Exp $
+# $NetBSD: Makefile,v 1.5 2012/09/24 16:56:29 asau Exp $
 #
 
 PKGNAME=	Terminal-0.9.4
@@ -11,8 +11,6 @@ MAINTAINER=	metaridley@mchsi.com
 HOMEPAGE=	http://www.nongnu.org/backbone/apps.html
 COMMENT=	GNUstep terminal emulator
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/terminal-0.9.4+cvs20051125
 USE_LANGUAGES=	objc

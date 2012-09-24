@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2011/10/09 10:05:45 cheusov Exp $
+# $NetBSD: Makefile,v 1.11 2012/09/24 16:56:33 asau Exp $
 #
 
 DISTNAME=	am-utils-6.1.5
@@ -34,8 +34,6 @@ RCD_SCRIPTS=		amd-pkgsrc
 
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 PKGDOCDIR=		${PREFIX}/share/doc/${PKGBASE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 INSTALLATION_DIRS+=	${EGDIR} ${PKGDOCDIR} etc/amd
 

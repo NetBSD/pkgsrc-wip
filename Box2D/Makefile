@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/10/07 11:30:17 obache Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/24 16:56:26 asau Exp $
 #
 
 DISTNAME=	Box2D_v2.2.1
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://www.box2d.org/
 COMMENT=	Box2D Physics Engine for games
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFIGURE_DIRS=	Build
 USE_LANGUAGES=	c c++

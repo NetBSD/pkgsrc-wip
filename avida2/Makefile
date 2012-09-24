@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/06/13 08:04:16 othyro Exp $
+# $NetBSD: Makefile,v 1.13 2012/09/24 16:56:40 asau Exp $
 #
 
 DISTNAME=	avida-2.0b1
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://avida.devosoft.org/
 COMMENT=	Avida is an auto-adaptive genetic system
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 HAS_CONFIGURE=		YES
 GNU_CONFIGURE=		YES

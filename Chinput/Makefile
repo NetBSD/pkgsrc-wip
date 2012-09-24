@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/03/14 01:27:57 jlamwww Exp $
+# $NetBSD: Makefile,v 1.6 2012/09/24 16:56:26 asau Exp $
 #
 
 DISTNAME=	Chinput-3.0.2
@@ -10,6 +10,8 @@ MASTER_SITES=	ftp://linux.nctu.edu.tw/dists/gentoo/distfiles/ \
 MAINTAINER=	rxg@NetBSD.org
 HOMEPAGE=	http://www.opencjk.org/~yumj/project-chinput.html
 COMMENT=	Chinese input server
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_X11BASE=	yes
 

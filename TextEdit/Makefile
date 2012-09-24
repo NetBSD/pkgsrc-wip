@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/01/28 22:19:03 dvol Exp $
+# $NetBSD: Makefile,v 1.4 2012/09/24 16:56:29 asau Exp $
 #
 
 PKGNAME=	TextEdit-4.0
@@ -10,6 +10,8 @@ MASTER_SITES=	http://www.gtlib.cc.gatech.edu/pub/debian/pool/main/t/textedit.app
 MAINTAINER=	metaridley@mchsi.com
 HOMEPAGE=	http://www.nongnu.org/backbone/apps.html
 COMMENT=	GNUstep text editor
+
+PKG_DESTDIR_SUPPORT=	none
 
 WRKSRC=		${WRKDIR}/textedit-4.0
 NO_CONFIGURE=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/03/29 18:35:22 christtrekker Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/24 16:56:29 asau Exp $
 
 DISTNAME=	Typewriter-0.0.1
 CATEGORIES=	editors gnustep
@@ -7,8 +7,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://etoileos.com/
 COMMENT=	General text editor for plain and rich format text
 LICENSE=	modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	objc
 

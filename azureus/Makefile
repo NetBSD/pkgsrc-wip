@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/06/08 16:14:56 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2012/09/24 16:56:41 asau Exp $
 #
 
 DISTNAME=		azureus-2.2.0.2
@@ -18,8 +18,6 @@ NOT_FOR_PLATFORM=	NetBSD-[0-2]*-*
 
 EMUL_MODULES.linux=	gtk2
 SUSE_VERSION_REQD=	10.0
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/azureus
 BUILD_DIRS=		# empty

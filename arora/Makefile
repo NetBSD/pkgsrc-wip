@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2010/06/13 22:46:56 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.11 2012/09/24 16:56:38 asau Exp $
 
 DISTNAME=		arora-0.10.2
 PKGREVISION=		2
@@ -10,7 +10,6 @@ HOMEPAGE=		http://code.google.com/p/arora
 COMMENT=		Arora is a web browser using Qt and Webkit
 LICENSE=		gnu-gpl-v2
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALL_ENV+=		INSTALL_ROOT=${DESTDIR}
 
 USE_LIBTOOL=		yes

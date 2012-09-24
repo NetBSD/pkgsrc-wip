@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/03/29 18:10:38 christtrekker Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/24 16:56:26 asau Exp $
 
 DISTNAME=	FontManager-0.0.1
 CATEGORIES=	fonts gnustep
@@ -7,8 +7,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://etoileos.com/
 COMMENT=	Font Manager is an app for the purpose of (guess what) managing fonts
 LICENSE=	modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	objc
 

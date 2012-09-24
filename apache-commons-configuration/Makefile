@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/01/01 15:28:47 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/24 16:56:37 asau Exp $
 #
 
 DISTNAME=	commons-configuration-1.6
@@ -17,8 +17,6 @@ DEPENDS+=	apache-commons-collections>=3.2.1:../../wip/apache-commons-collections
 DEPENDS+=	apache-commons-digester>=2.0:../../wip/apache-commons-digester
 DEPENDS+=	apache-commons-lang>=2.5:../../wip/apache-commons-lang
 DEPENDS+=	apache-commons-logging>=1.1.1:../../wip/apache-commons-logging
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_BUILD=	yes
 USE_TOOLS+=	pax

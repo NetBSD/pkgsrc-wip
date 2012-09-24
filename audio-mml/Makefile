@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/02/28 14:53:17 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2012/09/24 16:56:40 asau Exp $
 #
 
 DISTNAME=	rat-4.4.01r4121
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www-mice.cs.ucl.ac.uk/multimedia/software/
 COMMENT=	Real-time Audio Tool
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/09/09 17:01:23 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/24 16:56:38 asau Exp $
 #
 
 DISTNAME=	AriaSrc-1.4.4
@@ -12,7 +12,6 @@ HOMEPAGE=	http://ariamaestosa.sourceforge.net/
 COMMENT=	Open-source (GPL) midi tracker/editor
 #LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2 AND public-domain
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 BUILD_DEPENDS+=		scons-[0-9]*:../../devel/scons
 
 USE_PKGLOCALEDIR=	yes

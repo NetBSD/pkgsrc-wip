@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/09/19 23:25:50 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/24 16:56:39 asau Exp $
 #
 
 DISTNAME=	aten-1.7
@@ -9,8 +9,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://www.projectaten.org/
 COMMENT=	Aten is a tool to create, edit, and visualise coordinates
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/01/01 15:32:17 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/24 16:56:37 asau Exp $
 #
 
 DISTNAME=	commons-io-1.4-bin
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://commons.apache.org/io/
 COMMENT=	Common useful IO related classes
 LICENSE=	apache-2.0
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/commons-io-1.4
 

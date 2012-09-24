@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/09/01 21:21:31 udontknow Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/24 16:56:26 asau Exp $
 #
 
 DISTNAME=	389-ds-base-1.2.2
@@ -10,8 +10,6 @@ MAINTAINER=	evaldo@gardenali.biz
 HOMEPAGE=	http://www.port389.org/
 COMMENT=	389 Directory Server (LDAP) Base package
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

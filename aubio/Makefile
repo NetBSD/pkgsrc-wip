@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/07/31 13:23:06 ryo-on Exp $
+# $NetBSD: Makefile,v 1.5 2012/09/24 16:56:39 asau Exp $
 #
 
 DISTNAME=	aubio-0.3.2
@@ -9,8 +9,6 @@ MAINTAINER=	pho@cielonegro.org
 HOMEPAGE=	http://aubio.org/
 COMMENT=	Extracting annotations from audio signals
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

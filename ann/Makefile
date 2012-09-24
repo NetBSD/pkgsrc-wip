@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/01/17 22:02:17 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/24 16:56:33 asau Exp $
 #
 
 DISTNAME=	ann_1.1.2
@@ -10,8 +10,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://www.cs.umd.edu/~mount/ANN
 COMMENT=	Library for Approximate Nearest Neighbor Searching
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+= gmake pax
 USE_LANGUAGES=	c++

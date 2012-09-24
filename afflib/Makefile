@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/01/17 12:03:22 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2012/09/24 16:56:31 asau Exp $
 #
 
 DISTNAME=		afflib-1.6.31
@@ -9,8 +9,6 @@ MASTER_SITES=		http://www.afflib.org/downloads/
 MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://www.afflib.org/downloads/
 COMMENT=		Advanced Forensic Format library
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES= c++
 

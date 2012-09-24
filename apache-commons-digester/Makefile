@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/01/01 15:31:15 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/24 16:56:37 asau Exp $
 #
 
 DISTNAME=	commons-digester-2.0-bin
@@ -13,8 +13,6 @@ LICENSE=	apache-2.0
 
 DEPENDS+=	apache-commons-beanutils>=1.8.3:../../wip/apache-commons-beanutils
 DEPENDS+=	apache-commons-logging>=-1.1.1:../../wip/apache-commons-logging
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/commons-digester-2.0
 

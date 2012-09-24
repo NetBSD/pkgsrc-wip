@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/10/14 04:40:21 phonohawk Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/24 16:56:40 asau Exp $
 #
 
 DISTNAME=		auto-complete-1.3
@@ -11,8 +11,6 @@ MAINTAINER=		pho@cielonegro.org
 HOMEPAGE=		http://cx4a.org/software/auto-complete/index.html
 COMMENT=		The most intelligent auto-completion extension for GNU Emacs
 LICENSE=		gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MESSAGE_SUBST+=         LISPDIR=${EMACS_LISPPREFIX:Q}
 MESSAGE_SUBST+=			PKGBASE=${PKGBASE:Q}

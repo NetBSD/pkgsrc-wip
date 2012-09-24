@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2010/08/01 14:57:08 asau Exp $
+# $NetBSD: Makefile,v 1.11 2012/09/24 16:56:39 asau Exp $
 
 ATLAS_VERSION=	3.9.25
 
@@ -13,8 +13,6 @@ HOMEPAGE=	http://math-atlas.sourceforge.net/
 COMMENT=	Automatically Tuned Linear Algebra Software
 
 CONFLICTS=	lapack-[0-9]*
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/ATLAS
 HAS_CONFIGURE=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/06/13 05:25:35 othyro Exp $
+# $NetBSD: Makefile,v 1.13 2012/09/24 16:56:30 asau Exp $
 #
 
 DISTNAME=		acpid-1.0.4
@@ -11,7 +11,6 @@ HOMEPAGE=		http://acpid.sourceforge.net/
 COMMENT=		Linux ACPI event handler
 LICENSE=		gnu-gpl-v2
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 ONLY_FOR_PLATFORM=	Linux-*-*
 
 EGDIR=			${PREFIX}/share/examples/acpid

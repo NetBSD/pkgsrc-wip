@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/10/29 08:32:37 shattered Exp $
+# $NetBSD: Makefile,v 1.12 2012/09/24 16:56:34 asau Exp $
 #
 
 DISTNAME=		aolserver-4.01-src
@@ -9,6 +9,8 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=aolserver/}
 MAINTAINER=		iharding@destinydata.com
 HOMEPAGE=		http://www.aolserver.com/
 COMMENT=		America Online's open source web server
+
+PKG_DESTDIR_SUPPORT=	none
 
 MAKE_FLAGS+=		NSHOME=${WRKSRC:Q}
 CONFIGURE_ARGS+=	--with-tcl=${LOCALBASE}/lib

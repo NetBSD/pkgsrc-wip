@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/06/13 08:00:49 othyro Exp $
+# $NetBSD: Makefile,v 1.4 2012/09/24 16:56:40 asau Exp $
 #
 
 VERSION=2.21
@@ -10,8 +10,6 @@ MAINTAINER=		oivulf@gmail.com
 HOMEPAGE=		http://www.sleuthkit.org/
 COMMENT=		Browser interface to sleuthkit
 LICENSE=		gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake perl

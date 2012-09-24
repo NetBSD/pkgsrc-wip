@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/06/13 06:24:12 othyro Exp $
+# $NetBSD: Makefile,v 1.4 2012/09/24 16:56:34 asau Exp $
 #
 
 BASENAME=		aoi
@@ -13,8 +13,6 @@ MAINTAINER=		jfranz@bsdprojects.net
 HOMEPAGE=		http://aoi.sourceforge.net/
 COMMENT=		Open source 3D modelling and rendering studio based on Java
 LICENSE=		gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/ArtOfIllusion${PKGVERSION_NOREV:S/.//}
 USE_JAVA=		run

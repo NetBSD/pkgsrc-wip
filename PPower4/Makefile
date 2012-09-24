@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/06/13 03:31:53 othyro Exp $
+# $NetBSD: Makefile,v 1.13 2012/09/24 16:56:27 asau Exp $
 
 DISTNAME=	# empty
 PKGNAME=	PPower4-0.9.4
@@ -14,8 +14,6 @@ LICENSE=	gnu-gpl-v3
 DEPENDS+=	tex-eso-pic-[0-9]*:../../print/tex-eso-pic
 DEPENDS+=	tex-graphics-[0-9]*:../../print/tex-graphics
 DEPENDS+=	tex-hyperref-[0-9]*:../../print/tex-hyperref
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 # This requires Java 1.2 or better
 USE_JAVA=	run

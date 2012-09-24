@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/01/18 04:30:10 tnn2 Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/24 16:56:26 asau Exp $
 #
 
 PKGNAME=	GNUMail-pgp-1.1.2
@@ -10,6 +10,8 @@ MASTER_SITES=	http://debian.uni-essen.de/misc/GNUstep/Apps/GNUMail/
 MAINTAINER=	metaridley@mchsi.com
 HOMEPAGE=	http://debian.uni-essen.de/misc/GNUstep/Apps/GNUMail/
 COMMENT=	Bundle for PGP support in GNUMail
+
+PKG_DESTDIR_SUPPORT=	none
 
 WRKSRC=		${WRKDIR}/GNUMail/Bundles/PGP
 

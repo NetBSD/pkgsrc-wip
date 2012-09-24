@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/05/12 05:36:32 makoto Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/24 16:56:33 asau Exp $
 
 DISTNAME=	anthy-dic-jis34-0.2
 CATEGORIES=	inputmethod
@@ -10,8 +10,6 @@ COMMENT=	Dictionary of JIS level 3 and 4 for Anthy
 LICENSE=	gnu-gpl-v2
 
 BUILD_DEFS+=	ANTHYDIC_DIR
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CONFIGURE=	yes
 NO_BUILD=	yes

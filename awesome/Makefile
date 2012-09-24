@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2012/04/27 00:39:30 blckmaxima Exp $
+# $NetBSD: Makefile,v 1.24 2012/09/24 16:56:40 asau Exp $
 #
 
 DISTNAME=	awesome-3.4.10
@@ -10,8 +10,6 @@ MAINTAINER=	pallegra@gmail.com
 HOMEPAGE=	http://awesome.naquadah.org/
 COMMENT=	Tiling window manager based on dwm
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=	awesome<3.0
 

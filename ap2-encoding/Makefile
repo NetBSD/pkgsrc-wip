@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2010/01/17 12:03:23 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2012/09/24 16:56:36 asau Exp $
 
 DISTNAME=	mod_encoding-20021209
 PKGNAME=	ap2-encoding-20040616
@@ -9,6 +9,8 @@ MASTER_SITES=	http://webdav.todo.gr.jp/download/
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://webdav.todo.gr.jp/
 COMMENT=	Apache module for non-ascii filename interoperability
+
+PKG_DESTDIR_SUPPORT=	none
 
 DISTFILE.main=	mod_encoding-20021209.tar.gz
 DISTFILE.ap2=	mod_encoding.c.apache2.20040616

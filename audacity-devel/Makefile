@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/06/13 07:43:44 othyro Exp $
+# $NetBSD: Makefile,v 1.13 2012/09/24 16:56:40 asau Exp $
 
 DISTNAME=		audacity-src-1.3.0b
 PKGNAME=		${DISTNAME:S/-src-/-/}
@@ -11,7 +11,6 @@ HOMEPAGE=		http://audacity.sourceforge.net/
 COMMENT=		Audio editor
 LICENSE=		gnu-gpl-v2
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 DEPENDS+=		zip>=0.0:../../archivers/zip
 
 WRKSRC=			${WRKDIR}/${DISTNAME}-beta

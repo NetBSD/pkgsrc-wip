@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/09/02 21:51:46 jihbed Exp $
+# $NetBSD: Makefile,v 1.5 2012/09/24 16:56:38 asau Exp $
 #
 
 DISTNAME=	argtable2-13
@@ -10,8 +10,6 @@ MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://argtable.sourceforge.net/
 COMMENT=	ANSI C Library for parsing GNU style command line arguments
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_CMAKE=	yes
 USE_LIBTOOL=	yes

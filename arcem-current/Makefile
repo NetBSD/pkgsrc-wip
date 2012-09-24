@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2010/08/21 09:10:51 ryo-on Exp $
+# $NetBSD: Makefile,v 1.5 2012/09/24 16:56:38 asau Exp $
 #
 
 DISTNAME=	arcem-20100819
 CATEGORIES=	emulators
 MASTER_SITES=	http://ryo-on.users.sourceforge.net/distrib/
 EXTRACT_SUFX=	.tar.bz2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 INSTALLATION_DIRS=	bin \
 			share/${PKGBASE}

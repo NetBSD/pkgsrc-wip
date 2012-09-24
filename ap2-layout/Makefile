@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2010/06/02 08:34:08 obache Exp $
+# $NetBSD: Makefile,v 1.10 2012/09/24 16:56:36 asau Exp $
 
 DISTNAME=	mod_layout-4.1
 PKGNAME=	${DISTNAME:S/mod_/ap2-/}
@@ -10,8 +10,6 @@ MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://tangent.org/362/mod_layout.html
 COMMENT=	Apache2 module to wrap served pages with a header and/or footer
 LICENSE=	apache-2.0
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=	yes
 APACHE_MODULE=	yes

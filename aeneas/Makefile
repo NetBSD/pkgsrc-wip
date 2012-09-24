@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/09/05 09:16:15 gschwarz Exp $
+# $NetBSD: Makefile,v 1.6 2012/09/24 16:56:31 asau Exp $
 
 DISTNAME=	aeneas-1.2
 CATEGORIES=	misc
@@ -11,8 +11,6 @@ COMMENT=	3D Monte Carlo simulation software for submicron semiconductor devices
 LICENSE=	gnu-gpl-v3
 
 USE_FEATURES+=	getopt_long
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	YES
 

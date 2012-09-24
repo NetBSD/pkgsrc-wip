@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/02/16 15:16:13 christtrekker Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/24 16:56:39 asau Exp $
 #
 
 DISTNAME=	atque-1.1.1
@@ -10,8 +10,6 @@ MAINTAINER=	christtrekker@users.sourceforge.net
 HOMEPAGE=	http://igniferroque.sourceforge.net/
 COMMENT=	Marathon game map utility
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	autoconf automake gmake

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/05/29 17:27:10 tnn2 Exp $
+# $NetBSD: Makefile,v 1.11 2012/09/24 16:56:27 asau Exp $
 #
 
 DISTNAME=	openglut-0.6.3
@@ -12,7 +12,6 @@ HOMEPAGE=	http://OpenGLUT.sourceforge.net/
 COMMENT=	OpenGLUT is an open source evolution of the GLUT API
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes

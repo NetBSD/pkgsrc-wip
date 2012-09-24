@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/06/13 06:00:22 othyro Exp $
+# $NetBSD: Makefile,v 1.7 2012/09/24 16:56:33 asau Exp $
 #
 
 DISTNAME=	alive-1.4.0
@@ -9,8 +9,6 @@ MAINTAINER=	oht@users.sourceforge.net
 HOMEPAGE=	http://www.gnu.org/software/alive/
 COMMENT=	Login software for Swedish Telia ADSL/Comhem cable Internet users
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 AUTOMAKE_REQD=	1.7.1
 MANCOMPRESSED=	yes

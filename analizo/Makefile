@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/10/28 20:24:44 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/24 16:56:33 asau Exp $
 #
 
 DISTNAME=	analizo_1.16.0
@@ -10,8 +10,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://analizo.org/
 COMMENT=	Extensible source code analysis and visualization toolkit
 #LICENSE=	# TODO: (see mk/license.mk)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Class-Accessor>=0.34:../../devel/p5-Class-Accessor
 DEPENDS+=	p5-Test-Class>=0.36:../../devel/p5-Test-Class

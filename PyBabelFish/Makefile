@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/04/08 19:09:41 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.14 2012/09/24 16:56:27 asau Exp $
 #
 
 DISTNAME=		PyBabelPhish-2.0_All_Platforms
@@ -12,6 +12,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.phrozensmoke.com/projects/pythonol/
 COMMENT=		Gtk-based frontend for several translation services on web
+
+PKG_DESTDIR_SUPPORT=	none
 
 PYTHON_VERSIONS_ACCEPTED=	25
 PY_PATCHPLIST=		yes

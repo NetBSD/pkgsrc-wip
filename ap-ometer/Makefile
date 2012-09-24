@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2010/12/26 05:01:21 davesainty Exp $
+# $NetBSD: Makefile,v 1.18 2012/09/24 16:56:36 asau Exp $
 #
 
 DISTNAME=	mod_ometer-1.3.0
@@ -10,6 +10,8 @@ MASTER_SITES=	http://www.umich.edu/~umweb/downloads/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.umich.edu/~umweb/software/mod_ometer.html
 COMMENT=	Web counter apache module
+
+PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=		yes
 

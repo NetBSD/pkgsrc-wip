@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2010/06/13 22:46:56 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2012/09/24 16:56:40 asau Exp $
 #
 
 DISTNAME=	awflwm-0.0
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	low@ameba6.com
 HOMEPAGE=	http://awflwm.berlios.de/
 COMMENT=	Fork of the flwm project
+
+PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ENV+=	X_LIBS="-lGL"

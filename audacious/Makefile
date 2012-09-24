@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2012/06/13 07:35:56 othyro Exp $
+# $NetBSD: Makefile,v 1.24 2012/09/24 16:56:40 asau Exp $
 #
 
 DISTNAME=	audacious-3.2.3
@@ -10,8 +10,6 @@ MAINTAINER=	loki.vt@gmail.com
 HOMEPAGE=	http://audacious-media-player.org/
 COMMENT=	Media player based on BMP and XMMS
 LICENSE=	gnu-gpl-v3 public-domain
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=  c c++
 GNU_CONFIGURE=  YES

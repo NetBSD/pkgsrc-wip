@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/02/03 17:07:30 realzhtw Exp $
+# $NetBSD: Makefile,v 1.4 2012/09/24 16:56:34 asau Exp $
 #
 
 DISTNAME=	aoeui-1.6
@@ -10,8 +10,6 @@ MAINTAINER=	a@zta.lk
 HOMEPAGE=	http://code.google.com/p/aoeui/
 COMMENT=	Lightweight text editor optimized for Dvorak
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	m4
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2010/06/13 22:46:54 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.13 2012/09/24 16:56:27 asau Exp $
 #
 
 DISTNAME=	LabPlot-1.6.0.1-2
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	ianzag@mail.ru
 HOMEPAGE=	http://mitarbeiter.mbi-berlin.de/gerlach/Linux/LabPlot/
 COMMENT=	Data analysis and visualisation
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/LabPlot-1.6.0.1
 GNU_CONFIGURE=		yes

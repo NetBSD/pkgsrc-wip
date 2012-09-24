@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/08/20 13:23:18 imilh Exp $
+# $NetBSD: Makefile,v 1.17 2012/09/24 16:56:32 asau Exp $
 
 DISTNAME=		aircrack-ng-1.1
 CATEGORIES=		security net
@@ -10,7 +10,6 @@ COMMENT=		Tools for auditing wireless networks
 
 LICENSE=		gnu-gpl-v3
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS+=	bin sbin ${PKGMANDIR}/man1
 
 USE_TOOLS+=		bash gmake

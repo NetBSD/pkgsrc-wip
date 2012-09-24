@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/01/08 13:28:24 rubengonzalez Exp $
+# $NetBSD: Makefile,v 1.4 2012/09/24 16:56:38 asau Exp $
 #
 
 DISTNAME=	arandr-0.1.4
@@ -12,8 +12,6 @@ LICENSE=	gnu-gpl-v3
 
 DEPENDS+=       ${PYPKGPREFIX}-docutils>=0.6:../../textproc/py-docutils
 DEPENDS+=	xrandr>=1.2:../../x11/xrandr
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PY_PATCHPLIST = YES
 PYSETUP = setup.py

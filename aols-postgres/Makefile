@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/11/28 00:27:22 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2012/09/24 16:56:34 asau Exp $
 #
 
 DISTNAME=	nspostgres-4.0
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=aolserver/}
 MAINTAINER=	iharding@destinydata.com
 HOMEPAGE=	http://www.aolserver.com/
 COMMENT=	Postgres database access module for aolserver
+
+PKG_DESTDIR_SUPPORT=	none
 
 MAKE_FLAGS+=	POSTGRES=${PREFIX:Q} INST=/${PREFIX:Q}/include/nsd \
 		TCL_CC=gcc

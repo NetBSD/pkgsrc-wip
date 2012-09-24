@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2011/09/28 14:20:29 ryo-on Exp $
+# $NetBSD: Makefile,v 1.11 2012/09/24 16:56:33 asau Exp $
 #
 
 DISTNAME=	allegro-4.4.2
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://alleg.sourceforge.net/
 COMMENT=	Allegro game programming library
 #LICENSE=	# TODO: (see mk/license.mk)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config makeinfo

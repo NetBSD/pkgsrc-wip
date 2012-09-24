@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/10/16 12:27:04 ryo-on Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/24 16:56:40 asau Exp $
 #
 
 DISTNAME=		autossh-1.4c
@@ -10,8 +10,6 @@ MAINTAINER=		mj@mjturner.net
 HOMEPAGE=		http://www.harding.motd.ca/autossh/
 COMMENT=		Monitor and automatically restart SSH sessions and tunnels
 #LICENSE=		autossh
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/06/21 21:14:32 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/24 16:56:38 asau Exp $
 #
 
 VERS=	 	20051229
@@ -11,8 +11,6 @@ EXTRACT_SUFX=	.bz2
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://garr.dl.sourceforge.net/project/arabeyes/Quran/Fonts/
 COMMENT=	Fonts to be used to display the Qur\'an text
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=	${WRKDIR}
 USE_LANGUAGES=	# none

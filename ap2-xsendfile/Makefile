@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/05/11 07:25:56 fhajny Exp $
+# $NetBSD: Makefile,v 1.5 2012/09/24 16:56:36 asau Exp $
 #
 
 DISTNAME=		mod_xsendfile-0.12
@@ -10,8 +10,6 @@ MAINTAINER=		filip@joyent.com
 HOMEPAGE=		http://tn123.org/mod_xsendfile/
 COMMENT=		Apache 2 module that processes X-SENDFILE headers
 LICENSE=		apache-2.0
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 APACHE_MODULE=		YES
 APACHE_MODULE_NAME=	${DISTNAME:C|-.*||}.so

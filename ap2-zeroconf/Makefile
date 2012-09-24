@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/01/17 12:03:23 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2012/09/24 16:56:36 asau Exp $
 
 DISTNAME=	mod_zeroconf-0.3
 PKGNAME=	ap2-zeroconf-0.3
@@ -9,6 +9,8 @@ MASTER_SITES=	http://people.apache.org/~sctemme/Apcon2003/TU10/
 MAINTAINER=	eggert@macvaerk.dtu.dk
 HOMEPAGE=	http://www.temme.net/sander/mod_zeroconf/
 COMMENT=	Allows apache2 to register on a Zero Configuration network
+
+PKG_DESTDIR_SUPPORT=	none
 
 WRKSRC=		${WRKDIR}/mod_zeroconf
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/01/01 15:33:28 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/24 16:56:38 asau Exp $
 #
 
 DISTNAME=	commons-lang-2.5-bin
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://commons.apache.org/lang/
 COMMENT=	Extension of the java.lang package
 LICENSE=	apache-2.0
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/commons-lang-2.5
 

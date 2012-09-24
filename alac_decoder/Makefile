@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/11/13 22:03:51 ryo-on Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/24 16:56:32 asau Exp $
 #
 
 DISTNAME=	alac_decoder-0.2.0
@@ -10,8 +10,6 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://craz.net/programs/itunes/alac.html
 COMMENT=	Apple Lossless Audio Codec files decoder
 LICENSE=	mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/alac_decoder
 BUILD_TARGET=	# empty

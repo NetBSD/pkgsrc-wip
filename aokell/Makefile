@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/01/19 14:14:04 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/24 16:56:34 asau Exp $
 #
 
 DISTNAME=	AOKell-2.0-bin
@@ -11,8 +11,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://fractal.ow2.org/aokell/index.html
 COMMENT=	AOKell is a Java implementation of the Fractal component model
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/AOKell-2.0
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/10/29 08:32:37 shattered Exp $
+# $NetBSD: Makefile,v 1.6 2012/09/24 16:56:35 asau Exp $
 
 DISTNAME=	mod_macro-1.1.2
 PKGNAME=	${DISTNAME:S/mod_/ap-/}
@@ -8,6 +8,8 @@ MASTER_SITES=	http://www.cri.ensmp.fr/~coelho/mod_macro/
 MAINTAINER=	jdunn@opentrend.net
 HOMEPAGE=	http://www.cri.ensmp.fr/~coelho/mod_macro/
 COMMENT=	Apache module for using macros in config files
+
+PKG_DESTDIR_SUPPORT=	none
 
 CONFLICTS=	ap2-macro-[0-9]*
 

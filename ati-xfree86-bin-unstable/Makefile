@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/07/22 09:53:11 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2012/09/24 16:56:39 asau Exp $
 #
 
 VERSION=	8.40.4
@@ -14,8 +14,9 @@ MAINTAINER=	bsd@cs.ubc.ca
 HOMEPAGE=	http://ati.amd.com/support/drivers/linux/linux-radeon.html
 COMMENT=	ATI binary drivers for XFree86 4.3
 LICENSE=	amd-software-license
-
 LICENSE_FILE=	LICENSE
+
+PKG_DESTDIR_SUPPORT=	none
 
 DEPENDS=	ati-xfree86-bin<${VERSION}:../../wip/ati-xfree86-bin
 

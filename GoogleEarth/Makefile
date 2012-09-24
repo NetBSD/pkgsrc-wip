@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2010/06/02 00:48:34 othyro Exp $
+# $NetBSD: Makefile,v 1.16 2012/09/24 16:56:26 asau Exp $
 
 DISTNAME=		GoogleEarthLinux.bin
 PKGNAME=		GoogleEarth-${GE_VERSION}
@@ -31,7 +31,6 @@ WRKSRC=			${WRKDIR}/GoogleEarthLinuxPlus-${GE_VERSION}-installer
 DIST_SUBDIR=		${PKGNAME_NOREV}
 EXTRACT_CMD=		${SH} "$$extract_file" --noexec --keep
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS=	bin
 
 USE_TOOLS+=		pax

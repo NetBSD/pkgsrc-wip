@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2008/07/20 13:39:22 hoka_adam Exp $
+# $NetBSD: Makefile.common,v 1.3 2012/09/24 16:56:38 asau Exp $
 #
 # used by wip/armagetronad/Makefile
 
@@ -13,6 +13,8 @@ ARMAD_VER=	0.2.8.2.1
 
 MAINTAINER=	adam.hoka@gmail.com
 HOMEPAGE=	http://armagetronad.sourceforge.net/
+
+PKG_DESTDIR_SUPPORT=	none
 
 WRKSRC=		${WRKDIR}/armagetronad-0.2.8.2.1
 GNU_CONFIGURE=	yes

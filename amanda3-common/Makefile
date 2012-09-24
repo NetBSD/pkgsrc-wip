@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/08/24 02:40:35 schnoebe Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/24 16:56:33 asau Exp $
 
 PKGNAME=		amanda-common-${VERS}
 SVR4_PKGNAME=		amaco
 
 COMMENT=		Common libraries and binaries for Amanda
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../wip/amanda3-common/Makefile.common"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2011/05/21 19:14:41 marko_schuetz Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/24 16:56:33 asau Exp $
 #
 
 DISTNAME=	alt-ergo-0.93
@@ -10,7 +10,6 @@ HOMEPAGE=	http://ergo.lri.fr/http/
 COMMENT=	Automatic theorem prover for program verification
 
 USE_TOOLS+=	gmake
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c

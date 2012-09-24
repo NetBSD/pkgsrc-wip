@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/01/18 04:30:10 tnn2 Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/24 16:56:29 asau Exp $
 #
 
 DISTNAME=	StepTalk-0.10.0
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_GNUSTEP:=libs/}
 MAINTAINER=	metaridley@mchsi.com
 HOMEPAGE=	http://www.gnustep.org/experience/StepTalk.html
 COMMENT=	GNUstep scripting framework
+
+PKG_DESTDIR_SUPPORT=	none
 
 WRKSRC=		${WRKDIR}/StepTalk
 USE_LANGUAGES=	objc

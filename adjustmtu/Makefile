@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/01/13 15:58:55 ishit Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/24 16:56:30 asau Exp $
 #
 
 DISTNAME=	adjustmtu-1.00
@@ -12,8 +12,6 @@ HOMEPAGE=	${MASTER_SITES}
 COMMENT=	Detect MTU size and set MTU size of routing table
 
 #ONLY_FOR_PLATFORM=	FreeBSD-* NetBSD-* OpenBSD-*
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-1.00//}
 

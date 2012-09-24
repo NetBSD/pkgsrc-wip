@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/10/29 08:32:37 shattered Exp $
+# $NetBSD: Makefile,v 1.5 2012/09/24 16:56:31 asau Exp $
 #
 
 DISTNAME=		aespipe-v2.3b
@@ -10,6 +10,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		evaldo@gardenali.biz
 HOMEPAGE=		http://loop-aes.sourceforge.net/aespipe/
 COMMENT=		AES encryption pipe from the loop-aes project
+
+PKG_DESTDIR_SUPPORT=	none
 
 DEPENDS+=		gnupg>=1.2.0:../../security/gnupg
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/06/13 05:49:49 othyro Exp $
+# $NetBSD: Makefile,v 1.4 2012/09/24 16:56:32 asau Exp $
 #
 
 DISTNAME=	aida-3.2.1
@@ -9,8 +9,6 @@ MAINTAINER=	hugor@users.sourceforge.net
 HOMEPAGE=	http://aida.freehep.org/index.thtml
 COMMENT=	Abstract interfaces for data analysis
 LICENSE=	gnu-lgpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}
 INSTALLATION_DIRS+=	include/AIDA share/doc/${PKGBASE}/api/hep/aida

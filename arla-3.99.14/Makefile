@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/10/29 08:32:38 shattered Exp $
+# $NetBSD: Makefile,v 1.8 2012/09/24 16:56:38 asau Exp $
 
 DISTNAME=		arla-0.41
 PKGREVISION=		3
@@ -8,6 +8,8 @@ MASTER_SITES=		ftp://ftp.stacken.kth.se/pub/arla/
 MAINTAINER=		ola@mreriksson.net
 HOMEPAGE=		http://www.stacken.kth.se/project/arla/
 COMMENT=		Free AFS implementation from KTH
+
+PKG_DESTDIR_SUPPORT=	none
 
 CONFLICTS+=		heimdal-[0-9]*
 CONFLICTS+=		lwp-[0-9]*

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/06/10 12:07:00 leot1990 Exp $
+# $NetBSD: Makefile,v 1.8 2012/09/24 16:56:38 asau Exp $
 #
 
 DISTNAME=	apvlv-0.0.9.2
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://apvlv.googlecode.com/
 COMMENT=	PDF Viewer which behaves like Vim
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++

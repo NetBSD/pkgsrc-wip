@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/11/30 12:53:00 noud4 Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/24 16:56:28 asau Exp $
 #
 
 DISTNAME=		SDL-1.0-portuguese-intro
@@ -10,8 +10,6 @@ MASTER_SITES=	http://www.libsdl.org/archives/
 MAINTAINER=		ianzag@mail.ru
 HOMEPAGE=		http://www.libsdl.org/docs.php
 COMMENT=		Simple DirectMedia Layer introduction (Portuguese)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/intro.br
 DEST=			${PREFIX}/share/doc/SDL-intro/pt

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2009/05/20 00:58:40 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2012/09/24 16:56:39 asau Exp $
 #
 
 DISTNAME=		atftp-0.7
@@ -11,7 +11,6 @@ MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://freshmeat.net/projects/atftp/
 COMMENT=		Advanced TFTP client and server
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 ONLY_FOR_PLATFORM=	Linux-*-*
 
 USE_PKGLOCALEDIR=	yes

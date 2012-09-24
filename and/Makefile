@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/06/13 06:17:15 othyro Exp $
+# $NetBSD: Makefile,v 1.13 2012/09/24 16:56:33 asau Exp $
 #
 
 DISTNAME=		and-1.2.0
@@ -14,7 +14,6 @@ LICENSE=		gnu-gpl-v3
 USE_TOOLS+=		gmake
 USE_LANGUAGES=		c
 BUILD_TARGET=		default
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 

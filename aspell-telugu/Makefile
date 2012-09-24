@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/05/04 15:50:06 othyro Exp $
+# $NetBSD: Makefile,v 1.4 2012/09/24 16:56:39 asau Exp $
 #
 
 DISTNAME=	aspell6-te-0.01-2
@@ -11,8 +11,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	prudhvi-krishna-bsd@surapaneni.in
 HOMEPAGE=	http://www.swecha.org/wiki/Wordlist_and_Dictionaries
 COMMENT=	Telugu language support for aspell
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 HAS_CONFIGURE=	YES
 

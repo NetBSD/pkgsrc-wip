@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/03/21 12:45:33 phonohawk Exp $
+# $NetBSD: Makefile,v 1.5 2012/09/24 16:56:26 asau Exp $
 #
 
 DISTNAME=	ETL-0.04.13
@@ -9,8 +9,6 @@ MAINTAINER=	pho@cielonegro.org
 HOMEPAGE=	http://synfig.org/
 COMMENT=	C++ template library for synfig
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config

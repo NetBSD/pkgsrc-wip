@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/03/23 14:06:28 outpaddling Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/24 16:56:33 asau Exp $
 #
 
 DISTNAME=	alberta-2.0.1
@@ -9,8 +9,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://www.alberta-fem.de/
 COMMENT=	Adaptive hierarchical finite element toolbox
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

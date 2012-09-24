@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/08/05 10:20:22 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/24 16:56:38 asau Exp $
 #
 
 DISTNAME=	aravis-0.1.0
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc.gnome@gmail.com
 HOMEPAGE=	https://live.gnome.org/Aravis
 COMMENT=	vision library for genicam based cameras
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

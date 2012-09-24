@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/09/06 13:06:36 othyro Exp $
+# $NetBSD: Makefile,v 1.6 2012/09/24 16:56:26 asau Exp $
 #
 
 DISTNAME=	Cg-3.1_April2012_x86${DIST_ARCH}
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://developer.nvidia.com/cg-toolkit
 COMMENT=	TODO: Short description of the package
 LICENSE=	nvidia-license
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	c c++

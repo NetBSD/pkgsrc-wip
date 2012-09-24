@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/01/01 15:38:09 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/24 16:56:38 asau Exp $
 #
 
 DISTNAME=	velocity-1.6.4
@@ -12,8 +12,6 @@ COMMENT=	Java-based template engine for web application
 LICENSE=	apache-2.0
 
 DEPENDS+=	jakarta-oro>=2.0.8:../../wip/jakarta-oro
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_BUILD=		yes
 USE_TOOLS+=	pax

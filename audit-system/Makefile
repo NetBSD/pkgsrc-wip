@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/07/17 17:11:04 adrian_p Exp $
+# $NetBSD: Makefile,v 1.7 2012/09/24 16:56:40 asau Exp $
 #
 
 DISTNAME=	audit-system-0.01
@@ -9,6 +9,8 @@ DISTFILES=	# empty
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.NetBSD.org/support/security/
 COMMENT=	Check the NetBSD base OS for known vulnerabilities
+
+PKG_DESTDIR_SUPPORT=	none
 
 WRKSRC=		${WRKDIR}
 NO_BUILD=	yes

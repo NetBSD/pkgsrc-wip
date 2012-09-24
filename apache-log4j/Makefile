@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/01/01 15:36:50 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/24 16:56:38 asau Exp $
 #
 
 DISTNAME=	apache-log4j-1.2.16
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://apache.multihomed.net//logging/log4j/1.2.16/
 COMMENT=	Logging facility for Java
 LICENSE=	apache-2.0
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_BUILD=	yes
 USE_JAVA=	run

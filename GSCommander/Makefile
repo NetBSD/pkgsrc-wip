@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/01/18 04:30:10 tnn2 Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/24 16:56:26 asau Exp $
 #
 
 DISTNAME=	GSCommander-0.1
@@ -9,6 +9,8 @@ MASTER_SITES=	http://www.nice.ch/~phip/
 MAINTAINER=	metaridley@mchsi.com
 HOMEPAGE=	http://www.nice.ch/~phip/softcorner.html
 COMMENT=	Simple Unix command monitor for GNUstep
+
+PKG_DESTDIR_SUPPORT=	none
 
 WRKSRC=		${WRKDIR}/GSCommander
 USE_LANGUAGES=	objc

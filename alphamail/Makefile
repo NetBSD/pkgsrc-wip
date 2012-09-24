@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/07/02 13:37:54 moubctez Exp $
+# $NetBSD: Makefile,v 1.13 2012/09/24 16:56:33 asau Exp $
 
 DISTNAME=	alphamail-1.0.44
 PKGREVISION=	5
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://alphamail.sourceforge.net/
 COMMENT=	Highly scalable webmail with middleware component
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BROKEN=		Incompatible with boost 1.34+
 

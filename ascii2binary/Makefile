@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/04/13 10:27:32 bartoszkuzma Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/24 16:56:39 asau Exp $
 #
 
 DISTNAME=	ascii2binary-2.14
@@ -10,8 +10,6 @@ MAINTAINER=	bartosz.kuzma@gmail.com
 HOMEPAGE=	http://www.billposer.org/Software/a2b.html
 COMMENT=	Convert between textual representations of numbers and binary
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BROKEN_GETTEXT_DETECTION=	yes
 GNU_CONFIGURE=	yes

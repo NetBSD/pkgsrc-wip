@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/06/13 22:46:56 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2012/09/24 16:56:38 asau Exp $
 #
 
 DISTNAME=	arista-0.9.1
@@ -13,8 +13,6 @@ LICENSE=	gnu-lgpl-v2
 
 DEPENDS+=	gst-ffmpeg-[0-9]*:../../multimedia/gst-plugins0.10-ffmpeg
 DEPENDS+=	gst-plugins0.10-x264-[0-9]*:../../multimedia/gst-plugins0.10-x264
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=	intltool msgfmt

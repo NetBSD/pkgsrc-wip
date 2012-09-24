@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2012/06/13 08:06:52 othyro Exp $
+# $NetBSD: Makefile,v 1.24 2012/09/24 16:56:40 asau Exp $
 
 DISTNAME=	avifile-0.7-0.7.45
 PKGNAME=	avifile-devel-0.7.45
@@ -10,8 +10,6 @@ MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://avifile.sourceforge.net/
 COMMENT=	MPEG-4 (DivX) video player library
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .if ${MACHINE_ARCH} == "i386"
 DEPENDS+=	win32-codecs>=010122:../../multimedia/win32-codecs
