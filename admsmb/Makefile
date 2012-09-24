@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/04/24 13:51:43 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/24 16:22:50 asau Exp $
 #
 
 DISTNAME=		ADMsmb_0.3
@@ -16,6 +16,6 @@ pre-build:
 	cd ${WRKSRC} && ${MAKE} clean
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/ADMsmb ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/ADMsmb ${DESTDIR}${PREFIX}/bin
 
 .include "../../mk/bsd.pkg.mk"
