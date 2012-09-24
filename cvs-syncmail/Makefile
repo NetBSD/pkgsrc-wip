@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/11/03 14:21:49 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2012/09/24 17:55:48 asau Exp $
 #
 
 DISTNAME=		syncmail
@@ -17,7 +17,7 @@ NO_BUILD=		yes
 PYTHON_PATCH_SCRIPTS=	syncmail
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/syncmail ${PREFIX}/bin/cvs-syncmail
+	${INSTALL_SCRIPT} ${WRKSRC}/syncmail ${DESTDIR}${PREFIX}/bin/cvs-syncmail
 
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
