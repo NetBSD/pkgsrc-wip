@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/06/13 16:48:19 othyro Exp $
+# $NetBSD: Makefile,v 1.8 2012/09/24 17:14:33 asau Exp $
 #
 
 DISTNAME=	bleachbit-0.7.2
@@ -14,8 +14,6 @@ LICENSE=	gnu-gpl-v3
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 DEPENDS+=	${PYPKGPREFIX}-gobject>=2.18.0:../../devel/py-gobject
 DEPENDS+=	${PYPKGPREFIX}-gtk2>=2.14.1:../../x11/py-gtk2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	pax
 USE_LANGUAGES=	# none

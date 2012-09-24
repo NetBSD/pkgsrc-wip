@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/04/08 19:09:41 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2012/09/24 17:14:33 asau Exp $
 #
 
 DISTNAME=	bkchem-0.13.0
@@ -10,8 +10,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://bkchem.zirael.org/
 COMMENT=	Python based chemical structures editor
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	${PYPKGPREFIX}-Pmw>=1.3.2:../../x11/py-Pmw
 

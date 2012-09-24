@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/04/16 20:51:46 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/24 17:14:43 asau Exp $
 #
 
 DISTNAME=	bunny-0.93
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@netbsd.org
 HOMEPAGE=	http://code.google.com/p/bunny-the-fuzzer/
 COMMENT=	Tools with C code security fuzzer
 LICENSE=	apache-2.0
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=	${WRKDIR}/bunny
 USE_TOOLS+=	gmake

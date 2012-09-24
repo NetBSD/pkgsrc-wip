@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/06/13 22:49:02 othyro Exp $
+# $NetBSD: Makefile,v 1.9 2012/09/24 17:14:39 asau Exp $
 #
 
 DISTNAME=		briquolo-0.5.7
@@ -11,7 +11,6 @@ HOMEPAGE=		http://briquolo.free.fr/en/
 COMMENT=		3D breakout based on OpenGL
 LICENSE=		gnu-gpl-v3
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS+=	share/applications share/briquolo/data/.xvpics
 INSTALLATION_DIRS+=	share/pixmaps
 

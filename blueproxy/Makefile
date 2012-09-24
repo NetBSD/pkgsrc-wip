@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/06/13 16:53:14 othyro Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/24 17:14:35 asau Exp $
 #
 
 DISTNAME=		blueproxy-1.3
@@ -9,8 +9,6 @@ MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://anil.recoil.org/projects/blueproxy.html
 COMMENT=		RFCOMM <-> TCP proxy
 #LICENSE=		# TODO
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/06/13 19:44:18 othyro Exp $
+# $NetBSD: Makefile,v 1.12 2012/09/24 17:14:38 asau Exp $
 
 DISTNAME=		boost-test-suite-20090305
 CATEGORIES=		devel
@@ -11,7 +11,6 @@ COMMENT?=		Run the Boost test suite
 LICENSE=		boost-license
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		ftp pax patch
 

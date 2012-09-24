@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/12/28 20:22:31 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/24 17:14:23 asau Exp $
 #
 
 DISTNAME=	bagel-2.0.0
@@ -8,8 +8,6 @@ MASTER_SITES=	http://www2.ph.ed.ac.uk/~paboyle/bagel/
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://www2.ph.ed.ac.uk/~paboyle/bagel/
 COMMENT=	Domain specific compiler for lattice QCD
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c++

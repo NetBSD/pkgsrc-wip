@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2012/06/14 01:13:59 othyro Exp $
+# $NetBSD: Makefile,v 1.21 2012/09/24 17:14:43 asau Exp $
 #
 
 DISTNAME=		bubbros-1.6
@@ -10,8 +10,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://bub-n-bros.sourceforge.net/
 COMMENT=		Multiplayer crazy clone of Bubble Bobble
 LICENSE=		mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PY_PATCHPLIST=		yes
 PYTHON_VERSIONS_INCOMPATIBLE+=	25

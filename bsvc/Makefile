@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/06/14 00:48:08 othyro Exp $
+# $NetBSD: Makefile,v 1.4 2012/09/24 17:14:42 asau Exp $
 
 DISTNAME=	bsvc-2.1
 CATEGORIES=	emulators
@@ -9,8 +9,6 @@ MAINTAINER=	nocker.bk@gmail.com
 HOMEPAGE=	http://www4.ncsu.edu/~bwmott/bsvc/
 COMMENT=	Extensible hardware simulation framework with MC68K support
 #LICENSE=	# TODO
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	tk>=8.4:../../x11/tk
 

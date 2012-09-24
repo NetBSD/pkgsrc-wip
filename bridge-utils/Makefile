@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/06/13 19:52:22 othyro Exp $
+# $NetBSD: Makefile,v 1.6 2012/09/24 17:14:39 asau Exp $
 #
 
 DISTNAME=		bridge-utils-1.0.4
@@ -9,8 +9,6 @@ MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://www.linuxfoundation.org/collaborate/workgroups/networking/bridge
 COMMENT=		Ethernet bridging utilities for GNU/Linux
 LICENSE=		gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes

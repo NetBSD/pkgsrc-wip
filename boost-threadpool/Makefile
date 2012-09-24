@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/12/29 22:40:18 tonnerre Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/24 17:14:39 asau Exp $
 
 DISTNAME=	threadpool-0_2_5-src
 PKGNAME=	boost-${DISTNAME:S/_/./g:S/-src//}
@@ -10,7 +10,6 @@ HOMEPAGE=	http://threadpool.sourceforge.net/
 COMMENT=	Cross-platform C++ thread pool library
 LICENSE=	boost-license
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 EXTRACT_SUFX=	.zip
 WRKSRC=		${WRKDIR}/${DISTNAME}/threadpool
 INSTALLATION_DIRS=	include/boost

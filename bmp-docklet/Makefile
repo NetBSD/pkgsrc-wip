@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/06/13 22:46:57 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2012/09/24 17:14:36 asau Exp $
 #
 
 DISTNAME=		bmp-docklet-1.3
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=		ianzag@mail.ru
 HOMEPAGE=		http://mark.xnull.de/bmp-docklet.php
 COMMENT=		BMP Dock applet
+
+PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES

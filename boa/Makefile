@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/06/12 15:46:33 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.18 2012/09/24 17:14:36 asau Exp $
 #
 
 DISTNAME=	boa-0.94.14rc21
@@ -17,8 +17,6 @@ EGDIR=		${PREFIX}/share/examples/boa
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	gmake lex
 USE_FEATURES+=	snprintf
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 

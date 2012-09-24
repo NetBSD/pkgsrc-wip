@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/05/15 16:10:22 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2012/09/24 17:14:26 asau Exp $
 #
 
 DISTNAME=	baler-1.0
@@ -10,8 +10,6 @@ MAINTAINER=	jan.smydke@jh-inst.cas.cz
 HOMEPAGE=	http://blue.jh-inst.cas.cz/~smydke/projects/baler
 COMMENT=	Store data in bales and provide a TOC for direct access
 LICENSE=	2-clause-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gmake
 MAKE_FILE=	GNUmakefile

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/06/14 01:24:41 othyro Exp $
+# $NetBSD: Makefile,v 1.4 2012/09/24 17:14:43 asau Exp $
 #
 
 DISTNAME=		bwm-ng-0.5
@@ -9,8 +9,6 @@ MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://www.gropp.org/?id=projects&sub=bwm-ng
 COMMENT=		Console-based bandwidth monitor
 LICENSE=		gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes

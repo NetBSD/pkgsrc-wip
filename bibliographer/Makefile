@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/06/13 09:32:10 othyro Exp $
+# $NetBSD: Makefile,v 1.7 2012/09/24 17:14:31 asau Exp $
 #
 
 DISTNAME=	bibliographer-0.1.3
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc.gnome@gmail.com
 HOMEPAGE=	https://launchpad.net/bibliographer
 COMMENT=	Bibliographer is a bibtex editor written in Gtk\# and Mono
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config gmake

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/06/13 22:46:57 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2012/09/24 17:14:30 asau Exp $
 #
 
 DISTNAME=	beryl-settings-simple-0.2.1
@@ -11,8 +11,6 @@ GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c
 
 USE_TOOLS+=	gettext-tools intltool
-
-PKG_DESTDIR_SUPPORT+=	user-destdir
 
 PYTHON_PATCH_SCRIPTS+=	src/beryl-settings-simple.in
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/06/13 09:41:10 othyro Exp $
+# $NetBSD: Makefile,v 1.6 2012/09/24 17:14:32 asau Exp $
 #
 
 DISTNAME=		bioruby-0.6.2
@@ -11,8 +11,6 @@ MAINTAINER=		dprice@cs.nmsu.edu
 HOMEPAGE=		http://bioruby.org/
 COMMENT=		Intergrated environment for Bioinformatics using Ruby
 LICENSE=		gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_RUBY=		yes
 USE_RUBY_EXTCONF=	yes

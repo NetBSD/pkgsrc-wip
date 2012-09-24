@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/04/08 19:09:41 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2012/09/24 17:14:31 asau Exp $
 #
 
 DISTNAME=	bicho-0.3
@@ -12,8 +12,6 @@ COMMENT=	Bug tracking system tool analyzer
 LICENSE=	gnu-gpl-v2
 
 DEPENDS=	${PYPKGPREFIX}-storm>=0.16.0:../../wip/py-storm
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake

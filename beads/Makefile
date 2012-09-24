@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/10/28 17:05:06 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/24 17:14:27 asau Exp $
 #
 
 DISTNAME=	beads-1.1.13
@@ -8,8 +8,6 @@ MASTER_SITES=	http://pappso.inra.fr//downloads/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pappso.inra.fr/bioinfo/beads/
 COMMENT=	BEADS is a program for spot detection on 2-D gel images
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_CMAKE= yes
 USE_LANGUAGES=	c c++

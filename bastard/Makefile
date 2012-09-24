@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2009/05/20 00:58:40 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.11 2012/09/24 17:14:27 asau Exp $
 #
 
 DISTNAME=		bastard-0.17-pre
@@ -11,6 +11,8 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://bastard.sourceforge.net/
 COMMENT=		Disassembler for ELF x86 binarys
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_TOOLS+=		gmake
 WRKSRC=			${WRKDIR}/bastard_src-0.17

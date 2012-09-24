@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/09/09 10:19:11 noud4 Exp $
+# $NetBSD: Makefile,v 1.7 2012/09/24 17:14:23 asau Exp $
 #
 
 DISTNAME=	backintime-0.9.2_src
@@ -10,8 +10,6 @@ MASTER_SITES=	http://www.le-web.org/download/backintime/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.le-web.org/back-in-time/
 COMMENT=	Simple backup system for the GNOME desktop
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	${PYPKGPREFIX}-gnome2-[0-9]*:../../x11/py-gnome2
 DEPENDS+=	rsync-[0-9]*:../../net/rsync

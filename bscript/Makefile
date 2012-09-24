@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/06/14 00:37:41 othyro Exp $
+# $NetBSD: Makefile,v 1.5 2012/09/24 17:14:40 asau Exp $
 #
 
 DISTNAME=		bscript-0.3
@@ -9,8 +9,6 @@ MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://bscript.sourceforge.net/
 COMMENT=		Portable, fast, lightweight BASIC interpreter
 LICENSE=		gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes

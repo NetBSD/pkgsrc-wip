@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2010/12/23 13:00:16 noud4 Exp $
+# $NetBSD: Makefile,v 1.10 2012/09/24 17:14:33 asau Exp $
 #
 
 DISTNAME=	blam-1.8.7
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc.gnome@gmail.com
 HOMEPAGE=	http://www.cmartin.tk/blam.html
 COMMENT=	Blam is a feed reader for GNOME written in C\#
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=		user-destdir
 
 GNU_CONFIGURE=	yes
 USE_PKGLOCALEDIR= yes

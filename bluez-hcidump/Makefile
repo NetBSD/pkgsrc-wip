@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/06/13 17:37:37 othyro Exp $
+# $NetBSD: Makefile,v 1.15 2012/09/24 17:14:35 asau Exp $
 #
 
 DISTNAME=		bluez-hcidump-1.32
@@ -11,8 +11,6 @@ COMMENT=		Bluetooth packet analyzer
 LICENSE=		gnu-gpl-v2
 
 USE_LANGUAGES=		c
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes

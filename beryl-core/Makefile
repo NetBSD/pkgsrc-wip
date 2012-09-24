@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/06/13 22:46:57 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2012/09/24 17:14:27 asau Exp $
 #
 
 DISTNAME=	beryl-core-0.2.1
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.tar.bz2
 COMMENT=	Core component of the Beryl compositing window manager
 
 .include "../../wip/beryl/Makefile.inc"
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 

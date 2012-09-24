@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/06/01 15:26:59 hfath Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/24 17:14:38 asau Exp $
 #
 
 DISTNAME=	bonnie++-1.96
@@ -12,7 +12,6 @@ HOMEPAGE=	http://www.coker.com.au/bonnie++/experimental/
 COMMENT=	Enhanced performance Test of Filesystem I/O
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		YES

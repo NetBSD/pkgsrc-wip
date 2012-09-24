@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/12/04 10:16:02 triaxx Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/24 17:14:31 asau Exp $
 #
 
 DISTNAME=	bindgraph-0.2
@@ -14,8 +14,6 @@ LICENSE= gnu-gpl-v2
 DEPENDS+= p5-Time-Local-[0-9]*:../../time/p5-Time-Local
 
 .include "../../databases/rrdtool/buildlink3.mk"
-
-PKG_DESTDIR_SUPPORT= user-destdir
 
 USE_TOOLS+= perl
 

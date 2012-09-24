@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/03/10 20:44:43 asau Exp $
+# $NetBSD: Makefile,v 1.5 2012/09/24 17:14:36 asau Exp $
 #
 
 DISTNAME=		bmap-1.0.17
@@ -10,8 +10,6 @@ HOMEPAGE=		http://packetstorm.linuxsecurity.com/linux/security/
 COMMENT=			Forensic tool to perform low-level operations on ext2 filesystems
 
 USE_TOOLS+= gmake
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bmap ${DESTDIR}${PREFIX}/bin/

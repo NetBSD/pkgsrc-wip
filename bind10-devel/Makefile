@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/05/05 23:21:21 pettai Exp $
+# $NetBSD: Makefile,v 1.4 2012/09/24 17:14:31 asau Exp $
 #
 
 DISTNAME=	bind10-devel-20120329
@@ -9,8 +9,6 @@ MAINTAINER=	pettai@NetBSD.org
 HOMEPAGE=	http://www.isc.org/bind10
 COMMENT=	ISC Bind 10 devel-20120119 (snapshot #19)
 LICENSE=	isc
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYTHON_VERSIONS_ACCEPTED=	31
 PYTHON_VERSIONS_INCLUDE_3X=	yes

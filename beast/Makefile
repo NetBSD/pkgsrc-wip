@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/06/13 09:26:33 othyro Exp $
+# $NetBSD: Makefile,v 1.17 2012/09/24 17:14:27 asau Exp $
 #
 
 DISTNAME=	beast-0.5.4
@@ -10,8 +10,6 @@ MAINTAINER=	collver1@comcast.net
 HOMEPAGE=	http://beast.gtk.org/
 COMMENT=	Bedevilled Audio System
 LICENSE=	gnu-lgpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes

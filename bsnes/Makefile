@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/09/06 02:36:40 othyro Exp $
+# $NetBSD: Makefile,v 1.10 2012/09/24 17:14:42 asau Exp $
 #
 
 DISTNAME=	bsnes_v091-source
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.byuu.org/bsnes/
 COMMENT=	SNES emulator
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake pkg-config

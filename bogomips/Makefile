@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2010/06/08 23:27:51 schaecsn Exp $
+# $NetBSD: Makefile,v 1.8 2012/09/24 17:14:37 asau Exp $
 #
 
 DISTNAME=	bogomips-1.4.2
@@ -11,8 +11,6 @@ COMMENT=	Unscientific measurement of CPU speed
 LICENSE=	gnu-gpl-v2
 
 NO_CONFIGURE=	yes
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=	${WRKDIR}/${PKGBASE}
 

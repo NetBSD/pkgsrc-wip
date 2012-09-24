@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/06/14 01:10:12 othyro Exp $
+# $NetBSD: Makefile,v 1.4 2012/09/24 17:14:42 asau Exp $
 #
 
 DISTNAME=		btscanner-2.0
@@ -10,8 +10,6 @@ MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://www.pentest.co.uk/cgi-bin/viewcat.cgi?cat=downloads
 COMMENT=		Bluetooth device information viewer
 LICENSE=		gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes

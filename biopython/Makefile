@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2011/10/26 15:46:30 noud4 Exp $
+# $NetBSD: Makefile,v 1.14 2012/09/24 17:14:32 asau Exp $
 #
 
 DISTNAME=		biopython-1.53
@@ -10,6 +10,8 @@ MAINTAINER=		dprice@cs.nmsu.edu
 HOMEPAGE=		http://biopython.org/
 COMMENT=		Python libraries for computational molecular biology
 LICENSE=		Biopython
+
+PKG_DESTDIR_SUPPORT=	none
 
 PY_PATCHPLIST=		YES
 PYDISTUTILSPKG=		YES

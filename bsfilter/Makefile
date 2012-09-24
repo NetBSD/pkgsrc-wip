@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2011/10/30 15:34:29 ishit Exp $
+# $NetBSD: Makefile,v 1.15 2012/09/24 17:14:40 asau Exp $
 
 DISTNAME=	bsfilter-1.0.17
 CATEGORIES=	mail
@@ -16,8 +16,6 @@ RUBY_VERSION_SUPPORTED=	18
 
 NO_BUILD=	yes
 REPLACE_RUBY=	bsfilter/bsfilter
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 INSTALLATION_DIRS=	bin \
 			share/examples/bsfilter/mda/maildrop \

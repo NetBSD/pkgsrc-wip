@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/05/19 16:51:14 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.4 2012/09/24 17:14:23 asau Exp $
 #
 
 DISTNAME=		backplane-1.05
@@ -10,6 +10,8 @@ HOMEPAGE=		http://www.backplane.com/
 COMMENT=		Innovative RDBMS database by Matthew Dillon
 
 BUILD_DEPENDS+=		dxmake>=0:../../wip/dxmake
+
+PKG_DESTDIR_SUPPORT=	none
 
 .include "../../mk/bsd.prefs.mk"
 

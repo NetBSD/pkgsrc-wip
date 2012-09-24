@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2012/09/24 17:06:18 asau Exp $
+# $NetBSD: Makefile,v 1.25 2012/09/24 17:14:36 asau Exp $
 #
 
 DISTNAME=		BNR2beta-0.14.7
@@ -23,8 +23,6 @@ SUBST_STAGE.prefix=	pre-install
 SUBST_MESSAGE.prefix=	Fixing prefixes.
 SUBST_FILES.prefix=	bnr2
 SUBST_SED.prefix=	-e "s|@PREFIX@|${PREFIX}|g"
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 post-extract:
 	${CP} ${FILESDIR}/bnr2 ${WRKSRC}/bnr2

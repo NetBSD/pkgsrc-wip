@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/06/02 13:10:14 cheusov Exp $
+# $NetBSD: Makefile,v 1.4 2012/09/24 17:14:31 asau Exp $
 
 DISTNAME=	binutils-2.22
 CATEGORIES=	devel
@@ -9,8 +9,6 @@ HOMEPAGE=	http://directory.fsf.org/project/binutils/
 COMMENT=	GNU binary utilities
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2
 EXTRACT_SUFX=	.tar.bz2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=	avr-binutils<2.13.2.1nb1
 

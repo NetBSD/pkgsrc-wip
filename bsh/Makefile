@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/09/10 10:59:20 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/24 17:14:40 asau Exp $
 #
 
 DISTNAME=	bsh-2.0b4
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.beanshell.org/
 COMMENT=	Java scripting environment
 LICENSE=	spl-1.0 AND gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/05/10 12:24:33 ryo-on Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/24 17:14:43 asau Exp $
 #
 
 DISTNAME=	bwping-1.3
@@ -9,8 +9,6 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://bwping.sourceforge.net/
 COMMENT=	Tool to measure bandwidth and RTT between two hosts using ICMP
 LICENSE=	2-clause-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 
