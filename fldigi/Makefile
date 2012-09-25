@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2012/09/25 05:08:12 makoto Exp $
+# $NetBSD: Makefile,v 1.7 2012/09/25 07:24:21 makoto Exp $
 #
 
-DISTNAME=	fldigi-3.21.50
+DISTNAME=	fldigi-3.21.52
 CATEGORIES=	ham
 MASTER_SITES=	http://www.w1hkj.com/downloads/fldigi/
 LICENSE=	gnu-gpl-v3
@@ -38,7 +38,7 @@ SUBST_SED.asciidoc=	-e s\|/usr/share\|${PREFIX}/share\|g
 SUBST_CLASSES+=		brag-os
 SUBST_STAGE.brag-os=	post-patch
 SUBST_FILES.brag-os=	src/misc/newinstall.cxx
-SUBST_MESSAGE.brag-os=	Show OS name correctly
+SUBST_MESSAGE.brag-os=	Show OS name correctly with Brag button
 SUBST_SED.brag-os=	-e s/@@OS@@/${OPSYS}/
 
 # Following binary contains configure parameter, which is OK.
