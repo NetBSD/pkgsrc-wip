@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2012/04/18 11:55:45 bubuchka Exp $
+$NetBSD: distinfo,v 1.2 2012/09/25 21:59:16 bubuchka Exp $
 
 SHA1 (PTMonoOFL.zip) = 5cf07f7b10222a3044a8c3297996c1174fd9f79c
 RMD160 (PTMonoOFL.zip) = b371c31e8320735664b8e117208cac06a6260ef6
@@ -6,6 +6,6 @@ Size (PTMonoOFL.zip) = 178983 bytes
 SHA1 (PTSansOFL.zip) = fb81801bcf51a8f587b044f3a1a2c8f938823dd2
 RMD160 (PTSansOFL.zip) = 5672db272cf38d2878fbfbea110298d5277b212a
 Size (PTSansOFL.zip) = 1600360 bytes
-SHA1 (PTSerifOFL.zip) = b85de704e22b341e9f0dd7ef7478fedec371823b
-RMD160 (PTSerifOFL.zip) = 065d616cbd4ca36c1b2099359e77109b577eb438
-Size (PTSerifOFL.zip) = 1029464 bytes
+SHA1 (PTSerifOFL.zip) = ed34c8a7bd859511f99a7ce416e1d7a54dc9cca4
+RMD160 (PTSerifOFL.zip) = f83b4d904a50bf169e6d480d4b462dbfbdbc669a
+Size (PTSerifOFL.zip) = 1023119 bytes
