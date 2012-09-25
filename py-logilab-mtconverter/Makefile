@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/07/09 18:39:17 jihbed Exp $
+# $NetBSD: Makefile,v 1.4 2012/09/25 21:10:16 kristerw Exp $
 #
 
 DISTNAME=	logilab-mtconverter-0.8.0
@@ -18,5 +18,5 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
-.include "../../wip/py-logilab-common/buildlink3.mk"
+.include "../../devel/py-logilab-common/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
