@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/08/07 01:15:21 makoto Exp $
+# $NetBSD: Makefile,v 1.6 2012/09/25 07:47:48 makoto Exp $
 
 DISTNAME=		tc-2.99.1
 PKGNAME=		${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -65,7 +65,7 @@ pre-configure:
 		)
 # To avoid byte-compile error 'Invalid syntax ?', convert EUC-JP to UTF-8
 # Just one file is to be converted now,
-.if !empty(EMACS_TYPE:Memacs24)
+.if !empty(EMACS_TYPE:Memacs23) || !empty(EMACS_TYPE:Memacs24) || !empty(EMACS_TYPE:Memacs25)
 post-patch:
 	(cd ${WRKSRC}/lisp; \
 	for i in tc-bushu.el;  \
