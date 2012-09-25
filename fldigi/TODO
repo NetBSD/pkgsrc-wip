@@ -1,11 +1,34 @@
    ham/fldigi (3.03) segfaults on NetBSD/amd64 6_BETA2
    while this package runs fine there.
 
-- portaudio  is needed ? (See INSTALL and configure results) ,probably yes
+- portaudio  is needed ? (See INSTALL and configure results), probably yes
   [gdt think pulseaudio is normal, and portaudio is atypical, so it's best
-  to not link portaudio, unless some pkgsrc/fldigi user explains why]
+  not to link portaudio, unless some pkgsrc/fldigi user explains why]
+  [It is not working with my environment, but it is harmless and may not
+   be the reason to remove for that (mef)]
 - WRKREF issue
 - patches/patch-a? in ham/ is really unnecessary ?
+  patch-aa:
+  Type issue of argument of ioctl. Upstream fixed (with little bit
+  different edit), it is OK to remove.
+
+  patch-ab:
+  From the commit log,
+    ----
+    date: 2010/06/13 22:44:47;  author: wiz;  state: Exp;  lines: +12 -3
+    Also add some patches to remove use of deprecated symbols and fix other
+    problems when looking for or compiling against libpng-1.4.x.
+    ----
+  libpng-1.4 transition was old story, it is OK to remove.
+
+  patch-ac:
+  From the commit log,
+    ----
+    date: 2009/02/15 19:41:10;  author: joerg;  state: Exp;
+    Cast via ssize_t to make GCC happy. This is still somewhat abusive, but
+    easier than to switch to dynamically allocated int.
+    ----
+  Upstream fixed (with little bit different edit), it is OK to remove.
 
 -----------------------------------
 Configuration summary:
