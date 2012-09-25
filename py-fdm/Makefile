@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/04/08 19:09:46 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/25 21:07:02 kristerw Exp $
 #
 
 DISTNAME=	pyse-0.3.1
@@ -13,6 +13,8 @@ LICENSE=	gnu-gpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+DEPENDS+=	${PYPKGPREFIX}-Pmw>=1.3.2:../../x11/py-Pmw
+
 USE_LANGUAGES=	c c++
 
 PYTHON_VERSIONS_ACCEPTED= 26 25
@@ -21,5 +23,4 @@ PYDISTUTILSPKG=	yes
 .include "../../lang/python/extension.mk"
 .include "../../math/py-Numeric/buildlink3.mk"
 .include "../../math/py-numarray/buildlink3.mk"
-.include "../../x11/py-Pmw/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
