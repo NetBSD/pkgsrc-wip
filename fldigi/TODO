@@ -1,6 +1,8 @@
    ham/fldigi (3.03) segfaults on NetBSD/amd64 6_BETA2
    while this package runs fine there.
 
+- with Me/Qth, Sending name twice (3.21.52, 20120925,mef)
+
 - portaudio  is needed ? (See INSTALL and configure results), probably yes
   [gdt think pulseaudio is normal, and portaudio is atypical, so it's best
   not to link portaudio, unless some pkgsrc/fldigi user explains why]
