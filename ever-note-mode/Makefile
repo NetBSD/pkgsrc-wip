@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2011/07/30 21:26:57 ryo-on Exp $
+# $NetBSD: Makefile,v 1.7 2012/09/25 21:39:08 kristerw Exp $
 #
 
 DISTNAME=	evernote-mode-0_41
@@ -23,7 +23,7 @@ INSTALLATION_DIRS=	${DOCSDIR} \
 			${EMACS_LISPPREFIX}
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/ruby
-RUBY_VERSION_SUPPORTED=	19 #18
+RUBY_VERSION_SUPPORTED=	193 #18
 USE_RUBY_SETUP=	YES
 
 DOCUMENTS=	readme_en.txt \
