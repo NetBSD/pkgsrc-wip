@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/08/12 16:14:41 lexort Exp $
+# $NetBSD: Makefile,v 1.6 2012/09/25 05:08:12 makoto Exp $
 #
 
 DISTNAME=	fldigi-3.21.50
@@ -33,6 +33,13 @@ SUBST_STAGE.asciidoc=	post-configure
 SUBST_FILES.asciidoc=	doc/Makefile.am doc/Makefile.in doc/Makefile
 SUBST_MESSAGE.asciidoc=	Replacing asciidoc PATH
 SUBST_SED.asciidoc=	-e s\|/usr/share\|${PREFIX}/share\|g
+
+.include "../../mk/bsd.prefs.mk"
+SUBST_CLASSES+=		brag-os
+SUBST_STAGE.brag-os=	post-patch
+SUBST_FILES.brag-os=	src/misc/newinstall.cxx
+SUBST_MESSAGE.brag-os=	Show OS name correctly
+SUBST_SED.brag-os=	-e s/@@OS@@/${OPSYS}/
 
 # Following binary contains configure parameter, which is OK.
 CHECK_WRKREF_SKIP+=	bin/flarq
