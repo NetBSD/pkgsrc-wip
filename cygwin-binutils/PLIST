@@ -1,12 +1,14 @@
-@comment $NetBSD: PLIST,v 1.3 2010/10/14 03:53:53 makoto Exp $
+@comment $NetBSD: PLIST,v 1.4 2012/09/25 08:20:47 makoto Exp $
 bin/${CYGWIN_TARGET}-addr2line
 bin/${CYGWIN_TARGET}-ar
 bin/${CYGWIN_TARGET}-as
 bin/${CYGWIN_TARGET}-c++filt
 bin/${CYGWIN_TARGET}-dlltool
 bin/${CYGWIN_TARGET}-dllwrap
+bin/${CYGWIN_TARGET}-elfedit
 bin/${CYGWIN_TARGET}-gprof
 bin/${CYGWIN_TARGET}-ld
+bin/${CYGWIN_TARGET}-ld.bfd
 bin/${CYGWIN_TARGET}-nm
 bin/${CYGWIN_TARGET}-objcopy
 bin/${CYGWIN_TARGET}-objdump
@@ -22,6 +24,7 @@ ${CYGWIN_TARGET}/bin/as
 ${CYGWIN_TARGET}/bin/dlltool
 ${CYGWIN_TARGET}/bin/dllwrap
 ${CYGWIN_TARGET}/bin/ld
+${CYGWIN_TARGET}/bin/ld.bfd
 ${CYGWIN_TARGET}/bin/nm
 ${CYGWIN_TARGET}/bin/objcopy
 ${CYGWIN_TARGET}/bin/objdump
@@ -34,6 +37,7 @@ ${CYGWIN_TARGET}/lib/ldscripts/i386pe.xbn
 ${CYGWIN_TARGET}/lib/ldscripts/i386pe.xn
 ${CYGWIN_TARGET}/lib/ldscripts/i386pe.xr
 ${CYGWIN_TARGET}/lib/ldscripts/i386pe.xu
+${CYGWIN_TARGET}/lib/libiberty.a
 info/as.info
 info/bfd.info
 info/binutils.info
@@ -41,12 +45,12 @@ info/configure.info
 info/gprof.info
 info/ld.info
 info/standards.info
-${CYGWIN_TARGET}/lib/libiberty.a
 man/man1/${CYGWIN_TARGET}-addr2line.1
 man/man1/${CYGWIN_TARGET}-ar.1
 man/man1/${CYGWIN_TARGET}-as.1
 man/man1/${CYGWIN_TARGET}-c++filt.1
 man/man1/${CYGWIN_TARGET}-dlltool.1
+man/man1/${CYGWIN_TARGET}-elfedit.1
 man/man1/${CYGWIN_TARGET}-gprof.1
 man/man1/${CYGWIN_TARGET}-ld.1
 man/man1/${CYGWIN_TARGET}-nlmconv.1
@@ -60,6 +64,9 @@ man/man1/${CYGWIN_TARGET}-strings.1
 man/man1/${CYGWIN_TARGET}-strip.1
 man/man1/${CYGWIN_TARGET}-windmc.1
 man/man1/${CYGWIN_TARGET}-windres.1
+share/locale/bg/LC_MESSAGES/binutils.mo
+share/locale/bg/LC_MESSAGES/gprof.mo
+share/locale/bg/LC_MESSAGES/ld.mo
 share/locale/da/LC_MESSAGES/bfd.mo
 share/locale/da/LC_MESSAGES/binutils.mo
 share/locale/da/LC_MESSAGES/gprof.mo
@@ -95,6 +102,7 @@ share/locale/id/LC_MESSAGES/ld.mo
 share/locale/id/LC_MESSAGES/opcodes.mo
 share/locale/ja/LC_MESSAGES/bfd.mo
 share/locale/ja/LC_MESSAGES/binutils.mo
+share/locale/ja/LC_MESSAGES/ld.mo
 share/locale/ms/LC_MESSAGES/gprof.mo
 share/locale/nl/LC_MESSAGES/gprof.mo
 share/locale/nl/LC_MESSAGES/opcodes.mo
@@ -106,6 +114,8 @@ share/locale/ro/LC_MESSAGES/gprof.mo
 share/locale/ro/LC_MESSAGES/opcodes.mo
 share/locale/ru/LC_MESSAGES/bfd.mo
 share/locale/ru/LC_MESSAGES/binutils.mo
+share/locale/ru/LC_MESSAGES/gas.mo
+share/locale/ru/LC_MESSAGES/gprof.mo
 share/locale/rw/LC_MESSAGES/bfd.mo
 share/locale/rw/LC_MESSAGES/binutils.mo
 share/locale/rw/LC_MESSAGES/gas.mo
@@ -134,3 +144,4 @@ share/locale/zh_CN/LC_MESSAGES/ld.mo
 share/locale/zh_CN/LC_MESSAGES/opcodes.mo
 share/locale/zh_TW/LC_MESSAGES/binutils.mo
 share/locale/zh_TW/LC_MESSAGES/ld.mo
+@pkgdir ${CYGWIN_TARGET}/share
