@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2012/06/07 14:29:36 asau Exp $
+@comment $NetBSD: PLIST,v 1.4 2012/09/26 19:04:17 airhead Exp $
 bin/chicken
 bin/chicken-bug
 bin/chicken-install
@@ -46,3 +46,56 @@ man/man1/csi.1
 share/chicken/setup.defaults
 share/doc/${PKGNAME}/LICENSE
 share/doc/${PKGNAME}/README
+share/doc/${PKGNAME}/manual/Accessing external objects.html
+share/doc/${PKGNAME}/manual/Acknowledgements.html
+share/doc/${PKGNAME}/manual/Basic mode of operation.html
+share/doc/${PKGNAME}/manual/Bibliography.html
+share/doc/${PKGNAME}/manual/Bugs and limitations.html
+share/doc/${PKGNAME}/manual/C interface.html
+share/doc/${PKGNAME}/manual/Callbacks.html
+share/doc/${PKGNAME}/manual/Cross development.html
+share/doc/${PKGNAME}/manual/Data representation.html
+share/doc/${PKGNAME}/manual/Declarations.html
+share/doc/${PKGNAME}/manual/Deployment.html
+share/doc/${PKGNAME}/manual/Deviations from the standard.html
+share/doc/${PKGNAME}/manual/Embedding.html
+share/doc/${PKGNAME}/manual/Exceptions.html
+share/doc/${PKGNAME}/manual/Extensions.html
+share/doc/${PKGNAME}/manual/Extensions to the standard.html
+share/doc/${PKGNAME}/manual/Foreign type specifiers.html
+share/doc/${PKGNAME}/manual/Getting started.html
+share/doc/${PKGNAME}/manual/Interface to external functions and variables.html
+share/doc/${PKGNAME}/manual/Locations.html
+share/doc/${PKGNAME}/manual/Macros.html
+share/doc/${PKGNAME}/manual/Modules.html
+share/doc/${PKGNAME}/manual/Non-standard macros and special forms.html
+share/doc/${PKGNAME}/manual/Non-standard read syntax.html
+share/doc/${PKGNAME}/manual/Other support procedures.html
+share/doc/${PKGNAME}/manual/Parameters.html
+share/doc/${PKGNAME}/manual/Supported language.html
+share/doc/${PKGNAME}/manual/The R5RS standard.html
+share/doc/${PKGNAME}/manual/The User's Manual.html
+share/doc/${PKGNAME}/manual/Unit data-structures.html
+share/doc/${PKGNAME}/manual/Unit eval.html
+share/doc/${PKGNAME}/manual/Unit expand.html
+share/doc/${PKGNAME}/manual/Unit extras.html
+share/doc/${PKGNAME}/manual/Unit files.html
+share/doc/${PKGNAME}/manual/Unit irregex.html
+share/doc/${PKGNAME}/manual/Unit library.html
+share/doc/${PKGNAME}/manual/Unit lolevel.html
+share/doc/${PKGNAME}/manual/Unit ports.html
+share/doc/${PKGNAME}/manual/Unit posix.html
+share/doc/${PKGNAME}/manual/Unit srfi-1.html
+share/doc/${PKGNAME}/manual/Unit srfi-13.html
+share/doc/${PKGNAME}/manual/Unit srfi-14.html
+share/doc/${PKGNAME}/manual/Unit srfi-18.html
+share/doc/${PKGNAME}/manual/Unit srfi-4.html
+share/doc/${PKGNAME}/manual/Unit srfi-69.html
+share/doc/${PKGNAME}/manual/Unit tcp.html
+share/doc/${PKGNAME}/manual/Unit utils.html
+share/doc/${PKGNAME}/manual/Using the compiler.html
+share/doc/${PKGNAME}/manual/Using the interpreter.html
+share/doc/${PKGNAME}/manual/chicken.png
+share/doc/${PKGNAME}/manual/faq.html
+share/doc/${PKGNAME}/manual/index.html
+share/doc/${PKGNAME}/manual/manual.css

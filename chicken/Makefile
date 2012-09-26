@@ -1,20 +1,18 @@
-# $NetBSD: Makefile,v 1.7 2012/09/24 18:26:52 asau Exp $
+# $NetBSD: Makefile,v 1.8 2012/09/26 19:04:17 airhead Exp $
 
-DISTNAME=	chicken-4.8.0rc2 # development snapshot
+DISTNAME=	chicken-4.8.0
 CATEGORIES=	lang
-MASTER_SITES=	http://code.call-cc.org/releases/${PKGVERSION_NOREV}/ \
-		http://code.call-cc.org/dev-snapshots/2012/08/11/
+MASTER_SITES=	http://code.call-cc.org/releases/${PKGVERSION_NOREV}/
 
 MAINTAINER=	asau@inbox.ru #, airhead@users.sourceforge.net
 HOMEPAGE=	http://www.call-cc.org/
-COMMENT=	Scheme to C compiler, handling R5RS (development snapshot)
+COMMENT=	Scheme to C compiler, handling R5RS
 LICENSE=	modified-bsd
 
 MAKE_JOBS_SAFE=		no
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
-MAKE_FILE=		GNUmakefile
 UNLIMIT_RESOURCES=	datasize
 
 INSTALLATION_DIRS=	share/chicken
@@ -41,6 +39,8 @@ PLATFORM=	haiku
 PKG_FAIL_REASON=	"${OPSYS} is not supported"
 .endif
 
+MAKE_FILE=	GNUmakefile
+MAKE_ENV+=	C_COMPILER=$(CC:Q)
 MAKE_ENV+=	HOST=	# fix ${HOST} prepending ${CC}
 # Need to have these in MAKE_FLAGS, MAKE_ENV is not enough due to the
 # way the build system overrides them.
