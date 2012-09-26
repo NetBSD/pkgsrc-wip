@@ -1,5 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2012/09/26 22:45:13 othyro Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/09/26 23:15:55 othyro Exp $
 bin/autoq3d
+share/autoq3d/lan_sp.qm
+share/autoq3d/lan_sp.ts
+share/autoq3d/qref.htm
+share/autoq3d/qref_sp.htm
 share/autoq3d/images/array.png
 share/autoq3d/images/autoscale.png
 share/autoq3d/images/cascade.png

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/09/26 22:45:13 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/26 23:15:55 othyro Exp $
 #
 
 DISTNAME=	AutoQ3DCommunity1-40qt4source
@@ -36,6 +36,10 @@ pre-build:
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/AutoQ3D ${DESTDIR}${PREFIX}/bin/autoq3d
+	${INSTALL_DATA} ${WRKSRC}/lan_sp.qm ${DESTDIR}${AUTOQ3D_HOME}/
+	${INSTALL_DATA} ${WRKSRC}/lan_sp.ts ${DESTDIR}${AUTOQ3D_HOME}/
+	${INSTALL_DATA} ${WRKSRC}/qref.htm ${DESTDIR}${AUTOQ3D_HOME}/
+	${INSTALL_DATA} ${WRKSRC}/qref_sp.htm ${DESTDIR}${AUTOQ3D_HOME}/
 	${INSTALL_DATA_DIR} ${DESTDIR}${AUTOQ3D_HOME}/images
 	for a in `ls -1 ${WRKSRC}/images/*.png`; \
 	do \
