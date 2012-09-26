@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/10/28 10:11:22 ryo-on Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/26 12:21:28 ryo-on Exp $
 #
 
-DISTNAME=	ipamjm00101
-PKGNAME=	ipamjfont-00101
+DISTNAME=	ipamjm00201
+PKGNAME=	ipamjfont-00201
 CATEGORIES=	fonts
-MASTER_SITES=	-http://ossipedia.ipa.go.jp/ipamjfont/ipamjm00101.php
+MASTER_SITES=	-http://ossipedia.ipa.go.jp/ipamjfont/ipamjm00201.php
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	ryoon@NetBSD.org
