@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2012/09/26 22:45:13 othyro Exp $
+
+SHA1 (AutoQ3DCommunity1-40qt4source.zip) = 3f9931f38899d5fc042a771ae5a751120d36343b
+RMD160 (AutoQ3DCommunity1-40qt4source.zip) = 393dd31d1a477a748d82cffaac8eb461b4733024
+Size (AutoQ3DCommunity1-40qt4source.zip) = 227530 bytes
+SHA1 (patch-src_cmds_cmds.cpp) = 8a0952b0ce4d5bb739dfd65c7b11b66112fe8460
+SHA1 (patch-src_fgui_cadform.cpp) = c94b197aa6f627d71e0293ac66b70d176e619a7f
+SHA1 (patch-src_fgui_glapparea.h) = 5933b1f9d9619c808ab611c1d16795e32306da3b
