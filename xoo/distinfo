@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1 2011/02/26 15:15:18 khorben Exp $
+$NetBSD: distinfo,v 1.2 2012/09/27 11:56:37 khorben Exp $
 
 SHA1 (xoo-0.8.tar.gz) = cfb48578ddf224326e3a643fe6105b9a6b2a9dc6
 RMD160 (xoo-0.8.tar.gz) = 0d203b80e7c8dc43ff82427b8fa4d238384d9b96
 Size (xoo-0.8.tar.gz) = 1361866 bytes
 SHA1 (patch-aa) = 95861f8e9c6d9e4cc6c9cab4a5af701be41abf61
+SHA1 (patch-src_button.c) = 9a03a677a827d688292dfd5a45549a307cd13c96

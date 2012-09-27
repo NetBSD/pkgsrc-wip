@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2011/06/02 00:41:58 khorben Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/27 11:56:37 khorben Exp $
 #
 
 DISTNAME=	xoo-0.8
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	http://labs.o-hand.com/sources/xoo/
 
