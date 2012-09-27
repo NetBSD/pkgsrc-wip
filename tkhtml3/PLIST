@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2012/09/27 12:22:55 othyro Exp $
+lib/Tkhtml3.0/libTkhtml30.so
+lib/Tkhtml3.0/pkgIndex.tcl
+man/mann/tkhtml.n
