@@ -1,0 +1,14 @@
+% qtnotifydaemon
+Shared object "libQtDBus.so.4" not found
+
+% ldd /usr/pkg/bin/qtnotifydaemon
+/usr/pkg/bin/qtnotifydaemon:
+	-lQtDBus.4 => not found
+	-lQtGui.4 => not found
+	-lQtCore.4 => not found
+	-lpthread.1 => /usr/lib/libpthread.so.1
+	-lgcc_s.1 => /usr/lib/libgcc_s.so.1
+	-lc.12 => /usr/lib/libc.so.12
+	-lstdc++.7 => /usr/lib/libstdc++.so.7
+	-lm.0 => /usr/lib/libm.so.0
+	-lX11.6 => not found

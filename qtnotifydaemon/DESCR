@@ -1,0 +1,9 @@
+Configurable and flexible Qt notification daemon. Features:
+
+* HTML Rich text support
+* Fading
+* Flexible configuration of appearance
+* Close by click
+* Appending messages
+* Support of svg+xml icons
+* Synchronous messages support

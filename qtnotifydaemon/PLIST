@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2012/09/27 20:15:17 othyro Exp $
+bin/qtnotifydaemon
+share/dbus-1/services/org.freedesktop.Notifications.service
