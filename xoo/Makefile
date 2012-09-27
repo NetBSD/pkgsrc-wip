@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2012/09/27 11:56:37 khorben Exp $
+# $NetBSD: Makefile,v 1.4 2012/09/27 12:03:34 khorben Exp $
 #
 
 DISTNAME=	xoo-0.8
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11
 MASTER_SITES=	http://labs.o-hand.com/sources/xoo/
 
@@ -24,4 +24,5 @@ post-install:
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../devel/libglade/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
