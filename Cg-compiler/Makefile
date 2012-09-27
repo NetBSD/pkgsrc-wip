@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/09/24 16:56:26 asau Exp $
+# $NetBSD: Makefile,v 1.7 2012/09/27 11:19:04 othyro Exp $
 #
 
 DISTNAME=	Cg-3.1_April2012_x86${DIST_ARCH}
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://developer.nvidia.com/cg-toolkit
-COMMENT=	TODO: Short description of the package
+COMMENT=	Compiler for the Cg 3.1 language
 LICENSE=	nvidia-license
 
 WRKSRC=		${WRKDIR}
