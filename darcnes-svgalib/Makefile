@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/04/19 00:08:55 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2012/09/28 20:47:10 asau Exp $
 
 PKGNAME=	darcnes-svgalib-20010401
 
@@ -8,9 +8,9 @@ COMMENT=	Multi-system emulator, svgalib display
 MAKE_ENV+=	TARGET=Linux_svgalib
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/sdarcnes ${PREFIX}/bin/darcnes-svgalib
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/darcnes-svgalib
-	${INSTALL_MAN} ${WRKSRC}/readme ${PREFIX}/share/doc/darcnes-svgalib
+	${INSTALL_PROGRAM} ${WRKSRC}/sdarcnes ${DESTDIR}${PREFIX}/bin/darcnes-svgalib
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/darcnes-svgalib
+	${INSTALL_MAN} ${WRKSRC}/readme ${DESTDIR}${PREFIX}/share/doc/darcnes-svgalib
 
 .include "../../emulators/darcnes/Makefile.common"
 .include "../../wip/svgalib/buildlink3.mk"
