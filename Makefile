@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4878 2012/09/27 20:17:00 othyro Exp $
+# $Id: Makefile,v 1.4879 2012/09/28 00:03:30 mwilhelmy Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -70,6 +70,7 @@ SUBDIR+=	adamem
 SUBDIR+=	adjustmtu
 SUBDIR+=	adms
 SUBDIR+=	admsmb
+SUBDIR+=	adobe-source-sans-pro-ttf-otf
 SUBDIR+=	ae-fonts-decorative
 SUBDIR+=	aegis-devel
 SUBDIR+=	aeneas
