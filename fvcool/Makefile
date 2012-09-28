@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/05/19 16:51:16 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.6 2012/09/28 23:07:55 asau Exp $
 #
 
 DISTNAME=		FVCool103
@@ -14,7 +14,9 @@ HAS_CONFIGURE=		yes
 ONLY_FOR_PLATFORM=	FreeBSD-*-i386
 BUILD_TARGET=		# empty
 
+INSTALLATION_DIRS=	sbin
+
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/fvcool ${PREFIX}/sbin/fvcool
+	${INSTALL_PROGRAM} ${WRKSRC}/fvcool ${DESTDIR}${PREFIX}/sbin/fvcool
 
 .include "../../mk/bsd.pkg.mk"
