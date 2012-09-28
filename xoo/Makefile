@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/09/27 12:07:19 khorben Exp $
+# $NetBSD: Makefile,v 1.6 2012/09/28 05:24:51 asau Exp $
 #
 
 DISTNAME=	xoo-0.8
@@ -16,8 +16,6 @@ GNU_CONFIGURE=	yes
 CFLAGS=
 CFLAGS+=	-DPREFIX=\"${PREFIX:Q}\"
 CONFIGURE_ARGS+=CFLAGS=${CFLAGS:M*:Q}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 post-install:
 	${INSTALL} -m 444 ${FILESDIR}/neo1973.png ${DESTDIR}${PREFIX}/share/xoo/neo1973.png
