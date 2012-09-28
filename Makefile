@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4879 2012/09/28 00:03:30 mwilhelmy Exp $
+# $Id: Makefile,v 1.4880 2012/09/28 03:21:08 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -244,6 +244,7 @@ SUBDIR+=	boinc-lib
 SUBDIR+=	bonnie++-current
 SUBDIR+=	boost-test-suite
 SUBDIR+=	boost-threadpool
+SUBDIR+=	bpmcounter
 SUBDIR+=	bridge-utils
 SUBDIR+=	briquolo
 SUBDIR+=	brltty
