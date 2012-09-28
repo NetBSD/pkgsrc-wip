@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2011/11/10 12:55:55 othyro Exp $
+# $NetBSD: Makefile,v 1.4 2012/09/28 03:57:46 othyro Exp $
 #
 
 DISTNAME=	libdjconsole-0.1.3
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=djplay/}
 
@@ -12,7 +13,7 @@ LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=	gmake pkg-config
 USE_LANGUAGES=	c c++
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -20,21 +21,13 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 PKGCONFIG_OVERRIDE+=	libdjconsole.pc.in
 
 EGDIR=			${PREFIX}/share/examples/udev/rules.d
-INSTALLATION_DIRS+=	include/libdjconsole lib/pkgconfig share/libdjconsole
+CONF_FILES+=		${EGDIR}/45-hpdjconsole.rules ${PKG_SYSCONFDIR}/udev/rules.d/45-hpdjconsole.rules
+INSTALLATION_DIRS+=	${PKG_SYSCONFDIR}/udev/rules.d/ ${EGDIR}
 
-DATA_FILES=		bitfield.h delta.h djconsole.h
 
-do-install:
-	for a in ${DATA_FILES}; do \
-		${INSTALL_DATA} ${WRKSRC}/$$a ${DESTDIR}${PREFIX}/include/libdjconsole/$$a; \
-	done
-	${INSTALL_LIB} ${WRKSRC}/libdjconsole.la ${DESTDIR}${PREFIX}/lib/libdjconsole.la
-	${INSTALL_DATA} ${WRKSRC}/libdjconsole.pc ${DESTDIR}${PREFIX}/lib/pkgconfig/libdjconsole.pc
-	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
+pre-install:
 	${INSTALL_DATA} ${WRKSRC}/45-hpdjconsole.rules ${DESTDIR}${EGDIR}/45-hpdjconsole.rules
-	cd ${WRKSRC} && for b in 06f8-*; do \
-		${INSTALL_DATA} $$b ${DESTDIR}${PREFIX}/share/libdjconsole/$$b; \
-	done
+
 
 .include "../../devel/libusb/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
