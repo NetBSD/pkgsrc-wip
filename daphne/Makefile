@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/11/25 11:50:59 shattered Exp $
+# $NetBSD: Makefile,v 1.13 2012/09/28 20:30:44 asau Exp $
 #
 
 DISTNAME=		${PKGNAME_NOREV}-src
@@ -34,30 +34,30 @@ post-extract:
 	${CP} ${WRKSRC:Q}/src/Makefile.vars.linux_x86 ${WRKSRC:Q}/src/Makefile.vars
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC:Q}/daphne ${PREFIX:Q}/bin
-	${INSTALL_DATA_DIR} ${PREFIX:Q}/lib/daphne
-	${INSTALL_DATA} ${WRKSRC:Q}/libvldp2.so ${PREFIX:Q}/lib/daphne
-	${INSTALL_DATA_DIR} ${PREFIX:Q}/share/daphne
-	${INSTALL_DATA_DIR} ${PREFIX:Q}/share/daphne/pics
+	${INSTALL_PROGRAM} ${WRKSRC:Q}/daphne ${DESTDIR}${PREFIX:Q}/bin
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX:Q}/lib/daphne
+	${INSTALL_DATA} ${WRKSRC:Q}/libvldp2.so ${DESTDIR}${PREFIX:Q}/lib/daphne
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX:Q}/share/daphne
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX:Q}/share/daphne/pics
 	set -e;								\
 	for f in ${WRKSRC:Q}/pics/*.bmp; do				\
-		${INSTALL_DATA} "$$f" ${PREFIX:Q}/share/daphne/pics/;	\
+		${INSTALL_DATA} "$$f" ${DESTDIR}${PREFIX:Q}/share/daphne/pics/;	\
 	done
-	${INSTALL_DATA_DIR} ${PREFIX:Q}/share/daphne/sound
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX:Q}/share/daphne/sound
 	set -e;								\
 	for f in ${WRKSRC:Q}/sound/*.wav ${WRKSRC:Q}/sound/*.ogg; do	\
-		${INSTALL_DATA} "$$f" ${PREFIX:Q}/share/daphne/sound/;	\
+		${INSTALL_DATA} "$$f" ${DESTDIR}${PREFIX:Q}/share/daphne/sound/;	\
 	done
-	${INSTALL_DATA_DIR} ${PREFIX:Q}/share/doc/daphne
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX:Q}/share/doc/daphne
 	${INSTALL_DATA} ${WRKSRC:Q}/doc/docs.html \
-		${PREFIX:Q}/share/doc/daphne/index.html
-	${INSTALL_DATA_DIR} ${PREFIX:Q}/share/doc/daphne/graphics
+		${DESTDIR}${PREFIX:Q}/share/doc/daphne/index.html
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX:Q}/share/doc/daphne/graphics
 	set -e;								\
 	for f in ${WRKSRC:Q}/doc/docs_files/*.[Jj][Pp][Gg]; do		\
 		n=`basename "$$f"`;					\
 		n=`echo "$$n" | tr A-Z a-z`;				\
 		${INSTALL_DATA} "$$f"					\
-			${PREFIX:Q}/share/doc/daphne/graphics/"$$n";	\
+			${DESTDIR}${PREFIX:Q}/share/doc/daphne/graphics/"$$n";	\
 	done
 
 .include "../../mk/bsd.pkg.mk"
