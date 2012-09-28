@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2010/06/13 22:47:16 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.14 2012/09/28 22:58:16 khorben Exp $
 #
 
 DISTNAME=		supertux-0.1.3
@@ -10,6 +10,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		hernani@vecirex.net
 HOMEPAGE=		http://supertux.lethargik.org/
 COMMENT=		2D jump'n run game in the style of the Super Mario ones
+
+LICENSE=		gnu-gpl-v2
 
 HAS_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}

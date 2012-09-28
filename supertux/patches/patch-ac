@@ -1,8 +1,16 @@
-$NetBSD: patch-ac,v 1.1 2006/10/08 22:04:57 h2m Exp $
+$NetBSD: patch-ac,v 1.2 2012/09/28 22:58:16 khorben Exp $
 
---- src/setup.cpp.orig	2005-07-08 14:19:17.000000000 +0200
+--- src/setup.cpp.orig	2005-07-08 12:19:17.000000000 +0000
 +++ src/setup.cpp
-@@ -889,6 +889,14 @@ void st_abort(const std::string& reason,
+@@ -36,6 +36,7 @@
+ #include <dirent.h>
+ #ifndef WIN32
+ #include <libgen.h>
++#include <limits.h>
+ #endif
+ #include <ctype.h>
+ 
+@@ -889,6 +890,14 @@ void st_abort(const std::string& reason,
    abort();
  }
  
