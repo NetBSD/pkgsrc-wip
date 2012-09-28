@@ -1,4 +1,6 @@
-$NetBSD: patch-ad,v 1.2 2011/01/20 14:56:52 khorben Exp $
+$NetBSD: patch-ad,v 1.3 2012/09/28 22:44:11 khorben Exp $
+
+Allowing the configuration files' directory to be re-defined
 
 --- src/defs.h.orig	2010-04-08 12:50:26.000000000 +0000
 +++ src/defs.h

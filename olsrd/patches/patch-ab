@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.4 2011/01/20 14:56:52 khorben Exp $
+$NetBSD: patch-ab,v 1.5 2012/09/28 22:44:11 khorben Exp $
+
+Fixing the installation directories
 
 --- Makefile.inc.orig	2010-06-08 12:49:01.000000000 +0000
 +++ Makefile.inc
