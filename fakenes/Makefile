@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2007/02/20 19:11:09 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.14 2012/09/28 22:10:13 asau Exp $
 #
 
 DISTNAME=		fakenes-0.5.4
@@ -20,11 +20,13 @@ CONFIGURE_ARGS+=	--without-hawknl
 # no openal support
 CONFIGURE_ARGS+=	--without-openal
 
+INSTALLATION_DIRS=	bin
+
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/fakenes ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/fakenes
-	${INSTALL_DATA} ${WRKSRC}/LICENSE ${PREFIX}/share/doc/fakenes
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/fakenes
+	${INSTALL_PROGRAM} ${WRKSRC}/fakenes ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/fakenes
+	${INSTALL_DATA} ${WRKSRC}/LICENSE ${DESTDIR}${PREFIX}/share/doc/fakenes
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/fakenes
 
 .include "../../devel/allegro/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
