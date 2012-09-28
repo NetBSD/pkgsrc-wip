@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/09/28 18:50:22 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/28 21:37:22 asau Exp $
 #
 
 DISTNAME=	djplay-0.5.0
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/djplay/files/djplay/0.5.0/
 COMMENT=	High class live DJing application
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		bpmcounter-[0-9]*:../../wip/bpmcounter
 
