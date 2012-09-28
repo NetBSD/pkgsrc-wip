@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/08/25 11:56:45 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2012/09/28 21:07:56 asau Exp $
 #
 
 DISTNAME=	distella
@@ -23,9 +23,9 @@ do-build:
 	( cd ${WRKSRC} ; ${CC} -o distella distella.c )
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/distella
-	${INSTALL_DATA} ${WRKSRC}/distella.txt ${PREFIX}/share/doc/distella
-	${INSTALL_PROGRAM} ${WRKSRC}/distella ${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/distella
+	${INSTALL_DATA} ${WRKSRC}/distella.txt ${DESTDIR}${PREFIX}/share/doc/distella
+	${INSTALL_PROGRAM} ${WRKSRC}/distella ${DESTDIR}${PREFIX}/bin
 	@${ECHO} ""
 	@${ECHO} ";======================================================================================;"
 	@${ECHO} " BUG-NOTICE: Distella may core dump some machines if you do not specify any parameters."
