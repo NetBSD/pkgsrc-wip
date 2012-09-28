@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/07/05 14:54:34 othyro Exp $
+# $NetBSD: Makefile,v 1.7 2012/09/28 21:19:44 asau Exp $
 #
 
 DISTNAME=		dvbsnoop-1.4.00
@@ -16,7 +16,9 @@ USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 ONLY_FOR_PLATFORM=	Linux-*-*
 
+INSTALLATION_DIRS=	bin
+
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/src/dvbsnoop ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/src/dvbsnoop ${DESTDIR}${PREFIX}/bin
 
 .include "../../mk/bsd.pkg.mk"
