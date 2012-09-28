@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/08/13 21:23:32 jtonio Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/28 21:53:00 asau Exp $
 #
 
 DISTNAME=		eot-1.1
@@ -18,6 +18,6 @@ NO_BUILD=	yes
 INSTALLATION_DIRS=	bin
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/eot ${PREFIX}/bin/eot
+	${INSTALL_SCRIPT} ${WRKSRC}/eot ${DESTDIR}${PREFIX}/bin/eot
 
 .include "../../mk/bsd.pkg.mk"

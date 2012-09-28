@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/08/11 17:18:55 udontknow Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/28 21:50:52 asau Exp $
 #
 
 DISTNAME=		random
@@ -14,7 +14,9 @@ COMMENT=		Entropy calculation and analysis of putative random sequences
 WRKSRC=		${WRKDIR}
 BUILD_TARGET=	${EMPTY}
 
+INSTALLATION_DIRS=	bin
+
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/ent ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/ent ${DESTDIR}${PREFIX}/bin
 
 .include "../../mk/bsd.pkg.mk"
