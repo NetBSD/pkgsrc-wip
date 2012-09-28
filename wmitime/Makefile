@@ -1,14 +1,20 @@
-# $NetBSD: Makefile,v 1.10 2010/12/25 12:45:45 noud4 Exp $
+# $NetBSD: Makefile,v 1.11 2012/09/28 22:21:24 khorben Exp $
 #
 
 DISTNAME=	wmitime-0.3
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11 sysutils
 MASTER_SITES=	http://www.neotokyo.org/illusion/downloads/
 
 MAINTAINER=	poff@sixbit.org
 HOMEPAGE=	http://www.neotokyo.org/illusion/dock_apps.html
 COMMENT=	Windowmaker dockapp for time/date/itime
+
+LICENSE=	gnu-gpl-v2
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+MAKE_FLAGS+=	PREFIX=${PREFIX}
+MAKE_FLAGS+=	DESTDIR=${DESTDIR}
 
 WRKSRC=		${WRKDIR}/wmitime/wmitime
 

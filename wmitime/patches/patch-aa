@@ -1,6 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2003/08/15 13:57:14 amadeus_z Exp $
+$NetBSD: patch-aa,v 1.3 2012/09/28 22:21:24 khorben Exp $
 
---- Makefile.orig	Mon Mar 29 03:51:39 1999
+Implements PKG_DESTDIR_SUPPORT
+
+--- Makefile.orig	1999-03-29 03:51:39.000000000 +0000
 +++ Makefile
 @@ -1,7 +1,7 @@
 -#LANG = fr
@@ -13,14 +15,15 @@ $NetBSD: patch-aa,v 1.2 2003/08/15 13:57:14 amadeus_z Exp $
  OBJS =	wmitime.o \
  		../wmgeneral/wmgeneral.o \
  		../wmgeneral/misc.o \
-@@ -24,9 +24,7 @@ clean::
+@@ -24,9 +24,8 @@ clean::
  	rm -f *~
  
  install:: wmitime
 -	cp -f wmitime /usr/local/bin/
 -	chmod 755 /usr/local/bin/wmitime
 -	chown root:root /usr/local/bin/wmitime
-+	install -c -o root -g wheel -m 555 wmitime $(PREFIX)/bin/wmitime
++	mkdir -p $(DESTDIR)$(PREFIX)/bin
++	install -m 755 wmitime $(DESTDIR)$(PREFIX)/bin/wmitime
  #	cp wminetrc $(HOME)/.wminetrc
  #	chmod 600 $(HOME)/.wminetrc
  #	cp wminetrc /etc/wminetrc
