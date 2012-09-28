@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/06/12 23:51:19 kristerw Exp $
+# $NetBSD: Makefile,v 1.4 2012/09/28 23:43:19 asau Exp $
 #
 
 DISTNAME=		GDElinux
@@ -23,22 +23,22 @@ do-build:
 	cd ${WRKSRC}/ZUKER && ${MAKE_ENV} ${SH} install.csh
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/gde
-	${INSTALL_DATA_DIR} ${PREFIX}/gde/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/gde/scripts
-	${INSTALL_DATA_DIR} ${PREFIX}/gde/doc
-	${INSTALL_DATA_DIR} ${PREFIX}/gde/db
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/gde
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/gde/bin
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/gde/scripts
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/gde/doc
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/gde/db
 
 .for PROGRAM in gde Consto01mask MakeCons PrintStrat Translate \
 	heapsortHGL mapview DotPlotTool lrna crna
-	${INSTALL_PROGRAM} ${WRKSRC}/bin/${PROGRAM} ${PREFIX}/gde/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/${PROGRAM} ${DESTDIR}${PREFIX}/gde/bin
 .endfor
-	${INSTALL_SCRIPT} ${WRKSRC}/bin/*.pl ${PREFIX}/gde/scripts
-	${INSTALL_SCRIPT} ${WRKSRC}/bin/*.sh ${PREFIX}/gde/scripts
-	${INSTALL_SCRIPT} ${WRKSRC}/CORE/.GDEmenus ${PREFIX}/gde/scripts
-	${INSTALL_DATA} ${WRKSRC}/tutorial/* ${PREFIX}/gde/doc/
-	${INSTALL_DATA} ${WRKSRC}/GDE2.0_manual.ps ${PREFIX}/gde/doc
-	${INSTALL_DATA} ${WRKSRC}/db/* ${PREFIX}/gde/db/
+	${INSTALL_SCRIPT} ${WRKSRC}/bin/*.pl ${DESTDIR}${PREFIX}/gde/scripts
+	${INSTALL_SCRIPT} ${WRKSRC}/bin/*.sh ${DESTDIR}${PREFIX}/gde/scripts
+	${INSTALL_SCRIPT} ${WRKSRC}/CORE/.GDEmenus ${DESTDIR}${PREFIX}/gde/scripts
+	${INSTALL_DATA} ${WRKSRC}/tutorial/* ${DESTDIR}${PREFIX}/gde/doc/
+	${INSTALL_DATA} ${WRKSRC}/GDE2.0_manual.ps ${DESTDIR}${PREFIX}/gde/doc
+	${INSTALL_DATA} ${WRKSRC}/db/* ${DESTDIR}${PREFIX}/gde/db/
 
 .include "../../x11/xview-lib/buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
