@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4882 2012/09/28 14:10:54 nthauvin Exp $
+# $Id: Makefile,v 1.4883 2012/09/28 18:51:50 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -463,6 +463,7 @@ SUBDIR+=	distbb-current
 SUBDIR+=	distella
 SUBDIR+=	ditz-commander
 SUBDIR+=	diveintopython
+SUBDIR+=	djplay
 SUBDIR+=	djview4
 SUBDIR+=	dk-milter
 SUBDIR+=	dlpoly-classic
