@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/04/13 12:24:19 noud4 Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/28 23:06:25 khorben Exp $
 #
 
 DISTNAME=	u-boot-1.3.2
@@ -11,15 +11,22 @@ MAINTAINER=	noud4@home.nl
 HOMEPAGE=	http://www.denx.de/wiki/UBoot
 COMMENT=	The mkimage utility of the u-boot bootloader
 
-USE_TOOLS=	make
+LICENSE=	gnu-gpl-v2
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+MAKE_FLAGS+=	PREFIX=${PREFIX}
+MAKE_FLAGS+=	DESTDIR=${DESTDIR}
+AUTO_MKDIRS=	yes
+
+USE_TOOLS+=	make
 
 do-patch:
 	${CP} ${FILESDIR}/BSDmakefile ${WRKSRC}/tools
 
 do-build:
-	cd ${WRKSRC}/tools && make -f BSDmakefile
+	cd ${WRKSRC}/tools && ${MAKE} -f BSDmakefile
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/tools/mkimage ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/tools/mkimage ${DESTDIR}${PREFIX}/bin/mkimage
 
 .include "../../mk/bsd.pkg.mk"
