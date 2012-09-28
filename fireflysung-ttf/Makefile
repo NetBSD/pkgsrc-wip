@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/02/26 14:51:13 rxg Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/28 22:20:55 asau Exp $
 #
 
 DISTNAME=	fireflysung-1.3.0
@@ -20,11 +20,11 @@ FONTS_DIRS.ttf=	${PREFIX}/lib/X11/fonts/TTF
 DOCDIR=		${PREFIX}/share/doc/fireflysung-ttf
 
 do-install:
-	${INSTALL_DATA_DIR} ${FONTS_DIRS.ttf}
-	${INSTALL_DATA} ${WRKSRC}/fireflysung.ttf ${FONTS_DIRS.ttf}
-	${INSTALL_DATA_DIR} ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/AUTHORS ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/COPYRIGHT ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/Changelog* ${DOCDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${FONTS_DIRS.ttf}
+	${INSTALL_DATA} ${WRKSRC}/fireflysung.ttf ${DESTDIR}${FONTS_DIRS.ttf}
+	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/AUTHORS ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/COPYRIGHT ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/Changelog* ${DESTDIR}${DOCDIR}
 
 .include "../../mk/bsd.pkg.mk"
