@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/06/12 23:22:54 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/28 21:24:35 asau Exp $
 #
 
 DISTNAME=	depSolver-2.1
@@ -12,8 +12,6 @@ COMMENT=	Multimaterial 3D electrostatic solver
 LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	doxygen-[0-9]*:../../devel/doxygen
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=	${WRKDIR}/depSolver
 USE_TOOLS+=	pax

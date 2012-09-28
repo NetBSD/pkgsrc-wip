@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/06/14 23:42:45 othyro Exp $
+# $NetBSD: Makefile,v 1.7 2012/09/28 21:24:35 asau Exp $
 #
 
 DISTNAME=		dfu-util-4412
@@ -12,7 +12,6 @@ HOMEPAGE=		http://wiki.openmoko.org/wiki/Dfu-util
 COMMENT=		Host side of the USB DFU protocol
 LICENSE=		gnu-gpl-v2
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 BUILD_DEPENDS+=		subversion-base>=1.4.2:../../devel/subversion-base
 
 SUBDIR=			${PKGNAME}

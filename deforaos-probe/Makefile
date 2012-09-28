@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/08/20 22:10:11 khorben Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/28 21:24:35 asau Exp $
 
 DISTNAME=	Probe-0.0.2
 PKGNAME=	deforaos-probe-0.0.2
@@ -11,7 +11,6 @@ COMMENT=	DeforaOS system monitoring infrastructure
 
 LICENSE=	gnu-gpl-v3
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_FLAGS+=	PREFIX=${PREFIX}
 MAKE_FLAGS+=	DESTDIR=${DESTDIR}
 

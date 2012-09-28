@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/04/29 15:06:26 roelants Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/28 21:24:31 asau Exp $
 #
 
 DISTNAME=	deadbeef-0.5.2
@@ -11,8 +11,6 @@ MAINTAINER=	dieter.NetBSD@pandora.be
 HOMEPAGE=	http://deadbeef.sourceforge.net/
 COMMENT=	Ultimate Music Player For GNU/Linux
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

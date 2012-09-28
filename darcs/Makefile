@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2011/01/12 05:56:33 phonohawk Exp $
+# $NetBSD: Makefile,v 1.27 2012/09/28 21:24:30 asau Exp $
 
 DISTNAME=	darcs-2.5
 PKGNAME=	${DISTNAME}
@@ -8,8 +8,6 @@ MAINTAINER=	matias@dotbsd.org
 HOMEPAGE=	http://www.darcs.net/
 COMMENT=	Distributed revision control system
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFIGURE_ARGS+= -fhttp -fterminfo -fcolor -fmmap
 .include "options.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/01/09 15:46:04 khorben Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/28 21:24:34 asau Exp $
 
 DISTNAME=	PDFViewer-0.0.0
 PKGNAME=	deforaos-pdfviewer-0.0.0
@@ -13,7 +13,6 @@ LICENSE=	gnu-gpl-v3
 
 USE_TOOLS+=	pkg-config
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_FLAGS+=	PREFIX=${PREFIX}
 MAKE_FLAGS+=	DESTDIR=${DESTDIR}
 

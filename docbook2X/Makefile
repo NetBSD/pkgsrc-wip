@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/04/30 10:10:18 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/28 21:24:37 asau Exp $
 #
 
 DISTNAME=	docbook2X-0.8.8
@@ -19,8 +19,6 @@ DEPENDS+=	p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
 DEPENDS+=	p5-XML-SAX-[0-9]*:../../textproc/p5-XML-SAX
 DEPENDS+=	p5-XML-SAX-Expat-[0-9]*:../../textproc/p5-XML-SAX-Expat
 DEPENDS+=	tidy-[0-9]*:../../www/tidy
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 INFO_FILES=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/09/05 08:52:10 gschwarz Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/28 21:24:36 asau Exp $
 
 DISTNAME=	dionysus-1.3.0
 CATEGORIES=	misc
@@ -13,8 +13,6 @@ LICENSE=	gnu-gpl-v3
 INFO_FILES=	yes
 USE_LANGUAGES=	# none
 USE_TOOLS+=	tclsh:run
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	YES
 CONFIGURE_ARGS+=	--infodir=${PREFIX}/${PKGINFODIR}

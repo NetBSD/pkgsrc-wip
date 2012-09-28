@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/07/05 03:26:37 othyro Exp $
+# $NetBSD: Makefile,v 1.8 2012/09/28 21:24:37 asau Exp $
 #
 
 DISTNAME=	dotproject-2.1.4
@@ -9,8 +9,6 @@ MAINTAINER=	hallmann@ahatec.de
 HOMEPAGE=	http://dotproject.sourceforge.net/
 COMMENT=	Webserver base project management
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=		user-destdir
 
 WRKSRC=				${WRKDIR}/dotproject
 USE_LANGUAGES=			# none

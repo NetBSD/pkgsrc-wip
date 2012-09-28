@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/09/03 15:57:31 shindenmorr Exp $
+# $NetBSD: Makefile,v 1.7 2012/09/28 21:24:31 asau Exp $
 
 DISTNAME=	util-linux-2.12r
 VERSION=	2.12r
@@ -9,7 +9,6 @@ MASTER_SITES=	${MASTER_SITE_SUNSITE:=system/misc/} \
                 ftp://ftp.fr.kernel.org/pub/linux/utils/util-linux/
 
 MAINTAINER=		lkundrak@skosi.org
-PKG_DESTDIR_SUPPORT=	user-destdir
 HOMEPAGE=		http://freshmeat.net/projects/util-linux/
 COMMENT=		The enhanced Discordian date program
 #LICENSE=		# GPL, but which version?

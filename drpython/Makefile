@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2010/07/23 16:01:31 jihbed Exp $
+# $NetBSD: Makefile,v 1.13 2012/09/28 21:24:38 asau Exp $
 #
 
 DISTNAME=    DrPython_3.11.2
@@ -12,8 +12,6 @@ MAINTAINER=   pkgsrc-users@NetBSD.org
 HOMEPAGE=    http://drpython.sourceforge.net/
 COMMENT=    Source code editor, written in Python, for Python
 LICENSE=    gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=    user-destdir
 
 WRKSRC=        ${WRKDIR}/DrPython
 USE_LANGUAGES=    # none

@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3 2010/03/21 16:29:52 thomasklausner Exp $
+# $Id: Makefile,v 1.4 2012/09/28 21:24:33 asau Exp $
 
 DISTNAME=		# empty
 DISTFILES=		${DEBS}
@@ -27,6 +27,8 @@ DEBS+=			libxp6_4.3.0.dfsg.1-4_${MACHINE_ARCH}.deb
 DEBS+=			libxpm4_4.3.0.dfsg.1-4_${MACHINE_ARCH}.deb
 DEBS+=			libxt6_4.3.0.dfsg.1-4_${MACHINE_ARCH}.deb
 DEBS+=			xlibs-data_4.3.0.dfsg.1-4_all.deb
+
+PKG_DESTDIR_SUPPORT=	none
 
 do-extract:		do-extract-deb
 do-install:		do-install-deb

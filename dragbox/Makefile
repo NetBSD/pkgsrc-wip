@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2010/06/13 22:46:59 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2012/09/28 21:24:38 asau Exp $
 #
 
 DISTNAME=	dragbox-0.4.0
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc.gnome@gmail.com
 HOMEPAGE=	http://users.student.lth.se/f04us/wiki/dragbox/
 COMMENT=	Command line drag-and-drop tool for GNOME
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake

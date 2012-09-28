@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2010/01/17 12:03:24 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2012/09/28 21:24:39 asau Exp $
 
 DISTNAME=	dwepcrack-0.4
 PKGREVISION=	3
@@ -8,8 +8,6 @@ MASTER_SITES=	http://www.e.kth.se/~pvz/wifi/
 MAINTAINER=	schwarz@NetBSD.org
 HOMEPAGE=	http://web.archive.org/web/20070322102507/http://www.dachb0den.com/projects/dwepcrack.html
 COMMENT=	Dwepcrack uses varioius methods to extract WEP keys
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CONFIGURE=	YES
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2010/04/21 10:44:50 fhajny Exp $
+# $NetBSD: Makefile,v 1.21 2012/09/28 21:24:37 asau Exp $
 
 DISTNAME=	dk-milter-1.0.2
 #PKGREVISION=	1
@@ -15,7 +15,6 @@ MAKE_ENV+=		M4=${M4:Q}
 RCD_SCRIPTS=		dk-milter
 USE_BUILTIN.libmilter=	no
 USE_TOOLS+=		gm4
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 

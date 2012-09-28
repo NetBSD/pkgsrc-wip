@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/02/25 18:52:23 tnn2 Exp $
+# $NetBSD: Makefile,v 1.6 2012/09/28 21:24:39 asau Exp $
 #
 
 DISTNAME=		dxmake-2.12
@@ -8,8 +8,6 @@ MASTER_SITES=		http://apollo.backplane.com/FreeBSDPorts/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://apollo.backplane.com/FreeBSDPorts/
 COMMENT=		Yet another make tool
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_BSD_MAKEFILE=	yes
 USE_TOOLS+=		groff nroff

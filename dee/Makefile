@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/01/07 21:50:33 noud4 Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/28 21:24:33 asau Exp $
 #
 
 DISTNAME=	dee-0.5.22
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://launchpad.net/dee
 COMMENT=	Model to synchronize mutiple instances over DBus
 LICENSE=	gnu-gpl-v3 AND gnu-lgpl-v3 # probably
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/05/07 00:02:38 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/28 21:24:38 asau Exp $
 #
 
 DISTNAME=	dropbox-lnx.x86-1.4.0
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.dropbox.com/
 COMMENT=	Dropbox sync server
 #LICENSE=	# TODO: (see mk/license.mk)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/.dropbox-dist
 USE_LANGUAGES=	# none

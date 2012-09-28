@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/09/16 02:15:34 khorben Exp $
+# $NetBSD: Makefile,v 1.7 2012/09/28 21:24:34 asau Exp $
 
 DISTNAME=	Locker-0.2.0
 PKGNAME=	deforaos-locker-0.2.0
@@ -16,7 +16,6 @@ USE_TOOLS+=	pkg-config
 BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_FLAGS+=	PREFIX=${PREFIX}
 MAKE_FLAGS+=	DESTDIR=${DESTDIR}
 AUTO_MKDIRS=	yes

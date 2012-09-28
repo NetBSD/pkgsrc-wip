@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/05/26 09:29:58 amoibos Exp $
+# $NetBSD: Makefile,v 1.5 2012/09/28 21:24:35 asau Exp $
 
 DISTNAME=	dhex_0.67
 PKGNAME=	dhex-0.67
@@ -11,8 +11,6 @@ COMMENT=	The ncurses-based hex-editor with diff mode
 LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	c
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAN1=		dhex.1
 MAN5=		dhexrc.5 dhex_markers.5 dhex_searchlog.5

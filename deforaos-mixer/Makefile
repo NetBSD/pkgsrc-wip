@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/07/13 13:50:31 khorben Exp $
+# $NetBSD: Makefile,v 1.10 2012/09/28 21:24:34 asau Exp $
 
 DISTNAME=	Mixer-0.1.0
 PKGNAME=	deforaos-mixer-0.1.0
@@ -13,7 +13,6 @@ LICENSE=	gnu-gpl-v3
 
 USE_TOOLS+=	pkg-config
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_FLAGS+=	PREFIX=${PREFIX}
 MAKE_FLAGS+=	DESTDIR=${DESTDIR}
 

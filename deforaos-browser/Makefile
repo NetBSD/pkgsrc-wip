@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/09/01 16:58:16 khorben Exp $
+# $NetBSD: Makefile,v 1.18 2012/09/28 21:24:33 asau Exp $
 
 DISTNAME=	Browser-0.4.7
 PKGNAME=	deforaos-browser-0.4.7
@@ -16,7 +16,6 @@ USE_TOOLS+=	pkg-config
 BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_FLAGS+=	PREFIX=${PREFIX}
 MAKE_FLAGS+=	DESTDIR=${DESTDIR}
 AUTO_MKDIRS=	yes

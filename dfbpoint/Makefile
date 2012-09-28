@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/06/14 20:33:12 othyro Exp $
+# $NetBSD: Makefile,v 1.15 2012/09/28 21:24:35 asau Exp $
 #
 
 DISTNAME=	DFBPoint-0.7.2
@@ -12,7 +12,6 @@ HOMEPAGE=	http://www.directfb.org/
 COMMENT=	Simple presentation viewer that uses the DirectFB
 LICENSE=	gnu-lgpl-v2.1
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 ONLY_FOR_PLATFORM=	Linux-*-*
 
 USE_LIBTOOL=		yes

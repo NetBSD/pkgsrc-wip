@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/01/28 06:44:13 phonohawk Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/28 21:24:30 asau Exp $
 #
 
 DISTNAME=	darcs-to-git-0.1
@@ -8,8 +8,6 @@ MAINTAINER=	pho@cielonegro.org
 HOMEPAGE=	http://github.com/purcell/${PKGBASE}
 COMMENT=	Convert a Darcs repository into a Git repository
 LICENSE=	mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GIT_REPOSITORIES=	master
 GIT_REPO.master=	git://github.com/purcell/${PKGBASE}.git

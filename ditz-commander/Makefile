@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/03/18 05:39:35 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/28 21:24:37 asau Exp $
 #
 
 PKGNAME=	ditz-commander-0.4
@@ -10,8 +10,6 @@ MAINTAINER=	pho@cielonegro.org
 HOMEPAGE=	http://code.google.com/p/ditz-commander/
 COMMENT=	GUI frontend for ditz the distributed issue tracker
 LICENSE=	modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 REPLACE_PYTHON=	ditz-commander
 

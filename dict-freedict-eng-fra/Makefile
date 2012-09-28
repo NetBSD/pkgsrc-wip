@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/06/15 00:03:02 othyro Exp $
+# $NetBSD: Makefile,v 1.11 2012/09/28 21:24:36 asau Exp $
 #
 
 DISTNAME=	eng-fra
@@ -15,8 +15,6 @@ LICENSE=	gnu-gpl-v2
 DICTSRCNAME=	${DISTNAME}
 
 USE_TOOLS+=		gzip
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		dict-server>=1.9.14:../../textproc/dict-server
 BUILD_DEPENDS+=		dict-server>=1.10.2:../../textproc/dict-server

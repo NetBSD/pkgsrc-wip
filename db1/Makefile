@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2008/03/08 16:51:53 asau Exp $
+# $NetBSD: Makefile,v 1.10 2012/09/28 21:24:30 asau Exp $
 #
 
 DISTNAME=		db.1.86
@@ -10,8 +10,6 @@ MASTER_SITES=		http://downloads.sleepycat.com/ \
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.oracle.com/database/berkeley-db.html
 COMMENT=		Berkeley DB 1.86
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DIRS=		${WRKSRC}/PORT/linux
 BUILD_TARGET=		libdb.a

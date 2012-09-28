@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2010/12/24 18:39:35 noud4 Exp $
+# $NetBSD: Makefile,v 1.13 2012/09/28 21:24:38 asau Exp $
 #
 
 DISTNAME=		dumb-0.9.3
@@ -10,8 +10,6 @@ MAINTAINER=		collver1@comcast.net
 HOMEPAGE=		http://dumb.sourceforge.net/
 COMMENT=		IT, XM, S3M and MOD player library
 #LICENSE=		dumb-license
-
-PKG_DESTDIR_SUPPORT=	destdir
 
 USE_TOOLS+=		gmake
 

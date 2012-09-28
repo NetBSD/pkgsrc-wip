@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/03/10 19:20:11 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.5 2012/09/28 21:24:38 asau Exp $
 
 DISTNAME=	dspam-3.9.0
 CATEGORIES=	mail
@@ -9,8 +9,6 @@ HOMEPAGE=	http://dspam.sourceforge.net/
 COMMENT=	Extremely scalable, statistical-hybrid anti-spam filter
 
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes

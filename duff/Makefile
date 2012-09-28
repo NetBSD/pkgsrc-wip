@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/07/05 14:50:18 othyro Exp $
+# $NetBSD: Makefile,v 1.4 2012/09/28 21:24:38 asau Exp $
 #
 
 DISTNAME=	duff-0.5.2
@@ -10,8 +10,6 @@ MAINTAINER=	bartosz.kuzma@gmail.com
 HOMEPAGE=	http://duff.sourceforge.net/
 COMMENT=	Quickly finds duplicates in a given set of files
 LICENSE=	png-license
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes

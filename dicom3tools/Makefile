@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/10/14 12:16:08 shattered Exp $
+# $NetBSD: Makefile,v 1.8 2012/09/28 21:24:36 asau Exp $
 #
 
 DISTNAME=		dicom3tools_1.00.snapshot.20061010
@@ -11,6 +11,8 @@ MASTER_SITES=		http://www.dclunie.com/dicom3tools/workinprogress/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.dclunie.com/
 COMMENT=		Library for dealing with DICOM 3 files
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_IMAKE=		yes
 

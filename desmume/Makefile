@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/05/04 15:38:34 noud4 Exp $
+# $NetBSD: Makefile,v 1.11 2012/09/28 21:24:35 asau Exp $
 #
 
 DISTNAME=	desmume-0.9.8
@@ -14,8 +14,6 @@ LICENSE=	gnu-gpl-v2
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake intltool perl pkg-config
 USE_LANGUAGES=	c c++
-
-PKG_DESTDIR_SUPPORT=user-destdir
 
 .include "options.mk"
 

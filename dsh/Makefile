@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/04/26 15:44:48 shindenmorr Exp $
+# $NetBSD: Makefile,v 1.6 2012/09/28 21:24:38 asau Exp $
 #
 
 DISTNAME=	dsh-0.25.10
@@ -9,7 +9,6 @@ MAINTAINER=	morr@NetBSD.org
 HOMEPAGE=	http://www.netfort.gr.jp/~dancer/software/downloads/
 COMMENT=	Runs command through rsh or ssh on a cluster of machines
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 EGDIR=			${PREFIX}/share/examples/dsh
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes

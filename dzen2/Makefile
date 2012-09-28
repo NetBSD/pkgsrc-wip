@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/01/09 17:20:14 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/28 21:24:39 asau Exp $
 #
 
 DISTNAME=	dzen2-0.8.5
@@ -10,8 +10,6 @@ MAINTAINER=	pikapika@8-0.net
 HOMEPAGE=	http://sites.google.com/site/gotmor/dzen
 COMMENT=	General purpose messaging and notification program
 LICENSE=	mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CONFIGURE=		yes
 BUILD_DIRS=		. gadgets

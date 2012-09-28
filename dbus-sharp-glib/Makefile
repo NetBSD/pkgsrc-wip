@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/09/10 23:52:19 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/28 21:24:31 asau Exp $
 #
 
 DISTNAME=	mono-dbus-sharp-glib-v0.5-1-gf73a286
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/mono/dbus-sharp-glib
 COMMENT=	Fork of ndesk-dbus-glib
 LICENSE=	2-clause-bsd # ?
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 WRKSRC=		${WRKDIR}/${DISTNAME:S/v0.5-1-g//}

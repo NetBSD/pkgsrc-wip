@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2012/09/15 23:57:55 jihbed Exp $
+# $NetBSD: Makefile.common,v 1.2 2012/09/28 21:24:38 asau Exp $
 #
 
 .include "../../wip/dune-common/Makefile.version"
@@ -11,8 +11,6 @@ HOMEPAGE=	http://www.dune-project.org/coremodules.html/
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2.1
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE= yes
 USE_LIBTOOL= yes

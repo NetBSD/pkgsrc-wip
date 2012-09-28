@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/02/16 17:10:41 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/28 21:24:37 asau Exp $
 #
 
 DISTNAME=	dmd.2.051
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.digitalmars.com/d/
 COMMENT=	Digital Mars D compiler
 #LICENSE=	# TODO: (see mk/license.mk)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=	${WRKDIR}/dmd2
 

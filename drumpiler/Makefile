@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/07/05 14:32:16 othyro Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/28 21:24:38 asau Exp $
 #
 
 DISTNAME=	drumpiler-0.9.0
@@ -9,8 +9,6 @@ MAINTAINER=	jfranz@bsdprojects.net
 HOMEPAGE=	http://drumpiler.sourceforge.net/
 COMMENT=	Drum machine compiler
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEPENDS+=	SDL-1.2.[0-9]*:../../devel/SDL
 

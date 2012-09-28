@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/02/02 18:17:18 tnn2 Exp $
+# $NetBSD: Makefile,v 1.6 2012/09/28 21:24:35 asau Exp $
 #
 
 DISTNAME=	# SVN package
@@ -9,8 +9,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=despotify/}
 MAINTAINER=	pettai@nordu.net
 HOMEPAGE=	http://despotify.sourceforge.net/
 COMMENT=	Open Source Spotify client
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gmake
 USE_NCURSES=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/05/14 21:32:05 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/28 21:24:39 asau Exp $
 #
 
 DISTNAME=	duplo_0.2.0_src
@@ -10,8 +10,6 @@ MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://duplo.giants.ch/
 COMMENT=	Find duplicated code blocks in large C/C++/Java/C
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gmake
 USE_LANGUAGES=	c++

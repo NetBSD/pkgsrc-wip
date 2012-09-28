@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2011/06/26 19:31:05 khorben Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/28 21:24:33 asau Exp $
 
 DISTNAME=	asm-0.2.0
 PKGNAME=	deforaos-asm-0.2.0
@@ -13,7 +13,6 @@ LICENSE=	gnu-gpl-v3
 
 USE_TOOLS+=	pkg-config
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_FLAGS+=	PREFIX=${PREFIX}
 MAKE_FLAGS+=	DESTDIR=${DESTDIR}
 

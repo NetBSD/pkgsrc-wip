@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/07/05 03:32:19 othyro Exp $
+# $NetBSD: Makefile,v 1.5 2012/09/28 21:24:38 asau Exp $
 #
 
 PKGNAME=		dpic-07.2.2
@@ -10,8 +10,6 @@ MAINTAINER=		mwicks@kettering.edu
 HOMEPAGE=		http://www.ece.uwaterloo.ca/~aplevich/dpic/
 COMMENT=		Replacement for pic/gpic that supports more output formats
 LICENSE=		2-clause-bsd gnu-gpl-v3 # also creative commons v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_TARGET=		dpic
 INSTALLATION_DIRS+=	share/doc/dpic

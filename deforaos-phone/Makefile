@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/01/09 16:11:53 khorben Exp $
+# $NetBSD: Makefile,v 1.12 2012/09/28 21:24:34 asau Exp $
 
 DISTNAME=	Phone-0.3.9
 PKGNAME=	deforaos-phone-0.3.9
@@ -13,7 +13,6 @@ LICENSE=	gnu-gpl-v3
 
 USE_TOOLS+=	pkg-config
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_FLAGS+=	PREFIX=${PREFIX}
 MAKE_FLAGS+=	DESTDIR=${DESTDIR}
 

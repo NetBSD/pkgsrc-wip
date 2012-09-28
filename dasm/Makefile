@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/12/18 14:20:22 rhialto Exp $
+# $NetBSD: Makefile,v 1.6 2012/09/28 21:24:30 asau Exp $
 #
 
 DISTNAME=	dasm-${DISTVERSION}
@@ -10,8 +10,6 @@ MAINTAINER=	rhialto@falu.nl
 HOMEPAGE=	http://dasm-dillon.sourceforge.net/
 COMMENT=	Multi-CPU cross-assembler for 6502, 6803, 68HC11 and others
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CONFIGURE=	YES
 USE_TOOLS+=	gmake

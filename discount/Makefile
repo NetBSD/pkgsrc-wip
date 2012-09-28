@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/05/11 08:52:05 fhajny Exp $
+# $NetBSD: Makefile,v 1.5 2012/09/28 21:24:36 asau Exp $
 #
 
 DISTNAME=	discount-2.0.9
@@ -10,8 +10,6 @@ MAINTAINER=	zecrazytux@zecrazytux.net
 HOMEPAGE=	http://www.pell.portland.or.us/~orc/Code/discount/
 COMMENT=	Markdown C implementation
 LICENSE=	modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 HAS_CONFIGURE=		YES
 CONFIGURE_SCRIPT=	./configure.sh

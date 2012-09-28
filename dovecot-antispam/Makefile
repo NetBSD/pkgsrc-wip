@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/03/30 11:46:11 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/28 21:24:37 asau Exp $
 
 DISTNAME=	dovecot-antispam-1.3-pre1
 PKGNAME=	dovecot-antispam-1.2.90.1
@@ -12,7 +12,7 @@ COMMENT=	Antispam plugin for Dovecot
 
 LICENSE=	gnu-gpl-v2
 
-#PKG_DESTDIR_SUPPORT=	user-destdir
+PKG_DESTDIR_SUPPORT=	none
 
 USE_TOOLS+=		gmake
 #MAKE_DIRS+=		lib/dovecot/imap

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/03/17 11:31:07 khorben Exp $
+# $NetBSD: Makefile,v 1.5 2012/09/28 21:24:35 asau Exp $
 
 DISTNAME=	Todo-0.1.2
 PKGNAME=	deforaos-todo-0.1.2
@@ -13,7 +13,6 @@ LICENSE=	gnu-gpl-v3
 
 USE_TOOLS+=	pkg-config
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_FLAGS+=	PREFIX=${PREFIX}
 MAKE_FLAGS+=	DESTDIR=${DESTDIR}
 

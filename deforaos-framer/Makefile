@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/06/13 22:46:58 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2012/09/28 21:24:33 asau Exp $
 
 DISTNAME=	Framer-0.0.0
 PKGNAME=	deforaos-framer-0.0.0
@@ -14,7 +14,6 @@ LICENSE=	gnu-gpl-v3
 
 USE_TOOLS+=	pkg-config
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_FLAGS+=	PREFIX=${PREFIX}
 MAKE_FLAGS+=	DESTDIR=${DESTDIR}
 

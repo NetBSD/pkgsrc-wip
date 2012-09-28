@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/07/05 14:36:08 othyro Exp $
+# $NetBSD: Makefile,v 1.6 2012/09/28 21:24:38 asau Exp $
 #
 
 DISTNAME=	dssi-0.9.1
@@ -10,8 +10,6 @@ MAINTAINER=	jfranz@bsdprojects.net
 HOMEPAGE=	http://dssi.sourceforge.net/
 COMMENT=	API for audio processing plugins
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

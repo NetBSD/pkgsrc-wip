@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/03/30 19:54:21 outpaddling Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/28 21:24:37 asau Exp $
 #
 
 DISTNAME=	dl_class_1.8
@@ -10,8 +10,6 @@ MAINTAINER=	jwbacon@tds.net
 HOMEPAGE=	http://ccpforge.cse.rl.ac.uk/gf/download/frsrelease/238/2028/
 COMMENT=	General purpose classical molecular dynamics
 LICENSE=	original-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c fortran
 USE_TOOLS+=	gmake

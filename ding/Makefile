@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/06/15 00:04:47 othyro Exp $
+# $NetBSD: Makefile,v 1.12 2012/09/28 21:24:36 asau Exp $
 
 DISTNAME=	ding-1.5
 CATEGORIES=	x11
@@ -20,8 +20,6 @@ DEPENDS+=	dict-client>=1.8:../../textproc/dict-client
 
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../textproc/aspell/buildlink3.mk"

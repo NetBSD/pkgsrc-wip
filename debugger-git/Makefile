@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/05/15 11:21:13 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2012/09/28 21:24:33 asau Exp $
 
 DISTNAME=		debugger-git
 CATEGORIES=		devel
@@ -10,8 +10,6 @@ COMMENT=		X86/x86_64 debugger with the goal to drop-in replace gdb
 LICENSE=		2-clause-bsd
 
 DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GIT_REPOSITORIES=	debugger
 GIT_REPO.debugger=	git://github.com/path64/debugger.git

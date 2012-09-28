@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/07/05 14:40:30 othyro Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/28 21:24:38 asau Exp $
 #
 
 DISTNAME=	duali-data-0.1b
@@ -10,8 +10,6 @@ MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://www.arabeyes.org/project.php?proj=Duali
 COMMENT=	Arabic dictionary
 LICENSE=	modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CONFIGURE=		yes
 NO_BUILD=		yes

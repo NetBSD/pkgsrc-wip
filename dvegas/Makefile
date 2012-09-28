@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/08/26 21:54:53 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/28 21:24:39 asau Exp $
 #
 
 DISTNAME=	dvegas-2.0.1
@@ -9,8 +9,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://dvegas.hepforge.org/
 COMMENT=	Parallel Adaptive Monte Carlo Integration in C++
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

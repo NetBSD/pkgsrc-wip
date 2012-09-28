@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/06/13 22:46:59 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/28 21:24:35 asau Exp $
 #
 
 DISTNAME=	desktop-data-model-1.2.5
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc.gnome@gmail.com
 HOMEPAGE=	http://ftp.gnome.org/pub/GNOME/sources/desktop-data-model
 COMMENT=	Engine providing live updates of online data to the desktop
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config

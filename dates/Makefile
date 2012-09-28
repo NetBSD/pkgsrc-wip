@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/06/13 22:46:58 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/28 21:24:30 asau Exp $
 #
 
 DISTNAME=	dates-0.4.8
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc.gnome@gmail.com
 HOMEPAGE=	http://www.pimlico-project.org/
 COMMENT=	Dates is a small, lightweight calenda
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

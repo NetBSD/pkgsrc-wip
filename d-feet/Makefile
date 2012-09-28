@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/05/10 20:25:40 noud4 Exp $
+# $NetBSD: Makefile,v 1.9 2012/09/28 21:24:30 asau Exp $
 #
 
 DISTNAME=	d-feet-0.1.14
@@ -12,8 +12,6 @@ MAINTAINER=	pkgsrc-gnome@gmail.com
 HOMEPAGE=	http://live.gnome.org/d-feet/
 COMMENT=	D-Feet is a powerful dbus debugger
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/02/20 20:58:40 ddeus Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/28 21:24:35 asau Exp $
 #
 
 DISTNAME=	detachtty_9
@@ -11,8 +11,6 @@ HOMEPAGE=	ftp://ftp.linux.org.uk/pub/lisp/detachtty/
 COMMENT=	Utility that lets you run interactive programs non-interactively
 LICENSE=	gnu-gpl-v2
 USE_TOOLS=	gmake
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=	${WRKDIR}/detachtty-9
 INSTALLATION_DIRS+=bin/

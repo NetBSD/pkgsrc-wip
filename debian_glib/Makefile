@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.3 2010/03/21 16:29:52 thomasklausner Exp $
+# $Id: Makefile,v 1.4 2012/09/28 21:24:33 asau Exp $
 
 DISTNAME=		# empty
 DISTFILES=		${DEBS}
@@ -18,6 +18,8 @@ DEPENDS+=		debian_base-[0-9]*:../../wip/debian_base
 DIST_SUBDIR=		debian_linux
 
 DEBS=			libglib1.2_1.2.10-9_${MACHINE_ARCH}.deb
+
+PKG_DESTDIR_SUPPORT=	none
 
 do-extract:		do-extract-deb
 do-install:		do-install-deb

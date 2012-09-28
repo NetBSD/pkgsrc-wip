@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2009/11/01 18:36:11 khorben Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/28 21:24:33 asau Exp $
 
 DISTNAME=	configure-0.0.7
 PKGNAME=	deforaos-configure-0.0.7
@@ -11,7 +11,6 @@ COMMENT=	DeforaOS automated Makefile generation tool
 
 LICENSE=	gnu-gpl-v3
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_FLAGS+=	PREFIX=${PREFIX}
 MAKE_FLAGS+=	DESTDIR=${DESTDIR}
 

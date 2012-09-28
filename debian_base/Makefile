@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.5 2010/03/21 16:29:52 thomasklausner Exp $
-# $Id: Makefile,v 1.5 2010/03/21 16:29:52 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2012/09/28 21:24:31 asau Exp $
+# $Id: Makefile,v 1.6 2012/09/28 21:24:31 asau Exp $
 
 DISTNAME=		# empty
 DISTFILES=		${DEBS}
@@ -22,6 +22,8 @@ DEBS+=				${DISTFILE_ZLIB}
 DISTFILE_LIBSTDCXX=		libstdc++5_3.3.6-7_${MACHINE_ARCH}.deb
 SITES.${DISTFILE_LIBSTDCXX}=	${MASTER_SITE_DEBIAN:=pool/main/g/gcc-3.3/}
 DEBS+=				${DISTFILE_LIBSTDCXX}
+
+PKG_DESTDIR_SUPPORT=	none
 
 do-extract:		do-extract-deb
 do-install:		do-install-deb

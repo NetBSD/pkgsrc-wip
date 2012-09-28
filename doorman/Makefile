@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/07/05 02:00:43 othyro Exp $
+# $NetBSD: Makefile,v 1.9 2012/09/28 21:24:37 asau Exp $
 #
 
 DISTNAME=		doorman-0.81
@@ -10,8 +10,6 @@ MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://doorman.sourceforge.net/
 COMMENT=		Open ports when requested by a *secret knock*
 LICENSE=		gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS=		lsof>4.7:../../sysutils/lsof
 

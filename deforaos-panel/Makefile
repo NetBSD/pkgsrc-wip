@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2012/04/19 14:27:29 khorben Exp $
+# $NetBSD: Makefile,v 1.23 2012/09/28 21:24:34 asau Exp $
 
 DISTNAME=	Panel-0.2.13
 PKGNAME=	deforaos-panel-0.2.13
@@ -13,7 +13,6 @@ LICENSE=	gnu-gpl-v3
 
 USE_TOOLS+=	pkg-config
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_FLAGS+=	PREFIX=${PREFIX}
 MAKE_FLAGS+=	DESTDIR=${DESTDIR}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/06/14 23:32:22 othyro Exp $
+# $NetBSD: Makefile,v 1.18 2012/09/28 21:24:35 asau Exp $
 #
 
 DISTNAME=	DFBSee-0.7.4
@@ -12,7 +12,6 @@ HOMEPAGE=	http://www.directfb.org/download/DFBSee/
 COMMENT=	Image viewer for DirectFB
 LICENSE=	gnu-lgpl-v2.1
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 ONLY_FOR_PLATFORM=	Linux-*-* NetBSD-*-*
 
 GNU_CONFIGURE=		yes

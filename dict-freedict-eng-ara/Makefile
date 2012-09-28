@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/06/15 00:01:34 othyro Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/28 21:24:36 asau Exp $
 #
 
 DISTNAME=	freedict-eng-ara-0.0.2
@@ -13,8 +13,6 @@ LICENSE=	gnu-gpl-v2
 
 DEPENDS+=		dict-server>=1.9.14:../../textproc/dict-server
 BUILD_DEPENDS+=		dict-server>=1.10.2:../../textproc/dict-server
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DICTSRCNAME=	${DISTNAME:S/freedict-//S/-0.0.2//}
 
