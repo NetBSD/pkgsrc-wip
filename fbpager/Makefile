@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/07/07 21:56:01 hoka_adam Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/28 23:21:47 asau Exp $
 
 DISTNAME=	fbpager-0.1.4
 CATEGORIES=	wm x11
@@ -7,6 +7,8 @@ MASTER_SITES=	http://fluxbox.org/download/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://fluxbox.org/fbpager/
 COMMENT=	Fluxbox pager with transparency and mouse gestures
+
+PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/02/14 17:26:32 fhajny Exp $
+# $NetBSD: Makefile,v 1.5 2012/09/28 23:21:47 asau Exp $
 
 # fetching by tag from GitHub needs some special treatment
 DISTNAME=	gnosek-fcgiwrap-${VERSION}-4-g58ec209
@@ -19,8 +19,6 @@ CATEGORIES=	www
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://nginx.localdomain.pl/wiki/FcgiWrap
 LICENSE=	modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	automake autoreconf

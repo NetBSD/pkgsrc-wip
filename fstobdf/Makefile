@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/09/13 13:41:20 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2012/09/28 23:21:49 asau Exp $
 #
 
 DISTNAME=	fstobdf-1.0.5
@@ -10,7 +10,6 @@ MAINTAINER=	blair.sadewitz@gmail.com
 HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	Reads a font from a font server and writes bdf-format output
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=	yes

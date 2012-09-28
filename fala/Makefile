@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/01/04 19:05:15 noud4 Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/28 23:21:47 asau Exp $
 #
 
 DISTNAME=		fala_0.1-1
@@ -10,8 +10,6 @@ MAINTAINER=		noud4@home.nl
 HOMEPAGE=		http://fala.sourceforge.net/
 COMMENT=		Simple text reader
 LICENSE=		public-domain
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/fala
 USE_LANGUAGES=		# none

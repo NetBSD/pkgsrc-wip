@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2010/12/26 05:01:22 davesainty Exp $
+# $NetBSD: Makefile,v 1.10 2012/09/28 23:21:48 asau Exp $
 #
 
 DISTNAME=	flimp-0.0.11
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.ecademix.com/JohannesHofmann/flimp.html
 COMMENT=	Generic GUI for image manipulation
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES+=	c c++

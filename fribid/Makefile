@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/12/05 15:13:33 oht Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/28 23:21:49 asau Exp $
 
 DISTNAME=		fribid-1.0.0
 PKGNAME=		fribid-1.0.0
@@ -12,6 +12,7 @@ COMMENT=		FriBID  is a web browser plugin for BankID
 USE_TOOLS+=             gmake pkg-config
 LICENSE=		mit
 
+PKG_DESTDIR_SUPPORT=    none
 
 CONFIGURE_ARGS+=	--prefix=${PREFIX}  --mandir=${PKGMANDIR}
 HAS_CONFIGURE=		yes

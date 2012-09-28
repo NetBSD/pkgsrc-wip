@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2011/10/09 10:05:44 cheusov Exp $
+# $NetBSD: Makefile,v 1.6 2012/09/28 23:21:49 asau Exp $
 #
 
 DISTNAME=	freedict-tools-0.2
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	cheusov@NetBSD.org
 HOMEPAGE=	http://www.freedict.org/
 COMMENT=	XSL files from FreeDict tools
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		install pax
 NO_BUILD=		yes

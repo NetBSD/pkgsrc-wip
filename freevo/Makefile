@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2012/08/12 10:08:35 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.40 2012/09/28 23:21:49 asau Exp $
 #
 
 DISTNAME=		freevo-1.7.6
@@ -17,6 +17,8 @@ DEPENDS+=		${PYPKGPREFIX}-twisted>=2.0.0:../../net/py-twisted
 #DEPENDS+=		${PYPKGPREFIX}-twisted-web>=0.5.0:../../wip/py-twisted-web
 DEPENDS+=		${PYPKGPREFIX}-elementtree-[0-9]*:../../textproc/py-elementtree
 DEPENDS+=		${PYPKGPREFIX}-beautifulsoup-[0-9]*:../../www/py-beautifulsoup
+
+PKG_DESTDIR_SUPPORT=    none
 
 PYDISTUTILSPKG=		yes
 USE_PKGLOCALEDIR=	yes

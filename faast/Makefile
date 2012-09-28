@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/01/01 15:11:20 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/28 23:21:46 asau Exp $
 #
 
 DISTNAME=	faast-0.2.0
@@ -10,8 +10,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://www.lix.polytechnique.fr/~defeo/FAAST
 COMMENT= Library for Fast Arithmetics in Artin-Schreier Towers
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=		yes

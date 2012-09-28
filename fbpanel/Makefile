@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2011/12/16 15:50:05 seanboudreau Exp $
+# $NetBSD: Makefile,v 1.22 2012/09/28 23:21:47 asau Exp $
 #
 
 DISTNAME=		fbpanel-4.12
@@ -10,6 +10,8 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		bsd@cs.ubc.ca
 HOMEPAGE=		http://fbpanel.sourceforge.net/
 COMMENT=		Desktop panel with menu, pager, and other plugins
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_TOOLS+=		gmake pkg-config
 HAS_CONFIGURE=		yes

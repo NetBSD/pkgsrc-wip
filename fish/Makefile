@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/08/17 13:53:50 mwilhelmy Exp $
+# $NetBSD: Makefile,v 1.6 2012/09/28 23:21:48 asau Exp $
 #
 
 DISTNAME=		fish-1.23.1
@@ -9,8 +9,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.fishshell.org/
 COMMENT=		User friendly command line shell for UNIX-like operating systems
 LICENSE=		gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}

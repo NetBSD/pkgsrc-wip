@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/05/29 23:04:07 cheusov Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/28 23:21:49 asau Exp $
 #
 
 DISTNAME=	freedup-1.6-2-src
@@ -7,8 +7,6 @@ CATEGORIES=	sysutils
 MASTER_SITES=	http://freedup.org/
 EXTRACT_SUFX=	.tar.bz2
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=    user-destdir
 
 MAINTAINER=	stefano@dragas.it
 HOMEPAGE=	http://freedup.org/

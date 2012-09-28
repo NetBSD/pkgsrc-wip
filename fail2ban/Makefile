@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/12/20 17:17:37 lexort Exp $
+# $NetBSD: Makefile,v 1.4 2012/09/28 23:21:47 asau Exp $
 #
 
 DISTNAME=	fail2ban-0.8.4
@@ -11,8 +11,6 @@ MAINTAINER=	rhaamo@gruik.at
 HOMEPAGE=	http://www.fail2ban.org/
 COMMENT=	Scans log files and bans IP that makes too many password failures
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

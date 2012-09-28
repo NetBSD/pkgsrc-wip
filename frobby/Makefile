@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/12/27 20:57:50 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/28 23:21:49 asau Exp $
 #
 
 DISTNAME=	frobby_v0.8.2
@@ -10,8 +10,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://www.broune.com/frobby/index.html
 COMMENT=	Computations with monomial ideals
 #LICENSE=	# TODO: (see mk/license.mk)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gmake
 USE_LANGUAGES=	c++

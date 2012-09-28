@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/09/09 10:29:58 noud4 Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/28 23:21:48 asau Exp $
 #
 
 DISTNAME=	flyback_0.4.0
@@ -10,8 +10,6 @@ MASTER_SITES=	http://flyback.googlecode.com/files/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/flyback/
 COMMENT=	Backup software inspired by Apple's Time Machine
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	${PYPKGPREFIX}-gnome2-[0-9]*:../../x11/py-gnome2
 DEPENDS+=	${PYPKGPREFIX}-sqlite2-[0-9]*:../../databases/py-sqlite2

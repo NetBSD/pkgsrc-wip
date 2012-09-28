@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2010/09/11 10:10:34 jihbed Exp $
+# $NetBSD: Makefile,v 1.8 2012/09/28 23:21:49 asau Exp $
 #
 
 DISTNAME=	frogmicroblog-0.1.4
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc.gnome@gmail.com
 HOMEPAGE=	http://code.google.com/p/froggymicroblog/
 COMMENT=	C\# twitter identi.ca client
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config intltool gmake

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/02/15 17:41:35 lkundrak Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/28 23:21:48 asau Exp $
 
 DISTNAME=	fnteditfs-1.1
 CATEGORIES=	sysutils
@@ -8,6 +8,8 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	lkundrak@skosi.org
 HOMEPAGE=	http://fonteditfs.sourceforge.net/
 COMMENT=	Small, simple font editor, designed for editing console fonts
+
+PKG_DESTDIR_SUPPORT=	none
 
 BUILD_TARGET=	fnteditfs
 

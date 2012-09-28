@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/08/16 19:31:04 leot1990 Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/28 23:21:48 asau Exp $
 #
 
 DISTNAME=	fortune-it-1.99
@@ -11,8 +11,6 @@ HOMEPAGE=	http://www.fortune-it.net/
 COMMENT=	Italian fortunes
 
 BUILD_DEPENDS+=	fortune-strfile-[0-9]*:../../games/fortune-strfile
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 STRFILE=	${LOCALBASE}/bin/strfile
 

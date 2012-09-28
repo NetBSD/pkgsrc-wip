@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/11/09 19:40:17 tnn2 Exp $
+# $NetBSD: Makefile,v 1.5 2012/09/28 23:21:48 asau Exp $
 #
 
 DISTNAME=	fonttosfnt-1.0.4
@@ -9,8 +9,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	blair.sadewitz@gmail.com
 HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	Modular X.org fonttosfnt utility
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	pkg-config
 

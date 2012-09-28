@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/09/25 07:24:21 makoto Exp $
+# $NetBSD: Makefile,v 1.8 2012/09/28 23:21:48 asau Exp $
 #
 
 DISTNAME=	fldigi-3.21.52
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.w1hkj.com/Fldigi.html
 #HOMEPAGE=	http://lists.berlios.de/mailman/listinfo/fldigi-devel
 COMMENT=	Digital radio modem
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gmake pkg-config
 USE_LANGUAGES=	c c++

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2011/10/20 12:27:27 rhialto Exp $
+# $NetBSD: Makefile,v 1.13 2012/09/28 23:21:47 asau Exp $
 #
 
 DISTNAME=		fbida-2.08
@@ -12,8 +12,6 @@ COMMENT=		Image viewer and editor
 MAKE_FILE=		GNUmakefile
 MAKE_ENV+=		prefix=${PREFIX:Q}
 USE_TOOLS+=		gmake perl
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 # not used, even though the configure output claims it
 #.include "../../graphics/ImageMagick/buildlink3.mk"

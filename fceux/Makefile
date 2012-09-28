@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/11/09 21:02:53 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/28 23:21:47 asau Exp $
 #
 
 DISTNAME=	fceux-2.1.5.src
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://fceux.com/
 COMMENT=	NES, Famicom, and Famicom Disk System (FDS) emulator
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/fceu2.1.5
 #USE_CMAKE=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/05/24 15:34:10 tnn2 Exp $
+# $NetBSD: Makefile,v 1.4 2012/09/28 23:21:48 asau Exp $
 #
 
 DISTNAME=	foo2zjs-20080105
@@ -9,6 +9,8 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	martijn.van.buul@gmail.com
 HOMEPAGE=	http://foo2zjs.rkkda.com/
 COMMENT=	Printer driver for ZjStream-compatible printers
+
+PKG_DESTDIR_SUPPORT=	none
 
 WRKSRC=	${WRKDIR}/foo2zjs
 

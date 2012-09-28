@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2010/06/13 22:47:04 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.16 2012/09/28 23:21:48 asau Exp $
 #
 
 DISTNAME=		fluxspace-0.0.3
@@ -9,6 +9,8 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=fluxspace/}
 MAINTAINER=		poff@sixbit.org
 HOMEPAGE=		http://fluxspace.sourceforge.net/
 COMMENT=		Fluxbox workspace manager, environment
+
+PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES

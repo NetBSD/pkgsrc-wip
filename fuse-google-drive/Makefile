@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/06/19 07:34:54 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/28 23:21:49 asau Exp $
 #
 
 DISTNAME=	fuse-google-drive-0
@@ -10,8 +10,6 @@ MAINTAINER=	bjs@NetBSD.org
 HOMEPAGE=	https://github.com/jcline/fuse-google-drive
 COMMENT=	FUSE filesystem wrapper for Google Drive
 LICENSE=	gplv2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GIT_REPOSITORIES=	fuse-google-drive
 GIT_REPO.fuse-google-drive=	http://github.com/jcline/fuse-google-drive.git

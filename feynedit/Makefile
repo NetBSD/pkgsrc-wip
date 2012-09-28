@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/12/29 22:26:35 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/28 23:21:47 asau Exp $
 #
 
 DISTNAME=	FeynEdit-1.0
@@ -10,8 +10,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://www.feynarts.de/
 COMMENT=	Tool for drawing Feynman diagrams
 LICENSE=	gnu-lgpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

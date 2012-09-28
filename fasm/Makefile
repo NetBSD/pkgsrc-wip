@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/06/21 09:54:07 athaba Exp $
+# $NetBSD: Makefile,v 1.14 2012/09/28 23:21:47 asau Exp $
 #
 
 DISTNAME=		fasm-1.70.02
@@ -11,7 +11,6 @@ COMMENT=		Open source assembly language compiler
 LICENSE=		modified-bsd
 
 ONLY_FOR_PLATFORM=	*-*-i386 *-*-x86_64
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/fasm
 USE_LANGUAGES=		c

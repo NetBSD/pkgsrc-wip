@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/01/17 22:03:21 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/28 23:21:49 asau Exp $
 #
 
 DISTNAME=	FXrays
@@ -11,8 +11,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://www.math.uic.edu/~t3m/
 COMMENT=	Computes extremal rays with filtering
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 VERSION=	1.0
 BUILD_TARGET=	${DISTNAME}.so

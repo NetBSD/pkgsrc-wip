@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/11/18 10:05:20 ryo-on Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/28 23:21:49 asau Exp $
 #
 
 DISTNAME=	ftgl-2.1.3-rc5
@@ -10,8 +10,6 @@ MAINTAINER=	ryo_on@yk.rim.or.jp
 HOMEPAGE=	http://sourceforge.net/projects/ftgl/
 COMMENT=	C++ library of Freetype2 in OpenGL applications
 #LICENSE=	# TODO: (see mk/license.mk)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/ftgl-2.1.3~rc5
 GNU_CONFIGURE=	yes

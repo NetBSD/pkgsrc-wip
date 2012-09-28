@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/01/03 13:30:58 shattered Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/28 23:21:48 asau Exp $
 
 DISTNAME=	flvstreamer-2.1c1
 WRKSRC=		${WRKDIR}/flvstreamer
@@ -12,7 +12,6 @@ COMMENT=	Open source command-line RTMP client
 LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=	gmake
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_FLAGS+=	posix
 MAKE_FLAGS+=	PREFIX=${PREFIX}

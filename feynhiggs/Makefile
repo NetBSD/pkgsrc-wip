@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/04/02 22:32:34 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/28 23:21:47 asau Exp $
 #
 
 DISTNAME=	FeynHiggs-2.7.3
@@ -10,8 +10,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://www.feynhiggs.de/FeynHiggs.html
 COMMENT=	Fortran code for the diagrammatic calculation of the masses
 #LICENSE=	# TODO: (see mk/license.mk)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=NO
 

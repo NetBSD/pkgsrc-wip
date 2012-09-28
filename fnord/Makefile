@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2011/01/16 17:49:52 gschwarz Exp $
+# $NetBSD: Makefile,v 1.9 2012/09/28 23:21:48 asau Exp $
 
 DISTNAME=	fnord-1.10
 CATEGORIES=	www
@@ -9,8 +9,6 @@ MAINTAINER=	schwarz@NetBSD.org
 HOMEPAGE=	http://www.fefe.de/fnord/
 COMMENT=	Small HTTP server
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gmake
 DEPENDS+=	ucspi-tcp-*:../../net/ucspi-tcp

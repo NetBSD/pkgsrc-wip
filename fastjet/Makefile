@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/09/12 17:25:41 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/28 23:21:47 asau Exp $
 #
 
 DISTNAME=	fastjet-3.0.3
@@ -9,8 +9,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://fastjet.fr/
 COMMENT=	Software package for jet finding in pp and e+e- collisions
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CHECK_PORTABILITY_SKIP= configure plugins/SISCone/siscone/configure \
 			configure.lineno

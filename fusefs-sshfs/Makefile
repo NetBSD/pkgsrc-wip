@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2010/01/17 12:03:25 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2012/09/28 23:21:49 asau Exp $
 #
 
 DISTNAME=		sshfs-fuse-1.4
@@ -13,8 +13,6 @@ COMMENT=		Mount remote directories using ssh and FUSE
 
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake pkg-config
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 

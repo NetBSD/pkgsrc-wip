@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/09/14 14:44:57 ryo-on Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/28 23:21:48 asau Exp $
 #
 
 DISTNAME=	firefox-${FIREFOX_VER}
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mozilla.com/en-US/firefox/
 COMMENT=	Web browser with support for extensions
 LICENSE=	mpl-1.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 FIREFOX_VER=	3.6.22
 

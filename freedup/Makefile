@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/05/29 23:04:07 cheusov Exp $
+# $NetBSD: Makefile,v 1.5 2012/09/28 23:21:49 asau Exp $
 #
 
 DISTNAME=	freedup-1.3-1-src
@@ -10,6 +10,9 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	hallmann@ahatec.de
 HOMEPAGE=	http://freedup.org/
 COMMENT=	Free disk space by hard linking duplicate files.
+
+PKG_DESTDIR_SUPPORT=	none
+
 USE_TOOLS+=	gmake
 
 WRKSRC=	${WRKDIR}/freedup-1.3

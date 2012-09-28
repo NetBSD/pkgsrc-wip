@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/10/07 05:49:30 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/09/28 23:21:48 asau Exp $
 
 DISTNAME=	ficl-4.1.0
 CATEGORIES=	lang
@@ -7,8 +7,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ficl/}
 MAINTAINER=	asau@inbox.ru
 HOMEPAGE=	http://ficl.sourceforge.net/
 COMMENT=	Forth Inspired Command Language
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_TARGET=	ficl
 

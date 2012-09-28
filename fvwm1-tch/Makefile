@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/06/04 21:27:46 tonnerre Exp $
+# $NetBSD: Makefile,v 1.5 2012/09/28 23:21:49 asau Exp $
 
 DISTNAME=		fvwm-1.24r-tch1
 PKGNAME=		${DISTNAME:S/fvwm/fvwm1/:S/-tch/tch/}
@@ -10,6 +10,8 @@ HOMEPAGE=		http://fvwm.bsdprojects.net/
 COMMENT=		Virtual window manager for X
 
 CONFLICTS=		fvwm2-[0-9]* fvwm1-[0-9]* fvwm>=1
+
+PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		autoconf automake

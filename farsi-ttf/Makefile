@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/06/21 21:15:14 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/28 23:21:47 asau Exp $
 #
 
 DISTNAME=	farsifonts-0.4
@@ -11,8 +11,6 @@ MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://www.farsiweb.ir/wiki/Products/PersianFonts
 COMMENT=	Mothanna is a sans-serif like Arabic OpenType font
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 NO_BUILD=		yes

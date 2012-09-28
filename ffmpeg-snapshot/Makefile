@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2008/03/12 07:52:33 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.10 2012/09/28 23:21:47 asau Exp $
 #
 
 DISTNAME=	ffmpeg-export-snapshot
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	ccatrian@eml.cc
 HOMEPAGE=	http://ffmpeg.mplayerhq.hu/
 COMMENT=	Nightly snapshot of the ffmpeg tool
+
+PKG_DESTDIR_SUPPORT=	none
 
 WRKSRC=		${WRKDIR}/${SRCDIR}
 HAS_CONFIGURE=	yes

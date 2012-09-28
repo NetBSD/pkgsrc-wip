@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2007/06/08 21:32:22 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2012/09/28 23:21:48 asau Exp $
 
 DISTNAME=	fragrouter-1.6
 CATEGORIES=	security
@@ -9,6 +9,8 @@ MASTER_SITES=	ftp://ftp.freebsd.org/pub/FreeBSD/ports/distfiles/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 # XXX: HOMEPAGE=	http://www.anzen.com/research/nidsbench/
 COMMENT=	Tool for testing network IDS implementations
+
+PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--with-libnet=${BUILDLINK_PREFIX.libnet10}

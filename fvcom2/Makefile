@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/04/02 23:11:20 outpaddling Exp $
+# $NetBSD: Makefile,v 1.5 2012/09/28 23:21:49 asau Exp $
 #
 
 PKGNAME=	fvcom-2.7.1
@@ -10,8 +10,6 @@ MAINTAINER=	jwbacon@tds.net
 HOMEPAGE=	http://fvcom.smast.umassd.edu/FVCOM/password_required/t2/
 COMMENT=	Prognostic coastal ocean circulation model
 #LICENSE=	fvcom-license
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/FVCOM2.7.1/FVCOM_source
 

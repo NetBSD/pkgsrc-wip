@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2009/08/12 02:32:04 obache Exp $
+# $NetBSD: Makefile,v 1.29 2012/09/28 23:21:48 asau Exp $
 #
 
 DISTNAME=		Firebird-2.1.1.17910-0
@@ -11,8 +11,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		nel@soraneko.com, adam.hoka@gmail.com
 HOMEPAGE=		http://www.firebirdsql.org/
 COMMENT=		SQL database, opensource version of InterBase
-
-PKG_DESTDIR_SUPPORT+=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++

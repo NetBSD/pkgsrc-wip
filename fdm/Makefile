@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2010/01/17 12:03:25 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.17 2012/09/28 23:21:47 asau Exp $
 
 DISTNAME=	fdm-1.6
 PKGREVISION=	1
@@ -9,7 +9,6 @@ MAINTAINER=	clamiax@gmail.com
 HOMEPAGE=	http://fdm.sourceforge.net/
 COMMENT=	Mail fetching, filtering and delivering program
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 NO_CONFIGURE=		yes
 
 # Makefile
