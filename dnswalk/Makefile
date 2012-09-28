@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/04/20 13:36:36 cheusov Exp $
+# $NetBSD: Makefile,v 1.7 2012/09/28 21:13:25 asau Exp $
 #
 
 DISTNAME=		dnswalk-2.0.2
@@ -15,10 +15,12 @@ DEPENDS+=		p5-Net-DNS>=0.42:../../net/p5-Net-DNS
 USE_TOOLS+=		perl:run
 REPLACE_PERL=		dnswalk makereports
 
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/dnswalk     ${PREFIX}/bin/
-	${INSTALL_SCRIPT} ${WRKSRC}/makereports ${PREFIX}/bin/
-	${INSTALL_SCRIPT} ${WRKSRC}/sendreports ${PREFIX}/bin/
-	${INSTALL_MAN}    ${WRKSRC}/dnswalk.1   ${PREFIX}/${PKGMANDIR}/man1/
+	${INSTALL_SCRIPT} ${WRKSRC}/dnswalk     ${DESTDIR}${PREFIX}/bin/
+	${INSTALL_SCRIPT} ${WRKSRC}/makereports ${DESTDIR}${PREFIX}/bin/
+	${INSTALL_SCRIPT} ${WRKSRC}/sendreports ${DESTDIR}${PREFIX}/bin/
+	${INSTALL_MAN}    ${WRKSRC}/dnswalk.1   ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
 
 .include "../../mk/bsd.pkg.mk"

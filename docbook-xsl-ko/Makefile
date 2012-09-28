@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/01/17 10:20:45 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2012/09/28 21:14:26 asau Exp $
 
 DISTNAME=	docbook-xsl-ko-0.2
 CATEGORIES=	textproc
@@ -25,9 +25,9 @@ SUBST_FILES.xsl=	dbk-fo.xsl dbk-html-chunk.xsl dbk-html.xsl \
 SUBST_SED.xsl=		-e 's,http://docbook.sourceforge.net/release/xsl/current/,../docbook/,g'
 
 do-install:
-	${INSTALL_DATA_DIR} ${XSLDIR}
-	${INSTALL_DATA} ${WRKSRC}/*.xsl ${XSLDIR}
-	${INSTALL_DATA} ${FILESDIR}/catalog ${XSLDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${XSLDIR}
+	${INSTALL_DATA} ${WRKSRC}/*.xsl ${DESTDIR}${XSLDIR}
+	${INSTALL_DATA} ${FILESDIR}/catalog ${DESTDIR}${XSLDIR}
 
 .include "../../textproc/xmlcatmgr/catalogs.mk"
 .include "../../mk/bsd.pkg.mk"
