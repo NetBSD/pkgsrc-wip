@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4881 2012/09/28 04:56:39 othyro Exp $
+# $Id: Makefile,v 1.4882 2012/09/28 14:10:54 nthauvin Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2195,6 +2195,7 @@ SUBDIR+=	pkg_fake
 #SUBDIR+=	pkg_get			# not a package (yet?)
 SUBDIR+=	pkg_rmleaves
 SUBDIR+=	pkg_summary-utils
+SUBDIR+=	pkgconf
 SUBDIR+=	pkgin
 SUBDIR+=	pkgmanager
 SUBDIR+=	plasti
