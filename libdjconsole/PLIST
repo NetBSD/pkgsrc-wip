@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:52 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/09/28 03:54:20 othyro Exp $
 include/libdjconsole/bitfield.h
 include/libdjconsole/delta.h
 include/libdjconsole/djconsole.h
 lib/libdjconsole.la
 lib/pkgconfig/libdjconsole.pc
+share/examples/udev/rules.d/45-hpdjconsole.rules
 share/libdjconsole/06f8-b000.buttons
 share/libdjconsole/06f8-b000.leds
 share/libdjconsole/06f8-b000.mouse
