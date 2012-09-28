@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/10/29 08:32:43 shattered Exp $
+# $NetBSD: Makefile,v 1.8 2012/09/28 22:36:19 asau Exp $
 #
 
 DISTNAME=		flexbackup-1.2.1
@@ -23,11 +23,13 @@ SUBST_SED.cfgpath =	-e s,/etc/flexbackup.conf,${PKG_SYSCONFDIR}/flexbackup.conf,
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 CONF_FILES=		${EGDIR}/flexbackup.conf ${PKG_SYSCONFDIR}/flexbackup.conf
 
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5
+
 do-install:
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/flexbackup.conf ${EGDIR}/flexbackup.conf
-	${INSTALL_SCRIPT} ${WRKSRC}/flexbackup ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/flexbackup.1 ${PREFIX}/${PKGMANDIR}/man1/
-	${INSTALL_MAN} ${WRKSRC}/flexbackup.conf.5 ${PREFIX}/${PKGMANDIR}/man5/
+	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/flexbackup.conf ${DESTDIR}${EGDIR}/flexbackup.conf
+	${INSTALL_SCRIPT} ${WRKSRC}/flexbackup ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/flexbackup.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
+	${INSTALL_MAN} ${WRKSRC}/flexbackup.conf.5 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5/
 
 .include "../../mk/bsd.pkg.mk"

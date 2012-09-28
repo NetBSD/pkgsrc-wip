@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2004/07/18 15:50:19 ppostma Exp $
+# $NetBSD: Makefile,v 1.4 2012/09/28 22:34:30 asau Exp $
 #
 
 DISTNAME=		flc
@@ -10,7 +10,9 @@ MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		ftp://coombs.anu.edu.au/pub/net/firewall/ip-filter/
 COMMENT=		Filter Language Compiler
 
+INSTALLATION_DIRS=	bin
+
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/flc ${PREFIX}/bin/flc
+	${INSTALL_PROGRAM} ${WRKSRC}/flc ${DESTDIR}${PREFIX}/bin/flc
 
 .include "../../mk/bsd.pkg.mk"

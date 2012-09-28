@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/09/11 19:07:21 kh-p Exp $
+# $NetBSD: Makefile,v 1.5 2012/09/28 22:33:39 asau Exp $
 
 DISTNAME=		flasm16src
 PKGNAME=		flasm-1.6.1
@@ -14,11 +14,13 @@ WRKSRC=			${WRKDIR}
 NO_CONFIGURE=		yes
 USE_TOOLS+=		gmake yacc
 
+INSTALLATION_DIRS=	bin share/doc share/examples
+
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/flasm ${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/flasm.html ${PREFIX}/share/doc
-	${INSTALL_DATA} ${WRKSRC}/classic.css ${PREFIX}/share/doc
-	${INSTALL_DATA} ${WRKSRC}/flasm.ini ${PREFIX}/share/examples
+	${INSTALL_PROGRAM} ${WRKSRC}/flasm ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/flasm.html ${DESTDIR}${PREFIX}/share/doc
+	${INSTALL_DATA} ${WRKSRC}/classic.css ${DESTDIR}${PREFIX}/share/doc
+	${INSTALL_DATA} ${WRKSRC}/flasm.ini ${DESTDIR}${PREFIX}/share/examples
 
 .include "../../devel/flex/buildlink3.mk"
 .include "../../devel/gperf/buildlink3.mk"
