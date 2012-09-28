@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/12/24 13:16:24 noud4 Exp $
+# $NetBSD: Makefile,v 1.6 2012/09/28 23:24:29 asau Exp $
 
 DISTNAME=	rssgrab-0.6.4
 PKGNAME=	gDesklets-${DISTNAME}
@@ -23,12 +23,12 @@ post-extract:
 	${PYTHONBIN} ${WRKSRC}/Install_${NAME}_Sensor.bin --nomsg ${WRKSRC}
 
 do-install:
-	${INSTALL_DATA_DIR} ${GDESKLETSDIR}/Displays/${NAME}/gfx
-	${INSTALL_DATA_DIR} ${GDESKLETSDIR}/Sensors/${NAME}
-	${INSTALL_DATA} ${WRKSRC}/*.display ${GDESKLETSDIR}/Displays/${NAME}
+	${INSTALL_DATA_DIR} ${DESTDIR}${GDESKLETSDIR}/Displays/${NAME}/gfx
+	${INSTALL_DATA_DIR} ${DESTDIR}${GDESKLETSDIR}/Sensors/${NAME}
+	${INSTALL_DATA} ${WRKSRC}/*.display ${DESTDIR}${GDESKLETSDIR}/Displays/${NAME}
 	${INSTALL_DATA} ${WRKSRC}/gfx/*.png \
-		${GDESKLETSDIR}/Displays/${NAME}/gfx
-	${INSTALL_DATA} ${WRKSRC}/${NAME}/*.py ${GDESKLETSDIR}/Sensors/${NAME}
+		${DESTDIR}${GDESKLETSDIR}/Displays/${NAME}/gfx
+	${INSTALL_DATA} ${WRKSRC}/${NAME}/*.py ${DESTDIR}${GDESKLETSDIR}/Sensors/${NAME}
 
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
