@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/07/12 23:18:22 dillo Exp $
+# $NetBSD: Makefile,v 1.10 2012/09/29 00:18:35 asau Exp $
 #
 
 DISTNAME=	glulxe-035
@@ -19,7 +19,9 @@ PKG_OPTIONS_VAR=PKG_OPTIONS.glulxe
 .include "../../mk/bsd.options.mk"
 .include "../../wip/glkloader/glk-depends.mk"
 
+INSTALLATION_DIRS=	bin
+
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/glulxe ${LOCALBASE}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/glulxe ${DESTDIR}${PREFIX}/bin
 
 .include "../../mk/bsd.pkg.mk"

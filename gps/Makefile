@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2007/06/08 21:37:26 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2012/09/29 00:32:40 asau Exp $
 #
 
 DISTNAME=		gps-0.9.2
@@ -15,9 +15,9 @@ MISCDIR=		${PREFIX}/share/gps
 DOCSDIR=		${PREFIX}/share/doc/gps
 
 post-install:
-	${INSTALL_DATA_DIR} ${MISCDIR} ${DOCSDIR}
-	${INSTALL_DATA} ${WRKSRC}/AUTHORS ${WRKSRC}/COPYING ${WRKSRC}/ChangeLog ${MISCDIR}
-	${INSTALL_DATA} ${WRKSRC}/docs/* ${DOCSDIR}
+	${INSTALL_DATA_DIR} ${MISCDIR} ${DESTDIR}${DOCSDIR}
+	${INSTALL_DATA} ${WRKSRC}/AUTHORS ${WRKSRC}/COPYING ${WRKSRC}/ChangeLog ${DESTDIR}${MISCDIR}
+	${INSTALL_DATA} ${WRKSRC}/docs/* ${DESTDIR}${DOCSDIR}
 
 .include "../../devel/libnet10/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"

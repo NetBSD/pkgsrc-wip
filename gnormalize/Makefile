@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/11/02 18:00:14 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/29 00:26:13 asau Exp $
 #
 
 DISTNAME=		gnormalize-0.35
@@ -17,7 +17,9 @@ USE_TOOLS+=	perl
 NO_BUILD=	YES
 REPLACE_PERL=${WRKSRC}/gnormalize
 
+INSTALLATION_DIRS=	bin
+
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/gnormalize ${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/gnormalize ${DESTDIR}${PREFIX}/bin
 
 .include "../../mk/bsd.pkg.mk"
