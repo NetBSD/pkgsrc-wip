@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/07/16 02:20:43 prudhvikrishna Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/28 20:50:50 asau Exp $
 #
 
 DISTNAME=	datapipe-1.0
@@ -14,5 +14,6 @@ do-build:
 	${CC} -o ${WRKSRC}/datapipe ${WRKSRC}/datapipe.c
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/datapipe ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/datapipe ${DESTDIR}${PREFIX}/bin
+
 .include "../../mk/bsd.pkg.mk"
