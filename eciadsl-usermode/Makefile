@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/10/26 19:33:30 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2012/09/28 21:36:21 asau Exp $
 #
 
 DISTNAME=		eciadsl-usermode-0.10
@@ -27,17 +27,17 @@ EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 CONF_FILES=		${EGDIR}/ppp.conf ${PKG_SYSCONFDIR}/ppp/ppp.conf
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/${PKGBASE}
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/${PKGBASE}
-	${INSTALL_DATA_DIR} ${PKG_SYSCONFDIR}
-	${INSTALL_PROGRAM} ${WRKSRC}/eci-load1 ${PREFIX}/sbin
-	${INSTALL_PROGRAM} ${WRKSRC}/eci-load2 ${PREFIX}/sbin
-	${INSTALL_PROGRAM} ${WRKSRC}/pppoeci ${PREFIX}/sbin
-	${INSTALL_DATA} ${WRKSRC}/modems.db ${PREFIX}/share/${PKGBASE}
-	${INSTALL_DATA} ${WRKSRC}/providers.db ${PREFIX}/share/${PKGBASE}
-	${INSTALL_DATA} ${WRKSRC}/firmware00.bin ${PREFIX}/share/${PKGBASE}
-	${INSTALL_DATA} ${WRKSRC}/synch01.bin ${PREFIX}/share/${PKGBASE}
-	${INSTALL_DATA} ${WRKSRC}/ppp.conf ${EGDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/${PKGBASE}
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/${PKGBASE}
+	${INSTALL_DATA_DIR} ${DESTDIR}${PKG_SYSCONFDIR}
+	${INSTALL_PROGRAM} ${WRKSRC}/eci-load1 ${DESTDIR}${PREFIX}/sbin
+	${INSTALL_PROGRAM} ${WRKSRC}/eci-load2 ${DESTDIR}${PREFIX}/sbin
+	${INSTALL_PROGRAM} ${WRKSRC}/pppoeci ${DESTDIR}${PREFIX}/sbin
+	${INSTALL_DATA} ${WRKSRC}/modems.db ${DESTDIR}${PREFIX}/share/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/providers.db ${DESTDIR}${PREFIX}/share/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/firmware00.bin ${DESTDIR}${PREFIX}/share/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/synch01.bin ${DESTDIR}${PREFIX}/share/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/ppp.conf ${DESTDIR}${EGDIR}
 
 SUBST_CLASSES+=		path
 SUBST_MESSAGE.path=	Setting up hardcoded path
