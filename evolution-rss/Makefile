@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/05/29 23:04:07 cheusov Exp $
+# $NetBSD: Makefile,v 1.6 2012/09/28 22:07:35 asau Exp $
 #
 
 DISTNAME=	evolution-rss-0.2.1
@@ -11,8 +11,6 @@ COMMENT=	Evolution rss reader plugin
 LICENSE=		gnu-gpl-v2
 
 DEPENDS+=	gsed>=:../../textproc/gsed
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

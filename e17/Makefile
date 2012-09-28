@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2012/07/03 11:35:45 lokivit Exp $
+# $NetBSD: Makefile,v 1.29 2012/09/28 22:07:28 asau Exp $
 #
 
 DISTNAME=	enlightenment-0.16.999.55225
@@ -14,8 +14,6 @@ COMMENT=	Enlightenment Window Manager, Development Release
 DEPENDS+=	evas-eet>=1.1.0:../../graphics/evas-eet
 DEPENDS+=	evas-jpeg>=1.1.0:../../graphics/evas-jpeg
 DEPENDS+=	evas-png>=1.1.0:../../graphics/evas-png
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

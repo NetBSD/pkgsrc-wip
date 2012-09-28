@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2009/12/27 14:13:37 jihbed Exp $
+# $NetBSD: Makefile,v 1.13 2012/09/28 22:07:32 asau Exp $
 #
 
 DISTNAME=	emacs-jabber-0.8.0
@@ -11,8 +11,6 @@ MAINTAINER=	tonio@NetBSD.org
 HOMEPAGE=	http://emacs-jabber.sourceforge.net/
 COMMENT=	Minimal jabber client for emacs
 #LICENSE=	# TODO: (see mk/license.mk)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	# none

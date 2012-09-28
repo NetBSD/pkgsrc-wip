@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/05/09 20:15:34 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/28 22:07:36 asau Exp $
 #
 
 DISTNAME=	ExHuME-1.3.5
@@ -10,8 +10,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://projects.hepforge.org/exhume/
 COMMENT=	Monte Carlo simulation of central exclusive production
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++ fortran

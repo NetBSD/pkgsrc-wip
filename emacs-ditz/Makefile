@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/01/28 09:00:23 phonohawk Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/28 22:07:32 asau Exp $
 #
 
 DISTNAME=	emacs-ditz-0.5
@@ -8,8 +8,6 @@ MAINTAINER=	pho@cielonegro.org
 HOMEPAGE=	https://github.com/kentaro/${PKGBASE}/
 COMMENT=	Emacs interface to Ditz issue tracking system
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GIT_REPOSITORIES=	master
 GIT_REPO.master=	git://github.com/kentaro/${PKGBASE}.git

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/12/26 05:01:21 davesainty Exp $
+# $NetBSD: Makefile,v 1.5 2012/09/28 22:07:30 asau Exp $
 #
 
 DISTNAME=	efltk-2.0.8
@@ -11,6 +11,8 @@ EXTRACT_SUFX=	.tar.gz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ede.sourceforge.net/
 COMMENT=	Extended Fast Light Toolkit
+
+PKG_DESTDIR_SUPPORT=	none
 
 WRKSRC=			${WRKDIR}/efltk
 GNU_CONFIGURE=		yes

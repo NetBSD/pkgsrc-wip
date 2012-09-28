@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/01/19 14:26:42 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/28 22:07:32 asau Exp $
 #
 
 DISTNAME=	elk-1.1.4
@@ -12,8 +12,6 @@ COMMENT= 	All-electron full-potential linearised augmented-planewave
 LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	gnuplot>=4.2.6:../../graphics/gnuplot
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/elk
 

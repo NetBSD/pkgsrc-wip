@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/04/29 17:43:15 shattered Exp $
+# $NetBSD: Makefile,v 1.4 2012/09/28 22:07:34 asau Exp $
 #
 
 DISTNAME=	emirror-2.1.21
@@ -10,6 +10,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=emirror/} \
 MAINTAINER=	holger@zedat.fu-berlin.de
 HOMEPAGE=	http://sourceforge.net/projects/emirror/
 COMMENT=	FTP mirroring tool with nice HTML logfiles
+
+PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=	yes
 NO_BUILD=	yes

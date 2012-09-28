@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/05/20 00:58:40 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/28 22:07:31 asau Exp $
 
 DISTNAME=		elinks-current-0.13
 PKGNAME=		elinks-0.13
@@ -10,8 +10,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://elinks.or.cz/
 COMMENT=		Extended/Enhanced Links
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/06/13 22:46:59 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2012/09/28 22:07:31 asau Exp $
 #
 
 DISTNAME=		ejourn-0.4.2
@@ -10,6 +10,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		dhowland@users.sourceforge.net
 HOMEPAGE=		http://www.public.iastate.edu/~chris129/code/elog/
 COMMENT=		Application to help track a journal or diary
+
+PKG_DESTDIR_SUPPORT=	none
 
 WRKSRC=			${WRKDIR}/eJourn
 

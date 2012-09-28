@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/05/06 02:38:34 khorben Exp $
+# $NetBSD: Makefile,v 1.4 2012/09/28 22:07:34 asau Exp $
 #
 
 DISTNAME=	enigmail-1.0.1
@@ -12,8 +12,6 @@ COMMENT=	GnuPG support for mail/thunderbird
 WRKSRC=		${WRKDIR}/enigmail
 USE_LANGUAGES=	c c++
 USE_TOOLS=	gmake pax perl
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 REPLACE_PERL=	makemake ipc/makemake lang/make-lang-xpi.pl
 REPLACE_PERL+=	${ENIGMAIL_WRKSRC}/makemake

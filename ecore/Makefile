@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2011/05/12 09:03:38 absd Exp $
+# $NetBSD: Makefile,v 1.35 2012/09/28 22:07:30 asau Exp $
 #
 
 DISTNAME=	ecore-0.9.9.063
@@ -8,8 +8,6 @@ MASTER_SITES=	http://download.enlightenment.org/snapshots/2009-12-02/
 MAINTAINER=	yazzy@yazzy.org
 HOMEPAGE=	http://enlightenment.org/
 COMMENT=	Event Abstraction and Modular Convenience Library
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

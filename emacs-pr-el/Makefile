@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/10/09 10:05:45 cheusov Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/28 22:07:32 asau Exp $
 
 DISTNAME=		emacs-pr-el-0.0.1
 CATEGORIES=		misc
@@ -8,8 +8,6 @@ DISTFILES=		# empty
 MAINTAINER=		cheusov@NetBSD.org
 HOMEPAGE=		#
 COMMENT=		Modified version of GNATS send-pr.el
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CHECKSUM=		yes
 

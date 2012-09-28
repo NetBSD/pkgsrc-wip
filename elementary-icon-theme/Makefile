@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/05/17 04:13:09 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/28 22:07:31 asau Exp $
 #
 
 DISTNAME=	elementary-icon-theme-2.7.1
@@ -9,8 +9,6 @@ MAINTAINER=	INSERT_YOUR_MAIL_ADDRESS_HERE
 HOMEPAGE=	http://elementaryos.org/docs/packaging/themes/elementary-icons
 COMMENT=	Simple and appealing Tango-styled icon theme
 #LICENSE=	# TODO: (see mk/license.mk)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 # Needed for launchpad
 FETCH_USING=	curl

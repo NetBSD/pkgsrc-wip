@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2009/05/20 00:58:40 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2012/09/28 22:07:31 asau Exp $
 #
 
 DISTNAME=	elinks-current-unstable
@@ -15,6 +15,8 @@ COMMENT=	Extended/Enhanced links text-mode web browser (snapshot)
 NO_CHECKSUM=	yes
 
 CONFLICTS+=	elinks-[0-9]*
+
+PKG_DESTDIR_SUPPORT=	none
 
 CONFIGURE_ARGS+=	--enable-256-colors --enable-utf-8
 CONFIGURE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR:Q}

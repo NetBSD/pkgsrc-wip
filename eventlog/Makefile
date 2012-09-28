@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/07/18 09:15:46 cheusov Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/28 22:07:35 asau Exp $
 #
 
 DISTNAME=	eventlog-0.2.5
@@ -8,8 +8,6 @@ MASTER_SITES=	http://www.balabit.com/downloads/files/eventlog/0.2/
 MAINTAINER=	pkgsrc@blackmouse.biz
 HOMEPAGE=	http://www.balabit.com/products/syslog-ng/
 COMMENT=	New API to format and send structured log messages
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/03/19 07:26:15 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/28 22:07:34 asau Exp $
 #
 
 DISTNAME=	emovix-0.9.0
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://movix.sourceforge.net/
 COMMENT=	Tiny GNU/Linux distribution that plays video files when booted
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	# none

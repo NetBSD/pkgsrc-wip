@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2012/03/26 07:03:31 makoto Exp $
+# $NetBSD: Makefile,v 1.60 2012/09/28 22:07:32 asau Exp $
 #
 
 .include	"version.mk"
@@ -12,8 +12,6 @@ MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/emacs/emacs.html
 COMMENT=	GNU editing macros (editor)
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gmake makeinfo gzip autoconf automake
 # for example, Mac OS X 10.6.1 has 2.61 which fails

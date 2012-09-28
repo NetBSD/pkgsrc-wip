@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/05/29 23:04:07 cheusov Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/28 22:07:34 asau Exp $
 #
 
 DISTNAME=	emerald-themes-0.2.1
@@ -11,8 +11,6 @@ COMMENT=	Emerald themes for beryl.
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	# none
 USE_TOOLS+=	bash gtar
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 REPLACE_BASH=	themes/import.sh
 

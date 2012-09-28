@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/09/22 16:20:41 phonohawk Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/28 22:07:33 asau Exp $
 #
 
 DISTNAME=		session-2.3
@@ -14,7 +14,6 @@ LICENSE=		gnu-gpl-v2
 WRKSRC=			${WRKDIR}/session
 NO_CONFIGURE=	yes
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS+=		${EMACS_LISPPREFIX}
 INSTALLATION_DIRS+=		share/doc/${PKGBASE}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/02/18 21:02:19 helgoman Exp $
+# $NetBSD: Makefile,v 1.11 2012/09/28 22:07:34 asau Exp $
 #
 
 VERS=			4.5.0
@@ -11,7 +11,6 @@ HOMEPAGE=		http://eric-ide.python-projects.org/index.html
 COMMENT=		Python - IDE
 LICENSE=		gnu-gpl-v3
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 NO_BUILD=				yes
 
 PY_PATCHPLIST=			yes

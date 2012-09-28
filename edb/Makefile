@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/02/28 14:53:17 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/28 22:07:30 asau Exp $
 #
 
 DISTNAME=	edb-1.0.5.042
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.enlightenment.org/
 COMMENT=	Enlightenment Database Library
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

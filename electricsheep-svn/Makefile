@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/12/26 05:01:21 davesainty Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/28 22:07:31 asau Exp $
 
 PKGNAME=		electricsheep-2.7
 DISTNAME=		electricsheep
@@ -24,7 +24,6 @@ USE_TOOLS+=		pkg-config gmake
 SVN_REPOSITORIES=	client
 SVN_ROOT.client=	http://electricsheep.svn.sourceforge.net/svnroot/electricsheep/trunk/client
 WRKSRC=			${WRKDIR}/client
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 SHARE_DIR=		${DESTDIR}/${PREFIX}/share/electricsheep
 

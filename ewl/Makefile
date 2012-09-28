@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/06/13 22:47:03 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2012/09/28 22:07:36 asau Exp $
 #
 
 DISTNAME=	ewl-0.5.2.042
@@ -11,6 +11,8 @@ MASTER_SITES=	http://download.enlightenment.org/snapshots/2008-01-25/ \
 MAINTAINER=	yazzy@yazzy.org
 HOMEPAGE=	http://enlightenment.org/
 COMMENT=	Enlightened Widgets Library
+
+PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

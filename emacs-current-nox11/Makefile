@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2011/10/07 13:04:49 makoto Exp $
+# $NetBSD: Makefile,v 1.7 2012/09/28 22:07:32 asau Exp $
 #
 
 DISTNAME=	emacs-nox11-24.0.90
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/emacs/emacs.html
 COMMENT=	GNU editing macros (editor, no x11)
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gmake makeinfo gzip autoconf automake
 # for example, Mac OS X 10.6.1 has 2.61 which fails

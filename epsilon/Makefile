@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2010/06/13 22:47:03 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.11 2012/09/28 22:07:34 asau Exp $
 #
 
 DISTNAME=	epsilon-0.3.0.012
@@ -7,8 +7,6 @@ CATEGORIES=	graphics
 MASTER_SITES=	http://download.enlightenment.org/snapshots/2008-01-25/ \
 		http://www.ezunix.org/pkgsrc/e17/snapshots/2008-01-25/ \
 		http://jfranz.users.bsdprojects.net/pkgsrc/e17/
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAINTAINER=	yazzy@yazzy.org
 HOMEPAGE=	http://enlightenment.org/

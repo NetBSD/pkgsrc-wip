@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/03/01 08:35:26 khorben Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/28 22:07:30 asau Exp $
 #
 
 DISTNAME=	${PKGNAME_NOREV}
@@ -11,8 +11,6 @@ MAINTAINER=	khorben@defora.org
 HOMEPAGE=	http://www.eclipse.org/
 COMMENT=	Java IDE
 LICENSE=	eclipse-license
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PKG_JVMS_ACCEPTED= sun-jdk6 sun-jdk15 sun-jdk14
 

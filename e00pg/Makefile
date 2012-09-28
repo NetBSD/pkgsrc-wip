@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/07/05 14:59:36 othyro Exp $
+# $NetBSD: Makefile,v 1.8 2012/09/28 22:07:28 asau Exp $
 #
 
 DISTNAME=		e00pg-1.0.1
@@ -9,8 +9,6 @@ MAINTAINER=		mchittur@cs.nmsu.edu
 HOMEPAGE=		http://e00pg.sourceforge.net/
 COMMENT=		Converting ESRI-E00 coverages into PostgreSQL/PostGIS sql instructions
 LICENSE=		gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes

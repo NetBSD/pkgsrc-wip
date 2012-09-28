@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/01/22 04:28:42 pseudo_anim Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/28 22:07:34 asau Exp $
 #
 
 DISTNAME=	enet-1.0
@@ -8,6 +8,8 @@ MASTER_SITES=	http://enet.bespin.org/download/
 MAINTAINER=	Pseudo.Statistic@gmail.com
 HOMEPAGE=	http://enet.bespin.org/
 COMMENT=	Network communication layer that runs on top of UDP
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_TOOLS+=	gmake
 USE_LANGUAGES=	c

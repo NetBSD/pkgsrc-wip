@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/02/15 15:07:12 slitvinov Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/28 22:07:34 asau Exp $
 #
 
 DISTNAME=	digit-src-4_1
@@ -11,8 +11,6 @@ HOMEPAGE=	http://digitizer.sourceforge.net/
 COMMENT=	Converts an image file with graph or map into numbers
 LICENSE=	gnu-gpl-v2
 
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/engauge
 USE_LANGUAGES=	c++

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2009/03/18 12:34:24 cheusov Exp $
+# $NetBSD: Makefile,v 1.11 2012/09/28 22:07:30 asau Exp $
 #
 
 DISTNAME=		libedit-20080712-2.11
@@ -9,8 +9,6 @@ MASTER_SITES=		http://www.thrysoee.dk/editline/
 MAINTAINER=		reed@reedmedia.net
 HOMEPAGE=		http://www.thrysoee.dk/editline/
 COMMENT=		NetBSD Editline library (libedit) for generic line editing
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/05/29 19:28:03 tnn2 Exp $
+# $NetBSD: Makefile,v 1.4 2012/09/28 22:07:36 asau Exp $
 #
 
 DISTNAME=	expiretable-0.6
@@ -8,8 +8,6 @@ MASTER_SITES=	http://expiretable.fnord.se/
 MAINTAINER=	bartosz.kuzma@gmail.com
 HOMEPAGE=	http://expiretable.fnord.se/
 COMMENT=	Removes entries from pf tables based on their age
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 ONLY_FOR_PLATFORM=	DragonFly-*-* FreeBSD-[5-9]*-*
 ONLY_FOR_PLATFORM+=	NetBSD-[3-9]*-* OpenBSD-[4-9]*-*

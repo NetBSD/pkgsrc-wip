@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/01/18 19:41:05 jsonn Exp $
+# $NetBSD: Makefile,v 1.5 2012/09/28 22:07:31 asau Exp $
 #
 
 DISTNAME=	elementary-0.6.0.063
@@ -9,8 +9,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://www.enlightenment.org/
 COMMENT=	E17 Widget Library
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/03/30 08:20:06 rsmarples Exp $
+# $NetBSD: Makefile,v 1.5 2012/09/28 22:07:35 asau Exp $
 #
 
 DISTNAME=		evilvte-0.4.3
@@ -9,8 +9,6 @@ MASTER_SITES=		http://www.calno.com/evilvte/
 MAINTAINER=		roy@marples.name
 HOMEPAGE=		http://www.calno.com/evilvte/
 COMMENT=		VTE based, highly customizable terminal emulator
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX}

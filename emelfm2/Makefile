@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2010/06/13 22:47:03 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.11 2012/09/28 22:07:33 asau Exp $
 #
 
 DISTNAME=	emelfm2-0.1.3
@@ -9,6 +9,8 @@ MASTER_SITES=	http://emelfm2.net/rel/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://emelfm2.net/
 COMMENT=	Fast two-pane file manager using GTK2
+
+PKG_DESTDIR_SUPPORT=	none
 
 PTHREAD_OPTS+=	require
 

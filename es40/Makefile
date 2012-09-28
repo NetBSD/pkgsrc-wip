@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/01/10 17:30:08 tnn2 Exp $
+# $NetBSD: Makefile,v 1.5 2012/09/28 22:07:34 asau Exp $
 
 DISTNAME=		# cvs package
 PKGNAME=		es40-0.18
@@ -11,8 +11,6 @@ SITES.${VGABIOS}=	http://savannah.gnu.org/download/vgabios/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.es40.org/
 COMMENT=	AlphaServer ES40 emulator
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CVS_REPOSITORIES=	es40
 CVS_ROOT.es40=		:pserver:anonymous:@es40.cvs.sourceforge.net:/cvsroot/es40

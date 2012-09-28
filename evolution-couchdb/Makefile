@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/05/13 17:55:07 noud4 Exp $
+# $NetBSD: Makefile,v 1.7 2012/09/28 22:07:35 asau Exp $
 #
 
 DISTNAME=	evolution-couchdb-0.5.1
@@ -11,8 +11,6 @@ MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://launchpad.net/evolution-couchdb
 COMMENT=	Evolution backend to access CouchDBs
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_PKGLOCALEDIR= yes

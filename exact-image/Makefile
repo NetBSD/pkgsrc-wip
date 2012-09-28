@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2011/05/26 20:34:25 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2012/09/28 22:07:36 asau Exp $
 #
 
 DISTNAME=	exact-image-0.7.5
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.exactcode.de/site/open_source/exactimage/
 COMMENT=	Fast, modern, and generic image processing library
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 HAS_CONFIGURE=		yes
 CONFIG_SHELL=		bash

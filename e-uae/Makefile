@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/12/18 13:35:32 rhialto Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/28 22:07:28 asau Exp $
 
 DISTNAME=	e-uae-0.8.29-WIP4
 PKGNAME=	e-uae-0.8.29wip4
@@ -10,8 +10,6 @@ MAINTAINER=	rhialto@falu.nl
 HOMEPAGE=	http://www.rcdrummond.net/uae/
 COMMENT=	Enhanced Ubiquitous Amiga Emulator
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=		no
 

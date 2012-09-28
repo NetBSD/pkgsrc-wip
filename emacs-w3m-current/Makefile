@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/03/11 02:18:22 makoto Exp $
+# $NetBSD: Makefile,v 1.11 2012/09/28 22:07:33 asau Exp $
 
 DISTNAME=	emacs-w3m-1.4.50
 PKGNAME=	emacs-w3m-1.4.50
@@ -10,7 +10,6 @@ HOMEPAGE=	http://emacs-w3m.namazu.org/
 COMMENT=	Emacs frontend for w3m browser
 LICENSE=	gnu-gpl-v2
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS=	${ETCDIR}
 # the name is slightly different for now, so put. (Shall I?)
 # CONFLICTS+=	emacs-w3m-[0-9]*

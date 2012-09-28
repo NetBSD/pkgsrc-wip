@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2012/07/02 13:37:55 moubctez Exp $
+# $NetBSD: Makefile,v 1.24 2012/09/28 22:07:37 asau Exp $
 #
 
 DISTNAME=	ezbounce-1.99.14
@@ -9,8 +9,6 @@ MASTER_SITES=	http://www.linuxftw.com/ezbounce/files/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.linuxftw.com/ezbounce/
 COMMENT=	Highly Configurable IRC Proxy
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	YES
 USE_LANGUAGES=	c c++

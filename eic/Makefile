@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/08/13 23:33:25 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2012/09/28 22:07:31 asau Exp $
 #
 
 DISTNAME=		EiCsrc_4.3.0
@@ -10,6 +10,8 @@ EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		C style scripting lang
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_TOOLS+=		gmake
 

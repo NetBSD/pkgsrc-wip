@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/11/18 05:53:34 phonohawk Exp $
+# $NetBSD: Makefile,v 1.4 2012/09/28 22:07:29 asau Exp $
 #
 
 DISTNAME=		ecb-2.40
@@ -18,8 +18,6 @@ MAKE_FLAGS+=		EMACS=${EMACS_BIN}
 MAKE_FLAGS+=		CEDET=${EMACS_LISPPREFIX}/${EMACS_PKGNAME_PREFIX}cedet
 EMACS_MODULES=		base
 #EMACS_BUILDLINK=	yes  # Causes a conflict with Emacs 23's built-in CEDET.
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 INSTALLATION_DIRS+=	\
 	${PKGINFODIR} \
