@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/09/16 13:29:47 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/29 17:05:56 asau Exp $
 #
 
 DISTNAME=	HiggsBounds-3.8.0
@@ -12,8 +12,6 @@ COMMENT=	Selection of Higgs sector predictions for any particular model
 LICENSE=	gnu-gpl-v3
 
 #DEPENDS+=	feynhiggs-[0-9]*:../../wip/feynhiggs
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=	${WRKDIR}/${DISTNAME}/HiggsBounds
 

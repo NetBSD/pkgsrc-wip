@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/06/13 22:47:07 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2012/09/29 17:05:54 asau Exp $
 #
 
 DISTNAME=	heliodor-0.2.1
@@ -7,6 +7,8 @@ PKGREVISION=	3
 .include "../../wip/beryl/Makefile.inc"
 
 COMMENT=	Heliodor theme package for beryl
+
+PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

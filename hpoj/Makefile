@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2010/06/13 22:47:08 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.16 2012/09/29 17:05:57 asau Exp $
 #
 
 DISTNAME=		hpoj-0.91
@@ -16,6 +16,8 @@ DEPENDS+=		psmisc-[0-9]*:../../sysutils/psmisc
 # The ptal-cups script require bash
 DEPENDS+=		bash-[0-9]*:../../shells/bash
 
+PKG_DESTDIR_SUPPORT=	none
+
 USE_TOOLS+=		gmake perl
 GNU_CONFIGURE=		YES
 
@@ -23,7 +25,7 @@ CONFIGURE_ARGS+=	--prefix=${PREFIX:Q} \
 			--with-cups-backend=${PREFIX:Q}/libexec/cups/backend \
 			--with-sane-backend=${PREFIX:Q}/lib/sane \
 			--with-sane-etc=${PREFIX:Q}/etc/sane.d \
- 			--with-usb=libusb \
+			--with-usb=libusb \
 			--without-snmp \
 			--without-qt
 

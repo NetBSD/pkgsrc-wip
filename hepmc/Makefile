@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/09/18 10:20:33 jihbed Exp $
+# $NetBSD: Makefile,v 1.4 2012/09/29 17:05:55 asau Exp $
 #
 
 DISTNAME=	HepMC-2.06.02
@@ -12,8 +12,6 @@ COMMENT=	C++ Event Record for Monte Carlo Generators
 LICENSE=	gnu-gpl-v2
 
 MAKE_JOBS_SAFE=NO
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

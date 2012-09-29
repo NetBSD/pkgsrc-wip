@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2010/07/21 09:37:03 jihbed Exp $
+# $NetBSD: Makefile,v 1.8 2012/09/29 17:05:56 asau Exp $
 #
 
 DISTNAME=	hitori-0.2.4
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc.gnome@gmail.com
 HOMEPAGE=	http://tecnocode.co.uk/projects/hitori/
 COMMENT=	Hitori is an application that allow to play the eponymous puzzle game
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

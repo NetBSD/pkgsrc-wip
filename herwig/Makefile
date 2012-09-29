@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/10/28 17:08:35 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/29 17:05:55 asau Exp $
 #
 
 DISTNAME=	herwig6510
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.f
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://hepwww.rl.ac.uk/theory/seymour/herwig/
 COMMENT= Monte Carlo package for simulating Hadron Emission Reactions
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/herwig6510.f
 

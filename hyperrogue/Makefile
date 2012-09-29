@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/05/07 11:09:31 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/29 17:05:57 asau Exp $
 #
 
 DISTNAME=	hyperrogue-35
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.roguetemple.com/z/hyper.php
 COMMENT=	Rogue clone in a strange, non-Euclidean world
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c++
 USE_TOOLS+=	gmake pkg-config

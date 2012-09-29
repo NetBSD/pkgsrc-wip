@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/08/22 05:10:37 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/29 17:05:55 asau Exp $
 #
 
 DISTNAME=	hengband-1.6.2
@@ -9,6 +9,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pho@cielonegro.org
 HOMEPAGE=	http://hengband.sourceforge.jp/en/index.html
 COMMENT=	Variant of ZAngband 2.2.8
+
+PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-setgid=games

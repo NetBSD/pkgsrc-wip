@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/10/28 17:30:05 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/29 17:05:54 asau Exp $
 #
 
 DISTNAME=	HAWK
@@ -9,8 +9,6 @@ MASTER_SITES=	http://omnibus.uni-freiburg.de/~sd565/programs/hawk/
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://omnibus.uni-freiburg.de/~sd565/programs/hawk/
 COMMENT=	HAWK is a Monte Carlo integrator for pp -> H + 2jets
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 VERSION=	1.1
 USE_TOOLS+= gmake

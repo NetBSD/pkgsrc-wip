@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/06/21 21:15:47 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/29 17:05:54 asau Exp $
 #
 
 VERS=	20030228
@@ -11,8 +11,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://garr.dl.sourceforge.net/project/arabeyes/Fonts/haydar_fonts/
 COMMENT=	Free X11 fonts (BDF format) for HaydarLinux
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/fonts
 NO_BUILD=	yes

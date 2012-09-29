@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2011/01/17 10:48:03 emil_s Exp $
+# $NetBSD: Makefile,v 1.7 2012/09/29 17:05:52 asau Exp $
 #
 
 DISTNAME=		haddock-${VERSION}
@@ -13,6 +13,8 @@ HOMEPAGE=		http://www.haskell.org/haddock/
 COMMENT=		Documentation tool for Haskell
 
 VERSION=		0.8
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake perl

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/08/06 21:37:18 jihbed Exp $
+# $NetBSD: Makefile,v 1.5 2012/09/29 17:05:56 asau Exp $
 #
 
 DISTNAME=	hijra-0.1.18
@@ -11,8 +11,6 @@ MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://hijra.ojuba.org/
 COMMENT=	Hijra is the Hijri Islamic Calendar
 #LICENSE=	LICENSE
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 PYDISTUTILSPKG=		yes

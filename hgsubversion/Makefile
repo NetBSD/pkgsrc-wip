@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/08/04 16:07:45 ura Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/29 17:05:56 asau Exp $
 #
 
 DISTNAME=		1.1.2
@@ -11,8 +11,6 @@ MAINTAINER=		ura@jp.NetBSD.org
 HOMEPAGE=		http://bibucket.org/durin42/hgsubversion/
 COMMENT=		Subversion plugin for Mercurial
 LICENSE=		gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DIST_SUBDIR=    hgsubversion
 WRKSRC=		${WRKDIR}/hgsubversion

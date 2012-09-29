@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2009/07/22 09:53:13 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.25 2012/09/29 17:05:57 asau Exp $
 #
 
 DISTNAME=	httrack-3.43-5
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.httrack.com/
 COMMENT=	Easy-to-use offline browser utility
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 LDFLAGS+=		-L${WRKSRC}/src/.libs/

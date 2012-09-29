@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/12/29 22:37:09 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/29 17:05:55 asau Exp $
 #
 
 DISTNAME=	HepMCVisual-1.1.6
@@ -10,8 +10,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://projects.hepforge.org/hepmcvisual/
 COMMENT=	Interactive Browser for HepMC events 
 #LICENSE=	# TODO: (see mk/license.mk)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/HepMCVisual
 

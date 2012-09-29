@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/12/29 22:56:36 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/29 17:05:57 asau Exp $
 #
 
 DISTNAME=	hztool-4.3
@@ -9,8 +9,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://projects.hepforge.org/hztool//
 COMMENT=	Robust model-to-data comparisons
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CHECK_PORTABILITY_SKIP=  configure
 

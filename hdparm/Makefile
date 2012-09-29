@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/05/20 10:47:41 poppnk Exp $
+# $NetBSD: Makefile,v 1.5 2012/09/29 17:05:54 asau Exp $
 #
 
 DISTNAME=		hdparm-6.6
@@ -18,5 +18,7 @@ SUBST_STAGE.prefix=pre-build
 SUBST_FILES.prefix=Makefile
 SUBST_SED.prefix  =-e s,/usr,,g \
 		   -e s,DESTDIR\ =,DESTDIR=${PREFIX},g
+
+PKG_DESTDIR_SUPPORT=	none
 
 .include "../../mk/bsd.pkg.mk"

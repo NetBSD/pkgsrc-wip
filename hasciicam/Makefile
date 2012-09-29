@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/05/19 16:51:18 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.8 2012/09/29 17:05:53 asau Exp $
 #
 
 DISTNAME=		hasciicam-0.9
@@ -15,6 +15,8 @@ GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake
 
 ONLY_FOR_PLATFORM=	Linux-*-*
+
+PKG_DESTDIR_SUPPORT=	none
 
 .include "../../graphics/aalib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

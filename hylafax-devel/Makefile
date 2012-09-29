@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2010/12/26 05:01:22 davesainty Exp $
+# $NetBSD: Makefile,v 1.15 2012/09/29 17:05:57 asau Exp $
 
 VERS=		4.4.0
 PKGNAME=	hylafax-devel-${VERS}
@@ -22,7 +22,6 @@ DEPENDS+=	mawk>=1.2.2:../../lang/mawk
 
 DIST_SUBDIR=	hylafax
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 CONFLICTS=	hylafax-[0-9]* mgetty-[0-9]*
 
 USE_LANGUAGES=		c c++

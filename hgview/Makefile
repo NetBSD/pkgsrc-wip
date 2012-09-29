@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/06/13 22:47:07 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2012/09/29 17:05:56 asau Exp $
 #
 
 DISTNAME=	hgview-0.9.${HGVIEW_VER}
@@ -8,6 +8,8 @@ CATEGORIES=	devel
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.logilab.org/project/eid/3426
 COMMENT=	GTK based replacement for hgview
+
+PKG_DESTDIR_SUPPORT=	none
 
 NO_CHECKSUM=		yes
 PYDISTUTILSPKG=		yes
