@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/09/28 00:02:14 mwilhelmy Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/29 18:19:38 mwilhelmy Exp $
 
 FNTVER=		1.036
 DISTNAME=	SourceSansPro_FontsOnly-${FNTVER}
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/sourcesans.adobe/
 COMMENT=	Adobe Source Sans Pro TTF fonts
 LICENSE=	open-font-license
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/${DISTNAME}
 NO_BUILD=		yes
