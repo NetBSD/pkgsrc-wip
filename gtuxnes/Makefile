@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/11/06 17:51:07 othyro Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/29 00:44:37 asau Exp $
 
 DISTNAME=		gtuxnes-0.75
 CATEGORIES=		emulators
@@ -24,9 +24,9 @@ do-build:
 	cd ${WRKSRC} && && ${SETENV} ${MAKE_ENV} ${MAKE}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/gtuxnes ${PREFIX}/bin/gtuxnes
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/gtuxnes
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/gtuxnes
+	${INSTALL_PROGRAM} ${WRKSRC}/gtuxnes ${DESTDIR}${PREFIX}/bin/gtuxnes
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/gtuxnes
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/gtuxnes
 
 .include "../../x11/gtk/buildlink3.mk"
 .include "../../devel/glib/buildlink3.mk"

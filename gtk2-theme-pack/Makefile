@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2009/07/22 09:53:13 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.21 2012/09/29 00:42:14 asau Exp $
 #
 
 DISTNAME=	gtk2-theme-pack
@@ -47,7 +47,7 @@ DISTFILES=	GKT2-Quantumcurve.tar.gz \
 		GTK2-Ibs.tar.gz \
 		GTK2-IceCube.tar.gz \
 		GTK2-Latte.tar.bz2 \
-       		GTK2-Lighthouse-H20.tar.gz \
+		GTK2-Lighthouse-H20.tar.gz \
 		GTK2-LighthouseGreen.tar.gz \
 		GTK2-LighthouseIDEA.tar.bz2 \
 		GTK2-LighthouseWhite.tar.gz \
@@ -134,6 +134,6 @@ do-configure:
 	${FIND} ${WRKDIR} -name \*.orig -type f -print0 | ${XARGS} -t -0 ${RM}
 
 do-install:
-	cd ${WRKDIR} && pax -rw -pp [A-Za-z]* ${PREFIX}/share/themes
+	cd ${WRKDIR} && pax -rw -pp [A-Za-z]* ${DESTDIR}${PREFIX}/share/themes
 
 .include "../../mk/bsd.pkg.mk"
