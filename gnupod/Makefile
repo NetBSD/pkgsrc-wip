@@ -1,4 +1,4 @@
-e# $NetBSD: Makefile,v 1.2 2012/09/29 00:50:39 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/29 09:28:22 kristerw Exp $
 #
 
 DISTNAME=		gnupod-0.99.6
