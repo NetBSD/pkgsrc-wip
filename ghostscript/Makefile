@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/03/31 12:15:55 makoto Exp $
+# $NetBSD: Makefile,v 1.10 2012/09/29 00:50:34 asau Exp $
 
 DISTNAME=	ghostscript-${GS_VERSION}
 CATEGORIES=	print
@@ -20,8 +20,6 @@ DEPENDS+=		ghostscript-fonts>=6.0:../../fonts/ghostscript-fonts
 CONFLICTS+=		ghostscript-afpl-[0-9]*
 CONFLICTS+=		ghostscript-esp{,-nox11}-[0-9]*
 CONFLICTS+=		ghostscript-gnu{,-nox11,-x11}-[0-9]*
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake perl:run lex pkg-config
 USE_LANGUAGES+=		c c++

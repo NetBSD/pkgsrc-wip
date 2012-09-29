@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/07/08 14:17:20 ryo-on Exp $
+# $NetBSD: Makefile,v 1.6 2012/09/29 00:50:42 asau Exp $
 
 SVN_REVISION=	1429
 DIST_VERSION=	0.1
@@ -12,8 +12,6 @@ MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/gyp/
 COMMENT=	GYP can Generate Your Projects
 LICENSE=	modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 SVN_REPOSITORIES=	gyp
 SVN_ROOT.gyp=		http://gyp.googlecode.com/svn/trunk/

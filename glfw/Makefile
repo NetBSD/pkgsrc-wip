@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/11/18 10:02:47 ryo-on Exp $
+# $NetBSD: Makefile,v 1.4 2012/09/29 00:50:35 asau Exp $
 #
 
 DISTNAME=	glfw-2.7
@@ -10,8 +10,6 @@ MAINTAINER=	ryo_on@yk.rim.or.jp
 HOMEPAGE=	http://www.glfw.org/
 COMMENT=	GLFW is a free, Open Source, multi-platform library of OpenGL
 #LICENSE=	zlib/libpng license
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	pkg-config
 

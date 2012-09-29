@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/06/13 22:47:06 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2012/09/29 00:50:41 asau Exp $
 
 DISTNAME=		gtk2-engines-magicchicken_1.1.1.orig
 PKGNAME=		gtk2-engines-magicchicken-1.1.1
@@ -9,6 +9,8 @@ MASTER_SITES=		ftp://ftp.debian.org/debian/pool/main/g/gtk2-engines-magicchicken
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://art.gnome.org/
 COMMENT=		MagicChicken theme engine for GTK+ 2.x
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_LIBTOOL=		YES
 USE_TOOLS+=		gmake pkg-config

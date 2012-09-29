@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/04/27 20:34:12 schaecsn Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/29 00:50:40 asau Exp $
 #
 
 DISTNAME=	gsview-4.9
@@ -15,8 +15,6 @@ RESTRICTED=	Commercial distribution prohibited in most cases.
 # the variables are set.
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=     gmake pkg-config gs:run
 

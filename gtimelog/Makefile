@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/03/30 21:11:34 shindenmorr Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/29 00:50:40 asau Exp $
 #
 
 DISTNAME=	gtimelog-0.5.0
@@ -9,8 +9,6 @@ MAINTAINER=	morr@NetBSD.org
 HOMEPAGE=	http://mg.pov.lt/gtimelog/
 COMMENT=	Small Gtk+ app for keeping track of your time
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

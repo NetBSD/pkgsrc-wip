@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2010/04/15 07:10:05 athaba Exp $
+# $NetBSD: Makefile,v 1.8 2012/09/29 00:50:35 asau Exp $
 #
 
 PKGNAME=	gmp-${DISTNAME}
@@ -19,7 +19,6 @@ CONFIGURE_ARGS+=	--with-gmp=${BUILDLINK_PREFIX.gmp}
 #USE_LIBTOOL=		YES
 
 TEST_TARGET=		check
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "options.mk"
 .include "../../devel/gmp/buildlink3.mk"

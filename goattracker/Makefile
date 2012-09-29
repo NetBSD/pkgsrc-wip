@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/03/14 13:42:25 rodo6510 Exp $
+# $NetBSD: Makefile,v 1.5 2012/09/29 00:50:39 asau Exp $
 #
 
 DISTNAME=	goattrk2
@@ -12,7 +12,7 @@ HOMEPAGE=	http://cadaver.homeftp.net/tools/
 COMMENT=	Crossplatform C64 Music Editor
 
 PKG_INSTALLATION_TYPES= overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
+
 CFLAGS=			-I{PREFIX}/include -D_GNU_SOURCE=1 -D_REENTRANT -D_THREAD_SAFE
 WRKSRC=			${WRKDIR}/src
 USE_LANGUAGES=		c c++
@@ -21,7 +21,6 @@ MAKE_FILE=		makefile.common
 INSTALLATION_DIRS=	bin share/examples/goattracker share/doc/goattracker
 
 do-install:
-
 	${INSTALL_PROGRAM} ${WRKDIR}/src/goattrk2 ${DESTDIR}${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKDIR}/src/sngspli2 ${DESTDIR}${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKDIR}/src/mod2sng ${DESTDIR}${PREFIX}/bin

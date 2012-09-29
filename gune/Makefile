@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/08/19 20:02:12 dhowland Exp $
+# $NetBSD: Makefile,v 1.5 2012/09/29 00:50:41 asau Exp $
 #
 
 DISTNAME=		gune-0.1
@@ -8,6 +8,8 @@ MASTER_SITES=		http://download.berlios.de/gune/
 MAINTAINER=		Peter.Bex@student.kun.nl
 HOMEPAGE=		http://gune.berlios.de/
 COMMENT=		High level C utility library
+
+PKG_DESTDIR_SUPPORT=	none
 
 MAKE_ENV+=		MKLINT=no
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2010/12/14 16:43:44 noud4 Exp $
+# $NetBSD: Makefile,v 1.11 2012/09/29 00:50:36 asau Exp $
 #
 
 DISTNAME=		gnokii-0.6.22
@@ -24,8 +24,6 @@ USE_BUILTIN.gettext=	no
 
 REPLACE_BASH+=		utils/sendsms
 USE_TOOLS+=		bash:run
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 pre-configure:
 	set -e; cd ${WRKSRC}; autoheader; autoconf

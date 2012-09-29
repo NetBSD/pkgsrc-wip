@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2011/05/26 20:34:25 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2012/09/29 00:50:34 asau Exp $
 #
 
 DISTNAME=		gfontview-0.5.0
@@ -8,6 +8,8 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gfontview/}
 MAINTAINER=		ccatrian@eml.cc
 HOMEPAGE=		http://gfontview.sourceforge.net/
 COMMENT=		Outline font viewer for X11
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes

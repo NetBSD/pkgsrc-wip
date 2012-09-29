@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2011/11/02 15:46:46 makoto Exp $
+# $NetBSD: Makefile,v 1.8 2012/09/29 00:50:34 asau Exp $
 
 DISTNAME=	ghostscript-cidfonts-ryumin-${GS_VERSION}
 # Please note  following is a must when building ghostscript
@@ -18,7 +18,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Enable Ryumin-Light and GothicBBB for ghostscript
 
 .include	"../../wip/ghostscript/Makefile.common"
-PKG_DESTDIR_SUPPORT=	user-destdir
+
 GS_RESOURCEDIR=		share/ghostscript/${PKGVERSION}/Resource
 WRKSRC=			${WRKDIR}/gcr
 INSTALLATION_DIRS+=	${GS_RESOURCEDIR}/Font

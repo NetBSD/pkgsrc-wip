@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/05/01 14:20:07 shattered Exp $
+# $NetBSD: Makefile,v 1.5 2012/09/29 00:50:33 asau Exp $
 #
 
 DISTNAME=		Gauche-fastcgi-0.1
@@ -8,6 +8,8 @@ MASTER_SITES=		http://prdownloads.sourceforge.jp/gauche/8004/
 MAINTAINER=		nel@soraneko.com
 HOMEPAGE=		http://sourceforge.jp/projects/gauche/
 COMMENT=		Fastcgi bindings for gauche
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes

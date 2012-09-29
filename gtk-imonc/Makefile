@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/09/05 09:38:50 gschwarz Exp $
+# $NetBSD: Makefile,v 1.6 2012/09/29 00:50:40 asau Exp $
 
 DISTNAME=	gtk-imonc-0.6.4.1
 PKGREVISION=	1
@@ -9,8 +9,6 @@ MAINTAINER=	schwarz@NetBSD.org
 HOMEPAGE=	http://zeank.in-berlin.de/gtkimonc/
 COMMENT=	GTK version of the fli4l monitoring tool
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	pkg-config

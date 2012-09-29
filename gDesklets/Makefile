@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2010/12/25 12:45:45 noud4 Exp $
+# $NetBSD: Makefile,v 1.34 2012/09/29 00:50:33 asau Exp $
 #
 
 DISTNAME=	gdesklets-0.36
@@ -11,6 +11,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://gdesklets.de/
 COMMENT=	Advanced architecture for desktop applets
+
+PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	gmake pkg-config intltool

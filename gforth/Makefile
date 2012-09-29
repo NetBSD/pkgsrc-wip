@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2010/07/14 09:03:39 asau Exp $
+# $NetBSD: Makefile,v 1.14 2012/09/29 00:50:34 asau Exp $
 
 DISTNAME=	gforth-0.7.99
 PKGNAME=	gforth-0.7.99 # needed because of cvs-package.mk
@@ -12,8 +12,6 @@ COMMENT=	Fast interpreter for the Forth language
 
 CVS_REPOSITORIES=	gforth
 CVS_ROOT.gforth=	:pserver:anonymous:@c1.complang.tuwien.ac.at:/nfs/unsafe/cvs-repository/src-master
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 INFO_FILES=		yes

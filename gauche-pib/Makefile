@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/08/29 07:28:27 kristerw Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/29 00:50:33 asau Exp $
 #
 
 DISTNAME=	pib-0.3.1
@@ -13,8 +13,6 @@ LICENSE=	modified-bsd
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/gauche/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/10/01 19:24:33 shattered Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/29 00:50:35 asau Exp $
 #
 
 DISTNAME=	gitg-0.0.8
@@ -10,8 +10,6 @@ MAINTAINER=	shattered@NetBSD.org
 HOMEPAGE=	http://trac.novowork.com/gitg/
 COMMENT=	Git repository browser
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/03/14 16:32:22 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2012/09/29 00:50:40 asau Exp $
 #
 
 DISTNAME=	gpx2shp-0.69
@@ -9,8 +9,6 @@ MAINTAINER=	wenheping@gmail.com
 HOMEPAGE=	http://gpx2shp.sourceforge.jp/
 COMMENT=	Converts GPX to ESRI shapefile format
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c
 GNU_CONFIGURE=	yes

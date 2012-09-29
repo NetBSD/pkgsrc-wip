@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/05/11 14:39:15 shattered Exp $
+e# $NetBSD: Makefile,v 1.2 2012/09/29 00:50:39 asau Exp $
 #
 
 DISTNAME=		gnupod-0.99.6
@@ -19,6 +19,8 @@ DEPENDS+=		p5-MP3-Info>=1.23:../../audio/p5-MP3-Info
 DEPENDS+=		p5-libwww>=5.808:../../www/p5-libwww
 DEPENDS+=		vorbis-tools>=1.1.1:../../audio/vorbis-tools
 DEPENDS+=		timidity>=2.13.2nb2:../../audio/timidity
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes

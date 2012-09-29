@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2012/07/29 10:49:48 gregoire Exp $
+# $NetBSD: Makefile,v 1.43 2012/09/29 00:50:40 asau Exp $
 #
 
 DISTNAME=		grub-bazaar-snapshot
@@ -12,8 +12,6 @@ COMMENT=		GRand Unified Bootloader, version 2 (development snapshot)
 LICENSE=		gnu-gpl-v3
 
 CONFLICTS=		grub-[0-9]*
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 ONLY_FOR_PLATFORM=	*-*-i386 *-*-x86_64
 

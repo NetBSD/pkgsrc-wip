@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2010/06/13 22:47:04 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.13 2012/09/29 00:50:34 asau Exp $
 #
 
 DISTNAME=	giggle-0.5
@@ -11,8 +11,6 @@ MAINTAINER=	netbsd@guigui2.net
 HOMEPAGE=	http://live.gnome.org/giggle
 COMMENT=	GTK2 graphical frontend to git SCM tool
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	scmgit-base-[0-9]*:../../devel/scmgit-base
 GNU_CONFIGURE=	yes

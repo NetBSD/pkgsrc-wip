@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/01/03 22:19:30 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/29 00:50:33 asau Exp $
 #
 
 DISTNAME=	gappa-0.12.3
@@ -9,8 +9,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://gappa.gforge.inria.fr/
 COMMENT=	Formal tool for certifying numerical applications
 #LICENSE=	# TODO: (see mk/license.mk)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config bison flex

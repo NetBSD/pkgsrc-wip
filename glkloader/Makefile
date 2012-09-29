@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/10/29 08:32:43 shattered Exp $
+# $NetBSD: Makefile,v 1.9 2012/09/29 00:50:35 asau Exp $
 #
 
 DISTNAME=		glkloader-0.3.2
@@ -10,6 +10,8 @@ HOMEPAGE=		http://www.ifarchive.org/indexes/if-archiveXprogrammingXglkXimplement
 COMMENT=		Glk library that loads real glk implementation at runtime
 
 DEPENDS+=		glkterm-[0-9]*:../../wip/glkterm
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_TOOLS+=		perl
 

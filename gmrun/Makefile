@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/11/06 17:08:02 rhaamo Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/29 00:50:36 asau Exp $
 #
 
 DISTNAME=	gmrun-0.9.2
@@ -11,7 +11,6 @@ COMMENT=	Customizable program to run programs, with tab-completion
 LICENSE=	gnu-gpl-v2
 
 DOCDIR=		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gmake
 

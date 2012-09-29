@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/06/13 22:47:07 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2012/09/29 00:50:42 asau Exp $
 #
 
 DISTNAME=	gupnp-vala-0.5.4
@@ -10,8 +10,6 @@ MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://gupnp.org/
 COMMENT=	Gupnp-vala offers Vala bindings to GUPnP framework
 #LICENSE=	# TODO: (see mk/license.mk)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config gmake

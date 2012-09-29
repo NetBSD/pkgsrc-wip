@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/09/06 20:54:44 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2012/09/29 00:50:34 asau Exp $
 #
 
 DISTNAME=	ggz-server-0.0.14
@@ -9,6 +9,8 @@ MASTER_SITES=	http://mirrors.ibiblio.org/pub/mirrors/ggzgamingzone/ggz/0.0.14/
 MAINTAINER=	mrohrer@users.sourceforge.net
 HOMEPAGE=	http://mirrors.ibiblio.org/pub/mirrors/ggzgamingzone/ggz/0.0.14/
 COMMENT=	GGZ Gaming Zone - Server package
+
+PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

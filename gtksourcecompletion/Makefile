@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/09/11 10:12:41 jihbed Exp $
+# $NetBSD: Makefile,v 1.5 2012/09/29 00:50:41 asau Exp $
 #
 
 DISTNAME=	gtksourcecompletion-0.5.2
@@ -11,7 +11,6 @@ HOMEPAGE=	http://gtksourcecomple.sourceforge.net/
 COMMENT=	GtkSourceCompletion
 LICENSE=	gnu-gpl-v3
 
-PKG_DESTDIR_SUPPORT= user-destdir
 GNU_CONFIGURE=	yes
 USE_PKGLOCALEDIR= yes
 USE_LIBTOOL=	yes

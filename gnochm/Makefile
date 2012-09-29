@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/07/22 09:53:12 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/29 00:50:36 asau Exp $
 #
 
 DISTNAME=	gnochm-0.9.11
@@ -13,8 +13,6 @@ DEPENDS+=	${PYPKGPREFIX}-chm>=0.8.4:../../wip/py-chm
 DEPENDS+=	${PYPKGPREFIX}-gtk2>=1.99.12:../../x11/py-gtk2
 DEPENDS+=	${PYPKGPREFIX}-gnome2>=1.99.12:../../x11/py-gnome2
 DEPENDS+=	${PYPKGPREFIX}-gnome2-extras>=1.99.12:../../x11/py-gnome2-extras
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		PYTHON=${PYTHONBIN}

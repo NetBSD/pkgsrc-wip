@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2010/06/13 22:47:07 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.18 2012/09/29 00:50:42 asau Exp $
 #
 
 DISTNAME=	gxmms2.git-snapshot-3d4b4bc7ad71055dc28b00cf4c99fbdac3e177cb
@@ -13,6 +13,8 @@ MASTER_SITES=	http://git.xmms.se/snapshot.cgi/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://wejp.k.vu/projects/xmms2/
 COMMENT=	Graphical GTK+2-based XMMS2 client
+
+PKG_DESTDIR_SUPPORT=	none
 
 NO_CONFIGURE=		yes
 USE_TOOLS+=		gmake pkg-config

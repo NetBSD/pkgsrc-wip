@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/08/05 18:18:42 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/29 00:50:36 asau Exp $
 #
 
 DISTNAME=	rest-0.7.10
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc.gnome@gmail.com
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	GNOME Rest library
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

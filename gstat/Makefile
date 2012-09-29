@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/06/13 22:47:06 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2012/09/29 00:50:40 asau Exp $
 #
 
 DISTNAME=	gstat-2.4.3
@@ -9,6 +9,8 @@ MASTER_SITES=	http://www.gstat.org/bin/
 MAINTAINER=	brook@nmsu.edu
 HOMEPAGE=	http://www.gstat.org/
 COMMENT=	Geostatistical modelling, prediction and simulation
+
+PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=	YES
 MAKE_FILE=	makefile

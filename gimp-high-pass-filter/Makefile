@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/06/21 06:17:39 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/29 00:50:35 asau Exp $
 #
 
 DISTNAME=	high-pass
@@ -15,8 +15,6 @@ WRKSRC=		${WRKDIR}/high-pass.scm
 #USE_LANGUAGES=	# none
 
 DEPENDS+=	gimp>=2.0:../../graphics/gimp
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 NO_CONFIGURE=	yes

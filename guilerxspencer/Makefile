@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/11/11 22:42:07 shattered Exp $
+# $NetBSD: Makefile,v 1.6 2012/09/29 00:50:41 asau Exp $
 #
 
 DISTNAME=		guilerxspencer-1.2
@@ -9,6 +9,8 @@ MASTER_SITES=		http://www.arglist.com/guile/${DISTNAME}/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.arglist.com/guile/
 COMMENT=		Guile bindings for Henry Spencer's regex
+
+PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=		yes
 INSTALLATION_DIRS=	share/guile/site

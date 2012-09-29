@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/05/04 12:37:19 ryo-on Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/29 00:50:39 asau Exp $
 #
 
 DISTNAME=	googlecl-0.9.13
@@ -9,8 +9,6 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/googlecl/
 COMMENT=	Command line tools for the Google Data APIs
 LICENSE=	apache-2.0
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man1
 

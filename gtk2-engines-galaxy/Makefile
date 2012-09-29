@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2010/12/24 11:55:23 noud4 Exp $
+# $NetBSD: Makefile,v 1.17 2012/09/29 00:50:41 asau Exp $
 
 DISTNAME=		GTK2-Galaxy
 PKGNAME=		gtk2-engines-galaxy-0
@@ -10,6 +10,8 @@ MASTER_SITES=		http://ftp.gnome.org/pub/GNOME/teams/art.gnome.org/archive/themes
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://art.gnome.org/
 COMMENT=		Another theme engine for GTK+ 2.x
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_LIBTOOL=		YES
 USE_TOOLS+=		gmake

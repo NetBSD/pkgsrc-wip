@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/03/04 12:46:12 hoka_adam Exp $
+# $NetBSD: Makefile,v 1.9 2012/09/29 00:50:35 asau Exp $
 #
 
 DISTNAME=		git-110
@@ -13,8 +13,6 @@ COMMENT=		Interpreter for Glulx interactive fiction
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV:S/glk//}
 MAKE_ENV+=		BUILDLINK_DIR=${BUILDLINK_DIR:Q}
-
-PKG_DESTDIR_SUPPORT+=	user-destdir
 
 INSTALLATION_DIRS+=	bin
 

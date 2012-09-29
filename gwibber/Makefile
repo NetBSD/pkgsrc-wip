@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/04/08 19:09:43 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.10 2012/09/29 00:50:42 asau Exp $
 #
 
 DISTNAME=	gwibber-2.91.90
@@ -10,8 +10,6 @@ MAINTAINER=	ryo_on@yk.rim.or.jp
 HOMEPAGE=	http://gwibber.com/
 COMMENT=	Open source microblogging client
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG=	yes
 

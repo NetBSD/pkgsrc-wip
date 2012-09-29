@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/06/13 22:47:04 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2012/09/29 00:50:34 asau Exp $
 #
 
 DISTNAME=	gecko-sharp-2.0-0.13
@@ -12,7 +12,6 @@ HOMEPAGE=	http://mono-project.com/GeckoSharp/
 COMMENT=	GeckoSharp is a wrapper for the GtkEmbedMoz widget
 LICENSE=	gnu-lgpl-v2.1
 
-PKG_DESTDIR_SUPPORT=		user-destdir
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=		c

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/04/14 12:38:14 keckhardt Exp $
+# $NetBSD: Makefile,v 1.17 2012/09/29 00:50:33 asau Exp $
 
 GCC_VERSION=		4.7.0
 DISTNAME=		gcc-${GCC_VERSION}
@@ -22,8 +22,6 @@ BUILDLINK_API_DEPENDS.mpfr+=	mpfr>=2.3.1
 USE_TOOLS+=		awk:run bash:run perl chmod \
 			gmake:run makeinfo msgfmt bison flex gm4 \
 			sed:run unzip
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 UNLIMIT_RESOURCES+=	datasize
 UNLIMIT_RESOURCES+=	stacksize

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/06/13 22:47:04 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2012/09/29 00:50:34 asau Exp $
 #
 
 DISTNAME=	gfa-0.4.1
@@ -9,8 +9,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gfa/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gfa.sourceforge.net/
 COMMENT=	Gfa a GTK+ fast address
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config

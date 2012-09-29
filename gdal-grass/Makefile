@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2010/06/13 22:47:04 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.10 2012/09/29 00:50:34 asau Exp $
 #
 
 DISTNAME=		gdal-grass-1.3.1.2
@@ -9,6 +9,8 @@ MASTER_SITES=		http://www.gdal.org/dl/
 MAINTAINER=		brook@nmsu.edu
 HOMEPAGE=		http://www.gdal.org/dl/
 COMMENT=		Standalone GRASS 6 drivers for GDAL and OGR
+
+PKG_DESTDIR_SUPPORT=	none
 
 .include "../../wip/grass/Makefile.common"
 

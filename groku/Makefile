@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2011/11/09 11:21:18 noud4 Exp $
+# $NetBSD: Makefile,v 1.9 2012/09/29 00:50:40 asau Exp $
 #
 
 DISTNAME=		groku-0.1
@@ -9,8 +9,6 @@ MASTER_SITES=		http://digitalssg.net/debian/
 MAINTAINER=		mwicks@kettering.edu
 HOMEPAGE=		http://groku.digitalssg.net/
 COMMENT=		Groku is a GTK for controlling your Roku Soundbridge (tm)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config

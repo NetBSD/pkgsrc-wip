@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/05/09 21:38:28 noud4 Exp $
+# $NetBSD: Makefile,v 1.5 2012/09/29 00:50:42 asau Exp $
 #
 
 DISTNAME=	gwget-1.0.4
@@ -13,8 +13,6 @@ COMMENT=	GNOME wget front-end
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	wget>=1.12:../../net/wget
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

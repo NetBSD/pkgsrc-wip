@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2010/06/13 22:47:04 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.10 2012/09/29 00:50:35 asau Exp $
 #
 
 DISTNAME=	gimmie-0.2.8
@@ -9,8 +9,6 @@ MASTER_SITES=	http://www.beatniksoftware.com/gimmie/releases/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://beatniksoftware.com/gimmie
 COMMENT=	Creative panel replacement
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_PKGLOCALEDIR= yes

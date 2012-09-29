@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/04/08 19:09:43 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/29 00:50:42 asau Exp $
 #
 
 DISTNAME=	gwyddion-2.20
@@ -10,8 +10,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://gwyddion.sourceforge.net/
 COMMENT=	Gtk2 based SPM data visualization and analysis tool
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		PYTHON=${PYTHONBIN}

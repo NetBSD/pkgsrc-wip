@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2010/06/13 22:47:04 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.11 2012/09/29 00:50:34 asau Exp $
 #
 
 DISTNAME=		gdmap-0.7.5
@@ -9,8 +9,6 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gdmap/}
 MAINTAINER=		dhowland@users.sourceforge.net
 HOMEPAGE=		http://gdmap.sourceforge.net/
 COMMENT=		Tool to visualize disk space
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++

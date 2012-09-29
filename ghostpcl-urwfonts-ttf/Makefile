@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/07/07 15:32:36 ryo-on Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/29 00:50:34 asau Exp $
 #
 
 DISTNAME=	urwfonts-8.71
@@ -16,8 +16,6 @@ COMMENT=	PCL 80 std ttf fonts under AFPL (except for PostScript 35 std fonts)
 RESTRICTED=		Under AFPL (Distribution with fee is prohibitted.)
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_X11BASE=	YES
 NO_CONFIGURE=	YES

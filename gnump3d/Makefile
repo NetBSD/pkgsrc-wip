@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2008/02/03 16:53:11 tnn2 Exp $
+# $NetBSD: Makefile,v 1.16 2012/09/29 00:50:39 asau Exp $
 #
 
 DISTNAME=		gnump3d-2.9.7
@@ -9,6 +9,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://www.gnu.org/software/gnump3d/
 COMMENT=		The GNU Streaming MP3 / Media Server
+
+PKG_DESTDIR_SUPPORT=	none
 
 CFGFILE=		${PKG_SYSCONFDIR}/gnump3d/gnump3d.conf
 RCD_SCRIPTS=		gnump3d

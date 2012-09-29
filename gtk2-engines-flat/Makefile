@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2010/06/13 22:47:06 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.17 2012/09/29 00:50:41 asau Exp $
 
 DISTNAME=		gtk2flat-default
 PKGNAME=		gtk2-engines-flat-2.0
@@ -10,6 +10,8 @@ MASTER_SITES=		http://freshmeat.net/projects/gtk2flat/url_tgz/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://freshmeat.net/projects/gtk2flat/
 COMMENT=		Flat theme engine for GTK+ 2.x
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_LIBTOOL=		YES
 USE_TOOLS+=		gmake pkg-config

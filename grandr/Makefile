@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/06/13 22:47:06 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2012/09/29 00:50:40 asau Exp $
 #
 
 DISTNAME=	grandr-0.1
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	blair.sadewitz@gmail.com
 HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	GTK2 utility for changing RandR settings
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

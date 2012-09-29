@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/02/09 19:23:52 shattered Exp $
+# $NetBSD: Makefile,v 1.4 2012/09/29 00:50:34 asau Exp $
 #
 
 DISTNAME=	get_iplayer-2.80
@@ -18,7 +18,6 @@ DEPENDS+=	p5-libwww>=6.0:../../www/p5-libwww
 DEPENDS+=	rtmpdump>=1.8:../../net/rtmpdump
 DEPENDS+=	flvstreamer>=1.8:../../wip/flvstreamer
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 USE_LANGUAGES=	# none

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/07/22 16:56:04 drochner Exp $
+# $NetBSD: Makefile,v 1.5 2012/09/29 00:50:39 asau Exp $
 #
 
 DISTNAME=	gosmore-1
@@ -8,8 +8,6 @@ CATEGORIES=	geography
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://wiki.openstreetmap.org/wiki/Gosmore
 COMMENT=	Navigation program
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gmake pkg-config
 USE_LANGUAGES+=	c c++

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/06/13 22:47:07 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2012/09/29 00:50:41 asau Exp $
 #
 
 DISTNAME=	gts-0.7.6
@@ -10,8 +10,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://gts.sourceforge.net/
 COMMENT=	GTS stands for the GNU Triangulated Surface Library
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

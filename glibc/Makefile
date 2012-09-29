@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/05/19 16:51:17 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.6 2012/09/29 00:50:35 asau Exp $
 
 DISTNAME=	glibc-${VERSION}
 CATEGORIES=	misc
@@ -11,6 +11,8 @@ HOMEPAGE=	http://www.gnu.org/software/libc/libc.html
 COMMENT=	GNU C library
 
 VERSION=	2.3.2
+
+PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	gmake

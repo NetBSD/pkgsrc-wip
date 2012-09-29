@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2010/09/11 21:38:26 jihbed Exp $
+# $NetBSD: Makefile,v 1.10 2012/09/29 00:50:42 asau Exp $
 #
 
 DISTNAME=	gxmessage-2.12.4
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc.gnome@gmail.com
 HOMEPAGE=	http://homepages.ihug.co.nz/~trmusson/stuff/
 COMMENT=	Gxmessage a GTK2+ based xmessage clone
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_PKGLOCALEDIR=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/11/01 21:40:02 koifren Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/29 00:50:39 asau Exp $
 
 DISTNAME=	gpak-0.0.1
 CATEGORIES=	sysutils
@@ -11,8 +11,6 @@ NO_CONFIGURE=	yes
 
 DEPENDS+=	p5-Gtk2-GladeXML>=1.007:../../devel/p5-Gtk2-GladeXML
 DEPENDS+=	p5-pkgsrc-Dewey>=1.0:../../pkgtools/p5-pkgsrc-Dewey
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 SUBST_CLASSES+=			fix-prefix
 SUBST_STAGE.fix-prefix=		post-build

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2009/09/06 07:37:56 asau Exp $
+# $NetBSD: Makefile,v 1.8 2012/09/29 00:50:34 asau Exp $
 #
 
 DISTNAME=	geant4.9.2
@@ -10,8 +10,6 @@ MASTER_SITES=	http://geant4.web.cern.ch/geant4/support/source/
 MAINTAINER=	hugor@users.sourceforge.net
 HOMEPAGE=	http://geant4.web.cern.ch/geant4/
 COMMENT=	Toolkit for the simulation of the passage of particles through matter
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/source
 MAKE_FILE=	GNUmakefile

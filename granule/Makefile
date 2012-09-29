@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2010/06/13 22:47:06 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.12 2012/09/29 00:50:40 asau Exp $
 #
 
 DISTNAME=		granule-1.4.0-7
@@ -12,6 +12,8 @@ HOMEPAGE=		http://granule.sourceforge.net/
 COMMENT=		Program for Leitner methodology for learning new words
 
 BUILD_DEPENDS+=		p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes

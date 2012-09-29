@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/01/19 14:00:00 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/29 00:50:33 asau Exp $
 #
 
 DISTNAME=	GaloisFieldArithmetic-${VERSION}
@@ -10,8 +10,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://www.partow.net/
 COMMENT=	Galois Field Arithmetic Library
 LICENSE=	cpl-1.0
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 VERSION=	2006
 USE_LANGUAGES=	c++

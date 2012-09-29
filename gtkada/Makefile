@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2010/06/13 22:47:06 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.15 2012/09/29 00:50:41 asau Exp $
 #
 
 DISTNAME=		GtkAda-2.2.1
@@ -10,6 +10,8 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		john@johnrshannon.com
 HOMEPAGE=		https://libre.adacore.com/GtkAda/
 COMMENT=		Ada95 graphical toolkit
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes

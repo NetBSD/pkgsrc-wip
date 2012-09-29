@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2010/06/13 22:47:06 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2012/09/29 00:50:40 asau Exp $
 #
 
 DISTNAME=	grsync-0.9.3
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc@blackmouse.biz
 HOMEPAGE=	http://www.opbyte.it/grsync/
 COMMENT=	Grsync is a GUI for rsync
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_PKGLOCALEDIR= yes

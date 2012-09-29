@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2010/08/18 10:27:27 pallegra Exp $
+# $NetBSD: Makefile.common,v 1.3 2012/09/29 00:50:35 asau Exp $
 # used by wip/dri/Makefile
 # used by wip/glu/Makefile
 # used by wip/glut/Makefile
@@ -16,8 +16,6 @@ MASTER_SITES=		${MESA_SITES}
 DISTFILES+=		MesaLib-${MESA_VERSION}${EXTRACT_SUFX}
 DISTFILES+=		MesaGLUT-${MESA_VERSION}${EXTRACT_SUFX}
 DISTFILES+=		MesaDemos-${MESA_VERSION}${EXTRACT_SUFX}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DISTINFO_FILE=	${.CURDIR}/../../wip/gl/distinfo
 PATCHDIR=	${.CURDIR}/../../wip/gl/patches

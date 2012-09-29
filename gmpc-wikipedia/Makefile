@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/02/27 17:00:23 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/29 00:50:36 asau Exp $
 #
 
 DISTNAME=	gmpc-wikipedia-0.20.0
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gmpc.wikia.com/wiki/GMPC_PLUGIN_WIKIPEDIA
 COMMENT=	GMPC plugin showing wikipedia information
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

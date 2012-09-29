@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/01/17 12:03:26 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2012/09/29 00:50:42 asau Exp $
 
 DISTNAME=			gwhois_20080219.1
 PKGNAME=			${DISTNAME:S/_/-/g}
@@ -9,8 +9,6 @@ MASTER_SITES=			http://gwhois.de/gwhois/
 MAINTAINER=			mj@mjturner.net
 HOMEPAGE=			http://gwhois.de/gwhois/
 COMMENT=			Flexible whois client and proxy
-
-PKG_DESTDIR_SUPPORT=		user-destdir
 
 USE_TOOLS+=			perl
 REPLACE_PERL+=			gwhois

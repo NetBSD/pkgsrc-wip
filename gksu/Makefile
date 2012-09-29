@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2011/11/20 15:55:28 noud4 Exp $
+# $NetBSD: Makefile,v 1.6 2012/09/29 00:50:35 asau Exp $
 #
 
 DISTNAME=		gksu-1.3.6
@@ -9,8 +9,6 @@ MASTER_SITES=		http://people.debian.org/~kov/gksu/old_stuff/gksu/
 MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://www.nongnu.org/gksu/
 COMMENT=		Authorization dialog library
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.fast.prefs.mk"
 

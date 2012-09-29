@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2010/11/11 22:42:06 shattered Exp $
+# $NetBSD: Makefile,v 1.22 2012/09/29 00:50:41 asau Exp $
 #
 
 DISTNAME=		9714-gtk-qt-engine-0.2
@@ -11,6 +11,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://kde-look.org/content/show.php?content=9714
 COMMENT=		GTK+ 2.x theme, which looks just like Qt toolkit
+
+PKG_DESTDIR_SUPPORT=	none
 
 WRKSRC=			${WRKDIR}/gtk-qt-engine-0.2
 USE_PKGLOCALEDIR=	yes

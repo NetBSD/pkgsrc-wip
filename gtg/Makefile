@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/06/13 22:47:06 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2012/09/29 00:50:40 asau Exp $
 #
 
 DISTNAME=	gtg-0.1.1
@@ -13,8 +13,6 @@ LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-xdg>=0.17:../../devel/py-xdg
 DEPENDS+=	${PYPKGPREFIX}-configobj>=4.6.0:../../wip/py-configobj
-
-PKG_DESTDIR_SUPPORT=		user-destdir
 
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=	intltool msgfmt

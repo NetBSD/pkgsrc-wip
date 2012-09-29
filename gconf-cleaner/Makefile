@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/05/09 22:38:23 noud4 Exp $
+# $NetBSD: Makefile,v 1.7 2012/09/29 00:50:33 asau Exp $
 #
 
 DISTNAME=	gconf-cleaner-0.0.3
@@ -9,8 +9,6 @@ MASTER_SITES=	http://gconf-cleaner.googlecode.com/files/
 MAINTAINER=	pkgsrc-users@netbsd.org
 HOMEPAGE=	http://code.google.com/p/gconf-cleaner/
 COMMENT=	Cleaning tool for GConf
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

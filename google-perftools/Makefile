@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/10/09 10:05:44 cheusov Exp $
+# $NetBSD: Makefile,v 1.5 2012/09/29 00:50:39 asau Exp $
 #
 
 DISTNAME=	google-perftools-1.5
@@ -13,7 +13,6 @@ LICENSE=	modified-bsd
 
 USE_TOOLS+=		perl:run
 REPLACE_PERL=		src/pprof
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes

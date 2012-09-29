@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2010/06/13 22:47:07 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.16 2012/09/29 00:50:42 asau Exp $
 #
 
 DISTNAME=	gurlchecker-0.4.1
@@ -9,6 +9,8 @@ MASTER_SITES=	http://savannah.nongnu.org/download/gurlchecker/stable/0.4/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://labs.libre-entreprise.org/projects/gurlchecker/
 COMMENT=	Gnome2 program to check a page/website for broken links
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes

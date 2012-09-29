@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2010/06/13 22:47:05 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.10 2012/09/29 00:50:36 asau Exp $
 #
 
 DISTNAME=	clipboard-daemon-1.0
@@ -12,8 +12,6 @@ MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://members.chello.nl/~h.lai/gnome-clipboard-daemon/
 COMMENT=	Program that keeps the content of your X clipboard in memory
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	pkg-config
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/06/13 22:47:05 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2012/09/29 00:50:39 asau Exp $
 #
 
 DISTNAME=		godura-0.6.2
@@ -9,8 +9,6 @@ MASTER_SITES=		http://www.mindspring.com/~joeja/ftp/
 MAINTAINER=		reed@reedmedia.net
 HOMEPAGE=		http://home.earthlink.net/~joseph-ja/programs.html
 COMMENT=		Simple GTK2-based notepad text editor
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes

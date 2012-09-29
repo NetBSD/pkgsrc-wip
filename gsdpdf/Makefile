@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/12/29 22:25:06 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/29 00:50:40 asau Exp $
 #
 
 DISTNAME=	gs2009code
@@ -10,8 +10,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://projects.hepforge.org/gsdpdf
 COMMENT=	Gaunt-Stirling double Parton Distribution Functions
 #LICENSE=	# TODO: (see mk/license.mk)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 

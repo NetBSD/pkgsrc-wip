@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/03/16 19:43:04 jihbed Exp $
+# $NetBSD: Makefile,v 1.7 2012/09/29 00:50:36 asau Exp $
 #
 
 DISTNAME=	gnome-keyring-sharp-1.0.0
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc.gnome@gmail.com
 #http://andrew.jorgensenfamily.us/2008/08/gnome-keyring-sharp/
 HOMEPAGE=	http://ftp.novell.com/pub/mono/sources/gnome-keyring-sharp/ 
 COMMENT=	Mono implementation of libgnome-keyring
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake pkg-config

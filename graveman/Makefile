@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2010/06/13 22:47:06 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.17 2012/09/29 00:50:40 asau Exp $
 #
 
 DISTNAME=		graveman-0.3.12-5
@@ -12,6 +12,8 @@ HOMEPAGE=		http://graveman.tuxfamily.org/
 COMMENT=		GTK2 frontend for CD writing and audio conversion
 
 DEPENDS+=		dvd+rw-tools>5.21:../../sysutils/dvd+rw-tools
+
+PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes

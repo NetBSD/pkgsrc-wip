@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2011/12/04 21:10:10 larnor Exp $
+# $NetBSD: Makefile,v 1.23 2012/09/29 00:50:40 asau Exp $
 
 DISTNAME=		gtk-gnutella-${GTK_GNUTELLA_VER}
 CATEGORIES=		net
@@ -7,6 +7,8 @@ MASTER_SITES=		# not defined
 MAINTAINER=		lars.nordlund@hem.utfors.se
 HOMEPAGE=		http://gtk-gnutella.sourceforge.net/
 COMMENT=		GTK-based gnutella client, GIT snapshot
+
+PKG_DESTDIR_SUPPORT=	none
 
 # Debug
 CFLAGS=		-g

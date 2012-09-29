@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/06/13 22:47:06 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2012/09/29 00:50:41 asau Exp $
 #
 
 DISTNAME=		gtk-server-2.0.10
@@ -9,6 +9,8 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gtk-server/}
 MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://www.gtk-server.org/
 COMMENT=		Small tool to enable GUI access for shell scripts
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		pkg-config

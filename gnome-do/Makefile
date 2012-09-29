@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/01/10 14:21:29 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2012/09/29 00:50:36 asau Exp $
 #
 
 DISTNAME=	gnome-do-0.8.5
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://do.davebsd.com/
 COMMENT=	Panel replacement
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

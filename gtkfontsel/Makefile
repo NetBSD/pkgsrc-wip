@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/11/17 14:41:57 netcap Exp $
+# $NetBSD: Makefile,v 1.4 2012/09/29 00:50:41 asau Exp $
 #
 
 DISTNAME=	gtkfontsel_1.1.orig
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/g/gtkfontsel/}
 MAINTAINER=	jfranz@bsdprojects.net
 HOMEPAGE=	http://packages.debian.org/gtkfontsel
 COMMENT=	Utility for selecting X11 fonts	to the clipboard
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_TOOLS=	gmake autoconf automake
 USE_LIBTOOL=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/02/25 09:47:47 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/29 00:50:39 asau Exp $
 
 GOOGLESHAREVERS=	0.9
 DISTNAME=		googleshare-${GOOGLESHAREVERS}
@@ -16,8 +16,6 @@ PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX:Q}
 
 PYTHON_VERSIONS_ACCEPTED= 27 26
 REPLACE_PYTHON+=	googleshare.py
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
 DEPENDS+=		${PYPKGPREFIX}-OpenSSL>=0.6:../../security/py-OpenSSL

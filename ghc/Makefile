@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2012/03/23 00:17:21 phonohawk Exp $
+# $NetBSD: Makefile,v 1.34 2012/09/29 00:50:34 asau Exp $
 
 DISTNAME=	ghc-${VERSION}
 VERSION=	7.4.1
@@ -18,8 +18,6 @@ DISTFILES+=	${DISTNAME}-boot-x86_64-unknown-linux-gnu.tar.bz2
 .for i in ${DISTFILES:M*-boot-*}
 SITES.${i}=	http://static.cielonegro.org/archive/
 .endfor
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 # Unregisterised HC packages are platform-dependent C sources. Yes,
 # they are C sources but are totally non-portable. We have to create

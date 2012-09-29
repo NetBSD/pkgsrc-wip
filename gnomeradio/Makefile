@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/06/13 22:47:05 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2012/09/29 00:50:37 asau Exp $
 #
 
 DISTNAME=		gnomeradio-1.6
@@ -9,6 +9,8 @@ MASTER_SITES=		http://www.wh-hms.uni-ulm.de/~mfcn/gnomeradio/packages/
 MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://www.wh-hms.uni-ulm.de/~mfcn/gnomeradio/
 COMMENT=		FM-radio tuner for the GNOME desktop
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/08/04 22:00:41 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/29 00:50:35 asau Exp $
 #
 
 DISTNAME=	glyr-1.0.0
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/sahib/glyr/
 COMMENT=	Music related metadata search engine with CLI and C API
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/glyr
 USE_TOOLS+=	pkg-config

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2010/12/26 05:01:22 davesainty Exp $
+# $NetBSD: Makefile,v 1.26 2012/09/29 00:50:40 asau Exp $
 
 DISTNAME=		grass-${GRASS_VERSION}
 PKGREVISION=		3
@@ -8,6 +8,8 @@ MASTER_SITES=		http://grass.itc.it/grass64/source/
 MAINTAINER=		brook@nmsu.edu
 HOMEPAGE=		http://grass.itc.it/
 COMMENT=		Open source geographical information system (GIS)
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes

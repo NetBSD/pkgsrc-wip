@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/09/11 21:45:51 jihbed Exp $
+# $NetBSD: Makefile,v 1.6 2012/09/29 00:50:42 asau Exp $
 #
 
 DISTNAME=	gxconsole-0.3.1
@@ -10,7 +10,6 @@ MAINTAINER=	pkgsrc.gnome@gmail.com
 HOMEPAGE=	http://gxconsole.sourceforge.net/
 COMMENT=	Gxconsole is gtk-based reading system console messages like xconsole
 
-PKG_DESTDIR_SUPPORT=		user-destdir
 WRKSRC=		${WRKDIR}/gxconsole
 GNU_CONFIGURE=	yes
 USE_TOOLS+=		pkg-config

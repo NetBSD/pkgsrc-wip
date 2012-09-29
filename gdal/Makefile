@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2010/06/13 22:47:04 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.20 2012/09/29 00:50:34 asau Exp $
 
 DISTNAME=		gdal-1.3.1
 PKGREVISION=		5
@@ -12,6 +12,8 @@ COMMENT=		Translator library for raster geospatial data formats
 
 DEPENDS+=	gdal-lib>=1.3.1:../../geography/gdal-lib
 DEPENDS+=	gdal-docs-1.3.1{,nb*}:../../wip/gdal-docs
+
+PKG_DESTDIR_SUPPORT=	none
 
 NO_BUILD=		yes
 

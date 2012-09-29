@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2011/02/28 14:53:17 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2012/09/29 00:50:41 asau Exp $
 #
 
 DISTNAME=	guitone-0.8.99.0
@@ -13,7 +13,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://guitone.thomaskeller.biz/
 COMMENT=	Graphical Monotone VCS Tool
 
-PKG_DESTDIR_SUPPORT=    user-destdir
 ###
 ### XXX A Darwin build needs special handling; feel free to add
 ###	Darwin support should the mood strike you. 

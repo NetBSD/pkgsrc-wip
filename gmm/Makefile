@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/03/19 21:06:22 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/29 00:50:35 asau Exp $
 #
 
 DISTNAME=	gmm-4.0.0
@@ -9,8 +9,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://home.gna.org/getfem/gmm_intro.html
 COMMENT=	Gmm++ is a generic C++ template library for sparse
 #LICENSE=	# TODO: (see mk/license.mk)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

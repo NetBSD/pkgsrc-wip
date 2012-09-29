@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/06/13 22:47:05 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/29 00:50:36 asau Exp $
 #
 
 DISTNAME=	gnome-activity-journal-0.3.3
@@ -15,8 +15,6 @@ DEPENDS+=	${PYPKGPREFIX}-xdg>=0.17:../../devel/py-xdg
 DEPENDS+=	${PYPKGPREFIX}-pygments>=1.0:../../textproc/py-pygments
 DEPENDS+=	${PYPKGPREFIX}-distutils-extra>=2.15:../../wip/py-distutils-extra
 DEPENDS+=	${PYPKGPREFIX}-zeitgeist>=0.3.0:../../wip/py-zeitgeist
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	intltool
 USE_LANGUAGES=	# none

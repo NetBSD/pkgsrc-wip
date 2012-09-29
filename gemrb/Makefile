@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/09/13 12:38:01 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2012/09/29 00:50:34 asau Exp $
 #
 
 DISTNAME=	gemrb-0.7.1
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gemrb.sourceforge.net/
 COMMENT=	Open Source clone of the Infinity Engine
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_CMAKE=	yes
 USE_LIBTOOL=	yes

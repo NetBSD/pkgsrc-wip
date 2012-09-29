@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2010/12/22 02:31:50 khorben Exp $
+# $NetBSD: Makefile,v 1.32 2012/09/29 00:50:40 asau Exp $
 #
 
 DISTNAME=		grip-3.2.0
@@ -9,6 +9,8 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=grip/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://nostatic.org/grip/
 COMMENT=		CD-player and CD-ripper for the Gnome desktop
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_TOOLS+=		gmake msgfmt
 USE_PKGLOCALEDIR=	yes

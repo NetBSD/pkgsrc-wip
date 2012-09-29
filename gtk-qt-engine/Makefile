@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2010/06/13 22:47:06 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2012/09/29 00:50:40 asau Exp $
 #
 
 DISTNAME=	gtk-qt-engine-0.7
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	blair.sadewitz@gmail.com
 HOMEPAGE=	http://gtk-qt.ecs.soton.ac.uk/
 COMMENT=	Theme engine for gtk2 which uses qt widgets
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_LANGUAGES+=	c c++
 USE_TOOLS+=	gmake pkg-config

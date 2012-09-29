@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2010/06/13 22:47:06 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2012/09/29 00:50:40 asau Exp $
 #
 
 DISTNAME=		gpsdrive-2.10pre4
@@ -16,7 +16,6 @@ DEPENDS+=		p5-libwww>=5.800:../../www/p5-libwww
 
 GNU_CONFIGURE=		YES
 USE_LANGUAGES=		c c++
-PKG_DESTDIR_SUPPORT=	user-destdir
 USE_PKGLOCALEDIR=	YES
 USE_LIBTOOL=		YES
 PTHREAD_AUTO_VARS=	YES	# XXX needed by mapnik / boost

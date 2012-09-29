@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/09/11 10:16:13 jihbed Exp $
+# $NetBSD: Makefile,v 1.7 2012/09/29 00:50:41 asau Exp $
 #
 
 DISTNAME=	gtkhotkey-0.2.1
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc.gnome@gmail.com
 HOMEPAGE=	https://launchpad.net/gtkhotkey/
 COMMENT=	GtkHotkey library Platform independent hotkey handling for Gtk+
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=    user-destdir
 
 GNU_CONFIGURE=	yes
 USE_PKGLOCALEDIR= yes

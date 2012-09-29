@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/03/19 09:24:03 makoto Exp $
+# $NetBSD: Makefile,v 1.4 2012/09/29 00:50:34 asau Exp $
 
 DISTNAME=	ghostscript-cidfonts-20000901
 PKGREVISION=	3
@@ -8,8 +8,6 @@ DISTFILES=	# empty
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	CIDFont resources for Ghostscript
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	adobe-cidfonts>=20000901:../../fonts/adobe-cidfonts
 DEPENDS+=	ghostscript-[0-9]*:../../wip/ghostscript

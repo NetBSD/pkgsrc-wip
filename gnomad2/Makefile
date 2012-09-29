@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2010/06/13 22:47:05 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2012/09/29 00:50:36 asau Exp $
 #
 
 DISTNAME=		gnomad2-2.8.8
@@ -10,8 +10,6 @@ MAINTAINER=		ku3@sl.aanet.ru
 HOMEPAGE=		http://gnomad2.sourceforge.net/
 COMMENT=		GTK+2 tool for managing Creative and Dell mp3 players
 LICENSE=		gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes

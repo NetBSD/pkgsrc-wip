@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/06/13 22:47:07 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2012/09/29 00:50:41 asau Exp $
 #
 
 DISTNAME=		guichan-0.6.0-src
@@ -10,6 +10,8 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=guichan/}
 MAINTAINER=		Pseudo.Statistic@gmail.com
 HOMEPAGE=		http://guichan.sourceforge.net/
 COMMENT=	Portable C++ GUI library for games
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_TOOLS+=		gmake
 USE_LIBTOOL=		yes

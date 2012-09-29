@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/06/13 22:47:06 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2012/09/29 00:50:40 asau Exp $
 #
 
 PKGNAME=	gst-plugins0.10-farsight-0.12.11
@@ -11,8 +11,6 @@ MAINTAINER=	yacht@users.sourceforge.net
 HOMEPAGE=	http://farsight.freedesktop.org/wiki/
 COMMENT=	GStreamer farsight2 plugin
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

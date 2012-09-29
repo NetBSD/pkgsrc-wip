@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/03/19 17:47:36 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/29 00:50:36 asau Exp $
 #
 
 DISTNAME=	gnome-js-common-0.1.1
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc.gnome@gmail.com
 HOMEPAGE=	ftp://ftp.gnome.org/pub/gnome/sources/gnome-js-common/0.1/
 COMMENT=	GNOME JavaScript common modules and tests
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

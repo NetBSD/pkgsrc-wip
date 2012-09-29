@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/07/02 13:37:56 moubctez Exp $
+# $NetBSD: Makefile,v 1.10 2012/09/29 00:50:35 asau Exp $
 #
 
 PKGNAME=		globulation2-0.8.21
@@ -10,6 +10,8 @@ MASTER_SITES=		http://globulation2.org/releases/0.8.21/
 MAINTAINER=		hernani@vecirex.net
 HOMEPAGE=		http://globulation2.org/wiki/
 COMMENT=		Real-Time Strategy (RTS) game providing AI and net mode
+
+PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=		YES
 USE_LANGUAGES=		c++

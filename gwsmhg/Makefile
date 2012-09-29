@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/06/13 22:47:07 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2012/09/29 00:50:42 asau Exp $
 #
 
 DISTNAME=	gwsmhg-0.8.1
@@ -16,8 +16,6 @@ DEPENDS+=	${PYPKGPREFIX}-gobject>=2.18.0:../../devel/py-gobject
 DEPENDS+=	${PYPKGPREFIX}-cairo>=1.8.6:../../graphics/py-cairo
 DEPENDS+=	${PYPKGPREFIX}-gtksourceview>=2.6.0:../../x11/gtksourceview
 DEPENDS+=	${PYPKGPREFIX}-gtk2>=1.99.12:../../x11/py-gtk2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

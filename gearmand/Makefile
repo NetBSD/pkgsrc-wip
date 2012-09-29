@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/07/02 13:37:55 moubctez Exp $
+# $NetBSD: Makefile,v 1.5 2012/09/29 00:50:34 asau Exp $
 #
 
 DISTNAME=	gearmand-0.33
@@ -10,8 +10,6 @@ MAINTAINER=	filip@joyent.com
 HOMEPAGE=	http://gearman.org/
 COMMENT=	Gearman C Server and Library
 LICENSE=	modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake pkg-config

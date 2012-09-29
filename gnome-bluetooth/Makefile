@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2010/06/13 22:47:05 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.18 2012/09/29 00:50:36 asau Exp $
 #
 
 DISTNAME=		gnome-bluetooth-0.7.0
@@ -9,6 +9,8 @@ MASTER_SITES=		http://ftp.gnome.org/pub/gnome/sources/gnome-bluetooth/0.7/
 MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://live.gnome.org/GnomeBluetooth
 COMMENT=		Gnome Bluetooth Manager
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes

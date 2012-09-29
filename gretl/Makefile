@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2010/12/24 15:01:21 noud4 Exp $
+# $NetBSD: Makefile,v 1.11 2012/09/29 00:50:40 asau Exp $
 #
 
 DISTNAME=	gretl-1.9.0
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	asau@users.sourceforge.net
 HOMEPAGE=	http://gretl.sourceforge.net/
 COMMENT=	Gnu Regression, Econometrics and Time-series Library
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c fortran77	# problems with LAPACK
 GNU_CONFIGURE=	yes

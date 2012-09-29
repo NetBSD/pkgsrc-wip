@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/12/27 21:23:39 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/29 00:50:34 asau Exp $
 #
 
 DISTNAME=	gerris-0.9.2
@@ -9,8 +9,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://gfs.sourceforge.net/wiki/index.php/Main_Page
 COMMENT=	Software the solution of the PDE describing fluid flow
 #LICENSE=	# TODO: (see mk/license.mk)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

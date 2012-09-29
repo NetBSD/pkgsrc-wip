@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/06/13 22:47:07 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2012/09/29 00:50:41 asau Exp $
 #
 
 DISTNAME=	gtkaml-0.2.7.1
@@ -11,8 +11,6 @@ MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://code.google.com/p/gtkaml/
 COMMENT=	Gtkaml is an xml parser that extends the Vala
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config gmake

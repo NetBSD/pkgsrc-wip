@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2010/11/11 22:42:06 shattered Exp $
+# $NetBSD: Makefile,v 1.8 2012/09/29 00:50:39 asau Exp $
 #
 
 DISTNAME=		goldwater-1.4.0
@@ -9,6 +9,8 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://www.zxdesign.info/download/src/
 COMMENT=		Highly scalable distributed middleware
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes

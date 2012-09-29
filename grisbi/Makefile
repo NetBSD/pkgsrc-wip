@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2010/09/27 15:29:51 ggergely Exp $
+# $NetBSD: Makefile,v 1.13 2012/09/29 00:50:40 asau Exp $
 #
 
 DISTNAME=	grisbi-0.5.9
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://grisbi.sourceforge.net/
 COMMENT=	Personal Finance Manager under Gnome/GTK
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config intltool gmake
