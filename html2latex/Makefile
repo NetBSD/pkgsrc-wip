@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/05/05 22:24:03 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.7 2012/09/29 16:59:05 asau Exp $
 
 .include "../../wip/p5-HTML-Latex/Makefile.common"
 
@@ -17,7 +17,7 @@ NO_BUILD=		YES
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC:Q}/html2latex ${PREFIX:Q}/bin/html2latex
-	${INSTALL_MAN} ${WRKSRC:Q}/html2latex.1 ${PREFIX:Q}/${PKGMANDIR}/man1
+	${INSTALL_SCRIPT} ${WRKSRC:Q}/html2latex ${DESTDIR}${PREFIX:Q}/bin/html2latex
+	${INSTALL_MAN} ${WRKSRC:Q}/html2latex.1 ${DESTDIR}${PREFIX:Q}/${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"

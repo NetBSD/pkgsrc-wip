@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2011/02/28 14:53:17 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2012/09/29 16:57:17 asau Exp $
 #
 
 DISTNAME=		ht2html-2.0
@@ -28,17 +28,19 @@ do-build:
 	${PYTHONBIN} -O ${PREFIX}/${PYLIB}/compileall.py \
 		${PY_COMPILE_EXCLUDE} ${WRKSRC}
 
+INSTALLATION_DIRS=	bin ${PYSITELIB}
+
 do-install:
-	${INSTALL_DATA_DIR} ${EGDIR}
-	cd ${WRKSRC}/doc && pax -rw -pp -pm . ${EGDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
+	cd ${WRKSRC}/doc && pax -rw -pp -pm . ${DESTDIR}${EGDIR}
 	for egfile in ${EGFILES}; do \
-		${INSTALL_DATA} ${WRKSRC}/$${egfile} ${EGDIR}; \
+		${INSTALL_DATA} ${WRKSRC}/$${egfile} ${DESTDIR}${EGDIR}; \
 	done
 	for libfile in ${LIBFILES}; do \
 		${INSTALL_DATA} ${WRKSRC}/$${libfile} \
-			${PREFIX}/${PYSITELIB}; \
+			${DESTDIR}${PREFIX}/${PYSITELIB}; \
 	done
-	${INSTALL_SCRIPT} ${WRKSRC}/ht2html.py ${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/ht2html.py ${DESTDIR}${PREFIX}/bin
 
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/application.mk"

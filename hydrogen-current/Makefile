@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2010/06/13 22:47:08 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2012/09/29 17:00:42 asau Exp $
 
 DISTNAME=	hydrogen-0.9.3
 PKGNAME=	${DISTNAME:S/-/-current-/}
@@ -30,13 +30,15 @@ CONFIGURE_ARGS+=	--with-xinerama
 BUILDLINK_DEPMETHOD.libXt?=	build
 DEPENDS+=	liblrdf>0:../../textproc/liblrdf
 
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+
 do-install:
-	cd ${WRKSRC} && ${INSTALL_PROGRAM} hydrogen hydrogenPlayer ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/hydrogen/data
-	cd ${WRKSRC}/data && pax -rwpp . ${PREFIX}/share/hydrogen/data
-	${INSTALL_LIB_DIR} ${PREFIX}/lib/hydrogen/plugins
-	cd ${WRKSRC}/plugins/wasp && ${INSTALL_LIB} *.so ${PREFIX}/lib/hydrogen/plugins
-	${INSTALL_MAN} ${WRKSRC}/data/doc/man/C/hydrogen.1 ${PREFIX}/${PKGMANDIR}/man1
+	cd ${WRKSRC} && ${INSTALL_PROGRAM} hydrogen hydrogenPlayer ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/hydrogen/data
+	cd ${WRKSRC}/data && pax -rwpp . ${DESTDIR}${PREFIX}/share/hydrogen/data
+	${INSTALL_LIB_DIR} ${DESTDIR}${PREFIX}/lib/hydrogen/plugins
+	cd ${WRKSRC}/plugins/wasp && ${INSTALL_LIB} *.so ${DESTDIR}${PREFIX}/lib/hydrogen/plugins
+	${INSTALL_MAN} ${WRKSRC}/data/doc/man/C/hydrogen.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 #.include "../../audio/portaudio-devel/buildlink3.mk"
 .include "../../audio/flac/buildlink3.mk"
