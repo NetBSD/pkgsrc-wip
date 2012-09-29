@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/11/11 11:31:04 shattered Exp $
+# $NetBSD: Makefile,v 1.9 2012/09/29 17:07:40 asau Exp $
 #
 
 DISTNAME=		itext-1.3
@@ -18,8 +18,8 @@ do-extract:
 do-build:
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/java
-	${INSTALL_DATA} ${DISTDIR}/${DISTNAME}.jar ${PREFIX}/lib/java/itext.jar
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/lib/java
+	${INSTALL_DATA} ${DISTDIR}/${DISTNAME}.jar ${DESTDIR}${PREFIX}/lib/java/itext.jar
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"

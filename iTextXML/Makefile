@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/07/02 19:04:34 shattered Exp $
+# $NetBSD: Makefile,v 1.6 2012/09/29 17:09:46 asau Exp $
 #
 
 DISTNAME=		iTextXML
@@ -13,12 +13,14 @@ COMMENT=		Java classes to generate and parse XML files
 
 WRKSRC=			${WRKDIR}
 
+INSTALLATION_DIRS=	lib
+
 do-extract:
 
 do-build:
 
 do-install:
-		${INSTALL_DATA} ${DISTDIR}/iTextXML.jar ${PREFIX}/lib/iTextXML.jar
+		${INSTALL_DATA} ${DISTDIR}/iTextXML.jar ${DESTDIR}${PREFIX}/lib/iTextXML.jar
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
