@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1 2012/09/29 02:11:01 othyro Exp $
+include/itcl.h
+include/itclDecls.h
+include/itclInt.h
+include/itclIntDecls.h
+lib/itcl3.4/itcl.tcl
+lib/itcl3.4/libitcl3.4.so
+lib/itcl3.4/libitclstub3.4.a
+lib/itcl3.4/pkgIndex.tcl
+lib/itclConfig.sh
+man/mann/body.n
+man/mann/itcl-class.n
+man/mann/code.n
+man/mann/configbody.n
+man/mann/delete.n
+man/mann/ensemble.n
+man/mann/find.n
+man/mann/is.n
+man/mann/itcl.n
+man/mann/itclvars.n
+man/mann/local.n
+man/mann/scope.n
