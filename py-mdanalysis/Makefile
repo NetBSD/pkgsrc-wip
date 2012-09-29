@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/09/03 22:59:11 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/29 15:52:56 kristerw Exp $
 #
 
 DISTNAME=	MDAnalysis-0.7.6
@@ -17,7 +17,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c c++
 
-PYTHON_VERSIONS_ACCEPTED= 32 27 26 25
+PYTHON_VERSIONS_ACCEPTED= 27 26 25
 
 
 .include "../../devel/py-cython/buildlink3.mk"
