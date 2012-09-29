@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/04/15 22:07:46 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2012/09/29 16:50:14 asau Exp $
 #
 
 DISTNAME=	haze
@@ -15,6 +15,6 @@ WRKSRC=	${WRKDIR}/haze
 INSTALLATION_DIRS= sbin
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/haze ${PREFIX}/sbin/haze
+	${INSTALL_SCRIPT} ${WRKSRC}/haze ${DESTDIR}${PREFIX}/sbin/haze
 
 .include "../../mk/bsd.pkg.mk"

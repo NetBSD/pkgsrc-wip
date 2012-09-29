@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2011/03/15 20:27:50 jakllsch Exp $
+# $NetBSD: Makefile,v 1.13 2012/09/29 16:50:56 asau Exp $
 #
 
 DISTNAME=	libhdhomerun_20100828
@@ -22,6 +22,6 @@ CFLAGS.SunOS+= -lsocket
 INSTALLATION_DIRS=	bin
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/hdhomerun_config ${PREFIX}/bin/hdhomerun_config
+	${INSTALL_PROGRAM} ${WRKSRC}/hdhomerun_config ${DESTDIR}${PREFIX}/bin/hdhomerun_config
 
 .include "../../mk/bsd.pkg.mk"

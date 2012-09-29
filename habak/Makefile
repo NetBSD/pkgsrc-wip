@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/06/13 22:47:07 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/29 16:46:13 asau Exp $
 
 H_VERSION=	0.2.5
 DISTNAME=	habak-${H_VERSION}
@@ -21,8 +21,10 @@ SUBST_SED.fix-linking=		-e 's,CFLAGS += -I/usr/X11R6/include -Wall,,g'
 SUBST_SED.fix-linking+=		-e 's,LDFLAGS += -L/usr/X11R6/lib -lImlib2 -lm,LDFLAGS += -lImlib2 -lm,g'
 
 
+INSTALLATION_DIRS=	bin
+
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/habak ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/habak ${DESTDIR}${PREFIX}/bin
 
 
 .include "../../graphics/imlib2/buildlink3.mk"
