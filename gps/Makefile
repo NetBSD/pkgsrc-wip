@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/09/29 00:32:40 asau Exp $
+# $NetBSD: Makefile,v 1.9 2012/09/29 00:33:28 asau Exp $
 #
 
 DISTNAME=		gps-0.9.2
@@ -15,7 +15,7 @@ MISCDIR=		${PREFIX}/share/gps
 DOCSDIR=		${PREFIX}/share/doc/gps
 
 post-install:
-	${INSTALL_DATA_DIR} ${MISCDIR} ${DESTDIR}${DOCSDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${MISCDIR} ${DESTDIR}${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/AUTHORS ${WRKSRC}/COPYING ${WRKSRC}/ChangeLog ${DESTDIR}${MISCDIR}
 	${INSTALL_DATA} ${WRKSRC}/docs/* ${DESTDIR}${DOCSDIR}
 
