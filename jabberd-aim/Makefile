@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/01/17 12:03:27 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2012/09/30 08:39:11 asau Exp $
 
 DISTNAME=	aim-transport-stable-20040131
 PKGNAME=	jabberd-aim-20040131
@@ -21,9 +21,11 @@ pre-configure:
 		${LN} -s ${PREFIX}/include/jabberd ${WRKDIR}/jabberd; \
 	fi
 
+INSTALLATION_DIRS=	lib/jabberd share/examples/jabberd
+
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/src/aimtrans.so ${PREFIX}/lib/jabberd/
-	${INSTALL_DATA} ${WRKSRC}/aim.xml ${EXAMPLEFILE}
+	${INSTALL_DATA} ${WRKSRC}/src/aimtrans.so ${DESTDIR}${PREFIX}/lib/jabberd/
+	${INSTALL_DATA} ${WRKSRC}/aim.xml ${DESTDIR}${EXAMPLEFILE}
 
 .include "../../devel/pth/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
