@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/10/05 08:15:51 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2012/09/30 05:41:12 asau Exp $
 #
 
 DISTNAME=		iptstate-2.0
@@ -13,11 +13,11 @@ COMMENT=		Display Netfilter state tables in a "top"-like interface
 ONLY_FOR_PLATFORM=	Linux-*-*
 USE_LANGUAGES=		c++
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man8
+INSTALLATION_DIRS=	sbin ${PKGMANDIR}/man8
 
 do-install:
-	cd ${WRKSRC} && ${INSTALL_PROGRAM} iptstate ${PREFIX}/sbin/
-	cd ${WRKSRC} && ${INSTALL_MAN} iptstate.8 ${PREFIX}/${PKGMANDIR}/man8/
+	cd ${WRKSRC} && ${INSTALL_PROGRAM} iptstate ${DESTDIR}${PREFIX}/sbin/
+	cd ${WRKSRC} && ${INSTALL_MAN} iptstate.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
