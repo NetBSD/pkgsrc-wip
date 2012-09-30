@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/05/07 10:57:59 jihbed Exp $
+$NetBSD: distinfo,v 1.2 2012/09/30 09:55:06 noud4 Exp $
 
-SHA1 (fuzzpy-0.2.1.tar.bz2) = 199f0dc5f933ab34afb524f5af7a201fbea41693
-RMD160 (fuzzpy-0.2.1.tar.bz2) = 3e032765f00169e7bd68089664ff0dac98c086c9
-Size (fuzzpy-0.2.1.tar.bz2) = 28405 bytes
+SHA1 (fuzzpy-0.3.0.tar.bz2) = 9f0b3ef8f3938cec87ba6730eacba9cd43b5ab8f
+RMD160 (fuzzpy-0.3.0.tar.bz2) = 7ef7ff47f9685446206e4b7ec8b8ad5ea325e0de
+Size (fuzzpy-0.3.0.tar.bz2) = 25201 bytes

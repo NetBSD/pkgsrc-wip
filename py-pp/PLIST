@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.6 2012/09/09 22:06:48 jihbed Exp $
-bin/ppserver2.7
+@comment $NetBSD: PLIST,v 1.7 2012/09/30 09:55:06 noud4 Exp $
+bin/ppserver${PYVERSSUFFIX}
 ${PYSITELIB}/pp.py
 ${PYSITELIB}/pp.pyc
 ${PYSITELIB}/pp.pyo
