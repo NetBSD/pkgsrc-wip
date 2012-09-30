@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/09/07 00:59:04 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/30 05:44:15 asau Exp $
 #
 
 DISTNAME=	islamic-menus-1.0.2
@@ -9,8 +9,6 @@ MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://launchpad.net/islamic-menu
 COMMENT=	Islamic menu categories for applications under GNOME and KDE
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
 

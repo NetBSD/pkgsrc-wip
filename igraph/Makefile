@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/03/23 14:53:43 christtrekker Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/30 05:44:15 asau Exp $
 #
 
 DISTNAME=	igraph-0.5.3
@@ -9,8 +9,6 @@ MAINTAINER=	wenheping@gmail.com
 HOMEPAGE=	http://igraph.sf.net/
 COMMENT=	Package For Manipulating Undirected And Directed Graphs
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

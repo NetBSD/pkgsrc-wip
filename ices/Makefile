@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/05/19 16:51:19 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.12 2012/09/30 05:44:15 asau Exp $
 #
 
 DISTNAME=	ices-0.2.3
@@ -8,6 +8,8 @@ MASTER_SITES=	http://www.icecast.org/releases/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.icecast.org/
 COMMENT=	MP3/Vorbis encoder for icecast servers
+
+PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-lame=${BUILDLINK_PREFIX.lame} \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/01/15 18:19:39 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/30 05:44:15 asau Exp $
 #
 
 DISTNAME=	innotop-1.7.2
@@ -9,8 +9,6 @@ MAINTAINER=	filip@joyent.com
 HOMEPAGE=	http://code.google.com/p/innotop/
 COMMENT=	MySQL and InnoDB monitor program
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Term-ReadKey>=2.10:../../devel/p5-Term-ReadKey
 DEPENDS+=	p5-DBI>=1.13:../../databases/p5-DBI

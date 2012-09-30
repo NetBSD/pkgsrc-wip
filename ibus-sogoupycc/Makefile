@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/08/07 02:41:38 obache Exp $
+# $NetBSD: Makefile,v 1.4 2012/09/30 05:44:14 asau Exp $
 #
 
 DISTNAME=	ibus-sogoupycc-0.2.5
@@ -12,8 +12,6 @@ COMMENT=	Sogou Pinyin cloud client for IBus
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	lua-socket-[0-9]*:../../wip/luasocket
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++

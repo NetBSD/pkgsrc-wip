@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2008/02/03 16:53:11 tnn2 Exp $
+# $NetBSD: Makefile,v 1.15 2012/09/30 05:44:15 asau Exp $
 #
 
 DISTNAME=	interchange-5.2.1
@@ -36,6 +36,8 @@ DEPENDS+=	p5-Business-UPS>=1.0.6:../../misc/p5-Business-UPS
 MESSAGE_SUBST+=	ICUSER=${INTERCHANGE_USER}	\
 			ICGROUP=${INTERCHANGE_GROUP}	\
 			ICDIR=${INTERCHANGE_DIR}
+
+PKG_DESTDIR_SUPPORT=	none
 
 .include "../../mk/bsd.prefs.mk"
 

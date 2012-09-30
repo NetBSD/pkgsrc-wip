@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2011/12/01 14:34:36 gschwarz Exp $
+# $NetBSD: Makefile,v 1.9 2012/09/30 05:44:15 asau Exp $
 
 DISTNAME=	imonc-20010125
 CATEGORIES=	net
@@ -9,8 +9,6 @@ MAINTAINER=	schwarz@NetBSD.org
 HOMEPAGE=	http://www.fli4l.de/
 COMMENT=	Command-line version of the fli4l monitoring tool
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/fli4l-3.6.1/unix
 NO_CONFIGURE=	YES

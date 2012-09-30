@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/02/24 15:12:08 pallegra Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/30 05:44:15 asau Exp $
 #
 
 DISTNAME=	irrlicht-1.7.2
@@ -10,8 +10,6 @@ MAINTAINER=	pallegra@gmail.com
 HOMEPAGE=	http://irrlicht.sourceforge.net/
 COMMENT=	open source high performance realtime 3D engine
 #LICENSE=	png-license #irrlicht-license ?
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	pkg-config gmake
 USE_LANGUAGES=	c c++

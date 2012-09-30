@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/08/12 02:32:04 obache Exp $
+# $NetBSD: Makefile,v 1.7 2012/09/30 05:44:15 asau Exp $
 #
 
 DISTNAME=	IronPython-1.0.1-Src
@@ -12,8 +12,6 @@ MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://www.codeplex.com/IronPython
 COMMENT=	Python implementation targeting the .NET and Mono platforms
 #LICENSE=	LICENSE
-
-PKG_DESTDIR_SUPPORT= user-destdir
 
 WRKSRC=		${WRKDIR}/IronPython-1.0.1
 USE_TOOLS+=	gmake

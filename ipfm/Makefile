@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/05/19 16:51:19 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.7 2012/09/30 05:44:15 asau Exp $
 
 DISTNAME=		ipfm-0.11.5
 CATEGORIES=		net
@@ -8,6 +8,8 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://robert.cheramy.net/ipfm/
 COMMENT=		Bandwidth analysis tool
+
+PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}

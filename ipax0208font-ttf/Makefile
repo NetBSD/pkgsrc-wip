@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/06/26 00:17:56 ryo-on Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/30 05:44:15 asau Exp $
 #
 
 DISTNAME=	IPAfont00103
@@ -11,8 +11,6 @@ MAINTAINER=	ryo_on@yk.rim.or.jp
 HOMEPAGE=	http://ossipedia.ipa.go.jp/ipafont/
 COMMENT=	TrueType IPA fonts based on JIS X0208
 # LICENSE=	IPA Public Font End User License (not OSI certified)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_X11BASE=	YES
 NO_CONFIGURE=	YES

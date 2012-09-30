@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/05/01 14:20:07 shattered Exp $
+# $NetBSD: Makefile,v 1.4 2012/09/30 05:44:15 asau Exp $
 #
 
 DISTNAME=		ipmitool-1.8.6
@@ -8,6 +8,8 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ipmitool/}
 MAINTAINER=		ola@mrEriksson.net
 HOMEPAGE=		http://ipmitool.sourceforge.net/
 COMMENT=		Provides command-line interface to IPMI-enabled devices
+
+PKG_DESTDIR_SUPPORT=	none
 
 CONFIGURE_ARGS+=	--enable-intf-imb=no
 

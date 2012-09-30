@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/03/23 14:44:31 netcap Exp $
+# $NetBSD: Makefile,v 1.4 2012/09/30 05:44:15 asau Exp $
 #
 
 DISTNAME=	iksemel-1.3
@@ -9,6 +9,8 @@ MASTER_SITES=	http://iksemel.googlecode.com/files/
 MAINTAINER=	jfranz@bsdprojects.net
 HOMEPAGE=	http://code.google.com/p/iksemel/
 COMMENT=	XML parser library mainly designed for Jabber applications
+
+PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

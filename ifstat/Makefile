@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/10/29 11:23:10 shattered Exp $
+# $NetBSD: Makefile,v 1.7 2012/09/30 05:44:15 asau Exp $
 #
 
 DISTNAME=	ifstat-1.1
@@ -8,6 +8,8 @@ MASTER_SITES=	${HOMEPAGE}
 MAINTAINER=	charlie@rubberduck.com
 HOMEPAGE=	http://gael.roualland.free.fr/ifstat/
 COMMENT=	Tool to report network interfaces bandwidth
+
+PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=	YES
 

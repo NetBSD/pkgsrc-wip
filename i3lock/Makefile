@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/11/07 09:12:20 pallegra Exp $
+# $NetBSD: Makefile,v 1.4 2012/09/30 05:44:14 asau Exp $
 #
 
 DISTNAME=	i3lock-2.2
@@ -10,8 +10,6 @@ MAINTAINER=	pallegra@gmail.com
 HOMEPAGE=	http://i3wm.org/i3lock/
 COMMENT=	Slightly improved screen locker based on slock
 LICENSE=	modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gmake pkg-config
 USE_LANGUAGES=	c99

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/09/26 12:21:28 ryo-on Exp $
+# $NetBSD: Makefile,v 1.3 2012/09/30 05:44:15 asau Exp $
 #
 
 DISTNAME=	ipamjm00201
@@ -11,8 +11,6 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://ossipedia.ipa.go.jp/ipamjfont/
 COMMENT=	Font for Japanese names
 LICENSE=	ipafont
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 NO_CONFIGURE=	yes

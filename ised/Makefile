@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/09/02 12:06:52 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/09/30 05:44:15 asau Exp $
 #
 
 DISTNAME=	ised-2.2.2
@@ -10,8 +10,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://ised.sourceforge.net/
 COMMENT=	Tool for generating number sequences and arithmetic evaluation
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c++

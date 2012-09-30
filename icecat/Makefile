@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2010/08/23 13:17:05 yhardy Exp $
+# $NetBSD: Makefile,v 1.14 2012/09/30 05:44:14 asau Exp $
 #
 
 DISTNAME=	icecat-${ICECAT_VER}
@@ -18,7 +18,6 @@ USE_LANGUAGES=	c c++
 
 BUILD_DEPENDS+=		zip>=2.3:../../archivers/zip
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 CHECK_PORTABILITY_SKIP=	security/nss/tests/libpkix/libpkix.sh
 
 PRIVILEGED_STAGES=	clean

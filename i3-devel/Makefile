@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2011/09/07 09:07:45 pallegra Exp $
+# $NetBSD: Makefile,v 1.8 2012/09/30 05:44:14 asau Exp $
 #
 
 DISTNAME=	i3-4.0.2
@@ -10,8 +10,6 @@ MAINTAINER=	pallegra@gmail.com
 HOMEPAGE=	http://i3wm.org/
 COMMENT=	Improved dynamic tiling window manager
 LICENSE=	modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gmake bison lex yacc pkg-config
 USE_LANGUAGES=	c99

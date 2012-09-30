@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/05/28 05:38:00 othyro Exp $
+# $NetBSD: Makefile,v 1.6 2012/09/30 05:44:15 asau Exp $
 #
 
 DISTNAME=		ispell-lt-1.2
@@ -10,8 +10,6 @@ MAINTAINER=		tomas.furmonavicius@takas.lt
 HOMEPAGE=		http://www.lietuvybe.org/?menuid=Zodynai&submenu=ispell-lt
 COMMENT=		Lithuanian dictionary for ispell
 LICENSE=		modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		ispell-base-[0-9]*:../../textproc/ispell-base
 

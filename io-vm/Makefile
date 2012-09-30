@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2009/03/18 10:59:09 cheusov Exp $
+# $NetBSD: Makefile,v 1.8 2012/09/30 05:44:15 asau Exp $
 
 .include "../../wip/io/version.mk"
 
@@ -12,8 +12,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		milos.negovanovic@googlemail.com
 HOMEPAGE=		http://www.iolanguage.com/
 COMMENT=		Small programming language
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 #USE_PKGLOCALEDIR=	yes
 NO_CONFIGURE=		yes
