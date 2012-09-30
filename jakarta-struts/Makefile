@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/11/10 23:16:04 shattered Exp $
+# $NetBSD: Makefile,v 1.5 2012/09/30 12:09:49 asau Exp $
 #
 
 DISTNAME=		jakarta-struts-1.1
@@ -13,8 +13,8 @@ COMMENT=		struts is struts xD
 do-build:
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/java/jakarta-struts/
-	${INSTALL_DATA} ${WRKSRC}/lib/* \
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/lib/java/jakarta-struts/
+	${INSTALL_DATA} ${DESTDIR}${WRKSRC}/lib/* \
 		${PREFIX}/lib/java/jakarta-struts/
 
 .include "../../mk/java-vm.mk"
