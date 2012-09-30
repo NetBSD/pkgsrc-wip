@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4887 2012/09/29 23:18:57 obache Exp $
+# $Id: Makefile,v 1.4888 2012/09/30 14:04:56 jellehermsen Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -291,6 +291,7 @@ SUBDIR+=	cclive
 SUBDIR+=	ccrtp
 SUBDIR+=	ccrypt
 SUBDIR+=	cddlib
+SUBDIR+=    cde
 SUBDIR+=	cdogs
 SUBDIR+=	cdpr
 SUBDIR+=	cedet
