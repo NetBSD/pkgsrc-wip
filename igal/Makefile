@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2010/01/09 17:21:42 koifren Exp $
+# $NetBSD: Makefile,v 1.12 2012/09/30 05:19:44 asau Exp $
 #
 DISTNAME=	igal-1.4.7-wt
 CATEGORIES=	www graphics
@@ -22,14 +22,16 @@ SUBST_MESSAGE.fix-prefix=	Fixing relative prefix
 SUBST_FILES.fix-prefix=		igal
 SUBST_SED.fix-prefix=		-e 's,/usr/local/lib/igal,${PREFIX}/share/igal,'
 
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/igal ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/igal.1 ${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_DATA_DIR} ${PREFIX}/share/igal
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/igal
+	${INSTALL_SCRIPT} ${WRKSRC}/igal ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/igal.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/igal
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/igal
 	cd ${WRKSRC} && \
-	${INSTALL_DATA} indextemplate.html slidetemplate.html tile.png igal.css ${PREFIX}/share/igal
+	${INSTALL_DATA} indextemplate.html slidetemplate.html tile.png igal.css ${DESTDIR}${PREFIX}/share/igal
 	cd ${WRKSRC} && \
-	${INSTALL_DATA} README THANKS ChangeLog COPYING ${PREFIX}/share/doc/igal
+	${INSTALL_DATA} README THANKS ChangeLog COPYING ${DESTDIR}${PREFIX}/share/doc/igal
 
 .include "../../mk/bsd.pkg.mk"

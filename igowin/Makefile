@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2010/01/18 09:38:25 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.15 2012/09/30 05:21:20 asau Exp $
 #
 
 DISTNAME=		igowin
@@ -35,9 +35,9 @@ do-configure:
 .endfor
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/igowin.sh ${PREFIX}/bin/igowin
+	${INSTALL_SCRIPT} ${WRKSRC}/igowin.sh ${DESTDIR}${PREFIX}/bin/igowin
 .for f in ${IGOWIN_FILES}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${IGOWIN_DIR}/${f}
+	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${IGOWIN_DIR}/${f}
 .endfor
 
 .include "../../emulators/wine/buildlink3.mk"

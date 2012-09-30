@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/10/29 08:32:44 shattered Exp $
+# $NetBSD: Makefile,v 1.5 2012/09/30 05:17:18 asau Exp $
 #
 
 DISTNAME=		ices-${ICES_VERSION}
@@ -21,23 +21,25 @@ EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 pre-configure:
 	cd ${WRKSRC} && autoreconf --force
 
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/src/ices ${PREFIX}/bin/${PKGBASE}
-	${INSTALL_MAN} ${WRKSRC}/debian/ices2.1 ${PREFIX}/${PKGMANDIR}/man1/${PKGBASE}.1
-	${INSTALL_DATA_DIR} ${DOCDIR}
+	${INSTALL_PROGRAM} ${WRKSRC}/src/ices ${DESTDIR}${PREFIX}/bin/${PKGBASE}
+	${INSTALL_MAN} ${WRKSRC}/debian/ices2.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/${PKGBASE}.1
+	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
 	for i in basic.html config.html faq.html index.html inputs.html \
 		intro.html style.css ; \
 	do \
-		${INSTALL_DATA} ${WRKSRC}/doc/$$i ${DOCDIR}/$$i ; \
+		${INSTALL_DATA} ${WRKSRC}/doc/$$i ${DESTDIR}${DOCDIR}/$$i ; \
 	done
 	for i in AUTHORS COPYING README  ; \
 	do \
-		${INSTALL_DATA} ${WRKSRC}/$$i ${DOCDIR}/$$i ; \
+		${INSTALL_DATA} ${WRKSRC}/$$i ${DESTDIR}${DOCDIR}/$$i ; \
 	done
-	${INSTALL_DATA_DIR} ${EGDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
 	for i in ices-alsa.xml ices-oss.xml ices-playlist.xml ; \
 	do \
-		${INSTALL_DATA} ${WRKSRC}/conf/$$i ${EGDIR}/$$i ; \
+		${INSTALL_DATA} ${WRKSRC}/conf/$$i ${DESTDIR}${EGDIR}/$$i ; \
 	done
 
 .include "../../mk/oss.buildlink3.mk"

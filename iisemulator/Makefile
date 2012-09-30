@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/05/26 13:59:44 tnn2 Exp $
+# $NetBSD: Makefile,v 1.7 2012/09/30 05:23:06 asau Exp $
 
 DISTNAME=	iisemulator-0.95
 CATEGORIES=	net www
@@ -19,33 +19,35 @@ do-build:
 	@${SED} -e 's#@IISEMUL8@#${IISEMUL8}#g' < ${WRKSRC}/iisemul8.pl > \
 			${WRKSRC}/iisemul8
 
-do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/iisemulator
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/iisemulator/docs
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/iisemulator/docs/notes
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/iisemulator
-	${INSTALL_DATA_DIR} ${IISEMUL8}/iis_data
-	${INSTALL_DATA_DIR} ${IISEMUL8}/wwwroot
+INSTALLATION_DIRS=	bin
 
-	${INSTALL_SCRIPT} ${WRKSRC}/iisemul8 ${PREFIX}/bin
+do-install:
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/iisemulator
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/iisemulator/docs
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/iisemulator/docs/notes
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/iisemulator
+	${INSTALL_DATA_DIR} ${DESTDIR}${IISEMUL8}/iis_data
+	${INSTALL_DATA_DIR} ${DESTDIR}${IISEMUL8}/wwwroot
+
+	${INSTALL_SCRIPT} ${WRKSRC}/iisemul8 ${DESTDIR}${PREFIX}/bin
 
 	${INSTALL_DATA} ${WRKSRC}/docs/honeyd.conf \
-		${PREFIX}/share/doc/iisemulator/docs
+		${DESTDIR}${PREFIX}/share/doc/iisemulator/docs
 
 	${INSTALL_DATA} ${WRKSRC}/docs/notes/*.txt \
-		${PREFIX}/share/doc/iisemulator/docs/notes
+		${DESTDIR}${PREFIX}/share/doc/iisemulator/docs/notes
 
 	for FILE in ${DOC_FILES}; do \
 		${INSTALL_DATA} ${WRKSRC}/$$FILE \
-			${PREFIX}/share/doc/iisemulator; \
+			${DESTDIR}${PREFIX}/share/doc/iisemulator; \
 	done
 
 	for FILE in ${EG_FILES}; do \
 		${INSTALL_DATA} ${WRKSRC}/$$FILE \
-			${PREFIX}/share/examples/iisemulator; \
+			${DESTDIR}${PREFIX}/share/examples/iisemulator; \
 	done
 
-	cd ${WRKSRC}/iis_data && pax -rw . ${IISEMUL8}/iis_data
-	cd ${WRKSRC}/wwwroot && pax -rw . ${IISEMUL8}/wwwroot
+	cd ${WRKSRC}/iis_data && pax -rw . ${DESTDIR}${IISEMUL8}/iis_data
+	cd ${WRKSRC}/wwwroot && pax -rw . ${DESTDIR}${IISEMUL8}/wwwroot
 
 .include "../../mk/bsd.pkg.mk"
