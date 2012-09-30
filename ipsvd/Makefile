@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/12/31 08:20:37 akihabara Exp $
+# $NetBSD: Makefile,v 1.7 2012/09/30 05:39:45 asau Exp $
 
 DISTNAME=	ipsvd-1.0.0
 CATEGORIES=	net
@@ -17,14 +17,16 @@ DJB_SLASHPACKAGE=	YES
 
 DOCS=		package/CHANGES package/COPYING package/README doc/*.html
 
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man5 ${PKGMANDIR}/man7 ${PKGMANDIR}/man8
+
 do-install:
-	${INSTALL_PROGRAM} ${CMDDIR}/* ${PREFIX}/sbin
-	${INSTALL_MAN} ${WRKSRC}/man/*.5 ${PREFIX}/${PKGMANDIR}/man5
-	${INSTALL_MAN} ${WRKSRC}/man/*.7 ${PREFIX}/${PKGMANDIR}/man7
+	${INSTALL_PROGRAM} ${CMDDIR}/* ${DESTDIR}${PREFIX}/sbin
+	${INSTALL_MAN} ${WRKSRC}/man/*.5 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
+	${INSTALL_MAN} ${WRKSRC}/man/*.7 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man7
 	${INSTALL_MAN} ${WRKSRC}/man/tcpsvd.8 ${WRKSRC}/man/udpsvd.8 \
-		${WRKSRC}/man/ipsvd-cdb.8 ${PREFIX}/${PKGMANDIR}/man8
-	${INSTALL_DATA_DIR} ${PKGDOCDIR}
-	cd ${WRKSRC} && ${INSTALL_DATA} ${DOCS} ${PKGDOCDIR}
+		${WRKSRC}/man/ipsvd-cdb.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
+	${INSTALL_DATA_DIR} ${DESTDIR}${PKGDOCDIR}
+	cd ${WRKSRC} && ${INSTALL_DATA} ${DOCS} ${DESTDIR}${PKGDOCDIR}
 
 .include "../../mk/djbware.mk"
 .include "../../mk/bsd.pkg.mk"

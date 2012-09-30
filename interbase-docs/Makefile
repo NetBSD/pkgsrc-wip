@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2009/08/25 11:56:45 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2012/09/30 05:32:10 asau Exp $
 #
 
 DISTNAME=		60All
@@ -22,8 +22,8 @@ ID6_FILES=		ApiGuide.pdf DataDef.pdf DevGuide.pdf EmbedSQL.pdf \
 			GetStart.pdf LANGREF.PDF OpGuide.pdf
 
 do-install:
-	${INSTALL_DATA_DIR} ${ID6_DIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${ID6_DIR}
 	for a in ${ID6_FILES}; do \
-		${INSTALL_DATA} ${WRKSRC}/$$a ${ID6_DIR}/$$a; done
+		${INSTALL_DATA} ${WRKSRC}/$$a ${DESTDIR}${ID6_DIR}/$$a; done
 
 .include "../../mk/bsd.pkg.mk"

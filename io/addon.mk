@@ -1,4 +1,4 @@
-# $NetBSD: addon.mk,v 1.4 2008/09/10 19:59:59 milosn Exp $
+# $NetBSD: addon.mk,v 1.5 2012/09/30 05:34:21 asau Exp $
 
 .include "../../wip/io/version.mk"
 
@@ -35,29 +35,29 @@ do-build:
 	cd ${WRKSRC} && ${PREFIX}/bin/io build.io -a ${ADDON_NAME}
 
 do-install:
-	${INSTALL_DATA_DIR} ${TARGET_DIR}
-	${INSTALL_DATA_DIR} ${TARGET_DIR}/_build
+	${INSTALL_DATA_DIR} ${DESTDIR}${TARGET_DIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${TARGET_DIR}/_build
 	if [ -d  ${SRC_DIR}/_build/dll ]; then \
-		${CP} -rf ${SRC_DIR}/_build/dll ${TARGET_DIR}/_build/; \
+		${CP} -rf ${SRC_DIR}/_build/dll ${DESTDIR}${TARGET_DIR}/_build/; \
 	fi
 	if [ -d ${SRC_DIR}/_build/lib ]; then \
-		${CP} -rf ${SRC_DIR}/_build/lib ${TARGET_DIR}/_build/; \
+		${CP} -rf ${SRC_DIR}/_build/lib ${DESTDIR}${TARGET_DIR}/_build/; \
 	fi
 	if [ -d ${SRC_DIR}/io ]; then \
-		${CP} -rf ${SRC_DIR}/io ${TARGET_DIR}/; \
+		${CP} -rf ${SRC_DIR}/io ${DESTDIR}${TARGET_DIR}/; \
 	fi
 	if [ -e ${SRC_DIR}/depends ]; then \
-		${CP} -f ${SRC_DIR}/depends ${TARGET_DIR}/; \
+		${CP} -f ${SRC_DIR}/depends ${DESTDIR}${TARGET_DIR}/; \
 	fi
 	if [ -e ${SRC_DIR}/protos ]; then \
-		${CP} -f ${SRC_DIR}/protos ${TARGET_DIR}/; \
+		${CP} -f ${SRC_DIR}/protos ${DESTDIR}${TARGET_DIR}/; \
 	fi
 	if [ -e ${SRC_DIR}/build.io ]; then \
-		${CP} -f ${SRC_DIR}/build.io ${TARGET_DIR}/; \
+		${CP} -f ${SRC_DIR}/build.io ${DESTDIR}${TARGET_DIR}/; \
 	fi
 	if [ ! -z "${ADDON_INSTALL_HEADERS}" ]; then \
-		${INSTALL_DATA_DIR} ${PREFIX}/include/io/${ADDON_NAME}; \
-		${CP} -f ${SRC_DIR}/source/*.h ${PREFIX}/include/io/${ADDON_NAME}/; \
+		${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/include/io/${ADDON_NAME}; \
+		${CP} -f ${SRC_DIR}/source/*.h ${DESTDIR}${PREFIX}/include/io/${ADDON_NAME}/; \
 	fi
 
 .include "../../wip/io-vm/buildlink3.mk"

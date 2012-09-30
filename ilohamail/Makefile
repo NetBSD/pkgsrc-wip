@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2008/08/11 14:36:45 ondratu Exp $
+# $NetBSD: Makefile,v 1.20 2012/09/30 05:30:23 asau Exp $
 #
 
 DISTNAME=	IlohaMail-0.8.14-rc3
@@ -11,6 +11,8 @@ HOMEPAGE=	http://blog.ilohamail.org/
 COMMENT=	Light weight yet full featured multilingual webmail
 
 DEPENDS+=	${PHP_PKG_PREFIX}-imap>=4.3.3:../../mail/php-imap
+
+PKG_DESTDIR_SUPPORT=	destdir
 
 NO_BUILD=	yes
 USE_TOOLS+=	pax
@@ -51,14 +53,14 @@ pre-install:
 	${FIND} ${WRKSRC} -name "*.orig" -print -type f | ${XARGS} ${RM} -f
 
 do-install:
-	${INSTALL_DATA_DIR} ${ILOHAMAIL_DIR}
-	${INSTALL_DATA_DIR} ${ILOHAMAIL_DOC_DIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${ILOHAMAIL_DIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${ILOHAMAIL_DOC_DIR}
 	cd ${WRKSRC}/IlohaMail && pax -r -w data include index.html lang \
-		source ${ILOHAMAIL_DIR}
-	cd ${WRKSRC}/IlohaMail && pax -r -w conf ${EGDIR}
+		source ${DESTDIR}${ILOHAMAIL_DIR}
+	cd ${WRKSRC}/IlohaMail && pax -r -w conf ${DESTDIR}${EGDIR}
 	cd ${WRKSRC} && pax -r -w COPYING INSTALL Manual MySQL README \
-		RELEASE_NOTES THEMES TODO UPGRADING ${ILOHAMAIL_DOC_DIR}
-	${CHOWN} -R ${APACHE_USER}:${APACHE_GROUP} ${ILOHAMAIL_DIR}
+		RELEASE_NOTES THEMES TODO UPGRADING ${DESTDIR}${ILOHAMAIL_DOC_DIR}
+	${CHOWN} -R ${APACHE_USER}:${APACHE_GROUP} ${DESTDIR}${ILOHAMAIL_DIR}
 
 .include "../../lang/php/phpversion.mk"
 .include "../../mk/bsd.pkg.mk"
