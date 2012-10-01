@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/11/02 18:00:18 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/01 20:23:09 asau Exp $
 #
 
 DISTNAME=		bcel-5.1
@@ -13,10 +13,10 @@ COMMENT=		ByteCode Engineering Library
 NO_BUILD=		yes
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/java
-	${INSTALL_DATA} ${WRKSRC}/bcel-5.1.jar ${PREFIX}/lib/java/bcel.jar
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/java-bcel/
-	${CP} -rf ${WRKSRC}/docs/* ${PREFIX}/share/doc/java-bcel/
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/lib/java
+	${INSTALL_DATA} ${WRKSRC}/bcel-5.1.jar ${DESTDIR}${PREFIX}/lib/java/bcel.jar
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/java-bcel/
+	${CP} -rf ${WRKSRC}/docs/* ${DESTDIR}${PREFIX}/share/doc/java-bcel/
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:13:18 tvierling Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/01 20:29:41 asau Exp $
 #
 
 DISTNAME=		java-getopt-1.0.9
@@ -10,13 +10,15 @@ MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://www.urbanophile.com/arenn/hacking/download.html
 COMMENT=		GNU getopt port for Java
 
+INSTALLATION_DIRS=	share/classpath
+
 do-extract:
 
 do-build:
 
 do-install:
 	${INSTALL_DATA} ${DISTDIR}/${DISTNAME}.jar \
-		${PREFIX}/share/classpath/java-getopt.jar
+		${DESTDIR}${PREFIX}/share/classpath/java-getopt.jar
 
 WRKSRC=		${WRKDIR}/
 

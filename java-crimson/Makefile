@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/11/02 18:00:18 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/01 20:26:04 asau Exp $
 #
 
 DISTNAME=		crimson-1.1.3-bin
@@ -13,10 +13,12 @@ COMMENT=		XML parser for JAXP with DOM and SAX2.
 
 WRKSRC=		${WRKDIR}/crimson-1.1.3
 
+INSTALLATION_DIRS=	share/classpath
+
 do-build:
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/classpath/
-	${INSTALL_DATA} ${WRKSRC}/crimson.jar ${PREFIX}/share/classpath/
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/classpath/
+	${INSTALL_DATA} ${WRKSRC}/crimson.jar ${DESTDIR}${PREFIX}/share/classpath/
 
 .include "../../mk/bsd.pkg.mk"

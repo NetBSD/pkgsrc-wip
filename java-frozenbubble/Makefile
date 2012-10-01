@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:13:17 tvierling Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/01 20:27:55 asau Exp $
 #
 
 DISTNAME=		frozenBubble
@@ -23,7 +23,7 @@ do-extract:
 
 do-install:
 	${INSTALL_DATA} ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX} \
-		${JAR_PREFIX}/frozenbubble.jar
+		${DESTDIR}${JAR_PREFIX}/frozenbubble.jar
 
 .include "../../wip/mk/java-app.mk"
 .include "../../mk/bsd.pkg.mk"
