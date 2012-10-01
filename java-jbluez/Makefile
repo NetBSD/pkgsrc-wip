@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/11/28 00:27:25 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/01 20:47:20 asau Exp $
 #
 
 DISTNAME=		jbluez-1.0
@@ -21,11 +21,13 @@ SUBST_STAGE.jh=pre-build
 SUBST_FILES.jh= c/Makefile
 SUBST_SED.jh= -e 's,/usr/lib/java,${PKG_JAVA_HOME},g'
 
+INSTALLATION_DIRS=	lib/java
+
 do-install:
-	${INSTALL_DATA} ${WRKDIR}/bin/jbluez.jar ${PREFIX}/lib/java/
-	${INSTALL_LIB} ${WRKDIR}/bin/libjbluez.so ${PREFIX}/lib/
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/jbluez/
-	${CP} -rf ${WRKDIR}/javadoc/* ${PREFIX}/share/doc/jbluez/
+	${INSTALL_DATA} ${WRKDIR}/bin/jbluez.jar ${DESTDIR}${PREFIX}/lib/java/
+	${INSTALL_LIB} ${WRKDIR}/bin/libjbluez.so ${DESTDIR}${PREFIX}/lib/
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/jbluez/
+	${CP} -rf ${WRKDIR}/javadoc/* ${DESTDIR}${PREFIX}/share/doc/jbluez/
 
 .include "../../mk/java-vm.mk"
 .include "../../wip/bluez-libs/Makefile.common"

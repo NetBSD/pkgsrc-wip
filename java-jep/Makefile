@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/04/11 21:13:19 tvierling Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/01 20:53:32 asau Exp $
 #
 
 DISTNAME=		jep-2.24
@@ -10,14 +10,18 @@ MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://www.singularsys.com/jep/
 COMMENT=		Java Mathematical Expression Parser
 
+PKG_DESTDIR_SUPPORT=	destdir
+
 NO_BUILD=		#defined
+
+INSTALLATION_DIRS=	share/classpath
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/jep-2.24.jar \
-		${PREFIX}/share/classpath/jep.jar
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/java-jep/
-	${CP} -rf ${WRKSRC}/doc/* ${PREFIX}/share/doc/java-jep/
-	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/doc/java-jep/
-	${CHMOD} ${SHAREMODE} ${PREFIX}/share/doc/java-jep/
+		${DESTDIR}${PREFIX}/share/classpath/jep.jar
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/java-jep/
+	${CP} -rf ${WRKSRC}/doc/* ${DESTDIR}${PREFIX}/share/doc/java-jep/
+	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${DESTDIR}${PREFIX}/share/doc/java-jep/
+	${CHMOD} ${SHAREMODE} ${DESTDIR}${PREFIX}/share/doc/java-jep/
 
 .include "../../mk/bsd.pkg.mk"
