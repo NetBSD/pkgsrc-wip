@@ -1,0 +1,24 @@
+$NetBSD: distinfo,v 1.1 2012/10/01 06:41:28 jellehermsen Exp $
+
+SHA1 (cde.tar.gz) = f6227064d2c621e1b9db5b35d220587c5eb46cc9
+RMD160 (cde.tar.gz) = ac91cee9c476c421a9e4a10e93b2dd58eea11f5d
+Size (cde.tar.gz) = 63641254 bytes
+SHA1 (patch-lib_DtSearch_raima_vista.h) = 3fb5d81fb8de12c9088d69fb528291b7f3855d86
+SHA1 (patch-lib_tt_bin_dbck_options.C) = 48c71a089ba5c28cfd4a534ec796a13c67b4ba21
+SHA1 (patch-lib_tt_bin_tt__type__comp_mp__type__comp.C) = 5aaf55066ac42fdc61ebbd071907e7c8badaaff1
+SHA1 (patch-lib_tt_bin_ttdbserverd_db__server__svc.C) = c699740a9022afbe1089c9c618736916804f8ca0
+SHA1 (patch-lib_tt_bin_ttsession_mp__server.C) = 04bd7f8805b53590ee045e3f37e4bb2754f0b15d
+SHA1 (patch-lib_tt_lib_tttk_tttk.h) = d384af24fbdc8987cf68667dcc45ff2a736303c2
+SHA1 (patch-programs_dtappbuilder_src_ab_palette__stubs.c) = c6a895781d0c5566b97b42d8bff2225f08a7dc8e
+SHA1 (patch-programs_dtappbuilder_src_ab_proj.c) = f9d3dae4abea15269c85490fcf05ac5af69b3984
+SHA1 (patch-programs_dtappbuilder_src_ab_projP__utils.c) = 02a39f002d83e662ac4b6a52e662c316a8d98b05
+SHA1 (patch-programs_dtappbuilder_src_ab_proj__utils.c) = 4cd1c18d3c46ad6d7bb9b0e4f31838706026995f
+SHA1 (patch-programs_dtappbuilder_src_abmf_write__c.c) = f71022c4aae1f788b29e4df9600a674fa427ece0
+SHA1 (patch-programs_dtappbuilder_src_libABil_bil__loadfile.c) = e3fd8c4d2b458e175546dd076f2865c03aa004f0
+SHA1 (patch-programs_dtcm_dtcm_cm__i18n.c) = 1d3e4aea5d3b3f40f0a1398af1461a2d96cb3421
+SHA1 (patch-programs_dtcm_dtcm_dnd.c) = bb969086d5a5b8e6909715cb9c5b3a6a513c1015
+SHA1 (patch-programs_dtexec_Main.c) = 8d7815b00d35ee048bd0f66285dc4229478114f8
+SHA1 (patch-programs_dtimsstart_remote.c) = 90ca531927931dad5ef5737a96051c772b5263a1
+SHA1 (patch-programs_dtimsstart_start.c) = 0983191a6d35263916843308e4c3fefb45df6c5c
+SHA1 (patch-programs_dtksh_ksh93_src_lib_libast_hash_hashalloc.c) = f82a849804133012b706aa06e60563b7a257db8c
+SHA1 (patch-programs_dtksh_ksh93_src_lib_libast_sfio_sfvprintf.c) = 245c9b6b7d324e203884483241b33af19ec291da

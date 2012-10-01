@@ -1,0 +1,98 @@
+As of 2012-09-30 CDE doesn't build yet. I (Jelle Hermsen) am almost done
+adding most basic NetBSD compatibility. I've made this preliminary pkgsrc
+package and the thing it's lacking right now is a proper link to the X11
+headers (imake can't find them yet). This seems like a small thing, but
+this is my first pkgsrc package, so I still have to find out how stuff
+works :-)
+
+The current patches are generated with mkpatches and consist mostly of
+changes to CSRG_BASED:
+
+
+I have searched the codebase for occurences of __FreeBSD__ and I'm looking
+to change them to CSRG_BASED where ever this is possible. Here you find a list
+of files I've located and actions I took. I added a + in front of a file
+to indicate that CSRG_BASED applied, a - that I don't think it's the case
+and a * where I'll have to look further into it.
+
+CSRG_BASED
+
+I skipped the ocurrences of utmpx.h, because I haven't looked into the status
+on utmpx in OpenBSD, but it is present in NetBSD -> http://80386.nl/unix/utmpx/
+
++ I did change an __FreeBSD__ identifier to CSRG_BASED
+- I didn't (so more work has probably to be done on NetBSD compatibility here)
+* needs more time looking into
+
++ lib/DtSearch/raima/vista.h
+* lib/DtTerm/TermPrim/TermPrimSetUtmp.c
+- lib/DtWidget/Editor.c -> define iswblank(wc) iswctype((wc),blnkclass), anders undef getwc
++ lib/tt/bin/dbck/options.C -> clear cut if defined(linux) || defined(sgi) || defined(__FreeBSD__)
++ lib/tt/bin/tt_type_comp/mp_type_comp.C -> clear cut, include <getopt.h>
++ lib/tt/bin/ttdbserverd/db_server_svc.C -> clear cut, include <getopt.h>
++ lib/tt/bin/ttsession/mp_server.C -> clear cut, include <getopt.h>
++ programs/dtappbuilder/src/ab/palette_stubs.c -> clear cut, if !defined(linux) && !defined(__FreeBSD__)
++ programs/dtappbuilder/src/ab/proj.c -> clear cut, if !defined(linux) && !defined(__FreeBSD__)
++ programs/dtappbuilder/src/ab/projP_utils.c -> clear cut, if !defined(linux) && !defined(__FreeBSD__)
++ programs/dtappbuilder/src/ab/proj_utils.c -> clear cut, if !defined(linux) && !defined(__FreeBSD__)
++ programs/dtappbuilder/src/abmf/write_c.c -> but debatable:
+It seems OpenBSD does have va_copy in stdarg.h, so
+http://www.openbsd.org/cgi-bin/man.cgi?query=va_copy&sektion=3
+__va_copy is a GNU extension, so it seems more sensible to use va_copy instead
+va_copy is a standard C99 feature. Using this would one day have been controversial, 
+but since GCC 3.0 even the GNU coding standards allwo relying on C99 features.
+
+	Line 353:
+	#if defined(__ppc) || defined(linux)  || defined(__OpenBSD__)
+	#define va_start_params() __va_copy(params, va_params)
+	#elif defined(__FreeBSD__)
+	#define va_start_params() va_copy(params, va_params)
+	#else
+	#define va_start_params() (params = va_params)
+	#endif
+
+Clear cut cases:
++ programs/dtappbuilder/src/libABil/bil_loadfile.c
++ programs/dtcm/dtcm/cm_i18n.c
++ programs/dtcm/dtcm/dnd.c
+* programs/dtdocbook/tcl/tclUnixInit.c -> #include <floatingpoint.h>
++ programs/dtexec/Main.c
++ programs/dtimsstart/remote.c
++ programs/dtimsstart/start.c
++ programs/dtksh/ksh93/src/lib/libast/hash/hashalloc.c
++ programs/dtksh/ksh93/src/lib/libast/sfio/sfvprintf.c
+- programs/dtlogin/account.c -> utmpx.x ge-includ -l
+
+Still have to do configuration of dtlogin
+---
+* programs/dtlogin/config/0060.dtsysenv.src
+* programs/dtlogin/config/Xfailsafe.src
+* programs/dtlogin/config/Xservers.src
+* programs/dtlogin/config/Xsession.src
+* programs/dtlogin/config/Xsetup.src
+* programs/dtlogin/config/Xstartup.src
+* programs/dtlogin/config/_common.ksh.src
+---
+
+
++ programs/dtlogin/dm.c -> utmpx.h not, but I did do ifdef linux || ifdef FreeBSD 
++ programs/dtlogin/dm.h -> utmpx.h
+- programs/dtlogin/fontpath.c -> utmpx.h
+- programs/dtlogin/session.c -> utmpx.h
++ programs/dtmail/libDtMail/Common/Session.C -> const char *ip = (const char *) *bp;
++ programs/dtmail/libDtMail/RFC/RFCBodyPart.C -> const char *ip = (const char *) *bp;
++ programs/dtprintinfo/libUI/MotifUI/Debug.c
++ programs/dtprintinfo/objects/PrintObj/ParseJobs.C -> added NetBSD identifier,
+we have lpq in path
+* programs/dtprintinfo/util/Process.C -> ps ax... or ps -el | awk ...
+- programs/dtsearchpath/dtsp/ManSearchPath.C -> manpath has to be added 
+- programs/dtsearchpath/dtsp/SearchPath.h
++ programs/dtsearchpath/libCliSrv/UnixEnv.C -> manpaths added
+
+
+Still have to do:
+programs/dtudcexch/exportbdf.c
+programs/dtudcfonted/dtaddcpf/addcpf.c
+programs/dtudcfonted/dtcpftogpf/cpftogpf.c
+programs/dtudcfonted/libfuty/getfname.c
+programs/dtudcfonted/libfuty/oakfuty.c
