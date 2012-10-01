@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2012/04/08 19:09:46 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/01 23:56:16 jihbed Exp $
 #
 
-DISTNAME=	PyFFTW3-0.2
+DISTNAME=	PyFFTW3-0.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/Py//S/FFTW/fftw/S/3//}
 PKGREVISION=	2
 CATEGORIES=	math
@@ -14,18 +14,10 @@ LICENSE=	gnu-gpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-WRKSRC=		${WRKDIR}/PyFFTW3-0.2
 USE_LANGUAGES=	c
 
 PYDISTUTILSPKG=	yes
 
-INSTALLATION_DIRS=	share/doc/py-fftw
-
-do-test:
-	cd ${WRKSRC} && ${PYTHONBIN} test/test_fftw3.py
-
-post-install:
-	${INSTALL_DATA} ${WRKSRC}/README.txt ${DESTDIR}${PREFIX}/share/doc/py-fftw
 
 .include "../../lang/python/extension.mk"
 .include "../../math/fftw/buildlink3.mk"

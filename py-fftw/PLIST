@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/09/02 12:29:46 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/10/01 23:56:16 jihbed Exp $
 ${PYSITELIB}/fftw3/__init__.py
 ${PYSITELIB}/fftw3/__init__.pyc
 ${PYSITELIB}/fftw3/__init__.pyo
@@ -11,4 +11,3 @@ ${PYSITELIB}/fftw3/planning.pyo
 ${PYSITELIB}/fftw3/wisdom.py
 ${PYSITELIB}/fftw3/wisdom.pyc
 ${PYSITELIB}/fftw3/wisdom.pyo
-share/doc/py-fftw/README.txt
