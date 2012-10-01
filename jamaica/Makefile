@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/11/02 18:00:17 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/01 20:15:49 asau Exp $
 #
 
 DISTNAME=		jamaica-1.0
@@ -22,12 +22,14 @@ SUBST_SED.jamaica+=	-e 's,@PREFIX@,${PREFIX},g'
 post-extract:
 	${CP} ${FILESDIR}/jamaica.sh.in ${WRKSRC}/jamaica.sh
 
+INSTALLATION_DIRS=	bin lib/java
+
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/jamaica.jar ${PREFIX}/lib/java/
-	${INSTALL_SCRIPT} ${WRKSRC}/jamaica.sh ${PREFIX}/bin/jamaica
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/jamaica/
+	${INSTALL_DATA} ${WRKSRC}/jamaica.jar ${DESTDIR}${PREFIX}/lib/java/
+	${INSTALL_SCRIPT} ${WRKSRC}/jamaica.sh ${DESTDIR}${PREFIX}/bin/jamaica
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/jamaica/
 	${INSTALL_DATA} ${WRKSRC}/examples/* \
-			${PREFIX}/share/examples/jamaica/
+			${DESTDIR}${PREFIX}/share/examples/jamaica/
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"

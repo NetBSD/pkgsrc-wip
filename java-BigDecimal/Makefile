@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:13:15 tvierling Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/01 20:19:36 asau Exp $
 #
 
 DISTNAME=		decimal
@@ -13,10 +13,12 @@ COMMENT=		Decimal arithmetic for Java
 
 WRKSRC=			${WRKDIR}/
 
+INSTALLATION_DIRS=	share/classpath
+
 do-build:
 
 do-install:
 	${INSTALL_DATA} ${WRKDIR}/decimal.jar \
-		${PREFIX}/share/classpath/
+		${DESTDIR}${PREFIX}/share/classpath/
 
 .include "../../mk/bsd.pkg.mk"
