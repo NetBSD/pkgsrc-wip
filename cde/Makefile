@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/10/01 06:41:28 jellehermsen Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/01 11:37:00 jellehermsen Exp $
 #
 # CDE - The Common Desktop Environment
 DISTNAME=	cde-2.2.0b
@@ -11,8 +11,7 @@ LICENSE=	gnu-lgpl-v2
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=     pkg-config
-.include "../../x11/libX11/buildlink3.mk"
-BUILD_MAKE_FLAGS= World all
+BUILD_MAKE_FLAGS= World all BOOTSTRAPCFLAGS="-I${X11BASE}/include/X11"
 
 DEPENDS+= bdftopcf-[0-9]*:../../fonts/bdftopcf
 DEPENDS+= libiconv-[0-9]*:../../converters/libiconv
@@ -28,6 +27,7 @@ WRKSRC=$(WRKDIR)/code/cde
 PKG_DESTDIR_SUPPORT= user-destdir
 
 .include "../../wip/mk/git-package.mk"
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/motif.buildlink3.mk"
 # url2pkg-marker (please do not remove this line.)
 .include "../../mk/bsd.pkg.mk"

@@ -1,9 +1,12 @@
 As of 2012-09-30 CDE doesn't build yet. I (Jelle Hermsen) am almost done
 adding most basic NetBSD compatibility. I've made this preliminary pkgsrc
-package and the thing it's lacking right now is a proper link to the X11
-headers (imake can't find them yet). This seems like a small thing, but
-this is my first pkgsrc package, so I still have to find out how stuff
-works :-)
+package.
+
+First off there are two tiny things:
+- during the build somehow it loses track of imake, probably a path mixup
+- the NetBSD config in config/cf/NetBSD.cf is really old, can be replaced
+  by for example a config from xorg
+
 
 The current patches are generated with mkpatches and consist mostly of
 changes to CSRG_BASED:
