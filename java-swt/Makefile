@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2010/06/13 22:47:09 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/01 21:04:14 asau Exp $
 #
 
 DISTNAME=	swt-2.1.3-linux-gtk
@@ -34,10 +34,12 @@ SUBST_STAGE.foo=    post-patch
 SUBST_FILES.foo=    make_gtk.mak
 SUBST_SED.foo=	    -e s,@PKG_JVM_HOME@,${PKG_JAVA_HOME},
 
+INSTALLATION_DIRS=	lib
+
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/classpath
-	${INSTALL_DATA} ${WRKSRC}/libswt-*gtk*.so ${PREFIX}/lib
-	${INSTALL_DATA} ${WRKSRC}/*.jar ${PREFIX}/share/classpath
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/classpath
+	${INSTALL_DATA} ${WRKSRC}/libswt-*gtk*.so ${DESTDIR}${PREFIX}/lib
+	${INSTALL_DATA} ${WRKSRC}/*.jar ${DESTDIR}${PREFIX}/share/classpath
 
 .include "../../devel/pango/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/11/03 14:43:30 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/01 21:05:45 asau Exp $
 #
 
 DISTNAME=		xmlrpc-1.2-b1
@@ -16,14 +16,14 @@ COMMENT=		Java implementation of XML-RPC
 do-build:
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/classpath/
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/classpath/
 	${INSTALL_DATA} ${WRKSRC}/xmlrpc-1.2-b1.jar \
-		${PREFIX}/share/classpath/xmlrpc-1.2-b1.jar
+		${DESTDIR}${PREFIX}/share/classpath/xmlrpc-1.2-b1.jar
 	${INSTALL_DATA} ${WRKSRC}/xmlrpc-1.2-b1-applet.jar \
-		${PREFIX}/share/classpath/xmlrpc-1.2-b1-applet.jar
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/java-xmlrpc/
+		${DESTDIR}${PREFIX}/share/classpath/xmlrpc-1.2-b1-applet.jar
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/java-xmlrpc/
 	${CP} -rf ${WRKSRC}/docs/apidocs/* \
-		${PREFIX}/share/doc/java-xmlrpc/
+		${DESTDIR}${PREFIX}/share/doc/java-xmlrpc/
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
