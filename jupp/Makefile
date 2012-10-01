@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/06/09 11:09:27 bsiegert Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/01 21:43:26 asau Exp $
 #
 
 DISTNAME=	joe-3.1jupp20
@@ -17,7 +17,6 @@ WRKSRC=		${WRKDIR}/jupp
 CONFLICTS+=	joe-[0-9]*
 BUILD_DEPENDS+=	mksh-[0-9]*:../../shells/mksh
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PREFIX:Q}/share/examples
 

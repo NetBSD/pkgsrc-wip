@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/02/28 14:53:17 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/01 21:43:23 asau Exp $
 #
 
 DISTNAME=	jlibtool-1.4
@@ -10,8 +10,6 @@ DISTFILES=	# empty
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://apr.apache.org/
 COMMENT=	Libtool replacement from the apache APR, written in C
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CONFIGURE=		yes
 USE_BSD_MAKEFILE=	yes

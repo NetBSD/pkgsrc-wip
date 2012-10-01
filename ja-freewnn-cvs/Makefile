@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/04/28 13:48:14 makoto Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/01 21:43:20 asau Exp $
 
 DISTNAME=	ja-freewnn-1.1.0.pl22
 PKGNAME=	ja-freewnn-1.1.0_pl22
@@ -13,8 +13,6 @@ MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
 HOMEPAGE=	http://freewnn.sourceforge.jp/
 COMMENT=	Japanese/Chinese/Korean input method (Japanese client library)
 WRKSRC=		${WRKDIR}/FreeWnn
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_TARGET=	all
 INSTALL_TARGET=	install

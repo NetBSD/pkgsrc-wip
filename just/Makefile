@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/12/05 21:45:20 tnn2 Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/01 21:43:26 asau Exp $
 #
 
 DISTNAME=	just-0.3.6
@@ -10,6 +10,8 @@ COMMENT=	Jarle's useless SNMP tools
 
 DEPENDS+=	tk>=8.3.2:../../x11/tk
 DEPENDS+=	tcl-scotty>=2.1.10:../../net/tcl-scotty
+
+PKG_DESTDIR_SUPPORT=	none
 
 .include "../../mk/bsd.prefs.mk"
 

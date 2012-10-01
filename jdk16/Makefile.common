@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2010/12/24 00:40:03 noud4 Exp $
+# $NetBSD: Makefile.common,v 1.10 2012/10/01 21:43:23 asau Exp $
 # used by wip/jdk14/Makefile
 # used by wip/jdk15/Makefile
 # used by wip/jdk16/Makefile
@@ -10,8 +10,6 @@ EXTRACT_SUFX=		.zip
 
 BUILD_DEPENDS+=		unzip-[0-9]*:../../archivers/unzip
 BUILD_DEPENDS+=		zip-[0-9]*:../../archivers/zip
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 RESTRICTED=		Redistribution of source or binaries permitted only by license terms
 NO_SRC_ON_CDROM=	${RESTRICTED}

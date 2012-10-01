@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/09/10 15:00:41 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/01 21:43:22 asau Exp $
 #
 
 DISTNAME=	jakarta-oro-2.0.8
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://jakarta.apache.org/oro/
 COMMENT=	Perl/awk/sh regular expressions for Java
 LICENSE=	apache-1.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_BUILD=		yes
 USE_TOOLS+=	pax

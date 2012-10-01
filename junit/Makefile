@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/08/03 18:53:09 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/01 21:43:26 asau Exp $
 #
 
 DISTNAME=	junit4.8.2
@@ -11,8 +11,6 @@ MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://www.junit.org/
 COMMENT=	Automated testing framework for Java
 LICENSE=	cpl-1.0
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_BUILD=	yes
 USE_JAVA=	run

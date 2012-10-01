@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/09/10 08:25:24 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/01 21:43:22 asau Exp $
 #
 
 DISTNAME=	jspeex-0.9.7
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://jspeex.sourceforge.net/
 COMMENT=	Java Implementation of Speex
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/jspeex
 

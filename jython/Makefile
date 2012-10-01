@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/04/08 19:09:43 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/01 21:43:26 asau Exp $
 #
 
 VERSION=	2.5.2b1
@@ -12,8 +12,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://www.jython.org/
 COMMENT=	Python for the Java Platform
 LICENSE=	python-software-foundation 
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/jython_installer-2.5.2b1.jar
 

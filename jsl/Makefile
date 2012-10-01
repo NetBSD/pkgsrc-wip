@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/06/28 13:47:42 hfath Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/01 21:43:25 asau Exp $
 #
 
 DISTNAME=	jsl-0.3.0-src
@@ -11,7 +11,6 @@ HOMEPAGE=	http://www.javascriptlint.com/
 COMMENT=	Standalone JavaScript lint
 LICENSE=	mpl-1.1
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS=	bin ${DOCDIR} ${EGDIR}
 
 DOCDIR=		share/doc/html/jsl

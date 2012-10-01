@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/09/10 15:02:50 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/01 21:43:22 asau Exp $
 #
 
 DISTNAME=	jlayer1.0.1
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.javazoom.net/javalayer/javalayer.html
 COMMENT=	Library to decode, convert and play MP3 files
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/JLayer1.0.1
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.11 2011/06/18 13:48:19 obache Exp $
+# $NetBSD: Makefile.common,v 1.12 2012/10/01 21:43:20 asau Exp $
 # used by wip/ja-freewnn-server/Makefile
 # used by wip/ja-freewnn-lib/Makefile
 
@@ -11,8 +11,6 @@ MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
 HOMEPAGE=	http://freewnn.sourceforge.jp/
 COMMENT=	Japanese/Chinese/Korean input method
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=	YES
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2010/06/24 18:30:45 schnoebe Exp $
+# $NetBSD: Makefile,v 1.71 2012/10/01 21:43:20 asau Exp $
 
 DISTNAME=		jabberd-2.2.10
 CATEGORIES=		chat
@@ -9,8 +9,6 @@ MAINTAINER=		eric@cirr.com
 HOMEPAGE=		http://jabberd2.xiaoka.com/
 COMMENT=		XMPP (Jabber) instant messaging server
 LICENSE=		gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=		jabberd-[0-9]*
 

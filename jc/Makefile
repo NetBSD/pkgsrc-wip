@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2010/01/17 12:03:27 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/01 21:43:23 asau Exp $
 #
 
 DISTNAME=		jc-1.2.3
@@ -9,6 +9,8 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=jcvm/}
 MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://jcvm.sourceforge.net/
 COMMENT=		Native java compiler using gcc
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/09/10 15:12:33 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/01 21:43:22 asau Exp $
 #
 
 DISTNAME=	tritonus_share-0.3.6
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://tritonus.org/plugins.html
 COMMENT=	Shared classes required by all other Tritonus plug-ins
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 

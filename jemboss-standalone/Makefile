@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2011/10/26 13:47:14 noud4 Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/01 21:43:23 asau Exp $
 #
 
 DISTNAME=		EMBOSS-2.9.0
@@ -18,6 +18,8 @@ DEPENDS+=		xerces-j>=1.2.0:../../textproc/xerces-j
 DEPENDS+=		apache-ant>=1.5.3.1:../../devel/apache-ant
 
 DIST_SUBDIR=		emboss/emboss-2.9.0
+
+PKG_DESTDIR_SUPPORT=	none
 
 PKG_DEFAULT_JVM=	sun-jdk13
 

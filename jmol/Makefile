@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/01/17 22:05:28 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/01 21:43:24 asau Exp $
 #
 
 DISTNAME=	Jmol-12.0.12-binary
@@ -11,8 +11,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://jmol.sourceforge.net/
 COMMENT=	Jmol: an open-source Java viewer for chemical structures in 3D
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/jmol-12.0.12
 

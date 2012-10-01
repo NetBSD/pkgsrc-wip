@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/09/10 08:36:36 jihbed Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/01 21:43:22 asau Exp $
 #
 
 DISTNAME=	basicplayer3.0
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.javazoom.net/
 COMMENT=	Threaded simple player class based on JavaSound API
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/BasicPlayer3.0
 

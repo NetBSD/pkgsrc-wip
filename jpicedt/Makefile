@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/01/24 09:04:35 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/01 21:43:24 asau Exp $
 #
 
 VERSION=	1.4.1-03
@@ -12,8 +12,6 @@ MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://www.jpicedt.org/
 COMMENT=	Interactive picture edtor for LaTeX and PSTricks
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 USE_TOOLS+=	pax

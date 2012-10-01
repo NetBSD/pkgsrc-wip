@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/05/23 11:45:11 pdtafti Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/01 21:43:21 asau Exp $
 #
 
 PKGNAME=	jabref-2.6
@@ -11,8 +11,6 @@ MAINTAINER=	pouya@san-serriffe.org
 HOMEPAGE=	http://jabref.sourceforge.net/
 COMMENT=	JabRef is an advanced reference manager that uses the BibTeX format
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_JAVA=run
 USE_JAVA2=1.5

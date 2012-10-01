@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/08/10 23:22:54 jihbed Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/01 21:43:25 asau Exp $
 #
 
 DISTNAME=	json-c-0.9
@@ -9,8 +9,6 @@ MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://json.org/
 COMMENT=	JSON (Javascript Object Notation) implementation in C
 LICENSE=	mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

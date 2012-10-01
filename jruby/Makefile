@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/09/28 12:00:44 ryo-on Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/01 21:43:24 asau Exp $
 #
 
 DISTNAME=	jruby-bin-1.6.4
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://jruby.org/
 COMMENT=	Implementation of the Ruby programming language atop the JVM
 LICENSE=	cpl-1.0 OR gnu-gpl-v2 OR gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=	${WRKDIR}/${PKGNAME_NOREV}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/10/09 06:31:56 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/01 21:43:22 asau Exp $
 #
 
 DISTNAME=		activation-1.1.1
@@ -9,6 +9,8 @@ MASTER_SITES=	http://ftp.gnu.org/gnu/classpathx/
 MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://ftp.gnu.org/gnu/classpathx/
 COMMENT=		GNU Java Activation Framework
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes

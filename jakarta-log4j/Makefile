@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2009/12/03 10:38:10 jihbed Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/01 21:43:22 asau Exp $
 #
 
 DISTNAME=	logging-log4j-1.3alpha-8
@@ -10,8 +10,6 @@ MAINTAINER=	drue@users.sourceforge.net
 HOMEPAGE=	http://logging.apache.org/log4j/docs/
 COMMENT=	Logging facility for Java
 #LICENSE=	# TODO: (see mk/license.mk)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
