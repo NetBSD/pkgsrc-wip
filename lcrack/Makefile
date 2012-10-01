@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/11/02 18:00:19 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/01 22:17:50 asau Exp $
 #
 
 DISTNAME=		lcrack-20040914
@@ -14,9 +14,11 @@ HAS_CONFIGURE=	yes
 
 CONFIGURE_ARGS+=unknown  # talking with authors to solve this :)
 
+INSTALLATION_DIRS=	bin
+
 do-install:
 .for _file_ in lcrack mkword regex mktbl
-	${INSTALL_PROGRAM} ${WRKSRC}/${_file_} ${PREFIX}/bin/${_file_}
+	${INSTALL_PROGRAM} ${WRKSRC}/${_file_} ${DESTDIR}${PREFIX}/bin/${_file_}
 .endfor
 .undef _file_
 

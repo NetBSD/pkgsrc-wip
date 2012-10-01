@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2010/04/02 20:55:19 hfath Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/01 22:12:50 asau Exp $
 
 DISTNAME=	l2tpd-0.69
 CATEGORIES=	net
@@ -47,15 +47,17 @@ SUBST_FILES.l2tpd+=	doc/l2tpd.8 doc/l2tpd.conf.sample
 SUBST_FILES.l2tpd+=	doc/l2tp-secrets.5 doc/l2tpd.conf.5
 SUBST_SED.l2tpd+=	-e 's|%%SYSCONFDIR%%|${PKG_SYSCONFDIR}|g'
 
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man5 ${PKGMANDIR}/man8
+
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC:Q}/l2tpd ${PREFIX:Q}/bin
-	${INSTALL_DATA_DIR} ${DOCDIR:Q}
-	${INSTALL_DATA} ${WRKSRC:Q}/README ${DOCDIR:Q}
-	${INSTALL_MAN} ${WRKSRC:Q}/doc/l2tpd.8 ${PREFIX:Q}/${PKGMANDIR}/man8
-	${INSTALL_MAN} ${WRKSRC:Q}/doc/l2tp-secrets.5 ${PREFIX:Q}/${PKGMANDIR}/man5
-	${INSTALL_MAN} ${WRKSRC:Q}/doc/l2tpd.conf.5 ${PREFIX:Q}/${PKGMANDIR}/man5
-	${INSTALL_DATA_DIR} ${EGDIR:Q}
-	${INSTALL_DATA} ${WRKSRC:Q}/doc/l2tpd.conf.sample ${EGDIR:Q}
-	${INSTALL_DATA} ${WRKSRC:Q}/doc/l2tp-secrets.sample ${EGDIR:Q}
+	${INSTALL_PROGRAM} ${WRKSRC:Q}/l2tpd ${DESTDIR}${PREFIX:Q}/bin
+	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR:Q}
+	${INSTALL_DATA} ${WRKSRC:Q}/README ${DESTDIR}${DOCDIR:Q}
+	${INSTALL_MAN} ${WRKSRC:Q}/doc/l2tpd.8 ${DESTDIR}${PREFIX:Q}/${PKGMANDIR}/man8
+	${INSTALL_MAN} ${WRKSRC:Q}/doc/l2tp-secrets.5 ${DESTDIR}${PREFIX:Q}/${PKGMANDIR}/man5
+	${INSTALL_MAN} ${WRKSRC:Q}/doc/l2tpd.conf.5 ${DESTDIR}${PREFIX:Q}/${PKGMANDIR}/man5
+	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR:Q}
+	${INSTALL_DATA} ${WRKSRC:Q}/doc/l2tpd.conf.sample ${DESTDIR}${EGDIR:Q}
+	${INSTALL_DATA} ${WRKSRC:Q}/doc/l2tp-secrets.sample ${DESTDIR}${EGDIR:Q}
 
 .include "../../mk/bsd.pkg.mk"

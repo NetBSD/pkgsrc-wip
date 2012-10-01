@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/06/13 22:47:10 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/01 22:15:52 asau Exp $
 #
 
 DISTNAME=	${PKGNAME}.src
@@ -33,15 +33,17 @@ do-build:
 	cd ${WRKSRC}/src/output/RtAudio && \
 	env ${CONFIGURE_ENV} ${QMAKE} -spec netbsd-g++ && env ${MAKE_ENV} make
 
+INSTALLATION_DIRS=	bin
+
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/bin/last.fm ${LOCALBASE}/bin/last.fm
-	${INSTALL_LIB_DIR} ${LOCALBASE}/lib/last.fm
-	cd ${WRKSRC}/bin/.libs && pax -rwpp . ${LOCALBASE}/lib/last.fm
-	${INSTALL_DATA_DIR} ${LFMDATA}
-	${INSTALL_DATA_DIR} ${LFMDATA}/data
-	${INSTALL_DATA_DIR} ${LFMDATA}/services
-	${INSTALL_DATA} ${FILESDIR}/lastfm.protocol ${LFMDATA}/services
-	cd ${WRKSRC}/bin && pax -rwpp . ${LFMDATA}/
+	${INSTALL_SCRIPT} ${WRKSRC}/bin/last.fm ${DESTDIR}${PREFIX}/bin/last.fm
+	${INSTALL_LIB_DIR} ${DESTDIR}${PREFIX}/lib/last.fm
+	cd ${WRKSRC}/bin/.libs && pax -rwpp . ${DESTDIR}${PREFIX}/lib/last.fm
+	${INSTALL_DATA_DIR} ${DESTDIR}${LFMDATA}
+	${INSTALL_DATA_DIR} ${DESTDIR}${LFMDATA}/data
+	${INSTALL_DATA_DIR} ${DESTDIR}${LFMDATA}/services
+	${INSTALL_DATA} ${FILESDIR}/lastfm.protocol ${DESTDIR}${LFMDATA}/services
+	cd ${WRKSRC}/bin && pax -rwpp . ${DESTDIR}${LFMDATA}/
 
 .include "../../x11/qt4-libs/buildlink3.mk"
 .include "../../x11/qt4-tools/buildlink3.mk"
