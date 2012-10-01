@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2011/11/21 19:08:56 absd Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/01 21:33:19 asau Exp $
 #
 
 DISTNAME=		CoreReferenceJS15
@@ -20,10 +20,10 @@ NO_BUILD=		yes
 USE_TOOLS+=		pax
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/${HTMLDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/${HTMLDIR}
 	${CAT} ${PKGDIR}/PLIST.pre >${PLIST_SRC}
-	cd ${WRKDIR} && pax -rw -pp [a-z]* ${PREFIX}/${HTMLDIR}
-	${CHMOD} -R go-w ${PREFIX}/${HTMLDIR}
-	cd ${PREFIX} && ${FIND} ${HTMLDIR} -type f -print >>${PLIST_SRC}
+	cd ${WRKDIR} && pax -rw -pp [a-z]* ${DESTDIR}${PREFIX}/${HTMLDIR}
+	${CHMOD} -R go-w ${DESTDIR}${PREFIX}/${HTMLDIR}
+	cd ${DESTDIR}${PREFIX} && ${FIND} ${HTMLDIR} -type f -print >>${PLIST_SRC}
 
 .include "../../mk/bsd.pkg.mk"
