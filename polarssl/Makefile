@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/08/13 21:17:41 mwilhelmy Exp $
+# $NetBSD: Makefile,v 1.13 2012/10/01 09:01:15 mwilhelmy Exp $
 #
 
 DISTNAME=		polarssl-1.1.4-gpl
@@ -11,8 +11,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://polarssl.org/
 COMMENT=		Lightweight, modular cryptographic and SSL/TLS library
 LICENSE=		gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 USE_TOOLS+=		gmake
