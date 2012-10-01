@@ -1,4 +1,6 @@
-$NetBSD: patch-src_xa.c,v 1.1 2012/10/01 09:17:07 mwilhelmy Exp $
+$NetBSD: patch-src_xa.c,v 1.2 2012/10/01 09:24:54 mwilhelmy Exp $
+
+Rename internal getline so it doesn't conflict with libc's
 
 --- src/xa.c.orig	2009-01-21 16:57:32.000000000 +0000
 +++ src/xa.c
