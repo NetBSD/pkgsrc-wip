@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/11/02 18:00:18 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/01 20:44:08 asau Exp $
 #
 
 DISTNAME=		gnujaxp-1.0beta1
@@ -15,11 +15,11 @@ COMMENT=		XML extensions for GNU classpath
 do-build:
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/classpath/
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/classpath/
 	${INSTALL_DATA} ${WRKSRC}/gnujaxp.jar \
-		${PREFIX}/share/classpath/gnujaxp.jar
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/java-gnujaxp/
+		${DESTDIR}${PREFIX}/share/classpath/gnujaxp.jar
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/java-gnujaxp/
 	${CP} -rf ${WRKSRC}/apidoc/* \
-		${PREFIX}/share/doc/java-gnujaxp/
+		${DESTDIR}${PREFIX}/share/doc/java-gnujaxp/
 
 .include "../../mk/bsd.pkg.mk"

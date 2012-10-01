@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2004/07/18 15:50:24 ppostma Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/01 20:34:09 asau Exp $
 #
 
 DISTNAME=		gnu-crypto-2.0.1-bin
@@ -14,12 +14,12 @@ COMMENT=		Free cryptographic implementation for Java
 do-build:
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/classpath/
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/classpath/
 	${INSTALL_DATA} ${WRKSRC}/lib/gnu-crypto.jar \
-		${PREFIX}/share/classpath/
+		${DESTDIR}${PREFIX}/share/classpath/
 	${INSTALL_DATA} ${WRKSRC}/lib/javax-crypto.jar \
-		${PREFIX}/share/classpath/
+		${DESTDIR}${PREFIX}/share/classpath/
 	${INSTALL_DATA} ${WRKSRC}/lib/javax-security.jar \
-		${PREFIX}/share/classpath/
+		${DESTDIR}${PREFIX}/share/classpath/
 
 .include "../../mk/bsd.pkg.mk"
