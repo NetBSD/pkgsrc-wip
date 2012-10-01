@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4888 2012/09/30 14:04:56 jellehermsen Exp $
+# $Id: Makefile,v 1.4889 2012/10/01 13:45:07 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -3084,6 +3084,7 @@ SUBDIR+=	tinylogin
 SUBDIR+=	tipp10
 SUBDIR+=	tk-tkimg
 SUBDIR+=	tk85
+SUBDIR+=	tk85-itk
 SUBDIR+=	tk86
 SUBDIR+=	tkhtml3
 SUBDIR+=	tkpng
