@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1 2012/10/01 13:42:30 othyro Exp $
+include/itk.h
+include/itkDecls.h
+lib/itk${PKGVERSION}/Archetype.itk
+lib/itk${PKGVERSION}/Toplevel.itk
+lib/itk${PKGVERSION}/Widget.itk
+lib/itk${PKGVERSION}/itk.tcl
+lib/itk${PKGVERSION}/libitk33.so
+lib/itk${PKGVERSION}/pkgIndex.tcl
+lib/itk${PKGVERSION}/tclIndex
+man/mann/Archetype.n
+man/mann/Toplevel.n
+man/mann/Widget.n
+man/mann/itk.n
+man/mann/itkvars.n
+man/mann/usual.n
