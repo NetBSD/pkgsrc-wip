@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/07/02 13:37:56 moubctez Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/01 21:57:33 asau Exp $
 #
 
 DISTNAME=		kahakai-0.6.2
@@ -10,6 +10,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://kahakai.sourceforge.net/
 COMMENT=		Window manager with Python scripting
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes

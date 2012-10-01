@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/07/02 13:37:58 moubctez Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/01 21:57:40 asau Exp $
 
 DISTNAME=	kmymoney-4.6.1
 PKGREVISION=	1
@@ -14,8 +14,6 @@ LICENSE=	gnu-gpl-v2
 CONFLICTS+=	kmymoney2-[0-9]*
 
 BUILD_DEPENDS+=	automoc4-[0-9]*:../../devel/automoc4
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 #MAKE_JOBS_SAFE=no
 BUILD_MAKE_FLAGS+= VERBOSE=yes

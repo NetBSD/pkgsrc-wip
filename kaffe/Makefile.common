@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.27 2008/05/24 15:34:11 tnn2 Exp $
+# $NetBSD: Makefile.common,v 1.28 2012/10/01 21:57:32 asau Exp $
 # used by wip/kaffe-x11/Makefile
 
 DISTNAME=     kaffe-1.1.7
@@ -10,6 +10,8 @@ MASTER_SITES=		ftp://ftp.kaffe.org/pub/kaffe/v1.1.x-development/
 MAINTAINER= tonio@NetBSD.org
 HOMEPAGE=   http://www.kaffe.org/
 COMMENT=    Virtual machine capable of running Java(tm) code
+
+PKG_DESTDIR_SUPPORT=	none
 
 EXTRACT_USING=	gtar
 DEPENDS+=	jikes>=1.22:../../lang/jikes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/08/27 11:29:42 kristerw Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/01 21:57:40 asau Exp $
 
 DISTNAME=	kmymoney
 PKGREVISION=	1
@@ -11,8 +11,6 @@ COMMENT=	Personal finance manager for KDE 4, Subversion Snapshot
 LICENSE=	gnu-gpl-v2
 
 BUILD_DEPENDS+=	automoc4-[0-9]*:../../devel/automoc4
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 SVN_REPOSITORIES=	kmymoney
 SVN_ROOT.kmymoney=	svn://anonsvn.kde.org/home/kde/trunk/extragear/office/kmymoney

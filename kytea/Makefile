@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/09/09 08:29:50 obache Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/01 21:57:48 asau Exp $
 #
 
 DISTNAME=	kytea-0.4.2
@@ -9,8 +9,6 @@ MAINTAINER=	obache@users.sourceforge.net
 HOMEPAGE=	http://www.phontron.com/kytea/
 COMMENT=	Kyoto Text Analysis Toolkit
 LICENSE=	apache-2.0
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 RESTRICTED=	Included model is not re-distributed without prior permission.
 NO_SRC_ON_FTP=		${RESTRICTED}

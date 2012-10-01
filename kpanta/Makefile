@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2010/06/13 22:47:09 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.13 2012/10/01 21:57:42 asau Exp $
 #
 
 DISTNAME=		kpanta_1_0
@@ -12,6 +12,8 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.geocities.com/anil_rvce/kpanta.html
 COMMENT=		AntiChess - like ordinary chess, but the objective is to loose pieces
+
+PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++

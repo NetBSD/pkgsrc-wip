@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/07/02 13:37:57 moubctez Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/01 21:57:38 asau Exp $
 #
 
 DISTNAME=	kgraphviewer-2.0.2-kde4.4.0
@@ -15,7 +15,6 @@ LICENSE=	gnu-gpl-v2
 
 BUILD_DEPENDS+=	automoc4>=0.9.83:../../devel/automoc4
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2012/09/17 05:20:55 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.20 2012/10/01 21:57:40 asau Exp $
 #
 
 DISTNAME=	koffice-2.3.3
@@ -17,8 +17,6 @@ DEPENDS+=	pstoedit>=3.0:../../graphics/pstoedit
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	pkg-config
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CHECK_INTERPRETER_SKIP+=	share/kde/apps/kword/scripts/samples/*
 

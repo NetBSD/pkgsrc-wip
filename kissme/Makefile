@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/01/22 11:49:32 tnn2 Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/01 21:57:40 asau Exp $
 #
 
 DISTNAME=		kissme-0.0.32
@@ -11,6 +11,8 @@ COMMENT=		Java Virtual Machine (JVM) freely available
 
 DEPENDS+=		classpath>=0.7:../../lang/classpath
 DEPENDS+=		zip>=2.3:../../archivers/zip
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes

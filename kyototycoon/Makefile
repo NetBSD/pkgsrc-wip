@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/04/19 11:23:30 genolopolis Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/01 21:57:47 asau Exp $
 #
 
 DISTNAME=	kyototycoon-0.9.38
@@ -9,8 +9,6 @@ MAINTAINER=	msporleder@gmail.com
 HOMEPAGE=	http://fallabs.com/kyototycoon/
 COMMENT=	Kyoto Tycoon is a lightweight database server for Kyoto Cabinet
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2010/06/13 22:47:09 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/01 21:57:40 asau Exp $
 #
 
 # XXX You must update MASTER_SITES download number when updating
@@ -11,6 +11,8 @@ MASTER_SITES=		http://kino.schirmacher.de/filemanager/download/42/
 MAINTAINER=		reed@reedmedia.net
 HOMEPAGE=		http://www.kinodv.org/
 COMMENT=		Non-linear editor for Digital Video data
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_TOOLS+=		gmake
 USE_PKGLOCALEDIR=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2010/06/13 22:47:09 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.17 2012/10/01 21:57:44 asau Exp $
 #
 
 DISTNAME=	kxmleditor-1.0.0
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=kxmleditor/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://kxmleditor.sourceforge.net/
 COMMENT=	KDE xml editor
+
+PKG_DESTDIR_SUPPORT=	none
 
 WRKSRC=			${WRKDIR}/${DISTNAME}
 GNU_CONFIGURE=		yes

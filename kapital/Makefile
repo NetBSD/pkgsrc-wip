@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2010/06/13 22:47:09 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.22 2012/10/01 21:57:33 asau Exp $
 
 DISTNAME=	kapital-1.1.030606
 PKGREVISION=	5
@@ -34,6 +34,8 @@ _FETCH_MESSAGE= \
 	${ECHO} "  top of the list."; \
 	${ECHO} ; \
 	${ECHO} "======================================================================"
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_TOOLS+=	gmake
 GNU_CONFIGURE=	YES

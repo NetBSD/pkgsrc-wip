@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2010/06/13 22:47:09 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.13 2012/10/01 21:57:42 asau Exp $
 #
 
 DISTNAME=		kplayer-0.6.3
@@ -11,6 +11,8 @@ MAINTAINER=		shattered@users.sourceforge.net
 HOMEPAGE=		http://kplayer.sourceforge.net/
 COMMENT=		KDE media player based on MPlayer
 LICENSE=		gnu-gpl-v3
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2011/01/13 09:55:18 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/01 21:57:40 asau Exp $
 
 DISTNAME=	klamav-0.37-source
 PKGNAME=	${DISTNAME:S/-source//}
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=klamav/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://klamav.sourceforge.net/
 COMMENT=	Clam Anti-Virus Manager For The KDE Desktop
+
+PKG_DESTDIR_SUPPORT=	none
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/${PKGNAME_NOREV}
 

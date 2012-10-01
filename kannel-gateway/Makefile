@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/10/29 08:32:45 shattered Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/01 21:57:33 asau Exp $
 #
 
 DISTNAME=		gateway-1.2.1
@@ -8,6 +8,8 @@ MASTER_SITES=		http://www.kannel.org/download/1.2.1/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.kannel.org/download/1.2.1/
 COMMENT=		Kannel WAP gateway
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_TOOLS+=		gmake
 USE_LIBTOOL=		yes

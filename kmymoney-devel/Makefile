@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/08/27 11:29:42 kristerw Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/01 21:57:40 asau Exp $
 
 DISTNAME=	kmymoney-3.98.0
 PKGREVISION=	3
@@ -12,8 +12,6 @@ COMMENT=	Personal finance manager for KDE 4
 LICENSE=	gnu-gpl-v2
 
 BUILD_DEPENDS+=	automoc4-[0-9]*:../../devel/automoc4
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 #MAKE_JOBS_SAFE=no
 

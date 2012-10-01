@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2010/12/26 05:01:22 davesainty Exp $
+# $NetBSD: Makefile,v 1.21 2012/10/01 21:57:43 asau Exp $
 #
 
 DISTNAME=		kvirc-3.4.2
@@ -14,8 +14,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		siflfran@hawo.stw.uni-erlangen.de
 HOMEPAGE=		http://www.kvirc.net/
 COMMENT=		QT based irc client
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake msgfmt perl
 USE_LANGUAGES=		c c++

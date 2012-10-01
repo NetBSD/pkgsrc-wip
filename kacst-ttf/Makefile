@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/11/09 16:38:56 noud4 Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/01 21:57:32 asau Exp $
 #
 
 DISTNAME=	kacst_fonts_2.01
@@ -12,8 +12,6 @@ MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://sourceforge.net/projects/arabeyes/files/kacst_fonts/
 COMMENT=	Truetype Arabic fonts created by KACST
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/KacstArabicFonts-2.01
 USE_LANGUAGES=	# none

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/12/01 23:49:15 hisazumi Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/01 21:57:33 asau Exp $
 #
 
 DISTNAME=		Kahua-0.3.4
@@ -9,6 +9,8 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		nel@soraneko.com
 HOMEPAGE=		http://www.kahua.org/download/kahua/
 COMMENT=		Kahua is a web application framework for Gauche
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/12/29 22:50:20 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/01 21:57:43 asau Exp $
 #
 
 DISTNAME=	KtJet-1.08
@@ -10,8 +10,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://projects.hepforge.org/ktjet/
 COMMENT=	C++ implementation of the K clustering algorithm
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CHECK_PORTABILITY_SKIP=  configure
 

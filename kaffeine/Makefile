@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/09/08 15:11:31 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/01 21:57:32 asau Exp $
 #
 
 DISTNAME=	kaffeine-1.2.2
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://kaffeine.kde.org/
 COMMENT=	Full featured Multimedia-Player for KDE
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++

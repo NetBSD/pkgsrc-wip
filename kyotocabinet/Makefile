@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/03/31 21:45:06 bubuchka Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/01 21:57:44 asau Exp $
 #
 
 DISTNAME=	kyotocabinet-1.2.73
@@ -9,8 +9,6 @@ MAINTAINER=	msporleder@gmail.com
 HOMEPAGE=	http://fallabs.com/kyotocabinet/
 COMMENT=	Straightforward implementation of DBM
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config

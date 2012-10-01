@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/06/04 09:08:04 tnn2 Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/01 21:57:31 asau Exp $
 #
 
 DISTNAME=	kBuild-0.1.5-p2-all
@@ -10,8 +10,6 @@ MAINTAINER=	tnn@NetBSD.org
 HOMEPAGE=	ftp://ftp.netlabs.org/pub/kbuild/
 COMMENT=	Framework for writing simple makefiles for complex tasks
 LICENSE=	gnu-gpl-v3 # but also various other licenses in 3rd party code
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes

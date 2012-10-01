@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2010/06/13 22:47:09 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/01 21:57:48 asau Exp $
 #
 
 DISTNAME=		kyra_src_1_6_5
@@ -12,6 +12,8 @@ HOMEPAGE=		http://kyra.sourceforge.net/
 COMMENT=		Sprite engine in C++ that uses SDL library
 
 CONFLICTS+=		kyra2-*
+
+PKG_DESTDIR_SUPPORT=	none
 
 WRKSRC=			${WRKDIR}/kyra
 USE_PKGLOCALEDIR=	yes
