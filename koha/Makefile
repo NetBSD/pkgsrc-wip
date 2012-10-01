@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/09/27 10:12:49 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/01 21:52:41 asau Exp $
 
 DISTNAME=	koha-2.2.9
 #PKGREVISION=	0
@@ -372,7 +372,7 @@ do-build:
 	@${TRUE}
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/koha
-	${CP} -r ${WRKDIR}/${DISTNAME}/* ${PREFIX}/share/koha
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/koha
+	${CP} -r ${WRKDIR}/${DISTNAME}/* ${DESTDIR}${PREFIX}/share/koha
 
 .include "../../mk/bsd.pkg.mk"
