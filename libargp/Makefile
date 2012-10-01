@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/02/16 12:13:13 lkundrak Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/01 22:33:17 asau Exp $
 
 DISTNAME=		argp-standalone-1.3
 PKGNAME=		libargp-1.3
@@ -14,7 +14,7 @@ GNU_CONFIGURE=		yes
 INSTALLATION_DIRS+=	lib include
 
 do-install:
-	${INSTALL_DATA}	${WRKSRC}/libargp.a ${PREFIX}/lib
-	${INSTALL_DATA}	${WRKSRC}/argp.h ${PREFIX}/include
+	${INSTALL_DATA}	${WRKSRC}/libargp.a ${DESTDIR}${PREFIX}/lib
+	${INSTALL_DATA}	${WRKSRC}/argp.h ${DESTDIR}${PREFIX}/include
 
 .include "../../mk/bsd.pkg.mk"
