@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/08/17 18:21:28 mwilhelmy Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/02 07:07:24 mwilhelmy Exp $
 #
 
 DISTNAME=	tkimg-1.3-2008-01-16
@@ -14,8 +14,6 @@ COMMENT=	Add support for several image formats to Tk
 WRKSRC=		${WRKDIR}/tkimg-1.3
 GNU_CONFIGURE=	yes
 TEST_TARGET=	test
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
