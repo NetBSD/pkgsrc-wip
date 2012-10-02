@@ -1,0 +1,2 @@
+- Finding wxWindows at configure is not clean yet.
+  See the combination of patch-configure and SUBST in Makefile.

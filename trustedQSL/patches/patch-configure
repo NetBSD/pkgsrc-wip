@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2012/10/02 15:25:35 makoto Exp $
+
+Adjust for wxWindows path
+
+--- configure.orig	2012-10-02 23:51:49.000000000 +0900
++++ configure	2012-10-02 23:52:45.000000000 +0900
+@@ -4767,7 +4767,7 @@
+ if test "${with_wxwindows+set}" = set; then
+   withval=$with_wxwindows;  checkwxdir "$withval"
+ else
+-   checkwxdir "$HOME/wx"; checkwxdir "/usr"; checkwxdir "/usr/local"
++   checkwxdir "$HOME/wx"; checkwxdir "/usr"; checkwxdir "/usr/local"; checkwxdir @@PREFIX@@;
+ 
+ fi
+ 
