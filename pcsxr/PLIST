@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2012/09/22 16:45:49 othyro Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/10/02 21:55:52 othyro Exp $
 bin/pcsx
 lib/games/psemu/cfgDFCdrom
 lib/games/psemu/cfgDFInput
@@ -12,11 +12,11 @@ lib/games/psemu/libDFSound.la
 lib/games/psemu/libDFXVideo.la
 man/man1/pcsx.1
 share/applications/pcsx.desktop
-${PLIST.nls}share/locale/it/LC_MESSAGES/pcsx.mo
-${PLIST.nls}share/locale/pt_BR/LC_MESSAGES/pcsx.mo
-${PLIST.nls}share/locale/ru_RU/LC_MESSAGES/pcsx.mo
-${PLIST.nls}share/locale/zh_CN/LC_MESSAGES/pcsx.mo
-${PLIST.nls}share/locale/zh_TW/LC_MESSAGES/pcsx.mo
+${PLIST.nls}${PKGLOCALEDIR}/locale/it/LC_MESSAGES/pcsx.mo
+${PLIST.nls}${PKGLOCALEDIR}/locale/pt_BR/LC_MESSAGES/pcsx.mo
+${PLIST.nls}${PKGLOCALEDIR}/locale/ru_RU/LC_MESSAGES/pcsx.mo
+${PLIST.nls}${PKGLOCALEDIR}/locale/zh_CN/LC_MESSAGES/pcsx.mo
+${PLIST.nls}${PKGLOCALEDIR}/locale/zh_TW/LC_MESSAGES/pcsx.mo
 share/pcsx/pcsx.glade2
 share/pcsx/pcsx.jpg
 share/pixmaps/pcsx-icon.png
