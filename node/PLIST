@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2012/09/19 14:36:46 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.12 2012/10/02 11:20:28 fhajny Exp $
 bin/node
 bin/node-waf
 bin/npm
@@ -688,6 +688,7 @@ lib/node_modules/npm/node_modules/npm-registry-client/lib/unpublish.js
 lib/node_modules/npm/node_modules/npm-registry-client/lib/upload.js
 lib/node_modules/npm/node_modules/npm-registry-client/package.json
 lib/node_modules/npm/node_modules/npmconf/.npmignore
+lib/node_modules/npm/node_modules/npmconf/LICENSE
 lib/node_modules/npm/node_modules/npmconf/README.md
 lib/node_modules/npm/node_modules/npmconf/config-defs.js
 lib/node_modules/npm/node_modules/npmconf/node_modules/config-chain/.npmignore
@@ -710,6 +711,10 @@ lib/node_modules/npm/node_modules/once/LICENSE
 lib/node_modules/npm/node_modules/once/README.md
 lib/node_modules/npm/node_modules/once/once.js
 lib/node_modules/npm/node_modules/once/package.json
+lib/node_modules/npm/node_modules/opener/LICENSE.txt
+lib/node_modules/npm/node_modules/opener/README.md
+lib/node_modules/npm/node_modules/opener/opener.js
+lib/node_modules/npm/node_modules/opener/package.json
 lib/node_modules/npm/node_modules/osenv/LICENSE
 lib/node_modules/npm/node_modules/osenv/README.md
 lib/node_modules/npm/node_modules/osenv/osenv.js

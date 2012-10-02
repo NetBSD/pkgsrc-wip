@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.18 2012/09/19 14:36:46 fhajny Exp $
+$NetBSD: distinfo,v 1.19 2012/10/02 11:20:28 fhajny Exp $
 
-SHA1 (node-v0.8.9.tar.gz) = 2d3234adceedc2dc87284af88609ede6ecd71734
-RMD160 (node-v0.8.9.tar.gz) = 2ae53c163b4924dffbdd76e3b9d3a8f85850c9cb
-Size (node-v0.8.9.tar.gz) = 12146570 bytes
+SHA1 (node-v0.8.11.tar.gz) = e9dd36cbbe03c632ee7e9c52e06122fa022981c8
+RMD160 (node-v0.8.11.tar.gz) = b8a49604570d45e38eb88e2101da0cab4f2f7026
+Size (node-v0.8.11.tar.gz) = 11816407 bytes
 SHA1 (patch-common.gypi) = 427e299ec84722321240878e2e6df5860909ee16
 SHA1 (patch-deps_uv_common.gypi) = 556d40673e4e2deff8ade09c03dec3c301ab3464
 SHA1 (patch-deps_uv_src_unix_netbsd.c) = e812ed14e06350adde7aa6fd438c1aa6c9af1e73
