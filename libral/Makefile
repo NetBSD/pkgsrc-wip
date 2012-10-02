@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/10/02 19:51:30 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/02 20:03:41 othyro Exp $
 #
 
 DISTNAME=	libral-0.9.6
@@ -14,14 +14,10 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	aclocal autoconf autoheader automake gmake pkg-config
+USE_LANGUAGES+=	c c++ fortran
+USE_TOOLS+=	gmake pkg-config
 
 PKGCONFIG_OVERRIDE+=	libral.pc.in
-
-pre-configure:
-	set -e; cd ${WRKSRC}; \
-	aclocal; autoheader; automake -a --foreign -i; autoconf
-
 
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
