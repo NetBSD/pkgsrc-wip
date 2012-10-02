@@ -1,13 +1,14 @@
-$NetBSD: patch-util__file_allocator.cpp,v 1.1 2012/02/22 11:36:27 bartoszkuzma Exp $
+$NetBSD: patch-util__file_allocator.cpp,v 1.2 2012/10/02 08:48:46 fhajny Exp $
 
---- util/file_allocator.cpp.orig	2011-12-14 17:18:48.000000000 +0000
-+++ util/file_allocator.cpp
-@@ -19,7 +19,7 @@
+Add support for NetBSD.
+--- src/mongo/util/file_allocator.cpp.orig	2012-08-28 05:28:11.000000000 +0000
++++ src/mongo/util/file_allocator.cpp
+@@ -22,7 +22,7 @@
  #include <fcntl.h>
  #include <errno.h>
  
 -#if defined(__freebsd__) || defined(__openbsd__)
 +#if defined(__freebsd__) || defined(__netbsd__) || defined(__openbsd__)
- #include <sys/stat.h>
+ #   include <sys/stat.h>
  #endif
  

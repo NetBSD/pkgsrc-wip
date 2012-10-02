@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2012/08/10 18:55:59 bartoszkuzma Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/02 08:48:46 fhajny Exp $
 
-DISTNAME=	mongodb-src-r2.0.7
+DISTNAME=	mongodb-src-r2.2.0
 PKGNAME=	${DISTNAME:S/src-r//}
-PKGREVISION=
 CATEGORIES=	databases
 MASTER_SITES=	http://downloads.mongodb.org/src/
 
@@ -20,7 +19,13 @@ BUILD_DEPENDS+=	scons:../../devel/scons
 
 SCONS_BIN=	${PREFIX}/bin/scons
 SCONS_ARGS=	${_MAKE_JOBS}
-SCONS_ARGS+=	--use-system-all
+# Does not build with lang/spidermonkey yet
+# SCONS_ARGS+=	--use-system-all=USE-SYSTEM-ALL
+SCONS_ARGS+=	--use-system-tcmalloc=USE-SYSTEM-TCMALLOC
+SCONS_ARGS+=	--use-system-pcre=USE-SYSTEM-PCRE
+SCONS_ARGS+=	--use-system-boost=USE-SYSTEM-BOOST
+SCONS_ARGS+=	--use-system-snappy=USE-SYSTEM-SNAPPY
+
 SCONS_ARGS+=	--cc=${WRAPPER_BINDIR}/${CC}
 SCONS_ARGS+=	--cxx=${WRAPPER_BINDIR}/${CXX}
 
@@ -55,14 +60,14 @@ FILES_SUBST+=		MONGODB_LOGPATH=${MONGODB_LOGPATH}
 
 # XXX No better idea how to pass CXXFLAGS and LDFLAGS to scons
 SUBST_CLASSES+=		scons
-SUBST_STAGE.scons=	post-patch
+SUBST_STAGE.scons=	pre-build
 SUBST_FILES.scons=	SConstruct
 SUBST_VARS.scons=	PREFIX CXXFLAGS LDFLAGS
 
 SUBST_CLASSES+=		path
-SUBST_STAGE.path=	post-patch
-SUBST_FILES.path=	db/db.cpp db/flushtest.cpp db/pdfile.cpp
-SUBST_FILES.path+=	debian/mongodb.conf
+SUBST_STAGE.path=	pre-build
+SUBST_FILES.path=	src/mongo/db/db.cpp src/mongo/db/flushtest.cpp
+SUBST_FILES.path+=	src/mongo/db/pdfile.cpp debian/mongodb.conf
 SUBST_SED.path=		-e "s|/data/db|${MONGODB_DBPATH}|g"
 SUBST_VARS.path=	MONGODB_DBPATH MONGODB_LOGPATH
 
@@ -87,6 +92,9 @@ do-install:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${SCONS_BIN} \
 		${SCONS_ARGS} --full --prefix ${DESTDIR}${PREFIX} install
 
+do-test:
+	cd ${WRKSRC} && ./test
+
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/mongodb
 .	for file in ${MONGODB_MAN_FILES}
@@ -101,6 +109,7 @@ post-install:
 .include "../../devel/boost-python/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../devel/snappy/buildlink3.mk"
-.include "../../lang/spidermonkey/buildlink3.mk"
+# Disabling until this can be made to work
+# .include "../../lang/spidermonkey/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

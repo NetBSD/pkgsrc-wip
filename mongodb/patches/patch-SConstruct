@@ -1,8 +1,9 @@
-$NetBSD: patch-SConstruct,v 1.3 2012/07/26 11:08:46 fhajny Exp $
+$NetBSD: patch-SConstruct,v 1.4 2012/10/02 08:48:46 fhajny Exp $
 
---- SConstruct.orig	2012-06-04 13:42:54.000000000 +0000
+Add support for NetBSD/Dragonfly, fix locations.
+--- SConstruct.orig	2012-08-28 05:28:11.000000000 +0000
 +++ SConstruct
-@@ -219,7 +219,9 @@ linux = False
+@@ -257,7 +257,9 @@ linux = False
  linux64  = False
  darwin = False
  windows = False
@@ -11,8 +12,8 @@ $NetBSD: patch-SConstruct,v 1.3 2012/07/26 11:08:46 fhajny Exp $
 +netbsd = False
  openbsd = False
  solaris = False
- force64 = has_option( "force64" )
-@@ -545,6 +547,14 @@ elif "sunos5" == os.sys.platform:
+ force32 = has_option( "force32" ) 
+@@ -530,6 +532,14 @@ elif "sunos5" == os.sys.platform:
       env.Append( CPPDEFINES=[ "__sunos__" ] )
       env.Append( LIBS=["socket","resolv"] )
  
@@ -27,9 +28,9 @@ $NetBSD: patch-SConstruct,v 1.3 2012/07/26 11:08:46 fhajny Exp $
  elif os.sys.platform.startswith( "freebsd" ):
      nix = True
      freebsd = True
-@@ -552,6 +562,14 @@ elif os.sys.platform.startswith( "freebs
-     env.Append( LIBPATH=[ "/usr/local/lib" ] )
+@@ -539,6 +549,14 @@ elif os.sys.platform.startswith( "freebs
      env.Append( CPPDEFINES=[ "__freebsd__" ] )
+     env.Append( CCFLAGS=[ "-fno-omit-frame-pointer" ] )
  
 +elif os.sys.platform.startswith( "netbsd" ):
 +    nix = True
@@ -42,22 +43,32 @@ $NetBSD: patch-SConstruct,v 1.3 2012/07/26 11:08:46 fhajny Exp $
  elif os.sys.platform.startswith( "openbsd" ):
      nix = True
      openbsd = True
-@@ -709,7 +727,9 @@ if nix:
+@@ -690,8 +708,11 @@ if nix:
+             env.Append( CCFLAGS=["-fno-builtin-memcmp"] ) # glibc's memcmp is faster than gcc's
  
-     env.Append( CPPDEFINES="_FILE_OFFSET_BITS=64" )
-     env.Append( CXXFLAGS=" -Wnon-virtual-dtor " )
-+    env.Append( CXXFLAGS=" @CXXFLAGS@ " )
-     env.Append( LINKFLAGS=" -fPIC -pthread -rdynamic" )
-+    env.Append( LINKFLAGS=" @LDFLAGS@ " )
+     env.Append( CPPDEFINES=["_FILE_OFFSET_BITS=64"] )
++    env.Append( CPPDEFINES=["XP_UNIX=1"] )
+     env.Append( CXXFLAGS=["-Wnon-virtual-dtor", "-Woverloaded-virtual"] )
++    env.Append( CXXFLAGS=os.environ['CXXFLAGS'] )
+     env.Append( LINKFLAGS=["-fPIC", "-pthread",  "-rdynamic"] )
++    env.Append( LINKFLAGS=os.environ['LDFLAGS'] )
      env.Append( LIBS=[] )
  
      #make scons colorgcc friendly
-@@ -777,7 +797,7 @@ if "uname" in dir(os):
- if has_option( "ssl" ):
-     env.Append( CPPDEFINES=["MONGO_SSL"] )
-     env.Append( LIBS=["ssl"] )
--    if darwin:
-+    if darwin or solaris:
-         env.Append( LIBS=["crypto"] )
+@@ -790,6 +811,16 @@ def doConfigure(myenv):
+             print( "c++ compiler not installed!" )
+             Exit(1)
  
- try:
++    if use_system_version_of_library("pcre"):
++        if not conf.CheckLib("pcrecpp"):
++            Exit(1)
++        if not conf.CheckLib("pcre"):
++            Exit(1)
++
++    if use_system_version_of_library("snappy"):
++        if not conf.CheckLib("snappy"):
++            Exit(1)
++
+     if use_system_version_of_library("boost"):
+         if not conf.CheckCXXHeader( "boost/filesystem/operations.hpp" ):
+             print( "can't find boost headers" )
