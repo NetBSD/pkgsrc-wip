@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2012/10/02 13:01:09 makoto Exp $
+
+SHA1 (tqsllib-2_2_tar.gz) = 5b9bdd99d6ef34b49b6f8050328cdf6d1102cb3e
+RMD160 (tqsllib-2_2_tar.gz) = 3612d1cf1941835a5163baabdd64cbeae19ade17
+Size (tqsllib-2_2_tar.gz) = 616257 bytes
+SHA1 (patch-Makefile.am) = 730b831cfa4010d2172282701f7e6d9bf14ec8e6
+SHA1 (patch-Makefile.in) = e3758802263052ecad609027f25e03975d94934b
