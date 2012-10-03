@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2012/10/02 15:25:35 makoto Exp $
+$NetBSD: distinfo,v 1.2 2012/10/03 01:21:47 makoto Exp $
 
 SHA1 (TrustedQSL-1_13_tar.gz) = b404b038323123b805846495522b9be3119b8b83
 RMD160 (TrustedQSL-1_13_tar.gz) = 7f4ea084180c857096088e6a77d4c08e7e4f0a69
 Size (TrustedQSL-1_13_tar.gz) = 362767 bytes
-SHA1 (patch-configure) = 91e29e926f9689d272b0494c367f5d504a1bc6c5
+SHA1 (patch-configure) = dc9342434ee06c244d1a569114175839a1b4d9d7
