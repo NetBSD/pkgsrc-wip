@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/08/13 23:33:25 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/03 08:17:45 asau Exp $
 #
 
 DISTNAME=	libdisasm-0.17pre2
@@ -12,16 +12,18 @@ COMMENT=	Dissassembly library for ELF x86 binarys
 
 WRKSRC=		${WRKDIR}/libdisasm_src-0.17
 
+INSTALLATION_DIRS=	bin lib
+
 do-build:
 	cd ${WRKSRC}/src/arch/i386/libdisasm && make
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/libdisasm
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/libdisasm
 	${INSTALL_SCRIPT} ${WRKSRC}/src/arch/i386/libdisasm/quikdis \
-		${PREFIX}/bin
+		${DESTDIR}${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/src/arch/i386/libdisasm/libdisasm.so \
-		${PREFIX}/lib
-	${INSTALL_SCRIPT} ${WRKSRC}/utils/op-conv.pl ${PREFIX}/bin;
-	${INSTALL_DATA} ${WRKSRC}/doc/* ${PREFIX}/share/libdisasm
+		${DESTDIR}${PREFIX}/lib
+	${INSTALL_SCRIPT} ${WRKSRC}/utils/op-conv.pl ${DESTDIR}${PREFIX}/bin;
+	${INSTALL_DATA} ${WRKSRC}/doc/* ${DESTDIR}${PREFIX}/share/libdisasm
 
 .include "../../mk/bsd.pkg.mk"
