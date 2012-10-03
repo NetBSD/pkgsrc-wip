@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/02/20 19:59:08 briandealwis Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 14:14:57 asau Exp $
 #
 
 DISTNAME=		mime-support_3.9-1.3
@@ -27,14 +27,16 @@ SUBST_STAGE.fix-x11=	pre-configure
 SUBST_FILES.fix-x11=	run-mailcap
 SUBST_SED.fix-x11=	-e 's,/usr/bin/X11,${X11BASE},g'
 
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+
 # Note: the mime-support provides other commands for managing /etc/mailcap:
 #    but they're not necessary with pkgsrc and hence are ignored.
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/run-mailcap ${PREFIX}/bin
-	cd ${PREFIX}/bin; ${LN} run-mailcap mime-edit
-	cd ${PREFIX}/bin; ${LN} run-mailcap mime-compose
-	cd ${PREFIX}/bin; ${LN} run-mailcap mime-see
-	cd ${PREFIX}/bin; ${LN} run-mailcap mime-print
-	${INSTALL_MAN} ${WRKSRC}/run-mailcap.man ${PREFIX}/${PKGMANDIR}/man1/run-mailcap.1
+	${INSTALL_SCRIPT} ${WRKSRC}/run-mailcap ${DESTDIR}${PREFIX}/bin
+	cd ${DESTDIR}${PREFIX}/bin; ${LN} run-mailcap mime-edit
+	cd ${DESTDIR}${PREFIX}/bin; ${LN} run-mailcap mime-compose
+	cd ${DESTDIR}${PREFIX}/bin; ${LN} run-mailcap mime-see
+	cd ${DESTDIR}${PREFIX}/bin; ${LN} run-mailcap mime-print
+	${INSTALL_MAN} ${WRKSRC}/run-mailcap.man ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/run-mailcap.1
 
 .include "../../mk/bsd.pkg.mk"

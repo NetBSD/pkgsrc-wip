@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/02/03 16:53:11 tnn2 Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/03 14:17:22 asau Exp $
 #
 
 DISTNAME=	minimalist-2.5.3
@@ -23,32 +23,34 @@ SUBST_FILES.path+=minimalist.pl
 SUBST_FILES.path+=contrib/minimalist_request.pl
 SUBST_SED.path= -e 's,/usr/local,${PREFIX},'
 
+INSTALLATION_DIRS=	bin
+
 do-build:
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/minimalist/sample
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/minimalist/sample
 	# cfgfiles
 	${INSTALL_DATA} ${WRKSRC}/minimalist.conf-sample \
-		${PREFIX}/etc/minimalist.conf
+		${DESTDIR}${PREFIX}/etc/minimalist.conf
 	${INSTALL_DATA} ${WRKSRC}/minimalist.conf-sample \
-		${PREFIX}/share/examples/minimalist/minimalist.conf
+		${DESTDIR}${PREFIX}/share/examples/minimalist/minimalist.conf
 	# examples
 	${INSTALL_DATA} ${WRKSRC}/sample/lists.lst \
-		${PREFIX}/share/examples/minimalist/
+		${DESTDIR}${PREFIX}/share/examples/minimalist/
 	${INSTALL_DATA} ${WRKSRC}/sample/sample/* \
-		${PREFIX}/share/examples/minimalist/sample/
+		${DESTDIR}${PREFIX}/share/examples/minimalist/sample/
 	# documentation
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/minimalist/FAQ
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/minimalist/FAQ
 	${INSTALL_DATA} ${WRKSRC}/docs/FAQ/* \
-		${PREFIX}/share/doc/minimalist/FAQ/
+		${DESTDIR}${PREFIX}/share/doc/minimalist/FAQ/
 .for _file_ in README CHANGES.txt virtual-domains.txt
 	${INSTALL_DATA} ${WRKSRC}/docs/${_file_} \
-		${PREFIX}/share/doc/minimalist/
+		${DESTDIR}${PREFIX}/share/doc/minimalist/
 .endfor
 	# scripts
 	${INSTALL_SCRIPT} ${WRKSRC}/minimalist.pl \
-			${PREFIX}/bin/
+			${DESTDIR}${PREFIX}/bin/
 	${INSTALL_SCRIPT} ${WRKSRC}/contrib/minimalist_request.pl \
-			${PREFIX}/bin/
+			${DESTDIR}${PREFIX}/bin/
 
 .include "../../mk/bsd.pkg.mk"
