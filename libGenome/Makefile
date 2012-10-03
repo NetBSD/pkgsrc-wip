@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/09/14 18:29:57 dhowland Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/03 09:10:36 asau Exp $
 #
 
 DISTNAME=		libGenome-0.5.2
@@ -9,6 +9,8 @@ MASTER_SITES=		http://www.libgenome.org/releases/
 MAINTAINER=		dprice@cs.nmsu.edu
 HOMEPAGE=		http://www.libgenome.org/releases/
 COMMENT=		A development library for bioinformatic software
+
+PKG_DESTDIR_SUPPORT=	none
 
 WRKSRC=			${WRKDIR}/libgenome-0.5.2
 USE_PKGLOCALEDIR=	yes

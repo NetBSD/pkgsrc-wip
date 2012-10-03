@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/01/17 22:33:46 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/03 09:10:39 asau Exp $
 #
 
 DISTNAME=	ginac-1.5.8
@@ -11,8 +11,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://www.ginac.de/
 COMMENT=	The GiNaC symbolic framework
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_GNU_READLINE=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/08/19 18:09:29 udontknow Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 09:10:41 asau Exp $
 #
 
 DISTNAME=	libzdb-2.6
@@ -9,8 +9,6 @@ MAINTAINER=	evaldo@gardenali.biz
 HOMEPAGE=	http://www.tildeslash.com/libzdb/
 COMMENT=	Zild Database Library, a fast thread-safe connection pooling library
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

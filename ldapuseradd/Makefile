@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/09/21 04:59:22 gregschenzel Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 09:10:35 asau Exp $
 
 DISTNAME=	ldapuseradd-0.9.2
 CATEGORIES=	databases
@@ -9,6 +9,8 @@ MASTER_SITES=   http://ftp.unixdev.net/pub/unixdev/ldapuseradd/0.9.2/
 
 HOMEPAGE=       http://www.unixdev.net/projects/ldapuseradd/
 COMMENT=        LDAP User/Group Management Toolset
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_TOOLS+=             gmake
 GNU_CONFIGURE=	yes

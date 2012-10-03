@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2012/09/18 16:26:45 ahp-nils Exp $
+# $NetBSD: Makefile,v 1.24 2012/10/03 09:10:43 asau Exp $
 #
 
 DISTNAME=		logrotate-3.8.2
@@ -10,8 +10,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://fedorahosted.org/logrotate/
 COMMENT=		Daemon to rotate, compress, remove and mail system log files
 LICENSE=		gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake gzip:run gunzip:run mail:run
 NO_EXPORT_CPP=		yes

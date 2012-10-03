@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/11/20 15:52:12 noud4 Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/03 09:10:39 asau Exp $
 #
 
 DISTNAME=		libgksu1.2-1.3.7
@@ -9,8 +9,6 @@ MASTER_SITES=		http://people.debian.org/~kov/gksu/old_stuff/libgksu1.2/
 MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://www.nongnu.org/gksu/
 COMMENT=		Support library for gksu
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.fast.prefs.mk"
 

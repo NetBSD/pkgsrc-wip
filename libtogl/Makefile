@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/03/07 11:54:25 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 09:10:41 asau Exp $
 #
 
 DISTNAME=	Togl2.0-src
@@ -9,8 +9,6 @@ MASTER_SITES=	http://garr.dl.sourceforge.net/project/togl/Togl/2.0/
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://togl.sourceforge.net/index.html#intro
 COMMENT=	Tk OpenGL widget
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/Togl2.0
 

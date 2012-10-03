@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/02/23 10:01:08 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 09:10:35 asau Exp $
 #
 
 
@@ -11,8 +11,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://pmmac03.math.uwaterloo.ca/~mrubinst/L_function_public/CODE/
 COMMENT=	Lcalc is a program for calculating with L-functions
 LICENSE=		gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=	${WRKDIR}/${DISTNAME}/src
 USE_TOOLS+=	gmake

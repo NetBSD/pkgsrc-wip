@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/09/15 21:58:24 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 09:10:40 asau Exp $
 #
 
 DISTNAME=	libpsurface-1.3.1
@@ -9,8 +9,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://numerik.mi.fu-berlin.de/dune/psurface/index.php
 COMMENT=	Library that handles piecewise linear bijections
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE= yes
 USE_LIBTOOL= yes

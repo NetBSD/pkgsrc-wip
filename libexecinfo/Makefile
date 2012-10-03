@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/08/14 11:02:54 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/03 09:10:38 asau Exp $
 #
 
 DISTNAME=	libexecinfo-1.1
@@ -16,8 +16,6 @@ MAKE_FLAGS+=	INCSYMLINKS=no
 MAKE_FLAGS+=	LIBDIR=${PREFIX}/lib
 MAKE_FLAGS+=	MKLINT=no
 MAKE_FLAGS+=	SHLIBDIR=${PREFIX}/lib
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 INSTALLATION_DIRS=	include lib
 

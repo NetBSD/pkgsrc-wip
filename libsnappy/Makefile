@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/03/29 06:05:45 bharder Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/03 09:10:40 asau Exp $
 #
 http://snappy.googlecode.com/files/snappy-1.0.0.tar.gz
 
@@ -14,8 +14,6 @@ LICENSE=	modified-bsd
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-DLZF_STATE_ARG="0"
 USE_LANGUAGES+=	c++ c
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 # url2pkg-marker (please do not remove this line.)
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/04/14 00:03:34 obache Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/03 09:10:42 asau Exp $
 #
 
 DISTNAME=	linuxigd-1.0
@@ -9,8 +9,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=linux-igd/}
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://linux-igd.sourceforge.net/
 COMMENT=	Linux UPnP Internet Gateway Device
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c
 USE_TOOLS+=	gmake pkg-config

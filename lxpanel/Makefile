@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/05/27 00:06:48 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/03 09:10:45 asau Exp $
 
 DISTNAME=	lxpanel-0.5.9
 PKGREVISION=	1
@@ -8,8 +8,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lxde/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://lxde.sourceforge.net/
 COMMENT=	Lightweight X11 desktop panel from LXDE
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	lxmenu-data-[0-9]*:../../wip/lxmenu-data
 

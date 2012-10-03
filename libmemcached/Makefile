@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/09/17 11:57:05 fhajny Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/03 09:10:39 asau Exp $
 #
 
 DISTNAME=	libmemcached-0.43
@@ -9,8 +9,6 @@ MAINTAINER=	mbowie@buzmo.com
 HOMEPAGE=	http://tangent.org/552/libmemcached.html
 COMMENT=	C and C++ client library to the memcached server
 LICENSE=	original-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes

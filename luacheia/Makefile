@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/06/12 16:28:58 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/03 09:10:44 asau Exp $
 #
 
 DISTNAME=		luacheia5-5.0.1a4
@@ -9,6 +9,8 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=/luacheia/}
 MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://luacheia.sourceforge.net/
 COMMENT=		Extension libraries for LUA
+
+PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	gmake

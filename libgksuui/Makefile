@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/11/20 15:21:23 noud4 Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/03 09:10:39 asau Exp $
 #
 
 DISTNAME=		libgksuui1.0-1.0.7
@@ -9,8 +9,6 @@ MASTER_SITES=		http://people.debian.org/~kov/gksu/old_stuff/libgksuui1.0/
 MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://people.debian.org/~kov/gksu/
 COMMENT=		UI Support library for Gksu
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes

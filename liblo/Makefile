@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/05/24 15:34:11 tnn2 Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/03 09:10:39 asau Exp $
 #
 
 DISTNAME=	liblo-0.24
@@ -9,8 +9,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=liblo/}
 MAINTAINER=	jfranz@bsdprojects.net
 HOMEPAGE=	http://liblo.sourceforge.net/
 COMMENT=	Lightweight Open Sound Control implementation
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes

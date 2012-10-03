@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/11/06 10:53:44 grasmi Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 09:10:40 asau Exp $
 #
 
 DISTNAME=	libnfo-1.0.0
@@ -13,8 +13,6 @@ LICENSE=	gnu-lgpl-v2.1
 
 USE_TOOLS+=	gmake
 USE_TOOLS+=	diff
-
-PKG_DESTDIR_SUPPORT= user-destdir
 
 CONFIGURE_ARGS+= --prefix=${PREFIX}
 

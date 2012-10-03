@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/05/04 07:54:18 bartoszkuzma Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/03 09:10:39 asau Exp $
 #
 
 DISTNAME=	liblognorm-0.3.4
@@ -9,8 +9,6 @@ MAINTAINER=	bartosz.kuzma@gmail.com
 HOMEPAGE=	http://www.liblognorm.com/
 COMMENT=	Tool to normalize log data
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 

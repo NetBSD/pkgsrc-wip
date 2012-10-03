@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/08/25 16:02:47 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 09:10:40 asau Exp $
 #
 
 DISTNAME=	ncl-2.1.18
@@ -10,8 +10,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://ncl.sourceforge.net/
 COMMENT=	The NEXUS Class Library is a C++ library for parsing NEXUS files
 LICENSE=	gnu-gpl-v2 AND 2-clause-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL= yes

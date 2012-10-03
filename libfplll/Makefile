@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/01/03 22:58:42 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 09:10:38 asau Exp $
 #
 
 DISTNAME=	libfplll-3.0.12
@@ -9,8 +9,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://perso.ens-lyon.fr/damien.stehle/#software
 COMMENT=	Library for LLL-reduction of Euclidean lattices
 #LICENSE=	# TODO: (see mk/license.mk)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/05/15 03:09:39 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/03 09:10:44 asau Exp $
 #
 
 
@@ -19,7 +19,5 @@ COMMENT=	LXDE menu data
 GNU_CONFIGURE=	yes
 #USE_LANGUAGES=	# none
 USE_TOOLS+=	gmake intltool
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.pkg.mk"

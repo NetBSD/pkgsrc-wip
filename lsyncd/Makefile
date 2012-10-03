@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/02/09 08:59:57 slitvinov Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 09:10:43 asau Exp $
 #
 
 DISTNAME=	lsyncd-2.0.5
@@ -11,7 +11,6 @@ COMMENT=	Live syncing daemon
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=		rsync-[0-9]*:../../net/rsync
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		pkg-config gmake
 GNU_CONFIGURE=		yes

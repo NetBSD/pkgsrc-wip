@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2010/01/11 21:21:28 christtrekker Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/03 09:10:35 asau Exp $
 #
 
 DISTNAME=	lcdproc-0.5.3
@@ -9,7 +9,6 @@ MAINTAINER=	christtrekker@users.sourceforge.net
 HOMEPAGE=	http://lcdproc.org/
 COMMENT=	Client/server software to print system info to small LCDs
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=	yes
 
 .include "../../mk/bsd.prefs.mk"

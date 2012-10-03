@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2011/10/31 13:43:50 noud4 Exp $
+# $NetBSD: Makefile,v 1.17 2012/10/03 09:10:35 asau Exp $
 #
 
 DISTNAME=		Browser282b2
@@ -11,8 +11,6 @@ MASTER_SITES=		http://www-unix.mcs.anl.gov/~gawor/ldapcommon/bin/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www-unix.mcs.anl.gov/~gawor/ldap/
 COMMENT=		Java based LDAP browser and editor
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CONFIGURE=		yes
 USE_JAVA=		run

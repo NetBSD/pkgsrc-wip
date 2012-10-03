@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2011/12/15 15:48:15 jihbed Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/03 09:10:35 asau Exp $
 #
 
 DISTNAME=	liblastfm-sharp-0.1.09
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/lastfm-sharp/
 COMMENT=	DotNet/Mono interface to last.fm
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config gmake

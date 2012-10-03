@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/05/15 03:30:36 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 09:10:45 asau Exp $
 
 DISTNAME=	lxsession-edit-0.2.0
 CATEGORIES=	x11
@@ -7,8 +7,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lxde/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://lxde.sourceforge.net/
 COMMENT=	Desktop Session settings editor
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 #DEPENDS+=	lxmenu-data-[0-9]*:../../wip/lxmenu-data
 

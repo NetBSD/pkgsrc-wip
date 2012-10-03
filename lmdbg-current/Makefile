@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/08/29 07:08:59 cheusov Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/03 09:10:42 asau Exp $
 #
 
 PKGNAME=	lmdbg-9
@@ -24,8 +24,6 @@ WRKSRC=			${WRKDIR}/lmdbg
 
 ONLY_FOR_COMPILER=	gcc icc clang
 NOT_FOR_PLATFORM=	Darwin-*-*
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 TEST_TARGET=		test
 

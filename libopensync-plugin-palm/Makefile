@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/12/14 17:02:31 noud4 Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 09:10:40 asau Exp $
 #
 
 DISTNAME=	libopensync-plugin-palm-0.22
@@ -9,8 +9,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	noud4@home.nl
 HOMEPAGE=	http://www.opensync.org/download/releases/0.22/
 COMMENT=	Platform independent synchronization framework, palm plugin
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c

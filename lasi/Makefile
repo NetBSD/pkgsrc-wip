@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/01/17 10:48:04 emil_s Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/03 09:10:35 asau Exp $
 #
 
 DISTNAME=	libLASi-1.1.0
@@ -10,8 +10,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lasi/}
 MAINTAINER=	esg@sdf.lonestar.org
 HOMEPAGE=	http://lasi.sourceforge.net/
 COMMENT=	C++ library for postscript stream output
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++

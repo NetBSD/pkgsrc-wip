@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/01/04 15:48:52 rubengonzalez Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 09:10:43 asau Exp $
 #
 
 DISTNAME=	lsw-0.1
@@ -9,8 +9,6 @@ MAINTAINER=	rga@sdf.lonestar.org
 HOMEPAGE=	http://tools.suckless.org/lsw/
 COMMENT=	Lists the titles of all running X windows to stdout
 LICENSE=	mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CONFIGURE=   yes
 

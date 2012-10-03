@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/01/13 15:17:00 genolopolis Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 09:10:39 asau Exp $
 #
 
 DISTNAME=	libinotify-20120113
@@ -9,7 +9,7 @@ MAINTAINER=	msporleder@gmail.com
 HOMEPAGE=	http://on.encoreinteractive.ca/opensource/
 COMMENT=	portable inotify userland lib
 #LICENSE=	# TODO: (see mk/license.mk)
-PKG_DESTDIR_SUPPORT=    user-destdir
+
 GNU_CONFIGURE=          yes
 
 .include "../../mk/bsd.pkg.mk"

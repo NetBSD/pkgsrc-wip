@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/08/26 22:40:50 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/03 09:10:43 asau Exp $
 #
 
 DISTNAME=	lrslib-043
@@ -10,8 +10,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://cgm.cs.mcgill.ca/~avis/C/lrs.html
 COMMENT=	Enumerate vertices and extreme rays of a convex polyhedron
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_FILE=   makefile
 

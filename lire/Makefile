@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/05/19 09:00:09 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/03 09:10:42 asau Exp $
 #
 
 DISTNAME=	lire-2.1
@@ -16,6 +16,8 @@ DEPENDS+=	p5-Curses-[0-9]*:../../devel/p5-Curses
 DEPENDS+=	p5-Curses-UI-[0-9]*:../../devel/p5-Curses-UI
 DEPENDS+=	p5-Locale-libintl-[0-9]*:../../misc/p5-Locale-libintl
 DEPENDS+=	p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
+
+PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes

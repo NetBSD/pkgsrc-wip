@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2012/04/13 20:02:17 gschwarz Exp $
+# $NetBSD: Makefile,v 1.33 2012/10/03 09:10:41 asau Exp $
 
 DISTNAME=	linphone-3.5.2
 CATEGORIES=	net
@@ -8,8 +8,6 @@ MAINTAINER=	schwarz@NetBSD.org
 HOMEPAGE=	http://www.linphone.org/
 COMMENT=	SIP-based IP telephony client
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	gmake intltool perl pkg-config

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2011/11/16 15:08:22 noud4 Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/03 09:10:42 asau Exp $
 #
 
 DISTNAME=	lives-0.9.9.9
@@ -17,8 +17,6 @@ LICENSE=	gnu-gpl-v3
 DEPENDS+=	sox-[0-9]*:../../audio/sox
 DEPENDS+=	mplayer>=1.0rc1:../../multimedia/mplayer
 DEPENDS+=	mencoder>=1.0rc1:../../multimedia/mencoder
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/${DISTNAME}
 GNU_CONFIGURE=		yes

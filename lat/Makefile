@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2010/06/13 22:47:10 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/03 09:10:35 asau Exp $
 #
 
 DISTNAME=		lat-1.2.3
@@ -9,8 +9,6 @@ MASTER_SITES=		http://dev.mmgsecurity.com/downloads/lat/1.2/
 MAINTAINER=		adam.hoka@gmail.com
 HOMEPAGE=		http://dev.mmgsecurity.com/projects/lat/
 COMMENT=		LDAP Administration Tool written in Mono
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		pkg-config gmake msgfmt intltool
 USE_LANGUAGES=		# empty -> its csharp

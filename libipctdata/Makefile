@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/06/23 09:18:51 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/03 09:10:39 asau Exp $
 #
 
 DISTNAME=	libiptcdata-1.0.3
@@ -8,8 +8,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libiptcdata/}
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://libiptcdata.sourceforge.net/
 COMMENT=	Library to parse IPTC metadata
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CHECK_PORTABILITY_SKIP+=	configure
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/08/31 19:45:30 cheusov Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/03 09:10:41 asau Exp $
 #
 
 DISTNAME=	lmdbg-1.0.0
@@ -16,8 +16,6 @@ BUILD_DEPENDS+=		mk-configure>=0.20.0:../../devel/mk-configure
 
 ONLY_FOR_COMPILER=	gcc icc
 NOT_FOR_PLATFORM=	Darwin-*-*
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/libstacktrace
 

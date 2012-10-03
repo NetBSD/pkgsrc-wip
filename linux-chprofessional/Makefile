@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2011/11/21 19:08:56 absd Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/03 09:10:41 asau Exp $
 
 DISTNAME=	chprofessional-4.0.0.linux2.2.5.intel
 PKGNAME=	linux-chprofessional-4.0.0
@@ -15,6 +15,8 @@ COMMENT=	Ch is an interactive C development environment
 # or commercial use, go for Ch standard edition
 #
 LICENSE=	chpro-license
+
+PKG_DESTDIR_SUPPORT=	none
 
 BUILD_DIRS=	# empty
 

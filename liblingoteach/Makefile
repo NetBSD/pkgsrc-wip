@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/05/19 16:51:24 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/03 09:10:39 asau Exp $
 #
 
 DISTNAME=		liblingoteach-0.2.1
@@ -8,6 +8,8 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=lingoteach/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://lingoteach.sourceforge.net/
 COMMENT=		Library for lingoteach
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/liblingoteach.pc.in

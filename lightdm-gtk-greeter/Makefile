@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/09/27 22:13:08 othyro Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/03 09:10:41 asau Exp $
 #
 
 DISTNAME=	lightdm-gtk-greeter-1.3.1
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://launchpad.net/lightdm-gtk-greeter
 COMMENT=	GTK+ greeter for LightDM
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 # Needed for launchpad
 FETCH_USING=	curl

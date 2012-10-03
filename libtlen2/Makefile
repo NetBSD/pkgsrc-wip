@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/05/19 16:51:24 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/03 09:10:41 asau Exp $
 #
 
 DISTNAME=		libtlen2-20040301
@@ -8,6 +8,8 @@ MASTER_SITES=		http://www.libtlen.eu.org/libtlen2_files/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.libtlen.eu.org/index.php?theme=teary&page=libtlen2
 COMMENT=		Library to access tlen.pl IM system
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes

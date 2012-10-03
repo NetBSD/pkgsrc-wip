@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/05/15 03:22:07 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 09:10:45 asau Exp $
 
 DISTNAME=	lxshortcut-0.1.2
 CATEGORIES=	x11
@@ -7,8 +7,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lxde/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://lxde.sourceforge.net/
 COMMENT=	Desktop Entry application shortcuts editor
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 #DEPENDS+=	lxmenu-data-[0-9]*:../../wip/lxmenu-data
 

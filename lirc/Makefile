@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/08/29 12:49:44 cheusov Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/03 09:10:42 asau Exp $
 #
 
 DISTNAME=		lirc-0.8.0
@@ -9,6 +9,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://www.lirc.org/
 COMMENT=		Linux Infrared Remote Control
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes

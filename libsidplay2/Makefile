@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/01/03 01:40:54 hoka_adam Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 09:10:40 asau Exp $
 #
 
 DISTNAME=	libsidplay-2.1.1+20060528.ccr
@@ -11,6 +11,8 @@ HOMEPAGE=	http://tnsp.org/xs-files/
 COMMENT=	SID-chip emulator snapshot from ccr/TNSP
 
 CONFLICTS=	libsidplay2-[0-9]*
+
+PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config

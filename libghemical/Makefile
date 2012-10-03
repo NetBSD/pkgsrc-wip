@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/06/03 13:14:55 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 09:10:38 asau Exp $
 #
 
 DISTNAME=	libghemical-2.99.1
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc.gnome@gmail.com
 HOMEPAGE=	http://www.bioinformatics.org/ghemical/libghemical/index.html
 COMMENT=	Molecular modelling library
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/04/08 19:09:43 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/03 09:10:35 asau Exp $
 #
 
 DISTNAME=	labyrinth_0.4.1
@@ -10,8 +10,6 @@ MASTER_SITES=	http://labyrinth.googlecode.com/files/
 MAINTAINER=	pkgsrc.gnome@gmail.com
 HOMEPAGE=	http://www.gnome.org/~dscorgie/labyrinth.html
 COMMENT=	Labyrinth is a lightweight mind-mapping tool for GNOME
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/labyrinth-0.4.0
 GNU_CONFIGURE=	yes

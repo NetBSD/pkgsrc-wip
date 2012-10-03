@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2011/05/11 09:18:46 ryo-on Exp $
+# $NetBSD: Makefile.common,v 1.5 2012/10/03 09:10:41 asau Exp $
 #
 
 # used by wip/py-libtorrent-rasterbar/Makefile
@@ -8,8 +8,6 @@ CATEGORIES=	net
 MASTER_SITES=	http://libtorrent.googlecode.com/files/ \
 		${MASTER_SITE_SOURCEFORGE:=libtorrent/}
 LICENSE=	modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c c++
 

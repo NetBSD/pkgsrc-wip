@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/09/02 12:26:06 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 09:10:40 asau Exp $
 #
 
 DISTNAME=	scscp-0.6.1
@@ -9,8 +9,6 @@ MASTER_SITES=	http://www.imcce.fr/trip/scscp/download/
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://www.imcce.fr/trip/scscp/
 COMMENT=  Library of the Symbolic Computation Software Composibility Protocol
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 INFO_FILES=	yes

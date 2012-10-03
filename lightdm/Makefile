@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/09/27 21:37:22 othyro Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/03 09:10:41 asau Exp $
 #
 
 DISTNAME=	lightdm-1.3.3
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.freedesktop.org/wiki/Software/LightDM
 COMMENT=	Light cross-desktop display manager
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-tests	# PAM

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/08/25 18:20:52 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 09:10:39 asau Exp $
 #
 
 VERSION=	1.5
@@ -12,8 +12,6 @@ MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://www.cs.unc.edu/Research/compgeom/gzstream/#src
 COMMENT=	Gzstream is a small C++ library, basically just a wrapper
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=	 yes
 USE_TOOLS+=	gmake

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/08/01 02:27:48 pallegra Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 09:10:39 asau Exp $
 #
 
 DISTNAME=	game-music-emu-0.5.5
@@ -11,8 +11,6 @@ MAINTAINER=	pallegra@gmail.com
 HOMEPAGE=	http://code.google.com/p/game-music-emu/
 COMMENT=	Video game music file emulation/playback library
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++

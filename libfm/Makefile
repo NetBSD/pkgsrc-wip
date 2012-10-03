@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/06/02 14:27:54 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/03 09:10:38 asau Exp $
 #
 
 DISTNAME=	libfm-0.1.17
@@ -9,8 +9,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pcmanfm/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pcmanfm.sourceforge.net/
 COMMENT=	File management library
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 # Instead of depending on fam, use glib2 with kqueue
 #DEPENDS=		gio-fam>=0:../../sysutils/gio-fam

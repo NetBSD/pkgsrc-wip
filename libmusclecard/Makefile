@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2008/05/22 16:02:39 tnn2 Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/03 09:10:39 asau Exp $
 
 DISTNAME=		libmusclecard-1.3.3
 CATEGORIES=		security
@@ -7,6 +7,8 @@ MASTER_SITES=		http://alioth.debian.org/download.php/1579/
 MAINTAINER=		evaldo@gardenali.biz
 HOMEPAGE=		http://www.musclecard.com/
 COMMENT=		MUSCLE SmartCard framework support library
+
+PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2011/09/27 02:21:25 makoto Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/03 09:10:39 asau Exp $
 
 DISTNAME=	libgtksourceviewmm-0.3.1
 PKGREVISION=	5
@@ -15,7 +15,6 @@ GNU_CONFIGURE=	YES
 
 USE_TOOLS+=	gmake pkg-config
 USE_LIBTOOL=	yes
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../x11/gtksourceview/buildlink3.mk"
 .include "../../x11/gtkmm/buildlink3.mk"

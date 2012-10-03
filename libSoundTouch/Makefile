@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/09/05 15:12:49 othyro Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/03 09:10:36 asau Exp $
 #
 
 DISTNAME=		soundtouch-1.7.0
@@ -10,8 +10,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.surina.net/soundtouch/
 COMMENT=		Audio Processing Library
 LICENSE=		gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/soundtouch/
 USE_TOOLS+=		aclocal autoconf autoheader automake gmake gsed pkg-config

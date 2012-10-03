@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2011/11/22 17:11:04 ryo-on Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/03 09:10:39 asau Exp $
 #
 
 DISTNAME=	libisoburn-1.1.8
@@ -9,8 +9,6 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://libburnia-project.org/wiki/Libisoburn
 COMMENT=	libisoburn library and xorriso commands
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/.pl00//}
 GNU_CONFIGURE=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/09/19 08:26:05 jihbed Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/03 09:10:40 asau Exp $
 #
 
 DISTNAME=	libowl-av-0.1
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc.gnome@gmail.com
 HOMEPAGE=	http://labs.o-hand.com/av-widget-library/
 COMMENT=	AV widget library
 LICENSE=	gnu-lgpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

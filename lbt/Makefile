@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/06/12 23:15:38 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 09:10:35 asau Exp $
 #
 
 DISTNAME=	lbt-1.2.2
@@ -9,8 +9,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://www.tcs.hut.fi/Software/maria/tools/lbt/
 COMMENT=	Converts from LTL formulas to Büchi automata
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c c++
 

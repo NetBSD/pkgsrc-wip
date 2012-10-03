@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2010/05/08 05:54:52 obache Exp $
+# $NetBSD: Makefile,v 1.18 2012/10/03 09:10:44 asau Exp $
 #
 
 DISTNAME=		luasocket-2.0.2
@@ -10,8 +10,6 @@ MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://www.tecgraf.puc-rio.br/~diego/professional/luasocket/
 COMMENT=		Gives socket capabilities to lua
 LICENSE=		mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_FILE=		makefile
 USE_TOOLS+=		gmake

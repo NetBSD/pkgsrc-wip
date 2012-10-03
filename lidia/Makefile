@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/01/17 10:48:04 emil_s Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/03 09:10:41 asau Exp $
 #
 
 DISTNAME=		lidia-2.2.0
@@ -8,6 +8,8 @@ MASTER_SITES=		ftp://ftp.informatik.tu-darmstadt.de/pub/TI/systems/LiDIA/current
 MAINTAINER=		esg@sdf.lonestar.org
 HOMEPAGE=		ftp://ftp.informatik.tu-darmstadt.de/pub/TI/systems/LiDIA/current/
 COMMENT=		C++ Library For Computational Number Theory
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes

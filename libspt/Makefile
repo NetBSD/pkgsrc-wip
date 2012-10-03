@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/12/31 16:21:21 makoto Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 09:10:40 asau Exp $
 
 DISTNAME=	libspt-1.1
 
@@ -12,7 +12,6 @@ HOMEPAGE=	http://www.j10n.org/libspt/
 COMMENT=	Provide unpriviliged secure pty
 
 USE_LIBTOOL=	yes
-PKG_DESTDIR_SUPPORT=    user-destdir
 GNU_CONFIGURE=  yes
 
 SPECIAL_PERMS=	libexec/sptagent root wheel 4755

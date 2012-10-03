@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/06/13 18:54:40 jihbed Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/03 09:10:42 asau Exp $
 #
 
 DISTNAME=	lisaac-0.13.1
@@ -9,8 +9,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://www.lisaac.org/
 COMMENT=	Lisaac is the first compiled POO based on prototype concepts
 #LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gmake
 USE_LANGUAGES=  c c++

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/04/08 19:09:43 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/03 09:10:36 asau Exp $
 #
 
 DISTNAME=	lhapdf-5.8.7b2
@@ -10,8 +10,6 @@ HOMEPAGE=	http://www.hepforge.org/archive/lhapdf/
 COMMENT=	Les Houches Accord PDF library and interface
 LICENSE=	gnu-gpl-v2
 
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CHECK_PORTABILITY_SKIP= configure
 

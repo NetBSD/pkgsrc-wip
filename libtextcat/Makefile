@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2011/02/17 13:19:17 ftigeot Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/03 09:10:41 asau Exp $
 #
 
 DISTNAME=	libtextcat-2.2
@@ -9,8 +9,6 @@ MASTER_SITES=	http://software.wise-guys.nl/download/
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://software.wise-guys.nl/libtextcat/
 COMMENT=	Libtextcat library the Cavnar & Trenkle
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

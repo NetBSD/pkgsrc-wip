@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/06/13 22:47:09 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/03 09:10:35 asau Exp $
 #
 
 DISTNAME=	lasem-0.2.0
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc.gnome@gmail.com
 HOMEPAGE=	ftp://ftp.gnome.org/pub/gnome/sources/lasem/0.2/
 COMMENT=	Lasem is a library for rendering SVG and Mathml
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/10/14 01:26:27 makoto Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 09:10:38 asau Exp $
 #
 
 DISTNAME=		libFS-1.0.3
@@ -11,7 +11,6 @@ HOMEPAGE=		http://xorg.freedesktop.org/
 COMMENT=		X Font Service client library
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		pkg-config
 USE_LIBTOOL=		yes

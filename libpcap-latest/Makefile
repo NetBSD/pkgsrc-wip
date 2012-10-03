@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/10/29 08:32:46 shattered Exp $
+# $NetBSD: Makefile,v 1.13 2012/10/03 09:10:40 asau Exp $
 
 DISTNAME=		libpcap-0.8.3
 SVR4_PKGNAME=		lpcap
@@ -9,6 +9,7 @@ MAINTAINER=		imil@gcu.info
 HOMEPAGE=		http://www.tcpdump.org/
 COMMENT=		System-independent interface for user-level packet capture
 
+PKG_DESTDIR_SUPPORT=	none
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 GNU_CONFIGURE=		yes

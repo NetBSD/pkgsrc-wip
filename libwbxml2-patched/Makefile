@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/11/14 19:20:32 shattered Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/03 09:10:41 asau Exp $
 #
 
 DISTNAME=		wbxml2-0.9.0-patched
@@ -9,6 +9,8 @@ MASTER_SITES=		http://multisync.sourceforge.net/files/
 MAINTAINER=		ola@mrEriksson.net
 HOMEPAGE=		http://libwbxml.aymerick.com:8080/
 COMMENT=		Library to handle WBXML (Patched for MultiSync)
+
+PKG_DESTDIR_SUPPORT=	none
 
 WRKSRC=		${WRKDIR}/wbxml2-0.9.0
 USE_PKGLOCALEDIR=	yes

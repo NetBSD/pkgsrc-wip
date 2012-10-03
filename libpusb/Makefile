@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/10/26 19:26:09 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/03 09:10:40 asau Exp $
 #
 
 DISTNAME=		libpusb
@@ -9,6 +9,7 @@ MASTER_SITES=		http://benoit.is-a-geek.net/bsd-tmp/
 MAINTAINER=		imil@gcu.info
 COMMENT=		Simple and portable USB development interface
 
+PKG_DESTDIR_SUPPORT=	none
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 ONLY_FOR_PLATFORM=	FreeBSD-*-* NetBSD-*-* OpenBSD-*-* Linux-*-*

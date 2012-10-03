@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/01/18 21:13:53 gschwarz Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/03 09:10:43 asau Exp $
 
 DISTNAME=	${PKGNAME:C/-.*$//}
 PKGNAME=	lpdsrv-1.4
@@ -8,8 +8,6 @@ EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	schwarz@NetBSD.org
 COMMENT=	Non-spooling LPD server (RFC1179)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CONFIGURE=	YES
 WRKSRC=		${WRKDIR}

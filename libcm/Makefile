@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/06/16 22:08:02 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/03 09:10:37 asau Exp $
 #
 
 DISTNAME=	libcm-0.1.1
@@ -10,8 +10,6 @@ MAINTAINER=	blair.sadewitz@gmail.com
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Metacity compositor library
 #LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

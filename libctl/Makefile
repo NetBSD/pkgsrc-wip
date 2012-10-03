@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/05/28 14:09:28 outpaddling Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/03 09:10:37 asau Exp $
 #
 
 DISTNAME=	libctl-3.1
@@ -9,8 +9,6 @@ MAINTAINER=	jwbacon@tds.net
 HOMEPAGE=	http://ab-initio.mit.edu/libctl/
 COMMENT=	Control Language Library
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/12/29 14:39:01 keckhardt Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 09:10:35 asau Exp $
 
 DISTNAME=	lapack-3.4.0
 PKGNAME=	lapack340-3.4.0
@@ -12,7 +12,6 @@ COMMENT=	Linear Algebra PACKage
 LICENSE=	modified-bsd
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GCC_REQD=		4.6.0
 USE_LANGUAGES=		c fortran

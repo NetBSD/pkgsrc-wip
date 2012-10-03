@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/10/28 17:37:04 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 09:10:38 asau Exp $
 #
 
 DISTNAME=	libecc-0.14.0
@@ -9,8 +9,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://garr.dl.sourceforge.net/project/libecc/libecc/0.14.0/
 COMMENT=	C++ elliptic curve library
 #LICENSE=	# TODO: (see mk/license.mk)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=NO
 

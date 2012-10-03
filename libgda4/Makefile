@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2012/06/10 10:16:22 noud4 Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/03 09:10:38 asau Exp $
 #
 
 PKG_REVISION=		1
 LICENSE=		gnu-gpl-v2 AND gnu-lgpl-v2
 # XXX			tools AND libraries
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "Makefile.common"
 

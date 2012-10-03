@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.14 2012/02/06 20:15:18 fhajny Exp $
-# $Id: Makefile,v 1.14 2012/02/06 20:15:18 fhajny Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/03 09:10:41 asau Exp $
+# $Id: Makefile,v 1.15 2012/10/03 09:10:41 asau Exp $
 
 .include "../../wip/e2fsprogs/Makefile.common"
 
@@ -15,7 +15,6 @@ LICENSE=		modified-bsd
 
 DISTINFO_FILE=		${.CURDIR}/distinfo
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 AUTO_MKDIRS=		yes
 
 CONFLICTS=		e2fsprogs-1.32{,nb*} e2fsprogs-1.36{,nb*}

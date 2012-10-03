@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/05/02 08:44:16 noud4 Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 09:10:38 asau Exp $
 #
 
 LIBGDA_PROVIDER=	mdb
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../databases/libgda/Makefile.common"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/09/07 12:55:57 othyro Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/03 09:10:40 asau Exp $
 #
 
 DISTNAME=	libpeas-1.5.0
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://live.gnome.org/Libpeas
 COMMENT=	Gobject-based plugins engine
 LICENSE=	gnu-lgpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 

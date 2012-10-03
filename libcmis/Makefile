@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/07/26 20:47:09 ftigeot Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 09:10:37 asau Exp $
 
 DISTNAME=	libcmis-0.2.3
 CATEGORIES=	net
@@ -8,8 +8,6 @@ MAINTAINER=	ftigeot@wolfpond.org
 HOMEPAGE=	http://sourceforge.net/projects/libcmis/
 COMMENT=	Client library for the CMIS interface
 LICENSE=	gnu-lgpl-v2.1 OR mpl-1.1 OR gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes

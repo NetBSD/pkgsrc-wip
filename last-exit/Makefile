@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/06/13 22:47:10 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/03 09:10:35 asau Exp $
 #
 
 DISTNAME=	last-exit-6
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc.gnome@gmail.com
 HOMEPAGE=	http://lastexit-player.org/index.php/Main_Page
 COMMENT=	Last Exit is streaming media player for GNOME
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT= 	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_PKGLOCALEDIR=	yes

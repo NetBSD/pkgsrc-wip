@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/05/19 16:51:24 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/03 09:10:41 asau Exp $
 #
 
 DISTNAME=		libtifiles
@@ -9,6 +9,8 @@ MASTER_SITES=		http://www.ticalc.org/pub/unix/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://tilp.info/
 COMMENT=		Library for reading files from TI calculators
+
+PKG_DESTDIR_SUPPORT=	none
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 

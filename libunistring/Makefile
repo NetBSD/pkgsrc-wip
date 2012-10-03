@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/02/11 07:17:20 realzhtw Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/03 09:10:41 asau Exp $
 #
 
 DISTNAME=	libunistring-0.9.3
@@ -9,8 +9,6 @@ MAINTAINER=	a@zta.lk
 HOMEPAGE=	http://www.gnu.org/software/libunistring/
 COMMENT=	Library that provides functions for manipulating Unicode strings
 LICENSE=	gnu-lgpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 

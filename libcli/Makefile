@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/02/20 10:51:22 lkundrak Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/03 09:10:37 asau Exp $
 #
 
 DISTNAME=	libcli-1.8.8
@@ -9,6 +9,8 @@ MAINTAINER=	haaaad@gmail.com
 HOMEPAGE=	http://libcli.sourceforge.net/
 
 COMMENT="Provides a shared library for including a Cisco-like CLI."
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_LANGUAGES+=	c
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/07/31 22:18:51 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/03 09:10:36 asau Exp $
 
 DISTNAME=	leim-${VERSION}
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -8,6 +8,8 @@ MASTER_SITES=	#
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/emacs/emacs.html
 COMMENT=	Libraries of Emacs Input Methods (for emacs22)
+
+PKG_DESTDIR_SUPPORT=	none
 
 CVS_REPOSITORIES=	emacs
 CVS_ROOT.emacs=		${CVS_ROOT_GNU}/emacs

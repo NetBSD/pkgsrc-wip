@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/05/06 10:32:00 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 09:10:37 asau Exp $
 #
 
 DISTNAME=	libcmt-0.1.0
@@ -10,8 +10,6 @@ MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://sourceforge.net/projects/libcmt/
 COMMENT=	Composable Memory Transactions Library for C
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

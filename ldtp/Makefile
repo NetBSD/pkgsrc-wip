@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/02/08 16:54:45 noud4 Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/03 09:10:36 asau Exp $
 #
 
 DISTNAME=	ldtp-2.0.6
@@ -13,8 +13,6 @@ LICENSE=	gnu-lgpl-v2
 
 DEPENDS+=	${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
 DEPENDS+=	${PYPKGPREFIX}-at-spi-[0-9]*:../../devel/py-at-spi
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

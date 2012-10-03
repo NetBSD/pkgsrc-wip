@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/10/29 08:32:46 shattered Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/03 09:10:41 asau Exp $
 
 DISTNAME=		kbd-1.08
 PKGNAME=		linux-${DISTNAME}
@@ -13,6 +13,8 @@ HOMEPAGE=		ftp://ftp.win.tue.nl/pub/linux-local/utils/kbd/
 COMMENT=		Keyboard and console utilities for Linux
 
 ONLY_FOR_PLATFORM=	Linux-*-* # Uses Linux kernel headers
+
+PKG_DESTDIR_SUPPORT=	none
 
 HAS_CONFIGURE=		YES
 USE_TOOLS+=		gmake msgfmt # and xgettext

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2010/04/11 08:38:23 obache Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/03 09:10:37 asau Exp $
 #
 
 DISTNAME=		libassa-3.5.0
@@ -9,8 +9,6 @@ MAINTAINER=		bartosz.kuzma@gmail.com
 HOMEPAGE=		http://libassa.sourceforge.net/
 COMMENT=		Networking library based on ACP
 LICENSE=		gnu-lgpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes

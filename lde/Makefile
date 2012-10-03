@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/10/29 08:32:45 shattered Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/03 09:10:35 asau Exp $
 #
 
 DISTNAME=	lde-2.6.0
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lde/}
 MAINTAINER=	pancake@phreaker.net
 HOMEPAGE=	http://lde.sourceforge.net
 COMMENT=	Curses based file system viewer/editor for Linux
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_NCURSES=	YES # missing function termname
 GNU_CONFIGURE=	YES

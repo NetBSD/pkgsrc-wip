@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/02/13 16:22:14 tnn2 Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 09:10:37 asau Exp $
 #
 
 DISTNAME=	# SVN package
@@ -9,8 +9,6 @@ MASTER_SITES=	# SVN package
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.libcpu.org/
 COMMENT=	Anything-to-anything binary translation library
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gmake flex bison
 USE_LANGUAGES+=	c c++

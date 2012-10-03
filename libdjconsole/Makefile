@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/09/28 03:57:46 othyro Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/03 09:10:38 asau Exp $
 #
 
 DISTNAME=	libdjconsole-0.1.3
@@ -15,8 +15,6 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake pkg-config
 USE_LANGUAGES=	c c++
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PKGCONFIG_OVERRIDE+=	libdjconsole.pc.in
 

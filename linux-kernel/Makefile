@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/11/28 00:27:26 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/03 09:10:41 asau Exp $
 
 .include "Makefile.common"
 
@@ -14,6 +14,8 @@ BUILD_DEPENDS+=		linux-module-init-tools-[0-9]*:../../wip/linux-module-init-tool
 # XXX todo: fix pkg_info to not be so noisy about this
 # XXX       maybe say "Package preserve option is set" or ...?
 PKG_PRESERVE=	# defined
+
+PKG_DESTDIR_SUPPORT=	none
 
 .include "../../mk/bsd.prefs.mk"
 

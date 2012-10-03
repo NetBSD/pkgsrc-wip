@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/10/29 08:32:46 shattered Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/03 09:10:41 asau Exp $
 #
 
 DISTNAME=		acl_2.2.39-1
@@ -12,6 +12,8 @@ COMMENT=		The acl package contains the setfacl and getfacl utils
 
 # uses linux/version.h and only tested under Linux
 ONLY_FOR_PLATFORM=	Linux-*-*
+
+PKG_DESTDIR_SUPPORT=	none
 
 AUTOCONF_REQD=	2.50
 

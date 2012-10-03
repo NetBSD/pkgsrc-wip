@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2010/07/11 17:40:53 bharder Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 09:10:39 asau Exp $
 #
 
 .include "../../wip/libmpg123/Makefile.common"
 
 PKGNAME=	libmpg123-${LIBMPG123_VERSION}
 COMMENT=	MPEG layer 1, 2, and 3 decoder library
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PKGCONFIG_OVERRIDE+=	libmpg123.pc.in
 

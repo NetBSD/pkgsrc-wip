@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/03/21 12:26:29 jihbed Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/03 09:10:44 asau Exp $
 #
 
 DISTNAME=		ltrace_0.3.36.orig
@@ -9,8 +9,6 @@ MASTER_SITES=		${MASTER_SITE_DEBIAN:=pool/main/l/ltrace/}
 MAINTAINER=		reed@reedmedia.net
 HOMEPAGE=		http://ltrace.alioth.debian.org/
 COMMENT=		Track runtime library calls in dynamically linked programs
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 ONLY_FOR_PLATFORM=	Linux-*-*
 

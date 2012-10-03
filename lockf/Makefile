@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/07/07 13:19:05 genolopolis Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 09:10:42 asau Exp $
 #
 
 DISTNAME=	lockf-1
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.freebsd.org
 COMMENT=	FreeBSD's lockf
 LICENSE=	original-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	c

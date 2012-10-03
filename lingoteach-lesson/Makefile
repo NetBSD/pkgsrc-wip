@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/05/19 16:51:25 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/03 09:10:41 asau Exp $
 #
 
 DISTNAME=		lingoteach-lesson-0.4.1
@@ -10,6 +10,8 @@ HOMEPAGE=		http://lingoteach.sourceforge.net/
 COMMENT=		Lesson files for lingoteach
 
 DEPENDS+=		lingoteach-ui-[0-9]*:../../wip/lingoteach-ui
+
+PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=		yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/10/31 15:34:53 mjoellnir Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/03 09:10:40 asau Exp $
 #
 
 DISTNAME=	libpar2-0.2
@@ -13,7 +13,6 @@ LICENSE=	gnu-gpl-v2
 GNU_CONFIGURE=yes
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes

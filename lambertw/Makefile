@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/09/11 08:21:56 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 09:10:35 asau Exp $
 #
 
 DISTNAME=	LambertW-1.1
@@ -10,8 +10,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://sabotin.ung.si/~darko/LambertW/
 COMMENT=	Lambert W Function for Applications in Physics
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gmake
 USE_LANGUAGES=	c++

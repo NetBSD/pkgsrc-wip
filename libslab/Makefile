@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/06/13 22:47:10 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/03 09:10:40 asau Exp $
 #
 
 DISTNAME=	libslab-2.30.0
@@ -11,8 +11,6 @@ MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://code.google.com/p/libslab/
 COMMENT=	Slab memory allocator in application layer
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/05/17 09:15:49 obache Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/03 09:10:42 asau Exp $
 #
 
 DISTNAME=	lmtp2nntp-1.4.1
@@ -9,8 +9,6 @@ MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://www.ossp.org/pkg/tool/lmtp2nntp/
 COMMENT=	OSSP lmtp2nntp - Mail to News Gateway
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 # XXX: LIBS in CONFIGURE_ENV confuse subsequent configure script.

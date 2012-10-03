@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/03/29 18:41:53 christtrekker Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/03 09:10:45 asau Exp $
 #
 
 DISTNAME=	lxmusic-0.4.0
@@ -9,6 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://lxde.org/
 COMMENT=	Minimalist XMMS2-based music player
 LICENSE=	gnu-gpl-v2
+
+PKG_DESTDIR_SUPPORT=	none
 
 WRKSRC=		${WRKDIR}/lxmusic-0.4.0
 GNU_CONFIGURE=	yes

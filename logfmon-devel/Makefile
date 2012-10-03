@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/06/23 14:31:39 smoppy Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/03 09:10:42 asau Exp $
 #
 
 DISTNAME=	logfmon
@@ -15,7 +15,6 @@ CVS_PROJECT=		logfmon
 CVS_REPOSITORIES=	${CVS_PROJECT}
 CVS_ROOT.logfmon=	${CVS_ROOT_SOURCEFORGE}
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 USE_TOOLS+=		yacc
 
 # Makefile things

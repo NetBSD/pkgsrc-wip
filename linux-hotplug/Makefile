@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:13:53 tvierling Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/03 09:10:41 asau Exp $
 #
 
 DISTNAME=		hotplug-2002_04_01
@@ -12,5 +12,6 @@ MAINTAINER=		reed@reedmedia.net
 HOMEPAGE=		http://linux-hotplug.sourceforge.net/
 COMMENT=		Hardware autoconfiguration for Linux
 
+PKG_DESTDIR_SUPPORT=	none
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/08/01 14:57:09 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/03 09:10:41 asau Exp $
 #
 
 DISTNAME=	linbox-1.1.7rc0
@@ -10,8 +10,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://www.linalg.org/
 COMMENT=	LinBox: exact computational linear algebra
 LICENSE=	gnu-lgpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

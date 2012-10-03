@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/03/14 23:03:55 shindenmorr Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/03 09:10:38 asau Exp $
 #
 
 DISTNAME=	libgadu-1.9.0-rc2
@@ -10,8 +10,6 @@ MAINTAINER=	mjl@luckie.org.nz
 HOMEPAGE=	http://toxygen.net/libgadu/
 COMMENT=	Used by Instant Messengers with Gadu-Gadu support
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

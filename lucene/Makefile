@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/08/04 00:07:25 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 09:10:44 asau Exp $
 #
 
 DISTNAME=	lucene-3.0.2
@@ -10,8 +10,6 @@ MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://lucene.apache.org/
 COMMENT=	Full-text search engine for Java
 LICENSE=	apache-2.0
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_BUILD=	yes
 USE_TOOLS+=	pax

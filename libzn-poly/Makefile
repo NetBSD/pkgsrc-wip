@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/01/24 09:21:57 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 09:10:41 asau Exp $
 #
 
 DISTNAME=	zn_poly-0.9
@@ -10,8 +10,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://cims.nyu.edu/~harvey/code/zn_poly/
 COMMENT=	Libzn_poly is a C library for polynomial arithmetic in Z/nZ[x]
 LICENSE=		gnu-gpl-v2 AND gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake

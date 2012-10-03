@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/10/27 12:04:20 fhajny Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/03 09:10:38 asau Exp $
 #
 
 DISTNAME=		libestr-0.1.2
@@ -9,8 +9,6 @@ MAINTAINER=		bartosz.kuzma@gmail.com
 HOMEPAGE=		http://libestr.adiscon.com/
 COMMENT=		Library for some string essentials
 LICENSE=		gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes

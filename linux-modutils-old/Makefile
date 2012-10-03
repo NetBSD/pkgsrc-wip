@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/10/29 08:32:46 shattered Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/03 09:10:42 asau Exp $
 
 DISTNAME=		modutils-2.4.24
 PKGNAME=		linux-${DISTNAME:S/modutils/modutils-old/}
@@ -15,6 +15,8 @@ COMMENT=		Linux kernel module utilities, .old versions
 CONFLICTS+=		linux-modutils-[0-9]*
 
 ONLY_FOR_PLATFORM=	Linux-*-* # This is for the Linux kernel
+
+PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--exec-prefix=${PREFIX:Q} --sysconfdir=${PKG_SYSCONFDIR:Q}

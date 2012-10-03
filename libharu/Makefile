@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2011/01/17 09:26:28 emil_s Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/03 09:10:39 asau Exp $
 #
 
 DISTNAME=	libharu-2.2.1
@@ -8,8 +8,6 @@ MASTER_SITES=	http://libharu.org/files/
 MAINTAINER=	esg@sdf.lonestar.org
 HOMEPAGE=	http://libharu.org/
 COMMENT=	Library for generating PDF files
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

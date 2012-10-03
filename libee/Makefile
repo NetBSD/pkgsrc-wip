@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/05/04 07:48:31 bartoszkuzma Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/03 09:10:38 asau Exp $
 #
 
 DISTNAME=		libee-0.4.1
@@ -9,8 +9,6 @@ MAINTAINER=		bartosz.kuzma@gmail.com
 HOMEPAGE=		http://www.libee.org/
 COMMENT=		Event Expression Library inspired by CEE
 LICENSE=		gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-testbench

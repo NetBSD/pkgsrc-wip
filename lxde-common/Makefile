@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/05/17 04:20:52 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/03 09:10:44 asau Exp $
 
 DISTNAME=	lxde-common-0.5.5
 CATEGORIES=	devel x11
@@ -17,7 +17,5 @@ DEPENDS+=	openbox>=0:../../wm/openbox
 DEPENDS+=	xprop>=0:../../x11/xprop
 
 GNU_CONFIGURE=	yes
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.pkg.mk"

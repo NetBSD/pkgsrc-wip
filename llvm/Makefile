@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/08/14 16:31:47 asau Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/03 09:10:42 asau Exp $
 #
 
 DISTNAME=	llvm-2.8
@@ -8,8 +8,6 @@ MASTER_SITES=	http://llvm.org/releases/${PKGVERSION_NOREV}/
 MAINTAINER=	adam.hoka@gmail.com
 HOMEPAGE=	http://llvm.org/
 COMMENT=	Low Level Virtual Machine compiler infrastructure
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake perl:build chown

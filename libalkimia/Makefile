@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/01/02 20:02:32 gduzan Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 09:10:36 asau Exp $
 #
 
 DISTNAME=	137323-libalkimia-4.3.1
@@ -13,8 +13,6 @@ COMMENT=	Common finance routines for kde4 applications
 LICENSE=	gnu-lgpl-v2.1
 
 BUILD_DEPENDS+=	automoc4>=0.9.83:../../devel/automoc4
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 

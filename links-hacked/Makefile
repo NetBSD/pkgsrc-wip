@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2010/12/26 05:01:22 davesainty Exp $
+# $NetBSD: Makefile,v 1.23 2012/10/03 09:10:41 asau Exp $
 #
 
 DISTNAME=	links-hacked-${VER}
@@ -11,6 +11,8 @@ DISTFILES=	{DEFAULT_DISTFILES} links-fonts-new${EXTRACT_SUFX}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://xray.sai.msu.ru/~karpov/links-hacked/
 COMMENT=	Enhanced version of Links with tabs and more
+
+PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake automake

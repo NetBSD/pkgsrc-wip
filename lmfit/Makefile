@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/03/07 12:01:16 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 09:10:42 asau Exp $
 #
 
 DISTNAME=	lmfit-3.2
@@ -10,8 +10,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://www.messen-und-deuten.de/lmfit/lmfit.html
 COMMENT= Levenberg-Marquardt least-squares minimization and curve fitting
 #LICENSE=	# TODO: (see mk/license.mk)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL= yes
