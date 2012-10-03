@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2010/01/17 12:03:29 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.19 2012/10/03 14:22:23 asau Exp $
 #
 # XXX WIP: only installs parts necessary for client operation.
 # Server parts still in work (need to add informational texts into
@@ -59,11 +59,13 @@ post-patch:
 		${SED} ${FILES_SUBST_SED} <$$f >../conf.eg/$$f; \
 	done
 
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/Src/mix ${PREFIX}/bin/mix
-	${INSTALL_DATA} ${WRKSRC}/mix.1 ${PREFIX}/${PKGMANDIR}/man1/mix.1
-	${INSTALL_DATA_DIR} ${egdir}
-	${INSTALL_DATA} ${WRKSRC}/conf.eg/* ${egdir}/
+	${INSTALL_PROGRAM} ${WRKSRC}/Src/mix ${DESTDIR}${PREFIX}/bin/mix
+	${INSTALL_DATA} ${WRKSRC}/mix.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/mix.1
+	${INSTALL_DATA_DIR} ${DESTDIR}${egdir}
+	${INSTALL_DATA} ${WRKSRC}/conf.eg/* ${DESTDIR}${egdir}/
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/06/13 22:47:11 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/03 14:29:31 asau Exp $
 #
 
 DISTNAME=		moto4lin-0.3
@@ -14,11 +14,13 @@ COMMENT=		Filemanager and seem editor for Motorola P2k phones
 USE_LANGUAGES=		c++
 USE_TOOLS+=		gmake
 
+INSTALLATION_DIRS=	bin
+
 pre-build:
 	cd ${WRKSRC} && ${QTDIR}/bin/qmake
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/moto_ui/moto4lin ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/moto_ui/moto4lin ${DESTDIR}${PREFIX}/bin
 
 .include "../../devel/libusb/buildlink3.mk"
 .include "../../wip/p2kmoto/buildlink3.mk"

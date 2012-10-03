@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/03/14 01:28:02 jlamwww Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/03 14:30:47 asau Exp $
 #
 
 DISTNAME=		mozplugger-1.5.2
@@ -12,13 +12,15 @@ COMMENT=		Mozilla plugin for launching external viewers
 MAKE_ARGS+=		-DPKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 CONF_FILES+=		${PREFIX}/share/examples/mozplugger/mozpluggerrc ${PKG_SYSCONFDIR}/mozpluggerrc
 
+INSTALLATION_DIRS=	bin
+
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/mozplugger
-	${INSTALL_DATA} ${WRKSRC}/mozpluggerrc ${PREFIX}/share/examples/mozplugger/
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/mozilla/plugins
-	${INSTALL_LIB} ${WRKSRC}/mozplugger.so ${PREFIX}/lib/mozilla/plugins/
-	${INSTALL_PROGRAM} ${WRKSRC}/mozplugger-controller ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/mozplugger-helper ${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/mozplugger
+	${INSTALL_DATA} ${WRKSRC}/mozpluggerrc ${DESTDIR}${PREFIX}/share/examples/mozplugger/
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/lib/mozilla/plugins
+	${INSTALL_LIB} ${WRKSRC}/mozplugger.so ${DESTDIR}${PREFIX}/lib/mozilla/plugins/
+	${INSTALL_PROGRAM} ${WRKSRC}/mozplugger-controller ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/mozplugger-helper ${DESTDIR}${PREFIX}/bin
 
 .include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2010/12/26 05:01:23 davesainty Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/03 14:26:39 asau Exp $
 #
 
 DISTNAME=		molmol-2k.2.0-src
@@ -15,11 +15,13 @@ USE_LIBTOOLS=		yes
 
 WRKSRC=			${WRKDIR}
 
+INSTALLATION_DIRS=	bin
+
 post-configure:
 	${CP} ${WRKSRC}/makedef.lnx ${WRKSRC}/makedef
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/src/main/molmol ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/src/main/molmol ${DESTDIR}${PREFIX}/bin
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
