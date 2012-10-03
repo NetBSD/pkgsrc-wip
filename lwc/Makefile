@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/11/03 13:01:52 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/03 09:04:32 asau Exp $
 #
 
 DISTNAME=		lwc-1.3.2
@@ -18,7 +18,9 @@ SUBST_FILES.gcc=Makefile
 SUBST_SED.gcc= -e 's,CCC\ \=,\#,g' -e 's,CC\ =\ ,CC+=-c ${CFLAGS}\#,' \
 	-e 's,$$(CCC),${CC},g'
 
+INSTALLATION_DIRS=	bin
+
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/objdir/lwc ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/objdir/lwc ${DESTDIR}${PREFIX}/bin
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/02/22 21:13:15 plunky Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/03 09:06:28 asau Exp $
 
 DISTNAME=		lzs-lkm-1.2
 CATEGORIES=		net
@@ -47,8 +47,10 @@ CPPFLAGS+=		-DMALLOCLOG
 CPPFLAGS+=		-DMULTIPROCESSOR
 .endif
 
+INSTALLATION_DIRS=	lkm
+
 do-install:
 	${INSTALL} ${COPY} -o ${BINOWN} -g ${BINGRP} -m 444 \
-		${WRKSRC:Q}/lkm/lzs.o ${PREFIX:Q}/lkm/lzs.o
+		${WRKSRC:Q}/lkm/lzs.o ${DESTDIR}${PREFIX:Q}/lkm/lzs.o
 
 .include "../../mk/bsd.pkg.mk"
