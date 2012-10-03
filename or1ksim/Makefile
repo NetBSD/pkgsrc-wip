@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2009/05/20 00:58:42 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/03 21:26:15 asau Exp $
 #
 
 DISTNAME=	or1ksim-0.2.0rc3
@@ -22,16 +22,16 @@ post-build:
 	mv ${WRKSRC}/sim.cfg ${WRKSRC}/or1ksim.cfg
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/or1ksim ${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/or1ksim.cfg ${PREFIX}/share/examples/${PKGBASE}
-	${INSTALL_DATA} ${WRKSRC}/virtex.tim ${PREFIX}/share/examples/${PKGBASE}
-	${INSTALL_DATA} ${WRKSRC}/AUTHORS ${PREFIX}/share/doc/${PKGBASE}
-	${INSTALL_DATA} ${WRKSRC}/COPYING ${PREFIX}/share/doc/${PKGBASE}
-	${INSTALL_DATA} ${WRKSRC}/ChangeLog ${PREFIX}/share/doc/${PKGBASE}
-	${INSTALL_DATA} ${WRKSRC}/INSTALL ${PREFIX}/share/doc/${PKGBASE}
-	${INSTALL_DATA} ${WRKSRC}/NEWS ${PREFIX}/share/doc/${PKGBASE}
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/${PKGBASE}
-	${INSTALL_DATA} ${WRKSRC}/README.gdb ${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_PROGRAM} ${WRKSRC}/or1ksim ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/or1ksim.cfg ${DESTDIR}${PREFIX}/share/examples/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/virtex.tim ${DESTDIR}${PREFIX}/share/examples/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/AUTHORS ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/COPYING ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/ChangeLog ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/INSTALL ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/NEWS ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/README.gdb ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 
 .include "../../devel/readline/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/01/12 04:32:48 geeohgeegeeoh Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 21:02:10 asau Exp $
 # FreeBSD Id: ports/net/openbgpd/Makefile,v 1.10 2006/05/25 11:09:26 flz Exp
 
 PKGNAME=	openbgpd-as4byte-3.9
@@ -107,11 +107,13 @@ do-build:
 post-install:
 	@echo "yep"
 
+INSTALLATION_DIRS=	sbin ${PKGMANDIR}/man5 ${PKGMANDIR}/man8
+
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/bgpd/bgpd ${PREFIX}/sbin
-	${INSTALL_PROGRAM} ${WRKSRC}/bgpctl/bgpctl ${PREFIX}/sbin
-	${INSTALL_MAN} ${WRKSRC}/bgpd/bgpd.8 ${PREFIX}/${PKGMANDIR}/man8
-	${INSTALL_MAN} ${WRKSRC}/bgpd/bgpd.conf.5 ${PREFIX}/${PKGMANDIR}/man5
-	${INSTALL_MAN} ${WRKSRC}/bgpctl/bgpctl.8 ${PREFIX}/${PKGMANDIR}/man8
+	${INSTALL_PROGRAM} ${WRKSRC}/bgpd/bgpd ${DESTDIR}${PREFIX}/sbin
+	${INSTALL_PROGRAM} ${WRKSRC}/bgpctl/bgpctl ${DESTDIR}${PREFIX}/sbin
+	${INSTALL_MAN} ${WRKSRC}/bgpd/bgpd.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
+	${INSTALL_MAN} ${WRKSRC}/bgpd/bgpd.conf.5 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
+	${INSTALL_MAN} ${WRKSRC}/bgpctl/bgpctl.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
 
 .include "../../mk/bsd.pkg.mk"

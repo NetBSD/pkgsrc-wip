@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/02/24 16:20:14 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/03 21:06:07 asau Exp $
 
 DISTNAME=		opentracker-0.0.${OPENTRACKER_PKG_VERSION}
 CATEGORIES=		net
@@ -18,8 +18,8 @@ CVS_MODULE.opentracker=	opentracker
 INSTALLATION_DIRS=	bin share/doc/opentracker
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/opentracker ${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/README* ${PREFIX}/share/doc/opentracker
+	${INSTALL_PROGRAM} ${WRKSRC}/opentracker ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/README* ${DESTDIR}${PREFIX}/share/doc/opentracker
 
 .include "../../mk/bsd.prefs.mk"
 

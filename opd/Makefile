@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/11/02 18:00:24 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/03 20:58:20 asau Exp $
 #
 
 DISTNAME=		opd-v0.2-2003-03-18
@@ -21,8 +21,10 @@ WRKSRC=		${WRKDIR}/
 #	-lbluetooth -lopenobex \
 #	 -o opd
 
+INSTALLATION_DIRS=	bin
+
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/opd ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/opd ${DESTDIR}${PREFIX}/bin
 
 .include "../../comms/openobex/buildlink3.mk"
 .include "../../wip/bluez-libs/buildlink3.mk"
