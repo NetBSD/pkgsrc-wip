@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4895 2012/10/03 22:14:24 thomasklausner Exp $
+# $Id: Makefile,v 1.4896 2012/10/03 22:49:09 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -292,7 +292,7 @@ SUBDIR+=	cclive
 SUBDIR+=	ccrtp
 SUBDIR+=	ccrypt
 SUBDIR+=	cddlib
-SUBDIR+=    cde
+SUBDIR+=	cde
 SUBDIR+=	cdogs
 SUBDIR+=	cdpr
 SUBDIR+=	cedet
@@ -2808,6 +2808,7 @@ SUBDIR+=	rpcemu-devel
 SUBDIR+=	rpki-svn
 SUBDIR+=	rrdtool
 SUBDIR+=	rsget
+SUBDIR+=	rsound
 SUBDIR+=	rss-glib
 SUBDIR+=	rst-mode
 SUBDIR+=	rstudio
