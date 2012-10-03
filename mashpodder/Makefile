@@ -1,22 +1,22 @@
-# $NetBSD: Makefile,v 1.1 2012/09/19 14:54:02 ahp-nils Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 11:53:15 ahp-nils Exp $
 #
 
 DISTNAME=	mashpodder-svn37
-PKGNAME=	mashpodder-37
+PKGNAME=	mashpodder-svn-37
 CATEGORIES=	net
 MASTER_SITES=	https://mashpodder.googlecode.com/files/
 
-MAINTAINER=	nils@gruik.net
+MAINTAINER=	ahp-nils@users.sf.net
 HOMEPAGE=	https://code.google.com/p/mashpodder/
 COMMENT=	Podcatching client based on BashPodder
 LICENSE=	gnu-gpl-v2
 
 FETCH_USING=		wget
 FETCH_BEFORE_ARGS=	--no-check-certificate
-DEPENDS+=		wget:../../net/wget
-DEPENDS+=		rsync:../../net/rsync
-DEPENDS+=		curl:../../www/curl
-DEPENDS+=		libxslt:../../textproc/libxslt
+DEPENDS+=		wget-[0-9]*:../../net/wget
+DEPENDS+=		rsync-[0-9]*:../../net/rsync
+DEPENDS+=		curl-[0-9]*:../../www/curl
+DEPENDS+=		libxslt-[0-9]*:../../textproc/libxslt
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 NO_BUILD=		yes
