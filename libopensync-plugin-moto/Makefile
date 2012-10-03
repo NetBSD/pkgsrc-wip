@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/04/08 19:09:43 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/03 08:27:28 asau Exp $
 #
 
 DISTNAME=	libopensync-plugin-moto-0.22
@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-dateutil>=1.0:../../time/py-dateutil
 PYTHON_VERSIONS_ACCEPTED=	25
 USE_TOOLS+=			pkg-config:run
 
-INSTALLATION_DIRS=		share/opensync/defaults
+INSTALLATION_DIRS=		bin lib/opensync/python-plugins share/opensync/defaults
 
 SUBST_CLASSES+=		python
 SUBST_SED.python=	-e 's,/usr/bin/env python,${PYTHONBIN},'
@@ -27,9 +27,9 @@ SUBST_MESSAGE.python=	Replacing python interpreter.
 do-build:
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/mototool ${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/motosync.py ${PREFIX}/lib/opensync/python-plugins
-	${INSTALL_DATA} ${WRKSRC}/moto-sync ${PREFIX}/share/opensync/defaults
+	${INSTALL_SCRIPT} ${WRKSRC}/mototool ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/motosync.py ${DESTDIR}${PREFIX}/lib/opensync/python-plugins
+	${INSTALL_DATA} ${WRKSRC}/moto-sync ${DESTDIR}${PREFIX}/share/opensync/defaults
 
 .include "../../comms/libopensync/buildlink3.mk"
 .include "../../lang/python/extension.mk"
