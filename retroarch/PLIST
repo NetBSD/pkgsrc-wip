@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2012/10/03 23:23:23 othyro Exp $
+bin/retroarch
+bin/retroarch-joyconfig
+bin/retroarch-zip
+man/man1/retroarch-joyconfig.1
+man/man1/retroarch.1
