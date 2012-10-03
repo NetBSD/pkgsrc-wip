@@ -1,16 +1,16 @@
-As of 2012-09-30 CDE doesn't build yet. I (Jelle Hermsen) am almost done
+As of 2012-10-03 CDE doesn't build yet. I (Jelle Hermsen) am almost done
 adding most basic NetBSD compatibility. I've made this preliminary pkgsrc
 package.
 
 First off there are two tiny things:
-- during the build somehow it loses track of imake, probably a path mixup
-- the NetBSD config in config/cf/NetBSD.cf is really old, can be replaced
-  by for example a config from xorg
+- during the build of doc it somehow it loses track of imake, probably a path
+  mixup
+- the NetBSD config in config/cf/NetBSD.cf is really old, can be replaced by
+  for example a config from xorg
 
 
 The current patches are generated with mkpatches and consist mostly of
 changes to CSRG_BASED:
-
 
 I have searched the codebase for occurences of __FreeBSD__ and I'm looking
 to change them to CSRG_BASED where ever this is possible. Here you find a list
@@ -25,11 +25,11 @@ on utmpx in OpenBSD, but it is present in NetBSD -> http://80386.nl/unix/utmpx/
 
 + I did change an __FreeBSD__ identifier to CSRG_BASED
 - I didn't (so more work has probably to be done on NetBSD compatibility here)
-* needs more time looking into
+* Needs more time looking into, but looks replaceable on first glance
 
 + lib/DtSearch/raima/vista.h
 * lib/DtTerm/TermPrim/TermPrimSetUtmp.c
-- lib/DtWidget/Editor.c -> define iswblank(wc) iswctype((wc),blnkclass), anders undef getwc
+- lib/DtWidget/Editor.c -> define iswblank(wc) iswctype((wc),blnkclass), else undef getwc
 + lib/tt/bin/dbck/options.C -> clear cut if defined(linux) || defined(sgi) || defined(__FreeBSD__)
 + lib/tt/bin/tt_type_comp/mp_type_comp.C -> clear cut, include <getopt.h>
 + lib/tt/bin/ttdbserverd/db_server_svc.C -> clear cut, include <getopt.h>
@@ -92,10 +92,8 @@ we have lpq in path
 - programs/dtsearchpath/dtsp/SearchPath.h
 + programs/dtsearchpath/libCliSrv/UnixEnv.C -> manpaths added
 
-
-Still have to do:
-programs/dtudcexch/exportbdf.c
-programs/dtudcfonted/dtaddcpf/addcpf.c
-programs/dtudcfonted/dtcpftogpf/cpftogpf.c
-programs/dtudcfonted/libfuty/getfname.c
-programs/dtudcfonted/libfuty/oakfuty.c
++ programs/dtudcexch/exportbdf.c -> union wait => int
++ programs/dtudcfonted/dtaddcpf/addcpf.c -> union wait => int
++ programs/dtudcfonted/dtcpftogpf/cpftogpf.c -> union wait => int
++ programs/dtudcfonted/libfuty/getfname.c -> union wait => int
++ programs/dtudcfonted/libfuty/oakfuty.c -> union wait => int
