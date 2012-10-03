@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/03 01:06:45 makoto Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/03 01:16:13 makoto Exp $
 
 DISTNAME=	tqsllib-2_2
 PKGNAME=	tqsllib-2.2
@@ -14,6 +14,6 @@ COMMENT=	Tqsl library for ARRL LoTW
 GNU_CONFIGURE=	yes
 USE_LANGUAGES+=	c c++
 USE_LIBTOOL=	yes
-WRKSRC=		${WRKDIR}/${PKGNAME}
+WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/03 01:05:00 makoto Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/03 01:19:59 makoto Exp $
 
 DISTNAME=		TrustedQSL-1_13
 PKGNAME=		TrustedQSL-1.13
@@ -14,7 +14,7 @@ COMMENT=		Uploading QSL Data to LoTW of ARRL
 USE_TOOLS+=		perl gmake
 USE_LANGUAGES+=		c c++
 USE_LIBTOOL=		yes
-WRKSRC=			${WRKDIR}/${PKGNAME}
+WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-tqsllib=${PREFIX}/lib
