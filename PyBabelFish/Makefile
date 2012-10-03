@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/09/24 16:56:27 asau Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/03 22:14:51 thomasklausner Exp $
 #
 
 DISTNAME=		PyBabelPhish-2.0_All_Platforms
@@ -15,7 +15,6 @@ COMMENT=		Gtk-based frontend for several translation services on web
 
 PKG_DESTDIR_SUPPORT=	none
 
-PYTHON_VERSIONS_ACCEPTED=	25
 PY_PATCHPLIST=		yes
 NO_CONFIGURE=		yes
 

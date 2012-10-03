@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/05/19 09:00:11 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/03 22:14:53 thomasklausner Exp $
 
 DISTNAME=	rcsparse-0.0.0_20061004
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,6 @@ LICENSE=	corecode-license
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-PYTHON_VERSIONS_ACCEPTED=	25
 PYDISTUTILSPKG=	# yes
 
 .include "../../lang/python/extension.mk"

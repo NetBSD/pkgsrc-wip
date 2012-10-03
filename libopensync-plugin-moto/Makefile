@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/03 08:27:28 asau Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/03 22:14:52 thomasklausner Exp $
 #
 
 DISTNAME=	libopensync-plugin-moto-0.22
@@ -13,7 +13,6 @@ COMMENT=	Moto plugin for opensync (for Motorola phones)
 DEPENDS+=	${PYPKGPREFIX}-libopensync-plugin>=0.22:../../wip/py-libopensync-plugin
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=1.0:../../time/py-dateutil
 
-PYTHON_VERSIONS_ACCEPTED=	25
 USE_TOOLS+=			pkg-config:run
 
 INSTALLATION_DIRS=		bin lib/opensync/python-plugins share/opensync/defaults

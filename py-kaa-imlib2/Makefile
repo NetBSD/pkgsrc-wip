@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/04/08 19:09:47 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/03 22:14:53 thomasklausner Exp $
 #
 
 DISTNAME=		kaa-imlib2-0.2.3
@@ -12,8 +12,6 @@ HOMEPAGE=		http://freevo.sourceforge.net/cgi-bin/freevo-2.0/Kaa
 COMMENT=		Imlib2 wrapper for the Kaa multimedia framework
 
 PYDISTUTILSPKG=		yes
-
-PYTHON_VERSIONS_ACCEPTED=	25
 
 .include "../../graphics/imlib2/buildlink3.mk"
 .include "../../lang/python/extension.mk"

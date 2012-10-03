@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/08/25 17:02:04 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 22:14:52 thomasklausner Exp $
 #
 
 DISTNAME=	dreampie-1.1
@@ -16,8 +16,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LANGUAGES=	# none
 
 PYDISTUTILSPKG=	yes
-PYTHON_VERSIONS_ACCEPTED= 31 27 26 25
-
 
 .include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"

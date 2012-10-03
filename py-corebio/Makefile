@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/04/08 19:09:45 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/03 22:14:52 thomasklausner Exp $
 #
 
 DISTNAME=	CoreBio-0.5.0
@@ -15,7 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_ACCEPTED=  26 25
+PYTHON_VERSIONS_ACCEPTED=  26
 PYDISTUTILSPKG=	yes
 
 do-test:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/09/16 09:16:53 noud4 Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/03 22:14:53 thomasklausner Exp $
 #
 
 DISTNAME=	joblib-0.6.4
@@ -19,7 +19,6 @@ WRKSRC=		${WRKDIR}/joblib-0.6.4
 USE_LANGUAGES=	# none
 
 PYTHON_VERSIONS_INCLUDE_3X= yes
-PYTHON_VERSIONS_ACCEPTED= 25 26 27
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"

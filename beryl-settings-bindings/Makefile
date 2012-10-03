@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/06/13 22:46:57 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/03 22:14:52 thomasklausner Exp $
 #
 
 DISTNAME=	beryl-settings-bindings-${BERYL_VERSION}
@@ -13,7 +13,6 @@ PKGCONFIG_OVERRIDE+=	beryl-settings-bindings.pc.in
 
 DEPENDS+=	${PYPKGPREFIX}-pyrex>=0.9:../../lang/py-pyrex
 
-PYTHON_VERSION_REQD=	25
 PYBINMODULE=	YES
 PY_PATCHPLIST=	YES
 

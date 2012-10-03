@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/09/03 23:10:51 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 22:14:52 thomasklausner Exp $
 #
 
 DISTNAME=	Booktype-1.5
@@ -44,8 +44,6 @@ REPLACE_INTERPRETER+=	python
 REPLACE.python.old=	/usr/bin/env
 REPLACE.python.new=	${PYTHONBIN}
 REPLACE_FILES.python=	${WRKSRC}/lib/booki/manage.py
-
-PYTHON_VERSIONS_ACCEPTED= 27 26 25
 
 .include "options.mk"
 

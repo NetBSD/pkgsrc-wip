@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/09/24 18:26:51 asau Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/03 22:14:52 thomasklausner Exp $
 
 DISTNAME=	calypso-0.5
 CATEGORIES=	net
@@ -18,7 +18,6 @@ WRKSRC=		${WRKDIR}/calypso
 
 PYDISTUTILSPKG=			yes
 PYTHON_VERSIONS_INCLUDE_3X=	yes
-PYTHON_VERSIONS_INCOMPATIBLE=	25
 
 INSTALLATION_DIRS=	share/examples/calypso
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/01/17 13:29:56 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 22:14:54 thomasklausner Exp $
 #
 
 DISTNAME=	pyttk-0.3.2
@@ -17,7 +17,6 @@ WRKSRC=		${WRKDIR}/pyttk-0.3.2
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_ACCEPTED= 31 27 26 25
 PYDISTUTILSPKG=	yes
 
 do-test:

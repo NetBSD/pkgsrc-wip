@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/09/03 14:47:25 jihbed Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/03 22:14:53 thomasklausner Exp $
 #
 
 DISTNAME=	qmath-0.2.0
@@ -18,7 +18,6 @@ WRKSRC=		${WRKDIR}/qmath-0.2.0
 USE_LANGUAGES=	# none
 
 PYDISTUTILSPKG=	yes
-PYTHON_VERSIONS_ACCEPTED=		31 27 26 25
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

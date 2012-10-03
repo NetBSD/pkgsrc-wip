@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/09/10 09:22:59 jihbed Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/03 22:14:52 thomasklausner Exp $
 #
 
 DISTNAME=	django-gitrevision-0.1.4
@@ -21,8 +21,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 WRKSRC=		${WRKDIR}/django-gitrevision-0.1.4
 
 USE_LANGUAGES=	# none
-
-PYTHON_VERSIONS_ACCEPTED= 31 27 26 25
 
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 

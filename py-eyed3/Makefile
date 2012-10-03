@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/01/04 22:06:10 noud4 Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/03 22:14:52 thomasklausner Exp $
 #
 
 DISTNAME=	eyeD3-0.6.18
@@ -18,7 +18,7 @@ GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_ACCEPTED= 25 26
+PYTHON_VERSIONS_ACCEPTED= 26
 PY_PATCHPLIST=	yes
 
 REPLACE_PYTHON+=		bin/eyeD3

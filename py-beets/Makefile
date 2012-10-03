@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/09/13 13:49:32 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/03 22:14:52 thomasklausner Exp $
 #
 
 DISTNAME=	beets-1.0b15
@@ -22,8 +22,6 @@ DEPENDS+=	${PYPKGPREFIX}-Unidecode-[0-9]*:../../textproc/py-Unidecode
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
-# because of py-last
-PYTHON_VERSIONS_INCOMPATIBLE=	25
 PLIST_SUBST+=			PYVERSSUFFIX=${PYVERSSUFFIX}
 
 post-install:

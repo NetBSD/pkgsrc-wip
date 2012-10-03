@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/09/24 18:26:55 asau Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/03 22:14:52 thomasklausner Exp $
 #
 
 DISTNAME=	ConvertToMP3_0.6.3
@@ -17,7 +17,6 @@ DEPENDS+=	lame-[0-9]*:../../audio/lame
 DEPENDS+=	mplayer-[0-9]*:../../multimedia/mplayer
 
 USE_LANGUAGES=			# none
-PYTHON_VERSIONS_ACCEPTED=	25
 NO_BUILD=			yes
 WRKSRC=				${WRKDIR}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/03/22 08:21:39 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 22:14:53 thomasklausner Exp $
 #
 
 DISTNAME=	scikits.vectorplot-0.1.1
@@ -16,7 +16,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=	${WRKDIR}/scikits.vectorplot-0.1.1
 
-PYTHON_VERSIONS_ACCEPTED= 26 25
+PYTHON_VERSIONS_ACCEPTED= 26
 
 .include "../../lang/python/egg.mk"
 .include "../../math/py-numpy/buildlink3.mk"
