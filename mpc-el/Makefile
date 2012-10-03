@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/07/31 22:18:51 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/03 14:32:32 asau Exp $
 #
 
 DISTNAME=	mpc.el-p29
@@ -22,12 +22,12 @@ do-build:
 		all
 
 do-install:
-	${INSTALL_DATA_DIR} ${EMACS_LISPPREFIX}/mpc
-	${INSTALL_DATA} ${WRKSRC}/*.el  ${EMACS_LISPPREFIX}/mpc
-	${INSTALL_DATA} ${WRKSRC}/*.elc ${EMACS_LISPPREFIX}/mpc
+	${INSTALL_DATA_DIR} ${DESTDIR}${EMACS_LISPPREFIX}/mpc
+	${INSTALL_DATA} ${WRKSRC}/*.el  ${DESTDIR}${EMACS_LISPPREFIX}/mpc
+	${INSTALL_DATA} ${WRKSRC}/*.elc ${DESTDIR}${EMACS_LISPPREFIX}/mpc
 
-	${INSTALL_DATA_DIR} ${EMACS_LISPPREFIX}/mpc/images/mpc
-	${INSTALL_DATA} ${WRKSRC}/images/mpc/*.xpm ${EMACS_LISPPREFIX}/mpc/images/mpc
+	${INSTALL_DATA_DIR} ${DESTDIR}${EMACS_LISPPREFIX}/mpc/images/mpc
+	${INSTALL_DATA} ${WRKSRC}/images/mpc/*.xpm ${DESTDIR}${EMACS_LISPPREFIX}/mpc/images/mpc
 
 .include "../../editors/emacs/modules.mk"
 .include "../../mk/bsd.pkg.mk"
