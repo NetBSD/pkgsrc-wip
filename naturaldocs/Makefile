@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/05/26 13:59:45 tnn2 Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/03 16:37:16 asau Exp $
 #
 
 DISTNAME=	NaturalDocs-1.35
@@ -30,10 +30,10 @@ INSTALL_DIRS=	Info JavaScript Modules Modules/NaturalDocs Modules/NaturalDocs/Bu
 INSTALLATION_DIRS=	${NDDIR}
 
 do-install:
-	cd ${WRKSRC} && pax -wr * ${NDDIR}
-	${INSTALL_SCRIPT} ${WRKSRC}/NaturalDocs ${NDDIR}
-	${INSTALL_SCRIPT} ${WRKSRC}/NaturalDocs.bat ${NDDIR}
-	${INSTALL_DATA} ${WRKSRC}/License-GPL.txt ${NDDIR}
+	cd ${WRKSRC} && pax -wr * ${DESTDIR}${NDDIR}
+	${INSTALL_SCRIPT} ${WRKSRC}/NaturalDocs ${DESTDIR}${NDDIR}
+	${INSTALL_SCRIPT} ${WRKSRC}/NaturalDocs.bat ${DESTDIR}${NDDIR}
+	${INSTALL_DATA} ${WRKSRC}/License-GPL.txt ${DESTDIR}${NDDIR}
 
 
 .include "../../lang/perl5/buildlink3.mk"
