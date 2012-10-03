@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2012/10/03 22:45:58 othyro Exp $
+bin/rsd
+bin/rsdplay
+include/rsound.h
+lib/librsound.a
+lib/librsound.so
+lib/librsound.so.3
+lib/librsound.so.3.0.0
+lib/pkgconfig/rsound.pc
+man/man1/rsd.1
+man/man1/rsdplay.1
