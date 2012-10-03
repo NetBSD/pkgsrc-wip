@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1 2012/10/03 23:58:06 jihbed Exp $
+${PYSITELIB}/django_uuidfield-${PKGVERSION}-py2.7.egg-info/PKG-INFO
+${PYSITELIB}/django_uuidfield-${PKGVERSION}-py2.7.egg-info/SOURCES.txt
+${PYSITELIB}/django_uuidfield-${PKGVERSION}-py2.7.egg-info/dependency_links.txt
+${PYSITELIB}/django_uuidfield-${PKGVERSION}-py2.7.egg-info/not-zip-safe
+${PYSITELIB}/django_uuidfield-${PKGVERSION}-py2.7.egg-info/requires.txt
+${PYSITELIB}/django_uuidfield-${PKGVERSION}-py2.7.egg-info/top_level.txt
+${PYSITELIB}/uuidfield/__init__.py
+${PYSITELIB}/uuidfield/__init__.pyc
+${PYSITELIB}/uuidfield/__init__.pyo
+${PYSITELIB}/uuidfield/fields.py
+${PYSITELIB}/uuidfield/fields.pyc
+${PYSITELIB}/uuidfield/fields.pyo
+${PYSITELIB}/uuidfield/models.py
+${PYSITELIB}/uuidfield/models.pyc
+${PYSITELIB}/uuidfield/models.pyo
+${PYSITELIB}/uuidfield/tests/__init__.py
+${PYSITELIB}/uuidfield/tests/__init__.pyc
+${PYSITELIB}/uuidfield/tests/__init__.pyo
+${PYSITELIB}/uuidfield/tests/models.py
+${PYSITELIB}/uuidfield/tests/models.pyc
+${PYSITELIB}/uuidfield/tests/models.pyo
+${PYSITELIB}/uuidfield/tests/tests.py
+${PYSITELIB}/uuidfield/tests/tests.pyc
+${PYSITELIB}/uuidfield/tests/tests.pyo

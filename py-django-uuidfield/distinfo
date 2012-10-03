@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2012/10/03 23:58:06 jihbed Exp $
+
+SHA1 (django-uuidfield-0.4.0.tar.gz) = 44de2ff7fce1cb38fdba479276064e48947c6b1c
+RMD160 (django-uuidfield-0.4.0.tar.gz) = 3d94f3e5acd9768d2b109fec7fe2367de8d710ed
+Size (django-uuidfield-0.4.0.tar.gz) = 4388 bytes
