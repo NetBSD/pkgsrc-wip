@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/10/03 14:21:34 solevis Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 16:02:56 asau Exp $
 #
 
 DISTNAME=		labelnation-1.212
@@ -11,7 +11,6 @@ LICENSE=		gnu-gpl-v3
 
 REPLACE_PYTHON= 	labelnation csv_to_ln
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LANGUAGES=		# none
 NO_BUILD= 		yes
 

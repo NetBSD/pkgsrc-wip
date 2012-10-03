@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/02 20:03:41 othyro Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/03 16:02:56 asau Exp $
 #
 
 DISTNAME=	libral-0.9.6
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://developer.berlios.de/projects/libral
 COMMENT=	Address book engine
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

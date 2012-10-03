@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/01 11:37:00 jellehermsen Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/03 16:02:56 asau Exp $
 #
 # CDE - The Common Desktop Environment
 DISTNAME=	cde-2.2.0b
@@ -23,8 +23,6 @@ DEPENDS+= libXp-[0-9]*:../../x11/libXp
 GIT_REPOSITORIES=   cdesktopenv-code 
 GIT_REPO.cdesktopenv-code = git://git.code.sf.net/p/cdesktopenv/code
 WRKSRC=$(WRKDIR)/code/cde
-
-PKG_DESTDIR_SUPPORT= user-destdir
 
 .include "../../wip/mk/git-package.mk"
 .include "../../x11/libX11/buildlink3.mk"
