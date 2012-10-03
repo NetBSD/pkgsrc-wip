@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/02/28 14:53:17 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/03 15:09:51 asau Exp $
 #
 
 DISTNAME=	marsyas-0.2.16
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=marsyas/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://marsyas.sourceforge.net/
 COMMENT=	Music Analysis, Retrieval and Synthesis for Audio Signals
+
+PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

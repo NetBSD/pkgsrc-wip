@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/10/09 10:05:44 cheusov Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/03 15:09:49 asau Exp $
 #
 
 DISTNAME=	makedict-0.4.1-beta1-Source
@@ -11,8 +11,6 @@ HOMEPAGE=	http://sourceforge.net/projects/xdxf/
 COMMENT=	Dictionary converting tool
 
 LICENSE=		gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_CMAKE=		yes
 USE_TOOLS=		pkg-config

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/08/08 19:09:31 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 15:09:56 asau Exp $
 #
 
 DISTNAME=	mmdb_1.21.orig
@@ -10,8 +10,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://strucbio.biologie.uni-konstanz.de/ccp4wiki/index.php/Mmdb
 COMMENT=	Macromolecular coordinate library
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/mmdb-1.21
 GNU_CONFIGURE=	yes

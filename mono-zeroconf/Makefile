@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/08/12 02:32:04 obache Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/03 15:09:56 asau Exp $
 #
 
 DISTNAME=	mono-zeroconf-0.9.0
@@ -11,8 +11,6 @@ MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://www.mono-project.com/Mono.Zeroconf
 COMMENT=	Cross platform Zero Configuration Networking library for Mono and .NET
 LICENSE=	LICENSE
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config gmake bash:run

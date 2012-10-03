@@ -1,5 +1,5 @@
-# $Id: Makefile,v 1.17 2006/12/20 19:03:04 netcap Exp $
-# $NetBSD: Makefile,v 1.17 2006/12/20 19:03:04 netcap Exp $
+# $Id: Makefile,v 1.18 2012/10/03 15:10:00 asau Exp $
+# $NetBSD: Makefile,v 1.18 2012/10/03 15:10:00 asau Exp $
 
 DISTNAME=	muttng-20061125
 CATEGORIES=	mail
@@ -8,6 +8,8 @@ MASTER_SITES=	http://nion.modprobe.de/mutt-ng/snapshots/
 MAINTAINER=	cg@cgall.de
 HOMEPAGE=	http://mutt-ng.berlios.de/
 COMMENT=	Fork of the well-known email client mutt
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes

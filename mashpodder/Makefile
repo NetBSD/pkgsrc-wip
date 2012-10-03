@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/03 11:53:15 ahp-nils Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/03 15:09:52 asau Exp $
 #
 
 DISTNAME=	mashpodder-svn37
@@ -18,7 +18,6 @@ DEPENDS+=		rsync-[0-9]*:../../net/rsync
 DEPENDS+=		curl-[0-9]*:../../www/curl
 DEPENDS+=		libxslt-[0-9]*:../../textproc/libxslt
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 NO_BUILD=		yes
 USE_LANGUAGES=		# none
 USE_TOOLS+=		bash:run sed:run awk:run

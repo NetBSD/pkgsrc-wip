@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/05/10 21:38:55 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 15:09:47 asau Exp $
 #
 
 DISTNAME=	Macaulay2-1.3.1-r10737
@@ -13,8 +13,6 @@ COMMENT=	Macaulay2  a software system for research in algebraic geometry
 #LICENSE=	# TODO: (see mk/license.mk)
 
 DEPENDS+=	wget>=1.12:../../net/wget
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/02/25 19:02:44 ishit Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/03 15:09:52 asau Exp $
 
 DISTNAME=	mathopd-1.5p8
 CATEGORIES=	www
@@ -8,7 +8,6 @@ MAINTAINER=	ishit@users.sourceforge.net
 HOMEPAGE=	http://www.mathopd.org/
 COMMENT=	Very small, yet very fast HTTP server
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 .include "../../mk/bsd.prefs.mk"
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/src

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/02/16 15:18:42 christtrekker Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 15:09:51 asau Exp $
 
 DISTNAME=	marathon-evil-199704
 CATEGORIES=	games
@@ -14,8 +14,6 @@ LICENSE=	cc-by-nc-nd-v3.0
 # There is no true dependency on Aleph One.  These scenarios cannot be
 # played without it, though.
 #DEPENDS+=	:../../games/alephone
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../games/alephone/scenario.mk"
 INSTALLATION_DIRS=	${SCENARIO_BASE}/Evil ${SCENARIO_BASE}/Evil/Scripts ${SCENARIO_BASE}/Evil/Themes

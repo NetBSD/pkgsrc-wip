@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/08/17 19:43:21 kheinz Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/03 15:09:49 asau Exp $
 #
 
 DISTNAME=		majordomo-20060817
@@ -38,6 +38,8 @@ DEPENDS+=	p5-Text-Reflow>=1.04:../../textproc/p5-Text-Reflow
 # optional
 ##DEPENDS+=	p5-Time-HiRes-[0-9]*:../../time/p5-Time-HiRes
 ##DEPENDS+=	p5-DB_File>=1.63:../../databases/p5-DB_File
+
+PKG_DESTDIR_SUPPORT=	none
 
 WRKSRC=			${WRKDIR}/majordomo
 

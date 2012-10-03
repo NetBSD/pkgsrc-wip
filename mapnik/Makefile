@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/07/02 13:38:00 moubctez Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/03 15:09:51 asau Exp $
 #
 
 DISTNAME=	mapnik-0.4.0
@@ -15,7 +15,6 @@ BUILD_DEPENDS+=		scons>=0.96:../../devel/scons
 DEPENDS+=		dejavu-ttf>=2.19:../../fonts/dejavu-ttf
 USE_LANGUAGES=		c++
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 PTHREAD_AUTO_VARS=	yes
 PLIST_SUBST+=		PYSITELIB=${PYSITELIB}
 SCONS_ENV=		PREFIX=${PREFIX} DESTDIR=${DESTDIR} \

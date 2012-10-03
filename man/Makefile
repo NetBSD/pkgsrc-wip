@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2007/05/11 12:03:52 obache Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/03 15:09:50 asau Exp $
 #
 
 DISTNAME=		man-1.6e
@@ -14,6 +14,8 @@ HOMEPAGE=		http://primates.ximian.com/~flucifredi/man/
 COMMENT=		Man page viewer and utilities
 
 CONFLICTS+=		man-db-[0-9]*
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_TOOLS+=		groff:run
 

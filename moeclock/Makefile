@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/11/09 23:19:16 noud4 Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/03 15:09:56 asau Exp $
 #
 
 DISTNAME=	moeclock
@@ -12,8 +12,6 @@ HOMEPAGE=	http://code.google.com/p/moeclock/
 COMMENT=	Wallpaper changing clock
 LICENSE=	gnu-gpl-v3 #AND cc-by-v3.0
 # The time signal voice must not be modified and distributed separately.
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	# none

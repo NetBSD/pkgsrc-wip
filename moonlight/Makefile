@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/06/13 22:47:11 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/03 15:09:57 asau Exp $
 
 DISTNAME=	moon-1.0.1
 PKGREVISION=	2
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	kefren@NetBSD.org
 COMMENT=	Open Source implementation of Microsoft Silverlight for UNIX Systems
 HOMEPAGE=	http://mono-project.com/Moonlight
-
-PKG_DESTDIR_SUPPORT=    user-destdir
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=			--with-cairo=system

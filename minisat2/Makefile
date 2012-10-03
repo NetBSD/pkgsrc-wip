@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/04/16 20:30:19 jihbed Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/03 15:09:55 asau Exp $
 #
 
 DISTNAME=	minisat2-070721
@@ -10,8 +10,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://minisat.se/MiniSat.html
 COMMENT=	Fast and lightweight SAT solver
 #LICENSE=	LICENSE
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/minisat
 USE_TOOLS+=	gmake

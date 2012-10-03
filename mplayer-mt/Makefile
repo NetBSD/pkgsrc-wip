@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/07/21 13:25:04 koifren Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/03 15:09:58 asau Exp $
 
 PKGNAME=	mplayer-mt-20090720
 PKGREVISION=	1
@@ -6,8 +6,6 @@ DISTNAME=	mplayer-svn-mt
 EXTRACT_SUFX=	.tar.bz2
 
 COMMENT=	Software-only MPEG-1/2/4 video decoder
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/mplayer
 

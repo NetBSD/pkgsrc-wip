@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2011/02/28 14:53:17 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.27 2012/10/03 15:09:54 asau Exp $
 #
 
 DISTNAME=		metatheme-0.9.7
@@ -10,8 +10,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Themes for GNOME 2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_PKGLOCALEDIR=	yes

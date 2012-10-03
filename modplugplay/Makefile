@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/03/20 14:06:09 pallegra Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 15:09:56 asau Exp $
 #
 
 DISTNAME=	modplugplay-1.0
@@ -9,8 +9,6 @@ MAINTAINER=	pallegra@gmail.com
 HOMEPAGE=	http://gnu.ethz.ch/linuks.mine.nu/modplugplay/
 COMMENT=	Commandline music mod player using libmodplug
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c++
 

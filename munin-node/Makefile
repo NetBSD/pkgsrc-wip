@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/08/09 14:00:20 fhajny Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/03 15:09:59 asau Exp $
 #
 
 DISTNAME=	munin-${VER}
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://munin-monitoring.org/
 COMMENT=	System monitoring tool, client version
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Net-Server>=0:../../net/p5-Net-Server
 DEPENDS+=	p5-Socket6>=0:../../net/p5-Socket6

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/09/16 00:02:17 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 15:09:58 asau Exp $
 #
 
 DISTNAME=	mplabs-1.1
@@ -9,8 +9,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://code.google.com/p/mplabs/
 COMMENT=	Multiphase lattice boltzmann suite
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/mplabs
 

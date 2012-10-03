@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2010/06/13 22:47:11 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.18 2012/10/03 15:09:55 asau Exp $
 
 DISTNAME=		mixxx-1.4.2
 PKGREVISION=		3
@@ -11,6 +11,8 @@ COMMENT=		Digital DJ tool
 
 # needs pselect(2). if you know a workaround, please let me know.
 NOT_FOR_PLATFORM=	NetBSD-[0-2]*-* FreeBSD-[0-4]*-* OpenBSD-*-* DragonFly-*-*
+
+PKG_DESTDIR_SUPPORT=	none
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/src
 

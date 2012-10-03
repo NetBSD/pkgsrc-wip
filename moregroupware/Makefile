@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2012/09/02 11:20:35 noud4 Exp $
+# $NetBSD: Makefile,v 1.20 2012/10/03 15:09:57 asau Exp $
 
 DISTNAME=	moregroupware-0.7.2
 PKGREVISION=	3
@@ -12,8 +12,6 @@ DISTFILES=	moregroupware-core-0.7.2${EXTRACT_SUFX} \
 MAINTAINER=	pih@xbase.dk
 HOMEPAGE=	http://www.moregroupware.de/
 COMMENT=	Web based GroupWare system
-
-PKG_DESTDIR_SUPPORT= 	user-destdir
 
 DEPENDS+=	${PHP_PKG_PREFIX}-curl>=4.3.4:../../www/php-curl
 DEPENDS+=	mysql-server>=4.0.0:../../databases/mysql${MYSQL_VERSION_DEFAULT}-server

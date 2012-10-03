@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2007/08/21 01:18:09 bsadewitz Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 15:09:55 asau Exp $
 #
 
 DISTNAME=	min12xxw-0.0.9
@@ -8,8 +8,6 @@ MASTER_SITES=	http://www.hinterbergen.de/mala/min12xxw/
 MAINTAINER=	blair.sadewitz@gmail.com
 HOMEPAGE=	http://www.hinterbergen.de/mala/min12xxw/
 COMMENT=	Konica/Minolta PagePro 1[234]xx pbmraw stream converter
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/06/13 22:47:11 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/03 15:09:56 asau Exp $
 #
 
 DISTNAME=	monajat-2.3.1
@@ -12,8 +12,6 @@ COMMENT=	Monajat is a small application that popups Islamic prayers
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
 USE_TOOLS+=	msgfmt intltool

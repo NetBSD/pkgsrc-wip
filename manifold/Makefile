@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/04/08 19:09:43 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/03 15:09:50 asau Exp $
 #
 
 PKGNAME=	${DISTNAME:S/^M/m/}
@@ -10,8 +10,6 @@ MAINTAINER=	filip@joyent.com
 HOMEPAGE=	http://code.google.com/p/manifold/
 COMMENT=	SMF service manifest creation tool
 LICENSE=	mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	${PYPKGPREFIX}-genshi-[0-9]*:../../www/py-genshi
 

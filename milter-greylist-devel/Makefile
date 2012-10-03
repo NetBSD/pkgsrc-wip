@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/10/27 11:19:54 pettai Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/03 15:09:55 asau Exp $
 
 DISTNAME=	milter-greylist-${VERSION}
 PKGNAME=	milter-greylist-devel-${VERSION}
@@ -11,8 +11,6 @@ HOMEPAGE=	http://hcpnet.free.fr/milter-greylist/
 COMMENT=	Easy-to-use greylist milter for sendmail devel snapshot
 
 VERSION=	4.3.3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 # yacc rule moving to y.tab.c and renaming
 MAKE_JOBS_SAFE=		no

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/10/02 08:48:46 fhajny Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/03 15:09:56 asau Exp $
 
 DISTNAME=	mongodb-src-r2.2.0
 PKGNAME=	${DISTNAME:S/src-r//}
@@ -9,8 +9,6 @@ MAINTAINER=	bartosz.kuzma@gmail.com
 HOMEPAGE=	http://mongodb.org/
 COMMENT=	NOSQL distributed document-oriented database
 LICENSE=	gnu-agpl-v3 # Client and tools licensed under apache-2.0
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CONFIGURE=	yes
 USE_LANGUAGES=	c c++

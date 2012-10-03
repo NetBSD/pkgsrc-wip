@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/04/08 19:09:44 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/03 15:09:55 asau Exp $
 #
 
 DISTNAME=			mirage-0.9.5.2
@@ -10,8 +10,6 @@ MAINTAINER=			netbsd@guigui2.net
 HOMEPAGE=			http://mirageiv.berlios.de/
 COMMENT=			Fast and simple image viewer
 LICENSE=			gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PY_PATCHPLIST=			yes
 PYDISTUTILSPKG=			yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/03/01 22:42:42 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/03 15:09:52 asau Exp $
 #
 
 DISTNAME=		mc-4.1.40-pre9
@@ -12,8 +12,6 @@ HOMEPAGE=		http://mc.linuxinside.com/cgi-bin/dir.cgi
 COMMENT=		Midnight Commander clone
 
 CONFLICTS+=		mc-[0-9]*
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/05/02 08:21:29 noud4 Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/03 15:09:53 asau Exp $
 #
 
 DISTNAME=		mdbtools-0.6pre1
@@ -10,8 +10,6 @@ MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://mdbtools.sourceforge.net/
 COMMENT=		Microsoft Access Database management tools
 LICENSE=		gnu-lgpl-v2 AND gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		YES

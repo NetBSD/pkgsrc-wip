@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2010/06/13 22:47:11 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.13 2012/10/03 15:10:03 asau Exp $
 #
 
 DISTNAME=		mythtv-0.11
@@ -13,6 +13,8 @@ COMMENT=		TV/video recorder with many features
 
 
 ONLY_FOR_PLATFORM=	Linux-*-*
+
+PKG_DESTDIR_SUPPORT=	none
 
 HAS_CONFIGURE=		YES
 USE_LANGUAGES=		c c++

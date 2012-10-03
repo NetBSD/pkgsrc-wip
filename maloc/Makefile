@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/09/04 09:23:42 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/03 15:09:50 asau Exp $
 #
 
 DISTNAME=	maloc-1.5
@@ -9,8 +9,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://fetk.org/codes/maloc/
 COMMENT=	Minimal Abstraction Layer for Object-oriented C
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/maloc
 

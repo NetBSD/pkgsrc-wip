@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/10/07 20:52:22 mbowie Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 15:09:53 asau Exp $
 #
 
 DISTNAME=	memcached-1.4.1
@@ -8,8 +8,6 @@ MASTER_SITES=	http://memcached.googlecode.com/files/
 MAINTAINER=	mbowie@buzmo.com
 HOMEPAGE=	http://www.danga.com/memcached/
 COMMENT=	High-performance distributed memory object caching system
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	perl
 GNU_CONFIGURE=	yes

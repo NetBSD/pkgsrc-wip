@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/06/13 22:47:11 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/03 15:09:54 asau Exp $
 #
 
 DISTNAME=	microtetris
@@ -11,8 +11,6 @@ EXTRACT_SUFX=	.py
 MAINTAINER=	pkgsrc-users@netbsd.org
 HOMEPAGE=	http://microtetris.sourceforge.net/
 COMMENT=	MicroTetris is a simple and compact popular game Tetris
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	# none

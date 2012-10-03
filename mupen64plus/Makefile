@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/04/20 19:34:24 othyro Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/03 15:09:59 asau Exp $
 #
 
 DISTNAME=	mupen64plus-bundle-src-1.99.5
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/mupen64plus/
 COMMENT=	Cross-platform plugin-based N64 emulator
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEPENDS+=	cpuflags>=1.42:../../devel/cpuflags
 USE_LANGUAGES=	c c++

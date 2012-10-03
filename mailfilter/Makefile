@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/11/17 20:56:16 leonardschmidt Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/03 15:09:48 asau Exp $
 #
 
 DISTNAME=	mailfilter-0.7.1
@@ -8,6 +8,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mailfilter/}
 MAINTAINER=	virtus@wanadoo.nl
 HOMEPAGE=	http://mailfilter.sourceforge.net/
 COMMENT=	Filter mail on a POP3 server
+
+PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake bison

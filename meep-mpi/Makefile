@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/05/16 01:53:31 outpaddling Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/03 15:09:53 asau Exp $
 #
 
 DISTNAME=	meep-1.1.1
@@ -10,8 +10,6 @@ MAINTAINER=	jwbacon@tds.net
 HOMEPAGE=	http://ab-initio.mit.edu/meep/
 COMMENT=	FDTD simulation software to model electromagnetic systems
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	bash-[0-9]*:../../shells/bash
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2010/04/10 10:56:53 cheusov Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/03 15:09:55 asau Exp $
 
 # Version based on CVS revision number.
 DISTNAME=		mkdep-1.16
@@ -10,7 +10,6 @@ MAINTAINER=		reed@reedmedia.net
 COMMENT=		Fast mkdep
 
 USE_FEATURES=		nbcompat
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
 

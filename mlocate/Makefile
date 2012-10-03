@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/11/07 15:32:59 emil_s Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/03 15:09:55 asau Exp $
 #
 
 DISTNAME=	mlocate-0.24
@@ -14,8 +14,6 @@ LICENSE=	gnu-gpl-v2
 
 # Depends on _PATH_MOUNTED being defined in paths.h
 ONLY_FOR_PLATFORM=	Linux-*-*
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=	slocate-[0-9]*
 

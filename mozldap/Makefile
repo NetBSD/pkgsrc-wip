@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/08/21 03:45:36 udontknow Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 15:09:57 asau Exp $
 #
 
 DISTNAME=	mozldap-6.0.6
@@ -9,8 +9,6 @@ MAINTAINER=	evaldo@gardenali.biz
 HOMEPAGE=	https://wiki.mozilla.org/LDAP_C_SDK
 COMMENT=	LDAP C-SDK from Mozilla Project
 LICENSE=	gnu-gpl-v1 OR gnu-lgpl-v2.1 OR mpl-1.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	YES
 USE_LIBTOOL=	YES

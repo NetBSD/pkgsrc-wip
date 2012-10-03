@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2011/10/09 10:49:35 cheusov Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/03 15:09:52 asau Exp $
 #
 
 DISTNAME=	mawk-1.3.4-20100625
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	cheusov@NetBSD.org
 COMMENT=	AWK clone by Mike Brennan
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 TEST_TARGET=		mawk_test fpe_test
 

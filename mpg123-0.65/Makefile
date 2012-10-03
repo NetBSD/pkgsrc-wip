@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/05/19 09:00:09 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/03 15:09:58 asau Exp $
 #
 
 DISTNAME=	mpg123-0.65
@@ -10,8 +10,6 @@ MAINTAINER=	blair.sadewitz@gmail.com
 HOMEPAGE=	http://www.mpg123.de/
 COMMENT=	Command line player for MPEG layer 1, 2, and 3 audio
 LICENSE=	mpg123-license
-
-PKG_DESTDIR_SUPPORT=user-destdir
 
 GNU_CONFIGURE=	yes
 

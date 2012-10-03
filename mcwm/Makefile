@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/01/03 10:40:07 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/03 15:09:53 asau Exp $
 #
 
 DISTNAME=	mcwm-20111124
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.hack.org/mc/hacks/mcwm/
 COMMENT=	Window manager for the X Window System written entirely with XCB
 LICENSE=	isc
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 

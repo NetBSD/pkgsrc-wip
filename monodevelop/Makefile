@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2010/06/13 22:47:11 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/03 15:09:56 asau Exp $
 
 DISTNAME=	monodevelop-2.1.2
 PKGREVISION=	2
@@ -9,8 +9,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	kefren@NetBSD.org
 HOMEPAGE=	http://monodevelop.com/
 COMMENT=	IDE for C\# and other .NET languages
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake perl:run pkg-config bash:run msgfmt

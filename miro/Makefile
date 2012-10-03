@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/08/12 10:10:49 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/03 15:09:55 asau Exp $
 #
 
 DISTNAME=	miro-3.5.1
@@ -10,8 +10,6 @@ HOMEPAGE=	http://www.getmiro.com/
 COMMENT=	Miro is a integrated video downloader and player
 
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++

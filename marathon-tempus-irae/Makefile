@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/02/22 20:24:47 christtrekker Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/03 15:09:51 asau Exp $
 
 DISTNAME=	marathon-tempus-irae-20060613
 CATEGORIES=	games
@@ -15,8 +15,6 @@ LICENSE=	cc-by-nc-nd-v2.5-license
 # There is no true dependency on Aleph One.  These scenarios cannot be
 # played without it, though.
 #DEPENDS+=	:../../games/alephone
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../games/alephone/scenario.mk"
 INSTALLATION_DIRS=	${SCENARIO_BASE}/TempusIrae ${SCENARIO_BASE}/TempusIrae/Scripts ${SCENARIO_BASE}/TempusIrae/tex ${SCENARIO_BASE}/TempusIrae/Themes

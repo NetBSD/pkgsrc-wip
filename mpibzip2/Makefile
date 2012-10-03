@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/01/08 04:31:15 noud4 Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 15:09:58 asau Exp $
 #
 
 DISTNAME=	mpibzip2-0.6
@@ -10,8 +10,6 @@ MAINTAINER=	noud4@home.nl
 HOMEPAGE=	http://compression.ca/mpibzip2/
 COMMENT=	Parallel implementation of bzip2
 LICENSE=	original-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c++
 

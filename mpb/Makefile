@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/05/28 15:40:58 outpaddling Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/03 15:09:57 asau Exp $
 #
 
 DISTNAME=	mpb-1.4.2
@@ -9,8 +9,6 @@ MAINTAINER=	jwbacon@tds.net
 HOMEPAGE=	http://ab-initio.mit.edu/mpb/
 COMMENT=	MIT Photonic Bands
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

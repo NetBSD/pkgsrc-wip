@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/08/25 11:56:45 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/03 15:09:51 asau Exp $
 #
 
 # The version number should be incremented 0.1 when a scenario is moved or
@@ -40,8 +40,6 @@ NO_SRC_ON_FTP=	${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 SCENARIO_BASE=		share/AlephOne/Scenarios
 .for scenario in TheGrayIncident Rubicon \

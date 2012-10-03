@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/08/31 18:23:40 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 15:10:01 asau Exp $
 #
 
 DISTNAME=	myfitter-0.1
@@ -9,8 +9,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://myfitter.hepforge.org/
 COMMENT=	Maximum Likelihood Fits in C++
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

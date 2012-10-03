@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/08/20 11:20:14 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 15:10:00 asau Exp $
 #
 
 DISTNAME=	mscore-1.2
@@ -15,7 +15,6 @@ LICENSE=	gnu-gpl-v2
 USE_CMAKE=	yes
 CMAKE_ARGS+=	-DQTDIR:PATH=${QTDIR:Q}
 WRKSRC=		${WRKDIR}/${DISTNAME}/mscore
-PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake pkg-config
 

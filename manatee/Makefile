@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2010/06/13 22:47:11 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/03 15:09:50 asau Exp $
 #
 
 DISTNAME=		manatee-1.8.4.1
@@ -25,6 +25,8 @@ DEPENDS+=		p5-Date-Manip>=5.40:../../devel/p5-Date-Manip
 DEPENDS+=		mysql-server>=5.0:../../databases/mysql5-server
 DEPENDS+=		p5-Tree-DAG_Node>=1.04:../../devel/p5-Tree-DAG_Node
 DEPENDS+=		p5-DBD-Sybase>=0.94:../../databases/p5-DBD-Sybase
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes

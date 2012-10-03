@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/06/13 22:47:11 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/03 15:09:54 asau Exp $
 
 DISTNAME=	tracker-0.6.96
 PKGNAME=	meta-${DISTNAME}
@@ -13,8 +13,6 @@ COMMENT=	Extract information and metadata about your personal data
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	poppler-utils-[0-9]*:../../print/poppler-utils
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

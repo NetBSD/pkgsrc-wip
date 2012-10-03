@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/12/15 14:34:40 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/03 15:10:00 asau Exp $
 #
 
 DISTNAME=		mpcsv7-src-1.15t
@@ -10,6 +10,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.musepack.net/
 COMMENT=		MPEG-Plus and MusePack decoder
+
+PKG_DESTDIR_SUPPORT=	none
 
 WRKSRC=			${WRKDIR}/sv7
 MAKE_FILE=		Makefile.bsd

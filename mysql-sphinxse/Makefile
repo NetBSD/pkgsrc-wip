@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/05/11 10:15:43 fhajny Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/03 15:10:02 asau Exp $
 
 PKGNAME=		${DISTNAME:S/mysql-/mysql-sphinxse-/}.${SPHINX_VER}
 
@@ -6,8 +6,6 @@ MAINTAINER=		filip@joyent.com
 COMMENT=		SphinxSE MySQL storage engine
 HOMEPAGE=		http://sphinxsearch.com/
 LICENSE=		gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		automake
 

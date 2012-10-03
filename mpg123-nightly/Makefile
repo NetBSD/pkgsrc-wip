@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/09/12 06:54:09 cheusov Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/03 15:09:58 asau Exp $
 
 DISTNAME=	mpg123-${MPG123_VERSION}
 CATEGORIES=	audio
@@ -13,8 +13,6 @@ NO_SRC_ON_CDROM=	${RESTRICTED}
 
 USE_TOOLS+=		pkg-config automake date perl
 GNU_CONFIGURE=		yes
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/mpg123
 

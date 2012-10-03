@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/06/12 15:46:34 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/03 15:09:57 asau Exp $
 #
 
 DISTNAME=	monotone-cvsimport-20080325
@@ -11,8 +11,6 @@ HOMEPAGE=	http://monotone.ca/
 COMMENT=	Free distributed version control system
 
 CONFLICTS=	monotone-[0-9]*
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GCC_REQD+=		3.0
 GNU_CONFIGURE=		yes

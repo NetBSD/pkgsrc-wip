@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/05/24 10:31:01 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/03 15:09:53 asau Exp $
 #
 
 DISTNAME=	mcats-0.1.0
@@ -8,6 +8,8 @@ MASTER_SITES=	http://mcats.net/files/
 MAINTAINER=	pehr@mcats.net
 HOMEPAGE=	http://mcats.net/
 COMMENT=	Catalog converter
+
+PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/03/11 15:19:53 mayureshw Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 15:10:00 asau Exp $
 #
 
 DISTNAME=	muttprint-0.72d
@@ -11,7 +11,5 @@ COMMENT=	Utility to pretty print email
 LICENSE=	gnu-gpl-v1
 
 DEPENDS+=	p5-Text-Iconv>=1.7:../../converters/p5-Text-Iconv
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.pkg.mk"

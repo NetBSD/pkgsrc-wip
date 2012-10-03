@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2010/06/13 22:47:11 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.22 2012/10/03 15:09:59 asau Exp $
 #
 
 DISTNAME=	muine-0.8.11
@@ -9,8 +9,6 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/muine/0.8/}
 MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://muine-player.org/wiki/Main_Page
 COMMENT=	Simple and intuitive music player for GNOME
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES

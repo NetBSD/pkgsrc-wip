@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/05/22 02:20:47 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 15:09:59 asau Exp $
 #
 
 DISTNAME=	mtpaint-3.40
@@ -10,8 +10,6 @@ MAINTAINER=	INSERT_YOUR_MAIL_ADDRESS_HERE
 HOMEPAGE=	http://mtpaint.sourceforge.net/
 COMMENT=	Painting program and photo editor
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS=		--prefix=${PREFIX} --bindir=${PREFIX}/bin

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/03/18 19:07:47 zul_ Exp $
+# $NetBSD: Makefile,v 1.17 2012/10/03 15:09:53 asau Exp $
 #
 
 DISTNAME=	mcabber-0.10.1
@@ -9,8 +9,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=		degroote@NetBSD.org
 HOMEPAGE=		http://www.lilotux.net/~mikael/mcabber/
 COMMENT=		Jabber console client
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CHECK_PORTABILITY_SKIP+=	contrib/events/eventcmd.pastebin
 

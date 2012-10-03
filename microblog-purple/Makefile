@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/01/12 02:23:20 noud4 Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 15:09:54 asau Exp $
 #
 
 DISTNAME=		mbpurple-0.3.0
@@ -10,8 +10,6 @@ MAINTAINER=		noud@home.nl
 HOMEPAGE=		http://code.google.com/p/microblog-purple/
 COMMENT=		Libpurple plug-in supporting microblog services like Twitter
 LICENSE=		gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake pkg-config
 USE_LIBTOOL=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/10/29 08:32:47 shattered Exp $
+# $NetBSD: Makefile,v 1.19 2012/10/03 15:09:50 asau Exp $
 
 DISTNAME=		man-db_${VERSION}.orig
 PKGNAME=		man-db-${VERSION}
@@ -11,6 +11,8 @@ HOMEPAGE=		http://www.chiark.greenend.org.uk/~cjwatson/code/man-db/
 COMMENT=		Manual pager and related man page utilities
 
 CONFLICTS+=		man-[0-9]*
+
+PKG_DESTDIR_SUPPORT=	none
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 

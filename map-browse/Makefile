@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/05/24 15:34:12 tnn2 Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/03 15:09:51 asau Exp $
 
 DISTNAME=		map-browse-1.1
 WRKSRC=			${WRKDIR}/map-browse
@@ -12,6 +12,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.olib.org/~rkr/mud/software/map-browse/
 COMMENT=		GLUT-based 3D data graph (vertices, edges) viewer
 
+PKG_DESTDIR_SUPPORT=	none
 
 .include "../../graphics/glut/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

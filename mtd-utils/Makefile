@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/10/20 15:32:11 noud4 Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 15:09:58 asau Exp $
 #
 
 DISTNAME=	mtd-utils-1.0.0
@@ -8,6 +8,8 @@ MASTER_SITES=	ftp://ftp.infradead.org/pub/mtd-utils/
 MAINTAINER=	noud4@home.nl
 HOMEPAGE=	http://www.linux-mtd.infradead.org/
 COMMENT=	Memory Technology Device Tools
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_TOOLS+=	gmake
 USE_LANGUAGES=	c c++

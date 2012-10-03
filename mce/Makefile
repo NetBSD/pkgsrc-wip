@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/09/17 22:24:25 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 15:09:53 asau Exp $
 #
 
 DISTNAME=	mce-dev_1.5.6.debian.orig
@@ -9,8 +9,6 @@ MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/m/mce-dev/}
 MAINTAINER=	kamel.derouiche@gmail.com
 COMMENT=	The DBus method calls provided by the Mode Control Entity
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/mce-dev-1.5.6.debian.orig
 

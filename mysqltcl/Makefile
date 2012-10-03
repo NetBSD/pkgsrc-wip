@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/05/24 15:34:12 tnn2 Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/03 15:10:02 asau Exp $
 
 DISTNAME=		mysqltcl-3.02
 CATEGORIES=		wip
@@ -8,6 +8,8 @@ MAINTAINER=		alchow@users.sourceforge.net
 
 HOMEPAGE=		http://www.xdobry.de/mysqltcl/
 COMMENT=		Tcl Mysql Interface
+
+PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes

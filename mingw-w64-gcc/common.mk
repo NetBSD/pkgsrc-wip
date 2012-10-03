@@ -1,4 +1,4 @@
-# $NetBSD: common.mk,v 1.1.1.1 2010/08/11 14:33:10 tnn2 Exp $
+# $NetBSD: common.mk,v 1.2 2012/10/03 15:09:55 asau Exp $
 #
 
 DISTNAME=	gcc-4.5.1
@@ -9,8 +9,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gcc.gnu.org/
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		mingw-w64-binutils-[0-9]*:../../wip/mingw-w64-binutils
 DEPENDS+=		mingw-w64-headers-[0-9]*:../../wip/mingw-w64-headers

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2011/10/25 02:03:12 makoto Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/03 15:09:55 asau Exp $
 #
 
 DISTNAME=	mingw-w64-v2.0
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://mingw-w64.sourceforge.net/
 COMMENT=	Headers for win32/64 cross-development
 #LICENSE=	# TODO: (see mk/license.mk)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/${DISTNAME:S/-snapshot//}
 GNU_CONFIGURE=		yes

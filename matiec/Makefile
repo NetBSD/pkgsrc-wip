@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/10/23 10:06:50 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/03 15:09:52 asau Exp $
 #
 
 DISTNAME=	matiec-0.1
@@ -9,7 +9,7 @@ MAINTAINER=	conti.ma@alice.it
 HOMEPAGE=	http://www.beremiz.org/documentation/the-iec-to-c-compiler
 COMMENT= 	IEC61131-3 Compiler
 LICENSE=	gnu-gpl-v3
-PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_TOOLS+=	bison
 WRKSRC=		${WRKDIR}/matiec
 GNU_CONFIGURE=	yes

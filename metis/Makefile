@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/03/27 16:40:14 outpaddling Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 15:09:54 asau Exp $
 
 DISTNAME=		metis-4.0
 CATEGORIES=		math
@@ -7,8 +7,6 @@ MASTER_SITES=		http://glaros.dtc.umn.edu/gkhome/fetch/sw/metis/
 MAINTAINER=		jwbacon@tds.net
 HOMEPAGE=		http://glaros.dtc.umn.edu/gkhome/views/metis/
 COMMENT=		Unstructured graph partitioning and sparse matrix ordering system
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_TARGET=		default
 INSTALLATION_DIRS=	bin lib

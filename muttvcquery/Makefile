@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/11/02 18:00:23 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/03 15:10:00 asau Exp $
 #
 
 DISTNAME=		mutt_vc_query-002
@@ -11,6 +11,8 @@ HOMEPAGE=		http://rolo.sourceforge.net/
 COMMENT=		External contact manager for mutt
 
 DEPENDS+=		rolo-[0-9]*:../../wip/rolo
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes

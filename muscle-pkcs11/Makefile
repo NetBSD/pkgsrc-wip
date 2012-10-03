@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/10/29 08:32:48 shattered Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/03 15:10:00 asau Exp $
 
 DISTNAME=		muscleframework-1.1.5
 PKGNAME=		muscle-pkcs11-1.1.5
@@ -9,6 +9,8 @@ MASTER_SITES=		http://alioth.debian.org/download.php/463/
 MAINTAINER=	evaldo@gardenali.biz
 HOMEPAGE=	http://www.linuxnet.com/
 COMMENT=		MUSCLE SmartCard framework PKCS \#11 library
+
+PKG_DESTDIR_SUPPORT=	none
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/libmusclepkcs11
 GNU_CONFIGURE=		YES

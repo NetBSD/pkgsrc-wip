@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/08/15 03:47:45 prudhvikrishna Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/03 15:09:55 asau Exp $
 #
 
 DISTNAME=	miracl
@@ -19,7 +19,6 @@ EXTRACT_OPTS_ZIP+=	-j -aa -L -d ${DISTNAME}
 
 USE_LANGUAGES=	c c++
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 .include "../../mk/bsd.prefs.mk"
 
 .if ${MACHINE_ARCH} == "i386"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/12/15 14:34:40 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/03 15:09:54 asau Exp $
 #
 #
 
@@ -12,6 +12,8 @@ HOMEPAGE=	http://web.archive.org/web/20020811140533/http://people.cs.uct.ac.za/~
 COMMENT=	DOS compatible command line interpreter
 
 DEPENDS+=	free-[0-9]*:../../sysutils/free
+
+PKG_DESTDIR_SUPPORT=	none
 
 BUILD_TARGET=	lsh
 WRKSRC=		${WRKDIR}/lsh-0.70

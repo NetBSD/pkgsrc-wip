@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/08/10 14:50:56 tnn2 Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 15:09:55 asau Exp $
 #
 
 DISTNAME=	binutils-2.20.1
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/binutils/
 COMMENT=	GNU binutils for win32/64 cross-development
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes

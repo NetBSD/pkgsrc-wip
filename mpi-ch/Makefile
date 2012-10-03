@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2011/07/11 21:16:45 asau Exp $
+# $NetBSD: Makefile,v 1.35 2012/10/03 15:09:58 asau Exp $
 
 DISTNAME=	mpich2-trunk-r8760
 PKGNAME=	${DISTNAME}
@@ -13,8 +13,6 @@ COMMENT=	Open source MPI and MPI-2 implementation from Univ. of Chicago
 
 CONFLICTS+=	mpich-[0-9]*	# installs bin/mpicc & other wrappers
 CONFLICTS+=	openmpi-[0-9]*	# installs bin/mpicc & other wrappers
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=		no
 

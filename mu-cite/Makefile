@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/03/29 11:25:42 makoto Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/03 15:09:59 asau Exp $
 
 DISTNAME=	mu-cite-201202272330
 CATEGORIES=	mail
@@ -8,8 +8,6 @@ MAINTAINER=	packages@ki.nu
 HOMEPAGE=	http://emacs-21.ki.nu/application/mu-cite.html
 COMMENT=	Mail (MUA) companion to cite other's mail
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 SUBST_CLASSES+=	dest
 SUBST_STAGE.dest=	pre-build

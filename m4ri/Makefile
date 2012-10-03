@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/12/29 22:29:49 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 15:09:46 asau Exp $
 #
 
 DISTNAME=	m4ri-20111203
@@ -9,8 +9,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://m4ri.sagemath.org/
 COMMENT=	M4RI is a library for fast arithmetic with dense matrices over F2
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

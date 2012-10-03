@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/04/11 21:14:07 tvierling Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/03 15:09:59 asau Exp $
 #
 
 DISTNAME=		mtrack-0.3
@@ -8,6 +8,8 @@ MASTER_SITES=		http://www.qsl.net/g4klx/
 MAINTAINER=		dawszy@arhea.pl
 HOMEPAGE=		http://www.qsl.net/g4klx/
 COMMENT=		Satellite tracking program for amateurs
+
+PKG_DESTDIR_SUPPORT=	none
 
 NO_CONFIGURE=		yes
 

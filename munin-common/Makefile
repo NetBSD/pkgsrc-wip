@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/05/11 10:56:32 fhajny Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/03 15:09:59 asau Exp $
 #
 
 DISTNAME=	munin-${VERSION}
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://munin-monitoring.org/
 COMMENT=	Common components between a munin node and master
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT= user-destdir
 
 DEPENDS=	p5-Net-SSLeay>=0:../../security/p5-Net-SSLeay
 

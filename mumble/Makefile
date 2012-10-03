@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/08/12 17:36:47 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/03 15:09:59 asau Exp $
 #
 
 DISTNAME=	mumble-1.2.2
@@ -10,8 +10,6 @@ MAINTAINER=	elentirmo.gilgalad@gmail.com
 HOMEPAGE=	http://mumble.sourceforge.net/
 COMMENT=	Low latency VOIP software used mostly during computer games
 #LICENSE=	# TODO: (see mk/license.mk)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEPENDS+=	boost-headers-[0-9]*:../../devel/boost-headers
 USE_TOOLS+= 	pkg-config

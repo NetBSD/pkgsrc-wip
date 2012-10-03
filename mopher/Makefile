@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/05/12 13:29:06 pebog Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 15:09:57 asau Exp $
 
 DISTNAME=		mopher-0.1
 CATEGORIES=		mail
@@ -8,8 +8,6 @@ OWNER=			petar@smokva.net
 HOMEPAGE=		https://github.com/badzong/mopher
 COMMENT=		Versatile mail filter
 LICENSE=		mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 

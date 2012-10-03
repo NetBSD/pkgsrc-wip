@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/07/20 08:35:53 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 15:09:53 asau Exp $
 #
 
 DISTNAME=	mediawiki
@@ -16,7 +16,6 @@ HOMEPAGE=	http://www.emacswiki.org/emacs/MediaWikiMode
 COMMENT=	Emacs frontend for MediaWiki
 LICENSE=	gnu-gpl-v3
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS+=	${EMACS_LISPPREFIX}
 
 WRKSRC=	${WRKDIR}
