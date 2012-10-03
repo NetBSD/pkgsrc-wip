@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.2 2012/10/03 01:21:47 makoto Exp $
+$NetBSD: patch-configure,v 1.3 2012/10/03 05:19:29 makoto Exp $
 
 Adjust for wxWindows, aka wxGTK, path. See Also SUBST in Makefile
 
@@ -9,7 +9,7 @@ Adjust for wxWindows, aka wxGTK, path. See Also SUBST in Makefile
    withval=$with_wxwindows;  checkwxdir "$withval"
  else
 -   checkwxdir "$HOME/wx"; checkwxdir "/usr"; checkwxdir "/usr/local"
-+   checkwxdir "$HOME/wx"; checkwxdir "/usr"; checkwxdir "/usr/local"; checkwxdir @@PREFIX@@;
++   checkwxdir "$HOME/wx"; checkwxdir "/usr"; checkwxdir "@@PREFIX@@";
  
  fi
  
