@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/08/12 02:32:05 obache Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/03 14:58:39 asau Exp $
 
 DISTNAME=	mwf-designer
 PKGNAME=	${DISTNAME}-${MWF_VERSION}
@@ -27,10 +27,12 @@ SUBST_MESSAGE.fix-prefix=	Fixing prefix directory.
 SUBST_FILES.fix-prefix=		mwf-designer
 SUBST_SED.fix-prefix=		-e "s,%PREFIX%,${PREFIX},g"
 
+INSTALLATION_DIRS=	bin ${PREFIX}/lib/mono/2.0
+
 do-install:
-	${INSTALL} ${WRKSRC}/build/mwf-designer.exe ${PREFIX}/bin
-	${INSTALL} ${WRKSRC}/deps/ICSharpCode.NRefactory.dll ${PREFIX}/lib/mono/2.0
-	${INSTALL} ${WRKSRC}/mwf-designer ${PREFIX}/bin
+	${INSTALL} ${WRKSRC}/build/mwf-designer.exe ${DESTDIR}${PREFIX}/bin
+	${INSTALL} ${WRKSRC}/deps/ICSharpCode.NRefactory.dll ${DESTDIR}${PREFIX}/lib/mono/2.0
+	${INSTALL} ${WRKSRC}/mwf-designer ${DESTDIR}${PREFIX}/bin
 
 .include "../../wip/mk/svn-package.mk"
 .include "../../lang/mono/buildlink3.mk"
