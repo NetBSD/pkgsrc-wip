@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/09/28 23:21:48 asau Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/03 00:41:46 makoto Exp $
 #
 
 DISTNAME=	fldigi-3.21.52
@@ -32,7 +32,6 @@ SUBST_FILES.asciidoc=	doc/Makefile.am doc/Makefile.in doc/Makefile
 SUBST_MESSAGE.asciidoc=	Replacing asciidoc PATH
 SUBST_SED.asciidoc=	-e s\|/usr/share\|${PREFIX}/share\|g
 
-.include "../../mk/bsd.prefs.mk"
 SUBST_CLASSES+=		brag-os
 SUBST_STAGE.brag-os=	post-patch
 SUBST_FILES.brag-os=	src/misc/newinstall.cxx
@@ -42,6 +41,12 @@ SUBST_SED.brag-os=	-e s/@@OS@@/${OPSYS}/
 # Following binary contains configure parameter, which is OK.
 CHECK_WRKREF_SKIP+=	bin/flarq
 CHECK_WRKREF_SKIP+=	bin/fldigi
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${LOWER_OPSYS} == "netbsd"
+CONFIGURE_ENV+=		ac_cv_header_execinfo_h=no
+.endif
 
 .include "../../audio/libsamplerate/buildlink3.mk"
 .include "../../audio/libsndfile/buildlink3.mk"
