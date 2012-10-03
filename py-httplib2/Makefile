@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2011/02/25 09:47:48 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/03 09:40:14 jihbed Exp $
 #
 
-DISTNAME=	httplib2-0.6.0
+DISTNAME=	httplib2-0.7.6
+EGG_NAME=	httplib2-0.7.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	www python
 MASTER_SITES=	http://httplib2.googlecode.com/files/
@@ -13,8 +14,7 @@ LICENSE=	mit
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-PYDISTUTILSPKG=	yes
-PYTHON_VERSIONS_ACCEPTED= 27 26
+PLIST_SUBST+=	EGG_INFODIR=${EGG_NAME}-py${PYVERSSUFFIX}.egg-info
 
 # Install README manually
 DOCDIR=		${PREFIX}/share/doc/py-httplib2
@@ -25,5 +25,5 @@ post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${DOCDIR}
 
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
