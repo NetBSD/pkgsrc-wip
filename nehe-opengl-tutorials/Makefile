@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2011/11/21 19:08:57 absd Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/03 17:42:10 asau Exp $
 #
 
 DISTNAME=	nehe-opengl-tutorials-${NEHE_OPENGL_TUT_FLAVOUR}-0
@@ -65,8 +65,8 @@ do-build:
 		cd $$a && ${GMAKE} && cd ..; done
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/${NEHE_OPENGL_TUT_DIR}
-	cd ${WRKSRC} && pax -rw -pe [Ll]esson* ${PREFIX}/${NEHE_OPENGL_TUT_DIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/${NEHE_OPENGL_TUT_DIR}
+	cd ${WRKSRC} && pax -rw -pe [Ll]esson* ${DESTDIR}${PREFIX}/${NEHE_OPENGL_TUT_DIR}
 	${CAT} ${PKGDIR}/PLIST.pre >${PLIST_SRC}
 	cd ${PREFIX} && ${FIND} ${NEHE_OPENGL_TUT_DIR} -type f -print >>${PLIST_SRC}
 

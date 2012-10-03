@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/10/29 08:32:48 shattered Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/03 17:39:52 asau Exp $
 #
 
 DISTNAME=		neb-hdtoolbox-src-0.9
@@ -19,7 +19,7 @@ WRKSRC=			${WRKDIR}
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/neb-hdtoolbox ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/neb-hdtoolbox.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_PROGRAM} ${WRKSRC}/neb-hdtoolbox ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/neb-hdtoolbox.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"

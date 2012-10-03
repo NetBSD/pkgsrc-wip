@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/05/19 16:51:27 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/03 17:43:18 asau Exp $
 #
 
 DISTNAME=		nestra-0.66
@@ -15,11 +15,13 @@ WRKSRC=			${WRKDIR}/nestra
 
 BUILD_TARGET=		nestra
 
+INSTALLATION_DIRS=	bin
+
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/nestra ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/nestra
-	${INSTALL_DATA} ${WRKSRC}/BUGS ${PREFIX}/share/doc/nestra
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/nestra
+	${INSTALL_PROGRAM} ${WRKSRC}/nestra ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/nestra
+	${INSTALL_DATA} ${WRKSRC}/BUGS ${DESTDIR}${PREFIX}/share/doc/nestra
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/nestra
 
 .include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

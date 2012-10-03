@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2009/06/02 13:14:30 noud4 Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/03 17:35:02 asau Exp $
 #
 
 DISTNAME=		ncbi
@@ -30,13 +30,13 @@ do-build:
 do-install:
 	@${ECHO} "Installing NCBI toolkit"
 	@${ECHO} "Installing Lib"
-	@${INSTALL_DATA_DIR} ${PREFIX}/lib/ncbi
+	@${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/lib/ncbi
 	@${CP} -fr ${WRKSRC}/lib/*  ${PREFIX}/lib/ncbi
 	@${ECHO} "Installing include files"
-	@${INSTALL_DATA_DIR} ${PREFIX}/include/ncbi
-	@${INSTALL_DATA_DIR} ${PREFIX}/include/ncbi/connect
-	@${CP} -fr ${WRKSRC}/include/*.h ${PREFIX}/include/ncbi
-	@${CP} -fr ${WRKSRC}/connect/*.* ${PREFIX}/include/ncbi/connect/
+	@${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/include/ncbi
+	@${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/include/ncbi/connect
+	@${CP} -fr ${WRKSRC}/include/*.h ${DESTDIR}${PREFIX}/include/ncbi
+	@${CP} -fr ${WRKSRC}/connect/*.* ${DESTDIR}${PREFIX}/include/ncbi/connect/
 
 .include "../../mk/motif.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
