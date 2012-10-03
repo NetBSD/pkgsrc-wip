@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4892 2012/10/03 14:42:41 solevis Exp $
+# $Id: Makefile,v 1.4893 2012/10/03 15:07:29 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2870,6 +2870,7 @@ SUBDIR+=	serlook
 SUBDIR+=	service
 SUBDIR+=	seturgent
 SUBDIR+=	sflphoned
+SUBDIR+=	sfml+
 SUBDIR+=	sgmltools-lite
 SUBDIR+=	shaarli
 SUBDIR+=	shadow
