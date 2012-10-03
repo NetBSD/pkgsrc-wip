@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2009/02/04 20:53:45 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/03 14:50:41 asau Exp $
 #
 
 DISTNAME=	mupen64_src-0.4
@@ -27,22 +27,24 @@ SUBST_SED.fixme=    -e "s|@BLNK@|${BUILDLINK_DIR}|g" \
 DOCDIR=		${PREFIX}/share/doc/${PKGBASE}
 SHAREDIR=	${PREFIX}/share/${PKGBASE}
 
+INSTALLATION_DIRS=	bin
+
 do-install:
-	${INSTALL_DATA_DIR} ${DOCDIR}
-	${INSTALL_DATA_DIR} ${SHAREDIR}/lang
-	${INSTALL_DATA_DIR} ${SHAREDIR}/roms
-	${INSTALL_DATA_DIR} ${SHAREDIR}/scripts
-	${INSTALL_DATA_DIR} ${SHAREDIR}/save
-	${INSTALL_DATA_DIR} ${SHAREDIR}/plugins
-	${INSTALL_PROGRAM} ${WRKSRC}/mupen64 ${SHAREDIR}
-	${INSTALL_DATA} ${WRKSRC}/lang/* ${SHAREDIR}/lang
-	${INSTALL_DATA} ${WRKSRC}/mupen64.ini ${SHAREDIR}
-	${INSTALL_DATA} ${WRKSRC}/logo.xpm ${SHAREDIR}
-	${INSTALL_DATA} ${WRKSRC}/doc/readme.pdf ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/roms/*.gz ${SHAREDIR}/roms
+	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${SHAREDIR}/lang
+	${INSTALL_DATA_DIR} ${DESTDIR}${SHAREDIR}/roms
+	${INSTALL_DATA_DIR} ${DESTDIR}${SHAREDIR}/scripts
+	${INSTALL_DATA_DIR} ${DESTDIR}${SHAREDIR}/save
+	${INSTALL_DATA_DIR} ${DESTDIR}${SHAREDIR}/plugins
+	${INSTALL_PROGRAM} ${WRKSRC}/mupen64 ${DESTDIR}${SHAREDIR}
+	${INSTALL_DATA} ${WRKSRC}/lang/* ${DESTDIR}${SHAREDIR}/lang
+	${INSTALL_DATA} ${WRKSRC}/mupen64.ini ${DESTDIR}${SHAREDIR}
+	${INSTALL_DATA} ${WRKSRC}/logo.xpm ${DESTDIR}${SHAREDIR}
+	${INSTALL_DATA} ${WRKSRC}/doc/readme.pdf ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/roms/*.gz ${DESTDIR}${SHAREDIR}/roms
 	${SED} -e "s,@SHAREDIR@,${SHAREDIR},g" ${FILESDIR}/mupen64.sh > \
 	    ${WRKSRC}/roms/mupen64
-	${INSTALL_SCRIPT} ${WRKSRC}/roms/mupen64 ${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/roms/mupen64 ${DESTDIR}${PREFIX}/bin
 
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../graphics/Mesa/buildlink3.mk"
