@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/06/11 12:58:19 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 17:47:55 asau Exp $
 #
 
 DISTNAME=		netx-${VERSION}
@@ -22,7 +22,7 @@ do-extract:
 
 do-install:
 	${INSTALL_DATA} ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX} \
-		${JAR_PREFIX}/netx-${VERSION}.jar
+		${DESTDIR}${JAR_PREFIX}/netx-${VERSION}.jar
 
 .include "../../wip/mk/java-app.mk"
 .include "../../mk/bsd.pkg.mk"

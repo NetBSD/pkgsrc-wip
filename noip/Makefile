@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/11/26 20:54:55 gschwarz Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/03 17:52:04 asau Exp $
 
 DISTNAME=	noip-duc-linux
 PKGNAME=	noip-2.1.9
@@ -18,10 +18,12 @@ post-extract:
 	${RM} ${WRKSRC}/Makefile
 	${CP} ${FILESDIR}/makefile.noip ${WRKSRC}/Makefile
 
+INSTALLATION_DIRS=	bin
+
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/noip2 ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/noip
-	${INSTALL_MAN} ${WRKSRC}/README.FIRST ${PREFIX}/share/doc/noip
-	${INSTALL_MAN} ${WRKSRC}/COPYING ${PREFIX}/share/doc/noip
+	${INSTALL_PROGRAM} ${WRKSRC}/noip2 ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/noip
+	${INSTALL_MAN} ${WRKSRC}/README.FIRST ${DESTDIR}${PREFIX}/share/doc/noip
+	${INSTALL_MAN} ${WRKSRC}/COPYING ${DESTDIR}${PREFIX}/share/doc/noip
 
 .include "../../mk/bsd.pkg.mk"
