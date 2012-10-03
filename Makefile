@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4894 2012/10/03 19:24:58 othyro Exp $
+# $Id: Makefile,v 1.4895 2012/10/03 22:14:24 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -3398,7 +3398,6 @@ SUBDIR+=	ziparchive
 SUBDIR+=	zipios
 SUBDIR+=	zookeeper-client
 SUBDIR+=	zookeeper-server
-SUBDIR+=	zope3-unstable
 SUBDIR+=	zvbi
 
 ${.CURDIR}/PKGDB:
