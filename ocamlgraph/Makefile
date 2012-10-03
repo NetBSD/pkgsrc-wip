@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/05/21 18:18:14 marko_schuetz Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/03 21:32:45 asau Exp $
 #
 
 DISTNAME=	ocamlgraph-1.7
@@ -11,8 +11,6 @@ COMMENT=	Ocamlgraph is a graph library for Objective Caml
 LICENSE=	gnu-lgpl-v2.1
 
 DEPENDS+=	ocaml-findlib-[0-9]*:../../devel/ocaml-findlib
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake

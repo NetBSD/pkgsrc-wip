@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/01/17 12:03:29 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/03 21:32:49 asau Exp $
 #
 
 DISTNAME=	oww-0.82.2
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=oww/}
 MAINTAINER=	pettai@nordu.net
 HOMEPAGE=	http://oww.sourceforge.net/
 COMMENT=	One-wire weather
+
+PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=	yes
 #USE_LIBTOOL=	yes

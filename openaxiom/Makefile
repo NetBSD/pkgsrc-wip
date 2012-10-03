@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2012/07/21 20:24:23 asau Exp $
+# $NetBSD: Makefile,v 1.20 2012/10/03 21:32:46 asau Exp $
 #
 
 DISTNAME=		open-axiom-1.4.1
@@ -12,7 +12,6 @@ HOMEPAGE=		http://www.open-axiom.org/
 # http://open-axiom.sourceforge.net/index.html
 COMMENT=		Platform for symbolic, algebraic, and numerical computations
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_JOBS_SAFE=		no
 
 USE_LANGUAGES=		c c++

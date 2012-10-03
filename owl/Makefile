@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/11/13 10:04:09 jdwhite Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/03 21:32:49 asau Exp $
 #
 
 DISTNAME=		owl-2.1.11
@@ -8,6 +8,8 @@ MASTER_SITES=		http://www.ktools.org/dist/owl/
 MAINTAINER=		jdw-pkgsrc@menelos.com
 HOMEPAGE=		http://www.ktools.org/dist/owl/
 COMMENT=		Curses-based instant messaging client
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes

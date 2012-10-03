@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/05/22 02:24:17 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 21:32:48 asau Exp $
 #
 
 DISTNAME=	osmo-0.2.10
@@ -9,8 +9,6 @@ MAINTAINER=	INSERT_YOUR_MAIL_ADDRESS_HERE
 HOMEPAGE=	http://clayo.org/osmo/
 COMMENT=	Personal organizer, calendar and task manager
 #LICENSE=	# TODO: (see mk/license.mk)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFIGURE_ENV+=		LIBICAL_CFLAGS="-I${BUILDLINK_PREFIX.libical}/include/libical"
 GNU_CONFIGURE=	yes

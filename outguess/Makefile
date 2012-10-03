@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/06/23 13:19:54 hfath Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/03 21:32:48 asau Exp $
 #
 
 DISTNAME=	outguess-0.2
@@ -14,7 +14,6 @@ HOMEPAGE=	http://www.outguess.org/
 COMMENT=	JPEG steganography tool
 LICENSE=	original-bsd
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${OG_DOCSDIR} ${OG_EGDIR}
 
 OG_DOCSDIR=	share/doc/outguess

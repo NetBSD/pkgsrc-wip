@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/06/13 22:47:12 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/03 21:32:46 asau Exp $
 
 DISTNAME=	oolite-1.65
 PKGREVISION=	2
@@ -14,6 +14,8 @@ WRKSRC=		${WRKDIR}/${DISTNAME}-src
 MAINTAINER=	pkgsrc-users@pkgsrc.org
 COMMENT=	Space sim game, inspired by Elite
 HOMEPAGE=	http://oolite.aegidian.org/
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_LANGUAGES=	objc
 USE_TOOLS+=	gmake

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/02/28 14:53:17 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/03 21:32:46 asau Exp $
 #
 
 DISTNAME=	openbsd-input-usbtablet-1.0
@@ -9,8 +9,6 @@ MASTER_SITES=	${MASTER_SITE_LOCAL}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://xenocara.org/
 COMMENT=	X.org USB tablet driver from OpenBSD
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

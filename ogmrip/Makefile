@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/11/19 22:33:08 blckmaxima Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/03 21:32:46 asau Exp $
 #
 
 DISTNAME=		ogmrip-0.13.7
@@ -19,8 +19,6 @@ DEPENDS+=		vorbis-tools-[0-9]*:../../audio/vorbis-tools
 DEPENDS+=		gocr-[0-9]*:../../graphics/gocr
 BUILD_DEPENDS+=		gtk-doc-[0-9]*:../../textproc/gtk-doc
 BUILD_DEPENDS+=		gsed-[0-9]*:../../textproc/gsed
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	SED_PROG=${LOCALBASE}/bin/gsed

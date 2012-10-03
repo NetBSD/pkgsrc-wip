@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2012/09/29 23:27:14 pettai Exp $
+# $NetBSD: Makefile,v 1.35 2012/10/03 21:32:47 asau Exp $
 #
 
 DISTNAME=	opendnssec-1.4.0b1
@@ -14,8 +14,6 @@ DEPENDS+=	ldns>=1.6.12:../../net/ldns
 DEPENDS+=	${RUBY_PKGPREFIX}-rubygems-[0-9]*:../../misc/rubygems
 DEPENDS+=	${RUBY_PKGPREFIX}-dnsruby>=1.53:../../net/ruby-dnsruby
 BUILD_DEPENDS+=	CUnit-[0-9]*:../../devel/cunit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEFS+=	VARBASE
 

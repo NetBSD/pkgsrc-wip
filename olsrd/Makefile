@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/09/28 22:44:11 khorben Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/03 21:32:46 asau Exp $
 #
 
 DISTNAME=	olsrd-0.6.1
@@ -12,7 +12,6 @@ COMMENT=	Ad-hoc wireless mesh routing daemon
 
 LICENSE=	modified-bsd
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 USE_TOOLS+=	bison
 USE_TOOLS+=	flex
 USE_TOOLS+=	gmake

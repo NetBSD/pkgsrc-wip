@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2010/01/17 12:03:29 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/03 21:32:47 asau Exp $
 
 DISTNAME=		openscep-0.4.2
 PKGREVISION=		3
@@ -10,6 +10,8 @@ HOMEPAGE=		http://openscep.othello.ch/
 COMMENT=		CA glue for Cisco SCEP
 
 BUILD_DEPENDS+=		w3m>=0.5.1:../../www/w3m
+
+PKG_DESTDIR_SUPPORT=	none
 
 .include "../../mk/bsd.prefs.mk"
 

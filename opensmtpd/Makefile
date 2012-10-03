@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/05/25 09:43:31 ftigeot Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/03 21:32:47 asau Exp $
 
 DISTNAME=	opensmtpd-201205241358
 CATEGORIES=	mail net
@@ -8,8 +8,6 @@ MAINTAINER=	ftigeot@wolfpond.org
 HOMEPAGE=	http://www.opensmtpd.org/
 COMMENT=	The OpenSMTPD mail transfer agent, a replacement for sendmail
 LICENSE=	isc
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/opensmtpd
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2009/12/13 22:50:29 gschwarz Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/03 21:32:47 asau Exp $
 
 DISTNAME=	openlogos-1.0.3
 CATEGORIES=	misc
@@ -7,6 +7,8 @@ MASTER_SITES=	http://logos-os.dfki.de/release/
 MAINTAINER=	schwarz@NetBSD.org
 HOMEPAGE=	http://logos-os.dfki.de/
 COMMENT=	Openlogos is a language translation system
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake

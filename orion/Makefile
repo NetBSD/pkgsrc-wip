@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2007/06/11 10:50:12 shattered Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/03 21:32:48 asau Exp $
 #
 
 DISTNAME=		orion-0.2
@@ -16,6 +16,8 @@ BUILD_DEPENDS+=		scsh>=0.6:../../shells/scsh
 BUILD_DEPENDS+=		scsh-install-lib>=1:../../wip/scsh-install-lib
 DEPENDS+=		sunterlib-*:../../wip/sunterlib
 DEPENDS+=		scx-*:../../wip/scx
+
+PKG_DESTDIR_SUPPORT=	none
 
 NO_BUILD=		yes
 

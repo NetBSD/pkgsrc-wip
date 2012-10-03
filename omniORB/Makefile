@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/08/25 15:00:35 tonnerre Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/03 21:32:46 asau Exp $
 #
 
 PKGNAME=		omniORB-4.1.2
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=omniorb/}
 MAINTAINER=		ianzag@mail.ru
 HOMEPAGE=		http://omniorb.sourceforge.net/
 COMMENT=		OmniORB is an ORB that implements the 2.6 specification of the CORBA
+
+PKG_DESTDIR_SUPPORT=	none
 
 MAKE_FILE=		GNUmakefile
 GNU_CONFIGURE=	YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/06/19 23:49:02 jihbed Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/03 21:32:48 asau Exp $
 #
 
 VERS=	0.2.5
@@ -11,8 +11,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://othman.ojuba.org/
 COMMENT=	Electronic Quran browser
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR= yes
 USE_TOOLS+=	intltool msgfmt

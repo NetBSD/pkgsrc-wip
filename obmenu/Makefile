@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/04/22 16:47:10 othyro Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/03 21:32:45 asau Exp $
 #
 
 DISTNAME=	obmenu-1.0
@@ -11,8 +11,6 @@ COMMENT=	Openbox menu editor
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${PYPKGPREFIX}-gtk2-[0-9]*:../../x11/py-gtk2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 SUBST_CLASSES+=		obmenu
 SUBST_MESSAGE.obmenu=	Fixing LOCALBASE path.

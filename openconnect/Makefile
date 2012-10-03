@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/05/14 14:57:42 hfath Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/03 21:32:47 asau Exp $
 #
 
 DISTNAME=	openconnect-3.18
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.infradead.org/openconnect.html
 COMMENT=	Client for Cisco AnyConnect VPN
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

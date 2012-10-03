@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/09/02 12:08:48 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 21:32:48 asau Exp $
 #
 
 DISTNAME=	oslc3.0
@@ -11,8 +11,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://wiki.objectweb.org/oslcv3/
 COMMENT=	Open Source License Checker
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 
@@ -40,7 +38,7 @@ do-build:
 	${ECHO} "StartupNotify=true" >> ${WRKSRC}/oslc.desktop
 	printf "#! ${SH}\\nexec ${PKG_JAVA_HOME}/bin/java -Xms512M -Xmx512M -jar oslc.jar \n" > ${WRKSRC}/oslcgui
 	printf "#! ${SH}\\nexec ${PKG_JAVA_HOME}/bin/java -Xms512M -Xmx512M -jar ${PREFIX}/lib/java/oslc/oslc.jar --$@\n" > ${WRKSRC}/oslccli
-	
+
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/oslcgui ${DESTDIR}${PREFIX}/lib/java/oslc
 	${INSTALL_SCRIPT} ${WRKSRC}/oslccli ${DESTDIR}${PREFIX}/lib/java/oslc

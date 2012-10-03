@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/09/25 16:54:38 ggergely Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/03 21:32:47 asau Exp $
 #
 
 
@@ -14,7 +14,6 @@ HOMEPAGE=	http://openttd.org/
 COMMENT=	Free and open source graphics data files for the game OpenTTD
 #LICENSE=	# TODO: (see mk/license.mk)
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS=  	share/openttd/data
 
 WRKSRC=		${WRKDIR}/opengfx-${VERSION}

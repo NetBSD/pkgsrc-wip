@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/11/03 14:58:32 silasdb Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/03 21:32:46 asau Exp $
 #
 
 DISTNAME=	OpenCASCADE_src
@@ -13,8 +13,6 @@ COMMENT=	Software development platform for 3D CAD CAM CAE
 
 LICENSE=	opencascade-license
 LICENSE_FILE=	opencascade-license
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE_PREFIX=	${PREFIX}/opencascade
 

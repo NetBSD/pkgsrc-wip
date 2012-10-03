@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2010/07/04 16:38:10 hftmarkand Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/03 21:32:45 asau Exp $
 
 DISTNAME=	ode-${ODE_VERSION}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=opende/}
 EXTRACT_SUFX=	.zip
 ODE_VERSION=	0.11.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAINTAINER=	kh.p@no-log.org
 HOMEPAGE=	http://www.ode.org/

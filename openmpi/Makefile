@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2012/06/13 00:56:22 asau Exp $
+# $NetBSD: Makefile,v 1.56 2012/10/03 21:32:47 asau Exp $
 
 DISTNAME=	openmpi-1.6.1a1r26586
 PKGNAME=	openmpi-1.6.0.99.26586
@@ -13,8 +13,6 @@ COMMENT=	Open source MPI-2 implementation
 
 CONFLICTS+=	mpich-[0-9]*	# installs bin/mpicc & other wrappers
 CONFLICTS+=	mpich2-[0-9]*	# installs bin/mpicc & other wrappers
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++ fortran77

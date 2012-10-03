@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/02/29 05:12:40 dhowland Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/03 21:32:47 asau Exp $
 #
 
 DISTNAME=		opendchub-0.7.15
@@ -8,8 +8,6 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=opendchub/}
 MAINTAINER=		dhowland@users.sourceforge.net
 HOMEPAGE=		http://opendchub.sourceforge.net/
 COMMENT=		Open source Direct Connect hub software
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 # only works for systems with cap_set_proc() support

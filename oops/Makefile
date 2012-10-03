@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2011/10/02 21:23:00 shattered Exp $
+# $NetBSD: Makefile,v 1.22 2012/10/03 21:32:46 asau Exp $
 #
 
 DISTNAME=	oops-1.5.24
@@ -12,6 +12,8 @@ COMMENT=	Multithreaded caching HTTP proxy server
 
 # Oops requires working native threads
 NOT_FOR_PLATFORM=	NetBSD-1.*-*
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		YES

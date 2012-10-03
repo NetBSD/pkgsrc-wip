@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/02/28 14:53:17 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/03 21:32:46 asau Exp $
 #
 
 DISTNAME=	openal-soft-1.5.304
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://kcat.strangesoft.net/
 COMMENT=	Alternative OpenAL implementation
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++

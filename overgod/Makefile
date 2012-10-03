@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/07/18 15:25:55 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 21:32:48 asau Exp $
 #
 
 DISTNAME=	ogsrc10
@@ -14,7 +14,6 @@ LICENSE=	gnu-gpl-v2
 
 WRKSRC=		${WRKDIR}
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS=	bin libexec share/doc/overgod
 INSTALLATION_DIRS+=	share/overgod/gfx share/overgod/wavs/beat
 

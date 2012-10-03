@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/09/07 14:12:27 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 21:32:45 asau Exp $
 #
 
 DISTNAME=	ocamlweb-1.37
@@ -12,8 +12,6 @@ COMMENT=	Ocamlweb is a literate programming tool for Objective Caml
 
 #DEPENDS+=	teTeX>=3.0:../../print/teTeX
 DEPENDS+=	hevea>=1.10:../../textproc/hevea
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c

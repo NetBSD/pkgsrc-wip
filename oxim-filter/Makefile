@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/04/13 14:00:26 obache Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/03 21:32:50 asau Exp $
 #
 
 DISTNAME=	oxim-filters
@@ -11,8 +11,6 @@ MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://opendesktop.org.tw/demopage/oxim/
 COMMENT=	Open X Input Method output filters
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	oxim>=1.4:../../wip/oxim
 

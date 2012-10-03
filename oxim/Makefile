@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/04/13 13:58:47 obache Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/03 21:32:49 asau Exp $
 #
 
 DISTNAME=	oxim-1.4.4
@@ -10,8 +10,6 @@ MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://opendesktop.org.tw/demopage/oxim/
 COMMENT=	Open X Input Method server
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes

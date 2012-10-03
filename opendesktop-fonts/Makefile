@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/10/07 11:05:07 obache Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/03 21:32:47 asau Exp $
 #
 
 DISTNAME=	opendesktop-fonts-1.4.2
@@ -10,8 +10,6 @@ HOMEPAGE=	ftp://ftp.opendesktop.org.tw/odp/ODOFonts/OpenFonts/
 COMMENT=	Simplified and Traditional Chinese and Japanese Ming and Kai Face
 LICENSE=	arphic-public-license
 LICENSE_FILE=	arphic-public-license
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_BUILD=	yes
 USE_LANGUAGES=	# empty
