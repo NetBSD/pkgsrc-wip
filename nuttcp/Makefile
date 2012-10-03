@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/03/24 15:48:55 bubuchka Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/03 17:57:30 asau Exp $
 #
 
 DISTNAME=	nuttcp-${NUTTCP_VERSION}
@@ -15,20 +15,18 @@ NUTTCP_VERSION=	6.1.2
 
 USE_TOOLS+=	gmake
 
-INSTALLATION_DIRS=	${PREFIX}/bin \
-			${PREFIX}/${PKGMANDIR}/man8 \
-			${PREFIX}/share/doc/${PKGBASE}
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man8 share/doc/${PKGBASE}
 
 do-install:
 		${INSTALL_PROGRAM} ${WRKSRC}/nuttcp-${NUTTCP_VERSION} \
-			${PREFIX}/bin/nuttcp
+			${DESTDIR}${PREFIX}/bin/nuttcp
 		${INSTALL_MAN} ${WRKSRC}/nuttcp.8 \
-			${PREFIX}/${PKGMANDIR}/man8
+			${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
 		${INSTALL_DATA} ${WRKSRC}/README \
-			${PREFIX}/share/doc/${PKGBASE}
+			${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 		${INSTALL_DATA} ${WRKSRC}/examples.txt \
-			${PREFIX}/share/doc/${PKGBASE}
+			${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 		${INSTALL_DATA} ${WRKSRC}/nuttcp.html \
-			${PREFIX}/share/doc/${PKGBASE}
+			${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 
 .include "../../mk/bsd.pkg.mk"
