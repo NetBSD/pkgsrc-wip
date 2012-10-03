@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/09/13 13:45:21 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/03 18:15:32 asau Exp $
 #
 
 DISTNAME=	netwmpager-2.04
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 #HOMEPAGE=	# none
 COMMENT=	EWMH (NetWM) compatible pager
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 HAS_CONFIGURE=	yes
 USE_TOOLS+=	gmake pkg-config

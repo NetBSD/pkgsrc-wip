@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/01/21 16:53:01 cheusov Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/03 18:15:32 asau Exp $
 #
 
 DISTNAME=	bmake-20111010
@@ -10,8 +10,6 @@ MAINTAINER=	cheusov@NetBSD.org
 HOMEPAGE=	http://www.crufty.net/help/sjg/bmake.html
 COMMENT=	Portable (autoconf) version of NetBSD 'make' utility
 LICENSE=	original-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/bmake
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/08/04 11:49:17 hfath Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 18:15:31 asau Exp $
 
 DISTNAME=	netatalk-${DISTVERS}
 DISTVERS=	2.0.5
@@ -14,8 +14,6 @@ MAINTAINER=	hauke@NetBSD.org
 HOMEPAGE=	http://netatalk.sourceforge.net/
 COMMENT=	Netatalk v2.0 appletalk file and print services
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS=		rc>=1.5:../../shells/rc
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/05/25 10:03:28 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/03 18:15:32 asau Exp $
 #
 
 DISTNAME=	netbsd-light-desktop-default-settings-0.0
@@ -12,8 +12,6 @@ MAINTAINER=	INSERT_YOUR_MAIL_ADDRESS_HERE
 HOMEPAGE=	http://wiki.NetBSD.org/
 COMMENT=	Default settings for NetBSD Light Desktop
 #LICENSE=	# TODO: (see mk/license.mk)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	lightdm-gtk-greeter>=0:../../wip/lightdm-gtk-greeter
 DEPENDS+=	lxsession>=0:../../wip/lxsession

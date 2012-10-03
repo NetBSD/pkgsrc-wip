@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/09/12 22:37:14 samott Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 18:15:33 asau Exp $
 
 DISTNAME=	nullpop-0.2
 CATEGORIES=	mail
@@ -8,6 +8,8 @@ HOMEPAGE=	http://memberwebs.com/nielsen/software/nullpop/
 
 MAINTAINER=	shaun@inerd.com
 COMMENT=	POP3 server that allows logins, but never returns any email
+
+PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=	yes
 

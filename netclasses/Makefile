@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/06/10 10:04:28 hoka_adam Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 18:15:32 asau Exp $
 #
 
 DISTNAME=	netclasses-1.06
@@ -8,6 +8,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=netclasses/}
 MAINTAINER=	adam.hoka@gmail.com
 HOMEPAGE=	http://netclasses.sourceforge.net/
 COMMENT=	Asynchronous networking library
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_LANGUAGES=		objc
 USE_TOOLS+=		pkg-config

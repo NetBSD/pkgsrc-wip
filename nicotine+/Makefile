@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2010/06/13 22:47:12 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/03 18:15:32 asau Exp $
 #
 
 DISTNAME=	nicotine+-1.2.9
@@ -19,6 +19,8 @@ DEPENDS+=	${PYPKGPREFIX}-vorbis>=0:../../audio/py-vorbis
 DEPENDS+=	${PYPKGPREFIX}-psyco>=0:../../lang/py-psyco
 .endif
 DEPENDS+=	${PYPKGPREFIX}-GeoIP>=0:../../net/py-GeoIP
+
+PKG_DESTDIR_SUPPORT=	none
 
 PY_PATCHPLIST=	yes
 PYDISTUTILSPKG= yes

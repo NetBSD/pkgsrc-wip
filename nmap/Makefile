@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/01/12 22:48:35 pettai Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/03 18:15:32 asau Exp $
 #
 
 DISTNAME=	nmap-5.61TEST4
@@ -13,7 +13,6 @@ COMMENT=	Network/port scanner with OS detection
 LICENSE=	gnu-gpl-v2
 
 #PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILDLINK_API_DEPENDS.libpcap=	libpcap>=1.0.0
 BUILDLINK_API_DEPENDS.libpcre=	libpcre>=7.6

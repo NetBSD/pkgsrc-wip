@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/09/03 23:07:42 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 18:15:32 asau Exp $
 #
 
 DISTNAME=	ninka-1.0-pre2
@@ -12,8 +12,6 @@ COMMENT=	License identification tool for Source Code
 LICENSE=	gnu-agpl-v3
 
 DEPENDS+=	p5-Getopt-Long>=2.38:../../devel/p5-Getopt-Long
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	pax perl
 NO_BUILD=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2011/11/16 20:39:06 noud4 Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/03 18:15:31 asau Exp $
 #
 
 DISTNAME=	nautilus-search-tool-0.3.0
@@ -9,8 +9,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nautsearchtool/}
 MAINTAINER=	pkgsrc.gnome@gmail.com
 HOMEPAGE=	http://nautsearchtool.sourceforge.net/
 COMMENT=	Extension to have search files on popup menu
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=		pkg-config intltool

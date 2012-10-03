@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2008/03/20 16:24:08 tnn2 Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/03 18:15:32 asau Exp $
 #
 
 DISTNAME=	netwib-5.35.0-src
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	adrianp@stindustries.net
 HOMEPAGE=	http://www.laurentconstantin.com/en/netw/
 COMMENT=	Network library providing network functionality for developers
+
+PKG_DESTDIR_SUPPORT=	none
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
 HAS_CONFIGURE=		YES

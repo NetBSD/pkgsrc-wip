@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/02/07 13:31:35 makoto Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/03 18:15:32 asau Exp $
 
 PKG_VERSION=		2.20
 PKGNAME=		nios2-binutils-${PKG_VERSION}
@@ -12,8 +12,6 @@ LICENSE=		gnu-gpl-v2
 EXTRACT_SUFX=		.tgz
 EXTRACT_ELEMENTS=	binutils-${PKGVERSION}
 WRKSRC=			${WRKDIR}/${EXTRACT_ELEMENTS}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake makeinfo perl
 GNU_CONFIGURE=		yes

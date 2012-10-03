@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/09/03 23:13:26 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 18:15:32 asau Exp $
 #
 
 DISTNAME=	nightfall-1.70
@@ -11,8 +11,6 @@ COMMENT=	Application for a producing a best-fit model for a binary star
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	gnuplot>=4.6.0:../../graphics/gnuplot
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes

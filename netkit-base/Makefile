@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/03/14 01:28:03 jlamwww Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/03 18:15:32 asau Exp $
 
 DISTNAME=		netkit-base-0.17
 PKGREVISION=		1
@@ -11,6 +11,8 @@ HOMEPAGE=		http://www.hcs.harvard.edu/~dholland/computers/netkit.html
 COMMENT=		The inetd super server and ping for Linux
 
 ONLY_FOR_PLATFORM=	Linux-*-*
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_TOOLS+=		gmake
 

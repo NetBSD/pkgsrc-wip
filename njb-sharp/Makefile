@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/02/15 16:47:13 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/03 18:15:32 asau Exp $
 #
 
 DISTNAME=	njb-sharp-0.3.0
@@ -10,8 +10,6 @@ MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://download.banshee-project.org/legacy/njb-sharp/
 COMMENT=	Mono C\# Bindings to libnjb
 #LICENSE=	LICENSE
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

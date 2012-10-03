@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/10/07 13:57:55 ryo-on Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/03 18:15:32 asau Exp $
 #
 
 DISTNAME=	noor-1.2.1
@@ -10,8 +10,6 @@ MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://noor.sourceforge.net/
 COMMENT=	Quran viewer
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		# none

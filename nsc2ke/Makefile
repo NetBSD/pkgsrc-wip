@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/09/02 11:57:25 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 18:15:33 asau Exp $
 #
 
 VERSION=	1.0.2
@@ -10,8 +10,6 @@ MASTER_SITES=	http://pauillac.inria.fr/cdrom_a_graver/ftp/nsc2ke/
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://pauillac.inria.fr/cdrom_a_graver/www/nsc2ke/eng.htm
 COMMENT=	Navier-Stokes solver
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 

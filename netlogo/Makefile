@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/11/16 15:05:31 noud4 Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/03 18:15:32 asau Exp $
 #
 
 DISTNAME=	netlogo-4.1.3
@@ -9,8 +9,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://ccl.sesp.northwestern.edu/netlogo/index.shtml
 COMMENT=	NetLogo is a multi-agent programmable modeling environment
 LICENSE=	apache-2.0
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_JAVA=	run
 USE_TOOLS+=	pax

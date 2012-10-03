@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/05/18 23:55:47 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 18:15:31 asau Exp $
 #
 
 DISTNAME=	netbsd-icon-theme-0.0
@@ -20,8 +20,6 @@ COMMENT=	Icon theme for NetBSD
 
 # Note: the index.theme inherits elementary-mono-dark
 DEPENDS=	elementary-icon-theme>=0:../../wip/elementary-icon-theme
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CHECKSUM=	yes
 NO_BUILD=	yes

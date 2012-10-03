@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/08/01 14:57:09 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/03 18:15:33 asau Exp $
 #
 
 DISTNAME=	nsp2-cvs_20090724
@@ -11,8 +11,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://cermics.enpc.fr/~jpc/nsp-tiddly/
 COMMENT=	A scientific software package similiar to Matlab, Scilab, octave
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/nsp2
 USE_PKGLOCALEDIR=	yes

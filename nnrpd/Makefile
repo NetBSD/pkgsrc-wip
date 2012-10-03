@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2011/09/21 20:10:17 hfath Exp $
+# $NetBSD: Makefile,v 1.18 2012/10/03 18:15:32 asau Exp $
 
 DISTNAME=		inn-1.7.2.insync-1.1d
 PKGNAME=		nnrpd-1.7.2
@@ -12,7 +12,6 @@ MAINTAINER=		hauke@NetBSD.org
 HOMEPAGE=		http://www.isc.org/sw/inn/
 COMMENT=		NNTP reader daemon from InterNet News (INN)
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS=	sbin libexec \
 			share/examples/nnrpd share/doc/nnrpd \
 			${PKGMANDIR}/man3 ${PKGMANDIR}/man5 ${PKGMANDIR}/man8

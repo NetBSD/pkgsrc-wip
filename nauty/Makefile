@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/09/02 12:05:14 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 18:15:31 asau Exp $
 #
 
 DISTNAME=	nauty24r2
@@ -12,8 +12,6 @@ COMMENT=	Brendan McKay's graph isomorphism tester
 #LICENSE=	# TODO: (see mk/license.mk)
 
 MAKE_JOBS_SAFE= no
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 MAKE_FILE=	makefile

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/05/24 10:31:13 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/03 18:15:31 asau Exp $
 
 DISTNAME=		net-tools-1.60
 CATEGORIES=		net sysutils
@@ -8,6 +8,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		reed@reedmedia.net
 #HOMEPAGE
 COMMENT=		Network configuration and status tools for Linux
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_TOOLS+=		gmake
 # build uses linux/if_ether.h for example

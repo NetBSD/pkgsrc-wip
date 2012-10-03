@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/10/02 11:20:28 fhajny Exp $
+# $NetBSD: Makefile,v 1.17 2012/10/03 18:15:32 asau Exp $
 #
 
 DISTNAME=	node-v0.8.11
@@ -11,7 +11,6 @@ HOMEPAGE=	http://nodejs.org/
 COMMENT=	V8 JavaScript for clients and servers
 LICENSE=	mit
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 CHECK_INTERPRETER=	no
 
 HAS_CONFIGURE=	yes

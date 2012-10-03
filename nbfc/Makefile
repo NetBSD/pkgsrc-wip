@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/09/03 16:01:26 shindenmorr Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/03 18:15:31 asau Exp $
 #
 
 DISTNAME=		nbfc-0.1
@@ -11,7 +11,6 @@ COMMENT=		Nbfc - the "new brainfuck compiler"
 
 WRKSRC=			${WRKDIR}/nbfc-0.1
 USE_TOOLS+=		gmake yacc
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1 
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/05/05 23:30:09 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 18:15:31 asau Exp $
 #
 
 DISTNAME=	nautilus-dropbox-1.4.0
@@ -13,8 +13,6 @@ COMMENT=	Dropbox nautilus integration
 
 DEPENDS+=	${PYPKGPREFIX}-gtk2-[0-9]*:../../x11/py-gtk2
 BUILD_DEPENDS+=	${PYPKGPREFIX}-docutils-[0-9]*:../../textproc/py-docutils
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 FETCH_USING=		curl
 

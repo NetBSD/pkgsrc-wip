@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2011/11/10 01:03:44 othyro Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/03 18:15:32 asau Exp $
 
 PKGVERSION=		0.7
 DISTNAME=		nomadio-${PKGVERSION}
@@ -9,7 +9,6 @@ MASTER_SITES=		ftp://ftp.lucifier.net/pub/nomadio/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://nomadio.lucifier.net/
 COMMENT=		Utility to control Creative Nomad II MG
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/cat1
 

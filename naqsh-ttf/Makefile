@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/09/22 14:28:10 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/03 18:15:31 asau Exp $
 
 DISTNAME=	lateef.shaikh_fonts
 PKGNAME=	naqsh-ttf-${VERS}
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	kamelderouiche@yahoo.com
 COMMENT=	Arabic font by Lateef Shaikh
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	# none

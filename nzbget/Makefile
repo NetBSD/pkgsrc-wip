@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2011/01/02 10:38:53 mjoellnir Exp $
+# $NetBSD: Makefile,v 1.17 2012/10/03 18:15:33 asau Exp $
 #
 
 DISTNAME=		nzbget-0.7.0
@@ -16,8 +16,6 @@ USE_TOOLS+=		pkg-config
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 INSTALLATION_DIRS=	share/examples/nzbget
 

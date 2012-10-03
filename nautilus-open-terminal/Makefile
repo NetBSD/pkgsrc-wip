@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2010/06/13 22:47:12 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/03 18:15:31 asau Exp $
 #
 
 DISTNAME=	nautilus-open-terminal-0.18
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc.gnome@gmail.com
 HOMEPAGE=	ftp://ftp.gnome.org/pub/gnome/sources/nautilus-open-terminal/
 COMMENT=	Nautilus extension which allows you to open a terminal
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

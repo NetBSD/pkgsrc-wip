@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/09/12 15:52:18 jihbed Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/03 18:15:33 asau Exp $
 #
 
 DISTNAME=	notify-sharp_0.4.0~r2998.orig
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc.gnome@gmail.com
 HOMEPAGE=	http://www.ndesk.org/NotifySharp
 COMMENT=	C\# bindings for libnotify
 #LICENSE=	# TODO: (see mk/license.mk)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/notify-sharp-0.4.0
 GNU_CONFIGURE=	yes

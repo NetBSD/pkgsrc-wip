@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/09/27 00:37:02 makoto Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/03 18:15:32 asau Exp $
 
 PKG_VERSION=		3.4.6
 # PKGNAME will have option name only when explictly selected
@@ -12,8 +12,6 @@ LICENSE=		gnu-gpl-v2
 EXTRACT_ELEMENTS=	gcc
 WRKSRC=			${WRKDIR}/gcc
 PATH:=                  ${CROSSBASE}/bin:${PATH}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake makeinfo perl
 USE_GNU_CONFIGURE_HOST=	no

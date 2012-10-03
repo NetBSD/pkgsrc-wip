@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2007/01/03 14:38:15 shattered Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/03 18:15:32 asau Exp $
 #
 
 DISTNAME=		netkit-telnet-0.17
@@ -8,6 +8,8 @@ MASTER_SITES=		ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/
 MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/
 COMMENT=		The telnet and telnetd for Linux
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_PKGLOCALEDIR=	yes
 HAS_CONFIGURE=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2011/08/01 14:55:22 hfath Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/03 18:15:31 asau Exp $
 
 DISTNAME=	netatalk-2.2.0
 CATEGORIES=	net print
@@ -12,8 +12,6 @@ MAINTAINER=	hauke@NetBSD.org
 HOMEPAGE=	http://netatalk.sourceforge.net/
 COMMENT=	Netatalk appletalk file and print services
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BDB_ACCEPTED=		db4 db5
 USE_LIBTOOL=		yes

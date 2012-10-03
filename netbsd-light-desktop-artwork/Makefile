@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/05/25 10:12:21 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/03 18:15:32 asau Exp $
 #
 
 PKGNAME=	netbsd-light-desktop-artwork-0.0
@@ -11,8 +11,6 @@ MAINTAINER=	INSERT_YOUR_MAIL_ADDRESS_HERE
 HOMEPAGE=	http://wiki.netbsd.org/light-desktop
 COMMENT=	Artwork and icon theme for NetBSD
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/lubuntu-artwork-0.27
 NO_BUILD=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2010/06/13 22:47:12 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/03 18:15:31 asau Exp $
 #
 
 DISTNAME=		ncbi_cxx--Nov_30_2004
@@ -12,6 +12,8 @@ HOMEPAGE=		http://www.ncbi.nlm.nih.gov/IEB/ToolBox/index.cgi
 COMMENT=		Libraries needed by apps dependent on NCBI C++ toolkit
 
 CONFLICTS=		ncbi_cxx-lib-[0-9]*
+
+PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake

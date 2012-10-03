@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2011/10/09 10:05:44 cheusov Exp $
+# $NetBSD: Makefile,v 1.18 2012/10/03 18:15:31 asau Exp $
 #
 
 DISTNAME=	netbsd-awk-20110509
@@ -12,8 +12,6 @@ COMMENT=		NetBSD version of AWK
 #LICENSE=		mit/bsd?
 
 BUILD_DEPENDS+=		mk-configure>0.19.0:../../devel/mk-configure
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		yacc lex
 

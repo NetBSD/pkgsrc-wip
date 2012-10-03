@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/12/13 17:29:17 slitvinov Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/03 18:15:31 asau Exp $
 #
 
 DISTNAME=	ncdu-1.8
@@ -8,7 +8,6 @@ MASTER_SITES=	http://sourceforge.net/projects/ncdu/files/ncdu/ncdu-1.8/
 COMMENT=	Disk usage visualization tool
 LICENSE=	modified-bsd
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 MAINTAINER=	slitvinov@gmail.com
 HOMEPAGE=	http://dev.yorhel.nl/ncdu
 

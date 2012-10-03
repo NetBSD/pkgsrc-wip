@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/10/29 08:32:48 shattered Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/03 18:15:33 asau Exp $
 #
 
 DISTNAME=	NVIDIA-FreeBSD-x86-${DIST_VERSION}
@@ -19,6 +19,8 @@ NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_PACKAGE=		# Oi!
+
+PKG_DESTDIR_SUPPORT=	none
 
 .include "../../mk/bsd.prefs.mk"
 

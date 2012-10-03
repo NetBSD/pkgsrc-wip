@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/01/07 21:41:36 bubuchka Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/03 18:15:32 asau Exp $
 
 DISTNAME=		nhc98src-1.22
 PKGNAME=		nhc98-1.22
@@ -13,6 +13,8 @@ COMMENT=		Portable Haskell 98 compiler
 # Not yet ported to 64-bit machines
 NOT_FOR_PLATFORM=	${LP64PLATFORMS}
 
+PKG_DESTDIR_SUPPORT=	none
+
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
 #INCOMPAT_CURSES=	NetBSD-1.5*-* NetBSD-1.6[-_.]*-*
@@ -21,9 +23,6 @@ WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 HAS_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--buildwith=gcc --installdir=${DESTDIR}${PREFIX:Q} \
 			+docs --docdir=${DESTDIR}${PREFIX}/share/doc/nhc98
-
-# XXX Doesn't yet supported
-#PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake
 

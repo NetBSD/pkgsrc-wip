@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2010/04/15 16:39:10 othyro Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/03 18:15:32 asau Exp $
 #
 
 DISTNAME=	nmzmail-1.1
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.ecademix.com/JohannesHofmann/nmzmail.html
 COMMENT=	Fast mail searching for mutt
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 

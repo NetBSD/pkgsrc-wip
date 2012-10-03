@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/01/22 13:29:08 airhead Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/03 18:15:32 asau Exp $
 
 DISTNAME=	newsbeuter-2.4
 CATEGORIES=	news
@@ -7,8 +7,6 @@ MASTER_SITES=	http://www.newsbeuter.org/downloads/
 MAINTAINER=	pkgsrc-users@netbsd.org
 HOMEPAGE=	http://www.newsbeuter.org/
 COMMENT=	Open-source RSS/Atom feed reader for text terminals
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake pkg-config msgfmt perl

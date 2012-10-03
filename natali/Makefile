@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2011/05/19 12:57:41 hfath Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/03 18:15:31 asau Exp $
 
 DISTNAME=	natali-1.25
 PKGREVISION=	1
@@ -9,7 +9,6 @@ MAINTAINER=	hauke@NetBSD.org
 HOMEPAGE=	http://ppr.trincoll.edu/
 COMMENT=	AT&T/Apple AppleTalk Library Interface for Netatalk
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS=	lib include/at share/doc/natali
 
 CONFLICTS=	netatalk-asun-[0-9]* netatalk-umich-[0-9]*

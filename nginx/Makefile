@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2010/06/08 16:06:56 anielski Exp $
+# $NetBSD: Makefile,v 1.30 2012/10/03 18:15:32 asau Exp $
 
 DISTNAME=		nginx-0.7.66
 DISTFILES=		${DEFAULT_DISTFILES}
@@ -10,8 +10,6 @@ MAINTAINER=		aniou@smutek.pl
 HOMEPAGE=		http://nginx.net/
 COMMENT=		Lightweight HTTP server and mail proxy server (stable branch)
 LICENSE=		2-clause-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 

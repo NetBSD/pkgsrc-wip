@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/05/13 15:14:04 noud4 Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/03 18:15:31 asau Exp $
 #
 
 DISTNAME=	nautilus-sound-converter-1.0.6
@@ -12,8 +12,6 @@ HOMEPAGE=	http://code.google.com/p/nautilus-sound-converter/
 COMMENT=	Nautilus extension to convert audio files
 
 #LICENSE=	# TODO: (see mk/license.mk)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_PKGLOCALEDIR=	yes
