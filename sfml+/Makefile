@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/10/03 15:05:59 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/04 22:31:21 othyro Exp $
 #
 
 DISTNAME=	SFML-1.6-sdk-linux-64
@@ -15,7 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/SFML-1.6
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake rm
 CPPFLAGS+=		-I${BUILDLINK_PREFIX.glu}/include
 CPPFLAGS+=		-I${BUILDLINK_PREFIX.freetype2}/include/freetype2
 LDFLAGS+=		-L${BUILDLINK_PREFIX.libsndfile}/lib
@@ -27,6 +27,11 @@ INSTALLATION_DIRS+=	include/SFML/System/Unix include/SFML/System/Win32
 INSTALLATION_DIRS+=	include/SFML/Window lib
 
 .include "options.mk"
+
+post-install:
+			${RM} ${DESTDIR}${PREFIX}/include/SFML/Config.hpp.orig
+			${RM} ${DESTDIR}${PREFIX}/include/SFML/Window/OpenGL.hpp.orig
+			${RM} ${DESTDIR}${PREFIX}/include/SFML/Window/WindowHandle.hpp.orig
 
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../audio/openal/buildlink3.mk"
