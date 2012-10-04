@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/04/21 15:33:55 uccwen Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/04 18:42:21 asau Exp $
 #
 
 DISTNAME=	MMapDB-0.08
@@ -10,8 +10,6 @@ MAINTAINER=	wenheping@gmail.com
 HOMEPAGE=	http://search.cpan.org/dist/MMapDB
 COMMENT=	Simple database in shared memory
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		p5-File-Map>=0:../../wip/p5-File-Map
 

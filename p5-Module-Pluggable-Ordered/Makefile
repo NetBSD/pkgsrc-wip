@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/09/02 18:07:17 kuli0020 Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/04 18:42:21 asau Exp $
 
 DISTNAME=	Module-Pluggable-Ordered-1.4
 PKGNAME=	p5-${DISTNAME}
@@ -11,6 +11,8 @@ COMMENT=	Call module plugins in a specified order
 
 DEPENDS+=	p5-Module-Pluggable>=1.9:../../devel/p5-Module-Pluggable
 DEPENDS+=	p5-UNIVERSAL-exports>=0:../../wip/p5-UNIVERSAL-exports
+
+PKG_DESTDIR_SUPPORT=	none
 
 PERL5_PACKLIST= auto/Module/Pluggable/Ordered/.packlist
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/06/10 12:07:00 leot1990 Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/04 18:42:21 asau Exp $
 #
 
 DISTNAME=	MediaWiki-API-0.28
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/MediaWiki-API/
 COMMENT=	Perl interface to the MediaWiki API
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 # LWP::UserAgent, JSON::XS, Encode
 DEPENDS+=	p5-Encode>=0:../../textproc/p5-Encode

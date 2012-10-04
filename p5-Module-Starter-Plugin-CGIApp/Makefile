@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/05/01 23:22:50 ficovh Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/04 18:42:21 asau Exp $
 #
 
 DISTNAME=	Module-Starter-Plugin-CGIApp-0.10
@@ -16,8 +16,6 @@ DEPENDS+=	p5-Pod-Coverage>=0.20:../../textproc/p5-Pod-Coverage
 DEPENDS+=	p5-Test-Pod>=1.02:../../devel/p5-Test-Pod
 DEPENDS+=	p5-HTML-Template>=0:../../www/p5-HTML-Template
 DEPENDS+=	p5-Module-Starter>=0:../../devel/p5-Module-Starter
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_MODULE_TYPE=	Module::Build
 PERL5_PACKLIST=		auto/Module/Starter/Plugin/CGIApp/.packlist

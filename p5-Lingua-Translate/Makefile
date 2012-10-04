@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/06/10 12:07:00 leot1990 Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/04 18:42:20 asau Exp $
 #
 
 DISTNAME=	Lingua-Translate-0.09
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Lingua-Translate/
 COMMENT=	Translate text from one language to another
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Unicode-MapUTF8>=1.09:../../converters/p5-Unicode-MapUTF8
 DEPENDS+=	p5-Pod-Constants>=0.15:../../wip/p5-Pod-Constants

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/04/08 21:58:44 bubuchka Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/04 18:42:21 asau Exp $
 
 DISTNAME=	Math-Gauss-0.01
 PKGNAME=	p5-${DISTNAME}
@@ -10,8 +10,6 @@ HOMEPAGE=	http://search.cpan.org/dist/Math-Gauss/
 COMMENT=	Perl module for Gaussian probability distribution
 
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/Math/Gauss/.packlist
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/03/09 02:03:55 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/04 18:42:21 asau Exp $
 
 DISTNAME=	Module-Pluggable-Fast-0.18
 PKGNAME=	p5-${DISTNAME}
@@ -13,6 +13,7 @@ COMMENT=	Fast plugins with instantiation
 DEPENDS+=	p5-UNIVERSAL-exports>=0.03:../../wip/p5-UNIVERSAL-exports
 DEPENDS+=	p5-File-Find-Rule>=0.28:../../devel/p5-File-Find-Rule
 
+PKG_DESTDIR_SUPPORT=	none
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=	auto/Module/Pluggable/Fast/.packlist

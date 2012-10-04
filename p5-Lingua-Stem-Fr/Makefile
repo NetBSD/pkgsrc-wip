@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/03/18 12:03:56 cheusov Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/04 18:42:20 asau Exp $
 
 DISTNAME=		Lingua-Stem-Fr-0.02
 PKGNAME=		p5-${DISTNAME}
@@ -8,8 +8,6 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Lingua/}
 MAINTAINER=		kuli0020@umn.edu
 HOMEPAGE=		http://search.cpan.org/dist/Lingua-Stem-Fr/
 COMMENT=		Perl French Stemming
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/Lingua/Stem/Fr/.packlist
 

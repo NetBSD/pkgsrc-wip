@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/10/29 11:23:11 shattered Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/04 18:42:22 asau Exp $
 
 DISTNAME=	Net-Whois-RIPE-1.19
 PKGNAME=	p5-${DISTNAME}
@@ -11,6 +11,7 @@ COMMENT=	Implementation of RIPE Whois
 
 BUILD_DEPENDS+=		{p5-Test-Simple>=0.44,perl{,-thread}>=5.8.0}:../../devel/p5-Test-Simple
 
+PKG_DESTDIR_SUPPORT=	none
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PERL5_REQD+=		5.6.0
 PERL_CONFIGURE=	yes

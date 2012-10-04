@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/09/01 12:46:00 udontknow Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/04 18:42:21 asau Exp $
 #
 
 DISTNAME=	Net-SenderBase-1.01
@@ -12,8 +12,6 @@ COMMENT=	Query the senderbase.org service
 
 .include "../../lang/perl5/license.mk"
 LICENSE=        ${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Net-DNS>=0.23:../../net/p5-Net-DNS
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/03/14 22:17:23 bubuchka Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/04 18:42:21 asau Exp $
 
 DISTNAME=	MongoDB-0.45
 PKGNAME=	p5-${DISTNAME}
@@ -10,8 +10,6 @@ HOMEPAGE=	http://search.cpan.org/dist/MongoDB/
 COMMENT=	Mongo Driver for Perl
 
 LICENSE=        apache-2.0
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Any-Moose>=0.18:../../devel/p5-Any-Moose
 DEPENDS+=	p5-Class-Method-Modifiers>=1.07:../../devel/p5-Class-Method-Modifiers

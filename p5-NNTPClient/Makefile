@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/01/04 16:51:55 shattered Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/04 18:42:21 asau Exp $
 #
 
 DISTNAME=	NNTPClient-0.37
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=News/}
 MAINTAINER=	imil@gcu.info
 HOMEPAGE=	http://search.cpan.org/dist/NNTPClient/
 COMMENT=	Perl 5 module to talk to NNTP (RFC977) server
+
+PKG_DESTDIR_SUPPORT=	none
 
 PERL5_PACKLIST=	auto/News/NNTPClient/.packlist
 

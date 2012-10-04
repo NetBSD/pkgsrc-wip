@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/02/18 15:56:31 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/04 18:42:21 asau Exp $
 
 DISTNAME=	Net-Delicious-1.14
 PKGNAME=	p5-${DISTNAME}
@@ -8,8 +8,6 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
 MAINTAINER=	charlie@rubberduck.com
 HOMEPAGE=	http://search.cpan.org/dist/Net-Delicious/
 COMMENT=	OOP for the del.icio.us API
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEPENDS+=	p5-Test-Simple>=0.47:../../devel/p5-Test-Simple
 

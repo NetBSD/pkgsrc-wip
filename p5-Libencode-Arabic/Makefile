@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/09/07 00:56:29 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/04 18:42:20 asau Exp $
 #
 
 DISTNAME=	Encode-Arabic-1.8
@@ -9,8 +9,6 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=SMRZ/}
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://search.cpan.org/dist/Encode-Arabic/
 COMMENT=	Perl5 implementation for Arabic encodings
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_MODULE_TYPE=	Module::Build
 PERL5_PACKLIST=		auto/Encode/Arabic/.packlist

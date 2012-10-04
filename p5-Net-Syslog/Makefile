@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/09/01 13:12:01 udontknow Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/04 18:42:21 asau Exp $
 #
 
 DISTNAME=	Net-Syslog-0.03
@@ -12,8 +12,6 @@ COMMENT=	Extension for sending syslog messages directly to a remote syslogd
 
 .include "../../lang/perl5/license.mk"
 LICENSE=        ${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=	auto/Net/Syslog/.packlist
 USE_LANGUAGES=	# none

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/10/29 08:32:51 shattered Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/04 18:42:20 asau Exp $
 
 DISTNAME=		Lingua-Stem-0.81
 PKGNAME=		p5-${DISTNAME}
@@ -17,6 +17,8 @@ DEPENDS+=		p5-Lingua-Stem-Snowball-Da>=1.01:../../wip/p5-Lingua-Stem-Snowball-Da
 DEPENDS+=		p5-Lingua-Stem-Snowball-No>=0:../../wip/p5-Lingua-Stem-Snowball-No
 DEPENDS+=		p5-Lingua-Stem-Snowball-Se>=1.01:../../wip/p5-Lingua-Stem-Snowball-Se
 DEPENDS+=		p5-Text-German>=0:../../wip/p5-Text-German
+
+PKG_DESTDIR_SUPPORT=	none
 
 MAN3PREFIX=		${PREFIX}/lib/perl5/${PERL_VERSION}
 

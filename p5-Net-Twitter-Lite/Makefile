@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/06/10 12:07:00 leot1990 Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/04 18:42:22 asau Exp $
 #
 
 DISTNAME=	Net-Twitter-Lite-0.10003
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Net-Twitter-Lite/
 COMMENT=	Perl interface to the Twitter API (lite)
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-JSON-Any>=1.21:../../converters/p5-JSON-Any
 DEPENDS+=	p5-Net-OAuth>=0.20:../../net/p5-Net-OAuth

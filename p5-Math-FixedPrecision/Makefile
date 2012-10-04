@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/03/01 19:20:45 hoka_adam Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/04 18:42:21 asau Exp $
 #
 
 DISTNAME=	Math-FixedPrecision-0.21
@@ -8,8 +8,6 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Math/}
 
 MAINTAINER=	geeogeegeeoh@users.sourceforge.net
 COMMENT=	Perl module that provides decimal math without floating point errors
-
-PKG_DESTDIR_SUPPORT= user-destdir
 
 REPLACE_PERL+=	FixedPrecision.pm
 REPLACE_PERL+=	t/test.t

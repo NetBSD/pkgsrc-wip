@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/06/01 05:35:30 obache Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/04 18:42:21 asau Exp $
 # p5-HTML-MasonX-Apache2Handler
 # http://search.cpan.org/CPAN/authors/id/B/BE/BEAU/MasonX-Apache2Handler-0.05.tar.gz
 # modules/by-category/15_World_Wide_Web_HTML_HTTP_CGI/MasonX
@@ -16,6 +16,8 @@ COMMENT=		Perl-based Apache handler for Apache2 with Mason
 DEPENDS+=		p5-libapreq2>=2.4:../../www/p5-libapreq2
 DEPENDS+=		p5-HTML-Mason>=1.26:../../www/p5-HTML-Mason
 DEPENDS+=		${APACHE_PKG_PREFIX}-perl>=1.99.17:../../www/ap2-perl
+
+PKG_DESTDIR_SUPPORT=	none
 
 BUILDLINK_API_DEPENDS.perl=	perl>=5.8.4
 
