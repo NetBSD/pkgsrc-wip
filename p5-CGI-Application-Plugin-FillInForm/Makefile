@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/04/29 05:52:00 ficovh Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/04 09:13:24 asau Exp $
 #
 
 DISTNAME=	CGI-Application-Plugin-FillInForm-1.14
@@ -13,6 +13,8 @@ COMMENT=	Integrate with HTML::FillInForm
 # TODO: Look for the dependencies in Build.PL.
 DEPENDS+=	p5-CGI-Application>=4.11:../../www/p5-CGI-Application
 DEPENDS+=	p5-HTML-FillInForm>=2.0:../../www/p5-HTML-FillInForm
+
+PKG_DESTDIR_SUPPORT=    none
 
 PERL5_MODULE_TYPE=	Module::Build
 PERL5_PACKLIST=		auto/CGI/Application/Plugin/FillInForm/.packlist

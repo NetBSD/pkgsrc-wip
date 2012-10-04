@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/08/18 20:51:01 bubuchka Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/04 09:13:18 asau Exp $
 #
 
 DISTNAME=	p4d
 HOMEPAGE=	http://www.perforce.com/product/components/perforce_server
 COMMENT=	Perforce SCM server
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 P4BINONLY=	yes
 EXTRACT_ONLY=	# none

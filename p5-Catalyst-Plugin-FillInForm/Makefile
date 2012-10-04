@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/10/20 10:10:18 tonnerre Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/04 09:13:29 asau Exp $
 
 DISTNAME=	Catalyst-Plugin-FillInForm-0.06
 PKGNAME=	p5-${DISTNAME}
@@ -15,6 +15,8 @@ PERL5_REQD+=	5.8
 DEPENDS+=	p5-Catalyst-Runtime>=2.99:../../www/p5-Catalyst-Runtime
 DEPENDS+=	p5-HTML-FillInForm>=0:../../www/p5-HTML-FillInForm
 DEPENDS+=	p5-NEXT>=0:../../devel/p5-NEXT
+
+PKG_DESTDIR_SUPPORT=	none
 
 PERL5_PACKLIST= auto/Catalyst/Plugin/FillInForm/.packlist
 

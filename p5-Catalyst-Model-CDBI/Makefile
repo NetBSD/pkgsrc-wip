@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/03/07 09:46:53 cheusov Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/04 09:13:28 asau Exp $
 
 DISTNAME=	Catalyst-Model-CDBI-0.08
 PKGNAME=	p5-${DISTNAME}
@@ -14,6 +14,8 @@ COMMENT=	CDBI model class for Catalyst
 DEPENDS+=	p5-Class-DBI-Loader>=0.2:../../wip/p5-Class-DBI-Loader
 DEPENDS+=	p5-Catalyst-Runtime>=4:../../www/p5-Catalyst-Runtime
 DEPENDS+=	p5-Class-DBI>=0:../../databases/p5-Class-DBI
+
+PKG_DESTDIR_SUPPORT=	none
 
 PERL5_PACKLIST= auto/Catalyst/Model/CDBI/.packlist
 

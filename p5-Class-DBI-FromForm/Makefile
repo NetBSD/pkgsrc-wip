@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/08/07 19:51:59 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/04 09:13:32 asau Exp $
 #
 
 DISTNAME=	Class-DBI-FromForm-0.03
@@ -13,6 +13,8 @@ COMMENT=	Update Class::DBI data using Data::FormValidator
 
 DEPENDS+=	p5-Class-DBI>=0.89:../../databases/p5-Class-DBI
 DEPENDS+=	p5-Data-FormValidator>=3.63:../../textproc/p5-Data-FormValidator
+
+PKG_DESTDIR_SUPPORT=	none
 
 PERL5_PACKLIST=	auto/Class/DBI/FromForm/.packlist
 

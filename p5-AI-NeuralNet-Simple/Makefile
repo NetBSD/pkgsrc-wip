@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/04/15 07:10:05 athaba Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/04 09:13:18 asau Exp $
 #
 
 DISTNAME=	AI-NeuralNet-Simple-0.11
@@ -10,8 +10,6 @@ MAINTAINER=	athaba@users.sourceforge.net
 HOMEPAGE=	http://search.cpan.org/~ovid/AI-NeuralNet-Simple-0.11/
 COMMENT=	Easy to use backprop neural net
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=user-destdir
 
 DEPENDS+=	p5-Log-Agent>=0.208:../../devel/p5-Log-Agent
 DEPENDS+=	p5-Sub-Uplevel>=0:../../devel/p5-Sub-Uplevel

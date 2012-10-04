@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/03/18 12:27:16 cheusov Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/04 09:13:26 asau Exp $
 #
 
 DISTNAME=	CGI-Untaint-1.26
@@ -11,8 +11,6 @@ HOMEPAGE=	http://search.cpan.org/CPAN/authors/id/T/TM/TMTM/
 COMMENT=	CGI::Untaint - process CGI input parameters
 
 DEPENDS+=	p5-UNIVERSAL-require>=0.01:../../devel/p5-UNIVERSAL-require
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/CGI/Untaint/.packlist
 USE_LANGUAGES=		# none

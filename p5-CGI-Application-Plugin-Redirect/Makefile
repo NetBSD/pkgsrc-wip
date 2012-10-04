@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/01/09 06:08:26 ficovh Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/04 09:13:24 asau Exp $
 #
 
 DISTNAME=	CGI-Application-Plugin-Redirect-1.00
@@ -11,7 +11,6 @@ HOMEPAGE=	http://search.cpan.org/CPAN/authors/id/C/CE/CEESHEK/
 COMMENT=	Easy external redirects in CGI::Application
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		p5-CGI-Application-[0-9]*:../../www/p5-CGI-Application
 

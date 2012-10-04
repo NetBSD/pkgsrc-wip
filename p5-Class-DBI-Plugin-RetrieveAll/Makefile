@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/08/07 19:34:50 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/04 09:13:32 asau Exp $
 #
 
 DISTNAME=	Class-DBI-Plugin-RetrieveAll-1.01
@@ -12,6 +12,8 @@ HOMEPAGE=	http://search.cpan.org/dist/Class-DBI-Plugin-RetrieveAll/
 COMMENT=	More complex retrieve_all() for Class::DBI
 
 DEPENDS+=	p5-Class-DBI>=0.95:../../databases/p5-Class-DBI
+
+PKG_DESTDIR_SUPPORT=	none
 
 PERL5_PACKLIST=	auto/Class/DBI/Plugin/RetrieveAll/.packlist
 

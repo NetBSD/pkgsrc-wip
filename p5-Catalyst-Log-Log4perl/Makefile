@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/12/17 09:14:56 tonnerre Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/04 09:13:27 asau Exp $
 
 DISTNAME=	Catalyst-Log-Log4perl-1.00
 PKGNAME=	p5-${DISTNAME}
@@ -15,6 +15,8 @@ DEPENDS+=	p5-Catalyst-Runtime>=5.60:../../www/p5-Catalyst-Runtime
 DEPENDS+=	p5-Log-Log4perl>=0.49:../../devel/p5-Log-Log4perl
 DEPENDS+=	p5-Params-Validate>=0:../../devel/p5-Params-Validate
 DEPENDS+=	p5-Sub-Install>=0:../../devel/p5-Sub-Install
+
+PKG_DESTDIR_SUPPORT=	none
 
 PERL5_PACKLIST=		auto/Catalyst/Log/Log4perl/.packlist
 

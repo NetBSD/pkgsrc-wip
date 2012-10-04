@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2011/08/18 21:00:35 bubuchka Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/04 09:13:18 asau Exp $
 #
 
 DISTNAME=	p4api
 DISTFILES=	p4api.tgz
 HOMEPAGE=	http://www.perforce.com/product/components/apis
 COMMENT=	Perforce SCM C/C++ API
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 P4BINONLY=	yes
 

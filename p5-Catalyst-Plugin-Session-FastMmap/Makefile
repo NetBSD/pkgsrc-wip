@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/08/21 14:16:36 cheusov Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/04 09:13:30 asau Exp $
 
 DISTNAME=	Catalyst-Plugin-Session-FastMmap-0.12
 PKGNAME=	p5-${DISTNAME}
@@ -18,6 +18,8 @@ DEPENDS+=	p5-URI-Find>=0:../../www/p5-URI-Find
 DEPENDS+=	p5-Digest-MD5>=0:../../security/p5-Digest-MD5
 DEPENDS+=	p5-Catalyst-Runtime>=2.99:../../www/p5-Catalyst-Runtime
 DEPENDS+=	p5-Class-Data-Inheritable>=0:../../devel/p5-Class-Data-Inheritable
+
+PKG_DESTDIR_SUPPORT=	none
 
 PERL5_PACKLIST= auto/Catalyst/Plugin/Session/FastMmap/.packlist
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/09/10 05:59:19 ficovh Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/04 09:13:26 asau Exp $
 #
 
 DISTNAME=	CGI-Application-Plugin-ViewCode-1.02
@@ -18,7 +18,6 @@ DEPENDS+=	p5-Test-LongString>=0.11:../../devel/p5-Test-LongString
 DEPENDS+=	p5-Pod-Xhtml>=1:../../wip/p5-Pod-Xhtml
 
 PKG_INSTALLATION_TYPES= overwrite pkgviews
-PKG_DESTDIR_SUPPORT=    user-destdir
 
 PERL5_MODULE_TYPE=	Module::Build
 PERL5_PACKLIST=		auto/CGI/Application/Plugin/ViewCode/.packlist

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/10/20 10:10:18 tonnerre Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/04 09:13:28 asau Exp $
 
 DISTNAME=	Catalyst-Plugin-DefaultEnd-0.06
 PKGNAME=	p5-${DISTNAME}
@@ -12,6 +12,8 @@ COMMENT=	Sensible default end action
 PERL5_REQD+=	5.8.1
 
 DEPENDS+=	p5-Catalyst-Runtime>=5.20:../../www/p5-Catalyst-Runtime
+
+PKG_DESTDIR_SUPPORT=	none
 
 PERL5_MODULE_TYPE=	Module::Build
 

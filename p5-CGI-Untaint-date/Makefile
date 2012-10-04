@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2008/09/12 21:05:31 ficovh Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/04 09:13:26 asau Exp $
 #
 
 DISTNAME=	CGI-Untaint-date-1.00
@@ -13,6 +13,8 @@ COMMENT=	CGI::Untaint::date - validate a date
 DEPENDS+=	p5-CGI-Untaint>=0.07:../../wip/p5-CGI-Untaint
 DEPENDS+=	p5-Date-Manip>=5:../../devel/p5-Date-Manip
 DEPENDS+=	p5-Date-Simple>=0.01:../../devel/p5-Date-Simple
+
+PKG_DESTDIR_SUPPORT=	none
 
 PERL5_PACKLIST=	auto/CGI/Untaint/date/.packlist
 USE_LANGUAGES=	# none

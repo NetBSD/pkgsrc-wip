@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/11/18 09:47:15 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/04 09:13:28 asau Exp $
 
 DISTNAME=	Catalyst-Plugin-Authentication-Store-Htpasswd-0.02
 PKGNAME=	p5-${DISTNAME}
@@ -12,6 +12,8 @@ COMMENT=	Use .htpasswd with Catalyst
 
 DEPENDS+=	p5-Catalyst-Plugin-Authentication>=0.01:../../www/p5-Catalyst-Plugin-Authentication
 DEPENDS+=	p5-Authen-Htpasswd>=0.13:../../security/p5-Authen-Htpasswd
+
+PKG_DESTDIR_SUPPORT=	none
 
 PERL5_MODULE_TYPE=	Module::Build
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/09/09 20:04:49 ficovh Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/04 09:13:24 asau Exp $
 #
 
 DISTNAME=	CGI-Application-Plugin-Forward-1.06
@@ -17,7 +17,6 @@ DEPENDS+=       p5-Test-Simple>=0:../../devel/p5-Test-Simple
 
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 
 PERL5_MODULE_TYPE=	Module::Build

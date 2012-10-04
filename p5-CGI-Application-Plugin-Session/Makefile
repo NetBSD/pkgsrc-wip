@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/01/22 16:24:19 ficovh Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/04 09:13:24 asau Exp $
 #
 
 DISTNAME=	CGI-Application-Plugin-Session-1.03
@@ -15,7 +15,6 @@ DEPENDS+=	p5-CGI-Application>=4:../../www/p5-CGI-Application
 DEPENDS+=	p5-CGI-Session>=0:../../www/p5-CGI-Session
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_MODULE_TYPE=	Module::Build
 PERL5_PACKLIST=		auto/CGI/Application/Plugin/Session/.packlist

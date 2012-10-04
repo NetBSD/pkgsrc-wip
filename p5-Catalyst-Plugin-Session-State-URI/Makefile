@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/08/21 14:17:40 cheusov Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/04 09:13:30 asau Exp $
 
 DISTNAME=	Catalyst-Plugin-Session-State-URI-0.07
 PKGNAME=	p5-${DISTNAME}
@@ -17,6 +17,8 @@ DEPENDS+=	p5-MIME-Types>=0:../../mail/p5-MIME-Types
 DEPENDS+=	p5-Test-MockObject>=1.01:../../devel/p5-Test-MockObject
 DEPENDS+=	p5-URI>=0:../../www/p5-URI
 DEPENDS+=	p5-URI-Find>=0:../../www/p5-URI-Find
+
+PKG_DESTDIR_SUPPORT=	none
 
 # PERL5_MODULE_TYPE=	Module::Build
 

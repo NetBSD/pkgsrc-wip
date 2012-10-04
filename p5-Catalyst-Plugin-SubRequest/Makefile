@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/10/20 10:10:19 tonnerre Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/04 09:13:31 asau Exp $
 
 DISTNAME=	Catalyst-Plugin-SubRequest-0.10
 PKGNAME=	p5-${DISTNAME}
@@ -13,6 +13,8 @@ PERL5_REQD+=	5.8.0
 
 DEPENDS+=	p5-Catalyst-Runtime>=2.99:../../www/p5-Catalyst-Runtime
 DEPENDS+=	p5-File-Slurp>=0:../../devel/p5-File-Slurp
+
+PKG_DESTDIR_SUPPORT=	none
 
 PERL5_PACKLIST= auto/Catalyst/Plugin/SubRequest/.packlist
 

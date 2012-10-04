@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/10/20 10:10:18 tonnerre Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/04 09:13:30 asau Exp $
 
 DISTNAME=	Catalyst-Plugin-HTML-Widget-1.1
 PKGNAME=	p5-${DISTNAME}
@@ -12,6 +12,8 @@ COMMENT=	HTML Widget And Validation Framework
 
 DEPENDS+=	p5-Catalyst-Runtime>=5.5:../../www/p5-Catalyst-Runtime
 DEPENDS+=	p5-HTML-Widget>=0:../../wip/p5-HTML-Widget
+
+PKG_DESTDIR_SUPPORT=	none
 
 PERL5_REQD+=	5.8.1
 

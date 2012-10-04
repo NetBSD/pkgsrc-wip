@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/02/07 07:28:27 noud4 Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/04 09:13:28 asau Exp $
 
 DISTNAME=	Catalyst-Plugin-Authorization-ACL-0.08
 PKGNAME=	p5-${DISTNAME}
@@ -14,6 +14,8 @@ DEPENDS+=	p5-Catalyst-Runtime>=5.7:../../www/p5-Catalyst-Runtime
 DEPENDS+=	p5-Class-Data-Inheritable>=0:../../devel/p5-Class-Data-Inheritable
 DEPENDS+=	p5-Class-Throwable>=0:../../devel/p5-Class-Throwable
 DEPENDS+=	p5-Tree-Simple-VisitorFactory>=0:../../devel/p5-Tree-Simple-VisitorFactory
+
+PKG_DESTDIR_SUPPORT=	none
 
 PERL5_MODULE_TYPE=	Module::Build
 

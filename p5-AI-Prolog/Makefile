@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/04/15 07:10:05 athaba Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/04 09:13:19 asau Exp $
 #
 
 DISTNAME=	AI-Prolog-0.740
@@ -20,8 +20,6 @@ DEPENDS+=	p5-Term-ReadLine>=1.01:../../devel/p5-Term-ReadLine
 DEPENDS+=	p5-Text-Balanced>=1.95:../../textproc/p5-Text-Balanced
 DEPENDS+=	p5-Text-Quote>=0.03:../../wip/p5-Text-Quote
 DEPENDS+=	p5-aliased>=0.11:../../devel/p5-aliased
-
-PKG_DESTDIR_SUPPORT=    user-destdir
 
 PERL5_PACKLIST=	auto/AI/Prolog/.packlist
 USE_LANGUAGES=	# none

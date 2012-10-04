@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/05/01 23:19:47 ficovh Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/04 09:13:26 asau Exp $
 #
 
 DISTNAME=	CGI-Application-Standard-Config-1.01
@@ -14,8 +14,6 @@ COMMENT=	Define a standard configuration API for CGI::Application
 PERL5_MODULE_TYPE=	Module::Build
 PERL5_PACKLIST=		auto/CGI/Application/Standard/Config/.packlist
 USE_LANGUAGES=		# none
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

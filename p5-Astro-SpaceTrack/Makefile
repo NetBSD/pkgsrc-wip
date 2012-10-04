@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/03/02 13:21:03 uccwen Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/04 09:13:21 asau Exp $
 #
 
 DISTNAME=	Astro-SpaceTrack-0.045
@@ -10,8 +10,6 @@ MAINTAINER=	wenheping@gmail.com
 HOMEPAGE=	http://search.cpan.org/dist/Astro-SpaceTrack
 COMMENT=	Retrieve orbital data from www.space-track.org
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 # TODO: Look for the dependencies in Build.PL.
 

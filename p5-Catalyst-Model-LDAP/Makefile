@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/05/21 14:28:53 tonnerre Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/04 09:13:28 asau Exp $
 
 DISTNAME=	Catalyst-Model-LDAP-0.16
 PKGNAME=	p5-${DISTNAME}
@@ -16,6 +16,8 @@ DEPENDS+=	p5-Class-Accessor>=0:../../devel/p5-Class-Accessor
 DEPENDS+=	p5-Class-C3>=0:../../devel/p5-Class-C3
 
 PERL5_REQD+=	5.8.1
+
+PKG_DESTDIR_SUPPORT=	none
 
 PERL5_PACKLIST=	auto/Catalyst/Model/LDAP/.packlist
 

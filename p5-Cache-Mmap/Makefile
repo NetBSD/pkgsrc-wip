@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/07/26 05:58:12 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/04 09:13:27 asau Exp $
 
 DISTNAME=		Cache-Mmap-0.081
 PKGNAME=		p5-${DISTNAME}
@@ -10,6 +10,7 @@ MAINTAINER=		hiramatu@boreas.dti.ne.jp
 HOMEPAGE=		http://search.cpan.org/dist/Cache-Mmap/
 COMMENT=		Shared data cache using memory mapped files
 
+PKG_DESTDIR_SUPPORT=	none
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/Cache/Mmap/.packlist

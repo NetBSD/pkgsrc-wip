@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/01/22 15:48:07 ficovh Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/04 09:13:22 asau Exp $
 #
 
 DISTNAME=	CGI-Application-Dispatch-2.15
@@ -14,6 +14,7 @@ DEPENDS+=       p5-CGI-Application>=4.01:../../www/p5-CGI-Application
 DEPENDS+=       p5-Exception-Class>=0:../../devel/p5-Exception-Class
 DEPENDS+=       p5-Exception-Class-TryCatch>=0:../../wip/p5-Exception-Class-TryCatch
 
+PKG_DESTDIR_SUPPORT=	none
 
 # TODO: Look for the dependencies in Build.PL.
 

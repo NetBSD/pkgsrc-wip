@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/04/29 04:13:31 ficovh Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/04 09:13:25 asau Exp $
 #
 
 DISTNAME=	CGI-Application-Plugin-Stream-2.10
@@ -12,10 +12,6 @@ COMMENT=	CGI::Application Plugin for streaming files
 
 DEPENDS+=	p5-CGI-Application-[0-9]*:../../www/p5-CGI-Application
 DEPENDS+=	p5-File-MMagic>0:../../misc/p5-File-MMagic
-
-PKG_DESTDIR_SUPPORT=	user-destdir
-
-
 
 PERL5_MODULE_TYPE=	Module::Build
 PERL5_PACKLIST=		auto/CGI/Application/Plugin/Stream/.packlist

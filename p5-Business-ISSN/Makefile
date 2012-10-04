@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/09/08 16:31:49 genolopolis Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/04 09:13:22 asau Exp $
 #
 
 DISTNAME=	Business-ISSN-0.91
@@ -10,8 +10,6 @@ MAINTAINER=	INSERT_YOUR_MAIL_ADDRESS_HERE
 HOMEPAGE=	http://search.cpan.org/CPAN/authors/id/B/BD/BDFOY/
 COMMENT=	TODO: Short description of the package
 #LICENSE=	# TODO: (see mk/license.mk)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=	auto/Business/ISSN/.packlist
 USE_LANGUAGES=	# none

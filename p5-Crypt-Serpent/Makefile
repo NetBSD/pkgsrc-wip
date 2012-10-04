@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/04/15 07:10:06 athaba Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/04 09:13:33 asau Exp $
 #
 
 DISTNAME=		Crypt-Serpent-1.01
@@ -10,8 +10,6 @@ MAINTAINER=		athaba@users.sourceforge.net
 HOMEPAGE=		http://search.cpan.org/dist/Crypt-Serpent
 COMMENT=		Serpent block cipher encryption module for perl
 LICENSE=		${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=	auto/Crypt/Serpent/.packlist
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/10/20 10:10:18 tonnerre Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/04 09:13:30 asau Exp $
 
 DISTNAME=	Catalyst-Plugin-Pluggable-0.04
 PKGNAME=	p5-${DISTNAME}
@@ -11,6 +11,8 @@ HOMEPAGE=	http://search.cpan.org/dist/Catalyst-Plugin-Pluggable/
 COMMENT=	Plugin for pluggable Catalyst applications
 
 DEPENDS+=	p5-Catalyst-Runtime>=5.50:../../www/p5-Catalyst-Runtime
+
+PKG_DESTDIR_SUPPORT=	none
 
 PERL5_REQD+=	5.8.1
 

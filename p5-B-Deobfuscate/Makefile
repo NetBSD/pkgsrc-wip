@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/02/18 15:55:35 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/04 09:13:21 asau Exp $
 
 DISTNAME=	B-Deobfuscate-0.20
 PKGNAME=	p5-${DISTNAME}
@@ -12,8 +12,6 @@ LICENSE=	${PERL5_LICENSE}
 
 DEPENDS+=	p5-YAML>=0:../../textproc/p5-YAML
 DEPENDS+=	p5-B-Keywords>=0.03:../../devel/p5-B-Keywords
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=	auto/B/Deobfuscate/.packlist
 

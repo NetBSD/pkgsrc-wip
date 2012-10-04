@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/04/10 07:13:48 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/04 09:13:26 asau Exp $
 
 DISTNAME=		CGI-Application-Plugin-TT-1.03
 PKGNAME=		p5-${DISTNAME}
@@ -14,6 +14,7 @@ DEPENDS+=		p5-CGI-Application>=4.0:../../www/p5-CGI-Application
 DEPENDS+=		p5-Template-Toolkit>=2.0:../../www/p5-Template-Toolkit
 DEPENDS+=		p5-CGI-Application-Plugin-DevPopup>=0:../../wip/p5-CGI-Application-Plugin-DevPopup
 
+PKG_DESTDIR_SUPPORT=	none
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/CGI/Application/Plugin/TT/.packlist

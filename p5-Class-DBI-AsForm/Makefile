@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/03/07 09:45:26 cheusov Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/04 09:13:31 asau Exp $
 #
 
 DISTNAME=	Class-DBI-AsForm-2.42
@@ -15,6 +15,8 @@ DEPENDS+=	p5-DBI>=1.30:../../databases/p5-DBI
 DEPENDS+=	p5-Class-DBI>=0.89:../../databases/p5-Class-DBI
 DEPENDS+=	p5-Class-DBI-Plugin-Type>=0.02:../../wip/p5-Class-DBI-Plugin-Type
 DEPENDS+=	p5-HTML-Tree>=1.88:../../www/p5-HTML-Tree
+
+PKG_DESTDIR_SUPPORT=	none
 
 PERL5_PACKLIST=	auto/Class/DBI/AsForm/.packlist
 

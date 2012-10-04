@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/02/19 07:52:23 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/04 09:13:33 asau Exp $
 
 DISTNAME=	Class-Date-1.1.10
 PKGNAME=	p5-${DISTNAME}
@@ -12,7 +12,6 @@ COMMENT=	Perl class for easy date and time manipulation
 LICENSE=	${PERL5_LICENSE}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c
 PERL5_PACKLIST=		auto/Class/Date/.packlist

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/02/23 08:31:53 ficovh Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/04 09:13:20 asau Exp $
 #
 
 DISTNAME=	App-cpanminus-0.09
@@ -10,8 +10,6 @@ MAINTAINER=	ficovh@yahoo.com
 HOMEPAGE=	http://search.cpan.org/CPAN/authors/id/M/MI/MIYAGAWA/
 COMMENT=	App::cpanminus - get, unpack, build and install modules from CPAN
 #LICENSE=	license
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Module-Build>=0:../../devel/p5-Module-Build
 DEPENDS+=	p5-libwww>=0:../../www/p5-libwww

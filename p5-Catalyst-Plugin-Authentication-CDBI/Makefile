@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/10/20 10:10:18 tonnerre Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/04 09:13:28 asau Exp $
 
 DISTNAME=	Catalyst-Plugin-Authentication-CDBI-0.09
 PKGNAME=	p5-${DISTNAME}
@@ -13,6 +13,8 @@ COMMENT=	CDBI Authentication for Catalyst
 DEPENDS+=	p5-Catalyst-Plugin-Session-FastMmap>=0:../../wip/p5-Catalyst-Plugin-Session-FastMmap
 DEPENDS+=	p5-Catalyst-Runtime>=2.99:../../www/p5-Catalyst-Runtime
 DEPENDS+=	p5-Catalyst-Model-CDBI>=0:../../wip/p5-Catalyst-Model-CDBI
+
+PKG_DESTDIR_SUPPORT=	none
 
 PERL5_PACKLIST= auto/Catalyst/Plugin/Authentication/CDBI/.packlist
 

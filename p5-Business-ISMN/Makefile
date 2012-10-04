@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/09/08 16:33:35 genolopolis Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/04 09:13:22 asau Exp $
 #
 
 DISTNAME=	Business-ISMN-1.11
@@ -10,8 +10,6 @@ MAINTAINER=	INSERT_YOUR_MAIL_ADDRESS_HERE
 HOMEPAGE=	http://search.cpan.org/CPAN/authors/id/B/BD/BDFOY/
 COMMENT=	TODO: Short description of the package
 #LICENSE=	# TODO: (see mk/license.mk)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Tie-Cycle>=0:../../wip/p5-Tie-Cycle
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/10/20 10:10:18 tonnerre Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/04 09:13:28 asau Exp $
 
 DISTNAME=	Catalyst-Model-DBIC-0.13
 PKGNAME=	p5-${DISTNAME}
@@ -15,6 +15,8 @@ DEPENDS+=	p5-DBIx-Class>=0:../../databases/p5-DBIx-Class
 DEPENDS+=	p5-DBIx-Class-Loader>=0:../../databases/p5-DBIx-Class-Loader
 
 PERL5_REQD+=	5.8.0
+
+PKG_DESTDIR_SUPPORT=	none
 
 PERL5_PACKLIST=	auto/Catalyst/Model/DBIC/.packlist
 

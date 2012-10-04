@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/10/20 10:10:19 tonnerre Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/04 09:13:30 asau Exp $
 
 DISTNAME=	Catalyst-Plugin-Session-Store-DBI-0.07
 PKGNAME=	p5-${DISTNAME}
@@ -15,6 +15,8 @@ DEPENDS+=	p5-DBI>=1.50:../../databases/p5-DBI
 DEPENDS+=	p5-Catalyst-Plugin-Session>=0.01:../../www/p5-Catalyst-Plugin-Session
 DEPENDS+=	p5-Class-Accessor>=0.22:../../devel/p5-Class-Accessor
 DEPENDS+=	p5-Class-Data-Inheritable>=0.04:../../devel/p5-Class-Data-Inheritable
+
+PKG_DESTDIR_SUPPORT=	none
 
 PERL5_REQD+=	5.8.0
 PERL5_MODULE_TYPE=	Module::Build
