@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1 2012/10/04 17:39:33 jihbed Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/ropemode/__init__.py
+${PYSITELIB}/ropemode/__init__.pyc
+${PYSITELIB}/ropemode/__init__.pyo
+${PYSITELIB}/ropemode/decorators.py
+${PYSITELIB}/ropemode/decorators.pyc
+${PYSITELIB}/ropemode/decorators.pyo
+${PYSITELIB}/ropemode/dialog.py
+${PYSITELIB}/ropemode/dialog.pyc
+${PYSITELIB}/ropemode/dialog.pyo
+${PYSITELIB}/ropemode/environment.py
+${PYSITELIB}/ropemode/environment.pyc
+${PYSITELIB}/ropemode/environment.pyo
+${PYSITELIB}/ropemode/filter.py
+${PYSITELIB}/ropemode/filter.pyc
+${PYSITELIB}/ropemode/filter.pyo
+${PYSITELIB}/ropemode/interface.py
+${PYSITELIB}/ropemode/interface.pyc
+${PYSITELIB}/ropemode/interface.pyo
+${PYSITELIB}/ropemode/refactor.py
+${PYSITELIB}/ropemode/refactor.pyc
+${PYSITELIB}/ropemode/refactor.pyo
