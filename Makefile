@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4897 2012/10/03 23:24:42 othyro Exp $
+# $Id: Makefile,v 1.4898 2012/10/04 00:46:45 khorben Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -646,6 +646,7 @@ SUBDIR+=	fontedit
 SUBDIR+=	fonttosfnt
 SUBDIR+=	foo2zjs
 SUBDIR+=	fortunes-it
+SUBDIR+=	foxtrotgps
 SUBDIR+=	fprobe
 SUBDIR+=	fragrouter
 SUBDIR+=	freecell
