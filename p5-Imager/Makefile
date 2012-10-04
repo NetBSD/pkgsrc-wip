@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2011/05/18 08:18:37 fhajny Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/04 10:45:30 asau Exp $
 
 DISTNAME=		Imager-0.82
 PKGNAME=		p5-${DISTNAME}
@@ -9,8 +9,6 @@ MAINTAINER=		kuli0020@umn.edu
 HOMEPAGE=		http://search.cpan.org/~tonyc/Imager/
 COMMENT=		Perl module for manipulating gray, color, and RGBA format images
 LICENSE=		${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 #MAKE_PARAMS+=		--disable gif
 

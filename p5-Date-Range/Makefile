@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/04/13 20:40:05 kuli0020 Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/04 10:45:26 asau Exp $
 
 DISTNAME=	Date-Range-1.40
 PKGNAME=	p5-${DISTNAME}
@@ -11,6 +11,8 @@ COMMENT=	Date::Range - deal with a range of dates
 
 DEPENDS+=	p5-Date-Simple>=0.03:../../devel/p5-Date-Simple
 BUILD_DEPENDS+=	{perl>=5.7.3,p5-Test-Simple>=0.4}:../../devel/p5-Test-Simple
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_LANGUAGES=	# empty
 

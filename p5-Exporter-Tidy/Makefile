@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/04/15 07:10:06 athaba Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/04 10:45:27 asau Exp $
 #
 
 DISTNAME=	Exporter-Tidy-0.07
@@ -12,8 +12,6 @@ COMMENT=	Alternative way of exporting symbols in perl
 # In fact the license says:
 # Pick your favourite OSI approved license :)
 LICENSE=	modified-bsd
-
-PKG_DESTDIR_SUPPORT=user-destdir
 
 PERL5_PACKLIST=	auto/Exporter/Tidy/.packlist
 USE_LANGUAGES=	# none

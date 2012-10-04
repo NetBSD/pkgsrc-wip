@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/06/10 12:07:00 leot1990 Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/04 10:45:28 asau Exp $
 #
 
 DISTNAME=	Getopt-GUI-Long-0.91
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Getopt-GUI-Long/
 COMMENT=	Wrapper around Getopt::Long
 LICENSE=	artistic-2.0 # OR gpl-v2+
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=	auto/Getopt/GUI/Long/.packlist
 USE_LANGUAGES=	# none

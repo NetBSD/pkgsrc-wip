@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/04/13 17:47:16 kuli0020 Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/04 10:45:28 asau Exp $
 
 DISTNAME=	HTML-TagCloud-0.33
 PKGNAME=	p5-${DISTNAME}
@@ -10,6 +10,8 @@ HOMEPAGE=	http://search.cpan.org/dist/HTML-TagCloud/
 COMMENT=	Generate An HTML Tag Cloud
 
 DEPENDS+=	{perl>=5.7.3,p5-Test-Simple>=0.47}:../../devel/p5-Test-Simple
+
+PKG_DESTDIR_SUPPORT=	none
 
 PERL5_REQD+=	5.6.0
 PERL5_MODULE_TYPE=	Module::Build

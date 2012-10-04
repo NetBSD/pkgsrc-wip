@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/11/05 04:20:26 shattered Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/04 10:45:26 asau Exp $
 
 DISTNAME=	Email-AddressParser-0.04
 PKGNAME=	p5-${DISTNAME}
@@ -8,6 +8,8 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Email/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Email-AddressParser/
 COMMENT=	RFC 2822 Address Parsing and Creation
+
+PKG_DESTDIR_SUPPORT=	none
 
 PERL5_PACKLIST= auto/Email/AddressParser/.packlist
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/05/24 15:34:13 tnn2 Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/04 10:45:29 asau Exp $
 #
 
 DISTNAME=	HTML-WebMake-2.4
@@ -17,6 +17,8 @@ DEPENDS+=	p5-Text-EtText-[0-9]*:../../wip/p5-Text-EtText
 DEPENDS+=	p5-HTML-Parser-[0-9]*:../../www/p5-HTML-Parser
 DEPENDS+=	p5-XML-Sablotron-[0-9]*:../../textproc/p5-XML-Sablotron
 DEPENDS+=	p5-Image-Size-[0-9]*:../../graphics/p5-Image-Size
+
+PKG_DESTDIR_SUPPORT=	none
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

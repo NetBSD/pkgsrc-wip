@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/11/13 12:52:04 ryo-on Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/04 10:45:28 asau Exp $
 #
 
 DISTNAME=	Gtk2-Spell-1.03
@@ -10,8 +10,6 @@ MAINTAINER=	ryo_on@yk.rim.or.jp
 HOMEPAGE=	http://search.cpan.org/~mlehmann/Gtk2-Spell-1.03/
 COMMENT=	Bindings for GtkSpell with Gtk2
 #LICENSE=	# TODO: (see mk/license.mk)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	pkg-config
 

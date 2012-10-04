@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/03/31 22:15:26 bubuchka Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/04 10:45:30 asau Exp $
 #
 
 DISTNAME=	kyotocabinet-perl-1.19
@@ -12,8 +12,6 @@ COMMENT=	Perl binding for Kyoto Cabinet
 LICENSE=	gnu-gpl-v3
 
 REPLACE_PERL=	*.pl
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=	auto/KyotoCabinet/.packlist
 

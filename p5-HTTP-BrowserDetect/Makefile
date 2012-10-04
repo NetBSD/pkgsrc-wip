@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/07/26 05:58:13 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/04 10:45:29 asau Exp $
 
 DISTNAME=		HTTP-BrowserDetect-0.98
 PKGNAME=		p5-${DISTNAME}
@@ -10,6 +10,7 @@ MAINTAINER=		hiramatu@boreas.dti.ne.jp
 HOMEPAGE=		http://search.cpan.org/dist/HTTP-BrowserDetect/
 COMMENT=		Detect browser, version, OS from UserAgent
 
+PKG_DESTDIR_SUPPORT=	none
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/HTTP/BrowserDetect/.packlist

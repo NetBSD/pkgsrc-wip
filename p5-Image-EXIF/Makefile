@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/08/24 14:40:49 kuli0020 Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/04 10:45:29 asau Exp $
 
 DISTNAME=	Image-EXIF-1.00.3
 PKGNAME=	p5-${DISTNAME}
@@ -9,6 +9,8 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	kuli0020@umn.edu
 HOMEPAGE=	http://cpan.uwinnipeg.ca/dist/Image-EXIF
 COMMENT=	Perl extension for exif library
+
+PKG_DESTDIR_SUPPORT=	none
 
 PERL5_PACKLIST= auto/Image/EXIF/.packlist
 

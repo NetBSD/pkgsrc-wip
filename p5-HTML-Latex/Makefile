@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/10/29 08:32:51 shattered Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/04 10:45:28 asau Exp $
 
 .include "Makefile.common"
 
@@ -10,6 +10,8 @@ COMMENT=		Perl5 module for converting HTML to LaTeX
 
 DEPENDS+=		p5-XML-Simple-[0-9]*:../../textproc/p5-XML-Simple
 DEPENDS+=		p5-HTML-Tree-[0-9]*:../../www/p5-HTML-Tree
+
+PKG_DESTDIR_SUPPORT=	none
 
 REPLACE_PERL+=		Latex.pm
 PERL5_PACKLIST=		auto/HTML/Latex/.packlist

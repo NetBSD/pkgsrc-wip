@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/10/29 08:32:51 shattered Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/04 10:45:28 asau Exp $
 #
 
 DISTNAME=		HTML-CalendarMonthSimple-1.25
@@ -13,6 +13,7 @@ COMMENT=		Perl Module for Generating HTML Calendars
 
 #DEPENDS+=
 
+PKG_DESTDIR_SUPPORT=	none
 PKG_INSTALLATION_TYPES= overwrite pkgviews
 
 PERL5_PACKLIST=		auto/HTML/CalendarMonthSimple/.packlist

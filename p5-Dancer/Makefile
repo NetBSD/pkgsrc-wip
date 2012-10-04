@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/07/06 01:50:37 ficovh Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/04 10:45:25 asau Exp $
 #
 
 DISTNAME=	Dancer-1.3060
@@ -11,7 +11,6 @@ HOMEPAGE=	http://www.perldancer.org/
 COMMENT=	Perl 5 lightweight yet powerful web application framework
 
 LICENSE=	${PERL5_LICENSE}
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Encode>=0:../../textproc/p5-Encode
 DEPENDS+=	p5-HTTP-Body>=1.07:../../www/p5-HTTP-Body

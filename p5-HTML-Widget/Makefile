@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2008/07/20 23:34:45 absd Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/04 10:45:29 asau Exp $
 
 DISTNAME=		HTML-Widget-1.11
 PKGNAME=		p5-${DISTNAME}
@@ -9,6 +9,7 @@ MAINTAINER=		hiramatu@boreas.dti.ne.jp
 HOMEPAGE=		http://search.cpan.org/dist/HTML-Widget/
 COMMENT=		HTML Widget And Validation Framework
 
+PKG_DESTDIR_SUPPORT=	none
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 DEPENDS+=		p5-Module-Pluggable-Fast>=0.18:../../wip/p5-Module-Pluggable-Fast

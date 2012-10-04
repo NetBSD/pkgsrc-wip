@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/02/17 10:10:31 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/04 10:45:26 asau Exp $
 
 DISTNAME=	Data-ObjectDriver-0.09
 PKGNAME=	p5-${DISTNAME}
@@ -14,8 +14,6 @@ DEPENDS+=	p5-Class-Accessor>=0.34:../../devel/p5-Class-Accessor
 DEPENDS+=	p5-Class-Data-Inheritable>=0.08:../../devel/p5-Class-Data-Inheritable
 DEPENDS+=	p5-Class-Trigger>=0.14:../../devel/p5-Class-Trigger
 DEPENDS+=	p5-Text-SimpleTable>=2.0:../../textproc/p5-Text-SimpleTable
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Data/ObjectDriver/.packlist

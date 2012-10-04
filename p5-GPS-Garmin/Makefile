@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/11/06 20:32:19 uhabel Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/04 10:45:28 asau Exp $
 
 DISTNAME=	perl-GPS-0.15
 PKGNAME=	p5-GPS-Garmin-0.15
@@ -8,6 +8,7 @@ MAINTAINER=	uli@habel.name
 HOMEPAGE=	http://search.cpan.org/dist/perl-GPS/
 COMMENT=	GPS::Garmin access module for Perl
 
+PKG_DESTDIR_SUPPORT=	none
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/GPS/Garmin/.packlist

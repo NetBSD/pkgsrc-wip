@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/10/29 08:32:51 shattered Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/04 10:45:26 asau Exp $
 #
 
 DISTNAME=	Data-Properties-0.02
@@ -11,6 +11,7 @@ MAINTAINER=	hiramatu@boreas.dti.ne.jp
 HOMEPAGE=	http://search.cpan.org/dist/Data-Properties/
 COMMENT=	Perl version of Java's java.util.Properties
 
+PKG_DESTDIR_SUPPORT=	none
 PKG_INSTALLATION_TYPES= overwrite pkgviews
 
 USE_LANGUAGES=		# empty

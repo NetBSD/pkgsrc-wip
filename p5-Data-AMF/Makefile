@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/10/27 20:38:45 tomasbodzar Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/04 10:45:25 asau Exp $
 #
 
 DISTNAME=	Data-AMF-0.09
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Data-AMF/lib/Data/AMF.pm
 COMMENT=	serialize/deserialize Adobe Action Message Format data
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	groff
 DEPENDS+=	p5-Any-Moose*:../../devel/p5-Any-Moose

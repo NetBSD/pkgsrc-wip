@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/06/18 14:11:53 uccwen Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/04 10:45:25 asau Exp $
 #
 
 DISTNAME=	DBIx-Simple-1.35
@@ -11,6 +11,8 @@ HOMEPAGE=	http://search.cpan.org/CPAN/authors/id/J/JU/JUERD/
 COMMENT=	DBIx::Simple - Easy-to-use OO interface to DBI
 
 DEPENDS+=	p5-DBI>=1.21:../../databases/p5-DBI
+
+PKG_DESTDIR_SUPPORT=	none
 
 PERL5_PACKLIST=	auto/DBIx/Simple/.packlist
 USE_LANGUAGES=	# none
