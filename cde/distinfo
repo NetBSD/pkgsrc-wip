@@ -1,6 +1,13 @@
-$NetBSD: distinfo,v 1.2 2012/10/04 04:24:54 jellehermsen Exp $
+$NetBSD: distinfo,v 1.3 2012/10/04 04:57:03 jellehermsen Exp $
 
 SHA1 (cde.tar.gz) = f6227064d2c621e1b9db5b35d220587c5eb46cc9
 RMD160 (cde.tar.gz) = ac91cee9c476c421a9e4a10e93b2dd58eea11f5d
 Size (cde.tar.gz) = 63641254 bytes
 SHA1 (patch-lib_tt_lib_tttk_tttk.h) = d384af24fbdc8987cf68667dcc45ff2a736303c2
+SHA1 (patch-programs_dtlogin_dm.c) = 169d5e166820c7d36e214a1c16c329329c82165b
+SHA1 (patch-programs_dtlogin_dm.h) = 6b7aa8a5dcd105a0f07da509e02d6cf64cf16118
+SHA1 (patch-programs_dtmail_libDtMail_Common_Session.C) = 7bedfd99e0b1810b4aa5e5031cd8c82f085d8c9d
+SHA1 (patch-programs_dtmail_libDtMail_RFC_RFCBodyPart.C) = eb95248f4a9623ce4d45de2e97d331cd48fa1be5
+SHA1 (patch-programs_dtprintinfo_libUI_MotifUI_Debug.c) = a0cb0c69742d898c1dece9d4e879584ad9faf728
+SHA1 (patch-programs_dtprintinfo_objects_PrintObj_ParseJobs.C) = 48538d434c9274a24aac5a1793e31d15a4d85f32
+SHA1 (patch-programs_dtsearchpath_libCliSrv_UnixEnv.C) = c596ad21e9eba5c2a717cd151d10b72455a76f87
