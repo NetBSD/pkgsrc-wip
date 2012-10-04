@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/09/28 22:26:42 bartoszkuzma Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/04 19:44:06 asau Exp $
 #
 
 DISTNAME=		pam_pwdfile-0.99
@@ -13,8 +13,6 @@ COMMENT=		PAM module for authenticating with text password files
 LICENSE=		modified-bsd
 
 USE_LIBTOOL=		yes
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 

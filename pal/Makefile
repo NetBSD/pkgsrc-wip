@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2011/01/17 10:48:04 emil_s Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/04 19:44:06 asau Exp $
 #
 
 DISTNAME=		pal-0.4.3
@@ -12,6 +12,8 @@ HOMEPAGE=		http://palcal.sourceforge.net/
 COMMENT=		Command-line calendar program
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/src
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_TOOLS+=		gmake pkg-config
 USE_PKGLOCALEDIR=	yes

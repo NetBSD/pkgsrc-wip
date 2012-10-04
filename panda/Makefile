@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/12/26 05:01:23 davesainty Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/04 19:44:06 asau Exp $
 #
 
 DISTNAME=		panda-0.5.4
@@ -10,6 +10,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://www.stillhq.com//panda/
 COMMENT=			GPLed PDF generation library
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_PKGLOCALEDIR=	yes
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/panda.pc.in

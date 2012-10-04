@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/07/02 13:38:02 moubctez Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/04 19:44:06 asau Exp $
 #
 
 DISTNAME=	paperbox-0.4.4
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://live.gnome.org/PaperBox
 COMMENT=	Document browser
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/01/03 22:19:03 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/04 19:44:06 asau Exp $
 #
 
 DISTNAME=	palp-1.1
@@ -9,8 +9,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://hep.itp.tuwien.ac.at/%7Ekreuzer/CY/palp/
 COMMENT=	Analyzing lattice polytopes
 #LICENSE=	# TODO: (see mk/license.mk)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=	${WRKDIR}/palp
 MAKE_FILE=      GNUmakefile

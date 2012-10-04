@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/01/17 12:03:29 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/04 19:44:06 asau Exp $
 #
 
 DISTNAME=		pam_pkcs11-0.5.3
@@ -10,6 +10,8 @@ MASTER_SITES=		http://www.opensc-project.org/files/pam_pkcs11/
 MAINTAINER=		evaldo@gardenali.biz
 HOMEPAGE=		http://www.opensc-project.org/pam_pkcs11/
 COMMENT=		PKCS #11 authentication method for PAM
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes

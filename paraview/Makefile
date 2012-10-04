@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/03/01 10:17:44 slitvinov Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/04 19:44:06 asau Exp $
 #
 
 PKGNAME=	paraview-3.12.0
@@ -10,8 +10,6 @@ MAINTAINER=	pouya@san-serriffe.org
 HOMEPAGE=	http://www.paraview.org/
 COMMENT=	ParaView is a data analysis and scientific visualization application
 LICENSE=	paraview-license
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++ fortran
 USE_TOOLS+=		gmake

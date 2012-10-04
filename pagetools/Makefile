@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/06/13 22:47:12 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/04 19:44:06 asau Exp $
 #
 
 DISTNAME=	pagetools-0.1
@@ -14,8 +14,6 @@ LICENSE=	gnu-gpl-v2
 WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	c++
 USE_TOOLS+=	gmake
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 INSTALLATION_DIRS+=	bin
 

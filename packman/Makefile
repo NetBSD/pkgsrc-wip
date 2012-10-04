@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2009/03/18 10:11:10 cheusov Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/04 19:44:06 asau Exp $
 
 DISTNAME=	packman-0.0.10
 CATEGORIES=	pkgtools
@@ -7,8 +7,6 @@ MASTER_SITES=	http://kefren.ngnetworks.ro/
 MAINTAINER=	mihai.chelaru@ngnetworks.ro
 HOMEPAGE=	http://kefren.ngnetworks.ro/
 COMMENT=	Small package manager
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	perl:run
 

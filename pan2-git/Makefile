@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/02/28 15:27:17 rhialto Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/04 19:44:06 asau Exp $
 
 DISTNAME=		pan2-git-2
 CATEGORIES=		news
@@ -30,8 +30,6 @@ GNU_CONFIGURE=		YES
 #CONFIGURE_ENV+=		CXXFLAGS=-ggdb
 #CONFIGURE_ENV+=		CFLAGS=-ggdb
 #CONFIGURE_ENV+=		LDFLAGS=-ggdb
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 .if (${OPSYS} != "Darwin" && ${OPSYS} != "SunOS" && ${OPSYS} != "Linux")

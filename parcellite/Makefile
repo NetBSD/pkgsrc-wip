@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/05/09 22:24:41 noud4 Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/04 19:44:06 asau Exp $
 #
 
 DISTNAME=	parcellite-1.0.1
@@ -8,8 +8,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=parcellite/}
 MAINTAINER=	pkgsrc-users@netbsd.org
 HOMEPAGE=	http://parcellite.sourceforge.net/
 COMMENT=	Parcellite is a lightweight GTK+ clipboard manager
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	perl intltool gmake

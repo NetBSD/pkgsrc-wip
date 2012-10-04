@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/05/20 00:58:42 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/04 19:44:06 asau Exp $
 
 DISTNAME=					pandoc-1.2
 PKGREVISION=				1
@@ -8,8 +8,6 @@ MASTER_SITES=			http://pandoc.googlecode.com/files/
 MAINTAINER=				zecrazytux@zecrazytux.net
 HOMEPAGE=					http://johnmacfarlane.net/pandoc/
 COMMENT=					Pandoc is a Haskell library to convert markups
-
-#PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=				gmake sed
 

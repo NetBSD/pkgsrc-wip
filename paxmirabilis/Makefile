@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/06/02 15:39:09 bsiegert Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/04 19:44:07 asau Exp $
 #
 
 DISTNAME=	paxmirabilis-20120520
@@ -10,8 +10,6 @@ MAINTAINER=	bsiegert@NetBSD.org
 HOMEPAGE=	http://launchpad.net/paxmirabilis
 COMMENT=	Archiving utility for tar, cpio and ar
 LICENSE=	miros
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 AUTO_MKDIRS=	yes
 

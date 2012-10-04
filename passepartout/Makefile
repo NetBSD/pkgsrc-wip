@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2010/06/13 22:47:13 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/04 19:44:07 asau Exp $
 #
 
 DISTNAME=		passepartout-0.3
@@ -10,6 +10,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		reed@reedmedia.net
 HOMEPAGE=		http://www.stacken.kth.se/project/pptout/
 COMMENT=		Desktop publishing for X
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_TOOLS+=		gs:run
 USE_PKGLOCALEDIR=	yes
