@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2012/10/02 21:46:53 othyro Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/10/04 00:22:50 othyro Exp $
 bin/rubrica2
 include/libral-1.0/libral/abook.h
 include/libral-1.0/libral/address.h
@@ -25,7 +25,6 @@ include/libral-1.0/libral/types.h
 include/libral-1.0/libral/utils.h
 include/libral-1.0/libral/work.h
 lib/libral.la
-lib/libral/plugins/libcsv.la
 lib/libral/plugins/libcsvgmail.la
 lib/libral/plugins/librubrica.la
 lib/libral/plugins/libvcard.la
@@ -42,10 +41,9 @@ share/gtk-doc/html/libRAL/right.png
 share/gtk-doc/html/libRAL/style.css
 share/gtk-doc/html/libRAL/up.png
 ${PLIST.nls}${PKGLOCALEDIR}/locale/de/LC_MESSAGES/rubrica2.mo
-${PLIST.nls}${PKGLOCALEDIR}/locale/el/LC_MESSAGES/rubrica2.mo
-${PLIST.nls}${PKGLOCALEDIR}/locale/en_US/LC_MESSAGES/rubrica2.mo
 ${PLIST.nls}${PKGLOCALEDIR}/locale/fr/LC_MESSAGES/rubrica2.mo
 ${PLIST.nls}${PKGLOCALEDIR}/locale/it/LC_MESSAGES/rubrica2.mo
+${PLIST.nls}${PKGLOCALEDIR}/locale/ru/LC_MESSAGES/rubrica2.mo
 ${PLIST.nls}${PKGLOCALEDIR}/locale/uk/LC_MESSAGES/rubrica2.mo
 share/mime-info/rubrica2.keys
 share/mime-info/rubrica2.mime
