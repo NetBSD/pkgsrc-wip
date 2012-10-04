@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4898 2012/10/04 00:46:45 khorben Exp $
+# $Id: Makefile,v 1.4899 2012/10/04 15:49:03 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1373,6 +1373,7 @@ SUBDIR+=	libcpu
 SUBDIR+=	libctl
 SUBDIR+=	libcuba
 SUBDIR+=	libdbglog
+SUBDIR+=	libdbusmenu
 SUBDIR+=	libdialog
 SUBDIR+=	libdisasm
 SUBDIR+=	libdjconsole
