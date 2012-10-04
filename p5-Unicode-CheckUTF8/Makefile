@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/10/24 10:53:40 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/04 19:12:03 asau Exp $
 #
 
 DISTNAME=       Unicode-CheckUTF8-1.03
@@ -12,7 +12,6 @@ COMMENT=        Perl5 module to check if scalar is valid UTF-8
 LICENSE=	generic-nonlicense
 
 PKG_INSTALLATION_TYPES= overwrite pkgviews
-PKG_DESTDIR_SUPPORT=    user-destdir
 
 USE_LANGUAGES=	c
 PERL5_PACKLIST=         auto/Unicode/CheckUTF8/.packlist

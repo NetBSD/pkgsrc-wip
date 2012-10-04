@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/09/13 10:49:56 leot1990 Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/04 19:11:57 asau Exp $
 #
 
 DISTNAME=	POD2-IT-0.13
@@ -10,8 +10,6 @@ MAINTAINER=	leot1990@users.sourceforge.net
 HOMEPAGE=	http://pod2it.sourceforge.net/
 COMMENT=	Italian translation of Perl core documentation
 LICENSE=	${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=	auto/POD2/IT/.packlist
 USE_LANGUAGES=	# none

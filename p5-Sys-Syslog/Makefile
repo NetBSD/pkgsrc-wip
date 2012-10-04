@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/10/17 15:12:34 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/04 19:11:59 asau Exp $
 #
 
 DISTNAME=	Sys-Syslog-0.29
@@ -11,8 +11,6 @@ MAINTAINER=	evaldo@gardenali.biz
 HOMEPAGE=	http://search.cpan.org/dist/Sys-Syslog/
 COMMENT=	Perl interface to the UNIX syslog(3) calls
 LICENSE=        ${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-XSLoader>=0:../../devel/p5-XSLoader
 

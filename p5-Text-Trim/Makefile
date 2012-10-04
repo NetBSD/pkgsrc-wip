@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/10/19 07:36:55 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/04 19:12:00 asau Exp $
 #
 
 DISTNAME=	Text-Trim-1.02
@@ -16,8 +16,6 @@ DEPENDS+=	p5-Test-Simple-[0-9]*:../../devel/p5-Test-Simple
 PERL5_MODULE_TYPE=	Module::Build
 
 PERL5_PACKLIST=	auto/Text/Trim/.packlist
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

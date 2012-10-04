@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/08/21 14:40:44 cheusov Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/04 19:12:00 asau Exp $
 #
 
 DISTNAME=	Text-Quote-0.3
@@ -9,8 +9,6 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Text/}
 MAINTAINER=	athaba@users.sourceforge.net
 HOMEPAGE=	http://search.cpan.org/dist/Text-Quote
 COMMENT=	Quotes strings as required for perl to eval them back correctly
-
-PKG_DESTDIR_SUPPORT=user-destdir
 
 DEPENDS+=	p5-Carp-Assert>=0.13:../../devel/p5-Carp-Assert
 DEPENDS+=	p5-IO-Compress-[0-9]*:../../devel/p5-IO-Compress

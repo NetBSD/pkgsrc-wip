@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/01/04 16:51:55 shattered Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/04 19:11:59 asau Exp $
 
 DISTNAME=		Term-Encoding-0.02
 PKGNAME=		p5-${DISTNAME}
@@ -9,6 +9,7 @@ MAINTAINER=		hiramatu@boreas.dti.ne.jp
 HOMEPAGE=		http://search.cpan.org/dist/Term-Encoding/
 COMMENT=		Detect encoding of the current terminal
 
+PKG_DESTDIR_SUPPORT=	none
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/Term/Encoding/.packlist

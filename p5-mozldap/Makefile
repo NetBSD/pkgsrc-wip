@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/09/01 19:55:21 udontknow Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/04 19:12:08 asau Exp $
 #
 
 DISTNAME=	perl-mozldap-1.5.2
@@ -11,8 +11,6 @@ MAINTAINER=	evaldo@gardenali.biz
 HOMEPAGE=	http://www.mozilla.org/directory/perldap.html
 COMMENT=	Mozilla implementation of LDAP support libraries for Perl
 LICENSE=	gnu-gpl-v1 OR gnu-lgpl-v2.1 OR mpl-1.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_ENV+=	LDAPSDKDIR=${PREFIX}
 MAKE_ENV+=	LDAPSDKINCDIR=${PREFIX}/include/ldap

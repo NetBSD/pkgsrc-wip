@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/06/10 12:07:00 leot1990 Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/04 19:11:58 asau Exp $
 #
 
 DISTNAME=	Pod-Constants-0.16
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Pod-Constants/
 COMMENT=	Include constants from POD
 LICENSE=	artistic-2.0 # OR gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Test-Simple>=0.18:../../devel/p5-Test-Simple
 DEPENDS+=	p5-Pod-Parser>=1.13:../../textproc/p5-Pod-Parser

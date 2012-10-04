@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/10/15 15:49:12 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/04 19:11:59 asau Exp $
 
 DISTNAME=		Text-ASCIITable-0.18
 PKGNAME=		p5-${DISTNAME}
@@ -14,8 +14,6 @@ LICENSE=		${PERL5_LICENSE}
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/Text/ASCIITable/.packlist
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

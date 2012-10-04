@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/09/08 16:35:01 genolopolis Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/04 19:12:00 asau Exp $
 #
 
 DISTNAME=	Tie-Cycle-1.17
@@ -10,8 +10,6 @@ MAINTAINER=	INSERT_YOUR_MAIL_ADDRESS_HERE
 HOMEPAGE=	http://search.cpan.org/CPAN/authors/id/B/BD/BDFOY/
 COMMENT=	TODO: Short description of the package
 #LICENSE=	# TODO: (see mk/license.mk)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=	auto/Tie/Cycle/.packlist
 USE_LANGUAGES=	# none

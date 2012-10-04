@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/12/07 12:12:23 bubuchka Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/04 19:11:58 asau Exp $
 #
 
 DISTNAME=	Proc-Fork-0.71
@@ -14,7 +14,6 @@ LICENSE=	${PERL5_LICENSE}
 DEPENDS+=	p5-Exporter-Tidy-[0-9]*:../../wip/p5-Exporter-Tidy
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/Proc/Fork/.packlist
 

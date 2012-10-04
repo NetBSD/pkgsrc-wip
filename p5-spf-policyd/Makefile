@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/09/14 16:56:05 shindenmorr Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/04 19:12:08 asau Exp $
 #
 
 DISTNAME=	postfix-policyd-spf-perl-2.007
@@ -10,8 +10,6 @@ MAINTAINER=	morr@NetBSD.org
 HOMEPAGE=	http://launchpad.net/postfix-policyd-spf-perl/
 COMMENT=	Basic Postfix policy engine for SPF checking
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Mail-SPF:../../mail/p5-Mail-SPF
 DEPENDS+=	p5-NetAddr-IP:../../net/p5-NetAddr-IP

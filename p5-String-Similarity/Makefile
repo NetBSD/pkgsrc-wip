@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/10/12 09:04:45 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/04 19:11:58 asau Exp $
 #
 
 DISTNAME=		String-Similarity-1.04
@@ -10,8 +10,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/String-Similarity/
 COMMENT=		Calculate the similarity of two strings
 LICENSE=		gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGE=		c
 PERL5_PACKLIST=		auto/String/Similarity/.packlist

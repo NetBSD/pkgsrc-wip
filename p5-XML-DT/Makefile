@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/10/15 18:10:37 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/04 19:12:06 asau Exp $
 #
 
 DISTNAME=	XML-DT-0.56
@@ -16,8 +16,6 @@ DEPENDS+=	p5-XML-DTDParser>=2.0:../../wip/p5-XML-DTDParser
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
 
 PERL5_PACKLIST=		auto/XML/DT/.packlist
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

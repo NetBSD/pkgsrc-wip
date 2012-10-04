@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/05/11 19:53:12 ficovh Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/04 19:11:59 asau Exp $
 #
 
 DISTNAME=	Syntax-Highlight-Perl-Improved-1.01
@@ -9,8 +9,6 @@ MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/D/DA/DAVIDCYL/Syntax-Highli
 MAINTAINER=	ficovh@yahoo.com
 HOMEPAGE=	http://search.cpan.org/CPAN/authors/id/D/DA/DAVIDCYL/Syntax-Highlight-Perl-Improved-101/
 COMMENT=	Highlighting of Perl Syntactical Structures
-
-PKG_DESTDIR_SUPPORT= user-destdir
 
 PERL5_PACKLIST=	auto/Syntax/Highlight/Perl/Improved/.packlist
 USE_LANGUAGES=	# none

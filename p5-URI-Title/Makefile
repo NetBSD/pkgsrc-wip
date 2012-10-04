@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/10/17 15:28:26 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/04 19:12:02 asau Exp $
 
 DISTNAME=		URI-Title-1.85
 PKGNAME=		p5-${DISTNAME}
@@ -9,8 +9,6 @@ MAINTAINER=		hiramatu@boreas.dti.ne.jp
 HOMEPAGE=		http://search.cpan.org/dist/URI-Title/
 COMMENT=		Get the titles of things on the web in a sensible way
 LICENSE=		${PERL5_LICENSE}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		p5-Module-Pluggable>=1.2:../../devel/p5-Module-Pluggable
 DEPENDS+=		p5-HTML-Parser>=3.45:../../www/p5-HTML-Parser

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/03/16 08:33:41 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/04 19:12:01 asau Exp $
 
 DISTNAME=	URI-Find-Rule-0.8
 PKGNAME=	p5-${DISTNAME}
@@ -11,6 +11,8 @@ COMMENT=	Simpler interface to URI::Find
 
 DEPENDS+=	p5-URI-Find>=0:../../www/p5-URI-Find
 DEPENDS+=	p5-Text-Glob>=0:../../textproc/p5-Text-Glob
+
+PKG_DESTDIR_SUPPORT=	none
 
 PERL5_PACKLIST= auto/URI/Find/Rule/.packlist
 

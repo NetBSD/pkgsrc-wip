@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/10/20 01:19:40 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/04 19:11:59 asau Exp $
 #
 
 DISTNAME=	Template-Plugin-Class-0.14
@@ -16,8 +16,6 @@ LICENSE=	${PERL5_LICENSE}
 #PERL5_MODULE_TYPE=	Module::Build
 PERL5_PACKLIST=		auto/Template/Plugin/Class/.packlist
 USE_LANGUAGES=		# none
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

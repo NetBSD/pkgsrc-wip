@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/05/21 14:28:53 tonnerre Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/04 19:11:58 asau Exp $
 
 DISTNAME=		Startup-0.103
 PKGNAME=		p5-${DISTNAME}
@@ -10,6 +10,7 @@ MAINTAINER=		pkgsrc-p5-people@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/Startup/
 COMMENT=		Program flow utility
 
+PKG_DESTDIR_SUPPORT=	none
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/Startup/.packlist

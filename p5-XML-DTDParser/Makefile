@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/10/15 17:00:56 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/04 19:12:07 asau Exp $
 #
 
 DISTNAME=	XML-DTDParser-2.01
@@ -12,8 +12,6 @@ COMMENT=	Perl module for handling XML DTDs
 LICENSE=	${PERL5_LICENSE}
 
 PERL5_PACKLIST=		auto/XML/DTDParser/.packlist
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2010/06/13 22:47:12 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/04 19:12:08 asau Exp $
 
 PKGNAME=		p5-qt3-3.009b2
 DISTNAME=		PerlQt-3.009-b2
@@ -17,7 +17,6 @@ USE_LANGUAGES+=		c++
 USE_TOOLS+=		perl
 USE_TOOLS+=		gmake
 USE_LIBTOOL=		YES
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_CONFIGURE_DIRS+=	. PerlQt
 WRKSRC=			${WRKDIR}/PerlQt-3.009

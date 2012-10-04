@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/01/04 16:51:55 shattered Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/04 19:11:57 asau Exp $
 
 DISTNAME=	PDL-2.4.2
 PKGNAME=	p5-${DISTNAME}
@@ -12,6 +12,8 @@ COMMENT=	PDL turns perl in to a free, array-oriented, numerical language
 DEPENDS+=	p5-Term-ReadLine-[0-9]*:../../devel/p5-Term-ReadLine
 DEPENDS+=	p5-Filter-[0-9]*:../../textproc/p5-Filter
 DEPENDS+=	p5-Text-Balanced-[0-9]*:../../textproc/p5-Text-Balanced
+
+PKG_DESTDIR_SUPPORT=	none
 
 PERL5_PACKLIST=		auto/PDL/.packlist
 

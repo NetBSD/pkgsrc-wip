@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/10/17 04:56:03 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/04 19:12:08 asau Exp $
 #
 
 DISTNAME=	XML-Writer-Simple-0.07
@@ -15,8 +15,6 @@ DEPENDS+=	p5-XML-DT>=0.42:../../wip/p5-XML-DT
 DEPENDS+=	p5-XML-DTDParser>=2.01:../../wip/p5-XML-DTDParser
 
 PERL5_PACKLIST=		auto/XML/Writer/Simple/.packlist
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

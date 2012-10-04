@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/11/18 02:59:27 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/04 19:12:00 asau Exp $
 
 DISTNAME=		Text-VimColor-0.14
 PKGNAME=		p5-${DISTNAME}
@@ -21,8 +21,6 @@ DEPENDS+=		vim{,-gtk,gtk2,-kde,-motif,-xaw}-[0-9]*:../../editors/vim
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/Text/VimColor/.packlist
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

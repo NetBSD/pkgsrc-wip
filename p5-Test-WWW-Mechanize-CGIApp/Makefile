@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/01/10 00:05:24 ficovh Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/04 19:11:59 asau Exp $
 #
 
 DISTNAME=	Test-WWW-Mechanize-CGIApp-0.05
@@ -13,6 +13,8 @@ COMMENT=	Test::WWW::Mechanize for CGI::Application
 DEPENDS+=	p5-CGI-Application>=0:../../www/p5-CGI-Application
 DEPENDS+=	p5-HTTP-Request-AsCGI>=0:../../www/p5-HTTP-Request-AsCGI
 DEPENDS+=	p5-Test-WWW-Mechanize>=1.04:../../www/p5-Test-WWW-Mechanize
+
+PKG_DESTDIR_SUPPORT=	none
 
 PERL5_PACKLIST=	auto/Test/WWW/Mechanize/CGIApp/.packlist
 USE_LANGUAGES=	# none

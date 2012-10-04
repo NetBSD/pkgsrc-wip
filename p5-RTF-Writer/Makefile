@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/12/10 09:08:21 netcap Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/04 19:11:58 asau Exp $
 
 DISTNAME=		RTF-Writer-1.11
 PKGNAME=		p5-${DISTNAME}
@@ -10,6 +10,8 @@ HOMEPAGE=		http://search.cpan.org/dist/RTF-Writer/
 COMMENT=		Perl module for generating documents in Rich Text Format
 
 DEPENDS+=		p5-Image-Size-[0-9]*:../../graphics/p5-Image-Size
+
+PKG_DESTDIR_SUPPORT=	none
 
 PERL5_PACKLIST=		auto/RTF/Writer/.packlist
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/10/15 16:07:18 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/04 19:11:58 asau Exp $
 #
 
 DISTNAME=	Pod-Xhtml-1.61
@@ -15,7 +15,6 @@ DEPENDS+=	p5-Pod-Parser>=0:../../textproc/p5-Pod-Parser
 DEPENDS+=	p5-Test-Assertions>=1.054:../../devel/p5-Test-Assertions
 
 PKG_INSTALLATION_TYPES= overwrite pkgviews
-PKG_DESTDIR_SUPPORT=    user-destdir
 
 PERL5_PACKLIST=	auto/Pod/Xhtml/.packlist
 USE_LANGUAGES=	# none

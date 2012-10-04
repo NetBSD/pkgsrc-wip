@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/10/24 10:57:50 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/04 19:12:07 asau Exp $
 
 DISTNAME=	XML-RSS-LibXML-0.3102
 PKGNAME=	p5-${DISTNAME}
@@ -11,7 +11,6 @@ COMMENT=	XML::RSS with XML::LibXML
 LICENSE=	${PERL5_LICENSE}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Class-Accessor:../../devel/p5-Class-Accessor
 DEPENDS+=	p5-DateTime-Format-Mail:../../time/p5-DateTime-Format-Mail

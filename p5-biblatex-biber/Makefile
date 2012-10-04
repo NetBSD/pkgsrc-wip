@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/09/08 16:36:45 genolopolis Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/04 19:12:08 asau Exp $
 #
 
 DISTNAME=	biblatex-biber
@@ -10,8 +10,6 @@ MAINTAINER=	INSERT_YOUR_MAIL_ADDRESS_HERE
 HOMEPAGE=	http://downloads.sourceforge.net/project/biblatex-biber/biblatex-biber/1.2/
 COMMENT=	TODO: Short description of the package
 #LICENSE=	# TODO: (see mk/license.mk)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 # TODO: Look for the dependencies in Build.PL.
 

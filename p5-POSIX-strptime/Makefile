@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/02/17 10:08:42 jgoamakf Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/04 19:11:57 asau Exp $
 
 DISTNAME=	POSIX-strptime-0.10
 PKGNAME=	p5-${DISTNAME}
@@ -16,8 +16,6 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 USE_LANGUAGES=	c
 
 PERL5_PACKLIST=		auto/POSIX/strptime/.packlist
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
