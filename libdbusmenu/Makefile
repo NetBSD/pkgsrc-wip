@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/10/04 15:47:40 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/04 18:58:56 asau Exp $
 #
 
 DISTNAME=	libdbusmenu-12.10.2
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://launchpad.net/dbusmenu/
 COMMENT=	Small library created by pulling some code from indicator-applet
 LICENSE=	gnu-lgpl-v3 AND gnu-lgpl-v2.1 AND gnu-lgpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
