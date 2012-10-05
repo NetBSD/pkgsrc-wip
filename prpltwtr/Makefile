@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/01/11 23:02:17 noud4 Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/05 13:52:03 asau Exp $
 #
 
 DISTNAME=		prpltwtr-0.11.0
@@ -10,8 +10,6 @@ MAINTAINER=		noud@home.nl
 HOMEPAGE=		http://code.google.com/p/prpltwtr/
 COMMENT=		Treat microblogging (Twitter, etc) as IM protocols
 LICENSE=		gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 HAS_CONFIGURE=		yes
 USE_TOOLS+=		perl

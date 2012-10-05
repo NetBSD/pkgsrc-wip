@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/07/17 23:47:06 bubuchka Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/05 13:52:03 asau Exp $
 #
 
 DISTNAME=	pt-ttf-2.004.20120328
@@ -10,8 +10,6 @@ MAINTAINER=	mishka@NetBSD.org
 HOMEPAGE=	http://www.paratype.com/public/
 COMMENT=	Public fonts for minority languages of Russia
 LICENSE=	open-font-license
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 NO_BUILD=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/10/28 20:22:15 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/05 13:52:03 asau Exp $
 #
 
 DISTNAME=	polymul-1.01
@@ -10,8 +10,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://code.google.com/p/polymul/
 COMMENT=	Fast multivariate polynomial multiplication in C++
 LICENSE=	mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_BUILD= yes
 USE_LANGUAGES=	c++

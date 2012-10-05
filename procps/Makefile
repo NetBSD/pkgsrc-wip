@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/11/28 00:27:27 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/05 13:52:03 asau Exp $
 
 DISTNAME=		procps-3.0.5
 CATEGORIES=		sysutils
@@ -14,6 +14,8 @@ COMMENT=		The Linux /proc file system utilities
 ONLY_FOR_PLATFORM=	Linux-*-*
 
 CONFLICTS+=		top-[0-9]*
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_TOOLS+=		gmake
 MAKE_ENV+=		DESTDIR=${PREFIX:Q}

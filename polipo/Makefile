@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/02/18 21:31:43 ishit Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/05 13:52:02 asau Exp $
 #
 
 DISTNAME=		polipo-1.0.4.1
@@ -7,8 +7,6 @@ MASTER_SITES=		http://freehaven.net/~chrisd/polipo/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.pps.jussieu.fr/~jch/software/polipo/
 COMMENT=		Small and fast caching web proxy
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	makeinfo
 

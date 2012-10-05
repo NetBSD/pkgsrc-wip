@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/06/13 22:47:13 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/05 13:52:03 asau Exp $
 #
 
 DISTNAME=	postr-0.12.4
@@ -13,8 +13,6 @@ COMMENT=	GNOME flickr uploader
 #LICENSE=	# TODO: (see mk/license.mk)
 
 DEPENDS+=	${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 PYDISTUTILSPKG=		yes

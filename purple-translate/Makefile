@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/01/11 23:36:33 noud4 Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/05 13:52:03 asau Exp $
 #
 
 DISTNAME=		purple-translate-1.1
@@ -13,8 +13,6 @@ LICENSE=		gnu-gpl-v3
 SVN_REPOSITORIES=	translate
 SVN_ROOT.translate=	http://purple-translate.googlecode.com/svn/trunk/
 SVN_MODULE.translate=	purple-translate
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/purple-translate
 BUILD_TARGET=		purple-translate.so

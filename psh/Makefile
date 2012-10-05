@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/02/28 14:53:18 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/05 13:52:03 asau Exp $
 #
 
 DISTNAME=	psh-1.8.1
@@ -8,8 +8,6 @@ MASTER_SITES=	http://www.focusresearch.com/gregor/download/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.focusresearch.com/gregor/download/
 COMMENT=	Perl Shell
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PKG_SHELL=	${PREFIX}/bin/psh
 

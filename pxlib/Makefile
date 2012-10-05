@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/05/19 16:51:30 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/05 13:52:03 asau Exp $
 #
 
 DISTNAME=		pxlib_0.2.0.orig
@@ -9,6 +9,8 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=pxlib/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://pxlib.sourceforge.net/
 COMMENT=		C language library for reading Paradox database files
+
+PKG_DESTDIR_SUPPORT=	none
 
 WRKSRC=		${WRKDIR}/pxlib-0.2.0
 USE_PKGLOCALEDIR=	yes

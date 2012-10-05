@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2012/03/06 23:54:35 minskim Exp $
+# $NetBSD: Makefile,v 1.22 2012/10/05 13:52:02 asau Exp $
 #
 
 DISTNAME=		pointless-0.5
@@ -23,6 +23,8 @@ DEPENDS+=		ghostscript>=7.0:../../print/ghostscript
 DEPENDS+=		tex-latex-[0-9]*:../../print/tex-latex
 DEPENDS+=		tex-latex-bin-[0-9]*:../../print/tex-latex-bin
 DEPENDS+=		tex-tex-[0-9]*:../../print/tex-tex
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_PKGLOCALEDIR=	yes
 

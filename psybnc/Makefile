@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/02/21 00:12:52 pettai Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/05 13:52:03 asau Exp $
 #
 
 DISTNAME=	psyBNC-2.3.2-9
@@ -9,8 +9,6 @@ MAINTAINER=	pettai@nordu.net
 HOMEPAGE=	http://www.psybnc.at/
 COMMENT=	Easy-to-use, multi-user, permanent IRC-Bouncer with many features
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=	${WRKDIR}/psybnc
 

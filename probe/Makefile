@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/04/18 14:30:16 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/05 13:52:03 asau Exp $
 #
 
 DISTNAME=	probe-1.30-linux6
@@ -12,9 +12,6 @@ COMMENT=	ProBE is an animator for CSP processes
 
 EMUL_PLATFORMS=		linux-i386
 EMUL_MODULES.linux=	base x11
-
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_BUILD=	yes
 

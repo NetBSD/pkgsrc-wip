@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/08/10 00:09:47 haad Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/05 13:52:03 asau Exp $
 #
 
 DISTNAME=		proxychains-4.2.0
@@ -16,6 +16,8 @@ COMMENT=		Chain multiple proxies in a transparent way
 # (see mk/fetch/fetch.mk), so you have to use a browser for now.
 FETCH_USING=		wget
 FETCH_BEFORE_ARGS=	--no-check-certificate
+
+PKG_DESTDIR_SUPPORT=	none
 
 WRKSRC=		${WRKDIR}/proxychains
 

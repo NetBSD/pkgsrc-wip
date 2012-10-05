@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/05/09 20:35:37 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/05 13:52:02 asau Exp $
 #
 
 DISTNAME=	polylib-5.22.5
@@ -9,8 +9,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://icps.u-strasbg.fr/polylib/polylib_src/
 COMMENT=	The polyhedral library - long int version
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

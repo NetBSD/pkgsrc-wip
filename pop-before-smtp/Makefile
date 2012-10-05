@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2007/12/17 07:29:03 obache Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/05 13:52:03 asau Exp $
 #
 
 DISTNAME=	pop-before-smtp-1.42
@@ -15,8 +15,6 @@ REPLACE_PERL+=	pop-before-smtp
 
 DEPENDS+=	p5-Net-Netmask-[0-9]*:../../devel/p5-Net-Netmask
 DEPENDS+=	p5-TimeDate-[0-9]*:../../time/p5-TimeDate
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 EGDIR=		${PREFIX}/share/examples/pop-before-smtp
 CONF_FILES=	${EGDIR}/pop-before-smtp-conf.pl ${PKG_SYSCONFDIR}/pop-before-smtp-conf.pl

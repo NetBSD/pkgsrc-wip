@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/09/10 09:17:24 jihbed Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/05 13:52:03 asau Exp $
 #
 
 DISTNAME=	pudb-0.92.15
@@ -16,8 +16,6 @@ DEPENDS+=	${PYPKGPREFIX}-urwid-[0-9]*:../../devel/py-urwid
 DEPENDS+=	${PYPKGPREFIX}-numpy>=1.1.0:../../math/py-numpy
 DEPENDS+=	${PYPKGPREFIX}-pygments>=1.0:../../textproc/py-pygments
 #DEPENDS+=	${PYPKGPREFIX}-ipython>=0.9.1:../../wip/py-ipython
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/pudb-0.92.15
 USE_LANGUAGES=	# none

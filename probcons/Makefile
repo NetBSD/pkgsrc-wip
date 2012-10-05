@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/01/22 13:23:48 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/05 13:52:03 asau Exp $
 #
 
 DISTNAME=	probcons_v1_12
@@ -9,8 +9,6 @@ MASTER_SITES=	http://probcons.stanford.edu/
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://probcons.stanford.edu/
 COMMENT= Probabilistic Consistency-based Multiple Alignment of Amino Acid Sequences
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/probcons
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/01/17 12:03:30 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/05 13:52:03 asau Exp $
 
 POUND_VERSION=	2.4.5
 PKGNAME=	pound-${POUND_VERSION}
@@ -11,6 +11,8 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	tonnerre@bsdprojects.net
 HOMEPAGE=	http://www.apsis.ch/pound/
 COMMENT=	Reverse-proxy and load-balancer
+
+PKG_DESTDIR_SUPPORT=	none
 
 HAS_CONFIGURE=	yes
 USE_BUILTIN.openssl=	no

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2009/05/19 09:00:11 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.13 2012/10/05 13:52:03 asau Exp $
 #
 
 DISTNAME=		postoffice-1.4.9
@@ -22,8 +22,6 @@ CONFIGURE_ARGS=		--prefix=${PREFIX} \
 			--with-vhost=${PKG_SYSCONFDIR}/virtual \
 			--with-vspool=${VARBASE}/spool/virtual \
 			--with-vuser=mail
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEFS=		VARBASE PKG_SYSCONFDIR
 BUILD_DEFS+=		POSTOFFICE_GREYLIST

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/01/08 12:36:33 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/05 13:52:03 asau Exp $
 #
 
 DISTNAME=	LADR-2009-11A
@@ -11,7 +11,6 @@ HOMEPAGE=	http://www.cs.unm.edu/~mccune/prover9/
 COMMENT=	Prover9 is an automated theorem prover
 LICENSE=	gnu-gpl-v2
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_JOBS_SAFE= 	no
 
 REPLACE_PYTHON=		utilities/attack utilities/gvizify utilities/looper utilities/prover9-mace4

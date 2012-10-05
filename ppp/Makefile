@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/10/14 10:16:59 shattered Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/05 13:52:03 asau Exp $
 
 DISTNAME=	ppp-2.4.1
 CATEGORIES=	net
@@ -9,6 +9,9 @@ HOMEPAGE=	http://www.samba.org/ppp/
 COMMENT=	Point-to-Point Protocol (PPP) over serial lines
 
 ONLY_FOR_PLATFORM=	Linux-*-* SunOS-5*-*
+
+PKG_DESTDIR_SUPPORT=	none
+
 HAS_CONFIGURE=	yes
 USE_TOOLS+=	gmake
 
