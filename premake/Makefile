@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2009/05/20 00:58:42 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/05 13:39:04 asau Exp $
 #
 
 DISTNAME=		premake-src-3.1
@@ -15,8 +15,10 @@ COMMENT=		Build script generator
 USE_TOOLS+=		gmake
 WRKSRC=			${WRKDIR}/Premake-3.1
 
+INSTALLATION_DIRS=	bin
+
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/bin/premake ${PREFIX}/bin/
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/premake ${DESTDIR}${PREFIX}/bin/
 
 .include "../../lang/lua/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
