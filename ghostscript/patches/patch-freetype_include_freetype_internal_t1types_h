@@ -1,4 +1,4 @@
-$NetBSD: patch-freetype_include_freetype_internal_t1types.h,v 1.1 2011/12/09 13:17:41 makoto Exp $
+$NetBSD: patch-freetype_include_freetype_internal_t1types_h,v 1.1 2012/10/05 13:25:15 makoto Exp $
 
 To avoid redifintion of T1_EncodingType_ by:
 .include "../../fonts/fontconfig/buildlink3.mk"
