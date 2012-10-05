@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2012/10/03 22:45:58 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/05 09:03:34 thomasklausner Exp $
 #
 
 DISTNAME=	rsound-1.1
 CATEGORIES=	audio
-MASTER_SITES=	http://github.com/downloads/Themaister/RSound/
+MASTER_SITES=	http://cloud.github.com/downloads/Themaister/RSound/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/downloads/Themaister/RSound/
