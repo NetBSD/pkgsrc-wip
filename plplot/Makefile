@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/01/17 10:48:04 emil_s Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/05 11:31:52 asau Exp $
 #
 
 DISTNAME=	plplot-5.9.2
@@ -8,8 +8,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=plplot/}
 MAINTAINER=	esg@sdf.lonestar.org
 HOMEPAGE=	http://plplot.sourceforge.net/
 COMMENT=	Scientific plotting library
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++ # fortran77

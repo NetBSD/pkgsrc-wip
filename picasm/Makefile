@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/09/09 02:49:33 obache Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/05 11:31:51 asau Exp $
 #
 
 DISTNAME=	picasm105
@@ -16,11 +16,13 @@ WRKSRC=		${WRKDIR}
 
 USE_TOOLS+=	gmake
 
+INSTALLATION_DIRS=	bin
+
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/picasm ${PREFIX}/bin/
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/picasm/
-	${INSTALL_DATA} ${WRKSRC}/examples/* ${PREFIX}/share/examples/picasm/
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/picasm
-	${INSTALL_DATA} ${WRKSRC}/picasm.doc ${PREFIX}/share/doc/picasm
+	${INSTALL_PROGRAM} ${WRKSRC}/picasm ${DESTDIR}${PREFIX}/bin/
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/picasm/
+	${INSTALL_DATA} ${WRKSRC}/examples/* ${DESTDIR}${PREFIX}/share/examples/picasm/
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/picasm
+	${INSTALL_DATA} ${WRKSRC}/picasm.doc ${DESTDIR}${PREFIX}/share/doc/picasm
 
 .include "../../mk/bsd.pkg.mk"

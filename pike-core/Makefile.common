@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2011/10/09 10:05:44 cheusov Exp $
+# $NetBSD: Makefile.common,v 1.10 2012/10/05 11:31:52 asau Exp $
 # used by wip/pike-Gettext/Makefile
 # used by wip/pike-Gz/Makefile
 # used by wip/pike-Pipe/Makefile
@@ -20,7 +20,7 @@ DISTINFO_FILE=	${PKGDIR}/../../wip/pike-core/distinfo
 PIKEDIR=	${WRKDIR}/${DISTNAME}
 WRKSRC=		${PIKEDIR}/src
 
-#PKG_DESTDIR_SUPPORT=	user-destdir
+PKG_DESTDIR_SUPPORT=	none
 
 USE_TOOLS+=		bison autoconf
 GNU_CONFIGURE=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/05/09 10:18:48 cheusov Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/05 11:31:52 asau Exp $
 #
 
 DISTNAME=		pmars-0_8_6_tar
@@ -14,8 +14,6 @@ COMMENT=		The official Core Wars simulator
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 USE_TOOLS+=		pkg-config gmake
 MAKE_FILE=		makefile
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 

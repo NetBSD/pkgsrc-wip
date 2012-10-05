@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2012/09/18 17:46:21 cheusov Exp $
+# $NetBSD: Makefile,v 1.63 2012/10/05 11:31:52 asau Exp $
 
 DISTNAME=	pkg_summary-utils-9
 CATEGORIES=	pkgtools
@@ -38,7 +38,6 @@ USE_LANGUAGES=		#empty
 USE_TOOLS+=		gzip:run
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/pkg_summary-utils
 

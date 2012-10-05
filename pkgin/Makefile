@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2012/07/30 10:33:00 imilh Exp $
+# $NetBSD: Makefile,v 1.59 2012/10/05 11:31:52 asau Exp $
 #
 
 DISTNAME=		pkgin-20120730
@@ -9,8 +9,6 @@ MAINTAINER=		imil@home.imil.net
 HOMEPAGE=		http://pkgin.net/
 COMMENT=		Apt / yum like tool for managing pkgsrc binary packages
 LICENSE=		modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 CONF_FILES=		${EGDIR}/repositories.conf.example		\

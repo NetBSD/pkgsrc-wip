@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/01/12 04:43:06 noud4 Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/05 11:31:52 asau Exp $
 #
 
 DISTNAME=		status_to_twitter
@@ -11,8 +11,6 @@ MAINTAINER=		noud@home.nl
 HOMEPAGE=		http://code.google.com/p/pidgin-status-to-twitter/
 COMMENT=		Update Twitter with your Pidgin status
 LICENSE=		gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		p5-Net-Twitter-[0-9]*:../../net/p5-Net-Twitter
 

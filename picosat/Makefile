@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/06/11 11:45:49 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/05 11:31:51 asau Exp $
 #
 
 DISTNAME=	picosat-913
@@ -9,8 +9,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://fmv.jku.at/picosat/
 COMMENT=	SAT solver with proof and core support
 #LICENSE=	# TODO: (see mk/license.mk)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 HAS_CONFIGURE=	yes
 USE_LANGUAGES= c

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/05/07 21:02:55 jihbed Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/05 11:31:52 asau Exp $
 #
 
 DISTNAME=	plod-1.9
@@ -9,8 +9,6 @@ MASTER_SITES=	http://www.far2wise.net/plod/ \
 MAINTAINER=	jfranz@bsdprojects.net
 HOMEPAGE=	http://www.far2wise.net/plod/
 COMMENT=	System administration journaling tool
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 REPLACE_PERL+=	plod
 

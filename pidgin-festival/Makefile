@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/08/19 11:43:21 noud4 Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/05 11:31:51 asau Exp $
 #
 
 DISTNAME=	pidgin-festival-2.4
@@ -18,8 +18,6 @@ USE_LANGUAGES+=		c c++ fortran77
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		aclocal autoconf autoheader automake pkg-config
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CFLAGS+=                -DFESTIVAL_VOICES_PATH='"${PREFIX}/share/festival/lib/voices"'
 

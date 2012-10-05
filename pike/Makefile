@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/03/01 22:42:42 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/05 11:31:52 asau Exp $
 #
 
 DISTNAME=		Pike-v7.6.66
@@ -9,6 +9,8 @@ MASTER_SITES=		http://pike.ida.liu.se/pub/pike/latest-stable/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://pike.ida.liu.se/
 COMMENT=		Dynamic programming language similar to Java and C
+
+PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=		yes
 CONFIGURE_DIRS=		src

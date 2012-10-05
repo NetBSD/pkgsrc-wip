@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/11/18 13:44:03 ryo-on Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/05 11:31:52 asau Exp $
 #
 
 DISTNAME=	pink-pony-1.2.1
@@ -11,8 +11,6 @@ MAINTAINER=	ryo_on@yk.rim.or.jp
 HOMEPAGE=	http://code.google.com/p/pink-pony/
 COMMENT=	Pink Pony is a 3D racing game with ponies!
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEPENDS+=	scons-[0-9]*:../../devel/scons
 #DEPENDS+=	protobuf-[0-9]*:../../wip/protobuf

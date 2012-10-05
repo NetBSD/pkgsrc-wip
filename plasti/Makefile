@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/01/22 13:14:48 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/05 11:31:52 asau Exp $
 #
 
 DISTNAME=	plasti-1.0.0
@@ -9,8 +9,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://www.geodynamics.org/cig/software/plasti/
 COMMENT=	Plasti is a 2D ALE (Arbitrary Lagrangian Eulerian) code
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	fortran
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2011/10/09 10:05:44 cheusov Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/05 11:31:52 asau Exp $
 
 DISTNAME=	pkg_conflicts-0.4.0
 PKGREVISION=	1
@@ -16,8 +16,6 @@ DEPENDS+=	pkg_online-client>=0.6.0:../../pkgtools/pkg_online-client
 DEPENDS+=	pkg_summary-utils-[0-9]*:../../pkgtools/pkg_summary-utils
 
 USE_LANGUAGES=		#empty
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CHECKSUM=		yes
 NO_BUILD=		yes

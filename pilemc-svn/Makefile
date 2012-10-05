@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/09/12 19:34:56 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/05 11:31:52 asau Exp $
 
 DISTNAME=		pilemc
 PKGNAME=	${DISTNAME}-svn-${VERSION}
@@ -7,8 +7,6 @@ CATEGORIES=		math
 MAINTAINER=		jihbed.research@gmail.com
 HOMEPAGE=		http://pilemc.hepforge.org/
 COMMENT=	Tool for the simulation of pile-up events at HepMC level
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 # Get it from Subversion repository:
 SVN_REPOSITORIES=	pilemc
