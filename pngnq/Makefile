@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/06/13 22:47:13 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/05 11:31:08 asau Exp $
 #
 
 DISTNAME=		pngnq-0.3-src
@@ -13,11 +13,13 @@ COMMENT=		Tool for quantizing PNG images in RGBA format
 
 WRKSRC=		${WRKDIR}/pngnq
 
+INSTALLATION_DIRS=	bin
+
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/pngnq ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/pngnq
-	${INSTALL_DATA} ${WRKSRC}/LICENSE ${PREFIX}/share/doc/pngnq
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/pngnq
+	${INSTALL_PROGRAM} ${WRKSRC}/pngnq ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/pngnq
+	${INSTALL_DATA} ${WRKSRC}/LICENSE ${DESTDIR}${PREFIX}/share/doc/pngnq
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/pngnq
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
