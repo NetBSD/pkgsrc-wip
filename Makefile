@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4902 2012/10/05 09:58:48 khorben Exp $
+# $Id: Makefile,v 1.4903 2012/10/05 11:36:00 asau Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1583,7 +1583,6 @@ SUBDIR+=	mdbtools
 SUBDIR+=	mediawiki-mode
 SUBDIR+=	meep
 SUBDIR+=	meep-mpi
-SUBDIR+=	memcached14
 SUBDIR+=	memdump
 SUBDIR+=	memgrep
 SUBDIR+=	menu-cache
