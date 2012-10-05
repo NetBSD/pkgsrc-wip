@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2007/11/29 09:09:53 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/05 11:07:45 asau Exp $
 #
 
 DISTNAME=		pgpsrc658unix
@@ -30,10 +30,12 @@ CPPFLAGS+=		-D__unix__
 post-extract:
 	cd ${WRKDIR} && extract_file=pgpsrc658unix.tar.gz && ${EXTRACT_CMD}
 
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/clients/pgp/cmdline/pgp ${PREFIX}/bin/pgp6
-	${INSTALL_DATA} ${WRKSRC}/clients/pgp/cmdline/packaging/pgp-6.0/man/man1/pgp.1 ${PREFIX}/${PKGMANDIR}/man1/pgp6.1
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/pgp6
-	${INSTALL_DATA} ${WRKSRC}/clients/pgp/cmdline/packaging/pgp-6.0/docs/* ${PREFIX}/share/doc/pgp6/
+	${INSTALL_PROGRAM} ${WRKSRC}/clients/pgp/cmdline/pgp ${DESTDIR}${PREFIX}/bin/pgp6
+	${INSTALL_DATA} ${WRKSRC}/clients/pgp/cmdline/packaging/pgp-6.0/man/man1/pgp.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/pgp6.1
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/pgp6
+	${INSTALL_DATA} ${WRKSRC}/clients/pgp/cmdline/packaging/pgp-6.0/docs/* ${DESTDIR}${PREFIX}/share/doc/pgp6/
 
 .include "../../mk/bsd.pkg.mk"
