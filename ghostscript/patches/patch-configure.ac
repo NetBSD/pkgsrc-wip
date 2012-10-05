@@ -1,5 +1,6 @@
-$NetBSD: patch-bf,v 1.2 2011/08/22 14:15:33 makoto Exp $
+$NetBSD: patch-configure.ac,v 1.1 2012/10/05 12:36:55 makoto Exp $
 
+See patch-ah (configure)
 
 --- base/configure.ac.orig	2011-08-05 20:12:20.000000000 +0900
 +++ base/configure.ac	2011-08-22 19:10:30.000000000 +0900
