@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2009/04/09 01:12:08 jsonn Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/05 11:23:03 asau Exp $
 
 DISTNAME=	pkg_fake-0.3
 CATEGORIES=	pkgtools
@@ -14,6 +14,8 @@ NO_BUILD=	yes
 DEPENDS+=	pkg_alternatives>=1.3:../../pkgtools/pkg_alternatives
 DEPENDS+=	pkgfind>=20050804:../../pkgtools/pkgfind
 
+INSTALLATION_DIRS=	sbin ${PKGMANDIR}/man1
+
 do-extract:
 	${MKDIR} ${WRKSRC:Q}
 	${SED}	-e 's,@PREFIX@,${PREFIX},g'				\
@@ -24,7 +26,7 @@ do-extract:
 	${CP} ${FILESDIR:Q}/pkg_fake.1 ${WRKSRC:Q}/
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC:Q}/pkg_fake ${PREFIX:Q}/sbin/
-	${INSTALL_MAN} ${WRKSRC:Q}/pkg_fake.1 ${PREFIX:Q}/${PKGMANDIR}/man1/
+	${INSTALL_SCRIPT} ${WRKSRC:Q}/pkg_fake ${DESTDIR}${PREFIX:Q}/sbin/
+	${INSTALL_MAN} ${WRKSRC:Q}/pkg_fake.1 ${DESTDIR}${PREFIX:Q}/${PKGMANDIR}/man1/
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2008/01/03 23:08:57 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/05 11:20:58 asau Exp $
 #
 
 DISTNAME=		pizza-1.1
@@ -15,12 +15,14 @@ WRKSRC=			${WRKDIR}
 AUTO_MKDIRS=		yes
 USE_TOOLS+=		printf
 
+INSTALLATION_DIRS=	bin lib/java
+
 do-build:
 	printf "#! ${SH}\\nexec ${JAVA_BINPREFIX}-java -jar ${PREFIX}/lib/java/${DISTNAME}.jar \"\$$@\"\\n" > ${WRKSRC}/pizza.sh
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/pizza.sh ${PREFIX}/bin/pizza
-	${INSTALL_DATA} ${WRKSRC}/${DISTNAME}.jar ${PREFIX}/lib/java/
+	${INSTALL_SCRIPT} ${WRKSRC}/pizza.sh ${DESTDIR}${PREFIX}/bin/pizza
+	${INSTALL_DATA} ${WRKSRC}/${DISTNAME}.jar ${DESTDIR}${PREFIX}/lib/java/
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
