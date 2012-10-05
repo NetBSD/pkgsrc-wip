@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/09/05 03:27:50 othyro Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/05 08:46:09 asau Exp $
 #
 
 DISTNAME=	PcsxSrc-1.6beta
@@ -19,7 +19,6 @@ WRKSRC=		${WRKDIR}/${DISTNAME}/Linux
 #
 USE_PKGSRC_GCC=	yes
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS=	bin
 
 do-install:

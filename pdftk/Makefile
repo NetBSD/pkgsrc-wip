@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2006/12/01 04:32:13 mwicks Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/05 08:46:09 asau Exp $
 #
 
 DISTNAME=		pdftk-1.41
@@ -8,6 +8,8 @@ MASTER_SITES=		http://www.pdfhacks.com/pdftk/
 MAINTAINER=		mwicks@kettering.edu
 HOMEPAGE=		http://www.pdfhacks.com/pdftk/
 COMMENT=		Swiss army knife for PDF files
+
+PKG_DESTDIR_SUPPORT=	none
 
 BUILD_DIRS=		pdftk
 MAKE_FILE=		Makefile.Generic

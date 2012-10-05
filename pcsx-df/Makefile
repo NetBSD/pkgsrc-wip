@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/12/23 01:51:42 othyro Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/05 08:46:09 asau Exp $
 #
 
 DISTNAME=	pcsx-df-1.10
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pcsx-df.sourceforge.net/
 COMMENT=	Playstation 1 emulator optimized for Open Source Unix systems
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++ fortran

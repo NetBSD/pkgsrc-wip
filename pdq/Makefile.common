@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2009/03/18 13:04:38 cheusov Exp $
+# $NetBSD: Makefile.common,v 1.9 2012/10/05 08:46:10 asau Exp $
 #
 # used by wip/xpdq/Makefile
 
@@ -10,8 +10,6 @@ EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		reed@reedmedia.net
 HOMEPAGE=		http://pdq.sourceforge.net/
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DISTINFO_FILE=		${.CURDIR}/../../wip/pdq/distinfo
 PATCHDIR=		${.CURDIR}/../../wip/pdq/patches

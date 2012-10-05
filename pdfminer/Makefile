@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/04/08 19:09:44 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/05 08:46:09 asau Exp $
 #
 
 DISTNAME=	pdfminer-20100424.tar
@@ -11,8 +11,6 @@ MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://www.unixuser.org/~euske/python/pdfminer/index.html
 COMMENT=	PDF parser and analyzer
 LICENSE=	mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/pdfminer-20100424
 USE_LANGUAGES=	# none

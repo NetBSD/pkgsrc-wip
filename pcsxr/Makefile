@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/09/25 20:07:57 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/05 08:46:09 asau Exp $
 #
 
 DISTNAME=	pcsxr-1.9.92
@@ -16,8 +16,6 @@ COMMENT=	PlayStation Emulator based on PCSX-df 1.9
 LICENSE=	gnu-gpl-v2
 
 BUILD_DEPENDS+=	gettext-m4-[0-9]*:../../devel/gettext-m4
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes

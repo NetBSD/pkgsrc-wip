@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2011/08/22 11:45:30 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/05 08:46:09 asau Exp $
 #
 
 DISTNAME=	pdfmod-0.9.1
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc.gnome@gmail.com
 HOMEPAGE=	http://live.gnome.org/PdfMod
 COMMENT=	PDF Mod is a simple tool for modifying PDF documents
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes

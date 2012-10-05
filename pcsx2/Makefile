@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/09/22 15:50:00 othyro Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/05 08:46:09 asau Exp $
 #
 
 DISTNAME=	pcsx2-1.0.0-r5350-sources.7z
@@ -14,8 +14,6 @@ COMMENT=	Playstation 2 Emulator
 #LICENSE=	gnu-gpl-v3 AND modified-bsd AND expatobjc-license AND gnu-gpl-v2 AND gnu-lgpl-v2.1 AND gnu-lgpl-v3 AND public-domain
 
 BUILD_DEPENDS+=	p7zip-[0-9]*:../../archivers/p7zip
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/pcsx2-1.0.0-r5350-sources
 USE_LANGUAGES=	c c++
