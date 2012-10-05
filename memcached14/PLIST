@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/10/07 20:52:22 mbowie Exp $
-man/man1/memcached.1
-sbin/memcached
-sbin/memcached-tool
-share/doc/memcached/memory_management.txt
-share/doc/memcached/protocol.txt
-share/doc/memcached/readme.txt
-share/doc/memcached/threads.txt
