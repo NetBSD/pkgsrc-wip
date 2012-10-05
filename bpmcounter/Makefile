@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/09/28 03:19:43 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/05 11:37:29 thomasklausner Exp $
 #
 
 DISTNAME=	bpmcounter-0.1.0
@@ -22,4 +22,5 @@ USE_TOOLS+=	bison flex gmake pkg-config
 .include "../../audio/id3lib/buildlink3.mk"
 .include "../../math/fftw/buildlink3.mk"
 .include "../../x11/qt3-libs/buildlink3.mk"
+.include "../../x11/qt3-tools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
