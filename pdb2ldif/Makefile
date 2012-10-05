@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/05/19 16:51:29 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/05 08:44:03 asau Exp $
 #
 
 DISTNAME=	pdb2ldif-1.1
@@ -13,8 +13,10 @@ DEPENDS+=	p5-Palm>=1.3.0:../../databases/p5-Palm
 
 NO_BUILD=	YES
 
+INSTALLATION_DIRS=	bin
+
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/pdb2ldif ${PREFIX}/bin/pdb2ldif
+	${INSTALL_SCRIPT} ${WRKSRC}/pdb2ldif ${DESTDIR}${PREFIX}/bin/pdb2ldif
 
 .include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
