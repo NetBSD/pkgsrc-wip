@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2009/02/17 21:50:46 adrian_p Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/05 11:12:56 asau Exp $
 #
 
 MODNAME=		suhosin
@@ -11,8 +11,6 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		cg@cgall.de
 HOMEPAGE=		http://www.hardened-php.net/suhosin/index.html
 COMMENT=		Advanced protection system for PHP installations
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFIGURE_ARGS=		--enable-${MODNAME}
 

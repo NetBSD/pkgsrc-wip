@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/10/13 21:32:01 mbowie Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/05 11:12:56 asau Exp $
 #
 
 MODNAME=		tclink
@@ -11,8 +11,6 @@ EXTRACT_SUFX=		.tar.gz
 MAINTAINER=		mbowie@buzmo.com
 HOMEPAGE=		http://www.trustcommerce.com/
 COMMENT=		PHP extension for TrustCommerce credit card processing
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFIGURE_ARGS=         --enable-${MODNAME}
 

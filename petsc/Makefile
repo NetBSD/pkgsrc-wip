@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/05/19 04:11:34 outpaddling Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/05 11:12:55 asau Exp $
 #
 
 DISTNAME=	petsc-3.1-p2
@@ -10,8 +10,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://www.mcs.anl.gov/petsc/petsc-as/
 COMMENT=	Portable, Extensible Toolkit for  Scientific Computation
 #LICENSE=	# TODO: (see mk/license.mk)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 HAS_CONFIGURE=		yes
 USE_LANGUAGES=		c c++

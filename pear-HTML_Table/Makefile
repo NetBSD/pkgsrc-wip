@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/04/06 13:17:36 uccwen Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/05 11:12:49 asau Exp $
 
 DISTNAME=	HTML_Table-1.8.3
 CATEGORIES=	www
 
 MAINTAINER=	wenheping@gmail.com
 COMMENT=	Makes the design of HTML tables easy, flexible, reusable and efficient
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=	php-pear-HTML_Common-[0-9]*
 

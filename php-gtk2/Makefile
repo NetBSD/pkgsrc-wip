@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/08/12 00:31:49 khorben Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/05 11:12:56 asau Exp $
 
 MODNAME=		php_gtk2
 PECL_VERSION=		2.0.1
@@ -12,8 +12,6 @@ MAINTAINER=		khorben@defora.org
 HOMEPAGE=		http://gtk.php.net/
 COMMENT=		PHP extension for Gtk+ 2.0
 LICENSE=		gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		awk
 USE_TOOLS+=		pkg-config

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/10/06 19:40:25 mbowie Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/05 11:12:56 asau Exp $
 #
 
 MODNAME=		igbinary
@@ -10,8 +10,6 @@ EXTRACT_SUFX=		.tar.gz
 MAINTAINER=		mbowie@buzmo.com
 HOMEPAGE=		http://opensource.dynamoid.com/
 COMMENT=		Binary serialization for PHP
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFIGURE_ARGS+=	--enable-${MODNAME}
 

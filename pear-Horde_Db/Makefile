@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/05/16 07:01:27 triaxx Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/05 11:12:53 asau Exp $
 #
 
 DISTNAME=	Horde_Db-1.2.1
@@ -10,8 +10,6 @@ MAINTAINER=	frederic@fauberteau.org
 HOMEPAGE=	http://pear.horde.org/
 COMMENT=	Database abstraction for horde
 LICENSE=	2-clause-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEPENDS+=	${PHP_PKG_PREFIX}-pear-channel-horde-[0-9]*:../../wip/pear-channel-horde
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-Horde_Date-[0-9]*:../../wip/pear-Horde_Date

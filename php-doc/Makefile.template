@@ -1,5 +1,5 @@
-# $NetBSD: Makefile.template,v 1.9 2012/05/19 16:21:18 noud4 Exp $
-# $Id: Makefile.template,v 1.9 2012/05/19 16:21:18 noud4 Exp $
+# $NetBSD: Makefile.template,v 1.10 2012/10/05 11:12:55 asau Exp $
+# $Id: Makefile.template,v 1.10 2012/10/05 11:12:55 asau Exp $
 
 #####################################################################
 # If the checksum does not match, please regen and bump the version.#
@@ -18,8 +18,6 @@ COMMENT=       		${PHP_DOC_LANG_DESC} documentation for PHP
 NO_CONFIGURE=		yes
 NO_BUILD=		yes
 USE_TOOLS+=		pax
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 HTMLDIR=		share/doc/${PKGNAME}
 DOC_SRCDIR=		${WRKSRC}

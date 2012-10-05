@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/10/08 11:31:28 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/05 11:12:56 asau Exp $
 
 MODNAME=		tidy
 CATEGORIES+=		www
 COMMENT=		PHP extension for tidy functions
 
 CONFLICTS=		php-tidy-[0-9]*
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFIGURE_ARGS+=	--with-tidy=shared,${BUILDLINK_PREFIX.tidy}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/08/06 17:25:29 mayureshw Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/05 11:12:55 asau Exp $
 #
 
 DISTNAME=	phantomjs-1.4.1-source
@@ -10,8 +10,6 @@ MAINTAINER=	filip@joyent.com
 HOMEPAGE=	http://www.phantomjs.org/
 COMMENT=	Headless WebKit with JavaScript API
 LICENSE=	modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/phantomjs-1.4.1
 USE_LANGUAGES=	c c++ c99

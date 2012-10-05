@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2011/05/13 23:25:13 mwdavies Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/05 11:12:55 asau Exp $
 
 DISTNAME=	phonon-backend-xine-4.4.4
 CATEGORIES=	multimedia
@@ -9,8 +9,6 @@ MAINTAINER=	markd@NetBSD.org
 HOMEPAGE=	http://phonon.kde.org
 COMMENT=	Multimedia API for KDE and QT - xine backend
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 # BUILD_MAKE_FLAGS+= VERBOSE=1
 

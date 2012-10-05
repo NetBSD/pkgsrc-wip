@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/06/13 22:47:13 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/05 11:12:55 asau Exp $
 #
 
 DISTNAME=	pessulus-2.30.0
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc.gnome@gmail.com
 HOMEPAGE=	http://live.gnome.org/Pessulus
 COMMENT=	Pessulus is a lockdown editor for GNOME
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_PKGLOCALEDIR= yes

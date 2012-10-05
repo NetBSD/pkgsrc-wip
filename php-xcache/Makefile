@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/01/02 09:47:21 mjoellnir Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/05 11:12:56 asau Exp $
 #
 
 MODNAME=		xcache
@@ -17,9 +17,6 @@ HOMEPAGE=		http://xcache.lighttpd.net/
 COMMENT=		Fast and stable PHP opcode cacher
 
 PLIST_SRC+=		PLIST
-
-PKG_DESTDIR_SUPPORT=	user-destdir
-
 
 CONFIGURE_ARGS+=	--enable-${MODNAME}
 
