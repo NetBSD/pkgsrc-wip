@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4905 2012/10/06 12:53:08 ryo-on Exp $
+# $Id: Makefile,v 1.4906 2012/10/06 13:16:53 kristerw Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -14,7 +14,6 @@ SUBDIR+=	GSCommander
 SUBDIR+=	GoogleEarth
 SUBDIR+=	InfoNES
 SUBDIR+=	LabPlot
-SUBDIR+=	labelnation
 SUBDIR+=	Mesa
 SUBDIR+=	MesaLib
 SUBDIR+=	MoleInvasion
@@ -1328,6 +1327,7 @@ SUBDIR+=	kyra
 SUBDIR+=	kyra2
 SUBDIR+=	kytea
 SUBDIR+=	l2tpd
+SUBDIR+=	labelnation
 SUBDIR+=	labyrinth
 SUBDIR+=	lambertw
 SUBDIR+=	lapack340
