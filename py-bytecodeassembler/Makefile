@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/07/14 13:10:47 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/06 17:22:16 asau Exp $
 #
 
 DISTNAME=	BytecodeAssembler-0.5.1
@@ -13,8 +13,6 @@ COMMENT=	Generate Python code objects by assembling bytecode
 
 DEPENDS+=	${PYPKGPREFIX}-decoratortools>=1.8:../../wip/py-decoratortools
 DEPENDS+=	${PYPKGPREFIX}-symboltype>=1.0:../../wip/py-symboltype
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

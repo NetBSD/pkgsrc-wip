@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/03 22:14:52 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/06 17:22:16 asau Exp $
 #
 
 DISTNAME=	Booktype-1.5
@@ -21,8 +21,6 @@ DEPENDS+=	${PYPKGPREFIX}-feedparser>=5.1.2:../../textproc/py-feedparser
 DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
 DEPENDS+=	${PYPKGPREFIX}-Unidecode>=0.04.9:../../textproc/py-Unidecode
 DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/Booktype-1.5
 

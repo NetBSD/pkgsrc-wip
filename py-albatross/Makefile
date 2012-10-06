@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/09/07 19:29:56 noud4 Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/06 17:13:30 asau Exp $
 #
 
 DISTNAME=	albatross-1.10
@@ -11,7 +11,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.object-craft.com.au/projects/albatross/
 COMMENT=	Toolkit for Stateful Web Applications
 
-PKG_DESTDIR_SUPPORT= 	user-destdir
+PKG_DESTDIR_SUPPORT= 	none
 
 PYDISTUTILSPKG=	yes
 PY_PATCHPLIST=	yes

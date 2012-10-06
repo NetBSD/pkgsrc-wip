@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2009/03/28 21:00:12 jihbed Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/06 17:13:24 asau Exp $
 #
 
 DISTNAME=	genetic_0.1.1b.orig
@@ -12,8 +12,6 @@ COMMENT=	Python-genetic provides genetic algorithms for Python
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/_/-/}
 USE_LANGUAGES=	# none
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes

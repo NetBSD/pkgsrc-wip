@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/09/10 10:56:53 jihbed Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/06 17:22:16 asau Exp $
 #
 
 DISTNAME=	bitstring-3.0.2
@@ -12,8 +12,6 @@ HOMEPAGE=	http://code.google.com/p/python-bitstring/
 COMMENT=	Tools for analysis and modification of binary data in python
 LICENSE=	mit
 
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

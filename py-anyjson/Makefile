@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/09/10 20:39:03 jihbed Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/06 17:13:31 asau Exp $
 #
 
 DISTNAME=	anyjson-0.2.3
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@netbsd.org
 HOMEPAGE=	http://pypi.python.org/pypi/anyjson
 COMMENT=	Wraps the JSON implementation available in a common interface
 LICENSE=		modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

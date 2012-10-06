@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2011/04/04 11:12:47 bubuchka Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/06 17:22:16 asau Exp $
 #
 
 PKGNAME=	${PYPKGPREFIX}-bsddb-${PY_DISTVERSION}
@@ -8,6 +8,8 @@ CATEGORIES=	databases
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.python.org/topics/database/
 COMMENT=	Python extension module for Berkeley DB 3 and 4
+
+PKG_DESTDIR_SUPPORT=	none
 
 PYDISTUTILSPKG=	yes
 PYBINMODULE=	yes

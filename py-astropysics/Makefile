@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/02/10 09:01:10 noud4 Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/06 17:13:32 asau Exp $
 #
 
 DISTNAME=	Astropysics-0.1.dev-r596
@@ -15,8 +15,6 @@ LICENSE=	apache-2.0
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.7.0:../../math/py-scipy
 DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-pyfits>=2.3.1:../../graphics/py-pyfits
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 #WRKSRC=		${WRKDIR}/Astropysics-0.1.dev-r596
 USE_LANGUAGES=	# none

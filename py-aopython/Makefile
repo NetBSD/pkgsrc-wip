@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/07/31 12:08:02 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/06 17:13:31 asau Exp $
 #
 
 DISTNAME=	AOPython-1.0.3
@@ -11,8 +11,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://pieces.openpolitics.com/?s=AOPython
 COMMENT=	Aspect Oriented Python
 LICENSE=	python-software-foundation
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 PYDISTUTILSPKG=	yes

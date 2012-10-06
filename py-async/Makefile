@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/01/06 10:58:51 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/06 17:13:32 asau Exp $
 #
 
 DISTNAME=	async-0.6.1
@@ -10,8 +10,6 @@ MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://pypi.python.org/packages/source/a/async/
 COMMENT=	Framework to process interdependent tasks in a pool of workers
 LICENSE=	modified-bsd #Probably
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=	${WRKDIR}/async-0.6.1
 

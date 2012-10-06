@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2009/04/29 00:16:18 jihbed Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/06 17:13:26 asau Exp $
 #
 
 DISTNAME=	PyProtocols-0.9.3
@@ -9,8 +9,6 @@ MASTER_SITES=	http://peak.telecommunity.com/dist/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://peak.telecommunity.com/PyProtocols.html
 COMMENT=		Lets you easily define your own protocols and adapters
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	zope3>=3.3.1:../../www/zope3
 

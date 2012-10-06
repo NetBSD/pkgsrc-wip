@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/06/20 12:54:14 jihbed Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/06 17:13:24 asau Exp $
 #
 
 DISTNAME=		Fnorb-1.3
@@ -9,8 +9,6 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=fnorb/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://fnorb.sourceforge.net/
 COMMENT=		CORBA 2.0 ORB for Python
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes

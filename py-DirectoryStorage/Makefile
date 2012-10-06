@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/09/02 13:53:53 noud4 Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/06 17:13:24 asau Exp $
 #
 
 DISTNAME=		DirectoryStorage_1_1_7
@@ -11,8 +11,6 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://dirstorage.sourceforge.net/
 COMMENT=		Storage for ZODB, that uses files and directories
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CONFIGURE=		yes
 PYTHON_PATCH_SCRIPTS=	${TOOLS}

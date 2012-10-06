@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/02/12 20:16:33 noud4 Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/06 17:22:16 asau Exp $
 #
 
 DISTNAME=	BIP-0.5.4
@@ -17,8 +17,6 @@ DEPENDS+=	${PYPKGPREFIX}-nose>=0.11.3:../../devel/py-nose
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.7.0:../../math/py-scipy
 DEPENDS+=	${PYPKGPREFIX}-liveplots>=0.7.1:../../wip/py-liveplots
 DEPENDS+=	${PYPKGPREFIX}-openopt>=0.31:../../wip/py-openopt
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

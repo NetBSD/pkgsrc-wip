@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/04/08 19:09:44 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/06 17:13:31 asau Exp $
 #
 
 DISTNAME=	python-ase-3.4.1.1765
@@ -11,8 +11,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://wiki.fysik.dtu.dk/ase/
 COMMENT=	Atomic Simulation Environment
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 FETCH_USING=		wget
 FETCH_BEFORE_ARGS=	--no-check-certificate

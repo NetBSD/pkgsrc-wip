@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2010/06/13 22:47:14 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/06 17:13:27 asau Exp $
 #
 
 DISTNAME=		Soya-0.6.1
@@ -11,6 +11,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://home.gna.org/oomadness/en/soya/index.html
 COMMENT=		High level 3D engine for Python
+
+PKG_DESTDIR_SUPPORT=	none
 
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes

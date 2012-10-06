@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/05/27 22:41:29 jihbed Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/06 17:13:32 asau Exp $
 #
 
 DISTNAME=	aspell-python1.11
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://wm.ite.pl/proj/aspell-python/index-c.html
 COMMENT=	Python wrapper for GNU Aspell
 LICENSE=	modified-bsd
-
-PKG_DESTDIR_SUPPORT= user-destdir
 
 WRKSRC=	${WRKDIR}/aspell-python
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2010/06/15 14:11:59 jihbed Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/06 17:13:24 asau Exp $
 #
 
 DISTNAME=	PyBrenda041-tar
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.gz
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://wiki.python.org/moin/PyBrenda
 COMMENT=		Parallel computation system
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=	${WRKDIR}/PyBrenda-0.4.1
 

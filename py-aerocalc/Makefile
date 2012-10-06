@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/08/25 17:16:29 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/06 17:13:27 asau Exp $
 #
 
 DISTNAME=	AeroCalc-0.11
@@ -10,8 +10,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://www.kilohotel.com/python/aerocalc/
 COMMENT=	Aeronautical Engineering Calculations
 #LICENSE=	# TODO: (see mk/license.mk)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

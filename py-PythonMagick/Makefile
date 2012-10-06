@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/06/13 22:47:14 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/06 17:13:27 asau Exp $
 #
 
 DISTNAME=	PythonMagick-0.9.1
@@ -16,7 +16,6 @@ COMMENT=	Python binding for ImageMagick
 USE_LANGUAGES=	c c++
 USE_TOOLS+=     pkg-config
 
-PKG_DESTDIR_SUPPORT=    user-destdir
 GNU_CONFIGURE=  yes
 
 #PYDISTUTILSPKG= yes

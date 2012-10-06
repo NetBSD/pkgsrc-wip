@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/04/08 19:09:44 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/06 17:13:32 asau Exp $
 #
 
 DISTNAME=	Aspyct-3.0_beta_4
@@ -11,8 +11,6 @@ MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://www.aspyct.org/
 COMMENT=	Python library including an aspect-oriented programming (AOP) engine
 LICENSE=	gnu-lgpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

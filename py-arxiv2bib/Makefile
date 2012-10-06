@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/09/29 15:49:20 kristerw Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/06 17:13:31 asau Exp $
 #
 
 DISTNAME=	arxiv2bib-1.0.0
@@ -11,8 +11,6 @@ MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://nathan11g.github.com/arxiv2bib
 COMMENT=	Get arXiv.org metadata in BibTeX format
 LICENSE=	2-clause-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/arxiv2bib-1.0.0
 

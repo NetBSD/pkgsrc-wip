@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/09/07 21:27:50 noud4 Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/06 17:22:16 asau Exp $
 #
 
 DISTNAME=	biskit-2.3.1
@@ -15,8 +15,6 @@ LICENSE=	gnu-gpl-v2
 DEPENDS+=	${PYPKGPREFIX}-biggles>=1.6.3:../../graphics/py-biggles
 DEPENDS+=	${PYPKGPREFIX}-Scientific>=2.8:../../math/py-Scientific
 DEPENDS+=	${PYPKGPREFIX}-rlcompleter2>=0.96:../../wip/py-rlcompleter2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	perl
 USE_LANGUAGES=	# none

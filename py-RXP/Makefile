@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/04/29 00:38:02 jihbed Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/06 17:13:27 asau Exp $
 #
 
 DISTNAME=	pyRXP-1.13-daily-unix
@@ -9,8 +9,6 @@ MASTER_SITES=	http://www.reportlab.org/daily/
 MAINTAINER=	david@netbsd-fr.org
 HOMEPAGE=	http://www.reportlab.org/pyrxp.html
 COMMENT=	Validating XML parser for Python
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=	${WRKDIR}/pyRXP-1.13
 MAKE_ENV+=	LIBERROR=0

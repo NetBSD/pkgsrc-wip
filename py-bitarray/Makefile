@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/03/20 22:48:46 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/06 17:22:16 asau Exp $
 #
 
 DISTNAME=	bitarray-0.3.5
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pypi.python.org/pypi/bitarray
 COMMENT=	Efficient arrays of booleans -- C extension
 LICENSE=	python-software-foundation
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=	${WRKDIR}/bitarray-0.3.5
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/12/29 00:22:12 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/06 17:13:31 asau Exp $
 #
 
 DISTNAME=	PyArabic-0.3
@@ -11,8 +11,6 @@ MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://pyarabic.sourceforge.net/
 COMMENT=	Arabic text tools
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 PYDISTUTILSPKG=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/06/12 15:10:40 uccwen Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/06 17:13:27 asau Exp $
 #
 
 DISTNAME=	SQLObject-1.3.1.tar
@@ -12,8 +12,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sqlobject.sourceforge.net/
 COMMENT=	Allows you to translate RDBMS table rows into Python objects
 LICENSE=	gnu-lgpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S|.tar||:Q}
 USE_LANGUAGES=	# none

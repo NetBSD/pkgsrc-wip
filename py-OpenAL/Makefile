@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2009/05/05 23:06:01 jihbed Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/06 17:13:26 asau Exp $
 #
 
 DISTNAME=	PyOpenAL-0.1.6
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://home.gna.org/oomadness/en/pyopenal/index.html
 COMMENT=	Python bindings for audio/openal
 #LICENSE=	LICENSE
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes

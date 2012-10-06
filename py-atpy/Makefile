@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/08/25 16:20:48 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/06 17:13:33 asau Exp $
 #
 
 DISTNAME=	ATpy-0.9.6
@@ -10,8 +10,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://atpy.github.com/
 COMMENT=	Astronomical Tables in Python
 LICENSE=	mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG=	yes
 USE_LANGUAGES=	# none

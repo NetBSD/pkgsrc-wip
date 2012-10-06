@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/02/12 16:02:14 noud4 Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/06 17:13:28 asau Exp $
 #
 
 DISTNAME=	AIGO-0.1.0
@@ -11,8 +11,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://code.google.com/p/aigo/
 COMMENT=	Analysis and Inter-comparison of Gene Ontology functional annotations
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=	 ${PYPKGPREFIX}-creole-[0-9]*
 

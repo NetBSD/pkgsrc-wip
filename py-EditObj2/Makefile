@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2011/12/30 19:36:22 jihbed Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/06 17:13:24 asau Exp $
 #
 
 DISTNAME=	EditObj2-0.4
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@netbsd.org
 HOMEPAGE=	http://home.gna.org/oomadness/en/editobj/index.html
 COMMENT=	EditObj2 is a dialog box generator for Python objects
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 PYDISTUTILSPKG=         yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/04/02 22:36:43 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/06 17:22:16 asau Exp $
 #
 
 DISTNAME=	bidict-0.1.1
@@ -10,8 +10,6 @@ MAINTAINER=	kamek.derouiche@gmail.com
 HOMEPAGE=	http://bitbucket.org/jab/bidict
 COMMENT=	Bidirectional (one-to-one) mapping data structure
 LICENSE=	mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/bidict-0.1.1
 USE_LANGUAGES=	# none

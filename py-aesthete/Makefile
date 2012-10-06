@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/12/27 14:03:09 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/06 17:13:28 asau Exp $
 #
 
 DISTNAME=	Aesthete-0.4.1-7
@@ -17,9 +17,6 @@ DEPENDS+=	${PYPKGPREFIX}-argparse>=1.1:../../devel/py-argparse
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.7.2:../../math/py-scipy
 DEPENDS+=	${PYPKGPREFIX}-sympy>=0.6.7:../../math/py-sympy
 DEPENDS+=	${PYPKGPREFIX}-lxml>=2.2.6:../../textproc/py-lxml
-
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/Aesthete-0.4.1-7
 

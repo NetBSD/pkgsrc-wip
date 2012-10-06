@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2011/10/17 23:24:22 schnoebe Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/06 17:22:16 asau Exp $
 
 DISTNAME=		MostAwesomeDude-bravo-1.8.1-0-gf6cb5fe
 BRAVO_VERSION=		1.8.1
@@ -26,8 +26,6 @@ DEPENDS+=		${PYPKGPREFIX}-numpy>=0nb4:../../math/py-numpy
 DEPENDS+=		${PYPKGPREFIX}-twisted>=10.1:../../net/py-twisted
 
 PYTHON_VERSIONS_ACCEPTED=	27 26
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 # REPLACE_PYTHON+=	spectrumctl/spectrumctl.py
 PY_PATCHPLIST=		yes

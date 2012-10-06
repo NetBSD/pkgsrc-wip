@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/09/15 15:22:54 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/06 17:13:30 asau Exp $
 #
 
 VERSION= 0.3.1.dev-20120112
@@ -13,8 +13,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://github.com/rzoz/python-algebraic
 COMMENT=	Algebraic modeling system for Python
 LICENSE=	2-clause-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

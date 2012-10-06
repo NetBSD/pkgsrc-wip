@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/04/02 22:35:05 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/06 17:22:16 asau Exp $
 #
 
 DISTNAME=	bottleneck-0.1.0dev
@@ -12,8 +12,6 @@ COMMENT=	Fast, NumPy array functions written in Cython
 #LICENSE=	# TODO: (see mk/license.mk)
 
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.7.0:../../math/py-scipy
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=	${WRKDIR}/Bottleneck-0.1.0dev
 

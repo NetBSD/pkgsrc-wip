@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/07/14 13:10:27 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/06 17:13:27 asau Exp $
 #
 
 DISTNAME=	AddOns-0.7
@@ -12,8 +12,6 @@ HOMEPAGE=	http://pypi.python.org/pypi/AddOns
 COMMENT=	Dynamically extend other objects with AddOns
 
 DEPENDS+=	${PYPKGPREFIX}-decoratortools>=1.8:../../wip/py-decoratortools
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

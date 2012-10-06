@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/04/29 00:19:34 jihbed Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/06 17:13:26 asau Exp $
 #
 
 DISTNAME=		PEAK-0.5a3
@@ -9,8 +9,6 @@ MASTER_SITES=		http://peak.telecommunity.com/dist/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://peak.telecommunity.com/
 COMMENT=		Python Enterprise Application Kit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=		${PYPKGPREFIX}-ZODB-*
 

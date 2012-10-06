@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/01/30 07:19:57 noud4 Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/06 17:13:31 asau Exp $
 #
 
 DISTNAME=	asciidata-1.1.1
@@ -13,8 +13,6 @@ COMMENT=	Asciidata , to handle (read/modify/write) ASCII tables
 LICENSE=	gnu-lgpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-pyfits>=2.3.1:../../graphics/py-pyfits
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 PYDISTUTILSPKG=	yes

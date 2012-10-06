@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/03 22:14:52 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/06 17:22:16 asau Exp $
 #
 
 DISTNAME=	beets-1.0b15
@@ -18,8 +18,6 @@ DEPENDS+=	${PYPKGPREFIX}-musicbrainz-ngs-[0-9]*:../../wip/py-musicbrainz-ngs
 DEPENDS+=	${PYPKGPREFIX}-mutagen-[0-9]*:../../audio/py-mutagen
 DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 DEPENDS+=	${PYPKGPREFIX}-Unidecode-[0-9]*:../../textproc/py-Unidecode
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 PLIST_SUBST+=			PYVERSSUFFIX=${PYVERSSUFFIX}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/05/09 14:54:49 uccwen Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/06 17:13:24 asau Exp $
 
 DISTNAME=	PyClimate-1.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/Py//}
@@ -9,8 +9,6 @@ MAINTAINER=	wenheping@gmail.com
 HOMEPAGE=	http://www.pyclimate.org/
 COMMENT=	Python modules for Analysis of Climate Variability
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG=	yes
 

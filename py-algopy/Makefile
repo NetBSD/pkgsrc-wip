@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/09/10 23:23:09 jihbed Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/06 17:13:30 asau Exp $
 #
 
 DISTNAME=	algopy-0.3.1
@@ -10,8 +10,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://packages.python.org/algopy
 COMMENT=	Taylor Arithmetic Computation and Algorithmic Differentiation
 LICENSE=	modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

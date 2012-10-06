@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/07/14 22:04:31 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/06 17:13:24 asau Exp $
 #
 
 DISTNAME=	EMpy-0.1.2.linux-i686
@@ -10,8 +10,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://empy.sourceforge.net/
 COMMENT=	Suite of numerical algorithms widely used in electromagnetism
 #LICENSE=	# TODO: (see mk/license.mk)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/usr
 

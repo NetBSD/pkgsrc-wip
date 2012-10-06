@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/04/08 19:09:45 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.13 2012/10/06 17:22:16 asau Exp $
 #
 
 DISTNAME=		buildbot-0.8.5
@@ -11,8 +11,6 @@ MAINTAINER=		haad@NetBSD.org
 HOMEPAGE=		http://buildbot.sourceforge.net/
 COMMENT=		System to automate the compile/test cycle
 LICENSE=		gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes

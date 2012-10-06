@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2009/07/29 08:43:49 jihbed Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/06 17:13:24 asau Exp $
 #
 
 DISTNAME=	CVSToys-1.0.10
@@ -14,8 +14,6 @@ LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-readline-[0-9]*:../../devel/py-readline
 DEPENDS+=	${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes

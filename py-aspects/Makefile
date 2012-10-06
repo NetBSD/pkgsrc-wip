@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/03/22 22:29:47 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/06 17:13:31 asau Exp $
 #
 
 DISTNAME=	python-aspects-1.3
@@ -9,8 +9,6 @@ MASTER_SITES=	http://www.cs.tut.fi/~ask/aspects/
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://www.cs.tut.fi/~ask/aspects/index.shtml
 COMMENT=	Lightweight aspect oriented programming library for Python
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG= yes
 
