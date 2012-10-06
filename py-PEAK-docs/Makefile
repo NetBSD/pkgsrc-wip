@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2011/11/21 19:08:57 absd Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/06 15:57:15 asau Exp $
 #
 
 DISTNAME=		PEAK-0.5a3
@@ -19,10 +19,10 @@ DOC_SRCDIR=		${WRKSRC}/docs
 PLIST_SRC=		${WRKDIR}/.PLIST_SRC
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/${HTMLDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/${HTMLDIR}
 	${CAT} ${PKGDIR}/PLIST.pre >${PLIST_SRC}
-	cd ${DOC_SRCDIR}/html && pax -rw -pe reference ${PREFIX}/${HTMLDIR}
-	cd ${DOC_SRCDIR}/core_tutorial && pax -rw -pe tut ${PREFIX}/${HTMLDIR}
+	cd ${DOC_SRCDIR}/html && pax -rw -pe reference ${DESTDIR}${PREFIX}/${HTMLDIR}
+	cd ${DOC_SRCDIR}/core_tutorial && pax -rw -pe tut ${DESTDIR}${PREFIX}/${HTMLDIR}
 	cd ${PREFIX} && ${FIND} ${HTMLDIR} -type f -print >>${PLIST_SRC}
 
 .include "../../mk/bsd.pkg.mk"
