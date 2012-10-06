@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4907 2012/10/06 13:19:56 kristerw Exp $
+# $Id: Makefile,v 1.4908 2012/10/06 18:05:35 kristerw Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -526,7 +526,6 @@ SUBDIR+=	edbus
 SUBDIR+=	edelib
 SUBDIR+=	editline
 SUBDIR+=	edje
-SUBDIR+=	edoc
 SUBDIR+=	efltk
 SUBDIR+=	efreet
 SUBDIR+=	eic

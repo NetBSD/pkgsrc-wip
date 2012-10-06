@@ -1,5 +1,0 @@
-EDoc++ is a tool that analyses exception usage in C++ source code to provide
-compile time/static analysis checks similar to that found in other languages
-such as Java. EDoc++ can also generate detailed information about exception
-propagation in various formats. One of which can be used by doxygen in
-documenting exception information for API's.
