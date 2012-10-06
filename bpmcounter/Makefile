@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/05 11:37:29 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/06 15:39:20 asau Exp $
 #
 
 DISTNAME=	bpmcounter-0.1.0
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://djplay.sourceforge.net/
 COMMENT=	Comfortable GUI application to count and tag MP3 file collection
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
