@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/09/24 16:56:40 asau Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/06 05:55:25 ryo-on Exp $
 #
 
 DISTNAME=		autocutsel-0.9.0
@@ -6,7 +6,7 @@ PKGREVISION=		1
 CATEGORIES=		x11
 MASTER_SITES=		http://savannah.nongnu.org/download/autocutsel/
 
-MAINTAINER=		reed@reedmedia.net
+MAINTAINER=		ryoon@NetBSD.org
 HOMEPAGE=		http://www.nongnu.org/autocutsel/
 COMMENT=		Synchronizes the X11 cutbuffer and CLIPBOARD selection
 LICENSE=		gnu-gpl-v2
