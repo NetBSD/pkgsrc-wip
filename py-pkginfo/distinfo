@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2012/10/06 23:42:04 jihbed Exp $
+
+SHA1 (pkginfo-0.9.tar.gz) = b97e3bbaef711d093cd2d0f8be9cc3a6310314e6
+RMD160 (pkginfo-0.9.tar.gz) = 1f34831fe54a3da4b49bff6c4a79f88b39ae7033
+Size (pkginfo-0.9.tar.gz) = 24094 bytes
