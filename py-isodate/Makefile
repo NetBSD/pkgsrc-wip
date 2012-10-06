@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/10/06 18:11:53 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/06 18:14:21 jihbed Exp $
 #
 
 DISTNAME=	isodate-0.4.8
@@ -12,6 +12,9 @@ COMMENT=	ISO 8601 date/time/duration parser and formater
 LICENSE=	modified-bsd
 
 USE_LANGUAGES=	# none
+
+do-test:
+	${RUN} cd ${WRKSRC}/src/isodate/tests; ${SETENV} ${TEST_ENV} ${PYTHONBIN} __init__.py
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
