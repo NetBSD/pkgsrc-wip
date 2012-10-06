@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2012/10/06 23:09:25 jihbed Exp $
+
+SHA1 (rdflib-django-0.2.dev-201210061248.tar.gz) = 910e59c8245de17cb664bee109b23d873a74625b
+RMD160 (rdflib-django-0.2.dev-201210061248.tar.gz) = 88fa5373929861daf6f693c0351be6ec1cc5bf56
+Size (rdflib-django-0.2.dev-201210061248.tar.gz) = 15554 bytes
