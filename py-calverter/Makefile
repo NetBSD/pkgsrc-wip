@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/09/02 14:18:10 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/06 17:55:20 asau Exp $
 #
 
 DISTNAME=	pyCalverter-1.5
@@ -10,8 +10,6 @@ MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://launchpad.net/pycalverter
 COMMENT=	Convert date between Hijri, Jalali and Gregorian types of date
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

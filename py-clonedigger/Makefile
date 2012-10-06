@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/01/30 05:59:26 noud4 Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/06 17:55:27 asau Exp $
 #
 
 DISTNAME=	clonedigger-1.0.9-beta
@@ -13,8 +13,6 @@ COMMENT=	Clone Digger aimed to detect similar code in Python
 LICENSE=	gnu-lgpl-v2
 
 DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX:Q}

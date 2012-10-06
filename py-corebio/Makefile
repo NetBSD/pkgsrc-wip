@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/03 22:14:52 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/06 17:55:30 asau Exp $
 #
 
 DISTNAME=	CoreBio-0.5.0
@@ -10,8 +10,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://code.google.com/p/corebio/
 COMMENT=	Python toolkit for computational biology
 LICENSE=	modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/03/20 22:25:47 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/06 17:55:31 asau Exp $
 #
 
 DISTNAME=	csa-0.0.1
@@ -10,8 +10,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://software.incf.org/software/csa/
 COMMENT=	The Connection-Set Algebra implemented in Python
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/csa-0.0.1
 

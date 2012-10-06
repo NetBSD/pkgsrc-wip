@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/09/07 21:54:37 noud4 Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/06 17:55:24 asau Exp $
 #
 
 DISTNAME=	cclib-1.0.tar
@@ -12,8 +12,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://cclib.sourceforge.net/wiki/index.php/Main_Page
 COMMENT=	Parsers and algorithms for computational chemistry
 LICENSE=	gnu-lgpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/cclib-1.0
 USE_LANGUAGES=	# none

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/08/01 14:57:09 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/06 17:55:31 asau Exp $
 #
 
 DISTNAME=	cvxopt-1.1.2.tar
@@ -11,8 +11,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://abel.ee.ucla.edu/cvxopt/
 COMMENT=	Python software for convex optimization
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/cvxopt-1.1.2/src
 

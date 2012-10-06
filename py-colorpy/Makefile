@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/09/03 22:56:09 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/06 17:55:29 asau Exp $
 #
 
 DISTNAME=	colorpy-0.1.0
@@ -13,8 +13,6 @@ LICENSE=	gnu-gpl-v3 AND gnu-lgpl-v3
 
 
 #DEPENDS+=	${PYPKGPREFIX}-scipy>=0.7.2:../../math/py-scipy
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/04/13 16:18:40 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/06 17:55:28 asau Exp $
 #
 
 DISTNAME=	cogent-1.4.1
@@ -14,8 +14,6 @@ LICENSE=		gnu-gpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-sqlalchemy>=0.5.6:../../databases/py-sqlalchemy
 DEPENDS+=	${PYPKGPREFIX}-pyrex-[0-9]*:../../lang/py-pyrex
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG= yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/09/08 23:21:32 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/06 17:55:21 asau Exp $
 #
 
 DISTNAME=	pycaptcha-0.4
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@netbsd.org
 HOMEPAGE=	http://svn.navi.cx/misc/trunk/pycaptcha/
 COMMENT=	Python framework for CAPTCHA tests
 LICENSE=	mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 PYDISTUTILSPKG=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/09/06 13:49:09 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/06 17:55:26 asau Exp $
 #
 
 DISTNAME=	clnum-1.6
@@ -10,8 +10,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://pypi.python.org/packages/source/c/clnum/
 COMMENT=	Rational and arbitrary precision floating point numbers
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c c++
 

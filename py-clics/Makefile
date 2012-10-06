@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/01/24 09:31:55 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/06 17:55:26 asau Exp $
 #
 
 DISTNAME=	CLICS-src-0.1.0
@@ -14,8 +14,6 @@ COMMENT=	Clone detector and GUI
 
 DEPENDS+=	${PYPKGPREFIX}-psycopg2>=2.2.2:../../databases/py-psycopg2
 DEPENDS+=	${PYPKGPREFIX}-psyco>=1.6:../../lang/py-psyco
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/CLICS-d93a40ceebaa
 

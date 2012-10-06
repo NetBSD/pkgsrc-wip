@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/01/30 06:01:48 noud4 Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/06 17:55:27 asau Exp $
 #
 
 DISTNAME=	codepy-0.90.tar
@@ -12,8 +12,6 @@ MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://mathema.tician.de/software/codepy
 COMMENT=	CodePy is a C metaprogramming toolkit for Python
 #LICENSE=	# TODO: (see mk/license.mk)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/codepy-0.90
 USE_LANGUAGES=	# none

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/03/20 23:17:13 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/06 17:55:25 asau Exp $
 #
 
 DISTNAME=	chaos
@@ -11,8 +11,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://www.math.uic.edu/~culler/chaos/
 COMMENT=	UIC REU on Chaos, Fractals and Complex Dynamics
 #LICENSE=	# TODO: (see mk/license.mk)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 VERSION=	1.0
 PYDISTUTILSPKG=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/08/25 17:14:46 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/06 17:55:29 asau Exp $
 #
 
 DISTNAME=	ComplexSystems-0.3.0.5
@@ -10,8 +10,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	 http://bitbucket.org/vgauthier/complex-systems/
 COMMENT=	Toolbox for Complex Sytems
 LICENSE=	mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/ComplexSystems-0.3.0.5
 

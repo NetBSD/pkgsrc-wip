@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/02/01 13:58:39 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/06 17:55:31 asau Exp $
 #
 
 DISTNAME=	CythonGSL-0.1
@@ -10,8 +10,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://github.com/twiecki/CythonGSL
 COMMENT=	Cython declarations for the Gnu Scientific Library
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/CythonGSL-0.1
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/06/04 11:57:31 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/06 17:55:24 asau Exp $
 #
 
 DISTNAME=	Pyccuracy-1.2.23.tar
@@ -14,8 +14,6 @@ COMMENT=	Pyccuracy is a BDD style Acceptance Testing framework
 #LICENSE=	# TODO: (see mk/license.mk)
 
 DEPENDS+=	${PYPKGPREFIX}-selenium>=1.0.1:../../wip/py-selenium
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/Pyccuracy-1.2.23
 USE_LANGUAGES=	# none

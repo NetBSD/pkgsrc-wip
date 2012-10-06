@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/04/08 19:09:45 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/06 17:55:29 asau Exp $
 #
 
 DISTNAME=	configobj-4.7.2.tar
@@ -11,8 +11,6 @@ MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://www.voidspace.org.uk/python/configobj.html
 COMMENT=	Simple but powerful config file reader and write
 LICENSE=	modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/configobj-4.7.2
 USE_LANGUAGES=	# none

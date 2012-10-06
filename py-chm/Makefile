@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/06/23 09:38:31 jihbed Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/06 17:55:25 asau Exp $
 #
 
 DISTNAME=	pychm-0.8.4
@@ -9,8 +9,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gnochm/}
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://gnochm.sourceforge.net/
 COMMENT=	Python bindings for the CHMLIB library
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG=		yes
 

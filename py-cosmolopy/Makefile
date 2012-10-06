@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/07/31 12:15:24 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/06 17:55:30 asau Exp $
 #
 
 VERS=	0.1.alpha
@@ -15,8 +15,6 @@ LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-nose>=0.11.3:../../devel/py-nose
 #DEPENDS+=	${PYPKGPREFIX}-scipy>=0.7.0:../../math/py-scipy
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=	${WRKDIR}/${DISTNAME}
 USE_LANGUAGES=	c

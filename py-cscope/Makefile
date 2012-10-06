@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/06/04 12:07:05 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/06 17:55:31 asau Exp $
 #
 
 DISTNAME=	pycscope-0.3.tar
@@ -12,8 +12,6 @@ MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://pypi.python.org/pypi/pycscope/
 COMMENT=	Generates a cscope index of Python source trees
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/pycscope-0.3
 USE_LANGUAGES=	# none

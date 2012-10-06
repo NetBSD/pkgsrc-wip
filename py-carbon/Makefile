@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/08/14 18:35:45 fhajny Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/06 17:55:22 asau Exp $
 #
 
 DISTNAME=	carbon-0.9.10
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://launchpad.net/graphite
 COMMENT=	Backend storage application for graphite
 LICENSE=	apache-2.0
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
 DEPENDS+=	${PYPKGPREFIX}-whisper>=${PKGVERSION_NOREV}*:../../wip/py-whisper

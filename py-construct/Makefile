@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/04/08 19:09:45 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/06 17:55:30 asau Exp $
 #
 
 DISTNAME=	construct-2.04
@@ -10,8 +10,6 @@ MAINTAINER=	eric@cirr.com
 HOMEPAGE=	http://pypi.python.org/pypi/construct
 COMMENT=	Powerful declarative parser for binary data
 LICENSE=	public-domain
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG=	yes
 USE_LANGUAGES+=	c
