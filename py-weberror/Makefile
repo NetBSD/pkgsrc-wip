@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/07/14 13:21:25 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/06 21:10:15 kristerw Exp $
 #
 
 DISTNAME=	WebError-0.10.2.tar
@@ -16,7 +16,7 @@ LICENSE=	mit
 DEPENDS+=	${PYPKGPREFIX}-simplejson>=2.1.1:../../converters/py-simplejson
 DEPENDS+=	${PYPKGPREFIX}-pygments>=1.3.1:../../textproc/py-pygments
 DEPENDS+=	${PYPKGPREFIX}-Paste>=1.7.2:../../www/py-paste
-DEPENDS+=	${PYPKGPREFIX}-tempita>=0.4:../../wip/py-tempita
+DEPENDS+=	${PYPKGPREFIX}-tempita>=0.4:../../textproc/py-Tempita
 DEPENDS+=	${PYPKGPREFIX}-webob>=0.9.8:../../wip/py-webob
 
 PKG_DESTDIR_SUPPORT=	user-destdir
