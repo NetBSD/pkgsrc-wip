@@ -1,3 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1 2012/09/28 18:50:22 othyro Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/10/07 07:53:54 thomasklausner Exp $
 bin/djplay
+share/locale/de/LC_MESSAGES/djplay.mo
+share/locale/en@boldquot/LC_MESSAGES/djplay.mo
+share/locale/en@quot/LC_MESSAGES/djplay.mo
 share/pixmaps/djplay-icon.png
