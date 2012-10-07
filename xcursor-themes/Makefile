@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/09/13 14:17:13 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/07 20:11:08 asau Exp $
 #
 
 DISTNAME=	xcursor-themes-1.0.3
@@ -11,8 +11,6 @@ HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	Modular X.org xcursor themes
 
 MAKE_JOBS_SAFE=	no
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEPENDS+=	xcursorgen>=1.0.5:../../x11/xcursorgen
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/03/01 19:12:21 shattered Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/07 20:11:10 asau Exp $
 #
 
 DISTNAME=	xsi-0.98.29
@@ -10,6 +10,8 @@ HOMEPAGE=	http://xsi.kolabore.ath.cx/
 COMMENT=	System monitor that provides XML encoded stats
 
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xmlsysinfo/}
+
+PKG_DESTDIR_SUPPORT=	none
 
 BUILDLINK_API_DEPENDS.libxml2+=   libxml2>=2.0.0
 BUILDLINK_API_DEPENDS.zlib+=	  zlib>=1.2.0

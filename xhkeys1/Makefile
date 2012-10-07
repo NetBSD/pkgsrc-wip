@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/04/15 20:53:39 jakllsch Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/07 20:11:09 asau Exp $
 #
 
 DISTNAME=	xhkeys-1.0.2
@@ -8,8 +8,6 @@ MASTER_SITES=	http://wmalms.tripod.com/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://wmalms.tripod.com/
 COMMENT=	Tool for special keyboards
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gmake
 USE_LANGUAGES+=	c

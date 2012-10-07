@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/09/06 13:59:00 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 20:11:10 asau Exp $
 #
 
 DISTNAME=	xmds-1.6.6
@@ -11,8 +11,6 @@ COMMENT=	XMDS is a code generator that integrates equations
 LICENSE=	gnu-gpl-v2
 
 MAKE_JOBS_SAFE=NO
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

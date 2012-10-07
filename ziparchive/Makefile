@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/05/12 12:13:39 ryo-on Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 20:11:11 asau Exp $
 #
 
 DISTNAME=	ziparchive
@@ -11,8 +11,6 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://www.artpol-software.com/Download.aspx
 COMMENT=	Library for ZIP compression and decompression
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DIST_SUBDIR=		ziparchive-4.1.0
 

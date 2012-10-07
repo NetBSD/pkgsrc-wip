@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2011/11/16 15:11:19 noud4 Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/07 20:11:08 asau Exp $
 #
 
 DISTNAME=	WritRecogn-0.1.9
@@ -13,8 +13,6 @@ COMMENT=	CJK Handwriting Recoginzer
 LICENSE=	gnu-gpl-v2
 
 BUILD_DEPENDS+=	gob2>=2.0.0:../../devel/gob2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

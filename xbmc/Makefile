@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/07/02 13:38:09 moubctez Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/07 20:11:08 asau Exp $
 #
 
 DISTNAME=	xbmc-10.1
@@ -10,8 +10,6 @@ MAINTAINER=	khorben@defora.org
 HOMEPAGE=	http://xbmc.org/
 COMMENT=	Software media player and entertainment hub for digital media
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 EXTRACT_USING=		bsdtar
 

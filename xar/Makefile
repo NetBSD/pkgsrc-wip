@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/01/17 12:03:33 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/07 20:11:08 asau Exp $
 #
 
 DISTNAME=		xar-1.5.2
@@ -9,6 +9,8 @@ MASTER_SITES=		http://xar.googlecode.com/files/
 MAINTAINER=		dhowland@users.sourceforge.net
 HOMEPAGE=		http://code.google.com/p/xar/
 COMMENT=		The eXtensible ARchiver
+
+PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake

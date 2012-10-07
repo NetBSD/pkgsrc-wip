@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/06/02 11:32:25 ryo-on Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/07 20:11:10 asau Exp $
 #
 
 DISTNAME=	quick_locale_switcher-1.7.8
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://addons.mozilla.org/en-US/firefox/addon/quick-locale-switcher/
 COMMENT=	Quickly change the locale preference in Mozilla applications
 LICENSE=	mpl-1.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_BUILD=	yes
 

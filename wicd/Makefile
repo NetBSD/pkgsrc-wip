@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/05/11 11:43:59 noud4 Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/07 20:11:07 asau Exp $
 #
 
 DISTNAME=	wicd-1.6.2.2
@@ -19,8 +19,6 @@ DEPENDS+=	${PYPKGPREFIX}-urwid>=0.9.9:../../devel/py-urwid
 PY_PATCHPLIST = YES
 PYSETUP = setup.py
 PLIST_SUBST+=	EGG_INFODIR=${EGG_NAME}-py${PYVERSSUFFIX}.egg-info
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	pkg-config
 USE_TOOLS+=	intltool

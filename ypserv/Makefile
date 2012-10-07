@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/03/09 03:20:08 tnn2 Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/07 20:11:11 asau Exp $
 #
 
 DISTNAME=		ypserv-2.9
@@ -14,6 +14,8 @@ COMMENT=		NIS (YP) Server
 DEPENDS+=		portmap>=4:../../net/portmap
 # rc.d scripts use domainname from yp-tools or net-tools
 #DEPENDS+=		yp-tools-[0-9]*:../../wip/yp-tools
+
+PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=		yes
 

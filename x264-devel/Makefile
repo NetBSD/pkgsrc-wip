@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/01/14 13:11:15 moubctez Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/07 20:11:08 asau Exp $
 
 SNAPSHOT_DATE=		20110101
 
@@ -11,8 +11,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		joerg@NetBSD.org
 HOMEPAGE=		http://www.videolan.org/developers/x264.html
 COMMENT=		GPL licensed H.264 encoder
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 

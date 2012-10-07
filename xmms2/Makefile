@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2010/01/17 12:03:33 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.22 2012/10/07 20:11:10 asau Exp $
 #
 
 DISTNAME=	xmms2-0.2DrJekyll
@@ -11,6 +11,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://xmms2.xmms.org/
 COMMENT=	Audio player featuring a client-server model
+
+PKG_DESTDIR_SUPPORT=	none
 
 HAS_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config

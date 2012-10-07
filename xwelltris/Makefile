@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/06/11 09:45:17 leot1990 Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/07 20:11:11 asau Exp $
 #
 
 DISTNAME=	xwelltris-1.0.1.src
@@ -9,8 +9,6 @@ MASTER_SITES=	http://xnc.jinr.ru/xwelltris/src/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://xnc.jinr.ru/xwelltris/
 COMMENT=	Tetris like popular game
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 GNU_CONFIGURE=	yes

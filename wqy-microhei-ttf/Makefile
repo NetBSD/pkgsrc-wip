@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/03/09 19:58:45 ryo-on Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 20:11:08 asau Exp $
 #
 
 DISTNAME=	wqy-microhei-0.2.0-beta
@@ -10,8 +10,6 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://wenq.org/enindex.cgi?ZenHei%28en%29
 COMMENT=	WenQuanYi Open Source Outline Fonts based on Droid font
 LICENSE=	apache-2.0 OR gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/wqy-microhei
 USE_LANGUAGES=	# none

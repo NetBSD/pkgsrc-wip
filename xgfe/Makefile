@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2010/06/13 22:47:21 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/07 20:11:09 asau Exp $
 #
 
 DISTNAME=		xgfe-2.1
@@ -8,6 +8,8 @@ MASTER_SITES=		${MASTER_SITE_TEX_CTAN=graphics/gnuplot/contrib}
 
 MAINTAINER=		dprice@cs.nmsu.edu
 COMMENT=		GUI front end for Gnuplot plotting package
+
+PKG_DESTDIR_SUPPORT=	none
 
 WRKSRC=			${WRKDIR}/xgfe-2.1/source
 

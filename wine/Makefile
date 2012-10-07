@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2012/02/18 23:01:46 asau Exp $
+# $NetBSD: Makefile,v 1.23 2012/10/07 20:11:07 asau Exp $
 
 DISTNAME=	wine-1.4-rc4
 PKGNAME=	wine-1.4rc4
@@ -17,8 +17,6 @@ BUILD_DEPENDS+=	fontforge-[0-9]*:../../fonts/fontforge
 
 ONLY_FOR_PLATFORM+=	*-*-i386
 #ONLY_FOR_PLATFORM+=	*-*-x86_64
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c
 USE_LIBTOOL=		yes

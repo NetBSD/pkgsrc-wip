@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/02/19 20:10:18 guigui2 Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 20:11:09 asau Exp $
 #
 
 .include "../../wip/xfce48/Makefile.common"
@@ -12,8 +12,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	gls@NetBSD.org
 HOMEPAGE=	http://www.xfce.org/
 COMMENT=	D-Bus thumbnailing service
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

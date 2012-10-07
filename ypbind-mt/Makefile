@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2008/03/09 03:20:08 tnn2 Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/07 20:11:11 asau Exp $
 #
 
 DISTNAME=		ypbind-mt-1.12
@@ -17,6 +17,8 @@ COMMENT=		Multithreaded NIS (YP) client daemon
 DEPENDS+=		portmap>=4:../../net/portmap
 # rc.d script uses domainname from yp-tools or net-tools
 #DEPENDS+=		yp-tools-[0-9]*:../../wip/yp-tools
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/06/12 13:28:42 othyro Exp $
+# $NetBSD: Makefile,v 1.17 2012/10/07 20:11:11 asau Exp $
 #
 
 DISTNAME=	zinf-2.2.5
@@ -10,7 +10,6 @@ HOMEPAGE=	http://www.zinf.org/
 COMMENT=	Simple but powerful audio player
 LICENSE=	gnu-gpl-v2
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 BUILD_DEPENDS+=	nasm>=0.98:../../devel/nasm
 
 GNU_CONFIGURE=	yes

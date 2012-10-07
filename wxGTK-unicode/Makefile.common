@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2010/12/26 05:01:24 davesainty Exp $
+# $NetBSD: Makefile.common,v 1.9 2012/10/07 20:11:08 asau Exp $
 # used by wip/wxGTK-contrib-unicode/Makefile
 
 DISTNAME=		wxGTK-2.8.8
@@ -15,8 +15,6 @@ DISTINFO_FILE=		${.CURDIR}/../../wip/wxGTK-unicode/distinfo
 
 PATCHFILES=		${DISTNAME}-libtool.diff.bz2
 PATCH_SITES=		${MASTER_SITE_LOCAL}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		pkg-config msgfmt
 USE_LIBTOOL=		yes

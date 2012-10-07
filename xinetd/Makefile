@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/03/14 01:28:18 jlamwww Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/07 20:11:09 asau Exp $
 #
 
 DISTNAME=		xinetd-2.3.13
@@ -8,6 +8,8 @@ MASTER_SITES=		http://www.xinetd.org/
 MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://www.xinetd.org/
 COMMENT=		Secure replacement for inetd
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes

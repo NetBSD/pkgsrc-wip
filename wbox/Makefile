@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/08/02 12:13:31 bartoszkuzma Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/07 20:11:06 asau Exp $
 #
 
 DISTNAME=		wbox-5
@@ -11,8 +11,6 @@ COMMENT=		HTTP testing tool
 LICENSE=		modified-bsd
 
 INSTALLATION_DIRS=	bin
-
-PKG_DESTDIR_SUPPORT=    user-destdir
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/wbox ${DESTDIR}${PREFIX}/bin

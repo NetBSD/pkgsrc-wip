@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/05/14 13:20:05 obache Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/07 20:11:11 asau Exp $
 #
 
 DISTNAME=	xvmware-20100627
@@ -10,8 +10,6 @@ MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://www.hi-matic.org/diary/?20090124#24-1
 COMMENT=	VMware support tools for clipboard and seamless mouse movement
 LICENSE=	2-clause-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_IMAKE=	yes
 WRKSRC=		${WRKDIR}/${PKGBASE}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/07/12 02:18:02 makoto Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/07 20:11:07 asau Exp $
 
 DISTNAME=	wl-2.15.9
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -13,7 +13,6 @@ HOMEPAGE=	http://www.gohome.org/wl/
 COMMENT=	Mail/news management system with IMAP4rev1 support for Emacs
 WRKSRC=		${WRKDIR}/wanderlust
 USE_TOOLS=	patch
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_TARGET=	all info
 INSTALL_TARGET=	install install-info

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2010/04/26 11:37:36 shindenmorr Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/07 20:11:07 asau Exp $
 #
 
 DISTNAME=		wordpress-mu-${VERSION}
@@ -14,7 +14,6 @@ USE_TOOLS+=		pax
 
 NO_BUILD=		yes
 DIST_SUBDIR=		wordpress-mu-${VERSION}
-PKG_DESTDIR_SUPPORT=	user-destdir
 WRKSRC=			${WRKDIR}/wordpress-mu
 
 INSTALLATION_DIRS=	share/wordpress-mu

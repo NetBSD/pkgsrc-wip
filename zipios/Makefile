@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/05/12 12:20:42 ryo-on Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 20:11:11 asau Exp $
 #
 
 DISTNAME=	zipios++_0.1.5.9+cvs.2007.04.28.orig
@@ -10,8 +10,6 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://zipios.sourceforge.net/
 COMMENT=	java.util.zip-like C++ library for reading and writing Zip files
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/zipios++-0.1.5.9+cvs.2007.04.28
 

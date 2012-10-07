@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/10/09 10:28:49 cheusov Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/07 20:11:09 asau Exp $
 
 DISTNAME=	xf86-video-nv-2.1.16
 CATEGORIES=	x11
@@ -14,8 +14,6 @@ GIT_REPO.master=	git://cgit.freedesktop.org/xorg/driver/xf86-video-nv
 .include "../../wip/mk/git-package.mk"
 
 BUILD_DEPENDS+=		xorg-util-macros-[0-9]*:../../devel/xorg-util-macros
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES

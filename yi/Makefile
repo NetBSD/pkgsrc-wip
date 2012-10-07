@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/07/13 07:21:11 phonohawk Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 20:11:11 asau Exp $
 #
 
 DISTNAME=	yi-0.6.3.0
@@ -16,7 +16,6 @@ CONFIGURE_ARGS+= \
 	-f-hacking \
 	-f-testing
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 .include "options.mk"
 
 .include "../../wip/mk/haskell.mk"

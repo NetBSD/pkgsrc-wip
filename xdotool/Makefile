@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/01/02 02:43:14 rubengonzalez Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 20:11:08 asau Exp $
 #
 
 DISTNAME=	xdotool-2.20110530.1
@@ -8,8 +8,6 @@ MASTER_SITES=	http://semicomplete.googlecode.com/files/
 MAINTAINER=	rga@sdf.lonestar.org
 HOMEPAGE=	http://www.semicomplete.com/projects/xdotool/
 COMMENT=	Simulate keyboard input and mouse activity using X11 xtest extension
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CONFIGURE=   yes
 USE_LIBTOOL=    yes

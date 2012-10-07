@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/02/19 15:59:17 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 20:11:11 asau Exp $
 #
 
 DISTNAME=	xtraceroute-0.9.2
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.beebgames.com/sw/gtk-ports.html
 COMMENT=	Graphical version of traceroute, tracing the route IP packets go
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes

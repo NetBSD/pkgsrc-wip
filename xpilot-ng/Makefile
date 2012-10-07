@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2010/06/13 22:47:22 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/07 20:11:10 asau Exp $
 
 DISTNAME=	xpilot-ng-4.7.2
 PKGREVISION=	3
@@ -8,8 +8,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xpilot/}
 MAINTAINER=	vnorrman@cc.hut.fi
 HOMEPAGE=	http://xpilot.sourceforge.net/
 COMMENT=	Enhanced version of XPilot network space battle
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 

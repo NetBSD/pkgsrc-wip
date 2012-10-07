@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/01/03 00:12:21 rubengonzalez Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 20:11:07 asau Exp $
 #
 
 DISTNAME=	wmname-0.1
@@ -9,8 +9,6 @@ MAINTAINER=	rga@sdf.lonestar.org
 HOMEPAGE=	http://tools.suckless.org/wmname
 COMMENT=	Prints/sets the window manager name property of the root window
 LICENSE=	mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CONFIGURE=   yes
 

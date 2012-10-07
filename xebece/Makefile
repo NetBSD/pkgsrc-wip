@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/05/05 04:27:16 othyro Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 20:11:08 asau Exp $
 #
 
 DISTNAME=	xebece-1.0.3
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://xebece.sourceforge.net/
 COMMENT=	Multipurpose tool for information visualization and organization
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/xebece-1.0
 USE_LANGUAGES=	# none

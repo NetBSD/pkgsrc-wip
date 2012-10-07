@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/03/06 04:38:39 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 20:11:11 asau Exp $
 #
 
 DISTNAME=	yaml-mode-0.0.7
@@ -13,7 +13,6 @@ GIT_REPOSITORIES=	master
 GIT_REPO.master=	git://github.com/yoshiki/${PKGBASE}.git
 GIT_MODULE.master=	${PKGBASE}
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS+=	${EMACS_LISPPREFIX}
 INSTALLATION_DIRS+=	share/doc/${PKGBASE}
 

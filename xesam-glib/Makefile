@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/06/22 10:36:49 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 20:11:08 asau Exp $
 #
 
 DISTNAME=	xesam-glib-0.5.0
@@ -8,8 +8,6 @@ MASTER_SITES=	http://xesam.org/people/kamstrup/xesam-glib/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://xesam.org/main/XesamGLib
 COMMENT=	Xesam GLib is a client library for the XESAM specification
-
-PKG_DESTDIR_SUPPORT= 	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2011/10/09 10:05:43 cheusov Exp $
+# $NetBSD: Makefile.common,v 1.6 2012/10/07 20:11:10 asau Exp $
 # used by wip/xmms-skin-AdamAmp/Makefile
 # used by wip/xmms-skin-Chaos/Makefile
 # used by wip/xmms-skin-CherryBest/Makefile
@@ -26,8 +26,6 @@ MASTER_SITES=		http://www.xmms.org/files/Skins/
 MAINTAINER=		cheusov@NetBSD.org
 HOMEPAGE=		http://www.xmms.org/skins.php
 COMMENT=		Skin for XMMS
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		xmms>=1.2.0:../../audio/xmms
 

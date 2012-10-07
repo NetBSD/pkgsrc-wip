@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2010/12/26 05:01:24 davesainty Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/07 20:11:11 asau Exp $
 #
 
 DISTNAME=		zapping-0.9.6
@@ -10,6 +10,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://zapping.sourceforge.net/Zapping/
 COMMENT=		TV viewer for the Gnome desktop
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes

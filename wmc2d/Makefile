@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/04/24 15:53:54 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 20:11:07 asau Exp $
 #
 
 DISTNAME=	wmc2d-2010-08-16-13
@@ -12,7 +12,6 @@ HOMEPAGE=	http://www.goron.de/~johns/wmc2d/
 COMMENT=	Dockapp to monitor coretemp temperature and cpufreq frequency
 LICENSE=	gnu-agpl-v3
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 USE_TOOLS+=		gmake
 INSTALLATION_DIRS+=	bin
 

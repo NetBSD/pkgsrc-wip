@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/05/11 16:27:12 pallegra Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 20:11:11 asau Exp $
 #
 
 DISTNAME=	yajl-1.0.9
@@ -9,8 +9,6 @@ MAINTAINER=	pallegra@gmail.com
 HOMEPAGE=	http://lloyd.github.com/yajl/
 COMMENT=	Small JSON library written in ANSI C
 LICENSE=	modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=	yes
 

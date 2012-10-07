@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/03/05 23:02:16 amoibos Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 20:11:11 asau Exp $
 #
 
 DISTNAME=	xwindiff-1.1.5
@@ -13,8 +13,6 @@ LICENSE=	gnu-gpl-v2
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXaw/buildlink3.mk"

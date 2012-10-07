@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/12/16 20:00:38 jsonn Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/07 20:11:10 asau Exp $
 #
 
 DISTNAME=		xplore-1.2a
@@ -9,6 +9,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.musikwissenschaft.uni-mainz.de/~ag/xplore/
 COMMENT=		X11/Motif File Manager
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_IMAKE=		YES
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2009/08/15 16:15:28 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/07 20:11:07 asau Exp $
 
 DISTNAME=		wmii+ixp-snap20090703
 PKGNAME=		wmii-20090703
@@ -11,6 +11,8 @@ HOMEPAGE=		http://wmii.suckless.org/
 COMMENT=		Window manager improved 2
 
 DEPENDS+=		dmenu-[0-9]*:../../x11/dmenu
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_TOOLS+=		pkg-config
 NO_CONFIGURE=		yes

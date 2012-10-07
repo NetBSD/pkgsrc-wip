@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2011/05/21 18:27:39 marko_schuetz Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 20:11:07 asau Exp $
 #
 
 DISTNAME=	why-2.29
@@ -10,7 +10,6 @@ HOMEPAGE=	http://why.lri.fr/download/
 COMMENT=	Why is a software verification platform
 
 GNU_CONFIGURE=	yes
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+= 	gmake
 

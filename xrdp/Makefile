@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2012/08/06 17:24:32 mwilhelmy Exp $
+# $NetBSD: Makefile,v 1.19 2012/10/07 20:11:10 asau Exp $
 
 DISTNAME=		xrdp-0.5.0
 CATEGORIES=		net x11
@@ -11,8 +11,6 @@ LICENSE=		gnu-gpl-v2
 
 USE_TOOLS+=		autoconf automake gmake
 USE_LIBTOOL=		yes
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 RCD_SCRIPTS=		xrdp sesman
 RCD_SCRIPT_SRC.xrdp=	files/xrdp.sh

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/03/20 23:43:21 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 20:11:10 asau Exp $
 #
 
 DISTNAME=	xmakemol-5.16
@@ -9,8 +9,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://www.nongnu.org/xmakemol/
 COMMENT=	Program for visualizing atomic and molecular systems
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake perl

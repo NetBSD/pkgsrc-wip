@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/02/06 06:05:21 netcap Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 20:11:08 asau Exp $
 #
 
 DISTNAME=		wsmake-0.6.4
@@ -9,6 +9,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://sourceforge.net/projects/wsmake/
 COMMENT=		Software for production and maintenance of web sites
+
+PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes

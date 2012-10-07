@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/08/27 21:41:31 kristerw Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/07 20:11:11 asau Exp $
 #
 
 DISTNAME=	yakuake-2.9.4
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	drjumba@bigmir.net
 HOMEPAGE=	http://extragear.kde.org/apps/yakuake/
 COMMENT=	Drop-down terminal emulator based on KDE Konsole technology
-
-PKG_DESTDIR_SUPPORT=    user-destdir
 
 USE_CMAKE=              yes
 USE_LANGUAGES=          c c++

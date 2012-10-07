@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2010/12/26 05:01:24 davesainty Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/07 20:11:10 asau Exp $
 
 PKGNAME=		xmoto-${VERSION}
 DISTNAME=		xmoto-${VERSION}-src
@@ -10,8 +10,6 @@ VERSION=		0.5.3
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://xmoto.sourceforge.net/
 COMMENT=		2D motocross plateform game
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		msgfmt autoconf automake gmake pkg-config

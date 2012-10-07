@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2011/08/17 17:14:09 guigui2 Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/07 20:11:09 asau Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
@@ -9,9 +9,6 @@ PKGREVISION=	2
 CATEGORIES=	mail
 MASTER_SITES=	http://spuriousinterrupt.org/files/mailwatch/
 EXTRACT_SUFX=	.tar.bz2
-
-#I'm not sure how to test it. -hoka
-#PKG_DESTDIR_SUPPORT=user-destdir
 
 CONFIGURE_ARGS+=	--x-includes=${X11BASE}/include \
 			--x-libraries=${X11BASE}/libs

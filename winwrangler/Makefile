@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/06/13 22:47:21 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/07 20:11:07 asau Exp $
 #
 
 DISTNAME=	winwrangler-0.2.1
@@ -11,7 +11,6 @@ HOMEPAGE=	http://launchpad.net/winwrangler/
 COMMENT=	WinWrangler desktop daemon to manipulations window managers
 LICENSE=	gnu-gpl-v3
 
-PKG_DESTDIR_SUPPORT= 	user-destdir
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	intltool perl pkg-config

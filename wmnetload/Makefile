@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/06/12 23:51:30 kristerw Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/07 20:11:07 asau Exp $
 #
 
 DISTNAME=	wmnetload-1.0
@@ -7,6 +7,8 @@ MASTER_SITES=	http://dockapps.org/files/78/116/
 
 MAINTAINER=		poff@sixbit.org
 COMMENT=		Windowmaker dockapp to monitor network interface usage
+
+PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=	yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/04/09 01:04:06 jsonn Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/07 20:11:07 asau Exp $
 
 # this code is from NetBSD's src/usr.bin/whereis/ with slight changes
 
@@ -10,8 +10,6 @@ DISTFILES=	# empty
 MAINTAINER=		reed@reedmedia.net
 #HOMEPAGE=
 COMMENT=		Locate a command
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/${DISTNAME}
 

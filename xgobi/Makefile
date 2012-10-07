@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2011/10/26 15:16:44 noud4 Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/07 20:11:09 asau Exp $
 #
 
 DISTNAME=		xgobi
@@ -10,8 +10,6 @@ MASTER_SITES=		http://www.research.att.com/areas/stat/xgobi/
 MAINTAINER=		dprice@cs.nmsu.edu
 HOMEPAGE=		http://www.research.att.com/areas/stat/xgobi/
 COMMENT=		Data Visualization Systems for viewing high-dimensional data
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/${DISTNAME}
 CONFIGURE_DIRS=		src

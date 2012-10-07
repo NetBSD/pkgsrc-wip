@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/09/17 08:45:16 zplay Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/07 20:11:10 asau Exp $
 #
 
 DISTNAME=	xombrero-1.3.1
@@ -15,7 +15,6 @@ EXTRACT_SUFX=	.tgz
 
 ONLY_FOR_PLATFORM= DragonFly-*-* NetBSD-*-*
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 NO_CONFIGURE= yes
 USE_TOOLS+= perl
 

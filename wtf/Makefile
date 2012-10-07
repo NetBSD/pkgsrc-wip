@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/06/07 05:57:23 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 20:11:08 asau Exp $
 #
 
 DISTNAME=	wtf-20080926
@@ -10,7 +10,6 @@ COMMENT=	Translate common Internet acronyms
 LICENSE=	public-domain
 
 NO_BUILD=				yes
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 SUBST_CLASSES+=				fix-paths
 SUBST_STAGE.fix-paths=		pre-configure

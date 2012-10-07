@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/01/17 12:03:33 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/07 20:11:08 asau Exp $
 #
 
 DISTNAME=	wvstreams-4.5.1
@@ -13,7 +13,6 @@ COMMENT=	WvStreams is a network programming library in C++
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake pkg-config
 USE_LANGUAGES=	c c++
-PKG_DESTDIR_SUPPORT=    user-destdir
 
 EGDIR=                  ${PREFIX}/share/examples/wvstreams
 CONF_FILES=             ${EGDIR}/uniconf.conf ${PKG_SYSCONFDIR}/uniconf.conf

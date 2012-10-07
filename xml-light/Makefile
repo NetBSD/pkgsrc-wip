@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/03/09 23:49:21 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 20:11:10 asau Exp $
 #
 
 DISTNAME=	xml-light-2.2
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://tech.motion-twin.com/xmllight.html
 COMMENT=	Xml-Light is a minimal XML parser & printer for OCaml
 LICENSE=	gnu-lgpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/xml-light
 USE_LANGUAGES=	c

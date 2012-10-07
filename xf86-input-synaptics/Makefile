@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/01/08 10:04:23 rubengonzalez Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 20:11:09 asau Exp $
 #
 
 DISTNAME=	xf86-input-synaptics-1.2.1
@@ -9,8 +9,6 @@ MAINTAINER=	rga@sdf.lonestar.org
 HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	Synaptics touchpad driver for X.Org
 LICENSE=	mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

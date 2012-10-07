@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/11/09 16:12:29 noud4 Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 20:11:08 asau Exp $
 #
 
 DISTNAME=	wqy-zenhei-0.8.38-1
@@ -11,8 +11,6 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://wenq.org/enindex.cgi?ZenHei%28en%29
 COMMENT=	WenQuanYi Open Source Outline Fonts (Chinese simplified)
 LICENSE=	gnu-gpl-v2 # with font embedding exception
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/wqy-zenhei
 USE_LANGUAGES=	# none

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2012/04/19 10:31:37 fhajny Exp $
+# $NetBSD: Makefile.common,v 1.2 2012/10/07 20:11:11 asau Exp $
 #
 # used by wip/zookeeper-client/Makefile
 
@@ -9,8 +9,6 @@ MASTER_SITES=	${MASTER_SITE_APACHE:=zookeeper/${DISTNAME}/}
 MAINTAINER=	filip@joyent.com
 HOMEPAGE=	http://zookeeper.apache.org/
 LICENSE=	apache-2.0
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PATCHDIR=	${.CURDIR}/../../wip/zookeeper-server/patches
 DISTINFO_FILE=	${.CURDIR}/../../wip/zookeeper-server/distinfo

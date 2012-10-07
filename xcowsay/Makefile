@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/06/27 17:35:21 drochner Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/07 20:11:08 asau Exp $
 #
 
 DISTNAME=	xcowsay-1.3
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.doof.me.uk/xcowsay/
 COMMENT=	Display a cow and message on your desktop
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes

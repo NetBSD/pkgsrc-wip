@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2010/12/26 05:01:24 davesainty Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/07 20:11:07 asau Exp $
 
 DISTNAME=		wings-0.98.29b
 PKGREVISION=		2
@@ -9,6 +9,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAIER=		ghen@NetBSD.org
 HOMEPAGE=		http://www.wings3d.com/
 COMMENT=		3D modeling program with a friendly interface
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_TOOLS+=		gmake
 

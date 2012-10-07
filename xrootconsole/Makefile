@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/12/22 03:36:50 gregschenzel Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/07 20:11:10 asau Exp $
 
 DISTNAME=	xrootconsole-0.6
 PKGREVISION=	2
@@ -9,6 +9,8 @@ MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=xrootconsole/}
 
 HOMEPAGE=       http://xrootconsole.sourceforge.net/
 COMMENT=        Windowless XConsole
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_TOOLS+=             gmake
 

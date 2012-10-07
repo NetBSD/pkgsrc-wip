@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/09/13 14:19:42 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 20:11:09 asau Exp $
 #
 
 DISTNAME=		xfs-1.1.2
@@ -9,8 +9,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://xorg.freedesktop.org/
 COMMENT=		Xorg version of X font server
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config gmake

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/04/28 17:56:38 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 20:11:07 asau Exp $
 #
 
 DISTNAME=	wmsupermon-1.2.2
@@ -10,7 +10,6 @@ HOMEPAGE=	http://dockapps.windowmaker.org/file.php/id/320
 COMMENT=	Universal monitoring dockapp
 LICENSE=	gnu-gpl-v2
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 USE_TOOLS+=		gmake yacc
 INSTALLATION_DIRS+=	bin share/doc/wmsupermon share/examples/wmsupermon
 INSTALLATION_DIRS+=	share/pixmaps

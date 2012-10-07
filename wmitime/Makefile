@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/09/28 22:21:24 khorben Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/07 20:11:07 asau Exp $
 #
 
 DISTNAME=	wmitime-0.3
@@ -12,7 +12,6 @@ COMMENT=	Windowmaker dockapp for time/date/itime
 
 LICENSE=	gnu-gpl-v2
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_FLAGS+=	PREFIX=${PREFIX}
 MAKE_FLAGS+=	DESTDIR=${DESTDIR}
 

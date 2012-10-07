@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/05/13 08:25:51 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 20:11:11 asau Exp $
 #
 
 DISTNAME=	yauap-0.2.4
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.nongnu.org/yauap/index.html
 COMMENT=	Yauap is a simple commandline audio player
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	pkg-config gmake
 USE_LANGUAGES=  c c++

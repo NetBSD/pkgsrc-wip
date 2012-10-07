@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2010/09/11 12:33:10 jihbed Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/07 20:11:06 asau Exp $
 #
 
 DISTNAME=	webkit-sharp-0.3
@@ -12,8 +12,6 @@ MAINTAINER=	pkgsrc.gnome@gmail.com
 #HOMEPAGE=	http://ftp.novell.com/pub/mono/sources/webkit-sharp/
 COMMENT=	Webkit-sharp Bindings webkit-gtk under C\#
 #LICENSE=	# TODO: (see mk/license.mk)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config

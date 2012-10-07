@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/07/22 09:53:18 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/07 20:11:07 asau Exp $
 #
 
 DISTNAME=		workrave-1.8.5
@@ -8,6 +8,8 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=workrave/}
 MAINTAINER=		bsd@cs.ubc.ca
 HOMEPAGE=		http://www.workrave.org/
 COMMENT=		Wrist break reminder program for prevention of RSI
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_LIBTOOL=		YES
 USE_TOOLS+=		gmake pkg-config intltool

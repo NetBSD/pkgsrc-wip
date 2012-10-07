@@ -1,4 +1,4 @@
-# $NetBSD: mozilla-common.mk,v 1.17 2011/07/07 21:56:32 tnn2 Exp $
+# $NetBSD: mozilla-common.mk,v 1.18 2012/10/07 20:11:11 asau Exp $
 #
 # common Makefile fragment for mozilla packages based on gecko 2.0.
 # 
@@ -12,7 +12,6 @@ UNLIMIT_RESOURCES+=	datasize
 
 BUILD_DEPENDS+=		zip>=2.3:../../archivers/zip
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}security/nss/tests/libpkix/libpkix.sh
 CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}security/nss/tests/multinit/multinit.sh
 PRIVILEGED_STAGES+=	clean

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2010/06/13 22:47:22 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/07 20:11:11 asau Exp $
 
 DISTNAME=	xxdiff-3.1
 PKGREVISION=	2
@@ -9,8 +9,6 @@ MAINTAINER=	ghen@NetBSD.org
 HOMEPAGE=	http://furius.ca/xxdiff/
 COMMENT=	Graphical file comparator and merge tool
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEPENDS+=		tmake>=1.7:../../devel/tmake
 
