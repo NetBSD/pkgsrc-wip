@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4908 2012/10/06 18:05:35 kristerw Exp $
+# $Id: Makefile,v 1.4909 2012/10/07 20:20:58 asau Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -3277,7 +3277,6 @@ SUBDIR+=	xchat2-perl
 SUBDIR+=	xchat2-python
 SUBDIR+=	xchat2-tcl
 SUBDIR+=	xclipboard
-SUBDIR+=	xcowsay
 SUBDIR+=	xcursor-themes
 SUBDIR+=	xdiskusage
 SUBDIR+=	xdotool
