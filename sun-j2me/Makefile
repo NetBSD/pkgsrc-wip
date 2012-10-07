@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/05/19 09:00:13 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/07 16:11:39 asau Exp $
 #
 
 DISTNAME=j2me_wireless_toolkit-2_1_01-linux-i386
@@ -53,9 +53,9 @@ _FETCH_MESSAGE= \
 ONLY_FOR_PLATFORM=Linux-*-i[3-6]86
 
 do-install:
-	${INSTALL_DATA_DIR} ${JAVA_HOME}/bin
-	cp -rf ${WRKSRC}/bin ${JAVA_HOME}/bin/
-	${INSTALL_DATA_DIR} ${JAVA_HOME}/lib
-	cp -rf ${WRKSRC}/lib ${JAVA_HOME}/lib
+	${INSTALL_DATA_DIR} ${DESTDIR}${JAVA_HOME}/bin
+	cp -rf ${WRKSRC}/bin ${DESTDIR}${JAVA_HOME}/bin/
+	${INSTALL_DATA_DIR} ${DESTDIR}${JAVA_HOME}/lib
+	cp -rf ${WRKSRC}/lib ${DESTDIR}${JAVA_HOME}/lib
 
 .include "../../mk/bsd.pkg.mk"
