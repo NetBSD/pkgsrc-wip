@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2011/11/21 19:08:57 absd Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/07 11:48:39 asau Exp $
 #
 
 DISTNAME=		py-gtk2-docs
@@ -22,9 +22,9 @@ DOC_SRCDIR=	${WRKSRC}
 PLIST_SRC=	${WRKDIR}/.PLIST_SRC
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/${HTMLDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/${HTMLDIR}
 	${CAT} ${PKGDIR}/PLIST.pre >${PLIST_SRC}
-	cd ${DOC_SRCDIR} && pax -rw -pe pygtk* ${PREFIX}/${HTMLDIR}
-	cd ${PREFIX} && ${FIND} ${HTMLDIR} -type f -print >>${PLIST_SRC}
+	cd ${DOC_SRCDIR} && pax -rw -pe pygtk* ${DESTDIR}${PREFIX}/${HTMLDIR}
+	cd ${DESTDIR}${PREFIX} && ${FIND} ${HTMLDIR} -type f -print >>${PLIST_SRC}
 
 .include "../../mk/bsd.pkg.mk"
