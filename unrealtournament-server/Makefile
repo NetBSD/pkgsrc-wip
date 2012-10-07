@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2010/03/21 16:29:52 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/07 17:27:16 asau Exp $
 #
 
 DISTNAME=	ut-server-436
@@ -17,9 +17,9 @@ BUILD_DIRS=		# empty
 USE_TOOLS+=		pax
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/UnrealTournament-server
-	cd ${WRKSRC} && pax -rw -pm . ${PREFIX}/UnrealTournament-server
-	cd ${PREFIX}/UnrealTournament-server && \
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/UnrealTournament-server
+	cd ${WRKSRC} && pax -rw -pm . ${DESTDIR}${PREFIX}/UnrealTournament-server
+	cd ${DESTDIR}${PREFIX}/UnrealTournament-server && \
 		${LN} -s -f libSDL-1.1.so.0 libSDL-1.2.so.0
 
 .include "../../mk/bsd.pkg.mk"
