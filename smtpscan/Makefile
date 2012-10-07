@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/02/03 16:53:11 tnn2 Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/07 15:41:36 asau Exp $
 
 DISTNAME=	smtpscan-${SSVERSION}
 WRKSRC=		${WRKDIR}/smtpscan
@@ -26,12 +26,14 @@ do-build:
 		-e 's#@PREFIX@#${PREFIX}#g' \
 		< ${WRKSRC}/src/smtpscan > ${WRKSRC}/smtpscan
 
-do-install:
-	${INSTALL_DATA_DIR} ${SSSHARE}
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
-	${INSTALL_DATA} ${WRKSRC}/src/fingerprints ${SSSHARE}
-	${INSTALL_DATA} ${WRKSRC}/src/tests ${SSSHARE}
-	${INSTALL_SCRIPT} ${WRKSRC}/smtpscan ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/docs/smtpscan.1 ${PREFIX}/${PKGMANDIR}/man1
+do-install:
+	${INSTALL_DATA_DIR} ${DESTDIR}${SSSHARE}
+
+	${INSTALL_DATA} ${WRKSRC}/src/fingerprints ${DESTDIR}${SSSHARE}
+	${INSTALL_DATA} ${WRKSRC}/src/tests ${DESTDIR}${SSSHARE}
+	${INSTALL_SCRIPT} ${WRKSRC}/smtpscan ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/docs/smtpscan.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/01/02 13:37:58 marttikuparinen Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 15:12:59 asau Exp $
 
 DISTNAME=	shttpd-1.38
 CATEGORIES=	www
@@ -13,8 +13,10 @@ WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}/src
 
 BUILD_TARGET=	unix
 
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/shttpd ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/shttpd.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_PROGRAM} ${WRKSRC}/shttpd ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/shttpd.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"

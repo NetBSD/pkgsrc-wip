@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/03/14 01:28:13 jlamwww Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/07 15:09:40 asau Exp $
 #
 
 DISTNAME=		shaper_2.2.12-0.7.3.orig
@@ -18,11 +18,13 @@ RCD_SCRIPTS=		shaper
 EGDIR=			${PREFIX}/share/examples/shaper
 CONF_FILES=		${EGDIR}/shaper.conf ${PKG_SYSCONFDIR}/shaper.conf
 
+INSTALLATION_DIRS=	sbin
+
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/shapecfg ${PREFIX}/sbin/
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/shaper/
-	${INSTALL_DATA} ${WRKSRC}/../README.shaper ${PREFIX}/share/doc/shaper/
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/shaper/
-	${INSTALL_DATA} ${FILESDIR}/shaper.conf ${PREFIX}/share/examples/shaper/
+	${INSTALL_PROGRAM} ${WRKSRC}/shapecfg ${DESTDIR}${PREFIX}/sbin/
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/shaper/
+	${INSTALL_DATA} ${WRKSRC}/../README.shaper ${DESTDIR}${PREFIX}/share/doc/shaper/
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/shaper/
+	${INSTALL_DATA} ${FILESDIR}/shaper.conf ${DESTDIR}${PREFIX}/share/examples/shaper/
 
 .include "../../mk/bsd.pkg.mk"

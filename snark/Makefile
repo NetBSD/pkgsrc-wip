@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/11/02 18:00:27 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/07 15:52:36 asau Exp $
 #
 
 DISTNAME=		snark-0.5
@@ -19,7 +19,7 @@ JAVA_APP_MAIN.snark=org.klomp.snark.Snark
 JAVA_APP_CLASSPATH.snark=${JAR_PREFIX}/snark.jar
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/snark.jar ${JAR_PREFIX}/
+	${INSTALL_DATA} ${WRKSRC}/snark.jar ${DESTDIR}${JAR_PREFIX}/
 
 .include "../../wip/mk/java-app.mk"
 .include "../../mk/bsd.pkg.mk"

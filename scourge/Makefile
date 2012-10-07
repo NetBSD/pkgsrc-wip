@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/05/26 13:59:47 tnn2 Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/07 15:00:39 asau Exp $
 #
 
 DISTNAME=		scourge-0.4
@@ -26,15 +26,17 @@ SUBST_STAGE.scourge=	post-patch
 SUBST_FILES.scourge=	scourge.sh
 SUBST_SED.scourge=	-e "s,XXXPREFIXXXX,${PREFIX},g"
 
+INSTALLATION_DIRS=	bin
+
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/scourgedir
-	${INSTALL_DATA_DIR} ${PREFIX}/share/scourgedir/data
-	${INSTALL_DATA_DIR} ${PREFIX}/share/scourgedir/saved
-	${INSTALL_PROGRAM} ${WRKSRC}/scourge ${PREFIX}/share/scourgedir
-	${INSTALL_SCRIPT} ${WRKSRC}/scourge.sh ${PREFIX}/bin/scourge
-	cd ${WRKSRC}/data && pax -rw . ${PREFIX}/share/scourgedir/data
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/scourgedir
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/scourgedir/data
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/scourgedir/saved
+	${INSTALL_PROGRAM} ${WRKSRC}/scourge ${DESTDIR}${PREFIX}/share/scourgedir
+	${INSTALL_SCRIPT} ${WRKSRC}/scourge.sh ${DESTDIR}${PREFIX}/bin/scourge
+	cd ${WRKSRC}/data && pax -rw . ${DESTDIR}${PREFIX}/share/scourgedir/data
 	${INSTALL_DATA} ${WRKSRC}/saved/scourge.cfg \
-		${PREFIX}/share/scourgedir/saved
+		${DESTDIR}${PREFIX}/share/scourgedir/saved
 
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"

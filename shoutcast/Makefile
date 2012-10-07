@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2007/07/30 15:49:11 jlamwww Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/07 15:11:33 asau Exp $
 
 DISTNAME=	shoutcast-1-9-2-linux-glibc6
 PKGNAME=	shoutcast-1.9.2
@@ -23,6 +23,6 @@ post-build:
 	@${SED} -e "s,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g" < ${WRKSRC}/tmp >${WRKSRC}/sc_serv.conf
 
 do-install:
-	@${FILESDIR}/install.sh ${WRKDIR}/shoutcast-1-9-2-linux-glibc6 ${LOCALBASE} ${PKG_SYSCONFDIR}
+	@${FILESDIR}/install.sh ${WRKDIR}/shoutcast-1-9-2-linux-glibc6 ${DESTDIR}${LOCALBASE} ${DESTDIR}${PKG_SYSCONFDIR}
 
 .include "../../mk/bsd.pkg.mk"

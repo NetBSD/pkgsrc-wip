@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/10/29 08:32:56 shattered Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/07 15:31:11 asau Exp $
 
 .include "Makefile.common"
 
@@ -20,16 +20,18 @@ pre-build:
 		< ${WRKSRC}/Makefile > ${WRKSRC}/Makefile.new
 	@${CP} ${WRKSRC}/Makefile.new ${WRKSRC}/Makefile
 
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/smtprc
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/smtprc
-	${INSTALL_PROGRAM} ${WRKSRC}/smtprc ${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/auto.conf ${PREFIX}/share/examples/smtprc
-	${INSTALL_DATA} ${WRKSRC}/email.tmpl ${PREFIX}/share/examples/smtprc
-	${INSTALL_DATA} ${WRKSRC}/rcheck.conf ${PREFIX}/share/examples/smtprc
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/smtprc
-	${INSTALL_DATA} ${WRKSRC}/FAQ ${PREFIX}/share/doc/smtprc
-	${INSTALL_MAN} ${WRKSRC}/smtprc.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/smtprc
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/smtprc
+	${INSTALL_PROGRAM} ${WRKSRC}/smtprc ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/auto.conf ${DESTDIR}${PREFIX}/share/examples/smtprc
+	${INSTALL_DATA} ${WRKSRC}/email.tmpl ${DESTDIR}${PREFIX}/share/examples/smtprc
+	${INSTALL_DATA} ${WRKSRC}/rcheck.conf ${DESTDIR}${PREFIX}/share/examples/smtprc
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/smtprc
+	${INSTALL_DATA} ${WRKSRC}/FAQ ${DESTDIR}${PREFIX}/share/doc/smtprc
+	${INSTALL_MAN} ${WRKSRC}/smtprc.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

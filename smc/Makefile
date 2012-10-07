@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2010/06/13 22:47:16 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/07 15:27:49 asau Exp $
 #
 
 DISTNAME=		SMC_0.97
@@ -35,24 +35,26 @@ post-patch:
 	${CHMOD} a+x configure && \
 	${CP} ${FILESDIR}/smc ${WRKDIR}/.smc
 
+INSTALLATION_DIRS=	bin
+
 do-install:
 	# Installing game executable, data and default configuration
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/smc
-	${INSTALL_PROGRAM} ${WRKSRC}/src/smc ${PREFIX}/lib/smc
-	${INSTALL_SCRIPT} ${WRKDIR}/.smc ${PREFIX}/bin/smc
-	${INSTALL_DATA_DIR} ${SMCSHARE}/levels
-	${INSTALL_DATA} ${WRKSRC}/data/levels/* ${SMCSHARE}/levels
-	${CP} -rf ${WRKSRC}/data/font ${SMCSHARE}
-	${CP} -rf ${WRKSRC}/data/music ${SMCSHARE}
-	${CP} -rf ${WRKSRC}/data/pixmaps ${SMCSHARE}
-	${CP} -rf ${WRKSRC}/data/sounds ${SMCSHARE}
-	${CP} -rf ${WRKSRC}/data/world ${SMCSHARE}
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/lib/smc
+	${INSTALL_PROGRAM} ${WRKSRC}/src/smc ${DESTDIR}${PREFIX}/lib/smc
+	${INSTALL_SCRIPT} ${WRKDIR}/.smc ${DESTDIR}${PREFIX}/bin/smc
+	${INSTALL_DATA_DIR} ${DESTDIR}${SMCSHARE}/levels
+	${INSTALL_DATA} ${WRKSRC}/data/levels/* ${DESTDIR}${SMCSHARE}/levels
+	${CP} -rf ${WRKSRC}/data/font ${DESTDIR}${SMCSHARE}
+	${CP} -rf ${WRKSRC}/data/music ${DESTDIR}${SMCSHARE}
+	${CP} -rf ${WRKSRC}/data/pixmaps ${DESTDIR}${SMCSHARE}
+	${CP} -rf ${WRKSRC}/data/sounds ${DESTDIR}${SMCSHARE}
+	${CP} -rf ${WRKSRC}/data/world ${DESTDIR}${SMCSHARE}
 	# Installing documentation, license information and install notes
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/smc/licenses
-	${INSTALL_DATA} ${WRKSRC}/docs/*.css ${PREFIX}/share/doc/smc
-	${INSTALL_DATA} ${WRKSRC}/docs/*.html ${PREFIX}/share/doc/smc
-	${INSTALL_DATA} ${WRKSRC}/docs/*.txt ${PREFIX}/share/doc/smc
-	${INSTALL_DATA} ${WRKSRC}/docs/licenses/* ${PREFIX}/share/doc/smc/licenses
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/smc/licenses
+	${INSTALL_DATA} ${WRKSRC}/docs/*.css ${DESTDIR}${PREFIX}/share/doc/smc
+	${INSTALL_DATA} ${WRKSRC}/docs/*.html ${DESTDIR}${PREFIX}/share/doc/smc
+	${INSTALL_DATA} ${WRKSRC}/docs/*.txt ${DESTDIR}${PREFIX}/share/doc/smc
+	${INSTALL_DATA} ${WRKSRC}/docs/licenses/* ${DESTDIR}${PREFIX}/share/doc/smc/licenses
 
 SUBST_CLASSES+=		libpath sharepath
 SUBST_STAGE.libpath=	pre-install

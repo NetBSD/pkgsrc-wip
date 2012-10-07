@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/05/04 20:16:59 shattered Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 15:29:10 asau Exp $
 #
 
 DISTNAME=		smstools3-3.0.10
@@ -17,19 +17,19 @@ REPLACE_BASH=		scripts/sms2html scripts/sms2unicode scripts/regular_run scripts/
 
 EGDIR=			${PREFIX}/share/examples/smstools
 CONF_FILES=		${EGDIR}/smsd.conf ${PKG_SYSCONFDIR}/smsd.conf
-INSTALLATION_DIRS+=	${EGDIR}
+INSTALLATION_DIRS+=	bin sbin ${EGDIR}
 RCD_SCRIPTS=		smsd
 
 WRKSRC=			${WRKDIR}/smstools3
 BUILD_DIRS=		src
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/src/smsd ${PREFIX}/sbin
-	${INSTALL_SCRIPT} ${WRKSRC}/scripts/regular_run ${PREFIX}/bin
-	${INSTALL_SCRIPT} ${WRKSRC}/scripts/sendsms ${PREFIX}/bin
-	${INSTALL_SCRIPT} ${WRKSRC}/scripts/sms2html ${PREFIX}/bin
-	${INSTALL_SCRIPT} ${WRKSRC}/scripts/sms2unicode ${PREFIX}/bin
-	${INSTALL_SCRIPT} ${WRKSRC}/scripts/unicode2sms ${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/examples/smsd.conf.easy ${EGDIR}/smsd.conf
+	${INSTALL_PROGRAM} ${WRKSRC}/src/smsd ${DESTDIR}${PREFIX}/sbin
+	${INSTALL_SCRIPT} ${WRKSRC}/scripts/regular_run ${DESTDIR}${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/scripts/sendsms ${DESTDIR}${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/scripts/sms2html ${DESTDIR}${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/scripts/sms2unicode ${DESTDIR}${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/scripts/unicode2sms ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/examples/smsd.conf.easy ${DESTDIR}${EGDIR}/smsd.conf
 
 .include "../../mk/bsd.pkg.mk"

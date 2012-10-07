@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/05/26 13:59:46 tnn2 Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/07 14:55:50 asau Exp $
 #
 
 DISTNAME=		sara-7.4.4
@@ -57,26 +57,28 @@ REPLACE_PERL=	bin/get_targets bin/faux_fping sara add_user \
 	bin/*.sara* bin/*.sara.ext perl/*.pl perl/contrib/* html/*.pl \
 	html/docs/*.pl plugins/*.pi bin/fwping
 
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man8
+
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/sara ${PREFIX}/bin/
-	${INSTALL_MAN} ${WRKSRC}/docs/sara.8  ${PREFIX}/${PKGMANDIR}/man8/
-	${INSTALL_DATA_DIR} ${EGDIR}/
-	${INSTALL_DATA} ${WRKSRC}/config/* ${EGDIR}/
-	${INSTALL_DATA_DIR} ${PREFIX}/share/sara/
-	${INSTALL_DATA} ${WRKSRC}/perl/*.pl ${PREFIX}/share/sara/
-	${INSTALL_DATA} ${WRKSRC}/perllib/getopts.pl ${PREFIX}/share/sara/
-	${INSTALL_DATA} ${WRKSRC}/perllib/ctime.pl ${PREFIX}/share/sara/
-	${INSTALL_SCRIPT} ${WRKSRC}/bin/*.sara ${PREFIX}/bin/
+	${INSTALL_SCRIPT} ${WRKSRC}/sara ${DESTDIR}${PREFIX}/bin/
+	${INSTALL_MAN} ${WRKSRC}/docs/sara.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/
+	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}/
+	${INSTALL_DATA} ${WRKSRC}/config/* ${DESTDIR}${EGDIR}/
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/sara/
+	${INSTALL_DATA} ${WRKSRC}/perl/*.pl ${DESTDIR}${PREFIX}/share/sara/
+	${INSTALL_DATA} ${WRKSRC}/perllib/getopts.pl ${DESTDIR}${PREFIX}/share/sara/
+	${INSTALL_DATA} ${WRKSRC}/perllib/ctime.pl ${DESTDIR}${PREFIX}/share/sara/
+	${INSTALL_SCRIPT} ${WRKSRC}/bin/*.sara ${DESTDIR}${PREFIX}/bin/
 .for bin in faux_fping fwping get_targets
-	${INSTALL_SCRIPT} ${WRKSRC}/bin/${bin} ${PREFIX}/bin/
+	${INSTALL_SCRIPT} ${WRKSRC}/bin/${bin} ${DESTDIR}${PREFIX}/bin/
 .endfor
 .for bin in ddos-scan dscan ftp_scan sys_socket sqlanlz yp-chk \
 	nfs-chk irix-telnet rcmd rex safe_finger tcp_scan timeout udp_scan
-	${INSTALL_PROGRAM} ${WRKSRC}/bin/${bin} ${PREFIX}/bin/
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/${bin} ${DESTDIR}${PREFIX}/bin/
 .endfor
-	${INSTALL_DATA_DIR} ${PREFIX}/share/sara/rules/
-	${INSTALL_DATA_DIR} ${PREFIX}/share/sara/html/
-	cd ${WRKSRC}/rules && pax -rwppm . ${PREFIX}/share/sara/rules/
-	cd ${WRKSRC}/html && pax -rwppm . ${PREFIX}/share/sara/html/
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/sara/rules/
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/sara/html/
+	cd ${WRKSRC}/rules && pax -rwppm . ${DESTDIR}${PREFIX}/share/sara/rules/
+	cd ${WRKSRC}/html && pax -rwppm . ${DESTDIR}${PREFIX}/share/sara/html/
 
 .include "../../mk/bsd.pkg.mk"
