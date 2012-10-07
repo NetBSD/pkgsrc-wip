@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/02/06 19:39:11 shattered Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/07 16:33:35 asau Exp $
 
 DISTNAME=	tcmplex-panteltje-0.4.7
 CATEGORIES=	multimedia
@@ -13,11 +13,13 @@ BUILD_TARGET=	a.out
 
 DOCSDIR=	${PREFIX}/share/doc/tcmplex-panteltje
 
+INSTALLATION_DIRS=	bin
+
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/${PKGBASE} ${PREFIX}/bin/${PKGBASE}
-	${MKDIR} ${DOCSDIR}
+	${INSTALL_PROGRAM} ${WRKSRC}/${PKGBASE} ${DESTDIR}${PREFIX}/bin/${PKGBASE}
+	${INSTALL_DATA_DIR} ${DESTDIR}${DOCSDIR}
 	for file in CHANGES COPYRIGHT LICENSE README; do \
-		${INSTALL_DATA} ${WRKSRC}/$$file ${DOCSDIR}; \
+		${INSTALL_DATA} ${WRKSRC}/$$file ${DESTDIR}${DOCSDIR}; \
 	done
 
 .include "../../mk/bsd.pkg.mk"
