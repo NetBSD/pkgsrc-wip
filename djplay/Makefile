@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/06 14:12:49 othyro Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/07 07:54:40 thomasklausner Exp $
 #
 
 DISTNAME=	djplay-0.5.0
@@ -44,4 +44,5 @@ SUBST_SED.qmake=	-e "s|qmake|${QTDIR}/bin/qmake|1"
 .include "../../audio/libsamplerate/buildlink3.mk"
 .include "../../audio/jack/buildlink3.mk"
 .include "../../x11/qt3-libs/buildlink3.mk"
+.include "../../x11/qt3-tools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
