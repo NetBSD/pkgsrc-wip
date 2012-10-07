@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2011/10/09 10:05:43 cheusov Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/07 14:09:36 asau Exp $
 #
 
 DISTNAME=		rc.d.Interix-0.0.1
@@ -22,7 +22,9 @@ NO_MTREE=		yes
 FILES_SUBST+=		PKGSRC_PREFIX=${PREFIX}
 MESSAGE_SUBST+=		PKGSRC_PREFIX=${PREFIX}
 
+INSTALLATION_DIRS=	libexec
+
 do-install:
-	${INSTALL_SCRIPT} ${.CURDIR}/files/pkgsrc_rc ${PREFIX}/libexec
+	${INSTALL_SCRIPT} ${.CURDIR}/files/pkgsrc_rc ${DESTDIR}${PREFIX}/libexec
 
 .include "../../mk/bsd.pkg.mk"

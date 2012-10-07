@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/05/01 14:34:50 noud4 Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/07 14:01:16 asau Exp $
 #
 
 DISTNAME=	uImage-2.6.24+git20080430-r0-om-gta01
@@ -20,6 +20,8 @@ DEPENDS+=	qemu-neo1973>=4250:../../wip/qemu-neo1973
 WRKSRC=		${WRKDIR}
 NO_BUILD=	YES
 
+INSTALLATION_DIRS=	qemu-neo1973/libexec/openmoko
+
 do-extract:
 .for f in ${DISTFILES}
 	${CP} ${DISTDIR}/${f} ${WRKSRC}
@@ -27,7 +29,7 @@ do-extract:
 
 do-install:
 .for f in ${DISTFILES}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${PREFIX}/qemu-neo1973/libexec/openmoko
+	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/qemu-neo1973/libexec/openmoko
 .endfor
 
 .include "../../mk/bsd.pkg.mk"

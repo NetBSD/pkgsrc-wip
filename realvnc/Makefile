@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2009/06/02 12:27:47 noud4 Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/07 14:14:44 asau Exp $
 #
 
 DISTNAME=		vnc-4_1_2-unixsrc
@@ -58,23 +58,25 @@ post-patch:
 post-build:
 	cd ${WRKSRC}/xc && ${MAKE} World
 
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/vncserver ${PREFIX}/bin/vncserver
-	${INSTALL_PROGRAM} ${WRKSRC}/vncpasswd/vncpasswd ${PREFIX}/bin/vncpasswd
-	${INSTALL_PROGRAM} ${WRKSRC}/vncviewer/vncviewer ${PREFIX}/bin/vncviewer
-	${INSTALL_PROGRAM} ${WRKSRC}/vncconfig/vncconfig ${PREFIX}/bin/vncconfig
-	${INSTALL_PROGRAM} ${WRKSRC}/x0vncserver/x0vncserver ${PREFIX}/bin/x0vncserver
-	${INSTALL_PROGRAM} ${WRKSRC}/xc/programs/Xserver/Xvnc ${PREFIX}/bin/Xvnc
-	${INSTALL_PROGRAM} ${WRKSRC}/xc/programs/Xserver/Xvnc ${PREFIX}/bin/Xvnc
-	${INSTALL_PROGRAM_DIR} ${PREFIX}/lib/modules/extensions
-	${INSTALL_PROGRAM} ${WRKSRC}/xc/programs/Xserver/vnc/module/vnc.so ${PREFIX}/lib/modules/extensions/vnc.so
-	${INSTALL_MAN} ${WRKSRC}/vncviewer/vncviewer.man ${PREFIX}/${PKGMANDIR}/man1/vncviewer.1
-	${INSTALL_MAN} ${WRKSRC}/x0vncserver/x0vncserver.man ${PREFIX}/${PKGMANDIR}/man1/x0vncserver.1
-	${INSTALL_MAN} ${WRKSRC}/vncpasswd/vncpasswd.man ${PREFIX}/${PKGMANDIR}/man1/vncpasswd.1
-	${INSTALL_MAN} ${WRKSRC}/vncconfig/vncconfig.man ${PREFIX}/${PKGMANDIR}/man1/vncconfig.1
-	${INSTALL_MAN} ${WRKSRC}/vncserver.man ${PREFIX}/${PKGMANDIR}/man1/vncserver.1
-	${INSTALL_DATA_DIR} ${PREFIX}/share/vnc/classes
-	${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/common/javabin/* ${PREFIX}/share/vnc/classes
+	${INSTALL_SCRIPT} ${WRKSRC}/vncserver ${DESTDIR}${PREFIX}/bin/vncserver
+	${INSTALL_PROGRAM} ${WRKSRC}/vncpasswd/vncpasswd ${DESTDIR}${PREFIX}/bin/vncpasswd
+	${INSTALL_PROGRAM} ${WRKSRC}/vncviewer/vncviewer ${DESTDIR}${PREFIX}/bin/vncviewer
+	${INSTALL_PROGRAM} ${WRKSRC}/vncconfig/vncconfig ${DESTDIR}${PREFIX}/bin/vncconfig
+	${INSTALL_PROGRAM} ${WRKSRC}/x0vncserver/x0vncserver ${DESTDIR}${PREFIX}/bin/x0vncserver
+	${INSTALL_PROGRAM} ${WRKSRC}/xc/programs/Xserver/Xvnc ${DESTDIR}${PREFIX}/bin/Xvnc
+	${INSTALL_PROGRAM} ${WRKSRC}/xc/programs/Xserver/Xvnc ${DESTDIR}${PREFIX}/bin/Xvnc
+	${INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/lib/modules/extensions
+	${INSTALL_PROGRAM} ${WRKSRC}/xc/programs/Xserver/vnc/module/vnc.so ${DESTDIR}${PREFIX}/lib/modules/extensions/vnc.so
+	${INSTALL_MAN} ${WRKSRC}/vncviewer/vncviewer.man ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/vncviewer.1
+	${INSTALL_MAN} ${WRKSRC}/x0vncserver/x0vncserver.man ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/x0vncserver.1
+	${INSTALL_MAN} ${WRKSRC}/vncpasswd/vncpasswd.man ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/vncpasswd.1
+	${INSTALL_MAN} ${WRKSRC}/vncconfig/vncconfig.man ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/vncconfig.1
+	${INSTALL_MAN} ${WRKSRC}/vncserver.man ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/vncserver.1
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/vnc/classes
+	${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/common/javabin/* ${DESTDIR}${PREFIX}/share/vnc/classes
 
 .include "../../devel/zlib/buildlink3.mk"
 .if ${X11_TYPE} == "native"

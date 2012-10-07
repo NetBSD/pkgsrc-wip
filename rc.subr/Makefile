@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2009/04/09 01:09:04 jsonn Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/07 14:10:46 asau Exp $
 #
 
 DISTNAME=		rc.subr-20030912
@@ -50,8 +50,8 @@ do-extract:
 	${SED} ${FILES_SUBST_SED} ${FILESDIR}/rc.subr > ${WRKDIR}/rc.subr
 
 do-install:
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA} ${FILESDIR}/rc.conf.example ${EGDIR}
-	${INSTALL_DATA} ${WRKDIR}/rc.subr ${EGDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${FILESDIR}/rc.conf.example ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${WRKDIR}/rc.subr ${DESTDIR}${EGDIR}
 
 .include "../../mk/bsd.pkg.mk"

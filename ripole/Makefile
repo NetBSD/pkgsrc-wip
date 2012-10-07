@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/03/14 01:28:12 jlamwww Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/07 14:23:03 asau Exp $
 #
 
 DISTNAME=		ripole-0.1.4
@@ -15,10 +15,12 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 USE_LIBTOOL=		yes
 BUILD_TARGET=		default
 
+INSTALLATION_DIRS=	bin
+
 do-configure: # empty
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/${PKGBASE} ${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/${PKGBASE} ${DESTDIR}${PREFIX}/bin
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/bsd.pkg.mk"

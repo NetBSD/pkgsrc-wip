@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/05/20 11:19:30 poppnk Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 14:20:27 asau Exp $
 #
 
 PKGNAME=		rhapsody-0.28b
@@ -18,10 +18,12 @@ CONFIGURE_ARGS=		-i ${PREFIX}/bin
 
 # XXX : CC is forced to be /usr/bin/gcc. must be reported
 
+INSTALLATION_DIRS=	bin
+
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/src/rhapsody ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/rhapsody
-	${INSTALL_DATA} ${WRKSRC}/help/*.hlp ${PREFIX}/share/rhapsody
+	${INSTALL_PROGRAM} ${WRKSRC}/src/rhapsody ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/rhapsody
+	${INSTALL_DATA} ${WRKSRC}/help/*.hlp ${DESTDIR}${PREFIX}/share/rhapsody
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

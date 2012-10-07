@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/07/31 22:18:51 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 14:23:56 asau Exp $
 #
 
 DISTNAME=	RncMode-1_0b3
@@ -21,9 +21,9 @@ do-build:
 	&& ${EMACS_BIN} -batch -f batch-byte-compile rnc-mode.el
 
 do-install:
-	${INSTALL_DATA_DIR} ${EMACS_LISPPREFIX}
-	${INSTALL_DATA} ${WRKSRC}/*.el  ${EMACS_LISPPREFIX}
-	${INSTALL_DATA} ${WRKSRC}/*.elc ${EMACS_LISPPREFIX}
+	${INSTALL_DATA_DIR} ${DESTDIR}${EMACS_LISPPREFIX}
+	${INSTALL_DATA} ${WRKSRC}/*.el  ${DESTDIR}${EMACS_LISPPREFIX}
+	${INSTALL_DATA} ${WRKSRC}/*.elc ${DESTDIR}${EMACS_LISPPREFIX}
 
 .include "../../editors/emacs/modules.mk"
 .include "../../mk/bsd.pkg.mk"

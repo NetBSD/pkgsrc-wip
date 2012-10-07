@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/04/20 11:38:12 poppnk Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 14:25:16 asau Exp $
 #
 
 DISTNAME=		rootcheck-0.7
@@ -9,13 +9,15 @@ MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://www.ossec.net/rootcheck/
 COMMENT=		RootKit detection software
 
+INSTALLATION_DIRS=	bin
+
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/ossec-rootcheck ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/rootcheck/
-	${INSTALL_DATA} ${WRKSRC}/rootcheck.conf ${PREFIX}/share/rootcheck/
-	${INSTALL_DATA_DIR} ${PREFIX}/share/rootcheck/db/
-	${INSTALL_DATA} ${WRKSRC}/db/*.txt ${PREFIX}/share/rootcheck/db/
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/rootcheck
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/rootcheck/
+	${INSTALL_PROGRAM} ${WRKSRC}/ossec-rootcheck ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/rootcheck/
+	${INSTALL_DATA} ${WRKSRC}/rootcheck.conf ${DESTDIR}${PREFIX}/share/rootcheck/
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/rootcheck/db/
+	${INSTALL_DATA} ${WRKSRC}/db/*.txt ${DESTDIR}${PREFIX}/share/rootcheck/db/
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/rootcheck
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/rootcheck/
 
 .include "../../mk/bsd.pkg.mk"

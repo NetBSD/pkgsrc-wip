@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/07/15 18:33:16 shattered Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/07 14:07:06 asau Exp $
 #
 
 DISTNAME=		r8s1.7.dist
@@ -27,15 +27,17 @@ EXAMPLES+=		SAMPLE_LOCAL_CLOCK
 EXAMPLES+=		SAMPLE_SIMPLE
 EXAMPLES+=		SAMPLE_SUPERTREE
 
+INSTALLATION_DIRS=	bin
+
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/r8s ${BINDIR}/r8s
-	${INSTALL_DATA_DIR} ${DOCDIR}
-	${INSTALL_DATA_DIR} ${EXAMPLESDIR}
+	${INSTALL_PROGRAM} ${WRKSRC}/r8s ${DESTDIR}${BINDIR}/r8s
+	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${EXAMPLESDIR}
 .for f in ${DOCS}
-	${INSTALL_DATA} ${WRKSRC}/../doc/${f} ${DOCDIR}/${f}
+	${INSTALL_DATA} ${WRKSRC}/../doc/${f} ${DESTDIR}${DOCDIR}/${f}
 .endfor
 .for f in ${EXAMPLES}
-	${INSTALL_DATA} ${WRKSRC}/../sample/${f} ${EXAMPLESDIR}/${f}
+	${INSTALL_DATA} ${WRKSRC}/../sample/${f} ${DESTDIR}${EXAMPLESDIR}/${f}
 .endfor
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/07/23 13:12:53 netcap Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 14:22:05 asau Exp $
 #
 
 DISTNAME=	ripit-3.6.0
@@ -38,10 +38,12 @@ do-configure:
 	${MV} ${WRKSRC}/ripit.pl ${WRKSRC}/ripit.pl.dist
 	${SED} -e 's,my @coder.*;,my @coder= \(1\);,1' ${WRKSRC}/ripit.pl.dist > ${WRKSRC}/ripit.pl
 
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/ripit.pl ${PREFIX}/bin/ripit
-	${INSTALL_MAN} ${WRKSRC}/ripit.1 ${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/ripit
-	${INSTALL_DATA} ${WRKSRC}/config ${PREFIX}/share/examples/ripit
+	${INSTALL_SCRIPT} ${WRKSRC}/ripit.pl ${DESTDIR}${PREFIX}/bin/ripit
+	${INSTALL_MAN} ${WRKSRC}/ripit.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/ripit
+	${INSTALL_DATA} ${WRKSRC}/config ${DESTDIR}${PREFIX}/share/examples/ripit
 
 .include "../../mk/bsd.pkg.mk"

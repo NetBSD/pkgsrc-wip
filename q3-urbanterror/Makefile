@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2007/09/30 15:00:34 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/07 13:59:09 asau Exp $
 #
 
 DISTNAME=	urbanterror3
@@ -27,8 +27,10 @@ BUILD_DIRS=	# empty
 
 EMUL_PLATFORMS=		linux-i386
 
+INSTALLATION_DIRS=	lib/lokigames/quake3arena/baseq3
+
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/zq3ut3.pk3 \
-		${PREFIX}/lib/lokigames/quake3arena/baseq3
+		${DESTDIR}${PREFIX}/lib/lokigames/quake3arena/baseq3
 
 .include "../../mk/bsd.pkg.mk"
