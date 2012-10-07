@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/01/17 13:26:29 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 17:17:40 asau Exp $
 #
 
 DISTNAME=	tile-0.8.4.0
@@ -10,8 +10,6 @@ MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://tktable.sourceforge.net/tile/
 COMMENT=	Improved themeing engine for Tk
 LICENSE=	mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 

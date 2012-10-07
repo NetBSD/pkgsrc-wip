@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/01/17 10:48:04 emil_s Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 17:17:45 asau Exp $
 #
 
 DISTNAME=		tpp-1.3.1
@@ -8,8 +8,6 @@ MASTER_SITES=		http://synflood.at/tpp/
 MAINTAINER=		esg@sdf.lonestar.org
 HOMEPAGE=		http://synflood.at/tpp/
 COMMENT=		Tpp is an ncurses-based presentation tool
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

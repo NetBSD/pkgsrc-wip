@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/07/28 12:20:35 lexort Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/07 17:17:46 asau Exp $
 
 SVNVERSION=	4543
 UPSTREAM_VERSION=	0.7.5
@@ -14,8 +14,6 @@ MASTER_SITES=	# not defined
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	http://trac-hacks.org/wiki/GraphVizPlugin
 COMMENT=	Graphviz plugin for Trac
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	{ja-,}trac>=0.11:../../www/trac
 

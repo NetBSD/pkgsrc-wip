@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/04/09 01:44:07 silasdb Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/07 17:17:32 asau Exp $
 #
 # TODO: it doesn't compile nor install documentation yet.
 
@@ -11,8 +11,6 @@ HOMEPAGE=	http://abntex.codigolivre.org.br/
 COMMENT=	Support for ABNT documentation standards
 
 USE_TOOLS+=	gmake
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/abntex-0.9
 

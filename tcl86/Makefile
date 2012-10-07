@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2011/09/13 03:52:38 bharder Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/07 17:17:27 asau Exp $
 #
 
 DISTNAME=		tcl8.6b2-src.tar.gz
@@ -11,8 +11,6 @@ EXTRACT_CMD=		tar xzf $$extract_file
 MAINTAINER=		bch@methodlogic.net
 HOMEPAGE=		http://www.tcl.tk/
 COMMENT=		Tool Command Language, a dynamic language
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../wip/tcl86/Makefile.version"
 .include "options.mk"

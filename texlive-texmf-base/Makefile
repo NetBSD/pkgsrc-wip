@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2010/11/11 14:01:55 makoto Exp $
+# $NetBSD: Makefile,v 1.13 2012/10/07 17:17:32 asau Exp $
 
 DISTNAME=	texlive-20100722-texmf
 PKGNAME=	texlive-texmf-base-2010
@@ -27,7 +27,6 @@ EXTRACT_ELEMENTS=	${DISTNAME}/texmf-dist/bibtex \
 			${DISTNAME}/texmf/web2c
 NO_BUILD=		yes
 USE_TOOLS+=		pax
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 TEX_TEXMF_DIRS=	${PREFIX}/share/texmf ${PREFIX}/share/texmf-dist
 

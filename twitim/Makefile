@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/11/16 19:13:29 noud4 Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/07 17:17:53 asau Exp $
 #
 
 DISTNAME=	twitim_1.5
@@ -11,8 +11,6 @@ MAINTAINER=	ryo_on@yk.rim.or.jp
 HOMEPAGE=	http://code.google.com/p/twitim/
 COMMENT=	Twitim is a Twitter client for GNOME
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/twitim
 USE_LANGUAGES=	# none

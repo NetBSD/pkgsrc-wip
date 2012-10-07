@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/06/26 23:27:25 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 17:17:20 asau Exp $
 #
 
 DISTNAME=	ta-lib-0.4.0-src
@@ -9,8 +9,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ta-lib/}
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://www.ta-lib.org/
 COMMENT=	Unix POSIX Library for Technical Analysis
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/ta-lib
 GNU_CONFIGURE=	yes

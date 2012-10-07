@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/08/05 12:22:58 obache Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/07 17:17:48 asau Exp $
 
 DISTNAME=	excelviewerplugin-0.1dev_r${SVN_REV}
 PKGNAME=	trac-plugins-excelviewer-0.1pre${SVN_REV}
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://trac-hacks.org/wiki/ExcelViewerPlugin
 COMMENT=	Excel viewer plugin for trac
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	{ja-,}trac>=0.10:../../www/trac
 DEPENDS+=	${PYPKGPREFIX}-xlrd>=0:../../textproc/py-xlrd

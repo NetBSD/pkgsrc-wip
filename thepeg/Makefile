@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/12/29 22:42:40 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 17:17:35 asau Exp $
 #
 
 DISTNAME=	ThePEG-1.6.1
@@ -11,8 +11,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://home.thep.lu.se/~leif/ThePEG/
 COMMENT=	Toolkit for High Energy Physics Event Generation
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CHECK_PORTABILITY_SKIP= configure
 

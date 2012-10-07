@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2012/04/08 19:09:53 thomasklausner Exp $
+# $NetBSD: Makefile.common,v 1.4 2012/10/07 17:17:28 asau Exp $
 #
 # used by wip/teeworlds-server/Makefile
 
@@ -13,7 +13,6 @@ HOMEPAGE=		http://www.teeworlds.com/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 USE_LANGUAGES=		c c++
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 NO_CONFIGURE=		yes
 
 USE_TOOLS=	pax

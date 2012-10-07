@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/06/11 09:45:17 leot1990 Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 17:17:53 asau Exp $
 #
 
 DISTNAME=	twitmail-0.42
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.hardakers.net/twitmail/
 COMMENT=	Curses-based mail-like interface to twitter
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-DBD-SQLite>=0:../../databases/p5-DBD-SQLite
 DEPENDS+=	p5-DBI>=0:../../databases/p5-DBI

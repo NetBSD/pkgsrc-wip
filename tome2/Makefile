@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/03/04 15:57:43 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/07 17:17:43 asau Exp $
 #
 
 DISTNAME=	tome-235-src
@@ -11,7 +11,6 @@ MAINTAINER=	pho@cielonegro.org
 HOMEPAGE=	http://t-o-m-e.net/dl/src/
 COMMENT=	Troubles of Middle Earth
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_JOBS_SAFE=		no
 
 BUILD_DIRS=	src

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/12/06 17:41:49 asau Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 17:17:28 asau Exp $
 
 DISTNAME=	tecoclinux0398
 PKGNAME=	teco-0398
@@ -8,8 +8,6 @@ MASTER_SITES=	http://almy.us/files/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://almy.us/teco.html
 COMMENT=	Powerful and compact editor with nongrafical user interface
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_FILE=	makefile
 WRKSRC=		${WRKDIR}/tecoc${PKGVERSION}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/02/22 16:07:41 emil_s Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 17:17:50 asau Exp $
 #
 
 DISTNAME=		ttyload-0.5.2
@@ -14,8 +14,6 @@ LICENSE=		isc
 ONLY_FOR_PLATFORM=	Darwin-*-* FreeBSD-*-* Linux-*-* IRIX-*-* SunOS-*-*
 
 BUILD_TARGET=		default
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/ttyload ${DESTDIR}${PREFIX}/bin

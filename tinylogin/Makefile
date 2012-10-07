@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/05/24 10:31:46 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/07 17:17:36 asau Exp $
 #
 
 DISTNAME=	tinylogin-1.4
@@ -8,6 +8,8 @@ MASTER_SITES=	http://tinylogin.busybox.net/downloads/
 MAINTAINER=	pancake@phreaker.net
 HOMEPAGE=	http://tinylogin.busybox.net/
 COMMENT=	Suite of tiny Unix utilities for handling logging
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_TOOLS+=	gmake
 

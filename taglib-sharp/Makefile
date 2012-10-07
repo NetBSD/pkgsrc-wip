@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/06/13 22:47:20 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/07 17:17:22 asau Exp $
 #
 
 DISTNAME=	taglib-sharp-2.0.3.2
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://developer.novell.com/wiki/index.php/TagLib_Sharp
 COMMENT=	Multimedia metadata reading/writing library for popular formats
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config gmake

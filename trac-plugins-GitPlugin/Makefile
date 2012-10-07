@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2011/07/28 12:37:03 lexort Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/07 17:17:46 asau Exp $
 
 DISTNAME=	gitplugin_0.12-r${SVN_REV}
 PKGNAME=	trac-plugins-GitPlugin-0.1pre${SVN_REV}
@@ -11,8 +11,6 @@ MAINTAINER=	roy@NetBSD.org
 HOMEPAGE=	http://trac.edgewall.org/wiki/GitPlugin
 COMMENT=	GIT plugin for Trac
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	{ja-,}trac>=0.12:../../www/trac
 DEPENDS+=	scmgit-base>=1.5.6:../../devel/scmgit-base

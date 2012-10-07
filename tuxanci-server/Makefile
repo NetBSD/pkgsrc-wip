@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/11/10 13:38:07 ondratu Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 17:17:51 asau Exp $
 #
 
 DISTNAME=	tuxanci-0.20.0-src
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc@blackmouse.biz
 HOMEPAGE=	http://download.tuxanci.org/0.20.0/
 COMMENT=	server of czechoslovak multiplatform action game like Bulanci
+
+PKG_DESTDIR_SUPPORT=	none
 
 WRKSRC=	${WRKDIR}/pkgs/tuxanci-0.20.0-src
 

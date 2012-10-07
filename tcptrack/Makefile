@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2011/03/30 10:30:18 moubctez Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/07 17:17:27 asau Exp $
 
 DISTNAME=	tcptrack-1.4.0
 CATEGORIES=	net
@@ -8,8 +8,6 @@ MAINTAINER=	pancake@phreaker.net
 HOMEPAGE=	http://www.rhythm.cx/~steve/devel/tcptrack/
 COMMENT=	Watch TCP connections
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes

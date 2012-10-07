@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/01/12 23:15:24 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/07 17:17:48 asau Exp $
 
 DISTNAME=	trayer-1.0
 PKGREVISION=    4
@@ -9,8 +9,6 @@ MAINTAINER=	milos.negovanovic@googlemail.com
 HOMEPAGE=	http://fvwm-crystal.org/
 COMMENT=	Standalone tray app
 LICENSE=	mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gmake pkg-config
 MAKE_JOBS_SAFE=	no

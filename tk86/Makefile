@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2011/08/08 19:17:51 bharder Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/07 17:17:38 asau Exp $
 
 DISTNAME=		tk8.6b2-src.tar.gz
 PKGNAME=		tk86-${TK_PKGSRC_PATCHLEVEL}
@@ -10,8 +10,6 @@ HOMEPAGE=		http://www.tcl.tk/
 EXTRACT_SUFX=
 EXTRACT_CMD=		tar xzf $$extract_file
 COMMENT=		Graphical toolkit for Tcl
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../wip/tk86/Makefile.version"
 .include "../../wip/tcl86/options.mk"

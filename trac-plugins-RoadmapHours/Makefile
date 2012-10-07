@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/12/16 16:13:33 lexort Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 17:17:46 asau Exp $
 
 SVNVERSION=	4802
 # Eggs do not have the same name and do not include the SVN revision.
@@ -15,8 +15,6 @@ MASTER_SITES=	# not defined
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	http://trac-hacks.org/wiki/RoadmapHoursPlugin
 COMMENT=	RoadmapHours plugin for Trac
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	{ja-,}trac>=0.11:../../www/trac
 DEPENDS+=	trac-plugins-TimingAndEstimation>=0.7.6:../../wip/trac-plugins-TimingAndEstimation

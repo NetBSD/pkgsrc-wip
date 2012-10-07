@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/10/19 22:38:59 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 17:17:40 asau Exp $
 #
 
 DISTNAME=	Tktable2.10
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://tktable.sourceforge.net/
 COMMENT=	Full-featured 2D table widget for Tk
 #LICENSE=	# TODO: (see ${WRKSRC}/license.txt)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 

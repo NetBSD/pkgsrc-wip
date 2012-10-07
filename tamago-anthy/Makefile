@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2011/05/09 04:32:25 makoto Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/07 17:17:22 asau Exp $
 # the version number is for pkglint only
 DISTNAME=	tamago-anthy-4.0
 # to avoid trailing -cvs in package name.
@@ -23,7 +23,6 @@ DISTFILES+=	anthy-${ANTHY_VERSION}.tar.gz
 COMMENT=	Tamago(Emacs CJK input) + Anthy engine interface
 
 CONFLICTS=	tamago-[0-9]*
-PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX}
 
 USE_TOOLS+=	pax patch

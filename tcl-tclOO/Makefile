@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/10/20 14:01:23 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 17:17:26 asau Exp $
 #
 
 DISTNAME=	TclOO0.6
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tcl.tk/
 COMMENT=	Core for other TCL OO extensions and basic TCL OO framework
 #LICENSE=	# TODO: (see mk/license.mk)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 

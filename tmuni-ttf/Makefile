@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/11/04 07:12:45 phonohawk Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 17:17:41 asau Exp $
 #
 
 DISTNAME=		ttf-tmuni_1.901b.orig
@@ -14,8 +14,6 @@ LICENSE=		gnu-gpl-v2
 WRKSRC=			${WRKDIR}/${DISTNAME:S/_/-/}
 NO_BUILD=		YES
 NO_CONFIGURE=	YES
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 FONTS_DIRS.ttf=		${PREFIX}/lib/X11/fonts/TTF
 INSTALLATION_DIRS+=	${FONTS_DIRS.ttf}

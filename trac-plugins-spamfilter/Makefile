@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/05/10 20:11:34 noud4 Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/07 17:17:48 asau Exp $
 
 SVNREV=		9935
 DISTNAME=	TracSpamFilter-0.3.2dev
@@ -10,8 +10,6 @@ CATEGORIES=	www
 MAINTAINER=	roy@NetBSD.org
 HOMEPAGE=	http://trac.edgewall.org/wiki/SpamFilter
 COMMENT=	Spam Filter plugin for Trac
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	{ja-,}trac>=0.12:../../www/trac
 DEPENDS+=	${PYPKGPREFIX}-dns:../../net/py-dns

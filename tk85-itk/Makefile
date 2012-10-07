@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/10/01 13:42:30 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 17:17:37 asau Exp $
 #
 
 DISTNAME=	itk3.3
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://incrtcl.sourceforge.net/itk/index.html
 COMMENT=	Framework for building mega-widgets using [incr Tcl]
 LICENSE=	2-clause-bsd # ?
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-tcl=${BUILDLINK_PREFIX.tcl}/lib/tcl8.5

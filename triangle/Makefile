@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/10/28 16:38:52 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 17:17:49 asau Exp $
 #
 
 DISTNAME=	triangle
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://www.cs.cmu.edu/~quake/triangle.html
 COMMENT=	Two-Dimensional Quality Mesh Generator and Delaunay Triangulator
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=	${WRKDIR}
 

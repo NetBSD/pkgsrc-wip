@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/09/28 04:54:00 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 17:17:23 asau Exp $
 #
 
 DISTNAME=	tap-plugins-0.7.2
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://tap-plugins.sourceforge.net/ladspa.html
 COMMENT=	Tom's Audio Processing plugins
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	post-patch

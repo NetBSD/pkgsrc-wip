@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2010/06/13 22:47:20 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/07 17:17:52 asau Exp $
 
 DISTNAME=	Tuxtype2-${VERSION}
 PKGNAME=	tuxtype2-${VERSION}
@@ -11,6 +11,8 @@ COMMENT=	Educational typing tutorial game for children
 HOMEPAGE=	http://tuxtype.sourceforge.net/
 
 VERSION=	1.5.0
+
+PKG_DESTDIR_SUPPORT=	none
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 GNU_CONFIGURE=	YES

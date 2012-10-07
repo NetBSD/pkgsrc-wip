@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/09/29 02:59:47 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 17:17:25 asau Exp $
 #
 
 DISTNAME=	iwidgets-4.0.1
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://incrtcl.sourceforge.net/iwidgets
 COMMENT=	Object-oriented mega-widget set which extends Tcl/Tk
 LICENSE=	2-clause-bsd # ?
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 NO_CONFIGURE=	yes

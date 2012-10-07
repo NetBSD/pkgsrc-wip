@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/10/15 21:14:59 ghen Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/07 17:17:32 asau Exp $
 #
 
 DISTNAME=		testdisk-6.10
@@ -9,6 +9,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://www.cgsecurity.org/wiki/TestDisk
 COMMENT=		Tool to check and undelete partitions
+
+PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=		yes
 

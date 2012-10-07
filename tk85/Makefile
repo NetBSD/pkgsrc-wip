@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/07/13 00:48:17 makoto Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/07 17:17:37 asau Exp $
 
 DISTNAME=	tk${TK_VERSION}-src
 PKGNAME=	tk-${TK_VERSION}
@@ -8,8 +8,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tcl/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tcl.tk/
 COMMENT=	Graphical toolkit for TCL
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../wip/tk85/Makefile.version"
 

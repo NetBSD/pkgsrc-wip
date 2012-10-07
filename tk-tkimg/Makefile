@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/02 07:07:24 mwilhelmy Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/07 17:17:36 asau Exp $
 #
 
 DISTNAME=	tkimg-1.3-2008-01-16
@@ -10,6 +10,8 @@ MAINTAINER=	egavilan@eie.fceia.unr.edu.ar
 HOMEPAGE=	http://www.flightlab.com/~joe/downloads/
 COMMENT=	Add support for several image formats to Tk
 #LICENSE=	# Same as Tcl
+
+PKG_DESTDIR_SUPPORT=	none
 
 WRKSRC=		${WRKDIR}/tkimg-1.3
 GNU_CONFIGURE=	yes

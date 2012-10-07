@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2009/07/31 22:18:51 minskim Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/07 17:17:20 asau Exp $
 
 DISTNAME=	t-gnus-6.17.2.00
 CATEGORIES=	mail
@@ -9,6 +9,8 @@ HOMEPAGE=	http://gnus.org/
 COMMENT=	Gnus is a flexible message reader running under GNU Emacs
 
 DEPENDS+=	semi>=1.14.6:../../devel/semi
+
+PKG_DESTDIR_SUPPORT=	none
 
 WRKSRC=		${WRKDIR}/gnus
 

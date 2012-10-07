@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/06/12 23:25:01 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 17:17:35 asau Exp $
 #
 
 DISTNAME=	thwab-2.2.3
@@ -11,8 +11,6 @@ HOMEPAGE=	http://thwab.ojuba.org/
 COMMENT=	Electronic Encyclopedia System
 
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=	intltool msgfmt

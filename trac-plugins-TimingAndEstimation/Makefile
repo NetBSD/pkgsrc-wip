@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2010/12/16 16:07:55 lexort Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/07 17:17:47 asau Exp $
 
 SVNVERSION=	5370
 # Eggs do not have the same name and do not include the SVN revision.
@@ -15,8 +15,6 @@ MASTER_SITES=	# not defined
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	http://trac-hacks.org/wiki/TimingAndEstimationPlugin
 COMMENT=	TimingAndEstimation plugin for Trac
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	{ja-,}trac>=0.11:../../www/trac
 

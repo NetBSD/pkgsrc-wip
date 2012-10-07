@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2010/06/13 22:47:20 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/07 17:17:36 asau Exp $
 #
 
 DISTNAME=		tilp
@@ -10,6 +10,8 @@ MASTER_SITES=		http://www.ticalc.org/pub/unix/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://tilp.info/
 COMMENT=		Database of TI calculator model information
+
+PKG_DESTDIR_SUPPORT=	none
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 

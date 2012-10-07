@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/04/08 19:09:54 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/07 17:17:29 asau Exp $
 #
 
 DISTNAME=	telepathy-logger-0.1.1
@@ -12,8 +12,6 @@ COMMENT=	The logging of all communication within the Telepathy framework
 LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

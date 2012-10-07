@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/03/07 19:08:11 amoibos Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 17:17:21 asau Exp $
 
 DISTNAME=	tabbed-0.3
 CATEGORIES=	x11
@@ -13,8 +13,6 @@ USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c
 
 NO_CONFIGURE=	yes
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 # Adjust config.mk
 SUBST_CLASSES+=		makefile

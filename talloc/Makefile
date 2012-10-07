@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/05/01 23:05:33 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 17:17:22 asau Exp $
 #
 
 DISTNAME=	talloc-2.0.1
@@ -11,8 +11,6 @@ COMMENT=	Hierarchical pool based memory allocator with destructors
 #LICENSE=	# TODO: (see mk/license.mk)
 
 BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config

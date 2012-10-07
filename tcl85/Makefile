@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/05/01 19:45:43 bsiegert Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/07 17:17:26 asau Exp $
 
 DISTNAME=	tcl${TCL_VERSION}-src
 PKGNAME=	tcl-${TCL_VERSION}
@@ -11,8 +11,6 @@ COMMENT=	Tool Command Language, a dynamic language
 
 CONFLICTS+=	tclman80-[0-9]*
 CONFLICTS+=	tcl86-* tcl-[0-9]*
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../wip/tcl85/Makefile.version"
 

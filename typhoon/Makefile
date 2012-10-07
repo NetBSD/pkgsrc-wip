@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/08/13 23:33:25 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/07 17:17:54 asau Exp $
 #
 
 DISTNAME=		typhoon-1.11.0
@@ -8,5 +8,7 @@ MASTER_SITES=		http://users.footprints.net/~kaz/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://users.footprints.net/~kaz/
 COMMENT=		Database management system
+
+PKG_DESTDIR_SUPPORT=	none
 
 .include "../../mk/bsd.pkg.mk"

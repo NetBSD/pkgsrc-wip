@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/01/18 07:14:29 helgoman Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/07 17:17:23 asau Exp $
 #
 
 DISTNAME=	task-1.9.4
@@ -9,8 +9,6 @@ MAINTAINER=	esg@sdf.lonestar.org
 HOMEPAGE=	http://taskwarrior.org/projects/show/taskwarrior/
 COMMENT=	Task is an open source, command-line, TODO list manager
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++

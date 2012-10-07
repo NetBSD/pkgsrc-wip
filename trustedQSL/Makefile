@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/03 01:19:59 makoto Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/07 17:17:49 asau Exp $
 
 DISTNAME=		TrustedQSL-1_13
 PKGNAME=		TrustedQSL-1.13
@@ -10,6 +10,8 @@ MAINTAINER=		makoto@ki.nu
 HOMEPAGE=		http://www.arrl.org/files/file/LoTW%20Instructions/
 COMMENT=		Uploading QSL Data to LoTW of ARRL
 #LICENSE=		arrl
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_TOOLS+=		perl gmake
 USE_LANGUAGES+=		c c++

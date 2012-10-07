@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/08/13 23:33:25 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/07 17:17:33 asau Exp $
 #
 
 DISTNAME=	thcrut-1.2.4g
@@ -8,6 +8,8 @@ MASTER_SITES=	http://www.thc.org/releases/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.thc.org/
 COMMENT=	Gathers information from local and remote networks
+
+PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=	yes
 

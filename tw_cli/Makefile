@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/05/19 09:00:14 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 17:17:52 asau Exp $
 #
 
 DISTNAME=	tw_cli-${EMUL_OPSYS}-${DIST_ARCH}-9.5.0.1
@@ -18,8 +18,6 @@ NO_SRC_ON_CDROM=${RESTRICTED}
 NO_SRC_ON_FTP=	${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_FTP=	${RESTRICTED}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	# none

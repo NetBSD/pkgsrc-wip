@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2011/11/16 13:52:13 ryo-on Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/07 17:17:23 asau Exp $
 #
 
 DISTNAME=	TaskCoach-1.2.31
@@ -10,8 +10,6 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://www.taskcoach.org/
 COMMENT=	Task Coach is a simple open source todo manager
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

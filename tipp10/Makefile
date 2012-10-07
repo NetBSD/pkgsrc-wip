@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/05/31 00:50:56 mrampke Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 17:17:36 asau Exp $
 
 DISTNAME=		tipp10_source_v2-1-0
 EXTRACT_SUFFIX=		.zip
@@ -13,7 +13,6 @@ HOMEPAGE=		http://www.tipp10.com/
 COMMENT=		Touch typing tutor
 LICENSE=		gnu-gpl-v2
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LANGUAGES+=		c++
 
 .include		 "../../x11/qt4-libs/buildlink3.mk"

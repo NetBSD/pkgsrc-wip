@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2011/10/28 12:28:51 crocusino Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/07 17:17:31 asau Exp $
 #
 
 DISTNAME=	termit-2.9.1
@@ -10,8 +10,6 @@ MAINTAINER=	jan.smydke@jh-inst.cas.cz
 HOMEPAGE=	http://wiki.github.com/nonstop/termit
 COMMENT=	Simple vte-based terminal with tabs and encoding switching
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake

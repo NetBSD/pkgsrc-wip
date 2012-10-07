@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/03/17 17:53:26 ishit Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/07 17:17:49 asau Exp $
 
 DISTNAME=	tscreen-0.4.9
 CATEGORIES=	misc shells
@@ -10,7 +10,6 @@ COMMENT=	Multi-screen window manager
 LICENSE=	gnu-gpl-v2
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "options.mk"
 

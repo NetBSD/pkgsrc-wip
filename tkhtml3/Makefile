@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/09/27 12:22:55 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 17:17:40 asau Exp $
 #
 
 DISTNAME=	tkhtml3-alpha-16
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://tkhtml.tcl.tk/
 COMMENT=	Tk widget displaying content formatted to HTML and CSS standards
 LICENSE=	modified-bsd # ?
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/htmlwidget
 GNU_CONFIGURE=	yes

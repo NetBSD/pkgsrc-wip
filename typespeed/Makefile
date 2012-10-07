@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2008/09/25 14:02:17 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.18 2012/10/07 17:17:53 asau Exp $
 #
 
 DISTNAME=		typespeed-0.6.4
@@ -9,6 +9,8 @@ MASTER_SITES=		http://tobias.eyedacor.org/typespeed/
 MAINTAINER=		hernani@vecirex.net
 HOMEPAGE=		http://tobias.eyedacor.org/typespeed/
 COMMENT=		Game to measure your typing speed, with network mode
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_LANGUAGES=		c
 GNU_CONFIGURE=		YES

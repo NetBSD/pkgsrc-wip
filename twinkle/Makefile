@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/07/02 13:38:09 moubctez Exp $
+# $NetBSD: Makefile,v 1.17 2012/10/07 17:17:53 asau Exp $
 #
 
 DISTNAME=		twinkle-1.4.2
@@ -10,8 +10,6 @@ MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://www.twinklephone.com/
 COMMENT=		Software Phone using the SIP protocol
 LICENSE=		gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config

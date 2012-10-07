@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/05/10 20:11:34 noud4 Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/07 17:17:46 asau Exp $
 
 DISTNAME=	fullblognotification_0.11-r${SVN_REV}
 PKGNAME=	trac-plugins-FullBlogNotification-0.1pre${SVN_REV}
@@ -11,8 +11,6 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	roy@NetBSD.org
 HOMEPAGE=	http://trac-hacks.org/wiki/FullBlogNotificationPlugin
 COMMENT=	E-mail Notification for the FullBlog plugin for Trac
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	trac-plugins-FullBlog>=0.1pre6158:../../wip/trac-plugins-FullBlog
 

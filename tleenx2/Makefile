@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2010/06/13 22:47:20 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/07 17:17:40 asau Exp $
 #
 
 DISTNAME=	TleenX2-20040214
@@ -10,6 +10,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tleenx/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://tleenx.sourceforge.net/
 COMMENT=	Client to tlen.pl - polish IM / chat system
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes

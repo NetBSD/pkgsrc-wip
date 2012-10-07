@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2010/06/13 22:47:20 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/07 17:17:42 asau Exp $
 #
 
 DISTNAME=	tmw-0.0.22.1
@@ -10,6 +10,7 @@ MAINTAINER=	Pseudo.Statistic@gmail.com
 HOMEPAGE=	http://themanaworld.sourceforge.net/
 COMMENT=	Free open source 2D MMORPG in development
 
+PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++

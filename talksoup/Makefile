@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/06/10 12:17:05 hoka_adam Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 17:17:22 asau Exp $
 #
 
 DISTNAME=	TalkSoup-1.0alpha
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=talksoup/}
 MAINTAINER=	adam.hoka@gmail.com
 HOMEPAGE=	http://talksoup.sourceforge.net/
 COMMENT=	IRC client for GNUstep and MacOSX
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_LANGUAGES=		objc
 NO_CONFIGURE=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2010/09/05 16:27:36 gschwarz Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/07 17:17:21 asau Exp $
 
 DISTNAME=	tac_plus.F5.0.0.alpha-libradius
 PKGNAME=	tac_plus-libradius-5.0.0
@@ -9,8 +9,6 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	schwarz@NetBSD.org
 HOMEPAGE=	http://www.portal-to-web.de/tacacs/
 COMMENT=	Version of Cisco's tac_plus Tacacs server with RADIUS support
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 INSTALLATION_DIRS=	bin sbin ${PKGMANDIR}/man8 share/doc/tac_plus \
 			share/examples/tac_plus

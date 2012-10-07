@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/03/12 22:17:30 christtrekker Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 17:17:52 asau Exp $
 #
 
 DISTNAME=	tuxguitar-src-1.2
@@ -10,8 +10,6 @@ MAINTAINER=	christtrekker@users.sourceforge.net
 HOMEPAGE=	http://www.tuxguitar.com.ar/
 COMMENT=	Multitrack tablature editor and player
 LICENSE=	gnu-lgpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/tuxguitar-src-1.2
 USE_LANGUAGES=	c c++

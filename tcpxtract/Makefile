@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/03/21 15:25:44 jihbed Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/07 17:17:27 asau Exp $
 #
 
 DISTNAME=		tcpxtract-1.0.1
@@ -8,8 +8,6 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=tcpxtract/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://tcpxtract.sourceforge.net/
 COMMENT=		Extract files from network traffic based on file signatures
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 CPPFLAGS+=		-DDEFAULT_CONFIG_FILE="\"${PKG_SYSCONFDIR}/tcpxtract.conf\""

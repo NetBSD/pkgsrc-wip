@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/08/15 03:28:19 prudhvikrishna Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 17:17:49 asau Exp $
 #
 
 DISTNAME=	ttf-indic-fonts_0.5.4
@@ -10,8 +10,6 @@ MAINTAINER=	prudhvi-krishna-bsd@surapaneni.in
 HOMEPAGE=	http://www.debian-in.org/
 COMMENT=	TTF Indic Fonts from Debian
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=	lohit-fonts-[0-9]*
 

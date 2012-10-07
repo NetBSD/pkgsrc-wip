@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/07/12 10:03:51 makoto Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/07 17:17:53 asau Exp $
 
 # M-x twittering-mode-version shows twittering-mode-vHEAD,
 # but just for convenience:
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/hayamiz/twittering-mode/
 COMMENT=	Emacs client for twitter
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GIT_REPOSITORIES=	master
 GIT_REPO.master=	https://github.com/hayamiz/twittering-mode.git

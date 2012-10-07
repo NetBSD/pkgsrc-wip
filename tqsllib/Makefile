@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/03 01:16:13 makoto Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/07 17:17:45 asau Exp $
 
 DISTNAME=	tqsllib-2_2
 PKGNAME=	tqsllib-2.2
@@ -10,6 +10,8 @@ MAINTAINER=	makoto@ki.nu
 HOMEPAGE=	http://www.arrl.org/files/file/LoTW%20Instructions/
 COMMENT=	Tqsl library for ARRL LoTW
 #LICENSE=	arrl
+
+PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES+=	c c++

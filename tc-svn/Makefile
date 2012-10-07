@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/09/25 07:47:48 makoto Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/07 17:17:24 asau Exp $
 
 DISTNAME=		tc-2.99.1
 PKGNAME=		${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -10,8 +10,6 @@ HOMEPAGE=		http://openlab.ring.gr.jp/tcode/index.html
 COMMENT=		2-stroke non associative direct input for Kanji
 # tc is in GPL2, kw is unknown for the moment
 LICENSE=		gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/tcode/tc
 INSTALLATION_DIRS=	${EMACS_INFOPREFIX} \

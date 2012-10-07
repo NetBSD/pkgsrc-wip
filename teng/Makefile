@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/08/30 19:21:32 ondratu Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 17:17:30 asau Exp $
 #
 
 DISTNAME=	teng-2.1.0
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	ondrej.tuma@firma.seznam.cz
 HOMEPAGE=	http://teng.sourceforge.net/
 COMMENT=	Teng is a general purpose templating engine (whence Teng)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

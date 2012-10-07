@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2010/07/22 06:08:55 schaecsn Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/07 17:17:49 asau Exp $
 #
 
 DISTNAME=	TrueCrypt%207.0%20Source
@@ -11,8 +11,6 @@ HOMEPAGE=	http://www.truecrypt.org/
 COMMENT=	Filesystem encryption package
 LICENSE=	truecrypt-license
 LICENSE_FILE=	truecrypt-license
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/truecrypt-7.0-source
 

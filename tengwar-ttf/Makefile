@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/09/12 12:42:10 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 17:17:30 asau Exp $
 #
 
 DISTNAME=	tengwar-ttf-20100611
@@ -14,8 +14,6 @@ COMMENT=	Family of fonts covering J. R. R. Tolkien's Tengwar script
 LICENSE=	gnu-gpl-v3
 
 #BUILD_DEPENDS+=	fontforge-[0-9]*:../../fonts/fontforge
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	# none

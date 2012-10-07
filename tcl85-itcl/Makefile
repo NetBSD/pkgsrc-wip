@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/09/29 02:11:01 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 17:17:27 asau Exp $
 #
 
 DISTNAME=	itcl3.4.1
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://incrtcl.sourceforge.net/
 COMMENT=	O-O system for Tcl
 LICENSE=	2-clause-bsd # ?
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 

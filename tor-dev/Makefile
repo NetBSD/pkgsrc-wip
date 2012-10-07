@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2012/06/21 09:35:53 athaba Exp $
+# $NetBSD: Makefile,v 1.40 2012/10/07 17:17:43 asau Exp $
 #
 
 DISTNAME=		tor-0.2.3.17-beta
@@ -10,8 +10,6 @@ MAINTAINER=		athaba@users.sourceforge.net
 HOMEPAGE=		http://www.torproject.org/
 COMMENT=		Anonymizing overlay network for TCP
 LICENSE=		modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 

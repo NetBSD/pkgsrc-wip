@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/07/02 13:38:09 moubctez Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 17:17:45 asau Exp $
 #
 
 DISTNAME=	tortunnel-0.2
@@ -10,8 +10,6 @@ MAINTAINER=	pettai@nordu.net
 HOMEPAGE=	http://www.thoughtcrime.org/software/tortunnel/
 COMMENT=	Partial onion proxy for single-hop circuits through TOR
 #LICENSE=	# TODO: (see mk/license.mk)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS=	gmake

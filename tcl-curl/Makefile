@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/01/17 12:03:33 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 17:17:25 asau Exp $
 #
 
 DISTNAME=		TclCurl-7.19.6
@@ -10,8 +10,6 @@ MASTER_SITES=		http://personal1.iddeo.es/andresgarci/tclcurl/download/tarball/
 MAINTAINER=		bharder@methodlogic.net
 HOMEPAGE=		http://personal1.iddeo.es/andresgarci/tclcurl/english/
 COMMENT=		Curl bindings for Tcl
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-tcl=${PREFIX}/lib/tcl8.5

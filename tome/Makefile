@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/06/13 22:47:20 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/07 17:17:43 asau Exp $
 #
 
 DISTNAME=	tome-300alpha18-src
@@ -11,6 +11,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pho@cielonegro.org
 HOMEPAGE=	http://t-o-m-e.net/
 COMMENT=	Troubles of Middle Earth
+
+PKG_DESTDIR_SUPPORT=	none
 
 BUILD_DIRS=	src
 MAKE_FILE=	makefile.std

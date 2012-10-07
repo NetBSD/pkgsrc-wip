@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/05/10 20:11:34 noud4 Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/07 17:17:46 asau Exp $
 
 DISTNAME=	fullblogplugin_0.11-r${SVN_REV}
 PKGNAME=	trac-plugins-FullBlog-0.1.1pre${SVN_REV}
@@ -11,8 +11,6 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	roy@NetBSD.org
 HOMEPAGE=	http://trac-hacks.org/wiki/FullBlogPlugin
 COMMENT=	Blog plugin for Trac
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	{ja-,}trac>=0.11:../../www/trac
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/06/25 21:28:48 cherrymathew Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/07 17:17:30 asau Exp $
 #
 
 DISTNAME=	sid-1.10
@@ -13,6 +13,7 @@ BUILD_DEPENDS+=		libxslt>=1.1.0:../../textproc/libxslt
 BUILD_DEPENDS+=		docbook-xml>=4.2nb4:../../textproc/docbook-xml
 BUILD_DEPENDS+=		docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
+PKG_DESTDIR_SUPPORT=	none
 
 USE_TOOLS+=	perl
 

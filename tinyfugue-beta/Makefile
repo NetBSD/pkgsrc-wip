@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2007/07/15 18:33:16 shattered Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/07 17:17:36 asau Exp $
 #
 DISTNAME=		tf-50b7
 CATEGORIES=		net
@@ -7,6 +7,8 @@ MASTER_SITES=		http://tcp.com/pub/mud/Clients/tinyfugue/
 MAINTAINER=		martijn.van.buul@gmail.com
 HOMEPAGE=		http://tcp.com/pub/mud/Clients/tinyfugue/
 COMMENT=		Beta-version of tinyfugue
+
+PKG_DESTDIR_SUPPORT=	none
 
 WRKSRC=			${WRKDIR}/tf-50b7
 

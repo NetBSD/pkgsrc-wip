@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/10/20 14:10:51 ryo-on Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 17:17:50 asau Exp $
 #
 
 DISTNAME=	ttytter-1.2.02
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.floodgap.com/software/ttytter/dist1/
 COMMENT=	Twitter client written in perl
 #LICENSE=	# The Floodgap Free Software License
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	# none

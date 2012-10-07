@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2010/06/13 22:47:20 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/07 17:17:48 asau Exp $
 #
 
 DISTNAME=	tv-0.5
@@ -10,6 +10,8 @@ MASTER_SITES=	http://darwin.zoology.gla.ac.uk/~rpage/treeviewx/
 MAINTAINER=	hdp@cs.nmsu.edu
 HOMEPAGE=	http://darwin.zoology.gla.ac.uk/~rpage/treeviewx/index.html
 COMMENT=	Phylogenetic tree viewer for Linux and Unix
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake

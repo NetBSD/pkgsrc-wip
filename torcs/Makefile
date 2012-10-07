@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/11/18 22:58:28 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/07 17:17:44 asau Exp $
 #
 
 DISTNAME=	torcs-1.3.1
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.torcs.org/
 COMMENT=	The Open Racing Car Simulator
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 RESTRICTED=		Files too large.
 NO_BIN_ON_CDROM=	${RESTRICTED}

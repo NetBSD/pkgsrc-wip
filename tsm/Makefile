@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2011/03/18 16:46:42 hfath Exp $
+# $NetBSD: Makefile,v 1.17 2012/10/07 17:17:49 asau Exp $
 
 DISTNAME=	tsm-5.2.5
 CATEGORIES=	sysutils
@@ -23,8 +23,6 @@ EMUL_MODULES.linux=	compat x11
 SUSE_VERSION_REQD=	7.3
 
 NOT_FOR_PLATFORM=	Linux-*-* NetBSD-[0-1]*-*
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}
 TEMP?=			${WRKSRC}

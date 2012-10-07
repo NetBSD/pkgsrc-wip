@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/11/26 23:20:32 shattered Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/07 17:17:25 asau Exp $
 #
 
 DISTNAME=	tcc-0.9.22
@@ -11,6 +11,8 @@ COMMENT=	The Smallest ANSI C compiler
 
 ONLY_FOR_PLATFORM=	*-*-i386
 NOT_FOR_PLATFORM=	NetBSD-1.6.2-*
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_TOOLS+=	gmake
 HAS_CONFIGURE=	yes

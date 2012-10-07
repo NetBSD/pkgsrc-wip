@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/09/02 11:59:04 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 17:17:42 asau Exp $
 #
 
 DISTNAME=	tnt_3_0_12
@@ -11,8 +11,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://math.nist.gov/tnt/
 COMMENT=	Template Numerical Toolkit
 #LICENSE=	# TODO: (see mk/license.mk)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/tnt
 

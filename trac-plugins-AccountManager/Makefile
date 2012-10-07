@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/03/10 14:36:56 obache Exp $
+# $NetBSD: Makefile,v 1.13 2012/10/07 17:17:45 asau Exp $
 
 DISTNAME=	accountmanagerplugin_0.11-r${SVN_REV}
 PKGNAME=	trac-plugins-AccountManager-0.3.2
@@ -11,8 +11,6 @@ MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://trac-hacks.org/wiki/AccountManagerPlugin
 COMMENT=	User account management plugin for Trac
 #LICENSE=	THE BEER-WARE LICENSE
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	{,ja-}trac>=0.12:../../www/trac
 DEPENDS+=	${PYPKGPREFIX}-genshi>=0.5:../../www/py-genshi

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2010/06/13 22:47:20 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/07 17:17:36 asau Exp $
 #
 
 DISTNAME=	tilda-0.9.6
@@ -9,8 +9,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tilda/}
 MAINTAINER=	pancake@phreaker.net
 HOMEPAGE=	http://tilda.sourceforge.net/
 COMMENT=	Terminal like the classic first-person-shooter games
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config intltool msgfmt gmake flex

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2011/07/28 12:29:30 lexort Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/07 17:17:46 asau Exp $
 
 UPSTREAM_VERSION=	0.1
 VERSION=	${UPSTREAM_VERSION}.${SVN_VERSION}
@@ -18,8 +18,6 @@ LICENSE=	gnu-gpl-v2
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	http://trac-hacks.org/wiki/SensitiveTicketsPlugin
 COMMENT=	Ticket dependency plugin for Trac
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	{ja-,}trac>=0.11:../../www/trac
 

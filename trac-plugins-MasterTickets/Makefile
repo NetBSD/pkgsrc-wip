@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/01/04 23:04:42 lexort Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/07 17:17:46 asau Exp $
 
 UPSTREAM_VERSION=	3.0.2
 DISTNAME=	TracMasterTickets-${UPSTREAM_VESRION}
@@ -13,8 +13,6 @@ MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	http://trac-hacks.org/wiki/MasterTicketsPlugin
 #HOMEPAGE+=	https://github.com/coderanger/trac-mastertickets/
 COMMENT=	Ticket dependency plugin for Trac
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 EGG_NAME=	${DISTNAME}
 
