@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/09/06 13:55:53 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 13:57:30 asau Exp $
 #
 
 DISTNAME=	spfpm-0.6.1
@@ -11,8 +11,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://pyfixedpoint.sourceforge.net/
 COMMENT=	Tools for arithmetic on fixed-point (binary) numbers
 LICENSE=	python-software-foundation
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2009/09/09 11:22:11 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/07 13:57:32 asau Exp $
 #
 
 DISTNAME=		willow-1.4
@@ -9,6 +9,8 @@ MASTER_SITES=		http://www.digitallumber.com/TAR/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.digitallumber.com/
 COMMENT=		Content-filtering proxy server
+
+PKG_DESTDIR_SUPPORT=	none
 
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes

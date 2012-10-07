@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/03/20 23:26:42 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 13:57:28 asau Exp $
 #
 
 DISTNAME=	pymc-2.1beta
@@ -10,8 +10,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://pypi.python.org/pypi/pymc
 COMMENT=	Markov Chain Monte Carlo sampling toolkit
 LICENSE=	afl
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c fortran
 PYDISTUTILSPKG=	yes

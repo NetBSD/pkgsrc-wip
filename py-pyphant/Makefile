@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/08/25 16:53:16 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 13:57:28 asau Exp $
 #
 
 DISTNAME=	pyphant-1.0b1
@@ -15,8 +15,6 @@ COMMENT=	Workflow modelling app
 DEPENDS+=	${PYPKGPREFIX}-simplejson>=2.1.1:../../converters/py-simplejson
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 DEPENDS+=	${PYPKGPREFIX}-Paste>=1.7.4:../../www/py-paste
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/pyphant-1.0b1
 USE_LANGUAGES=	# none

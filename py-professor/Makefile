@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/12/29 22:05:40 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 13:57:26 asau Exp $
 #
 
 DISTNAME=	professor-1.3.1
@@ -12,8 +12,6 @@ COMMENT=	Parameterisation-based tuning tool for Monte Carlo event generators
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.7.2:../../math/py-scipy
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

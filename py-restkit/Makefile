@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/04/08 19:09:50 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/07 13:57:29 asau Exp $
 #
 
 DISTNAME=	restkit-2.0.4.tar
@@ -18,8 +18,6 @@ DEPENDS+=	${PYPKGPREFIX}-pygments>=1.3.1:../../textproc/py-pygments
 DEPENDS+=	${PYPKGPREFIX}-eventlet>=0.9.7:../../wip/py-eventlet
 DEPENDS+=	${PYPKGPREFIX}-gevent>=0.13.0:../../wip/py-gevent
 DEPENDS+=	${PYPKGPREFIX}-webob>=0.9.8:../../wip/py-webob
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/restkit-2.0.4
 USE_LANGUAGES=	# none

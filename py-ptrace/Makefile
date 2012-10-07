@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/09/09 22:46:51 jihbed Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/07 13:57:26 asau Exp $
 #
 
 DISTNAME=	python-ptrace-0.6.4
@@ -11,8 +11,6 @@ MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	https://bitbucket.org/haypo/python-ptrace/wiki/Home
 COMMENT=	Python binding of ptrace
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 ONLY_FOR_PLATFORM=	FreeBSD-*-x86_64  FreeBSD-*-i386 Linux-*-*
 

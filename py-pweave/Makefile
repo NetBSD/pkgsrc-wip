@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/12/29 22:08:13 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 13:57:27 asau Exp $
 #
 
 DISTNAME=	Pweave-0.20.1
@@ -10,8 +10,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://mpastell.com/pweave
 COMMENT=	Scientific reports with embedded python computations
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/Pweave-0.20.1
 

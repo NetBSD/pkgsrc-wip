@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/08/07 19:37:24 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 13:57:32 asau Exp $
 #
 
 DISTNAME=	whisper-0.9.10
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://launchpad.net/graphite
 COMMENT=	Fixed-size database, similar in design to RRD
 LICENSE=	apache-2.0
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/01/24 21:32:21 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 13:57:28 asau Exp $
 #
 
 DISTNAME=	pytkgen-1.4
@@ -12,8 +12,6 @@ COMMENT=	Create Tkinter GUIs from JSON definition files
 LICENSE=	gnu-lgpl-v2.1
 
 DEPENDS+=	${PYPKGPREFIX}-simplejson>=2.1.1:../../converters/py-simplejson
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/pytkgen-1.4
 

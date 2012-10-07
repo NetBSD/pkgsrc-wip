@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/06/19 23:44:19 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 13:57:31 asau Exp $
 #
 
 TEXML_VERSION=		2.0.1
@@ -11,8 +11,6 @@ MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://getfo.org/texml/
 COMMENT=	Convert TeXML to LaTeX or ConTeXt
 LICENSE=	mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

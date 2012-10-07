@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/08/21 14:46:33 cheusov Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/07 13:57:32 asau Exp $
 #
 
 DISTNAME=	wadllib-1.1.4
@@ -15,8 +15,6 @@ DEPENDS+=	${PYPKGPREFIX}-simplejson>=2.0.9:../../converters/py-simplejson
 DEPENDS+=	${PYPKGPREFIX}-cElementTree-[0-9]*:../../textproc/py-cElementTree
 DEPENDS+=	${PYPKGPREFIX}-httplib2>=0.6.0:../../wip/py-httplib2
 DEPENDS+=	${PYPKGPREFIX}-lazr.uri>=1.0.2:../../wip/py-lazr.uri
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

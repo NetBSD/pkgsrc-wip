@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/10/28 16:46:27 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 13:57:33 asau Exp $
 #
 
 DISTNAME=	PythonToolkit-11.04.06
@@ -11,8 +11,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://pythontoolkit.sourceforge.net/
 COMMENT=	PythonToolkit (PTK) an interactive python environment
 #LICENSE=	# TODO: (see mk/license.mk)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

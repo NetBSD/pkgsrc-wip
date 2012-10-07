@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/12/28 22:48:58 jihbed Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/07 13:57:30 asau Exp $
 #
 
 DISTNAME=	simplegeneric-0.8
@@ -11,8 +11,6 @@ MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://cheeseshop.python.org/pypi/simplegeneric
 COMMENT=	Simple generic functions for Python
 LICENSE=	zpl
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

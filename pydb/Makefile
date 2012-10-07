@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/04/08 19:09:53 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/07 13:57:33 asau Exp $
 #
 
 DISTNAME=	pydb-1.26
@@ -11,8 +11,6 @@ HOMEPAGE=	http://sourceforge.net/projects/bashdb/
 COMMENT=	The Extended Python Debugger
 
 DEPENDS+=	${PYPKGPREFIX}-ipython-[0-9]*:../../wip/py-ipython
-
-PKG_DESTDIR_SUPPORT= 	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=	# none

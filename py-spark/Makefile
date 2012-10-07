@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2010/10/07 00:37:20 jihbed Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/07 13:57:30 asau Exp $
 #
 
 DISTNAME=	spark-0.6.1
@@ -9,8 +9,6 @@ MASTER_SITES=	http://pages.cpsc.ucalgary.ca/~aycock/spark/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pages.cpsc.ucalgary.ca/~aycock/spark/
 COMMENT=	Scanning, Parsing, and Rewriting Kit for Python
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	pax
 NO_BUILD=	YES

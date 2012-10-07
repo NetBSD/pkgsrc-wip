@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/07/31 11:58:20 jihbed Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/07 13:57:29 asau Exp $
 #
 
 DISTNAME=	pysage-1.5.3
@@ -12,8 +12,6 @@ COMMENT=	High-level message passing library supporting actor based concurrency
 LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-processing>=0.52:../../wip/py-processing
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 PYDISTUTILSPKG=		yes

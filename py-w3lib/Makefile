@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/06/07 17:43:19 slitvinov Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 13:57:32 asau Exp $
 #
 
 DISTNAME=	w3lib-1.2
@@ -12,8 +12,6 @@ COMMENT=	Library of web-related functions
 LICENSE=	mit
 
 REPLACE_PYTHON=	${WRKSRC}/*.py
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG=	yes
 

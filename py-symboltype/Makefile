@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/07/14 13:22:17 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 13:57:31 asau Exp $
 #
 
 DISTNAME=	SymbolType-1.0
@@ -11,8 +11,6 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://peak.telecommunity.com/DevCenter/SymbolType
 COMMENT=	Simple Symbol Type for Python
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

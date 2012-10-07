@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/08/31 19:52:24 helgoman Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 13:57:33 asau Exp $
 #
 
 VERS=					1.4.1
@@ -11,8 +11,6 @@ MAINTAINER=				helgoman@users.sourceforge.net
 HOMEPAGE=				http://www.simplistix.co.uk/software/python/xlutils
 COMMENT=				Utilities for working with Excel files
 LICENSE=				mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=       		${PYPKGPREFIX}-xlrd>=0.7.1:../../textproc/py-xlrd
 

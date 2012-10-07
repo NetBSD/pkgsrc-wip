@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/04/08 19:09:52 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 13:57:31 asau Exp $
 #
 
 DISTNAME=	pyswarmsdk-0.7.1-sdist-20070501
@@ -12,8 +12,6 @@ COMMENT=	Model-driven development of Python applications
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${PYPKGPREFIX}-PgSQL>=2.4:../../databases/py-PgSQL
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

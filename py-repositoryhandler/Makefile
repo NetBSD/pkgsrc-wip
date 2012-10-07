@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/04/08 19:09:50 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/07 13:57:29 asau Exp $
 #
 
 DISTNAME=	repositoryhandler-0.3
@@ -14,8 +14,6 @@ LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	bzr>=2.0.3:../../devel/bzr
 DEPENDS+=	scmgit>=1.7.0.5:../../devel/scmgit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config gmake

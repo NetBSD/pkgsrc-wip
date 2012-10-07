@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/03 22:14:54 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 13:57:31 asau Exp $
 #
 
 DISTNAME=	pyttk-0.3.2
@@ -10,8 +10,6 @@ MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://code.google.com/p/python-ttk/
 COMMENT=	Ttk Python wrapper
 LICENSE=	gnu-lgpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/pyttk-0.3.2
 

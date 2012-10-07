@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/04/08 19:09:52 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/07 13:57:31 asau Exp $
 #
 
 DISTNAME=    	telepathy-python-0.15.15
@@ -10,8 +10,6 @@ MAINTAINER= pkgsrc.gnome@gmail.com
 HOMEPAGE=   http://telepathy.freedesktop.org/releases/telepathy-python/
 COMMENT=    Python bindings for the Telepathy framework
 LICENSE=    gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=    user-destdir
 
 GNU_CONFIGURE=    yes
 USE_TOOLS+=	gmake

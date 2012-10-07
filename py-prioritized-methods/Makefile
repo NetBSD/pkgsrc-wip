@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/07/14 13:13:03 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 13:57:26 asau Exp $
 #
 
 DISTNAME=	prioritized_methods-0.2.1.tar
@@ -13,8 +13,6 @@ HOMEPAGE=	http://toscawidgets.org/download
 COMMENT=	An extension to PEAK-Rules to prioritize methods
 
 DEPENDS+=	${PYPKGPREFIX}-peak-rules-[0-9]*:../../wip/py-peak-rules
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/prioritized_methods-0.2.1
 USE_LANGUAGES=	# none

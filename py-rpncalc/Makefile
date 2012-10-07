@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/03/20 23:38:15 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 13:57:29 asau Exp $
 #
 
 DISTNAME=	rpncalc-2.7
@@ -11,8 +11,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://calcrpnpy.sourceforge.net/
 COMMENT=	RPN Calculator For Python
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c++
 PYDISTUTILSPKG=	yes

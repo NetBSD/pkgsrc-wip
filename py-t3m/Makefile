@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/03/07 12:13:12 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 13:57:31 asau Exp $
 #
 
 DISTNAME=	t3m
@@ -11,8 +11,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://www.math.uic.edu/~t3m/
 COMMENT=	Tinker toys for topologists
 #LICENSE=	# TODO: (see mk/license.mk)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 PYDISTUTILSPKG=	yes

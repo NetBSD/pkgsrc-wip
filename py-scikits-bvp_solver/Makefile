@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/01/19 14:29:25 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 13:57:29 asau Exp $
 #
 
 DISTNAME=	scikits.bvp_solver-0.3.0
@@ -12,8 +12,6 @@ COMMENT=	Python package for solving two-point boundary value problems
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-nose>=0.11.3:../../devel/py-nose
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/scikits.bvp_solver-0.3.0
 

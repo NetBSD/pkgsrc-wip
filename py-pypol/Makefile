@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/08/26 10:19:42 noud4 Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/07 13:57:28 asau Exp $
 #
 
 DISTNAME=	pypol-0.5
@@ -11,8 +11,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://pypol.sourceforge.net/
 COMMENT=	Python module to manage monomials and polynomials
 LICENSE=	mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	${PYPKGPREFIX}-gmpy>=1.01:../../math/py-gmpy
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/08/24 10:36:21 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 13:57:30 asau Exp $
 #
 
 DISTNAME=	spatialdata-1.8.0
@@ -10,8 +10,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://www.geodynamics.org/cig/software/pylith/
 COMMENT=	Spatialdata provides transformations among coordinate systems
 LICENSE=	mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CHECK_PORTABILITY_SKIP= configure
 GNU_CONFIGURE=	yes

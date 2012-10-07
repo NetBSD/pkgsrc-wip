@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/05/06 09:51:04 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 13:57:31 asau Exp $
 #
 
 DISTNAME=	sympycore-0.1
@@ -10,8 +10,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://code.google.com/p/sympycore/
 COMMENT=	SympyCore an efficient pure Python Computer Algebra System
 LICENSE=	modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

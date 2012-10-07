@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/01/19 14:32:20 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 13:57:29 asau Exp $
 #
 
 DISTNAME=	scikits.bvp1lg-0.2.5
@@ -13,8 +13,6 @@ COMMENT=	Boundary value problem (legacy) solvers for ODEs
 
 DEPENDS+=	${PYPKGPREFIX}-nose>=0.11.3:../../devel/py-nose
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.7.0:../../math/py-scipy
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES= c fortran
 

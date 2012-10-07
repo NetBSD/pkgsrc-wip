@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/03/15 20:15:31 jakllsch Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/07 13:57:29 asau Exp $
 
 VERSION=	2.16
 DISTNAME=	remctl-${VERSION}
@@ -27,8 +27,6 @@ BUILDLINK_API_DEPENDS.remctl+= remctl>=${PKGVERSION}
 
 PYDISTUTILSPKG=yes
 PYSETUPSUBDIR=python
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/python/extension.mk"
 .include "../../wip/remctl/buildlink3.mk"

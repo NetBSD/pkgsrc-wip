@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/04/27 22:20:37 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 13:57:29 asau Exp $
 #
 
 DISTNAME=	qitensor-0.5
@@ -12,8 +12,6 @@ COMMENT=	Quantum Hilbert Space Tensors in Python and Sage
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.7.2:../../math/py-scipy
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 PYDISTUTILSPKG=	yes

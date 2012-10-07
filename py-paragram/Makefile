@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/03/07 11:03:34 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 13:57:25 asau Exp $
 #
 
 DISTNAME=	paragram-0.1.2
@@ -11,8 +11,6 @@ MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://gfxmonk.net/dist/0install/paragram/
 COMMENT=	Erlang-style concurrency library for python
 #LICENSE=	# TODO: (see mk/license.mk)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 

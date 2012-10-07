@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/05/10 13:17:32 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 13:57:30 asau Exp $
 #
 
 DISTNAME=	SPARQLWrapper-1.4.2
@@ -12,8 +12,6 @@ COMMENT=	SPARQL endpoint interface to Python
 
 DEPENDS+=	${PYPKGPREFIX}-simplejson>=2.1.1:../../converters/py-simplejson
 DEPENDS+=	${PYPKGPREFIX}-rdflib>=2.4.2:../../wip/py-rdflib
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYTHON_VERSIONS_ACCEPTED= 27 26
 

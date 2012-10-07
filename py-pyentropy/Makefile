@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/05/22 23:13:03 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 13:57:27 asau Exp $
 #
 
 DISTNAME=	pyentropy-0.4.0
@@ -12,8 +12,6 @@ COMMENT=	Python module for estimation information theoretic quantities
 LICENSE=	gnu-gpl-v2
 
 #DEPENDS+=	${PYPKGPREFIX}-scipy>=0.7.0:../../math/py-scipy
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

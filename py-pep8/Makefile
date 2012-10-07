@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/06/27 13:58:44 uccwen Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/07 13:57:26 asau Exp $
 #
 
 DISTNAME=	pep8-1.3.3
@@ -10,8 +10,6 @@ MAINTAINER=	wenheping@gmail.com
 HOMEPAGE=	http://github.com/jcrocholl/pep8
 COMMENT=	Python style guide checker
 LICENSE=	mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

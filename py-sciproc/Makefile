@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/12/29 22:01:01 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 13:57:29 asau Exp $
 #
 
 DISTNAME=	sciproc-0.3.1
@@ -9,8 +9,6 @@ MASTER_SITES=	http://pypi.python.org/packages/source/s/sciproc/
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://pypi.python.org/pypi/sciproc
 COMMENT=	Process scientific multidimensional data
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/sciproc-0.3.1
 

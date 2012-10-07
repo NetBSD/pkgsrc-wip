@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/03/20 22:38:26 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 13:57:30 asau Exp $
 #
 
 DISTNAME=	spectral-0.6
@@ -12,8 +12,6 @@ COMMENT=	Python module for hyperspectral image processing
 LICENSE=	gnu-gpl-v3
 
 #DEPENDS+=	${PYPKGPREFIX}-OpenGL>=3.0.1:../../graphics/py-OpenGL
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

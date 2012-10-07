@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/10/28 18:23:05 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 13:57:29 asau Exp $
 #
 
 DISTNAME=	pyreport-0.3.4c
@@ -12,8 +12,6 @@ COMMENT=	Pyreport makes notes out of a python script
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-docutils>=0.8.1:../../textproc/py-docutils
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/pyreport-0.3.4c
 

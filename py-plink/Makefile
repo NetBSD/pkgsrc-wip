@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/07/04 12:48:48 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 13:57:26 asau Exp $
 #
 
 DISTNAME=	plink
@@ -11,8 +11,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://math.uic.edu/~t3m/plink/
 COMMENT=	Link Projection Editor
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 VERSION= 1.1
 

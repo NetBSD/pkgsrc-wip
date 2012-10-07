@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/04/08 19:09:49 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/07 13:57:27 asau Exp $
 #
 
 DISTNAME=	pyecm-2.0
@@ -11,8 +11,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://garr.dl.sourceforge.net/project/pyecm/pyecm/2.0/
 COMMENT=	Integer factorization with the Elliptic Curve Method (ECM)
 #LICENSE=	# TODO: (see mk/license.mk)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/04/08 19:09:50 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/07 13:57:28 asau Exp $
 #
 
 DISTNAME=	qecalc-0.2.3
@@ -12,8 +12,6 @@ COMMENT=	Wrapper for Quantum Espresso
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-diffpy-structure-[0-9]*:../../wip/py-diffpy-structure
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

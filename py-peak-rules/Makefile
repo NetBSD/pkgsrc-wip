@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/01/30 08:27:26 noud4 Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 13:57:26 asau Exp $
 #
 
 DISTNAME=	PEAK-Rules-0.5a1.dev-r2707
@@ -16,8 +16,6 @@ DEPENDS+=	${PYPKGPREFIX}-addons>=0.7:../../wip/py-addons
 DEPENDS+=	${PYPKGPREFIX}-bytecodeassembler>=0.5.1:../../wip/py-bytecodeassembler
 DEPENDS+=	${PYPKGPREFIX}-decoratortools>=1.8:../../wip/py-decoratortools
 DEPENDS+=	${PYPKGPREFIX}-extremes>=1.1.1:../../wip/py-extremes
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

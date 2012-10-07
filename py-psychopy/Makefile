@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/04/08 19:09:49 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/07 13:57:26 asau Exp $
 #
 
 DISTNAME=	PsychoPy-1.61.01
@@ -14,8 +14,6 @@ HOMEPAGE=	http://code.google.com/p/psychopy/
 COMMENT=	Psychology and neuroscience software in python
 
 #DEPENDS+=	${PYPKGPREFIX}-OpenGL-[0-9]*:../../graphics/py-OpenGL
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

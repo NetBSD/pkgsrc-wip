@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/04/08 19:09:52 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/07 13:57:31 asau Exp $
 #
 
 DISTNAME=	thermopy-0.3
@@ -13,8 +13,6 @@ LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.7.0:../../math/py-scipy
 DEPENDS+=	${PYPKGPREFIX}-cElementTree-[0-9]*:../../textproc/py-cElementTree
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/thermopy-0.3
 USE_LANGUAGES=	# none

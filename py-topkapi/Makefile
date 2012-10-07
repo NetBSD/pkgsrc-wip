@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/01/22 13:33:53 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 13:57:31 asau Exp $
 #
 
 DISTNAME=	PyTOPKAPI-0.2.0
@@ -13,8 +13,6 @@ LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-rpy>=2.1.3:../../math/py-rpy
 #DEPENDS+=	${PYPKGPREFIX}-scipy>=0.7.0:../../math/py-scipy
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 # pkgsrc is not currently able to fetch distfiles from https web servers
 # (see mk/fetch/fetch.mk), so you have to use a browser for now.

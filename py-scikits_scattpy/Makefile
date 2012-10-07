@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/01/17 22:19:36 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 13:57:29 asau Exp $
 #
 
 DISTNAME=	scikits.scattpy-0.1.0
@@ -12,8 +12,6 @@ COMMENT=	Light Scattering methods for Python
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.7.0:../../math/py-scipy
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/scikits.scattpy-0.1.0
 USE_LANGUAGES=	c fortran

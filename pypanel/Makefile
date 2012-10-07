@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/10/03 22:14:54 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/07 13:57:33 asau Exp $
 #
 
 DISTNAME=		PyPanel-2.4
@@ -11,8 +11,6 @@ HOMEPAGE=		http://pypanel.sourceforge.net/
 COMMENT=		Lightweight panel written in Python and C for X11
 
 DEPENDS+=		${PYPKGPREFIX}-Xlib-[0-9]*:../../x11/py-Xlib
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG=		yes
 PY_PATCHPLIST=		yes

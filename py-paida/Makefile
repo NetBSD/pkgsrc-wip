@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/09/02 12:16:19 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 13:57:25 asau Exp $
 #
 
 PKGVERSION=	3.2.1.2.10
@@ -13,8 +13,6 @@ COMMENT=	Pure Python scientific analysis package
 #LICENSE=	# TODO: (see mk/license.mk)
 
 DEPENDS+=	${PYPKGPREFIX}-cElementTree-[0-9]*:../../textproc/py-cElementTree
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 PYDISTUTILSPKG= yes

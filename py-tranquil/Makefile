@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/09/08 23:48:44 jihbed Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/07 13:57:31 asau Exp $
 #
 
 DISTNAME=	Tranquil-0.2dev
@@ -12,8 +12,6 @@ COMMENT=	Integrating SQLAlchemy with Django
 
 DEPENDS+=	${PYPKGPREFIX}-sqlalchemy>=${SQLALCHEMYVERS}:../../databases/py-sqlalchemy
 DEPENDS+=	${PYPKGPREFIX}-django>=${DJANGOVERS}:../../www/py-django
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

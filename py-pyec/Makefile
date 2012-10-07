@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/09/16 23:00:46 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 13:57:27 asau Exp $
 #
 
 DISTNAME=	PyEC-0.2.5
@@ -12,8 +12,6 @@ COMMENT=	Evolutionary computation package
 LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.7.2:../../math/py-scipy
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/PyEC-0.2.5
 

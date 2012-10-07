@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/05/09 20:09:37 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 13:57:32 asau Exp $
 #
 
 DISTNAME=	pyutilib.component.loader-3.2.3
@@ -13,8 +13,6 @@ LICENSE=	modified-bsd
 
 #DEPENDS+=	${PYPKGPREFIX}-utilib_component_config>=${VERSION}:../../wip/py-utilib_component_config
 #DEPENDS+=	${PYPKGPREFIX}-utilib_component_core>=3.0.4:../../wip/py-utilib_component_core
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/pyutilib.component.loader-3.2.3
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/04/08 19:09:50 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/07 13:57:28 asau Exp $
 #
 
 DISTNAME=	PyPedal-2.0.0rc7
@@ -15,8 +15,6 @@ LICENSE=	gnu-lgpl-v2
 DEPENDS+=	${PYPKGPREFIX}-psyco-[0-9]*:../../lang/py-psyco
 DEPENDS+=	${PYPKGPREFIX}-networkx>=1.0.1:../../math/py-networkx
 DEPENDS+=	${PYPKGPREFIX}-pydot>=1.0.2:../../wip/py-pydot
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

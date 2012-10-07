@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/09/10 15:26:22 jihbed Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/07 13:57:32 asau Exp $
 #
 
 DISTNAME=	WebOb-1.2b3
@@ -13,8 +13,6 @@ COMMENT=	Python module providing WSGI request and response objects
 LICENSE=	mit
 
 DEPENDS+=		${PYPKGPREFIX}-simplejson>=2.0.9:../../converters/py-simplejson
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

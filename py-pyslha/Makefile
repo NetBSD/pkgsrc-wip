@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/04/25 21:16:09 jihbed Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/07 13:57:28 asau Exp $
 #
 
 DISTNAME=	pyslha-1.2.3
@@ -10,8 +10,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://www.insectnation.org/projects/pyslha
 COMMENT=	Parsing, manipulating, and visualising SUSY Les Houches Accord data
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/pyslha-1.2.3
 

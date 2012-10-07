@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/01/30 08:04:39 noud4 Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/07 13:57:29 asau Exp $
 #
 
 DISTNAME=	rlcompleter2-0.96
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://codespeak.net/rlcompleter2/index.cgi?home
 COMMENT=	Python command line completion
 LICENSE=	mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 PYDISTUTILSPKG=		yes

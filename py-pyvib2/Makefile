@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/01/30 02:26:08 noud4 Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 13:57:28 asau Exp $
 #
 
 DISTNAME=	pyvib2-1.1.tar
@@ -12,8 +12,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://pyvib2.sourceforge.net/
 COMMENT=	Analyzing vibrational motion and vibrational spectra
 LICENSE=		gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	${PYPKGPREFIX}-Pmw>=1.3.2:../../x11/py-Pmw
 

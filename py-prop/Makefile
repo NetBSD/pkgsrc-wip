@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/12/29 22:23:16 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 13:57:26 asau Exp $
 #
 
 DISTNAME=	${PYPKGPREFIX}-pyprop
@@ -11,8 +11,6 @@ COMMENT=	A framework for propagating the time dependent Schrödinger equation (T
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.7.0:../../math/py-scipy
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 # Get it from Subversion repository:
 SVN_REPOSITORIES=	pyprop

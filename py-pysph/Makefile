@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/01/24 21:36:58 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 13:57:28 asau Exp $
 #
 
 DISTNAME=	PySPH-0.9beta
@@ -12,8 +12,6 @@ COMMENT=	General purpose Smoothed Particle Hydrodynamics framework
 
 
 DEPENDS+=	${PYPKGPREFIX}-multiprocessing>=2.6.2.1:../../devel/py-multiprocessing
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/PySPH-0.9beta
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/09/10 09:34:47 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 13:57:26 asau Exp $
 #
 
 DISTNAME=	pmi-1.0
@@ -10,8 +10,6 @@ MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://github.com/olenz/pmi/
 COMMENT=	Parallel Method Invocation
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/pmi-1.0
 USE_LANGUAGES=	# none

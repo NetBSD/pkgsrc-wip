@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/08/24 10:41:00 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 13:57:26 asau Exp $
 #
 
 DISTNAME=	piquant-0.1
@@ -16,8 +16,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://sourceforge.net/projects/piquant/
 COMMENT=	Extending NumPy and SciPy to specification of numbers and arrays
 LICENSE=	modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 PYDISTUTILSPKG=	yes

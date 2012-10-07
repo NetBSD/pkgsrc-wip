@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/04/08 19:09:50 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/07 13:57:27 asau Exp $
 #
 
 DISTNAME=	pygr-0.8.0
@@ -15,8 +15,6 @@ COMMENT=	Pygr graph database for bioinformatics
 DEPENDS+=       ${PYPKGPREFIX}-mysqldb-[0-9]*:../../databases/py-mysqldb
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 DEPENDS+=	${PYPKGPREFIX}-pyrex-[0-9]*:../../lang/py-pyrex
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES= c c++
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX:Q}

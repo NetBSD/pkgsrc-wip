@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/09/10 23:37:21 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 13:57:31 asau Exp $
 #
 
 DISTNAME=	TurboJson-1.2.1
@@ -15,8 +15,6 @@ LICENSE=	mit
 DEPENDS+=	${PYPKGPREFIX}-simplejson>=2.1.1:../../converters/py-simplejson
 DEPENDS+=	${PYPKGPREFIX}-prioritized-methods>=0.2.1:../../wip/py-prioritized-methods
 DEPENDS+=	${PYPKGPREFIX}-peak-rules-[0-9]*:../../wip/py-peak-rules
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/TurboJson-1.2.1
 USE_LANGUAGES=	# none

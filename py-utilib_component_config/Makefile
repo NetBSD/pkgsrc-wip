@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/05/09 20:07:42 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 13:57:32 asau Exp $
 #
 
 DISTNAME=	pyutilib.component.config-3.2.3
@@ -13,8 +13,6 @@ COMMENT= Extensions for configuring components in the PyUtilib Component Archite
 LICENSE=	modified-bsd
 
 #DEPENDS+=	${PYPKGPREFIX}-utilib_component_core>=3.0.4:../../wip/py-utilib_component_core
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/pyutilib.component.config-3.2.3
 

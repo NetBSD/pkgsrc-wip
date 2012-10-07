@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/04/08 19:09:50 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/07 13:57:29 asau Exp $
 #
 
 DISTNAME=	scikits.statsmodels-0.2.0
@@ -11,8 +11,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://statsmodels.sourceforge.net/
 COMMENT=	Statistical computations and models for use with SciPy
 #LICENSE=	# TODO: (see mk/license.mk)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

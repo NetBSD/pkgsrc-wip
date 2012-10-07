@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/05/13 12:41:29 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 13:57:28 asau Exp $
 #
 
 DISTNAME=	Pyqu-0.1
@@ -12,8 +12,6 @@ COMMENT=	PyQu is an extension module for Python to implement quantum algorithms
 LICENSE=		gnu-gpl-v3
 
 DEPENDS+=	libquantum>=0.2.4:../../misc/libquantum
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFIGURE_ARGS+=	--with-libquantum-include=${LIBQUANTUM_PREFIX}/include
 

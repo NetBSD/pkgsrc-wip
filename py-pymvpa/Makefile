@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/03/23 09:48:20 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 13:57:28 asau Exp $
 #
 
 DISTNAME=	pymvpa_0.4.5
@@ -14,8 +14,6 @@ LICENSE=	mit
 DEPENDS+=	${PYPKGPREFIX}-psyco-[0-9]*:../../lang/py-psyco
 DEPENDS+=	${PYPKGPREFIX}-rpy>=2.1.3:../../math/py-rpy
 #DEPENDS+=	${PYPKGPREFIX}-scipy>=0.7.0:../../math/py-scipy
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/pymvpa-0.4.5
 

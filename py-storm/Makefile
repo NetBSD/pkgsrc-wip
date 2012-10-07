@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/05/07 22:41:52 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 13:57:31 asau Exp $
 #
 
 DISTNAME=	storm-0.16.0
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://storm.canonical.com/
 COMMENT=	Object-relational mapper (ORM) for Python
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 do-test:
 	( cd ${WRKSRC} && ${PYTHONBIN} test )

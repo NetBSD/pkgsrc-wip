@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/10/20 15:19:37 othyro Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 13:57:30 asau Exp $
 #
 
 DISTNAME=	sexy-python-0.1.9
@@ -10,8 +10,6 @@ MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://www.chipx86.com/wiki/Libsexy
 COMMENT=	Python bindings for libsexy
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/04/08 19:09:50 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/07 13:57:29 asau Exp $
 #
 
 DISTNAME=	ruffus-2.2
@@ -14,8 +14,6 @@ LICENSE=	mit
 
 DEPENDS+=  ${PYPKGPREFIX}-simplejson>=2.1.1:../../converters/py-simplejson
 DEPENDS+=  ${PYPKGPREFIX}-multiprocessing>=2.6.2.1:../../devel/py-multiprocessing
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

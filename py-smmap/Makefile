@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/09/16 09:02:11 noud4 Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/07 13:57:30 asau Exp $
 #
 
 DISTNAME=	smmap-0.8.2
@@ -10,8 +10,6 @@ MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	https://github.com/Byron/smmap
 COMMENT=	Git implementation of a sliding window memory map manager
 LICENSE=	2-clause-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

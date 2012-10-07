@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/04/08 19:09:49 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/07 13:57:25 asau Exp $
 #
 
 DISTNAME=	papyon-0.4.9
@@ -15,8 +15,6 @@ LICENSE=	gnu-gpl-v2
 DEPENDS+=	${PYPKGPREFIX}-OpenSSL>=0.7:../../security/py-OpenSSL
 DEPENDS+=	${PYPKGPREFIX}-cElementTree-[0-9]*:../../textproc/py-cElementTree
 DEPENDS+=	${PYPKGPREFIX}-crypto>=2.0:../../security/py-crypto
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

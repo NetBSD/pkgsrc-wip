@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/07/02 10:37:53 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 13:57:27 asau Exp $
 #
 
 DISTNAME=	pyflation-0.2.2
@@ -13,8 +13,6 @@ LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-pytables>=2.2.1:../../math/py-pytables
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.7.2:../../math/py-scipy
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG=	yes
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}

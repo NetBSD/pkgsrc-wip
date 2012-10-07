@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/02/10 09:01:10 noud4 Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 13:57:29 asau Exp $
 #
 
 DISTNAME=	scikits.ann-${PYPKGVERSION}
@@ -12,8 +12,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://scipy.org/scipy/scikits/wiki/AnnWrapper
 COMMENT=	Approximate Nearest Neighbor library wrapper for Numpy
 LICENSE=	gnu-lgpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 #WRKSRC=		${WRKDIR}/scikits.ann-0.2.dev-r803
 

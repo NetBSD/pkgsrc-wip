@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2012/01/24 21:38:11 jihbed Exp $
+# $NetBSD: Makefile.common,v 1.2 2012/10/07 13:57:27 asau Exp $
 #
 
 DISTNAME=	pylith-1.6.2
@@ -11,8 +11,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://www.geodynamics.org/cig/software/pylith
 COMMENT=	finite element code for the solution of dynamic and quasi-static tectonic deformation problems
 LICENSE=	mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c++

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/06/13 22:47:14 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 13:57:32 asau Exp $
 #
 
 DISTNAME=	Wally-0.6.14.tar
@@ -13,8 +13,6 @@ MAINTAINER=	pkgsrc.gnome@gmail.com
 HOMEPAGE=	http://pypi.python.org/pypi/Wally/
 COMMENT=	Tool for managing desktop backgrounds
 #LICENSE=	# TODO: (see mk/license.mk)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/Wally-0.6.14
 USE_LANGUAGES=	# none

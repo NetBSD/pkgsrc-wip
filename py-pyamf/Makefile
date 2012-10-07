@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/05/22 23:10:36 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 13:57:27 asau Exp $
 #
 
 DISTNAME=	PyAMF-0.5.1.tar
@@ -12,8 +12,6 @@ MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://www.pyamf.org/
 COMMENT=	Action Message Format support for Python
 LICENSE=	mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=	${WRKDIR}/PyAMF-0.5.1
 

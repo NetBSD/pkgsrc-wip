@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/04/11 23:44:24 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 13:57:27 asau Exp $
 #
 
 DISTNAME=	pydelay-0.1.1
@@ -10,8 +10,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://pydelay.sourceforge.net/
 COMMENT=	Translates a system of delay differential equations (DDEs)
 LICENSE=	mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 PYDISTUTILSPKG=	yes

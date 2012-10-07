@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/03 22:14:53 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/07 13:57:29 asau Exp $
 #
 
 DISTNAME=	qmath-0.2.0
@@ -10,8 +10,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://pypi.python.org/pypi/qmath
 COMMENT= Provides a class for deal with quaternion algebra and 3D rotation
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/qmath-0.2.0
 

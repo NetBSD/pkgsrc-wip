@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/10/18 20:14:35 ryo-on Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 13:57:33 asau Exp $
 #
 
 DISTNAME=	PythonCAD-DS1-R37
@@ -11,8 +11,6 @@ MAINTAINER=	ryo_on@yk.rim.or.jp
 HOMEPAGE=	http://pythoncad.sourceforge.net/dokuwiki/doku.php
 COMMENT=	PythonCAD is a CAD package written, surprisingly enough, in Python
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DOCSDIR=	${PREFIX}/share/doc/${PKGBASE}
 

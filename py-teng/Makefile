@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/08/31 07:39:55 ondratu Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 13:57:31 asau Exp $
 #
 
 DISTNAME=	teng-python-2.0.0
@@ -15,8 +15,6 @@ COMMENT=	Python binding for teng
 LICENSE=	gnu-lgpl-v2.1
 
 USE_LANGUAGES=	c c++
-
-PKG_DESTDIR_SUPPORT=    user-destdir
 
 PYDISTUTILSPKG= yes
 PY_PATCHPLIST=  yes

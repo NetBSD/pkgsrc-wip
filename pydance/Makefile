@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/04/08 19:09:53 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/07 13:57:33 asau Exp $
 #
 
 DISTNAME=		pydance-1.0.3
@@ -12,6 +12,8 @@ HOMEPAGE=		http://icculus.org/pyddr/
 COMMENT=		Simulator of Dance Dance Revolution and similar games
 
 DEPENDS+=		${PYPKGPREFIX}-game>=1.6:../../devel/py-game
+
+PKG_DESTDIR_SUPPORT=	none
 
 .include "../../mk/bsd.prefs.mk"
 

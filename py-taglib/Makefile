@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/09/09 11:18:58 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/07 13:57:31 asau Exp $
 #
 
 DISTNAME=	python-taglib-1.3.3
@@ -10,8 +10,6 @@ MASTER_SITES=	http://download.berlios.de/namingmuse/ \
 MAINTAINER=	jfranz@bsdprojects.net
 HOMEPAGE=	http://developer.kde.org/~wheeler/taglib.html
 COMMENT=	Python bindings for the taglib audio file tagging library
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS=	gmake
 PY_PATCHPLIST=	yes

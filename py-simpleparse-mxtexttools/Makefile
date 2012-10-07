@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/02/16 15:23:40 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 13:57:30 asau Exp $
 #
 
 DISTNAME=	SimpleParse-2.1.1a2
@@ -10,8 +10,6 @@ MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://simpleparse.sourceforge.net/
 COMMENT=	SimpleParse is a Python providing a simple and fast parser generator
 #LICENSE=	# TODO: (see mk/license.mk)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 INSTALLATION_DIRS+= 	share/doc/py-simpleparse-mxtexttools
 

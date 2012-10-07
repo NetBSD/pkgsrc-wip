@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/04/08 19:09:49 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/07 13:57:25 asau Exp $
 #
 
 DISTNAME=	pyparsing-1.5.2
@@ -10,8 +10,6 @@ MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://pyparsing.wikispaces.com/
 COMMENT=	General parsing module for Python
 LICENSE=	mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

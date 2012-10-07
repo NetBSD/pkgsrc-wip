@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/08/01 14:57:09 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/07 13:57:30 asau Exp $
 #
 
 DISTNAME=	pysparse-1.1
@@ -11,9 +11,6 @@ HOMEPAGE=	http://pysparse.sourceforge.net/
 COMMENT=	Sparse linear algebra extension for Python
 #LICENSE=	# TODO: (see mk/license.mk)
 
-PKG_DESTDIR_SUPPORT=	user-destdir
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LANGUAGES=	c c++ fortran77
 PYDISTUTILSPKG= yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/08/02 21:38:35 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 13:57:30 asau Exp $
 #
 
 DISTNAME=	spyse-0.2
@@ -11,8 +11,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://code.google.com/p/pastiche/
 COMMENT=	Spyse is a framework and platform for building multi-agent systems
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/spyse
 USE_LANGUAGES=	# none

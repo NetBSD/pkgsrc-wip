@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/04/14 20:28:25 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 13:57:32 asau Exp $
 #
 
 DISTNAME=	wsgiref-0.1.2
@@ -11,8 +11,6 @@ MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://pypi.python.org/pypi/wsgiref
 COMMENT=	This is a standalone release of the wsgiref library
 LICENSE=		zpl
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

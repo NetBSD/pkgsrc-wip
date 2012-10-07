@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/04/08 19:09:52 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/07 13:57:32 asau Exp $
 #
 
 DISTNAME=	pywebkitgtk-1.1.7
@@ -12,8 +12,6 @@ MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://code.google.com/p/pywebkitgtk/
 COMMENT=	Python bindings for the WebKit GTK+
 LICENSE=	gnu-lgpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/03 22:14:53 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/07 13:57:27 asau Exp $
 #
 
 DISTNAME=	PuLP-1.4.7
@@ -10,8 +10,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://code.google.com/p/pulp-or/
 COMMENT=	LP modeler in Python
 LICENSE=	modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 PYTHON_VERSIONS_ACCEPTED= 26

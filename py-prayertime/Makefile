@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/04/18 14:09:52 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 13:57:26 asau Exp $
 #
 
 DISTNAME=	prayertime-2.2
@@ -10,8 +10,6 @@ MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://bitbucket.org/xmonader/pyprayertime/
 COMMENT=	Prayertime algorithm implementation in python
 LICENSE=		gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/12/29 22:19:38 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 13:57:33 asau Exp $
 #
 
 DISTNAME=	yt-2.2
@@ -10,8 +10,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://yt-project.org/
 COMMENT=	Analyzing and visualizing astrophysical simulation output
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c c++
 

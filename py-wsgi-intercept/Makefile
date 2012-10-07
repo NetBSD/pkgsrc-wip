@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/04/14 20:27:59 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 13:57:32 asau Exp $
 #
 
 DISTNAME=	wsgi_intercept-0.4.tar
@@ -14,8 +14,6 @@ COMMENT=	Installs a WSGI application in place of a real URI for testing
 #LICENSE=	mit-license
 
 DEPENDS+=	${PYPKGPREFIX}-httplib2>=0.6.0:../../wip/py-httplib2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/wsgi_intercept-0.4
 USE_LANGUAGES=	# none

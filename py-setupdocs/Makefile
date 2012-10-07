@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/06/19 20:21:01 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 13:57:30 asau Exp $
 #
 
 DISTNAME=	SetupDocs-1.0.4.tar
@@ -13,8 +13,6 @@ HOMEPAGE=	http://pypi.python.org/pypi/setupdocs
 COMMENT=	Setuptools plugin that automates building of docs from reST source
 
 DEPENDS+=	${PYPKGPREFIX}-sphinx>=0.6.6:../../textproc/py-sphinx
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/SetupDocs-1.0.4
 USE_LANGUAGES=	# none

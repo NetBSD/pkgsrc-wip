@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/04/08 19:09:52 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.17 2012/10/07 13:57:32 asau Exp $
 #
 
 DISTNAME=	visionegg-0.9.9
@@ -14,8 +14,6 @@ COMMENT=	Visual stimulus creation and control in Python
 
 DEPENDS+=	${PYPKGPREFIX}-Pyro>=3.4:../../devel/py-Pyro
 DEPENDS+=	${PYPKGPREFIX}-OpenGL-[0-9]*:../../graphics/py-OpenGL
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES= c c++
 

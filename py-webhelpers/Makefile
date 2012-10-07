@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/07/31 12:11:07 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 13:57:32 asau Exp $
 #
 
 DISTNAME=	WebHelpers-1.0.tar
@@ -17,8 +17,6 @@ DEPENDS+=	${PYPKGPREFIX}-nose>=0.11.3:../../devel/py-nose
 DEPENDS+=	${PYPKGPREFIX}-sqlalchemy>=0.6.0:../../databases/py-sqlalchemy
 DEPENDS+=	${PYPKGPREFIX}-pylons>=0.1:../../wip/py-pylons
 DEPENDS+=	${PYPKGPREFIX}-webob>=0.9.8:../../wip/py-webob
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/WebHelpers-1.0
 USE_LANGUAGES=	# none

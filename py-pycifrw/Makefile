@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/05/12 16:06:43 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 13:57:27 asau Exp $
 #
 
 VERS=	3.1.4
@@ -13,8 +13,6 @@ COMMENT=	CIF/STAR file support for Python
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-yapps2>=2.1.1:../../wip/py-yapps2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG= yes
 

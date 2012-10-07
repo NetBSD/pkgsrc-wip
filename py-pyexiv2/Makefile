@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/04/08 19:09:49 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/07 13:57:27 asau Exp $
 #
 
 DISTNAME=	pyexiv2-0.2.2
@@ -11,8 +11,6 @@ MAINTAINER=	nico@orgrim.net
 HOMEPAGE=	http://tilloy.net/dev/pyexiv2/
 COMMENT=	Python binding to Exiv2
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c++
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/09/10 21:58:16 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 13:57:33 asau Exp $
 #
 
 DISTNAME=	PyYAML-3.10
@@ -10,8 +10,6 @@ MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://pyyaml.org/wiki/PyYAML
 COMMENT=	YAML parser and emitter for Python
 LICENSE=	mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYTHON_VERSIONS_INCLUDE_3X= yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/04/08 19:09:49 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/07 13:57:26 asau Exp $
 #
 
 DISTNAME=	processing-0.52
@@ -12,8 +12,6 @@ MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://pyprocessing.berlios.de/
 COMMENT=	Library for running multiple Python processes using the threading API
 #LICENSE=	# TODO: (see mk/license.mk)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG=	yes
 

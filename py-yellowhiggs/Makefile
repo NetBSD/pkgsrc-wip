@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/09/16 15:08:05 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 13:57:33 asau Exp $
 #
 
 DISTNAME=	yellowhiggs-1.0a4
@@ -10,8 +10,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://end.web.cern.ch/end/projects/yellowhiggs/
 COMMENT=	Interface for the CERN Yellow Report
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

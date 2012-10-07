@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/05/01 14:49:37 noud4 Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/07 13:57:27 asau Exp $
 #
 
 DISTNAME=	${PYPKGPREFIX}-pydec-0.67.0
@@ -12,8 +12,6 @@ COMMENT=	Python Library for Discrete Exterior Calculus
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.7.0:../../math/py-scipy
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 # Get it from Subversion repository:
 SVN_REPOSITORIES=	pydec

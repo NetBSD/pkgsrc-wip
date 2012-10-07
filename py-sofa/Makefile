@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/04/08 19:09:51 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/07 13:57:30 asau Exp $
 #
 
 DISTNAME=	pysofa-0.1.0a2
@@ -11,8 +11,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://code.google.com/p/pysofa/
 COMMENT=	Python ctypes wrapper around the SOFA astronomical library
 LICENSE=	mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/pysofa-0.1.0a2
 

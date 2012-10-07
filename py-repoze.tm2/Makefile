@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/07/14 13:22:27 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 13:57:29 asau Exp $
 #
 
 DISTNAME=	repoze.tm2-1.0a5.tar
@@ -13,8 +13,6 @@ HOMEPAGE=	http://www.repoze.org/
 COMMENT=	Zope-like transaction manager via WSGI middleware
 
 DEPENDS+=	${PYPKGPREFIX}-transaction>=1.1.1:../../wip/py-transaction
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/repoze.tm2-1.0a5
 USE_LANGUAGES=	# none

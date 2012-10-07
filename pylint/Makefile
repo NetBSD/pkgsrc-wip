@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2011/01/18 08:25:34 jihbed Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/07 13:57:33 asau Exp $
 #
 
 VERSION=	0.22.0
@@ -10,8 +10,6 @@ MAINTAINER=	helgoman@users.sourceforge.net
 HOMEPAGE=	http://www.logilab.org/project/pylint
 COMMENT=	Python code static checker
 LICENSE=    	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DOCDIR= ${PREFIX}/share/doc/pylint
 INSTALLATION_DIRS=  ${DOCDIR} ${PKGMANDIR}/man1

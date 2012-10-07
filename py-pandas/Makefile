@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/03/07 19:53:09 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 13:57:25 asau Exp $
 #
 
 DISTNAME=	pandas-0.3.0
@@ -13,7 +13,6 @@ LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-dateutil>=1.5:../../time/py-dateutil
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 PYDISTUTILSPKG=	yes
 
 .include "../../math/py-numpy/buildlink3.mk"

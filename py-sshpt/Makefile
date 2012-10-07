@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/04/08 19:09:52 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/07 13:57:30 asau Exp $
 #
 
 DISTNAME=	sshpt-1.1.1
@@ -13,8 +13,6 @@ LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-m2crypto>=0.13:../../security/py-m2crypto
 DEPENDS+=	${PYPKGPREFIX}-paramiko-[0-9]*:../../security/py-paramiko
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/sshpt
 USE_LANGUAGES=	# none

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/02/06 22:56:35 fhajny Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/07 13:57:33 asau Exp $
 
 DISTNAME=	pyzor-0.5.0
 CATEGORIES=	mail
@@ -9,8 +9,6 @@ MAINTAINER=	tom@replic8.net
 HOMEPAGE=	http://sourceforge.net/apps/trac/pyzor/
 COMMENT=	Collaborative, networked system to detect and block spam
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .if defined(PYZOR_USE_PYZORD) && !empty(PYZOR_USE_PYZORD:M[Yy][Ee][Ss])
 DEPENDS+=	${PYPKGPREFIX}-gdbm>=0nb1:../../databases/py-gdbm

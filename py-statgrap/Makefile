@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/09/09 22:09:50 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 13:57:31 asau Exp $
 #
 
 DISTNAME=	pystatgrab-0.5
@@ -12,8 +12,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.i-scream.org/pystatgrab/
 COMMENT=	Python bindings for the libstatgrab library
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG=	yes
 

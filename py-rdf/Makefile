@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/09/09 21:08:13 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 13:57:29 asau Exp $
 #
 
 DISTNAME=	rdf-0.9a6
@@ -13,8 +13,6 @@ LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-nose>=0.11.3:../../devel/py-nose
 DEPENDS+=	${PYPKGPREFIX}-rdflib>=2.4.2:../../wip/py-rdflib
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/rdf-0.9a6
 

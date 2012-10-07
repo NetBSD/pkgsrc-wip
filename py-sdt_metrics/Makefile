@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/07/03 14:14:54 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 13:57:29 asau Exp $
 #
 
 DISTNAME=	sdt_metrics-0.1.2.1
@@ -13,8 +13,6 @@ COMMENT=	Signal Detection Theory (SDT) metrics for Python
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.7.2:../../math/py-scipy
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

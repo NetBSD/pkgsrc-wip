@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/09/16 18:01:30 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 13:57:28 asau Exp $
 #
 
 DISTNAME=	pythia-0.8.1.14
@@ -12,8 +12,6 @@ COMMENT=Framework for specifying and staging complex,multi-physics simulations
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-ipython>=0.10.2:../../devel/py-ipython
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 

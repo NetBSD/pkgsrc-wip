@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/04/08 19:09:52 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/07 13:57:30 asau Exp $
 
 DISTNAME=				ssh4py-0.6.9
 EXTRACT_SUFX=			.zip
@@ -11,7 +11,6 @@ COMMENT=				Python wrapper around libssh2
 HOMEPAGE=				http://www.keyphrene.com/products/4py/
 LICENSE=				gnu-lgpl-v2
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 WRKSRC=					${WRKDIR}/ssh4py-0.6.9
 
 NO_CONFIGURE=			yes

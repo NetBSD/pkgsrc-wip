@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/02/01 00:04:53 noud4 Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/07 13:57:25 asau Exp $
 #
 
 DISTNAME=	papy-1.0b1.tar
@@ -12,8 +12,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://code.google.com/p/papy/
 COMMENT=	Parallel Pipelines In Python
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	${PYPKGPREFIX}-Pmw>=1.3.2:../../x11/py-Pmw
 

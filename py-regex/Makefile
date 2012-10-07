@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/08/25 16:26:23 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 13:57:29 asau Exp $
 #
 
 DISTNAME=	regex-0.1.20120803
@@ -9,8 +9,6 @@ MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://code.google.com/p/mrab-regex-hg
 COMMENT=	Alternative regular expression module, to replace re
 LICENSE=	python-software-foundation
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=	${WRKDIR}/regex-0.1.20120803
 

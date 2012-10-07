@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/03/10 21:25:17 genolopolis Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/07 13:57:30 asau Exp $
 #
 
 DISTNAME=	selenium-2.20.0.tar
@@ -12,8 +12,6 @@ MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://pypi.python.org/pypi/selenium/
 COMMENT=	Python binding to selenium Remote Control
 #LICENSE=	apache
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/selenium-2.20.0
 USE_LANGUAGES=	# none

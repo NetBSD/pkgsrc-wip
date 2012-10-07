@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/05/14 21:47:27 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 13:57:33 asau Exp $
 #
 
 DISTNAME=	python-xdgapp-1.1
@@ -12,8 +12,6 @@ COMMENT=	Python XDG for Applications
 LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-xdg>=0.17:../../devel/py-xdg
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

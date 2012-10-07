@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2011/05/18 19:23:12 alnsn Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/07 13:57:26 asau Exp $
 #
 
 DISTNAME=		pcapy-0.10.5
@@ -12,7 +12,6 @@ COMMENT=		Python interface to pcap library
 LICENSE=		apache-1.1
 
 USE_LANGUAGES+=		c c++
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes

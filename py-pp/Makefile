@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/09/09 22:07:35 jihbed Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/07 13:57:26 asau Exp $
 #
 
 DISTNAME=	pp-1.6.2
@@ -11,8 +11,6 @@ MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://www.parallelpython.com/
 COMMENT=	Parallel and distributed programming for Python
 LICENSE=	2-clause-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

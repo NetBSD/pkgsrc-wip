@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/04/23 22:00:55 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 13:57:33 asau Exp $
 #
 
 DISTNAME=	pythia-6.4.25.f
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.gz
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://www.hepforge.org/archive/pythia6/
 COMMENT=	Program can be used to generate high-energy-physics events
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_BUILD= yes
 USE_LANGUAGES=	fortran77

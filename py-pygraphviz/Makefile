@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/02/12 21:41:54 helgoman Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 13:57:27 asau Exp $
 #
 
 VERS=			1.1
@@ -11,8 +11,6 @@ MAINTAINER=		helgoman@users.sourceforge.net
 HOMEPAGE=		http://networkx.lanl.gov/pygraphviz/index.html
 COMMENT=		Python interface to the Graphviz package
 LICENSE=		original-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG=		yes
 
