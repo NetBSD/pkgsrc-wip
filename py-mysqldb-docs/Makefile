@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.8 2011/11/21 19:08:57 absd Exp $
-# $Id: Makefile,v 1.8 2011/11/21 19:08:57 absd Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/07 12:20:12 asau Exp $
+# $Id: Makefile,v 1.9 2012/10/07 12:20:12 asau Exp $
 
 DISTNAME=	MySQL-python-0.9.2
 PKGNAME=	py-mysqldb-docs-0.9.2
@@ -19,9 +19,9 @@ DOC_SRCDIR=	${WRKSRC}/doc
 PLIST_SRC=	${WRKDIR}/.PLIST_SRC
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/${HTMLDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/${HTMLDIR}
 	${CAT} ${PKGDIR}/PLIST.pre >${PLIST_SRC}
-	cd ${DOC_SRCDIR} && pax -rw -pe * ${PREFIX}/${HTMLDIR}
-	cd ${PREFIX} && ${FIND} ${HTMLDIR} -type f -print >>${PLIST_SRC}
+	cd ${DOC_SRCDIR} && pax -rw -pe * ${DESTDIR}${PREFIX}/${HTMLDIR}
+	cd ${DESTDIR}${PREFIX} && ${FIND} ${HTMLDIR} -type f -print >>${PLIST_SRC}
 
 .include "../../mk/bsd.pkg.mk"
