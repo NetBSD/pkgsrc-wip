@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/04/02 16:17:31 emil_s Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 14:53:43 asau Exp $
 #
 
 DISTNAME=	recutils-1.5
@@ -9,8 +9,6 @@ MAINTAINER=	esg@sdf.org
 HOMEPAGE=	http://www.gnu.org/software/recutils/
 COMMENT=	Tools and libraries to access plain text databases
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 #USE_TOOLS+=		lex yacc
 GNU_CONFIGURE=		yes

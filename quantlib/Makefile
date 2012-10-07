@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/02/28 18:57:25 slitvinov Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/07 14:53:42 asau Exp $
 #
 
 DISTNAME=	QuantLib-1.1
@@ -8,7 +8,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=quantlib/}
 COMMENT=	Framework for quantitative finance
 LICENSE=	modified-bsd
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 MAINTAINER=	slitvinov@gmail.com
 HOMEPAGE=	http://quantlib.sourceforge.net/
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/05/09 10:48:08 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 14:53:43 asau Exp $
 #
 
 DISTNAME=	reduze-1.2
@@ -9,8 +9,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://www.qgd.unizh.ch/~cedric/reduze/download/
 COMMENT=	Program for reducing Feynman Integrals
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+= pkg-config

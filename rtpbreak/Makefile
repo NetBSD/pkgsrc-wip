@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/01/16 13:35:16 noud4 Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/07 14:53:44 asau Exp $
 #
 
 DISTNAME=	rtpbreak-1.3a
@@ -13,8 +13,6 @@ COMMENT=	Detects, reconstructs and analyzes any RTP session
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	libnet11>=1.1.2.1:../../devel/libnet11
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 INSTALLATION_DIRS+=	bin
 

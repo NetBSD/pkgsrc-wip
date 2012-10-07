@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/08/27 15:42:03 kristerw Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 14:53:43 asau Exp $
 #
 
 DISTNAME=	rast-0.3.1
@@ -17,8 +17,6 @@ DEPENDS+=	${RUBY_PKGPREFIX}-zip-[0-9]*:../../archivers/ruby-zip
 DEPENDS+=	${RUBY_PKGPREFIX}-mp3info-[0-9]*:../../audio/ruby-mp3info
 DEPENDS+=	${RUBY_PKGPREFIX}-tmail-[0-9]*:../../mail/ruby-tmail
 DEPENDS+=	${RUBY_PKGPREFIX}-htree-[0-9]*:../../textproc/ruby-htree
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

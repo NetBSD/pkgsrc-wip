@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/07/15 14:31:04 fhajny Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 14:53:42 asau Exp $
 #
 
 DISTNAME=	rabbitmq-c
@@ -12,8 +12,6 @@ LICENSE=	mit
 
 GIT_REPOSITORIES=	rabbitmq-c
 GIT_REPO.rabbitmq-c=	git://github.com/alanxz/rabbitmq-c.git
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		autoconf automake autoreconf gmake perl pkg-config

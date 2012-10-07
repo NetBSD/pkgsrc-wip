@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/08/09 16:32:24 fhajny Exp $
+# $NetBSD: Makefile,v 1.13 2012/10/07 14:53:43 asau Exp $
 #
 
 DISTNAME=		riak-1.2.0
@@ -9,8 +9,6 @@ MAINTAINER=		filip@joyent.com
 HOMEPAGE=		http://www.basho.com/products_riak_overview.php
 COMMENT=		Distributed, highly available data store
 LICENSE=		apache-2.0
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
 USE_TOOLS=		gmake

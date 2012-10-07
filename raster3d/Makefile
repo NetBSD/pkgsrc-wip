@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/08/01 14:57:09 asau Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/07 14:53:43 asau Exp $
 #
 
 DISTNAME=	Raster3D_2.7s
@@ -10,8 +10,6 @@ MASTER_SITES=	http://skuld.bmsc.washington.edu/raster3d/
 MAINTAINER=	shaun@inerd.com
 HOMEPAGE=	http://skuld.bmsc.washington.edu/raster3d/
 COMMENT=	Set of tools for generating raster images of proteins and molecules
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c fortran77
 USE_TOOLS+=	gunzip:run

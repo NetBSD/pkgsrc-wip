@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/09/14 07:33:46 obache Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 14:53:44 asau Exp $
 #
 
 DISTNAME=	easyjour-0.0.4
@@ -10,8 +10,6 @@ COMMENT=	Simple access to service announcing and discovery using Bonjour
 LICENSE=	mit
 
 DEPENDS+=	${RUBY_PKGPREFIX}-dnssd>=0.7.0:../../wip/ruby-dnssd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"

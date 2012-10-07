@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/07/16 12:50:00 tnn2 Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 14:53:43 asau Exp $
 #
 
 DISTNAME=	resin-4.0.8
@@ -10,8 +10,6 @@ MAINTAINER=	tnn@NetBSD.org
 HOMEPAGE=	http://www.caucho.com/
 COMMENT=	High-performance, open source application server
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_JAVA=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2010/06/13 22:47:15 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/07 14:53:42 asau Exp $
 #
 
 DISTNAME=		qhacc-3.3
@@ -9,6 +9,8 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=qhacc/}
 MAINTAINER=		reed@reedmedia.net
 HOMEPAGE=		http://qhacc.sourceforge.net/
 COMMENT=		The Q Home Accountant for bookkeeping
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/04 00:22:50 othyro Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 14:53:44 asau Exp $
 #
 
 DISTNAME=	rubrica2-2.1.6
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://rubrica.berlios.de/
 COMMENT=	Addressbook manager for the GNOME Environment
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes

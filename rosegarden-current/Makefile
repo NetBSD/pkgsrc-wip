@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2010/06/13 22:47:15 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.20 2012/10/07 14:53:43 asau Exp $
 #
 
 DISTNAME=	rosegarden-4-0.9.1
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=rosegarden/}
 MAINTAINER=	virtus@wanadoo.nl
 HOMEPAGE=	http://www.rosegardenmusic.com/
 COMMENT=	Development release of rosegarden
+
+PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	gmake

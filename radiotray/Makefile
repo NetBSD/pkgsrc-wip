@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/03/11 07:59:40 pdtafti Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 14:53:43 asau Exp $
 #
 
 DISTNAME=		radiotray-0.6.3
@@ -15,8 +15,6 @@ DEPENDS+=		${PYPKGPREFIX}-xdg-[0-9]*:../../devel/py-xdg
 DEPENDS+=		gst-plugins0.10-soup-[0-9]*:../../net/gst-plugins0.10-soup
 # XXX notification-daemon is not a strict dependency.
 #DEPENDS+=		notification-daemon-[0-9]*:../../sysutils/notification-daemon
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG=			yes
 

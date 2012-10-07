@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/03/07 22:58:55 tnn2 Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 14:53:42 asau Exp $
 
 DISTNAME=	quickie-1.1
 CATEGORIES=	www
@@ -11,6 +11,8 @@ HOMEPAGE=	http://${PKGBASE}.sourceforge.net/
 
 MAINTAINER=	shaun@inerd.com
 COMMENT=	Small footprint, fast Wiki engine written in C++
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_LANGUAGES=	c c++
 

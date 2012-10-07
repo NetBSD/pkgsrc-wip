@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2012/09/01 20:53:40 fhajny Exp $
+# $NetBSD: Makefile.common,v 1.5 2012/10/07 14:53:44 asau Exp $
 # used by wip/ap2-passenger/Makefile
 #
 DISTNAME=		passenger-3.0.17
@@ -8,8 +8,6 @@ MASTER_SITES=		http://rubyforge.org/frs/download.php/76398/
 MAINTAINER=		filip@joyent.com
 HOMEPAGE=		http://www.modrails.com/
 LICENSE=		mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		pax:build

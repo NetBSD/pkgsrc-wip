@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/01/15 18:15:28 othyro Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/07 14:53:43 asau Exp $
 
 PKGVERSION=		4.10beta5
 DISTNAME=		rarbsd-${PKGVERSION:S/0beta/.b/}
@@ -25,7 +25,6 @@ ONLY_FOR_PLATFORM=	FreeBSD-*-i386 NetBSD-*-i386
 
 NO_BUILD=		yes
 NO_CONFIGURE=		yes
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DATA_FILES=		license.txt order.htm rar.txt readme.txt technote.txt \
 			whatsnew.txt

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/10/29 08:32:55 shattered Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/07 14:53:43 asau Exp $
 #
 
 DISTNAME=	RPSL-OL-3.1.1
@@ -10,7 +10,9 @@ MAINTAINER=	tech-pkg@netbsd.org
 HOMEPAGE=	http://www.ripe.net/
 COMMENT=	RPSL Object Library
 
+PKG_DESTDIR_SUPPORT=	none
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
 PERL5_CONFIGURE_DIRS=	${WRKSRC}/perl
 BUILD_DIRS=		${WRKSRC} ${WRKSRC}/perl
 

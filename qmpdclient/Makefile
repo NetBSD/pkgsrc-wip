@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/06/13 22:47:15 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/07 14:53:42 asau Exp $
 #
 
 DISTNAME=	qmpdclient-1.1.2
@@ -15,8 +15,6 @@ COMMENT=	QT4 based mpd client
 LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES= c c++
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 SUBST_CLASSES+=			fix-proj
 SUBST_STAGE.fix-proj=	post-patch

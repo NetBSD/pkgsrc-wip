@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/10/03 23:23:23 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 14:53:43 asau Exp $
 #
 
 DISTNAME=	retroarch-0.9.7
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://themaister.net/retroarch.html
 COMMENT=	Multi-system emulator for Linux, Windows, Mac OS X and *BSD
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=			c c++
 USE_TOOLS+=			gmake pkg-config

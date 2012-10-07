@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/10/02 14:40:59 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/07 14:53:44 asau Exp $
 #
 
 DISTNAME=	rsget.pl-11838
@@ -10,8 +10,6 @@ MAINTAINER=	ryo_on@yk.rim.or.jp
 HOMEPAGE=	http://rsget.pl/
 COMMENT=	Poowerful perl application designed to retrieve files from download services
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gmake perl:run
 

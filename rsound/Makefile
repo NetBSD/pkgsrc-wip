@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/05 09:03:34 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 14:53:44 asau Exp $
 #
 
 DISTNAME=	rsound-1.1
@@ -10,7 +10,6 @@ HOMEPAGE=	https://github.com/downloads/Themaister/RSound/
 COMMENT=	Multi-platform, simple PCM audio server and client
 LICENSE=	gnu-gpl-v3
 
-PKG_DESTDIR_SUPPORT=		user-destdir
 HAS_CONFIGURE=			yes
 USE_LANGUAGES+=			c
 USE_TOOLS+=			gmake

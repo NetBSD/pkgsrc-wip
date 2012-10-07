@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/06/13 22:47:15 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/07 14:53:42 asau Exp $
 #
 
 DISTNAME=		qcomicbook-0.3.4
@@ -15,6 +15,8 @@ DEPENDS+=		unrar-[0-9]*:../../archivers/unrar
 DEPENDS+=		unzip-[0-9]*:../../archivers/unzip
 BUILD_DEPENDS+=		imlib2-[0-9]*:../../graphics/imlib2
 BUILD_DEPENDS+=		qt3-libs>=3.3.3:../../x11/qt3-libs
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_LANGUAGES=		c c++
 USE_TOOLS=		gmake pkg-config

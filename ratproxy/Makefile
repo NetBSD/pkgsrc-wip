@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/02/28 14:53:18 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/07 14:53:43 asau Exp $
 #
 
 DISTNAME=	ratproxy-1.51
@@ -9,8 +9,6 @@ MASTER_SITES=	http://ratproxy.googlecode.com/files/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/ratproxy
 COMMENT=	Passive web application security assessment tool
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/ratproxy
 

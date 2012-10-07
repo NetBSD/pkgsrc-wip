@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/09/10 00:18:08 jihbed Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/07 14:53:43 asau Exp $
 #
 
 DISTNAME=	reinteract-0.5.10
@@ -11,8 +11,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://www.reinteract.org/
 COMMENT=	Reinteract is a system for interactive experimentation with Python
 LICENSE=	2-clause-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 

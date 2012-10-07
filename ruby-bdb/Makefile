@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/02/21 11:32:09 obache Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 14:53:44 asau Exp $
 #
 
 DISTNAME=	bdb-0.6.5
@@ -9,8 +9,6 @@ MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://rubyforge.org/projects/bdb/
 COMMENT=	Ruby interface to Berkley DB
 LICENSE=	ruby-license
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DIST_SUBDIR=	ruby
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/05/05 10:59:18 pettai Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/07 14:53:44 asau Exp $
 #
 
 DISTNAME=	rpki-svn
@@ -15,8 +15,6 @@ SVN_REPOSITORIES=	rpki
 SVN_ROOT.rpki=		http://subvert-rpki.hactrn.net/
 SVN_MODULE.rpki=	rpki
 NO_CHECKSUM=		yes
-
-PKG_DESTDIR_SUPPORT=    user-destdir
 
 DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django
 

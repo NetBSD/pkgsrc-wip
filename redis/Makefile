@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2012/07/20 11:06:46 fhajny Exp $
+# $NetBSD: Makefile,v 1.20 2012/10/07 14:53:43 asau Exp $
 #
 
 DISTNAME=	redis-2.4.14
@@ -12,8 +12,6 @@ LICENSE=	modified-bsd
 
 USE_TOOLS+=	gmake pax
 USE_LANGUAGES=	c99
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/08/24 15:19:30 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 14:53:43 asau Exp $
 #
 
 DISTNAME=	macgen_src_v1.1
@@ -14,8 +14,6 @@ LICENSE=	gnu-gpl-v2
 
 NO_CONFIGURE=	yes
 USE_LANGUAGES+=	c
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}
 

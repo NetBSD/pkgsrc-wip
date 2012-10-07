@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2010/06/13 22:47:15 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/07 14:53:43 asau Exp $
 #
 
 DISTNAME=		rekall-2.2.0-beta0
@@ -11,6 +11,8 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.rekallrevealed.org/packages/
 COMMENT=		KDE database frontend
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2011/03/15 20:15:31 jakllsch Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/07 14:53:43 asau Exp $
 
 VERSION=	2.16
 DISTNAME=	remctl-${VERSION}
@@ -9,6 +9,8 @@ MAINTAINER=	jakllsch@NetBSD.org
 HOMEPAGE=	http://www.eyrie.org/~eagle/software/remctl/
 COMMENT=	Client/server protocol for running commands using Kerberos v5 auth
 LICENSE=	mit
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake

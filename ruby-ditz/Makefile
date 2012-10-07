@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/02/22 14:39:43 phonohawk Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/07 14:53:44 asau Exp $
 #
 
 DISTNAME=	ditz-0.5
@@ -8,6 +8,8 @@ MAINTAINER=	pho@cielonegro.org
 HOMEPAGE=	http://ditz.rubyforge.org/
 COMMENT=	Simple, light-weight distributed issue tracker
 LICENSE=	gnu-gpl-v3
+
+PKG_DESTDIR_SUPPORT=	none
 
 .include "../../lang/ruby/rubyversion.mk"
 

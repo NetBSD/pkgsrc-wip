@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/04/08 19:09:53 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/07 14:53:42 asau Exp $
 #
 
 DISTNAME=		qemu-neo1973-4412
@@ -12,6 +12,8 @@ HOMEPAGE=		http://wiki.openmoko.org/wiki/OpenMoko_under_QEMU
 COMMENT=		Qemu OpenMoko Neo1973 phone emulator
 
 NOT_FOR_PLATFORM=	NetBSD-1.[0-6]*-*
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_TOOLS+=		gmake perl:build
 USE_TOOLS+=		tar gzip

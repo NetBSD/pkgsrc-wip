@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/09/28 14:57:12 ryo-on Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 14:53:44 asau Exp $
 #
 
 DISTNAME=	rpcemu-20110928
@@ -10,8 +10,6 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://marutan.net/rpcemuspoon/
 COMMENT=	Acorn RiscPC and A7000 emulator
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2012/09/02 07:10:40 noud4 Exp $
+# $NetBSD: Makefile,v 1.24 2012/10/07 14:53:43 asau Exp $
 #
 
 DISTNAME=	regexxer-0.9
@@ -10,8 +10,6 @@ MAINTAINER=	dhowland@users.sourceforge.net
 HOMEPAGE=	http://regexxer.sourceforge.net/
 COMMENT=	Interactive tool for performing search and replace operations
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT= 	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/10/05 11:06:01 ryo-on Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 14:53:44 asau Exp $
 #
 
 DISTNAME=	roxterm-2.2.1
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://roxterm.sourceforge.net/
 COMMENT=	ROXTerm is a terminal emulator
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/04/25 13:22:23 alnsn Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/07 14:53:42 asau Exp $
 
 DISTNAME=		quickfix-1.13.3
 CATEGORIES=		finance
@@ -9,7 +9,6 @@ HOMEPAGE=		http://www.quickfixengine.org/
 COMMENT=		FIX engine
 LICENSE=		quickfix
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 .include "../../mk/bsd.prefs.mk"

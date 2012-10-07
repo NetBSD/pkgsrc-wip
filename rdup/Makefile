@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2011/04/26 09:24:52 moubctez Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/07 14:53:43 asau Exp $
 #
 
 DISTNAME=	rdup-1.1.11
@@ -12,8 +12,6 @@ COMMENT=	Backup utility listing changed files only
 LICENSE=	gnu-gpl-v3
 
 REPLACE_BASH+=	sh/rdup-simple.in
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	pkg-config gmake bash:run
 GNU_CONFIGURE=	yes

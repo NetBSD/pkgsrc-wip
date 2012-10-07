@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2010/06/13 22:47:15 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/07 14:53:43 asau Exp $
 
 DISTNAME=	rawphoto.c
 PKGNAME=	rawphoto-1.1.15
@@ -13,6 +13,8 @@ COMMENT=	GIMP plugin for dcraw (digital camera raw file decoder)
 
 # The dcraw program is executed by the plugin.
 DEPENDS+=	dcraw>=1.208:../../graphics/dcraw
+
+PKG_DESTDIR_SUPPORT=	none
 
 WRKSRC=		${WRKDIR}
 DIST_SUBDIR=	${PKGNAME_NOREV}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/07/31 22:18:51 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/07 14:53:44 asau Exp $
 #
 
 DISTNAME=	rst
@@ -13,8 +13,6 @@ COMMENT=	Emacs mode for reStructuredText documents
 
 WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	# none
-
-PKG_DESTDIR_SUPPORT= user-destdir
 
 NO_CONFIGURE=YES
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/03/05 13:19:08 fhajny Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/07 14:53:44 asau Exp $
 #
 
 DISTNAME=		rsyslog-6.2.0
@@ -11,8 +11,6 @@ COMMENT=		The enhanced syslogd for Unix
 LICENSE=		gnu-gpl-v3
 
 CONFLICTS=		rsyslog-[0-9]*
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-testbench

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/08/11 17:29:51 helgoman Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 14:53:43 asau Exp $
 #
 
 VERS=								0.9.3
@@ -12,8 +12,6 @@ MAINTAINER=							helgoman@users.sourceforge.net
 HOMEPAGE=							http://rope.sourceforge.net/
 COMMENT=							Rope is a python refactoring library
 LICENSE=							gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=    			user-destdir
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

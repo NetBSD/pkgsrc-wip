@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/06/14 07:29:13 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 14:53:43 asau Exp $
 #
 
 DISTNAME=	recoll-1.17.3
@@ -9,8 +9,6 @@ MAINTAINER=	slitvinov@gmail.com
 HOMEPAGE=	http://www.lesbonscomptes.com/recoll/
 COMMENT=	Full text desktop search engine
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++

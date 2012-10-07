@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/11/12 23:58:33 cheusov Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 14:53:44 asau Exp $
 #
 
 DISTNAME=	actionmessenger-0.2.0
@@ -11,8 +11,6 @@ MAINTAINER=	yuripoloni@gmail.com
 HOMEPAGE=	http://trypticon.org/software/actionmessenger/
 COMMENT=	Ruby convenience framework for instant messaging
 LICENSE=	mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

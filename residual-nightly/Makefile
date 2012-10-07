@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/07/22 09:53:14 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/07 14:53:43 asau Exp $
 
 DISTNAME=	residual-${SCM_VER}
 CATEGORIES=	games
@@ -6,8 +6,6 @@ CATEGORIES=	games
 OWNER=		dillo@NetBSD.org
 HOMEPAGE=	http://residual.sourceforge.net/
 COMMENT=	Lucas Arts' LUA-based 3D adventure engine
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 RESTRICTED=	changes daily
 NO_SRC_ON_FTP=	${RESTRICTED}
