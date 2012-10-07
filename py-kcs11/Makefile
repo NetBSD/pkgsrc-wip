@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/09/16 09:22:44 noud4 Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/07 12:25:13 asau Exp $
 #
 
 DISTNAME=	PyKCS11-1.2.4
@@ -10,8 +10,6 @@ MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://www.bit4id.org/trac/pykcs11
 COMMENT=	PKCS\#11 wrapper for Python
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c c++
 

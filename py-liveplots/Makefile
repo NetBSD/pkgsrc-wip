@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/03/20 21:43:34 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 12:25:15 asau Exp $
 #
 
 DISTNAME=	liveplots-0.7.1
@@ -13,8 +13,6 @@ LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-multiprocessing>=:../../devel/py-multiprocessing
 DEPENDS+=	${PYPKGPREFIX}-gnuplot>=:../../graphics/py-gnuplot
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/liveplots-0.7.1
 

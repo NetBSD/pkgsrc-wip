@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/07/15 14:43:36 jihbed Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/07 12:25:30 asau Exp $
 #
 
 DISTNAME=	nose_scenario-0.1.3.tar
@@ -14,8 +14,6 @@ COMMENT=	Nose plugin test unittest scenario adapt
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${PYPKGPREFIX}-nose>=0.11.3:../../devel/py-nose
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/nose_scenario-0.1.3
 USE_LANGUAGES=	# none

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/06/24 19:13:03 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 12:25:14 asau Exp $
 #
 
 DISTNAME=	libopensync-plugin-python-0.22
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.opensync.org/attachment/wiki/download/
 COMMENT=	Python support code for opensync plugins
+
+PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c

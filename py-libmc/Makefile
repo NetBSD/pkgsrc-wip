@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/06/25 09:03:35 fhajny Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/07 12:25:14 asau Exp $
 #
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pypi.python.org/pypi/pylibmc
 COMMENT=	Quick and small memcached client for Python
 LICENSE=	modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG=	yes
 PY_PATCHPLIST=	yes

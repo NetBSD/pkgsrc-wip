@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/01/05 10:03:24 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 12:25:19 asau Exp $
 #
 
 DISTNAME=	pymetrics-0.8.1
@@ -10,8 +10,6 @@ MAINTAINER=	 jihbed.research@gmail.com
 HOMEPAGE=	http://sourceforge.net/projects/pymetrics/
 COMMENT=	Metrics for python files
 #LICENSE=	# TODO: (see mk/license.mk)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 PYDISTUTILSPKG=	yes

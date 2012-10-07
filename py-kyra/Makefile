@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2010/06/13 22:47:14 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/07 12:25:13 asau Exp $
 #
 
 DISTNAME=		PyKyra-0.4.0
@@ -10,6 +10,8 @@ MASTER_SITES=		http://www.alobbs.com/pykyra/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.alobbs.com/modules.php?op=modload&name=pykyra&file=index
 COMMENT=		Game development framework for Python
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes

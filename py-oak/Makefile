@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2009/09/09 11:22:11 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/07 12:25:33 asau Exp $
 #
 
 DISTNAME=		oak-1.2
@@ -9,6 +9,8 @@ MASTER_SITES=		http://www.digitallumber.com/software/oak/code/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.digitallumber.com/software/oak/
 COMMENT=		Authoritative/recursive DNS server
+
+PKG_DESTDIR_SUPPORT=	none
 
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes

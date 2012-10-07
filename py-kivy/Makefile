@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/04/08 19:09:47 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/07 12:25:13 asau Exp $
 #
 
 VERSION=	1.0.9
@@ -17,8 +17,6 @@ DEPENDS+=	${PYPKGPREFIX}-simplejson>=2.1.1:../../converters/py-simplejson
 DEPENDS+=	${PYPKGPREFIX}-multiprocessing>=2.6.2.1:../../devel/py-multiprocessing
 DEPENDS+=	${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
 DEPENDS+=	${PYPKGPREFIX}-enchant>=1.6.5:../../textproc/py-enchant
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES= c
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/05/22 23:04:51 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 12:25:13 asau Exp $
 #
 
 DISTNAME=	python-keyczar-0.6b.061709
@@ -12,8 +12,6 @@ COMMENT=	Toolkit for safe and simple cryptography
 LICENSE=	apache-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-asn1-[0-9]*:../../security/py-asn1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/python-keyczar-0.6b
 USE_LANGUAGES=	# none

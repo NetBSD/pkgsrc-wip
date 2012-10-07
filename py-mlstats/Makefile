@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/04/27 22:34:10 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 12:25:19 asau Exp $
 #
 
 DISTNAME=	mlstats-0.4
@@ -12,8 +12,6 @@ COMMENT=	Mailing lists analysis tool. Part of libresoft-tool
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${PYPKGPREFIX}-mysqldb-[0-9]*:../../databases/py-mysqldb
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 # Force using "curl" for fetching the distribution file. It is only available
 # over HTTPS and "curl" is the only fetch program which always supports HTTPS.

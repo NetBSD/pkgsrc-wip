@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/03/07 10:50:33 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 12:25:28 asau Exp $
 #
 
 DISTNAME=	nodepy-0.3
@@ -10,8 +10,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://web.kaust.edu.sa/faculty/davidketcheson/NodePy/
 COMMENT=	Numerical ODE solvers in Python
 LICENSE=	modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/nodepy-0.3
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/09/02 12:18:36 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 12:25:24 asau Exp $
 #
 
 DISTNAME=	PyMois-0.1
@@ -10,8 +10,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://www.qtzlabs.com/
 COMMENT=	Applications for interactive visualization of numerical methods
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}

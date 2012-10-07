@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/04/08 19:09:49 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/07 12:25:36 asau Exp $
 #
 
 DISTNAME=	openxmllib-1.0.6
@@ -12,8 +12,6 @@ COMMENT=	Provides resources to handle OpenXML documents from Python
 LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-lxml-[0-9]*:../../textproc/py-lxml
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

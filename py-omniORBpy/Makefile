@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/08/20 08:07:05 tonnerre Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 12:25:35 asau Exp $
 
 DISTNAME=	omniORBpy-3.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -8,8 +8,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=omniorb/}
 MAINTAINER=	tonnerre@NetBSD.org
 HOMEPAGE=	http://omniorb.sourceforge.net/
 COMMENT=	Python interface to omniORB
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PLIST_SUBST+=	PYINC=${PYINC} PYSITELIB=${PYSITELIB}
 GNU_CONFIGURE=	yes

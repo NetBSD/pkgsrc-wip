@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/03/23 11:00:51 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 12:25:23 asau Exp $
 #
 
 DISTNAME=	Model-Builder-0.4.6
@@ -12,8 +12,6 @@ HOMEPAGE=	http://model-builder.sourceforge.net/
 COMMENT=	Graphical ODE simulator
 
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.7.0:../../math/py-scipy
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

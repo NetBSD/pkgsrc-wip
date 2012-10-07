@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/04/08 19:09:47 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 12:25:14 asau Exp $
 #
 
 DISTNAME=	py-libmpdclient2-1.0
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	jfranz@bsdprojects.net
 HOMEPAGE=	http://www.incise.org/index.cgi/py-libmpdclient2
 COMMENT=	Python bindings to the mpd access library
+
+PKG_DESTDIR_SUPPORT=	none
 
 WRKSRC=		${WRKDIR}/py-libmpdclient2
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/07/31 12:23:44 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 12:25:16 asau Exp $
 #
 
 DISTNAME=	logilab-database-1.1.0.tar
@@ -12,8 +12,6 @@ MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://www.logilab.org/project/logilab-database
 COMMENT=	Logilab utilities for database manipulation
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/logilab-database-1.1.0
 USE_LANGUAGES=	# none

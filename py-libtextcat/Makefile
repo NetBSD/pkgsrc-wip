@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/08/16 11:00:51 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 12:25:14 asau Exp $
 #
 
 DISTNAME=	pylibtextcat-0.1
@@ -12,8 +12,6 @@ MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://proyvind.net/
 COMMENT=	Python bindings for libTextCa
 LICENSE=	modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=	${WRKDIR}/pylibtextcat-0.1
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/10/02 00:10:26 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 12:25:15 asau Exp $
 #
 
 DISTNAME=	loggly-0.1.2
@@ -12,8 +12,6 @@ COMMENT=	Python interface to Loggly
 LICENSE=	apache-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-simplejson>=2.6.1:../../converters/py-simplejson
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/loggly-0.1.2
 

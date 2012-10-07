@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/12/29 22:12:12 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 12:25:25 asau Exp $
 #
 
 DISTNAME=	Naftawayh-0.1
@@ -11,8 +11,6 @@ MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://naftawayh.sourceforge.net/
 COMMENT=	Naftawayh: Arabic word tagger
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 PYDISTUTILSPKG=	yes

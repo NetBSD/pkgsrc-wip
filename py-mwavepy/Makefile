@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/03 22:14:53 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/07 12:25:25 asau Exp $
 #
 
 DISTNAME=	mwavepy-1.0
@@ -14,8 +14,6 @@ COMMENT=	Python datatypes and functions for microwave engineering
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.7.0:../../math/py-scipy
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

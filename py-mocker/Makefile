@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/09/10 09:12:17 jihbed Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/07 12:25:19 asau Exp $
 #
 
 DISTNAME=	mocker-1.1
@@ -12,8 +12,6 @@ MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://labix.org/mocker
 COMMENT=	Graceful platform for test doubles in Python
 LICENSE=	2-clause-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

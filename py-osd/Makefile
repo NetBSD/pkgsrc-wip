@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/01/30 08:18:31 noud4 Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/07 12:25:38 asau Exp $
 #
 
 DISTNAME=		pyosd-0.2.14
@@ -13,8 +13,6 @@ COMMENT=		Display text on an X11 display
 LICENSE=		gnu-gpl-v2
 
 DEPENDS+=		${PYPKGPREFIX}-twisted>=2.0.0:../../net/py-twisted
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG=		yes
 

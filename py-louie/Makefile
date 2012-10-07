@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/10/11 08:58:14 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 12:25:16 asau Exp $
 #
 
 DISTNAME=	Louie-1.1
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://11craft.github.com/louie/
 COMMENT=	Python signal dispatching mechanism
 LICENSE=	modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/Louie-1.1
 

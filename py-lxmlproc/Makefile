@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/08/30 22:12:02 kristerw Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 12:25:16 asau Exp $
 #
 
 DISTNAME=	lxmlproc-0.1
@@ -12,8 +12,6 @@ COMMENT=	Lxml version of xsltproc
 LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-lxml>=2.3.2:../../textproc/py-lxml
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

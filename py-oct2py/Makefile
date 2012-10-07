@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/09/11 14:01:44 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 12:25:35 asau Exp $
 #
 
 DISTNAME=	oct2py-0.3.4
@@ -12,8 +12,6 @@ COMMENT=	Python to GNU Octave bridge --> run m-files from python
 LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.7.2:../../math/py-scipy
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/oct2py-0.3.4
 USE_LANGUAGES=	# none

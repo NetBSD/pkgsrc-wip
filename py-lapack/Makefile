@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/01/24 09:18:14 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 12:25:13 asau Exp $
 #
 
 VERSION=	0.21
@@ -11,8 +11,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://kochanski.org/gpk/misc/PyLapack.html
 COMMENT=	PyLapack is a python interface to LAPACK
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES= fortran77
 PYDISTUTILSPKG=	yes

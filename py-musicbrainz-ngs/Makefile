@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/05/30 10:31:33 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 12:25:25 asau Exp $
 
 # for egg
 DISTNAME=	musicbrainzngs-0.3dev
@@ -11,8 +11,6 @@ COMMENT=	Python bindings for Musicbrainz' NGS service
 LICENSE=	2-clause-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GIT_REPOSITORIES=			python-musicbrainz-ngs
 GIT_REPO.python-musicbrainz-ngs=	git://github.com/alastair/python-musicbrainz-ngs.git

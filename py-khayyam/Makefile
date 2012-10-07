@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/03/27 09:22:15 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 12:25:13 asau Exp $
 #
 
 DISTNAME=	Khayyam-0.5rc2
@@ -9,8 +9,6 @@ MASTER_SITES=	http://pypi.python.org/packages/source/K/Khayyam/
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://pylover.dobisel.com/projects/khayyam
 COMMENT=	Khayyam(Jalali Persian Datetime) library
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/Khayyam-0.5rc2
 

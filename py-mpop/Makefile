@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/08/25 16:24:23 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 12:25:25 asau Exp $
 #
 
 DISTNAME=	mpop-v0.11.5
@@ -10,8 +10,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://github.com/mraspaud/mpop
 COMMENT=	Meteorological post processing package
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/mpop-v0.11.5
 

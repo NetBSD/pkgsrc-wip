@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/01/30 08:52:28 noud4 Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/07 12:25:13 asau Exp $
 #
 
 VER=		0.7
@@ -11,8 +11,6 @@ MAINTAINER=	pettai@nordu.net
 HOMEPAGE=	http://www.thoughtcrime.org/software/knockknock/
 COMMENT=	Simple & secure port knocking client/server written in python
 #LICENSE=	# TODO: (see mk/license.mk)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	hping3-[0-9]*:../../net/hping3
 DEPENDS+=	${PYPKGPREFIX}-crypto-[0-9]*:../../security/py-crypto

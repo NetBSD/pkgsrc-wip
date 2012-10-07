@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/04/27 22:16:55 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 12:25:25 asau Exp $
 #
 
 DISTNAME=	neurolab-0.0.5
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://code.google.com/p/neurolab
 COMMENT=	Simple and powerfull neural network library for python
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 PYDISTUTILSPKG=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/03 22:14:53 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/07 12:25:17 asau Exp $
 #
 
 DISTNAME=	MDAnalysis-0.7.6
@@ -12,8 +12,6 @@ COMMENT=Library to analyze and manipulate molecular dynamics trajectories
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.7.2:../../math/py-scipy
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c c++
 

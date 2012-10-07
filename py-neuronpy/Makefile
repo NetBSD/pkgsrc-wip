@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/04/27 22:18:43 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 12:25:26 asau Exp $
 #
 
 DISTNAME=	neuronpy-0.1.2
@@ -13,8 +13,6 @@ COMMENT=	The NEURON simulator and analyzing neural data
 LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.7.0:../../math/py-scipy
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 PYDISTUTILSPKG=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/04/08 19:09:48 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/07 12:25:31 asau Exp $
 #
 
 DISTNAME=	pyntch-dist-20090907
@@ -9,8 +9,6 @@ MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://www.unixuser.org/~euske/python/pyntch/index.html
 COMMENT=	Examine python code and detect possible errors
 #LICENSE=	LICENSE
-
-PKG_DESTDIR_SUPPORT=		user-destdir
 
 VERSION=	20090615
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/08/31 00:34:12 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 12:25:25 asau Exp $
 #
 
 DISTNAME=	pynetcdf-0.7
@@ -10,8 +10,6 @@ MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://pypi.python.org/pypi/pynetcdf/0.7
 COMMENT=	Python bindings for netcdf
 #LICENSE=	cecill
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG= yes
 

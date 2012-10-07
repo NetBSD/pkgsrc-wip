@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/04/08 19:09:47 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/07 12:25:14 asau Exp $
 #
 
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -6,8 +6,6 @@ CATEGORIES=	net python
 MAINTAINER=	ryo_on@yk.rim.or.jp
 HOMEPAGE=	http://www.rasterbar.com/products/libtorrent/python_binding.html
 COMMENT=	Python binding of rasterbar libtorrent library
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c c++
 

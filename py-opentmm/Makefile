@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/08/25 16:50:42 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 12:25:36 asau Exp $
 #
 
 DISTNAME=	openTMM-0.1.0
@@ -13,9 +13,6 @@ LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.7.2:../../math/py-scipy
 #DEPENDS+=	${PYPKGPREFIX}-django-gitrevision>=0.1.4:../../wip/py-django-gitrevision
-
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/openTMM-0.1.0
 

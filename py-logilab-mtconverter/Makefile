@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/09/25 21:10:16 kristerw Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/07 12:25:16 asau Exp $
 #
 
 DISTNAME=	logilab-mtconverter-0.8.0
@@ -12,8 +12,6 @@ MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://www.logilab.org/project/logilab-mtconverter
 COMMENT=	Library convert from a MIME type to another
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

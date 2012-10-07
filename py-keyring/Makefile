@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/05/12 16:10:47 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 12:25:13 asau Exp $
 #
 
 DISTNAME=	keyring-0.2.tar
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc.gnome@gmail.com
 HOMEPAGE=	http://pypi.python.org/packages/source/k/keyring/
 COMMENT=	Store and access your passwords safely
 #LICENSE=	# TODO: (see mk/license.mk)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/keyring-0.2
 USE_LANGUAGES=	c c++

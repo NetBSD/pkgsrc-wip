@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/09/10 22:44:44 jihbed Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/07 12:25:18 asau Exp $
 #
 
 DISTNAME=	MDP-3.0
@@ -10,8 +10,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://mdp-toolkit.sourceforge.net/index.html
 COMMENT=	Modular toolkit for data processing
 LICENSE=	gnu-lgpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 PYDISTUTILSPKG=	yes

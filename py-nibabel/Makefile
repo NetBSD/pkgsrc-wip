@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/05/16 20:43:56 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 12:25:26 asau Exp $
 #
 
 DISTNAME=	nibabel-1.1.0
@@ -14,8 +14,6 @@ LICENSE=	mit
 DEPENDS+=	${PYPKGPREFIX}-nose>=0.11.3:../../devel/py-nose
 DEPENDS+=	${PYPKGPREFIX}-rpy>=2.1.3:../../math/py-rpy
 DEPENDS+=	${PYPKGPREFIX}-sphinx>=1.0.7:../../textproc/py-sphinx
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/nibabel-1.1.0
 

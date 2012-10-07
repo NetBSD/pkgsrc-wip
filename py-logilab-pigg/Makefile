@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/06/13 22:47:14 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 12:25:16 asau Exp $
 #
 
 DISTNAME=	pigg-0.2.0
@@ -11,8 +11,6 @@ MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://www.logilab.org/project/pigg
 COMMENT=	Python Interface Generator for Gtk implementation of the MVC pattern
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 PYDISTUTILSPKG= yes

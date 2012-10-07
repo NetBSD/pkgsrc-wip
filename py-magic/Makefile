@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/07/12 21:05:02 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/07 12:25:16 asau Exp $
 
 DISTNAME=	python-magic-0.4.2
 PKGNAME=	${PYPKGPREFIX}-magic-0.4.2
@@ -9,8 +9,6 @@ MAINTAINER=	khorben@defora.org
 HOMEPAGE=	http://pypi.python.org/pypi/python-magic/
 COMMENT=	File type identification using libmagic
 LICENSE=	python-software-foundation
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 EGG_NAME=	${DISTNAME:S/-magic/_magic/}
 

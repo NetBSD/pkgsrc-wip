@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/05/08 16:01:41 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 12:25:14 asau Exp $
 #
 
 DISTNAME=	lazr.uri-1.0.2
@@ -10,8 +10,6 @@ MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://launchpad.net/lazr.uri
 COMMENT=	Library for parsing, manipulating, and generating URIs
 LICENSE=	gnu-lgpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

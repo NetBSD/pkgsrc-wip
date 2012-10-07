@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/04/08 19:09:47 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/07 12:25:14 asau Exp $
 
 DISTNAME=	libtunepimp-0.5.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,6 +10,8 @@ MASTER_SITES=	ftp://ftp.musicbrainz.org/pub/musicbrainz/ \
 MAINTAINER=	jfranz@bsdprojects.net
 HOMEPAGE=	http://musicbrainz.org/products/tunepimp/index.html
 COMMENT=	Python bindings for TunePimp library.
+
+PKG_DESTDIR_SUPPORT=	none
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/python
 

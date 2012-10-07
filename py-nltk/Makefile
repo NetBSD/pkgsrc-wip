@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/04/08 19:09:48 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 12:25:27 asau Exp $
 #
 
 DISTNAME=	nltk-2.0.1rc1
@@ -12,8 +12,6 @@ COMMENT=	Natural Language Toolkit (NLTK)
 LICENSE=	apache-2.0
 
 DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG=			yes
 REPLACE_PYTHON=			nltk/corpus/reader/knbc.py
