@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2008/05/29 22:18:15 asau Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/07 16:22:54 asau Exp $
 #
 
 DISTNAME=	scm-5e5
@@ -17,8 +17,6 @@ HOMEPAGE=	http://www.swiss.ai.mit.edu/~jaffer/SCM.html
 COMMENT=	Portable scheme interpreter
 
 DEPENDS+=	slib>=2.4.4:../../devel/slib
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gmake
 

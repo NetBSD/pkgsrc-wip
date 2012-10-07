@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/03/23 16:30:42 erinlalouve Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/07 16:22:55 asau Exp $
 #
 
 PKGNAME=	seeks-0.3.2
@@ -10,7 +10,6 @@ MAINTAINER=	erin.nivelet@erinlalouve.com
 HOMEPAGE=	https://www.seeks-project.info/
 COMMENT=	Decentralized metasearch engine
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_JOBS_SAFE=	no
 
 DEPENDS+=       autogen-[0-9]*:../../devel/autogen

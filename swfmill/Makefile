@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/06/13 22:47:19 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/07 16:23:18 asau Exp $
 #
 
 DISTNAME=	swfmill-0.2.11
@@ -9,6 +9,8 @@ MASTER_SITES=	http://swfmill.org/releases/
 MAINTAINER=	hiramatu@boreas.dti.ne.jp
 HOMEPAGE=	http://swfmill.org/
 COMMENT=	Collection of SWF manipulation and creation utilities
+
+PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config

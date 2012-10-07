@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/07/02 13:38:06 moubctez Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 16:23:16 asau Exp $
 #
 
 DISTNAME=	srecord-1.50
@@ -9,8 +9,6 @@ MASTER_SITES=	http://srecord.sourceforge.net/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://srecord.sourceforge.net/
 COMMENT=	Manipulate EPROM load files
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 LICENSE=	gnu-gpl-v3
 

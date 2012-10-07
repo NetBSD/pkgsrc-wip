@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/06/01 06:14:49 obache Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 16:23:10 asau Exp $
 #
 
 DISTNAME=	se${VERSION:tl:S/.//g}
@@ -10,8 +10,6 @@ MAINTAINER=	lifanov@mail.lifanov.com
 HOMEPAGE=	http://slashem.sourceforge.net/
 COMMENT=	Slash'EM is a Nethack variant with more stuff
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 USE_LANGUAGES=	c c++

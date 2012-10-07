@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/10/14 02:01:55 makoto Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 16:23:04 asau Exp $
 #
 
 DISTNAME=		showfont-1.0.3
@@ -11,7 +11,6 @@ HOMEPAGE=		http://xorg.freedesktop.org/
 COMMENT=		Displays font data from an X font server
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config

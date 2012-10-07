@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/09/03 14:44:27 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 16:23:15 asau Exp $
 #
 
 DISTNAME=	spai-3.2
@@ -10,8 +10,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://www.computational.unibas.ch/software/spai/
 COMMENT=	Sparse Approximate Inverses 
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=NO
 

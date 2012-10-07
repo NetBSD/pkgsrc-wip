@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/08/19 16:49:23 udontknow Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 16:23:18 asau Exp $
 #
 
 DISTNAME=	svrcore-4.0.4
@@ -11,8 +11,6 @@ MAINTAINER=	evaldo@gardenali.biz
 HOMEPAGE=	http://ftp.mozilla.org/pub/mozilla.org/directory/svrcore/releases/4.0.4/src/
 COMMENT=	Netscape svrcore is a kind of library to handle NSS PIN requests
 LICENSE=	gnu-gpl-v2 OR gnu-lgpl-v2.1 OR mpl-1.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

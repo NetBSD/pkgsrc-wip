@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/09/02 07:27:57 noud4 Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/07 16:23:18 asau Exp $
 #
 
 DISTNAME=	SugarCE-${VERSION}
@@ -11,8 +11,6 @@ MAINTAINER=	derv0@nubisci.net
 HOMEPAGE=	http://www.sugarcrm.com/
 COMMENT=	SugarCRM is a php based CRM system
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT= 	user-destdir
 
 DEPENDS+=	${PHP_PKG_PREFIX}-mysql>=4.3.3:../../databases/php-mysql
 

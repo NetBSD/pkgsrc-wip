@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/02/03 08:13:29 mrampke Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 16:23:17 asau Exp $
 #
 
 DISTNAME=		sudo-1.8.3p2
@@ -20,7 +20,6 @@ USE_LIBTOOL=		yes
 OWN_DIRS+=		${VARBASE}/run
 GNU_CONFIGURE=		yes
 BUILD_DEFS+=		VARBASE
-PKG_DESTDIR_SUPPORT=	user-destdir
 PLIST_VARS+=		ldap
 
 .include "../../mk/bsd.prefs.mk"

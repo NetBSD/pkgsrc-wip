@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/05/17 16:36:23 hfath Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/07 16:23:19 asau Exp $
 
 DISTNAME=		symon-2.85
 CATEGORIES=		net sysutils
@@ -6,8 +6,6 @@ MASTER_SITES=		http://www.xs4all.nl/~wpd/symon/philes/
 MAINTAINER=		charlie@rubberduck.com
 HOMEPAGE=		http://www.xs4all.nl/~wpd/symon/
 COMMENT=		System monitoring suite
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_ENV+=		RRDDIR=${PREFIX:Q}
 MAKE_ENV+=		SYSCONFDIR=${PKG_SYSCONFDIR:Q}

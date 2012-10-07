@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/10/26 14:37:21 tomasbodzar Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 16:23:14 asau Exp $
 
 DISTNAME=	slideml-1.1.0
 CATEGORIES=	graphics
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://opensource.conformal.com/wiki/slideml
 COMMENT=	HTML slide generator based on SlideML
 LICENSE=	isc
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=			# none
 USE_TOOLS+=			perl

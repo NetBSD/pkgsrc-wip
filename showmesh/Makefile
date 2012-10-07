@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/12/25 12:45:45 noud4 Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/07 16:23:04 asau Exp $
 
 DISTNAME=	showmesh-1.0
 PKGREVISION=	2
@@ -9,8 +9,6 @@ DISTFILES=	showmesh_1_0.c
 MAINTAINER=	schwarz@NetBSD.org
 HOMEPAGE=	http://www-dinma.univ.trieste.it/nirftc/research/easymesh/
 COMMENT=	Display program for easymesh
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 NO_CONFIGURE=	YES

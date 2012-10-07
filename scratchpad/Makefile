@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2010/06/13 22:47:15 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/07 16:22:54 asau Exp $
 #
 
 DISTNAME=	scratchpad-0.3.0
@@ -6,8 +6,6 @@ PKGREVISION=	3
 CATEGORIES=	editors gnome
 MASTER_SITES=	http://scratchpad.googlecode.com/files/
 EXTRACT_SUFX=	.tar.bz2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAINTAINER=	pkgsrc-users@netbsd.org
 HOMEPAGE=	http://dborg.wordpress.com/scratchpad/

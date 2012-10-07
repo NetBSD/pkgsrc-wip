@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/05/10 04:58:50 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 16:22:54 asau Exp $
 #
 
 DISTNAME=	saxonhe9-2-1-1j
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://saxon.sourceforge.net/
 COMMENT=	Michael H. Kay's Java XSLT processor
 LICENSE=	mpl-1.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 DIST_SUBDIR=	${PKGNAME_NOREV}

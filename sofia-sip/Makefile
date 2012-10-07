@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/09/29 11:56:36 khorben Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/07 16:23:15 asau Exp $
 #
 
 DISTNAME=	sofia-sip-1.12.11
@@ -12,8 +12,6 @@ COMMENT=	Open-source SIP User-Agent library
 LICENSE=	gnu-lgpl-v2.1
 
 USE_TOOLS+=	pkg-config
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes

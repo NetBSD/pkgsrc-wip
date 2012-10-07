@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/11/03 14:15:58 silasdb Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/07 16:23:15 asau Exp $
 #
 
 DISTNAME=	SoQt-1.4.1
@@ -10,8 +10,6 @@ MAINTAINER=	silasdb@gmail.com
 HOMEPAGE=	http://www.coin3d.org/lib/soqt/
 COMMENT=	Legacy library that provides glue between Coin and Qt
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

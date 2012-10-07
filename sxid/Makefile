@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/02/28 20:35:19 bartoszkuzma Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/07 16:23:18 asau Exp $
 #
 
 DISTNAME=		sxid-4.2
@@ -9,8 +9,6 @@ MAINTAINER=		bartosz.kuzma@gmail.com
 HOMEPAGE=		http://linukz.org/sxid.shtml
 COMMENT=		Suid, sgid file and directory checking
 LICENSE=		gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 

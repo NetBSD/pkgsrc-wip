@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/09/16 22:36:24 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 16:22:54 asau Exp $
 #
 
 DISTNAME=	sarf
@@ -10,9 +10,6 @@ EXTRACT_SUFX=	.jar
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://sourceforge.net/projects/sarf/
 COMMENT=	Arabic Morphology System
-
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 

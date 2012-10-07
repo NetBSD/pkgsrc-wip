@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/02/10 14:13:36 bartoszkuzma Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/07 16:23:15 asau Exp $
 #
 
 DISTNAME=		smtp-gated-1.4.18.8
@@ -42,8 +42,6 @@ RCD_SCRIPTS=		smtp_gated
 USE_TOOLS+=		gmake
 
 GNU_CONFIGURE=		yes
-
-PKG_DESTDIR_SUPPORT=    user-destdir
 
 post-extract:
 	${CP} ${FILESDIR}/smtp-gated.conf ${WRKDIR}

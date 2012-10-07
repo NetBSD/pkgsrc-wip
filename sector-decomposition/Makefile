@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/09/05 11:17:55 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 16:22:55 asau Exp $
 #
 
 DISTNAME=	sector_decomposition-1.1.0
@@ -10,8 +10,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://wwwthep.physik.uni-mainz.de/~stefanw/sector_decomposition/
 COMMENT= Used to compute numerically the Laurent expansion of Feynman integrals
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/08/09 13:53:12 fhajny Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/07 16:23:22 asau Exp $
 #
 
 PKGVERSION=	2.0.0
@@ -13,6 +13,8 @@ HOMEPAGE=	http://www.balabit.com/products/syslog-ng/
 COMMENT=	Syslog-ng embodies the next generation of logging systems
 
 CONFLICTS=	syslog-ng-[0-9]*
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_TOOLS+=	pkg-config pax
 

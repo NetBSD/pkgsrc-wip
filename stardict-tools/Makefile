@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2011/10/09 10:05:43 cheusov Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/07 16:23:17 asau Exp $
 #
 
 DISTNAME=	stardict-tools-3.0.1
@@ -15,8 +15,6 @@ LICENSE=		gnu-gpl-v3
 
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		aclocal autoheader autoconf automake pkg-config
 

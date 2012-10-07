@@ -1,5 +1,5 @@
 #
-# $NetBSD: Makefile,v 1.6 2005/11/02 18:00:26 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/07 16:22:55 asau Exp $
 #
 
 DISTNAME=		scx-0.2
@@ -9,6 +9,8 @@ MASTER_SITES=		ftp://ftp.scsh.net/pub/scsh/packages/scx/
 MAINTAINER=		airhead@users.sf.net
 HOMEPAGE=		http://www.scsh.net/resources/graphics.html
 COMMENT=		Scx - a GUI library for scsh and Scheme 48
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes

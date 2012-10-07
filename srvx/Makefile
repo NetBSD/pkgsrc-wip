@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/04/11 21:15:56 tvierling Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/07 16:23:16 asau Exp $
 #
 
 DISTNAME=	srvx-1.1.3
@@ -8,6 +8,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=srvx/}
 MAINTAINER=	virtus@wanadoo.nl
 HOMEPAGE=	http://srvx.sourceforge.net/
 COMMENT=	Srvx IRC services
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES

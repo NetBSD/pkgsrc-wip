@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2011/01/14 21:35:10 asau Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/07 16:23:15 asau Exp $
 #
 
 DISTNAME=		Songwrite-0.12
@@ -11,6 +11,8 @@ HOMEPAGE=		http://home.gna.org/oomadness/en/songwrite/index.html
 COMMENT=		Tablature (guitar partition) editor
 
 DEPENDS+=		${PYPKGPREFIX}-EditObj2-[0-9]*:../../wip/py-EditObj2
+
+PKG_DESTDIR_SUPPORT=	none
 
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes

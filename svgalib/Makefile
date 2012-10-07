@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/05/24 10:31:44 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/07 16:23:18 asau Exp $
 
 DISTNAME=	svgalib-1.4.3
 CATEGORIES=	graphics devel
@@ -7,6 +7,8 @@ MASTER_SITES=	http://www.svgalib.org/
 MAINTAINER=	collver1@comcast.net
 HOMEPAGE=	http://www.svgalib.org/
 COMMENT=	Low level console graphics library
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_TOOLS+=	gmake
 CFLAGS+=	-g -DUSE_LIBC_VM86

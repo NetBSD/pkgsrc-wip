@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2010/09/09 09:31:59 rxg Exp $
+# $NetBSD: Makefile,v 1.17 2012/10/07 16:23:16 asau Exp $
 #
 
 DISTNAME=		stardict-3.0.1
@@ -10,8 +10,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		rxg@NetBSD.org
 HOMEPAGE=		http://stardict.sourceforge.net/
 COMMENT=		Cross-Platform and international dictionary written in Gtk2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEPENDS+=		p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
 

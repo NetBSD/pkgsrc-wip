@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2011/10/09 10:05:43 cheusov Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/07 16:22:55 asau Exp $
 #
 
 DISTNAME=	ptksdict-1.2.1
@@ -12,7 +12,6 @@ HOMEPAGE=	http://sdict.com/
 COMMENT=	SDict conversion tools
 
 USE_TOOLS+=		gzip tar
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-DBI-[0-9]*:../../databases/p5-DBI
 DEPENDS+=	p5-Crypt-Blowfish-[0-9]*:../../security/p5-Crypt-Blowfish

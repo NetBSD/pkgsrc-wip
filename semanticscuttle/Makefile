@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/04/14 16:27:53 moubctez Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/07 16:22:55 asau Exp $
 #
 
 PKGNAME=      semanticscuttle-${VERSION}
@@ -13,8 +13,6 @@ MAINTAINER=   frederic@fauberteau.org
 HOMEPAGE=     http://semanticscuttle.sourceforge.net/
 COMMENT=      SemanticScuttle is a social bookmarking tool
 LICENSE=      gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/php/phpversion.mk"
 .include "../../mk/apache.mk"

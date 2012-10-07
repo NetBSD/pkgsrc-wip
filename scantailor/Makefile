@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/07/02 13:38:06 moubctez Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 16:22:54 asau Exp $
 #
 
 DISTNAME=	scantailor-0.9.9.2
@@ -12,8 +12,6 @@ COMMENT=	Interactive post-processing tool for scanned pages
 LICENSE=	gnu-gpl-v2 AND gnu-gpl-v3
 
 BUILD_MAKE_FLAGS+=	VERBOSE=1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c c++
 USE_CMAKE=	yes

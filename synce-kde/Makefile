@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/12/26 05:01:23 davesainty Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/07 16:23:21 asau Exp $
 #
 
 DISTNAME=		synce-kde-0.9.1
@@ -9,6 +9,8 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=synce/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.synce.org/oldwiki/index.php/KDE
 COMMENT=		Integrate Windows CE or Windows Mobile device into KDE
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes

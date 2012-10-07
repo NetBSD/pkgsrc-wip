@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/02/06 23:14:26 cheusov Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/07 16:23:10 asau Exp $
 #
 
 DISTNAME=	mk-20111010
@@ -10,8 +10,6 @@ MAINTAINER=	cheusov@NetBSD.org
 HOMEPAGE=	http://crufty.net/help/sjg/bmake.html
 COMMENT=	mk-files for bmake by Simon J. Gerraty
 LICENSE=	2-clause-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/mk
 USE_LANGUAGES=	# none

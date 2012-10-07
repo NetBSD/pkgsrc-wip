@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/09/22 15:16:33 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 16:23:05 asau Exp $
 #
 
 DISTNAME=	ttf-sil-scheherazade_1.001.orig
@@ -10,8 +10,6 @@ MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://scripts.sil.org/ArabicFonts
 COMMENT=	Smart unicode font for arabic
 LICENSE=	open-font-license
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/ttf-sil-scheherazade-1.001
 USE_LANGUAGES=	# none

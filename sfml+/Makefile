@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/04 22:31:21 othyro Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 16:22:56 asau Exp $
 #
 
 DISTNAME=	SFML-1.6-sdk-linux-64
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sfml.sourceforge.net/
 COMMENT=	Free multimedia C++ API
 LICENSE=	zlib
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/SFML-1.6
 USE_LANGUAGES=		c c++

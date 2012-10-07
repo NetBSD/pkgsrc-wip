@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2010/10/29 19:44:34 shattered Exp $
+# $NetBSD: Makefile,v 1.26 2012/10/07 16:22:54 asau Exp $
 
 DISTNAME=		scite177
 PKGNAME=		scite-1.77
@@ -10,6 +10,8 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		loic-hoguin@users.sourceforge.net
 HOMEPAGE=		http://www.scintilla.org/SciTE.html
 COMMENT=		Editor with facilities for building and running programs
+
+PKG_DESTDIR_SUPPORT=	none
 
 WRKSRC=			${WRKDIR}
 USE_LANGUAGES=		c c++

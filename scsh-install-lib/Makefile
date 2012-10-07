@@ -1,5 +1,5 @@
 #
-# $NetBSD: Makefile,v 1.2 2005/11/02 18:00:26 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 16:22:54 asau Exp $
 #
 
 DISTNAME=		scsh-install-lib-1.2.0
@@ -11,6 +11,8 @@ HOMEPAGE=		http://lamp.epfl.ch/~schinz/scsh_packages/
 COMMENT=		SCSH installation library for third-party libraries
 
 BUILD_DEPENDS+=		scsh>=0.6:../../shells/scsh
+
+PKG_DESTDIR_SUPPORT=	none
 
 NO_BUILD=		yes
 

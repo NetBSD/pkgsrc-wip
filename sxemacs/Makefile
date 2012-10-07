@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2011/03/06 16:37:19 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/07 16:23:18 asau Exp $
 
 DISTNAME=	sxemacs-22.1.5
 PKGREVISION=	3
@@ -11,6 +11,8 @@ COMMENT=	SXEmacs text editor version 22
 
 CONFLICTS+=	gnuclient-[0-9]*
 CONFLICTS+=	xemacs-[0-9]*
+
+PKG_DESTDIR_SUPPORT=	none
 
 PLIST_SUBST+=	DISTNAME=${DISTNAME:Q}
 MESSAGE_SUBST+=	DISTNAME=${DISTNAME:Q}

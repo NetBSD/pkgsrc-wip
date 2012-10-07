@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/08/06 20:25:30 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 16:22:54 asau Exp $
 #
 
 DISTNAME=	schur-6.05
@@ -9,8 +9,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://schur.sourceforge.net/
 COMMENT=	Calculating properties of Lie groups and symmetric functions
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	flex pax

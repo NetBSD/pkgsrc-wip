@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/10/17 11:18:49 tnn2 Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 16:22:54 asau Exp $
 #
 
 DISTNAME=	schismtracker-0.5rc1
@@ -13,7 +13,6 @@ COMMENT=	Music tracker similar to Impulse Tracker
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../devel/SDL/buildlink3.mk"
 

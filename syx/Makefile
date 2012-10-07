@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/04/15 07:10:07 athaba Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 16:23:22 asau Exp $
 #
 
 DISTNAME=	syx-0.1.7
@@ -9,8 +9,6 @@ MAINTAINER=	athaba@users.sourceforge.net
 HOMEPAGE=	http://syx.berlios.de/
 COMMENT=	Free and portable smalltalk implementation
 LICENSE=	mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/08/27 14:55:29 fhajny Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 16:23:17 asau Exp $
 #
 
 DISTNAME=	stud-0
@@ -8,8 +8,6 @@ MAINTAINER=	filip@joyent.com
 HOMEPAGE=	http://github.com/bumptech/stud
 COMMENT=	Scalable TLS Unwrapping Daemon
 LICENSE=	2-clause-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GIT_REPOSITORIES=	stud
 GIT_REPO.stud=		git://github.com/bumptech/stud.git

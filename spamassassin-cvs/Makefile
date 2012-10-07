@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2011/11/21 19:08:57 absd Exp $
+# $NetBSD: Makefile,v 1.17 2012/10/07 16:23:15 asau Exp $
 
 DISTNAME=	Mail-SpamAssassin-${_SA_CVS_VER}
 PKGNAME=	spamassassin-cvs-${_SA_CVS_DATE}
@@ -23,6 +23,7 @@ DEPENDS+=	p5-DB_File-[0-9]*:../../databases/p5-DB_File
 CONFLICTS=	p5-Mail-SpamAssassin-[1-9]*			\
 		spamassassin-[1-9]*
 
+PKG_DESTDIR_SUPPORT=	none
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 EXTRACT_SUFX?=	.tar.bz2

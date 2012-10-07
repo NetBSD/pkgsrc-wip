@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/05/10 21:24:52 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 16:23:06 asau Exp $
 #
 
 DISTNAME=	Singular-3-1-0-7
@@ -12,8 +12,6 @@ COMMENT=	SINGULAR is a Computer Algebra System for polynomial computations
 #LICENSE=	# TODO: (see mk/license.mk)
 
 DEPENDS+=	latex2html-[0-9]*:../../textproc/latex2html
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/Singular-3-1-0
 GNU_CONFIGURE=	yes

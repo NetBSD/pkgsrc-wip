@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2010/08/01 14:57:10 asau Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/07 16:23:16 asau Exp $
 
 DISTNAME=	spandsp-0.0.6pre12
 PKGREVISION=	1
@@ -9,6 +9,8 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	x400@msfu.ru
 HOMEPAGE=	http://www.soft-switch.org/
 COMMENT=	DSP functions
+
+PKG_DESTDIR_SUPPORT=	none
 
 WRKSRC=		${WRKDIR}/spandsp-0.0.6
 GNU_CONFIGURE=	yes

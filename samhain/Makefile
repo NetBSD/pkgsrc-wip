@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/05/26 13:59:46 tnn2 Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/07 16:22:53 asau Exp $
 
 DISTNAME=	samhain_signed-2.4.4
 PKGNAME=	samhain-2.4.4
@@ -8,6 +8,8 @@ MASTER_SITES=	http://www.la-samhna.de/archive/
 MAINTAINER=	lavalamp@digitalfreaks.org
 HOMEPAGE=	http://www.la-samhna.de/samhain/
 COMMENT=	Open-source IDS/file integrity checking
+
+PKG_DESTDIR_SUPPORT=	none
 
 BUILD_DEFS+=	VARBASE
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/12/26 05:01:23 davesainty Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/07 16:22:54 asau Exp $
 #
 
 PKGNAME=	scorched3d-42.1
@@ -13,8 +13,6 @@ MAINTAINER=	yacht@users.sourceforge.net
 HOMEPAGE=	http://www.scorched3d.co.uk/
 COMMENT=	3D version of the classic DOS game Scorched Earth
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/scorched
 GNU_CONFIGURE=	yes

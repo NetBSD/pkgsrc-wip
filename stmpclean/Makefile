@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/05/07 16:40:37 jihbed Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/07 16:23:17 asau Exp $
 #
 
 DISTNAME=		stmpclean-0.3
@@ -9,8 +9,6 @@ MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://shlang.com/stmpclean/
 COMMENT=		Secure /tmp cleaner
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DOCDIR=	${PREFIX}/share/doc/stmpclean
 

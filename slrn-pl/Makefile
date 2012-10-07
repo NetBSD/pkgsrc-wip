@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/10/29 08:32:55 shattered Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/07 16:23:15 asau Exp $
 # based on slrn-pl.spec from PLD Linux (http://www.pld-linux.org)
 #
 # SLRN_PL_FACES - build both slrnfaces (x11) and txtfaces extensions
@@ -12,6 +12,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	aniou@smutek.pl
 HOMEPAGE=	http://slrn-pl.zamiast.net/
 COMMENT=	Highly customizable threaded newsreader (PoLished version)
+
+PKG_DESTDIR_SUPPORT=	none
 
 PKG_SYSCONFSUBDIR=	slrn-pl
 USE_TOOLS+=		gmake

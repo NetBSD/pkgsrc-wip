@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/11/15 00:05:50 dhowland Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 16:23:08 asau Exp $
 #
 
 DISTNAME=	sis-1.3.6
@@ -8,6 +8,8 @@ MASTER_SITES=	http://embedded.eecs.berkeley.edu/Alumni/pchong/sis/
 MAINTAINER=	dhowland@users.sourceforge.net
 HOMEPAGE=	http://embedded.eecs.berkeley.edu/Alumni/pchong/sis.html
 COMMENT=	Classic logic synthesis tool
+
+PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake

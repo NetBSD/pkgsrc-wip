@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/09/28 15:04:55 ggergely Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 16:23:18 asau Exp $
 #
 
 DISTNAME=	sword-1.6.1
@@ -9,8 +9,6 @@ MAINTAINER=	elentirmo.gilgalad@gmail.com
 HOMEPAGE=	http://www.crosswire.org/ftpmirror/pub/sword/source/v1.6/
 COMMENT=	SWORD Bible study software libraries and tools
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

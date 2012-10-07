@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/05/15 03:39:55 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 16:23:06 asau Exp $
 #
 
 DISTNAME=	simple-scan-3.4.1
@@ -9,8 +9,6 @@ MAINTAINER=	INSERT_YOUR_MAIL_ADDRESS_HERE
 HOMEPAGE=	https://launchpad.net/simple-scan/
 COMMENT=	Simple scanner graphical interface
 #LICENSE=	# TODO: (see mk/license.mk)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 # Needed for launchpad
 FETCH_USING=	curl

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/05/09 14:29:47 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 16:23:17 asau Exp $
 #
 
 DISTNAME=	stkSolver-1.0
@@ -10,8 +10,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://code.google.com/p/stksolver/
 COMMENT=	Stokes flow solver using the boundary element method
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=	${WRKDIR}/stkSolver
 

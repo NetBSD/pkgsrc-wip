@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2011/01/13 13:55:03 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/07 16:23:15 asau Exp $
 #
 
 DISTNAME=	slim-1.3.1
@@ -13,8 +13,6 @@ COMMENT=	SLiM is a Desktop-independent graphical login manager for X11
 DEPENDS+=	xauth>=1.0.0:../../x11/xauth
 
 USE_LANGUAGES=	c c++
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 EGDIR=		${PREFIX}/share/examples/slim
 CONF_FILES=	${EGDIR}/slim.conf ${PKG_SYSCONFDIR}/slim.conf

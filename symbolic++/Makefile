@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/09/18 00:15:15 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 16:23:19 asau Exp $
 #
 
 DISTNAME=	SymbolicC++3-3.35-ac
@@ -10,8 +10,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://issc.uj.ac.za/symbolic/symbolic.html
 COMMENT=	C++ and POO programming to develop a computer algebra system
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/SymbolicC++3-3.35
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/01/03 00:32:19 rubengonzalez Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 16:23:16 asau Exp $
 #
 
 DISTNAME=	sselp-0.2
@@ -10,8 +10,6 @@ MAINTAINER=	rga@sdf.lonestar.org
 HOMEPAGE=	http://tools.suckless.org/sselp
 COMMENT=	Simple X selection printer. Prints the X selection to stdout
 LICENSE=	mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CONFIGURE=   yes
 

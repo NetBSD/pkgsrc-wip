@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/08/29 13:32:33 triaxx Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/07 16:22:57 asau Exp $
 #
 
 PKGNAME=	shaarli-${VERSION}
@@ -12,8 +12,6 @@ MAINTAINER=	frederic@fauberteau.org
 HOMEPAGE=	http://sebsauvage.net/wiki/doku.php?id=php:shaarli
 COMMENT=	Shaarli is a minimalist delicious clone
 LICENSE=	png-license
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/php/phpversion.mk"
 DEPENDS+= ${PHP_PKG_PREFIX}-zlib:../../archivers/php-zlib

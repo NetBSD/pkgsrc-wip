@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2011/03/21 16:43:49 phonohawk Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/07 16:23:22 asau Exp $
 #
 
 DISTNAME=	synfig-0.62.02
@@ -9,8 +9,6 @@ MAINTAINER=	pho@cielonegro.org
 HOMEPAGE=	http://synfig.org/
 COMMENT=	Vector-based 2D animation renderer
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=			pkg-config

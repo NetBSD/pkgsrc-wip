@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2012/01/15 22:27:29 asau Exp $
+# $NetBSD: Makefile,v 1.40 2012/10/07 16:22:54 asau Exp $
 
 DISTNAME=		${PKGNAME_NOREV}-source
 PKGNAME=		sbcl-1.0.55
@@ -19,7 +19,6 @@ COMMENT=		SBCL, a Common Lisp implementation
 
 USE_TOOLS+=		gmake gtar:run patch
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 

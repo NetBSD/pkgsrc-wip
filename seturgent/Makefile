@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/01/02 03:39:00 rubengonzalez Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 16:22:56 asau Exp $
 #
 
 DISTNAME=	seturgent-1.4
@@ -9,8 +9,6 @@ MAINTAINER=	rga@sdf.lonestar.org
 HOMEPAGE=	http://www.codemadness.nl/downloads/projects/seturgent/
 COMMENT=	Set an application urgency hint using x11
 LICENSE=	mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 # Adjust config.mk
 SUBST_CLASSES+=         makefile

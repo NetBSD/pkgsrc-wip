@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/05/25 14:12:52 obache Exp $
+# $NetBSD: Makefile,v 1.18 2012/10/07 16:23:18 asau Exp $
 #
 
 DISTNAME=	swftools-0.9.2
@@ -12,8 +12,6 @@ LICENSE=	gnu-gpl-v2
 
 # missing fmax(3)
 NOT_FOR_PLATFORM=	NetBSD-[0-4].*-* NetBSD-5.0*-*
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake yacc

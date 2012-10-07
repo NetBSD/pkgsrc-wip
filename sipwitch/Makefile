@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/06/03 22:18:00 othyro Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 16:23:07 asau Exp $
 #
 
 DISTNAME=	sipwitch-1.2.4
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/sipwitch/
 COMMENT=	Secure peer-to-peer VoIP server that uses the SIP protocol
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config

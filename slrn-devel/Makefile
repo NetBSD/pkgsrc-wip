@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2010/11/30 20:41:45 anielski Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/07 16:23:15 asau Exp $
 
 DISTNAME=	slrn-pre1.0.0-26
 PKGNAME=	slrn-pre1.0.0-26
@@ -14,7 +14,6 @@ MAINTAINER=	aniou@smutek.pl
 HOMEPAGE=	http://slrn.sourceforge.net/
 COMMENT=	Highly customizable threaded newsreader
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_JOBS_SAFE=		no
 
 USE_PKGLOCALEDIR=	yes

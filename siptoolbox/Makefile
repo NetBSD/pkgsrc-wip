@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/06/13 22:47:16 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/07 16:23:06 asau Exp $
 #
 
 DISTNAME=	sip-0.4.0-rc1
@@ -11,6 +11,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	matias@dotbsd.org
 HOMEPAGE=	http://siptoolbox.sourceforge.net/
 COMMENT=	Scilab Image Processing toolbox
+
+PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2011/05/29 13:55:06 cheusov Exp $
+# $NetBSD: Makefile,v 1.18 2012/10/07 16:22:55 asau Exp $
 
 # this should use a Makefile.common to share the DISTNAME
 DISTNAME=	gnats-4.1.0
@@ -17,7 +17,6 @@ GNATS_VERSION=	${DISTNAME:S/gnats-//}
 CONFLICTS+=	gnats-[0-9]* arla-[0-9]*
 
 GNU_CONFIGURE=		YES
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFIGURE_ENV+=		GNATS_ROOT=${PKG_SYSCONFDIR}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/01/03 13:16:17 rubengonzalez Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 16:23:16 asau Exp $
 #
 
 DISTNAME=	ssid-0.1
@@ -9,8 +9,6 @@ MAINTAINER=	rga@sdf.lonestar.org
 HOMEPAGE=	http://tools.suckless.org/ssid/
 COMMENT=	Simple setsid replacement
 LICENSE=	mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CONFIGURE=   yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/03/14 01:28:16 jlamwww Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/07 16:23:22 asau Exp $
 
 DISTNAME=		sysklogd-1.4.1
 PKGREVISION=		2
@@ -11,6 +11,8 @@ HOMEPAGE=		http://www.infodrom.org/projects/sysklogd/
 COMMENT=		System and kernel log daemons for Linux
 
 ONLY_FOR_PLATFORM=	Linux-*-*	# This has Linux klogd
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_TOOLS+=		gmake
 CFLAGS+=		-D_PATH_LOGCONF='\"${PKG_SYSCONFBASE}/syslog.conf\"'

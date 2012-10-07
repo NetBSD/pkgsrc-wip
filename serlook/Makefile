@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2010/06/13 22:47:15 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/07 16:22:56 asau Exp $
 #
 
 DISTNAME=		serlook-0.2.4-KDE3
@@ -10,6 +10,8 @@ MASTER_SITES=	http://serlook.sunsite.dk/
 MAINTAINER=		ianzag@mail.ru
 HOMEPAGE=		http://serlook.sunsite.dk/
 COMMENT=		SerLooK is a tool aimed to inspect and debug serial line data traffic
+
+PKG_DESTDIR_SUPPORT=	none
 
 WRKSRC=			${WRKDIR}/${DISTNAME:C/-KDE3//}/
 

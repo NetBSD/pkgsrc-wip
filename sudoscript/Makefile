@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2007/01/04 17:33:15 shattered Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/07 16:23:17 asau Exp $
 
 DISTNAME=	sudoscript-2.1.1
 CATEGORIES=	security
@@ -8,6 +8,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sudoscript/} \
 MAINTAINER=	hbo@egbok.com
 HOMEPAGE=	http://www.egbok.com/sudoscript/
 COMMENT=	Audited shells with sudo(8) and script(1)
+
+PKG_DESTDIR_SUPPORT=	none
 
 MESSAGE_SUBST+=	DISTNAME=${DISTNAME}
 

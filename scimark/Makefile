@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/09/02 12:32:23 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 16:22:54 asau Exp $
 #
 
 DISTNAME=	scimark2src
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://math.nist.gov/scimark2/index.html
 COMMENT=	Java benchmark for scientific and numerical computing
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 

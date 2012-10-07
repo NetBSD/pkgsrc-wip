@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/06/13 22:47:19 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 16:23:18 asau Exp $
 #
 
 DISTNAME=	surf-0.3
@@ -13,7 +13,6 @@ LICENSE=	mit
 
 USE_TOOLS+=		pkg-config
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:

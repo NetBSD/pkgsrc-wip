@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/11/10 08:36:28 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/07 16:23:15 asau Exp $
 
 DISTNAME=	smtpproxy-1.3.3
 CATEGORIES=	mail
@@ -8,8 +8,6 @@ MAINTAINER=	oht@users.sourceforge.net
 HOMEPAGE=	http://quietsche-entchen.de/cgi-bin/wiki.cgi/proxies/00-WikiIndex
 COMMENT=	The smtp.proxy is an application level gateway for SMTP
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_FILE=	makefile
 

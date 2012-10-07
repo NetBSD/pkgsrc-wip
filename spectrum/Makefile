@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2012/08/11 22:10:11 schnoebe Exp $
+# $NetBSD: Makefile,v 1.33 2012/10/07 16:23:16 asau Exp $
 
 DISTNAME=		spectrum-1.4.7
 CATEGORIES=		chat
@@ -11,8 +11,6 @@ LICENSE=		gnu-gpl-v3
 
 DEPENDS+=		${PYPKGPREFIX}-xmpppy>=0.4.1:../../wip/py-xmpppy
 DEPENDS+=		${PYPKGPREFIX}-expat>=0nb4:../../textproc/py-expat
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		pkg-config msgfmt xgettext
 USE_CMAKE=		yes

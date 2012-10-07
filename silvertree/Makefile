@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/07/02 13:38:06 moubctez Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/07 16:23:06 asau Exp $
 #
 
 DISTNAME=	silvertree-0.2
@@ -9,6 +9,8 @@ MASTER_SITES=	http://www.silvertreerpg.org/downloads/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.silvertreerpg.org/
 COMMENT=	Silver Tree, an open source role playing game
+
+PKG_DESTDIR_SUPPORT=	none
 
 WRKSRC=		${WRKDIR}/silvertree
 USE_LANGUAGES=	c c++

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/05/11 10:08:47 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 16:23:21 asau Exp $
 #
 
 DISTNAME=	sympow_1.019.orig
@@ -10,8 +10,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://www.maths.bris.ac.uk/~mamjw/
 COMMENT=	Special values of symmetric power elliptic curve L-functions
 #LICENSE=	# TODO: (see mk/license.mk)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=	${WRKDIR}/sympow-1.019
 USE_TOOLS+=	pax

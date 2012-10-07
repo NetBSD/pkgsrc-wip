@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/06/10 12:38:33 leot1990 Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 16:23:18 asau Exp $
 #
 
 DISTNAME=	sxiv-1.0
@@ -9,8 +9,6 @@ MAINTAINER=	leot1990@users.sourceforge.net
 HOMEPAGE=	http://github.com/muennich/sxiv
 COMMENT=	Simple (or small or suckless) X Image Viewer
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CONFIGURE=	yes
 

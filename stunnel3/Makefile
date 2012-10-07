@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2011/05/19 12:59:16 hfath Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/07 16:23:17 asau Exp $
 
 DISTNAME=		stunnel-3.26
 PKGREVISION=		4
@@ -10,7 +10,6 @@ HOMEPAGE=		http://www.stunnel.org/
 COMMENT=		Universal SSL tunnel
 LICENSE=		gnu-gpl-v2
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS=	sbin lib ${PKGMANDIR}/man8 share/doc/stunnel3
 
 CONFLICTS=		stunnel-[0-9]*

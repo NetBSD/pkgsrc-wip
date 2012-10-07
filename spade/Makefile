@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/10/03 22:14:54 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.18 2012/10/07 16:23:15 asau Exp $
 #
 
 DISTNAME=	spade-2.0rc4
@@ -19,7 +19,6 @@ DEPENDS+=	${PYPKGPREFIX}-m2crypto>=0.13:../../security/py-m2crypto
 DEPENDS+=	${PYPKGPREFIX}-event>=0.3:../../wip/py-event
 DEPENDS+=	jython>=2.5.1:../../wip/jython
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 WRKSRC=	${WRKDIR}/spade
 
 PYDISTUTILSPKG=	yes

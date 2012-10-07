@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2010/01/17 12:03:32 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.25 2012/10/07 16:22:55 asau Exp $
 
 DISTNAME=	smX-${VERSION}
 PKGNAME=	sendmailX-${VERSION}
@@ -9,6 +9,8 @@ MASTER_SITES=	ftp://ftp.sendmail.org/pub/sendmail/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.sendmail.org/sm-X/
 COMMENT=	Modular Mail Transfer Agent
+
+PKG_DESTDIR_SUPPORT=	none
 
 CONFLICTS+=	postfix-[0-9]* fastforward>=0.51nb2 sendmail-[0-9]*
 GNU_CONFIGURE=	YES

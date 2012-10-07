@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2010/06/13 22:47:16 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/07 16:23:15 asau Exp $
 #
 
 DISTNAME=		snes9express-1.42
@@ -11,6 +11,8 @@ HOMEPAGE=		http://www.linuxgames.com/snes9express/
 COMMENT=		Frontend for snes9x written in GTK2
 
 DEPENDS+=		snes9x>=1.39:../../emulators/snes9x
+
+PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++

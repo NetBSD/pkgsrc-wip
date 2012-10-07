@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/06/08 08:48:25 tonnerre Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 16:22:56 asau Exp $
 
 DISTNAME=		serendipity-${VERSION}
 VERSION=		1.5.3
@@ -8,8 +8,6 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=php-blog/}
 MAINTAINER=		tonnerre@NetBSD.org
 HOMEPAGE=		http://s9y.org/
 COMMENT=		Blogging tool written in php
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		pax
 

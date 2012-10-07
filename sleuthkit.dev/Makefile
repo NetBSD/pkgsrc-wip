@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2009/02/19 15:53:18 fulviociriaco Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 16:23:14 asau Exp $
 #
 
 VERSION=3.0.1
@@ -9,6 +9,8 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=sleuthkit/}
 MAINTAINER=		oivulf@gmail.com
 HOMEPAGE=		http://www.sleuthkit.org/
 COMMENT=		OpenSource Forensic Toolkit
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL= yes

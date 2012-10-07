@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/10/28 21:00:52 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 16:23:15 asau Exp $
 #
 
 DISTNAME=	SocNetV-0.90
@@ -10,8 +10,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://socnetv.sourceforge.net/index.html
 COMMENT=	Social network analysis and visualisation application
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/socnetv-0.90
 

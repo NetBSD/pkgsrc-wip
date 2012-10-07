@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/04/27 22:27:07 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 16:23:18 asau Exp $
 #
 
 DISTNAME=	superchicv1.3
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.f
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://projects.hepforge.org/superchic/
 COMMENT=	Monte Carlo Event Generator for Central Exclusive Production
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 

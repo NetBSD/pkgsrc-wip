@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2011/02/18 23:59:51 pettai Exp $
+# $NetBSD: Makefile,v 1.17 2012/10/07 16:23:10 asau Exp $
 #
 
 DISTNAME=	sks-1.1.1
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://minskyprimus.net/sks/
 COMMENT=	Self Replicating PGP Key Server
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILDLINK_API_DEPENDS.ocaml+=	ocaml>=3.10.2
 BUILDLINK_API_DEPENDS.db4+=	db4>=4.6.0

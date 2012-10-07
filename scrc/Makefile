@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/08/31 11:53:59 makoto Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 16:22:54 asau Exp $
 #
 DISTNAME=		scrc-2.1
 
@@ -11,7 +11,6 @@ COMMENT=		SpecC Reference Compiler
 USE_LANGUAGES+=		c++
 USE_LANGUAGES+=		c
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 # mkdir etc is hardcoded, not so easy to make it.
 
 USE_TOOLS+=		gmake gtar

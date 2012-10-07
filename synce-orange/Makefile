@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/12/04 23:08:21 shattered Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 16:23:22 asau Exp $
 #
 
 DISTNAME=		orange-0.3
@@ -8,6 +8,8 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=synce/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.synce.org/oldwiki/index.php/Orange
 COMMENT=		Extract installable files from self-extracting installers
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes

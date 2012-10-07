@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/05/07 17:43:21 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 16:23:15 asau Exp $
 
 DISTNAME=	sloccount-2.26
 CATEGORIES=	devel
@@ -9,8 +9,6 @@ HOMEPAGE=	http://www.dwheeler.com/sloccount/
 COMMENT=	Counting physical Source Lines of Code (SLOC)
 
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	flex perl
 

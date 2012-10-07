@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2011/01/14 21:36:48 asau Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/07 16:23:15 asau Exp $
 #
 
 DISTNAME=		Slune-0.6.1
@@ -10,6 +10,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://home.gna.org/oomadness/en/slune/index.html
 COMMENT=		Action game, featuring cars, races and Tux the Penguin
+
+PKG_DESTDIR_SUPPORT=	none
 
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes

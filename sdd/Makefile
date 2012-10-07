@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/10/09 10:30:32 cheusov Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/07 16:22:55 asau Exp $
 #
 
 DISTNAME=		sdd-1.52
@@ -8,8 +8,6 @@ MASTER_SITES=		ftp://ftp.berlios.de/pub/sdd/
 MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://directory.fsf.org/project/sdd/
 COMMENT=		Replacement for 'dd'
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake

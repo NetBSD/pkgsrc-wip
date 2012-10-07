@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/09/28 22:58:16 khorben Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/07 16:23:18 asau Exp $
 #
 
 DISTNAME=		supertux-0.1.3
@@ -12,6 +12,8 @@ HOMEPAGE=		http://supertux.lethargik.org/
 COMMENT=		2D jump'n run game in the style of the Super Mario ones
 
 LICENSE=		gnu-gpl-v2
+
+PKG_DESTDIR_SUPPORT=	none
 
 HAS_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}

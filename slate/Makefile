@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/04/05 10:13:28 asau Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/07 16:23:14 asau Exp $
 #
 
 DISTNAME=		slate-0.3.5
@@ -9,6 +9,8 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://slatelanguage.org/
 COMMENT=		Prototype-based object-oriented programming language
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_TOOLS=		gmake
 

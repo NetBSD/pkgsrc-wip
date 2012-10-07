@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/05/31 11:25:25 dillo Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/07 16:22:57 asau Exp $
 
 DISTNAME=		shadow-4.0.4.1
 CATEGORIES=		sysutils devel
@@ -10,6 +10,8 @@ HOMEPAGE=		http://shadow.pld.org.pl/
 COMMENT=		User administration and passwd database tools for Linux
 
 ONLY_FOR_PLATFORM=	Linux-*-* # Linux shadow format
+
+PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=		YES
 

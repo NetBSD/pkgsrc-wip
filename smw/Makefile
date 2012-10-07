@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/06/13 22:47:16 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 16:23:15 asau Exp $
 #
 
 DISTNAME=	smw-1.8-beta2-src
@@ -12,8 +12,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://72dpiarmy.supersanctuary.net/viewforum.php?f=1
 COMMENT=	Super Mario War - stomp the Marios
 #LICENSE=	# TODO: (see mk/license.mk)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 HAS_CONFIGURE=	yes
 USE_LANGUAGES=	c c++

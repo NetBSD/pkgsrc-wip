@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/06/21 21:19:36 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 16:22:57 asau Exp $
 #
 
 VERS=	20030208
@@ -13,7 +13,6 @@ HOMEPAGE=	http://sourceforge.net/projects/arabeyes/files/
 COMMENT=	This font was created by Sharif University
 
 WRKSRC=	${WRKDIR}
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 NO_BUILD=		yes

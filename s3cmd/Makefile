@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/05/25 04:55:31 emil_s Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/07 16:22:53 asau Exp $
 #
 
 DISTNAME=	s3cmd-0.9.9.91
@@ -20,8 +20,6 @@ SUBST_FILES.fix-paths=		setup.py
 SUBST_SED.fix-paths=		-e 's,"share/man","${PKGMANDIR}",g'
 
 PYDISTUTILSPKG=	yes
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

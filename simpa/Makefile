@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/08/03 18:53:31 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 16:23:06 asau Exp $
 #
 
 DISTNAME=	simpa-1.2.5
@@ -10,8 +10,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://alice.unibo.it/xwiki/bin/view/SimpA/
 COMMENT=	Agent-oriented framework approach to concurrent, multi-core, distributed programming
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	pax
 NO_BUILD=	yes

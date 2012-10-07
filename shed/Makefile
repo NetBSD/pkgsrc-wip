@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/02/16 11:55:20 lkundrak Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/07 16:22:57 asau Exp $
 
 DISTNAME=		shed-1.13
 CATEGORIES=		sysutils
@@ -7,6 +7,8 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=shed/}
 MAINTAINER=		lkundrak@skosi.org
 HOMEPAGE=		http://shed.sourceforge.net/
 COMMENT=		Simple curses-based hexadecimal editor
+
+PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=		yes
 

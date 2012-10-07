@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/01/03 00:47:19 rubengonzalez Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 16:23:18 asau Exp $
 #
 
 DISTNAME=	swarp-0.1
@@ -10,8 +10,6 @@ MAINTAINER=	rga@sdf.lonestar.org
 HOMEPAGE=	http://tools.suckless.org/swarp
 COMMENT=	Simple mouse pointer warping tool for X
 LICENSE=	mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CONFIGURE=   yes
 

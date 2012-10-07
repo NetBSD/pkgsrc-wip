@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/08/04 15:36:33 ryo-on Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 16:23:16 asau Exp $
 #
 
 DISTNAME=	js185-1.0.0
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://developer.mozilla.org/en/SpiderMonkey
 COMMENT=	Standalone JavaScript implementation in C
 LICENSE=	mpl-1.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/js-1.8.5/js/src
 USE_TOOLS+=	pkg-config perl:build gmake

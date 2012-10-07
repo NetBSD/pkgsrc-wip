@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/08/23 10:44:26 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 16:23:18 asau Exp $
 #
 
 DISTNAME=	swift-1.0
@@ -9,8 +9,6 @@ MAINTAINER=	eric@cirr.com
 HOMEPAGE=	http://www.swift.im/
 COMMENT=	Swift XMPP Client
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	scons>=1.3:../../devel/scons
 

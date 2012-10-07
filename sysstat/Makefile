@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2007/01/08 01:03:29 shattered Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/07 16:23:22 asau Exp $
 #
 
 DISTNAME=		sysstat-6.0.1
@@ -8,6 +8,8 @@ MASTER_SITES=		${MASTER_SITE_SUNSITE:=system/status/}
 MAINTAINER=		reed@reedmedia.net
 HOMEPAGE=		http://perso.orange.fr/sebastien.godard/
 COMMENT=		System performance tools for Linux
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_TOOLS+=		gmake
 # uses msgfmt

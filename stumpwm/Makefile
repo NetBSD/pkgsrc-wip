@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/01/17 08:33:08 dukzcry Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/07 16:23:17 asau Exp $
 #
 
 SHORTNAME=		stumpwm
@@ -13,8 +13,6 @@ MAINTAINER=		jfranz@bsdprojects.net
 HOMEPAGE=		http://www.nongnu.org/stumpwm/
 COMMENT=		Tiling, keyboard driven X11 Window Manager written in Common Lisp
 LICENSE=		gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "options.mk"
 

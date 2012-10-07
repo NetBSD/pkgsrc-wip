@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/11/28 00:27:28 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/07 16:23:22 asau Exp $
 
 DISTNAME=		sysvinit-2.84
 WRKSRC=			${WRKDIR}/${DISTNAME}/src
@@ -13,6 +13,8 @@ COMMENT=		The Linux System V init and miscellaneous Linux tools
 
 # this uses linux/kd.h for example
 ONLY_FOR_PLATFORM=	Linux-*-*	# This is the Linux init
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_TOOLS+=		gmake
 MAKE_ENV+=		ROOT=${PREFIX:Q} ROOT_GROUP=${ROOT_GROUP:Q} \

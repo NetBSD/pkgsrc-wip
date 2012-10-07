@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/07/20 18:58:40 asau Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/07 16:22:53 asau Exp $
 
 .include "../../net/samba/Makefile.mirrors"
 
@@ -15,8 +15,6 @@ VERSION=	4.0.0beta4
 CONFLICTS+=	ja-samba-[0-9]* pam-smbpass-[0-9]* tdb-[0-9]* winbind-[0-9]*
 
 # DEPENDS=	xsltproc
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 FILESDIR=		${PKGDIR}/../../net/samba/files
 DESCR_SRC=		${PKGDIR}/../../net/samba/DESCR

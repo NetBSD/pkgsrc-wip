@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/04/02 03:51:56 netcap Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 16:23:00 asau Exp $
 #
 
 DISTNAME=	shell-fm-0.4
@@ -9,6 +9,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	jfranz@bsdprojects.net
 HOMEPAGE=	http://nex.scrapping.cc/shell-fm/
 COMMENT=	Console based player for Last.FM radio streams
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_TOOLS+=	autoconf automake
 HAS_CONFIGURE=	yes

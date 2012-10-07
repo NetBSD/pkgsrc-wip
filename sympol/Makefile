@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/09/03 23:06:17 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 16:23:19 asau Exp $
 #
 
 DISTNAME=	sympol-0.1.7
@@ -11,8 +11,6 @@ COMMENT=	SymPol is a C++ tool to work with symmetric polyhedra
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	lrslib>=4.3:../../wip/lrslib
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/05/28 13:51:06 outpaddling Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/07 16:23:18 asau Exp $
 # FreeBSD Id: ports/math/suitesparse/Makefile,v 1.38 2011/07/20 16:17:35 bf Exp
 
 DISTNAME=	SuiteSparse-3.6.1
@@ -9,8 +9,6 @@ MASTER_SITES=	http://www.cise.ufl.edu/research/sparse/SuiteSparse/
 MAINTAINER=	jwbacon@tds.net
 HOMEPAGE=	http://www.cise.ufl.edu/research/sparse/SuiteSparse/
 COMMENT=	SuiteSparse is a set of packages for sparse matrices calculation
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 # Actually uses a combination of gpl and lgpl
 # Not sure how to specify 2 licenses, so just listing the stricter one
