@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/05/26 13:59:47 tnn2 Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/07 17:34:22 asau Exp $
 #
 
 PKGNAME=	vee-0.9.9
@@ -14,8 +14,10 @@ COMMENT=	Command line blog tool that is very portable across Unix systems
 NO_BUILD=	yes	# no? yes!
 USE_TOOLS+=	pax
 
+INSTALLATION_DIRS=	bin
+
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/bin/vee ${PREFIX}/bin
-	cd ${WRKSRC}/ && ${RM} -rf ${WRKSRC}/bin && pax -rw -pp [a,c-z,A-Z]* ${PREFIX}/share/vee
+	${INSTALL_SCRIPT} ${WRKSRC}/bin/vee ${DESTDIR}${PREFIX}/bin
+	cd ${WRKSRC}/ && ${RM} -rf ${WRKSRC}/bin && pax -rw -pp [a,c-z,A-Z]* ${DESTDIR}${PREFIX}/share/vee
 
 .include "../../mk/bsd.pkg.mk"

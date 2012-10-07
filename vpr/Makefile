@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/12/25 12:45:45 noud4 Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/07 17:40:30 asau Exp $
 #
 
 DISTNAME=	vpr-4.30
@@ -22,17 +22,19 @@ SUBST_MESSAGE.x11=	Fixing X11 LD flags.
 SUBST_FILES.x11=	vpr/makefile
 SUBST_SED.x11=		-e "s|@X11_LDFLAGS@|${X11_LDFLAGS}|g"
 
+INSTALLATION_DIRS=	bin
+
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/t-vpack/t-vpack ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/vpr/vpr ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/vpr
-	${INSTALL_DATA} ${WRKSRC}/README_430.txt ${PREFIX}/share/doc/vpr
-	${INSTALL_DATA} ${WRKSRC}/manual_430.pdf ${PREFIX}/share/doc/vpr
-	${INSTALL_DATA} ${WRKSRC}/manual_430.ps ${PREFIX}/share/doc/vpr
-	${INSTALL_DATA_DIR} ${PREFIX}/share/vpr
-	${INSTALL_DATA} ${WRKSRC}/t-vpack/*.blif ${PREFIX}/share/vpr
-	${INSTALL_DATA} ${WRKSRC}/vpr/*.arch ${PREFIX}/share/vpr
-	${INSTALL_DATA} ${WRKSRC}/vpr/*.net ${PREFIX}/share/vpr
+	${INSTALL_PROGRAM} ${WRKSRC}/t-vpack/t-vpack ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/vpr/vpr ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/vpr
+	${INSTALL_DATA} ${WRKSRC}/README_430.txt ${DESTDIR}${PREFIX}/share/doc/vpr
+	${INSTALL_DATA} ${WRKSRC}/manual_430.pdf ${DESTDIR}${PREFIX}/share/doc/vpr
+	${INSTALL_DATA} ${WRKSRC}/manual_430.ps ${DESTDIR}${PREFIX}/share/doc/vpr
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/vpr
+	${INSTALL_DATA} ${WRKSRC}/t-vpack/*.blif ${DESTDIR}${PREFIX}/share/vpr
+	${INSTALL_DATA} ${WRKSRC}/vpr/*.arch ${DESTDIR}${PREFIX}/share/vpr
+	${INSTALL_DATA} ${WRKSRC}/vpr/*.net ${DESTDIR}${PREFIX}/share/vpr
 
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
