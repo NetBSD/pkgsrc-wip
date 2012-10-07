@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2008/05/26 13:59:47 tnn2 Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/07 17:13:28 asau Exp $
 #
 
 DISTNAME=	TUTOS-php-1.2.20040906
@@ -24,8 +24,8 @@ USE_TOOLS+=	pax
 do-install:
 	${SED} -e 's|@PREFIX@|${PREFIX}|g' -e 's|@X11BASE@|${X11BASE}|g' \
 		${FILESDIR}/config.pinc > ${WRKSRC}/config.pinc
-	${INSTALL_DATA_DIR} ${PREFIX}/share/httpd/htdocs/tutos
-	cd ${WRKSRC}; pax -rwpe . ${PREFIX}/share/httpd/htdocs/tutos
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/httpd/htdocs/tutos
+	cd ${WRKSRC}; pax -rwpe . ${DESTDIR}${PREFIX}/share/httpd/htdocs/tutos
 
 .include "../../lang/php/phpversion.mk"
 .include "${PHPPKGSRCDIR}/buildlink3.mk"

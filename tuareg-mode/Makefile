@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2009/07/31 22:18:51 minskim Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/07 17:11:34 asau Exp $
 
 DISTNAME=      tuareg-mode-1.46.2
 PKGNAME=       ${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -14,9 +14,9 @@ NO_BUILD=      yes
 SRCS=          camldebug.el sym-lock.el tuareg.el
 
 do-install:
-	${INSTALL_DATA_DIR} ${EMACS_LISPPREFIX}/
+	${INSTALL_DATA_DIR} ${DESTDIR}${EMACS_LISPPREFIX}/
 	cd ${WRKSRC} && ${INSTALL_DATA} ${SRCS} ${SRCS} \
-		${EMACS_LISPPREFIX}/
+		${DESTDIR}${EMACS_LISPPREFIX}/
 
 .include "../../editors/emacs/modules.mk"
 .include "../../mk/bsd.pkg.mk"

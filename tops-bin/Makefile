@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2007/07/30 15:49:11 jlamwww Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/07 16:56:50 asau Exp $
 #
 
 DISTNAME=		Tops
@@ -24,14 +24,16 @@ do-configure:
 		${WRKSRC}/bin/EditTops > ${WRKSRC}/bin/EditTops.bak
 	${MV} ${WRKSRC}/bin/EditTops.bak ${WRKSRC}/bin/EditTops
 
+INSTALLATION_DIRS=	bin
+
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/tops-bin
-	${INSTALL_DATA} ${WRKSRC}/docs/Guide.ps ${PREFIX}/share/doc/tops-bin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/tops-bin
-	${INSTALL_DATA} ${WRKSRC}/examples/* ${PREFIX}/share/examples/tops-bin
-	${INSTALL_DATA} ${WRKSRC}/classes/TOPS.jar ${PKG_JAVA_HOME}/lib
-	${INSTALL_SCRIPT} ${WRKSRC}/bin/Tops ${PREFIX}/bin
-	${INSTALL_SCRIPT} ${WRKSRC}/bin/EditTops ${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/tops-bin
+	${INSTALL_DATA} ${WRKSRC}/docs/Guide.ps ${DESTDIR}${PREFIX}/share/doc/tops-bin
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/tops-bin
+	${INSTALL_DATA} ${WRKSRC}/examples/* ${DESTDIR}${PREFIX}/share/examples/tops-bin
+	${INSTALL_DATA} ${WRKSRC}/classes/TOPS.jar ${DESTDIR}${PKG_JAVA_HOME}/lib
+	${INSTALL_SCRIPT} ${WRKSRC}/bin/Tops ${DESTDIR}${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/bin/EditTops ${DESTDIR}${PREFIX}/bin
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"

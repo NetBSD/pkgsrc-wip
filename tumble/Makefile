@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/06/13 22:47:20 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/07 17:12:20 asau Exp $
 
 DISTNAME=		tumble-0.33
 PKGREVISION=		2
@@ -20,8 +20,8 @@ INSTALLATION_DIRS+=	bin
 INSTALLATION_DIRS+=	share/doc/tumble
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/tumble ${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/tumble
+	${INSTALL_PROGRAM} ${WRKSRC}/tumble ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/tumble
 
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../graphics/netpbm/buildlink3.mk"

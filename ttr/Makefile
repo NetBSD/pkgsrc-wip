@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/11/11 13:26:33 shattered Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 17:08:30 asau Exp $
 #
 
 DISTNAME=		ttr-0.11
@@ -12,11 +12,11 @@ COMMENT=		Text Text Revolution
 GNU_CONFIGURE=		YES
 USE_LANGUAGES=		c
 ONLY_FOR_PLATFORM=	Linux-*-* # Because of linuxjoy.c
-INSTALLATION_DIRS+=	share/ttr
+INSTALLATION_DIRS+=	bin share/ttr
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/src/ttr ${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/steps/6jan.step ${PREFIX}/share/ttr/
+	${INSTALL_PROGRAM} ${WRKSRC}/src/ttr ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/steps/6jan.step ${DESTDIR}${PREFIX}/share/ttr/
 
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

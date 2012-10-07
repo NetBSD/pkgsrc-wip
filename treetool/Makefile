@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/06/12 23:51:29 kristerw Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/07 17:02:49 asau Exp $
 #
 
 DISTNAME=	treetool2.0.2
@@ -26,13 +26,15 @@ do-configure:
 			-e 's:@X11BASE@:${X11BASE}:'; \
 	done
 
+INSTALLATION_DIRS=	bin
+
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/treetool_release/treetool ${PREFIX}/bin/treetool
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/treetool
-	${INSTALL_DATA} ${WRKSRC}/treetool_release/README ${PREFIX}/share/doc/treetool/README
-	${INSTALL_DATA} ${WRKSRC}/treetool_release/user.manual ${PREFIX}/share/doc/treetool/user.manual
-	${INSTALL_DATA_DIR} ${PREFIX}/share/misc/treetool
-	${INSTALL_DATA} ${WRKSRC}/treetool_release/font_map ${PREFIX}/share/misc/treetool/font_map
+	${INSTALL_PROGRAM} ${WRKSRC}/treetool_release/treetool ${DESTDIR}${PREFIX}/bin/treetool
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/treetool
+	${INSTALL_DATA} ${WRKSRC}/treetool_release/README ${DESTDIR}${PREFIX}/share/doc/treetool/README
+	${INSTALL_DATA} ${WRKSRC}/treetool_release/user.manual ${DESTDIR}${PREFIX}/share/doc/treetool/user.manual
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/misc/treetool
+	${INSTALL_DATA} ${WRKSRC}/treetool_release/font_map ${DESTDIR}${PREFIX}/share/misc/treetool/font_map
 
 .include "../../x11/xview-lib/buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"

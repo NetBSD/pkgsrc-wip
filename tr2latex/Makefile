@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/09/09 02:49:33 obache Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/07 16:59:25 asau Exp $
 
 DISTNAME=	tr2latex
 PKGNAME=	${DISTNAME}-2.2
@@ -30,10 +30,10 @@ PKGMANDIR?=	man  # until in pkgsrc
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/texmf/tex/latex/misc
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/tr2latex ${PREFIX}/bin/tr2latex
-	${INSTALL_MAN} ${WRKSRC}/tr2latex.man ${PREFIX}/${PKGMANDIR}/man1/tr2latex.1
-	${INSTALL_DATA_DIR} ${PREFIX}/share/texmf/tex/latex/misc
-	${INSTALL_DATA} ${WRKSRC}/troffman.sty ${PREFIX}/share/texmf/tex/latex/misc/
-	${INSTALL_DATA} ${WRKSRC}/troffms.sty ${PREFIX}/share/texmf/tex/latex/misc/
+	${INSTALL_PROGRAM} ${WRKSRC}/tr2latex ${DESTDIR}${PREFIX}/bin/tr2latex
+	${INSTALL_MAN} ${WRKSRC}/tr2latex.man ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/tr2latex.1
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/texmf/tex/latex/misc
+	${INSTALL_DATA} ${WRKSRC}/troffman.sty ${DESTDIR}${PREFIX}/share/texmf/tex/latex/misc/
+	${INSTALL_DATA} ${WRKSRC}/troffms.sty ${DESTDIR}${PREFIX}/share/texmf/tex/latex/misc/
 
 .include "../../mk/bsd.pkg.mk"

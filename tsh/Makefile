@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/11/02 18:00:30 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/07 17:06:27 asau Exp $
 #
 
 DISTNAME=		tsh-0.6
@@ -13,8 +13,10 @@ COMMENT=		Lightweight remote shel wity 128AES and file transfers
 
 BUILD_TARGET=${LOWER_OPSYS}
 
+INSTALLATION_DIRS=	bin sbin
+
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/tsh ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/tshd ${PREFIX}/sbin
+	${INSTALL_PROGRAM} ${WRKSRC}/tsh ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/tshd ${DESTDIR}${PREFIX}/sbin
 
 .include "../../mk/bsd.pkg.mk"
