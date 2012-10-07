@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2010/12/25 12:45:45 noud4 Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/07 19:06:05 asau Exp $
 #
 
 DISTNAME=		xace-0.4
@@ -29,13 +29,15 @@ SUBST_FILES.scale=	Imakefile
 SUBST_SED.scale=	-e 's,SCALE=2,SCALE=1,'
 .endif
 
+INSTALLATION_DIRS=	bin
+
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/xace
-	${INSTALL_DATA} ${WRKSRC}/ace.rom ${PREFIX}/share/xace
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/xace
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/xace
-	${INSTALL_DATA} ${WRKSRC}/forth.txt ${PREFIX}/share/doc/xace
-	${INSTALL_PROGRAM} ${WRKSRC}/xace ${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/xace
+	${INSTALL_DATA} ${WRKSRC}/ace.rom ${DESTDIR}${PREFIX}/share/xace
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/xace
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/xace
+	${INSTALL_DATA} ${WRKSRC}/forth.txt ${DESTDIR}${PREFIX}/share/doc/xace
+	${INSTALL_PROGRAM} ${WRKSRC}/xace ${DESTDIR}${PREFIX}/bin
 
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2007/01/21 09:45:01 gschwarz Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/07 19:41:52 asau Exp $
 #
 
 DISTNAME=	xmail-1.18
@@ -35,17 +35,19 @@ EXT=bsd # Default one :)
 
 MAKE_FILE=Makefile.${EXT}
 
+INSTALLATION_DIRS=	sbin
+
 do-install:
-	${INSTALL_PROGRAM_DIR} ${PREFIX}/libexec/xmail
+	${INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/libexec/xmail
 .for bin in XMail XMCrypt CtrlClnt MkUsers
-	${INSTALL_PROGRAM} ${WRKSRC}/${bin} ${PREFIX}/libexec/xmail/${bin}
+	${INSTALL_PROGRAM} ${WRKSRC}/${bin} ${DESTDIR}${PREFIX}/libexec/xmail/${bin}
 .endfor
 .undef bin
-	${INSTALL_SCRIPT} ${WRKSRC}/sendmail    ${PREFIX}/sbin/sendmail.xmail
-	${INSTALL_SCRIPT} ${WRKSRC}/sendmail.sh ${PREFIX}/sbin/sendmail.xmail.sh
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/xmail
+	${INSTALL_SCRIPT} ${WRKSRC}/sendmail    ${DESTDIR}${PREFIX}/sbin/sendmail.xmail
+	${INSTALL_SCRIPT} ${WRKSRC}/sendmail.sh ${DESTDIR}${PREFIX}/sbin/sendmail.xmail.sh
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/xmail
 .for doc in Readme.txt Readme.html
-	${INSTALL_DATA} ${WRKSRC}/docs/${doc} ${PREFIX}/share/doc/xmail/${doc}
+	${INSTALL_DATA} ${WRKSRC}/docs/${doc} ${DESTDIR}${PREFIX}/share/doc/xmail/${doc}
 .endfor
 .undef doc
 

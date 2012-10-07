@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2011/10/26 14:56:49 noud4 Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/07 18:57:22 asau Exp $
 #
 
 DISTNAME=		wise2.2.0
@@ -15,9 +15,11 @@ BUILD_DIRS=		src
 MAKE_FILE=		makefile
 MESSAGE_SUBST+=		PREFIX=${PREFIX}
 
+INSTALLATION_DIRS=	bin
+
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/wise2/wisecfg
-	cd ${WRKSRC}/wisecfg && ${INSTALL_DATA} * ${DESTDIR}${PREFIX}/share/wise2/wisecfg/
-	cd ${WRKSRC}/src/bin && ${INSTALL_PROGRAM} * ${DESTDIR}${PREFIX}/bin/
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/wise2/wisecfg
+	cd ${WRKSRC}/wisecfg && ${INSTALL_DATA} * ${DESTDIR}${DESTDIR}${PREFIX}/share/wise2/wisecfg/
+	cd ${WRKSRC}/src/bin && ${INSTALL_PROGRAM} * ${DESTDIR}${DESTDIR}${PREFIX}/bin/
 
 .include "../../mk/bsd.pkg.mk"

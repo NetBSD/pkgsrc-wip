@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2009/08/25 11:56:46 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/07 19:11:30 asau Exp $
 
 DISTNAME=	xbnbt-81b.3.5
 PKGREVISION=	1
@@ -25,13 +25,13 @@ post-extract:
 		${WRKDIR:Q}/xbnbt/bnbt/examples/ipb2_mod
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/bnbt ${PREFIX}/sbin
+	${INSTALL_PROGRAM} ${WRKSRC}/bnbt ${DESTDIR}${PREFIX}/sbin
 	cd ${WRKDIR}/xbnbt/bnbt/doc && pax -rwpam . \
-		${PREFIX}/share/doc/xbnbt
+		${DESTDIR}${PREFIX}/share/doc/xbnbt
 	cd ${WRKDIR}/xbnbt/bnbt/examples && pax -rwpam . \
-		${PREFIX}/share/examples/xbnbt
+		${DESTDIR}${PREFIX}/share/examples/xbnbt
 	cd ${WRKDIR}/xbnbt/bnbt/public_http/xbnbt && pax -rwpam . \
-		${PREFIX}/share/xbnbt
+		${DESTDIR}${PREFIX}/share/xbnbt
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

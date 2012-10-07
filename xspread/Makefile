@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/05/03 13:40:18 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/07 19:54:59 asau Exp $
 #
 
 DISTNAME=		xspread3.1.1c
@@ -12,6 +12,8 @@ MAINTAINER=		reed@reedmedia.net
 HOMEPAGE=		http://www.chemie.fu-berlin.de/chemnet/use/xspread.html
 COMMENT=		X11 spreadsheet based on sc
 
+PKG_DESTDIR_SUPPORT=	destdir
+
 GNU_CONFIGURE=		yes
 CONFIGURE_HAS_MANDIR=	no
 
@@ -24,19 +26,21 @@ post-extract:
 	${RM} ${WRKSRC}/doc/doc.tmp ${WRKSRC}/sample_files/sample_files.tmp \
 		${WRKSRC}/documents/documents.tmp
 
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/pxspread ${PREFIX}/bin/pxspread
-	${INSTALL_PROGRAM} ${WRKSRC}/xspread ${PREFIX}/bin/xspread
-	${INSTALL_MAN} ${WRKSRC}/pxspread.man ${PREFIX}/${PKGMANDIR}/man1/pxspread.1
-	${INSTALL_MAN} ${WRKSRC}/xspread.man ${PREFIX}/${PKGMANDIR}/man1/xspread.1
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/xspread
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/xspread
-	${INSTALL_DATA} ${WRKSRC}/x/notes  ${PREFIX}/share/doc/xspread
-	${CP} ${WRKSRC}/doc/* ${PREFIX}/share/doc/xspread/
-	${INSTALL_DATA_DIR} ${PREFIX}/share/xspread/examples
-	${CP} -R ${WRKSRC}/documents ${PREFIX}/share/xspread/
-	${CP} ${WRKSRC}/sample_files/* ${PREFIX}/share/xspread/examples/
-	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/xspread/
+	${INSTALL_PROGRAM} ${WRKSRC}/pxspread ${DESTDIR}${PREFIX}/bin/pxspread
+	${INSTALL_PROGRAM} ${WRKSRC}/xspread ${DESTDIR}${PREFIX}/bin/xspread
+	${INSTALL_MAN} ${WRKSRC}/pxspread.man ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/pxspread.1
+	${INSTALL_MAN} ${WRKSRC}/xspread.man ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/xspread.1
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/xspread
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/xspread
+	${INSTALL_DATA} ${WRKSRC}/x/notes  ${DESTDIR}${PREFIX}/share/doc/xspread
+	${CP} ${WRKSRC}/doc/* ${DESTDIR}${PREFIX}/share/doc/xspread/
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/xspread/examples
+	${CP} -R ${WRKSRC}/documents ${DESTDIR}${PREFIX}/share/xspread/
+	${CP} ${WRKSRC}/sample_files/* ${DESTDIR}${PREFIX}/share/xspread/examples/
+	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${DESTDIR}${PREFIX}/share/xspread/
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"

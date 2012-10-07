@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2009/09/09 11:17:56 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/07 19:10:21 asau Exp $
 #
 
 DISTNAME=		xbelmark.py
@@ -21,10 +21,12 @@ PYTHON_PATCH_SCRIPTS=	xbelmark.py
 do-extract:
 	${CP} ${DISTDIR}/${DISTNAME} ${WRKSRC}
 
+INSTALLATION_DIRS=	bin
+
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/xbelmark
-	${INSTALL_DATA} ${FILESDIR}/README ${PREFIX}/share/doc/xbelmark/
-	${INSTALL_SCRIPT} ${WRKSRC}/xbelmark.py ${PREFIX}/bin/xbelmark.py
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/xbelmark
+	${INSTALL_DATA} ${FILESDIR}/README ${DESTDIR}${PREFIX}/share/doc/xbelmark/
+	${INSTALL_SCRIPT} ${WRKSRC}/xbelmark.py ${DESTDIR}${PREFIX}/bin/xbelmark.py
 
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"

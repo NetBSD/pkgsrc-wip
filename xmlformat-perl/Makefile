@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2008/07/15 17:07:14 bubuchka Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/07 19:47:05 asau Exp $
 #
 
 DISTNAME=		xmlformat-${XMLFORMAT_VERSION}
@@ -22,8 +22,10 @@ DISTINFO_FILE=		${.CURDIR}/../../wip/xmlformat-docs/distinfo
 DESCR_SRC=		${.CURDIR}/../../wip/xmlformat-docs/DESCR.common \
 			${PKGDIR}/DESCR
 
+INSTALLATION_DIRS=	bin
+
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/xmlformat.pl ${PREFIX}/bin/xmlformat
+	${INSTALL_SCRIPT} ${WRKSRC}/xmlformat.pl ${DESTDIR}${PREFIX}/bin/xmlformat
 
 .include "../../wip/xmlformat-docs/version.mk"
 .include "../../mk/bsd.pkg.mk"
