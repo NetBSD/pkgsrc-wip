@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/02/01 03:23:42 jdwhite Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 17:41:40 asau Exp $
 
 DISTNAME=		nut-2.2.1
 PKGNAME=		ups-${DISTNAME}
@@ -8,6 +8,8 @@ MASTER_SITES=		http://www.networkupstools.org/source/2.2/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.networkupstools.org/
 COMMENT=		Network UPS Tools
+
+PKG_DESTDIR_SUPPORT=	none
 
 .include "options.mk"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/07/02 13:38:09 moubctez Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/07 17:41:39 asau Exp $
 #
 
 DISTNAME=	ufc-2.0.5
@@ -12,8 +12,6 @@ COMMENT=	Unified framework for finite element assembly
 LICENSE=	public-domain
 
 FETCH_USING=	curl
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++ python

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/05/14 14:59:11 hfath Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/07 17:41:43 asau Exp $
 
 DISTNAME=	vpnc-script-20120514
 CATEGORIES=	net security
@@ -8,8 +8,6 @@ DISTFILES=	# empty
 MAINTAINER=	pouya@san-serriffe.org
 HOMEPAGE=	http://www.infradead.org/openconnect.html
 COMMENT=	Improved config script for OpenConnect and vpnc
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_BUILD=	YES
 WRKSRC=		${WRKDIR}

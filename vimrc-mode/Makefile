@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/06/06 01:44:07 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 17:41:42 asau Exp $
 #
 
 DISTNAME=	vimrc-mode-0.2.1
@@ -11,7 +11,6 @@ HOMEPAGE=	http://${PKGBASE}.sourceforge.net/
 COMMENT=	Emacs major mode for editing .vimrc configuration files
 LICENSE=	gnu-gpl-v2
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS+=	${EMACS_LISPPREFIX}
 
 WRKSRC=	${WRKDIR}

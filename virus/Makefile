@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/12/17 17:21:00 tnn2 Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/07 17:41:42 asau Exp $
 #
 
 DISTNAME=	virus-0.0.6
@@ -10,7 +10,6 @@ MAINTAINER=	pancake@phreaker.net
 HOMEPAGE=	http://www.rocklinux.net/people/ripclaw/projects/software/virus/
 COMMENT=	VI resembling utility skeleton
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS=	bin
 
 do-build:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/08/25 18:27:06 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 17:41:40 asau Exp $
 #
 
 DISTNAME=	unpaper-0.3
@@ -9,8 +9,6 @@ MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://unpaper.berlios.de/
 COMMENT=	Post-processing scanned and photocopied book pages
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+= bash
 

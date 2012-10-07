@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/10/17 08:49:14 hoka_adam Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 17:41:39 asau Exp $
 #
 
 DISTNAME=	umurmur-0.2.4
@@ -14,7 +14,6 @@ WRKSRC=		${WRKDIR}/${DISTNAME}/src
 USE_TOOLS+=	gmake
 NO_CONFIGURE=	yes
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS=	sbin share/examples/umurmur
 
 EGDIR=		${PREFIX}/share/examples/umurmur

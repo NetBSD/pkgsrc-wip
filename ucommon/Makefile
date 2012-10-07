@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/03/26 13:21:20 othyro Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/07 17:41:39 asau Exp $
 #
 
 DISTNAME=	ucommon-5.1.2
@@ -10,7 +10,6 @@ HOMEPAGE=	http://www.gnu.org/software/commoncpp/
 COMMENT=	Very light-weight C++ library for deeply embedded applications
 LICENSE=	gnu-gpl-v3
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 #DEPENDS+=	doxygen>=doxygen-1.6.2:../../devel/doxygen
 
 USE_TOOLS+=	pkg-config

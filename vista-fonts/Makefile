@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/02/04 08:50:00 shattered Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 17:41:42 asau Exp $
 #
 
 DISTNAME=	# empty
@@ -15,8 +15,6 @@ LICENSE=	ms-ttf-license
 RESTRICTED=	No redistribution in altered form
 
 BUILD_DEPENDS+=	cabextract-[0-9]*:../../archivers/cabextract
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2011/05/26 20:34:25 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/07 17:41:44 asau Exp $
 
 #DISTNAME=	vreng-6.8.3
 DISTNAME=	vreng-6.8.12
@@ -13,6 +13,7 @@ MAINTAINER=	dauphin@enst.fr
 HOMEPAGE=	http://vreng.enst.fr/
 COMMENT=	Virtual Reality Engine interactive distributed 3D application
 
+PKG_DESTDIR_SUPPORT=	none
 #PKG_INSTALLATION_TYPES= overwrite pkgviews
 
 USE_LANGUAGES=	c c++

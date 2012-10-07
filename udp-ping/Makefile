@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/09/12 18:42:22 gschwarz Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 17:41:39 asau Exp $
 
 DISTNAME=	udp-ping
 PKGNAME=	${DISTNAME}-1.0
@@ -13,8 +13,6 @@ COMMENT=	UDP Ping is a tool to selectively send UDP packets
 WRKSRC=		${WRKDIR}/UDPing
 USE_LANGUAGES=	c++
 NO_CONFIGURE=	YES
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 INSTALLATION_DIRS+=	 bin sbin
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2011/10/04 19:42:35 ryo-on Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/07 17:41:39 asau Exp $
 #
 
 DISTNAME=	ubuntu-font-family-0.80
@@ -11,8 +11,6 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://font.ubuntu.com/
 COMMENT=	Ubuntu font family
 #LICENSE=	UBUNTU FONT LICENCE Version 1.0
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/.orig//:S/_/-/}
 USE_LANGUAGES=	# none

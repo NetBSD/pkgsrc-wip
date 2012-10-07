@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/09/28 23:06:25 khorben Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/07 17:41:39 asau Exp $
 #
 
 DISTNAME=	u-boot-1.3.2
@@ -13,7 +13,6 @@ COMMENT=	The mkimage utility of the u-boot bootloader
 
 LICENSE=	gnu-gpl-v2
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_FLAGS+=	PREFIX=${PREFIX}
 MAKE_FLAGS+=	DESTDIR=${DESTDIR}
 AUTO_MKDIRS=	yes

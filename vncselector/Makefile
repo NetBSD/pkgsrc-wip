@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2010/12/26 05:01:24 davesainty Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/07 17:41:43 asau Exp $
 #
 
 PKGNAME=		vncselector-1.6.1
@@ -10,6 +10,8 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=vncselector/}
 MAINTAINER=		dhowland@users.sourceforge.net
 HOMEPAGE=		http://vncselector.sourceforge.net/
 COMMENT=		Tool for managing VNC sessions
+
+PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++ fortran77

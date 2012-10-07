@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/09/10 19:57:09 genolopolis Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/07 17:41:40 asau Exp $
 
 DISTNAME=		v8
 CATEGORIES=		wip
@@ -15,8 +15,6 @@ SVN_MODULE.v8=		v8
 
 DEPENDS+=		libexecinfo>=1:../../wip/libexecinfo
 BUILD_DEPENDS+=		scons>=1:../../devel/scons
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CONFIGURE=		yes
 

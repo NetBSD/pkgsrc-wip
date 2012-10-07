@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2011/10/30 14:25:29 genolopolis Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/07 17:41:41 asau Exp $
 #
 
 DISTNAME=	varnish-3.0.2
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://varnish-cache.org/
 COMMENT=	High-performace HTTP accelerator
 LICENSE=	modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/05/23 15:58:00 hfath Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 17:41:43 asau Exp $
 #
 
 DISTNAME=		vpnc-0.5.3
@@ -12,8 +12,6 @@ SVN_REPOSITORIES=	vpnc
 MAINTAINER=		hauke@NetBSD.org
 HOMEPAGE=		http://www.unix-ag.uni-kl.de/~massar/vpnc/
 COMMENT=		Client for Cisco3000 ipsec VPN Concentrator
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/vpnc/trunk
 

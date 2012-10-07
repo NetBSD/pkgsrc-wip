@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/02/18 04:55:05 phonohawk Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 17:41:40 asau Exp $
 #
 
 DISTNAME=	undo-tree
@@ -14,8 +14,6 @@ COMMENT=	Treat Emacs undo history as a tree
 WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	# none
 MESSAGE_SUBST+=	LISPDIR=${EMACS_LISPPREFIX:Q}
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 do-build:
 	cd ${WRKSRC} && ${EMACS_BIN} -batch -f batch-byte-compile ${DISTNAME}.el

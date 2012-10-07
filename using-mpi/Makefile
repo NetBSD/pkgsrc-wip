@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/08/01 14:57:10 asau Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/07 17:41:40 asau Exp $
 
 DISTNAME=	UsingMPI
 PKGNAME=	UsingMPI-2
@@ -8,8 +8,6 @@ MASTER_SITES=	ftp://ftp.mcs.anl.gov/pub/mpi/using/
 MAINTAINER=	asau@inbox.ru
 HOMEPAGE=	http://www-unix.mcs.anl.gov/mpi/learning.html
 COMMENT=	Sample programs from "Using MPI" (2nd ed.) book
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c fortran77 c++

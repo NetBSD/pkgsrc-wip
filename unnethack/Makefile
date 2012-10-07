@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/10/26 23:04:35 rhialto Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 17:41:40 asau Exp $
 #
 
 DISTNAME=	unnethack-3.6.0-20111008
@@ -11,7 +11,6 @@ HOMEPAGE=	http://unnethack.sourceforge.net/
 COMMENT=	Variant and further development of NetHack
 LICENSE=	nethack-license
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=	YES
 MAKE_JOBS_SAFE=		no
 

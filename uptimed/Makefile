@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/05/01 21:11:44 dzoe Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/07 17:41:40 asau Exp $
 #
 
 DISTNAME=		uptimed-0.3.16
@@ -9,6 +9,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=		joe@joe.cz
 HOMEPAGE=		http://podgorny.cz/uptimed/
 COMMENT=		Keeps track of current and past system uptimes
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes

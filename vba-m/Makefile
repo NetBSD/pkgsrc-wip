@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/03 14:59:11 othyro Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/07 17:41:41 asau Exp $
 #
 
 PKGVERSION=	1.8.0.1138
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://vba-m.com/
 COMMENT=	VBA-M is a fork from the now inactive VisualBoy Advance project
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 USE_CMAKE=	yes

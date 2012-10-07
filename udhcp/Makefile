@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/05/24 10:31:47 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/07 17:41:39 asau Exp $
 #
 
 DISTNAME=	udhcp-0.9.8
@@ -8,6 +8,8 @@ MASTER_SITES=	http://udhcp.busybox.net/source/
 MAINTAINER=	pancake@phreaker.net
 HOMEPAGE=	http://www.busybox.net/
 COMMENT=	Embedded DHCP Client/Server
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_TOOLS+=	gmake
 

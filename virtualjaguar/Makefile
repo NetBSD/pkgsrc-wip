@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/12/08 09:54:37 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 17:41:42 asau Exp $
 #
 
 DISTNAME=		virtualjaguar-1.1.0
@@ -10,7 +10,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://sdlemu.ngemu.com/
 COMMENT=		Jaguar emulator based on SDL
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS=	bin share/doc/vj share/examples/vj
 MAKE_JOBS_SAFE=		no
 

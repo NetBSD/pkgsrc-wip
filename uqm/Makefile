@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2012/08/18 10:06:55 leot1990 Exp $
+# $NetBSD: Makefile,v 1.20 2012/10/07 17:41:40 asau Exp $
 #
 
 DISTNAME=	uqm-0.7.0-source
@@ -16,8 +16,6 @@ COMMENT=	Ur-Quan Masters
 # At the moment cc-by-nc-sa-2.5v-license is not present in pkgsrc/licenses/,
 # this is why LICENSE is commented out.
 #LICENSE=	gnu-gpl-v2 AND cc-by-nc-sa-2.5v-license
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DIST_SUBDIR=		uqm
 EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}

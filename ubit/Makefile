@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2011/05/26 20:34:25 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/07 17:41:39 asau Exp $
 
 #DISTNAME=	ubit-5.0.4
 DISTNAME=	ubit-5.5.0
@@ -13,6 +13,7 @@ MAINTAINER=	dauphin@enst.fr
 HOMEPAGE=	http://perso.enst.fr/~elc/ubit/
 COMMENT=	Ubiquitous Brick Interactive Toolkit
 
+PKG_DESTDIR_SUPPORT=	none
 #PKG_INSTALLATION_TYPES= overwrite pkgviews
 
 USE_LANGUAGES=		c c++

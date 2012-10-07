@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2010/12/25 12:45:45 noud4 Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/07 17:41:41 asau Exp $
 #
 
 DISTNAME=		vdesk-1.2
@@ -11,8 +11,6 @@ HOMEPAGE=		http://offog.org/code/vdesk.html
 COMMENT=		Virtual desktop manager
 
 GNU_CONFIGURE=		yes
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/vdesk

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/02/03 17:33:17 tnn2 Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/07 17:41:43 asau Exp $
 
 DISTNAME=	vkeybd-0.1.17
 CATEGORIES=	audio
@@ -7,6 +7,8 @@ MASTER_SITES=	http://www.alsa-project.org/~iwai/
 MAINTAINER=	oht@users.sourceforge.net
 HOMEPAGE=	http://www.alsa-project.org/~iwai/
 COMMENT=	Virtual midi keyboard
+
+PKG_DESTDIR_SUPPORT=	none
 
 RAWMIDI=	/dev/rmidi0
 WRKSRC=		${WRKDIR}/vkeybd

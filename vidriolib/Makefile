@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/08/01 14:57:10 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/07 17:41:42 asau Exp $
 #
 
 DISTNAME=	vidriolib-0.1.20070718.0
@@ -9,6 +9,8 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	ivaniclixx@gmail.com
 HOMEPAGE=	http://vidrio.euler.es/vidriolib/bin/
 COMMENT=	Viriolib is a windows, menus and so on development library
+
+PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

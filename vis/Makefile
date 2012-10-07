@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/11/25 11:51:00 shattered Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 17:41:42 asau Exp $
 #
 
 DISTNAME=	vis-2.1
@@ -14,6 +14,8 @@ DISTFILES=	vis-2.1.tar.gz glu-2.1.tar.gz
 DEPENDS+=	bison>=1.22:../../devel/bison
 
 CONFLICTS=	vis<=0.1
+
+PKG_DESTDIR_SUPPORT=	none
 
 CONFIGURE_DIRS=		../glu-2.1 .
 

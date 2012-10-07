@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/12/26 05:01:24 davesainty Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/07 17:41:42 asau Exp $
 
 DISTNAME=	vino-2.26.2
 PKGREVISION=	2
@@ -9,8 +9,6 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	VNC server for GNOME
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/12/04 13:16:19 rhialto Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 17:41:41 asau Exp $
 
 DISTNAME=		vamps-0.99.2
 CATEGORIES=		multimedia
@@ -9,7 +9,6 @@ HOMEPAGE=		http://vamps.sourceforge.net/
 COMMENT=		Requantizer for shrinking DVDs
 
 USE_TOOLS+=		gmake
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../multimedia/libdvdread/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

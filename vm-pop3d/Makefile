@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/08/01 09:19:39 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/07 17:41:43 asau Exp $
 
 DISTNAME=		vm-pop3d-1.1.6
 PKGNAME=		vm-pop3d-1.1.7e
@@ -12,6 +12,8 @@ PATCH_DIST_STRIP=	-p1
 MAINTAINER=		reed@reedmedia.net
 HOMEPAGE=		http://www.reedmedia.net/software/virtualmail-pop3d/
 COMMENT=		POP3 server with support for virtual mail accounts
+
+PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=		YES
 

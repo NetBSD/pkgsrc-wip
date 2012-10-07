@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/05/15 12:03:43 shattered Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 17:41:39 asau Exp $
 #
 
 DISTNAME=	ukncbtl-0.0.1
@@ -9,8 +9,6 @@ MAINTAINER=	shattered@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/ukncbtl/
 COMMENT=	Emulator of 'UKNC', a Soviet school computer
 LICENSE=	gnu-lgpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CHECKSUM=	yes
 SVN_REPOSITORIES=	ukncbtl-read-only
