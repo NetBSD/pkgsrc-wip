@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/03/20 21:59:19 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 11:54:25 asau Exp $
 #
 
 DISTNAME=	Helmholtz-0.1.0
@@ -12,8 +12,6 @@ COMMENT=	Framework for creating neuroscience databases
 #LICENSE=	cecill
 
 DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/Helmholtz-0.1.0
 

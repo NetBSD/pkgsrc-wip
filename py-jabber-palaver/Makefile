@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2010/07/26 02:08:35 schnoebe Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/07 11:54:46 asau Exp $
 
 DISTNAME=	palaver-0.6
 PKGNAME=	${PYPKGPREFIX}-jabber-${DISTNAME}
@@ -10,7 +10,6 @@ HOMEPAGE=	http://code.stanziq.com/palaver
 COMMENT=	XEP-0045 + XEP-0128 Multi-User Conferencing package
 LICENSE=	mit
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 #
 # jabberd isn't really a dependency since the transport can run on a
 # different server than the main jabber server (not that many sites will

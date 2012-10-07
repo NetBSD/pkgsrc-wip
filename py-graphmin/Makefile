@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/06/13 20:27:03 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 11:54:41 asau Exp $
 #
 
 DISTNAME=	graphmin-0.1.8
@@ -12,8 +12,6 @@ COMMENT=	RDF Graph Minimisation
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-rdflib>=2.4.2:../../wip/py-rdflib
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/graphmin-0.1.8
 

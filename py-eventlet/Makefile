@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/07/17 00:09:47 jihbed Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/07 11:54:32 asau Exp $
 #
 
 DISTNAME=	eventlet-0.9.9
@@ -12,8 +12,6 @@ COMMENT=	High performance network library using coroutines
 LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-OpenSSL>=0.6:../../security/py-OpenSSL
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

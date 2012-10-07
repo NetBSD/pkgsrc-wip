@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2010/01/26 18:17:17 schnoebe Exp $
+# $NetBSD: Makefile,v 1.27 2012/10/07 11:54:46 asau Exp $
 
 DISTNAME=		pyicqt-0.8.1.5
 PKGNAME=		${PYPKGPREFIX}-jabber-${DISTNAME:S/py//}
@@ -9,8 +9,6 @@ MAINTAINER=		eric@cirr.com
 HOMEPAGE=		http://code.google.com/p/pyicqt/
 COMMENT=		Transport connecting Jabber to the ICQ IM network
 LICENSE=		gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=		${PYPKGPREFIX}-jabber-pyicq-t-*
 

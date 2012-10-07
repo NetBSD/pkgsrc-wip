@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/01/30 06:10:51 noud4 Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 11:54:33 asau Exp $
 #
 
 DISTNAME=	pyfeyn-0.3.2
@@ -14,8 +14,6 @@ LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-cElementTree-[0-9]*:../../textproc/py-cElementTree
 DEPENDS+=	${PYPKGPREFIX}-X>=0.9:../../textproc/py-X
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
 

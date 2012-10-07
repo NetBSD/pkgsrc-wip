@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/03/07 10:45:51 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 11:54:40 asau Exp $
 #
 
 DISTNAME=	pygist-1.5.28
@@ -11,8 +11,6 @@ HOMEPAGE=	http://hifweb.lbl.gov/public/software/gist/
 COMMENT=	Gist is a scientific graphics library
 #please see: http://hifweb.lbl.gov/public/software/gist/RELEASE
 #LICENSE=	# TODO: (see mk/license.mk)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG=	yes
 

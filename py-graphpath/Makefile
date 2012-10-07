@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/06/13 20:27:29 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 11:54:42 asau Exp $
 #
 
 DISTNAME=	GraphPath-0.7
@@ -12,8 +12,6 @@ COMMENT=	Analysing graph-structured data, especially RDF
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${PYPKGPREFIX}-rdflib>=2.4.2:../../wip/py-rdflib
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 PYDISTUTILSPKG=	yes

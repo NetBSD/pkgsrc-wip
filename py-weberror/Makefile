@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/07 00:15:46 kristerw Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/07 11:54:46 asau Exp $
 #
 
 DISTNAME=	WebError-0.10.2.tar
@@ -18,8 +18,6 @@ DEPENDS+=	${PYPKGPREFIX}-pygments>=1.3.1:../../textproc/py-pygments
 DEPENDS+=	${PYPKGPREFIX}-Paste>=1.7.2:../../www/py-paste
 DEPENDS+=	${PYPKGPREFIX}-Tempita>=0.4:../../textproc/py-Tempita
 DEPENDS+=	${PYPKGPREFIX}-webob>=0.9.8:../../wip/py-webob
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/WebError-0.10.2
 USE_LANGUAGES=	# none

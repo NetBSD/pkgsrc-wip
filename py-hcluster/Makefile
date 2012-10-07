@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/08/09 21:31:41 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 11:54:43 asau Exp $
 #
 
 DISTNAME=	hcluster-0.2.0.tar
@@ -11,8 +11,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://code.google.com/p/scipy-cluster/
 COMMENT=	Hierarchical Clustering Package For Scipy
 LICENSE=	modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=	${WRKDIR}/hcluster-0.2.0
 USE_LANGUAGES=	c

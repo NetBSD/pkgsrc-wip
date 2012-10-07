@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/06 18:14:21 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 11:54:46 asau Exp $
 #
 
 DISTNAME=	isodate-0.4.8
@@ -10,6 +10,8 @@ MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://cheeseshop.python.org/pypi/isodate
 COMMENT=	ISO 8601 date/time/duration parser and formater
 LICENSE=	modified-bsd
+
+PKG_DESTDIR_SUPPORT=	none
 
 USE_LANGUAGES=	# none
 

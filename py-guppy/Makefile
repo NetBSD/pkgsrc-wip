@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/08/17 12:12:34 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 11:54:43 asau Exp $
 #
 
 DISTNAME=	guppy-0.1.9
@@ -11,8 +11,6 @@ MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://guppy-pe.sourceforge.net/
 COMMENT=	Guppy-PE -- A Python Programming Environment
 LICENSE=	mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=	${WRKDIR}/guppy-0.1.9
 PYDISTUTILSPKG=	yes

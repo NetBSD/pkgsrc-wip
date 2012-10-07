@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/10/03 23:58:06 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 11:54:27 asau Exp $
 #
 
 DISTNAME=	django-uuidfield-0.4.0
@@ -13,8 +13,6 @@ COMMENT=	UUIDField in Django
 LICENSE=	2-clause-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

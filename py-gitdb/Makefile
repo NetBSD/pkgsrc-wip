@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/01/06 11:07:16 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 11:54:41 asau Exp $
 #
 
 DISTNAME=	gitdb-0.5.4
@@ -13,8 +13,6 @@ LICENSE=	modified-bsd #Probably
 
 DEPENDS+=	${PYPKGPREFIX}-async>=0.6.1:../../wip/py-async
 DEPENDS+=	${PYPKGPREFIX}-smmap>=0.8.1:../../wip/py-smmap
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=	${WRKDIR}/gitdb-0.5.4
 

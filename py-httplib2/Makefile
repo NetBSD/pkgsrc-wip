@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/10/03 09:40:14 jihbed Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/07 11:54:43 asau Exp $
 #
 
 DISTNAME=	httplib2-0.7.6
@@ -11,8 +11,6 @@ MAINTAINER=	mj@mjturner.net
 HOMEPAGE=	http://code.google.com/p/httplib2/
 COMMENT=	Comprehensive http client library for Python
 LICENSE=	mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PLIST_SUBST+=	EGG_INFODIR=${EGG_NAME}-py${PYVERSSUFFIX}.egg-info
 

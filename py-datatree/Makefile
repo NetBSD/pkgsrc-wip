@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/06/22 13:04:27 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 11:54:19 asau Exp $
 #
 
 DISTNAME=	datatree-0.1.8
@@ -11,8 +11,6 @@ HOMEPAGE=	https://github.com/bigjason/datatree
 COMMENT=	DSL for creating structured documents in python
 
 DEPENDS+=	${PYPKGPREFIX}-yaml>=3.08:../../textproc/py-yaml
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/datatree-0.1.8
 

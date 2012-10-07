@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/09/16 08:42:40 noud4 Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/07 11:54:39 asau Exp $
 #
 
 PKGNAME=	${PYPKGPREFIX}-gettext-tools-0
@@ -8,8 +8,6 @@ CATEGORIES=	databases
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.python.org/topics/database/
 COMMENT=	Python tools for development of I18N Python apps
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_BUILD=	yes
 AUTO_MKDIRS=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/03 22:14:52 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 11:54:30 asau Exp $
 #
 
 DISTNAME=	dreampie-1.1
@@ -10,8 +10,6 @@ MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://dreampie.sourceforge.net/
 COMMENT=	Advanced graphical interactive Python shell
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

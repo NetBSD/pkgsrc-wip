@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/01/06 11:19:04 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 11:54:40 asau Exp $
 #
 
 DISTNAME=	GitPython-0.3.2.RC1
@@ -12,8 +12,6 @@ COMMENT=	Python library used to interact with Git repositories
 LICENSE=	modified-bsd
 
 #DEPENDS+=	${PYPKGPREFIX}-gitdb>=0.6.1:../../wip/py-gitdb
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/GitPython-0.3.2.RC1
 

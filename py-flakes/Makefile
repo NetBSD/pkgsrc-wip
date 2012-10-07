@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/09/30 09:55:06 noud4 Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/07 11:54:35 asau Exp $
 #
 
 DISTNAME=	pyflakes-0.5.0
@@ -11,8 +11,6 @@ MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	https://launchpad.net/pyflakes
 COMMENT=	Passive checker of Python programs
 LICENSE=	mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/pyflakes-0.5.0
 

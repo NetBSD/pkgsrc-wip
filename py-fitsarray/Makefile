@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/03/20 22:21:46 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 11:54:35 asau Exp $
 #
 
 DISTNAME=	fitsarray-0.2.0
@@ -12,8 +12,6 @@ COMMENT=	Ndarray subclass with a fits header
 
 
 DEPENDS+=	${PYPKGPREFIX}-pyfits>=2.3.1:../../graphics/py-pyfits
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/fitsarray-0.2.0
 

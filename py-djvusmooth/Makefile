@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/04/08 19:09:46 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/07 11:54:28 asau Exp $
 #
 
 DISTNAME=	djvusmooth-0.2.10
@@ -10,8 +10,6 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://jwilk.net/software/djvusmooth
 COMMENT=	Graphical editor for DjVu documents
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man1
 

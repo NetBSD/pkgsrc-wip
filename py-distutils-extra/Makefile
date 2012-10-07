@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/05/11 09:26:35 ryo-on Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/07 11:54:21 asau Exp $
 #
 
 DISTNAME=	python-distutils-extra-2.26
@@ -11,8 +11,6 @@ MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	https://launchpad.net/python-distutils-extra
 COMMENT=	Enhancements to the Python build system
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 #WRKSRC=		${WRKDIR}/python-distutils-extra-2.19
 USE_LANGUAGES=	# none

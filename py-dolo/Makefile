@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/09/10 22:11:34 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 11:54:29 asau Exp $
 #
 
 DISTNAME=	dolo-0.4-dev
@@ -13,8 +13,6 @@ LICENSE=	2-clause-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-sympy>=0.7.1:../../math/py-sympy
 DEPENDS+=	${PYPKGPREFIX}-yaml>=3.10:../../wip/py-yaml
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/dolo-0.4-dev
 

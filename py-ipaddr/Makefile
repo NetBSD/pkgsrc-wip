@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/07/24 19:44:55 bubuchka Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/07 11:54:45 asau Exp $
 #
 
 DISTNAME=	ipaddr-2.1.10
@@ -10,8 +10,6 @@ MAINTAINER=	mishka@NetBSD.org
 HOMEPAGE=	http://ipaddr-py.googlecode.com/
 COMMENT=	IPv4/IPv6 address manipulation library
 LICENSE=	apache-2.0
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

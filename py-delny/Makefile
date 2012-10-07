@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/09/09 16:10:32 jihbed Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/07 11:54:20 asau Exp $
 #
 
 DISTNAME=	Delny-0.4.1
@@ -10,8 +10,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	https://bitbucket.org/flub/delny
 COMMENT=	Python module for delaunay triangulation
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=	${WRKDIR}/Delny-0.4.1
 

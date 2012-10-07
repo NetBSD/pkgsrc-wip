@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/09/09 23:52:24 jihbed Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/07 11:54:30 asau Exp $
 #
 
 DISTNAME=	embedc-0.22
@@ -10,8 +10,6 @@ MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://pyembedc.sourceforge.net/
 COMMENT=	Python module for embedding C/C++ 
 LICENSE=	artistic
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

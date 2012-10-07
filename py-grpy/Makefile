@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2011/02/25 09:47:48 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 11:54:42 asau Exp $
 #
 
 DISTNAME=	GRPy
@@ -12,8 +12,6 @@ COMMENT=	Small GR-oriented package which uses sympy
 LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-sympy>=0.6.7:../../math/py-sympy
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 VERSION=	0.1
 

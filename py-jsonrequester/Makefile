@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/09/19 23:28:41 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 11:54:46 asau Exp $
 #
 
 DISTNAME=	jsonrequester-0.1.3
@@ -12,8 +12,6 @@ COMMENT=	Library for client JSON REST requests
 #LICENSE=	# TODO: (see mk/license.mk)
 
 DEPENDS+=	${PYPKGPREFIX}-httplib2>=0.6.0:../../wip/py-httplib2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/jsonrequester-0.1.3
 

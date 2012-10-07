@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2011/02/28 14:53:18 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.17 2012/10/07 11:54:39 asau Exp $
 #
 
 DISTNAME=	generateDS-1.6a
@@ -9,6 +9,8 @@ MASTER_SITES=	http://www.rexx.com/~dkuhlman/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.rexx.com/~dkuhlman/
 COMMENT=	Python XML data binding library
+
+PKG_DESTDIR_SUPPORT=	none
 
 PY_PATCHPLIST=	yes
 PYDISTUTILSPKG=	yes

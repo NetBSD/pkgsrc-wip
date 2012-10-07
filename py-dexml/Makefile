@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2010/05/25 12:51:38 uccwen Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/07 11:54:21 asau Exp $
 #
 
 DISTNAME=	dexml-0.3.6
@@ -10,8 +10,6 @@ MAINTAINER=	wenheping@gmail.com
 HOMEPAGE=	http://www.rfk.id.au/software/
 COMMENT=	Dead-simple Object-XML mapper for Python
 LICENSE=	mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG=	yes
 

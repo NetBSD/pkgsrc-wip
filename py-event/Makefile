@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/07/11 13:24:18 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 11:54:32 asau Exp $
 #
 
 DISTNAME=	pyevent-0.3
@@ -11,7 +11,6 @@ HOMEPAGE=	http://code.google.com/p/pyevent/
 COMMENT=	Python extension module for libevent
 LICENSE=	modified-bsd
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 PYDISTUTILSPKG= 	yes
 
 do-test:

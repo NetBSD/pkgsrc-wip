@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/10/03 22:30:36 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 11:54:32 asau Exp $
 #
 
 DISTNAME=	etk.docking-0.2
@@ -13,8 +13,6 @@ COMMENT=	PyGTK Docking Widgets
 LICENSE=	gnu-lgpl-v3 AND gnu-gpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-simplegeneric>=0.8:../../wip/py-simplegeneric
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

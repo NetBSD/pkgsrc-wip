@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/03 22:14:53 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/07 11:54:46 asau Exp $
 #
 
 DISTNAME=	joblib-0.6.4
@@ -11,8 +11,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://packages.python.org/joblib/
 COMMENT=	Lightweight pipelining: using Python functions as pipeline jobs
 LICENSE=	modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/joblib-0.6.4
 

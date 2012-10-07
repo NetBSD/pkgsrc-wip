@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/01/01 16:21:09 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 11:54:33 asau Exp $
 #
 
 DISTNAME=	ezPyCrypto-0.1.1
@@ -10,8 +10,6 @@ MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://www.freenet.org.nz/ezPyCrypto/
 COMMENT=	Easy Python API for strong encryption
 #LICENSE=	# TODO: (see mk/license.mk)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG=	yes
 

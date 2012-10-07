@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/10/04 00:27:48 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 11:54:23 asau Exp $
 #
 
 DISTNAME=	django-audiofield-0.4.6
@@ -13,8 +13,6 @@ LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django
 DEPENDS+=	${PYPKGPREFIX}-django-uuidfield>=0.4.0:../../wip/py-django-uuidfield
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/django-audiofield-0.4.6
 

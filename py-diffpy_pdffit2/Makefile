@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/01/22 13:47:34 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 11:54:21 asau Exp $
 #
 
 DISTNAME=	diffpy.pdffit2-${VERSION}
@@ -13,8 +13,6 @@ COMMENT=	PDFfit2 - real space structure refinement program
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-diffpy-structure-[0-9]*:../../wip/py-diffpy-structure
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 VERSION=	1.0-r3067-20090410
 USE_LANGUAGES=	c c++

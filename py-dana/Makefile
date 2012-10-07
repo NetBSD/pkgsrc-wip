@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/03/20 22:51:12 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 11:54:18 asau Exp $
 #
 
 DISTNAME=	dana-0.3.1
@@ -12,8 +12,6 @@ COMMENT= Framework for distributed, asynchronous and adaptive computing
 LICENSE=	modified-bsd
 
 #DEPENDS+=	${PYPKGPREFIX}-scipy>=0.7.0:../../math/py-scipy
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/dana-0.3.1
 

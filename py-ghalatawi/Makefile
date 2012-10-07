@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/12/29 22:14:10 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 11:54:39 asau Exp $
 #
 
 DISTNAME=	ghalatawi-0.2
@@ -11,8 +11,6 @@ MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://ghalatawi.sourceforge.net/
 COMMENT=	Ghalatawi: Arabic AUtocorrec
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 PYDISTUTILSPKG=	yes

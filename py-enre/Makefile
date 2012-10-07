@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/08/25 16:04:40 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 11:54:31 asau Exp $
 #
 
 DISTNAME=	enre-0.3.4
@@ -12,8 +12,6 @@ COMMENT=	This library is a Qooxdoo based GUI for Django
 LICENSE=	gnu-lgpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/enre-0.3.4
 

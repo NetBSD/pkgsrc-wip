@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/08/15 07:16:40 fhajny Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/07 11:54:41 asau Exp $
 #
 
 DISTNAME=	graphite-web-0.9.10
@@ -10,8 +10,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://launchpad.net/graphite
 COMMENT=	Enterprise scalable realtime graphing platform
 LICENSE=	apache-2.0
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	${PYPKGPREFIX}-cairo>=1.8.10:../../graphics/py-cairo
 DEPENDS+=	${PYPKGPREFIX}-carbon>=${PKGREVISION_NOREV}:../../wip/py-carbon

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/01/30 06:25:01 noud4 Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 11:54:41 asau Exp $
 #
 
 DISTNAME=	gpaw-0.7.2.6974
@@ -13,8 +13,6 @@ COMMENT=	Grid-based real-space PAW method DFT code
 LICENSE=	gnu-gpl-v3
 
 #DEPENDS+=	${PYPKGPREFIX}-scipy>=0.7.0:../../math/py-scipy
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 FETCH_USING=		wget
 FETCH_BEFORE_ARGS=	--no-check-certificate

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/03 22:14:53 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/07 11:54:36 asau Exp $
 #
 
 DISTNAME=	fwrap-0.1.1
@@ -10,8 +10,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://fwrap.sourceforge.net/
 COMMENT=	Tool to wrap Fortran 77/90/95 code in C, Cython & Python
 LICENSE=	modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

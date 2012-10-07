@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2010/07/26 01:47:32 schnoebe Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/07 11:54:46 asau Exp $
 
 DISTNAME=	Proxy65-1.2.0
 PKGNAME=	${PYPKGPREFIX}-jabber-${DISTNAME:S/P/p/}
@@ -10,7 +10,6 @@ HOMEPAGE=	http://proxy65.googlecode.com/
 COMMENT=	XEP-0065 proxy transport for XMPP
 LICENSE=	mit
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 #
 # jabberd isn't really a dependency since the transport can run on a
 # different server than the main jabber server (not that many sites will

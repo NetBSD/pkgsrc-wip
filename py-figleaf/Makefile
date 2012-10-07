@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/08/04 16:22:26 ura Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 11:54:34 asau Exp $
 #
 
 PYMODULENAME=		figleaf
@@ -12,8 +12,6 @@ MAINTAINER=		ura@jp.NetBSD.org
 HOMEPAGE=		http://darcs.idyll.org/~t/projects/figleaf/doc/
 COMMENT=		Figleaf is a Python code coverrage analysis tool
 #LICENSE=		bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DOCDIR=			${DESTDIR}${PREFIX}/share/doc/py-${PYMODULENAME}
 EGDIR=			${DESTDIR}${PREFIX}/share/examples/py-${PYMODULENAME}

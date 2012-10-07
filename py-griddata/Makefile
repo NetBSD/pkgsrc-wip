@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/04/02 22:38:36 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 11:54:42 asau Exp $
 #
 
 DISTNAME=	griddata-0.1.2
@@ -10,8 +10,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://code.google.com/p/griddata-python/
 COMMENT=	Interpolate irregularly spaced data to a grid
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG=	yes
 

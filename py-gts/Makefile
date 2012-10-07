@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/05/06 10:51:24 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 11:54:42 asau Exp $
 #
 
 DISTNAME=	pygts-0.3.1
@@ -10,8 +10,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://pygts.sourceforge.net/
 COMMENT=	Python bindings for GNU Triangulated Surface Library
 LICENSE=	gnu-lgpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	pkg-config
 PYDISTUTILSPKG= yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/03 22:14:53 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/07 11:54:44 asau Exp $
 #
 
 DISTNAME=		imgSeek-0.8.6
@@ -11,8 +11,6 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		shattered@users.sourceforge.net
 HOMEPAGE=		http://www.imgseek.net/
 COMMENT=		Photo collection manager and viewer
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
 PYDISTUTILSPKG=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2009/10/05 03:28:46 schnoebe Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/07 11:54:46 asau Exp $
 
 DISTNAME=		yahoo-transport-0.4.90
 PKGNAME=		${PYPKGPREFIX}-jabber-${DISTNAME}
@@ -9,8 +9,6 @@ MAINTAINER=		eric@cirr.com
 HOMEPAGE=		http://xmpppy.sourceforge.net/
 COMMENT=		Transport connecting Jabber to the Yahoo! IM network
 LICENSE=		gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 #
 # jabberd isn't really a dependency since the transport can run on a

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/04/08 19:09:46 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/07 11:54:42 asau Exp $
 #
 
 DISTNAME=	greenlet-0.3.2
@@ -11,8 +11,6 @@ MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://undefined.org/python/#greenlet
 COMMENT=	Lightweight in-process concurrent programming
 LICENSE=	mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

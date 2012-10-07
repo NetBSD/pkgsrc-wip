@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/04/08 19:09:46 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/07 11:54:28 asau Exp $
 #
 DISTNAME=	python-djvulibre-0.3.3
 EGG_NAME=	${DISTNAME:S/python-/python_/}
@@ -10,8 +10,6 @@ MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://jwilk.net/software/python-djvulibre
 COMMENT=	Python bindings for the DjVuLibre library
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	${PYPKGPREFIX}-pyrex-[0-9]*:../../lang/py-pyrex
 DEPENDS+=	${PYPKGPREFIX}-setuptools-[0-9]*:../../devel/py-setuptools

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/01/24 21:40:34 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 11:54:36 asau Exp $
 #
 
 DISTNAME=	pyformex-0.8.5
@@ -12,8 +12,6 @@ COMMENT=	Tool to generate and manipulate complex 3D geometries
 LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-OpenGL>=3.0.1:../../graphics/py-OpenGL
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	bash
 USE_LANGUAGES=	c c++

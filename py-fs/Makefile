@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/01/30 06:16:26 noud4 Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 11:54:36 asau Exp $
 #
 
 DISTNAME=	fs-0.1.0
@@ -11,8 +11,6 @@ MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://code.google.com/p/pyfilesystem/
 COMMENT=	Creates a common interface to filesystems
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT= user-destdir
 
 USE_LANGUAGES=	# none
 

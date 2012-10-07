@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/03 22:14:52 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/07 11:54:25 asau Exp $
 #
 
 DISTNAME=	django-gitrevision-0.1.4
@@ -15,8 +15,6 @@ LICENSE=	gnu-lgpl-v2.1
 
 DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django
 DEPENDS+=	${PYPKGPREFIX}-git-[0-9]*:../../wip/py-git
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/django-gitrevision-0.1.4
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/08/31 18:11:04 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 11:54:45 asau Exp $
 #
 
 DISTNAME=	iowait-0.1
@@ -10,8 +10,6 @@ MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	https://launchpadlibrarian.net/65588193/
 COMMENT=	Platform-independent module for I/O completion events
 LICENSE=	gnu-lgpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

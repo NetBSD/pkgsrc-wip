@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/02/15 04:09:54 schnoebe Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 11:54:46 asau Exp $
 
 DISTNAME=	punjab-0.13
 PKGNAME=	${PYPKGPREFIX}-jabber-${DISTNAME}
@@ -11,6 +11,7 @@ MAINTAINER=	eric@cirr.com
 HOMEPAGE=	http://code.stanziq.com/punjab
 COMMENT=	HTTP XMMP client interface implementing BOSH/XEP-0124
 
+PKG_DESTDIR_SUPPORT=	none
 #
 # jabberd isn't really a dependency since the transport can run on a
 # different server than the main jabber server (not that many sites will

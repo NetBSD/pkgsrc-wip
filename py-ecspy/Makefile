@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/01/24 21:24:37 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 11:54:30 asau Exp $
 #
 
 DISTNAME=	ecspy-1.0
@@ -12,8 +12,6 @@ COMMENT=	Framework for creating evolutionary computations in Python
 LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-pp>=1.6.0:../../wip/py-pp
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

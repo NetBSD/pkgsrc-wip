@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/04/08 19:09:46 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/07 11:54:42 asau Exp $
 #
 
 DISTNAME=	pygsl-0.9.5
@@ -10,8 +10,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://pygsl.sourceforge.net/
 COMMENT=	Python interface for the GNU scientific library
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG=	yes
 

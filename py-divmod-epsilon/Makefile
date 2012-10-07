@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/10/03 22:14:52 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/07 11:54:21 asau Exp $
 
 EPSILON_VERSION=	0.5.12
 DISTNAME=	Epsilon-${EPSILON_VERSION}
@@ -11,8 +11,6 @@ EXTRACT_SUFX=	.tar.gz
 MAINTAINER=         pkgsrc-wip-users@sourceforge.net
 HOMEPAGE=	http://divmod.org/trac/wiki/DivmodNevow
 COMMENT=	A Python utilities package, most famous for its Time class
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	${PYPKGPREFIX}-twisted>=2.4.0:../../net/py-twisted
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/08/31 18:57:49 helgoman Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 11:54:32 asau Exp $
 #
 
 VERS=				1.1.1
@@ -11,8 +11,6 @@ MAINTAINER=			helgoman@users.sourceforge.net
 HOMEPAGE=			http://www.simplistix.co.uk/software/python/errorhandler
 COMMENT=			Logging framework handler
 LICENSE=			mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

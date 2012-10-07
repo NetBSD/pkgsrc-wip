@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2009/02/14 05:31:24 schnoebe Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/07 11:54:46 asau Exp $
 
 DISTNAME=		pyaim-t-0.8a
 PKGNAME=		${PYPKGPREFIX}-jabber-${DISTNAME:S/py//}
@@ -9,8 +9,6 @@ MASTER_SITES=		http://pyaimt.googlecode.com/files/
 MAINTAINER=		eric@cirr.com
 HOMEPAGE=		http://code.google.com/p/pyaimt/
 COMMENT=		Transport connecting Jabber to the AOL IM network
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 # jabberd isn't really a dependency since the transport can run on a
 # different server than the main jabber server (not that many sites will

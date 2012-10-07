@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/05/09 20:13:21 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 11:54:38 asau Exp $
 #
 
 DISTNAME=	pygccxml-1.0.0
@@ -11,8 +11,6 @@ MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://www.language-binding.net/
 COMMENT=	Python package for easy C++ declarations navigation
 #LICENSE=	boost-licence
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c c++
 PYDISTUTILSPKG=	yes

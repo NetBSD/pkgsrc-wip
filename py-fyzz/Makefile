@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/07/31 13:46:39 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 11:54:38 asau Exp $
 #
 
 DISTNAME=	fyzz-0.1.0
@@ -10,8 +10,6 @@ MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://www.logilab.org/project/fyzz
 COMMENT=	SPARQL parser written in Python using yapps
 LICENSE=	gnu-lgpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 PYDISTUTILSPKG=	yes

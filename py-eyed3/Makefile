@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/03 22:14:52 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/07 11:54:32 asau Exp $
 #
 
 DISTNAME=	eyeD3-0.6.18
@@ -11,8 +11,6 @@ MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://eyed3.nicfit.net/
 COMMENT=	Python module for id3-tags manipulation
 LICENSE=	gnu-lgpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/05/11 22:27:47 outpaddling Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 11:54:45 asau Exp $
 #
 
 DISTNAME=	instant-1.0.0
@@ -11,8 +11,6 @@ HOMEPAGE=	https://launchpad.net/instant
 COMMENT=	Instant inlining of C and C++ code in Python
 
 FETCH_USING=	curl
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 LICENSE=	gnu-lgpl-v3
 

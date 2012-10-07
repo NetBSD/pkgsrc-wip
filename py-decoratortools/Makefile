@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/07/14 13:11:02 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 11:54:20 asau Exp $
 #
 
 DISTNAME=	DecoratorTools-1.8
@@ -10,8 +10,6 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://pypi.python.org/pypi/DecoratorTools
 COMMENT=	Class, function, and metaclass decorators
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

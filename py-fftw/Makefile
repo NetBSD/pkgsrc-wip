@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/01 23:56:16 jihbed Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/07 11:54:33 asau Exp $
 #
 
 DISTNAME=	PyFFTW3-0.2.1
@@ -11,8 +11,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://pypi.python.org/packages/source/P/PyFFTW3/
 COMMENT=	Python bindings to the FFTW3 C-library
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c
 

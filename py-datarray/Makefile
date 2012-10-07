@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/07/31 12:19:28 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 11:54:18 asau Exp $
 #
 
 DISTNAME=	datarray-0.0.3.tar
@@ -12,8 +12,6 @@ HOMEPAGE=	http://github.com/fperez/datarray
 COMMENT=	NumPy arrays with named axes and named indices
 
 DEPENDS+=	${PYPKGPREFIX}-nose>=0.11.3:../../devel/py-nose
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/datarray-0.0.3
 USE_LANGUAGES=	# none

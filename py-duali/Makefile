@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/04/08 19:09:46 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/07 11:54:30 asau Exp $
 #
 
 DISTNAME=	duali-0.1.1
@@ -12,8 +12,6 @@ COMMENT=	The Arabic Spellchecker
 #LICENSE=	modified-bsd
 
 #DEPENDS+=	duali-data>=1.0:../../wip/duali-data
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

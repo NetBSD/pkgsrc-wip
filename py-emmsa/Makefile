@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/05/09 21:20:04 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 11:54:30 asau Exp $
 #
 
 DISTNAME=	EMMSA-0.0.3
@@ -14,8 +14,6 @@ LICENSE=	mit
 DEPENDS+=	${PYPKGPREFIX}-rpy>=2.1.3:../../math/py-rpy
 DEPENDS+=	${PYPKGPREFIX}-Elixir>=0.7.0:../../databases/py-elixir
 DEPENDS+=	${PYPKGPREFIX}-pandas>=0.3.0:../../wip/py-pandas
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/EMMSA-0.0.3
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/05/12 16:07:40 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 11:54:21 asau Exp $
 #
 
 VERS=	1.0-r3067-20090410
@@ -14,8 +14,6 @@ COMMENT=	Crystal structure container and parsers for structure formats
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-pycifrw>=3.1.4:../../wip/py-pycifrw
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

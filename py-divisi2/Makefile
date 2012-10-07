@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/05/03 14:57:53 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 11:54:21 asau Exp $
 #
 
 DISTNAME=	Divisi2-2.0b1.tar
@@ -12,8 +12,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://csc.media.mit.edu/divisi
 COMMENT=	Commonsense Reasoning over Semantic Networks
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=	${WRKDIR}/Divisi2-2.0b1
 

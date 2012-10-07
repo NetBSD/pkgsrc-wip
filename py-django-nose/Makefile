@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/08/16 10:57:50 jihbed Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 11:54:26 asau Exp $
 #
 
 DISTNAME=	django-nose-0.1.2
@@ -14,8 +14,6 @@ LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-nose>=0.11.3:../../devel/py-nose
 DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 

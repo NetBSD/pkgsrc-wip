@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/04/08 19:09:46 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/07 11:54:27 asau Exp $
 #
 
 DISTNAME=	django-tagging-0.3.1
@@ -12,8 +12,6 @@ COMMENT=	Generic tagging application for Django
 LICENSE=	mit
 
 DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG=		yes
 USE_LANGUAGES=	# none

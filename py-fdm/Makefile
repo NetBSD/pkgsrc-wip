@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/03 22:14:53 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/07 11:54:33 asau Exp $
 #
 
 DISTNAME=	pyse-0.3.1
@@ -10,8 +10,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://pyfdm.sourceforge.net
 COMMENT=	Framework for solving PDEs with FDM using Python
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	${PYPKGPREFIX}-Pmw>=1.3.2:../../x11/py-Pmw
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/07/31 12:09:34 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 11:54:46 asau Exp $
 #
 
 DISTNAME=	julio-0.4.0
@@ -10,8 +10,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://www.lifl.fr/~marvie/software/julio.html
 COMMENT=	Python Implementation of the Fractal Specification
 #LICENSE=	# TODO: (see mk/license.mk)
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 PYDISTUTILSPKG=	yes

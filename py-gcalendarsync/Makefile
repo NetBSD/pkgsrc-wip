@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/08/02 09:32:14 jihbed Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/07 11:54:38 asau Exp $
 #
 
 DISTNAME=	googlecalendarsync-0.4
@@ -12,8 +12,6 @@ COMMENT=	Googlecalendarsync is a tool to bidirectional synchronize a local iCal
 
 DEPENDS+=	${PYPKGPREFIX}-vobject-[0-9]*:../../textproc/py-vobject
 DEPENDS+=	${PYPKGPREFIX}-httplib2-[0-9]*:../../wip/py-httplib2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 PYDISTUTILSPKG=		yes

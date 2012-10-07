@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2011/08/12 12:55:13 asau Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/07 11:54:39 asau Exp $
 #
 
 DISTNAME=	gevent-0.13.6
@@ -10,8 +10,6 @@ MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://www.gevent.org/
 COMMENT=	Python-gevent a coroutine-based Python networking library
 LICENSE=	mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c c++
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/08/02 21:39:51 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 11:54:26 asau Exp $
 #
 
 DISTNAME=	django-quran-0.1.tar
@@ -14,8 +14,6 @@ COMMENT=	Quranic models and helpers for use in Django projects
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/django-quran-0.1
 USE_LANGUAGES=	# none
