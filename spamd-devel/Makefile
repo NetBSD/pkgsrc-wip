@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2009/04/09 01:07:31 jsonn Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/07 16:00:10 asau Exp $
 
 DISTNAME=		spamd-20070531
 PKGREVISION=		1
@@ -53,22 +53,22 @@ do-extract:
 	@${CP} -R ${FILESDIR}/src ${WRKSRC}
 
 do-install:
-	${INSTALL_MAN} ${WRKSRC}/share/man/man5/spamd.conf.5 ${PREFIX}/${PKGMANDIR}/man5
-	${INSTALL_MAN} ${WRKSRC}/share/man/man5/spamd.conf.cat5 ${PREFIX}/${PKGMANDIR}/cat5/spamd.conf.0
-	${INSTALL_MAN} ${WRKSRC}/libexec/spamd/spamd.8 ${PREFIX}/${PKGMANDIR}/man8
-	${INSTALL_MAN} ${WRKSRC}/libexec/spamd/spamd.cat8 ${PREFIX}/${PKGMANDIR}/cat8/spamd.0
-	${INSTALL_MAN} ${WRKSRC}/libexec/spamd-setup/spamd-setup.8 ${PREFIX}/${PKGMANDIR}/man8
-	${INSTALL_MAN} ${WRKSRC}/libexec/spamd-setup/spamd-setup.cat8 ${PREFIX}/${PKGMANDIR}/cat8/spamd-setup.0
-	${INSTALL_MAN} ${WRKSRC}/usr.sbin/spamdb/spamdb.8 ${PREFIX}/${PKGMANDIR}/man8
-	${INSTALL_MAN} ${WRKSRC}/usr.sbin/spamdb/spamdb.cat8 ${PREFIX}/${PKGMANDIR}/cat8/spamdb.0
-#	${INSTALL_MAN} ${WRKSRC}/libexec/spamlogd/spamlogd.8 ${PREFIX}/${PKGMANDIR}/man8
-#	${INSTALL_MAN} ${WRKSRC}/libexec/spamlogd/spamlogd.cat8 ${PREFIX}/${PKGMANDIR}/cat8/spamlogd.0
+	${INSTALL_MAN} ${WRKSRC}/share/man/man5/spamd.conf.5 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
+	${INSTALL_MAN} ${WRKSRC}/share/man/man5/spamd.conf.cat5 ${DESTDIR}${PREFIX}/${PKGMANDIR}/cat5/spamd.conf.0
+	${INSTALL_MAN} ${WRKSRC}/libexec/spamd/spamd.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
+	${INSTALL_MAN} ${WRKSRC}/libexec/spamd/spamd.cat8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/cat8/spamd.0
+	${INSTALL_MAN} ${WRKSRC}/libexec/spamd-setup/spamd-setup.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
+	${INSTALL_MAN} ${WRKSRC}/libexec/spamd-setup/spamd-setup.cat8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/cat8/spamd-setup.0
+	${INSTALL_MAN} ${WRKSRC}/usr.sbin/spamdb/spamdb.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
+	${INSTALL_MAN} ${WRKSRC}/usr.sbin/spamdb/spamdb.cat8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/cat8/spamdb.0
+#	${INSTALL_MAN} ${WRKSRC}/libexec/spamlogd/spamlogd.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
+#	${INSTALL_MAN} ${WRKSRC}/libexec/spamlogd/spamlogd.cat8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/cat8/spamlogd.0
 
-	${INSTALL_PROGRAM} ${WRKSRC}/libexec/spamd-setup/spamd-setup ${PREFIX}/libexec
-	${INSTALL_PROGRAM} ${WRKSRC}/libexec/spamd/spamd ${PREFIX}/libexec
-	${INSTALL_PROGRAM} ${WRKSRC}/usr.sbin/spamdb/spamdb ${PREFIX}/sbin
-#	${INSTALL_PROGRAM} ${WRKSRC}/libexec/spamlogd/spamlogd ${PREFIX}/libexec
-	${INSTALL_DATA} ${WRKSRC}/etc/mail/spamd.conf ${PREFIX}/share/examples/spamd
+	${INSTALL_PROGRAM} ${WRKSRC}/libexec/spamd-setup/spamd-setup ${DESTDIR}${PREFIX}/libexec
+	${INSTALL_PROGRAM} ${WRKSRC}/libexec/spamd/spamd ${DESTDIR}${PREFIX}/libexec
+	${INSTALL_PROGRAM} ${WRKSRC}/usr.sbin/spamdb/spamdb ${DESTDIR}${PREFIX}/sbin
+#	${INSTALL_PROGRAM} ${WRKSRC}/libexec/spamlogd/spamlogd ${DESTDIR}${PREFIX}/libexec
+	${INSTALL_DATA} ${WRKSRC}/etc/mail/spamd.conf ${DESTDIR}${PREFIX}/share/examples/spamd
 
 .include "../../mk/pf.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

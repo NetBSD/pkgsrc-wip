@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/12/24 08:30:43 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/07 16:07:54 asau Exp $
 #
 
 DISTNAME=	ssu-0.8
@@ -18,10 +18,12 @@ USE_TOOLS+=	perl
 
 do-build:
 
+INSTALLATION_DIRS=	bin
+
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/ss ${PREFIX}/bin
-	${INSTALL_SCRIPT} ${WRKSRC}/ssserv ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/ssu
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/ssu
+	${INSTALL_SCRIPT} ${WRKSRC}/ss ${DESTDIR}${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/ssserv ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/ssu
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/ssu
 
 .include "../../mk/bsd.pkg.mk"

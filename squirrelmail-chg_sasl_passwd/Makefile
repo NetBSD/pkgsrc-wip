@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/10/29 08:32:56 shattered Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/07 16:04:27 asau Exp $
 #
 
 DISTNAME=	chg_sasl_passwd-1.4-1.4.x
@@ -30,7 +30,7 @@ do-build:
 
 do-install:
 	cd ${WRKDIR} && ${TAR} -cf - ${DISTNAME:C/-.*$//} | \
-		${TAR} -xf - -C ${SMDIR}/plugins
+		${TAR} -xf - -C ${DESTDIR}${SMDIR}/plugins
 
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	post-patch
