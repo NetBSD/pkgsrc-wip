@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/01/29 10:54:59 tnn2 Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/07 16:45:13 asau Exp $
 #
 
 PKGNAME=	texlive-texmf-minimal-${TEXLIVE_VERSION}
@@ -9,6 +9,8 @@ MASTER_SITES=	http://students.dec.bournemouth.ac.uk/ebarrett/texlive/distfiles/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tug.org/texlive/
 COMMENT=	TeXLive texmf, minimal version from Edd Barret's OpenBSD repository
+
+PKG_DESTDIR_SUPPORT=	destdir
 
 NO_BUILD=	yes
 
@@ -34,10 +36,10 @@ pre-install:
 	cd ${WRKSRC}/texmf-dist/tex/latex/bbold/ && mv -f Ubbold.fd ubbold.fd
 
 do-install:
-	cp -R ${WRKSRC}/texmf ${PREFIX}/share
-	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/texmf
-	cp -R ${WRKSRC}/texmf-dist ${PREFIX}/share
-	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/texmf-dist
+	cp -R ${WRKSRC}/texmf ${DESTDIR}${PREFIX}/share
+	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${DESTDIR}${PREFIX}/share/texmf
+	cp -R ${WRKSRC}/texmf-dist ${DESTDIR}${PREFIX}/share
+	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${DESTDIR}${PREFIX}/share/texmf-dist
 
 .include "../../wip/texlive/Makefile.common"
 

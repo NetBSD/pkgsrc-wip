@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2009/07/22 04:16:53 jessepeterson Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/07 16:41:34 asau Exp $
 #
 
 DISTNAME=	tenshi-0.11
@@ -28,8 +28,8 @@ SUBST_SED.tenshi+=	-e 's,/etc/tenshi/tenshi.conf,${PKG_SYSCONFDIR}/tenshi.conf,g
 SUBST_SED.tenshi+=	-e 's,/var/run/tenshi.pid,${VARBASE}/run/tenshi.pid,g'
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/tenshi ${PREFIX}/bin/tenshi
-	${INSTALL_MAN} ${WRKSRC}/tenshi.8 ${PREFIX}/${PKGMANDIR}/man8/tenshi.8
-	${INSTALL_DATA} ${WRKSRC}/tenshi.conf ${PREFIX}/${EGDIR}/tenshi.conf
+	${INSTALL_SCRIPT} ${WRKSRC}/tenshi ${DESTDIR}${PREFIX}/bin/tenshi
+	${INSTALL_MAN} ${WRKSRC}/tenshi.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/tenshi.8
+	${INSTALL_DATA} ${WRKSRC}/tenshi.conf ${DESTDIR}${PREFIX}/${EGDIR}/tenshi.conf
 
 .include "../../mk/bsd.pkg.mk"
