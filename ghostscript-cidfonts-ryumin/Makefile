@@ -1,21 +1,12 @@
-# $NetBSD: Makefile,v 1.8 2012/09/29 00:50:34 asau Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/07 13:10:30 makoto Exp $
 
 DISTNAME=	ghostscript-cidfonts-ryumin-${GS_VERSION}
-# Please note  following is a must when building ghostscript
-# for this package to work
-#    PKGOPTION.ghostscipt+= disable-compile-inits
-LICENSE=	generic-nonlicense
-
-CATEGORIES=	print
 DISTFILES=	# empty
-
-CONFLICTS+=	ghostscript-[0-7]*
-CONFLICTS+=	ghostscript-8.[0-6]*
-CONFLICTS+=	ghostscript-8.71
-CONFLICTS+=	ghostscript-8.71nb[1-7]
+CATEGORIES=	fonts
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Enable Ryumin-Light and GothicBBB for ghostscript
+LICENSE=	generic-nonlicense
 
 .include	"../../wip/ghostscript/Makefile.common"
 
@@ -24,7 +15,7 @@ WRKSRC=			${WRKDIR}/gcr
 INSTALLATION_DIRS+=	${GS_RESOURCEDIR}/Font
 INSTALLATION_DIRS+=	${GS_RESOURCEDIR}/Init
 
-DEPENDS+=	ghostscript>=8.71.nb8:../../wip/ghostscript
+DEPENDS+=	ghostscript>=9.05:../../wip/ghostscript
 DEPENDS+=	ghostscript-cidfonts>=20000901nb3:../../wip/ghostscript-cidfonts
 BUILD_DEFS+=	GS_CIDFMAP
 # used in options.mk to switch adobe or ttf
@@ -63,5 +54,10 @@ NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
 
 .include "../../wip/ghostscript/buildlink3.mk"
+
+.if empty(PKG_BUILD_OPTIONS.ghostscript:Mdisable-compile-inits)
+PKG_FAIL_REASON+=	'You need to set PKG_OPTIONS.ghostscript+= disable-compile-inits, at its compile time.'
+.endif
+
 #.include "../../fonts/adobe-cidfonts/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
