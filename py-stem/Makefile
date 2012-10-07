@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/05/19 16:51:34 ykomatsu Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/07 13:27:23 asau Exp $
 #
 
 DISTNAME=		PyStem-1.0.4
@@ -23,8 +23,8 @@ do-build:
 	cd ${WRKSRC} && ${CC} ${LDFLAGS} -shared -o _pyStem.so *.o
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/_pyStem.so ${PREFIX}/${PYSITELIB}/_pyStem.so
-	${INSTALL_DATA} ${WRKSRC}/Stem.py ${PREFIX}/${PYSITELIB}/Stem.py
+	${INSTALL_DATA} ${WRKSRC}/_pyStem.so ${DESTDIR}${PREFIX}/${PYSITELIB}/_pyStem.so
+	${INSTALL_DATA} ${WRKSRC}/Stem.py ${DESTDIR}${PREFIX}/${PYSITELIB}/Stem.py
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
