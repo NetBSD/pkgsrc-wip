@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2010/06/13 22:47:14 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/07 13:45:41 asau Exp $
 #
 
 DISTNAME=		visionegg-contrib-0.9.3
@@ -25,10 +25,10 @@ PY_VC_FILES_LABVIEW=	"Edit Grating C.vi" \
 			"Waveclip CA to python.vi"
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/VisionEgg-${PYVERSSUFFIX}/labview
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/VisionEgg-${PYVERSSUFFIX}/labview
 	for a in ${PY_VC_FILES_LABVIEW}; do \
 		${INSTALL_DATA} "${WRKSRC}/labview/$$a" \
-			"${PREFIX}/share/VisionEgg-${PYVERSSUFFIX}/labview/$$a"; \
+			"${DESTDIR}${PREFIX}/share/VisionEgg-${PYVERSSUFFIX}/labview/$$a"; \
 	done
 
 .include "../../wip/py-visionegg/buildlink3.mk"
