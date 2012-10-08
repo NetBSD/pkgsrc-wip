@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/09/27 15:13:01 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/08 14:00:39 asau Exp $
 #
 
 DISTNAME=	blaze-textual-0.2.0.4
@@ -8,7 +8,6 @@ MAINTAINER=	pho@cielonegro.org
 COMMENT=	Fast rendering of common datatypes
 LICENSE=	modified-bsd
 
-PKG_DESTDIR_SUPPORT= user-destdir
 .include "options.mk"
 
 .include "../../wip/mk/haskell.mk"

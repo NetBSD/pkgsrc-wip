@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/10/03 15:09:52 asau Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/08 14:00:39 asau Exp $
 #
 
 DISTNAME=	mawk-1.3.4-20100625
@@ -15,7 +15,6 @@ TEST_TARGET=		mawk_test fpe_test
 
 GNU_CONFIGURE=		yes
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_JOBS_SAFE=		no
 
 .include "../../mk/bsd.prefs.mk"

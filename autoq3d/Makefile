@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/09/26 23:15:55 othyro Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/08 14:00:38 asau Exp $
 #
 
 DISTNAME=	AutoQ3DCommunity1-40qt4source
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.autoq3d.com/
 COMMENT=	Application for computer aided drafting in two and dimensions
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/AutoQ3DCommunity1-40qt4source
 USE_LANGUAGES=		c++

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2011/10/09 10:05:43 cheusov Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/08 14:00:39 asau Exp $
 
 DISTNAME=	xmms-skins-0.10
 CATEGORIES=	meta-pkgs audio
@@ -8,8 +8,6 @@ DISTFILES=	# empty
 MAINTAINER=	cheusov@NetBSD.org
 HOMEPAGE=	http://www.xmms.org/skins.php
 COMMENT=	Skins for XMMS
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 SKINS=		AdamAmp Chaos CherryBest Cobalt CoolBlue Cracked Eclipse \
 		Fire HelixSawfish LinuxDotCom m2n MarbleX maXMMS nixamp \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/09/24 17:35:29 asau Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/08 14:00:38 asau Exp $
 
 DISTNAME=	chems-0x04
 CATEGORIES=	www
@@ -9,8 +9,6 @@ MAINTAINER=	clamiax@gmail.com
 HOMEPAGE=	http://chems.sourceforge.net/
 COMMENT=	The geekest content helper management system
 LICENSE=	gnu-gpl-v3
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CONFIGURE=	yes
 NO_BUILD=	yes

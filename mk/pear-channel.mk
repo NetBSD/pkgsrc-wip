@@ -1,4 +1,4 @@
-# $NetBSD: pear-channel.mk,v 1.2 2010/08/29 05:53:09 obache Exp $
+# $NetBSD: pear-channel.mk,v 1.3 2012/10/08 14:00:39 asau Exp $
 #
 # PEAR channel package templates
 #
@@ -19,8 +19,6 @@ EXTRACT_SUFX?=		# empty
 
 HOMEPAGE?=		http://${PEAR_CHANNEL}/
 COMMENT?=		Adds ${PEAR_CHANNEL} channel to PEAR
-
-PKG_DESTDIR_SUPPORT?=	user-destdir
 
 DEPENDS+=		${PHP_PKG_PREFIX}-pear-[0-9]*:../../lang/pear
 

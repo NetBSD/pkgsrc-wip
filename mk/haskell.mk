@@ -1,4 +1,4 @@
-# $NetBSD: haskell.mk,v 1.18 2011/11/21 19:08:57 absd Exp $
+# $NetBSD: haskell.mk,v 1.19 2012/10/08 14:00:39 asau Exp $
 #
 # This Makefile fragment handles Haskell Cabal packages.
 # See: http://www.haskell.org/cabal/
@@ -106,10 +106,6 @@ HASKELL_COMPILER?=	${HASKELL_TYPE}
 # Declare HASKELL_COMPILER as one of BUILD_DEFS variables. See
 # ../../mk/misc/show.mk
 BUILD_DEFS+=	HASKELL_COMPILER
-
-
-# Cabal packages usually support DESTDIR with no root access.
-PKG_DESTDIR_SUPPORT?=	user-destdir
 
 
 # Declarations for ../../mk/misc/show.mk

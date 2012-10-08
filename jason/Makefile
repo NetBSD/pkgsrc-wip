@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2010/09/02 12:35:35 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/08 14:00:39 asau Exp $
 #
 
 DISTNAME=	Jason-1.3.3
@@ -11,8 +11,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://jason.sourceforge.net/Jason/Jason.html
 COMMENT=	Java-based interpreter for an extended version of AgentSpeak
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_JAVA=	run
 USE_JAVA2=	yes
