@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.15 2012/10/07 08:07:38 makoto Exp $
+$NetBSD: distinfo,v 1.16 2012/10/08 01:11:47 makoto Exp $
 
-SHA1 (ghostscript-9.05.tar.bz2) = 1a54a846e90ae95b5307f4f0459d044b9597d8cf
-RMD160 (ghostscript-9.05.tar.bz2) = 27935f60083b788b2793b19ee42f3663082ba084
-Size (ghostscript-9.05.tar.bz2) = 28279634 bytes
+SHA1 (ghostscript-9.06.tar.bz2) = 4c1c2b4cddd16d86b21f36ad4fc15f6100162238
+RMD160 (ghostscript-9.06.tar.bz2) = 11ef74cf783ec5f7cde0ceaaf2823a1f62fb4d1d
+Size (ghostscript-9.06.tar.bz2) = 29246039 bytes
 SHA1 (patch-CVE-2012-4405) = 1dcb4cfeceb366c144e0a1337c6ccc2d8e13e4ca
 SHA1 (patch-af) = 77683ee52c886ecc0efe23e2b62fca533a187a09
 SHA1 (patch-ah) = 7a20008f9b3974cd93a4398958692a2df286919a
@@ -13,5 +13,4 @@ SHA1 (patch-an) = 22ed9965aec5d540adb31334d8dd9e05eab8e0c2
 SHA1 (patch-base_gdevpng.c) = 24120e26bd2a846f6d4c8ab9753dfe91f151343f
 SHA1 (patch-base_gserrors_h) = fde64bd096a6e6f94005c8352a6295df06c19bae
 SHA1 (patch-configure.ac) = 450053cef6948c638bf8f72cfcba7391edb33600
-SHA1 (patch-freetype_include_freetype_internal_t1types_h) = 2f56641fb51555b83fd313534bd618764365aee0
-SHA1 (patch-openjpeg_libopenjpeg_opj_malloc_h) = 383db0c5909b9d7b33f8da341d82159dbf8594b5
+SHA1 (patch-openjpeg_libopenjpeg_opj_malloc_h) = 24f15c55cd7961afc1254f6c4bccd6d0c2a5e737
