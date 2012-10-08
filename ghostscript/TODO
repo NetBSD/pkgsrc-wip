@@ -1,4 +1,9 @@
-$NetBSD: TODO,v 1.4 2012/04/18 15:28:46 makoto Exp $
+$NetBSD: TODO,v 1.5 2012/10/08 01:54:48 makoto Exp $
+- Add comments on patch-a{h,l}
+  patch-ah seems to be needed on native xorg build.
+ (See cvs log 1.3 of print/ghostscript/patches/patch-ah)
+  At least modular xorg builds fine without patch-ah.
+
 - Review patches/patch-af carefully for Darwin
   (Actually Mac OS X has problem making libgs.9.05.dynlib)
 
