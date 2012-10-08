@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4910 2012/10/07 20:24:12 asau Exp $
+# $Id: Makefile,v 1.4911 2012/10/08 13:00:27 ryo-on Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2241,6 +2241,7 @@ SUBDIR+=	pt-ttf
 SUBDIR+=	pts
 SUBDIR+=	ptunnel
 SUBDIR+=	pudb
+SUBDIR+=	pulseaudio
 SUBDIR+=	pure
 SUBDIR+=	purple-translate
 SUBDIR+=	pxlib
