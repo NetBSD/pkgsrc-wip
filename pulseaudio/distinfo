@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.4 2012/10/08 12:58:37 ryo-on Exp $
+
+SHA1 (pulseaudio-2.1.tar.xz) = 56b4ad9207ea3aec0ad1b8be4b55793b426a4f01
+RMD160 (pulseaudio-2.1.tar.xz) = 87f6051bbbe59c26e505a9765f388d3ee4d3a485
+Size (pulseaudio-2.1.tar.xz) = 1355004 bytes
+SHA1 (patch-configure) = 2e07448e6f243185ec049056993cf680c6c1bb4d
+SHA1 (patch-src_Makefile.in) = 9f1ba78d232cc56c69009245f2eaa6d6c6cf349c
+SHA1 (patch-src_modules_module-hal-detect.c) = 4bec2108b538cbfaec4ba6c9513be41d79c5c51a
