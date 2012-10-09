@@ -1,4 +1,12 @@
-$NetBSD: TODO,v 1.5 2012/10/08 01:54:48 makoto Exp $
+$NetBSD: TODO,v 1.6 2012/10/09 14:50:53 makoto Exp $
+- Check X11_TYPE=native/modular and 6.0_RC2 and 5.1.2
+
+- In some case, probably because x11-links behavior,
+  Following line is needed in /etc/mk.conf
+  DEPENDS_TARGET=         package-install
+
+- Update configure.ac patch
+
 - Add comments on patch-a{h,l}
   patch-ah seems to be needed on native xorg build.
  (See cvs log 1.3 of print/ghostscript/patches/patch-ah)
