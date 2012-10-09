@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4911 2012/10/08 13:00:27 ryo-on Exp $
+# $Id: Makefile,v 1.4912 2012/10/09 22:30:10 pettai Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2907,7 +2907,6 @@ SUBDIR+=	sipwitch
 SUBDIR+=	sis
 SUBDIR+=	siscone
 SUBDIR+=	sjg-mk-files
-SUBDIR+=	sks
 SUBDIR+=	slackpkg2pkgsrc
 SUBDIR+=	slashem
 SUBDIR+=	slate
