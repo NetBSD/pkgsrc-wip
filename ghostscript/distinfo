@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.17 2012/10/09 14:50:53 makoto Exp $
+$NetBSD: distinfo,v 1.18 2012/10/10 01:18:14 makoto Exp $
 
 SHA1 (ghostscript-9.06.tar.bz2) = 4c1c2b4cddd16d86b21f36ad4fc15f6100162238
 RMD160 (ghostscript-9.06.tar.bz2) = 11ef74cf783ec5f7cde0ceaaf2823a1f62fb4d1d
 Size (ghostscript-9.06.tar.bz2) = 29246039 bytes
 SHA1 (patch-CVE-2012-4405) = 1dcb4cfeceb366c144e0a1337c6ccc2d8e13e4ca
-SHA1 (patch-af) = 77683ee52c886ecc0efe23e2b62fca533a187a09
+SHA1 (patch-af) = 79af4d253001f879f1b5d3ef93584ae7300361de
 SHA1 (patch-ah) = 35d6e3a4623bb28e59526f61a3062874cc363429
 SHA1 (patch-ai) = 8a3de7e097d3d893a0de4ea2936acf192f770c65
 SHA1 (patch-aj) = 620d921210b5c0efec0a84e33bc416e4ab4bd11c
