@@ -1,5 +1,10 @@
-$NetBSD: TODO,v 1.6 2012/10/09 14:50:53 makoto Exp $
+$NetBSD: TODO,v 1.7 2012/10/10 05:27:07 makoto Exp $
+- Report to upstream the patches
+
 - Check X11_TYPE=native/modular and 6.0_RC2 and 5.1.2
+           5.1.2  6.0_RC2  Darwin 10.6.
+   native    o      o      o
+   modular          o
 
 - In some case, probably because x11-links behavior,
   Following line is needed in /etc/mk.conf
@@ -12,19 +17,8 @@ $NetBSD: TODO,v 1.6 2012/10/09 14:50:53 makoto Exp $
  (See cvs log 1.3 of print/ghostscript/patches/patch-ah)
   At least modular xorg builds fine without patch-ah.
 
-- Review patches/patch-af carefully for Darwin
-  (Actually Mac OS X has problem making libgs.9.05.dynlib)
-
 - Build on DragonFly BSD is not tested
   for the patch-openjpeg_libopenjpeg_opj_malloc_h
-
-- pdftoraster seems gone compared to 9.0.4, (with cups only)
-  -${PLIST.cups}libexec/cups/filter/pdftoraster
-  -${PLIST.cups}share/examples/cups/pdftoraster.convs
-  But is it intentional or not: unknown yet (to me, mef@)
-  Having tried to add pdf with FEATURE_DEV as
-    patches/patch-base_unix-gcc.mak
-  But no luck yet.
 
 - To fix a problem with one particular combination:
 
