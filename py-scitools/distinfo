@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/01/19 14:38:34 jihbed Exp $
+$NetBSD: distinfo,v 1.2 2012/10/11 14:25:00 jihbed Exp $
 
-SHA1 (scitools-0.7.tar.gz) = 053b41674a91a58ff5540eeed352a2e2e5cbd858
-RMD160 (scitools-0.7.tar.gz) = 9559a553386ebf0dc3821ba8c20e1dc8faff04c9
-Size (scitools-0.7.tar.gz) = 3326922 bytes
-SHA1 (patch-aa) = 3868170b8f24ae4898e68ea2e362ddf185d576e4
+SHA1 (scitools-0.9.0.tar.gz) = 68f774a5580689dbecc95cd4a4dc28f56dfeca01
+RMD160 (scitools-0.9.0.tar.gz) = c0c57bc2f248ca1721e66210c00df4241a7dd4ac
+Size (scitools-0.9.0.tar.gz) = 16419259 bytes
+SHA1 (patch-setup.py) = 1f79fa957abe8eb4922b09fd7e522ee32ef763fb

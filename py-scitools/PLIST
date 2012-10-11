@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.3 2012/05/11 12:47:08 noud4 Exp $
-bin/pyreport${PYVERSSUFFIX}
-bin/scitools${PYVERSSUFFIX}
-${PYSITELIB}/${EGG_INFODIR}
+@comment $NetBSD: PLIST,v 1.4 2012/10/11 14:25:00 jihbed Exp $
+bin/scitools2.7
+${PYSITELIB}/SciTools-${PKGVERSION}-py2.7.egg-info
 ${PYSITELIB}/scitools/BoxField.py
 ${PYSITELIB}/scitools/BoxField.pyc
 ${PYSITELIB}/scitools/BoxField.pyo
@@ -17,9 +16,15 @@ ${PYSITELIB}/scitools/FloatComparison.pyo
 ${PYSITELIB}/scitools/Lumpy.py
 ${PYSITELIB}/scitools/Lumpy.pyc
 ${PYSITELIB}/scitools/Lumpy.pyo
+${PYSITELIB}/scitools/MovingPlotWindow.py
+${PYSITELIB}/scitools/MovingPlotWindow.pyc
+${PYSITELIB}/scitools/MovingPlotWindow.pyo
 ${PYSITELIB}/scitools/NumPyDB.py
 ${PYSITELIB}/scitools/NumPyDB.pyc
 ${PYSITELIB}/scitools/NumPyDB.pyo
+${PYSITELIB}/scitools/ODE.py
+${PYSITELIB}/scitools/ODE.pyc
+${PYSITELIB}/scitools/ODE.pyo
 ${PYSITELIB}/scitools/PrmDictBase.py
 ${PYSITELIB}/scitools/PrmDictBase.pyc
 ${PYSITELIB}/scitools/PrmDictBase.pyo
@@ -41,12 +46,12 @@ ${PYSITELIB}/scitools/__init__.pyo
 ${PYSITELIB}/scitools/_numpyload.py
 ${PYSITELIB}/scitools/_numpyload.pyc
 ${PYSITELIB}/scitools/_numpyload.pyo
-${PYSITELIB}/scitools/_update.py
-${PYSITELIB}/scitools/_update.pyc
-${PYSITELIB}/scitools/_update.pyo
 ${PYSITELIB}/scitools/aplotter.py
 ${PYSITELIB}/scitools/aplotter.pyc
 ${PYSITELIB}/scitools/aplotter.pyo
+${PYSITELIB}/scitools/avplotter.py
+${PYSITELIB}/scitools/avplotter.pyc
+${PYSITELIB}/scitools/avplotter.pyo
 ${PYSITELIB}/scitools/basics.py
 ${PYSITELIB}/scitools/basics.pyc
 ${PYSITELIB}/scitools/basics.pyo
@@ -125,6 +130,9 @@ ${PYSITELIB}/scitools/filetable.pyo
 ${PYSITELIB}/scitools/globaldata.py
 ${PYSITELIB}/scitools/globaldata.pyc
 ${PYSITELIB}/scitools/globaldata.pyo
+${PYSITELIB}/scitools/materials.py
+${PYSITELIB}/scitools/materials.pyc
+${PYSITELIB}/scitools/materials.pyo
 ${PYSITELIB}/scitools/misc.py
 ${PYSITELIB}/scitools/misc.pyc
 ${PYSITELIB}/scitools/misc.pyo
@@ -146,6 +154,27 @@ ${PYSITELIB}/scitools/numpyutils.pyo
 ${PYSITELIB}/scitools/pprint2.py
 ${PYSITELIB}/scitools/pprint2.pyc
 ${PYSITELIB}/scitools/pprint2.pyo
+${PYSITELIB}/scitools/pyreport/__init__.py
+${PYSITELIB}/scitools/pyreport/__init__.pyc
+${PYSITELIB}/scitools/pyreport/__init__.pyo
+${PYSITELIB}/scitools/pyreport/code_hasher.py
+${PYSITELIB}/scitools/pyreport/code_hasher.pyc
+${PYSITELIB}/scitools/pyreport/code_hasher.pyo
+${PYSITELIB}/scitools/pyreport/main.py
+${PYSITELIB}/scitools/pyreport/main.pyc
+${PYSITELIB}/scitools/pyreport/main.pyo
+${PYSITELIB}/scitools/pyreport/options.py
+${PYSITELIB}/scitools/pyreport/options.pyc
+${PYSITELIB}/scitools/pyreport/options.pyo
+${PYSITELIB}/scitools/pyreport/pyreport.py
+${PYSITELIB}/scitools/pyreport/pyreport.pyc
+${PYSITELIB}/scitools/pyreport/pyreport.pyo
+${PYSITELIB}/scitools/pyreport/python_parser.py
+${PYSITELIB}/scitools/pyreport/python_parser.pyc
+${PYSITELIB}/scitools/pyreport/python_parser.pyo
+${PYSITELIB}/scitools/pyreport/version.py
+${PYSITELIB}/scitools/pyreport/version.pyc
+${PYSITELIB}/scitools/pyreport/version.pyo
 ${PYSITELIB}/scitools/redirect_io.py
 ${PYSITELIB}/scitools/redirect_io.pyc
 ${PYSITELIB}/scitools/redirect_io.pyo
@@ -156,5 +185,4 @@ ${PYSITELIB}/scitools/sound.pyo
 ${PYSITELIB}/scitools/std.py
 ${PYSITELIB}/scitools/std.pyc
 ${PYSITELIB}/scitools/std.pyo
-man/man1/pyreport.1
 man/man1/scitools.1
