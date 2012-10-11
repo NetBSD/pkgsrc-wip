@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/10/08 11:45:16 makoto Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/11 13:14:37 makoto Exp $
 
 DISTNAME=	ghostscript-${GS_VERSION}
 CATEGORIES=	print
@@ -18,8 +18,10 @@ LICENSE=	gnu-gpl-v3
 DEPENDS+=		ghostscript-fonts>=6.0:../../fonts/ghostscript-fonts
 
 CONFLICTS+=		ghostscript-afpl-[0-9]*
-CONFLICTS+=		ghostscript-esp{,-nox11}-[0-9]*
-CONFLICTS+=		ghostscript-gnu{,-nox11,-x11}-[0-9]*
+CONFLICTS+=		ghostscript-esp-[0-9]*
+CONFLICTS+=		ghostscript-esp-nox11-[0-9]*
+CONFLICTS+=		ghostscript-gnu-x11-[0-9]*
+CONFLICTS+=		ghostscript-gnu-nox11-[0-9]*
 
 USE_TOOLS+=		gmake perl:run lex pkg-config
 USE_LANGUAGES+=		c c++
