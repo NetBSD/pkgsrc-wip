@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/08 12:58:37 ryo-on Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/11 15:32:49 ryo-on Exp $
 #
 
 DISTNAME=	pulseaudio-2.1
@@ -21,6 +21,11 @@ USE_LANGUAGES=	c c++
 .if ${OPSYS} == "NetBSD"
 CONFIGURE_ARGS+=	--disable-default-build-tests
 .endif
+.if ${OPSYS} == "NetBSD" && !empty(OS_VERSION:M[45].*)
+# broken test for TLS
+CONFIGURE_ENV+=		ac_cv_tls=none
+.endif
+
 
 CONFIGURE_ENV+=		EGDIR=${EGDIR}
 MAKE_ENV+=		EGDIR=${EGDIR}
