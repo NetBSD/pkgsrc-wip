@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4913 2012/10/11 18:50:12 kristerw Exp $
+# $Id: Makefile,v 1.4914 2012/10/11 18:53:25 kristerw Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2365,6 +2365,7 @@ SUBDIR+=	py-django-nose
 SUBDIR+=	py-django-quran
 SUBDIR+=	py-django-tagging
 SUBDIR+=	py-django-uuidfield
+SUBDIR+=	py-djangopypi2
 SUBDIR+=	py-djvulibre
 SUBDIR+=	py-djvusmooth
 SUBDIR+=	py-dolo
@@ -2429,6 +2430,7 @@ SUBDIR+=	py-instant
 SUBDIR+=	py-iowait
 SUBDIR+=	py-ipaddr
 SUBDIR+=	py-ipython
+SUBDIR+=	py-isodate
 SUBDIR+=	py-jabber-aimt
 SUBDIR+=	py-jabber-icqt
 SUBDIR+=	py-jabber-msnt
@@ -2523,6 +2525,7 @@ SUBDIR+=	py-peak-rules
 SUBDIR+=	py-pebl
 SUBDIR+=	py-pep8
 SUBDIR+=	py-piquant
+SUBDIR+=	py-pkginfo
 SUBDIR+=	py-plex
 SUBDIR+=	py-plink
 SUBDIR+=	py-plucker
@@ -2581,6 +2584,7 @@ SUBDIR+=	py-qutrub
 SUBDIR+=	py-rcsparse
 SUBDIR+=	py-rdf
 SUBDIR+=	py-rdflib
+SUBDIR+=	py-rdflib-django
 SUBDIR+=	py-regex
 SUBDIR+=	py-remctl
 SUBDIR+=	py-report
