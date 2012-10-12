@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2012/10/12 09:41:55 thomasklausner Exp $
+$NetBSD: distinfo,v 1.4 2012/10/12 10:55:56 thomasklausner Exp $
 
-SHA1 (auto-complete-1.3.1.tar.bz2) = c38c1d35ac25f72e16eaf30af1dabe00e2690147
-RMD160 (auto-complete-1.3.1.tar.bz2) = c70324566f274fe6cedcea5d5d34bf009c3d54ac
-Size (auto-complete-1.3.1.tar.bz2) = 155081 bytes
+SHA1 (auto-complete-1.3.1a.tar.gz) = 0b993654eb0daf20953eb25210d30a422b313803
+RMD160 (auto-complete-1.3.1a.tar.gz) = b680a0de35bc18e4225486b1272ca325ad8c95c4
+Size (auto-complete-1.3.1a.tar.gz) = 702074 bytes
 SHA1 (patch-require-help-mode) = 5eb2eb0ef43cec9714f9abeba690f688ed2e8dec
