@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4914 2012/10/11 18:53:25 kristerw Exp $
+# $Id: Makefile,v 1.4915 2012/10/12 11:17:23 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -179,6 +179,7 @@ SUBDIR+=	audacity-devel
 SUBDIR+=	audiere
 SUBDIR+=	audio-mml
 SUBDIR+=	audit-system
+SUBDIR+=	auto-complete-current
 SUBDIR+=	auto-complete-mode
 SUBDIR+=	autoproject
 SUBDIR+=	autopsy
@@ -667,6 +668,7 @@ SUBDIR+=	fuse-google-drive
 SUBDIR+=	fuse-smbfs
 SUBDIR+=	fusefs-btfs
 SUBDIR+=	fusefs-sshfs
+SUBDIR+=	fuzzy-el-current
 SUBDIR+=	fvcom2
 SUBDIR+=	fvcool
 SUBDIR+=	fvwm-crystal
@@ -2215,6 +2217,7 @@ SUBDIR+=	polylib
 SUBDIR+=	polymul
 SUBDIR+=	pop-before-smtp
 SUBDIR+=	pop3.proxy
+SUBDIR+=	popup-el-current
 SUBDIR+=	postal2-mpdemo-bin
 SUBDIR+=	postoffice
 SUBDIR+=	postr
