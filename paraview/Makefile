@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/04 19:44:06 asau Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/12 10:45:48 asau Exp $
 #
 
 PKGNAME=	paraview-3.12.0
@@ -13,7 +13,7 @@ LICENSE=	paraview-license
 
 USE_LANGUAGES=		c c++ fortran
 USE_TOOLS+=		gmake
-DEPENDS+=		qt4-sqlite3:../../x11/qt4-sqlite3
+DEPENDS+=		qt4-sqlite3>=4.0:../../x11/qt4-sqlite3
 
 USE_CMAKE=				yes
 CHECK_PORTABILITY_SKIP=		Utilities/protobuf/configure
