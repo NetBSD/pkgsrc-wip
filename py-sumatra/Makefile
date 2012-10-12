@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/12 12:03:38 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/12 12:49:25 asau Exp $
 #
 
 DISTNAME=	Sumatra-0.3.0.tar
@@ -20,7 +20,7 @@ DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django
 DEPENDS+=	${PYPKGPREFIX}-django-tagging>=0.2.1:../../wip/py-django-tagging
 DEPENDS+=	${PYPKGPREFIX}-httplib2>=0.6.0:../../wip/py-httplib2
 DEPENDS+=	${PYPKGPREFIX}-mpi4py>=1.2.1:../../wip/py-mpich4py
-DEPENDS+=	${PYPKGPREFIX}-genesis-[0-9]:../../wip/py-genesis
+DEPENDS+=	${PYPKGPREFIX}-genesis>=0:../../wip/py-genesis
 
 WRKSRC=		${WRKDIR}/Sumatra-0.3.0
 USE_LANGUAGES=	# none
