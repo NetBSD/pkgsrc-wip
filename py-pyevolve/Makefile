@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/07 13:57:27 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/12 12:05:43 asau Exp $
 #
 
 DISTNAME=	Pyevolve-0.6rc1
@@ -11,7 +11,7 @@ HOMEPAGE=	http://pyevolve.sourceforge.net/
 COMMENT=	Complete genetic algorithm framework written in pure python
 #LICENSE=	# TODO: (see mk/license.mk)
 
-DEPENDS+=	${PYPKGPREFIX}-sqlite-[0-9]*:../../databases/py-sqlite3
+DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 
 USE_LANGUAGES=	# none
 
