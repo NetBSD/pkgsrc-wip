@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2012/09/03 23:10:51 jihbed Exp $
+# $NetBSD: options.mk,v 1.2 2012/10/12 12:07:26 asau Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.booktype
 PKG_SUPPORTED_OPTIONS=	mysql pgsql sqlite3
@@ -24,6 +24,6 @@ PLIST.pgsql=	yes
 .endif
 
 .if !empty(PKG_OPTIONS:Msqlite)
-DEPENDS+=	${PYPKGPREFIX}-sqlite2-[0-9]*:../../databases/py-sqlite3
+DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 PLIST.sqlite=	yes
 .endif
