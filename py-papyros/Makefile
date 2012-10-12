@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/07 13:57:25 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/12 11:46:59 asau Exp $
 #
 
 DISTNAME=	papyros-0.2.1
@@ -12,7 +12,7 @@ MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://code.google.com/p/papyros/
 COMMENT=	Pythonic parallel processing
 
-DEPENDS+=	${PYPKGPREFIX}-Pyro>=3.4:../../devel/py-Pyro
+DEPENDS+=	${PYPKGPREFIX}-Pyro4>=3.4:../../devel/py-Pyro
 
 USE_LANGUAGES=	# none
 PYDISTUTILSPKG=	yes

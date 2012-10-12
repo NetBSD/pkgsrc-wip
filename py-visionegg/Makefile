@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/10/07 13:57:32 asau Exp $
+# $NetBSD: Makefile,v 1.18 2012/10/12 11:47:00 asau Exp $
 #
 
 DISTNAME=	visionegg-0.9.9
@@ -12,7 +12,7 @@ HOMEPAGE=	http://visionegg.sourceforge.net/
 COMMENT=	Visual stimulus creation and control in Python
 #LICENSE=	# TODO: (see mk/license.mk)
 
-DEPENDS+=	${PYPKGPREFIX}-Pyro>=3.4:../../devel/py-Pyro
+DEPENDS+=	${PYPKGPREFIX}-Pyro4>=3.4:../../devel/py-Pyro
 DEPENDS+=	${PYPKGPREFIX}-OpenGL-[0-9]*:../../graphics/py-OpenGL
 
 USE_LANGUAGES= c c++

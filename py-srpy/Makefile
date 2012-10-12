@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/07 13:57:30 asau Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/12 11:47:00 asau Exp $
 #
 
 DISTNAME=	srpy-0.2.3
@@ -14,7 +14,7 @@ HOMEPAGE=	http://code.google.com/p/srpy/
 COMMENT=	Easy access and remote control of local/remote Python instances
 LICENSE=	modified-bsd
 
-DEPENDS+=	${PYPKGPREFIX}-Pyro>=-3.4:../../devel/py-Pyro
+DEPENDS+=	${PYPKGPREFIX}-Pyro4>=-3.4:../../devel/py-Pyro
 
 USE_TOOLS+=	pax
 USE_LANGUAGES=	# none

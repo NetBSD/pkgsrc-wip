@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/10/06 17:55:31 asau Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/12 11:46:59 asau Exp $
 #
 
 DISTNAME=	pycvf-0.2.0
@@ -14,7 +14,7 @@ COMMENT=	Python Computer Vision Framework
 LICENSE=	gnu-lgpl-v3
 
 
-DEPENDS+=	${PYPKGPREFIX}-Pyro>=3.4:../../devel/py-Pyro
+DEPENDS+=	${PYPKGPREFIX}-Pyro4>=3.4:../../devel/py-Pyro
 DEPENDS+=	${PYPKGPREFIX}-multiprocessing>=2.6.2.1:../../devel/py-multiprocessing
 #DEPENDS+=	${PYPKGPREFIX}-scipy>=0.7.0:../../math/py-scipy
 

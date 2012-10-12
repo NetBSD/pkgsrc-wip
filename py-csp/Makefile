@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/10/06 17:55:31 asau Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/12 11:46:58 asau Exp $
 #
 
 DISTNAME=	pycsp-0.7.0
@@ -13,7 +13,7 @@ HOMEPAGE=	http://code.google.com/p/pycsp/
 COMMENT=	PyCSP Python CSP Library
 LICENSE=	mit
 
-DEPENDS+=	${PYPKGPREFIX}-Pyro>=3.4:../../devel/py-Pyro
+DEPENDS+=	${PYPKGPREFIX}-Pyro4>=3.4:../../devel/py-Pyro
 DEPENDS+=	${PYPKGPREFIX}-greenlet>=0.2:../../wip/py-greenlet
 DEPENDS+=	${PYPKGPREFIX}-uuid>=1.30:../../wip/py-uuid
 
