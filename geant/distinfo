@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2009/07/20 11:44:24 asau Exp $
+$NetBSD: distinfo,v 1.4 2012/10/14 15:16:58 asau Exp $
 
-SHA1 (geant4.9.2.tar.gz) = 7e6fd6b254652bd50d534237678a2e2654300210
-RMD160 (geant4.9.2.tar.gz) = d6ae7fb718e78fb9bb8fe2b8cfd21dca7ef3a293
-Size (geant4.9.2.tar.gz) = 18752051 bytes
+SHA1 (geant4.9.5.tar.gz) = 846b48e82c1709d77a8f490fd12b039acc1d0cf9
+RMD160 (geant4.9.5.tar.gz) = 24e78b5243aa9ec47a48bbcb6d2afb4d9fe22dbf
+Size (geant4.9.5.tar.gz) = 28458437 bytes

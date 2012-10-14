@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2012/09/29 00:50:34 asau Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/14 15:16:58 asau Exp $
 #
 
-DISTNAME=	geant4.9.2
-PKGNAME=	geant-4.9.2
+DISTNAME=	geant4.9.5
+PKGNAME=	geant-4.9.5
 CATEGORIES=	math
 MASTER_SITES=	http://geant4.web.cern.ch/geant4/support/source/
 
@@ -11,17 +11,10 @@ MAINTAINER=	hugor@users.sourceforge.net
 HOMEPAGE=	http://geant4.web.cern.ch/geant4/
 COMMENT=	Toolkit for the simulation of the passage of particles through matter
 
-WRKSRC=		${WRKDIR}/${DISTNAME}/source
-MAKE_FILE=	GNUmakefile
-USE_TOOLS+=	gmake pax
+CONFIGURE_DIRS=	source
+USE_TOOLS+=	gmake pax perl:run
 USE_LANGUAGES=	c c++
-
-REPLACE_SH=	examples/advanced/Tiara/envCommon.sh
-# It should be:
-#REPLACE_CSH=	examples/extended/biasing/B02/setupPI.csh
-# skip it for now:
-CHECK_INTERPRETER_SKIP=	geant/examples/extended/biasing/B02/setupPI.csh
-
+MAKE_FILE=	GNUmakefile
 BUILD_TARGET=	# empty
 
 # Enviroment variables for building geant4
@@ -51,6 +44,18 @@ MAKE_ENV+=	G4UI_USE_TERMINAL=1
 # Override "echo -e" gnuism
 MAKE_FLAGS+=	ECHO=echo
 
+# It should be:
+#REPLACE_CSH=	examples/extended/biasing/B02/setupPI.csh
+# skip it for now:
+CHECK_INTERPRETER_SKIP=	geant/examples/extended/biasing/B02/setupPI.csh \
+			geant/examples/extended/medical/electronScattering2/run.csh
+
+REPLACE_PERL=	examples/advanced/ChargeExchangeMC/util/mkacchist \
+		examples/advanced/ChargeExchangeMC/util/mkjob
+REPLACE_PYTHON=	examples/extended/eventgenerator/exgps/macros/plotall.py \
+		examples/extended/eventgenerator/exgps/macros/plotfiles.py \
+		examples/extended/eventgenerator/exgps/macros/plottest35.py
+
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/geant
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/geant/config
@@ -68,10 +73,11 @@ do-install:
 	cd ${WRKDIR}/${DISTNAME}/source && pax -pp -rw . \
 		${DESTDIR}${PREFIX}/geant/source
 
-.include	"../../wip/clhep/buildlink3.mk"
-.include	"../../graphics/MesaLib/buildlink3.mk"
-.include	"../../graphics/glu/buildlink3.mk"
-.include	"../../x11/libXt/buildlink3.mk"
-.include	"../../x11/libXmu/buildlink3.mk"
-.include	"../../x11/libX11/buildlink3.mk"
-.include	"../../mk/bsd.pkg.mk"
+.include "../../lang/python/application.mk"
+.include "../../wip/clhep/buildlink3.mk"
+.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../graphics/glu/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
+.include "../../x11/libXmu/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"
