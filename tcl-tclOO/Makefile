@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/07 17:17:26 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/14 13:30:45 thomasklausner Exp $
 #
 
 DISTNAME=	TclOO0.6
@@ -15,5 +15,5 @@ GNU_CONFIGURE=	yes
 
 CONFIGURE_ARGS+=	--with-tcl=${BUILDLINK_PREFIX.tcl}/lib/tcl8.5
 
-.include "../../wip/tcl85/buildlink3.mk"
+.include "../../lang/tcl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
