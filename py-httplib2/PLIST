@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.3 2012/10/03 09:40:14 jihbed Exp $
-${PYSITELIB}/httplib2-${PKGVERSION}-py2.7.egg-info/PKG-INFO
-${PYSITELIB}/httplib2-${PKGVERSION}-py2.7.egg-info/SOURCES.txt
-${PYSITELIB}/httplib2-${PKGVERSION}-py2.7.egg-info/dependency_links.txt
-${PYSITELIB}/httplib2-${PKGVERSION}-py2.7.egg-info/top_level.txt
+@comment $NetBSD: PLIST,v 1.4 2012/10/14 21:55:16 thomasklausner Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/httplib2/__init__.py
 ${PYSITELIB}/httplib2/__init__.pyc
 ${PYSITELIB}/httplib2/__init__.pyo
