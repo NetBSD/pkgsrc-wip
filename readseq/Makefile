@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/07 14:12:40 asau Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/14 18:13:15 asau Exp $
 #
 
 DISTNAME=		readseq
@@ -10,6 +10,8 @@ EXTRACT_SUFX=		.tar.Z
 MAINTAINER=		dprice@cs.nmsu.edu
 HOMEPAGE=		ftp://ftp.ebi.ac.uk/pub/software/unix/
 COMMENT=		Widely Used Tool to Convert Various Sequence Formats
+
+TEST_TARGET=		test
 
 INSTALLATION_DIRS=	bin
 
