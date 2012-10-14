@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4918 2012/10/14 13:31:12 thomasklausner Exp $
+# $Id: Makefile,v 1.4919 2012/10/14 17:06:29 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1547,6 +1547,7 @@ SUBDIR+=	mago
 SUBDIR+=	mailfilter
 SUBDIR+=	majordomo-devel
 SUBDIR+=	makedict
+SUBDIR+=	malaga
 SUBDIR+=	maloc
 SUBDIR+=	man
 SUBDIR+=	man-db
@@ -1785,7 +1786,6 @@ SUBDIR+=	nostromo
 SUBDIR+=	notify-sharp
 SUBDIR+=	notmuch
 SUBDIR+=	nsc2ke
-SUBDIR+=	nsd4-svn
 SUBDIR+=	nsp
 SUBDIR+=	nullpop
 SUBDIR+=	nuppelvideo
@@ -3095,7 +3095,6 @@ SUBDIR+=	tinylogin
 SUBDIR+=	tipp10
 SUBDIR+=	tk-tkimg
 SUBDIR+=	tk85-itk
-SUBDIR+=	tk86
 SUBDIR+=	tkhtml3
 SUBDIR+=	tkpng
 SUBDIR+=	tktable
