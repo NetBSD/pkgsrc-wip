@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4921 2012/10/14 21:04:47 thomasklausner Exp $
+# $Id: Makefile,v 1.4922 2012/10/14 22:11:45 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2429,7 +2429,6 @@ SUBDIR+=	py-guppy
 SUBDIR+=	py-h5py
 SUBDIR+=	py-hcluster
 SUBDIR+=	py-hfk
-SUBDIR+=	py-httplib2
 SUBDIR+=	py-igraph
 SUBDIR+=	py-imgSeek
 SUBDIR+=	py-instant
