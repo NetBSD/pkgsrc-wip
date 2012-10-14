@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/10/14 15:40:22 asau Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/14 16:09:00 asau Exp $
 #
 
 DISTNAME=		ncbi
@@ -31,7 +31,7 @@ do-install:
 	@${ECHO} "Installing NCBI toolkit"
 	@${ECHO} "Installing Lib"
 	@${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/lib/ncbi
-	@${CP} -fr ${WRKSRC}/lib/*  ${PREFIX}/lib/ncbi
+	@${CP} -fr ${WRKSRC}/lib/*  ${DESTDIR}${PREFIX}/lib/ncbi
 	@${ECHO} "Installing include files"
 	@${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/include/ncbi
 	@${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/include/ncbi/connect
