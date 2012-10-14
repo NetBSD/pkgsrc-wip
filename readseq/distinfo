@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.2 2005/09/28 06:41:40 rillig Exp $
+$NetBSD: distinfo,v 1.3 2012/10/14 18:12:12 asau Exp $
 
 SHA1 (readseq.tar.Z) = 0b11dc201698e9b11d03d5358951389f3c2da59f
 RMD160 (readseq.tar.Z) = b66795ca91b942096a0af8724e16a1d79a75c9ce
 Size (readseq.tar.Z) = 75281 bytes
 SHA1 (patch-aa) = 16af1514f15dc612886dac68262e09d6031083fb
+SHA1 (patch-readseq.c) = d41772f54da20e08638b0e4cdf2b6c841f4a8fe1
+SHA1 (patch-ureadseq.c) = eabaf4e1f1d6a923b8d102fdc64bcee45c127c28
