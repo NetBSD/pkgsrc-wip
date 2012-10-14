@@ -1,5 +1,0 @@
-# $NetBSD: Makefile.version,v 1.2 2011/06/07 23:05:30 asau Exp $
-
-.include "../../wip/tcl85/Makefile.version"
-
-TK_VERSION=	${TCL_VERSION}
