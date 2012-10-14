@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.5 2012/09/01 16:11:42 khorben Exp $
+@comment $NetBSD: PLIST,v 1.6 2012/10/14 19:56:32 khorben Exp $
 include/Desktop.h
 include/Desktop/about.h
 include/Desktop/accel.h
-include/Desktop/assistant.h
 include/Desktop/compat.h
 include/Desktop/help.h
 include/Desktop/menubar.h
