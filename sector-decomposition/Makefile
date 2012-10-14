@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/07 16:22:55 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/14 18:21:28 asau Exp $
 #
 
 DISTNAME=	sector_decomposition-1.1.0
@@ -30,4 +30,5 @@ do-configure:
 #.include "../../math/cln/buildlink3.mk"
 .include "../../math/gsl/buildlink3.mk"
 .include "../../wip/libginac/buildlink3.mk"
+.include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
