@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2012/10/14 19:32:56 khorben Exp $
+
+SHA1 (Accessories-0.0.3.tar.gz) = fc0c0f57a976e5a0d3def056d9901057be55be1e
+RMD160 (Accessories-0.0.3.tar.gz) = 301a6c8eb7dcfefdc634d7d100bdafeae86e1f76
+Size (Accessories-0.0.3.tar.gz) = 18977 bytes
+SHA1 (patch-src_Makefile) = 9645969752efe5be7e6f37bd7fc470a6de1540c6
