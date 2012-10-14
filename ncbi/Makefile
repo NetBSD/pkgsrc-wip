@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2006/10/29 08:32:48 shattered Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/14 20:13:26 asau Exp $
 
+PKGNAME=		ncbi-20120620
 DISTNAME=		ncbi
-PKGNAME=		ncbi-20060301
+DIST_SUBDIR=		ncbi-${PKGVERSION_NOREV}
 CATEGORIES=		biology
 MASTER_SITES=		#empty
 DISTFILES=		#empty
@@ -10,12 +11,9 @@ MAINTAINER=		mchittur@nmsu.edu
 HOMEPAGE=		http://www.ncbi.nlm.nih.gov/IEB/ToolBox/
 COMMENT=		Portable, modular software for molecular biology
 
-DEPENDS+=	ncbi-bin-20060301:../../wip/ncbi-bin
+META_PACKAGE=		yes
 
-NO_BUILD=		yes
+DEPENDS+=	ncbi-bin-${PKGVERSION_NOREV}:../../wip/ncbi-bin
+DEPENDS+=	ncbi-lib-${PKGVERSION_NOREV}:../../wip/ncbi-lib
 
-do-install:
-	@#empty
-
-.include "../../wip/ncbi-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
