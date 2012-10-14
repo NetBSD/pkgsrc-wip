@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/06 17:55:31 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/14 22:09:25 thomasklausner Exp $
 #
 
 DISTNAME=	CouchDB-0.6.tar
@@ -14,7 +14,7 @@ COMMENT=	Couchdb python library
 #LICENSE=	# TODO: (see mk/license.mk)
 
 DEPENDS+=	${PYPKGPREFIX}-simplejson>=2.0.9:../../converters/py-simplejson
-DEPENDS+=	${PYPKGPREFIX}-httplib2>=0.5.0:../../wip/py-httplib2
+DEPENDS+=	${PYPKGPREFIX}-httplib2>=0.5.0:../../www/py-httplib2
 
 WRKSRC=		${WRKDIR}/CouchDB-0.6
 USE_TOOLS+=	pax

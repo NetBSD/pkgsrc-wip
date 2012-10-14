@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/07 13:57:32 asau Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/14 22:09:25 thomasklausner Exp $
 #
 
 DISTNAME=	wadllib-1.1.4
@@ -13,7 +13,7 @@ LICENSE=	gnu-lgpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-simplejson>=2.0.9:../../converters/py-simplejson
 DEPENDS+=	${PYPKGPREFIX}-cElementTree-[0-9]*:../../textproc/py-cElementTree
-DEPENDS+=	${PYPKGPREFIX}-httplib2>=0.6.0:../../wip/py-httplib2
+DEPENDS+=	${PYPKGPREFIX}-httplib2>=0.6.0:../../www/py-httplib2
 DEPENDS+=	${PYPKGPREFIX}-lazr.uri>=1.0.2:../../wip/py-lazr.uri
 
 USE_LANGUAGES=	# none
