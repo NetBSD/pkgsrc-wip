@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/07 13:57:27 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/14 11:01:48 asau Exp $
 #
 
 DISTNAME=	pylith-1.6.2
@@ -15,4 +15,5 @@ LICENSE=	mit
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c++
 
+.include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
