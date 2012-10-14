@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2012/10/14 16:32:33 asau Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/14 17:57:23 asau Exp $
 #
 
 PKGNAME=		ncbi-lib-20120620
 DISTNAME=		ncbi
-DIST_SUBDIR=		${PKGNAME_NOREV}
+DIST_SUBDIR=		ncbi-${PKGVERSION_NOREV}
 CATEGORIES=		biology
 MASTER_SITES=		ftp://ftp.ncbi.nih.gov/toolbox/ncbi_tools/old/${PKGVERSION_NOREV}/
 
