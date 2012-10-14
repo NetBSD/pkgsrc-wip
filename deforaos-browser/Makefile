@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2012/09/28 21:24:33 asau Exp $
+# $NetBSD: Makefile,v 1.19 2012/10/14 20:15:05 khorben Exp $
 
-DISTNAME=	Browser-0.4.7
-PKGNAME=	deforaos-browser-0.4.7
+DISTNAME=	Browser-0.4.8
+PKGNAME=	deforaos-browser-0.4.8
 CATEGORIES=	sysutils
-MASTER_SITES=	http://www.defora.org/os/download/download/3684/
+MASTER_SITES=	http://www.defora.org/os/download/download/3701/
 
 MAINTAINER=	khorben@defora.org
 HOMEPAGE=	http://www.defora.org/
@@ -12,12 +12,13 @@ COMMENT=	DeforaOS desktop file browser
 LICENSE=	gnu-gpl-v3
 
 USE_TOOLS+=	pkg-config
+USE_TOOLS+=	xgettext
 
 BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 
-MAKE_FLAGS+=	PREFIX=${PREFIX}
 MAKE_FLAGS+=	DESTDIR=${DESTDIR}
+MAKE_FLAGS+=	PREFIX=${PREFIX}
 AUTO_MKDIRS=	yes
 
 post-install:
@@ -35,9 +36,7 @@ post-install:
 
 .include "options.mk"
 
-.include "../../wip/deforaos-libsystem/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
-.include "../../x11/libXrandr/buildlink3.mk"
 .include "../../wip/deforaos-libdesktop/buildlink3.mk"
+.include "../../x11/libXrandr/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
