@@ -1,1 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/11/29 18:03:02 daprice Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/10/14 18:13:59 asau Exp $
+bin/readseq
+share/doc/readseq/Formats
+share/doc/readseq/Readme
+share/doc/readseq/Readseq.help
