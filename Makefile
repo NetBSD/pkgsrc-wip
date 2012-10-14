@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4919 2012/10/14 17:06:29 thomasklausner Exp $
+# $Id: Makefile,v 1.4920 2012/10/14 19:34:34 khorben Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -415,6 +415,7 @@ SUBDIR+=	debian_gtk
 SUBDIR+=	debian_x11
 SUBDIR+=	debugger-git
 SUBDIR+=	dee
+SUBDIR+=	deforaos-accessories
 SUBDIR+=	deforaos-asm
 SUBDIR+=	deforaos-browser
 SUBDIR+=	deforaos-configure
