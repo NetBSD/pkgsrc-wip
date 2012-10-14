@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2012/09/28 21:24:35 asau Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/14 21:14:18 khorben Exp $
 
-DISTNAME=	Player-0.1.3
-PKGNAME=	deforaos-player-0.1.3
+DISTNAME=	Player-0.1.4
+PKGNAME=	deforaos-player-0.1.4
 CATEGORIES=	multimedia
-MASTER_SITES=	http://www.defora.org/os/download/download/3504/
+MASTER_SITES=	http://www.defora.org/os/download/download/3708/
 
 MAINTAINER=	khorben@defora.org
 HOMEPAGE=	http://www.defora.org/
@@ -12,13 +12,15 @@ COMMENT=	DeforaOS desktop media player
 LICENSE=	gnu-gpl-v3
 
 USE_TOOLS+=	pkg-config
+USE_TOOLS+=	xgettext
 
-MAKE_FLAGS+=	PREFIX=${PREFIX}
+DEPENDS+=	mplayer-[0-9]*:../../multimedia/mplayer
+
 MAKE_FLAGS+=	DESTDIR=${DESTDIR}
+MAKE_FLAGS+=	PREFIX=${PREFIX}
 
 .include "options.mk"
 
-.include "../../wip/deforaos-libsystem/buildlink3.mk"
 .include "../../wip/deforaos-libdesktop/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
