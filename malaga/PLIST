@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2012/10/14 17:04:18 thomasklausner Exp $
+bin/malaga
+bin/mallex
+bin/malmake
+bin/malrul
+bin/malshow
+bin/malsym
+include/malaga.h
+info/malaga.info
+lib/libmalaga.la
+man/man1/malaga.1
+man/man1/mallex.1
+man/man1/malmake.1
+man/man1/malrul.1
+man/man1/malshow.1
+man/man1/malsym.1
+share/malaga/malaga.el
