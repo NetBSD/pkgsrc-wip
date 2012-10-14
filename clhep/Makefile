@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2012/09/24 18:26:54 asau Exp $
+# $NetBSD: Makefile,v 1.15 2012/10/14 11:44:38 asau Exp $
 #
 
-DISTNAME=	clhep-2.0.4.5
+DISTNAME=	clhep-2.1.2.5
 CATEGORIES=	math
 MASTER_SITES=	http://proj-clhep.web.cern.ch/proj-clhep/DISTRIBUTION/tarFiles/
 EXTRACT_SUFX=	.tgz
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	hugor@users.sourceforge.net
 HOMEPAGE=	http://proj-clhep.web.cern.ch/proj-clhep/
 COMMENT=	Class library for high energy physics
-LICENSE=	gnu-gpl-v3 gnu-lgpl-v3
+LICENSE=	gnu-gpl-v3 AND gnu-lgpl-v3
 
 TMPEXT_DIR=	${WRKDIR}/${PKGVERSION_NOREV}/CLHEP
 AUTOCONF_REQD=	2.59
@@ -25,8 +25,6 @@ LDFLAGS.FreeBSD=	-lc
 pre-configure:
 	${RUN} ${MKDIR} ${WRKSRC};	\
 	cd ${TMPEXT_DIR};		\
-	autoconf;			\
-	aclocal;			\
-	automake -a --foreign -i
+	${CONFIG_SHELL} bootstrap
 
 .include "../../mk/bsd.pkg.mk"
