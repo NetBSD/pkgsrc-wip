@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST,v 1.12 2012/04/19 14:27:29 khorben Exp $
+@comment $NetBSD: PLIST,v 1.13 2012/10/14 20:36:39 khorben Exp $
 bin/panel
+bin/panel-embed
+bin/panel-message
 bin/panel-notify
 bin/panelctl
 bin/run
@@ -11,6 +13,7 @@ lib/Panel/applets/close.so
 lib/Panel/applets/cpu.so
 lib/Panel/applets/cpufreq.so
 lib/Panel/applets/desktop.so
+lib/Panel/applets/embed.so
 lib/Panel/applets/gps.so
 lib/Panel/applets/gsm.so
 lib/Panel/applets/keyboard.so
@@ -32,7 +35,17 @@ lib/Panel/applets/usb.so
 lib/Panel/applets/volume.so
 lib/Panel/applets/wpa_supplicant.so
 lib/pkgconfig/Panel.pc
+man/man1/panel-embed.1
+man/man1/panel-message.1
+man/man1/panel-notify.1
+man/man1/panel.1
+man/man1/panelctl.1
 share/applications/panel-settings.desktop
+share/doc/html/Panel/panel-embed.html
+share/doc/html/Panel/panel-message.html
+share/doc/html/Panel/panel-notify.html
+share/doc/html/Panel/panel.html
+share/doc/html/Panel/panelctl.html
 share/icons/hicolor/16x16/apps/panel-applet-bluetooth.png
 share/icons/hicolor/16x16/apps/panel-applet-desktop.png
 share/icons/hicolor/16x16/apps/panel-applet-usb.png
