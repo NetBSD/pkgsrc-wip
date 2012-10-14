@@ -1,3 +1,0 @@
-# $NetBSD: Makefile.version,v 1.7 2012/01/13 05:59:32 bharder Exp $
-
-TCL_VERSION=	8.5.11

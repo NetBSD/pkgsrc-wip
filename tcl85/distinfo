@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.6 2012/01/13 05:59:32 bharder Exp $
-
-SHA1 (tcl8.5.11-src.tar.gz) = cb70dcfb7625389afd774e0438a7ade3e7aa13c8
-RMD160 (tcl8.5.11-src.tar.gz) = 36140b5e8365c190202132dd6f0dfeb831ea9bc8
-Size (tcl8.5.11-src.tar.gz) = 4484001 bytes
