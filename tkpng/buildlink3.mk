@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2010/10/19 21:55:16 othyro Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2012/10/14 13:26:57 thomasklausner Exp $
 
 BUILDLINK_TREE+=	tkpng
 
@@ -8,7 +8,7 @@ TKPNG_BUILDLINK3_MK:=
 BUILDLINK_API_DEPENDS.tkpng+=	tkpng>=0.9
 BUILDLINK_PKGSRCDIR.tkpng?=	../../wip/tkpng
 
-.include "../../wip/tk85/buildlink3.mk"
+.include "../../x11/tk/buildlink3.mk"
 .endif # TKPNG_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-tkpng

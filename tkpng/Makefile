@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/07 17:17:40 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/14 13:26:57 thomasklausner Exp $
 #
 
 DISTNAME=	tkpng0.9
@@ -18,5 +18,5 @@ CONFIGURE_ARGS+=	--with-tcl=${BUILDLINK_PREFIX.tcl}/lib/tcl8.5 \
 			--with-tk=${BUILDLINK_PREFIX.tk}/lib/tk8.5 \
 			--enable-threads
 
-.include "../../wip/tk85/buildlink3.mk"
+.include "../../x11/tk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

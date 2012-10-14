@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/07 17:17:40 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/14 13:26:56 thomasklausner Exp $
 #
 
 DISTNAME=	tkhtml3-alpha-16
@@ -24,5 +24,5 @@ CONFIGURE_ARGS+=	--with-tcl=${BUILDLINK_PREFIX.tcl}/lib/tcl8.5 \
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
-.include "../../wip/tk85/buildlink3.mk"
+.include "../../x11/tk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

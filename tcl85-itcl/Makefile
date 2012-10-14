@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/07 17:17:27 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/14 13:26:56 thomasklausner Exp $
 #
 
 DISTNAME=	itcl3.4.1
@@ -20,5 +20,5 @@ pre-install:
 		${MV} ${WRKSRC}/doc/class.n ${WRKSRC}/doc/itcl-class.n
 
 .include "../../wip/tcl-tclOO/buildlink3.mk"
-.include "../../wip/tk85/buildlink3.mk"
+.include "../../x11/tk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
