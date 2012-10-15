@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2012/10/15 18:36:37 asau Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/15 18:40:51 asau Exp $
 #
 
 DISTNAME=	harminv-1.3.1
-CATEGORIES=	science
+CATEGORIES=	math
 MASTER_SITES=	http://ab-initio.mit.edu/harminv/
 
 MAINTAINER=	jihbed.research@gmail.com
