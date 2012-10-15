@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/10/03 15:09:53 asau Exp $
+# $NetBSD: Makefile,v 1.13 2012/10/15 19:21:45 asau Exp $
 #
 
 DISTNAME=	meep-1.1.1
@@ -22,6 +22,6 @@ CONFIGURE_ARGS+=--with-libctl=${PREFIX}/share/libctl
 .include "../../math/gsl/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
-.include "../../wip/harminv/buildlink3.mk"
+.include "../../math/harminv/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
