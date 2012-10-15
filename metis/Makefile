@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/03 15:09:54 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/15 22:49:50 asau Exp $
 
 DISTNAME=		metis-4.0
 CATEGORIES=		math
@@ -12,6 +12,10 @@ BUILD_TARGET=		default
 INSTALLATION_DIRS=	bin lib
 
 LICENSE=	modified-bsd
+
+do-test:
+	cd ${WRKSRC}/Graphs && ./mtest 4elt.graph
+	cd ${WRKSRC}/Graphs && ./mtest test.mgraph
 
 do-install:
 	cd ${WRKSRC} && ${INSTALL_PROGRAM} graphchk kmetis mesh2dual 	\
