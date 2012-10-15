@@ -1,0 +1,13 @@
+$NetBSD: patch-configure.ac,v 1.1 2012/10/15 21:53:37 asau Exp $
+
+--- configure.ac.orig	2012-07-20 01:27:20.000000000 +0000
++++ configure.ac
+@@ -307,7 +307,7 @@ if guile -c "$ractivate" > /dev/null 2>&
+ 	ACTIVATE_READLINE="$ractivate"
+ else
+ 	ractivate="(use-modules (ice-9 readline)) (activate-readline)"
+-	if guile -c "$ractivate" >& /dev/null; then
++	if guile -c "$ractivate" > /dev/null 2>&1; then
+ 	        AC_MSG_RESULT(ice-9 readline)
+ 	        ACTIVATE_READLINE="$ractivate"
+ 	else
