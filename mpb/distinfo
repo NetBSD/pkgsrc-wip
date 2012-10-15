@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2012/03/23 02:21:07 outpaddling Exp $
+$NetBSD: distinfo,v 1.2 2012/10/15 21:01:15 asau Exp $
 
 SHA1 (mpb-1.4.2.tar.gz) = 2d4052566cff6c6befd31183253a908654b534f8
 RMD160 (mpb-1.4.2.tar.gz) = 6440f0e19d4b5b8354c135034429ea2031c4301d
 Size (mpb-1.4.2.tar.gz) = 686488 bytes
+SHA1 (patch-mpb-ctl_Makefile.in) = 822a94fe7239664002daf45d0bee94b415af15c4
+SHA1 (patch-utils_Makefile.in) = bcdc8b28a2bf29c1e94b38a9b5dd7d93073a00a6

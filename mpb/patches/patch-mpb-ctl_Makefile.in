@@ -1,0 +1,51 @@
+$NetBSD: patch-mpb-ctl_Makefile.in,v 1.1 2012/10/15 21:01:15 asau Exp $
+
+--- mpb-ctl/Makefile.in.orig	2002-09-14 22:20:55.000000000 +0000
++++ mpb-ctl/Makefile.in
+@@ -66,7 +66,12 @@ LDFLAGS = $(MY_LDFLAGS) @LDFLAGS@
+ ##############################################################################
+ 
+ INSTALL = @INSTALL@
++INSTALL_PROGRAM = @INSTALL_PROGRAM@
++INSTALL_SCRIPT = @INSTALL_SCRIPT@
++INSTALL_DATA = @INSTALL_DATA@
+ prefix = @prefix@
++exec_prefix = @exec_prefix@
++bindir = @bindir@
+ mandir = @mandir@
+ # c.f. AC_ARG_PROGRAM autoconf docs:
+ transform=@program_transform_name@
+@@ -133,23 +138,23 @@ geom.c: $(LIBCTL_DIR)/utils/geom.c
+ install: install-mpb @INSTALL_MPB_SPLIT@
+ 
+ install-mpb: $(PROGRAM_NAME)
+-	$(INSTALL) -d $(prefix)/bin
+-	$(INSTALL) -m 0755 -s .$(PROGRAM_NAME) $(prefix)/bin/`echo $(PROGRAM_NAME)|sed '$(transform)'`
+-	$(INSTALL) -d $(prefix)/share/libctl/specs
+-	$(INSTALL) -m 0644 $(SPECIFICATION_FILE) $(prefix)/share/libctl/specs
+-	$(INSTALL) -d $(mandir)/man1
+-	$(INSTALL) -m 0644 $(PROGRAM_NAME).1 $(mandir)/man1
++	$(INSTALL) -d $(DESTDIR)$(prefix)/bin
++	$(INSTALL_PROGRAM) .$(PROGRAM_NAME) $(DESTDIR)$(bindir)/`echo $(PROGRAM_NAME)|sed '$(transform)'`
++	$(INSTALL) -d $(DESTDIR)$(prefix)/share/libctl/specs
++	$(INSTALL_DATA) $(SPECIFICATION_FILE) $(DESTDIR)$(prefix)/share/libctl/specs
++	$(INSTALL) -d $(DESTDIR)$(mandir)/man1
++	$(INSTALL_DATA) $(PROGRAM_NAME).1 $(DESTDIR)$(mandir)/man1
+ 
+ mpb-split-tmp:
+ 	rm -f mpb-split-tmp
+ 	mpb_name=`echo mpb | sed '$(transform)'`; \
+-	sed "s%\./mpb%"$(prefix)/bin/"$$mpb_name%g" mpb-split > mpb-split-tmp;
++	sed "s%\./mpb%"$(bindir)/"$$mpb_name%g" mpb-split > mpb-split-tmp;
+ 
+ install-mpb-split: mpb-split-tmp
+ 	mpb_name=`echo mpb | sed '$(transform)'`; \
+-	$(INSTALL) -m 0755 mpb-split-tmp $(prefix)/bin/$${mpb_name}-split
+-	$(INSTALL) -d $(mandir)/man1
+-	$(INSTALL) -m 0644 mpb-split.1 $(mandir)/man1
++	$(INSTALL_SCRIPT) mpb-split-tmp $(DESTDIR)$(bindir)/$${mpb_name}-split
++	$(INSTALL) -d $(DESTDIR)$(mandir)/man1
++	$(INSTALL_DATA) mpb-split.1 $(DESTDIR)$(mandir)/man1
+ 
+ clean:
+ 	rm -f $(ALL_OBJECTS) ctl-io.c ctl-io.h main.c geom.c \

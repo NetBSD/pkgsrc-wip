@@ -1,0 +1,32 @@
+$NetBSD: patch-utils_Makefile.in,v 1.1 2012/10/15 21:01:15 asau Exp $
+
+--- utils/Makefile.in.orig	2002-09-14 22:20:55.000000000 +0000
++++ utils/Makefile.in
+@@ -12,7 +12,12 @@ RANLIB = @RANLIB@
+ @SET_MAKE@
+ 
+ INSTALL = @INSTALL@
++INSTALL_PROGRAM = @INSTALL_PROGRAM@
++INSTALL_SCRIPT = @INSTALL_SCRIPT@
++INSTALL_DATA = @INSTALL_DATA@
+ prefix = @prefix@
++exec_prefix = @exec_prefix@
++bindir = @bindir@
+ mandir = @mandir@
+ # c.f. AC_ARG_PROGRAM autoconf docs:
+ transform=@program_transform_name@
+@@ -35,10 +40,10 @@ install: install-@BUILD_MPB_DATA@
+ install-: # dummy target for when BUILD_MPB_DATA is ""
+ 
+ install-mpb-data: mpb-data
+-	$(INSTALL) -d $(prefix)/bin
+-	$(INSTALL) -m 0755 -s mpb-data $(prefix)/bin/`echo mpb-data|sed '$(transform)'`
+-	$(INSTALL) -d $(mandir)/man1
+-	$(INSTALL) -m 0644 mpb-data.1 $(mandir)/man1
++	$(INSTALL) -d $(DESTDIR)$(bindir)
++	$(INSTALL_PROGRAM) mpb-data $(DESTDIR)$(bindir)/`echo mpb-data|sed '$(transform)'`
++	$(INSTALL) -d $(DESTDIR)$(mandir)/man1
++	$(INSTALL_DATA) mpb-data.1 $(DESTDIR)$(mandir)/man1
+ 
+ clean: 
+ 	rm -f mpb-data mpb-data.o core
