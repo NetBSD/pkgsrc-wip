@@ -1,32 +1,23 @@
-# $NetBSD: Makefile,v 1.8 2012/09/28 22:14:13 asau Exp $
-#
+# $NetBSD: Makefile,v 1.9 2012/10/15 22:31:09 asau Exp $
 
-DISTNAME=		fasta3
-PKGNAME=		fasta-3.4
+DISTNAME=		fasta-36.3.5d
+PKGNAME=		fasta-36.3.5.4 # 4 for "d"
 CATEGORIES=		biology
-MASTER_SITES=		ftp://ftp.virginia.edu/pub/fasta/
-EXTRACT_SUFX=		.shar.Z
+MASTER_SITES=		http://faculty.virginia.edu/wrpearson/fasta/fasta36/
 
 MAINTAINER=		hdp@cs.nmsu.edu
 HOMEPAGE=		http://fasta.bioch.virginia.edu/
 COMMENT=		FASTA sequence comparison programs
 LICENSE=		no-commercial-use
 
-MAKE_FILE=		Makefile.NetBSD
-
-WRKSRC=			${WRKDIR}
+BUILD_DIRS=		src
+MAKE_FILE=		../make/Makefile.NetBSD
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
-post-extract:
-	${SED} -e 's:/seqprg/slib/bin:@PREFIX@:' \
-	       -e 's:your.host.here:@HOSTNAME@:' \
-	        ${WRKSRC:Q}/${MAKE_FILE:Q} > ${WRKSRC:Q}/${MAKE_FILE:Q}.in
+do-test:
+	cd ${WRKSRC}/src && ../bin/fasta36 -q ../seq/mgstm1.aa ../seq/prot_test.lseg
 
-do-configure:
-	${SED} < ${WRKSRC:Q}/${MAKE_FILE:Q}.in > ${WRKSRC:Q}/${MAKE_FILE:Q} \
-		-e 's:@PREFIX@:${PREFIX}:' \
-	        -e 's:@HOSTNAME@:fasta.bioch.virginia.edu:'
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX:Q}/share/doc/fasta
 .for f in README.versions README Readme.Mac readme.mpi_3.3 readme.pvm_3.3    \
