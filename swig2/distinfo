@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2012/03/27 16:09:28 outpaddling Exp $
+$NetBSD: distinfo,v 1.2 2012/10/15 18:14:46 asau Exp $
 
-SHA1 (swig-2.0.4.tar.gz) = ace563563a8f6f367ba82236e5bea240adea0d94
-RMD160 (swig-2.0.4.tar.gz) = 7e5314de2b2443a76ea484909072ca63b2b1f1f7
-Size (swig-2.0.4.tar.gz) = 5148567 bytes
+SHA1 (swig-2.0.8.tar.gz) = 763305da320163903c69c1cdfbf9a942117d9ace
+RMD160 (swig-2.0.8.tar.gz) = defca7a34be7ce8407949d6bd17b860e5169618d
+Size (swig-2.0.8.tar.gz) = 5291361 bytes

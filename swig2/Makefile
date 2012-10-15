@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2012/10/07 16:23:18 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/15 18:14:46 asau Exp $
 
-DISTNAME=	swig-2.0.4
+DISTNAME=	swig-2.0.8
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=swig/}
 
@@ -37,6 +37,8 @@ CHECK_INTERPRETER_SKIP+=	share/examples/swig/*
 
 # configure fails to generate this on NetBSD
 LDFLAGS+=	-lpcre
+
+TEST_TARGET=	check
 
 post-install:
 	cd ${WRKSRC}/Doc/Manual && \
