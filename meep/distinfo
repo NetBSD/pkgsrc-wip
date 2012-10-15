@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.2 2012/10/15 21:16:04 asau Exp $
+$NetBSD: distinfo,v 1.3 2012/10/15 21:50:13 asau Exp $
 
-SHA1 (meep-1.1.1.tar.gz) = df1910906ebc996ae154b6de78bb67ceadbb2813
-RMD160 (meep-1.1.1.tar.gz) = 5b74b172678d5ce7e8d7ac2d7b78649aafdb11cb
-Size (meep-1.1.1.tar.gz) = 751244 bytes
+SHA1 (meep-1.2.tar.gz) = a627b201ff149210be42e824667d1ac355790732
+RMD160 (meep-1.2.tar.gz) = 2b76ea516f7ba1cae6b211ff5e623edfe88186ac
+Size (meep-1.2.tar.gz) = 807522 bytes
+SHA1 (patch-configure) = dd626b44af862f1a93a888ea9dd1ca9c6f3ea6fe
+SHA1 (patch-configure.ac) = 54e60d25f5cd3a2dff406142860538c43043b207

@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2012/10/15 21:17:30 asau Exp $
-#
+# $NetBSD: Makefile,v 1.15 2012/10/15 21:50:13 asau Exp $
 
-DISTNAME=	meep-1.1.1
+DISTNAME=	meep-1.2
 CATEGORIES=	math
 MASTER_SITES=	http://ab-initio.mit.edu/meep/
 
@@ -9,8 +8,6 @@ MAINTAINER=	jwbacon@tds.net
 HOMEPAGE=	http://ab-initio.mit.edu/meep/
 COMMENT=	FDTD simulation software to model electromagnetic systems
 LICENSE=	gnu-gpl-v3
-
-DEPENDS+=	bash-[0-9]*:../../shells/bash
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
