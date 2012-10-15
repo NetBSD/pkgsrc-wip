@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/10/15 19:21:45 asau Exp $
+# $NetBSD: Makefile,v 1.14 2012/10/15 21:17:30 asau Exp $
 #
 
 DISTNAME=	meep-1.1.1
@@ -16,7 +16,7 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++ fortran77
 
-CONFIGURE_ARGS+=--with-libctl=${PREFIX}/share/libctl
+CONFIGURE_ARGS+=--with-libctl=${BUILDLINK_PREFIX.libctl}/share/libctl
 
 .include "../../wip/mpb/buildlink3.mk"
 .include "../../math/gsl/buildlink3.mk"
