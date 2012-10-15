@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/10/15 21:50:13 asau Exp $
+# $NetBSD: Makefile,v 1.16 2012/10/15 22:36:09 asau Exp $
 
 DISTNAME=	meep-1.2
 CATEGORIES=	math
@@ -14,6 +14,8 @@ USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++ fortran77
 
 CONFIGURE_ARGS+=--with-libctl=${BUILDLINK_PREFIX.libctl}/share/libctl
+
+TEST_TARGET=	check
 
 .include "../../wip/mpb/buildlink3.mk"
 .include "../../math/gsl/buildlink3.mk"
