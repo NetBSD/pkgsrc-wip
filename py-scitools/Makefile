@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/10/11 14:25:00 jihbed Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/15 18:20:49 asau Exp $
 #
 
 DISTNAME=	scitools-0.9.0
@@ -14,8 +14,6 @@ COMMENT=	Python library for scientific computing
 LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-matplotlib-tk>=1.1.1:../../graphics/py-matplotlib-tk
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gzip
 USE_LANGUAGES=	# none

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/10/14 11:13:06 pettai Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/15 18:20:49 asau Exp $
 #
 
 DISTNAME=	nsd4-${VERSION}
@@ -9,8 +9,6 @@ MAINTAINER=	pettai@NetBSD.org
 HOMEPAGE=	http://www.nlnetlabs.nl/projects/nsd/
 COMMENT=	Name Server Daemon 4 (trunk)
 LICENSE=	modified-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILDLINK_API_DEPENDS.openssl+= openssl>=0.9.7
 
