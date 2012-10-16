@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4923 2012/10/15 19:06:40 asau Exp $
+# $Id: Makefile,v 1.4924 2012/10/16 22:13:35 khorben Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1407,6 +1407,7 @@ SUBDIR+=	libgtask
 SUBDIR+=	libgtk-java
 SUBDIR+=	libgtkhtml-java
 SUBDIR+=	libgtksourceviewmm
+SUBDIR+=	libgtkstylus
 SUBDIR+=	libgxim
 SUBDIR+=	libgzstream
 SUBDIR+=	libharu
