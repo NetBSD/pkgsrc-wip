@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=PythonToolkit
-Exec=PTKdrpython
-Icon=/usr/pkg/share/drpython/icons/drpython.png
+Exec=PTK
+Icon=/usr/pkg/share/pythontoolkit/icons/ptkicon.svg
 Terminal=false
 Type=Application
 Categories=Development;
