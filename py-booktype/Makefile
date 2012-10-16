@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/06 17:22:16 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/16 09:21:16 jihbed Exp $
 #
 
 DISTNAME=	Booktype-1.5
@@ -43,6 +43,7 @@ REPLACE.python.old=	/usr/bin/env
 REPLACE.python.new=	${PYTHONBIN}
 REPLACE_FILES.python=	${WRKSRC}/lib/booki/manage.py
 
+PYTHON_VERSIONS_INCLUDE_3X=yes
 .include "options.mk"
 
 .include "../../lang/python/egg.mk"
