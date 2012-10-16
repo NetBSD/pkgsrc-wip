@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/07 13:57:32 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/16 19:28:42 kristerw Exp $
 #
 
 DISTNAME=	van.testing-3.0.0.tar
@@ -13,7 +13,7 @@ HOMEPAGE=	http://pypi.python.org/pypi/van.testing
 COMMENT=	Layers for zope.testing to simplify test setups
 LICENSE=		zpl
 
-DEPENDS+=	${PYPKGPREFIX}-wsgi-intercept>=0.4:../../wip/py-wsgi-intercept
+DEPENDS+=	${PYPKGPREFIX}-wsgi_intercept>=0.4:../../wip/py-wsgi-intercept
 #DEPENDS+=	zope3>=0.3.3:../../www/zope3
 
 WRKSRC=		${WRKDIR}/van.testing-3.0.0
