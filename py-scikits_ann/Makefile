@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/07 13:57:29 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/16 08:32:49 thomasklausner Exp $
 #
 
 DISTNAME=	scikits.ann-${PYPKGVERSION}
@@ -13,9 +13,11 @@ HOMEPAGE=	http://scipy.org/scipy/scikits/wiki/AnnWrapper
 COMMENT=	Approximate Nearest Neighbor library wrapper for Numpy
 LICENSE=	gnu-lgpl-v3
 
+BUILD_DEPENDS+=	swig-[0-9]*:../../devel/swig
+
 #WRKSRC=		${WRKDIR}/scikits.ann-0.2.dev-r803
 
-USE_LANGUAGES=	c++
+USE_LANGUAGES=	c c++
 
 PYPKGVERSION=	0.2.dev-r803
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
