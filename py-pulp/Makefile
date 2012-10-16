@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/07 13:57:27 asau Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/16 11:40:21 jihbed Exp $
 #
 
 DISTNAME=	PuLP-1.4.7
@@ -12,7 +12,6 @@ COMMENT=	LP modeler in Python
 LICENSE=	modified-bsd
 
 USE_LANGUAGES=	# none
-PYTHON_VERSIONS_ACCEPTED= 26
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

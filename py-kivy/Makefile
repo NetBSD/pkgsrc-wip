@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/07 12:25:13 asau Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/16 11:34:36 jihbed Exp $
 #
 
 VERSION=	1.0.9
@@ -20,7 +20,7 @@ DEPENDS+=	${PYPKGPREFIX}-enchant>=1.6.5:../../textproc/py-enchant
 
 USE_LANGUAGES= c
 
-PYTHON_VERSIONS_ACCEPTED= 27 26
+PYTHON_VERSIONS_INCOMPATIBLE= 32 31
 PYDISTUTILSPKG=		yes
 
 .include "../../devel/py-cython/buildlink3.mk"

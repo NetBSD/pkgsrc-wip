@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/07 12:25:35 asau Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/16 11:35:44 jihbed Exp $
 #
 
 VERSION=	0.37
@@ -16,7 +16,6 @@ COMMENT=	Python module for numerical optimization
 LICENSE=	modified-bsd
 
 USE_LANGUAGES=	fortran
-PYTHON_VERSIONS_ACCEPTED= 26
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX:Q}
 
 .include "../../lang/python/egg.mk"

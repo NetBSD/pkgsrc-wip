@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2012/10/07 13:57:25 asau Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/16 11:37:40 jihbed Exp $
 #
 
-DISTNAME=	papy-1.0b1.tar
-PKGNAME= ${PYPKGPREFIX}-${DISTNAME:S/.tar//}
+DISTNAME=	papy-1.0b1
+PKGNAME= ${PYPKGPREFIX}-${DISTNAME}
 PKGREVISION=	2
 CATEGORIES=	parallel python
 MASTER_SITES=	http://pypi.python.org/packages/source/p/papy/
-EXTRACT_SUFX=	.gz#md5=2cfa9ac9791eea16fdf8e3c34940e924
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://code.google.com/p/papy/
@@ -19,7 +18,6 @@ WRKSRC=		${WRKDIR}/papy-1.0b1
 USE_TOOLS+=	pax
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_ACCEPTED= 27 26
 PYDISTUTILSPKG=	yes
 
 DOCDIR=	${PREFIX}/share/doc/py-papy
