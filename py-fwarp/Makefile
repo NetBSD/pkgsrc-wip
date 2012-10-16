@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/07 11:54:36 asau Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/16 11:23:15 jihbed Exp $
 #
 
 DISTNAME=	fwrap-0.1.1
@@ -13,7 +13,6 @@ LICENSE=	modified-bsd
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_ACCEPTED= 26
 PYDISTUTILSPKG=	yes
 
 do-test:
