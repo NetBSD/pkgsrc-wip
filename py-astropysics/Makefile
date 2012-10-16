@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/06 17:13:32 asau Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/16 08:04:15 thomasklausner Exp $
 #
 
 DISTNAME=	Astropysics-0.1.dev-r596
@@ -17,6 +17,7 @@ DEPENDS+=	${PYPKGPREFIX}-dateutil-[0-9]*:../../time/py-dateutil
 DEPENDS+=	${PYPKGPREFIX}-pyfits>=2.3.1:../../graphics/py-pyfits
 
 #WRKSRC=		${WRKDIR}/Astropysics-0.1.dev-r596
+EGG_NAME=	${DISTNAME:S/-r596//}
 USE_LANGUAGES=	# none
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 
