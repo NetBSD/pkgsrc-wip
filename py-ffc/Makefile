@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/07 11:54:33 asau Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/16 09:39:09 jihbed Exp $
 #
 
 DISTNAME=	ffc-1.0.0
@@ -15,7 +15,6 @@ LICENSE=	gnu-lgpl-v3
 FETCH_USING=	curl
 
 PYDISTUTILSPKG=	yes
-PYTHON_VERSIONS_ACCEPTED=	27 26
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
