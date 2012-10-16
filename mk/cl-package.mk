@@ -66,7 +66,7 @@ PLIST_SUBST+=			CLISP="@comment "
 PLIST_SUBST+=			CL="@comment "
 PLIST_SUBST+=			EXT="fas"
 INSTALLATION_DIRS+=		${ECL_CENTRAL_REGISTRY}
-DEPENDS+=                       ecl-${ECL_VERSION}:../../${ECL_DEFAULT_PACKAGE}
+DEPENDS+=                       ecl-${ECL_VERSION}{,nb*}:../../${ECL_DEFAULT_PACKAGE}
 
 do-build:
 .for pkg in ${COMMON_LISP_PACKAGES}
