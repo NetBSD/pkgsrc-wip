@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/07 13:57:27 asau Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/16 08:28:19 thomasklausner Exp $
 #
 
 DISTNAME=	pygr-0.8.0
@@ -10,7 +10,7 @@ MASTER_SITES=	http://pygr.googlecode.com/files/
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://code.google.com/p/pygr/
 COMMENT=	Pygr graph database for bioinformatics
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	modified-bsd
 
 DEPENDS+=       ${PYPKGPREFIX}-mysqldb-[0-9]*:../../databases/py-mysqldb
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
