@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/07 11:54:25 asau Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/16 09:42:16 jihbed Exp $
 #
 
 DISTNAME=	django-gitrevision-0.1.4
@@ -21,6 +21,7 @@ WRKSRC=		${WRKDIR}/django-gitrevision-0.1.4
 USE_LANGUAGES=	# none
 
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
+PYTHON_VERSIONS_INCLUDE_3X=yes
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
