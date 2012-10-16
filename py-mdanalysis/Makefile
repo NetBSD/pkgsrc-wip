@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/07 12:25:17 asau Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/16 09:15:48 jihbed Exp $
 #
 
 DISTNAME=	MDAnalysis-0.7.6
@@ -14,6 +14,7 @@ LICENSE=	gnu-gpl-v2
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.7.2:../../math/py-scipy
 
 USE_LANGUAGES=	c c++
+PYTHON_VERSIONS_INCLUDE_3X=yes
 
 .include "../../devel/py-cython/buildlink3.mk"
 .include "../../math/py-numpy/buildlink3.mk"

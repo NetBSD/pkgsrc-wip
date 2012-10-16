@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/07 11:54:30 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/16 09:11:42 jihbed Exp $
 #
 
 DISTNAME=	dreampie-1.1
@@ -14,6 +14,7 @@ LICENSE=	gnu-gpl-v3
 USE_LANGUAGES=	# none
 
 PYDISTUTILSPKG=	yes
+PYTHON_VERSIONS_INCLUDE_3X=yes
 
 .include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
