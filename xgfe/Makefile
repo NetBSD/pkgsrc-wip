@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/10/07 20:11:09 asau Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/16 13:07:56 asau Exp $
 #
 
 DISTNAME=		xgfe-2.1
@@ -16,5 +16,4 @@ WRKSRC=			${WRKDIR}/xgfe-2.1/source
 USE_LANGUAGES=		c c++
 
 .include "../../x11/qt3-libs/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

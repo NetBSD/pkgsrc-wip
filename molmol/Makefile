@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/10/03 14:26:39 asau Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/16 13:07:56 asau Exp $
 #
 
 DISTNAME=		molmol-2k.2.0-src
@@ -28,5 +28,4 @@ do-install:
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../mk/motif.buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

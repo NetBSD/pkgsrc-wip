@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/10/03 09:10:40 asau Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/16 13:07:55 asau Exp $
 #
 
 DISTNAME=		libopenmodeller-0.3.3
@@ -23,5 +23,4 @@ GNU_CONFIGURE=		YES
 .include "../../math/gsl/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../mk/pgsql.buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

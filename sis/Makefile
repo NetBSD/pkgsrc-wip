@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/07 16:23:08 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/16 13:07:56 asau Exp $
 #
 
 DISTNAME=	sis-1.3.6
@@ -23,5 +23,4 @@ pre-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/sis/espresso_examples/math
 	${INSTALL_DATA_DIR} ${PREFIX}/share/sis/espresso_examples/random
 
-.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/07 17:02:49 asau Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/16 13:07:56 asau Exp $
 #
 
 DISTNAME=	treetool2.0.2
@@ -37,5 +37,4 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/treetool_release/font_map ${DESTDIR}${PREFIX}/share/misc/treetool/font_map
 
 .include "../../x11/xview-lib/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
