@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/15 18:20:49 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/16 21:56:48 pettai Exp $
 #
 
 DISTNAME=	nsd4-${VERSION}
@@ -40,19 +40,21 @@ PKG_SYSCONFSUBDIR=	nsd
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=--prefix=${PREFIX:Q}
-CONFIGURE_ARGS+=--enable-bind8-stats
+CONFIGURE_ARGS+=--localstatedir=${VARBASE}
 .if !empty(PKG_OPTIONS:Minet6)
 CONFIGURE_ARGS+=--enable-ipv6
 .else
 CONFIGURE_ARGS+=--disable-ipv6
 .endif
-CONFIGURE_ARGS+=--localstatedir=${VARBASE}
+CONFIGURE_ARGS+=--enable-bind8-stats
+CONFIGURE_ARGS+=--with-ratelimit
 
 CONFIGURE_ARGS+=--with-pidfile=${VARBASE}/run/nsd.pid
 CONFIGURE_ARGS+=--with-user=${NSD_USER}
 CONFIGURE_ARGS+=--with-dbfile=${VARBASE}/nsd/nsd.db
 CONFIGURE_ARGS+=--with-difffile=${VARBASE}/nsd/nsd-ixfr.db
 CONFIGURE_ARGS+=--with-xfrdfile=${VARBASE}/nsd/nsd-xfrd.state
+CONFIGURE_ARGS+=--with-libevent=${BUILDLINK_PREFIX.libevent}
 CONFIGURE_ARGS+=--with-ssl=${BUILDLINK_PREFIX.openssl}
 
 RCD_SCRIPTS=    nsd
@@ -75,6 +77,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/contrib/nsd.zones2nsd.conf \
 		${DESTDIR}${PREFIX}/share/examples/nsd
 
+.include "../../devel/libevent/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../wip/mk/svn-package.mk"
 .include "../../mk/bsd.pkg.mk"
