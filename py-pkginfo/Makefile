@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/10/06 23:42:04 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/16 09:30:53 jihbed Exp $
 #
 
 DISTNAME=	pkginfo-0.9
@@ -15,7 +15,7 @@ WRKSRC=		${WRKDIR}/pkginfo-0.9
 
 USE_LANGUAGES=	# none
 
-PYTHON_VERSIONS_ACCEPTED= 32 31 27 26
+PYTHON_VERSIONS_INCLUDE_3X=yes
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
