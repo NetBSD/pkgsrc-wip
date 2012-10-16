@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/07 13:57:29 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/16 12:33:35 jihbed Exp $
 #
 
 DISTNAME=	scikits.vectorplot-0.1.1
@@ -13,7 +13,6 @@ LICENSE=	modified-bsd
 
 WRKSRC=	${WRKDIR}/scikits.vectorplot-0.1.1
 
-PYTHON_VERSIONS_ACCEPTED= 26
 
 .include "../../lang/python/egg.mk"
 .include "../../math/py-numpy/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/07 13:57:30 asau Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/16 12:35:14 jihbed Exp $
 #
 
 DISTNAME=	pyse-0.3.1
@@ -16,7 +16,6 @@ DEPENDS+=	${PYPKGPREFIX}-Pmw>=1.3.2:../../x11/py-Pmw
 
 USE_LANGUAGES=	c c++
 
-PYTHON_VERSIONS_ACCEPTED= 26
 PYDISTUTILSPKG=	yes
 
 .include "../../lang/python/extension.mk"
