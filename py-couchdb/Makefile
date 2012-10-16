@@ -1,29 +1,35 @@
-# $NetBSD: Makefile,v 1.4 2012/10/14 22:09:25 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/16 08:25:50 thomasklausner Exp $
 #
 
-DISTNAME=	CouchDB-0.6.tar
-PKGNAME=		${PYPKGPREFIX}-couchdb-0.6
+DISTNAME=	CouchDB-0.6
+PKGNAME=		${PYPKGPREFIX}-${DISTNAME:S/CouchDB/couchdb/}
 PKGREVISION=	1
 CATEGORIES=	databases python
 MASTER_SITES=	http://pypi.python.org/packages/source/C/CouchDB/
-EXTRACT_SUFX=	.gz#md5=446b8377cf2ddda94d5f2df29c4f705f
+EXTRACT_SUFX=	.tar.gz#md5=446b8377cf2ddda94d5f2df29c4f705f
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://code.google.com/p/couchdb-python/
 COMMENT=	Couchdb python library
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	modified-bsd
 
 DEPENDS+=	${PYPKGPREFIX}-simplejson>=2.0.9:../../converters/py-simplejson
 DEPENDS+=	${PYPKGPREFIX}-httplib2>=0.5.0:../../www/py-httplib2
 
-WRKSRC=		${WRKDIR}/CouchDB-0.6
 USE_TOOLS+=	pax
 USE_LANGUAGES=	# none
-PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX:Q}
+
+REPLACE_PYTHON+=	couchdb/json.py
+REPLACE_PYTHON+=	couchdb/tools/dump.py
+REPLACE_PYTHON+=	couchdb/tools/load.py
+REPLACE_PYTHON+=	couchdb/tools/replication_helper.py
+REPLACE_PYTHON+=	couchdb/tools/replication_helper_test.py
+REPLACE_PYTHON+=	couchdb/view.py
 
 post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/py-couchdb
 	cd ${WRKSRC}/doc && pax -rwpe . ${DESTDIR}${PREFIX}/share/doc/py-couchdb
 
+.include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
