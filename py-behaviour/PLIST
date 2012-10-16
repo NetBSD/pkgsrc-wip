@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2012/01/30 05:57:06 noud4 Exp $
-${PYSITELIB}/Behaviour-0.1a4-py${PYVERSSUFFIX}.egg-info/PKG-INFO
-${PYSITELIB}/Behaviour-0.1a4-py${PYVERSSUFFIX}.egg-info/SOURCES.txt
-${PYSITELIB}/Behaviour-0.1a4-py${PYVERSSUFFIX}.egg-info/dependency_links.txt
-${PYSITELIB}/Behaviour-0.1a4-py${PYVERSSUFFIX}.egg-info/not-zip-safe
-${PYSITELIB}/Behaviour-0.1a4-py${PYVERSSUFFIX}.egg-info/requires.txt
-${PYSITELIB}/Behaviour-0.1a4-py${PYVERSSUFFIX}.egg-info/top_level.txt
+@comment $NetBSD: PLIST,v 1.3 2012/10/16 07:11:12 thomasklausner Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/src/__init__.py
 ${PYSITELIB}/src/__init__.pyc
 ${PYSITELIB}/src/__init__.pyo
