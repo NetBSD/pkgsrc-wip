@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/16 21:56:48 pettai Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/17 02:35:18 asau Exp $
 #
 
 DISTNAME=	nsd4-${VERSION}
@@ -26,8 +26,6 @@ SVN_ROOT.nsd=		http://www.nlnetlabs.nl/svn/nsd/trunk/
 SVN_MODULE.nsd=		NSD4
 VERSION=		4.0a
 NO_CHECKSUM=		yes
-
-PKG_DESTDIR_SUPPORT=    user-destdir
 
 BUILD_DEFS+=	VARBASE
 
