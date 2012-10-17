@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/09/28 21:24:37 asau Exp $
+# $NetBSD: Makefile,v 1.8 2012/10/17 01:44:46 asau Exp $
 #
 
 DISTNAME=	dolfin-1.0.0
@@ -63,12 +63,12 @@ PLIST_SUBST+=   PYSITELIB=${PYSITELIB}
 .include "../../wip/py-viper/buildlink3.mk"
 .include "../../math/blas/buildlink3.mk"
 .include "../../math/lapack/buildlink3.mk"
+.include "../../math/cgal/buildlink3.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../wip/swig2/buildlink3.mk"
 .include "../../wip/suitesparse/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../wip/cgal/buildlink3.mk"
 # Broken package
 #.include "../../wip/petsc/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
