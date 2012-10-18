@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2012/10/03 21:32:47 asau Exp $
+# $NetBSD: Makefile,v 1.57 2012/10/18 01:13:09 asau Exp $
 
 DISTNAME=	openmpi-1.6.1a1r26586
 PKGNAME=	openmpi-1.6.0.99.26586
@@ -27,6 +27,7 @@ SHLIBTOOL_OVERRIDE=	${WRKSRC}/config/libtool.m4 \
 CONFIGURE_ARGS+=	--disable-mpi-f90
 CONFIGURE_ARGS+=	--without-sge
 CONFIGURE_ARGS+=	--without-slurm
+CONFIGURE_ARGS+=	--enable-contrib-no-build=vt # in separate package
 CONFIGURE_ARGS+=	--with-libltdl=external # use our libltdl
 CONFIGURE_ARGS+=	--with-hwloc=$(BUILDLINK_PREFIX.hwloc:Q) #external
 CONFIGURE_ARGS+=	--with-wrapper-ldflags="-L${PREFIX}/lib ${LINKER_RPATH_FLAG}${PREFIX}/lib"
