@@ -1,13 +1,2 @@
 maybe rename this and files as x11trace
 as another project is called xtrace
-
-ask developer for homepage for this
-
-test on Linux -- submit patches as appropriate to upstream
-
-parse.c: In function `print_parameters':
-parse.c:734: warning: `u8' might be used uninitialized in this function
-parse.c:734: warning: `u16' might be used uninitialized in this function
-parse.c:734: warning: `u32' might be used uninitialized in this function
-parse.c:735: warning: `l' might be used uninitialized in this function
-
