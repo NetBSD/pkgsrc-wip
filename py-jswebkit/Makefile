@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/10/19 16:52:29 silasdb Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/19 17:05:06 silasdb Exp $
 #
 
 DISTNAME=	python-jswebkit-0.0.3
@@ -18,7 +18,7 @@ USE_LANGUAGES=	c
 
 BUILDLINK_API_DEPENDS.pycython+= ${PYPKGPREFIX}-cython>=0.13
 .include "../../devel/py-cython/buildlink3.mk"
-.include "../../www/webkit-gtk/buildlink3.mk"
+.include "../../wip/py-webkit/buildlink3.mk"
 
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
