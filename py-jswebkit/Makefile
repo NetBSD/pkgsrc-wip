@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/19 17:05:06 silasdb Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/19 18:16:48 silasdb Exp $
 #
 
 DISTNAME=	python-jswebkit-0.0.3
@@ -9,7 +9,7 @@ MASTER_SITES=	http://gwrite.googlecode.com/files/
 MAINTAINER=	silasdb@gmail.com
 HOMEPAGE=	http://gwrite.googlecode.com/
 COMMENT=	WebKit/JavaScriptCore Python bindings
-LICENSE=	gnu-gpl-v3
+LICENSE=	gnu-lgpl-v3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
