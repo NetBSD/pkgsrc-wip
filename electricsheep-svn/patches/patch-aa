@@ -1,0 +1,43 @@
+$NetBSD: patch-aa,v 1.1 2012/10/21 09:54:14 noud4 Exp $
+
+for libav>=0.7.1 conform
+http://patches.ubuntu.com/e/electricsheep/electricsheep_2.7~b12+svn20091224-1ubuntu3.patch
+
+--- electricsheep.c.orig	2012-10-21 09:26:28.000000000 +0000
++++ electricsheep.c	2012-10-21 09:51:53.000000000 +0000
+@@ -670,7 +670,7 @@
+     input_stream_index = -1;
+     for (j = 0; j < ictx->nb_streams; j++) {
+ 	AVCodecContext *enc = ictx->streams[j]->codec;
+-	if (CODEC_TYPE_VIDEO == enc->codec_type) {
++	if (AVMEDIA_TYPE_VIDEO == enc->codec_type) {
+ 	    input_stream_index = j;
+ 	    break;
+ 	}
+@@ -696,7 +696,7 @@
+ 
+ 	output_ctx = avformat_alloc_context();
+ 
+-	ofmt = guess_format(NULL, fname, NULL);
++	ofmt = av_guess_format(NULL, fname, NULL);
+ 	if (!ofmt) {
+ 	    fprintf(logout, "could not determine format from %s.\n", fname);
+ 	    exit(1);
+@@ -738,7 +738,7 @@
+ 	av_init_packet(&opkt);
+ 	if (av_parser_change(ictx->streams[input_stream_index]->parser, output_ctx->streams[0]->codec,
+ 			     &opkt.data, &opkt.size, ipkt.data, ipkt.size,
+-			     ipkt.flags & PKT_FLAG_KEY))
++			     ipkt.flags & AV_PKT_FLAG_KEY))
+ 	    opkt.destruct= av_destruct_packet;
+ 		
+ 	if (-1 == av_interleaved_write_frame(output_ctx, &opkt)) {
+@@ -748,7 +748,7 @@
+ 	av_free_packet(&opkt);
+ 	av_free_packet(&ipkt);
+     }
+-    av_close_input_file(ictx);
++    avformat_close_input(&ictx);
+ }
+ 
+ time_t search_time;
