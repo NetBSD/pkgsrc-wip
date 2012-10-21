@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4927 2012/10/20 20:29:18 ishit Exp $
+# $Id: Makefile,v 1.4928 2012/10/21 16:26:26 kristerw Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2444,6 +2444,7 @@ SUBDIR+=	py-jabber-yahoo-transport
 SUBDIR+=	py-jabberbot
 SUBDIR+=	py-joblib
 SUBDIR+=	py-jsonrequester
+SUBDIR+=	py-jswebkit
 SUBDIR+=	py-julio
 SUBDIR+=	py-kaa-base
 SUBDIR+=	py-kaa-imlib2
@@ -2513,6 +2514,7 @@ SUBDIR+=	py-ontopy
 SUBDIR+=	py-openopt
 SUBDIR+=	py-opentmm
 SUBDIR+=	py-openxmllib
+SUBDIR+=	py-operators
 SUBDIR+=	py-orm
 SUBDIR+=	py-osd
 SUBDIR+=	py-p4
@@ -3009,12 +3011,12 @@ SUBDIR+=	sword
 SUBDIR+=	sxemacs
 SUBDIR+=	sxid
 SUBDIR+=	sxiv
+SUBDIR+=	sylfilter
 SUBDIR+=	symbolic++
 SUBDIR+=	symmetrica
 SUBDIR+=	symon
 SUBDIR+=	sympol
 SUBDIR+=	sympow
-SUBDIR+=	sylfilter
 SUBDIR+=	syn68k
 SUBDIR+=	synce-dynamite
 #SUBDIR+=	synce-kde	# requires buildlink3 file to be put in pkgsrc tree
