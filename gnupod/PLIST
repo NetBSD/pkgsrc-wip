@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:40 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/10/21 14:16:59 noud4 Exp $
 bin/gnupod_INIT.pl
 bin/gnupod_addsong.pl
 bin/gnupod_check.pl
@@ -12,15 +12,15 @@ bin/gnupod_search.pl
 bin/mktunes.pl
 bin/tunes2pod.pl
 info/gnupod.info
-lib/perl5/site_perl/5.8.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/GNUpod/ArtworkDB.pm
-lib/perl5/site_perl/5.8.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/GNUpod/FileMagic.pm
-lib/perl5/site_perl/5.8.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/GNUpod/FooBar.pm
-lib/perl5/site_perl/5.8.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/GNUpod/Hash58.pm
-lib/perl5/site_perl/5.8.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/GNUpod/Mktunes.pm
-lib/perl5/site_perl/5.8.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/GNUpod/QTfile.pm
-lib/perl5/site_perl/5.8.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/GNUpod/SysInfo.pm
-lib/perl5/site_perl/5.8.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/GNUpod/XMLhelper.pm
-lib/perl5/site_perl/5.8.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/GNUpod/iTunesDB.pm
+lib/perl5/site_perl/5.16.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/GNUpod/ArtworkDB.pm
+lib/perl5/site_perl/5.16.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/GNUpod/FileMagic.pm
+lib/perl5/site_perl/5.16.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/GNUpod/FooBar.pm
+lib/perl5/site_perl/5.16.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/GNUpod/Hash58.pm
+lib/perl5/site_perl/5.16.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/GNUpod/Mktunes.pm
+lib/perl5/site_perl/5.16.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/GNUpod/QTfile.pm
+lib/perl5/site_perl/5.16.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/GNUpod/SysInfo.pm
+lib/perl5/site_perl/5.16.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/GNUpod/XMLhelper.pm
+lib/perl5/site_perl/5.16.0/${MACHINE_ARCH}-${LOWER_OPSYS}-thread-multi/GNUpod/iTunesDB.pm
 man/man1/gnupod_INIT.pl.1
 man/man1/gnupod_addsong.pl.1
 man/man1/gnupod_check.pl.1
