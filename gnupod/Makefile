@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2012/10/21 14:16:59 noud4 Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/21 15:19:41 noud4 Exp $
 #
 
 DISTNAME=		gnupod-0.99.6
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		multimedia
 MASTER_SITES=		http://download.savannah.gnu.org/releases/gnupod/ \
 			http://blinkenlights.ch/gnupod-dist/stable/
@@ -25,18 +25,10 @@ PKG_DESTDIR_SUPPORT=	none
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
-#USE_TOOLS+=		perl:run
-USE_TOOLS+=		perl
+USE_TOOLS+=		perl:run
 INFO_FILES=		yes
 
-PERL5=			yes
-t:
-	echo ${PERL5_SUB_INSTALLARCHLIB} ${PERL5_SITELIB} ${INSTALLARCHLIB} ${INSTALLSCRIPT} \
-	${INSTALLVENDORBIN} ${INSTALLVENDORSCRIPT} \
-	${INSTALLVENDORARCH} ${INSTALLVENDORLIB} \
-	${INSTALLVENDORMAN1DIR} ${INSTALLVENDORMAN3DIR}
-
-.include "../../lang/perl5/dirs.mk"
+PLIST_SUBST+=		PERL5_SUB_INSTALLSITEARCHLIB=${PERL5_SUB_INSTALLARCHLIB:S|perl5/|perl5/site_perl/|}
 
 .include "../../audio/faac/buildlink3.mk"
 .include "../../audio/flac/buildlink3.mk"
