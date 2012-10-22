@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.2 2010/12/25 02:55:18 bharder Exp $
+$NetBSD: patch-aa,v 1.3 2012/10/22 22:58:00 othyro Exp $
+
+Fixes manpage install path.
 
 --- ./unix/Makefile.in.orig	2010-12-17 23:13:32.000000000 +0000
 +++ ./unix/Makefile.in
