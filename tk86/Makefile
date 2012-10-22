@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/10/07 17:17:38 asau Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/22 23:04:57 othyro Exp $
 
 DISTNAME=		tk8.6b2-src.tar.gz
 PKGNAME=		tk86-${TK_PKGSRC_PATCHLEVEL}
@@ -10,6 +10,7 @@ HOMEPAGE=		http://www.tcl.tk/
 EXTRACT_SUFX=
 EXTRACT_CMD=		tar xzf $$extract_file
 COMMENT=		Graphical toolkit for Tcl
+LICENSE=		2-clause-bsd # ?
 
 .include "../../wip/tk86/Makefile.version"
 .include "../../wip/tcl86/options.mk"
@@ -19,6 +20,7 @@ WRKSRC=			${WRKDIR}/tk8.6b2
 GNU_CONFIGURE=	yes
 CONFIGURE_DIRS=	unix
 BUILD_DIRS=		${CONFIGURE_DIRS}
+USE_TOOLS+=		tar
 
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
 # CONFIGURE_ARGS+=	--with-tcl=${TCLCONFIG_SH_DIR}
@@ -36,5 +38,6 @@ DESTDIRPREFIX=		${DESTDIR}${PREFIX}
 
 post-install:
 	mv ${DESTDIRPREFIX:Q}/lib/tkConfig.sh ${DESTDIRPREFIX:Q}/lib/tk${TK_PKGSRC_VERSION}
+	${RM} ${DESTDIRPREFIX:Q}/lib/tk8.6/demos/license.terms
 
 .include "../../mk/bsd.pkg.mk"
