@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/03 09:10:41 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/23 07:47:50 thomasklausner Exp $
 #
 
 DISTNAME=	lightdm-1.3.3
@@ -22,7 +22,7 @@ MAKE_ENV+=		"LIBLIGHTDM_GOBJECT_CFLAGS=-I${BUILDLINK_PREFIX.glib2}/include/glib/
 PKGCONFIG_OVERRIDE+=	liblightdm-gobject/liblightdm-gobject-1.pc.in
 PKGCONFIG_OVERRIDE+=	liblightdm-qt/liblightdm-qt-2.pc.in
 
-DEPENDS+=		itstool-[0-9]*:../../wip/itstool
+DEPENDS+=		itstool-[0-9]*:../../textproc/itstool
 
 EGDIR=			${PREFIX}/share/examples
 INSTALLATION_DIRS+=	${PKG_SYSCONFDIR}/apparmor.d
