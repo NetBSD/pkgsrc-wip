@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2012/10/12 11:16:49 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/10/23 21:53:14 thomasklausner Exp $
 share/doc/auto-complete/ac-fuzzy.png
 share/doc/auto-complete/ac-isearch.png
 share/doc/auto-complete/ac.png
@@ -33,6 +33,7 @@ ${EMACS_LISPPREFIX}/auto-complete/ac-dict/sh-mode
 ${EMACS_LISPPREFIX}/auto-complete/ac-dict/tcl-mode
 ${EMACS_LISPPREFIX}/auto-complete/ac-dict/ts-mode
 ${EMACS_LISPPREFIX}/auto-complete/ac-dict/tuareg-mode
+${EMACS_LISPPREFIX}/auto-complete/ac-dict/verilog-mode
 ${EMACS_LISPPREFIX}/auto-complete/auto-complete-config.el
 ${EMACS_LISPPREFIX}/auto-complete/auto-complete-config.elc
 ${EMACS_LISPPREFIX}/auto-complete/auto-complete-pkg.el
