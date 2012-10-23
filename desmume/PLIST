@@ -1,7 +1,19 @@
-@comment $NetBSD: PLIST,v 1.3 2012/04/20 08:17:29 othyro Exp $
+@comment $NetBSD: PLIST,v 1.4 2012/10/23 20:44:33 othyro Exp $
 bin/desmume
 bin/desmume-cli
+bin/desmume-glade
 man/man1/desmume-cli.1
+man/man1/desmume-glade.1
 man/man1/desmume.1
+share/applications/desmume-glade.desktop
 share/applications/desmume.desktop
+share/desmume/glade/DeSmuME.xpm
+share/desmume/glade/DeSmuMe.glade
+share/desmume/glade/DeSmuMe_Dtools.glade
+share/locale/fr/LC_MESSAGES/desmume.mo
+share/locale/nb/LC_MESSAGES/desmume.mo
+share/locale/pt_BR/LC_MESSAGES/desmume.mo
+share/locale/sv/LC_MESSAGES/desmume.mo
+share/locale/zh_CN/LC_MESSAGES/desmume.mo
+share/locale/zh_TW/LC_MESSAGES/desmume.mo
 share/pixmaps/DeSmuME.xpm
