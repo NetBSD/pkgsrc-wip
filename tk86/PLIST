@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2011/03/29 22:19:05 bharder Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/10/23 00:13:46 othyro Exp $
 bin/wish8.6
 include/tk.h
 include/tkDecls.h
@@ -13,6 +13,7 @@ include/ttkDecls.h
 include/ttkTheme.h
 lib/libtk8.6.so
 lib/libtkstub8.6.a
+lib/tkConfig.sh
 lib/pkgconfig/tk.pc
 lib/tk8.6/bgerror.tcl
 lib/tk8.6/button.tcl
@@ -186,7 +187,6 @@ lib/tk8.6/ttk/winTheme.tcl
 lib/tk8.6/ttk/xpTheme.tcl
 lib/tk8.6/unsupported.tcl
 lib/tk8.6/xmfbox.tcl
-lib/tk8.6b
 man/man1/wish.1
 man/man3/Tk_3DBorderColor.3
 man/man3/Tk_3DBorderGC.3
