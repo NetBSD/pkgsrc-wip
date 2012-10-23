@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2012/04/20 08:33:55 othyro Exp $
+$NetBSD: distinfo,v 1.6 2012/10/23 20:43:44 othyro Exp $
 
-SHA1 (desmume-0.9.8.tar.gz) = aae63473b79df0fd80a13ef2c6a2813d3d6e605e
-RMD160 (desmume-0.9.8.tar.gz) = 5af92926f335dd5823f34dd60ff2001b7e0e6b19
-Size (desmume-0.9.8.tar.gz) = 3645764 bytes
+SHA1 (desmume-0.9.8.tar.gz) = de72f0a634d5904eced1491d2aeed96705168f65
+RMD160 (desmume-0.9.8.tar.gz) = 68ee9cf026df5a3d301f12630cceaebd7fd2caed
+Size (desmume-0.9.8.tar.gz) = 3677290 bytes
 SHA1 (patch-src_firmware.cpp) = 11ce0975793299e8a02a7db2d7bf0298fa3dccde
