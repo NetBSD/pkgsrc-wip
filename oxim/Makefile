@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/03 21:32:49 asau Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/23 10:28:55 thomasklausner Exp $
 #
 
 DISTNAME=	oxim-1.4.4
@@ -44,5 +44,4 @@ SUBST_VARS.gtk-localedir=	PREFIX PKGLOCALEDIR
 .include "../../x11/libXft/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
-.include "../../x11/xextproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

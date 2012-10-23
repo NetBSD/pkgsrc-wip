@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/07 20:11:08 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/23 10:28:55 thomasklausner Exp $
 #
 
 DISTNAME=	xdotool-2.20110530.1
@@ -23,6 +23,5 @@ SUBST_SED.fix-getopt+=    -e 's,getopt_long_only,getopt_long,g'
 .include "../../lang/perl5/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
-.include "../../x11/xextproto/buildlink3.mk"
 .include "../../x11/libXinerama/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2012/10/08 12:58:37 ryo-on Exp $
+# $NetBSD: options.mk,v 1.2 2012/10/23 10:28:55 thomasklausner Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.pulseaudio
 PKG_SUPPORTED_OPTIONS=	avahi x11
@@ -24,7 +24,6 @@ CONFIGURE_ARGS+=	--disable-avahi
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
-.include "../../x11/xextproto/buildlink3.mk"
 PLIST.x11=		yes
 .else
 CONFIGURE_ARGS+=	--disable-x11
