@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/07 20:11:07 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/23 10:23:06 thomasklausner Exp $
 
 DISTNAME=	WindowMaker-0.95.2
 PKGNAME=	${DISTNAME:S/WindowMaker/windowmaker/}
@@ -85,5 +85,4 @@ post-install:
 .include "../../x11/libXrandr/buildlink3.mk"
 BUILDLINK_DEPMETHOD.libXt?=	build
 .include "../../x11/libXt/buildlink3.mk"
-.include "../../x11/xextproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

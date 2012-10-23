@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1.1.1 2009/12/18 13:35:32 rhialto Exp $
+# $NetBSD: options.mk,v 1.2 2012/10/23 10:23:06 thomasklausner Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.e-uae
 PKG_SUPPORTED_OPTIONS=	gtk sdl x11
@@ -27,5 +27,4 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libXxf86dga/buildlink3.mk"
 .include "../../x11/libXxf86vm/buildlink3.mk"
-.include "../../x11/xextproto/buildlink3.mk"
 .endif

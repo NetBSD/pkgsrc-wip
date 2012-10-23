@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/09/24 16:56:38 asau Exp $
+# $NetBSD: Makefile,v 1.6 2012/10/23 10:23:05 thomasklausner Exp $
 #
 
 DISTNAME=	arcem-20100819
@@ -38,5 +38,4 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/hexcmos ${DESTDIR}${PREFIX}/share/${PKGBASE}/hexcmos
 
 .include "../../x11/libXext/buildlink3.mk"
-.include "../../x11/xextproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
