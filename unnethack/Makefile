@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2012/10/07 17:41:40 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/27 16:39:13 rhialto Exp $
 #
 
-DISTNAME=	unnethack-3.6.0-20111008
+DISTNAME=	unnethack-4.0.0-20120401
 #PKGREVISION=	0
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=unnethack/}
@@ -44,8 +44,8 @@ BUILD_DEFS+=		GAMES_USER GAMES_GROUP
 GAMEPERM=		${NETHACK_USER} ${NETHACK_GROUP} 2555
 
 GAMEDIR=		${PREFIX}/share/${NETHACK_DIR}
-NETHACK_DIR=		unnethackdir360
-VARDIR=			/var/games/unnethack360
+NETHACK_DIR=		unnethackdir400
+VARDIR=			/var/games/unnethack400
 #MAKE_ENV+=		GAMEDIR=${GAMEDIR:Q}
 MAKE_ENV+=		MANDIR=${PREFIX:Q}/${PKGMANDIR:Q}/man6
 #MAKE_ENV+=		VARDIR=${VARDIR:Q}
