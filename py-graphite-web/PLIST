@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2012/08/07 19:43:37 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/10/27 16:52:10 noud4 Exp $
 bin/build-index.sh
 bin/run-graphite-devel-server.py
 graphite/webapp/content/css/cli.css
@@ -753,7 +753,7 @@ ${PYSITELIB}/graphite/whitelist/urls.pyo
 ${PYSITELIB}/graphite/whitelist/views.py
 ${PYSITELIB}/graphite/whitelist/views.pyc
 ${PYSITELIB}/graphite/whitelist/views.pyo
-${PYSITELIB}/graphite_web-${PKGVERSION}-py2.7.egg-info
+${PYSITELIB}/${THIS_EGG_FILE}
 share/examples/graphite/dashboard.conf.example
 share/examples/graphite/example-client.py
 share/examples/graphite/example-graphite-vhost.conf

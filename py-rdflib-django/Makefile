@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2012/10/06 23:09:25 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/27 16:52:10 noud4 Exp $
 #
 
 DISTNAME=	rdflib-django-0.2.dev-201210061248
 EGG_NAME=	rdflib_django-0.2.dev_201210061248
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://pypi.python.org/packages/source/r/rdflib-django/
 

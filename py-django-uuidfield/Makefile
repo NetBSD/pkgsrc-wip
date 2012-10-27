@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2012/10/07 11:54:27 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/27 16:52:10 noud4 Exp $
 #
 
 DISTNAME=	django-uuidfield-0.4.0
 EGG_NAME=	django_uuidfield-0.4.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www python
 MASTER_SITES=	http://pypi.python.org/packages/source/d/django-uuidfield/
 

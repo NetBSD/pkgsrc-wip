@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2012/10/04 00:27:48 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/10/27 16:52:10 noud4 Exp $
 ${PYSITELIB}/audiofield/__init__.py
 ${PYSITELIB}/audiofield/__init__.pyc
 ${PYSITELIB}/audiofield/__init__.pyo
@@ -23,9 +23,9 @@ ${PYSITELIB}/audiofield/tests.pyo
 ${PYSITELIB}/audiofield/widgets.py
 ${PYSITELIB}/audiofield/widgets.pyc
 ${PYSITELIB}/audiofield/widgets.pyo
-${PYSITELIB}/django_audiofield-${PKGVERSION}-py2.7.egg-info/PKG-INFO
-${PYSITELIB}/django_audiofield-${PKGVERSION}-py2.7.egg-info/SOURCES.txt
-${PYSITELIB}/django_audiofield-${PKGVERSION}-py2.7.egg-info/dependency_links.txt
-${PYSITELIB}/django_audiofield-${PKGVERSION}-py2.7.egg-info/not-zip-safe
-${PYSITELIB}/django_audiofield-${PKGVERSION}-py2.7.egg-info/requires.txt
-${PYSITELIB}/django_audiofield-${PKGVERSION}-py2.7.egg-info/top_level.txt
+${PYSITELIB}/${THIS_EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${THIS_EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${THIS_EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${THIS_EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${THIS_EGG_INFODIR}/requires.txt
+${PYSITELIB}/${THIS_EGG_INFODIR}/top_level.txt

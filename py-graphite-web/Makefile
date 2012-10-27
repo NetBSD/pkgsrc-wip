@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2012/10/07 11:54:41 asau Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/27 16:52:10 noud4 Exp $
 #
 
 DISTNAME=	graphite-web-0.9.10
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://launchpadlibrarian.net/106575888/
 
@@ -44,6 +45,8 @@ PYSETUPINSTALLARGS=	--prefix=${PREFIX}			\
 			--install-lib=${PREFIX}/${PYSITELIB}
 
 INSTALLATION_DIRS+=	share/examples/graphite
+
+PLIST_SUBST+=	THIS_EGG_FILE=${EGG_NAME:S|graphite-|graphite_|}-py${PYVERSSUFFIX}.egg-info
 
 pre-build:
 	${MKDIR} ${WRKSRC}/graphite/webapp

@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2012/10/11 14:25:00 jihbed Exp $
-bin/scitools2.7
-${PYSITELIB}/SciTools-${PKGVERSION}-py2.7.egg-info
+@comment $NetBSD: PLIST,v 1.5 2012/10/27 16:52:10 noud4 Exp $
+bin/scitools${PYVERSSUFFIX}
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/scitools/BoxField.py
 ${PYSITELIB}/scitools/BoxField.pyc
 ${PYSITELIB}/scitools/BoxField.pyo

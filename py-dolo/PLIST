@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2012/09/10 22:11:34 jihbed Exp $
-bin/dolo-matlab.py2.7
-bin/dolo-recs.py2.7
-${PYSITELIB}/dolo-0.4_${PKGVERSION}-py2.7.egg-info/PKG-INFO
-${PYSITELIB}/dolo-0.4_${PKGVERSION}-py2.7.egg-info/SOURCES.txt
-${PYSITELIB}/dolo-0.4_${PKGVERSION}-py2.7.egg-info/dependency_links.txt
-${PYSITELIB}/dolo-0.4_${PKGVERSION}-py2.7.egg-info/requires.txt
-${PYSITELIB}/dolo-0.4_${PKGVERSION}-py2.7.egg-info/top_level.txt
+@comment $NetBSD: PLIST,v 1.2 2012/10/27 16:52:10 noud4 Exp $
+bin/dolo-matlab.py${PYVERSSUFFIX}
+bin/dolo-recs.py${PYVERSSUFFIX}
+${PYSITELIB}/${THIS_EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${THIS_EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${THIS_EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${THIS_EGG_INFODIR}/requires.txt
+${PYSITELIB}/${THIS_EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/dolo/__init__.py
 ${PYSITELIB}/dolo/__init__.pyc
 ${PYSITELIB}/dolo/__init__.pyo

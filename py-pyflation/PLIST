@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/07/02 10:37:53 jihbed Exp $
-bin/pyflation_combine.py2.7
-bin/pyflation_firstorder.py2.7
-bin/pyflation_newrun.py2.7
-bin/pyflation_qsubstart.py2.7
-bin/pyflation_secondorder.py2.7
-bin/pyflation_source.py2.7
-bin/pyflation_srcmerge.py2.7
+@comment $NetBSD: PLIST,v 1.2 2012/10/27 16:52:10 noud4 Exp $
+bin/pyflation_combine.py${PYVERSSUFFIX}
+bin/pyflation_firstorder.py${PYVERSSUFFIX}
+bin/pyflation_newrun.py${PYVERSSUFFIX}
+bin/pyflation_qsubstart.py${PYVERSSUFFIX}
+bin/pyflation_secondorder.py${PYVERSSUFFIX}
+bin/pyflation_source.py${PYVERSSUFFIX}
+bin/pyflation_srcmerge.py${PYVERSSUFFIX}
 ${PYSITELIB}/pyflation/__init__.py
 ${PYSITELIB}/pyflation/__init__.pyc
 ${PYSITELIB}/pyflation/__init__.pyo

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2012/10/07 13:57:28 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/27 16:52:10 noud4 Exp $
 #
 
 DISTNAME=	pythia-0.8.1.14
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	http://www.geodynamics.org/cig/software/pythia/
 

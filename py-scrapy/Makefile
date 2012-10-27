@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2012/10/07 13:57:29 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/27 16:52:10 noud4 Exp $
 #
 
 DISTNAME=	Scrapy-0.14.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://pypi.python.org/packages/source/S/Scrapy/
 
@@ -20,5 +21,5 @@ REPLACE_PYTHON=	${WRKSRC}/*.py
 
 PYDISTUTILSPKG=	yes
 
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

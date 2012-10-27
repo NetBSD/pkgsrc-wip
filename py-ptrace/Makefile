@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2012/10/07 13:57:26 asau Exp $
+# $NetBSD: Makefile,v 1.10 2012/10/27 16:52:10 noud4 Exp $
 #
 
 DISTNAME=	python-ptrace-0.6.4
 PKGNAME=	${PYPKGPREFIX}${DISTNAME:S/python//}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	sysutils python
 MASTER_SITES=	http://pypi.python.org/packages/source/p/python-ptrace/
 

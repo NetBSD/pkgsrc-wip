@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/06/07 18:11:04 slitvinov Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/10/27 16:52:10 noud4 Exp $
 bin/scrapy
-${PYSITELIB}/Scrapy-${PKGVERSION}-py2.6.egg-info/dependency_links.txt
-${PYSITELIB}/Scrapy-${PKGVERSION}-py2.6.egg-info/PKG-INFO
-${PYSITELIB}/Scrapy-${PKGVERSION}-py2.6.egg-info/requires.txt
-${PYSITELIB}/Scrapy-${PKGVERSION}-py2.6.egg-info/SOURCES.txt
-${PYSITELIB}/Scrapy-${PKGVERSION}-py2.6.egg-info/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/scrapy/cmdline.py
 ${PYSITELIB}/scrapy/cmdline.pyc
 ${PYSITELIB}/scrapy/cmdline.pyo

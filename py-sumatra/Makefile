@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2012/10/14 22:09:25 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2012/10/27 16:52:10 noud4 Exp $
 #
 
 DISTNAME=	Sumatra-0.3.0.tar
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/S/s/S/.tar//}
+PKGREVISION=	1
 CATEGORIES=	biology python
 MASTER_SITES=	http://pypi.python.org/packages/source/S/Sumatra/
 EXTRACT_SUFX=	.gz
@@ -27,6 +28,7 @@ USE_LANGUAGES=	# none
 
 PYDISTUTILSPKG=	yes
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
+PLIST_SUBST+=	THIS_EGG_INFODIR=${EGG_NAME:S|.tar||}-py${PYVERSSUFFIX}.egg-info
 
 INSTALLATION_DIRS=	share/doc/py-sumatra
 
@@ -40,6 +42,6 @@ do-test:
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/*.txt ${DESTDIR}${PREFIX}/share/doc/py-sumatra
 
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/egg.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

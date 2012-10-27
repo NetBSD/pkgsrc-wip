@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2012/09/16 18:01:30 jihbed Exp $
-bin/idd.py2.7
-bin/ipad.py2.7
-bin/journald.py2.7
+@comment $NetBSD: PLIST,v 1.2 2012/10/27 16:52:10 noud4 Exp $
+bin/idd.py${PYVERSSUFFIX}
+bin/ipad.py${PYVERSSUFFIX}
+bin/journald.py${PYVERSSUFFIX}
 ${PYSITELIB}/acis/Body.py
 ${PYSITELIB}/acis/Body.pyc
 ${PYSITELIB}/acis/Body.pyo
