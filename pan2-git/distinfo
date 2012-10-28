@@ -1,1 +1,2 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/02/28 15:27:17 rhialto Exp $
+$NetBSD: distinfo,v 1.2 2012/10/28 21:05:48 rhialto Exp $
+SHA1 (patch-pan_usenet-utils_mime-utils.cc) = 8e148bb2f67fccc0675ca529577eadbb6da333ca
