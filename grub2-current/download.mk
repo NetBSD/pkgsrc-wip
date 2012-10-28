@@ -1,4 +1,4 @@
-# $NetBSD: download.mk,v 1.23 2012/07/29 16:27:21 gregoire Exp $
+# $NetBSD: download.mk,v 1.24 2012/10/28 11:29:03 gregoire Exp $
 #
 
 #
@@ -11,7 +11,7 @@ BUILD_DEPENDS+=		rsync>=3.0:../../net/rsync
 BUILD_DEPENDS+=		autogen>=5.9:../../devel/autogen
 
 BZR_REPOSITORY=		bzr://bzr.savannah.gnu.org/grub/trunk/grub
-BZR_REVISION=		4542
+BZR_REVISION=		4595
 
 pre-extract: do-bzr-extract
 

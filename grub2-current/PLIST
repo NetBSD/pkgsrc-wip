@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2012/07/26 09:20:48 gregoire Exp $
+@comment $NetBSD: PLIST,v 1.30 2012/10/28 11:29:03 gregoire Exp $
 bin/grub-editenv
 bin/grub-fstest
 bin/grub-kbdcomp
@@ -6,6 +6,7 @@ bin/grub-menulst2cfg
 ${PLIST.freetype}bin/grub-mkfont
 bin/grub-mkimage
 bin/grub-mklayout
+bin/grub-mknetdir
 bin/grub-mkpasswd-pbkdf2
 bin/grub-mkrelpath
 bin/grub-mkrescue
@@ -241,6 +242,8 @@ lib/grub/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/lzma_decompress.image
 lib/grub/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/lzma_decompress.img
 lib/grub/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/lzopio.mod
 lib/grub/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/lzopio.module
+lib/grub/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/mda_text.mod
+lib/grub/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/mda_text.module
 lib/grub/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/mdraid09.mod
 lib/grub/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/mdraid09.module
 lib/grub/${GRUB_TARGET_CPU}-${GRUB_PLATFORM}/mdraid09_be.mod
@@ -468,6 +471,7 @@ man/man1/grub-menulst2cfg.1
 ${PLIST.freetype}man/man1/grub-mkfont.1
 man/man1/grub-mkimage.1
 man/man1/grub-mklayout.1
+man/man1/grub-mknetdir.1
 man/man1/grub-mkpasswd-pbkdf2.1
 man/man1/grub-mkrelpath.1
 man/man1/grub-mkrescue.1
@@ -476,7 +480,6 @@ man/man1/grub-script-check.1
 man/man8/grub-bios-setup.8
 man/man8/grub-install.8
 man/man8/grub-mkconfig.8
-man/man8/grub-mknetdir.8
 man/man8/grub-ofpathname.8
 man/man8/grub-probe.8
 man/man8/grub-reboot.8
@@ -485,7 +488,6 @@ man/man8/grub-sparc64-setup.8
 sbin/grub-bios-setup
 sbin/grub-install
 sbin/grub-mkconfig
-sbin/grub-mknetdir
 sbin/grub-ofpathname
 sbin/grub-probe
 sbin/grub-reboot
@@ -558,6 +560,7 @@ share/locale/ja/LC_MESSAGES/grub.mo
 share/locale/nl/LC_MESSAGES/grub.mo
 share/locale/pa/LC_MESSAGES/grub.mo
 share/locale/pl/LC_MESSAGES/grub.mo
+share/locale/pt_BR/LC_MESSAGES/grub.mo
 share/locale/ru/LC_MESSAGES/grub.mo
 share/locale/sv/LC_MESSAGES/grub.mo
 share/locale/uk/LC_MESSAGES/grub.mo
