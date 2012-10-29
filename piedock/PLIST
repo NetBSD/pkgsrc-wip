@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2012/10/29 04:41:12 othyro Exp $
+bin/piedock
+bin/piedockutils
+share/examples/piedock/piedockrc.sample
