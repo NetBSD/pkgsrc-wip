@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/10/29 04:41:12 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2012/10/29 17:15:48 othyro Exp $
 #
 
 DISTNAME=	piedock-1.6.1
@@ -17,6 +17,12 @@ USE_TOOLS+=		pkg-config
 
 EGDIR=			share/examples/piedock
 INSTALLATION_DIRS+=	${EGDIR}
+
+SUBST_CLASSES+=		share
+SUBST_MESSAGE.share=	Fixing share path.
+SUBST_STAGE.share=	pre-install
+SUBST_FILES.share=	res/piedockrc.sample
+SUBST_SED.share=	-e "s|/usr/share|${PREFIX}/share|g"
 
 .include "options.mk"
 
