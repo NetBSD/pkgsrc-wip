@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4930 2012/10/27 15:11:16 kristerw Exp $
+# $Id: Makefile,v 1.4931 2012/10/29 04:42:25 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2177,6 +2177,7 @@ SUBDIR+=	pidgin-rhythmbox
 SUBDIR+=	pidgin-sipe
 SUBDIR+=	pidgin-status-to-twitter
 SUBDIR+=	pidgin-twitterstatus
+SUBDIR+=	piedock
 SUBDIR+=	pike
 SUBDIR+=	pike-Gettext
 SUBDIR+=	pike-Gz
