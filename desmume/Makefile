@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.11 2012/09/28 21:24:35 asau Exp $
+# $NetBSD: Makefile,v 1.12 2012/10/29 00:54:38 othyro Exp $
 #
 
 DISTNAME=	desmume-0.9.8
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=desmume/}
+DIST_SUBDIR=	${PKGNAME_NOREV}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://desmume.sourceforge.net/
