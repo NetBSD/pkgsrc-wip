@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/09/24 18:26:55 asau Exp $
+# $NetBSD: Makefile,v 1.7 2012/10/29 16:59:40 lexort Exp $
 #
 
 DISTNAME=	CRF++-0.54
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=crfpp/}
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://crfpp.sourceforge.net/
 COMMENT=	Yet Another CRF toolkit
-LICENSE=	gnu-lgpl-v2.1 modified-bsd
+LICENSE=	gnu-lgpl-v2.1 OR modified-bsd
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
