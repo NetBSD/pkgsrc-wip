@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.58 2012/10/18 02:12:45 asau Exp $
+# $NetBSD: Makefile,v 1.59 2012/10/30 07:45:53 asau Exp $
 
-DISTNAME=	openmpi-1.6.3rc1r27448
-PKGNAME=	openmpi-1.6.2.99.27448
+DISTNAME=	openmpi-1.6.3rc4
+#PKGNAME=	openmpi-1.6.2.99.27448
 CATEGORIES=	parallel
 MASTER_SITES=	http://www.open-mpi.org/software/ompi/v1.6/downloads/ \
 		http://www.open-mpi.org/nightly/v1.6/
@@ -54,5 +54,4 @@ LIBLTDL_CONVENIENCE_SUBDIR=	opal/libltdl
 .include "../../devel/libltdl/convenience.mk" # for "test" target to work
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../parallel/hwloc/buildlink3.mk"
-.include "../../textproc/libxml2/buildlink3.mk" # should be reexported by hwloc?
 .include "../../mk/bsd.pkg.mk"
