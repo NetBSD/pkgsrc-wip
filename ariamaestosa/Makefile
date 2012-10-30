@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2012/09/24 16:56:38 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/30 13:57:06 othyro Exp $
 #
 
-DISTNAME=	AriaSrc-1.4.4
+DISTNAME=	AriaSrc-1.4.5
 PKGNAME=	${DISTNAME:S/Src/Maestosa/}
 CATEGORIES=	audio
-MASTER_SITES=	http://sourceforge.net/projects/ariamaestosa/files/ariamaestosa/1.4.4/
+MASTER_SITES=	http://sourceforge.net/projects/ariamaestosa/files/ariamaestosa/1.4.5/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
