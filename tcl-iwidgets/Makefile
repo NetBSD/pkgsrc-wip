@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2012/10/07 17:17:25 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/31 20:11:18 othyro Exp $
 #
 
 DISTNAME=	iwidgets-4.0.1
 PKGNAME=	tcl-${DISTNAME}
 CATEGORIES=	devel lang
-MASTER_SITES=	http://sourceforge.net/projects/incrtcl/files/%5BIncr%20Widgets%5D/4.0.1/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=incrtcl/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

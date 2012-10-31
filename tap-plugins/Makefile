@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2012/10/07 17:17:23 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/31 20:09:26 othyro Exp $
 #
 
 DISTNAME=	tap-plugins-0.7.2
 CATEGORIES=	audio
-MASTER_SITES=	http://sourceforge.net/projects/tap-plugins/files/tap-plugins/0.7.2/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tap-plugins/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://tap-plugins.sourceforge.net/ladspa.html

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2012/10/22 21:45:24 othyro Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/31 20:12:40 othyro Exp $
 #
 
 DISTNAME=	TclOO0.6
 PKGNAME=	${DISTNAME:S/TclOO/tcl-tclOO-/}
 CATEGORIES=	devel
-MASTER_SITES=	http://sourceforge.net/projects/tcl/files/TclOO%20Package/0.6/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tcl/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tcl.tk/
