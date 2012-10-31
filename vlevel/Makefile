@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2012/10/07 17:41:43 asau Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/31 23:26:33 othyro Exp $
 #
 
 DISTNAME=	vlevel-0.5
 CATEGORIES=	audio
-MASTER_SITES=	http://downloads.sourceforge.net/vlevel/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=vlevel/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://vlevel.sourceforge.net/
