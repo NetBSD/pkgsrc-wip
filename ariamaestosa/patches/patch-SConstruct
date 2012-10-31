@@ -1,10 +1,28 @@
-$NetBSD: patch-SConstruct,v 1.3 2012/10/31 01:51:18 asau Exp $
+$NetBSD: patch-SConstruct,v 1.4 2012/10/31 18:40:43 othyro Exp $
 
 NetBSD and FreeBSD have first-class dynamic libraries unlike linux.
 While neither NetBSD nor FreeBSD have ALSA, leave it as is for now.
 
 --- SConstruct.orig	2012-10-16 23:38:50.000000000 +0000
 +++ SConstruct
+@@ -9,7 +9,7 @@ Help("""
+             does a release build, auto-detects your system
+             
+         Flags you can pass when calling 'scons' :
+-            platform=[macosx/linux/unix/windows]
++            platform=[macosx/linux/unix/windows/netbsd]
+                 specify platform, if not auto-detected
+             config=[debug/release]
+                 specify build type
+@@ -38,7 +38,7 @@ Help("""
+             Installs Aria, auto-detects system (run as root if necessary)
+             
+         Flags you can pass when calling 'scons install' :
+-            platform=[macosx/linux/unix]
++            platform=[macosx/linux/unix/netbsd]
+                 specify platform, if not auto-detected
+             prefix=[/opt/local or something else]
+                 install to a different prefix than default /usr/local
 @@ -99,6 +99,8 @@ def main_Aria_func():
          #auto-detect
          if os.name == 'nt':
@@ -14,15 +32,34 @@ While neither NetBSD nor FreeBSD have ALSA, leave it as is for now.
          elif os.uname()[0] == 'Linux':
              which_os = "linux"
          elif os.uname()[0] == 'Darwin':
-@@ -107,7 +109,7 @@ def main_Aria_func():
+@@ -107,8 +109,8 @@ def main_Aria_func():
              print "!! Unknown operating system '" + os.uname()[0] + "', defaulting to Unix"
              which_os = "unix"
  
 -    if not which_os in ["linux", "macosx", "unix", "windows"]:
+-        print "!! Unknown operating system '" + which_os + "', please specify 'platform=[linux/macosx/unix/windows]'"
 +    if not which_os in ["netbsd", "linux", "macosx", "unix", "windows"]:
-         print "!! Unknown operating system '" + which_os + "', please specify 'platform=[linux/macosx/unix/windows]'"
++        print "!! Unknown operating system '" + which_os + "', please specify 'platform=[linux/macosx/unix/windows/netbsd]'"
          sys.exit(0) 
      
+     print">> Operating system : " + which_os 
+@@ -116,14 +118,14 @@ def main_Aria_func():
+     # check what to do
+     if 'uninstall' in COMMAND_LINE_TARGETS:
+         # uninstall
+-        if which_os in ["linux", "unix"]:
++        if which_os in ["linux", "unix", "netbsd"]:
+             uninstall_Aria_unix()
+         else:
+             print "!! Unknown operation or system (uninstall is not valid on your system)"
+             sys.exit(0)
+     elif 'install' in COMMAND_LINE_TARGETS:
+         # install
+-        if which_os in ["linux", "unix"]:
++        if which_os in ["linux", "unix", "netbsd"]:
+             compile_Aria(which_os)
+         elif which_os == "macosx":
+             install_Aria_mac()
 @@ -346,6 +348,30 @@ def compile_Aria(which_os):
          if renderer == 'opengl':
              env.Append(LINKFLAGS = ['-framework','OpenGL','-framework','AGL'])
