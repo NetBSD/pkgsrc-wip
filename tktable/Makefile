@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2012/10/22 22:13:20 othyro Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/31 11:20:45 othyro Exp $
 #
 
 DISTNAME=	Tktable2.10
 PKGNAME=	${DISTNAME:S/Tktable/tktable-/}
 PKGREVISION=	1
 CATEGORIES=	x11
-MASTER_SITES=	http://sourceforge.net/projects/tktable/files/tktable/2.10/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tktable/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://tktable.sourceforge.net/

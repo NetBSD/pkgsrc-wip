@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2012/10/22 21:52:39 othyro Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/31 11:18:20 othyro Exp $
 #
 
 DISTNAME=	tkpng0.9
 PKGNAME=	${DISTNAME:S/tkpng/tkpng-/}
 CATEGORIES=	graphics
-MASTER_SITES=	http://sourceforge.net/projects/tkpng/files/tkpng/0.9/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tkpng/}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
