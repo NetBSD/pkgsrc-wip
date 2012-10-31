@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.10 2012/10/23 00:16:42 othyro Exp $
+# $NetBSD: Makefile,v 1.11 2012/10/31 22:49:51 othyro Exp $
 
 DISTNAME=		tk8.6b2-src.tar.gz
 PKGNAME=		tk86-${TK_PKGSRC_PATCHLEVEL}
 PKGREVISION=		1
 CATEGORIES=		x11 lang
-MASTER_SITES=		http://sourceforge.net/projects/tcl/files/Tcl/8.6b2/
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=tcl/}
 
 MAINTAINER=		bch@methodlogic.net
 HOMEPAGE=		http://www.tcl.tk/
@@ -32,8 +32,6 @@ CONFIGURE_ARGS+=	--x-libraries=${BUILDLINK_PREFIX.libX11}/lib
 
 TEST_TARGET=	test
 INSTALL_TARGET=	install install-private-headers
-
-.include "options.mk"
 
 .include "../../wip/tcl86/buildlink3.mk"
 .include "../../x11/libXScrnSaver/buildlink3.mk"
