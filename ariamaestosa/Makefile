@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/30 13:57:06 othyro Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/31 01:47:38 asau Exp $
 #
 
 DISTNAME=	AriaSrc-1.4.5
@@ -20,7 +20,7 @@ USE_TOOLS+=		pkg-config
 
 do-build:
 			cd ${WRKSRC} && \
-			${SETENV} ${MAKE_ENV} ${PREFIX}/bin/scons platform=linux
+			${SETENV} ${MAKE_ENV} ${PREFIX}/bin/scons
 
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
