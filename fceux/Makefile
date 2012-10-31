@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2012/09/28 23:21:47 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/31 12:51:55 othyro Exp $
 #
 
 DISTNAME=	fceux-2.1.5.src
 PKGNAME=	${DISTNAME:S/.src//}
 CATEGORIES=	emulators
-MASTER_SITES=	http://sourceforge.net/projects/fceultra/files/Source%20Code/2.1.5%20src/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fceultra/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

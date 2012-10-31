@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2012/09/28 22:07:34 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/31 12:50:00 othyro Exp $
 #
 
 DISTNAME=	emovix-0.9.0
 CATEGORIES=	multimedia
-MASTER_SITES=	http://downloads.sourceforge.net/project/movix/eMoviX/0.9/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=movix/eMoviX/0.9/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://movix.sourceforge.net/

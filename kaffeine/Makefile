@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2012/10/01 21:57:32 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/10/31 12:53:57 othyro Exp $
 #
 
 DISTNAME=	kaffeine-1.2.2
 CATEGORIES=	multimedia
-MASTER_SITES=	http://sourceforge.net/projects/kaffeine/files/current/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=kaffeine/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://kaffeine.kde.org/
