@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2012/10/07 17:41:41 asau Exp $
+# $NetBSD: Makefile,v 1.5 2012/10/31 22:56:58 othyro Exp $
 #
 
 PKGVERSION=	1.8.0.1138
 DISTNAME=	vbam-${PKGVERSION}-src
 PKGNAME=	vba-m-${PKGVERSION}
 CATEGORIES=	emulators
-MASTER_SITES=	http://sourceforge.net/projects/vbam/files/VBA-M%20svn%20r1138/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=vbam/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://vba-m.com/
