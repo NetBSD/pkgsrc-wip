@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2012/10/08 14:00:38 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/31 12:09:45 othyro Exp $
 #
 
 DISTNAME=	AutoQ3DCommunity1-40qt4source
 PKGNAME=	autoq3d-1.40
 CATEGORIES=	cad
-MASTER_SITES=	http://downloads.sourceforge.net/project/autoq3d/autoq3d/AutoQ3D%201.40/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=autoq3d/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

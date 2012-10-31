@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2012/10/06 15:39:20 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/10/31 12:13:14 othyro Exp $
 #
 
 DISTNAME=	bpmcounter-0.1.0
 CATEGORIES=	audio
-MASTER_SITES=	http://downloads.sourceforge.net/project/djplay/bpmcounter/0.1.0/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=djplay/bpmcounter/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://djplay.sourceforge.net/
