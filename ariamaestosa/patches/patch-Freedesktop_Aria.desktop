@@ -1,0 +1,12 @@
+$NetBSD: patch-Freedesktop_Aria.desktop,v 1.1 2012/10/31 12:55:01 othyro Exp $
+
+Removing unallowed interpreter.
+
+--- Freedesktop/Aria.desktop.orig	2012-10-16 23:38:50.000000000 +0000
++++ Freedesktop/Aria.desktop
+@@ -1,5 +1,3 @@
+-#!/usr/bin/env xdg-open
+-
+ [Desktop Entry]
+ Encoding=UTF-8
+ Version=1.4.1
