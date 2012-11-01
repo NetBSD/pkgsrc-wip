@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2012/10/05 11:31:52 asau Exp $
+# $NetBSD: Makefile,v 1.64 2012/11/01 21:52:58 cheusov Exp $
 
 DISTNAME=	pkg_summary-utils-9
 CATEGORIES=	pkgtools
@@ -52,7 +52,8 @@ REPLACE_INTERPRETER+=	runawk
 REPLACE.runawk.old=	.*runawk
 REPLACE.runawk.new=	${PREFIX}/bin/runawk
 REPLACE_FILES.runawk=	get_processed_pkgs.in pkg_*.in XB2bin_summary.in \
-	direct_deps.in summary2multi_variants.in enrich_summary.in
+	direct_deps.in summary2multi_variants.in enrich_summary.in \
+	makefiles2deps.in
 
 MAKE_ENV+=	AWKMODDIR=${PREFIX}/share/runawk
 MAKE_ENV+=	EGDIR=${EGDIR}
@@ -62,10 +63,6 @@ MAKE_ENV+=	DISTDIR=${DISTDIR}
 MAKE_ENV+=	PKGSRCDIR=${PKGSRCDIR}
 MAKE_ENV+=	PKG_SUFX=${PKG_SUFX}
 MAKE_ENV+=	PKG_INFO_CMD=${PKG_INFO:Q}
-
-AUTO_MKDIRS=	yes
-
-MAKE_PROGRAM=	mkcmake
 
 .include "../../devel/mk-configure/mk-c.mk"
 .include "../../mk/bsd.pkg.mk"
