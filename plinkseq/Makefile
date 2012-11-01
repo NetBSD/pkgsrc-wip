@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/11/01 03:59:35 asau Exp $
-#
+# $NetBSD: Makefile,v 1.6 2012/11/01 04:00:51 asau Exp $
 
 DISTNAME=	plinkseq-0.08
 CATEGORIES=	biology
