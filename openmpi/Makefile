@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.59 2012/10/30 07:45:53 asau Exp $
+# $NetBSD: Makefile,v 1.60 2012/11/01 00:44:55 asau Exp $
 
-DISTNAME=	openmpi-1.6.3rc4
-#PKGNAME=	openmpi-1.6.2.99.27448
+DISTNAME=	openmpi-1.7rc5r27536
+PKGNAME=	openmpi-1.6.99.27536
 CATEGORIES=	parallel
-MASTER_SITES=	http://www.open-mpi.org/software/ompi/v1.6/downloads/ \
+MASTER_SITES=	http://www.open-mpi.org/software/ompi/v1.7/downloads/ \
+		http://www.open-mpi.org/nightly/v1.7/ \
 		http://www.open-mpi.org/nightly/v1.6/
 EXTRACT_SUFX=	.tar.bz2
 
@@ -15,7 +16,7 @@ CONFLICTS+=	mpich-[0-9]*	# installs bin/mpicc & other wrappers
 CONFLICTS+=	mpich2-[0-9]*	# installs bin/mpicc & other wrappers
 
 GNU_CONFIGURE=		yes
-USE_LANGUAGES=		c c++ fortran77
+USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool \
 			${WRKSRC}/ompi/contrib/vt/vt/extlib/otf/libtool \
@@ -24,7 +25,7 @@ LIBTOOL_OVERRIDE=	${WRKSRC}/libtool \
 SHLIBTOOL_OVERRIDE=	${WRKSRC}/config/libtool.m4 \
 			${WRKSRC}/opal/libltdl/m4/libtool.m4
 
-CONFIGURE_ARGS+=	--disable-mpi-f90
+CONFIGURE_ARGS+=	--disable-mpi-fortran
 CONFIGURE_ARGS+=	--without-sge
 CONFIGURE_ARGS+=	--without-slurm
 CONFIGURE_ARGS+=	--enable-contrib-no-build=vt # in separate package
@@ -33,6 +34,8 @@ CONFIGURE_ARGS+=	--with-hwloc=$(BUILDLINK_PREFIX.hwloc:Q) #external
 CONFIGURE_ARGS+=	--with-wrapper-ldflags="-L${PREFIX}/lib ${LINKER_RPATH_FLAG}${PREFIX}/lib"
 CONFIGURE_ENV+=		ompi_cv_f77_have_INTEGERp8=no	# no "INTEGER*8"??
 CONFIGURE_ARGS+=	OPAL_HAVE_LTDL_ADVISE=0
+# Suppress regeneration:
+CONFIGURE_ENV+=		ACLOCAL=: AUTOCONF=: AUTOHEADER=: AUTOMAKE=:
 
 # Prevent detection of OpenMP support in order to make PLIST consistent:
 BUILDLINK_TRANSFORM=	rm:-fopenmp

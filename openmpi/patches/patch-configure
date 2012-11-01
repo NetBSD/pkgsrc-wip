@@ -1,0 +1,13 @@
+$NetBSD: patch-configure,v 1.1 2012/11/01 00:44:56 asau Exp $
+
+--- configure.orig	2012-10-31 06:42:12.000000000 +0000
++++ configure
+@@ -27707,7 +27707,7 @@ fi
+     ORTE_HAVE_HADOOP_SERIES_2=0
+ 
+     # Only build the Hadoop support if requested
+-    if test "$enable_hadoop" == "yes"; then
++    if test "$enable_hadoop" = "yes"; then
+         { $as_echo "$as_me:${as_lineno-$LINENO}: result: yes" >&5
+ $as_echo "yes" >&6; }
+         orte_enable_hadoop_support=0

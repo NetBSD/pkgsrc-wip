@@ -1,18 +1,18 @@
-$NetBSD: patch-aj,v 1.5 2012/10/18 02:12:45 asau Exp $
+$NetBSD: patch-aj,v 1.6 2012/11/01 00:44:56 asau Exp $
 
 Install configuration files into example directory.
 
---- opal/etc/Makefile.in.orig	2012-08-22 14:25:33.000000000 +0000
+--- opal/etc/Makefile.in.orig	2012-10-31 02:14:47.000000000 +0000
 +++ opal/etc/Makefile.in
-@@ -35,6 +35,7 @@
- #
- VPATH = @srcdir@
- pkgdatadir = $(datadir)/@PACKAGE@
+@@ -1318,6 +1318,7 @@ sbindir = @sbindir@
+ sharedstatedir = @sharedstatedir@
+ srcdir = @srcdir@
+ sysconfdir = @sysconfdir@
 +sysconfexampledir = $(pkgdatadir)/examples
- pkgincludedir = $(includedir)/@PACKAGE@
- pkglibdir = $(libdir)/@PACKAGE@
- pkglibexecdir = $(libexecdir)/@PACKAGE@
-@@ -1302,24 +1303,24 @@ uninstall-am: uninstall-local
+ target = @target@
+ target_alias = @target_alias@
+ target_cpu = @target_cpu@
+@@ -1533,24 +1534,24 @@ uninstall-am: uninstall-local
  # details why the mkdir is in install-data-local.
  
  install-data-local:
@@ -44,7 +44,7 @@ Install configuration files into example directory.
  	        fi; \
  	    done \
          fi;
-@@ -1331,11 +1332,11 @@ install-data-local:
+@@ -1562,11 +1563,11 @@ install-data-local:
  uninstall-local:
  	@ p="$(opal_config_files)"; \
  	for file in $$p; do \
