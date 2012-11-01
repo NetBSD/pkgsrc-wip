@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/07 16:22:55 asau Exp $
+# $NetBSD: Makefile,v 1.5 2012/11/01 03:49:17 asau Exp $
 #
 
 PKGNAME=	seeks-0.3.2
@@ -27,5 +27,5 @@ WRKSRC=		${WRKDIR}/seeks-0.3.2
 .include "../../www/curl/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../databases/tokyocabinet/buildlink3.mk"
-.include "../../wip/protobuf/buildlink3.mk"
+.include "../../devel/protobuf/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

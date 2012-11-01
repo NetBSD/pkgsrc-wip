@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/09/14 17:30:35 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/11/01 03:49:17 asau Exp $
 #
 
 DISTNAME=	plinkseq-0.08
@@ -23,5 +23,5 @@ BUILDLINK_TRANSFORM=	rm:-ldl
 
 REPLACE_BASH=	browser/pbrowse.in index/index.in
 
-.include "../../wip/protobuf/buildlink3.mk"
+.include "../../devel/protobuf/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
