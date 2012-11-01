@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4932 2012/11/01 03:41:35 asau Exp $
+# $Id: Makefile,v 1.4933 2012/11/01 04:14:23 asau Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2201,7 +2201,6 @@ SUBDIR+=	pkgin
 SUBDIR+=	pkgmanager
 SUBDIR+=	plasti
 SUBDIR+=	plconfig
-SUBDIR+=	plinkseq
 SUBDIR+=	plod
 SUBDIR+=	plplot
 SUBDIR+=	plugger
