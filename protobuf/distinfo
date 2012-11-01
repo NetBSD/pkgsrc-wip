@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2012/04/10 02:02:13 genolopolis Exp $
-
-SHA1 (protobuf-2.4.1.tar.bz2) = df5867e37a4b51fb69f53a8baf5b994938691d6d
-RMD160 (protobuf-2.4.1.tar.bz2) = 405eccad08463c2f84064bb68d8a8e757235765f
-Size (protobuf-2.4.1.tar.bz2) = 1440188 bytes
