@@ -1,7 +1,19 @@
-$NetBSD: distinfo,v 1.4 2012/10/31 12:56:41 othyro Exp $
+$NetBSD: distinfo,v 1.5 2012/11/02 20:40:13 othyro Exp $
 
 SHA1 (AriaSrc-1.4.5.tar.bz2) = 06483e161cfbd5579ca317feef12a476fb4b37ea
 RMD160 (AriaSrc-1.4.5.tar.bz2) = a36e402785287e10e3735243189690b13640326b
 Size (AriaSrc-1.4.5.tar.bz2) = 2656420 bytes
 SHA1 (patch-Freedesktop_Aria.desktop) = 077180c0a0819f4ea357f6a014416330de5de469
 SHA1 (patch-SConstruct) = 525a4890b784fe027bda8d4772759d32503db7a9
+SHA1 (patch-Src_GUI_GraphicalSequence.cpp) = e1f4d21450cf8d629947b76ea8decd48881185cc
+SHA1 (patch-Src_GUI_GraphicalTrack.cpp) = e544dfe41aee93d14ee3c49b65da95be09600758
+SHA1 (patch-Src_IO_AriaFileWriter.cpp) = eb1f26ba93eebde39fb704ddcf7741abeb1e076b
+SHA1 (patch-Src_Midi_ControllerEvent.cpp) = 9283d534fe32e104eb2cfc998f1bdbcc4c1c6b8a
+SHA1 (patch-Src_Midi_MagneticGrid.cpp) = 19f7b6ff89649b224e7394127dd720d49ea45cd2
+SHA1 (patch-Src_Midi_MeasureData.cpp) = d97adb0517248f59f715659065b69925250ccc8f
+SHA1 (patch-Src_Midi_Note.cpp) = 9ff0694ab5d1df1e82881fd572aa4e1caf2fddb7
+SHA1 (patch-Src_Midi_Sequence.cpp) = 3099d7f01f7bb17a35bfcf0c4cea87de2007bd2b
+SHA1 (patch-Src_Midi_Track.cpp) = b814cf15c2b29c41e596af1ab7334c0f19227af4
+SHA1 (patch-Src_Pickers_MagneticGridPicker.cpp) = 629d5346915711f19d75b990ee4a56a70f8aedae
+SHA1 (patch-cl_Aria.project) = af0e4831522aadde4c7093c13b5afc15ea249eb2
+SHA1 (patch-win32_Aria.cbp) = f2e4b793b66be3497488c4765150446202a9b98d
