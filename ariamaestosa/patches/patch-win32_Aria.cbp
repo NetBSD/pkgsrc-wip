@@ -1,0 +1,21 @@
+$NetBSD: patch-win32_Aria.cbp,v 1.1 2012/11/02 20:39:32 othyro Exp $
+
+Use system irrXML instead of bundled.
+
+--- win32/Aria.cbp.orig	2012-10-16 23:38:51.000000000 +0000
++++ win32/Aria.cbp
+@@ -382,14 +382,6 @@
+ 		<Unit filename="..\Src\unit_test.cpp" />
+ 		<Unit filename="..\Src\unit_test.h" />
+ 		<Unit filename="..\doc\BugsWindows.txt" />
+-		<Unit filename="..\irrXML\CXMLReaderImpl.h" />
+-		<Unit filename="..\irrXML\fast_atof.h" />
+-		<Unit filename="..\irrXML\heapsort.h" />
+-		<Unit filename="..\irrXML\irrArray.h" />
+-		<Unit filename="..\irrXML\irrString.h" />
+-		<Unit filename="..\irrXML\irrTypes.h" />
+-		<Unit filename="..\irrXML\irrXML.cpp" />
+-		<Unit filename="..\irrXML\irrXML.h" />
+ 		<Unit filename="..\libjdkmidi\include\jdkmidi\advancedsequencer.h" />
+ 		<Unit filename="..\libjdkmidi\include\jdkmidi\driver.h" />
+ 		<Unit filename="..\libjdkmidi\include\jdkmidi\driverdump.h" />

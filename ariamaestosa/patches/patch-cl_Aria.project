@@ -1,0 +1,23 @@
+$NetBSD: patch-cl_Aria.project,v 1.1 2012/11/02 20:39:32 othyro Exp $
+
+Use system irrXML instead of bundled.
+
+--- cl/Aria.project.orig	2012-10-16 23:38:50.000000000 +0000
++++ cl/Aria.project
+@@ -367,16 +367,6 @@
+     <File Name="../Src/AppIPCConnection.cpp"/>
+     <File Name="../Src/AppIPCConnection.h"/>
+   </VirtualDirectory>
+-  <VirtualDirectory Name="irrXML">
+-    <File Name="../irrXML/fast_atof.h"/>
+-    <File Name="../irrXML/irrXML.h"/>
+-    <File Name="../irrXML/irrArray.h"/>
+-    <File Name="../irrXML/irrTypes.h"/>
+-    <File Name="../irrXML/heapsort.h"/>
+-    <File Name="../irrXML/irrString.h"/>
+-    <File Name="../irrXML/irrXML.cpp"/>
+-    <File Name="../irrXML/CXMLReaderImpl.h"/>
+-  </VirtualDirectory>
+   <VirtualDirectory Name="rtmidi">
+     <File Name="../rtmidi/RtError.h"/>
+     <File Name="../rtmidi/RtMidi.h"/>
