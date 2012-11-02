@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2012/10/22 15:09:22 makoto Exp $
+# $NetBSD: Makefile,v 1.12 2012/11/02 15:05:23 makoto Exp $
 #
 
-DISTNAME=	fldigi-3.21.58
+DISTNAME=	fldigi-3.21.59
 CATEGORIES=	ham
 MASTER_SITES=	http://www.w1hkj.com/downloads/fldigi/
 LICENSE=	gnu-gpl-v3
@@ -56,7 +56,7 @@ CONFIGURE_ENV+=		ac_cv_header_execinfo_h=no
 .include "../../ham/hamlib/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
 .include "../../textproc/xmlrpc-c/buildlink3.mk"
-.include "../../x11/fltk/buildlink3.mk"
+.include "../../x11/fltk13/buildlink3.mk"
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
