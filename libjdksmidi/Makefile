@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2012/11/02 05:11:51 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2012/11/02 19:20:10 othyro Exp $
 #
 
 DISTNAME=	jdksmidi-20121031-1
+PKGNAME=	lib${DISTNAME:S/-1/r1/}
 CATEGORIES=	audio
 MASTER_SITES=	https://github.com/downloads/jdkoftinoff/jdksmidi/
 FETCH_USING=	curl
