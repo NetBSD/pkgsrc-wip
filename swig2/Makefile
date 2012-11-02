@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/30 22:37:09 lexort Exp $
+# $NetBSD: Makefile,v 1.5 2012/11/02 15:00:55 lexort Exp $
 
 DISTNAME=	swig-2.0.8
 CATEGORIES=	devel
@@ -33,6 +33,11 @@ CHECK_INTERPRETER_SKIP+=	share/examples/swig/*
 LDFLAGS+=	-lpcre
 
 TEST_TARGET=	check
+# Tests require lots of other dependencies.  There should be a better
+# way to encode this, but for now they are commented out -gdt.
+#.include "../../lang/python/extension.mk"
+#.include "../../lang/php53/buildlink3.mk"
+#.include "../../devel/boost-libs/buildlink3.mk"
 
 post-install:
 	cd ${WRKSRC}/Doc/Manual && \
