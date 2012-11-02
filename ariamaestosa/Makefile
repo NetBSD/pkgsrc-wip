@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2012/11/02 00:25:59 othyro Exp $
+# $NetBSD: Makefile,v 1.8 2012/11/02 20:41:25 othyro Exp $
 #
 
 DISTNAME=	AriaSrc-1.4.5
 PKGNAME=	${DISTNAME:S/Src/Maestosa/}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ariamaestosa/}
 EXTRACT_SUFX=	.tar.bz2
@@ -14,6 +14,7 @@ COMMENT=	Open-source (GPL) midi tracker/editor
 LICENSE=	gnu-gpl-v2 AND gnu-lgpl-v2 AND public-domain
 
 BUILD_DEPENDS+=		scons-[0-9]*:../../devel/scons
+BUILD_DEPENDS+=		irrxml-1.2:../../wip/irrxml
 
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c++
