@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2012/10/07 16:22:54 asau Exp $
-#
+# $NetBSD: Makefile,v 1.3 2012/11/02 14:03:18 othyro Exp $
 
-DISTNAME=	saxonhe9-2-1-1j
-PKGNAME=	${DISTNAME:S/-/./g:S/he/-/}
+DISTNAME=	SaxonHE9-4-0-6J
+PKGNAME=	${DISTNAME:tl:S/-/./g:S/he/-/}
 CATEGORIES=	textproc
-MASTER_SITES=	http://downloads.sourceforge.net/project/saxon/Saxon-HE/9.2/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=saxon/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -13,21 +12,18 @@ COMMENT=	Michael H. Kay's Java XSLT processor
 LICENSE=	mpl-1.1
 
 WRKSRC=		${WRKDIR}
-DIST_SUBDIR=	${PKGNAME_NOREV}
 USE_JAVA=	run
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
 USE_TOOLS+=	pax
 
-post-extract:
-	chmod -R u+w,go-w ${WRKSRC}
+INSTALLATION_DIRS= lib/java
 
-INSTALLATION_DIRS= lib/java share/doc/saxon
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/saxon9he.jar ${DESTDIR}${PREFIX}/lib/java/saxon.jar
-	cd ${WRKSRC}/doc && pax -rw . ${DESTDIR}${PREFIX}/share/doc/saxon
+
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
