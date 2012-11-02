@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4933 2012/11/01 04:14:23 asau Exp $
+# $Id: Makefile,v 1.4934 2012/11/02 05:12:56 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1415,6 +1415,7 @@ SUBDIR+=	libipctdata
 SUBDIR+=	libisoburn
 SUBDIR+=	libisofs
 SUBDIR+=	libitl
+SUBDIR+=	libjdksmidi
 SUBDIR+=	libjingle
 SUBDIR+=	liblingoteach
 SUBDIR+=	liblo
