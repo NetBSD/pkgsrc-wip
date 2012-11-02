@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/05/10 04:58:50 othyro Exp $
+$NetBSD: distinfo,v 1.2 2012/11/02 13:55:51 othyro Exp $
 
-SHA1 (saxon-9.2.1.1j/saxonhe9-2-1-1j.zip) = 118356c343d9af505187f2258aea4c05098eac9c
-RMD160 (saxon-9.2.1.1j/saxonhe9-2-1-1j.zip) = c7758262b67c2597baddcab7a8bcbaee0ecacbdc
-Size (saxon-9.2.1.1j/saxonhe9-2-1-1j.zip) = 1984393 bytes
+SHA1 (SaxonHE9-4-0-6J.zip) = e206ed3b787dbdf12b172fa6a3084221dc00394e
+RMD160 (SaxonHE9-4-0-6J.zip) = caddb3b5e1dc2cde12408d04e307b1e9bc64b15a
+Size (SaxonHE9-4-0-6J.zip) = 2796388 bytes
