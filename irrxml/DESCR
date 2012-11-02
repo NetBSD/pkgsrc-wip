@@ -1,0 +1,19 @@
+irrXML provides forward-only, read-only access to a stream of non validated XML
+data. It was fully implemented by Nikolaus Gebhardt. Its current features are:
+
+* It it fast as lighting and has very low memory usage. It was developed with
+  the intention of being used in 3D games, as it already has been.
+* irrXML is very small: It only consists of 60 KB of code and can be added
+  easily to your existing project.
+* Of course, it is platform independent and works with lots of compilers.
+* It is able to parse ASCII, UTF-8, UTF-16 and UTF-32 text files, both in little
+  and big endian format.
+* Independent of the input file format, the parser can return all strings in
+  ASCII, UTF-8, UTF-16 and UTF-32 format.
+* With its optional file access abstraction it has the advantage that it can
+  read not only from files but from any type of data (memory, network, ...). For
+  example when used with the Irrlicht Engine, it directly reads from compressed.
+  zip files.
+* Just like the Irrlicht Engine for which it was originally created, it is
+  extremely easy to use.
+* It has no external dependencies, it does not even need the STL.

@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2012/11/02 15:38:44 othyro Exp $
+include/irrXML/CXMLReaderImpl.h
+include/irrXML/fast_atof.h
+include/irrXML/heapsort.h
+include/irrXML/irrArray.h
+include/irrXML/irrString.h
+include/irrXML/irrTypes.h
+include/irrXML/irrXML.h
