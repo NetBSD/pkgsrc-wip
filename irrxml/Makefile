@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/11/02 15:38:44 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2012/11/02 19:51:25 othyro Exp $
 #
 
 DISTNAME=	irrxml-1.2
@@ -19,7 +19,7 @@ INSTALLATION_DIRS+=	include/irrXML
 
 do-install:
 	cd ${WRKSRC} && \
-	for file in src/*.h; do \
+	for file in src/irrXML.cpp src/*.h; do \
 		${INSTALL_DATA} $${file} ${DESTDIR}${PREFIX}/include/irrXML; \
 	done
 
