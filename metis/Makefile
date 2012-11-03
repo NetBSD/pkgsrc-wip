@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/15 22:49:50 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/11/03 13:42:24 outpaddling Exp $
 
 DISTNAME=		metis-4.0
 CATEGORIES=		math
@@ -12,6 +12,11 @@ BUILD_TARGET=		default
 INSTALLATION_DIRS=	bin lib
 
 LICENSE=	modified-bsd
+
+SUBST_CLASSES+=         log2
+SUBST_SED.log2=         -e "s/log2/int_log2/g"
+SUBST_STAGE.log2=       post-patch
+SUBST_FILES.log2=       Lib/*
 
 do-test:
 	cd ${WRKSRC}/Graphs && ./mtest 4elt.graph
