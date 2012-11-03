@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/08/04 10:39:02 ryo-on Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/11/03 15:07:33 thomasklausner Exp $
 bin/js-config
 include/js/Allocator.h
 include/js/Assembler.h
@@ -9,7 +9,7 @@ include/js/LIR.h
 include/js/LIRopcode.tbl
 include/js/Native.h
 include/js/NativeCommon.h
-include/js/Native${MACHINE_ARCH}.h
+include/js/Native${ARCH}.h
 include/js/RegAlloc.h
 include/js/VMPI.h
 include/js/Writer.h
