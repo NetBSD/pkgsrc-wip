@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2012/05/11 10:56:32 fhajny Exp $
+# $NetBSD: Makefile,v 1.5 2012/11/03 19:43:28 ftigeot Exp $
 #
 
 DISTNAME=	munin-${VERSION}
 PKGNAME=	munin-master-${VERSION}
-VERSION=	1.4.5
+VERSION=	2.0.7
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=munin/munin%20stable/}
 
@@ -17,17 +17,16 @@ PKG_DESTDIR_SUPPORT=	destdir
 USE_TOOLS+=	gmake bash:run perl:run pax
 
 DEPENDS+=	p5-Date-Manip>=0:../../devel/p5-Date-Manip
+DEPENDS+=	p5-File-Copy-Recursive>=0.38:../../sysutils/p5-File-Copy-Recursive
 DEPENDS+=	p5-HTML-Template>=0:../../www/p5-HTML-Template
+DEPENDS+=	p5-IO-Socket-INET6>=2.69:../../net/p5-IO-Socket-INET6
 DEPENDS+=	p5-Log-Log4perl>=0:../../devel/p5-Log-Log4perl
+DEPENDS+=	p5-URI>=1.60:../../www/p5-URI
 DEPENDS+=	rrdtool>=1.2:../../databases/rrdtool
 DEPENDS+=	munin-common>=1.4:../../wip/munin-common
 #DEPENDS+=	munin-doc>=1.3.1:../../sysutils/munin-doc
 
 .include "../../mk/bsd.prefs.mk"
-
-.if ${X11_TYPE} == "modular"
-DEPENDS+=	modular-xorg-fonts>0:../../meta-pkgs/modular-xorg-fonts
-.endif
 
 REPLACE_PERL=	${WRKSRC}/master/_bin/munin-update.in
 
@@ -57,6 +56,7 @@ MUNIN_WWWDIR?=		${PREFIX}/www
 OWN_DIRS=		${MUNIN_DBDIR} ${MUNIN_LOGDIR}
 OWN_DIRS+=		${MUNIN_SPOOLDIR} ${MUNIN_STATEDIR}
 OWN_DIRS+=		${PKG_SYSCONFDIR}/munin-conf.d
+OWN_DIRS+=		${PKG_SYSCONFDIR}/static
 OWN_DIRS+=		${PKG_SYSCONFDIR}/templates
 OWN_DIRS+=		${PKG_SYSCONFDIR}/templates/partial
 OWN_DIRS+=		${MUNIN_WWWDIR}/munin ${MUNIN_WWWDIR}/munin/data
@@ -100,22 +100,31 @@ MESSAGE_SUBST+=	VARBASE=${VARBASE}
 
 EGDIR=		${PREFIX}/share/examples/munin
 TMPL_EGDIR=	${EGDIR}/templates
+STATIC_EGDIR=	${EGDIR}/static
 INST_TMPL_DIR=	${PKG_SYSCONFDIR}/templates
 
 CONF_FILES+=	${EGDIR}/munin.conf ${PKG_SYSCONFDIR}/munin.conf
 
-TMPL_FILES=	definitions.html logo.png logo-h.png munin-comparison-day.tmpl \
+TMPL_FILES=	munin-categoryview.tmpl munin-comparison-day.tmpl \
 		munin-comparison-month.tmpl munin-comparison-week.tmpl \
 		munin-comparison-year.tmpl munin-domainview.tmpl \
-		munin-nodeview.tmpl munin-overview.tmpl \
-		munin-serviceview.tmpl style.css \
-		favicon.ico style-1.2.css partial/bottom_navigation.tmpl \
+		munin-dynazoom.tmpl munin-nodeview.tmpl munin-overview.tmpl \
+		munin-problemview.tmpl munin-serviceview.tmpl \
+		partial/bottom_navigation.tmpl partial/footer.tmpl \
 		partial/generated_by.tmpl partial/head.tmpl partial/logo_navigation.tmpl \
-		partial/logo_navigation_comparison.tmpl partial/logo_path.tmpl \
-		partial/path.tmpl
+		partial/logo_navigation_comparison.tmpl \
+		partial/logo_navigation_problem.tmpl partial/logo_path.tmpl \
+		partial/navigation.tmpl partial/path.tmpl
+
+STATIC_FILES=	definitions.html dynazoom.html favicon.ico formatdate.js \
+		logo-h.png logo.png querystring.js zoom.js \
+		style-1.2.css style-new.css style.css
 
 .for f in ${TMPL_FILES}
 CONF_FILES+=	${TMPL_EGDIR}/${f} ${INST_TMPL_DIR}/${f}
+.endfor
+.for f in ${STATIC_FILES}
+CONF_FILES+=	${STATIC_EGDIR}/${f} ${PKG_SYSCONFDIR}/static/${f}
 .endfor
 
 INSTALLATION_DIRS+=	${EGDIR}

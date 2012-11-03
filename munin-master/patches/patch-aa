@@ -1,11 +1,11 @@
-$NetBSD: patch-aa,v 1.2 2012/05/11 10:56:32 fhajny Exp $
+$NetBSD: patch-aa,v 1.3 2012/11/03 19:43:28 ftigeot Exp $
 
---- Makefile.config.orig	2009-11-06 14:35:44.000000000 +0000
+--- Makefile.config.orig	2012-10-02 22:46:50.000000000 +0000
 +++ Makefile.config
-@@ -17,62 +17,65 @@
+@@ -17,39 +17,42 @@
  #
  # the base of the Munin installation.
- # 
+ #
 -PREFIX     = $(DESTDIR)/opt/munin
 +UPREFIX    = $(DESTDIR)$(PREFIX)
  
@@ -13,7 +13,7 @@ $NetBSD: patch-aa,v 1.2 2012/05/11 10:56:32 fhajny Exp $
 -CONFDIR    = $(DESTDIR)/etc/opt/munin
 +CONFDIR   ?= $(UPREFIX)/etc/munin
 +
-+# Where NetBSD pkgsrc installs example config files
++# Where pkgsrc installs example config files
 +EGDIR      = $(UPREFIX)/share/examples/munin
  
  # Server only - where to put munin-cron
@@ -42,28 +42,21 @@ $NetBSD: patch-aa,v 1.2 2012/05/11 10:56:32 fhajny Exp $
 +HTMLDIR    = $(DESTDIR)${MUNIN_WWWDIR}/munin/data
 +CGIDIR     = $(DESTDIR)${MUNIN_WWWDIR}/cgi-bin
  
- # Server only - spool directory for data gathered from nodes by
- # munin-gather - experimental.  Place on ramdisk to make munin
- # scale better.  On many versions of Linux as well as on Solaris
- # /tmp will be a ramdisk.
- 
--SSPOOLDIR  = $(PREFIX)/spool
-+SSPOOLDIR  = ${MUNIN_SPOOLDIR}
- 
- # Suggested directory name for a pulic ramdisk based tmp directory.
- # SSPOOLDIR := /tmp/muninspool
- 
- # Client only - Where to put RRD files and other intenal data
+ # Where to put internal data for master (RRD, internal files, ...)
 -DBDIR      = $(DESTDIR)/var/opt/munin
 +DBDIR      = ${MUNIN_DBDIR}
  
+ # Where to put internal data for node (plugin state, ...)
+ DBDIRNODE  = $(DESTDIR)/var/opt/munin-node
+ 
+ # Client only - Where the spool files are written. Must be writable by
+ # group "munin", and should be preserved between reboots
+-SPOOLDIR   = $(DBDIR)/spool
++SPOOLDIR   = ${MUNIN_SPOOLDIR}
+ 
  # Client only - Where plugins should put their states. Must be writable by
  # group "munin", and should be preserved between reboots
- PLUGSTATE  = $(DBDIR)/plugin-state
- 
- # Where Munin should place its logs.
--LOGDIR     = $(PREFIX)/log/munin
-+LOGDIR     = ${MUNIN_LOGDIR}
+@@ -60,16 +63,16 @@ LOGDIR     = $(PREFIX)/log/munin
  
  # Location of PID files and other statefiles. On the server, must be
  # writable by the user "munin".
@@ -84,8 +77,8 @@ $NetBSD: patch-aa,v 1.2 2012/05/11 10:56:32 fhajny Exp $
  
  # The java runtime to use (used by some plugins)
  JAVARUN    := /usr/bin/java
-@@ -95,11 +98,11 @@ JAVALIBDIR:= $(LIBDIR)
- GOODSH     := $(shell PATH=`getconf PATH` sh -c 'type sh | sed "s/.* //"')
+@@ -92,11 +95,11 @@ JAVALIBDIR = $(LIBDIR)
+ GOODSH     := $(shell PATH=`getconf PATH 2>/dev/null || echo $(PATH)` LANG=C sh -c 'type sh | sed "s/.* //"')
  
  # Path of bash for bash specific plugins
 -BASH       := /bin/bash
@@ -98,7 +91,7 @@ $NetBSD: patch-aa,v 1.2 2012/05/11 10:56:32 fhajny Exp $
 +PERLLIB    = $(DESTDIR)$(PERLVENDORLIB)
  
  # Client only - Install plugins for this architecture
- OSTYPE     := $(shell uname | tr '[A-Z]' '[a-z]')
+ # the LANG=C makes tr work as expected, not regarding any locale it
 @@ -117,8 +120,8 @@ MKTEMP     := $(shell ./test-mktemp)
  VERSION    := $(shell ./getversion)
  
@@ -110,7 +103,7 @@ $NetBSD: patch-aa,v 1.2 2012/05/11 10:56:32 fhajny Exp $
  
  # Default user to run the plugins as
  PLUGINUSER := nobody
-@@ -126,9 +129,10 @@ PLUGINUSER := nobody
+@@ -129,9 +132,10 @@ CGIUSER := nobody
  # Which command to use to check if the USER and GROUP to run Munin as, exists.
  # These will work on most modern OSes:
  #
