@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/10/07 11:54:28 asau Exp $
+# $NetBSD: Makefile,v 1.10 2012/11/03 19:15:12 kristerw Exp $
 #
 
 DISTNAME=	djvusmooth-0.2.10
@@ -15,10 +15,10 @@ INSTALLATION_DIRS=	${PKGMANDIR}/man1
 
 USE_LANGUAGES=	# none
 
-DEPENDS+=	${PYPKGPREFIX}-xdg:../../devel/py-xdg
-DEPENDS+=	${PYPKGPREFIX}-wxWidgets:../../x11/py-wxWidgets
-DEPENDS+=	${PYPKGPREFIX}-djvulibre:../../wip/py-djvulibre
-DEPENDS+=	djvulibre-tools:../../graphics/djvulibre-tools
+DEPENDS+=	${PYPKGPREFIX}-xdg-[0-9]*:../../devel/py-xdg
+DEPENDS+=	${PYPKGPREFIX}-wxWidgets-[0-9]*:../../x11/py-wxWidgets
+DEPENDS+=	${PYPKGPREFIX}-djvulibre-[0-9]*:../../wip/py-djvulibre
+DEPENDS+=	djvulibre-tools-[0-9]*:../../graphics/djvulibre-tools
 
 PYDISTUTILSPKG=	yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/07 17:17:22 asau Exp $
+# $NetBSD: Makefile,v 1.8 2012/11/03 19:41:30 kristerw Exp $
 # the version number is for pkglint only
 DISTNAME=	tamago-anthy-4.0
 # to avoid trailing -cvs in package name.
@@ -29,7 +29,7 @@ USE_TOOLS+=	pax patch
 INFO_FILES=	yes
 
 # requires KANA-Kanji conversion engine
-DEPENDS+=	anthy:../../inputmethod/anthy
+DEPENDS+=	anthy-[0-9]*:../../inputmethod/anthy
 
 CVS_REPOSITORIES=	tamago
 CVS_ROOT.tamago=	:pserver:anonymous:@cvs.m17n.org:/cvs/tamago

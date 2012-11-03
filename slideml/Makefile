@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/07 16:23:14 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/03 19:41:30 kristerw Exp $
 
 DISTNAME=	slideml-1.1.0
 CATEGORIES=	graphics
@@ -13,7 +13,7 @@ LICENSE=	isc
 USE_LANGUAGES=			# none
 USE_TOOLS+=			perl
 REPLACE_PERL+=			slideml.pl
-DEPENDS+=			p5-Image-Size:../../graphics/p5-Image-Size
+DEPENDS+=			p5-Image-Size-[0-9]*:../../graphics/p5-Image-Size
 NO_BUILD=			yes
 WRKSRC=				${WRKDIR}/${DISTNAME}
 INSTALLATION_DIRS=		bin

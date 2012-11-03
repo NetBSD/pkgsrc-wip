@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/07 17:17:52 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/03 19:41:31 kristerw Exp $
 #
 
 DISTNAME=	tuxguitar-src-1.2
@@ -15,7 +15,7 @@ WRKSRC=		${WRKDIR}/tuxguitar-src-1.2
 USE_LANGUAGES=	c c++
 USE_JAVA2=	yes
 
-BUILD_DEPENDS+=	apache-ant:../../devel/apache-ant
+BUILD_DEPENDS+=	apache-ant-[0-9]*:../../devel/apache-ant
 MAKE_PROGRAM=ant
 MAKE_FILE=build.xml
 
