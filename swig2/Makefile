@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/11/02 15:00:55 lexort Exp $
+# $NetBSD: Makefile,v 1.6 2012/11/03 23:47:08 lexort Exp $
 
 DISTNAME=	swig-2.0.8
 CATEGORIES=	devel
@@ -12,7 +12,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=swig/}
 
 MAINTAINER=	jwbacon@tds.net
 HOMEPAGE=	http://www.swig.org/
-COMMENT=	Simplified Wrapper and Interface Generator
+COMMENT=	Simplified Wrapper and Interface Generator (version 2)
 LICENSE=	2-clause-bsd
 
 CONFLICTS=		swig-build-[0-9]*
