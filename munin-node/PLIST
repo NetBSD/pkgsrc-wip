@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2012/06/02 13:24:41 ftigeot Exp $
+@comment $NetBSD: PLIST,v 1.8 2012/11/03 16:39:31 ftigeot Exp $
 bin/munindoc
 lib/munin/plugins/amavis
 lib/munin/plugins/apache_accesses
@@ -50,8 +50,6 @@ lib/munin/plugins/ifx_concurrent_sessions_
 lib/munin/plugins/ipac-ng
 lib/munin/plugins/ipmi_sensor_
 lib/munin/plugins/ircu
-lib/munin/plugins/jmx_
-lib/munin/plugins/jmx_tomcat_dbpools
 lib/munin/plugins/loggrep
 lib/munin/plugins/lpstat
 lib/munin/plugins/mailman

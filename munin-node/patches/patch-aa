@@ -1,6 +1,8 @@
-$NetBSD: patch-aa,v 1.6 2012/06/02 13:24:41 ftigeot Exp $
+$NetBSD: patch-aa,v 1.7 2012/11/03 16:39:31 ftigeot Exp $
 
---- Makefile.config.orig	2012-05-30 10:05:22.000000000 +0000
+Initialize default paths for all Munin components.
+
+--- Makefile.config.orig	2012-10-02 22:46:50.000000000 +0000
 +++ Makefile.config
 @@ -17,32 +17,35 @@
  #
@@ -12,10 +14,10 @@ $NetBSD: patch-aa,v 1.6 2012/06/02 13:24:41 ftigeot Exp $
  # Where Munin keeps its configurations (server.conf, client.conf, ++)
 -CONFDIR    = $(DESTDIR)/etc/opt/munin
 +CONFDIR    = $(UPREFIX)/etc/munin
- 
++
 +# Where pkgsrc installs example config files
 +EGDIR      = $(UPREFIX)/share/examples/munin
-+ 
+ 
  # Server only - where to put munin-cron
 -BINDIR     = $(PREFIX)/bin
 +BINDIR     = $(UPREFIX)/bin
@@ -42,14 +44,14 @@ $NetBSD: patch-aa,v 1.6 2012/06/02 13:24:41 ftigeot Exp $
 +HTMLDIR    = $(UPREFIX)/www/munin/data
 +CGIDIR     = $(UPREFIX)/www/cgi-bin
  
- # Where to put RRD files and other internal data, both master and node
+ # Where to put internal data for master (RRD, internal files, ...)
 -DBDIR      = $(DESTDIR)/var/opt/munin
 +DBDIR      = ${MUNIN_DBDIR}
  
- # Client only - Where the spool files are written. Must be writable by
- # group "munin", and should be preserved between reboots
-@@ -53,20 +56,20 @@ SPOOLDIR   = $(DBDIR)/spool
- PLUGSTATE  = $(DBDIR)/plugin-state
+ # Where to put internal data for node (plugin state, ...)
+ DBDIRNODE  = $(DESTDIR)/var/opt/munin-node
+@@ -56,20 +59,20 @@ SPOOLDIR   = $(DBDIR)/spool
+ PLUGSTATE  = $(DBDIRNODE)/plugin-state
  
  # Where Munin should place its logs.
 -LOGDIR     = $(PREFIX)/log/munin
@@ -73,8 +75,8 @@ $NetBSD: patch-aa,v 1.6 2012/06/02 13:24:41 ftigeot Exp $
  
  # The java runtime to use (used by some plugins)
  JAVARUN    := /usr/bin/java
-@@ -89,11 +92,11 @@ JAVALIBDIR:= $(LIBDIR)
- GOODSH     := $(shell PATH=`getconf PATH 2>/dev/null || echo $(PATH)` sh -c 'type sh | sed "s/.* //"')
+@@ -92,11 +95,11 @@ JAVALIBDIR = $(LIBDIR)
+ GOODSH     := $(shell PATH=`getconf PATH 2>/dev/null || echo $(PATH)` LANG=C sh -c 'type sh | sed "s/.* //"')
  
  # Path of bash for bash specific plugins
 -BASH       := /bin/bash
@@ -87,8 +89,8 @@ $NetBSD: patch-aa,v 1.6 2012/06/02 13:24:41 ftigeot Exp $
 +PERLLIB    = $(DESTDIR)$(PERLVENDORLIB)
  
  # Client only - Install plugins for this architecture
- OSTYPE     := $(shell uname | tr '[A-Z]' '[a-z]' | cut -f 1 -d _)
-@@ -111,8 +114,8 @@ MKTEMP     := $(shell ./test-mktemp)
+ # the LANG=C makes tr work as expected, not regarding any locale it
+@@ -117,8 +120,8 @@ MKTEMP     := $(shell ./test-mktemp)
  VERSION    := $(shell ./getversion)
  
  # User to run munin as
@@ -99,7 +101,7 @@ $NetBSD: patch-aa,v 1.6 2012/06/02 13:24:41 ftigeot Exp $
  
  # Default user to run the plugins as
  PLUGINUSER := nobody
-@@ -123,9 +126,10 @@ CGIUSER := nobody
+@@ -129,9 +132,10 @@ CGIUSER := nobody
  # Which command to use to check if the USER and GROUP to run Munin as, exists.
  # These will work on most modern OSes:
  #
