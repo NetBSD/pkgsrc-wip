@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2012/11/01 21:52:58 cheusov Exp $
+@comment $NetBSD: PLIST,v 1.36 2012/11/03 11:51:22 cheusov Exp $
 bin/cvs_checksum
 bin/makefiles2deps
 bin/pkg_assignments2pkgpath
@@ -7,6 +7,8 @@ bin/pkg_cleanup_distdir
 bin/pkg_cmp_summary
 bin/pkg_digger
 bin/pkg_digger_backend
+bin/pkg_digger_installed
+bin/pkg_digger_summary
 bin/pkg_grep_summary
 bin/pkg_lint_summary
 bin/pkg_list_all_pkgs
@@ -35,6 +37,8 @@ man/man1/pkg_bin_summary.1
 man/man1/pkg_cleanup_distdir.1
 man/man1/pkg_cmp_summary.1
 man/man1/pkg_digger.1
+man/man1/pkg_digger_installed.1
+man/man1/pkg_digger_summary.1
 man/man1/pkg_grep_summary.1
 man/man1/pkg_lint_summary.1
 man/man1/pkg_list_all_pkgs.1
