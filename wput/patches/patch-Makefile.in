@@ -1,0 +1,49 @@
+$NetBSD: patch-Makefile.in,v 1.1 2012/11/03 16:43:56 othyro Exp $
+
+Make wput use DESTDIR.
+
+--- Makefile.in.orig	2008-09-27 10:31:23.000000000 +0000
++++ Makefile.in
+@@ -1,8 +1,9 @@
+ #wput makefile
+ PACKAGE     = @PACKAGE@
++destdir     = ${DESTDIR}
+ prefix      = @prefix@
+ datadir     = $(prefix)/share
+-mandir	    = $(datadir)/man/man1
++mandir	    = $(prefix)/${PKGMANDIR}/man1
+ exec_prefix = @exec_prefix@
+ bindir=@bindir@
+ 
+@@ -16,12 +17,12 @@ win-clean:
+ 
+ install: all
+ 	cd po && $(MAKE) $(MAKEDEFS) $@
+-	mkdir -p $(bindir) 
+-	mkdir -p $(mandir) 
+-	install -m0755 wput $(bindir)
+-	install -m0644 doc/wput.1.gz $(mandir)
+-	ln -s $(bindir)/wput $(bindir)/wdel
+-	install -m0644 doc/wdel.1.gz $(mandir)
++	mkdir -p $(destdir)$(bindir) 
++	mkdir -p $(destdir)$(mandir) 
++	install -m0755 wput $(destdir)$(bindir)
++	install -m0644 doc/wput.1.gz $(destdir)$(mandir)
++	ln -fs $(destdir)$(bindir)/wput $(destdir)$(bindir)/wdel
++	install -m0644 doc/wdel.1.gz $(destdir)$(mandir)
+ 	@echo "----------------"
+ 	@echo "Wput and Wdel installed. See 'wput/wdel -h' or 'man wput/wdel' for"
+ 	@echo "usage information."
+@@ -31,8 +32,8 @@ install: all
+ 	@echo "in the manpage)."
+ 	@echo "----------------"
+ uninstall:
+-	rm -f $(bindir)/wput
+-	rm -f $(bindir)/wdel
+-	rm -f $(mandir)/wput.1.gz
+-	rm -f $(mandir)/wdel.1.gz
++	rm -f $(destdir)$(bindir)/wput
++	rm -f $(destdir)$(bindir)/wdel
++	rm -f $(destdir)$(mandir)/wput.1.gz
++	rm -f $(destdir)$(mandir)/wdel.1.gz
+ 	
