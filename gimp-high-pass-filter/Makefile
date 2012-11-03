@@ -1,18 +1,19 @@
-# $NetBSD: Makefile,v 1.2 2012/09/29 00:50:35 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/03 12:11:09 othyro Exp $
 #
 
 DISTNAME=	high-pass
-PKGNAME=	gimp-${DISTNAME}-1.0
+PKGNAME=	gimp-${DISTNAME}-filter-1.2
 CATEGORIES=	graphics
 MASTER_SITES=	http://registry.gimp.org/files/
 EXTRACT_SUFX=	.scm
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://registry.gimp.org/files/
+HOMEPAGE=	http://registry.gimp.org/node/7385
 COMMENT=	General purpose high-pass filter plugin for GIMP
+LICENSE=	gnu-gpl-v2
 
 WRKSRC=		${WRKDIR}/high-pass.scm
-#USE_LANGUAGES=	# none
+USE_LANGUAGES=	# none
 
 DEPENDS+=	gimp>=2.0:../../graphics/gimp
 
