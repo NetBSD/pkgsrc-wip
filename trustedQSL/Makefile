@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2012/11/03 23:28:17 lexort Exp $
+# $NetBSD: Makefile,v 1.8 2012/11/03 23:28:59 lexort Exp $
 
 DISTNAME=		TrustedQSL-1_13
 PKGNAME=		TrustedQSL-1.13
+PKGREVISION=		1
 CATEGORIES=		ham
 MASTER_SITES=		http://www.arrl.org/files/file/LoTW%20Instructions/
 EXTRACT_SUFX=		_tar.gz
