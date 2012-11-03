@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/07 20:11:09 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/11/03 18:33:44 kristerw Exp $
 #
 
 .include "../../wip/xfce48/Makefile.common"
@@ -13,7 +13,7 @@ MAINTAINER=	gls@NetBSD.org
 HOMEPAGE=	http://goodies.xfce.org/projects/thunar-plugins/thunar-archive-plugin/
 COMMENT=	Thunar archive plugin
 
-DEPENDS=	file-roller:../../archivers/file-roller
+DEPENDS=	file-roller-[0-9]*:../../archivers/file-roller
 
 .include "../../wip/xfce4-thunar/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

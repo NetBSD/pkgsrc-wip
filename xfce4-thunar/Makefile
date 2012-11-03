@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2012/10/07 20:11:09 asau Exp $
+# $NetBSD: Makefile,v 1.26 2012/11/03 18:33:44 kristerw Exp $
 
 .include "../../wip/xfce48/Makefile.common"
 
@@ -28,8 +28,8 @@ CONF_FILES=	${EGDIR}/uca.xml ${PKG_SYSCONFDIR}/Thunar/uca.xml
 
 #.include "options.mk"
 
-DEPENDS+=	gio-fam:../../sysutils/gio-fam
-DEPENDS+=	gvfs:../../sysutils/gvfs
+DEPENDS+=	gio-fam-[0-9]*:../../sysutils/gio-fam
+DEPENDS+=	gvfs-[0-9]*:../../sysutils/gvfs
 
 #.include "../../devel/GConf/buildlink3.mk"
 #.include "../../devel/gettext-lib/buildlink3.mk"
