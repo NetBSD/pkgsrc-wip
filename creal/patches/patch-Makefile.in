@@ -1,0 +1,58 @@
+$NetBSD: patch-Makefile.in,v 1.1 2012/11/03 01:06:49 othyro Exp $
+
+Make creal use DESTDIR.
+
+--- Makefile.in.orig	2005-10-27 07:58:45.000000000 +0000
++++ Makefile.in
+@@ -4,6 +4,7 @@
+ ###########################################################################
+ 
+ # where to install the binaries
++DESTDIR=${DESTDIR}
+ prefix=@prefix@
+ exec_prefix=@exec_prefix@
+ BINDIR=@bindir@
+@@ -141,30 +142,30 @@ install-lib: install-lib-@OCAMLBEST@
+ install-prog: install-prog-@OCAMLBEST@
+ 
+ install-lib-byte:
+-	mkdir -p $(LIBDIR)
+-	cp -f $(BYTEFILES) $(GMPBYTEFILES) $(LIBDIR)
++	mkdir -p $(DESTDIR)$(LIBDIR)
++	cp -f $(BYTEFILES) $(GMPBYTEFILES) $(DESTDIR)$(LIBDIR)
+ 
+ install-prog-byte:
+-	mkdir -p $(BINDIR)
+-	cp ecalc.byte $(BINDIR)/ecalc
++	mkdir -p $(DESTDIR)$(BINDIR)
++	cp ecalc.byte $(DESTDIR)$(BINDIR)/ecalc
+ 
+ install-lib-opt:
+-	mkdir -p $(LIBDIR)
+-	cp -f $(BYTEFILES) $(GMPBYTEFILES) $(LIBDIR)
+-	cp -f $(OPTFILES) $(GMPOPTFILES) $(LIBDIR)
++	mkdir -p $(DESTDIR)$(LIBDIR)
++	cp -f $(BYTEFILES) $(GMPBYTEFILES) $(DESTDIR)$(LIBDIR)
++	cp -f $(OPTFILES) $(GMPOPTFILES) $(DESTDIR)$(LIBDIR)
+ 
+ install-prog-opt:
+-	mkdir -p $(BINDIR)
+-	cp ecalc.opt $(BINDIR)/ecalc
++	mkdir -p $(DESTDIR)$(BINDIR)
++	cp ecalc.opt $(DESTDIR)$(BINDIR)/ecalc
+ 
+ install-toplevels:
+ 	if test -f ocamlgmp; then \
+-	  cp -f ocamlgmp $(BINDIR); \
+-	  cp -f gmp_pp.cmi $(LIBDIR); \
++	  cp -f ocamlgmp $(DESTDIR)$(BINDIR); \
++	  cp -f gmp_pp.cmi $(DESTDIR)$(LIBDIR); \
+ 	fi
+ 	if test -f ocamlcreal; then \
+-	  cp -f ocamlcreal $(BINDIR); \
+-	  cp -f creal_pp.cmi $(LIBDIR); \
++	  cp -f ocamlcreal $(DESTDIR)$(BINDIR); \
++	  cp -f creal_pp.cmi $(DESTDIR)$(LIBDIR); \
+ 	fi
+ 
+ local:
