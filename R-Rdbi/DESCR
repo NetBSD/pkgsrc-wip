@@ -1,9 +1,0 @@
-Rdbi is a general database access framework for the R statistical
-computing environment.  It is the successor to RPgSQL, a PostgreSQL
-specific package.  It provides Rdbi binding for PostgreSQL.
-
-Example session:
-
-conn <- dbConnect(PgSQL(), host = "myhost", dbname = "mydb")
-res <- dbSendQuery(conn, "select * from mytable")
-mydata <- dbGetResult(res)

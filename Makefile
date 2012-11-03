@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4936 2012/11/02 18:08:10 outpaddling Exp $
+# $Id: Makefile,v 1.4937 2012/11/03 17:49:17 kristerw Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -23,8 +23,6 @@ SUBDIR+=	PPower4
 SUBDIR+=	PyBabelFish
 SUBDIR+=	Pythonol
 SUBDIR+=	R-BiocGenerics
-SUBDIR+=	R-Rdbi
-SUBDIR+=	R-Rdbi.PgSQL
 SUBDIR+=	R-Rgraphviz
 SUBDIR+=	R-Rserve
 SUBDIR+=	R-VGAM

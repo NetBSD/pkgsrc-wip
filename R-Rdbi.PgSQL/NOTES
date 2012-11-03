@@ -1,2 +1,0 @@
-- The devel/readline package should be installed before installing this one
-- This package uses libg2c.so.1 not libg2c.so.2
