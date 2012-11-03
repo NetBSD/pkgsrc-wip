@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2012/11/01 21:52:58 cheusov Exp $
+# $NetBSD: Makefile,v 1.65 2012/11/03 12:36:23 cheusov Exp $
 
 DISTNAME=	pkg_summary-utils-9
 CATEGORIES=	pkgtools
@@ -63,6 +63,7 @@ MAKE_ENV+=	DISTDIR=${DISTDIR}
 MAKE_ENV+=	PKGSRCDIR=${PKGSRCDIR}
 MAKE_ENV+=	PKG_SUFX=${PKG_SUFX}
 MAKE_ENV+=	PKG_INFO_CMD=${PKG_INFO:Q}
+MAKE_ENV+=	PKG_DBDIR=${PKG_DBDIR}
 
 .include "../../devel/mk-configure/mk-c.mk"
 .include "../../mk/bsd.pkg.mk"
