@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2012/10/07 20:11:08 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/11/03 00:30:54 othyro Exp $
 #
 
 DISTNAME=	xebece-1.0.3
+PKGREVISION=	1
 CATEGORIES=	misc
-MASTER_SITES=	http://downloads.sourceforge.net/project/xebece/xebece/1.0.3/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xebece/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://xebece.sourceforge.net/
@@ -35,5 +36,6 @@ do-install:
 		${INSTALL_LIB} ${WRKSRC}/lib/prefusex.jar ${DESTDIR}${PREFIX}/xebece/lib/prefusex.jar
 		${INSTALL_SCRIPT} ${WRKSRC}/xebece ${DESTDIR}${PREFIX}/bin/xebece
 
-.include "../../lang/sun-jre6/buildlink3.mk"
+
+.include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
