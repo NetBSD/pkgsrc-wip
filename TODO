@@ -130,6 +130,21 @@ Suggested package updates
 Suggested ready to import packages
 =================================
 
+	o R-BiocGenerics
+	o R-Rgraphviz
+	o R-VGAM
+	o R-biganalytics
+	o R-bigmemory
+	o R-bigtabulate
+	o R-bnlearn
+	o R-doParallel
+	o R-entropy
+	o R-foreach
+	o R-gmp
+	o R-graph
+	o R-gsl
+	o R-iterators
+	o R-mclust
 	o am-utils [pkg/35668]
 	o aspell-dictionaries
 	o aspell-finnish
@@ -138,22 +153,94 @@ Suggested ready to import packages
 	o castget
 	o commoncpp2
 	o ccrtp
+	o fcgiwrap
+	o fish
 	o flimsel
 	o flpsed
+	o gimp-high-pass-filter
 	o heirloom-sh [pkg/40272]
 	o ilbc-rfc3951
+	o iodine
 	o ispell-dictionaries
 	o ispell-lietuviu
+	o kaffeine
+	o kde4-l10n-ar
+	o kde4-l10n-bg
+	o kde4-l10n-bs
+	o kde4-l10n-ca
+	o kde4-l10n-cat
+	o kde4-l10n-cs
+	o kde4-l10n-da
+	o kde4-l10n-el
+	o kde4-l10n-es
+	o kde4-l10n-et
+	o kde4-l10n-eu
+	o kde4-l10n-fa
+	o kde4-l10n-fi
+	o kde4-l10n-fr
+	o kde4-l10n-ga
+	o kde4-l10n-gl
+	o kde4-l10n-he
+	o kde4-l10n-hr
+	o kde4-l10n-hu
+	o kde4-l10n-ia
+	o kde4-l10n-id
+	o kde4-l10n-is
+	o kde4-l10n-it
+	o kde4-l10n-ja
+	o kde4-l10n-kk
+	o kde4-l10n-km
+	o kde4-l10n-ko
+	o kde4-l10n-lt
+	o kde4-l10n-lv
+	o kde4-l10n-nb
+	o kde4-l10n-nds
+	o kde4-l10n-nn
+	o kde4-l10n-pa
+	o kde4-l10n-pl
+	o kde4-l10n-pt
+	o kde4-l10n-pt_BR
+	o kde4-l10n-ro
+	o kde4-l10n-ru
+	o kde4-l10n-si
+	o kde4-l10n-sk
+	o kde4-l10n-sl
+	o kde4-l10n-sr
+	o kde4-l10n-tg
+	o kde4-l10n-th
+	o kde4-l10n-tr
+	o kde4-l10n-ug
+	o kde4-l10n-uk
+	o kde4-l10n-vi
+	o kde4-l10n-wa
+	o kde4-l10n-zh_CN
+	o kde4-l10n-zh_TW
+	o labelnation
 	o libzrtpcpp
+	o logrotate
+	o marathon-tempus-irae
+	o matiec
+	o nmzmail
+	o pear-Net_URL2
 	o pnmcurve
-	o rar3
+	o polarssl
+	o py-jswebkit
+	o rar4
 	o saxon
 	o send-pr
+	o tcl-tclOO
+	o tcl85-itcl
+	o tktable
+	o tqsllib
 	o truecrypt
+	o trustedQSL
 	o vcf
 	o vlevel
+	o wput
+	o xa65
 	o xmms-cdread [pkg/36220]
 	o xmms-skins [pkg/35666]
+	o xombrero
 
 Suggested infrastructure improvements
 =====================================
