@@ -1,0 +1,13 @@
+% quodlibet
+
+** (process:24707): WARNING **: Trying to register gtype 'GMountMountFlags' as enum when in fact it is of type 'GFlags'
+
+** (process:24707): WARNING **: Trying to register gtype 'GDriveStartFlags' as enum when in fact it is of type 'GFlags'
+
+** (process:24707): WARNING **: Trying to register gtype 'GSocketMsgFlags' as enum when in fact it is of type 'GFlags'
+W: Couldn't find module libc.so.6 (ctypes). Not setting process title.
+** Message: pygobject_register_sinkfunc is deprecated (GstObject)
+W: Could not import python-feedparser, Audio Feeds browser disabled.
+W: Could not import python-gpod, iPod support disabled.
+W: Couldn't connect to a device backend.
+W: No device backend, Media Devices browser disabled.
