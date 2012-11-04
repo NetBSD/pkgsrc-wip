@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2012/11/03 23:47:08 lexort Exp $
+# $NetBSD: Makefile,v 1.7 2012/11/04 12:58:43 lexort Exp $
 
 DISTNAME=	swig-2.0.8
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=swig/}
 
@@ -17,7 +18,8 @@ LICENSE=	2-clause-bsd
 
 CONFLICTS=		swig-build-[0-9]*
 
-CONFIGURE_ARGS+=	--with-swiglibdir=${PREFIX}/share/swig/1.3
+# Keep the path from changing due to minor version bumps.
+CONFIGURE_ARGS+=	--with-swiglibdir=${PREFIX}/share/swig/2.0
 BUILD_TARGET=		swig
 
 USE_TOOLS+=		gmake pax
