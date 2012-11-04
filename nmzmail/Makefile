@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/10/03 18:15:32 asau Exp $
+# $NetBSD: Makefile,v 1.10 2012/11/04 14:32:01 othyro Exp $
 #
 
 DISTNAME=	nmzmail-1.1
@@ -12,6 +12,12 @@ COMMENT=	Fast mail searching for mutt
 LICENSE=	gnu-gpl-v3
 
 GNU_CONFIGURE=		yes
+
+SUBST_CLASSES+=		mknmz
+SUBST_FILES.mknmz=	src/nmzmail.c
+SUBST_MESSAGE.mknmz=	Fixing mknmz executable path.
+SUBST_STAGE.mknmz=	post-configure
+SUBST_SED.mknmz=	-e "s|mknmz|${PREFIX}/bin/mknmz|"
 
 DEPENDS+=	namazu>=2.0.20:../../textproc/namazu
 
