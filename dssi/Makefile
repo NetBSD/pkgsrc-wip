@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2012/09/28 21:24:38 asau Exp $
+# $NetBSD: Makefile,v 1.7 2012/11/05 13:57:27 othyro Exp $
 #
 
-DISTNAME=	dssi-0.9.1
-PKGREVISION=	3
+DISTNAME=	dssi-1.1.1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dssi/}
 
@@ -13,17 +12,23 @@ LICENSE=	gnu-lgpl-v2.1
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config
-USE_LANGUAGES=	c c++
+USE_TOOLS+=	gmake gsed pkg-config
+USE_LANGUAGES=	c c++ fortran
 
 PKGCONFIG_OVERRIDE+=	dssi.pc.in
 
+.include "options.mk"
+
+.if $(OPSYS) != "Linux"
+BUILDLINK_TRANSFORM=	rm:-ldl
+.endif
+
+
+.include "../../mk/dlopen.buildlink3.mk"
 .include "../../audio/libsamplerate/buildlink3.mk"
 .include "../../audio/libsndfile/buildlink3.mk"
 .include "../../audio/jack/buildlink3.mk"
 .include "../../audio/ladspa/buildlink3.mk"
 .include "../../wip/libdssialsacompat/buildlink3.mk"
 .include "../../wip/liblo/buildlink3.mk"
-#.include "../../x11/qt3-libs/buildlink3.mk"
-#.include "../../x11/qt3-tools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
