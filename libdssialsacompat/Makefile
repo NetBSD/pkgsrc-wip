@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/03 09:10:38 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/11/05 12:18:30 othyro Exp $
 #
 
 DISTNAME=	libdssialsacompat-1.0.8a
@@ -8,6 +8,7 @@ MASTER_SITES=	http://home.jps.net/~musound/
 MAINTAINER=	jfranz@bsdprojects.net
 HOMEPAGE=	http://home.jps.net/~musound/
 COMMENT=	Alsa compatibility library to build DSSI
+LICENSE=	gnu-lgpl-v2.1
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
