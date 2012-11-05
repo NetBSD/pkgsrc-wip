@@ -1,0 +1,11 @@
+=> Checking for missing run-time search paths in dssi-1.1.1
+ERROR: /usr/pkg/lib/libdssialsacompat.so.0: libdssialsacompat-1.0.8a is not a runtime dependency
+ERROR: /usr/pkg/lib/libdssialsacompat.so.0: libdssialsacompat-1.0.8a is not a runtime dependency
+ERROR: /usr/pkg/lib/libdssialsacompat.so.0: libdssialsacompat-1.0.8a is not a runtime dependency
+ERROR: /usr/pkg/lib/libdssialsacompat.so.0: libdssialsacompat-1.0.8a is not a runtime dependency
+ERROR: /usr/pkg/lib/libdssialsacompat.so.0: libdssialsacompat-1.0.8a is not a runtime dependency
+*** Error code 1
+
+Stop.
+bmake: stopped in /usr/pkgsrc/wip/dssi
+*** Error code 1
