@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.3 2008/02/17 22:16:30 bsadewitz Exp $
+$NetBSD: distinfo,v 1.4 2012/11/05 13:18:37 othyro Exp $
 
-SHA1 (liblo-0.24.tar.gz) = 429505bcb00b789811e0c90ad7130e5976e613c1
-RMD160 (liblo-0.24.tar.gz) = d40cfb849cb84924a03800ba7de21b1134862e1d
-Size (liblo-0.24.tar.gz) = 432285 bytes
-SHA1 (patch-aa) = bb6bcd986611e860d6deb9ee6361c6d112a43786
-SHA1 (patch-ab) = ec91b6954be3261193afb44ef894d2bc0926b390
-SHA1 (patch-ac) = 790a52fdb7d66a724f156e37c8c5a1f6cd3aa062
+SHA1 (liblo-0.26.tar.gz) = 21942c8f19e9829b5842cb85352f98c49dfbc823
+RMD160 (liblo-0.26.tar.gz) = 380025d0d79280b13929da82db2e0908a3f4be39
+Size (liblo-0.26.tar.gz) = 519750 bytes
+SHA1 (patch-aa) = 108817632563e01175414126635ff1ba374d4d8a
+SHA1 (patch-ab) = e4ec47f6c8d545f3ef41d90224318476c2bfb5d2
+SHA1 (patch-ac) = 1fa0664cc4f251ee6c3ef515d7bc5473ff6483f3
