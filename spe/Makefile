@@ -1,20 +1,26 @@
-# $NetBSD: Makefile,v 1.10 2010/06/13 22:47:16 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.11 2012/11/05 02:37:55 othyro Exp $
 #
 
-DISTNAME=		SPE-0.4.1.d-wx2.4.2.4.-bl2.28
-PKGNAME=		spe-0.4.1
-PKGREVISION=		2
-CATEGORIES=		editors
-MASTER_SITES=		http://projects.blender.org/download.php/47/
-EXTRACT_SUFX=		.zip
+DISTNAME=	spe-0.8.4.h-wx2.6.1.0
+PKGNAME=	${DISTNAME:C/\.[a-z]+.*//}
+CATEGORIES=	editors
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=python.berlios/}
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://stani.be/python/spe/blog/
-COMMENT=		Python IDE with wxGlade GUI designer, auto-indentation and more
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://pythonide.stani.be/
+COMMENT=	Python IDE with UML, PyChecker, Debugger, GUI design, Blender and more
+LICENSE=	gnu-gpl-v3
 
-PY_PATCHPLIST=		yes
-PYDISTUTILSPKG=		yes
-EXTRACT_CMD_OPTS.zip=	-qo
+DEPENDS+=	${PYPKGPREFIX}-checker-[0-9]*:../../devel/py-checker
+WRKSRC=		${WRKDIR}/${DISTNAME:C/-[a-z]+.*//}
+PY_PATCHPLIST=	yes
+PYDISTUTILSPKG=	yes
+
+REPLACE_INTERPRETER+=	env
+REPLACE.env.old=	/usr/bin/env
+REPLACE.env.new=	${PYTHONBIN}
+REPLACE_FILES.env=	_spe/SPE.py _spe/SPE_DEBUG.py
+
 
 .include "../../x11/py-wxWidgets/buildlink3.mk"
 .include "../../lang/python/extension.mk"
