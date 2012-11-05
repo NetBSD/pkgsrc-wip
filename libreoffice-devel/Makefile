@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.11 2012/10/03 09:10:40 asau Exp $
+# $NetBSD: Makefile,v 1.12 2012/11/05 19:49:08 ftigeot Exp $
 
-VER=			3.6.1.2
+VER=			3.6.3.2
 DISTNAME=		libreoffice-${VER}
 PKGNAME=		libreoffice-devel-${VER:S/-//g}
 CATEGORIES=		misc
-MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/3.6.1/ \
+MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/3.6.3/ \
 		http://dev-www.libreoffice.org/src/ \
 		http://www.numbertext.org/linux/
 
@@ -30,6 +30,7 @@ MORE_DISTFILES= \
 	86261f06c097d3e425a2f6d0b0635380-hyphen-2.8.3.tar.gz \
 	0d2dcdfbf28d6208751b33057f5361f0-libcmis-0.2.3.tar.gz \
 	0be45d54cc5e1c2e3102e32b8c190346-liberation-fonts-ttf-1.07.1.tar.gz \
+	cfbf1ac6f61bf6cf45342a0cc9381be5-liberation-fonts-ttf-2.00.0.tar.gz \
 	e1e255dc43dbcbb34cb19e8a0eba90ae-mythes-1.2.2.tar.gz \
 	fdb27bfe2dbe2e7b57ae194d9bf36bab-SampleICC-1.3.2.tar.gz \
 	1f24ab1d39f4a51faf22244c94a6203f-xmlsec1-1.2.14.tar.gz
@@ -135,7 +136,6 @@ LO_PROGRAMS=		sbase scalc sdraw simpress smath soffice swriter
 # Base depends on java, we don't install the icon
 LO_DESKTOP_FILES=	calc.desktop draw.desktop impress.desktop math.desktop \
 			printeradmin.desktop startcenter.desktop writer.desktop
-LO_ICONS=		calc draw impress math printeradmin startcenter writer
 
 post-extract:
 	${MKDIR} -p ${WRKSRC}/clone

@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.9 2012/09/04 16:52:14 ftigeot Exp $
+$NetBSD: distinfo,v 1.10 2012/11/05 19:49:08 ftigeot Exp $
 
 SHA1 (libreoffice/0be45d54cc5e1c2e3102e32b8c190346-liberation-fonts-ttf-1.07.1.tar.gz) = 935bf5d6748b465d2d540884af67fb5dfd59fc4a
 RMD160 (libreoffice/0be45d54cc5e1c2e3102e32b8c190346-liberation-fonts-ttf-1.07.1.tar.gz) = d4dd5ad660ba5747de8e65892583427014aebaa2
@@ -21,6 +21,9 @@ Size (libreoffice/48d647fbd8ef8889e5a7f422c1bfda94-clucene-core-2.3.3.4.tar.gz) 
 SHA1 (libreoffice/86261f06c097d3e425a2f6d0b0635380-hyphen-2.8.3.tar.gz) = f708f0adb4b1e45fc041cc7152d467bf818c0fc9
 RMD160 (libreoffice/86261f06c097d3e425a2f6d0b0635380-hyphen-2.8.3.tar.gz) = 2416da0644fdfbbe71d8477e8a36eebff44d66d6
 Size (libreoffice/86261f06c097d3e425a2f6d0b0635380-hyphen-2.8.3.tar.gz) = 614264 bytes
+SHA1 (libreoffice/cfbf1ac6f61bf6cf45342a0cc9381be5-liberation-fonts-ttf-2.00.0.tar.gz) = 1d56c6f319401012e53818fa6e9e26ebf6429da0
+RMD160 (libreoffice/cfbf1ac6f61bf6cf45342a0cc9381be5-liberation-fonts-ttf-2.00.0.tar.gz) = 7a0ec5ffc77d962c8ce394eadbf00ccf7455e741
+Size (libreoffice/cfbf1ac6f61bf6cf45342a0cc9381be5-liberation-fonts-ttf-2.00.0.tar.gz) = 2302736 bytes
 SHA1 (libreoffice/e1e255dc43dbcbb34cb19e8a0eba90ae-mythes-1.2.2.tar.gz) = a1657eb4a7d237c2d10b0686a23573bc36865b27
 RMD160 (libreoffice/e1e255dc43dbcbb34cb19e8a0eba90ae-mythes-1.2.2.tar.gz) = 70f41b52d843616c4d52d2c1c6ae0037b4282953
 Size (libreoffice/e1e255dc43dbcbb34cb19e8a0eba90ae-mythes-1.2.2.tar.gz) = 4906938 bytes
@@ -33,15 +36,15 @@ Size (libreoffice/f872f4ac066433d8ff92f5e316b36ff9-dejavu-fonts-ttf-2.33.zip) = 
 SHA1 (libreoffice/fdb27bfe2dbe2e7b57ae194d9bf36bab-SampleICC-1.3.2.tar.gz) = 6e836945719e137596df1ca82f0afa809e8a2e88
 RMD160 (libreoffice/fdb27bfe2dbe2e7b57ae194d9bf36bab-SampleICC-1.3.2.tar.gz) = 6443438ddf0bb5cd277c96108aa2671213edf8df
 Size (libreoffice/fdb27bfe2dbe2e7b57ae194d9bf36bab-SampleICC-1.3.2.tar.gz) = 547217 bytes
-SHA1 (libreoffice/libreoffice-core-3.6.1.2.tar.xz) = cfcbdc9b56dd13d63c0d2777731ad40f2c55f9a9
-RMD160 (libreoffice/libreoffice-core-3.6.1.2.tar.xz) = cfd0412a79977f219776b32702f06be8d4b062f2
-Size (libreoffice/libreoffice-core-3.6.1.2.tar.xz) = 107175952 bytes
-SHA1 (libreoffice/libreoffice-dictionaries-3.6.1.2.tar.xz) = 93fe5a69c907ae5d992ef4c5fc15b48716c6590f
-RMD160 (libreoffice/libreoffice-dictionaries-3.6.1.2.tar.xz) = 36dd760250f22ce2a9599ca0c4cb8d6b752c2ba1
-Size (libreoffice/libreoffice-dictionaries-3.6.1.2.tar.xz) = 34798480 bytes
-SHA1 (libreoffice/libreoffice-help-3.6.1.2.tar.xz) = d03a78d7c634fbfa1fb1aab2d7d7673a71a42280
-RMD160 (libreoffice/libreoffice-help-3.6.1.2.tar.xz) = 780f70201b89e52dd048dc7ab4ae3913086367fa
-Size (libreoffice/libreoffice-help-3.6.1.2.tar.xz) = 1863760 bytes
+SHA1 (libreoffice/libreoffice-core-3.6.3.2.tar.xz) = 69041c2ca4bd588ed970546f9b7cba86b533b52c
+RMD160 (libreoffice/libreoffice-core-3.6.3.2.tar.xz) = 03128380ab5c7f207423d701845291abc711c659
+Size (libreoffice/libreoffice-core-3.6.3.2.tar.xz) = 107194308 bytes
+SHA1 (libreoffice/libreoffice-dictionaries-3.6.3.2.tar.xz) = 1a4542b4756d224ee670457262028549391b5811
+RMD160 (libreoffice/libreoffice-dictionaries-3.6.3.2.tar.xz) = 5a9fd2ec2450af75a7a94c0273263f299909c82d
+Size (libreoffice/libreoffice-dictionaries-3.6.3.2.tar.xz) = 35101308 bytes
+SHA1 (libreoffice/libreoffice-help-3.6.3.2.tar.xz) = fc190cb8bbebe0722d26887667b408397d4ee17a
+RMD160 (libreoffice/libreoffice-help-3.6.3.2.tar.xz) = 095e0e91b3bd9b854465e07433378335ae41a0ad
+Size (libreoffice/libreoffice-help-3.6.3.2.tar.xz) = 1864084 bytes
 SHA1 (patch-clucene_configs_clucene-config-generic.h) = e8cb4a70e217b1594cdab68dd4e39fedbe0a6ea7
 SHA1 (patch-configure.in) = 0003e9da27bbfc0f78d12057e42c75c82a463fc1
 SHA1 (patch-extensions_Library_npsoplugin.mk) = 2cd965083a3aad541d1776ac83e441f84723db7d
