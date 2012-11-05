@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.9 2007/09/17 11:50:29 thomasklausner Exp $
+$NetBSD: distinfo,v 1.10 2012/11/05 00:37:20 othyro Exp $
 
-SHA1 (xmms2-0.2DrJekyll.tar.bz2) = 6169594c07701fd2eea0691fe50c57a019e17dd8
-RMD160 (xmms2-0.2DrJekyll.tar.bz2) = 76b0deb9eb92db023c4ff15dbdb82938ef8f663d
-Size (xmms2-0.2DrJekyll.tar.bz2) = 1207014 bytes
-SHA1 (patch-aa) = e0584a22a47b8f7e0347ee90e25bba47c4b76a27
-SHA1 (patch-ab) = ec9c35f4716e7733089812a126efeb281a688dbc
-SHA1 (patch-ac) = d21840930de09556cd0edf683fa0638e811f726b
+SHA1 (xmms2-0.8DrO_o.tar.bz2) = 9f7585571d95acd98df48c37948e8638fae7cc3a
+RMD160 (xmms2-0.8DrO_o.tar.bz2) = 35513d7eddd5f79146cb8aa5c6c0bb35369619ec
+Size (xmms2-0.8DrO_o.tar.bz2) = 1670726 bytes
+SHA1 (patch-src_plugins_file_browse_fstatat.c) = ede7033e3d6dd773108e6e45a80ccf38f56241e9
