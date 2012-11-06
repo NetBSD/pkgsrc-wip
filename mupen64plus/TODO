@@ -1,0 +1,11 @@
+% mupen64plus
+[...]
+dlopen('./libmupen64plus.so.2') error: Cannot open "./libmupen64plus.so.2"
+AttachCoreLib() Error: failed to find Mupen64Plus Core library
+
+% cd /usr/pkg/lib; mupen64plus 
+[...]
+dlopen('./libmupen64plus.so.2') error: ./libmupen64plus.so.2: Undefined PLT symbol "fseeko64" (symnum = 72)
+AttachCoreLib() Error: failed to find Mupen64Plus Core library
+
+but fseeko64 is defined in source/mupen64plus-core/src/main/zip/ioapi.h...
