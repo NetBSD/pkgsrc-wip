@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/11/04 12:58:43 lexort Exp $
+# $NetBSD: Makefile,v 1.8 2012/11/06 19:43:26 outpaddling Exp $
 
 DISTNAME=	swig-2.0.8
 PKGREVISION=	1
@@ -19,7 +19,8 @@ LICENSE=	2-clause-bsd
 CONFLICTS=		swig-build-[0-9]*
 
 # Keep the path from changing due to minor version bumps.
-CONFIGURE_ARGS+=	--with-swiglibdir=${PREFIX}/share/swig/2.0
+CONFIGURE_ARGS+=	--with-swiglibdir=${PREFIX}/share/swig/2.0 \
+			--program-suffix=2
 BUILD_TARGET=		swig
 
 USE_TOOLS+=		gmake pax
@@ -27,7 +28,7 @@ GNU_CONFIGURE=		YES
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		YES
 
-INSTALLATION_DIRS+=	share/doc/swig share/examples/swig
+INSTALLATION_DIRS+=	share/doc/swig/2.0 share/examples/swig/2.0
 
 CHECK_INTERPRETER_SKIP+=	share/examples/swig/*
 
@@ -44,13 +45,13 @@ TEST_TARGET=	check
 post-install:
 	cd ${WRKSRC}/Doc/Manual && \
 	${INSTALL_DATA} SWIGDocumentation.html SWIGDocumentation.pdf	\
-		*.png ${DESTDIR}${PREFIX}/share/doc/swig
+		*.png ${DESTDIR}${PREFIX}/share/doc/swig/2.0
 	cd ${WRKSRC}/Examples &&					\
 	pax -wr								\
 		-s ',.*CVS.*,,'						\
 		-s ',.*Makefile\.in$$,,'				\
 		-s ',^test-suite.*,,'					\
-		. ${DESTDIR}${PREFIX}/share/examples/swig
+		. ${DESTDIR}${PREFIX}/share/examples/swig/2.0
 
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
