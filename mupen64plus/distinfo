@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2012/04/20 19:36:25 othyro Exp $
+$NetBSD: distinfo,v 1.3 2012/11/06 14:34:37 othyro Exp $
 
 SHA1 (mupen64plus-bundle-src-1.99.5.tar.gz) = ca80ae446c9591e272e3ec93f0a2a8b01cfcd34e
 RMD160 (mupen64plus-bundle-src-1.99.5.tar.gz) = 9e5aec09f73e70e9010d18d67756e3204e580307
@@ -6,8 +6,8 @@ Size (mupen64plus-bundle-src-1.99.5.tar.gz) = 1732468 bytes
 SHA1 (patch-m64p__build.sh) = 0a154241aa2e4cb8be922f642d6112b35f027f2a
 SHA1 (patch-source_mupen64plus-audio-sdl_projects_unix_Makefile) = 53f84a0fdd4d6546345b73b75094ec27beac1206
 SHA1 (patch-source_mupen64plus-audio-sdl_src_main.c) = d12d692398138e2ac2afb22ad462bea1201e364c
-SHA1 (patch-source_mupen64plus-core_projects_unix_Makefile) = c8e094f166d99d7c4dee6de846c22a9670b55df7
-SHA1 (patch-source_mupen64plus-input-sdl_projects_unix_Makefile) = 0ed9651ecb6df6659a027b1d5b0aedf315e06779
+SHA1 (patch-source_mupen64plus-core_projects_unix_Makefile) = 10129a5d9b5a721113ceab810db1c9f44ce8e129
+SHA1 (patch-source_mupen64plus-input-sdl_projects_unix_Makefile) = 0e3d5edcf0529b5815c7d84fcdbeab2f540601e9
 SHA1 (patch-source_mupen64plus-rsp-hle_projects_unix_Makefile) = 286318c16f10ff10feccab08732cd20de537e85b
-SHA1 (patch-source_mupen64plus-ui-console_projects_unix_Makefile) = f9f86b18fb4d88a6cffd97bc2c865a248babb07f
-SHA1 (patch-source_mupen64plus-video-rice_projects_unix_Makefile) = 572f28af608af4da3b716bfcf7ff5aaca24e6286
+SHA1 (patch-source_mupen64plus-ui-console_projects_unix_Makefile) = c5c3d93a399f5cb312efc684a1bb0f01049dde42
+SHA1 (patch-source_mupen64plus-video-rice_projects_unix_Makefile) = e4dafebecbdb2062b80fc6b9746a1c0604bd50c3
