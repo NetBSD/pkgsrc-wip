@@ -1,0 +1,18 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2012/11/06 16:39:31 othyro Exp $
+
+One or more of the following archivers:
+
+	archivers/bsdtar
+	archivers/gtar
+	archivers/heirloom-tar
+	archivers/mousetar
+	archivers/p7zip
+	archivers/star
+	archivers/unace
+	archivers/unrar
+	archivers/unzip
+
+to open some comic book archives.
+
+===========================================================================
