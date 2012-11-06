@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/07 16:22:56 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/11/06 21:36:25 othyro Exp $
 #
 
 DISTNAME=	SFML-1.6-sdk-linux-64
@@ -7,7 +7,7 @@ CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sfml/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://sfml.sourceforge.net/
+HOMEPAGE=	http://www.sfml-dev.org/
 COMMENT=	Free multimedia C++ API
 LICENSE=	zlib
 
