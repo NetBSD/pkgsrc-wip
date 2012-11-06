@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4938 2012/11/04 12:21:16 othyro Exp $
+# $Id: Makefile,v 1.4939 2012/11/06 22:21:32 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -83,7 +83,6 @@ SUBDIR+=	alex
 SUBDIR+=	alive
 SUBDIR+=	allegro
 SUBDIR+=	alphamail
-SUBDIR+=	alsa-lib
 SUBDIR+=	alsa-plugins
 SUBDIR+=	alsa-utils
 SUBDIR+=	alt-ergo
