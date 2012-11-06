@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2012/10/03 15:09:59 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/11/06 14:41:31 othyro Exp $
 #
 
 DISTNAME=	mupen64plus-bundle-src-1.99.5
 PKGNAME=	${DISTNAME:S/-bundle-src//}
+PKGREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	http://mupen64plus.googlecode.com/files/
 
@@ -18,11 +19,14 @@ USE_LIBTOOL=	yes
 #CFLAGS+=	-DNO_ASM=1
 MAKE_ENV+=	PLUGINDIR="${PREFIX}/lib/mupen64plus"
 MAKE_ENV+=	SHAREDIR="${PREFIX}/share/mupen64plus"
-CFLAGS+=	-g
 INSTALL_ENV+=	PREFIX=${PREFIX}
 INSTALL_ENV+=	MANDIR=${PREFIX}/${PKGMANDIR}
 
 .include "options.mk"
+
+.if $(OPSYS) != "Linux"
+BUILDLINK_TRANSFORM=    rm:-ldl
+.endif
 
 do-build:
 		cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${BASH} m64p_build.sh;
@@ -30,6 +34,10 @@ do-build:
 do-install:
 		cd ${WRKSRC} && ${SETENV} ${INSTALL_ENV} ${BASH} m64p_install.sh;
 
+
+.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/dlopen.buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 #.include "../../x11/gtk2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
