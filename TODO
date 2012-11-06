@@ -97,7 +97,6 @@ Suggested package updates
 	o py-PyPE-2.9
 	o py-rpyc-3.2.1
 	o py-zeitgeist-0.9
-	o qcomicbook-0.8.1
 	o rdup-1.1.13
 	o redis-2.6.0
 	o rezound-0.12.3beta
@@ -223,6 +222,7 @@ Suggested ready to import packages
 	o pnmcurve
 	o polarssl
 	o py-jswebkit
+	o qcomicbook
 	o rar4
 	o saxon
 	o send-pr
