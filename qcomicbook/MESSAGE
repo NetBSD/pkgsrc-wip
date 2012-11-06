@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2012/11/06 16:39:31 othyro Exp $
+$NetBSD: MESSAGE,v 1.2 2012/11/06 16:52:06 othyro Exp $
 
 One or more of the following archivers:
 
@@ -13,6 +13,6 @@ One or more of the following archivers:
 	archivers/unrar
 	archivers/unzip
 
-to open some comic book archives.
+is required to open some comic book archives.
 
 ===========================================================================
