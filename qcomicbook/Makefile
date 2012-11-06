@@ -1,27 +1,32 @@
-# $NetBSD: Makefile,v 1.6 2012/10/07 14:53:42 asau Exp $
+# $NetBSD: Makefile,v 1.7 2012/11/06 16:45:03 othyro Exp $
 #
 
-DISTNAME=		qcomicbook-0.3.4
-PKGREVISION=		2
+DISTNAME=		qcomicbook-0.9.0
 CATEGORIES=		graphics
-MASTER_SITES=		http://linux.bydg.org/~yogin/
+MASTER_SITES=		http://qcomicbook.org/releases/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://linux.bydg.org/~yogin/
+HOMEPAGE=		http://qcomicbook.org/
 COMMENT=		Viewer for comic book archives
-
-DEPENDS+=		unace-[0-9]*:../../archivers/unace
-DEPENDS+=		unrar-[0-9]*:../../archivers/unrar
-DEPENDS+=		unzip-[0-9]*:../../archivers/unzip
-BUILD_DEPENDS+=		imlib2-[0-9]*:../../graphics/imlib2
-BUILD_DEPENDS+=		qt3-libs>=3.3.3:../../x11/qt3-libs
-
-PKG_DESTDIR_SUPPORT=	none
+LICENSE=		gnu-gpl-v2
 
 USE_LANGUAGES=		c c++
 USE_TOOLS=		gmake pkg-config
-GNU_CONFIGURE=		yes
+USE_CMAKE=		yes
 
-.include "../../graphics/imlib2/buildlink3.mk"
-.include "../../x11/qt3/application.mk"
+SUBST_CLASSES+=		man
+SUBST_FILES.man=	help/CMakeLists.txt
+SUBST_MESSAGE.man=	Fixing PKGMANDIR.
+SUBST_STAGE.man=	pre-configure
+SUBST_SED.man=		-e "s|share/man|${PKGMANDIR}|1"
+
+.include "options.mk"
+
+
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
+BUILD_DEPENDS+=	poppler-qt4>=0.12.4:../../print/poppler-qt4
+.include "../../print/poppler-qt4/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+BUILD_DEPENDS+=	qt4-tools>=4.5.0:../../x11/qt4-tools
+.include "../../x11/qt4-tools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
