@@ -1,12 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2012/11/05 21:35:38 christtrekker Exp $
-
-.if !empty(PKG_OPTIONS:Mdbus)
-.  include "../../sysutils/dbus/buildlink3.mk"
-PLIST.dbus=yes
-CONFIGURE_ARGS+=	--enable-dbus
-.else
-CONFIGURE_ARGS+=	--disable-dbus
-.endif
+# $NetBSD: options.mk,v 1.3 2012/11/07 19:42:21 christtrekker Exp $
 
 .if !empty(PKG_OPTIONS:Mfam) || !empty(PKG_OPTIONS:Mfam-only)
 .  include "../../mk/fam.buildlink3.mk"
