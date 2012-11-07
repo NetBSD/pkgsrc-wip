@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/11/07 14:19:17 cheusov Exp $
+# $NetBSD: Makefile,v 1.14 2012/11/07 14:42:18 cheusov Exp $
 
 DISTNAME=	pkgnih-999
 PKGNAME=	nih-999
@@ -41,6 +41,8 @@ REPLACE_FILES.runawk=	nih/pkg_update_plan.in nih/cmp2hr.in
 
 MAKE_ENV+=		MANDIR=${PREFIX}/${PKGMANDIR}
 MAKE_ENV+=		VERSION=${_GIT_PKGVERSION:S/.//}
+MAKE_ENV+=		PKGSRCDIR=${PKGSRCDIR}
+MAKE_ENV+=		PACKAGES=${PACKAGES}
 
 .include "../../mk/bsd.prefs.mk"
 
