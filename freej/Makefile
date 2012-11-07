@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2012/11/07 03:07:09 othyro Exp $
+# $NetBSD: Makefile,v 1.9 2012/11/07 03:09:51 othyro Exp $
 #
 
 DISTNAME=		freej-0.8.1
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		multimedia
 MASTER_SITES=		http://www.ljudmila.org/~jaromil/freej/releases/
 

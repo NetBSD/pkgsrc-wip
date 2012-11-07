@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2012/11/07 03:07:08 othyro Exp $
+# $NetBSD: Makefile,v 1.4 2012/11/07 03:09:51 othyro Exp $
 #
 
 DISTNAME=	alsa-plugins-1.0.18
 CATEGORIES=	audio
+PKGREVISION=	1
 MASTER_SITES=	ftp://ftp.alsa-project.org/pub/plugins/
 EXTRACT_SUFX=	.tar.bz2
 

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2012/11/07 03:07:09 othyro Exp $
+# $NetBSD: Makefile,v 1.4 2012/11/07 03:09:51 othyro Exp $
 #
 
 DISTNAME=		alsa-utils-1.0.4
+PKGREVISION=		1
 CATEGORIES=		audio
 MASTER_SITES=		ftp://ftp.alsa-project.org/pub/utils/
 MASTER_SITES=		http://www.alsa-project.org/alsa/ftp/utils/	\
