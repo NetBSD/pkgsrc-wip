@@ -1,0 +1,21 @@
+$NetBSD: patch-configure,v 1.1 2012/11/07 22:38:50 lexort Exp $
+
+This package's configure checks for the 'build' (target) OS, and if
+Darwin, switches to mac-specific mode, rather than using configure
+tests.  This patch disables that behavior, and limits the Darwin test
+to setting dyn_lib_suf, because later configure checks explicitly for
+libraries by name (rather than trying to link).
+
+--- configure.orig	2010-09-29 15:23:42.000000000 +0000
++++ configure
+@@ -2395,8 +2395,8 @@ app_library="libtqsllib.la"
+ dyn_lib_suf=".so"
+ 
+ case "$build_os" in
+-  darwin*) platform="-DMAC -I/Developer/Headers/FlatCarbon"
+-    ldflags="-framework Carbon -framework System"
++  darwin*) # platform="-DMAC -I/Developer/Headers/FlatCarbon"
++    # ldflags="-framework Carbon -framework System"
+ 	dyn_lib_suf=".dylib"
+     ;;
+   mingw32) platform=-DWINDOWS
