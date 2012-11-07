@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/11/03 23:28:59 lexort Exp $
+# $NetBSD: Makefile,v 1.9 2012/11/07 22:43:29 lexort Exp $
 
 DISTNAME=		TrustedQSL-1_13
 PKGNAME=		TrustedQSL-1.13
@@ -23,7 +23,7 @@ CONFIGURE_ARGS+=	--with-tqsllib=${PREFIX}/lib
 CONFIGURE_ARGS+=	--with-wxwindows=${PREFIX}
 # The configure script is broken and looks in explicit paths, instead
 # of just trying to link.
-CONFIGURE_ARGS+=	--with-expat=${PREFIX}
+CONFIGURE_ARGS+=	--with-expat=${BUILDLINK_PREFIX.expat}
 
 SUBST_CLASSES+=		wxGTK
 SUBST_STAGE.wxGTK=	post-patch
