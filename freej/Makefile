@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/09/28 23:21:49 asau Exp $
+# $NetBSD: Makefile,v 1.8 2012/11/07 03:07:09 othyro Exp $
 #
 
 DISTNAME=		freej-0.8.1
@@ -22,7 +22,7 @@ GNU_CONFIGURE=		yes
 .include "../../multimedia/libogg/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
-.include "../../wip/alsa-lib/buildlink3.mk"
+.include "../../audio/alsa-lib/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

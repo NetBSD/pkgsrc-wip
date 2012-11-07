@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/04/11 21:09:41 tvierling Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/07 03:07:09 othyro Exp $
 #
 
 DISTNAME=		alsa-utils-1.0.4
@@ -18,7 +18,7 @@ COMMENT=		Advanced Linux Sound Architecture (ALSA) command-line utilities
 
 GNU_CONFIGURE=		yes
 
-.include "../../wip/alsa-lib/buildlink3.mk"
+.include "../../audio/alsa-lib/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

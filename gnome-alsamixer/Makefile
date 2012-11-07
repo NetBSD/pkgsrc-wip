@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/09/29 00:50:36 asau Exp $
+# $NetBSD: Makefile,v 1.9 2012/11/07 03:07:09 othyro Exp $
 #
 
 DISTNAME=		gnome-alsamixer-0.9.6
@@ -15,6 +15,6 @@ PKG_DESTDIR_SUPPORT=	none
 GNU_CONFIGURE=		yes
 
 .include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../wip/alsa-lib/buildlink3.mk"
+.include "../../audio/alsa-lib/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

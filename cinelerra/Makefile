@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2010/12/26 05:01:21 davesainty Exp $
+# $NetBSD: Makefile,v 1.11 2012/11/07 03:07:09 othyro Exp $
 #
 
 #DISTNAME=		cinelerra-1.2.0-src
@@ -26,7 +26,7 @@ GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake
 
 # maybe have an option for HAVE_ALSA
-.include "../../wip/alsa-lib/buildlink3.mk"
+.include "../../audio/alsa-lib/buildlink3.mk"
 .include "../../audio/esound/buildlink3.mk"
 .include "../../audio/faad2/buildlink3.mk"
 # what can be done about ACCEPTABLE_LICENSES=fee-based-commercial-use ?
