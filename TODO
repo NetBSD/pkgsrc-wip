@@ -5,7 +5,7 @@ Suggested package updates
 	o atlas-3.10.0
 	o backintime-1.0.6
 	o cairo-java-1.0.8
-	o calligra-2.5.2
+	o calligra-2.5.3
 	o ccrypt-1.10
 	o cgal-4.0
 	o chora-2.0.1
@@ -39,7 +39,7 @@ Suggested package updates
 	o globulation2-0.9.4
 	o gnokii-0.6.31
 	o gnome-bluetooth-2.30.0
-	o gnunet-0.9.3
+	o gnunet-0.9.4
 	o gnupod-0.99.8
 	o gobject-introspection-0.9.12
 	o grandr-0.1
@@ -97,6 +97,7 @@ Suggested package updates
 	o py-rpyc-3.2.1
 	o py-zeitgeist-0.9
 	o rdup-1.1.13
+	o recoll-1.18.1
 	o redis-2.6.0
 	o rezound-0.12.3beta
 	o rosegarden-current-1.4.0
