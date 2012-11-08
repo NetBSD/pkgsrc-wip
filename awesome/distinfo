@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.19 2012/04/27 00:39:30 blckmaxima Exp $
-
-SHA1 (awesome-3.4.10.tar.xz) = c5c774cc1ca416863e200fcfe01a05acc0fbcbc2
-RMD160 (awesome-3.4.10.tar.xz) = 66dc56438f577e30ac67507af243e955b7e39f79
-Size (awesome-3.4.10.tar.xz) = 715484 bytes
-SHA1 (patch-awesomeConfig.cmake) = ce48651d804fb8b277c33aed94861219acc1bc73
