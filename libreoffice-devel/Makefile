@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/11/05 19:49:08 ftigeot Exp $
+# $NetBSD: Makefile,v 1.13 2012/11/08 08:22:03 ftigeot Exp $
 
 VER=			3.6.3.2
 DISTNAME=		libreoffice-${VER}
@@ -119,6 +119,15 @@ CONFIGURE_ARGS+=	--without-system-jars
 CONFIGURE_ARGS+=	--without-system-libcmis
 CONFIGURE_ARGS+=	--without-system-mozilla-headers
 CONFIGURE_ARGS+=	--without-system-sampleicc
+
+# NetBSD's dynamic linker apparently doesn't support $ORIGIN
+# Preset LD_LIBRARY_PATH to sane defaults on this platform
+.if ${OPSYS} == "NetBSD"
+LIBPATH=       ${BUILDLINK_DIR}/lib:${X11BASE}/lib
+LIBPATH:=      ${LIBPATH}:${WRKSRC}/desktop/unxnbsd.pro/lib
+LIBPATH:=      ${LIBPATH}:${WRKSRC}/solver/unxnbsd.pro/lib
+CONFIGURE_ENV+=        LD_LIBRARY_PATH=${LIBPATH}
+.endif
 
 SUBST_CLASSES+=			localbase
 SUBST_STAGE.localbase=		pre-configure
