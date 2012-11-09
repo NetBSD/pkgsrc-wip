@@ -1,0 +1,3 @@
+Zipline is a financial backtester for trading algorithms written in
+Python. The system is fundamentally event-driven and a close
+approximation of how live-trading systems operate
