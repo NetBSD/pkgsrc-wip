@@ -1,0 +1,12 @@
+Translates from ASCIIMathML (an easy to type and highly readable way to
+represent math formulas) into Presentation MathML (a w3c standard directly
+displayable by some web browsers).
+
+The MathML tree is represented by Elements from the standard
+xml.etree.ElementTree python library.
+
+The obtained tree can then be further manipulated and then serialized into a
+string to be included for example in a HTML document.
+
+Also included is a markdown extension that allows the use of ASCIIMathML,
+eclosed between $$, inside markdown documents
