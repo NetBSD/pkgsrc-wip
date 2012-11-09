@@ -1,0 +1,95 @@
+$NetBSD: patch-configure,v 1.1 2012/11/09 18:38:46 jihbed Exp $
+
+--- configure.orig	2012-03-21 14:30:13.000000000 +0100
++++ configure	2012-09-18 13:46:42.000000000 +0100
+@@ -3088,11 +3088,11 @@
+ 
+ 
+ ## Set default compiler flags
+-if test "x$CXXFLAGS" == "x"; then CXXFLAGS="-O3"; fi
++if test "x$CXXFLAGS" = "x"; then CXXFLAGS="-O3"; fi
+ 
+ ## More comprehensible error messages if possible. See:
+ ## http://www.bdsoft.com/tools/stlfilt.html
+-if test "x$CXXFLAGS" == "x"; then
++if test "x$CXXFLAGS" = "x"; then
+   # Extract the first word of "gfilt", so it can be a program name with args.
+ set dummy gfilt; ac_word=$2
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking for $ac_word" >&5
+@@ -20370,7 +20370,7 @@
+   enable_debug=no
+ fi
+ 
+-if test x$enable_debug == xyes; then
++if test x$enable_debug = xyes; then
+ 
+   ac_ext=cpp
+ ac_cpp='$CXXCPP $CPPFLAGS'
+@@ -20455,7 +20455,7 @@
+ 
+ 
+ ## Basic Python checks
+-if test x$enable_pyext == xyes; then
++if test x$enable_pyext = xyes; then
+ 
+ 
+     # Extract the first word of "python", so it can be a program name with args.
+@@ -20586,7 +20586,7 @@
+   fi
+ fi
+ ## SWIG checks
+-if test x$enable_pyext == xyes; then
++if test x$enable_pyext = xyes; then
+ 
+         # Extract the first word of "swig", so it can be a program name with args.
+ set dummy swig; ac_word=$2
+@@ -20692,7 +20692,7 @@
+         fi
+ 
+ 
+-  if test x$SWIG == x; then
++  if test x$SWIG = x; then
+     as_fn_error $? "Can't build Python extension since swig could not be found" "$LINENO" 5
+     enable_pyext=no
+   else
+@@ -20768,7 +20768,7 @@
+       { $as_echo "$as_me:${as_lineno-$LINENO}: checking if $SWIG is compatible with the $CXX compiler" >&5
+ $as_echo_n "checking if $SWIG is compatible with the $CXX compiler... " >&6; }
+       flag_ok=yes
+-      if test x$flag_ok == xyes; then
++      if test x$flag_ok = xyes; then
+         stat_string=`$swig_compiler -c conftest_wrap.cxx $CPPFLAGS $CXXFLAGS -I$python_incpath 2>&1 1>&5` ; test -z "$stat_string" || flag_ok=no
+       fi
+       { $as_echo "$as_me:${as_lineno-$LINENO}: result: $flag_ok" >&5
+@@ -20782,11 +20782,11 @@
+   rm -rf conftest*
+ fi
+ ## Finish
+-if test x$enable_pyext == xyes; then
++if test x$enable_pyext = xyes; then
+   { $as_echo "$as_me:${as_lineno-$LINENO}: All Python build checks successful: 'AGILe' Python extension will be built" >&5
+ $as_echo "$as_me: All Python build checks successful: 'AGILe' Python extension will be built" >&6;}
+ fi
+- if test x$enable_pyext == xyes; then
++ if test x$enable_pyext = xyes; then
+   ENABLE_PYEXT_TRUE=
+   ENABLE_PYEXT_FALSE='#'
+ else
+@@ -21542,6 +21542,8 @@
+   case $ac_option in
+   # Handling of the options.
+   -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
++	: Avoid regenerating within pkgsrc
++	exit 0
+     ac_cs_recheck=: ;;
+   --version | --versio | --versi | --vers | --ver | --ve | --v | -V )
+     $as_echo "$ac_cs_version"; exit ;;
+@@ -23811,7 +23813,7 @@
+ fi
+ 
+ 
+-if test x$enable_python == xyes; then
++if test x$enable_python = xyes; then
+    cat <<EOF
+ 
+ ************************************************************
