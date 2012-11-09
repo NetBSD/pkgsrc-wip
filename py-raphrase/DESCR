@@ -1,0 +1,5 @@
+pyraphrase is the result of an academic project to extract paraphrases from
+a subtitle corpus by using some statistical metrics.
+This library only contains one
+method get_paraphrases() but it is intended to be completed with more
+linguistics-related functionallity.
