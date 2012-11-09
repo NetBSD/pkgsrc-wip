@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2012/11/09 17:43:05 jihbed Exp $
+
+SHA1 (Forthon-0.8.10.tgz) = c97442f512d66c79ab1a8748828b4ee75393867b
+RMD160 (Forthon-0.8.10.tgz) = eef8b42d55ae67eec0c35f33c86b998146c8168f
+Size (Forthon-0.8.10.tgz) = 89048 bytes
+SHA1 (patch-setup.py) = c42b5e03432c36ca32ecd648a2fd1433bcbfde80
