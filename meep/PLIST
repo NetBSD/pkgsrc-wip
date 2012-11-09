@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/03/22 21:07:44 outpaddling Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/11/09 23:18:45 outpaddling Exp $
 bin/meep
 include/meep.hpp
 include/meep/mympi.hpp
 include/meep/vec.hpp
 lib/libmeep.la
 lib/pkgconfig/meep.pc
+lib/libguile-srfi-srfi-1-v-3.so
 share/meep/casimir.scm
 share/meep/meep-enums.scm
 share/meep/meep.scm
