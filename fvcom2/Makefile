@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/09/28 23:21:49 asau Exp $
+# $NetBSD: Makefile,v 1.6 2012/11/09 18:59:42 outpaddling Exp $
 #
 
 PKGNAME=	fvcom-2.7.1
@@ -14,8 +14,8 @@ COMMENT=	Prognostic coastal ocean circulation model
 WRKSRC=		${WRKDIR}/FVCOM2.7.1/FVCOM_source
 
 USE_TOOLS+=	make
-USE_LANGUAGES=	c fortran
-FC=		gfortran
+# Code is actually Fortran77, even though the build system generates .f90 files
+USE_LANGUAGES=	c fortran77
 
 DEPENDS+=	metis>=4.0:../../math/metis
 
