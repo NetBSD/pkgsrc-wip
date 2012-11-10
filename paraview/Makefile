@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2012/10/12 10:45:48 asau Exp $
+# $NetBSD: Makefile,v 1.7 2012/11/10 17:30:39 slitvinov Exp $
 #
 
-PKGNAME=	paraview-3.12.0
-DISTNAME=	ParaView-3.12.0
+PKGNAME=	paraview-3.14.1
+DISTNAME=	ParaView-3.14.0-Source
 CATEGORIES=	graphics
-MASTER_SITES=	http://www.paraview.org/files/v3.12/
+MASTER_SITES=	http://www.paraview.org/files/v3.14/
 
 MAINTAINER=	pouya@san-serriffe.org
 HOMEPAGE=	http://www.paraview.org/
