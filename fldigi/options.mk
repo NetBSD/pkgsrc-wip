@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.1 2012/11/04 14:48:43 makoto Exp $
+# $NetBSD: options.mk,v 1.2 2012/11/10 12:55:40 lexort Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.fldigi
 PKG_SUPPORTED_OPTIONS=	fltk13
-PKG_SUGGESTED_OPTIONS=
+PKG_SUGGESTED_OPTIONS=	fltk13
 
 .include "../../mk/bsd.options.mk"
 
