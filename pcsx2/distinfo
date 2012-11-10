@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2012/09/09 17:10:58 othyro Exp $
+$NetBSD: distinfo,v 1.2 2012/11/10 23:08:45 othyro Exp $
 
-SHA1 (pcsx2-1.0.0-r5350-sources.7z) = 060d57c6b06b1752fd5ece9aaf45fa4da508aba4
-RMD160 (pcsx2-1.0.0-r5350-sources.7z) = eb359862ba2d5c7466de079a8cf0c501a80c8992
-Size (pcsx2-1.0.0-r5350-sources.7z) = 10673799 bytes
+SHA1 (pcsx2-1.0.0r5412.tar.gz) = 74c6275575acd031bc81c57daa2449e13af4f582
+RMD160 (pcsx2-1.0.0r5412.tar.gz) = 4a6fd5a00bd6b8b0647aa37603f341bfabda2255
+Size (pcsx2-1.0.0r5412.tar.gz) = 4562452 bytes
