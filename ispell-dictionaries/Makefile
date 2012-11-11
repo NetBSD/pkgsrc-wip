@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/09/30 05:44:15 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/11 22:01:12 othyro Exp $
 #
 
 DISTNAME=	ispell-dictionaries-1.0
@@ -9,7 +9,7 @@ DISTFILES=	# empty
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ficus-www.cs.ucla.edu/geoff/ispell.html
 COMMENT=	"meta-package" for ispell spell checker dictionaries
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	# blank
 
 USE_LANGUAGES=	# none
 
