@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.4 2012/11/11 02:40:23 othyro Exp $
+$NetBSD: distinfo,v 1.5 2012/11/11 12:31:41 othyro Exp $
 
 SHA1 (mupen64plus-bundle-src-1.99.5.tar.gz) = ca80ae446c9591e272e3ec93f0a2a8b01cfcd34e
 RMD160 (mupen64plus-bundle-src-1.99.5.tar.gz) = 9e5aec09f73e70e9010d18d67756e3204e580307
 Size (mupen64plus-bundle-src-1.99.5.tar.gz) = 1732468 bytes
 SHA1 (patch-m64p__build.sh) = 0a154241aa2e4cb8be922f642d6112b35f027f2a
-SHA1 (patch-source_mupen64plus-audio-sdl_projects_unix_Makefile) = 53f84a0fdd4d6546345b73b75094ec27beac1206
+SHA1 (patch-source_mupen64plus-audio-sdl_projects_unix_Makefile) = 46f37f4a228bb4555fe849096d031ca71f87e49d
 SHA1 (patch-source_mupen64plus-audio-sdl_src_main.c) = d12d692398138e2ac2afb22ad462bea1201e364c
 SHA1 (patch-source_mupen64plus-core_projects_unix_Makefile) = a27707415ec2398af73eb91d1012a50aa7c7656d
 SHA1 (patch-source_mupen64plus-core_src_main_util.c) = a19e07be7fe63bf1cf8c2b954580144c0cbad688
