@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2012/11/06 14:50:30 othyro Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2012/11/11 12:02:53 thomasklausner Exp $
 
 BUILDLINK_TREE+=	rsound
 
@@ -8,35 +8,35 @@ RSOUND_BUILDLINK3_MK:=
 pkgbase := rsound
 .include "../../mk/pkg-build-options.mk"
 
-.if !empty(PKG_BUILD_OPTIONS:Malsa)
+.if !empty(PKG_BUILD_OPTIONS.rsound:Malsa)
 .include "../../audio/alsa-lib/buildlink3.mk"
 .endif
 
-.if !empty(PKG_BUILD_OPTIONS:Mjack)
+.if !empty(PKG_BUILD_OPTIONS.rsound:Mjack)
 .include "../../audio/jack/buildlink3.mk"
 .endif
 
-.if !empty(PKG_BUILD_OPTIONS:Mlibao)
+.if !empty(PKG_BUILD_OPTIONS.rsound:Mlibao)
 .include "../../audio/libao/buildlink3.mk"
 .endif
 
-.if !empty(PKG_BUILD_OPTIONS:Msamplerate)
+.if !empty(PKG_BUILD_OPTIONS.rsound:Msamplerate)
 .include "../../audio/libsamplerate/buildlink3.mk"
 .endif
 
-.if !empty(PKG_BUILD_OPTIONS:Mopenal)
+.if !empty(PKG_BUILD_OPTIONS.rsound:Mopenal)
 .include "../../audio/openal/buildlink3.mk"
 .endif
 
-.if !empty(PKG_BUILD_OPTIONS:Moss)
+.if !empty(PKG_BUILD_OPTIONS.rsound:Moss)
 .include "../../mk/oss.buildlink3.mk"
 .endif
 
-.if !empty(PKG_BUILD_OPTIONS:Mportaudio)
+.if !empty(PKG_BUILD_OPTIONS.rsound:Mportaudio)
 .include "../../audio/portaudio/buildlink3.mk"
 .endif
 
-.if !empty(PKG_BUILD_OPTIONS:Mpulseaudio)
+.if !empty(PKG_BUILD_OPTIONS.rsound:Mpulseaudio)
 .include "../../audio/pulseaudio/buildlink3.mk"
 .endif
 
