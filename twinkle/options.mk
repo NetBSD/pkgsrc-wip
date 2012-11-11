@@ -1,10 +1,16 @@
-# $NetBSD: options.mk,v 1.3 2009/02/09 21:07:44 othyro Exp $
+# $NetBSD: options.mk,v 1.4 2012/11/11 12:23:39 othyro Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.twinkle
-PKG_SUPPORTED_OPTIONS=	ilbc kde speex zrtp
-PKG_SUGGESTED_OPTIONS=	kde speex
+PKG_SUPPORTED_OPTIONS=	alsa ilbc kde speex zrtp
+PKG_SUGGESTED_OPTIONS=	ilbc speex zrtp
 
 .include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Malsa)
+.include "../../audio/alsa-lib/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--without-alsa
+.endif
 
 .if !empty(PKG_OPTIONS:Milbc)
 .include "../../wip/ilbc-rfc3951/buildlink3.mk"
