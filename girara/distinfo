@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2012/11/11 11:12:53 zul_ Exp $
+
+SHA1 (girara-0.1.4.tar.gz) = 525f14dc7e4f6aab2be15aaae5b7803950737d5e
+RMD160 (girara-0.1.4.tar.gz) = 020d72d9eaadb1417724cdda7379e5b2904b95a3
+Size (girara-0.1.4.tar.gz) = 73645 bytes
+SHA1 (patch-aa) = 87edbd7f80bdc948f811e9cd78e16a89d1dd5373
