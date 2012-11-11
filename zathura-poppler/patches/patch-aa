@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1 2012/11/11 11:38:12 zul_ Exp $
+
+Adapt to pkgsrc prerequisite
+
+--- config.mk.orig	2012-11-10 11:38:35.000000000 +0000
++++ config.mk	2012-11-10 11:38:45.000000000 +0000
+@@ -11,7 +11,7 @@
+ ZATHURA_GTK_VERSION ?= $(shell pkg-config --variable=GTK_VERSION zathura)
+ 
+ # paths
+-PREFIX ?= /usr
++PREFIX ?= ${PREFIX}
+ LIBDIR ?= ${PREFIX}/lib
+ 
+ # libs
