@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2012/11/06 14:45:00 othyro Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2012/11/11 12:24:25 othyro Exp $
 
 BUILDLINK_TREE+=	twinkle
 
@@ -11,6 +11,10 @@ BUILDLINK_PKGSRCDIR.twinkle?=	../../wip/twinkle
 
 pkgbase := twinkle
 .include "../../mk/pkg-build-options.mk"
+
+.if !empty(PKG_BUILD_OPTIONS:Malsa)
+.include "../../audio/alsa-lib/buildlink3.mk"
+.endif
 
 .if !empty(PKG_BUILD_OPTIONS:Milbc)
 .include "../../wip/ilbc-rfc3951/buildlink3.mk"
