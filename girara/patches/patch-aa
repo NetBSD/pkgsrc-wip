@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1 2012/11/11 10:56:53 zul_ Exp $
+
+Adapt install target to pkgsrc prerequisite
+
+--- config.mk.orig	2012-11-10 10:55:21.000000000 +0000
++++ config.mk	2012-11-10 10:55:55.000000000 +0000
+@@ -16,7 +16,7 @@
+ SOVERSION = ${SOMAJOR}.${SOMINOR}
+ 
+ # paths
+-PREFIX ?= /usr
++PREFIX ?= ${PREFIX}
+ LIBDIR ?= ${PREFIX}/lib
+ INCLUDEDIR ?= ${PREFIX}/include
+ # locale directory
