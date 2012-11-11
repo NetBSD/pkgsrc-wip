@@ -1,4 +1,26 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/10/27 07:24:54 tomasbodzar Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/11/11 11:25:29 zul_ Exp $
 bin/zathura
+include/zathura/document.h
+include/zathura/links.h
+include/zathura/macros.h
+include/zathura/page.h
+include/zathura/plugin-api.h
+include/zathura/types.h
+include/zathura/version.h
+lib/pkgconfig/zathura.pc
 man/man1/zathura.1
+man/man5/zathurarc.5
 share/applications/zathura.desktop
+share/locale/cs/LC_MESSAGES/zathura.mo
+share/locale/de/LC_MESSAGES/zathura.mo
+share/locale/eo/LC_MESSAGES/zathura.mo
+share/locale/es/LC_MESSAGES/zathura.mo
+share/locale/es_CL/LC_MESSAGES/zathura.mo
+share/locale/et/LC_MESSAGES/zathura.mo
+share/locale/fr/LC_MESSAGES/zathura.mo
+share/locale/it/LC_MESSAGES/zathura.mo
+share/locale/pl/LC_MESSAGES/zathura.mo
+share/locale/ru/LC_MESSAGES/zathura.mo
+share/locale/ta_IN/LC_MESSAGES/zathura.mo
+share/locale/tr/LC_MESSAGES/zathura.mo
+share/locale/uk_UA/LC_MESSAGES/zathura.mo
