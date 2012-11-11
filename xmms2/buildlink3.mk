@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2012/11/05 00:42:28 othyro Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2012/11/11 13:44:12 othyro Exp $
 
 BUILDLINK_TREE+=	xmms2
 
@@ -11,143 +11,143 @@ pkgbase := xmms2
 .include "../../mk/pkg-build-options.mk"
 
 
-.if !empty(PKG_BUILD_OPTIONS:Malsa)
+.if !empty(PKG_BUILD_OPTIONS.xmms2:Malsa)
 .include "../../audio/alsa-lib/buildlink3.mk"
 .endif
 
-.if !empty(PKG_BUILD_OPTIONS:Mavahi)
+.if !empty(PKG_BUILD_OPTIONS.xmms2:Mavahi)
 .include "../../net/avahi/buildlink3.mk"
 .endif
 
-.if !empty(PKG_BUILD_OPTIONS:Mboost)
+.if !empty(PKG_BUILD_OPTIONS.xmms2:Mboost)
 .include "../../devel/boost-headers/buildlink3.mk"
 .endif
 
-.if !empty(PKG_BUILD_OPTIONS:Mcurl)
+.if !empty(PKG_BUILD_OPTIONS.xmms2:Mcurl)
 .include "../../www/curl/buildlink3.mk"
 .endif
 
-.if !empty(PKG_BUILD_OPTIONS:Mecore)
+.if !empty(PKG_BUILD_OPTIONS.xmms2:Mecore)
 .include "../../devel/ecore/buildlink3.mk"
 .endif
 
-.if !empty(PKG_BUILD_OPTIONS:Mfaad)
+.if !empty(PKG_BUILD_OPTIONS.xmms2:Mfaad)
 .include "../../audio/faad2/buildlink3.mk"
 .endif
 
-.if !empty(PKG_BUILD_OPTIONS:Mffmpeg)
+.if !empty(PKG_BUILD_OPTIONS.xmms2:Mffmpeg)
 .include "../../multimedia/ffmpeg/buildlink3.mk"
 .endif
 
-.if !empty(PKG_BUILD_OPTIONS:Mfftw)
+.if !empty(PKG_BUILD_OPTIONS.xmms2:Mfftw)
 .include "../../math/fftwf/buildlink3.mk"
 .endif
 
-.if !empty(PKG_BUILD_OPTIONS:Mflac)
+.if !empty(PKG_BUILD_OPTIONS.xmms2:Mflac)
 .include "../../audio/flac/buildlink3.mk"
 .endif
 
-.if !empty(PKG_BUILD_OPTIONS:Mgnomevfs)
+.if !empty(PKG_BUILD_OPTIONS.xmms2:Mgnomevfs)
 .include "../../sysutils/gnome-vfs/buildlink3.mk"
 .endif
 
-.if !empty(PKG_BUILD_OPTIONS:Mjack)
+.if !empty(PKG_BUILD_OPTIONS.xmms2:Mjack)
 .include "../../audio/jack/buildlink3.mk"
 .endif
 
-.if !empty(PKG_BUILD_OPTIONS:Mlibao)
+.if !empty(PKG_BUILD_OPTIONS.xmms2:Mlibao)
 .include "../../audio/libao/buildlink3.mk"
 .endif
 
-.if !empty(PKG_BUILD_OPTIONS:Mlibcdio)
+.if !empty(PKG_BUILD_OPTIONS.xmms2:Mlibcdio)
 .include "../../misc/libcdio/buildlink3.mk"
 .endif
 
-.if !empty(PKG_BUILD_OPTIONS:Mlibdiscid)
+.if !empty(PKG_BUILD_OPTIONS.xmms2:Mlibdiscid)
 .include "../../audio/libdiscid/buildlink3.mk"
 .endif
 
-.if !empty(PKG_BUILD_OPTIONS:Mlibgme)
+.if !empty(PKG_BUILD_OPTIONS.xmms2:Mlibgme)
 .include "../../wip/libgme/buildlink3.mk"
 .endif
 
-.if !empty(PKG_BUILD_OPTIONS:Mlibmms)
+.if !empty(PKG_BUILD_OPTIONS.xmms2:Mlibmms)
 .include "../../net/libmms/buildlink3.mk"
 .endif
 
-.if !empty(PKG_BUILD_OPTIONS:Mlibmpg123)
+.if !empty(PKG_BUILD_OPTIONS.xmms2:Mlibmpg123)
 .include "../../wip/libmpg123/buildlink3.mk"
 .endif
 
-.if !empty(PKG_BUILD_OPTIONS:Mlibofa)
+.if !empty(PKG_BUILD_OPTIONS.xmms2:Mlibofa)
 .include "../../audio/libofa/buildlink3.mk"
 .endif
 
-.if !empty(PKG_BUILD_OPTIONS:Mlibvisual)
+.if !empty(PKG_BUILD_OPTIONS.xmms2:Mlibvisual)
 .include "../../audio/libvisual/buildlink3.mk"
 .endif
 
-.if !empty(PKG_BUILD_OPTIONS:Mmad)
+.if !empty(PKG_BUILD_OPTIONS.xmms2:Mmad)
 .include "../../audio/libmad/buildlink3.mk"
 .endif
 
-.if !empty(PKG_BUILD_OPTIONS:Mmodplug)
+.if !empty(PKG_BUILD_OPTIONS.xmms2:Mmodplug)
 .include "../../audio/libmodplug/buildlink3.mk"
 .endif
 
-.if !empty(PKG_BUILD_OPTIONS:Mmpcdec)
+.if !empty(PKG_BUILD_OPTIONS.xmms2:Mmpcdec)
 .include "../../audio/libmpcdec/buildlink3.mk"
 .endif
 
-.if !empty(PKG_BUILD_OPTIONS:Mperl)
+.if !empty(PKG_BUILD_OPTIONS.xmms2:Mperl)
 .include "../../lang/perl5/buildlink3.mk"
 .endif
 
-.if !empty(PKG_BUILD_OPTIONS:Mpulseaudio)
+.if !empty(PKG_BUILD_OPTIONS.xmms2:Mpulseaudio)
 .include "../../audio/pulseaudio/buildlink3.mk"
 .endif
 
-.if !empty(PKG_BUILD_OPTIONS:Mpython)
+.if !empty(PKG_BUILD_OPTIONS.xmms2:Mpython)
 .include "../../devel/py-cython/buildlink3.mk"
 .endif
 
-.if !empty(PKG_BUILD_OPTIONS:Mruby)
+.if !empty(PKG_BUILD_OPTIONS.xmms2:Mruby)
 .include "../../lang/ruby/buildlink3.mk"
 .endif
 
-.if !empty(PKG_BUILD_OPTIONS:Mreadline)
+.if !empty(PKG_BUILD_OPTIONS.xmms2:Mreadline)
 .include "../../devel/readline/buildlink3.mk"
 .endif
 
-.if !empty(PKG_BUILD_OPTIONS:Msamba)
+.if !empty(PKG_BUILD_OPTIONS.xmms2:Msamba)
 .include "../../net/samba/buildlink3.mk"
 .endif
 
-.if !empty(PKG_BUILD_OPTIONS:Mshout)
+.if !empty(PKG_BUILD_OPTIONS.xmms2:Mshout)
 .include "../../audio/libshout/buildlink3.mk"
 .endif
 
-.if !empty(PKG_BUILD_OPTIONS:Msidplay)
+.if !empty(PKG_BUILD_OPTIONS.xmms2:Msidplay)
 .include "../../audio/libsidplay2/buildlink3.mk"
 .endif
 
-.if !empty(PKG_BUILD_OPTIONS:Msndfile)
+.if !empty(PKG_BUILD_OPTIONS.xmms2:Msndfile)
 .include "../../audio/libsndfile/buildlink3.mk"
 .endif
 
-.if !empty(PKG_BUILD_OPTIONS:Mspeex)
+.if !empty(PKG_BUILD_OPTIONS.xmms2:Mspeex)
 .include "../../audio/speex/buildlink3.mk"
 .endif
 
-.if !empty(PKG_BUILD_OPTIONS:Mtremor)
+.if !empty(PKG_BUILD_OPTIONS.xmms2:Mtremor)
 .include "../../audio/tremor/buildlink3.mk"
 .endif
 
-.if !empty(PKG_BUILD_OPTIONS:Mvorbis)
+.if !empty(PKG_BUILD_OPTIONS.xmms2:Mvorbis)
 .include "../../audio/libvorbis/buildlink3.mk"
 .endif
 
-.if !empty(PKG_BUILD_OPTIONS:Mwavpack)
+.if !empty(PKG_BUILD_OPTIONS.xmms2:Mwavpack)
 .include "../../audio/wavpack/buildlink3.mk"
 .endif
 

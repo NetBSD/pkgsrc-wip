@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2012/11/06 14:38:43 othyro Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2012/11/11 13:44:13 othyro Exp $
 
 BUILDLINK_TREE+=	mupen64plus
 
@@ -11,11 +11,11 @@ BUILDLINK_PKGSRCDIR.mupen64plus?=	../../wip/mupen64plus
 pkgbase := mupen64plus
 .include "../../mk/pkg-build-options.mk"
 
-.if !empty(PKG_BUILD_OPTIONS:Mlirc)
+.if !empty(PKG_BUILD_OPTIONS.mupen64plus:Mlirc)
 .include "../../wip/lirc/buildlink3.mk"
 .endif
 
-.if !empty(PKG_BUILD_OPTIONS:Msamplerate)
+.if !empty(PKG_BUILD_OPTIONS.mupen64plus:Msamplerate)
 .include "../../audio/libsamplerate/buildlink3.mk"
 .endif
 

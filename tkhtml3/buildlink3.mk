@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2012/11/06 14:59:06 othyro Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2012/11/11 13:44:13 othyro Exp $
 
 BUILDLINK_TREE+=	tkhtml3
 
@@ -12,7 +12,7 @@ pkgbase := tkhtml3
 .include "../../mk/pkg-build-options.mk"
 
 
-.if !empty(PKG_BUILD_OPTIONS:Mpthread)
+.if !empty(PKG_BUILD_OPTIONS.tkhtml3:Mpthread)
 .include "../../mk/pthread.buildlink3.mk"
 .endif
 

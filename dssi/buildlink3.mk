@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2012/11/05 13:52:38 othyro Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2012/11/11 13:44:13 othyro Exp $
 
 BUILDLINK_TREE+=	dssi
 
@@ -12,7 +12,7 @@ BUILDLINK_DEPMETHOD.dssi?=	build
 pkgbase := dssi
 .include "../../mk/pkg-build-options.mk"
 
-.if !empty(PKG_BUILD_OPTIONS:Mqt)
+.if !empty(PKG_BUILD_OPTIONS.dssi:Mqt)
 .include "../../x11/qt4-libs/buildlink3.mk"
 .endif
 
