@@ -1,11 +1,4 @@
-% mupen64plus
-[...]
-dlopen('./libmupen64plus.so.2') error: Cannot open "./libmupen64plus.so.2"
-AttachCoreLib() Error: failed to find Mupen64Plus Core library
+dlopen('/usr/pkg/lib/mupen64plus/mupen64plus-audio-sdl.so') error: /usr/pkg/lib/mupen64plus/mupen64plus-audio-sdl.so: Undefined PLT symbol "SDL_MixAudio" (symnum = 6)
+dlopen('/usr/pkg/lib/mupen64plus/mupen64plus-audio-sdl.so') error: /usr/pkg/lib/mupen64plus/mupen64plus-audio-sdl.so: Undefined PLT symbol "SDL_MixAudio" (symnum = 6)
+UI-console: using Audio plugin: <dummy>
 
-% cd /usr/pkg/lib; mupen64plus 
-[...]
-dlopen('./libmupen64plus.so.2') error: ./libmupen64plus.so.2: Undefined PLT symbol "fseeko64" (symnum = 72)
-AttachCoreLib() Error: failed to find Mupen64Plus Core library
-
-but fseeko64 is defined in source/mupen64plus-core/src/main/zip/ioapi.h...
