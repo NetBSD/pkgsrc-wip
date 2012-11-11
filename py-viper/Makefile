@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/07 13:57:32 asau Exp $
+# $NetBSD: Makefile,v 1.5 2012/11/11 23:17:53 outpaddling Exp $
 #
 
 DISTNAME=	viper-1.0.0
@@ -7,7 +7,7 @@ PKGREVISION=	1
 CATEGORIES=	graphics python
 MASTER_SITES=	http://launchpad.net/fenics-viper/1.0.x/1.0.0/+download/
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	jwbacon@tds.net
 HOMEPAGE=	https://launchpad.net/fenics-viper
 COMMENT=	Scientific plotter and run-time visualization module
 
