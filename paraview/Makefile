@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2012/11/10 17:30:39 slitvinov Exp $
+# $NetBSD: Makefile,v 1.8 2012/11/11 13:56:09 slitvinov Exp $
 #
 
-PKGNAME=	paraview-3.14.1
-DISTNAME=	ParaView-3.14.0-Source
+VER=3.14.1
+PKGNAME=	paraview-${VER}
+DISTNAME=	ParaView-${VER}-Source
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.paraview.org/files/v3.14/
 
