@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/09/24 16:56:39 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/11 21:58:06 othyro Exp $
 #
 
 DISTNAME=	aspell-dictionaries-1.0
@@ -9,7 +9,7 @@ DISTFILES=	# empty
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://aspell.net/
 COMMENT=	"meta-package" for aspell spell checker dictionaries
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	# blank
 
 USE_LANGUAGES=	# none
 
