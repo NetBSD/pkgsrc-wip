@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.4 2012/11/06 19:43:26 outpaddling Exp $
-bin/ccache-swig2
-bin/swig2
-man/man1/ccache-swig2.1
+@comment $NetBSD: PLIST,v 1.5 2012/11/11 22:24:02 outpaddling Exp $
+bin/ccache-swig2.0
+bin/swig2.0
+man/man1/ccache-swig2.0.1
 share/doc/swig/2.0/SWIGDocumentation.html
 share/doc/swig/2.0/SWIGDocumentation.pdf
 share/doc/swig/2.0/android-class.png
