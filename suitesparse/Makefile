@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/07 16:23:18 asau Exp $
+# $NetBSD: Makefile,v 1.6 2012/11/11 23:55:51 outpaddling Exp $
 # FreeBSD Id: ports/math/suitesparse/Makefile,v 1.38 2011/07/20 16:17:35 bf Exp
 
 DISTNAME=	SuiteSparse-3.6.1
@@ -33,8 +33,12 @@ PICFLAG?=       -fpic
 BLAS=		-lblas
 LAPACK=		-llapack
 
+# USE_TOOLS+=gsed causes this on CentOS 6.3:
+# /home/bacon/Pkgsrc/pkgsrc-1/mk/pkgformat/pkg/list-dependencies: line 52: -e: command not found
+# Problem is ${SED} is empty
 USE_TOOLS+=	gmake gsed
-TOOLS_PLATFORM.gsed=	#empty
+# TOOLS_PLATFORM.gsed=	#empty
+USE_TOOLS+=	gmake
 
 USE_LANGUAGES=	c c++ fortran77
 
