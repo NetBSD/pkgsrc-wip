@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/11/06 14:41:31 othyro Exp $
+# $NetBSD: Makefile,v 1.5 2012/11/11 02:44:05 othyro Exp $
 #
 
 DISTNAME=	mupen64plus-bundle-src-1.99.5
@@ -24,9 +24,6 @@ INSTALL_ENV+=	MANDIR=${PREFIX}/${PKGMANDIR}
 
 .include "options.mk"
 
-.if $(OPSYS) != "Linux"
-BUILDLINK_TRANSFORM=    rm:-ldl
-.endif
 
 do-build:
 		cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${BASH} m64p_build.sh;
