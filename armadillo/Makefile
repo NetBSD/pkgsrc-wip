@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2012/09/24 16:56:38 asau Exp $
+# $NetBSD: Makefile,v 1.5 2012/11/11 23:33:19 outpaddling Exp $
 
-DISTNAME=	armadillo-2.2.1
-PKGREVISION=	1
+# DISTNAME=	armadillo-2.2.1
+# PKGREVISION=	1
+DISTNAME=	armadillo-3.4.4
 CATEGORIES=	math
 MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=arma/}
 
