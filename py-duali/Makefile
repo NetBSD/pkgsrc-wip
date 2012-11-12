@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2012/10/07 11:54:30 asau Exp $
+# $NetBSD: Makefile,v 1.5 2012/11/12 16:51:37 othyro Exp $
 #
 
 DISTNAME=	duali-0.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	textproc python
-MASTER_SITES=	http://switch.dl.sourceforge.net/project/arabeyes/Duali/0.1.1/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=arabeyes/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://www.arabeyes.org/project.php?proj=duali

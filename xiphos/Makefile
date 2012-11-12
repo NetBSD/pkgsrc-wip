@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.2 2012/10/07 20:11:09 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/12 16:51:39 othyro Exp $
 #
 
 DISTNAME=	xiphos-3.1.3
 CATEGORIES=	misc
-MASTER_SITES=	http://downloads.sourceforge.net/project/gnomesword/Xiphos/3.1.3/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gnomesword/}
 
 MAINTAINER=	elentirmo.gilgalad@gmail.com
-HOMEPAGE=	http://downloads.sourceforge.net/project/gnomesword/Xiphos/3.1.3/
+HOMEPAGE=	http://gnomesword.sourceforge.net/
 COMMENT=	Xiphos (formerly GnomeSword) is a Bible study tool using GTK
 LICENSE=	gnu-gpl-v2
 

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2012/10/12 20:32:06 asau Exp $
+# $NetBSD: Makefile,v 1.6 2012/11/12 16:51:37 othyro Exp $
 #
 
 DISTNAME=	PyPedal-2.0.0rc7
 PKGNAME=	${PYPKGPREFIX}-pypedal-2.0.0
 CATEGORIES=	math python
-MASTER_SITES=	http://switch.dl.sourceforge.net/project/pypedal/pypedal-2.0.0/2.0.0rc7/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pypedal/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	kamel.derouiche@gmail.com

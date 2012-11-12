@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.18 2012/10/12 11:47:00 asau Exp $
+# $NetBSD: Makefile,v 1.19 2012/11/12 16:51:37 othyro Exp $
 #
 
 DISTNAME=	visionegg-0.9.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 PKGREVISION=	4
 CATEGORIES=	graphics python
-MASTER_SITES=	http://surfnet.dl.sourceforge.net/project/visionegg/visionegg/visionegg-0.9.9/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=visionegg/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://visionegg.sourceforge.net/

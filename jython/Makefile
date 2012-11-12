@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2012/10/01 21:43:26 asau Exp $
+# $NetBSD: Makefile,v 1.7 2012/11/12 16:51:36 othyro Exp $
 #
 
 VERSION=	2.5.2b1
 DISTNAME=	jython_installer-${VERSION}
 PKGNAME=	${DISTNAME:S/_installer//}
 CATEGORIES=	lang
-MASTER_SITES=	http://softlayer.dl.sourceforge.net/project/jython/jython-dev/2.5.2b1/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=jython/}
 EXTRACT_SUFX=	.jar
 
 MAINTAINER=	jihbed.research@gmail.com

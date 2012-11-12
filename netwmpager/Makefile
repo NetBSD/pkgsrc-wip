@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2012/10/03 18:15:32 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/11/12 16:51:36 othyro Exp $
 #
 
 DISTNAME=	netwmpager-2.04
 CATEGORIES=	wm
-MASTER_SITES=	http://downloads.sourceforge.net/project/sf-xpaint/netwmpager/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sf-xpaint/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

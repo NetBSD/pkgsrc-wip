@@ -1,29 +1,29 @@
-# $NetBSD: Makefile,v 1.9 2012/10/07 17:17:27 asau Exp $
+# $NetBSD: Makefile,v 1.10 2012/11/12 16:51:39 othyro Exp $
 #
 
-DISTNAME=		tcl8.6b2-src.tar.gz
-PKGNAME=		tcl86-${TCL_PKGSRC_PATCHLEVEL}
-CATEGORIES=		lang
-MASTER_SITES=	http://sourceforge.net/projects/tcl/files/Tcl/8.6b2/
+DISTNAME=	tcl8.6b2-src.tar.gz
+PKGNAME=	tcl86-${TCL_PKGSRC_PATCHLEVEL}
+CATEGORIES=	lang
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tcl/}
 EXTRACT_SUFX=
-EXTRACT_CMD=		tar xzf $$extract_file
+EXTRACT_CMD=	tar xzf $$extract_file
 
-MAINTAINER=		bch@methodlogic.net
-HOMEPAGE=		http://www.tcl.tk/
-COMMENT=		Tool Command Language, a dynamic language
+MAINTAINER=	bch@methodlogic.net
+HOMEPAGE=	http://www.tcl.tk/
+COMMENT=	Tool Command Language, a dynamic language
 
 .include "../../wip/tcl86/Makefile.version"
 .include "options.mk"
 
-CONFLICTS+=		tclman80-[0-9]*
-CONFLICTS+=		tcl85-* tcl-[0-9]*
+CONFLICTS+=	tclman80-[0-9]*
+CONFLICTS+=	tcl85-* tcl-[0-9]*
 
-WRKSRC=			${WRKDIR}/tcl8.6b2
+WRKSRC=		${WRKDIR}/tcl8.6b2
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake
 CONFIGURE_DIRS=	unix
-BUILD_DIRS=		${CONFIGURE_DIRS}
+BUILD_DIRS=	${CONFIGURE_DIRS}
 
 CONFIGURE_ARGS+=	"--prefix=${PREFIX}"
 # CONFIGURE_ARGS+=	"--enable-shared=off"

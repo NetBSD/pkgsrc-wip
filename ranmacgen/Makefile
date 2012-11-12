@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2012/10/07 14:53:43 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/12 16:51:39 othyro Exp $
 #
 
 DISTNAME=	macgen_src_v1.1
 PKGNAME=	ran${DISTNAME:S/_src_v/-/}
 CATEGORIES=	net
-MASTER_SITES=	http://sourceforge.net/projects/ranmacgen/files/ranmacgen/macgen_src/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ranmacgen/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
