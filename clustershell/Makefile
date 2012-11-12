@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2012/09/24 18:26:54 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/12 15:59:46 othyro Exp $
 #
 
 DISTNAME=	clustershell-1.2.83
 CATEGORIES=	shells
-MASTER_SITES=	http://downloads.sourceforge.net/project/clustershell/clustershell/1.3%20beta3/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=clustershell/}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	wenheping@gmail.com

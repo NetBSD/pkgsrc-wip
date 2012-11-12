@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2012/09/28 21:24:36 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/11/12 15:59:47 othyro Exp $
 #
 
 DISTNAME=	freedict-eng-ara-0.0.2
 PKGNAME=	dict-${DISTNAME}
 CATEGORIES=	textproc
-MASTER_SITES=	http://garr.dl.sourceforge.net/project/freedict/English%20-%20Arabic/0.0.2/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=freedict/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://www.freedict.org/ar/

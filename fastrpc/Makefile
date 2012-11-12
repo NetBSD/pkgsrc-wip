@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2012/09/28 23:21:47 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/11/12 15:59:48 othyro Exp $
 #
 
 DISTNAME=	fastrpc-1.0.13
 CATEGORIES=	net
-MASTER_SITES=	http://downloads.sourceforge.net/sourceforge/fastrpc/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fastrpc/}
 
 MAINTAINER=	ondrej.tuma@firma.seznam.cz
 HOMEPAGE=	http://downloads.sourceforge.net/sourceforge/fastrpc/

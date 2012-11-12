@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2012/09/29 00:50:42 asau Exp $
+# $NetBSD: Makefile,v 1.5 2012/11/12 15:59:50 othyro Exp $
 #
 
 DISTNAME=	gwsmhg-0.8.1
 PKGREVISION=	1
 CATEGORIES=	devel python
-MASTER_SITES=	http://garr.dl.sourceforge.net/project/gwsmhg/gwsmhg/v-0.8.1/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gwsmhg/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gwsmhg.sourceforge.net/

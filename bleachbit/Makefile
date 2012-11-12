@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2012/09/24 17:14:33 asau Exp $
+# $NetBSD: Makefile,v 1.9 2012/11/12 15:59:46 othyro Exp $
 #
 
 DISTNAME=	bleachbit-0.7.2
 CATEGORIES=	sysutils python
-MASTER_SITES=	http://garr.dl.sourceforge.net/project/bleachbit/bleachbit/0.7.2/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bleachbit/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc.gnome@gmail.com

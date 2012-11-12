@@ -1,26 +1,26 @@
-# $NetBSD: Makefile,v 1.11 2012/09/28 22:07:34 asau Exp $
+# $NetBSD: Makefile,v 1.12 2012/11/12 15:59:48 othyro Exp $
 #
 
-VERS=			4.5.0
-DISTNAME=		eric4-${VERS}
-CATEGORIES=		devel
-MASTER_SITES=	http://downloads.sourceforge.net/project/eric-ide/eric4/stable/${VERS}/
+VERS=		4.5.0
+DISTNAME=	eric4-${VERS}
+CATEGORIES=	devel
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=eric-ide/}
 
-MAINTAINER=		helgoman@users.sourceforge.net
-HOMEPAGE=		http://eric-ide.python-projects.org/index.html
-COMMENT=		Python - IDE
-LICENSE=		gnu-gpl-v3
+MAINTAINER=	helgoman@users.sourceforge.net
+HOMEPAGE=	http://eric-ide.python-projects.org/index.html
+COMMENT=	Python - IDE
+LICENSE=	gnu-gpl-v3
 
-NO_BUILD=				yes
+NO_BUILD=	yes
 
-PY_PATCHPLIST=			yes
+PY_PATCHPLIST=	yes
 
-CONFIGURE_ARGS+=		-b ${PREFIX}/bin
-CONFIGURE_ARGS+=		-d ${PREFIX}/${PYSITELIB}
-CONFIGURE_ARGS+=		-a ${PREFIX}/qt4/qsci/api
+CONFIGURE_ARGS+=	-b ${PREFIX}/bin
+CONFIGURE_ARGS+=	-d ${PREFIX}/${PYSITELIB}
+CONFIGURE_ARGS+=	-a ${PREFIX}/qt4/qsci/api
 .include "../../mk/bsd.prefs.mk"
 .if defined(DESTDIR) && !empty(DESTDIR)
-CONFIGURE_ARGS+=		-i ${DESTDIR}
+CONFIGURE_ARGS+=	-i ${DESTDIR}
 .endif
 
 do-install:

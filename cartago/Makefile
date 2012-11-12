@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2012/09/24 18:26:52 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/12 15:59:46 othyro Exp $
 #
 
 DISTNAME=	cartago-1.4.0
 CATEGORIES=	devel
-MASTER_SITES=	http://garr.dl.sourceforge.net/project/cartago/cartago/1.4/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cartago/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	jihbed.research@gmail.com

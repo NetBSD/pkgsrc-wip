@@ -1,19 +1,19 @@
-# $NetBSD: Makefile,v 1.2 2012/09/29 00:50:40 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/12 15:59:49 othyro Exp $
 #
 
 DISTNAME=	GraphMonkey-1.7
 PKGNAME=	${DISTNAME:S/GraphMonkey/graphmonkey/}
 CATEGORIES=	math
-MASTER_SITES=	http://garr.dl.sourceforge.net/project/graphmonkey/GraphMonkey/GraphMonkey-1.7/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=graphmonkey/}
 
-MAINTAINER=	ppkgsrc-users@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://graphmonkey.sourceforge.net/
 COMMENT=	GTK\#-based graphing calculator
 LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	# none
 
-NO_BUILD= yes
+NO_BUILD=	yes
 
 INSTALLATION_DIRS+=	bin
 

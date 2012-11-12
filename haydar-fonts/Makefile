@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2012/09/29 17:05:54 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/12 15:59:51 othyro Exp $
 #
 
-VERS=	20030228
+VERS=		20030228
 DISTNAME=	haydar_fonts
 PKGNAME=	haydar-ttf-${VERS}
 CATEGORIES=	fonts
-MASTER_SITES=	http://garr.dl.sourceforge.net/project/arabeyes/Fonts/haydar_fonts/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=arabeyes/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	kamelderouiche@yahoo.com

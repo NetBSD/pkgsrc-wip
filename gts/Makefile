@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2012/09/29 00:50:41 asau Exp $
+# $NetBSD: Makefile,v 1.7 2012/11/12 15:59:50 othyro Exp $
 #
 
 DISTNAME=	gts-0.7.6
 PKGREVISION=	2
 CATEGORIES=	graphics
-MASTER_SITES=	http://garr.dl.sourceforge.net/project/gts/gts/0.7.6/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gts/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://gts.sourceforge.net/

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2012/09/28 22:07:32 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/12 15:59:47 othyro Exp $
 #
 
 DISTNAME=	elk-1.1.4
 CATEGORIES=	science
-MASTER_SITES=	http://garr.dl.sourceforge.net/project/elk/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=elk/}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	jihbed.research@gmail.com

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2012/09/28 21:24:38 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/11/12 15:59:47 othyro Exp $
 #
 
 DISTNAME=	duali-data-0.1b
 PKGNAME=	${DISTNAME:S/b//}
 CATEGORIES=	textproc
-MASTER_SITES=	http://switch.dl.sourceforge.net/project/arabeyes/Duali/data-0.1b/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=arabeyes/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://www.arabeyes.org/project.php?proj=Duali

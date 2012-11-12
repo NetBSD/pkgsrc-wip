@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2012/09/29 17:05:53 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/12 15:59:51 othyro Exp $
 #
 
 DISTNAME=	haserl-0.8.0
 CATEGORIES=	lang www
-MASTER_SITES=	http://downloads.sourceforge.net/haserl/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=haserl/}
 
 MAINTAINER=	xmor61@users.sourceforge.net
 HOMEPAGE=	http://haserl.sourceforge.net/

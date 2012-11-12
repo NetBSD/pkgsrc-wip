@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2012/09/30 05:44:15 asau Exp $
+# $NetBSD: Makefile,v 1.8 2012/11/12 15:59:51 othyro Exp $
 #
 
 DISTNAME=	imagination-1.0
 PKGREVISION=	1
 CATEGORIES=	multimedia
-MASTER_SITES=	http://ovh.dl.sourceforge.net/sourceforge/imagination/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=imagination/}
 
 MAINTAINER=	pkgsrc.gnome@gmail.com
 HOMEPAGE=	http://imagination.sourceforge.net/

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2012/09/24 16:56:30 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/12 15:59:46 othyro Exp $
 #
 
 DISTNAME=	ae_fonts_decorative-${VERSION}
 PKGNAME=	ae-fonts-decorative-${VERSION}
 CATEGORIES=	fonts
-MASTER_SITES=	http://garr.dl.sourceforge.net/project/arabeyes/Fonts/ae_fonts/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=arabeyes/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	kamelderouiche@yahoo.com

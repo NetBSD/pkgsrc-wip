@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2012/09/24 18:26:52 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/11/12 15:59:46 othyro Exp $
 #
 
 DISTNAME=	cgnslib_3.1.3-2
 PKGNAME=	cgnslib-3.1.3-2
 CATEGORIES=	math
-MASTER_SITES=	http://garr.dl.sourceforge.net/project/cgns/cgnslib_3.1/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cgns/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://www.cgns.org/
