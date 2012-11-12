@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2012/09/30 05:44:15 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/12 16:26:41 othyro Exp $
 #
 
 DISTNAME=	itools-1.0
 CATEGORIES=	time
-MASTER_SITES=	http://garr.dl.sourceforge.net/project/arabeyes/ITL%20itools/itools-1.0/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=arabeyes/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://www.arabeyes.org/project.php?proj=ITL

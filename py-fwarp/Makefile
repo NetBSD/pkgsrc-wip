@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2012/10/16 11:23:15 jihbed Exp $
+# $NetBSD: Makefile,v 1.6 2012/11/12 16:26:47 othyro Exp $
 #
 
 DISTNAME=	fwrap-0.1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
-MASTER_SITES=	http://garr.dl.sourceforge.net/project/fwrap/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fwrap/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://fwrap.sourceforge.net/

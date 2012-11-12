@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2012/10/07 11:54:42 asau Exp $
+# $NetBSD: Makefile,v 1.5 2012/11/12 16:26:47 othyro Exp $
 #
 
 DISTNAME=	pygsl-0.9.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	math
-MASTER_SITES=	http://garr.dl.sourceforge.net/project/pygsl/pygsl/pygsl-0.9.5/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pygsl/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://pygsl.sourceforge.net/

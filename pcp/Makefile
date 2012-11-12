@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2012/10/05 08:46:09 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/11/12 16:26:45 othyro Exp $
 #
 
 DISTNAME=	pcp-2.2
 CATEGORIES=	math
-MASTER_SITES=	http://garr.dl.sourceforge.net/project/pcp/pcp/2.2/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pcp/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pcp.sourceforge.net/

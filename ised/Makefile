@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2012/09/30 05:44:15 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/12 16:26:41 othyro Exp $
 #
 
 DISTNAME=	ised-2.2.2
 CATEGORIES=	math
-MASTER_SITES=	http://garr.dl.sourceforge.net/project/ised/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ised/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jihbed.research@gmail.com

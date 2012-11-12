@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2012/10/07 17:17:40 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/12 16:26:52 othyro Exp $
 #
 
 DISTNAME=	tile-0.8.4.0
 PKGNAME=	tk${DISTNAME}
 CATEGORIES=	x11
-MASTER_SITES=	http://garr.dl.sourceforge.net/project/tktable/tile/tile-0-8-4-0/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tktable/}
 
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://tktable.sourceforge.net/tile/

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2012/10/07 13:57:31 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/11/12 16:26:51 othyro Exp $
 #
 
 DISTNAME=	pyswarmsdk-0.7.1-sdist-20070501
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//S/-sdist-20070501//}
 CATEGORIES=	devel
-MASTER_SITES=	http://garr.dl.sourceforge.net/project/pyswarm/pyswarmSDK-unstable/0.7.1/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pyswarm/}
 
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://pyswarm.sourceforge.net/

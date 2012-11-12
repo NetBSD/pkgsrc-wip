@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2012/10/07 16:23:06 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/12 16:26:52 othyro Exp $
 #
 
 DISTNAME=	simpa-1.2.5
 CATEGORIES=	devel parallel java
-MASTER_SITES=	http://garr.dl.sourceforge.net/project/simpa/simpa/1.2/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=simpa/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	jihbed.research@gmail.com

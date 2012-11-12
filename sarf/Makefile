@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2012/10/07 16:22:54 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/12 16:26:52 othyro Exp $
 #
 
 DISTNAME=	sarf
 PKGNAME=	${DISTNAME}-${VERSION}
 CATEGORIES=	textproc java
-MASTER_SITES=	http://garr.dl.sourceforge.net/project/sarf/sarf/sarf%201.0/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sarf/}
 EXTRACT_SUFX=	.jar
 
 MAINTAINER=	kamelderouiche@yahoo.com

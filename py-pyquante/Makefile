@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2012/10/07 13:57:28 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/11/12 16:26:50 othyro Exp $
 #
 
 DISTNAME=	PyQuante-1.6.3
 PKGNAME=	${PYPKGPREFIX}-pyquante-1.6.3
 CATEGORIES=	biology python
-MASTER_SITES=	http://garr.dl.sourceforge.net/project/pyquante/PyQuante-1.6/PyQuante-1.6.3/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pyquante/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://pyquante.sourceforge.net/

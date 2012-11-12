@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2012/10/16 12:35:14 jihbed Exp $
+# $NetBSD: Makefile,v 1.7 2012/11/12 16:26:51 othyro Exp $
 #
 
 DISTNAME=	pyse-0.3.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
 PKGREVISION=	1
 CATEGORIES=	math python
-MASTER_SITES=	http://garr.dl.sourceforge.net/project/pyfdm/pyfdm/0.3.1/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pyfdm/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://pyfdm.sourceforge.net/

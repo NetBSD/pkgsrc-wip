@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2012/10/03 09:10:40 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/12 16:26:44 othyro Exp $
 #
 
 DISTNAME=	ode-0.11.1
 PKGNAME= 	lib${DISTNAME}
 CATEGORIES=	science
-MASTER_SITES=	http://garr.dl.sourceforge.net/project/opende/ODE/0.11.1/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=opende/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jihbed.research@gmail.com

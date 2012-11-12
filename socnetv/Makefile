@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2012/10/07 16:23:15 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/12 16:26:52 othyro Exp $
 #
 
 DISTNAME=	SocNetV-0.90
 PKGNAME=	socnetv-0.90
 CATEGORIES=	math graphics
-MASTER_SITES=	http://garr.dl.sourceforge.net/project/socnetv/0.90/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=socnetv/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://socnetv.sourceforge.net/index.html

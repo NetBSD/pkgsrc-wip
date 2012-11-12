@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.2 2012/10/03 09:10:38 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/12 16:26:44 othyro Exp $
 #
 
 DISTNAME=	libecc-0.14.0
 CATEGORIES=	math
-MASTER_SITES=	http://garr.dl.sourceforge.net/project/libecc/libecc/0.14.0/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libecc/}
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://garr.dl.sourceforge.net/project/libecc/libecc/0.14.0/
+HOMEPAGE=	http://libecc.sourceforge.net/
 COMMENT=	C++ elliptic curve library
 #LICENSE=	# TODO: (see mk/license.mk)
 

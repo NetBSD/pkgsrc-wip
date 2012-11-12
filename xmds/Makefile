@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2012/10/07 20:11:10 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/12 16:26:52 othyro Exp $
 #
 
 DISTNAME=	xmds-1.6.6
 CATEGORIES=	math
-MASTER_SITES=	http://garr.dl.sourceforge.net/project/xmds/xmds/xmds-1.6.6/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xmds/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://xmds.sourceforge.net/

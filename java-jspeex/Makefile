@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2012/10/01 21:43:22 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/11/12 16:26:42 othyro Exp $
 #
 
 DISTNAME=	jspeex-0.9.7
 PKGNAME=	java-${DISTNAME}
 CATEGORIES=	audio java
-MASTER_SITES=	http://garr.dl.sourceforge.net/project/jspeex/jspeex/0.9.7/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=jspeex/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

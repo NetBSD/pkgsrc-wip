@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2012/10/07 13:57:30 asau Exp $
+# $NetBSD: Makefile,v 1.5 2012/11/12 16:26:51 othyro Exp $
 #
 
 DISTNAME=	pysparse-1.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	math python
-MASTER_SITES=	http://garr.dl.sourceforge.net/project/pysparse/pysparse/1.1/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pysparse/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://pysparse.sourceforge.net/

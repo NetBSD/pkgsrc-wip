@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2012/10/07 11:54:38 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/12 16:26:47 othyro Exp $
 #
 
 DISTNAME=	pygccxml-1.0.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
 CATEGORIES=	devel python
-MASTER_SITES=	http://garr.dl.sourceforge.net/project/pygccxml/pygccxml/pygccxml-1.0/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pygccxml/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	kamel.derouiche@gmail.com

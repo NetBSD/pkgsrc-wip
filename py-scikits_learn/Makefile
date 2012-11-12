@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/07 13:57:29 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/11/12 16:26:51 othyro Exp $
 #
 
 DISTNAME=	scikits.learn-0.5
@@ -6,7 +6,7 @@ EGG_NAME=	${DISTNAME}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S|s.|s_|}
 PKGREVISION=	2
 CATEGORIES=	math
-MASTER_SITES=	http://garr.dl.sourceforge.net/project/scikit-learn/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=scikit-learn/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://scikit-learn.sourceforge.net/

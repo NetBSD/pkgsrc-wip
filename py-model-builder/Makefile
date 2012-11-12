@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2012/10/07 12:25:23 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/12 16:26:47 othyro Exp $
 #
 
 DISTNAME=	Model-Builder-0.4.6
 EGG_NAME=	Model_Builder-0.4.6
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/M/m/S/B/b/}
 CATEGORIES=	math python
-MASTER_SITES=	http://garr.dl.sourceforge.net/project/model-builder/model-builder/0.4.6/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=model-builder/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://model-builder.sourceforge.net/

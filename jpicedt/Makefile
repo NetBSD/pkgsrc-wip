@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2012/10/01 21:43:24 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/12 16:26:43 othyro Exp $
 #
 
 VERSION=	1.4.1-03
 DISTNAME=	jpicedt-install_1_4_1_03_20071021
 PKGNAME=	jpicedt-${VERSION}
 CATEGORIES=	print java
-MASTER_SITES=	http://garr.dl.sourceforge.net/project/jpicedt/jpicedt/1.4.1_03/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=jpicedt/}
 EXTRACT_SUFX=	.jar
 
 MAINTAINER=	kamelderouiche@yahoo.com

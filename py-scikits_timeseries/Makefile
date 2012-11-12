@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/07 13:57:29 asau Exp $
+# $NetBSD: Makefile,v 1.6 2012/11/12 16:26:51 othyro Exp $
 #
 
 DISTNAME=	scikits.timeseries-0.91.3
@@ -6,7 +6,7 @@ EGG_NAME=	${DISTNAME}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S|s.|s_|}
 PKGREVISION=	1
 CATEGORIES= math python
-MASTER_SITES=	http://garr.dl.sourceforge.net/project/pytseries/scikits.timeseries/${PKGVERSION_NOREV}/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pytseries/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://pytseries.sourceforge.net/

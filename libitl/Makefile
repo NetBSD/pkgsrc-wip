@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2012/10/03 09:10:39 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/12 16:26:44 othyro Exp $
 #
 
 DISTNAME=	libitl-0.7.0
 CATEGORIES=	time
-MASTER_SITES=	http://garr.dl.sourceforge.net/project/arabeyes/ITL%20Library%20%28libitl%29/libitl-0.7.0/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=arabeyes/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://www.arabeyes.org/project.php?proj=ITL

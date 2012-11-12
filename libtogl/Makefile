@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2012/10/03 09:10:41 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/12 16:26:45 othyro Exp $
 #
 
 DISTNAME=	Togl2.0-src
 PKGNAME=	libtogl-2.0
 CATEGORIES=	graphics
-MASTER_SITES=	http://garr.dl.sourceforge.net/project/togl/Togl/2.0/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=togl/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://togl.sourceforge.net/index.html#intro

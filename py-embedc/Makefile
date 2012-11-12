@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2012/10/07 11:54:30 asau Exp $
+# $NetBSD: Makefile,v 1.5 2012/11/12 16:26:45 othyro Exp $
 #
 
 DISTNAME=	embedc-0.22
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
-MASTER_SITES=	http://garr.dl.sourceforge.net/project/pyembedc/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pyembedc/}
 
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://pyembedc.sourceforge.net/

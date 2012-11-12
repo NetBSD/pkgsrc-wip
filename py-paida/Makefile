@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2012/10/07 13:57:25 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/12 16:26:49 othyro Exp $
 #
 
 PKGVERSION=	3.2.1.2.10
 DISTNAME=	paida-3.2.1_2.10.1
 PKGNAME=	${PYPKGPREFIX}-paida-${PKGVERSION}
 CATEGORIES=	math #science
-MASTER_SITES=	http://garr.dl.sourceforge.net/project/paida/paida/paida-3.2.1_2.10.1/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=paida/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://paida.sourceforge.net/

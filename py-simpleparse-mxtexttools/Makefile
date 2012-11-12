@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2012/10/07 13:57:30 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/12 16:26:51 othyro Exp $
 #
 
 DISTNAME=	SimpleParse-2.1.1a2
 PKGNAME=	${PYPKGPREFIX}-simpleparse-mxtexttools-2.1.1
 CATEGORIES=	textproc python
-MASTER_SITES=	http://garr.dl.sourceforge.net/project/simpleparse/simpleparse/2.1.1a2/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=simpleparse/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://simpleparse.sourceforge.net/

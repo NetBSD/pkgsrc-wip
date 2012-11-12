@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2012/10/07 12:25:25 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/12 16:26:47 othyro Exp $
 #
 
 DISTNAME=	pynetcdf-0.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	devel python
-MASTER_SITES=	http://garr.dl.sourceforge.net/project/pylab/PyNetCDF/0.7/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pylab/}
 
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://pypi.python.org/pypi/pynetcdf/0.7

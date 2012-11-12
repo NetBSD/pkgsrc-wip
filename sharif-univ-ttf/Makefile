@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2012/10/07 16:22:57 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/12 16:26:52 othyro Exp $
 #
 
-VERS=	20030208
+VERS=		20030208
 DISTNAME=	sharif.univ_ttf
 PKGNAME=	sharif-univ-ttf-${VERS}
 CATEGORIES=	fonts
-MASTER_SITES=	http://garr.dl.sourceforge.net/project/arabeyes/Fonts/sharif.univ/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=arabeyes/}
 EXTRACT_SUFX=	.bz2
 
 MAINTAINER=	kamelderouiche@yahoo.com

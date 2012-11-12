@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2012/10/08 14:00:39 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/12 16:26:42 othyro Exp $
 #
 
 DISTNAME=	Jason-1.3.3
 PKGNAME=	${DISTNAME:S/J/j/}
 CATEGORIES=	devel net
-MASTER_SITES=	http://garr.dl.sourceforge.net/project/jason/jason/version%201.3.3/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=jason/}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	jihbed.research@gmail.com

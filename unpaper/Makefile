@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2012/10/07 17:41:40 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/12 16:26:52 othyro Exp $
 #
 
 DISTNAME=	unpaper-0.3
 CATEGORIES=	textproc
-MASTER_SITES=	http://garr.dl.sourceforge.net/project/unpaper.berlios/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=unpaper.berlios/}
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://unpaper.berlios.de/

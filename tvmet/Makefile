@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2012/10/07 17:17:52 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/12 16:26:52 othyro Exp $
 #
 
 DISTNAME=	tvmet-1.7.2
 CATEGORIES=	math
-MASTER_SITES=	http://garr.dl.sourceforge.net/project/tvmet/Tar.Gz_Bz2%20Archive/1.7.2/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tvmet/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jihbed.research@gmail.com

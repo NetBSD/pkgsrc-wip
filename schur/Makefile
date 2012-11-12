@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2012/10/07 16:22:54 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/12 16:26:52 othyro Exp $
 #
 
 DISTNAME=	schur-6.05
 CATEGORIES=	math
-MASTER_SITES=	http://garr.dl.sourceforge.net/project/schur/sources/6.05/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=schur/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://schur.sourceforge.net/

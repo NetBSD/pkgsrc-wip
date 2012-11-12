@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2012/10/07 12:25:18 asau Exp $
+# $NetBSD: Makefile,v 1.6 2012/11/12 16:26:47 othyro Exp $
 #
 
 DISTNAME=	MDP-3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/MDP/mdp/}
 CATEGORIES=	math python
-MASTER_SITES=	http://garr.dl.sourceforge.net/project/mdp-toolkit/mdp-toolkit/3.0/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mdp-toolkit/}
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://mdp-toolkit.sourceforge.net/index.html

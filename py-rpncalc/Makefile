@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2012/10/07 13:57:29 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/12 16:26:51 othyro Exp $
 #
 
 DISTNAME=	rpncalc-2.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math
-MASTER_SITES=	http://garr.dl.sourceforge.net/project/calcrpnpy/rpncalc/rpncalc-2.7/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=calcrpnpy/}
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	jihbed.research@gmail.com
