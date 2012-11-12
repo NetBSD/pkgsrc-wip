@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/11/07 19:42:21 christtrekker Exp $
+# $NetBSD: Makefile,v 1.11 2012/11/12 23:26:26 christtrekker Exp $
 #
 
 DISTNAME=	edelib-2.0
@@ -24,8 +24,8 @@ PKGCONFIG_OVERRIDE+=	edelib-gui.pc.in
 PKGCONFIG_OVERRIDE+=	edelib.pc.in
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.edelib
-PKG_SUPPORTED_OPTIONS=	fam fam-only largefile nls shared
-PKG_SUGGESTED_OPTIONS=	fam nls shared
+PKG_SUPPORTED_OPTIONS=	largefile nls shared
+PKG_SUGGESTED_OPTIONS=	nls shared
 PLIST_VARS+=	shlibs statlibs
 
 .include "../../mk/bsd.prefs.mk"
@@ -45,6 +45,7 @@ BUILD_DEPENDS+=	doxygen:../../devel/doxygen
 
 BUILD_DEPENDS+=	jam:../../devel/jam
 
+.include "../../mk/fam.buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../x11/fltk13/buildlink3.mk"
 
