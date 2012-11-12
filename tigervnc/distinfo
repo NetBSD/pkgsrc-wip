@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2012/11/12 14:03:38 thomasklausner Exp $
+
+SHA1 (tigervnc-1.2.0.tar.gz) = 0542b2549a85b6723deebc3b5ecafa4f1fbee8e6
+RMD160 (tigervnc-1.2.0.tar.gz) = c8f498c6812407bb1383b94234dcae8053a7d4f1
+Size (tigervnc-1.2.0.tar.gz) = 2487050 bytes
+SHA1 (patch-CMakeLists.txt) = c6f2d7608e499f20884eb325676e13155363fd1d
+SHA1 (patch-cmake_BuildPackages.cmake) = 959ce07a14674874eb81b6e6ace3da9b19a71aa5

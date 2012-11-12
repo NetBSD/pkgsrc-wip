@@ -1,0 +1,15 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2012/11/12 14:03:38 thomasklausner Exp $
+
+Use dl setting from pkgsrc.
+
+--- CMakeLists.txt.orig	2012-03-09 20:34:29.000000000 +0000
++++ CMakeLists.txt
+@@ -316,7 +316,7 @@ if(USE_INCLUDED_FLTK)
+   if(APPLE)
+     set(FLTK_LIBRARIES "-framework Carbon -framework Cocoa -framework ApplicationServices")
+   elseif(NOT WIN32)
+-    set(FLTK_LIBRARIES "-ldl")
++    set(FLTK_LIBRARIES "${DL_LIBS}")
+   endif()
+   message(STATUS "Using included FLTK library")
+ endif()
