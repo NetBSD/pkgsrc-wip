@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.1 2005/10/18 17:59:29 dhowland Exp $
+$NetBSD: patch-ab,v 1.2 2012/11/12 14:32:14 thomasklausner Exp $
 
---- xc/programs/Xserver/dix/main.c.orig	2003-02-17 11:55:31.000000000 -0500
-+++ xc/programs/Xserver/dix/main.c
+--- unix/xc/programs/Xserver/dix/main.c.orig	2003-02-17 11:55:31.000000000 -0500
++++ unix/xc/programs/Xserver/dix/main.c
 @@ -505,7 +505,7 @@ CreateConnectionBlock()
      /* Leave off the ridBase and ridMask, these must be sent with 
         connection */

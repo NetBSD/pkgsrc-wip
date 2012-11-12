@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/11/12 14:21:44 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.18 2012/11/12 14:32:14 thomasklausner Exp $
 #
 
 DISTNAME=		vnc-4_1_2-unixsrc
@@ -21,7 +21,7 @@ CONFLICTS+=		vnc-[0-9]*
 CONFLICTS+=		vncviewer-[0-9]*
 CONFLICTS+=		vncviewer4-[0-9]*
 
-WRKSRC=			${WRKDIR}/${DISTNAME}/unix
+CONFIGURE_DIRS=		unix
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-installed-zlib
@@ -29,7 +29,7 @@ NO_INSTALL_MANPAGES=	yes
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		perl:run tar
-REPLACE_PERL=		vncserver
+REPLACE_PERL=		unix/vncserver
 
 SUBST_CLASSES+=		pl
 SUBST_STAGE.pl=		pre-install
@@ -49,32 +49,32 @@ pre-fetch:
 
 # This is also lifted from FreeBSD Ports.
 post-extract:
-	cd ${WRKSRC} && ${TAR} -cf - -C ${WRKDIR} xc | ${TAR} -xf - && \
+	cd ${WRKSRC}/unix && ${TAR} -cf - -C ${WRKDIR} xc | ${TAR} -xf - && \
 	${RM} -rf ${WRKDIR}/xc
 
 post-patch:
-	cd ${WRKSRC} && ${TOOLS_PLATFORM.patch} -Np0 <xc.patch
+	cd ${WRKSRC}/unix && ${TOOLS_PLATFORM.patch} -Np0 <xc.patch
 
 post-build:
-	cd ${WRKSRC}/xc && ${MAKE} World
+	cd ${WRKSRC}/unix/xc && ${MAKE} World
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/vncserver ${DESTDIR}${PREFIX}/bin/vncserver
-	${INSTALL_PROGRAM} ${WRKSRC}/vncpasswd/vncpasswd ${DESTDIR}${PREFIX}/bin/vncpasswd
-	${INSTALL_PROGRAM} ${WRKSRC}/vncviewer/vncviewer ${DESTDIR}${PREFIX}/bin/vncviewer
-	${INSTALL_PROGRAM} ${WRKSRC}/vncconfig/vncconfig ${DESTDIR}${PREFIX}/bin/vncconfig
-	${INSTALL_PROGRAM} ${WRKSRC}/x0vncserver/x0vncserver ${DESTDIR}${PREFIX}/bin/x0vncserver
-	${INSTALL_PROGRAM} ${WRKSRC}/xc/programs/Xserver/Xvnc ${DESTDIR}${PREFIX}/bin/Xvnc
-	${INSTALL_PROGRAM} ${WRKSRC}/xc/programs/Xserver/Xvnc ${DESTDIR}${PREFIX}/bin/Xvnc
+	${INSTALL_SCRIPT} ${WRKSRC}/unix/vncserver ${DESTDIR}${PREFIX}/bin/vncserver
+	${INSTALL_PROGRAM} ${WRKSRC}/unix/vncpasswd/vncpasswd ${DESTDIR}${PREFIX}/bin/vncpasswd
+	${INSTALL_PROGRAM} ${WRKSRC}/unix/vncviewer/vncviewer ${DESTDIR}${PREFIX}/bin/vncviewer
+	${INSTALL_PROGRAM} ${WRKSRC}/unix/vncconfig/vncconfig ${DESTDIR}${PREFIX}/bin/vncconfig
+	${INSTALL_PROGRAM} ${WRKSRC}/unix/x0vncserver/x0vncserver ${DESTDIR}${PREFIX}/bin/x0vncserver
+	${INSTALL_PROGRAM} ${WRKSRC}/unix/xc/programs/Xserver/Xvnc ${DESTDIR}${PREFIX}/bin/Xvnc
+	${INSTALL_PROGRAM} ${WRKSRC}/unix/xc/programs/Xserver/Xvnc ${DESTDIR}${PREFIX}/bin/Xvnc
 	${INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/lib/modules/extensions
-	${INSTALL_PROGRAM} ${WRKSRC}/xc/programs/Xserver/vnc/module/vnc.so ${DESTDIR}${PREFIX}/lib/modules/extensions/vnc.so
-	${INSTALL_MAN} ${WRKSRC}/vncviewer/vncviewer.man ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/vncviewer.1
-	${INSTALL_MAN} ${WRKSRC}/x0vncserver/x0vncserver.man ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/x0vncserver.1
-	${INSTALL_MAN} ${WRKSRC}/vncpasswd/vncpasswd.man ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/vncpasswd.1
-	${INSTALL_MAN} ${WRKSRC}/vncconfig/vncconfig.man ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/vncconfig.1
-	${INSTALL_MAN} ${WRKSRC}/vncserver.man ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/vncserver.1
+	${INSTALL_PROGRAM} ${WRKSRC}/unix/xc/programs/Xserver/vnc/module/vnc.so ${DESTDIR}${PREFIX}/lib/modules/extensions/vnc.so
+	${INSTALL_MAN} ${WRKSRC}/unix/vncviewer/vncviewer.man ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/vncviewer.1
+	${INSTALL_MAN} ${WRKSRC}/unix/x0vncserver/x0vncserver.man ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/x0vncserver.1
+	${INSTALL_MAN} ${WRKSRC}/unix/vncpasswd/vncpasswd.man ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/vncpasswd.1
+	${INSTALL_MAN} ${WRKSRC}/unix/vncconfig/vncconfig.man ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/vncconfig.1
+	${INSTALL_MAN} ${WRKSRC}/unix/vncserver.man ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/vncserver.1
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/vnc/classes
 	${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/common/javabin/* ${DESTDIR}${PREFIX}/share/vnc/classes
 
