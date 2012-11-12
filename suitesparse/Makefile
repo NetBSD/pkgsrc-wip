@@ -1,8 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2012/11/11 23:55:51 outpaddling Exp $
+# $NetBSD: Makefile,v 1.7 2012/11/12 03:11:32 outpaddling Exp $
 # FreeBSD Id: ports/math/suitesparse/Makefile,v 1.38 2011/07/20 16:17:35 bf Exp
 
-DISTNAME=	SuiteSparse-3.6.1
-PKGNAME=	suitesparse-3.6.1
+# DISTNAME=	SuiteSparse-3.6.1
+# PKGNAME=	suitesparse-3.6.1
+DISTNAME=	SuiteSparse-4.0.2
+PKGNAME=	suitesparse-4.0.2
 CATEGORIES=	math
 MASTER_SITES=	http://www.cise.ufl.edu/research/sparse/SuiteSparse/
 
@@ -33,17 +35,17 @@ PICFLAG?=       -fpic
 BLAS=		-lblas
 LAPACK=		-llapack
 
-# USE_TOOLS+=gsed causes this on CentOS 6.3:
 # /home/bacon/Pkgsrc/pkgsrc-1/mk/pkgformat/pkg/list-dependencies: line 52: -e: command not found
 # Problem is ${SED} is empty
-USE_TOOLS+=	gmake gsed
 # TOOLS_PLATFORM.gsed=	#empty
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake gsed
 
 USE_LANGUAGES=	c c++ fortran77
 
 WRKSRC=${WRKDIR}/SuiteSparse
-WRKSRC_SHARED=${WRKSRC}_shared
+# Creating shared libs for all platforms is complicated.  Putting this off
+# for now.
+# WRKSRC_SHARED=${WRKSRC}_shared
 SVERSION=1
 
 .if defined (WITH_METIS)
@@ -54,7 +56,8 @@ CHOLMOD_CONFIG =
 CHOLMOD_CONFIG =	-DNPARTITION
 .endif
 
-AUTO_MKDIRS=	yes
+AUTO_MKDIRS=		yes
+INSTALLATION_DIRS=	include/suitesparse lib
 
 post-patch:
 	${FIND} ${WRKSRC} -type f \( -name 'Makefile' -o -name '*.mk' \) \
@@ -78,8 +81,9 @@ post-patch:
 do-build:
 	cd ${WRKSRC} ; ${SETENV} ${MAKE_ENV} PICFLAG= \
 		${GMAKE} ${_MAKE_JOBS} ${MAKE_ARGS}
-	cd ${WRKSRC_SHARED} ; ${SETENV} ${MAKE_ENV} PICFLAG=${PICFLAG} \
-		${GMAKE} ${_MAKE_JOBS} ${MAKE_ARGS}
+
+#	cd ${WRKSRC_SHARED} ; ${SETENV} ${MAKE_ENV} PICFLAG=${PICFLAG} \
+#		${GMAKE} ${_MAKE_JOBS} ${MAKE_ARGS}
 
 # OS X ld does not support -Bshareable or --whole-archive
 # Find a portable way to add sonames
@@ -94,13 +98,17 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/${d}/Include/*.h ${DESTDIR}${PREFIX}/include/suitesparse
 .endfor
 	(cd ${DESTDIR}${PREFIX}/include && ${LN} -sf suitesparse ufsparse)
-	${INSTALL_DATA} ${WRKSRC}/UFconfig/*.h ${DESTDIR}${PREFIX}/include/suitesparse
 	${INSTALL_DATA} ${WRKSRC}/SPQR/Include/*.hpp ${DESTDIR}${PREFIX}/include/suitesparse
-	for i in `find ${WRKSRC_SHARED} -type f -name '*.a'` ; do \
-		${INSTALL_DATA} ${WRKSRC}/$${i##${WRKSRC_SHARED}/} \
-		$${i%.a}.so.${SVERSION} ${DESTDIR}${PREFIX}/lib ; \
-		j=$${i##*/} ;  ${LN} -sf $${j%.a}.so.${SVERSION} ${DESTDIR}${PREFIX}/lib/$${j%.a}.so ; \
+	for i in `find ${WRKSRC} -type f -name '*.a'` ; do \
+		${INSTALL_DATA} $${i} ${DESTDIR}${PREFIX}/lib ; \
 	done
+
+# Shared libs
+#	for i in `find ${WRKSRC_SHARED} -type f -name '*.a'` ; do \
+#		${INSTALL_DATA} ${WRKSRC}/$${i##${WRKSRC_SHARED}/} \
+#		$${i%.a}.so.${SVERSION} ${DESTDIR}${PREFIX}/lib ; \
+#		j=$${i##*/} ;  ${LN} -sf $${j%.a}.so.${SVERSION} ${DESTDIR}${PREFIX}/lib/$${j%.a}.so ; \
+#	done
 
 .include "../../math/blas/buildlink3.mk"
 .include "../../math/lapack/buildlink3.mk"
