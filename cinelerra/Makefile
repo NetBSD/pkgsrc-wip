@@ -1,29 +1,31 @@
-# $NetBSD: Makefile,v 1.12 2012/11/07 03:09:51 othyro Exp $
+# $NetBSD: Makefile,v 1.13 2012/11/13 18:59:56 othyro Exp $
 #
 
-#DISTNAME=		cinelerra-1.2.0-src
-DISTNAME=		hvirtual_1.2.0-2cvs20040814
-PKGNAME=		cinelerra-1.2.0-2cvs20040814
-PKGREVISION=		3
-CATEGORIES=		multimedia
+#DISTNAME=	cinelerra-1.2.0-src
+DISTNAME=	hvirtual_1.2.0-2cvs20040814
+PKGNAME=	cinelerra-1.2.0-2cvs20040814
+PKGREVISION=	3
+CATEGORIES=	multimedia
 # unofficial source is here
-MASTER_SITES=		http://www.kiberpipa.org/~minmax/cinelerra/builds/sid/
-#MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=heroines/}
-#EXTRACT_SUFX=		.tar.bz2
+MASTER_SITES=	http://www.kiberpipa.org/~minmax/cinelerra/builds/sid/
+#MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=heroines/}
+#EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=		reed@reedmedia.net
-#HOMEPAGE=		http://heroines.sourceforge.net/
-HOMEPAGE=		http://cvs.cinelerra.org/
-COMMENT=		Non-linear video and audio editor and compositor (unofficial)
+MAINTAINER=	reed@reedmedia.net
+#HOMEPAGE=	http://heroines.sourceforge.net/
+HOMEPAGE=	http://cvs.cinelerra.org/
+COMMENT=	Non-linear video and audio editor and compositor (unofficial)
+LICENSE=	gnu-gpl-v2
 
 #DEPENDS+=	toolame>=02:../../audio/toolame
 
-#WRKSRC=			${WRKDIR}/cinelerra-1.2.0/cinelerra
-#WRKSRC=			${WRKDIR}/cinelerra-1.2.0
+#WRKSRC=		${WRKDIR}/cinelerra-1.2.0/cinelerra
+#WRKSRC=		${WRKDIR}/cinelerra-1.2.0
 WRKSRC=			${WRKDIR}/hvirtual
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake
+USE_LIBTOOL=		yes
 
 # maybe have an option for HAVE_ALSA
 .include "../../audio/alsa-lib/buildlink3.mk"
