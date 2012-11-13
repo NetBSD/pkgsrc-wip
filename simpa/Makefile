@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/11/12 16:26:52 othyro Exp $
+# $NetBSD: Makefile,v 1.4 2012/11/13 22:25:49 othyro Exp $
 #
 
 DISTNAME=	simpa-1.2.5
@@ -8,7 +8,7 @@ EXTRACT_SUFX=	.zip
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://alice.unibo.it/xwiki/bin/view/SimpA/
-COMMENT=	Agent-oriented framework approach to concurrent, multi-core, distributed programming
+COMMENT=	Agent-oriented framework for concurrent, multi-core, distributed programming
 LICENSE=	gnu-lgpl-v2.1
 
 USE_TOOLS+=	pax

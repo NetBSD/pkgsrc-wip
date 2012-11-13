@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/10/07 11:54:21 asau Exp $
+# $NetBSD: Makefile,v 1.13 2012/11/13 22:25:43 othyro Exp $
 
 EPSILON_VERSION=	0.5.12
 DISTNAME=	Epsilon-${EPSILON_VERSION}
@@ -8,9 +8,9 @@ CATEGORIES=	python
 MASTER_SITES=	ftp://ftp.osuosl.org/pub/nslu2/sources/
 EXTRACT_SUFX=	.tar.gz
 
-MAINTAINER=         pkgsrc-wip-users@sourceforge.net
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://divmod.org/trac/wiki/DivmodNevow
-COMMENT=	A Python utilities package, most famous for its Time class
+COMMENT=	Python utilities package, most famous for its Time class
 
 DEPENDS+=	${PYPKGPREFIX}-twisted>=2.4.0:../../net/py-twisted
 

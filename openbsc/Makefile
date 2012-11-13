@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/03 21:32:46 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/11/13 22:25:39 othyro Exp $
 #
 
 DISTNAME=	openbsc-0.9.13
@@ -8,7 +8,7 @@ MASTER_SITES=	http://openbsc.osmocom.org/trac/raw-attachment/wiki/Tarballs/
 
 MAINTAINER=	khorben@defora.org
 HOMEPAGE=	http://openbsc.osmocom.org/
-COMMENT=	openbsc
+COMMENT=	Free software implementation for GSM/3GPP protocol stack and elements
 
 LICENSE=	gnu-gpl-v2
 

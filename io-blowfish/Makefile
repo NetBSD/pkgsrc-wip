@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/09/06 23:41:12 milosn Exp $
+# $NetBSD: Makefile,v 1.2 2012/11/13 22:25:32 othyro Exp $
 
 .include "../../wip/io/version.mk"
 
@@ -8,7 +8,7 @@ CATEGORIES=		crypto
 
 MAINTAINER=		milos.negovanovic@googlemail.com
 HOMEPAGE=		www.iolanguage.com
-COMMENT=		Blowfish addon for Io.
+COMMENT=		Blowfish addon for Io
 
 ADDON_NAME=		Blowfish
 

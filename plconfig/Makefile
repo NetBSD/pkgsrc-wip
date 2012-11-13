@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/05 11:31:52 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/13 22:25:40 othyro Exp $
 #
 
 DISTNAME=		plconfig-0.2
@@ -8,7 +8,7 @@ MASTER_SITES=		https://neon1.net/prog/ \
 
 MAINTAINER=		noud4@home.nl
 HOMEPAGE=		https://neon1.net/prog/plconfig.html
-COMMENT=		A tool for configuring HomePlug powerline bridges
+COMMENT=		Tool for configuring HomePlug powerline bridges
 
 BUILD_TARGET=		plconfig
 

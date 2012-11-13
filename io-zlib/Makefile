@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/07/04 19:34:29 milosn Exp $
+# $NetBSD: Makefile,v 1.4 2012/11/13 22:25:33 othyro Exp $
 
 .include "../../wip/io/version.mk"
 
@@ -8,7 +8,7 @@ CATEGORIES=		archivers
 
 MAINTAINER=		milos.negovanovic@googlemail.com
 HOMEPAGE=		www.iolanguage.com
-COMMENT=		Zlib addon for Io.
+COMMENT=		Zlib addon for Io
 
 ADDON_NAME=		Zlib
 

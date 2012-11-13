@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/07 14:23:03 asau Exp $
+# $NetBSD: Makefile,v 1.5 2012/11/13 22:25:46 othyro Exp $
 #
 
 DISTNAME=		ripole-0.1.4
@@ -8,7 +8,7 @@ MASTER_SITES=		http://www.pldaniels.com/ripole/
 
 MAINTAINER=		charlie@rubberduck.com
 HOMEPAGE=		http://www.pldaniels.com/ripole/
-COMMENT=		a small program/library designed to pull out attachments from OLE2 data files
+COMMENT=		Program/library designed to extract attachments from OLE2 files
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 

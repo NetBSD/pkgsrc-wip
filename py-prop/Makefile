@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.2 2012/10/07 13:57:26 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/13 22:25:44 othyro Exp $
 #
 
 DISTNAME=	${PYPKGPREFIX}-pyprop
 #EGG_NAME=	pydec-1.0.0.dev14
-CATEGORIES=	physcis python
+CATEGORIES=	math
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://code.google.com/p/pyprop/
-COMMENT=	A framework for propagating the time dependent Schrödinger equation (TDSE) written in Python/C++
+COMMENT=	Framework for propagating the TDSE written in Python/C++
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.7.0:../../math/py-scipy

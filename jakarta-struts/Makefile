@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/09/30 12:09:49 asau Exp $
+# $NetBSD: Makefile,v 1.6 2012/11/13 22:25:35 othyro Exp $
 #
 
 DISTNAME=		jakarta-struts-1.1
@@ -7,7 +7,7 @@ MASTER_SITES=		http://archive.apache.org/dist/struts/struts-1.1/
 
 MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://archive.apache.org/dist/struts/struts-1.1/
-COMMENT=		struts is struts xD
+COMMENT=		Struts is struts xD
 
 
 do-build:

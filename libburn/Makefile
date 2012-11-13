@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/03 09:10:37 asau Exp $
+# $NetBSD: Makefile,v 1.8 2012/11/13 22:25:37 othyro Exp $
 #
 
 DISTNAME=	libburn-1.1.8
@@ -7,7 +7,7 @@ MASTER_SITES=	http://files.libburnia-project.org/releases/
 
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://libburnia-project.org/wiki/Libburn
-COMMENT=	library by which preformatted data get onto optical media
+COMMENT=	Library by which preformatted data get onto optical media
 LICENSE=	gnu-gpl-v2
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/.pl01//}

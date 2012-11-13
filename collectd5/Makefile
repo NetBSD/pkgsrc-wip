@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/09/24 18:26:55 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/13 22:25:29 othyro Exp $
 #
 
 DISTNAME=	collectd-5.0.1
@@ -8,7 +8,7 @@ CATEGORIES=     net
 
 MAINTAINER=	msporleder@gmail.com
 HOMEPAGE=	http://collectd.org/
-COMMENT=	statistics collection daemon - base
+COMMENT=	Statistics collection daemon - base
 LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/09/29 00:50:41 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/11/13 22:25:31 othyro Exp $
 #
 
 DISTNAME=	guile-2.0.5
@@ -7,7 +7,7 @@ MASTER_SITES=	ftp://ftp.gnu.org/gnu/guile/
 
 MAINTAINER=	a@zta.lk
 HOMEPAGE=	ftp://ftp.gnu.org/gnu/guile/
-COMMENT=	The official extension language for the GNU operating system.
+COMMENT=	Official extension language for the GNU operating system
 LICENSE=	gnu-gpl-v3
 
 GNU_CONFIGURE=	yes

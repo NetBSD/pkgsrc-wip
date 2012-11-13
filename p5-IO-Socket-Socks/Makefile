@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/04 10:45:29 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/13 22:25:39 othyro Exp $
 #
 
 DISTNAME=	IO-Socket-Socks-0.51
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=IO/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/~oleg/IO-Socket-Socks-0.51/lib/IO/Socket/Socks.pm
-COMMENT=	create SOCKS v4/v5 client or server
+COMMENT=	Create SOCKS v4/v5 client or server
 LICENSE=	${PERL5_LICENSE}
 
 .include "../../lang/perl5/module.mk"

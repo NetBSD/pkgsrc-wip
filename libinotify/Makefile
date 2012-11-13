@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/11/13 19:33:45 othyro Exp $
+# $NetBSD: Makefile,v 1.4 2012/11/13 22:25:37 othyro Exp $
 #
 
 DISTNAME=	libinotify-20120113
@@ -7,7 +7,7 @@ MASTER_SITES=	http://on.encoreinteractive.ca/opensource/
 
 MAINTAINER=	msporleder@gmail.com
 HOMEPAGE=	http://on.encoreinteractive.ca/opensource/
-COMMENT=	portable inotify userland lib
+COMMENT=	Portable inotify userland lib
 #LICENSE=	# TODO: (see mk/license.mk)
 
 GNU_CONFIGURE=	yes

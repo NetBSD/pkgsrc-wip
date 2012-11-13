@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/11/13 19:33:45 othyro Exp $
+# $NetBSD: Makefile,v 1.5 2012/11/13 22:25:38 othyro Exp $
 #
 
 DISTNAME=	libosmocore-0.1.30
@@ -8,7 +8,7 @@ MASTER_SITES=	http://openbsc.osmocom.org/trac/raw-attachment/wiki/Tarballs/
 
 MAINTAINER=	khorben@defora.org
 HOMEPAGE=	http://www.osmocom.org/
-COMMENT=	libosmocore
+COMMENT=	This is the libosmocore library
 
 LICENSE=	gnu-gpl-v2
 

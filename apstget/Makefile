@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2012/09/24 16:51:01 asau Exp $
+# $NetBSD: Makefile,v 1.35 2012/11/13 22:25:29 othyro Exp $
 
 DISTNAME=	apstget-20060410
 CATEGORIES=	pkgtools
@@ -6,7 +6,7 @@ MASTER_SITES=	# empty
 DISTFILES=	# empty
 
 MAINTAINER=	pancake@phreaker.net
-COMMENT=	apt-get like tool for pkgsrc
+COMMENT=	This is an apt-get like tool for pkgsrc
 
 DEPENDS+=	pkgfind>=20041020:../../pkgtools/pkgfind
 DEPENDS+=	pkg_tarup>=1.6.3:../../pkgtools/pkg_tarup

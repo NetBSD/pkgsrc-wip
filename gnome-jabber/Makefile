@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/11/13 20:09:30 othyro Exp $
+# $NetBSD: Makefile,v 1.10 2012/11/13 22:25:30 othyro Exp $
 #
 
 DISTNAME=		gnome-jabber-0.4
@@ -9,7 +9,7 @@ EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://ftp.gnome.org/pub/GNOME/sources/gnome-jabber/0.4/
-COMMENT=		Instant message client for Gnome using the Jabber protocol.
+COMMENT=		Instant message client for Gnome using the Jabber protocol
 
 PKG_DESTDIR_SUPPORT=	none
 

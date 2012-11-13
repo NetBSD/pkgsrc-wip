@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2011/07/14 14:01:02 zaydogan Exp $
+# $NetBSD: Makefile,v 1.12 2012/11/13 22:25:50 othyro Exp $
 #
 
 DISTNAME=	VirtualBox-${VBOX_VER}
@@ -10,7 +10,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tnn@NetBSD.org
 HOMEPAGE=	http://www.virtualbox.org/
-COMMENT=	general-purpose full virtualizer for x86 hardware
+COMMENT=	General-purpose full virtualizer for x86 hardware
 LICENSE=	gnu-gpl-v2
 
 HAS_CONFIGURE=	yes

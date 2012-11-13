@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/07/05 10:29:46 milosn Exp $
+# $NetBSD: Makefile,v 1.2 2012/11/13 22:25:33 othyro Exp $
 
 .include "../../wip/io/version.mk"
 
@@ -8,7 +8,7 @@ CATEGORIES=		devel
 
 MAINTAINER=		milos.negovanovic@googlemail.com
 HOMEPAGE=		www.iolanguage.com
-COMMENT=		Regex addon for Io.
+COMMENT=		Regex addon for Io
 
 ADDON_NAME=			Regex
 ADDON_DEPENDS_ON_ADDONS=        Range

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/07 14:53:44 asau Exp $
+# $NetBSD: Makefile,v 1.5 2012/11/13 22:25:47 othyro Exp $
 #
 
 DISTNAME=	rsget.pl-11838
@@ -8,7 +8,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	ryo_on@yk.rim.or.jp
 HOMEPAGE=	http://rsget.pl/
-COMMENT=	Poowerful perl application designed to retrieve files from download services
+COMMENT=	Perl application designed to retrieve files from download services
 LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=	gmake perl:run

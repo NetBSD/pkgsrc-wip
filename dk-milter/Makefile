@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2012/09/28 21:24:37 asau Exp $
+# $NetBSD: Makefile,v 1.22 2012/11/13 22:25:29 othyro Exp $
 
 DISTNAME=	dk-milter-1.0.2
 #PKGREVISION=	1
@@ -8,7 +8,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dk-milter/}
 
 MAINTAINER=	j+pkgsrc@salmi.ch
 HOMEPAGE=	http://sourceforge.net/projects/dk-milter/
-COMMENT=	Open source DomainKeys filter software from Sendmail, Inc.
+COMMENT=	Open source DomainKeys filter software from Sendmail, Inc
 LICENSE=	sendmail-open-source-license
 
 MAKE_ENV+=		M4=${M4:Q}

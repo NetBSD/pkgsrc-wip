@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/03 17:47:55 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/13 22:25:39 othyro Exp $
 #
 
 DISTNAME=		netx-${VERSION}
@@ -9,7 +9,7 @@ VERSION=		0.5
 
 MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://jnlp.sourceforge.net/
-COMMENT=		A free JNLP implementation
+COMMENT=		Free JNLP implementation
 
 NO_BUILD=#defined
 

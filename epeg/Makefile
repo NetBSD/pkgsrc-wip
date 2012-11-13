@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/09/28 22:07:34 asau Exp $
+# $NetBSD: Makefile,v 1.15 2012/11/13 22:25:30 othyro Exp $
 #
 
 DISTNAME=	epeg-0.9.1.042
@@ -10,7 +10,7 @@ MASTER_SITES=	http://download.enlightenment.org/snapshots/2008-01-25/ \
 
 MAINTAINER=	yazzy@yazzy.org
 HOMEPAGE=	http://enlightenment.org/
-COMMENT=	An IMMENSELY FAST JPEG thumbnailer library API.
+COMMENT=	IMMENSELY FAST JPEG thumbnailer library API
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

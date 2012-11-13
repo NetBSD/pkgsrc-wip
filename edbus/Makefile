@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/09/28 22:07:30 asau Exp $
+# $NetBSD: Makefile,v 1.16 2012/11/13 22:25:29 othyro Exp $
 #
 
 DISTNAME=	e_dbus-0.5.0.063
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.enlightenment.org/
-COMMENT=	Convenience wrappers around dbus to ease integrating dbus with E17.
+COMMENT=	Convenience wrappers around dbus to ease integrating dbus with E17
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/11/09 18:38:46 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/11/13 22:25:29 othyro Exp $
 #
 
 DISTNAME=	AGILe-1.4.0
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://agile.hepforge.org/
-COMMENT= Generator Interface for a variety of Fortran-based Monte Carlo generator
+COMMENT=	Interface for a variety of Fortran-based Monte Carlo generators
 LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir

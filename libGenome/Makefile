@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/15 23:18:23 asau Exp $
+# $NetBSD: Makefile,v 1.7 2012/11/13 22:25:37 othyro Exp $
 #
 
 DISTNAME=		libGenome-0.5.2
@@ -7,7 +7,7 @@ MASTER_SITES=		http://pages.cs.wisc.edu/~darling/libgenome/releases/
 
 MAINTAINER=		dprice@cs.nmsu.edu
 HOMEPAGE=		http://pages.cs.wisc.edu/~darling/libgenome/
-COMMENT=		A development library for bioinformatic software
+COMMENT=		Development library for bioinformatic software
 
 WRKSRC=			${WRKDIR}/libgenome-0.5.2
 USE_PKGLOCALEDIR=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/07 16:23:15 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/13 22:25:50 othyro Exp $
 
 DISTNAME=		softflowd-0.9.8
 CATEGORIES=		net
@@ -6,7 +6,7 @@ MASTER_SITES=		http://www.mindrot.org/files/softflowd/
 
 MAINTAINER=		cg@cgall.de
 HOMEPAGE=		http://www.mindrot.org/projects/softflowd/
-COMMENT=		flow-based network traffic analyser capable of Cisco NetFlow export
+COMMENT=		Flow-based network traffic analyser capable of Cisco NetFlow export
 
 PKG_DESTDIR_SUPPORT=	none
 

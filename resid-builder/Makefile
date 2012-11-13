@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/07 14:53:43 asau Exp $
+# $NetBSD: Makefile,v 1.5 2012/11/13 22:25:45 othyro Exp $
 #
 
 DISTNAME=	resid-builder-1.0.1+20060528.ccr
@@ -8,7 +8,7 @@ MASTER_SITES=	http://www.tnsp.org/xs-files/
 
 MAINTAINER=	adam.hoka@gmail.com
 HOMEPAGE=	http://www.tnsp.org/xs-files/
-COMMENT=	reSID-builder snapshot from ccr/TNSP
+COMMENT=	Snapshot of reSID-builder from ccr/TNSP
 
 PKG_DESTDIR_SUPPORT=	none
 

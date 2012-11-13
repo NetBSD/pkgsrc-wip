@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/09/08 22:45:09 milosn Exp $
+# $NetBSD: Makefile,v 1.2 2012/11/13 22:25:33 othyro Exp $
 
 .include "../../wip/io/version.mk"
 
@@ -8,7 +8,7 @@ CATEGORIES=		database
 
 MAINTAINER=		milos.negovanovic@googlemail.com
 HOMEPAGE=		www.iolanguage.com
-COMMENT=		SqlDatabase addon for Io.
+COMMENT=		SqlDatabase addon for Io
 
 ADDON_NAME=		SqlDatabase
 

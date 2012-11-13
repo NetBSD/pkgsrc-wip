@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/10/05 11:23:03 asau Exp $
+# $NetBSD: Makefile,v 1.10 2012/11/13 22:25:40 othyro Exp $
 
 DISTNAME=	pkg_fake-0.3
 CATEGORIES=	pkgtools
@@ -6,7 +6,7 @@ MASTER_SITES=	# empty
 DISTFILES=	# empty
 
 MAINTAINER=	pancake@phreaker.net
-COMMENT=	pkgsrc tool to create and manage fake packages
+COMMENT=	Tool for pkgsrc that creates and manages fake packages
 
 NO_CONFIGURE=	yes
 NO_BUILD=	yes

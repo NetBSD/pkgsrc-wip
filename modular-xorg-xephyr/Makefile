@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/23 10:23:06 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2012/11/13 22:25:39 othyro Exp $
 #
 
 DISTNAME=	xorg-server-1.6.5
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	khorben@defora.org
 HOMEPAGE=	http://xorg.freedesktop.org/
-COMMENT=	kdrive-based Xephyr server from modular X.org
+COMMENT=	Xephyr server based on kdrive from modular X.org
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

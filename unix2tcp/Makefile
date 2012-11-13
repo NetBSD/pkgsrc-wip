@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/07 17:41:40 asau Exp $
+# $NetBSD: Makefile,v 1.5 2012/11/13 22:25:50 othyro Exp $
 #
 
 DISTNAME=		unix2tcp-0.8.2
@@ -7,7 +7,7 @@ MASTER_SITES=		http://ahriman.bucharest.roedu.net/unix2tcp/
 
 MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://ahriman.bucharest.roedu.net/unix2tcp/
-COMMENT=		UNIX socket to TCP tunnel.
+COMMENT=		UNIX socket to TCP tunnel
 
 GNU_CONFIGURE=		yes
 

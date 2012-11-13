@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/07 16:23:16 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/13 22:25:50 othyro Exp $
 #
 
 DISTNAME=	squidview-0.76
@@ -7,7 +7,7 @@ MASTER_SITES=	http://www.rillion.net/squidview/
 
 MAINTAINER=	morr@NetBSD.org
 HOMEPAGE=	http://www.rillion.net/squidview/
-COMMENT=	program which monitors and displays squid logs
+COMMENT=	Program which monitors and displays squid logs
 LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes

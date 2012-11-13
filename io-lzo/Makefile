@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2009/02/05 23:11:48 milosn Exp $
+# $NetBSD: Makefile,v 1.4 2012/11/13 22:25:33 othyro Exp $
 
 .include "../../wip/io/version.mk"
 
@@ -8,7 +8,7 @@ CATEGORIES=		archivers
 
 MAINTAINER=		milos.negovanovic@googlemail.com
 HOMEPAGE=		www.iolanguage.com
-COMMENT=		LZO addon for Io.
+COMMENT=		LZO addon for Io
 
 ADDON_NAME=		LZO
 

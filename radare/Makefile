@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.5 2012/10/07 14:53:42 asau Exp $
+# $NetBSD: Makefile,v 1.6 2012/11/13 22:25:45 othyro Exp $
 #
 
 DISTNAME=	radare-0.8.6
 PKGREVISION=	1
-CATEGORIES=	wip sysutils
+CATEGORIES=	sysutils
 MASTER_SITES=	http://radare.nopcode.org/get/
 
 MAINTAINER=	pancake@youterm.com
 HOMEPAGE=	http://radare.nopcode.org/
-COMMENT=	advanced commandline hexadecimal editor
+COMMENT=	Advanced commandline hexadecimal editor
 
 PKG_DESTDIR_SUPPORT=	none
 

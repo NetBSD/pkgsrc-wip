@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/10/03 15:09:53 asau Exp $
+# $NetBSD: Makefile,v 1.13 2012/11/13 22:25:39 othyro Exp $
 #
 
 DISTNAME=	mcats-0.1.0
@@ -8,7 +8,7 @@ MASTER_SITES=	http://mcats.net/files/
 
 MAINTAINER=	pehr@mcats.net
 HOMEPAGE=	http://mcats.net/
-COMMENT=	iODBC module for MCatS
+COMMENT=	MCatS iODBC module
 
 #DEPENDS+=	mcats>=0.1.0:../../convertors/mcats
 DEPENDS+=	mcats>=0.1.0:../../wip/mcats

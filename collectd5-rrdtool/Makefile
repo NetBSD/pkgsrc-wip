@@ -6,7 +6,7 @@ CATEGORIES=     net
 
 MAINTAINER=     msporleder@gmail.com
 HOMEPAGE=       http://collectd.org/
-COMMENT=        statistics collection daemon - rrdtool plugin
+COMMENT=        Statistics collection daemon - rrdtool plugin
 LICENSE=        gnu-gpl-v2
 
 GNU_CONFIGURE=          yes

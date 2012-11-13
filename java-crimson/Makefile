@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/01 20:26:04 asau Exp $
+# $NetBSD: Makefile,v 1.6 2012/11/13 22:25:37 othyro Exp $
 #
 
 DISTNAME=		crimson-1.1.3-bin
@@ -9,7 +9,7 @@ EXTRACT_SUFX=		.zip
 
 MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://xml.apache.org/dist/crimson/
-COMMENT=		XML parser for JAXP with DOM and SAX2.
+COMMENT=		XML parser for JAXP with DOM and SAX2
 
 WRKSRC=		${WRKDIR}/crimson-1.1.3
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/09/02 11:14:10 noud4 Exp $
+# $NetBSD: Makefile,v 1.4 2012/11/13 22:25:30 othyro Exp $
 #
 
 .include "../emboss-base/Makefile.common"
@@ -8,7 +8,7 @@ DISTNAME=		PHYLIP-3.57c
 PKGNAME=		emboss-phylip-3.57c
 PKGREVISION=		1
 
-COMMENT=		A package of programs for inferring phylogenies
+COMMENT=		Package of programs for inferring phylogenies
 
 DIST_SUBDIR=		emboss/phylip-3.57c-20041107
 BUILD_TARGET=		#empty

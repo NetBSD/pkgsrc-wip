@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/10/07 11:54:22 asau Exp $
+# $NetBSD: Makefile,v 1.10 2012/11/13 22:25:43 othyro Exp $
 
 MANTISSA_VERSION=	0.6.1
 DISTNAME=	Mantissa-${MANTISSA_VERSION}
@@ -8,9 +8,9 @@ CATEGORIES=	python www net
 MASTER_SITES=	ftp://ftp.osuosl.org/pub/nslu2/sources/
 EXTRACT_SUFX=	.tar.gz
 
-MAINTAINER=         pkgsrc-wip-users@sourceforge.net
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://divmod.org/trac/wiki/DivmodMantissa
-COMMENT=	An extensible application server
+COMMENT=	Extensible application server
 
 DEPENDS+=	${PYPKGPREFIX}-twisted>=2.4.0:../../net/py-twisted
 DEPENDS+=	${PYPKGPREFIX}-pytz>=2005m:../../time/py-pytz

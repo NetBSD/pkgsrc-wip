@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/07 14:20:27 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/11/13 22:25:46 othyro Exp $
 #
 
 PKGNAME=		rhapsody-0.28b
@@ -9,7 +9,7 @@ EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://rhapsody.sourceforge.net
-COMMENT=		IRC client for Unix operating systems.
+COMMENT=		IRC client for Unix operating systems
 
 WRKSRC=			${WRKDIR}/${PKGNAME}
 USE_PKGLOCALEDIR=	yes

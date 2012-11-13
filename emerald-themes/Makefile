@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2012/09/28 22:07:34 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/11/13 22:25:30 othyro Exp $
 #
 
 DISTNAME=	emerald-themes-0.2.1
 CATEGORIES=	wm
 
-COMMENT=	Emerald themes for beryl.
+COMMENT=	Emerald themes for beryl
 
 .include "../../wip/beryl/Makefile.inc"
 

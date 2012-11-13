@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/09/07 16:53:59 milosn Exp $
+# $NetBSD: Makefile,v 1.2 2012/11/13 22:25:33 othyro Exp $
 
 .include "../../wip/io/version.mk"
 
@@ -8,7 +8,7 @@ CATEGORIES=		devel
 
 MAINTAINER=		milos.negovanovic@googlemail.com
 HOMEPAGE=		www.iolanguage.com
-COMMENT=		MD5 addon for Io.
+COMMENT=		MD5 addon for Io
 
 DEPENDS+=       	io-sha1>=${IO_VERSION}:../../wip/io-sha1
 
