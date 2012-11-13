@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2010/12/13 18:07:14 noud4 Exp $
+# $NetBSD: Makefile,v 1.8 2012/11/13 20:28:39 othyro Exp $
 #
 
 PKGNAME=		multisync-palm-0.82
@@ -7,10 +7,9 @@ PKGREVISION=		4
 COMMENT=		Module for synchronization with Palm devices
 
 WRKSRC=			${WRKDIR}/multisync-0.82/plugins/palm_sync/
-
 DEPENDS+=		multisync>=0.82:../../wip/multisync
-
 BUILD_DEPENDS+=		libtool-base>=1.5.10:../../devel/libtool-base
+USE_TOOLS+=		aclocal autoconf autoheader automake
 
 pre-configure:
 	cd ${WRKSRC}/../.. && \

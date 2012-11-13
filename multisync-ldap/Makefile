@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2010/12/13 18:12:46 noud4 Exp $
+# $NetBSD: Makefile,v 1.10 2012/11/13 20:28:39 othyro Exp $
 #
 
 PKGNAME=		multisync-ldap-0.82
@@ -7,10 +7,9 @@ PKGREVISION=		4
 COMMENT=		LDAP module for Multisync
 
 WRKSRC=			${WRKDIR}/multisync-0.82/plugins/ldap_plugin/
-
 DEPENDS+=		multisync>=0.82:../../wip/multisync
-
 BUILD_DEPENDS+=		libtool-base>=1.5.10:../../devel/libtool-base
+USE_TOOLS+=		aclocal autoconf autoheader automake
 
 pre-configure:
 	cd ${WRKSRC}/../.. && \
