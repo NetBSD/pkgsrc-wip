@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/09/28 23:21:49 asau Exp $
+# $NetBSD: Makefile,v 1.7 2012/11/13 20:41:14 othyro Exp $
 #
 
 PKGNAME=	fs2_open-3.6.12
@@ -13,7 +13,7 @@ COMMENT=	Freespace 2 source code project
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	autoconf automake
+USE_TOOLS+=	aclocal autoconf automake
 
 INSTALLATION_DIRS=	bin
 
