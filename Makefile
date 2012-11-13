@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4946 2012/11/13 13:07:06 othyro Exp $
+# $Id: Makefile,v 1.4947 2012/11/13 16:46:36 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -869,6 +869,7 @@ SUBDIR+=	hasciicam
 SUBDIR+=	haserl
 SUBDIR+=	haskell-mode
 SUBDIR+=	hawk
+SUBDIR+=	hawknl
 SUBDIR+=	haydar-fonts
 SUBDIR+=	haze
 SUBDIR+=	hdhomerun_config
