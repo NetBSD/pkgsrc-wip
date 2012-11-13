@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/03 09:10:40 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/11/13 19:33:45 othyro Exp $
 #
 
 DISTNAME=	libosmocore-0.1.30
@@ -19,5 +19,6 @@ PKGCONFIG_OVERRIDE+=	libosmocore.pc.in
 PKGCONFIG_OVERRIDE+=	libosmocovty.pc.in
 
 GNU_CONFIGURE=	yes
+USE_LIBTOOL=	yes
 
 .include "../../mk/bsd.pkg.mk"

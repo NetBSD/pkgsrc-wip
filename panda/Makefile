@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/04 19:44:06 asau Exp $
+# $NetBSD: Makefile,v 1.7 2012/11/13 19:33:45 othyro Exp $
 #
 
 DISTNAME=		panda-0.5.4
@@ -16,6 +16,7 @@ PKG_DESTDIR_SUPPORT=	none
 USE_PKGLOCALEDIR=	yes
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/panda.pc.in
 GNU_CONFIGURE=		yes
+USE_LIBTOOL=		yes
 
 # THIS package is broken, when creating the library it checks for the real
 # installation path, not the sources one. and this crashes in compilation

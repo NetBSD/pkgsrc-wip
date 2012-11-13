@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/09/28 21:24:35 asau Exp $
+# $NetBSD: Makefile,v 1.7 2012/11/13 19:33:44 othyro Exp $
 #
 
 DISTNAME=	# SVN package
@@ -11,6 +11,7 @@ HOMEPAGE=	http://despotify.sourceforge.net/
 COMMENT=	Open Source Spotify client
 
 USE_TOOLS+=	gmake
+USE_LIBTOOL=	yes
 USE_NCURSES=	yes
 WRKSRC=		${WRKDIR}/despotify/src
 

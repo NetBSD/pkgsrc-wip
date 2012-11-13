@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/03 09:10:41 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/11/13 19:33:45 othyro Exp $
 #
 
 DISTNAME=	libunistring-0.9.3
@@ -11,6 +11,7 @@ COMMENT=	Library that provides functions for manipulating Unicode strings
 LICENSE=	gnu-lgpl-v3
 
 GNU_CONFIGURE=	yes
+USE_LIBTOOL=	yes
 
 .include "../../converters/libiconv/buildlink3.mk"
 

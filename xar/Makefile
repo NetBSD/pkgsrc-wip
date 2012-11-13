@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/07 20:11:08 asau Exp $
+# $NetBSD: Makefile,v 1.7 2012/11/13 19:33:45 othyro Exp $
 #
 
 DISTNAME=		xar-1.5.2
@@ -13,6 +13,7 @@ COMMENT=		The eXtensible ARchiver
 PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=		yes
+USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
 
 .include "../../textproc/libxml2/buildlink3.mk"

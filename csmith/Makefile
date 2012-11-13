@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/09/24 18:26:56 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/13 19:33:44 othyro Exp $
 #
 
 DISTNAME=	csmith-2.1.0
@@ -12,6 +12,7 @@ LICENSE=	modified-bsd
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gm4 gmake perl
+USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
 
 REPLACE_PERL+=	scripts/compiler_test.pl scripts/launchn.pl scripts/test_csmith.pl \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/09/24 18:26:51 asau Exp $
+# $NetBSD: Makefile,v 1.6 2012/11/13 19:33:44 othyro Exp $
 #
 
 DISTNAME=		cairo-java-1.0.1
@@ -11,6 +11,7 @@ HOMEPAGE=		http://java-gnome.sourceforge.net/
 COMMENT=		Cairo bindings for Java
 
 GNU_CONFIGURE=		yes
+USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake pkg-config
 CONFIGURE_ARGS+=	--without-gcj-compile # JAVAC=javac
 CPPFLAGS+=		-I${PKG_JAVA_HOME}/include

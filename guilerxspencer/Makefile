@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/09/29 00:50:41 asau Exp $
+# $NetBSD: Makefile,v 1.7 2012/11/13 19:33:45 othyro Exp $
 #
 
 DISTNAME=		guilerxspencer-1.2
@@ -13,6 +13,7 @@ COMMENT=		Guile bindings for Henry Spencer's regex
 PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=		yes
+USE_LIBTOOL=		yes
 INSTALLATION_DIRS=	share/guile/site
 
 .include "../../lang/guile/buildlink3.mk"

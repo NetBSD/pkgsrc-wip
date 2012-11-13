@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/10/03 15:09:56 asau Exp $
+# $NetBSD: Makefile,v 1.15 2012/11/13 19:33:45 othyro Exp $
 
 DISTNAME=	mnogosearch-3.1.21
 PKGREVISION=	3
@@ -10,6 +10,7 @@ HOMEPAGE=	http://www.mnogosearch.org/
 COMMENT=	Web search engine software for intranet and internet servers
 
 GNU_CONFIGURE=		YES
+USE_LIBTOOL=		yes
 USE_TOOLS+=		pax
 
 PKG_SYSCONFSUBDIR=	mnogosearch

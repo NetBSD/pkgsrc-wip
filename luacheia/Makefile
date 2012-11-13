@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/10/03 09:10:44 asau Exp $
+# $NetBSD: Makefile,v 1.11 2012/11/13 19:33:45 othyro Exp $
 #
 
 DISTNAME=		luacheia5-5.0.1a4
@@ -13,6 +13,7 @@ COMMENT=		Extension libraries for LUA
 PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=	YES
+USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake
 CPPFLAGS+=	-I${PREFIX:Q}/include
 CPPFLAGS+=	-I/usr/X11R6/include

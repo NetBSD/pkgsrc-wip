@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/03 15:09:50 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/11/13 19:33:45 othyro Exp $
 #
 
 DISTNAME=	maloc-1.5
@@ -12,9 +12,10 @@ LICENSE=	gnu-gpl-v2
 
 WRKSRC=		${WRKDIR}/maloc
 
-GNU_CONFIGURE=	yes
-USE_LANGUAGES=	c fortran
+GNU_CONFIGURE=		yes
+USE_LANGUAGES=		c fortran
 USE_GNU_READLINE=	yes
+USE_LIBTOOL=		yes
 
 #CONFIGURE_ARGS+=	--enable-efence
 

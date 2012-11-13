@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/10/07 16:22:57 asau Exp $
+# $NetBSD: Makefile,v 1.11 2012/11/13 19:33:45 othyro Exp $
 
 DISTNAME=		shadow-4.0.4.1
 CATEGORIES=		sysutils devel
@@ -14,6 +14,7 @@ ONLY_FOR_PLATFORM=	Linux-*-* # Linux shadow format
 PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=		YES
+USE_LIBTOOL=		yes
 
 .include "../../mk/bsd.prefs.mk"
 

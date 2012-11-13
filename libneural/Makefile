@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/03 09:10:40 asau Exp $
+# $NetBSD: Makefile,v 1.6 2012/11/13 19:33:45 othyro Exp $
 
 DISTNAME= libneural-1.0.3
 CATEGORIES=	devel
@@ -14,6 +14,8 @@ CONFIGURE_PREFIX+= ${PREFIX}
 MAKE_FLAGS+= prefix=${PREFIX:Q}
 
 USE_LANGUAGES=	c c++
+USE_LIBTOOL=	yes
+
 post-patch:
 	${CHMOD} +x ${WRKSRC}/configure
 

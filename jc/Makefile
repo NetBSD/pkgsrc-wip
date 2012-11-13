@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/10/01 21:43:23 asau Exp $
+# $NetBSD: Makefile,v 1.11 2012/11/13 19:33:45 othyro Exp $
 #
 
 DISTNAME=		jc-1.2.3
@@ -14,6 +14,7 @@ PKG_DESTDIR_SUPPORT=	none
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
+USE_LIBTOOL=		yes
 USE_TOOLS+=	makeinfo
 INFO_FILES=	# PLIST
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2012/10/03 15:09:58 asau Exp $
+# $NetBSD: Makefile,v 1.36 2012/11/13 19:33:45 othyro Exp $
 
 DISTNAME=	mpich2-trunk-r8760
 PKGNAME=	${DISTNAME}
@@ -19,6 +19,7 @@ MAKE_JOBS_SAFE=		no
 DEPENDS+=	bash-[0-9]*:../../shells/bash
 
 GNU_CONFIGURE=		yes
+USE_LIBTOOL=		yes
 USE_LANGUAGES=		c c++ fortran77
 
 PKG_SYSCONFSUBDIR=	mpich
