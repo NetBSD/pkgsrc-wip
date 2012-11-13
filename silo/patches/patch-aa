@@ -1,3 +1,7 @@
+$NetBSD: patch-aa,v 1.2 2012/11/13 14:41:41 othyro Exp $
+
+Fixes comparison operator.
+
 --- configure.orig	2010-11-19 21:13:36.000000000 +0000
 +++ configure	2010-11-19 21:14:16.000000000 +0000
 @@ -27000,10 +27000,10 @@
