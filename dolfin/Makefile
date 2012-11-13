@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/10/17 01:44:46 asau Exp $
+# $NetBSD: Makefile,v 1.9 2012/11/13 16:50:55 outpaddling Exp $
 #
 
 DISTNAME=	dolfin-1.0.0
@@ -63,7 +63,8 @@ PLIST_SUBST+=   PYSITELIB=${PYSITELIB}
 .include "../../wip/py-viper/buildlink3.mk"
 .include "../../math/blas/buildlink3.mk"
 .include "../../math/lapack/buildlink3.mk"
-.include "../../math/cgal/buildlink3.mk"
+# Requires qt4-libs and qt4-tools, which don't build on Linux or Mac
+#.include "../../math/cgal/buildlink3.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../wip/swig2/buildlink3.mk"
