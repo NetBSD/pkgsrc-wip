@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2012/10/03 09:10:35 asau Exp $
+# $NetBSD: Makefile,v 1.10 2012/11/13 20:09:33 othyro Exp $
 #
 
 DISTNAME=		lat-1.2.3
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		databases
 MASTER_SITES=		http://dev.mmgsecurity.com/downloads/lat/1.2/
 
@@ -17,6 +17,8 @@ USE_LIBTOOL=		yes
 
 PKGCONFIG_OVERRIDE+=	desktop/lat-plugins.pc.in
 
+
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/gtk-sharp/buildlink3.mk"
 .include "../../lang/mono/buildlink3.mk"
 .include "../../security/gnome-keyring/buildlink3.mk"

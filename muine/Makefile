@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.22 2012/10/03 15:09:59 asau Exp $
+# $NetBSD: Makefile,v 1.23 2012/11/13 20:09:35 othyro Exp $
 #
 
 DISTNAME=	muine-0.8.11
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	audio gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/muine/0.8/}
 
@@ -21,6 +21,8 @@ GCONF_SCHEMAS=		muine.schemas
 
 BUILDLINK_TRANSFORM+=	rm:-Werror
 
+
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../audio/flac/buildlink3.mk"
 .include "../../audio/faad2/buildlink3.mk"
 .include "../../audio/libid3tag/buildlink3.mk"
@@ -40,5 +42,4 @@ BUILDLINK_TRANSFORM+=	rm:-Werror
 .include "../../sysutils/ndesk-dbus-glib/buildlink3.mk"
 .include "../../x11/gnome-sharp/buildlink3.mk"
 .include "../../x11/gtk-sharp/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"

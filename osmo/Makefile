@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2012/10/03 21:32:48 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/13 20:09:35 othyro Exp $
 #
 
 DISTNAME=	osmo-0.2.10
+PKGREVISION=	1
 CATEGORIES=	misc time
 MASTER_SITES=	 ${MASTER_SITE_SOURCEFORGE:=osmo-pim/osmo-0.2.10/}
 
@@ -26,10 +27,11 @@ post-build:
 	${TOOLS_CMD.msgfmt} -c ${WRKSRC}/po/$m.po -o ${WRKSRC}/po/$m.mo
 .endfor
 
+
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../time/libical/buildlink3.mk"
 .include "../../www/libgtkhtml/buildlink3.mk"	# required for contacts
 .include "../../x11/gtk2/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"

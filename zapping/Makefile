@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2012/10/07 20:11:11 asau Exp $
+# $NetBSD: Makefile,v 1.17 2012/11/13 20:09:36 othyro Exp $
 #
 
 DISTNAME=		zapping-0.9.6
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		multimedia
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=zapping/}
 EXTRACT_SUFX=		.tar.bz2
@@ -26,6 +26,8 @@ MAKE_ENV+=		GCONF_SCHEMA_FILE_DIR=${PREFIX:Q}/share/gconf/schemas/
 
 GCONF_SCHEMAS+=	zapping.schemas
 
+
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../devel/GConf/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libglade/buildlink3.mk"

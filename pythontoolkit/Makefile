@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2012/11/12 16:51:37 othyro Exp $
+# $NetBSD: Makefile,v 1.5 2012/11/13 20:09:35 othyro Exp $
 #
 
 DISTNAME=	PythonToolkit-12.08.18
-PKGNAME=	pythontoolkit-12.08.18
+PKGNAME=	${DISTNAME:tl}
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pythontoolkit/}
 EXTRACT_SUFX=	.zip
@@ -28,6 +29,8 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/ptkicon.svg \
 				 ${DESTDIR}${PREFIX}/share/pythontoolkit/icons
 
+
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../lang/python/extension.mk"

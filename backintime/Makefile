@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2012/09/24 17:14:23 asau Exp $
+# $NetBSD: Makefile,v 1.8 2012/11/13 20:09:29 othyro Exp $
 #
 
 DISTNAME=	backintime-0.9.2_src
 PKGNAME=	${DISTNAME:S/_src//}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.le-web.org/download/backintime/
 
@@ -40,6 +40,7 @@ do-install:
 	cd ${WRKSRC} && ${SH} install-common.sh
 	cd ${WRKSRC} && ${SH} install-gnome.sh
 
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/omf-scrollkeeper.mk"
 .include "../../mk/bsd.pkg.mk"

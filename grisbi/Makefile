@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2012/09/29 00:50:40 asau Exp $
+# $NetBSD: Makefile,v 1.14 2012/11/13 20:09:31 othyro Exp $
 #
 
 DISTNAME=	grisbi-0.5.9
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	finance
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=grisbi/}
 EXTRACT_SUFX=	.tar.bz2
@@ -36,6 +36,7 @@ post-install:
 			${DESTDIR}${PREFIX}/share/applications/
 
 
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../databases/shared-mime-info/mimedb.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"

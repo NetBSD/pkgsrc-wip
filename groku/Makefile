@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2012/09/29 00:50:40 asau Exp $
+# $NetBSD: Makefile,v 1.10 2012/11/13 20:09:31 othyro Exp $
 #
 
 DISTNAME=		groku-0.1
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		audio
 MASTER_SITES=		http://digitalssg.net/debian/
 
@@ -26,9 +26,10 @@ pre-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/groku
 	${LN} -s ${DESTDIR}${PREFIX}/share/pixmaps/groku.png ${DESTDIR}${PREFIX}/share/groku/groku-logo.png
 
+
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/GConf/buildlink3.mk"
 .include "../../devel/libglade/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"

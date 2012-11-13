@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2012/10/07 16:22:54 asau Exp $
+# $NetBSD: Makefile,v 1.27 2012/11/13 20:09:35 othyro Exp $
 
 DISTNAME=		scite177
 PKGNAME=		scite-1.77
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		editors
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=scintilla/}
 EXTRACT_SUFX=		.tgz
@@ -27,6 +27,8 @@ do-install:
 	cd ${WRKSRC}/scite/gtk && gmake GTK2=1 prefix=${PREFIX} install
 	${INSTALL_MAN} ${WRKSRC}/scite/doc/scite.1 ${PREFIX}/${PKGMANDIR}/man1
 
+
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 # has own copy included
 #.include "../../lang/lua/buildlink3.mk"

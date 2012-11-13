@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2012/10/03 18:15:32 asau Exp $
+# $NetBSD: Makefile,v 1.6 2012/11/13 20:09:35 othyro Exp $
 #
 
 DISTNAME=	netbsd-light-desktop-default-settings-0.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	# none
 DISTFILES=	# none
@@ -77,4 +77,6 @@ do-install:
 #            scrot,
 #            galculator
 
+
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"

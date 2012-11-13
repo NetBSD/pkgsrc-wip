@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.16 2012/10/01 21:57:40 asau Exp $
+# $NetBSD: Makefile,v 1.17 2012/11/13 20:09:33 othyro Exp $
 #
 
 # XXX You must update MASTER_SITES download number when updating
 # XXX or you will download old file with new filename.
 DISTNAME=		kino-0.7.5
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		multimedia
 MASTER_SITES=		http://kino.schirmacher.de/filemanager/download/42/
 
@@ -28,6 +28,8 @@ CONFIGURE_ARGS+=	--with-hotplug-script-dir=${PREFIX}/share/examples/kino/hotplug
 #CONFIGURE_ARGS+=	--with-avcodec
 #.include "../../multimedia/ffmpeg/buildlink3.mk"
 
+
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../audio/libsamplerate/buildlink3.mk"
 .include "../../devel/atk/buildlink3.mk"
 .include "../../devel/GConf/buildlink3.mk"
@@ -49,10 +51,8 @@ CONFIGURE_ARGS+=	--with-hotplug-script-dir=${PREFIX}/share/examples/kino/hotplug
 .include "../../multimedia/libdv/buildlink3.mk"
 .include "../../sysutils/gnome-vfs/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-
 .include "../../wip/libavc1394/buildlink3.mk"
 .include "../../wip/libraw1394/buildlink3.mk"
-
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"

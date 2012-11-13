@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2012/10/03 15:09:56 asau Exp $
+# $NetBSD: Makefile,v 1.11 2012/11/13 20:09:34 othyro Exp $
 
 DISTNAME=	monodevelop-2.1.2
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/monodevelop/
 EXTRACT_SUFX=	.tar.bz2
@@ -21,6 +21,8 @@ REPLACE_BASH+=	src/addins/MonoDevelop.Autotools/templates/configure.template
 REPLACE_BASH+=	contrib/extract_makefile_variable.sh
 REPLACE_BASH+=	theme-icons/icon-theme-installer
 
+
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../databases/shared-mime-info/buildlink3.mk"
 .include "../../devel/mono-addins/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"

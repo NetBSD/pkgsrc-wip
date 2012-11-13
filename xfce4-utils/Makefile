@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/10/07 20:11:09 asau Exp $
+# $NetBSD: Makefile,v 1.15 2012/11/13 20:09:36 othyro Exp $
 
 .include "../../wip/xfce48/Makefile.common"
 
@@ -6,7 +6,7 @@ UTILS_VERSION=	4.8.3
 
 DISTNAME=	xfce-utils-${UTILS_VERSION}
 PKGNAME=	xfce4-utils-${UTILS_VERSION}
-#PKGREVISION=	1
+PKGREVISION=	1
 CATEGORIES=	x11
 COMMENT=	Xfce utilities
 
@@ -36,6 +36,8 @@ CONF_FILES+=		${EGDIR}/autostart/xfconf-migration-4.6.desktop \
 
 .include "options.mk"
 
+
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../wip/libxfce4ui/buildlink3.mk"

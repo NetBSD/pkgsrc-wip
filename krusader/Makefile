@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2012/10/01 21:57:42 asau Exp $
+# $NetBSD: Makefile,v 1.10 2012/11/13 20:09:33 othyro Exp $
 #
 
 DISTNAME=	krusader-2.1.0-beta1
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	kde sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=krusader/}
 EXTRACT_SUFX=	.tar.bz2
@@ -17,6 +17,8 @@ USE_TOOLS+=	perl msgfmt
 USE_LANGUAGES=	c c++
 USE_CMAKE=	yes
 
+
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../meta-pkgs/kde4/kde4.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../x11/kdelibs4/buildlink3.mk"

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2012/09/28 22:07:33 asau Exp $
+# $NetBSD: Makefile,v 1.12 2012/11/13 20:09:29 othyro Exp $
 #
 
 DISTNAME=	emelfm2-0.1.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	http://emelfm2.net/rel/
 
@@ -16,6 +16,8 @@ PTHREAD_OPTS+=	require
 
 USE_TOOLS+=	gmake
 
+
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
