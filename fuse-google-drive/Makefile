@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/09/28 23:21:49 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/13 20:39:10 othyro Exp $
 #
 
 DISTNAME=	fuse-google-drive-0
@@ -17,7 +17,7 @@ GIT_TAG.fuse-google-drive=	1e1bfa00b6d55cabcb717d0109ffc374c0af0348
 .include "../../wip/mk/git-package.mk"
 
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	gmake aclocal automake pkg-config
+USE_TOOLS+=	aclocal automake autoreconf gmake pkg-config
 USE_LIBTOOL=	yes
 
 WRKSRC=		${WRKDIR}/${PKGBASE}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/09/30 05:17:18 asau Exp $
+# $NetBSD: Makefile,v 1.6 2012/11/13 20:39:10 othyro Exp $
 #
 
 DISTNAME=		ices-${ICES_VERSION}
@@ -11,7 +11,7 @@ MAINTAINER=		peter.schuller@infidyne.com
 HOMEPAGE=		http://www.icecast.org/ices.php
 COMMENT=		Vorbis source client for a streaming server
 
-USE_TOOLS+=		automake
+USE_TOOLS+=		automake autoreconf
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 

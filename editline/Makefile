@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/09/28 22:07:30 asau Exp $
+# $NetBSD: Makefile,v 1.12 2012/11/13 20:39:10 othyro Exp $
 #
 
 DISTNAME=		libedit-20080712-2.11
@@ -13,7 +13,7 @@ COMMENT=		NetBSD Editline library (libedit) for generic line editing
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
-USE_TOOLS+=			automake
+USE_TOOLS+=		automake autoreconf
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf
