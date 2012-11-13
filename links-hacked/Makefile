@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2012/10/03 09:10:41 asau Exp $
+# $NetBSD: Makefile,v 1.24 2012/11/13 20:26:27 othyro Exp $
 #
 
 DISTNAME=	links-hacked-${VER}
@@ -15,11 +15,11 @@ COMMENT=	Enhanced version of Links with tabs and more
 PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake automake
+USE_TOOLS+=		aclocal autoheader autoconf automake gmake
 
 VER=			030709
 
-CONFLICTS+=	links-[0-9]* links-gui-[0-9]* elinks-[0-9]*
+CONFLICTS+=		links-[0-9]* links-gui-[0-9]* elinks-[0-9]*
 
 LIBS+=			-lpng
 CONFIGURE_ARGS+=	--with-x

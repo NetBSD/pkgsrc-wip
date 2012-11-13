@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/10/01 21:57:40 asau Exp $
+# $NetBSD: Makefile,v 1.10 2012/11/13 20:26:27 othyro Exp $
 
 DISTNAME=	korelib-1.0
 CATEGORIES=	devel kde
@@ -10,11 +10,11 @@ COMMENT=	Cross-platform C++ library for developing modular applications
 
 PKG_DESTDIR_SUPPORT=	none
 
-GNU_CONFIGURE=	YES
-USE_LIBTOOL=	YES
+GNU_CONFIGURE=		YES
+USE_LIBTOOL=		YES
 LTCONFIG_OVERRIDE=	${WRKSRC}/ltconfig
-USE_TOOLS+=	automake
-USE_LANGUAGES=	c c++
+USE_TOOLS+=		aclocal autoheader autoconf automake
+USE_LANGUAGES=		c c++
 
 pre-configure:
 	cd ${WRKSRC} && aclocal
