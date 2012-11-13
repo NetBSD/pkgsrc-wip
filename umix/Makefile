@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2012/10/07 17:41:39 asau Exp $
+# $NetBSD: Makefile,v 1.20 2012/11/13 20:29:42 othyro Exp $
 
 DISTNAME=	umix-1.0.2
 CATEGORIES=	audio
@@ -11,7 +11,7 @@ COMMENT=	Adjust mix levels
 PKG_DESTDIR_SUPPORT=	none
 
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake automake pkg-config
+USE_TOOLS+=		aclocal autoconf automake gmake pkg-config
 USE_LIBTOOL=		yes
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
