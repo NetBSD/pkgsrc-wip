@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/11/13 16:50:55 outpaddling Exp $
+# $NetBSD: Makefile,v 1.10 2012/11/13 21:50:53 outpaddling Exp $
 #
 
 DISTNAME=	dolfin-1.0.0
@@ -23,11 +23,12 @@ REPLACE_PYTHON+=	scripts/dolfin-convert/dolfin-convert
 
 .include "../../mk/bsd.prefs.mk"
 
-# CMAKE_ARGS+=	-DCMAKE_VERBOSE_MAKEFILE:BOOL=ON
+CMAKE_ARGS+=	-DCMAKE_VERBOSE_MAKEFILE:BOOL=ON \
+		-DDOLFIN_ENABLE_MPI:BOOL=OFF
 
 # Needed on OS X
 # Not needed on NetBSD
-CXXFLAGS+=	-I${LOCALBASE}/${PYINC}
+CXXFLAGS+=	-I${LOCALBASE}/${PYINC} -std=gnu++0x
 
 # .include "../../mk/compiler.mk"
 
