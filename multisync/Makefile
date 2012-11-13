@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/11/13 20:09:35 othyro Exp $
+# $NetBSD: Makefile,v 1.7 2012/11/13 22:50:39 othyro Exp $
 #
 
 PKGNAME=		multisync-0.82
@@ -6,6 +6,7 @@ PKGREVISION=		4
 COMMENT=		Modular program to synchronize PIM data
 
 WRKSRC=			${WRKDIR}/multisync-0.82
+USE_TOOLS+=		aclocal autoconf autoheader automake
 
 pre-configure:
 	cd ${WRKSRC} && \
