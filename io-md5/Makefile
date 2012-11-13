@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2012/11/13 22:25:33 othyro Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/13 23:05:26 othyro Exp $
 
 .include "../../wip/io/version.mk"
 
 PKGNAME=		io-md5-${IO_VERSION}
-PKGREVISION=		0
 CATEGORIES=		devel
 
 MAINTAINER=		milos.negovanovic@googlemail.com

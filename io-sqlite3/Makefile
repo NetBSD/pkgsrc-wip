@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2009/07/11 19:42:19 milosn Exp $
+# $NetBSD: Makefile,v 1.2 2012/11/13 23:05:28 othyro Exp $
 
 .include "../../wip/io/version.mk"
 
 PKGNAME=		io-sqlite3-${IO_VERSION}
-PKGREVISION=		0
 CATEGORIES=		databases
 
 MAINTAINER=		milos.negovanovic@googlemail.com

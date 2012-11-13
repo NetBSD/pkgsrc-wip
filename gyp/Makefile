@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2012/09/29 00:50:42 asau Exp $
+# $NetBSD: Makefile,v 1.7 2012/11/13 23:05:23 othyro Exp $
 
 SVN_REVISION=	1429
 DIST_VERSION=	0.1
 DISTNAME=	gyp-${DIST_VERSION}
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}pre${SVN_REVISION}
-PKGREVISION=	# empty
 CATEGORIES=	devel
 MASTER_SITES=	# not defined
 
