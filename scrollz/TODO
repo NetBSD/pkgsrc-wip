@@ -1,0 +1,12 @@
+edit.c:603:2: warning: initialization from incompatible pointer type
+gnutls support needs work
+
+ChangeLogs:
+
+http://www.scrollz.com/download/ChangeLog.2.2.2.txt
+ftp://ftp.scrollz.com/pub/ScrollZ/source/ChangeLog.2.2.1.txt
+http://www.scrollz.com/download/ChangeLog.2.2.txt
+http://www.scrollz.com/download/ChangeLog.2.1.txt
+http://www.scrollz.com/download/ChangeLog.2.0.txt
+ftp://ftp.scrollz.com/pub/ScrollZ/source/ChangeLog.1.9.98.1
+ftp://ftp.scrollz.com/pub/ScrollZ/source/ChangeLog.1.9.98

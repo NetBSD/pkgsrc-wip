@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1 2012/11/13 12:53:54 othyro Exp $
+
+SHA1 (ScrollZ-2.2.2.tar.gz) = 15d64a51d0a39093a0a9d8a75b0785fc79a80ed8
+RMD160 (ScrollZ-2.2.2.tar.gz) = 041d203fc6bed294baed2a9adc121dfef63c19f9
+Size (ScrollZ-2.2.2.tar.gz) = 940789 bytes
+SHA1 (patch-aa) = da3ce0d9f5e9169def974c2d9cf190833963b9b8
+SHA1 (patch-source_input.c) = 76f2c7b8badf061b8763c95ec668149ad198a3eb
+SHA1 (patch-source_screen.c) = f4165aeb2d6c7c51cb506ea7d689fcddf06a8f10
+SHA1 (patch-source_translat.c) = 281e55cc33bf26dfde9abdc56eccf228c5baa732
