@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2012/09/28 22:07:31 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/13 23:20:30 othyro Exp $
 #
 
 DISTNAME=	elementary-icon-theme-2.7.1
 CATEGORIES=	graphics
 MASTER_SITES=	https://launchpad.net/elementaryicons/2.0/2.7.1/+download/
 
-MAINTAINER=	INSERT_YOUR_MAIL_ADDRESS_HERE
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://elementaryos.org/docs/packaging/themes/elementary-icons
 COMMENT=	Simple and appealing Tango-styled icon theme
 #LICENSE=	# TODO: (see mk/license.mk)

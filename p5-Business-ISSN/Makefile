@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/04 09:13:22 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/13 23:20:31 othyro Exp $
 #
 
 DISTNAME=	Business-ISSN-0.91
@@ -6,7 +6,7 @@ PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	wip
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/B/BD/BDFOY/
 
-MAINTAINER=	INSERT_YOUR_MAIL_ADDRESS_HERE
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/CPAN/authors/id/B/BD/BDFOY/
 COMMENT=	TODO: Short description of the package
 #LICENSE=	# TODO: (see mk/license.mk)

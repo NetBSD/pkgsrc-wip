@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2012/10/07 16:23:06 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/13 23:20:31 othyro Exp $
 #
 
 DISTNAME=	simple-scan-3.4.1
 CATEGORIES=	graphics
 MASTER_SITES=	https://launchpad.net/simple-scan/3.4/3.4.1/+download/
 
-MAINTAINER=	INSERT_YOUR_MAIL_ADDRESS_HERE
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://launchpad.net/simple-scan/
 COMMENT=	Simple scanner graphical interface
 #LICENSE=	# TODO: (see mk/license.mk)

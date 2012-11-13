@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/03 18:15:31 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/13 23:20:30 othyro Exp $
 #
 
 DISTNAME=	netbsd-icon-theme-0.0
@@ -6,7 +6,7 @@ CATEGORIES=	graphics
 MASTER_SITES=	# none
 DISTFILES=	# none
 
-MAINTAINER=	INSERT_YOUR_MAIL_ADDRESS_HERE
+MAINTAINER=	pkgsrc-users@NetBSD.org
 # TODO: point to wiki for this package
 HOMEPAGE=	http://wiki.NetBSD.org/
 COMMENT=	Icon theme for NetBSD
