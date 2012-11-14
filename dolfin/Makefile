@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/11/13 21:50:53 outpaddling Exp $
+# $NetBSD: Makefile,v 1.11 2012/11/14 00:20:41 outpaddling Exp $
 #
 
 DISTNAME=	dolfin-1.0.0
@@ -21,20 +21,19 @@ REPLACE_PYTHON+=	scripts/dolfin-plot/dolfin-plot
 REPLACE_PYTHON+=	scripts/dolfin-order/dolfin-order
 REPLACE_PYTHON+=	scripts/dolfin-convert/dolfin-convert
 
-.include "../../mk/bsd.prefs.mk"
-
 CMAKE_ARGS+=	-DCMAKE_VERBOSE_MAKEFILE:BOOL=ON \
 		-DDOLFIN_ENABLE_MPI:BOOL=OFF
 
-# Needed on OS X
-# Not needed on NetBSD
-CXXFLAGS+=	-I${LOCALBASE}/${PYINC} -std=gnu++0x
+.include "../../mk/bsd.prefs.mk"
 
-# .include "../../mk/compiler.mk"
+.if ${OPSYS} == "Darwin"
+CXXFLAGS+=	-I${LOCALBASE}/${PYINC}
+.endif
 
-# .if ${OPSYS} == "Linux"
-# CXXFLAGS+=	-std=c++0x
-# .endif
+.if ${OPSYS} == "Linux"
+#CXXFLAGS+=	-std=gnu++0x
+CXXFLAGS+=	-std=c++0x
+.endif
 
 # MAKE_ENV+=	ARMADILLO_DIR=${PREFIX}
 
@@ -48,7 +47,7 @@ FETCH_USING=	curl
 SUBST_CLASSES+=		bash
 SUBST_STAGE.bash=	post-configure
 SUBST_FILES.bash=	dolfin-version
-SUBST_SED.bash=		-e 's|/bin/bash|/usr/pkg/bin/bash|'
+SUBST_SED.bash=		-e 's|/bin/bash|/usr/bin/env bash|'
 
 # Stolen from lang/python/extension.mk
 PLIST_SUBST+=   PYSITELIB=${PYSITELIB}
@@ -64,7 +63,7 @@ PLIST_SUBST+=   PYSITELIB=${PYSITELIB}
 .include "../../wip/py-viper/buildlink3.mk"
 .include "../../math/blas/buildlink3.mk"
 .include "../../math/lapack/buildlink3.mk"
-# Requires qt4-libs and qt4-tools, which don't build on Linux or Mac
+# cgal requires qt4-libs and qt4-tools, which don't build on Linux or Mac
 #.include "../../math/cgal/buildlink3.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
