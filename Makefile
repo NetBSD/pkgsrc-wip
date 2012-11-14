@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4947 2012/11/13 16:46:36 othyro Exp $
+# $Id: Makefile,v 1.4948 2012/11/14 14:45:46 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -202,13 +202,6 @@ SUBDIR+=	bastard
 SUBDIR+=	bastille
 SUBDIR+=	beads
 SUBDIR+=	beast
-SUBDIR+=	beryl
-SUBDIR+=	beryl-core
-SUBDIR+=	beryl-manager
-SUBDIR+=	beryl-plugins
-SUBDIR+=	beryl-settings
-SUBDIR+=	beryl-settings-bindings
-SUBDIR+=	beryl-settings-simple
 SUBDIR+=	bibliographer
 SUBDIR+=	bicho
 SUBDIR+=	bigdft
