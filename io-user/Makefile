@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2012/11/13 23:05:30 othyro Exp $
+# $NetBSD: Makefile,v 1.4 2012/11/14 00:16:11 othyro Exp $
 
 .include "../../wip/io/version.mk"
 
 PKGNAME=		io-user-${IO_VERSION}
-CATEGORIES=		system
+CATEGORIES=		sysutils
 
 MAINTAINER=		milos.negovanovic@googlemail.com
 HOMEPAGE=		www.iolanguage.com

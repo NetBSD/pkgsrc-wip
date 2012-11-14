@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2012/10/07 13:57:33 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/14 00:16:17 othyro Exp $
 #
 
 DISTNAME=	yt-2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	physics graphics python
+CATEGORIES=	graphics python
 MASTER_SITES=	http://pypi.python.org/packages/source/y/yt/
 
 MAINTAINER=	jihbed.research@gmail.com

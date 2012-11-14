@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2012/09/28 22:07:36 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/14 00:16:04 othyro Exp $
 #
 
 DISTNAME=	ExHuME-1.3.5
-PKGNAME=	exhume-1.3.5
-CATEGORIES=	physics
+PKGNAME=	${DISTNAME:tl}
+CATEGORIES=	math
 MASTER_SITES=	http://www.hepforge.org/archive/exhume/
 
 MAINTAINER=	jihbed.research@gmail.com

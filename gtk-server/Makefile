@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2012/09/29 00:50:41 asau Exp $
+# $NetBSD: Makefile,v 1.6 2012/11/14 00:16:08 othyro Exp $
 #
 
 DISTNAME=		gtk-server-2.0.10
 PKGREVISION=		1
-CATEGORIES=		wip x11 devel
+CATEGORIES=		devel x11
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gtk-server/}
 
 MAINTAINER=		pancake@phreaker.net

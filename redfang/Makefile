@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2012/10/07 14:16:00 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/11/14 00:16:17 othyro Exp $
 #
 
 DISTNAME=		redfang.2.5
-PKGNAME=		redfang-2.5
-CATEGORIES=		wip security
+PKGNAME=		${DISTNAME:S/./-/1}
+CATEGORIES=		security
 MASTER_SITES=		http://www.blackops.cn/tools/
 
 MAINTAINER=		pancake@phreaker.net

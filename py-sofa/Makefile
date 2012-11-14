@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2012/10/07 13:57:30 asau Exp $
+# $NetBSD: Makefile,v 1.7 2012/11/14 00:16:16 othyro Exp $
 #
 
 DISTNAME=	pysofa-0.1.0a2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
 PKGREVISION=	2
-CATEGORIES=	astronomy python
+CATEGORIES=	misc python
 MASTER_SITES=	http://pypi.python.org/packages/source/p/pysofa/
 
 MAINTAINER=	jihbed.research@gmail.com

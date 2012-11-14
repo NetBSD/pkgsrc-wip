@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2012/10/27 16:52:10 noud4 Exp $
+# $NetBSD: Makefile,v 1.4 2012/11/14 00:16:15 othyro Exp $
 #
 
 DISTNAME=	pyflation-0.2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 PKGREVISION=	1
-CATEGORIES=	science python
+CATEGORIES=	math python
 MASTER_SITES=	http://pyflation.ianhuston.net/files/pyflation/
 
 MAINTAINER=	jihbed.research@gmail.com

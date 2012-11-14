@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2012/10/07 13:57:28 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/14 00:16:15 othyro Exp $
 #
 
 DISTNAME=	PySPH-0.9beta
-PKGNAME=	${PYPKGPREFIX}-pysph-0.9
-CATEGORIES=	science python
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
+CATEGORIES=	misc python
 MASTER_SITES=	http://pypi.python.org/packages/source/P/PySPH/
 
 MAINTAINER=	jihbed.research@gmail.com

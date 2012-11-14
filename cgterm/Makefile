@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2012/09/24 18:26:52 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/14 00:16:00 othyro Exp $
 #
 
 DISTNAME=	cgterm-1.7b2
-CATEGORIES=	wip
+CATEGORIES=	net
 MASTER_SITES=	http://www.paradroid.net/cgterm/
 
 MAINTAINER=	rodo@zlug.org

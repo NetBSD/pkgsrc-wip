@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2012/10/07 11:54:30 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/14 00:16:14 othyro Exp $
 #
 
 DISTNAME=	EMMSA-0.0.3
-PKGNAME=	${PYPKGPREFIX}-emmsa-0.0.3
-CATEGORIES=	physics python
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
+CATEGORIES=	math python
 MASTER_SITES=	http://pypi.python.org/packages/source/E/EMMSA/
 
 MAINTAINER=	jihbed.research@gmail.com

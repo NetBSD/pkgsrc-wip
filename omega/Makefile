@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2012/10/03 21:32:46 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/14 00:16:12 othyro Exp $
 #
 
 DISTNAME=	omega-2.0.5
-CATEGORIES=	physics
+CATEGORIES=	math
 MASTER_SITES=	http://www.hepforge.org/archive/whizard/
 
 MAINTAINER=	jihbed.research@gmail.com

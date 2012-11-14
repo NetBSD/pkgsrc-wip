@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2012/10/01 21:43:21 asau Exp $
+# $NetBSD: Makefile,v 1.8 2012/11/14 00:16:11 othyro Exp $
 #
 
 DISTNAME=		JacORB_${DIST_VERSION}-src
 PKGNAME=		JacORB-lib-${PKG_VERSION}
-CATEGORIES=		corba
+CATEGORIES=		lang
 MASTER_SITES=		http://www.jacorb.org/releases/${PKG_VERSION}/
 
 MAINTAINER=		dprice@cs.nmsu.edu

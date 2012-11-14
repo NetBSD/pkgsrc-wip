@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2012/10/07 14:53:43 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/14 00:16:17 othyro Exp $
 #
 
 DISTNAME=	reduze-1.2
-CATEGORIES=	physics
+CATEGORIES=	math
 MASTER_SITES=	http://www.qgd.unizh.ch/~cedric/reduze/download/
 
 MAINTAINER=	jihbed.research@gmail.com

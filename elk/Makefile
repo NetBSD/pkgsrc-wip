@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2012/11/12 15:59:47 othyro Exp $
+# $NetBSD: Makefile,v 1.4 2012/11/14 00:16:04 othyro Exp $
 #
 
 DISTNAME=	elk-1.1.4
-CATEGORIES=	science
+CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=elk/}
 EXTRACT_SUFX=	.tgz
 

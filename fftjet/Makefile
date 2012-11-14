@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2012/09/28 23:21:47 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/14 00:16:04 othyro Exp $
 #
 
 DISTNAME=	fftjet-1.3.1
-CATEGORIES=	physics
+CATEGORIES=	math
 MASTER_SITES=	http://www.hepforge.org/archive/fftjet/
 
 MAINTAINER=	jihbed.research@gmail.com

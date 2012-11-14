@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2012/09/29 00:50:41 asau Exp $
+# $NetBSD: Makefile,v 1.6 2012/11/14 00:16:08 othyro Exp $
 #
 
 DISTNAME=	gtkaml-0.2.7.1
 PKGREVISION=	1
-CATEGORIES=	wip
+CATEGORIES=	textproc
 MASTER_SITES=	http://gtkaml.googlecode.com/files/
 EXTRACT_SUFX=	.tar.bz2
 

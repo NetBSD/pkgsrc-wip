@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2012/10/07 16:23:09 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/14 00:16:17 othyro Exp $
 #
 
 DISTNAME=	siscone-2.0.1
-CATEGORIES=	physics
+CATEGORIES=	devel
 MASTER_SITES=	http://www.hepforge.org/archive/siscone/
 
 MAINTAINER=	jihbed.research@gmail.com

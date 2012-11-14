@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2012/11/13 22:25:29 othyro Exp $
+# $NetBSD: Makefile,v 1.4 2012/11/14 00:16:03 othyro Exp $
 #
 
 DISTNAME=	collectd-5.0.1
-CATEGORIES=	wip
 MASTER_SITES=	http://collectd.org/files/
 CATEGORIES=     net
 

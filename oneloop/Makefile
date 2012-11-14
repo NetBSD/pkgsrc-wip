@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2012/10/03 21:32:46 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/14 00:16:12 othyro Exp $
 #
 
 DISTNAME=	OneLOop-1.1
-PKGNAME=	oneloop-1.1
-CATEGORIES=	physics
+PKGNAME=	${DISTNAME:tl}
+CATEGORIES=	math
 MASTER_SITES=	http://helac-phegas.web.cern.ch/helac-phegas/tar-files/
 EXTRACT_SUFX=	.tgz
 

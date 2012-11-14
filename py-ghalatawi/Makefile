@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2012/10/07 11:54:39 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/14 00:16:14 othyro Exp $
 #
 
 DISTNAME=	ghalatawi-0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	textproc python arabic
+CATEGORIES=	python textproc
 MASTER_SITES=	http://pypi.python.org/packages/source/g/ghalatawi/
 EXTRACT_SUFX=	.zip#md5=7afa6950e1786db9729f2582c451a2a9
 

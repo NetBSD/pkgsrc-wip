@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2012/09/29 00:50:42 asau Exp $
+# $NetBSD: Makefile,v 1.17 2012/11/14 00:16:08 othyro Exp $
 #
 
 DISTNAME=	gurlchecker-0.4.1
 PKGREVISION=	4
-CATEGORIES=	www gnome2
+CATEGORIES=	www
 MASTER_SITES=	http://savannah.nongnu.org/download/gurlchecker/stable/0.4/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

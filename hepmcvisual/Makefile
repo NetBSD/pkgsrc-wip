@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2012/09/29 17:05:55 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/14 00:16:09 othyro Exp $
 #
 
 DISTNAME=	HepMCVisual-1.1.6
-PKGNAME=	hepmcvisual-1.1.6
-CATEGORIES=	physics
+PKGNAME=	${DISTNAME:tl}
+CATEGORIES=	misc
 MASTER_SITES=	http://www.hepforge.org/archive/hepmcvisual/
 
 MAINTAINER=	jihbed.research@gmail.com

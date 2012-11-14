@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2012/11/13 22:25:40 othyro Exp $
+# $NetBSD: Makefile,v 1.4 2012/11/14 00:16:12 othyro Exp $
 #
 
 DISTNAME=		plconfig-0.2
-CATEGORIES=		HomePlug
+CATEGORIES=		net
 MASTER_SITES=		https://neon1.net/prog/ \
 			http://www.sourcefiles.org/Networking/Tools/General_Configuration/
 

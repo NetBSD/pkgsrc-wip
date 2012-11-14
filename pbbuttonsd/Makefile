@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2012/10/04 19:44:07 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/11/14 00:16:12 othyro Exp $
 #
 
 DISTNAME=		pbbuttonsd-0.7.2
-CATEGORIES=		wip sysutils
+CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=pbbuttons/}
 
 MAINTAINER=		pancake@phreaker.net

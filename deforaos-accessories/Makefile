@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2012/10/14 19:32:56 khorben Exp $
+# $NetBSD: Makefile,v 1.2 2012/11/14 00:16:04 othyro Exp $
 
 DISTNAME=	Accessories-0.0.3
 PKGNAME=	deforaos-accessories-0.0.3
-CATEGORIES=	wip
+CATEGORIES=	misc
 MASTER_SITES=	http://www.defora.org/os/download/download/3700/
 
 MAINTAINER=	khorben@defora.org

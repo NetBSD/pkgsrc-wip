@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2012/11/12 16:26:44 othyro Exp $
+# $NetBSD: Makefile,v 1.4 2012/11/14 00:16:11 othyro Exp $
 #
 
 DISTNAME=	ode-0.11.1
 PKGNAME= 	lib${DISTNAME}
-CATEGORIES=	science
+CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=opende/}
 EXTRACT_SUFX=	.tar.bz2
 

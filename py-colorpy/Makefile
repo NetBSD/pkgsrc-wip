@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2012/10/06 17:55:29 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/14 00:16:14 othyro Exp $
 #
 
 DISTNAME=	colorpy-0.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	physics python
+CATEGORIES=	graphics python
 MASTER_SITES=	http://markkness.net/colorpy/dist/
 
 MAINTAINER=	jihbed.research@gmail.com

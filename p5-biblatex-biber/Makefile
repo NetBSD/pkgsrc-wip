@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2012/11/13 23:20:31 othyro Exp $
+# $NetBSD: Makefile,v 1.6 2012/11/14 00:16:12 othyro Exp $
 #
 
 DISTNAME=	biblatex-biber
 PKGNAME=	p5-${DISTNAME}
-CATEGORIES=	wip
+CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=biblatex-biber/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

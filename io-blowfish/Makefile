@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2012/11/13 23:05:23 othyro Exp $
+# $NetBSD: Makefile,v 1.4 2012/11/14 00:16:09 othyro Exp $
 
 .include "../../wip/io/version.mk"
 
 PKGNAME=		io-blowfish-${IO_VERSION}
-CATEGORIES=		crypto
+CATEGORIES=		security
 
 MAINTAINER=		milos.negovanovic@googlemail.com
 HOMEPAGE=		www.iolanguage.com

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2012/10/07 11:54:40 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/14 00:16:14 othyro Exp $
 #
 
 DISTNAME=	pygist-1.5.28
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
-CATEGORIES=	graphics science python
+CATEGORIES=	graphics python
 MASTER_SITES=	http://hifweb.lbl.gov/public/software/gist/
 
 MAINTAINER=	jihbed.research@gmail.com

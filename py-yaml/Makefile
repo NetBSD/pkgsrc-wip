@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2012/10/07 13:57:33 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/14 00:16:17 othyro Exp $
 #
 
 DISTNAME=	PyYAML-3.10
 PKGNAME=	${PYPKGPREFIX}-yaml-3.10
-CATEGORIES=	textoproc python
+CATEGORIES=	textproc python
 MASTER_SITES=	http://pyyaml.org/download/pyyaml/
 
 MAINTAINER=	kamelderouiche@yahoo.com

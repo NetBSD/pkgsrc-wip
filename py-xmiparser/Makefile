@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2012/10/07 13:57:33 asau Exp $
+# $NetBSD: Makefile,v 1.5 2012/11/14 00:16:16 othyro Exp $
 #
 
 DISTNAME=	xmiparser-1.5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	wip
+CATEGORIES=	textproc
 MASTER_SITES=	http://pypi.python.org/packages/source/x/xmiparser/
 EXTRACT_SUFX=	.zip
 

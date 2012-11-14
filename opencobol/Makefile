@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2012/10/03 21:32:47 asau Exp $
+# $NetBSD: Makefile,v 1.5 2012/11/14 00:16:12 othyro Exp $
 #
 
 DISTNAME=	open-cobol-1.1
-CATEGORIES=	wip
+CATEGORIES=	lang
 MASTER_SITES=	http://www.sim-basis.de/
 
 MAINTAINER=	rodo@zlug.org

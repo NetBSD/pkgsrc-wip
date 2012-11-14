@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2012/10/07 17:41:40 asau Exp $
+# $NetBSD: Makefile,v 1.5 2012/11/14 00:16:17 othyro Exp $
 
 DISTNAME=		v8
-CATEGORIES=		wip
+CATEGORIES=		lang
 MASTER_SITES=		# none?
 
 MAINTAINER=		msporleder@gmail.com

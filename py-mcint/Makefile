@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2012/10/07 12:25:17 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/14 00:16:14 othyro Exp $
 #
 
 DISTNAME=	mcint-0.1dev5
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	physics python
+CATEGORIES=	math python
 MASTER_SITES=	http://pypi.python.org/packages/source/m/mcint/
 EXTRACT_SUFX=	.zip#md5=2f8d65a42f38e3640b61f074e280982a
 

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2012/10/07 20:11:06 asau Exp $
+# $NetBSD: Makefile,v 1.6 2012/11/14 00:16:17 othyro Exp $
 #
 
 DISTNAME=		wbox-5
-CATEGORIES=		wip www
+CATEGORIES=		www
 MASTER_SITES=		http://www.hping.org/wbox/
 
 MAINTAINER=		bartosz.kuzma@gmail.com

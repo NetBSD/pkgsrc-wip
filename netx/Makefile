@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2012/11/13 22:25:39 othyro Exp $
+# $NetBSD: Makefile,v 1.4 2012/11/14 00:16:12 othyro Exp $
 #
 
 DISTNAME=		netx-${VERSION}
-CATEGORIES=		wip sysutils
+CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=jnlp/}
 EXTRACT_SUFX=		.jar
 VERSION=		0.5

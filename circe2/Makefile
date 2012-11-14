@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2012/09/24 18:26:53 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/14 00:16:01 othyro Exp $
 #
 
 DISTNAME=	circe2-2.0.5
-CATEGORIES=	physics
+CATEGORIES=	math
 MASTER_SITES=	http://www.hepforge.org/archive/whizard/
 
 MAINTAINER=	jihbed.research@gmail.com

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2012/10/06 17:13:29 asau Exp $
+# $NetBSD: Makefile,v 1.6 2012/11/14 00:16:12 othyro Exp $
 #
 
 DISTNAME=	aipy-0.9.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 PKGREVISION=	1
-CATEGORIES=	astronomy python
+CATEGORIES=	misc python
 MASTER_SITES=	http://pypi.python.org/packages/source/a/aipy/
 
 MAINTAINER=	jihbed.research@gmail.com

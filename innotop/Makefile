@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2012/09/30 05:44:15 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/14 00:16:09 othyro Exp $
 #
 
 DISTNAME=	innotop-1.7.2
-CATEGORIES=	wip databases
+CATEGORIES=	databases
 MASTER_SITES=	http://innotop.googlecode.com/files/
 
 MAINTAINER=	filip@joyent.com

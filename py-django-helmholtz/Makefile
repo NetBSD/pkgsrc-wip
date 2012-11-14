@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2012/10/07 11:54:25 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/14 00:16:14 othyro Exp $
 #
 
 DISTNAME=	Helmholtz-0.1.0
 PKGNAME=	${PYPKGPREFIX}-django-${DISTNAME:S/H/h/}
-CATEGORIES=	science  python
+CATEGORIES=	databases python
 MASTER_SITES=	http://pypi.python.org/packages/source/H/Helmholtz/
 
 MAINTAINER=	jihbed.research@gmail.com

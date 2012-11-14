@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2012/10/07 17:41:41 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/14 00:16:17 othyro Exp $
 #
 
 DISTNAME=	vamp-2.0.4
-CATEGORIES=	physics
+CATEGORIES=	misc
 MASTER_SITES=	http://www.hepforge.org/archive/whizard/
 
 MAINTAINER=	jihbed.research@gmail.com

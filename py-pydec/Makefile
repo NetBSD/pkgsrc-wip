@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2012/10/07 13:57:27 asau Exp $
+# $NetBSD: Makefile,v 1.6 2012/11/14 00:16:15 othyro Exp $
 #
 
 DISTNAME=	${PYPKGPREFIX}-pydec-0.67.0
 PKGREVISION=	3
 EGG_NAME=	pydec-1.0.0.dev29
-CATEGORIES=	science python
+CATEGORIES=	math python
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://code.google.com/p/pydec/

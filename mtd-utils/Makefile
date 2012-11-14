@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2012/10/03 15:09:58 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/14 00:16:11 othyro Exp $
 #
 
 DISTNAME=	mtd-utils-1.0.0
-CATEGORIES=	wip
+CATEGORIES=	sysutils
 MASTER_SITES=	ftp://ftp.infradead.org/pub/mtd-utils/
 
 MAINTAINER=	noud4@home.nl

@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2012/10/07 11:54:33 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/11/14 00:16:14 othyro Exp $
 #
 
 DISTNAME=	pyfeyn-0.3.2
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
+PKGNAME=	${DISTNAME:S/py/${PYPKGPREFIX}-/1}
 PKGREVISION=	1
-CATEGORIES=	physics
+CATEGORIES=	graphics
 MASTER_SITES=	http://www.hepforge.org/archive/pyfeyn/
 
 MAINTAINER=	jihbed.research@gmail.com

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2012/09/28 23:21:47 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/14 00:16:04 othyro Exp $
 #
 
 DISTNAME=	FeynEdit-1.0
-PKGNAME=	feynedit-1.0
-CATEGORIES=	physcis java
+PKGNAME=	${DISTNAME:tl}
+CATEGORIES=	java graphics
 MASTER_SITES=	http://www.feynarts.de/
 
 MAINTAINER=	jihbed.research@gmail.com
@@ -13,7 +13,7 @@ LICENSE=	gnu-lgpl-v3
 
 USE_LANGUAGES=	# none
 
-PKG_JVMS_ACCEPTED= sun-jdk6 sun-jdk15 sun-jdk14
+PKG_JVMS_ACCEPTED=	sun-jdk6 sun-jdk15 sun-jdk14
 
 INSTALLATION_DIRS=	bin share/doc/feynedit
 

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2012/10/07 13:57:29 asau Exp $
+# $NetBSD: Makefile,v 1.5 2012/11/14 00:16:16 othyro Exp $
 #
 
 DISTNAME=	ruffus-2.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	science python
+CATEGORIES=	math python
 MASTER_SITES=	http://pypi.python.org/packages/source/r/ruffus/
 EXTRACT_SUFX=	.zip
 

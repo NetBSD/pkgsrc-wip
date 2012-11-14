@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2012/11/13 22:25:31 othyro Exp $
+# $NetBSD: Makefile,v 1.5 2012/11/14 00:16:08 othyro Exp $
 #
 
 DISTNAME=	guile-2.0.5
-CATEGORIES=	wip
+CATEGORIES=	lang
 MASTER_SITES=	ftp://ftp.gnu.org/gnu/guile/
 
 MAINTAINER=	a@zta.lk

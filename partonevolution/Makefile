@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2012/10/04 19:44:07 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/14 00:16:12 othyro Exp $
 #
 
 DISTNAME=	partonevolution-1.1.2
-CATEGORIES=	science
+CATEGORIES=	math
 MASTER_SITES=	http://wwwthep.physik.uni-mainz.de/~stefanw/download/
 
 MAINTAINER=	jihbed.research@gmail.com

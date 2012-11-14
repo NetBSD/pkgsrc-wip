@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2012/10/07 13:57:29 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/14 00:16:16 othyro Exp $
 #
 
 DISTNAME=	scikits.datasmooth-0.5
 PKGNAME=	${PYPKGPREFIX}-scikits_datasmooth-0.5
-CATEGORIES=	science python
+CATEGORIES=	misc python
 MASTER_SITES=	http://pypi.python.org/packages/source/s/scikits.datasmooth/
 
 MAINTAINER=	jihbed.research@gmail.com

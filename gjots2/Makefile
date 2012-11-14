@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2012/11/13 22:25:30 othyro Exp $
+# $NetBSD: Makefile,v 1.7 2012/11/14 00:16:07 othyro Exp $
 #
 
 DISTNAME=		gjots2-2.3.4
 PKGREVISION=		4
-CATEGORIES=		wip x11
+CATEGORIES=		x11
 MASTER_SITES=		http://bhepple.freeshell.org/gjots/
 EXTRACT_SUFX=		.tgz
 

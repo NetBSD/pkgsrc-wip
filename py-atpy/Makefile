@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2012/10/06 17:13:33 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/14 00:16:13 othyro Exp $
 #
 
 DISTNAME=	ATpy-0.9.6
 PKGNAME=	${PYPKGPREFIX}-atpy-0.9.6
-CATEGORIES=	science
+CATEGORIES=	math
 MASTER_SITES=	http://cloud.github.com/downloads/atpy/atpy/
 
 MAINTAINER=	jihbed.research@gmail.com

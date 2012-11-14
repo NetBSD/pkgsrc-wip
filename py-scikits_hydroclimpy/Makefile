@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2012/10/07 13:57:29 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/11/14 00:16:16 othyro Exp $
 #
 
 DISTNAME=	${PYPKGPREFIX}-scikits_hydroclimpy-0.67.1
 EGG_NAME=	${DISTNAME:S|${PYPKGPREFIX}-||:S|kits_|kits.|:Q}
-CATEGORIES=	science python
+CATEGORIES=	python time
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://hydroclimpy.sourceforge.net/

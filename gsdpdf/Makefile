@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2012/09/29 00:50:40 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/14 00:16:08 othyro Exp $
 #
 
 DISTNAME=	gs2009code
 PKGNAME=	gsdpdf-2009
-CATEGORIES=	physics
+CATEGORIES=	math
 MASTER_SITES=	http://projects.hepforge.org/gsdpdf/code/
 
 MAINTAINER=	jihbed.research@gmail.com

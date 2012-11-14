@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2012/09/24 17:14:23 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/11/14 00:16:00 othyro Exp $
 #
 
 DISTNAME=	bagel-2.0.0
-CATEGORIES=	physics
+CATEGORIES=	math
 MASTER_SITES=	http://www2.ph.ed.ac.uk/~paboyle/bagel/
 
 MAINTAINER=	jihbed.research@gmail.com

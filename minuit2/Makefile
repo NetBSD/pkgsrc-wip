@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2012/10/03 15:09:55 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/11/14 00:16:11 othyro Exp $
 #
 
 DISTNAME=	Minuit2-5.28.00
-PKGNAME=	minuit2-5.28.00
-CATEGORIES=	physics
+PKGNAME=	${DISTNAME:tl}
+CATEGORIES=	math
 MASTER_SITES=	http://www.cern.ch/mathlibs/sw/5_28_00/Minuit2/
 
 MAINTAINER=	jihbed.research@gmail.com

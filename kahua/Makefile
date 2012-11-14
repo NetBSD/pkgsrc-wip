@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2012/10/01 21:57:33 asau Exp $
+# $NetBSD: Makefile,v 1.5 2012/11/14 00:16:11 othyro Exp $
 #
 
 DISTNAME=		Kahua-0.3.4
-CATEGORIES=		wip
+CATEGORIES=		www
 MASTER_SITES=		http://www.kahua.org/download/kahua/
 EXTRACT_SUFX=		.tgz
 

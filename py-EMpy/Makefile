@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2012/11/12 16:26:45 othyro Exp $
+# $NetBSD: Makefile,v 1.4 2012/11/14 00:16:12 othyro Exp $
 #
 
 DISTNAME=	EMpy-0.1.2.linux-i686
 PKGNAME=	${PYPKGPREFIX}-EMpy-${VERSION}
-CATEGORIES=	science python
+CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=empy/}
 
 MAINTAINER=	jihbed.research@gmail.com

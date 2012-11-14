@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2012/10/07 13:57:31 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/14 00:16:16 othyro Exp $
 #
 
 DISTNAME=	PyTOPKAPI-0.2.0
-PKGNAME=	${PYPKGPREFIX}-topkapi-0.2.0
-CATEGORIES=	science
+PKGNAME=	${DISTNAME:tl:S/py/${PYPKGPREFIX}-/1}
+CATEGORIES=	misc
 MASTER_SITES=	https://github.com/downloads/sahg/PyTOPKAPI/
 
 MAINTAINER=	jihbed.research@gmail.com

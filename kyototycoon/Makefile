@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2012/10/01 21:57:47 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/14 00:16:11 othyro Exp $
 #
 
 DISTNAME=	kyototycoon-0.9.38
-CATEGORIES=	wip
+CATEGORIES=	databases
 MASTER_SITES=	http://fallabs.com/kyototycoon/pkg/
 
 MAINTAINER=	msporleder@gmail.com

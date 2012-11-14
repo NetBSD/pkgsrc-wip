@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2012/10/03 09:10:41 asau Exp $
+# $NetBSD: Makefile,v 1.10 2012/11/14 00:16:11 othyro Exp $
 #
 
 DISTNAME=		libtifiles
 PKGNAME=		libtifiles-0.5.6
-CATEGORIES=		db
+CATEGORIES=		databases
 MASTER_SITES=		http://www.ticalc.org/pub/unix/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org

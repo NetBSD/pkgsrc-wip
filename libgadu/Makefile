@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2012/10/03 09:10:38 asau Exp $
+# $NetBSD: Makefile,v 1.7 2012/11/14 00:16:11 othyro Exp $
 #
 
 DISTNAME=	libgadu-1.9.0-rc2
-PKGNAME=	libgadu-1.9.0rc2
-CATEGORIES=	wip
+PKGNAME=	${DISTNAME:S/-r/r/1}
+CATEGORIES=	chat
 MASTER_SITES=	http://toxygen.net/libgadu/files/
 
 MAINTAINER=	mjl@luckie.org.nz

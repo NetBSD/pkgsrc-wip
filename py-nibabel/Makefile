@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2012/10/07 12:25:26 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/11/14 00:16:15 othyro Exp $
 #
 
 DISTNAME=	nibabel-1.1.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	science python
+CATEGORIES=	graphics python
 MASTER_SITES=	http://pypi.python.org/packages/source/n/nibabel/
 
 MAINTAINER=	jihbed.research@gmail.com

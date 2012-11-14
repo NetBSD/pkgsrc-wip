@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2012/10/03 09:10:36 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/11/14 00:16:11 othyro Exp $
 #
 
 DISTNAME=	lhapdf-5.8.7b2
-CATEGORIES=	physics
+CATEGORIES=	print
 MASTER_SITES=	http://www.hepforge.org/archive/lhapdf/
 
 MAINTAINER=	jihbed.research@gmail.com

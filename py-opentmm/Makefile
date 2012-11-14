@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2012/10/07 12:25:36 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/14 00:16:15 othyro Exp $
 #
 
 DISTNAME=	openTMM-0.1.0
-PKGNAME=	${PYPKGPREFIX}-opentmm-0.1.0
-CATEGORIES=	science python
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:tl}
+CATEGORIES=	math python
 MASTER_SITES=	http://pypi.python.org/packages/source/o/openTMM/
 
 MAINTAINER=	jihbed.research@gmail.com

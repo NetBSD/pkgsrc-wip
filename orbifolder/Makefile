@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2012/10/03 21:32:47 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/14 00:16:12 othyro Exp $
 #
 
 DISTNAME=	orbifolder-1.2
-CATEGORIES=	physics
+CATEGORIES=	misc
 MASTER_SITES=	http://orbifolder.hepforge.org/source/V1.2/
 EXTRACT_SUFX=	.tgz
 

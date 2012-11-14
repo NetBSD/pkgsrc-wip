@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2012/10/03 15:09:51 asau Exp $
+# $NetBSD: Makefile,v 1.5 2012/11/14 00:16:11 othyro Exp $
 #
 
 DISTNAME=	marsyas-0.2.16
 PKGREVISION=	1
-CATEGORIES=	wip
+CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=marsyas/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

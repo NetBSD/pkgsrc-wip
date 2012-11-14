@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2012/10/03 18:15:31 asau Exp $
+# $NetBSD: Makefile,v 1.11 2012/11/14 00:16:12 othyro Exp $
 #
 
 DISTNAME=	nautilus-sound-converter-1.0.6
 PKGREVISION=	1
-CATEGORIES=	wip
+CATEGORIES=	audio
 MASTER_SITES=	http://nautilus-sound-converter.googlecode.com/files/
 EXTRACT_SUFX=	.tar.bz2
 

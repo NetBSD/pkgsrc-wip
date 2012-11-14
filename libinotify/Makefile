@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2012/11/13 22:25:37 othyro Exp $
+# $NetBSD: Makefile,v 1.5 2012/11/14 00:16:11 othyro Exp $
 #
 
 DISTNAME=	libinotify-20120113
-CATEGORIES=	wip
+CATEGORIES=	x11
 MASTER_SITES=	http://on.encoreinteractive.ca/opensource/
 
 MAINTAINER=	msporleder@gmail.com

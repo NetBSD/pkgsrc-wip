@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.36 2012/09/24 16:56:40 asau Exp $
+# $NetBSD: Makefile,v 1.37 2012/11/14 00:15:59 othyro Exp $
 #
 
 DISTNAME=	audacious-plugins-3.2.3
-CATEGORIES=	wip
+CATEGORIES=	audio
 MASTER_SITES=	http://distfiles.audacious-media-player.org/
 EXTRACT_SUFX=	.tar.bz2
 

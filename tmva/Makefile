@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2012/10/07 17:17:41 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/11/14 00:16:17 othyro Exp $
 #
 
 DISTNAME=	TMVA-v4.1.2
-PKGNAME=	tmva-4.1.2
-CATEGORIES=	science
+PKGNAME=	${DISTNAME:S/v//1:tl}
+CATEGORIES=	math
 MASTER_SITES=	http://tmva.sourceforge.net/downloads/
 EXTRACT_SUFX=	.tgz
 

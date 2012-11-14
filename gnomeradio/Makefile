@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2012/11/13 20:09:31 othyro Exp $
+# $NetBSD: Makefile,v 1.9 2012/11/14 00:16:07 othyro Exp $
 #
 
 DISTNAME=		gnomeradio-1.6
 PKGREVISION=		5
-CATEGORIES=		wip audio
+CATEGORIES=		audio
 MASTER_SITES=		http://www.wh-hms.uni-ulm.de/~mfcn/gnomeradio/packages/
 
 MAINTAINER=		pancake@phreaker.net

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2012/10/07 13:57:30 asau Exp $
+# $NetBSD: Makefile,v 1.6 2012/11/14 00:16:16 othyro Exp $
 #
 
 DISTNAME=	smmap-0.8.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-CATEGORIES=	wip
+CATEGORIES=	devel
 MASTER_SITES=	http://pypi.python.org/packages/source/s/smmap/
 
 MAINTAINER=	kamel.derouiche@gmail.com
