@@ -1,24 +1,30 @@
-# $NetBSD: Makefile,v 1.4 2012/11/13 22:25:30 othyro Exp $
+# $NetBSD: Makefile,v 1.5 2012/11/14 14:36:40 othyro Exp $
 #
 
-DISTNAME=	emerald-themes-0.2.1
+DISTNAME=	emerald-themes-becbfa5be845a4721d8912ed55c3ff4607fe97ba
+PKGNAME=	${DISTNAME:C/-b.+/-0.6.99/W}
 CATEGORIES=	wm
+MASTER_SITES=	http://cgit.compiz.org/fusion/decorators/emerald-themes/snapshot/
+EXTRACT_SUFX=	.tar.bz2
 
-COMMENT=	Emerald themes for beryl
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://wiki.compiz.org/EmeraldThemeManager
+COMMENT=	Themes for the Emerald window decorator
+LICENSE=	gnu-gpl-v2
 
-.include "../../wip/beryl/Makefile.inc"
-
-GNU_CONFIGURE=	yes
 USE_LANGUAGES=	# none
-USE_TOOLS+=	bash gtar
+USE_TOOLS+=	aclocal autoconf autoheader automake autoreconf bash gmake gtar
+GNU_CONFIGURE=	yes
 
 REPLACE_BASH=	themes/import.sh
 
-SUBST_CLASSES+=	gtar
-SUBST_SED.gtar+= -e "s,tar,${LOCALBASE}/bin/gtar,g"
-SUBST_MESSAGE.gtar+= replacing tar
-SUBST_FILES.gtar+= themes/import.sh
-SUBST_STAGE.gtar+=post-configure
+SUBST_CLASSES+=		gtar
+SUBST_SED.gtar=		-e "s|tar|${PREFIX}/bin/gtar|1"
+SUBST_MESSAGE.gtar=	Replacing tar.
+SUBST_FILES.gtar=	themes/import.sh
+SUBST_STAGE.gtar=	post-configure
 
+pre-configure:
+		cd ${WRKSRC} && ./autogen.sh
 
 .include "../../mk/bsd.pkg.mk"
