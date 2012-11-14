@@ -1,0 +1,9 @@
+The Emerald Theme Manager allows you to install, edit and switch between Emerald
+themes. In order for it to work, select Emerald as your window decorator. You
+will also need to enable the Window Decorations plugin (via CCSM).
+
+As a window decorator, Emerald controls the appearance of your window borders;
+please see your desktop environment's own theme settings if you wish to change
+the appearance of things inside windows, such as buttons, menus and scrollbars.
+
+This package contains themes for Emerald.
