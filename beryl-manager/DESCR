@@ -1,5 +1,0 @@
-       beryl-manager is a tray application that allows you  to  launch  beryl,
-       start  different window decorators, start a different window manager or
-       launch beryl-settings to configure your beryl environment. Should beryl
-       crash,  the  beryl-manager  will try to launch a window manager to fall
-       back to.

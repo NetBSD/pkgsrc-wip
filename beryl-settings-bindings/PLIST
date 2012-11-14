@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2007/04/25 07:07:58 bsadewitz Exp $
-lib/pkgconfig/beryl-settings-bindings.pc
-${PYSITELIB}/berylsettings.la

@@ -1,1 +1,0 @@
-Fix -lpthread linkages with stubs (or something else).
