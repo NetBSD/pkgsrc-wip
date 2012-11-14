@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2012/11/14 00:16:17 othyro Exp $
+# $NetBSD: Makefile,v 1.4 2012/11/14 03:45:04 othyro Exp $
 #
 
 DISTNAME=	superchicv1.3
-PKGNAME=	${DISTNAME:S/v//1}
+PKGNAME=	${DISTNAME:S/v/-/1}
 CATEGORIES=	misc
 MASTER_SITES=	http://projects.hepforge.org/superchic/
 EXTRACT_SUFX=	.f
