@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/11/12 03:20:20 outpaddling Exp $
+# $NetBSD: Makefile,v 1.9 2012/11/14 23:29:46 outpaddling Exp $
 # FreeBSD Id: ports/math/suitesparse/Makefile,v 1.38 2011/07/20 16:17:35 bf Exp
 
 # DISTNAME=	SuiteSparse-3.6.1
@@ -94,6 +94,8 @@ do-build:
 #	done
 
 do-install:
+	${INSTALL_DATA} ${WRKSRC}/SuiteSparse_config/SuiteSparse_config.h \
+		${DESTDIR}${PREFIX}/include/suitesparse
 .for d in AMD BTF CAMD CCOLAMD CHOLMOD COLAMD CXSparse KLU SPQR UMFPACK
 	${INSTALL_DATA} ${WRKSRC}/${d}/Include/*.h ${DESTDIR}${PREFIX}/include/suitesparse
 .endfor
