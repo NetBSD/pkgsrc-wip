@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/11/14 00:41:24 outpaddling Exp $
+# $NetBSD: Makefile,v 1.13 2012/11/14 01:25:01 outpaddling Exp $
 #
 
 DISTNAME=	dolfin-1.0.0
@@ -30,10 +30,10 @@ CMAKE_ARGS+=	-DCMAKE_VERBOSE_MAKEFILE:BOOL=ON \
 CXXFLAGS+=	-I${LOCALBASE}/${PYINC}
 .endif
 
-# Fix for variadic template warnings
+# Fix for variadic template warnings, but causes make_pair() error
 .if ${OPSYS} == "Linux" || ${OPSYS} == "NetBSD"
 #CXXFLAGS+=	-std=gnu++0x
-CXXFLAGS+=	-std=c++0x
+#CXXFLAGS+=	-std=c++0x
 .endif
 
 # MAKE_ENV+=	ARMADILLO_DIR=${PREFIX}
