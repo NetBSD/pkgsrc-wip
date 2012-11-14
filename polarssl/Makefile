@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2012/10/01 09:01:15 mwilhelmy Exp $
+# $NetBSD: Makefile,v 1.14 2012/11/14 22:07:40 christtrekker Exp $
 #
 
-DISTNAME=		polarssl-1.1.4-gpl
+DISTNAME=		polarssl-1.2.0-gpl
 PKGNAME=		${DISTNAME:-gpl=}
 CATEGORIES=		security devel
 MASTER_SITES=		http://polarssl.org/code/releases/
@@ -19,8 +19,8 @@ TEST_TARGET=		check
 
 .if defined(PKGSRC_RUN_TEST) && !empty(PKGSRC_RUN_TEST:M[Yy][Ee][Ss])
 USE_TOOLS+=		perl
-REPLACE_PERL=		tests/scripts/*.pl
 .endif
+REPLACE_PERL=		tests/scripts/*.pl
 
 .include "options.mk"
 .include "../../mk/bsd.pkg.mk"
