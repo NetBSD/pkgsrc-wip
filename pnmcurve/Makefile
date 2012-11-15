@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2012/10/05 11:31:52 asau Exp $
+# $NetBSD: Makefile,v 1.7 2012/11/15 19:03:30 othyro Exp $
 #
 
 DISTNAME=	pnmcurve-0.0.4
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.ecademix.com/JohannesHofmann/
 
@@ -14,5 +14,5 @@ GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
 
 .include "../../math/gsl/buildlink3.mk"
-.include "../../x11/fltk/buildlink3.mk"
+.include "../../x11/fltk13/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
