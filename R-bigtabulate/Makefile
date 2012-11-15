@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/08/28 15:39:17 bubuchka Exp $
+# $NetBSD: Makefile,v 1.5 2012/11/15 23:19:50 bubuchka Exp $
 
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
@@ -8,7 +8,7 @@ HOMEPAGE=	http://www.bigmemory.org/
 COMMENT=	R table, tapply, and split-like functionality for (big.)matrix objects
 
 R_PKGNAME=	bigtabulate
-R_PKGVER=	1.0.13
+R_PKGVER=	1.1.0
 
 LICENSE=	gnu-lgpl-v3
 
