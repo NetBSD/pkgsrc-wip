@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.1 2012/11/13 12:53:54 othyro Exp $
+# $NetBSD: options.mk,v 1.2 2012/11/15 23:29:12 othyro Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.scrollz
-PKG_SUPPORTED_OPTIONS=		gnutls inet6 openssl regexp socks4 socks5 utf8
+PKG_SUPPORTED_OPTIONS=		inet6 regexp utf8
 PKG_SUGGESTED_OPTIONS+=		inet6
 PKG_OPTIONS_OPTIONAL_GROUPS=	socks ssl
 PKG_OPTIONS_GROUP.socks=	socks4 socks5
