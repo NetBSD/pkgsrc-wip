@@ -1,3 +1,3 @@
-gxmms2 is a GTK2-based XMMS2 client with a small and simple main window.
-It features a playlist editor with a medialib search, an artist browser
-and a file information dialog.
+gxmms2 is a GTK2 based XMMS2 client, written in C. Its main window is small and
+simple. It includes a playlist editor and a file details dialog. You can use
+gxmms2 to add files to the XMMS2 media library and also manage your playlists.
