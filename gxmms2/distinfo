@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2007/05/27 18:46:32 tnn2 Exp $
+$NetBSD: distinfo,v 1.9 2012/11/15 17:55:11 othyro Exp $
 
-SHA1 (gxmms2.git-snapshot-3d4b4bc7ad71055dc28b00cf4c99fbdac3e177cb.tar.bz2) = b1621e797f0a8324bb663209fc3ffa8e5efe8b81
-RMD160 (gxmms2.git-snapshot-3d4b4bc7ad71055dc28b00cf4c99fbdac3e177cb.tar.bz2) = 78a061c0d1924a95e4830cd3e81264fee71598a2
-Size (gxmms2.git-snapshot-3d4b4bc7ad71055dc28b00cf4c99fbdac3e177cb.tar.bz2) = 57105 bytes
-SHA1 (patch-aa) = d6838fda32cc244627511f9afe40c2ec2c818d29
+SHA1 (gxmms2-0.7.1.tar.gz) = b131d0a8b8ab3ea9fe84067c0f44a994bf196598
+RMD160 (gxmms2-0.7.1.tar.gz) = 6b532bef2562a7ff08d129f89313974ba05a1f65
+Size (gxmms2-0.7.1.tar.gz) = 76473 bytes
+SHA1 (patch-aa) = 327a984aec26ae21a0b896d871e20038bdf0172b
