@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2012/04/24 15:53:54 othyro Exp $
+$NetBSD: distinfo,v 1.2 2012/11/15 21:21:37 othyro Exp $
 
-SHA1 (wmc2d-2010-08-16-13.tar.bz2) = d4bc76d405a5d68e3fbcd56b8a2c90e6560a960c
-RMD160 (wmc2d-2010-08-16-13.tar.bz2) = 57758446accaa7f0162d00907494e40e80951a95
-Size (wmc2d-2010-08-16-13.tar.bz2) = 36267 bytes
+SHA1 (wmc2d-2011-04-29-17.tar.bz2) = 3112ed57625120fa217cb8632a899d54a5ef72d7
+RMD160 (wmc2d-2011-04-29-17.tar.bz2) = e8930f9e6bd0ee71e11c7893e1341606a43f2b6b
+Size (wmc2d-2011-04-29-17.tar.bz2) = 39308 bytes
+SHA1 (patch-Makefile) = b5326488b8b5408f8a4d65e023e0fb36bfa3b86d
+SHA1 (patch-wmc2d.c) = e9e0047b331d8f0187b8ce46c5e7ffac0260f1e0
