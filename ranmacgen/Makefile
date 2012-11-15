@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/11/12 16:51:39 othyro Exp $
+# $NetBSD: Makefile,v 1.4 2012/11/15 20:22:14 othyro Exp $
 #
 
 DISTNAME=	macgen_src_v1.1
@@ -16,6 +16,7 @@ NO_CONFIGURE=	yes
 USE_LANGUAGES+=	c
 
 WRKSRC=			${WRKDIR}
+INSTALLATION_DIRS+=	bin
 
 do-build:
 			cd ${WRKSRC} && ${CC} -o ranmacgen macgen.c
