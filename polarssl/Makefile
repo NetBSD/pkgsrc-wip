@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/11/14 22:07:40 christtrekker Exp $
+# $NetBSD: Makefile,v 1.15 2012/11/15 05:51:57 christtrekker Exp $
 #
 
 DISTNAME=		polarssl-1.2.0-gpl
@@ -22,5 +22,4 @@ USE_TOOLS+=		perl
 .endif
 REPLACE_PERL=		tests/scripts/*.pl
 
-.include "options.mk"
 .include "../../mk/bsd.pkg.mk"

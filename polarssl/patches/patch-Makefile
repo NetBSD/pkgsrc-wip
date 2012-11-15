@@ -1,6 +1,6 @@
 --- Makefile.orig	2012-04-05 07:07:50.000000000 -0500
-+++ Makefile	2012-11-14 15:26:53.000000000 -0600
-@@ -1,6 +1,4 @@
++++ Makefile	2012-11-14 23:27:47.000000000 -0600
+@@ -1,37 +1,24 @@
 -
 -DESTDIR=/usr/local
 -PREFIX=polarssl_
@@ -8,7 +8,16 @@
  
  .SILENT:
  
-@@ -17,18 +15,18 @@
+ all:
+ 	cd library  && $(MAKE) all && cd ..
+-	cd programs && $(MAKE) all && cd ..
+ 	cd tests    && $(MAKE) all && cd ..
+ 
+ no_test:
+ 	cd library  && $(MAKE) all && cd ..
+-	cd programs && $(MAKE) all && cd ..
+ 
+ lib:
  	cd library  && $(MAKE) all && cd ..
  
  install:
@@ -23,14 +32,14 @@
 +	cp library/libpolarssl.* ${DESTDIR}${PREFIX}/lib
  	
 -	mkdir -p $(DESTDIR)/bin
-+	mkdir -p ${DESTDIR}${PREFIX}/bin
- 	for p in programs/*/* ; do              \
- 	    if [ -x $$p ] && [ ! -d $$p ] ;     \
- 	    then                                \
+-	for p in programs/*/* ; do              \
+-	    if [ -x $$p ] && [ ! -d $$p ] ;     \
+-	    then                                \
 -	        f=$(PREFIX)`basename $$p` ;     \
 -	        cp $$p $(DESTDIR)/bin/$$f ;     \
-+	        f=$(APPNAME_PRE)`basename $$p` ;     \
-+	        cp $$p ${DESTDIR}${PREFIX}/bin/$$f ;     \
- 	    fi                                  \
- 	done
- 
+-	    fi                                  \
+-	done
+-
+ clean:
+ 	cd library  && $(MAKE) clean && cd ..
+ 	cd programs && $(MAKE) clean && cd ..
