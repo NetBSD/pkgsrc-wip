@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2009/06/02 13:12:07 noud4 Exp $
-
-SHA1 (heliodor-0.2.1.tar.bz2) = ffb259dc4964ab017c435c9b14e27e723077882c
-RMD160 (heliodor-0.2.1.tar.bz2) = 2b6254c408603add0bc31428d182f6e20aec9693
-Size (heliodor-0.2.1.tar.bz2) = 252950 bytes
-SHA1 (patch-aa) = d6f0846cc921cf00e2a8727174eaf2c664429eab
