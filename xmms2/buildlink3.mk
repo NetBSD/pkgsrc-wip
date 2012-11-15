@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2012/11/11 13:44:12 othyro Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2012/11/15 16:08:15 othyro Exp $
 
 BUILDLINK_TREE+=	xmms2
 
@@ -108,6 +108,7 @@ pkgbase := xmms2
 .endif
 
 .if !empty(PKG_BUILD_OPTIONS.xmms2:Mpython)
+.include "../../lang/python/pyversion.mk"
 .include "../../devel/py-cython/buildlink3.mk"
 .endif
 
