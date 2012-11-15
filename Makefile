@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4950 2012/11/15 13:33:53 othyro Exp $
+# $Id: Makefile,v 1.4951 2012/11/15 20:09:36 kristerw Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2253,10 +2253,6 @@ SUBDIR+=	py-Fnorb-docs
 SUBDIR+=	py-Genetic
 SUBDIR+=	py-Impacket
 SUBDIR+=	py-OpenAL
-SUBDIR+=	py-PEAK
-SUBDIR+=	py-PEAK-docs
-SUBDIR+=	py-Protocols
-SUBDIR+=	py-Protocols-docs
 SUBDIR+=	py-Py2Play
 SUBDIR+=	py-PyPE
 SUBDIR+=	py-PythonDirector
