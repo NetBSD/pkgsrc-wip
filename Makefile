@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4949 2012/11/15 01:50:59 othyro Exp $
+# $Id: Makefile,v 1.4950 2012/11/15 13:33:53 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -3183,6 +3183,7 @@ SUBDIR+=	uim-chewing
 SUBDIR+=	ukncbtl
 SUBDIR+=	umix
 SUBDIR+=	umurmur
+SUBDIR+=	unagi
 SUBDIR+=	undo-tree
 SUBDIR+=	unix2tcp
 SUBDIR+=	unmo3
