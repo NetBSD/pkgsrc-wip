@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/30 18:42:22 othyro Exp $
+# $NetBSD: Makefile,v 1.4 2012/11/15 18:51:53 othyro Exp $
 #
 
 DISTNAME=	libdbusmenu-12.10.2
@@ -21,12 +21,19 @@ PKGCONFIG_OVERRIDE+=	libdbusmenu-gtk/dbusmenu-gtk3-0.4.pc.in
 PKGCONFIG_OVERRIDE+=	libdbusmenu-gtk/dbusmenu-gtk-0.4.pc.in
 PKGCONFIG_OVERRIDE+=	tests/dbusmenu-jsonloader-0.4.pc.in
 
+SUBST_CLASSES+=		python
+SUBST_MESSAGE.python=	Fixing python interpreter.
+SUBST_FILES.python=	tools/dbusmenu-bench
+SUBST_STAGE.python=	post-build
+SUBST_SED.python=	-e "s|/usr/bin/env python|${PYTHONBIN}|1"
+
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "Linux"
 BUILD_DEPENDS+=		valgrind-[0-9]*:../../devel/valgrind
 .endif
 
+.include "../../lang/python/application.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../devel/gobject-introspection/buildlink3.mk"
 .include "../../textproc/json-glib/buildlink3.mk"
