@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4952 2012/11/15 23:01:45 bubuchka Exp $
+# $Id: Makefile,v 1.4953 2012/11/15 23:43:26 bubuchka Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -23,6 +23,7 @@ SUBDIR+=	PPower4
 SUBDIR+=	PyBabelFish
 SUBDIR+=	Pythonol
 SUBDIR+=	R-BiocGenerics
+SUBDIR+=	R-C50
 SUBDIR+=	R-Rgraphviz
 SUBDIR+=	R-Rserve
 SUBDIR+=	R-VGAM
