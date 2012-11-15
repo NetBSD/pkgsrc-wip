@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4951 2012/11/15 20:09:36 kristerw Exp $
+# $Id: Makefile,v 1.4952 2012/11/15 23:01:45 bubuchka Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -28,6 +28,7 @@ SUBDIR+=	R-Rserve
 SUBDIR+=	R-VGAM
 SUBDIR+=	R-biganalytics
 SUBDIR+=	R-bigmemory
+SUBDIR+=	R-bigmemory.sri
 SUBDIR+=	R-bigtabulate
 SUBDIR+=	R-bnlearn
 SUBDIR+=	R-digest
