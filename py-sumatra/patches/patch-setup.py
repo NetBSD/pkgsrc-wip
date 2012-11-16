@@ -1,5 +1,6 @@
-$NetBSD: patch-setup.py,v 1.2 2012/11/16 11:13:17 slitvinov Exp $
+$NetBSD: patch-setup.py,v 1.3 2012/11/16 11:18:32 slitvinov Exp $
 
+# add a python version number to program names
 --- setup.py.orig	2012-10-18 13:02:49.000000000 +0000
 +++ setup.py
 @@ -6,6 +6,7 @@ from setuptools import setup
