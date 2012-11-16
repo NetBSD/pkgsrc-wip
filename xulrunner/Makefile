@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2012/11/13 20:35:53 othyro Exp $
+# $NetBSD: Makefile,v 1.23 2012/11/16 21:48:35 othyro Exp $
 
 .include "dist.mk"
 PKGNAME=	xulrunner-${MOZ_BRANCH}${MOZ_BRANCH_MINOR}
@@ -22,7 +22,6 @@ PKGCONFIG_OVERRIDE+=	xulrunner/installer/mozilla-plugin.pc.in
 
 CONFIGURE_ARGS+=	--enable-application=xulrunner
 CONFIGURE_ARGS+=	--enable-libxul
-USE_TOOLS+=		autoconf
 
 ALL_ENV+=		MOZILLA_PKG_NAME=xulrunner
 
