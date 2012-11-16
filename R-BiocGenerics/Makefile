@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/08/28 15:39:17 bubuchka Exp $
+# $NetBSD: Makefile,v 1.6 2012/11/16 00:07:43 bubuchka Exp $
 
 CATEGORIES=	devel math
 MASTER_SITES=	http://www.bioconductor.org/packages/release/bioc/src/contrib/
@@ -8,7 +8,7 @@ HOMEPAGE=	http://www.bioconductor.org/
 COMMENT=	Generic functions for Bioconductor
 
 R_PKGNAME=	BiocGenerics
-R_PKGVER=	0.2.0
+R_PKGVER=	0.4.0
 
 LICENSE=	artistic-2.0
 
