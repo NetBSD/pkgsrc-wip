@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/10/10 09:12:39 fhajny Exp $
+# $NetBSD: Makefile,v 1.17 2012/11/16 21:45:05 kristerw Exp $
 
 DISTNAME=	mongodb-src-r2.2.0
 PKGNAME=	${DISTNAME:S/src-r//}
@@ -13,7 +13,7 @@ LICENSE=	gnu-agpl-v3 # Client and tools licensed under apache-2.0
 NO_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
 
-BUILD_DEPENDS+=	scons:../../devel/scons
+BUILD_DEPENDS+=	scons-[0-9]*:../../devel/scons
 
 SCONS_BIN=	${PREFIX}/bin/scons
 SCONS_ARGS=	${_MAKE_JOBS}
