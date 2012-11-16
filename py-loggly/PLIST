@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1 2012/10/02 00:10:26 jihbed Exp $
-bin/loggly-add-device2.7
-bin/loggly-create-input2.7
-bin/loggly-delete-input2.7
-bin/loggly-describe-input2.7
-bin/loggly-remove-device2.7
+@comment $NetBSD: PLIST,v 1.2 2012/11/16 23:37:01 noud4 Exp $
+bin/loggly-add-device${PYVERSSUFFIX}
+bin/loggly-create-input${PYVERSSUFFIX}
+bin/loggly-delete-input${PYVERSSUFFIX}
+bin/loggly-describe-input${PYVERSSUFFIX}
+bin/loggly-remove-device${PYVERSSUFFIX}
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
