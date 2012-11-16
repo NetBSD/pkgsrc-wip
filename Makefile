@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4955 2012/11/16 04:24:45 schnoebe Exp $
+# $Id: Makefile,v 1.4956 2012/11/16 22:36:21 helgoman Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -365,6 +365,7 @@ SUBDIR+=	csstidy
 SUBDIR+=	csv-mode
 SUBDIR+=	cubature
 SUBDIR+=	cup
+SUBDIR+=	cutecom
 SUBDIR+=	cvc3
 SUBDIR+=	cvs-syncmail
 SUBDIR+=	cvs20hg
