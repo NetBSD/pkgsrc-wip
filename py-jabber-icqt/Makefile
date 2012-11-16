@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2012/10/07 11:54:46 asau Exp $
+# $NetBSD: Makefile,v 1.28 2012/11/16 05:14:45 schnoebe Exp $
 
 DISTNAME=		pyicqt-0.8.1.5
 PKGNAME=		${PYPKGPREFIX}-jabber-${DISTNAME:S/py//}
@@ -35,6 +35,9 @@ NO_BUILD=		yes
 RCD_SCRIPTS=	pyicqt
 
 PYTHON_PATCH_SCRIPTS+=	PyICQt.py
+PYTHON_PATCH_SCRIPTS+=	tools/infodump.py
+PYTHON_PATCH_SCRIPTS+=	tools/managessi.py
+PYTHON_PATCH_SCRIPTS+=	tools/migrate.py
 
 TRANSPORTDIR=		${JABBER_TRANSDIR}/pyicqt
 

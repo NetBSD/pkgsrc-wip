@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/10/07 11:54:46 asau Exp $
+# $NetBSD: Makefile,v 1.9 2012/11/16 05:14:45 schnoebe Exp $
 
 DISTNAME=	palaver-0.6
 PKGNAME=	${PYPKGPREFIX}-jabber-${DISTNAME}
@@ -9,6 +9,7 @@ MAINTAINER=	eric@cirr.com
 HOMEPAGE=	http://code.stanziq.com/palaver
 COMMENT=	XEP-0045 + XEP-0128 Multi-User Conferencing package
 LICENSE=	mit
+BROKEN=		Distfile has disappeared.
 
 #
 # jabberd isn't really a dependency since the transport can run on a

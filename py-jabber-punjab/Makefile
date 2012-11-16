@@ -1,15 +1,17 @@
-# $NetBSD: Makefile,v 1.3 2012/11/16 05:08:55 schnoebe Exp $
+# $NetBSD: Makefile,v 1.4 2012/11/16 05:14:45 schnoebe Exp $
 
-DISTNAME=	idavoll-0.8.1
+DISTNAME=	punjab-0.13
 PKGNAME=	${PYPKGPREFIX}-jabber-${DISTNAME}
 CATEGORIES=	chat python
-MASTER_SITES=	http://idavoll.ik.nu/releases/0.8.1/
+# MASTER_SITES=	http://code.stanziq.com/punjab/browser/releases/
+# MASTER_SITES=	http://code.stanziq.com/punjab/export/38/releases/
+MASTER_SITES=	http://code.stanziq.com/cgit/punjab/punjab/snapshot/
 
 MAINTAINER=	eric@cirr.com
-HOMEPAGE=	http://idavoll.ik.nu/
-COMMENT=	XMPP publish-subscribe (XEP-0060) component (via twistd)
+HOMEPAGE=	http://code.stanziq.com/punjab
+COMMENT=	HTTP XMMP client interface implementing BOSH/XEP-0124
+BROKEN=		Source tarballs have disappeared.
 
-PKG_DESTDIR_SUPPORT=	none
 #
 # jabberd isn't really a dependency since the transport can run on a
 # different server than the main jabber server (not that many sites will
@@ -17,9 +19,7 @@ PKG_DESTDIR_SUPPORT=	none
 #
 # DEPENDS+=	jabberd-[0-9]*:../../chat/jabberd2
 DEPENDS+=	${PYPKGPREFIX}-twisted>=8.1.0:../../net/py-twisted
-DEPENDS+=	${PYPKGPREFIX}-crypto>=2.0.1:../../security/py-crypto
-# wonkle
-# python < 2.5, uuid
+DEPENDS+=	${PYPKGPREFIX}-amkCrypto>=2.0.1:../../security/py-amkCrypto
 
 # it's a python package using the standard Python packager
 PYDISTUTILSPKG=	yes
@@ -36,19 +36,18 @@ PKG_GROUPS_VARS+=	JABBER_GROUP
 
 .include "../../wip/jabberd/transports.mk"
 
-DOCDIR=                 ${PREFIX}/share/doc/idavoll
-DOCFILES=               README INSTALL NEWS LICENSE
+DOCDIR=                 ${PREFIX}/share/doc/punjab
+DOCFILES=               README.txt INSTALL.txt
 
-INSTALLATION_DIRS=	share/doc/idavoll
+INSTALLATION_DIRS=	share/doc/punjab
 
-RCD_SCRIPTS=	idavoll
+RCD_SCRIPTS=	punjab
 
 post-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
 .for f in ${DOCFILES}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/${f} ${DOCDIR}
 .endfor
-	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
+	${INSTALL_DATA_DIR} ${EGDIR}
 
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Localizing Paths
@@ -64,5 +63,5 @@ SUBST_SED.paths+=	-e 's,@PKG_SYSCONFDIR@,${PKG_SYSCONFDIR},g'
 SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
 SUBST_SED.paths+=	-e 's,@TRANSPORTDIR@,${TRANSPORTDIR},g'
 
-.include "../../lang/python/egg.mk"
+.include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

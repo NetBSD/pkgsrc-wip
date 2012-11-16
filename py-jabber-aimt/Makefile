@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2012/10/07 11:54:46 asau Exp $
+# $NetBSD: Makefile,v 1.16 2012/11/16 05:14:45 schnoebe Exp $
 
 DISTNAME=		pyaim-t-0.8a
 PKGNAME=		${PYPKGPREFIX}-jabber-${DISTNAME:S/py//}
@@ -26,6 +26,9 @@ DEPENDS+=	${PYPKGPREFIX}-imaging>=1.1.5:../../graphics/py-imaging
 # EXTRACT_ONLY=		# yes
 NO_BUILD=		yes
 PYTHON_PATCH_SCRIPTS+=	PyAIMt.py
+PYTHON_PATCH_SCRIPTS+=	tools/infodump.py
+PYTHON_PATCH_SCRIPTS+=	tools/managessi.py
+PYTHON_PATCH_SCRIPTS+=	tools/migrate.py
 
 # always include bsd.prefs.mk before any .if or .ifdef statements
 .include "../../mk/bsd.prefs.mk"
