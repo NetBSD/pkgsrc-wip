@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2012/11/09 17:43:05 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/11/16 23:59:10 noud4 Exp $
 #
 
 DISTNAME=	Forthon-0.8.10
 PKGNAME=        ${PYPKGPREFIX}-forthon-0.8.10
+PKGREVISION=	1
 CATEGORIES=	lang python
 MASTER_SITES=	http://hifweb.lbl.gov/Forthon/
 EXTRACT_SUFX=	.tgz
