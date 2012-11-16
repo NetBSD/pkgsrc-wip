@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/08/30 19:03:42 bubuchka Exp $
+# $NetBSD: Makefile,v 1.8 2012/11/16 00:15:30 bubuchka Exp $
 
 CATEGORIES=	math
 MASTER_SITES=	http://www.bioconductor.org/packages/release/bioc/src/contrib/
@@ -8,11 +8,10 @@ HOMEPAGE=	http://www.bioconductor.org/packages/release/bioc/html/graph.html
 COMMENT=	R package to handle graph data structures
 
 R_PKGNAME=	graph
-R_PKGVER=	1.34.0
+R_PKGVER=	1.36.1
 
 LICENSE=	artistic-2.0
 
-REPLACE_SH+=	inst/unitTests/*.sh
 USE_LANGUAGES=	c
 
 BUILDLINK_API_DEPENDS.R+=	R>=2.10.0
