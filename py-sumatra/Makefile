@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2012/10/27 16:52:10 noud4 Exp $
+# $NetBSD: Makefile,v 1.10 2012/11/16 11:13:16 slitvinov Exp $
 #
 
-DISTNAME=	Sumatra-0.3.0.tar
+VER=		0.4.0
+DISTNAME=	Sumatra-${VER}.tar
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/S/s/S/.tar//}
 PKGREVISION=	1
 CATEGORIES=	biology python
@@ -10,6 +11,10 @@ EXTRACT_SUFX=	.gz
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://neuralensemble.org/trac/sumatra/
+# The name of the licence is CeCILL [1] but it is GNU GPL v2 compatible [2]
+# [1] see work/Sumatra-0.4.0/COPYING
+# [2] http://projects.opensource.org/pipermail/license-review/2012-February/000269.html
+LICENSE=	gnu-gpl-v2
 COMMENT=	Tracking projects based on numerical simulation or analysis
 
 
@@ -23,7 +28,7 @@ DEPENDS+=	${PYPKGPREFIX}-httplib2>=0.6.0:../../www/py-httplib2
 DEPENDS+=	${PYPKGPREFIX}-mpi4py>=1.2.1:../../wip/py-mpich4py
 DEPENDS+=	${PYPKGPREFIX}-genesis>=0:../../wip/py-genesis
 
-WRKSRC=		${WRKDIR}/Sumatra-0.3.0
+WRKSRC=		${WRKDIR}/Sumatra-${VER}
 USE_LANGUAGES=	# none
 
 PYDISTUTILSPKG=	yes
@@ -36,8 +41,9 @@ post-extract:
 	${MV} ${WRKSRC}/bin/smt ${WRKSRC}/bin/smt${PYVERSSUFFIX}
 	${MV} ${WRKSRC}/bin/smtweb ${WRKSRC}/bin/smtweb${PYVERSSUFFIX}
 
+# test requers devel/py-coverage
 do-test:
-	${RUN} cd ${WRKSRC}; ${TEST_ENV} ${SH} test/unittests/all_tests.sh
+	${RUN} cd ${WRKSRC}/test/unittests; ${TEST_ENV} ${SH} all_tests.sh
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/*.txt ${DESTDIR}${PREFIX}/share/doc/py-sumatra

@@ -1,6 +1,6 @@
-$NetBSD: patch-setup.py,v 1.1 2012/08/17 18:07:23 slitvinov Exp $
+$NetBSD: patch-setup.py,v 1.2 2012/11/16 11:13:17 slitvinov Exp $
 
---- setup.py.orig	2011-03-14 13:34:29.000000000 +0000
+--- setup.py.orig	2012-10-18 13:02:49.000000000 +0000
 +++ setup.py
 @@ -6,6 +6,7 @@ from setuptools import setup
  from distutils.command.sdist import sdist
@@ -10,9 +10,9 @@ $NetBSD: patch-setup.py,v 1.1 2012/08/17 18:07:23 slitvinov Exp $
  
  
  class sdist_hg(sdist):
-@@ -38,7 +39,7 @@ setup(
-     package_data = {'sumatra': ['web/media/smt.css',
-                                 'web/media/*.png',
+@@ -39,7 +40,7 @@ setup(
+                                 'web/media/img/*', 'web/media/css/*.css', 'web/media/extras/fontawesome/font/*',
+                                 'web/media/extras/fontawesome/sass/*', 'web/media/extras/fontawesome/css/*.css',          
                                  'web/templates/*.html']},
 -    scripts = ['bin/smt', 'bin/smtweb'],
 +    scripts= ['bin/smt'+sys.version[:3], 'bin/smtweb'+sys.version[:3]],
