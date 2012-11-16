@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.7 2012/08/30 19:03:42 bubuchka Exp $
+# $NetBSD: Makefile,v 1.8 2012/11/16 01:34:38 bubuchka Exp $
 
 CATEGORIES=	graphics math
-MASTER_SITES=	http://www.bioconductor.org/packages/release/bioc/src/contrib/
+MASTER_SITES=	http://www.bioconductor.org/packages/2.10/bioc/src/contrib/
 
 MAINTAINER=	mishka@NetBSD.org
 HOMEPAGE=	http://www.bioconductor.org/packages/release/bioc/html/Rgraphviz.html
 COMMENT=	Plotting capabilities for R graph objects
 
 R_PKGNAME=	Rgraphviz
-R_PKGVER=	1.34.0
+R_PKGVER=	1.34.2
 
 LICENSE=	artistic-2.0
 

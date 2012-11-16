@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2012/05/10 10:54:15 bubuchka Exp $
+$NetBSD: distinfo,v 1.2 2012/11/16 01:34:38 bubuchka Exp $
 
-SHA1 (R/Rgraphviz_1.34.0.tar.gz) = 84c30ad34883113ac410db9757871925f6fe3835
-RMD160 (R/Rgraphviz_1.34.0.tar.gz) = 24d12d9b28dd7b13b96202541345ce4eb8217840
-Size (R/Rgraphviz_1.34.0.tar.gz) = 694533 bytes
+SHA1 (R/Rgraphviz_1.34.2.tar.gz) = 602fa13dcf9130e2449d902adb200751180f88fa
+RMD160 (R/Rgraphviz_1.34.2.tar.gz) = ded47653d207b364c518b99052ee0eaacd230f43
+Size (R/Rgraphviz_1.34.2.tar.gz) = 689663 bytes
