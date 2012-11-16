@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2010/11/26 12:38:21 makoto Exp $
+# $NetBSD: Makefile.common,v 1.2 2012/11/16 21:27:26 kristerw Exp $
 #
 # used by wip/nios2-binutils/Makefile
 # used by wip/nios2-gcc/Makefile
@@ -20,7 +20,7 @@ USE_CROSSBASE=		yes
 BUILD_DEFS+=		CROSSBASE
 PATH:=			${CROSSBASE}/bin:${PATH}
 
-BUILD_DEPENDS+=		gtexinfo:../../devel/gtexinfo
+BUILD_DEPENDS+=		gtexinfo-[0-9]*:../../devel/gtexinfo
 
 .if defined(GNU_CONFIGURE)
 CONFIGURE_ARGS=		# reset

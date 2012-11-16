@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/03 18:15:32 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/11/16 21:27:26 kristerw Exp $
 
 PKG_VERSION=		3.4.6
 # PKGNAME will have option name only when explictly selected
@@ -17,7 +17,7 @@ USE_TOOLS+=		gmake makeinfo perl
 USE_GNU_CONFIGURE_HOST=	no
 #BUILD_DEFS+=		CROSSBASE	#included in ../nios2/Makefile.common
 
-DEPENDS+=		nios2-binutils:../../wip/nios2-binutils
+DEPENDS+=		nios2-binutils-[0-9]*:../../wip/nios2-binutils
 
 .include		"../../wip/nios2/Makefile.common"
 
