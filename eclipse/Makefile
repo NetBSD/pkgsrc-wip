@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/09/28 22:07:30 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/11/16 02:04:52 mayureshw Exp $
 #
 
 DISTNAME=	${PKGNAME_NOREV}
@@ -12,7 +12,7 @@ HOMEPAGE=	http://www.eclipse.org/
 COMMENT=	Java IDE
 LICENSE=	eclipse-license
 
-PKG_JVMS_ACCEPTED= sun-jdk6 sun-jdk15 sun-jdk14
+PKG_JVMS_ACCEPTED= sun-jdk6 sun-jdk15 sun-jdk14 openjdk7-bin openjdk7
 
 MAKE_ENV+=	JAVA_HOME=${PKG_JAVA_HOME:Q}
 
