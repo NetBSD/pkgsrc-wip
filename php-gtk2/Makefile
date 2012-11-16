@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/05 11:12:56 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/11/16 18:51:39 kristerw Exp $
 
 MODNAME=		php_gtk2
 PECL_VERSION=		2.0.1
@@ -16,7 +16,7 @@ LICENSE=		gnu-lgpl-v2.1
 USE_TOOLS+=		awk
 USE_TOOLS+=		pkg-config
 
-BUILD_DEPENDS+=		re2c:../../devel/re2c
+BUILD_DEPENDS+=		re2c-[0-9]*:../../devel/re2c
 
 CONFIGURE_ARGS+=	--without-libglade
 

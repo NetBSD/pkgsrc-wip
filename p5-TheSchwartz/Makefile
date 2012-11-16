@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/04 19:12:00 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/16 19:31:54 kristerw Exp $
 
 DISTNAME=		TheSchwartz-1.10
 PKGNAME=		p5-${DISTNAME}
@@ -11,8 +11,8 @@ COMMENT=		Reliable job queue system
 LICENSE=		artistic-2.0
 
 DEPENDS+=		p5-Data-ObjectDriver>=0.04:../../wip/p5-Data-ObjectDriver
-DEPENDS+=		p5-Digest-MD5:../../security/p5-Digest-MD5
-DEPENDS+=		p5-Storable:../../devel/p5-Storable
+DEPENDS+=		p5-Digest-MD5-[0-9]*:../../security/p5-Digest-MD5
+DEPENDS+=		p5-Storable-[0-9]*:../../devel/p5-Storable
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
