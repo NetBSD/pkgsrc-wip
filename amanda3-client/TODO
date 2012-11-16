@@ -1,3 +1,0 @@
-Make sure $PREFIX/libexec/amanda/run* end up setuid(root).
-
-see amanda3-common for more.
