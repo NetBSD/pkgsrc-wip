@@ -1,2 +1,1 @@
-BOSH/XEP-0124 component. Implements an HTTP gateway to XMPP. Useful for
-browser based jabber clients.
+XEP-0060 publish-subscribe component, implemented in Python, using Twisted.
