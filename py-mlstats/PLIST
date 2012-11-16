@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/04/27 22:34:10 jihbed Exp $
-bin/mlstats2.6
+@comment $NetBSD: PLIST,v 1.2 2012/11/16 23:19:39 noud4 Exp $
+bin/mlstats${PYVERSSUFFIX}
 ${PYSITELIB}/pymlstats/__init__.py
 ${PYSITELIB}/pymlstats/__init__.pyc
 ${PYSITELIB}/pymlstats/__init__.pyo

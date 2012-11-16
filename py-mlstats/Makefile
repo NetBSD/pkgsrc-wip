@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2012/10/07 12:25:19 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/16 23:19:39 noud4 Exp $
 #
 
 DISTNAME=	mlstats-0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGREVISION=	1	
 CATEGORIES=	devel python
 MASTER_SITES=	https://forge.morfeo-project.org/frs/download.php/777/
 
