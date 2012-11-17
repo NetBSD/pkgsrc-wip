@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/09/24 16:56:29 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/17 10:39:33 kristerw Exp $
 
 DISTNAME=	Typewriter-0.0.1
 CATEGORIES=	editors gnustep
@@ -24,7 +24,7 @@ WRKSRC=			${WRKDIR}/$(SVN_MODULE.etoile)
 
 .include "../../wip/mk/svn-package.mk"
 
-DEPENDS+=	etoile-core:../../wip/etoile-core
+DEPENDS+=	etoile-core-[0-9]*:../../wip/etoile-core
 .include "../../devel/gnustep-base/buildlink3.mk"
 .include "../../x11/gnustep-gui/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

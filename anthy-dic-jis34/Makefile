@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/09/24 16:56:33 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/17 10:37:06 kristerw Exp $
 
 DISTNAME=	anthy-dic-jis34-0.2
 CATEGORIES=	inputmethod
@@ -20,7 +20,7 @@ AUTO_MKDIRS=	YES
 
 INSTALL_FILES=	README COPYING jis3_4.t ChangeLog
 
-DEPENDS+=	anthy:../../inputmethod/anthy
+DEPENDS+=	anthy-[0-9]*:../../inputmethod/anthy
 
 do-install:
 .for file in ${INSTALL_FILES}
