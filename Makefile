@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4956 2012/11/16 22:36:21 helgoman Exp $
+# $Id: Makefile,v 1.4957 2012/11/17 10:55:43 kristerw Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -666,7 +666,6 @@ SUBDIR+=	fvwm1-tch
 SUBDIR+=	fxrays
 SUBDIR+=	g21k-binutils
 SUBDIR+=	gDesklets
-SUBDIR+=	gDesklets-CornerXMMS
 SUBDIR+=	gDesklets-rssgrab
 SUBDIR+=	gDesklets-starterbar
 SUBDIR+=	galib
