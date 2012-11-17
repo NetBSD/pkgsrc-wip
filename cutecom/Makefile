@@ -1,26 +1,27 @@
-# $NetBSD: Makefile,v 1.1 2012/11/16 22:25:07 helgoman Exp $
+# $NetBSD: Makefile,v 1.2 2012/11/17 17:31:58 othyro Exp $
 #
 
+VERSION=	0.22.0
+DISTNAME=	cutecom-${VERSION}
+PKGREVISION=	1
+CATEGORIES=	comms
+MASTER_SITES=	http://cutecom.sourceforge.net/
 
-VERSION=			0.22.0
-DISTNAME=			cutecom-${VERSION}
-CATEGORIES=			comms
-MASTER_SITES=		http://cutecom.sourceforge.net/
+MAINTAINER=	helgoman@users.sourceforge.net
+HOMEPAGE=	http://cutecom.sourceforge.net/
+COMMENT=	Graphical serial terminal
+LICENSE=	gnu-gpl-v2
 
-MAINTAINER=			helgoman@users.sourceforge.net
-HOMEPAGE=			http://cutecom.sourceforge.net/
-COMMENT=			Graphical serial terminal
-LICENSE=			gnu-gpl-v2
+DEPENDS+=      	lrzsz>=0.12.20:../../comms/lrzsz
 
-DEPENDS+=       	lrzsz>=0.12.20:../../comms/lrzsz
+USE_CMAKE=	yes
+USE_LANGUAGES=	c c++
 
-PKG_DESTDIR_SUPPORT=	user-destdir
+SUBST_CLASSES+=			pkgmandir
+SUBST_FILES.pkgmandir=		CMakeLists.txt
+SUBST_MESSAGE.pkgmandir=	Fixing PKGMANDIR.
+SUBST_STAGE.pkgmandir=		pre-configure
+SUBST_SED.pkgmandir=		-e "s|share/man|${PKGMANDIR}|1"
 
-.include "../../x11/qt4-libs/buildlink3.mk"
 .include "../../x11/qt4-tools/buildlink3.mk"
-
-HAS_CONFIGURE=		yes
-USE_CMAKE=			yes
-USE_LANGUAGES=		c c++
-
 .include "../../mk/bsd.pkg.mk"
