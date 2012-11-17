@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2012/11/08 23:00:23 outpaddling Exp $
+# $NetBSD: Makefile,v 1.6 2012/11/17 18:31:46 outpaddling Exp $
 
 DISTNAME=	libctl-3.2.1
-CATEGORIES=	math
+CATEGORIES=	devel
 MASTER_SITES=	http://ab-initio.mit.edu/libctl/
 
 MAINTAINER=	jwbacon@tds.net
@@ -10,7 +10,6 @@ COMMENT=	Guile-based flexible control file library for scientific simulations
 LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
-USE_LIBTOOL=	yes
 
 USE_LANGUAGES=	c fortran77
 
