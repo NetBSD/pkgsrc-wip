@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/09/24 17:14:27 asau Exp $
+# $NetBSD: Makefile,v 1.18 2012/11/17 11:03:23 kristerw Exp $
 #
 
 DISTNAME=	beast-0.5.4
@@ -13,7 +13,7 @@ LICENSE=	gnu-lgpl-v3
 
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
-USE_TOOLS+=	gmake autoconf213 autoconf
+USE_TOOLS+=	gmake autoconf213
 GNU_CONFIGURE=	yes
 
 LDFLAGS+=	${LIBOSSAUDIO}
