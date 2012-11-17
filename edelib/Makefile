@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/11/12 23:26:26 christtrekker Exp $
+# $NetBSD: Makefile,v 1.12 2012/11/17 10:22:45 kristerw Exp $
 #
 
 DISTNAME=	edelib-2.0
@@ -38,12 +38,12 @@ REPLACE_SH+=    autogen.sh configure \
                 test/abicheck.sh tools/geniconmap
 .else
 # doxygen doesn't build from pkgsrc on Solaris now - handle this better later
-BUILD_DEPENDS+=	doxygen:../../devel/doxygen
+BUILD_DEPENDS+=	doxygen-[0-9]*:../../devel/doxygen
 .endif
 
 .include "options.mk"
 
-BUILD_DEPENDS+=	jam:../../devel/jam
+BUILD_DEPENDS+=	jam-[0-9]*:../../devel/jam
 
 .include "../../mk/fam.buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"

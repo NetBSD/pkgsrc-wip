@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2010/08/04 01:33:43 makoto Exp $
+# $NetBSD: Makefile.common,v 1.3 2012/11/17 10:26:04 kristerw Exp $
 #
 # used by wip/cygwin-binutils/Makefile
 # used by wip/cygwin-gcc/Makefile
@@ -16,7 +16,7 @@ CONFIGURE_ENV+=		CYGWIN_TARGET=${CYGWIN_TARGET:Q}
 BUILD_DEFS+=		CROSSBASE
 PATH:=			${CROSSBASE}/bin:${PATH}
 
-BUILD_DEPENDS+=		gtexinfo:../../devel/gtexinfo
+BUILD_DEPENDS+=		gtexinfo-[0-9]*:../../devel/gtexinfo
 
 .if defined(GNU_CONFIGURE)
 CONFIGURE_ARGS=		# reset
