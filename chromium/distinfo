@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2011/05/27 13:23:09 rxg Exp $
+$NetBSD: distinfo,v 1.11 2012/11/17 02:57:11 gduzan Exp $
 
 SHA1 (chromium-11.0.696.72.tar.bz2) = 57613e310bdf7095f02417cbb98646a11f592521
 RMD160 (chromium-11.0.696.72.tar.bz2) = cfa3c1ea7d2c24396a5a9a87643a5794951b475a
@@ -290,7 +290,7 @@ SHA1 (patch-third__party_skia_include_core_SkPreConfig.h) = f2266fa487610d9fee5a
 SHA1 (patch-third__party_sqlite_sqlite.gyp) = 1ba923af65191300d4331b4b17e9382fc4b46c5d
 SHA1 (patch-third__party_yasm_source_patched-yasm_Makefile.in) = 60202571b5bdee6586e473a8f14ac95b0c7db4db
 SHA1 (patch-third__party_yasm_yasm.gyp) = 820b50a3bde3aa21dcb198cf9c40539fcda29ba7
-SHA1 (patch-tools_gyp_pylib_gyp_____init____.py) = b70a4367f7a3eeb65b59f5dbe8803c81b6f0c244
+SHA1 (patch-tools_gyp_pylib_gyp_____init____.py) = 11c8aec84908a464ccdff4fb517ac298370cf767
 SHA1 (patch-tools_gyp_test_additional-targets_src_dir1_actions.gyp) = 8db632cb51d105897767e51ea85ab13930a4c69c
 SHA1 (patch-tools_gyp_test_library_src_library.gyp) = 2033cc3961234be68105b1675eb0a8613ce996db
 SHA1 (patch-ui_base_l10n_l10n__util.cc) = c82af0901bca4c97f0f3b3765347d78c851e3383
