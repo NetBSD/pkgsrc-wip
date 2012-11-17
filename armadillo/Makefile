@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/11/13 23:56:10 outpaddling Exp $
+# $NetBSD: Makefile,v 1.7 2012/11/17 18:56:25 outpaddling Exp $
 
 DISTNAME=	armadillo-3.4.4
 CATEGORIES=	math
@@ -13,9 +13,6 @@ USE_LANGUAGES+= c c++
 USE_CMAKE=	yes
 
 CMAKE_ARGS+=	-DINSTALL_LIB_DIR=${PREFIX}/lib
-
-#pre-configure:
-	#cp -f ${FILESDIR}/CMakeLists.txt.native-find ${WRKSRC}
 
 .include "../../math/blas/buildlink3.mk"
 .include "../../math/lapack/buildlink3.mk"
