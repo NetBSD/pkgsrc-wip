@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/11/09 23:16:55 outpaddling Exp $
+# $NetBSD: Makefile,v 1.9 2012/11/18 13:38:37 outpaddling Exp $
 #
 
 DISTNAME=	ufc-2.0.5
@@ -29,6 +29,11 @@ PKGCONFIG_OVERRIDE+=	cmake/ufc-1.pc.in
 
 # Stolen from lang/python/extension.mk
 PLIST_SUBST+=   PYINC=${PYINC} PYLIB=${PYLIB} PYSITELIB=${PYSITELIB}
+
+SUBST_CLASSES+=		ospath
+SUBST_STAGE.ospath=	post-patch
+SUBST_FILES.ospath=	src/utils/python/ufc_utils/build.py
+SUBST_SED.ospath=	-e 's|os.path.join(os.path.sep, "opt", "local")|os.path.normpath("${PREFIX}")|' -e 's|os.path.join(os.path.sep, "usr")|os.path.normpath("${PREFIX}")|'
 
 .include "../../lang/python/application.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
