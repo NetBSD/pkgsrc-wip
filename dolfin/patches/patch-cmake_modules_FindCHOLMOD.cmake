@@ -1,4 +1,4 @@
-$NetBSD: patch-cmake_modules_FindCHOLMOD.cmake,v 1.1 2012/11/14 23:18:38 outpaddling Exp $
+$NetBSD: patch-cmake_modules_FindCHOLMOD.cmake,v 1.2 2012/11/18 23:52:13 outpaddling Exp $
 
 --- cmake/modules/FindCHOLMOD.cmake.orig	2011-12-07 21:21:22.000000000 +0000
 +++ cmake/modules/FindCHOLMOD.cmake
@@ -6,7 +6,7 @@ $NetBSD: patch-cmake_modules_FindCHOLMOD.cmake,v 1.1 2012/11/14 23:18:38 outpadd
  if (LAPACK_FOUND)
    set(CHOLMOD_LIBRARIES ${CHOLMOD_LIBRARIES} ${LAPACK_LIBRARIES})
  endif()
-+set(CHOLMOD_LIBRARIES ${CHOLMOD_LIBRARIES} -lsuitesparseconfig)
++set(CHOLMOD_LIBRARIES ${CHOLMOD_LIBRARIES} $ENV{CHOLMOD_DIR}/lib/libsuitesparseconfig.a)
  
  mark_as_advanced(
    CHOLMOD_INCLUDE_DIRS
