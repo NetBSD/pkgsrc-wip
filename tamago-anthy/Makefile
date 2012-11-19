@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2012/11/03 19:41:30 kristerw Exp $
+# $NetBSD: Makefile,v 1.9 2012/11/19 13:04:56 makoto Exp $
 # the version number is for pkglint only
 DISTNAME=	tamago-anthy-4.0
-# to avoid trailing -cvs in package name.
-PKGNAME=	${DISTNAME}
-PKGREVISION=	${_CVS_PKGVERSION:S/.//g}
+PKGREVISION=    ${_GIT_PKGVERSION:S/.//g}
 LICENSE=	gnu-gpl-v2
 
 # See ../../inputmethod/anthy/Makefile.common
@@ -31,11 +29,13 @@ INFO_FILES=	yes
 # requires KANA-Kanji conversion engine
 DEPENDS+=	anthy-[0-9]*:../../inputmethod/anthy
 
-CVS_REPOSITORIES=	tamago
-CVS_ROOT.tamago=	:pserver:anonymous:@cvs.m17n.org:/cvs/tamago
+GIT_REPOSITORIES=	master
+GIT_MODULE=		egg
+GIT_REPO.master=	git://git.debian.org/git/pkg-anthy/egg.git
+_GIT_FLAGS?=		--depth 1
 
 GNU_CONFIGURE=	yes
-WRKSRC=			${WRKDIR}/tamago
+WRKSRC=			${WRKDIR}/egg
 
 .include "../../editors/emacs/modules.mk"
 
@@ -65,7 +65,7 @@ post-build:
 
 do-install:
 # Original egg install (copied part of mk/install/install.mk)
-	set -e; cd ${WRKDIR}/tamago; 					\
+	set -e; cd ${WRKSRC}; 					\
 	${SETENV} ${INSTALL_ENV} ${MAKE_ENV}				\
 		${MAKE_PROGRAM} ${MAKE_FLAGS} ${INSTALL_MAKE_FLAGS}	\
 			install
@@ -87,5 +87,5 @@ PLIST_VARS+=	jisx0213
 PLIST.jisx0213=		yes
 .endif
 
-.include "../../wip/mk/cvs-package.mk"
+.include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"
