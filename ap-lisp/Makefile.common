@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2012/09/24 16:56:35 asau Exp $
+# $NetBSD: Makefile.common,v 1.5 2012/11/20 15:42:49 othyro Exp $
 #
 # used by wip/ap-lisp/Makefile
 # used by wip/ap2-lisp/Makefile
@@ -10,16 +10,16 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.fractalconcept.com/asp/html/mod_lisp.html
 LICENSE=	modified-bsd
 
-WRKSRC=		${WRKDIR}
+WRKSRC=			${WRKDIR}
 USE_LANGUAGES=		c
+INSTALLATION_DIRS+=	lib/httpd
 
 do-build:
-		cd ${WRKDIR} && \
-		${APXS} -c ${DISTNAME}${EXTRACT_SUFX}
+	cd ${WRKDIR} && ${APXS} -c ${DISTNAME}${EXTRACT_SUFX}
 
 do-install:
-		cd ${WRKDIR} && \
-		${APXS} -i ${DISTNAME}.so
+	cd ${WRKDIR} && \
+	${APXS} -S  LIBEXECDIR=${DESTDIR}${PREFIX}/lib/httpd -i ${DISTNAME}.so
 
 .include "../../mk/apache.mk"
 .include "../../mk/bsd.pkg.mk"
