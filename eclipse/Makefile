@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2012/11/16 02:04:52 mayureshw Exp $
-#
+# $NetBSD: Makefile,v 1.5 2012/11/20 11:42:52 absd Exp $
 
 DISTNAME=	${PKGNAME_NOREV}
 PKGNAME=	eclipse-${VERSION}
 CATEGORIES=	devel java
 MASTER_SITES=	http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/helios/SR1/eclipse-java-helios-SR1-linux-gtk.tar.gz&url=http://mirror.netcologne.de/eclipse//technology/epp/downloads/release/helios/SR1/eclipse-java-helios-SR1-linux-gtk.tar.gz&mirror_id=580
-EXTRACT_SUFX=	.tar.gz
 
 MAINTAINER=	khorben@defora.org
 HOMEPAGE=	http://www.eclipse.org/
@@ -14,7 +12,7 @@ LICENSE=	eclipse-license
 
 PKG_JVMS_ACCEPTED= sun-jdk6 sun-jdk15 sun-jdk14 openjdk7-bin openjdk7
 
-MAKE_ENV+=	JAVA_HOME=${PKG_JAVA_HOME:Q}
+MAKE_ENV+=	JAVA_HOME=${PKG_JAVA_HOME}
 
 VERSION=	3.6.1
 
@@ -23,17 +21,17 @@ ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-x86_64 Linux-*-*
 
 .include "../../mk/bsd.prefs.mk"
 
-NO_BUILD=		yes
 CHECK_SHLIBS_SUPPORTED=	no
+WRKSRC=			${WRKDIR}/${PKGBASE}
+AUTO_MKDIRS=		YES
+USE_TOOLS+=		tar
 
-do-extract:
-
-do-install:
+do-build:
 	${SED} -e "s,@PREFIX@,${PREFIX}," ${FILESDIR}/eclipse > 	\
 		${WRKDIR}/.eclipse
-	cd ${DESTDIR}${PREFIX} && \
-		${TAR} -xzf ${DISTDIR}/${PKGNAME_NOREV}${EXTRACT_SUFX}
-	${MKDIR} ${DESTDIR}${PREFIX}/bin
+
+do-install:
+	cd ${WRKDIR} && ${TAR} cf - eclipse | ${TAR} xf - -C ${DESTDIR}${PREFIX}
 	${INSTALL_SCRIPT} ${WRKDIR}/.eclipse ${DESTDIR}${PREFIX}/bin/eclipse
 
 .include "../../mk/java-vm.mk"
