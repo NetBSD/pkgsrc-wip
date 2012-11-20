@@ -1,6 +1,4 @@
 Armadillo is an open-source C++ linear algebra library (matrix maths) aiming
 towards a good balance between speed and ease of use. Integer, floating point
 and complex numbers are supported, as well as a subset of trigonometric and
-statistics functions. Various matrix decompositions are provided through
-optional integration with LAPACK, or one of its high performance drop-in
-replacements (such as MKL or ACML).
+statistics functions.
