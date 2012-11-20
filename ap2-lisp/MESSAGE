@@ -1,12 +1,14 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2010/05/05 21:23:38 othyro Exp $
+$NetBSD: MESSAGE,v 1.2 2012/11/20 16:55:35 othyro Exp $
 
 In the Apache config file (httpd.conf or apache.conf):
 
 First, add the mod_lisp module (change the path to where you have put mod_lisp):
 
-LoadModule lisp_module libexec/apache/mod_lisp.so # for Unixes and similar
-LoadModule lisp_module modules/mod_lisp.dll # for Win32
+# for Unixes and similar
+LoadModule lisp_module lib/httpd/${MODNAME}.so
+# for Win32
+LoadModule lisp_module modules/mod_lisp.dll
 
 Then add a LispServer directive (LispServer ip-address-of-lisp-computer
 ip-port-of-lisp-process user-defined-name):
@@ -32,11 +34,9 @@ All the url located in /asp (like /asp/index.html) will be sent to mod_lisp.
 Your httpd.conf should be like this:
 
 [...]
-LoadModule lisp_module		libexec/apache/mod_lisp.so
+LoadModule lisp_module		lib/httpd/${MODNAME}.so
 [...]
 ClearModuleList
-[...]
-AddModule mod_lisp.c
 [...]
 LispServer 127.0.0.1 3000 "fractal"
 [...]
