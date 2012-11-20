@@ -1,8 +1,0 @@
-===> Building for ap2-lisp-1.2
-cd /usr/pkgsrc/wip/ap2-lisp/work &&  /usr/pkg/sbin/apxs -c mod_lisp2-1.2.c
-/usr/pkg/libexec/apr/libtool --silent --mode=compile cc -prefer-pic   -DNETBSD -pthread -I/usr/pkg/include/httpd  -I/usr/pkg/include/apr-1   -I/usr/pkg/include/apr-1 -I/usr/pkg/include  -c -o mod_lisp2-1.2.lo mod_lisp2-1.2.c && touch mod_lisp2-1.2.slo
-mod_lisp2-1.2.c: In function 'open_lisp_socket':
-mod_lisp2-1.2.c:327: warning: passing argument 4 of 'apr_socket_create' makes integer from pointer without a cast
-mod_lisp2-1.2.c:327: error: too few arguments to function 'apr_socket_create'
-apxs:Error: Command failed with rc=65536
-.
