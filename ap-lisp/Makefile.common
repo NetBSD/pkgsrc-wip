@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2012/11/20 15:42:49 othyro Exp $
+# $NetBSD: Makefile.common,v 1.6 2012/11/20 17:04:18 othyro Exp $
 #
 # used by wip/ap-lisp/Makefile
 # used by wip/ap2-lisp/Makefile
@@ -13,13 +13,16 @@ LICENSE=	modified-bsd
 WRKSRC=			${WRKDIR}
 USE_LANGUAGES=		c
 INSTALLATION_DIRS+=	lib/httpd
+PLIST_SRC=		${PKGSRCDIR}/wip/ap-lisp/PLIST.common
+PLIST_SUBST=		MODNAME=${DISTNAME}
+MESSAGE_SUBST=		MODNAME=${DISTNAME}
 
 do-build:
 	cd ${WRKDIR} && ${APXS} -c ${DISTNAME}${EXTRACT_SUFX}
 
 do-install:
 	cd ${WRKDIR} && \
-	${APXS} -S  LIBEXECDIR=${DESTDIR}${PREFIX}/lib/httpd -i ${DISTNAME}.so
+	${APXS} -S  LIBEXECDIR=${DESTDIR}${PREFIX}/lib/httpd -i ${DISTNAME}.${LIBRARY_EXTENSION}
 
 .include "../../mk/apache.mk"
 .include "../../mk/bsd.pkg.mk"
