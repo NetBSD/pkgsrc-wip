@@ -7,3 +7,6 @@
 - v5.2.x is no longer supported. Unfortunately, it is the last version
   with a native X11 GUI, and the Java GUI shipped with later versions
   blows up. A CLI only package might be worth while, though.
+
+- The suse_* packages > v10 are missing libraries that tasm 5.2.5 requires.
+ 
