@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2012/11/20 11:42:52 absd Exp $
+# $NetBSD: Makefile,v 1.6 2012/11/20 16:15:02 mayureshw Exp $
 
 DISTNAME=	${PKGNAME_NOREV}
 PKGNAME=	eclipse-${VERSION}
 CATEGORIES=	devel java
-MASTER_SITES=	http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/helios/SR1/eclipse-java-helios-SR1-linux-gtk.tar.gz&url=http://mirror.netcologne.de/eclipse//technology/epp/downloads/release/helios/SR1/eclipse-java-helios-SR1-linux-gtk.tar.gz&mirror_id=580
+MASTER_SITES=	http://www.eclipse.org/downloads/download.php?file=/eclipse/downloads/drops4/R-4.2.1-201209141800/eclipse-SDK-4.2.1-linux-gtk.tar.gz&url=http://download.nus.edu.sg/mirror/eclipse//eclipse/downloads/drops4/R-4.2.1-201209141800/eclipse-SDK-4.2.1-linux-gtk.tar.gz&mirror_id=580
+VERSION=	4.2.1
 
 MAINTAINER=	khorben@defora.org
 HOMEPAGE=	http://www.eclipse.org/
@@ -14,7 +15,11 @@ PKG_JVMS_ACCEPTED= sun-jdk6 sun-jdk15 sun-jdk14 openjdk7-bin openjdk7
 
 MAKE_ENV+=	JAVA_HOME=${PKG_JAVA_HOME}
 
-VERSION=	3.6.1
+USE_TOOLS+= perl
+REPLACE_PERL+= plugins/org.apache.ant_1.8.3.v20120321-1730/bin/antRun.pl
+REPLACE_PERL+= plugins/org.apache.ant_1.8.3.v20120321-1730/bin/complete-ant-cmd.pl
+REPLACE_PERL+= plugins/org.apache.ant_1.8.3.v20120321-1730/bin/runant.pl
+REPLACE_PYTHON+= plugins/org.apache.ant_1.8.3.v20120321-1730/bin/runant.py
 
 # XXX: Others might work but might need significant tweaking
 ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-x86_64 Linux-*-*
