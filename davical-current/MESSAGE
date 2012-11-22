@@ -1,0 +1,73 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2012/11/22 12:13:19 hfath Exp $
+
+For pkgsrc installations, DAViCal's package is installed in non-default
+locations:
+
+	Document root:		${DAVICALDIR}/htdocs
+	Configuration file:	${PKG_SYSCONFDIR}/config.php
+
+If you are upgrading from a previous version, see
+
+	http://wiki.davical.org/w/Release_Notes
+
+for how to perform a database upgrade.
+
+To complete the installation of DAViCal, follow these steps:
+
+1. Create DAViCal's app (application) and dba (database admin) acounts.
+   Depending on your PostgreSQL setup, this could be done in different
+   ways, like:
+
+	$ su pgsql
+	$ createuser -D -R -S --pwprompt davical_app
+	<enter davical_app passwd>
+	$ createuser -D -R -S --pwprompt davical_dba
+	<enter davical_dba passwd>
+
+   Consider editing pg_hba.conf file to grant access for both accounts
+   to the soon to be created 'davical' database.
+
+2. Adapt DAViCal's configuration files to your setup:
+
+	${PKG_SYSCONFDIR}/administration.yml	(used for davical_dba)
+	${PKG_SYSCONFDIR}/config.php		(used for davical_app)
+
+   Look for 'pg_connect', 'system_name', 'admin_email', and 'default_locale'
+   in config.php.
+
+3. To ease DAViCal's database creation, you can use the following script:
+
+	${DAVICALDIR}/dba/create-database.sh
+
+   To work properly, it needs to be executed with a PostgreSQL's superuser
+   account, and requires access to administration.yml file (see step 2.).
+
+   At the end, the script will output the password of the www 'admin'
+   account for DAViCal. Keep it in mind, it will be used at step 5.
+
+4. You will need to make DAViCal accessible through your HTTP server.
+   If you are running Apache and ap-php, you can use the following file:
+
+	${PKG_SYSCONFDIR}/davical.conf
+
+   and add an Include directive directly within Apache configuration:
+
+	Include ${PKG_SYSCONFDIR}/davical.conf
+
+   then restart Apache. Note that Davical requires the following PHP
+   extensions to be loaded: pdo.so, pdo_pgsql.so, pgsql.so, iconv.so and
+   gettext.so.
+
+5. You should now be able to access DAViCal through the URL configured
+   at step 4. At login page, enter the following credentials:
+
+	Login: admin
+	Password: <the one obtained in step 3.>
+
+   Validate, then follow the steps to create user accounts. See DAViCal
+   online documentation for further information:
+
+	${HOMEPAGE}
+
+===========================================================================

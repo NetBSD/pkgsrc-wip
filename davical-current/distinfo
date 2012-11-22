@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2012/11/22 12:13:19 hfath Exp $
+
+SHA1 (patch-aa) = 3172ea7a359e1779431d732d0f1cb106e3b4dd4e
+SHA1 (patch-ab) = d9c4c6729e7be6968306bdd96ed4269c0887a885
+SHA1 (patch-ac) = 74e9b103d502886736dff4fa659fb3e50bae5032
+SHA1 (patch-ad) = 7816ff4ee7440911e275f3152089760e82b5d180
+SHA1 (patch-ae) = e3f2b5c002c8289d40cd025a38c382d402fc659e
+SHA1 (patch-scripts_build-always.sh) = 528aef5225f83908786aa1ba6ee176e87db64a15

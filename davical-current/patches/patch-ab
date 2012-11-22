@@ -1,0 +1,29 @@
+$NetBSD: patch-ab,v 1.1 2012/11/22 12:13:19 hfath Exp $
+
+--- inc/always.php.in.orig	2011-09-25 09:04:29.000000000 +0000
++++ inc/always.php.in
+@@ -79,7 +79,7 @@ if ( ! @include_once('AWLUtilities.php')
+         '../../awl/inc'
+       , '/usr/share/awl/inc'        // Where it ends up on Debian
+       , '/usr/share/php/awl/inc'    // Fedora's standard for PHP libraries
+-      , '/usr/local/share/awl/inc'
++      , '@LIBAWLPATH@/inc'
+   );
+   foreach( $try_paths AS $awl_include_path ) {
+     if ( @file_exists($awl_include_path.'/AWLUtilities.php') ) {
+@@ -131,11 +131,11 @@ if ( @file_exists('/etc/davical/'.$_SERV
+ else if ( @file_exists('/etc/davical/config.php') ) {
+   include('/etc/davical/config.php');
+ }
+-else if ( @file_exists('/usr/local/etc/davical/'.$_SERVER['SERVER_NAME'].'-conf.php') ) {
+-  include('/usr/local/etc/davical/'.$_SERVER['SERVER_NAME'].'-conf.php');
++else if ( @file_exists('@PKG_SYSCONFDIR@'.$_SERVER['SERVER_NAME'].'-conf.php') ) {
++  include('@PKG_SYSCONFDIR@'.$_SERVER['SERVER_NAME'].'-conf.php');
+ }
+-else if ( @file_exists('/usr/local/etc/davical/config.php') ) {
+-  include('/usr/local/etc/davical/config.php');
++else if ( @file_exists('@PKG_SYSCONFDIR@/config.php') ) {
++  include('@PKG_SYSCONFDIR@/config.php');
+ }
+ else if ( @file_exists('../config/config.php') ) {
+   include('../config/config.php');

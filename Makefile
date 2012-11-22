@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4959 2012/11/22 11:38:01 othyro Exp $
+# $Id: Makefile,v 1.4960 2012/11/22 12:13:19 hfath Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -388,6 +388,7 @@ SUBDIR+=	darcs-to-git
 SUBDIR+=	dasm
 SUBDIR+=	datapipe
 SUBDIR+=	dates
+SUBDIR+=	davical-current
 SUBDIR+=	db1
 SUBDIR+=	dbf
 SUBDIR+=	dbus-explorer
