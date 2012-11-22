@@ -1,4 +1,0 @@
-libmemcached is a C and C++ client library to the memcached
-server (http://danga.com/memcached). It has been designed to
-be light on memory usage, thread safe, and provide full
-access to server side methods.
