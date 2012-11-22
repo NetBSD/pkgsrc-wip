@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/07 16:22:53 asau Exp $
+# $NetBSD: Makefile,v 1.7 2012/11/22 22:33:13 kristerw Exp $
 
 .include "../../net/samba/Makefile.mirrors"
 
@@ -46,7 +46,7 @@ FILES_SUBST+=		WINBINDD_RCD_SCRIPT=${WINBINDD_RCD_SCRIPT:Q}
 
 # mktemp is useful for the replacement adduser script, but don't require
 # a full dependency since it's not actually needed by samba.
-USE_TOOLS+=		gmake mktemp perl:run
+USE_TOOLS+=		gmake mktemp perl:run python
 REPLACE_PERL=		script/findsmb.in
 
 BROKEN_GETTEXT_DETECTION=yes
@@ -165,7 +165,7 @@ post-install:
 	# ${CHMOD} ${SHAREMODE} ${DESTDIR}${PREFIX}/include/*.h
 
 REPLACE_PERL=	pidl/pidl
-REPLACE_PYTHON=	source4/setup/* source4/scripting/bin/*
+REPLACE_PYTHON=	source4/setup/* source4/scripting/bin/* buildtools/bin/waf
 # tevent.py sample-script.py sample-two-script.py
 
 .include "../../lang/python/application.mk"
