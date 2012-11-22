@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/31 12:53:57 othyro Exp $
+# $NetBSD: Makefile,v 1.4 2012/11/22 23:41:46 othyro Exp $
 #
 
 DISTNAME=	kaffeine-1.2.2
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=kaffeine/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://kaffeine.kde.org/
-COMMENT=	Full featured Multimedia-Player for KDE
+COMMENT=	Full featured Multimedia-Player for KDE4
 LICENSE=	gnu-gpl-v2
 
 USE_CMAKE=	yes
