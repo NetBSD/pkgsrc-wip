@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4960 2012/11/22 12:13:19 hfath Exp $
+# $Id: Makefile,v 1.4961 2012/11/22 20:41:56 kristerw Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -3014,8 +3014,8 @@ SUBDIR+=	sympol
 SUBDIR+=	sympow
 SUBDIR+=	syn68k
 SUBDIR+=	synce-dynamite
-#SUBDIR+=	synce-kde	# requires buildlink3 file to be put in pkgsrc tree
-#SUBDIR+=	synce-orange	# requires buildlink3 file to be put in pkgsrc tree
+SUBDIR+=	synce-kde
+SUBDIR+=	synce-orange
 SUBDIR+=	synfig
 SUBDIR+=	synfigstudio
 SUBDIR+=	sysjail
