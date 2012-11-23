@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4962 2012/11/23 01:06:56 othyro Exp $
+# $Id: Makefile,v 1.4963 2012/11/23 01:17:39 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -524,7 +524,6 @@ SUBDIR+=	elk
 SUBDIR+=	emacs-current
 SUBDIR+=	emacs-current-nox11
 SUBDIR+=	emacs-ditz
-SUBDIR+=	emacs-jabber
 SUBDIR+=	emacs-pr-el
 SUBDIR+=	emacs-rc
 SUBDIR+=	emacs-session
@@ -624,7 +623,6 @@ SUBDIR+=	fnord
 SUBDIR+=	fnteditfs
 SUBDIR+=	fontedit
 SUBDIR+=	fonttosfnt
-SUBDIR+=	foo2zjs
 SUBDIR+=	fortunes-it
 SUBDIR+=	foxtrotgps
 SUBDIR+=	fprobe
