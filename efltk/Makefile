@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/23 10:23:06 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2012/11/23 22:44:43 othyro Exp $
 #
 
 DISTNAME=	efltk-2.0.8
@@ -6,7 +6,6 @@ DISTNAME=	efltk-2.0.8
 PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ede/}
-EXTRACT_SUFX=	.tar.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ede.sourceforge.net/

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/11/13 22:25:44 othyro Exp $
+# $NetBSD: Makefile,v 1.12 2012/11/23 22:44:44 othyro Exp $
 
 VERTEX_VERSION=	0.2.0
 DISTNAME=	Vertex-${VERTEX_VERSION}
@@ -8,7 +8,6 @@ CATEGORIES=	python net
 MASTER_SITES=	http://milosn.no-ip.org/files/
 #MASTER_SITES=	ftp://ftp.osuosl.org/pub/nslu2/sources/
 #MASTER_SITES=	http://divmod.org/trac/attachment/wiki/SoftwareReleases/
-EXTRACT_SUFX=	.tar.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://divmod.org/trac/wiki/DivmodVertex

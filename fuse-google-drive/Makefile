@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2012/11/13 20:39:10 othyro Exp $
+# $NetBSD: Makefile,v 1.4 2012/11/23 22:44:43 othyro Exp $
 #
 
 DISTNAME=	fuse-google-drive-0
 CATEGORIES=	filesystems
 MASTER_SITES=	/usr/pkgsrc/distfiles/
-EXTRACT_SUFX=	.tar.gz
 
 MAINTAINER=	bjs@NetBSD.org
 HOMEPAGE=	https://github.com/jcline/fuse-google-drive

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/11/13 22:25:42 othyro Exp $
+# $NetBSD: Makefile,v 1.14 2012/11/23 22:44:43 othyro Exp $
 
 AXIOM_VERSION=	0.5.20
 DISTNAME=	Axiom-${AXIOM_VERSION}
@@ -6,7 +6,6 @@ PKGNAME=	${PYPKGPREFIX}-divmod-axiom-${AXIOM_VERSION}
 PKGREVISION=	2
 CATEGORIES=	python
 MASTER_SITES=	ftp://ftp.osuosl.org/pub/nslu2/sources/
-EXTRACT_SUFX=	.tar.gz
 
 MAINTAINER=	pkgsrc-wip-users@sourceforge.net
 HOMEPAGE=	http://divmod.org/trac/wiki/DivmodAxiom

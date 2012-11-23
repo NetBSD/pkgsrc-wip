@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/10/07 16:23:15 asau Exp $
+# $NetBSD: Makefile,v 1.10 2012/11/23 22:44:44 othyro Exp $
 
 DISTNAME=	slrn-pre1.0.0-26
 PKGNAME=	slrn-pre1.0.0-26
@@ -7,8 +7,6 @@ LICENSE=	gnu-gpl-v2
 #PKGREVISION=	1
 CATEGORIES=	news
 MASTER_SITES=	http://www.jedsoft.org/snapshots/
-EXTRACT_SUFX=	.tar.gz
-#WRKSRC=		${WRKDIR}/slrn
 
 MAINTAINER=	aniou@smutek.pl
 HOMEPAGE=	http://slrn.sourceforge.net/

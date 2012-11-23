@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2012/10/07 11:54:43 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/23 22:44:44 othyro Exp $
 #
 
 DISTNAME=	guppy-0.1.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	http://pypi.python.org/packages/source/g/guppy/
-EXTRACT_SUFX=	.tar.gz
 
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://guppy-pe.sourceforge.net/

@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2012/10/03 09:10:44 asau Exp $
+# $NetBSD: Makefile,v 1.5 2012/11/23 22:44:43 othyro Exp $
 
 DISTNAME=	lxde-common-0.5.5
 CATEGORIES=	devel x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lxde/}
-EXTRACT_SUFX=	.tar.gz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://lxde.sourceforge.net/

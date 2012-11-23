@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/07 13:57:32 asau Exp $
+# $NetBSD: Makefile,v 1.7 2012/11/23 22:44:44 othyro Exp $
 #
 
 DISTNAME=	uuid-1.30
@@ -6,7 +6,6 @@ PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	http://pypi.python.org/packages/source/u/uuid/
-EXTRACT_SUFX=	.tar.gz
 
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://pypi.python.org/pypi/uuid/1.30

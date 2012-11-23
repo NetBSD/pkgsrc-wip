@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2010/06/13 22:47:21 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.4 2012/11/23 22:44:44 othyro Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
@@ -8,7 +8,6 @@ DISTNAME=	xfce4-radio-plugin-${XFCE4_VERSION}
 PKGREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	http://goodies.xfce.org/releases/xfce4-radio-plugin/
-EXTRACT_SUFX=	.tar.gz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Xfce V4L radio plugin
 
