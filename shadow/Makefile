@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/11/13 19:33:45 othyro Exp $
+# $NetBSD: Makefile,v 1.12 2012/11/23 22:34:05 othyro Exp $
 
 DISTNAME=		shadow-4.0.4.1
 CATEGORIES=		sysutils devel
@@ -56,4 +56,3 @@ post-install:
 .endif
 
 .include "../../mk/bsd.pkg.mk"
-

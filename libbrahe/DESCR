@@ -1,7 +1,7 @@
-A heterogeneous C library of interesting numeric functions
+A heterogeneous C library of interesting numeric functions.
 
- This library provides:
-  
+This library provides:
+
    * a function for rounding floating point values to a specific number
      of digits
    * several pseudo-random number generators, including the Mersenne
@@ -9,6 +9,6 @@ A heterogeneous C library of interesting numeric functions
    * least common multiple and greatest common denominator functions
    * a few trigonometry functions for finding the inversions of hyperbolic
      sine, cosine, and tangent
-  
- This library is also used by libevocosm, which is in turn the 
- foundation for Acovea, used to determine optimal compiler optimizations
+
+This library is also used by libevocosm, which is in turn the foundation for
+Acovea, used to determine optimal compiler optimizations.

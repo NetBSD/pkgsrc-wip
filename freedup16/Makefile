@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/09/28 23:21:49 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/11/23 22:33:33 othyro Exp $
 #
 
 DISTNAME=	freedup-1.6-2-src
@@ -28,7 +28,7 @@ SUBST_SED.fix-paths=		-e 's,/usr/bin/,${PREFIX}/bin/g,g'
 ONLY_FOR_PLATFORM=DragonFly-*-* \
 		NetBSD-[5-9]*-i386 \
 		NetBSD-[5-9]*-x86_64 \
-		NetBSD-[5-9]*-amd64 
+		NetBSD-[5-9]*-amd64
 
 post-extract:
 		cd ${WRKSRC} && rm symharden

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/09/28 23:21:49 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/23 22:33:35 othyro Exp $
 
 DISTNAME=		fribid-1.0.0
 PKGNAME=		fribid-1.0.0
@@ -22,4 +22,3 @@ HAS_CONFIGURE=		yes
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
-

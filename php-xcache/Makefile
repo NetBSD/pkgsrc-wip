@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/05 11:12:56 asau Exp $
+# $NetBSD: Makefile,v 1.6 2012/11/23 22:33:51 othyro Exp $
 #
 
 MODNAME=		xcache
@@ -6,7 +6,7 @@ PECL_VERSION=		1.3.1
 PKGNAME=		${MODNAME}-${PECL_VERSION}
 CATEGORIES=		www
 MASTER_SITES=		http://xcache.lighttpd.net/pub/Releases/${PECL_VERSION}/
-EXTRACT_SUFX=		.tar.gz # required, because ../../lang/php/ext.mk 
+EXTRACT_SUFX=		.tar.gz # required, because ../../lang/php/ext.mk
 				# overrides it with .tgz
 
 # Original Maintainer (since dec 2010)

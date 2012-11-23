@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/09/28 22:07:32 asau Exp $
+# $NetBSD: Makefile,v 1.8 2012/11/23 22:33:29 othyro Exp $
 #
 
 DISTNAME=	emacs-nox11-24.0.90
@@ -71,4 +71,3 @@ pre-configure:
 .include "../../wip/mk/git-package.mk"
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
-

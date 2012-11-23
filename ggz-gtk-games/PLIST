@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:38 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.3 2012/11/23 22:33:38 othyro Exp $
 lib/ggz/ggz.ccheckers
 lib/ggz/ggz.chess
 lib/ggz/ggz.combat
@@ -109,4 +109,3 @@ share/locale/de/LC_MESSAGES/hastings.mo
 share/locale/de/LC_MESSAGES/reversi.mo
 share/locale/de/LC_MESSAGES/spades.mo
 share/locale/de/LC_MESSAGES/tictactoe.mo
-

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2012/09/29 17:05:56 asau Exp $
+# $NetBSD: Makefile,v 1.41 2012/11/23 22:33:39 othyro Exp $
 #
 
 DISTNAME=		hplip-3.12.4
@@ -15,7 +15,7 @@ CONFLICTS+=		hpijs-[0-9]*
 FILES_SUBST+=           CUPS_USER=${CUPS_USER}
 FILES_SUBST+=           CUPS_GROUP=${CUPS_GROUP}
 
-PKG_GROUPS_VARS+=       CUPS_GROUP 
+PKG_GROUPS_VARS+=       CUPS_GROUP
 PKG_USERS_VARS+=        CUPS_USER
 
 BUILD_DEFS+=            CUPS_USER CUPS_GROUP VARBASE

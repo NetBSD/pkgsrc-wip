@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.1.1.1 2011/08/05 10:20:22 jihbed Exp $
+# $NetBSD: options.mk,v 1.2 2012/11/23 22:33:26 othyro Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.aravis
-PKG_SUPPORTED_OPTIONS=	cairo gstreamer 
+PKG_SUPPORTED_OPTIONS=	cairo gstreamer
 PKG_SUGGESTED_OPTIONS=	cairo gstreamer
 
 .include "../../mk/bsd.options.mk"

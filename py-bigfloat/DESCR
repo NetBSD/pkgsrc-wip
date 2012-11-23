@@ -1,12 +1,10 @@
 The bigfloat package is a Python package providing arbitrary-precision
-correctly-rounded binary floating-point arithmetic.
-Features
+correctly-rounded binary floating-point arithmetic. Features:
 
  * correct rounding on all operations; precisely defined semantics compatible
-    with the IEEE 754-2008 standard.
+   with the IEEE 754-2008 standard.
  * support for mixed-type operations with Python integers and floats
- * support for emulating IEEE 754 arithmetic in any of the IEEE binary interchange
-    formats described in IEEE 754-2008. Infinities, NaNs, signed zeros,
-    and subnormals are all supported.
+ * support for emulating IEEE 754 arithmetic in any of the IEEE binary
+   interchange formats described in IEEE 754-2008. Infinities, NaNs, signed
+   zeros, and subnormals are all supported.
  * easy control of rounding modes and precisions, via Python's 'with' statement.
-

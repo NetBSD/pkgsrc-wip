@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/07 16:27:12 asau Exp $
+# $NetBSD: Makefile,v 1.6 2012/11/23 22:34:05 othyro Exp $
 #
 
 DISTNAME=		T-COFFEE_distribution
@@ -33,4 +33,3 @@ do-install:
 .endfor
 
 .include "../../mk/bsd.pkg.mk"
-

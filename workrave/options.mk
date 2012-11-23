@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2007/11/13 19:15:24 briandealwis Exp $
+# $NetBSD: options.mk,v 1.4 2012/11/23 22:34:06 othyro Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.workrave
 PKG_SUPPORTED_OPTIONS+=		arts dbus debug distributed
@@ -111,4 +111,3 @@ CONFIGURE_ARGS+=	--enable-debug
 .else
 CONFIGURE_ARGS+=	--disable-debug
 .endif
-

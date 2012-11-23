@@ -1,5 +1,4 @@
-C++/Python module for specifying variations in fields over a domain
-(typically parameters for boundary conditions or physical properties
-over a simulation domain. The module also supports conversions 
-between coordinate systems, using Proj.4 for conversions between
-geographic coordinate systems
+C++/Python module for specifying variations in fields over a domain (typically
+parameters for boundary conditions or physical properties over a simulation
+domain. The module also supports conversions between coordinate systems, using
+Proj.4 for conversions between geographic coordinate systems.

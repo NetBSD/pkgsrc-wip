@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/09/24 18:26:53 asau Exp $
+# $NetBSD: Makefile,v 1.8 2012/11/23 22:33:28 othyro Exp $
 #
 
 DISTNAME=	ciwiki-1.7.0.1
@@ -27,7 +27,7 @@ DOCFILES=	AUTHORS \
 		ChangeLog \
 		INSTALL \
 		NEWS \
-		README \
+		README
 
 NEWDOCFILES=	BUGS \
 		CIWIKI_ON_USBDRIVE \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/11/01 03:49:17 asau Exp $
+# $NetBSD: Makefile,v 1.6 2012/11/23 22:34:02 othyro Exp $
 #
 
 PKGNAME=	seeks-0.3.2
@@ -21,7 +21,7 @@ USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	autoconf automake gmake
 
-WRKSRC=		${WRKDIR}/seeks-0.3.2 
+WRKSRC=		${WRKDIR}/seeks-0.3.2
 
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"

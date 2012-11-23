@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.1.1.1 2010/11/05 16:01:32 ggergely Exp $
+# $NetBSD: options.mk,v 1.2 2012/11/23 22:33:47 othyro Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mumble
-PKG_SUPPORTED_OPTIONS=	 dbus alsa portaudio pulseaudio oss bonjour
-PKG_SUGGESTED_OPTIONS=	dbus portaudio bonjour 
+PKG_SUPPORTED_OPTIONS=	dbus alsa portaudio pulseaudio oss bonjour
+PKG_SUGGESTED_OPTIONS=	dbus portaudio bonjour
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/bsd.options.mk"

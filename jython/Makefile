@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/11/12 16:51:36 othyro Exp $
+# $NetBSD: Makefile,v 1.8 2012/11/23 22:33:39 othyro Exp $
 #
 
 VERSION=	2.5.2b1
@@ -11,7 +11,7 @@ EXTRACT_SUFX=	.jar
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://www.jython.org/
 COMMENT=	Python for the Java Platform
-LICENSE=	python-software-foundation 
+LICENSE=	python-software-foundation
 
 WRKSRC=		${WRKDIR}/jython_installer-2.5.2b1.jar
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/09/28 22:07:34 asau Exp $
+# $NetBSD: Makefile,v 1.6 2012/11/23 22:33:31 othyro Exp $
 
 DISTNAME=		# cvs package
 PKGNAME=		es40-0.18
@@ -29,7 +29,7 @@ CONFIGURE_ENV+=	ac_cv_func__strdup=no
 BUILD_ENV+=	es40_cfg_LDADD=Exception.o
 
 # off_t is always 64 bits on NetBSD
-CFLAGS.NetBSD+=		-Doff64_t=off_t -Dftello64=ftello -Dfseeko64=fseeko 
+CFLAGS.NetBSD+=		-Doff64_t=off_t -Dftello64=ftello -Dfseeko64=fseeko
 
 INSTALLATION_DIRS=	share/es40 share/examples/es40
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/09/29 00:50:36 asau Exp $
+# $NetBSD: Makefile,v 1.8 2012/11/23 22:33:39 othyro Exp $
 #
 
 DISTNAME=	gnome-keyring-sharp-1.0.0
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc.gnome@gmail.com
 #http://andrew.jorgensenfamily.us/2008/08/gnome-keyring-sharp/
-HOMEPAGE=	http://ftp.novell.com/pub/mono/sources/gnome-keyring-sharp/ 
+HOMEPAGE=	http://ftp.novell.com/pub/mono/sources/gnome-keyring-sharp/
 COMMENT=	Mono implementation of libgnome-keyring
 
 GNU_CONFIGURE=	yes

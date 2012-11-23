@@ -1,5 +1,5 @@
-Some tools for working with directed acyclic graphs, partial orders and 
-topological sorting with Python
+Some tools for working with directed acyclic graphs, partial orders and
+topological sorting with Python.
 
-digraphtools was written as a lightweight way of using DAGs and partial
-ordering to represent, sort and traverse dependency trees
+digraphtools was written as a lightweight way of using DAGs and partial ordering
+to represent, sort and traverse dependency trees.

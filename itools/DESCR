@@ -6,4 +6,3 @@ means to access its functions. The available tools are:
   * idate: Multi method Hijri/Gregorian date converter.
   * ipraytime: Prayer times and Qibla calculator and schedule table generator.
   * ireminder: Prayer time reminder Perl script.
-

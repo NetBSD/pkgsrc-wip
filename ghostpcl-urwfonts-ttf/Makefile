@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/09/29 00:50:34 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/11/23 22:33:38 othyro Exp $
 #
 
 DISTNAME=	urwfonts-8.71
@@ -79,7 +79,7 @@ do-install:
 .for fontfile in ${INSTALL_FONTS}
 	${INSTALL_DATA} ${WRKSRC}/${fontfile} ${DESTDIR}${FONTDIR}
 .endfor
-.for fontfile in ${EXTRAFONT} 
+.for fontfile in ${EXTRAFONT}
 	${INSTALL_DATA} ${EXTRAFONTDIR}/${fontfile} ${DESTDIR}${FONTDIR}
 .endfor
 .for docfile in ${INSTALL_DOCS}

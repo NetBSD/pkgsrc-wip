@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.5 2010/11/25 21:23:52 pettai Exp $
+$NetBSD: MESSAGE,v 1.6 2012/11/23 22:33:47 othyro Exp $
 
 For latest information about configurating OpenDNSSEC, see:
 http://www.opendnssec.org/documentation/using-opendnssec/
@@ -13,9 +13,9 @@ Migration:
   1) Run ods-ksmutil setup again. This will remove _all_ the current
   information from the kasp database and start you off again with a fresh
   environment.
-  
+
   If that is not an option, or you want to try something else then:
-  
+
   2) run one of the migration scripts
         enforcer/utils/migrate_keyshare_mysql.pl
   or

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/12 20:32:05 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/11/23 22:33:56 othyro Exp $
 #
 
 DISTNAME=	CLICS-src-0.1.0
@@ -20,7 +20,7 @@ USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
 PYDISTUTILSPKG=	yes
 
-INSTALLATION_DIRS=	
+INSTALLATION_DIRS=	# blank
 
 .include "../../lang/python/extension.mk"
 .include "../../x11/py-wxWidgets/buildlink3.mk"

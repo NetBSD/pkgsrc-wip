@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2010/12/26 05:01:22 davesainty Exp $
+# $NetBSD: Makefile,v 1.15 2012/11/23 22:33:31 othyro Exp $
 #
 
 DISTNAME=	esmart-0.9.0.042
@@ -20,7 +20,7 @@ USE_TOOLS=	gmake pkg-config automake autoconf autoheader aclocal
 CONFIGURE_ARGS=		--with-edje-cc=${PREFIX}/bin/edje_cc
 
 pre-configure:
-	cd ${WRKSRC} && ${SH} autogen.sh	
+	cd ${WRKSRC} && ${SH} autogen.sh
 
 .include "../../wip/ecore/buildlink3.mk"
 .include "../../devel/eina/buildlink3.mk"

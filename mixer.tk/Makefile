@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/10/03 14:19:06 asau Exp $
+# $NetBSD: Makefile,v 1.10 2012/11/23 22:33:42 othyro Exp $
 #
 
 DISTNAME=	mixer.tk-0.4
@@ -6,7 +6,7 @@ CATEGORIES=	audio
 MASTER_SITES=	http://gnorw.net/netbsd/
 
 MAINTAINER=	jaka.jejcic@gmail.com
-HOMEPAGE=	
+HOMEPAGE=	http://gnorw.net/netbsd/mixer.tk-0.4/
 COMMENT=	Tcl/Tk audio mixer using mixerctl utility
 
 NO_CONFIGURE=	yes
@@ -19,4 +19,3 @@ do-install:
 
 .include "../../x11/tk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
-

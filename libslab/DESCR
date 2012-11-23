@@ -1,4 +1,4 @@
-Since SUNOS has presented slab allocation theroy, many OSs have changed 
-their own memory allocator into slab. But it requires kernel-layer 
-interfaces such as page supply etc. So this library improves slab's 
-algorithm and brings the interfaces of slab into application layer:
+Since SUNOS has presented slab allocation theroy, many OSs have changed their
+own memory allocator into slab. But it requires kernel-layer interfaces such as
+page supply etc. So this library improves slab's algorithm and brings the
+interfaces of slab into application layer.

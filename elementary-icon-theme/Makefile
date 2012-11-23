@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/11/13 23:20:30 othyro Exp $
+# $NetBSD: Makefile,v 1.4 2012/11/23 22:33:29 othyro Exp $
 #
 
 DISTNAME=	elementary-icon-theme-2.7.1
@@ -20,7 +20,7 @@ USE_TOOLS+=	pax
 
 post-extract:
 	${CHMOD} a-x ${WRKSRC}/elementary/apps/48/internet-mail.svg
-	
+
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/icons
 	cd ${WRKSRC} && pax -rw -pe . ${DESTDIR}${PREFIX}/share/icons/

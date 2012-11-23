@@ -1,9 +1,9 @@
 Polymul is a self-contained C++ template library for efficient multiplication
 of multivariate polynomials. It is intended for low order polynomials of a few
 variables, but is in principle limited only by the compiler's maximum template
-recursion depth.Polynomials can be created over any scalar type, such as 
+recursion depth.Polynomials can be created over any scalar type, such as
 integers or floating point numbers.
 
-In addition to normal polynomial multiplication the library can also do truncated (Taylor series) 
-multiplication, as well as linear changes of coordinates. Polynomials can also be evaluated at arbitrary 
-points
+In addition to normal polynomial multiplication the library can also do
+truncated (Taylor series) multiplication, as well as linear changes of
+coordinates. Polynomials can also be evaluated at arbitrary points.

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/03 09:10:42 asau Exp $
+# $NetBSD: Makefile,v 1.6 2012/11/23 22:33:40 othyro Exp $
 #
 
 DISTNAME=	lmtp2nntp-1.4.1
@@ -14,7 +14,7 @@ GNU_CONFIGURE=		yes
 # XXX: LIBS in CONFIGURE_ENV confuse subsequent configure script.
 # XXX: main configure rewrite LIBS before call subsequent configure script,
 # XXX: it contains unwanted variables, so will be failed to test links.
-# XXX: LIBS passed with CONFIGURE_ARGS will be passed to sub configure AS-IS. 
+# XXX: LIBS passed with CONFIGURE_ARGS will be passed to sub configure AS-IS.
 CONFIGURE_ARGS+=	LIBS=${LIBS:M*:Q}
 
 MAKE_JOBS_SAFE=	no

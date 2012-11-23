@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/03 16:02:56 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/11/23 22:33:26 othyro Exp $
 #
 # CDE - The Common Desktop Environment
 DISTNAME=	cde-2.2.0b
@@ -20,7 +20,7 @@ DEPENDS+= libSM-[0-9]*:../../x11/libSM
 DEPENDS+= libICE-[0-9]*:../../x11/libICE
 DEPENDS+= libXp-[0-9]*:../../x11/libXp
 
-GIT_REPOSITORIES=   cdesktopenv-code 
+GIT_REPOSITORIES=   cdesktopenv-code
 GIT_REPO.cdesktopenv-code = git://git.code.sf.net/p/cdesktopenv/code
 WRKSRC=$(WRKDIR)/code/cde
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/03 09:10:40 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/23 22:33:39 othyro Exp $
 #
 
 DISTNAME=	libopensync-plugin-palm-0.22
@@ -19,4 +19,3 @@ GNU_CONFIGURE=	yes
 
 .include "../../comms/libopensync/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
-

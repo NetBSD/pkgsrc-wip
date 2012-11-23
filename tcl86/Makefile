@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/11/12 16:51:39 othyro Exp $
+# $NetBSD: Makefile,v 1.11 2012/11/23 22:34:05 othyro Exp $
 #
 
 DISTNAME=	tcl8.6b2-src.tar.gz
@@ -45,7 +45,7 @@ CONFIGURE_ARGS+=	--enable-64bit
 
 DESTDIRPREFIX=          ${DESTDIR}${PREFIX}
 
-post-install:	
+post-install:
 	cp ${WRKSRC}/doc/man.macros ${DESTDIRPREFIX:Q}/man/mann
 #	mkdir -p ${DESTDIRPREFIX:Q}/lib/tcl${TCL_PKGSRC_VERSION}
 #	mv ${DESTDIRPREFIX:Q}/lib/tclConfig.sh ${DESTDIRPREFIX:Q}/lib/tcl${TCL_PKGSRC_VERSION}

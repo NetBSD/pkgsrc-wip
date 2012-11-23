@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2012/10/03 15:09:57 asau Exp $
+# $NetBSD: Makefile,v 1.21 2012/11/23 22:33:47 othyro Exp $
 
 DISTNAME=	moregroupware-0.7.2
 PKGREVISION=	3
@@ -7,7 +7,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=moregroupware/}
 DISTFILES=	moregroupware-core-0.7.2${EXTRACT_SUFX} \
 		moregroupware-docs-0.7.2${EXTRACT_SUFX} \
 		moregroupware-addons-0.7.2${EXTRACT_SUFX} \
-		moregroupware-scripts-0.7.2${EXTRACT_SUFX} \
+		moregroupware-scripts-0.7.2${EXTRACT_SUFX}
 
 MAINTAINER=	pih@xbase.dk
 HOMEPAGE=	http://www.moregroupware.de/

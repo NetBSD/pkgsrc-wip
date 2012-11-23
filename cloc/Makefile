@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/11/14 00:16:02 othyro Exp $
+# $NetBSD: Makefile,v 1.6 2012/11/23 22:33:29 othyro Exp $
 #
 
 DISTNAME=	cloc-1.55
@@ -8,7 +8,7 @@ EXTRACT_SUFX=	.pl
 
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://cloc.sourceforge.net/
-COMMENT=	Statistics utility to count lines of code 
+COMMENT=	Statistics utility to count lines of code
 LICENSE=	gnu-gpl-v2
 
 DEPENDS+=	p5-Getopt-Long>=2.38:../../devel/p5-Getopt-Long

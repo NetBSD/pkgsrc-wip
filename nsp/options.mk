@@ -1,10 +1,10 @@
-# $NetBSD: options.mk,v 1.1.1.1 2010/05/10 23:34:11 jihbed Exp $
+# $NetBSD: options.mk,v 1.2 2012/11/23 22:33:47 othyro Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.nsp
 PKG_SUPPORTED_OPTIONS=	tk
-PKG_SUGGESTED_OPTIONS=	
+PKG_SUGGESTED_OPTIONS=	# blank
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mgtk)

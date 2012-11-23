@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2012/11/14 00:16:05 othyro Exp $
+# $NetBSD: Makefile,v 1.19 2012/11/23 22:33:36 othyro Exp $
 
 GCC_VERSION=		4.7.0
 DISTNAME=		gcc-${GCC_VERSION}
@@ -99,7 +99,7 @@ LANGS+= java
 EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
 DISTFILES+=		ecj-4.5.jar
 SITES.ecj-4.5.jar= \
-		ftp://ftp.mirrorservice.org/sites/sourceware.org/pub/java/ 
+		ftp://ftp.mirrorservice.org/sites/sourceware.org/pub/java/
 
 REPLACE_PYTHON=		${WRKSRC}/libjava/contrib/aot-compile.in
 REPLACE_PYTHON+=	${WRKSRC}/libjava/contrib/aot-compile-rpm.in

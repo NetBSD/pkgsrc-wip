@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/07 16:23:15 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/11/23 22:34:05 othyro Exp $
 #
 
 DISTNAME=	spai-3.2
@@ -8,7 +8,7 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://www.computational.unibas.ch/software/spai/
-COMMENT=	Sparse Approximate Inverses 
+COMMENT=	Sparse Approximate Inverses
 LICENSE=	gnu-gpl-v2
 
 MAKE_JOBS_SAFE=NO

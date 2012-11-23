@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/04 18:42:21 asau Exp $
+# $NetBSD: Makefile,v 1.5 2012/11/23 22:33:50 othyro Exp $
 #
 
 DISTNAME=	Math-FixedPrecision-0.21
@@ -18,4 +18,3 @@ PERL5_PACKLIST= auto/Math/FixedPrecision/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
-

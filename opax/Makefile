@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/03 21:32:46 asau Exp $
+# $NetBSD: Makefile,v 1.5 2012/11/23 22:33:47 othyro Exp $
 
 DISTNAME=	pax-3.4
 PKGNAME=	o${DISTNAME}
@@ -18,4 +18,3 @@ PKG_DESTDIR_SUPPORT=	none
 GNU_CONFIGURE=	YES
 
 .include "../../mk/bsd.pkg.mk"
-

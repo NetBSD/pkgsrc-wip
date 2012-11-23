@@ -1,3 +1,4 @@
 TeXML is an XML vocabulary for TeX. The processor transforms the TeXML markup
-into the TeX markup, escaping special and out-of-encoding characters.
-The intended audience is developers who automatically generate [La]TeX or ConTeXt files. 
+into the TeX markup, escaping special and out-of-encoding characters. The
+intended audience is developers who automatically generate [La]TeX or ConTeXt
+files.

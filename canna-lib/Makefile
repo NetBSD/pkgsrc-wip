@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/09/24 18:26:52 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/11/23 22:33:26 othyro Exp $
 
 CANNA_MODULE=	lib
 
@@ -25,6 +25,6 @@ post-configure:
 post-install:
 .for f in forcpp kpdic
 	${RM} ${DESTDIR}${PREFIX}/bin/${f}
-.endfor	
-	
+.endfor
+
 .include "../../mk/bsd.pkg.mk"

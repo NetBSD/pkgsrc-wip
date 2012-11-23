@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/10/07 16:23:16 asau Exp $
+# $NetBSD: Makefile,v 1.9 2012/11/23 22:34:05 othyro Exp $
 #
 
 DISTNAME=	spyder-2.1.6
@@ -12,9 +12,9 @@ HOMEPAGE=	http://code.google.com/p/spyderlib/
 COMMENT=	Scientific Python Development Environment
 LICENSE=	mit
 
-### Recommende dependency###
+### Recommended dependencies###
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.7.2:../../math/py-scipy
-DEPENDS+=	${PYPKGPREFIX}-cElementTree-[0-9]*:../../textproc/py-cElementTree 
+DEPENDS+=	${PYPKGPREFIX}-cElementTree-[0-9]*:../../textproc/py-cElementTree
 DEPENDS+=	${PYPKGPREFIX}-sphinx>=1.0.7:../../textproc/py-sphinx
 
 USE_PKGLOCALEDIR=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/10/06 17:13:26 asau Exp $
+# $NetBSD: Makefile,v 1.14 2012/11/23 22:33:55 othyro Exp $
 #
 
 DISTNAME=		PyPE1.8.2
@@ -30,7 +30,7 @@ do-install:
 		${DESTDIR}${PREFIX}/${PYSITELIB}/pype/readme.txt
 	${INSTALL_DATA} ${FILESDIR}/__init__.py \
 		${DESTDIR}${PREFIX}/${PYSITELIB}/pype/__init__.py
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/bin		
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/pype.py ${DESTDIR}${PREFIX}/bin/pype.py-${PYVERSSUFFIX}
 
 .include "../../lang/python/application.mk"

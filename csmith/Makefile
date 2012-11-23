@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/11/13 19:33:44 othyro Exp $
+# $NetBSD: Makefile,v 1.4 2012/11/23 22:33:29 othyro Exp $
 #
 
 DISTNAME=	csmith-2.1.0
@@ -15,6 +15,7 @@ USE_TOOLS+=	gm4 gmake perl
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
 
-REPLACE_PERL+=	scripts/compiler_test.pl scripts/launchn.pl scripts/test_csmith.pl \
+REPLACE_PERL+=	scripts/compiler_test.pl scripts/launchn.pl
+REPLACE_PERL+=	scripts/test_csmith.pl
 
 .include "../../mk/bsd.pkg.mk"

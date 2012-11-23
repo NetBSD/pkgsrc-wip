@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2012/10/23 10:28:55 thomasklausner Exp $
+# $NetBSD: options.mk,v 1.3 2012/11/23 22:33:54 othyro Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.pulseaudio
 PKG_SUPPORTED_OPTIONS=	avahi x11
@@ -28,4 +28,3 @@ PLIST.x11=		yes
 .else
 CONFIGURE_ARGS+=	--disable-x11
 .endif
-

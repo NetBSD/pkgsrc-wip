@@ -1,5 +1,5 @@
 Yapps (Yet Another Python Parser System) is an easy to use parser generator that
-is written in Python and generates Python code. Although there are several 
+is written in Python and generates Python code. Although there are several
 parser generators already available for Python, I had different goals, including
 learning about recursive descent parsers. Yapps is simple, is easy to use, and
 produces human-readable parsers. It is not the fastest, most powerful, or most

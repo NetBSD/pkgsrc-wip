@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2012/09/28 22:07:33 asau Exp $
+# $NetBSD: Makefile.common,v 1.13 2012/11/23 22:33:30 othyro Exp $
 # used by wip/emboss-domainatrix/Makefile
 # used by wip/emboss-emnu/Makefile
 # used by wip/emboss-hmmer/Makefile
@@ -35,4 +35,3 @@ AUTO_MKDIRS=	yes
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
-

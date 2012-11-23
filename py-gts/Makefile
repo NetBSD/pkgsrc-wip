@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/11/12 16:26:47 othyro Exp $
+# $NetBSD: Makefile,v 1.5 2012/11/23 22:33:57 othyro Exp $
 #
 
 DISTNAME=	pygts-0.3.1
@@ -25,7 +25,7 @@ do-test:
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/gts.html ${DESTDIR}${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/README.developers ${DESTDIR}${DOCDIR}
-	
+
 .include "../../lang/python/extension.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../wip/gts/buildlink3.mk"

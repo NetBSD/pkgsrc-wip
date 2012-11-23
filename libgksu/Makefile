@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/03 09:10:39 asau Exp $
+# $NetBSD: Makefile,v 1.5 2012/11/23 22:33:39 othyro Exp $
 #
 
 DISTNAME=		libgksu1.2-1.3.7
@@ -74,4 +74,3 @@ post-patch:
 
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
-

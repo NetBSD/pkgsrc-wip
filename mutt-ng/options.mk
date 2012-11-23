@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2006/08/15 09:00:39 christian_gall Exp $
+# $NetBSD: options.mk,v 1.4 2012/11/23 22:33:47 othyro Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.muttng
 PKG_SUPPORTED_OPTIONS=	ssl gpgme sasl2 idn esmtp hcache gssapi debug curses nntp
@@ -60,4 +60,3 @@ CONFIGURE_ARGS+=	--enable-hcache --with-bdb --without-qdbm --without-gdbm
 CONFIGURE_ARGS+=	--enable-nntp
 .include "../../databases/db4/buildlink3.mk"
 .endif
-
