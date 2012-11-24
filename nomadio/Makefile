@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2012/11/03 17:01:16 othyro Exp $
+# $NetBSD: Makefile,v 1.8 2012/11/24 17:38:12 kristerw Exp $
 
-PKGVERSION=		0.7
-DISTNAME=		nomadio-${PKGVERSION}
+DISTNAME=		nomadio-0.7
 PKGREVISION=		1
 CATEGORIES=		audio
 MASTER_SITES=		ftp://ftp.lucifier.net/pub/nomadio/
