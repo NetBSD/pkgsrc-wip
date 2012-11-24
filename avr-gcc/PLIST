@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/02/06 07:41:56 makoto Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/11/24 17:27:40 kristerw Exp $
 avr/bin/c++
 avr/bin/g++
 avr/bin/gcc
@@ -175,6 +175,7 @@ libexec/gcc/avr/${PKGVERSION}/install-tools/fixincl
 libexec/gcc/avr/${PKGVERSION}/install-tools/mkheaders
 libexec/gcc/avr/${PKGVERSION}/install-tools/mkinstalldirs
 libexec/gcc/avr/${PKGVERSION}/lto-wrapper
+libexec/gcc/avr/${PKGVERSION}/lto1
 man/man1/avr-cpp.1
 man/man1/avr-g++.1
 man/man1/avr-gcc.1
