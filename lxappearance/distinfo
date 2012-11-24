@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2012/05/15 03:24:18 jeremy-c-reed Exp $
+$NetBSD: distinfo,v 1.2 2012/11/24 02:29:27 jeremy-c-reed Exp $
 
-SHA1 (lxappearance-0.3.0.tar.gz) = 735f7e1f7fb2cafdedeedb69d78ef2f2ac38fdb9
-RMD160 (lxappearance-0.3.0.tar.gz) = 7fd9f1a83149ff0af0db90572e05f23b82f88b82
-Size (lxappearance-0.3.0.tar.gz) = 226321 bytes
+SHA1 (lxappearance-0.5.2.tar.gz) = 08adf1210cd70c59aae08b8229d629eb94275fbb
+RMD160 (lxappearance-0.5.2.tar.gz) = e8a59562a2f1e95b4919d00d4a253956fb6cc406
+Size (lxappearance-0.5.2.tar.gz) = 278331 bytes

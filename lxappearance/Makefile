@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2012/11/13 20:09:33 othyro Exp $
+# $NetBSD: Makefile,v 1.4 2012/11/24 02:29:27 jeremy-c-reed Exp $
 
-DISTNAME=	lxappearance-0.3.0
-PKGREVISION=	1
+DISTNAME=	lxappearance-0.5.2
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lxde/}
 
