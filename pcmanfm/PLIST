@@ -1,6 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/05/20 04:06:16 jeremy-c-reed Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/11/24 02:42:40 jeremy-c-reed Exp $
 bin/pcmanfm
 etc/xdg/pcmanfm/default/pcmanfm.conf
+man/man1/pcmanfm.1
+share/applications/pcmanfm-desktop-pref.desktop
 share/applications/pcmanfm.desktop
 share/pcmanfm/ui/about.ui
 share/pcmanfm/ui/autorun.ui
