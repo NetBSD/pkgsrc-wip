@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2010/10/15 12:01:29 bseklecki Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/24 10:28:54 kristerw Exp $
 #
 
 PKGVERSION=	1.0
@@ -32,6 +32,6 @@ post-install:
 	${INSTALL_DATA_DIR} ${PKG_SYSCONFDIR}/sup-client-scan
 	${INSTALL_DATA_DIR} ${PKG_SYSCONFDIR}/prefixes
 
-DEPENDS+=            cvsup-16.1.hnb2:../../devel/cvsup
+DEPENDS+=            cvsup>=16.1.hnb2:../../devel/cvsup
 
 .include "../../mk/bsd.pkg.mk"
