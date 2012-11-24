@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/11/22 23:41:46 othyro Exp $
+# $NetBSD: Makefile,v 1.5 2012/11/24 21:53:35 kristerw Exp $
 #
 
 DISTNAME=	kaffeine-1.2.2
@@ -10,6 +10,9 @@ HOMEPAGE=	http://kaffeine.kde.org/
 COMMENT=	Full featured Multimedia-Player for KDE4
 LICENSE=	gnu-gpl-v2
 
+BUILD_DEPENDS+=	automoc4>=0.9.87:../../devel/automoc4
+
+USE_TOOLS+=	msgfmt
 USE_CMAKE=	yes
 USE_LANGUAGES=	c c++
 
