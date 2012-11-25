@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4965 2012/11/25 03:42:13 othyro Exp $
+# $Id: Makefile,v 1.4966 2012/11/25 18:42:42 kristerw Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -3182,8 +3182,8 @@ SUBDIR+=	vcf
 SUBDIR+=	vche
 SUBDIR+=	vdesk
 SUBDIR+=	vee
-SUBDIR+=	vidalia-devel
 SUBDIR+=	vidalia
+SUBDIR+=	vidalia-devel
 SUBDIR+=	vidrioclock
 SUBDIR+=	vidriolib
 SUBDIR+=	viewer
