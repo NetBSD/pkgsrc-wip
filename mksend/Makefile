@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2012/10/03 15:09:55 asau Exp $
+# $NetBSD: Makefile,v 1.7 2012/11/25 23:32:28 othyro Exp $
 #
 
 DISTNAME=		mksend-0.5.3
 CATEGORIES=		net
 MASTER_SITES=		ftp://ftp.nopcode.org/prj/mksend/
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.nopcode.org/?t=mksend
 COMMENT=		Network testing tool for capture and generate packets
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2012/10/03 15:09:53 asau Exp $
+# $NetBSD: Makefile,v 1.8 2012/11/25 23:32:27 othyro Exp $
 #
 
 DISTNAME=		memdump-1.01
 CATEGORIES=		sysutils
 MASTER_SITES=		http://www.porcupine.org/forensics/
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.porcupine.org/forensics/tct.html
 COMMENT=		Memory dumper for UNIX-like systems
 

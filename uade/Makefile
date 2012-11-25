@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/07 17:41:39 asau Exp $
+# $NetBSD: Makefile,v 1.7 2012/11/25 23:32:31 othyro Exp $
 #
 
 DISTNAME=		uade-1.00
@@ -6,7 +6,7 @@ CATEGORIES=		audio
 MASTER_SITES=		http://uade.ton.tut.fi/uade/
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://uade.ton.tut.fi/
 COMMENT=		Unix Amiga Delitracker Emulator
 

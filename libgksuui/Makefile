@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/03 09:10:39 asau Exp $
+# $NetBSD: Makefile,v 1.6 2012/11/25 23:32:25 othyro Exp $
 #
 
 DISTNAME=		libgksuui1.0-1.0.7
@@ -6,7 +6,7 @@ PKGREVISION=		2
 CATEGORIES=		sysutils
 MASTER_SITES=		http://people.debian.org/~kov/gksu/old_stuff/libgksuui1.0/
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://people.debian.org/~kov/gksu/
 COMMENT=		UI Support library for Gksu
 

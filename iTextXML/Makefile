@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/09/29 17:09:46 asau Exp $
+# $NetBSD: Makefile,v 1.7 2012/11/25 23:32:20 othyro Exp $
 #
 
 DISTNAME=		iTextXML
@@ -7,7 +7,7 @@ CATEGORIES=		textproc
 MASTER_SITES=		http://itext.sourceforge.net/downloads/
 EXTRACT_SUFX=		.jar
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.lowagie.com/iText/
 COMMENT=		Java classes to generate and parse XML files
 

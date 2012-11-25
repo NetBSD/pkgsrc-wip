@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/01 21:03:09 asau Exp $
+# $NetBSD: Makefile,v 1.6 2012/11/25 23:32:23 othyro Exp $
 #
 
 DISTNAME=		swingwt-0.82
@@ -6,7 +6,7 @@ PKGNAME=		java-swingswt-0.82
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=swingwt/}
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://swingwt.sourceforge.net/
 COMMENT=		Swing binding to SWT for java
 

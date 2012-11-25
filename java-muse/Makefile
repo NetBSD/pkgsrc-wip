@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/01 21:00:57 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/11/25 23:32:23 othyro Exp $
 #
 
 DISTNAME=		muse-0.8a5
@@ -6,7 +6,7 @@ PKGNAME=		java-muse-0.8a5
 CATEGORIES=		textproc
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=muse/}
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://muse.sourceforge.net/
 COMMENT=		Java-XML API for networking with modules like Jabber
 

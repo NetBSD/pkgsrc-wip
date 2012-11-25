@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/07 20:11:07 asau Exp $
+# $NetBSD: Makefile,v 1.7 2012/11/25 23:32:32 othyro Exp $
 #
 
 DISTNAME=		wireless_tools.27
@@ -6,7 +6,7 @@ PKGNAME=		wireless-tools-27
 CATEGORIES=		net linux
 MASTER_SITES=		http://pcmcia-cs.sourceforge.net/ftp/contrib/
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://pcmcia-cs.sourceforge.net/ftp/contrib/
 COMMENT=		Tools for manipulating Linux Wireless Extensions
 

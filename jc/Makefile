@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/11/13 19:33:45 othyro Exp $
+# $NetBSD: Makefile,v 1.12 2012/11/25 23:32:24 othyro Exp $
 #
 
 DISTNAME=		jc-1.2.3
@@ -6,7 +6,7 @@ PKGREVISION=		2
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=jcvm/}
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://jcvm.sourceforge.net/
 COMMENT=		Native java compiler using gcc
 

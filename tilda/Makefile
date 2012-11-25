@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/10/07 17:17:36 asau Exp $
+# $NetBSD: Makefile,v 1.10 2012/11/25 23:32:31 othyro Exp $
 #
 
 DISTNAME=	tilda-0.9.6
@@ -6,7 +6,7 @@ PKGREVISION=	3
 CATEGORIES=	x11 sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tilda/}
 
-MAINTAINER=	pancake@phreaker.net
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://tilda.sourceforge.net/
 COMMENT=	Terminal like the classic first-person-shooter games
 

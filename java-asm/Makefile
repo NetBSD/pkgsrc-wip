@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/01 20:20:52 asau Exp $
+# $NetBSD: Makefile,v 1.6 2012/11/25 23:32:22 othyro Exp $
 #
 
 DISTNAME=		asm-1.4.2-bin
@@ -9,7 +9,7 @@ MASTER_SITES=		http://download.forge.objectweb.org/asm/ \
 				http://download.us.forge.objectweb.org/asm/
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://asm.objectweb.org/
 COMMENT=		Java bytecode manipulation framework
 

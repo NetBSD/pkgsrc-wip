@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2012/10/03 09:10:41 asau Exp $
+# $NetBSD: Makefile,v 1.8 2012/11/25 23:32:26 othyro Exp $
 #
 
 DISTNAME=		libvc-003
 CATEGORIES=		mail
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=rolo/}
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://rolo.sourceforge.net/
 COMMENT=		VCard library
 

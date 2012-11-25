@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/03 18:15:32 asau Exp $
+# $NetBSD: Makefile,v 1.8 2012/11/25 23:32:28 othyro Exp $
 #
 
 DISTNAME=		netkit-routed-0.17
@@ -6,7 +6,7 @@ CATEGORIES=		net
 MASTER_SITES=		ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/ \
 			${MASTER_SITE_SUNSITE:=system/network/}
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.hcs.harvard.edu/~dholland/computers/netkit.html
 COMMENT=		Network RIP and router discovery daemon for Linux
 

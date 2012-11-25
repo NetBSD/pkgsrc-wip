@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/09/30 08:40:48 asau Exp $
+# $NetBSD: Makefile,v 1.8 2012/11/25 23:32:21 othyro Exp $
 #
 
 DISTNAME=		jadlx158
@@ -8,7 +8,7 @@ MASTER_SITES=		http://www.kpdus.com/jad/${JAD_OSDIR}
 EXTRACT_SUFX=		.zip
 JAD_OSDIR=		linux # Default one
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.kpdus.com/jad.html
 COMMENT=		The fast Java Decompiler
 LICENSE=		no-commercial-use

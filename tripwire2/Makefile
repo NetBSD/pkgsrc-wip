@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.10 2012/10/07 17:04:47 asau Exp $
+# $NetBSD: Makefile,v 1.11 2012/11/25 23:32:31 othyro Exp $
 #
 
 DISTNAME=	tripwire-2.3.1-2
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tripwire/}
 
-MAINTAINER=	pancake@phreaker.net
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/tripwire/
 COMMENT=	File and directory integrity checker
 

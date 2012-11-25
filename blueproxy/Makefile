@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2012/09/24 17:14:35 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/11/25 23:32:08 othyro Exp $
 #
 
 DISTNAME=		blueproxy-1.3
 CATEGORIES=		net
 MASTER_SITES=		http://anil.recoil.org/projects/
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://anil.recoil.org/projects/blueproxy.html
 COMMENT=		RFCOMM <-> TCP proxy
 #LICENSE=		# TODO

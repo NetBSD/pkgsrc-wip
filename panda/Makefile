@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/11/13 19:33:45 othyro Exp $
+# $NetBSD: Makefile,v 1.8 2012/11/25 23:32:28 othyro Exp $
 #
 
 DISTNAME=		panda-0.5.4
@@ -7,7 +7,7 @@ CATEGORIES=		print
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=panda/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.stillhq.com//panda/
 COMMENT=			GPLed PDF generation library
 

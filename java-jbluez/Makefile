@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/01 20:47:20 asau Exp $
+# $NetBSD: Makefile,v 1.8 2012/11/25 23:32:23 othyro Exp $
 #
 
 DISTNAME=		jbluez-1.0
@@ -6,7 +6,7 @@ PKGNAME=		java-${DISTNAME}
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=jbluez/}
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://jbluez.sourceforge.net/
 COMMENT=		Java interface for BlueZ stack
 

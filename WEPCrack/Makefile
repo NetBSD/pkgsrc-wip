@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2012/09/24 16:43:56 asau Exp $
+# $NetBSD: Makefile,v 1.10 2012/11/25 23:32:07 othyro Exp $
 
 DISTNAME=		WEPCrack-0.1.0
 CATEGORIES=		security
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=wepcrack/}
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://wepcrack.sourceforge.net/
 COMMENT=		Open source tool for breaking 802.11 WEP secret keys
 

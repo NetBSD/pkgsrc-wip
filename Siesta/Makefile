@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2008/03/08 15:32:55 hoka_adam Exp $
+# $NetBSD: Makefile,v 1.7 2012/11/25 23:32:07 othyro Exp $
 #
 
 DISTNAME=	Siesta-0.66
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../by-authors/id/R/RC/RCLAMP/}
 
-MAINTAINER=	pancake@phreaker.net
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://siesta.unixbeard.net/
 COMMENT=	Siesta Mailing List Manager
 

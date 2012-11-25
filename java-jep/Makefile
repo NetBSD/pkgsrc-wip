@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/01 20:53:32 asau Exp $
+# $NetBSD: Makefile,v 1.8 2012/11/25 23:32:23 othyro Exp $
 #
 
 DISTNAME=		jep-2.24
@@ -6,7 +6,7 @@ PKGNAME=		java-jep-2.24
 CATEGORIES=		math
 MASTER_SITES=		http://www.singularsys.com/download/
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.singularsys.com/jep/
 COMMENT=		Java Mathematical Expression Parser
 

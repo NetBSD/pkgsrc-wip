@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2012/09/28 22:07:37 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/11/25 23:32:12 othyro Exp $
 #
 
 DISTNAME=		ezstream-0.2.0
 CATEGORIES=		audio
 MASTER_SITES=		http://downloads.us.xiph.org/releases/ezstream/
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://downloads.us.xiph.org/releases/ezstream/
 COMMENT=		Streamming client of mp3 and oggvorbis for icecast
 

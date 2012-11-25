@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/11/14 00:16:12 othyro Exp $
+# $NetBSD: Makefile,v 1.5 2012/11/25 23:32:28 othyro Exp $
 #
 
 DISTNAME=		netx-${VERSION}
@@ -7,7 +7,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=jnlp/}
 EXTRACT_SUFX=		.jar
 VERSION=		0.5
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://jnlp.sourceforge.net/
 COMMENT=		Free JNLP implementation
 

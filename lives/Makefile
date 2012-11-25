@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/10/03 09:10:42 asau Exp $
+# $NetBSD: Makefile,v 1.12 2012/11/25 23:32:27 othyro Exp $
 #
 
 DISTNAME=	lives-0.9.9.9
@@ -9,7 +9,7 @@ CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lives/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	pancake@phreaker.net
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://lives.sourceforge.net/
 COMMENT=	Linux Video Editing System
 LICENSE=	gnu-gpl-v3

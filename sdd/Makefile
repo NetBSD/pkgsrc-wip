@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2012/10/07 16:22:55 asau Exp $
+# $NetBSD: Makefile,v 1.6 2012/11/25 23:32:30 othyro Exp $
 #
 
 DISTNAME=		sdd-1.52
 CATEGORIES=		sysutils
 MASTER_SITES=		ftp://ftp.berlios.de/pub/sdd/
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://directory.fsf.org/project/sdd/
 COMMENT=		Replacement for 'dd'
 

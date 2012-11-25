@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/09/28 22:36:19 asau Exp $
+# $NetBSD: Makefile,v 1.9 2012/11/25 23:32:13 othyro Exp $
 #
 
 DISTNAME=		flexbackup-1.2.1
@@ -6,7 +6,7 @@ PKGREVISION=		1
 CATEGORIES=		sysutils
 MASTER_SITES=		http://flexbackup.sourceforge.net/tarball/
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://flexbackup.sourceforge.net/
 COMMENT=		Flexible backup tool
 

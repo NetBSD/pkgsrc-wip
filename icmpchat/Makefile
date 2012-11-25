@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.10 2012/09/30 05:44:15 asau Exp $
+# $NetBSD: Makefile,v 1.11 2012/11/25 23:32:21 othyro Exp $
 
 DISTNAME=	icmpchat-0.6
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=icmpchat/}
 
-MAINTAINER=	pancake@phreaker.net
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://icmpchat.sourceforge.net/
 COMMENT=	Simple chat using ICMP and Rijndael-256 encryptation
 

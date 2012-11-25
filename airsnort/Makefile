@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/09/24 16:56:32 asau Exp $
+# $NetBSD: Makefile,v 1.11 2012/11/25 23:32:07 othyro Exp $
 #
 
 DISTNAME=		airsnort-0.2.7e
@@ -6,7 +6,7 @@ PKGREVISION=		1
 CATEGORIES=		net security linux
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=airsnort/}
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://airsnort.shmoo.com/
 COMMENT=		WLAN sniffer and realtime WEP cracker
 LICENSE=		gnu-gpl-v2

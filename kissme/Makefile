@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2012/10/01 21:57:40 asau Exp $
+# $NetBSD: Makefile,v 1.7 2012/11/25 23:32:24 othyro Exp $
 #
 
 DISTNAME=		kissme-0.0.32
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=kissme/}
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://kissme.sourceforge.net/
 COMMENT=		Java Virtual Machine (JVM) freely available
 

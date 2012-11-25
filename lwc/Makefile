@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/03 09:04:32 asau Exp $
+# $NetBSD: Makefile,v 1.8 2012/11/25 23:32:27 othyro Exp $
 #
 
 DISTNAME=		lwc-1.3.2
@@ -6,7 +6,7 @@ CATEGORIES=		lang
 MASTER_SITES=		http://students.ceid.upatras.gr/~sxanth/lwc/
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://students.ceid.upatras.gr/~sxanth/lwc/
 COMMENT=		Lightweight C++
 

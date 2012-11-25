@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2012/10/04 09:13:18 asau Exp $
+# $NetBSD: Makefile,v 1.6 2012/11/25 23:32:28 othyro Exp $
 #
 
 DISTNAME=		p3nfs-5.16
 CATEGORIES=		sysutils
 MASTER_SITES=		http://www.koeniglich.de/packages/
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.koeniglich.de/p3nfs.html
 COMMENT=		Symbian to UNIX NFS daemon
 

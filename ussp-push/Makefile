@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2012/10/07 17:30:35 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/11/25 23:32:31 othyro Exp $
 #
 
 DISTNAME=		ussp-push-0.4
 CATEGORIES=		comms
 MASTER_SITES=		http://xmailserver.org/
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://xmailserver.org/ussp-push.html
 COMMENT=		OBEX object pusher for BlueZ
 

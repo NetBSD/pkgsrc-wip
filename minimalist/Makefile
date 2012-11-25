@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.11 2012/10/03 14:17:22 asau Exp $
+# $NetBSD: Makefile,v 1.12 2012/11/25 23:32:28 othyro Exp $
 #
 
 DISTNAME=	minimalist-2.5.3
 CATEGORIES=	mail
 MASTER_SITES=	http://www.mml.org.ua/LIST/
 
-MAINTAINER=	pancake@phreaker.net
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mml.org.ua/
 COMMENT=	Minimalistic Mailing Lists Manager
 

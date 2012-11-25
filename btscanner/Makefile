@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/09/24 17:14:42 asau Exp $
+# $NetBSD: Makefile,v 1.5 2012/11/25 23:32:09 othyro Exp $
 #
 
 DISTNAME=		btscanner-2.0
@@ -6,7 +6,7 @@ CATEGORIES=		net security
 MASTER_SITES=		http://www.pentest.co.uk/src/
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.pentest.co.uk/cgi-bin/viewcat.cgi?cat=downloads
 COMMENT=		Bluetooth device information viewer
 LICENSE=		gnu-gpl-v2

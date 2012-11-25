@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/10/03 09:03:16 asau Exp $
+# $NetBSD: Makefile,v 1.9 2012/11/25 23:32:27 othyro Exp $
 #
 
 DISTNAME=		luasql-2.0b
@@ -7,7 +7,7 @@ PKGREVISION=		1
 CATEGORIES=		databases
 MASTER_SITES=		http://www.keplerproject.org/luasql/
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.keplerproject.org/luasql/
 COMMENT=		PostgreSQL bindings for LUA
 

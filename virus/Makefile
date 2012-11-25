@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/07 17:41:42 asau Exp $
+# $NetBSD: Makefile,v 1.7 2012/11/25 23:32:32 othyro Exp $
 #
 
 DISTNAME=	virus-0.0.6
@@ -6,7 +6,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	http://www.rocklinux.net/people/ripclaw/projects/software/virus/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	pancake@phreaker.net
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.rocklinux.net/people/ripclaw/projects/software/virus/
 COMMENT=	VI resembling utility skeleton
 

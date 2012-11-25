@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/09/28 23:04:11 asau Exp $
+# $NetBSD: Makefile,v 1.7 2012/11/25 23:32:13 othyro Exp $
 #
 
 DISTNAME=		btfs-0.0.3
@@ -6,7 +6,7 @@ PKGNAME=		fusefs-btfs-0.0.3
 CATEGORIES=		sysutils
 MASTER_SITES=		http://www.mulliner.org/bluetooth/
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.mulliner.org/bluetooth/btfs.php
 COMMENT=		Bluetooth Filesystem for FUSE
 

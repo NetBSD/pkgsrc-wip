@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.14 2012/10/07 17:17:25 asau Exp $
+# $NetBSD: Makefile,v 1.15 2012/11/25 23:32:31 othyro Exp $
 #
 
 DISTNAME=	tcc-0.9.22
 CATEGORIES=	lang
 MASTER_SITES=	http://fabrice.bellard.free.fr/tcc/
 
-MAINTAINER=	pancake@phreaker.net
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tinycc.org/
 COMMENT=	The Smallest ANSI C compiler
 

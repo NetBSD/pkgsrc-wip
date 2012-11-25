@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/11/13 22:25:37 othyro Exp $
+# $NetBSD: Makefile,v 1.7 2012/11/25 23:32:23 othyro Exp $
 #
 
 DISTNAME=		crimson-1.1.3-bin
@@ -7,7 +7,7 @@ CATEGORIES=		textproc
 MASTER_SITES=		http://xml.apache.org/dist/crimson/
 EXTRACT_SUFX=		.zip
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://xml.apache.org/dist/crimson/
 COMMENT=		XML parser for JAXP with DOM and SAX2
 

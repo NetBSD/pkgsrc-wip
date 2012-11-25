@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/09/28 23:21:49 asau Exp $
+# $NetBSD: Makefile,v 1.10 2012/11/25 23:32:13 othyro Exp $
 #
 
 DISTNAME=		sshfs-fuse-1.4
@@ -7,7 +7,7 @@ PKGREVISION=		2
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=fuse/}
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://fuse.sourceforge.net/
 COMMENT=		Mount remote directories using ssh and FUSE
 

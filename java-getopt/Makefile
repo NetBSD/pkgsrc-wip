@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/01 20:29:41 asau Exp $
+# $NetBSD: Makefile,v 1.5 2012/11/25 23:32:23 othyro Exp $
 #
 
 DISTNAME=		java-getopt-1.0.9
@@ -6,7 +6,7 @@ CATEGORIES=		devel
 MASTER_SITES=		ftp://ftp.urbanophile.com/pub/arenn/software/sources/
 EXTRACT_SUFX=		.jar
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.urbanophile.com/arenn/hacking/download.html
 COMMENT=		GNU getopt port for Java
 

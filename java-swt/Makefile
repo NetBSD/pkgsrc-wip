@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/10/01 21:04:14 asau Exp $
+# $NetBSD: Makefile,v 1.9 2012/11/25 23:32:24 othyro Exp $
 #
 
 DISTNAME=	swt-2.1.3-linux-gtk
@@ -8,7 +8,7 @@ CATEGORIES=	lang
 MASTER_SITES=	http://download.eclipse.org/downloads/drops/R-2.1.3-200403101828/
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=	pancake@phreaker.net
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.eclipse.org/swt/
 COMMENT=	Standard Widget Toolkit for Java
 

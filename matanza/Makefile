@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2012/10/03 15:09:52 asau Exp $
+# $NetBSD: Makefile,v 1.5 2012/11/25 23:32:27 othyro Exp $
 #
 
 DISTNAME=		matanza-0.13
 CATEGORIES=		games
 MASTER_SITES=		http://bachue.com/matanza/
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://bachue.com/matanza/
 COMMENT=		Multiplayer space shooter ascii-art game
 

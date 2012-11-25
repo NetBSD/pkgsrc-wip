@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2012/09/28 22:07:35 asau Exp $
+# $NetBSD: Makefile,v 1.5 2012/11/25 23:32:10 othyro Exp $
 #
 
 DISTNAME=		ethtool-1.6
 CATEGORIES=		net linux
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gkernel/}
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://gkernel.sourceforge.net/
 COMMENT=		Display or change ethernet card settings
 

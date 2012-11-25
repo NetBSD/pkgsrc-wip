@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/11/24 22:22:34 othyro Exp $
+# $NetBSD: Makefile,v 1.11 2012/11/25 23:32:09 othyro Exp $
 #
 
 DISTNAME=		briquolo-0.5.7
@@ -6,7 +6,7 @@ CATEGORIES=		games
 MASTER_SITES=		http://briquolo.free.fr/download/
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://briquolo.free.fr/en/
 COMMENT=		3D breakout based on OpenGL
 LICENSE=		gnu-gpl-v3

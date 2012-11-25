@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/11/13 20:09:30 othyro Exp $
+# $NetBSD: Makefile,v 1.8 2012/11/25 23:32:15 othyro Exp $
 #
 
 DISTNAME=		gksu-1.3.6
@@ -6,7 +6,7 @@ PKGREVISION=		3
 CATEGORIES=		sysutils
 MASTER_SITES=		http://people.debian.org/~kov/gksu/old_stuff/gksu/
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.nongnu.org/gksu/
 COMMENT=		Authorization dialog library
 

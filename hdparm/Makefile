@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2012/09/29 17:05:54 asau Exp $
+# $NetBSD: Makefile,v 1.6 2012/11/25 23:32:20 othyro Exp $
 #
 
 DISTNAME=		hdparm-6.6
 CATEGORIES=		linux sysutils
 MASTER_SITES=		http://www.ibiblio.org/pub/Linux/system/hardware/
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.ibiblio.org/pub/Linux/system/hardware/
 COMMENT=		Linux tool for view and manipulate IDE drive parameters
 

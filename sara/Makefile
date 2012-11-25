@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/10/07 14:55:50 asau Exp $
+# $NetBSD: Makefile,v 1.10 2012/11/25 23:32:30 othyro Exp $
 #
 
 DISTNAME=		sara-7.4.4
@@ -6,7 +6,7 @@ CATEGORIES=		security
 MASTER_SITES=		http://www-arc.com/sara/downloads/
 EXTRACT_SUFX=		.tgz
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www-arc.com/sara/
 COMMENT=		Security Auditor's Research Assistant
 

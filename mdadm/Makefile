@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/03 15:09:53 asau Exp $
+# $NetBSD: Makefile,v 1.7 2012/11/25 23:32:27 othyro Exp $
 #
 
 DISTNAME=		mdadm-1.8.1
@@ -7,7 +7,7 @@ MASTER_SITES=		http://www.cse.unsw.edu.au/~neilb/source/mdadm/ \
 			http://www.kernel.org/pub/linux/utils/raid/mdadm/
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.cse.unsw.edu.au/~neilb/source/mdadm/ANNOUNCE
 COMMENT=		RAID management for Linux systems
 

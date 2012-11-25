@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/10/05 11:20:58 asau Exp $
+# $NetBSD: Makefile,v 1.11 2012/11/25 23:32:29 othyro Exp $
 #
 
 DISTNAME=		pizza-1.1
@@ -7,7 +7,7 @@ CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=pizzacompiler/}
 EXTRACT_SUFX=		.jar
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://pizzacompiler.sourceforge.net/
 COMMENT=		Pizza language is an extension to Java
 

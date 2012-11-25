@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2012/10/01 22:17:50 asau Exp $
+# $NetBSD: Makefile,v 1.6 2012/11/25 23:32:24 othyro Exp $
 #
 
 DISTNAME=		lcrack-20040914
 CATEGORIES=		security
 MASTER_SITES=		http://usuarios.lycos.es/reinob/lcrack/
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://usuarios.lycos.es/reinob/
 COMMENT=		Generic password hash cracker
 

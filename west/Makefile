@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/07 18:52:42 asau Exp $
+# $NetBSD: Makefile,v 1.7 2012/11/25 23:32:32 othyro Exp $
 #
 
 DISTNAME=		west_0.9
@@ -8,7 +8,7 @@ CATEGORIES=		www
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=west/}
 EXTRACT_SUFX=		.tgz
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://west.sourceforge.net/
 COMMENT=		Web scripting/stress tool
 

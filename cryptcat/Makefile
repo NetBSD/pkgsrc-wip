@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/09/24 18:26:55 asau Exp $
+# $NetBSD: Makefile,v 1.5 2012/11/25 23:32:09 othyro Exp $
 #
 
 DISTNAME=		cryptcat-unix-1.2.1
@@ -6,7 +6,7 @@ CATEGORIES=		net security
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=cryptcat/}
 EXTRACT_SUFX=		.tar
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://sourceforge.net/projects/cryptcat/
 COMMENT=		Standard netcat enhanced with twofish encryption
 

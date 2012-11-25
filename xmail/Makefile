@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.11 2012/10/07 19:41:52 asau Exp $
+# $NetBSD: Makefile,v 1.12 2012/11/25 23:32:32 othyro Exp $
 #
 
 DISTNAME=	xmail-1.18
 CATEGORIES=	mail
 MASTER_SITES=	http://www.xmailserver.com/
 
-MAINTAINER=	pancake@phreaker.net
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.xmailserver.com/
 COMMENT=	SMTP, POP3 and finder server
 

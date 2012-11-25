@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/01 20:34:09 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/11/25 23:32:23 othyro Exp $
 #
 
 DISTNAME=		gnu-crypto-2.0.1-bin
@@ -7,7 +7,7 @@ CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.gnupg.org/GnuPG/gnu-crypto/
 EXTRACT_SUFX=		.zip
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		ftp://ftp.gnupg.org/GnuPG/gnu-crypto/
 COMMENT=		Free cryptographic implementation for Java
 

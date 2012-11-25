@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2012/09/30 05:26:08 asau Exp $
+# $NetBSD: Makefile,v 1.9 2012/11/25 23:32:21 othyro Exp $
 #
 
 DISTNAME=		ile-0.4
 CATEGORIES=		misc
 MASTER_SITES=		http://www.jabberstudio.org/files/ile/
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://jabberstudio.org/projects/ile/
 COMMENT=		Email notifier component for jabber
 

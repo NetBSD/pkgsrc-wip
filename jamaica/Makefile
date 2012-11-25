@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/01 20:15:49 asau Exp $
+# $NetBSD: Makefile,v 1.6 2012/11/25 23:32:21 othyro Exp $
 #
 
 DISTNAME=		jamaica-1.0
@@ -6,7 +6,7 @@ CATEGORIES=		lang
 MASTER_SITES=		http://www.judoscript.com/store/
 EXTRACT_SUFX=		.zip
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.judoscript.com/articles/jamaica.html
 COMMENT=		JVM Macro Assembler language
 

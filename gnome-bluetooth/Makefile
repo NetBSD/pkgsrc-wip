@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2012/11/13 20:09:30 othyro Exp $
+# $NetBSD: Makefile,v 1.20 2012/11/25 23:32:17 othyro Exp $
 #
 
 DISTNAME=		gnome-bluetooth-0.7.0
@@ -6,7 +6,7 @@ PKGREVISION=		7
 CATEGORIES=		net
 MASTER_SITES=		http://ftp.gnome.org/pub/gnome/sources/gnome-bluetooth/0.7/
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://live.gnome.org/GnomeBluetooth
 COMMENT=		Gnome Bluetooth Manager
 

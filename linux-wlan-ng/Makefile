@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/03 09:10:42 asau Exp $
+# $NetBSD: Makefile,v 1.7 2012/11/25 23:32:26 othyro Exp $
 #
 
 DISTNAME=		linux-wlan-ng-0.2.1pre23
@@ -6,7 +6,7 @@ CATEGORIES=		net linux
 MASTER_SITES=		ftp://ftp.linux-wlan.org/pub/linux-wlan-ng/
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.linux-wlan.com/
 COMMENT=		Linux utilities for wireless prism2 cards
 

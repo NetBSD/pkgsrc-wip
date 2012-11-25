@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.9 2012/09/24 17:14:43 asau Exp $
+# $NetBSD: Makefile,v 1.10 2012/11/25 23:32:09 othyro Exp $
 #
 
 DISTNAME=	busybox-1.3.1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.busybox.net/downloads/
 
-MAINTAINER=	pancake@phreaker.net
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.busybox.net/
 COMMENT=	The Swiss Army Knife of Embedded Linux
 LICENSE=	gnu-gpl-v2

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2012/10/03 08:34:53 asau Exp $
+# $NetBSD: Makefile,v 1.6 2012/11/25 23:32:26 othyro Exp $
 #
 
 DISTNAME=		libvg-0.2.0
 CATEGORIES=		devel
 MASTER_SITES=		http://www.7a69ezine.org/download/
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.7a69ezine.org/project/libvg/
 COMMENT=		High-level ptrace library
 

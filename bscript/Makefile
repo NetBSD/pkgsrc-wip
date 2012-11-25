@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2012/09/24 17:14:40 asau Exp $
+# $NetBSD: Makefile,v 1.6 2012/11/25 23:32:09 othyro Exp $
 #
 
 DISTNAME=		bscript-0.3
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=bscript/}
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://bscript.sourceforge.net/
 COMMENT=		Portable, fast, lightweight BASIC interpreter
 LICENSE=		gnu-gpl-v2

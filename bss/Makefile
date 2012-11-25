@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/09/24 17:14:42 asau Exp $
+# $NetBSD: Makefile,v 1.7 2012/11/25 23:32:09 othyro Exp $
 #
 
 DISTNAME=		bss-0.6
@@ -6,7 +6,7 @@ PKGREVISION=   1
 CATEGORIES=		security
 MASTER_SITES=		http://www.secuobs.com/
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.secuobs.com/
 COMMENT=		Bluetooth Stack Smasher
 

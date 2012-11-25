@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/01 20:23:09 asau Exp $
+# $NetBSD: Makefile,v 1.6 2012/11/25 23:32:23 othyro Exp $
 #
 
 DISTNAME=		bcel-5.1
@@ -6,7 +6,7 @@ PKGNAME=		java-bcel-5.1
 CATEGORIES=		devel
 MASTER_SITES=	http://apache.rediris.es/jakarta/bcel/binaries/
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://jakarta.apache.org/bcel/
 COMMENT=		ByteCode Engineering Library
 

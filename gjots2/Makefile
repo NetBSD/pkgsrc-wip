@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/11/14 00:16:07 othyro Exp $
+# $NetBSD: Makefile,v 1.8 2012/11/25 23:32:13 othyro Exp $
 #
 
 DISTNAME=		gjots2-2.3.4
@@ -7,7 +7,7 @@ CATEGORIES=		x11
 MASTER_SITES=		http://bhepple.freeshell.org/gjots/
 EXTRACT_SUFX=		.tgz
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://bhepple.freeshell.org/gjots/
 COMMENT=		Jotter application for your Gnome desktop
 

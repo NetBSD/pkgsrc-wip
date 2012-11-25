@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/10/03 09:10:37 asau Exp $
+# $NetBSD: Makefile,v 1.10 2012/11/25 23:32:24 othyro Exp $
 #
 
 DISTNAME=		libbtctl-0.6.0
@@ -6,7 +6,7 @@ PKGREVISION=		1
 CATEGORIES=		net
 MASTER_SITES=		http://ftp.gnome.org/pub/gnome/sources/libbtctl/0.6/
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://live.gnome.org/GnomeBluetooth
 COMMENT=		GObject Bluetooth controller
 

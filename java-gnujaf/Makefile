@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/01 21:43:22 asau Exp $
+# $NetBSD: Makefile,v 1.7 2012/11/25 23:32:23 othyro Exp $
 #
 
 DISTNAME=		activation-1.1.1
@@ -6,7 +6,7 @@ PKGNAME=		java-gnujaf-1.1.1
 CATEGORIES=		textproc
 MASTER_SITES=	http://ftp.gnu.org/gnu/classpathx/
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://ftp.gnu.org/gnu/classpathx/
 COMMENT=		GNU Java Activation Framework
 

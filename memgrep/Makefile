@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2012/10/03 14:07:46 asau Exp $
+# $NetBSD: Makefile,v 1.7 2012/11/25 23:32:27 othyro Exp $
 #
 
 DISTNAME=		memgrep-0.8.0
 CATEGORIES=		devel
 MASTER_SITES=		http://www.hick.org/code/skape/memgrep/
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.hick.org/code.html
 COMMENT=		Tool to modify applications on-the-fly
 

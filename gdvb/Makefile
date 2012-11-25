@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/09/29 00:50:34 asau Exp $
+# $NetBSD: Makefile,v 1.6 2012/11/25 23:32:13 othyro Exp $
 #
 
 DISTNAME=	gdvb-0.2
@@ -7,7 +7,7 @@ CATEGORIES=	multimedia
 MASTER_SITES=	ftp://ftp.nopcode.org/prj/gdvb/ \
 		http://cvs.nopcode.org/ftp/
 
-MAINTAINER=	pancake@phreaker.net
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.nopcode.org/?t=gdvb
 COMMENT=	DVB channels manager frontend using JavaGTK
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/11/13 22:25:46 othyro Exp $
+# $NetBSD: Makefile,v 1.5 2012/11/25 23:32:30 othyro Exp $
 #
 
 PKGNAME=		rhapsody-0.28b
@@ -7,7 +7,7 @@ CATEGORIES=		chat
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=rhapsody/}
 EXTRACT_SUFX=		.tgz
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://rhapsody.sourceforge.net
 COMMENT=		IRC client for Unix operating systems
 

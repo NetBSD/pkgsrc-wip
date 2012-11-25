@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/10/07 17:10:07 asau Exp $
+# $NetBSD: Makefile,v 1.12 2012/11/25 23:32:31 othyro Exp $
 #
 
 # TODO : wrong name ?
@@ -7,7 +7,7 @@ PKGREVISION=	2
 CATEGORIES=		sysutils
 MASTER_SITES=		http://grad.icmc.usp.br/~duker/ttysnoop/
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://grad.icmc.usp.br/~duker/ttysnoop/
 COMMENT=		Snoop TTYs on Linux for kernels 2.6
 

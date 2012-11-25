@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2012/10/07 16:35:21 asau Exp $
+# $NetBSD: Makefile,v 1.7 2012/11/25 23:32:31 othyro Exp $
 #
 
 DISTNAME=		tcpspy-1.7
 CATEGORIES=		net
 MASTER_SITES=		http://www.mirrors.wiretapped.net/security/network-monitoring/tcpspy/
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://freshmeat.net/projects/tcpspy/
 COMMENT=		TCP/IP connections logger
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/05 11:28:55 asau Exp $
+# $NetBSD: Makefile,v 1.8 2012/11/25 23:32:29 othyro Exp $
 #
 
 DISTNAME=		png2ico-src-2002-12-08
@@ -7,7 +7,7 @@ PKGREVISION=		1
 CATEGORIES=		graphics
 MASTER_SITES=		http://www.winterdrache.de/freeware/png2ico/data/
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.winterdrache.de/freeware/png2ico/
 COMMENT=		PNG to icon converter
 

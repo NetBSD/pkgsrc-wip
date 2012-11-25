@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.17 2012/09/24 17:14:36 asau Exp $
+# $NetBSD: Makefile,v 1.18 2012/11/25 23:32:09 othyro Exp $
 #
 
 DISTNAME=		bluez-libs-3.19
 CATEGORIES=		net
 MASTER_SITES=		http://bluez.sourceforge.net/download/
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.bluez.org/
 COMMENT=		Linux Bluetooth Stack libraries
 

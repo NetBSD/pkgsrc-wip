@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/11/13 19:33:44 othyro Exp $
+# $NetBSD: Makefile,v 1.7 2012/11/25 23:32:09 othyro Exp $
 #
 
 DISTNAME=		cairo-java-1.0.1
@@ -6,7 +6,7 @@ PKGREVISION=		1
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/cairo-java/1.0/}
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://java-gnome.sourceforge.net/
 COMMENT=		Cairo bindings for Java
 

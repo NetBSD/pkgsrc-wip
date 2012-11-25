@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.9 2012/10/07 15:22:10 asau Exp $
+# $NetBSD: Makefile,v 1.10 2012/11/25 23:32:30 othyro Exp $
 #
 
 DISTNAME=		sleuthkit-2.04
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=sleuthkit/}
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.sleuthkit.org/
 COMMENT=		OpenSource Forensic Toolkit
 

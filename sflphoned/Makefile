@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2012/10/07 16:22:56 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/11/25 23:32:30 othyro Exp $
 #
 
 DISTNAME=		sflphoned-0.6.1
 CATEGORIES=		chat
 MASTER_SITES=		http://www.sflphone.org/releases/
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.sflphone.org/
 COMMENT=		Multiplatform softphone for IP telephony using SIP (VOIP)
 

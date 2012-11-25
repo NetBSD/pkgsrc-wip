@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2012/09/24 17:14:36 asau Exp $
+# $NetBSD: Makefile,v 1.6 2012/11/25 23:32:09 othyro Exp $
 #
 
 DISTNAME=		bmap-1.0.17
 CATEGORIES=		sysutils
 MASTER_SITES=		http://packetstorm.linuxsecurity.com/linux/security/
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://packetstorm.linuxsecurity.com/linux/security/
 COMMENT=			Forensic tool to perform low-level operations on ext2 filesystems
 

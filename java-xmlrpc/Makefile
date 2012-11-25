@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/01 21:05:45 asau Exp $
+# $NetBSD: Makefile,v 1.8 2012/11/25 23:32:24 othyro Exp $
 #
 
 DISTNAME=		xmlrpc-1.2-b1
@@ -8,7 +8,7 @@ MASTER_SITES=		http://apache.rediris.es/ws/xmlrpc/v1.2-b1/ \
 			http://nagoya.apache.org/mirror/ws/xmlrpc/ \
 			${MASTER_SITE_APACHE:=ws/xmlrpc/}
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://ws.apache.org/xmlrpc/
 COMMENT=		Java implementation of XML-RPC
 

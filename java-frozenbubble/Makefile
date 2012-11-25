@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/01 20:27:55 asau Exp $
+# $NetBSD: Makefile,v 1.5 2012/11/25 23:32:23 othyro Exp $
 #
 
 DISTNAME=		frozenBubble
@@ -7,7 +7,7 @@ CATEGORIES=		games
 MASTER_SITES=		http://glenn.sanson.free.fr/fb/
 EXTRACT_SUFX=		.jar
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://glenn.sanson.free.fr/fb/index.html
 COMMENT=		Java port of Frozen Bubble
 

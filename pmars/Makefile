@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/05 11:31:52 asau Exp $
+# $NetBSD: Makefile,v 1.8 2012/11/25 23:32:29 othyro Exp $
 #
 
 DISTNAME=		pmars-0_8_6_tar
@@ -7,7 +7,7 @@ CATEGORIES=		games
 MASTER_SITES=		http://www.koth.org/pmars/
 EXTRACT_SUFX=		.gz
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.koth.org/pmars/
 COMMENT=		The official Core Wars simulator
 

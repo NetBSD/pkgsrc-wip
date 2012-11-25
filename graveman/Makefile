@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2012/11/13 20:09:31 othyro Exp $
+# $NetBSD: Makefile,v 1.19 2012/11/25 23:32:19 othyro Exp $
 #
 
 DISTNAME=		graveman-0.3.12-5
@@ -7,7 +7,7 @@ CATEGORIES=		sysutils
 MASTER_SITES=		http://graveman.tuxfamily.org/sources/
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://graveman.tuxfamily.org/
 COMMENT=		GTK2 frontend for CD writing and audio conversion
 

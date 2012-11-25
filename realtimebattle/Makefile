@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/07 14:53:43 asau Exp $
+# $NetBSD: Makefile,v 1.6 2012/11/25 23:32:30 othyro Exp $
 #
 
 DISTNAME=		RealTimeBattle-1.0.7-Std
@@ -7,7 +7,7 @@ PKGREVISION=		1
 CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=realtimebattle/}
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://realtimebattle.sourceforge.net/
 COMMENT=		Programming robots game
 

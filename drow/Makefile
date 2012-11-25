@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2012/09/28 21:24:38 asau Exp $
+# $NetBSD: Makefile,v 1.7 2012/11/25 23:32:09 othyro Exp $
 #
 
 DISTNAME=		drow-0.2.22
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=drow/}
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://drow.sourceforge.net/
 COMMENT=		Low-level ELF file analyzer
 LICENSE=		gnu-gpl-v2

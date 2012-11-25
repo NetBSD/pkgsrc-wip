@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2012/10/03 09:10:44 asau Exp $
+# $NetBSD: Makefile,v 1.19 2012/11/25 23:32:27 othyro Exp $
 #
 
 DISTNAME=		luasocket-2.0.2
@@ -6,7 +6,7 @@ PKGNAME=		${LUA_PKGPREFIX}-${DISTNAME:S/lua//}
 CATEGORIES=		net
 MASTER_SITES=		http://luaforge.net/frs/download.php/2664/
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.tecgraf.puc-rio.br/~diego/professional/luasocket/
 COMMENT=		Gives socket capabilities to lua
 LICENSE=		mit

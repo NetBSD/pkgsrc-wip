@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2012/10/07 17:17:27 asau Exp $
+# $NetBSD: Makefile,v 1.10 2012/11/25 23:32:31 othyro Exp $
 
 DISTNAME=	tcptrack-1.4.0
 CATEGORIES=	net
 MASTER_SITES=	http://www.rhythm.cx/~steve/devel/tcptrack/release/${PKGVERSION_NOREV}/source/
 
-MAINTAINER=	pancake@phreaker.net
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.rhythm.cx/~steve/devel/tcptrack/
 COMMENT=	Watch TCP connections
 LICENSE=	gnu-lgpl-v2.1

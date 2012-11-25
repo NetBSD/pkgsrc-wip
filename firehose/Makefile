@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/09/28 22:31:29 asau Exp $
+# $NetBSD: Makefile,v 1.7 2012/11/25 23:32:12 othyro Exp $
 #
 
 DISTNAME=		firehose-0.6.0-src
@@ -7,7 +7,7 @@ CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=heroines/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://heroinewarrior.com/firehose.php3
 COMMENT=		Super fast throughput over cheap ethernet
 

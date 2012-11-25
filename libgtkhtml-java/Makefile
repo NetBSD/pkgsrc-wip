@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/03 09:10:39 asau Exp $
+# $NetBSD: Makefile,v 1.8 2012/11/25 23:32:26 othyro Exp $
 #
 
 DISTNAME=		libgtkhtml-java-2.6.0
@@ -7,7 +7,7 @@ CATEGORIES=		www
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libgtkhtml-java/2.6/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://java-gnome.sourceforge.net/
 COMMENT=		GtkHtml bindings for Java
 

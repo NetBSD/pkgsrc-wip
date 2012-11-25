@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2012/10/07 14:25:16 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/11/25 23:32:30 othyro Exp $
 #
 
 DISTNAME=		rootcheck-0.7
 CATEGORIES=		security
 MASTER_SITES=		http://www.ossec.net/rootcheck/files/
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.ossec.net/rootcheck/
 COMMENT=		RootKit detection software
 

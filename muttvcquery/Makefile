@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/03 15:10:00 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/11/25 23:32:28 othyro Exp $
 #
 
 DISTNAME=		mutt_vc_query-002
@@ -6,7 +6,7 @@ PKGNAME=		muttvcquery-002
 CATEGORIES=		mail
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=rolo/}
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://rolo.sourceforge.net/
 COMMENT=		External contact manager for mutt
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2012/10/05 11:31:51 asau Exp $
+# $NetBSD: Makefile,v 1.9 2012/11/25 23:32:29 othyro Exp $
 #
 
 DISTNAME=		picprog-1.1
 CATEGORIES=		devel
 MASTER_SITES=	http://hyvatti.iki.fi/~jaakko/pic/
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://hyvatti.iki.fi/~jaakko/pic/picprog.html
 COMMENT=		PIC16xxx microcontroller programmer for JDM (TE-20)
 

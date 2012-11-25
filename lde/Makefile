@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/10/03 09:10:35 asau Exp $
+# $NetBSD: Makefile,v 1.10 2012/11/25 23:32:24 othyro Exp $
 #
 
 DISTNAME=	lde-2.6.0
@@ -6,7 +6,7 @@ WRKSRC=		${WRKDIR}/lde
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lde/}
 
-MAINTAINER=	pancake@phreaker.net
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://lde.sourceforge.net
 COMMENT=	Curses based file system viewer/editor for Linux
 

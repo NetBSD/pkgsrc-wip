@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/10/01 22:20:17 asau Exp $
+# $NetBSD: Makefile,v 1.10 2012/11/25 23:32:24 othyro Exp $
 
 DISTNAME=	ldapdns-cvs-snapshot
 PKGNAME=	ldapdns-cvs-0.0.1
@@ -6,7 +6,7 @@ WRKSRC=		${WRKDIR}/ldapdns/
 CATEGORIES=	net
 MASTER_SITES=	http://ldapdns.sourceforge.net/
 
-MAINTAINER=	pancake@phreaker.net
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ldapdns.sourceforge.net
 COMMENT=	Tiny, fast authoritative nameserver that queries LDAP
 

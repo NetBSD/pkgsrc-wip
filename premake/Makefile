@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/10/05 13:39:04 asau Exp $
+# $NetBSD: Makefile,v 1.9 2012/11/25 23:32:29 othyro Exp $
 #
 
 DISTNAME=		premake-src-3.1
@@ -8,7 +8,7 @@ CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=premake/}
 EXTRACT_SUFX=		.zip
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://premake.sourceforge.net/
 COMMENT=		Build script generator
 

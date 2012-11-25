@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2012/09/29 00:26:13 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/11/25 23:32:18 othyro Exp $
 #
 
 DISTNAME=		gnormalize-0.35
 CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gnormalize/}
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://gnormalize.sourceforge.net/
 COMMENT=		Gtk2::Perl frontend for audio conversion
 

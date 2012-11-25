@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/11/23 22:33:39 othyro Exp $
+# $NetBSD: Makefile,v 1.6 2012/11/25 23:32:24 othyro Exp $
 #
 
 DISTNAME=		libgksu1.2-1.3.7
@@ -6,7 +6,7 @@ PKGREVISION=		2
 CATEGORIES=		sysutils
 MASTER_SITES=		http://people.debian.org/~kov/gksu/old_stuff/libgksu1.2/
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.nongnu.org/gksu/
 COMMENT=		Support library for gksu
 

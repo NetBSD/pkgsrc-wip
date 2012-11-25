@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/09/28 21:13:25 asau Exp $
+# $NetBSD: Makefile,v 1.8 2012/11/25 23:32:09 othyro Exp $
 #
 
 DISTNAME=		dnswalk-2.0.2
@@ -6,7 +6,7 @@ WRKSRC=			${WRKDIR}/
 CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=dnswalk/}
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://dnswalk.sourceforge.net/
 COMMENT=		DNS debugger
 
