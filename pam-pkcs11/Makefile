@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/11/25 23:08:44 lexort Exp $
+# $NetBSD: Makefile,v 1.9 2012/11/25 23:28:52 lexort Exp $
 
 DISTNAME=		pam_pkcs11-0.5.3
 PKGNAME=		pam-pkcs11-0.5.3
@@ -20,7 +20,7 @@ GNU_CONFIGURE=		yes
 .include "options.mk"
 PLIST_SRC+=		PLIST.common
 
-# After updating, send a bashism bug report upstream.
+# See TODO.
 USE_TOOLS+=		bash
 REPLACE_INTERPRETER+=	bash
 REPLACE.bash.old=	.*/bin/bash
