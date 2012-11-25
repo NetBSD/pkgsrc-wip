@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2006/10/29 08:32:52 shattered Exp $
+# $NetBSD: options.mk,v 1.4 2012/11/25 23:08:44 lexort Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.pam-pkcs11
 PKG_SUPPORTED_OPTIONS=	pcsc-lite ldap
@@ -6,7 +6,7 @@ PKG_SUPPORTED_OPTIONS=	pcsc-lite ldap
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mpcsc-lite)
-.include "../../wip/pcsc-lite/buildlink3.mk"
+.include "../../security/pcsc-lite/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-pcsclite
 PLIST_SRC+=		PLIST.pcsc-lite
 .endif
@@ -15,4 +15,6 @@ PLIST_SRC+=		PLIST.pcsc-lite
 .include "../../databases/openldap-client/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-ldap
 PLIST_SRC+=		PLIST.ldap
+.else
+CONFIGURE_ARGS+=	--without-ldap
 .endif
