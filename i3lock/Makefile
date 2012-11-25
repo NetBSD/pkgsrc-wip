@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2012/09/30 05:44:14 asau Exp $
+# $NetBSD: Makefile,v 1.5 2012/11/25 17:26:58 pallegra Exp $
 #
 
-DISTNAME=	i3lock-2.2
+DISTNAME=	i3lock-2.4.1
 CATEGORIES=	x11
 MASTER_SITES=	http://i3wm.org/i3lock/
 EXTRACT_SUFX=	.tar.bz2
@@ -29,6 +29,9 @@ do-install:
 
 .include "../../x11/libxcb/buildlink3.mk"
 .include "../../x11/xcb-util/buildlink3.mk"
+.include "../../x11/xcb-util-keysyms/buildlink3.mk"
+.include "../../x11/xcb-util-image/buildlink3.mk"
 .include "../../x11/xextproto/buildlink3.mk"
+.include "../../devel/libev/buildlink3.mk"
 .include "../../mk/pam.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
