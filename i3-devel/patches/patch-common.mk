@@ -1,15 +1,30 @@
-$NetBSD: patch-common.mk,v 1.6 2011/09/07 09:07:45 pallegra Exp $
+$NetBSD: patch-common.mk,v 1.7 2012/11/25 17:53:11 pallegra Exp $
 
---- common.mk.orig	2011-08-28 17:48:21.000000000 +0000
+--- common.mk.orig	2012-09-19 16:08:09.000000000 +0000
 +++ common.mk
-@@ -68,8 +68,8 @@ LIBS += $(call ldflags_for_lib, xcb-rand
- LIBS += $(call ldflags_for_lib, xcb, xcb)
- LIBS += $(call ldflags_for_lib, xcursor, Xcursor)
- LIBS += $(call ldflags_for_lib, x11, X11)
--LIBS += $(call ldflags_for_lib, yajl, yajl)
--LIBS += $(call ldflags_for_lib, libev, ev)
-+LIBS += -lyajl
-+LIBS += -lev
+@@ -1,5 +1,7 @@
+ UNAME=$(shell uname)
+-DEBUG=1
++ifndef DEBUG
++  DEBUG=1
++endif
+ COVERAGE=0
+ INSTALL=install
+ FLEX=flex
+@@ -137,11 +139,11 @@ LIBSN_CFLAGS := $(call cflags_for_lib, l
+ LIBSN_LIBS   := $(call ldflags_for_lib, libstartup-notification-1.0,startup-notification-1)
  
- # Please test if -Wl,--as-needed works on your platform and send me a patch.
- # it is known not to work on Darwin (Mac OS X)
+ # Pango
+-PANGO_CFLAGS := $(call cflags_for_lib, cairo)
+-PANGO_CFLAGS += $(call cflags_for_lib, pangocairo)
+-I3_CPPFLAGS  += -DPANGO_SUPPORT=1
+-PANGO_LIBS   := $(call ldflags_for_lib, cairo)
+-PANGO_LIBS   += $(call ldflags_for_lib, pangocairo)
++#PANGO_CFLAGS := $(call cflags_for_lib, cairo)
++#PANGO_CFLAGS += $(call cflags_for_lib, pangocairo)
++I3_CPPFLAGS  += -DPANGO_SUPPORT=0
++#PANGO_LIBS   := $(call ldflags_for_lib, cairo)
++#PANGO_LIBS   += $(call ldflags_for_lib, pangocairo)
+ 
+ # libi3
+ LIBS = -L$(TOPDIR) -li3
