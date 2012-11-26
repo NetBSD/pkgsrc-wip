@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4967 2012/11/25 18:45:14 kristerw Exp $
+# $Id: Makefile,v 1.4968 2012/11/26 14:49:05 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -344,6 +344,7 @@ SUBDIR+=	courierpassd
 SUBDIR+=	coxeter
 SUBDIR+=	cpdup
 SUBDIR+=	cpm
+SUBDIR+=	crabemu
 SUBDIR+=	creal
 SUBDIR+=	cream
 SUBDIR+=	crfpp
