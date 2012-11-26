@@ -1,0 +1,10 @@
+CrabEmu is primarily a Sega Master System emulator for Mac OS X, Linux and Sega
+Dreamcast. Several other related platforms are emulated with varying degrees of
+accuracy (Game Gear and SG-1000 currently). The eventual goal of the CrabEmu
+project is to emulate many different systems, and do it not only quickly, but
+also accurately.
+
+CrabEmu is designed with portability in mind. The base of CrabEmu is written in
+C (specifically C99). The user interface of CrabEmu is the only part that would
+actually need much porting to put CrabEmu other platforms other than Mac OS X,
+Sega Dreamcast, and Linux (with Qt for the GUI).
