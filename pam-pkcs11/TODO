@@ -1,7 +1,8 @@
-An update to 0.6.8 is due.
-
 A ticket should be filed upstream about the use of bash in scripts,
 either to use /bin/sh if POSIX is sufficient, or to have configure
 search for and replace bash if not.
 
 The options.mk should have a comment about what the ldap option does.
+
+The pcsc-lite option is now on by default, and it seems that it is
+non-optional.
