@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2012/11/25 23:28:52 lexort Exp $
+# $NetBSD: Makefile,v 1.10 2012/11/26 00:49:51 lexort Exp $
 
-DISTNAME=		pam_pkcs11-0.5.3
-PKGNAME=		pam-pkcs11-0.5.3
-PKGREVISION=		3
+DISTNAME=		pam_pkcs11-0.6.8
+PKGNAME=		pam-pkcs11-0.6.8
 CATEGORIES=		security
 MASTER_SITES=		http://www.opensc-project.org/files/pam_pkcs11/
 
@@ -11,9 +10,16 @@ HOMEPAGE=		http://www.opensc-project.org/pam_pkcs11/
 COMMENT=		PKCS \#11 authentication method for PAM
 LICENSE=		gnu-lgpl-v2.1
 
+USE_LANGUAGES=		c99
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
+USE_TOOLS+=		pkg-config
+
+EGDIR=        		${PREFIX}/share/examples/pam-pkcs11
+PKG_SYSCONFSUBDIR=	pam-pkcs11
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--docdir=${EGDIR}
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -21,11 +27,20 @@ GNU_CONFIGURE=		yes
 PLIST_SRC+=		PLIST.common
 
 # See TODO.
-USE_TOOLS+=		bash
+USE_TOOLS+=		bash:run
 REPLACE_INTERPRETER+=	bash
 REPLACE.bash.old=	.*/bin/bash
 REPLACE.bash.new=	${PREFIX}/bin/bash
-REPLACE_FILES.bash=	tools/make_hash_link.sh
+REPLACE_FILES.bash=	tools/pkcs11_make_hash_link
 
+CONF_FILES+=	${EGDIR}/card_eventmgr.conf.example ${PKG_SYSCONFDIR}/card_eventmgr.conf.example
+CONF_FILES+=	${EGDIR}/digest_mapping.example ${PKG_SYSCONFDIR}/digest_mapping.example
+CONF_FILES+=	${EGDIR}/mail_mapping.example ${PKG_SYSCONFDIR}/mail_mapping.example
+CONF_FILES+=	${EGDIR}/pam.d_login.example ${PKG_SYSCONFDIR}/pam.d_login.example
+CONF_FILES+=	${EGDIR}/pam_pkcs11.conf.example ${PKG_SYSCONFDIR}/pam_pkcs11.conf.example
+CONF_FILES+=	${EGDIR}/pkcs11_eventmgr.conf.example ${PKG_SYSCONFDIR}/pkcs11_eventmgr.conf.example
+CONF_FILES+=	${EGDIR}/subject_mapping.example ${PKG_SYSCONFDIR}/subject_mapping.example
+
+.include "../../mk/pam.buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
