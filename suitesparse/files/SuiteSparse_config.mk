@@ -29,7 +29,10 @@
 # this file.
 #
 # To enable an option of the form "# OPTION = ...", edit this file and
-# delete the "#" in the first column of the option you wish to use.
+# delete the "#" in the first column of the option you wish to use, or
+# simply override variables on the "make" command line, e.g.
+#
+#	make PREFIX=/opt/local LOCALBASE=/opt/local CFLAGS="-O3 -Wall"
 #
 # The use of METIS 4.0.1 is optional.  To exclude METIS, you must compile with
 # CHOLMOD_CONFIG set to -DNPARTITION.  See below for details.  However, if you
@@ -60,33 +63,35 @@
 # C and C++ compiler flags.  The first three are standard for *.c and *.cpp
 # Add -DNTIMER if you do use any timing routines (otherwise -lrt is required).
 # CF = $(CFLAGS) $(CPPFLAGS) $(TARGET_ARCH) -O3 -fexceptions -fPIC -DNTIMER
-  CF = $(CFLAGS) $(CPPFLAGS) $(TARGET_ARCH) -O3 -fexceptions -fPIC
+CF		?= $(CFLAGS) $(CPPFLAGS) $(TARGET_ARCH) -O3 -fexceptions -fPIC
 
 # ranlib, and ar, for generating libraries.  If you don't need ranlib,
 # just change it to RANLAB = echo
-RANLIB	?= ranlib
-ARCHIVE	?= $(AR) $(ARFLAGS)
+RANLIB		?= ranlib
+ARCHIVE		?= $(AR) $(ARFLAGS)
 
 # copy and delete a file
-CP	?= cp -f
-MV	?= mv -f
+CP		?= cp -f
+MV		?= mv -f
 
 # Fortran compiler (not required for 'make' or 'make library')
 F77FLAGS	?= -O ${PICFLAG}
 F77LIB		?=
 
 # C and Fortran libraries.  Remove -lrt if you don't have it.
-  LIB = -lm -lrt
+# LIB		?= -lm -lrt
+LIB		?= -lm
 # Using the following requires CF = ... -DNTIMER on POSIX C systems.
 # LIB = -lm
 
 # For "make install"
-PREFIX		?= /usr/local
+LOCALBASE	?= /usr/local
+PREFIX		?= ${LOCALBASE}
 INSTALL_LIB	?= ${PREFIX}/lib
 INSTALL_INCLUDE	?= ${PREFIX}/include
 
 # Which version of MAKE you are using (default is "make")
-MAKE	?= make
+MAKE		?= make
 
 #------------------------------------------------------------------------------
 # BLAS and LAPACK configuration:
@@ -105,7 +110,6 @@ MAKE	?= make
 # naming the BLAS and LAPACK library (*.a or *.so) files.
 
 # This is probably slow ... it might connect to the Standard Reference BLAS:
-LOCALBASE	?= /usr/local
 BLAS		?= -L${LOCALBASE}/lib -lblas
 LAPACK		?= -L${LOCALBASE}/lib -llapack
 
@@ -129,11 +133,11 @@ LAPACK		?= -L${LOCALBASE}/lib -llapack
 # includes a Fortran-callable xerbla routine that prints nothing and does not
 # stop the application program.  This is optional.
 
-# XERBLA = ../../SuiteSparse_config/xerbla/libcerbla.a 
+XERBLA 		?= ../../SuiteSparse_config/xerbla/libcerbla.a 
 
 # If you wish to use the XERBLA in LAPACK and/or the BLAS instead,
 # use this option:
-XERBLA = 
+# XERBLA = 
 
 # If you wish to use the Fortran SuiteSparse_config/xerbla/xerbla.f instead,
 # use this:
@@ -162,8 +166,8 @@ GPU_CONFIG	?=
 # The path is relative to where it is used, in CHOLMOD/Lib, CHOLMOD/MATLAB, etc.
 # You may wish to use an absolute path.  METIS is optional.  Compile
 # CHOLMOD with -DNPARTITION if you do not wish to use METIS.
-METIS_PATH = 
-METIS = 
+METIS_PATH	?= 
+METIS		?= 
 
 #------------------------------------------------------------------------------
 # UMFPACK configuration:
@@ -181,7 +185,7 @@ METIS =
 #               included in UMFPACK_CONFIG, then UMFPACK  does not rely on
 #               CHOLMOD, CAMD, CCOLAMD, COLAMD, and METIS.
 
-UMFPACK_CONFIG =
+UMFPACK_CONFIG	?=
 
 # uncomment this line to compile UMFPACK without CHOLMOD:
 # UMFPACK_CONFIG = -DNCHOLMOD
@@ -222,7 +226,7 @@ UMFPACK_CONFIG =
 # -DNSUNPERF	    for Solaris only.  If defined, do not use the Sun
 #			Performance Library
 
-CHOLMOD_CONFIG = -DNPARTITION
+CHOLMOD_CONFIG	?= -DNPARTITION
 
 # uncomment this line to compile CHOLMOD without METIS:
 # CHOLMOD_CONFIG = -DNPARTITION
@@ -238,7 +242,7 @@ CHOLMOD_CONFIG = -DNPARTITION
 # -DHAVE_TBB        enable the use of Intel's Threading Building Blocks (TBB)
 
 # default, without timing, without TBB:
-SPQR_CONFIG = -DNPARTITION
+SPQR_CONFIG	?= -DNPARTITION
 # with TBB:
 # SPQR_CONFIG = -DHAVE_TBB
 
@@ -248,7 +252,7 @@ SPQR_CONFIG = -DNPARTITION
 # with TBB, you must select this:
 # TBB = -ltbb
 # without TBB:
-TBB =
+TBB		?=
 
 #------------------------------------------------------------------------------
 # Linux

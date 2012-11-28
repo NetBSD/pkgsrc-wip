@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/11/14 23:29:46 outpaddling Exp $
+# $NetBSD: Makefile,v 1.10 2012/11/28 13:38:26 outpaddling Exp $
 # FreeBSD Id: ports/math/suitesparse/Makefile,v 1.38 2011/07/20 16:17:35 bf Exp
 
 # DISTNAME=	SuiteSparse-3.6.1
@@ -24,12 +24,19 @@ RESTRICTED=	GPL and METIS licenses are contradictory
 
 .include "../../mk/bsd.prefs.mk"
 
-CFLAGS+=	${PTHREAD_CFLAGS}
+CFLAGS+=	${PTHREAD_CFLAGS} ${PICFLAG}
 
 .if ( ${MACHINE_ARCH} == "sparc" ) || ( ${MACHINE_ARCH} == "powerpc" )
 PICFLAG?=       -fPIC
 .else
 PICFLAG?=       -fpic
+.endif
+
+# Platforms without librt
+.if ${OPSYS} == "Darwin"
+LIB=		-lm
+.else
+LIB=		-lm -lrt
 .endif
 
 BLAS=		-lblas
@@ -59,8 +66,20 @@ CHOLMOD_CONFIG =	-DNPARTITION
 AUTO_MKDIRS=		yes
 INSTALLATION_DIRS=	include/suitesparse lib
 
+MAKE_FLAGS+=	BLAS="${LDFLAGS} ${BLAS}" \
+		CHOLMOD_CONFIG=${CHOLMOD_CONFIG} \
+		CPLUSPLUS=${CXX} \
+		F77FLAGS="${FFLAGS} ${PICFLAG}" \
+		LAPACK="${LDFLAGS} ${LAPACK}" \
+		METIS=${METIS} \
+		METIS_PATH=${METIS_PATH} \
+		SPQR_CONFIG=${CHOLMOD_CONFIG} \
+		LIB=${LIB} \
+		RANLIB=${RANLIB}
+
 post-patch:
-	${FIND} ${WRKSRC} -type f \( -name 'Makefile' -o -name '*.mk' \) \
+	${CP} ${FILESDIR}/SuiteSparse_config.mk ${WRKSRC}/SuiteSparse_config
+#	${FIND} ${WRKSRC} -type f \( -name 'Makefile' -o -name '*.mk' \) \
 		-exec gsed -i'.bak' -e '\|^AR =|s|ar|${AR}|' \
 			-e '\|^BLAS =|s|=.*|= ${LDFLAGS} ${BLAS}|' \
 			-e '\|^CC =|d' \
