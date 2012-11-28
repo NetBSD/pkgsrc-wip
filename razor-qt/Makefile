@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/11/28 18:26:00 christtrekker Exp $
+# $NetBSD: Makefile,v 1.2 2012/11/28 20:25:54 christtrekker Exp $
 #
 
 DISTNAME=	razorqt-0.5.1
@@ -13,6 +13,7 @@ LICENSE=	gnu-gpl-v2
 
 FETCH_USING=	curl
 USE_LANGUAGES=	c c++
+USE_TOOLS+=	bash
 USE_CMAKE=	yes
 
 REPLACE_BASH+=	razorqt-session/razor-session/resources/xdg-mime
