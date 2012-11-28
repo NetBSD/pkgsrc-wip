@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/11/28 21:20:55 outpaddling Exp $
+# $NetBSD: Makefile,v 1.12 2012/11/28 21:43:05 outpaddling Exp $
 # FreeBSD Id: ports/math/suitesparse/Makefile,v 1.38 2011/07/20 16:17:35 bf Exp
 
 # DISTNAME=	SuiteSparse-3.6.1
@@ -16,15 +16,9 @@ COMMENT=	SuiteSparse is a set of packages for sparse matrices calculation
 # Not sure how to specify 2 licenses, so just listing the stricter one
 LICENSE=	gnu-gpl-v2
 
-.if defined (WITH_METIS)
-# Using buildlink framework instead
-# DEPENDS=	metis>=4.0:../../math/metis
-RESTRICTED=	GPL and METIS licenses are contradictory
-.endif
-
 .include "../../mk/bsd.prefs.mk"
 
-CFLAGS+=	${PTHREAD_CFLAGS} ${PICFLAG}
+CFLAGS+=	-O ${PTHREAD_CFLAGS} ${PICFLAG}
 
 .if ( ${MACHINE_ARCH} == "sparc" ) || ( ${MACHINE_ARCH} == "powerpc" )
 PICFLAG?=       -fPIC
@@ -66,16 +60,17 @@ CHOLMOD_CONFIG =	-DNPARTITION
 AUTO_MKDIRS=		yes
 INSTALLATION_DIRS=	include/suitesparse lib
 
+# Non-standard variables used by SuiteSparse Makefiles
 MAKE_FLAGS+=	BLAS="${LDFLAGS} ${BLAS}" \
-		CHOLMOD_CONFIG=${CHOLMOD_CONFIG} \
-		CPLUSPLUS=${CXX} \
+		CHOLMOD_CONFIG="${CHOLMOD_CONFIG}" \
+		CPLUSPLUS="${CXX}" \
+		CF="${CFLAGS} ${CXXFLAGS}" \
 		F77FLAGS="${FFLAGS} ${PICFLAG}" \
 		LAPACK="${LDFLAGS} ${LAPACK}" \
-		METIS=${METIS} \
-		METIS_PATH=${METIS_PATH} \
-		SPQR_CONFIG=${CHOLMOD_CONFIG} \
-		LIB=${LIB} \
-		RANLIB=${RANLIB}
+		METIS="${METIS}" \
+		METIS_PATH="${METIS_PATH}" \
+		SPQR_CONFIG="${CHOLMOD_CONFIG}" \
+		LIB="${LIB}"
 
 post-patch:
 	${CP} ${FILESDIR}/SuiteSparse_config.mk ${WRKSRC}/SuiteSparse_config
@@ -133,7 +128,5 @@ do-install:
 
 .include "../../math/blas/buildlink3.mk"
 .include "../../math/lapack/buildlink3.mk"
-.if defined (WITH_METIS)
 .include "../../wip/metis/buildlink3.mk"
-.endif
 .include "../../mk/bsd.pkg.mk"

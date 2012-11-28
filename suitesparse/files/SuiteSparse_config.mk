@@ -48,8 +48,9 @@
 #
 #   CC              cc      C compiler
 #   CXX             g++     C++ compiler
-#   CFLAGS          [ ]     flags for C and C++ compiler
-#   CPPFLAGS        [ ]     flags for C and C++ compiler
+#   CFLAGS          [ ]     flags for C
+#   CXXFLAGS        [ ]     flags for C++ compiler
+#   CPPFLAGS        [ ]     flags for C and C++ preprocessor
 #   TARGET_ARCH     [ ]     target architecture
 #   FFLAGS          [ ]     flags for Fortran compiler
 #   RM              rm -f   delete a file
@@ -62,8 +63,8 @@
 
 # C and C++ compiler flags.  The first three are standard for *.c and *.cpp
 # Add -DNTIMER if you do use any timing routines (otherwise -lrt is required).
-# CF = $(CFLAGS) $(CPPFLAGS) $(TARGET_ARCH) -O3 -fexceptions -fPIC -DNTIMER
-CF		?= $(CFLAGS) $(CPPFLAGS) $(TARGET_ARCH) -O3 -fexceptions -fPIC
+# CF = $(CFLAGS) $(CXXFLAGS) $(TARGET_ARCH) -O3 -fexceptions -fPIC -DNTIMER
+CF		?= $(CPPFLAGS) $(CFLAGS) $(CXXFLAGS) $(TARGET_ARCH) -O3 -fexceptions -fPIC
 
 # ranlib, and ar, for generating libraries.  If you don't need ranlib,
 # just change it to RANLAB = echo
