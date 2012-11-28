@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/11/28 13:38:26 outpaddling Exp $
+# $NetBSD: Makefile,v 1.11 2012/11/28 21:20:55 outpaddling Exp $
 # FreeBSD Id: ports/math/suitesparse/Makefile,v 1.38 2011/07/20 16:17:35 bf Exp
 
 # DISTNAME=	SuiteSparse-3.6.1
@@ -99,10 +99,10 @@ post-patch:
 
 do-build:
 	cd ${WRKSRC} ; ${SETENV} ${MAKE_ENV} PICFLAG= \
-		${GMAKE} ${_MAKE_JOBS} ${MAKE_ARGS}
+		${GMAKE} ${_MAKE_JOBS} ${MAKE_FLAGS}
 
 #	cd ${WRKSRC_SHARED} ; ${SETENV} ${MAKE_ENV} PICFLAG=${PICFLAG} \
-#		${GMAKE} ${_MAKE_JOBS} ${MAKE_ARGS}
+#		${GMAKE} ${_MAKE_JOBS} ${MAKE_FLAGS}
 
 # OS X ld does not support -Bshareable or --whole-archive
 # Find a portable way to add sonames
