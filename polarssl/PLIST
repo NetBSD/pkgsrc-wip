@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2012/11/15 05:51:57 christtrekker Exp $
+@comment $NetBSD: PLIST,v 1.7 2012/11/28 20:17:16 christtrekker Exp $
 include/polarssl/aes.h
 include/polarssl/arc4.h
 include/polarssl/asn1.h
@@ -44,3 +44,4 @@ include/polarssl/x509.h
 include/polarssl/x509write.h
 include/polarssl/xtea.h
 lib/libpolarssl.a
+lib/libpolarssl.so
