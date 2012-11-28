@@ -1,11 +1,13 @@
-# $NetBSD: Makefile,v 1.10 2012/11/26 00:49:51 lexort Exp $
+# $NetBSD: Makefile,v 1.11 2012/11/28 23:44:35 lexort Exp $
 
 DISTNAME=		pam_pkcs11-0.6.8
 PKGNAME=		pam-pkcs11-0.6.8
 CATEGORIES=		security
 MASTER_SITES=		http://www.opensc-project.org/files/pam_pkcs11/
 
-MAINTAINER=		evaldo@gardenali.biz
+MAINTAINER=		gdt@ir.bbn.com
+# Did not answer mail 2011-11
+#MAINTAINER=		evaldo@gardenali.biz
 HOMEPAGE=		http://www.opensc-project.org/pam_pkcs11/
 COMMENT=		PKCS \#11 authentication method for PAM
 LICENSE=		gnu-lgpl-v2.1
