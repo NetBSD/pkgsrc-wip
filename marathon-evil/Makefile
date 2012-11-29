@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/11/29 13:38:14 christtrekker Exp $
+# $NetBSD: Makefile,v 1.4 2012/11/29 14:30:04 christtrekker Exp $
 
 DISTNAME=	marathon-evil-199704
 CATEGORIES=	games
@@ -6,7 +6,7 @@ MASTER_SITES=	http://files3.bungie.org/trilogy/
 DISTFILES+=	MarathonEvil.zip
 EXTRACT_SUFX=	.zip
 
-OWNER=		christtrekker@users.sourceforge.net
+MAINTAINER=	christtrekker@users.sourceforge.net
 HOMEPAGE=	http://bighouse.bungie.org/evil/
 COMMENT=	Game data for Marathon EVIL scenario, playable with Aleph One
 LICENSE=	cc-by-nc-nd-v3.0
