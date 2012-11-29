@@ -1,11 +1,23 @@
-$NetBSD: distinfo,v 1.10 2012/10/02 08:48:46 fhajny Exp $
+$NetBSD: distinfo,v 1.11 2012/11/29 14:52:38 fhajny Exp $
 
-SHA1 (mongodb-src-r2.2.0.tar.gz) = bdf414c3a71386f1bf7b6df8da72400abe434ebe
-RMD160 (mongodb-src-r2.2.0.tar.gz) = 08a411e74d3f66e5714f04d537e8c45bcd0fc2fe
-Size (mongodb-src-r2.2.0.tar.gz) = 10150762 bytes
+SHA1 (mongodb-src-r2.2.2.tar.gz) = 64f96c4149cb79fbbad62c9b374f659cb46575b2
+RMD160 (mongodb-src-r2.2.2.tar.gz) = 189519fa17dd2c4119ae15cf6c79cd6d61cb3c26
+Size (mongodb-src-r2.2.2.tar.gz) = 10171793 bytes
 SHA1 (patch-SConstruct) = 60d86492d4222276951aaae6c1b78f7c8defc1ba
 SHA1 (patch-db__nonce.cpp) = 93fdb0a71ac4865fbd1052f0df96fb30ba6f743e
 SHA1 (patch-debian_mongodb.conf) = d52115eadf871ee1d68073f26ceb7ed90aeeb9ef
 SHA1 (patch-shell__dbshell.cpp) = 799b292bb21637c64682a8b4fbd54d78783165c9
 SHA1 (patch-src_SConscript.client) = 18ce1c8641359ce8e5624c9658fd8851ec182e2f
+SHA1 (patch-src__mongo__db__db.cpp) = 792767dd1a29f77a105d544bf661202bce37e355
+SHA1 (patch-src__mongo__db__dur.cpp) = 2c6eaba383dc71eef9d26e22edd0274f4508baec
+SHA1 (patch-src__mongo__db__dur_journal.cpp) = 522dd6fcfa6df2bcb4adff42ca152e7d59bced4f
+SHA1 (patch-src__mongo__db__dur_recover.cpp) = 5608504cf59a0b835278bd84b9fac400f0c745df
+SHA1 (patch-src__mongo__db__instance.cpp) = 3bae566305148e266d14867341d16e6fafce8dbf
+SHA1 (patch-src__mongo__db__pdfile.cpp) = 184d745fd38265ae21bd3fc1cdbf3bba9d533cbc
+SHA1 (patch-src__mongo__dbtests__framework.cpp) = 793fa30bd14456304de40612257c3513f5972bab
+SHA1 (patch-src__mongo__pch.h) = 99820beca4fa6416ab01dafd827489fdcdd992d9
+SHA1 (patch-src__mongo__shell__shell_utils_launcher.cpp) = fc6421bed0629ee7b8da7466f786d2c5864a1102
+SHA1 (patch-src__mongo__tools__restore.cpp) = 25f5d348aca2adb34f298c65f7ea869a4ad74025
+SHA1 (patch-src__mongo__tools__tool.cpp) = bc5d7cd9ca57e92bc13d0e4c24bd619d8f03e68f
+SHA1 (patch-src__mongo__util__time_support.h) = 724ad7008f059ecfb30f264b2cc62648bcaa7967
 SHA1 (patch-util__file_allocator.cpp) = c5ffa5c65ef02fd5afc5a672d2f2695af48140aa
