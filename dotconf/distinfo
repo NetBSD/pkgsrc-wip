@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/10/31 20:39:29 shattered Exp $
-
-SHA1 (dotconf-1.0.13.tar.gz) = bf0c3a29da525f0be8b896c484b3b518f022998f
-RMD160 (dotconf-1.0.13.tar.gz) = 41871061a303b7a590a751d5c4f392b8da2fe3e9
-Size (dotconf-1.0.13.tar.gz) = 197993 bytes
