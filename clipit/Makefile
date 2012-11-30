@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2012/11/12 15:59:46 othyro Exp $
+# $NetBSD: Makefile,v 1.5 2012/11/30 01:25:13 khorben Exp $
 #
 
-DISTNAME=	clipit-1.4.1
+DISTNAME=	clipit-1.4.2
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtkclipit/}
-PKGREVISION=	1
 
 MAINTAINER=	khorben@defora.org
 HOMEPAGE=	http://clipit.rspwn.com/
