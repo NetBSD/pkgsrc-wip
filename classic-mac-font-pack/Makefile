@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/09/24 18:26:54 asau Exp $
+# $NetBSD: Makefile,v 1.7 2012/11/30 15:18:51 christtrekker Exp $
 #
 
 DISTNAME=	classic-mac-font-pack-0.1
@@ -39,7 +39,7 @@ SITES.MONACO.TTF=	http://www.webdevkungfu.com/files/
 #SITES.Fernando%20Regular%20(2).ttf=	http://ufonts.com/bin/
 # Brampton is not yet complete.
 DISTFILES+=	Brampton.tgz
-SITES.Brampton.tgz=	http://christtrek.dyndns.org:8000/fnt/
+SITES.Brampton.tgz=	http://christtrekker.users.sourceforge.net/fnt/
 DISTFILES+=	genoa.zip
 SITES.genoa.zip=	http://www.searchfreefonts.com/assets/downloads/
 
@@ -52,7 +52,7 @@ SITES.virtue.zip=	http://www.scootergraphics.com/virtue/
 DISTFILES+=	Mottek.zip
 SITES.Mottek.zip=	http://www.searchfreefonts.com/assets/downloads/
 
-MAINTAINER=	christtrekker@users.sourceforge.net
+OWNER=		christtrekker@users.sourceforge.net
 HOMEPAGE=	http://68kmla.net/wiki/User:ChristTrekker/Choosing_Mac_fonts_for_the_web
 COMMENT=	Outline fonts modeled after those of the vintage 68k Macintosh era
 LICENSE=	generic-nonlicense
@@ -67,24 +67,25 @@ NO_BUILD=	yes
 
 # OPTIONS
 PKG_OPTIONS_VAR=	PKG_OPTIONS.classic-mac-font-pack
-PKG_SUPPORTED_OPTIONS=	agaramond
+PKG_SUPPORTED_OPTIONS=	apgar
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=	agaramond
-.if !empty(PKG_OPTIONS:Magaramond)
-PLIST.agaramond=	yes
+PLIST_VARS+=	apgar
+.if !empty(PKG_OPTIONS:Mapgar)
+PLIST.apgar=	yes
 .endif
 
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${FONTS_DIRS.ttf}
 	${INSTALL_DATA} ${WRKSRC}/*.[Tt][Tt][Ff] ${DESTDIR}${FONTS_DIRS.ttf}
 	${INSTALL_DATA} ${WRKSRC}/brampton/Brampton.ttf ${DESTDIR}${FONTS_DIRS.ttf}
-	if [ "x${PLIST.agaramond}" = "xyes" ]; then \
+	if [ "x${PLIST.apgar}" = "xyes" ]; then \
 		${INSTALL_DATA} ${WRKSRC}/macfonts/AppleGaramond*.[Tt][Tt][Ff] ${DESTDIR}${FONTS_DIRS.ttf}; \
 	fi
 # install doco too!
 
+DEPENDS+=	urbanrenewal-ttf:../../fonts/urbanrenewal-ttf
 # url2pkg-marker (please do not remove this line.)
 .include "../../mk/bsd.pkg.mk"
