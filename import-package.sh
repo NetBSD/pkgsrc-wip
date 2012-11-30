@@ -1,6 +1,6 @@
 #! /bin/sh
 #
-# $Id: import-package.sh,v 1.8 2012/11/07 10:23:47 thomasklausner Exp $
+# $Id: import-package.sh,v 1.9 2012/11/30 12:24:29 thomasklausner Exp $
 #
 # Script designed to make add packages into wip easier.
 #
@@ -20,6 +20,12 @@ if [ -z "${MAKE}" ]; then
   else
     MAKE=make
   fi
+fi
+
+if find . | grep -q CVS
+then
+	echo "Please remove any existing CVS directories; or change to the correct directory path" >&2
+	exit 1
 fi
 
 CATEGORY=$(basename $(dirname $(pwd)))
