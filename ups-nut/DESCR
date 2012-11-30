@@ -1,7 +1,0 @@
-The primary goal of the Network UPS Tools (NUT) project is to provide
-reliable monitoring of UPS hardware and ensure safe shutdowns of the
-systems which are connected.
-
-Network communications are used so that multiple systems can monitor a
-single physical UPS and shut down together if necessary without any
-special "sharing hardware" on the UPS itself.
