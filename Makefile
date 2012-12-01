@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4972 2012/11/29 01:53:13 othyro Exp $
+# $Id: Makefile,v 1.4973 2012/12/01 12:57:54 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2754,6 +2754,7 @@ SUBDIR+=	rabbitmq-c
 SUBDIR+=	radare
 SUBDIR+=	radiotray
 SUBDIR+=	ranmacgen
+SUBDIR+=	rapidxml
 SUBDIR+=	rar4
 SUBDIR+=	rast
 SUBDIR+=	raster3d
