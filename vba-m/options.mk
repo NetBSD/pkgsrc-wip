@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1.1.1 2011/12/28 06:56:35 othyro Exp $
+# $NetBSD: options.mk,v 1.2 2012/12/02 02:20:01 othyro Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.vba-m
 PKG_SUPPORTED_OPTIONS=	debug ffmpeg gtk lirc nls sdl
@@ -30,7 +30,7 @@ CMAKE_ARGS+=	-DENABLE_GTK=OFF
 .endif
 
 .if !empty(PKG_OPTIONS:Mlirc)
-.include "../../wip/lirc/buildlink3.mk"
+.include "../../comms/lirc/buildlink3.mk"
 CMAKE_ARGS+=	-DENABLE_LIRC=ON
 .else
 CMAKE_ARGS+=	-DENABLE_LIRC=OFF
