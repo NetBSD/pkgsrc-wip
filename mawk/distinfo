@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2010/08/25 20:00:00 cheusov Exp $
-
-SHA1 (mawk-1.3.4-20100625.tgz) = 5ba79c2af60915ec3a3eb8d2bbd59e15b9c24a79
-RMD160 (mawk-1.3.4-20100625.tgz) = eba15ad8ed2d0acefe56b02a6db80ad3d9f87dfa
-Size (mawk-1.3.4-20100625.tgz) = 304970 bytes
