@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4983 2012/12/03 18:55:36 othyro Exp $
+# $Id: Makefile,v 1.4984 2012/12/03 19:18:47 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2037,6 +2037,7 @@ SUBDIR+=	p5-XML-DTDParser
 SUBDIR+=	p5-XML-RSS-LibXML
 SUBDIR+=	p5-XML-Writer-Simple
 SUBDIR+=	p5-biblatex-biber
+SUBDIR+=	p5-constant-def
 SUBDIR+=	p5-mozldap
 SUBDIR+=	p5-qt3
 SUBDIR+=	p5-spf-policyd
