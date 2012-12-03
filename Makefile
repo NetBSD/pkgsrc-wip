@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4978 2012/12/03 15:17:34 othyro Exp $
+# $Id: Makefile,v 1.4979 2012/12/03 15:59:37 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1890,6 +1890,7 @@ SUBDIR+=	p5-Catalyst-Plugin-SubRequest
 SUBDIR+=	p5-Catalyst-Plugin-Unicode-Encoding
 SUBDIR+=	p5-Catalyst-Plugin-XMLRPC
 SUBDIR+=	p5-Class-DBI-AsForm
+SUBDIR+=	p5-Class-DBI-BaseDSN
 SUBDIR+=	p5-Class-DBI-FromForm
 SUBDIR+=	p5-Class-DBI-Loader
 SUBDIR+=	p5-Class-DBI-Loader-Relationship
