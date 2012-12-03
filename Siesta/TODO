@@ -1,4 +1,2 @@
-* PLIST depends on perl version. I have 5.9 installed and it's broken to 5.8
-	-- should be solved by using PERL_VERSION, but untested; maybe needs PLIST_SUB
 * Not tested yet
-* You must specify the path in instalation process.
+* You must specify the path in installation process.
