@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4985 2012/12/03 19:33:40 othyro Exp $
+# $Id: Makefile,v 1.4986 2012/12/03 20:53:20 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2832,6 +2832,7 @@ SUBDIR+=	ruby-trollop
 SUBDIR+=	ruby-xmpp4r
 SUBDIR+=	ruby-yaml_waml
 SUBDIR+=	runit
+SUBDIR+=	rygel
 SUBDIR+=	s3cmd
 SUBDIR+=	s3funnel
 SUBDIR+=	samba
