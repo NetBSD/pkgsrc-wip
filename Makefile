@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4981 2012/12/03 16:45:55 othyro Exp $
+# $Id: Makefile,v 1.4982 2012/12/03 16:54:28 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1993,6 +1993,7 @@ SUBDIR+=	p5-PluceneSimple
 SUBDIR+=	p5-Pod-Constants
 SUBDIR+=	p5-Pod-Xhtml
 SUBDIR+=	p5-Proc-Fork
+SUBDIR+=	p5-Python-Serialise-Marshal
 SUBDIR+=	p5-Quota
 SUBDIR+=	p5-RTF-Writer
 SUBDIR+=	p5-Spread
