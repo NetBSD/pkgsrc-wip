@@ -1,19 +1,18 @@
-# $NetBSD: Makefile,v 1.14 2012/11/25 23:32:08 othyro Exp $
+# $NetBSD: Makefile,v 1.15 2012/12/03 23:15:04 othyro Exp $
 #
 
-DISTNAME=		and-1.2.0
-PKGREVISION=		2
-CATEGORIES=		sysutils
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=and/}
+DISTNAME=	and-1.2.2
+CATEGORIES=	sysutils
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=and/}
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://and.sourceforge.net/
-COMMENT=		Auto nice daemon
-LICENSE=		gnu-gpl-v3
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://and.sourceforge.net/
+COMMENT=	Auto nice daemon
+LICENSE=	gnu-gpl-v3
 
-USE_TOOLS+=		gmake
-USE_LANGUAGES=		c
-BUILD_TARGET=		default
+USE_TOOLS+=	gmake
+USE_LANGUAGES=	c
+BUILD_TARGET=	default
 
 .include "../../mk/bsd.prefs.mk"
 
