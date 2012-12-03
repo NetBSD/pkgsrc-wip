@@ -1,29 +1,29 @@
-# $NetBSD: Makefile,v 1.3 2012/09/24 16:56:37 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/12/03 13:35:39 othyro Exp $
 #
 
-DISTNAME=	commons-codec-1.4-bin
+DISTNAME=	commons-codec-1.7-bin
 PKGNAME=	apache-${DISTNAME:S/-bin//}
 CATEGORIES=	devel java
-MASTER_SITES=	http://apache.multihomed.net//commons/codec/binaries/
+MASTER_SITES=	${MASTER_SITE_APACHE:=commons/codec/binaries/}
 
-MAINTAINER=	pgksrc-users@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://commons.apache.org/codec/
 COMMENT=	Encoder and decoders such as Base64 and hexadecimal codec
 LICENSE=	apache-2.0
 
-WRKSRC=		${WRKDIR}/commons-codec-1.4
+WRKSRC=		${WRKDIR}/commons-codec-${PKGVERSION_NOREV}
 
 NO_BUILD=	yes
 USE_TOOLS+=	pax
 USE_LANGUAGES=	# none
 
 USE_JAVA=	yes
-PKG_JVMS_ACCEPTED= sun-jdk6 sun-jdk15 sun-jdk14
+PKG_JVMS_ACCEPTED= sun-jdk6 sun-jdk15
 
 INSTALLATION_DIRS=	lib/java share/doc/apache-commons-codec
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/commons-codec-1.4.jar \
+	${INSTALL_DATA} ${WRKSRC}/commons-codec-${PKGVERSION_NOREV}.jar \
 		${DESTDIR}${PREFIX}/lib/java/commons-codec.jar
 	cd ${WRKSRC}/apidocs && pax -rw -pp . ${DESTDIR}${PREFIX}/share/doc/apache-commons-codec
 
