@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2012/11/25 23:32:08 othyro Exp $
+# $NetBSD: Makefile,v 1.37 2012/12/03 23:34:45 othyro Exp $
 
 DISTNAME=	apstget-20060410
 CATEGORIES=	pkgtools
@@ -16,16 +16,10 @@ DEPENDS+=	pkglint>=3.94:../../pkgtools/pkglint
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
-CONF_FILES=	apstget.conf ${PKG_SYSCONFDIR}/apstget.conf
+EGDIR=		share/examples/apstget
+CONF_FILES=	${PREFIX}/${EGDIR}/apstget.conf ${PKG_SYSCONFDIR}/apstget.conf
 
-INSTALLATION_DIRS+=	bin libexec
-
-do-extract:
-	cp -R ${FILESDIR} ${WRKSRC}
-
-do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/apst-get ${DESTDIR}${PREFIX}/bin/apstget
-	${INSTALL_SCRIPT} ${WRKSRC}/apstget-wrapper ${DESTDIR}${PREFIX}/libexec/
+INSTALLATION_DIRS+=	bin libexec share/examples/apstget
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -37,10 +31,20 @@ SUBST_SED.etc= -e "s,-W interactive,,"
 SUBST_CLASSES+=		etc
 SUBST_STAGE.etc=	post-patch
 SUBST_FILES.etc=	apst-get apstget-wrapper
-SUBST_SED.etc+=		-e "s,_etc_,${PKG_SYSCONFDIR},g" \
-			-e "s,_pfx_,${PREFIX},g" \
-			-e "s,_psd_,${PKGSRCDIR},g" \
-			-e "s,_dbd_,${PKG_DBDIR},g" \
-			-e "s,_makebin_,${MAKE},g"
+SUBST_SED.etc=		-e "s,_etc_,${PKG_SYSCONFDIR},g"
+SUBST_SED.etc+=		-e "s,_pfx_,${PREFIX},g"
+SUBST_SED.etc+=		-e "s,_psd_,${PKGSRCDIR},g"
+SUBST_SED.etc+=		-e "s,_dbd_,${PKG_DBDIR},g"
+SUBST_SED.etc+=		-e "s,_makebin_,${MAKE},g"
+
+do-extract:
+	cp -R ${FILESDIR} ${WRKSRC}
+
+do-install:
+	${INSTALL_SCRIPT} ${WRKSRC}/apst-get ${DESTDIR}${PREFIX}/bin/apstget
+	${INSTALL_SCRIPT} ${WRKSRC}/apstget-wrapper ${DESTDIR}${PREFIX}/libexec/
+
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/apstget.conf ${DESTDIR}${PREFIX}/${EGDIR}
 
 .include "../../mk/bsd.pkg.mk"
