@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4979 2012/12/03 15:59:37 othyro Exp $
+# $Id: Makefile,v 1.4980 2012/12/03 16:36:53 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1920,6 +1920,7 @@ SUBDIR+=	p5-Encode-compat
 SUBDIR+=	p5-Exception-Base
 SUBDIR+=	p5-Exception-Class-TryCatch
 SUBDIR+=	p5-Exporter-Tidy
+SUBDIR+=	p5-File-Binary
 SUBDIR+=	p5-File-Map
 SUBDIR+=	p5-File-ShareDir-Install
 SUBDIR+=	p5-Frontier-RPC
