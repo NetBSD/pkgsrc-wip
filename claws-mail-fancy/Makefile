@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/09/24 18:26:54 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/12/03 16:58:38 roelants Exp $
 #
 
 DISTNAME=	fancy-0.9.15
@@ -12,6 +12,7 @@ COMMENT=	Renders HTML e-mail using the WebKit library
 LICENSE=	gnu-gpl-v3
 
 USE_LIBTOOL=		yes
+USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
 
