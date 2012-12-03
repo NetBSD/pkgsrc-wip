@@ -1,19 +1,22 @@
-# $NetBSD: Makefile,v 1.3 2012/11/25 23:32:07 othyro Exp $
+# $NetBSD: Makefile,v 1.4 2012/12/03 13:12:21 othyro Exp $
 #
 
-DISTNAME=		ADMsmb_0.3
-PKGNAME=		admsmb-0.3
-CATEGORIES=		security
-MASTER_SITES=		http://www.void.irq.org/
+DISTNAME=	ADMsmb_0.3
+PKGNAME=	admsmb-0.3
+CATEGORIES=	security
+MASTER_SITES=	http://www.void.irq.org/
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.void.irq.org/
-COMMENT=		Security scanner for Samba
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://www.void.irq.org/
+COMMENT=	Security scanner for Samba
+LICENSE=	gnu-gpl-v2
 
-BUILD_TARGET=		ADMsmb
+BUILD_TARGET=	ADMsmb
+
+INSTALLATION_DIRS+=	bin
 
 pre-build:
-	cd ${WRKSRC} && ${MAKE} clean
+	cd ${WRKSRC} && ${MAKE_PROGRAM} clean
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/ADMsmb ${DESTDIR}${PREFIX}/bin
