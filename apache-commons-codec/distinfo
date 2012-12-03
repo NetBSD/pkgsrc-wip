@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/09/08 23:59:12 jihbed Exp $
+$NetBSD: distinfo,v 1.2 2012/12/03 13:34:00 othyro Exp $
 
-SHA1 (commons-codec-1.4-bin.tar.gz) = e42083648924c36bd36b94e18b8b9a382072417d
-RMD160 (commons-codec-1.4-bin.tar.gz) = ea34d96db129d2b1ef168a8cdb17607a98a27ad4
-Size (commons-codec-1.4-bin.tar.gz) = 660236 bytes
+SHA1 (commons-codec-1.7-bin.tar.gz) = 86e21507f6ef321ccdd38ab64fea4f9272172242
+RMD160 (commons-codec-1.7-bin.tar.gz) = 0b4e591aed2d510e3dbabee5bc645cf0c2eaa428
+Size (commons-codec-1.7-bin.tar.gz) = 1351923 bytes
