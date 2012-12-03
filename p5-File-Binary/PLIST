@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2012/12/03 16:36:03 othyro Exp $
+${PERL5_SUB_INSTALLVENDORLIB}/File/Binary.pm
+${PERL5_SUB_INSTALLVENDORARCH}/auto/File/Binary/.packlist
+${PERL5_SUB_INSTALLVENDORMAN3DIR}/File::Binary.3
