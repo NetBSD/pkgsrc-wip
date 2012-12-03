@@ -1,0 +1,5 @@
+YAUPSPE (Yet Another PSP Emulator) is a small prototype of PSP emulator. It's
+not usable yet. It's based on Potemkin, a multiplatform (but mostly PSP)
+emulator under the GPL-2 license, abandoned by its main developer. YAUPSPE is a
+cleaned up version of it, using C, and cross-platform (it should work on all the
+platforms where SDL works).
