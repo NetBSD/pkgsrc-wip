@@ -1,21 +1,23 @@
-# $NetBSD: Makefile,v 1.8 2012/11/25 23:32:09 othyro Exp $
+# $NetBSD: Makefile,v 1.9 2012/12/03 23:43:54 othyro Exp $
 #
 
-DISTNAME=		dnswalk-2.0.2
-WRKSRC=			${WRKDIR}/
-CATEGORIES=		net
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=dnswalk/}
+DISTNAME=	dnswalk-2.0.2
+CATEGORIES=	net
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dnswalk/}
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://dnswalk.sourceforge.net/
-COMMENT=		DNS debugger
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://dnswalk.sourceforge.net/
+COMMENT=	DNS debugger
 
-DEPENDS+=		p5-Net-DNS>=0.42:../../net/p5-Net-DNS
+DEPENDS+=	p5-Net-DNS>=0.42:../../net/p5-Net-DNS
 
-USE_TOOLS+=		perl:run
-REPLACE_PERL=		dnswalk makereports
+USE_TOOLS+=	perl:run
+REPLACE_PERL=	dnswalk makereports
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+
+WRKSRC=		${WRKDIR}/
+NO_BUILD=	yes
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/dnswalk     ${DESTDIR}${PREFIX}/bin/
