@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/11/30 15:18:51 christtrekker Exp $
+# $NetBSD: Makefile,v 1.8 2012/12/03 14:17:39 kristerw Exp $
 #
 
 DISTNAME=	classic-mac-font-pack-0.1
@@ -86,6 +86,6 @@ do-install:
 	fi
 # install doco too!
 
-DEPENDS+=	urbanrenewal-ttf:../../fonts/urbanrenewal-ttf
+DEPENDS+=	urbanrenewal-ttf-[0-9]*:../../fonts/urbanrenewal-ttf
 # url2pkg-marker (please do not remove this line.)
 .include "../../mk/bsd.pkg.mk"
