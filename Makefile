@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4977 2012/12/03 15:04:11 othyro Exp $
+# $Id: Makefile,v 1.4978 2012/12/03 15:17:34 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1833,6 +1833,7 @@ SUBDIR+=	p5-Aceperl
 SUBDIR+=	p5-Algorithm-Cluster
 SUBDIR+=	p5-Algorithm-Combinatorics
 SUBDIR+=	p5-Apache-AuthenNTLM
+SUBDIR+=	p5-Apache-Session-SharedMem
 SUBDIR+=	p5-Apache2-ModSSL
 SUBDIR+=	p5-App-cpanminus
 SUBDIR+=	p5-Arch
