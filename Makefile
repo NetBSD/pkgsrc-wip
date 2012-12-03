@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4980 2012/12/03 16:36:53 othyro Exp $
+# $Id: Makefile,v 1.4981 2012/12/03 16:45:55 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1959,6 +1959,7 @@ SUBDIR+=	p5-Log-Dispatch-Array
 SUBDIR+=	p5-MKDoc-XML
 SUBDIR+=	p5-MMapDB
 SUBDIR+=	p5-MasonX-Apache2Handler
+SUBDIR+=	p5-Math-Complex
 SUBDIR+=	p5-Math-FixedPrecision
 SUBDIR+=	p5-Math-Gauss
 SUBDIR+=	p5-Math-IntervalSearch
