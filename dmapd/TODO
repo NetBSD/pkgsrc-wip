@@ -1,0 +1,6 @@
+User/group handling.
+Create var directories (/var/cache/dmapd/DAAP and /usr/pkg/var/lock/subsys/)
+Add rc.d script.
+
+Can't play files served by dmapd with iTunes 10 or 11 -- connections work
+fine, but playing music just does nothing -- wiz 20121203.

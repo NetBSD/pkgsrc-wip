@@ -1,0 +1,19 @@
+The dmapd project provides a GObject-based, Open Source DMAP server
+with the following features:
+
+    Support for both DAAP and DPAP
+    Support for realtime transcoding of media formats not natively
+    supported by clients
+    Support for many metadata formats, such as those associated
+    with Ogg Vorbis and MP3 (e.g., ID3)
+    Detection of video streams so that clients may play them as
+    video
+    Use of GStreamer to support a wide range of audio and video
+    CODECs
+    Caching of photograph thumbnails to avoid regenerating them
+    each time the server restarts
+
+Dmapd runs on Linux and other POSIX operating systems. It has been
+used on OpenWrt Linux-based systems with as little as 32MB of memory
+to serve music, video and photograph libraries containing thousands
+of files.
