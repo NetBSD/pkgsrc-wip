@@ -1,0 +1,9 @@
+Core dumps for me on NetBSD-6.99.15/amd64 after adding media -- wiz 20121203
+
+More portable solution for uuid code should be found (see
+patch*librygel*); using the libuuid package doesn't currently work
+because of net/gupnp/buildlink3.mk's trying to overwrite uuid.pc.
+
+Config file framework should be used.
+pkgsrc user/group handling should be used.
+rc.d script should be added.
