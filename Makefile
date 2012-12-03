@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4976 2012/12/02 20:36:15 othyro Exp $
+# $Id: Makefile,v 1.4977 2012/12/03 15:04:11 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1935,6 +1935,7 @@ SUBDIR+=	p5-HTTP-BrowserDetect
 SUBDIR+=	p5-Hash-AsObject
 SUBDIR+=	p5-IO-Lambda
 SUBDIR+=	p5-IO-Socket-Socks
+SUBDIR+=	p5-IPC-Cache
 SUBDIR+=	p5-Image-EXIF
 SUBDIR+=	p5-Imager
 SUBDIR+=	p5-JavaScript-SpiderMonkey
