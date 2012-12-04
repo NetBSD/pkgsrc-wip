@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/03/06 15:12:54 poppnk Exp $
+$NetBSD: distinfo,v 1.2 2012/12/04 03:55:52 othyro Exp $
 
-SHA1 (gjots2-2.3.4.tgz) = c5b5e96021b0d37b029246d6d9759e31a977a2ab
-RMD160 (gjots2-2.3.4.tgz) = 0a6ee1ee41cfc6179de7949ac25ebb2701ddf41c
-Size (gjots2-2.3.4.tgz) = 250204 bytes
+SHA1 (gjots2-2.3.15.tgz) = df041523c231e522bfa2c2c0ce5ff774ea47353f
+RMD160 (gjots2-2.3.15.tgz) = 39c91648e012650d67e5f703fe8bb8de168ee63c
+Size (gjots2-2.3.15.tgz) = 312557 bytes
