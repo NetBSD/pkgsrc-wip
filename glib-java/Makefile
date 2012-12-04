@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/12/04 02:37:15 othyro Exp $
+# $NetBSD: Makefile,v 1.10 2012/12/04 02:46:24 othyro Exp $
 #
 
 DISTNAME=	glib-java-0.4.2
@@ -15,6 +15,9 @@ USE_LIBTOOL=		yes
 USE_LANGUAGES+=		c c++ fortran
 USE_TOOLS+=		aclocal autoconf automake gmake gsed pkg-config
 CONFIGURE_ARGS+=	--without-gcj-compile
+
+PKGCONFIG_OVERRIDE+=	glib-java-uninstalled.pc.in
+PKGCONFIG_OVERRIDE+=	glib-java.pc.in
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../wip/mk/java-app.mk"
