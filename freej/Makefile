@@ -1,22 +1,23 @@
-# $NetBSD: Makefile,v 1.10 2012/11/25 23:32:13 othyro Exp $
+# $NetBSD: Makefile,v 1.11 2012/12/04 01:57:59 othyro Exp $
 #
 
-DISTNAME=		freej-0.8.1
-PKGREVISION=		4
-CATEGORIES=		multimedia
-MASTER_SITES=		http://www.ljudmila.org/~jaromil/freej/releases/
+DISTNAME=	freej-0.10
+CATEGORIES=	multimedia
+MASTER_SITES=	http://ftp.dyne.org/freej/releases/
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://freej.dyne.org/
-COMMENT=		Instrument for realtime video manipulation
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://freej.dyne.org/
+COMMENT=	Instrument for realtime video manipulation
+LICENSE=	gnu-gpl-v3
 
-PKG_DESTDIR_SUPPORT=    none
+NOT_FOR_PLATFORM=	NetBSD-*-*
 
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
-USE_TOOLS+=		pkg-config gmake
+USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		yes
 
+.include "../../audio/libshout/buildlink3.mk"
 .include "../../devel/libslang/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
