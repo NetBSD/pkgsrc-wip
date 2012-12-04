@@ -1,0 +1,4 @@
+RUPS is an abbreviation for Reading and Updating PDF Syntax. RUPS is a tool
+built on top of iText that allows you to look inside a PDF document and browse
+the different PDF objects and content streams. (Updating PDFs isn't possible
+yet.).
