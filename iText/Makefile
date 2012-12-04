@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/12/04 18:33:48 othyro Exp $
+# $NetBSD: Makefile,v 1.12 2012/12/04 18:59:10 othyro Exp $
 #
 
 DISTNAME=	itext-5.3.4
@@ -16,7 +16,7 @@ WRKSRC=		${WRKDIR}
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
-MESSAGE_SUBST=	PKGV_NR=${PKGVERSION_NOREV}
+MESSAGE_SUBST+=	PKGV_NR=${PKGVERSION_NOREV}
 
 INSTALLATION_DIRS+=	lib/java share/doc/${PKGBASE}
 
