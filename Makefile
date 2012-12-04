@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4988 2012/12/03 22:51:57 othyro Exp $
+# $Id: Makefile,v 1.4989 2012/12/04 19:07:51 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1183,6 +1183,7 @@ SUBDIR+=	java-getopt
 SUBDIR+=	java-gnucrypto
 SUBDIR+=	java-gnujaf
 SUBDIR+=	java-gnujaxp
+SUBDIR+=	java-iText-RUPS
 SUBDIR+=	java-jbluez
 SUBDIR+=	java-jep
 SUBDIR+=	java-jlayer
