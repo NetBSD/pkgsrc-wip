@@ -1,26 +1,29 @@
-# $NetBSD: Makefile,v 1.7 2012/11/25 23:32:20 othyro Exp $
+# $NetBSD: Makefile,v 1.8 2012/12/04 18:53:43 othyro Exp $
 #
 
-DISTNAME=		iTextXML
-PKGNAME=		iTextXML-1.02
-CATEGORIES=		textproc
-MASTER_SITES=		http://itext.sourceforge.net/downloads/
-EXTRACT_SUFX=		.jar
+DISTNAME=	xmlworker-1.2.1
+PKGNAME=	java-itext-${DISTNAME}
+CATEGORIES=	textproc
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xmlworker/}
+EXTRACT_SUFX=	.zip
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.lowagie.com/iText/
-COMMENT=		Java classes to generate and parse XML files
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://www.lowagie.com/iText/
+COMMENT=	Java classes to generate and parse XML files
+LICENSE=	gnu-agpl-v3
 
-WRKSRC=			${WRKDIR}
+DEPENDS+=	java-itext-[0-9]*:../../wip/iText
 
-INSTALLATION_DIRS=	lib
+WRKSRC=		${WRKDIR}
+NO_CONFIGURE=	yes
+NO_BUILD=	yes
 
-do-extract:
+MESSAGE_SUBST+=	DN=${DISTNAME}
 
-do-build:
+INSTALLATION_DIRS=	lib/java
 
 do-install:
-		${INSTALL_DATA} ${DISTDIR}/iTextXML.jar ${DESTDIR}${PREFIX}/lib/iTextXML.jar
+		${INSTALL_DATA} ${WRKSRC}/${DISTNAME}.jar ${DESTDIR}${PREFIX}/lib/java
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"

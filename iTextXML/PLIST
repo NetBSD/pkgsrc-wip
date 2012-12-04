@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/21 12:01:47 poppnk Exp $
-lib/iTextXML.jar
+@comment $NetBSD: PLIST,v 1.2 2012/12/04 18:53:43 othyro Exp $
+lib/java/xmlworker-1.2.1.jar
