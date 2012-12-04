@@ -1,3 +1,2 @@
 use autoclasspath tool (must be created :)
-add some .javas in files/ to be used as cmdline tools for converting xml->pdf
 rename to java-itext when importing into pkgsrc
