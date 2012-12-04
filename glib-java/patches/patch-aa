@@ -1,8 +1,10 @@
-$NetBSD: patch-aa,v 1.1 2006/10/25 02:08:56 rillig Exp $
+$NetBSD: patch-aa,v 1.2 2012/12/04 02:30:22 othyro Exp $
 
---- configure.orig	2006-10-25 03:32:56.000000000 +0200
-+++ configure	2006-10-25 03:41:02.000000000 +0200
-@@ -21054,9 +21054,9 @@ public class Test {
+Fixing portability error.
+
+--- configure.orig	2007-01-05 13:13:51.000000000 +0000
++++ configure
+@@ -21253,9 +21253,9 @@ public class Test {
  EOF
  	GCJ_JAR=`gcj -C Test.java && gij Test`
  	rm Test.java Test.class
