@@ -1,13 +1,15 @@
-# $NetBSD: Makefile,v 1.12 2012/11/25 23:32:28 othyro Exp $
+# $NetBSD: Makefile,v 1.13 2012/12/04 20:07:43 othyro Exp $
 #
 
-DISTNAME=	minimalist-2.5.3
+DISTNAME=	minimalist-2.5.4-1
 CATEGORIES=	mail
 MASTER_SITES=	http://www.mml.org.ua/LIST/
+EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mml.org.ua/
 COMMENT=	Minimalistic Mailing Lists Manager
+LICENSE=	2-clause-bsd
 
 USE_TOOLS+=	perl
 REPLACE_PERL=	${WRKSRC}/minimalist.pl
@@ -16,41 +18,33 @@ REPLACE_PERL+=	${WRKSRC}/contrib/minimalist_request.pl
 EGDIR=		${PREFIX}/share/examples/minimalist/
 CONF_FILES=	${EGDIR}/minimalist.conf ${PKG_SYSCONFDIR}/minimalist.conf
 
-SUBST_CLASSES+=	path
-SUBST_STAGE.path=post-patch
-SUBST_FILES.path=minimalist.conf-sample
-SUBST_FILES.path+=minimalist.pl
-SUBST_FILES.path+=contrib/minimalist_request.pl
-SUBST_SED.path= -e 's,/usr/local,${PREFIX},'
+WRKSRC=		${WRKDIR}/${DISTNAME:S/-1/.1/1}
 
-INSTALLATION_DIRS=	bin
+SUBST_CLASSES+=		path
+SUBST_STAGE.path=	post-patch
+SUBST_FILES.path=	minimalist.conf-sample
+SUBST_FILES.path+=	minimalist.pl
+SUBST_FILES.path+=	contrib/minimalist_request.pl
+SUBST_SED.path=		-e 's,/usr/local,${PREFIX},'
 
-do-build:
+NO_BUILD=		yes
+INSTALLATION_DIRS=	bin ${PKG_SYSCONFDIR} ${EGDIR} share/doc/minimalist/FAQ
 
 do-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/minimalist/sample
-	# cfgfiles
-	${INSTALL_DATA} ${WRKSRC}/minimalist.conf-sample \
-		${DESTDIR}${PREFIX}/etc/minimalist.conf
-	${INSTALL_DATA} ${WRKSRC}/minimalist.conf-sample \
-		${DESTDIR}${PREFIX}/share/examples/minimalist/minimalist.conf
-	# examples
-	${INSTALL_DATA} ${WRKSRC}/sample/lists.lst \
-		${DESTDIR}${PREFIX}/share/examples/minimalist/
-	${INSTALL_DATA} ${WRKSRC}/sample/sample/* \
-		${DESTDIR}${PREFIX}/share/examples/minimalist/sample/
-	# documentation
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/minimalist/FAQ
-	${INSTALL_DATA} ${WRKSRC}/docs/FAQ/* \
-		${DESTDIR}${PREFIX}/share/doc/minimalist/FAQ/
-.for _file_ in README CHANGES.txt virtual-domains.txt
-	${INSTALL_DATA} ${WRKSRC}/docs/${_file_} \
-		${DESTDIR}${PREFIX}/share/doc/minimalist/
-.endfor
-	# scripts
-	${INSTALL_SCRIPT} ${WRKSRC}/minimalist.pl \
-			${DESTDIR}${PREFIX}/bin/
-	${INSTALL_SCRIPT} ${WRKSRC}/contrib/minimalist_request.pl \
-			${DESTDIR}${PREFIX}/bin/
+	cd ${WRKSRC}; \
+	${INSTALL_DATA} minimalist.conf-sample \
+		${DESTDIR}${PREFIX}/share/examples/minimalist/minimalist.conf; \
+	${INSTALL_DATA} sample/lists.lst \
+		${DESTDIR}${PREFIX}/share/examples/minimalist; \
+	${INSTALL_DATA} sample/sample/* \
+		${DESTDIR}${PREFIX}/share/examples/minimalist; \
+	${INSTALL_DATA} docs/FAQ/* \
+		${DESTDIR}${PREFIX}/share/doc/minimalist/FAQ; \
+for file in README CHANGES.txt virtual-domains.txt; do \
+	${INSTALL_DATA} docs/$${file} \
+		${DESTDIR}${PREFIX}/share/doc/minimalist/; \
+done; \
+	${INSTALL_SCRIPT} minimalist.pl ${DESTDIR}${PREFIX}/bin; \
+	${INSTALL_SCRIPT} contrib/minimalist_request.pl ${DESTDIR}${PREFIX}/bin
 
 .include "../../mk/bsd.pkg.mk"
