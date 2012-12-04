@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/03 09:10:41 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/12/04 19:31:28 othyro Exp $
 #
 
 DISTNAME=	lightdm-gtk-greeter-1.3.1
@@ -24,6 +24,9 @@ INSTALLATION_DIRS+=	${PKG_SYSCONFDIR}/lightdm ${EGDIR}
 
 pre-install:
 		${INSTALL_DATA} ${WRKSRC}/data/lightdm-gtk-greeter.conf ${DESTDIR}${EGDIR}/lightdm-gtk-greeter.conf
+
+post-install:
+		${RM} ${DESTDIR}${PKG_SYSCONFDIR}/lightdm/lightdm-gtk-greeter.conf
 
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
