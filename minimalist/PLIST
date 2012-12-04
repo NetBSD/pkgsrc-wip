@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.3 2009/10/11 10:44:57 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.4 2012/12/04 20:05:53 othyro Exp $
 bin/minimalist.pl
 bin/minimalist_request.pl
-etc/minimalist.conf
 share/doc/minimalist/CHANGES.txt
 share/doc/minimalist/FAQ/postfix.mailloop
 share/doc/minimalist/FAQ/sendmail.smrsh
@@ -9,6 +8,6 @@ share/doc/minimalist/README
 share/doc/minimalist/virtual-domains.txt
 share/examples/minimalist/lists.lst
 share/examples/minimalist/minimalist.conf
-share/examples/minimalist/sample/config
-share/examples/minimalist/sample/footer
-share/examples/minimalist/sample/info
+share/examples/minimalist/config
+share/examples/minimalist/footer
+share/examples/minimalist/info
