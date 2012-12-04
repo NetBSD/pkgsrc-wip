@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/12/04 19:36:32 othyro Exp $
+# $NetBSD: Makefile,v 1.10 2012/12/04 23:25:15 othyro Exp $
 #
 
 DISTNAME=	memdump-1.01
@@ -8,7 +8,7 @@ MASTER_SITES=	http://www.porcupine.org/forensics/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.porcupine.org/forensics/tct.html
 COMMENT=	Memory dumper for UNIX-like systems
-#LICENSE=	# XXX IBM Public License -> ${WRKSRC}/LICENSE
+LICENSE=	postfix-license
 
 USE_TOOLS+=		gmake
 BUILD_TARGET=		what
