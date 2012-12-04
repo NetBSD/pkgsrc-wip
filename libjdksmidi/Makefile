@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/11/02 19:20:10 othyro Exp $
+# $NetBSD: Makefile,v 1.3 2012/12/04 19:25:15 othyro Exp $
 #
 
 DISTNAME=	jdksmidi-20121031-1
@@ -31,6 +31,7 @@ SUBST_SED.bash=		-e "s|/bin/bash|${BASH}|1"
 
 INSTALL_ENV+=		TAR=${GTAR} TARGET_MAN_DIR=${PKGMANDIR}
 INSTALL_ENV+=		TARGET_INSTALL_DEV_DIR=${DESTDIR}${PREFIX}
+INSTALLATION_DIRS+=	${PKG_SYSCONFDIR}
 
 
 .include "../../mk/bsd.pkg.mk"
