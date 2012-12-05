@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2012/12/05 04:40:20 othyro Exp $
+
+SHA1 (libbfio-alpha-20120425.tar.gz) = 0016eb449e880d09c37960166451f48626c5b416
+RMD160 (libbfio-alpha-20120425.tar.gz) = d6fb9253ac7935017399cda7b72a764bbc4c3aaf
+Size (libbfio-alpha-20120425.tar.gz) = 1569560 bytes

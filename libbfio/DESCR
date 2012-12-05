@@ -1,0 +1,3 @@
+Library to provide basic file input/output abstraction. Libbfio is used in
+multiple other libraries like libewf, libmsiecf, libnk2, libolecf and libpff. It
+is used to chain I/O to support file-in-file access.
