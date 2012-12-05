@@ -1,11 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.1 2012/12/05 04:23:21 othyro Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2012/12/05 04:29:12 othyro Exp $
 
 BUILDLINK_TREE+=	libuna
 
 .if !defined(LIBUNA_BUILDLINK3_MK)
 LIBUNA_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.libuna+=	libuna>=a20120630
+BUILDLINK_API_DEPENDS.libuna+=	libuna>=20120630
 BUILDLINK_PKGSRCDIR.libuna?=	../../wip/libuna
 
 pkgbase := libuna

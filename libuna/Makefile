@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2012/12/05 04:23:21 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2012/12/05 04:29:12 othyro Exp $
 #
 
 DISTNAME=	libuna-alpha-20120630
-PKGNAME=	${DISTNAME:S/lpha-//1}
+PKGNAME=	${DISTNAME:S/alpha-//1}
 CATEGORIES=	converters
 MASTER_SITES=	http://libuna.googlecode.com/files/
 
