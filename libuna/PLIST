@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1 2012/12/05 04:23:21 othyro Exp $
+bin/unabase
+bin/unaexport
+include/libuna.h
+include/libuna/definitions.h
+include/libuna/error.h
+include/libuna/extern.h
+include/libuna/features.h
+include/libuna/types.h
+lib/libuna.la
+lib/pkgconfig/libuna.pc
+man/man1/unaexport.1
+man/man3/libuna.3
