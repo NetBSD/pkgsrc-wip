@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4990 2012/12/05 04:24:45 othyro Exp $
+# $Id: Makefile,v 1.4991 2012/12/05 04:41:11 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1338,6 +1338,7 @@ SUBDIR+=	libanimal
 SUBDIR+=	libargp
 SUBDIR+=	libassa
 SUBDIR+=	libavc1394
+SUBDIR+=	libbfio
 SUBDIR+=	libbrahe
 SUBDIR+=	libbtctl
 SUBDIR+=	libburn
