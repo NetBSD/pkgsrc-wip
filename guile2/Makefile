@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/11/14 00:16:08 othyro Exp $
+# $NetBSD: Makefile,v 1.6 2012/12/06 00:11:56 lexort Exp $
 #
 
 DISTNAME=	guile-2.0.5
@@ -18,8 +18,8 @@ PKGCONFIG_OVERRIDE+=	meta/guile-2.0.pc.in
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
-.include "../../wip/libunistring/buildlink3.mk"
 .include "../../devel/libffi/buildlink3.mk"
 .include "../../devel/boehm-gc/buildlink3.mk"
+.include "../../textproc/libunistring/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
