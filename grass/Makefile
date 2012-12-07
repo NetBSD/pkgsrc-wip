@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2012/09/29 00:50:40 asau Exp $
+# $NetBSD: Makefile,v 1.27 2012/12/07 20:51:51 kristerw Exp $
 
 DISTNAME=		grass-${GRASS_VERSION}
 PKGREVISION=		3
@@ -13,7 +13,7 @@ PKG_DESTDIR_SUPPORT=	none
 
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		autoconf bash gm4 gmake perl
+USE_TOOLS+=		autoconf bash gm4 gmake perl pkg-config
 USE_X11=		yes
 GNU_CONFIGURE=		yes
 
