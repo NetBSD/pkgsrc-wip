@@ -55,7 +55,7 @@ Suggested package updates
 	o hu-go-2.11
 	o i3-4.1.1
 	o i3status-2.4
-	o icecat-14.0
+	o icecat-17.0.1
 	o jakarta-struts-1.2.4
 	o jalview-2.4
 	o java-asm-3.2
@@ -76,6 +76,7 @@ Suggested package updates
 	o lives-1.6.4
 	o lucene-3.6.1
 	o man-1.6f
+	o mcabber-0.10.2
 	o meta-tracker-0.15.0
 	o miro-5.0
 	o mixxx-1.9.2
@@ -252,4 +253,5 @@ Suggested infrastructure improvements
 Suggested fixes
 ===============
 
+	o xombrero-1.4.0
 	o xscreensaver, PR 43047
