@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2010/01/17 12:03:32 thomasklausner Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2012/12/08 16:56:41 ryo-on Exp $
 
 BUILDLINK_TREE+=	rss-glib
 
@@ -11,7 +11,7 @@ BUILDLINK_PKGSRCDIR.rss-glib?=	../../wip/rss-glib
 
 
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../wip/libmrss/buildlink3.mk"
+.include "../../www/libmrss/buildlink3.mk"
 .endif	# RSS_GLIB_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-rss-glib

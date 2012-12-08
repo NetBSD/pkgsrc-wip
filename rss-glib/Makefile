@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/07 14:53:44 asau Exp $
+# $NetBSD: Makefile,v 1.7 2012/12/08 16:56:40 ryo-on Exp $
 #
 
 DISTNAME=	rss-glib-0.2.2
@@ -25,5 +25,5 @@ PLIST_SRC+=		PLIST
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../textproc/gtk-doc/buildlink3.mk"
-.include "../../wip/libmrss/buildlink3.mk"
+.include "../../www/libmrss/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
