@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.15 2012/11/25 23:32:32 othyro Exp $
+# $NetBSD: Makefile,v 1.16 2012/12/09 20:21:52 othyro Exp $
 #
 
-DISTNAME=		xinetd-2.3.13
-CATEGORIES=		sysutils
-MASTER_SITES=		http://www.xinetd.org/
+DISTNAME=	xinetd-2.3.15
+CATEGORIES=	sysutils
+MASTER_SITES=	http://www.xinetd.org/
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.xinetd.org/
-COMMENT=		Secure replacement for inetd
-
-PKG_DESTDIR_SUPPORT=	none
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://www.xinetd.org/
+COMMENT=	Secure replacement for inetd
+#LICENSE=	# XXX TODO see ${WRKSRC}/COPYRIGHT
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
@@ -33,13 +32,14 @@ CPPFLAGS+=		-DDEFAULT_CONFIG_FILE="\"${PKG_SYSCONFDIR:Q}/etc/xinetd.conf\""
 USE_TOOLS+=		perl:run
 REPLACE_PERL+=		xinetd/xconv.pl
 
+EGDIR=			share/examples/${PKGBASE}
+INSTALLATION_DIRS+=	${EGDIR}/xinetd.d
+
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX:Q}/share/examples/xinetd/
-	${INSTALL_DATA} ${WRKSRC:Q}/contrib/xinetd.conf \
-		${PREFIX:Q}/share/examples/xinetd/
-	${INSTALL_DATA_DIR} ${PREFIX:Q}/share/examples/xinetd/xinetd.d/
-	${INSTALL_DATA} ${WRKSRC:Q}/contrib/xinetd.d/* \
-		${PREFIX:Q}/share/examples/xinetd/xinetd.d/
+	${INSTALL_DATA} ${WRKSRC}/contrib/xinetd.conf \
+		${DESTDIR}${PREFIX}/share/examples/xinetd/
+	${INSTALL_DATA} ${WRKSRC}/contrib/xinetd.d/* \
+		${DESTDIR}${PREFIX}/share/examples/xinetd/xinetd.d/
 
 .if !empty(XINETD_USE_TCPWRAPPER:M[yY][eE][sS])
 .include "../../security/tcp_wrappers/buildlink3.mk"
