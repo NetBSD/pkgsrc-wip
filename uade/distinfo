@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.2 2005/09/28 06:41:43 rillig Exp $
+$NetBSD: distinfo,v 1.3 2012/12/09 15:30:46 othyro Exp $
 
-SHA1 (uade-1.00.tar.bz2) = 4c17dd570a60a8ccf1bb68e9fe29f00bbdeeb74e
-RMD160 (uade-1.00.tar.bz2) = 204ce1054823157924897033e0eb645c122df418
-Size (uade-1.00.tar.bz2) = 2134483 bytes
+SHA1 (uade-2.13.tar.bz2) = 61c5ce9dfecc37addf233de06be196c9b15a91d8
+RMD160 (uade-2.13.tar.bz2) = 10034302e848ea7c974429ae302ca52403909ded
+Size (uade-2.13.tar.bz2) = 2897931 bytes
+SHA1 (patch-Makefile.in) = a38fa7a4f26fac79d9b10145fa0b2bc127de95d2
+SHA1 (patch-src_frontends_meta-input_uade123.sh) = 53cebaf2ff4c66902d488b7b8d96283e77f483dc
+SHA1 (patch-src_frontends_mod2ogg_mod2ogg2.sh.in) = d325bba67c8d1eb19bb721e5c1bdd1b289b5244b
