@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/11/23 14:56:22 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2012/12/09 21:31:51 othyro Exp $
 #
 
 DISTNAME=	vidalia-0.3.1
@@ -29,6 +29,6 @@ pre-configure:
 #		cd ${WRKSRC}/build && ${CMAKE} ..
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-DEPENDS+=	qt4-libs>=4.3:../../x11/qt4-libs
-.include "../../x11/qt4-libs/buildlink3.mk"
+DEPENDS+=	qt4-tools>=4.3:../../x11/qt4-tools
+.include "../../x11/qt4-tools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
