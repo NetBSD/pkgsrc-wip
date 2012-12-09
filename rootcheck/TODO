@@ -1,6 +1,0 @@
-Making os_xml
-gcc -DXML_VAR=\"var\" -Wall -I../ -I../headers/   -DUSE_OPENSSL -DDarwin -DARGV0=\"os_xml\" -DXML_VAR=\"var\" -DOSSECHIDS -c os_xml.c os_xml_access.c os_xml_node_access.c os_xml_variables.c
-In file included from os_xml.c:18:
-../headers/shared.h:78: error: conflicting types for 'socklen_t'
-/usr/include/sys/socket.h:99: error: previous declaration of 'socklen_t' was here
-*** Error code 1
