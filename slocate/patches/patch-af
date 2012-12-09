@@ -1,4 +1,6 @@
-$NetBSD: patch-af,v 1.1 2007/11/17 14:36:51 hoka_adam Exp $
+$NetBSD: patch-af,v 1.2 2012/12/09 14:03:46 othyro Exp $
+
+Don't hardcode CFLAGS or CC.
 
 --- src/Makefile.orig	2007-11-17 13:35:02.000000000 +0100
 +++ src/Makefile

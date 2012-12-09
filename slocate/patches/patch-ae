@@ -1,4 +1,6 @@
-$NetBSD: patch-ae,v 1.1 2007/11/17 14:36:51 hoka_adam Exp $
+$NetBSD: patch-ae,v 1.2 2012/12/09 14:03:46 othyro Exp $
+
+Remove this block if FNM_CASEFOLD is not set.
 
 --- src/utils.c.orig	2007-11-17 13:22:15.000000000 +0100
 +++ src/utils.c
