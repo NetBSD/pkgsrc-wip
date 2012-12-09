@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/11/16 11:13:16 slitvinov Exp $
-#
+# $NetBSD: Makefile,v 1.11 2012/12/09 20:45:33 moubctez Exp $
 
 VER=		0.4.0
 DISTNAME=	Sumatra-${VER}.tar
@@ -17,13 +16,12 @@ HOMEPAGE=	http://neuralensemble.org/trac/sumatra/
 LICENSE=	gnu-gpl-v2
 COMMENT=	Tracking projects based on numerical simulation or analysis
 
-
 DEPENDS+=	mercurial>=1.6:../../devel/mercurial
 DEPENDS+=	scmgit-base>=1.7.0.5:../../devel/scmgit-base
 DEPENDS+=	${PYPKGPREFIX}-subversion>=1.6.9:../../devel/py-subversion
 DEPENDS+=	${PYPKGPREFIX}-scipy>=0.7.2:../../math/py-scipy
 DEPENDS+=	${PYPKGPREFIX}-django-[0-9]*:../../www/py-django
-DEPENDS+=	${PYPKGPREFIX}-django-tagging>=0.2.1:../../wip/py-django-tagging
+DEPENDS+=	${PYPKGPREFIX}-django-tagging>=0.2.1:../../www/py-django-tagging
 DEPENDS+=	${PYPKGPREFIX}-httplib2>=0.6.0:../../www/py-httplib2
 DEPENDS+=	${PYPKGPREFIX}-mpi4py>=1.2.1:../../wip/py-mpich4py
 DEPENDS+=	${PYPKGPREFIX}-genesis>=0:../../wip/py-genesis
