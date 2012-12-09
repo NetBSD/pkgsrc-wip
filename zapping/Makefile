@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/11/13 20:09:36 othyro Exp $
+# $NetBSD: Makefile,v 1.18 2012/12/09 21:27:53 othyro Exp $
 #
 
 DISTNAME=		zapping-0.9.6
@@ -16,6 +16,7 @@ PKG_DESTDIR_SUPPORT=	none
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
+USE_LANGUAGES+=		c c++ fortran
 USE_TOOLS+=		gmake intltool perl
 
 CONFIGURE_ARGS+=	--disable-rebuild-man
