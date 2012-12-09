@@ -1,3 +1,1 @@
-add support for xmms/bmp plugin with PKG_OPTIONS
-
-Do not install man pages to share/man, but man.
+Test audacious option.
