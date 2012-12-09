@@ -1,0 +1,45 @@
+$NetBSD: patch-src_frontends_mod2ogg_mod2ogg2.sh.in,v 1.1 2012/12/09 15:25:12 othyro Exp $
+
+Fixes portability failure.
+
+--- src/frontends/mod2ogg/mod2ogg2.sh.in.orig	2009-10-29 21:01:12.000000000 +0000
++++ src/frontends/mod2ogg/mod2ogg2.sh.in
+@@ -474,27 +474,27 @@ check_enc_quality ()
+ 
+ translate_enc_quality ()
+ {
+-    if [ "$ENCQUALITY" == "0" ]; then
++    if [ "$ENCQUALITY" = "0" ]; then
+         LAME_BITRATE=64
+-    elif [ "$ENCQUALITY" == "1" ]; then
++    elif [ "$ENCQUALITY" = "1" ]; then
+         LAME_BITRATE=80
+-    elif [ "$ENCQUALITY" == "2" ]; then
++    elif [ "$ENCQUALITY" = "2" ]; then
+         LAME_BITRATE=96
+-    elif [ "$ENCQUALITY" == "3" ]; then
++    elif [ "$ENCQUALITY" = "3" ]; then
+         LAME_BITRATE=112
+-    elif [ "$ENCQUALITY" == "4" ]; then
++    elif [ "$ENCQUALITY" = "4" ]; then
+         LAME_BITRATE=128
+-    elif [ "$ENCQUALITY" == "5" ]; then
++    elif [ "$ENCQUALITY" = "5" ]; then
+         LAME_BITRATE=160
+-    elif [ "$ENCQUALITY" == "6" ]; then
++    elif [ "$ENCQUALITY" = "6" ]; then
+         LAME_BITRATE=192
+-    elif [ "$ENCQUALITY" == "7" ]; then
++    elif [ "$ENCQUALITY" = "7" ]; then
+         LAME_BITRATE=224
+-    elif [ "$ENCQUALITY" == "8" ]; then
++    elif [ "$ENCQUALITY" = "8" ]; then
+         LAME_BITRATE=256
+-    elif [ "$ENCQUALITY" == "9" ]; then
++    elif [ "$ENCQUALITY" = "9" ]; then
+         LAME_BITRATE=320
+-    elif [ "$ENCQUALITY" == "10" ]; then
++    elif [ "$ENCQUALITY" = "10" ]; then
+         LAME_BITRATE=320
+     fi
+ }
