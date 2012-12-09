@@ -1,6 +1,9 @@
-$NetBSD: patch-aa,v 1.1 2004/07/10 17:47:52 poppnk Exp $
---- xinetd/xconfig.h.orig	2004-07-10 18:31:48.000000000 +0000
-+++ xinetd/xconfig.h	2004-07-10 18:32:21.000000000 +0000
+$NetBSD: patch-aa,v 1.2 2012/12/09 20:17:11 othyro Exp $
+
+Define default config file if not defined.
+
+--- xinetd/xconfig.h.orig	2003-02-19 17:29:28.000000000 +0000
++++ xinetd/xconfig.h
 @@ -28,8 +28,9 @@
  #include "customconf.h"
  #endif
