@@ -1,8 +1,0 @@
-This is GtkAda version 2.2.1. This package is an Ada95 graphical library
-for the Gimp Toolkit, which means this is a set of packages to allow you
-to easily create some graphical interfaces under X11 and Win32, using Ada95
-as a programming language.
-
-Every widget from gtk 2.2 has been bound, and the test
-program found in the gtk release has been reimplemented in Ada (have a
-look at the testgtk/ directory).

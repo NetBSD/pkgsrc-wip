@@ -1,7 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.1 2007/10/13 20:50:49 martijnb Exp $
-
-This package does NOT include the firmware needed to operate some of the
-printers that this driver supports.
-
-===========================================================================
