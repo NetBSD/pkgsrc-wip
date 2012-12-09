@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.12 2012/11/25 23:32:32 othyro Exp $
+# $NetBSD: Makefile,v 1.13 2012/12/09 21:20:33 othyro Exp $
 #
 
-DISTNAME=	xmail-1.18
+DISTNAME=	xmail-1.27
 CATEGORIES=	mail
 MASTER_SITES=	http://www.xmailserver.com/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.xmailserver.com/
 COMMENT=	SMTP, POP3 and finder server
+LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
@@ -35,20 +36,16 @@ EXT=bsd # Default one :)
 
 MAKE_FILE=Makefile.${EXT}
 
-INSTALLATION_DIRS=	sbin
+INSTALLATION_DIRS+=	libexec/${PKGBASE} sbin share/doc/${PKGBASE}
 
 do-install:
-	${INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/libexec/xmail
 .for bin in XMail XMCrypt CtrlClnt MkUsers
-	${INSTALL_PROGRAM} ${WRKSRC}/${bin} ${DESTDIR}${PREFIX}/libexec/xmail/${bin}
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/${bin} ${DESTDIR}${PREFIX}/libexec/xmail/${bin}
 .endfor
-.undef bin
-	${INSTALL_SCRIPT} ${WRKSRC}/sendmail    ${DESTDIR}${PREFIX}/sbin/sendmail.xmail
+	${INSTALL_SCRIPT} ${WRKSRC}/bin/sendmail    ${DESTDIR}${PREFIX}/sbin/sendmail.xmail
 	${INSTALL_SCRIPT} ${WRKSRC}/sendmail.sh ${DESTDIR}${PREFIX}/sbin/sendmail.xmail.sh
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/xmail
 .for doc in Readme.txt Readme.html
 	${INSTALL_DATA} ${WRKSRC}/docs/${doc} ${DESTDIR}${PREFIX}/share/doc/xmail/${doc}
 .endfor
-.undef doc
 
 .include "../../mk/bsd.pkg.mk"
