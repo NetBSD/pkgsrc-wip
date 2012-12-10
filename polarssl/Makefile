@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/11/19 14:41:35 christtrekker Exp $
+# $NetBSD: Makefile,v 1.17 2012/12/10 18:47:08 lexort Exp $
 #
 
 DISTNAME=		polarssl-1.2.0-gpl
@@ -18,9 +18,5 @@ USE_TOOLS+=		gmake perl
 REPLACE_PERL=		tests/scripts/*.pl
 USE_LANGUAGES=		c
 TEST_TARGET=		check
-
-.if defined(PKGSRC_RUN_TEST) && !empty(PKGSRC_RUN_TEST:M[Yy][Ee][Ss])
-#TODO later
-.endif
 
 .include "../../mk/bsd.pkg.mk"
