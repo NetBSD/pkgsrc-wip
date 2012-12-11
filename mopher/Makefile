@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2012/10/03 15:09:57 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/12/11 00:39:42 pebog Exp $
 
-DISTNAME=		mopher-0.1
+DISTNAME=		mopher-0.4
 CATEGORIES=		mail
 MASTER_SITES=		http://smokva.net/src/
 
@@ -14,24 +14,29 @@ LICENSE=		mit
 MOPHER_USER?=		mopher
 MOPHER_GROUP?=		${MOPHER_USER}
 MOPHER_HOME?=		${VARBASE}/mopher
+MOPHER_RUN?=		${VARBASE}/run/mopher
 
-BUILD_DEFS+=		VARBASE
-
-WRKSRC=			${WRKDIR}/badzong-mopher-a544e0a
+FILES_SUBST+=		MOPHER_USER=${MOPHER_USER}
+FILES_SUBST+=		MOPHER_GROUP=${MOPHER_GROUP}
+FILES_SUBST+=		MOPHER_RUN=${MOPHER_RUN}
+FILES_SUBST+=		INSTALL=${INSTALL}
 
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX}
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASE}
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 CONFIGURE_ARGS+=	--localstatedir=${MOPHER_HOME}
 
 .include "options.mk"
 
+BUILD_DEFS+=		VARBASE
+
 PKG_SYSCONFSUBDIR=	mopher
 INSTALLATION_DIRS+=	sbin ${EGDIR}
 EGDIR=			${PREFIX}/share/examples/mopher
-CONF_FILES+=		${EGDIR}/mopherd.conf ${PKG_SYSCONFDIR}/mopherd.conf
-CONF_FILES+=		${EGDIR}/mail.acl ${PKG_SYSCONFDIR}/mail.acl
+CONF_FILES+=		${EGDIR}/mopherd.conf.example
+CONF_FILES+=		${EGDIR}/mail.acl.example
+MAKE_ENV+=		CONFIG_INST=${EGDIR}
 
 PKG_GROUPS=		${MOPHER_USER}
 PKG_USERS=		${MOPHER_USER}:${MOPHER_GROUP}
