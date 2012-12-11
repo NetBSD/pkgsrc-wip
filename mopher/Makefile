@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/12/11 00:39:42 pebog Exp $
+# $NetBSD: Makefile,v 1.4 2012/12/11 23:43:05 lexort Exp $
 
 DISTNAME=		mopher-0.4
 CATEGORIES=		mail
@@ -29,7 +29,7 @@ CONFIGURE_ARGS+=	--localstatedir=${MOPHER_HOME}
 
 .include "options.mk"
 
-BUILD_DEFS+=		VARBASE
+BUILD_DEFS+=		PKG_SYSCONFBASE VARBASE
 
 PKG_SYSCONFSUBDIR=	mopher
 INSTALLATION_DIRS+=	sbin ${EGDIR}
