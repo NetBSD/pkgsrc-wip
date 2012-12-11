@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.4998 2012/12/11 20:25:32 ftigeot Exp $
+# $Id: Makefile,v 1.4999 2012/12/11 23:32:42 lexort Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2198,7 +2198,6 @@ SUBDIR+=	pngnq
 SUBDIR+=	pnmcurve
 SUBDIR+=	pointfree
 SUBDIR+=	pointless
-SUBDIR+=	polarssl
 SUBDIR+=	polipo
 SUBDIR+=	polylib
 SUBDIR+=	polymul
