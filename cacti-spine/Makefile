@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/12/11 18:03:40 ahp-nils Exp $
+# $NetBSD: Makefile,v 1.10 2012/12/11 18:18:59 ahp-nils Exp $
 #
 
 VERSION=0.8.8a
@@ -36,7 +36,7 @@ AUTO_MKDIRS=	yes
 
 SUBST_CLASSES+=			version
 SUBST_STAGE.version=	pre-build
-SUBST_MESSAGES.version=	Substituting version numbers.
+SUBST_MESSAGE.version=	Substituting version numbers.
 SUBST_FILES.version=	${WRKDIR}/spine.1
 SUBST_VARS.version=		VERSION
 

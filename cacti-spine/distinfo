@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2012/12/11 18:03:40 ahp-nils Exp $
+$NetBSD: distinfo,v 1.6 2012/12/11 18:18:59 ahp-nils Exp $
 
 SHA1 (cacti-spine-0.8.8a.tar.gz) = 15a1624e417978b10623d2f37b96e393801d64af
 RMD160 (cacti-spine-0.8.8a.tar.gz) = 1d295441894cb64b4d4a657387c93020be5e0438
@@ -6,4 +6,4 @@ Size (cacti-spine-0.8.8a.tar.gz) = 623853 bytes
 SHA1 (spine.1.gz) = f4144283342644b1c7a6033fb6e79a94a9cf86bf
 RMD160 (spine.1.gz) = 8fc3167636b4488ea5b16fe9231321225f912843
 Size (spine.1.gz) = 878 bytes
-SHA1 (patch-.._spine.1) = 4ab6401b9339fb8612bf90ad83d60224edc4e624
+SHA1 (patch-.._spine.1) = 8eb6e59b9b182c6e4223cb10eca523aeae7338a2
