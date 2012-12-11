@@ -1,7 +1,12 @@
-# $NetBSD: Makefile,v 1.8 2012/09/24 18:26:51 asau Exp $
+# $NetBSD: Makefile,v 1.9 2012/12/11 18:03:40 ahp-nils Exp $
 #
 
-DISTNAME=	cacti-spine-0.8.7i
+VERSION=0.8.8a
+DISTNAME=	cacti-spine-${VERSION}
+DISTFILES=		${DISTNAME}${EXTRACT_SUFX}
+DISTFILES+=		spine.1.gz
+SITES.spine.1.gz=	\
+	http://manpages.ubuntu.com/manpages.gz/precise/man1/
 #PKGREVISION=           1
 CATEGORIES=	net
 MASTER_SITES=	http://www.cacti.net/downloads/spine/
@@ -21,12 +26,20 @@ USE_TOOLS+=	autoconf autoheader automake aclocal
 BUILD_DEPENDS+=	automake-[0-9]*:../../devel/automake
 DEPENDS+=	cacti>=0.8.7:../../net/cacti
 
+PKG_DESTDIR_SUPPORT=	user-destdir
 DOCDIR=			share/doc/cacti-spine
 EXAMPLES_DIR=		examples
 EGDIR=			${PREFIX}/${DOCDIR}/${EXAMPLES_DIR}
 CONF_FILES=		${EGDIR}/spine.conf.dist ${PKG_SYSCONFDIR}/spine.conf
+INSTALLATION_DIRS=	bin ${DOCDIR} ${DOCDIR}/${EXAMPLES_DIR} ${PKG_SYSCONFDIR} ${PKGMANDIR}/man1
+AUTO_MKDIRS=	yes
 
-INSTALLATION_DIRS=	bin ${DOCDIR} ${DOCDIR}/${EXAMPLES_DIR} ${PKG_SYSCONFDIR}
+SUBST_CLASSES+=			version
+SUBST_STAGE.version=	pre-build
+SUBST_MESSAGES.version=	Substituting version numbers.
+SUBST_FILES.version=	${WRKDIR}/spine.1
+SUBST_VARS.version=		VERSION
+
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/spine ${DESTDIR}${PREFIX}/bin
@@ -38,6 +51,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/LICENSE* ${DESTDIR}${PREFIX}/${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/NEWS ${DESTDIR}${PREFIX}/${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/README* ${DESTDIR}${PREFIX}/${DOCDIR}
+	${INSTALL_MAN} ${WRKDIR}/spine.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/mysql.buildlink3.mk"
 .include "../../net/net-snmp/buildlink3.mk"
