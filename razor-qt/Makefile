@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/11/28 20:25:54 christtrekker Exp $
+# $NetBSD: Makefile,v 1.3 2012/12/12 13:37:46 thomasklausner Exp $
 #
 
 DISTNAME=	razorqt-0.5.1
@@ -27,5 +27,4 @@ CHECK_PORTABILITY_SKIP=	razorqt-session/razor-session/resources/xdg-screensaver
 .include "../../x11/qt4-qdbus/buildlink3.mk"
 .include "../../x11/qt4-tools/buildlink3.mk"
 .include "../../x11/xscreensaver/buildlink3.mk"
-# url2pkg-marker (please do not remove this line.)
 .include "../../mk/bsd.pkg.mk"
