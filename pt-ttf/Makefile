@@ -1,7 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2012/10/05 13:52:03 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/12/12 23:45:37 bubuchka Exp $
 #
 
-DISTNAME=	pt-ttf-2.004.20120328
+PT_TTF_REV=	20121212
+DISTNAME=	pt-ttf-2.004.${PT_TTF_REV}	# as derived from TTF files
+DIST_SUBDIR=	pt-ttf-${PT_TTF_REV}
 CATEGORIES=	fonts
 MASTER_SITES=	http://www.fontstock.com/public/
 DISTFILES=	PTSansOFL.zip PTSerifOFL.zip PTMonoOFL.zip
