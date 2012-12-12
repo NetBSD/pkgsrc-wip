@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/12/12 13:34:11 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2012/12/12 15:22:41 christtrekker Exp $
 
 DISTNAME=	marathon-evil-199704
 CATEGORIES=	games
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	christtrekker@users.sourceforge.net
 HOMEPAGE=	http://bighouse.bungie.org/evil/
 COMMENT=	Game data for Marathon EVIL scenario, playable with Aleph One
-LICENSE=	cc-by-nc-nd-v3.0
+LICENSE=	cc-by-nc-nd-v3.0-license
 
 # There is no true dependency on Aleph One.  These scenarios cannot be
 # played without it, though.
