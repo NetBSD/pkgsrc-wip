@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/12/09 14:06:07 othyro Exp $
+# $NetBSD: Makefile,v 1.14 2012/12/12 15:22:23 thomasklausner Exp $
 #
 
 DISTNAME=	slocate-3.1
@@ -9,8 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/slocate/
 COMMENT=	Secure Locate
 LICENSE=	gnu-gpl-v2
-
-PKG_DESTDIR_SUPPORT=	destdir
 
 NO_CONFIGURE=	YES
 USE_TOOLS+=	gmake
