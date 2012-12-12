@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/09/29 00:50:35 asau Exp $
+# $NetBSD: Makefile,v 1.10 2012/12/12 10:44:37 thomasklausner Exp $
 #
 
 DISTNAME=	glkterm-078
@@ -7,7 +7,7 @@ CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_IFARCHIVE:=programming/glk/implementations/}
 EXTRACT_SUFX=	.tar.Z
 
-MAINTAINER=	dillo@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.eblong.com/zarf/glk/index.html
 COMMENT=	Curses port of Glk interface
 

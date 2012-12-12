@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/09/29 00:50:41 asau Exp $
+# $NetBSD: Makefile,v 1.12 2012/12/12 10:44:37 thomasklausner Exp $
 #
 
 DISTNAME=	gtkglk-0.2
@@ -6,7 +6,7 @@ PKGREVISION=	2
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_IFARCHIVE:=programming/glk/implementations/}
 
-MAINTAINER=	dillo@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.ifarchive.org/indexes/if-archiveXprogrammingXglkXimplementations.html
 COMMENT=	Gtk+ 2 port of Glk interface for text adventures
 

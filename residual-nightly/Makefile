@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2012/10/07 14:53:43 asau Exp $
+# $NetBSD: Makefile,v 1.5 2012/12/12 10:44:37 thomasklausner Exp $
 
 DISTNAME=	residual-${SCM_VER}
 CATEGORIES=	games
 
-OWNER=		dillo@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://residual.sourceforge.net/
 COMMENT=	Lucas Arts' LUA-based 3D adventure engine
 

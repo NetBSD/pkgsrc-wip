@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/09/29 17:05:57 asau Exp $
+# $NetBSD: Makefile,v 1.6 2012/12/12 10:44:37 thomasklausner Exp $
 #
 
 DISTNAME=		hugo-2.11-preview
@@ -7,7 +7,7 @@ PKGREVISION=		2
 CATEGORIES=		emulators
 MASTER_SITES=		http://www.zeograd.com/download/
 
-MAINTAINER=		dillo@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.zeograd.com/parse.php?src=hugof&path=0,1,
 COMMENT=		PC Engine emulator (with CD support)
 

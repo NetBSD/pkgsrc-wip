@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/09/29 00:50:35 asau Exp $
+# $NetBSD: Makefile,v 1.10 2012/12/12 10:44:37 thomasklausner Exp $
 #
 
 DISTNAME=		git-110
@@ -7,7 +7,7 @@ CATEGORIES=		games
 MASTER_SITES=		http://diden.net/if/git/releases/
 EXTRACT_SUFX=		.zip
 
-MAINTAINER=		dillo@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://diden.net/if/git/
 COMMENT=		Interpreter for Glulx interactive fiction
 

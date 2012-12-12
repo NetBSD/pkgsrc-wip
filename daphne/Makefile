@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/09/28 20:30:44 asau Exp $
+# $NetBSD: Makefile,v 1.14 2012/12/12 10:44:37 thomasklausner Exp $
 #
 
 DISTNAME=		${PKGNAME_NOREV}-src
@@ -7,7 +7,7 @@ CATEGORIES=		emulators
 MASTER_SITES=		http://daphne.rulecity.com/download/
 MASTER_SITES+=		http://daphne.rulecity.com/download/old/
 
-MAINTAINER=		dillo@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.daphne-emu.com/site3/
 COMMENT=		Emulator for Laserdisc arcade games
 
