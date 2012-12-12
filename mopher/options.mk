@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1.1.1 2012/05/12 13:29:06 pebog Exp $
+# $NetBSD: options.mk,v 1.2 2012/12/12 15:30:30 lexort Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.mopher
 PKG_SUPPORTED_OPTIONS=	bdb mysql spf
@@ -7,6 +7,11 @@ PKG_SUGGESTED_OPTIONS=	bdb spf
 .include "../../mk/bsd.options.mk"
 
 PLIST_VARS+=		${PKG_SUPPORTED_OPTIONS}
+
+# The use of db method is selected by config file; multiple methods
+# can be compiled in.  There is a builtin (non-option) memdb, which is
+# not persistent across processes, so no database option is a plausible
+# configuration.
 
 # bdb
 .if !empty(PKG_OPTIONS:Mbdb)
