@@ -1,6 +1,9 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.2 2012/12/12 13:34:11 thomasklausner Exp $
 
 Using this scenario with Aleph One obviates some of the information contained
 in EVIL ReadMe.txt, but useful development history and plot details can still
 be found there.
 
-${PREFIX}/${SCENARIO_BASE}/Evil/EVIL ReadMe.txt
+${PREFIX}/share/doc/marathon-evil/EVIL ReadMe.txt
+===========================================================================
