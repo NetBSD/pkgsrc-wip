@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5003 2012/12/12 13:21:50 thomasklausner Exp $
+# $Id: Makefile,v 1.5004 2012/12/12 15:19:16 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2768,7 +2768,6 @@ SUBDIR+=	raster3d
 SUBDIR+=	ratpoints
 SUBDIR+=	ratproxy
 SUBDIR+=	rawphoto
-SUBDIR+=	razor-qt
 SUBDIR+=	rc.d.Interix
 SUBDIR+=	rc.subr
 SUBDIR+=	rdup
