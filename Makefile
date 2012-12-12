@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5002 2012/12/12 13:19:26 thomasklausner Exp $
+# $Id: Makefile,v 1.5003 2012/12/12 13:21:50 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -604,7 +604,6 @@ SUBDIR+=	firefox-bin
 SUBDIR+=	firefox-wrapper
 SUBDIR+=	firefox3-bin
 SUBDIR+=	firehose
-SUBDIR+=	fish
 SUBDIR+=	flam3-svn
 SUBDIR+=	flasm
 SUBDIR+=	flc
