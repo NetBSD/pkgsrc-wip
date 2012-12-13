@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.63 2012/12/13 08:52:32 imilh Exp $
+# $NetBSD: Makefile,v 1.64 2012/12/13 13:13:02 imilh Exp $
 #
 
-DISTNAME=		pkgin-20121213
+DISTNAME=		pkgin-2012121301
 CATEGORIES=		pkgtools
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=pkgin/}
 
@@ -27,11 +27,14 @@ SUBST_SED.path=		-e "s|/usr/pkg/etc|${PKG_SYSCONFDIR}|g"
 SUBST_SED.path+=	-e "s|/usr/sbin|${PKG_TOOLS_BIN}|g"
 SUBST_SED.path+=	-e "s|/var|${VARBASE}|g"
 SUBST_SED.path+=	-e "s|/usr/pkg|${PREFIX}|g"
+SUBST_SED.path+=	-e "s|!=.*uname -p|=	${MACHINE_ARCH}|g"
 
 GNU_CONFIGURE=		yes
 USE_FEATURES=		nbcompat
 USE_TOOLS+=		nroff
 CFLAGS+=		-g
+
+MAKE_ENV+=		MACHINE_ARCH=${MACHINE_ARCH}
 
 DEPENDS+=		pkg_install>=20110215:../../pkgtools/pkg_install
 
@@ -57,6 +60,7 @@ do-install:
 .	include "../../net/libfetch/buildlink3.mk"
 .endif
 
-.include "../../databases/sqlite3/buildlink3.mk"
 .include "../../archivers/libarchive/buildlink3.mk"
+.include "../../databases/sqlite3/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
