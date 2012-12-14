@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5006 2012/12/12 16:28:21 thomasklausner Exp $
+# $Id: Makefile,v 1.5007 2012/12/14 18:50:26 kristerw Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1973,8 +1973,8 @@ SUBDIR+=	p5-Module-Starter-Plugin-CGIApp
 SUBDIR+=	p5-MongoDB
 SUBDIR+=	p5-NNTPClient
 SUBDIR+=	p5-Net-DBus-GLib
-SUBDIR+=	p5-Net-Delicious
 SUBDIR+=	p5-Net-DNS
+SUBDIR+=	p5-Net-Delicious
 SUBDIR+=	p5-Net-IP-Match-Regexp
 SUBDIR+=	p5-Net-PcapUtils
 SUBDIR+=	p5-Net-SMTP-TLS
@@ -2610,9 +2610,9 @@ SUBDIR+=	py-sdt_metrics
 SUBDIR+=	py-se
 SUBDIR+=	py-selenium
 SUBDIR+=	py-sempy
+SUBDIR+=	py-serial
 SUBDIR+=	py-setupdocs
 SUBDIR+=	py-setuptools_git
-SUBDIR+=	py-serial
 SUBDIR+=	py-sexy
 SUBDIR+=	py-sfepy
 SUBDIR+=	py-shapely
