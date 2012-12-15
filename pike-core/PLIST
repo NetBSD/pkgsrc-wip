@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.5 2009/10/11 10:45:05 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.6 2012/12/15 00:13:02 cheusov Exp $
 bin/pike
-bin/pike76
 pike/${PIKE_VERSION}/bin/hilfe
 pike/${PIKE_VERSION}/bin/pike
 pike/${PIKE_VERSION}/bin/pike.syms
@@ -53,7 +52,6 @@ pike/${PIKE_VERSION}/include/pike/dmalloc.h
 pike/${PIKE_VERSION}/include/pike/docode.h
 pike/${PIKE_VERSION}/include/pike/dynamic_buffer.h
 pike/${PIKE_VERSION}/include/pike/dynamic_load.h
-pike/${PIKE_VERSION}/include/pike/dynamic_module_makefile
 pike/${PIKE_VERSION}/include/pike/encode.h
 pike/${PIKE_VERSION}/include/pike/errors.h
 pike/${PIKE_VERSION}/include/pike/fd_control.h
@@ -331,7 +329,6 @@ pike/${PIKE_VERSION}/lib/modules/Crypto.pmod/Serpent.pmod
 pike/${PIKE_VERSION}/lib/modules/Crypto.pmod/Substitution.pike
 pike/${PIKE_VERSION}/lib/modules/Crypto.pmod/Twofish.pmod
 pike/${PIKE_VERSION}/lib/modules/Crypto.pmod/module.pmod
-pike/${PIKE_VERSION}/lib/modules/Crypto.pmod/randomness.pmod
 pike/${PIKE_VERSION}/lib/modules/Debug.pmod/Subject.pike
 pike/${PIKE_VERSION}/lib/modules/Debug.pmod/Tracer.pike
 pike/${PIKE_VERSION}/lib/modules/Debug.pmod/Wrapper.pike
@@ -360,7 +357,6 @@ pike/${PIKE_VERSION}/lib/modules/Geography.pmod/Countries.pmod
 pike/${PIKE_VERSION}/lib/modules/Geography.pmod/Position.pike
 pike/${PIKE_VERSION}/lib/modules/Geography.pmod/module.pmod
 pike/${PIKE_VERSION}/lib/modules/Getopt.pmod
-pike/${PIKE_VERSION}/lib/modules/Gmp.so
 pike/${PIKE_VERSION}/lib/modules/Gnome.pmod
 pike/${PIKE_VERSION}/lib/modules/Graphics.pmod/Graph.pmod/create_bars.pike
 pike/${PIKE_VERSION}/lib/modules/Graphics.pmod/Graph.pmod/create_graph.pike
@@ -372,7 +368,6 @@ pike/${PIKE_VERSION}/lib/modules/Graphics.pmod/Graph.pmod/polyline.pike
 pike/${PIKE_VERSION}/lib/modules/Int.pmod
 pike/${PIKE_VERSION}/lib/modules/Languages.pmod/PLIS.pmod
 pike/${PIKE_VERSION}/lib/modules/Local.pmod
-pike/${PIKE_VERSION}/lib/modules/Locale.pmod/Charset.pmod
 pike/${PIKE_VERSION}/lib/modules/Locale.pmod/Gettext.pmod
 pike/${PIKE_VERSION}/lib/modules/Locale.pmod/Language.pmod/abstract.pike
 pike/${PIKE_VERSION}/lib/modules/Locale.pmod/Language.pmod/cat.pmod
@@ -411,7 +406,6 @@ pike/${PIKE_VERSION}/lib/modules/Parser.pmod/RCS.pike
 pike/${PIKE_VERSION}/lib/modules/Parser.pmod/SGML.pike
 pike/${PIKE_VERSION}/lib/modules/Parser.pmod/XML.pmod/DOM.pmod
 pike/${PIKE_VERSION}/lib/modules/Parser.pmod/XML.pmod/NSTree.pmod
-pike/${PIKE_VERSION}/lib/modules/Parser.pmod/XML.pmod/Simple.pike
 pike/${PIKE_VERSION}/lib/modules/Parser.pmod/XML.pmod/Tree.pmod
 pike/${PIKE_VERSION}/lib/modules/Parser.pmod/XML.pmod/Validating.pike
 pike/${PIKE_VERSION}/lib/modules/Parser.pmod/_parser.so
@@ -450,7 +444,6 @@ pike/${PIKE_VERSION}/lib/modules/Protocols.pmod/IRC.pmod/Requests.pmod
 pike/${PIKE_VERSION}/lib/modules/Protocols.pmod/IRC.pmod/module.pmod
 pike/${PIKE_VERSION}/lib/modules/Protocols.pmod/Ident.pmod
 pike/${PIKE_VERSION}/lib/modules/Protocols.pmod/LDAP.pmod/client.pike
-pike/${PIKE_VERSION}/lib/modules/Protocols.pmod/LDAP.pmod/ldap_errors.h
 pike/${PIKE_VERSION}/lib/modules/Protocols.pmod/LDAP.pmod/ldap_globals.h
 pike/${PIKE_VERSION}/lib/modules/Protocols.pmod/LDAP.pmod/ldap_privates.pmod
 pike/${PIKE_VERSION}/lib/modules/Protocols.pmod/LDAP.pmod/protocol.pike
@@ -502,7 +495,6 @@ pike/${PIKE_VERSION}/lib/modules/Remote.pmod/remote.h
 pike/${PIKE_VERSION}/lib/modules/SSL.pmod/Cipher.pmod
 pike/${PIKE_VERSION}/lib/modules/SSL.pmod/Constants.pmod
 pike/${PIKE_VERSION}/lib/modules/SSL.pmod/alert.pike
-pike/${PIKE_VERSION}/lib/modules/SSL.pmod/client.pike
 pike/${PIKE_VERSION}/lib/modules/SSL.pmod/connection.pike
 pike/${PIKE_VERSION}/lib/modules/SSL.pmod/context.pike
 pike/${PIKE_VERSION}/lib/modules/SSL.pmod/handshake.pike
@@ -631,7 +623,6 @@ pike/${PIKE_VERSION}/lib/modules/Web.pmod/RDFS.pike
 pike/${PIKE_VERSION}/lib/modules/Web.pmod/RSS.pmod
 pike/${PIKE_VERSION}/lib/modules/Yabu.pmod/module.pmod
 pike/${PIKE_VERSION}/lib/modules/_ADT.so
-pike/${PIKE_VERSION}/lib/modules/_Charset.pmod
 pike/${PIKE_VERSION}/lib/modules/_Image.pmod/Dims.pmod
 pike/${PIKE_VERSION}/lib/modules/_Image.pmod/Fonts.pmod
 pike/${PIKE_VERSION}/lib/modules/_Image.pmod/module.pmod
@@ -641,8 +632,5 @@ pike/${PIKE_VERSION}/lib/modules/_Image_PSD.pmod
 pike/${PIKE_VERSION}/lib/modules/_Image_XCF.pmod
 pike/${PIKE_VERSION}/lib/modules/_Image_XPM.pmod
 pike/${PIKE_VERSION}/lib/modules/___Regexp.so
-pike/${PIKE_VERSION}/lib/modules/____Charset.so
 pike/${PIKE_VERSION}/lib/modules/__builtin.pmod
 pike/${PIKE_VERSION}/lib/modules/__builtin_dirnode.pmod
-pike/${PIKE_VERSION}/lib/modules/spider.so
-pike/${PIKE_VERSION}/man/man1/pike.1
