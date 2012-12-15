@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2012/11/12 16:51:36 othyro Exp $
+# $NetBSD: Makefile,v 1.6 2012/12/15 16:31:52 slitvinov Exp $
 #
 
-DISTNAME=	ncdu-1.8
+DISTNAME=	ncdu-1.9
 CATEGORIES=	filesystems
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ncdu/}
 

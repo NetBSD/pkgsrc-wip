@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2011/12/15 13:45:11 slitvinov Exp $
+$NetBSD: distinfo,v 1.3 2012/12/15 16:31:52 slitvinov Exp $
 
-SHA1 (ncdu-1.8.tar.gz) = 3d98e78cf7035e32333d263d301d12e9b4352598
-RMD160 (ncdu-1.8.tar.gz) = 37ffe863e66cb99c0398f68951296c4f7579c929
-Size (ncdu-1.8.tar.gz) = 114648 bytes
+SHA1 (ncdu-1.9.tar.gz) = 27cb5464b192db8ffdf0a894fe51d29985348eb0
+RMD160 (ncdu-1.9.tar.gz) = b6998faae2a783c70196a3ea3951ba96bfa11a61
+Size (ncdu-1.9.tar.gz) = 124738 bytes
