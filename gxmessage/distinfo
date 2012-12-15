@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2009/10/01 10:37:14 jihbed Exp $
+$NetBSD: distinfo,v 1.5 2012/12/15 12:13:01 othyro Exp $
 
-SHA1 (gxmessage-2.12.4.tar.gz) = d8f8cccb98c27e1ae97af675f62fa286a03cdcbf
-RMD160 (gxmessage-2.12.4.tar.gz) = ee98aecfa678586573938f49e46a200c0332c72a
-Size (gxmessage-2.12.4.tar.gz) = 248034 bytes
+SHA1 (gxmessage-2.20.0.tar.gz) = d74bbc57d3074cd59b53c551572e8f4a98e61f34
+RMD160 (gxmessage-2.20.0.tar.gz) = ea8d6ae7985c929030f040873c8a57c74beab6a6
+Size (gxmessage-2.20.0.tar.gz) = 259406 bytes
