@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/11/09 18:41:09 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/12/15 08:27:24 asau Exp $
 #
 
 DISTNAME=	freefem++-3.19-1
@@ -9,8 +9,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://www.freefem.org/ff++/
 COMMENT=	PDE oriented language using Finite Element Method
 LICENSE=	gnu-lgpl-v2.1
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	bison perl

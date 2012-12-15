@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/11/09 18:30:35 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2012/12/15 08:27:24 asau Exp $
 #
 
 DISTNAME=	pymmlib-1.2.0
@@ -10,8 +10,6 @@ MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://pymmlib.sourceforge.net/
 COMMENT=	Python Macromolecular Library
 LICENSE=	artistic
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c fortran
 PYDISTUTILSPKG=	yes

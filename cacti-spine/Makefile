@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/12/11 18:18:59 ahp-nils Exp $
+# $NetBSD: Makefile,v 1.11 2012/12/15 08:27:24 asau Exp $
 #
 
 VERSION=0.8.8a
@@ -26,7 +26,6 @@ USE_TOOLS+=	autoconf autoheader automake aclocal
 BUILD_DEPENDS+=	automake-[0-9]*:../../devel/automake
 DEPENDS+=	cacti>=0.8.7:../../net/cacti
 
-PKG_DESTDIR_SUPPORT=	user-destdir
 DOCDIR=			share/doc/cacti-spine
 EXAMPLES_DIR=		examples
 EGDIR=			${PREFIX}/${DOCDIR}/${EXAMPLES_DIR}
