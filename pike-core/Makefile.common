@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.11 2012/12/15 00:13:02 cheusov Exp $
+# $NetBSD: Makefile.common,v 1.12 2012/12/15 13:35:23 cheusov Exp $
 # used by wip/pike-Gettext/Makefile
 # used by wip/pike-Gz/Makefile
 # used by wip/pike-Pipe/Makefile
@@ -17,10 +17,9 @@ HOMEPAGE=	http://pike.lysator.liu.se/
 
 PATCHDIR=	${PKGDIR}/../../wip/pike-core/patches
 DISTINFO_FILE=	${PKGDIR}/../../wip/pike-core/distinfo
-PIKEDIR=	${WRKDIR}/${DISTNAME}
-WRKSRC=		${PIKEDIR}/src
 
-PKG_DESTDIR_SUPPORT=	none
+CONFIGURE_DIRS=		src
+BUILD_DIRS=		src
 
 USE_TOOLS+=		bison autoconf
 GNU_CONFIGURE=		yes
@@ -126,7 +125,7 @@ CONFIGURE_ARGS+=	--with-${m:Q}
 
 pre-configure:
 	${MKDIR} -p ${WRKSRC} &&           \
-	cd ${PIKEDIR}/src &&               \
+	cd ${WRKSRC}/src &&               \
 	if ! test -f autoconfig.done; then \
 		./run_autoconfig . ./src ${MODULE_DIRS} && \
 		${TOUCH} autoconfig.done;  \
