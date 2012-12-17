@@ -1,9 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.3 2012/11/11 12:02:53 thomasklausner Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2012/12/17 12:52:12 thomasklausner Exp $
 
 BUILDLINK_TREE+=	rsound
 
 .if !defined(RSOUND_BUILDLINK3_MK)
 RSOUND_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.rsound+=	rsound>=1.1
+BUILDLINK_PKGSRCDIR.rsound?=	../../wip/rsound
 
 pkgbase := rsound
 .include "../../mk/pkg-build-options.mk"
@@ -39,9 +42,6 @@ pkgbase := rsound
 .if !empty(PKG_BUILD_OPTIONS.rsound:Mpulseaudio)
 .include "../../audio/pulseaudio/buildlink3.mk"
 .endif
-
-BUILDLINK_API_DEPENDS.rsound+=	rsound>=1.1
-BUILDLINK_PKGSRCDIR.rsound?=	../../wip/rsound
 .endif	# RSOUND_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-rsound
