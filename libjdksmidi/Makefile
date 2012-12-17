@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2012/12/04 19:25:15 othyro Exp $
+# $NetBSD: Makefile,v 1.4 2012/12/17 14:14:24 othyro Exp $
 #
 
 DISTNAME=	jdksmidi-20121031-1
 PKGNAME=	lib${DISTNAME:S/-1/r1/}
 CATEGORIES=	audio
-MASTER_SITES=	https://github.com/downloads/jdkoftinoff/jdksmidi/
-FETCH_USING=	curl
+MASTER_SITES=	http://dist.jdkoftinoff.com/jdksmidi/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.jdkoftinoff.com/main/Free_Projects/C++_MIDI_Library/
