@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2012/10/07 16:23:15 asau Exp $
+# $NetBSD: Makefile,v 1.5 2012/12/17 01:06:49 khorben Exp $
 #
 
 DISTNAME=	sofia-sip-1.12.11
-CATEGORIES=	net
+CATEGORIES=	devel net comms
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sofia-sip/}
 
 MAINTAINER=	khorben@defora.org
