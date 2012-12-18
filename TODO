@@ -47,7 +47,7 @@ Suggested package updates
 	o grisbi-0.8.4
 	o grsync-1.2.0
 	o gtkaml-0.4.3
-	o gtypist-2.9.1
+	o gtypist-2.9.2
 	o guichan-0.8.1
 	o guitone-0.9
 	o hitori-0.4.0
@@ -73,7 +73,7 @@ Suggested package updates
 	o libpthread-stubs-0.3
 	o libuuid-1.41.14
 	o lirc-0.8.6
-	o lives-1.6.4
+	o lives-1.8.0
 	o lucene-3.6.1
 	o man-1.6f
 	o mcabber-0.10.2
