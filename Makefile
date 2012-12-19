@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5008 2012/12/17 22:18:15 othyro Exp $
+# $Id: Makefile,v 1.5009 2012/12/19 15:48:07 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2918,6 +2918,7 @@ SUBDIR+=	sm-change_ldappass
 SUBDIR+=	sm-change_qldforward
 SUBDIR+=	sm-compatibility
 SUBDIR+=	smc
+SUBDIR+=	smplayer
 SUBDIR+=	smproxy
 SUBDIR+=	smstools
 SUBDIR+=	smtp-gated
