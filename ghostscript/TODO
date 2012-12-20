@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7 2012/10/10 05:27:07 makoto Exp $
+$NetBSD: TODO,v 1.8 2012/12/20 07:37:28 makoto Exp $
 - Report to upstream the patches
 
 - Check X11_TYPE=native/modular and 6.0_RC2 and 5.1.2
@@ -20,6 +20,7 @@ $NetBSD: TODO,v 1.7 2012/10/10 05:27:07 makoto Exp $
 - Build on DragonFly BSD is not tested
   for the patch-openjpeg_libopenjpeg_opj_malloc_h
 
+-----------------------------------------
 - To fix a problem with one particular combination:
 
 (1) the option at 
@@ -30,7 +31,7 @@ PKG_OPTIONS.gcr_type= ipa
 (2) and only if gs invoked from dvipdfmx via following sequence:
     ps2pdf
     ps2pdf14
-    ps2pdfwrt
+    ps2pdfwr
     gs -sDEVICE=pdfwrite
 
 gs failed to find the font Ryumin-Light-EUC-H
@@ -48,3 +49,11 @@ can be processed successfully even if
 following line in /etc/mk.conf mentioned in (1)
 PKG_OPTIONS.gcr_type= ipa
 is set.
+-----------------------------------------
+Above problem is turned out to be related -dSAFER
+option included in ps2pdfwr script. The similar thing
+was reported as following PR.
+Bug 691780 - -dSAFER seems to prevent loading of a ttf font 
+  http://bugs.ghostscript.com/show_bug.cgi?id=691780
+-----------------------------------------
+Interim fix is to eliminate -dSAFER from ps2pdfwr script.
