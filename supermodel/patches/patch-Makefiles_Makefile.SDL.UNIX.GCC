@@ -1,10 +1,36 @@
-$NetBSD: patch-Makefiles_Makefile.SDL.UNIX.GCC,v 1.1 2012/12/12 09:32:10 thomasklausner Exp $
+$NetBSD: patch-Makefiles_Makefile.SDL.UNIX.GCC,v 1.2 2012/12/20 14:30:46 othyro Exp $
 
-Add missing dependencies.
+Add missing dependencies, and fix CFLAGS and LDFLAGS for GL and GLU.
 
 --- Makefiles/Makefile.SDL.UNIX.GCC.orig	2012-01-11 16:47:40.000000000 +0000
 +++ Makefiles/Makefile.SDL.UNIX.GCC
-@@ -138,7 +138,7 @@ $(OBJ_DIR)/m68kmake: Src/CPU/68K/Musashi
+@@ -45,6 +45,12 @@ ENABLE_DEBUGGER = no
+ ###############################################################################
+ 
+ #
++# GL, GLU
++#
++GLU_CFLAGS = `pkg-config gl glu --cflags`
++GLU_LIBFLAGS = `pkg-config gl glu --libs`
++
++#
+ # SDL
+ #
+ SDL_CFLAGS = `sdl-config --cflags`
+@@ -67,10 +73,10 @@ OUTFILE = $(BIN_DIR)/Supermodel
+ 
+ CC = gcc
+ LD = gcc
+-COMPILER_FLAGS = $(SDL_CFLAGS) -ISrc/ -ISrc/OSD/SDL/ -ISrc/Pkgs/ -c -Wall -O3
++COMPILER_FLAGS = $(GLU_CFLAGS) $(SDL_CFLAGS) -ISrc/ -ISrc/OSD/SDL/ -ISrc/Pkgs/ -c -Wall -O3
+ CFLAGS = $(COMPILER_FLAGS)
+ CPPFLAGS = $(COMPILER_FLAGS)
+-LFLAGS = -o $(OUTFILE) $(SDL_LIBFLAGS) -lGL -lGLU -lz -lm -lstdc++
++LFLAGS = -o $(OUTFILE) $(GLU_LIBFLAGS) $(SDL_LIBFLAGS) -lGL -lGLU -lz -lm -lstdc++
+ 
+ #
+ # Build options...
+@@ -138,7 +144,7 @@ $(OBJ_DIR)/m68kmake: Src/CPU/68K/Musashi
  	$(CC) $< $(CFLAGS) -o $(OBJ_DIR)/m68kmake.o
  	$(LD) $(OBJ_DIR)/m68kmake.o -o $(OBJ_DIR)/m68kmake
  	
