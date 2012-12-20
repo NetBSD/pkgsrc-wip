@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2012/12/09 21:29:48 othyro Exp $
+# $NetBSD: Makefile,v 1.5 2012/12/20 14:28:02 othyro Exp $
 #
 
 DISTNAME=	wmc2d-2011-04-29-17
 PKGNAME=	wmc2d-2.05
+PKGREVISION=	1
 CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wmc2d/}
 EXTRACT_SUFX=	.tar.bz2
@@ -27,5 +28,5 @@ SUBST_SED.paths+=	-e "s|share/man|${PKGMANDIR}|1"
 .include "../../x11/xcb-util-wm/buildlink3.mk"
 .include "../../x11/xcb-util036/buildlink3.mk"
 .include "../../x11/xcb-util/buildlink3.mk"
-.include "../../x11/libxcb/buildlink3.mk"
+BUILD_DEPENDS+=		libxcb-[0-9]*:../../x11/libxcb
 .include "../../mk/bsd.pkg.mk"
