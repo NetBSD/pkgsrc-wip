@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2012/11/03 14:32:30 othyro Exp $
+# $NetBSD: Makefile,v 1.5 2012/12/20 14:33:06 othyro Exp $
 #
 
 DISTNAME=	pcsxr-1.9.92
+PKGREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	http://pcsxr.codeplex.com/downloads/get/140521
 EXTRACT_SUFX=	.tar.bz2
@@ -29,6 +30,7 @@ pre-configure:
 			cd ${WRKSRC} && ./autogen.sh
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
+BUILD_DEPENDS+=		libXcursor-[0-9]*:../../x11/libXcursor
 .include "../../x11/libXv/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
 .include "../../x11/videoproto/buildlink3.mk"
