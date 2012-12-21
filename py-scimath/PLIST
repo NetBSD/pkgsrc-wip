@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/01/24 21:31:47 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/12/21 18:45:36 jihbed Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -74,9 +74,21 @@ ${PYSITELIB}/scimath/units/data/unit_ranges.txt
 ${PYSITELIB}/scimath/units/density.py
 ${PYSITELIB}/scimath/units/density.pyc
 ${PYSITELIB}/scimath/units/density.pyo
+${PYSITELIB}/scimath/units/dimensionless.py
+${PYSITELIB}/scimath/units/dimensionless.pyc
+${PYSITELIB}/scimath/units/dimensionless.pyo
+${PYSITELIB}/scimath/units/electromagnetism.py
+${PYSITELIB}/scimath/units/electromagnetism.pyc
+${PYSITELIB}/scimath/units/electromagnetism.pyo
 ${PYSITELIB}/scimath/units/energy.py
 ${PYSITELIB}/scimath/units/energy.pyc
 ${PYSITELIB}/scimath/units/energy.pyo
+${PYSITELIB}/scimath/units/example.py
+${PYSITELIB}/scimath/units/example.pyc
+${PYSITELIB}/scimath/units/example.pyo
+${PYSITELIB}/scimath/units/example_units.py
+${PYSITELIB}/scimath/units/example_units.pyc
+${PYSITELIB}/scimath/units/example_units.pyo
 ${PYSITELIB}/scimath/units/family_name_trait.py
 ${PYSITELIB}/scimath/units/family_name_trait.pyc
 ${PYSITELIB}/scimath/units/family_name_trait.pyo
@@ -188,6 +200,9 @@ ${PYSITELIB}/scimath/units/temperature.pyo
 ${PYSITELIB}/scimath/units/tests/__init__.py
 ${PYSITELIB}/scimath/units/tests/__init__.pyc
 ${PYSITELIB}/scimath/units/tests/__init__.pyo
+${PYSITELIB}/scimath/units/tests/available_imports_test.py
+${PYSITELIB}/scimath/units/tests/available_imports_test.pyc
+${PYSITELIB}/scimath/units/tests/available_imports_test.pyo
 ${PYSITELIB}/scimath/units/tests/function_signature_test_case.py
 ${PYSITELIB}/scimath/units/tests/function_signature_test_case.pyc
 ${PYSITELIB}/scimath/units/tests/function_signature_test_case.pyo
@@ -266,3 +281,9 @@ ${PYSITELIB}/scimath/units/variable.pyo
 ${PYSITELIB}/scimath/units/volume.py
 ${PYSITELIB}/scimath/units/volume.pyc
 ${PYSITELIB}/scimath/units/volume.pyo
+${PYSITELIB}/scimath/units/wx/__init__.py
+${PYSITELIB}/scimath/units/wx/__init__.pyc
+${PYSITELIB}/scimath/units/wx/__init__.pyo
+${PYSITELIB}/scimath/units/wx/quantity_editor.py
+${PYSITELIB}/scimath/units/wx/quantity_editor.pyc
+${PYSITELIB}/scimath/units/wx/quantity_editor.pyo
