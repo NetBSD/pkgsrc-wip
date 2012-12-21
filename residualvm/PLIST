@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1 2012/12/21 23:56:29 thomasklausner Exp $
+bin/residualvm
+man/man6/residualvm.6
+share/doc/residualvm/AUTHORS
+share/doc/residualvm/COPYING
+share/doc/residualvm/COPYING.BSD
+share/doc/residualvm/COPYING.FREEFONT
+share/doc/residualvm/COPYING.LGPL
+share/doc/residualvm/COPYRIGHT
+share/doc/residualvm/KNOWN_BUGS
+share/doc/residualvm/NEWS
+share/doc/residualvm/README
+share/pixmaps/residualvm.xpm
+share/residualvm/modern.zip
+share/residualvm/residualvm-grim-patch.lab
