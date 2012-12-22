@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5012 2012/12/22 03:46:32 thomasklausner Exp $
+# $Id: Makefile,v 1.5013 2012/12/22 04:03:33 khorben Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -400,6 +400,7 @@ SUBDIR+=	dee
 SUBDIR+=	deforaos-accessories
 SUBDIR+=	deforaos-asm
 SUBDIR+=	deforaos-browser
+SUBDIR+=	deforaos-camera
 SUBDIR+=	deforaos-configure
 SUBDIR+=	deforaos-cpp
 SUBDIR+=	deforaos-desktop
