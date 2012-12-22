@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2012/11/16 23:54:02 noud4 Exp $
+# $NetBSD: Makefile,v 1.11 2012/12/22 19:13:06 ryo-on Exp $
 #
 
 DISTNAME=	pyflakes-0.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/^py//}
-PKGREVISION=	1	
+PKGREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	http://pypi.python.org/packages/source/p/pyflakes/
 
@@ -11,8 +11,6 @@ MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	https://launchpad.net/pyflakes
 COMMENT=	Passive checker of Python programs
 LICENSE=	mit
-
-WRKSRC=		${WRKDIR}/pyflakes-0.5.0
 
 USE_LANGUAGES=	# none
 
