@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5011 2012/12/21 23:58:43 thomasklausner Exp $
+# $Id: Makefile,v 1.5012 2012/12/22 03:46:32 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2787,7 +2787,6 @@ SUBDIR+=	rekall
 SUBDIR+=	relaydb
 SUBDIR+=	remctl
 SUBDIR+=	resid-builder
-SUBDIR+=	residual-nightly
 SUBDIR+=	residualvm
 SUBDIR+=	resin
 SUBDIR+=	retroarch

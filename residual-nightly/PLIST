@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2009/10/18 09:36:49 thomasklausner Exp $
-bin/residual
-share/doc/residual/AUTHORS
-share/doc/residual/COPYING.GPL
-share/doc/residual/COPYING.LGPL
-share/doc/residual/NEWS
-share/doc/residual/README
-share/pixmaps/residual.xpm
-share/residual/modern.zip
