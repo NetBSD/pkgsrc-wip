@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5013 2012/12/22 04:03:33 khorben Exp $
+# $Id: Makefile,v 1.5014 2012/12/23 14:01:40 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -3102,6 +3102,7 @@ SUBDIR+=	tmw
 SUBDIR+=	tnt
 SUBDIR+=	tome
 SUBDIR+=	tome2
+SUBDIR+=	toppler
 SUBDIR+=	tops-bin
 SUBDIR+=	tor-dev
 SUBDIR+=	torcs
