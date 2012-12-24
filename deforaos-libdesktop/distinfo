@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2012/10/14 19:56:32 khorben Exp $
+$NetBSD: distinfo,v 1.9 2012/12/24 03:18:05 khorben Exp $
 
-SHA1 (libDesktop-0.0.8.tar.gz) = 4328ddd7be53b2271f4ace96ac51b1fa92fe8074
-RMD160 (libDesktop-0.0.8.tar.gz) = a4fc3eca33310f3144e6e8e23b345ed632b14146
-Size (libDesktop-0.0.8.tar.gz) = 26524 bytes
+SHA1 (libDesktop-0.0.9.tar.gz) = 525f9666d2848418c6dec25a0abccca0e807bff6
+RMD160 (libDesktop-0.0.9.tar.gz) = 5d48f629ba7796b22c67509857d6039c4e7150d0
+Size (libDesktop-0.0.9.tar.gz) = 26474 bytes

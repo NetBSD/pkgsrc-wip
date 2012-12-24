@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.12 2012/11/14 00:16:04 othyro Exp $
+# $NetBSD: Makefile,v 1.13 2012/12/24 03:18:05 khorben Exp $
+#
 
-DISTNAME=	libDesktop-0.0.8
-PKGNAME=	deforaos-libdesktop-0.0.8
+DISTNAME=	libDesktop-0.0.9
+PKGNAME=	deforaos-libdesktop-0.0.9
 CATEGORIES=	x11
-MASTER_SITES=	http://www.defora.org/os/download/download/3699/
+MASTER_SITES=	http://www.defora.org/os/download/download/4011/
 
 MAINTAINER=	khorben@defora.org
 HOMEPAGE=	http://www.defora.org/
