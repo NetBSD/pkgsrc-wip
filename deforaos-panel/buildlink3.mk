@@ -1,4 +1,5 @@
-# $NetBSD: buildlink3.mk,v 1.2 2012/01/09 16:11:53 khorben Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2012/12/24 03:44:13 khorben Exp $
+#
 
 BUILDLINK_TREE+=	deforaos-panel
 
