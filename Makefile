@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5014 2012/12/23 14:01:40 thomasklausner Exp $
+# $Id: Makefile,v 1.5015 2012/12/24 03:21:03 khorben Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -314,7 +314,6 @@ SUBDIR+=	classic-mac-font-pack
 SUBDIR+=	claws-mail-fancy
 SUBDIR+=	clfswm
 SUBDIR+=	clhep
-SUBDIR+=	clipit
 SUBDIR+=	clips
 SUBDIR+=	clisp
 SUBDIR+=	clisp-asdf
