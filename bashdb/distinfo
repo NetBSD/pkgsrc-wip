@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/09/13 17:34:14 splitscreen Exp $
+$NetBSD: distinfo,v 1.2 2012/12/25 20:42:51 slitvinov Exp $
 
-SHA1 (bashdb-3.1-0.06.tar.gz) = 8074475b44d7e27b3e38e6a68cf79d07f72d1138
-RMD160 (bashdb-3.1-0.06.tar.gz) = 2b99e2e9d1000458366406886fd279ceb105f5ad
-Size (bashdb-3.1-0.06.tar.gz) = 620020 bytes
+SHA1 (bashdb-4.2-0.8.tar.gz) = c2640aa3a35037d08fcd19e8b33002984a3f477c
+RMD160 (bashdb-4.2-0.8.tar.gz) = b96c72adfc19505823719c60a5d13f1c819c57d0
+Size (bashdb-4.2-0.8.tar.gz) = 745064 bytes

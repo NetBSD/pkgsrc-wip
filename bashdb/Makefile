@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.8 2012/09/24 17:14:26 asau Exp $
+# $NetBSD: Makefile,v 1.9 2012/12/25 20:42:51 slitvinov Exp $
 #
 
-DISTNAME=		bashdb-3.1-0.06
-PKGNAME=		bashdb-3.1
+DISTNAME=		bashdb-4.2-0.8
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=bashdb/}
 
 MAINTAINER=		splitscreen@users.sourceforge.net
-HOMEPAGE=		http://sourceforge.net/projects/bashdb/
+HOMEPAGE=		http://bashdb.sourceforge.net
 COMMENT=		The Bash debugger project
 LICENSE=		gnu-gpl-v2
 
@@ -17,8 +16,9 @@ USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
-USE_LANGUAGES=		c c++ fortran77
+USE_LANGUAGES=		c c++
 
 INFO_FILES=		yes
+TEST_TARGET=		check
 
 .include "../../mk/bsd.pkg.mk"
