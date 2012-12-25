@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/11/23 22:44:43 othyro Exp $
+# $NetBSD: Makefile,v 1.5 2012/12/25 09:44:08 ryo-on Exp $
 #
 
 DISTNAME=	fuse-google-drive-0
@@ -27,7 +27,7 @@ pre-configure:
 
 .include "../../mk/fuse.buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../wip/json-c/buildlink3.mk"
+.include "../../textproc/json-c/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
