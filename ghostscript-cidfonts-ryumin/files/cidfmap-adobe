@@ -1,5 +1,5 @@
 %!
-% $Id: cidfmap-adobe,v 1.2 2011/03/30 12:49:24 makoto Exp $
+% $Id: cidfmap-adobe,v 1.3 2012/12/25 08:55:31 makoto Exp $
 % This is a sample map file for CIDFont category.
 
 %
@@ -26,6 +26,7 @@
 %   /ShinGo-Bold   /HeiseiKakuGo-W5 ;
 %   /Ryumin-Medium << /FileType /TrueType /Path (H:/AuxFiles/Fonts/BATANG.TTC) /SubfontID 3 /CSI [(Japan1) 2] >> ;
 %
+/Ryumin-Light		/WadaMin-Regular
 /Ryumin-Light-H		/WadaMin-Regular
 /Ryumin-Light-EUC-H	/WadaMin-Regular
 /GothicBBB-Medium	/WadaMin-Bold
