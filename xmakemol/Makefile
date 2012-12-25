@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2012/10/07 20:11:10 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/12/25 18:19:27 noud4 Exp $
 #
 
 DISTNAME=	xmakemol-5.16
+PKGREVISION=	1
 CATEGORIES=	biology
 MASTER_SITES=	http://savannah.nongnu.org/download/xmakemol/
 
@@ -31,5 +32,5 @@ post-install:
 .include "../../x11/libXi/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
-.include "../../x11/openmotif/buildlink3.mk"
+.include "../../x11/motif/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2012/09/28 23:21:47 asau Exp $
+# $NetBSD: Makefile,v 1.14 2012/12/25 18:19:27 noud4 Exp $
 #
 
 DISTNAME=		fbida-2.08
+PKGREVISION=		1
 CATEGORIES=		graphics
 MASTER_SITES=		http://www.kraxel.org/releases/fbida/
 
@@ -22,5 +23,5 @@ USE_TOOLS+=		gmake perl
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../mk/giflib.buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
-.include "../../x11/openmotif/buildlink3.mk"
+.include "../../x11/motif/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
