@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5018 2012/12/26 16:41:42 othyro Exp $
+# $Id: Makefile,v 1.5019 2012/12/26 17:24:30 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2452,6 +2452,7 @@ SUBDIR+=	py-loggly
 SUBDIR+=	py-logilab-database
 SUBDIR+=	py-logilab-mtconverter
 SUBDIR+=	py-logilab-pigg
+SUBDIR+=	py-logtools
 SUBDIR+=	py-louie
 SUBDIR+=	py-lxmlproc
 SUBDIR+=	py-magic
