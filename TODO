@@ -5,7 +5,7 @@ Suggested package updates
 	o atlas-3.10.0
 	o backintime-1.0.6
 	o cairo-java-1.0.8
-	o calligra-2.5.3
+	o calligra-2.5.4
 	o ccrypt-1.10
 	o cgal-4.0
 	o chora-2.0.1
@@ -108,6 +108,7 @@ Suggested package updates
 	o rezound-0.12.3beta
 	o rosegarden-current-1.4.0
 	o rsyslog6-6.3.6
+	o rygel-0.16.4
 	o samhain-3.0.5
 	o scantailor-0.9.11.1
 	o sflphone-0.7.2
