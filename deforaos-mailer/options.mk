@@ -1,4 +1,5 @@
-# $NetBSD: options.mk,v 1.1 2011/06/06 00:52:22 khorben Exp $
+# $NetBSD: options.mk,v 1.2 2012/12/26 17:02:47 khorben Exp $
+#
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.deforaos-mailer
 PKG_SUPPORTED_OPTIONS=	embedded
