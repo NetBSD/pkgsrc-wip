@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/12/25 23:40:19 leot1990 Exp $
+# $NetBSD: Makefile,v 1.2 2012/12/26 18:58:02 asau Exp $
 #
 
 DISTNAME=	vimprobable2_1.2.0
@@ -11,8 +11,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.vimprobable.org/
 COMMENT=	WebKit based web browser that behaves like Vimperator
 LICENSE=	mit
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gmake perl pkg-config
 WRKSRC=		${WRKDIR}/vimprobable2
