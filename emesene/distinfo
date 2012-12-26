@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2012/12/26 16:40:34 othyro Exp $
+
+SHA1 (v2.12.9.tar.gz) = b6ef053e00262bf6dc9d8bf5a9091eb3ff9256ed
+RMD160 (v2.12.9.tar.gz) = b7cc20d9ef45ef7773abe4aea38337bdc992ddc7
+Size (v2.12.9.tar.gz) = 11990963 bytes
+SHA1 (patch-osx_Uninstall.command) = 77b6b0025c7aa41b57786f51beeefe874f76dead
