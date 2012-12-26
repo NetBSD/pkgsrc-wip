@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2012/11/13 16:45:34 othyro Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/12/26 14:02:01 othyro Exp $
+include/hawklib.h
 include/nl.h
 lib/NL.so
 lib/NL.so.1
