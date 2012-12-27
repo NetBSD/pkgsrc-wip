@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2009/02/15 13:38:59 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.10 2012/12/27 06:15:04 othyro Exp $
 #
 
 DISTNAME=	tr64_oglv078_src
@@ -15,8 +15,7 @@ COMMENT=	OpenGL Video plugin for mupen64 emulator
 CPPFLAGS+=	-fPIC
 LIBS+=		${PTHREAD_LDFLAGS}
 
-pre-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/mupen64-base/plugins
+INSTALLATION_DIRS+=	share/mupen64-base/plugins
 
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../graphics/Mesa/buildlink3.mk"
