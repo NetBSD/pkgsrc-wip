@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2005/09/28 06:41:31 rillig Exp $
+$NetBSD: distinfo,v 1.5 2012/12/27 06:04:19 othyro Exp $
 
 SHA1 (hack_azi_rsp_hle.tar.bz2) = 9ba4a945c1b13d6a239bdc1d81f0c7fd92742d9e
 RMD160 (hack_azi_rsp_hle.tar.bz2) = 284cb9ffe4157d580d1c9924cbf40ea34bfee752
 Size (hack_azi_rsp_hle.tar.bz2) = 38268 bytes
-SHA1 (patch-aa) = 297274f0a55faaea5121afc3c1beef02c01b30b1
+SHA1 (patch-aa) = 994626a54646de86df843f89e9213012e39a24f0

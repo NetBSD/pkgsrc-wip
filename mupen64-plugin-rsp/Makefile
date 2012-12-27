@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2009/02/15 13:39:31 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.11 2012/12/27 06:04:19 othyro Exp $
 #
 
 DISTNAME=	hack_azi_rsp_hle
@@ -16,6 +16,8 @@ BUILD_DEPENDS+=	mupen64-base-[0-9]*:../../wip/mupen64-base
 
 USE_LANGUAGES=	c c++
 CPPFLAGS+=	-fPIC
+
+INSTALLATION_DIRS+=	share/mupen64-base/plugins
 
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../graphics/Mesa/buildlink3.mk"

@@ -1,7 +1,9 @@
-$NetBSD: patch-aa,v 1.3 2004/07/13 23:03:33 xtraeme Exp $
+$NetBSD: patch-aa,v 1.4 2012/12/27 06:04:19 othyro Exp $
 
---- Makefile.orig	2004-07-14 00:53:59.000000000 +0200
-+++ Makefile	2004-07-14 00:55:53.000000000 +0200
+Fix CXXFLAGS, LDFLAGS, and install stage.
+
+--- Makefile.orig	2004-07-03 16:52:25.000000000 +0000
++++ Makefile
 @@ -1,23 +1,24 @@
 -CC = gcc
 -CFLAGS = -DUSE_GTK `gtk-config --cflags` -O3 -mcpu=athlon \
@@ -33,7 +35,7 @@ $NetBSD: patch-aa,v 1.3 2004/07/13 23:03:33 xtraeme Exp $
 -	$(warning please copy $(TARGET) in the plugins/ folder of the emulator)
 +install:
 +	$(BSD_INSTALL_DATA) mupen64_hle_rsp_azimer.so \
-+		$(PREFIX)/share/mupen64-base/plugins
++		${DESTDIR}$(PREFIX)/share/mupen64-base/plugins
  
  #.o: .c
  #	$(CC) $(CFLAGS) -o $@ $<
