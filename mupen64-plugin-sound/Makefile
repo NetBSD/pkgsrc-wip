@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2009/02/15 13:39:31 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.13 2012/12/27 06:09:33 othyro Exp $
 #
 
 DISTNAME=	mupen64_sound
@@ -21,8 +21,7 @@ SUBST_FILES.dsp=    main.c
 SUBST_SED.dsp=	    -e "s,/dev/dsp,${DEVOSSAUDIO},g"
 SUBST_MESSAGE.dsp=  Fixing harcoded audio device.
 
-pre-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/mupen64-base/plugins
+INSTALLATION_DIRS+=	share/mupen64-base/plugins
 
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"

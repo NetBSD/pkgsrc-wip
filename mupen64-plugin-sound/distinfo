@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.3 2005/09/28 06:41:31 rillig Exp $
+$NetBSD: distinfo,v 1.4 2012/12/27 06:09:33 othyro Exp $
 
 SHA1 (mupen64_sound.tar.bz2) = 45c8f9105fdee26dc172af1fdb8eb3182c861833
 RMD160 (mupen64_sound.tar.bz2) = b5c1e0d0180e6759ecfd0df679944395792523ea
 Size (mupen64_sound.tar.bz2) = 4646 bytes
-SHA1 (patch-aa) = 7f2fee5387767e10fef0cea864b327b53b58cfdd
-SHA1 (patch-ab) = 21eeb15929118e9eb9fc1cfe924386b916dc804d
+SHA1 (patch-aa) = 9d5bf5623e21348d6c8c111ae3ce036dab8e3e4f
+SHA1 (patch-ab) = 8bfa37a6e32e0ad496cc908b4e53a5ff350443ca
