@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2012/10/03 16:02:56 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/12/27 21:49:31 thomasklausner Exp $
 #
 
 DISTNAME=		labelnation-1.212
 CATEGORIES=		misc
 MASTER_SITES=		http://www.red-bean.com/labelnation/
+
 MAINTAINER=		solevis@solevis.net
 HOMEPAGE=		http://www.red-bean.com/labelnation/
 COMMENT=		Command-line label, business card printing program
