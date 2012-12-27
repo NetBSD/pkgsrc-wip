@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2012/09/24 17:14:43 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/12/27 18:28:46 ryo-on Exp $
 #
 
-DISTNAME=	bwping-1.3
+DISTNAME=	bwping-1.7
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bwping/}
 
