@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2012/09/29 00:50:40 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/12/27 10:13:22 ryo-on Exp $
 #
 
-DISTNAME=	groovy-binary-1.8.2
+DISTNAME=	groovy-binary-2.0.6
 PKGNAME=	${DISTNAME:S/binary-//}
 CATEGORIES=	lang
 MASTER_SITES=	http://dist.groovy.codehaus.org/distributions/
