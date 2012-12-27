@@ -1,22 +1,25 @@
-# $NetBSD: Makefile,v 1.5 2012/11/25 23:32:28 othyro Exp $
+# $NetBSD: Makefile,v 1.6 2012/12/27 12:29:16 othyro Exp $
 #
 
-DISTNAME=		netx-${VERSION}
-CATEGORIES=		sysutils
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=jnlp/}
-EXTRACT_SUFX=		.jar
-VERSION=		0.5
+DISTNAME=	netx-${VERSION}
+CATEGORIES=	sysutils
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=jnlp/}
+EXTRACT_SUFX=	.jar
+VERSION=	0.5
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://jnlp.sourceforge.net/
-COMMENT=		Free JNLP implementation
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://jnlp.sourceforge.net/netx/
+COMMENT=	Free JNLP implementation
 
-NO_BUILD=#defined
+NO_BUILD=	yes
 
 JAVA_APP_TARGETS=	jnlp
 JAVA_APP_BIN.jnlp=	netx
 JAVA_APP_MAIN.jnlp=	netx.jnlp.runtime.Boot13
 JAVA_APP_CLASSPATH.jnlp=	${JAR_PREFIX}/netx-${VERSION}.jar
+JAVA_APP_PATH=		${DESTDIR}${PREFIX}/bin
+
+INSTALLATION_DIRS+=	bin share/classpath
 
 do-extract:
 
