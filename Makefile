@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5020 2012/12/27 04:34:51 othyro Exp $
+# $Id: Makefile,v 1.5021 2012/12/27 04:36:06 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -820,6 +820,7 @@ SUBDIR+=	gtkfontsel
 SUBDIR+=	gtkglextmm
 SUBDIR+=	gtkglk
 SUBDIR+=	gtkhotkey
+SUBDIR+=	gtkmm3
 SUBDIR+=	gtksourcecompletion
 SUBDIR+=	gts
 SUBDIR+=	gtuxnes
