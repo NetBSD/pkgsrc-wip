@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5022 2012/12/27 05:44:02 othyro Exp $
+# $Id: Makefile,v 1.5023 2012/12/27 05:50:00 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1500,7 +1500,6 @@ SUBDIR+=	lsyncd
 SUBDIR+=	ltrace
 SUBDIR+=	lua-BitOp
 SUBDIR+=	lua-pgsql
-SUBDIR+=	luacheia
 SUBDIR+=	luaposix
 SUBDIR+=	luasocket
 SUBDIR+=	lucene
