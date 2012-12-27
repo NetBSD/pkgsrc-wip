@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2012/12/27 04:35:33 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2012/12/27 05:25:31 othyro Exp $
 #
 
-DISTNAME=	gtkmm-3.0.1
+DISTNAME=	gtkmm-3.4.2
 PKGNAME=	${DISTNAME:S/gtkmm/gtkmm3/1}
 CATEGORIES=	x11
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtkmm/3.0/}
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtkmm/3.4/}
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gtkmm.org/
