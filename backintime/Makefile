@@ -1,17 +1,17 @@
-# $NetBSD: Makefile,v 1.8 2012/11/13 20:09:29 othyro Exp $
+# $NetBSD: Makefile,v 1.9 2012/12/27 19:52:23 ryo-on Exp $
 #
 
-DISTNAME=	backintime-0.9.2_src
+DISTNAME=	backintime-1.0.8_src
 PKGNAME=	${DISTNAME:S/_src//}
-PKGREVISION=	2
 CATEGORIES=	sysutils
 MASTER_SITES=	http://www.le-web.org/download/backintime/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.le-web.org/back-in-time/
+HOMEPAGE=	http://http://backintime.le-web.org/
 COMMENT=	Simple backup system for the GNOME desktop
 
 DEPENDS+=	${PYPKGPREFIX}-gnome2-[0-9]*:../../x11/py-gnome2
+DEPENDS+=	${PYPKGPREFIX}-notify-[0-9]*:../../sysutils/py-notify
 DEPENDS+=	rsync-[0-9]*:../../net/rsync
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
@@ -21,24 +21,23 @@ USE_LANGUAGES=	# none
 USE_TOOLS=	msgfmt
 
 SUBST_CLASSES+=		path
-SUBST_FILES.path=	backintime
-SUBST_FILES.path+=	backintime-gnome
-SUBST_FILES.path+=	config.py
-SUBST_FILES.path+=	docbook/C/backintime-C.omf
-SUBST_FILES.path+=	install-common.sh
-SUBST_FILES.path+=	install-gnome.sh
-SUBST_SED.path=		-e "s,/usr,${DESTDIR}${PREFIX},"
-SUBST_SED.path+=	-e "s,--mode=,-m ,"
-SUBST_SED.path+=	-e "s,share/man/man1,${PKGMANDIR}/man1,"
-SUBST_SED.path+=	-e "s,python ,${PYTHONBIN} ,"
-SUBST_STAGE.path=	post-extract
+SUBST_STAGE.path=	pre-configure
 SUBST_MESSAGE.path=	Fixing installation path.
+SUBST_FILES.path+=	common/backintime
+SUBST_FILES.path+=	common/configure
+SUBST_FILES.path+=	common/Makefile.template
+SUBST_FILES.path+=	gnome/Makefile.template
+SUBST_FILES.path+=	gnome/app.py
+SUBST_FILES.path+=	gnome/backintime-gnome
+SUBST_FILES.path+=	gnome/docbook/C/backintime-C.omf
+SUBST_VARS.path+=	PREFIX PKGMANDIR
+SUBST_SED.path+=	-e "s,--mode=,-m ,"
+SUBST_SED.path+=	-e "s,python,${PYTHONBIN},"
 
-do-build:
+CONFIGURE_DIRS=	common gnome
+HAS_CONFIGURE=	yes
 
-do-install:
-	cd ${WRKSRC} && ${SH} install-common.sh
-	cd ${WRKSRC} && ${SH} install-gnome.sh
+BUILD_DIRS=	common gnome
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../lang/python/application.mk"
