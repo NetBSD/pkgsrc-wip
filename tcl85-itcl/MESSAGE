@@ -1,7 +1,7 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2012/09/29 02:11:01 othyro Exp $
+$NetBSD: MESSAGE,v 1.2 2012/12/28 15:27:57 othyro Exp $
 
 The class(n) man page has been moved to itcl-class(n) as to not conflict
-with wip/tcl-tclOO, on which this package depends.
+with wip/tcl-tclOO.
 
 ===========================================================================
