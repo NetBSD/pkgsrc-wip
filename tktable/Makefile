@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/31 11:20:45 othyro Exp $
+# $NetBSD: Makefile,v 1.6 2012/12/28 15:17:49 othyro Exp $
 #
 
 DISTNAME=	Tktable2.10
@@ -10,7 +10,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tktable/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://tktable.sourceforge.net/
 COMMENT=	Full-featured 2D table widget for Tk
-#LICENSE=	# TODO: (see ${WRKSRC}/license.txt) 2-clause-bsd + bourbon_ware
+LICENSE=	2-clause-bsd
 
 GNU_CONFIGURE=	yes
 
