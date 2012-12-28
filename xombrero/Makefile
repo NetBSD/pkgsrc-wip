@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/07 20:11:10 asau Exp $
+# $NetBSD: Makefile,v 1.5 2012/12/28 12:38:21 thomasklausner Exp $
 #
 
 DISTNAME=	xombrero-1.3.1
@@ -16,7 +16,7 @@ EXTRACT_SUFX=	.tgz
 ONLY_FOR_PLATFORM= DragonFly-*-* NetBSD-*-*
 
 NO_CONFIGURE= yes
-USE_TOOLS+= perl
+USE_TOOLS+= perl pkg-config
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "DragonFly"
