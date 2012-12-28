@@ -1,6 +1,9 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/05/01 22:44:52 thomasklausner Exp $
+$NetBSD: distinfo,v 1.2 2012/12/28 12:41:41 othyro Exp $
 
 SHA1 (paperbox-0.4.4.tar.bz2) = caf7ea9b486d6bcd995268d9ff425d4fd1c27bc5
 RMD160 (paperbox-0.4.4.tar.bz2) = 713cb000250c403deb60673505c18897286ae5f9
 Size (paperbox-0.4.4.tar.bz2) = 205101 bytes
-SHA1 (patch-aa) = 67764e6e1bed1c16a827fe6c3bbe8f18b39aeec4
+SHA1 (patch-aa) = a64230da0ce9e6c985c56af26e957720c6c8f541
+SHA1 (patch-src_category.cc) = ecfaf9fe4bd0c9ae135f091f7405b2ccd5137048
+SHA1 (patch-src_paths.hh) = 747a3c413e163e9ae44847706cff15a611bdd50a
+SHA1 (patch-src_tag-cloud.hh) = f4bce2914a8c4c1aade09c40564c94d2ca7fa3d0
