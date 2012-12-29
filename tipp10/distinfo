@@ -1,6 +1,11 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/05/31 00:50:56 mrampke Exp $
+$NetBSD: distinfo,v 1.2 2012/12/29 14:52:28 othyro Exp $
 
 SHA1 (tipp10_source_v2-1-0.zip) = a50aeab9b579149b3d34789fdeeab4c175db6a0f
 RMD160 (tipp10_source_v2-1-0.zip) = 2d460d3447a8de5344fded0638e2b993f3320167
 Size (tipp10_source_v2-1-0.zip) = 2106535 bytes
-SHA1 (patch-def_defines.h) = 4d0ac4c2e5ea9e25b89ae0e3df645fbfd8d9b2b4
+SHA1 (patch-def_defines.h) = e93e893a488d6e4887cc02c7a4287f300118779c
+SHA1 (patch-sql_chartablesql.cpp) = 9bb09d8248528dec62ed8b233519dd7297a7509d
+SHA1 (patch-sql_startsql.cpp) = d14d8f71fbf2539cbd98c07d91a65eea4f4c969e
+SHA1 (patch-widget_lessondialog.cpp) = 6b82ef02ffc8765f4936947338e2b3214cf59f70
+SHA1 (patch-widget_settingspages.cpp) = ed33422950e012ea3cf381238aaa8b35585db559
+SHA1 (patch-widget_tickerboard.cpp) = 287ce80c0164d6c903292cc3c24f1e10f82bffd5
