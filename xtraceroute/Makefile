@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/07 20:11:11 asau Exp $
+# $NetBSD: Makefile,v 1.3 2012/12/29 11:32:08 othyro Exp $
 #
 
 DISTNAME=	xtraceroute-0.9.2
@@ -14,33 +14,21 @@ LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake msgfmt pkg-config
+USE_TOOLS+=		autoheader autoconf gm4 gmake intltool msgfmt msgmerge
+USE_TOOLS+=		pkg-config xgettext
 USE_FEATURES=		snprintf
 
-CPPFLAGS+=		-I${BUILDLINK_PREFIX.gtkglarea}/include/gtkgl-2.0
-
-#CONFIGURE_ARGS+= --with-gtk-prefix="${BUILDLINK_PREFIX.gtk}"
-# XXX Actually, Mesa's in X11PREFIX too, but as our tiff is in LOCALBASE
-# and xtraceroute doesn't have a switch to tell it so (yet?), we abuse
-# the --with-GL-prefix switch for this.
-#CONFIGURE_ARGS+= --with-GL-prefix=${LOCALBASE:Q}
-#CONFIGURE_ARGS+= --with-lib-MesaGL
-
 .include "../../mk/bsd.prefs.mk"
+
+CPPFLAGS+=		-I${BUILDLINK_PREFIX.gtkglarea2}/include/gtkgl-2.0
 
 .if !empty(MACHINE_PLATFORM:MIRIX-5*)
 CONFIGURE_ARGS+=	--with-traceroute=/usr/etc/traceroute
 .endif
 
-INSTALLATION_DIRS+=	share/xtraceroute
-
-#post-install:
-	#${INSTALL_DATA} ${WRKDIR}/hosts.cache    ${DESTDIR}${PREFIX}/share/xtraceroute/hosts.cache
-	#${INSTALL_DATA} ${WRKDIR}/networks.cache ${DESTDIR}${PREFIX}/share/xtraceroute/networks.cache
-
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/gtkglarea2/buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"
