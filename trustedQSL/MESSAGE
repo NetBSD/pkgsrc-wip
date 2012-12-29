@@ -1,7 +1,8 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2012/10/03 02:57:38 makoto Exp $
-For help, see following HTML file respectively.
-tqsl, aka tQSL or tqslapp, regular signing up for QSL:
+$NetBSD: MESSAGE,v 1.2 2012/12/29 12:17:47 thomasklausner Exp $
+
+For help, see the following HTML files, respectively:
+tqsl, aka tQSL or tqslapp, about signing up for QSL:
   ${PREFIX}/share/TrustedQSL/help/tqslapp/main.htm
 
 tqslcert, aka tQSLCert, for manipulating certificates:
