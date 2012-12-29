@@ -1,18 +1,9 @@
-$NetBSD: patch-intl_Makefile.in,v 1.1.1.1 2011/02/19 15:59:17 thomasklausner Exp $
+$NetBSD: patch-intl_Makefile.in,v 1.2 2012/12/29 11:29:34 othyro Exp $
+
+Fixing paths.
 
 --- intl/Makefile.in.orig	2001-06-28 21:10:24.000000000 +0000
 +++ intl/Makefile.in
-@@ -31,8 +31,8 @@ transform = @program_transform_name@
- libdir = $(exec_prefix)/lib
- includedir = $(prefix)/include
- datadir = $(prefix)/@DATADIRNAME@
--localedir = $(datadir)/locale
--gnulocaledir = $(prefix)/share/locale
-+localedir = /usr/pkg/share/locale
-+gnulocaledir = /usr/pkg/share/locale
- gettextsrcdir = @datadir@/gettext/intl
- aliaspath = $(localedir):.
- subdir = intl
 @@ -202,12 +202,8 @@ Makefile: Makefile.in ../config.status
  # The dependency for intlh.inst is different in gettext and all other
  # packages.  Because we cannot you GNU make features we have to solve
