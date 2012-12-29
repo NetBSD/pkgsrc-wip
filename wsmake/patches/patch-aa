@@ -1,8 +1,18 @@
-$NetBSD: patch-aa,v 1.1.1.1 2007/02/06 06:05:21 netcap Exp $
+$NetBSD: patch-aa,v 1.2 2012/12/29 13:14:11 othyro Exp $
 
---- libwsmake/wsUtil.cpp.orig	2001-09-01 22:09:13.000000000 +0200
+Needs malloc and removing const cast from va_list.
+
+--- libwsmake/wsUtil.cpp.orig	2001-09-01 20:09:13.000000000 +0000
 +++ libwsmake/wsUtil.cpp
-@@ -709,12 +709,12 @@ void std::__wsmake_set_quiet(int quiet)
+@@ -25,6 +25,7 @@
+ 
+ #include <sys/stat.h>
+ 
++#include <cstdlib>
+ #include <cassert>
+ #include <cerrno>
+ #include <cstring>
+@@ -709,12 +710,12 @@ void std::__wsmake_set_quiet(int quiet)
    }
  }
  
