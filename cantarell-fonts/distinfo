@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/07/15 03:57:17 ryo-on Exp $
+$NetBSD: distinfo,v 1.2 2012/12/29 14:23:42 thomasklausner Exp $
 
-SHA1 (cantarell-fonts-0.0.6.tar.bz2) = d99bc6123c1c91a68572587a6bd6ce5922889196
-RMD160 (cantarell-fonts-0.0.6.tar.bz2) = c78a9bfdc827c0c62dd5b2dbd1cfaa0040df5806
-Size (cantarell-fonts-0.0.6.tar.bz2) = 494468 bytes
+SHA1 (cantarell-fonts-0.0.12.tar.xz) = 57dbe64a01f610818cde460ae446d601d2a39487
+RMD160 (cantarell-fonts-0.0.12.tar.xz) = ca7b5d608d24f2eb3e2c1f8b358ebe3ad8ad9614
+Size (cantarell-fonts-0.0.12.tar.xz) = 291964 bytes
