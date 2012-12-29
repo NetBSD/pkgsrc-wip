@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2012/10/07 20:11:11 asau Exp $
+# $NetBSD: Makefile,v 1.4 2012/12/29 04:22:29 othyro Exp $
 #
 
 DISTNAME=	yauap-0.2.4
 CATEGORIES=	audio
-MASTER_SITES=	http://mirrors.linhub.com/savannah/yauap/
+MASTER_SITES=	http://download.savannah.gnu.org/releases/yauap/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.nongnu.org/yauap/index.html
