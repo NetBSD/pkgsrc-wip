@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/10/07 14:53:42 asau Exp $
+# $NetBSD: Makefile,v 1.11 2012/12/29 03:22:07 othyro Exp $
 #
 
 DISTNAME=	qico-0.55si
@@ -10,8 +10,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/qico/
 COMMENT=	FidoNet mailer
-
-PKG_DESTDIR_SUPPORT=	none
+LICENSE=	2-clause-bsd AND gnu-gpl-v2
 
 USE_TOOLS+=	gmake
 WRKSRC=		${WRKDIR}/qicosi
@@ -34,8 +33,10 @@ CONF_FILES_PERMS=	${EGDIR}/qico.conf ${PKG_SYSCONFDIR}/qico.conf \
 				uucp news 0644
 INSTALLATION_DIRS+=	share/examples/qico
 
+INSTALL_ENV+=		DESTDIR=${DESTDIR}
+
 pre-install:
 	${INSTALL_DATA} ${WRKSRC}/qico.conf.sample \
-		${PREFIX}/share/examples/qico/qico.conf
+		${DESTDIR}${PREFIX}/share/examples/qico/qico.conf
 
 .include "../../mk/bsd.pkg.mk"
