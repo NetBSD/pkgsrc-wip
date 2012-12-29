@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2012/11/07 22:38:49 lexort Exp $
+# $NetBSD: Makefile,v 1.9 2012/12/29 12:20:54 thomasklausner Exp $
 
 DISTNAME=	tqsllib-2_2
-PKGNAME=	tqsllib-2.2
+PKGNAME=	${DISTNAME:S/_/./}
 PKGREVISION=	2
 CATEGORIES=	ham
 MASTER_SITES=	http://www.arrl.org/files/file/LoTW%20Instructions/
