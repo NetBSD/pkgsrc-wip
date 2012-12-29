@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2012/12/29 01:01:16 othyro Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2012/12/29 01:11:15 othyro Exp $
 
 BUILDLINK_TREE+=	libinstpatch
 
@@ -8,7 +8,7 @@ LIBINSTPATCH_BUILDLINK3_MK:=
 BUILDLINK_API_DEPENDS.libinstpatch+=	libinstpatch>=1.0.0
 BUILDLINK_PKGSRCDIR.libinstpatch?=	../../wip/libinstpatch
 
-pkgbase := xmms2
+pkgbase := libinstpatch
 .include "../../mk/pkg-build-options.mk"
 
 .if !empty(PKG_BUILD_OPTIONS.libinstpatch:Mdoc)
