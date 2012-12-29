@@ -1,3 +1,2 @@
-Tqsllib supports TrustedQSL as a library.
-TrustedQSL helps to upload QSO logs onto ARRL LoTW
-(Logbook of The World) server.
+Tqsllib is a support library for TrustedQSL.  TrustedQSL helps to
+upload QSO logs onto ARRL LoTW (Logbook of The World) server.
