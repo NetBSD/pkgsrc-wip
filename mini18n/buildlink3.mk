@@ -1,0 +1,12 @@
+# $NetBSD: buildlink3.mk,v 1.1 2012/12/29 18:53:33 othyro Exp $
+
+BUILDLINK_TREE+=	mini18n
+
+.if !defined(MINI18N_BUILDLINK3_MK)
+MINI18N_BUILDLINK3_MK:=
+
+BUILDLINK_API_DEPENDS.mini18n+=	mini18n>=0.1
+BUILDLINK_PKGSRCDIR.mini18n?=	../../wip/mini18n
+.endif	# MINI18N_BUILDLINK3_MK
+
+BUILDLINK_TREE+=	-mini18n
