@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2012/11/07 22:43:29 lexort Exp $
+# $NetBSD: Makefile,v 1.10 2012/12/29 12:17:27 thomasklausner Exp $
 
 DISTNAME=		TrustedQSL-1_13
-PKGNAME=		TrustedQSL-1.13
+PKGNAME=		${DISTNAME:S/_/./}
 PKGREVISION=		1
 CATEGORIES=		ham
 MASTER_SITES=		http://www.arrl.org/files/file/LoTW%20Instructions/
