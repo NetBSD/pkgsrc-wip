@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5029 2012/12/30 00:42:09 othyro Exp $
+# $Id: Makefile,v 1.5030 2012/12/30 01:17:10 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -760,6 +760,7 @@ SUBDIR+=	gnump3d
 SUBDIR+=	gnunet
 SUBDIR+=	gnupoc-makesis
 SUBDIR+=	gnupod
+SUBDIR+=	go
 SUBDIR+=	goattracker
 SUBDIR+=	godura
 SUBDIR+=	goldwater
