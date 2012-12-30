@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5033 2012/12/30 01:48:25 othyro Exp $
+# $Id: Makefile,v 1.5034 2012/12/30 01:58:25 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1435,7 +1435,7 @@ SUBDIR+=	libspt
 SUBDIR+=	libstacktrace
 SUBDIR+=	libtextcat
 SUBDIR+=	libticables2
-SUBDIR+=	libticalcs
+SUBDIR+=	libticalcs2
 SUBDIR+=	libticonv
 SUBDIR+=	libtifiles2
 SUBDIR+=	libtlen2
