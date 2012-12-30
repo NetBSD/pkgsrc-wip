@@ -1,18 +1,28 @@
-# $NetBSD: Makefile,v 1.20 2012/09/28 22:07:31 asau Exp $
+# $NetBSD: Makefile,v 1.21 2012/12/30 19:51:57 roelants Exp $
 #
 
-DISTNAME=	efreet-0.5.0.063
-CATEGORIES=	graphics
-MASTER_SITES=	http://download.enlightenment.org/snapshots/2009-12-02/
+DISTNAME=	efreet-1.7.4
+CATEGORIES=	sysutils devel
+MASTER_SITES=	http://download.enlightenment.org/releases/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	yazzy@yazzy.org
+MAINTAINER=	dieter.NetBSD@pandora.be
 HOMEPAGE=	http://enlightenment.org/
 COMMENT=	Interface Abstraction Library and Toolset
+
+LICENSE=	2-clause-bsd
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS=	pkg-config
 
+INSTALLATION_DIRS=	share/doc/efreet
+
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/AUTHORS ${WRKSRC}/COPYING \
+	    ${DESTDIR}${PREFIX}/share/doc/efreet
+
 .include "../../wip/ecore/buildlink3.mk"
+.include "../../wip/eet/buildlink3.mk"
+.include "../../wip/eina/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
