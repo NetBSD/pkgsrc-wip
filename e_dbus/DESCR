@@ -1,0 +1,20 @@
+E_Dbus is a set of wrappers around DBus APIs by third parties, so
+they can be easily used by EFL applications, automatically providing
+Ecore/main loop integration, as well as Eina data types.
+
+So far, E_Dbus wraps the following:
+
+dbus: core dbus integrated into ecore main loop, it is the base
+    for all users of DBus in EFL.
+connman: implements API described by ConnMan, a network connection
+    manager.
+hal: implements API described by Hardware Abstraction Layer, a
+    freedesktop.org standard to access storage, power management
+    features and so on.
+libnotify: implements API described by libnotify, used by many
+    applications and default in many distributions as the standard
+    to inform user about status changes. It is the based o Ubuntu's
+    OSD, a passive notification system.
+bluez: implement bluetooth handling and control via bluez.
+ukit: udev (umount/power etc.) handling.
+ofono: ofono telephony access.
