@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2012/12/30 01:33:38 othyro Exp $
+include/tilp2/charset.h
+include/tilp2/export4.h
+include/tilp2/stdints4.h
+include/tilp2/ticonv.h
+lib/libticonv.la
+lib/pkgconfig/ticonv.pc
