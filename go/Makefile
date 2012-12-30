@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/12/30 01:31:49 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2012/12/30 17:40:12 bsiegert Exp $
 #
 
 DISTNAME=	go-1.1pre-20121229
@@ -14,6 +14,15 @@ LICENSE=	modified-bsd
 WRKSRC=		${WRKDIR}/go
 USE_TOOLS+=	bash:run perl:run pax
 UNLIMIT_RESOURCES= datasize stacksize memorysize
+
+# TODO: linux/arm
+ONLY_FOR_PLATFORM= *-*-i386 *-*-x86_64
+.if ${MACHINE_ARCH} == "i386"
+GOARCH=		386
+.elif ${MACHINE_ARCH} == "x86_64"
+GOARCH=		amd64
+.endif
+PLIST_SUBST+=	GO_PLATFORM=${LOWER_OPSYS:Q}_${GOARCH:Q}
 
 # cgo compiles under TMPDIR
 TMPDIR?=	/tmp
