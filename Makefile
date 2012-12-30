@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5034 2012/12/30 01:58:25 othyro Exp $
+# $Id: Makefile,v 1.5035 2012/12/30 02:46:48 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -3083,7 +3083,7 @@ SUBDIR+=	thepeg
 SUBDIR+=	thwab
 SUBDIR+=	tigervnc
 SUBDIR+=	tilda
-SUBDIR+=	tilp
+SUBDIR+=	tilp2
 SUBDIR+=	tinyca2
 SUBDIR+=	tinycobol
 SUBDIR+=	tinyfugue-beta
