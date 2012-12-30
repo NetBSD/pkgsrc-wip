@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2012/09/29 02:11:01 othyro Exp $
+@comment $NetBSD: PLIST,v 1.2 2012/12/30 03:08:45 othyro Exp $
 include/itcl.h
 include/itclDecls.h
 include/itclInt.h
@@ -9,7 +9,7 @@ lib/itcl3.4/libitclstub3.4.a
 lib/itcl3.4/pkgIndex.tcl
 lib/itclConfig.sh
 man/mann/body.n
-man/mann/itcl-class.n
+man/mann/class.n
 man/mann/code.n
 man/mann/configbody.n
 man/mann/delete.n
