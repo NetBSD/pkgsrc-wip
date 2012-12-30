@@ -1,7 +1,5 @@
-$NetBSD: distinfo,v 1.3 2007/06/30 21:56:05 corecode Exp $
+$NetBSD: distinfo,v 1.4 2012/12/30 16:01:57 ryo-on Exp $
 
-SHA1 (lposix.tar.gz) = 85b58f90e225c15f512bd2f341086580f8c7e09c
-RMD160 (lposix.tar.gz) = c5c2366b9864773b350c02e032a1c6a433dcdbe5
-Size (lposix.tar.gz) = 9651 bytes
-SHA1 (patch-aa) = 4307cff8b858633b401aa6dface3b2592695c359
-SHA1 (patch-ab) = 545b295d39e3cbd2aea32d8b1fdec2525c45f167
+SHA1 (luaposix-5.1.23.tar.gz) = 40e7765d83483f7b91d73391f02f81993ec21bd1
+RMD160 (luaposix-5.1.23.tar.gz) = 732b2730d8643f1676c169ebf173d1910454ca68
+Size (luaposix-5.1.23.tar.gz) = 420433 bytes

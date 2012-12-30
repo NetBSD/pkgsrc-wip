@@ -1,2 +1,9 @@
-@comment $NetBSD: PLIST,v 1.3 2009/03/20 13:50:52 cheusov Exp $
-${LUA_CDIR}/posix.so
+@comment $NetBSD: PLIST,v 1.4 2012/12/30 16:01:57 ryo-on Exp $
+lib/lua/5.1/curses_c.la
+lib/lua/5.1/posix_c.la
+share/doc/${PKGNAME}/curses.html
+share/doc/${PKGNAME}/index.html
+share/doc/${PKGNAME}/lcurses_c.html
+share/doc/${PKGNAME}/ldoc.css
+share/${PKGNAME}/curses.lua
+share/${PKGNAME}/posix.lua

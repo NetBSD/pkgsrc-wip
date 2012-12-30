@@ -1,23 +1,25 @@
-# $NetBSD: Makefile,v 1.11 2012/11/25 23:32:27 othyro Exp $
+# $NetBSD: Makefile,v 1.12 2012/12/30 16:01:57 ryo-on Exp $
 #
 
-DISTNAME=		lposix
-PKGNAME=		luaposix-1.0
-CATEGORIES=		devel
-MASTER_SITES=		http://www.tecgraf.puc-rio.br/~lhf/ftp/lua/5.0/
+DISTNAME=	luaposix-5.1.23
+PKGNAME=	${DISTNAME:S/lua/${LUA_PKGPREFIX}-/}
+CATEGORIES=	devel
+MASTER_SITES=	https://github.com/downloads/luaposix/luaposix/
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.tecgraf.puc-rio.br/~lhf/ftp/lua/
-COMMENT=		POSIX library for Lua
+MAINTAINER=	ryoon@NetBSD.org
+HOMEPAGE=	http://luaforge.net/projects/luaposix/
+COMMENT=	POSIX library (including curses) for lua
+LICENSE=	mit
 
-WRKSRC=			${WRKDIR}/posix/
-BUILD_TARGET=		lposix.so
-#TEST_TARGET=		test
+DEPENDS+=	${LUA_PKGPREFIX}-BitOp-[0-9]*:../../wip/lua-BitOp
 
-INSTALLATION_DIRS+=	${LUA_CDIR}
+GNU_CONFIGURE=	yes
+USE_LIBTOOL=	yes
 
-do-install:
-	${INSTALL_DATA} ${WRKSRC}/lposix.so ${DESTDIR}${PREFIX}/${LUA_CDIR}/posix.so
+CONFIGURE_ARGS+=	--libdir=${PREFIX}/${LUA_CDIR}
+CONFIGURE_ARGS+=	--docdir=${PREFIX}/share/doc/${PKGNAME_NOREV}
+CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/${PKGNAME_NOREV}
 
 .include "../../lang/lua/module.mk"
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

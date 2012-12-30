@@ -1,1 +1,1 @@
-This is a POSIX library for Lua 5.0.
+A POSIX library (including curses) for lua.
