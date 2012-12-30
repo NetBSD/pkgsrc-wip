@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.16 2012/07/03 06:35:37 lokivit Exp $
+$NetBSD: distinfo,v 1.17 2012/12/30 20:08:52 roelants Exp $
 
-SHA1 (enlightenment-0.16.999.55225.tar.bz2) = 4bd9cfdb5f360ed62b6881948af1c278388b27af
-RMD160 (enlightenment-0.16.999.55225.tar.bz2) = d3b1356b6983bd715ea3130cc1c7cc8b7b4e5661
-Size (enlightenment-0.16.999.55225.tar.bz2) = 5988716 bytes
+SHA1 (enlightenment-0.17.0.tar.bz2) = 61731709ab9e23358c6a4ef8cd713bec5884f85d
+RMD160 (enlightenment-0.17.0.tar.bz2) = 8042978c8687b5bf5dc26ac5004eb8287ebba251
+Size (enlightenment-0.17.0.tar.bz2) = 29213523 bytes
+SHA1 (patch-data_etc_Makefile.in) = 19a6a94f85333fb3b76307261e66ac535c98e736
