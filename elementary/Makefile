@@ -1,31 +1,36 @@
-# $NetBSD: Makefile,v 1.6 2012/11/13 20:09:29 othyro Exp $
+# $NetBSD: Makefile,v 1.7 2012/12/30 20:00:56 roelants Exp $
 #
 
-DISTNAME=	elementary-0.6.0.063
-PKGREVISION=	1
+DISTNAME=	elementary-1.7.4
 CATEGORIES=	x11
-MASTER_SITES=	http://download.enlightenment.org/snapshots/2009-12-02/
+MASTER_SITES=	http://download.enlightenment.org/releases/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	joerg@NetBSD.org
+MAINTAINER=	dieter.NetBSD@pandora.be
 HOMEPAGE=	http://www.enlightenment.org/
 COMMENT=	E17 Widget Library
+LICENSE=	gnu-lgpl-v2
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=	autoconf automake gettext gmake pkg-config
 
-PKGCONFIG_OVERRIDE=	elementary
+PKGCONFIG_OVERRIDE=	elementary.pc.in
 
-DEPENDS+=	evas-png-[0-9]*:../../graphics/evas-png
-DEPENDS+=	evas-jpeg-[0-9]*:../../graphics/evas-jpeg
+pre-configure:
+		cd ${WRKSRC} && ./autogen.sh
 
-MODULE_ARCH=	${LOWER_OPSYS}${APPEND_ELF}${LOWER_OPSYS_VERSUFFIX}-${LOWER_ARCH}-ver-svn-05
+MODULE_ARCH=	${LOWER_OPSYS}${APPEND_ELF}${LOWER_OPSYS_VERSUFFIX}-${LOWER_ARCH}
 PLIST_SUBST=	MODULE_ARCH=${MODULE_ARCH}
 PRINT_PLIST_AWK+=        { gsub(/${MODULE_ARCH}/, "$${MODULE_ARCH}") }
 
-
-.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../wip/ecore/buildlink3.mk"
+.include "../../wip/eet/buildlink3.mk"
+.include "../../wip/eina/buildlink3.mk"
+.include "../../wip/eio/buildlink3.mk"
 .include "../../wip/edje/buildlink3.mk"
+.include "../../wip/evas/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../wip/efreet/buildlink3.mk"
+.include "../../wip/e_dbus/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
