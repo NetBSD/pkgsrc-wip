@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5036 2012/12/30 03:30:20 othyro Exp $
+# $Id: Makefile,v 1.5037 2012/12/30 20:14:40 roelants Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -497,6 +497,7 @@ SUBDIR+=	e16menuedit
 SUBDIR+=	e17
 SUBDIR+=	e2fsprogs
 SUBDIR+=	e3
+SUBDIR+=	e_dbus
 SUBDIR+=	easymesh
 SUBDIR+=	eboard-extras
 SUBDIR+=	ecasound
@@ -509,9 +510,12 @@ SUBDIR+=	edb
 SUBDIR+=	edelib
 SUBDIR+=	editline
 SUBDIR+=	edje
+SUBDIR+=	eet
 SUBDIR+=	efltk
 SUBDIR+=	efreet
 SUBDIR+=	eic
+SUBDIR+=	eina
+SUBDIR+=	eio
 SUBDIR+=	ejourn
 SUBDIR+=	ekg2
 SUBDIR+=	electricsheep
@@ -538,6 +542,7 @@ SUBDIR+=	emboss-meme
 SUBDIR+=	emboss-mse
 SUBDIR+=	emboss-phylip
 SUBDIR+=	emboss-topo
+SUBDIR+=	embryo
 SUBDIR+=	emelfm2
 SUBDIR+=	emerald
 SUBDIR+=	emerald-themes
@@ -564,6 +569,11 @@ SUBDIR+=	ethtool
 SUBDIR+=	etoile
 SUBDIR+=	etoile-core
 SUBDIR+=	etoile-services
+SUBDIR+=	evas
+SUBDIR+=	evas-gif
+SUBDIR+=	evas-software-x11
+SUBDIR+=	evas-xpm
+SUBDIR+=	evas_generic_loaders
 SUBDIR+=	eventlog
 SUBDIR+=	ever-note-mode
 SUBDIR+=	evilvte
