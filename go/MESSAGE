@@ -1,0 +1,8 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2012/12/30 01:35:02 thomasklausner Exp $
+
+The go executable needs a lot of memory; you probably will have to increase
+your datasize, e.g. with
+	ulimit -d 1024000
+
+===========================================================================
