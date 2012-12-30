@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/31 20:12:40 othyro Exp $
+# $NetBSD: Makefile,v 1.6 2012/12/30 03:11:43 othyro Exp $
 #
 
 DISTNAME=	TclOO0.6
@@ -12,6 +12,9 @@ COMMENT=	Core for other TCL OO extensions and basic TCL OO framework
 LICENSE=	2-clause-bsd # ?
 
 GNU_CONFIGURE=	yes
+
+pre-install:
+		${MV} ${WRKSRC}/doc/class.n ${WRKSRC}/doc/tclOO-class.n
 
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
