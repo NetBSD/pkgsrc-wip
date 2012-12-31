@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2012/08/30 18:51:22 bubuchka Exp $
+$NetBSD: distinfo,v 1.2 2012/12/31 20:12:42 bubuchka Exp $
 
-SHA1 (R/VGAM_0.8-7.tar.gz) = 0f3f39aa65c3170cb6dd1d2b6224b7f8eeb7f8f5
-RMD160 (R/VGAM_0.8-7.tar.gz) = 5b6d84b6729d2432f07d83411ecdefb1211fcc1a
-Size (R/VGAM_0.8-7.tar.gz) = 2004921 bytes
+SHA1 (R/VGAM_0.9-0.tar.gz) = c98e6f91ca8ada44973945bf71dd21794bcdb005
+RMD160 (R/VGAM_0.9-0.tar.gz) = c3881609f96444725c087d2210894ac258fb67bf
+Size (R/VGAM_0.9-0.tar.gz) = 2034305 bytes

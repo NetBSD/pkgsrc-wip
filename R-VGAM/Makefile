@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/08/30 19:03:42 bubuchka Exp $
+# $NetBSD: Makefile,v 1.3 2012/12/31 20:12:41 bubuchka Exp $
 
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
@@ -8,7 +8,7 @@ HOMEPAGE=	http://www.stat.auckland.ac.nz/~yee/VGAM/
 COMMENT=	Vector Generalized Linear and Additive Models
 
 R_PKGNAME=	VGAM
-R_PKGVER=	0.8-7
+R_PKGVER=	0.9-0
 
 LICENSE=	gnu-gpl-v2
 
