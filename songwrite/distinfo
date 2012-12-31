@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2004/01/02 03:52:07 mpasternak Exp $
-
-SHA1 (Songwrite-0.12.tar.gz) = 2c12189b7e931add9c42d2a3ff9dfca628a40339
-Size (Songwrite-0.12.tar.gz) = 298651 bytes
-SHA1 (patch-aa) = af1f43d270965bde38924d243c4d3ef9d7ede189
