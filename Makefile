@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5037 2012/12/30 20:14:40 roelants Exp $
+# $Id: Makefile,v 1.5038 2012/12/31 07:35:18 kristerw Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -258,6 +258,7 @@ SUBDIR+=	cairo-java
 SUBDIR+=	calcurse
 SUBDIR+=	calligra
 SUBDIR+=	callweaver
+SUBDIR+=	calypso
 SUBDIR+=	canna
 SUBDIR+=	canna-canuum
 SUBDIR+=	canna-dict
@@ -2557,6 +2558,7 @@ SUBDIR+=	py-pyecm
 SUBDIR+=	py-pyentropy
 SUBDIR+=	py-pyevolve
 SUBDIR+=	py-pyexiv2
+SUBDIR+=	py-pyfaces
 SUBDIR+=	py-pyflation
 SUBDIR+=	py-pygi
 SUBDIR+=	py-pygr
