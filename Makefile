@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5039 2012/12/31 21:35:06 othyro Exp $
+# $Id: Makefile,v 1.5040 2012/12/31 23:40:30 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2951,7 +2951,7 @@ SUBDIR+=	socklog
 SUBDIR+=	socnetv
 SUBDIR+=	sofia-sip
 SUBDIR+=	softflowd
-SUBDIR+=	songwrite
+SUBDIR+=	songwrite2
 SUBDIR+=	soqt
 SUBDIR+=	spade
 SUBDIR+=	spai
