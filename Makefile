@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5040 2012/12/31 23:40:30 othyro Exp $
+# $Id: Makefile,v 1.5041 2013/01/01 01:25:12 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -333,7 +333,6 @@ SUBDIR+=	com_err
 SUBDIR+=	common-mml
 SUBDIR+=	commoncpp2
 SUBDIR+=	compare
-SUBDIR+=	compiz-gnome-current
 SUBDIR+=	converttomp3
 SUBDIR+=	cops
 SUBDIR+=	copytape
