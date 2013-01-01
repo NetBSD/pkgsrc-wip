@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2012/10/07 14:53:44 asau Exp $
+# $NetBSD: Makefile,v 1.3 2013/01/01 01:01:19 othyro Exp $
 #
 
 DISTNAME=	rpcemu-0.8.8
+PKGREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	http://www.marutan.net/rpcemuspoon/088/
 
@@ -27,5 +28,5 @@ SUBST_VARS.prefix=	RPCEMUBASE
 #post-install:
 #	${INSTALL_DATA} ${WRKSRC|/
 
-.include "../../wip/allegro/buildlink3.mk"
+.include "../../devel/allegro/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
