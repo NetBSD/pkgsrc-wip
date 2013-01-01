@@ -1,0 +1,18 @@
+$NetBSD: patch-be,v 1.5 2013/01/01 01:46:25 othyro Exp $
+
+--- support/sys-mman.c.orig	2012-12-05 17:44:30.000000000 +0000
++++ support/sys-mman.c
+@@ -105,8 +105,13 @@ Mono_Posix_Syscall_mremap (void *old_add
+ 	if (Mono_Posix_FromMremapFlags (flags, &_flags) == -1)
+ 		return MAP_FAILED;
+ 
++#if defined(__NetBSD__)
++	return mremap (old_address, (size_t) old_size, old_address, (size_t) new_size,
++			(unsigned long) _flags);
++#else
+ 	return mremap (old_address, (size_t) old_size, (size_t) new_size,
+ 			(unsigned long) _flags);
++#endif
+ }
+ #endif /* def HAVE_MREMAP */
+ 

@@ -1,0 +1,12 @@
+$NetBSD: patch-ar,v 1.5 2013/01/01 01:46:24 othyro Exp $
+--- data/net_2_0/Makefile.in.orig	2012-12-05 17:50:24.000000000 +0000
++++ data/net_2_0/Makefile.in
+@@ -322,7 +322,7 @@ top_build_prefix = @top_build_prefix@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+ SUBDIRS = Browsers
+-monodir = $(sysconfdir)/mono/2.0
++monodir = $(datadir)/examples/mono/2.0
+ EXTRA_DIST = machine.config \
+ 	      web.config \
+ 	      DefaultWsdlHelpGenerator.aspx \

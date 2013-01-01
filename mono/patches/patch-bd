@@ -1,0 +1,14 @@
+$NetBSD: patch-bd,v 1.5 2013/01/01 01:46:25 othyro Exp $
+--- mcs/build/config-default.make.orig	2012-12-05 17:47:52.000000000 +0000
++++ mcs/build/config-default.make
+@@ -17,8 +17,9 @@ LIBRARY_FLAGS = /noconfig
+ ifndef CFLAGS
+ CFLAGS = -g -O2
+ endif
+-prefix = /usr/local
++prefix = /usr/pkg
+ exec_prefix = $(prefix)
++mandir = $(prefix)/man
+ mono_libdir = $(exec_prefix)/lib
+ sysconfdir = $(prefix)/etc
+ #RUNTIME = mono

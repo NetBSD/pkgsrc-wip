@@ -1,0 +1,20 @@
+Making all in support
+gmake[2]: Entering directory `/usr/pkgsrc/wip/mono/work/mono-3.0.2/support'
+  CC     sys-mman.lo
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I../eglib/src -Ifuck -I/usr/pkgsrc/wip/mono/work/.buildlink/include -D_REENTRANT -DGC_NETBSD_THREADS -D_GNU_SOURCE -DPLATFORM_BSD -D__default_codegen__ -DUSE_COMPILER_TLS -fno-strict-aliasing -Wdeclaration-after-statement -g -Wall -Wunused -Wmissing-prototypes -Wmissing-declarations -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wpointer-arith -Wno-cast-qual -Wwrite-strings -Wno-switch -Wno-switch-enum -Wno-unused-value -mno-tls-direct-seg-refs -Werror-implicit-function-declaration -MT sys-mman.lo -MD -MP -MF .deps/sys-mman.Tpo -c sys-mman.c  -fPIC -DPIC -o .libs/sys-mman.o
+sys-mman.c: In function 'Mono_Posix_Syscall_mremap':
+sys-mman.c:109:2: error: implicit declaration of function 'mremap'
+sys-mman.c:109:2: warning: nested extern declaration of 'mremap'
+sys-mman.c:109:2: warning: return makes pointer from integer without a cast
+sys-mman.c: In function 'Mono_Posix_Syscall_mincore':
+sys-mman.c:123:2: error: implicit declaration of function 'mincore'
+sys-mman.c:123:2: warning: nested extern declaration of 'mincore'
+gmake[2]: *** [sys-mman.lo] Error 1
+gmake[2]: Leaving directory `/usr/pkgsrc/wip/mono/work/mono-3.0.2/support'
+gmake[1]: *** [all-recursive] Error 1
+gmake[1]: Leaving directory `/usr/pkgsrc/wip/mono/work/mono-3.0.2'
+gmake: *** [all] Error 2
+*** Error code 2
+
+Stop.
+bmake: stopped in /usr/pkgsrc/wip/mono

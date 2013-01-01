@@ -1,0 +1,21 @@
+$NetBSD: patch-ae,v 1.5 2013/01/01 01:46:24 othyro Exp $
+--- libgc/configure.orig	2012-12-05 17:50:43.000000000 +0000
++++ libgc/configure
+@@ -4939,7 +4939,7 @@ $as_echo "$as_me: WARNING: \"Only HP/UX 
+ 
+ 	THREADDLLIBS="-lpthread -lrt"
+ 	;;
+-      *-*-freebsd*)
++      *-*-freebsd* | *-*-*dragonfly*)
+ 	$as_echo "#define GC_FREEBSD_THREADS 1" >>confdefs.h
+ 
+ 	if test "x$PTHREAD_CFLAGS" != "x"; then
+@@ -4980,6 +4980,8 @@ $as_echo "$as_me: WARNING: \"Only HP/UX 
+      *-*-netbsd*)
+ 	$as_echo "#define GC_NETBSD_THREADS 1" >>confdefs.h
+ 
++	$as_echo "#define _REENTRANT 1" >>confdefs.h
++
+ 	if test "${enable_parallel_mark}" = yes; then
+ 	  $as_echo "#define PARALLEL_MARK 1" >>confdefs.h
+ 
