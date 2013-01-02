@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5042 2013/01/01 01:47:32 othyro Exp $
+# $Id: Makefile,v 1.5043 2013/01/02 18:22:26 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1388,6 +1388,7 @@ SUBDIR+=	libgda-xbase
 SUBDIR+=	libgda4
 SUBDIR+=	libghemical
 SUBDIR+=	libginac
+SUBDIR+=	libgit2
 SUBDIR+=	libgksu
 SUBDIR+=	libgksuui
 SUBDIR+=	libglade-java
