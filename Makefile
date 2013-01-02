@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5044 2013/01/02 18:50:42 othyro Exp $
+# $Id: Makefile,v 1.5045 2013/01/02 23:48:54 kristerw Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1626,8 +1626,8 @@ SUBDIR+=	molmol
 SUBDIR+=	monajat
 SUBDIR+=	mongodb
 SUBDIR+=	monkey-bubble
-SUBDIR+=	mono-zeroconf
 SUBDIR+=	mono
+SUBDIR+=	mono-zeroconf
 SUBDIR+=	monodevelop
 SUBDIR+=	monotone-cvsimport
 SUBDIR+=	moonlight
