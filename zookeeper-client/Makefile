@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/04/19 10:32:38 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2013/01/02 13:16:51 jonperkin Exp $
 #
 
 .include "../../wip/zookeeper-server/Makefile.common"
@@ -12,8 +12,7 @@ USE_LIBTOOL=	yes
 
 BUILD_DEPENDS+=	cppunit-[0-9]*:../../devel/cppunit
 
-WRKSRC=		${WRKDIR}/${DISTNAME}/src/c
-PATCH_ARGS=	-d ${WRKDIR}/${DISTNAME} --forward --quiet -E ${PATCH_STRIP:Q}
+CONFIGURE_DIRS=	src/c
 
 CFLAGS.SunOS+=	-D_POSIX_PTHREAD_SEMANTICS
 LIBS.SunOS+=	-lnsl -lsocket
