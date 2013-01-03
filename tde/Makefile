@@ -1,24 +1,25 @@
-# $NetBSD: Makefile,v 1.6 2012/10/07 17:17:27 asau Exp $
+# $NetBSD: Makefile,v 1.7 2013/01/03 13:06:34 othyro Exp $
 
-DISTNAME=		tde-5.1u
-PKGNAME=		tde-5.1.20
-CATEGORIES=		editors
-MASTER_SITES=		http://www.geocities.com/jadoxa/tde/
+DISTNAME=	tde-5.1v
+CATEGORIES=	editors
+MASTER_SITES=	http://adoxa.3eeweb.com/tde/
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		${MASTER_SITES}
-COMMENT=		Thomson-Davis Editor
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://adoxa.3eeweb.com/tde/
+COMMENT=	Thomson-Davis Editor
+#LICENSE=	XXX ?
 
-PKG_DESTDIR_SUPPORT=	none
+USE_TOOLS+=	gmake
+MAKE_FILE=	makefile
+BUILD_TARGET=	tde
 
-USE_TOOLS+=		gmake
-MAKE_FILE=		makefile
-BUILD_TARGET=		tde
+SUBST_CLASSES+=		prefix
+SUBST_FILES.prefix=	makefile
+SUBST_MESSAGE.prefix=	Fixing PREFIX path.
+SUBST_SED.prefix=	-e "s|/usr/local|${PREFIX}|g"
+SUBST_STAGE.prefix=     post-patch
 
-SUBST_CLASSES+=		base
-SUBST_MESSAGE.base=	Configuring to use LOCALBASE.
-SUBST_STAGE.base=	post-patch
-SUBST_FILES.base=	makefile
-SUBST_SED.base=		-e 's,/usr/local,${PREFIX},g'
+INSTALLATION_DIRS+=	bin
 
+.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

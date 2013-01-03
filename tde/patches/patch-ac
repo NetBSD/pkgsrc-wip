@@ -1,6 +1,8 @@
-$NetBSD: patch-ac,v 1.1.1.1 2005/11/20 17:25:42 bencollver Exp $
+$NetBSD: patch-ac,v 1.2 2013/01/03 13:06:34 othyro Exp $
 
---- unix/console.c.orig	2003-12-05 16:47:02.000000000 -0800
+Only include Linux stuff if OPSYS=Linux.
+
+--- unix/console.c.orig	2007-04-01 01:20:16.000000000 +0000
 +++ unix/console.c
 @@ -64,8 +64,10 @@
  #include "tdefunc.h"
@@ -45,7 +47,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2005/11/20 17:25:42 bencollver Exp $
       shift = ERROR;
    return( shift );
  }
-@@ -522,9 +528,13 @@ int  capslock_active( void )
+@@ -528,9 +534,13 @@ int  capslock_active( void )
  {
  int  kbled;
  
@@ -59,7 +61,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2005/11/20 17:25:42 bencollver Exp $
  }
  
  
-@@ -846,11 +856,13 @@ void set_cursor_size( int csize )
+@@ -852,11 +862,13 @@ void set_cursor_size( int csize )
   */
  void set_overscan_color( int color )
  {

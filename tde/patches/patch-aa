@@ -1,6 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/11/20 17:25:42 bencollver Exp $
+$NetBSD: patch-aa,v 1.2 2013/01/03 13:06:34 othyro Exp $
 
---- makefile.orig	2005-09-19 22:17:56.000000000 -0700
+Don't hardcode things like CFLAGS, LIBS, bindir, etc.
+
+--- makefile.orig	2005-09-20 05:17:56.000000000 +0000
 +++ makefile
 @@ -39,8 +39,8 @@ STRIP = strip
  #STRIP = true
@@ -31,3 +33,14 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/11/20 17:25:42 bencollver Exp $
  else
  ifeq ($(OS),win32)
  PROJ	= tdew.exe
+@@ -148,8 +146,8 @@ install: $(PROJ)
+ 	-$(STRIP) $(PROJ)
+ 	-$(DJP) $(PROJ)
+ ifeq ($(OS),unix)
+-	cp $(PROJ) $(bindir)
+-	ln -fs $(bindir)/$(PROJ) $(bindir)/tdv
++	cp $(PROJ) ${DESTDIR}$(bindir)
++	ln -fs ${DESTDIR}$(bindir)/$(PROJ) ${DESTDIR}$(bindir)/tdv
+ else
+ 	cp $(PROJ) $(bindir)/tde.exe
+ 	cp $(LINK) $(bindir)
