@@ -1,8 +1,8 @@
-$NetBSD: patch-source_Irrlicht_os.cpp,v 1.1.1.1 2011/02/24 15:12:08 pallegra Exp $
+$NetBSD: patch-source_Irrlicht_os.cpp,v 1.2 2013/01/03 07:14:54 ryo-on Exp $
 
---- source/Irrlicht/os.cpp.orig	2010-10-24 09:42:48.000000000 +0000
+--- source/Irrlicht/os.cpp.orig	2012-11-03 09:08:08.000000000 +0000
 +++ source/Irrlicht/os.cpp
-@@ -19,7 +19,7 @@
+@@ -22,7 +22,7 @@
  	#include <libkern/OSByteOrder.h>
  	#define bswap_16(X) OSReadSwapInt16(&X,0)
  	#define bswap_32(X) OSReadSwapInt32(&X,0)

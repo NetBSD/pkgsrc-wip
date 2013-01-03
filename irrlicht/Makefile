@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2012/11/13 22:25:35 othyro Exp $
+# $NetBSD: Makefile,v 1.4 2013/01/03 07:14:54 ryo-on Exp $
 #
 
-DISTNAME=	irrlicht-1.7.2
+DISTNAME=	irrlicht-1.8
 CATEGORIES=	graphics games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=irrlicht/}
 EXTRACT_SUFX=	.zip
@@ -18,6 +18,12 @@ USE_LIBTOOL=	yes
 MAKE_ENV=	NDEBUG=1
 BUILD_DIRS=	source/Irrlicht
 BUILD_TARGET=	sharedlib
+
+CXXFLAGS+=	-DNO_IRR_COMPILE_WITH_JOYSTICK_EVENTS_=1
+CXXFLAGS+=	-DNO_IRR_USE_NON_SYSTEM_JPEG_LIB_=1
+CXXFLAGS+=	-DNO_IRR_USE_NON_SYSTEM_LIB_PNG_=1
+CXXFLAGS+=	-DNO_IRR_USE_NON_SYSTEM_ZLIB_=1
+CXXFLAGS+=	-DNO_IRR_USE_NON_SYSTEM_BZLIB_=1
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
