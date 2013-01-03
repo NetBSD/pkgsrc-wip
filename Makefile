@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5047 2013/01/03 13:04:45 ryo-on Exp $
+# $Id: Makefile,v 1.5048 2013/01/03 14:26:48 ryo-on Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2392,7 +2392,6 @@ SUBDIR+=	py-fiat
 SUBDIR+=	py-figleaf
 SUBDIR+=	py-fipy
 SUBDIR+=	py-fitsarray
-SUBDIR+=	py-flakes
 SUBDIR+=	py-formex
 SUBDIR+=	py-forthon
 SUBDIR+=	py-fs
@@ -2529,7 +2528,6 @@ SUBDIR+=	py-parsing
 SUBDIR+=	py-pcapy
 SUBDIR+=	py-peak-rules
 SUBDIR+=	py-pebl
-SUBDIR+=	py-pep8
 SUBDIR+=	py-piquant
 SUBDIR+=	py-pkginfo
 SUBDIR+=	py-plex
