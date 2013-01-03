@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5048 2013/01/03 14:26:48 ryo-on Exp $
+# $Id: Makefile,v 1.5049 2013/01/03 21:07:39 mrampke Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1352,6 +1352,7 @@ SUBDIR+=	libassa
 SUBDIR+=	libavc1394
 SUBDIR+=	libbfio
 SUBDIR+=	libbrahe
+SUBDIR+=	libbsd
 SUBDIR+=	libbtctl
 SUBDIR+=	libburn
 SUBDIR+=	libcerror
