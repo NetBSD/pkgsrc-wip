@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/01/03 21:11:34 mrampke Exp $
+
+SHA1 (libbsd-0.4.2.tar.gz) = b9dd0b0d217642bf6519b4a5e386b30a73ad5c08
+RMD160 (libbsd-0.4.2.tar.gz) = eeaa86e3cc4b8d3c8599952e6f9f1b2f1a4b78f4
+Size (libbsd-0.4.2.tar.gz) = 442436 bytes
