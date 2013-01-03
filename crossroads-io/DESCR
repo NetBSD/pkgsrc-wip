@@ -1,0 +1,12 @@
+Crossroads I/O...
+
+...is lego bricks for building scalable and high performance distributed
+   applications.
+...is what BSD sockets might have looked like if designed for today's
+   requirements.
+...is message based, and supports many different network protocols.
+...works with all programming languages, all operating systems.
+...is part of a wider effort to make messaging a standard part of the networking
+   stack.
+...is Free Software licensed under the LGPL license.
+...is a fork of the ZeroMQ project.
