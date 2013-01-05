@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2013/01/03 21:21:36 mrampke Exp $
+# $NetBSD: Makefile,v 1.7 2013/01/05 22:22:45 kristerw Exp $
 #
 
 DISTNAME=	cpdup-1.17
@@ -26,7 +26,7 @@ do-install:
 # on platforms where libbsd is available, it is needed for MD5
 .if defined(USE_LIBBSD)
 MAKE_FLAGS+= -DLIBBSD
-.elif ${OS} == Darwin
+.elif ${OPSYS} == Darwin
 MAKE_FLAGS+= -DNOMD5
 .endif
 
