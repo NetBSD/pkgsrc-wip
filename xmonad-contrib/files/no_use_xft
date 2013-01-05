@@ -1,0 +1,10 @@
+--- xmonad-contrib.cabal.orig	2013-01-01 10:32:44.000000000 +0900
++++ xmonad-contrib.cabal	2013-01-02 16:47:51.000000000 +0900
+@@ -49,6 +49,7 @@
+ 
+ flag use_xft
+   description: Use Xft to render text
++  default: False
+ 
+ flag testing
+   description: Testing mode
