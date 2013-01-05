@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2010/11/02 16:11:16 phonohawk Exp $
+# $NetBSD: Makefile,v 1.3 2013/01/05 13:42:03 szptvlfn Exp $
 #
 
-DISTNAME=	transformers-0.2.2.0
+DISTNAME=	transformers-0.3.0.0
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org

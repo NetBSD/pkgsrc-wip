@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2010/11/02 16:11:16 phonohawk Exp $
+$NetBSD: distinfo,v 1.3 2013/01/05 13:42:03 szptvlfn Exp $
 
-SHA1 (transformers-0.2.2.0.tar.gz) = 69361d6afeef9eb7cc0c759c34844db367a64f89
-RMD160 (transformers-0.2.2.0.tar.gz) = 1b0f20324b5ceb3e9c8073d7f18c2e2b2cdbff3e
-Size (transformers-0.2.2.0.tar.gz) = 17148 bytes
+SHA1 (transformers-0.3.0.0.tar.gz) = 09c51f1ab5ecaa8a3ede836722faf373203cb735
+RMD160 (transformers-0.3.0.0.tar.gz) = 110bd7eb44609d8db44d85f8367db323576545dc
+Size (transformers-0.3.0.0.tar.gz) = 20087 bytes
