@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.2 2011/11/21 18:24:43 absd Exp $
+@comment $NetBSD: PLIST,v 1.3 2013/01/05 13:35:18 szptvlfn Exp $
 lib/X11-xft-${PKGVERSION}/${HASKELL_VERSION}/Graphics/X11/Xft.hi
+lib/X11-xft-${PKGVERSION}/${HASKELL_VERSION}/Graphics/X11/Xft.p_hi
 lib/X11-xft-${PKGVERSION}/${HASKELL_VERSION}/Graphics/X11/Xrender.hi
-${PLIST.prof}lib/X11-xft-${PKGVERSION}/${HASKELL_VERSION}/Graphics/X11/Xft.p_hi
-${PLIST.prof}lib/X11-xft-${PKGVERSION}/${HASKELL_VERSION}/Graphics/X11/Xrender.p_hi
+lib/X11-xft-${PKGVERSION}/${HASKELL_VERSION}/Graphics/X11/Xrender.p_hi
 lib/X11-xft-${PKGVERSION}/${HASKELL_VERSION}/HSX11-xft-${PKGVERSION}.o
 lib/X11-xft-${PKGVERSION}/${HASKELL_VERSION}/libHSX11-xft-${PKGVERSION}.a
-${PLIST.prof}lib/X11-xft-${PKGVERSION}/${HASKELL_VERSION}/libHSX11-xft-${PKGVERSION}_p.a
+lib/X11-xft-${PKGVERSION}/${HASKELL_VERSION}/libHSX11-xft-${PKGVERSION}_p.a
 lib/X11-xft-${PKGVERSION}/${HASKELL_VERSION}/package-description
 share/doc/X11-xft-${PKGVERSION}/LICENSE
 ${PLIST.doc}share/doc/X11-xft-${PKGVERSION}/html/Graphics-X11-Xft.html
