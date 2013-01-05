@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2010/04/16 22:19:58 emil_s Exp $
+# $NetBSD: Makefile,v 1.9 2013/01/05 13:26:31 szptvlfn Exp $
 DISTNAME=	X11-${VERSION}
 PKGNAME=	hs-x11-${VERSION}
-VERSION=	1.5.0.0
+VERSION=	1.6.0.2
 CATEGORIES=	devel
 
 MAINTAINER=	esg@sdf.lonestar.org
