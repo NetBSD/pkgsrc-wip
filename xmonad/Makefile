@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2010/04/16 22:19:59 emil_s Exp $
+# $NetBSD: Makefile,v 1.11 2013/01/05 14:11:02 szptvlfn Exp $
 DISTNAME=	xmonad-${VERSION}
 PKGNAME=	xmonad-${VERSION}
-VERSION=	0.9.1
+VERSION=	0.11
 CATEGORIES=	wm
 
 MAINTAINER=	esg@sdf.lonestar.org
@@ -10,10 +10,10 @@ COMMENT=	Tiling window manager
 
 LICENSE=	modified-bsd
 
-BUILDLINK_API_DEPENDS.hs-x11+=	hs-x11>=1.5.0.0
-BUILDLINK_API_DEPENDS.hs-x11+=	hs-x11<1.6
 
 .include "../../x11/libX11/buildlink3.mk"
+.include "../../wip/hs-mtl/buildlink3.mk"
+.include "../../wip/hs-utf8-string/buildlink3.mk"
 .include "../../wip/hs-x11/buildlink3.mk"
 .include "../../wip/mk/haskell.mk"
 .include "../../mk/bsd.pkg.mk"
