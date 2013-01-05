@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2011/01/14 06:52:43 phonohawk Exp $
+# $NetBSD: Makefile,v 1.7 2013/01/05 13:15:00 szptvlfn Exp $
 #
 
-DISTNAME=	mtl-2.0.1.0
-PKGREVISION=	1
+DISTNAME=	mtl-2.1.2
 CATEGORIES=	devel
 LICENSE=	modified-bsd
 

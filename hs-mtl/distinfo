@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2010/12/30 06:54:21 phonohawk Exp $
+$NetBSD: distinfo,v 1.3 2013/01/05 13:15:00 szptvlfn Exp $
 
-SHA1 (mtl-2.0.1.0.tar.gz) = ecb67ee33aebe5877f07c69767c6a4906e9ff024
-RMD160 (mtl-2.0.1.0.tar.gz) = a8c5472ee6fd6b0ecc2a255abbf35f2269bd248c
-Size (mtl-2.0.1.0.tar.gz) = 14124 bytes
+SHA1 (mtl-2.1.2.tar.gz) = 657b7a3aafb944dde2520c37792a6933612c70c7
+RMD160 (mtl-2.1.2.tar.gz) = aa5c576c124b602a605cf3931ac42c1c1eb27cda
+Size (mtl-2.1.2.tar.gz) = 13723 bytes
