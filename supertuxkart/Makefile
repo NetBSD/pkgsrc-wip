@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/01/03 13:03:29 ryo-on Exp $
+# $NetBSD: Makefile,v 1.2 2013/01/06 10:30:36 ryo-on Exp $
 #
 
 DISTNAME=	supertuxkart-0.8-src
@@ -29,6 +29,7 @@ SUBST_MESSAGE.dos_eol=	Removing DOS line-ends
 SUBST_STAGE.dos_eol=	post-extract
 SUBST_FILES.dos_eol=	lib/irrlicht/source/Irrlicht/Makefile
 SUBST_FILES.dos_eol+=	lib/irrlicht/source/Irrlicht/os.cpp
+SUBST_FILES.dos_eol+=	lib/irrlicht/source/Irrlicht/COSOperator.cpp
 SUBST_FILTER_CMD.dos_eol=	${TR} -d '\r'
 
 pre-build:
