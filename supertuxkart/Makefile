@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/01/06 10:30:36 ryo-on Exp $
+# $NetBSD: Makefile,v 1.3 2013/01/06 14:15:10 ryo-on Exp $
 #
 
 DISTNAME=	supertuxkart-0.8-src
@@ -24,6 +24,9 @@ CXXFLAGS+=	-DNO_IRR_USE_NON_SYSTEM_LIB_PNG_=1
 CXXFLAGS+=	-DNO_IRR_USE_NON_SYSTEM_ZLIB_=1
 CXXFLAGS+=	-DNO_IRR_USE_NON_SYSTEM_BZLIB_=1
 
+# Debug nob for STK
+#CMAKE_ARGS+=	-DCMAKE_BUILD_TYPE=Debug
+
 SUBST_CLASSES+=		dos_eol
 SUBST_MESSAGE.dos_eol=	Removing DOS line-ends
 SUBST_STAGE.dos_eol=	post-extract
@@ -31,6 +34,11 @@ SUBST_FILES.dos_eol=	lib/irrlicht/source/Irrlicht/Makefile
 SUBST_FILES.dos_eol+=	lib/irrlicht/source/Irrlicht/os.cpp
 SUBST_FILES.dos_eol+=	lib/irrlicht/source/Irrlicht/COSOperator.cpp
 SUBST_FILTER_CMD.dos_eol=	${TR} -d '\r'
+
+# for irrlicht debugging
+#pre-build:
+#	cd ${WRKSRC}/lib/irrlicht/source/Irrlicht && \
+#		${MAKE_ENV} DEBUG=1 make -j ${MAKE_JOBS}
 
 pre-build:
 	cd ${WRKSRC}/lib/irrlicht/source/Irrlicht && \
