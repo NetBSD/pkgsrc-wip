@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2010/12/16 16:07:55 lexort Exp $
+@comment $NetBSD: PLIST,v 1.7 2013/01/06 22:09:20 mlresnick Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -13,12 +13,23 @@ ${PYSITELIB}/timingandestimationplugin/api.pyo
 ${PYSITELIB}/timingandestimationplugin/dbhelper.py
 ${PYSITELIB}/timingandestimationplugin/dbhelper.pyc
 ${PYSITELIB}/timingandestimationplugin/dbhelper.pyo
+${PYSITELIB}/timingandestimationplugin/hours_layout_changer.py
+${PYSITELIB}/timingandestimationplugin/hours_layout_changer.pyc
+${PYSITELIB}/timingandestimationplugin/hours_layout_changer.pyo
+${PYSITELIB}/timingandestimationplugin/htdocs/StopwatchControls.js
+${PYSITELIB}/timingandestimationplugin/htdocs/StopwatchDisplay.js
+${PYSITELIB}/timingandestimationplugin/htdocs/Toggler.js
 ${PYSITELIB}/timingandestimationplugin/htdocs/billingplugin.css
+${PYSITELIB}/timingandestimationplugin/htdocs/change_layout.js
+${PYSITELIB}/timingandestimationplugin/htdocs/date.js
 ${PYSITELIB}/timingandestimationplugin/htdocs/field_disabler.js
 ${PYSITELIB}/timingandestimationplugin/htdocs/formatDate.js
 ${PYSITELIB}/timingandestimationplugin/htdocs/linkifyer.js
 ${PYSITELIB}/timingandestimationplugin/htdocs/query.js
+${PYSITELIB}/timingandestimationplugin/htdocs/stopwatch.css
+${PYSITELIB}/timingandestimationplugin/htdocs/stopwatch.js
 ${PYSITELIB}/timingandestimationplugin/htdocs/ticket.js
+${PYSITELIB}/timingandestimationplugin/htdocs/whitespace_remover.js
 ${PYSITELIB}/timingandestimationplugin/query_webui.py
 ${PYSITELIB}/timingandestimationplugin/query_webui.pyc
 ${PYSITELIB}/timingandestimationplugin/query_webui.pyo
@@ -31,6 +42,9 @@ ${PYSITELIB}/timingandestimationplugin/reports.pyo
 ${PYSITELIB}/timingandestimationplugin/statuses.py
 ${PYSITELIB}/timingandestimationplugin/statuses.pyc
 ${PYSITELIB}/timingandestimationplugin/statuses.pyo
+${PYSITELIB}/timingandestimationplugin/stopwatch.py
+${PYSITELIB}/timingandestimationplugin/stopwatch.pyc
+${PYSITELIB}/timingandestimationplugin/stopwatch.pyo
 ${PYSITELIB}/timingandestimationplugin/tande_filters.py
 ${PYSITELIB}/timingandestimationplugin/tande_filters.pyc
 ${PYSITELIB}/timingandestimationplugin/tande_filters.pyo

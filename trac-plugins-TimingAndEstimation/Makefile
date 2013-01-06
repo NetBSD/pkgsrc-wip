@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2012/10/07 17:17:47 asau Exp $
+# $NetBSD: Makefile,v 1.10 2013/01/06 22:09:20 mlresnick Exp $
 
-SVNVERSION=	5370
+SVNVERSION=	11739
 # Eggs do not have the same name and do not include the SVN revision.
-EGG_VERSION=	0.7.6
+EGG_VERSION=	1.2.8
 VERSION=	${EGG_VERSION}.${SVNVERSION}
 DISTNAME=	TracTimingAndEstimation-${VERSION}
 EGG_NAME=	timingandestimationplugin-${EGG_VERSION}
@@ -16,10 +16,10 @@ MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	http://trac-hacks.org/wiki/TimingAndEstimationPlugin
 COMMENT=	TimingAndEstimation plugin for Trac
 
-DEPENDS+=	{ja-,}trac>=0.11:../../www/trac
+DEPENDS+=	{ja-,}trac>=0.12:../../www/trac
 
 SVN_REPOSITORIES=	plugin
-SVN_ROOT.plugin=	http://trac-hacks.org/svn/timingandestimationplugin/branches/trac0.11
+SVN_ROOT.plugin=	http://trac-hacks.org/svn/timingandestimationplugin/branches/trac0.12
 SVN_TAG.plugin=		${SVNVERSION}
 
 NO_CHECKSUM=	yes
