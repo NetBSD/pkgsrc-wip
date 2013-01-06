@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.116 2012/11/07 06:38:37 makoto Exp $
+@comment $NetBSD: PLIST,v 1.117 2013/01/06 15:20:16 makoto Exp $
 bin/ctags
 bin/ebrowse
 bin/emacs
@@ -9,6 +9,7 @@ bin/grep-changelog
 info/ada-mode.info.gz
 info/auth.info.gz
 info/autotype.info.gz
+info/bovine.info.gz
 info/calc.info.gz
 info/ccmode.info.gz
 info/cl.info.gz
@@ -33,6 +34,7 @@ info/eudc.info.gz
 info/flymake.info.gz
 info/forms.info.gz
 info/gnus.info.gz
+info/htmlfontify.info.gz
 info/idlwave.info.gz
 info/info.info.gz
 info/mairix-el.info.gz
@@ -53,11 +55,13 @@ info/ses.info.gz
 info/sieve.info.gz
 info/smtpmail.info.gz
 info/speedbar.info.gz
+info/srecode.info.gz
 info/tramp.info.gz
 info/url.info.gz
 info/vip.info.gz
 info/viper.info.gz
 info/widget.info.gz
+info/wisent.info.gz
 info/woman.info.gz
 libexec/emacs/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/hexl
 libexec/emacs/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/movemail
@@ -945,6 +949,7 @@ share/emacs/${PKGVERSION}/etc/srecode/wisent.srt
 share/emacs/${PKGVERSION}/etc/themes/adwaita-theme.el
 share/emacs/${PKGVERSION}/etc/themes/deeper-blue-theme.el
 share/emacs/${PKGVERSION}/etc/themes/dichromacy-theme.el
+share/emacs/${PKGVERSION}/etc/themes/leuven-theme.el
 share/emacs/${PKGVERSION}/etc/themes/light-blue-theme.el
 share/emacs/${PKGVERSION}/etc/themes/manoj-dark-theme.el
 share/emacs/${PKGVERSION}/etc/themes/misterioso-theme.el
@@ -1771,6 +1776,8 @@ share/emacs/${PKGVERSION}/lisp/emacs-lisp/macroexp.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/macroexp.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/map-ynp.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/map-ynp.elc
+share/emacs/${PKGVERSION}/lisp/emacs-lisp/nadvice.el.gz
+share/emacs/${PKGVERSION}/lisp/emacs-lisp/nadvice.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/package-x.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/package-x.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/package.el.gz
@@ -2551,8 +2558,6 @@ share/emacs/${PKGVERSION}/lisp/loadhist.elc
 share/emacs/${PKGVERSION}/lisp/loadup.el
 share/emacs/${PKGVERSION}/lisp/locate.el.gz
 share/emacs/${PKGVERSION}/lisp/locate.elc
-share/emacs/${PKGVERSION}/lisp/longlines.el.gz
-share/emacs/${PKGVERSION}/lisp/longlines.elc
 share/emacs/${PKGVERSION}/lisp/lpr.el.gz
 share/emacs/${PKGVERSION}/lisp/lpr.elc
 share/emacs/${PKGVERSION}/lisp/ls-lisp.el.gz
@@ -2800,6 +2805,8 @@ share/emacs/${PKGVERSION}/lisp/net/telnet.el.gz
 share/emacs/${PKGVERSION}/lisp/net/telnet.elc
 share/emacs/${PKGVERSION}/lisp/net/tls.el.gz
 share/emacs/${PKGVERSION}/lisp/net/tls.elc
+share/emacs/${PKGVERSION}/lisp/net/tramp-adb.el.gz
+share/emacs/${PKGVERSION}/lisp/net/tramp-adb.elc
 share/emacs/${PKGVERSION}/lisp/net/tramp-cache.el.gz
 share/emacs/${PKGVERSION}/lisp/net/tramp-cache.elc
 share/emacs/${PKGVERSION}/lisp/net/tramp-cmds.el.gz
@@ -2915,6 +2922,8 @@ share/emacs/${PKGVERSION}/lisp/obsolete/levents.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/levents.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/lmenu.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/lmenu.elc
+share/emacs/${PKGVERSION}/lisp/obsolete/longlines.el.gz
+share/emacs/${PKGVERSION}/lisp/obsolete/longlines.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/lucid.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/lucid.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/mailpost.el.gz
@@ -2958,6 +2967,8 @@ share/emacs/${PKGVERSION}/lisp/obsolete/swedish.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/swedish.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/sym-comp.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/sym-comp.elc
+share/emacs/${PKGVERSION}/lisp/obsolete/terminal.el.gz
+share/emacs/${PKGVERSION}/lisp/obsolete/terminal.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/vc-mcvs.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/vc-mcvs.elc
 share/emacs/${PKGVERSION}/lisp/org/ob-C.el.gz
@@ -3585,8 +3596,6 @@ share/emacs/${PKGVERSION}/lisp/term/x-win.el.gz
 share/emacs/${PKGVERSION}/lisp/term/x-win.elc
 share/emacs/${PKGVERSION}/lisp/term/xterm.el.gz
 share/emacs/${PKGVERSION}/lisp/term/xterm.elc
-share/emacs/${PKGVERSION}/lisp/terminal.el.gz
-share/emacs/${PKGVERSION}/lisp/terminal.elc
 share/emacs/${PKGVERSION}/lisp/textmodes/artist.el.gz
 share/emacs/${PKGVERSION}/lisp/textmodes/artist.elc
 share/emacs/${PKGVERSION}/lisp/textmodes/bib-mode.el.gz
