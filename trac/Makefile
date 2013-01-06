@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2012/10/07 17:17:45 asau Exp $
+# $NetBSD: Makefile,v 1.16 2013/01/06 09:11:17 obache Exp $
 #
 
-DISTNAME=	Trac-0.12.2
+DISTNAME=	Trac-1.0
 PKGNAME=	${DISTNAME:tl}
 EGG_NAME=	${DISTNAME}
 CATEGORIES=	devel www
@@ -17,7 +17,7 @@ USE_TOOLS+=	pax
 
 DEPENDS+=	${PYPKGPREFIX}-genshi>=0.6:../../www/py-genshi
 
-REPLACE_PYTHON=	cgi-bin/trac.cgi cgi-bin/trac.fcgi
+REPLACE_PYTHON=	contrib/cgi-bin/trac.cgi contrib/cgi-bin/trac.fcgi
 REPLACE_PYTHON+=contrib/*.py contrib/*-hook contrib/workflow/*.py
 REPLACE_PYTHON+=trac/admin/templates/deploy_trac.* trac/tests/functional/*.py
 
@@ -29,7 +29,7 @@ INSTALLATION_DIRS+=	libexec/cgi-bin ${EGDIR}
 
 post-install:
 .for cgi in trac.cgi trac.fcgi
-	${INSTALL_SCRIPT} ${WRKSRC}/cgi-bin/${cgi} ${DESTDIR}${PREFIX}/libexec/cgi-bin
+	${INSTALL_SCRIPT} ${WRKSRC}/contrib/cgi-bin/${cgi} ${DESTDIR}${PREFIX}/libexec/cgi-bin
 .endfor
 	cd ${WRKSRC}/contrib && \
 		pax -rw -pp -pm . ${DESTDIR}${PREFIX}/${EGDIR}
