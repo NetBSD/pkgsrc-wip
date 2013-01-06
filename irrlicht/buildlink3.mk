@@ -1,4 +1,5 @@
-# $NetBSD: buildlink3.mk,v 1.2 2013/01/03 07:14:54 ryo-on Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2013/01/06 14:13:27 ryo-on Exp $
+
 BUILDLINK_TREE+=	irrlicht
 
 .if !defined(IRRLICHT_BUILDLINK3_MK)
