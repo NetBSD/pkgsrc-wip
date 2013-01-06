@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1 2013/01/06 23:09:41 othyro Exp $
+bin/compiz-boxmenu
+bin/compiz-boxmenu-daemon
+bin/compiz-boxmenu-dlist
+bin/compiz-boxmenu-editor
+bin/compiz-boxmenu-vplist
+bin/compiz-boxmenu-wlist
+share/cb-editor/cb-editor
+share/cb-editor/cb_itemtypes.py
+share/cb-editor/cbmenu.py
+share/cb-editor/cbutil.py
+share/cb-editor/pyicon_browser.py
+share/dbus-1/services/org.compiz_fusion.boxmenu.service
+share/examples/xdg/compiz/boxmenu/menu.xml
+share/examples/xdg/compiz/boxmenu/precache.ini
+share/icons/hicolor/scalable/apps/cbmenu.svg

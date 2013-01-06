@@ -1,0 +1,11 @@
+A desktop menu for compiz, forked from compiz-deskmenu by crdlb. Introduces
+extensive icon support, pipeitems, recent documents list, and more! Features:
+
+* Pipemenus allow dynamically generated items to be inserted into a submenu
+* Recent documents list with customizable URI command
+* Extended icon support over the original
+* Caches menu files for quicker callup (dbus version only)
+* Pin menus for persistent launching (dbus version only)
+* Call up recent documents list, viewport list, and windowlist on their own
+  (dbus version only)
+* Several bugfixes
