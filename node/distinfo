@@ -1,12 +1,12 @@
-$NetBSD: distinfo,v 1.20 2012/11/13 15:29:30 fhajny Exp $
+$NetBSD: distinfo,v 1.21 2013/01/07 14:58:40 fhajny Exp $
 
-SHA1 (node-v0.8.14.tar.gz) = 47a1186004f6ce5e25a8555429d72b15519bc7f1
-RMD160 (node-v0.8.14.tar.gz) = eecf3c3a400f54ef5ac6ef12b7539e1cca87291c
-Size (node-v0.8.14.tar.gz) = 11861540 bytes
+SHA1 (node-v0.8.16.tar.gz) = 6479366bfbc2b4392f7f496dec55b5ab719308c0
+RMD160 (node-v0.8.16.tar.gz) = 256aef54ae4a14e05e0b98447bf7ce7be47b388b
+Size (node-v0.8.16.tar.gz) = 11899509 bytes
 SHA1 (patch-common.gypi) = 427e299ec84722321240878e2e6df5860909ee16
 SHA1 (patch-deps_uv_common.gypi) = 556d40673e4e2deff8ade09c03dec3c301ab3464
 SHA1 (patch-deps_uv_src_unix_netbsd.c) = e812ed14e06350adde7aa6fd438c1aa6c9af1e73
 SHA1 (patch-deps_uv_uv.gyp) = 8614c63b2436a9062b3fe67ee80656d1cde920d7
 SHA1 (patch-deps_v8_tools_gyp_v8.gyp) = 0f2804eaa72eef282c19c3cd045082864d78b6fd
 SHA1 (patch-node.gyp) = 570a5fe1bc86e86a3271f5faf1cd1b6a59faa765
-SHA1 (patch-tools_install.py) = 81f18d26e68fc72a7d6a5ab8a8c80390145a9cfc
+SHA1 (patch-tools_install.py) = b50748cd6abb4fd072d196dfa3a7c252e1c5d1da

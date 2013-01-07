@@ -1,14 +1,14 @@
-$NetBSD: patch-tools_install.py,v 1.1 2012/08/09 13:03:45 fhajny Exp $
+$NetBSD: patch-tools_install.py,v 1.2 2013/01/07 14:58:40 fhajny Exp $
 
 Install man pages under the right directory.
---- tools/install.py.orig	2012-08-07 18:56:58.000000000 +0000
+--- tools/install.py.orig	2012-12-12 22:44:54.000000000 +0000
 +++ tools/install.py
-@@ -191,7 +191,7 @@ def files(action):
-           'deps/uv/include/uv-private/uv-unix.h',
-           'deps/uv/include/uv-private/uv-win.h'],
-           'include/node/uv-private/')
--  action(['doc/node.1'], 'share/man/man1/')
-+  action(['doc/node.1'], '@PKGMANDIR@/man1/')
-   action(['out/Release/node'], 'bin/node')
+@@ -201,7 +201,7 @@ def files(action):
+   if 'freebsd' in sys.platform:
+     action(['doc/node.1'], 'man/man1/')
+   else:
+-    action(['doc/node.1'], 'share/man/man1/')
++    action(['doc/node.1'], '@PKGMANDIR@/man1/')
  
-   # install unconditionally, checking if the platform supports dtrace doesn't
+   if 'true' == variables.get('node_install_waf'): waf_files(action)
+   if 'true' == variables.get('node_install_npm'): npm_files(action)

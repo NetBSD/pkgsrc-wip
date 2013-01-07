@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2012/11/13 15:29:30 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.14 2013/01/07 14:58:40 fhajny Exp $
 bin/node
 bin/node-waf
 bin/npm
@@ -583,6 +583,11 @@ lib/node_modules/npm/node_modules/minimatch/.travis.yml
 lib/node_modules/npm/node_modules/minimatch/LICENSE
 lib/node_modules/npm/node_modules/minimatch/README.md
 lib/node_modules/npm/node_modules/minimatch/minimatch.js
+lib/node_modules/npm/node_modules/minimatch/node_modules/sigmund/LICENSE
+lib/node_modules/npm/node_modules/minimatch/node_modules/sigmund/README.md
+lib/node_modules/npm/node_modules/minimatch/node_modules/sigmund/bench.js
+lib/node_modules/npm/node_modules/minimatch/node_modules/sigmund/package.json
+lib/node_modules/npm/node_modules/minimatch/node_modules/sigmund/sigmund.js
 lib/node_modules/npm/node_modules/minimatch/package.json
 lib/node_modules/npm/node_modules/mkdirp/.npmignore
 lib/node_modules/npm/node_modules/mkdirp/.travis.yml
@@ -591,6 +596,7 @@ lib/node_modules/npm/node_modules/mkdirp/README.markdown
 lib/node_modules/npm/node_modules/mkdirp/examples/pow.js
 lib/node_modules/npm/node_modules/mkdirp/index.js
 lib/node_modules/npm/node_modules/mkdirp/package.json
+lib/node_modules/npm/node_modules/node-gyp/.jshintrc
 lib/node_modules/npm/node_modules/node-gyp/.npmignore
 lib/node_modules/npm/node_modules/node-gyp/LICENSE
 lib/node_modules/npm/node_modules/node-gyp/README.md
@@ -824,7 +830,10 @@ lib/node_modules/npm/node_modules/slide/lib/slide.js
 lib/node_modules/npm/node_modules/slide/package.json
 lib/node_modules/npm/node_modules/tar/.npmignore
 lib/node_modules/npm/node_modules/tar/.travis.yml
+lib/node_modules/npm/node_modules/tar/LICENCE
 lib/node_modules/npm/node_modules/tar/README.md
+lib/node_modules/npm/node_modules/tar/examples/extracter.js
+lib/node_modules/npm/node_modules/tar/examples/reader.js
 lib/node_modules/npm/node_modules/tar/lib/buffer-entry.js
 lib/node_modules/npm/node_modules/tar/lib/entry-writer.js
 lib/node_modules/npm/node_modules/tar/lib/entry.js

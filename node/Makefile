@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2012/11/13 15:29:30 fhajny Exp $
+# $NetBSD: Makefile,v 1.19 2013/01/07 14:58:40 fhajny Exp $
 #
 
-DISTNAME=	node-v0.8.14
+DISTNAME=	node-v0.8.16
 CATEGORIES=	devel
 MASTER_SITES=	http://nodejs.org/dist/${DISTNAME:S/node-//}/
 PKGNAME=	${DISTNAME:S/-v/js-/}
