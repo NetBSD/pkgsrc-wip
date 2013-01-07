@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/31 20:11:18 othyro Exp $
+# $NetBSD: Makefile,v 1.4 2013/01/07 13:30:24 thomasklausner Exp $
 #
 
 DISTNAME=	iwidgets-4.0.1
@@ -40,5 +40,5 @@ do-install:
 	${INSTALL_MAN} doc/collapsablewidget.n ${DESTDIR}${PREFIX}/${PKGMANDIR}/mann/ && \
 	${INSTALL_DATA} src/* ${DESTDIR}${PREFIX}/lib/iwidgets/incoming/
 
-.include "../../wip/tcl85-itcl/buildlink3.mk"
+.include "../../lang/tcl-itcl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
