@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5054 2013/01/08 03:56:52 othyro Exp $
+# $Id: Makefile,v 1.5055 2013/01/08 12:51:12 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2512,6 +2512,7 @@ SUBDIR+=	py-oasa
 SUBDIR+=	py-oct2py
 SUBDIR+=	py-omniORBpy
 SUBDIR+=	py-ontopy
+SUBDIR+=	py-openastro
 SUBDIR+=	py-openopt
 SUBDIR+=	py-opentmm
 SUBDIR+=	py-openxmllib
