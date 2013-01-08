@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.62 2012/11/23 22:33:30 othyro Exp $
+# $NetBSD: Makefile,v 1.63 2013/01/08 13:19:40 othyro Exp $
 #
 
 .include	"version.mk"
 DISTNAME=	emacs-${_EMACS_VERSION_MAJOR}.${_EMACS_VERSION_MINOR}.${_EMACS_VERSION_MICRO}
 #PKGNAME=	emacs-24.0.50
-PKGREVISION=	1
 CATEGORIES=	editors
 MASTER_SITES=	#
 
