@@ -1,0 +1,18 @@
+The open source astrology program openastro.org. Features:
+
+ * Natal/Radix Charts
+ * Transit Charts
+ * Synastry/Combine/Composite Charts
+ * Solar Return / Secondary Progressions
+ * Customizeable Planets & Aspects
+ * Additional celestial bodies: Chiron, Pholus, Ceres, Pallas, Juno, Vesta
+ * Fictional points: North/South Node, Day/Night Pars
+ * Cusp Aspects
+ * Monthly Timeline
+ * European and Traditional chart view
+ * Online Atlas (Geocoder) using google maps (virtually every location)
+ * Offline Atlas (Geonames) with about 80.000 major cities!
+ * Database export/import, Save as JPG, PNG, SVG, OAC
+ * Import from skylendar (*.skif), oroboros (*.xml)
+ * Import from astrolog32 (*.dat), zet8 dbase (*.zds)
+ * Ephemeris files for 1800 AD - 2400 AD (download seperately)
