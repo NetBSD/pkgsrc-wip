@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2013/01/08 03:55:32 othyro Exp $
+
+SHA1 (swe_unix_src_1.78.00.tar.gz) = f2e4fc60ce148282e8ee734a3023511566a18600
+RMD160 (swe_unix_src_1.78.00.tar.gz) = e79f32305a0a702f312200b2bc47247846df9cb6
+Size (swe_unix_src_1.78.00.tar.gz) = 4517350 bytes
+SHA1 (patch-src_Makefile) = 6f3167c75284438ebfd47c4fab12b28c2c56a6e1
+SHA1 (patch-src_swephexp.h) = f4990af25776b0c237b08c82158149fec323205f
