@@ -1,14 +1,10 @@
-$NetBSD: distinfo,v 1.4 2010/07/05 17:13:55 gduzan Exp $
+$NetBSD: distinfo,v 1.5 2013/01/08 22:37:27 makoto Exp $
 
-SHA1 (audacity-src-1.3.0b.tar.gz) = 6ba57ee1a3a9b6c57bf98142fbe4561b7cadf5db
-RMD160 (audacity-src-1.3.0b.tar.gz) = 4ada2e40799f60477d6c2aabb0b91bb03c8882f9
-Size (audacity-src-1.3.0b.tar.gz) = 4938302 bytes
-SHA1 (patch-aa) = 5494f3fb6035f15a4447556f8cf4a0a2404a2259
-SHA1 (patch-ab) = 8630488f5a89b1542ac2a9f01080c36f1eac7c7d
-SHA1 (patch-ac) = 00698c284e513e20f28ac536b206139ad87ab6d2
-SHA1 (patch-ad) = 820e5321a6558063d04ee8da11fc606d59e33046
-SHA1 (patch-ae) = e79a37496da81d0ea33c53eb3ca492bbb91edffc
-SHA1 (patch-ag) = 68bcbd932cd4440bc9090c6afc369cfcae54a16b
-SHA1 (patch-ah) = fc3690d514ebe0612c9a54a2f056d3f807ebbffe
-SHA1 (patch-ai) = 7b86df7d36ad94b1c924b301f7e93964eb09b688
-SHA1 (patch-aj) = 34b4cdd266345f04954983cc14e4b762f09f4df8
+SHA1 (audacity-minsrc-2.0.2.tar.bz2) = c5e4058346c96713a0d39fcd6b33f27137589b06
+RMD160 (audacity-minsrc-2.0.2.tar.bz2) = d79ca9ec93baf9cbf1a1673ca755f7edff7b8ab2
+Size (audacity-minsrc-2.0.2.tar.bz2) = 6794285 bytes
+SHA1 (patch-lib_src_libnyquist_nyquist_xlisp_xlisp_h) = 3a29f7c39465375faa72bb90878b7456d6bd2707
+SHA1 (patch-lib_src_portmixer_px__unix__oss_px__unix__oss.c) = 02fb3ffe8d5b0e80f8f736c1b6500bc394535faf
+SHA1 (patch-locale_Makefile.in) = 4e6c8fa1cbb59f5f59fa2944da5d643faf3eb0f7
+SHA1 (patch-src_AudioIO.cpp) = aa2592176c66ba7ad62efeb7f95b0e675f435ba4
+SHA1 (patch-src_effects_NoiseRemoval.cpp) = 6fc1026cecfcb726da93d7197e63598bc39f9080

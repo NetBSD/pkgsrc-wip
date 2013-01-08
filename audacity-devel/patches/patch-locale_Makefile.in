@@ -1,0 +1,15 @@
+$NetBSD: patch-locale_Makefile.in,v 1.1 2013/01/08 22:37:27 makoto Exp $
+
+xgettext: unknown option -- package-name=audacity
+
+--- audacity-src-2.0.2/locale/Makefile.in.orig	2012-08-21 17:47:16.000000000 +0900
++++ locale/Makefile.in	2013-01-08 23:52:17.000000000 +0900
+@@ -54,7 +54,7 @@ XARGS=xargs
+ XGETTEXT_ARGS=-F -C -k_ -k_NoAcc -kwxTRANSLATE \
+ 	--add-comments="i18n-hint" \
+ 	--msgid-bugs-address="audacity-translation@lists.sourceforge.net" \
+-	--package-name="${AUDACITY_NAME}" \
++#	--package-name="${AUDACITY_NAME}" \
+ 	--package-version="2.0.0" \
+ 	--copyright-holder="Audacity Development Team" \
+ 	--msgid-bugs-address="audacity-translation@lists.sourceforge.net"
