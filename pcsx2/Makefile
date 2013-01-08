@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/11/10 23:13:58 othyro Exp $
+# $NetBSD: Makefile,v 1.5 2013/01/08 16:53:56 thomasklausner Exp $
 #
 
 DISTNAME=	pcsx2-1.0.0r5412
@@ -9,7 +9,7 @@ CATEGORIES=	emulators
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pcsx2.net/
 COMMENT=	Playstation 2 Emulator
-#LICENSE=	gnu-gpl-v3 AND modified-bsd AND expatobjc-license AND gnu-gpl-v2 AND gnu-lgpl-v2.1 AND gnu-lgpl-v3 AND public-domain
+#LICENSE=	gnu-gpl-v3 AND modified-bsd AND mit AND gnu-gpl-v2 AND gnu-lgpl-v2.1 AND gnu-lgpl-v3 AND public-domain
 
 WRKSRC=		${WRKDIR}/pcsx2-1.0.0
 USE_LANGUAGES=	c c++
