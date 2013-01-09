@@ -1,11 +1,10 @@
-# $NetBSD: buildlink3.mk,v 1.3 2012/03/11 07:30:30 phonohawk Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2013/01/09 23:20:44 szptvlfn Exp $
 
 BUILDLINK_TREE+=	gtk2hs-buildtools
 
 .if !defined(GTK2HS_BUILDTOOLS_BUILDLINK3_MK)
 GTK2HS_BUILDTOOLS_BUILDLINK3_MK:=
 
-BUILDLINK_DEPMETHOD.gtk2hs-buildtools?=	build
 BUILDLINK_API_DEPENDS.gtk2hs-buildtools+=	gtk2hs-buildtools>=0.12.3
 BUILDLINK_PKGSRCDIR.gtk2hs-buildtools?=	../../wip/gtk2hs-buildtools
 
