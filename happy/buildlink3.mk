@@ -1,11 +1,10 @@
-# $NetBSD: buildlink3.mk,v 1.4 2012/02/11 04:51:12 phonohawk Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2013/01/09 23:34:20 szptvlfn Exp $
 
 BUILDLINK_TREE+=	happy
 
 .if !defined(HAPPY_BUILDLINK3_MK)
 HAPPY_BUILDLINK3_MK:=
 
-BUILDLINK_DEPMETHOD.happy?=	build
 BUILDLINK_API_DEPENDS.happy+=	happy>=1.18.9
 BUILDLINK_PKGSRCDIR.happy?=	../../wip/happy
 

@@ -1,11 +1,10 @@
-# $NetBSD: buildlink3.mk,v 1.7 2010/04/13 17:58:46 emil_s Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2013/01/09 23:33:11 szptvlfn Exp $
 
 BUILDLINK_TREE+=	hs-x11
 
 .if !defined(HS_X11_BUILDLINK3_MK)
 HS_X11_BUILDLINK3_MK:=
 
-BUILDLINK_DEPMETHOD.hs-x11?=	build
 BUILDLINK_API_DEPENDS.hs-x11+=	hs-x11>=1.5.0.0
 BUILDLINK_PKGSRCDIR.hs-x11?=	../../wip/hs-x11
 
