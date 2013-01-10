@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.2 2013/01/06 10:30:36 ryo-on Exp $
-
-SHA1 (supertuxkart-0.8-src.tar.bz2) = 8765a21bcbab8ca7f43643f15eac1e9bad57fba4
-RMD160 (supertuxkart-0.8-src.tar.bz2) = 5a097ac858c65c824e38211dc6b15e1264e83e1b
-Size (supertuxkart-0.8-src.tar.bz2) = 171184279 bytes
-SHA1 (patch-CMakeLists.txt) = 3155516a762792dbd1a74abbecc053c7063248d6
-SHA1 (patch-lib_irrlicht_source_Irrlicht_COSOperator.cpp) = 5670f8aa961893f60ae87ce13942553b786d3910
-SHA1 (patch-lib_irrlicht_source_Irrlicht_Makefile) = 06f73c43bcdd35dc19aab239a79f0401045bc8d3
-SHA1 (patch-lib_irrlicht_source_Irrlicht_os.cpp) = 31a8dbf604e389b8ca6f80df6590bfc9669fa2af
