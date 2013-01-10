@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1 2013/01/10 13:47:27 fhajny Exp $
+
+SHA1 (gecode-3.7.3.tar.gz) = f9281a80788cd0c0f0495cd6145fe4bf9ee74117
+RMD160 (gecode-3.7.3.tar.gz) = ba7ab9a545dab5b4ff3feaa90e617be561614822
+Size (gecode-3.7.3.tar.gz) = 1643336 bytes
+SHA1 (patch-Makefile) = 0b198106ef027f03e6c3029c5fec1dd1070a5540
+SHA1 (patch-configure) = 041ea85f05b4ae4a7ca0a61b6dcd82bcb13485b5
