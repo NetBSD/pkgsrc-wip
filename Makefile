@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5056 2013/01/08 22:09:03 othyro Exp $
+# $Id: Makefile,v 1.5057 2013/01/10 14:16:52 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2443,6 +2443,7 @@ SUBDIR+=	py-jabber-punjab
 SUBDIR+=	py-jabber-yahoo-transport
 SUBDIR+=	py-jabberbot
 SUBDIR+=	py-joblib
+SUBDIR+=	py-jokosher
 SUBDIR+=	py-jsonrequester
 SUBDIR+=	py-jswebkit
 SUBDIR+=	py-julio
