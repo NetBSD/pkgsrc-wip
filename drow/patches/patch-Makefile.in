@@ -1,4 +1,4 @@
-$NetBSD: patch-Makefile.in,v 1.1 2012/12/03 23:58:09 othyro Exp $
+$NetBSD: patch-Makefile.in,v 1.2 2013/01/10 14:50:15 othyro Exp $
 
 Make package use DESTDIR.
 
@@ -22,7 +22,7 @@ Make package use DESTDIR.
 -	chgrp $(GROUP) ${PREFIX}${BINDIR}/${PROGNAME}
 -	chown $(OWNER) ${PREFIX}${BINDIR}/${PROGNAME}
 +	cp ${PROGNAME} $(DESTDIR)${PREFIX}${BINDIR}
-+	chown 755 $(DESTDIR)${PREFIX}${BINDIR}/${PROGNAME}
++	chmod 755 $(DESTDIR)${PREFIX}${BINDIR}/${PROGNAME}
 +	chgrp $(GROUP) $(DESTDIR)${PREFIX}${BINDIR}/${PROGNAME}
 +	chown $(OWNER) $(DESTDIR)${PREFIX}${BINDIR}/${PROGNAME}
  

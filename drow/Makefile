@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/12/04 00:04:07 othyro Exp $
+# $NetBSD: Makefile,v 1.9 2013/01/10 14:50:15 othyro Exp $
 #
 
 DISTNAME=	drow-0.2.22
@@ -12,7 +12,10 @@ LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	YES
 
+PKG_DESTDIR_SUPPORT=	destdir
 CONFIGURE_ENV+=		DESTDIR=${DESTDIR}
 INSTALLATION_DIRS+=	bin
+
+SPECIAL_PERMS+=		bin/drow bin bin 0755
 
 .include "../../mk/bsd.pkg.mk"
