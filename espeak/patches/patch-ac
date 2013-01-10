@@ -1,0 +1,28 @@
+$NetBSD: patch-ac,v 1.1 2013/01/10 01:41:39 makoto Exp $
+
+--- Makefile.orig	2008-01-19 22:50:27.000000000 +0100
++++ Makefile
+@@ -81,17 +81,21 @@ libespeak_SOURCES = speak_lib.cpp compil
+ 	tr_languages.cpp voices.cpp wavegen.cpp phonemelist.cpp \
+ 	espeak_command.cpp event.cpp fifo.cpp $(WAVE) debug.cpp klatt.cpp sonic.cpp
+ 
++LPATH=	-L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib
++
+ SRCS1=$(speak_SOURCES)
+ OBJS1=$(patsubst %.cpp,%.o,$(SRCS1))
+-LIBS1=-lstdc++ $(LIB_AUDIO) -lpthread $(EXTRA_LIBS)
++LIBS1=-lstdc++ $(LIB_AUDIO) -lpthread 
++LIBS1=-lstdc++ $(LPATH) $(LIB_AUDIO) ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS} $(EXTRA_LIBS)
+ 
+ SRCS2=$(libespeak_SOURCES)
+ OBJS2=$(patsubst %.cpp,x_%.o,$(SRCS2))
+-LIBS2=-lstdc++ $(LIB_AUDIO) -lpthread
++LIBS2=-lstdc++ $(LPATH) $(LIB_AUDIO) ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}
+ 
+ SRCS3 = espeak.cpp
+ OBJS3=$(patsubst %.cpp,%.o,$(SRCS3))
+ LIBS3=-lstdc++ -L . -lespeak
++LIBS3=-lstdc++ $(LPATH) -L . -lespeak
+ 
+ CXXFLAGS=-O2
+ 
