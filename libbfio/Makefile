@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2012/12/05 04:40:20 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2013/01/10 15:37:11 othyro Exp $
 #
 
 DISTNAME=	libbfio-alpha-20120425
 PKGNAME=	${DISTNAME:S/alpha-//1}
 CATEGORIES=	sysutils
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libbfio/}
+MASTER_SITES=	http://libbfio.googlecode.com/files/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://libbfio.sourceforge.net/
