@@ -1,11 +1,1 @@
-Several libraries for cross-platform C functions:
-
- * libcerror; error functions
- * libclocale; locale functions
- * libcnotify; notification functions
- * libcfile; file functions
- * libcpath; path functions
- * libcsplit; split string functions
-
-These libraries were initially build to be used within other libraries and are
-currently in the process of being turned into stand-alone versions.
+Library for cross-platform C error functions.

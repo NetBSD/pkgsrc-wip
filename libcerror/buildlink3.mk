@@ -1,11 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.1 2012/12/08 22:41:37 othyro Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2013/01/10 15:43:51 othyro Exp $
 
 BUILDLINK_TREE+=	libcerror
 
 .if !defined(LIBCERROR_BUILDLINK3_MK)
 LIBCERROR_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.libcerror+=	libcerror>=20120507
+BUILDLINK_API_DEPENDS.libcerror+=	libcerror>=20121222
 BUILDLINK_PKGSRCDIR.libcerror?=	../../wip/libcerror
 
 pkgbase := libcerror
