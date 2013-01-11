@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/12/09 14:29:04 othyro Exp $
+# $NetBSD: Makefile,v 1.7 2013/01/11 00:49:04 othyro Exp $
 #
 
 DISTNAME=	snark-0.5
@@ -19,7 +19,7 @@ INSTALLATION_DIRS+=	bin share/classpath
 
 JAVA_APP_TARGETS=		snark
 JAVA_APP_MAIN.snark=		org.klomp.snark.Snark
-JAVA_APP_CLASSPATH.snark=	${JAR_PREFIX}/snark.jar
+JAVA_APP_CLASSPATH.snark=	${DESTDIR}${JAR_PREFIX}/snark.jar
 JAVA_APP_PATH=			${DESTDIR}${PREFIX}/bin
 
 do-install:
