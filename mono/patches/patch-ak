@@ -1,13 +1,12 @@
-$NetBSD: patch-ak,v 1.5 2013/01/01 01:46:24 othyro Exp $
+$NetBSD: patch-ak,v 1.6 2013/01/11 08:07:54 thomasklausner Exp $
 --- libgc/pthread_support.c.orig	2012-12-05 17:44:36.000000000 +0000
 +++ libgc/pthread_support.c
 @@ -70,8 +70,8 @@
  # if (defined(GC_DGUX386_THREADS) || defined(GC_OSF1_THREADS) || \
        defined(GC_DARWIN_THREADS) || defined(GC_AIX_THREADS)) || \
        defined(GC_NETBSD_THREADS) && !defined(USE_PTHREAD_SPECIFIC) || \
--      defined(GC_FREEBSD_THREADS) && !defined(USE_PTHREAD_SPECIFIC) || \
+       defined(GC_FREEBSD_THREADS) && !defined(USE_PTHREAD_SPECIFIC) || \
 -      defined(GC_OPENBSD_THREADS)
-+      defined(GC_FREEBSD_THREADS) && !defined(USE_PTHREAD_SPECIFIC) \
 +      !defined(USE_COMPILER_TLS) || defined(GC_OPENBSD_THREADS)
  #   define USE_PTHREAD_SPECIFIC
  # endif
