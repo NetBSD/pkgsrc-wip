@@ -1,10 +1,10 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2012/03/18 13:32:51 makoto Exp $
+$NetBSD: MESSAGE,v 1.3 2013/01/11 12:59:27 makoto Exp $
 ja-ptex installed.
 
 To preview with ghostscript, you may need two more packages to be installed,
-   (wip)/ghostscript-cidfonts-ryumin
-   ghostscript
+   fonts/ghostscript-cidfonts-ryumin
+   print/ghostscript
 
 The commands to process documents:
 platex   *.tex -> *.dvi
