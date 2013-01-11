@@ -1,5 +1,15 @@
 To fix a problem with one particular combination:
 
+The problem I was raising here turned out that
+ghostscript has a problem with TrueType font if
+option -dSAFER is designated.
+This is filed as [Bug 691780] 
+  http://bugs.ghostscript.com/show_bug.cgi?id=691780
+If -dSAFER in (/usr/pkg/bin/) ps2pdfwr is removed 
+as the patch attached, all the processing are OK.
+
+(Previous note):
+------------
 (1) the option at 
 wip/ghostscrip-cidfonts-ryumin
 set
@@ -26,3 +36,18 @@ can be processed successfully even if
 following line in /etc/mk.conf mentioned in (1)
 PKG_OPTIONS.gcr_type= ipa
 is set.
+------------
+(End of Previous note):
+
+--- ps2pdfwr.orig       2013-01-11 22:20:51.000000000 +0900
++++ ps2pdfwr    2013-01-11 21:52:24.000000000 +0900
+@@ -10,7 +10,7 @@
+ fi
+ GS_EXECUTABLE="$gs"
+ 
+-OPTIONS="-P- -dSAFER"
++OPTIONS="-P- "
+ while true
+ do
+        case "$1" in
+
