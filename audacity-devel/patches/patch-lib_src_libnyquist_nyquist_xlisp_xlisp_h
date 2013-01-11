@@ -1,4 +1,4 @@
-$NetBSD: patch-lib_src_libnyquist_nyquist_xlisp_xlisp_h,v 1.1 2013/01/08 22:37:27 makoto Exp $
+$NetBSD: patch-lib_src_libnyquist_nyquist_xlisp_xlisp_h,v 1.2 2013/01/11 09:32:18 makoto Exp $
 
 nyquist/xlisp/xlfio.c:22:15: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'error'
 nyquist/xlisp/xlfio.c: In function 'xgetstroutput':
@@ -10,7 +10,7 @@ nyquist/xlisp/xlfio.c: In function 'xgetstroutput':
  #endif
  
 +/* NetBSD */
-+#if defined(__NetBSD__) || defined(__DragonFlyBSD__)
++#if defined(__NetBSD__) || defined(__DragonFly__)
 +#include <sys/endian.h>
 +#if BYTE_ORDER == LITTLE_ENDIAN
 +#define XL_LITTLE_ENDIAN
