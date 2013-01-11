@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.5 2009/10/11 10:45:24 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.6 2013/01/11 11:16:14 makoto Exp $
 info/wl-ja.info
 info/wl.info
 share/doc/wl/en/BUGS
 share/doc/wl/en/NEWS
-share/doc/wl/en/README
+share/doc/wl/en/README.md
 share/doc/wl/ja/BUGS.ja
 share/doc/wl/ja/NEWS.ja
 share/doc/wl/ja/README.ja
@@ -251,4 +251,4 @@ share/wl/wl-summary-reply-with-citation-up.xpm
 share/wl/wl-summary-set-flags-up.xpm
 share/wl/wl-summary-sync-force-update-up.xpm
 share/wl/wl-write-current-folder-up.xpm
-@comment $NetBSD: PLIST,v 1.5 2009/10/11 10:45:24 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.6 2013/01/11 11:16:14 makoto Exp $

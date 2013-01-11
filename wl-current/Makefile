@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/11/23 22:34:06 othyro Exp $
+# $NetBSD: Makefile,v 1.9 2013/01/11 11:16:14 makoto Exp $
 
 DISTNAME=	wl-2.15.9
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -47,8 +47,12 @@ _GIT_FLAGS?=            --depth 1
 
 post-install:
 	set -e; \
-	for f in BUGS NEWS README; do \
+	for f in BUGS NEWS ; do \
 		${INSTALL_DATA} ${WRKSRC:Q}/"$$f" ${DESTDIR:Q}${DOCDIR:Q}/en; \
+		${INSTALL_DATA} ${WRKSRC:Q}/"$$f".ja ${DESTDIR:Q}${DOCDIR:Q}/ja; \
+	done
+	for f in README ; do \
+		${INSTALL_DATA} ${WRKSRC:Q}/"$$f".md ${DESTDIR:Q}${DOCDIR:Q}/en; \
 		${INSTALL_DATA} ${WRKSRC:Q}/"$$f".ja ${DESTDIR:Q}${DOCDIR:Q}/ja; \
 	done
 	${INSTALL_DATA} ${WRKSRC:Q}/samples/en/dot.* ${DESTDIR:Q}${EXAMPLESDIR:Q}/en
