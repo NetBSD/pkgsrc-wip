@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2013/01/01 01:46:24 othyro Exp $
+# $NetBSD: Makefile,v 1.10 2013/01/12 15:45:26 othyro Exp $
 
 DISTNAME=	mono-3.0.2
 CATEGORIES=	lang
@@ -62,31 +62,41 @@ REPLACE_BASH+=	mcs/mkinstalldirs mkinstalldirs
 EGDIR=		${PREFIX}/share/examples/mono
 CONF_FILES=	${EGDIR}/config ${PKG_SYSCONFDIR}/mono/config
 CONF_FILES+=	${EGDIR}/browscap.ini ${PKG_SYSCONFDIR}/mono/browscap.ini
-CONF_FILES+=	${EGDIR}/4.0/DefaultWsdlHelpGenerator.aspx \
-		${PKG_SYSCONFDIR}/mono/4.0/DefaultWsdlHelpGenerator.aspx
-CONF_FILES+=	${EGDIR}/4.0/machine.config \
-		${PKG_SYSCONFDIR}/mono/4.0/machine.config
-CONF_FILES+=	${EGDIR}/4.0/settings.map \
-		${PKG_SYSCONFDIR}/mono/4.0/settings.map
-CONF_FILES+=	${EGDIR}/4.0/web.config \
-		${PKG_SYSCONFDIR}/mono/4.0/web.config
 CONF_FILES+=	${EGDIR}/2.0/DefaultWsdlHelpGenerator.aspx \
-		${PKG_SYSCONFDIR}/mono/2.0/DefaultWsdlHelpGenerator.aspx
+			${PKG_SYSCONFDIR}/mono/2.0/DefaultWsdlHelpGenerator.aspx
 CONF_FILES+=	${EGDIR}/2.0/machine.config \
-		${PKG_SYSCONFDIR}/mono/2.0/machine.config
+			${PKG_SYSCONFDIR}/mono/2.0/machine.config
 CONF_FILES+=	${EGDIR}/mconfig/config.xml \
-		${PKG_SYSCONFDIR}/mono/mconfig/config.xml
+			${PKG_SYSCONFDIR}/mono/mconfig/config.xml
 CONF_FILES+=	${EGDIR}/2.0/settings.map \
-		${PKG_SYSCONFDIR}/mono/2.0/settings.map
+			${PKG_SYSCONFDIR}/mono/2.0/settings.map
 CONF_FILES+=	${EGDIR}/2.0/web.config \
-		${PKG_SYSCONFDIR}/mono/2.0/web.config
+			${PKG_SYSCONFDIR}/mono/2.0/web.config
 CONF_FILES+=	${EGDIR}/2.0/Browsers/Compat.browser \
-		${PKG_SYSCONFDIR}/mono/2.0/Browsers/Compat.browser
+			${PKG_SYSCONFDIR}/mono/2.0/Browsers/Compat.browser
+CONF_FILES+=	${EGDIR}/4.0/DefaultWsdlHelpGenerator.aspx \
+			${PKG_SYSCONFDIR}/mono/4.0/DefaultWsdlHelpGenerator.aspx
+CONF_FILES+=	${EGDIR}/4.0/machine.config \
+			${PKG_SYSCONFDIR}/mono/4.0/machine.config
+CONF_FILES+=	${EGDIR}/4.0/settings.map \
+			${PKG_SYSCONFDIR}/mono/4.0/settings.map
+CONF_FILES+=	${EGDIR}/4.0/web.config \
+			${PKG_SYSCONFDIR}/mono/4.0/web.config
+CONF_FILES+=	${EGDIR}/4.5/DefaultWsdlHelpGenerator.aspx \
+			${PKG_SYSCONFDIR}/mono/4.5/DefaultWsdlHelpGenerator.aspx
+CONF_FILES+=	${EGDIR}/4.5/machine.config \
+			${PKG_SYSCONFDIR}/mono/4.5/machine.config
+CONF_FILES+=	${EGDIR}/4.5/settings.map \
+			${PKG_SYSCONFDIR}/mono/4.5/settings.map
+CONF_FILES+=	${EGDIR}/4.5/web.config  ${PKG_SYSCONFDIR}/mono/4.5/web.config
 
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/mono/2.0
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/mono/2.0/Browsers
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/mono/4.0
+MAKE_DIRS+=	${PKG_SYSCONFDIR}/mono/4.5
 MAKE_DIRS+=	${PKG_SYSCONFDIR}/mono/mconfig
+
+INSTALLATION_DIRS+=	share/examples/mono/4.5
 
 TEST_TARGET=	check
 
@@ -100,7 +110,8 @@ SUBST_CLASSES+=			fix-mcs
 SUBST_STAGE.fix-mcs=		post-patch
 SUBST_MESSAGE.fix-mcs=		Fixing mcs default prefix
 SUBST_FILES.fix-mcs=		mcs/build/config-default.make
-SUBST_SED.fix-mcs=		-e 's,/usr/local,${PREFIX},g'
+SUBST_SED.fix-mcs=		-e 's,/usr/local,${PREFIX},1'
+SUBST_SED.fix-mcs+=		-e "s|MANDIR|${PKGMANDIR}|1"
 
 SUBST_CLASSES+=			fix-cfgdir
 SUBST_STAGE.fix-cfgdir=		post-patch
@@ -113,6 +124,16 @@ SUBST_STAGE.fix-libx11=		pre-configure
 SUBST_MESSAGE.fix-libx11=	Fixing libX11 search path configuration
 SUBST_FILES.fix-libx11=		configure
 SUBST_SED.fix-libx11=		-e 's,@X11BASE@,${X11BASE},g'
+
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/data/net_4_5/DefaultWsdlHelpGenerator.aspx \
+		${DESTDIR}${EGDIR}/4.5/DefaultWsdlHelpGenerator.aspx
+	${INSTALL_DATA} ${WRKSRC}/data/net_4_5/machine.config \
+		${DESTDIR}${EGDIR}/4.5/machine.config
+	${INSTALL_DATA} ${WRKSRC}/data/net_4_5/settings.map \
+		${DESTDIR}${EGDIR}/4.5/settings.map
+	${INSTALL_DATA} ${WRKSRC}/data/net_4_5/web.config \
+		${DESTDIR}${EGDIR}/4.5/web.config
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../lang/python/application.mk"

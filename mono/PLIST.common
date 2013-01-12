@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.2 2013/01/11 08:07:54 thomasklausner Exp $
+@comment $NetBSD: PLIST.common,v 1.3 2013/01/12 15:45:26 othyro Exp $
 bin/al
 bin/al2
 bin/caspol
@@ -82,10 +82,6 @@ bin/wsdl
 bin/wsdl2
 bin/xbuild
 bin/xsd
-etc/mono/4.5/DefaultWsdlHelpGenerator.aspx
-etc/mono/4.5/machine.config
-etc/mono/4.5/settings.map
-etc/mono/4.5/web.config
 include/mono-2.0/mono/cil/opcode.def
 include/mono-2.0/mono/jit/jit.h
 include/mono-2.0/mono/metadata/appdomain.h
@@ -1165,6 +1161,10 @@ share/examples/mono/4.0/DefaultWsdlHelpGenerator.aspx
 share/examples/mono/4.0/machine.config
 share/examples/mono/4.0/settings.map
 share/examples/mono/4.0/web.config
+share/examples/mono/4.5/DefaultWsdlHelpGenerator.aspx
+share/examples/mono/4.5/machine.config
+share/examples/mono/4.5/settings.map
+share/examples/mono/4.5/web.config
 share/examples/mono/browscap.ini
 share/examples/mono/config
 share/examples/mono/mconfig/config.xml
