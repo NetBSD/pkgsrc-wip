@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2012/07/08 14:17:20 ryo-on Exp $
+@comment $NetBSD: PLIST,v 1.6 2013/01/13 13:10:03 ryo-on Exp $
 bin/gyp
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/gyp/MSVSNew.py
@@ -94,9 +94,6 @@ ${PYSITELIB}/gyp/ninja_syntax.pyo
 ${PYSITELIB}/gyp/sun_tool.py
 ${PYSITELIB}/gyp/sun_tool.pyc
 ${PYSITELIB}/gyp/sun_tool.pyo
-${PYSITELIB}/gyp/system_test.py
-${PYSITELIB}/gyp/system_test.pyc
-${PYSITELIB}/gyp/system_test.pyo
 ${PYSITELIB}/gyp/win_tool.py
 ${PYSITELIB}/gyp/win_tool.pyc
 ${PYSITELIB}/gyp/win_tool.pyo

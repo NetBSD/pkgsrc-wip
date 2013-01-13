@@ -1,13 +1,15 @@
-$NetBSD: patch-pylib_gyp_common.py,v 1.2 2012/05/03 02:29:16 obache Exp $
+$NetBSD: patch-pylib_gyp_common.py,v 1.3 2013/01/13 13:10:03 ryo-on Exp $
 
---- pylib/gyp/common.py.orig	2012-05-03 02:20:39.000000000 +0000
+* Add NetBSD support
+
+--- pylib/gyp/common.py.orig	2012-12-15 10:46:11.000000000 +0000
 +++ pylib/gyp/common.py
-@@ -356,6 +356,8 @@ def GetFlavor(params):
-     'freebsd7': 'freebsd',
-     'freebsd8': 'freebsd',
-     'freebsd9': 'freebsd',
-+    'netbsd5': 'netbsd',
-+    'netbsd6': 'netbsd',
-   }
-   flavor = flavors.get(sys.platform, 'linux')
-   return params.get('flavor', flavor)
+@@ -380,6 +380,8 @@ def GetFlavor(params):
+     return 'freebsd'
+   if sys.platform.startswith('aix'):
+     return 'aix'
++  if sys.platform.startswith('netbsd'):
++    return 'netbsd'
+ 
+   return 'linux'
+ 

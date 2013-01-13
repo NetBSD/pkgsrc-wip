@@ -1,8 +1,10 @@
-$NetBSD: patch-gyptest.py,v 1.1 2012/04/13 22:38:16 ryo-on Exp $
+$NetBSD: patch-gyptest.py,v 1.2 2013/01/13 13:10:03 ryo-on Exp $
 
---- gyptest.py.orig	2012-04-13 19:32:07.000000000 +0000
+* Add NetBSD 5 and 6 target
+
+--- gyptest.py.orig	2012-12-15 10:47:22.000000000 +0000
 +++ gyptest.py
-@@ -208,6 +208,9 @@ def main(argv=None):
+@@ -212,6 +212,9 @@ def main(argv=None):
      format_list = {
        'freebsd7': ['make'],
        'freebsd8': ['make'],

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2012/05/03 02:29:16 obache Exp $
+$NetBSD: distinfo,v 1.3 2013/01/13 13:10:03 ryo-on Exp $
 
-SHA1 (patch-gyptest.py) = 0e49e69049784ac69bbc5ef3e44e318103ffbaa5
-SHA1 (patch-pylib_gyp_common.py) = a43bc2b91ff7b09dfe08c821aa615760e389e0bc
-SHA1 (patch-test_module_src_module.gyp) = aaee5500e4d93a3de1106b7a8ba9c94ec92fedbe
+SHA1 (patch-gyptest.py) = d2668ccadaa1b2308c871fbba85964d89795d043
+SHA1 (patch-pylib_gyp_common.py) = 3cb646ca5f1d21ab929134cfbb5a24c24d2f9d3b
+SHA1 (patch-pylib_gyp_generator_make.py) = d201298031d7d3d51414a3c1023f0c0efb6c6df7
