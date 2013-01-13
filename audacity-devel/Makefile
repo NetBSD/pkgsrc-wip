@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2013/01/08 22:37:27 makoto Exp $
+# $NetBSD: Makefile,v 1.15 2013/01/13 23:28:28 makoto Exp $
 
 DISTNAME=		audacity-minsrc-2.0.2
 PKGNAME=		${DISTNAME:S/-minsrc-/-/}
@@ -34,6 +34,11 @@ CONFIG_GUESS_OVERRIDE=		\
 CONFIG_SUB_OVERRIDE=		\
 	config.sub */config.sub */*/config.sub */*/*/config.sub
 
+SUBST_CLASSES+=		clang
+SUBST_STAGE.clang=	post-patch
+SUBST_MESSAGE.clang=	Fix linking problem for clang
+SUBST_FILES.clang=	lib-src/libnyquist/nyquist/ffts/src/fftlib.c
+SUBST_SED.clang=	-e 's|inline void|static inline void|'
 
 PTHREAD_AUTO_VARS=	yes
 
