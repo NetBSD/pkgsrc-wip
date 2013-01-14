@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5060 2013/01/14 06:22:30 ryo-on Exp $
+# $Id: Makefile,v 1.5061 2013/01/14 06:28:52 ryo-on Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1640,6 +1640,8 @@ SUBDIR+=	mopac7
 SUBDIR+=	mopher
 SUBDIR+=	moregroupware
 SUBDIR+=	moto4lin
+SUBDIR+=	mozc-server
+SUBDIR+=	mozc-tool
 SUBDIR+=	mozldap
 SUBDIR+=	mozplugger
 SUBDIR+=	mp3chop
