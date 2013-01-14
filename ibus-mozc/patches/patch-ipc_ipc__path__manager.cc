@@ -1,6 +1,4 @@
-$NetBSD: patch-ipc_ipc__path__manager.cc,v 1.1 2013/01/14 06:21:30 ryo-on Exp $
-
-* I am no sure.
+$NetBSD: patch-ipc_ipc__path__manager.cc,v 1.2 2013/01/14 14:00:55 ryo-on Exp $
 
 --- ipc/ipc_path_manager.cc.orig	2012-08-31 05:37:07.000000000 +0000
 +++ ipc/ipc_path_manager.cc
@@ -9,7 +7,25 @@ $NetBSD: patch-ipc_ipc__path__manager.cc,v 1.1 2013/01/14 06:21:30 ryo-on Exp $
  #endif  // OS_WINDOWS
  
 -#ifdef OS_LINUX
-+#if defined(OS_LINUX) && (!defined(__FreeBSD__) || !defined(__NetBSD__))
++#if defined(OS_LINUX) || defined(OS_NETBSD)
    // On Linux, use abstract namespace which is independent of the file system.
    (*ipc_name)[0] = '\0';
  #endif
+@@ -377,7 +377,7 @@ bool IPCPathManager::IsValidServer(uint3
+   }
+ #endif
+ 
+-#ifdef OS_LINUX
++#if defined(OS_LINUX) || defined(OS_NETBSD)
+   // load from /proc/<pid>/exe
+   char proc[128];
+   char filename[512];
+@@ -397,7 +397,7 @@ bool IPCPathManager::IsValidServer(uint3
+     return true;
+   }
+ 
+-#ifdef OS_LINUX
++#if defined(OS_LINUX) || defined(OS_NETBSD)
+   if ((server_path + " (deleted)") == server_path_) {
+     LOG(WARNING) << server_path << " on disk is modified";
+     // If a user updates the server binary on disk during the server is running,

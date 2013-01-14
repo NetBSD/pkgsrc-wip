@@ -1,1 +1,33 @@
 * Build fails
+flock out_bsd/Release/linker.lock c++ -L/usr/pkg/lib -L/lib -lssl -lcrypto -L/usr/pkg/lib -L/usr/pkg/lib -L/usr/pkg/lib -pthread -L/usr/pkg/lib -Wl,-R/usr/pkg/lib -L/usr/lib -Wl,-R/usr/lib -L/usr/X11R7/lib -Wl,-R/usr/X11R7/lib -o out_bsd/Release/ibus_mozc -Wl,--start-group out_bsd/Release/obj.target/ibus_mozc/unix/ibus/main.o out_bsd/Release/obj.target/client/libclient.a out_bsd/Release/obj.target/session/libsession_protocol.a out_bsd/Release/obj.target/base/libbase.a out_bsd/Release/obj.target/unix/ibus/libibus_mozc_lib.a out_bsd/Release/obj.target/unix/ibus/libibus_mozc_metadata.a out_bsd/Release/obj.target/base/libbase_core.a out_bsd/Release/obj.target/config/libconfig_protocol.a out_bsd/Release/obj.target/protobuf/libprotobuf.a out_bsd/Release/obj.target/ipc/libipc.a out_bsd/Release/obj.target/ipc/libipc_protocol.a out_bsd/Release/obj.target/dictionary/libdictionary_protocol.a out_bsd/Release/obj.target/engine/liboss_engine_factory.a out_bsd/Release/obj.target/data_manager/oss/liboss_data_manager.a out_bsd/Release/obj.target/data_manager/oss/liboss_user_pos_manager.a out_bsd/Release/obj.target/dictionary/libuser_pos.a out_bsd/Release/obj.target/converter/libconnector_base.a out_bsd/Release/obj.target/converter/libcached_connector.a out_bsd/Release/obj.target/converter/libsparse_connector.a out_bsd/Release/obj.target/storage/louds/libsimple_succinct_bit_vector_index.a out_bsd/Release/obj.target/converter/libsegmenter_base.a out_bsd/Release/obj.target/dictionary/libsuffix_dictionary.a out_bsd/Release/obj.target/dictionary/system/libsystem_dictionary.a out_bsd/Release/obj.target/session/librequest_handler.a out_bsd/Release/obj.target/dictionary/file/libdictionary_file.a out_bsd/Release/obj.target/dictionary/file/libcodec.a out_bsd/Release/obj.target/dictionary/rx/librbx_array.a out_bsd/Release/obj.target/third_party/rx/librx.a out_bsd/Release/obj.target/dictionary/rx/librx_trie.a out_bsd/Release/obj.target/dictionary/system/libsystem_dictionary_codec.a out_bsd/Release/obj.target/dictionary/system/libvalue_dictionary.a out_bsd/Release/obj.target/prediction/libprediction.a out_bsd/Release/obj.target/base/libconfig_file_stream.a out_bsd/Release/obj.target/config/libconfig_handler.a out_bsd/Release/obj.target/composer/libcomposer.a out_bsd/Release/obj.target/config/libcharacter_form_manager.a out_bsd/Release/obj.target/storage/libstorage.a out_bsd/Release/obj.target/session/libkey_event_util.a out_bsd/Release/obj.target/session/libkey_parser.a out_bsd/Release/obj.target/transliteration/libtransliteration.a out_bsd/Release/obj.target/converter/libimmutable_converter.a out_bsd/Release/obj.target/dictionary/libsuppression_dictionary.a out_bsd/Release/obj.target/converter/libsegments.a out_bsd/Release/obj.target/dictionary/libuser_dictionary.a out_bsd/Release/obj.target/usage_stats/libusage_stats.a out_bsd/Release/obj.target/usage_stats/libusage_stats_protocol.a out_bsd/Release/obj.target/dictionary/libdictionary_impl.a out_bsd/Release/obj.target/rewriter/librewriter.a out_bsd/Release/obj.target/rewriter/calculator/libcalculator.a out_bsd/Release/obj.target/storage/libencrypted_string_storage.a out_bsd/Release/obj.target/base/libencryptor.a out_bsd/Release/obj.target/prediction/libsuggestion_filter.a out_bsd/Release/obj.target/prediction/libprediction_protocol.a out_bsd/Release/obj.target/engine/libengine.a out_bsd/Release/obj.target/converter/libconverter.a out_bsd/Release/obj.target/session/libime_switch_util.a out_bsd/Release/obj.target/session/libkeymap.a out_bsd/Release/obj.target/unix/ibus/libibus_property_handler.a out_bsd/Release/obj.target/unix/ibus/libmessage_translator.a out_bsd/Release/obj.target/unix/ibus/libpath_util.a -Wl,--end-group -libus-1.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0 -lintl -lrt -lprotobuf -lssl -lcrypto
+out_bsd/Release/obj.target/ipc/ipc/ipc.o: In function `mozc::IPCClientFactory::NewClient(std::string const&)':
+ipc.cc:(.text+0x5e): undefined reference to `mozc::IPCClient::IPCClient(std::string const&)'
+out_bsd/Release/obj.target/ipc/ipc/ipc.o: In function `mozc::IPCClientFactory::NewClient(std::string const&, std::string const&)':
+ipc.cc:(.text+0x94): undefined reference to `mozc::IPCClient::IPCClient(std::string const&, std::string const&)'
+out_bsd/Release/obj.target/ipc/ipc/ipc.o: In function `mozc::IPCClient::TerminateServer(std::string const&)':
+ipc.cc:(.text+0x27a): undefined reference to `mozc::IPCClient::IPCClient(std::string const&)'
+ipc.cc:(.text+0x282): undefined reference to `mozc::IPCClient::Connected() const'
+ipc.cc:(.text+0x294): undefined reference to `mozc::IPCClient::~IPCClient()'
+out_bsd/Release/obj.target/ipc/ipc/ipc.o: In function `mozc::(anonymous namespace)::IPCServerThread::Run()':
+ipc.cc:(.text+0x115): undefined reference to `mozc::IPCServer::Loop()'
+gmake: *** [out_bsd/Release/ibus_mozc] Error 1
+Traceback (most recent call last):
+  File "build_mozc.py", line 1494, in <module>
+    main()
+  File "build_mozc.py", line 1482, in main
+    BuildMain(cmd_opts, cmd_args, original_directory_name)
+  File "build_mozc.py", line 1129, in BuildMain
+    BuildOnBSD(options, targets, original_directory_name)
+  File "build_mozc.py", line 975, in BuildOnBSD
+    RunOrDie([make_command] + build_args + target_names)
+  File "/usr/tmp/wip/ibus-mozc/work/mozc-1.6.1187.102/build_tools/util.py", line 101, in RunOrDie
+    '==========']))
+build_tools.util.RunOrDieError:
+==========
+ ERROR: gmake -j5 MAKE_JOBS=5 BUILDTYPE=Release builddir_name=out_bsd ibus_mozc
+==========
+*** Error code 1
+
+Stop.
+make: stopped in /usr/pkgsrc/wip/ibus-mozc
+*** Error code 1

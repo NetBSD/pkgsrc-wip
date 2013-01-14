@@ -1,6 +1,4 @@
-$NetBSD: patch-base_iconv.cc,v 1.1 2013/01/14 06:21:30 ryo-on Exp $
-
-* Fix for BSD iconv, this does not support PREFER_PKGSRC case.
+$NetBSD: patch-base_iconv.cc,v 1.2 2013/01/14 14:00:54 ryo-on Exp $
 
 --- base/iconv.cc.orig	2012-08-31 05:37:06.000000000 +0000
 +++ base/iconv.cc
@@ -8,7 +6,7 @@ $NetBSD: patch-base_iconv.cc,v 1.1 2013/01/14 06:21:30 ryo-on Exp $
    size_t olen_org = olen;
    iconv(ic, 0, &ilen, 0, &olen);  // reset iconv state
    while (ilen != 0) {
-+#if defined(__FreeBSD__) || defined(__NetBSD__)
++#if defined(OS_NETBSD)
 +    if (iconv(ic, (const char **)(&ibuf), &ilen, &obuf, &olen)
 +#else
      if (iconv(ic, reinterpret_cast<char **>(&ibuf), &ilen, &obuf, &olen)
