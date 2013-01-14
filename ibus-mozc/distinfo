@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2013/01/14 14:00:54 ryo-on Exp $
+$NetBSD: distinfo,v 1.3 2013/01/14 14:05:38 ryo-on Exp $
 
 SHA1 (mozc-1.6.1187.102.tar.bz2) = 341e0edd1f5c8593b8936792975a4856e1c9c89e
 RMD160 (mozc-1.6.1187.102.tar.bz2) = 4997cba2b8db9d14ec085142947c92fc789f79cb
@@ -8,6 +8,7 @@ SHA1 (patch-base_cpu__stats.cc) = cda8bbcbc963d8ed635435375cc80ee5e7ca2191
 SHA1 (patch-base_iconv.cc) = 1bf65dfc6152bf152cbe2714835a61436df2a48b
 SHA1 (patch-base_logging.cc) = 3105c5686df11175495603cf79eb1f0c95d9ada2
 SHA1 (patch-base_mutex.cc) = 48e5f3e7eacabd6d5a1aceec3e63e1c952be556e
+SHA1 (patch-base_mutex.h) = bf77404ad2d105ef975fc0f9c4086d8dcdc428ea
 SHA1 (patch-base_password__manager.cc) = cb11b9b707ab0c361c969eefd4d7c805c0b4b06a
 SHA1 (patch-base_process.cc) = cf7e086d35d1bd0c640ceda6b39a9e12103979e8
 SHA1 (patch-base_run__level.cc) = 738b263a334977038629d24bef96b365c42fca57
@@ -29,6 +30,7 @@ SHA1 (patch-gui_word__register__dialog_word__register__dialog.cc) = 82c814154bad
 SHA1 (patch-gui_zinnia.gyp) = 0eaad35b829d2c25e751ce6e99207781306934d5
 SHA1 (patch-gyp_common.gypi) = 7f6f2c79980fb2a4aee5be1bde5350e708499682
 SHA1 (patch-handwriting_handwriting.gyp) = 951ac70a188ff640a0d526d83fd4304e8ee07d0c
+SHA1 (patch-handwriting_zinnia__handwriting.cc) = 9f6a857571a6d13f722d0503e232943d8dd2915e
 SHA1 (patch-ipc_ipc__path__manager.cc) = 915715125a6b5f6d2e2be8e3fc8796a6bfffe866
 SHA1 (patch-ipc_ipc__path__manager__test.cc) = 000acabea50faf3d192ee219313c4c4ebfc4e330
 SHA1 (patch-ipc_unix__ipc.cc) = f60692f46c1ebcd76839ac667b73e70e6eab6324
@@ -39,3 +41,5 @@ SHA1 (patch-protobuf_genproto.gypi) = b31dacd4e7e5a3f7baed8e1ab0d2d6983a244119
 SHA1 (patch-protobuf_protobuf.gyp) = 32639f8052e53b88c4e460f211292967fc915873
 SHA1 (patch-session_session__converter__interface.h) = 93bda6e51b9a9ac7146aa23ac0aa28bb017a4465
 SHA1 (patch-session_session__test.cc) = 1258b334c77b08c5b423a35cfef452587f5b6db6
+SHA1 (patch-unix_ibus_gen__mozc__xml.py) = 0c440cf525c1aace360180f5de416ad5e17a77df
+SHA1 (patch-unix_ibus_mozc__engine.cc) = 0ae1220c1253c4d5d0d5eb97e584c12ea38b5c96
