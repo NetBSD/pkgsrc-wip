@@ -1,0 +1,16 @@
+$NetBSD: distinfo,v 1.1 2013/01/14 06:21:30 ryo-on Exp $
+
+SHA1 (mozc-1.6.1187.102.tar.bz2) = 341e0edd1f5c8593b8936792975a4856e1c9c89e
+RMD160 (mozc-1.6.1187.102.tar.bz2) = 4997cba2b8db9d14ec085142947c92fc789f79cb
+Size (mozc-1.6.1187.102.tar.bz2) = 54828375 bytes
+SHA1 (patch-base_base.gyp) = 86dda7972a156729c9615f238171f90c029300c8
+SHA1 (patch-base_iconv.cc) = 0a6785a72434ba1fba3373c0c11ad2fcec84b0bf
+SHA1 (patch-base_logging.cc) = b89e3306a5f2e66b38c20cdfb06b236ffd58d059
+SHA1 (patch-base_mutex.cc) = fe9c3e692ec824667686e30c961223aebfd5b686
+SHA1 (patch-base_mutex.h) = bf77404ad2d105ef975fc0f9c4086d8dcdc428ea
+SHA1 (patch-build__tools_util.py) = 107ebb33e214081691b858ce43cc47b6c4d6e55c
+SHA1 (patch-handwriting_zinnia__handwriting.cc) = 9f6a857571a6d13f722d0503e232943d8dd2915e
+SHA1 (patch-ipc_ipc__path__manager.cc) = e19531cf18245c4250f92d59b5f204e432275156
+SHA1 (patch-protobuf_genproto.gypi) = d9af6c594fc540f546780dca06961027ed50d8d9
+SHA1 (patch-unix_ibus_gen__mozc__xml.py) = 0c440cf525c1aace360180f5de416ad5e17a77df
+SHA1 (patch-unix_ibus_mozc__engine.cc) = 0ae1220c1253c4d5d0d5eb97e584c12ea38b5c96
