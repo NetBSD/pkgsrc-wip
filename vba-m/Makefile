@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2012/10/31 22:56:58 othyro Exp $
+# $NetBSD: Makefile,v 1.6 2013/01/14 19:49:11 othyro Exp $
 #
 
 PKGVERSION=	1.8.0.1138
+PKGREVISION=	1
 DISTNAME=	vbam-${PKGVERSION}-src
 PKGNAME=	vba-m-${PKGVERSION}
 CATEGORIES=	emulators
@@ -24,12 +25,16 @@ CMAKE_ARGS+=	-DSFML_INCLUDE_DIR=${BUILDLINK_PREFIX.sfml+}/include/SFML
 CMAKE_ARGS+=	-DSFML_LIBRARY=${BUILDLINK_PREFIX.sfml+}/lib/libsfml-system.so
 EGDIR=		${PREFIX}/share/examples/vbam
 CONF_FILES+=	${EGDIR}/vbam.cfg ${PKG_SYSCONFDIR}/vbam.cfg
-CMAKE_ARGS+=	-DENABLE_LINK=OFF # broken - needs shm_open() and shm_unlink()
 
 .include "options.mk"
 
-CMAKE_ARGS+=	-DENABLE_FFMPEG=OFF # needs ffmpeg > 0.8
-#.include "../../multimedia/ffmpeg/buildlink3.mk"
+.if $(OPSYS) == "NetBSD" || $(OPSYS) == "SunOS"
+CMAKE_ARGS+=	-DENABLE_LINK=OFF # needs shm_open() and shm_unlink()
+.endif
+
+BUILD_DEPENDS+=	glibmm-[0-9]*:../../devel/glibmm
+BUILD_DEPENDS+=	gtkmm-[0-9]*:../../x11/gtkmm
+.include "../../multimedia/ffmpeg/buildlink3.mk"
 .include "../../wip/sfml+/buildlink3.mk"
 .include "../../graphics/ImageMagick/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
