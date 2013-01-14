@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2013/01/14 06:27:43 ryo-on Exp $
+bin/mozc_server
