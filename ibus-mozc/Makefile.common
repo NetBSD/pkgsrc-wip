@@ -1,4 +1,6 @@
-# $NetBSD: Makefile.common,v 1.1 2013/01/14 06:21:30 ryo-on Exp $
+# $NetBSD: Makefile.common,v 1.2 2013/01/14 07:03:38 ryo-on Exp $
+# used by wip/mozc-server/Makefile
+# used by wip/mozc-tool/Makefile
 #
 
 DISTNAME=	mozc-1.6.1187.102
