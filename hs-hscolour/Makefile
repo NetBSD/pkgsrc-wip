@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2011/07/08 03:37:41 phonohawk Exp $
+# $NetBSD: Makefile,v 1.5 2013/01/15 13:07:03 phonohawk Exp $
 #
 
-DISTNAME=	hscolour-1.19
-CATEGORIES=	devel
+DISTNAME=	hscolour-1.20.3
+CATEGORIES=	textproc
 
 MAINTAINER=	pho@cielonegro.org
 COMMENT=	Colourise Haskell code
