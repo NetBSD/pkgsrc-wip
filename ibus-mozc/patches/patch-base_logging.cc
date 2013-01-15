@@ -1,4 +1,4 @@
-$NetBSD: patch-base_logging.cc,v 1.3 2013/01/15 12:31:35 ryo-on Exp $
+$NetBSD: patch-base_logging.cc,v 1.4 2013/01/15 12:37:32 ryo-on Exp $
 
 --- base/logging.cc.orig	2012-08-31 05:37:06.000000000 +0000
 +++ base/logging.cc
@@ -19,7 +19,7 @@ $NetBSD: patch-base_logging.cc,v 1.3 2013/01/15 12:31:35 ryo-on Exp $
  #elif defined(OS_MACOSX)
             ::getpid(),
             reinterpret_cast<uint32>(pthread_self())
-+#elif defined*OS_NETBSD)
++#elif defined(OS_NETBSD)
 +           ::getpid()
 +           _lwp_self()
  #else  // = OS_LINUX
