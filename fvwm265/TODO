@@ -3,3 +3,5 @@ TODO
 done
   NetBSD/amd 6.99.16 clang no option
   NetBSD/amd 6.0.1 no option
+  DragonFly 3.2.2 + gcc-4.7 no option
+  DragonFly 3.2.2 + gcc-4.7 gtk rplay 
