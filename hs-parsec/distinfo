@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2012/02/11 04:13:14 phonohawk Exp $
+$NetBSD: distinfo,v 1.6 2013/01/15 12:06:10 phonohawk Exp $
 
-SHA1 (parsec-3.1.2.tar.gz) = 51b6625da58d5d623f3d35891f25a2d332f943d1
-RMD160 (parsec-3.1.2.tar.gz) = f360e4b209a56f193eca65b71bb13b95948b7042
-Size (parsec-3.1.2.tar.gz) = 27733 bytes
+SHA1 (parsec-3.1.3.tar.gz) = 15db33ed093d8fd53a78a7885f3be8515b470627
+RMD160 (parsec-3.1.3.tar.gz) = b1b407b27f5642142bfa619b31abd7a8cafe11ce
+Size (parsec-3.1.3.tar.gz) = 27866 bytes
