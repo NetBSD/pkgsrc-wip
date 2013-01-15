@@ -1,10 +1,11 @@
-$NetBSD: distinfo,v 1.7 2013/01/15 13:27:04 ryo-on Exp $
+$NetBSD: distinfo,v 1.8 2013/01/15 15:44:30 ryo-on Exp $
 
 SHA1 (mozc-1.6.1187.102.tar.bz2) = 341e0edd1f5c8593b8936792975a4856e1c9c89e
 RMD160 (mozc-1.6.1187.102.tar.bz2) = 4997cba2b8db9d14ec085142947c92fc789f79cb
 Size (mozc-1.6.1187.102.tar.bz2) = 54828375 bytes
 SHA1 (patch-DEPS) = e86c43a1b55aec4296b9fc6d21683a0f87630828
 SHA1 (patch-base_base.gyp) = eb16f96503998e9f33bdf99474f63eec7975c7f9
+SHA1 (patch-base_const.h) = 30f4fcccc5ba9bdb969697b807ec548d53fd6c60
 SHA1 (patch-base_cpu__stats.cc) = cda8bbcbc963d8ed635435375cc80ee5e7ca2191
 SHA1 (patch-base_crash__report__util.cc) = b745c0ac69e06a222df8398af425e9d697f6ce68
 SHA1 (patch-base_iconv.cc) = 1bf65dfc6152bf152cbe2714835a61436df2a48b
@@ -17,7 +18,7 @@ SHA1 (patch-base_run__level.cc) = 738b263a334977038629d24bef96b365c42fca57
 SHA1 (patch-base_thread.h) = b0560c13b2670dc645f3587cfd56ecab0a7fe850
 SHA1 (patch-base_util.cc) = e4c335570b51ab52a620cbbfc0112b769f07e630
 SHA1 (patch-base_util__test.cc) = 219027850ae06a5cac3c21c7a3f4555dbe19b19c
-SHA1 (patch-build__mozc.py) = b6f464a8a71e62fd91dc2b0352c04afd1c843eed
+SHA1 (patch-build__mozc.py) = dc6cfa50c588d799ac2f6b09fe3e80ea0afe2cb1
 SHA1 (patch-build__tools_mozc__version.py) = 47460ca750d8d28652c5c55e5df9b786af4d33c7
 SHA1 (patch-build__tools_util.py) = 17560bc77282ae4f1fe9f9f208b087961f808276
 SHA1 (patch-client_client.cc) = 0b7e60a9222acc8360de573ec0c0e110e461bc3e

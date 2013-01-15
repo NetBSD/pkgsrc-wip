@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.3 2013/01/14 14:00:54 ryo-on Exp $
+# $NetBSD: Makefile.common,v 1.4 2013/01/15 15:44:30 ryo-on Exp $
 # used by wip/mozc-server/Makefile
 # used by wip/mozc-tool/Makefile
 #
@@ -41,6 +41,8 @@ SUBST_FILES.gyp+=	gui/qt_rcc.gypi
 SUBST_FILES.gyp+=	gui/qt_moc.gypi
 SUBST_FILES.gyp+=	gui/qt_uic.gypi
 SUBST_FILES.gyp+=	gui/qt_libraries.gypi
+SUBST_FILES.gyp+=	base/const.h
+SUBST_FILES.gyp+=	build_mozc.py
 SUBST_VARS.gyp+=	OPENSSL_CFLAGS OPENSSL_INC OPENSSL_LDFLAGS OPENSSL_LIBS
 SUBST_VARS.gyp+=	PREFIX QTDIR
 

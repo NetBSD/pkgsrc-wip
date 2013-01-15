@@ -1,4 +1,4 @@
-$NetBSD: patch-build__mozc.py,v 1.2 2013/01/15 12:31:35 ryo-on Exp $
+$NetBSD: patch-build__mozc.py,v 1.3 2013/01/15 15:44:30 ryo-on Exp $
 
 --- build_mozc.py.orig	2012-08-31 05:36:42.000000000 +0000
 +++ build_mozc.py
@@ -45,6 +45,15 @@ $NetBSD: patch-build__mozc.py,v 1.2 2013/01/15 12:31:35 ryo-on Exp $
    elif IsWindows():
      default_target = 'Windows'
    elif IsMac():
+@@ -413,7 +419,7 @@ def ParseGypOptions(args=None, values=No
+   use_zinnia_default = True
+ 
+   parser.add_option('--server_dir', dest='server_dir',
+-                    default='/usr/lib/mozc',
++                    default='@PREFIX@/libexec',
+                     help='A path to the directory to be installed server '
+                     'executable. This option is only available for Linux.')
+ 
 @@ -467,6 +473,12 @@ def ExpandMetaTarget(meta_target_name):
                 '%s/gui/gui.gyp:mozc_tool']
      if PkgExists('ibus-1.0 >= 1.4.1'):

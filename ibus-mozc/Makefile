@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/01/15 11:29:02 ryo-on Exp $
+# $NetBSD: Makefile,v 1.3 2013/01/15 15:44:30 ryo-on Exp $
 #
 
 PKGNAME=	ibus-${DISTNAME}
@@ -10,13 +10,13 @@ DEPENDS+=	xdg-utils-[0-9]*:../../misc/xdg-utils
 
 do-build:
 	cd ${WRKSRC} && env ${MAKE_ENV} \
-		${PYTHONBIN} build_mozc.py build -c Release -j ${MAKE_JOBS} \
+		${PYTHONBIN} build_mozc.py build -j ${MAKE_JOBS} \
 			unix/ibus/ibus.gyp:ibus_mozc
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/out_bsd/Release/ibus_mozc \
+	${INSTALL_PROGRAM} ${WRKSRC}/out_bsd/Debug/ibus_mozc \
 		${DESTDIR}${PREFIX}/libexec/ibus-engine-mozc
-	${INSTALL_DATA} ${WRKSRC}/out_bsd/Release/obj/gen/unix/ibus/mozc.xml \
+	${INSTALL_DATA} ${WRKSRC}/out_bsd/Debug/obj/gen/unix/ibus/mozc.xml \
 		${DESTDIR}${PREFIX}/share/ibus/component
 .for f in ui-alpha_full ui-alpha_half ui-dictionary ui-direct \
 	ui-hiragana ui-katakana_full ui-katakana_half ui-properties ui-tool
