@@ -1,4 +1,4 @@
-$NetBSD: patch-base_logging.cc,v 1.2 2013/01/14 14:00:54 ryo-on Exp $
+$NetBSD: patch-base_logging.cc,v 1.3 2013/01/15 12:31:35 ryo-on Exp $
 
 --- base/logging.cc.orig	2012-08-31 05:37:06.000000000 +0000
 +++ base/logging.cc
@@ -15,3 +15,13 @@ $NetBSD: patch-base_logging.cc,v 1.2 2013/01/14 14:00:54 ryo-on Exp $
             1900 + tm_time.tm_year,
             1 + tm_time.tm_mon,
             tm_time.tm_mday,
+@@ -124,6 +119,9 @@ string Logging::GetLogMessageHeader() {
+ #elif defined(OS_MACOSX)
+            ::getpid(),
+            reinterpret_cast<uint32>(pthread_self())
++#elif defined*OS_NETBSD)
++           ::getpid()
++           _lwp_self()
+ #else  // = OS_LINUX
+            ::getpid(),
+            // In NaCl it returns uint32, otherwise it returns unsigned long.

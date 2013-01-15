@@ -1,4 +1,4 @@
-$NetBSD: patch-base_util.cc,v 1.1 2013/01/14 14:00:55 ryo-on Exp $
+$NetBSD: patch-base_util.cc,v 1.2 2013/01/15 12:31:35 ryo-on Exp $
 
 --- base/util.cc.orig	2012-08-31 05:37:06.000000000 +0000
 +++ base/util.cc
@@ -32,6 +32,15 @@ $NetBSD: patch-base_util.cc,v 1.1 2013/01/14 14:00:55 ryo-on Exp $
  }
  
  string Util::GetServerPath() {
+@@ -2000,7 +2000,7 @@ bool GetCurrentSessionId(DWORD *session_
+ #endif  // OS_WINDOWS
+ 
+ string Util::GetDesktopNameAsString() {
+-#ifdef OS_LINUX
++#if defined(OS_LINUX) || defined(OS_NETBSD)
+   const char *display = getenv("DISPLAY");
+   if (display == NULL) {
+     return "";
 @@ -2514,7 +2514,7 @@ bool Util::IsPlatformSupported() {
  #if defined(OS_MACOSX)
    // TODO(yukawa): support Mac.

@@ -1,4 +1,4 @@
-$NetBSD: patch-unix_ibus_gen__mozc__xml.py,v 1.1 2013/01/14 06:21:30 ryo-on Exp $
+$NetBSD: patch-unix_ibus_gen__mozc__xml.py,v 1.2 2013/01/15 12:31:35 ryo-on Exp $
 
 * Fix for pkgsrc installation.
 
@@ -22,11 +22,29 @@ $NetBSD: patch-unix_ibus_gen__mozc__xml.py,v 1.1 2013/01/14 06:21:30 ryo-on Exp 
      'rank': '80',
  }
  
-@@ -193,7 +193,7 @@ def main():
+@@ -76,6 +76,13 @@ IBUS_ENGINES_PROPS = {
+         'longname': ['%s'],
+         'layout': ['jp'],
+     },
++    'NetBSD': {
++        # DO NOT change the engine name 'mozc-jp'. The names is referenced by
++        # unix/ibus/mozc_engine.cc.
++        'name': ['mozc-jp'],
++        'longname': ['%s'],
++        'layout': ['jp'],
++    },
+     # On Chrome/Chromium OS, we provide three engines.
+     'ChromeOS': {
+         # DO NOT change the engine name 'mozc-jp'. The names is referenced by
+@@ -193,7 +200,11 @@ def main():
  
    setup_arg = []
    if options.platform == 'Linux':
 -    setup_arg.append(os.path.join(options.server_dir, 'mozc_tool'))
++    setup_arg.append(os.path.join("@PREFIX@/libexec", 'mozc_tool'))
++    setup_arg.append('--mode=config_dialog')
++
++  if options.platform == 'NetBSD':
 +    setup_arg.append(os.path.join("@PREFIX@/libexec", 'mozc_tool'))
      setup_arg.append('--mode=config_dialog')
  
