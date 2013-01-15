@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2012/02/02 12:58:31 phonohawk Exp $
+$NetBSD: distinfo,v 1.5 2013/01/15 09:18:41 phonohawk Exp $
 
-SHA1 (vector-0.9.1.tar.gz) = b6764277b1a80f34e47b3bcb21112623fd3bb606
-RMD160 (vector-0.9.1.tar.gz) = 0d85065d116ba4e7557634ef2fedcb4c92feeefd
-Size (vector-0.9.1.tar.gz) = 104997 bytes
+SHA1 (vector-0.10.0.1.tar.gz) = f5485ed7691350350702177f96f56a54b6d7ffaa
+RMD160 (vector-0.10.0.1.tar.gz) = e00adaf6b4a9634df2feb1a805f4adf51d1870ae
+Size (vector-0.10.0.1.tar.gz) = 102426 bytes
