@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/01/14 06:25:23 ryo-on Exp $
+# $NetBSD: Makefile,v 1.2 2013/01/15 13:08:04 ryo-on Exp $
 #
 
 DISTNAME=	mozc-1.6.1187.102
@@ -16,7 +16,7 @@ do-build:
 			gui/gui.gyp:mozc_tool
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/out_linux/Release/mozc_tool \
+	${INSTALL_PROGRAM} ${WRKSRC}/out_bsd/Release/mozc_tool \
 		${DESTDIR}${PREFIX}/libexec
 
 .include "../../wip/ibus-mozc/Makefile.common"
