@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2012/01/16 05:06:53 phonohawk Exp $
+# $NetBSD: Makefile,v 1.5 2013/01/15 08:56:03 phonohawk Exp $
 #
 
-DISTNAME=	base-unicode-symbols-0.2.2.3
+DISTNAME=	base-unicode-symbols-0.2.2.4
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
