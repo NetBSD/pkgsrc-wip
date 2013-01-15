@@ -1,4 +1,6 @@
-$NetBSD: patch-src_AudioIO.cpp,v 1.1 2013/01/08 22:37:27 makoto Exp $
+$NetBSD: patch-src_AudioIO.cpp,v 1.2 2013/01/15 06:46:48 makoto Exp $
+
+Fix build on sunos.
 
 --- src/AudioIO.cpp.orig	2012-08-21 17:48:21.000000000 +0900
 +++ src/AudioIO.cpp	2013-01-08 22:21:56.000000000 +0900

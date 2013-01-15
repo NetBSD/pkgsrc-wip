@@ -1,5 +1,6 @@
-$NetBSD: patch-src_effects_NoiseRemoval.cpp,v 1.1 2013/01/08 22:37:27 makoto Exp $
+$NetBSD: patch-src_effects_NoiseRemoval.cpp,v 1.2 2013/01/15 06:46:48 makoto Exp $
 
+Fix build on sunos.
 
 --- src/effects/NoiseRemoval.cpp.orig	2006-11-15 05:12:10.000000000 +0100
 +++ src/effects/NoiseRemoval.cpp	2012-01-15 19:19:20.622909031 +0100
