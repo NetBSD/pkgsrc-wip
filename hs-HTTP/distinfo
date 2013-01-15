@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2011/01/07 10:07:22 phonohawk Exp $
+$NetBSD: distinfo,v 1.6 2013/01/15 12:14:36 phonohawk Exp $
 
-SHA1 (HTTP-4000.1.1.tar.gz) = cdb8ae29b8524a912545059e4ec4a2b25ada88c5
-RMD160 (HTTP-4000.1.1.tar.gz) = c90418ef556cf833cffcb327df9b57e051ee8b25
-Size (HTTP-4000.1.1.tar.gz) = 59459 bytes
+SHA1 (HTTP-4000.2.6.tar.gz) = ee59395d954a070d799f8fdcb621e5a218af9cae
+RMD160 (HTTP-4000.2.6.tar.gz) = b37d8acd0a729a2179c100a3bf0c2d4811460277
+Size (HTTP-4000.2.6.tar.gz) = 66546 bytes

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2011/01/07 10:07:22 phonohawk Exp $
+# $NetBSD: Makefile,v 1.6 2013/01/15 12:14:36 phonohawk Exp $
 #
 
-DISTNAME=	HTTP-4000.1.1
+DISTNAME=	HTTP-4000.2.6
 CATEGORIES=	www
 
 MAINTAINER=	pho@cielonegro.org
