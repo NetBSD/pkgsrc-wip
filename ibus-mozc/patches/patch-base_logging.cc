@@ -1,8 +1,19 @@
-$NetBSD: patch-base_logging.cc,v 1.4 2013/01/15 12:37:32 ryo-on Exp $
+$NetBSD: patch-base_logging.cc,v 1.5 2013/01/15 13:27:04 ryo-on Exp $
 
 --- base/logging.cc.orig	2012-08-31 05:37:06.000000000 +0000
 +++ base/logging.cc
-@@ -106,12 +106,7 @@ string Logging::GetLogMessageHeader() {
+@@ -59,6 +59,10 @@
+ #include "base/singleton.h"
+ #include "base/util.h"
+ 
++#if defined(OS_NETBSD)
++#include <lwp.h>
++#endif
++
+ DEFINE_bool(colored_log, true, "Enables colored log messages on tty devices");
+ DEFINE_bool(logtostderr,
+             false,
+@@ -106,12 +110,7 @@ string Logging::GetLogMessageHeader() {
    char buf[512];
    snprintf(buf, sizeof(buf),
             "%4.4d-%2.2d-%2.2d %2.2d:%2.2d:%2.2d %u "
@@ -15,12 +26,12 @@ $NetBSD: patch-base_logging.cc,v 1.4 2013/01/15 12:37:32 ryo-on Exp $
             1900 + tm_time.tm_year,
             1 + tm_time.tm_mon,
             tm_time.tm_mday,
-@@ -124,6 +119,9 @@ string Logging::GetLogMessageHeader() {
+@@ -124,6 +123,9 @@ string Logging::GetLogMessageHeader() {
  #elif defined(OS_MACOSX)
             ::getpid(),
             reinterpret_cast<uint32>(pthread_self())
 +#elif defined(OS_NETBSD)
-+           ::getpid()
++           ::getpid(),
 +           _lwp_self()
  #else  // = OS_LINUX
             ::getpid(),
