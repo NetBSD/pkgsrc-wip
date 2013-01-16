@@ -1,5 +1,5 @@
-# $NetBSD: Makefile,v 1.8 2013/01/16 04:56:53 noud4 Exp $
-#-lidn
+# $NetBSD: Makefile,v 1.9 2013/01/16 04:58:14 noud4 Exp $
+#
 
 DISTNAME=	pidgin-rhythmbox-2.0
 PKGREVISION=	4
