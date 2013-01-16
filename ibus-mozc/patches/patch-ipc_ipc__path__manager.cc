@@ -1,4 +1,4 @@
-$NetBSD: patch-ipc_ipc__path__manager.cc,v 1.2 2013/01/14 14:00:55 ryo-on Exp $
+$NetBSD: patch-ipc_ipc__path__manager.cc,v 1.3 2013/01/16 12:35:59 ryo-on Exp $
 
 --- ipc/ipc_path_manager.cc.orig	2012-08-31 05:37:07.000000000 +0000
 +++ ipc/ipc_path_manager.cc
@@ -7,7 +7,7 @@ $NetBSD: patch-ipc_ipc__path__manager.cc,v 1.2 2013/01/14 14:00:55 ryo-on Exp $
  #endif  // OS_WINDOWS
  
 -#ifdef OS_LINUX
-+#if defined(OS_LINUX) || defined(OS_NETBSD)
++#if defined(OS_LINUX)
    // On Linux, use abstract namespace which is independent of the file system.
    (*ipc_name)[0] = '\0';
  #endif
@@ -16,7 +16,7 @@ $NetBSD: patch-ipc_ipc__path__manager.cc,v 1.2 2013/01/14 14:00:55 ryo-on Exp $
  #endif
  
 -#ifdef OS_LINUX
-+#if defined(OS_LINUX) || defined(OS_NETBSD)
++#if defined(OS_LINUX)
    // load from /proc/<pid>/exe
    char proc[128];
    char filename[512];

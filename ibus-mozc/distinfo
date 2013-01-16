@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.8 2013/01/15 15:44:30 ryo-on Exp $
+$NetBSD: distinfo,v 1.9 2013/01/16 12:35:59 ryo-on Exp $
 
 SHA1 (mozc-1.6.1187.102.tar.bz2) = 341e0edd1f5c8593b8936792975a4856e1c9c89e
 RMD160 (mozc-1.6.1187.102.tar.bz2) = 4997cba2b8db9d14ec085142947c92fc789f79cb
@@ -35,9 +35,9 @@ SHA1 (patch-gui_zinnia.gyp) = 0eaad35b829d2c25e751ce6e99207781306934d5
 SHA1 (patch-gyp_common.gypi) = 7f6f2c79980fb2a4aee5be1bde5350e708499682
 SHA1 (patch-handwriting_handwriting.gyp) = 951ac70a188ff640a0d526d83fd4304e8ee07d0c
 SHA1 (patch-handwriting_zinnia__handwriting.cc) = 9f6a857571a6d13f722d0503e232943d8dd2915e
-SHA1 (patch-ipc_ipc__path__manager.cc) = 915715125a6b5f6d2e2be8e3fc8796a6bfffe866
+SHA1 (patch-ipc_ipc__path__manager.cc) = 53cdd15f18a7171cbd08d0c6a43c767f69a90302
 SHA1 (patch-ipc_ipc__path__manager__test.cc) = 000acabea50faf3d192ee219313c4c4ebfc4e330
-SHA1 (patch-ipc_unix__ipc.cc) = 19ec861a7765a60a22ec2ef0fb40da009c2251e2
+SHA1 (patch-ipc_unix__ipc.cc) = 5a5c05136731d1c6f9c03426ed91de573050db96
 SHA1 (patch-languages_chewing_chewing.gyp) = 26fa18398911609a53cff003943436f003772e64
 SHA1 (patch-languages_hangul_hangul.gyp) = 685964cd31e91c96f0d41e729441b17ed9ac24f8
 SHA1 (patch-net_net.gyp) = 60cb23882d81c8222337888dd735f3c6c72aee0f
