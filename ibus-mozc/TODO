@@ -1,2 +1,2 @@
-* Can input alphanumeric characters only.
-* mozc_server cannot be invoked from mozc_tool nor ibus-mozc.
+* Cannot input Hiragana characters, alphanemuric characters only.
+* mozc_server does not work, I have gotten cannot-run message.
