@@ -1,2 +1,2 @@
 * Can input alphanumeric characters only.
-* mozc-tool cannnot read configuration (unix domain socket defact?)
+* mozc_server cannot be invoked from mozc_tool nor ibus-mozc.
