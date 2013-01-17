@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/01/17 09:29:56 akihabara Exp $
+# $NetBSD: Makefile,v 1.2 2013/01/17 13:56:07 akihabara Exp $
 
 DISTNAME=	Electrum-1.6.1
 CATEGORIES=	finance python
@@ -15,6 +15,15 @@ PYDISTUTILSPKG= yes
 
 DEPENDS+=	${PYPKGPREFIX}-slowaes:../../wip/py-slowaes
 DEPENDS+=	${PYPKGPREFIX}-ecdsa:../../wip/py-ecdsa
+
+FIX_PYTHON_PATHS+=	lib/*.py
+
+# This one is for /usr/bin/env python (or even /usr/bin/env Python or /usr/bin/python2)
+SUBST_CLASSES+=		path
+SUBST_SED.path=		-e "s,\#! */usr/bin/env *[Pp]ython[0-9.]*,\#!${PYTHONBIN},"
+SUBST_MESSAGE.path=	Fixing path to python.
+SUBST_STAGE.path=	post-patch
+SUBST_FILES.path=	${FIX_PYTHON_PATHS}
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
