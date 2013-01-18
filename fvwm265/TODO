@@ -1,7 +1,9 @@
 TODO
-  NetBSD/amd 6.99.16 clang gtk 
 done
   NetBSD/amd 6.99.16 clang no option
+  NetBSD/amd 6.99.16 clang gtk rplay xrender xcursor xft
   NetBSD/amd 6.0.1 no option
+  NetBSD/amd 6.0.1 gtk rplay xrender xcursor xft (running fine)
+  NetBSD/i386 5.2  gtk rplay xrender xcursor xft
   DragonFly 3.2.2 + gcc-4.7 no option
   DragonFly 3.2.2 + gcc-4.7 gtk rplay 
