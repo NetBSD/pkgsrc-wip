@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.1 2013/01/15 01:59:57 makoto Exp $
+# $NetBSD: options.mk,v 1.2 2013/01/18 08:08:13 lokivit Exp $
 
-PKG_OPTIONS_VAR=		PKG_OPTIONS.fvwm
-PKG_SUPPORTED_OPTIONS=		gtk rplay
+PKG_OPTIONS_VAR=		PKG_OPTIONS.fvwm2
+PKG_SUPPORTED_OPTIONS=		gtk rplay xrender xcursor xft
 PKG_OPTIONS_LEGACY_VARS+=	FVWM2_USE_GTK:gtk
 PKG_OPTIONS_LEGACY_VARS+=	FVWM2_USE_RPLAY:rplay
 
@@ -18,4 +18,25 @@ CONFIGURE_ARGS+=	--without-gtk-prefix
 
 .if !empty(PKG_OPTIONS:Mrplay)
 .  include "../../audio/rplay/buildlink3.mk"
+.endif
+
+.if !empty(PKG_OPTIONS:Mxcursor)
+CONFIGURE_ARGS+=	--enable-xcursor
+.include "../../x11/libXcursor/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-xcursor
+.endif
+
+.if !empty(PKG_OPTIONS:Mxft)
+CONFIGURE_ARGS+=        --enable-xft
+.include "../../x11/libXft/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=        --disable-xft
+.endif
+
+.if !empty(PKG_OPTIONS:Mxrender)
+CONFIGURE_ARGS+=        --enable-xrender
+.include "../../x11/libXrender/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=        --disable-xrender
 .endif

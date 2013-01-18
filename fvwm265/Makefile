@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/01/15 06:09:07 makoto Exp $
+# $NetBSD: Makefile,v 1.3 2013/01/18 08:08:13 lokivit Exp $
 
 DISTNAME=	fvwm-${FVWM_VER}
 CATEGORIES=	x11 wm
@@ -15,7 +15,7 @@ LICENSE=	gnu-gpl-v2
 
 CONFLICTS=	fvwm1-[0-9]* fvwm2-[0-9]* metisse-[0-9]* xpmroot[0-9]*
 EXTRACT_ONLY=	${DISTNAME}.tar.gz
-FVWM_VER=	2.6.5
+FVWM_VER=	2.6.5nb1
 
 USE_X11BASE=		YES
 GNU_CONFIGURE=		YES
