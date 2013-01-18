@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.2 2013/01/18 08:08:13 lokivit Exp $
+# $NetBSD: options.mk,v 1.3 2013/01/18 13:52:51 makoto Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.fvwm2
-PKG_SUPPORTED_OPTIONS=		gtk rplay xrender xcursor xft
+PKG_SUPPORTED_OPTIONS=		gtk rplay xrender xcursor xft2
 PKG_OPTIONS_LEGACY_VARS+=	FVWM2_USE_GTK:gtk
 PKG_OPTIONS_LEGACY_VARS+=	FVWM2_USE_RPLAY:rplay
 
@@ -27,7 +27,7 @@ CONFIGURE_ARGS+=	--enable-xcursor
 CONFIGURE_ARGS+=	--disable-xcursor
 .endif
 
-.if !empty(PKG_OPTIONS:Mxft)
+.if !empty(PKG_OPTIONS:Mxft2)
 CONFIGURE_ARGS+=        --enable-xft
 .include "../../x11/libXft/buildlink3.mk"
 .else
