@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2013/01/06 23:09:41 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2013/01/18 15:04:51 othyro Exp $
 #
 
 DISTNAME=	compiz-boxmenu_-_1.1.9
 PKGNAME=	${DISTNAME:S/_-_/-/1}
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=compizboxmenu/}
 
@@ -13,12 +14,9 @@ LICENSE=	gnu-gpl-v2
 
 WRKSRC=		${WRKDIR}/${PKGBASE}
 USE_LANGUAGES+=	c
-USE_TOOLS+=	gmake m4
+USE_TOOLS+=	gmake m4 pkg-config
 
 PYTHON_VERSIONS_ACCEPTED= 27 26
-
-#REPLACE_PYTHON+=	new-editor/cb-editor new-editor/cbutil.py
-#REPLACE_PYTHON+=	new-editor/pyicon_browser.py
 
 EGDIR=			share/examples/xdg/compiz/boxmenu
 INSTALLATION_DIRS+=	${EGDIR}
