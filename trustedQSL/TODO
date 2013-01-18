@@ -1,2 +1,10 @@
 - Finding wxWindows at configure is not clean yet.
   See the combination of patch-configure and SUBST in Makefile.
+
+  I think above notice may be almost OK.
+
+- My rough (manually) browsing LICENSE and pkgsrc/licenses gives
+  pcc-license is one of the candiate to be similar
+  (2013/01/18 JA1XMS aka mef@)
+
+  Please comment here if you have any.
