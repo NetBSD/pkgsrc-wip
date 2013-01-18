@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2013/01/18 08:08:13 lokivit Exp $
+# $NetBSD: Makefile,v 1.4 2013/01/18 09:50:15 makoto Exp $
 
 DISTNAME=	fvwm-${FVWM_VER}
 CATEGORIES=	x11 wm
@@ -12,10 +12,11 @@ COMMENT=	Newer version of X11 Virtual window manager
 LICENSE=	gnu-gpl-v2
 
 #DEPENDS+=	xpmroot-2.*:../../x11/xpmroot
+PKGREVISION=	1
 
 CONFLICTS=	fvwm1-[0-9]* fvwm2-[0-9]* metisse-[0-9]* xpmroot[0-9]*
 EXTRACT_ONLY=	${DISTNAME}.tar.gz
-FVWM_VER=	2.6.5nb1
+FVWM_VER=	2.6.5
 
 USE_X11BASE=		YES
 GNU_CONFIGURE=		YES
