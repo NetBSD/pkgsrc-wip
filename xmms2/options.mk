@@ -1,10 +1,10 @@
-# $NetBSD: options.mk,v 1.12 2012/11/05 00:50:38 othyro Exp $
+# $NetBSD: options.mk,v 1.13 2013/01/19 08:26:06 othyro Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.xmms2
 PKG_SUPPORTED_OPTIONS=	alsa avahi boost curl ecore faad ffmpeg flac fftw gamin
 PKG_SUPPORTED_OPTIONS+=	gnomevfs jack libao libcdio libdiscid libgme libmms
 PKG_SUPPORTED_OPTIONS+=	libmpg123 libofa libvisual mad modplug mpcdec pyrex ruby
-PKG_SUPPORTED_OPTIONS+=	perl pulseaudio python readline samba shout sidplay
+PKG_SUPPORTED_OPTIONS+=	pulseaudio python readline samba shout sidplay
 PKG_SUPPORTED_OPTIONS+=	sndfile speex tremor valgrind vorbis wavpack
 PKG_SUGGESTED_OPTIONS=	flac mad vorbis
 
@@ -177,12 +177,6 @@ WITHOUT_PLUGINS+=	modplug
 PLIST.mpcdec=		yes
 .else
 WITHOUT_PLUGINS+=	musepack
-.endif
-
-.if !empty(PKG_OPTIONS:Mperl)
-.include "../../lang/perl5/buildlink3.mk"
-PLIST.perl=		yes
-PLIST_SUBST+=		PERL5_SUB_INSTALLSITEARCHLIB=${PERL5_SUB_INSTALLARCHLIB:S|perl5/|perl5/site_perl/|1}
 .endif
 
 .if !empty(PKG_OPTIONS:Mpulseaudio)

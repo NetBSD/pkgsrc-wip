@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.15 2012/11/15 16:08:15 othyro Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2013/01/19 08:26:06 othyro Exp $
 
 BUILDLINK_TREE+=	xmms2
 
@@ -97,10 +97,6 @@ pkgbase := xmms2
 
 .if !empty(PKG_BUILD_OPTIONS.xmms2:Mmpcdec)
 .include "../../audio/libmpcdec/buildlink3.mk"
-.endif
-
-.if !empty(PKG_BUILD_OPTIONS.xmms2:Mperl)
-.include "../../lang/perl5/buildlink3.mk"
 .endif
 
 .if !empty(PKG_BUILD_OPTIONS.xmms2:Mpulseaudio)

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2012/11/05 00:40:40 othyro Exp $
+@comment $NetBSD: PLIST,v 1.17 2013/01/19 08:26:06 othyro Exp $
 ${PLIST.readline}bin/nyxmms2
 bin/xmms2
 bin/xmms2-et
@@ -80,15 +80,15 @@ lib/libxmmsclient-glib.so.1.0.0
 lib/libxmmsclient.so
 lib/libxmmsclient.so.6
 lib/libxmmsclient.so.6.0.0
-${PLIST.perl}${PERL5_SUB_INSTALLSITEARCHLIB}/Audio/XMMSClient.pm
-${PLIST.perl}${PERL5_SUB_INSTALLSITEARCHLIB}/Audio/XMMSClient.pod
-${PLIST.perl}${PERL5_SUB_INSTALLSITEARCHLIB}/Audio/XMMSClient/Collection.pm
-${PLIST.perl}${PERL5_SUB_INSTALLSITEARCHLIB}/Audio/XMMSClient/Collection.pod
-${PLIST.perl}${PERL5_SUB_INSTALLSITEARCHLIB}/Audio/XMMSClient/Glib.pm
-${PLIST.perl}${PERL5_SUB_INSTALLSITEARCHLIB}/Audio/XMMSClient/Playlist.pod
-${PLIST.perl}${PERL5_SUB_INSTALLSITEARCHLIB}/Audio/XMMSClient/Result.pod
-${PLIST.perl}${PERL5_SUB_INSTALLSITEARCHLIB}/Audio/XMMSClient/Sync.pm
-${PLIST.perl}${PERL5_SUB_INSTALLSITEARCHLIB}/auto/Audio/XMMSClient/XMMSClient.so
+${PERL5_SUB_INSTALLSITEARCHLIB}/Audio/XMMSClient.pm
+${PERL5_SUB_INSTALLSITEARCHLIB}/Audio/XMMSClient.pod
+${PERL5_SUB_INSTALLSITEARCHLIB}/Audio/XMMSClient/Collection.pm
+${PERL5_SUB_INSTALLSITEARCHLIB}/Audio/XMMSClient/Collection.pod
+${PERL5_SUB_INSTALLSITEARCHLIB}/Audio/XMMSClient/Glib.pm
+${PERL5_SUB_INSTALLSITEARCHLIB}/Audio/XMMSClient/Playlist.pod
+${PERL5_SUB_INSTALLSITEARCHLIB}/Audio/XMMSClient/Result.pod
+${PERL5_SUB_INSTALLSITEARCHLIB}/Audio/XMMSClient/Sync.pm
+${PERL5_SUB_INSTALLSITEARCHLIB}/auto/Audio/XMMSClient/XMMSClient.so
 lib/pkgconfig/xmms2-client-cpp-glib.pc
 ${PLIST.ecore}lib/pkgconfig/xmms2-client-ecore.pc
 lib/pkgconfig/xmms2-client-glib.pc
