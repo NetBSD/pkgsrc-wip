@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2013/01/17 08:52:58 akihabara Exp $
+# $NetBSD: Makefile,v 1.4 2013/01/19 02:07:16 akihabara Exp $
 
 DISTNAME=	slowaes-0.1a1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,5 +14,5 @@ LICENSE=	apache-2.0
 
 PYDISTUTILSPKG=	yes
 
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
