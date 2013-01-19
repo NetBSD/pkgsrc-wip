@@ -1,16 +1,15 @@
-# $NetBSD: Makefile,v 1.1 2013/01/19 16:23:58 genolopolis Exp $
+# $NetBSD: Makefile,v 1.2 2013/01/19 18:39:58 genolopolis Exp $
 #
 
 DISTNAME=	stone_soup-0.11.1
-PKGNAME=	crawl-stone-soup
 CATEGORIES=	games
 MASTER_SITES=	http://downloads.sourceforge.net/project/crawl-ref/Stone%20Soup/0.11.1/
 EXTRACT_SUFX=	.tar.xz
 WRKSRC=		${WRKDIR}/${DISTNAME}/source
 
-MAINTAINER=	pkgsrc-users@netbsd.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://downloads.sourceforge.net/project/crawl-ref/Stone%20Soup/0.11.1/
-COMMENT=	Dungeon Crawl Stone Soup is an open-source, single-player, role-playing roguelike game
+COMMENT=	Dungeon Crawl Stone Soup is a role-playing roguelike game
 LICENSE=	gnu-gpl-v2
 
 USE_TOOLS+=	pkg-config
