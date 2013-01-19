@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2010/07/04 16:38:10 hftmarkand Exp $
+@comment $NetBSD: PLIST,v 1.6 2013/01/19 12:25:39 othyro Exp $
 bin/ode-config
 include/ode/collision.h
 include/ode/collision_space.h
@@ -19,6 +19,7 @@ include/ode/odecpp.h
 include/ode/odecpp_collision.h
 include/ode/odeinit.h
 include/ode/odemath.h
+include/ode/odemath_legacy.h
 include/ode/rotation.h
 include/ode/timer.h
 lib/libode.la
