@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/01/17 13:56:07 akihabara Exp $
+# $NetBSD: Makefile,v 1.3 2013/01/19 05:26:04 akihabara Exp $
 
 DISTNAME=	Electrum-1.6.1
 CATEGORIES=	finance python
@@ -27,5 +27,6 @@ SUBST_FILES.path=	${FIX_PYTHON_PATHS}
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
+.include "../../devel/py-curses/buildlink3.mk"
 .include "../../x11/py-qt4/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
