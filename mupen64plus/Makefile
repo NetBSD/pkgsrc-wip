@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2013/01/17 13:27:31 othyro Exp $
+# $NetBSD: Makefile,v 1.8 2013/01/19 13:18:44 thomasklausner Exp $
 #
 
 DISTNAME=	mupen64plus-bundle-src-1.99.5
@@ -41,6 +41,5 @@ BUILDLINK_DEPMETHOD.MesaLib=build
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
-BUILDLINK_DEPMETHOD.freetype2=build
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
