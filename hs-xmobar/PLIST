@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2013/01/19 13:10:58 szptvlfn Exp $
+bin/xmobar
+share/doc/xmobar-${PKGVERSION}/license
