@@ -30,7 +30,7 @@ Fvwm Configuration:
   With Shaped window support?         yes
   With Shared memory for XImage?      yes
   With Session Management support?    yes
-  With SVG image support?             yes
+  With SVG image support?             no: Failed to run test program
   With Xcursor support?               yes
   With Xinerama multi-head support?   yes
   With Xft anti-alias font support?   yes (version 2)
