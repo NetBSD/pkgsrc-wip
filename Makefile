@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5068 2013/01/20 19:12:17 kristerw Exp $
+# $Id: Makefile,v 1.5069 2013/01/20 19:21:37 kristerw Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -201,6 +201,7 @@ SUBDIR+=	beast
 SUBDIR+=	bibliographer
 SUBDIR+=	bicho
 SUBDIR+=	bigdft
+SUBDIR+=	bind10
 SUBDIR+=	bind10-devel
 SUBDIR+=	bindgraph
 SUBDIR+=	biopython
@@ -569,6 +570,7 @@ SUBDIR+=	es40
 SUBDIR+=	es40-firmware
 SUBDIR+=	esdl
 SUBDIR+=	esmart
+SUBDIR+=	espeak
 SUBDIR+=	ethtool
 SUBDIR+=	etoile
 SUBDIR+=	etoile-core
@@ -698,6 +700,7 @@ SUBDIR+=	gdvb
 SUBDIR+=	geant
 SUBDIR+=	gearmand
 SUBDIR+=	gecko-sharp
+SUBDIR+=	gecode
 SUBDIR+=	gemrb
 SUBDIR+=	genus2reduction
 SUBDIR+=	gerris
@@ -2223,6 +2226,7 @@ SUBDIR+=	pngnq
 SUBDIR+=	pnmcurve
 SUBDIR+=	pointfree
 SUBDIR+=	pointless
+SUBDIR+=	polarssl11
 SUBDIR+=	polipo
 SUBDIR+=	polylib
 SUBDIR+=	polymul
@@ -2241,6 +2245,7 @@ SUBDIR+=	probcons
 SUBDIR+=	probe
 SUBDIR+=	procps
 SUBDIR+=	progreiserfs
+SUBDIR+=	protobuf-c
 SUBDIR+=	prover9
 SUBDIR+=	proxychains
 SUBDIR+=	proxyknife
@@ -2340,6 +2345,7 @@ SUBDIR+=	py-cogent
 SUBDIR+=	py-colorpy
 SUBDIR+=	py-complexsystems
 SUBDIR+=	py-configobj
+SUBDIR+=	py-constraint
 SUBDIR+=	py-construct
 SUBDIR+=	py-corebio
 SUBDIR+=	py-cosmolopy
