@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.6 2008/05/29 19:38:32 tnn2 Exp $
+$NetBSD: distinfo,v 1.7 2013/01/20 22:12:46 othyro Exp $
 
-SHA1 (ezbounce-1.99.14.tar.gz) = 1dda6ca2a20f1f3b83c1268c919b55fb8f86f2f3
-RMD160 (ezbounce-1.99.14.tar.gz) = 275ac1a18264a3d302d9086bdbfcf6df86acb6b1
-Size (ezbounce-1.99.14.tar.gz) = 428628 bytes
+SHA1 (ezbounce-1.99.15.tar.gz) = 84b75eb59d4c80cf832446f1a985f70c0335ed73
+RMD160 (ezbounce-1.99.15.tar.gz) = ccb301b93d04134fbeff0a9f2a353a820d461af9
+Size (ezbounce-1.99.15.tar.gz) = 429512 bytes
+SHA1 (patch-src_util_timer.cc) = ad326a8fc1c1bc0b0ff5da8ea0ecd679e84fa16d
