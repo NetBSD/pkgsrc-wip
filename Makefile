@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5067 2013/01/20 19:05:32 kristerw Exp $
+# $Id: Makefile,v 1.5068 2013/01/20 19:12:17 kristerw Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -523,6 +523,7 @@ SUBDIR+=	ejourn
 SUBDIR+=	ekg2
 SUBDIR+=	electricsheep
 SUBDIR+=	electricsheep-svn
+SUBDIR+=	electrum
 SUBDIR+=	elementary
 SUBDIR+=	elementary-icon-theme
 SUBDIR+=	elinks-libmm
@@ -667,6 +668,7 @@ SUBDIR+=	fvcom2
 SUBDIR+=	fvcool
 SUBDIR+=	fvwm-crystal
 SUBDIR+=	fvwm1-tch
+SUBDIR+=	fvwm265
 SUBDIR+=	fxrays
 SUBDIR+=	g21k-binutils
 SUBDIR+=	gDesklets
@@ -2380,6 +2382,7 @@ SUBDIR+=	py-djvusmooth
 SUBDIR+=	py-dolo
 SUBDIR+=	py-dreampie
 SUBDIR+=	py-duali
+SUBDIR+=	py-ecdsa
 SUBDIR+=	py-ecspy
 SUBDIR+=	py-embedc
 SUBDIR+=	py-emmsa
@@ -2652,6 +2655,7 @@ SUBDIR+=	py-shtoom
 SUBDIR+=	py-siginterrupt
 SUBDIR+=	py-simplegeneric
 SUBDIR+=	py-simpleparse-mxtexttools
+SUBDIR+=	py-slowaes
 SUBDIR+=	py-smmap
 SUBDIR+=	py-smop
 SUBDIR+=	py-snmp
