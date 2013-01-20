@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5066 2013/01/19 22:59:38 genolopolis Exp $
+# $Id: Makefile,v 1.5067 2013/01/20 19:05:32 kristerw Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -956,7 +956,7 @@ SUBDIR+=	hs-crypto-api
 SUBDIR+=	hs-curl
 SUBDIR+=	hs-data-accessor
 SUBDIR+=	hs-data-accessor-monads-fd
-SUBDIR+=    hs-data-accessor-mtl
+SUBDIR+=	hs-data-accessor-mtl
 SUBDIR+=	hs-data-accessor-template
 SUBDIR+=	hs-data-default
 SUBDIR+=	hs-dataenc
