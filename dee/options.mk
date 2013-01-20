@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.1 2013/01/20 12:46:21 othyro Exp $
+# $NetBSD: options.mk,v 1.2 2013/01/20 14:14:21 othyro Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.dee
 PKG_SUPPORTED_OPTIONS=	doc icu introspection tests
-PKG_SUGGESTED_OPTIONS+=	icu introspection doc # tests
+PKG_SUGGESTED_OPTIONS+=	doc icu introspection tests
 PLIST_VARS+=		icu introspection
 
 .include "../../mk/bsd.options.mk"
