@@ -1,13 +1,16 @@
-# $NetBSD: Makefile,v 1.9 2012/11/25 23:32:09 othyro Exp $
+# $NetBSD: Makefile,v 1.10 2013/01/20 03:38:39 othyro Exp $
 #
 
-DISTNAME=		compare-1.11
-CATEGORIES=		sysutils
+DISTNAME=	compare-1.16
+CATEGORIES=	sysutils
 MASTER_SITES=	ftp://ftp.berlios.de/pub/compare/
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		ftp://ftp.berlios.de/pub/compare/AN-1.11
-COMMENT=		Fast binary comparision between two files
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	ftp://ftp.berlios.de/pub/compare/AN-1.11
+COMMENT=	Fast binary comparision between two files
+LICENSE=	gnu-gpl-v2
+
+NOT_FOR_PLATFORM=	*-*-x86_64
 
 USE_TOOLS+=	gmake
 
