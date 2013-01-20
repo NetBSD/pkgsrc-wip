@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/07 16:05:23 asau Exp $
+# $NetBSD: Makefile,v 1.4 2013/01/20 22:41:19 schnoebe Exp $
 #
 
 DISTNAME=	compatibility-1.3
@@ -19,6 +19,7 @@ MESSAGE_SUBST+=		SMDIR=${SMDIR}
 do-build:
 
 do-install:
+	${MKDIR} ${DESTDIR}${SMDIR}/plugins
 	cd ${WRKDIR} && ${TAR} -cf - ${DISTNAME:C/-.*$//} | \
 		${TAR} -xf - -C ${DESTDIR}${SMDIR}/plugins
 

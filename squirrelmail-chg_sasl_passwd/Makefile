@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/10/07 16:04:27 asau Exp $
+# $NetBSD: Makefile,v 1.10 2013/01/20 22:39:01 schnoebe Exp $
 #
 
 DISTNAME=	chg_sasl_passwd-1.4-1.4.x
@@ -29,6 +29,7 @@ do-build:
 	${MV} config.php config_default.php
 
 do-install:
+	${MKDIR} ${DESTDIR}${SMDIR}/plugins
 	cd ${WRKDIR} && ${TAR} -cf - ${DISTNAME:C/-.*$//} | \
 		${TAR} -xf - -C ${DESTDIR}${SMDIR}/plugins
 

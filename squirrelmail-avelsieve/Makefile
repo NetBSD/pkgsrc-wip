@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/10/07 16:03:45 asau Exp $
+# $NetBSD: Makefile,v 1.10 2013/01/20 22:35:34 schnoebe Exp $
 #
 
 DISTNAME=	avelsieve-1.9.7
@@ -24,6 +24,7 @@ do-build:
 		-print | xargs rm
 
 do-install:
+	${MKDIR} ${DESTDIR}${SMDIR}/plugins
 	cd ${WRKDIR} && ${TAR} -cf - ${DISTNAME:C/-.*$//} | \
 		${TAR} -xf - -C ${DESTDIR}${SMDIR}/plugins
 
