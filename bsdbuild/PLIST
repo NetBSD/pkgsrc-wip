@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2011/06/21 15:38:28 reinoudz70 Exp $
+@comment $NetBSD: PLIST,v 1.5 2013/01/20 01:33:35 othyro Exp $
 bin/h2mandoc
 bin/man2wiki
 bin/mkconfigure
@@ -11,7 +11,6 @@ man/man1/mkconfigure.1
 man/man1/mkify.1
 man/man1/uman.1
 man/man5/build.common.mk.5
-man/man5/build.den.mk.5
 man/man5/build.dep.mk.5
 man/man5/build.lib.mk.5
 man/man5/build.prog.mk.5
@@ -33,10 +32,13 @@ share/bsdbuild/BSDBuild/arc4random.pm
 share/bsdbuild/BSDBuild/asprintf.pm
 share/bsdbuild/BSDBuild/byte_order.pm
 share/bsdbuild/BSDBuild/cc.pm
+share/bsdbuild/BSDBuild/cc_attributes.pm
 share/bsdbuild/BSDBuild/cg.pm
 share/bsdbuild/BSDBuild/clock_gettime.pm
 share/bsdbuild/BSDBuild/clock_win32.pm
+share/bsdbuild/BSDBuild/cocoa.pm
 share/bsdbuild/BSDBuild/cracklib.pm
+share/bsdbuild/BSDBuild/crypt.pm
 share/bsdbuild/BSDBuild/curl.pm
 share/bsdbuild/BSDBuild/cxx.pm
 share/bsdbuild/BSDBuild/db4.pm
@@ -48,15 +50,19 @@ share/bsdbuild/BSDBuild/fastcgi.pm
 share/bsdbuild/BSDBuild/fgetln.pm
 share/bsdbuild/BSDBuild/float_h.pm
 share/bsdbuild/BSDBuild/flock.pm
+share/bsdbuild/BSDBuild/fontconfig.pm
 share/bsdbuild/BSDBuild/free_null.pm
 share/bsdbuild/BSDBuild/freesg.pm
 share/bsdbuild/BSDBuild/freetype.pm
+share/bsdbuild/BSDBuild/gcc.pm
 share/bsdbuild/BSDBuild/getaddrinfo.pm
 share/bsdbuild/BSDBuild/getenv.pm
+share/bsdbuild/BSDBuild/gethostbyname.pm
 share/bsdbuild/BSDBuild/gethostname.pm
 share/bsdbuild/BSDBuild/getopt.pm
 share/bsdbuild/BSDBuild/getpeereid.pm
 share/bsdbuild/BSDBuild/getpeerucred.pm
+share/bsdbuild/BSDBuild/getpwnam_r.pm
 share/bsdbuild/BSDBuild/getpwuid.pm
 share/bsdbuild/BSDBuild/gettext.pm
 share/bsdbuild/BSDBuild/gettimeofday.pm
@@ -76,6 +82,8 @@ share/bsdbuild/BSDBuild/math_c99.pm
 share/bsdbuild/BSDBuild/md5.pm
 share/bsdbuild/BSDBuild/mgid.pm
 share/bsdbuild/BSDBuild/mmap.pm
+share/bsdbuild/BSDBuild/mysql.pm
+share/bsdbuild/BSDBuild/objc.pm
 share/bsdbuild/BSDBuild/ode.pm
 share/bsdbuild/BSDBuild/open_exlock.pm
 share/bsdbuild/BSDBuild/opengl.pm
@@ -83,6 +91,7 @@ share/bsdbuild/BSDBuild/pctr.pm
 share/bsdbuild/BSDBuild/percgi.pm
 share/bsdbuild/BSDBuild/perl.pm
 share/bsdbuild/BSDBuild/png.pm
+share/bsdbuild/BSDBuild/portaudio.pm
 share/bsdbuild/BSDBuild/progname.pm
 share/bsdbuild/BSDBuild/pthreads.pm
 share/bsdbuild/BSDBuild/rmd160.pm
@@ -97,10 +106,12 @@ share/bsdbuild/BSDBuild/setproctitle.pm
 share/bsdbuild/BSDBuild/sha1.pm
 share/bsdbuild/BSDBuild/shl_load.pm
 share/bsdbuild/BSDBuild/signal.pm
+share/bsdbuild/BSDBuild/siocgifconf.pm
 share/bsdbuild/BSDBuild/smpeg.pm
 share/bsdbuild/BSDBuild/sndfile.pm
 share/bsdbuild/BSDBuild/snprintf.pm
 share/bsdbuild/BSDBuild/so_peercred.pm
+share/bsdbuild/BSDBuild/sockopts.pm
 share/bsdbuild/BSDBuild/sse.pm
 share/bsdbuild/BSDBuild/stdlib_h.pm
 share/bsdbuild/BSDBuild/strlcat.pm
@@ -115,10 +126,10 @@ share/bsdbuild/BSDBuild/unistd_h.pm
 share/bsdbuild/BSDBuild/vasprintf.pm
 share/bsdbuild/BSDBuild/vsnprintf.pm
 share/bsdbuild/BSDBuild/wgl.pm
+share/bsdbuild/BSDBuild/winsock.pm
 share/bsdbuild/BSDBuild/x11.pm
 share/bsdbuild/BSDBuild/xinerama.pm
 share/bsdbuild/build.common.mk
-share/bsdbuild/build.den.mk
 share/bsdbuild/build.dep.mk
 share/bsdbuild/build.doc.mk
 share/bsdbuild/build.lib.mk

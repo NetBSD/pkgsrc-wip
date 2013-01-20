@@ -1,42 +1,25 @@
-$NetBSD: patch-ai,v 1.2 2011/06/21 15:38:28 reinoudz70 Exp $
+$NetBSD: patch-ai,v 1.3 2013/01/20 01:33:36 othyro Exp $
 
---- Makefile.orig	2011-05-27 14:45:08.000000000 +0000
+Don't install to ${DATADIR}/libtool.
+
+--- Makefile.orig	2012-08-10 01:37:36.000000000 +0000
 +++ Makefile
-@@ -60,18 +60,10 @@ install: install-subdir
- 	    echo "${INSTALL_DATA_DIR} ${SHAREDIR}"; \
- 	    ${SUDO} ${INSTALL_DATA_DIR} "${DESTDIR}${SHAREDIR}"; \
+@@ -66,18 +66,10 @@ install: config-ok install-subdir
+ 	    echo "${INSTALL_DATA_DIR} ${DATADIR}"; \
+ 	    ${SUDO} ${INSTALL_DATA_DIR} "${DESTDIR}${DATADIR}"; \
  	fi
--	@if [ ! -d "${DESTDIR}${SHAREDIR}/libtool" ]; then \
--	    echo "${INSTALL_DATA_DIR} ${SHAREDIR}/libtool"; \
--	    ${SUDO} ${INSTALL_DATA_DIR} "${DESTDIR}${SHAREDIR}/libtool"; \
+-	@if [ ! -d "${DESTDIR}${DATADIR}/libtool" ]; then \
+-	    echo "${INSTALL_DATA_DIR} ${DATADIR}/libtool"; \
+-	    ${SUDO} ${INSTALL_DATA_DIR} "${DESTDIR}${DATADIR}/libtool"; \
 -	fi
- 	@for F in ${SHARE}; do \
- 	    echo "${INSTALL_DATA} $$F ${SHAREDIR}"; \
- 	    ${SUDO} ${INSTALL_DATA} $$F "${DESTDIR}${SHAREDIR}"; \
+ 	@for F in ${DATAFILES}; do \
+ 	    echo "${INSTALL_DATA} $$F ${DATADIR}"; \
+ 	    ${SUDO} ${INSTALL_DATA} $$F "${DESTDIR}${DATADIR}"; \
  	done
 -	@for F in ${LTFILES}; do \
--	    echo "${INSTALL_DATA} libtool/$$F ${SHAREDIR}/libtool"; \
--	    ${SUDO} ${INSTALL_DATA} libtool/$$F "${DESTDIR}${SHAREDIR}/libtool"; \
+-	    echo "${INSTALL_DATA} libtool/$$F ${DATADIR}/libtool"; \
+-	    ${SUDO} ${INSTALL_DATA} libtool/$$F "${DESTDIR}${DATADIR}/libtool"; \
 -	done
- 	@for F in ${SCRIPTS}; do \
- 	    echo "${INSTALL_PROG} $$F ${BINDIR}"; \
- 	    ${SUDO} ${INSTALL_PROG} $$F "${DESTDIR}${BINDIR}"; \
-@@ -98,18 +90,10 @@ install-links: install-links-subdir
- 	    echo "${INSTALL_DATA_DIR} ${SHAREDIR}"; \
- 	    ${SUDO} ${INSTALL_DATA_DIR} "${DESTDIR}${SHAREDIR}"; \
- 	fi
--	@if [ ! -d "${SHAREDIR}/libtool" ]; then \
--	    echo "${INSTALL_DATA_DIR} ${SHAREDIR}/libtool"; \
--	    ${SUDO} ${INSTALL_DATA_DIR} "${DESTDIR}${SHAREDIR}/libtool"; \
--	fi
- 	@for F in ${SHARE}; do \
- 	    echo "ln -sf `pwd`/$$F ${SHAREDIR}/$$F"; \
- 	    ${SUDO} ln -sf `pwd`/$$F "${DESTDIR}${SHAREDIR}/$$F"; \
- 	done
--	@for F in ${LTFILES}; do \
--	    echo "${INSTALL_DATA} libtool/$$F ${SHAREDIR}/libtool"; \
--	    ${SUDO} ${INSTALL_DATA} libtool/$$F "${DESTDIR}${SHAREDIR}/libtool"; \
--	done
- 	@for F in ${SCRIPTS}; do \
- 	    echo "${INSTALL_PROG} $$F.pl ${BINDIR}/$$F"; \
- 	    ${SUDO} ${INSTALL_PROG} $$F.pl "${DESTDIR}${BINDIR}"; \
+ 	@if [ ! -d "${DESTDIR}${BINDIR}" ]; then \
+ 	    echo "${INSTALL_PROG_DIR} ${BINDIR}"; \
+ 	    ${SUDO} ${INSTALL_PROG_DIR} "${DESTDIR}${BINDIR}"; \

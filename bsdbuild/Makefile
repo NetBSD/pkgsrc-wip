@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.5 2012/09/24 17:14:40 asau Exp $
+# $NetBSD: Makefile,v 1.6 2013/01/20 01:33:35 othyro Exp $
 #
 
-DISTNAME=	bsdbuild-2.9
+DISTNAME=	bsdbuild-3.0
 CATEGORIES=	devel
 MASTER_SITES=	http://stable.hypertriton.com/bsdbuild/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.hypertriton.com/bsdbuild/
 COMMENT=	BSD-licensed portable build system
+LICENSE=	2-clause-bsd
 
 HAS_CONFIGURE=	yes
 USE_LANGUAGES=	# none
