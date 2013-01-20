@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2012/11/23 22:44:43 othyro Exp $
+# $NetBSD: Makefile,v 1.8 2013/01/20 20:29:30 othyro Exp $
 #
 
 DISTNAME=	efltk-2.0.8
-#PKGREVISION=	0
 PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ede/}
@@ -10,6 +9,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ede/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ede.sourceforge.net/
 COMMENT=	Extended Fast Light Toolkit
+LICENSE=	gnu-lgpl-v2
 
 PKG_DESTDIR_SUPPORT=	none
 
