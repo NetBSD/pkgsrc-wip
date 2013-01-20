@@ -1,5 +1,7 @@
-The AccountManager offers several features for managing user accounts:
+The AccountManager offers features for managing user accounts and more:
 
+    * enable authentication through a number of built-in authentication
+      resources and some more by 3rd party extensions
     * allow users to register new accounts
     * login via an HTML form instead of using HTTP authentication
     * allow existing users to change their passwords or delete their accounts
@@ -8,3 +10,15 @@ These features are new in the plugin for Trac 0.10.
 
     * send a new password to users who've forgotten their password
     * administration of user accounts
+
+These features are new in the plugin for Trac 0.11 and later 
+    * login failure tracking and rule based account locking (temporary or
+       permanent lock) 
+    * per-account details admin page 
+    * password hash refresh and store migration on user login 
+    * i18n support (requires Trac 0.12 or later) 
+    * account meta-data listing from Trac db table session_attribute, with
+      cleanup option 
+    * Single-Sign-On functionality for applications with multiple Trac
+      environments per domain/host 
+    * mostly account-/user-related WikiMacros
