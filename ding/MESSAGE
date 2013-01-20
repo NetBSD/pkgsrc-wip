@@ -1,7 +1,7 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.3 2005/09/28 14:24:39 rillig Exp $
+$NetBSD: MESSAGE,v 1.4 2013/01/20 14:18:58 othyro Exp $
 
-- Note that ${PREFIX}/bin/ding uses a defined path to access it's
+- Note that ${PREFIX}/bin/ding uses a defined path to access its
   dictionary file.
 
   If your LOCALBASE variable is not set to /usr/pkg, you'll have to change

@@ -1,6 +1,3 @@
-Ding is a Dictionary lookup program for the
-X window system. It comes with a German-English
-Dictionary with approximately 135,000 entries.
-
-It is based on Tk version >= 8.0 and uses
-the agrep or egrep tools for searching.
+Ding is a dictionary lookup program for the X window system. It comes with a
+German-English dictionary with approximately 135,000 entries. It is based on Tk
+version >= 8.0 and uses the agrep or egrep tools for searching.
