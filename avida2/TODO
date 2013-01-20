@@ -1,0 +1,8 @@
+[ 27%] Building CXX object avida-core/CMakeFiles/avidacore.dir/source/actions/DriverActions.cc.o
+In file included from /usr/pkgsrc/wip/avida2/work/avida-2.12.4-src/avida-core/source/main/cMutationRates.h:30:0,
+                 from /usr/pkgsrc/wip/avida2/work/avida-2.12.4-src/avida-core/source/main/cOrganism.h:31,
+                 from /usr/pkgsrc/wip/avida2/work/avida-2.12.4-src/avida-core/source/main/cStats.h:38,
+                 from /usr/pkgsrc/wip/avida2/work/avida-2.12.4-src/avida-core/source/actions/DriverActions.cc:28:
+/usr/pkgsrc/wip/avida2/work/avida-2.12.4-src/avida-core/source/tools/cRandom.h:255:65: error: redefinition of 'template<class ForwardIterator, class T> void std::iota(ForwardIterator, ForwardIterator, T)'
+/usr/include/g++/bits/stl_numeric.h:81:72: error: 'template<class _ForwardIterator, class _Tp> void std::iota(_ForwardIterator, _ForwardIterator, _Tp)' previously declared here
+*** Error code 1
