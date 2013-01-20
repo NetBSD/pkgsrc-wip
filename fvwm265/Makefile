@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2013/01/18 13:43:11 makoto Exp $
+# $NetBSD: Makefile,v 1.6 2013/01/20 09:46:48 makoto Exp $
 
 DISTNAME=	fvwm-${FVWM_VER}
 CATEGORIES=	x11 wm
@@ -30,7 +30,6 @@ INSTALLATION_DIRS+=	lib/X11/fvwm2/pixmaps
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 
 EVAL_PREFIX+=		XPMDIR=xpm
-CONFIGURE_ARGS+=	--without-gnome
 CONFIGURE_ARGS+=	--sysconfdir=${PREFIX:Q}/lib/X11/fvwm2
 CONFIGURE_ARGS+=	--libexecdir=${PREFIX:Q}/lib/X11
 CONFIGURE_ARGS+=	--with-xpm-includes=${XPMDIR:Q}/include
