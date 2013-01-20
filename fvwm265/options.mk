@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2013/01/20 09:46:48 makoto Exp $
+# $NetBSD: options.mk,v 1.5 2013/01/20 11:16:45 makoto Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.fvwm
 PKG_OPTIONS_LEGACY_VARS+=	FVWM2_USE_GTK:gtk
@@ -48,8 +48,7 @@ CONFIGURE_ARGS+=        --disable-png
 .endif
 
 .if !empty(PKG_OPTIONS:Msvg)
-# With SVG image support?             no: Failed to run test program
-#.include "../../graphics/librsvg/buildlink3.mk"
+.include "../../graphics/librsvg/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=        --disable-rsvg
 .endif

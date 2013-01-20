@@ -30,7 +30,7 @@ Fvwm Configuration:
   With Shaped window support?         yes
   With Shared memory for XImage?      yes
   With Session Management support?    yes
-  With SVG image support?             no: librsvg library or header not found
+  With SVG image support?             yes
   With Xcursor support?               yes
   With Xinerama multi-head support?   yes
   With Xft anti-alias font support?   yes (version 2)
@@ -38,7 +38,3 @@ Fvwm Configuration:
   With Xrender image support?         yes
   Build man pages?                    yes
   Build HTML documentation?           no
-
-See INSTALL.fvwm for the description of what this may mean.
-modena@makoto 18:42:21/130120(..wip/fvwm265)%
-:
