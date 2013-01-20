@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/09/24 16:56:40 asau Exp $
+# $NetBSD: Makefile,v 1.8 2013/01/20 00:27:17 othyro Exp $
 #
 
 DISTNAME=	audit-system-0.01
@@ -9,8 +9,7 @@ DISTFILES=	# empty
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.NetBSD.org/support/security/
 COMMENT=	Check the NetBSD base OS for known vulnerabilities
-
-PKG_DESTDIR_SUPPORT=	none
+LICENSE=	2-clause-bsd
 
 WRKSRC=		${WRKDIR}
 NO_BUILD=	yes
@@ -29,6 +28,7 @@ BUILD_DEFS=	VARBASE
 CONF_FILES+=	${EGDIR}/audit-system.conf ${PKG_SYSCONFDIR}/audit-system.conf
 USE_TOOLS+=	awk cp mv ident chmod mkdir find rm echo
 MAKE_DIRS=	${SYSVULNDIR}
+INSTALLATION_DIRS+=	${PKGMANDIR}/man5 ${PKGMANDIR}/man8 ${EGDIR} sbin
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -64,18 +64,14 @@ do-extract:
 .	endfor
 
 do-install:
-	${INSTALL_DATA_DIR} ${EGDIR}
-
-	${INSTALL_DATA} ${WRKSRC}/audit-system.conf ${EGDIR}
-
-	${INSTALL_SCRIPT} ${WRKSRC}/audit-get-ident ${PREFIX}/sbin
-	${INSTALL_SCRIPT} ${WRKSRC}/audit-get-mtime ${PREFIX}/sbin
-	${INSTALL_SCRIPT} ${WRKSRC}/audit-get-objdump ${PREFIX}/sbin
-	${INSTALL_SCRIPT} ${WRKSRC}/audit-system ${PREFIX}/sbin
-
+	${INSTALL_DATA} ${WRKSRC}/audit-system.conf ${DESTDIR}${EGDIR}
+	${INSTALL_SCRIPT} ${WRKSRC}/audit-get-ident ${DESTDIR}${PREFIX}/sbin
+	${INSTALL_SCRIPT} ${WRKSRC}/audit-get-mtime ${DESTDIR}${PREFIX}/sbin
+	${INSTALL_SCRIPT} ${WRKSRC}/audit-get-objdump ${DESTDIR}${PREFIX}/sbin
+	${INSTALL_SCRIPT} ${WRKSRC}/audit-system ${DESTDIR}${PREFIX}/sbin
 	${INSTALL_MAN} ${WRKSRC}/audit-system.8 \
-		${PREFIX}/${PKGMANDIR}/man8
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
 	${INSTALL_MAN} ${WRKSRC}/audit-system.conf.5 \
-		${PREFIX}/${PKGMANDIR}/man5
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
 
 .include "../../mk/bsd.pkg.mk"
