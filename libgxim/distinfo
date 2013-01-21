@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2009/04/08 14:52:50 jihbed Exp $
+$NetBSD: distinfo,v 1.3 2013/01/21 20:59:36 othyro Exp $
 
-SHA1 (libgxim-0.3.3.tar.bz2) = 534492505fff1e1d97c3327daf4852bf6c1ca9fb
-RMD160 (libgxim-0.3.3.tar.bz2) = 0c843bfc33b25b3bfbccf3e6e653734f2c561457
-Size (libgxim-0.3.3.tar.bz2) = 483635 bytes
+SHA1 (libgxim-0.4.0.tar.bz2) = 4369b7b43f8860a81acb8873612d3163f20a57f0
+RMD160 (libgxim-0.4.0.tar.bz2) = b2c0f402e71bdd4155f3fc3543b720c27f946bb3
+Size (libgxim-0.4.0.tar.bz2) = 431697 bytes
