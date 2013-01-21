@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2005/09/28 06:41:25 rillig Exp $
+$NetBSD: distinfo,v 1.3 2013/01/21 15:18:23 othyro Exp $
 
-SHA1 (libdisasm-0.17pre2.tgz) = 66f11f7f59ace8f00a55897ded09830ff5a6eee1
-RMD160 (libdisasm-0.17pre2.tgz) = 89a1dfa7f5438dd8673bef5c6410f90005622de0
-Size (libdisasm-0.17pre2.tgz) = 92900 bytes
+SHA1 (libdisasm-0.23.tar.gz) = ff5e2ffb726d1c28396b21e0abbe10bae5d4a846
+RMD160 (libdisasm-0.23.tar.gz) = bd205e2399724e37738c9ad633fd24321acef5ff
+Size (libdisasm-0.23.tar.gz) = 454721 bytes
