@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/09/24 17:47:37 asau Exp $
+# $NetBSD: Makefile,v 1.6 2013/01/21 15:18:00 schmonz Exp $
 
 DISTNAME=	clockspeed-0.62
 CATEGORIES=	time
@@ -7,6 +7,7 @@ MASTER_SITES=	http://cr.yp.to/clockspeed/
 MAINTAINER=	neil@daikokuya.co.uk
 HOMEPAGE=	http://cr.yp.to/clockspeed.html
 COMMENT=	Suite of clock synchronization utilities
+LICENSE=	public-domain
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
 CMDDIR=		${WRKSRC}
