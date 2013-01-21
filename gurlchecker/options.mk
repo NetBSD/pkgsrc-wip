@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.1 2013/01/21 02:58:05 othyro Exp $
+# $NetBSD: options.mk,v 1.2 2013/01/21 05:48:18 othyro Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gurlchecker
-PKG_SUPPORTED_OPTIONS=	clamav croco doc json tidy
+PKG_SUPPORTED_OPTIONS=	clamav croco doc json sqlite3 tidy
 PKG_SUGGESTED_OPTIONS+=	doc
 PLIST_VARS+=		doc
 
