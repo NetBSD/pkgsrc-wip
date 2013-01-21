@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2009/10/11 10:44:46 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.10 2013/01/21 03:32:33 othyro Exp $
 bin/htsserver
 bin/httrack
 bin/proxytrack
@@ -7,19 +7,23 @@ include/httrack/config.h
 include/httrack/htsbasenet.h
 include/httrack/htsbauth.h
 include/httrack/htsconfig.h
+include/httrack/htsdefines.h
 include/httrack/htsglobal.h
 include/httrack/htsmodules.h
 include/httrack/htsopt.h
-include/httrack/htssystem.h
 include/httrack/htswrap.h
 include/httrack/httrack-library.h
 lib/httrack/libbaselinks.la
+lib/httrack/libchangecontent.la
 lib/httrack/libcontentfilter.la
 lib/httrack/libdisplayheader.la
 lib/httrack/libfilename.la
 lib/httrack/libfilename2.la
 lib/httrack/libfilenameiisbug.la
 lib/httrack/liblistlinks.la
+lib/httrack/liblog.la
+lib/httrack/libsimple.la
+lib/libhtsjava.la
 lib/libhttrack.la
 man/man1/htsserver.1
 man/man1/httrack.1
@@ -88,6 +92,7 @@ share/doc/httrack/html/license.txt
 share/doc/httrack/html/options.html
 share/doc/httrack/html/overview.html
 share/doc/httrack/html/plug.html
+share/doc/httrack/html/plug_330.html
 share/doc/httrack/html/scripting.html
 share/doc/httrack/html/server/about.html
 share/doc/httrack/html/server/addurl.html
@@ -170,17 +175,17 @@ share/httrack/lang/Svenska.txt
 share/httrack/lang/Turkish.txt
 share/httrack/lang/Ukrainian.txt
 share/httrack/libtest/callbacks-example-baselinks.c
+share/httrack/libtest/callbacks-example-changecontent.c
 share/httrack/libtest/callbacks-example-contentfilter.c
 share/httrack/libtest/callbacks-example-displayheader.c
 share/httrack/libtest/callbacks-example-filename.c
 share/httrack/libtest/callbacks-example-filename2.c
 share/httrack/libtest/callbacks-example-filenameiisbug.c
 share/httrack/libtest/callbacks-example-listlinks.c
+share/httrack/libtest/callbacks-example-log.c
+share/httrack/libtest/callbacks-example-simple.c
 share/httrack/libtest/example.c
-share/httrack/libtest/example.dsp
-share/httrack/libtest/example.dsw
 share/httrack/libtest/example.h
-share/httrack/libtest/htssystem.h
 share/httrack/libtest/readme.txt
 share/httrack/templates/index-body.html
 share/httrack/templates/index-footer.html

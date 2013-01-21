@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2009/07/04 13:25:17 leot1990 Exp $
+$NetBSD: distinfo,v 1.8 2013/01/21 03:32:33 othyro Exp $
 
-SHA1 (httrack-3.43-5.tar.gz) = 5370101b3c6068f78c867d2110c3389d2621fcb4
-RMD160 (httrack-3.43-5.tar.gz) = 3271fc8fdc1d82b4ab436e4aec8a860f35e45724
-Size (httrack-3.43-5.tar.gz) = 1675394 bytes
+SHA1 (httrack-3.46.1.tar.gz) = be6328d2ff3cbabd21426b7acc54edcf1ebb76e0
+RMD160 (httrack-3.46.1.tar.gz) = 492d00b3bcb1f9a0f07dffba282258b8f35c39ad
+Size (httrack-3.46.1.tar.gz) = 1698018 bytes
