@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2012/09/22 16:45:49 othyro Exp $
+# $NetBSD: options.mk,v 1.2 2013/01/21 20:36:04 othyro Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.pcsxr
 PKG_SUPPORTED_OPTIONS=	nls
@@ -10,4 +10,6 @@ PLIST_VARS+=		nls
 .if !empty(PKG_OPTIONS:Mnls)
 .include "../../devel/gettext-lib/buildlink3.mk"
 PLIST.nls=	yes
+.else
+CONFIGURE_ARGS+=	--disable-nls
 .endif
