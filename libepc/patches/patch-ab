@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.1.1.1 2010/05/02 10:26:16 thomasklausner Exp $
+$NetBSD: patch-ab,v 1.2 2013/01/21 20:27:30 othyro Exp $
+
+Run this block only if SIOCGIFINDEX is defined.
 
 --- tests/framework.c.orig	2008-10-20 07:47:36.000000000 +0000
 +++ tests/framework.c
