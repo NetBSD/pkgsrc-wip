@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2012/12/04 02:34:32 othyro Exp $
+@comment $NetBSD: PLIST,v 1.7 2013/01/21 00:49:52 othyro Exp $
 include/glib-java/glib_java.h
 include/glib-java/jg_jnu.h
 lib/libglibjni.la
@@ -47,7 +47,10 @@ share/doc/${PKGNAME}/api/org/gnu/glib/package-summary.html
 share/doc/${PKGNAME}/api/org/gnu/glib/package-tree.html
 share/doc/${PKGNAME}/api/overview-tree.html
 share/doc/${PKGNAME}/api/package-list
-share/doc/${PKGNAME}/api/resources/inherit.gif
+share/doc/${PKGNAME}/api/resources/background.gif
+share/doc/${PKGNAME}/api/resources/tab.gif
+share/doc/${PKGNAME}/api/resources/titlebar.gif
+share/doc/${PKGNAME}/api/resources/titlebar_end.gif
 share/doc/${PKGNAME}/api/serialized-form.html
 share/doc/${PKGNAME}/api/stylesheet.css
 share/glib-java/macros/ac_prog_jar.m4
