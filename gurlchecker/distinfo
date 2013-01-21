@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/06/24 05:05:21 xtraeme Exp $
+$NetBSD: distinfo,v 1.2 2013/01/21 02:58:05 othyro Exp $
 
-SHA1 (gurlchecker-0.4.1.tar.gz) = c0e056736012abc780dbf0f908a9455897b58a9d
-Size (gurlchecker-0.4.1.tar.gz) = 211767 bytes
-SHA1 (patch-aa) = 01d3ed3e7dbcfc581f733f53ec71b2255fcb47f8
+SHA1 (gurlchecker-0.13.1.tar.gz) = 483a721178eb55c831fa223edd565ab34a45a009
+RMD160 (gurlchecker-0.13.1.tar.gz) = 86c07058b1fc8c519b84433216fbdb8ad8fbcfae
+Size (gurlchecker-0.13.1.tar.gz) = 709336 bytes
+SHA1 (patch-aa) = a33271c29908eeadc5f48b9e96cb6421e149252e

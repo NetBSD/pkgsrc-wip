@@ -1,16 +1,17 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/06/24 05:05:21 xtraeme Exp $
+$NetBSD: patch-aa,v 1.2 2013/01/21 02:58:05 othyro Exp $
 
---- src/utils.c.orig	2003-06-24 07:03:04.000000000 +0200
-+++ src/utils.c	2003-06-24 07:04:09.000000000 +0200
-@@ -17,6 +17,11 @@
-  * Boston, MA 02111-1307, USA.
-  */
- 
+Add FreeBSD and NetBSD support.
+
+--- src/utils.c.orig	2010-02-04 12:25:12.000000000 +0000
++++ src/utils.c
+@@ -22,6 +22,10 @@
+ #include "check.h"
+ #include "connection.h"
+ #include "project.h"
 +#if defined(__FreeBSD__) || defined(__NetBSD__)
 +#include <sys/param.h>
 +#include <sys/mount.h>
 +#endif
-+
- #include "utils.h"
  
+ #include "utils.h"
  

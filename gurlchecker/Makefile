@@ -1,21 +1,25 @@
-# $NetBSD: Makefile,v 1.17 2012/11/14 00:16:08 othyro Exp $
+# $NetBSD: Makefile,v 1.18 2013/01/21 02:58:05 othyro Exp $
 #
 
-DISTNAME=	gurlchecker-0.4.1
-PKGREVISION=	4
+DISTNAME=	gurlchecker-0.13.1
 CATEGORIES=	www
-MASTER_SITES=	http://savannah.nongnu.org/download/gurlchecker/stable/0.4/
+MASTER_SITES=	http://labs.libre-entreprise.org/frs/download.php/857/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://labs.libre-entreprise.org/projects/gurlchecker/
 COMMENT=	Gnome2 program to check a page/website for broken links
-
-PKG_DESTDIR_SUPPORT=	none
+LICENSE=	gnu-gpl-v2
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake msgfmt
+USE_LIBTOOL=		yes
+USE_TOOLS+=		gmake intltool msgfmt msgmerge perl pkg-config xgettext
 
+.include "options.mk"
+
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../net/gnet/buildlink3.mk"
+.include "../../security/gnutls/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
