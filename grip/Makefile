@@ -1,18 +1,16 @@
-# $NetBSD: Makefile,v 1.33 2012/11/13 20:09:31 othyro Exp $
+# $NetBSD: Makefile,v 1.34 2013/01/21 01:53:59 othyro Exp $
 #
 
-DISTNAME=		grip-3.2.0
-PKGREVISION=		9
-CATEGORIES=		audio
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=grip/}
+DISTNAME=	grip-3.3.1
+CATEGORIES=	audio
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=grip/}
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://nostatic.org/grip/
-COMMENT=		CD-player and CD-ripper for the Gnome desktop
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://nostatic.org/grip/
+COMMENT=	CD-player and CD-ripper for the Gnome desktop
+LICENSE=	gnu-gpl-v2
 
-PKG_DESTDIR_SUPPORT=	none
-
-USE_TOOLS+=		gmake msgfmt
+USE_TOOLS+=		gmake msgfmt intltool msgmerge pkg-config xgettext
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
@@ -23,6 +21,7 @@ BUILDLINK_FNAME_TRANSFORM.cdparanoia+=	-e s,/cdparanoia/,/,g
 CONFIGURE_ARGS+=	--disable-id3
 
 
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../audio/cdparanoia/buildlink3.mk"
 #.include "../../audio/id3lib/buildlink3.mk"
