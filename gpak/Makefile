@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/09/29 00:50:39 asau Exp $
+# $NetBSD: Makefile,v 1.3 2013/01/21 01:07:17 othyro Exp $
 
 DISTNAME=	gpak-0.0.1
 CATEGORIES=	sysutils
@@ -17,6 +17,8 @@ SUBST_STAGE.fix-prefix=		post-build
 SUBST_MESSAGE.fix-prefix=	Fixing relative prefix
 SUBST_FILES.fix-prefix=		gpak.pl
 SUBST_SED.fix-prefix=		-e 's,gpak.glade,${PREFIX}/share/gpak.glade,'
+
+INSTALLATION_DIRS+=	bin share
 
 do-build:
 	${MKDIR} ${WRKSRC}
