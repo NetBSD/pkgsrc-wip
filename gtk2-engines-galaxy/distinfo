@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2003/11/27 03:01:46 mpasternak Exp $
+$NetBSD: distinfo,v 1.2 2013/01/21 02:06:05 othyro Exp $
 
 SHA1 (GTK2-Galaxy.tar.gz) = 965a93aae60569f1b7088e258aa2685cef05e6de
+RMD160 (GTK2-Galaxy.tar.gz) = 9d45c9e87be0cd5cf2bdb404a2c7136b37c3a72f
 Size (GTK2-Galaxy.tar.gz) = 236030 bytes
-SHA1 (patch-aa) = 019f6db71934d27f7cf1d9c8fe85d1c7607da6d3
-SHA1 (patch-ab) = 9cc82337c35a4c991347e5353b663c2b95c5f288
+SHA1 (patch-aa) = eb21a2aec172d0b9cf5b4547be6d179a75360ed4
+SHA1 (patch-ab) = 661fd3167855fa750245c6bd7451320d4d435886

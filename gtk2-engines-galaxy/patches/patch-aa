@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/11/27 03:01:46 mpasternak Exp $
+$NetBSD: patch-aa,v 1.2 2013/01/21 02:06:05 othyro Exp $
+
+Only build gtk2 target.
 
 --- Makefile.in~	Fri Jul 25 22:19:13 2003
 +++ Makefile.in	Thu Nov 27 03:53:37 2003

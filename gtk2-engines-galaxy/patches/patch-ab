@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.1.1.1 2003/11/27 03:01:49 mpasternak Exp $
+$NetBSD: patch-ab,v 1.2 2013/01/21 02:06:05 othyro Exp $
+
+Remove GTK tests.
 
 --- configure~	Fri Jul 25 22:19:21 2003
 +++ configure	Thu Nov 27 03:56:34 2003

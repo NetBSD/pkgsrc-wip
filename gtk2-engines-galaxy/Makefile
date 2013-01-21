@@ -1,22 +1,20 @@
-# $NetBSD: Makefile,v 1.17 2012/09/29 00:50:41 asau Exp $
+# $NetBSD: Makefile,v 1.18 2013/01/21 02:06:05 othyro Exp $
 
-DISTNAME=		GTK2-Galaxy
-PKGNAME=		gtk2-engines-galaxy-0
-WRKSRC=			${WRKDIR}/galaxy-0.2
-PKGREVISION=		1
-CATEGORIES=		x11
-MASTER_SITES=		http://ftp.gnome.org/pub/GNOME/teams/art.gnome.org/archive/themes/gtk2/
+DISTNAME=	GTK2-Galaxy
+PKGNAME=	${DISTNAME:tl:S/-/-engines-/1}-0.2
+CATEGORIES=	x11
+MASTER_SITES=	${MASTER_SITE_GNOME:=teams/art.gnome.org/archive/themes/gtk2/}
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://art.gnome.org/
-COMMENT=		Another theme engine for GTK+ 2.x
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://art.gnome.org/
+COMMENT=	Another theme engine for GTK+ 2.x
+LICENSE=	gnu-gpl-v2
 
-PKG_DESTDIR_SUPPORT=	none
-
-USE_LIBTOOL=		YES
-USE_TOOLS+=		gmake
-GNU_CONFIGURE=		YES
-CONFIGURE_ARGS=		--disable-gtktest  --disable-gdk_pixbuftest
+WRKSRC=		${WRKDIR}/galaxy-0.2
+USE_LIBTOOL=	yes
+USE_TOOLS+=	gmake pkg-config
+GNU_CONFIGURE=	yes
+CONFIGURE_ARGS=	--disable-gtktest  --disable-gdk_pixbuftest
 
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
