@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/28 21:05:48 rhialto Exp $
+# $NetBSD: Makefile,v 1.4 2013/01/22 22:12:45 thomasklausner Exp $
 
 DISTNAME=		pan2-git-2
 CATEGORIES=		news
@@ -35,6 +35,8 @@ GNU_CONFIGURE=		YES
 #CONFIGURE_ENV+=		CXXFLAGS=-ggdb
 #CONFIGURE_ENV+=		CFLAGS=-ggdb
 #CONFIGURE_ENV+=		LDFLAGS=-ggdb
+CONFIGURE_ARGS+=		ZLIB_CFLAGS=-I${BUILDLINK_PREFIX.zlib}/include
+CONFIGURE_ARGS+=		ZLIB_LIBS="${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.zlib}/lib -L${BUILDLINK_PREFIX.zlib}/lib -lz"
 
 .include "../../mk/bsd.prefs.mk"
 .if (${OPSYS} != "Darwin" && ${OPSYS} != "SunOS" && ${OPSYS} != "Linux")
@@ -46,6 +48,7 @@ BUILD_DEPENDS+=		gnome-common>=3.6:../../devel/gnome-common
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mail/gmime24/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-gnutls
 .include "../../security/gnutls/buildlink3.mk"			# optional
