@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/11/25 23:32:08 othyro Exp $
+# $NetBSD: Makefile,v 1.12 2013/01/22 23:21:22 thomasklausner Exp $
 #
 
 DISTNAME=		bluez-gnome-0.4
@@ -9,7 +9,8 @@ MASTER_SITES=		http://bluez.sourceforge.net/download/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://bluez.sourceforge.net/
 COMMENT=		BlueZ helpers for Gnome
-LICENSE=		gnu-gpl-v2 gnu-lgpl-v2.1
+# AND? OR?
+#LICENSE=		gnu-gpl-v2 gnu-lgpl-v2.1
 
 USE_LANGUAGES=		c
 USE_PERL=		YES
