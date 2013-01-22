@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2013/01/20 18:35:36 othyro Exp $
+# $NetBSD: Makefile,v 1.12 2013/01/22 02:58:12 othyro Exp $
 #
 
 DISTNAME=	diveintopython-html-5.4
@@ -14,9 +14,8 @@ LICENSE=	python-software-foundation
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 HTMLDIR=	share/doc/diveintopython
-NO_BUILD=	yes
 NO_CONFIGURE=	yes
-USE_TOOLS+=	pax
+NO_BUILD=	yes
 
 INSTALLATION_DIRS+=	${HTMLDIR}/html/appendix
 INSTALLATION_DIRS+=	${HTMLDIR}/html/dynamic_functions
