@@ -1,0 +1,33 @@
+$NetBSD: patch-configure.ac,v 1.1 2013/01/22 13:54:22 makoto Exp $
+
+Add --enable-symbol-rev for configure (by mef@)
+
+--- configure.ac.orig	2011-04-16 11:35:11.000000000 +0900
++++ configure.ac	2011-04-16 16:51:55.000000000 +0900
+@@ -35,6 +35,18 @@
+   --with-lispdir=DIR      Emacs Lisp files in DIR,
+ lispdir=${withval})
+ 
++SYMBOLREV=no
++AC_ARG_ENABLE(symbol-rev,
++[AS_HELP_STRING([--enable-symbol-rev],
++                [Includes symbol.rev in bushu.rev Default: none])],
++if test "${enableval}" = "yes"; then
++  SYMBOLREV=yes
++else
++  SYMBOLREV=no
++fi
++)
++  AC_MSG_RESULT(checking symbol-rev .. ${SYMBOLREV})
++
+ dnl AC_ARG_WITH(makeinfo,dnl
+ dnl   --with-makeinfo         Specify how to build info files,
+ dnl  [ MAKEINFO="$withval" ])
+@@ -63,6 +75,7 @@
+ AC_SUBST(EMACS_PACKAGE_DIR)
+ AC_SUBST(MAKEINFO)
+ AC_SUBST(EMACS)
++AC_SUBST(SYMBOLREV)
+ AC_SUBST(INSTALL)
+ AC_SUBST(INSTALLINFO)
+ INSTALL_SCRIPT=$INSTALL
