@@ -1,0 +1,46 @@
+$NetBSD: patch-aa,v 1.1 2013/01/22 13:25:15 noud4 Exp $
+
+--- runConfigure.orig	2012-10-02 17:06:36.000000000 +0000
++++ runConfigure	2013-01-20 15:14:59.000000000 +0000
+@@ -156,7 +156,7 @@
+     echo "runConfigure: Helper script to run \"configure\" for one of the supported platforms"
+     echo "Usage: runConfigure \"options\""
+     echo "       where options may be any of the following:"
+-    echo "       -p <platform> (accepts 'aix', 'linux', 'freebsd', 'netbsd', 'openbsd', 'solaris' 'solaris-x86',
++    echo "       -p <platform> (accepts 'aix', 'linux', 'freebsd', 'dragonfly', 'netbsd', 'openbsd', 'solaris' 'solaris-x86',
+             'hp-10', 'hp-11', 'hp-11-ia64', 'irix', 'tru64', 'macosx', 'os390', 'os400', 'cygwin' 'mingw-msys')"
+     echo "       -c <C compiler name> (e.g. gcc, cc, xlc)"
+     echo "       -x <C++ compiler name> (e.g. g++, CC, xlC)"
+@@ -347,7 +347,7 @@
+ #
+ 
+ case $platform in
+-   aix | linux | freebsd | netbsd | openbsd | solaris | solaris-x86 | hp-11 | hp-11-ia64 | irix | tru64 | macosx | os390 | os400 | cygwin | mingw-msys)
++   aix | linux | freebsd | dragonfly | netbsd | openbsd | solaris | solaris-x86 | hp-11 | hp-11-ia64 | irix | tru64 | macosx | os390 | os400 | cygwin | mingw-msys)
+        # platform has been recognized
+        ;;
+    *)
+@@ -390,7 +390,7 @@
+ 
+ #
+ #  aix | linux | hp-11 | hp-11-ia64 | solaris |
+-#  freebsd | netbsd | openbsd | irix | os390 | os400 | tru64 | macosx
++#  freebsd | dragonfly | netbsd | openbsd | irix | os390 | os400 | tru64 | macosx
+ #
+ if test $bitsToBuild = 64; then
+     bitstobuildDefines=""
+@@ -609,6 +609,14 @@
+             fi
+             ;;
+ 
++        dragonfly)
++            threadingLibs="-lpthread"
++            ;;
++
++        netbsd)
++            threadingLibs="-pthread -lpthread"
++            ;;
++
+         os400)
+             threadingDefines="-D_MULTI_THREADED"
+             ;;
