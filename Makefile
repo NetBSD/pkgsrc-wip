@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5072 2013/01/22 13:28:57 noud4 Exp $
+# $Id: Makefile,v 1.5073 2013/01/22 21:55:39 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -770,7 +770,6 @@ SUBDIR+=	gnome-js-common
 SUBDIR+=	gnome-keyring-sharp
 SUBDIR+=	gnome-librest
 SUBDIR+=	gnome-paint
-SUBDIR+=	gnome-user-share
 SUBDIR+=	gnomebaker
 SUBDIR+=	gnomeradio
 SUBDIR+=	gnormalize
