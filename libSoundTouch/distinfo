@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2012/09/05 15:14:52 othyro Exp $
+$NetBSD: distinfo,v 1.6 2013/01/22 09:30:35 thomasklausner Exp $
 
 SHA1 (soundtouch-1.7.0.tar.gz) = ca24cf3cfec6bc9c9dda195c899f3c31de6d5432
 RMD160 (soundtouch-1.7.0.tar.gz) = cbd24f58e64752faf55d9b1f447ecfbbe4e2d8cc
 Size (soundtouch-1.7.0.tar.gz) = 96531 bytes
 SHA1 (patch-ac) = 8cb67fcb71f49bbbd226f61eabd5653fb7b6c9db
+SHA1 (patch-configure.ac) = 23d2bbf772d3e82716b6aa8e082210f4e23a1d3a

@@ -1,0 +1,15 @@
+$NetBSD: patch-configure.ac,v 1.1 2013/01/22 09:30:36 thomasklausner Exp $
+
+automake-1.13 compat.
+
+--- configure.ac.orig	2012-09-01 08:39:31.000000000 +0000
++++ configure.ac
+@@ -21,7 +21,7 @@ dnl Place - Suite 330, Boston, MA  02111
+ 
+ AC_INIT(SoundTouch, 1.7.0, [http://www.surina.net/soundtouch])
+ AC_CONFIG_AUX_DIR(config)
+-AM_CONFIG_HEADER([include/soundtouch_config.h])
++AC_CONFIG_HEADER([include/soundtouch_config.h])
+ AM_INIT_AUTOMAKE
+ #AC_DISABLE_SHARED	dnl This makes libtool only build static libs 
+ AC_DISABLE_STATIC	dnl This makes libtool only build shared libs
