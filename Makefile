@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5079 2013/01/23 21:54:13 thomasklausner Exp $
+# $Id: Makefile,v 1.5080 2013/01/23 21:55:54 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2767,7 +2767,6 @@ SUBDIR+=	pywm
 SUBDIR+=	pyzor
 SUBDIR+=	q3-urbanterror
 SUBDIR+=	qcdloop
-SUBDIR+=	qcomicbook
 SUBDIR+=	qdevelop
 SUBDIR+=	qemu-neo1973
 SUBDIR+=	qemu-neo1973-images
