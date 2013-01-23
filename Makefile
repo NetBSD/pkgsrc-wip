@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5075 2013/01/23 21:39:09 thomasklausner Exp $
+# $Id: Makefile,v 1.5076 2013/01/23 21:41:57 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1327,7 +1327,6 @@ SUBDIR+=	kyototycoon
 SUBDIR+=	kyra2
 SUBDIR+=	kytea
 SUBDIR+=	l2tpd
-SUBDIR+=	labelnation
 SUBDIR+=	labyrinth
 SUBDIR+=	lambertw
 SUBDIR+=	lapack340
