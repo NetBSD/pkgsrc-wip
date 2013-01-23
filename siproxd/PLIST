@@ -1,4 +1,13 @@
-@comment $NetBSD: PLIST,v 1.5 2009/10/11 10:45:18 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.6 2013/01/23 19:35:16 rhialto Exp $
+lib/siproxd/plugin_defaulttarget.la
+lib/siproxd/plugin_demo.la
+lib/siproxd/plugin_fix_bogus_via.la
+lib/siproxd/plugin_logcall.la
+lib/siproxd/plugin_prefix.la
+lib/siproxd/plugin_regex.la
+lib/siproxd/plugin_shortdial.la
+lib/siproxd/plugin_stun.la
+@dirrm lib/siproxd
 sbin/siproxd
 share/examples/siproxd/siproxd.conf.example
 share/examples/siproxd/siproxd_passwd.cfg
