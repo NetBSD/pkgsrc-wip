@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5080 2013/01/23 21:55:54 thomasklausner Exp $
+# $Id: Makefile,v 1.5081 2013/01/23 21:57:16 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -856,7 +856,6 @@ SUBDIR+=	gwibber
 SUBDIR+=	gwsmhg
 SUBDIR+=	gwyddion
 SUBDIR+=	gxconsole
-SUBDIR+=	gxmessage
 SUBDIR+=	gxmms2
 SUBDIR+=	gyp
 SUBDIR+=	habak
