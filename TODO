@@ -158,13 +158,11 @@ Suggested ready to import packages
 	o fish
 	o flimsel
 	o flpsed
-	o gimp-high-pass-filter
 	o heirloom-sh [pkg/40272]
 	o ilbc-rfc3951
 	o iodine
 	o ispell-dictionaries
 	o ispell-lietuviu
-	o kaffeine
 	o kde4-l10n-ar
 	o kde4-l10n-bg
 	o kde4-l10n-bs
@@ -216,9 +214,7 @@ Suggested ready to import packages
 	o kde4-l10n-wa
 	o kde4-l10n-zh_CN
 	o kde4-l10n-zh_TW
-	o labelnation
 	o libzrtpcpp
-	o logrotate
 	o marathon-tempus-irae
 	o matiec
 	o nmzmail
@@ -226,12 +222,10 @@ Suggested ready to import packages
 	o pnmcurve
 	o polarssl
 	o py-jswebkit
-	o qcomicbook
 	o rar4
 	o saxon
 	o send-pr
 	o tcl-tclOO
-	o tktable
 	o tqsllib
 	o truecrypt
 	o trustedQSL
