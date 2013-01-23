@@ -1,0 +1,28 @@
+$NetBSD: patch-bc,v 1.1 2013/01/23 02:17:06 noud4 Exp $
+
+--- src/xalanc/XSLT/ElemNumber.cpp.orig	2013-01-20 21:18:51.000000000 +0000
++++ src/xalanc/XSLT/ElemNumber.cpp	2013-01-20 21:19:21.000000000 +0000
+@@ -55,7 +55,9 @@
+ #include "StylesheetConstructionContext.hpp"
+ #include "StylesheetExecutionContext.hpp"
+ 
+-
++#ifdef __NetBSD__
++#include <cstring>
++#endif
+ 
+ XALAN_CPP_NAMESPACE_BEGIN
+ 
+--- src/xalanc/PlatformSupport/DirectoryEnumerator.hpp.orig	2013-01-20 21:22:52.000000000 +0000
++++ src/xalanc/PlatformSupport/DirectoryEnumerator.hpp	2013-01-20 21:23:21.000000000 +0000
+@@ -46,7 +46,9 @@
+ #include "xalanc/PlatformSupport/DOMStringHelper.hpp"
+ #include "xalanc/PlatformSupport/XalanUnicode.hpp"
+ 
+-
++#ifdef __NetBSD__
++#include <cstring>
++#endif
+ 
+ XALAN_CPP_NAMESPACE_BEGIN
+ 
