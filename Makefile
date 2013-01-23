@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5082 2013/01/23 21:58:56 thomasklausner Exp $
+# $Id: Makefile,v 1.5083 2013/01/23 22:00:46 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -430,7 +430,6 @@ SUBDIR+=	detachtty
 SUBDIR+=	dfbpoint
 SUBDIR+=	dfbsee
 SUBDIR+=	dfu-util
-SUBDIR+=	dhex
 SUBDIR+=	di
 SUBDIR+=	diablo
 SUBDIR+=	dicom3tools

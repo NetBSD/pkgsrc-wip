@@ -1,4 +1,0 @@
-Dhex is a ncurses-based hex-editor with a diff mode. It makes heavy
-use of colors, but is also themeable to work on monochrome monitors.
-It includes the good old Action Cartridge Search Algorithm to find
-specific changes.
