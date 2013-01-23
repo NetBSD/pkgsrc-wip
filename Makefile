@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5081 2013/01/23 21:57:16 thomasklausner Exp $
+# $Id: Makefile,v 1.5082 2013/01/23 21:58:56 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -3119,7 +3119,6 @@ SUBDIR+=	tk85-itk
 SUBDIR+=	tk86
 SUBDIR+=	tkhtml3
 SUBDIR+=	tkpng
-SUBDIR+=	tktable
 SUBDIR+=	tktile
 SUBDIR+=	tleenx2
 SUBDIR+=	tleenx3
