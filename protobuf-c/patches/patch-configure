@@ -1,0 +1,22 @@
+$NetBSD: patch-configure,v 1.1 2013/01/24 00:00:47 thomasklausner Exp $
+
+Fix unportable test(1) construct.
+
+--- configure.orig	2013-01-23 21:26:47.000000000 +0000
++++ configure
+@@ -16775,13 +16775,13 @@ fi
+ 
+ if test "$with_endianness" != "no"; then
+ 
+-  if test "$with_endianness" == "little"; then
++  if test "$with_endianness" = "little"; then
+ 
+     is_little_endian=1
+ 
+ else
+ 
+-    if test "$with_endianness" == "big"; then
++    if test "$with_endianness" = "big"; then
+ 
+       is_little_endian=0
+ 

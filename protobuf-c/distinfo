@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2013/01/13 00:42:39 wongk Exp $
+$NetBSD: distinfo,v 1.2 2013/01/24 00:00:47 thomasklausner Exp $
 
 SHA1 (protobuf-c-0.15.tar.gz) = 4fbd93f492c52154713de1951c0a2133ddd43abb
 RMD160 (protobuf-c-0.15.tar.gz) = 50319bba2b173aafb96dd1fe70550d378e69f871
 Size (protobuf-c-0.15.tar.gz) = 500911 bytes
+SHA1 (patch-configure) = eeaea1bf19736be6f6316ebe4abfa896ad220065
