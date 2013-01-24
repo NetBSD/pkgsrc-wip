@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/10/07 17:41:41 asau Exp $
+# $NetBSD: Makefile,v 1.9 2013/01/24 23:35:23 thomasklausner Exp $
 #
 
 DISTNAME=	vidalia-0.2.12
@@ -28,4 +28,5 @@ pre-configure:
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/qt4-libs/buildlink3.mk"
+.include "../../x11/qt4-tools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
