@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/10/03 15:09:59 asau Exp $
+# $NetBSD: Makefile,v 1.8 2013/01/24 23:54:45 schnoebe Exp $
 #
 
 DISTNAME=		mu-conference_0.8
@@ -9,8 +9,11 @@ MASTER_SITES=		http://download.gna.org/mu-conference/
 MAINTAINER=		eric@cirr.com
 HOMEPAGE=		https://gna.org/projects/mu-conference/
 COMMENT=		Implementation of the JEP-0045 Multi-User Chat protocol
+LICENSE=		gnu-gpl-v2
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/src
+
+MAKE_JOBS_SAFE=		NO
 
 USE_TOOLS+=		pkg-config
 
