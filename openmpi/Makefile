@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2013/01/25 03:22:09 asau Exp $
+# $NetBSD: Makefile,v 1.62 2013/01/25 03:50:50 asau Exp $
 
 DISTNAME=	openmpi-1.7rc6
 #PKGNAME=	openmpi-1.6.99.27536
@@ -36,7 +36,6 @@ CONFIGURE_ENV+=		ompi_cv_f77_have_INTEGERp8=no	# no "INTEGER*8"??
 CONFIGURE_ARGS+=	OPAL_HAVE_LTDL_ADVISE=0
 # Suppress regeneration:
 CONFIGURE_ENV+=		ACLOCAL=: AUTOCONF=: AUTOHEADER=: AUTOMAKE=:
-#CONFIGURE_ARGS+=	ACLOCAL=: AUTOMAKE=: AUTOCONF=: AUTOHEADER=:
 
 # Prevent detection of OpenMP support in order to make PLIST consistent:
 BUILDLINK_TRANSFORM=	rm:-fopenmp
