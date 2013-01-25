@@ -1,10 +1,10 @@
-$NetBSD: patch-ai,v 1.5 2012/11/01 00:44:56 asau Exp $
+$NetBSD: patch-ai,v 1.6 2013/01/25 03:22:09 asau Exp $
 
 Install configuration files into example directory.
 
---- orte/etc/Makefile.in.orig	2012-10-31 02:15:36.000000000 +0000
-+++ orte/etc/Makefile.in
-@@ -1318,6 +1318,7 @@ sbindir = @sbindir@
+--- orte/etc/Makefile.in.orig	2013-01-15 14:44:04.000000000 +0100
++++ orte/etc/Makefile.in	2013-01-24 12:33:12.118712233 +0100
+@@ -1320,6 +1320,7 @@
  sharedstatedir = @sharedstatedir@
  srcdir = @srcdir@
  sysconfdir = @sysconfdir@
@@ -12,7 +12,7 @@ Install configuration files into example directory.
  target = @target@
  target_alias = @target_alias@
  target_cpu = @target_cpu@
-@@ -1534,19 +1535,19 @@ uninstall-am: uninstall-local
+@@ -1536,19 +1537,19 @@
  # details why the mkdir is in install-data-local.
  
  install-data-local:
@@ -37,7 +37,7 @@ Install configuration files into example directory.
  	  fi; \
  	done
  
-@@ -1557,11 +1558,11 @@ install-data-local:
+@@ -1559,11 +1560,11 @@
  uninstall-local:
  	@ p="$(orte_config_files)"; \
  	for file in $$p; do \

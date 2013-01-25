@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2012/10/18 01:13:09 asau Exp $
+# $NetBSD: options.mk,v 1.6 2013/01/25 03:22:09 asau Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.openmpi
 PKG_SUPPORTED_OPTIONS=	debug

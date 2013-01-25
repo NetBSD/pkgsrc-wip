@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.60 2012/11/01 00:44:55 asau Exp $
+# $NetBSD: Makefile,v 1.61 2013/01/25 03:22:09 asau Exp $
 
-DISTNAME=	openmpi-1.7rc5r27536
-PKGNAME=	openmpi-1.6.99.27536
+DISTNAME=	openmpi-1.7rc6
+#PKGNAME=	openmpi-1.6.99.27536
 CATEGORIES=	parallel
 MASTER_SITES=	http://www.open-mpi.org/software/ompi/v1.7/downloads/ \
 		http://www.open-mpi.org/nightly/v1.7/ \
@@ -16,7 +16,7 @@ CONFLICTS+=	mpich-[0-9]*	# installs bin/mpicc & other wrappers
 CONFLICTS+=	mpich2-[0-9]*	# installs bin/mpicc & other wrappers
 
 GNU_CONFIGURE=		yes
-USE_LANGUAGES=		c c++
+USE_LANGUAGES=		c c++ fortran77
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool \
 			${WRKSRC}/ompi/contrib/vt/vt/extlib/otf/libtool \
@@ -36,11 +36,13 @@ CONFIGURE_ENV+=		ompi_cv_f77_have_INTEGERp8=no	# no "INTEGER*8"??
 CONFIGURE_ARGS+=	OPAL_HAVE_LTDL_ADVISE=0
 # Suppress regeneration:
 CONFIGURE_ENV+=		ACLOCAL=: AUTOCONF=: AUTOHEADER=: AUTOMAKE=:
+#CONFIGURE_ARGS+=	ACLOCAL=: AUTOMAKE=: AUTOCONF=: AUTOHEADER=:
 
 # Prevent detection of OpenMP support in order to make PLIST consistent:
 BUILDLINK_TRANSFORM=	rm:-fopenmp
 
 USE_TOOLS+=		perl:run
+REPLACE_PERL+=		ompi/tools/wrappers/mpijavac.pl.in
 
 .include "options.mk"
 
@@ -48,10 +50,10 @@ TEST_TARGET=	check
 
 ## Just in case you'll need it...
 # USE_TOOLS+=	aclocal autoconf automake bash perl
-# REPLACE_BASH=	autogen.sh
+# REPLACE_PERL=	autogen.sh
 
 # pre-configure:	replace-interpreter
-# 	cd $(WRKSRC) && $(BASH) autogen.sh
+# 	cd $(WRKSRC) && $(PERL5) autogen.sh
 
 LIBLTDL_CONVENIENCE_SUBDIR=	opal/libltdl
 .include "../../devel/libltdl/convenience.mk" # for "test" target to work

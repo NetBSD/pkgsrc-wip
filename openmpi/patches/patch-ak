@@ -1,18 +1,18 @@
-$NetBSD: patch-ak,v 1.6 2012/11/01 00:44:56 asau Exp $
+$NetBSD: patch-ak,v 1.7 2013/01/25 03:22:09 asau Exp $
 
 Install configuration files into example directory.
 
---- ompi/etc/Makefile.in.orig	2012-10-31 02:13:07.000000000 +0000
-+++ ompi/etc/Makefile.in
-@@ -1318,6 +1318,7 @@ sbindir = @sbindir@
- sharedstatedir = @sharedstatedir@
- srcdir = @srcdir@
- sysconfdir = @sysconfdir@
+--- ompi/etc/Makefile.in.orig	2013-01-15 14:41:30.000000000 +0100
++++ ompi/etc/Makefile.in	2013-01-24 12:36:01.150707935 +0100
+@@ -51,6 +51,7 @@
+     test $$am__dry = yes; \
+   }
+ pkgdatadir = $(datadir)/@PACKAGE@
 +sysconfexampledir = $(pkgdatadir)/examples
- target = @target@
- target_alias = @target_alias@
- target_cpu = @target_cpu@
-@@ -1534,19 +1535,19 @@ uninstall-am: uninstall-local
+ pkgincludedir = $(includedir)/@PACKAGE@
+ pkglibdir = $(libdir)/@PACKAGE@
+ pkglibexecdir = $(libexecdir)/@PACKAGE@
+@@ -1536,19 +1537,19 @@
  # details why the mkdir is in install-data-local.
  
  install-data-local:
@@ -37,7 +37,7 @@ Install configuration files into example directory.
  	  fi; \
  	done
  
-@@ -1557,11 +1558,11 @@ install-data-local:
+@@ -1559,11 +1560,11 @@
  uninstall-local:
  	@ p="$(ompi_config_files)"; \
  	for file in $$p; do \
