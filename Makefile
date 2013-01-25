@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5083 2013/01/23 22:00:46 thomasklausner Exp $
+# $Id: Makefile,v 1.5084 2013/01/25 11:38:41 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1473,6 +1473,7 @@ SUBDIR+=	lidia
 SUBDIR+=	light-desktop
 SUBDIR+=	lightdm
 SUBDIR+=	lightdm-gtk-greeter
+SUBDIR+=	lilypond-devel
 SUBDIR+=	linbox
 SUBDIR+=	lingoteach-lesson
 SUBDIR+=	lingoteach-ui
@@ -3062,6 +3063,7 @@ SUBDIR+=	tardy
 SUBDIR+=	task
 SUBDIR+=	taskcoach
 SUBDIR+=	tasks
+SUBDIR+=	tc-git
 SUBDIR+=	tc-svn
 SUBDIR+=	tcc
 SUBDIR+=	tcc-devel
