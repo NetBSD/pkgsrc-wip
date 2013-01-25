@@ -1,15 +1,15 @@
-$NetBSD: patch-mashpodder.sh,v 1.1 2012/09/19 14:54:02 ahp-nils Exp $
+$NetBSD: patch-mashpodder.sh,v 1.2 2013/01/25 08:50:06 ahp-nils Exp $
 
 Add pkgsrc paths compatibility
 
---- mashpodder.sh.orig	2012-09-19 13:16:31.000000000 +0000
+--- mashpodder.sh.orig	2013-01-09 14:39:56.000000000 +0000
 +++ mashpodder.sh
-@@ -23,7 +23,7 @@ DATESTRING='%Y%m%d'
- RSSFILE="$BASEDIR/mp.conf"
+@@ -43,7 +43,7 @@ RSSFILE="$BASEDIR/mp.conf"
  
- #PARSE_ENCLOSURE: Location of parse_enclosure.xsl file.
+ # PARSE_ENCLOSURE: Location of parse_enclosure.xsl file.  Default is
+ # "$BASEDIR/parse_enclosure.xsl".
 -PARSE_ENCLOSURE="$BASEDIR/parse_enclosure.xsl"
 +PARSE_ENCLOSURE="@PREFIX@/share/mashpodder/parse_enclosure.xsl"
  
- # FIRST_ONLY: Default '' means look to mp.conf on whether to download or
- # update; 1 will override mp.conf and download the newest episode.
+ # PODLOG: This is a critical file.  This is the file that saves the name of
+ # every file downloaded (or checked with the 'update' option in mp.conf.)  If

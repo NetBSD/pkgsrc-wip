@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2012/10/03 15:09:52 asau Exp $
+# $NetBSD: Makefile,v 1.4 2013/01/25 08:50:06 ahp-nils Exp $
 #
 
-DISTNAME=	mashpodder-svn37
-PKGNAME=	mashpodder-svn-37
+DISTNAME=	mashpodder-svn49
+PKGNAME=	mashpodder-svn-49
 CATEGORIES=	net
 MASTER_SITES=	https://mashpodder.googlecode.com/files/
 

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1 2012/09/19 14:54:02 ahp-nils Exp $
+$NetBSD: distinfo,v 1.2 2013/01/25 08:50:06 ahp-nils Exp $
 
-SHA1 (mashpodder-svn37.tar.gz) = a15fd410229676afc6dd37cff863f714caae2555
-RMD160 (mashpodder-svn37.tar.gz) = 06358e760edd3384b23ff7b6f50c4d9ad00b2608
-Size (mashpodder-svn37.tar.gz) = 5500 bytes
-SHA1 (patch-mashpodder.sh) = 83ee018bc58b3e06092b195a1545dca54b2dd991
+SHA1 (mashpodder-svn49.tar.gz) = a5db43b2fa038e943835f472f8cb6cd430d3b562
+RMD160 (mashpodder-svn49.tar.gz) = b3553ad026480c19121f2fc0824786f348a6eeef
+Size (mashpodder-svn49.tar.gz) = 7072 bytes
+SHA1 (patch-mashpodder.sh) = 610ddbe5655127ae5c9cff1615dfc85870f510d4
