@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST,v 1.4 2012/12/09 15:31:28 othyro Exp $
+@comment $NetBSD: PLIST,v 1.5 2013/01/26 18:55:23 othyro Exp $
 bin/mod2ogg2.sh
+lib/uade2/uadecore
+lib/pkgconfig/uade.pc
 man/uade123.1
 share/uade2/eagleplayer.conf
 share/uade2/players/ADPCM_mono
