@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5084 2013/01/25 11:38:41 thomasklausner Exp $
+# $Id: Makefile,v 1.5085 2013/01/26 01:03:08 khorben Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2961,7 +2961,6 @@ SUBDIR+=	snes9express
 SUBDIR+=	snotes
 SUBDIR+=	socklog
 SUBDIR+=	socnetv
-SUBDIR+=	sofia-sip
 SUBDIR+=	softflowd
 SUBDIR+=	songwrite2
 SUBDIR+=	soqt
