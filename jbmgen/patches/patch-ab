@@ -1,4 +1,6 @@
-$NetBSD: patch-ab,v 1.1.1.1 2005/12/10 22:10:28 shattered Exp $
+$NetBSD: patch-ab,v 1.2 2013/01/27 17:09:10 othyro Exp $
+
+Require jbmgen/JBMFile.
 
 --- jbmgen.orig	2005-01-25 17:57:46.000000000 +0000
 +++ jbmgen

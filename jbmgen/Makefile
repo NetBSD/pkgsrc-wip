@@ -1,21 +1,21 @@
-# $NetBSD: Makefile,v 1.7 2012/10/01 21:43:23 asau Exp $
+# $NetBSD: Makefile,v 1.8 2013/01/27 17:09:10 othyro Exp $
 #
 
-DISTNAME=		jbmgen-1.1.0
-PKGNAME=		${RUBY_PKGPREFIX}-${DISTNAME}
-PKGREVISION=		1
-CATEGORIES=		audio ruby
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=jbmgen/}
+DISTNAME=	jbmgen-1.1.0
+PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
+PKGREVISION=	2
+CATEGORIES=	audio ruby
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=jbmgen/}
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://jbmgen.sourceforge.net/
-COMMENT=		Archos Gmini playlist generator
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://jbmgen.sourceforge.net/
+COMMENT=	Archos Gmini playlist generator
+LICENSE=	gnu-gpl-v2
 
-NO_BUILD=		yes
-REPLACE_RUBY=		jbmgen
-JBMGEN_FILES=		BinaryStuff.rb Dictionary.rb FileEntry.rb JBMFile.rb \
-			Path.rb Pointable.rb TreeNode.rb TreeNodeTypes.rb \
-			mp3info.rb
+NO_BUILD=	yes
+REPLACE_RUBY=	jbmgen
+JBMGEN_FILES=	BinaryStuff.rb Dictionary.rb FileEntry.rb JBMFile.rb Path.rb
+JBMGEN_FILES+=	Pointable.rb TreeNode.rb TreeNodeTypes.rb mp3info.rb
 
 post-extract:
 	set -e; \
@@ -24,16 +24,14 @@ post-extract:
 			"${WRKSRC}/$$m" > "${WRKSRC}/$$m.new"; \
 	done
 
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	bin ${RUBY_SITELIB}/jbmgen
 
 do-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${RUBY_SITELIBDIR}/jbmgen
 	set -e; \
 	for m in ${JBMGEN_FILES}; do \
-		${INSTALL_DATA} "${WRKSRC}/$$m.new" ${DESTDIR}${RUBY_SITELIBDIR}/jbmgen/"$$m"; \
+		${INSTALL_DATA} "${WRKSRC}/$$m.new" ${DESTDIR}${PREFIX}/${RUBY_SITELIB}/jbmgen/"$$m"; \
 	done
 	${INSTALL_SCRIPT} ${WRKSRC}/jbmgen ${DESTDIR}${PREFIX}/bin
 
 .include "../../lang/ruby/modules.mk"
-.include "../../lang/ruby/replace.mk"
 .include "../../mk/bsd.pkg.mk"
