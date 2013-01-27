@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/12/27 03:06:57 othyro Exp $
+# $NetBSD: Makefile,v 1.8 2013/01/27 16:40:00 othyro Exp $
 #
 
 DISTNAME=	ispell-lt-1.2
@@ -20,11 +20,12 @@ SUBST_FILES.fix-python=		tools/*.py
 SUBST_SED.fix-python=		-e 's,/usr/bin/python,${PYTHONBIN},g'
 SUBST_SED.fix-python+=		-e 's,env python,env ${PYTHONBIN},g'
 
-SUBST_CLASSES+=		destdir
-SUBST_FILES.destdir=	Makefile
-SUBST_MESSAGE.destdir=	Fixing DESTDIR path.
-SUBST_SED.destdir=	-e "s|installdir=|installdir=${DESTDIR}|1"
-SUBST_STAGE.destdir=	pre-configure
+SUBST_CLASSES+=		install
+SUBST_FILES.install=	Makefile
+SUBST_MESSAGE.install=	Fixing DESTDIR path and install user/group.
+SUBST_SED.install=	-e "s|installdir=|installdir=${DESTDIR}|1"
+SUBST_SED.install+=	-e 's/-g 0 -o 0//g'
+SUBST_STAGE.install=	pre-configure
 
 BUILD_TARGET=		lietuviu.hash
 INSTALLATION_DIRS+=	lib
