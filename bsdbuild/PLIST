@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2013/01/20 01:33:35 othyro Exp $
+@comment $NetBSD: PLIST,v 1.6 2013/01/27 15:21:08 othyro Exp $
 bin/h2mandoc
 bin/man2wiki
 bin/mkconfigure
@@ -129,6 +129,7 @@ share/bsdbuild/BSDBuild/wgl.pm
 share/bsdbuild/BSDBuild/winsock.pm
 share/bsdbuild/BSDBuild/x11.pm
 share/bsdbuild/BSDBuild/xinerama.pm
+share/bsdbuild/ManReader/Mdoc.pm
 share/bsdbuild/build.common.mk
 share/bsdbuild/build.dep.mk
 share/bsdbuild/build.doc.mk

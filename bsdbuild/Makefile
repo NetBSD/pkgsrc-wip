@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2013/01/20 01:33:35 othyro Exp $
+# $NetBSD: Makefile,v 1.7 2013/01/27 15:21:08 othyro Exp $
 #
 
 DISTNAME=	bsdbuild-3.0
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://stable.hypertriton.com/bsdbuild/
 
