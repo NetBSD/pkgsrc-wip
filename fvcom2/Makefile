@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/11/09 18:59:42 outpaddling Exp $
+# $NetBSD: Makefile,v 1.7 2013/01/27 22:12:38 outpaddling Exp $
 #
 
 PKGNAME=	fvcom-2.7.1
@@ -17,13 +17,27 @@ USE_TOOLS+=	make
 # Code is actually Fortran77, even though the build system generates .f90 files
 USE_LANGUAGES=	c fortran77
 
-DEPENDS+=	metis>=4.0:../../math/metis
+# Use bundled metis
+# DEPENDS+=	metis>=4.0:../../math/metis
 
 AUTO_MKDIRS=	yes
 
 FETCH_MESSAGE=  "Please download the files"
 FETCH_MESSAGE+= "    "${DISTFILES:Q}
 FETCH_MESSAGE+= "manually from "${MASTER_SITES:Q}"."
+
+SUBST_CLASSES+=		log2
+SUBST_FILES.log2=	METIS_source/coarsen.c \
+			METIS_source/kmetis.c \
+			METIS_source/kvmetis.c \
+			METIS_source/metis_source.c \
+			METIS_source/mkmetis.c \
+			METIS_source/proto.h \
+			METIS_source/rename.h \
+			METIS_source/util.c
+SUBST_STAGE.log2=	post-patch
+SUBST_MESSAGE.log2=	Fixing log2 conflict
+SUBST_SED.log2=		-e 's|log2|metis_log2|g'
 
 pre-patch:
 	${MV} ${WRKSRC}/makefile ${WRKSRC}/Makefile
