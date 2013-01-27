@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5085 2013/01/26 01:03:08 khorben Exp $
+# $Id: Makefile,v 1.5086 2013/01/27 16:52:19 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1215,8 +1215,6 @@ SUBDIR+=	java-swt
 SUBDIR+=	java-tritonus-share
 SUBDIR+=	java-vorbisspi
 SUBDIR+=	java-xmlrpc
-SUBDIR+=	javascript-guide
-SUBDIR+=	javascript-reference
 SUBDIR+=	jbmgen
 SUBDIR+=	jc
 SUBDIR+=	jdk15
