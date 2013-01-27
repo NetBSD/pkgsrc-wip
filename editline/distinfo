@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.6 2009/01/11 10:57:19 phonohawk Exp $
+$NetBSD: distinfo,v 1.7 2013/01/27 00:01:24 ryo-on Exp $
 
-SHA1 (libedit-20080712-2.11.tar.gz) = 5d53aa79b73a160436ffd4eda5df08bcd347b6ab
-RMD160 (libedit-20080712-2.11.tar.gz) = fa45ed93c5f345fac82df39d23b0118082a515ce
-Size (libedit-20080712-2.11.tar.gz) = 466153 bytes
-SHA1 (patch-aa) = 462f35a2ffdf7dd501e975029a2007f634404972
+SHA1 (libedit-20121213-3.0.tar.gz) = 2f20bc835c1282b6815c4c8e2f852d6fe4318f7a
+RMD160 (libedit-20121213-3.0.tar.gz) = 880a3711863af5f0823475db76f0697d91d088c6
+Size (libedit-20121213-3.0.tar.gz) = 473665 bytes
 SHA1 (patch-ab) = 29ed6d0aad2a4c76ada124867cb0e3ff88b8030e
 SHA1 (patch-ac) = 71b27006acc43128ad9756e07eb79e961f6f9c94

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2012/11/13 20:39:10 othyro Exp $
+# $NetBSD: Makefile,v 1.13 2013/01/27 00:01:24 ryo-on Exp $
 #
 
-DISTNAME=		libedit-20080712-2.11
-PKGNAME=		editline-2.11
+DISTNAME=		libedit-20121213-3.0
+PKGNAME=		editline-3.0.20121213
 CATEGORIES=		devel
 MASTER_SITES=		http://www.thrysoee.dk/editline/
 
