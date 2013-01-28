@@ -1,19 +1,17 @@
-# $NetBSD: Makefile,v 1.4 2012/10/31 12:51:55 othyro Exp $
+# $NetBSD: Makefile,v 1.5 2013/01/28 12:41:42 othyro Exp $
 #
 
-DISTNAME=	fceux-2.1.5.src
+DISTNAME=	fceux-2.2.0.src
 PKGNAME=	${DISTNAME:S/.src//}
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fceultra/}
-EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://fceux.com/
 COMMENT=	NES, Famicom, and Famicom Disk System (FDS) emulator
 LICENSE=	gnu-gpl-v2
 
-WRKSRC=			${WRKDIR}/fceu2.1.5
-#USE_CMAKE=		yes
+WRKSRC=			${WRKDIR}/${PKGBASE}
 USE_LANGUAGES=		c c++
 BUILD_DEPENDS+=		scons-[0-9]*:../../devel/scons
 USE_TOOLS+=		pkg-config
@@ -21,14 +19,22 @@ INSTALLATION_DIRS+=	bin
 
 .include "options.mk"
 
+SUBST_CLASSES+=			pkgmandir
+SUBST_FILES.pkgmandir=		SConstruct
+SUBST_MESSAGE.pkgmandir=	Fixing PKGMANDIR path.
+SUBST_SED.pkgmandir=		-e "s|share/man|${PKGMANDIR}|g"
+SUBST_STAGE.pkgmandir=		post-patch
+
+.if $(OPSYS) != "Linux"
+BUILDLINK_TRANSFORM=	rm:-ldl
+.endif
+
 do-build:
-		cd ${WRKSRC} && \
-		${SETENV} ${MAKE_ENV} ${PREFIX}/bin/scons
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/scons
 
 do-install:
-		cd ${WRKSRC} && \
-		${INSTALL_PROGRAM} src/fceux ${DESTDIR}${PREFIX}/bin/fceux
+	cd ${WRKSRC} && \
+		${SETENV} ${INSTALL_ENV} ${PREFIX}/bin/scons install --prefix=${DESTDIR}${PREFIX}
 
-.include "../../devel/SDL/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
+.include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
