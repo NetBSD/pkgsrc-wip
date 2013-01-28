@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/12/30 17:40:12 bsiegert Exp $
+# $NetBSD: Makefile,v 1.4 2013/01/28 09:14:09 bsiegert Exp $
 #
 
 DISTNAME=	go-1.1pre-20121229
@@ -37,10 +37,16 @@ INSTALLATION_DIRS= bin
 REPLACE_BASH+=	doc/articles/wiki/test.bash
 REPLACE_BASH+=	doc/progs/run
 REPLACE_BASH+=	doc/progs/update.bash
+REPLACE_BASH+=	lib/codereview/test.sh
 REPLACE_BASH+=	misc/arm/a
+REPLACE_BASH+=	misc/dist/darwin/scripts/postinstall
+REPLACE_BASH+=	misc/osx/package.bash
+REPLACE_BASH+=	misc/osx/scripts/postinstall
+REPLACE_BASH+=	misc/vim/ftplugin/go/test.sh
 REPLACE_BASH+=	misc/xcode/4/go4xcode.sh
 REPLACE_BASH+=	src/all.bash
 REPLACE_BASH+=	src/clean.bash
+REPLACE_BASH+=	src/cmd/go/test.bash
 REPLACE_BASH+=	src/cmd/godoc/setup-godoc-app.bash
 REPLACE_BASH+=	src/make.bash
 REPLACE_BASH+=	src/pkg/syscall/mkall.sh
