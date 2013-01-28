@@ -1,0 +1,26 @@
+$NetBSD: patch-Makefile,v 1.1 2013/01/28 00:17:33 othyro Exp $
+
+Don't hardcode paths, and install to DESTDIR.
+
+--- Makefile.orig	2006-11-26 16:22:01.000000000 +0000
++++ Makefile
+@@ -1,7 +1,7 @@
+ CC=mcs
+ EXEC=GraphMonkey.exe
+-SHARE=/usr/local/share
+-BIN=/usr/local/bin
++SHARE?=/usr/local/share
++BIN?=/usr/local/bin
+ 
+ all: 
+ 	$(CC) -target:exe -out:"$(EXEC)" -resource:./pixmaps/graphmonkey.png -resource:./pixmaps/gm.png -pkg:gtk-sharp-2.0  ./Main.cs ./GraphMonkey.cs ./Ecran_Form.cs ./operation.cs ./Help_Form.cs ./About_Form.cs ./Calculus.cs
+@@ -10,6 +10,6 @@ clean:
+ 	rm -rf $(EXEC)
+ 
+ install:
+-	mkdir -p $(SHARE)/graphmonkey
+-	cp -f $(EXEC) $(SHARE)/graphmonkey
+-	cp -f graphmonkey $(BIN)
++	mkdir -p ${DESTDIR}$(SHARE)/graphmonkey
++	cp -f $(EXEC) ${DESTDIR}$(SHARE)/graphmonkey
++	cp -f graphmonkey ${DESTDIR}$(BIN)

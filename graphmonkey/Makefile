@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2012/11/12 15:59:49 othyro Exp $
+# $NetBSD: Makefile,v 1.4 2013/01/28 00:17:33 othyro Exp $
 #
 
-DISTNAME=	GraphMonkey-1.7
-PKGNAME=	${DISTNAME:S/GraphMonkey/graphmonkey/}
+DISTNAME=	GraphMonkey-1.7-src
+PKGNAME=	${DISTNAME:tl:S/-src//1}
+PKGREVISION=	1
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=graphmonkey/}
 
@@ -12,13 +13,20 @@ COMMENT=	GTK\#-based graphing calculator
 LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	# none
+USE_TOOLS+=	pkg-config
+INSTALL_ENV+=	BIN=${PREFIX}/bin SHARE=${PREFIX}/share
 
-NO_BUILD=	yes
+SUBST_CLASSES+=		prefix
+SUBST_FILES.prefix=	graphmonkey
+SUBST_MESSAGE.prefix=	Fixing PREFIX.
+SUBST_SED.prefix=	-e "s|/usr/local|${PREFIX}|1"
+SUBST_STAGE.prefix=	post-patch
 
-INSTALLATION_DIRS+=	bin
+INSTALLATION_DIRS+=	bin share/pixmaps
 
-do-install:
-	${INSTALL_DATA}  ${WRKSRC}/GraphMonkey.exe ${DESTDIR}${PREFIX}/bin
+post-install:
+		${INSTALL_DATA} ${WRKSRC}/pixmaps/*.png \
+			${DESTDIR}${PREFIX}/share/pixmaps
 
 .include "../../lang/mono/buildlink3.mk"
 .include "../../x11/gtk-sharp/buildlink3.mk"
