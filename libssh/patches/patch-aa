@@ -1,0 +1,13 @@
+--- CMakeLists.txt.orig	2013-01-30 11:46:25.000000000 +0000
++++ CMakeLists.txt	2013-01-30 11:45:52.000000000 +0000
+@@ -36,8 +36,8 @@
+ include(CPackConfig.cmake)
+ 
+ # disallow in-source build
+-include(MacroEnsureOutOfSourceBuild)
+-macro_ensure_out_of_source_build("${PROJECT_NAME} requires an out of source build. Please create a separate build directory and run 'cmake /path/to/${PROJECT_NAME} [options]' there.")
++#include(MacroEnsureOutOfSourceBuild)
++#macro_ensure_out_of_source_build("${PROJECT_NAME} requires an out of source build. Please create a separate build directory and run 'cmake /path/to/${PROJECT_NAME} [options]' there.")
+ 
+ # add macros
+ include(MacroAddPlugin)

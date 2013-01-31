@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.3 2013/01/31 14:59:28 noud4 Exp $
+
+SHA1 (security/libssh-0.5.3.tar.gz) = 63f5f9e7d8b8e936048a51998a6f9be0e86866a7
+RMD160 (security/libssh-0.5.3.tar.gz) = d2a5ba37bf1df2439a997bfafdf3eb0a51a6195a
+Size (security/libssh-0.5.3.tar.gz) = 369344 bytes
+SHA1 (patch-aa) = 76de63b15c0ef380cb2bc4ab5b96bf437a79faef
