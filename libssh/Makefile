@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2013/01/31 17:39:31 noud4 Exp $
+# $NetBSD: Makefile,v 1.7 2013/01/31 20:46:31 noud4 Exp $
 #
 
-DISTNAME=		libssh-0.5.3
-PKGREVISION=		1
+DISTNAME=		libssh-0.5.4
 CATEGORIES=		security
-MASTER_SITES=		http://www.libssh.org/files/0.5/
+MASTER_SITES=		https://red.libssh.org/attachments/download/41/
 
 MAINTAINER=		ndb@NetBSD.org
 HOMEPAGE=		http://www.libssh.org/
@@ -12,6 +11,13 @@ COMMENT=		SSHv2 and SSHv1 protocol
 LICENSE=		2-clause-bsd
 
 DIST_SUBDIR=		security
+
+.include "../../mk/bsd.prefs.mk"
+
+# ftp: Unsupported URL scheme `https'
+.if ${OPSYS} == "NetBSD"
+FETCH_USING=		curl
+.endif
 
 USE_CMAKE=		yes
 USE_LANGUAGES=		c c++
