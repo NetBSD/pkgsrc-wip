@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/11/24 02:37:05 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.9 2013/01/31 03:35:02 jeremy-c-reed Exp $
 
 DISTNAME=	lxpanel-0.5.10
 CATEGORIES=	x11
@@ -29,7 +29,7 @@ PKGCONFIG_OVERRIDE+=	lxpanel.pc.in
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libwnck/buildlink3.mk"
-.include "../../wip/menu-cache/buildlink3.mk"
+.include "../../sysutils/menu-cache/buildlink3.mk"
 .include "../../graphics/gdk-pixbuf2-xlib/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 

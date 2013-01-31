@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/11/24 02:42:40 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.4 2013/01/31 03:35:01 jeremy-c-reed Exp $
 #
 
 DISTNAME=	pcmanfm-1.1.0
@@ -18,7 +18,7 @@ USE_TOOLS+=		intltool pkg-config
 
 .include "../../x11/gtk2/buildlink3.mk"
 
-.include "../../wip/menu-cache/buildlink3.mk"
+.include "../../sysutils/menu-cache/buildlink3.mk"
 
 .include "../../wip/libfm/buildlink3.mk"
 
