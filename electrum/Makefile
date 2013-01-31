@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2013/01/23 19:26:47 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2013/01/31 13:12:51 akihabara Exp $
 
-DISTNAME=	Electrum-1.6.1
+DISTNAME=	Electrum-1.6.2
 CATEGORIES=	finance python
 MASTER_SITES=	http://download.electrum.org/download/
 
