@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/11/24 02:35:07 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.7 2013/02/01 01:38:00 jeremy-c-reed Exp $
 
 DISTNAME=	lxde-common-0.5.5
 PKGREVISION=	1
@@ -14,7 +14,7 @@ DEPENDS+=	dbus>=1:../../sysutils/dbus
 # Clearlooks is default GTK theme for the LXDE lxsession
 DEPENDS+=	gtk2-engines>=0:../../x11/gtk2-engines
 DEPENDS+=	lxpanel>=0:../../wip/lxpanel
-DEPENDS+=	lxsession>=0:../../wip/lxsession
+DEPENDS+=	lxsession>=0:../../x11/lxsession
 DEPENDS+=	openbox>=0:../../wm/openbox
 DEPENDS+=	xprop>=0:../../x11/xprop
 

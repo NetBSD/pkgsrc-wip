@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/11/13 23:20:30 othyro Exp $
+# $NetBSD: Makefile,v 1.8 2013/02/01 01:38:00 jeremy-c-reed Exp $
 #
 
 DISTNAME=	netbsd-light-desktop-default-settings-0.0
@@ -14,7 +14,7 @@ COMMENT=	Default settings for NetBSD Light Desktop
 #LICENSE=	# TODO: (see mk/license.mk)
 
 DEPENDS+=	lightdm-gtk-greeter>=0:../../wip/lightdm-gtk-greeter
-DEPENDS+=	lxsession>=0:../../wip/lxsession
+DEPENDS+=	lxsession>=0:../../x11/lxsession
 DEPENDS+	netbsd-icon-theme>=0:../../wip/netbsd-icon-theme
 DEPENDS+=	netbsd-light-desktop-artwork>=0:../../wip/netbsd-light-desktop-artwork
 DEPENDS+=	pcmanfm>=0.5:../../wip/pcmanfm
