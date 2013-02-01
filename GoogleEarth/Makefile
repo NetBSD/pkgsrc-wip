@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/09/24 16:56:26 asau Exp $
+# $NetBSD: Makefile,v 1.17 2013/02/01 22:22:15 thomasklausner Exp $
 
 DISTNAME=		GoogleEarthLinux.bin
 PKGNAME=		GoogleEarth-${GE_VERSION}
@@ -6,7 +6,7 @@ CATEGORIES=		geography x11
 MASTER_SITES=		http://dl.google.com/earth/client/current/
 EXTRACT_SUFX=
 
-MAINTAINER=		tnn@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://earth.google.com/
 COMMENT=		Interactive browser for satellite imagery and maps
 LICENSE=		google-earth-license

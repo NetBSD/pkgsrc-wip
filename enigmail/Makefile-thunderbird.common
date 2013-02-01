@@ -1,4 +1,4 @@
-# $NetBSD: Makefile-thunderbird.common,v 1.1 2010/05/06 02:38:34 khorben Exp $
+# $NetBSD: Makefile-thunderbird.common,v 1.2 2013/02/01 22:22:15 thomasklausner Exp $
 #
 
 DISTNAME=	thunderbird-${TB_VER}.source
@@ -8,7 +8,7 @@ CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_MOZILLA:=thunderbird/releases/${TB_VER}/source/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	tnn@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mozillamessaging.com/en-US/thunderbird/
 COMMENT=	Organize, secure and customize your mail
 

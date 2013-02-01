@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2012/10/03 15:09:59 asau Exp $
+# $NetBSD: Makefile,v 1.6 2013/02/01 22:22:16 thomasklausner Exp $
 #
 
 DISTNAME=	mtop-0.6.6
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mtop/}
 
-MAINTAINER=	tnn@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://mtop.sourceforge.net/
 COMMENT=	Curses-based MySQL server monitor
 LICENSE=	gnu-gpl-v2

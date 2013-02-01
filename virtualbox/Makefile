@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/11/13 22:25:50 othyro Exp $
+# $NetBSD: Makefile,v 1.13 2013/02/01 22:22:16 thomasklausner Exp $
 #
 
 DISTNAME=	VirtualBox-${VBOX_VER}
@@ -8,7 +8,7 @@ CATEGORIES=	emulators
 MASTER_SITES=	http://download.virtualbox.org/virtualbox/${VBOX_VER}/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	tnn@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.virtualbox.org/
 COMMENT=	General-purpose full virtualizer for x86 hardware
 LICENSE=	gnu-gpl-v2

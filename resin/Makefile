@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/07 14:53:43 asau Exp $
+# $NetBSD: Makefile,v 1.3 2013/02/01 22:22:16 thomasklausner Exp $
 #
 
 DISTNAME=	resin-4.0.8
@@ -6,7 +6,7 @@ CATEGORIES=	www
 MASTER_SITES=	http://www.caucho.com/download/
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=	tnn@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.caucho.com/
 COMMENT=	High-performance, open source application server
 LICENSE=	gnu-gpl-v2
