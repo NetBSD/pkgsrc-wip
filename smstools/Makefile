@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/07 15:29:10 asau Exp $
+# $NetBSD: Makefile,v 1.4 2013/02/02 13:05:25 shattered Exp $
 #
 
 DISTNAME=		smstools3-3.0.10
@@ -10,6 +10,7 @@ MASTER_SITES=		http://smstools3.kekekasvi.com/packages/
 MAINTAINER=		shattered@users.sourceforge.net
 HOMEPAGE=		http://smstools3.kekekasvi.com/
 COMMENT=		Send and receive short messages via GSM phones
+LICENSE=		gnu-gpl-v2
 
 USE_TOOLS+=		bash:run gmake
 CPPFLAGS+=		-DPKG_SYSCONFDIR="\"${PKG_SYSCONFDIR}\""
