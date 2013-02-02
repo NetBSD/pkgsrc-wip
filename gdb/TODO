@@ -1,1 +1,2 @@
 - NetBSD/amd64 6.0.1 segfaults
+- devel/gdb/patches/patch-* are not reviewed yet for inclusion
