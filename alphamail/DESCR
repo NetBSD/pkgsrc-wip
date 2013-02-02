@@ -1,6 +1,0 @@
-AlphaMail is a mod_perl webmail solution with a C++ middleware component
-that is intended to make the system highly scalable. It is written using
-C++, perl, and HTML::Mason, and accesses mail stores through IMAPS. It
-is in active production use at the University of Oregon, and currently
-supports many *NIX variants with any RFC-compliant IMAP server including
-UW, Cyrus, and Dovecot.

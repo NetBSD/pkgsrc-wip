@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5089 2013/02/02 05:32:55 noud4 Exp $
+# $Id: Makefile,v 1.5090 2013/02/02 13:16:31 shattered Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -85,7 +85,6 @@ SUBDIR+=	alac_decoder
 SUBDIR+=	alberta
 SUBDIR+=	alex
 SUBDIR+=	alive
-SUBDIR+=	alphamail
 SUBDIR+=	alsa-plugins
 SUBDIR+=	alsa-utils
 SUBDIR+=	alt-ergo
