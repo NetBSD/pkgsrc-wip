@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2013/02/02 13:05:25 shattered Exp $
+# $NetBSD: Makefile,v 1.4 2013/02/02 13:20:15 shattered Exp $
 #
 
 DISTNAME=		pypod-0.6.0
@@ -8,7 +8,7 @@ MASTER_SITES=		http://superduper.net/downloads/pypod/
 
 DEPENDS+=		${PYPKGPREFIX}-mad>=0.5.0:../../audio/py-mad
 
-MAINTAINER=		shattered@users.sourceforge.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://superduper.net/index.py?page=pypod
 COMMENT=		Python tools for manipluating iPod data
 LICENSE=		gnu-gpl-v2

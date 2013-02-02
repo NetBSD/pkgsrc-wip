@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2013/02/02 13:05:25 shattered Exp $
+# $NetBSD: Makefile,v 1.5 2013/02/02 13:20:14 shattered Exp $
 #
 
 DISTNAME=		smstools3-3.0.10
@@ -7,7 +7,7 @@ PKGREVISION=		1
 CATEGORIES=		comms
 MASTER_SITES=		http://smstools3.kekekasvi.com/packages/
 
-MAINTAINER=		shattered@users.sourceforge.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://smstools3.kekekasvi.com/
 COMMENT=		Send and receive short messages via GSM phones
 LICENSE=		gnu-gpl-v2

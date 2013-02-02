@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/21 15:19:41 noud4 Exp $
+# $NetBSD: Makefile,v 1.6 2013/02/02 13:20:15 shattered Exp $
 #
 
 DISTNAME=		gnupod-0.99.6
@@ -8,7 +8,7 @@ MASTER_SITES=		http://download.savannah.gnu.org/releases/gnupod/ \
 			http://blinkenlights.ch/gnupod-dist/stable/
 EXTRACT_SUFX=		.tgz
 
-MAINTAINER=		shattered@users.sourceforge.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnu.org/software/gnupod/
 COMMENT=		GNU iPod tools
 
