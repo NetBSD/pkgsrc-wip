@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2013/02/02 20:37:58 noud4 Exp $
+
+SHA1 (ansible/devel.zip) = 3b461dc44e0d6e6420a91c10bdf98cfadad82df9
+RMD160 (ansible/devel.zip) = 8b9e5953a4712875a0739e744a7d69d9c8b94fcf
+Size (ansible/devel.zip) = 783804 bytes
+SHA1 (patch-Makefile) = 939a2f75ef1a8f63ba2a6c96fb323f5bf96e1b09
+SHA1 (patch-lib_ansible_constants.py) = 667db0f9d3fb9f3f6aea257f6a6b84088424b1da
+SHA1 (patch-library_pkgin) = b19a3b5f811ea32c0238b27b9474b210ec8bb8bc
