@@ -1,0 +1,15 @@
+$NetBSD: patch-library_pkgin,v 1.1 2013/02/02 20:42:22 noud4 Exp $
+
+Ssst, the stupid part NetBSD thinks this is there pkgin.
+
+--- library/pkgin.orig	2013-02-01 21:29:56.000000000 +0000
++++ library/pkgin
+@@ -55,7 +55,7 @@ import shlex
+ import os
+ import sys
+ 
+-PKGIN_PATH = "/opt/local/bin/pkgin"
++PKGIN_PATH = "@PREFIX@/bin/pkgin"
+ 
+ def query_package(module, name, state="present"):
+ 

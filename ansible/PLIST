@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/02/02 05:30:16 noud4 Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/02/02 20:42:22 noud4 Exp $
 bin/ansible
 bin/ansible-doc
 bin/ansible-playbook
@@ -154,6 +154,9 @@ ${PYSITELIB}/ansible/runner/lookup_plugins/pipe.pyo
 ${PYSITELIB}/ansible/runner/lookup_plugins/redis_kv.py
 ${PYSITELIB}/ansible/runner/lookup_plugins/redis_kv.pyc
 ${PYSITELIB}/ansible/runner/lookup_plugins/redis_kv.pyo
+${PYSITELIB}/ansible/runner/lookup_plugins/sequence.py
+${PYSITELIB}/ansible/runner/lookup_plugins/sequence.pyc
+${PYSITELIB}/ansible/runner/lookup_plugins/sequence.pyo
 ${PYSITELIB}/ansible/runner/lookup_plugins/template.py
 ${PYSITELIB}/ansible/runner/lookup_plugins/template.pyc
 ${PYSITELIB}/ansible/runner/lookup_plugins/template.pyo
@@ -177,6 +180,7 @@ ${PYSITELIB}/ansible/utils/template.pyc
 ${PYSITELIB}/ansible/utils/template.pyo
 share/ansible/add_host
 share/ansible/apt
+share/ansible/apt_key
 share/ansible/apt_repository
 share/ansible/assemble
 share/ansible/async_status
@@ -188,6 +192,7 @@ share/ansible/cron
 share/ansible/debug
 share/ansible/easy_install
 share/ansible/ec2
+share/ansible/ec2_facts
 share/ansible/facter
 share/ansible/fail
 share/ansible/fetch
@@ -197,6 +202,7 @@ share/ansible/get_url
 share/ansible/git
 share/ansible/group
 share/ansible/group_by
+share/ansible/hg
 share/ansible/ini_file
 share/ansible/lineinfile
 share/ansible/mail
@@ -205,9 +211,11 @@ share/ansible/mysql_db
 share/ansible/mysql_user
 share/ansible/nagios
 share/ansible/ohai
+share/ansible/pacman
 share/ansible/pause
 share/ansible/ping
 share/ansible/pip
+share/ansible/pkgin
 share/ansible/postgresql_db
 share/ansible/postgresql_user
 share/ansible/raw
@@ -221,6 +229,7 @@ share/ansible/slurp
 share/ansible/subversion
 share/ansible/supervisorctl
 share/ansible/svr4pkg
+share/ansible/sysctl
 share/ansible/template
 share/ansible/user
 share/ansible/virt
