@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5088 2013/02/01 01:38:54 jeremy-c-reed Exp $
+# $Id: Makefile,v 1.5089 2013/02/02 05:32:55 noud4 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -93,6 +93,7 @@ SUBDIR+=	am-utils
 SUBDIR+=	analizo
 SUBDIR+=	and
 SUBDIR+=	ann
+SUBDIR+=	ansible
 SUBDIR+=	anthy-dic-jis34
 SUBDIR+=	aoeui
 SUBDIR+=	aoi
