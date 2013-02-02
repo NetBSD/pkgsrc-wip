@@ -1,0 +1,31 @@
+$NetBSD: patch-etc_Makefile.in,v 1.1 2013/02/02 05:06:43 makoto Exp $
+
+# pkg_add: Conflicting PLIST with autoconf-2.69nb1: info/standards.info
+
+--- etc/Makefile.in.orig	2010-11-21 04:37:57.000000000 +0900
++++ etc/Makefile.in	2013-02-02 12:03:17.000000000 +0900
+@@ -58,10 +58,10 @@
+ #### Host, target, and site specific Makefile fragments come in here.
+ ###
+ 
+-INFOFILES = standards.info configure.info
+-DVIFILES = standards.dvi configure.dvi
+-PDFFILES = standards.pdf configure.pdf
+-HTMLFILES = standards.html configure.html
++INFOFILES = configure.info
++DVIFILES = configure.dvi
++PDFFILES = configure.pdf
++HTMLFILES = configure.html
+ 
+ all: info
+ install install-strip: install-info
+@@ -157,9 +157,6 @@
+ 	  done; \
+ 	fi
+ 
+-standards.info: $(srcdir)/standards.texi $(srcdir)/make-stds.texi
+-	$(MAKEINFO) --no-split -I$(srcdir) -o standards.info $(srcdir)/standards.texi
+-
+ standards.html: $(srcdir)/standards.texi $(srcdir)/make-stds.texi
+ 	$(TEXI2HTML) --no-split -I$(srcdir) -o standards.html $(srcdir)/standards.texi
+ 
