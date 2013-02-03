@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5091 2013/02/02 20:39:47 noud4 Exp $
+# $Id: Makefile,v 1.5092 2013/02/03 16:57:27 noud4 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -501,6 +501,7 @@ SUBDIR+=	e17
 SUBDIR+=	e2fsprogs
 SUBDIR+=	e3
 SUBDIR+=	e_dbus
+SUBDIR+=	euca2ools
 SUBDIR+=	easymesh
 SUBDIR+=	eboard-extras
 SUBDIR+=	ecasound
