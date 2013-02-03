@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.7 2013/01/19 14:09:41 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2013/02/03 23:24:56 othyro Exp $
 #
 
-VERSION=	1.8.0.1138
-PKGREVISION=	1
-DISTNAME=	vbam-${VERSION}-src
-PKGNAME=	vba-m-${VERSION}
+VERSION=	1159
+DISTNAME=	vbam-r${VERSION}-src
+PKGNAME=	vba-m-1.8.0.${VERSION}
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=vbam/}
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://vba-m.com/
@@ -21,7 +21,6 @@ USE_TOOLS+=	pkg-config
 CMAKE_ARGS+=	-DVERSION=${VERSION}
 CMAKE_ARGS+=	-DENABLE_WX=OFF # "wx is not even beta state at present"
 CMAKE_ARGS+=	-DSYSCONFDIR=${PKG_SYSCONFDIR}
-CMAKE_ARGS+=	-DSFML_INCLUDE_DIR=${BUILDLINK_PREFIX.sfml+}/include/SFML
 CMAKE_ARGS+=	-DSFML_LIBRARY=${BUILDLINK_PREFIX.sfml+}/lib/libsfml-system.so
 EGDIR=		${PREFIX}/share/examples/vbam
 CONF_FILES+=	${EGDIR}/vbam.cfg ${PKG_SYSCONFDIR}/vbam.cfg
@@ -32,9 +31,10 @@ CONF_FILES+=	${EGDIR}/vbam.cfg ${PKG_SYSCONFDIR}/vbam.cfg
 CMAKE_ARGS+=	-DENABLE_LINK=OFF # needs shm_open() and shm_unlink()
 .endif
 
-BUILD_DEPENDS+=	glibmm-[0-9]*:../../devel/glibmm
-BUILD_DEPENDS+=	gtkmm-[0-9]*:../../x11/gtkmm
-.include "../../multimedia/ffmpeg/buildlink3.mk"
+BUILDLINK_DEPMETHOD.glibmm=	build
+.include "../../devel/glibmm/buildlink3.mk"
+BUILDLINK_DEPMETHOD.gtkmm=	build
+.include "../../x11/gtkmm/buildlink3.mk"
 .include "../../wip/sfml+/buildlink3.mk"
 .include "../../graphics/ImageMagick/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
