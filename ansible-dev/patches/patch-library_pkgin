@@ -1,6 +1,4 @@
-$NetBSD: patch-library_pkgin,v 1.1 2013/02/02 20:37:58 noud4 Exp $
-
-Ssst, the stupid part NetBSD thinks this is there pkgin.
+$NetBSD: patch-library_pkgin,v 1.2 2013/02/04 08:22:40 thomasklausner Exp $
 
 --- library/pkgin.orig	2013-02-01 21:29:56.000000000 +0000
 +++ library/pkgin
