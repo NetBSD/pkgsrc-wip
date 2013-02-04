@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/02/03 16:55:28 noud4 Exp $
+# $NetBSD: Makefile,v 1.2 2013/02/04 08:33:33 thomasklausner Exp $
 #
 
 GIT_PKG=		euca2ools
@@ -14,7 +14,7 @@ EXTRACT_SUFX=		.zip
 MAINTAINER=		noud4@home.nl
 HOMEPAGE=		http://www.eucalyptus.com/download/${GIT_PKG}
 COMMENT=		Amazon Web Services (AWS) interactor
-LICENSE=		unlicense # TODO
+LICENSE=		2-clause-bsd
 
 DEPENDS+=		${PYPKGPREFIX}-boto>=2.2:../../net/py-boto
 DEPENDS+=		${PYPKGPREFIX}-m2crypto>=0.20.2:../../security/py-m2crypto
@@ -26,8 +26,8 @@ USE_TOOLS+=		gmake
 
 WRKSRC=			${WRKDIR}/${GIT_PKG}-${GIT_LEVEL}
 
-PLIST_SUBST+=		THIS_EGG_FILE=${THIS_EGG_FILE} # XXX "
+PLIST_SUBST+=		THIS_EGG_FILE=${THIS_EGG_FILE} # XXX
 
-.include "../../lang/python/application.mk" # XXX 2.6 or higher
+.include "../../lang/python/application.mk"
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
