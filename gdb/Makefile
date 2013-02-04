@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/02/02 05:06:43 makoto Exp $
+# $NetBSD: Makefile,v 1.2 2013/02/04 11:03:55 makoto Exp $
 #
 
 DISTNAME=	gdb-7.5
@@ -16,13 +16,14 @@ BROKEN_GETTEXT_DETECTION=	yes
 GNU_CONFIGURE=		YES
 USE_PKGLOCALEDIR=	YES
 USE_LIBTOOL=		YES
-
 USE_TOOLS+=		gmake msgfmt makeinfo
 REPLACE_LOCALEDIR_PATTERNS+=	Make-in
 INSTALL_TARGET=		install install-info
 TEST_TARGET=		check
 INFO_FILES=		yes
 CONFIGURE_ENV+=		CONFIG_LDFLAGS=${LDFLAGS:M*:Q}
+TARGET_STR=		${MACHINE_ARCH}--dragonfly
+BUILD_DEFS+=		${TARGET_STR}
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -36,11 +37,26 @@ pre-configure:
 	${RUN} cd ${WRKSRC}/gdb/gdbserver &&				\
 	aclocal && autoheader && autoconf
 
+.elif ${OPSYS} == "DragonFly"
+## Remove "-pc" string, without this, getting following message:
+##	   *** Gdb does not support native target i386-pc-dragonfly"
+CONFIGURE_ARGS+=		--target=${TARGET_STR}
 .endif
 
 # pkg_add: Conflicting PLIST with autoconf-2.69nb1: info/standards.info
 post-patch:
-	${RM} 	${WRKSRC}/etc/standards.info
+	${RM}	${WRKSRC}/etc/standards.info
+
+.if ${OPSYS} == "DragonFly"
+post-install:
+# Following are installed by binutils
+#. for f in ansidecl.h bfdlink.h dis-asm.h symcat.h
+#	(cd ${WRKSRC}/include; ${INSTALL_DATA} ${f}  ${DESTDIR}${PREFIX}/include)
+#. endfor
+	(cd ${DESTDIR}${PREFIX}/bin;               ${LN} ${TARGET_STR}-gdb gdb)
+	(cd ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1; ${LN} ${TARGET_STR}-gdb.1 gdb.1)
+
+.endif
 
 .include "../../mk/termcap.buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"

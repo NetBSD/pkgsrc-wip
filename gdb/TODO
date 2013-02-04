@@ -1,9 +1,7 @@
 TODO
 - NetBSD/amd64 6.0.1 segfaults
 - devel/gdb/patches/patch-* are not reviewed yet for inclusion
-- Dragonfly
-  *** Gdb does not support native target i386-pc-dragonfly
-  (OS brings 7.4.1 for i386-dragonfly).
 
 DONE
 - NetBSD/i386 5.2 invocation is OK
+- DragonFly/i386 3.2.2 + gcc-47: invocation is OK
