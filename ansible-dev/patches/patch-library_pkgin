@@ -1,4 +1,6 @@
-$NetBSD: patch-library_pkgin,v 1.2 2013/02/04 08:22:40 thomasklausner Exp $
+$NetBSD: patch-library_pkgin,v 1.3 2013/02/04 18:10:29 noud4 Exp $
+
+Comment to please pkglint.
 
 --- library/pkgin.orig	2013-02-01 21:29:56.000000000 +0000
 +++ library/pkgin
