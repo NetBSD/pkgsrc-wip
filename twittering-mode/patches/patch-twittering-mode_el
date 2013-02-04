@@ -1,0 +1,22 @@
+$NetBSD: patch-twittering-mode_el,v 1.1 2013/02/04 03:02:44 makoto Exp $
+
+Fix typo, for the function, assigned to 'r',
+  twittering-toggle-show-replied-statuses
+| To: twmode-users@lists.sourceforge.net
+| Subject: [twmode-users] response to r is typed
+| From: Ikumi Keita <ikumi at ikumi que jp>
+| Date: Tue, 29 Jan 2013 00:54:11 +0900
+
+--- twittering-mode.el.orig	2013-02-04 11:52:23.000000000 +0900
++++ twittering-mode.el	2013-02-04 11:52:24.000000000 +0900
+@@ -8479,8 +8479,8 @@ Return nil if no statuses are rendered."
+ 				     field-properties formatted-status)
+ 		formatted-status)))
+ 	   statuses)
+-	  t))
+-      nil))))
++	  t)))
++     nil)))
+ 
+ (defun twittering-render-a-status-with-delay (beg end id prefix)
+   "Render a status with a delay.
