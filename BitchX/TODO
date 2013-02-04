@@ -1,3 +1,5 @@
 Fix
 mkdir /usr/pkg/man1
 mkdir: /usr/pkg/man1: Permission denied
+Roadmap
+build for gtk gnome
