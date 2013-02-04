@@ -2,4 +2,6 @@ Fix
 mkdir /usr/pkg/man1
 mkdir: /usr/pkg/man1: Permission denied
 Roadmap
+replace pkgsrc/chat/bitchx
+contact up-stream
 build for gtk gnome
