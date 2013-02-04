@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2013/02/04 08:39:32 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2013/02/04 20:31:21 noud4 Exp $
 
 DISTNAME=	BitchX-1.2-final
 PKGNAME=	bitchx-1.2 # XXX ${DISTNAME:S|-final||:LC}
 CATEGORIES=	chat
 MASTER_SITES=	http://www.bitchx.ca/
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	nuod4@home.nl
 HOMEPAGE=	http://www.bitchx.org/
 COMMENT=	IRC client based on ircII
 
