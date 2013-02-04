@@ -1,14 +1,10 @@
-$NetBSD: patch-af,v 1.1 2013/02/04 03:00:47 noud4 Exp $
+$NetBSD: patch-af,v 1.2 2013/02/04 08:39:32 thomasklausner Exp $
 
-Comment
-
---- Makefile.in.orig	2013-02-03 00:05:52.000000000 +0000
-+++ Makefile.in	2013-02-03 04:37:25.000000000 +0000
-@@ -211,8 +211,9 @@
- 	  && $(MAKE) 'PLUGINDIR=$(local_dir)/.BitchX/plugins'
+--- Makefile.in.orig	2013-01-01 04:55:05.000000000 +0000
++++ Makefile.in
+@@ -212,7 +212,7 @@ installdll_local: $(srcdir)/Makefile dll
  
  installhelp: installdirs
-+	# i will not again ask those stupid meat-pile shit-head peeps of half NetBSD about this.
  	cd $(top_srcdir)/bitchx-docs && \
 -		find . -name .svn -prune -o -print | cpio -pdmu -R `id -un`:`id -gn` "$(DESTDIR)$(HELPDIR)"
 +		find . -name .svn -prune -o -print | cpio -pdmu "$(DESTDIR)$(HELPDIR)"
