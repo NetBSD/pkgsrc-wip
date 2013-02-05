@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2012/08/10 16:23:39 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.12 2013/02/05 14:14:12 fhajny Exp $
 man/man1/riak-admin.1
 man/man1/riak.1
 man/man1/search-cmd.1
@@ -414,7 +414,6 @@ riak/lib/gs-${VERSION.gs}/priv/gstk.tcl
 riak/lib/hipe-${VERSION.hipe}/ebin/cerl_cconv.beam
 riak/lib/hipe-${VERSION.hipe}/ebin/cerl_closurean.beam
 riak/lib/hipe-${VERSION.hipe}/ebin/cerl_hipeify.beam
-riak/lib/hipe-${VERSION.hipe}/ebin/cerl_hybrid_transform.beam
 riak/lib/hipe-${VERSION.hipe}/ebin/cerl_lib.beam
 riak/lib/hipe-${VERSION.hipe}/ebin/cerl_messagean.beam
 riak/lib/hipe-${VERSION.hipe}/ebin/cerl_pmatch.beam
@@ -534,17 +533,17 @@ riak/lib/inets-${VERSION.inets}/ebin/tftp_sup.beam
 riak/lib/inets-${VERSION.inets}/include/httpd.hrl
 riak/lib/inets-${VERSION.inets}/include/mod_auth.hrl
 riak/lib/inets-${VERSION.inets}/priv/bin/runcgi.sh
-riak/lib/innostore-${VERSION.innostore}/ebin/innostore.app
-riak/lib/innostore-${VERSION.innostore}/ebin/innostore.beam
-riak/lib/innostore-${VERSION.innostore}/ebin/innostore_riak.beam
-riak/lib/innostore-${VERSION.innostore}/ebin/riak_kv_innostore_backend.beam
-riak/lib/innostore-${VERSION.innostore}/priv/innodump
-riak/lib/innostore-${VERSION.innostore}/priv/innoload
-riak/lib/innostore-${VERSION.innostore}/priv/innostore_drv.so
-riak/lib/innostore-${VERSION.innostore}/priv/riak-innostore
-riak/lib/innostore-${VERSION.innostore}/src/innostore.erl
-riak/lib/innostore-${VERSION.innostore}/src/innostore_riak.erl
-riak/lib/innostore-${VERSION.innostore}/src/riak_kv_innostore_backend.erl
+${PLIST.innostore}riak/lib/innostore-${VERSION.innostore}/ebin/innostore.app
+${PLIST.innostore}riak/lib/innostore-${VERSION.innostore}/ebin/innostore.beam
+${PLIST.innostore}riak/lib/innostore-${VERSION.innostore}/ebin/innostore_riak.beam
+${PLIST.innostore}riak/lib/innostore-${VERSION.innostore}/ebin/riak_kv_innostore_backend.beam
+${PLIST.innostore}riak/lib/innostore-${VERSION.innostore}/priv/innodump
+${PLIST.innostore}riak/lib/innostore-${VERSION.innostore}/priv/innoload
+${PLIST.innostore}riak/lib/innostore-${VERSION.innostore}/priv/innostore_drv.so
+${PLIST.innostore}riak/lib/innostore-${VERSION.innostore}/priv/riak-innostore
+${PLIST.innostore}riak/lib/innostore-${VERSION.innostore}/src/innostore.erl
+${PLIST.innostore}riak/lib/innostore-${VERSION.innostore}/src/innostore_riak.erl
+${PLIST.innostore}riak/lib/innostore-${VERSION.innostore}/src/riak_kv_innostore_backend.erl
 riak/lib/kernel-${VERSION.kernel}/ebin/application.beam
 riak/lib/kernel-${VERSION.kernel}/ebin/application_controller.beam
 riak/lib/kernel-${VERSION.kernel}/ebin/application_master.beam
@@ -796,6 +795,7 @@ riak/lib/otp_mibs-${VERSION.otp_mibs}/priv/mibs/OTP-TC.bin
 riak/lib/poolboy-${VERSION.poolboy}/ebin/poolboy.app
 riak/lib/poolboy-${VERSION.poolboy}/ebin/poolboy.beam
 riak/lib/poolboy-${VERSION.poolboy}/ebin/poolboy_sup.beam
+riak/lib/poolboy-${VERSION.poolboy}/ebin/poolboy_worker.beam
 riak/lib/poolboy-${VERSION.poolboy}/priv/vsn.git
 riak/lib/protobuffs-${VERSION.protobuffs}/ebin/pokemon_pb.beam
 riak/lib/protobuffs-${VERSION.protobuffs}/ebin/protobuffs.app
@@ -1134,7 +1134,7 @@ riak/lib/riak_pipe-${VERSION.riak_pipe}/include/riak_pipe_log.hrl
 riak/lib/riak_pipe-${VERSION.riak_pipe}/priv/app.slave0.config
 riak/lib/riak_pipe-${VERSION.riak_pipe}/priv/vsn.git
 riak/lib/riak_search-${VERSION.riak_search}/ebin/basho_bench_driver_riaksearch.beam
-riak/lib/riak_search-${VERSION.merge_index}/ebin/merge_index_backend.beam
+riak/lib/riak_search-${VERSION.riak_search}/ebin/merge_index_backend.beam
 riak/lib/riak_search-${VERSION.riak_search}/ebin/riak_indexed_doc.beam
 riak/lib/riak_search-${VERSION.riak_search}/ebin/riak_search.app
 riak/lib/riak_search-${VERSION.riak_search}/ebin/riak_search.beam

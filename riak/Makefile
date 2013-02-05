@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2012/10/07 14:53:43 asau Exp $
+# $NetBSD: Makefile,v 1.14 2013/02/05 14:14:12 fhajny Exp $
 #
 
-DISTNAME=		riak-1.2.0
+DISTNAME=		riak-1.2.1
 CATEGORIES=		databases
 MASTER_SITES=		http://s3.amazonaws.com/downloads.basho.com/riak/1.2/${PKGVERSION}/
 
@@ -9,6 +9,8 @@ MAINTAINER=		filip@joyent.com
 HOMEPAGE=		http://www.basho.com/products_riak_overview.php
 COMMENT=		Distributed, highly available data store
 LICENSE=		apache-2.0
+
+BUILD_DEPENDS+=		scmgit-base-[0-9]*:../../devel/scmgit-base
 
 USE_LANGUAGES=		c c++
 USE_TOOLS=		gmake

@@ -1,9 +1,9 @@
-$NetBSD: patch-package__Makefile,v 1.5 2012/08/09 16:32:24 fhajny Exp $
+$NetBSD: patch-package__Makefile,v 1.6 2013/02/05 14:14:12 fhajny Exp $
 
 Provide our own installation target.
---- package/Makefile.orig	2012-08-06 22:02:45.000000000 +0000
-+++ package/Makefile
-@@ -2,48 +2,8 @@ OS		= $(shell uname -s)
+--- package/Makefile.orig	2012-09-26 04:22:11.000000000 +0000
++++ package/Makefile	2013-02-05 12:00:57.237252197 +0000
+@@ -2,49 +2,8 @@ OS		= $(shell uname -s)
  KERNEL		= $(shell uname -r)
  ERLANG_BIN	= $(shell dirname $(shell which erl))
  
@@ -20,6 +20,7 @@ Provide our own installation target.
 -BUILDDIR        = rpmbuild
 -endif
 -endif # linux
+-
 -
 -ifeq ($(OS),SunOS)           # Solaris flavors
 -KERNELVER       = $(shell uname -v | grep -c joyent 2> /dev/null)
@@ -54,7 +55,7 @@ Provide our own installation target.
  
  DATE		= $(shell date +%Y-%m-%d)
  VERSIONSTRING	= $(APP) ($(PKG_VERSION) $(DATE)) $(OSNAME) $(ARCH)
-@@ -65,6 +25,6 @@ pkgcheck:
+@@ -66,6 +25,6 @@ pkgcheck:
  	@echo "Packaging \"$(DISTNAME)\""
  
  # The heavy lifting is done by the individual packager Makefiles
