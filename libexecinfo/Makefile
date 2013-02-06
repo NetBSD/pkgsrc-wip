@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/03 09:10:38 asau Exp $
+# $NetBSD: Makefile,v 1.5 2013/02/06 22:22:04 asau Exp $
 #
 
 DISTNAME=	libexecinfo-1.1
@@ -16,6 +16,9 @@ MAKE_FLAGS+=	INCSYMLINKS=no
 MAKE_FLAGS+=	LIBDIR=${PREFIX}/lib
 MAKE_FLAGS+=	MKLINT=no
 MAKE_FLAGS+=	SHLIBDIR=${PREFIX}/lib
+
+CFLAGS.Linux+=	-D_GNU_SOURCE # Dl_info internals
+CFLAGS.Linux+=	-Wno-unused-result # write(2) is declared specially
 
 INSTALLATION_DIRS=	include lib
 
