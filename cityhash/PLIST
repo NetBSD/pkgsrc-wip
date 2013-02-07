@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2013/02/07 17:44:58 othyro Exp $
+include/city.h
+lib/libcityhash.la
+share/doc/cityhash/COPYING
+share/doc/cityhash/NEWS
+share/doc/cityhash/README
