@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.6 2012/09/06 02:45:04 othyro Exp $
-
-SHA1 (bsnes_v091-source.tar.xz) = daebdff1f57f931c19bce9419c047cfca6aa833f
-RMD160 (bsnes_v091-source.tar.xz) = d8d0487bc4aabebe74074ccab35beb0fe3e0c82f
-Size (bsnes_v091-source.tar.xz) = 1055048 bytes
-SHA1 (patch-bsnes_Makefile) = 527b7c16e48d823ff344c30f90967ca5d7ea6556
-SHA1 (patch-bsnes_nall_Makefile) = 4b4995ab79c74985a6023d98390ea08a57d7829a
-SHA1 (patch-bsnes_nall_file.hpp) = 01f18162c4b2f1b28b41c21eb9ebd96936af9e05
