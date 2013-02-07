@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/02/07 22:44:31 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2013/02/07 23:25:51 othyro Exp $
 #
 
 DISTNAME=	v0.17
@@ -10,7 +10,7 @@ FETCH_USING=	curl
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://flarerpg.org/
 COMMENT=	Free Libre Action Roleplaying Engine (engine only)
-LICENSE=	gnu-gpl-v3
+LICENSE=	gnu-gpl-v3 AND cc-by-sa-v3.0 AND open-font-license
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 USE_LANGUAGES=	c c++
