@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5097 2013/02/07 20:36:18 jonperkin Exp $
+# $Id: Makefile,v 1.5098 2013/02/07 21:26:37 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -237,7 +237,6 @@ SUBDIR+=	bscript
 SUBDIR+=	bsdbuild
 SUBDIR+=	bsfilter
 SUBDIR+=	bsh
-SUBDIR+=	bsnes
 SUBDIR+=	bsnmp
 SUBDIR+=	bss
 SUBDIR+=	bsvc
@@ -883,6 +882,7 @@ SUBDIR+=	heroes
 SUBDIR+=	herwig
 SUBDIR+=	hgsubversion
 SUBDIR+=	hgview
+SUBDIR+=	higan
 SUBDIR+=	higgsbounds
 SUBDIR+=	hijra
 SUBDIR+=	hitori
