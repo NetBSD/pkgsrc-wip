@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2013/01/31 20:46:31 noud4 Exp $
+# $NetBSD: Makefile,v 1.8 2013/02/07 11:07:58 trontor Exp $
 #
 
 DISTNAME=		libssh-0.5.4
 CATEGORIES=		security
 MASTER_SITES=		https://red.libssh.org/attachments/download/41/
 
-MAINTAINER=		ndb@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.libssh.org/
 COMMENT=		SSHv2 and SSHv1 protocol
 LICENSE=		2-clause-bsd
