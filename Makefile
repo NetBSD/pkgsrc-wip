@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5099 2013/02/07 22:46:40 othyro Exp $
+# $Id: Makefile,v 1.5100 2013/02/08 03:22:52 outpaddling Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -738,6 +738,7 @@ SUBDIR+=	gl
 SUBDIR+=	glade2-nognome
 SUBDIR+=	glfw
 SUBDIR+=	glib-java
+SUBDIR+=	glib2
 SUBDIR+=	glibc
 SUBDIR+=	glide3
 SUBDIR+=	glimmerm
