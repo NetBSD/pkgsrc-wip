@@ -1,0 +1,10 @@
+libdoozer is a C++ client library for the Doozer lock service. It implements
+all the client functions the Go library has. It can be used for:
+
+ - Synchronized configuration update,
+ - Optimistic resource locking,
+ - Master election and
+ - Service autodiscovery.
+
+It supports multiple master processes in multiple locations while still
+guaranteeing a globally consistent state.
