@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/02/07 19:00:32 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2013/02/08 14:17:47 othyro Exp $
 #
 
 DISTNAME=	nestopia-1.44
@@ -26,7 +26,7 @@ SUBST_MESSAGE.prefix=	Fixing PREFIX path.
 SUBST_SED.prefix=	-e "s|/usr/local|${PREFIX}|1"
 SUBST_STAGE.prefix=	post-patch
 
-INSTALLATION_DIRS=	share/doc/${PKGBASE}
+INSTALLATION_DIRS=	share/doc/${PKGBASE} share/${PKGBASE}/icons
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/README.unix \
