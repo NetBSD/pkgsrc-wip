@@ -1,0 +1,22 @@
+$NetBSD: patch-al,v 1.1 2013/02/08 03:20:55 outpaddling Exp $
+
+http://bugzilla.gnome.org/show_bug.cgi?id=583329
+
+--- glib/tests/convert.c.orig	2008-09-02 15:09:28.000000000 +0000
++++ glib/tests/convert.c
+@@ -76,6 +76,7 @@ test_one_half (void)
+   g_assert (strcmp (out, "\xbd") == 0);
+   g_free (out);
+ 
++#if 0 /* these 2 tests depend on GNU iconv specific behaviour */
+   out = g_convert (in, -1, 
+ 		   "ISO-8859-15", "UTF-8",
+ 		   &bytes_read, &bytes_written,
+@@ -99,6 +100,7 @@ test_one_half (void)
+   g_assert (bytes_written == 1);
+   g_assert (strcmp (out, "a") == 0);
+   g_free (out);
++#endif
+ }
+ 
+ static void

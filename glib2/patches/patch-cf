@@ -1,0 +1,14 @@
+$NetBSD: patch-cf,v 1.1 2013/02/08 03:20:55 outpaddling Exp $
+
+--- gio/gnetworkingprivate.h.orig	2012-03-31 18:24:51.000000000 +0000
++++ gio/gnetworkingprivate.h
+@@ -51,6 +51,9 @@
+ #include <arpa/inet.h>
+ #include <arpa/nameser.h>
+ #if defined(HAVE_ARPA_NAMESER_COMPAT_H) && !defined(GETSHORT)
++#ifdef __NetBSD__
++#include <sys/param.h>
++#endif
+ #include <arpa/nameser_compat.h>
+ #endif
+ #include <net/if.h>

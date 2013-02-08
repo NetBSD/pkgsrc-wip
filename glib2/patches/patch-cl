@@ -1,0 +1,27 @@
+$NetBSD: patch-cl,v 1.1 2013/02/08 03:20:55 outpaddling Exp $
+
+--- gio/Makefile.am.orig	2012-07-14 20:33:13.000000000 +0000
++++ gio/Makefile.am
+@@ -2,7 +2,7 @@ include $(top_srcdir)/Makefile.decl
+ 
+ NULL =
+ 
+-SUBDIRS = gdbus-2.0/codegen
++SUBDIRS =
+ 
+ if OS_UNIX
+ SUBDIRS += xdgmime
+@@ -722,13 +722,6 @@ gdbus_LDADD = libgio-2.0.la \
+ 	$(top_builddir)/glib/libglib-2.0.la 		\
+ 	$(top_builddir)/gobject/libgobject-2.0.la
+ 
+-completiondir = $(datadir)/bash-completion/completions
+-completion_DATA = \
+-	completion/gdbus				\
+-	completion/gsettings				\
+-	completion/gresource
+-EXTRA_DIST += $(completion_DATA)
+-
+ # ------------------------------------------------------------------------
+ # gresource tool
+ 

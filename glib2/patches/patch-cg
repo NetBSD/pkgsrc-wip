@@ -1,0 +1,12 @@
+$NetBSD: patch-cg,v 1.1 2013/02/08 03:20:55 outpaddling Exp $
+
+--- glib/gmem.c.orig	2012-03-19 00:29:05.000000000 +0000
++++ glib/gmem.c
+@@ -42,6 +42,7 @@
+ #include "gbacktrace.h"
+ #include "gtestutils.h"
+ #include "gthread.h"
++#include "gthreadprivate.h"
+ #include "glib_trace.h"
+ 
+ #define MEM_PROFILE_TABLE_SIZE 4096

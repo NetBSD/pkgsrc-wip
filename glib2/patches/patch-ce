@@ -1,0 +1,15 @@
+$NetBSD: patch-ce,v 1.1 2013/02/08 03:20:55 outpaddling Exp $
+
+Fix inconsistency of .hidden attributes, leading to link error on amd64,
+reported by Tobias Nygren.
+
+--- glib/gatomic.c.orig	2012-03-12 00:42:41.000000000 +0000
++++ glib/gatomic.c
+@@ -22,6 +22,7 @@
+ #include "config.h"
+ 
+ #include "gatomic.h"
++#include "gthreadprivate.h"
+ 
+ /**
+  * SECTION:atomic_operations

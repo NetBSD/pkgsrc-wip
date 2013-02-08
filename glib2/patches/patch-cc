@@ -1,0 +1,16 @@
+$NetBSD: patch-cc,v 1.1 2013/02/08 03:20:55 outpaddling Exp $
+
+http://bugzilla.gnome.org/show_bug.cgi?id=562334
+
+--- glib/gbacktrace.h.orig	2009-03-13 04:09:59.000000000 +0000
++++ glib/gbacktrace.h
+@@ -32,6 +32,9 @@
+ #define __G_BACKTRACE_H__
+ 
+ #include <glib/gtypes.h>
++#ifdef __sun__
++#include <sys/select.h>
++#endif
+ #include <signal.h>
+ 
+ G_BEGIN_DECLS

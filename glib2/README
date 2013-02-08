@@ -1,0 +1,11 @@
+
+Added patch for gdummyfile.c.
+    gcc 4.6 does not like a variable named "in".
+
+Disabled hack converting libiconv_open calls.
+    Same issue arose in pkg-config.
+    Is this hack obsolete?
+    Does this have to do with PREFER_{NATIVE|PKGSRC}?
+
+Tested on OS X Snow Leopard with Xcode GCC and GCC 4.6.
+

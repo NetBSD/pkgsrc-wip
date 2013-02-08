@@ -1,0 +1,22 @@
+$NetBSD: patch-an,v 1.1 2013/02/08 03:20:55 outpaddling Exp $
+
+--- gio/Makefile.in.orig	2012-09-24 01:26:29.000000000 +0000
++++ gio/Makefile.in
+@@ -802,7 +802,7 @@ EXTRA_DIST = gdbusdaemon.c gdbusdaemon.h
+ 	gschema.dtd gconstructor_as_data.h $(NULL) $(completion_DATA)
+ TEST_PROGS = 
+ NULL = 
+-SUBDIRS = gdbus-2.0/codegen $(am__append_1) $(am__append_4) \
++SUBDIRS = $(am__append_1) $(am__append_4) \
+ 	$(am__append_8) $(am__append_11) . $(am__append_14) \
+ 	$(am__append_21)
+ @MS_LIB_AVAILABLE_TRUE@@OS_WIN32_AND_DLL_COMPILATION_TRUE@noinst_DATA = gio-2.0.lib
+@@ -3511,7 +3511,7 @@ info: info-recursive
+ 
+ info-am:
+ 
+-install-data-am: install-completionDATA install-data-local \
++install-data-am: install-data-local \
+ 	install-dist_schemaDATA install-gioincludeHEADERS \
+ 	install-giounixincludeHEADERS install-giowin32includeHEADERS
+ 	@$(NORMAL_INSTALL)
