@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2013/02/08 03:20:54 outpaddling Exp $
+# $NetBSD: Makefile.common,v 1.2 2013/02/08 18:25:23 outpaddling Exp $
 #
 # used by devel/glib2/Makefile
 # used by devel/gdbus-codegen/Makefile
@@ -26,8 +26,8 @@ USE_LANGUAGES=		c c++ c99
 USE_LIBTOOL=		yes
 TEST_TARGET=		check
 
-DISTINFO_FILE=		${.CURDIR}/../../jb-wip/glib2/distinfo
-PATCHDIR=		${.CURDIR}/../../jb-wip/glib2/patches
+DISTINFO_FILE=		${.CURDIR}/../../wip/glib2/distinfo
+PATCHDIR=		${.CURDIR}/../../wip/glib2/patches
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR}
