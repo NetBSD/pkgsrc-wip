@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/11/22 20:48:28 cheusov Exp $
+# $NetBSD: Makefile,v 1.17 2013/02/09 20:12:08 cheusov Exp $
 
 DISTNAME=	pkgnih-999
 PKGNAME=	nih-999
@@ -14,7 +14,7 @@ GIT_REPOSITORIES=	pkgnih
 GIT_REPO.pkgnih=	git://github.com/cheusov/pkgnih.git
 .include "../../wip/mk/git-package.mk"
 
-DEPENDS+=	pkg_summary-utils>=0.59.0nb1:../../pkgtools/pkg_summary-utils
+DEPENDS+=	pkg_summary-utils>=0.60.0:../../pkgtools/pkg_summary-utils
 DEPENDS+=	digest-[0-9]*:../../pkgtools/digest
 DEPENDS+=	pkg_install>=20100915:../../pkgtools/pkg_install
 
@@ -40,7 +40,6 @@ REPLACE.runawk.new=	${PREFIX}/bin/runawk
 REPLACE_FILES.runawk=	nih/pkg_update_plan.in nih/cmp2hr.in \
     nih/pkg_create_fake.in nih/analyse_conflicts.in
 
-MAKE_ENV+=		MANDIR=${PREFIX}/${PKGMANDIR}
 MAKE_ENV+=		VERSION=${_GIT_PKGVERSION:S/.//}
 MAKE_ENV+=		PKGSRCDIR=${PKGSRCDIR}
 MAKE_ENV+=		PACKAGES=${PACKAGES}
