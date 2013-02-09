@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2012/11/03 12:36:23 cheusov Exp $
+# $NetBSD: Makefile,v 1.66 2013/02/09 11:50:14 cheusov Exp $
 
 DISTNAME=	pkg_summary-utils-9
 CATEGORIES=	pkgtools
@@ -20,7 +20,7 @@ DEPENDS+=	digest-[0-9]*:../../pkgtools/digest
 
 BUILD_DEPENDS+=	mk-configure>=0.20.0:../../devel/mk-configure
 
-CONFLICTS+=	paexec<0.15.0
+CONFLICTS+=	paexec<0.17.0
 CONFLICTS+=	awk-pkgsrc-dewey-[0-9]*
 CONFLICTS+=	pkg_src_summary-[0-9]*
 CONFLICTS+=	pkg_cmp_summary-[0-9]*
