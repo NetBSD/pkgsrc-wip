@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2012/12/04 20:07:43 othyro Exp $
+# $NetBSD: Makefile,v 1.14 2013/02/09 18:55:00 thomasklausner Exp $
 #
 
 DISTNAME=	minimalist-2.5.4-1
+PKGNAME=	minimalist-2.5.4.1
 CATEGORIES=	mail
 MASTER_SITES=	http://www.mml.org.ua/LIST/
 EXTRACT_SUFX=	.tgz
