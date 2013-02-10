@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2013/02/09 23:54:43 asau Exp $
+# $NetBSD: Makefile,v 1.10 2013/02/10 01:13:12 asau Exp $
 
 .include "../../net/samba/Makefile.mirrors"
 
@@ -164,8 +164,13 @@ post-install:
 	# ${CHMOD} ${SHAREMODE} ${DESTDIR}${PREFIX}/include/*.h
 
 REPLACE_PERL=	pidl/pidl
-REPLACE_PYTHON=	source4/setup/* source4/scripting/bin/* buildtools/bin/waf
-# tevent.py sample-script.py sample-two-script.py
+REPLACE_PYTHON=	buildtools/bin/waf \
+		source4/setup/* \
+		source4/scripting/bin/* \
+		lib/subunit/python/subunit/run.py \
+		lib/subunit/python/subunit/tests/sample-script.py \
+		lib/subunit/python/subunit/tests/sample-two-script.py \
+		lib/tevent/tevent.py
 
 .include "../../lang/python/application.mk"
 
