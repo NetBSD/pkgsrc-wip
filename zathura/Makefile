@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2012/11/11 11:25:29 zul_ Exp $
+# $NetBSD: Makefile,v 1.4 2013/02/10 10:39:46 zul_ Exp $
 #
 
-DISTNAME=	zathura-0.2.1
+DISTNAME=	zathura-0.2.2
 CATEGORIES=	print
 MASTER_SITES=	http://pwmt.org/projects/zathura/download/
 
