@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2012/12/21 23:56:29 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.2 2013/02/11 13:44:12 thomasklausner Exp $
 
-DISTNAME=	residualvm-0.1.0-sources
+DISTNAME=	residualvm-0.1.1-sources
 PKGNAME=	${DISTNAME:S/-sources//}
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=residualvm/}
 CATEGORIES=	games
