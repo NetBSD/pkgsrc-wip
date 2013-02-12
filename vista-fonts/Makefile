@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/07 17:41:42 asau Exp $
+# $NetBSD: Makefile,v 1.3 2013/02/12 19:07:12 shattered Exp $
 #
 
 DISTNAME=	# empty
@@ -41,6 +41,6 @@ do-install:
 	cd ${WRKSRC} && for f in *.ttf ; do \
 		${INSTALL_DATA} $$f ${DESTDIR}${FONTDIR}/$$f; \
 	done
-	${INSTALL_DATA} ${.CURDIR}/../../licenses/${LICENSE} ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${.CURDIR}/../../licenses/${LICENSE:Q} ${DESTDIR}${DOCDIR}
 
 .include "../../mk/bsd.pkg.mk"
