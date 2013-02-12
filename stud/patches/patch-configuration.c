@@ -1,22 +1,10 @@
-$NetBSD: patch-configuration.c,v 1.1 2012/08/15 11:10:16 fhajny Exp $
+$NetBSD: patch-configuration.c,v 1.2 2013/02/12 08:58:33 fhajny Exp $
 
-SunOS fixes as per https://github.com/bumptech/stud/pull/71.
---- configuration.c.orig	2012-08-15 10:33:39.000000000 +0000
+Workaround missing facilities (SunOS).
+
+--- configuration.c.orig	2013-02-12 08:36:11.000000000 +0000
 +++ configuration.c
-@@ -538,10 +538,10 @@ void config_param_validate (char *k, cha
-   struct stat st;
- 
-   if (strcmp(k, "tls") == 0) {
--    //cfg->ENC_TLS = 1;
-+    cfg->ETYPE = ENC_TLS;
-   }
-   else if (strcmp(k, "ssl") == 0) {
--    //cfg->ENC_TLS = 0;
-+    cfg->ETYPE = ENC_SSL;
-   }
-   else if (strcmp(k, CFG_CIPHERS) == 0) {
-     if (v != NULL && strlen(v) > 0) {
-@@ -637,13 +637,23 @@ void config_param_validate (char *k, cha
+@@ -637,13 +637,19 @@ void config_param_validate (char *k, cha
    else if (strcmp(k, CFG_SYSLOG_FACILITY) == 0) {
      r = 1;
      if (!strcmp(v, "auth") || !strcmp(v, "authpriv"))
@@ -33,14 +21,10 @@ SunOS fixes as per https://github.com/bumptech/stud/pull/71.
      else if (!strcmp(v, "ftp"))
        cfg->SYSLOG_FACILITY = LOG_FTP;
 +#endif
-+#ifdef LOG_AUDIT
-+    else if (!strcmp(v, "audit"))
-+      cfg->SYSLOG_FACILITY = LOG_AUDIT;
-+#endif
      else if (!strcmp(v, "local0"))
        cfg->SYSLOG_FACILITY = LOG_LOCAL0;
      else if (!strcmp(v, "local1"))
-@@ -813,14 +823,25 @@ char * config_disp_hostport (char *host,
+@@ -813,14 +819,21 @@ char * config_disp_hostport (char *host,
  const char * config_disp_log_facility (int facility) {
    switch (facility)
    {
@@ -58,10 +42,6 @@ SunOS fixes as per https://github.com/bumptech/stud/pull/71.
 +#ifdef LOG_FTP
      case LOG_FTP:
        return "ftp";
-+#endif
-+#ifdef LOG_AUDIT
-+    case LOG_AUDIT:
-+      return "audit";
 +#endif
      case LOG_LOCAL0:
        return "local0";
