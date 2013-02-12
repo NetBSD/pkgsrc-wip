@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.2 2012/09/29 00:50:34 asau Exp $
+# $NetBSD: Makefile,v 1.3 2013/02/12 18:35:02 shattered Exp $
 #
 
 DISTNAME=	genus2reduction-0.3
 CATEGORIES=	math
-MASTER_SITES=	http://www.math.u-bordeaux.fr/~liu/G2R/
+MASTER_SITES=	http://www.math.u-bordeaux.fr/~qliu/G2R/
 
 MAINTAINER=	jihbed.research@gmail.com
-HOMEPAGE=	http://www.math.u-bordeaux.fr/~liu/G2R/
+HOMEPAGE=	http://www.math.u-bordeaux.fr/~qliu/G2R/
 COMMENT=	Conductor and Reduction Types for Genus 2 Curves
 #LICENSE=	# TODO: (see mk/license.mk)
 

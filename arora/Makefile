@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/09/24 16:56:38 asau Exp $
+# $NetBSD: Makefile,v 1.12 2013/02/12 18:35:01 shattered Exp $
 
 DISTNAME=		arora-0.10.2
 PKGREVISION=		2
@@ -6,7 +6,7 @@ CATEGORIES=		www net
 MASTER_SITES=		http://arora.googlecode.com/files/
 
 MAINTAINER=		zecrazytux@zecrazytux.net
-HOMEPAGE=		http://code.google.com/p/arora
+HOMEPAGE=		http://code.google.com/p/arora/
 COMMENT=		Arora is a web browser using Qt and Webkit
 LICENSE=		gnu-gpl-v2
 

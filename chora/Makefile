@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2013/01/20 02:41:10 othyro Exp $
+# $NetBSD: Makefile,v 1.10 2013/02/12 18:35:01 shattered Exp $
 #
 
 DISTNAME=	chora-h3-2.1.1
@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.horde.org/pub/chora/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.horde.org/chora/
+HOMEPAGE=	http://www.horde.org/apps/chora/
 COMMENT=	Another CVS-via-web system
 LICENSE=	gnu-gpl-v2
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/09/29 00:50:35 asau Exp $
+# $NetBSD: Makefile,v 1.11 2013/02/12 18:35:02 shattered Exp $
 #
 
 DISTNAME=	gimmie-0.2.8
@@ -7,7 +7,7 @@ CATEGORIES=	sysutils python
 MASTER_SITES=	http://www.beatniksoftware.com/gimmie/releases/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://beatniksoftware.com/gimmie
+HOMEPAGE=	http://beatniksoftware.com/gimmie/
 COMMENT=	Creative panel replacement
 
 GNU_CONFIGURE=	yes
