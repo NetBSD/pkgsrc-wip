@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/02/18 15:17:30 shattered Exp $
-bin/rejik-make-cache
+@comment $NetBSD: PLIST,v 1.2 2013/02/12 18:22:47 shattered Exp $
 bin/rejik
-share/examples/rejik/redirector.conf.dist
+bin/rejik-make-cache
 libexec/rejik/IN.gz
 libexec/rejik/benchmark
 libexec/rejik/check-redirector
 libexec/rejik/kill-cache
 libexec/rejik/set-permissions
+share/examples/rejik/redirector.conf.dist

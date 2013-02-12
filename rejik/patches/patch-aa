@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2012/02/18 15:17:30 shattered Exp $
+$NetBSD: patch-aa,v 1.2 2013/02/12 18:22:47 shattered Exp $
 
 --- Makefile.orig	2010-07-23 10:19:48.000000000 +0000
 +++ Makefile
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2012/02/18 15:17:30 shattered Exp $
 -CC=gcc -Wall
 -INCLUDE=-I/usr/include -I/usr/local/include -I/usr/include/pcre
 -LIBS=-L/lib `pcre-config --libs`
-+INSTALL_PATH=${PREFIX}
++INSTALL_PATH=${DESTDIR}${PREFIX}
 +SQUID_USER?=nobody
 +SQUID_GROUP?=nogroup
 +
