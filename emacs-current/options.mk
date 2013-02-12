@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.24 2013/02/12 14:48:45 makoto Exp $
+# $NetBSD: options.mk,v 1.25 2013/02/12 14:52:35 makoto Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.emacs_current
@@ -21,33 +21,31 @@ PKG_FAIL_REASON+=	xft2 options is incompatible with nextstep option.
 ###
 ### Support D-BUS
 ###
-.  if !empty(PKG_OPTIONS:Mdbus)
+.if !empty(PKG_OPTIONS:Mdbus)
 .include "../../sysutils/dbus/buildlink3.mk"
-.  else
-CONFIGURE_ARGS+=	--without-dbus
-.  endif
+.endif
 
 ###
 ### Support SVG
 ###
-.  if !empty(PKG_OPTIONS:Msvg) && empty(PKG_OPTIONS:Mnextstep)
+.if !empty(PKG_OPTIONS:Msvg)
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
-.  else
+.else
 CONFIGURE_ARGS+=	--without-rsvg
-.  endif
+.endif
 
 ###
-### Any of the "toolkit" options with no window-system option implies "x11"
+### Any of the "toolkit" options implies "x11".
 ###
 .if !empty(PKG_OPTIONS:Mgtk) || !empty(PKG_OPTIONS:Mmotif) || !empty(PKG_OPTIONS:Mxaw) || !empty(PKG_OPTIONS:Mxft2)
-.  if empty(PKG_OPTIONS:Mx11) && empty(PKG_OPTIONS:Mnextstep)
+.  if empty(PKG_OPTIONS:Mx11)
 PKG_OPTIONS+=		x11
 .  endif
 .endif
 
 ###
-### Default to using the GTK toolkit if none is specified.
+### Default to using the gtk if none is specified.
 ###
 .if !empty(PKG_OPTIONS:Mx11)
 .  if empty(PKG_OPTIONS:Mgtk) && empty(PKG_OPTIONS:Mmotif) && empty(PKG_OPTIONS:Mxaw)
@@ -73,7 +71,6 @@ CONFIGURE_ARGS+=	--with-png
 .include "../../graphics/png/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
-.include "../../x11/libXrender/buildlink3.mk"
 
 ###
 ### Enable font backend
@@ -126,7 +123,6 @@ MAKE_FILE=		Makefile
 APPLICATIONS_DIR=	share/GNUstep/Local/Applications
 NS_APPBINDIR=		nextstep/Emacs.app
 PLIST_SRC+=		PLIST.gnustep
-CHECK_WRKREF_SKIP+=	share/GNUstep/Local/Applications/Emacs.app/Emacs
 .  endif
 CONFIGURE_ARGS+=	--without-x
 CONFIGURE_ARGS+=	--with-ns
