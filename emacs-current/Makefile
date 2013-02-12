@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2013/01/08 13:19:40 othyro Exp $
+# $NetBSD: Makefile,v 1.64 2013/02/12 14:48:45 makoto Exp $
 #
 
 .include	"version.mk"
@@ -21,6 +21,7 @@ CONFLICTS+=	emacs-nox11-[0-9]*
 BUILD_TARGET=	bootstrap
 
 GIT_REPOSITORIES=	master
+GIT_MODULE.master=	emacs
 GIT_REPO.master=	git://repo.or.cz/emacs.git
 _GIT_FLAGS?=		--depth 1
 
