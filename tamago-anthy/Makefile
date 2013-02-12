@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/11/19 13:04:56 makoto Exp $
+# $NetBSD: Makefile,v 1.10 2013/02/12 14:35:43 makoto Exp $
 # the version number is for pkglint only
 DISTNAME=	tamago-anthy-4.0
 PKGREVISION=    ${_GIT_PKGVERSION:S/.//g}
@@ -30,7 +30,7 @@ INFO_FILES=	yes
 DEPENDS+=	anthy-[0-9]*:../../inputmethod/anthy
 
 GIT_REPOSITORIES=	master
-GIT_MODULE=		egg
+GIT_MODULE.master=	egg
 GIT_REPO.master=	git://git.debian.org/git/pkg-anthy/egg.git
 _GIT_FLAGS?=		--depth 1
 
