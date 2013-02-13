@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.26 2013/02/13 06:08:15 makoto Exp $
+# $NetBSD: options.mk,v 1.27 2013/02/13 09:03:15 makoto Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.emacs_current
@@ -11,7 +11,7 @@ PKG_OPTIONS_GROUP.window-system= x11 nextstep
 PKG_OPTIONS_OPTIONAL_GROUPS+= toolkit
 #  --with-x-toolkit=KIT    use an X toolkit (KIT one of: yes or gtk, gtk2,
 #                          gtk3, lucid or athena, motif, no)
-# gtk in next line implies gtk2
+# gtk in next line implies gtk2, xaw = athena = lucid
 PKG_OPTIONS_GROUP.toolkit= gtk motif xaw
 # gconf, gtk and xft2 will be ingnored for nextstep even shown as selected.
 PKG_SUGGESTED_OPTIONS=	dbus gnutls imagemagick svg gconf gtk xft2
@@ -46,6 +46,10 @@ CONFIGURE_ARGS+=	--without-imagemagic
 .endif
 
 ###
+### Check non nextstep (implies x11) options  ---------------------
+###
+.if empty(PKG_OPTIONS:Mnextstep)
+###
 ### Support SVG
 ###
 .if !empty(PKG_OPTIONS:Msvg)
@@ -55,10 +59,6 @@ CONFIGURE_ARGS+=	--without-imagemagic
 CONFIGURE_ARGS+=	--without-rsvg
 .endif
 
-###
-### Check non nextstep (implies x11) options  ---------------------
-###
-.if empty(PKG_OPTIONS:Mnextstep)
 ###
 ### Support gconf
 ###
