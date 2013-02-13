@@ -12,3 +12,14 @@
    is on pathces/patch-ag
    to set LD_RUN_PATH at compile time, may not be hurtful, but rpath
    may be better
+
+(4) This packages seems broken now wit:
+  In file included from sim.cc:20:0:
+  specc.h:1936:14: error: declaration of '_bit::bnd_t l'
+  specc.h:1859:10: error:  shadows template parm 'unsigned int l'
+  specc.h:1941:14: error: declaration of '_bit::bnd_t l'
+  specc.h:1859:10: error:  shadows template parm 'unsigned int l'
+  specc.h:1947:14: error: declaration of '_bit::bnd_t l'
+  specc.h:1859:10: error:  shadows template parm 'unsigned int l'
+  specc.h:1952:14: error: declaration of '_bit::bnd_t l'
+  specc.h:1859:10: error:  shadows template parm 'unsigned int l'
