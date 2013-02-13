@@ -1,28 +1,48 @@
-# $NetBSD: options.mk,v 1.25 2013/02/12 14:52:35 makoto Exp $
+# $NetBSD: options.mk,v 1.26 2013/02/13 06:08:15 makoto Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.emacs_current
-PKG_SUPPORTED_OPTIONS=	dbus xft2 svg
+PKG_SUPPORTED_OPTIONS=	dbus gconf gnutls imagemagick svg xaw3d xft2
+# xaw3d is only valid with tookit = xaw
+
 PKG_OPTIONS_OPTIONAL_GROUPS+= window-system
 PKG_OPTIONS_GROUP.window-system= x11 nextstep
+
 PKG_OPTIONS_OPTIONAL_GROUPS+= toolkit
+#  --with-x-toolkit=KIT    use an X toolkit (KIT one of: yes or gtk, gtk2,
+#                          gtk3, lucid or athena, motif, no)
+# gtk in next line implies gtk2
 PKG_OPTIONS_GROUP.toolkit= gtk motif xaw
-PKG_SUGGESTED_OPTIONS=	dbus svg x11 xft2
+# gconf, gtk and xft2 will be ingnored for nextstep even shown as selected.
+PKG_SUGGESTED_OPTIONS=	dbus gnutls imagemagick svg gconf gtk xft2
 
 .include "../../mk/bsd.options.mk"
-
-###
-### Check incompatible option sets.
-###
-.if !empty(PKG_OPTIONS:Mnextstep) && !empty(PKG_OPTIONS:Mxft2)
-PKG_FAIL_REASON+=	xft2 options is incompatible with nextstep option.
-.endif
 
 ###
 ### Support D-BUS
 ###
 .if !empty(PKG_OPTIONS:Mdbus)
 .include "../../sysutils/dbus/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--without-dbus
+.endif
+
+###
+### Support gnutls
+###
+.if !empty(PKG_OPTIONS:Mgnutls)
+.include "../../security/gnutls/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--without-gnutls
+.endif
+
+###
+### Support ImageMagick
+###
+.if !empty(PKG_OPTIONS:Mimagemagick)
+.include "../../graphics/ImageMagick/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--without-imagemagic
 .endif
 
 ###
@@ -36,20 +56,51 @@ CONFIGURE_ARGS+=	--without-rsvg
 .endif
 
 ###
-### Any of the "toolkit" options implies "x11".
+### Check non nextstep (implies x11) options  ---------------------
+###
+.if empty(PKG_OPTIONS:Mnextstep)
+###
+### Support gconf
+###
+.  if !empty(PKG_OPTIONS:Mgconf)
+.include "../../devel/gconfmm/buildlink3.mk"
+.  else
+CONFIGURE_ARGS+=	--without-gconf
+.  endif
+
+###
+### Support Xaw3d (This is only valid with Lucid Toolkit)
+###
+.  if !empty(PKG_OPTIONS:Mxaw3d)
+.include "../../x11/Xaw3d/buildlink3.mk"
+.  else
+CONFIGURE_ARGS+=	--without-xaw3d
+.  endif
+.endif
+###
+### End of Check non nextstep options  ---------------------
+###
+
+###
+### .
+### Any of the "toolkit" options with no window-system option implies "x11"
 ###
 .if !empty(PKG_OPTIONS:Mgtk) || !empty(PKG_OPTIONS:Mmotif) || !empty(PKG_OPTIONS:Mxaw) || !empty(PKG_OPTIONS:Mxft2)
-.  if empty(PKG_OPTIONS:Mx11)
+.  if empty(PKG_OPTIONS:Mx11) && empty(PKG_OPTIONS:Mnextstep)
 PKG_OPTIONS+=		x11
 .  endif
 .endif
 
 ###
-### Default to using the gtk if none is specified.
+### Default to using the GTK toolkit if none is specified.
 ###
 .if !empty(PKG_OPTIONS:Mx11)
-.  if empty(PKG_OPTIONS:Mgtk) && empty(PKG_OPTIONS:Mmotif) && empty(PKG_OPTIONS:Mxaw)
+.  if !empty(PKG_OPTIONS:Mlucid)
+PKG_OPTIONS+=		lucid
+.  else
+.    if empty(PKG_OPTIONS:Mgtk) && empty(PKG_OPTIONS:Mmotif) && empty(PKG_OPTIONS:Mxaw)
 PKG_OPTIONS+=		gtk
+.    endif
 .  endif
 .endif
 
@@ -71,6 +122,7 @@ CONFIGURE_ARGS+=	--with-png
 .include "../../graphics/png/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
+.include "../../x11/libXrender/buildlink3.mk"
 
 ###
 ### Enable font backend
@@ -123,6 +175,7 @@ MAKE_FILE=		Makefile
 APPLICATIONS_DIR=	share/GNUstep/Local/Applications
 NS_APPBINDIR=		nextstep/Emacs.app
 PLIST_SRC+=		PLIST.gnustep
+CHECK_WRKREF_SKIP+=	share/GNUstep/Local/Applications/Emacs.app/Emacs
 .  endif
 CONFIGURE_ARGS+=	--without-x
 CONFIGURE_ARGS+=	--with-ns
@@ -143,3 +196,8 @@ CONFIGURE_ARGS+=	--without-tiff
 CONFIGURE_ARGS+=	--without-gif
 CONFIGURE_ARGS+=	--without-png
 .endif
+
+# Local Variables:
+# mode: outline-minor
+# outline-regexp: "\\(.[ \t]*\\(if\\|endif\\|else\\|elif\\)\\)\\|### ."
+# End:

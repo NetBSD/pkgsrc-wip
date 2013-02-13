@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.119 2013/02/12 14:52:35 makoto Exp $
+@comment $NetBSD: PLIST,v 1.120 2013/02/13 06:08:15 makoto Exp $
 bin/ctags
 bin/ebrowse
 bin/emacs
@@ -76,6 +76,7 @@ man/man1/etags.1
 man/man1/grep-changelog.1
 share/applications/emacs.desktop
 share/emacs/${PKGVERSION}/etc/AUTHORS
+share/emacs/${PKGVERSION}/etc/CALC-NEWS
 share/emacs/${PKGVERSION}/etc/CENSORSHIP
 share/emacs/${PKGVERSION}/etc/CONTRIBUTE
 share/emacs/${PKGVERSION}/etc/COOKIES
@@ -1143,8 +1144,6 @@ share/emacs/${PKGVERSION}/lisp/buff-menu.el.gz
 share/emacs/${PKGVERSION}/lisp/buff-menu.elc
 share/emacs/${PKGVERSION}/lisp/button.el.gz
 share/emacs/${PKGVERSION}/lisp/button.elc
-share/emacs/${PKGVERSION}/lisp/calc/README
-share/emacs/${PKGVERSION}/lisp/calc/README.prev
 share/emacs/${PKGVERSION}/lisp/calc/calc-aent.el.gz
 share/emacs/${PKGVERSION}/lisp/calc/calc-aent.elc
 share/emacs/${PKGVERSION}/lisp/calc/calc-alg.el.gz
@@ -3334,8 +3333,6 @@ share/emacs/${PKGVERSION}/lisp/progmodes/cwarn.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/cwarn.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/dcl-mode.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/dcl-mode.elc
-share/emacs/${PKGVERSION}/lisp/progmodes/delphi.el.gz
-share/emacs/${PKGVERSION}/lisp/progmodes/delphi.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/ebnf-abn.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/ebnf-abn.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/ebnf-bnf.el.gz
@@ -3410,6 +3407,8 @@ share/emacs/${PKGVERSION}/lisp/progmodes/octave-inf.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/octave-inf.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/octave-mod.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/octave-mod.elc
+share/emacs/${PKGVERSION}/lisp/progmodes/opascal.el.gz
+share/emacs/${PKGVERSION}/lisp/progmodes/opascal.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/pascal.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/pascal.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/perl-mode.el.gz
