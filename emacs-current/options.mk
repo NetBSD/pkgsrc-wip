@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.27 2013/02/13 09:03:15 makoto Exp $
+# $NetBSD: options.mk,v 1.28 2013/02/13 09:07:07 makoto Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.emacs_current
@@ -52,12 +52,12 @@ CONFIGURE_ARGS+=	--without-imagemagic
 ###
 ### Support SVG
 ###
-.if !empty(PKG_OPTIONS:Msvg)
+.  if !empty(PKG_OPTIONS:Msvg)
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
-.else
+.  else
 CONFIGURE_ARGS+=	--without-rsvg
-.endif
+.  endif
 
 ###
 ### Support gconf
