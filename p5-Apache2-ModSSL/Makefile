@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2012/10/04 09:13:19 asau Exp $
+# $NetBSD: Makefile,v 1.4 2013/02/14 19:19:18 shattered Exp $
 
-DISTNAME=	Apache2-ModSSL-0.06
+DISTNAME=	Apache2-ModSSL-0.08
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Apache2/}

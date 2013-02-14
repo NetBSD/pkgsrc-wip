@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/06/28 22:34:45 tonnerre Exp $
+$NetBSD: distinfo,v 1.2 2013/02/14 19:20:25 shattered Exp $
 
-SHA1 (Apache2-ModSSL-0.06.tar.gz) = 584abbdf3037ce6547281b5b10f44f53b819c25f
-RMD160 (Apache2-ModSSL-0.06.tar.gz) = bdedf77a5103690b9309d65400e1e3ab4343b606
-Size (Apache2-ModSSL-0.06.tar.gz) = 9610 bytes
+SHA1 (Apache2-ModSSL-0.08.tar.gz) = c7f5f9086d59d3845d1c1cba04eae8a67d44c658
+RMD160 (Apache2-ModSSL-0.08.tar.gz) = e6540913373ae4f5d6c9d33ab4e193e24a6313e0
+Size (Apache2-ModSSL-0.08.tar.gz) = 9679 bytes
 SHA1 (patch-aa) = fd46b3a01437c470754c563295147b49f51bd069
