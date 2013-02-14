@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/04 09:13:19 asau Exp $
+# $NetBSD: Makefile,v 1.3 2013/02/14 18:56:25 shattered Exp $
 #
 
 DISTNAME=	Algorithm-Cluster-1.48
@@ -10,6 +10,8 @@ MAINTAINER=	wenheping@gmail.com
 HOMEPAGE=	http://search.cpan.org/dist/Algorithm-Cluster/
 COMMENT=	Perl interface to the C Clustering Library
 LICENSE=	${PERL5_LICENSE}
+
+MAKE_JOBS_SAFE=	no
 
 PERL5_PACKLIST=		auto/Algorithm/Cluster/.packlist
 
