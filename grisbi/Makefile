@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/11/13 20:09:31 othyro Exp $
+# $NetBSD: Makefile,v 1.15 2013/02/14 18:55:23 shattered Exp $
 #
 
 DISTNAME=	grisbi-0.5.9
@@ -15,7 +15,7 @@ GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config intltool gmake
 
 
-INSTALLATION_DIRS=	${PKGMANDIR}/man1 ${PREFIX}/share/applications/
+INSTALLATION_DIRS=	${PREFIX}${PKGMANDIR}/man1 ${PREFIX}/share/applications/
 
 PKG_OPTIONS_VAR=                PKG_OPTIONS.gribsi
 PKG_SUPPORTED_OPTIONS=          libofx
