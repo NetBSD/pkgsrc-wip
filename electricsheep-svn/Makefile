@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/09/28 22:07:31 asau Exp $
+# $NetBSD: Makefile,v 1.4 2013/02/15 11:29:50 rhialto Exp $
 
 PKGNAME=		electricsheep-2.7
 DISTNAME=		electricsheep
@@ -23,6 +23,8 @@ USE_TOOLS+=		pkg-config gmake
 
 SVN_REPOSITORIES=	client
 SVN_ROOT.client=	http://electricsheep.svn.sourceforge.net/svnroot/electricsheep/trunk/client
+			# OLD! Should now be 
+			# Our SVN is now hosted by Google: http://code.google.com/p/electricsheep/source/checkout
 WRKSRC=			${WRKDIR}/client
 
 SHARE_DIR=		${DESTDIR}/${PREFIX}/share/electricsheep
@@ -41,7 +43,7 @@ do-install:
 
 .include "../../mk/jpeg.buildlink3.mk"
 # for libavformat:
-.include "../../multimedia/ffmpeg/buildlink3.mk"
+.include "../../multimedia/ffmpeg010/buildlink3.mk"
 .include "../../devel/libglade/buildlink3.mk"
 #.include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../wip/flam3-svn/buildlink3.mk"
