@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5104 2013/02/12 21:44:26 keckhardt Exp $
+# $Id: Makefile,v 1.5105 2013/02/16 11:51:30 kristerw Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -292,8 +292,8 @@ SUBDIR+=	chrsh
 SUBDIR+=	cinelerra
 SUBDIR+=	cinelerra-cv
 SUBDIR+=	circe2
-SUBDIR+=	ciwiki
 SUBDIR+=	cityhash
+SUBDIR+=	ciwiki
 SUBDIR+=	cl-alexandria
 SUBDIR+=	cl-anaphora
 SUBDIR+=	cl-babel
@@ -503,7 +503,6 @@ SUBDIR+=	e17
 SUBDIR+=	e2fsprogs
 SUBDIR+=	e3
 SUBDIR+=	e_dbus
-SUBDIR+=	euca2ools
 SUBDIR+=	easymesh
 SUBDIR+=	eboard-extras
 SUBDIR+=	ecasound
@@ -577,6 +576,7 @@ SUBDIR+=	ethtool
 SUBDIR+=	etoile
 SUBDIR+=	etoile-core
 SUBDIR+=	etoile-services
+SUBDIR+=	euca2ools
 SUBDIR+=	evas
 SUBDIR+=	evas-gif
 SUBDIR+=	evas-software-x11
@@ -3297,7 +3297,6 @@ SUBDIR+=	x264-devel
 SUBDIR+=	xace
 SUBDIR+=	xalan-c
 SUBDIR+=	xalan-c-1.10
-SUBDIR+=	xerces-c-2.8.0
 SUBDIR+=	xar
 SUBDIR+=	xaralx-bin
 SUBDIR+=	xbase
@@ -3311,6 +3310,7 @@ SUBDIR+=	xcursor-themes
 SUBDIR+=	xdiskusage
 SUBDIR+=	xdotool
 SUBDIR+=	xebece
+SUBDIR+=	xerces-c-2.8.0
 SUBDIR+=	xesam-glib
 SUBDIR+=	xf86-input-synaptics
 SUBDIR+=	xf86-video-geode
