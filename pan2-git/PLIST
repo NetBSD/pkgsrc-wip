@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/02/28 15:27:17 rhialto Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/02/16 13:53:20 rhialto Exp $
 bin/pan
 share/applications/pan.desktop
 share/locale/am/LC_MESSAGES/pan.mo
@@ -13,6 +13,7 @@ share/locale/dz/LC_MESSAGES/pan.mo
 share/locale/el/LC_MESSAGES/pan.mo
 share/locale/en_CA/LC_MESSAGES/pan.mo
 share/locale/en_GB/LC_MESSAGES/pan.mo
+share/locale/eo/LC_MESSAGES/pan.mo
 share/locale/es/LC_MESSAGES/pan.mo
 share/locale/et/LC_MESSAGES/pan.mo
 share/locale/eu/LC_MESSAGES/pan.mo
