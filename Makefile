@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5106 2013/02/16 11:58:49 kristerw Exp $
+# $Id: Makefile,v 1.5107 2013/02/16 12:06:04 kristerw Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -696,6 +696,7 @@ SUBDIR+=	gconf-cleaner
 SUBDIR+=	gdal
 SUBDIR+=	gdal-docs
 SUBDIR+=	gdal-grass
+SUBDIR+=	gdb
 SUBDIR+=	gde
 SUBDIR+=	gdmap
 SUBDIR+=	gdvb
@@ -1378,6 +1379,7 @@ SUBDIR+=	libdialog
 SUBDIR+=	libdisasm
 SUBDIR+=	libdjconsole
 SUBDIR+=	libdmx
+SUBDIR+=	libdoozer
 SUBDIR+=	libdshconfig
 SUBDIR+=	libdssialsacompat
 SUBDIR+=	libecc
