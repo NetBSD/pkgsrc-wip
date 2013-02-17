@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2012/12/30 19:41:18 roelants Exp $
+# $NetBSD: Makefile,v 1.37 2013/02/17 13:09:00 roelants Exp $
 #
 
-DISTNAME=	ecore-1.7.4
+DISTNAME=	ecore-1.7.5
 CATEGORIES=	devel
 MASTER_SITES=	http://download.enlightenment.org/releases/
 EXTRACT_SUFX=	.tar.bz2

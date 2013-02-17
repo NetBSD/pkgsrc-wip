@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.16 2012/12/30 19:41:18 roelants Exp $
+$NetBSD: distinfo,v 1.17 2013/02/17 13:09:00 roelants Exp $
 
-SHA1 (ecore-1.7.4.tar.bz2) = 4d2e5c7cba0bc988fd737a54a0126306d7c0bc2f
-RMD160 (ecore-1.7.4.tar.bz2) = 5973d7bed47b281cf5823a6d5ad4a7f771077a8e
-Size (ecore-1.7.4.tar.bz2) = 3421866 bytes
+SHA1 (ecore-1.7.5.tar.bz2) = 11e001972d5f8f4fd3fe2f525b34156affb331ce
+RMD160 (ecore-1.7.5.tar.bz2) = ade2e342f1610462fce5350e7f12d5f2b6990bc6
+Size (ecore-1.7.5.tar.bz2) = 3458107 bytes
