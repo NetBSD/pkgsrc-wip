@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2012/12/30 19:42:14 roelants Exp $
+# $NetBSD: Makefile,v 1.2 2013/02/17 13:11:06 roelants Exp $
 #
 
-DISTNAME=	eio-1.7.4
+DISTNAME=	eio-1.7.5
 CATEGORIES=	devel
 MASTER_SITES=	http://download.enlightenment.org/releases/
 EXTRACT_SUFX=	.tar.bz2
