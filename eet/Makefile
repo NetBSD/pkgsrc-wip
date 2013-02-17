@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2012/12/30 19:27:17 roelants Exp $
+# $NetBSD: Makefile,v 1.14 2013/02/17 13:06:53 roelants Exp $
 #
 
-DISTNAME=	eet-1.7.4
+DISTNAME=	eet-1.7.5
 CATEGORIES=	devel archivers
 MASTER_SITES=	http://download.enlightenment.org/releases/
 EXTRACT_SUFX=	.tar.bz2
