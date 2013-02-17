@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2012/12/30 19:34:51 roelants Exp $
+# $NetBSD: Makefile,v 1.2 2013/02/17 13:10:10 roelants Exp $
 #
 
-DISTNAME=	evas_generic_loaders-1.7.4
+DISTNAME=	evas_generic_loaders-1.7.5
 CATEGORIES=	graphics
 MASTER_SITES=	http://download.enlightenment.org/releases/
 EXTRACT_SUFX=	.tar.bz2

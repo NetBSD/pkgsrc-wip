@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2012/12/30 19:34:51 roelants Exp $
+$NetBSD: distinfo,v 1.2 2013/02/17 13:10:10 roelants Exp $
 
-SHA1 (evas_generic_loaders-1.7.4.tar.bz2) = 2acc55feb095c43e0479cb37a4adccbb186966cf
-RMD160 (evas_generic_loaders-1.7.4.tar.bz2) = 139815bf59a4ca2a2242693da2da28fb2ada7f50
-Size (evas_generic_loaders-1.7.4.tar.bz2) = 200620 bytes
+SHA1 (evas_generic_loaders-1.7.5.tar.bz2) = e2677b3bea185c28d8ba2be7f7177458e12ba0b3
+RMD160 (evas_generic_loaders-1.7.5.tar.bz2) = 0035e332dd440fb33fd0af82b66ead402aff1a63
+Size (evas_generic_loaders-1.7.5.tar.bz2) = 201631 bytes
