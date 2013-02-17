@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2012/12/30 20:00:56 roelants Exp $
+@comment $NetBSD: PLIST,v 1.4 2013/02/17 13:15:26 roelants Exp $
 bin/elementary_config
 bin/elementary_quicklaunch
 bin/elementary_run
@@ -280,4 +280,5 @@ share/locale/ps/LC_MESSAGES/elementary.mo
 share/locale/pt/LC_MESSAGES/elementary.mo
 share/locale/ur/LC_MESSAGES/elementary.mo
 share/locale/yi/LC_MESSAGES/elementary.mo
+share/locale/zh_CN/LC_MESSAGES/elementary.mo
 @pkgdir share/elementary/examples
