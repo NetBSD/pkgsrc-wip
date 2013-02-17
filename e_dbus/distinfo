@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2012/12/30 19:57:06 roelants Exp $
+$NetBSD: distinfo,v 1.2 2013/02/17 13:14:01 roelants Exp $
 
-SHA1 (e_dbus-1.7.4.tar.bz2) = ac55a258255e40b74ad7671a468da632fc01b3c7
-RMD160 (e_dbus-1.7.4.tar.bz2) = 611d736dff8e90707cfbad29607f8f5fd78c58b6
-Size (e_dbus-1.7.4.tar.bz2) = 440334 bytes
+SHA1 (e_dbus-1.7.5.tar.bz2) = d859ecd54269c54e335d836f745081aaeb40fecf
+RMD160 (e_dbus-1.7.5.tar.bz2) = ebdcddb583e939db23cea0b5615678c367a37d54
+Size (e_dbus-1.7.5.tar.bz2) = 433475 bytes

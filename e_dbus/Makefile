@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2012/12/30 19:57:06 roelants Exp $
+# $NetBSD: Makefile,v 1.2 2013/02/17 13:14:01 roelants Exp $
 #
 
-DISTNAME=	e_dbus-1.7.4
+DISTNAME=	e_dbus-1.7.5
 CATEGORIES=	sysutils
 MASTER_SITES=	http://download.enlightenment.org/releases/
 EXTRACT_SUFX=	.tar.bz2
