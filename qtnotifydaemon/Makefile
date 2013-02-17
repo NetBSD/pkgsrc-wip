@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/11/12 16:51:39 othyro Exp $
+# $NetBSD: Makefile,v 1.4 2013/02/17 21:07:51 othyro Exp $
 #
 
 DISTNAME=	qtnotifydaemon_1.0.14.orig
@@ -29,4 +29,5 @@ do-install:
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/qt4-qdbus/buildlink3.mk"
 .include "../../x11/qt4-tools/buildlink3.mk"
+.include "../../x11/qt4-libs/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
