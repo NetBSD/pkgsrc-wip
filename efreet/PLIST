@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2012/12/30 19:51:57 roelants Exp $
+@comment $NetBSD: PLIST,v 1.6 2013/02/17 13:13:20 roelants Exp $
 bin/efreet_alloc
 bin/efreet_cache_test
 bin/efreet_icon_cache_dump
@@ -48,3 +48,4 @@ share/locale/nl/LC_MESSAGES/efreet.mo
 share/locale/pt/LC_MESSAGES/efreet.mo
 share/locale/ru/LC_MESSAGES/efreet.mo
 share/locale/sl/LC_MESSAGES/efreet.mo
+share/locale/zh_CN/LC_MESSAGES/efreet.mo

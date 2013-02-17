@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2012/12/30 19:51:57 roelants Exp $
+# $NetBSD: Makefile,v 1.22 2013/02/17 13:13:20 roelants Exp $
 #
 
-DISTNAME=	efreet-1.7.4
+DISTNAME=	efreet-1.7.5
 CATEGORIES=	sysutils devel
 MASTER_SITES=	http://download.enlightenment.org/releases/
 EXTRACT_SUFX=	.tar.bz2
