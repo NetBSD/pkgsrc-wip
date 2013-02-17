@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2013/01/26 18:55:23 othyro Exp $
+# $NetBSD: Makefile,v 1.10 2013/02/17 21:19:26 othyro Exp $
 #
 
 DISTNAME=	uade-2.13
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	http://zakalwe.fi/uade/uade2/
 EXTRACT_SUFX=	.tar.bz2
