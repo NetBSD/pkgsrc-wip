@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2013/02/18 09:23:57 ahp-nils Exp $
+# $NetBSD: Makefile,v 1.6 2013/02/18 09:32:05 ahp-nils Exp $
 #
 
 DISTNAME=		monitor-v${VERSION}
@@ -21,7 +21,7 @@ WRKSRC=			${WRKDIR}/monitor
 EXTRACT_USING=		gtar
 BUILD_DEPENDS+=		gtar-[0-9]*:../../archivers/gtar
 BUILD_DEPENDS+=		curl-[0-9]*:../../www/curl
-DEPENDS+=		cacti>=0.8.7:../../ahp/cacti
+DEPENDS+=		cacti>=0.8.7:../../net/cacti
 
 USE_TOOLS+=		gtar
 USE_TOOLS+=		pax
