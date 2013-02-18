@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/02/18 08:22:57 ahp-nils Exp $
+
+SHA1 (dhcpd-snmp-0.2.tar.gz) = d441bec381d67a963ff33ff39fc41f705c4a55ea
+RMD160 (dhcpd-snmp-0.2.tar.gz) = b4cdc93ad68bf9c8675be0cce85be0be4b20867a
+Size (dhcpd-snmp-0.2.tar.gz) = 76717 bytes
