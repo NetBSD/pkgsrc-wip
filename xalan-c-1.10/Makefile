@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/01/23 02:17:06 noud4 Exp $
+# $NetBSD: Makefile,v 1.2 2013/02/18 00:31:27 asau Exp $
 #
 
 DISTNAME=	Xalan-C_1_10_0-src
@@ -13,8 +13,6 @@ SITES.xerces-c-src_2_8_0.tar.gz=	${MASTER_SITE_APACHE:=xerces/c/2/sources/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://xml.apache.org/xalan-c/l
 COMMENT=	XSLT processor of the Apache Project
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=		no
 

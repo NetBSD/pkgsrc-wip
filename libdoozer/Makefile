@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/02/08 20:45:28 tonnerre Exp $
+# $NetBSD: Makefile,v 1.2 2013/02/18 00:31:27 asau Exp $
 #
 
 DISTNAME=	libdoozer-0.1
@@ -10,8 +10,6 @@ MAINTAINER=	tonnerre@NetBSD.org
 HOMEPAGE=	https://github.com/ha/doozer/
 COMMENT=	C++ Client Library for the Doozer Locking Service
 LICENSE=	2-clause-bsd
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

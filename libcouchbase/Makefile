@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/02/07 17:04:30 jonperkin Exp $
+# $NetBSD: Makefile,v 1.2 2013/02/18 00:31:27 asau Exp $
 
 DISTNAME=	libcouchbase-2.0.3
 CATEGORIES=	devel
@@ -8,8 +8,6 @@ MAINTAINER=	trond.norbye@gmail.com
 HOMEPAGE=	http://www.couchbase.com/develop/c/next
 COMMENT=	C/C++ client library to access a Couchbase server
 LICENSE=	apache-2.0
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake unzip
