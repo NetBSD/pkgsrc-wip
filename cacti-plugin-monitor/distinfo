@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/09/28 13:02:16 pettai Exp $
+$NetBSD: distinfo,v 1.2 2013/02/18 09:23:57 ahp-nils Exp $
 
-SHA1 (monitor-0.8.2.tar.gz) = ca6fedcaef1a89043795623b9c07d2e27b3ee761
-RMD160 (monitor-0.8.2.tar.gz) = defd239398583c89d5e6ae8a426b4aad3cd249e9
-Size (monitor-0.8.2.tar.gz) = 241873 bytes
+SHA1 (monitor-v1.3-1.tgz) = dfa7d2f313bd6127f1912310c3b8fd870dc0e7c5
+RMD160 (monitor-v1.3-1.tgz) = 3a021699848f4b835b79c515a2e9c48292744cc6
+Size (monitor-v1.3-1.tgz) = 236682 bytes
