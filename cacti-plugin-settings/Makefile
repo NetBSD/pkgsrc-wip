@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2013/02/18 09:42:59 ahp-nils Exp $
+# $NetBSD: Makefile,v 1.5 2013/02/18 10:02:22 ahp-nils Exp $
 #
 
 DISTNAME=		settings-v${VERSION}
@@ -26,8 +26,6 @@ DEPENDS+=		cacti>=0.8.7:../../net/cacti
 USE_TOOLS+=		gtar
 USE_TOOLS+=		pax
 USE_TOOLS+=		curl
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CACTIDIR=		${PREFIX}/share/cacti
 PLUGINDIR=		${CACTIDIR}/plugins/settings

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2013/02/18 09:47:16 ahp-nils Exp $
+# $NetBSD: Makefile,v 1.8 2013/02/18 10:02:22 ahp-nils Exp $
 #
 
 DISTNAME=		thold-v${VERSION}
@@ -26,8 +26,6 @@ DEPENDS+=		cacti>=0.8.7:../../net/cacti
 USE_TOOLS+=		gtar
 USE_TOOLS+=		pax
 USE_TOOLS+=		curl
-
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 CACTIDIR=		${PREFIX}/share/cacti
 PLUGINDIR=		${CACTIDIR}/plugins/thold
