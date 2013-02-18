@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5109 2013/02/18 08:26:11 ahp-nils Exp $
+# $Id: Makefile,v 1.5110 2013/02/18 10:11:54 ahp-nils Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -251,6 +251,7 @@ SUBDIR+=	c2hs
 SUBDIR+=	cabal-install
 SUBDIR+=	cacti-plugin-hostinfo
 SUBDIR+=	cacti-plugin-monitor
+SUBDIR+=	cacti-plugin-realtime
 SUBDIR+=	cacti-plugin-settings
 SUBDIR+=	cacti-plugin-thold
 SUBDIR+=	cacti-plugin-tools
