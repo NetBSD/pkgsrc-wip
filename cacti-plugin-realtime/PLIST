@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2013/02/18 10:10:29 ahp-nils Exp $
+share/cacti/plugins/realtime/LICENSE
+share/cacti/plugins/realtime/README
+share/cacti/plugins/realtime/cmd_rt.php
+share/cacti/plugins/realtime/graph_ajax_rt.php
+share/cacti/plugins/realtime/graph_image_rt.php
+share/cacti/plugins/realtime/graph_popup_rt.php
+share/cacti/plugins/realtime/index.php
+share/cacti/plugins/realtime/loading.gif
+share/cacti/plugins/realtime/monitor_rt.gif
+share/cacti/plugins/realtime/poller_rt.php
+share/cacti/plugins/realtime/realtime.js
+share/cacti/plugins/realtime/realtime.sql
+share/cacti/plugins/realtime/setup.php
