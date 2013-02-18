@@ -1,24 +1,33 @@
-# $NetBSD: Makefile,v 1.6 2012/09/24 18:26:51 asau Exp $
+# $NetBSD: Makefile,v 1.7 2013/02/18 09:47:16 ahp-nils Exp $
 #
 
-DISTNAME=		thold-0.4.1
-PKGNAME=		cacti-plugin-${DISTNAME}
+DISTNAME=		thold-v${VERSION}
+PKGNAME=		cacti-plugin-thold-${VERSION}
 CATEGORIES=		net
-MASTER_SITES=		http://mirror.cactiusers.org/downloads/plugins/
+MASTER_SITES=		http://docs.cacti.net/_media/
 
 MAINTAINER=		pettai@nordu.net
-HOMEPAGE=		http://cactiusers.org/
-COMMENT=		Threshold plugin to cacti
+HOMEPAGE=		http://docs.cacti.net/
+COMMENT=		Treshold plugin to cacti
+LICENSE=		gnu-gpl-v2
+
+VERSION=		0.4.9-3
+EXTRACT_SUFX=		.tgz
 
 USE_LANGUAGES=		# none
 NO_BUILD=		yes
 WRKSRC=			${WRKDIR}/thold
 
+EXTRACT_USING=		gtar
 BUILD_DEPENDS+=		gtar-[0-9]*:../../archivers/gtar
-DEPENDS+=		cacti>=0.8.7h:../../net/cacti
-DEPENDS+=		cacti-plugin-settings-[0-9]*:../../wip/cacti-plugin-settings
+BUILD_DEPENDS+=		curl-[0-9]*:../../www/curl
+DEPENDS+=		cacti>=0.8.7:../../net/cacti
 
 USE_TOOLS+=		gtar
+USE_TOOLS+=		pax
+USE_TOOLS+=		curl
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CACTIDIR=		${PREFIX}/share/cacti
 PLUGINDIR=		${CACTIDIR}/plugins/thold
@@ -28,10 +37,11 @@ MESSAGE_SUBST+=		PLUGINDIR=${PLUGINDIR}
 
 INSTALLATION_DIRS+=	${PLUGINDIR}
 
-do-extract:
-	${GTAR} xzf ${DISTDIR}/${DISTNAME}.tar.gz -C ${WRKDIR}
+do-fetch:
+	curl ${MASTER_SITES:Q}plugin:${DISTNAME}${EXTRACT_SUFX} -o ${DISTDIR}/thold-v${VERSION}${EXTRACT_SUFX}
 
 do-install:
-	${CP} -R ${WRKSRC}/* ${DESTDIR}${PLUGINDIR}
+	cd ${WRKSRC} && ${PAX} -wr * ${DESTDIR}${PLUGINDIR}
 
+# url2pkg-marker (please do not remove this line.)
 .include "../../mk/bsd.pkg.mk"
