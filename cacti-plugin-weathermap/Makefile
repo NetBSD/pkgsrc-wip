@@ -1,22 +1,28 @@
-# $NetBSD: Makefile,v 1.5 2012/09/24 18:26:51 asau Exp $
+# $NetBSD: Makefile,v 1.6 2013/02/18 09:55:06 ahp-nils Exp $
 #
 
-DISTNAME=		php-weathermap-0.96a
-PKGNAME=		cacti-plugin-weathermap-0.96a
+DISTNAME=		php-weathermap-0.97a
+PKGNAME=		cacti-plugin-weathermap-0.97a
 CATEGORIES=		net
 MASTER_SITES=		http://www.network-weathermap.com/files/
 EXTRACT_SUFX=		.zip
 
 MAINTAINER=		pettai@nordu.net
 HOMEPAGE=		http://www.network-weathermap.com/
-COMMENT=		Php Weathermap, as a plugin to cacti
+COMMENT=		Generate maps and diagrams using data collected by Cacti
 LICENSE=		gnu-gpl-v2
 
 WRKSRC=			${WRKDIR}/weathermap
 USE_LANGUAGES=		# none
+USE_TOOLS+=		pax
 NO_BUILD=		yes
 
-DEPENDS+=		cacti>=0.8.7h:../../net/cacti
+DEPENDS+=		cacti>=0.8.7:../../net/cacti
+
+.include "../../mk/bsd.prefs.mk"
+
+BUILD_DEFS+=		CACTI_USER
+BUILD_DEFS+=		CACTI_GROUP
 
 CACTI_USER?=		cacti
 CACTI_GROUP?=		cacti
@@ -24,15 +30,22 @@ CACTI_GROUP?=		cacti
 CACTIDIR=		${PREFIX}/share/cacti
 PLUGINDIR=		${CACTIDIR}/plugins/weathermap
 
+REPLACE_INTERPRETER+=	php
+REPLACE.php.old=	.*php[^ ]*
+REPLACE.php.new=	${PREFIX}/bin/php
+REPLACE_FILES.php=	weathermap
+
+REPLACE_PERL+=		random-bits/auto-overlib.pl
+
 MESSAGE_SUBST+=		CACTIDIR=${CACTIDIR}
 MESSAGE_SUBST+=		PLUGINDIR=${PLUGINDIR}
 
-OWN_DIRS_PERMS+=        ${PLUGINDIR}/configs ${CACTI_USER} ${CACTI_GROUP} 0755
-OWN_DIRS_PERMS+=        ${PLUGINDIR}/output ${CACTI_USER} ${CACTI_GROUP} 0755
+OWN_DIRS_PERMS+=	${PLUGINDIR}/configs ${CACTI_USER} ${CACTI_GROUP} 0755
+OWN_DIRS_PERMS+=	${PLUGINDIR}/output ${CACTI_USER} ${CACTI_GROUP} 0755
 
 INSTALLATION_DIRS+=	${PLUGINDIR}
 
 do-install:
-	${CP} -R ${WRKSRC}/* ${DESTDIR}${PLUGINDIR}
+	cd ${WRKSRC} && ${PAX} -wr * ${DESTDIR}${PLUGINDIR}
 
 .include "../../mk/bsd.pkg.mk"

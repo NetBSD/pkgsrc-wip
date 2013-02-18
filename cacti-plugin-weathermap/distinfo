@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2009/07/19 23:21:48 pettai Exp $
+$NetBSD: distinfo,v 1.3 2013/02/18 09:55:06 ahp-nils Exp $
 
-SHA1 (php-weathermap-0.96a.zip) = 7916e03b2373ee662d162eba476719fb9eab6674
-RMD160 (php-weathermap-0.96a.zip) = 8d2babf8c7050e509d6c554227aff7f192edc772
-Size (php-weathermap-0.96a.zip) = 2883600 bytes
+SHA1 (php-weathermap-0.97a.zip) = f7c9c6d1c37b0d6c60e1011f351330c396d057a4
+RMD160 (php-weathermap-0.97a.zip) = 95dc10d25918d8810f552c00f5b73ddfd3afb158
+Size (php-weathermap-0.97a.zip) = 2927302 bytes
