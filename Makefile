@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5108 2013/02/17 22:14:26 thomasklausner Exp $
+# $Id: Makefile,v 1.5109 2013/02/18 08:26:11 ahp-nils Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -432,6 +432,7 @@ SUBDIR+=	detachtty
 SUBDIR+=	dfbpoint
 SUBDIR+=	dfbsee
 SUBDIR+=	dfu-util
+SUBDIR+=	dhcpd-snmp
 SUBDIR+=	di
 SUBDIR+=	diablo
 SUBDIR+=	dicom3tools
