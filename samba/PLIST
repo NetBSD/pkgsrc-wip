@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2013/02/09 23:54:43 asau Exp $
+@comment $NetBSD: PLIST,v 1.6 2013/02/19 06:50:09 asau Exp $
 bin/cifsdd
 bin/dbwrap_tool
 bin/eventlogadm
@@ -787,6 +787,12 @@ lib/samba/vfs/xattr_tdb.so
 lib/security/pam_smbpass.so
 lib/security/pam_winbind.so
 lib/winbind_krb5_locator.so
+man/man1/pidl.1
+man/man3/Parse::Pidl::Dump.3
+man/man3/Parse::Pidl::NDR.3
+man/man3/Parse::Pidl::Util.3
+man/man3/Parse::Pidl::Wireshark::Conformance.3
+man/man3/Parse::Pidl::Wireshark::NDR.3
 sbin/nmbd
 sbin/samba
 sbin/samba_dnsupdate
@@ -830,12 +836,6 @@ share/examples/samba/adduser.sh
 share/examples/samba/deluser.sh
 share/examples/samba/samba.schema
 share/examples/samba/smb.conf.default
-share/man/man1/pidl.1
-share/man/man3/Parse::Pidl::Dump.3
-share/man/man3/Parse::Pidl::NDR.3
-share/man/man3/Parse::Pidl::Util.3
-share/man/man3/Parse::Pidl::Wireshark::Conformance.3
-share/man/man3/Parse::Pidl::Wireshark::NDR.3
 share/perl5/Parse/Pidl.pm
 share/perl5/Parse/Pidl/CUtil.pm
 share/perl5/Parse/Pidl/Compat.pm
