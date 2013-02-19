@@ -1,4 +1,4 @@
-# $Id: cvs-package.mk,v 1.43 2011/11/07 17:26:53 asau Exp $
+# $Id: cvs-package.mk,v 1.44 2013/02/19 10:28:14 fhajny Exp $
 
 # This file provides simple access to CVS repositories, so that packages
 # can be created from CVS instead of from released tarballs. Whenever a
@@ -178,7 +178,7 @@ _CVS_DISTFILE.${repo}=	${PKGBASE}-${CVS_MODULE.${repo}}-${_CVS_TAG.${repo}}.tar.
 _CVS_EXTRACT_CACHED.${repo}=	\
 	if [ -f ${_CVS_DISTDIR}/${_CVS_DISTFILE.${repo}:Q} ]; then		\
 	  ${STEP_MSG} "Extracting cached CVS archive "${_CVS_DISTFILE.${repo}:Q}"."; \
-	  pax -r -z -f ${_CVS_DISTDIR}/${_CVS_DISTFILE.${repo}:Q};	\
+	  gzip -d -c ${_CVS_DISTDIR}/${_CVS_DISTFILE.${repo}:Q} | pax -r;	\
 	  exit 0;							\
 	fi
 
@@ -186,7 +186,7 @@ _CVS_EXTRACT_CACHED.${repo}=	\
 _CVS_CREATE_CACHE.${repo}=	\
 	${STEP_MSG} "Creating cached CVS archive "${_CVS_DISTFILE.${repo}:Q}"."; \
 	${MKDIR} ${_CVS_DISTDIR:Q};					\
-	pax -w -z -f ${_CVS_DISTDIR}/${_CVS_DISTFILE.${repo}:Q} ${CVS_MODULE.${repo}:Q}
+	pax -w ${CVS_MODULE.${repo}:Q} | gzip > ${_CVS_DISTDIR}/${_CVS_DISTFILE.${repo}:Q}
 .endfor
 
 pre-extract: do-cvs-extract
