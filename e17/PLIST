@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2012/12/30 20:08:52 roelants Exp $
+@comment $NetBSD: PLIST,v 1.16 2013/02/20 17:54:15 roelants Exp $
 bin/enlightenment
 bin/enlightenment_filemanager
 bin/enlightenment_imc
@@ -554,6 +554,9 @@ share/enlightenment/data/images/test.edj
 share/enlightenment/data/images/test.jpg
 share/enlightenment/data/images/test.png
 share/enlightenment/data/images/test.svg
+share/enlightenment/data/input_methods/fcitx.imc
+share/enlightenment/data/input_methods/gcin.imc
+share/enlightenment/data/input_methods/hime.imc
 share/enlightenment/data/input_methods/ibus.imc
 share/enlightenment/data/input_methods/iiimf.imc
 share/enlightenment/data/input_methods/scim.imc
