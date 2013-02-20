@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2013/02/18 10:02:22 ahp-nils Exp $
+# $NetBSD: Makefile,v 1.6 2013/02/20 08:25:09 ahp-nils Exp $
 #
 
 DISTNAME=		settings-v${VERSION}
 PKGNAME=		cacti-plugin-settings-${VERSION}
 CATEGORIES=		net
-MASTER_SITES=		http://docs.cacti.net/_media/
+MASTER_SITES=		http://docs.cacti.net/_media/plugin:
 
 MAINTAINER=		pettai@nordu.net
 HOMEPAGE=		http://docs.cacti.net/
@@ -20,12 +20,10 @@ WRKSRC=			${WRKDIR}/settings
 
 EXTRACT_USING=		gtar
 BUILD_DEPENDS+=		gtar-[0-9]*:../../archivers/gtar
-BUILD_DEPENDS+=		curl-[0-9]*:../../www/curl
 DEPENDS+=		cacti>=0.8.7:../../net/cacti
 
 USE_TOOLS+=		gtar
 USE_TOOLS+=		pax
-USE_TOOLS+=		curl
 
 CACTIDIR=		${PREFIX}/share/cacti
 PLUGINDIR=		${CACTIDIR}/plugins/settings
@@ -34,9 +32,6 @@ MESSAGE_SUBST+=		CACTIDIR=${CACTIDIR}
 MESSAGE_SUBST+=		PLUGINDIR=${PLUGINDIR}
 
 INSTALLATION_DIRS+=	${PLUGINDIR}
-
-do-fetch:
-	curl ${MASTER_SITES:Q}plugin:${DISTNAME}${EXTRACT_SUFX} -o ${DISTDIR}/settings-v${VERSION}${EXTRACT_SUFX}
 
 do-install:
 	cd ${WRKSRC} && ${PAX} -wr * ${DESTDIR}${PLUGINDIR}
