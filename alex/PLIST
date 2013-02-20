@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.4 2010/04/10 06:40:52 emil_s Exp $
+@comment $NetBSD: PLIST,v 1.5 2013/02/20 13:10:34 szptvlfn Exp $
 bin/alex
 share/${PKGNAME}/AlexTemplate
 share/${PKGNAME}/AlexTemplate-debug
 share/${PKGNAME}/AlexTemplate-ghc
 share/${PKGNAME}/AlexTemplate-ghc-debug
+share/${PKGNAME}/AlexTemplate-ghc-nopred
 share/${PKGNAME}/AlexWrapper-basic
 share/${PKGNAME}/AlexWrapper-basic-bytestring
 share/${PKGNAME}/AlexWrapper-gscan
