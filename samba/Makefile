@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2013/02/19 06:50:09 asau Exp $
+# $NetBSD: Makefile,v 1.12 2013/02/20 05:13:33 asau Exp $
 
 .include "../../net/samba/Makefile.mirrors"
 
@@ -61,6 +61,7 @@ CONFIGURE_ARGS+=	--prefix=$(PREFIX:Q)
 #CONFIGURE_ARGS+=	--with-configdir=${SAMBA_ETCDIR}
 CONFIGURE_ARGS+=	--libdir=${SAMBA_LIBDIR}
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
+CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/${PKGBASE}
 CONFIGURE_ARGS+=	--with-lockdir=${SAMBA_LOCKDIR}
 #CONFIGURE_ARGS+=	--with-logfilebase=${SAMBA_LOGDIR}
 CONFIGURE_ARGS+=	--with-modulesdir=${SAMBA_MODULESDIR}
