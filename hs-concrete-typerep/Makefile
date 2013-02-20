@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/03/11 05:49:07 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2013/02/20 11:52:21 szptvlfn Exp $
 #
 
-DISTNAME=	concrete-typerep-0.1.0.1
+DISTNAME=	concrete-typerep-0.1.0.2
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
