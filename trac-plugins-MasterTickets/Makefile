@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2012/10/07 17:17:46 asau Exp $
+# $NetBSD: Makefile,v 1.10 2013/02/21 19:05:40 lexort Exp $
 
-UPSTREAM_VERSION=	3.0.2
+UPSTREAM_VERSION=	3.0.3
 DISTNAME=	TracMasterTickets-${UPSTREAM_VESRION}
 VERSION=	${UPSTREAM_VERSION}.20111224
 PKGNAME=	trac-plugins-MasterTickets-${VERSION}
