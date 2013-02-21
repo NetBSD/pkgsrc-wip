@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5111 2013/02/19 22:45:54 khorben Exp $
+# $Id: Makefile,v 1.5112 2013/02/21 20:12:10 szptvlfn Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -916,6 +916,7 @@ SUBDIR+=	hs-MonadCatchIO-transformers
 SUBDIR+=	hs-ObjectName
 SUBDIR+=	hs-OpenGL
 SUBDIR+=	hs-OpenGLRaw
+SUBDIR+=	hs-QIO
 SUBDIR+=	hs-QuickCheck
 SUBDIR+=	hs-QuickCheck1
 SUBDIR+=	hs-SHA
