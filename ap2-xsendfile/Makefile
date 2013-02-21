@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/09/24 16:56:36 asau Exp $
+# $NetBSD: Makefile,v 1.6 2013/02/21 13:26:24 jonperkin Exp $
 #
 
 DISTNAME=		mod_xsendfile-0.12
@@ -16,8 +16,7 @@ APACHE_MODULE_NAME=	${DISTNAME:C|-.*||}.so
 APACHE_MODULE_SRC=	${DISTNAME:C|-.*||}.c
 APACHE_MODULE_LA=	${DISTNAME:C|-.*||}.la
 
-.include "../../mk/apache.mk"
-BUILDLINK_API_DEPENDS.apache+=	apache>=2.0.47
+PKG_APACHE_ACCEPTED=	apache2 apache22 apache24
 
 do-build:
 	cd ${WRKSRC} && ${APXS} ${CPPFLAGS} ${LDFLAGS} -c -o ${APACHE_MODULE_NAME} ${APACHE_MODULE_SRC}
@@ -26,4 +25,5 @@ do-install:
 	${INSTALL_LIB_DIR} ${DESTDIR}${PREFIX}/lib/httpd
 	cd ${WRKSRC} && ${APXS} -i -S LIBEXECDIR=${DESTDIR}${PREFIX}/lib/httpd ${APACHE_MODULE_LA}
 
+.include "../../mk/apache.mk"
 .include "../../mk/bsd.pkg.mk"
