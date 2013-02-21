@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2012/10/07 16:23:16 asau Exp $
+# $NetBSD: Makefile,v 1.9 2013/02/21 12:24:12 jonperkin Exp $
 #
 
-DISTNAME=	sphinx-2.0.4-release
+DISTNAME=	sphinx-2.0.6-release
 PKGNAME=	${DISTNAME:S/-/search-/:S/-release//}
 CATEGORIES=	databases textproc
 MASTER_SITES=	http://www.sphinxsearch.com/files/
@@ -42,6 +42,7 @@ SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Setting standard paths
 SUBST_STAGE.paths=	post-patch
 SUBST_FILES.paths=	sphinx.conf.in sphinx-min.conf.in Makefile.in src/searchd.cpp
+SUBST_FILES.paths+=	src/Makefile.in
 SUBST_SED.paths+=	-e 's,@CONFDIR@/log/searchd.pid,${SPHINX_RUN}/searchd.pid,g'
 SUBST_SED.paths+=	-e 's,@CONFDIR@/log/query.log,${SPHINX_LOG}/query.log,g'
 SUBST_SED.paths+=	-e 's,@CONFDIR@/log/searchd.log,${SPHINX_LOG}/searchd.log,g'

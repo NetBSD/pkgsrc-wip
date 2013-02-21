@@ -1,8 +1,10 @@
-$NetBSD: patch-ae,v 1.1 2009/12/15 11:51:51 fhajny Exp $
+$NetBSD: patch-src_sphinxstd.h,v 1.1 2013/02/21 12:24:13 jonperkin Exp $
 
---- src/sphinxstd.h.orig	2009-11-15 17:11:30.000000000 +0000
+Portability fixes.
+
+--- src/sphinxstd.h.orig	2012-10-19 09:48:07.000000000 +0000
 +++ src/sphinxstd.h
-@@ -53,6 +53,11 @@ typedef int __declspec("SAL_nokernel") _
+@@ -64,6 +64,11 @@ typedef int __declspec("SAL_nokernel") _
  #include <pthread.h>
  #endif
  
