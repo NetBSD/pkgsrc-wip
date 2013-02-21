@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2013/02/21 01:43:43 lexort Exp $
+# $NetBSD: Makefile,v 1.4 2013/02/21 01:54:24 lexort Exp $
 
 DISTNAME=       diaspora-0.0.3.0
 PKGNAME=        ${RUBY_PKGPREFIX}-${DISTNAME}
@@ -19,7 +19,17 @@ LICENSE=        gnu-agpl-v3
 #  it's rails, so in the clone
 #    bundle && rails server
 
+# Hints from Debian may be useful:
+# http://wiki.debian.org/Diaspora/Packaging?action=show&redirect=Diaspora%2Fpackaging
+
+# diaspora hints (perhaps for post-install script)
+# https://github.com/diaspora/diaspora/wiki/FAQ-for-Developers
+
+# rails hints
+# http://guides.rubyonrails.org/getting_started.html
+
 DEPENDS+=	rubygems:../../misc/rubygems
+DEPENDS+=	ruby-bundler:../../misc/ruby-bundler
 DEPENDS+=	redis>=3.0.2:../../wip/redis
 
 # ImageMagick
