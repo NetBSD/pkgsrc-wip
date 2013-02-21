@@ -1,0 +1,10 @@
+Fix download link.
+
+Package any dependencies (many gems?) or figure out how to
+auto-install them instead.
+
+Add dependencies to Makefile.
+
+Perhaps write rc.d script to start/stop, init.
+
+Add to ../Makefile (when it builds).
