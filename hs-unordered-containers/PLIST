@@ -1,18 +1,18 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/03/04 06:45:47 phonohawk Exp $
-lib/unordered-containers-${PKGVERSION}/${HASKELL_VERSION}/Data/FullList/Lazy.hi
-lib/unordered-containers-${PKGVERSION}/${HASKELL_VERSION}/Data/FullList/Lazy.p_hi
-lib/unordered-containers-${PKGVERSION}/${HASKELL_VERSION}/Data/FullList/Strict.hi
-lib/unordered-containers-${PKGVERSION}/${HASKELL_VERSION}/Data/FullList/Strict.p_hi
-lib/unordered-containers-${PKGVERSION}/${HASKELL_VERSION}/Data/HashMap/Common.hi
-lib/unordered-containers-${PKGVERSION}/${HASKELL_VERSION}/Data/HashMap/Common.p_hi
+@comment $NetBSD: PLIST,v 1.2 2013/02/21 20:17:40 szptvlfn Exp $
+lib/unordered-containers-${PKGVERSION}/${HASKELL_VERSION}/Data/HashMap/Array.hi
+lib/unordered-containers-${PKGVERSION}/${HASKELL_VERSION}/Data/HashMap/Array.p_hi
+lib/unordered-containers-${PKGVERSION}/${HASKELL_VERSION}/Data/HashMap/Base.hi
+lib/unordered-containers-${PKGVERSION}/${HASKELL_VERSION}/Data/HashMap/Base.p_hi
 lib/unordered-containers-${PKGVERSION}/${HASKELL_VERSION}/Data/HashMap/Lazy.hi
 lib/unordered-containers-${PKGVERSION}/${HASKELL_VERSION}/Data/HashMap/Lazy.p_hi
-lib/unordered-containers-${PKGVERSION}/${HASKELL_VERSION}/Data/HashMap/Lazy/Internal.hi
-lib/unordered-containers-${PKGVERSION}/${HASKELL_VERSION}/Data/HashMap/Lazy/Internal.p_hi
+lib/unordered-containers-${PKGVERSION}/${HASKELL_VERSION}/Data/HashMap/PopCount.hi
+lib/unordered-containers-${PKGVERSION}/${HASKELL_VERSION}/Data/HashMap/PopCount.p_hi
 lib/unordered-containers-${PKGVERSION}/${HASKELL_VERSION}/Data/HashMap/Strict.hi
 lib/unordered-containers-${PKGVERSION}/${HASKELL_VERSION}/Data/HashMap/Strict.p_hi
-lib/unordered-containers-${PKGVERSION}/${HASKELL_VERSION}/Data/HashMap/Strict/Internal.hi
-lib/unordered-containers-${PKGVERSION}/${HASKELL_VERSION}/Data/HashMap/Strict/Internal.p_hi
+lib/unordered-containers-${PKGVERSION}/${HASKELL_VERSION}/Data/HashMap/Unsafe.hi
+lib/unordered-containers-${PKGVERSION}/${HASKELL_VERSION}/Data/HashMap/Unsafe.p_hi
+lib/unordered-containers-${PKGVERSION}/${HASKELL_VERSION}/Data/HashMap/UnsafeShift.hi
+lib/unordered-containers-${PKGVERSION}/${HASKELL_VERSION}/Data/HashMap/UnsafeShift.p_hi
 lib/unordered-containers-${PKGVERSION}/${HASKELL_VERSION}/Data/HashSet.hi
 lib/unordered-containers-${PKGVERSION}/${HASKELL_VERSION}/Data/HashSet.p_hi
 lib/unordered-containers-${PKGVERSION}/${HASKELL_VERSION}/HSunordered-containers-${PKGVERSION}.o
