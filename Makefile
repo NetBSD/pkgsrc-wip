@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5112 2013/02/21 20:12:10 szptvlfn Exp $
+# $Id: Makefile,v 1.5113 2013/02/22 22:46:23 kristerw Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2857,6 +2857,7 @@ SUBDIR+=	rubrica2
 SUBDIR+=	ruby-GalleryAdministrator
 SUBDIR+=	ruby-actionmessenger
 SUBDIR+=	ruby-bdb
+SUBDIR+=	ruby-diaspora
 SUBDIR+=	ruby-ditz
 SUBDIR+=	ruby-dnssd
 SUBDIR+=	ruby-easyjour
