@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/10/15 20:51:09 asau Exp $
+# $NetBSD: Makefile,v 1.9 2013/02/22 22:50:40 kristerw Exp $
 #
 
 DISTNAME=	mpb-1.4.2
@@ -23,5 +23,5 @@ CFLAGS+=	-DH5_USE_16_API=1
 .include "../../devel/hdf5/buildlink3.mk"
 .include "../../math/fftw2/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
-.include "../../wip/libctl/buildlink3.mk"
+.include "../../devel/libctl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
