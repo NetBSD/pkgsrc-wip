@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2013/01/15 13:03:13 phonohawk Exp $
+# $NetBSD: Makefile,v 1.4 2013/02/23 13:44:22 phonohawk Exp $
 
 DISTNAME=	cabal-install-1.16.0.2
 PKGNAME=	${DISTNAME}
@@ -9,7 +9,6 @@ COMMENT=	Command-line interface for Cabal and Hackage
 LICENSE=	modified-bsd
 
 .include "../../wip/mk/haskell.mk"
-.include "../../wip/hs-Cabal/buildlink3.mk"
 .include "../../wip/hs-HTTP/buildlink3.mk"
 .include "../../wip/hs-mtl/buildlink3.mk"
 .include "../../wip/hs-network/buildlink3.mk"
