@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/07 14:53:44 asau Exp $
+# $NetBSD: Makefile,v 1.7 2013/02/23 06:34:11 phonohawk Exp $
 #
 
 DISTNAME=	ditz-0.5
@@ -9,11 +9,9 @@ HOMEPAGE=	http://ditz.rubyforge.org/
 COMMENT=	Simple, light-weight distributed issue tracker
 LICENSE=	gnu-gpl-v3
 
-PKG_DESTDIR_SUPPORT=	none
-
 .include "../../lang/ruby/rubyversion.mk"
 
-.if ${RUBY_VER} == "19"
+.if ${RUBY_VER} == "193"
 GIT_REPOSITORIES=	ruby19
 GIT_REPO.ruby19=	git://github.com/chriskempson/Ditz-for-Ruby-1.9.2.git
 GIT_MODULE.ruby19=	Ditz-for-Ruby-1.9.2
@@ -21,7 +19,7 @@ WRKSRC=				${WRKDIR}/${GIT_MODULE.ruby19}
 .else
 GIT_REPOSITORIES=	mainline
 GIT_REPO.mainline=	git://gitorious.org/ditz/mainline.git
-WRKSRC=				${WRKDIR}/${GIT_MODULE.mainline}
+WRKSRC=		${WRKDIR}/${GIT_MODULE.mainline}
 .endif
 
 GEM_SPECFILE=	${WRKSRC}/ditz.gemspec
