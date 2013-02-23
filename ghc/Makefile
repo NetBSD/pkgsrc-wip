@@ -1,82 +1,107 @@
-# $NetBSD: Makefile,v 1.34 2012/09/29 00:50:34 asau Exp $
-
+# $NetBSD: Makefile,v 1.35 2013/02/23 12:24:06 phonohawk Exp $
+# -----------------------------------------------------------------------------
+# Package metadata
+#
 DISTNAME=	ghc-${VERSION}
-VERSION=	7.4.1
+VERSION=	7.6.2
 CATEGORIES=	lang
 MASTER_SITES=	http://www.haskell.org/ghc/dist/${VERSION}/
-MAINTAINER=	kristerw@NetBSD.org
+MAINTAINER=	pho@cielonero.org
 HOMEPAGE=	http://www.haskell.org/ghc/
 COMMENT=	Compiler for the functional language Haskell
 LICENSE=	modified-bsd
 
+# GHC requires GHC to build itself. Formerly we could work around this
+# bootstrapping problem by creating a special archive containing C
+# sources compiled from Haskell sources, but that's no longer
+# possible. So we have to prepare stripped-down binaries sufficient to
+# bootstrap compilers for each platforms. If you want to build them
+# yourself, follow an instruction in the ./TODO file.
+ONLY_FOR_PLATFORM= \
+	Darwin-*-powerpc \
+	FreeBSD-*-i386 \
+	Linux-*-x86_64 \
+	NetBSD-*-i386 \
+	NetBSD-*-x86_64
+
+
+# -----------------------------------------------------------------------------
+# Distfiles
+#
 DISTFILES=	${DISTNAME}-src.tar.bz2
-DISTFILES+=	${DISTNAME}-boot-i386-unknown-freebsd8.0.tar.bz2
-DISTFILES+=	${DISTNAME}-boot-i386-unknown-netbsdelf6.99.1.tar.bz2
-DISTFILES+=	${DISTNAME}-boot-powerpc-apple-darwin9.8.0.tar.bz2
-DISTFILES+=	${DISTNAME}-boot-x86_64-unknown-linux-gnu.tar.bz2
+DISTFILES+=	${DISTNAME}-boot-i386-unknown-freebsd.tar.xz
+DISTFILES+=	${DISTNAME}-boot-i386-unknown-netbsd.tar.xz
+DISTFILES+=	${DISTNAME}-boot-powerpc-apple-darwin.tar.xz
+DISTFILES+=	${DISTNAME}-boot-x86_64-unknown-linux.tar.xz
+DISTFILES+=	${DISTNAME}-boot-x86_64-unknown-netbsd.tar.xz
 
 .for i in ${DISTFILES:M*-boot-*}
 SITES.${i}=	http://static.cielonegro.org/archive/
 .endfor
 
-# Unregisterised HC packages are platform-dependent C sources. Yes,
-# they are C sources but are totally non-portable. We have to create
-# more HC packages to support more platforms. Note that those packages
-# are built with integer-simple, not integer-gmp, to reduce some
-# complexity by not depending on the GMP. The resulting registerised
-# GHC uses integer-gmp so this won't be a problem.
+# We don't want to extract all of the DISTFILEs.
+EXTRACT_ONLY=	${DISTNAME}-src.tar.bz2
+
+
+# -----------------------------------------------------------------------------
+# Tools
 #
-# If you want to build HC packages yourself, follow instructions in
-# the ./TODO file.
-ONLY_FOR_PLATFORM= \
-	Darwin-*-powerpc \
-	FreeBSD-*-i386 \
-	Linux-*-x86_64 \
-	NetBSD-*-i386
+USE_TOOLS+=			autoconf gmake perl:run
+GNU_CONFIGURE=			yes
+USE_GNU_CONFIGURE_HOST=	no
 
 # We must provide the real path to gcc to the ./configure script,
 # because GHC has a runtime dependency on it. Aren't there any ways
 # better than this?
-.include "../../mk/bsd.prefs.mk"
 .include "../../mk/compiler.mk"
 .if empty(CCPATH)
-WARNINGS+= "This package depends on pkgsrc's undocumented variable \
+CCPATH=	/usr/bin/gcc
+WARNINGS+="This package depends on pkgsrc's undocumented variable\
 CCPATH but it disappeared somehow."
-WARNINGS+= "Using hard-coded /usr/bin/gcc as the C compiler..."
-CONFIGURE_ARGS+= --with-gcc=/usr/bin/gcc
-.else
-CONFIGURE_ARGS+= --with-gcc=${CCPATH}
+WARNINGS+="Using hard-coded ${CCPATH:Q} as the C compiler..."
 .endif
 
-USE_TOOLS+=	gmake perl:run
-CONFIGURE_ENV+=	PerlCmd=${PERL5:Q}
+CONFIGURE_ARGS+= \
+	--with-gcc=${CCPATH:Q} \
+	--with-gmp-includes=${PREFIX:Q}/include \
+	--with-gmp-libraries=${PREFIX:Q}/lib \
+	--with-iconv-includes=${PREFIX:Q}/include \
+	--with-iconv-libraries=${PREFIX:Q}/lib
 
-# We don't want to extract all of the DISTFILEs.
-EXTRACT_ONLY=	${DISTNAME}-src.tar.bz2
+CONFIGURE_ENV+= \
+	PerlCmd=${PERL5:Q}
 
-CONFIGURE_ARGS += \
-	--build=${PLATFORM} \
-	--host=${PLATFORM} \
-	--target=${PLATFORM} \
-	--prefix=${PREFIX} \
-	--mandir=${PREFIX}/${PKGMANDIR} \
-	--with-gmp-includes=${PREFIX}/include \
-	--with-gmp-libraries=${PREFIX}/lib \
-	--with-iconv-includes=${PREFIX}/include \
-	--with-iconv-libraries=${PREFIX}/lib
 
-# Define ${PLATFORM} and the target "pre-configure".
+# -----------------------------------------------------------------------------
+# Build hooks
+#
+
+# We patch configure.ac in some directories.
+post-patch:
+	@${PHASE_MSG} "Regenerating configuration scripts for ${PKGNAME}"
+	${RUN} cd ${WRKSRC:Q}/libraries/integer-gmp && autoconf
+
+
+# Define the target "pre-configure" and non-standard "bootstrap".
 .include "../../wip/ghc/bootstrap.mk"
 
+
+# Our pre-configure phase installs a bindist of bootstrapping compiler
+# directly into TOOLS_DIR so that ./configure can find it.
 do-configure:
-	${RUN} cd ${WRKSRC} && \
-		${SETENV} ${CONFIGURE_ENV} ./configure ${CONFIGURE_ARGS}
+	${RUN} cd ${WRKSRC:Q} && \
+		${SETENV} ${CONFIGURE_ENV} ${SH} ./configure ${CONFIGURE_ARGS}
+
+# Here we generate mk/build.mk dynamically.
+	${RUN} ${RM} -f ${WRKSRC:Q}/mk/build.mk
+
 # We need to tell the libraries/terminfo/configure that our ncurses is
 # in a non-standard path. Without that, the resulting GHC tries to
-# link programs by executing ld(1) without passing it -L${PREFIX}/lib.
+# link programs by executing ld(1) without passing it -L${PREFIX:Q}/lib.
 	${RUN} ${ECHO} "libraries/terminfo_CONFIGURE_OPTS += \
-		--configure-option=--with-curses-includes=${PREFIX}/include \
-		--configure-option=--with-curses-libraries=${PREFIX}/lib" >> ${WRKSRC}/mk/build.mk
+		--configure-option=--with-curses-includes=${PREFIX:Q}/include \
+		--configure-option=--with-curses-libraries=${PREFIX:Q}/lib" >> ${WRKSRC:Q}/mk/build.mk
+
 # The ghc compiler does normally split the generated asm files into small
 # parts before sending them to gcc, to enable the linker to eliminate
 # unused parts.  This does however not play nice with the pkgsrc
@@ -85,13 +110,54 @@ do-configure:
 #    http://mail-index.netbsd.org/tech-pkg/2006/07/30/0005.html
 # for a description of the problem.
 # Disable file splitting until pkgsrc gets improved.
-	${RUN} ${ECHO} "SplitObjs = NO" >> ${WRKSRC}/mk/build.mk
-# If we don't explicitly disable HsColour, PLIST gets changed
-# depending on whether we have installed it or not.
-	${RUN} ${ECHO} "HSCOLOUR_SRCS = NO" >> ${WRKSRC}/mk/build.mk
+	${RUN} ${ECHO} "SplitObjs         = NO" >> ${WRKSRC:Q}/mk/build.mk
 
-# Substitutions for INSTALL and DEINSTALL.
+# If there is HsColour is in the PATH, GHC's build system tries to use
+# it without even checking if it really works. That's not what we
+# appreciate.
+	${RUN} ${ECHO} "HSCOLOUR_SRCS     = NO" >> ${WRKSRC:Q}/mk/build.mk
+
+# Don't even think of PDF.
+	${RUN} ${ECHO} "BUILD_DOCBOOK_PS  = NO" >> ${WRKSRC:Q}/mk/build.mk
+	${RUN} ${ECHO} "BUILD_DOCBOOK_PDF = NO" >> ${WRKSRC:Q}/mk/build.mk
+
+
+# -----------------------------------------------------------------------------
+# Installation/removal hooks
+#
+
+# Substitutions for INSTALL and DEINSTALL that handles package.cache.
 FILES_SUBST+=	DISTNAME=${DISTNAME}
+
+# We don't want package.cache to be in the PLIST.
+post-install:
+	${RM} -f ${DESTDIR:Q}${PREFIX:Q}/lib/${DISTNAME}/package.conf.d/package.cache
+
+
+# -----------------------------------------------------------------------------
+# PLIST
+#
+# We can't use static PLIST because the package installs some files
+# whose names are randomly generated, namely
+# lib/${PKGNAME}/package.conf.d/*.conf
+#
+
+# If we were lucky we could just use "PLIST_TYPE = dynamic", but the
+# feature has seemingly bitrotted.
+.include "../../mk/bsd.prefs.mk"
+.if empty(DESTDIR)
+PKG_FAIL_REASON+="This package can not be built without using DESTDIR.\
+You need to set USE_DESTDIR to \"yes\"."
+.else
+GENERATE_PLIST+= \
+	cd ${DESTDIR:Q}${PREFIX:Q} && \
+		${FIND} * \( -type f -or -type l \) | ${SORT} -d;
+.endif
+
+
+# -----------------------------------------------------------------------------
+# Sanity checks
+#
 
 # There is an unused script which don't pass the portability test.
 CHECK_PORTABILITY_SKIP+=	distrib/prep-bin-dist-mingw
@@ -101,14 +167,22 @@ CHECK_PORTABILITY_SKIP+=	distrib/prep-bin-dist-mingw
 # http://hackage.haskell.org/trac/ghc/ticket/2933
 CHECK_SHLIBS_SUPPORTED=	no
 
+
+# -----------------------------------------------------------------------------
+# Dependencies
+#
+
 # I guess pdcurses works well but not tested.
 USE_NCURSES=	yes
-.include "../../devel/ncurses/buildlink3.mk"
 
-BUILD_DEPENDS+=	docbook-xsl-[0-9]*:../../textproc/docbook-xsl
-BUILDLINK_DEPMETHOD.libxslt = build
+BUILDLINK_DEPMETHOD.docbook-xsl=	build
+BUILDLINK_DEPMETHOD.libxslt=		build
+BUILDLINK_DEPMETHOD.xz=		build
+.include "../../archivers/xz/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gmp/buildlink3.mk"
+.include "../../devel/ncurses/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
+.include "../../textproc/docbook-xsl/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

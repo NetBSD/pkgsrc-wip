@@ -1,11 +1,11 @@
-$NetBSD: patch-libraries_integer-gmp_configure.ac,v 1.1 2012/03/04 04:37:14 phonohawk Exp $
+$NetBSD: patch-libraries_integer-gmp_configure.ac,v 1.2 2013/02/23 12:24:08 phonohawk Exp $
 
 In Darwin, integer-gmp prefers GMP.framework when it happens to be
 installed somewhere in the system, even though it doesn't come with
-Darwin. Let it stop that.
+Darwin. Let it stop that. (Already fixed in the upstream.)
 
 
---- libraries/integer-gmp/configure.ac.orig	2012-02-01 18:10:52.000000000 +0000
+--- libraries/integer-gmp/configure.ac.orig	2013-01-27 13:36:41.000000000 +0000
 +++ libraries/integer-gmp/configure.ac
 @@ -45,18 +45,20 @@ dnl-------------------------------------
  dnl * Mac OS X only: check for GMP.framework

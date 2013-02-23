@@ -3,139 +3,28 @@
 wip/ghc TODO
 ============
 
-* Send hunks #3 and #4 of patch-aclocal.m4 to the upstream.
-* Send patch-configure.ac to the upstream.
-* Send patch-libraries-integer-gmp_configure.ac to the upstream.
-* Send patch-rules_hs-suffix-rules-srcdir.mk to the upstream.
 * Modify configure.ac and rules/build-package-data.mk to allow
   ``--with-curses-{includes,libraries}`` to be passed to the top-level
   ``configure``, and send a patch to the upstream.
-* Explain about files/bootstrap-main.c and files/capi-wrappers-*.c
-  in this guide, and fix the upstream to throw them away.
-* Build more bootstrapping HC archives to support more platforms.
+* Add the following ``./configure`` flags to eliminate
+  ``patch-Makefile`` and ``patch-ghc.mk``:
+
+  * ``--with-dist-archiver={bzip2,xz} [default=bzip2]``
+  * ``BZIP2FLAGS``
+  * ``XZFLAGS``
+
+* Let ``./configure`` check for broken binutils and provide a better
+  fix for ``patch-rts_StgCRun.c``.
+* Build more bootstrapping compilers to support more platforms.
 
 
-How to build an HC archive
---------------------------
+How to build a bootstrapping compiler
+-------------------------------------
 
-A preferred, automated way
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+You need a working compiler to build one. If you think there are no
+bindists for your platform, you may need to cross-build a compiler
+yourself: `Cross-compiling GHC
+<http://hackage.haskell.org/trac/ghc/wiki/Building/CrossCompiling>`_
 
-I've written an automation tool to build one: `build-hc-pkg
-<http://git.cielonegro.org/gitweb.cgi?p=build-hc-pkg.git>`_
-
-To use it, clone the repository, run ``./build-hc-pkg``, and then
-follow the instruction it shows::
-
-    $ git clone git://git.cielonegro.org/build-hc-pkg.git
-    ...
-    $ cd build-hc-pkg
-    $ ./build-hc-pkg
-    ...
-    This is build-hc-pkg, running on powerpc-apple-darwin9.8.0 with 2 processors.
-    Enter the file path to ghc-x.y.z-src.tar.bz2: _
-
-Note that you need Bash, Automake, GNU make, GNU sed, and GNU tar to
-use it.
-
-
-A manual way
-^^^^^^^^^^^^
-
-It's basically the same as the `Porting Guide
-<http://hackage.haskell.org/trac/ghc/wiki/Building/Porting>`_, plus
-some minor tweaks.
-
-Extract the source archive and duplicate the source tree, one for
-``-target`` and one for ``-host``::
-
-    $ tar jxf ghc-{VERSION}-src.tar.bz2
-    $ cp -r ghc-{VERSION} ghc-{VERSION}-target
-    $ mv ghc-{VERSION} ghc-{VERSION}-host
-
-Build some configuration files::
-
-    $ cd ghc-{VERSION}-target
-    $ ./configure --enable-hc-boot
-    $ echo "INTEGER_LIBRARY = integer-simple" > mk/build.mk
-    $ gmake bootstrapping-files
-    $ cd ..
-
-Run ``./configure`` on the host tree::
-
-    $ cd ghc-{VERSION}-host
-    $ ./configure \
-          --with-iconv-includes=/usr/pkg/include \
-          --with-iconv-libraries=/usr/pkg/lib
-
-Then create ``ghc-{VERSION}-host/mk/build.mk`` with the following
-contents::
-
-    PORTING_HOST = YES
-    GhcUnregisterised = YES
-    GhcLibHcOpts = -O -fvia-C -keep-hc-files
-    GhcRtsHcOpts = -keep-hc-files
-    GhcLibWays = v
-    GhcRTSWays =
-    SplitObjs = NO
-    GhcWithNativeCodeGen = NO
-    GhcWithInterpreter = NO
-    GhcStage1HcOpts = -O
-    GhcStage2HcOpts = -O -fvia-C -keep-hc-files
-    SRC_HC_OPTS += -H32m
-    GhcWithSMP = NO
-    utils/ghc-pkg_dist-install_v_HC_OPTS += -keep-hc-files
-    
-    INTEGER_LIBRARY = integer-simple
-    libraries/terminfo_CONFIGURE_OPTS += \
-        --configure-option=--with-curses-includes=/usr/pkg/include \
-        --configure-option=--with-curses-libraries=/usr/pkg/lib
-
-Copy some configuration files from the ``-target`` tree::
-
-    $ cp -r ../ghc-{VERSION}-target/includes/dist-{ghcconstants,derivedconstants} includes/
-    $ cp ../ghc-{VERSION}-target/includes/ghcautoconf.h includes/
-
-Build it::
-
-    $ gmake
-
-Create an intermediate tarball::
-
-    $ rm -f list mkfiles boot.tar.gz
-    $ find . -name "*.hi" >> list
-    $ find . -name "*.hc" >> list
-    $ find . -name "*_stub.c" >> list
-    $ find . -name "*_stub.h" >> list
-    $ find . -name package-data.mk >> list
-    $ find . -name package.conf.d >> list
-    $ find . -name package.conf.inplace >> list
-    $ ls compiler/stage?/build/Config.hs >> list
-    $ echo compiler/prelude/primops.txt >> list
-    $ ls compiler/primop-*.hs-incl >> list
-    $ find . -name .depend | sed -e 's/^/mkdir -p `dirname /' -e 's/$/`/' >> mkfiles
-    $ find . -name .depend | sed "s/^/touch /" >> mkfiles
-    $ echo mkfiles >> list
-    $ tar -zcf boot.tar.gz -T list
-
-Then extract it again, in a different directory::
-
-    $ mkdir ghc-{VERSION}
-    $ cd ghc-{VERSION}
-    $ tar zxf ../boot.tar.gz
-
-Modify hard-coded paths in inplace ``.conf`` files, and then
-re-archive the HC tree::
-
-    $ gsed -i \
-          -e 's#/usr/pkg#[[PREFIX]]#g' \
-          -e 's#'`dirname \`pwd\``'#[[GHC_SOURCE_PATH]]#g' \
-          inplace/lib/package.conf.d/*.conf \
-          */package.conf.inplace \
-          */*/package-data.mk \
-          */*/*/package-data.mk \
-          */*/*/*/package-data.mk
-    $ cd ..
-    $ tar jcvf ghc-{VERSION}-boot-{PLATFORM}.tar.bz2 ghc-{VERSION}
-
-Done. Upload the archive to some host and add it to the ``Makefile``.
+Assuming you have a working ghc in your PATH, just run ``bmake patch
+&& bmake bootstrap`` and see if you are lucky enough.

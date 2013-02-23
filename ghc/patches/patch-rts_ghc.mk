@@ -1,38 +1,17 @@
-$NetBSD: patch-rts_ghc.mk,v 1.3 2012/03/04 04:37:14 phonohawk Exp $
+$NetBSD: patch-rts_ghc.mk,v 1.4 2013/02/23 12:24:08 phonohawk Exp $
 
-Hunk #1:
-  Specify a C compiler to build C sources when we're bootstrapping.
+This is pkgsrc specific: dtrace(1) gets confused when we have gcc
+wrappers in the PATH so we have to hide them:
 
-Hunk #2:
-  Missing dependency on generated headers.
-
-Hunk #3:
-  This is pkgsrc specific: /usr/sbin/dtrace gets confused when we have
-  ghc wrappers in the PATH so we have to hide them.
+  gcc: installation problem, cannot exec '/usr/pkgsrc/wip/ghc/work/.gcc/bin/p
+  owerpc-apple-darwin9-gcc-4.0.1': No such file or directory
+  dtrace: failed to compile script rts/RtsProbes.d: Preprocessor failed to pr
+  ocess input program
 
 
---- rts/ghc.mk.orig	2012-02-01 18:10:32.000000000 +0000
+--- rts/ghc.mk.orig	2013-01-27 13:21:52.000000000 +0000
 +++ rts/ghc.mk
-@@ -15,6 +15,7 @@
- 
- # We build the RTS with stage 1
- rts_dist_HC = $(GHC_STAGE1)
-+rts_dist_CC = $(CC_STAGE1)
- 
- # merge GhcLibWays and GhcRTSWays but strip out duplicates
- rts_WAYS = $(GhcLibWays) $(filter-out $(GhcLibWays),$(GhcRTSWays))
-@@ -457,6 +458,10 @@ $(eval $(call dependencies,rts,dist,1))
- 
- $(rts_dist_depfile_c_asm) : $(libffi_HEADERS) $(DTRACEPROBES_H)
- 
-+ifeq "$(BootingFromHc)" "YES"
-+$(rts_C_SRCS) : $(libffi_HEADERS) $(DTRACEPROBES_H)
-+endif
-+
- # -----------------------------------------------------------------------------
- # compile dtrace probes if dtrace is supported
- 
-@@ -479,7 +484,7 @@ endif
+@@ -484,7 +484,7 @@ endif
  
  DTRACEPROBES_SRC = rts/RtsProbes.d
  $(DTRACEPROBES_H): $(DTRACEPROBES_SRC) includes/ghcplatform.h | $$(dir $$@)/.
