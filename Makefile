@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5115 2013/02/23 15:16:30 phonohawk Exp $
+# $Id: Makefile,v 1.5116 2013/02/23 15:17:06 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -895,7 +895,6 @@ SUBDIR+=	hlint
 SUBDIR+=	homebank
 SUBDIR+=	hplip3
 SUBDIR+=	hpoj
-SUBDIR+=	hs-Cabal
 SUBDIR+=	hs-ConfigFile
 SUBDIR+=	hs-Diff
 SUBDIR+=	hs-GLURaw
