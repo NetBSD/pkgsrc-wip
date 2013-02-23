@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2013/02/20 11:42:32 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.5 2013/02/23 14:53:28 phonohawk Exp $
 #
 
-DISTNAME=	hashable-1.1.2.5
+DISTNAME=	hashable-1.2.0.5
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
