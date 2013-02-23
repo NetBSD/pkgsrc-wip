@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2010/12/30 07:55:18 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.6 2013/02/23 13:27:10 phonohawk Exp $
 lib/network-${PKGVERSION}/${HASKELL_VERSION}/HSnetwork-${PKGVERSION}.o
 lib/network-${PKGVERSION}/${HASKELL_VERSION}/Network.hi
 lib/network-${PKGVERSION}/${HASKELL_VERSION}/Network.p_hi
@@ -18,6 +18,8 @@ lib/network-${PKGVERSION}/${HASKELL_VERSION}/Network/Socket/ByteString/MsgHdr.hi
 lib/network-${PKGVERSION}/${HASKELL_VERSION}/Network/Socket/ByteString/MsgHdr.p_hi
 lib/network-${PKGVERSION}/${HASKELL_VERSION}/Network/Socket/Internal.hi
 lib/network-${PKGVERSION}/${HASKELL_VERSION}/Network/Socket/Internal.p_hi
+lib/network-${PKGVERSION}/${HASKELL_VERSION}/Network/Socket/Types.hi
+lib/network-${PKGVERSION}/${HASKELL_VERSION}/Network/Socket/Types.p_hi
 lib/network-${PKGVERSION}/${HASKELL_VERSION}/Network/URI.hi
 lib/network-${PKGVERSION}/${HASKELL_VERSION}/Network/URI.p_hi
 lib/network-${PKGVERSION}/${HASKELL_VERSION}/include/HsNet.h
