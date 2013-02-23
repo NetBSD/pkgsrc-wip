@@ -1,10 +1,13 @@
-$NetBSD: patch-vector-bytestring.cabal,v 1.1.1.1 2012/02/02 13:11:52 phonohawk Exp $
+$NetBSD: patch-vector-bytestring.cabal,v 1.2 2013/02/23 15:58:08 phonohawk Exp $
 
-Don't build nor install the benchmarking suite.
+1. Relax build-depends.
+
+2. Don't build nor install the benchmarking suite.
+
 
 --- vector-bytestring.cabal.orig	2012-01-03 19:30:14.000000000 +0000
 +++ vector-bytestring.cabal
-@@ -28,10 +28,6 @@ source-repository head
+@@ -28,17 +28,13 @@ source-repository head
    Type:     git
    Location: git://github.com/basvandijk/vector-bytestring.git
  
@@ -13,9 +16,28 @@ Don't build nor install the benchmarking suite.
 -  Default:     False
 -
  Library
-   build-depends: base       >= 4     && < 4.6
-                , primitive  >= 0.3.1 && < 0.5
-@@ -70,18 +66,3 @@ test-suite prop-compiled
+-  build-depends: base       >= 4     && < 4.6
+-               , primitive  >= 0.3.1 && < 0.5
+-               , ghc-prim   >= 0.2   && < 0.3
+-               , vector     >= 0.9.1 && < 0.10
++  build-depends: base       >= 4     && < 4.7
++               , primitive  >= 0.3.1 && < 0.6
++               , ghc-prim   >= 0.2   && < 0.4
++               , vector     >= 0.9.1 && < 0.11
+                , deepseq    >= 1.1   && < 1.4
+-               , bytestring >= 0.9   && < 0.10
++               , bytestring >= 0.9   && < 0.11
+ 
+   exposed-modules: Data.Vector.Storable.ByteString
+                    Data.Vector.Storable.ByteString.Internal
+@@ -64,24 +60,9 @@ test-suite prop-compiled
+   hs-source-dirs: tests
+ 
+   build-depends: vector-bytestring
+-               , base       >= 4     && < 4.6
++               , base       >= 4     && < 4.7
+                , random     >= 1.0.1 && < 1.1
+                , directory  >= 1.0   && < 1.2
                 , QuickCheck >= 2.3   && < 3
  
    ghc-options: -fno-enable-rewrite-rules

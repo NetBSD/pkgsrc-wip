@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2012/03/04 06:05:51 phonohawk Exp $
+# $NetBSD: Makefile,v 1.3 2013/02/23 15:58:07 phonohawk Exp $
 #
 
 DISTNAME=	vector-bytestring-0.0.0.1
+PKGREVISION=	1
 CATEGORIES=	textproc
 
 MAINTAINER=	pho@cielonegro.org
