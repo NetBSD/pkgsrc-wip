@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2011/12/01 23:03:39 phonohawk Exp $
+# $NetBSD: Makefile,v 1.3 2013/02/23 15:23:17 phonohawk Exp $
 #
 
-DISTNAME=	semigroups-0.8
+DISTNAME=	semigroups-0.9
 CATEGORIES=	math
 
 MAINTAINER=	pho@cielonegro.org
@@ -9,4 +9,5 @@ COMMENT=	Haskell 98 semigroups
 LICENSE=	modified-bsd
 
 .include "../../wip/mk/haskell.mk"
+.include "../../wip/hs-nats/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

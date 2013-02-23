@@ -1,13 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2011/12/01 23:03:39 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.3 2013/02/23 15:23:18 phonohawk Exp $
 lib/semigroups-${PKGVERSION}/${HASKELL_VERSION}/Data/List/NonEmpty.hi
 lib/semigroups-${PKGVERSION}/${HASKELL_VERSION}/Data/List/NonEmpty.p_hi
 lib/semigroups-${PKGVERSION}/${HASKELL_VERSION}/Data/Semigroup.hi
 lib/semigroups-${PKGVERSION}/${HASKELL_VERSION}/Data/Semigroup.p_hi
 lib/semigroups-${PKGVERSION}/${HASKELL_VERSION}/HSsemigroups-${PKGVERSION}.o
-lib/semigroups-${PKGVERSION}/${HASKELL_VERSION}/Numeric/Natural.hi
-lib/semigroups-${PKGVERSION}/${HASKELL_VERSION}/Numeric/Natural.p_hi
-lib/semigroups-${PKGVERSION}/${HASKELL_VERSION}/Numeric/Natural/Internal.hi
-lib/semigroups-${PKGVERSION}/${HASKELL_VERSION}/Numeric/Natural/Internal.p_hi
 lib/semigroups-${PKGVERSION}/${HASKELL_VERSION}/libHSsemigroups-${PKGVERSION}.a
 lib/semigroups-${PKGVERSION}/${HASKELL_VERSION}/libHSsemigroups-${PKGVERSION}_p.a
 lib/semigroups-${PKGVERSION}/${HASKELL_VERSION}/package-description
