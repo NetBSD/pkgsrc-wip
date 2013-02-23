@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5113 2013/02/22 22:46:23 kristerw Exp $
+# $Id: Makefile,v 1.5114 2013/02/23 10:18:06 keckhardt Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -694,6 +694,7 @@ SUBDIR+=	gauche-pib
 SUBDIR+=	gbase
 SUBDIR+=	gcc42
 SUBDIR+=	gcc43
+SUBDIR+=	gcc48snapshot
 SUBDIR+=	gconf-cleaner
 SUBDIR+=	gdal
 SUBDIR+=	gdal-docs
