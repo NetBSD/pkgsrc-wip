@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2013/02/23 15:15:19 phonohawk Exp $
+lib/nats-${PKGVERSION}/${HASKELL_VERSION}/HSnats-${PKGVERSION}.o
+lib/nats-${PKGVERSION}/${HASKELL_VERSION}/Numeric/Natural.hi
+lib/nats-${PKGVERSION}/${HASKELL_VERSION}/Numeric/Natural.p_hi
+lib/nats-${PKGVERSION}/${HASKELL_VERSION}/Numeric/Natural/Internal.hi
+lib/nats-${PKGVERSION}/${HASKELL_VERSION}/Numeric/Natural/Internal.p_hi
+lib/nats-${PKGVERSION}/${HASKELL_VERSION}/libHSnats-${PKGVERSION}.a
+lib/nats-${PKGVERSION}/${HASKELL_VERSION}/libHSnats-${PKGVERSION}_p.a
+lib/nats-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/nats-${PKGVERSION}/LICENSE
