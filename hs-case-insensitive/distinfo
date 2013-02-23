@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2012/01/17 13:12:35 phonohawk Exp $
+$NetBSD: distinfo,v 1.5 2013/02/23 14:56:36 phonohawk Exp $
 
-SHA1 (case-insensitive-0.4.0.1.tar.gz) = 9be61135289823daed368c884a56d3fb6f4f8f3e
-RMD160 (case-insensitive-0.4.0.1.tar.gz) = 62bf1ec5ac7d7cc626a60d4b6a65e199c169d01c
-Size (case-insensitive-0.4.0.1.tar.gz) = 3207 bytes
+SHA1 (case-insensitive-1.0.tar.gz) = 4405dcc048539b8edad6a5c9e89b925a58191d96
+RMD160 (case-insensitive-1.0.tar.gz) = 9288948b990d2de49ceeacead302e93b87f468a1
+Size (case-insensitive-1.0.tar.gz) = 4772 bytes
