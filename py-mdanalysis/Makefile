@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/16 09:19:02 jihbed Exp $
+# $NetBSD: Makefile,v 1.7 2013/02/24 18:08:09 asau Exp $
 #
 
 DISTNAME=	MDAnalysis-0.7.6
@@ -15,7 +15,7 @@ DEPENDS+=	${PYPKGPREFIX}-scipy>=0.7.2:../../math/py-scipy
 DEPENDS+=	${PYPKGPREFIX}-biopython>=1.53:../../wip/biopython
 
 USE_LANGUAGES=	c c++
-PYTHON_VERSIONS_INCLUDE_3X=yes
+#PYTHON_VERSIONS_INCLUDE_3X=yes	# biopython doesn't support it yet
 
 .include "../../devel/py-cython/buildlink3.mk"
 .include "../../math/py-numpy/buildlink3.mk"
