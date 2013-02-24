@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/10/20 20:46:43 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2013/02/24 18:05:31 asau Exp $
 #
 
 DISTNAME=	pyoperators-0.6.2
@@ -16,7 +16,7 @@ DEPENDS+=	${PYPKGPREFIX}-fftw>=0.2:../../wip/py-fftw
 
 PYDISTUTILSPKG=	yes
 
-PYTHON_VERSIONS_INCLUDE_3X= yes
+#PYTHON_VERSIONS_INCLUDE_3X= yes	# py-fftw doesn't support it yet
 
 .include "../../devel/py-cython/buildlink3.mk"
 .include "../../math/py-numpy/buildlink3.mk"
