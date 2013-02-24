@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5117 2013/02/24 13:42:36 othyro Exp $
+# $Id: Makefile,v 1.5118 2013/02/24 23:21:52 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1487,6 +1487,7 @@ SUBDIR+=	light-desktop
 SUBDIR+=	lightdm
 SUBDIR+=	lightdm-gtk-greeter
 SUBDIR+=	lilypond-devel
+SUBDIR+=	lilyterm
 SUBDIR+=	linbox
 SUBDIR+=	lingoteach-lesson
 SUBDIR+=	lingoteach-ui
