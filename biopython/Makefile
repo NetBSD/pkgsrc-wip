@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2012/09/24 17:14:32 asau Exp $
+# $NetBSD: Makefile,v 1.15 2013/02/24 14:56:45 asau Exp $
 #
 
 DISTNAME=		biopython-1.53
-PKGREVISION=		1
+PKGNAME=		$(PYPKGPREFIX)-$(DISTNAME)
 CATEGORIES=		biology
 MASTER_SITES=		http://biopython.org/DIST/
 
