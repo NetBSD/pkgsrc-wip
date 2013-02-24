@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2012/11/01 00:44:55 asau Exp $
+@comment $NetBSD: PLIST,v 1.21 2013/02/24 15:22:40 asau Exp $
 bin/mpiCC
 bin/mpic++
 bin/mpicc
@@ -7,8 +7,6 @@ bin/mpiexec
 bin/mpif77
 bin/mpif90
 bin/mpifort
-bin/mpijavac
-bin/mpijavac.pl
 bin/mpirun
 bin/ompi-clean
 bin/ompi-ps
@@ -86,8 +84,6 @@ include/openmpi/ompi/mpi/cxx/topology.h
 include/openmpi/ompi/mpi/cxx/topology_inln.h
 include/openmpi/ompi/mpi/cxx/win.h
 include/openmpi/ompi/mpi/cxx/win_inln.h
-lib/libmca_common_commpatterns.la
-lib/libmca_common_netpatterns.la
 lib/libmca_common_sm.la
 lib/libmpi.la
 lib/libmpi_cxx.la
@@ -188,7 +184,6 @@ man/man1/mpiexec.1
 man/man1/mpif77.1
 man/man1/mpif90.1
 man/man1/mpifort.1
-man/man1/mpijavac.1
 man/man1/mpirun.1
 man/man1/ompi-clean.1
 man/man1/ompi-ps.1
@@ -546,7 +541,6 @@ share/openmpi/help-mpi-pml-bfo.txt
 share/openmpi/help-mpi-pml-ob1.txt
 share/openmpi/help-mpi-runtime.txt
 share/openmpi/help-mpool-base.txt
-share/openmpi/help-mr+.txt
 share/openmpi/help-ompi-crcp-base.txt
 share/openmpi/help-ompi-dpm-base.txt
 share/openmpi/help-ompi-dpm-orte.txt
