@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.22 2011/07/11 21:16:45 asau Exp $
+$NetBSD: distinfo,v 1.23 2013/02/24 19:15:53 asau Exp $
 
-SHA1 (mpich2-trunk-r8760.tar.gz) = 2b2f51ea6708c18c61afe18a1e4c6168374e5410
-RMD160 (mpich2-trunk-r8760.tar.gz) = 744c8a4a52a4eb172165f0806fc60bcedae83659
-Size (mpich2-trunk-r8760.tar.gz) = 20175564 bytes
-SHA1 (patch-aa) = a6d995bc759f1d813af178fd4cba2ad86b98d935
-SHA1 (patch-ac) = b956a355ef381d759077288916c40e32b022f178
+SHA1 (mpich-3.0.1.tar.gz) = 61ed0b9fac26e1d102d93503bd8e1ac73f246b5a
+RMD160 (mpich-3.0.1.tar.gz) = a30aa14f9360b9cf2e88f9cd4f06b24b8800c55d
+Size (mpich-3.0.1.tar.gz) = 10934260 bytes
+SHA1 (patch-Makefile.in) = 32a78a384ecb94a30631a8a756e746edbe6e0060
+SHA1 (patch-src_pm_hydra_configure) = c8d25676499386e4a2616db5ab2d86443f29b1f7
