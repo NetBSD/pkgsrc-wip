@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.1 2013/02/24 23:17:38 othyro Exp $
+# $NetBSD: options.mk,v 1.2 2013/02/25 10:21:30 othyro Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.lilyterm
 PKG_SUPPORTED_OPTIONS=	debug gnome nls
-PKG_SUGGESTED_OPTIONS=	gnome nls
-PLIST_VARS+=		nls
+PKG_SUGGESTED_OPTIONS=	nls
+PLIST_VARS+=		gnome nls
 
 .include "../../mk/bsd.options.mk"
 
