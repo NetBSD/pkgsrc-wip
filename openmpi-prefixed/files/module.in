@@ -1,0 +1,21 @@
+#%Module1.0#####################################################################
+proc ModulesHelp { } {
+    puts stdout "\n\tAll software installed via the pkgsrc package management"
+    puts stdout "\tsystem. This module prepends the pkgsrc directories to"
+    puts stdout "\tthe following environment variable(s):"
+    puts stdout "\n\tPATH\n\tMANPATH\n\tLD_LIBRARY_PATH"
+}
+
+module-whatis   "All software installed via pkgsrc"
+
+set     version         1
+set     install_prefix  /Users/bacon/Pkgsrc/pkg-1
+
+prepend-path    PATH            $install_prefix/bin
+prepend-path    PATH            $install_prefix/sbin
+prepend-path    MANPATH         $install_prefix/man
+prepend-path    LD_LIBRARY_PATH $install_prefix/lib
+setenv          PKGSRC          $install_prefix
+setenv          PKGSRC_INCLUDE  $install_prefix/include
+setenv          PKGSRC_LIB      $install_prefix/lib
+setenv          MPI_PREFIX      $install_prefix

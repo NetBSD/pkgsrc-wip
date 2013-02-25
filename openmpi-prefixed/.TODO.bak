@@ -1,0 +1,4 @@
+
+Install module system such as lmod
+	Generate env setup script and modulefile and install to
+	${PREFIX}/share or ${PREFIX}/etc
