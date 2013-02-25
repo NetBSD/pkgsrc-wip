@@ -1,14 +1,4 @@
-Gnome Bluetooth Manager
-
-Current features include:
-    * Controller object to manage the discovery of nearby Bluetooth
-      devices
-    * Controller will create serial (RFCOMM) connections for clients
-      to devices
-    * libbtcl, a GObject wrapper for Bluetooth functionality
-    * An OBEX server, so you can "beam" files such as pictures,
-      addresses or contacts from other Bluetooth devices to your
-      computer
-    * An OBEX push send tool, so you can beam files from your
-      computer to remote devices.
-    * Nautilus menu integration
+gnome-bluetooth is a fork of bluez-gnome focused on integration with the GNOME
+desktop environment. gnome-bluetooth is the historical name of the first GNOME
+focused Bluetooth effort for Linux. gnome-bluetooth does not include the
+bluez-gnome analyzer, or the proximity tool.

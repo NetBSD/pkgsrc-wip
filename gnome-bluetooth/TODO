@@ -1,3 +1,3 @@
-use MASTER_SITE_GNOME
-still not working. seems that the python/bluetooth/gnome
-subsystem is broken. (libbtctl is updated...so it must work)
+* Test NLS and doc options
+* Test build on Linux
+* See if possible to port to NetBSD or other OSes
