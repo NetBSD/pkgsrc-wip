@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2013/02/25 16:15:51 outpaddling Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2013/02/25 16:17:32 outpaddling Exp $
 
 BUILDLINK_TREE+=	openmpi
 
@@ -6,7 +6,7 @@ BUILDLINK_TREE+=	openmpi
 OPENMPI_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.openmpi+=	openmpi>=1.6.3
-BUILDLINK_PKGSRCDIR.openmpi?=	../../jb-wip/openmpi-prefixed
+BUILDLINK_PKGSRCDIR.openmpi?=	../../wip/openmpi-prefixed
 
 MPI_PREFIX=	${PREFIX}/openmpi
 
