@@ -1,38 +1,30 @@
-# $NetBSD: Makefile,v 1.3 2012/10/07 14:53:42 asau Exp $
+# $NetBSD: Makefile,v 1.4 2013/02/25 15:26:07 fhajny Exp $
 #
 
-DISTNAME=	rabbitmq-c
-PKGNAME=	${DISTNAME}-0.2${GIT_TAG}
+DISTNAME=	rabbitmq-c-v0.3.0
+PKGNAME=	${DISTNAME:S/c-v/c-/}
 CATEGORIES=	net
+MASTER_SITES=	https://github.com/alanxz/rabbitmq-c/archive/
+FETCH_USING=	curl
 
 MAINTAINER=	filip@joyent.com
 HOMEPAGE=	https://github.com/alanxz/rabbitmq-c
 COMMENT=	C-language AMQP client library for use with AMQP servers
 LICENSE=	mit
 
-GIT_REPOSITORIES=	rabbitmq-c
-GIT_REPO.rabbitmq-c=	git://github.com/alanxz/rabbitmq-c.git
+WRKSRC=			${WRKDIR}/${PKGBASE}-${DISTNAME}
 
-USE_LIBTOOL=		yes
-USE_TOOLS+=		autoconf automake autoreconf gmake perl pkg-config
-HAS_CONFIGURE=		yes
+USE_CMAKE=		yes
+USE_LANGUAGES+=		c99
+USE_TOOLS+=		pkg-config
 
-BUILD_DEPENDS+=		${PYPKGPREFIX}-simplejson-[0-9]*:../../converters/py-simplejson
-BUILD_DEPENDS+=		xmlto-[0-9]*:../../textproc/xmlto
+# Needed for docs and man pages - doesn't work now
+# BUILD_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
+# CMAKE_ARGS+=		-DBUILD_TOOLS_DOC=on
 
-CONFIGURE_ENV+=		LIBS=${LIBS:Q}
-CONFIGURE_ARGS+=	--prefix=${PREFIX}
-CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
+CMAKE_ARGS+=		-DBUILD_TOOLS=ON
 
-LIBS.SunOS+=		-lsocket
+CFLAGS.SunOS+=		-DHAVE_HTONLL=1
 
-pre-configure:
-	cd ${WRKSRC} && autoreconf -i
-
-.include "../../wip/mk/git-package.mk"
-# Init and update submodules too
-_GIT_FLAGS+=		--recursive
-
-.include "../../lang/python/application.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
