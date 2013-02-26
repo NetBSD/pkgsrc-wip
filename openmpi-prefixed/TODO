@@ -1,4 +1,6 @@
 
+Figure out why MPI progs are so verbose.
+
 Install openmpi/etc/openmpi-default-hostfile if not present
 
 Install module system such as lmod
