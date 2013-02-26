@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5119 2013/02/26 14:52:14 outpaddling Exp $
+# $Id: Makefile,v 1.5120 2013/02/26 14:54:14 outpaddling Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -616,6 +616,7 @@ SUBDIR+=	feynhiggs
 SUBDIR+=	ffmpeg-snapshot
 SUBDIR+=	fftjet
 SUBDIR+=	fftw-openmpi
+SUBDIR+=	fftw2-openmpi
 SUBDIR+=	ficl
 SUBDIR+=	filepp
 SUBDIR+=	firebird
