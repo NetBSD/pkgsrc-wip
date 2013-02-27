@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5122 2013/02/27 20:58:35 kristerw Exp $
+# $Id: Makefile,v 1.5123 2013/02/27 21:00:45 kristerw Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -3017,7 +3017,6 @@ SUBDIR+=	stunnel3
 SUBDIR+=	subversion17-base
 SUBDIR+=	sudo
 SUBDIR+=	sudoscript
-SUBDIR+=	sugarCRM
 SUBDIR+=	suitesparse
 SUBDIR+=	sun-j2me
 SUBDIR+=	sunterlib
