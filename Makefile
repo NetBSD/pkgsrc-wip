@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5123 2013/02/27 21:00:45 kristerw Exp $
+# $Id: Makefile,v 1.5124 2013/02/27 21:03:00 kristerw Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1835,6 +1835,7 @@ SUBDIR+=	opendesktop-fonts
 SUBDIR+=	opendnssec
 SUBDIR+=	openlogos
 SUBDIR+=	openmpi
+SUBDIR+=	openmpi-prefixed
 SUBDIR+=	openscep
 SUBDIR+=	opensips
 SUBDIR+=	opensmtpd
