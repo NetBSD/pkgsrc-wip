@@ -1,6 +1,8 @@
-$NetBSD: patch-af,v 1.1 2007/01/07 19:46:50 shattered Exp $
+$NetBSD: patch-af,v 1.2 2013/02/28 11:24:15 othyro Exp $
 
---- include/misc.h.orig	2006-08-27 22:36:54.000000000 +0000
+Include limits.h if the system has it.
+
+--- include/misc.h.orig	2011-12-02 14:53:04.000000000 +0000
 +++ include/misc.h
 @@ -36,6 +36,9 @@
  
@@ -10,5 +12,5 @@ $NetBSD: patch-af,v 1.1 2007/01/07 19:46:50 shattered Exp $
 +#  include <limits.h>
 +#endif
  
- #include "config.h"
  #include "compat.h"
+ 

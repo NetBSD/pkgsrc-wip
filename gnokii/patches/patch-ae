@@ -1,6 +1,8 @@
-$NetBSD: patch-ae,v 1.5 2009/01/22 10:45:12 corecode Exp $
+$NetBSD: patch-ae,v 1.6 2013/02/28 11:24:15 othyro Exp $
 
---- include/compat.h.orig	2007-11-24 12:31:01 +0100
+Include stat.h if the system has it.
+
+--- include/compat.h.orig	2011-12-02 14:53:04.000000000 +0000
 +++ include/compat.h
 @@ -79,6 +79,10 @@
  #  include <sys/types.h>
