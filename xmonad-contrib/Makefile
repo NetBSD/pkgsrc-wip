@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2013/02/26 22:17:45 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.7 2013/02/28 23:40:18 szptvlfn Exp $
 DISTNAME=	xmonad-contrib-${VERSION}
 VERSION=	0.11
+PKGREVISION=    1
 CATEGORIES=	wm
 
 MAINTAINER=	degroote@NetBSD.org
