@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2013/02/24 19:15:53 asau Exp $
+# $NetBSD: Makefile,v 1.38 2013/02/28 07:20:18 asau Exp $
 
 DISTNAME=	mpich-3.0.1
 CATEGORIES=	parallel
@@ -7,10 +7,6 @@ MASTER_SITES=	http://www.mpich.org/static/tarballs/$(PKGVERSION_NOREV)/
 MAINTAINER=	asau@inbox.ru
 HOMEPAGE=	http://www.mpich.org/
 COMMENT=	Open source MPI, MPI-2, and MPI-3 implementation from Univ. of Chicago
-
-CONFLICTS+=	mpich-[0-9]*	# installs bin/mpicc & other wrappers
-CONFLICTS+=	mpich2-[0-9]*	# older package name
-CONFLICTS+=	openmpi-[0-9]*	# installs bin/mpicc & other wrappers
 
 MAKE_JOBS_SAFE=		no
 
