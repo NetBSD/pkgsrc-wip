@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2009/11/10 04:07:52 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.4 2013/03/01 21:08:04 szptvlfn Exp $
 lib/haskell-src-exts-${PKGVERSION}/${HASKELL_VERSION}/HShaskell-src-exts-${PKGVERSION}.o
 lib/haskell-src-exts-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Exts.hi
 lib/haskell-src-exts-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Exts.p_hi
@@ -24,6 +24,8 @@ lib/haskell-src-exts-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Exts/Exte
 lib/haskell-src-exts-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Exts/Extension.p_hi
 lib/haskell-src-exts-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Exts/Fixity.hi
 lib/haskell-src-exts-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Exts/Fixity.p_hi
+lib/haskell-src-exts-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Exts/InternalLexer.hi
+lib/haskell-src-exts-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Exts/InternalLexer.p_hi
 lib/haskell-src-exts-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Exts/InternalParser.hi
 lib/haskell-src-exts-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Exts/InternalParser.p_hi
 lib/haskell-src-exts-${PKGVERSION}/${HASKELL_VERSION}/Language/Haskell/Exts/Lexer.hi
