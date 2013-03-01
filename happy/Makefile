@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2012/02/11 04:51:12 phonohawk Exp $
+# $NetBSD: Makefile,v 1.11 2013/03/01 20:47:28 szptvlfn Exp $
 #
 
-DISTNAME=	happy-1.18.9
+DISTNAME=	happy-1.18.10
 PKGNAME=	${DISTNAME}
 CATEGORIES=	devel
 MAINTAINER=	esg@sdf.lonestar.org
