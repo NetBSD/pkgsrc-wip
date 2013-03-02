@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2013/02/20 13:10:34 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.11 2013/03/02 12:31:41 phonohawk Exp $
 #
 
 DISTNAME=	alex-3.0.4
@@ -8,8 +8,6 @@ MAINTAINER=	esg@sdf.lonestar.org
 HOMEPAGE=	http://www.haskell.org/alex/
 COMMENT=	Tool for generating lexical analysers in Haskell
 LICENSE=	modified-bsd
-
-USE_TOOLS+=	perl
 
 .include "../../wip/mk/haskell.mk"
 .include "../../wip/hs-QuickCheck/buildlink3.mk"
