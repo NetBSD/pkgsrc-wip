@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/03/02 15:41:44 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2013/03/02 23:21:08 othyro Exp $
 #
 
 DISTNAME=	libfishsound-1.0.0
@@ -18,10 +18,6 @@ PKGCONFIG_OVERRIDE+=	fishsound.pc.in
 
 .include "options.mk"
 
-BUILDLINK_DEPMETHOD.flac=	build
-.include "../../audio/flac/buildlink3.mk"
 .include "../../wip/liboggz/buildlink3.mk"
 .include "../../audio/libsndfile/buildlink3.mk"
-.include "../../audio/speex/buildlink3.mk"
-.include "../../audio/libvorbis/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
