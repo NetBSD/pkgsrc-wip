@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2011/12/04 13:27:16 phonohawk Exp $
+$NetBSD: distinfo,v 1.6 2013/03/02 11:18:57 phonohawk Exp $
 
-SHA1 (HUnit-1.2.4.2.tar.gz) = 4db75bfdc4dcb6061500cc3321e10a5a311df6ea
-RMD160 (HUnit-1.2.4.2.tar.gz) = a8a8dca99fc5f6fd37a35e7e71305d195e2a52e2
-Size (HUnit-1.2.4.2.tar.gz) = 23558 bytes
-SHA1 (patch-HUnit.cabal) = a695a572b9b8a370677045ada5a7542464eae0fb
+SHA1 (HUnit-1.2.5.1.tar.gz) = b3f5838e06233457d4410f052dd4168684ea99e8
+RMD160 (HUnit-1.2.5.1.tar.gz) = 9b65d39d50740465c8623612ab52da848e382dc2
+Size (HUnit-1.2.5.1.tar.gz) = 24221 bytes
