@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2011/12/04 12:56:44 phonohawk Exp $
+# $NetBSD: Makefile,v 1.5 2013/03/02 10:58:52 phonohawk Exp $
 #
 
-DISTNAME=	regex-posix-0.95.1
+DISTNAME=	regex-posix-0.95.2
 CATEGORIES=	textproc
 
 MAINTAINER=	pho@cielonegro.org
