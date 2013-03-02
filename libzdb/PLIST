@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/08/19 18:09:29 udontknow Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/03/02 13:22:43 tnn2 Exp $
 include/zdb/Connection.h
 include/zdb/ConnectionPool.h
 include/zdb/Exception.h
@@ -6,4 +6,6 @@ include/zdb/PreparedStatement.h
 include/zdb/ResultSet.h
 include/zdb/SQLException.h
 include/zdb/URL.h
+include/zdb/zdb.h
 lib/libzdb.la
+lib/pkgconfig/zdb.pc

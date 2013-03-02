@@ -1,10 +1,10 @@
-# $NetBSD: options.mk,v 1.1.1.1 2009/08/19 18:09:29 udontknow Exp $
+# $NetBSD: options.mk,v 1.2 2013/03/02 13:22:43 tnn2 Exp $
 
-PKG_OPTIONS_VAR=        PKG_OPTIONS.zdb
-PKG_SUPPORTED_OPTIONS=	ssl sqliteunlock
-PKG_SUGGESTED_OPTIONS=	ssl
-PKG_OPTIONS_NONEMPTY_SETS= database
-PKG_OPTIONS_SET.database=  mysql pgsql sqlite
+PKG_OPTIONS_VAR=		PKG_OPTIONS.zdb
+PKG_SUPPORTED_OPTIONS=		ssl sqliteunlock
+PKG_SUGGESTED_OPTIONS=		ssl
+PKG_OPTIONS_NONEMPTY_SETS=	database
+PKG_OPTIONS_SET.database=	mysql pgsql sqlite
 
 .include "../../mk/bsd.options.mk"
 
@@ -13,6 +13,9 @@ PKG_OPTIONS_SET.database=  mysql pgsql sqlite
 ###
 .if !empty(PKG_OPTIONS:Mmysql)
 .  include "../../mk/mysql.buildlink3.mk"
+CONFIGURE_ARGS+=	--with-mysql=${BUILDLINK_PREFIX.mysql-client}
+.else
+CONFIGURE_ARGS+=	--without-mysql
 .endif
 
 ###
@@ -20,6 +23,9 @@ PKG_OPTIONS_SET.database=  mysql pgsql sqlite
 ###
 .if !empty(PKG_OPTIONS:Mpgsql)
 .  include "../../mk/pgsql.buildlink3.mk"
+CONFIGURE_ARGS+=	--with-postgresql=${BUILDLINK_PREFIX.postgresql-lib}
+.else
+CONFIGURE_ARGS+=	--without-postgresql
 .endif
 
 ###
@@ -27,15 +33,18 @@ PKG_OPTIONS_SET.database=  mysql pgsql sqlite
 ###
 .if !empty(PKG_OPTIONS:Msqlite)
 .  include "../../databases/sqlite3/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-sqlite=${BUILDLINK_PREFIX.sqlite3}
 .  if !empty(PKG_OPTIONS:Msqliteunlock)
-CONFIGURE_ARGS+=--enable-sqliteunlock
+CONFIGURE_ARGS+=	--enable-sqliteunlock
 .  endif
+.else
+CONFIGURE_ARGS+=	--without-sqlite
 .endif
 
 ###
 ### Support OpenSSL cryptographic library
 ###
 .if !empty(PKG_OPTIONS:Mssl)
-CONFIGURE_ARGS+=        --enable-openssl
+CONFIGURE_ARGS+=	--enable-openssl
 .  include "../../security/openssl/buildlink3.mk"
 .endif
