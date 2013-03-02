@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/12/04 13:40:06 phonohawk Exp $
+$NetBSD: distinfo,v 1.2 2013/03/02 11:28:48 phonohawk Exp $
 
-SHA1 (test-framework-quickcheck2-0.2.10.tar.gz) = 8f76648417ebc842db36a1f56a7743daa6d9ff0e
-RMD160 (test-framework-quickcheck2-0.2.10.tar.gz) = 1d5c48f3e0050687255295f6b438ba83fc173ab1
-Size (test-framework-quickcheck2-0.2.10.tar.gz) = 4798 bytes
+SHA1 (test-framework-quickcheck2-0.3.0.1.tar.gz) = c4921cf3d0764d2d16a967f7e02c0504c7aecb19
+RMD160 (test-framework-quickcheck2-0.3.0.1.tar.gz) = a538078c7d7c732f010ce79cbe690b61efe3f382
+Size (test-framework-quickcheck2-0.3.0.1.tar.gz) = 3379 bytes
