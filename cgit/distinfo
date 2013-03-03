@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.5 2009/09/20 16:23:44 mstapelberg Exp $
+$NetBSD: distinfo,v 1.6 2013/03/03 15:25:19 ryo-on Exp $
 
-SHA1 (cgit-0.8.3.tar.bz2) = 3957956d71acf2f4a7024bd8ee5ea6f967550d2f
-RMD160 (cgit-0.8.3.tar.bz2) = 383f3547c34f7e015437e4af049372a0dbd05c5f
-Size (cgit-0.8.3.tar.bz2) = 54775 bytes
-SHA1 (patch-aa) = 2a3699097ca01c7f653c20e0de843d562885d0a2
-SHA1 (patch-ab) = 1f049bbb12f6b7322778bd629da0802ed4bd766e
-SHA1 (patch-ac) = 51ace148ac8a41e6b0e19c7c9d00d9ef608b36a1
+SHA1 (cgit-0.9.0.3.tar.bz2) = 75696f21c6a8e249f4b59ccff99116ed602966c3
+RMD160 (cgit-0.9.0.3.tar.bz2) = a426468889aff48a19849acd01c9660b37cb0c0f
+Size (cgit-0.9.0.3.tar.bz2) = 64578 bytes
+SHA1 (git-1.7.4.tar.bz2) = 250fab29f4468e8066d7a439e93f99879971eb66
+RMD160 (git-1.7.4.tar.bz2) = 7220b3f5201cdedb8b6ad68ef7563a4e071dee2d
+Size (git-1.7.4.tar.bz2) = 2660412 bytes
+SHA1 (patch-ab) = 8abb64c9fcd9ba08baee4b913dcd5783432b711e
+SHA1 (patch-filters_syntax-highlighting.sh) = 698e02d753fba13a140078d873a8bf44c503428e
