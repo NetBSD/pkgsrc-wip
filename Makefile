@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5127 2013/03/03 17:58:29 othyro Exp $
+# $Id: Makefile,v 1.5128 2013/03/03 23:46:57 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1839,6 +1839,7 @@ SUBDIR+=	opendnssec
 SUBDIR+=	openlogos
 SUBDIR+=	openmpi
 SUBDIR+=	openmpi-prefixed
+SUBDIR+=	opennurbs
 SUBDIR+=	openscep
 SUBDIR+=	opensips
 SUBDIR+=	opensmtpd
