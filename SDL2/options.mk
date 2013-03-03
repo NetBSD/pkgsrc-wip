@@ -1,7 +1,8 @@
-# $NetBSD: options.mk,v 1.1 2012/12/28 04:23:54 othyro Exp $
+# $NetBSD: options.mk,v 1.2 2013/03/03 15:37:40 othyro Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.SDL2
-PKG_SUPPORTED_OPTIONS=	alsa arts esound nas opengl oss pulseaudio
+PKG_SUPPORTED_OPTIONS=	alsa arts esound nas opengl oss pulseaudio x11 xcursor
+PKG_SUPPORTED_OPTIONS+=	xim xinerama xrandr xrender xscrnsaver
 PKG_SUGGESTED_OPTIONS+=	oss
 
 .include "../../mk/bsd.options.mk"
@@ -53,4 +54,50 @@ CMAKE_ARGS+=		-DOSS=OFF
 CMAKE_ARGS+=		-DPULSEAUDIO=ON
 .else
 CMAKE_ARGS+=		-DPULSEAUDIO=OFF
+.endif
+
+.if !empty(PKG_OPTIONS:Mx11)
+.include "../../x11/libX11/buildlink3.mk"
+CMAKE_ARGS+=		-DX11_SHARED=ON -DVIDEO_X11=ON
+.else
+CMAKE_ARGS+=		-DX11_SHARED=OFF -DVIDEO_X11=OFF
+.endif
+
+.if !empty(PKG_OPTIONS:Mxcursor)
+.include "../../x11/libXcursor/buildlink3.mk"
+CMAKE_ARGS+=		-DVIDEO_X11_XCURSOR=ON
+.else
+CMAKE_ARGS+=		-DVIDEO_X11_XCURSOR=OFF
+.endif
+
+.if !empty(PKG_OPTIONS:Mxim)
+.include "../../x11/libXi/buildlink3.mk"
+CMAKE_ARGS+=		-DVIDEO_X11_XINPUT=ON
+.else
+CMAKE_ARGS+=		-DVIDEO_X11_XINPUT=OFF
+.endif
+
+.if !empty(PKG_OPTIONS:Mxinerama)
+.include "../../x11/libXinerama/buildlink3.mk"
+CMAKE_ARGS+=		-DVIDEO_X11_XINERAMA=ON
+.else
+CMAKE_ARGS+=		-DVIDEO_X11_XINERAMA=OFF
+.endif
+
+.if !empty(PKG_OPTIONS:Mxrandr)
+.include "../../x11/libXrandr/buildlink3.mk"
+CMAKE_ARGS+=		-DVIDEO_X11_XRANDR=ON
+.else
+CMAKE_ARGS+=		-DVIDEO_X11_XRANDR=OFF
+.endif
+
+.if !empty(PKG_OPTIONS:Mxrender)
+.include "../../x11/libXrender/buildlink3.mk"
+.endif
+
+.if !empty(PKG_OPTIONS:Mxscrnsaver)
+.include "../../x11/libXScrnSaver/buildlink3.mk"
+CMAKE_ARGS+=		-DVIDEO_X11_XSCRNSAVER=ON
+.else
+CMAKE_ARGS+=		-DVIDEO_X11_XSCRNSAVER=OFF
 .endif

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2012/12/28 04:23:54 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2013/03/03 15:37:40 othyro Exp $
 #
 
-DISTNAME=	SDL-2.0
+REVISION=	6940
+DISTNAME=	SDL-2.0.0-${REVISION}
 PKGNAME=	${DISTNAME:S/SDL/SDL2/1}
 CATEGORIES=	devel
 MASTER_SITES=	http://www.libsdl.org/tmp/
@@ -11,7 +12,7 @@ HOMEPAGE=	http://www.libsdl.org/
 COMMENT=	Simple DirectMedia Layer is a cross-platform multimedia library
 LICENSE=	zlib
 
-WRKSRC=		${WRKDIR}/SDL-2.0.0-6754
+WRKSRC=		${WRKDIR}/SDL-2.0.0-${REVISION}
 GNU_CONFIGURE=	yes
 USE_CMAKE=	yes
 USE_TOOLS+=	pkg-config
@@ -43,6 +44,7 @@ do-build:
 do-install:
 	cd ${WRKSRC}/build && ${SETENV} ${INSTALL_ENV} ${MAKE_PROGRAM} ${INSTALL_TARGET}
 
+.include "../../devel/libusb/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
