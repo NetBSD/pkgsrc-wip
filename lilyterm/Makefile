@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2013/02/24 23:17:38 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2013/03/03 19:46:48 othyro Exp $
 #
 
-DISTNAME=	lilyterm-0.9.9.3
+DISTNAME=	lilyterm-0.9.9.4
 CATEGORIES=	x11
 MASTER_SITES=	http://lilyterm.luna.com.tw/file/
 
