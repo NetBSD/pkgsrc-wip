@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/12/04 18:59:10 othyro Exp $
+# $NetBSD: Makefile,v 1.13 2013/03/04 00:03:35 thomasklausner Exp $
 #
 
 DISTNAME=	itext-5.3.4
@@ -10,7 +10,7 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.lowagie.com/iText/
 COMMENT=	Java classes to generate PDF files on the fly
-LICENSE=	gnu-agpl-v3
+LICENSE=	gnu-agpl-v3-license
 
 WRKSRC=		${WRKDIR}
 NO_CONFIGURE=	yes

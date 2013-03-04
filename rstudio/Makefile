@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/07 14:53:44 asau Exp $
+# $NetBSD: Makefile,v 1.4 2013/03/04 00:03:35 thomasklausner Exp $
 #
 
 DISTNAME=	rstudio-rstudio-v0.95.264-0-ge31bd49
@@ -10,7 +10,7 @@ MASTER_SITES=	-https://github.com/rstudio/rstudio/tarball/v0.95.265
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	https://github.com/rstudio/rstudio/tarball/v0.95.265/
 COMMENT=	Integrated Development Environment (IDE) for R
-LICENSE=	gnu-agpl-v3
+LICENSE=	gnu-agpl-v3-license
 
 BUILD_DEPENDS+=		apache-ant-[0-9]*:../../devel/apache-ant
 BUILD_DEPENDS+=		gwt-2.4.0:../../www/gwt

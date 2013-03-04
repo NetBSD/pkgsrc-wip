@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/12/04 19:06:56 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2013/03/04 00:03:35 thomasklausner Exp $
 #
 
 DISTNAME=	itextrups-1.0.2
@@ -10,7 +10,7 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.lowagie.com/iText/
 COMMENT=	Reading and Updating PDF Syntax tool from iText
-LICENSE=	gnu-agpl-v3
+LICENSE=	gnu-agpl-v3-license
 
 DEPENDS+=	java-itext-[0-9]*:../../wip/iText
 

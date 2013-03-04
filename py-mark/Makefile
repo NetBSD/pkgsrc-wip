@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/07 12:25:17 asau Exp $
+# $NetBSD: Makefile,v 1.4 2013/03/04 00:03:35 thomasklausner Exp $
 #
 
 DISTNAME=	mark-0.2
@@ -9,7 +9,7 @@ MASTER_SITES=	http://pypi.python.org/packages/source/m/mark/
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://packages.python.org/mark/
 COMMENT=RDF Bookmarking Utilities
-LICENSE=	gnu-agpl-v3
+LICENSE=	gnu-agpl-v3-license
 
 DEPENDS+=	${PYPKGPREFIX}-argparse>=1.1:../../devel/py-argparse
 DEPENDS+=	${PYPKGPREFIX}-rdflib>=2.4.2:../../wip/py-rdflib

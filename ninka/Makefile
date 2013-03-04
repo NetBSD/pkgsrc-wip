@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/03 18:15:32 asau Exp $
+# $NetBSD: Makefile,v 1.3 2013/03/04 00:03:35 thomasklausner Exp $
 #
 
 DISTNAME=	ninka-1.0-pre2
@@ -9,7 +9,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://ninka.turingmachine.org/
 COMMENT=	License identification tool for Source Code
-LICENSE=	gnu-agpl-v3
+LICENSE=	gnu-agpl-v3-license
 
 DEPENDS+=	p5-Getopt-Long>=2.38:../../devel/p5-Getopt-Long
 
