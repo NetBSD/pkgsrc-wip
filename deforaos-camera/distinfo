@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2012/12/22 04:01:24 khorben Exp $
+$NetBSD: distinfo,v 1.2 2013/03/04 20:56:37 khorben Exp $
 
-SHA1 (Camera-0.0.0.tar.gz) = 18f92312cd38d222312f1bcb8555ea225bb102a6
-RMD160 (Camera-0.0.0.tar.gz) = 37a670a724d91661c17290808f3943240859b603
-Size (Camera-0.0.0.tar.gz) = 6737 bytes
+SHA1 (Camera-0.0.1.tar.gz) = 0cf78ec1105ee4395f6324362c5d85316efb5735
+RMD160 (Camera-0.0.1.tar.gz) = 4688536267bbaad3f281c1580a75f5d653561d1e
+Size (Camera-0.0.1.tar.gz) = 13682 bytes
