@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2013/03/04 20:56:37 khorben Exp $
+# $NetBSD: Makefile,v 1.3 2013/03/04 23:15:40 khorben Exp $
 #
 
 DISTNAME=	Camera-0.0.1
 PKGNAME=	deforaos-camera-0.0.1
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.defora.org/os/download/download/4284/
 
@@ -29,6 +30,6 @@ post-install:
 
 .include "options.mk"
 
-.include "../../x11/deforaos-libdesktop/buildlink3.mk"
+.include "../../wip/deforaos-libdesktop/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
