@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2013/03/04 00:03:36 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2013/03/04 21:58:38 thomasklausner Exp $
 
 DISTNAME=       diaspora-0.0.3.0
 PKGNAME=        ${RUBY_PKGPREFIX}-${DISTNAME}
@@ -15,7 +15,7 @@ MAINTAINER=     gdt@NetBSD.org
 HOMEPAGE=       http://diasporaproject.org/
 #HOMEPAGE=	http://diaspora.github.com/diaspora/
 COMMENT=        Federated privacy-aware social network
-LICENSE=        gnu-agpl-v3-license
+LICENSE=        gnu-agpl-v3
 
 # Packaging decisions:
 #   This package will only (for now) support pgsql.

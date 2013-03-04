@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2013/03/04 00:03:35 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.10 2013/03/04 21:58:38 thomasklausner Exp $
 #
 
 DISTNAME=	xmlworker-1.2.1
@@ -10,7 +10,7 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.lowagie.com/iText/
 COMMENT=	Java classes to generate and parse XML files
-LICENSE=	gnu-agpl-v3-license
+LICENSE=	gnu-agpl-v3
 
 DEPENDS+=	java-itext-[0-9]*:../../wip/iText
 

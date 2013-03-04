@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2013/03/04 00:03:36 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.7 2013/03/04 21:58:38 thomasklausner Exp $
 #
 
 DISTNAME=	wmc2d-2011-04-29-17
@@ -11,7 +11,7 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://wmc2d.sourceforge.net/
 COMMENT=	Dockapp to monitor coretemp temperature and cpufreq frequency
-LICENSE=	gnu-agpl-v3-license
+LICENSE=	gnu-agpl-v3
 
 USE_TOOLS+=		gmake pkg-config
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
