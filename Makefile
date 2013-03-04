@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5129 2013/03/03 23:48:08 othyro Exp $
+# $Id: Makefile,v 1.5130 2013/03/04 17:34:10 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2793,6 +2793,7 @@ SUBDIR+=	qemu-neo1973-images
 SUBDIR+=	qhacc
 SUBDIR+=	qico
 SUBDIR+=	qinx
+SUBDIR+=	qmc2
 SUBDIR+=	qmpdclient
 SUBDIR+=	qn-x11
 SUBDIR+=	qrint
