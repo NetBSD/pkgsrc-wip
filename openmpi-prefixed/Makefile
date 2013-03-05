@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2013/03/05 22:26:17 asau Exp $
+# $NetBSD: Makefile,v 1.4 2013/03/05 22:36:45 asau Exp $
 
 DISTNAME=	openmpi-1.6.3
 CATEGORIES=	parallel
@@ -11,10 +11,10 @@ COMMENT=	Open source MPI-2 implementation
 
 # Allow multiple MPI installations to coexist.  This is mandatory on most
 # HPC clusters.
-MPI_PREFIX=	${PREFIX:Q}/openmpi
+MPI_SUBPREFIX=		openmpi
+MPI_PREFIX=		$(LOCALBASE)/$(MPI_SUBPREFIX)
 
 GNU_CONFIGURE=		yes
-GNU_CONFIGURE_PREFIX=	${MPI_PREFIX}
 USE_LANGUAGES=		c c++ fortran
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool \
@@ -24,17 +24,18 @@ LIBTOOL_OVERRIDE=	${WRKSRC}/libtool \
 SHLIBTOOL_OVERRIDE=	${WRKSRC}/config/libtool.m4 \
 			${WRKSRC}/opal/libltdl/m4/libtool.m4
 
+GNU_CONFIGURE_PREFIX=	${MPI_PREFIX}
 # CONFIGURE_ARGS+=	--disable-mpi-f90
 CONFIGURE_ARGS+=	--without-sge
 CONFIGURE_ARGS+=	--without-slurm
 CONFIGURE_ARGS+=	--enable-contrib-no-build=vt # in separate package
 CONFIGURE_ARGS+=	--with-libltdl=external # use our libltdl
 CONFIGURE_ARGS+=	--with-hwloc=$(BUILDLINK_PREFIX.hwloc:Q) #external
-CONFIGURE_ARGS+=	--with-wrapper-ldflags="-L${PREFIX}/lib ${LINKER_RPATH_FLAG}${PREFIX}/lib"
-
-# f2c limitation?
-# CONFIGURE_ENV+=		ompi_cv_f77_have_INTEGERp8=no	# no "INTEGER*8"??
+# CONFIGURE_ARGS+=	--with-wrapper-ldflags="-L$(MPI_PREFIX)/lib $(LINKER_RPATH_FLAG)$(MPI_PREFIX)/lib" # XXX see below
+# CONFIGURE_ENV+=		ompi_cv_f77_have_INTEGERp8=no	# no "INTEGER*8"?? # f2c limitation?
 CONFIGURE_ARGS+=	OPAL_HAVE_LTDL_ADVISE=0
+# Suppress regeneration:
+CONFIGURE_ENV+=		ACLOCAL=: AUTOCONF=: AUTOHEADER=: AUTOMAKE=:
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -63,6 +64,7 @@ BUILDLINK_TRANSFORM=	rm:-fopenmp
 USE_TOOLS+=		perl:run
 
 .include "options.mk"
+
 TEST_TARGET=	check
 
 ## Just in case you'll need it...
