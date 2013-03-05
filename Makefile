@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5130 2013/03/04 17:34:10 othyro Exp $
+# $Id: Makefile,v 1.5131 2013/03/05 00:54:33 khorben Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -423,6 +423,7 @@ SUBDIR+=	deforaos-phone
 SUBDIR+=	deforaos-player
 SUBDIR+=	deforaos-probe
 SUBDIR+=	deforaos-surfer
+SUBDIR+=	deforaos-terminal
 SUBDIR+=	deforaos-todo
 SUBDIR+=	depsolver
 SUBDIR+=	deskcribe
