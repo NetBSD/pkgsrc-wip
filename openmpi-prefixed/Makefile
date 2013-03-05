@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/02/25 16:15:51 outpaddling Exp $
+# $NetBSD: Makefile,v 1.2 2013/03/05 19:37:15 asau Exp $
 
 PKGVERSION=	1.6.3
 DISTNAME=	openmpi-${PKGVERSION}
@@ -14,11 +14,8 @@ COMMENT=	Open source MPI-2 implementation
 # HPC clusters.
 MPI_PREFIX=	${PREFIX:Q}/openmpi
 
-# GNU_CONFIGURE appends --prefix=${PREFIX} and --mandir=${PREFIX}/man
-# to CONFIGURE_ARGS, so you can't specify your own.  HAS_CONFIGURE does not.
-# GNU_CONFIGURE=		yes
-
-HAS_CONFIGURE=		yes
+GNU_CONFIGURE=		yes
+GNU_CONFIGURE_PREFIX=	${MPI_PREFIX}
 USE_LANGUAGES=		c c++ fortran
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool \
@@ -27,9 +24,6 @@ LIBTOOL_OVERRIDE=	${WRKSRC}/libtool \
 			${WRKSRC}/ompi/mca/io/romio/romio/libtool
 SHLIBTOOL_OVERRIDE=	${WRKSRC}/config/libtool.m4 \
 			${WRKSRC}/opal/libltdl/m4/libtool.m4
-
-CONFIGURE_ARGS+=	--prefix=${MPI_PREFIX} \
-			--mandir=${MPI_PREFIX}/man
 
 # CONFIGURE_ARGS+=	--disable-mpi-f90
 CONFIGURE_ARGS+=	--without-sge
