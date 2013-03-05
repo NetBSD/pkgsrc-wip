@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.3 2011/12/28 09:52:36 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.4 2013/03/05 00:02:17 jihbed Exp $
 bin/spyder
+bin/spyder_win_post_install.py
 ${PYSITELIB}/spyderlib/__init__.py
 ${PYSITELIB}/spyderlib/__init__.pyc
 ${PYSITELIB}/spyderlib/__init__.pyo
@@ -53,9 +54,15 @@ ${PYSITELIB}/spyderlib/doc/_sources/overview.txt
 ${PYSITELIB}/spyderlib/doc/_sources/projectexplorer.txt
 ${PYSITELIB}/spyderlib/doc/_sources/pylint.txt
 ${PYSITELIB}/spyderlib/doc/_sources/variableexplorer.txt
+${PYSITELIB}/spyderlib/doc/_static/ajax-loader.gif
 ${PYSITELIB}/spyderlib/doc/_static/basic.css
+${PYSITELIB}/spyderlib/doc/_static/comment-bright.png
+${PYSITELIB}/spyderlib/doc/_static/comment-close.png
+${PYSITELIB}/spyderlib/doc/_static/comment.png
 ${PYSITELIB}/spyderlib/doc/_static/contents.png
 ${PYSITELIB}/spyderlib/doc/_static/doctools.js
+${PYSITELIB}/spyderlib/doc/_static/down-pressed.png
+${PYSITELIB}/spyderlib/doc/_static/down.png
 ${PYSITELIB}/spyderlib/doc/_static/favicon.ico
 ${PYSITELIB}/spyderlib/doc/_static/file.png
 ${PYSITELIB}/spyderlib/doc/_static/jquery.js
@@ -67,6 +74,9 @@ ${PYSITELIB}/spyderlib/doc/_static/searchtools.js
 ${PYSITELIB}/spyderlib/doc/_static/sphinxdoc.css
 ${PYSITELIB}/spyderlib/doc/_static/spyder_bbg.png
 ${PYSITELIB}/spyderlib/doc/_static/underscore.js
+${PYSITELIB}/spyderlib/doc/_static/up-pressed.png
+${PYSITELIB}/spyderlib/doc/_static/up.png
+${PYSITELIB}/spyderlib/doc/_static/websupport.js
 ${PYSITELIB}/spyderlib/doc/console.html
 ${PYSITELIB}/spyderlib/doc/debugging.html
 ${PYSITELIB}/spyderlib/doc/editor.html
@@ -178,7 +188,6 @@ ${PYSITELIB}/spyderlib/images/editor/class.png
 ${PYSITELIB}/spyderlib/images/editor/close_panel.png
 ${PYSITELIB}/spyderlib/images/editor/comment.png
 ${PYSITELIB}/spyderlib/images/editor/convention.png
-${PYSITELIB}/spyderlib/images/editor/decorator.png
 ${PYSITELIB}/spyderlib/images/editor/error.png
 ${PYSITELIB}/spyderlib/images/editor/file.png
 ${PYSITELIB}/spyderlib/images/editor/filelist.png
@@ -394,6 +403,9 @@ ${PYSITELIB}/spyderlib/qt/QtCore.pyo
 ${PYSITELIB}/spyderlib/qt/QtGui.py
 ${PYSITELIB}/spyderlib/qt/QtGui.pyc
 ${PYSITELIB}/spyderlib/qt/QtGui.pyo
+${PYSITELIB}/spyderlib/qt/QtSvg.py
+${PYSITELIB}/spyderlib/qt/QtSvg.pyc
+${PYSITELIB}/spyderlib/qt/QtSvg.pyo
 ${PYSITELIB}/spyderlib/qt/QtWebKit.py
 ${PYSITELIB}/spyderlib/qt/QtWebKit.pyc
 ${PYSITELIB}/spyderlib/qt/QtWebKit.pyo
@@ -477,6 +489,9 @@ ${PYSITELIB}/spyderlib/utils/sourcecode.pyo
 ${PYSITELIB}/spyderlib/utils/sphinxify.py
 ${PYSITELIB}/spyderlib/utils/sphinxify.pyc
 ${PYSITELIB}/spyderlib/utils/sphinxify.pyo
+${PYSITELIB}/spyderlib/utils/windows.py
+${PYSITELIB}/spyderlib/utils/windows.pyc
+${PYSITELIB}/spyderlib/utils/windows.pyo
 ${PYSITELIB}/spyderlib/widgets/__init__.py
 ${PYSITELIB}/spyderlib/widgets/__init__.pyc
 ${PYSITELIB}/spyderlib/widgets/__init__.pyo
