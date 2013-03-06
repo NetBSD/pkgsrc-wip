@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2012/10/08 14:00:39 asau Exp $
+# $NetBSD: Makefile,v 1.3 2013/03/06 15:13:21 phonohawk Exp $
 #
 
-DISTNAME=	blaze-textual-0.2.0.4
+DISTNAME=	blaze-textual-0.2.0.8
 CATEGORIES=	textproc
 
 MAINTAINER=	pho@cielonegro.org
