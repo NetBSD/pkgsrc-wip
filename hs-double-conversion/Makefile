@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/09/27 13:43:39 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2013/03/06 15:08:32 phonohawk Exp $
 #
 
-DISTNAME=	double-conversion-0.2.0.1
+DISTNAME=	double-conversion-0.2.0.6
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org

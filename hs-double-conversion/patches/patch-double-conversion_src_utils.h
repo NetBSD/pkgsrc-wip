@@ -1,23 +1,16 @@
-$NetBSD: patch-double-conversion_src_utils.h,v 1.1.1.1 2011/09/27 13:43:39 phonohawk Exp $
+$NetBSD: patch-double-conversion_src_utils.h,v 1.2 2013/03/06 15:08:32 phonohawk Exp $
 
-PowerPC has an 80bit wide FPU.
+GCC defines __POWERPC__ instead of __powerpc__ for that
+architecture. Should be sent to the upstream?
 
---- double-conversion/src/utils.h.orig	2011-09-27 13:21:00.000000000 +0000
+
+--- double-conversion/src/utils.h.orig	2012-12-31 22:09:16.000000000 +0000
 +++ double-conversion/src/utils.h
-@@ -57,6 +57,9 @@
- #else
- #undef DOUBLE_CONVERSION_CORRECT_DOUBLE_OPERATIONS
- #endif  // _WIN32
-+#elif defined(__POWERPC__)
-+// PowerPC has an 80bit wide FPU.
-+#undef DOUBLE_CONVERSION_CORRECT_DOUBLE_OPERATIONS
- #else
- #error Target architecture was not detected as supported by Double-Conversion.
- #endif
-@@ -294,4 +297,4 @@ inline Dest BitCast(Source* source) {
- 
- }  // namespace double_conversion
- 
--#endif  // DOUBLE_CONVERSION_UTILS_H_
-\ No newline at end of file
-+#endif  // DOUBLE_CONVERSION_UTILS_H_
+@@ -56,6 +56,7 @@
+     defined(__ARMEL__) || defined(__avr32__) || \
+     defined(__hppa__) || defined(__ia64__) || \
+     defined(__mips__) || defined(__powerpc__) || \
++    defined(__POWERPC__) || \
+     defined(__sparc__) || defined(__sparc) || defined(__s390__) || \
+     defined(__SH4__) || defined(__alpha__) || \
+     defined(_MIPS_ARCH_MIPS32R2)
