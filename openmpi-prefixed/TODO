@@ -2,7 +2,9 @@
 Figure out why MPI progs are so verbose.
 
 Install openmpi/etc/openmpi-default-hostfile if not present
+ - What happens if build system is different from deployment system?
 
 Install module system such as lmod
 	Generate env setup script and modulefile and install to
 	${PREFIX}/share or ${PREFIX}/etc
+ - Install to $(PKG_SYSCONFDIR) rather?
