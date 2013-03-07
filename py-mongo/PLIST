@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2012/07/19 01:03:24 bubuchka Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/03/07 03:07:12 phonohawk Exp $
 ${PYSITELIB}/bson/__init__.py
 ${PYSITELIB}/bson/__init__.pyc
 ${PYSITELIB}/bson/__init__.pyo
@@ -86,9 +86,18 @@ ${PYSITELIB}/pymongo/master_slave_connection.pyo
 ${PYSITELIB}/pymongo/message.py
 ${PYSITELIB}/pymongo/message.pyc
 ${PYSITELIB}/pymongo/message.pyo
+${PYSITELIB}/pymongo/mongo_client.py
+${PYSITELIB}/pymongo/mongo_client.pyc
+${PYSITELIB}/pymongo/mongo_client.pyo
+${PYSITELIB}/pymongo/mongo_replica_set_client.py
+${PYSITELIB}/pymongo/mongo_replica_set_client.pyc
+${PYSITELIB}/pymongo/mongo_replica_set_client.pyo
 ${PYSITELIB}/pymongo/pool.py
 ${PYSITELIB}/pymongo/pool.pyc
 ${PYSITELIB}/pymongo/pool.pyo
+${PYSITELIB}/pymongo/read_preferences.py
+${PYSITELIB}/pymongo/read_preferences.pyc
+${PYSITELIB}/pymongo/read_preferences.pyo
 ${PYSITELIB}/pymongo/replica_set_connection.py
 ${PYSITELIB}/pymongo/replica_set_connection.pyc
 ${PYSITELIB}/pymongo/replica_set_connection.pyo
