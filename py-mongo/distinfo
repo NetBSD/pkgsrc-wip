@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2013/03/07 03:07:12 phonohawk Exp $
+$NetBSD: distinfo,v 1.3 2013/03/07 03:23:43 phonohawk Exp $
 
-SHA1 (pymongo-2.4.tar.gz) = a3ed1850c9c27a2c038ad0c566f77b05426c938c
-RMD160 (pymongo-2.4.tar.gz) = fb3897d75445368860b6cad010eae7599b0aa5ef
-Size (pymongo-2.4.tar.gz) = 273479 bytes
+SHA1 (pymongo-2.4.2.tar.gz) = eacc47f8d96a597dc0d5bcbba7367825305d89ba
+RMD160 (pymongo-2.4.2.tar.gz) = 27c8c164290882cb38304172f9607eb3c0857cf9
+Size (pymongo-2.4.2.tar.gz) = 283269 bytes
