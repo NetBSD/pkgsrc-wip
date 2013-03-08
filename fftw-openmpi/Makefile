@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/03/08 05:56:20 asau Exp $
+# $NetBSD: Makefile,v 1.3 2013/03/08 06:24:49 asau Exp $
 
 DISTNAME=		fftw-3.3
 PKGNAME=		fftw-openmpi-3.3
@@ -13,6 +13,9 @@ LICENSE=		gnu-gpl-v2
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
+INSTALLATION_PREFIX=	$(BUILDLINK_PREFIX.mpich:Q)
+#INSTALLATION_PREFIX=	$(BUILDLINK_PREFIX.openmpi:Q)
+
 USE_LANGUAGES=		c fortran77
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
@@ -25,7 +28,7 @@ TEST_TARGET=		check
 
 CONFIGURE_ARGS+=	--enable-shared \
 			--enable-mpi \
-			--prefix=${MPI_PREFIX:Q}
+			--prefix=$(INSTALLATION_PREFIX)
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -33,5 +36,6 @@ CONFIGURE_ARGS+=	--enable-shared \
 USE_TOOLS+=		perl
 .endif
 
-.include "../../wip/openmpi-prefixed/buildlink3.mk"
+.include "../../wip/mpi-ch/buildlink3.mk"
+#.include "../../wip/openmpi/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
