@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2013/03/05 22:21:37 asau Exp $
+# $NetBSD: Makefile,v 1.66 2013/03/08 18:32:52 asau Exp $
 
 DISTNAME=	openmpi-1.7rc7r28099
 PKGNAME=	openmpi-1.6.99.28099
@@ -14,6 +14,7 @@ COMMENT=	Open source MPI-2 implementation
 
 MPI_SUBPREFIX=		openmpi
 MPI_PREFIX=		$(LOCALBASE)/$(MPI_SUBPREFIX)
+INSTALLATION_PREFIX=	$(MPI_PREFIX)
 
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++ fortran77
@@ -43,10 +44,6 @@ BUILDLINK_TRANSFORM=	rm:-fopenmp
 
 USE_TOOLS+=		perl:run
 REPLACE_PERL+=		ompi/tools/wrappers/mpijavac.pl.in
-
-BUILDLINK_PASSTHRU_RPATHDIRS+=	$(MPI_PREFIX)/lib
-
-PLIST_SUBST=	MPI_SUBPREFIX=$(MPI_SUBPREFIX)/	# don't forget trailing "/"
 
 .include "options.mk"
 
