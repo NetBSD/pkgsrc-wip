@@ -1,0 +1,107 @@
+$NetBSD: patch-Makefile.in,v 1.1 2013/03/08 12:36:39 makoto Exp $
+
+(1) the first chunk.
+Avoid following error:
++--------
+| ld: src/error.o: relocation R_X86_64_32 against `.text' can not be used when making a shared object; recompilh -fPIC
+| src/error.o: could not read symbols: Bad value
++--------
+.. the variable name FLAGS may be overridden by CFLAGS
+without this patch
+
+(2) Add $(DESTDIR) for install target.
+
+--- Makefile.in.orig	2003-12-05 20:28:43.000000000 +0900
++++ Makefile.in	2013-03-01 20:51:53.000000000 +0900
+@@ -8,19 +8,24 @@ exec_prefix = @exec_prefix@
+ SHAREDOPT = -shared
+ LIBDIR = $(prefix)/lib
+ INCDIR = $(prefix)/include
+-MANDIR	= $(prefix)/man/man3
++MANDIR	= $(prefix)/man
+ SHELL = /bin/sh
+ EXTRA_LIBS = 
+ 
+ INCS =  -Isrc
+-FLAGS = -Wall -fpic
++CFLAGS = -Wall -g -O
+ 
+ OBJS = src/error.o src/cgi.o src/session.o src/base64.o src/md5.o \
+ 	src/string.o src/general.o src/list.o src/cookie.o
+ 
+-.c.o: $(CC) $(FLAGS) -c $<
++LO   = $(OBJS:%.o=%.lo)
+ 
+-all: $(OBJS) src/libcgi.so
++.SUFFIXES: .c .lo
++
++.c.lo: 
++	libtool --mode=compile $(CC) $(CFLAGS) -o $*.o -c $<
++
++all: $(OBJS) src/libcgi.a src/libcgi.la
+ 
+ 	@echo ""
+ 	@echo ""
+@@ -41,32 +46,28 @@ all: $(OBJS) src/libcgi.so
+ 	@echo "+-------------------------------------------------------------------+"
+ 	@echo ""
+ 
+-
+-shared: src/libcgi.so
+-	cp src/libcgi.so $(LIBDIR)
+-
+ src/libcgi.a: $(OBJS)
+-	$(AR) rc src/libcgi.a $(OBJS)
++	libtool --mode=link $(CC) -o $@ $<
+ 
+-src/libcgi.so: src/libcgi.a
+-	$(CC) $(SHAREDOPT) -o src/libcgi.so $(OBJS) $(EXTRA_LIBS)
++src/libcgi.la: $(LO)
++	libtool --mode=link $(CC) -o $@ $^
+ 
+ install:
+-	cp src/libcgi.a $(LIBDIR)
+-	cp src/libcgi.so $(LIBDIR)
+-	cp src/cgi.h $(INCDIR)
+-	cp src/session.h $(INCDIR)
+-
+-
+-src/error.o: src/error.c src/error.h
+-src/cgi.o: src/cgi.c src/cgi.h
+-src/session.o: src/session.c src/session.h
+-src/base64.o: src/base64.c
+-src/md5.o: src/md5.c
+-src/string.o: src/string.c
+-src/cookie.o: src/cookie.c
+-src/general.o: src/general.c
+-src/list.o: src/list.c
++	libtool --mode=install cp src/libcgi.a @@DESTDIR@@$(LIBDIR)
++	cp src/libcgi.la src/.libs/libcgi.lai 
++	libtool --mode=install cp src/libcgi.la @@DESTDIR@@$(LIBDIR)
++	cp src/cgi.h @@DESTDIR@@$(INCDIR)
++	cp src/session.h @@DESTDIR@@$(INCDIR)
++
++src/error.lo: src/error.c src/error.h
++src/cgi.lo: src/cgi.c src/cgi.h
++src/session.lo: src/session.c src/session.h
++src/base64.lo: src/base64.c
++src/md5.lo: src/md5.c
++src/string.lo: src/string.c
++src/cookie.lo: src/cookie.c
++src/general.lo: src/general.c
++src/list.lo: src/list.c 
+ 
+ clean:
+ 	find src/ -name *.*o -exec rm -f {} \;
+@@ -79,10 +80,4 @@ uninstall: clean
+ 	rm -f $(MANDIR)/libcgi*
+ 
+ install_man:
+-	cp doc/man/man3/libcgi_base64.3 $(MANDIR)
+-	cp doc/man/man3/libcgi_cgi.3 $(MANDIR)
+-	cp doc/man/man3/libcgi_general.3 $(MANDIR)
+-	cp doc/man/man3/libcgi_string.3 $(MANDIR)
+-	cp doc/man/man3/libcgi_session.3 $(MANDIR)
+-	cp doc/man/man3/libcgi_cookie.3 $(MANDIR)
+-
++	cp -r doc/man/man3/ @@DESTDIR@@$(MANDIR)/

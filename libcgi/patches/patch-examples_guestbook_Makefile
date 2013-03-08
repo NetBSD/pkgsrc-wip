@@ -1,0 +1,20 @@
+$NetBSD: patch-examples_guestbook_Makefile,v 1.1 2013/03/08 12:36:39 makoto Exp $
+
+Libtoolize.
+
+--- examples/guestbook/Makefile.orig	2003-08-31 09:14:16.000000000 +0900
++++ examples/guestbook/Makefile	2013-03-07 10:15:18.000000000 +0900
+@@ -1,9 +1,11 @@
+ CC = gcc
+-FLAGS = -Wall
++CFLAGS = -Wall -I @@PREFIX@@/include 
++LDFLAGS = -L@@PREFIX@@/lib -lcgi -Wl,-rpath=@@PREFIX@@/lib
+ CGIBIN = .
+ 
+ all:
+-	$(CC) $(FLAGS) -lcgi gbook.c -o $(CGIBIN)/gbook.cgi
++	libtool --mode=compile $(CC) $(CFLAGS) -o gbook.o -c gbook.c ; \
++	libtool --mode=link   $(CC) $(LDFLAGS) gbook.o -o $(CGIBIN)/gbook.cgi ;\
+ 
+ 	@echo 
+ 	@echo Example compiled. Now copy *.cgi and *.htm files 

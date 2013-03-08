@@ -1,0 +1,15 @@
+$NetBSD: patch-examples_session_session_ex1_session_c,v 1.1 2013/03/08 12:36:40 makoto Exp $
+
+Fix typo.
+
+--- examples/session/session_ex1/session.c.orig	2003-12-06 02:25:24.000000000 +0900
++++ examples/session/session_ex1/session.c	2013-03-07 09:55:48.000000000 +0900
+@@ -31,7 +31,7 @@ int main(void)
+ 	"	"
+ 	"<tr>"
+ 	"<td><font face='arial, verdana' size='2' color='#0000ff'>"
+-	"This is the main page of LibCGI session suport test. Please choose one of the options"
++	"This is the main page of LibCGI session support test. Please choose one of the options"
+ 	"in the navigation bar.</font>"
+ 	"</td>"
+ 	"</tr>"
