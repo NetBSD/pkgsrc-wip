@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5132 2013/03/07 11:53:00 othyro Exp $
+# $Id: Makefile,v 1.5133 2013/03/08 02:23:47 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2307,6 +2307,7 @@ SUBDIR+=	py-algopy
 SUBDIR+=	py-altgraph
 SUBDIR+=	py-amqplib
 SUBDIR+=	py-anfft
+SUBDIR+=	py-antlr3
 SUBDIR+=	py-anyjson
 SUBDIR+=	py-aopython
 SUBDIR+=	py-arabic
