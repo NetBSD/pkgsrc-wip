@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/03/08 01:49:41 othyro Exp $
+
+SHA1 (antlr_python_runtime-3.1.3.tar.gz) = dc095863a254cdf9606784dbd6efb43cf56a6804
+RMD160 (antlr_python_runtime-3.1.3.tar.gz) = 60688fecc8afba5722cbb44c1c79db4b55527ca3
+Size (antlr_python_runtime-3.1.3.tar.gz) = 76468 bytes
