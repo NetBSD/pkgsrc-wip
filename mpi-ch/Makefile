@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2013/03/07 19:05:41 asau Exp $
+# $NetBSD: Makefile,v 1.41 2013/03/08 05:49:23 asau Exp $
 
 DISTNAME=	mpich-3.0.1
 CATEGORIES=	parallel
@@ -34,6 +34,8 @@ CONFIGURE_ARGS+=	--with-openpa-prefix=$(BUILDLINK_PREFIX.openpa:Q) # reuse it
 CONFIGURE_ARGS+=	--with-hwloc-prefix=$(BUILDLINK_PREFIX.hwloc:Q) # reuse it
 
 USE_TOOLS+=		perl:run
+
+BUILDLINK_PASSTHRU_RPATHDIRS+=	$(MPI_PREFIX)/lib
 
 CONF_FILES+=		share/$(PKGBASE)/examples/mpicc.conf \
 			$(PKG_SYSCONFDIR)/mpicc.conf
