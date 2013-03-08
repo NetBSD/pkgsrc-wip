@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/02/26 14:51:28 outpaddling Exp $
+# $NetBSD: Makefile,v 1.2 2013/03/08 05:56:20 asau Exp $
 
 DISTNAME=		fftw-3.3
 PKGNAME=		fftw-openmpi-3.3
@@ -12,7 +12,6 @@ COMMENT=		Collection of fast C routines to compute DFTs
 LICENSE=		gnu-gpl-v2
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c fortran77
 USE_LIBTOOL=		yes
