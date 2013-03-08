@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2013/03/08 06:24:49 asau Exp $
+# $NetBSD: Makefile,v 1.4 2013/03/08 06:27:35 asau Exp $
 
 DISTNAME=		fftw-3.3
 PKGNAME=		fftw-openmpi-3.3
@@ -38,4 +38,5 @@ USE_TOOLS+=		perl
 
 .include "../../wip/mpi-ch/buildlink3.mk"
 #.include "../../wip/openmpi/buildlink3.mk"
+#.include "../../wip/openmpi-prefixed/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
