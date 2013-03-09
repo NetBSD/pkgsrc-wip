@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2013/03/09 11:49:26 szptvlfn Exp $
+lib/void-${PKGVERSION}/${HASKELL_VERSION}/Data/Void.hi
+lib/void-${PKGVERSION}/${HASKELL_VERSION}/Data/Void.p_hi
+lib/void-${PKGVERSION}/${HASKELL_VERSION}/Data/Void/Unsafe.hi
+lib/void-${PKGVERSION}/${HASKELL_VERSION}/Data/Void/Unsafe.p_hi
+lib/void-${PKGVERSION}/${HASKELL_VERSION}/HSvoid-${PKGVERSION}.o
+lib/void-${PKGVERSION}/${HASKELL_VERSION}/libHSvoid-${PKGVERSION}.a
+lib/void-${PKGVERSION}/${HASKELL_VERSION}/libHSvoid-${PKGVERSION}_p.a
+lib/void-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/void-${PKGVERSION}/LICENSE
