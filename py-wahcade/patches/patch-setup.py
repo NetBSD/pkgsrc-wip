@@ -1,6 +1,7 @@
-$NetBSD: patch-setup.py,v 1.1 2013/03/09 19:05:30 othyro Exp $
+$NetBSD: patch-setup.py,v 1.2 2013/03/09 21:03:09 othyro Exp $
 
 Resolves "Unknown distribution option: 'priority'".
+Fix file names and remove non-existent files.
 
 --- setup.py.orig	2009-06-29 17:15:56.000000000 +0000
 +++ setup.py
