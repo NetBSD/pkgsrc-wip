@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5138 2013/03/09 03:48:15 othyro Exp $
+# $Id: Makefile,v 1.5139 2013/03/09 03:51:53 szptvlfn Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1013,6 +1013,7 @@ SUBDIR+=	hs-hinstaller
 SUBDIR+=	hs-hint
 SUBDIR+=	hs-hopenssl
 SUBDIR+=	hs-hostname
+SUBDIR+=	hs-hothasktags
 SUBDIR+=	hs-hscolour
 SUBDIR+=	hs-hslogger
 SUBDIR+=	hs-hslogger-template
