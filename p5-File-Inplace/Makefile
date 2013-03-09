@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/03/09 02:44:39 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2013/03/09 02:50:57 othyro Exp $
 #
 
 DISTNAME=	File-Inplace-0.20
@@ -7,7 +7,7 @@ CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=File/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/~chipt/File-Inplace-0.20/
+HOMEPAGE=	http://search.cpan.org/~chipt/File-Inplace/
 COMMENT=	Perl module for in-place editing of files
 LICENSE=	${PERL5_LICENSE}
 
