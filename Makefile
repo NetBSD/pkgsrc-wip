@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5142 2013/03/09 15:26:05 othyro Exp $
+# $Id: Makefile,v 1.5143 2013/03/09 19:06:32 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2759,6 +2759,7 @@ SUBDIR+=	py-vo
 SUBDIR+=	py-w3lib
 SUBDIR+=	py-wadllib
 SUBDIR+=	py-wafo
+SUBDIR+=	py-wahcade
 SUBDIR+=	py-wally
 SUBDIR+=	py-weave
 SUBDIR+=	py-weberror
