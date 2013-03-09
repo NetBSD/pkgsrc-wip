@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5136 2013/03/09 03:18:51 othyro Exp $
+# $Id: Makefile,v 1.5137 2013/03/09 03:28:48 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1975,6 +1975,7 @@ SUBDIR+=	p5-GPS-Garmin
 SUBDIR+=	p5-Getopt-GUI-Long
 SUBDIR+=	p5-Gtk2-Spell
 SUBDIR+=	p5-HTML-CalendarMonthSimple
+SUBDIR+=	p5-HTML-FormatText-WithLinks-AndTables
 SUBDIR+=	p5-HTML-FormatText-WithLinks
 SUBDIR+=	p5-HTML-GenerateUtil
 SUBDIR+=	p5-HTML-Latex
