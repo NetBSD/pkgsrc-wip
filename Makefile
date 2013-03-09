@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5134 2013/03/09 02:45:32 othyro Exp $
+# $Id: Makefile,v 1.5135 2013/03/09 03:00:11 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1969,6 +1969,7 @@ SUBDIR+=	p5-File-Binary
 SUBDIR+=	p5-File-Inplace
 SUBDIR+=	p5-File-Map
 SUBDIR+=	p5-File-ShareDir-Install
+SUBDIR+=	p5-File-Which
 SUBDIR+=	p5-Frontier-RPC
 SUBDIR+=	p5-GPS-Garmin
 SUBDIR+=	p5-Getopt-GUI-Long
