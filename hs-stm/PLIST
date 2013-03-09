@@ -1,12 +1,18 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:45 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.3 2013/03/09 22:32:47 szptvlfn Exp $
 lib/stm-${PKGVERSION}/${HASKELL_VERSION}/Control/Concurrent/STM.hi
 lib/stm-${PKGVERSION}/${HASKELL_VERSION}/Control/Concurrent/STM.p_hi
 lib/stm-${PKGVERSION}/${HASKELL_VERSION}/Control/Concurrent/STM/TArray.hi
 lib/stm-${PKGVERSION}/${HASKELL_VERSION}/Control/Concurrent/STM/TArray.p_hi
+lib/stm-${PKGVERSION}/${HASKELL_VERSION}/Control/Concurrent/STM/TBQueue.hi
+lib/stm-${PKGVERSION}/${HASKELL_VERSION}/Control/Concurrent/STM/TBQueue.p_hi
 lib/stm-${PKGVERSION}/${HASKELL_VERSION}/Control/Concurrent/STM/TChan.hi
 lib/stm-${PKGVERSION}/${HASKELL_VERSION}/Control/Concurrent/STM/TChan.p_hi
 lib/stm-${PKGVERSION}/${HASKELL_VERSION}/Control/Concurrent/STM/TMVar.hi
 lib/stm-${PKGVERSION}/${HASKELL_VERSION}/Control/Concurrent/STM/TMVar.p_hi
+lib/stm-${PKGVERSION}/${HASKELL_VERSION}/Control/Concurrent/STM/TQueue.hi
+lib/stm-${PKGVERSION}/${HASKELL_VERSION}/Control/Concurrent/STM/TQueue.p_hi
+lib/stm-${PKGVERSION}/${HASKELL_VERSION}/Control/Concurrent/STM/TSem.hi
+lib/stm-${PKGVERSION}/${HASKELL_VERSION}/Control/Concurrent/STM/TSem.p_hi
 lib/stm-${PKGVERSION}/${HASKELL_VERSION}/Control/Concurrent/STM/TVar.hi
 lib/stm-${PKGVERSION}/${HASKELL_VERSION}/Control/Concurrent/STM/TVar.p_hi
 lib/stm-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/STM.hi
