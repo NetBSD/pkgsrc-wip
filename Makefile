@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5137 2013/03/09 03:28:48 othyro Exp $
+# $Id: Makefile,v 1.5138 2013/03/09 03:48:15 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2004,6 +2004,7 @@ SUBDIR+=	p5-Lingua-Stem-Snowball-No
 SUBDIR+=	p5-Lingua-Stem-Snowball-Se
 SUBDIR+=	p5-Lingua-StopWords
 SUBDIR+=	p5-Lingua-Translate
+SUBDIR+=	p5-Locale-Maketext-Gettext
 SUBDIR+=	p5-Log-Dispatch-Array
 SUBDIR+=	p5-MKDoc-XML
 SUBDIR+=	p5-MMapDB
