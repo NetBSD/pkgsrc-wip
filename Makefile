@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5144 2013/03/09 22:26:29 othyro Exp $
+# $Id: Makefile,v 1.5145 2013/03/10 00:14:30 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -9,6 +9,7 @@ SUBDIR+=	Box2D
 SUBDIR+=	Cg-compiler
 SUBDIR+=	Chinput
 SUBDIR+=	ETL
+SUBDIR+=	Eina
 SUBDIR+=	FontManager
 SUBDIR+=	GNUMail-pgp
 SUBDIR+=	GSCommander
@@ -3245,6 +3246,7 @@ SUBDIR+=	unmo3
 SUBDIR+=	unnethack
 SUBDIR+=	unpaper
 SUBDIR+=	unrealtournament-server
+SUBDIR+=	uprof
 SUBDIR+=	uptimed
 SUBDIR+=	uqwk
 SUBDIR+=	uschedule
