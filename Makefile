@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5147 2013/03/10 10:08:07 kristerw Exp $
+# $Id: Makefile,v 1.5148 2013/03/10 13:59:28 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -3001,6 +3001,7 @@ SUBDIR+=	snotes
 SUBDIR+=	socklog
 SUBDIR+=	socnetv
 SUBDIR+=	softflowd
+SUBDIR+=	soil
 SUBDIR+=	songwrite2
 SUBDIR+=	soqt
 SUBDIR+=	spade
