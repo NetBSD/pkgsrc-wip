@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5148 2013/03/10 13:59:28 othyro Exp $
+# $Id: Makefile,v 1.5149 2013/03/11 00:34:25 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -229,6 +229,7 @@ SUBDIR+=	boinc
 SUBDIR+=	boinc-client
 SUBDIR+=	boinc-lib
 SUBDIR+=	bonnie++-current
+SUBDIR+=	boo
 SUBDIR+=	boost-test-suite
 SUBDIR+=	boost-threadpool
 SUBDIR+=	bpmcounter
