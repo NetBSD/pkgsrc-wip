@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2013/03/05 19:22:22 keckhardt Exp $
+# $NetBSD: Makefile,v 1.5 2013/03/11 14:42:31 keckhardt Exp $
 
 GCC_PKGNAME=		gcc48snapshot
 #.include		"version.mk"
 
-GCC_VERSION=	4.8-20130303
+GCC_VERSION=	4.8-20130310
 DISTNAME=	gcc-${GCC_VERSION}
 PKGNAME=	${GCC_PKGNAME}-${GCC_VERSION}
 ## When bumping the PKGREVISION of this package the PKGREVISION of
@@ -75,7 +75,7 @@ CONFIGURE_ARGS+=	--disable-bootstrap
 .endif
 
 .if !empty(LOWER_ARCH:Mi386)
-CONFIGURE_ARGS+=	--with-arch=i486 --with-tune=nocona
+CONFIGURE_ARGS+=	--with-arch=i486 --with-tune=i486
 .endif
 
 .include "options.mk"
