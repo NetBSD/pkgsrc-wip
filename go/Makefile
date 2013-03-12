@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2013/01/28 09:14:09 bsiegert Exp $
+# $NetBSD: Makefile,v 1.5 2013/03/12 20:02:33 bsiegert Exp $
 #
 
-DISTNAME=	go-1.1pre-20121229
+DISTNAME=	go-1.1pre-20130311
 PKGNAME=	${DISTNAME:S/pre-/pre/}
 CATEGORIES=	lang
 MASTER_SITES=	# manually packaged, on ftp.n.o
@@ -13,9 +13,8 @@ LICENSE=	modified-bsd
 
 WRKSRC=		${WRKDIR}/go
 USE_TOOLS+=	bash:run perl:run pax
-UNLIMIT_RESOURCES= datasize stacksize memorysize
 
-# TODO: linux/arm
+# TODO: arm
 ONLY_FOR_PLATFORM= *-*-i386 *-*-x86_64
 .if ${MACHINE_ARCH} == "i386"
 GOARCH=		386
@@ -40,8 +39,7 @@ REPLACE_BASH+=	doc/progs/update.bash
 REPLACE_BASH+=	lib/codereview/test.sh
 REPLACE_BASH+=	misc/arm/a
 REPLACE_BASH+=	misc/dist/darwin/scripts/postinstall
-REPLACE_BASH+=	misc/osx/package.bash
-REPLACE_BASH+=	misc/osx/scripts/postinstall
+REPLACE_BASH+=	misc/dist/darwin/scripts/preinstall
 REPLACE_BASH+=	misc/vim/ftplugin/go/test.sh
 REPLACE_BASH+=	misc/xcode/4/go4xcode.sh
 REPLACE_BASH+=	src/all.bash
@@ -52,6 +50,7 @@ REPLACE_BASH+=	src/make.bash
 REPLACE_BASH+=	src/pkg/syscall/mkall.sh
 REPLACE_BASH+=	src/pkg/syscall/mkerrors.sh
 REPLACE_BASH+=	src/pkg/syscall/mkerrors_windows.sh
+REPLACE_BASH+=	src/race.bash
 REPLACE_BASH+=	src/run.bash
 REPLACE_BASH+=	src/sudo.bash
 REPLACE_BASH+=	test/bench/shootout/timing.sh
@@ -59,7 +58,6 @@ REPLACE_BASH+=	test/run
 
 REPLACE_PERL+=	misc/pprof
 REPLACE_PERL+=	misc/xcode/4/go4xcode.sh
-REPLACE_PERL+=	pkg/tool/netbsd_amd64/pprof
 REPLACE_PERL+=	src/pkg/net/http/cgi/testdata/test.cgi
 REPLACE_PERL+=	src/pkg/regexp/syntax/make_perl_groups.pl
 REPLACE_PERL+=	src/pkg/syscall/mksyscall.pl
@@ -79,13 +77,13 @@ CHECK_INTERPRETER_SKIP+=	go/src/make.rc
 CHECK_INTERPRETER_SKIP+=	go/src/run.rc
 
 do-build:
-	cd ${WRKSRC}/src && ${_ULIMIT_CMD} env GOROOT_FINAL=${GOROOT_FINAL:Q} ${BASH} ./all.bash
+	cd ${WRKSRC}/src && env GOROOT_FINAL=${GOROOT_FINAL:Q} ${BASH} ./all.bash
 
 do-install:
 	cd ${WRKSRC} && rm -f .hgignore .hgtags
 	cd ${WRKDIR} && pax -rw go ${DESTDIR}${PREFIX}
 .for cmd in go godoc gofmt
-	cd ${DESTDIR}${PREFIX}/bin && ln -s ../go/bin/${cmd} ${cmd}
+	cd ${DESTDIR}${PREFIX}/bin && ln -sf ../go/bin/${cmd} ${cmd}
 .endfor
 
 .include "../../mk/bsd.pkg.mk"

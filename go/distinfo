@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2012/12/30 01:13:18 bsiegert Exp $
+$NetBSD: distinfo,v 1.2 2013/03/12 20:02:36 bsiegert Exp $
 
-SHA1 (go-1.1pre-20121229.tar.gz) = 6729064f755ecc2f2d2f0b9a813cb94417fce4e6
-RMD160 (go-1.1pre-20121229.tar.gz) = fa5b8b6557866df9d4ca0f10c62263360326b43f
-Size (go-1.1pre-20121229.tar.gz) = 9907914 bytes
+SHA1 (go-1.1pre-20130311.tar.gz) = e9d6639eced19566ff7c730c05b988a2778fd29e
+RMD160 (go-1.1pre-20130311.tar.gz) = 4a92563ba8ac445e927a68358784c2a84515b909
+Size (go-1.1pre-20130311.tar.gz) = 8991947 bytes
