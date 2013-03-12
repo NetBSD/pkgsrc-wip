@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.31 2013/02/20 17:54:15 roelants Exp $
+# $NetBSD: Makefile,v 1.32 2013/03/12 07:54:06 roelants Exp $
 #
 
 DISTVERSION=	0.17.1
 DISTNAME=	enlightenment-${DISTVERSION}
 PKGNAME=	e17-${DISTVERSION:S/-//}
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	http://download.enlightenment.org/releases/
 EXTRACT_SUFX=	.tar.bz2
