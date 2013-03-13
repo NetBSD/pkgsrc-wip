@@ -1,17 +1,15 @@
-$NetBSD: patch-tools_gyp_pylib_gyp_generator_make.py,v 1.1 2013/03/03 12:38:37 jgoamakf Exp $
+$NetBSD: patch-tools_gyp_pylib_gyp_generator_make.py,v 1.2 2013/03/13 13:06:33 fhajny Exp $
 
-detects NetBSD.
+Add support for NetBSD.
 
---- tools/gyp/pylib/gyp/generator/make.py.orig	2013-03-01 15:57:34.000000000 +0900
-+++ tools/gyp/pylib/gyp/generator/make.py	2013-03-01 15:57:46.000000000 +0900
-@@ -1995,6 +1995,10 @@
+--- tools/gyp/pylib/gyp/generator/make.py.orig	2013-03-11 00:36:28.000000000 +0000
++++ tools/gyp/pylib/gyp/generator/make.py
+@@ -2000,7 +2000,7 @@ def GenerateOutput(target_list, target_d
+         'flock_index': 2,
+         'extra_commands': SHARED_HEADER_SUN_COMMANDS,
+     })
+-  elif flavor == 'freebsd' or flavor == 'dragonflybsd':
++  elif flavor == 'freebsd' or flavor == 'dragonflybsd' or flavor == 'netbsd':
      header_params.update({
          'flock': 'lockf',
      })
-+  elif flavor == 'netbsd':
-+    header_params.update({
-+        'flock': 'lockf',
-+    })
- 
-   header_params.update(RunSystemTests(flavor))
-   header_params.update({

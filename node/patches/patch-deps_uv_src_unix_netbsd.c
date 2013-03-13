@@ -1,14 +1,10 @@
-$NetBSD: patch-deps_uv_src_unix_netbsd.c,v 1.2 2012/06/15 11:33:29 fhajny Exp $
+$NetBSD: patch-deps_uv_src_unix_netbsd.c,v 1.3 2013/03/13 13:06:33 fhajny Exp $
 
-Add support for NetBSD
---- deps/uv/src/unix/netbsd.c
+Add support for NetBSD.
+
+--- deps/uv/src/unix/netbsd.c.orig	2013-03-11 00:36:28.000000000 +0000
 +++ deps/uv/src/unix/netbsd.c
-@@ -19,10 +19,14 @@
-  */
- 
- #include "uv.h"
-+#include "internal.h"
- 
+@@ -24,6 +24,9 @@
  #include <assert.h>
  #include <string.h>
  #include <errno.h>
@@ -16,13 +12,12 @@ Add support for NetBSD
 +#include <paths.h>
 +#include <fcntl.h>
  
- #include <sys/resource.h>
- #include <sys/types.h>
-@@ -106,3 +110,180 @@ uint64_t uv_get_total_memory(void) {
- 
+ #include <kvm.h>
+ #include <paths.h>
+@@ -132,6 +135,183 @@ uint64_t uv_get_total_memory(void) {
    return (uint64_t) info;
  }
-+
+ 
 +/* new from openbsd.c */
 +static char *process_title;
 +
@@ -199,3 +194,7 @@ Add support for NetBSD
 +  return argv;
 +}
 +
++
+ 
+ char** uv_setup_args(int argc, char** argv) {
+   process_title = argc ? strdup(argv[0]) : NULL;

@@ -1,14 +1,15 @@
-$NetBSD: patch-common.gypi,v 1.3 2012/07/24 13:40:35 fhajny Exp $
+$NetBSD: patch-common.gypi,v 1.4 2013/03/13 13:06:33 fhajny Exp $
 
 Add support for NetBSD.
---- common.gypi.orig	2012-07-19 17:01:56.000000000 +0000
+
+--- common.gypi.orig	2013-03-11 00:36:28.000000000 +0000
 +++ common.gypi
-@@ -152,7 +152,7 @@
-           '_FILE_OFFSET_BITS=64',
+@@ -159,7 +159,7 @@
+           'BUILDING_UV_SHARED=1',
          ],
        }],
 -      [ 'OS=="linux" or OS=="freebsd" or OS=="openbsd" or OS=="solaris"', {
 +      [ 'OS=="linux" or OS=="freebsd" or OS=="openbsd" or OS=="solaris" or OS=="netbsd"', {
-         'cflags': [ '-Wall', '-pthread', ],
+         'cflags': [ '-Wall', '-Wextra', '-Wno-unused-parameter', '-pthread', ],
          'cflags_cc': [ '-fno-rtti', '-fno-exceptions' ],
          'ldflags': [ '-pthread', '-rdynamic' ],

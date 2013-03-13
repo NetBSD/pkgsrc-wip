@@ -1,6 +1,7 @@
-$NetBSD: patch-deps_v8_tools_gyp_v8.gyp,v 1.1 2012/06/15 11:33:29 fhajny Exp $
+$NetBSD: patch-deps_v8_tools_gyp_v8.gyp,v 1.2 2013/03/13 13:06:33 fhajny Exp $
 
 Fix path to Python.
+
 --- deps/v8/tools/gyp/v8.gyp.orig	2012-06-11 16:30:44.000000000 +0000
 +++ deps/v8/tools/gyp/v8.gyp
 @@ -796,7 +796,7 @@
