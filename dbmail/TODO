@@ -1,0 +1,6 @@
+MD5 user authentication currently duesn't work on NetBSD
+because libmhash.so (security/mhash) pollutes the libc namespace which breaks
+crypt(3).
+
+You can fix this by applying mhash.diff to pkgsrc/security/mhash/Makefile
+and reinstalling it.

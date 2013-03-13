@@ -1,0 +1,34 @@
+Index: Makefile
+===================================================================
+RCS file: /cvsroot/pkgsrc/security/mhash/Makefile,v
+retrieving revision 1.26
+diff -u -r1.26 Makefile
+--- Makefile	23 Oct 2012 18:16:36 -0000	1.26
++++ Makefile	13 Mar 2013 21:28:59 -0000
+@@ -1,7 +1,7 @@
+ # $NetBSD: mhash.diff,v 1.1 2013/03/13 21:33:00 tnn2 Exp $
+ 
+ DISTNAME=	mhash-0.9.9
+-PKGREVISION=	3
++PKGREVISION=	4
+ CATEGORIES=	security devel
+ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mhash/}
+ EXTRACT_SUFX=	.tar.bz2
+@@ -19,6 +19,17 @@
+ 
+ INSTALLATION_DIRS=	include/mutils
+ 
++POLLUTING_SYMS=		MD4Final MD4Init MD4Transform MD4Update \
++			MD5Final MD5Init MD5Transform MD5Update
++
++SUBST_CLASSES+=		ns
++SUBST_STAGE.ns=		pre-configure
++SUBST_MESSAGE.ns=	Prefixing symbols to avoid libc namespace pollution
++SUBST_FILES.ns=		lib/*.c lib/*.h src/*.c src/*.h
++.for sym in ${POLLUTING_SYMS}
++SUBST_SED.ns+=		-e 's,\(${sym}\),mhash_\1,g'
++.endfor
++
+ pre-configure:
+ 	cd ${WRKSRC} && autoconf -v -f
+ 
