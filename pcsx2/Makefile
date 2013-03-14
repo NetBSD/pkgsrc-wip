@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2013/01/08 16:53:56 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2013/03/14 11:35:01 othyro Exp $
 #
 
 DISTNAME=	pcsx2-1.0.0r5412
@@ -31,7 +31,7 @@ CMAKE_ARGS+=		-Dlibdl=${DL_LIBS}
 .endif
 
 
-BUILD_DEPENDS+=	gtk2+>=2.16:../../x11/gtk2
+BUILDLINK_DEPMETHOD.gtk2=	build
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../devel/sparsehash/buildlink3.mk"
@@ -47,7 +47,7 @@ BUILD_DEPENDS+=	gtk2+>=2.16:../../x11/gtk2
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
-BUILD_DEPENDS+=	bzip2>=1.0.5:../../archivers/bzip2
+BUILDLINK_DEPMETHOD.bzip2=	build
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../audio/alsa-lib/buildlink3.mk"
