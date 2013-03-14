@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.8 2013/03/14 13:46:10 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2013/03/14 13:55:18 thomasklausner Exp $
 #
 
-DISTNAME=	beets-1.0b15
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+DISTNAME=	v1.0.0
+PKGNAME=	${PYPKGPREFIX}-beets-${DISTNAME:S/v//}
 CATEGORIES=	audio
-MASTER_SITES=	http://beets.googlecode.com/files/
+MASTER_SITES=	https://github.com/sampsyo/beets/archive/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-#HOMEPAGE=	http://code.google.com/p/beets/
+#HOMEPAGE=	https://github.com/sampsyo/beets
 HOMEPAGE=	http://beets.radbox.org/
 COMMENT=	Music geek's media organizer
 LICENSE=	mit
@@ -19,8 +19,11 @@ DEPENDS+=	${PYPKGPREFIX}-mutagen-[0-9]*:../../audio/py-mutagen
 DEPENDS+=	${PYPKGPREFIX}-yaml-[0-9]*:../../textproc/py-yaml
 DEPENDS+=	${PYPKGPREFIX}-Unidecode-[0-9]*:../../textproc/py-Unidecode
 
+DIST_SUBDIR=	py-beets
+WRKSRC=		${WRKDIR}/beets-${DISTNAME:S/v//}
 USE_LANGUAGES=	# none
 PLIST_SUBST+=			PYVERSSUFFIX=${PYVERSSUFFIX}
+EGG_NAME=	beets-${DISTNAME:S/v//}
 
 post-install:
 	${MV} ${DESTDIR}${PREFIX}/bin/beet ${DESTDIR}${PREFIX}/bin/beet${PYVERSSUFFIX}
