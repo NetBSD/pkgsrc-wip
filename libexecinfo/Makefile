@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2013/02/06 22:22:04 asau Exp $
-#
+# $NetBSD: Makefile,v 1.6 2013/03/14 21:36:13 asau Exp $
 
 DISTNAME=	libexecinfo-1.1
 EXTRACT_SUFX=	.tar.bz2
 CATEGORIES=	devel
-MASTER_SITES=	ftp://ftp.freebsd.org/pub/FreeBSD/distfiles
+MASTER_SITES=	$(MASTER_SITE_FREEBSD)
 
 MAINTAINER=	ober@NetBSD.org
 HOMEPAGE=       http://www.freebsdsoftware.org/devel/libexecinfo.html
