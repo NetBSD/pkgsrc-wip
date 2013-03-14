@@ -1,11 +1,12 @@
-$NetBSD: distinfo,v 1.25 2013/03/13 13:06:33 fhajny Exp $
+$NetBSD: distinfo,v 1.26 2013/03/14 11:38:28 jgoamakf Exp $
 
 SHA1 (node-v0.10.0.tar.gz) = 7321266347dc1c47ed2186e7d61752795ce8a0ef
 RMD160 (node-v0.10.0.tar.gz) = 4d27e37f34026f1b1b02745fca57b7a0e247f660
 Size (node-v0.10.0.tar.gz) = 12777259 bytes
 SHA1 (patch-common.gypi) = 0cffd29138431c982d9030b414cc26acd9407fbc
+SHA1 (patch-deps_cares_cares.gyp) = 2235eb44bc984fa2e745fdf1786f1ae6de6ef80f
 SHA1 (patch-deps_uv_common.gypi) = 65bd186b3773f74c3fe4b93e22ee80ea2e543491
-SHA1 (patch-deps_uv_src_unix_netbsd.c) = ab93aef4b8e90766ca1fd046dc16bec537201b8c
+SHA1 (patch-deps_uv_src_unix_thread.c) = 65e0c764b2e061a1b8e80c20b5fa41dab9c2858f
 SHA1 (patch-deps_v8_tools_gyp_v8.gyp) = 8602b7858d2d238a165554dfb1feaeec31babfe9
 SHA1 (patch-tools_gyp_pylib_gyp_common.py) = 0294a86d459b985f017d962f1e48192d8027d61a
 SHA1 (patch-tools_gyp_pylib_gyp_generator_make.py) = 4cba29a9d471ec466696b989f77aae6ead74f2fe
