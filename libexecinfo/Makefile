@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2013/03/14 21:36:13 asau Exp $
+# $NetBSD: Makefile,v 1.7 2013/03/14 21:44:43 asau Exp $
 
 DISTNAME=	libexecinfo-1.1
 EXTRACT_SUFX=	.tar.bz2
@@ -10,20 +10,15 @@ HOMEPAGE=       http://www.freebsdsoftware.org/devel/libexecinfo.html
 COMMENT=	BSD Licensed clone of backtrace facility found in GNU libc
 LICENSE=	2-clause-bsd
 
-MAKE_FLAGS=	INCSDIR=${PREFIX}/include
-MAKE_FLAGS+=	INCSYMLINKS=no
-MAKE_FLAGS+=	LIBDIR=${PREFIX}/lib
+USE_BSD_MAKEFILE=	yes
 MAKE_FLAGS+=	MKLINT=no
-MAKE_FLAGS+=	SHLIBDIR=${PREFIX}/lib
 
 CFLAGS.Linux+=	-D_GNU_SOURCE # Dl_info internals
 CFLAGS.Linux+=	-Wno-unused-result # write(2) is declared specially
 
 INSTALLATION_DIRS=	include lib
 
-do-install:
-	${INSTALL_LIB} ${WRKSRC}/libexecinfo.* ${DESTDIR}${PREFIX}/lib
-	${INSTALL_LIB} ${WRKSRC}/libexecinfo_pic.a ${DESTDIR}${PREFIX}/lib
+post-install:
 	${INSTALL_DATA} ${WRKSRC}/execinfo.h ${DESTDIR}${PREFIX}/include
 
 .include "../../mk/bsd.pkg.mk"
