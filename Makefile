@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5152 2013/03/14 13:58:33 thomasklausner Exp $
+# $Id: Makefile,v 1.5153 2013/03/15 20:56:13 asau Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1402,7 +1402,6 @@ SUBDIR+=	libecc
 SUBDIR+=	libee
 SUBDIR+=	libepc
 SUBDIR+=	libestr
-SUBDIR+=	libexecinfo
 SUBDIR+=	libexosip
 SUBDIR+=	libfishsound
 SUBDIR+=	libfm
