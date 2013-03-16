@@ -1,16 +1,20 @@
-# $NetBSD: Makefile,v 1.11 2012/11/28 23:44:35 lexort Exp $
+# $NetBSD: Makefile,v 1.12 2013/03/16 14:55:33 lexort Exp $
 
 DISTNAME=		pam_pkcs11-0.6.8
 PKGNAME=		pam-pkcs11-0.6.8
 CATEGORIES=		security
-MASTER_SITES=		http://www.opensc-project.org/files/pam_pkcs11/
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=opensc/}pam_pkcs11/
+#http://sourceforge.net/projects/opensc/files/pam_pkcs11/
 
 MAINTAINER=		gdt@ir.bbn.com
 # Did not answer mail 2011-11
 #MAINTAINER=		evaldo@gardenali.biz
-HOMEPAGE=		http://www.opensc-project.org/pam_pkcs11/
+HOMEPAGE=		https://github.com/OpenSC/pam_pkcs11/wiki
 COMMENT=		PKCS \#11 authentication method for PAM
 LICENSE=		gnu-lgpl-v2.1
+
+# At times in the past, pam_pkcs11 has been https
+#FETCH_USING=		curl
 
 USE_LANGUAGES=		c99
 USE_PKGLOCALEDIR=	yes
