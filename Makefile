@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5153 2013/03/15 20:56:13 asau Exp $
+# $Id: Makefile,v 1.5154 2013/03/16 08:00:34 szptvlfn Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -951,6 +951,7 @@ SUBDIR+=	hs-cairo
 SUBDIR+=	hs-case-insensitive
 SUBDIR+=	hs-cautious-file
 SUBDIR+=	hs-cereal
+SUBDIR+=	hs-cgi
 SUBDIR+=	hs-chalkboard
 SUBDIR+=	hs-chalkboard-viewer
 SUBDIR+=	hs-chunks
@@ -1116,6 +1117,7 @@ SUBDIR+=	hs-x11-xft
 SUBDIR+=	hs-xdg-basedir
 SUBDIR+=	hs-xml
 SUBDIR+=	hs-xmobar
+SUBDIR+=	hs-xhtml
 SUBDIR+=	hs-zip-archive
 SUBDIR+=	hs-zlib
 SUBDIR+=	ht2html
