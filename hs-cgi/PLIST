@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1 2013/03/16 07:55:38 szptvlfn Exp $
+lib/cgi-${PKGVERSION}/${HASKELL_VERSION}/HScgi-${PKGVERSION}.o
+lib/cgi-${PKGVERSION}/${HASKELL_VERSION}/Network/CGI.hi
+lib/cgi-${PKGVERSION}/${HASKELL_VERSION}/Network/CGI.p_hi
+lib/cgi-${PKGVERSION}/${HASKELL_VERSION}/Network/CGI/Accept.hi
+lib/cgi-${PKGVERSION}/${HASKELL_VERSION}/Network/CGI/Accept.p_hi
+lib/cgi-${PKGVERSION}/${HASKELL_VERSION}/Network/CGI/Compat.hi
+lib/cgi-${PKGVERSION}/${HASKELL_VERSION}/Network/CGI/Compat.p_hi
+lib/cgi-${PKGVERSION}/${HASKELL_VERSION}/Network/CGI/Cookie.hi
+lib/cgi-${PKGVERSION}/${HASKELL_VERSION}/Network/CGI/Cookie.p_hi
+lib/cgi-${PKGVERSION}/${HASKELL_VERSION}/Network/CGI/Header.hi
+lib/cgi-${PKGVERSION}/${HASKELL_VERSION}/Network/CGI/Header.p_hi
+lib/cgi-${PKGVERSION}/${HASKELL_VERSION}/Network/CGI/Monad.hi
+lib/cgi-${PKGVERSION}/${HASKELL_VERSION}/Network/CGI/Monad.p_hi
+lib/cgi-${PKGVERSION}/${HASKELL_VERSION}/Network/CGI/Multipart.hi
+lib/cgi-${PKGVERSION}/${HASKELL_VERSION}/Network/CGI/Multipart.p_hi
+lib/cgi-${PKGVERSION}/${HASKELL_VERSION}/Network/CGI/Protocol.hi
+lib/cgi-${PKGVERSION}/${HASKELL_VERSION}/Network/CGI/Protocol.p_hi
+lib/cgi-${PKGVERSION}/${HASKELL_VERSION}/libHScgi-${PKGVERSION}.a
+lib/cgi-${PKGVERSION}/${HASKELL_VERSION}/libHScgi-${PKGVERSION}_p.a
+lib/cgi-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/cgi-${PKGVERSION}/LICENSE

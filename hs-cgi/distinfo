@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/03/16 07:55:38 szptvlfn Exp $
+
+SHA1 (cgi-3001.1.8.3.tar.gz) = af6aa593e2b247cf770471d502f2c4a2387a36f3
+RMD160 (cgi-3001.1.8.3.tar.gz) = 00f64d63620b47f860543ffcb2bc8714ddaa0241
+Size (cgi-3001.1.8.3.tar.gz) = 21319 bytes
