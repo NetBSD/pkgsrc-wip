@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2013/02/20 05:13:33 asau Exp $
+# $NetBSD: Makefile,v 1.13 2013/03/17 22:42:31 asau Exp $
 
 .include "../../net/samba/Makefile.mirrors"
 
@@ -47,7 +47,7 @@ FILES_SUBST+=		WINBINDD_RCD_SCRIPT=${WINBINDD_RCD_SCRIPT:Q}
 USE_TOOLS+=		gmake mktemp perl:run python
 REPLACE_PERL=		script/findsmb.in
 
-BROKEN_GETTEXT_DETECTION=yes
+USE_GNU_ICONV=		yes	# FIXME: something doesn't work on NetBSD
 USE_GNU_READLINE=	yes
 
 HAS_CONFIGURE=		yes
@@ -60,6 +60,7 @@ CONFIGURE_ARGS+=	--prefix=$(PREFIX:Q)
 #CONFIGURE_ARGS+=	--with-readline=${BUILDLINK_PREFIX.readline}
 #CONFIGURE_ARGS+=	--with-configdir=${SAMBA_ETCDIR}
 CONFIGURE_ARGS+=	--libdir=${SAMBA_LIBDIR}
+CONFIGURE_ARGS+=	--with-privatelibdir=${SAMBA_LIBDIR}/samba
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/${PKGBASE}
 CONFIGURE_ARGS+=	--with-lockdir=${SAMBA_LOCKDIR}
@@ -75,7 +76,6 @@ CONFIGURE_ARGS+=	--localstatedir=${SAMBA_VARDIR}
 #
 #CONFIGURE_ARGS+=	--enable-merged-build=no
 
-#CONFIGURE_ARGS+=	--enable-rpath
 CONFIGURE_ARGS+=	--bundled-libraries=tdb,com_err
 CONFIGURE_ENV+=		XSLTPROC=${FALSE} # suppress generation of man pages
 
@@ -172,6 +172,9 @@ REPLACE_PYTHON=	buildtools/bin/waf \
 		lib/subunit/python/subunit/tests/sample-script.py \
 		lib/subunit/python/subunit/tests/sample-two-script.py \
 		lib/tevent/tevent.py
+
+# DEBUG:
+#CONFIGURE_ARGS+=	--verbose --verbose
 
 .include "../../lang/python/application.mk"
 
