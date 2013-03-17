@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/01/25 11:35:18 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/03/17 20:06:00 thomasklausner Exp $
 bin/abc2ly
 bin/convert-ly
 bin/etf2ly
@@ -323,6 +323,7 @@ share/lilypond/${PKGVERSION}/scm/safe-lily.scm
 share/lilypond/${PKGVERSION}/scm/safe-utility-defs.scm
 share/lilypond/${PKGVERSION}/scm/scheme-engravers.scm
 share/lilypond/${PKGVERSION}/scm/script.scm
+share/lilypond/${PKGVERSION}/scm/skyline.scm
 share/lilypond/${PKGVERSION}/scm/song-util.scm
 share/lilypond/${PKGVERSION}/scm/song.scm
 share/lilypond/${PKGVERSION}/scm/standalone.scm
