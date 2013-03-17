@@ -1,2 +1,0 @@
-* The autoconf build system is broken; hardcoded paths are used
-  to work around the issue for now.

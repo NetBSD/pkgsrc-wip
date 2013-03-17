@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2012/10/03 21:32:47 asau Exp $
+# $NetBSD: Makefile,v 1.6 2013/03/17 20:36:38 ftigeot Exp $
 
-DISTNAME=	opensmtpd-201205241358
+VERSION=	5.3p1
+DISTNAME=	opensmtpd-${VERSION}
 CATEGORIES=	mail net
 MASTER_SITES=	http://www.opensmtpd.org/archives/
 
@@ -9,7 +10,7 @@ HOMEPAGE=	http://www.opensmtpd.org/
 COMMENT=	The OpenSMTPD mail transfer agent, a replacement for sendmail
 LICENSE=	isc
 
-WRKSRC=		${WRKDIR}/opensmtpd
+#WRKSRC=		${WRKDIR}/${DISTNAME}
 
 USE_LANGUAGES=	c
 USE_LIBTOOL=	yes
@@ -23,7 +24,7 @@ CONF_FILES=	${EXAMPLEDIR}/smtpd.conf ${PKG_SYSCONFDIR}/smtpd.conf
 SUBST_CLASSES+=			exampledir
 SUBST_STAGE.exampledir=		pre-configure
 SUBST_MESSAGE.exampledir=	Fixing exampledir path
-SUBST_FILES.exampledir=		src/Makefile.am
+SUBST_FILES.exampledir=		smtpd/Makefile.am
 SUBST_SED.exampledir+=		-e 's,@EXAMPLE_DIR@,${EXAMPLEDIR},'
 
 pre-configure:
