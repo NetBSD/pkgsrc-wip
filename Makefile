@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5156 2013/03/18 17:02:37 kristerw Exp $
+# $Id: Makefile,v 1.5157 2013/03/18 17:04:07 kristerw Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1818,6 +1818,7 @@ SUBDIR+=	nvidia-freebsd
 SUBDIR+=	nx-client-bin
 SUBDIR+=	nzbget
 SUBDIR+=	objfw
+SUBDIR+=	objfw-git
 SUBDIR+=	obmenu
 SUBDIR+=	ocamlgraph
 SUBDIR+=	ocamlweb
