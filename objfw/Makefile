@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2012/11/23 22:24:33 midar Exp $
+# $NetBSD: Makefile,v 1.2 2013/03/18 13:06:10 midar Exp $
 #
 
 DISTNAME=	objfw-0.7.1
-CATEGORIES=	devel
 MASTER_SITES=	https://webkeks.org/objfw/downloads/
 EXTRACT_SUFX=	.tar.xz
 
