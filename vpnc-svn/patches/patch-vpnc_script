@@ -1,29 +1,22 @@
-$NetBSD: patch-vpnc_script,v 1.1.1.1 2012/05/23 15:37:12 hfath Exp $
+$NetBSD: patch-vpnc_script,v 1.2 2013/03/18 20:49:19 hfath Exp $
 
---- vpnc-script.orig	2012-05-23 13:52:36.000000000 +0000
+--- vpnc-script.orig	2013-03-12 21:00:57.000000000 +0000
 +++ vpnc-script
-@@ -56,8 +56,9 @@ PATH=/sbin:/usr/sbin:$PATH
+@@ -77,9 +77,10 @@ PATH=/sbin:/usr/sbin:$PATH
  
  OS="`uname -s`"
  
+-HOOKS_DIR=/etc/vpnc
 -DEFAULT_ROUTE_FILE=/var/run/vpnc/defaultroute
 -RESOLV_CONF_BACKUP=/var/run/vpnc/resolv.conf-backup
++HOOKS_DIR=$PKG_SYSCONFDIR/vpnc
 +STATEDIR=/var/run/vpnc
 +DEFAULT_ROUTE_FILE=$STATEDIR/defaultroute
 +RESOLV_CONF_BACKUP=$STATEDIR/resolv.conf-backup
  SCRIPTNAME=`basename $0`
  
  # some systems, eg. Darwin & FreeBSD, prune /var/run on boot
-@@ -67,7 +68,7 @@ if [ ! -d "/var/run/vpnc" ]; then
- fi
- 
- # stupid SunOS: no blubber in /usr/local/bin ... (on stdout)
--IPROUTE="`which ip | grep '^/'`" 2> /dev/null
-+IPROUTE="`command -v ip | grep '^/' 2> /dev/null`"
- 
- if [ "$OS" = "Linux" ]; then
- 	ifconfig_syntax_ptp="pointopoint"
-@@ -116,7 +117,7 @@ do_ifconfig() {
+@@ -162,7 +163,7 @@ do_ifconfig() {
  	fi
  
  	if [ -z "$MTU" ]; then
@@ -32,7 +25,7 @@ $NetBSD: patch-vpnc_script,v 1.1.1.1 2012/05/23 15:37:12 hfath Exp $
  	fi
  
  	# Point to point interface require a netmask of 255.255.255.255 on some systems
-@@ -235,11 +236,11 @@ else # use route command
+@@ -284,11 +285,11 @@ else # use route command
  		# isn't -n supposed to give --numeric output?
  		# apperently not...
  		# Get rid of lines containing IPv6 addresses (':')
@@ -46,7 +39,7 @@ $NetBSD: patch-vpnc_script,v 1.1.1.1 2012/05/23 15:37:12 hfath Exp $
  	}
  
  	del_vpngateway_route() {
-@@ -557,6 +558,20 @@ do_pre_init() {
+@@ -622,6 +623,20 @@ do_pre_init() {
  }
  
  do_connect() {
