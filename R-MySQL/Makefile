@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/03/19 01:10:14 bubuchka Exp $
+# $NetBSD: Makefile,v 1.2 2013/03/19 01:38:40 bubuchka Exp $
 
 PKGNAME=	R-MySQL-${R_PKGVER:S/-/./}
 CATEGORIES=	math databases
@@ -12,7 +12,7 @@ LICENSE=	gnu-gpl-v2
 R_PKGNAME=	RMySQL
 R_PKGVER=	0.9-3
 
-CONFIGURE_ARGS+=	--with-mysql-dir=${PREFIX}
+CONFIGURE_ARGS+=	--with-mysql-dir=${BUILDLINK_PREFIX.mysql-client}
 USE_LANGUAGES=		c
 
 DEPENDS+=	R-DBI>=0.2.2:../../math/R-DBI

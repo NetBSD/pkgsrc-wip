@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2013/03/19 01:22:55 bubuchka Exp $
+# $NetBSD: Makefile,v 1.11 2013/03/19 01:38:40 bubuchka Exp $
 
 CATEGORIES=	graphics math
 MASTER_SITES=	http://www.bioconductor.org/packages/2.10/bioc/src/contrib/
@@ -13,7 +13,7 @@ R_PKGVER=	1.34.2
 
 USE_LANGUAGES=	c
 
-CONFIGURE_ARGS+=		--with-graphviz=${PREFIX}
+CONFIGURE_ARGS+=		--with-graphviz=${BUILDLINK_PREFIX.graphviz}
 
 BUILDLINK_API_DEPENDS.R+=	R>=2.6.0
 
