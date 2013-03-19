@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2013/03/11 14:42:31 keckhardt Exp $
+# $NetBSD: Makefile,v 1.6 2013/03/19 14:13:48 keckhardt Exp $
 
 GCC_PKGNAME=		gcc48snapshot
 #.include		"version.mk"
 
-GCC_VERSION=	4.8-20130310
+GCC_VERSION=	4.8.0-RC-20130316
 DISTNAME=	gcc-${GCC_VERSION}
 PKGNAME=	${GCC_PKGNAME}-${GCC_VERSION}
 ## When bumping the PKGREVISION of this package the PKGREVISION of

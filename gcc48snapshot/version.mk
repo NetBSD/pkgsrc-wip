@@ -1,2 +1,2 @@
-# $NetBSD: version.mk,v 1.4 2013/03/11 14:42:31 keckhardt Exp $
-GCC_DIST_VERSION:=4.8-20130310
+# $NetBSD: version.mk,v 1.5 2013/03/19 14:13:48 keckhardt Exp $
+GCC_DIST_VERSION:=4.8.0-RC-20130316
