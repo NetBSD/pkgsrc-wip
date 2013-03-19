@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/11/15 23:16:08 bubuchka Exp $
+# $NetBSD: Makefile,v 1.8 2013/03/19 01:22:55 bubuchka Exp $
 
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
@@ -6,11 +6,10 @@ MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
 MAINTAINER=	mishka@NetBSD.org
 HOMEPAGE=	http://www.bigmemory.org/
 COMMENT=	Manage massive matrices with shared memory and memory-mapped files
+LICENSE=	gnu-lgpl-v3
 
 R_PKGNAME=	bigmemory
 R_PKGVER=	4.3.0
-
-LICENSE=	gnu-lgpl-v3
 
 USE_LANGUAGES=	c++
 

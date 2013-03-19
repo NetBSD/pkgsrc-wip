@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/08/30 19:03:42 bubuchka Exp $
+# $NetBSD: Makefile,v 1.6 2013/03/19 01:22:55 bubuchka Exp $
 
 CATEGORIES=	devel math parallel
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
@@ -6,11 +6,10 @@ MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
 MAINTAINER=	mishka@NetBSD.org
 HOMEPAGE=	http://cran.r-project.org/web/packages/doParallel/index.html
 COMMENT=	Foreach parallel adaptor for the parallel package
+LICENSE=	gnu-gpl-v2
 
 R_PKGNAME=	doParallel
 R_PKGVER=	1.0.1
-
-LICENSE=	gnu-gpl-v2
 
 BUILDLINK_API_DEPENDS.R+=	R>=2.14.0
 

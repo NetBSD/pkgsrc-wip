@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/08/30 19:03:42 bubuchka Exp $
+# $NetBSD: Makefile,v 1.3 2013/03/19 01:22:55 bubuchka Exp $
 
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
@@ -6,11 +6,10 @@ MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
 MAINTAINER=	mishka@NetBSD.org
 HOMEPAGE=	http://cran.r-project.org/web/packages/gmp/
 COMMENT=	Multiple Precision Arithmetic for R
+LICENSE=	gnu-gpl-v2
 
 R_PKGNAME=	gmp
 R_PKGVER=	0.5-2
-
-LICENSE=	gnu-gpl-v2
 
 USE_LANGUAGES=	c c++
 
