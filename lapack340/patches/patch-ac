@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1.1.1 2011/12/29 14:39:01 keckhardt Exp $
+$NetBSD: patch-ac,v 1.2 2013/03/20 18:22:29 keckhardt Exp $
 
 --- /dev/null	2007-11-22 18:29:57.000000000 +0100
 +++ make.inc
@@ -11,6 +11,6 @@ $NetBSD: patch-ac,v 1.1.1.1 2011/12/29 14:39:01 keckhardt Exp $
 +NOOPT=		${FFLAGSNOOPT}
 +LOADER=		${FC}
 +LOADOPTS=	${LDFLAGS}
-+LAPACKLIB=	liblapack340.la
-+BLASLIB=	../../librefblas340.la
++LAPACKLIB=	liblapack342.la
++BLASLIB=	../../librefblas342.la
 +TMGLIB=	libtmglib.la

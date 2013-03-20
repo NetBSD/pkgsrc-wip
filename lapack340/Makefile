@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2012/10/03 09:10:35 asau Exp $
+# $NetBSD: Makefile,v 1.3 2013/03/20 18:22:29 keckhardt Exp $
 
-DISTNAME=	lapack-3.4.0
-PKGNAME=	lapack340-3.4.0
+DISTNAME=	lapack-3.4.2
+PKGNAME=	lapack340-3.4.2
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_NETLIB:=lapack/}
 EXTRACT_SUFX=	.tgz
@@ -13,7 +13,7 @@ LICENSE=	modified-bsd
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-GCC_REQD=		4.6.0
+GCC_REQD=		4.7.0
 USE_LANGUAGES=		c fortran
 USE_LIBTOOL=		YES
 BUILD_TARGET=		blaslib lapacklib
@@ -36,9 +36,9 @@ do-configure:
 	@${ECHO} "See ${WRKDIR}/etime_test.log for details on the test"
 
 do-install:
-	${LIBTOOL} --mode=install ${INSTALL_DATA} ${WRKSRC}/liblapack340.la \
+	${LIBTOOL} --mode=install ${INSTALL_DATA} ${WRKSRC}/liblapack342.la \
 		${DESTDIR}${PREFIX}/lib
-	${LIBTOOL} --mode=install ${INSTALL_DATA} ${WRKSRC}/librefblas340.la \
+	${LIBTOOL} --mode=install ${INSTALL_DATA} ${WRKSRC}/librefblas342.la \
 		${DESTDIR}${PREFIX}/lib
 
 .include "../../mk/bsd.pkg.mk"

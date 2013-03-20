@@ -1,5 +1,5 @@
-Work in progress of lapack-3.4.0 with gcc-4.6.
-FC and PKGSRC_FORTRAN must not be set.
+Work in progress of lapack-3.4.x with gcc.
+FC and PKGSRC_FORTRAN must be empty or set to /usr/pkg/gcc47/bin/gfortran.
 
 LAPACK is a library of Fortran 90 with subroutines for solving
 the most commonly occurring problems in numerical linear algebra.

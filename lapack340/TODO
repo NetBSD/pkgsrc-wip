@@ -1,13 +1,13 @@
 1) Fix and update Fortran support in pkgsrc to enable
    different compilers with FC and PKGSRC_FORTRAN. See
    http://mail-index.netbsd.org/tech-toolchain/2011/11/26/msg001789.html 
-   for instance. Currently this package uses GCC_REQD=4.6.0
-   and builds lang/gcc46 if not already installed. If
+   for instance. Currently this package uses GCC_REQD=4.7.0
+   and builds lang/gcc47 if not already installed. If
    FC or PKGSRC_FORTRAN are set, it will fail. The default
    compiler in pkgsrc is f2c for USE_LANGUAGES=fortran77 and
    g95 for USE_LANGUAGES=fortran. Lapack needs Fortran90
    excluding F2C, and g95 development has stopped more than
-   a year ago. Therefor lang/gcc46 seems to be the only
+   a year ago. Therefor lang/gcc47 seems to be the only
    alternative. Additionally LAPACK now contains a new
    standard LAPACKE for interfacing with C99 or C++ which
    has explicit support for gfortran/gcc.
