@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2012/11/11 23:33:19 outpaddling Exp $
+@comment $NetBSD: PLIST,v 1.3 2013/03/20 15:16:46 outpaddling Exp $
 include/armadillo
 include/armadillo_bits/BaseCube_bones.hpp
 include/armadillo_bits/BaseCube_meat.hpp
@@ -200,6 +200,8 @@ include/armadillo_bits/mtOpCube_bones.hpp
 include/armadillo_bits/mtOpCube_meat.hpp
 include/armadillo_bits/mtOp_bones.hpp
 include/armadillo_bits/mtOp_meat.hpp
+include/armadillo_bits/mtSpOp_bones.hpp
+include/armadillo_bits/mtSpOp_meat.hpp
 include/armadillo_bits/op_chol_bones.hpp
 include/armadillo_bits/op_chol_meat.hpp
 include/armadillo_bits/op_cor_bones.hpp
@@ -264,6 +266,8 @@ include/armadillo_bits/op_sum_bones.hpp
 include/armadillo_bits/op_sum_meat.hpp
 include/armadillo_bits/op_symmat_bones.hpp
 include/armadillo_bits/op_symmat_meat.hpp
+include/armadillo_bits/op_toeplitz_bones.hpp
+include/armadillo_bits/op_toeplitz_meat.hpp
 include/armadillo_bits/op_trimat_bones.hpp
 include/armadillo_bits/op_trimat_meat.hpp
 include/armadillo_bits/op_unique_bones.hpp
@@ -302,6 +306,8 @@ include/armadillo_bits/spop_htrans_bones.hpp
 include/armadillo_bits/spop_htrans_meat.hpp
 include/armadillo_bits/spop_max_bones.hpp
 include/armadillo_bits/spop_max_meat.hpp
+include/armadillo_bits/spop_mean_bones.hpp
+include/armadillo_bits/spop_mean_meat.hpp
 include/armadillo_bits/spop_min_bones.hpp
 include/armadillo_bits/spop_min_meat.hpp
 include/armadillo_bits/spop_misc_bones.hpp
@@ -310,6 +316,8 @@ include/armadillo_bits/spop_strans_bones.hpp
 include/armadillo_bits/spop_strans_meat.hpp
 include/armadillo_bits/spop_sum_bones.hpp
 include/armadillo_bits/spop_sum_meat.hpp
+include/armadillo_bits/spop_var_bones.hpp
+include/armadillo_bits/spop_var_meat.hpp
 include/armadillo_bits/strip.hpp
 include/armadillo_bits/subview_bones.hpp
 include/armadillo_bits/subview_cube_bones.hpp

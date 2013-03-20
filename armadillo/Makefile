@@ -1,13 +1,16 @@
-# $NetBSD: Makefile,v 1.7 2012/11/17 18:56:25 outpaddling Exp $
+# $NetBSD: Makefile,v 1.8 2013/03/20 15:16:45 outpaddling Exp $
 
-DISTNAME=	armadillo-3.4.4
+# DISTNAME=	armadillo-3.4.4
+DISTNAME=	armadillo-3.800.1
 CATEGORIES=	math
 MASTER_SITES=   ${MASTER_SITE_SOURCEFORGE:=arma/}
 
 MAINTAINER=	jwbacon@tds.net
 HOMEPAGE=	http://sourceforge.net/projects/arma/
 COMMENT=	C++ linear algebra library
-LICENSE=	gnu-lgpl-v3
+# LICENSE=	gnu-lgpl-v3
+# Starting with v3.800, using Mozilla Public License 2.0
+LICENSE=	mpl-2.0
 
 USE_LANGUAGES+= c c++
 USE_CMAKE=	yes
