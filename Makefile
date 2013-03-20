@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5159 2013/03/19 04:08:53 alnsn Exp $
+# $Id: Makefile,v 1.5160 2013/03/20 23:31:13 noud4 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -625,6 +625,7 @@ SUBDIR+=	fftw-openmpi
 SUBDIR+=	fftw2-openmpi
 SUBDIR+=	ficl
 SUBDIR+=	filepp
+SUBDIR+=	filerunner
 SUBDIR+=	firebird
 SUBDIR+=	fireflysung-ttf
 SUBDIR+=	firefox
