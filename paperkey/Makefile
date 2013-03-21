@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2012/10/04 19:44:06 asau Exp $
+# $NetBSD: Makefile,v 1.3 2013/03/21 17:42:57 shattered Exp $
 #
 
-DISTNAME=	paperkey-1.2
+DISTNAME=	paperkey-1.3
 CATEGORIES=	security
 MASTER_SITES=	http://www.jabberwocky.com/software/paperkey/
 
