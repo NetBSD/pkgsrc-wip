@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2013/03/20 18:22:29 keckhardt Exp $
+# $NetBSD: Makefile,v 1.4 2013/03/21 12:05:43 keckhardt Exp $
 
 DISTNAME=	lapack-3.4.2
 PKGNAME=	lapack340-3.4.2
@@ -6,7 +6,7 @@ CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_NETLIB:=lapack/}
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	adam@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.netlib.org/lapack/index.html
 COMMENT=	Linear Algebra PACKage
 LICENSE=	modified-bsd
