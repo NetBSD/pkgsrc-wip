@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5161 2013/03/21 18:01:41 shattered Exp $
+# $Id: Makefile,v 1.5162 2013/03/21 20:13:52 zul_ Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1837,6 +1837,7 @@ SUBDIR+=	oneloop
 SUBDIR+=	oolite
 SUBDIR+=	oops
 SUBDIR+=	oorexx
+SUBDIR+=	opam
 SUBDIR+=	opax
 SUBDIR+=	opd
 SUBDIR+=	open21xx
