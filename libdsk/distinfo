@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/03/21 17:59:53 shattered Exp $
+
+SHA1 (libdsk-1.3.3.tar.gz) = 5ec36eb90cc55ba74b68b1529a15c51d60d382fe
+RMD160 (libdsk-1.3.3.tar.gz) = 827701e438ba14eb217f04248ad7c1fd2ddd7f6e
+Size (libdsk-1.3.3.tar.gz) = 962133 bytes
