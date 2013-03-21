@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2013/02/12 19:07:12 shattered Exp $
+# $NetBSD: Makefile,v 1.4 2013/03/21 17:35:58 shattered Exp $
 #
 
 DISTNAME=	# empty
@@ -34,7 +34,7 @@ INSTALLATION_DIRS=	${FONTDIR} ${DOCDIR}
 post-extract:
 	${RUN}								\
 	for f in ${WRKSRC}/*.TTF ; do					\
-		${MV} $$f `echo $$f | ${SED} 's|TTF$$|ttf|'`;		\
+		${MV} $$f `${ECHO} $$f | ${SED} 's|TTF$$|ttf|'`;		\
 	done
 
 do-install:
