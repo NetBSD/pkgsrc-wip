@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2013/03/21 01:05:35 genolopolis Exp $
+bin/sandy
+man/man1/sandy.1
