@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/11/14 00:16:12 othyro Exp $
+# $NetBSD: Makefile,v 1.5 2013/03/21 17:34:50 shattered Exp $
 #
 
 DISTNAME=		plconfig-0.2
@@ -11,6 +11,7 @@ HOMEPAGE=		https://neon1.net/prog/plconfig.html
 COMMENT=		Tool for configuring HomePlug powerline bridges
 
 BUILD_TARGET=		plconfig
+INSTALLATION_DIRS=	sbin
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/plconfig ${DESTDIR}${PREFIX}/sbin

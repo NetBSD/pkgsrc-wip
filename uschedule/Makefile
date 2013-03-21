@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/03/05 21:36:16 asau Exp $
+# $NetBSD: Makefile,v 1.6 2013/03/21 17:34:50 shattered Exp $
 
 DISTNAME=	uschedule-0.7.1
 CATEGORIES=	time
@@ -29,7 +29,7 @@ USER_CMDS=	${CMDDIR}/uschedule ${CMDDIR}/uschedulecmd \
 SYS_CMDS=	${CMDDIR}/uscheduled
 
 INSTALLATION_DIRS=	${PKGMANDIR} ${PKGMANDIR}/man1 ${PKGMANDIR}/man7 \
-			${PKGMANDIR}/man8 sbin
+			${PKGMANDIR}/man8 bin sbin
 
 do-install:
 	${INSTALL_PROGRAM} ${USER_CMDS} ${DESTDIR}${PREFIX}/bin

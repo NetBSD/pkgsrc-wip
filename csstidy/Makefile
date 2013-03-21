@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/09/24 18:26:56 asau Exp $
+# $NetBSD: Makefile,v 1.5 2013/03/21 17:34:50 shattered Exp $
 
 DISTNAME=		csstidy-source-1.2
 PKGNAME=		csstidy-1.2
@@ -16,10 +16,12 @@ NO_CONFIGURE=		yes
 USE_TOOLS+=		sh gmake
 USE_LANGUAGES=		c++
 
+INSTALLATION_DIRS=	bin
+
 do-build:
 	cd ${WRKSRC} && ${SH} ./compile.sh
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/csstidy ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/csstidy ${DESTDIR}${PREFIX}/bin
 
 .include "../../mk/bsd.pkg.mk"
