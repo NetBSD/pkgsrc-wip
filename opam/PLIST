@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1 2013/03/21 20:09:45 zul_ Exp $
+bin/opam
+bin/opam-mk-repo
+man/man1/opam-check.1
+man/man1/opam-config.1
+man/man1/opam-help.1
+man/man1/opam-info.1
+man/man1/opam-init.1
+man/man1/opam-install.1
+man/man1/opam-list.1
+man/man1/opam-mk-repo.1
+man/man1/opam-pin.1
+man/man1/opam-reinstall.1
+man/man1/opam-remote.1
+man/man1/opam-remove.1
+man/man1/opam-repository.1
+man/man1/opam-search.1
+man/man1/opam-switch.1
+man/man1/opam-update.1
+man/man1/opam-upgrade.1
+man/man1/opam-upload.1
+man/man1/opam.1
