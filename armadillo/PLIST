@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2013/03/20 15:16:46 outpaddling Exp $
+@comment $NetBSD: PLIST,v 1.4 2013/03/22 13:47:08 outpaddling Exp $
 include/armadillo
 include/armadillo_bits/BaseCube_bones.hpp
 include/armadillo_bits/BaseCube_meat.hpp
@@ -342,9 +342,9 @@ include/armadillo_bits/unwrap_spmat.hpp
 include/armadillo_bits/upgrade_val.hpp
 include/armadillo_bits/wall_clock_bones.hpp
 include/armadillo_bits/wall_clock_meat.hpp
-lib/libarmadillo.so
-lib/libarmadillo.so.3
-lib/libarmadillo.so.${PKGVERSION}
+lib/libarmadillo.${PKGVERSION}.dylib
+lib/libarmadillo.3.dylib
+lib/libarmadillo.dylib
 share/Armadillo/CMake/ArmadilloConfig.cmake
 share/Armadillo/CMake/ArmadilloConfigVersion.cmake
 share/Armadillo/CMake/ArmadilloLibraryDepends-noconfig.cmake
