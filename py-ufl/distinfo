@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2012/03/27 15:49:51 outpaddling Exp $
+$NetBSD: distinfo,v 1.2 2013/03/23 14:58:26 outpaddling Exp $
 
-SHA1 (ufl-1.0.0.tar.gz) = 2637b4bdc18eda3b224ee28d14750463a6982ef6
-RMD160 (ufl-1.0.0.tar.gz) = e9a18b8bb8796ee0de2c4e9ffd736592da11fb76
-Size (ufl-1.0.0.tar.gz) = 701017 bytes
+SHA1 (ufl-1.1.0.tar.gz) = 4c305268c43e66dc9fe79f004ba60f14ab61956d
+RMD160 (ufl-1.1.0.tar.gz) = 4633e13a7d1baef09570a63d2e5a7ed417218232
+Size (ufl-1.1.0.tar.gz) = 736874 bytes

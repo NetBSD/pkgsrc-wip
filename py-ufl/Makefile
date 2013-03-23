@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2012/10/07 13:57:32 asau Exp $
+# $NetBSD: Makefile,v 1.4 2013/03/23 14:58:26 outpaddling Exp $
 #
 
-DISTNAME=	ufl-1.0.0
+DISTNAME=	ufl-${MMVERSION}.0
 CATEGORIES=	devel python
-MASTER_SITES=	http://launchpad.net/ufl/1.0.x/1.0.0/+download/
+MASTER_SITES=	http://launchpad.net/ufl/${MMVERSION}.x/${MMVERSION}.0/+download/
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 
 MAINTAINER=	jwbacon@tds.net
@@ -16,6 +16,14 @@ LICENSE=	gnu-lgpl-v3
 
 PYDISTUTILSPKG=	yes
 
-# todo: depends on swig, distutils
+MMVERSION=	1.1
+
+SUBST_CLASSES+=		man
+SUBST_FILES.man=	setup.py
+SUBST_STAGE.man=	post-patch
+SUBST_SED.man=		-e 's|"share", ||g'
+
+# todo: depends distutils
 .include "../../lang/python/extension.mk"
+.include "../../wip/swig2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

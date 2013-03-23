@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/03/27 15:56:16 outpaddling Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/03/23 15:03:23 outpaddling Exp $
 bin/viper
 ${PYSITELIB}/viper/__init__.py
 ${PYSITELIB}/viper/__init__.pyc
@@ -40,4 +40,4 @@ ${PYSITELIB}/viper/viper.pyo
 ${PYSITELIB}/viper/viper_dolfin.py
 ${PYSITELIB}/viper/viper_dolfin.pyc
 ${PYSITELIB}/viper/viper_dolfin.pyo
-share/man/man1/viper.1.gz
+man/man1/viper.1
