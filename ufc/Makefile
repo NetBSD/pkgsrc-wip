@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.9 2012/11/18 13:38:37 outpaddling Exp $
+# $NetBSD: Makefile,v 1.10 2013/03/23 13:00:14 outpaddling Exp $
 #
 
-DISTNAME=	ufc-2.0.5
-PKGREVISION=	1
+DISTNAME=	ufc-2.1.0
+# PKGREVISION=	1
 CATEGORIES=	math
-MASTER_SITES=	http://launchpad.net/ufc/2.0.x/2.0.5/+download/
+MASTER_SITES=	http://launchpad.net/ufc/2.1.x/2.1.0/+download/
 
 MAINTAINER=	jwbacon@tds.net
-HOMEPAGE=	http://launchpad.net/ufc/2.0.x/2.0.5/+download/
+HOMEPAGE=	https://launchpad.net/ufc
 COMMENT=	Unified framework for finite element assembly
 LICENSE=	public-domain
 
@@ -19,6 +19,7 @@ USE_CMAKE=	yes
 
 .include "../../mk/bsd.prefs.mk"
 
+# Cmake's FindSWIG looks first for swig2.0, then for swig
 CMAKE_ARGS+=	-DCMAKE_VERBOSE_MAKEFILE:BOOL=ON
 
 # Needed on OS X
@@ -35,7 +36,11 @@ SUBST_STAGE.ospath=	post-patch
 SUBST_FILES.ospath=	src/utils/python/ufc_utils/build.py
 SUBST_SED.ospath=	-e 's|os.path.join(os.path.sep, "opt", "local")|os.path.normpath("${PREFIX}")|' -e 's|os.path.join(os.path.sep, "usr")|os.path.normpath("${PREFIX}")|'
 
+pre-configure:
+	which cmake
+	echo ${CMAKE}
+
 .include "../../lang/python/application.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
-.include "../../devel/swig2/buildlink3.mk"
+.include "../../wip/swig2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
