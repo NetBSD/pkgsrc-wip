@@ -1,20 +1,22 @@
-# $NetBSD: Makefile,v 1.3 2012/10/07 11:54:33 asau Exp $
+# $NetBSD: Makefile,v 1.4 2013/03/23 13:29:16 outpaddling Exp $
 #
 
-DISTNAME=	fiat-1.0.0
+DISTNAME=	fiat-${MMVERSION}.0
 CATEGORIES=	math python
-MASTER_SITES=	http://launchpad.net/fiat/1.0.x/1.0.0/+download/
+MASTER_SITES=	http://launchpad.net/fiat/${MMVERSION}.x/${MMVERSION}.0/+download/
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 
 MAINTAINER=	jwbacon@tds.net
 HOMEPAGE=	https://launchpad.net/fiat
-COMMENT=	FInite element Automatic Tabulator
+COMMENT=	Finite element Automatic Tabulator
 
 FETCH_USING=	curl
 
 LICENSE=	gnu-lgpl-v3
 
 PYDISTUTILSPKG=	yes
+
+MMVERSION=	1.1
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
