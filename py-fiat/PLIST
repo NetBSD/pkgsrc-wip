@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/03/27 15:20:10 outpaddling Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/03/23 13:41:02 outpaddling Exp $
 ${PYSITELIB}/FIAT/P0.py
 ${PYSITELIB}/FIAT/P0.pyc
 ${PYSITELIB}/FIAT/P0.pyo
@@ -14,6 +14,9 @@ ${PYSITELIB}/FIAT/asci2vtk2d.pyo
 ${PYSITELIB}/FIAT/asci2vtk3d.py
 ${PYSITELIB}/FIAT/asci2vtk3d.pyc
 ${PYSITELIB}/FIAT/asci2vtk3d.pyo
+${PYSITELIB}/FIAT/brezzi_douglas_fortin_marini.py
+${PYSITELIB}/FIAT/brezzi_douglas_fortin_marini.pyc
+${PYSITELIB}/FIAT/brezzi_douglas_fortin_marini.pyo
 ${PYSITELIB}/FIAT/brezzi_douglas_marini.py
 ${PYSITELIB}/FIAT/brezzi_douglas_marini.pyc
 ${PYSITELIB}/FIAT/brezzi_douglas_marini.pyo
