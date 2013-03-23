@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2013/03/23 13:22:33 outpaddling Exp $
+@comment $NetBSD: PLIST,v 1.3 2013/03/23 13:33:57 outpaddling Exp $
 bin/ffc
 ${PYSITELIB}/ffc/__init__.py
 ${PYSITELIB}/ffc/__init__.pyc
@@ -177,4 +177,4 @@ ${PYSITELIB}/ffc/utils.pyo
 ${PYSITELIB}/ffc/wrappers.py
 ${PYSITELIB}/ffc/wrappers.pyc
 ${PYSITELIB}/ffc/wrappers.pyo
-share/man/man1/ffc.1.gz
+man/man1/ffc.1.gz

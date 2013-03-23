@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2013/03/23 13:22:33 outpaddling Exp $
+# $NetBSD: Makefile,v 1.7 2013/03/23 13:33:57 outpaddling Exp $
 #
 
 DISTNAME=	ffc-${MMVERSION}.0
@@ -17,6 +17,11 @@ FETCH_USING=	curl
 PYDISTUTILSPKG=	yes
 
 MMVERSION=	1.1
+
+SUBST_CLASSES+=		man
+SUBST_FILES.man=	setup.py
+SUBST_STAGE.man=	post-patch
+SUBST_SED.man=		-e 's|"share", ||g'
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
