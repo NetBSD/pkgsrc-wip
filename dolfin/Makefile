@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2012/11/20 17:33:18 outpaddling Exp $
+# $NetBSD: Makefile,v 1.17 2013/03/23 18:29:58 outpaddling Exp $
 #
 
-DISTNAME=	dolfin-1.0.0
-PKGREVISION=	1
+DISTNAME=	dolfin-${MMVERSION}.0
 CATEGORIES=	math python
-MASTER_SITES=	http://launchpad.net/dolfin/1.0.x/1.0.0/+download/
+MASTER_SITES=	http://launchpad.net/dolfin/${MMVERSION}.x/${MMVERSION}.0/+download/
 
 MAINTAINER=	jwbacon@tds.net
 HOMEPAGE=	https://launchpad.net/dolfin
@@ -37,6 +36,8 @@ CMAKE_ARGS+=	-DCMAKE_VERBOSE_MAKEFILE:BOOL=ON \
 #		-DARMADILLO_DIR:PATH=${LOCALBASE} \
 
 .include "../../mk/bsd.prefs.mk"
+
+CXXFLAGS+=	-fpermissive
 
 .if ${OPSYS} == "Darwin"
 CXXFLAGS+=	-I${LOCALBASE}/${PYINC}
@@ -81,6 +82,8 @@ SUBST_SED.dolfinconf=	-e 's|${WRKDIR}/.buildlink|${PREFIX}|g' \
 
 # From lang/python/extension.mk
 PLIST_SUBST+=   PYSITELIB=${PYSITELIB}
+
+MMVERSION=	1.1
 
 .include "../../lang/python/application.mk"
 .include "../../wip/armadillo/buildlink3.mk"
