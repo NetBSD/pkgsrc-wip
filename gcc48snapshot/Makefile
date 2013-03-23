@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2013/03/22 14:28:49 keckhardt Exp $
+# $NetBSD: Makefile,v 1.8 2013/03/23 14:21:05 keckhardt Exp $
 
 GCC_PKGNAME=		gcc48snapshot
 #.include		"version.mk"
 
-GCC_VERSION=	4.8.0-RC-20130316
+GCC_VERSION=	4.8.0
 DISTNAME=	gcc-${GCC_VERSION}
 PKGNAME=	${GCC_PKGNAME}-${GCC_VERSION}
 ## When bumping the PKGREVISION of this package the PKGREVISION of
@@ -11,7 +11,7 @@ PKGNAME=	${GCC_PKGNAME}-${GCC_VERSION}
 ## PKGREVISION of this package!
 #PKGREVISION=	1
 CATEGORIES=	lang
-MASTER_SITES=	${MASTER_SITE_GNU:=gcc/snapshots/${GCC_VERSION}/}
+MASTER_SITES=	${MASTER_SITE_GNU:=gcc/gcc-${GCC_VERSION}/}
 #MASTER_SITES=	ftp://ftp.fu-berlin.de/unix/languages/gcc/snapshots/${GCC_VERSION}/
 EXTRACT_SUFX=	.tar.bz2
 
