@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2012/11/11 22:24:02 outpaddling Exp $
+@comment $NetBSD: PLIST,v 1.6 2013/03/23 13:07:42 outpaddling Exp $
 bin/ccache-swig2.0
 bin/swig2.0
 man/man1/ccache-swig2.0.1
@@ -25,6 +25,21 @@ share/examples/swig/2.0/android/class/project.properties
 share/examples/swig/2.0/android/class/res/layout/main.xml
 share/examples/swig/2.0/android/class/res/values/strings.xml
 share/examples/swig/2.0/android/class/src/org/swig/classexample/SwigClass.java
+share/examples/swig/2.0/android/extend/AndroidManifest.xml
+share/examples/swig/2.0/android/extend/Makefile
+share/examples/swig/2.0/android/extend/ant.properties
+share/examples/swig/2.0/android/extend/build.xml
+share/examples/swig/2.0/android/extend/jni/Android.mk
+share/examples/swig/2.0/android/extend/jni/Application.mk
+share/examples/swig/2.0/android/extend/jni/example.cpp
+share/examples/swig/2.0/android/extend/jni/example.h
+share/examples/swig/2.0/android/extend/jni/example.i
+share/examples/swig/2.0/android/extend/local.properties
+share/examples/swig/2.0/android/extend/proguard.cfg
+share/examples/swig/2.0/android/extend/project.properties
+share/examples/swig/2.0/android/extend/res/layout/main.xml
+share/examples/swig/2.0/android/extend/res/values/strings.xml
+share/examples/swig/2.0/android/extend/src/org/swig/extendexample/SwigExtend.java
 share/examples/swig/2.0/android/simple/AndroidManifest.xml
 share/examples/swig/2.0/android/simple/Makefile
 share/examples/swig/2.0/android/simple/ant.properties
@@ -1428,6 +1443,7 @@ share/examples/swig/2.0/test-suite/csharp_features.i
 share/examples/swig/2.0/test-suite/csharp_lib_arrays.i
 share/examples/swig/2.0/test-suite/csharp_prepost.i
 share/examples/swig/2.0/test-suite/csharp_typemaps.i
+share/examples/swig/2.0/test-suite/curiously_recurring_template_pattern.i
 share/examples/swig/2.0/test-suite/d/Makefile
 share/examples/swig/2.0/test-suite/d/README
 share/examples/swig/2.0/test-suite/d/aggregate_runme.1.d
@@ -1550,6 +1566,7 @@ share/examples/swig/2.0/test-suite/director_namespace_clash.i
 share/examples/swig/2.0/test-suite/director_nested.i
 share/examples/swig/2.0/test-suite/director_nspace.i
 share/examples/swig/2.0/test-suite/director_overload.i
+share/examples/swig/2.0/test-suite/director_overload2.i
 share/examples/swig/2.0/test-suite/director_primitives.i
 share/examples/swig/2.0/test-suite/director_profile.i
 share/examples/swig/2.0/test-suite/director_protected.i
@@ -1601,6 +1618,7 @@ share/examples/swig/2.0/test-suite/errors/cpp_extend_undefined.i
 share/examples/swig/2.0/test-suite/errors/cpp_inherit.i
 share/examples/swig/2.0/test-suite/errors/cpp_inline_namespace.i
 share/examples/swig/2.0/test-suite/errors/cpp_macro_locator.i
+share/examples/swig/2.0/test-suite/errors/cpp_missing_rparenthesis.i
 share/examples/swig/2.0/test-suite/errors/cpp_missing_rtemplate.i
 share/examples/swig/2.0/test-suite/errors/cpp_namespace_alias.i
 share/examples/swig/2.0/test-suite/errors/cpp_namespace_aliasnot.i
@@ -1670,6 +1688,7 @@ share/examples/swig/2.0/test-suite/extend.i
 share/examples/swig/2.0/test-suite/extend_constructor_destructor.i
 share/examples/swig/2.0/test-suite/extend_default.i
 share/examples/swig/2.0/test-suite/extend_placement.i
+share/examples/swig/2.0/test-suite/extend_special_variables.i
 share/examples/swig/2.0/test-suite/extend_template.i
 share/examples/swig/2.0/test-suite/extend_template_ns.i
 share/examples/swig/2.0/test-suite/extend_typedef_class.i
@@ -1911,6 +1930,7 @@ share/examples/swig/2.0/test-suite/java/arrays_global_twodim_runme.java
 share/examples/swig/2.0/test-suite/java/char_binary_runme.java
 share/examples/swig/2.0/test-suite/java/char_strings_runme.java
 share/examples/swig/2.0/test-suite/java/cpp_typedef_runme.java
+share/examples/swig/2.0/test-suite/java/curiously_recurring_template_pattern_runme.java
 share/examples/swig/2.0/test-suite/java/default_args_runme.java
 share/examples/swig/2.0/test-suite/java/default_constructor_runme.java
 share/examples/swig/2.0/test-suite/java/director_abstract_runme.java
@@ -1938,6 +1958,7 @@ share/examples/swig/2.0/test-suite/java/enum_thorough_simple_runme.java
 share/examples/swig/2.0/test-suite/java/enum_thorough_typeunsafe_runme.java
 share/examples/swig/2.0/test-suite/java/extend_constructor_destructor_runme.java
 share/examples/swig/2.0/test-suite/java/extend_default_runme.java
+share/examples/swig/2.0/test-suite/java/extend_special_variables_runme.java
 share/examples/swig/2.0/test-suite/java/extend_typedef_class_runme.java
 share/examples/swig/2.0/test-suite/java/extern_declaration_runme.java
 share/examples/swig/2.0/test-suite/java/friends_runme.java
@@ -2614,6 +2635,7 @@ share/examples/swig/2.0/test-suite/python/global_ns_arg_runme.py
 share/examples/swig/2.0/test-suite/python/grouping_runme.py
 share/examples/swig/2.0/test-suite/python/hugemod.pl
 share/examples/swig/2.0/test-suite/python/iadd_runme.py
+share/examples/swig/2.0/test-suite/python/implicittest_runme.py
 share/examples/swig/2.0/test-suite/python/import_nomodule_runme.py
 share/examples/swig/2.0/test-suite/python/import_stl_runme.py
 share/examples/swig/2.0/test-suite/python/imports_runme.py
@@ -3154,6 +3176,7 @@ share/examples/swig/2.0/test-suite/typedef_sizet.i
 share/examples/swig/2.0/test-suite/typedef_struct.i
 share/examples/swig/2.0/test-suite/typemap_arrays.i
 share/examples/swig/2.0/test-suite/typemap_delete.i
+share/examples/swig/2.0/test-suite/typemap_directorout.i
 share/examples/swig/2.0/test-suite/typemap_global_scope.i
 share/examples/swig/2.0/test-suite/typemap_manyargs.i
 share/examples/swig/2.0/test-suite/typemap_namespace.i
