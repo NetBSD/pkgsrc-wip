@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/09/28 23:21:49 asau Exp $
+# $NetBSD: Makefile,v 1.3 2013/03/23 08:37:36 shattered Exp $
 #
 
 DISTNAME=	freecell-1.0
@@ -12,6 +12,7 @@ COMMENT=	Console version of the solitaire game Freecell
 LICENSE=	gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
+CURSES_DEFAULT=	ncurses
 
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

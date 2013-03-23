@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/09/30 05:39:45 asau Exp $
+# $NetBSD: Makefile,v 1.8 2013/03/23 08:37:36 shattered Exp $
 
 DISTNAME=	ipsvd-1.0.0
 CATEGORIES=	net
@@ -17,7 +17,7 @@ DJB_SLASHPACKAGE=	YES
 
 DOCS=		package/CHANGES package/COPYING package/README doc/*.html
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man5 ${PKGMANDIR}/man7 ${PKGMANDIR}/man8
+INSTALLATION_DIRS=	sbin ${PKGMANDIR}/man5 ${PKGMANDIR}/man7 ${PKGMANDIR}/man8
 
 do-install:
 	${INSTALL_PROGRAM} ${CMDDIR}/* ${DESTDIR}${PREFIX}/sbin

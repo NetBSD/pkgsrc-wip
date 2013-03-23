@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2012/09/24 17:14:36 asau Exp $
+# $NetBSD: Makefile,v 1.26 2013/03/23 08:37:36 shattered Exp $
 #
 
 DISTNAME=		BNR2beta-0.14.7
@@ -17,6 +17,7 @@ EMUL_MODULES.linux=	jpeg x11
 
 WRKSRC=			${WRKDIR}/BNR2
 BUILD_DIRS=		# empty
+INSTALLATION_DIRS=	bin
 
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	pre-install

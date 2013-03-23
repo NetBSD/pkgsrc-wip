@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/09/30 05:44:15 asau Exp $
+# $NetBSD: Makefile,v 1.4 2013/03/23 08:37:36 shattered Exp $
 #
 
 DISTNAME=	ipamjm00201
@@ -15,6 +15,7 @@ LICENSE=	ipafont
 USE_LANGUAGES=	# none
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
+WRKSRC=		${WRKDIR}
 
 DOCS_DIR=	${PREFIX}/share/doc/${PKGBASE}
 
@@ -26,7 +27,7 @@ FONTS_DIRS.ttf=	${FONTS_DIR}
 
 INSTALL_FONTS=	ipamjm.ttf
 INSTALL_DOCS=	IPA_Font_License_Agreement_v1.0.txt \
-		Readme_ipamjm001.01.txt
+		Readme_ipamjm002.01.txt
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/${INSTALL_FONTS} \
