@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5163 2013/03/23 08:50:31 ryo-on Exp $
+# $Id: Makefile,v 1.5164 2013/03/23 21:08:09 kristerw Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2908,6 +2908,7 @@ SUBDIR+=	s3cmd
 SUBDIR+=	s3funnel
 SUBDIR+=	samba
 SUBDIR+=	samhain
+SUBDIR+=	sandy
 SUBDIR+=	sara
 SUBDIR+=	sarf
 SUBDIR+=	saxon
