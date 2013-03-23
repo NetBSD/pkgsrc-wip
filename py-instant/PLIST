@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/03/27 15:42:16 outpaddling Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/03/23 14:53:14 outpaddling Exp $
 bin/instant-clean
 bin/instant-showcache
 ${PYSITELIB}/instant/__init__.py
@@ -32,5 +32,5 @@ ${PYSITELIB}/instant/signatures.py
 ${PYSITELIB}/instant/signatures.pyc
 ${PYSITELIB}/instant/signatures.pyo
 ${PYSITELIB}/instant/swig/numpy.i
-share/man/man1/instant-clean.1
-share/man/man1/instant-showcache.1
+man/man1/instant-clean.1
+man/man1/instant-showcache.1

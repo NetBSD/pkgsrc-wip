@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2012/03/27 15:42:16 outpaddling Exp $
+$NetBSD: distinfo,v 1.2 2013/03/23 14:53:14 outpaddling Exp $
 
-SHA1 (instant-1.0.0.tar.gz) = b8615d1bbadc78a0997ec21501b58a164ddfc35a
-RMD160 (instant-1.0.0.tar.gz) = fb2fed90b2dafdae1829d61cbec7f9271740789a
-Size (instant-1.0.0.tar.gz) = 124652 bytes
+SHA1 (instant-1.1.0.tar.gz) = 53408062eac6375ad5bfe3df0214a0aedc486e93
+RMD160 (instant-1.1.0.tar.gz) = 6edde65e1ff0fdf36240fe1cc88fd0e7b4b0c457
+Size (instant-1.1.0.tar.gz) = 124878 bytes

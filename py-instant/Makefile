@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2012/10/07 11:54:45 asau Exp $
+# $NetBSD: Makefile,v 1.4 2013/03/23 14:53:14 outpaddling Exp $
 #
 
-DISTNAME=	instant-1.0.0
+DISTNAME=	instant-${MMVERSION}.0
 CATEGORIES=	devel python
-MASTER_SITES=	http://launchpad.net/instant/1.0.x/1.0.0/+download/
+MASTER_SITES=	http://launchpad.net/instant/${MMVERSION}.x/${MMVERSION}.0/+download/
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 
 MAINTAINER=	jwbacon@tds.net
@@ -16,6 +16,14 @@ LICENSE=	gnu-lgpl-v3
 
 PYDISTUTILSPKG=	yes
 
+MMVERSION=	1.1
+
+SUBST_CLASSES+=		man
+SUBST_FILES.man=	setup.py
+SUBST_STAGE.man=	post-patch
+SUBST_SED.man=		-e 's|"share", ||g'
+
 # todo: depends on swig, distutils
 .include "../../lang/python/extension.mk"
+.include "../../wip/swig2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
