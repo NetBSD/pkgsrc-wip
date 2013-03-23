@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2013/03/23 15:08:23 outpaddling Exp $
+# $NetBSD: Makefile,v 1.12 2013/03/23 15:11:55 outpaddling Exp $
 #
 
 DISTNAME=	ufc-2.1.0
@@ -14,6 +14,7 @@ LICENSE=	public-domain
 FETCH_USING=	curl
 
 USE_TOOLS+=	pkg-config
+# to do: Also depends on python
 USE_LANGUAGES=	c c++
 USE_CMAKE=	yes
 
