@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2013/03/23 13:00:14 outpaddling Exp $
+# $NetBSD: Makefile,v 1.11 2013/03/23 15:08:23 outpaddling Exp $
 #
 
 DISTNAME=	ufc-2.1.0
@@ -14,7 +14,7 @@ LICENSE=	public-domain
 FETCH_USING=	curl
 
 USE_TOOLS+=	pkg-config
-USE_LANGUAGES=	c c++ python
+USE_LANGUAGES=	c c++
 USE_CMAKE=	yes
 
 .include "../../mk/bsd.prefs.mk"
@@ -24,7 +24,7 @@ CMAKE_ARGS+=	-DCMAKE_VERBOSE_MAKEFILE:BOOL=ON
 
 # Needed on OS X
 # Not needed on NetBSD
-CXXFLAGS+=	-I${LOCALBASE}/${PYINC}
+CXXFLAGS+=	-I${PREFIX}/${PYINC}
 
 PKGCONFIG_OVERRIDE+=	cmake/ufc-1.pc.in
 
@@ -34,11 +34,8 @@ PLIST_SUBST+=   PYINC=${PYINC} PYLIB=${PYLIB} PYSITELIB=${PYSITELIB}
 SUBST_CLASSES+=		ospath
 SUBST_STAGE.ospath=	post-patch
 SUBST_FILES.ospath=	src/utils/python/ufc_utils/build.py
-SUBST_SED.ospath=	-e 's|os.path.join(os.path.sep, "opt", "local")|os.path.normpath("${PREFIX}")|' -e 's|os.path.join(os.path.sep, "usr")|os.path.normpath("${PREFIX}")|'
-
-pre-configure:
-	which cmake
-	echo ${CMAKE}
+SUBST_SED.ospath=	-e 's|os.path.join(os.path.sep, "opt", "local")|os.path.normpath("${PREFIX}")|'
+SUBST_SED.ospath+=	-e 's|os.path.join(os.path.sep, "usr")|os.path.normpath("${PREFIX}")|'
 
 .include "../../lang/python/application.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
