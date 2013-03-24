@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2013/03/23 14:21:05 keckhardt Exp $
+# $NetBSD: Makefile,v 1.9 2013/03/24 08:06:54 keckhardt Exp $
 
 GCC_PKGNAME=		gcc48snapshot
 #.include		"version.mk"
@@ -75,12 +75,9 @@ CONFIGURE_ARGS+=	--disable-bootstrap
 .endif
 
 
-.if !empty(LOWER_ARCH:Mi386)
-.if !empty(OPSYS:MNetBSD) || !empty(OPSYS:MLinux)
+.if !empty(MACHINE_PLATFORM:MNetBSD-*-i386) || !empty(MACHINE_PLATFORM:MLinux-*-i386)
 CONFIGURE_ARGS+=	--with-arch=i486 --with-tune=i486
 .endif
-.endif
-
 
 .include "options.mk"
 
