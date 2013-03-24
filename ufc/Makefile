@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2013/03/23 15:11:55 outpaddling Exp $
+# $NetBSD: Makefile,v 1.13 2013/03/24 20:17:23 outpaddling Exp $
 #
 
-DISTNAME=	ufc-2.1.0
-# PKGREVISION=	1
+DISTNAME=	ufc-${MMVERSION}.0
 CATEGORIES=	math
-MASTER_SITES=	http://launchpad.net/ufc/2.1.x/2.1.0/+download/
+MASTER_SITES=	http://launchpad.net/ufc/${MMVERSION}.x/${MMVERSION}.0/+download/
 
 MAINTAINER=	jwbacon@tds.net
 HOMEPAGE=	https://launchpad.net/ufc
@@ -31,6 +30,8 @@ PKGCONFIG_OVERRIDE+=	cmake/ufc-1.pc.in
 
 # Stolen from lang/python/extension.mk
 PLIST_SUBST+=   PYINC=${PYINC} PYLIB=${PYLIB} PYSITELIB=${PYSITELIB}
+
+MMVERSION=	2.2
 
 SUBST_CLASSES+=		ospath
 SUBST_STAGE.ospath=	post-patch
