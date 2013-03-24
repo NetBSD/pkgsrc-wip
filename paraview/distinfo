@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.5 2012/11/11 13:56:09 slitvinov Exp $
+$NetBSD: distinfo,v 1.6 2013/03/24 22:06:08 slitvinov Exp $
 
-SHA1 (ParaView-3.14.1-Source.tar.gz) = 1326c6e941fb9d12c548b14ca10932b49b5e3ffd
-RMD160 (ParaView-3.14.1-Source.tar.gz) = 7d52c8730d6b2156db6ec3fe5decdf1018b997d2
-Size (ParaView-3.14.1-Source.tar.gz) = 41471770 bytes
-SHA1 (patch-aa) = 660419ac6645c3dfb53f5af35d76be73aac091e0
+SHA1 (ParaView-3.98.0-src.tgz) = 3c3f82eba8ce9f82da6dcde3d1e532f819270bcf
+RMD160 (ParaView-3.98.0-src.tgz) = 520ba4c319d81f8badb0b1e15897e87df182d47b
+Size (ParaView-3.98.0-src.tgz) = 42160789 bytes

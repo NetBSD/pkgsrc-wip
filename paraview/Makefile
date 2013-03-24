@@ -1,11 +1,13 @@
-# $NetBSD: Makefile,v 1.8 2012/11/11 13:56:09 slitvinov Exp $
+# $NetBSD: Makefile,v 1.9 2013/03/24 22:06:07 slitvinov Exp $
 #
 
-VER=3.14.1
+VER=3.98.0
 PKGNAME=	paraview-${VER}
-DISTNAME=	ParaView-${VER}-Source
+#DISTNAME=	ParaView-${VER}-source
+DISTNAME=	ParaView-${VER}-src
+EXTRACT_SUFX=	.tgz
 CATEGORIES=	graphics
-MASTER_SITES=	http://www.paraview.org/files/v3.14/
+MASTER_SITES=	http://www.paraview.org/files/v3.98/
 
 MAINTAINER=	pouya@san-serriffe.org
 HOMEPAGE=	http://www.paraview.org/
@@ -23,7 +25,12 @@ CMAKE_ARGS+=			-DCMAKE_BUILD_TYPE=Release
 CMAKE_ARGS+=			-DBUILD_SHARED_LIBS=ON
 CMAKE_ARGS+=			-DPARAVIEW_USE_MPI=OFF
 CMAKE_ARGS+=			-DVTK_USE_SYSTEM_HDF5=ON
+
+# python related options
 CMAKE_ARGS+=			-DPARAVIEW_ENABLE_PYTHON=ON
+CMAKE_ARGS+=			-DPYTHON_LIBRARY=${PREFIX}/lib/libpython${PYVERSSUFFIX}.so
+CMAKE_ARGS+=			-DPYTHON_INCLUDE_DIR=${PREFIX}/${PYINC}
+
 CMAKE_ARGS+=			-DPARAVIEW_BUILD_QT_GUI=ON
 CMAKE_ARGS+=			-DPARAVIEW_INSTALL_DEVELOPMENT=ON
 CMAKE_ARGS+=			-DPARAVIEW_GENERATE_PROXY_DOCUMENTATION=ON
@@ -48,7 +55,15 @@ PY_PATCHPLIST=			yes
 
 # to make protoc work during installation
 # http://paraview.org/Bug/view.php?id=12852
-MAKE_ENV+=			LD_LIBRARY_PATH=${WRKSRC}/_ParaView_build/bin/
+# 
+# For 3.98 it fails to run vtkkwProcessXML-pv3.98
+# with the following error message
+# _ParaView_build/bin/vtkkwProcessXML-pv3.98: error while loading
+# shared libraries: libvtkCommonCore-pv3.98.so.1: cannot open shared
+# object file: No such file or directory
+# 
+# I add ${WRKSRC}/_ParaView_build/lib/ to LD_LIBRARY_PATH to solve it
+MAKE_ENV+=			LD_LIBRARY_PATH=${WRKSRC}/_ParaView_build/bin:${WRKSRC}/_ParaView_build/lib/
 
 pre-configure:
 	${MKDIR} ${WRKSRC}/_ParaView_build
@@ -73,6 +88,5 @@ pre-configure:
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 #.include "../../databases/sqlite3/buildlink3.mk"
-
 
 .include "../../mk/bsd.pkg.mk"
