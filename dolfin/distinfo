@@ -1,10 +1,8 @@
-$NetBSD: distinfo,v 1.7 2013/03/23 18:29:58 outpaddling Exp $
+$NetBSD: distinfo,v 1.8 2013/03/24 20:35:26 outpaddling Exp $
 
-SHA1 (dolfin-1.1.0.tar.gz) = 09570d29bdb13acd0b2d06b86b9d09ea67adf9d2
-RMD160 (dolfin-1.1.0.tar.gz) = 6a012942c637b51372bd18640e39f793167bef2b
-Size (dolfin-1.1.0.tar.gz) = 10192777 bytes
-SHA1 (patch-cmake_modules-FindCHOLMOD.cmake) = 4f80243ecf7d0735b51188eca3a0af1e1cf81922
+SHA1 (dolfin-1.2.0.tar.gz) = bd2be4b18dcd5ef96eb01ef6996c40e32ee03b47
+RMD160 (dolfin-1.2.0.tar.gz) = b35dcc8d4a4fac1dd3c3e719297501744c104d51
+Size (dolfin-1.2.0.tar.gz) = 10144756 bytes
 SHA1 (patch-dolfin_adaptivity_ErrorControl.h) = 696e7b3516b04efac311831e0a5397ef810f4f83
 SHA1 (patch-dolfin_fem_LinearVariationalProblem.h) = e6d53cd3c43d2498358680d4877fd6900d97e148
 SHA1 (patch-dolfin_io_HDF5Interface.h) = 9e1cd9bad3b2334f8a7ad1f9f24f2bf3db329ea7
-SHA1 (patch-dolfin_la_uBLASKrylovSolver.cpp) = 0ff9ce16aa7288425ff14f7e4cdd0e8d06e83f4a

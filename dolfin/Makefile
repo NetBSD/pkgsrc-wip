@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2013/03/23 18:29:58 outpaddling Exp $
+# $NetBSD: Makefile,v 1.18 2013/03/24 20:35:26 outpaddling Exp $
 #
 
 DISTNAME=	dolfin-${MMVERSION}.0
@@ -83,7 +83,7 @@ SUBST_SED.dolfinconf=	-e 's|${WRKDIR}/.buildlink|${PREFIX}|g' \
 # From lang/python/extension.mk
 PLIST_SUBST+=   PYSITELIB=${PYSITELIB}
 
-MMVERSION=	1.1
+MMVERSION=	1.2
 
 .include "../../lang/python/application.mk"
 .include "../../wip/armadillo/buildlink3.mk"

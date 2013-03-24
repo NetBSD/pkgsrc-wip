@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2013/03/23 13:33:57 outpaddling Exp $
+# $NetBSD: Makefile,v 1.8 2013/03/24 20:37:45 outpaddling Exp $
 #
 
 DISTNAME=	ffc-${MMVERSION}.0
@@ -16,7 +16,7 @@ FETCH_USING=	curl
 
 PYDISTUTILSPKG=	yes
 
-MMVERSION=	1.1
+MMVERSION=	1.2
 
 SUBST_CLASSES+=		man
 SUBST_FILES.man=	setup.py
