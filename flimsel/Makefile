@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2012/09/28 23:21:48 asau Exp $
+# $NetBSD: Makefile,v 1.12 2013/03/24 02:18:51 othyro Exp $
 #
 
 DISTNAME=	flimsel-0.0.9
@@ -13,6 +13,7 @@ LICENSE=	gnu-gpl-v3
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
 
+.include "../../devel/libltdl/buildlink3.mk"
 .include "../../graphics/epeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../x11/fltk13/buildlink3.mk"
