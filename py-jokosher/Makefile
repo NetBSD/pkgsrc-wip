@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/01/10 14:15:40 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2013/03/24 13:01:22 othyro Exp $
 #
 
 DISTNAME=	jokosher-0.11.5
@@ -24,6 +24,8 @@ SUBST_MESSAGE.share=	Fixing PREFIX/share path.
 SUBST_STAGE.share=	pre-install
 SUBST_SED.share=	-e 's,/usr/share/,${PREFIX}/share/,g'
 
+REPLACE_PYTHON+=	Jokosher/JokosherApp.py Jokosher/Profiler.py
+
 PY_PATCHPLIST=		yes
 
 do-build:
@@ -32,6 +34,7 @@ do-build:
 do-install:
 	cd ${WRKSRC} && ${SETENV} ${INSTALL_ENV} ${PYTHONBIN} setup.py install --root=${DESTDIR}
 
+.include "../../textproc/rarian/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
