@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2013/03/23 14:58:26 outpaddling Exp $
+# $NetBSD: Makefile,v 1.5 2013/03/24 20:47:00 outpaddling Exp $
 #
 
 DISTNAME=	ufl-${MMVERSION}.0
@@ -16,7 +16,7 @@ LICENSE=	gnu-lgpl-v3
 
 PYDISTUTILSPKG=	yes
 
-MMVERSION=	1.1
+MMVERSION=	1.2
 
 SUBST_CLASSES+=		man
 SUBST_FILES.man=	setup.py

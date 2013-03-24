@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2013/03/23 14:58:26 outpaddling Exp $
+@comment $NetBSD: PLIST,v 1.3 2013/03/24 20:47:00 outpaddling Exp $
 bin/form2ufl
 bin/ufl-analyse
 bin/ufl-convert
@@ -28,6 +28,9 @@ ${PYSITELIB}/ufl/algorithms/checks.pyo
 ${PYSITELIB}/ufl/algorithms/deprecated.py
 ${PYSITELIB}/ufl/algorithms/deprecated.pyc
 ${PYSITELIB}/ufl/algorithms/deprecated.pyo
+${PYSITELIB}/ufl/algorithms/domain_analysis.py
+${PYSITELIB}/ufl/algorithms/domain_analysis.pyc
+${PYSITELIB}/ufl/algorithms/domain_analysis.pyo
 ${PYSITELIB}/ufl/algorithms/elementtransformations.py
 ${PYSITELIB}/ufl/algorithms/elementtransformations.pyc
 ${PYSITELIB}/ufl/algorithms/elementtransformations.pyo
@@ -82,9 +85,6 @@ ${PYSITELIB}/ufl/algorithms/renumbering.pyo
 ${PYSITELIB}/ufl/algorithms/replace.py
 ${PYSITELIB}/ufl/algorithms/replace.pyc
 ${PYSITELIB}/ufl/algorithms/replace.pyo
-${PYSITELIB}/ufl/algorithms/reverse_ad.py
-${PYSITELIB}/ufl/algorithms/reverse_ad.pyc
-${PYSITELIB}/ufl/algorithms/reverse_ad.pyo
 ${PYSITELIB}/ufl/algorithms/signature.py
 ${PYSITELIB}/ufl/algorithms/signature.pyc
 ${PYSITELIB}/ufl/algorithms/signature.pyo
@@ -130,6 +130,9 @@ ${PYSITELIB}/ufl/constantvalue.pyo
 ${PYSITELIB}/ufl/differentiation.py
 ${PYSITELIB}/ufl/differentiation.pyc
 ${PYSITELIB}/ufl/differentiation.pyo
+${PYSITELIB}/ufl/domains.py
+${PYSITELIB}/ufl/domains.pyc
+${PYSITELIB}/ufl/domains.pyo
 ${PYSITELIB}/ufl/equation.py
 ${PYSITELIB}/ufl/equation.pyc
 ${PYSITELIB}/ufl/equation.pyo
@@ -193,9 +196,6 @@ ${PYSITELIB}/ufl/indexutils.pyo
 ${PYSITELIB}/ufl/integral.py
 ${PYSITELIB}/ufl/integral.pyc
 ${PYSITELIB}/ufl/integral.pyo
-${PYSITELIB}/ufl/lifting.py
-${PYSITELIB}/ufl/lifting.pyc
-${PYSITELIB}/ufl/lifting.pyo
 ${PYSITELIB}/ufl/log.py
 ${PYSITELIB}/ufl/log.pyc
 ${PYSITELIB}/ufl/log.pyo
