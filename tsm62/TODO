@@ -1,5 +1,6 @@
-# $NetBSD: TODO,v 1.1 2013/03/25 15:52:51 hfath Exp $
+# $NetBSD: TODO,v 1.2 2013/03/25 16:21:55 hfath Exp $
 
 - Work out license and distribution rules
 - pkg_delete(8) complains about missing files during pkg delete - apparently,
   it attempts to delete the PLIST files twice?
+- Support amd64 - the rpms are included.
