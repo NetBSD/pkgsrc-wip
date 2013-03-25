@@ -1,6 +1,6 @@
-$NetBSD: patch-config.m4,v 1.1 2013/03/19 11:57:28 kaosagnt Exp $
+$NetBSD: patch-config.m4,v 1.2 2013/03/25 12:58:01 fhajny Exp $
 
---- config.m4.orig	2013-03-11 13:44:55.000000000 +0000
+--- config.m4.orig	2012-05-30 20:21:12.000000000 +0000
 +++ config.m4
 @@ -32,6 +32,7 @@ if test $PHP_IMAGICK != "no"; then
  
@@ -10,13 +10,11 @@ $NetBSD: patch-config.m4,v 1.1 2013/03/19 11:57:28 kaosagnt Exp $
  
    AC_MSG_CHECKING(if ImageMagick version is at least 6.2.4)
    if test "$IMAGEMAGICK_VERSION_MASK" -ge 6002004; then
-@@ -52,8 +53,8 @@ if test $PHP_IMAGICK != "no"; then
-   else	
-     AC_MSG_CHECKING(for MagickWand.h header file)
+@@ -54,6 +55,8 @@ if test $PHP_IMAGICK != "no"; then
  
--    if test -r $WAND_DIR/include/ImageMagick/wand/MagickWand.h; then
--      AC_MSG_RESULT(found in $WAND_DIR/include/ImageMagick/wand/MagickWand.h)
-+    if test -r $WAND_DIR/include/ImageMagick-${IMAGEMAGICK_VERSION_MAJOR}/wand/MagickWand.h; then
+     if test -r $WAND_DIR/include/ImageMagick/wand/MagickWand.h; then
+       AC_MSG_RESULT(found in $WAND_DIR/include/ImageMagick/wand/MagickWand.h)
++    elif test -r $WAND_DIR/include/ImageMagick-${IMAGEMAGICK_VERSION_MAJOR}/wand/MagickWand.h; then
 +      AC_MSG_RESULT(found in $WAND_DIR/include/ImageMagick-${IMAGEMAGICK_VERSION_MAJOR}/wand/MagickWand.h)
      else
        AC_MSG_ERROR(Cannot locate header file MagickWand.h)
