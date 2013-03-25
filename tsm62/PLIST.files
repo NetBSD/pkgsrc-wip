@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST.files,v 1.1 2013/03/25 15:52:51 hfath Exp $
-share/examples/tsm/dsm.opt.smp
-share/examples/tsm/dsm.sys.smp
-share/examples/tsm/tsm_daily.sh
-emul/linux/etc/ld.so.conf.dir/tsm_ld.so.conf
-@exec ${RM} -f ${PKG_SYSCONFDIR}/EN_US && ${LN} -s ${EMULDIR}/${TSMCLIENTSUBDIR}/lang/EN_US/ ${PKG_SYSCONFDIR}/EN_US
-@exec ${LN} -s ${PKG_SYSCONFDIR}/dsm.sys ${EMULDIR}/${TSMCLIENTSUBDIR}/ba/bin/
-@unexec ${RM} -f ${PKG_SYSCONFDIR}/EN_US ${EMULDIR}/${TSMCLIENTSUBDIR}/ba/bin/dsm.sys
