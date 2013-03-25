@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5165 2013/03/24 10:20:55 keckhardt Exp $
+# $Id: Makefile,v 1.5166 2013/03/25 16:57:23 hfath Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -3209,6 +3209,7 @@ SUBDIR+=	trustedQSL
 SUBDIR+=	tscreen
 SUBDIR+=	tsh
 SUBDIR+=	tsm
+SUBDIR+=	tsm62
 SUBDIR+=	ttf-indic-fonts
 SUBDIR+=	ttr
 SUBDIR+=	ttyload
