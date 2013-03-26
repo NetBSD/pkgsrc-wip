@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2013/01/02 14:29:19 lokivit Exp $
+$NetBSD: distinfo,v 1.3 2013/03/26 10:09:53 lokivit Exp $
 
-SHA1 (fluxbox-1.3.3.tar.bz2) = 2fd193a0880fdce75a45a41f57a7bfca64f763aa
-RMD160 (fluxbox-1.3.3.tar.bz2) = 454e1290e5e291a84ccab226903913d48ecca285
-Size (fluxbox-1.3.3.tar.bz2) = 812727 bytes
+SHA1 (fluxbox-1.3.5.tar.bz2) = 4a221eb03aa87734f5953b41360c09fd7cd5ca40
+RMD160 (fluxbox-1.3.5.tar.bz2) = c977026d92d06833175cdc74f834e33f90981285
+Size (fluxbox-1.3.5.tar.bz2) = 805110 bytes
