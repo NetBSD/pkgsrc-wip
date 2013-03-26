@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2012/10/07 17:41:39 asau Exp $
+# $NetBSD: Makefile,v 1.7 2013/03/26 03:08:33 othyro Exp $
 #
 
-DISTNAME=	ucommon-5.1.2
+DISTNAME=	ucommon-6.0.3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=commonc++/}
 
@@ -21,6 +21,8 @@ CMAKE_ARGS=	-DINSTALL_MANDIR=${PKGMANDIR}
 PKGCONFIG_OVERRIDE+=	commoncpp.pc.in
 PKGCONFIG_OVERRIDE+=	ucommon.pc.in
 
+.include "../../mk/dlopen.buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
