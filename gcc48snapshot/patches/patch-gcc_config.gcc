@@ -1,4 +1,4 @@
-$NetBSD: patch-gcc_config.gcc,v 1.1 2013/02/23 10:04:12 keckhardt Exp $
+$NetBSD: patch-gcc_config.gcc,v 1.2 2013/03/26 12:23:29 keckhardt Exp $
 
 --- gcc/config.gcc.orig	2013-02-08 16:02:47.000000000 +0000
 +++ gcc/config.gcc
@@ -43,11 +43,11 @@ $NetBSD: patch-gcc_config.gcc,v 1.1 2013/02/23 10:04:12 keckhardt Exp $
      ;;
 +i[34567]86-*-dragonfly*)
 +	tm_file="${tm_file} i386/unix.h i386/att.h dbxelf.h elfos.h dragonfly.h dragonfly-stdint.h i386/dragonfly.h"
-+	tmake_file="${tmake-file} i386/t-crtstuff"
++	tmake_file="${tmake_file} i386/t-crtstuff"
 +	;;
 +x86_64-*-dragonfly*)
 +	tm_file="${tm_file} i386/unix.h i386/att.h dbxelf.h elfos.h dragonfly.h dragonfly-stdint.h i386/x86-64.h i386/dragonfly.h"
-+	tmake_file="${tmake-file} i386/t-crtstuff"
++	tmake_file="${tmake_file} i386/t-crtstuff"
 +	;;
  i[34567]86-*-freebsd*)
  	tm_file="${tm_file} i386/unix.h i386/att.h dbxelf.h elfos.h ${fbsd_tm_file} i386/freebsd.h"
