@@ -1,13 +1,16 @@
-# $NetBSD: Makefile,v 1.4 2012/10/04 18:42:20 asau Exp $
+# $NetBSD: Makefile,v 1.5 2013/03/26 02:11:15 jgoamakf Exp $
 
-DISTNAME=		Snowball-Swedish-1.01
-PKGNAME=		p5-Lingua-Stem-Snowball-Se-1.01
+DISTNAME=		Snowball-Swedish-1.2
+PKGNAME=		p5-Lingua-Stem-Snowball-Se-1.2
 CATEGORIES=		textproc perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=../../authors/id/A/AS/ASKSH/}
 
 MAINTAINER=		kuli0020@umn.edu
-HOMEPAGE=		http://search.cpan.org/~asksh/Snowball-Swedish-1.01/Se.pm
+HOMEPAGE=		http://search.cpan.org/dist/Snowball-Swedish/
 COMMENT=		Stemmer for Swedish
+LICENSE=		${PERL5_LICENSE}
+
+REPLACE_PERL+=		bin/stemmer-no.pl
 
 PERL5_PACKLIST=		auto/Lingua/Stem/Snowball/Se/.packlist
 
