@@ -1,10 +1,8 @@
-$NetBSD: patch-aa,v 1.7 2012/11/03 16:39:31 ftigeot Exp $
-
-Initialize default paths for all Munin components.
+$NetBSD: patch-aa,v 1.8 2013/03/27 15:21:30 fhajny Exp $
 
 --- Makefile.config.orig	2012-10-02 22:46:50.000000000 +0000
 +++ Makefile.config
-@@ -17,32 +17,35 @@
+@@ -17,35 +17,38 @@
  #
  # the base of the Munin installation.
  #
@@ -13,7 +11,7 @@ Initialize default paths for all Munin components.
  
  # Where Munin keeps its configurations (server.conf, client.conf, ++)
 -CONFDIR    = $(DESTDIR)/etc/opt/munin
-+CONFDIR    = $(UPREFIX)/etc/munin
++# CONFDIR    = $(UPREFIX)/etc/munin
 +
 +# Where pkgsrc installs example config files
 +EGDIR      = $(UPREFIX)/share/examples/munin
@@ -49,7 +47,11 @@ Initialize default paths for all Munin components.
 +DBDIR      = ${MUNIN_DBDIR}
  
  # Where to put internal data for node (plugin state, ...)
- DBDIRNODE  = $(DESTDIR)/var/opt/munin-node
+-DBDIRNODE  = $(DESTDIR)/var/opt/munin-node
++DBDIRNODE  = $(DBDIR)
+ 
+ # Client only - Where the spool files are written. Must be writable by
+ # group "munin", and should be preserved between reboots
 @@ -56,20 +59,20 @@ SPOOLDIR   = $(DBDIR)/spool
  PLUGSTATE  = $(DBDIRNODE)/plugin-state
  
@@ -59,7 +61,8 @@ Initialize default paths for all Munin components.
  
  # Location of PID files and other statefiles. On the server, must be
  # writable by the user "munin".
- STATEDIR   = $(DESTDIR)/var/run/munin
+-STATEDIR   = $(DESTDIR)/var/run/munin
++STATEDIR   = ${MUNIN_STATEDIR}
  
  # The perl interpreter to use
 -PERL       := $(shell which perl)

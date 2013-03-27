@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.3 2012/11/03 19:43:28 ftigeot Exp $
+$NetBSD: patch-aa,v 1.4 2013/03/27 15:21:30 fhajny Exp $
 
 --- Makefile.config.orig	2012-10-02 22:46:50.000000000 +0000
 +++ Makefile.config
-@@ -17,39 +17,42 @@
+@@ -17,59 +17,62 @@
  #
  # the base of the Munin installation.
  #
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.3 2012/11/03 19:43:28 ftigeot Exp $
  
  # Where Munin keeps its configurations (server.conf, client.conf, ++)
 -CONFDIR    = $(DESTDIR)/etc/opt/munin
-+CONFDIR   ?= $(UPREFIX)/etc/munin
++# CONFDIR   ?= $(UPREFIX)/etc/munin
 +
 +# Where pkgsrc installs example config files
 +EGDIR      = $(UPREFIX)/share/examples/munin
@@ -47,7 +47,8 @@ $NetBSD: patch-aa,v 1.3 2012/11/03 19:43:28 ftigeot Exp $
 +DBDIR      = ${MUNIN_DBDIR}
  
  # Where to put internal data for node (plugin state, ...)
- DBDIRNODE  = $(DESTDIR)/var/opt/munin-node
+-DBDIRNODE  = $(DESTDIR)/var/opt/munin-node
++DBDIRNODE  = $(DBDIR)
  
  # Client only - Where the spool files are written. Must be writable by
  # group "munin", and should be preserved between reboots
@@ -56,7 +57,11 @@ $NetBSD: patch-aa,v 1.3 2012/11/03 19:43:28 ftigeot Exp $
  
  # Client only - Where plugins should put their states. Must be writable by
  # group "munin", and should be preserved between reboots
-@@ -60,16 +63,16 @@ LOGDIR     = $(PREFIX)/log/munin
+ PLUGSTATE  = $(DBDIRNODE)/plugin-state
+ 
+ # Where Munin should place its logs.
+-LOGDIR     = $(PREFIX)/log/munin
++LOGDIR     = ${MUNIN_LOGDIR}
  
  # Location of PID files and other statefiles. On the server, must be
  # writable by the user "munin".
