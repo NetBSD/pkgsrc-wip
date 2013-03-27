@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5167 2013/03/27 15:06:26 othyro Exp $
+# $Id: Makefile,v 1.5168 2013/03/27 20:34:53 kristerw Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2551,7 +2551,7 @@ SUBDIR+=	py-nibabel
 SUBDIR+=	py-nltk
 SUBDIR+=	py-nodepy
 SUBDIR+=	py-nose-senario
-SUBDIR+=	py-notify
+SUBDIR+=	py-notify-dev
 SUBDIR+=	py-ntch
 SUBDIR+=	py-numdifftools
 SUBDIR+=	py-numpydoc
