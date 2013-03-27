@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5168 2013/03/27 20:34:53 kristerw Exp $
+# $Id: Makefile,v 1.5169 2013/03/27 20:35:45 kristerw Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1507,6 +1507,7 @@ SUBDIR+=	lidia
 SUBDIR+=	light-desktop
 SUBDIR+=	lightdm
 SUBDIR+=	lightdm-gtk-greeter
+SUBDIR+=	lighttpd
 SUBDIR+=	lilypond-devel
 SUBDIR+=	lilyterm
 SUBDIR+=	linbox
