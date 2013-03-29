@@ -1,32 +1,17 @@
-# $NetBSD: Makefile,v 1.7 2012/09/30 05:44:15 asau Exp $
+# $NetBSD: Makefile,v 1.8 2013/03/29 22:14:33 florian-geiges Exp $
 #
 
-DISTNAME=	ifstat-1.1
-CATEGORIES=	net sysutils
-MASTER_SITES=	${HOMEPAGE}
+DISTNAME=		ifstat-1.1
+CATEGORIES=		net sysutils
+MASTER_SITES=		${HOMEPAGE}
 
-MAINTAINER=	charlie@rubberduck.com
-HOMEPAGE=	http://gael.roualland.free.fr/ifstat/
-COMMENT=	Tool to report network interfaces bandwidth
+MAINTAINER=		charlie@rubberduck.com, florian@geiges.net
+HOMEPAGE=		http://gael.roualland.free.fr/ifstat/
+COMMENT=		Tool to report network interface bandwidth
+LICENSE=		gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	none
+GNU_CONFIGURE=		yes
 
-GNU_CONFIGURE=	YES
-
-CONFIGURE_ARGS+= --with-route # NetBSD
-CONFIGURE_ARGS+= --with-proc=no # breaks with =auto
-CONFIGURE_ARGS+= --with-kstat=no # ditto, etc ..
-CONFIGURE_ARGS+= --with-ifmib=no
-CONFIGURE_ARGS+= --with-ifdata=no
-CONFIGURE_ARGS+= --with-kvm=no
-CONFIGURE_ARGS+= --with-dlpi=no
-CONFIGURE_ARGS+= --with-win32=no
-CONFIGURE_ARGS+= --with-snmp=no
-CONFIGURE_ARGS+= --with-libcrypto=no
-CONFIGURE_ARGS+= --enable-library=no
-
-
-.include "../../mk/bsd.pkg.mk"
-
-# TODO
-# --with-snmp
+.include		"./options.mk"
+.include		"../../mk/bsd.pkg.mk"
