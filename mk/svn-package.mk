@@ -1,4 +1,4 @@
-# $Id: svn-package.mk,v 1.17 2013/02/19 10:28:14 fhajny Exp $
+# $Id: svn-package.mk,v 1.18 2013/03/29 20:43:05 asau Exp $
 
 # This file provides simple access to Subversion repositories, so that packages
 # can be created from Subversion instead of from released tarballs.
@@ -154,7 +154,7 @@ _SVN_TAG_FLAG.${repo}=	-r${SVN_TAG}
 _SVN_TAG.${repo}=	${SVN_TAG}
 .  elif defined(CHECKOUT_DATE)
 _SVN_TAG_FLAG.${repo}=	-r{${CHECKOUT_DATE}}
-_SVN_TAG.${repo}=	{${CHECKOUT_DATE}}
+_SVN_TAG.${repo}=	${CHECKOUT_DATE}
 .  else
 _SVN_TAG_FLAG.${repo}=	-r{${_SVN_TODAY} 00:00 +0000}
 _SVN_TAG.${repo}=	${_SVN_TODAY}
