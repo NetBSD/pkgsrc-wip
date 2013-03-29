@@ -1,0 +1,77 @@
+=> Bootstrap dependency digest>=20010302: found digest-20111104
+WARNING: [license.mk] Every package should define a LICENSE.
+===> Skipping vulnerability checks.
+WARNING: No /var/db/pkg/pkg-vulnerabilities file found.
+WARNING: To fix run: `/usr/pkg/sbin/pkg_admin -K /var/db/pkg fetch-pkg-vulnerabilities'.
+=> Checksum SHA1 OK for qt-everywhere-opensource-src-5.0.1.tar.gz
+=> Checksum RMD160 OK for qt-everywhere-opensource-src-5.0.1.tar.gz
+===> Installing dependencies for qt-libs-5.0.1
+==========================================================================
+The supported build options for qt-libs are:
+
+	openssl
+
+The currently selected options are:
+
+	openssl
+
+You can select which build options to use by setting PKG_DEFAULT_OPTIONS
+or the following variable.  Its current value is shown:
+
+	PKG_OPTIONS.qt5-libs (not defined)
+
+==========================================================================
+==========================================================================
+The following variables will affect the build process of this package,
+qt-libs-5.0.1.  Their current value is shown below:
+
+        * PYTHON_VERSION_DEFAULT = 27
+        * SSLBASE (defined)
+        * SSLCERTS = /usr/pkg/etc/openssl/certs
+        * SSLDIR = /usr/pkg/etc/openssl
+        * SSLKEYS = /usr/pkg/etc/openssl/private
+
+Based on these variables, the following variables have been set:
+
+        * PYPACKAGE = python27
+
+You may want to abort the process now with CTRL-C and change their value
+before continuing.  Be sure to run `/usr/pkg/bin/bmake clean' after
+the changes.
+==========================================================================
+=> Build dependency perl>=5.0: found perl-5.16.2nb1
+=> Build dependency pkg-config>=0.25: found pkg-config-0.27.1
+=> Build dependency xcb-proto>=1.4: found xcb-proto-1.8
+=> Build dependency xproto>=7.0.9: found xproto-7.0.23nb2
+=> Build dependency checkperms>=1.1: found checkperms-1.11
+=> Full dependency openssl>=0.9.8knb1: found openssl-0.9.8xnb1
+=> Full dependency icu>=49.1.1nb1: found icu-50.1
+=> Full dependency libxcb>=1.6: found libxcb-1.9
+=> Full dependency python27>=2.7.1nb2: found python27-2.7.3nb2
+===> Overriding tools for qt-libs-5.0.1
+===> Extracting for qt-libs-5.0.1
+===> Patching for qt-libs-5.0.1
+=> Applying pkgsrc patches for qt-libs-5.0.1
+===> Creating toolchain wrappers for qt-libs-5.0.1
+===> Configuring for qt-libs-5.0.1
+=> Replacing Perl interpreter in configure.
+=> Adding run-time search paths to pkg-config files.
+=> Fixing locale directory references.
+=> Checking for portability problems in extracted files
+use: not found
+use: not found
+use: not found
+use: not found
+use: not found
+use: not found
+use: not found
+sub: not found
+./configure: 61: Syntax error: word unexpected (expecting ")")
+*** Error code 2
+
+Stop.
+bmake: stopped in /usr/pkgsrc/wip/qt5-libs
+*** Error code 1
+
+Stop.
+bmake: stopped in /usr/pkgsrc/wip/qt5-libs

@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2013/03/29 11:25:11 othyro Exp $
+
+SHA1 (qt-everywhere-opensource-src-5.0.1.tar.gz) = fda04435b1d4069dc189ab4d22ed7a36fe6fa3e9
+RMD160 (qt-everywhere-opensource-src-5.0.1.tar.gz) = b127b9344ebf05be3a094c9d29906262cc93c03d
+Size (qt-everywhere-opensource-src-5.0.1.tar.gz) = 229909931 bytes
+SHA1 (patch-qtwebkit_Tools_wx_install-unix-extras) = df26b5145cfedf3f9b89a2880175ae5af137cbae

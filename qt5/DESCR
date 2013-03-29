@@ -1,0 +1,4 @@
+Qt C++ UI framework and the foundation for a new way of developing applications,
+where Qt Quick is in the center of Qt. Qt 5 continues to offer all of the power
+of native Qt C++ enabling highly sophisticated user experiences, offering
+applications the full capabilities of OpenGL/OpenGL ES graphics acceleration.

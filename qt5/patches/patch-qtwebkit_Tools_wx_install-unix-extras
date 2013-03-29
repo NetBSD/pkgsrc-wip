@@ -1,0 +1,60 @@
+$NetBSD: patch-qtwebkit_Tools_wx_install-unix-extras,v 1.1 2013/03/29 11:25:11 othyro Exp $
+
+Fixes portability failure.
+
+--- qtwebkit/Tools/wx/install-unix-extras.orig	2013-01-29 19:03:33.000000000 +0000
++++ qtwebkit/Tools/wx/install-unix-extras
+@@ -41,7 +41,7 @@ DL_DIR=/tmp/webkit-deps
+ DEPS_PREFIX=$WK_ROOT/WebKitLibraries/unix
+ DLLEXT=so
+ 
+-if [ "${OSTYPE:0:6}" == "darwin" ]; then
++if [ "${OSTYPE:0:6}" = "darwin" ]; then
+     DLLEXT=dylib
+ fi
+ 
+@@ -95,7 +95,7 @@ if [ ! -d $SDK ]; then
+     SDK="/Developer/SDKs/MacOSX10.6.sdk"
+ fi
+ 
+-if [ "${OSTYPE:0:6}" == "darwin" ]; then  
++if [ "${OSTYPE:0:6}" = "darwin" ]; then  
+     if [ -x /usr/bin/gcc-4.0 ]; then
+         export CC="gcc-4.0"
+         export CXX="g++-4.0"
+@@ -112,7 +112,7 @@ if [ `which icu-config >/dev/null 2>&1` 
+   
+   chmod +x configure install-sh
+ 
+-  if [ "${OSTYPE:0:6}" == "darwin" ]; then  
++  if [ "${OSTYPE:0:6}" = "darwin" ]; then  
+     ./configure --prefix=$DEPS_PREFIX --disable-dependency-tracking
+     make CFLAGS="-O -g -isysroot $SDK $ARCH_FLAGS" \
+     LDFLAGS=$ARCH_FLAGS
+@@ -137,7 +137,7 @@ if [ ! -f $DEPS_PREFIX/lib/libjpeg.a ]; 
+   # jpeg install command expects this to exist.
+   mkdir -p $DEPS_PREFIX/man/man1
+ 
+-  if [ "${OSTYPE:0:6}" == "darwin" ]; then
++  if [ "${OSTYPE:0:6}" = "darwin" ]; then
+     ./configure --prefix=$DEPS_PREFIX --disable-dependency-tracking
+     make CFLAGS="-O -g -isysroot $SDK $ARCH_FLAGS" \
+     LDFLAGS="$ARCH_FLAGS"
+@@ -161,7 +161,7 @@ if [ ! -f $DEPS_PREFIX/lib/libpng.a ]; t
+   tar xzvf $DL_DIR/$LIBPNG_TARBALL
+   cd $DL_DIR/libpng-$LIBPNG_VERSION
+ 
+-  if [ "${OSTYPE:0:6}" == "darwin" ]; then
++  if [ "${OSTYPE:0:6}" = "darwin" ]; then
+     ./configure --prefix=$DEPS_PREFIX --disable-dependency-tracking --disable-shared
+     make CFLAGS="-O -g -isysroot $SDK $ARCH_FLAGS" \
+     LDFLAGS="$ARCH_FLAGS"
+@@ -183,7 +183,7 @@ if [ ! -f $DEPS_PREFIX/lib/libcurl.$DLLE
+   tar xzvf $DL_DIR/$LIBCURL_TARBALL
+   cd $DL_DIR/curl-$LIBCURL_VERSION
+ 
+-  if [ "${OSTYPE:0:6}" == "darwin" ]; then
++  if [ "${OSTYPE:0:6}" = "darwin" ]; then
+     # CURL creates different build headers for 32 and 64 bit, so to get a universal build,
+     # we must first create a 32 bit version of the header, then a 64 bit version, and
+     # have the original header simply decide which to use.
