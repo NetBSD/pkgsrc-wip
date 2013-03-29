@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/03/29 03:12:04 othyro Exp $
+# $NetBSD: Makefile,v 1.3 2013/03/29 10:52:29 othyro Exp $
 #
 
 DISTNAME=	CrabEmu-0.2.0
@@ -16,6 +16,12 @@ USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_CMAKE=		yes
 INSTALLATION_DIRS+=	bin
+
+SUBST_CLASSES+=		SDLttf
+SUBST_FILES.SDLttf=	src/sdl/config.c
+SUBST_MESSAGE.SDLttf=	Fixing FONT_PATH.
+SUBST_SED.SDLttf=	-e "s|/usr/share|${BUILDLINK_PREFIX.SDL_ttf}/lib/X11|1"
+SUBST_STAGE.SDLttf=	post-patch
 
 .include "options.mk"
 
