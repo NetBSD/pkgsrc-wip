@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2013/03/13 13:06:33 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.17 2013/03/29 14:24:56 fhajny Exp $
 bin/node
 bin/npm
 lib/dtrace/node.d
@@ -521,6 +521,7 @@ lib/node_modules/npm/node_modules/lru-cache/LICENSE
 lib/node_modules/npm/node_modules/lru-cache/README.md
 lib/node_modules/npm/node_modules/lru-cache/lib/lru-cache.js
 lib/node_modules/npm/node_modules/lru-cache/package.json
+lib/node_modules/npm/node_modules/lru-cache/s.js
 lib/node_modules/npm/node_modules/minimatch/.travis.yml
 lib/node_modules/npm/node_modules/minimatch/LICENSE
 lib/node_modules/npm/node_modules/minimatch/README.md
