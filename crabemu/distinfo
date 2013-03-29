@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.1 2012/11/26 14:47:51 othyro Exp $
+$NetBSD: distinfo,v 1.2 2013/03/29 03:12:05 othyro Exp $
 
-SHA1 (CrabEmu-0.1.9.tar.bz2) = 97cfd052f1e2a62228b5775f7718704a0d90dfd9
-RMD160 (CrabEmu-0.1.9.tar.bz2) = 77d362e55650ba688ab759515672434ca4625d6a
-Size (CrabEmu-0.1.9.tar.bz2) = 534179 bytes
+SHA1 (CrabEmu-0.2.0.tar.bz2) = 6dd54d7eaa93cb51d3653787cc4df9c8eb623bd5
+RMD160 (CrabEmu-0.2.0.tar.bz2) = c5dcbc3074f9d9582de32ddf1bbd8af4868686a5
+Size (CrabEmu-0.2.0.tar.bz2) = 612934 bytes
+SHA1 (patch-CMakeLists.txt) = 999e7d1da6887899ea40923555935a9795032920
+SHA1 (patch-src_sdl_CMakeLists.txt) = 2e78627bc479e8c8d10c6d29b63bac2d8bcca992
