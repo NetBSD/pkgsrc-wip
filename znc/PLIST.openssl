@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST.openssl,v 1.1 2013/03/29 21:17:02 florian-geiges Exp $
+lib/znc/awaystore.so
+lib/znc/cert.so
+lib/znc/certauth.so
+lib/znc/crypt.so
+lib/znc/savebuff.so
+lib/znc/schat.so

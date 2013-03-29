@@ -1,0 +1,7 @@
+Python support is not working. 
+
+1) it does not pass the configure stage with only PKG_OPTIONS.znc+=python, you'd have to specify at least 1 other option.
+2) even using two PKG_OPTIONS, the build always fails like this: 
+Compiling modpython/znc.pyc...
+Shared object "libpython3.1.so.1.0" not found
+gmake[1]: *** [modpython/znc.pyc] Error 1
