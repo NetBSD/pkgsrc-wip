@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/09/04 17:12:01 gschwarz Exp $
+$NetBSD: distinfo,v 1.2 2013/03/30 07:04:33 shattered Exp $
 
 SHA1 (dionysus-1.3.0.tar.bz2) = 0062da7715fd5be7e263973bd734de14e0d17c6c
 RMD160 (dionysus-1.3.0.tar.bz2) = 33b89ad3f68ba05182f202cceae17a5fc1b6fa61
 Size (dionysus-1.3.0.tar.bz2) = 150955 bytes
+SHA1 (patch-aa) = ca6e0db4b0b602f24fee3e62ffeefe0fc90784ae
