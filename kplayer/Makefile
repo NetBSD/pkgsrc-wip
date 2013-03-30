@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/11/13 20:09:33 othyro Exp $
+# $NetBSD: Makefile,v 1.15 2013/03/30 07:07:52 shattered Exp $
 #
 
 DISTNAME=		kplayer-0.6.3
@@ -7,7 +7,7 @@ CATEGORIES=		multimedia
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=kplayer/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		shattered@users.sourceforge.net
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://kplayer.sourceforge.net/
 COMMENT=		KDE media player based on MPlayer
 LICENSE=		gnu-gpl-v3
