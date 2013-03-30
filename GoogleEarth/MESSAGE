@@ -1,5 +1,10 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2007/09/02 14:27:27 tnn2 Exp $
+$NetBSD: MESSAGE,v 1.3 2013/03/30 12:00:16 othyro Exp $
 
 Note: Google Earth *requires* DRI accelerated 3D graphics.
+Note: Quickly click "No" in the dialog window which asks if you want to
+	switch to DirectX. Otherwise, the programme will crash on first
+	start. Subsequent launches of GoogleEarth will have this same
+	dialog window. However, waiting to click Yes/No will not cause it
+	to crash.
 ===========================================================================
