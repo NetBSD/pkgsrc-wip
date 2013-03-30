@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5173 2013/03/29 22:26:33 florian-geiges Exp $
+# $Id: Makefile,v 1.5174 2013/03/30 17:08:38 kristerw Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1437,9 +1437,9 @@ SUBDIR+=	libgxim
 SUBDIR+=	libgzstream
 SUBDIR+=	libharu
 SUBDIR+=	libhttpd
+SUBDIR+=	libifstat
 SUBDIR+=	libinotify
 SUBDIR+=	libinstpatch
-SUBDIR+=	libifstat
 SUBDIR+=	libipctdata
 SUBDIR+=	libisoburn
 SUBDIR+=	libisofs
