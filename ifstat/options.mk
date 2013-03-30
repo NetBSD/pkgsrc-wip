@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.1 2013/03/29 22:14:33 florian-geiges Exp $
+# $NetBSD: options.mk,v 1.2 2013/03/30 08:12:28 florian-geiges Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ifstat
 PKG_SUPPORTED_OPTIONS=	debug optimization proc kstat ifmib ifdata route kvm dlpi win32 snmp snmp-crypto
-PKG_SUGGESTED_OPTIONS=
+PKG_SUGGESTED_OPTIONS=	route
 
 .include		"../../mk/bsd.prefs.mk"
 .include		"../../mk/bsd.options.mk"
@@ -98,9 +98,10 @@ CONFIGURE_ARGS+=        --without-win32
 # UCD-SNMP driver
 #
 .if !empty(PKG_OPTIONS:Msnmp)
+.include "../../net/net-snmp/buildlink3.mk"
 CONFIGURE_ARGS+=        --with-snmp
 .else
-CONFIGURE_ARGS+=        --without-ifmib
+CONFIGURE_ARGS+=        --without-snmp
 .endif
 
 #
