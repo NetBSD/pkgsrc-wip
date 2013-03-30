@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/09/24 16:56:40 asau Exp $
+# $NetBSD: Makefile,v 1.4 2013/03/30 07:06:51 shattered Exp $
 #
 
 DISTNAME=		autossh-1.4c
@@ -12,11 +12,5 @@ COMMENT=		Monitor and automatically restart SSH sessions and tunnels
 #LICENSE=		autossh
 
 GNU_CONFIGURE=		yes
-
-SUBST_CLASSES+=		destdir
-SUBST_STAGE.destdir=	pre-configure
-SUBST_MESSAGE.destdir=	Reaplacing @DESTDIR@
-SUBST_FILES.destdir+=	Makefile.in
-SUBST_VARS.destdir=	DESTDIR
 
 .include "../../mk/bsd.pkg.mk"
