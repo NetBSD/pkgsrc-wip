@@ -1,14 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2012/10/23 21:53:14 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.3 2013/04/01 14:48:41 thomasklausner Exp $
+share/doc/auto-complete/Makefile
 share/doc/auto-complete/ac-fuzzy.png
 share/doc/auto-complete/ac-isearch.png
 share/doc/auto-complete/ac.png
-share/doc/auto-complete/changes.ja.txt
-share/doc/auto-complete/changes.txt
-share/doc/auto-complete/demo.txt
-share/doc/auto-complete/index.ja.txt
-share/doc/auto-complete/index.txt
-share/doc/auto-complete/manual.ja.txt
-share/doc/auto-complete/manual.txt
+share/doc/auto-complete/changes.md
+share/doc/auto-complete/manual.md
 share/doc/auto-complete/style.css
 ${EMACS_LISPPREFIX}/auto-complete/ac-dict/ada-mode
 ${EMACS_LISPPREFIX}/auto-complete/ac-dict/c++-mode
