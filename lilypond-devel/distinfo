@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.3 2013/03/17 20:06:00 thomasklausner Exp $
+$NetBSD: distinfo,v 1.4 2013/04/01 17:16:04 thomasklausner Exp $
 
-SHA1 (lilypond-2.17.14.tar.gz) = 9213793907afd42311b43a4e67d1535968754614
-RMD160 (lilypond-2.17.14.tar.gz) = ab801f415e6b393ae2ad6df5a332fc785fd70b95
-Size (lilypond-2.17.14.tar.gz) = 16244181 bytes
+SHA1 (lilypond-2.17.15.tar.gz) = e906fb88e1f3d64b614e05f5d875077e225c9097
+RMD160 (lilypond-2.17.15.tar.gz) = f062fbc18643ad94a87987fab4ce4bd72b143eb7
+Size (lilypond-2.17.15.tar.gz) = 16256561 bytes
 SHA1 (patch-aa) = 99dc3ecc7df664fba71d850e6c0b253fc451ec61
 SHA1 (patch-ab) = a1d327ab900cca18b9306846f137e1bbcfdca945
 SHA1 (patch-ac) = ca7a8671885a40201f201431d2eb8a3377993c67
