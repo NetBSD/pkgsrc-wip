@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2012/10/09 14:50:53 makoto Exp $
+# $NetBSD: options.mk,v 1.8 2013/04/01 13:20:02 makoto Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ghostscript
 PKG_SUPPORTED_OPTIONS=	x11 cups debug fontconfig disable-compile-inits
@@ -58,7 +58,7 @@ CONFIGURE_ARGS+=	--disable-fontconfig
 CONFIGURE_ARGS+=	--disable-freetype
 .endif
 
-# Please note the same if cond is in post-extract: target in Makefile
+# Please note the same if condition is in post-extract: target in Makefile
 .if !empty(PKG_OPTIONS:Mdisable-compile-inits)
 CONFIGURE_ARGS+=        --disable-compile-inits
 PLIST.no_cidfmap=	YES

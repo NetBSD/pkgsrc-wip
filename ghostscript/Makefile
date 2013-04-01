@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2012/10/15 22:14:18 makoto Exp $
+# $NetBSD: Makefile,v 1.14 2013/04/01 13:20:02 makoto Exp $
 
 DISTNAME=	ghostscript-${GS_VERSION}
+PKGNAME=	${DISTNAME:S/ghostscript/ghostscript-gpl/}
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ghostscript/}
 MASTER_SITES+=	http://ghostscript.com/releases/
@@ -18,6 +19,7 @@ LICENSE=	gnu-gpl-v3
 DEPENDS+=		ghostscript-fonts>=6.0:../../fonts/ghostscript-fonts
 
 CONFLICTS+=		ghostscript-afpl-[0-9]*
+# To avoid flag from pkglint
 CONFLICTS+=		ghostscript-esp-[0-9]*
 CONFLICTS+=		ghostscript-esp-nox11-[0-9]*
 CONFLICTS+=		ghostscript-gnu-x11-[0-9]*
@@ -30,7 +32,7 @@ UNLIMIT_RESOURCES+=	datasize	# gsromfs1.c
 
 BUILD_TARGET=		so
 INSTALL_TARGET=		soinstall
-CONFIGURE_ARGS+=	-with-omni=no	# otherwise pulls in libstdc++
+CONFIGURE_ARGS+=	--with-omni=no	# otherwise pulls in libstdc++
 
 REPLACE_PERL+=		toolbin/localcluster/clusterpush.pl
 REPLACE_PERL+=		toolbin/checkdeps.pl
@@ -41,7 +43,7 @@ REPLACE_PERL+=		toolbin/bugsByEngineer.pl
 REPLACE_PERL+=		toolbin/htmldiff.pl
 
 GS_RESOURCEDIR=		${PREFIX}/share/ghostscript/${PKGVERSION}/Resource
-# to substitute in MESSAGE filed
+# MESSAGE file substitution
 MESSAGE_SUBST+=		GS_RESOURCEDIR=${GS_RESOURCEDIR}
 
 # XXX make sure the local jpeg headers are found before those pulled
@@ -101,7 +103,6 @@ post-extract:
 
 post-install:
 	${LN} -sf gsc ${DESTDIR}${PREFIX}/bin/gs
-
 
 .include "../../print/libpaper/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"

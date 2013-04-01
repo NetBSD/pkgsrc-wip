@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2012/10/08 01:11:47 makoto Exp $
+@comment $NetBSD: PLIST,v 1.8 2013/04/01 13:20:02 makoto Exp $
 bin/dvipdf
 bin/eps2eps
 bin/font2c
