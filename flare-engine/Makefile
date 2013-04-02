@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2013/02/08 14:22:49 othyro Exp $
+# $NetBSD: Makefile,v 1.4 2013/04/02 10:22:06 othyro Exp $
 #
 
-DISTNAME=	v0.17
+DISTNAME=	v0.18
 PKGNAME=	flare-engine-${DISTNAME:S/v//1}
 CATEGORIES=	games
 MASTER_SITES=	https://github.com/clintbellanger/flare-engine/archive/
@@ -19,7 +19,7 @@ USE_LANGUAGES=	c c++
 USE_CMAKE=	yes
 
 CMAKE_ARGS+=	-DCMAKE_INSTALL_PREFIX:STRING="${DESTDIR}${PREFIX}"
-CMAKE_ARGS+=	-DDATADIR:STRING="${PREFIX}/share/flare"
+CMAKE_ARGS+=	-DDATADIR:STRING="${PREFIX}/share/flare" -DBINDIR=bin
 
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	CMakeLists.txt build/cmake_install.cmake src/Settings.cpp
@@ -31,7 +31,10 @@ SUBST_SED.paths=	-e "s|/usr/local/games|${PREFIX}/bin|g"
 SUBST_SED.paths+=	-e "s|/usr/local|${PREFIX}|g"
 SUBST_SED.paths+=	-e 's|share/games|share|g'
 SUBST_SED.paths+=	-e 's|/games|/bin|1'
+SUBST_SED.paths+=	-e 's|BINDIR:STRING=games|BINDIR:STRING=bin|1'
 SUBST_STAGE.paths=	post-configure
+
+REPLACE_PYTHON+=	mods/default/languages/xgettext.py
 
 pre-configure:
 	cd ${WRKSRC} && ${MKDIR} build
@@ -45,7 +48,7 @@ do-build:
 do-install:
 	cd ${WRKSRC}/build && ${SETENV} ${INSTALL_ENV} ${MAKE_PROGRAM} ${INSTALL_TARGET}
 
-.include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../lang/python/application.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../devel/SDL_ttf/buildlink3.mk"

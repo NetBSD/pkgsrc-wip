@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/02/07 22:44:32 othyro Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/04/02 10:22:06 othyro Exp $
 bin/flare
 share/applications/flare.desktop
 share/flare/mods/default/engine/combat.txt
@@ -29,21 +29,26 @@ share/flare/mods/default/images/menus/logo.png
 share/flare/mods/default/images/menus/tab_active.png
 share/flare/mods/default/images/menus/tab_inactive.png
 share/flare/mods/default/languages/engine.be.po
+share/flare/mods/default/languages/engine.cs.po
 share/flare/mods/default/languages/engine.de.po
 share/flare/mods/default/languages/engine.el.po
+share/flare/mods/default/languages/engine.en.po
 share/flare/mods/default/languages/engine.es.po
 share/flare/mods/default/languages/engine.fi.po
 share/flare/mods/default/languages/engine.fr.po
 share/flare/mods/default/languages/engine.gl.po
 share/flare/mods/default/languages/engine.it.po
 share/flare/mods/default/languages/engine.ja.po
+share/flare/mods/default/languages/engine.nb.po
 share/flare/mods/default/languages/engine.nl.po
+share/flare/mods/default/languages/engine.pl.po
 share/flare/mods/default/languages/engine.pot
 share/flare/mods/default/languages/engine.ru.po
 share/flare/mods/default/languages/engine.sk.po
 share/flare/mods/default/languages/engine.sv.po
 share/flare/mods/default/languages/engine.uk.po
 share/flare/mods/default/languages/readme.txt
+share/flare/mods/default/languages/xgettext.py
 share/flare/mods/default/menus/config.txt
 share/flare/mods/default/menus/fps.txt
 share/flare/mods/default/menus/gameload.txt
