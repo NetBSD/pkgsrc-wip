@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2005/03/29 01:42:38 jgoamakf Exp $
+$NetBSD: distinfo,v 1.4 2013/04/02 06:59:29 jgoamakf Exp $
 
-SHA1 (Cache-Mmap-0.081.tar.gz) = 04a3e21d3290db9eb5a9aec5b6817f16ad3027c2
-RMD160 (Cache-Mmap-0.081.tar.gz) = 26e8d77eabddb88c615a4f3302303e119f803a62
-Size (Cache-Mmap-0.081.tar.gz) = 21879 bytes
+SHA1 (Cache-Mmap-0.11.tar.gz) = 4b720642a0b07b914b16a23667419b74f09d8bf3
+RMD160 (Cache-Mmap-0.11.tar.gz) = 6e74d7d7523de88b7bf7a725bb23ad160a3d631e
+Size (Cache-Mmap-0.11.tar.gz) = 21547 bytes
