@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/08/07 19:34:50 jgoamakf Exp $
+$NetBSD: distinfo,v 1.2 2013/04/02 08:03:09 jgoamakf Exp $
 
-SHA1 (Class-DBI-Plugin-RetrieveAll-1.01.tar.gz) = 98f22a80abbcd0298f1c4adfba1d5875a0c4d492
-RMD160 (Class-DBI-Plugin-RetrieveAll-1.01.tar.gz) = bd1256df1bd0db29f0f9c3ff458586c15dad345f
-Size (Class-DBI-Plugin-RetrieveAll-1.01.tar.gz) = 8069 bytes
+SHA1 (Class-DBI-Plugin-RetrieveAll-1.04.tar.gz) = f31b45ae9dd3bf2439e9c702be9b25e0cb0ca8c9
+RMD160 (Class-DBI-Plugin-RetrieveAll-1.04.tar.gz) = 91382811a36992ba509e8ef51d29e39521111a1a
+Size (Class-DBI-Plugin-RetrieveAll-1.04.tar.gz) = 3259 bytes
