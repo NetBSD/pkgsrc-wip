@@ -170,57 +170,6 @@ Suggested ready to import packages
 	o iodine
 	o ispell-dictionaries
 	o ispell-lietuviu
-	o kde4-l10n-ar
-	o kde4-l10n-bg
-	o kde4-l10n-bs
-	o kde4-l10n-ca
-	o kde4-l10n-cat
-	o kde4-l10n-cs
-	o kde4-l10n-da
-	o kde4-l10n-el
-	o kde4-l10n-es
-	o kde4-l10n-et
-	o kde4-l10n-eu
-	o kde4-l10n-fa
-	o kde4-l10n-fi
-	o kde4-l10n-fr
-	o kde4-l10n-ga
-	o kde4-l10n-gl
-	o kde4-l10n-he
-	o kde4-l10n-hr
-	o kde4-l10n-hu
-	o kde4-l10n-ia
-	o kde4-l10n-id
-	o kde4-l10n-is
-	o kde4-l10n-it
-	o kde4-l10n-ja
-	o kde4-l10n-kk
-	o kde4-l10n-km
-	o kde4-l10n-ko
-	o kde4-l10n-lt
-	o kde4-l10n-lv
-	o kde4-l10n-nb
-	o kde4-l10n-nds
-	o kde4-l10n-nn
-	o kde4-l10n-pa
-	o kde4-l10n-pl
-	o kde4-l10n-pt
-	o kde4-l10n-pt_BR
-	o kde4-l10n-ro
-	o kde4-l10n-ru
-	o kde4-l10n-si
-	o kde4-l10n-sk
-	o kde4-l10n-sl
-	o kde4-l10n-sr
-	o kde4-l10n-tg
-	o kde4-l10n-th
-	o kde4-l10n-tr
-	o kde4-l10n-ug
-	o kde4-l10n-uk
-	o kde4-l10n-vi
-	o kde4-l10n-wa
-	o kde4-l10n-zh_CN
-	o kde4-l10n-zh_TW
 	o libzrtpcpp
 	o marathon-tempus-irae
 	o matiec
@@ -230,7 +179,6 @@ Suggested ready to import packages
 	o polarssl
 	o py-jswebkit
 	o rar4
-	o saxon
 	o send-pr
 	o tcl-tclOO
 	o tqsllib

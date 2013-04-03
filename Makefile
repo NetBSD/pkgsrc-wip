@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5176 2013/04/02 02:07:54 othyro Exp $
+# $Id: Makefile,v 1.5177 2013/04/03 00:47:20 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2864,7 +2864,6 @@ SUBDIR+=	samhain
 SUBDIR+=	sandy
 SUBDIR+=	sara
 SUBDIR+=	sarf
-SUBDIR+=	saxon
 SUBDIR+=	sbcl
 SUBDIR+=	scantailor
 SUBDIR+=	scare
