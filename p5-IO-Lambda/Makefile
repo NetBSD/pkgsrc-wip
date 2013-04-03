@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2012/10/04 10:45:29 asau Exp $
+# $NetBSD: Makefile,v 1.3 2013/04/03 01:43:52 jgoamakf Exp $
 #
 
-DISTNAME=	IO-Lambda-1.16
+DISTNAME=	IO-Lambda-1.23
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/K/KA/KARASIK/
