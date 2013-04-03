@@ -1,16 +1,18 @@
-# $NetBSD: Makefile,v 1.5 2008/01/18 04:30:17 tnn2 Exp $
+# $NetBSD: Makefile,v 1.6 2013/04/03 11:27:27 fhajny Exp $
 #
 
-DISTNAME=		siege-2.66
-PKGREVISION=		1
+DISTNAME=		siege-2.78
 CATEGORIES=		www
-MASTER_SITES=		ftp://sid.joedog.org/pub/siege/
+MASTER_SITES=		http://www.joedog.org/pub/siege/
 
 MAINTAINER=		airhead@users.sf.net
 HOMEPAGE=		http://www.joedog.org/JoeDog/Siege
 COMMENT=		Website/webserver regression testing utility
+LICENSE=		gnu-gpl-v2
 
 GNU_CONFIGURE=		yes
+
+USE_TOOLS+=		autoconf
 
 .include "options.mk"
 
@@ -23,5 +25,9 @@ SUBST_FILES.siege=	doc/Makefile.am doc/Makefile.in
 SUBST_SED.siege+=	-e "s|@EGDIR@|${EGDIR}|g"
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ENV+=		PERL=${PERL5:Q}
+
+pre-configure:
+	cd ${WRKSRC} && autoconf
 
 .include "../../mk/bsd.pkg.mk"

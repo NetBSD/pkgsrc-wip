@@ -1,9 +1,7 @@
-$NetBSD: distinfo,v 1.3 2007/06/02 19:18:51 airhead Exp $
+$NetBSD: distinfo,v 1.4 2013/04/03 11:27:28 fhajny Exp $
 
-SHA1 (siege-2.66.tar.gz) = 06c5fa98a4522b37281c7fc0b66dd904cd2962fc
-RMD160 (siege-2.66.tar.gz) = 25cd395432477cda02d04da3b7c72e6c15008714
-Size (siege-2.66.tar.gz) = 478161 bytes
-SHA1 (patch-aa) = 951aa77b210a22500fc4958dcd1779ea3fe7ee3a
-SHA1 (patch-ab) = dc0fb4d56dc21a5246d1a826e78f9681308e7f60
-SHA1 (patch-ac) = 69c1364c19bbd519d6fb07b6f4c0906af55b6052
-SHA1 (patch-ad) = fd61d09f4eb9a3c3f6cdff262c7e17f3065a7040
+SHA1 (siege-2.78.tar.gz) = a21cf8b5264436394bf4a702bd63229eeb57f72f
+RMD160 (siege-2.78.tar.gz) = 73cfd3b9eea4365fe7f00ecfc5426a8b059aaae0
+Size (siege-2.78.tar.gz) = 489285 bytes
+SHA1 (patch-ac) = d0a87ecafa84c53ac0436ac977b5ec3083d90089
+SHA1 (patch-ad) = b6a705d000689e45edf3f78bd68c44aeede76eef
