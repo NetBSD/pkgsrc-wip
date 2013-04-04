@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2012/12/25 18:19:27 noud4 Exp $
+# $NetBSD: Makefile,v 1.15 2013/04/04 18:10:05 rhialto Exp $
 #
 
-DISTNAME=		fbida-2.08
+DISTNAME=		fbida-2.09
 PKGREVISION=		1
 CATEGORIES=		graphics
 MASTER_SITES=		http://www.kraxel.org/releases/fbida/
@@ -13,6 +13,17 @@ COMMENT=		Image viewer and editor
 MAKE_FILE=		GNUmakefile
 MAKE_ENV+=		prefix=${PREFIX:Q}
 USE_TOOLS+=		gmake perl
+
+# The jpeg/90 directory doesn't exist yet.
+# Populate it ourselves.
+post-extract:
+	cd ${WRKDIR}/${DISTNAME} && \
+	    tar xvzf ${DISTDIR}/jpegsrc.v9.tar.gz && \
+	    mkdir jpeg/90 && \
+	    for f in jinclude.h jpegint.h jpeglib.h transupp.c transupp.h; \
+	    do \
+		cp jpeg-9/$$f jpeg/90; \
+	    done
 
 # not used, even though the configure output claims it
 #.include "../../graphics/ImageMagick/buildlink3.mk"
