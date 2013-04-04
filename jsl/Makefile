@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/01 21:43:25 asau Exp $
+# $NetBSD: Makefile,v 1.3 2013/04/04 13:33:19 hfath Exp $
 #
 
 DISTNAME=	jsl-0.3.0-src
@@ -20,6 +20,9 @@ EGCONFIGFILE=	jsl.config.sample
 USE_TOOLS+=	gmake
 MAKE_FILE=	${WRKSRC}/Makefile.ref
 WRKSRC=		${WRKDIR}/jsl-0.3.0/src
+
+pre-configure:
+	cp ${PKGDIR}/files/NetBSD_All.mk ${WRKSRC}/config/
 
 pre-install:
 	(cd ${WRKSRC} && pkgsrc.objdir/jsl -help:conf > ${EGCONFIGFILE})
