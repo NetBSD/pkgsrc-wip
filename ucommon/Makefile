@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2013/03/26 03:15:18 othyro Exp $
+# $NetBSD: Makefile,v 1.9 2013/04/04 11:05:08 thomasklausner Exp $
 #
 
 DISTNAME=	ucommon-6.0.3
@@ -10,7 +10,7 @@ HOMEPAGE=	http://www.gnu.org/software/commoncpp/
 COMMENT=	Very light-weight C++ library for deeply embedded applications
 LICENSE=	gnu-gpl-v3
 
-#DEPENDS+=	doxygen>=doxygen-1.6.2:../../devel/doxygen
+#BUILD_DEPENDS+=	doxygen>=1.6.2:../../devel/doxygen
 
 USE_TOOLS+=	intltool pkg-config
 USE_LANGUAGES=	c c++
