@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5177 2013/04/03 00:47:20 othyro Exp $
+# $Id: Makefile,v 1.5178 2013/04/04 09:41:37 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -452,7 +452,6 @@ SUBDIR+=	dionysus
 SUBDIR+=	dir2ogg
 SUBDIR+=	directfb
 SUBDIR+=	discident-glib
-SUBDIR+=	discount
 SUBDIR+=	dispred
 SUBDIR+=	distbb-current
 SUBDIR+=	distella
