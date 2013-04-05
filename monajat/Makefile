@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2012/10/03 15:09:56 asau Exp $
+# $NetBSD: Makefile,v 1.4 2013/04/05 11:20:50 othyro Exp $
 #
 
 DISTNAME=	monajat-2.3.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	misc
 MASTER_SITES=	http://launchpad.net/monajat/trunk/beta/+download/
 
@@ -14,8 +14,8 @@ LICENSE=	gnu-gpl-v2
 DEPENDS+=	${PYPKGPREFIX}-sqlite3-[0-9]*:../../databases/py-sqlite3
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
-USE_TOOLS+=	msgfmt intltool
-USE_PKGLOCALEDIR=yes
+USE_TOOLS+=	intltool msgfmt
+USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=	# none
 
 PYDISTUTILSPKG=	yes
@@ -30,7 +30,7 @@ REPLACE_PYTHON+=   ${WRKSRC}/monajat-applet
 .include "../../graphics/librsvg/buildlink3.mk"
 .include "../../sysutils/py-dbus/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../sysutils/py-notify/buildlink3.mk"
+DEPENDS+=	${PYPKGPREFIX}-notify-[0-9]*:../../sysutils/py-notify
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .include "../../x11/py-gtk2/buildlink3.mk"

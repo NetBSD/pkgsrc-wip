@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2012/09/29 17:05:56 asau Exp $
+# $NetBSD: Makefile,v 1.6 2013/04/05 11:20:50 othyro Exp $
 #
 
 DISTNAME=	hijra-0.1.18
-PKGREVISION=	1
-CATEGORIES=	time python
+PKGREVISION=	2
+CATEGORIES=	python time
 MASTER_SITES=	http://www.ojuba.org/downloads/hijra/
 EXTRACT_SUFX=	.tar.bz2
 
@@ -13,7 +13,7 @@ COMMENT=	Hijra is the Hijri Islamic Calendar
 #LICENSE=	LICENSE
 
 USE_LANGUAGES=	# none
-PYDISTUTILSPKG=		yes
+PYDISTUTILSPKG=	yes
 
 INSTALLATION_DIRS+=	bin
 
@@ -25,7 +25,7 @@ post-install:
 .include "../../lang/python/extension.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/py-dbus/buildlink3.mk"
-.include "../../sysutils/py-notify/buildlink3.mk"
+DEPENDS+=	${PYPKGPREFIX}-notify-[0-9]*:../../sysutils/py-notify
 .include "../../x11/py-gnome2-extras/buildlink3.mk"
 .include "../../x11/py-gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
