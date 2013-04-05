@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2013/04/05 21:30:15 szptvlfn Exp $
+lib/timezone-series-${PKGVERSION}/${HASKELL_VERSION}/Data/Time/LocalTime/TimeZone/Series.hi
+lib/timezone-series-${PKGVERSION}/${HASKELL_VERSION}/Data/Time/LocalTime/TimeZone/Series.p_hi
+lib/timezone-series-${PKGVERSION}/${HASKELL_VERSION}/HStimezone-series-${PKGVERSION}.o
+lib/timezone-series-${PKGVERSION}/${HASKELL_VERSION}/libHStimezone-series-${PKGVERSION}.a
+lib/timezone-series-${PKGVERSION}/${HASKELL_VERSION}/libHStimezone-series-${PKGVERSION}_p.a
+lib/timezone-series-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/timezone-series-${PKGVERSION}/LICENSE
