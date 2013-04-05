@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/04/05 21:36:03 szptvlfn Exp $
+
+SHA1 (timezone-olson-0.1.2.tar.gz) = 891b5b94832e65036087ce7d354fbcce9245e7c4
+RMD160 (timezone-olson-0.1.2.tar.gz) = 24a92df2cb71d2a4ddc8a00841553962b6b6ee60
+Size (timezone-olson-0.1.2.tar.gz) = 11598 bytes

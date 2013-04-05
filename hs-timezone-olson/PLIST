@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2013/04/05 21:36:03 szptvlfn Exp $
+lib/timezone-olson-${PKGVERSION}/${HASKELL_VERSION}/Data/Time/LocalTime/TimeZone/Olson.hi
+lib/timezone-olson-${PKGVERSION}/${HASKELL_VERSION}/Data/Time/LocalTime/TimeZone/Olson.p_hi
+lib/timezone-olson-${PKGVERSION}/${HASKELL_VERSION}/Data/Time/LocalTime/TimeZone/Olson/Parse.hi
+lib/timezone-olson-${PKGVERSION}/${HASKELL_VERSION}/Data/Time/LocalTime/TimeZone/Olson/Parse.p_hi
+lib/timezone-olson-${PKGVERSION}/${HASKELL_VERSION}/Data/Time/LocalTime/TimeZone/Olson/Render.hi
+lib/timezone-olson-${PKGVERSION}/${HASKELL_VERSION}/Data/Time/LocalTime/TimeZone/Olson/Render.p_hi
+lib/timezone-olson-${PKGVERSION}/${HASKELL_VERSION}/Data/Time/LocalTime/TimeZone/Olson/Types.hi
+lib/timezone-olson-${PKGVERSION}/${HASKELL_VERSION}/Data/Time/LocalTime/TimeZone/Olson/Types.p_hi
+lib/timezone-olson-${PKGVERSION}/${HASKELL_VERSION}/HStimezone-olson-${PKGVERSION}.o
+lib/timezone-olson-${PKGVERSION}/${HASKELL_VERSION}/libHStimezone-olson-${PKGVERSION}.a
+lib/timezone-olson-${PKGVERSION}/${HASKELL_VERSION}/libHStimezone-olson-${PKGVERSION}_p.a
+lib/timezone-olson-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/timezone-olson-${PKGVERSION}/LICENSE
