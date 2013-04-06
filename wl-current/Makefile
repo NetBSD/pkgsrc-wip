@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2013/01/11 11:16:14 makoto Exp $
+# $NetBSD: Makefile,v 1.10 2013/04/06 22:17:47 makoto Exp $
 
 DISTNAME=	wl-2.15.9
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -27,7 +27,7 @@ INFO_FILES=	YES
 
 SUBST_CLASSES+=			icon_directory
 SUBST_STAGE.icon_directory=	pre-configure
-SUBST_MESSAGES.icon_directory=	Fixing wl-icon-directory default value (defvar)
+SUBST_MESSAGE.icon_directory=	Fixing wl-icon-directory default value (defvar)
 SUBST_FILES.icon_directory=	${WRKSRC}/wl/wl-vars.el
 SUBST_SED.icon_directory=	-e 's|%%PREFIX%%|${PREFIX}|'
 
