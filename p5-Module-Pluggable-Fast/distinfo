@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2006/03/09 02:03:55 jgoamakf Exp $
+$NetBSD: distinfo,v 1.4 2013/04/06 02:26:05 jgoamakf Exp $
 
-SHA1 (Module-Pluggable-Fast-0.18.tar.gz) = ea5c33abd0160a892ed4847e1fdd0192d12e4332
-RMD160 (Module-Pluggable-Fast-0.18.tar.gz) = 4a1a112a4c3aa6b02d6ffa4485e7d8d1e0d5be18
-Size (Module-Pluggable-Fast-0.18.tar.gz) = 3936 bytes
+SHA1 (Module-Pluggable-Fast-0.19.tar.gz) = 60c81a6a433441e301c81e2c492bf5d4fe1721d5
+RMD160 (Module-Pluggable-Fast-0.19.tar.gz) = 6b83a6bce50f60499a2b05bbe51203f5549a1058
+Size (Module-Pluggable-Fast-0.19.tar.gz) = 3669 bytes
