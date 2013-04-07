@@ -1,4 +1,6 @@
-$NetBSD: patch-src_Makefile.in,v 1.1 2012/10/08 12:58:37 ryo-on Exp $
+$NetBSD: patch-src_Makefile.in,v 1.2 2013/04/07 09:49:43 makoto Exp $
+
+Use pkgsrc infrastructure for config files.
 
 --- src/Makefile.in.orig	2012-07-19 11:30:13.000000000 +0000
 +++ src/Makefile.in

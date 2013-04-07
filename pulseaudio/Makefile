@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2012/10/11 15:32:49 ryo-on Exp $
+# $NetBSD: Makefile,v 1.8 2013/04/07 09:49:43 makoto Exp $
 #
 
 DISTNAME=	pulseaudio-2.1
+PKGREVISION=	3
 CATEGORIES=	audio
 MASTER_SITES=	http://freedesktop.org/software/pulseaudio/releases/
 EXTRACT_SUFX=	.tar.xz
@@ -13,7 +14,7 @@ LICENSE=	gnu-lgpl-v2.1 AND gnu-gpl-v2
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	gmake intltool pkg-config
+USE_TOOLS+=	gmake gm4 intltool msgfmt pkg-config
 USE_LANGUAGES=	c c++
 
 .include "../../mk/bsd.prefs.mk"
@@ -25,7 +26,6 @@ CONFIGURE_ARGS+=	--disable-default-build-tests
 # broken test for TLS
 CONFIGURE_ENV+=		ac_cv_tls=none
 .endif
-
 
 CONFIGURE_ENV+=		EGDIR=${EGDIR}
 MAKE_ENV+=		EGDIR=${EGDIR}
@@ -69,6 +69,24 @@ CONF_FILES+=	${EGDIR}/default.pa ${PKG_SYSCONFDIR}/default.pa
 CONF_FILES+=	${EGDIR}/system.pa ${PKG_SYSCONFDIR}/system.pa
 CONF_FILES+=	${EGDIR}/pulseaudio-system.conf \
 		${PKG_SYSCONFBASE}/dbus-1/system.d/pulseaudio-system.conf
+
+PLIST_VARS+=		evdev hal oss sun
+
+.if ${OPSYS} == "SunOS"
+PLIST.sun=		yes
+.  if ${OS_VERSION} == "5.11"
+PLIST.hal=		yes
+PLIST.oss=		yes
+.  endif
+.else
+PLIST.hal=		yes
+PLIST.oss=		yes
+.endif
+
+PKG_GROUPS=		${PULSE_GROUP}
+PKG_GROUPS+=		${PULSE_GROUP_REALTIME}
+PKG_GROUPS+=		${PULSE_GROUP_ACCESS}
+PKG_USERS=		${PULSE_USER}:${PULSE_GROUP}
 
 .if ${OPSYS} != "Darwin"
 .include "../../sysutils/consolekit/buildlink3.mk"

@@ -4,3 +4,5 @@ operations on your sound data as it passes between your application and your
 hardware. Things like transferring the audio to a different machine, changing
 the sample format or channel count and mixing several sounds into one are
 easily achieved using a sound server.
+
+This is truely experimental version to fix for NetBSD/i386 5.* X11_TYPE=native.
