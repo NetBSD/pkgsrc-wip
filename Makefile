@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5181 2013/04/06 11:01:25 kristerw Exp $
+# $Id: Makefile,v 1.5182 2013/04/07 20:55:57 khorben Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1753,6 +1753,7 @@ SUBDIR+=	nmzmail
 SUBDIR+=	nnrpd
 SUBDIR+=	nodau
 SUBDIR+=	node
+SUBDIR+=	nodm
 SUBDIR+=	noip
 SUBDIR+=	noiptun
 SUBDIR+=	nomadio
