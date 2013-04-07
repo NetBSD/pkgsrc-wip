@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2013/03/08 06:27:35 asau Exp $
+# $NetBSD: Makefile,v 1.5 2013/04/07 09:59:00 asau Exp $
 
 DISTNAME=		fftw-3.3
-PKGNAME=		fftw-openmpi-3.3
+PKGNAME=		fftw-mpich-3.3
+#PKGNAME=		fftw-openmpi-3.3
 CATEGORIES=		math
 MASTER_SITES=		ftp://ftp.fftw.org/pub/fftw/ \
 			http://www.fftw.org/
@@ -34,6 +35,8 @@ CONFIGURE_ARGS+=	--enable-shared \
 
 .if defined(PKGSRC_RUN_TEST) && !empty(PKGSRC_RUN_TEST:M[Yy][Ee][Ss])
 USE_TOOLS+=		perl
+#TEST_MAKE_FLAGS+=	MPIRUN=$(MPI_PREFIX)/bin/mpirun
+TEST_MAKE_FLAGS+=	MPIRUN=$(BUILDLINK_PREFIX.mpich:Q)/bin/mpirun
 .endif
 
 .include "../../wip/mpi-ch/buildlink3.mk"
