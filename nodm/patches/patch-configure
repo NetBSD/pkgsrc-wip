@@ -1,0 +1,15 @@
+$NetBSD: patch-configure,v 1.1 2013/04/07 20:54:18 khorben Exp $
+
+Allow building even if libpam_misc is not found
+
+--- configure.orig	2010-05-23 19:09:14.000000000 +0000
++++ configure
+@@ -3881,7 +3881,7 @@ $as_echo "$ac_cv_lib_pam_misc_main" >&6;
+ if test "x$ac_cv_lib_pam_misc_main" = x""yes; then :
+    PAM_LIBS="$PAM_LIBS -lpam_misc"
+ else
+-  as_fn_error "libpam_misc is missing" "$LINENO" 5
++  $as_echo "$as_me: warning: libpam_misc is missing"
+ 
+ fi
+ 
