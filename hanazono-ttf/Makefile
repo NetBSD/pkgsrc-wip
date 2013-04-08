@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/09/29 17:05:52 asau Exp $
+# $NetBSD: Makefile,v 1.7 2013/04/08 02:20:18 othyro Exp $
 #
 
 DISTNAME=	hanazono-20110915
@@ -10,7 +10,7 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://www.fonts.jp/hanazono/
 COMMENT=	Hanazono font (HanaMin) contains all UCS CJK glyphs
-LICENSE=	mplusfont OR open-font-license
+LICENSE=	mplusfont OR ofl-v1.1
 
 USE_X11BASE=	YES
 NO_CONFIGURE=	YES

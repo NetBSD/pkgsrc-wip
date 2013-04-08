@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/12/12 23:45:37 bubuchka Exp $
+# $NetBSD: Makefile,v 1.5 2013/04/08 02:20:18 othyro Exp $
 #
 
 PT_TTF_REV=	20121212
@@ -11,7 +11,7 @@ DISTFILES=	PTSansOFL.zip PTSerifOFL.zip PTMonoOFL.zip
 MAINTAINER=	mishka@NetBSD.org
 HOMEPAGE=	http://www.paratype.com/public/
 COMMENT=	Public fonts for minority languages of Russia
-LICENSE=	open-font-license
+LICENSE=	ofl-v1.1
 
 USE_LANGUAGES=	# none
 NO_BUILD=	yes

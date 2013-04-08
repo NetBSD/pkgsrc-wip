@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/07 17:17:33 asau Exp $
+# $NetBSD: Makefile,v 1.4 2013/04/08 02:20:18 othyro Exp $
 #
 
 DISTNAME=	Thabit-0.02
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=arabeyes/}
 MAINTAINER=	kamelderouiche@yahoo.com
 HOMEPAGE=	http://www.arabeyes.org/project.php?proj=Khotot
 COMMENT=	Thabit (from Arabic:fixed) is a fixed width OpenType font family
-LICENSE=	open-font-license
+LICENSE=	ofl-v1.1
 
 NO_CONFIGURE=		yes
 NO_BUILD=		yes

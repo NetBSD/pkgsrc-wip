@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/09/24 18:26:54 asau Exp $
+# $NetBSD: Makefile,v 1.4 2013/04/08 02:20:18 othyro Exp $
 #
 
 CMU_VERSION=	0.7.0
@@ -11,7 +11,7 @@ EXTRACT_SUFX=	.tar.xz
 MAINTAINER=	mishka@NetBSD.org
 HOMEPAGE=	http://cm-unicode.sourceforge.net/
 COMMENT=	Computer Modern Unicode fonts
-LICENSE=	open-font-license
+LICENSE=	ofl-v1.1
 
 WRKSRC=			${WRKDIR}/cm-unicode-${CMU_VERSION}
 NO_BUILD=		yes
