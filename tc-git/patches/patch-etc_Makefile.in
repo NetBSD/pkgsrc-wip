@@ -1,10 +1,11 @@
-$NetBSD: patch-etc_Makefile.in,v 1.1 2013/01/22 13:54:22 makoto Exp $
+$NetBSD: patch-etc_Makefile.in,v 1.2 2013/04/08 23:35:31 makoto Exp $
+
 Supporting to add following argment for configure.
  --enable-symbol-rev 
 
---- etc/Makefile.in.orig	2012-04-12 09:42:33.000000000 +0900
-+++ etc/Makefile.in	2012-04-12 23:49:23.000000000 +0900
-@@ -117,6 +117,7 @@
+--- etc/Makefile.in.orig	2013-04-09 08:22:32.000000000 +0900
++++ etc/Makefile.in	2013-04-09 08:26:40.000000000 +0900
+@@ -159,6 +159,7 @@ PATH_SEPARATOR = @PATH_SEPARATOR@
  SET_MAKE = @SET_MAKE@
  SHELL = /bin/sh
  STRIP = @STRIP@
@@ -12,7 +13,7 @@ Supporting to add following argment for configure.
  TEXI2HTML = @TEXI2HTML@
  TEXI2HTML_FLAGS = @TEXI2HTML_FLAGS@
  VERSION = @VERSION@
-@@ -166,6 +167,8 @@
+@@ -208,6 +209,8 @@ top_srcdir = @top_srcdir@
  DISTDATA = EELLLTXT EELLLTXT.tut bushu.rev symbol.rev tc-bitmap-8x16
  pkgdata_DATA = $(DISTDATA) bushu.expand bushu.index2
  EXTRA_DIST = $(DISTDATA) mk-bdic
@@ -21,13 +22,14 @@ Supporting to add following argment for configure.
  all: all-am
  
  .SUFFIXES:
-@@ -366,13 +369,23 @@
- 	uninstall-am uninstall-pkgdataDATA
+@@ -415,13 +418,24 @@ uninstall-am: uninstall-pkgdataDATA
+ 	uninstall-pkgdataDATA
  
  
 -bushu.expand bushu.index2: bushu.rev
 -	@echo '*** compiling bushu dictionary ***'
 -	@echo '*** this may take a few minutes ***'
++
 +bushu.expand bushu.index2: bushu.rev $(BATCH_SORT)
 +	@echo ' *** Taking care bushu.rev and sorting it'
 +	@if [ .${SYMBOLREV} = ."yes" ]; then \
