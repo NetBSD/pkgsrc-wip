@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2013/03/29 14:24:56 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.18 2013/04/08 10:32:06 fhajny Exp $
 bin/node
 bin/npm
 lib/dtrace/node.d
@@ -433,6 +433,12 @@ lib/node_modules/npm/node_modules/chownr/LICENCE
 lib/node_modules/npm/node_modules/chownr/README.md
 lib/node_modules/npm/node_modules/chownr/chownr.js
 lib/node_modules/npm/node_modules/chownr/package.json
+lib/node_modules/npm/node_modules/cmd-shim/.npmignore
+lib/node_modules/npm/node_modules/cmd-shim/.travis.yml
+lib/node_modules/npm/node_modules/cmd-shim/LICENSE
+lib/node_modules/npm/node_modules/cmd-shim/README.md
+lib/node_modules/npm/node_modules/cmd-shim/index.js
+lib/node_modules/npm/node_modules/cmd-shim/package.json
 lib/node_modules/npm/node_modules/fstream-npm/.npmignore
 lib/node_modules/npm/node_modules/fstream-npm/LICENCE
 lib/node_modules/npm/node_modules/fstream-npm/README.md
