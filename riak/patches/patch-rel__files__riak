@@ -1,8 +1,9 @@
-$NetBSD: patch-rel__files__riak,v 1.4 2012/08/10 17:16:54 fhajny Exp $
+$NetBSD: patch-rel__files__riak,v 1.5 2013/04/08 21:18:09 fhajny Exp $
 
 Substitute whoami for id across SunOS platforms.
 Silence sudo (unneeded screen waste).
---- rel/files/riak.orig	2012-08-06 22:02:45.000000000 +0000
+
+--- rel/files/riak.orig	2013-04-03 18:24:54.000000000 +0000
 +++ rel/files/riak
 @@ -13,6 +13,12 @@ if [ `uname -s` = 'SunOS' -a "${POSIX_SH
  fi
@@ -30,9 +31,9 @@ Silence sudo (unneeded screen waste).
          echo "sudo doesn't appear to be installed and your EUID isn't $RUNNER_USER" 1>&2
          exit 1
      fi
--    echo "Attempting to restart script through sudo -H -u $RUNNER_USER"
+-    echo "Attempting to restart script through sudo -H -u $RUNNER_USER" >&2
 -    exec sudo -H -u $RUNNER_USER -i $RUNNER_SCRIPT_DIR/$RUNNER_SCRIPT $@
 +    exec sudo -H -u $RUNNER_USER $RUNNER_SCRIPT_DIR/$RUNNER_SCRIPT $@
  fi
  
- # Warn the user if ulimit -n is less than 1024
+ # Warn the user if ulimit -n is less than 4096

@@ -1,42 +1,48 @@
-# $NetBSD: Makefile.versions,v 1.5 2013/02/05 14:14:12 fhajny Exp $
+# $NetBSD: Makefile.versions,v 1.6 2013/04/08 21:18:09 fhajny Exp $
 
 _RIAK_VERSIONS+=			\
 	appmon		2.1.14.1	\
 	asn1		1.8		\
 	basho_metrics	1.0.0		\
-	basho_stats	1.0.2		\
-	bear		0.1-0-g7ef9a7b	\
-	bitcask		1.5.2		\
-	cluster_info	1.2.2		\
+	basho_stats	1.0.3		\
+	bear		0.1.2-0-g0da736b	\
+	bitcask		1.6.1		\
+	cluster_info	1.2.3		\
 	dtrace		0.8		\
 	ebloom		1.1.1		\
-	eleveldb	1.2.2p5		\
+	eleveldb	1.3.0		\
 	eper		0.61		\
-	erlang_js	1.2.1		\
+	erlang_js	1.2.2		\
 	erlydtl		0.7.0		\
-	folsom		0.7-0-g64b24d3	\
+	folsom		0.7.3p1		\
 	getopt		0.4.3		\
 	innostore	${INNOVER}	\
-	lager		1.2.0		\
+	lager		1.2.2		\
+	lager_syslog	1.2.2		\
 	lucene_parser	1		\
 	luke		0.2.5		\
-	merge_index	1.2.1		\
-	mochiweb	1.5.1		\
+	merge_index	1.3.0		\
+	mochiweb	1.5.1p3		\
 	poolboy		0.8.1		\
-	protobuffs	0.7.0		\
-	riak_api	1.2.0		\
-	riak_control	1.2.0		\
-	riak_core	1.2.1		\
-	riak_kv		1.2.1		\
-	riak_pb		1.2.0		\
-	riak_pipe	1.2.1		\
-	riak_search	1.2.1		\
-	riak_sysmon	1.1.2		\
+	protobuffs	0.8.0		\
+	riak_api	1.3.1		\
+	riak_control	1.3.0		\
+	riak_core	1.3.1		\
+	riak_kv		1.3.1		\
+	riak_pb		1.3.0		\
+	riak_pipe	1.3.1		\
+	riak_search	1.3.0		\
+	riak_sysmon	1.1.3		\
 	riakc		1.2.1		\
-	sext		0.4.1-0-g362bdd1 \
-	webmachine	1.9.2
+	sext		1.1-0-g10529f0	\
+	syslog		1.0.1		\
+	webmachine	1.9.3
 
 .for name version in ${_RIAK_VERSIONS}
 VERSION.${name}=${version}
 PLIST_SUBST+=	VERSION.${name}=${version}
+.endfor
+
+.for _pkg_ _version_ in $(_RIAK_VERSIONS)
+PRINT_PLIST_AWK+=	{if ($$0 ~ /\/$(_pkg_)-$(_version_)\//) {sub(/\/$(_pkg_)-$(_version_)\//,"/$(_pkg_)-$${VERSION.$(_pkg_)}/", $$0);}}
 .endfor
