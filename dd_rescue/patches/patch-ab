@@ -1,0 +1,30 @@
+$NetBSD: patch-ab,v 1.1.1.1 2013/04/08 08:26:17 makoto Exp $
+
+See http://gnats.netbsd.org/38620
+dd_rescue: (fatal): allocation of aligned buffer failed!
+
+--- dd_rescue.c.orig	2013-03-31 04:24:34.000000000 +0900
++++ dd_rescue.c	2013-04-08 17:03:27.000000000 +0900
+@@ -121,6 +121,10 @@ _syscall6(long, splice, int, fdin, loff_
+ # endif
+ #endif
+ 
++#ifdef __DragonFly__
++#undef O_DIRECT
++#endif
++
+ /* fwd decls */
+ int cleanup();
+ 
+@@ -1452,6 +1456,11 @@ unsigned char* zalloc_buf(unsigned int b
+ 	unsigned char *ptr;
+ #ifdef O_DIRECT
+ 	void *mp;
++#ifdef linux
++#define my_valloc(a, b, c)     posix_memalign((a), (b), (c))
++#else
++#define my_valloc(a, b, c)     !(*(a) = valloc((c)))
++#endif
+ 	if (posix_memalign(&mp, pagesize, bs)) {
+ 		fplog(stderr, "dd_rescue: (fatal): allocation of aligned buffer failed!\n");
+ 		cleanup(); exit(18);
