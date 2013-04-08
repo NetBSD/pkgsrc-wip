@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5182 2013/04/07 20:55:57 khorben Exp $
+# $Id: Makefile,v 1.5183 2013/04/08 08:38:38 makoto Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -398,6 +398,7 @@ SUBDIR+=	dbus-explorer
 SUBDIR+=	dbus-sharp
 SUBDIR+=	dbus-sharp-glib
 SUBDIR+=	ddate
+SUBDIR+=	dd_rescue
 SUBDIR+=	deadbeef
 SUBDIR+=	debian_base
 SUBDIR+=	debian_glib
