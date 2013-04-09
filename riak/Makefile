@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2013/04/08 21:18:09 fhajny Exp $
+# $NetBSD: Makefile,v 1.17 2013/04/09 11:21:51 fhajny Exp $
 #
 
 DISTNAME=		riak-1.3.1
@@ -15,6 +15,8 @@ BUILD_DEPENDS+=		scmgit-base-[0-9]*:../../devel/scmgit-base
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS=		gmake
+
+MAKE_JOBS_SAFE=		no
 
 DISTFILES=		${DEFAULT_DISTFILES}
 EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
