@@ -1,4 +1,4 @@
-$NetBSD: patch-lisp_Makefile.in,v 1.1 2013/01/22 13:54:22 makoto Exp $
+$NetBSD: patch-lisp_Makefile.in,v 1.2 2013/04/09 01:03:46 makoto Exp $
 
 (1) lisp_LISP the list of *.el to be compiled
 (2) lisp_DATA not to be compiled
@@ -6,9 +6,9 @@ $NetBSD: patch-lisp_Makefile.in,v 1.1 2013/01/22 13:54:22 makoto Exp $
 Automake won't run on this directory, so not only Makefile.am
 but this Makefile.in should be patched the same way
 
---- lisp/Makefile.in.orig	2012-08-06 11:48:06.000000000 +0900
-+++ lisp/Makefile.in	2012-08-06 12:02:13.000000000 +0900
-@@ -213,10 +213,10 @@
+--- lisp/Makefile.in.orig	2013-04-09 09:02:41.000000000 +0900
++++ lisp/Makefile.in	2013-04-09 09:59:07.000000000 +0900
+@@ -243,10 +243,10 @@ COMMON_EL_FILES = tc-setup.el tc.el tc-h
  	tc-inst.el tc-stat.el tc-ja-alnum.el \
  	try-tbl.el try-etbl.el ttc-tbl.el ttc-rtbl.el ttc-ltbl.el
  
@@ -21,3 +21,12 @@ but this Makefile.in should be patched the same way
  ELCFILES = compile.log
  noinst_LISP = make-elc guess tc-pre-base
  EXTRA_DIST = $(lisp_LISP) $(noinst_LISP) add-site-info
+@@ -561,7 +561,7 @@ compile.log: $(PREFILE)
+ 	$(SHELL) add-site-info tc-pre-base $(PREFILE) \
+ 		"@datadir@/@PACKAGE@/"
+ 	$(EMACS) -q -no-site-file -batch -l $(srcdir)/make-elc \
+-		$(COMMON_EL_FILES) $(EL_FILES) 2> compile.log
++		$(COMMON_EL_FILES) $(EL_FILES) $(lisp_LISP) 2> compile.log
+ 
+ clean-generic:
+ 	rm -f *.elc $(PREFILE)

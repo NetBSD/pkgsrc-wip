@@ -1,12 +1,12 @@
-$NetBSD: patch-lisp_Makefile.am,v 1.1 2013/01/22 13:54:22 makoto Exp $
+$NetBSD: patch-lisp_Makefile.am,v 1.2 2013/04/09 01:03:46 makoto Exp $
 
 (1) This patch is reference only, not actually used.
 (2) automake on this directory won't be run with usual make package
     This may be used to generate Makefile.in file
 
---- lisp/Makefile.am.orig	2012-08-06 11:48:06.000000000 +0900
-+++ lisp/Makefile.am	2012-08-06 12:00:49.000000000 +0900
-@@ -10,9 +10,9 @@
+--- lisp/Makefile.am.orig	2013-04-09 09:02:41.000000000 +0900
++++ lisp/Makefile.am	2013-04-09 09:56:41.000000000 +0900
+@@ -10,9 +10,9 @@ COMMON_EL_FILES = tc-setup.el tc.el tc-h
  	tc-inst.el tc-stat.el tc-ja-alnum.el \
  	try-tbl.el try-etbl.el ttc-tbl.el ttc-rtbl.el ttc-ltbl.el
  
@@ -18,3 +18,12 @@ $NetBSD: patch-lisp_Makefile.am,v 1.1 2013/01/22 13:54:22 makoto Exp $
  ELCFILES = compile.log
  noinst_LISP = make-elc guess tc-pre-base
  
+@@ -26,7 +26,7 @@ compile.log: $(PREFILE)
+ 	$(SHELL) add-site-info tc-pre-base $(PREFILE) \
+ 		"@datadir@/@PACKAGE@/"
+ 	$(EMACS) -q -no-site-file -batch -l $(srcdir)/make-elc \
+-		$(COMMON_EL_FILES) $(EL_FILES) 2> compile.log
++		$(COMMON_EL_FILES) $(EL_FILES) $(lisp_LISP) 2> compile.log
+ 
+ clean-generic:
+ 	rm -f *.elc $(PREFILE)
