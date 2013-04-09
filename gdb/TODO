@@ -1,7 +1,9 @@
 TODO
-- NetBSD/amd64 6.0.1 segfaults
+- NetBSD/i386 fails to compile on 6.0/6.99.18
 - devel/gdb/patches/patch-* are not reviewed yet for inclusion
+- Test on Dragonfly amd64
 
 DONE
-- NetBSD/i386 5.2 invocation is OK
+- NetBSD/i386 5.2 invocation is OK (7.5)
 - DragonFly/i386 3.2.2 + gcc-47: invocation is OK
+- NetBSD/amd64 6.1_RC1 and 6.99.19 OK with gcc/gfortran 4.8.0
