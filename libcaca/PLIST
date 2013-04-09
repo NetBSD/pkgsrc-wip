@@ -1,0 +1,31 @@
+@comment $NetBSD: PLIST,v 1.1 2013/04/09 07:48:05 jgoamakf Exp $
+bin/caca-config
+bin/cacaclock
+bin/cacademo
+bin/cacafire
+bin/cacaplay
+bin/cacaserver
+bin/cacaview
+bin/img2txt
+include/caca.h
+include/caca0.h
+include/caca_conio.h
+include/caca_types.h
+include/cucul.h
+lib/libcaca.la
+lib/libcucul.la
+lib/libcucul.so
+lib/libcucul.so.0
+lib/libcucul.so.0.99.18
+lib/pkgconfig/caca.pc
+lib/pkgconfig/cucul.pc
+man/man1/caca-config.1
+man/man1/cacademo.1
+man/man1/cacafire.1
+man/man1/cacaplay.1
+man/man1/cacaserver.1
+man/man1/cacaview.1
+man/man1/img2txt.1
+share/libcaca/caca.txt
+@pkgdir share/java
+@pkgdir lib/jni

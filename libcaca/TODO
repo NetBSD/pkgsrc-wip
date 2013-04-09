@@ -1,0 +1,18 @@
+1. create options.mk to choose graphics backends.
+   (graphics/libcaca/options.mk)
+  - ncurses
+  - slang
+  - x11
+  - gl
+  - cocoa
+
+2. create licenses/wtfpl(http://www.wtfpl.net).
+
+3. create libcaca-doc package.
+
+4. create language binding packages. libcaca's contains these bindings.
+  - csharp
+  - java
+  - cxx
+  - python
+  - ruby
