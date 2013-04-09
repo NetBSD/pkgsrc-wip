@@ -1,8 +1,6 @@
-# $NetBSD: Makefile.versions,v 1.6 2013/04/08 21:18:09 fhajny Exp $
+# $NetBSD: Makefile.versions,v 1.7 2013/04/09 11:24:34 fhajny Exp $
 
 _RIAK_VERSIONS+=			\
-	appmon		2.1.14.1	\
-	asn1		1.8		\
 	basho_metrics	1.0.0		\
 	basho_stats	1.0.3		\
 	bear		0.1.2-0-g0da736b	\
