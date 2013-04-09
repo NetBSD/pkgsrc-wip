@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2009/10/11 10:44:28 thomasklausner Exp $
-lib/aspell/fi.multi
-lib/aspell/fi.rws
-lib/aspell/finnish.alias
-share/aspell/fi.dat
-share/aspell/fi_affix.dat
