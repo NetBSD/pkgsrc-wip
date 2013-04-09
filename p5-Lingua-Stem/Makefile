@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2012/10/04 18:42:20 asau Exp $
+# $NetBSD: Makefile,v 1.9 2013/04/09 07:40:26 jgoamakf Exp $
 
-DISTNAME=		Lingua-Stem-0.81
+DISTNAME=		Lingua-Stem-0.84
 PKGNAME=		p5-${DISTNAME}
 CATEGORIES=		textproc perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Lingua/}
@@ -8,6 +8,7 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Lingua/}
 MAINTAINER=		kuli0020@umn.edu
 HOMEPAGE=		http://search.cpan.org/~snowhare/Lingua-Stem/
 COMMENT=		Provides word stemming algorithms localized by language
+LICENSE=		${PERL5_LICENSE}
 
 DEPENDS+=		p5-Lingua-PT-Stemmer>=0:../../wip/p5-Lingua-PT-Stemmer
 DEPENDS+=		p5-Lingua-Stem-Fr>=0.02:../../wip/p5-Lingua-Stem-Fr
@@ -17,10 +18,6 @@ DEPENDS+=		p5-Lingua-Stem-Snowball-Da>=1.01:../../wip/p5-Lingua-Stem-Snowball-Da
 DEPENDS+=		p5-Lingua-Stem-Snowball-No>=0:../../wip/p5-Lingua-Stem-Snowball-No
 DEPENDS+=		p5-Lingua-Stem-Snowball-Se>=1.01:../../wip/p5-Lingua-Stem-Snowball-Se
 DEPENDS+=		p5-Text-German>=0:../../wip/p5-Text-German
-
-PKG_DESTDIR_SUPPORT=	none
-
-MAN3PREFIX=		${PREFIX}/lib/perl5/${PERL_VERSION}
 
 PERL5_PACKLIST=	auto/Lingua/Stem/.packlist
 
