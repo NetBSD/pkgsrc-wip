@@ -1,10 +1,18 @@
-# $NetBSD: options.mk,v 1.2 2013/03/02 23:22:31 othyro Exp $
+# $NetBSD: options.mk,v 1.3 2013/04/10 01:14:25 othyro Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.liboggz
-PKG_SUPPORTED_OPTIONS=	valgrind
+PKG_SUPPORTED_OPTIONS=	doc valgrind
 PKG_SUGGESTED_OPTIONS+=	# blank
+PLIST_VARS+=		doc
 
 .include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mdoc)
+BUILD_DEPENDS+=	doxygen-[0-9]*:../../devel/doxygen
+PLIST.doc=		yes
+.else
+CONFIGURE_ARGS+=	HAVE_DOXYGEN=no
+.endif
 
 .if !empty(PKG_OPTIONS:Mvalgrind)
 BUILD_DEPENDS+=	valgrind-[0-9]*:../../devel/valgrind

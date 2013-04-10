@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2013/03/02 15:31:33 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2013/04/10 01:14:25 othyro Exp $
 #
 
 DISTNAME=	liboggz-1.1.1
+PKGREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	http://downloads.xiph.org/releases/liboggz/
 
