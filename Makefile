@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5185 2013/04/09 23:58:03 othyro Exp $
+# $Id: Makefile,v 1.5186 2013/04/10 00:20:21 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -163,7 +163,6 @@ SUBDIR+=	arphic-uming-ttf
 SUBDIR+=	artemis
 SUBDIR+=	ascii2binary
 SUBDIR+=	aspell-dictionaries
-SUBDIR+=	aspell-telugu
 SUBDIR+=	aten
 SUBDIR+=	atftp
 SUBDIR+=	ati-xfree86-bin

@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2009/07/16 11:17:23 prudhvikrishna Exp $
-lib/aspell/te.rws
-lib/aspell/te.multi
-lib/aspell/telugu.alias
-share/aspell/te.dat
-share/aspell/u-telu.cset
-share/aspell/u-telu.cmap
