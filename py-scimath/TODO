@@ -1,0 +1,11 @@
+WARNING: [check-interpreter.mk] The interpreter "/usr/bin/env" of "/scratch/wip/py-scimath/work/.destdir/usr/pkg/lib/python2.7/site-packages/scimath/interpolate/setup.py" is not allowed.
+WARNING: [check-interpreter.mk] The interpreter "/usr/bin/env" of "/scratch/wip/py-scimath/work/.destdir/usr/pkg/lib/python2.7/site-packages/scimath/units/SI.py" is not allowed.
+WARNING: [check-interpreter.mk] The interpreter "/usr/bin/env" of "/scratch/wip/py-scimath/work/.destdir/usr/pkg/lib/python2.7/site-packages/scimath/units/area.py" is not allowed.
+WARNING: [check-interpreter.mk] The interpreter "/usr/bin/env" of "/scratch/wip/py-scimath/work/.destdir/usr/pkg/lib/python2.7/site-packages/scimath/units/energy.py" is not allowed.
+WARNING: [check-interpreter.mk] The interpreter "/usr/bin/env" of "/scratch/wip/py-scimath/work/.destdir/usr/pkg/lib/python2.7/site-packages/scimath/units/force.py" is not allowed.
+WARNING: [check-interpreter.mk] The interpreter "/usr/bin/env" of "/scratch/wip/py-scimath/work/.destdir/usr/pkg/lib/python2.7/site-packages/scimath/units/power.py" is not allowed.
+WARNING: [check-interpreter.mk] The interpreter "/usr/bin/env" of "/scratch/wip/py-scimath/work/.destdir/usr/pkg/lib/python2.7/site-packages/scimath/units/pressure.py" is not allowed.
+WARNING: [check-interpreter.mk] The interpreter "/usr/bin/env" of "/scratch/wip/py-scimath/work/.destdir/usr/pkg/lib/python2.7/site-packages/scimath/units/substance.py" is not allowed.
+WARNING: [check-interpreter.mk] The interpreter "/usr/bin/env" of "/scratch/wip/py-scimath/work/.destdir/usr/pkg/lib/python2.7/site-packages/scimath/units/temperature.py" is not allowed.
+WARNING: [check-interpreter.mk] The interpreter "/usr/bin/env" of "/scratch/wip/py-scimath/work/.destdir/usr/pkg/lib/python2.7/site-packages/scimath/units/unit.py" is not allowed.
+WARNING: [check-interpreter.mk] The interpreter "/usr/bin/env" of "/scratch/wip/py-scimath/work/.destdir/usr/pkg/lib/python2.7/site-packages/scimath/units/unit_parser.py" is not allowed.
