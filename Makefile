@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5186 2013/04/10 00:20:21 othyro Exp $
+# $Id: Makefile,v 1.5187 2013/04/10 11:09:15 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1299,7 +1299,6 @@ SUBDIR+=	l2tpd
 SUBDIR+=	labyrinth
 SUBDIR+=	lambertw
 SUBDIR+=	lapack340
-SUBDIR+=	lasem
 SUBDIR+=	lasi
 SUBDIR+=	last-exit
 SUBDIR+=	last.fm
