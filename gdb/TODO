@@ -1,9 +1,11 @@
 TODO
-- NetBSD/i386 fails to compile on 6.0/6.99.18
+- NetBSD/i386 fails to compile on 6.0 to 6.99.18 (bsd-kvm.c)
+- Dragonfly/i386 3.2.2: list command works, but cannot run programs 
 - devel/gdb/patches/patch-* are not reviewed yet for inclusion
-- Test on Dragonfly amd64
+- Test on Dragonfly amd64, SunOS and Linux.
+- Run make test on all platforms.
 
 DONE
-- NetBSD/i386 5.2 invocation is OK (7.5)
-- DragonFly/i386 3.2.2 + gcc-47: invocation is OK
 - NetBSD/amd64 6.1_RC1 and 6.99.19 OK with gcc/gfortran 4.8.0
+  (make test passes more than 95 % of testcases).
+- NetBSD/i386 5.2 invocation is OK (but does it work ?)
