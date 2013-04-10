@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2012/12/28 04:23:54 othyro Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/04/10 01:38:39 othyro Exp $
 bin/sdl2-config
 include/SDL2/SDL.h
 include/SDL2/SDL_assert.h
 include/SDL2/SDL_atomic.h
 include/SDL2/SDL_audio.h
+include/SDL2/SDL_bits.h
 include/SDL2/SDL_blendmode.h
 include/SDL2/SDL_clipboard.h
 include/SDL2/SDL_config.h
@@ -11,8 +12,8 @@ include/SDL2/SDL_config_android.h
 include/SDL2/SDL_config_iphoneos.h
 include/SDL2/SDL_config_macosx.h
 include/SDL2/SDL_config_minimal.h
-include/SDL2/SDL_config_nintendods.h
 include/SDL2/SDL_config_pandora.h
+include/SDL2/SDL_config_psp.h
 include/SDL2/SDL_config_windows.h
 include/SDL2/SDL_config_wiz.h
 include/SDL2/SDL_copying.h
@@ -24,7 +25,6 @@ include/SDL2/SDL_gamecontroller.h
 include/SDL2/SDL_gesture.h
 include/SDL2/SDL_haptic.h
 include/SDL2/SDL_hints.h
-include/SDL2/SDL_input.h
 include/SDL2/SDL_joystick.h
 include/SDL2/SDL_keyboard.h
 include/SDL2/SDL_keycode.h
@@ -55,10 +55,12 @@ include/SDL2/SDL_syswm.h
 include/SDL2/SDL_test.h
 include/SDL2/SDL_test_assert.h
 include/SDL2/SDL_test_common.h
+include/SDL2/SDL_test_compare.h
 include/SDL2/SDL_test_crc32.h
 include/SDL2/SDL_test_font.h
 include/SDL2/SDL_test_fuzzer.h
 include/SDL2/SDL_test_harness.h
+include/SDL2/SDL_test_images.h
 include/SDL2/SDL_test_log.h
 include/SDL2/SDL_test_md5.h
 include/SDL2/SDL_test_random.h
@@ -73,6 +75,6 @@ include/SDL2/close_code.h
 lib/libSDL2.a
 lib/libSDL2.so
 lib/libSDL2.so.0
-lib/libSDL2.so.${PKGVERSION}.0
+lib/libSDL2.so.2.0.0
 lib/libSDL2main.a
 lib/pkgconfig/sdl2.pc
