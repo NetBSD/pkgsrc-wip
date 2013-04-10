@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2012/09/13 12:38:01 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.5 2013/04/10 11:23:54 thomasklausner Exp $
 bin/extend2da.py
 bin/gemrb
 lib/gemrb/libgemrb_core.so
@@ -261,6 +261,7 @@ share/doc/gemrb/en/GUIScript/LoadWindow.txt
 share/doc/gemrb/en/GUIScript/LoadWindowFrame.txt
 share/doc/gemrb/en/GUIScript/LoadWindowPack.txt
 share/doc/gemrb/en/GUIScript/MemorizeSpell.txt
+share/doc/gemrb/en/GUIScript/MessageWindowDebug.txt
 share/doc/gemrb/en/GUIScript/ModifyEffect.txt
 share/doc/gemrb/en/GUIScript/MoveTAText.txt
 share/doc/gemrb/en/GUIScript/MoveToArea.txt
@@ -491,6 +492,7 @@ share/doc/gemrb/en/Tables/wssingle.txt
 share/doc/gemrb/en/Tables/wstwohnd.txt
 share/doc/gemrb/en/Tables/wstwowpn.txt
 share/doc/gemrb/en/cmake_install.cmake
+share/doc/gemrb/en/default_ini.txt
 share/doc/gemrb/en/gemrb_ini.txt
 share/examples/gemrb/GemRB.cfg.noinstall.sample
 share/examples/gemrb/GemRB.cfg.sample
@@ -504,6 +506,8 @@ share/gemrb/GUIScripts/GUIClasses.py
 share/gemrb/GUIScripts/GUICommon.py
 share/gemrb/GUIScripts/GUICommonWindows.py
 share/gemrb/GUIScripts/GUIDefines.py
+share/gemrb/GUIScripts/GUIOPT.py
+share/gemrb/GUIScripts/GUIOPTControls.py
 share/gemrb/GUIScripts/GUIREC.py
 share/gemrb/GUIScripts/GUIRECCommon.py
 share/gemrb/GUIScripts/GUISAVE.py
@@ -546,7 +550,6 @@ share/gemrb/GUIScripts/bg1/GUIMA.py
 share/gemrb/GUIScripts/bg1/GUIMG.py
 share/gemrb/GUIScripts/bg1/GUIMOVIE.py
 share/gemrb/GUIScripts/bg1/GUIMP.py
-share/gemrb/GUIScripts/bg1/GUIOPT.py
 share/gemrb/GUIScripts/bg1/GUIPR.py
 share/gemrb/GUIScripts/bg1/GUISONGS.py
 share/gemrb/GUIScripts/bg1/ImportFile.py
@@ -591,13 +594,6 @@ share/gemrb/GUIScripts/bg2/GUILOAD.py
 share/gemrb/GUIScripts/bg2/GUIMA.py
 share/gemrb/GUIScripts/bg2/GUIMG.py
 share/gemrb/GUIScripts/bg2/GUIMOVIE.py
-share/gemrb/GUIScripts/bg2/GUIOPT.py
-share/gemrb/GUIScripts/bg2/GUIOPT10.py
-share/gemrb/GUIScripts/bg2/GUIOPT12.py
-share/gemrb/GUIScripts/bg2/GUIOPT6.py
-share/gemrb/GUIScripts/bg2/GUIOPT7.py
-share/gemrb/GUIScripts/bg2/GUIOPT8.py
-share/gemrb/GUIScripts/bg2/GUIOPT9.py
 share/gemrb/GUIScripts/bg2/GUIPR.py
 share/gemrb/GUIScripts/bg2/GUISONGS.py
 share/gemrb/GUIScripts/bg2/ImportFile.py
@@ -626,7 +622,6 @@ share/gemrb/GUIScripts/iwd/GUILOAD.py
 share/gemrb/GUIScripts/iwd/GUIMA.py
 share/gemrb/GUIScripts/iwd/GUIMG.py
 share/gemrb/GUIScripts/iwd/GUIMOVIE.py
-share/gemrb/GUIScripts/iwd/GUIOPT.py
 share/gemrb/GUIScripts/iwd/GUIPR.py
 share/gemrb/GUIScripts/iwd/LoadScreen.py
 share/gemrb/GUIScripts/iwd/MessageWindow.py
@@ -636,7 +631,6 @@ share/gemrb/GUIScripts/iwd/Start.py
 share/gemrb/GUIScripts/iwd2/Abilities.py
 share/gemrb/GUIScripts/iwd2/Alignment.py
 share/gemrb/GUIScripts/iwd2/Appearance.py
-share/gemrb/GUIScripts/iwd2/AutoPause.py
 share/gemrb/GUIScripts/iwd2/Autodetect.py
 share/gemrb/GUIScripts/iwd2/CGPortrait.py
 share/gemrb/GUIScripts/iwd2/CSound.py
@@ -650,26 +644,20 @@ share/gemrb/GUIScripts/iwd2/CharGen7.py
 share/gemrb/GUIScripts/iwd2/CharGen8.py
 share/gemrb/GUIScripts/iwd2/CharGen9.py
 share/gemrb/GUIScripts/iwd2/CharOverview.py
-share/gemrb/GUIScripts/iwd2/CharSound.py
 share/gemrb/GUIScripts/iwd2/Class.py
 share/gemrb/GUIScripts/iwd2/Enemy.py
 share/gemrb/GUIScripts/iwd2/Feats.py
-share/gemrb/GUIScripts/iwd2/Feedback.py
 share/gemrb/GUIScripts/iwd2/GUIINV.py
 share/gemrb/GUIScripts/iwd2/GUIJRNL.py
 share/gemrb/GUIScripts/iwd2/GUILOAD.py
 share/gemrb/GUIScripts/iwd2/GUIMA.py
-share/gemrb/GUIScripts/iwd2/GUIOPT.py
 share/gemrb/GUIScripts/iwd2/GUIREC.py
 share/gemrb/GUIScripts/iwd2/GUISPL.py
 share/gemrb/GUIScripts/iwd2/GUIWORLD.py
-share/gemrb/GUIScripts/iwd2/GamePlay.py
 share/gemrb/GUIScripts/iwd2/Gender.py
-share/gemrb/GUIScripts/iwd2/Graphics.py
 share/gemrb/GUIScripts/iwd2/ImportFile.py
 share/gemrb/GUIScripts/iwd2/LoadScreen.py
 share/gemrb/GUIScripts/iwd2/MessageWindow.py
-share/gemrb/GUIScripts/iwd2/Movies.py
 share/gemrb/GUIScripts/iwd2/Name.py
 share/gemrb/GUIScripts/iwd2/Options.py
 share/gemrb/GUIScripts/iwd2/QuitGame.py
@@ -679,7 +667,6 @@ share/gemrb/GUIScripts/iwd2/SPParty2.py
 share/gemrb/GUIScripts/iwd2/SPPartyFormation.py
 share/gemrb/GUIScripts/iwd2/Skills.py
 share/gemrb/GUIScripts/iwd2/Songs.py
-share/gemrb/GUIScripts/iwd2/Sound.py
 share/gemrb/GUIScripts/iwd2/Start.py
 share/gemrb/GUIScripts/iwd2/SubRaces.py
 share/gemrb/GUIScripts/maze_defs.py
@@ -754,6 +741,7 @@ share/gemrb/override/bg1/avprefc.2da
 share/gemrb/override/bg1/avprefr.2da
 share/gemrb/override/bg1/axe.pro
 share/gemrb/override/bg1/axeex.pro
+share/gemrb/override/bg1/bios.2da
 share/gemrb/override/bg1/bloodclr.2da
 share/gemrb/override/bg1/bolt.pro
 share/gemrb/override/bg1/boltex.pro
@@ -818,6 +806,7 @@ share/gemrb/override/bg1/overlay.2da
 share/gemrb/override/bg1/pathfind.2da
 share/gemrb/override/bg1/pdolls.2da
 share/gemrb/override/bg1/pictures.2da
+share/gemrb/override/bg1/polish.ini
 share/gemrb/override/bg1/proftype.2da
 share/gemrb/override/bg1/qslots.2da
 share/gemrb/override/bg1/races.2da
@@ -1111,6 +1100,7 @@ share/gemrb/override/how/ddoorh.pro
 share/gemrb/override/how/defsound.2da
 share/gemrb/override/how/destruh.pro
 share/gemrb/override/how/dfog.pro
+share/gemrb/override/how/difflvls.2da
 share/gemrb/override/how/disint.pro
 share/gemrb/override/how/disinth.pro
 share/gemrb/override/how/dispel.pro
@@ -2450,6 +2440,8 @@ share/gemrb/override/shared/bardsong.spl
 share/gemrb/override/shared/comment.2da
 share/gemrb/override/shared/containr.2da
 share/gemrb/override/shared/cow.pro
+share/gemrb/override/shared/czech.ini
+share/gemrb/override/shared/default.ini
 share/gemrb/override/shared/demoend.chu
 share/gemrb/override/shared/detect.spl
 share/gemrb/override/shared/difflvls.2da
