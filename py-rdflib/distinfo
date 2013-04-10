@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2012/01/18 11:49:28 noud4 Exp $
+$NetBSD: distinfo,v 1.3 2013/04/10 08:28:27 noud4 Exp $
 
-SHA1 (rdflib-3.1.0.tar.gz) = bbef5011fcd9cfa296a8ef33ac2885416b97da2d
-RMD160 (rdflib-3.1.0.tar.gz) = b9e31b6a08c0e6526b258360becde0b08dad43bc
-Size (rdflib-3.1.0.tar.gz) = 247299 bytes
+SHA1 (rdflib-3.2.2.tar.gz) = e137c6faa76c4d4c12497d504cd140d50b6c18ca
+RMD160 (rdflib-3.2.2.tar.gz) = 8f8c0ca0434218490e9071f7c509d2d88ee3b60b
+Size (rdflib-3.2.2.tar.gz) = 448846 bytes

@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2012/01/24 21:31:47 jihbed Exp $
+$NetBSD: distinfo,v 1.2 2013/04/10 08:31:10 noud4 Exp $
 
-SHA1 (scimath-4.0.0.tar.gz) = a591fa56e614838554bfc37c12d824efbe0b7c7a
-RMD160 (scimath-4.0.0.tar.gz) = e0e49edf3167e1586bfffb32cf033755987cc251
-Size (scimath-4.0.0.tar.gz) = 107851 bytes
+SHA1 (scimath-4.1.0.tar.gz) = 320c831b625b3115b510d7ee229aef4e7f0f1a6b
+RMD160 (scimath-4.1.0.tar.gz) = e12c5b0ed72d642425084437892b3a3d3fe28bda
+Size (scimath-4.1.0.tar.gz) = 117677 bytes
