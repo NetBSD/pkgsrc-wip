@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2012/11/11 22:00:03 othyro Exp $
+# $NetBSD: options.mk,v 1.3 2013/04/10 00:28:36 othyro Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.aspell-dictionaries
 PKG_SUPPORTED_OPTIONS=	lang-br lang-ca lang-cs lang-cy lang-da lang-de lang-el
@@ -10,101 +10,101 @@ PKG_SUGGESTED_OPTIONS=	${PKG_SUPPORTED_OPTIONS}
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mlang-br)
-DEPENDS+=	aspell-breton>=0.50.2:../../textproc/aspell-breton
+DEPENDS+=	aspell-br>=0.50.2:../../textproc/aspell-br
 .endif
 
 .if !empty(PKG_OPTIONS:Mlang-ca)
-DEPENDS+=	aspell-catalan>=20040130.1:../../textproc/aspell-catalan
+DEPENDS+=	aspell-ca>=20040130.1:../../textproc/aspell-ca
 .endif
 
 .if !empty(PKG_OPTIONS:Mlang-cs)
-DEPENDS+=	aspell-czech>=20040614.1:../../textproc/aspell-czech
+DEPENDS+=	aspell-cs>=20040614.1:../../textproc/aspell-cs
 .endif
 
 .if !empty(PKG_OPTIONS:Mlang-cy)
-DEPENDS+=	aspell-welsh>=0.50.3:../../textproc/aspell-welsh
+DEPENDS+=	aspell-cy>=0.50.3:../../textproc/aspell-cy
 .endif
 
 .if !empty(PKG_OPTIONS:Mlang-da)
-DEPENDS+=	aspell-danish>=1.4.52:../../textproc/aspell-danish
+DEPENDS+=	aspell-da>=1.4.52:../../textproc/aspell-da
 .endif
 
 .if !empty(PKG_OPTIONS:Mlang-de)
-DEPENDS+=	aspell-german>=20030222.1:../../textproc/aspell-german
+DEPENDS+=	aspell-de>=20030222.1:../../textproc/aspell-de
 .endif
 
 .if !empty(PKG_OPTIONS:Mlang-el)
-DEPENDS+=	aspell-greek>=0.50.3:../../textproc/aspell-greek
+DEPENDS+=	aspell-el>=0.50.3:../../textproc/aspell-el
 .endif
 
 .if !empty(PKG_OPTIONS:Mlang-en)
-DEPENDS+=	aspell-english>=6.0.0:../../textproc/aspell-english
+DEPENDS+=	aspell-en>=6.0.0:../../textproc/aspell-en
 .endif
 
 .if !empty(PKG_OPTIONS:Mlang-eo)
-DEPENDS+=	aspell-esperanto>=0.50.2:../../textproc/aspell-esperanto
+DEPENDS+=	aspell-eo>=0.50.2:../../textproc/aspell-eo
 .endif
 
 .if !empty(PKG_OPTIONS:Mlang-es)
-DEPENDS+=	aspell-spanish>=0.50.2:../../textproc/aspell-spanish
+DEPENDS+=	aspell-es>=0.50.2:../../textproc/aspell-es
 .endif
 
 .if !empty(PKG_OPTIONS:Mlang-fi)
-DEPENDS+=	aspell-finnish>=0.7.0:../../wip/aspell-finnish
+DEPENDS+=	aspell-fi>=0.7.0:../../textproc/aspell-fi
 .endif
 
 .if !empty(PKG_OPTIONS:Mlang-fo)
-DEPENDS+=	aspell-faroese>=0.2.24:../../textproc/aspell-faroese
+DEPENDS+=	aspell-fo>=0.2.24:../../textproc/aspell-fo
 .endif
 
 .if !empty(PKG_OPTIONS:Mlang-fr)
-DEPENDS+=	aspell-francais>=0.50.3:../../textproc/aspell-francais
+DEPENDS+=	aspell-fr>=0.50.3:../../textproc/aspell-fr
 .endif
 
 .if !empty(PKG_OPTIONS:Mlang-ga)
-DEPENDS+=	aspell-gaeilge>=3.5.0:../../textproc/aspell-gaeilge
+DEPENDS+=	aspell-ga>=3.5.0:../../textproc/aspell-ga
 .endif
 
 .if !empty(PKG_OPTIONS:Mlang-it)
-DEPENDS+=	aspell-italian>=0.53.0:../../textproc/aspell-italian
+DEPENDS+=	aspell-it>=0.53.0:../../textproc/aspell-it
 .endif
 
 .if !empty(PKG_OPTIONS:Mlang-nb)
-DEPENDS+=	aspell-norwegian>=0.50.1.0:../../textproc/aspell-norwegian
+DEPENDS+=	aspell-nb>=0.50.1.0:../../textproc/aspell-nb
 .endif
 
 .if !empty(PKG_OPTIONS:Mlang-nl)
-DEPENDS+=	aspell-dutch>=0.50.2:../../textproc/aspell-dutch
+DEPENDS+=	aspell-nl>=0.50.2:../../textproc/aspell-nl
 .endif
 
 .if !empty(PKG_OPTIONS:Mlang-pl)
-DEPENDS+=	aspell-polish>=0.51.0:../../textproc/aspell-polish
+DEPENDS+=	aspell-pl>=0.51.0:../../textproc/aspell-pl
 .endif
 
 .if !empty(PKG_OPTIONS:Mlang-pt)
-DEPENDS+=	aspell-portuguese>=0.50.2:../../textproc/aspell-portuguese
+DEPENDS+=	aspell-pt_PT>=0.50.2:../../textproc/aspell-pt_PT
 .endif
 
 .if !empty(PKG_OPTIONS:Mlang-ro)
-DEPENDS+=	aspell-romanian>=0.50.2:../../textproc/aspell-romanian
+DEPENDS+=	aspell-ro>=0.50.2:../../textproc/aspell-ro
 .endif
 
 .if !empty(PKG_OPTIONS:Mlang-ru)
-DEPENDS+=	aspell-russian>=0.99f7.1:../../textproc/aspell-russian
+DEPENDS+=	aspell-ru>=0.99f7.1:../../textproc/aspell-ru
 .endif
 
 .if !empty(PKG_OPTIONS:Mlang-sk)
-DEPENDS+=	aspell-slovak>=0.52.0:../../textproc/aspell-slovak
+DEPENDS+=	aspell-sk>=0.52.0:../../textproc/aspell-sk
 .endif
 
 .if !empty(PKG_OPTIONS:Mlang-sv)
-DEPENDS+=	aspell-svenska>=0.51.0:../../textproc/aspell-svenska
+DEPENDS+=	aspell-sv>=0.51.0:../../textproc/aspell-sv
 .endif
 
 .if !empty(PKG_OPTIONS:Mlang-te)
-DEPENDS+=	aspell-telugu>=0.01.2:../../wip/aspell-telugu
+DEPENDS+=	aspell-te>=0.01.2:../../textproc/aspell-te
 .endif
 
 .if !empty(PKG_OPTIONS:Mlang-uk)
-DEPENDS+=	aspell-ukrainian>=1.1.0:../../textproc/aspell-ukrainian
+DEPENDS+=	aspell-uk>=1.1.0:../../textproc/aspell-uk
 .endif

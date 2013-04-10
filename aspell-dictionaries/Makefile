@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2012/11/11 21:58:06 othyro Exp $
+# $NetBSD: Makefile,v 1.4 2013/04/10 00:28:36 othyro Exp $
 #
 
 DISTNAME=	aspell-dictionaries-1.0
+PKGREVISION=	1
 CATEGORIES=	meta-pkgs textproc
 MASTER_SITES=	# blank
 DISTFILES=	# empty
