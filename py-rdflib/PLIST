@@ -1,4 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2012/01/13 21:55:46 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.3 2013/04/10 08:59:02 thomasklausner Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/rdflib/__init__.py
 ${PYSITELIB}/rdflib/__init__.pyc
 ${PYSITELIB}/rdflib/__init__.pyo
@@ -8,6 +13,9 @@ ${PYSITELIB}/rdflib/collection.pyo
 ${PYSITELIB}/rdflib/compare.py
 ${PYSITELIB}/rdflib/compare.pyc
 ${PYSITELIB}/rdflib/compare.pyo
+${PYSITELIB}/rdflib/compat.py
+${PYSITELIB}/rdflib/compat.pyc
+${PYSITELIB}/rdflib/compat.pyo
 ${PYSITELIB}/rdflib/events.py
 ${PYSITELIB}/rdflib/events.pyc
 ${PYSITELIB}/rdflib/events.pyo
@@ -38,6 +46,9 @@ ${PYSITELIB}/rdflib/plugins/parsers/__init__.pyo
 ${PYSITELIB}/rdflib/plugins/parsers/notation3.py
 ${PYSITELIB}/rdflib/plugins/parsers/notation3.pyc
 ${PYSITELIB}/rdflib/plugins/parsers/notation3.pyo
+${PYSITELIB}/rdflib/plugins/parsers/nquads.py
+${PYSITELIB}/rdflib/plugins/parsers/nquads.pyc
+${PYSITELIB}/rdflib/plugins/parsers/nquads.pyo
 ${PYSITELIB}/rdflib/plugins/parsers/nt.py
 ${PYSITELIB}/rdflib/plugins/parsers/nt.pyc
 ${PYSITELIB}/rdflib/plugins/parsers/nt.pyo
@@ -80,12 +91,18 @@ ${PYSITELIB}/rdflib/plugins/serializers/__init__.pyo
 ${PYSITELIB}/rdflib/plugins/serializers/n3.py
 ${PYSITELIB}/rdflib/plugins/serializers/n3.pyc
 ${PYSITELIB}/rdflib/plugins/serializers/n3.pyo
+${PYSITELIB}/rdflib/plugins/serializers/nquads.py
+${PYSITELIB}/rdflib/plugins/serializers/nquads.pyc
+${PYSITELIB}/rdflib/plugins/serializers/nquads.pyo
 ${PYSITELIB}/rdflib/plugins/serializers/nt.py
 ${PYSITELIB}/rdflib/plugins/serializers/nt.pyc
 ${PYSITELIB}/rdflib/plugins/serializers/nt.pyo
 ${PYSITELIB}/rdflib/plugins/serializers/rdfxml.py
 ${PYSITELIB}/rdflib/plugins/serializers/rdfxml.pyc
 ${PYSITELIB}/rdflib/plugins/serializers/rdfxml.pyo
+${PYSITELIB}/rdflib/plugins/serializers/trig.py
+${PYSITELIB}/rdflib/plugins/serializers/trig.pyc
+${PYSITELIB}/rdflib/plugins/serializers/trig.pyo
 ${PYSITELIB}/rdflib/plugins/serializers/trix.py
 ${PYSITELIB}/rdflib/plugins/serializers/trix.pyc
 ${PYSITELIB}/rdflib/plugins/serializers/trix.pyo
@@ -98,9 +115,15 @@ ${PYSITELIB}/rdflib/plugins/serializers/xmlwriter.pyo
 ${PYSITELIB}/rdflib/plugins/sleepycat.py
 ${PYSITELIB}/rdflib/plugins/sleepycat.pyc
 ${PYSITELIB}/rdflib/plugins/sleepycat.pyo
+${PYSITELIB}/rdflib/py3compat.py
+${PYSITELIB}/rdflib/py3compat.pyc
+${PYSITELIB}/rdflib/py3compat.pyo
 ${PYSITELIB}/rdflib/query.py
 ${PYSITELIB}/rdflib/query.pyc
 ${PYSITELIB}/rdflib/query.pyo
+${PYSITELIB}/rdflib/resource.py
+${PYSITELIB}/rdflib/resource.pyc
+${PYSITELIB}/rdflib/resource.pyo
 ${PYSITELIB}/rdflib/serializer.py
 ${PYSITELIB}/rdflib/serializer.pyc
 ${PYSITELIB}/rdflib/serializer.pyo
