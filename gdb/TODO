@@ -1,11 +1,14 @@
 TODO
-- NetBSD/i386: gdb fails to compile on 6.0 to 6.99.18 (bsd-kvm.c)
 - Dragonfly/i386 3.2.2: list command works, but cannot run programs 
-- devel/gdb/patches/patch-* are not reviewed yet for inclusion
+- NetBSD/i386 5.2 invocation reported as OK, but does it work ?
 - Test on Dragonfly amd64, SunOS and Linux.
 - Run make test on all platforms.
+- devel/gdb/patches/patch-* are not reviewed yet for inclusion
+- Run pkglint and do cleanup.
+- Is the addition of libpthread_dbg necessary for full functionality
+  as done by the gdb 7.3 in NetBSD src ?
 
 DONE
-- NetBSD/amd64 6.1_RC1 and 6.99.19 OK with gcc/gfortran 4.8.0
-  (make test passes more than 95 % of testcases).
-- NetBSD/i386 5.2 invocation is OK (but does it work ?)
+- NetBSD/amd64 6.1_RC1 and 6.99.19 OK Tested with gcc/gfortran 4.8.0
+  and make test passes more than 95 % of testcases.
+- NetBSD/i386: 6.0 OK Have done some manual tests. make test started.

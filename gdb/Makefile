@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2013/04/09 16:44:36 keckhardt Exp $
+# $NetBSD: Makefile,v 1.4 2013/04/10 22:47:28 keckhardt Exp $
 #
 
 DISTNAME=	gdb-7.5.1
@@ -35,6 +35,8 @@ CONFIGURE_ENV+=		ac_cv_header_curses_h=yes
 CONFIGURE_ARGS+= -with-curses
 CONFIGURE_ENV+= gdb_cv_var_elf=yes
 MAKE_ENV+= gdb_cv_var_elf=yes
+CONFIGURE_ENV+= gdb_cv_struct_lwp=yes
+MAKE_ENV+= gdb_cv_struct_lwp=yes
 
 .elif ${OPSYS} == "Linux"
 USE_TOOLS+=		aclocal autoheader autoconf
