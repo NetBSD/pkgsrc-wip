@@ -11,4 +11,5 @@ TODO
 DONE
 - NetBSD/amd64 6.1_RC1 and 6.99.19 OK Tested with gcc/gfortran 4.8.0
   and make test passes more than 95 % of testcases.
-- NetBSD/i386: 6.0 OK Have done some manual tests. make test started.
+- NetBSD/i386: 6.0 OK Tested with gcc 4.7 and make test passes 90 %
+  of the testcases.
