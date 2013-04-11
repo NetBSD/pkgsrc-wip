@@ -1,9 +1,12 @@
-# $NetBSD: Makefile,v 1.65 2012/12/17 12:57:05 imilh Exp $
+# $NetBSD: Makefile,v 1.66 2013/04/11 22:07:34 imilh Exp $
 #
 
-DISTNAME=		pkgin-20121217
+VERSION=		34b823c158e62e4d347de74499a075a2259382c5
+DISTNAME=		${VERSION}
+PKGNAME=		pkgin-20130412
 CATEGORIES=		pkgtools
-MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=pkgin/}
+MASTER_SITES=		https://github.com/NetBSDfr/pkgin/archive/
+FETCH_USING=		curl
 
 MAINTAINER=		imil@home.imil.net
 HOMEPAGE=		http://pkgin.net/
@@ -17,7 +20,7 @@ CONF_FILES=		${EGDIR}/repositories.conf.example		\
 OWN_DIRS+=		${PKG_SYSCONFDIR}/${PKGBASE}
 INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1 ${EGDIR}
 
-WRKSRC=			${WRKDIR}/pkgin
+WRKSRC=			${WRKDIR}/pkgin-${VERSION}
 
 SUBST_CLASSES+=		path
 SUBST_STAGE.path=	pre-configure
