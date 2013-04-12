@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2012/02/01 16:03:07 phonohawk Exp $
+$NetBSD: distinfo,v 1.2 2013/04/12 19:26:31 szptvlfn Exp $
 
-SHA1 (comonad-1.1.1.1.tar.gz) = f833750255ff9b725aa9b7d66a822394620a9203
-RMD160 (comonad-1.1.1.1.tar.gz) = af88fed7885f5d289afb35f1aa5a14b0f248d425
-Size (comonad-1.1.1.1.tar.gz) = 4198 bytes
+SHA1 (comonad-3.0.2.tar.gz) = b506d49a6b3d6120ad8992f4c3a04f3bbd118ff5
+RMD160 (comonad-3.0.2.tar.gz) = 9549fc1b95daf54915e1d90a8c9871435c3d1aee
+Size (comonad-3.0.2.tar.gz) = 7660 bytes

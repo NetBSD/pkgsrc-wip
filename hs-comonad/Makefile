@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/02/01 16:03:07 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2013/04/12 19:26:31 szptvlfn Exp $
 #
 
-DISTNAME=	comonad-1.1.1.1
+DISTNAME=	comonad-3.0.2
 CATEGORIES=	math
 
 MAINTAINER=	pho@cielonegro.org
-COMMENT=	Haskell 98 comonads
+COMMENT=	Haskell 98 compatible comonads
 LICENSE=	modified-bsd
 
 .include "../../wip/mk/haskell.mk"
