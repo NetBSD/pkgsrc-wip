@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2012/10/04 10:45:27 asau Exp $
+# $NetBSD: Makefile,v 1.3 2013/04/13 07:50:28 jgoamakf Exp $
 #
 
-DISTNAME=	File-Map-0.26
+DISTNAME=	File-Map-0.56
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/L/LE/LEONT/}

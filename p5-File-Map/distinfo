@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/04/21 15:26:33 uccwen Exp $
+$NetBSD: distinfo,v 1.2 2013/04/13 07:50:28 jgoamakf Exp $
 
-SHA1 (File-Map-0.26.tar.gz) = 0b2e00fdf3b06e25a5e7208caed4156c091d5312
-RMD160 (File-Map-0.26.tar.gz) = 38bca66e27006f68a2bca839f4da3f14868db578
-Size (File-Map-0.26.tar.gz) = 25115 bytes
+SHA1 (File-Map-0.56.tar.gz) = 822f09f55984767bdf49532daaf3a2c60b5c1b61
+RMD160 (File-Map-0.56.tar.gz) = a403526ea4e4d6362e6b65eedfd13b3bc915b150
+Size (File-Map-0.56.tar.gz) = 73947 bytes
