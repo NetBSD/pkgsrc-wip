@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.14 2012/10/07 20:11:11 asau Exp $
+# $NetBSD: Makefile,v 1.15 2013/04/13 07:58:29 ghen Exp $
 
 DISTNAME=	xxdiff-3.1
 PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xxdiff/}
 
-MAINTAINER=	ghen@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://furius.ca/xxdiff/
 COMMENT=	Graphical file comparator and merge tool
 LICENSE=	gnu-gpl-v2

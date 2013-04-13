@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.18 2012/10/03 15:09:55 asau Exp $
+# $NetBSD: Makefile,v 1.19 2013/04/13 07:58:29 ghen Exp $
 
 DISTNAME=		mixxx-1.4.2
 PKGREVISION=		3
 CATEGORIES=		audio
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=mixxx/}
 
-MAINTAINER=		ghen@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://mixxx.sourceforge.net/
 COMMENT=		Digital DJ tool
 

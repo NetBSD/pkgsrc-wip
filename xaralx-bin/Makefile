@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2012/10/07 19:09:06 asau Exp $
+# $NetBSD: Makefile,v 1.13 2013/04/13 07:58:29 ghen Exp $
 
 DISTNAME=		XaraLX0.4_rev798
 PKGNAME=		XaraLX-0.4.798
@@ -6,7 +6,7 @@ CATEGORIES=		graphics
 MASTER_SITES=		http://downloads.xara.com/opensource/
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		ghen@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.xaraxtreme.org/
 COMMENT=		Vector graphics program
 

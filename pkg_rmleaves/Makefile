@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2012/10/05 11:31:52 asau Exp $
+# $NetBSD: Makefile,v 1.5 2013/04/13 07:58:29 ghen Exp $
 
 DISTNAME=		pkg_rmleaves-20050922
 CATEGORIES=		pkgtools
 MASTER_SITES=		http://utenti.gufi.org/~drizzt/codes/ports/pkg_rmleaves/
 
-MAINTAINER=		ghen@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Interactive script for deinstalling 'leaf' packages
 HOMEPAGE=		#
 
