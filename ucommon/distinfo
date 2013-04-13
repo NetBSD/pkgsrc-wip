@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2013/03/26 11:08:18 othyro Exp $
+$NetBSD: distinfo,v 1.8 2013/04/13 16:16:59 othyro Exp $
 
 SHA1 (ucommon-6.0.3.tar.gz) = e3263fe7bb8a37dc00a227218c62a5040ccaf465
 RMD160 (ucommon-6.0.3.tar.gz) = 4debf5f5c31a6162b9d60041ddb44ca385336f3b
 Size (ucommon-6.0.3.tar.gz) = 806841 bytes
-SHA1 (patch-CMakeLists.txt) = e703fe9b7b359c1b01b1fcdbd451ac4e1cd8ec8a
+SHA1 (patch-CMakeLists.txt) = 4d4c11a89111161bc8d8fe3715f643290ecb6149
