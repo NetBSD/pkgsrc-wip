@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2012/12/11 23:43:05 lexort Exp $
+# $NetBSD: Makefile,v 1.5 2013/04/13 02:44:40 pebog Exp $
 
-DISTNAME=		mopher-0.4
+DISTNAME=		mopher-0.4.1
 CATEGORIES=		mail
 MASTER_SITES=		http://smokva.net/src/
 
