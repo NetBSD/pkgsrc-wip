@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5189 2013/04/12 20:28:22 szptvlfn Exp $
+# $Id: Makefile,v 1.5190 2013/04/13 08:49:36 jgoamakf Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2002,6 +2002,7 @@ SUBDIR+=	p5-News-Newsrc
 SUBDIR+=	p5-PDL
 SUBDIR+=	p5-POD2-IT
 SUBDIR+=	p5-POSIX-strptime
+SUBDIR+=	p5-PerlIO-Layers
 SUBDIR+=	p5-Petal
 SUBDIR+=	p5-Picasa
 SUBDIR+=	p5-Plucene
