@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.1 2012/11/03 16:47:20 othyro Exp $
+# $NetBSD: options.mk,v 1.2 2013/04/13 16:03:57 othyro Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.wput
 PKG_SUPPORTED_OPTIONS=	gnutls nls
-PKG_SUGGESTED_OPTIONS+=	gnutls nls
+PKG_SUGGESTED_OPTIONS+=	nls
 PLIST_VARS+=		nls
 
 .include "../../mk/bsd.options.mk"
@@ -17,6 +17,7 @@ CONFIGURE_ARGS+=	--without-gnutls
 
 .if !empty(PKG_OPTIONS:Mnls)
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../converters/libiconv/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-nls
 PLIST.nls=		yes
 .else
