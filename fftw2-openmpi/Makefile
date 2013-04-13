@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/02/26 14:52:57 outpaddling Exp $
+# $NetBSD: Makefile,v 1.2 2013/04/13 21:25:25 asau Exp $
 
 DISTNAME=		fftw-2.1.5
 PKGNAME=		fftw2-openmpi-2.1.5
@@ -12,7 +12,6 @@ COMMENT=		Collection of fast C routines to compute DFTs
 LICENSE=		gnu-gpl-v1
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-PKG_DESTDIR_SUPPORT=	user-destdir
 
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-shared \
