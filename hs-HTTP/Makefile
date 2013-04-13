@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2013/02/23 13:32:23 phonohawk Exp $
+# $NetBSD: Makefile,v 1.8 2013/04/13 08:54:01 szptvlfn Exp $
 #
 
 DISTNAME=	HTTP-4000.2.8
@@ -6,6 +6,7 @@ CATEGORIES=	www
 
 MAINTAINER=	pho@cielonegro.org
 COMMENT=	Haskell library for client-side HTTP
+LICENSE=	modified-bsd
 
 .include "../../wip/mk/haskell.mk"
 .include "../../wip/hs-mtl/buildlink3.mk"
