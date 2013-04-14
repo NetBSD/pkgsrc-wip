@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2013/03/30 07:23:38 shattered Exp $
+# $NetBSD: Makefile,v 1.7 2013/04/14 20:05:24 shattered Exp $
 #
 
 DISTNAME=	cpm
@@ -7,7 +7,7 @@ PKGREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	http://www.harry-b.de/downloads/
 
-MAINTAINER=	shattered@users.sourceforge.net
+MAINTAINER=	shattered@NetBSD.org
 HOMEPAGE=	http://www.harry-b.de/dokuwiki/doku.php?id=harry:cpm
 COMMENT=	Console Password Manager
 LICENSE=	gnu-gpl-v2

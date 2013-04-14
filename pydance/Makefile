@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2013/03/30 07:23:38 shattered Exp $
+# $NetBSD: Makefile,v 1.18 2013/04/14 20:05:24 shattered Exp $
 #
 
 DISTNAME=		pydance-1.0.3
@@ -7,7 +7,7 @@ PKGREVISION=		4
 CATEGORIES=		games
 MASTER_SITES=		http://offload1.icculus.org/pyddr/
 
-MAINTAINER=		shattered@users.sourceforge.net
+MAINTAINER=		shattered@NetBSD.org
 HOMEPAGE=		http://icculus.org/pyddr/
 COMMENT=		Simulator of Dance Dance Revolution and similar games
 LICENSE=		mit

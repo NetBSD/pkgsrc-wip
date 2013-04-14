@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2013/02/12 18:22:47 shattered Exp $
+# $NetBSD: Makefile,v 1.4 2013/04/14 20:05:24 shattered Exp $
 #
 
 DISTNAME=		redirector-3.2.8
@@ -7,7 +7,7 @@ CATEGORIES=		www
 MASTER_SITES=		http://www.rejik.ru/download/
 EXTRACT_SUFX=		.tgz
 
-MAINTAINER=		shattered@users.sourceforge.net
+MAINTAINER=		shattered@NetBSD.org
 HOMEPAGE=		http://www.rejik.ru/index_en_0_0.html
 COMMENT=		Banner-filtering redirector for Squid
 LICENSE=		gnu-gpl-v2
