@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2013/03/26 10:45:30 othyro Exp $
+# $NetBSD: Makefile,v 1.18 2013/04/15 01:10:43 othyro Exp $
 #
 
 DISTNAME=	ccrtp-2.0.5
@@ -20,7 +20,9 @@ INFO_FILES=		yes
 
 .include "options.mk"
 
-.include "../../wip/ucommon/buildlink3.mk"
-.include "../../security/openssl/buildlink3.mk"
+.include "../../converters/libiconv/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../security/libgpg-error/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
+.include "../../wip/ucommon/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
