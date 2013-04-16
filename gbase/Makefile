@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2013/04/13 18:28:48 othyro Exp $
+# $NetBSD: Makefile,v 1.5 2013/04/16 13:43:59 thomasklausner Exp $
 #
 
 DISTNAME=	gbase-0.5
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	math
 MASTER_SITES=	http://www.fluxcode.net/
 
@@ -11,24 +11,14 @@ HOMEPAGE=	http://www.fluxcode.net/
 COMMENT=	GTK program designed to convert between the four common bases
 LICENSE=	artistic
 
+USE_TOOLS+=	pkg-config
+
 INSTALLATION_DIRS+=	bin
 
 BUILD_TARGET=	gbase
 
-CFLAGS+=	-I${BUILDLINK_PREFIX.gtk}/include/gtk-1.2
-CFLAGS+=	-I${BUILDLINK_PREFIX.glib2}/include/glib/glib-2.0
-CFLAGS+=	-I${BUILDLINK_PREFIX.glib2}/lib/glib-2.0/include
-CFLAGS+=	-I${BUILDLINK_PREFIX.cairo}/include/cairo
-CFLAGS+=	-I${BUILDLINK_PREFIX.pango}/include/pango-1.0
-CFLAGS+=	-I${BUILDLINK_PREFIX.gtk}/lib
-CFLAGS+=	-I${BUILDLINK_PREFIX.atk}/include/atk-1.0
-
 do-install:
 		${INSTALL_PROGRAM} ${WRKSRC}/gbase ${DESTDIR}${PREFIX}/bin/gbase
 
-.include "../../devel/atk/buildlink3.mk"
-.include "../../devel/pango/buildlink3.mk"
-.include "../../graphics/cairo/buildlink3.mk"
-.include "../../devel/glib2/buildlink3.mk"
-.include "../../x11/gtk/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
