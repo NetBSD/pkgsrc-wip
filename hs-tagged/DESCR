@@ -1,2 +1,1 @@
-Provides newtype wrappers for phantom types to avoid unsafely passing
-dummy arguments.
+Haskell 98 phantom types to avoid unsafely passing dummy arguments
