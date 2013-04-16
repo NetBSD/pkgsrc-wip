@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/10/30 00:36:32 othyro Exp $
+# $NetBSD: Makefile,v 1.14 2013/04/16 11:38:21 othyro Exp $
 #
 
 DISTNAME=	desmume-0.9.8
@@ -18,7 +18,8 @@ USE_LANGUAGES=	c c++
 
 .include "options.mk"
 
-BUILD_DEPENDS+=	libSoundTouch>=1.5.0:../../wip/libSoundTouch
+BUILDLINK_DEPMETHOD.libSoundTouch+=	build
+.include "../../wip/libSoundTouch/buildlink3.mk"
 .include "../../audio/alsa-lib/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../archivers/zziplib/buildlink3.mk"
