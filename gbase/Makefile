@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2013/04/16 13:43:59 thomasklausner Exp $
-#
+# $NetBSD: Makefile,v 1.6 2013/04/16 15:59:44 thomasklausner Exp $
 
 DISTNAME=	gbase-0.5
 PKGREVISION=	2
@@ -7,7 +6,7 @@ CATEGORIES=	math
 MASTER_SITES=	http://www.fluxcode.net/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.fluxcode.net/
+HOMEPAGE=	http://fluxcode.net/projects/gbase-2
 COMMENT=	GTK program designed to convert between the four common bases
 LICENSE=	artistic
 
