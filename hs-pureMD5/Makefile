@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2012/03/04 08:17:53 phonohawk Exp $
+# $NetBSD: Makefile,v 1.3 2013/04/16 11:21:33 szptvlfn Exp $
 #
 
-DISTNAME=	pureMD5-2.1.0.3
+DISTNAME=	pureMD5-2.1.2.1
 CATEGORIES=	security
 
 MAINTAINER=	pho@cielonegro.org
