@@ -1,0 +1,5 @@
+When pressing "Start Indexing now", it fails. On the console it says:
+Shared object "libxapian.so.22" not found
+
+Looks like missing rpath
+[wiz 2013-04-16]
