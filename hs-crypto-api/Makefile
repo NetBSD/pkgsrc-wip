@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2012/03/04 08:14:38 phonohawk Exp $
+# $NetBSD: Makefile,v 1.3 2013/04/16 11:06:42 szptvlfn Exp $
 #
 
-DISTNAME=	crypto-api-0.9
+DISTNAME=	crypto-api-0.11
 CATEGORIES=	security
 
 MAINTAINER=	pho@cielonegro.org
@@ -11,6 +11,6 @@ LICENSE=	modified-bsd
 .include "../../wip/mk/haskell.mk"
 .include "../../wip/hs-cereal/buildlink3.mk"
 .include "../../wip/hs-entropy/buildlink3.mk"
-.include "../../wip/hs-largeword/buildlink3.mk"
 .include "../../wip/hs-tagged/buildlink3.mk"
+.include "../../wip/hs-transformers/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

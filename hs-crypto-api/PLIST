@@ -1,6 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2012/03/04 08:14:38 phonohawk Exp $
-lib/crypto-api-${PKGVERSION}/${HASKELL_VERSION}/Crypto/CPoly.hi
-lib/crypto-api-${PKGVERSION}/${HASKELL_VERSION}/Crypto/CPoly.p_hi
+@comment $NetBSD: PLIST,v 1.3 2013/04/16 11:06:42 szptvlfn Exp $
 lib/crypto-api-${PKGVERSION}/${HASKELL_VERSION}/Crypto/Classes.hi
 lib/crypto-api-${PKGVERSION}/${HASKELL_VERSION}/Crypto/Classes.p_hi
 lib/crypto-api-${PKGVERSION}/${HASKELL_VERSION}/Crypto/HMAC.hi

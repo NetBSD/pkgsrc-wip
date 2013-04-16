@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2012/03/04 08:14:38 phonohawk Exp $
+$NetBSD: distinfo,v 1.3 2013/04/16 11:06:42 szptvlfn Exp $
 
-SHA1 (crypto-api-0.9.tar.gz) = 9da8dcbd381e5d42b1ab5bbf440c83fbd2ada2eb
-RMD160 (crypto-api-0.9.tar.gz) = 7f6c4a00e9eb8cfa77e6aae4443248011ed6acde
-Size (crypto-api-0.9.tar.gz) = 44240 bytes
+SHA1 (crypto-api-0.11.tar.gz) = 4779458bc2b9b5af316457f4777e98a231baf6d0
+RMD160 (crypto-api-0.11.tar.gz) = 0ff5f2e85da754efd81460ba9e66376e3f1ef2ad
+Size (crypto-api-0.11.tar.gz) = 15684 bytes
