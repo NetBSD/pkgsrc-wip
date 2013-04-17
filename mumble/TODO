@@ -1,1 +1,7 @@
 Address security issue: http://secunia.com/advisories/47951/
+
+Does not build, pkgsrc contains celt>=0.12, this needs celt-0.7.
+
+1.2.3 does not build either, somewhere in boost or qt4.
+No newer source tarball found (though supposedly 1.2.4rc1 exists).
+[wiz 2013-04-17]
