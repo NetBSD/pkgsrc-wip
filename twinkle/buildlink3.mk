@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2012/11/11 13:44:13 othyro Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2013/04/17 01:00:50 othyro Exp $
 
 BUILDLINK_TREE+=	twinkle
 
@@ -29,14 +29,14 @@ pkgbase := twinkle
 .endif
 
 .if !empty(PKG_BUILD_OPTIONS.twinkle:Mzrtp)
-.include "../../wip/libzrtpcpp/buildlink3.mk"
+.include "../../net/libzrtpcpp/buildlink3.mk"
 .endif
 
 .include "../../x11/qt3-tools/buildlink3.mk"
 .include "../../x11/qt3-libs/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../wip/commoncpp2/buildlink3.mk"
-.include "../../wip/ccrtp/buildlink3.mk"
+.include "../../net/ccrtp/buildlink3.mk"
 .endif # TWINKLE_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-twinkle

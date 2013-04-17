@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2012/11/11 12:23:39 othyro Exp $
+# $NetBSD: options.mk,v 1.5 2013/04/17 01:00:50 othyro Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.twinkle
 PKG_SUPPORTED_OPTIONS=	alsa ilbc kde speex zrtp
@@ -31,7 +31,7 @@ CONFIGURE_ARGS+=	--without-speex
 .endif
 
 .if !empty(PKG_OPTIONS:Mzrtp)
-.include "../../wip/libzrtpcpp/buildlink3.mk"
+.include "../../net/libzrtpcpp/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-zrtp
 .endif
