@@ -159,7 +159,6 @@ Suggested ready to import packages
 	o bogomips
 	o castget
 	o commoncpp2
-	o ccrtp
 	o fcgiwrap
 	o fish
 	o flimsel
@@ -169,7 +168,6 @@ Suggested ready to import packages
 	o iodine
 	o ispell-dictionaries
 	o ispell-lietuviu
-	o libzrtpcpp
 	o marathon-tempus-irae
 	o matiec
 	o nmzmail
