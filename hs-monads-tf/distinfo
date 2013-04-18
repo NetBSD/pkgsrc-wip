@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/04/18 21:22:38 szptvlfn Exp $
+
+SHA1 (monads-tf-0.1.0.1.tar.gz) = 228ed2ae78f14decb000929b198a92fe8c1f2cf1
+RMD160 (monads-tf-0.1.0.1.tar.gz) = 58de00c7e06c1525313745b7880249c358cf9610
+Size (monads-tf-0.1.0.1.tar.gz) = 14198 bytes
