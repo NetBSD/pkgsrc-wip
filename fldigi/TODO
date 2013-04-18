@@ -1,3 +1,5 @@
+- DragonFly may give (remote) xorg X server to restart (protocol error ?)
+
 - portaudio  is needed ? (See INSTALL and configure results), probably yes
   [gdt think pulseaudio is normal, and portaudio is atypical, so it's best
   not to link portaudio, unless some pkgsrc/fldigi user explains why]

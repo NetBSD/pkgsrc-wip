@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.19 2013/04/15 05:52:55 makoto Exp $
+$NetBSD: distinfo,v 1.20 2013/04/18 13:48:28 makoto Exp $
 
-SHA1 (fldigi-3.21.69.tar.gz) = 4d56265e18481c87ff3059d1eb1e0002ade2d05b
-RMD160 (fldigi-3.21.69.tar.gz) = 286f01b4928364fe2775c27bb6125969ca222b0e
-Size (fldigi-3.21.69.tar.gz) = 2141540 bytes
-SHA1 (patch-src_misc_configuration.cxx) = f76f7fafbdf3b965f6bf0844b1774ee8a443d0a8
+SHA1 (fldigi-3.21.70.tar.gz) = 670700583404205990c7b7229eb6e75909698e63
+RMD160 (fldigi-3.21.70.tar.gz) = bcbb75218cc79d4662bf4bd07ed206823d9c953e
+Size (fldigi-3.21.70.tar.gz) = 2145803 bytes
+SHA1 (patch-src_misc_configuration.cxx) = 4f1940b0ff9d51418b37d01636c1a45f9a392943
 SHA1 (patch-src_misc_newinstall.cxx) = 2c215e9423d27dd4f4657221b17cf4ed3f12355c
