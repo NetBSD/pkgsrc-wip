@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5195 2013/04/18 02:22:05 othyro Exp $
+# $Id: Makefile,v 1.5196 2013/04/18 21:27:44 szptvlfn Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1041,6 +1041,7 @@ SUBDIR+=	hs-mmap4
 SUBDIR+=	hs-monad-control
 SUBDIR+=	hs-monad-peel
 SUBDIR+=	hs-monads-fd
+SUBDIR+=	hs-monads-tf
 SUBDIR+=	hs-monoid-transformer
 SUBDIR+=	hs-mtl
 SUBDIR+=	hs-nats
