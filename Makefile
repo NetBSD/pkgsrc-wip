@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5194 2013/04/17 01:20:57 othyro Exp $
+# $Id: Makefile,v 1.5195 2013/04/18 02:22:05 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1440,7 +1440,6 @@ SUBDIR+=	libtlen2
 SUBDIR+=	libtogl
 SUBDIR+=	libtorrent-rasterbar
 SUBDIR+=	libuna
-SUBDIR+=	libuuid
 SUBDIR+=	libvalhalla
 SUBDIR+=	libvc
 SUBDIR+=	libvg
