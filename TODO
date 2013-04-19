@@ -1,15 +1,14 @@
 Suggested package updates
 =========================
 
+	o ReZound-0.12.3beta
 	o argouml-0.24
 	o atlas-3.10.0
 	o beast-3.8.0
 	o cairo-java-1.0.8
 	o calligra-2.6.2
 	o ccrypt-1.10
-	o cgal-4.0
 	o cinelerra-4.4
-	o clojure-1.4
 	o d4x-2.5.7.1
 	o daphne-1.0
 	o di-4.34
@@ -20,7 +19,6 @@ Suggested package updates
 	o editline-20120311.3.0
 	o emboss-base-6.0.1
 	o emelfm2-0.8.2
-	o endeavour-3.1.3
 	o etoile-0.4.2
 	o evilvte-0.5.1
 	o evolution-couchdb-0.4.4
@@ -40,7 +38,6 @@ Suggested package updates
 	o gnome-do-0.9
 	o gnunet-0.9.5
 	o gnupod-0.99.8
-	o gobject-introspection-0.9.12
 	o grandr-0.1
 	o grass-6.4.2
 	o grisbi-0.8.4
@@ -67,7 +64,6 @@ Suggested package updates
 	o kvirc-3.4.2
 	o libburn-1.2.8
 	o libgtk-java-2.10.2
-	o libmemcached-0.53
 	o libpthread-stubs-0.3
 	o lives-2.0.3
 	o llvm-3.2
@@ -102,13 +98,12 @@ Suggested package updates
 	o rdup-1.1.13
 	o recoll-1.18.1
 	o retroarch-0.9.8
-	o rezound-0.12.3beta
 	o rosegarden-current-1.4.0
 	o rsyslog6-6.3.6
 	o rygel-0.18.1
 	o samhain-3.0.10
 	o scantailor-0.9.11.1
-	o sflphone-0.7.2
+	o sflphoned-0.7.2
 	o showfont-1.0.4
 	o siege-3.0.0
 	o sleuthkit-3.2.3
@@ -152,18 +147,13 @@ Suggested ready to import packages
 	o R-mclust
 	o am-utils [pkg/35668]
 	o aspell-dictionaries
-	o aspell-finnish
-	o aspell-telugu
 	o bogomips
 	o castget
 	o commoncpp2
 	o fcgiwrap
-	o fish
 	o flimsel
 	o flpsed
-	o heirloom-sh [pkg/40272]
 	o ilbc-rfc3951
-	o iodine
 	o ispell-dictionaries
 	o ispell-lietuviu
 	o marathon-tempus-irae
@@ -171,7 +161,6 @@ Suggested ready to import packages
 	o nmzmail
 	o pear-Net_URL2
 	o pnmcurve
-	o polarssl
 	o py-jswebkit
 	o rar4
 	o send-pr
@@ -180,8 +169,6 @@ Suggested ready to import packages
 	o truecrypt
 	o trustedQSL
 	o vlevel
-	o xa65
-	o xmms-cdread [pkg/36220]
 	o xmms-skins [pkg/35666]
 	o xombrero
 
