@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/09/24 16:56:39 asau Exp $
+# $NetBSD: Makefile,v 1.3 2013/04/19 11:30:15 othyro Exp $
 #
 
 DISTNAME=	ttf-arphic-uming_0.2.20080216.1.orig
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/t/ttf-arphic-uming/}
 MAINTAINER=	ryoon@NetBSD.org
 HOMEPAGE=	http://www.freedesktop.org/wiki/Software/CJKUnifonts
 COMMENT=	High-quality Chinese Unicode TrueType font, Mingti style
-#LICENSE=	Arphic Public License
+LICENSE=	arphic-public
 
 WRKSRC=		${WRKDIR}
 
