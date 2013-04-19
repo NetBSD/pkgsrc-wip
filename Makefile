@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5196 2013/04/18 21:27:44 szptvlfn Exp $
+# $Id: Makefile,v 1.5197 2013/04/19 13:16:07 szptvlfn Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1102,6 +1102,7 @@ SUBDIR+=	hs-timezone-series
 SUBDIR+=	hs-transformers
 SUBDIR+=	hs-transformers-abort
 SUBDIR+=	hs-transformers-base
+SUBDIR+=	hs-transformers-compat
 SUBDIR+=	hs-uconv
 SUBDIR+=	hs-uniplate
 SUBDIR+=	hs-unix-compat
