@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2012/02/01 16:11:36 phonohawk Exp $
+$NetBSD: distinfo,v 1.2 2013/04/20 04:35:40 szptvlfn Exp $
 
-SHA1 (contravariant-0.1.3.tar.gz) = 26b0ce4a5454ea8fb4a34e6ff43d442c03c75bea
-RMD160 (contravariant-0.1.3.tar.gz) = e18383f013f8279067a3d51db117b1adda1ae030
-Size (contravariant-0.1.3.tar.gz) = 2804 bytes
+SHA1 (contravariant-0.4.tar.gz) = 480d162a0e6514ca8875398f5835598a1b6cd2bf
+RMD160 (contravariant-0.4.tar.gz) = d4b8ec8fbd0ecf1963b87cd0b9f3542624ca594e
+Size (contravariant-0.4.tar.gz) = 3277 bytes
