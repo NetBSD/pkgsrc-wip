@@ -1,0 +1,18 @@
+$NetBSD: patch-ba,v 1.1 2013/04/20 19:07:39 noud4 Exp $
+
+using libtool 2.x
+http://sources.gentoo.org/cgi-bin/viewvc.cgi/gentoo-x86/net-misc/siproxd/files/siproxd-libtool-2.4.patch?view=markup
+
+--- src/plugins.c.orig	2011-05-28 15:47:15.000000000 +0000
++++ src/plugins.c	2013-04-20 18:33:58.000000000 +0000
+@@ -30,6 +30,10 @@
+ #include "log.h"
+ #include "plugins.h"
+ 
++#ifndef lt_libltdl_LTX_preloaded_symbols
++extern LT_DLSYM_CONST lt_dlsymlist lt__PROGRAM__LTX_preloaded_symbols[];
++#endif
++
+ static char const ident[]="$Id: patch-ba,v 1.1 2013/04/20 19:07:39 noud4 Exp $";
+ 
+ /* configuration storage */
