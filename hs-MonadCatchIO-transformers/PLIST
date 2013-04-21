@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/03/03 09:42:58 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/04/21 19:27:32 szptvlfn Exp $
 lib/MonadCatchIO-transformers-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/CatchIO.hi
 lib/MonadCatchIO-transformers-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/CatchIO.p_hi
 lib/MonadCatchIO-transformers-${PKGVERSION}/${HASKELL_VERSION}/HSMonadCatchIO-transformers-${PKGVERSION}.o
 lib/MonadCatchIO-transformers-${PKGVERSION}/${HASKELL_VERSION}/libHSMonadCatchIO-transformers-${PKGVERSION}.a
 lib/MonadCatchIO-transformers-${PKGVERSION}/${HASKELL_VERSION}/libHSMonadCatchIO-transformers-${PKGVERSION}_p.a
 lib/MonadCatchIO-transformers-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/MonadCatchIO-transformers-${PKGVERSION}/LICENSE
