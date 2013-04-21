@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5201 2013/04/21 09:33:48 szptvlfn Exp $
+# $Id: Makefile,v 1.5202 2013/04/21 18:09:28 kristerw Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -93,6 +93,7 @@ SUBDIR+=	alsa-plugins
 SUBDIR+=	alsa-utils
 SUBDIR+=	alt-ergo
 SUBDIR+=	am-utils
+SUBDIR+=	amaya
 SUBDIR+=	analizo
 SUBDIR+=	and
 SUBDIR+=	ann
@@ -2489,6 +2490,7 @@ SUBDIR+=	py-mocker
 SUBDIR+=	py-model-builder
 SUBDIR+=	py-mois
 SUBDIR+=	py-mongo
+SUBDIR+=	py-mox
 SUBDIR+=	py-mpich4py
 SUBDIR+=	py-mpop
 SUBDIR+=	py-multichain_mcmc
