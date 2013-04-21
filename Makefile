@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5199 2013/04/20 19:52:27 noud4 Exp $
+# $Id: Makefile,v 1.5200 2013/04/21 03:34:57 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1408,7 +1408,6 @@ SUBDIR+=	libncl
 SUBDIR+=	libnestedsums
 SUBDIR+=	libneural
 SUBDIR+=	libnfo
-SUBDIR+=	libnotify
 SUBDIR+=	libode
 SUBDIR+=	liboggz
 SUBDIR+=	liboglappth
