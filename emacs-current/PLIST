@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.121 2013/03/15 14:09:50 makoto Exp $
+@comment $NetBSD: PLIST,v 1.122 2013/04/21 00:30:28 makoto Exp $
 bin/ctags
 bin/ebrowse
 bin/emacs
@@ -1983,6 +1983,8 @@ share/emacs/${PKGVERSION}/lisp/eshell/em-smart.el.gz
 share/emacs/${PKGVERSION}/lisp/eshell/em-smart.elc
 share/emacs/${PKGVERSION}/lisp/eshell/em-term.el.gz
 share/emacs/${PKGVERSION}/lisp/eshell/em-term.elc
+share/emacs/${PKGVERSION}/lisp/eshell/em-tramp.el.gz
+share/emacs/${PKGVERSION}/lisp/eshell/em-tramp.elc
 share/emacs/${PKGVERSION}/lisp/eshell/em-unix.el.gz
 share/emacs/${PKGVERSION}/lisp/eshell/em-unix.elc
 share/emacs/${PKGVERSION}/lisp/eshell/em-xtra.el.gz
@@ -3211,6 +3213,8 @@ share/emacs/${PKGVERSION}/lisp/pcmpl-rpm.el.gz
 share/emacs/${PKGVERSION}/lisp/pcmpl-rpm.elc
 share/emacs/${PKGVERSION}/lisp/pcmpl-unix.el.gz
 share/emacs/${PKGVERSION}/lisp/pcmpl-unix.elc
+share/emacs/${PKGVERSION}/lisp/pcmpl-x.el.gz
+share/emacs/${PKGVERSION}/lisp/pcmpl-x.elc
 share/emacs/${PKGVERSION}/lisp/pcomplete.el.gz
 share/emacs/${PKGVERSION}/lisp/pcomplete.elc
 share/emacs/${PKGVERSION}/lisp/play/5x5.el.gz
