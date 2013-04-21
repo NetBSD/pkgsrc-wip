@@ -1,0 +1,73 @@
+#1 [pkgsrc] www/amaya 11.4.4
+
+--  On NetBSD/i386, strange racing condition exists.
+--  On NetBSD/amd64, you will get segfault.
+
+@  on NetBSD/i386 (5.2, in this case):
+
+    1. You need two terminal windows.
+    2. Start the first instance, just amaya on the first terminal window
+      (If you do nothing described below, you will wait forever something to happen).
+    3. On second terminal windows, start the second instance. You will get the error as:
+
+      pinapa@makoto 23:14:07/130421(~)% amaya
+      23:14:49: Error: Another instance is running
+      load: 0.41  cmd: amaya_bin 27780 [runnable] 6.05u 2.66s 34% 16268k
+
+      You will soon get [runnable] with Control-T.
+    4. In the second terminal, you will kill the second instance by Control-C.
+    5. From the first terminal invocation, You will get [runnable] status by Control-T, and soon Amaya window will appear.
+
+But having the message on the first terminal:
+
+libpng error: png_start_read_image/png_read_update_info: duplicate call
+
+@  on NetBSD/amd64 6.1_RC2:
+
+#0  0x00007f7ff784c197 in glRenderMode () from /usr/pkg/lib/libGL.so.1
+#1  0x000000000067b1f5 in SetMainWindowBackgroundColor(int, int) ()
+#2  0x00000000005a87b6 in CreateBox(_AbstractBox*, int, bool, bool, int*, int) ()
+#3  0x00000000005aa13d in ComputeUpdates(_AbstractBox*, int, bool*) ()
+#4  0x00000000005ac0fa in IsAbstractBoxUpdated(_AbstractBox*, int, bool*) ()
+#5  0x00000000005ad0ed in ChangeConcreteImage(int, int*, _AbstractBox*) ()
+#6  0x00000000005ccb6b in RebuildImage(_DocumentDescr*) ()
+#7  0x00000000005cddc2 in TtaSetDisplayMode(int, _DisplayMode) ()
+#8  0x00000000004c8a0b in InitView(int, int, bool, bool, bool, int, int, int, DocumentType, int) ()
+#9  0x00000000004ca2ac in InitDocAndView(int, bool, bool, char const*, DocumentType, int, bool, int, int, int) ()
+#10 0x000000000047bd77 in NotFoundDoc(char*, int) ()
+#11 0x00000000004cfc1e in CallbackDialogue(int, int, char*) ()
+#12 0x00000000004cfebd in OpenNewDocFromArgv(char*) ()
+#13 0x00000000004d297f in InitAmaya(NotifyEvent*) ()
+#14 0x000000000061d1b3 in CallAction(NotifyEvent*, APPevent, bool, int, int*, _StructSchema*, bool) ()
+#15 0x000000000061d287 in CallEventType(NotifyEvent*, bool) ()
+#16 0x00000000006296e4 in TtaMainLoop() ()
+#17 0x0000000000471e91 in amaya_main(int, char**) ()
+#18 0x00000000005e067e in AmayaApp::OnIdle(wxIdleEvent&) ()
+#19 0x00007f7ff3cd760a in wxEvtHandler::ProcessEventIfMatches(wxEventTableEntryBase const&, wxEvtHandler*, wxEvent&) () from /usr/pkg/lib/libwx_baseu-2.8.so.0
+#20 0x00007f7ff3cd771c in wxEventHashTable::HandleEvent(wxEvent&, wxEvtHandler*) () from /usr/pkg/lib/libwx_baseu-2.8.so.0
+#21 0x00007f7ff3cd79d7 in wxEvtHandler::ProcessEvent(wxEvent&) () from /usr/pkg/lib/libwx_baseu-2.8.so.0
+#22 0x00007f7ff4e35987 in wxAppBase::ProcessIdle() () from /usr/pkg/lib/libwx_gtk2u_core-2.8.so.0
+#23 0x00007f7ff4dbc2b1 in wxApp::Yield(bool) () from /usr/pkg/lib/libwx_gtk2u_core-2.8.so.0
+#24 0x00007f7ff441e897 in wxSocketBase::_Wait(long, long, int) () from /usr/pkg/lib/libwx_baseu_net-2.8.so.0
+---Type <return> to continue, or q <return> to quit--- 
+#25 0x00007f7ff441f015 in wxSocketBase::_Read(void*, unsigned int) () from /usr/pkg/lib/libwx_baseu_net-2.8.so.0
+#26 0x00007f7ff441f320 in wxSocketBase::Read(void*, unsigned int) () from /usr/pkg/lib/libwx_baseu_net-2.8.so.0
+#27 0x00007f7ff441dd7d in wxSocketInputStream::OnSysRead(void*, unsigned long) () from /usr/pkg/lib/libwx_baseu_net-2.8.so.0
+#28 0x00007f7ff3ca7016 in wxInputStream::Read(void*, unsigned long) () from /usr/pkg/lib/libwx_baseu-2.8.so.0
+#29 0x00007f7ff3c71e57 in wxDataInputStream::Read8() () from /usr/pkg/lib/libwx_baseu-2.8.so.0
+#30 0x00007f7ff441d126 in wxTCPEventHandler::Server_OnRequest(wxSocketEvent&) () from /usr/pkg/lib/libwx_baseu_net-2.8.so.0
+#31 0x00007f7ff3cd760a in wxEvtHandler::ProcessEventIfMatches(wxEventTableEntryBase const&, wxEvtHandler*, wxEvent&) () from /usr/pkg/lib/libwx_baseu-2.8.so.0
+#32 0x00007f7ff3cd771c in wxEventHashTable::HandleEvent(wxEvent&, wxEvtHandler*) () from /usr/pkg/lib/libwx_baseu-2.8.so.0
+#33 0x00007f7ff3cd79d7 in wxEvtHandler::ProcessEvent(wxEvent&) () from /usr/pkg/lib/libwx_baseu-2.8.so.0
+#34 0x00007f7ff3cd757e in wxEvtHandler::ProcessPendingEvents() () from /usr/pkg/lib/libwx_baseu-2.8.so.0
+#35 0x00007f7ff3c63777 in wxAppConsole::ProcessPendingEvents() () from /usr/pkg/lib/libwx_baseu-2.8.so.0
+#36 0x00007f7ff4e3590e in wxAppBase::ProcessIdle() () from /usr/pkg/lib/libwx_gtk2u_core-2.8.so.0
+#37 0x00007f7ff4dbb8fa in wxapp_idle_callback () from /usr/pkg/lib/libwx_gtk2u_core-2.8.so.0
+#38 0x00007f7fe8c41c44 in g_main_context_dispatch () from /usr/pkg/lib/libglib-2.0.so.0
+#39 0x00007f7fe8c41f1d in ?? () from /usr/pkg/lib/libglib-2.0.so.0
+#40 0x00007f7fe8c42295 in g_main_loop_run () from /usr/pkg/lib/libglib-2.0.so.0
+#41 0x00007f7fef12b854 in gtk_main () from /usr/pkg/lib/libgtk-x11-2.0.so.0
+#42 0x00007f7ff4dcdc0a in wxEventLoop::Run() () from /usr/pkg/lib/libwx_gtk2u_core-2.8.so.0
+#43 0x00007f7ff4e35759 in wxAppBase::MainLoop() () from /usr/pkg/lib/libwx_gtk2u_core-2.8.so.0
+#44 0x00007f7ff3c8f258 in wxEntry(int&, wchar_t**) () from /usr/pkg/lib/libwx_baseu-2.8.so.0
+#45 0x00000000005e0705 in main ()
