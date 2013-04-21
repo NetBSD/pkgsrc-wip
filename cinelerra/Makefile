@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/11/13 18:59:56 othyro Exp $
+# $NetBSD: Makefile,v 1.14 2013/04/21 17:37:43 kristerw Exp $
 #
 
 #DISTNAME=	cinelerra-1.2.0-src
@@ -54,7 +54,7 @@ USE_LIBTOOL=		yes
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 
-.include "../../wip/libuuid/buildlink3.mk"
+.include "../../devel/libuuid/buildlink3.mk"
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
