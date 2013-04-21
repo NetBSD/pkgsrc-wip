@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2012/11/03 18:59:27 kristerw Exp $
+# $NetBSD: Makefile,v 1.8 2013/04/21 13:55:39 triaxx Exp $
 #
 
 PKGNAME=	shaarli-${VERSION}
 DISTNAME=	shaarli_${VERSION}
-VERSION=	0.0.40beta
+VERSION=	0.0.41beta
 CATEGORIES=	www
 MASTER_SITES=	http://sebsauvage.net/files/
 EXTRACT_SUFX=	.zip
@@ -11,7 +11,7 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	frederic@fauberteau.org
 HOMEPAGE=	http://sebsauvage.net/wiki/doku.php?id=php:shaarli
 COMMENT=	Shaarli is a minimalist delicious clone
-LICENSE=	png-license
+LICENSE=	zlib
 
 .include "../../lang/php/phpversion.mk"
 DEPENDS+= ${PHP_PKG_PREFIX}-zlib-[0-9]*:../../archivers/php-zlib
@@ -36,7 +36,7 @@ MESSAGE_SUBST+=	DOCDIR=${DOCDIR}
 MESSAGE_SUBST+=	VARBASE=${VARBASE}
 
 OWN_DIRS_PERMS+=	${VARBASE}/shaarli \
-		       	${WWW_USER} ${WWW_GROUP} 0750
+		       	${WWW_USER} ${WWW_GROUP} 0770
 OWN_DIRS_PERMS+=	${VARBASE}/shaarli/data \
 		       	${WWW_USER} ${WWW_GROUP} 0750
 OWN_DIRS_PERMS+=	${VARBASE}/shaarli/tmp \
