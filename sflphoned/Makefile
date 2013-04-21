@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/11/25 23:32:30 othyro Exp $
+# $NetBSD: Makefile,v 1.5 2013/04/21 17:47:48 kristerw Exp $
 #
 
 DISTNAME=		sflphoned-0.6.1
@@ -21,5 +21,5 @@ CONFIGURE_ARGS+=	--disable-asound
 .include "../../wip/commoncpp2/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../devel/libosip/buildlink3.mk"
-.include "../../wip/ccrtp/buildlink3.mk"
+.include "../../net/ccrtp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
