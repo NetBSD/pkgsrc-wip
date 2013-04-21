@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2011/07/08 04:31:22 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.6 2013/04/21 21:02:50 szptvlfn Exp $
 bin/hlint
 lib/${PKGNAME}/${HASKELL_VERSION}/Apply.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Apply.p_hi
@@ -59,6 +59,8 @@ lib/${PKGNAME}/${HASKELL_VERSION}/Parallel.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Parallel.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Paths_hlint.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Paths_hlint.p_hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Proof.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Proof.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Report.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Report.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Settings.hi

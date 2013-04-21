@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2012/01/17 13:52:50 phonohawk Exp $
+$NetBSD: distinfo,v 1.9 2013/04/21 21:02:50 szptvlfn Exp $
 
-SHA1 (hlint-1.8.20.tar.gz) = af442f9d5b63f0d289fa7c2fd3f3878eabd6c469
-RMD160 (hlint-1.8.20.tar.gz) = 4bf5dcee0790def88798cd69d2098b977a736900
-Size (hlint-1.8.20.tar.gz) = 66549 bytes
+SHA1 (hlint-1.8.44.tar.gz) = f55ba9f274113e43aac6a1c55d4544bc534996bc
+RMD160 (hlint-1.8.44.tar.gz) = b6729d2580b56cbd2b0a11071482f8ce44785bff
+Size (hlint-1.8.44.tar.gz) = 68507 bytes
