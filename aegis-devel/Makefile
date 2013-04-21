@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2009/06/09 19:16:03 marko_schuetz Exp $
+# $NetBSD: Makefile,v 1.3 2013/04/21 18:04:04 kristerw Exp $
 #
 
 DISTNAME=	aegis-devel-4.24
@@ -27,7 +27,7 @@ DEPENDS+=		gawk>=3.1.6:../../lang/gawk
 # on NetBSD gettext is in the base set. others?
 DEPENDS+=		gettext>=0.14.4:../../devel/gettext
 .endif
-DEPENDS+=		ghostscript>=8.64:../../print/ghostscript
+DEPENDS+=		ghostscript-agpl>=8.64:../../print/ghostscript-agpl
 DEPENDS+=		gsharutils>=4.2.1:../../archivers/gsharutils
 DEPENDS+=		ImageMagick>=6.4.8.3:../../graphics/ImageMagick
 DEPENDS+=		libxml2>=1.8.17:../../textproc/libxml2

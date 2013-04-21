@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2012/10/05 13:52:02 asau Exp $
+# $NetBSD: Makefile,v 1.23 2013/04/21 18:04:04 kristerw Exp $
 #
 
 DISTNAME=		pointless-0.5
@@ -19,7 +19,7 @@ DEPENDS+=		pdflib>=4.0.3:../../print/pdflib
 DEPENDS+=		plotutils>=2.4.1:../../graphics/plotutils
 DEPENDS+=		gnuplot>=3.7:../../graphics/gnuplot
 DEPENDS+=		freetype2>=2.1:../../graphics/freetype2
-DEPENDS+=		ghostscript>=7.0:../../print/ghostscript
+DEPENDS+=		ghostscript-agpl>=7.0:../../print/ghostscript-agpl
 DEPENDS+=		tex-latex-[0-9]*:../../print/tex-latex
 DEPENDS+=		tex-latex-bin-[0-9]*:../../print/tex-latex-bin
 DEPENDS+=		tex-tex-[0-9]*:../../print/tex-tex

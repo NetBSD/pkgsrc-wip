@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2013/02/01 01:38:00 jeremy-c-reed Exp $
+# $NetBSD: Makefile,v 1.9 2013/04/21 18:04:04 kristerw Exp $
 #
 
 DISTNAME=	light-desktop-0.0
@@ -16,7 +16,7 @@ DEPENDS=	dejavu-ttf>2.28:../../fonts/dejavu-ttf
 DEPENDS+=	elementary-icon-theme>=0:../../wip/elementary-icon-theme
 DEPENDS+=	foomatic-filters>=4.0.9:../../print/foomatic4-filters
 DEPENDS+=	freefont-ttf>0:../../fonts/freefont-ttf
-DEPENDS+=	ghostscript>=8.71:../../print/ghostscript
+DEPENDS+=	ghostscript-agpl>=8.71:../../print/ghostscript-agpl
 DEPENDS+=	gtk2-engines-murrine>=0:../../x11/gtk2-engines-murrine
 ##DEPENDS+=	gvfs>=1.2.3:../../sysutils/gvfs
 #DEPENDS+=	hplip>=3:../../wip/hplip3
