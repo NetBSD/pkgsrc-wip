@@ -1,16 +1,21 @@
-# $NetBSD: Makefile,v 1.2 2012/10/04 10:45:25 asau Exp $
+# $NetBSD: Makefile,v 1.3 2013/04/22 05:29:56 jgoamakf Exp $
 #
 
-DISTNAME=	DBIx-Easy-0.18
+DISTNAME=	DBIx-Easy-0.19
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=DBIx/}
 
 MAINTAINER=	ficovh@yahoo.com
-HOMEPAGE=	http://search.cpan.org/CPAN/authors/id/H/HO/HORNBURG/
+HOMEPAGE=	http://search.cpan.org/dist/DBIx-Easy/
 COMMENT=	Easy to Use DBI interface
+LICENSE=	gnu-gpl-v2
 
-PKG_DESTDIR_SUPPORT=	none
+REPLACE_PERL+=	scripts/dbs_dumptabdata
+REPLACE_PERL+=	scripts/dbs_dumptabstruct
+REPLACE_PERL+=	scripts/dbs_empty
+REPLACE_PERL+=	scripts/dbs_printtab
+REPLACE_PERL+=	scripts/dbs_update
 
 PERL5_PACKLIST=	auto/DBIx/Easy/.packlist
 USE_LANGUAGES=	# none

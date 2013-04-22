@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2009/01/12 06:30:13 ficovh Exp $
+$NetBSD: distinfo,v 1.2 2013/04/22 05:29:56 jgoamakf Exp $
 
-SHA1 (DBIx-Easy-0.18.tar.gz) = c221d00a7fb92b2c075110534c2937016d05f5c4
-RMD160 (DBIx-Easy-0.18.tar.gz) = 3c197a28a763f713e67a6856a6e33c2c74d6f45f
-Size (DBIx-Easy-0.18.tar.gz) = 34635 bytes
+SHA1 (DBIx-Easy-0.19.tar.gz) = 47671c2df5149e67d6080e797555f73524479fb8
+RMD160 (DBIx-Easy-0.19.tar.gz) = b9da95b965b35129093a86548853a6861ddb1a92
+Size (DBIx-Easy-0.19.tar.gz) = 35167 bytes
