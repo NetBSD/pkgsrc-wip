@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2013/01/27 16:40:00 othyro Exp $
+# $NetBSD: Makefile,v 1.9 2013/04/24 02:27:59 othyro Exp $
 #
 
 DISTNAME=	ispell-lt-1.2
 PKGNAME=	ispell-lietuviu-1.2
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	ftp://ftp.akl.lt/ispell-lt/
 
@@ -11,7 +12,7 @@ HOMEPAGE=	http://www.lietuvybe.org/?menuid=Zodynai&submenu=ispell-lt
 COMMENT=	Lithuanian dictionary for ispell
 LICENSE=	modified-bsd
 
-DEPENDS+=	ispell-base-[0-9]*:../../textproc/ispell-base
+DEPENDS+=	ispell-[0-9]*:../../textproc/ispell
 
 SUBST_CLASSES+=			fix-python
 SUBST_STAGE.fix-python=		pre-configure

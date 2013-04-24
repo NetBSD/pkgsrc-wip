@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2012/11/11 22:16:16 othyro Exp $
+# $NetBSD: options.mk,v 1.3 2013/04/24 02:27:59 othyro Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ispell-dictionaries
 PKG_SUPPORTED_OPTIONS=	lang-ca lang-de lang-en-gb lang-es lang-fr lang-ga
@@ -9,27 +9,27 @@ PKG_SUGGESTED_OPTIONS=	${PKG_SUPPORTED_OPTIONS}
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Mlang-ca)
-DEPENDS+=	ispell-catalan>=1.0:../../textproc/ispell-catalan
+DEPENDS+=	ispell-ca>=1.0:../../textproc/ispell-ca
 .endif
 
 .if !empty(PKG_OPTIONS:Mlang-de)
-DEPENDS+=	ispell-german>=20081106:../../textproc/ispell-german
+DEPENDS+=	ispell-de>=20081106:../../textproc/ispell-de
 .endif
 
 .if !empty(PKG_OPTIONS:Mlang-en-gb)
-DEPENDS+=	ispell-british>=3.3.02:../../textproc/ispell-british
+DEPENDS+=	ispell-en_GB>=3.3.02:../../textproc/ispell-en_GB
 .endif
 
 .if !empty(PKG_OPTIONS:Mlang-es)
-DEPENDS+=	ispell-spanish>=1.7:../../textproc/ispell-spanish
+DEPENDS+=	ispell-es>=1.7:../../textproc/ispell-es
 .endif
 
 .if !empty(PKG_OPTIONS:Mlang-fr)
-DEPENDS+=	ispell-francais>=1.4:../../textproc/ispell-francais
+DEPENDS+=	ispell-fr>=1.4:../../textproc/ispell-fr
 .endif
 
 .if !empty(PKG_OPTIONS:Mlang-ga)
-DEPENDS+=	ispell-gaeilge>=2.0:../../textproc/ispell-gaeilge
+DEPENDS+=	ispell-ga>=2.0:../../textproc/ispell-ga
 .endif
 
 .if !empty(PKG_OPTIONS:Mlang-lt)
@@ -37,25 +37,25 @@ DEPENDS+=	ispell-lietuviu>=1.0:../../wip/ispell-lietuviu
 .endif
 
 .if !empty(PKG_OPTIONS:Mlang-pl)
-DEPENDS+=	ispell-polski>=20021127:../../textproc/ispell-polski
+DEPENDS+=	ispell-pl>=20021127:../../textproc/ispell-pl
 .endif
 
 .if !empty(PKG_OPTIONS:Mlang-ro)
-DEPENDS+=	ispell-romanian>=20031216:../../textproc/ispell-romanian
+DEPENDS+=	ispell-ro>=20031216:../../textproc/ispell-ro
 .endif
 
 .if !empty(PKG_OPTIONS:Mlang-ru)
-DEPENDS+=	ispell-russian>=0.99g4:../../textproc/ispell-russian
+DEPENDS+=	ispell-ru>=0.99g4:../../textproc/ispell-ru
 .endif
 
 .if !empty(PKG_OPTIONS:Mlang-ru-io)
-DEPENDS+=	ispell-russian-io>=0.99g4:../../textproc/ispell-russian-io
+DEPENDS+=	ispell-ru-io>=0.99g4:../../textproc/ispell-ru-io
 .endif
 
 .if !empty(PKG_OPTIONS:Mlang-sk)
-DEPENDS+=	ispell-slovak>=0.2.2:../../textproc/ispell-slovak
+DEPENDS+=	ispell-sk>=0.2.2:../../textproc/ispell-sk
 .endif
 
 .if !empty(PKG_OPTIONS:Mlang-sv)
-DEPENDS+=	ispell-svenska>=1.2.1:../../textproc/ispell-svenska
+DEPENDS+=	ispell-sv>=1.2.1:../../textproc/ispell-sv
 .endif
