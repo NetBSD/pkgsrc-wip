@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2013/04/24 02:27:59 othyro Exp $
+# $NetBSD: options.mk,v 1.4 2013/04/24 03:09:40 othyro Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ispell-dictionaries
 PKG_SUPPORTED_OPTIONS=	lang-ca lang-de lang-en-gb lang-es lang-fr lang-ga
@@ -33,7 +33,7 @@ DEPENDS+=	ispell-ga>=2.0:../../textproc/ispell-ga
 .endif
 
 .if !empty(PKG_OPTIONS:Mlang-lt)
-DEPENDS+=	ispell-lietuviu>=1.0:../../wip/ispell-lietuviu
+DEPENDS+=	ispell-lt>=1.0:../../textproc/ispell-lt
 .endif
 
 .if !empty(PKG_OPTIONS:Mlang-pl)

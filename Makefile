@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5202 2013/04/21 18:09:28 kristerw Exp $
+# $Id: Makefile,v 1.5203 2013/04/24 03:09:40 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1204,7 +1204,6 @@ SUBDIR+=	irrxml
 SUBDIR+=	ised
 SUBDIR+=	islamic-menus
 SUBDIR+=	ispell-dictionaries
-SUBDIR+=	ispell-lietuviu
 SUBDIR+=	itask-ng
 SUBDIR+=	itools
 SUBDIR+=	ja-freewnn-cvs
