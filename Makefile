@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5203 2013/04/24 03:09:40 othyro Exp $
+# $Id: Makefile,v 1.5204 2013/04/24 10:43:03 fhajny Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2093,6 +2093,7 @@ SUBDIR+=	pdfmod
 SUBDIR+=	pdftk
 SUBDIR+=	pdnsd
 SUBDIR+=	pdq
+SUBDIR+=	pdsh
 SUBDIR+=	pear-DB_DataObject
 SUBDIR+=	pear-HTML_Table
 SUBDIR+=	pear-HTTP_Client
