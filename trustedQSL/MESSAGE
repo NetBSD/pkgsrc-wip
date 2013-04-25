@@ -1,5 +1,8 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.2 2012/12/29 12:17:47 thomasklausner Exp $
+$NetBSD: MESSAGE,v 1.3 2013/04/25 02:52:56 makoto Exp $
+
+To start the application, just type tqsl. The window is plain, you may
+select operation from 'File' pull-down Menu.
 
 For help, see the following HTML files, respectively:
 tqsl, aka tQSL or tqslapp, about signing up for QSL:
