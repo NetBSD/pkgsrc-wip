@@ -29,15 +29,24 @@ Call Stack (most recent call first):
 
 gmake: *** [install] Error 1
 *** Error code 2
-
 Stop.
-make: stopped in /export/CHROOT/usr/pkgsrc/wip/trustedQSL
-*** Error code 1
-
-Stop.
-make: stopped in /export/CHROOT/usr/pkgsrc/wip/trustedQSL
-
 ==============================
+(Above log was taken after following tweak applied)
+modena@makoto 11:39:11/130425(..wip/trustedQSL)% 
+(cd /usr/pkg; diff -up share/cmake-2.8/Modules/CMakeGenericSystem.cmake{.orig,})
+
+--- share/cmake-2.8/Modules/CMakeGenericSystem.cmake.orig	2012-11-01 00:32:05.000000000 +0900
++++ share/cmake-2.8/Modules/CMakeGenericSystem.cmake	2013-04-25 11:16:40.000000000 +0900
+@@ -166,7 +166,7 @@ endif()
+ 
+ # Choose a default install prefix for this platform.
+ if(CMAKE_HOST_UNIX)
+-  set(CMAKE_INSTALL_PREFIX "/usr/local"
++  set(CMAKE_INSTALL_PREFIX "/usr/pkg"
+     CACHE PATH "Install path prefix, prepended onto install directories.")
+ else()
+   GetDefaultWindowsPrefixBase(CMAKE_GENERIC_PROGRAM_FILES)
 
 CHECKED (to make, not make package)
+
 - NetBSD/amd64 6.1_RC2 X11_TYPE=modular
