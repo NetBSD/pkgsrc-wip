@@ -1,4 +1,4 @@
-$NetBSD: patch-index.php,v 1.3 2013/04/21 13:55:39 triaxx Exp $
+$NetBSD: patch-index.php,v 1.4 2013/04/25 17:26:48 triaxx Exp $
 
 Substitution for data directory.
 Deletion of writable tests.
@@ -28,7 +28,7 @@ Deletion of writable tests.
  raintpl::$tpl_dir = "tpl/"; // template directory
  if (!is_dir('tmp')) { mkdir('tmp',0705); chmod('tmp',0705); }
 -raintpl::$cache_dir = "tmp/"; // cache directory
-+raintpl::$cache_dir = "@CACHEDIR"; // cache directory
++raintpl::$cache_dir = "@CACHEDIR@"; // cache directory
  
  ob_start();  // Output buffering for the page cache.
  

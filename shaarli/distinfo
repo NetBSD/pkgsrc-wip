@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.6 2013/04/21 13:55:39 triaxx Exp $
+$NetBSD: distinfo,v 1.7 2013/04/25 17:26:48 triaxx Exp $
 
 SHA1 (shaarli_0.0.41beta.zip) = 0fb3ec5b389f24fd47de90d996fad85180287104
 RMD160 (shaarli_0.0.41beta.zip) = 7906364cc6044ad0ca0de4fbf9685ab661845de0
 Size (shaarli_0.0.41beta.zip) = 357947 bytes
-SHA1 (patch-index.php) = fc153c79f8e8e0f34b84d18f824e0037336ab6e1
+SHA1 (patch-index.php) = db8d07cbd0b8de1efd7b07f72c172c22cd5ad2af
