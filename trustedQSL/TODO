@@ -1,10 +1,43 @@
-- Finding wxWindows at configure is not clean yet.
-  See the combination of patch-configure and SUBST in Makefile.
+- This is 1.14 beta only, some redundent lines left in Makefile
+  to migrate production version.
+- set LICENSE= line
+- make package won't complete with following problem now
 
-  I think above notice may be almost OK.
+==============================
+-- Installing: /export/CHROOT/usr/pkgsrc/wip/trustedQSL/work/.destdir/usr/pkg/bin/tqsl
+CMake Error at apps/cmake_install.cmake:40 (FILE):
+  file RPATH_CHANGE could not write new RPATH:
 
-- My rough (manually) browsing LICENSE and pkgsrc/licenses gives
-  pcc-license is one of the candiate to be similar
-  (2013/01/18 JA1XMS aka mef@)
+    /usr/pkg/lib:/usr/pkg/lib:/usr/X11R7/lib
 
-  Please comment here if you have any.
+  to the file:
+
+    /export/CHROOT/usr/pkgsrc/wip/trustedQSL/work/.destdir/usr/pkg/bin/tqsl
+
+  The current RPATH is:
+
+    /usr/pkg/lib:/export/CHROOT/usr/pkgsrc/wip/trustedQSL/work/tqsl-114/src
+
+  which does not contain:
+
+    /export/CHROOT/usr/pkgsrc/wip/trustedQSL/work/tqsl-114/src:/usr/pkg/lib:/usr/X11R7/lib:
+
+  as was expected.
+Call Stack (most recent call first):
+  cmake_install.cmake:33 (INCLUDE)
+
+
+gmake: *** [install] Error 1
+*** Error code 2
+
+Stop.
+make: stopped in /export/CHROOT/usr/pkgsrc/wip/trustedQSL
+*** Error code 1
+
+Stop.
+make: stopped in /export/CHROOT/usr/pkgsrc/wip/trustedQSL
+
+==============================
+
+CHECKED (to make, not make package)
+- NetBSD/amd64 6.1_RC2 X11_TYPE=modular
