@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2012/10/04 18:42:21 asau Exp $
+# $NetBSD: Makefile,v 1.3 2013/04/25 02:11:21 jgoamakf Exp $
 #
 
-DISTNAME=	MMapDB-0.08
+DISTNAME=	MMapDB-0.15
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/O/OP/OPI/}
