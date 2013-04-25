@@ -1,0 +1,4 @@
+Instances of numeric classes for functions and tuples. Import
+Data.NumInstances to get all the instances. If you want only function or
+only tuple instances, import Data.NumInstances.Function or
+Data.NumInstances.Tuple.
