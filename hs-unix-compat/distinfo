@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2012/02/11 03:35:33 phonohawk Exp $
+$NetBSD: distinfo,v 1.4 2013/04/25 22:34:23 szptvlfn Exp $
 
-SHA1 (unix-compat-0.3.0.1.tar.gz) = 43abb24415e39801754941f47bc02b3c401b1fe0
-RMD160 (unix-compat-0.3.0.1.tar.gz) = e2be4a10aabd05cecf7a1d2d312a9ef12e8d96f6
-Size (unix-compat-0.3.0.1.tar.gz) = 12614 bytes
+SHA1 (unix-compat-0.4.1.1.tar.gz) = 3d83c88534bc87ddaf137a6836545929f949d710
+RMD160 (unix-compat-0.4.1.1.tar.gz) = 0288dd5dd66194c0cc24d82e3324c4e626e1e2c4
+Size (unix-compat-0.4.1.1.tar.gz) = 13013 bytes

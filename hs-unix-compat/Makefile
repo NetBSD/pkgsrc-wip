@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2012/02/11 03:35:33 phonohawk Exp $
+# $NetBSD: Makefile,v 1.4 2013/04/25 22:34:23 szptvlfn Exp $
 #
 
-DISTNAME=	unix-compat-0.3.0.1
+DISTNAME=	unix-compat-0.4.1.1
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
