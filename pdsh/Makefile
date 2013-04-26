@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/04/24 12:04:56 fhajny Exp $
+# $NetBSD: Makefile,v 1.3 2013/04/26 12:06:27 fhajny Exp $
 #
 
 DISTNAME=	pdsh-2.29
@@ -15,6 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
+USE_TOOLS=	perl:run
 
 REPLACE_PERL+=		scripts/dshbak
 
