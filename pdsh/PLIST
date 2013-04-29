@@ -1,13 +1,13 @@
-@comment $NetBSD: PLIST,v 1.1 2013/04/24 10:41:49 fhajny Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/04/29 13:41:12 fhajny Exp $
 bin/dshbak
 bin/pdcp
 bin/pdsh
 bin/rpdcp
-lib/dshgroup.la
-lib/execcmd.la
-lib/machines.la
-lib/sshcmd.la
-lib/xrcmd.la
+lib/pdsh/dshgroup.la
+lib/pdsh/execcmd.la
+lib/pdsh/machines.la
+lib/pdsh/sshcmd.la
+lib/pdsh/xrcmd.la
 man/man1/dshbak.1
 man/man1/pdcp.1
 man/man1/pdsh.1
