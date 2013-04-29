@@ -1,0 +1,4 @@
+- fix pkg-config inability to see libevent and check during configure
+- use options framework for snmp support etc.
+- use proper chroot dir instead of /nonexistent
+
