@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2012/10/04 18:42:22 asau Exp $
+# $NetBSD: Makefile,v 1.5 2013/04/30 02:29:43 jgoamakf Exp $
 #
 
-DISTNAME=	Net-Twitter-Lite-0.10003
+DISTNAME=	Net-Twitter-Lite-0.12003
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	net perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
@@ -16,7 +16,7 @@ DEPENDS+=	p5-Net-OAuth>=0.20:../../net/p5-Net-OAuth
 DEPENDS+=	p5-URI>=1.40:../../www/p5-URI
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
 
-PERL5_MODULE_TYPE=	Module::Install::Bundled
+PERL5_MODULE_TYPE=	Module::Build
 PERL5_PACKLIST=		auto/Net/Twitter/Lite/.packlist
 USE_LANGUAGES=		# none
 
