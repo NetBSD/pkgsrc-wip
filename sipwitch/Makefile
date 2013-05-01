@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/07 16:23:07 asau Exp $
+# $NetBSD: Makefile,v 1.4 2013/05/01 20:22:44 kristerw Exp $
 #
 
 DISTNAME=	sipwitch-1.2.4
@@ -28,5 +28,5 @@ SUBST_SED.libdir=	-e 's,lib64,lib,g'
 
 .include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../net/avahi/buildlink3.mk"
-.include "../../wip/ucommon/buildlink3.mk"
+.include "../../devel/ucommon/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
