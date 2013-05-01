@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2013/04/30 23:44:23 asau Exp $
+# $NetBSD: Makefile,v 1.69 2013/05/01 23:12:14 asau Exp $
 
 DISTNAME=	openmpi-1.7.1
 #PKGNAME=	openmpi-1.7.1
@@ -40,6 +40,8 @@ CONFIGURE_ENV+=		ACLOCAL=: AUTOCONF=: AUTOHEADER=: AUTOMAKE=:
 
 # Prevent detection of OpenMP support in order to make PLIST consistent:
 BUILDLINK_TRANSFORM=	rm:-fopenmp
+
+BUILDLINK_PASSTHRU_RPATHDIRS+=	${MPI_PREFIX}/lib
 
 USE_TOOLS+=		perl:run
 REPLACE_PERL+=		ompi/tools/wrappers/mpijavac.pl.in
