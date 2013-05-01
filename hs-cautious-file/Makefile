@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/07/12 15:19:24 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2013/05/01 12:50:32 szptvlfn Exp $
 #
 
-DISTNAME=	cautious-file-1.0
+DISTNAME=	cautious-file-1.0.2
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
