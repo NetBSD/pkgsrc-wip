@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2013/02/08 07:11:34 asau Exp $
+# $NetBSD: Makefile,v 1.7 2013/05/01 20:25:28 kristerw Exp $
 
 DISTNAME=		v8
 CATEGORIES=		lang
@@ -13,7 +13,7 @@ SVN_REPOSITORIES=	v8
 SVN_ROOT.v8=		http://v8.googlecode.com/svn/trunk/
 SVN_MODULE.v8=		v8
 
-DEPENDS+=		libexecinfo>=1:../../wip/libexecinfo
+DEPENDS+=		libexecinfo>=1:../../devel/libexecinfo
 BUILD_DEPENDS+=		scons>=1:../../devel/scons
 
 NO_CONFIGURE=		yes
