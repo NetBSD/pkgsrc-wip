@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.3 2013/04/30 11:25:16 bbartlomiej Exp $
+# $NetBSD: Makefile,v 1.4 2013/05/01 17:24:19 bbartlomiej Exp $
 #
 
 DISTNAME=	lldpd-0.7.2
+PKGREVISION=2	
 CATEGORIES=	net
 MASTER_SITES=	http://media.luffy.cx/files/lldpd/
 
 MAINTAINER=	bbartlomiej@gmail.com
-HOMEPAGE=	http://media.luffy.cx/files/lldpd/
+HOMEPAGE=	http://http://vincentbernat.github.io/lldpd/
 COMMENT=	ISC-licensed implementation of LLDP for various Unixes
 LICENSE=	isc
 
@@ -33,6 +34,7 @@ PKGCONFIG_OVERRIDE+=    src/lib/lldpctl.pc.in
 
 BUILDLINK_API_DEPENDS.libevent+= libevent>=2.0.5
 
+.include "options.mk"
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../devel/check/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
