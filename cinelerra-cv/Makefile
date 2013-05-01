@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/09/24 18:26:53 asau Exp $
+# $NetBSD: Makefile,v 1.6 2013/05/01 20:03:28 kristerw Exp $
 #
 
 DISTNAME=	cinelerra-cv-2.1
@@ -49,7 +49,7 @@ BUILD_DEPENDS+=	nasm-[0-9]*:../../devel/nasm
 .include "../../audio/libsndfile/buildlink3.mk"
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
-.include "../../wip/libuuid/buildlink3.mk" # should be in "devel" category
+.include "../../devel/libuuid/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/openexr/buildlink3.mk"
