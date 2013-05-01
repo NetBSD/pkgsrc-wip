@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2013/04/25 02:36:49 makoto Exp $
+# $NetBSD: Makefile,v 1.12 2013/05/01 16:11:52 makoto Exp $
 
 DISTNAME=		TrustedQSL-1_14
 DISTNAME=		tqsl-114
@@ -24,9 +24,8 @@ WRKSRC=			${WRKDIR}/${DISTNAME}
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	post-patch
 SUBST_FILES.prefix=	cmakemodules/FindBDB.cmake
-SUBST_FILES.prefix+=	cmakemodules/FindCURL.cmake
-SUBST_MESSAGE.prefix=	Adjust CMake Find Berkley DB and CURL PREFIX
-SUBST_SED.prefix=	-e s\|@@PREFIX@@\|${PREFIX}\|
+SUBST_MESSAGE.prefix=	Adjust PREFIX in CMake Find Berkley DB
+SUBST_VARS.prefix=	PREFIX
 
 # There is an unresolved build failure, where -R for /usr/pkg/lib does
 # not precede /usr/X11R7/lib, and on a netbsd-5 system with base xorg,
