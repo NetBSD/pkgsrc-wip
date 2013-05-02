@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2013/05/01 16:11:52 makoto Exp $
+# $NetBSD: Makefile,v 1.13 2013/05/02 05:33:59 makoto Exp $
 
 DISTNAME=		TrustedQSL-1_14
 DISTNAME=		tqsl-114
@@ -26,6 +26,24 @@ SUBST_STAGE.prefix=	post-patch
 SUBST_FILES.prefix=	cmakemodules/FindBDB.cmake
 SUBST_MESSAGE.prefix=	Adjust PREFIX in CMake Find Berkley DB
 SUBST_VARS.prefix=	PREFIX
+
+SUBST_CLASSES+=		x11r7
+SUBST_STAGE.x11r7=	post-build
+SUBST_FILES.x11r7=	apps/cmake_install.cmake
+SUBST_MESSAGE.x11r7=	Remove X11R7/lib from RPATH_CHANGE, for modular only
+SUBST_SED.x11r7=	-e 's,:/usr/X11R7/lib,,'
+
+## CMAKE RPATH_CHANGE claims the the order is not the same, so the work around.
+##              /usr/pkgsrc/wip/trustedQSL/work/tqsl-114/src:/usr/pkg/lib:
+##                     v
+## /usr/pkg/lib:/usr/pkgsrc/wip/trustedQSL/work/tqsl-114/src:
+
+SUBST_CLASSES+=		workaround
+SUBST_STAGE.workaround= post-build
+SUBST_FILES.workaround=	apps/cmake_install.cmake
+SUBST_MESSAGE.workaround=	Truely experimental and interim fix for RPATH order
+SUBST_SED.workaround=	-e 's,${WRKSRC}/src:${PREFIX}/lib:,${PREFIX}/lib:${WRKSRC}/src,'
+
 
 # There is an unresolved build failure, where -R for /usr/pkg/lib does
 # not precede /usr/X11R7/lib, and on a netbsd-5 system with base xorg,

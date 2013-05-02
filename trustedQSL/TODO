@@ -3,6 +3,15 @@
 - set LICENSE= line
 - make package won't complete with following problem now
 
+- Getting following problem now
+   => Checking for missing run-time search paths in tqsl-1.14
+   ERROR: lib/libtqsllib.so: missing library: libdb5-5.3.so.3
+   *** Error code 1
+   
+   Stop.
+   make: stopped in /export/CHROOT/usr/pkgsrc/wip/trustedQSL
+   
+- Followin part will appear if SUBST_CLASSES = workaround is eliminated
 ==============================
 -- Installing: /export/CHROOT/usr/pkgsrc/wip/trustedQSL/work/.destdir/usr/pkg/bin/tqsl
 CMake Error at apps/cmake_install.cmake:40 (FILE):
@@ -31,10 +40,10 @@ gmake: *** [install] Error 1
 *** Error code 2
 Stop.
 ==============================
-(Above log was taken after following patch applied to cmake
+(Above log was taken after following patch applied to cmake)
 
 modena@makoto 01:01:29/130502(..devel/cmake)% cat  patches/patch-Modules_CMakeGenericSystem.cmake
-$NetBSD: TODO,v 1.5 2013/05/01 16:11:52 makoto Exp $
+$NetBSD: TODO,v 1.6 2013/05/02 05:33:59 makoto Exp $
 
 Correct Install Prefix, see SUBST in Makefile
 
