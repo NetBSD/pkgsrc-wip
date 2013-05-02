@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5209 2013/05/02 20:03:48 fhajny Exp $
+# $Id: Makefile,v 1.5210 2013/05/02 20:28:54 schnoebe Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -902,7 +902,6 @@ SUBDIR+=	hijra
 SUBDIR+=	hitori
 SUBDIR+=	hlint
 SUBDIR+=	homebank
-SUBDIR+=	hplip3
 SUBDIR+=	hpoj
 SUBDIR+=	hs-ConfigFile
 SUBDIR+=	hs-Diff
@@ -2440,9 +2439,9 @@ SUBDIR+=	py-isodate
 SUBDIR+=	py-jabber-aimt
 SUBDIR+=	py-jabber-icqt
 SUBDIR+=	py-jabber-msnt
-SUBDIR+=	py-jabber-palaver
+# SUBDIR+=	py-jabber-palaver
 SUBDIR+=	py-jabber-proxy65
-SUBDIR+=	py-jabber-punjab
+# SUBDIR+=	py-jabber-punjab
 SUBDIR+=	py-jabber-yahoo-transport
 SUBDIR+=	py-jabberbot
 SUBDIR+=	py-joblib
