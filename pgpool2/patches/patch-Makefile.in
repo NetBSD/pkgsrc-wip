@@ -1,0 +1,60 @@
+$NetBSD: patch-Makefile.in,v 1.1 2013/05/02 20:02:42 fhajny Exp $
+
+Install config files into examples only.
+--- Makefile.in.orig	2013-04-26 05:52:43.000000000 +0000
++++ Makefile.in
+@@ -59,7 +59,7 @@ CONFIG_HEADER = config.h
+ CONFIG_CLEAN_FILES =
+ CONFIG_CLEAN_VPATH_FILES =
+ am__installdirs = "$(DESTDIR)$(bindir)" "$(DESTDIR)$(man8dir)" \
+-	"$(DESTDIR)$(pkgdatadir)" "$(DESTDIR)$(sysconfdir)"
++	"$(DESTDIR)$(pkgdatadir)" "$(DESTDIR)$(egdir)"
+ PROGRAMS = $(bin_PROGRAMS)
+ am_pg_md5_OBJECTS = pg_md5.$(OBJEXT) md5.$(OBJEXT) \
+ 	pool_config_md5.$(OBJEXT) pool_error.$(OBJEXT) \
+@@ -289,6 +289,7 @@ datadir = @datadir@
+ datarootdir = @datarootdir@
+ docdir = @docdir@
+ dvidir = @dvidir@
++egdir = @prefix@/share/examples/@PACKAGE@
+ exec_prefix = @exec_prefix@
+ host = @host@
+ host_alias = @host_alias@
+@@ -675,22 +676,22 @@ uninstall-pkgdataDATA:
+ 	dir='$(DESTDIR)$(pkgdatadir)'; $(am__uninstall_files_from_dir)
+ install-sysconfDATA: $(sysconf_DATA)
+ 	@$(NORMAL_INSTALL)
+-	test -z "$(sysconfdir)" || $(MKDIR_P) "$(DESTDIR)$(sysconfdir)"
+-	@list='$(sysconf_DATA)'; test -n "$(sysconfdir)" || list=; \
++	test -z "$(egdir)" || $(MKDIR_P) "$(DESTDIR)$(egdir)"
++	@list='$(sysconf_DATA)'; test -n "$(egdir)" || list=; \
+ 	for p in $$list; do \
+ 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+ 	  echo "$$d$$p"; \
+ 	done | $(am__base_list) | \
+ 	while read files; do \
+-	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(sysconfdir)'"; \
+-	  $(INSTALL_DATA) $$files "$(DESTDIR)$(sysconfdir)" || exit $$?; \
++	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(egdir)'"; \
++	  $(INSTALL_DATA) $$files "$(DESTDIR)$(egdir)" || exit $$?; \
+ 	done
+ 
+ uninstall-sysconfDATA:
+ 	@$(NORMAL_UNINSTALL)
+-	@list='$(sysconf_DATA)'; test -n "$(sysconfdir)" || list=; \
++	@list='$(sysconf_DATA)'; test -n "$(egdir)" || list=; \
+ 	files=`for p in $$list; do echo $$p; done | sed -e 's|^.*/||'`; \
+-	dir='$(DESTDIR)$(sysconfdir)'; $(am__uninstall_files_from_dir)
++	dir='$(DESTDIR)$(egdir)'; $(am__uninstall_files_from_dir)
+ 
+ # This directory's subdirectories are mostly independent; you can cd
+ # into them and run `make' without going through this Makefile.
+@@ -1029,7 +1030,7 @@ check: check-recursive
+ all-am: Makefile $(PROGRAMS) $(MANS) $(DATA) config.h
+ installdirs: installdirs-recursive
+ installdirs-am:
+-	for dir in "$(DESTDIR)$(bindir)" "$(DESTDIR)$(man8dir)" "$(DESTDIR)$(pkgdatadir)" "$(DESTDIR)$(sysconfdir)"; do \
++	for dir in "$(DESTDIR)$(bindir)" "$(DESTDIR)$(man8dir)" "$(DESTDIR)$(pkgdatadir)" "$(DESTDIR)$(egdir)"; do \
+ 	  test -z "$$dir" || $(MKDIR_P) "$$dir"; \
+ 	done
+ install: install-recursive

@@ -1,0 +1,14 @@
+$NetBSD: patch-pgpool.conf.sample,v 1.1 2013/05/02 20:02:42 fhajny Exp $
+
+Default pid file location.
+--- pgpool.conf.sample.orig	2013-04-26 05:52:44.000000000 +0000
++++ pgpool.conf.sample
+@@ -180,7 +180,7 @@ debug_level = 0
+ # FILE LOCATIONS
+ #------------------------------------------------------------------------------
+ 
+-pid_file_name = '/var/run/pgpool/pgpool.pid'
++pid_file_name = '@PGPOOL_PIDDIR@/pgpool.pid'
+                                    # PID file name
+                                    # (change requires restart)
+ logdir = '/tmp'
