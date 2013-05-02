@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5208 2013/05/02 09:35:44 shattered Exp $
+# $Id: Makefile,v 1.5209 2013/05/02 20:03:48 fhajny Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2139,6 +2139,7 @@ SUBDIR+=	petsc
 SUBDIR+=	pev
 SUBDIR+=	pfe
 SUBDIR+=	pgp6
+SUBDIR+=	pgpool2
 SUBDIR+=	phantomjs
 SUBDIR+=	phlib
 SUBDIR+=	phonon-backend-xine
