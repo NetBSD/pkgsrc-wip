@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5207 2013/05/01 19:51:44 szptvlfn Exp $
+# $Id: Makefile,v 1.5208 2013/05/02 09:35:44 shattered Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2007,7 +2007,6 @@ SUBDIR+=	p5-POD2-IT
 SUBDIR+=	p5-POSIX-strptime
 SUBDIR+=	p5-PerlIO-Layers
 SUBDIR+=	p5-Petal
-SUBDIR+=	p5-Picasa
 SUBDIR+=	p5-Plucene
 SUBDIR+=	p5-Plucene-Plugin-Analyzer-SnowballAnalyzer
 SUBDIR+=	p5-PluceneSimple

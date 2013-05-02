@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/09/07 14:47:52 uhabel Exp $
-
-SHA1 (Picasa-0.02.tar.gz) = b776f29377bb3d1f6007eaae2d7fdb9b336bc590
-RMD160 (Picasa-0.02.tar.gz) = e6a2423a344e1cb4d896dae8ddf4963a5b25e6b3
-Size (Picasa-0.02.tar.gz) = 6239 bytes
-SHA1 (patch-aa) = 39496004b60c84f89ff6710842e7c3d566b88983
