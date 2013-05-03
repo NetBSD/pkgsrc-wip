@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2013/05/03 02:57:01 makoto Exp $
+# $NetBSD: Makefile,v 1.17 2013/05/03 03:13:31 makoto Exp $
 
 DISTNAME=		TrustedQSL-1_14
 DISTNAME=		tqsl-114
@@ -22,24 +22,24 @@ USE_LIBTOOL=		yes
 USE_CMAKE=		yes
 WRKSRC=			${WRKDIR}/${DISTNAME}
 
-.if !empty(X11_TYPE:Mmodular)
+#.if !empty(X11_TYPE:Mmodular)
 SUBST_CLASSES+=		x11r7
 SUBST_STAGE.x11r7=	post-build
 SUBST_FILES.x11r7=	apps/cmake_install.cmake
 SUBST_MESSAGE.x11r7=	Remove X11R7/lib from RPATH_CHANGE, for modular only
-SUBST_SED.x11r7=	-e 's,:/usr/X11R7/lib,:${X11BASE}/lib,'
-.endif
+SUBST_SED.x11r7=	-e 's,:/usr/X11R7/lib,,'
+#.endif
 
 ## CMAKE RPATH_CHANGE claims the the order is not the same, so the work around.
 ##              /usr/pkgsrc/wip/trustedQSL/work/tqsl-114/src:/usr/pkg/lib:
 ##                     v
-## /usr/pkg/lib:/usr/pkgsrc/wip/trustedQSL/work/tqsl-114/src:
+## /usr/pkg/lib:/usr/pkgsrc/wip/trustedQSL/work/tqsl-114/src
 
 SUBST_CLASSES+=		workaround
 SUBST_STAGE.workaround= post-build
 SUBST_FILES.workaround=	apps/cmake_install.cmake
 SUBST_MESSAGE.workaround=	Truely experimental and interim fix for RPATH order
-SUBST_SED.workaround=	-e 's,${WRKSRC}/src:${PREFIX}/lib:,${PREFIX}/lib:${WRKSRC}/src:,'
+SUBST_SED.workaround=	-e 's,${WRKSRC}/src:${PREFIX}/lib:,${PREFIX}/lib:${WRKSRC}/src,'
 
 
 # There is an unresolved build failure, where -R for /usr/pkg/lib does
