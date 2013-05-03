@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.122 2013/04/21 00:30:28 makoto Exp $
+@comment $NetBSD: PLIST,v 1.123 2013/05/03 12:20:39 makoto Exp $
 bin/ctags
 bin/ebrowse
 bin/emacs
@@ -3407,10 +3407,8 @@ share/emacs/${PKGVERSION}/lisp/progmodes/mixal-mode.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/mixal-mode.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/modula2.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/modula2.elc
-share/emacs/${PKGVERSION}/lisp/progmodes/octave-inf.el.gz
-share/emacs/${PKGVERSION}/lisp/progmodes/octave-inf.elc
-share/emacs/${PKGVERSION}/lisp/progmodes/octave-mod.el.gz
-share/emacs/${PKGVERSION}/lisp/progmodes/octave-mod.elc
+share/emacs/${PKGVERSION}/lisp/progmodes/octave.el.gz
+share/emacs/${PKGVERSION}/lisp/progmodes/octave.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/opascal.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/opascal.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/pascal.el.gz
