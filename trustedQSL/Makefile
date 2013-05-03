@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2013/05/03 02:09:45 makoto Exp $
+# $NetBSD: Makefile,v 1.15 2013/05/03 02:44:43 makoto Exp $
 
 DISTNAME=		TrustedQSL-1_14
 DISTNAME=		tqsl-114
@@ -20,7 +20,6 @@ USE_TOOLS+=		perl gmake cmake
 USE_LANGUAGES+=		c c++
 USE_LIBTOOL=		yes
 USE_CMAKE=		yes
-CMAKE_PREFIX_PATH=	${PREFIX}
 WRKSRC=			${WRKDIR}/${DISTNAME}
 
 SUBST_CLASSES+=		prefix
@@ -56,7 +55,7 @@ SUBST_SED.workaround=	-e 's,${WRKSRC}/src:${PREFIX}/lib:,${PREFIX}/lib:${WRKSRC}
 # usage in Makefile.am, without matching -R.
 
 do-configure:
-	(cd $(WRKSRC) ; cmake .)
+	(cd $(WRKSRC) ; cmake -DCMAKE_INSTALL_PREFIX=${PREFIX} .)
 
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../databases/db5/buildlink3.mk"
