@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2013/05/03 03:13:31 makoto Exp $
+# $NetBSD: Makefile,v 1.18 2013/05/03 06:05:45 makoto Exp $
 
 DISTNAME=		TrustedQSL-1_14
 DISTNAME=		tqsl-114
@@ -41,6 +41,13 @@ SUBST_FILES.workaround=	apps/cmake_install.cmake
 SUBST_MESSAGE.workaround=	Truely experimental and interim fix for RPATH order
 SUBST_SED.workaround=	-e 's,${WRKSRC}/src:${PREFIX}/lib:,${PREFIX}/lib:${WRKSRC}/src,'
 
+SUBST_CLASSES+=		rpath-link
+SUBST_STAGE.rpath-link= post-build
+SUBST_FILES.rpath-link=	src/cmake_install.cmake
+SUBST_MESSAGE.rpath-link=	Truely experimental and interim fix for RPATH-LINK
+SUBST_SED.rpath-link=	-e '/OLD_RPATH/s,::::::::::::,,'
+SUBST_SED.rpath-link+=	-e '/NEW_RPATH/s,:${PREFIX}/lib,,'
+
 
 # There is an unresolved build failure, where -R for /usr/pkg/lib does
 # not precede /usr/X11R7/lib, and on a netbsd-5 system with base xorg,
@@ -53,6 +60,8 @@ do-configure:
 	cmake \
 	-DCMAKE_INSTALL_PREFIX=${PREFIX} \
 	-DBDB_PREFIX=${PREFIX} \
+	-DCMAKE_INSTALL_RPATH=${PREFIX}/lib \
+	-DCMAKE_INSTALL_RPATH_USE_LINK_PATH=yes \
 	.)
 
 .include "../../textproc/expat/buildlink3.mk"

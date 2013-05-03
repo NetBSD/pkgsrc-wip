@@ -1,60 +1,10 @@
 - This is 1.14 beta only, some redundent lines left in Makefile
   to migrate production version.
 - set LICENSE= line
-- make package won't complete with following problem now
-
-- Getting following problem now
-   => Checking for missing run-time search paths in tqsl-1.14
-   ERROR: lib/libtqsllib.so: missing library: libdb5-5.3.so.3
-   *** Error code 1
-   
-   Stop.
-   make: stopped in /export/CHROOT/usr/pkgsrc/wip/trustedQSL
-   
-- Followin part will appear if SUBST_CLASSES = workaround is eliminated
-==============================
--- Installing: /export/CHROOT/usr/pkgsrc/wip/trustedQSL/work/.destdir/usr/pkg/bin/tqsl
-CMake Error at apps/cmake_install.cmake:40 (FILE):
-  file RPATH_CHANGE could not write new RPATH:
-
-    /usr/pkg/lib:/usr/pkg/lib:/usr/X11R7/lib
-
-  to the file:
-
-    /export/CHROOT/usr/pkgsrc/wip/trustedQSL/work/.destdir/usr/pkg/bin/tqsl
-
-  The current RPATH is:
-
-    /usr/pkg/lib:/export/CHROOT/usr/pkgsrc/wip/trustedQSL/work/tqsl-114/src
-
-  which does not contain:
-
-    /export/CHROOT/usr/pkgsrc/wip/trustedQSL/work/tqsl-114/src:/usr/pkg/lib:/usr/X11R7/lib:
-
-  as was expected.
-Call Stack (most recent call first):
-  cmake_install.cmake:33 (INCLUDE)
-
-
-gmake: *** [install] Error 1
-*** Error code 2
-Stop.
-==============================
-(Above log was taken after following patch applied to cmake)
-
-modena@makoto 01:01:29/130502(..devel/cmake)% cat  patches/patch-Modules_CMakeGenericSystem.cmake
-$NetBSD: TODO,v 1.6 2013/05/02 05:33:59 makoto Exp $
-
-Correct Install Prefix, see SUBST in Makefile
-
---- Modules/CMakeGenericSystem.cmake.orig       2012-11-01 00:32:05.000000000 +0900
-+++ Modules/CMakeGenericSystem.cmake    2013-05-01 23:45:47.000000000 +0900
-@@ -166,7 +166,7 @@ endif()
- 
- # Choose a default install prefix for this platform.
- if(CMAKE_HOST_UNIX)
--  set(CMAKE_INSTALL_PREFIX "/usr/local"
-+  set(CMAKE_INSTALL_PREFIX "@LOCALBASE@"
-     CACHE PATH "Install path prefix, prepended onto install directories.")
- else()
-   GetDefaultWindowsPrefixBase(CMAKE_GENERIC_PROGRAM_FILES)
+- checked with X11_TYPE=modular only for now
+- Following SUBST_CLASSES are all to be applied
+  post-build stage, probably cmake related problem.
+  Should be eliminated: 
+   SUBST_CLASSES+=		x11r7
+   SUBST_CLASSES+=		workaround
+   SUBST_CLASSES+=		rpath-link
