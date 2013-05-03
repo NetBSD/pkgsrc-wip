@@ -1,7 +1,6 @@
-$NetBSD: patch-cmakemodules_FindBDB_cmake,v 1.2 2013/05/01 16:11:52 makoto Exp $
+$NetBSD: patch-cmakemodules_FindBDB_cmake,v 1.3 2013/05/03 02:57:01 makoto Exp $
 
-(1) To find Berkley DB correctly.
-(2) Fix hardcoded library PATH to pkgsrc, See SUBST in Makefile
+To find Berkley DB correctly. This may be reported to upstream.
 
 --- cmakemodules/FindBDB.cmake.orig	2013-04-20 21:51:36.000000000 +0900
 +++ cmakemodules/FindBDB.cmake	2013-04-25 10:22:45.000000000 +0900
@@ -15,8 +14,8 @@ $NetBSD: patch-cmakemodules_FindBDB_cmake,v 1.2 2013/05/01 16:11:52 makoto Exp $
    "C:\\db-5.3.21\\build_windows\\Win32\\Static Release\\"
    "C:\\db-5.3.21\\build_windows\\Win32\\Static_Release\\" #vc08 adds underscore
    #OSX (and probably other unix) src build
--  "/usr/local/BerkeleyDB.5.3/lib"
-+  "@PREFIX@"
-   "${BDB_PREFIX}/lib"
+   "/usr/local/BerkeleyDB.5.3/lib"
+-  "${BDB_PREFIX}/lib"
++  "${BDB_PREFIX}"
  )
  MARK_AS_ADVANCED(BDB_LIBRARY)
