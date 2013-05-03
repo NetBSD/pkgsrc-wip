@@ -2,6 +2,7 @@ Suggested package updates
 =========================
 
 	o ReZound-0.12.3beta
+	o archimedes-2.0.1
 	o argouml-0.24
 	o atlas-3.10.0
 	o beast-3.8.0
@@ -11,6 +12,7 @@ Suggested package updates
 	o cinelerra-4.4
 	o d4x-2.5.7.1
 	o daphne-1.0
+	o desmume-0.9.9
 	o di-4.34
 	o directfb-1.0.0
 	o e17-1.0
@@ -71,7 +73,7 @@ Suggested package updates
 	o man-1.6f
 	o mcabber-0.10.2
 	o mcwm-20130209.2
-	o meta-tracker-0.16.0
+	o meta-tracker-0.16.1
 	o miniupnpc-1.8
 	o miro-5.0
 	o mixxx-1.9.2
