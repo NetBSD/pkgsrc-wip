@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2013/03/02 23:21:08 othyro Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2013/05/04 02:40:03 othyro Exp $
 
 BUILDLINK_TREE+=	libfishsound
 
@@ -23,8 +23,7 @@ pkgbase := libfishsound
 .include "../../audio/libvorbis/buildlink3.mk"
 .endif
 
-.include "../../wip/liboggz/buildlink3.mk"
-.include "../../audio/libsndfile/buildlink3.mk"
+.include "../../multimedia/libogg/buildlink3.mk"
 .endif	# LIBFISHSOUND_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-libfishsound

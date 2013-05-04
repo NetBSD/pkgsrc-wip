@@ -1,10 +1,19 @@
-# $NetBSD: options.mk,v 1.2 2013/03/02 23:21:08 othyro Exp $
+# $NetBSD: options.mk,v 1.3 2013/05/04 02:40:03 othyro Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.libfish
-PKG_SUPPORTED_OPTIONS=	flac speex valgrind vorbis
+PKG_SUPPORTED_OPTIONS=	doc flac speex valgrind vorbis
 PKG_SUGGESTED_OPTIONS+=	flac speex vorbis
+PLIST_VARS+=		doc nodoc
 
 .include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mdoc)
+BUILD_DEPENDS+=		doxygen-[0-9]*:../../devel/doxygen
+PLIST.doc=		yes
+.else
+CONFIGURE_ARGS+=	HAVE_DOXYGEN=no
+PLIST.nodoc=		yes
+.endif
 
 .if !empty(PKG_OPTIONS:Mflac)
 BUILDLINK_DEPMETHOD.flac=       build
