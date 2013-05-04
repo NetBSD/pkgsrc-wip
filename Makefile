@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5212 2013/05/04 02:51:30 jgoamakf Exp $
+# $Id: Makefile,v 1.5213 2013/05/04 10:41:36 shattered Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -618,7 +618,7 @@ SUBDIR+=	fcgiwrap
 SUBDIR+=	fdm
 SUBDIR+=	feynedit
 SUBDIR+=	feynhiggs
-SUBDIR+=	ffmpeg-snapshot
+SUBDIR+=	ffmpeg-current
 SUBDIR+=	fftjet
 SUBDIR+=	fftw-openmpi
 SUBDIR+=	fftw2-openmpi

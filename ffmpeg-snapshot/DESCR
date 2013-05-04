@@ -1,7 +1,0 @@
-FFmpeg is a complete solution to record, convert and stream audio and video.
-It includes libavcodec, the leading audio/video codec library. FFmpeg is
-developed under Linux, but it can compiled under most operating systems,
-including Windows.
-
-This package fetches nightly builds from mplayer's site, no checksums made.
-It is proven to build with distfile dated from 14-02-2008.
