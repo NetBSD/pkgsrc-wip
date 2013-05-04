@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2013/01/18 14:59:47 othyro Exp $
+# $NetBSD: Makefile,v 1.11 2013/05/04 01:41:49 othyro Exp $
 #
 
 DISTNAME=	AriaSrc-1.4.5
@@ -19,7 +19,7 @@ BUILD_DEPENDS+=		irrxml-1.2:../../wip/irrxml
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c++
 USE_TOOLS+=		chmod pkg-config
-INSTALLATION_DIRS+=	share/applications share/Aria/Documentation/docs
+INSTALLATION_DIRS+=	share/applications
 
 .include "options.mk"
 
