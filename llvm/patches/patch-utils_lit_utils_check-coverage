@@ -1,0 +1,22 @@
+$NetBSD: patch-utils_lit_utils_check-coverage,v 1.1 2013/05/04 14:49:48 othyro Exp $
+
+Fixes portability failure.
+
+--- utils/lit/utils/check-coverage.orig	2013-05-04 12:14:35.000000000 +0000
++++ utils/lit/utils/check-coverage
+@@ -9,13 +9,13 @@ if [ ! -f setup.py ] || [ ! -d lit ]; th
+ fi
+ 
+ # Parse command line arguments.
+-if [ "$1" == "--generate-html" ]; then
++if [ "$1" = "--generate-html" ]; then
+     GENERATE_HTML=1
+     shift
+ fi
+ 
+ # If invoked with no arguments, run all the tests.
+-if [ $# == "0" ]; then
++if [ $# = "0" ]; then
+     set -- "tests"
+ fi
+ 

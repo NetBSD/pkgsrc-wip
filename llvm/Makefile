@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2012/10/03 09:10:42 asau Exp $
+# $NetBSD: Makefile,v 1.17 2013/05/04 14:49:47 othyro Exp $
 #
 
 DISTNAME=	llvm-2.8
@@ -8,6 +8,7 @@ MASTER_SITES=	http://llvm.org/releases/${PKGVERSION_NOREV}/
 MAINTAINER=	adam.hoka@gmail.com
 HOMEPAGE=	http://llvm.org/
 COMMENT=	Low Level Virtual Machine compiler infrastructure
+LICENSE=	modified-bsd AND mit
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake perl:build chown
@@ -42,9 +43,9 @@ PRINT_PLIST_AWK+=	{gsub(/\.${SO_SUFFIX}$$/, ".$${SO_SUFFIX}");}
 .if ${OPSYS} == "Darwin"
 SO_SUFFIX=		dylib
 .endif
-    ## warning: ....usr/pkg/lib/libCompilerDriver.a: executable bit is set on non-executable file.
-#post-install:
-#	${CHMOD}	-x ${DESTDIR}${PREFIX}/lib/lib*.a
+
+post-install:
+	${CHMOD}	-x ${DESTDIR}${PREFIX}/lib/lib*.a
 
 
 # Get it from Subversion repository:
@@ -60,5 +61,6 @@ CHECK_PORTABILITY_SKIP= utils/buildit/.svn/text-base/build_llvm.svn-base \
 
 .include "../../wip/mk/svn-package.mk"
 
+.include "../../lang/python/pyversion.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
