@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2013/04/05 21:53:31 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.3 2013/05/05 21:39:35 szptvlfn Exp $
 
-DISTNAME=	xmobar-0.16
+DISTNAME=	xmobar-0.17
 CATEGORIES=	sysutils
 
 MAINTAINER=	szptvlfn@a-net.email.ne.jp
