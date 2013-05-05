@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2013/03/16 07:55:38 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.2 2013/05/05 22:09:01 szptvlfn Exp $
 #
 
-DISTNAME=	cgi-3001.1.8.3
+DISTNAME=	cgi-3001.1.8.4
 CATEGORIES=	net
 
 MAINTAINER=	szptvlfn@a-net.email.ne.jp
