@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2013/03/05 22:36:45 asau Exp $
+# $NetBSD: Makefile,v 1.5 2013/05/05 21:23:57 asau Exp $
 
 DISTNAME=	openmpi-1.6.3
 CATEGORIES=	parallel
@@ -13,6 +13,7 @@ COMMENT=	Open source MPI-2 implementation
 # HPC clusters.
 MPI_SUBPREFIX=		openmpi
 MPI_PREFIX=		$(LOCALBASE)/$(MPI_SUBPREFIX)
+INSTALLATION_PREFIX=	$(MPI_PREFIX)
 
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++ fortran
@@ -31,7 +32,7 @@ CONFIGURE_ARGS+=	--without-slurm
 CONFIGURE_ARGS+=	--enable-contrib-no-build=vt # in separate package
 CONFIGURE_ARGS+=	--with-libltdl=external # use our libltdl
 CONFIGURE_ARGS+=	--with-hwloc=$(BUILDLINK_PREFIX.hwloc:Q) #external
-# CONFIGURE_ARGS+=	--with-wrapper-ldflags="-L$(MPI_PREFIX)/lib $(LINKER_RPATH_FLAG)$(MPI_PREFIX)/lib" # XXX see below
+CONFIGURE_ARGS+=	--with-wrapper-ldflags="-L$(MPI_PREFIX)/lib $(COMPILER_RPATH_FLAG)$(MPI_PREFIX)/lib"
 # CONFIGURE_ENV+=		ompi_cv_f77_have_INTEGERp8=no	# no "INTEGER*8"?? # f2c limitation?
 CONFIGURE_ARGS+=	OPAL_HAVE_LTDL_ADVISE=0
 # Suppress regeneration:
@@ -54,35 +55,27 @@ LINKER_RPATH_FLAG=	-rpath,
 LINKER_RPATH_FLAG=	-rpath=
 .endif
 
-LDFLAGS+=	-Wl,${LINKER_RPATH_FLAG}${MPI_PREFIX}/lib
-
-CONFIGURE_ARGS+=	--with-wrapper-ldflags="-L${MPI_PREFIX}/lib -Wl,${LINKER_RPATH_FLAG}${MPI_PREFIX}/lib"
-
 # Prevent detection of OpenMP support in order to make PLIST consistent:
 BUILDLINK_TRANSFORM=	rm:-fopenmp
 
+BUILDLINK_PASSTHRU_RPATHDIRS+=	${MPI_PREFIX}/lib
+
 USE_TOOLS+=		perl:run
+REPLACE_PERL+=		ompi/tools/wrappers/mpijavac.pl.in
 
 .include "options.mk"
 
 TEST_TARGET=	check
 
+# Debug
+#BUILD_MAKE_FLAGS=	V=1
+
 ## Just in case you'll need it...
 # USE_TOOLS+=	aclocal autoconf automake bash perl
-# REPLACE_BASH=	autogen.sh
+# REPLACE_PERL=	autogen.sh
 
 # pre-configure:	replace-interpreter
-# 	cd $(WRKSRC) && $(BASH) autogen.sh
-
-# A -R flag is being mysteriously inserted into the mpi wrapper flags,
-# which is not supported by the Darwin linker.  This hack replaces
-# it with a harmless extra -L until I can figure out how to prevent it.
-# The same -R appears on Linux, but does not cause problems.
-# SUBST refused to edit binary files, so do it manually.
-.if ${OPSYS} == "Darwin"
-post-build:
-	sed -i '' -e 's|-R|-L|g' ${WRKSRC}/opal/tools/wrappers/.libs/opal_wrapper
-.endif
+# 	cd $(WRKSRC) && $(PERL5) autogen.sh
 
 # Remove files that would conflict on case-insensitive filesystems, so we
 # have a consistent PLIST and user interface across all platforms.  This
@@ -108,5 +101,4 @@ LIBLTDL_CONVENIENCE_SUBDIR=	opal/libltdl
 .include "../../devel/libltdl/convenience.mk" # for "test" target to work
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../parallel/hwloc/buildlink3.mk"
-.include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
