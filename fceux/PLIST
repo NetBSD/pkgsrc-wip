@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2013/01/28 12:41:42 othyro Exp $
+@comment $NetBSD: PLIST,v 1.3 2013/05/05 14:25:56 othyro Exp $
 bin/fceux
 bin/fceux-net-server
 man/man6/fceux-net-server.6
@@ -16,6 +16,7 @@ share/fceux/luaScripts/GUI-iup_button.lua
 share/fceux/luaScripts/GUI-iup_example.lua
 share/fceux/luaScripts/Galaxian.lua
 share/fceux/luaScripts/Gradius-BulletHell.lua
+share/fceux/luaScripts/JumpingFCEUXWindow.lua
 share/fceux/luaScripts/Luabot.lua
 share/fceux/luaScripts/Machrider.lua
 share/fceux/luaScripts/MegamanII-LaserEyes.lua
