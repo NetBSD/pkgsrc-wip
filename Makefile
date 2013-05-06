@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5213 2013/05/04 10:41:36 shattered Exp $
+# $Id: Makefile,v 1.5214 2013/05/06 21:33:04 szptvlfn Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1114,6 +1114,7 @@ SUBDIR+=	hs-unix-compat
 SUBDIR+=	hs-unordered-containers
 SUBDIR+=	hs-utf8-string
 SUBDIR+=	hs-utility-ht
+SUBDIR+=	hs-vault
 SUBDIR+=	hs-vector
 SUBDIR+=	hs-vector-bytestring
 SUBDIR+=	hs-vector-th-unbox
