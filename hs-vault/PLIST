@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2013/05/06 21:29:57 szptvlfn Exp $
+lib/vault-${PKGVERSION}/${HASKELL_VERSION}/Data/Unique/Really.hi
+lib/vault-${PKGVERSION}/${HASKELL_VERSION}/Data/Unique/Really.p_hi
+lib/vault-${PKGVERSION}/${HASKELL_VERSION}/Data/Vault.hi
+lib/vault-${PKGVERSION}/${HASKELL_VERSION}/Data/Vault.p_hi
+lib/vault-${PKGVERSION}/${HASKELL_VERSION}/Data/Vault/ST.hi
+lib/vault-${PKGVERSION}/${HASKELL_VERSION}/Data/Vault/ST.p_hi
+lib/vault-${PKGVERSION}/${HASKELL_VERSION}/Data/Vault/ST_GHC.hi
+lib/vault-${PKGVERSION}/${HASKELL_VERSION}/Data/Vault/ST_GHC.p_hi
+lib/vault-${PKGVERSION}/${HASKELL_VERSION}/HSvault-${PKGVERSION}.o
+lib/vault-${PKGVERSION}/${HASKELL_VERSION}/libHSvault-${PKGVERSION}.a
+lib/vault-${PKGVERSION}/${HASKELL_VERSION}/libHSvault-${PKGVERSION}_p.a
+lib/vault-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/vault-${PKGVERSION}/LICENSE
