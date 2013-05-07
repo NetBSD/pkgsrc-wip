@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2013/03/03 15:37:40 othyro Exp $
+# $NetBSD: options.mk,v 1.3 2013/05/07 03:00:49 othyro Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.SDL2
 PKG_SUPPORTED_OPTIONS=	alsa arts esound nas opengl oss pulseaudio x11 xcursor
@@ -38,6 +38,7 @@ CMAKE_ARGS+=		-DNAS=OFF
 .if !empty(PKG_OPTIONS:Mopengl)
 .include "../../graphics/MesaLib/buildlink3.mk"
 CMAKE_ARGS+=		-DVIDEO_OPENGL=ON
+BROKEN=			opengl option doesn't work at the moment.
 .else
 CMAKE_ARGS+=		-DVIDEO_OPENGL=OFF
 .endif

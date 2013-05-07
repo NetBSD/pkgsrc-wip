@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2013/03/03 15:37:40 othyro Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2013/05/07 03:00:49 othyro Exp $
 
 BUILDLINK_TREE+=	SDL2
 
@@ -11,19 +11,6 @@ BUILDLINK_PKGSRCDIR.SDL2?=	../../wip/SDL2
 pkgbase := SDL2
 .include "../../mk/pkg-build-options.mk"
 
-
-.if !empty(PKG_BUILD_OPTIONS.SDL2:Malsa)
-.include "../../audio/alsa-lib/buildlink3.mk"
-.endif
-
-.if !empty(PKG_BUILD_OPTIONS.SDL2:Marts)
-.include "../../audio/arts/buildlink3.mk"
-.endif
-
-.if !empty(PKG_BUILD_OPTIONS.SDL2:Mesound)
-.include "../../audio/esound/buildlink3.mk"
-.endif
-
 .if !empty(PKG_BUILD_OPTIONS.SDL2:Mnas)
 .include "../../audio/nas/buildlink3.mk"
 .endif
@@ -34,10 +21,6 @@ pkgbase := SDL2
 
 .if !empty(PKG_BUILD_OPTIONS.SDL2:Moss)
 .include "../../mk/oss.buildlink3.mk"
-.endif
-
-.if !empty(PKG_BUILD_OPTIONS.SDL2:Mpulseaudio)
-.include "../../audio/pulseaudio/buildlink3.mk"
 .endif
 
 .if !empty(PKG_BUILD_OPTIONS.SDL2:Mx11)
@@ -68,9 +51,8 @@ pkgbase := SDL2
 .include "../../x11/libXScrnSaver/buildlink3.mk"
 .endif
 
-.include "../../devel/libusb/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
-.include "../../x11/libX11/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .endif	# SDL2_BUILDLINK3_MK
 
