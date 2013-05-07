@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5214 2013/05/06 21:33:04 szptvlfn Exp $
+# $Id: Makefile,v 1.5215 2013/05/07 11:36:30 ahp-nils Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -485,6 +485,7 @@ SUBDIR+=	dropbox
 SUBDIR+=	drow
 SUBDIR+=	drpython
 SUBDIR+=	drumpiler
+SUBDIR+=	dscan
 SUBDIR+=	dsh
 SUBDIR+=	dspam
 SUBDIR+=	dssi
