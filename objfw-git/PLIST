@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/03/18 13:32:22 midar Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/05/07 22:52:22 midar Exp $
 bin/objfw-compile
 bin/objfw-config
 include/ObjFW/OFAcceptFailedException.h
@@ -89,6 +89,7 @@ include/ObjFW/OFSerialization.h
 include/ObjFW/OFSet.h
 include/ObjFW/OFSetOptionFailedException.h
 include/ObjFW/OFSortedList.h
+include/ObjFW/OFStdIOStream.h
 include/ObjFW/OFStillLockedException.h
 include/ObjFW/OFStream.h
 include/ObjFW/OFStreamObserver.h
