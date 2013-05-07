@@ -1,4 +1,4 @@
-LogRider is my attepmpt to improve a popular LogCheck/LogSentry utility.
+LogRider is my attempt to improve a popular LogCheck/LogSentry utility.
 LogCheck uses egrep for periodically scanning system logs for specific
 alert/hacking signatures based on set of static filters. LogRider is
 rewritten from scratch with lot of important features added:
