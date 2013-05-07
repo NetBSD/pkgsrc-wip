@@ -36,6 +36,7 @@ Suggested package updates
 	o girara-0.1.5
 	o gjs-1.30.1
 	o globulation2-0.9.4
+	o glsl-1.30
 	o gnome-do-0.9
 	o gnunet-0.9.5
 	o gnupod-0.99.8
@@ -66,7 +67,7 @@ Suggested package updates
 	o libburn-1.2.8
 	o libgtk-java-2.10.2
 	o libpthread-stubs-0.3
-	o lives-2.0.3
+	o lives-2.0.4
 	o llvm-3.2
 	o lucene-3.6.1
 	o man-1.6f
