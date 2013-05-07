@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1 2013/03/29 11:25:11 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2013/05/07 10:31:04 othyro Exp $
 #
 
-DISTNAME=	qt-everywhere-opensource-src-5.0.1
+DISTNAME=	qt-everywhere-opensource-src-5.0.2
 PKGNAME=	${DISTNAME:S/-everywhere-opensource-src//1}
 CATEGORIES=	x11
-MASTER_SITES=	http://releases.qt-project.org/qt5/5.0.1/single/
+MASTER_SITES=	http://releases.qt-project.org/qt5/5.0.2/single/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://qt-project.org/qt5
