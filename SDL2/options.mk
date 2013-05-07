@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2013/05/07 03:00:49 othyro Exp $
+# $NetBSD: options.mk,v 1.4 2013/05/07 11:25:01 othyro Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.SDL2
 PKG_SUPPORTED_OPTIONS=	alsa arts esound nas opengl oss pulseaudio x11 xcursor
@@ -44,7 +44,6 @@ CMAKE_ARGS+=		-DVIDEO_OPENGL=OFF
 .endif
 
 .if !empty(PKG_OPTIONS:Moss)
-.include "../../mk/oss.buildlink3.mk"
 CMAKE_ARGS+=		-DOSS=ON
 .else
 CMAKE_ARGS+=		-DOSS=OFF

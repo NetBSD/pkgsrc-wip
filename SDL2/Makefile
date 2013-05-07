@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2013/05/07 03:00:49 othyro Exp $
+# $NetBSD: Makefile,v 1.8 2013/05/07 11:25:01 othyro Exp $
 #
 
 REVISION=	7140
@@ -48,6 +48,7 @@ do-install:
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/xproto/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
