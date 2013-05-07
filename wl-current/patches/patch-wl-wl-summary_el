@@ -1,0 +1,48 @@
+$NetBSD: patch-wl-wl-summary_el,v 1.1 2013/05/07 12:02:01 makoto Exp $
+
+To: wl-en at ml gentei org
+X-Mail-Count: 05454
+
+Add other indidators depending on types of multipart.
+mef@ proposed to upstream.
+You will need following lines to utilize this change in 
+your setup, for example, in ~/.wl.
+
+(setq elmo-msgdb-extra-fields
+    (cons "content-type" elmo-msgdb-extra-fields))
+;                '((\"^%\" . \"%n%T%P  %M/%D(%W)%h:%m %t%[%14(%c %f%) %](%S) %s\")
+;(setq wl-summary-line-format "%n%T%P%@%M/%D(%W)%h:%m %t%[%17(%c %f%) %] %#%~%s")
+ (setq wl-summary-line-format "%n%T%P%@%M/%D(%W)%h:%m %t%[%17(%c %f%) %] %~%s")
+
+--- wl/wl-summary.el.orig	2013-01-25 11:39:09.000000000 +0900
++++ wl/wl-summary.el	2013-01-25 12:26:38.000000000 +0900
+@@ -38,6 +38,7 @@
+ (require 'elmo)
+ (require 'elmo-multi)
+ (eval-when-compile (require 'elmo-filter))
++(eval-when-compile (require 'wl-folder))
+ (require 'wl-message)
+ (require 'wl-vars)
+ (require 'wl-highlight)
+@@ -3541,11 +3542,15 @@ Return non-nil if the mark is updated"
+   (let ((content-type (elmo-message-entity-field
+ 		       wl-message-entity 'content-type))
+ 	(case-fold-search t))
+-    (if (and content-type
+-	     (string-match "multipart/mixed" content-type))
+-	"@"
+-      "")))
+-
++    (if (stringp content-type)
++	(cond 
++	 ((string-match "multipart/mixed" content-type) "@")
++	 ((string-match "multipart/signed" content-type) "s")
++	 ((string-match "multipart/encrypted" content-type) "e")
++	 ; else returns blank
++	 (t " " ) ) 
++      " ")))
++ 
+ ;;; For future use.
+ ;;;(defun wl-summary-line-cached ()
+ ;;;  (if (elmo-message-cached-p wl-summary-buffer-elmo-folder
+
