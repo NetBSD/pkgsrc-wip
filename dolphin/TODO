@@ -1,2 +1,2 @@
 * Fix Cg and SOIL detection;
-* Test portaudio and wxGTK29 option after they are packaged;
+* Test portaudio and wxGTK29 (wxUnicode) option after they are packaged;
