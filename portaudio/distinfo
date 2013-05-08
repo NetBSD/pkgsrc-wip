@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.7 2013/05/08 23:57:17 othyro Exp $
+
+SHA1 (pa_stable_v19_20111121.tgz) = f07716c470603729a55b70f5af68f4a6807097eb
+RMD160 (pa_stable_v19_20111121.tgz) = cd6a38824eb6ece1aae24494b6d05451c42dc319
+Size (pa_stable_v19_20111121.tgz) = 1422825 bytes
+SHA1 (patch-ac) = 9659715362d795527492f3f5ab359c98b42196f9
+SHA1 (patch-ag) = 9d93670c21b174030a40a30affb2afaf84837b8e
+SHA1 (patch-src_hostapi_oss_pa__unix__oss.c) = 3b557da2eec70c54d81cb2fd0b51c2e4ebdd8e3e
