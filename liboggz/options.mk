@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.3 2013/04/10 01:14:25 othyro Exp $
+# $NetBSD: options.mk,v 1.4 2013/05/08 09:13:15 thomasklausner Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.liboggz
 PKG_SUPPORTED_OPTIONS=	doc valgrind
-PKG_SUGGESTED_OPTIONS+=	# blank
+PKG_SUGGESTED_OPTIONS=	# blank
 PLIST_VARS+=		doc
 
 .include "../../mk/bsd.options.mk"
