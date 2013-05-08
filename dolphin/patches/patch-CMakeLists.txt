@@ -1,0 +1,15 @@
+$NetBSD: patch-CMakeLists.txt,v 1.1 2013/05/08 02:42:59 othyro Exp $
+
+Fix configure tests.
+
+--- CMakeLists.txt.orig	2012-12-24 20:29:24.000000000 +0000
++++ CMakeLists.txt
+@@ -429,7 +429,7 @@ else()
+ endif()
+ 
+ if(NOT ${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
+-	check_lib(SOIL SOIL SOIL/SOIL.h QUIET)
++	check_lib(SOIL SOIL SOIL.h SOIL/SOIL.h QUIET)
+ endif()
+ if(SOIL_FOUND)
+ 	message("Using shared SOIL")
