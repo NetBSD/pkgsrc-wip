@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2013/05/05 14:25:56 othyro Exp $
+# $NetBSD: Makefile,v 1.7 2013/05/08 00:55:14 othyro Exp $
 #
 
-DISTNAME=	fceux-2.2.1.src
+DISTNAME=	fceux-2.2.1.1.src
 PKGNAME=	${DISTNAME:S/.src//}
 CATEGORIES=	emulators
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fceultra/}

@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.6 2013/05/05 14:25:56 othyro Exp $
+$NetBSD: distinfo,v 1.7 2013/05/08 00:55:14 othyro Exp $
 
-SHA1 (fceux-2.2.1.src.tar.gz) = dec6d0e76cfc1712a6df9bf7deee4ca228514e8c
-RMD160 (fceux-2.2.1.src.tar.gz) = 2aad574625cbb000e98cfddb6e8deaed91ead8e6
-Size (fceux-2.2.1.src.tar.gz) = 8873566 bytes
+SHA1 (fceux-2.2.1.1.src.tar.gz) = a9e7babf7a883bfa17ee7cc4a1989382dfbced65
+RMD160 (fceux-2.2.1.1.src.tar.gz) = db36c21cba027f840cf5c64f90248e57b47e7757
+Size (fceux-2.2.1.1.src.tar.gz) = 8878420 bytes
 SHA1 (patch-SConstruct) = b2b3298624cb9267ac4deba9a0e8b75339c6533c
 SHA1 (patch-src_utils_ioapi.cpp) = 42d220fc2585f12d5711a4a6164c43b1fa736b85
