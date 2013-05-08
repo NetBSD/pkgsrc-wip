@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5215 2013/05/07 11:36:30 ahp-nils Exp $
+# $Id: Makefile,v 1.5216 2013/05/08 02:46:00 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -473,6 +473,7 @@ SUBDIR+=	docbook-xsl-ko
 SUBDIR+=	docbook2X
 SUBDIR+=	dokuwiki
 SUBDIR+=	dolfin
+SUBDIR+=	dolphin
 SUBDIR+=	doorman
 SUBDIR+=	dotproject
 SUBDIR+=	dovecot-antispam
