@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2013/03/03 00:01:24 othyro Exp $
+# $NetBSD: options.mk,v 1.2 2013/05/09 00:57:32 othyro Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.libkate
 PKG_SUPPORTED_OPTIONS=	debug doc oggz valgrind vorbis
@@ -18,7 +18,7 @@ CONFIGURE_ARGS+=	--disable-doc
 .endif
 
 .if !empty(PKG_OPTIONS:Moggz)
-.include "../../wip/liboggz/buildlink3.mk"
+.include "../../multimedia/liboggz/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mvalgrind)

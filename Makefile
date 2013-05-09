@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5217 2013/05/08 23:58:44 othyro Exp $
+# $Id: Makefile,v 1.5218 2013/05/09 00:57:32 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1365,7 +1365,6 @@ SUBDIR+=	libee
 SUBDIR+=	libepc
 SUBDIR+=	libestr
 SUBDIR+=	libexosip
-SUBDIR+=	libfishsound
 SUBDIR+=	libfm
 SUBDIR+=	libfplll
 SUBDIR+=	libfs
@@ -1414,7 +1413,6 @@ SUBDIR+=	libnestedsums
 SUBDIR+=	libneural
 SUBDIR+=	libnfo
 SUBDIR+=	libode
-SUBDIR+=	liboggz
 SUBDIR+=	liboglappth
 SUBDIR+=	libopenmodeller
 SUBDIR+=	libopensync-dev
