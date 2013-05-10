@@ -1,0 +1,15 @@
+Choosefont is a program for selecting the font you need out of a big ammount of
+fonts. If you have a hell lot of fonts, and you have to find the one you need,
+eg in a graphical application, but the entry where you choose the font name does
+not have previewing capabilities (eg.: once you selected the font you can
+preview the font, but you first have to select it).
+Choosefont alows you to select the font in a list where the fonts are displayed
+in it's own fontface. Once you selected the font you can copy it's name, or css,
+html,... code for it to the X clipboard. Adding extra languages is extremely
+simple.
+
+In the future Choosefont might also have capabilities to install and remove
+fonts and I might also extend it to be usable as a font seletion dialog in other
+tcl/tk applications. I will also add capabilities to select bold, italic,...
+
+Choosefont requires the tix extention that can be found at http://tix.sf.net
