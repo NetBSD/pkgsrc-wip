@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2012/10/07 17:41:40 asau Exp $
+# $NetBSD: Makefile,v 1.6 2013/05/10 08:20:04 ahp-nils Exp $
 #
 
-DISTNAME=		uptimed-0.3.16
+DISTNAME=		uptimed-0.3.17
 CATEGORIES=		sysutils
 MASTER_SITES=		http://podgorny.cz/uptimed/releases/
 EXTRACT_SUFX=	.tar.bz2
