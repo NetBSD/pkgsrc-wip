@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2013/01/21 03:32:33 othyro Exp $
+# $NetBSD: Makefile,v 1.27 2013/05/10 07:57:09 ahp-nils Exp $
 #
 
-DISTNAME=	httrack-3.46.1
+DISTNAME=	httrack-3.47.11
 CATEGORIES=	www
 MASTER_SITES=	http://download.httrack.com/cserv.php3?File=
 

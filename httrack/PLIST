@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2013/01/21 03:32:33 othyro Exp $
+@comment $NetBSD: PLIST,v 1.11 2013/05/10 07:57:09 ahp-nils Exp $
 bin/htsserver
 bin/httrack
 bin/proxytrack
@@ -119,6 +119,7 @@ share/doc/httrack/html/server/option8.html
 share/doc/httrack/html/server/option9.html
 share/doc/httrack/html/server/refresh.html
 share/doc/httrack/html/server/sfx/finished.wav
+share/doc/httrack/html/server/sfx/silent.wav
 share/doc/httrack/html/server/step2.html
 share/doc/httrack/html/server/step3.html
 share/doc/httrack/html/server/step4.html
@@ -143,7 +144,6 @@ share/doc/httrack/html/step9_opt7.html
 share/doc/httrack/html/step9_opt8.html
 share/doc/httrack/html/step9_opt9.html
 share/doc/httrack/httrack-doc.html
-share/httrack/icons/webhttrack.xpm
 share/httrack/lang.def
 share/httrack/lang.indexes
 share/httrack/lang/Bulgarian.txt
@@ -194,4 +194,9 @@ share/httrack/templates/topindex-body.html
 share/httrack/templates/topindex-bodycat.html
 share/httrack/templates/topindex-footer.html
 share/httrack/templates/topindex-header.html
-share/pixmaps/httrack.xpm
+share/icons/hicolor/16x16/apps/httrack.png
+share/icons/hicolor/32x32/apps/httrack.png
+share/icons/hicolor/48x48/apps/httrack.png
+share/pixmaps/httrack16x16.xpm
+share/pixmaps/httrack32x32.xpm
+share/pixmaps/httrack48x48.xpm
