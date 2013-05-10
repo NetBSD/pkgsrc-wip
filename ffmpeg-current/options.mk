@@ -1,10 +1,10 @@
-# $NetBSD: options.mk,v 1.1 2013/05/04 10:39:12 shattered Exp $
+# $NetBSD: options.mk,v 1.2 2013/05/10 16:51:09 shattered Exp $
 
 # Global and legacy options
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ffmpeg
 PKG_SUPPORTED_OPTIONS=	faac lame ass libvpx theora vorbis x264 xvid \
-			opencore-amr
+			opencore-amr x11
 PKG_SUGGESTED_OPTIONS=	lame ass libvpx theora vorbis x264 xvid
 #PKG_OPTIONS_OPTIONAL_GROUPS=	aac-decoder
 #PKG_OPTIONS_GROUP.aac-decoder=	faac
@@ -145,4 +145,13 @@ CONFIGURE_ARGS+=	--enable-libvpx
 .include "../../multimedia/libvpx/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-libvpx
+.endif
+
+.if !empty(PKG_OPTIONS:Mx11)
+CONFIGURE_ARGS+=	--enable-x11grab
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXfixes/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-x11grab
 .endif

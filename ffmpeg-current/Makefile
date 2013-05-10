@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/05/04 10:39:12 shattered Exp $
+# $NetBSD: Makefile,v 1.2 2013/05/10 16:51:09 shattered Exp $
 
 DISTNAME=	ffmpeg-${PKGREVISION}
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -7,7 +7,7 @@ COMMENT=	Decoding, encoding and streaming software
 
 GIT_REPOSITORIES=	master
 GIT_REPO.master=	git://source.ffmpeg.org/ffmpeg.git
-# GIT_MODULE.master=	emacs
+GIT_MODULE.master=	ffmpeg
 # _GIT_FLAGS?=		--depth 1
 WRKSRC=			${WRKDIR}/ffmpeg
 

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/05/04 10:39:12 shattered Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/05/10 16:51:09 shattered Exp $
 bin/ffmpeg
 bin/ffprobe
 bin/ffserver
@@ -97,7 +97,7 @@ lib/libavformat.so.55.4.101
 lib/libavutil.a
 lib/libavutil.so
 lib/libavutil.so.52
-lib/libavutil.so.52.28.100
+lib/libavutil.so.52.30.100
 lib/libpostproc.a
 lib/libpostproc.so
 lib/libpostproc.so.52
@@ -109,7 +109,7 @@ lib/libswresample.so.0.17.102
 lib/libswscale.a
 lib/libswscale.so
 lib/libswscale.so.2
-lib/libswscale.so.2.2.100
+lib/libswscale.so.2.3.100
 lib/pkgconfig/libavcodec.pc
 lib/pkgconfig/libavdevice.pc
 lib/pkgconfig/libavfilter.pc
