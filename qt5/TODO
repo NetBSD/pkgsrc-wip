@@ -1,2 +1,177 @@
 * Support all PKG_OPTIONS
+
+Qt D-Bus module ........ no
+Qt Concurrent code ..... yes
+Qt GUI module .......... yes
+Qt Widgets module ...... yes
+PCH support ............ yes
+AVX/AVX2................ no/no
+IPv6 ifname support .... yes
+getaddrinfo support .... yes
+getifaddrs support ..... yes
+Accessibility .......... yes
+NIS support ............ yes
+CUPS support ........... no
+Iconv support .......... gnu
+GStreamer support ...... no
+PulseAudio support ..... no
+Large File support ..... yes
+Session management ..... auto
+libudev support ........ no
+OpenVG support ......... no
+XShape support ......... auto
+XVideo support ......... auto
+XSync support .......... auto
+Xinerama support ....... runtime
+Xcursor support ........ runtime
+Xfixes support ......... runtime
+Xrandr support ......... runtime
+Xi support ............. runtime
+Xi2 support ............ no
+MIT-SHM support ........ auto
+FontConfig support ..... no
+XKB Support ............ auto
+GTK theme support ...... no
+Alsa support ........... no
+libICU support ......... yes
+Xcb support ............ system
+Xrender support ........ yes
+EGLFS support .......... no
+DirectFB support ....... no
+LinuxFB support ........ no
+KMS support ............ no
+
+Usage:  configure [options]
+
+Installation options:
+
+ These are optional, but you may specify install directories.
+
+    -prefix <dir> ...... This will install everything relative to <dir>
+                         (default /usr/local/Qt-5.0.2)
+
+    -hostprefix [dir] .. Tools and libraries needed when developing
+                         applications are installed in [dir]. If [dir] is
+                         not given, the current build directory will be used.
+                         (default PREFIX)
+
+Configure options:
+
+ The defaults (*) are usually acceptable. A plus (+) denotes a default value
+ that needs to be evaluated. If the evaluation succeeds, the feature is
+ included. Here is a short explanation of each option:
+
+ *  -shared ............ Create and use shared Qt libraries.
+    -static ............ Create and use static Qt libraries.
+
+    -no-sql-<driver> ... Disable SQL <driver> entirely.
+    -qt-sql-<driver> ... Enable a SQL <driver> in the Qt SQL module, by default
+                         none are turned on.
+    -plugin-sql-<driver> Enable SQL <driver> as a plugin to be linked to
+                         at run time.
+
+                         Possible values for <driver>:
+                         [ ibase oci odbc ]
+
+    -testcocoon          Instrument Qt with the TestCocoon code coverage tool.
+
+Third Party Libraries:
+
+    -qt-xcb ............ Use xcb- libraries bundled with Qt.
+                         (libxcb.so will still be used from operating system).
+ +  -system-xcb ........ Use xcb- libraries from the operating system.
+
+Additional options:
+
+    -make <part> ....... Add part to the list of parts to be built at make time.
+                         (libs tools examples)
+    -nomake <part> ..... Exclude part from the list of parts to be built.
+
+    -skip <module> ..... Exclude an entire module from the build.
+
+    -no-gui ............ Don't build the Qt GUI module and dependencies.
+ +  -gui ............... Build the Qt GUI module and dependencies.
+
+    -no-widgets ........ Don't build the Qt Widgets module and dependencies.
+ +  -widgets ........... Build the Qt Widgets module and dependencies.
+
+    -R <string> ........ Add an explicit runtime library path to the Qt
+                         libraries.
+    -l <string> ........ Add an explicit library.
+
+    -no-rpath .......... Do not use the library install path as a runtime
+                         library path.
+ +  -rpath ............. Link Qt libraries and executables using the library
+                         install path as a runtime library path. Equivalent
+                         to -R install_libpath
+
+    -continue .......... Continue as far as possible if an error occurs.
+
+    -verbose, -v ....... Print verbose information about each step of the
+                         configure process.
+
+    -silent ............ Reduce the build output so that warnings and errors
+                         can be seen more easily.
+
+ *  -no-optimized-qmake ... Do not build qmake optimized.
+    -optimized-qmake ...... Build qmake optimized.
+
+    -no-nis ............ Do not compile NIS support.
+ *  -nis ............... Compile NIS support.
+
+    -no-cups ........... Do not compile CUPS support.
+ *  -cups .............. Compile CUPS support.
+                         Requires cups/cups.h and libcups.so.2.
+
+    -no-iconv .......... Do not compile support for iconv(3).
+ *  -iconv ............. Compile support for iconv(3).
+
+    -no-icu ............ Do not compile support for ICU libraries.
+ +  -icu ............... Compile support for ICU libraries.
+
+    -no-strip .......... Do not strip binaries and libraries of unneeded symbols.
+ *  -strip ............. Strip binaries and libraries of unneeded symbols when installing.
+
+    -no-pch ............ Do not use precompiled header support.
+ *  -pch ............... Use precompiled header support.
+
+    -no-dbus ........... Do not compile the Qt D-Bus module.
+ +  -dbus .............. Compile the Qt D-Bus module and dynamically load libdbus-1.
+    -dbus-linked ....... Compile the Qt D-Bus module and link to libdbus-1.
+
+    -reduce-relocations ..... Reduce relocations in the libraries through extra
+                              linker optimizations (Qt/X11 and Qt for Embedded Linux only;
+                              experimental; needs GNU ld >= 2.18).
+
+    -force-asserts ........ Force Q_ASSERT to be enabled even in release builds.
+
+    -device <name> ............... Cross-compile for device <name> (experimental)
+    -device-option <key=value> ... Add device specific options for the device mkspec
+                                   (experimental)
+
+    -no-xcb ............ Do not compile Xcb (X protocol C-language Binding) support.
+ *  -xcb ............... Compile Xcb support.
+
+    -no-eglfs .......... Do not compile EGLFS (EGL Full Screen/Single Surface) support.
+ *  -eglfs ............. Compile EGLFS support (Requires OpenGL ES 2 support).
+
+    -no-directfb ....... Do not compile DirectFB support.
+ *  -directfb .......... Compile DirectFB support.
+
+    -no-linuxfb ........ Do not compile Linux Framebuffer support.
+ *  -linuxfb ........... Compile Linux Framebuffer support.
+
+    -no-kms ............ Do not compile KMS support.
+ *  -kms ............... Compile KMS support (Requires EGL and OpenGL ES 2 support).
+
+    -sysroot <dir> ...... Sets <dir> as the target compiler's and qmake's sysroot and also sets pkg-config paths.
+    -no-gcc-sysroot ..... When using -sysroot, it disables the passing of --sysroot to the compiler
+
+    -no-feature-<feature> Do not compile in <feature>.
+    -feature-<feature> .. Compile in <feature>. The available features
+                          are described in src/corelib/global/qfeatures.txt
+
+    -qconfig local ...... Use src/corelib/global/qconfig-local.h rather than the
+                          default (full).
+
 * Split into two packages like qtX-{libs|tools} ?
