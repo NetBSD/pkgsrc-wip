@@ -1,0 +1,12 @@
+Bump version to 4.9.6
+NSPR 4.9.6 has the following bug fixes:
+* Bug 782214: Auto detect Android API version for x86. Fixed by Makoto
+  Kato.
+* Bug 807883: Add the PL_SizeOfArenaPoolExcludingPool function. Fixed by
+  Nicholas Nethercote.
+* Bug 812085: Initialize Windows CRITICAL_SECTIONs without debug info and
+  with nonzero spin count. Fixed by  Chris Peterson.
+* Bug 827271: Add support for Aarch64 (64-Bit ARM). Fixed by Al Stone and
+  Riku Voipio.
+* Bug 841651: PR_SetThreadPriority doesn't do anything when using Bionic.
+  Fixed by Gabriele Svelto.
