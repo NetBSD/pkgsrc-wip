@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/05/11 16:20:39 slitvinov Exp $
+
+SHA1 (atool-0.39.0.tar.gz) = 40865bdc533f95fcaffdf8002889eb2ac67224a9
+RMD160 (atool-0.39.0.tar.gz) = ca067ba295ff2ad11dc1c9147a13f8a1becaf078
+Size (atool-0.39.0.tar.gz) = 119307 bytes
