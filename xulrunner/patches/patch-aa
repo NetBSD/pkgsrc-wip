@@ -1,27 +1,18 @@
-$NetBSD: patch-aa,v 1.13 2010/12/22 21:09:40 tnn2 Exp $
+$NetBSD: patch-aa,v 1.14 2013/05/11 05:39:52 makoto Exp $
 
---- configure.in.orig	2010-12-15 01:02:33.000000000 +0000
+--- configure.in.orig	2013-03-26 22:17:37.000000000 +0000
 +++ configure.in
-@@ -2076,7 +2076,7 @@ case "$target" in
-     MOZ_FIX_LINK_PATHS='-Wl,-executable_path,$(LIBXUL_DIST)/bin'
-     ;;
- 
--*-freebsd*)
-+*-freebsd* | *-dragonfly*)
-     if test `test -x /usr/bin/objformat && /usr/bin/objformat || echo elf` != "elf"; then
- 	DLL_SUFFIX=".so.1.0"
- 	DSO_LDOPTS="-shared"
-@@ -2084,6 +2084,9 @@ case "$target" in
-     if test ! "$GNU_CC"; then
- 	DSO_LDOPTS="-Bshareable $DSO_LDOPTS"
+@@ -2130,6 +2130,9 @@ ia64*-hpux*)
+     if test -z "$MC"; then
+         MC=mc.exe
      fi
 +    if test "$LIBRUNPATH"; then
-+       DSO_LDOPTS="-Wl,-R$LIBRUNPATH $DSO_LDOPTS"
++	DSO_LDOPTS="-Wl,-R$LIBRUNPATH $DSO_LDOPTS"
 +    fi
-     ;; 
- 
- ia64*-hpux*)
-@@ -3380,6 +3383,9 @@ dnl ====================================
+     ;;
+ *-mingw*)
+     DSO_CFLAGS=
+@@ -3071,6 +3074,9 @@ dnl ====================================
  case $target in
  *-hpux11.*)
  	;;
@@ -31,7 +22,17 @@ $NetBSD: patch-aa,v 1.13 2010/12/22 21:09:40 tnn2 Exp $
  *)
  	AC_CHECK_LIB(c_r, gethostbyname_r)
  	;;
-@@ -4727,6 +4733,14 @@ if test -n "$YASM"; then
+@@ -3372,6 +3378,9 @@ AC_CACHE_CHECK(
+         #ifdef linux
+         #define _BSD_SOURCE 1
+         #endif
++	#ifdef __NetBSD__
++	#error use of global _res variable in threaded programs is not portable
++	#endif
+         #include <resolv.h>
+         ],
+         [int foo = res_ninit(&_res);],
+@@ -4042,6 +4051,14 @@ if test -n "$YASM"; then
    _YASM_BUILD=`        echo ${YASM_VERSION} | $AWK -F\. '{ print $4 }'`
  fi
  
@@ -46,22 +47,23 @@ $NetBSD: patch-aa,v 1.13 2010/12/22 21:09:40 tnn2 Exp $
  if test -z "$SKIP_LIBRARY_CHECKS"; then
  dnl system JPEG support
  dnl ========================================================
-@@ -9383,7 +9397,8 @@ rm -f confdefs.h.save
- mv confdefs.h confdefs.h.save
- egrep -v "$_EGREP_PATTERN" confdefs.h.save > confdefs.h
- AC_OUTPUT_MAKE_DEFS()
--MOZ_DEFINES=$DEFS
-+# nbsed broken. PR bin/42261
-+MOZ_DEFINES="$DEFS`awk 'BEGIN {while(x<1000){printf " ";x++}}'`"
- AC_SUBST(MOZ_DEFINES)
- rm -f confdefs.h
- mv confdefs.h.save confdefs.h
-@@ -9493,6 +9508,8 @@ if test -z "$MOZ_NATIVE_NSPR"; then
-     AC_MSG_WARN([Recreating autoconf.mk with updated nspr-config output])
-     if test "$OS_ARCH" != "WINNT" -a "$OS_ARCH" != "WINCE"; then
-        NSPR_LIBS=`./nsprpub/config/nspr-config --prefix=$LIBXUL_DIST --exec-prefix=$MOZ_BUILD_ROOT/dist --libdir=$LIBXUL_DIST/lib --libs`
-+       AC_MSG_WARN([pkgsrc: adding run path to NSPR_LIBS for bundled NSPR.])
-+       NSPR_LIBS="-Wl,-R${prefix}/lib/\${MOZILLA_PKG_NAME} ${NSPR_LIBS}"
-        $PERL -pi.bak -e "s '^NSPR_LIBS\\s*=.*'NSPR_LIBS = $NSPR_LIBS'" config/autoconf.mk
-        NSPR_CFLAGS=`./nsprpub/config/nspr-config --prefix=$LIBXUL_DIST --exec-prefix=$MOZ_BUILD_ROOT/dist --includedir=$LIBXUL_DIST/include/nspr --cflags`
-        $PERL -pi.bak -e "s '^NSPR_CFLAGS\\s*=.*'NSPR_CFLAGS = $NSPR_CFLAGS'" config/autoconf.mk
+@@ -5326,8 +5343,8 @@ AC_SUBST(MOZ_WEBRTC_IN_LIBXUL)
+ AC_SUBST(MOZ_SCTP)
+ AC_SUBST(MOZ_SRTP)
+ 
+-case "$target_cpu" in
+-arm*)
++case "$target" in
++arm-*-linux*|*-dragonfly*|*-freebsd*|*-netbsd*|*-openbsd*)
+     MOZ_SAMPLE_TYPE_S16=1
+     AC_DEFINE(MOZ_SAMPLE_TYPE_S16)
+     AC_SUBST(MOZ_SAMPLE_TYPE_S16)
+@@ -5731,7 +5748,7 @@ MOZ_ALSA=)
+ 
+ if test -n "$MOZ_ALSA"; then
+     AC_DEFINE(MOZ_CUBEB)
+-    PKG_CHECK_MODULES(MOZ_ALSA, alsa, ,
++    PKG_CHECK_MODULES(MOZ_ALSA, alsa, MOZ_ALSA=1,
+          [echo "$MOZ_ALSA_PKG_ERRORS"
+           AC_MSG_ERROR([Need alsa for Ogg, Wave or WebM decoding on Linux.  Disable with --disable-ogg --disable-wave --disable-webm.  (On Ubuntu, you might try installing the package libasound2-dev.)])])
+ fi

@@ -1,13 +1,13 @@
-$NetBSD: patch-ak,v 1.6 2010/04/21 12:51:26 tnn2 Exp $
+$NetBSD: patch-ak,v 1.7 2013/05/11 05:39:52 makoto Exp $
 
---- js/src/ctypes/libffi/configure.orig	2010-03-16 01:02:50.000000000 +0000
+--- js/src/ctypes/libffi/configure.orig	2013-01-04 23:44:34.000000000 +0000
 +++ js/src/ctypes/libffi/configure
-@@ -12232,7 +12232,7 @@ case "$host" in
+@@ -11278,7 +11278,7 @@ case "$host" in
    powerpc-*-aix* | rs6000-*-aix*)
  	TARGET=POWERPC_AIX; TARGETDIR=powerpc
  	;;
--  powerpc-*-freebsd*)
-+  powerpc-*-freebsd* | powerpc-*-netbsd*)
+-  powerpc-*-freebsd* | powerpc-*-openbsd*)
++  powerpc-*-freebsd* | powerpc-*-openbsd* | powerpc-*-netbsd*)
  	TARGET=POWERPC_FREEBSD; TARGETDIR=powerpc
  	;;
    powerpc*-*-rtems*)

@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.5 2010/03/16 20:12:06 tnn2 Exp $
+$NetBSD: patch-ag,v 1.6 2013/05/11 05:39:52 makoto Exp $
 
---- nsprpub/pr/include/md/_freebsd.h.orig	2010-03-16 01:02:50.000000000 +0000
+--- nsprpub/pr/include/md/_freebsd.h.orig	2013-01-04 23:44:43.000000000 +0000
 +++ nsprpub/pr/include/md/_freebsd.h
-@@ -79,7 +79,7 @@
+@@ -47,7 +47,7 @@
  #define _PR_HAVE_LARGE_OFF_T
  
  #if defined(_PR_PTHREADS)
@@ -11,7 +11,7 @@ $NetBSD: patch-ag,v 1.5 2010/03/16 20:12:06 tnn2 Exp $
  /*
   * libc_r before this version of FreeBSD doesn't have poll().
   * Although libc has poll(), it is not thread-safe so we can't
-@@ -88,7 +88,7 @@
+@@ -56,7 +56,7 @@
  #define _PR_POLL_AVAILABLE
  #endif
  #else
@@ -20,7 +20,7 @@ $NetBSD: patch-ag,v 1.5 2010/03/16 20:12:06 tnn2 Exp $
  #define _PR_POLL_AVAILABLE
  #define _PR_USE_POLL
  #endif
-@@ -97,7 +97,7 @@
+@@ -65,7 +65,7 @@
  #define _PR_HAVE_SYSV_SEMAPHORES
  #define PR_HAVE_SYSV_NAMED_SHARED_MEMORY
  

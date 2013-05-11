@@ -1,11 +1,11 @@
-$NetBSD: patch-toolkit_toolkit-tiers.mk,v 1.1 2011/07/08 11:00:55 tnn2 Exp $
+$NetBSD: patch-toolkit_toolkit-tiers.mk,v 1.2 2013/05/11 05:39:53 makoto Exp $
 
---- toolkit/toolkit-tiers.mk.orig	2011-06-15 21:57:56.000000000 +0000
+--- toolkit/toolkit-tiers.mk.orig	2013-01-04 23:44:46.000000000 +0000
 +++ toolkit/toolkit-tiers.mk
-@@ -90,7 +90,7 @@ ifndef MOZ_NATIVE_BZ2
+@@ -43,7 +43,7 @@ ifdef MOZ_UPDATER
+ ifndef MOZ_NATIVE_BZ2
  tier_platform_dirs += modules/libbz2
  endif
- tier_platform_dirs += modules/libmar
 -tier_platform_dirs += other-licenses/bsdiff
 +#tier_platform_dirs += other-licenses/bsdiff
  endif
