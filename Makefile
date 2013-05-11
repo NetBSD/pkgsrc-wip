@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5220 2013/05/10 20:21:00 shattered Exp $
+# $Id: Makefile,v 1.5221 2013/05/11 14:43:29 makoto Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1768,6 +1768,7 @@ SUBDIR+=	notmuch
 SUBDIR+=	nsc2ke
 SUBDIR+=	nsd4-svn
 SUBDIR+=	nsp
+SUBDIR+=	nspr
 SUBDIR+=	nss-pam-ldapd
 SUBDIR+=	nullpop
 SUBDIR+=	nuppelvideo
