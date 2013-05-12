@@ -1,6 +1,7 @@
 -  patches/patch-python_psutil_setup.py
    is not reviewed at all.
-   Without that patch, we had following lines
+
+(Without that patch, we had following lines)
 ==========
 New python executable in /export/CHROOT/usr/pkgsrc/wip/xulrunner/work/mozilla-release/_virtualenv/bin/python2.7
 Also creating executable in /export/CHROOT/usr/pkgsrc/wip/xulrunner/work/mozilla-release/_virtualenv/bin/python
@@ -10,8 +11,23 @@ platform netbsd6 is not supported
 
 Error processing command. Ignoring because optional. (optional:setup.py:python/psutil:build_ext:--inplace)
 checking Python environment is Mozilla virtualenv... yes
+
+(With that patch, getting following error).
 ==========
-P
+/usr/include -I/usr/pkg/include -I/usr/pkg/include/nspr -I/usr/pkg/include/freetype2 -I/usr/pkg/lib/xulrunner/include -I/usr/pkg/include/xulrunner -fPIC -I/usr/pkg/include/python2.7 -c psutil/_psutil_bsd.c -o build/temp.netbsd-6.1_RC2-amd64-2.7/psutil/_psutil_bsd.o
+In file included from psutil/_psutil_bsd.c:39:0:
+/usr/include/netinet/tcp_var.h:169:2: error: expected specifier-qualifier-list before 'tcp_seq'
+/usr/include/netinet/tcp_var.h:175:2: error: expected specifier-qualifier-list before 'tcp_seq'
+/usr/include/netinet/tcp_var.h:187:18: error: field 'segq' has incomplete type
+/usr/include/netinet/tcp_var.h:189:20: error: 'TCPT_NTIMERS' undeclared here (not in a function)
+/usr/include/netinet/tcp_var.h:235:2: error: expected specifier-qualifier-list before 'tcp_seq'
+/usr/include/netinet/tcp_var.h:509:2: error: expected specifier-qualifier-list before 'tcp_seq'
+psutil/_psutil_bsd.c:48:48: fatal error: devstat.h: No such file or directory
+compilation terminated.
+error: command 'gcc' failed with exit status 1
+
+Error processing command. Ignoring because optional. (optional:setup.py:python/psutil:build_ext:--inplace)
+==========
 
 - nspr >= 4.9.6 [wip]
 
