@@ -1,0 +1,20 @@
+- not working yet.
+- Probably because the patch 
+  wip/xulrunner/patches/patch-python_psutil_setup.py
+  is not reviewed, we have following line.
+========================
+creating build/temp.netbsd-6.1_RC2-amd64-2.7/psutil/arch/bsd
+gcc -pthread -fno-strict-aliasing -O2 -DHAVE_DB_185_H -I/usr/include -I/usr/pkg/include -DNDEBUG -O2 -DHAVE_DB_185_H -I/usr/include -I/usr/pkg/include -I/usr/include -I/usr/pkg/
+include -I/usr/pkg/include/nspr -I/usr/pkg/include/freetype2 -I/usr/pkg/lib/xulrunner/include -I/usr/pkg/include/xulrunner -fPIC -I/usr/pkg/include/python2.7 -c psutil/_psutil_b
+sd.c -o build/temp.netbsd-6.1_RC2-amd64-2.7/psutil/_psutil_bsd.o
+In file included from psutil/_psutil_bsd.c:39:0:
+/usr/include/netinet/tcp_var.h:169:2: error: expected specifier-qualifier-list before 'tcp_seq'
+/usr/include/netinet/tcp_var.h:175:2: error: expected specifier-qualifier-list before 'tcp_seq'
+/usr/include/netinet/tcp_var.h:187:18: error: field 'segq' has incomplete type
+/usr/include/netinet/tcp_var.h:189:20: error: 'TCPT_NTIMERS' undeclared here (not in a function)
+/usr/include/netinet/tcp_var.h:235:2: error: expected specifier-qualifier-list before 'tcp_seq'
+/usr/include/netinet/tcp_var.h:509:2: error: expected specifier-qualifier-list before 'tcp_seq'
+psutil/_psutil_bsd.c:48:48: fatal error: devstat.h: No such file or directory
+compilation terminated.
+error: command 'gcc' failed with exit status 1
+========================
