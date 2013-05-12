@@ -1,7 +1,7 @@
-$NetBSD: patch-af,v 1.4 2009/12/02 15:03:01 tnn2 Exp $
+$NetBSD: patch-af,v 1.5 2013/05/12 01:49:16 makoto Exp $
 
 --- config/mkdepend/imakemdep.h.orig	2009-06-29 18:14:41.000000000 +0200
-+++ config/mkdepend/imakemdep.h
++++ security/coreconf/mkdepend/imakemdep.h
 @@ -235,7 +235,7 @@ in this Software without prior written a
  #ifdef _CRAY
  #define DEFAULT_CPP "/lib/pcpp"

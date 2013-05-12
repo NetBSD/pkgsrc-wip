@@ -1,20 +1,20 @@
-$NetBSD: patch-mf,v 1.6 2010/03/15 17:25:35 tnn2 Exp $
+$NetBSD: patch-mf,v 1.7 2013/05/12 01:49:16 makoto Exp $
 
 Add DragonFly support.
 Make sure nss libraries have a run path defined.
 
---- security/coreconf/config.mk.orig	2010-03-15 14:56:04.000000000 +0000
-+++ security/coreconf/config.mk
-@@ -63,7 +63,7 @@ endif
+--- security/coreconf/config.mk.orig	2013-05-07 18:01:43.000000000 +0900
++++ security/coreconf/config.mk	2013-05-11 22:30:42.000000000 +0900
+@@ -31,7 +31,7 @@
  #######################################################################
  
  TARGET_OSES = FreeBSD BSD_OS NetBSD OpenUNIX OS2 QNX Darwin BeOS OpenBSD \
--              AIX RISCOS WINNT WIN95 WINCE
-+              AIX RISCOS WINNT WIN95 WINCE DragonFly
+-              AIX RISCOS WINNT WIN95 Linux Android
++              AIX RISCOS WINNT WIN95 Linux Android DragonFly
  
  ifeq (,$(filter-out $(TARGET_OSES),$(OS_TARGET)))
  include $(CORE_DEPTH)/coreconf/$(OS_TARGET).mk
-@@ -207,3 +207,4 @@ endif
+@@ -175,3 +175,4 @@
  DEFINES += -DUSE_UTIL_DIRECTLY
  USE_UTIL_DIRECTLY = 1
  

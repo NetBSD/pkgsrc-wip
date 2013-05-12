@@ -1,8 +1,8 @@
-$NetBSD: patch-ay,v 1.1.1.1 2009/12/02 14:36:40 tnn2 Exp $
+$NetBSD: patch-ay,v 1.2 2013/05/12 01:49:16 makoto Exp $
 
---- browser/app/nsBrowserApp.cpp.orig	2009-06-29 18:14:40.000000000 +0200
-+++ browser/app/nsBrowserApp.cpp
-@@ -44,6 +44,27 @@
+--- browser/app/nsBrowserApp.cpp.orig	2013-05-07 18:01:17.000000000 +0900
++++ browser/app/nsBrowserApp.cpp	2013-05-11 22:12:44.000000000 +0900
+@@ -22,6 +22,28 @@
  
  #include <stdio.h>
  #include <stdarg.h>
@@ -11,30 +11,31 @@ $NetBSD: patch-ay,v 1.1.1.1 2009/12/02 14:36:40 tnn2 Exp $
 + * On netbsd-4, ulimit -n is 64 by default; too few for us.
 + */
 +static void netbsd_fixrlimit(void) {
-+	struct rlimit rlp;
-+	if (getrlimit(RLIMIT_NOFILE, &rlp) == -1) {
-+		fprintf(stderr, "warning: getrlimit failed\n");
-+		return;
-+	}
-+	if (rlp.rlim_cur >= 512)
-+		return;
-+	if (rlp.rlim_max < 512) {
-+		fprintf(stderr, "warning: hard limit of 'ulimit -n' too low\n");
-+		rlp.rlim_cur = rlp.rlim_max;
-+	}
-+	else
-+		rlp.rlim_cur = 512;
-+	if (setrlimit(RLIMIT_NOFILE, &rlp) == -1)
-+		fprintf(stderr, "warning: setrlimit failed\n");
++       struct rlimit rlp;
++       if (getrlimit(RLIMIT_NOFILE, &rlp) == -1) {
++               fprintf(stderr, "warning: getrlimit failed\n");
++               return;
++       }
++       if (rlp.rlim_cur >= 512)
++               return;
++       if (rlp.rlim_max < 512) {
++               fprintf(stderr, "warning: hard limit of 'ulimit -n' too low\n");
++               rlp.rlim_cur = rlp.rlim_max;
++       }
++       else
++               rlp.rlim_cur = 512;
++       if (setrlimit(RLIMIT_NOFILE, &rlp) == -1)
++               fprintf(stderr, "warning: setrlimit failed\n");
 +}
++
+ #include <time.h>
  
- #include "plstr.h"
- #include "prprf.h"
-@@ -106,6 +127,7 @@ public:
+ #include "nsCOMPtr.h"
+@@ -124,6 +146,7 @@ static const nsDynamicFunctionLoad kXULF
  
- int main(int argc, char* argv[])
+ static int do_main(int argc, char* argv[], nsIFile *xreDirectory)
  {
 +  netbsd_fixrlimit();
-   ScopedLogging log;
- 
-   nsCOMPtr<nsILocalFile> appini;
+   nsCOMPtr<nsIFile> appini;
+   nsresult rv;
+   uint32_t mainFlags = 0;
