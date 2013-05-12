@@ -1,4 +1,12 @@
-$NetBSD: patch-al,v 1.8 2013/05/11 05:39:52 makoto Exp $
+$NetBSD: patch-al,v 1.9 2013/05/12 14:41:14 makoto Exp $
+
+Thu Sep  9 09:03:30 UTC 2010
+The configure script requests sqlite3 compiled with SECURE_DELETE enabled
+by default. Enabling it be default would mean a performance penalty for
+other applications.
+
+Instead override the configure script and in patch-al do
+"PRAGMA secure_delete = 1;" when opening the sqlite session.
 
 --- storage/src/mozStorageConnection.cpp.orig	2013-01-04 23:44:44.000000000 +0000
 +++ storage/src/mozStorageConnection.cpp
