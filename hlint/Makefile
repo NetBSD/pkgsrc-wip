@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2013/04/21 21:02:50 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.10 2013/05/12 23:58:21 szptvlfn Exp $
 #
 
-DISTNAME=	hlint-1.8.44
+DISTNAME=	hlint-1.8.45
 PKGNAME=	${DISTNAME}
 CATEGORIES=	devel
 
