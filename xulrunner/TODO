@@ -1,5 +1,6 @@
-- getting following lines at configure
-
+-  patches/patch-python_psutil_setup.py
+   is not reviewed at all.
+   Without that patch, we had following lines
 ==========
 New python executable in /export/CHROOT/usr/pkgsrc/wip/xulrunner/work/mozilla-release/_virtualenv/bin/python2.7
 Also creating executable in /export/CHROOT/usr/pkgsrc/wip/xulrunner/work/mozilla-release/_virtualenv/bin/python
@@ -10,10 +11,7 @@ platform netbsd6 is not supported
 Error processing command. Ignoring because optional. (optional:setup.py:python/psutil:build_ext:--inplace)
 checking Python environment is Mozilla virtualenv... yes
 ==========
-
-This may come from the file:
-./work/mozilla-release/python/psutil/setup.py:    sys.exit('platform %s is not supported' % sys.platform)
-
+P
 
 - nspr >= 4.9.6 [wip]
 
