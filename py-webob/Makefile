@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/10/16 12:39:45 jihbed Exp $
+# $NetBSD: Makefile,v 1.6 2013/05/12 20:35:07 cheusov Exp $
 #
 
 DISTNAME=	WebOb-1.2b3
@@ -15,7 +15,6 @@ LICENSE=	mit
 DEPENDS+=		${PYPKGPREFIX}-simplejson>=2.0.9:../../converters/py-simplejson
 
 USE_LANGUAGES=	# none
-
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
