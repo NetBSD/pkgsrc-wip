@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/05/12 01:12:32 othyro Exp $
+
+SHA1 (qt-gstreamer-0.10.2.tar.gz) = 27603c5172894cfade224943fa7acd83953e8416
+RMD160 (qt-gstreamer-0.10.2.tar.gz) = 27377d3715567f6b9ec60e2e411ba091440f8b7b
+Size (qt-gstreamer-0.10.2.tar.gz) = 218065 bytes

@@ -1,0 +1,16 @@
+QtGStreamer is a set of libraries and plugins providing C++ bindings for
+GStreamer with a Qt-style API plus some helper classes for integrating GStreamer
+better in Qt applications.
+
+Currently, it consists of the following parts:
+
+* QtGLib - Library providing C++/Qt bindings for parts of the GLib and GObject
+  APIs, a base on which QtGStreamer is built.
+* QtGStreamer - Library providing C++/Qt bindings for GStreamer
+* QtGStreamerUi - Library providing integration with QtGui.
+* QtGStreamerUtils - Library providing some high level utility classes.
+
+In addition, it provides GStreamer elements for drawing video on widgets,
+graphics items and QML items.
+
+This is the Qt4 version of qt-gstreamer.
