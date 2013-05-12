@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2013/05/12 20:35:07 cheusov Exp $
+# $NetBSD: Makefile,v 1.7 2013/05/12 20:36:25 cheusov Exp $
 #
 
 DISTNAME=	WebOb-1.2b3
 PKGNAME=	${PYPKGPREFIX}-webob-1.2b3
-CATEGORIES=	 www python
+CATEGORIES=	www python
 MASTER_SITES=	http://pypi.python.org/packages/source/W/WebOb/
 EXTRACT_SUFX=	.zip
 
