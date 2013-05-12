@@ -1,7 +1,7 @@
-A set ot tools for managing file archives of various types (tar,
+A set of tools for managing file archives of various types (tar,
 tar+gzip, zip etc).
 
-aunpack: extracts  files from an archive
+aunpack: extracts files from an archive
 apack: creates archives (or compresses files). If no file arguments are
 specified, filenames to add are read from standard in.
 als: lists files in an archive
