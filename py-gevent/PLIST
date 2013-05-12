@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2011/08/12 12:55:13 asau Exp $
+@comment $NetBSD: PLIST,v 1.4 2013/05/12 20:17:42 cheusov Exp $
 ${PYSITELIB}/gevent/__init__.py
 ${PYSITELIB}/gevent/__init__.pyc
 ${PYSITELIB}/gevent/__init__.pyo
@@ -78,3 +78,8 @@ ${PYSITELIB}/gevent/win32util.pyo
 ${PYSITELIB}/gevent/wsgi.py
 ${PYSITELIB}/gevent/wsgi.pyc
 ${PYSITELIB}/gevent/wsgi.pyo
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
