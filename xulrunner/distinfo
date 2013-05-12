@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.55 2013/05/12 01:49:16 makoto Exp $
+$NetBSD: distinfo,v 1.56 2013/05/12 13:55:15 makoto Exp $
 
 SHA1 (xulrunner-21.0.source.tar.bz2) = 430dfc7fa600c2013d0cda79361ff8d5cd221b94
 RMD160 (xulrunner-21.0.source.tar.bz2) = 3a35011b55bc5f66f01a869a4426a341d18e5301
@@ -10,7 +10,7 @@ SHA1 (patch-ae) = adbf406cf3158ff2ecb847673d9d91edb200f034
 SHA1 (patch-af) = fb71722cbe722e934cc5bd5e29c0e78427980378
 SHA1 (patch-ag) = 3e6f3e2e9d0c7c498fbc39eabae798d1a7f8fb12
 SHA1 (patch-aj) = 78803641532203f878fc99ead9a440b8bf425aeb
-SHA1 (patch-ak) = 971ddb1f12b14bcee604c9d7e72da5e7bf47d9be
+SHA1 (patch-ak) = 0e6c18129b5e1df25751cd5b642f244697c63f55
 SHA1 (patch-al) = 553c6042a98e4b381a46eec50c02cff349d88bd2
 SHA1 (patch-am) = c5aa36638b666d99d4510f345802de259579e884
 SHA1 (patch-an) = 4c8ca17d259f56863d6066f1e3de0d81fefdcd6c
@@ -19,7 +19,7 @@ SHA1 (patch-as) = 1cd7a9c7e1cf7603f2d72111f3abc9d3747a9c32
 SHA1 (patch-au) = d577fc9a0091915e36d67a6ad82f0e7bfc107e7b
 SHA1 (patch-av) = 20dcf216808667d71e527a6126b1a9b76130a13b
 SHA1 (patch-aw) = 237be5fa18846b51b67ef2c2ea5f4fb427c529aa
-SHA1 (patch-ax) = 7f17ec79f11dbc5a63541746b73813faf22b493f
+SHA1 (patch-ax) = dae5c1c1ebdecf056add2472d1471f3d8cea0ed7
 SHA1 (patch-ay) = 64e9f0db0bf358b8f80b979c108bf9435b1aa645
 SHA1 (patch-az) = 2012a7fef2eac59f48ff21fea0e205e89b313e46
 SHA1 (patch-ba) = 1692053c1b0e65dd38bcf37cc1a80390cce081eb

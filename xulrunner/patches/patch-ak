@@ -1,4 +1,7 @@
-$NetBSD: patch-ak,v 1.7 2013/05/11 05:39:52 makoto Exp $
+$NetBSD: patch-ak,v 1.8 2013/05/12 13:55:15 makoto Exp $
+
+Sun Feb 14 20:03:52 UTC 2010
+Fix NetBSD/macppc build failure reported by zafer
 
 --- js/src/ctypes/libffi/configure.orig	2013-01-04 23:44:34.000000000 +0000
 +++ js/src/ctypes/libffi/configure
