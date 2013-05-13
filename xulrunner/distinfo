@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.60 2013/05/13 01:52:40 makoto Exp $
+$NetBSD: distinfo,v 1.61 2013/05/13 14:18:44 makoto Exp $
 
-SHA1 (xulrunner-21.0.source.tar.bz2) = 430dfc7fa600c2013d0cda79361ff8d5cd221b94
-RMD160 (xulrunner-21.0.source.tar.bz2) = 3a35011b55bc5f66f01a869a4426a341d18e5301
-Size (xulrunner-21.0.source.tar.bz2) = 105268055 bytes
+SHA1 (xulrunner-21.0.source.tar.bz2) = c8d8f619eb2dc2f48f11207f1a75d1a513c4acbe
+RMD160 (xulrunner-21.0.source.tar.bz2) = 5dc0cbcaf6ac879bc0ce4a4610cba9007d8a6da3
+Size (xulrunner-21.0.source.tar.bz2) = 105375567 bytes
 SHA1 (patch-aa) = 41c49c9f8c6447bd42477869005827729bf9a8c9
 SHA1 (patch-ab) = b60129618bb0945b65636f99980bdc026ec16fd9
 SHA1 (patch-ac) = 609a094d01878da0bdfb008a0cb30b96bdb4c6ce
