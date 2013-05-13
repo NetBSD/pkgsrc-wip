@@ -1,4 +1,4 @@
-$NetBSD: patch-xj,v 1.5 2013/05/11 05:39:53 makoto Exp $
+$NetBSD: patch-xj,v 1.6 2013/05/13 01:09:45 makoto Exp $
 
 NetBSD ppc xptcall support code. Originally from pkgsrc/www/mozilla.
 
@@ -12,14 +12,6 @@ NetBSD ppc xptcall support code. Originally from pkgsrc/www/mozilla.
  
  // The Linux/PPC ABI (aka PPC/SYSV ABI) passes the first 8 integral
  // parameters and the first 8 floating point parameters in registers
-@@ -36,7 +37,6 @@ PrepareAndDispatch(nsXPTCStubBase* self,
- {
-     nsXPTCMiniVariant paramBuffer[PARAM_BUFFER_COUNT];
-     nsXPTCMiniVariant* dispatchParams = NULL;
--    nsIInterfaceInfo* iface_info = NULL;
-     const nsXPTMethodInfo* info;
-     uint32_t paramCount;
-     uint32_t i;
 @@ -44,11 +44,7 @@ PrepareAndDispatch(nsXPTCStubBase* self,
  
      NS_ASSERTION(self,"no self");
