@@ -1,10 +1,10 @@
-$NetBSD: patch-js_src_vm_SPSProfiler_cpp,v 1.1 2013/05/13 01:09:45 makoto Exp $
+$NetBSD: patch-js_src_vm_SPSProfiler_cpp,v 1.2 2013/05/13 01:52:40 makoto Exp $
 
 For powerpc build,
 https://bug846986.bugzilla.mozilla.org/attachment.cgi?id=741092
 
 --- work/mozilla-release/js/src/vm/SPSProfiler.cpp.orig	2013-05-13 09:11:46.000000000 +0900
-+++ work/mozilla-release/js/src/vm/SPSProfiler.cpp	2013-05-13 09:11:53.000000000 +0900
++++ ./js/src/vm/SPSProfiler.cpp	2013-05-13 09:11:53.000000000 +0900
 @@ -16,6 +16,8 @@
  #include "vm/SPSProfiler.h"
  #include "vm/StringBuffer.h"
