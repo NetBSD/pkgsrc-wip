@@ -99,7 +99,7 @@ Suggested package updates
 	o py-zeitgeist-0.9
 	o pylint-0.26.0
 	o rdup-1.1.13
-	o recoll-1.18.1
+	o recoll-1.19.2
 	o retroarch-0.9.8
 	o rosegarden-current-1.4.0
 	o rsyslog6-6.3.6
@@ -108,7 +108,7 @@ Suggested package updates
 	o scantailor-0.9.11.1
 	o sflphoned-0.7.2
 	o showfont-1.0.4
-	o siege-3.0.0
+	o siege-3.0.1
 	o sleuthkit-3.2.3
 	o smc-1.9
 	o swift-2.0
