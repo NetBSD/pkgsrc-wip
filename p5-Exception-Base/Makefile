@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.3 2012/10/04 10:45:27 asau Exp $
+# $NetBSD: Makefile,v 1.4 2013/05/15 06:01:24 jgoamakf Exp $
 
-PKGVERSION=	0.13
-DISTNAME=	Exception-Base-${PKGVERSION}
-PKGNAME=	p5-Exception-Base-${PKGVERSION}
+DISTNAME=	Exception-Base-0.2401
+PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/D/DE/DEXTER/}
 
 MAINTAINER=	ggm@apnic.net
-HOMEPAGE=	http://search.cpan.org/src/DEXTER/Exception-Base-0.13
+HOMEPAGE=	http://search.cpan.org/dist/Exception-Base/
 COMMENT=	Exception::Base
+LICENSE=	${PERL5_LICENSE}
 
-PKG_DESTDIR_SUPPORT=	none
+BUILD_DEPENDS+=	p5-Test-Unit-Lite>=0.12:../../wip/p5-Test-Unit-Lite
 
 PERL5_PACKLIST=	auto/Exception/Base/.packlist
 
