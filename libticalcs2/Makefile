@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/12/30 01:56:46 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2013/05/16 11:10:49 othyro Exp $
 #
 
 DISTNAME=	libticalcs2-1.1.7
@@ -20,9 +20,9 @@ PKGCONFIG_OVERRIDE+=	ticalcs2.pc.in
 
 .include "options.mk"
 
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../wip/libtifiles2/buildlink3.mk"
 .include "../../wip/libticonv/buildlink3.mk"
 .include "../../wip/libticables2/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
