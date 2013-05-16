@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/12/30 01:46:38 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2013/05/16 10:56:24 othyro Exp $
 #
 
 DISTNAME=	libtifiles2-1.1.5
@@ -20,6 +20,7 @@ PKGCONFIG_OVERRIDE+=	tifiles2.pc.in
 
 .include "options.mk"
 
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../wip/libticonv/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
