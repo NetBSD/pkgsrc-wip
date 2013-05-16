@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/05/09 12:33:52 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2013/05/16 09:25:39 fhajny Exp $
 #
 
 DISTNAME=	mysql-proxy-0.8.3
@@ -18,7 +18,7 @@ MYSQL_VERSIONS_ACCEPTED=	56 55 51 50
 GNU_CONFIGURE=	yes
 USE_CMAKE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=	flex pkg-config
 
 PKGCONFIG_OVERRIDE+=	mysql-chassis.pc.in
 PKGCONFIG_OVERRIDE+=	mysql-proxy.pc.in
