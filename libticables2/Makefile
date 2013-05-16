@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/12/30 01:21:51 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2013/05/16 10:31:51 othyro Exp $
 #
 
 DISTNAME=	libticables2-1.3.3
@@ -20,9 +20,7 @@ PKGCONFIG_OVERRIDE+=	ticables2.pc.in
 
 .include "options.mk"
 
-BUILDLINK_ABI_DEPENDS.libusb+=	libusb>=0.1.12
-.include "../../devel/libusb/buildlink3.mk"
-.include "../../devel/libusb1/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
