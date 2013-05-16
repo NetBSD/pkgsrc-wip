@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2013/05/16 10:31:51 othyro Exp $
+# $NetBSD: options.mk,v 1.3 2013/05/16 10:47:34 othyro Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.libticables2
 PKG_SUPPORTED_OPTIONS=	libusb libusb1 nls
@@ -18,7 +18,6 @@ CONFIGURE_ARGS+=	--enable-libusb10
 .endif
 
 .if !empty(PKG_OPTIONS:Mnls)
-.include "../../devel/gettext-lib/buildlink3.mk"
 PLIST.nls=		yes
 .else
 CONFIGURE_ARGS+=	--disable-nls
