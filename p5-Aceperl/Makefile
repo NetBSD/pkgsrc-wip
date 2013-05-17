@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2012/10/04 09:13:19 asau Exp $
+# $NetBSD: Makefile,v 1.5 2013/05/17 18:06:16 shattered Exp $
 #
 
-DISTNAME=		AcePerl-1.86
+DISTNAME=		AcePerl-1.92
 PKGNAME=		p5-${DISTNAME}
 CATEGORIES=		databases
 MASTER_SITES=		http://www.cpan.org/authors/id/L/LD/LDS/
