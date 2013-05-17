@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2012/10/04 19:11:57 asau Exp $
+# $NetBSD: Makefile,v 1.14 2013/05/17 18:00:08 shattered Exp $
 
-DISTNAME=	Plucene-1.24
+DISTNAME=	Plucene-1.25
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Plucene/}

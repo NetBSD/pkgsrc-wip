@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2005/09/02 19:37:07 kuli0020 Exp $
+$NetBSD: distinfo,v 1.3 2013/05/17 18:00:08 shattered Exp $
 
-SHA1 (Plucene-1.24.tar.gz) = 78e4fecc1d83a85bb955b5cef0d2bf42303074fb
-RMD160 (Plucene-1.24.tar.gz) = f56b733ec4a4c101fab53a8e5e95a6c8dee263f4
-Size (Plucene-1.24.tar.gz) = 335765 bytes
+SHA1 (Plucene-1.25.tar.gz) = 55d243186928ced8c8b85453ed7e7c9877126518
+RMD160 (Plucene-1.25.tar.gz) = 10fe594f26e3db4c35868f8e36fa31bde4684e1b
+Size (Plucene-1.25.tar.gz) = 335300 bytes
