@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/12/30 03:29:10 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2013/05/17 11:58:17 othyro Exp $
 #
 
 DISTNAME=	gfm-1.06
@@ -22,9 +22,9 @@ USE_TOOLS+=		gmake intltool msgfmt msgmerge pkg-config xgettext
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../devel/libglade/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
-BUILD_DEPENDS+=	glib2-[0-9]*:../../devel/glib2
+BUILDLINK_DEPMETHOD.glib2=	build
+.include "../../devel/glib2/buildlink3.mk"
 .include "../../wip/libticalcs2/buildlink3.mk"
 .include "../../wip/libtifiles2/buildlink3.mk"
 .include "../../wip/libticonv/buildlink3.mk"
-.include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
