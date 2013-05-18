@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2013/05/18 15:50:48 othyro Exp $
+bin/xcmsdb
+man/man1/xcmsdb.1
