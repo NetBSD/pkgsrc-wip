@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5228 2013/05/18 14:46:52 othyro Exp $
+# $Id: Makefile,v 1.5229 2013/05/18 15:09:49 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1313,6 +1313,7 @@ SUBDIR+=	last.fm
 SUBDIR+=	lastfm-sharp
 SUBDIR+=	lat
 SUBDIR+=	lbt
+SUBDIR+=	lbxproxy
 SUBDIR+=	lcalc
 SUBDIR+=	lcdproc
 SUBDIR+=	lcrack
