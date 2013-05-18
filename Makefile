@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5227 2013/05/18 13:41:19 othyro Exp $
+# $Id: Makefile,v 1.5228 2013/05/18 14:46:52 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1402,6 +1402,7 @@ SUBDIR+=	libisofs
 SUBDIR+=	libitl
 SUBDIR+=	libjdksmidi
 SUBDIR+=	libjingle
+SUBDIR+=	liblbxutil
 SUBDIR+=	liblingoteach
 SUBDIR+=	liblo
 SUBDIR+=	liblognorm
