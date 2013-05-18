@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5232 2013/05/18 15:51:42 othyro Exp $
+# $Id: Makefile,v 1.5233 2013/05/18 21:36:50 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -653,6 +653,7 @@ SUBDIR+=	flvstreamer
 SUBDIR+=	flyback
 SUBDIR+=	fnord
 SUBDIR+=	fnteditfs
+SUBDIR+=	font-bitstream-speedo
 SUBDIR+=	fontedit
 SUBDIR+=	fonttosfnt
 SUBDIR+=	fortunes-it
