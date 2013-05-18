@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5230 2013/05/18 15:24:03 othyro Exp $
+# $Id: Makefile,v 1.5231 2013/05/18 15:35:42 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2849,6 +2849,7 @@ SUBDIR+=	rsget
 SUBDIR+=	rsound
 SUBDIR+=	rss-glib
 SUBDIR+=	rst-mode
+SUBDIR+=	rstart
 SUBDIR+=	rstudio
 SUBDIR+=	rsyslog5
 SUBDIR+=	rsyslog6
