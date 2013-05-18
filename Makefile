@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5226 2013/05/18 13:27:16 othyro Exp $
+# $Id: Makefile,v 1.5227 2013/05/18 13:41:19 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1782,6 +1782,7 @@ SUBDIR+=	objfw-git
 SUBDIR+=	obmenu
 SUBDIR+=	ocamlgraph
 SUBDIR+=	ocamlweb
+SUBDIR+=	oclock
 SUBDIR+=	octave
 SUBDIR+=	ode
 SUBDIR+=	ogmrip
