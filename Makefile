@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5235 2013/05/19 01:09:38 othyro Exp $
+# $Id: Makefile,v 1.5236 2013/05/19 01:29:11 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -3326,6 +3326,7 @@ SUBDIR+=	xdiskusage
 SUBDIR+=	xditview
 SUBDIR+=	xdotool
 SUBDIR+=	xebece
+SUBDIR+=	xedit
 SUBDIR+=	xerces-c-2.8.0
 SUBDIR+=	xesam-glib
 SUBDIR+=	xf86-input-synaptics
