@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5236 2013/05/19 01:29:11 othyro Exp $
+# $Id: Makefile,v 1.5237 2013/05/19 02:32:20 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -3333,6 +3333,7 @@ SUBDIR+=	xf86-input-synaptics
 SUBDIR+=	xf86-video-geode
 SUBDIR+=	xf86-video-nouveau
 SUBDIR+=	xf86-video-nv-current
+SUBDIR+=	xf86dga
 SUBDIR+=	xf86rushproto
 SUBDIR+=	xfce4-appfinder
 SUBDIR+=	xfce4-desktop
