@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2013/05/19 01:07:54 othyro Exp $
+bin/xditview
+include/X11/bitmaps/ldblarrow
+include/X11/bitmaps/rdblarrow
+lib/X11/app-defaults/Xditview
+lib/X11/app-defaults/Xditview-chrtr
+man/man1/xditview.1
