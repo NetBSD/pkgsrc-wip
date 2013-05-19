@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2012/10/03 18:15:32 asau Exp $
+# $NetBSD: Makefile,v 1.17 2013/05/19 19:51:59 airhead Exp $
 
-DISTNAME=	newsbeuter-2.4
+DISTNAME=	newsbeuter-2.6
 CATEGORIES=	news
 MASTER_SITES=	http://www.newsbeuter.org/downloads/
 
@@ -29,9 +29,13 @@ SUBST_SED.makefile=	-e 's/^ifneq.*//; s/^endif.*//'
 .endif
 
 .include "../../converters/libiconv/buildlink3.mk"
+.include "../../databases/sqlite3/buildlink3.mk"
+.if ${OPSYS}!="NetBSD"
+.include "../../devel/ncurses/buildlink3.mk"
+.endif
 .include "../../devel/ncursesw/buildlink3.mk"
+.include "../../textproc/json-c/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../wip/stfl/buildlink3.mk"
-.include "../../databases/sqlite3/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
