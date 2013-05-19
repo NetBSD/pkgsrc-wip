@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5233 2013/05/18 21:36:50 othyro Exp $
+# $Id: Makefile,v 1.5234 2013/05/19 00:06:14 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -3321,6 +3321,7 @@ SUBDIR+=	xchat2-tcl
 SUBDIR+=	xclipboard
 SUBDIR+=	xcmsdb
 SUBDIR+=	xcursor-themes
+SUBDIR+=	xdbedizzy
 SUBDIR+=	xdiskusage
 SUBDIR+=	xdotool
 SUBDIR+=	xebece
