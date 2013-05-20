@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5242 2013/05/19 12:57:27 othyro Exp $
+# $Id: Makefile,v 1.5243 2013/05/20 06:35:48 moubctez Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1755,7 +1755,6 @@ SUBDIR+=	ninka
 SUBDIR+=	nios2-binutils
 SUBDIR+=	nios2-gcc
 SUBDIR+=	njb-sharp
-SUBDIR+=	nmap
 SUBDIR+=	nmzmail
 SUBDIR+=	nnrpd
 SUBDIR+=	nodau
