@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5245 2013/05/20 23:35:52 othyro Exp $
+# $Id: Makefile,v 1.5246 2013/05/21 00:36:57 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -3414,6 +3414,7 @@ SUBDIR+=	xmonad-contrib
 SUBDIR+=	xmoto
 SUBDIR+=	xombrero
 SUBDIR+=	xoo
+SUBDIR+=	xphelloworld
 SUBDIR+=	xpde
 SUBDIR+=	xpdq
 SUBDIR+=	xpi-quick_locale_switcher
