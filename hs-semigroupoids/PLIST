@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/02/01 16:28:59 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/05/21 12:09:03 szptvlfn Exp $
 lib/semigroupoids-${PKGVERSION}/${HASKELL_VERSION}/Data/Functor/Alt.hi
 lib/semigroupoids-${PKGVERSION}/${HASKELL_VERSION}/Data/Functor/Alt.p_hi
 lib/semigroupoids-${PKGVERSION}/${HASKELL_VERSION}/Data/Functor/Apply.hi
@@ -7,6 +7,8 @@ lib/semigroupoids-${PKGVERSION}/${HASKELL_VERSION}/Data/Functor/Bind.hi
 lib/semigroupoids-${PKGVERSION}/${HASKELL_VERSION}/Data/Functor/Bind.p_hi
 lib/semigroupoids-${PKGVERSION}/${HASKELL_VERSION}/Data/Functor/Bind/Trans.hi
 lib/semigroupoids-${PKGVERSION}/${HASKELL_VERSION}/Data/Functor/Bind/Trans.p_hi
+lib/semigroupoids-${PKGVERSION}/${HASKELL_VERSION}/Data/Functor/Extend.hi
+lib/semigroupoids-${PKGVERSION}/${HASKELL_VERSION}/Data/Functor/Extend.p_hi
 lib/semigroupoids-${PKGVERSION}/${HASKELL_VERSION}/Data/Functor/Plus.hi
 lib/semigroupoids-${PKGVERSION}/${HASKELL_VERSION}/Data/Functor/Plus.p_hi
 lib/semigroupoids-${PKGVERSION}/${HASKELL_VERSION}/Data/Semigroup/Foldable.hi
