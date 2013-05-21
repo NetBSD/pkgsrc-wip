@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5250 2013/05/21 02:05:22 othyro Exp $
+# $Id: Makefile,v 1.5251 2013/05/21 02:37:40 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1331,6 +1331,7 @@ SUBDIR+=	lhapdf
 SUBDIR+=	lhs2tex
 SUBDIR+=	libGenome
 SUBDIR+=	libSoundTouch
+SUBDIR+=	libXaw3d
 SUBDIR+=	libXprintAppUtil
 SUBDIR+=	libalkimia
 SUBDIR+=	libanimal
