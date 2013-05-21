@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5249 2013/05/21 01:50:55 othyro Exp $
+# $Id: Makefile,v 1.5250 2013/05/21 02:05:22 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -3431,6 +3431,7 @@ SUBDIR+=	xstdcmap
 SUBDIR+=	xtags
 SUBDIR+=	xtrace
 SUBDIR+=	xtraceroute
+SUBDIR+=	xtrap
 SUBDIR+=	xtreemfs-client
 SUBDIR+=	xtreemfs-server
 SUBDIR+=	xtrlock
