@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5246 2013/05/21 00:36:57 othyro Exp $
+# $Id: Makefile,v 1.5247 2013/05/21 00:46:53 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -3420,6 +3420,7 @@ SUBDIR+=	xpdq
 SUBDIR+=	xpi-quick_locale_switcher
 SUBDIR+=	xpilot-ng
 SUBDIR+=	xplore
+SUBDIR+=	xpr
 SUBDIR+=	xrdp
 SUBDIR+=	xrootconsole
 SUBDIR+=	xspd
