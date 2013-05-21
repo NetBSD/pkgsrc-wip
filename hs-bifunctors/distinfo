@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/05/21 12:35:34 szptvlfn Exp $
+
+SHA1 (bifunctors-3.2.0.1.tar.gz) = b97f120779941f03faf24beb87cb97c12e7cade1
+RMD160 (bifunctors-3.2.0.1.tar.gz) = 0415a05a434f4ac5420505dd706f83c3aa83ad7f
+Size (bifunctors-3.2.0.1.tar.gz) = 7332 bytes
