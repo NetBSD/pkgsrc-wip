@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2013/05/21 00:45:46 othyro Exp $
+bin/xdpr
+bin/xpr
+man/man1/xdpr.1
+man/man1/xpr.1
