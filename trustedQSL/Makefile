@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2013/05/03 06:05:45 makoto Exp $
+# $NetBSD: Makefile,v 1.19 2013/05/21 01:54:25 makoto Exp $
 
 DISTNAME=		TrustedQSL-1_14
 DISTNAME=		tqsl-114
@@ -38,8 +38,8 @@ SUBST_SED.x11r7=	-e 's,:/usr/X11R7/lib,,'
 SUBST_CLASSES+=		workaround
 SUBST_STAGE.workaround= post-build
 SUBST_FILES.workaround=	apps/cmake_install.cmake
-SUBST_MESSAGE.workaround=	Truely experimental and interim fix for RPATH order
-SUBST_SED.workaround=	-e 's,${WRKSRC}/src:${PREFIX}/lib:,${PREFIX}/lib:${WRKSRC}/src,'
+SUBST_MESSAGE.workaround=	Removing the very last colon from OLD_RPATH in RPATH_CHANGE
+SUBST_SED.workaround=	-e '/OLD_RPATH/s,${WRKSRC}/src:,${WRKSRC}/src,'
 
 SUBST_CLASSES+=		rpath-link
 SUBST_STAGE.rpath-link= post-build
@@ -67,7 +67,6 @@ do-configure:
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../databases/db5/buildlink3.mk"
 .include "../../x11/wxGTK28/buildlink3.mk"
-.include "../../wip/tqsllib/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

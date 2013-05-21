@@ -8,5 +8,3 @@
    SUBST_CLASSES+=		x11r7
    SUBST_CLASSES+=		workaround
    SUBST_CLASSES+=		rpath-link
-- (20130521 mef) Getting following problem when Edit Location 
-   tqsl: Undefined PLT symbol "tqsl_setStationLocationCertFlags" (symnum = 183)
