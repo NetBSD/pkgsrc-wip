@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2013/05/22 19:12:43 szptvlfn Exp $
+lib/reflection-${PKGVERSION}/${HASKELL_VERSION}/Data/Reflection.hi
+lib/reflection-${PKGVERSION}/${HASKELL_VERSION}/Data/Reflection.p_hi
+lib/reflection-${PKGVERSION}/${HASKELL_VERSION}/HSreflection-${PKGVERSION}.o
+lib/reflection-${PKGVERSION}/${HASKELL_VERSION}/libHSreflection-${PKGVERSION}.a
+lib/reflection-${PKGVERSION}/${HASKELL_VERSION}/libHSreflection-${PKGVERSION}_p.a
+lib/reflection-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/reflection-${PKGVERSION}/LICENSE

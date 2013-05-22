@@ -1,0 +1,7 @@
+This package provides an implementation of the ideas presented in the paper
+"Functional Pearl: Implicit Configurations" by Oleg Kiselyov and
+Chung-chieh Shan. However, the API has been streamlined to improve
+performance.
+
+The original paper can be obtained from
+http://www.cs.rutgers.edu/~ccshan/prepose/prepose.pdf.
