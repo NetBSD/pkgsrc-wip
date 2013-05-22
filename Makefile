@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5254 2013/05/22 13:19:09 obache Exp $
+# $Id: Makefile,v 1.5255 2013/05/22 18:48:50 szptvlfn Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1068,6 +1068,7 @@ SUBDIR+=	hs-pointed
 SUBDIR+=	hs-pointedlist
 SUBDIR+=	hs-pointedlist03
 SUBDIR+=	hs-primitive
+SUBDIR+=	hs-profunctors
 SUBDIR+=	hs-punycode
 SUBDIR+=	hs-pureMD5
 SUBDIR+=	hs-quickcheck-instances
