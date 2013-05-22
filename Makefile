@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5255 2013/05/22 18:48:50 szptvlfn Exp $
+# $Id: Makefile,v 1.5256 2013/05/22 19:15:01 szptvlfn Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1074,6 +1074,7 @@ SUBDIR+=	hs-pureMD5
 SUBDIR+=	hs-quickcheck-instances
 SUBDIR+=	hs-random
 SUBDIR+=	hs-readline
+SUBDIR+=	hs-reflection
 SUBDIR+=	hs-regex-base
 SUBDIR+=	hs-regex-compat
 SUBDIR+=	hs-regex-posix
