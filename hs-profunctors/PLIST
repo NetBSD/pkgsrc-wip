@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2013/05/22 18:46:21 szptvlfn Exp $
+lib/profunctors-${PKGVERSION}/${HASKELL_VERSION}/Data/Profunctor.hi
+lib/profunctors-${PKGVERSION}/${HASKELL_VERSION}/Data/Profunctor.p_hi
+lib/profunctors-${PKGVERSION}/${HASKELL_VERSION}/Data/Profunctor/Unsafe.hi
+lib/profunctors-${PKGVERSION}/${HASKELL_VERSION}/Data/Profunctor/Unsafe.p_hi
+lib/profunctors-${PKGVERSION}/${HASKELL_VERSION}/HSprofunctors-${PKGVERSION}.o
+lib/profunctors-${PKGVERSION}/${HASKELL_VERSION}/libHSprofunctors-${PKGVERSION}.a
+lib/profunctors-${PKGVERSION}/${HASKELL_VERSION}/libHSprofunctors-${PKGVERSION}_p.a
+lib/profunctors-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/profunctors-${PKGVERSION}/LICENSE
