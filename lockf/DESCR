@@ -1,3 +1,0 @@
-Imported from FreeBSD:
-The lockf utility acquires an exclusive lock on a file, creating it if
-necessary, and removing the file on exit unless explicitly told not to.
