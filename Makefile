@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5258 2013/05/24 04:18:40 othyro Exp $
+# $Id: Makefile,v 1.5259 2013/05/24 11:56:17 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -346,6 +346,7 @@ SUBDIR+=	cops
 SUBDIR+=	copytape
 SUBDIR+=	couchdb-glib
 SUBDIR+=	courierpassd
+SUBDIR+=	cowpatty
 SUBDIR+=	coxeter
 SUBDIR+=	cpdup
 SUBDIR+=	cpm
