@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.2 2012/11/08 11:08:49 fhajny Exp $
+$NetBSD: distinfo,v 1.3 2013/05/24 09:26:35 fhajny Exp $
 
-SHA1 (zookeeper-3.4.4.tar.gz) = c4f6dc623a265f54a93ee3b1192860324270b054
-RMD160 (zookeeper-3.4.4.tar.gz) = 775365acd30af63483ac28026a5b0a9a25b24995
-Size (zookeeper-3.4.4.tar.gz) = 16347805 bytes
+SHA1 (zookeeper-3.4.5.tar.gz) = fd921575e02478909557034ea922de871926efc7
+RMD160 (zookeeper-3.4.5.tar.gz) = 3ee0066330eed4843f39d5244def5f9fef37df00
+Size (zookeeper-3.4.5.tar.gz) = 16402010 bytes
 SHA1 (patch-bin_zkEnv.sh) = 466e208d0e8f95c50c7db79a590b08a951a911f0
 SHA1 (patch-bin_zkServer.sh) = fc70c58523c59c8f2958cb114bf142410c711360
 SHA1 (patch-conf__zoo_sample.cfg) = 0437737ace30850eb41a51e26fa01227ef74db40
