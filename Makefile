@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5262 2013/05/24 22:18:28 szptvlfn Exp $
+# $Id: Makefile,v 1.5263 2013/05/25 09:49:00 shattered Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -350,6 +350,7 @@ SUBDIR+=	cowpatty
 SUBDIR+=	coxeter
 SUBDIR+=	cpdup
 SUBDIR+=	cpm
+SUBDIR+=	cpqarrayd
 SUBDIR+=	crabemu
 SUBDIR+=	crawl-stone-soup
 SUBDIR+=	creal
