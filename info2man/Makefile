@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/05/17 07:41:58 francksys Exp $
+# $NetBSD: Makefile,v 1.3 2013/05/25 13:05:56 francksys Exp $
 #
 
 DISTNAME=	info2man
@@ -15,7 +15,10 @@ NO_BUILD=		yes
 REPLACE_PERL=   	info2pod
 INSTALLATION_DIRS=	bin
 INFO2MAN_PM=		Pathname.pm Misc.pm Math.pm Sink.pm IO.pm GNUInfo.pm Source.pm Object.pm DEBUG.pm
-PKGNAME=		info2man-0
+PKGVERSION=		20001101
+PKGNAME=		info2man-${PKGVERSION}
+DIST_SUBDIR=		info2man
+
 
 
 do-install:
