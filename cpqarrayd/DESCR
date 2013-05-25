@@ -1,0 +1,5 @@
+A daemon to monitor HP (compaq) arraycontrollers. It reports any
+status changes, like failing disks, to the syslog and optionally
+to a remote host using SNMP traps.
+
+This program is designed to run on Linux.
