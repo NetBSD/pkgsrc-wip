@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1 2013/05/03 21:05:16 othyro Exp $
-
-SHA1 (sshpass-1.05.tar.gz) = 6dafec86dd74315913417829542f4023545c8fd7
-RMD160 (sshpass-1.05.tar.gz) = 6db9f833fbc4eda7e0a494fe0dbd287a388afe10
-Size (sshpass-1.05.tar.gz) = 98362 bytes
