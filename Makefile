@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5264 2013/05/26 01:54:52 othyro Exp $
+# $Id: Makefile,v 1.5265 2013/05/26 03:03:22 ryo-on Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1818,7 +1818,6 @@ SUBDIR+=	openbsc
 SUBDIR+=	openbsd-input-usbtablet
 SUBDIR+=	openca
 SUBDIR+=	opencascade
-SUBDIR+=	opencobol
 SUBDIR+=	openconnect
 SUBDIR+=	opendchub
 SUBDIR+=	opendesktop-fonts
