@@ -1,0 +1,9 @@
+* Doesn't work with python33:
+  File "/usr/pkgsrc/pkg/bin/wifite.py", line 166
+    print R+' [!]'+O+' ERROR:'+G+' wifite'+O+' must be run as '+R+'root'+W
+          ^
+SyntaxError: invalid syntax
+
+* Replace the iwconfig search and use the output ifconfig, checking if a line
+  contains "ssid" and if so, use the previous line, parsing everything before
+  ": " as the wireless adapter name.
