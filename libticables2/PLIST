@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2012/12/30 01:21:51 othyro Exp $
-include/tilp2/export1.h
-include/tilp2/stdints1.h
-include/tilp2/ticables.h
-include/tilp2/timeout.h
-lib/libticables2.la
-lib/pkgconfig/ticables2.pc
-${PLIST.nls}share/locale/fr/LC_MESSAGES/libticables2.mo

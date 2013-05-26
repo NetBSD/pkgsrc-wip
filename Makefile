@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5266 2013/05/26 21:31:04 othyro Exp $
+# $Id: Makefile,v 1.5267 2013/05/26 23:03:24 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1450,10 +1450,6 @@ SUBDIR+=	libsnappy
 SUBDIR+=	libspt
 SUBDIR+=	libstacktrace
 SUBDIR+=	libtextcat
-SUBDIR+=	libticables2
-SUBDIR+=	libticalcs2
-SUBDIR+=	libticonv
-SUBDIR+=	libtifiles2
 SUBDIR+=	libtlen2
 SUBDIR+=	libtogl
 SUBDIR+=	libtorrent-rasterbar
@@ -3135,7 +3131,6 @@ SUBDIR+=	thepeg
 SUBDIR+=	thwab
 SUBDIR+=	tigervnc
 SUBDIR+=	tilda
-SUBDIR+=	tilp2
 SUBDIR+=	tinyca2
 SUBDIR+=	tinycobol
 SUBDIR+=	tinyfugue-beta
