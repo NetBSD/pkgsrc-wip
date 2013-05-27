@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2013/04/15 06:56:52 asau Exp $
+# $NetBSD: Makefile,v 1.29 2013/05/27 23:19:32 asau Exp $
 
 PKGNAME=		fricas-1.2.0
 DISTNAME=		${PKGNAME}-full
@@ -32,7 +32,7 @@ USE_TOOLS+=		gmake
 INSTALL_UNSTRIPPED=	yes	# don't strip AXIOMsys, it breaks FFI
 .endif
 
-.if 0 # disable Subversion temporarily
+.if 1 # extract from Subversion
 .if !empty(PKG_OPTIONS:Mx11)
 post-build:
 # This should start Xvfb temporarily (1024x768x24 resolution recommended):
