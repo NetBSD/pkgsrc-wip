@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2013/04/10 11:23:54 thomasklausner Exp $
-#
+# $NetBSD: Makefile,v 1.10 2013/05/27 06:59:03 thomasklausner Exp $
 
-DISTNAME=	gemrb-0.7.2
+DISTNAME=	gemrb-0.8.0.1
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gemrb/}
 
@@ -31,6 +30,7 @@ CMAKE_ARGS+=		-DSDLMIXER_INCLUDE_DIR=${BUILDLINK_PREFIX.SDL_mixer}/include
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
