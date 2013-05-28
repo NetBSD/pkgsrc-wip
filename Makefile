@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5270 2013/05/28 02:55:36 othyro Exp $
+# $Id: Makefile,v 1.5271 2013/05/28 03:03:39 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -3377,7 +3377,6 @@ SUBDIR+=	xhkeys1
 SUBDIR+=	xine-plugin
 SUBDIR+=	xinetd
 SUBDIR+=	xiphos
-SUBDIR+=	xlsatoms
 SUBDIR+=	xmail
 SUBDIR+=	xmakemol
 SUBDIR+=	xmds
