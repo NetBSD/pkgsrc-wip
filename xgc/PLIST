@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2013/05/19 04:09:07 othyro Exp $
-bin/xgc
-lib/X11/app-defaults/Xgc
-lib/X11/app-defaults/Xgc-color
-man/man1/xgc.1
