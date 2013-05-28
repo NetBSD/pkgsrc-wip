@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2012/12/09 20:45:33 moubctez Exp $
+# $NetBSD: Makefile,v 1.12 2013/05/28 18:27:23 slitvinov Exp $
 
-VER=		0.4.0
+VER=		0.5.2
 DISTNAME=	Sumatra-${VER}.tar
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/S/s/S/.tar//}
 PKGREVISION=	1
