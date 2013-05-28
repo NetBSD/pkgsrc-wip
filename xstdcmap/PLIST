@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2013/05/21 01:43:51 othyro Exp $
-bin/xstdcmap
-man/man1/xstdcmap.1
