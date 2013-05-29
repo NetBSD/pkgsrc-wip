@@ -1,11 +1,11 @@
-# $NetBSD: options.mk,v 1.4 2013/05/09 00:24:09 othyro Exp $
+# $NetBSD: options.mk,v 1.5 2013/05/29 03:05:39 othyro Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.dolphin
 PKG_SUPPORTED_OPTIONS=	alsa bluez cg debug ffmpeg glew gtk2 libao openal opengl
 PKG_SUPPORTED_OPTIONS+=	portaudio pulseaudio sdl sdl2 sfml+ soil threads xrandr
 PKG_SUPPORTED_OPTIONS+=	x11 zlib
-PKG_SUGGESTED_OPTIONS+=	alsa ffmpeg glew gtk2 libao openal portaudio pulseaudio
-PKG_SUGGESTED_OPTIONS+=	sdl sdl2 sfml+ soil threads xrandr x11 zlib
+PKG_SUGGESTED_OPTIONS+=	alsa ffmpeg glew gtk2 libao openal opengl portaudio
+PKG_SUGGESTED_OPTIONS+=	pulseaudio sdl sdl2 sfml+ soil threads xrandr x11 zlib
 
 # XXX wxGTK29 (wxUnicode) is not yet supported. Package and test.
 
