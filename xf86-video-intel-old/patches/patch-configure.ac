@@ -1,0 +1,38 @@
+$NetBSD: patch-configure.ac,v 1.1 2013/05/29 03:38:08 makoto Exp $
+
+git clone git://cgit.freedesktop.org/xorg/driver/xf86-video-intel/
+git checkout e4cd9de2933ada3e2a4b43552729ae3a370128bf
+and make diff
+
+--- configure.ac.orig	2009-05-13 00:14:07.000000000 +0000
++++ configure.ac
+@@ -22,7 +22,7 @@
+ 
+ AC_PREREQ(2.57)
+ AC_INIT([xf86-video-intel],
+-        2.7.1,
++        2.6.99.1,
+         [https://bugs.freedesktop.org/enter_bug.cgi?product=xorg],
+         xf86-video-intel)
+ 
+@@ -34,6 +34,11 @@ AM_INIT_AUTOMAKE([dist-bzip2])
+ 
+ AM_MAINTAINER_MODE
+ 
++AC_CONFIG_FILES([
++	shave
++	shave-libtool
++])
++
+ # Checks for programs.
+ AC_DISABLE_STATIC
+ AC_PROG_LIBTOOL
+@@ -259,6 +264,8 @@ XORG_RELEASE_VERSION
+ 
+ XORG_CHECK_LINUXDOC
+ 
++SHAVE_INIT([.], [enable])
++
+ AC_OUTPUT([
+ 	Makefile
+ 	uxa/Makefile
