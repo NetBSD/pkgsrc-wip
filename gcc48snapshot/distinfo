@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.15 2013/05/14 15:56:28 keckhardt Exp $
+$NetBSD: distinfo,v 1.16 2013/05/29 05:42:16 keckhardt Exp $
 
 SHA1 (ecj-4.5.jar) = 58c1d79c64c8cd718550f32a932ccfde8d1e6449
 RMD160 (ecj-4.5.jar) = d3f4da657f086b6423f74e93f001132f4855368a
 Size (ecj-4.5.jar) = 1470676 bytes
-SHA1 (gcc-4.8-20130509.tar.bz2) = e55de842f58d5c994b8ba8525b29f1a1e4a6fd1b
-RMD160 (gcc-4.8-20130509.tar.bz2) = f8b96105759d2d3ff91e5c67d2a6fe127c66d322
-Size (gcc-4.8-20130509.tar.bz2) = 82574161 bytes
+SHA1 (gcc-4.8.1-RC-20130527.tar.bz2) = 6880441e3256699606bd0538d56021e5b56cbd8d
+RMD160 (gcc-4.8.1-RC-20130527.tar.bz2) = 43ea667a0cd0e4bfd07d290baf0cf6593bde4526
+Size (gcc-4.8.1-RC-20130527.tar.bz2) = 86851799 bytes
 SHA1 (patch-gcc_Makefile.in) = ce366a091960d335ecb022918e2f7bfc4e3fcccf
 SHA1 (patch-gcc_config.gcc) = ac175c5eecf3dd53508479b30bf5c59cc0a5fca9
 SHA1 (patch-gcc_config_dragonfly-stdint.h) = 740dc819b446d5f1476506322c4b280ffdb5a6c0
@@ -31,6 +31,9 @@ SHA1 (patch-libstdc++-v3_config_os_bsd_dragonfly_ctype__base.h) = 12b8e3b998ae1c
 SHA1 (patch-libstdc++-v3_config_os_bsd_dragonfly_ctype__configure__char.cc) = d5649f42b61ff3c27d60e813cc844b820525aee4
 SHA1 (patch-libstdc++-v3_config_os_bsd_dragonfly_ctype__inline.h) = 3e8cbedb167fc623f184a59b1f4b330544b08939
 SHA1 (patch-libstdc++-v3_config_os_bsd_dragonfly_os__defines.h) = 9a45ecb4309c50ca90008b2fc7d3b44d002698b4
+SHA1 (patch-libstdc++-v3_config_os_bsd_netbsd_ctype__base.h) = 014d442c885b9c51d1a4af05205279c274a9559d
+SHA1 (patch-libstdc++-v3_config_os_bsd_netbsd_ctype__configure__char.cc) = b63c2682336c9b6f0e0d7b900d6f40ad6e7a5ec4
+SHA1 (patch-libstdc++-v3_config_os_bsd_netbsd_ctype__inline.h) = 626fc1f9c035ac5cef30a92d525af4e778835ebf
 SHA1 (patch-libstdc++-v3_configure) = 3821275fa698221d7665ea3c98b0a24f33954a5a
 SHA1 (patch-libstdc++-v3_configure.host) = 7426ea4a9735e5f886f4a3ffb4a9ba62734178c4
 SHA1 (patch-libstdc++-v3_libsupc++_unwind-cxx.h) = 9784bfa4323f8498b36565d0fea28fce69ffdbb1
