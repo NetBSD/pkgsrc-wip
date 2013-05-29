@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2013/05/19 02:46:48 othyro Exp $
-bin/xfindproxy
-man/man1/xfindproxy.1

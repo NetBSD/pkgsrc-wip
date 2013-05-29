@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5277 2013/05/29 11:15:22 thomasklausner Exp $
+# $Id: Makefile,v 1.5278 2013/05/29 12:00:37 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -3369,7 +3369,6 @@ SUBDIR+=	xfce4-wm
 SUBDIR+=	xfce4-wm-themes
 SUBDIR+=	xfce48
 SUBDIR+=	xfconf
-SUBDIR+=	xfindproxy
 SUBDIR+=	xfs
 SUBDIR+=	xfsinfo
 SUBDIR+=	xfwp
