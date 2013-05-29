@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2012/10/23 10:23:06 thomasklausner Exp $
-#
+# $NetBSD: Makefile,v 1.8 2013/05/29 22:37:59 thomasklausner Exp $
 
-DISTNAME=	libdmx-1.1.2
+DISTNAME=	libdmx-1.1.3
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=	.tar.bz2

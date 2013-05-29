@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2012/09/13 13:43:41 thomasklausner Exp $
+$NetBSD: distinfo,v 1.3 2013/05/29 22:38:00 thomasklausner Exp $
 
-SHA1 (libdmx-1.1.2.tar.bz2) = 76956d4127ded2e6d1bb5746a6d1603ee23b442a
-RMD160 (libdmx-1.1.2.tar.bz2) = 0f3174159df970549fec544946b0d7c3a56e1c87
-Size (libdmx-1.1.2.tar.bz2) = 290694 bytes
+SHA1 (libdmx-1.1.3.tar.bz2) = 0eeac14a06cffb04a1c78793563f233a8f8b79be
+RMD160 (libdmx-1.1.3.tar.bz2) = 3c7da323bb86e9d7e9f09bb93ca762a87d7636c6
+Size (libdmx-1.1.3.tar.bz2) = 290859 bytes
