@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.124 2013/05/04 13:35:44 makoto Exp $
+@comment $NetBSD: PLIST,v 1.125 2013/05/30 17:10:01 makoto Exp $
 bin/ctags
 bin/ebrowse
 bin/emacs
@@ -84,7 +84,6 @@ share/emacs/${PKGVERSION}/etc/COPYING
 share/emacs/${PKGVERSION}/etc/DEBUG
 share/emacs/${PKGVERSION}/etc/DEVEL.HUMOR
 share/emacs/${PKGVERSION}/etc/DISTRIB
-share/emacs/${PKGVERSION}/etc/DOC-${PKGVERSION}.1
 share/emacs/${PKGVERSION}/etc/ERC-NEWS
 share/emacs/${PKGVERSION}/etc/ETAGS.EBNF
 share/emacs/${PKGVERSION}/etc/ETAGS.README
@@ -2833,8 +2832,6 @@ share/emacs/${PKGVERSION}/lisp/net/trampver.el.gz
 share/emacs/${PKGVERSION}/lisp/net/trampver.elc
 share/emacs/${PKGVERSION}/lisp/net/webjump.el.gz
 share/emacs/${PKGVERSION}/lisp/net/webjump.elc
-share/emacs/${PKGVERSION}/lisp/net/xesam.el.gz
-share/emacs/${PKGVERSION}/lisp/net/xesam.elc
 share/emacs/${PKGVERSION}/lisp/net/zeroconf.el.gz
 share/emacs/${PKGVERSION}/lisp/net/zeroconf.elc
 share/emacs/${PKGVERSION}/lisp/newcomment.el.gz
@@ -3559,8 +3556,6 @@ share/emacs/${PKGVERSION}/lisp/term/screen.el.gz
 share/emacs/${PKGVERSION}/lisp/term/screen.elc
 share/emacs/${PKGVERSION}/lisp/term/sun.el.gz
 share/emacs/${PKGVERSION}/lisp/term/sun.elc
-share/emacs/${PKGVERSION}/lisp/term/sup-mouse.el.gz
-share/emacs/${PKGVERSION}/lisp/term/sup-mouse.elc
 share/emacs/${PKGVERSION}/lisp/term/tty-colors.el.gz
 share/emacs/${PKGVERSION}/lisp/term/tty-colors.elc
 share/emacs/${PKGVERSION}/lisp/term/tvi970.el.gz
