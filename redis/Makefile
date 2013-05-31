@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2013/02/01 16:11:35 fhajny Exp $
+# $NetBSD: Makefile,v 1.23 2013/05/31 20:12:36 fhajny Exp $
 #
 
-DISTNAME=	redis-2.6.9
+DISTNAME=	redis-2.6.13
 CATEGORIES=	databases
 MASTER_SITES=	http://redis.googlecode.com/files/
 
@@ -49,9 +49,7 @@ SUBST_CLASSES+=		fix-paths
 SUBST_STAGE.fix-paths=	post-patch
 SUBST_MESSAGE.fix-paths= Fixing paths.
 SUBST_FILES.fix-paths=	redis.conf
-SUBST_SED.fix-paths=	-e 's,@@DBDIR@@,${REDIS_DATADIR},g'
-SUBST_SED.fix-paths+=	-e 's,@@LOGDIR@@,${REDIS_LOGDIR},g'
-SUBST_SED.fix-paths+=	-e 's,@@PIDDIR@@,${REDIS_PIDDIR},g'
+SUBST_VARS.fix-paths=	REDIS_DATADIR REDIS_LOGDIR REDIS_PIDDIR
 
 post-extract:
 	${CHMOD} -R g-w ${WRKSRC}
