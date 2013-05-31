@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5280 2013/05/31 13:46:06 thomasklausner Exp $
+# $Id: Makefile,v 1.5281 2013/05/31 14:44:07 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -3279,7 +3279,6 @@ SUBDIR+=	which
 SUBDIR+=	why
 SUBDIR+=	wicd
 SUBDIR+=	wimon-devel
-SUBDIR+=	windowmaker
 SUBDIR+=	wine
 SUBDIR+=	wings
 SUBDIR+=	winwrangler
