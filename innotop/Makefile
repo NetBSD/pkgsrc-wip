@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2012/11/14 00:16:09 othyro Exp $
+# $NetBSD: Makefile,v 1.4 2013/05/31 20:25:29 fhajny Exp $
 #
 
-DISTNAME=	innotop-1.7.2
+DISTNAME=	innotop-1.9.0
 CATEGORIES=	databases
 MASTER_SITES=	http://innotop.googlecode.com/files/
 
