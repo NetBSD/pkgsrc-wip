@@ -1,7 +1,8 @@
-$NetBSD: distinfo,v 1.6 2013/05/03 02:57:01 makoto Exp $
+$NetBSD: distinfo,v 1.7 2013/06/01 09:48:45 makoto Exp $
 
-SHA1 (tqsl-114.tgz) = 81590c30018bebd690eb0bdb79245543c0c1698a
-RMD160 (tqsl-114.tgz) = 31e8871d4d6fb639640f02f65a88b3f0eb8a30c8
-Size (tqsl-114.tgz) = 796099 bytes
+SHA1 (tqsl-114-1.tgz) = bcd50b54f3f8b2f068ba3539a6d379c75c2551e8
+RMD160 (tqsl-114-1.tgz) = 0e79c16bba78c6242e2319d5f8a6e3e07f34f20a
+Size (tqsl-114-1.tgz) = 795986 bytes
 SHA1 (patch-cmakemodules_FindBDB_cmake) = 3d40e3f792a33967d222203cd62fc73a998125a9
+SHA1 (patch-src_config.xml) = ace048f40382549cf48aea3f0a0acfcfe030adef
 SHA1 (patch-src_tqslconvert_cpp) = 6a0a4e54c1f351a0bd8e0e6f8c04a87ea975330e

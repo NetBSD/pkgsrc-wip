@@ -1,17 +1,13 @@
-# $NetBSD: Makefile,v 1.19 2013/05/21 01:54:25 makoto Exp $
+# $NetBSD: Makefile,v 1.20 2013/06/01 09:48:45 makoto Exp $
 
-DISTNAME=		TrustedQSL-1_14
-DISTNAME=		tqsl-114
+DISTNAME=		tqsl-114-1
 # 1.14 instead of 114 may be better (?)
 PKGNAME=		${DISTNAME:C/[0-9]/&./}
 CATEGORIES=		ham
 MASTER_SITES=		http://www.arrl.org/files/file/LoTW%20Instructions/
-MASTER_SITES=		http://www.arrl.org/files/file/TrustedQSL-Beta/
 EXTRACT_SUFX=		.tgz
 
 MAINTAINER=		makoto@ki.nu
-HOMEPAGE=		http://www.arrl.org/files/file/LoTW%20Instructions/
-HOMEPAGE=		http://www.arrl.org/trustedqsl-beta-release
 HOMEPAGE=		http://sourceforge.net/projects/trustedqsl/
 COMMENT=		TrustedQSL, uploading QSL Data to LoTW of ARRL
 #LICENSE=		See LICENSE file (ARRL)
@@ -35,11 +31,12 @@ SUBST_SED.x11r7=	-e 's,:/usr/X11R7/lib,,'
 ##                     v
 ## /usr/pkg/lib:/usr/pkgsrc/wip/trustedQSL/work/tqsl-114/src
 
-SUBST_CLASSES+=		workaround
-SUBST_STAGE.workaround= post-build
-SUBST_FILES.workaround=	apps/cmake_install.cmake
-SUBST_MESSAGE.workaround=	Removing the very last colon from OLD_RPATH in RPATH_CHANGE
-SUBST_SED.workaround=	-e '/OLD_RPATH/s,${WRKSRC}/src:,${WRKSRC}/src,'
+#SUBST_CLASSES+=		swaprpath
+#SUBST_STAGE.swaprpath=	post-build
+#SUBST_FILES.swaprpath=	apps/cmake_install.cmake
+#SUBST_MESSAGE.swaprpath= Swap SRC and LIB of OLD_RPATH in RPATH_CHANGE
+#SUBST_SED.swaprpath=	-e '/OLD_RPATH/s,${PREFIX}/lib:${WRKSRC}/src,${WRKSRC}/src${PREFIX}/lib',
+
 
 SUBST_CLASSES+=		rpath-link
 SUBST_STAGE.rpath-link= post-build
@@ -48,6 +45,11 @@ SUBST_MESSAGE.rpath-link=	Truely experimental and interim fix for RPATH-LINK
 SUBST_SED.rpath-link=	-e '/OLD_RPATH/s,::::::::::::,,'
 SUBST_SED.rpath-link+=	-e '/NEW_RPATH/s,:${PREFIX}/lib,,'
 
+SUBST_CLASSES+=		lastcolon
+SUBST_STAGE.lastcolon=	post-build
+SUBST_FILES.lastcolon=	apps/cmake_install.cmake
+SUBST_MESSAGE.lastcolon=	Removing the very last colon from OLD_RPATH in RPATH_CHANGE
+SUBST_SED.lastcolon=	-e '/OLD_RPATH/s,${WRKSRC}/src:,${WRKSRC}/src,'
 
 # There is an unresolved build failure, where -R for /usr/pkg/lib does
 # not precede /usr/X11R7/lib, and on a netbsd-5 system with base xorg,
