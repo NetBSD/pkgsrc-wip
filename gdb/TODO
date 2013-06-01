@@ -25,4 +25,17 @@ DONE
    # of untested testcases         174
    # of unresolved testcases       203
    # of unsupported tests          149
+
+- DragonFly 3.4.2/i386 make test results (with 7.6)
+   -----
+   tail -12  work/gdb-7.6/gdb/testsuite/gdb.sum
+                === gdb Summary ===
+
+   # of expected passes            4769
+   # of unexpected failures        2826
+   # of expected failures          23
+   # of known failures             13
+   # of untested testcases         189
+   # of unresolved testcases       165
+   # of unsupported tests          161
    -----
