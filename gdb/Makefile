@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2013/04/10 22:47:28 keckhardt Exp $
+# $NetBSD: Makefile,v 1.5 2013/06/01 12:07:12 makoto Exp $
 #
 
 DISTNAME=	gdb-7.5.1
@@ -22,8 +22,6 @@ INSTALL_TARGET=		install install-info
 TEST_TARGET=		check
 INFO_FILES=		yes
 CONFIGURE_ENV+=		CONFIG_LDFLAGS=${LDFLAGS:M*:Q}
-TARGET_STR=		${MACHINE_ARCH}--dragonfly
-BUILD_DEFS+=		${TARGET_STR}
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -46,9 +44,12 @@ pre-configure:
 	aclocal && autoheader && autoconf
 
 .elif ${OPSYS} == "DragonFly"
+TARGET_STR=		${MACHINE_ARCH}--dragonfly
+BUILD_DEFS+=		${TARGET_STR}
 ## Remove "-pc" string, without this, getting following message:
 ##	   *** Gdb does not support native target i386-pc-dragonfly"
 CONFIGURE_ARGS+=		--target=${TARGET_STR}
+TEST_ENV=		DEJAGNU=${WRKDIR}/../files/dragonfly-default.exp
 .endif
 
 # pkg_add: Conflicting PLIST with autoconf-2.69nb1: info/standards.info

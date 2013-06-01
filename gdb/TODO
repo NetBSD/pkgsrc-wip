@@ -13,3 +13,16 @@ DONE
   and make test passes more than 95 % of testcases.
 - NetBSD/i386: 6.0 OK Tested with gcc 4.7 and make test passes 90 %
   of the testcases.
+- DragonFly 3.4.2/i386 make test results (for now)
+   -----
+   tail -12  work/gdb-7.5.1/gdb/testsuite/gdb.sum
+                   === gdb Summary ===
+   
+   # of expected passes            4962
+   # of unexpected failures        3053
+   # of expected failures          35
+   # of known failures             20
+   # of untested testcases         174
+   # of unresolved testcases       203
+   # of unsupported tests          149
+   -----
