@@ -63,3 +63,18 @@ DONE
    # of untested testcases         172
    # of unresolved testcases       6
    # of unsupported tests          156
+
+- NetBSD/amd64 6.1 make test results (with 7.5.1)
+   -----
+ (but without patch-gdb_bsd-kvm.c)
+              === gdb Summary ===
+
+   # of expected passes            12515
+   # of unexpected failures        412
+   # of unexpected successes       2
+   # of expected failures          40
+   # of known failures             52
+   # of untested testcases         173
+   # of unresolved testcases       7
+   # of unsupported tests          153
+   -----
