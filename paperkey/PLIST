@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/10/01 10:23:55 shattered Exp $
-bin/paperkey
-man/man1/paperkey.1
