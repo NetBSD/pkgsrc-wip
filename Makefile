@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5284 2013/06/01 18:25:24 kristerw Exp $
+# $Id: Makefile,v 1.5285 2013/06/01 21:55:04 kristerw Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -291,6 +291,7 @@ SUBDIR+=	cgterm
 SUBDIR+=	chbg
 SUBDIR+=	chems
 SUBDIR+=	chicken
+SUBDIR+=	choosefont
 SUBDIR+=	chora
 SUBDIR+=	chromium
 SUBDIR+=	chrsh
@@ -1173,6 +1174,7 @@ SUBDIR+=	ile
 SUBDIR+=	ilohamail
 SUBDIR+=	imagination
 SUBDIR+=	imonc
+SUBDIR+=	info2man
 SUBDIR+=	innotop
 SUBDIR+=	interbase-docs
 #SUBDIR+=	interchange		# to be removed soon -- eric@cirr.com
@@ -3127,6 +3129,7 @@ SUBDIR+=	texlive-texmf-minimal
 SUBDIR+=	tftp-hpa
 SUBDIR+=	thabit-ttf
 SUBDIR+=	thcrut
+SUBDIR+=	theama
 SUBDIR+=	thepeg
 SUBDIR+=	thwab
 SUBDIR+=	tigervnc
@@ -3334,6 +3337,7 @@ SUBDIR+=	xerces-c-2.8.0
 SUBDIR+=	xesam-glib
 SUBDIR+=	xf86-input-synaptics
 SUBDIR+=	xf86-video-geode
+SUBDIR+=	xf86-video-intel-old
 SUBDIR+=	xf86-video-nouveau
 SUBDIR+=	xf86-video-nv-current
 SUBDIR+=	xf86dga
