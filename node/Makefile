@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2013/05/21 11:45:29 fhajny Exp $
+# $NetBSD: Makefile,v 1.31 2013/06/02 07:38:10 kristerw Exp $
 #
 
 DISTNAME=	node-v0.10.7
@@ -54,7 +54,7 @@ REPLACE_PYTHON+=	tools/wafadmin/Tools/*.py
 . include "../../devel/libexecinfo/buildlink3.mk"
 .endif
 .if ${OPSYS} == "NetBSD"
-BUILD_DEPENDS+=	lockf-[0-9]*:../../wip/lockf
+BUILD_DEPENDS+=	lockf-[0-9]*:../../sysutils/lockf
 .endif
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
