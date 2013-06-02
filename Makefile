@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5286 2013/06/02 22:27:49 othyro Exp $
+# $Id: Makefile,v 1.5287 2013/06/02 22:36:34 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2884,6 +2884,7 @@ SUBDIR+=	runit
 SUBDIR+=	rygel
 SUBDIR+=	s3cmd
 SUBDIR+=	s3funnel
+SUBDIR+=	safekeep
 SUBDIR+=	samba
 SUBDIR+=	samhain
 SUBDIR+=	sandy
