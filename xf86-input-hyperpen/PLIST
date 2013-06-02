@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1 2013/06/02 23:33:01 othyro Exp $
+lib/xorg/modules/input/hyperpen_drv.la
