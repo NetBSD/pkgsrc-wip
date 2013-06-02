@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5285 2013/06/01 21:55:04 kristerw Exp $
+# $Id: Makefile,v 1.5286 2013/06/02 22:27:49 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -3335,6 +3335,7 @@ SUBDIR+=	xebece
 SUBDIR+=	xedit
 SUBDIR+=	xerces-c-2.8.0
 SUBDIR+=	xesam-glib
+SUBDIR+=	xf86-input-elographics
 SUBDIR+=	xf86-input-synaptics
 SUBDIR+=	xf86-video-geode
 SUBDIR+=	xf86-video-intel-old
