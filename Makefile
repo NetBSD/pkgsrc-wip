@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5293 2013/06/03 01:23:03 othyro Exp $
+# $Id: Makefile,v 1.5294 2013/06/03 02:21:42 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -3000,6 +3000,7 @@ SUBDIR+=	spectrum
 SUBDIR+=	speedx
 SUBDIR+=	spfmilter
 SUBDIR+=	sphinxsearch
+SUBDIR+=	spice-protocol
 SUBDIR+=	spidermonkey185
 SUBDIR+=	splix
 SUBDIR+=	spyder
@@ -3348,6 +3349,7 @@ SUBDIR+=	xf86-video-intel-old
 SUBDIR+=	xf86-video-modesetting
 SUBDIR+=	xf86-video-nouveau
 SUBDIR+=	xf86-video-nv-current
+SUBDIR+=	xf86-video-qxl
 SUBDIR+=	xf86dga
 SUBDIR+=	xf86rushproto
 SUBDIR+=	xfce4-appfinder
