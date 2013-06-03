@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/06/03 02:19:48 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2013/06/03 11:23:11 othyro Exp $
 
 DISTNAME=	xf86-video-qxl-0.1.0
 CATEGORIES=	x11
@@ -17,7 +17,7 @@ USE_TOOLS+=	pkg-config
 .include "options.mk"
 
 .include "../../sysutils/libpciaccess/buildlink3.mk"
-.include "../../wip/spice-protocol/buildlink3.mk"
+.include "../../sysutils/spice-protocol/buildlink3.mk"
 .include "../../x11/xf86dgaproto/buildlink3.mk"
 .include "../../x11/fontsproto/buildlink3.mk"
 .include "../../x11/xproto/buildlink3.mk"
