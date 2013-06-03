@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2013/03/04 21:58:38 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.21 2013/06/03 13:58:34 fhajny Exp $
 
-DISTNAME=	mongodb-src-r2.2.2
+DISTNAME=	mongodb-src-r2.4.3
 PKGNAME=	${DISTNAME:S/src-r//}
 CATEGORIES=	databases
 MASTER_SITES=	http://downloads.mongodb.org/src/
@@ -17,8 +17,6 @@ BUILD_DEPENDS+=	scons-[0-9]*:../../devel/scons
 
 SCONS_BIN=	${PREFIX}/bin/scons
 SCONS_ARGS=	${_MAKE_JOBS}
-# Does not build with lang/spidermonkey yet
-# SCONS_ARGS+=	--use-system-all=USE-SYSTEM-ALL
 SCONS_ARGS+=	--use-system-tcmalloc=USE-SYSTEM-TCMALLOC
 SCONS_ARGS+=	--use-system-pcre=USE-SYSTEM-PCRE
 SCONS_ARGS+=	--use-system-boost=USE-SYSTEM-BOOST
@@ -26,6 +24,14 @@ SCONS_ARGS+=	--use-system-snappy=USE-SYSTEM-SNAPPY
 
 SCONS_ARGS+=	--cc=${WRAPPER_BINDIR}/${CC}
 SCONS_ARGS+=	--cxx=${WRAPPER_BINDIR}/${CXX}
+
+.include "../../mk/bsd.fast.prefs.mk"
+
+.if ${MACHINE_ARCH} == "x86_64"
+SCONS_ARGS+=	--64
+.else
+SCONS_ARGS+=	--32
+.endif
 
 .include "options.mk"
 
@@ -108,7 +114,5 @@ post-install:
 .include "../../devel/boost-python/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../devel/snappy/buildlink3.mk"
-# Disabling until this can be made to work
-# .include "../../lang/spidermonkey/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

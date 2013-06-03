@@ -1,10 +1,9 @@
-$NetBSD: patch-src_SConscript.client,v 1.1 2012/10/02 08:48:46 fhajny Exp $
+$NetBSD: patch-src_SConscript.client,v 1.2 2013/06/03 13:58:35 fhajny Exp $
 
-Fix installation as per
-https://bugs.gentoo.org/show_bug.cgi?id=433507.
---- src/SConscript.client.orig	2012-08-28 05:28:11.000000000 +0000
-+++ src/SConscript.client
-@@ -134,7 +134,7 @@ env.Install(
+Installation fix as per https://jira.mongodb.org/browse/SERVER-5575.
+--- src/SConscript.client.orig	2013-04-22 14:48:39.000000000 +0000
++++ src/SConscript.client	2013-06-03 12:34:55.407594501 +0000
+@@ -177,7 +177,7 @@ env.Install(
  # install
  prefix = GetOption("prefix")
  
@@ -12,4 +11,4 @@ https://bugs.gentoo.org/show_bug.cgi?id=433507.
 +env.InstallAs(prefix + "/lib", '${LIBPREFIX}mongoclient${LIBSUFFIX}')
  
  for x in clientHeaderDirectories:
-     env.Install(prefix + "/include/mongo/" + x,
+     inst = env.Install(prefix + "/include/mongo/" + x,

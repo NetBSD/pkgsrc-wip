@@ -1,2 +1,2 @@
-- Please take a look at http://secunia.com/advisories/52721 when updating this
-  package.
+Proper support for system v8 should be implemented,
+as soon as wip/v8 stops being a total mess.
