@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2012/10/05 11:12:56 asau Exp $
+# $NetBSD: Makefile,v 1.7 2013/06/04 13:04:54 fhajny Exp $
 #
 
 MODNAME=		memcached
-PECL_VERSION=		2.0.1
+PECL_VERSION=		2.1.0
 CATEGORIES+=		devel
 
 MAINTAINER=		filip@joyent.com
