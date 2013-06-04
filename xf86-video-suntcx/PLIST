@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2013/06/04 03:52:55 othyro Exp $
+lib/xorg/modules/drivers/suntcx_drv.la
+man/man4/suntcx.4
