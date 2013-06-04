@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2013/06/04 04:12:02 othyro Exp $
+lib/xorg/modules/drivers/voodoo_drv.la
+man/man4/voodoo.4
