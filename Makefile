@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5296 2013/06/03 11:25:00 othyro Exp $
+# $Id: Makefile,v 1.5297 2013/06/04 03:13:39 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -3350,6 +3350,7 @@ SUBDIR+=	xf86-video-modesetting
 SUBDIR+=	xf86-video-nouveau
 SUBDIR+=	xf86-video-nv-current
 SUBDIR+=	xf86-video-qxl
+SUBDIR+=	xf86-video-suncg6
 SUBDIR+=	xf86dga
 SUBDIR+=	xf86rushproto
 SUBDIR+=	xfce4-appfinder
