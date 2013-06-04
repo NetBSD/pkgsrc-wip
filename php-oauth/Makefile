@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2012/10/05 11:12:56 asau Exp $
+# $NetBSD: Makefile,v 1.6 2013/06/04 13:07:16 fhajny Exp $
 
 MODNAME=		oauth
-PECL_VERSION=		1.2.2
+PECL_VERSION=		1.2.3
 CATEGORIES+=		security
 
 MAINTAINER=		filip@joyent.com
