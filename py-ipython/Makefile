@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2012/10/07 11:54:45 asau Exp $
+# $NetBSD: Makefile,v 1.24 2013/06/04 07:45:23 thomasklausner Exp $
 #
 
 DISTNAME=	ipython-0.10
@@ -59,7 +59,7 @@ DEPENDS+=	${PYPKGPREFIX}-sphinx-[0-9]*:../../textproc/py-sphinx
 
 # X11 dependency section
 
-.include "../../x11/py-Tk/buildlink3.mk"
+DEPENDS+=	${PYPKGPREFIX}-Tk-[0-9]*:../../x11/py-Tk
 .include "../../x11/py-gtk2/buildlink3.mk"
 .include "../../x11/py-qt4/buildlink3.mk"
 .include "../../x11/py-wxWidgets/buildlink3.mk"

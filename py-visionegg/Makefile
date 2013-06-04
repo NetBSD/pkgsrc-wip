@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2012/11/12 16:51:37 othyro Exp $
-#
+# $NetBSD: Makefile,v 1.20 2013/06/04 07:45:24 thomasklausner Exp $
 
 DISTNAME=	visionegg-0.9.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -14,6 +13,7 @@ COMMENT=	Visual stimulus creation and control in Python
 
 DEPENDS+=	${PYPKGPREFIX}-Pyro4>=3.4:../../devel/py-Pyro
 DEPENDS+=	${PYPKGPREFIX}-OpenGL-[0-9]*:../../graphics/py-OpenGL
+DEPENDS+=	${PYPKGPREFIX}-Tk-[0-9]*:../../x11/py-Tk
 
 USE_LANGUAGES= c c++
 
@@ -24,6 +24,5 @@ PLIST_SUBST+=		PYVERSSUFFIX=${PYVERSSUFFIX:Q}
 
 .include "../../devel/py-game/buildlink3.mk"
 .include "../../math/py-Numeric/buildlink3.mk"
-.include "../../x11/py-Tk/buildlink3.mk"
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

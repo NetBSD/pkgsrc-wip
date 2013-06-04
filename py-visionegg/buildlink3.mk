@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2010/06/13 22:47:14 thomasklausner Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2013/06/04 07:45:24 thomasklausner Exp $
 
 .include "../../lang/python/pyversion.mk"
 
@@ -18,7 +18,6 @@ BUILDLINK_PKGSRCDIR.pyvisionegg?=	../../wip/py-visionegg
 .include "../../graphics/MesaLib/buildlink3.mk"
 .endif
 .include "../../devel/py-game/buildlink3.mk"
-.include "../../x11/py-Tk/buildlink3.mk"
 .include "../../math/py-Numeric/buildlink3.mk"
 .endif # PY_VISIONEGG_BUILDLINK3_MK
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/07 13:57:31 asau Exp $
+# $NetBSD: Makefile,v 1.5 2013/06/04 07:45:24 thomasklausner Exp $
 #
 
 DISTNAME=	tappy-0.8.3
@@ -13,6 +13,8 @@ HOMEPAGE=	http://tappy.sourceforge.net/
 COMMENT=	Tidal analysis program in python
 LICENSE=	gnu-gpl-v2
 
+DEPENDS+=	${PYPKGPREFIX}-readline>=0nb2:../../devel/py-readline
+
 USE_LANGUAGES=	# none
 
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
@@ -23,7 +25,6 @@ post-extract:
 do-test:
 	${RUN} cd ${WRKSRC}; ${SETENV} ${TEST_ENV} ${PYTHONBIN} tests/test_tappy.py
 
-.include "../../devel/py-readline/buildlink3.mk"
 .include "../../lang/python/egg.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

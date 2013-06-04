@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/11/23 22:44:44 othyro Exp $
-#
+# $NetBSD: Makefile,v 1.4 2013/06/04 07:45:23 thomasklausner Exp $
 
 DISTNAME=	guppy-0.1.9
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,9 +10,10 @@ HOMEPAGE=	http://guppy-pe.sourceforge.net/
 COMMENT=	Guppy-PE -- A Python Programming Environment
 LICENSE=	mit
 
+DEPENDS+=	${PYPKGPREFIX}-Tk-[0-9]*:../../x11/py-Tk
+
 WRKSRC=	${WRKDIR}/guppy-0.1.9
 PYDISTUTILSPKG=	yes
 
 .include "../../lang/python/extension.mk"
-.include "../../x11/py-Tk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

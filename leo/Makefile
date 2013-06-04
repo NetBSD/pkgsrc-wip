@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2012/10/03 09:10:36 asau Exp $
-#
+# $NetBSD: Makefile,v 1.15 2013/06/04 07:45:21 thomasklausner Exp $
 
 DISTNAME=		leo-4-4-2-1-final
 PKGNAME=		leo-4.4.2.1
@@ -12,6 +11,7 @@ HOMEPAGE=		http://leo.sourceforge.net/
 COMMENT=		Programmer's editor and a flexible browser
 
 DEPENDS+=		${PYPKGPREFIX}-docutils>=0.3.9:../../textproc/py-docutils
+DEPENDS+=		${PYPKGPREFIX}-Tk-[0-9]*:../../x11/py-Tk
 
 PKG_DESTDIR_SUPPORT=	none
 
@@ -44,5 +44,4 @@ post-install:
 	${PYTHONBIN} ${PYCOMPILEALL} ${PREFIX}/lib/leo/src ${PREFIX}/lib/leo/plugins ${PREFIX}/lib/leo/extensions ${PREFIX}/lib/leo/scripts ${PREFIX}/lib/leo/test
 
 .include "../../lang/python/application.mk"
-.include "../../x11/py-Tk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

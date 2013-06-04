@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2012/12/31 03:01:39 othyro Exp $
-#
+# $NetBSD: Makefile,v 1.8 2013/06/04 07:45:21 thomasklausner Exp $
 
 DISTNAME=	EditObj2-0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,6 +11,8 @@ HOMEPAGE=	http://home.gna.org/oomadness/en/editobj/index.html
 COMMENT=	EditObj2 is a dialog box generator for Python objects
 LICENSE=	gnu-gpl-v2
 
+DEPENDS+=	${PYPKGPREFIX}-Tk-[0-9]*:../../x11/py-Tk
+
 USE_LANGUAGES=	# none
 PYDISTUTILSPKG=         yes
 
@@ -20,7 +21,6 @@ do-test:
 
 
 .include "../../devel/py-gobject/buildlink3.mk"
-.include "../../x11/py-Tk/buildlink3.mk"
 .include "../../x11/py-gtk2/buildlink3.mk"
 .include "../../x11/py-qt4/buildlink3.mk"
 .include "../../lang/python/extension.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/07 13:57:29 asau Exp $
+# $NetBSD: Makefile,v 1.7 2013/06/04 07:45:24 thomasklausner Exp $
 #
 
 DISTNAME=	rlcompleter2-0.96
@@ -12,9 +12,10 @@ HOMEPAGE=	http://codespeak.net/rlcompleter2/index.cgi?home
 COMMENT=	Python command line completion
 LICENSE=	mit
 
+DEPENDS+=	${PYPKGPREFIX}-readline>=0nb2:../../devel/py-readline
+
 USE_LANGUAGES=	# none
 PYDISTUTILSPKG=		yes
 
-.include "../../devel/py-readline/buildlink3.mk"
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

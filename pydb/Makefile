@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2012/10/07 13:57:33 asau Exp $
+# $NetBSD: Makefile,v 1.9 2013/06/04 07:45:24 thomasklausner Exp $
 #
 
 DISTNAME=	pydb-1.26
@@ -22,7 +22,7 @@ PKG_SUGGESTED_OPTIONS=          pyreadline
 .include "../../mk/bsd.options.mk"
 
 .if !empty (PKG_OPTIONS:Mpyreadline)
-.include "../../devel/py-readline/buildlink3.mk"
+DEPENDS+=		${PYPKGPREFIX}-readline>=0nb2:../../devel/py-readline
 CONFIGURE_ARGS+=	--enable-pyreadline
 .endif
 

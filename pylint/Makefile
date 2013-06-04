@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2012/10/07 13:57:33 asau Exp $
-#
+# $NetBSD: Makefile,v 1.11 2013/06/04 07:45:24 thomasklausner Exp $
 
 VERSION=	0.22.0
 DISTNAME=	pylint-${VERSION}
@@ -10,6 +9,8 @@ MAINTAINER=	helgoman@users.sourceforge.net
 HOMEPAGE=	http://www.logilab.org/project/pylint
 COMMENT=	Python code static checker
 LICENSE=    	gnu-gpl-v2
+
+DEPENDS+=	${PYPKGPREFIX}-Tk-[0-9]*:../../x11/py-Tk
 
 DOCDIR= ${PREFIX}/share/doc/pylint
 INSTALLATION_DIRS=  ${DOCDIR} ${PKGMANDIR}/man1
@@ -22,7 +23,6 @@ post-install:
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../lang/python/egg.mk"
-.include "../../x11/py-Tk/buildlink3.mk"
 .include "../../devel/py-logilab-astng/buildlink3.mk"
 .include "../../devel/py-logilab-common/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

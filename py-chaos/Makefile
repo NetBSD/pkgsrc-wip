@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/06 17:55:25 asau Exp $
-#
+# $NetBSD: Makefile,v 1.3 2013/06/04 07:45:22 thomasklausner Exp $
 
 DISTNAME=	chaos
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}-${VERSION}
@@ -12,9 +11,10 @@ HOMEPAGE=	http://www.math.uic.edu/~culler/chaos/
 COMMENT=	UIC REU on Chaos, Fractals and Complex Dynamics
 #LICENSE=	# TODO: (see mk/license.mk)
 
+DEPENDS+=	${PYPKGPREFIX}-Tk-[0-9]*:../../x11/py-Tk
+
 VERSION=	1.0
 PYDISTUTILSPKG=	yes
 
 .include "../../lang/python/extension.mk"
-.include "../../x11/py-Tk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

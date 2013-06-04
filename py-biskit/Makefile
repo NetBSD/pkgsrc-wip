@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/06 17:22:16 asau Exp $
+# $NetBSD: Makefile,v 1.4 2013/06/04 07:45:22 thomasklausner Exp $
 #
 
 DISTNAME=	biskit-2.3.1
@@ -15,6 +15,7 @@ LICENSE=	gnu-gpl-v2
 DEPENDS+=	${PYPKGPREFIX}-biggles>=1.6.3:../../graphics/py-biggles
 DEPENDS+=	${PYPKGPREFIX}-Scientific>=2.8:../../math/py-Scientific
 DEPENDS+=	${PYPKGPREFIX}-rlcompleter2>=0.96:../../wip/py-rlcompleter2
+DEPENDS+=	${PYPKGPREFIX}-readline>=0nb2:../../devel/py-readline
 
 USE_TOOLS+=	perl
 USE_LANGUAGES=	# none
@@ -30,7 +31,6 @@ PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 post-extract:
 	${MV} ${WRKSRC}/scripts/Biskit/bis.py ${WRKSRC}/scripts/Biskit/bis${PYVERSSUFFIX}
 
-.include "../../devel/py-readline/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .include "../../math/py-Numeric/buildlink3.mk"

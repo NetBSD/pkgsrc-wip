@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2013/02/02 13:20:15 shattered Exp $
+# $NetBSD: Makefile,v 1.5 2013/06/04 07:45:24 thomasklausner Exp $
 #
 
 DISTNAME=		pypod-0.6.0
@@ -13,10 +13,11 @@ HOMEPAGE=		http://superduper.net/index.py?page=pypod
 COMMENT=		Python tools for manipluating iPod data
 LICENSE=		gnu-gpl-v2
 
+DEPENDS+=		${PYPKGPREFIX}-curses>=0nb4:../../devel/py-curses
+
 PYDISTUTILSPKG=		yes
 PYTHON_PATCH_SCRIPTS=	*.py */*.py
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
-.include "../../devel/py-curses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
