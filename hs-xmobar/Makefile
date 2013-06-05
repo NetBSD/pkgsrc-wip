@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2013/05/05 21:39:35 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.4 2013/06/05 22:20:22 szptvlfn Exp $
 
-DISTNAME=	xmobar-0.17
+DISTNAME=	xmobar-0.18
 CATEGORIES=	sysutils
 
 MAINTAINER=	szptvlfn@a-net.email.ne.jp
@@ -12,6 +12,7 @@ LICENSE=	modified-bsd
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../wip/hs-mtl/buildlink3.mk"
 .include "../../wip/hs-parsec/buildlink3.mk"
+.include "../../wip/hs-regex-compat/buildlink3.mk"
 .include "../../wip/hs-stm/buildlink3.mk"
 .include "../../wip/hs-text/buildlink3.mk"
 .include "../../wip/hs-transformers/buildlink3.mk"
