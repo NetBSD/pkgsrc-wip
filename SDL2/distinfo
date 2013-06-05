@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2013/05/29 03:18:35 othyro Exp $
+$NetBSD: distinfo,v 1.7 2013/06/05 00:32:21 othyro Exp $
 
-SHA1 (SDL-2.0.0-7238.tar.gz) = a3ea3667ab92c0bd4135bb57d24d4e8b5a039eeb
-RMD160 (SDL-2.0.0-7238.tar.gz) = 6b00e08269dca6bba7ad5f5ce4ed1f21e558542f
-Size (SDL-2.0.0-7238.tar.gz) = 4394309 bytes
+SHA1 (SDL-2.0.0-7250.tar.gz) = 1cebc73c97d2f83752054eeae4329ed791db9553
+RMD160 (SDL-2.0.0-7250.tar.gz) = a29d8cede1b3e728a441a4ad6afc171691c2b5ce
+Size (SDL-2.0.0-7250.tar.gz) = 4400644 bytes
