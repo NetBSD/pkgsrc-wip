@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2011/01/07 10:15:58 phonohawk Exp $
+# $NetBSD: Makefile,v 1.4 2013/06/05 22:11:21 szptvlfn Exp $
 #
 
-DISTNAME=	regex-compat-0.93.1
+DISTNAME=	regex-compat-0.95.1
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
