@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1 2013/05/25 13:45:59 francksys Exp $
+$NetBSD: distinfo,v 1.2 2013/06/06 08:44:10 francksys Exp $
 
 SHA1 (theama-0.2.tar.bz2) = 672615b7022c70b26d264dc51ebfea8ccd98b97b
 RMD160 (theama-0.2.tar.bz2) = 82988392804dc6f3835d6c0e4cac52d5e4ee9659
 Size (theama-0.2.tar.bz2) = 19166 bytes
-SHA1 (patch-theama.c) = 5f8ab96162a1eef3a866d009fa8e8076d350e1f5
