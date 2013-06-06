@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.125 2013/05/30 17:10:01 makoto Exp $
+@comment $NetBSD: PLIST,v 1.126 2013/06/06 15:31:07 makoto Exp $
 bin/ctags
 bin/ebrowse
 bin/emacs
@@ -84,6 +84,7 @@ share/emacs/${PKGVERSION}/etc/COPYING
 share/emacs/${PKGVERSION}/etc/DEBUG
 share/emacs/${PKGVERSION}/etc/DEVEL.HUMOR
 share/emacs/${PKGVERSION}/etc/DISTRIB
+share/emacs/${PKGVERSION}/etc/DOC
 share/emacs/${PKGVERSION}/etc/ERC-NEWS
 share/emacs/${PKGVERSION}/etc/ETAGS.EBNF
 share/emacs/${PKGVERSION}/etc/ETAGS.README
@@ -1728,6 +1729,8 @@ share/emacs/${PKGVERSION}/lisp/emacs-lisp/edebug.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/edebug.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/eieio-base.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/eieio-base.elc
+share/emacs/${PKGVERSION}/lisp/emacs-lisp/eieio-core.el.gz
+share/emacs/${PKGVERSION}/lisp/emacs-lisp/eieio-core.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/eieio-custom.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/eieio-custom.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/eieio-datadebug.el.gz
@@ -2961,6 +2964,8 @@ share/emacs/${PKGVERSION}/lisp/obsolete/spell.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/spell.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/sregex.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/sregex.elc
+share/emacs/${PKGVERSION}/lisp/obsolete/sup-mouse.el.gz
+share/emacs/${PKGVERSION}/lisp/obsolete/sup-mouse.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/swedish.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/swedish.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/sym-comp.el.gz
@@ -2969,6 +2974,8 @@ share/emacs/${PKGVERSION}/lisp/obsolete/terminal.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/terminal.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/vc-mcvs.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/vc-mcvs.elc
+share/emacs/${PKGVERSION}/lisp/obsolete/xesam.el.gz
+share/emacs/${PKGVERSION}/lisp/obsolete/xesam.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/yow.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/yow.elc
 share/emacs/${PKGVERSION}/lisp/org/ob-C.el.gz
@@ -3412,6 +3419,8 @@ share/emacs/${PKGVERSION}/lisp/progmodes/pascal.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/pascal.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/perl-mode.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/perl-mode.elc
+share/emacs/${PKGVERSION}/lisp/progmodes/prog-mode.el.gz
+share/emacs/${PKGVERSION}/lisp/progmodes/prog-mode.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/prolog.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/prolog.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/ps-mode.el.gz
