@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/06/07 23:03:21 othyro Exp $
+
+SHA1 (redis-py-2.7.5/2.7.5.tar.gz) = 437f0b182dc7df05bd067233b1c251c5d44d0963
+RMD160 (redis-py-2.7.5/2.7.5.tar.gz) = e661bbbffb281d89a8272535072391f06f27108f
+Size (redis-py-2.7.5/2.7.5.tar.gz) = 54904 bytes

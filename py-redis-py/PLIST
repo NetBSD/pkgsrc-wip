@@ -1,0 +1,23 @@
+@comment $NetBSD: PLIST,v 1.1 2013/06/07 23:03:21 othyro Exp $
+${PYSITELIB}/redis-${EGG_FILE}/PKG-INFO
+${PYSITELIB}/redis-${EGG_FILE}/SOURCES.txt
+${PYSITELIB}/redis-${EGG_FILE}/dependency_links.txt
+${PYSITELIB}/redis-${EGG_FILE}/top_level.txt
+${PYSITELIB}/redis/__init__.py
+${PYSITELIB}/redis/__init__.pyc
+${PYSITELIB}/redis/__init__.pyo
+${PYSITELIB}/redis/_compat.py
+${PYSITELIB}/redis/_compat.pyc
+${PYSITELIB}/redis/_compat.pyo
+${PYSITELIB}/redis/client.py
+${PYSITELIB}/redis/client.pyc
+${PYSITELIB}/redis/client.pyo
+${PYSITELIB}/redis/connection.py
+${PYSITELIB}/redis/connection.pyc
+${PYSITELIB}/redis/connection.pyo
+${PYSITELIB}/redis/exceptions.py
+${PYSITELIB}/redis/exceptions.pyc
+${PYSITELIB}/redis/exceptions.pyo
+${PYSITELIB}/redis/utils.py
+${PYSITELIB}/redis/utils.pyc
+${PYSITELIB}/redis/utils.pyo
