@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5308 2013/06/07 23:04:22 othyro Exp $
+# $Id: Makefile,v 1.5309 2013/06/07 23:26:33 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2476,6 +2476,7 @@ SUBDIR+=	py-keyring
 SUBDIR+=	py-khayyam
 SUBDIR+=	py-kivy
 SUBDIR+=	py-knockknock
+SUBDIR+=	py-kombu
 SUBDIR+=	py-kyra
 SUBDIR+=	py-lapack
 SUBDIR+=	py-larry
