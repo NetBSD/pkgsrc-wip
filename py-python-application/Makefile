@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/06/07 21:17:15 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2013/06/07 23:13:35 othyro Exp $
 #
 
 DISTNAME=	python-application-1.4.0
@@ -13,5 +13,6 @@ LICENSE=	gnu-lgpl-v2
 
 USE_LANGUAGES=	# none
 
+DEPENDS+=	${PYPKGPREFIX}-ZopeInterface-[0-9]*:../../devel/py-ZopeInterface
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
