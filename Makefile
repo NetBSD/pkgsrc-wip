@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5307 2013/06/07 22:52:27 othyro Exp $
+# $Id: Makefile,v 1.5308 2013/06/07 23:04:22 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2623,6 +2623,7 @@ SUBDIR+=	py-rcsparse
 SUBDIR+=	py-rdf
 SUBDIR+=	py-rdflib
 SUBDIR+=	py-rdflib-django
+SUBDIR+=	py-redis-py
 SUBDIR+=	py-regex
 SUBDIR+=	py-remctl
 SUBDIR+=	py-report
