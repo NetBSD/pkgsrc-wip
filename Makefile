@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5306 2013/06/07 22:28:48 othyro Exp $
+# $Id: Makefile,v 1.5307 2013/06/07 22:52:27 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -595,6 +595,7 @@ SUBDIR+=	evas-gif
 SUBDIR+=	evas-software-x11
 SUBDIR+=	evas-xpm
 SUBDIR+=	evas_generic_loaders
+SUBDIR+=	eventlib
 SUBDIR+=	eventlog
 SUBDIR+=	ever-note-mode
 SUBDIR+=	evilvte
