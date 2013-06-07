@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2013/03/17 22:42:31 asau Exp $
+@comment $NetBSD: PLIST,v 1.9 2013/06/07 14:49:20 makoto Exp $
 bin/cifsdd
 bin/dbwrap_tool
 bin/eventlogadm
@@ -296,6 +296,7 @@ ${PYSITELIB}/samba/dcerpc/winreg.so
 ${PYSITELIB}/samba/dcerpc/wkssvc.so
 ${PYSITELIB}/samba/dcerpc/xattr.so
 ${PYSITELIB}/samba/dckeytab.so
+${PYSITELIB}/samba/descriptor.py
 ${PYSITELIB}/samba/drs_utils.py
 ${PYSITELIB}/samba/dsdb.so
 ${PYSITELIB}/samba/external/__init__.py
@@ -479,7 +480,6 @@ ${PYSITELIB}/samba/posix_eadb.so
 ${PYSITELIB}/samba/provision/__init__.py
 ${PYSITELIB}/samba/provision/backend.py
 ${PYSITELIB}/samba/provision/common.py
-${PYSITELIB}/samba/provision/descriptor.py
 ${PYSITELIB}/samba/provision/sambadns.py
 ${PYSITELIB}/samba/registry.so
 ${PYSITELIB}/samba/samba3/__init__.py
@@ -493,6 +493,7 @@ ${PYSITELIB}/samba/sd_utils.py
 ${PYSITELIB}/samba/security.so
 ${PYSITELIB}/samba/sites.py
 ${PYSITELIB}/samba/smb.so
+${PYSITELIB}/samba/tdb_util.py
 ${PYSITELIB}/samba/tests/__init__.py
 ${PYSITELIB}/samba/tests/auth.py
 ${PYSITELIB}/samba/tests/blackbox/__init__.py
@@ -722,7 +723,7 @@ lib/samba/libtdb.so.1
 lib/samba/libtdb.so.1.2.11
 lib/samba/libtdb_compat.so
 lib/samba/libtevent.so.0
-lib/samba/libtevent.so.0.9.17
+lib/samba/libtevent.so.0.9.18
 lib/samba/libtrusts_util.so
 lib/samba/libutil_cmdline.so
 lib/samba/libutil_reg.so
@@ -799,7 +800,6 @@ sbin/samba_dnsupdate
 sbin/samba_kcc
 sbin/samba_spnupdate
 sbin/samba_upgradedns
-sbin/samba_upgradeprovision
 sbin/smbd
 sbin/swat
 sbin/winbindd

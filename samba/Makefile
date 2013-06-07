@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2013/03/17 22:42:31 asau Exp $
+# $NetBSD: Makefile,v 1.14 2013/06/07 14:49:20 makoto Exp $
 
 .include "../../net/samba/Makefile.mirrors"
 
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.samba.org/
 COMMENT=	SMB/CIFS protocol server suite
 LICENSE=	gnu-gpl-v3
 
-VERSION=	4.0.3
+VERSION=	4.0.6
 CONFLICTS+=	ja-samba-[0-9]* pam-smbpass-[0-9]* tdb-[0-9]* winbind-[0-9]*
 
 FILESDIR=		${PKGDIR}/../../net/samba/files
@@ -44,7 +44,8 @@ FILES_SUBST+=		WINBINDD_RCD_SCRIPT=${WINBINDD_RCD_SCRIPT:Q}
 
 # mktemp is useful for the replacement adduser script, but don't require
 # a full dependency since it's not actually needed by samba.
-USE_TOOLS+=		gmake mktemp perl:run python
+USE_TOOLS+=		gmake mktemp perl:run
+
 REPLACE_PERL=		script/findsmb.in
 
 USE_GNU_ICONV=		yes	# FIXME: something doesn't work on NetBSD
@@ -52,8 +53,8 @@ USE_GNU_READLINE=	yes
 
 HAS_CONFIGURE=		yes
 GNU_CONFIGURE_LIBDIR=	${SAMBA_LIBDIR}
-CONFIG_SHELL=		$(PYTHONBIN)
-CONFIGURE_SCRIPT=	$(WRKSRC)/buildtools/bin/waf
+CONFIG_SHELL=		${PYTHONBIN}
+CONFIGURE_SCRIPT=	${WRKSRC}/buildtools/bin/waf
 CONFIGURE_ARGS+=	configure
 CONFIGURE_ARGS+=	--prefix=$(PREFIX:Q)
 #CONFIGURE_ARGS+=	--with-libiconv=${BUILDLINK_PREFIX.iconv}
