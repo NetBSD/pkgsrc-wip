@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/06/07 23:40:57 othyro Exp $
+
+SHA1 (billiard-2.7.3.28.tar.gz) = 047d948f44b14e2fb65eb16a348063f386661f29
+RMD160 (billiard-2.7.3.28.tar.gz) = c9181ef29a418b4a8cc3239db6a39d1998eca2a5
+Size (billiard-2.7.3.28.tar.gz) = 132990 bytes
