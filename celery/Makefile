@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2013/06/07 23:45:12 othyro Exp $
+# $NetBSD: Makefile,v 1.4 2013/06/07 23:52:27 othyro Exp $
 #
 
 DISTNAME=	celery-3.0.19
@@ -12,7 +12,7 @@ LICENSE=	modified-bsd # AND cc-by-nc-sa-v3.0
 
 USE_LANGUAGES=	# none
 
-DEPENDS+=	${PYPKGPREFIX}-billard-[0-9]*:../../wip/py-billiard
+DEPENDS+=	${PYPKGPREFIX}-billiard-[0-9]*:../../wip/py-billiard
 DEPENDS+=	${PYPKGPREFIX}-kombu-[0-9]*:../../wip/py-kombu
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
