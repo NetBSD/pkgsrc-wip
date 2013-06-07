@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2013/06/07 22:28:01 othyro Exp $
+${PYSITELIB}/ejson-${EGG_FILE}/PKG-INFO
+${PYSITELIB}/ejson-${EGG_FILE}/SOURCES.txt
+${PYSITELIB}/ejson-${EGG_FILE}/dependency_links.txt
+${PYSITELIB}/ejson-${EGG_FILE}/requires.txt
+${PYSITELIB}/ejson-${EGG_FILE}/top_level.txt
+${PYSITELIB}/ejson/__init__.py
+${PYSITELIB}/ejson/__init__.pyc
+${PYSITELIB}/ejson/__init__.pyo
+${PYSITELIB}/ejson/serializers.py
+${PYSITELIB}/ejson/serializers.pyc
+${PYSITELIB}/ejson/serializers.pyo
