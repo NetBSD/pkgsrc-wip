@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2010/07/17 00:09:47 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.4 2013/06/07 21:32:11 othyro Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -38,6 +38,9 @@ ${PYSITELIB}/eventlet/green/BaseHTTPServer.pyo
 ${PYSITELIB}/eventlet/green/CGIHTTPServer.py
 ${PYSITELIB}/eventlet/green/CGIHTTPServer.pyc
 ${PYSITELIB}/eventlet/green/CGIHTTPServer.pyo
+${PYSITELIB}/eventlet/green/MySQLdb.py
+${PYSITELIB}/eventlet/green/MySQLdb.pyc
+${PYSITELIB}/eventlet/green/MySQLdb.pyo
 ${PYSITELIB}/eventlet/green/OpenSSL/SSL.py
 ${PYSITELIB}/eventlet/green/OpenSSL/SSL.pyc
 ${PYSITELIB}/eventlet/green/OpenSSL/SSL.pyo
@@ -68,6 +71,9 @@ ${PYSITELIB}/eventlet/green/SocketServer.pyo
 ${PYSITELIB}/eventlet/green/__init__.py
 ${PYSITELIB}/eventlet/green/__init__.pyc
 ${PYSITELIB}/eventlet/green/__init__.pyo
+${PYSITELIB}/eventlet/green/_socket_nodns.py
+${PYSITELIB}/eventlet/green/_socket_nodns.pyc
+${PYSITELIB}/eventlet/green/_socket_nodns.pyo
 ${PYSITELIB}/eventlet/green/asynchat.py
 ${PYSITELIB}/eventlet/green/asynchat.pyc
 ${PYSITELIB}/eventlet/green/asynchat.pyo
@@ -113,6 +119,9 @@ ${PYSITELIB}/eventlet/green/urllib.pyo
 ${PYSITELIB}/eventlet/green/urllib2.py
 ${PYSITELIB}/eventlet/green/urllib2.pyc
 ${PYSITELIB}/eventlet/green/urllib2.pyo
+${PYSITELIB}/eventlet/green/zmq.py
+${PYSITELIB}/eventlet/green/zmq.pyc
+${PYSITELIB}/eventlet/green/zmq.pyo
 ${PYSITELIB}/eventlet/greenio.py
 ${PYSITELIB}/eventlet/greenio.pyc
 ${PYSITELIB}/eventlet/greenio.pyo
@@ -173,6 +182,9 @@ ${PYSITELIB}/eventlet/semaphore.pyo
 ${PYSITELIB}/eventlet/support/__init__.py
 ${PYSITELIB}/eventlet/support/__init__.pyc
 ${PYSITELIB}/eventlet/support/__init__.pyo
+${PYSITELIB}/eventlet/support/greendns.py
+${PYSITELIB}/eventlet/support/greendns.pyc
+${PYSITELIB}/eventlet/support/greendns.pyo
 ${PYSITELIB}/eventlet/support/greenlets.py
 ${PYSITELIB}/eventlet/support/greenlets.pyc
 ${PYSITELIB}/eventlet/support/greenlets.pyo

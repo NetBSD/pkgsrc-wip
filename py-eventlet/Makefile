@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2012/10/07 11:54:32 asau Exp $
+# $NetBSD: Makefile,v 1.6 2013/06/07 21:32:11 othyro Exp $
 #
 
-DISTNAME=	eventlet-0.9.9
+DISTNAME=	eventlet-0.9.17
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel python
 MASTER_SITES=	http://pypi.python.org/packages/source/e/eventlet/
