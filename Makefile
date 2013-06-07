@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5309 2013/06/07 23:26:33 othyro Exp $
+# $Id: Makefile,v 1.5310 2013/06/07 23:41:48 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2315,6 +2315,7 @@ SUBDIR+=	py-atpy
 SUBDIR+=	py-behaviour
 SUBDIR+=	py-bidict
 SUBDIR+=	py-bigfloat
+SUBDIR+=	py-billiard
 SUBDIR+=	py-bip
 SUBDIR+=	py-biskit
 SUBDIR+=	py-bitarray
