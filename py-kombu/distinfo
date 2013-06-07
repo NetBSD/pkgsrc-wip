@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/06/07 23:25:35 othyro Exp $
+
+SHA1 (kombu-2.5.10.tar.gz) = d0544fa5dde969850fbb6b444efc3953cb9ea708
+RMD160 (kombu-2.5.10.tar.gz) = d9562e0bf8e2b59a75f7246b5bc99e49232934c4
+Size (kombu-2.5.10.tar.gz) = 304810 bytes
