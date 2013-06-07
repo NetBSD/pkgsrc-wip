@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2013/06/07 13:40:01 makoto Exp $
+
+SHA1 (dejagnu-1.5.tar.gz) = bd84c71e0587af0278a9b6a404d6da1b92df66cd
+RMD160 (dejagnu-1.5.tar.gz) = e2ded4f1f5b94a86734538a1091ec6738c4c9c99
+Size (dejagnu-1.5.tar.gz) = 576269 bytes
+SHA1 (patch-Makefile) = 6d851b18c025b7b7216606f317752b42d4105ba2

@@ -1,0 +1,40 @@
+$NetBSD: patch-Makefile,v 1.1 2013/06/07 13:40:01 makoto Exp $
+
+Avoid following warning at make package-install:
+warning: share/dejagnu/baseboards/am33_2.0-libremote.exp: executable bit is set on non-executable file.
+
+--- work/dejagnu-1.5/Makefile.in.orig	2011-03-09 09:47:24.000000000 +0900
++++ Makefile.in	2013-06-07 22:32:21.000000000 +0900
+@@ -505,8 +505,8 @@
+ 	while read type dir files; do \
+ 	     if test "$$dir" = .; then dir=; else dir=/$$dir; fi; \
+ 	     test -z "$$files" || { \
+-	       echo " $(INSTALL_SCRIPT) $$files '$(DESTDIR)$(baseboarddir)$$dir'"; \
+-	       $(INSTALL_SCRIPT) $$files "$(DESTDIR)$(baseboarddir)$$dir" || exit $$?; \
++	       echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(baseboarddir)$$dir'"; \
++	       $(INSTALL_DATA) $$files "$(DESTDIR)$(baseboarddir)$$dir" || exit $$?; \
+ 	     } \
+ 	; done
+ 
+@@ -573,8 +573,8 @@
+ 	while read type dir files; do \
+ 	     if test "$$dir" = .; then dir=; else dir=/$$dir; fi; \
+ 	     test -z "$$files" || { \
+-	       echo " $(INSTALL_SCRIPT) $$files '$(DESTDIR)$(configdir)$$dir'"; \
+-	       $(INSTALL_SCRIPT) $$files "$(DESTDIR)$(configdir)$$dir" || exit $$?; \
++	       echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(configdir)$$dir'"; \
++	       $(INSTALL_DATA) $$files "$(DESTDIR)$(configdir)$$dir" || exit $$?; \
+ 	     } \
+ 	; done
+ 
+@@ -641,8 +641,8 @@
+ 	while read type dir files; do \
+ 	     if test "$$dir" = .; then dir=; else dir=/$$dir; fi; \
+ 	     test -z "$$files" || { \
+-	       echo " $(INSTALL_SCRIPT) $$files '$(DESTDIR)$(pkgdatadir)$$dir'"; \
+-	       $(INSTALL_SCRIPT) $$files "$(DESTDIR)$(pkgdatadir)$$dir" || exit $$?; \
++	       echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(pkgdatadir)$$dir'"; \
++	       $(INSTALL_DATA) $$files "$(DESTDIR)$(pkgdatadir)$$dir" || exit $$?; \
+ 	     } \
+ 	; done
+ 
