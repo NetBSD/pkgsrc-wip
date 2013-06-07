@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5305 2013/06/07 22:11:27 othyro Exp $
+# $Id: Makefile,v 1.5306 2013/06/07 22:28:48 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2393,6 +2393,7 @@ SUBDIR+=	py-dreampie
 SUBDIR+=	py-duali
 SUBDIR+=	py-ecdsa
 SUBDIR+=	py-ecspy
+SUBDIR+=	py-ejson
 SUBDIR+=	py-embedc
 SUBDIR+=	py-emmsa
 SUBDIR+=	py-enre
