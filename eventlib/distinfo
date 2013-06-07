@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/06/07 22:51:45 othyro Exp $
+
+SHA1 (eventlib-0.1.1.tar.gz) = 30e775337cfd20234a750c663acc351f0be89d31
+RMD160 (eventlib-0.1.1.tar.gz) = 73598c3e3e0acf23988b44c2c16b86ee403bf5dc
+Size (eventlib-0.1.1.tar.gz) = 11246 bytes
