@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5302 2013/06/07 13:43:20 makoto Exp $
+# $Id: Makefile,v 1.5303 2013/06/07 21:18:37 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2604,6 +2604,7 @@ SUBDIR+=	py-pysph
 SUBDIR+=	py-pyswisseph
 SUBDIR+=	py-pythia
 SUBDIR+=	py-pythics
+SUBDIR+=	py-python-application
 SUBDIR+=	py-pytkgen
 SUBDIR+=	py-pyvib2
 SUBDIR+=	py-qecalc
