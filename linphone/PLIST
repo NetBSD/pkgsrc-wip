@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.19 2012/04/13 20:02:17 gschwarz Exp $
-${GUI}bin/linphone
+@comment $NetBSD: PLIST,v 1.20 2013/06/07 17:37:59 othyro Exp $
+bin/linphone
 bin/linphonec
 bin/linphonecsh
 bin/mediastream
@@ -17,7 +17,9 @@ include/mediastreamer2/ice.h
 include/mediastreamer2/mediastream.h
 include/mediastreamer2/msaudiomixer.h
 include/mediastreamer2/mschanadapter.h
+include/mediastreamer2/mscodecutils.h
 include/mediastreamer2/mscommon.h
+include/mediastreamer2/msconference.h
 include/mediastreamer2/msequalizer.h
 include/mediastreamer2/mseventqueue.h
 include/mediastreamer2/msextdisplay.h
@@ -154,3 +156,8 @@ share/sounds/linphone/rings/sweet.wav
 share/sounds/linphone/rings/synth.wav
 share/sounds/linphone/rings/tapping.wav
 share/sounds/linphone/rings/toy-mono.wav
+@pkgdir share/tutorials/linphone
+@pkgdir share/gnome/help/linphone/ja
+@pkgdir share/gnome/help/linphone/it
+@pkgdir share/gnome/help/linphone/fr
+@pkgdir share/gnome/help/linphone/C

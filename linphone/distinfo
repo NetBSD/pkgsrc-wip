@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.15 2013/04/20 19:08:46 noud4 Exp $
+$NetBSD: distinfo,v 1.16 2013/06/07 17:37:59 othyro Exp $
 
 SHA1 (linphone-3.5.2.tar.gz) = d0dde9d421b7cf6893c8e5acb969d5bd4a04a231
 RMD160 (linphone-3.5.2.tar.gz) = baca1927172df5b57beb6a46c62999fcac65ba48
@@ -10,4 +10,5 @@ SHA1 (patch-ae) = d4655225c52533e25d8ae0bf1e998afcc4965237
 SHA1 (patch-ah) = 508ffa2d7ffc97d7c202a94c672a8aec0b7cd42e
 SHA1 (patch-ba) = 0caaee9b8eb8957e079d11ed9d08f9af551812d3
 SHA1 (patch-bb) = f0f9eb7dffb4f5b29b4f659661b9544cb5f84178
+SHA1 (patch-mediastreamer2_configure) = 3faa17243fd1ac6867454788696a9a6c37913198
 SHA1 (patch-mediastreamer2_tests_Makefile.in) = e6530f576de41a5d5053afaca8a029f21412c58e
