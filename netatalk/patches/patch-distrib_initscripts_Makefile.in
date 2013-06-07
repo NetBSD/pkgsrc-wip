@@ -1,0 +1,22 @@
+$NetBSD: patch-distrib_initscripts_Makefile.in,v 1.1 2013/06/07 00:28:23 makoto Exp $
+
+--- distrib/initscripts/Makefile.in.orig	2013-05-24 22:32:58.000000000 +0900
++++ distrib/initscripts/Makefile.in	2013-06-07 07:34:05.000000000 +0900
+@@ -596,7 +596,7 @@ info: info-am
+ 
+ info-am:
+ 
+-install-data-am: install-serviceDATA install-sysvSCRIPTS
++install-data-am: install-serviceDATA
+ 	@$(NORMAL_INSTALL)
+ 	$(MAKE) $(AM_MAKEFLAGS) install-data-hook
+ install-dvi: install-dvi-am
+@@ -712,7 +712,7 @@ uninstall: uninstall-startup
+ @USE_SUSE_SYSV_TRUE@	rm -f $(DESTDIR)$(sysvdir)/$(sysv_SCRIPTS)
+ 
+ @USE_NETBSD_TRUE@netatalk: rc.netbsd
+-@USE_NETBSD_TRUE@	cp -f $< $@
++@USE_NETBSD_TRUE@	cp -f $? $@
+ @USE_NETBSD_TRUE@	chmod a+x $@
+ 
+ @USE_NETBSD_TRUE@install-data-hook:

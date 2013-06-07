@@ -1,0 +1,25 @@
+$NetBSD: patch-ae,v 1.1 2013/06/07 00:28:23 makoto Exp $
+
+--- config.h.in.orig	2013-05-24 22:33:19.000000000 +0900
++++ config.h.in	2013-06-07 07:18:53.000000000 +0900
+@@ -250,8 +250,8 @@
+ /* Define to 1 if you have the `getproplist' function. */
+ #undef HAVE_GETPROPLIST
+ 
+-/* Define to 1 if you have the `getusershell' function. */
+-#undef HAVE_GETUSERSHELL
++/* Define to 1 if you have the `getifaddrs' function. */
++#undef HAVE_GETIFADDRS
+ 
+ /* Define to 1 if you have the `getxattr' function. */
+ #undef HAVE_GETXATTR
+@@ -433,6 +433,9 @@
+ /* Define to 1 if you have the `renameat' function. */
+ #undef HAVE_RENAMEAT
+ 
++/* Define to 1 if you have the NetBSD quota library */
++#undef HAVE_LIBQUOTA
++
+ /* Define to 1 if you have the <rpcsvc/rquota.h> header file. */
+ #undef HAVE_RPCSVC_RQUOTA_H
+ 

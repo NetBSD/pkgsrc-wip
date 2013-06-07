@@ -1,0 +1,18 @@
+$NetBSD: distinfo,v 1.1 2013/06/07 00:28:23 makoto Exp $
+
+SHA1 (netatalk-3.0.4.tar.bz2) = f9dbf157e98f03cef8be3d55b38637584b67e6d5
+RMD160 (netatalk-3.0.4.tar.bz2) = c8840f000246eefa66cc2d16993bad13949921f5
+Size (netatalk-3.0.4.tar.bz2) = 1708476 bytes
+SHA1 (patch-ae) = d36a11b7910e9cfc737b380db427a1e7c87917c6
+SHA1 (patch-ah) = dc0d241f734140eccd8956529872e901842d1b65
+SHA1 (patch-am) = 369a98619870a21de601bf0216d057a2565ff374
+SHA1 (patch-an) = 5472758813b927708ca178809fb89733719e67b4
+SHA1 (patch-ao) = 83f8ccfd443711a62fa9be3852332ec4e10b6150
+SHA1 (patch-ap) = 5c68ece1e78741d884c078e139d26d6bb86aae1b
+SHA1 (patch-aq) = 0793cf5ec158aa27c42b5d8a96651307d7c7c8b6
+SHA1 (patch-bin_ad_ad__cp.c) = 0a9e93f6149ff53f0f0d8c36ea4c5e635b5b624c
+SHA1 (patch-distrib_initscripts_Makefile.in) = fe6240b78e4c38167150b960ea20c519345de2f0
+SHA1 (patch-etc_afpd_afp_mdns.c) = ab87bf511466ef183de1ee8f8a9ad1fbb8776066
+SHA1 (patch-etc_afpd_quota_c) = 123d671ffe370dca1e85a81011cf8add3d4f66d2
+SHA1 (patch-include_atalk_ldapconfig.h) = d0bb4a1bf520b18228de6ab87b646f4496852fce
+SHA1 (patch-macros_quota-check.m4) = b1484f83a2a6ba5bd50623ab525d5366bb71abaa

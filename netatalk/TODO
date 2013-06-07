@@ -1,0 +1,16 @@
+- It is just packaged, nothing verified more than that.
+- RCD_SCRIPTS and CONF_FILE seems having changed, and not adjusted yet,
+  or even nothing installed yet.
+- pkglint for now:
+
+ERROR: PLIST:12: Configuration files must not be registered in the PLIST. Please use the CONF_FILES framework, which is described in mk/pkginstall/bsd.pkginstall.mk.
+ERROR: patches/patch-ae:3: Comment expected.
+ERROR: patches/patch-ah:3: Comment expected.
+ERROR: patches/patch-am:3: Comment expected.
+ERROR: patches/patch-an:3: Comment expected.
+ERROR: patches/patch-ao:3: Comment expected.
+ERROR: patches/patch-bin_ad_ad__cp.c:3: Comment expected.
+ERROR: patches/patch-distrib_initscripts_Makefile.in:3: Comment expected.
+ERROR: patches/patch-etc_afpd_afp_mdns.c:3: Comment expected.
+ERROR: patches/patch-include_atalk_ldapconfig.h:3: Comment expected.
+10 errors and 0 warnings found. (Use -e for more details.)
