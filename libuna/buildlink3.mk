@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2013/01/10 15:50:39 othyro Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2013/06/08 13:18:02 othyro Exp $
 
 BUILDLINK_TREE+=	libuna
 
@@ -8,15 +8,7 @@ LIBUNA_BUILDLINK3_MK:=
 BUILDLINK_API_DEPENDS.libuna+=	libuna>=20130103
 BUILDLINK_PKGSRCDIR.libuna?=	../../wip/libuna
 
-pkgbase := libuna
-.include "../../mk/pkg-build-options.mk"
-
-
-.if !empty(PKG_BUILD_OPTIONS.libuna:Mnls)
-.include "../../devel/gettext-lib/buildlink3.mk"
-.endif
-
-#.include "../../wip/libcerror/buildlink3.mk"
+.include "../../wip/libcerror/buildlink3.mk"
 .endif	# LIBUNA_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-libuna

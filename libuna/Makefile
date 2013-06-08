@@ -1,17 +1,19 @@
-# $NetBSD: Makefile,v 1.3 2013/01/10 15:50:39 othyro Exp $
+# $NetBSD: Makefile,v 1.4 2013/06/08 13:18:02 othyro Exp $
 #
 
-DISTNAME=	libuna-alpha-20130103
+DATESTAMP=	20130608
+DISTNAME=	libuna-alpha-${DATESTAMP}
 PKGNAME=	${DISTNAME:S/alpha-//1}
 CATEGORIES=	converters
-MASTER_SITES=	http://libuna.googlecode.com/files/
+MASTER_SITES=	https://googledrive.com/host/0B3fBvzttpiiSaXBjN1ZJVzVsbjQ/
+FETCH_USING=	curl
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/libuna/
 COMMENT=	Library to support Unicode and ASCII (byte string) conversions
 LICENSE=	gnu-lgpl-v3
 
-WRKSRC=		${WRKDIR}/libuna-20130103
+WRKSRC=		${WRKDIR}/libuna-${DATESTAMP}
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	msgfmt msgmerge pkg-config xgettext
@@ -20,5 +22,8 @@ PKGCONFIG_OVERRIDE+=	libuna.pc.in
 
 .include "options.mk"
 
-#.include "../../wip/libcerror/buildlink3.mk"
+.include "../../wip/libcnotify/buildlink3.mk"
+#.include "../../wip/libcfile/buildlink3.mk"
+.include "../../wip/libclocale/buildlink3.mk"
+.include "../../wip/libcerror/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
