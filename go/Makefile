@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.5 2013/03/12 20:02:33 bsiegert Exp $
+# $NetBSD: Makefile,v 1.6 2013/06/08 11:04:24 bsiegert Exp $
 #
 
-DISTNAME=	go-1.1pre-20130311
-PKGNAME=	${DISTNAME:S/pre-/pre/}
+DISTNAME=	go1.1rc1.src
+PKGNAME=	go-1.1-rc1
 CATEGORIES=	lang
-MASTER_SITES=	# manually packaged, on ftp.n.o
+MASTER_SITES=	https://go.googlecode.com/files/
 
 MAINTAINER=	bsiegert@NetBSD.org
 HOMEPAGE=	http://golang.org/
 COMMENT=	The Go programming language
 LICENSE=	modified-bsd
+FETCH_USING=	curl
 
 WRKSRC=		${WRKDIR}/go
 USE_TOOLS+=	bash:run perl:run pax
@@ -70,7 +71,7 @@ REPLACE_PERL+=	src/pkg/syscall/mksysnum_netbsd.pl
 REPLACE_PERL+=	src/pkg/syscall/mksysnum_openbsd.pl
 REPLACE_PERL+=	test/errchk
 
-# uses /bin/rc
+# uses /bin/rc (for Plan 9)
 CHECK_INTERPRETER_SKIP+=	go/src/all.rc
 CHECK_INTERPRETER_SKIP+=	go/src/clean.rc
 CHECK_INTERPRETER_SKIP+=	go/src/make.rc
