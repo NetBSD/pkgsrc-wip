@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.1 2013/05/29 11:11:21 othyro Exp $
+# $NetBSD: options.mk,v 1.2 2013/06/08 13:07:45 othyro Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.libcsplit
 PKG_SUPPORTED_OPTIONS=	nls static wide-curses
-PKG_SUGGESTED_OPTIONS+=	nls wide-curses
+PKG_SUGGESTED_OPTIONS+=	nls static wide-curses
 
 .include "../../mk/bsd.options.mk"
 
