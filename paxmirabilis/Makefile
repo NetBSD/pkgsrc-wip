@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2012/10/04 19:44:07 asau Exp $
+# $NetBSD: Makefile,v 1.3 2013/06/08 11:36:04 bsiegert Exp $
 #
 
-DISTNAME=	paxmirabilis-20120520
+DISTNAME=	paxmirabilis-20120606
 CATEGORIES=	archivers
 MASTER_SITES=	http://www.mirbsd.org/MirOS/dist/mir/cpio/
 EXTRACT_SUFX=	.cpio.gz
