@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2013/06/08 12:49:58 othyro Exp $
+include/libcpath.h
+include/libcpath/codepage.h
+include/libcpath/definitions.h
+include/libcpath/error.h
+include/libcpath/extern.h
+include/libcpath/features.h
+include/libcpath/types.h
+lib/libcpath.la
+lib/pkgconfig/libcpath.pc
+man/man3/libcpath.3
