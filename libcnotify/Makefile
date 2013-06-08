@@ -1,16 +1,18 @@
-# $NetBSD: Makefile,v 1.1 2013/05/29 10:29:25 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2013/06/08 13:10:27 othyro Exp $
 
-DISTNAME=	libcnotify-alpha-20121224
+DATESTAMP=	20121224
+DISTNAME=	libcnotify-alpha-${DATESTAMP}
 PKGNAME=	${DISTNAME:S/-alpha//1}
 CATEGORIES=	sysutils
-MASTER_SITES=	http://libcnotify.googlecode.com/files/
+MASTER_SITES=	https://googledrive.com/host/0B3fBvzttpiiSb0xsMGNocEtGUjQ/
+FETCH_USING=	curl
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://code.google.com/p/libcnotify/
 COMMENT=	Library to support cross-platform C notification functions
 LICENSE=	gnu-lgpl-v3
 
-WRKSRC=		${WRKDIR}/libcnotify-20121224
+WRKSRC=		${WRKDIR}/libcnotify-${DATESTAMP}
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	msgfmt msgmerge pkg-config xgettext
