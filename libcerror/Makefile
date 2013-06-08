@@ -1,17 +1,19 @@
-# $NetBSD: Makefile,v 1.3 2013/05/28 12:14:20 othyro Exp $
+# $NetBSD: Makefile,v 1.4 2013/06/08 13:05:50 othyro Exp $
 #
 
-DISTNAME=	libcerror-alpha-20130411
+DATESTAMP=	20130411
+DISTNAME=	libcerror-alpha-${DATESTAMP}
 PKGNAME=	${DISTNAME:S/-alpha//1}
 CATEGORIES=	devel
-MASTER_SITES=	http://libcerror.googlecode.com/files/
+MASTER_SITES=	https://googledrive.com/host/0B3fBvzttpiiSV2xnMTZjSk5WVTg/
+FETCH_USING=	curl
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://code.google.com/p/libcerror/
 COMMENT=	Library for cross-platform C error functions
 LICENSE=	gnu-lgpl-v3
 
-WRKSRC=		${WRKDIR}/libcerror-20130411
+WRKSRC=		${WRKDIR}/libcerror-${DATESTAMP}
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	msgfmt msgmerge pkg-config xgettext
