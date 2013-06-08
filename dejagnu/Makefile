@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/06/08 00:38:45 makoto Exp $
+# $NetBSD: Makefile,v 1.3 2013/06/08 08:02:29 makoto Exp $
 #
 
 DISTNAME=	dejagnu-1.5
@@ -18,5 +18,10 @@ INFO_FILES=	yes
 CONFIGURE_ARGS+=	--infodir=${PREFIX}/info
 
 INSTALL_TARGET=	install install-info
+
+# c++ is necessary for make test
+USE_LANGUAGES+=	c c++
+TEST_TARGET=	check
+TEST_ENV=	PATH=/usr/bin:/bin:${PREFIX}/bin
 
 .include "../../mk/bsd.pkg.mk"
