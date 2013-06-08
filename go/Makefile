@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2013/06/08 11:04:24 bsiegert Exp $
+# $NetBSD: Makefile,v 1.7 2013/06/08 11:24:47 bsiegert Exp $
 #
 
-DISTNAME=	go1.1rc1.src
-PKGNAME=	go-1.1-rc1
+DISTNAME=	go1.1.src
+PKGNAME=	go-1.1
 CATEGORIES=	lang
 MASTER_SITES=	https://go.googlecode.com/files/
 
@@ -15,12 +15,14 @@ FETCH_USING=	curl
 WRKSRC=		${WRKDIR}/go
 USE_TOOLS+=	bash:run perl:run pax
 
-# TODO: arm
+# TODO: other arm platforms?
 ONLY_FOR_PLATFORM= *-*-i386 *-*-x86_64
 .if ${MACHINE_ARCH} == "i386"
 GOARCH=		386
 .elif ${MACHINE_ARCH} == "x86_64"
 GOARCH=		amd64
+.elif ${MACHINE_ARCH} == "evbarm"
+GOARCH=		arm
 .endif
 PLIST_SUBST+=	GO_PLATFORM=${LOWER_OPSYS:Q}_${GOARCH:Q}
 
@@ -37,7 +39,6 @@ INSTALLATION_DIRS= bin
 REPLACE_BASH+=	doc/articles/wiki/test.bash
 REPLACE_BASH+=	doc/progs/run
 REPLACE_BASH+=	doc/progs/update.bash
-REPLACE_BASH+=	lib/codereview/test.sh
 REPLACE_BASH+=	misc/arm/a
 REPLACE_BASH+=	misc/dist/darwin/scripts/postinstall
 REPLACE_BASH+=	misc/dist/darwin/scripts/preinstall

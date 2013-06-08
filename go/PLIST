@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2013/06/08 11:04:24 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.5 2013/06/08 11:24:47 bsiegert Exp $
 bin/go
 bin/godoc
 bin/gofmt
@@ -10,6 +10,7 @@ go/README
 go/VERSION
 go/api/README
 go/api/except.txt
+go/api/go1.1.txt
 go/api/go1.txt
 go/api/next.txt
 go/bin/go
@@ -504,6 +505,7 @@ go/pkg/${GO_PLATFORM}/runtime.h
 go/pkg/${GO_PLATFORM}/runtime/cgo.a
 go/pkg/${GO_PLATFORM}/runtime/debug.a
 go/pkg/${GO_PLATFORM}/runtime/pprof.a
+go/pkg/${GO_PLATFORM}/runtime/race.a
 go/pkg/${GO_PLATFORM}/sort.a
 go/pkg/${GO_PLATFORM}/strconv.a
 go/pkg/${GO_PLATFORM}/strings.a
@@ -1941,6 +1943,7 @@ go/src/pkg/net/cgo_unix.go
 go/src/pkg/net/conn_test.go
 go/src/pkg/net/dial.go
 go/src/pkg/net/dial_gen.go
+go/src/pkg/net/dial_gen_test.go
 go/src/pkg/net/dial_test.go
 go/src/pkg/net/dialgoogle_test.go
 go/src/pkg/net/dnsclient.go
@@ -2444,6 +2447,7 @@ go/src/pkg/runtime/race.c
 go/src/pkg/runtime/race.go
 go/src/pkg/runtime/race.h
 go/src/pkg/runtime/race/README
+go/src/pkg/runtime/race/doc.go
 go/src/pkg/runtime/race/race.go
 go/src/pkg/runtime/race/race_darwin_amd64.syso
 go/src/pkg/runtime/race/race_linux_amd64.syso
