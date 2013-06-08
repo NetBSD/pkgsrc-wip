@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/06/08 00:14:52 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2013/06/08 00:17:55 othyro Exp $
 #
 
 DISTNAME=	python-gnutls-1.2.4
@@ -11,5 +11,6 @@ HOMEPAGE=	http://ag-projects.com/
 COMMENT=	Python wrapper for the GNUTLS library
 LICENSE=	gnu-lgpl-v2
 
+.include "../../security/gnutls/buildlink3.mk"
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
