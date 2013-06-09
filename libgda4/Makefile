@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2012/10/03 09:10:38 asau Exp $
+# $NetBSD: Makefile,v 1.6 2013/06/09 12:50:58 noud4 Exp $
 #
 
-PKG_REVISION=		1
+PKG_REVISION=		2
 LICENSE=		gnu-gpl-v2 AND gnu-lgpl-v2
 # XXX			tools AND libraries
 

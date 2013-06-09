@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2012/06/19 11:39:51 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.6 2013/06/09 12:50:58 noud4 Exp $
 ${PLIST.bdb}include/libgda-4.0/libgda/gda-data-model-bdb.h
 ${PLIST.bdb}lib/libgda-4.0/providers/libgda-bdb.la
 ${PLIST.bdb}lib/pkgconfig/libgda-bdb-4.0.pc
@@ -19,9 +19,13 @@ ${PLIST.mdb}lib/pkgconfig/libgda-mdb-4.0.pc
 ${PLIST.mysql}lib/libgda-4.0/providers/libgda-mysql.la
 ${PLIST.mysql}lib/pkgconfig/libgda-mysql-4.0.pc
 ${PLIST.mysql}share/libgda-4.0/mysql_specs_add_column.xml
+${PLIST.mysql}share/libgda-4.0/mysql_specs_comment_column.xml
+${PLIST.mysql}share/libgda-4.0/mysql_specs_comment_table.xml
 ${PLIST.mysql}share/libgda-4.0/mysql_specs_create_db.xml
 ${PLIST.mysql}share/libgda-4.0/mysql_specs_create_index.xml
 ${PLIST.mysql}share/libgda-4.0/mysql_specs_create_table.xml
+${PLIST.mysql}share/libgda-4.0/mysql_specs_create_view.xml
+${PLIST.mysql}share/libgda-4.0/mysql_specs_drop_view.xml
 ${PLIST.mysql}share/libgda-4.0/mysql_specs_drop_column.xml
 ${PLIST.mysql}share/libgda-4.0/mysql_specs_drop_db.xml
 ${PLIST.mysql}share/libgda-4.0/mysql_specs_drop_index.xml
@@ -33,11 +37,17 @@ ${PLIST.postgres}lib/pkgconfig/libgda-postgres-4.0.pc
 ${PLIST.postgres}share/libgda-4.0/postgres_specs_add_column.xml
 ${PLIST.postgres}share/libgda-4.0/postgres_specs_create_db.xml
 ${PLIST.postgres}share/libgda-4.0/postgres_specs_create_index.xml
+${PLIST.postgres}share/libgda-4.0/postgres_specs_create_role.xml
 ${PLIST.postgres}share/libgda-4.0/postgres_specs_create_table.xml
+${PLIST.postgres}share/libgda-4.0/postgres_specs_create_user.xml
+${PLIST.postgres}share/libgda-4.0/postgres_specs_create_view.xml
 ${PLIST.postgres}share/libgda-4.0/postgres_specs_drop_column.xml
 ${PLIST.postgres}share/libgda-4.0/postgres_specs_drop_db.xml
 ${PLIST.postgres}share/libgda-4.0/postgres_specs_drop_index.xml
+${PLIST.postgres}share/libgda-4.0/postgres_specs_drop_role.xml
 ${PLIST.postgres}share/libgda-4.0/postgres_specs_drop_table.xml
+${PLIST.postgres}share/libgda-4.0/postgres_specs_drop_user.xml
+${PLIST.postgres}share/libgda-4.0/postgres_specs_drop_view.xml
 ${PLIST.postgres}share/libgda-4.0/postgres_specs_dsn.xml
 ${PLIST.postgres}share/libgda-4.0/postgres_specs_rename_table.xml
 ${PLIST.web}lib/libgda-4.0/providers/libgda-web.la
@@ -175,6 +185,7 @@ include/libgda-4.0/libgda/sqlite/gda-sqlite-provider.h
 include/libgda-4.0/libgda/thread-wrapper/gda-thread-wrapper.h
 include/libgda-4.0/libgda/virtual/gda-vconnection-data-model.h
 include/libgda-4.0/libgda/virtual/gda-vconnection-hub.h
+${PLIST.ldap}include/libgda-4.0/libgda/virtual/gda-ldap-connection.h
 include/libgda-4.0/libgda/virtual/gda-virtual-connection.h
 include/libgda-4.0/libgda/virtual/gda-virtual-provider.h
 include/libgda-4.0/libgda/virtual/gda-vprovider-data-model.h
@@ -932,6 +943,7 @@ share/libgda-4.0/icons/hicolor/scalable/actions/history-view.svg
 share/libgda-4.0/import_encodings.xml
 share/libgda-4.0/information_schema.xml
 share/libgda-4.0/language-specs/gda-sql.lang
+${PLIST.ldap}share/libgda-4.0/ldap_specs_auth.xml
 share/libgda-4.0/php/README
 share/libgda-4.0/php/gda-clean.php
 share/libgda-4.0/php/gda-config.php
