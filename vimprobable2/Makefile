@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2012/12/26 18:58:02 asau Exp $
+# $NetBSD: Makefile,v 1.3 2013/06/09 12:35:59 leot1990 Exp $
 #
 
-DISTNAME=	vimprobable2_1.2.0
+DISTNAME=	vimprobable2_1.3.0
 PKGNAME=	${DISTNAME:S/_/-/}
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=vimprobable/}
