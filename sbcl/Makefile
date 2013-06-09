@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2012/10/07 16:22:54 asau Exp $
+# $NetBSD: Makefile,v 1.41 2013/06/09 12:10:58 asau Exp $
 
 DISTNAME=		${PKGNAME_NOREV}-source
 PKGNAME=		sbcl-1.0.55
@@ -94,7 +94,7 @@ PLIST_SUBST+=	SUFX64=
 
 
 GIT_REPOSITORIES=	sbcl
-GIT_REPO.sbcl=		git://sbcl.git.sourceforge.net/gitroot/sbcl/sbcl.git
+GIT_REPO.sbcl=		git://git.code.sf.net/p/sbcl/sbcl
 WRKSRC=			${WRKDIR}/sbcl
 DISTNAME=
 PKGNAME=		sbcl-1.0.99
