@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5313 2013/06/08 12:50:53 othyro Exp $
+# $Id: Makefile,v 1.5314 2013/06/09 11:22:50 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -215,6 +215,7 @@ SUBDIR+=	bioruby
 SUBDIR+=	bkchem
 SUBDIR+=	blam
 SUBDIR+=	bleachbit
+SUBDIR+=	blink
 SUBDIR+=	blueproxy
 SUBDIR+=	bluez-gnome
 SUBDIR+=	bluez-hcidump
