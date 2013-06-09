@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2013/06/08 13:10:27 othyro Exp $
+# $NetBSD: Makefile,v 1.3 2013/06/09 21:31:16 othyro Exp $
 
-DATESTAMP=	20121224
+DATESTAMP=	20130609
 DISTNAME=	libcnotify-alpha-${DATESTAMP}
 PKGNAME=	${DISTNAME:S/-alpha//1}
 CATEGORIES=	sysutils
