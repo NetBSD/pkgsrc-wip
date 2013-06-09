@@ -1,0 +1,2 @@
+Depends on py-python-gnutls, which depends on a long since deprecated version
+of a gnutls library called libgnutls-extras.
