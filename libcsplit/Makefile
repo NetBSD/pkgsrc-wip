@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2013/06/08 12:24:12 othyro Exp $
+# $NetBSD: Makefile,v 1.3 2013/06/09 21:39:35 othyro Exp $
 
-DATESTAMP=	20121224
+DATESTAMP=	20130609
 DISTNAME=	libcsplit-alpha-${DATESTAMP}
 PKGNAME=	${DISTNAME:S/-alpha//1}
 CATEGORIES=	textproc
