@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/07 20:11:09 asau Exp $
+# $NetBSD: Makefile,v 1.5 2013/06/09 12:48:36 othyro Exp $
 
 DISTNAME=	xf86-video-nv-2.1.16
 CATEGORIES=	x11
@@ -20,6 +20,12 @@ GNU_CONFIGURE=	YES
 USE_TOOLS+=	pkg-config autoconf autoreconf automake
 
 WRKSRC=		${WRKDIR}/xf86-video-nv
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS"
+CONFIGURE_ENV+=	DRIVER_MAN_SUFFIX=4
+.endif
 
 pre-configure:
 	cd ${WRKSRC} && autoreconf -v --install

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/06/02 23:33:01 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2013/06/09 12:48:36 othyro Exp $
 
 DISTNAME=	xf86-input-hyperpen-1.4.1
 CATEGORIES=	x11
@@ -13,6 +13,12 @@ COMMENT=	Aiptek HyperPen 6000 input driver for the Xorg X server
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS"
+CONFIGURE_ENV+=	DRIVER_MAN_SUFFIX=4
+.endif
 
 .include "../../x11/xproto/buildlink3.mk"
 .include "../../x11/modular-xorg-server/buildlink3.mk"

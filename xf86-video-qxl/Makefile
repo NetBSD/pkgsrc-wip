@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/06/03 11:23:11 othyro Exp $
+# $NetBSD: Makefile,v 1.3 2013/06/09 12:48:36 othyro Exp $
 
 DISTNAME=	xf86-video-qxl-0.1.0
 CATEGORIES=	x11
@@ -15,6 +15,10 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
 
 .include "options.mk"
+
+.if ${OPSYS} == "SunOS"
+CONFIGURE_ENV+=	DRIVER_MAN_SUFFIX=4
+.endif
 
 .include "../../sysutils/libpciaccess/buildlink3.mk"
 .include "../../sysutils/spice-protocol/buildlink3.mk"

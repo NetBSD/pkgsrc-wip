@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/06/02 23:44:09 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2013/06/09 12:48:36 othyro Exp $
 
 DISTNAME=	xf86-input-joystick-1.6.2
 CATEGORIES=	x11
@@ -15,6 +15,12 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
 
 PKGCONFIG_OVERRIDE+=	xorg-joystick.pc.in
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS"
+CONFIGURE_ENV+=	DRIVER_MAN_SUFFIX=4
+.endif
 
 .include "../../x11/kbproto/buildlink3.mk"
 .include "../../devel/xorg-util-macros/buildlink3.mk"

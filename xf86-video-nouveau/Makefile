@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2012/10/07 20:11:09 asau Exp $
+# $NetBSD: Makefile,v 1.7 2013/06/09 12:48:36 othyro Exp $
 #
 
 DISTNAME=	xf86-video-nouveau-0.0.10
@@ -16,6 +16,12 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
 # XXX
 CFLAGS+=	-I${BUILDLINK_PREFIX.glproto}/include
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS"
+CONFIGURE_ENV+=	DRIVER_MAN_SUFFIX=4
+.endif
 
 # or server in wip
 .include "../../x11/modular-xorg-server/buildlink3.mk"
