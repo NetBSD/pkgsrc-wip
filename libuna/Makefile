@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2013/06/08 13:18:02 othyro Exp $
+# $NetBSD: Makefile,v 1.5 2013/06/09 21:49:15 othyro Exp $
 #
 
-DATESTAMP=	20130608
+DATESTAMP=	20130609
 DISTNAME=	libuna-alpha-${DATESTAMP}
 PKGNAME=	${DISTNAME:S/alpha-//1}
 CATEGORIES=	converters
@@ -23,7 +23,6 @@ PKGCONFIG_OVERRIDE+=	libuna.pc.in
 .include "options.mk"
 
 .include "../../wip/libcnotify/buildlink3.mk"
-#.include "../../wip/libcfile/buildlink3.mk"
 .include "../../wip/libclocale/buildlink3.mk"
 .include "../../wip/libcerror/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

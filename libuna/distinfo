@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2013/06/08 13:18:02 othyro Exp $
+$NetBSD: distinfo,v 1.4 2013/06/09 21:49:15 othyro Exp $
 
-SHA1 (libuna-alpha-20130608.tar.gz) = f97d9edabf6fc61d552a363e2bdea6ceb013d9ba
-RMD160 (libuna-alpha-20130608.tar.gz) = ca7a38723daef1a159bcf6055246157b8eee6c5d
-Size (libuna-alpha-20130608.tar.gz) = 1804003 bytes
+SHA1 (libuna-alpha-20130609.tar.gz) = 8d12cf29bf4c7de919c0a1ab50275e42d778ea65
+RMD160 (libuna-alpha-20130609.tar.gz) = d127ef7d5e37f4f5fdeb574bacfccb2b52b8dc76
+Size (libuna-alpha-20130609.tar.gz) = 1804012 bytes
