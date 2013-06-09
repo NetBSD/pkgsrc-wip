@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2013/06/09 12:08:39 noud4 Exp $
+
+SHA1 (ups-monitor-0.8.2.tar.gz) = 5a7e6b401de9ca875799ed36a0c6a81e94db117b
+RMD160 (ups-monitor-0.8.2.tar.gz) = 021095043f695ebcb765c2c43a39492e3a995568
+Size (ups-monitor-0.8.2.tar.gz) = 123569 bytes
+SHA1 (patch-aa) = 28619f00e72094e7f51013eb37ba70501369b143
