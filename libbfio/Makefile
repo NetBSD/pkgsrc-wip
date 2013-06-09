@@ -1,17 +1,19 @@
-# $NetBSD: Makefile,v 1.2 2013/01/10 15:37:11 othyro Exp $
+# $NetBSD: Makefile,v 1.3 2013/06/09 22:10:25 othyro Exp $
 #
 
-DISTNAME=	libbfio-alpha-20120425
+DATESTAMP=	20130609
+DISTNAME=	libbfio-alpha-${DATESTAMP}
 PKGNAME=	${DISTNAME:S/alpha-//1}
 CATEGORIES=	sysutils
-MASTER_SITES=	http://libbfio.googlecode.com/files/
+MASTER_SITES=	http://googledrive.com/host/0B3fBvzttpiiSTERGV3V4bnZ3dlk/
+FETCH_USING=	curl
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://libbfio.sourceforge.net/
 COMMENT=	Library to provide basic file input/output abstraction
 LICENSE=	gnu-lgpl-v3
 
-WRKSRC=		${WRKDIR}/libbfio-20120425
+WRKSRC=		${WRKDIR}/libbfio-${DATESTAMP}
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	msgfmt msgmerge pkg-config xgettext
@@ -20,7 +22,13 @@ PKGCONFIG_OVERRIDE+=	libbfio.pc.in
 
 .include "options.mk"
 
-#BUILDLINK_API_DEPENDS.libuna+=	libuna>=20120630
+.include "../../wip/libcfile/buildlink3.mk"
 .include "../../wip/libuna/buildlink3.mk"
+.include "../../wip/libcpath/buildlink3.mk"
+.include "../../wip/libcsplit/buildlink3.mk"
+.include "../../wip/libcnotify/buildlink3.mk"
+.include "../../wip/libcdata/buildlink3.mk"
+.include "../../wip/libclocale/buildlink3.mk"
+.include "../../wip/libcerror/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
