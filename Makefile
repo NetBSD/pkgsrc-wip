@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5315 2013/06/09 12:11:13 noud4 Exp $
+# $Id: Makefile,v 1.5316 2013/06/09 14:32:53 kristerw Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1358,7 +1358,6 @@ SUBDIR+=	libbsd
 SUBDIR+=	libbtctl
 SUBDIR+=	libburn
 SUBDIR+=	libcaca
-SUBDIR+=	libcpath
 SUBDIR+=	libcdata
 SUBDIR+=	libcerror
 SUBDIR+=	libcgi
@@ -1369,6 +1368,7 @@ SUBDIR+=	libcmis
 SUBDIR+=	libcmt
 SUBDIR+=	libcnotify
 SUBDIR+=	libcouchbase
+SUBDIR+=	libcpath
 SUBDIR+=	libcpu
 SUBDIR+=	libcsplit
 SUBDIR+=	libcuba
