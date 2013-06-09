@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2013/06/08 11:49:14 othyro Exp $
+$NetBSD: distinfo,v 1.4 2013/06/09 21:33:51 othyro Exp $
 
-SHA1 (libclocale-experimental-20130603.tar.gz) = 7e329306966ba5e945ba400cb454c1877f9dbe83
-RMD160 (libclocale-experimental-20130603.tar.gz) = 5d772abcc6b034109494febc4ef9e0f00864d8ce
-Size (libclocale-experimental-20130603.tar.gz) = 456771 bytes
+SHA1 (libclocale-experimental-20130609.tar.gz) = 7bea4be0c7d43d953774a77cbfab0ade00281180
+RMD160 (libclocale-experimental-20130609.tar.gz) = 6b118fe4f4ab86d2b7ec051a846afed187f84f88
+Size (libclocale-experimental-20130609.tar.gz) = 456735 bytes

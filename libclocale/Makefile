@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2013/06/08 11:49:14 othyro Exp $
+# $NetBSD: Makefile,v 1.4 2013/06/09 21:33:51 othyro Exp $
 
-DATESTAMP=	20130603
+DATESTAMP=	20130609
 DISTNAME=	libclocale-experimental-${DATESTAMP}
 PKGNAME=	${DISTNAME:S/-experimental//1}
 CATEGORIES=	devel
