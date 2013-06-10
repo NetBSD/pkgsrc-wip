@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5320 2013/06/10 01:32:12 makoto Exp $
+# $Id: Makefile,v 1.5321 2013/06/10 05:10:30 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1450,6 +1450,7 @@ SUBDIR+=	libpsurface
 SUBDIR+=	libpthread-stubs
 SUBDIR+=	libpusb
 SUBDIR+=	libraw1394
+SUBDIR+=	libre
 SUBDIR+=	libreoffice
 SUBDIR+=	libreoffice-devel
 SUBDIR+=	libscscp
