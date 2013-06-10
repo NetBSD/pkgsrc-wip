@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2013/06/10 12:33:30 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2013/06/10 21:47:42 othyro Exp $
 
 DISTNAME=	yate-4.2.0-2
 PKGNAME=	${DISTNAME:S/-/client-/1:S/-2/.2/1}
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://yate.null.ro/tarballs/yate4/
 
@@ -15,10 +16,16 @@ GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake pkg-config
 USE_LANGUAGES=	c c++
 
-CONFIGURE_ARGS+=	--prefix=${PREFIX}
+CONFIGURE_ARGS+=	--prefix=${PREFIX} --with-zlib=${BUILDLINK_PREFIX.zlib}
 PKGCONFIG_OVERRIDE+=	yate.pc.in
 
-.include "../../mk/bsd.fast.prefs.mk"
+SUBST_CLASSES+=		prefix
+SUBST_FILES.prefix=	configure
+SUBST_MESSAGE.prefix=	Fixing PREFIX path.
+SUBST_SED.prefix=	-e "s|/usr/local|${PREFIX}|g"
+SUBST_STAGE.prefix=	post-patch
+
+.include "options.mk"
 
 LIBS+=			${LIBOSSAUDIO}
 SUBST_CLASSES+=		moc
@@ -168,7 +175,6 @@ SUBST_MESSAGE.php=	Fixing PHP interpreter path.
 SUBST_SED.php=		-e "s|/usr/bin/php|${PREFIX}/bin/php|1"
 SUBST_STAGE.php=	post-patch
 
-# doxygen and kdoc for doc options
 .include "../../lang/php/phpversion.mk"
 .include "${PHPPKGSRCDIR}/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"
@@ -178,10 +184,6 @@ BUILDLINK_DEPMETHOD.qt4-tools=	full
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 #.include "../../devel/pwlib/buildlink3.mk"
-.include "../../comms/spandsp/buildlink3.mk"
-.include "../../audio/speex/buildlink3.mk"
-.include "../../wip/ilbc-rfc3951/buildlink3.mk"
-#.include "../../audio/alsa-lib/buildlink3.mk"
 .include "../../mk/mysql.buildlink3.mk"
 .include "../../mk/pgsql.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
