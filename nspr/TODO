@@ -1,0 +1,3 @@
+- LICENSE= mpl-2.0 is added, verify this is correct.
+- Upstream changed PATH name nsprpub to nspr.
+  Are the name of patches/patch-nsprpub.... to be renamed or not.
