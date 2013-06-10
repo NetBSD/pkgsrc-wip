@@ -1,7 +1,7 @@
-$NetBSD: patch-nsprpub_pr_src_pthreads_ptsynch.c,v 1.1 2013/05/11 14:04:23 makoto Exp $
+$NetBSD: patch-nsprpub_pr_src_pthreads_ptsynch.c,v 1.2 2013/06/10 01:42:12 makoto Exp $
 
 --- nsprpub/pr/src/pthreads/ptsynch.c.orig	2012-03-06 13:14:21.000000000 +0000
-+++ nsprpub/pr/src/pthreads/ptsynch.c
++++ nspr/pr/src/pthreads/ptsynch.c
 @@ -810,7 +810,7 @@ PR_IMPLEMENT(PRStatus) PR_DeleteSemaphor
   */
  #if (defined(__GNU_LIBRARY__) && !defined(_SEM_SEMUN_UNDEFINED)) \

@@ -1,9 +1,9 @@
-$NetBSD: patch-az,v 1.1 2013/05/11 14:04:23 makoto Exp $
+$NetBSD: patch-az,v 1.2 2013/06/10 01:42:12 makoto Exp $
 
 https://bugzilla.mozilla.org/show_bug.cgi?id=782111
 
 --- nsprpub/pr/src/pthreads/ptthread.c.orig	2012-06-22 01:36:02.000000000 +0000
-+++ nsprpub/pr/src/pthreads/ptthread.c
++++ nspr/pr/src/pthreads/ptthread.c
 @@ -21,6 +21,10 @@
  #include <signal.h>
  #include <dlfcn.h>
