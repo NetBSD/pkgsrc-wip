@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2013/06/10 01:42:12 makoto Exp $
+# $NetBSD: Makefile,v 1.6 2013/06/10 02:36:10 makoto Exp $
 #
 
 DISTNAME=	nspr-${NSPR_RELEASE}
@@ -9,6 +9,7 @@ MASTER_SITES=	${MASTER_SITE_MOZILLA_ALL:=nspr/releases/v${NSPR_RELEASE}/src/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mozilla.org/projects/nspr/index.html
 COMMENT=	Platform-neutral API for system level and libc like functions
+LICENSE=	mpl-2.0
 
 CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}security/nss/tests/libpkix/libpkix.sh
 CHECK_PORTABILITY_SKIP+=${MOZILLA_DIR}security/nss/tests/multinit/multinit.sh
