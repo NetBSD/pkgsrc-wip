@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.126 2013/06/06 15:31:07 makoto Exp $
+@comment $NetBSD: PLIST,v 1.127 2013/06/11 03:36:05 makoto Exp $
 bin/ctags
 bin/ebrowse
 bin/emacs
@@ -2078,6 +2078,8 @@ share/emacs/${PKGVERSION}/lisp/gnus/deuglify.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/deuglify.elc
 share/emacs/${PKGVERSION}/lisp/gnus/ecomplete.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/ecomplete.elc
+share/emacs/${PKGVERSION}/lisp/gnus/eww.el.gz
+share/emacs/${PKGVERSION}/lisp/gnus/eww.elc
 share/emacs/${PKGVERSION}/lisp/gnus/flow-fill.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/flow-fill.elc
 share/emacs/${PKGVERSION}/lisp/gnus/gmm-utils.el.gz
