@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/06/10 05:09:15 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2013/06/11 00:10:35 othyro Exp $
 
 DISTNAME=	re-0.4.3
 PKGNAME=	lib${DISTNAME}
@@ -20,6 +20,12 @@ SUBST_MESSAGE.prefix=	Fixing PREFIX path.
 SUBST_SED.prefix=	-e "s|/usr/local|${PREFIX}|1"
 SUBST_SED.prefix+=	-e "s|/usr|${PREFIX}|1"
 SUBST_STAGE.prefix=	post-patch
+
+SUBST_CLASSES+=		re
+SUBST_FILES.re=		mk/re.mk
+SUBST_MESSAGE.re=	Fixing PREFIX path.
+SUBST_SED.re=		-e "s|/usr/local|${PREFIX}|g"
+SUBST_STAGE.re=		post-patch
 
 post-install:
 	${CHMOD} -x ${DESTDIR}${PREFIX}/lib/libre.a
