@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/10/07 14:51:34 asau Exp $
+# $NetBSD: Makefile,v 1.14 2013/06/11 12:47:32 fhajny Exp $
 
 DISTNAME=	runit-2.0.0
 CATEGORIES=	sysutils
@@ -23,6 +23,16 @@ OWN_DIRS_PERMS= ${SERVICEDIR} ${ROOT_USER} ${ROOT_GROUP} 0755
 
 DOCS=		package/CHANGES package/COPYING package/README \
 		package/THANKS package/TODO doc/*.html
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "SunOS"
+SUBST_CLASSES+=		static
+SUBST_STAGE.static=	post-patch
+SUBST_MESSAGE.static=	Disable static linking on SunOS
+SUBST_FILES.static=	src/Makefile
+SUBST_SED.static=	-e 's/-static//'
+.endif
 
 INSTALLATION_DIRS=	${PKGMANDIR} ${PKGMANDIR}/man8 sbin share/examples/runit
 
