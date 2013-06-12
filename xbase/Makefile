@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2013/06/12 16:51:13 noud4 Exp $
+# $NetBSD: Makefile,v 1.15 2013/06/12 16:59:52 noud4 Exp $
 #
 
-DISTNAME=		xbase-2.1.0
+DISTNAME=		xbase-2.1.1
 CATEGORIES=		databases
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=xdb/}
 
