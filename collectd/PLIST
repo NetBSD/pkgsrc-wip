@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2010/12/31 19:55:12 genolopolis Exp $
+@comment $NetBSD: PLIST,v 1.5 2013/06/12 13:38:54 fhajny Exp $
 bin/collectd-nagios
 include/collectd/client.h
 include/collectd/lcc_features.h
@@ -9,6 +9,8 @@ ${PLIST.bind}lib/collectd/bind.la
 ${PLIST.cpu}lib/collectd/cpu.la
 ${PLIST.csv}lib/collectd/csv.la
 ${PLIST.curl}lib/collectd/curl.la
+${PLIST.curl-json}lib/collectd/curl_json.la
+${PLIST.curl-xml}lib/collectd/curl_xml.la
 ${PLIST.dbi}lib/collectd/dbi.la
 ${PLIST.df}lib/collectd/df.la
 ${PLIST.disk}lib/collectd/disk.la
@@ -46,6 +48,7 @@ ${PLIST.swap}lib/collectd/swap.la
 ${PLIST.syslog}lib/collectd/syslog.la
 ${PLIST.table}lib/collectd/table.la
 ${PLIST.tail}lib/collectd/tail.la
+${PLIST.tape}lib/collectd/tape.la
 ${PLIST.target-notification}lib/collectd/target_notification.la
 ${PLIST.target-replace}lib/collectd/target_replace.la
 ${PLIST.target-scale}lib/collectd/target_scale.la
@@ -58,6 +61,7 @@ ${PLIST.uptime}lib/collectd/uptime.la
 ${PLIST.users}lib/collectd/users.la
 ${PLIST.uuid}lib/collectd/uuid.la
 ${PLIST.write-http}lib/collectd/write_http.la
+${PLIST.zfs-arc}lib/collectd/zfs_arc.la
 lib/libcollectdclient.la
 lib/perl5/vendor_perl/man/man3/Collectd::Unixsock.3
 lib/pkgconfig/libcollectdclient.pc

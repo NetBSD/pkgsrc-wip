@@ -1,9 +1,9 @@
-# $NetBSD: options.mk,v 1.4 2010/12/31 20:33:08 genolopolis Exp $
+# $NetBSD: options.mk,v 1.5 2013/06/12 13:38:54 fhajny Exp $
 #
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.collectd
-PKG_SUPPORTED_OPTIONS=		rrdtool libstatgrab curl debug apache
-PKG_SUPPORTED_OPTIONS+=		apcups ascent bind cpu csv dbi df
+PKG_SUPPORTED_OPTIONS=		rrdtool libstatgrab curl curl-json curl-xml
+PKG_SUPPORTED_OPTIONS+=		apache apcups ascent bind cpu csv dbi debug df
 PKG_SUPPORTED_OPTIONS+=		disk dns email exec filecount
 PKG_SUPPORTED_OPTIONS+=		interface load logfile
 PKG_SUPPORTED_OPTIONS+=		match_empty_counter match_hashed match_regex
@@ -12,12 +12,20 @@ PKG_SUPPORTED_OPTIONS+=		memcached memory multimeter mysql
 PKG_SUPPORTED_OPTIONS+=		network nginx notify_desktop notify_email ntpd
 PKG_SUPPORTED_OPTIONS+=		olsrd openvpn perl postgresql
 PKG_SUPPORTED_OPTIONS+=		powerdns python
-PKG_SUPPORTED_OPTIONS+=		snmp swap syslog table tail
+PKG_SUPPORTED_OPTIONS+=		snmp swap syslog table tail tape
 PKG_SUPPORTED_OPTIONS+=		target_notification target_replace target_scale
 PKG_SUPPORTED_OPTIONS+=		target_set tcpconns teamspeak2 ted
-PKG_SUPPORTED_OPTIONS+=		unixsock uptime users uuid write_http
+PKG_SUPPORTED_OPTIONS+=		unixsock uptime users uuid write_http zfs-arc
 
 PKG_SUGGESTED_OPTIONS+=		rrdtool curl libstatgrab df interface cpu csv load memory swap syslog network uptime users
+
+.if ${OPSYS} == "SunOS"
+PKG_SUGGESTED_OPTIONS+=		tape
+. if !empty(OS_VERSION:M5\.1[0-9])
+PKG_SUGGESTED_OPTIONS+=		zfs-arc
+. endif
+.endif
+
 .include "../../mk/bsd.options.mk"
 
 #rrdtool
@@ -31,10 +39,36 @@ PLIST.rrdtool=	yes
 #curl
 .if !empty(PKG_OPTIONS:Mcurl)
 .include "../../www/curl/buildlink3.mk"
-.include "../../textproc/libxml2/buildlink3.mk"
 #CONFIGURE_ARGS+=	--with-libcurl=${BUILDLINK_PREFIX.curl}
 CONFIGURE_ARGS+=	--enable-curl
 PLIST.curl=	yes
+.endif
+
+#curl-json
+.if !empty(PKG_OPTIONS:Mcurl-json)
+. if empty(PKG_OPTIONS:Mcurl)
+PKG_FAIL_REASON+=	"option 'curl-json' requires option 'curl'"
+. else
+.  include "../../devel/yajl/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-curl_json
+CONFIGURE_ARGS+=	--with-libyajl=${BUILDLINK_PREFIX.yajl}
+PLIST.curl-json=	yes
+. endif
+.else
+CONFIGURE_ARGS+=	--disable-curl_json
+.endif
+
+#curl-xml
+.if !empty(PKG_OPTIONS:Mcurl-xml)
+. if empty(PKG_OPTIONS:Mcurl)
+PKG_FAIL_REASON+=	"option 'curl-xml' requires option 'curl'"
+. else
+.  include "../../textproc/libxml2/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-curl_xml
+PLIST.curl-xml=		yes
+. endif
+.else
+CONFIGURE_ARGS+=	--disable-curl_xml
 .endif
 
 #libstatgrab
@@ -452,4 +486,18 @@ CONFIGURE_ARGS+=	--enable-write_http
 PLIST.write-http=	yes
 .else
 CONFIGURE_ARGS+=	--disable-write_http
+.endif
+
+.if !empty(PKG_OPTIONS:Mzfs-arc)
+CONFIGURE_ARGS+=	--enable-zfs_arc
+PLIST.zfs-arc=		yes
+.else
+CONFIGURE_ARGS+=	--disable-zfs_arc
+.endif
+
+.if !empty(PKG_OPTIONS:Mtype)
+CONFIGURE_ARGS+=	--enable-tape
+PLIST.tape=		yes
+.else
+CONFIGURE_ARGS+=	--disable-tape
 .endif

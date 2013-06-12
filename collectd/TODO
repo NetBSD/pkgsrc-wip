@@ -8,9 +8,6 @@ Put everything in options since there are 70 possible plugins for this
 
 
 rhaamo@gruik.at:
-Can't get build with pkgsrc's libltdl, fail on -lltdl, i've added --with-ltdl..
-in CONFIGURE_ARGS temporarly.
-
 Better dependencie for postgresql than postgresql84-client ? (need pq)
 Better dependencie checking for plugins which need libstatgrab ?
 
@@ -45,16 +42,12 @@ Mac only:
  - wireless
 
 Other:
- - curl_json		(http://collectd.org/wiki/index.php/Plugin:cURL-JSON)
  - java			(i don't have/use java)
  - oracle		(i don't have/use oracle)
  - load			(can use libstatgrab or libperfstat(3) AIX or getloadavg(3) etc..)
  - netap		(http://collectd.org/wiki/index.php/Plugin:NetApp)
  - tokyotyrant		(http://collectd.org/wiki/index.php/Plugin:TokyoTyrant)
  - XMMS			(http://collectd.org/wiki/index.php/Plugin:XMMS)
-
-Solaris only:
- - zfs_arc		(http://collectd.org/wiki/index.php/Plugin:ZFS_ARC)
 
 Need libs not in pkgsrc:
  - gmond		(http://collectd.org/wiki/index.php/Plugin:gmond)
