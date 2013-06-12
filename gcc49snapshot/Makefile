@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2013/04/24 19:45:15 keckhardt Exp $
+# $NetBSD: Makefile,v 1.5 2013/06/12 20:43:41 keckhardt Exp $
 
 GCC_PKGNAME=		gcc49snapshot
 .include		"version.mk"
@@ -40,9 +40,18 @@ INFO_FILES=		yes
 UNLIMIT_RESOURCES+=	datasize
 UNLIMIT_RESOURCES+=	stacksize
 
+SUBST_CLASSES+=		vars
+SUBST_MESSAGE.vars=	Setting target machine name path in ${SUBST_FILES.vars}
+SUBST_STAGE.vars=	pre-configure
+SUBST_FILES.vars=	gcc/Makefile.in
+SUBST_VARS.vars=	GCC_TARGET_MACHINE
+
 .include "../../mk/bsd.prefs.mk"
 
 LANGS=			c 
+
+# In some cases LINKER_RPATH_FLAG needs a trailing space.
+LINKER_RPATH_FLAG:=	${LINKER_RPATH_FLAG:S/-rpath/& /}
 
 ## The Library rpath to use in end programs.
 LDFLAGS_FOR_TARGET=	${LDFLAGS:M${COMPILER_RPATH_FLAG}*:N*/usr/lib*}
