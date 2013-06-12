@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2013/06/07 14:49:20 makoto Exp $
+# $NetBSD: Makefile,v 1.15 2013/06/12 12:35:54 thomasklausner Exp $
 
 .include "../../net/samba/Makefile.mirrors"
 
@@ -52,7 +52,7 @@ USE_GNU_ICONV=		yes	# FIXME: something doesn't work on NetBSD
 USE_GNU_READLINE=	yes
 
 HAS_CONFIGURE=		yes
-GNU_CONFIGURE_LIBDIR=	${SAMBA_LIBDIR}
+CONFIGURE_ARGS+=	--libdir=${SAMBA_LIBDIR}
 CONFIG_SHELL=		${PYTHONBIN}
 CONFIGURE_SCRIPT=	${WRKSRC}/buildtools/bin/waf
 CONFIGURE_ARGS+=	configure
@@ -60,7 +60,6 @@ CONFIGURE_ARGS+=	--prefix=$(PREFIX:Q)
 #CONFIGURE_ARGS+=	--with-libiconv=${BUILDLINK_PREFIX.iconv}
 #CONFIGURE_ARGS+=	--with-readline=${BUILDLINK_PREFIX.readline}
 #CONFIGURE_ARGS+=	--with-configdir=${SAMBA_ETCDIR}
-CONFIGURE_ARGS+=	--libdir=${SAMBA_LIBDIR}
 CONFIGURE_ARGS+=	--with-privatelibdir=${SAMBA_LIBDIR}/samba
 CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/${PKGBASE}
