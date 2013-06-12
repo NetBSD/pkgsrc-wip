@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2013/03/19 01:22:55 bubuchka Exp $
+# $NetBSD: Makefile,v 1.5 2013/06/12 17:37:31 bubuchka Exp $
 
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
@@ -9,11 +9,11 @@ COMMENT=	Vector Generalized Linear and Additive Models
 LICENSE=	gnu-gpl-v2
 
 R_PKGNAME=	VGAM
-R_PKGVER=	0.9-0
+R_PKGVER=	0.9-1
 
 USE_LANGUAGES=	c fortran
 
-BUILDLINK_API_DEPENDS.R+=	R>=2.14.0
+BUILDLINK_API_DEPENDS.R+=	R>=2.15.1
 
 .include "../../math/R/Makefile.extension"
 .include "../../devel/gettext-lib/buildlink3.mk"
