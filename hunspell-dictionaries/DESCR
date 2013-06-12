@@ -1,0 +1,7 @@
+Hunspell is a Free and Open Source spell checker.
+
+This package does not contain anything by itself - it is a "meta-package" that
+depends on other hunspell packages. Its sole purpose is to require dependencies
+so users can install this package only and have all the hunspell stuff (or what
+is set in PKG_OPTIONS.hunspell-dictionaries) pulled in by the package
+dependency mechanism.
