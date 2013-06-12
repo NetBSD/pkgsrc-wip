@@ -1,3 +1,11 @@
-Comprehensive, high performance, small footprint multimedia communication
-libraries written in C language for building embedded/non-embedded VoIP
-applications.
+PJSIP is a free and open source multimedia communication library written in C
+language implementing standard based protocols such as SIP, SDP, RTP, STUN,
+TURN, and ICE. It combines signaling protocol (SIP) with rich multimedia
+framework and NAT traversal functionality into high level API that is portable
+and suitable for almost any type of systems ranging from desktops, embedded
+systems, to mobile handsets.
+
+PJSIP is both compact and feature rich. It supports audio, video, presence, and
+instant messaging, and has extensive documentation. PJSIP is very portable. On
+mobile devices, it abstracts system dependent features and in many cases is able
+to utilize the native multimedia capabilities of the device.
