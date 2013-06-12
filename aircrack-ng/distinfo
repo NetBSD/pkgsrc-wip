@@ -1,13 +1,13 @@
-$NetBSD: distinfo,v 1.14 2012/08/20 13:23:18 imilh Exp $
+$NetBSD: distinfo,v 1.15 2013/06/12 17:45:49 moubctez Exp $
 
-SHA1 (aircrack-ng-1.1.tar.gz) = 16eed1a8cf06eb8274ae382150b56589b23adf77
-RMD160 (aircrack-ng-1.1.tar.gz) = 7d70533b0397e801d4a85c1be3584699364f3d38
-Size (aircrack-ng-1.1.tar.gz) = 1453272 bytes
-SHA1 (patch-aa) = f441885a2f259f3c8926d8347ed741c0f12e62fc
-SHA1 (patch-ab) = ecad26501ce09dff0ba254330a5b2496d6e52e8b
+SHA1 (aircrack-ng-1.2-beta1.tar.gz) = 928b327ff47a31891a0edfdc1dc6a80914336458
+RMD160 (aircrack-ng-1.2-beta1.tar.gz) = d9af769dc3e9d60bfc5817069afae14f74809a3b
+Size (aircrack-ng-1.2-beta1.tar.gz) = 3457757 bytes
+SHA1 (patch-aa) = 377d9c3f971cd0e4de0590881ff4d57b7a873dfa
+SHA1 (patch-ab) = 902d4363c0f1667b2ee24db3a1befc2b4eacd039
 SHA1 (patch-ac) = 533ae8077842531bca36edfca6044f3908be2487
-SHA1 (patch-ad) = 24f21ac295ec06ecccb550d07859811748544ad0
-SHA1 (patch-af) = e92d839cd54a2251bdd75e46e606dd2287948e9b
-SHA1 (patch-ag) = d302dc9a79aac2554077a3485a5458c00ce8c825
-SHA1 (patch-ah) = 5e59a83921bee6672fbdf754d9ba712c130cf773
+SHA1 (patch-ad) = 8a14e2558ef9663389576a3ab0b4883537b889fd
+SHA1 (patch-af) = 1a72c03a0034ffebb619bf101923127cf1b5ecf9
+SHA1 (patch-ag) = d3694e13f109297a93bd774c7bf70c66f28e8c58
+SHA1 (patch-ah) = 530ea03a108719a54e453f15f3b8d80596b2e768
 SHA1 (patch-aj) = 7ebffb80feb90a4e8a819e29ece3be3db5de8357

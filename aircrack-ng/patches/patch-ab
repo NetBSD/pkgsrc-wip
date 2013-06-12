@@ -1,10 +1,10 @@
-$NetBSD: patch-ab,v 1.4 2012/08/20 13:23:18 imilh Exp $
+$NetBSD: patch-ab,v 1.5 2013/06/12 17:45:49 moubctez Exp $
 
 Leaving this line in leads to a compile error in openssl's crypto.h
 
 --- src/pcap.h.orig	2009-06-14 00:49:09.000000000 +0200
 +++ src/pcap.h
-@@ -24,7 +24,8 @@
+@@ -56,7 +56,8 @@
  #define uchar  unsigned char
  #define ushort unsigned short
  #define uint   unsigned int

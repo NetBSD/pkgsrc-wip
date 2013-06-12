@@ -1,19 +1,21 @@
-$NetBSD: patch-ad,v 1.4 2012/08/20 13:23:18 imilh Exp $
+$NetBSD: patch-ad,v 1.5 2013/06/12 17:45:49 moubctez Exp $
 
 Paths fixes
 
---- common.mak.orig	2009-09-01 11:32:00.000000000 +0200
+--- common.mak.orig	2013-05-25 21:49:08.000000000 +0000
 +++ common.mak
-@@ -70,10 +70,10 @@ OPTFLAGS        = -D_FILE_OFFSET_BITS=64
- CFLAGS          ?= -g -W -Wall -Werror -O3
+@@ -110,11 +110,11 @@ OPTFLAGS        = -D_FILE_OFFSET_BITS=64
+ CFLAGS          ?= -g -W -Wall -O3
  CFLAGS          += $(OPTFLAGS) $(REVFLAGS) $(COMMON_CFLAGS)
  
 -prefix          = /usr/local
 +prefix          = ${PREFIX}
  bindir          = $(prefix)/bin
  sbindir         = $(prefix)/sbin
--mandir          = $(prefix)/man/man1
+-mandir          = $(prefix)/share/man/man1
+-smandir         = $(prefix)/share/man/man8
 +mandir          = $(prefix)/${PKGMANDIR}/man1
++smandir         = $(prefix)/${PKGMANDIR}/man8
  datadir         = $(prefix)/share
  docdir          = $(datadir)/doc/aircrack-ng
  libdir		= $(prefix)/lib
