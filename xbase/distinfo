@@ -1,9 +1,11 @@
-$NetBSD: distinfo,v 1.4 2013/06/12 16:26:46 noud4 Exp $
+$NetBSD: distinfo,v 1.5 2013/06/12 16:51:13 noud4 Exp $
 
-SHA1 (xbase-2.0.0.tar.gz) = b3ee9e4c3299a11f31b0b199e958817bb0e24d5b
-RMD160 (xbase-2.0.0.tar.gz) = 55fd4bc05cc85b61ce94d592f076fcad04a4d1bb
-Size (xbase-2.0.0.tar.gz) = 430048 bytes
-SHA1 (patch-aa) = ce2aa63e51be2e5cf53844b1017d118b24ee158f
-SHA1 (patch-ab) = 6c3c06dd3dae94f880d6c23f81e0a66a01265d52
-SHA1 (patch-ac) = 258bdb21f1e6f79ce24631dd4942813fe136b682
+SHA1 (xbase-2.1.0.tar.gz) = 0bdaa61fe3437d7d2f0a9ccd6766fb900a08501e
+RMD160 (xbase-2.1.0.tar.gz) = 1bfc9e660bf21be5e44408c9d54e8b6c46bff00d
+Size (xbase-2.1.0.tar.gz) = 508021 bytes
 SHA1 (patch-ad) = 2e2bc8ba9879598a6d7a4f1b5f82f2eca8145ad1
+SHA1 (patch-ba) = df35b16168524fa454b35e70fd4e54a30c948194
+SHA1 (patch-bb) = 34758b30b4b5176a3c9a822c3c52627c7fb9ff49
+SHA1 (patch-bc) = 0f52ce89772727dbec2cc24cdd3178806d782069
+SHA1 (patch-bd) = a41e2c83eb22a1184970e43aefea2b63296f83dc
+SHA1 (patch-be) = 7a8d47ccd6ba3dcab62304cc8139f33f99ec15e1
