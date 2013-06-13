@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2013/02/04 08:33:33 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.3 2013/06/13 11:40:35 noud4 Exp $
 #
 
 GIT_PKG=		euca2ools
-GIT_LEVEL=		master
+GIT_LEVEL=		2.1.3
 
 DISTNAME=		${GIT_LEVEL}
-PKGNAME=		${GIT_PKG}-2.1.2.x
-THIS_EGG_FILE=		${GIT_PKG}-0.0.0-py${PYVERSSUFFIX}.egg-info # XXX ${PKGNAME}-p
+PKGNAME=		${GIT_PKG}-${GIT_LEVEL}
 CATEGORIES=		sysutils
 MASTER_SITES=		https://github.com/eucalyptus/${GIT_PKG}/archive/
 EXTRACT_SUFX=		.zip
@@ -26,8 +25,7 @@ USE_TOOLS+=		gmake
 
 WRKSRC=			${WRKDIR}/${GIT_PKG}-${GIT_LEVEL}
 
-PLIST_SUBST+=		THIS_EGG_FILE=${THIS_EGG_FILE} # XXX
-
 .include "../../lang/python/application.mk"
 .include "../../lang/python/distutils.mk"
+EGG_NAME=${GIT_PKG}-0.0.0
 .include "../../mk/bsd.pkg.mk"

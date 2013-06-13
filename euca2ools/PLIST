@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/02/03 16:55:28 noud4 Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/06/13 11:40:35 noud4 Exp $
 bin/euare-accountaliascreate
 bin/euare-accountaliasdelete
 bin/euare-accountaliaslist
@@ -121,7 +121,7 @@ bin/euca-upload-bundle
 bin/euca-version
 bin/eustore-describe-images
 bin/eustore-install-image
-${PYSITELIB}/${THIS_EGG_FILE}
+${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/euca2ools/__init__.py
 ${PYSITELIB}/euca2ools/__init__.pyc
 ${PYSITELIB}/euca2ools/__init__.pyo
