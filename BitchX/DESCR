@@ -1,4 +1,4 @@
 BitchX is an IRC (Internet Relay Chat) client by Colten Edwards aka
 panasync@efnet, it is based on its predecessors ircII and EPIC.
 
-(this MUST replace chat/bitchx given CVE-2007-3360, CVE-2007-4584)
+(this should replace chat/bitchx given CVE-2007-3360, CVE-2007-4584)

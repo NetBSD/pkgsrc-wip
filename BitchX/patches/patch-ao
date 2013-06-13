@@ -1,0 +1,15 @@
+$NetBSD: patch-ao,v 1.1 2013/06/13 09:51:05 noud4 Exp $
+
+--- source/term.c.orig	2013-06-13 06:34:20.000000000 +0000
++++ source/term.c	2013-06-13 06:45:27.000000000 +0000
+@@ -93,6 +93,10 @@
+ 
+ extern  char    *getenv();
+ 
++#if !defined(__FreeBSD__) && !defined(__DragonFly__) && !defined(__NetBSD__) && !defined(__sun)
++extern	char	*tparm();
++#endif
++
+ /*
+  * The old code assumed termcap. termcap is almost always present, but on
+  * many systems that have both termcap and terminfo, termcap is deprecated

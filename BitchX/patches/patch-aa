@@ -1,0 +1,23 @@
+$NetBSD: patch-aa,v 1.1 2013/06/13 09:51:05 noud4 Exp $
+
+ajusting pkg paths.
+
+--- configure.orig	2013-01-01 04:55:05.000000000 +0000
++++ configure	2013-06-13 09:20:23.000000000 +0000
+@@ -17270,14 +17270,14 @@
+   mandir="\$(IRCLIB)"
+ else
+   INSTALL_IRC="\${bindir}/\$(_VERSION_)\$(EXEEXT)"
+-  IRCLIB="\${libdir}/bx"
++  IRCLIB="\${datadir}/bx"
+   IRCPATH="\$(DEFAULT_CTOOLZ_DIR):\$(DEFAULT_CTOOLZ_DIR)/plugins:.:\$(PLUGINDIR):\$(INSTALL_SCRIPT):\$(IRCLIB)"
+   TRANSLATION_PATH="\$(IRCLIB)/translation"
+   HELPDIR="\$(IRCLIB)/help"
+   INSTALL_WSERV="\$(IRCLIB)/wserv\$(EXEEXT)"
+   INSTALL_SCRBX="\${bindir}/scr-bx\$(EXEEXT)"
+   INSTALL_SCRIPT="\$(IRCLIB)/script"
+-  PLUGINDIR="\$(IRCLIB)/plugins"
++  PLUGINDIR="\$(libdir)/plugins"
+   DEFAULT_CTOOLZ_DIR="~/.BitchX"
+   DEFAULT_MSGLOGFILE="BitchX.away"
+   DEFAULT_BITCHX_HELP_FILE="BitchX.help"

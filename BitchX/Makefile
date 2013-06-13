@@ -1,55 +1,41 @@
-# $NetBSD: Makefile,v 1.3 2013/02/04 20:31:21 noud4 Exp $
+# $NetBSD: Makefile,v 1.4 2013/06/13 09:51:05 noud4 Exp $
 
 DISTNAME=	BitchX-1.2-final
 PKGNAME=	bitchx-1.2 # XXX ${DISTNAME:S|-final||:LC}
+PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	http://www.bitchx.ca/
 
-MAINTAINER=	nuod4@home.nl
+MAINTAINER=	noud4@home.nl
 HOMEPAGE=	http://www.bitchx.org/
 COMMENT=	IRC client based on ircII
 
+# This package is not even remotely 64-bit clean
+NOT_FOR_PLATFORM=	${LP64PLATFORMS}
+
+USE_TOOLS+=	bash
+
 WRKSRC=			${WRKDIR}/${DISTNAME:S|-final||}
-
-HAS_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKG_MANDIR}
+GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--with-ssl
-CONFIGURE_ARGS+=	--prefix=${DESTDIR}${PREFIX}
 CONFIGURE_ARGS+=	--with-plugins
+CONFIG_SHELL=		${TOOLS_PATH.bash}
 
-USE_TOOLS+=		gmake pax
-USE_LANGUAGES+=		c
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Darwin"
+CFLAGS+=	-DBIND_8_COMPAT
+.endif
 
 SUBST_CLASSES+=		manpage
 SUBST_STAGE.manpage=	post-patch
 SUBST_FILES.manpage+=	doc/BitchX.1
 SUBST_SED.manpage+=	-e 's,@PREFIX@,${PREFIX},g'
 
-INSTALLATION_DIRS+=	bin
-INSTALLATION_DIRS+=	share/bx/help/1_General/ctcp \
-			share/bx/help/1_General/dcc \
-			share/bx/help/2_Queries \
-			share/bx/help/3_Operators \
-			share/bx/help/4_Misc/bind \
-			share/bx/help/4_Misc/set \
-			share/bx/help/4_Misc/window \
-			share/bx/help/5_Programming/on \
-			share/bx/help/6_Functions \
-			share/bx/help/7_Docs \
-			share/bx/help/8_Scripts \
-			share/bx/script \
-			share/bx/translation
-INSTALLATION_DIRS+=	${PKG_MANDIR}/man1
-
-post-build:
-	cd ${WRKSRC} && ${MAKE_ENV} ${MAKE} install
-
-do-install:
-	cd ${WRKSRC} && pax -rwpam ${DESTDIR}${PREFIX}/bin/* ${PREFIX}/bin
-	cd ${WRKSRC} && pax -rwpam ${DESTDIR}${PREFIX}/lib/* ${PREFIX}/lib
-	cd ${WRKSRC} && pax -rwpam ${DESTDIR}${PREFIX}/share/* ${PREFIX}/share
+INSTALL_MAKE_FLAGS+=	mandir=${PREFIX}/${PKGMANDIR}
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
+
 .include "../../mk/bsd.pkg.mk"

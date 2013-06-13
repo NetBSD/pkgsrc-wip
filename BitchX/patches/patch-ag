@@ -1,0 +1,40 @@
+$NetBSD: patch-ag,v 1.1 2013/06/13 09:51:05 noud4 Exp $
+
+--- source/parse.c.orig	2013-01-01 04:55:05.000000000 +0000
++++ source/parse.c	2013-06-13 06:38:29.000000000 +0000
+@@ -1495,10 +1495,11 @@
+ 	char *target;
+ 	char *line;
+ 	int	flag;
++	size_t	linelen;
+ 	
+ 	ChannelList *chan = NULL;
+ 	ChannelList *chan2 = get_server_channels(from_server);
+-	char buffer[BIG_BUFFER_SIZE+1];		
++	char *buffer;
+ 	char *smode;
+ 	char *display_uh = FromUserHost[0] ? FromUserHost : "*";
+ #ifdef COMPRESS_MODES
+@@ -1515,7 +1516,13 @@
+ 	set_display_target(target, LOG_CRAP);
+ 	if (target && line)
+ 	{
+-		strcpy(buffer, line);
++		buffer = malloc(linelen = strlen(line));
++		if (!buffer)
++		{
++			perror("malloc");
++			return;
++		}
++		strncpy(buffer, line, linelen);
+ 		if (get_int_var(MODE_STRIPPER_VAR))
+ 			strip_modes(from, target, line);
+ 		if (is_channel(target))
+@@ -1565,6 +1572,7 @@
+ 			logmsg(LOG_MODE_USER, from, 0, "%s %s", target, line);
+ 		}
+ 		update_all_status(current_window, NULL, 0);
++		free(buffer);
+ 	}
+ #ifdef GUI
+ 	gui_update_nicklist(target);
