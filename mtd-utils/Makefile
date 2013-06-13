@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.3 2012/11/14 00:16:11 othyro Exp $
+# $NetBSD: Makefile,v 1.4 2013/06/13 12:00:42 noud4 Exp $
 #
 
 DISTNAME=	mtd-utils-1.0.0
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://ftp.infradead.org/pub/mtd-utils/
 
 MAINTAINER=	noud4@home.nl
 HOMEPAGE=	http://www.linux-mtd.infradead.org/
 COMMENT=	Memory Technology Device Tools
-
-PKG_DESTDIR_SUPPORT=	none
 
 USE_TOOLS+=	gmake
 USE_LANGUAGES=	c c++
@@ -28,8 +27,8 @@ post-build:
 	cd ${WRKSRC}/jittertest && ${MAKE}
 
 post-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/checkfs/checkfs ${PREFIX}/sbin
-	${INSTALL_PROGRAM} ${WRKSRC}/jittertest/JitterTest ${PREFIX}/sbin
-	${INSTALL_PROGRAM} ${WRKSRC}/jittertest/plotJittervsFill ${PREFIX}/sbin
+	${INSTALL_PROGRAM} ${WRKSRC}/checkfs/checkfs ${DESTDIR}${PREFIX}/sbin
+	${INSTALL_PROGRAM} ${WRKSRC}/jittertest/JitterTest ${DESTDIR}${PREFIX}/sbin
+	${INSTALL_PROGRAM} ${WRKSRC}/jittertest/plotJittervsFill ${DESTDIR}${PREFIX}/sbin
 
 .include "../../mk/bsd.pkg.mk"
