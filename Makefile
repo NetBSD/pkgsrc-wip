@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5327 2013/06/12 12:13:16 othyro Exp $
+# $Id: Makefile,v 1.5328 2013/06/13 11:30:00 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -63,6 +63,7 @@ SUBDIR+=	SDL-intro-pt
 SUBDIR+=	SDL-intro-ru
 SUBDIR+=	SDL2
 SUBDIR+=	SDL2_mixer
+SUBDIR+=	SDL2_ttf
 SUBDIR+=	Siesta
 SUBDIR+=	StepTalk
 SUBDIR+=	Terminal
