@@ -1,0 +1,12 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2013/06/13 13:54:58 makoto Exp $
+T-code table in PostScript and PDF format are installed under
+  ${PREFIX}/share/${PKGBASE}.
+Also SCRIPT and DATA for generation are in the same directory. For help:
+  (cd ${PREFIX}/share/${PKGBASE}; perl hasida-table -h )
+or in Japanese (EUC for the moment):
+  (cd ${PREFIX}/share/${PKGBASE}; perl hasida-table -j )
+Executing on arbitrary directory, you need to copy
+   ${PREFIX}/share/${PKGBASE}/tcode.st
+to your current directory.
+===========================================================================

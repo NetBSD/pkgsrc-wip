@@ -1,0 +1,4 @@
+Kanji stroke table for t-code input method.
+This will install Postscript and PDF format file.
+Original has some customization, you may execute
+perl script in ${PREFIX}/share/hasida-table.
