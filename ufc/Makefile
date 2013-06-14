@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2013/03/24 20:17:23 outpaddling Exp $
+# $NetBSD: Makefile,v 1.14 2013/06/14 18:43:01 thomasklausner Exp $
 #
 
 DISTNAME=	ufc-${MMVERSION}.0
@@ -41,5 +41,5 @@ SUBST_SED.ospath+=	-e 's|os.path.join(os.path.sep, "usr")|os.path.normpath("${PR
 
 .include "../../lang/python/application.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
-.include "../../wip/swig2/buildlink3.mk"
+.include "../../devel/swig2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

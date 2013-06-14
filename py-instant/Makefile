@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2013/03/24 20:41:42 outpaddling Exp $
+# $NetBSD: Makefile,v 1.6 2013/06/14 18:43:01 thomasklausner Exp $
 #
 
 DISTNAME=	instant-${MMVERSION}.0
@@ -25,5 +25,5 @@ SUBST_SED.man=		-e 's|"share", ||g'
 
 # todo: depends on swig, distutils
 .include "../../lang/python/extension.mk"
-.include "../../wip/swig2/buildlink3.mk"
+.include "../../devel/swig2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2013/03/24 20:35:26 outpaddling Exp $
+# $NetBSD: Makefile,v 1.19 2013/06/14 18:43:01 thomasklausner Exp $
 #
 
 DISTNAME=	dolfin-${MMVERSION}.0
@@ -100,7 +100,7 @@ MMVERSION=	1.2
 #.include "../../math/cgal/buildlink3.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
-.include "../../wip/swig2/buildlink3.mk"
+.include "../../devel/swig2/buildlink3.mk"
 .include "../../wip/suitesparse/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 # Broken package
