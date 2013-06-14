@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/06/07 23:03:21 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2013/06/14 07:36:56 thomasklausner Exp $
 #
 
 DISTNAME=	2.7.5
@@ -17,6 +17,6 @@ LICENSE=	mit
 WRKSRC=		${WRKDIR}/${PKG}-${DISTNAME}
 USE_LANGUAGES=	# none
 
-DEPENDS+=	redis-[0-9]*:../../wip/redis
+DEPENDS+=	redis-[0-9]*:../../databases/redis
 .include "../../lang/python/distutils.mk"
 .include "../../mk/bsd.pkg.mk"
