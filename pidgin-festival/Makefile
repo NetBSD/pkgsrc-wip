@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2013/03/24 02:28:24 othyro Exp $
+# $NetBSD: Makefile,v 1.14 2013/06/14 13:37:56 noud4 Exp $
 #
 
 DISTNAME=	pidgin-festival-2.4
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	chat audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pidgin-festival/}
 

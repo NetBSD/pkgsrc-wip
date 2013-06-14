@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1 2013/06/14 13:37:56 noud4 Exp $
+
+replace obsolete macro.
+
+--- configure.ac.orig	2013-06-14 13:22:11.000000000 +0000
++++ configure.ac	2013-06-14 13:22:29.000000000 +0000
+@@ -128,7 +128,7 @@
+ #
+ # Finish up
+ #
+-AM_CONFIG_HEADER(pre_config.h)
++AC_CONFIG_HEADERS(pre_config.h)
+ AC_CONFIG_FILES([Makefile
+ 		   src/Makefile
+ 		   pidgin-festival.spec
