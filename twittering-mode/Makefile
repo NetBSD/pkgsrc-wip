@@ -1,25 +1,23 @@
-# $NetBSD: Makefile,v 1.7 2013/06/08 00:23:51 makoto Exp $
+# $NetBSD: Makefile,v 1.8 2013/06/14 13:50:15 makoto Exp $
 
+# M-x twittering-mode-version shows twittering-mode-vHEAD,
+# but just for convenience:
 DISTNAME=	twittering-mode-3.0.0
 CATEGORIES=	net
-MASTER_SITES+=	http://sourceforge.net/projects/twmode/files/twittering-mode-3.0.0/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	https://github.com/hayamiz/twittering-mode/
 COMMENT=	Emacs client for twitter
 LICENSE=	gnu-gpl-v2
 
+GIT_REPOSITORIES=	master
+GIT_REPO.master=	https://github.com/hayamiz/twittering-mode.git
+GIT_MODULE.master=	twittering-mode
+PKGSRC_SETENV=		GIT_SSL_NO_VERIFY=true
+
+WRKSRC=		${WRKDIR}/twittering-mode
 NO_BUILD=	yes
-
 USE_LANGUAGES=	# none
-
-# Original shows vHEAD by M-x twittering-mode-version, but it might be nice
-# to tell a user the version number by this command (mef@).
-SUBST_CLASSES+=		version
-SUBST_MESSAGE.version=	Replace version string 'HEAD' by ${PKGVERSION}
-SUBST_STAGE.version=	post-patch
-SUBST_FILES.version=	twittering-mode.el
-SUBST_SED.version=	-e '/defconst/s,HEAD,${PKGVERSION},'
 
 .include "../../editors/emacs/modules.mk"
 # Avoid single file spread out just under site-lisp directory.
@@ -27,8 +25,10 @@ SUBST_SED.version=	-e '/defconst/s,HEAD,${PKGVERSION},'
 INSTALLATION_DIRS=	${EMACS_LISPPREFIX}/a-files
 
 TEST_TARGET=	check
+BUILD_DEPENDS+=	scmgit-base-[0-9]*:../../devel/scmgit-base
 
 do-install:
 	${INSTALL_DATA}   ${WRKSRC}/twittering-mode.el  ${DESTDIR}${INSTALLATION_DIRS}
 
+.include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"
