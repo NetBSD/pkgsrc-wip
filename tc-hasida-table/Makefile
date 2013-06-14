@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/06/13 13:54:58 makoto Exp $
+# $NetBSD: Makefile,v 1.2 2013/06/14 00:57:33 makoto Exp $
 
 DISTNAME=	hasida-table-0.7
 
@@ -12,5 +12,15 @@ COMMENT=        Kanji table for t-code input (PostScript and PDF)
 
 USE_TOOLS+=     perl
 REPLACE_PERL=	hasida-table
+# BUILD_DEPENDS+=	ghostscript-cidfonts-ryumin-[0-9]*:../../fonts/ghostscript-cidfonts-ryumin
+# BUILD_ENV+=	PKG_OPTIONS.ghostscript+=disable-compile-inits
+
+# .if empty(PKG_BUILD_OPTIONS.ghostscript-gpl:Mdisable-compile-inits) && \
+#     empty(PKG_BUILD_OPTIONS.ghostscript-agpl:Mdisable-compile-inits)
+# PKG_FAIL_REASON+=       'You need to set PKG_OPTIONS.ghostscript+= disable-compile-inits, at its compile time.'
+# .endif
+
+# DEPENDS either ghostscript-agpl or ghostscript-gpl
+.include "../../print/ghostscript/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
