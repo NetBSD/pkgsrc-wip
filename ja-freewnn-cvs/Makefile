@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2012/10/01 21:43:20 asau Exp $
+# $NetBSD: Makefile,v 1.3 2013/06/15 17:33:37 kristerw Exp $
 
 DISTNAME=	ja-freewnn-1.1.0.pl22
 PKGNAME=	ja-freewnn-1.1.0_pl22
-PKGREVISION=	${_CVS_PKGVERSION:S/.//g}
 
 CATEGORIES=	inputmethod
 MASTER_SITES=
