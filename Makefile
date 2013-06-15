@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5330 2013/06/14 18:43:01 thomasklausner Exp $
+# $Id: Makefile,v 1.5331 2013/06/15 16:23:08 yvs4sf Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1672,6 +1672,7 @@ SUBDIR+=	mtd-utils
 SUBDIR+=	mtf
 SUBDIR+=	mtop
 SUBDIR+=	mtpaint
+SUBDIR+=	mtr-current
 SUBDIR+=	mtrack
 SUBDIR+=	mu
 SUBDIR+=	mu-cite
