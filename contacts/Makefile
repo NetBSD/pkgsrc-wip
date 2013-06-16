@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2013/06/16 09:02:57 noud4 Exp $
+# $NetBSD: Makefile,v 1.2 2013/06/16 09:19:06 noud4 Exp $
 #
 
 DISTNAME=	contacts-0.12
 CATEGORIES=	databases
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/contacts/${PKGVERSION}/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/contacts/${PKGVERSION_NOREV}/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	noud4@home.nl
