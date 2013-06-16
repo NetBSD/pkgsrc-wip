@@ -1,0 +1,29 @@
+$NetBSD: patch-af,v 1.1 2013/06/16 08:07:24 noud4 Exp $
+
+see patch-ad.
+
+--- src/dates_view.c.orig	2009-07-17 14:32:15.000000000 +0000
++++ src/dates_view.c	2013-06-14 16:48:08.000000000 +0000
+@@ -4691,7 +4691,6 @@
+ 	DatesViewPrivate *priv = DATES_VIEW_GET_PRIVATE (view);
+ 	DatesViewCalendar *cal;
+ 	ESource *source;
+-	guint32 colour;
+ /*	GError *error = NULL;*/
+ 	
+ 	g_return_if_fail (E_IS_CAL (ecal));
+@@ -4721,11 +4720,10 @@
+ 	cal->text_gc = gdk_gc_new (
+ 		GDK_DRAWABLE (priv->main->window));
+ 
+-	if (e_source_get_color (source, &colour)) {
++	const gchar* spec = e_source_peek_color_spec (source);
++	if (spec) {
+ 		GdkColor gcolour, dgcolour, tgcolour;
+-		gcolour.red = ((colour & 0xFF0000) >> 16) * 0x101;
+-		gcolour.green = ((colour & 0xFF00) >> 8)  * 0x101;
+-		gcolour.blue = (colour & 0xFF) * 0x101;
++		gdk_color_parse(spec, &gcolour);
+ 
+ 		/* This is simplified sRGB -> LAB conversion; we do not need it
+ 		 * entirely precise, as we are only going to chose between
