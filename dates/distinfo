@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.3 2013/06/16 08:07:24 noud4 Exp $
+$NetBSD: distinfo,v 1.4 2013/06/16 08:15:32 noud4 Exp $
 
-SHA1 (dates-0.4.8.tar.bz2) = 4befe1532b02b835c0d8b244eb66cae50b447ebb
-RMD160 (dates-0.4.8.tar.bz2) = d6f5dee1c21d2fc165d079ddfb4fae81ba48376a
-Size (dates-0.4.8.tar.bz2) = 407870 bytes
+SHA1 (dates-0.4.10.tar.bz2) = ccccdd5181cbfe2d948342e55397f77d0af8b875
+RMD160 (dates-0.4.10.tar.bz2) = ca754f1ce5325cb3cb1b82d1f6940018fd5f3bcf
+Size (dates-0.4.10.tar.bz2) = 429692 bytes
 SHA1 (patch-aa) = be09da3a4f57130fb476e031f2c59ae56eb76151
-SHA1 (patch-ac) = facab947e0d7fc19f4f0e3a787902518087b9c70
+SHA1 (patch-ac) = 277060693bec4ac215476d7ae611db2b5005b760
 SHA1 (patch-ad) = 9a79b72b5cb9d5362bae28407fc9e8f8d12aed59
 SHA1 (patch-ae) = 2f63dc36127a753e375c9c2d24c04f457c635e81
 SHA1 (patch-af) = 72b14883c774c2fce4b07e2a7ecf99d6d0d631a4

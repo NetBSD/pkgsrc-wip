@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2013/06/16 08:07:24 noud4 Exp $
+# $NetBSD: Makefile,v 1.5 2013/06/16 08:15:32 noud4 Exp $
 #
 
-DISTNAME=	dates-0.4.8
-PKGREVISION=	2
+DISTNAME=	dates-0.4.10
 CATEGORIES=	time gnome
 MASTER_SITES=	ftp://ftp.gnome.org/pub/gnome/sources/dates/0.4/
 EXTRACT_SUFX=	.tar.bz2
