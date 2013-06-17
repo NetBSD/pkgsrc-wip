@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2013/06/08 11:24:47 bsiegert Exp $
+# $NetBSD: Makefile,v 1.8 2013/06/17 09:29:15 thomasklausner Exp $
 #
 
-DISTNAME=	go1.1.src
-PKGNAME=	go-1.1
+DISTNAME=	go1.1.1.src
+PKGNAME=	go-1.1.1
 CATEGORIES=	lang
 MASTER_SITES=	https://go.googlecode.com/files/
 

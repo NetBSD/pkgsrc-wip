@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2013/06/08 11:24:47 bsiegert Exp $
+@comment $NetBSD: PLIST,v 1.6 2013/06/17 09:29:15 thomasklausner Exp $
 bin/go
 bin/godoc
 bin/gofmt
@@ -3699,6 +3699,7 @@ go/test/fixedbugs/issue5125.dir/main.go
 go/test/fixedbugs/issue5125.go
 go/test/fixedbugs/issue5162.go
 go/test/fixedbugs/issue5231.go
+go/test/fixedbugs/issue5244.go
 go/test/fixedbugs/issue5259.dir/bug.go
 go/test/fixedbugs/issue5259.dir/main.go
 go/test/fixedbugs/issue5259.go
@@ -3708,6 +3709,16 @@ go/test/fixedbugs/issue5260.go
 go/test/fixedbugs/issue5291.dir/pkg1.go
 go/test/fixedbugs/issue5291.dir/prog.go
 go/test/fixedbugs/issue5291.go
+go/test/fixedbugs/issue5470.dir/a.go
+go/test/fixedbugs/issue5470.dir/b.go
+go/test/fixedbugs/issue5470.go
+go/test/fixedbugs/issue5493.go
+go/test/fixedbugs/issue5515.go
+go/test/fixedbugs/issue5607.go
+go/test/fixedbugs/issue5614.dir/rethinkgo.go
+go/test/fixedbugs/issue5614.dir/x.go
+go/test/fixedbugs/issue5614.dir/y.go
+go/test/fixedbugs/issue5614.go
 go/test/fixedbugs/issue887.go
 go/test/float_lit.go
 go/test/floatcmp.go
