@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2012/10/03 09:10:35 asau Exp $
+# $NetBSD: Makefile,v 1.7 2013/06/17 12:45:12 thomasklausner Exp $
 #
 
 DISTNAME=	liblastfm-sharp-0.1.09
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	http://lastfm-sharp.googlecode.com/files/
 
@@ -17,5 +17,5 @@ USE_LANGUAGES=	# none
 
 PKGCONFIG_OVERRIDE+=	src/liblastfm-sharp.pc.in
 
-.include "../../lang/mono/buildlink3.mk"
+.include "../../lang/mono2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

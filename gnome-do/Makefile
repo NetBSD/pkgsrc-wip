@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2012/09/29 00:50:36 asau Exp $
+# $NetBSD: Makefile,v 1.8 2013/06/17 12:45:11 thomasklausner Exp $
 #
 
 DISTNAME=	gnome-do-0.8.5
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://launchpad.net/do/trunk/0.8.5/+download/
 
@@ -30,7 +31,7 @@ PKGCONFIG_OVERRIDE+=	Do.Interface.Linux.AnimationBase/do.interface.linux.animati
 .include "../../devel/GConf/schemas.mk"
 .include "../../devel/mono-addins/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../lang/mono/buildlink3.mk"
+.include "../../lang/mono2/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/ndesk-dbus/buildlink3.mk"
 .include "../../sysutils/ndesk-dbus-glib/buildlink3.mk"

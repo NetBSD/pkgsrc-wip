@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2012/10/07 17:17:22 asau Exp $
+# $NetBSD: Makefile,v 1.8 2013/06/17 12:45:13 thomasklausner Exp $
 #
 
 DISTNAME=	taglib-sharp-2.0.3.2
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	audio
 MASTER_SITES=	http://download.banshee-project.org/taglib-sharp/2.0.3.2/
 EXTRACT_SUFX=	.tar.bz2
@@ -19,7 +19,7 @@ PKGCONFIG_OVERRIDE+=	taglib-sharp.pc.in
 
 CONFIGURE_ARGS+=	--enable-docs
 
-.include "../../lang/mono/buildlink3.mk"
+.include "../../lang/mono2/buildlink3.mk"
 .include "../../security/policykit/buildlink3.mk"
 .include "../../x11/gnome-sharp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

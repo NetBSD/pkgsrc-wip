@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2012/09/29 17:05:57 asau Exp $
+# $NetBSD: Makefile,v 1.7 2013/06/17 12:45:11 thomasklausner Exp $
 #
 
 DISTNAME=	hyena-0.5
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/hyena/0.5/}
 EXTRACT_SUFX=	.tar.bz2
@@ -20,5 +21,5 @@ PKGCONFIG_OVERRIDE+=	build/pkg-config/hyena.gui.pc.in
 PKGCONFIG_OVERRIDE+=	build/pkg-config/hyena.pc.in
 
 .include "../../x11/gtk-sharp/buildlink3.mk"
-.include "../../lang/mono/buildlink3.mk"
+.include "../../lang/mono2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

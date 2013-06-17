@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2012/10/03 18:15:32 asau Exp $
+# $NetBSD: Makefile,v 1.7 2013/06/17 12:45:12 thomasklausner Exp $
 #
 
 DISTNAME=	njb-sharp-0.3.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	http://download.banshee-project.org/legacy/njb-sharp/
 
@@ -23,5 +23,5 @@ CONFIGURE_ARGS+=	--disable-monodoc
 PKGCONFIG_OVERRIDE+=	njb-sharp.pc.in
 
 .include "../../devel/libnjb/buildlink3.mk"
-.include "../../lang/mono/buildlink3.mk"
+.include "../../lang/mono2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

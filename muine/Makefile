@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2012/11/13 20:09:35 othyro Exp $
+# $NetBSD: Makefile,v 1.24 2013/06/17 12:45:12 thomasklausner Exp $
 #
 
 DISTNAME=	muine-0.8.11
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	audio gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/muine/0.8/}
 
@@ -35,7 +35,7 @@ BUILDLINK_TRANSFORM+=	rm:-Werror
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../multimedia/gstreamer0.10/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
-.include "../../lang/mono/buildlink3.mk"
+.include "../../lang/mono2/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
 .include "../../wip/taglib-sharp/buildlink3.mk"
 .include "../../sysutils/ndesk-dbus/buildlink3.mk"

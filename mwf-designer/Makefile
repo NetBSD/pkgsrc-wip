@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2012/10/03 14:58:39 asau Exp $
+# $NetBSD: Makefile,v 1.6 2013/06/17 12:45:12 thomasklausner Exp $
 
 DISTNAME=	mwf-designer
 PKGNAME=	${DISTNAME}-${MWF_VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	http://www.mono-project.com/
 
@@ -35,5 +35,5 @@ do-install:
 	${INSTALL} ${WRKSRC}/mwf-designer ${DESTDIR}${PREFIX}/bin
 
 .include "../../wip/mk/svn-package.mk"
-.include "../../lang/mono/buildlink3.mk"
+.include "../../lang/mono2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

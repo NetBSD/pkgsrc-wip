@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2013/03/10 17:07:48 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2013/06/17 12:45:10 thomasklausner Exp $
 #
 
 DISTNAME=	boo-0.9.4.9-src
 PKGNAME=	${DISTNAME:S/-src//}
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	http://dist.codehaus.org/boo/distributions/
 EXTRACT_SUFX=	.tar.bz2
@@ -35,5 +36,5 @@ do-install:
 
 .include "../../x11/gtksourceview/buildlink3.mk"
 .include "../../databases/shared-mime-info/buildlink3.mk"
-.include "../../lang/mono/buildlink3.mk"
+.include "../../lang/mono2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

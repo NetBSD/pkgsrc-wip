@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2012/11/23 22:33:39 othyro Exp $
+# $NetBSD: Makefile,v 1.9 2013/06/17 12:45:11 thomasklausner Exp $
 #
 
 DISTNAME=	gnome-keyring-sharp-1.0.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/gnome-keyring-sharp/
 EXTRACT_SUFX=	.tar.bz2
@@ -23,5 +23,5 @@ CONFIGURE_ARGS+=	--disable-monodoc
 
 .include "options.mk"
 
-.include "../../lang/mono/buildlink3.mk"
+.include "../../lang/mono2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

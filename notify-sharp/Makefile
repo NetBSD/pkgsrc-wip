@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2013/03/10 17:49:08 othyro Exp $
+# $NetBSD: Makefile,v 1.7 2013/06/17 12:45:12 thomasklausner Exp $
 #
 
 DISTNAME=	notify-sharp_0.4.0~r3032.orig
 PKGNAME=	${DISTNAME:S/_/-/1:S/~//1:S/.orig//1}
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	https://launchpad.net/ubuntu/+archive/primary/+files/
 FETCH_USING=	curl
@@ -19,7 +20,7 @@ USE_LANGUAGES=	c
 
 PKGCONFIG_OVERRIDE+=	notify-sharp.pc.in
 
-.include "../../lang/mono/buildlink3.mk"
+.include "../../lang/mono2/buildlink3.mk"
 .include "../../sysutils/ndesk-dbus/buildlink3.mk"
 .include "../../sysutils/ndesk-dbus-glib/buildlink3.mk"
 .include "../../x11/gtk-sharp/buildlink3.mk"

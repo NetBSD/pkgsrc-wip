@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2012/12/08 16:56:40 ryo-on Exp $
+# $NetBSD: Makefile,v 1.8 2013/06/17 12:45:12 thomasklausner Exp $
 #
 
 DISTNAME=	rss-glib-0.2.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://ftp.dronelabs.com/sources/rss-glib/0.2/
 

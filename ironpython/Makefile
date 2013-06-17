@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2012/09/30 05:44:15 asau Exp $
+# $NetBSD: Makefile,v 1.8 2013/06/17 12:45:11 thomasklausner Exp $
 #
 
 DISTNAME=	IronPython-1.0.1-Src
 PKGNAME=	ironpython-1.0.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	lang python
 MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/ironpython/
 EXTRACT_SUFX=	.zip
@@ -47,5 +47,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/*.html ${DESTDIR}${DOCDIR}
 
 
-.include "../../lang/mono/buildlink3.mk"
+.include "../../lang/mono2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

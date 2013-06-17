@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2012/10/03 15:09:57 asau Exp $
+# $NetBSD: Makefile,v 1.6 2013/06/17 12:45:12 thomasklausner Exp $
 
 DISTNAME=	moon-1.0.1
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	multimedia
 PKGNAME=	moonlight-1.0.1
 MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/moon/1.0.1/
@@ -29,7 +29,7 @@ ONLY_FOR_PLATFORM=	Linux-*-i386 Linux-*-x86_64 NetBSD-*-i386 NetBSD-*-x86_64
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/xulrunner/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
-.include "../../lang/mono/buildlink3.mk"
+.include "../../lang/mono2/buildlink3.mk"
 .include "../../multimedia/ffmpeg/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 

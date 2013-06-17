@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2012/10/05 08:46:09 asau Exp $
+# $NetBSD: Makefile,v 1.8 2013/06/17 12:45:12 thomasklausner Exp $
 #
 
 DISTNAME=	pdfmod-0.9.1
+PKGREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/pdfmod/0.9/}
 EXTRACT_SUFX=	.tar.bz2
@@ -19,7 +20,7 @@ USE_LANGUAGES=		c c++
 INSTALLATION_DIRS+=	lib/pdfmod
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../lang/mono/buildlink3.mk"
+.include "../../lang/mono2/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 BUILDLINK_API_DEPENDS.hyena+=	hyena>=0.5
