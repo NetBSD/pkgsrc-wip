@@ -1,2 +1,5 @@
-PhantomJS is still not entirely headless, but works fine with
-e.g. Xfvb from x11/modular-xorg-server.
+PhantomJS 1.9.x works fine on SunOS.*.i386. It does build properly
+on SunOS.*.x86_64, but doesn't work at all (JavaScript input is not
+being processed at all). See more here:
+
+https://github.com/ariya/phantomjs/issues/10521
