@@ -1,4 +1,6 @@
-$NetBSD: patch-ac,v 1.3 2010/05/01 22:34:48 thomasklausner Exp $
+$NetBSD: patch-ac,v 1.4 2013/06/18 11:36:25 noud4 Exp $
+
+reverted bogus patch(?)
 
 --- src/libtracker-gtk/Makefile.in.orig	2010-02-04 10:56:49.000000000 +0000
 +++ src/libtracker-gtk/Makefile.in
@@ -7,7 +9,7 @@ $NetBSD: patch-ac,v 1.3 2010/05/01 22:34:48 thomasklausner Exp $
  	@list='$(lib_LTLIBRARIES)'; test -n "$(libdir)" || list=; \
  	list2=; for p in $$list; do \
 -	  if test -f $$p; then \
-+	  if test -h $$p; then \
++	  if test -f $$p; then \
  	    list2="$$list2 $$p"; \
  	  else :; fi; \
  	done; \
