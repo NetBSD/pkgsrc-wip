@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/06/18 10:29:14 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2013/06/18 12:24:27 fhajny Exp $
 #
 
 DISTNAME=	ptpd-2.2.2
@@ -18,6 +18,8 @@ MAKE_ENV+=	LIBS=${LIBS:Q}
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
 
 INSTALLATION_DIRS=	lib ${PKGMANDIR}/man8 sbin
+
+PLIST_SUBST+=	PKGVERSION_NOREV=${PKGVERSION_NOREV}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/ptpd2 ${DESTDIR}${PREFIX}/sbin
