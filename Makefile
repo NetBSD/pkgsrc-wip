@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5334 2013/06/18 07:18:38 noud4 Exp $
+# $Id: Makefile,v 1.5335 2013/06/18 07:37:15 noud4 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1463,6 +1463,7 @@ SUBDIR+=	libscscp
 SUBDIR+=	libsidplay2
 SUBDIR+=	libslab
 SUBDIR+=	libsnappy
+SUBDIR+=	libsocialweb
 SUBDIR+=	libspt
 SUBDIR+=	libstacktrace
 SUBDIR+=	libtextcat
