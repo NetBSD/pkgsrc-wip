@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2012/11/16 23:37:01 noud4 Exp $
+# $NetBSD: Makefile,v 1.4 2013/06/19 14:12:22 noud4 Exp $
 #
 
 DISTNAME=	loggly-0.1.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel python
 MASTER_SITES=	http://pypi.python.org/packages/source/l/loggly/
 
