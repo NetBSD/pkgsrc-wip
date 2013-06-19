@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/05 11:31:52 asau Exp $
+# $NetBSD: Makefile,v 1.3 2013/06/19 13:47:19 noud4 Exp $
 #
 
 DISTNAME=		twitter-0.4.0
@@ -23,7 +23,7 @@ PLIST_SUBST+=		EXTRACT_SUFX=${EXTRACT_SUFX}
 INSTALLATION_DIRS+=	lib/purple-2
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/${DISTNAME}${EXTRACT_SUFX} ${DESTDIR}/${PREFIX}/lib/purple-2
+	${INSTALL_SCRIPT} ${WRKSRC}/${DISTNAME}${EXTRACT_SUFX} ${DESTDIR}${PREFIX}/lib/purple-2
 
 .include "../../chat/pidgin/buildlink3.mk"
 .include "../../chat/libpurple/buildlink3.mk"
