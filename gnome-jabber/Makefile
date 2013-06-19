@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.12 2012/12/04 03:30:08 othyro Exp $
+# $NetBSD: Makefile,v 1.13 2013/06/19 12:15:39 noud4 Exp $
 #
 
 DISTNAME=	gnome-jabber-0.4
 PKGREVISION=	5
 CATEGORIES=	chat
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-jabber/0.4/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-jabber/${PKGVERSION_NOREV}/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org

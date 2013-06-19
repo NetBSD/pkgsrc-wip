@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2012/10/03 18:15:31 asau Exp $
+# $NetBSD: Makefile,v 1.10 2013/06/19 12:12:21 noud4 Exp $
 #
 
 DISTNAME=	nautilus-open-terminal-0.18
 PKGREVISION=	1
 CATEGORIES=	sysutils
-MASTER_SITES=	ftp://ftp.gnome.org/pub/gnome/sources/nautilus-open-terminal/0.18/
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/nautilus-open-terminal/${PKGVERSION_NOREV}/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc.gnome@gmail.com
