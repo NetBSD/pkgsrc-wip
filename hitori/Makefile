@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2012/09/29 17:05:56 asau Exp $
+# $NetBSD: Makefile,v 1.9 2013/06/19 11:15:14 noud4 Exp $
 #
 
-DISTNAME=	hitori-0.2.4
+DISTNAME=	hitori-0.2.6
 CATEGORIES=	games gnome
-MASTER_SITES=	http://ftp.acc.umu.se/pub/GNOME/sources/hitori/0.2/
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/hitori/0.2/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc.gnome@gmail.com
@@ -15,6 +15,7 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config intltool gmake
 USE_LANGUAGES+=	c c++
+USE_PKGLOCALEDIR=	yes
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
