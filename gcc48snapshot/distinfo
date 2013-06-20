@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.18 2013/06/08 22:51:50 keckhardt Exp $
+$NetBSD: distinfo,v 1.19 2013/06/20 13:15:59 keckhardt Exp $
 
 SHA1 (ecj-4.5.jar) = 58c1d79c64c8cd718550f32a932ccfde8d1e6449
 RMD160 (ecj-4.5.jar) = d3f4da657f086b6423f74e93f001132f4855368a
 Size (ecj-4.5.jar) = 1470676 bytes
-SHA1 (gcc-4.8-20130606.tar.bz2) = 0ecdf0e91c9c672c57fe6f61a618a59dee785fb2
-RMD160 (gcc-4.8-20130606.tar.bz2) = 616f0eb918eabf565bf76477dd445cc5c7ac2eb1
-Size (gcc-4.8-20130606.tar.bz2) = 82565257 bytes
+SHA1 (gcc-4.8-20130613.tar.bz2) = 0dc2ab0701dacab230ed23af612ab3391a437145
+RMD160 (gcc-4.8-20130613.tar.bz2) = 889a222bd8a903487382184b91b0b1dde11adc66
+Size (gcc-4.8-20130613.tar.bz2) = 82548457 bytes
 SHA1 (patch-gcc_Makefile.in) = ce366a091960d335ecb022918e2f7bfc4e3fcccf
 SHA1 (patch-gcc_config.gcc) = ac175c5eecf3dd53508479b30bf5c59cc0a5fca9
 SHA1 (patch-gcc_config_dragonfly-stdint.h) = 740dc819b446d5f1476506322c4b280ffdb5a6c0
