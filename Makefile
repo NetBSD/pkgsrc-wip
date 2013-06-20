@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5336 2013/06/18 10:31:37 fhajny Exp $
+# $Id: Makefile,v 1.5337 2013/06/20 11:38:11 yvs4sf Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2190,6 +2190,7 @@ SUBDIR+=	php-memcached
 SUBDIR+=	php-mongo
 SUBDIR+=	php-oauth
 SUBDIR+=	php-recode
+SUBDIR+=	php-rrd
 SUBDIR+=	php-ssh2
 SUBDIR+=	php-suhosin
 SUBDIR+=	php-tclink
