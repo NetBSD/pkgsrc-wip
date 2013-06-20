@@ -1,10 +1,27 @@
-# $NetBSD: Makefile,v 1.1 2013/06/15 16:00:12 yvs4sf Exp $
+# $NetBSD: Makefile,v 1.2 2013/06/20 07:25:59 yvs4sf Exp $
 
-DISTNAME=	mtr-16c6a85c
 CATEGORIES=	net
-MASTER_SITES=	https://github.com/traviscross/mtr/tarball/16c6a85c/
+PKGBASE=	mtr
+PKGVERSION=	0.84.99
+PKGREVISION=	1
+#
+PKGNAME=	${PKGBASE}-${PKGVERSION}
+DISTNAME=	${PKGBASE}-${GITVERSION}
+#
+# non-successive package versions workaround:
+#
+# nb1:	git:16c6a85
+#	+ patch https://bugs.launchpad.net/mtr/+bug/701514
+#	+ fix https://bugs.launchpad.net/mtr/+bug/1180403
+#	+ fix https://bugs.launchpad.net/mtr/+bug/1189174
+#	+ fix https://bugs.launchpad.net/mtr/+bug/1189221
+#
+MASTER_SITES=	https://github.com/${GITHUB_USER}/${PKGBASE}/tarball/${GITVERSION}/
 FETCH_USING=	curl
-WRKSRC=         ${WRKDIR}/traviscross-mtr-16c6a85
+WRKSRC=		${WRKDIR}/${GITHUB_USER}-${PKGBASE}-${GITVERSION}
+
+GITVERSION=	16c6a85
+GITHUB_USER=	traviscross
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.bitwizard.nl/mtr/
