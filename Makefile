@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5337 2013/06/20 11:38:11 yvs4sf Exp $
+# $Id: Makefile,v 1.5338 2013/06/20 19:07:11 kristerw Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1226,7 +1226,6 @@ SUBDIR+=	islamic-menus
 SUBDIR+=	ispell-dictionaries
 SUBDIR+=	itask-ng
 SUBDIR+=	itools
-SUBDIR+=	jansson
 SUBDIR+=	ja-freewnn-cvs
 SUBDIR+=	ja-freewnn-lib
 SUBDIR+=	ja-freewnn-server
@@ -1242,6 +1241,7 @@ SUBDIR+=	jakarta-oro
 SUBDIR+=	jakarta-struts
 SUBDIR+=	jalview
 SUBDIR+=	jamaica
+SUBDIR+=	jansson
 SUBDIR+=	jason
 SUBDIR+=	java-BigDecimal
 SUBDIR+=	java-asm
