@@ -1,8 +1,9 @@
-$NetBSD: distinfo,v 1.5 2011/01/06 21:42:16 thomasklausner Exp $
+$NetBSD: distinfo,v 1.6 2013/06/21 14:32:18 noud4 Exp $
 
-SHA1 (pdfedit-0.3.1.tar.bz2) = 3629977b2b7d28d12ae397afbcd6aef677aec0e7
-RMD160 (pdfedit-0.3.1.tar.bz2) = c278f71b4656f92d3d4b347dc28ba11327432c61
-Size (pdfedit-0.3.1.tar.bz2) = 2645632 bytes
+SHA1 (pdfedit-0.3.2.tar.bz2) = d3954c6ede18d2d5b3e25c4b399aa9f36b36b32e
+RMD160 (pdfedit-0.3.2.tar.bz2) = fff06e1f3a97492a5e940b312c3de3da4b4ec52a
+Size (pdfedit-0.3.2.tar.bz2) = 2978196 bytes
 SHA1 (patch-aa) = c05359be708f193f38bba07e589a91f1a5ed6934
 SHA1 (patch-ab) = da309eebac81b0e976326b7f6e88a12174329292
 SHA1 (patch-ac) = 5f1492615e699be30636711847f057c5a13bed0a
+SHA1 (patch-ad) = 04fc778b282c64da88f22444b09b394f271731f8
