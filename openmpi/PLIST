@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2013/03/08 18:32:52 asau Exp $
-bin/mpiCC
+@comment $NetBSD: PLIST,v 1.24 2013/06/21 17:07:52 outpaddling Exp $
 bin/mpic++
 bin/mpicc
 bin/mpicxx
@@ -18,7 +17,6 @@ bin/orte-clean
 bin/orte-info
 bin/orte-ps
 bin/orte-top
-bin/orteCC
 bin/orte_wrapper_script
 bin/ortec++
 bin/ortecc
@@ -175,7 +173,6 @@ lib/pkgconfig/ompi-f90.pc
 lib/pkgconfig/ompi-fort.pc
 lib/pkgconfig/ompi.pc
 lib/pkgconfig/orte.pc
-man/man1/mpiCC.1
 man/man1/mpic++.1
 man/man1/mpicc.1
 man/man1/mpicxx.1
@@ -194,7 +191,6 @@ man/man1/orte-clean.1
 man/man1/orte-info.1
 man/man1/orte-ps.1
 man/man1/orte-top.1
-man/man1/orteCC.1
 man/man1/orted.1
 man/man1/orterun.1
 man/man3/MPI.3
@@ -582,7 +578,6 @@ share/openmpi/help-ras-base.txt
 share/openmpi/help-regex.txt
 share/openmpi/help-rmaps_rank_file.txt
 share/openmpi/mca-coll-ml.config
-share/openmpi/mpiCC-wrapper-data.txt
 share/openmpi/mpic++-wrapper-data.txt
 share/openmpi/mpicc-wrapper-data.txt
 share/openmpi/mpicxx-wrapper-data.txt
@@ -590,6 +585,7 @@ share/openmpi/mpif77-wrapper-data.txt
 share/openmpi/mpif90-wrapper-data.txt
 share/openmpi/mpifort-wrapper-data.txt
 share/openmpi/openmpi-valgrind.supp
-share/openmpi/orteCC-wrapper-data.txt
 share/openmpi/ortec++-wrapper-data.txt
 share/openmpi/ortecc-wrapper-data.txt
+etc/cshrc
+etc/shrc

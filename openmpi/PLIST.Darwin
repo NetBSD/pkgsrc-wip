@@ -1,0 +1,24 @@
+include/mpif-config.h
+include/mpif-constants.h
+include/mpif-externals.h
+include/mpif.h
+include/mpif-handles.h
+include/mpif-io-constants.h
+include/mpif-io-handles.h
+include/mpif-sentinels.h
+lib/libmpi_mpifh.la
+lib/libmpi_usempi.la
+lib/mpi.mod
+lib/openmpi/mca_pstat_${LOWER_OPSYS}.la
+lib/openmpi/mca_ras_loadleveler.la
+lib/openmpi/mca_shmem_posix.la
+share/openmpi/doc/COPYRIGHT-ptmalloc2.txt
+share/openmpi/help-opal-memory-${LOWER_OPSYS}.txt
+share/openmpi/help-opal-shmem-posix.txt
+
+pkg_create: can't stat `/Users/bacon/Pkgsrc/pkgsrc-1/jb-wip/openmpi171/work/.destdir/Users/bacon/Pkgsrc/pkg-1/openmpi/lib/openmpi/mca_pstat_darwin.la'
+pkg_create: can't stat `/Users/bacon/Pkgsrc/pkgsrc-1/jb-wip/openmpi171/work/.destdir/Users/bacon/Pkgsrc/pkg-1/openmpi/lib/openmpi/mca_ras_loadleveler.la'
+pkg_create: can't stat `/Users/bacon/Pkgsrc/pkgsrc-1/jb-wip/openmpi171/work/.destdir/Users/bacon/Pkgsrc/pkg-1/openmpi/share/openmpi/doc/COPYRIGHT-ptmalloc2.txt'
+pkg_create: can't stat `/Users/bacon/Pkgsrc/pkgsrc-1/jb-wip/openmpi171/work/.destdir/Users/bacon/Pkgsrc/pkg-1/openmpi/share/openmpi/help-opal-memory-darwin.txt'
+pkg_create: lstat failed for file lib/openmpi/mca_pstat_darwin.la: No such file or directory
+

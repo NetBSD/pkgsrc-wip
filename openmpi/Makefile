@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2013/05/02 18:35:45 asau Exp $
+# $NetBSD: Makefile,v 1.71 2013/06/21 17:07:52 outpaddling Exp $
 
 DISTNAME=	openmpi-1.7.1
 #PKGNAME=	openmpi-1.7.1
@@ -15,8 +15,18 @@ MPI_SUBPREFIX=		openmpi
 MPI_PREFIX=		$(LOCALBASE)/$(MPI_SUBPREFIX)
 INSTALLATION_PREFIX=	$(MPI_PREFIX)
 
+.include "../../mk/bsd.prefs.mk"
+
 GNU_CONFIGURE=		yes
+.if ${OPSYS} == Darwin || ${OPSYS} == Linux
+USE_LANGUAGES=		c c++ fortran
+# Fix for:
+# The Open MPI wrapper compiler was unable to find the specified compiler
+# f77 in your PATH.
+FC=			gfortran
+.else
 USE_LANGUAGES=		c c++ fortran77
+.endif
 USE_LIBTOOL=		yes
 LIBTOOL_OVERRIDE=	${WRKSRC}/libtool \
 			${WRKSRC}/ompi/contrib/vt/vt/extlib/otf/libtool \
@@ -26,7 +36,12 @@ SHLIBTOOL_OVERRIDE=	${WRKSRC}/config/libtool.m4 \
 			${WRKSRC}/opal/libltdl/m4/libtool.m4
 
 GNU_CONFIGURE_PREFIX=	$(MPI_PREFIX)
+.if ${OPSYS} != Darwin && ${OPSYS} != Linux
 CONFIGURE_ARGS+=	--disable-mpi-fortran
+# http://www.open-mpi.org/community/lists/users/2013/04/21752.php
+# Still doesn't compile on RHEL 5, but for different reason
+# CONFIGURE_ARGS+=	--disable-openib-connectx-xrc
+.endif
 CONFIGURE_ARGS+=	--without-sge
 CONFIGURE_ARGS+=	--without-slurm
 CONFIGURE_ARGS+=	--enable-contrib-no-build=vt # in separate package
@@ -60,8 +75,17 @@ TEST_TARGET=	check
 # pre-configure:	replace-interpreter
 # 	cd $(WRKSRC) && $(PERL5) autogen.sh
 
+post-install:
+	${MKDIR} ${DESTDIR}${MPI_PREFIX}/etc
+	${SED} -e "s|%%MPI_PREFIX%%|${MPI_PREFIX}|g" \
+		files/shrc > ${DESTDIR}${MPI_PREFIX}/etc/shrc
+	${SED} -e "s|%%MPI_PREFIX%%|${MPI_PREFIX}|g" \
+		files/cshrc > ${DESTDIR}${MPI_PREFIX}/etc/cshrc
+
 LIBLTDL_CONVENIENCE_SUBDIR=	opal/libltdl
 .include "../../devel/libltdl/convenience.mk" # for "test" target to work
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../parallel/hwloc/buildlink3.mk"
+# Build failed with "cannot find libxml2"
+.include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,0 +1,5 @@
+
+Regenerate PLIST.Darwin and update PLIST.
+
+Currently derived from PLIST.Linux by removing *CC*,
+which cannot exist on case-insensitive filesystems.
