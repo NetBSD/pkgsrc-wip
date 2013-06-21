@@ -1,0 +1,9 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2013/06/21 01:20:26 makoto Exp $
+To test the function,
+(cd your_git_working_directory)
+emacs
+M-x load-library magit RET
+M-x magit-status RET
+Menu bar -> magit
+===========================================================================
