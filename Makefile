@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5340 2013/06/21 01:22:37 makoto Exp $
+# $Id: Makefile,v 1.5341 2013/06/21 19:45:34 outpaddling Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1836,7 +1836,7 @@ SUBDIR+=	opendesktop-fonts
 SUBDIR+=	opendnssec
 SUBDIR+=	openlogos
 SUBDIR+=	openmpi
-SUBDIR+=	openmpi-prefixed
+SUBDIR+=	openmpi163
 SUBDIR+=	opennurbs
 SUBDIR+=	openscep
 SUBDIR+=	opensips
