@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5341 2013/06/21 19:45:34 outpaddling Exp $
+# $Id: Makefile,v 1.5342 2013/06/21 19:48:49 outpaddling Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1837,6 +1837,7 @@ SUBDIR+=	opendnssec
 SUBDIR+=	openlogos
 SUBDIR+=	openmpi
 SUBDIR+=	openmpi163
+SUBDIR+=	openmx-openmpi
 SUBDIR+=	opennurbs
 SUBDIR+=	openscep
 SUBDIR+=	opensips
