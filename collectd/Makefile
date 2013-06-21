@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2013/06/12 13:38:54 fhajny Exp $
+# $NetBSD: Makefile,v 1.11 2013/06/21 10:45:52 fhajny Exp $
 #
 
 DISTNAME=	collectd-4.10.9
@@ -20,7 +20,7 @@ PKGCONFIG_OVERRIDE+=	src/libcollectdclient/libcollectdclient.pc.in
 USE_LANGUAGES=		c c++
 
 CONFIGURE_ARGS+=	--with-perl-bindings='INSTALLDIRS=vendor'
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}/${PKGBASE}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 PKG_SYSCONFSUBDIR=	collectd
 
