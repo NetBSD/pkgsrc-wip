@@ -1,0 +1,15 @@
+$NetBSD: patch-g95-093_kinds_c,v 1.1 2013/06/21 07:38:52 makoto Exp $
+
+Add NetBSD/powerpc.
+
+--- kinds.c.orig	2008-08-20 00:38:46.000000000 +0900
++++ kinds.c	2013-06-21 15:07:09.000000000 +0900
+@@ -91,7 +91,7 @@ g95_ff g95_real_kinds[] = {
+ 
+ 
+ #elif defined (FPU_PPC_OSX) || defined(FPU_PPC_AIX) || defined(FPU_MIPS) || \
+-      defined(FPU_PPC_LINUX) || defined(FPU_HPPA) || defined(FPU_SPARC)
++      defined(FPU_PPC_LINUX) || defined(FPU_HPPA) || defined(FPU_SPARC) || defined(FPU_PPC_NETBSD) 
+ 
+     { 4, 2, END_BIG, 32, 0, 1, 8, 127, 255, 9, 23, MSB_IMPLICIT },
+ 

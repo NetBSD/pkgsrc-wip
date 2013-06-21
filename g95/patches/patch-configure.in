@@ -1,0 +1,17 @@
+$NetBSD: patch-configure.in,v 1.1 2013/06/21 07:38:52 makoto Exp $
+
+Add NetBSD/powerpc.
+
+--- configure.in.orig	2013-06-21 13:42:42.000000000 +0900
++++ configure.in	2013-06-21 13:42:17.000000000 +0900
+@@ -271,6 +271,10 @@
+        AC_DEFINE(FPU_PPC_LINUX, 1,[Define if compiling for a PPC fpu on Linux])
+      ;;
+ 
++     *netbsd*)
++       AC_DEFINE(FPU_PPC_NETBSD, 1,[Define if compiling for a PPC fpu on NetBSD])
++     ;;
++
+      *)
+        echo host = $host
+        AC_ERROR(Unknown powerpc architecture)

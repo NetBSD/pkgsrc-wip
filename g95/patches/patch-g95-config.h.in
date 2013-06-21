@@ -1,0 +1,16 @@
+$NetBSD: patch-g95-config.h.in,v 1.1 2013/06/21 07:38:52 makoto Exp $
+
+Add NetBSD/powerpc.
+
+--- g95-config.h.in.orig	2013-06-21 14:06:56.000000000 +0900
++++ g95-config.h.in	2013-06-21 14:17:14.000000000 +0900
+@@ -29,6 +29,9 @@
+ /* Define if compiling for a PPC fpu on Linux */
+ #undef FPU_PPC_LINUX
+ 
++/* Define if compiling for a PPC fpu on NetBSD */
++#undef FPU_PPC_NETBSD
++
+ /* Define if compiling for a PPC fpu on Darwin */
+ #undef FPU_PPC_OSX
+ 

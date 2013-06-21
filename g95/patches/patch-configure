@@ -1,0 +1,28 @@
+$NetBSD: patch-configure,v 1.1 2013/06/21 07:38:52 makoto Exp $
+
+Add NetBSD/powerpc (generetd by autoconf 2.65).
+
+--- configure.orig	2013-06-21 15:17:33.000000000 +0900
++++ configure	2013-06-21 15:55:22.000000000 +0900
+@@ -4647,7 +4647,7 @@
+    { $as_echo "$as_me:${as_lineno-$LINENO}: result: $gcc_version" >&5
+ $as_echo "$gcc_version" >&6; }
+ 
+-   DEST_LIBDIR=$prefix/lib/gcc-lib/$host_alias/$gcc_version
++   DEST_LIBDIR=$prefix/lib/gcc-lib/$host/$gcc_version
+    SAVE_DIR=`pwd`
+    PREFIX=$prefix
+ 
+@@ -4911,6 +4911,12 @@
+ 
+      ;;
+ 
++     *netbsd*)
++
++$as_echo "#define FPU_PPC_NETBSD 1" >>confdefs.h
++
++     ;;
++
+      *)
+        echo host = $host
+        as_fn_error "Unknown powerpc architecture" "$LINENO" 5
