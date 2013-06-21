@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST.x86_64,v 1.1 2013/06/21 15:22:55 makoto Exp $
+${PLIST.dri}lib/dri/i810_dri.so
+${PLIST.dri}lib/dri/i915_dri.so
+${PLIST.dri}lib/dri/i965_dri.so
+${PLIST.dri}lib/dri/r600_dri.so
+${PLIST.dri}lib/dri/sis_dri.so

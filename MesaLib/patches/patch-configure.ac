@@ -1,0 +1,41 @@
+$NetBSD: patch-configure.ac,v 1.1 2013/06/21 15:22:56 makoto Exp $
+
+(1) The first part to avoid libdrm_intel request for powerpc
+
+--- configure.ac.orig	2011-10-15 09:43:58.000000000 +0900
++++ configure.ac	2013-06-21 23:52:55.000000000 +0900
+@@ -1070,11 +1070,24 @@ if test "$mesa_driver" = dri -o "$mesa_d
+         if test "x$driglx_direct" = xyes; then
+             DEFINES="$DEFINES -DGLX_DIRECT_RENDERING"
+         fi
+-
++        case "$host_cpu" in
++	powerpc*)
++	# drop intel, to avoid libdrm_intel not found
++	# drop r600, to avoid following two, should be fixed by some other place
++	#   r600_dri.so.tmp: undefined reference to `CPU_TO_LE16'
++	#   r600_dri.so.tmp: undefined reference to `LE16_TO_CPU'
++        if test "x$DRI_DIRS" = "xyes"; then
++            DRI_DIRS="mach64 mga r128 r200 r300 \
++                radeon tdfx unichrome savage swrast"
++        fi
++	;;
++	*)
+         if test "x$DRI_DIRS" = "xyes"; then
+             DRI_DIRS="i810 i915 i965 mach64 mga nouveau r128 r200 r300 r600 \
+                 radeon tdfx unichrome savage sis swrast"
+         fi
++	;;
++	esac
+         ;;
+     gnu*)
+         DEFINES="$DEFINES -DUSE_EXTERNAL_DXTN_LIB=1 -DIN_DRI_DRIVER"
+@@ -1086,6 +1099,8 @@ if test "$mesa_driver" = dri -o "$mesa_d
+         if test "x$driglx_direct" = xyes; then
+             DEFINES="$DEFINES -DGLX_DIRECT_RENDERING"
+         fi
++        DRI_LIB_MAPFILE='-Wl,-M,$(TOP)/src/mesa/drivers/dri/mapfile.externs'
++        DRI_LIB_DEPS="$DRI_LIB_DEPS $DRI_LIB_MAPFILE"
+         ;;
+     cygwin*)
+         DEFINES="$DEFINES -DUSE_EXTERNAL_DXTN_LIB=1 -DIN_DRI_DRIVER"
