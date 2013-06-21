@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2013/02/14 14:29:21 othyro Exp $
+# $NetBSD: Makefile,v 1.3 2013/06/21 01:51:08 othyro Exp $
 #
 
-DISTNAME=	cityhash-1.1.0
+DISTNAME=	cityhash-1.1.1
 CATEGORIES=	devel security textproc
 MASTER_SITES=	http://cityhash.googlecode.com/files/
 
