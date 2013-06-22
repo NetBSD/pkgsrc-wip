@@ -8,7 +8,7 @@ proc ModulesHelp { } {
 
 module-whatis   "All openmpi-based software installed via pkgsrc"
 
-set     install_prefix  /Users/bacon/Pkgsrc/pkg-1/openmpi
+set     install_prefix  %%MPI_PREFIX%%
 
 prepend-path    PATH			$install_prefix/bin
 prepend-path    PATH			$install_prefix/sbin

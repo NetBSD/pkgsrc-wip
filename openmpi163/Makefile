@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/06/21 18:56:28 outpaddling Exp $
+# $NetBSD: Makefile,v 1.3 2013/06/22 13:19:10 outpaddling Exp $
 
 DISTNAME=	openmpi-1.6.3
 #PKGNAME=	openmpi-1.7.1
@@ -74,9 +74,12 @@ TEST_TARGET=	check
 post-install:
 	${MKDIR} ${DESTDIR}${MPI_PREFIX}/etc
 	${SED} -e "s|%%MPI_PREFIX%%|${MPI_PREFIX}|g" \
-		files/shrc > ${DESTDIR}${MPI_PREFIX}/etc/shrc
+		files/shrc.in > ${DESTDIR}${MPI_PREFIX}/etc/shrc
 	${SED} -e "s|%%MPI_PREFIX%%|${MPI_PREFIX}|g" \
-		files/cshrc > ${DESTDIR}${MPI_PREFIX}/etc/cshrc
+		files/cshrc.in > ${DESTDIR}${MPI_PREFIX}/etc/cshrc
+	${SED} -e "s|%%MPI_PREFIX%%|${MPI_PREFIX}|g" \
+		files/module.in > ${DESTDIR}${MPI_PREFIX}/etc/module
+	${INSTALL_DATA} ${DESTDIR}${MPI_PREFIX}/share/openmpi/examples/openmpi-default-hostfile ${DESTDIR}${MPI_PREFIX}/etc
 
 LIBLTDL_CONVENIENCE_SUBDIR=	opal/libltdl
 .include "../../devel/libltdl/convenience.mk" # for "test" target to work

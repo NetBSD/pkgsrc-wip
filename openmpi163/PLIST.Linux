@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.Linux,v 1.1 2013/06/21 18:56:28 outpaddling Exp $
+@comment $NetBSD: PLIST.Linux,v 1.2 2013/06/22 13:19:10 outpaddling Exp $
 bin/mpic++
 bin/mpicc
 bin/mpiCC
@@ -29,6 +29,8 @@ bin/orte-top
 bin/orte_wrapper_script
 etc/cshrc
 etc/shrc
+etc/module
+etc/openmpi-default-hostfile
 include/mpi-ext.h
 include/mpif-common.h
 include/mpif-config.h
