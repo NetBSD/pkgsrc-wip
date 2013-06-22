@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5342 2013/06/21 19:48:49 outpaddling Exp $
+# $Id: Makefile,v 1.5343 2013/06/22 11:16:21 kristerw Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -695,6 +695,7 @@ SUBDIR+=	fvwm1-tch
 SUBDIR+=	fvwm265
 SUBDIR+=	fxrays
 SUBDIR+=	g21k-binutils
+SUBDIR+=	g95
 SUBDIR+=	gDesklets
 SUBDIR+=	gDesklets-rssgrab
 SUBDIR+=	gDesklets-starterbar
@@ -3109,6 +3110,7 @@ SUBDIR+=	task
 SUBDIR+=	taskcoach
 SUBDIR+=	tasks
 SUBDIR+=	tc-git
+SUBDIR+=	tc-hasida-table
 SUBDIR+=	tc-svn
 SUBDIR+=	tcc
 SUBDIR+=	tcc-devel
