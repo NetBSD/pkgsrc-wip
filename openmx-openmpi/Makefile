@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/06/21 19:39:11 outpaddling Exp $
+# $NetBSD: Makefile,v 1.2 2013/06/22 13:20:19 outpaddling Exp $
 #
 
 DISTNAME=	openmx3.7
@@ -49,7 +49,7 @@ do-install:
 	${CP} -R ${WRKDIR}/${DISTNAME}/work ${DESTDIR}${MPI_PREFIX}/share/openmx
 .for f in DosMain jx analysis_example esp OpticalConductivityMain polB test_mpi
 	${CP} ${WRKDIR}/${DISTNAME}/work/${f} ${DESTDIR}${MPI_PREFIX}/bin
-	${RM} ${DESTDIR}${MPI_PREFIX}/share/openmx/${f}
+	${RM} ${DESTDIR}${MPI_PREFIX}/share/openmx/work/${f}
 .endfor
 
 # url2pkg-marker (please do not remove this line.)
