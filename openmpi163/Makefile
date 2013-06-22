@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2013/06/22 13:19:10 outpaddling Exp $
+# $NetBSD: Makefile,v 1.4 2013/06/22 13:49:31 outpaddling Exp $
 
 DISTNAME=	openmpi-1.6.3
 #PKGNAME=	openmpi-1.7.1
@@ -18,6 +18,9 @@ INSTALLATION_PREFIX=	$(MPI_PREFIX)
 .include "../../mk/bsd.prefs.mk"
 
 GNU_CONFIGURE=		yes
+
+# Be pessimistic about Fortran 90 support, which is lacking on many platforms.
+# Only enable it by default on platforms where it has been tested.
 .if ${OPSYS} == Darwin || ${OPSYS} == Linux
 USE_LANGUAGES=		c c++ fortran
 # Fix: The Open MPI wrapper compiler was unable to find the specified compiler
