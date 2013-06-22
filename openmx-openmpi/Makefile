@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2013/06/22 15:49:15 outpaddling Exp $
+# $NetBSD: Makefile,v 1.5 2013/06/22 15:54:28 outpaddling Exp $
 #
 
 DISTNAME=	openmx3.7
@@ -35,7 +35,8 @@ SUBST_FILES.compile=	${WRKSRC}/makefile
 SUBST_STAGE.compile=	post-patch
 SUBST_SED.compile=	-e "s|-openmp -O3 -I/usr/local/include|-fopenmp ${CFLAGS}|g"
 SUBST_SED.compile+=	-e "s|-lg2c -static||g"
-SUBST_SED.compile+=	-e "s|-L/usr/local/lib|-L${MPI_PREFIX}/lib -Wl,-rpath,${MPI_PREFIX}/lib -L${PREFIX}/lib -Wl,-rpath,${PREFIX}/lib|g"
+# SUBST_SED.compile+=	-e "s|-L/usr/local/lib|-L${MPI_PREFIX}/lib -Wl,-rpath,${MPI_PREFIX}/lib -L${PREFIX}/lib -Wl,-rpath,${PREFIX}/lib|g"
+SUBST_SED.compile+=	-e "s|-L/usr/local/lib|-L${MPI_PREFIX}/lib ${COMPILER_RPATH_FLAG}${MPI_PREFIX}/lib -L${PREFIX}/lib ${COMPILER_RPATH_FLAG}${PREFIX}/lib|g"
 SUBST_SED.compile+=	-e 's|$$(CC) $$(OBJS)|$$(FC) $$(OBJS)|g'
 
 # Some build targets "install" binaries into ${WRKDIR}/${DISTNAME}/work, so we
