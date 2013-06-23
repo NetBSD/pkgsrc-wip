@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/04/13 21:25:25 asau Exp $
+# $NetBSD: Makefile,v 1.3 2013/06/23 17:19:31 outpaddling Exp $
 
 DISTNAME=		fftw-2.1.5
 PKGNAME=		fftw2-openmpi-2.1.5
@@ -28,5 +28,5 @@ USE_TOOLS+=		gmake makeinfo
 CONFIGURE_ARGS+=	--enable-i386-hacks
 .endif
 
-.include "../../wip/openmpi-prefixed/buildlink3.mk"
+.include "../../wip/openmpi163/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
