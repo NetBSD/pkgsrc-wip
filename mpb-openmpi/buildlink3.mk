@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2013/06/23 18:33:44 outpaddling Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2013/06/23 18:40:10 outpaddling Exp $
 # XXX	BUILDLINK_DEPMETHOD.mpb-openmpi?=	build
 
 BUILDLINK_TREE+=	mpb-openmpi
@@ -7,7 +7,7 @@ BUILDLINK_TREE+=	mpb-openmpi
 MPB_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.mpb-openmpi+=	mpb-openmpi>=1.4.2
-BUILDLINK_PKGSRCDIR.mpb-openmpi?=	../../jb-wip/mpb-openmpi
+BUILDLINK_PKGSRCDIR.mpb-openmpi?=	../../wip/mpb-openmpi
 
 .include "../../math/blas/buildlink3.mk"
 .include "../../math/lapack/buildlink3.mk"
