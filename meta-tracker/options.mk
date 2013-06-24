@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2013/06/24 09:38:16 noud4 Exp $
+# $NetBSD: options.mk,v 1.4 2013/06/24 09:39:18 noud4 Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.meta-tracker
 PKG_SUPPORTED_OPTIONS+=		doc tests hal unac enca gnome
@@ -9,12 +9,12 @@ PKG_SUPPORTED_OPTIONS+=		rss evolution kmail
 PKG_SUPPORTED_OPTIONS+=		nautilus
 PKG_SUPPORTED_OPTIONS+=		mp3 xmp
 
-#PKG_SUGGESTED_OPTIONS+=		hal unac enca gnome
-#PKG_SUGGESTED_OPTIONS+=		pdf jpeg tiff vorbis flac html gsf playlist
-#PKG_SUGGESTED_OPTIONS+=		gstreamer
-#PKG_SUGGESTED_OPTIONS+=		rss evolution kmail
-#PKG_SUGGESTED_OPTIONS+=		nautilus
-#PKG_SUGGESTED_OPTIONS+=		mp3 xmp
+PKG_SUGGESTED_OPTIONS+=		hal unac enca gnome
+PKG_SUGGESTED_OPTIONS+=		pdf jpeg tiff vorbis flac html gsf playlist
+PKG_SUGGESTED_OPTIONS+=		gstreamer
+PKG_SUGGESTED_OPTIONS+=		rss evolution kmail
+PKG_SUGGESTED_OPTIONS+=		nautilus
+PKG_SUGGESTED_OPTIONS+=		mp3 xmp
 
 .include "../../mk/bsd.options.mk"
 
