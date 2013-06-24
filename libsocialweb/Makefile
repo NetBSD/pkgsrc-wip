@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/06/18 07:30:54 noud4 Exp $
+# $NetBSD: Makefile,v 1.2 2013/06/24 18:41:04 noud4 Exp $
 #
 
 DISTNAME=	libsocialweb-0.25.20
@@ -16,6 +16,7 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config intltool msgfmt
 USE_TOOLS+=	gmake
 USE_TOOLS+=	perl
+USE_PKGLOCALEDIR=	yes
 
 PKGCONFIG_OVERRIDE+=	libsocialweb-client.pc.in libsocialweb-keyfob.pc.in \
 			libsocialweb-keystore.pc.in libsocialweb-module.pc.in
