@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2012/11/09 23:18:45 outpaddling Exp $
+# $NetBSD: Makefile,v 1.18 2013/06/24 20:21:03 outpaddling Exp $
 
 DISTNAME=	meep-1.2
 CATEGORIES=	math
@@ -23,9 +23,9 @@ TEST_TARGET=	check
 # Darwin needs libguile with a .so suffix and LD_LIBRARY_PATH to include
 # ${LOCALBASE}/lib
 .if ${OPSYS} == "Darwin"
+.for l in ${PREFIX}/lib/libguile-srfi-srfi-*.dylib
 post-install:
-	${CP} ${PREFIX}/lib/libguile-srfi-srfi-1-v-3.dylib \
-		${DESTDIR}${PREFIX}/lib/libguile-srfi-srfi-1-v-3.so
+	${CP} ${l} ${l%.dylib}.so
 .endif
 
 .include "../../wip/mpb/buildlink3.mk"
