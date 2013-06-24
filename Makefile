@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5345 2013/06/23 18:34:51 outpaddling Exp $
+# $Id: Makefile,v 1.5346 2013/06/24 18:53:56 outpaddling Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1591,6 +1591,7 @@ SUBDIR+=	mdbtools
 SUBDIR+=	mediawiki-mode
 SUBDIR+=	meep
 SUBDIR+=	meep-mpi
+SUBDIR+=	meep-openmpi
 SUBDIR+=	memdump
 SUBDIR+=	memgrep
 SUBDIR+=	menumaker
