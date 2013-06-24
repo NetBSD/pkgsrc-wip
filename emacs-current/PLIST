@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.127 2013/06/11 03:36:05 makoto Exp $
+@comment $NetBSD: PLIST,v 1.128 2013/06/24 15:11:00 makoto Exp $
 bin/ctags
 bin/ebrowse
 bin/emacs
@@ -2078,8 +2078,6 @@ share/emacs/${PKGVERSION}/lisp/gnus/deuglify.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/deuglify.elc
 share/emacs/${PKGVERSION}/lisp/gnus/ecomplete.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/ecomplete.elc
-share/emacs/${PKGVERSION}/lisp/gnus/eww.el.gz
-share/emacs/${PKGVERSION}/lisp/gnus/eww.elc
 share/emacs/${PKGVERSION}/lisp/gnus/flow-fill.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/flow-fill.elc
 share/emacs/${PKGVERSION}/lisp/gnus/gmm-utils.el.gz
@@ -2304,10 +2302,6 @@ share/emacs/${PKGVERSION}/lisp/gnus/rtree.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/rtree.elc
 share/emacs/${PKGVERSION}/lisp/gnus/score-mode.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/score-mode.elc
-share/emacs/${PKGVERSION}/lisp/gnus/shr-color.el.gz
-share/emacs/${PKGVERSION}/lisp/gnus/shr-color.elc
-share/emacs/${PKGVERSION}/lisp/gnus/shr.el.gz
-share/emacs/${PKGVERSION}/lisp/gnus/shr.elc
 share/emacs/${PKGVERSION}/lisp/gnus/sieve-manage.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/sieve-manage.elc
 share/emacs/${PKGVERSION}/lisp/gnus/sieve-mode.el.gz
@@ -2746,6 +2740,8 @@ share/emacs/${PKGVERSION}/lisp/net/eudcb-mab.el.gz
 share/emacs/${PKGVERSION}/lisp/net/eudcb-mab.elc
 share/emacs/${PKGVERSION}/lisp/net/eudcb-ph.el.gz
 share/emacs/${PKGVERSION}/lisp/net/eudcb-ph.elc
+share/emacs/${PKGVERSION}/lisp/net/eww.el.gz
+share/emacs/${PKGVERSION}/lisp/net/eww.elc
 share/emacs/${PKGVERSION}/lisp/net/gnutls.el.gz
 share/emacs/${PKGVERSION}/lisp/net/gnutls.elc
 share/emacs/${PKGVERSION}/lisp/net/goto-addr.el.gz
@@ -2798,6 +2794,10 @@ share/emacs/${PKGVERSION}/lisp/net/sasl.el.gz
 share/emacs/${PKGVERSION}/lisp/net/sasl.elc
 share/emacs/${PKGVERSION}/lisp/net/secrets.el.gz
 share/emacs/${PKGVERSION}/lisp/net/secrets.elc
+share/emacs/${PKGVERSION}/lisp/net/shr-color.el.gz
+share/emacs/${PKGVERSION}/lisp/net/shr-color.elc
+share/emacs/${PKGVERSION}/lisp/net/shr.el.gz
+share/emacs/${PKGVERSION}/lisp/net/shr.elc
 share/emacs/${PKGVERSION}/lisp/net/snmp-mode.el.gz
 share/emacs/${PKGVERSION}/lisp/net/snmp-mode.elc
 share/emacs/${PKGVERSION}/lisp/net/soap-client.el.gz
@@ -2939,6 +2939,8 @@ share/emacs/${PKGVERSION}/lisp/obsolete/old-whitespace.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/old-whitespace.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/options.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/options.elc
+share/emacs/${PKGVERSION}/lisp/obsolete/otodo-mode.el.gz
+share/emacs/${PKGVERSION}/lisp/obsolete/otodo-mode.elc
 share/emacs/${PKGVERSION}/lisp/obsolete/patcomp.el
 share/emacs/${PKGVERSION}/lisp/obsolete/pc-mode.el.gz
 share/emacs/${PKGVERSION}/lisp/obsolete/pc-mode.elc
