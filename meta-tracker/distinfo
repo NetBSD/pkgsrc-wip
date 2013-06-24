@@ -1,12 +1,11 @@
-$NetBSD: distinfo,v 1.5 2013/06/18 11:36:25 noud4 Exp $
+$NetBSD: distinfo,v 1.6 2013/06/24 09:38:16 noud4 Exp $
 
-SHA1 (tracker-0.6.96.tar.bz2) = b35ab08834f55daab42ad50b2f2d33ad21ac90a5
-RMD160 (tracker-0.6.96.tar.bz2) = 6bac54795a8b05670421d90533271beec5ba7d99
-Size (tracker-0.6.96.tar.bz2) = 1470210 bytes
-SHA1 (patch-aa) = 01083b15536d376b08bb22544cc0713569a1c1fe
-SHA1 (patch-ab) = c49174f00a48ee613874baa3367304c2f400c646
-SHA1 (patch-ac) = eb50114310a0144289cb2e8d7b4eb6ce85917520
-SHA1 (patch-ad) = 5d1d561e784e11e79e4da9cacf010318f9c8e343
-SHA1 (patch-ae) = b18bdfd5afc9a7392971ce907021bc40f32fb909
-SHA1 (patch-af) = 5642caf72ca44792ff23fb1084c39d06e1ab2f71
-SHA1 (patch-ag) = d7533a0fbbc86cffcc429e3341cfd2647599e84d
+SHA1 (tracker-0.8.18.tar.bz2) = 827102c80890c01ed3468e9015f29a8c9fdb615b
+RMD160 (tracker-0.8.18.tar.bz2) = fc2088fc91ca921c77d67835d52e57c0f407a065
+Size (tracker-0.8.18.tar.bz2) = 4707060 bytes
+SHA1 (patch-aa) = 6f72501f167ff019b78c441f4437a86e01796088
+SHA1 (patch-ad) = 66d4cce3af56b8f59f410d1b762bec93e6ca8dcf
+SHA1 (patch-ae) = cbd23a6d5e1fcbb234ae1ad3629c3dbcef263074
+SHA1 (patch-ah) = d4fe408969d55ca28a43c38700a9e22bba1eee6c
+SHA1 (patch-ai) = 5459705eee6f92e8013b59e4b8e20929523adc40
+SHA1 (patch-aj) = 58532e53dc29194b84e675834ef7a963927e09b6

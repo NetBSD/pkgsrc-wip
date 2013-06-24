@@ -1,0 +1,15 @@
+$NetBSD: patch-ah,v 1.1 2013/06/24 09:38:15 noud4 Exp $
+
+glib.h
+
+--- src/tracker-status-icon/tomboykeybinder.h.orig	2013-06-17 11:47:47.000000000 +0000
++++ src/tracker-status-icon/tomboykeybinder.h	2013-06-17 11:48:03.000000000 +0000
+@@ -2,7 +2,7 @@
+ #ifndef __TOMBOY_KEY_BINDER_H__
+ #define __TOMBOY_KEY_BINDER_H__
+ 
+-#include <glib/gtypes.h>
++#include <glib.h>
+ 
+ G_BEGIN_DECLS
+ 

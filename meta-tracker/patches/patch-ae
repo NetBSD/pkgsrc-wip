@@ -1,13 +1,15 @@
-$NetBSD: patch-ae,v 1.2 2010/05/01 22:34:48 thomasklausner Exp $
+$NetBSD: patch-ae,v 1.3 2013/06/24 09:38:15 noud4 Exp $
 
---- data/Makefile.in.orig	2010-02-04 10:56:46.000000000 +0000
-+++ data/Makefile.in
-@@ -367,7 +367,7 @@ GTESTER_REPORT = gtester-report
- # initialize variables for unconditional += appending
- TEST_PROGS = 
- SUBDIRS = db dbus modules languages icons services
+use pkgsrc gnome path.
+
+--- data/Makefile.in.orig	2011-04-27 10:05:08.000000000 +0000
++++ data/Makefile.in	2013-06-21 14:59:57.000000000 +0000
+@@ -408,7 +408,7 @@
+ 
+ 
+ # Third we choose what we want installed based on config
 -autostartdir = $(sysconfdir)/xdg/autostart
 +autostartdir = $(prefix)/share/gnome/autostart
- autostart_in_in_files = trackerd.desktop.in.in
- autostart_in_files = trackerd.desktop.in
- autostart_DATA = trackerd.desktop
+ autostart_DATA = tracker-store.desktop tracker-miner-fs.desktop \
+ 	$(am__append_1) $(am__append_2)
+ 

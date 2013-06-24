@@ -1,0 +1,15 @@
+$NetBSD: patch-aj,v 1.1 2013/06/24 09:38:15 noud4 Exp $
+
+https://mail.gnome.org/archives/tracker-list/2010-September/msg00060.html
+
+--- src/tracker-extract/tracker-extract-totem.c.orig	2013-06-17 13:25:00.000000000 +0000
++++ src/tracker-extract/tracker-extract-totem.c	2013-06-17 13:25:14.000000000 +0000
+@@ -85,7 +85,7 @@
+ 	                                      (GDestroyNotify) g_free,
+ 	                                      (GDestroyNotify) g_free);
+ 
+-	if (tracker_spawn (argv, 10, &totem, NULL, NULL)) {
++	if (tracker_spawn (argv, 10, &totem, NULL)) {
+ 		gchar **lines, **line;
+ 		gchar *artist = NULL, *album = NULL;
+ 		gchar *artist_uri = NULL, *album_uri = NULL;

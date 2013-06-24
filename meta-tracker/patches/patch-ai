@@ -1,0 +1,24 @@
+$NetBSD: patch-ai,v 1.1 2013/06/24 09:38:15 noud4 Exp $
+
+https://mail.gnome.org/archives/tracker-list/2010-September/msg00060.html
+
+--- src/tracker-extract/tracker-extract-mplayer.c.orig	2013-06-17 13:20:13.000000000 +0000
++++ src/tracker-extract/tracker-extract-mplayer.c	2011-04-27 08:42:28.000000000 +0000
+@@ -129,7 +129,7 @@
+ 	argv[8] = g_filename_from_uri (uri, NULL, NULL);
+ 	argv[9] = NULL;
+ 
+-	if (tracker_spawn (argv, 10, &mplayer, NULL, NULL)) {
++	if (tracker_spawn (argv, 10, &mplayer, NULL)) {
+ 		GPatternSpec  *pattern_ID_AUDIO_ID;
+ 		GPatternSpec  *pattern_ID_VIDEO_ID;
+ 		GPatternSpec  *pattern_ID_AUDIO;
+@@ -213,7 +213,7 @@
+ 								if (g_strcmp0 (info_tags[i][0], "Year") == 0)
+ 									data = tracker_date_guess (equal_char_pos + 1);
+ 								else
+-									data = g_strdup (equal_char_pos + 1);
++									data = tracker_extract_guess_date (equal_char_pos + 1);
+ 
+ 								if (data) {
+ 									if (data[0] != '\0') {
