@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/06/24 18:52:04 outpaddling Exp $
+# $NetBSD: Makefile,v 1.2 2013/06/24 20:01:25 outpaddling Exp $
 #
 
 DISTNAME=	meep-1.2
@@ -25,6 +25,7 @@ CONFIGURE_ARGS+=--with-libctl=${PREFIX}/share/libctl \
 
 .include "../../wip/mpb-openmpi/buildlink3.mk"
 .include "../../math/gsl/buildlink3.mk"
+.include "../../math/fftw2/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../math/harminv/buildlink3.mk"
