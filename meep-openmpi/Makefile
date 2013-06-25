@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2013/06/24 20:06:06 outpaddling Exp $
+# $NetBSD: Makefile,v 1.4 2013/06/25 12:49:00 outpaddling Exp $
 #
 
 DISTNAME=	meep-1.2
@@ -22,6 +22,8 @@ CONFIGURE_ARGS+=--with-libctl=${PREFIX}/share/libctl \
 		--with-mpi \
  		--prefix=${MPI_PREFIX:Q} \
  		--mandir=${MPI_PREFIX:Q}/man
+
+MESSAGE_SUBST+=         PREFIX=${PREFIX:Q}
 
 .include "../../wip/mpb-openmpi/buildlink3.mk"
 .include "../../math/gsl/buildlink3.mk"
