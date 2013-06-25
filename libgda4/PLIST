@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2013/06/09 12:50:58 noud4 Exp $
+@comment $NetBSD: PLIST,v 1.7 2013/06/25 14:19:41 noud4 Exp $
 ${PLIST.bdb}include/libgda-4.0/libgda/gda-data-model-bdb.h
 ${PLIST.bdb}lib/libgda-4.0/providers/libgda-bdb.la
 ${PLIST.bdb}lib/pkgconfig/libgda-bdb-4.0.pc
@@ -18,6 +18,7 @@ ${PLIST.mdb}lib/libgda-4.0/providers/libgda-mdb.la
 ${PLIST.mdb}lib/pkgconfig/libgda-mdb-4.0.pc
 ${PLIST.mysql}lib/libgda-4.0/providers/libgda-mysql.la
 ${PLIST.mysql}lib/pkgconfig/libgda-mysql-4.0.pc
+${PLIST.mdb}share/libgda-4.0/mdb_specs_dsn.xml
 ${PLIST.mysql}share/libgda-4.0/mysql_specs_add_column.xml
 ${PLIST.mysql}share/libgda-4.0/mysql_specs_comment_column.xml
 ${PLIST.mysql}share/libgda-4.0/mysql_specs_comment_table.xml
