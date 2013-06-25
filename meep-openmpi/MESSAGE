@@ -1,0 +1,6 @@
+
+You may need to add LD_LIBRARY_PATH to
+
+${PREFIX}/lib
+
+in order to work around a problem locating libguile-srfi*.
