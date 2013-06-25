@@ -6,5 +6,6 @@ if ! echo $PATH | fgrep -q %%MPI_PREFIX%%; then
     export PATH
     MANPATH=$MPI_PREFIX/man:$MANPATH
     export MANPATH
+    LD_LIBRARY_PATH=$MPI_PREFIX/lib:$LD_LIBRARY_PATH
+    export LD_LIBRARY_PATH
 fi
-
