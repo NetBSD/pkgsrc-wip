@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2013/06/24 09:38:15 noud4 Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2013/06/25 14:29:02 noud4 Exp $
 
 BUILDLINK_TREE+=	meta-tracker
 
@@ -8,6 +8,9 @@ META_TRACKER_BUILDLINK3_MK:=
 BUILDLINK_API_DEPENDS.meta-tracker+=	meta-tracker>=0.9.0
 BUILDLINK_ABI_DEPENDS.meta-tracker+=	meta-tracker>=0.9.38
 BUILDLINK_PKGSRCDIR.meta-tracker?=	../../wip/meta-tracker
+
+pkgbase := meta-tracker
+.include "../../mk/pkg-build-options.mk"
 
 .if !empty(PKG_BUILD_OPTIONS.meta-tracker:Mgstreamer)
 .include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"
