@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2013/06/17 12:45:12 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.6 2013/06/26 12:18:25 noud4 Exp $
 #
 
 DISTNAME=	mono-zeroconf-0.9.0
@@ -10,11 +10,12 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	kamel.derouiche@gmail.com
 HOMEPAGE=	http://www.mono-project.com/Mono.Zeroconf
 COMMENT=	Cross platform Zero Configuration Networking library for Mono and .NET
-LICENSE=	LICENSE
+LICENSE=	mit
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config gmake bash:run
 USE_LANGUAGES=	c c++
+MAKE_JOBS_SAFE=	NO
 
 PKGCONFIG_OVERRIDE+=	src/mono-zeroconf.pc.in
 
