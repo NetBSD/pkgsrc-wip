@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2013/06/26 22:34:17 noud4 Exp $
+
+SHA1 (banshee-2.2.1.tar.bz2) = 570df8c12782d196a423f2d2fa7eefa1fdbe297d
+RMD160 (banshee-2.2.1.tar.bz2) = b8a75ff8ef3907d74cde838c932590caac8bdda7
+Size (banshee-2.2.1.tar.bz2) = 3905092 bytes
+SHA1 (patch-aa) = bb070c1daa79426ef4616e2d26e76e2c7376b455

@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5346 2013/06/24 18:53:56 outpaddling Exp $
+# $Id: Makefile,v 1.5347 2013/06/26 22:36:55 noud4 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -202,6 +202,7 @@ SUBDIR+=	backplane
 SUBDIR+=	bagel
 SUBDIR+=	bakery
 SUBDIR+=	baler
+SUBDIR+=	banshee
 SUBDIR+=	bashdb
 SUBDIR+=	bastard
 SUBDIR+=	beads
