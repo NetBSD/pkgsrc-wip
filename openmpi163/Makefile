@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2013/06/22 13:49:31 outpaddling Exp $
+# $NetBSD: Makefile,v 1.5 2013/06/26 21:04:35 outpaddling Exp $
 
 DISTNAME=	openmpi-1.6.3
 #PKGNAME=	openmpi-1.7.1
@@ -59,6 +59,18 @@ BUILDLINK_PASSTHRU_RPATHDIRS+=	${MPI_PREFIX}/lib
 
 USE_TOOLS+=		perl:run
 REPLACE_PERL+=		ompi/tools/wrappers/mpijavac.pl.in
+
+# A -R flag is being mysteriously inserted into the mpi wrapper flags,
+# which is not supported by the Darwin linker.  This hack replaces
+# it with a harmless extra -L until I can figure out how to prevent it.
+# The same -R appears on Linux, but does not cause problems.
+# SUBST refused to edit binary files, so do it manually.
+.if ${OPSYS} == "Darwin" || ${OPSYS} == "Linux"
+SUBST_CLASSES+=	opal
+SUBST_STAGE.opal=	post-build
+SUBST_FILES.opal=	${WRKSRC}/opal/tools/wrappers/.libs/opal_wrapper
+SUBST_SED.opal=		-e 's|-R|-L|g'
+.endif
 
 .include "options.mk"
 
