@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2013/06/17 12:45:13 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2013/06/26 15:35:33 noud4 Exp $
 #
 
-DISTNAME=	taglib-sharp-2.0.3.2
-PKGREVISION=	4
+DISTNAME=	taglib-sharp-2.0.3.7
 CATEGORIES=	audio
-MASTER_SITES=	http://download.banshee-project.org/taglib-sharp/2.0.3.2/
+MASTER_SITES=	http://download.banshee-project.org/taglib-sharp/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	kamelderouiche@yahoo.com
