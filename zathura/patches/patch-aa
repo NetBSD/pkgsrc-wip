@@ -1,16 +1,10 @@
-$NetBSD: patch-aa,v 1.1 2012/11/11 11:25:29 zul_ Exp $
-
-Adapt to pkgsrc prerequisite
-
---- config.mk.orig	2012-11-10 11:29:08.000000000 +0000
-+++ config.mk	2012-11-10 11:29:41.000000000 +0000
-@@ -24,8 +24,8 @@
- WITH_SQLITE ?= $(shell (pkg-config --atleast-version=3.5.9 sqlite3 && echo 1) || echo 0)
+--- config.mk.orig	2013-05-12 21:28:52.000000000 +0000
++++ config.mk	2013-06-26 20:31:28.000000000 +0000
+@@ -29,7 +29,7 @@
  
  # paths
--PREFIX ?= /usr
+ PREFIX ?= /usr
 -MANPREFIX ?= ${PREFIX}/share/man
-+PREFIX ?= ${PREFIX}
 +MANPREFIX ?= ${PREFIX}/man
  DESKTOPPREFIX ?= ${PREFIX}/share/applications
  LIBDIR ?= ${PREFIX}/lib

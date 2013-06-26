@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2013/02/10 10:39:46 zul_ Exp $
+$NetBSD: distinfo,v 1.4 2013/06/26 18:41:00 zul_ Exp $
 
-SHA1 (zathura-0.2.2.tar.gz) = 0aa88b31cf574cb70a1936c317a567a94f680896
-RMD160 (zathura-0.2.2.tar.gz) = 13bd4500278c210b285ea6253fb8f3a8eb8db3c2
-Size (zathura-0.2.2.tar.gz) = 108240 bytes
-SHA1 (patch-aa) = e83ebe02233395001cc1e5417ae0098b0fa43f3c
+SHA1 (zathura-0.2.3.tar.gz) = cc3cb49f3bc9e7f787773ac7c3db18ca2ff6dce3
+RMD160 (zathura-0.2.3.tar.gz) = 4ff510bf03a35d297ec69680086f055b96948a57
+Size (zathura-0.2.3.tar.gz) = 121465 bytes
+SHA1 (patch-aa) = 522f544ad2ebfbc2f0df5af0c5b05c61faef2349
