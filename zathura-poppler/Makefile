@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2013/02/10 10:47:00 zul_ Exp $
+# $NetBSD: Makefile,v 1.3 2013/06/26 18:46:24 zul_ Exp $
 #
 
-VERSION=	0.2.2
+VERSION=	0.2.3
 PKGNAME=	zathura-poppler-${VERSION}
 DISTNAME=	zathura-pdf-poppler-${VERSION}
 CATEGORIES=	print
