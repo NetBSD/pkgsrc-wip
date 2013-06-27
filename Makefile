@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5347 2013/06/26 22:36:55 noud4 Exp $
+# $Id: Makefile,v 1.5348 2013/06/27 07:05:49 ahp-nils Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2167,6 +2167,7 @@ SUBDIR+=	pear-Net_URL2
 SUBDIR+=	pear-XML_Parser
 SUBDIR+=	pear-channel-horde
 SUBDIR+=	pear-channel-phpunit
+SUBDIR+=	pelican
 SUBDIR+=	pessulus
 SUBDIR+=	petsc
 SUBDIR+=	pev
@@ -2429,6 +2430,7 @@ SUBDIR+=	py-ezPyCrypto
 SUBDIR+=	py-fastaudio
 SUBDIR+=	py-fatiando
 SUBDIR+=	py-fdm
+SUBDIR+=	py-feedgenerator
 SUBDIR+=	py-feyn
 SUBDIR+=	py-ffc
 SUBDIR+=	py-fftw
@@ -2694,6 +2696,7 @@ SUBDIR+=	py-shtoom
 SUBDIR+=	py-siginterrupt
 SUBDIR+=	py-simplegeneric
 SUBDIR+=	py-simpleparse-mxtexttools
+SUBDIR+=	py-six
 SUBDIR+=	py-slowaes
 SUBDIR+=	py-smmap
 SUBDIR+=	py-smop
