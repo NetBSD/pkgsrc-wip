@@ -6,6 +6,7 @@ Suggested package updates
 	o argouml-0.24
 	o atlas-3.10.0
 	o beast-3.8.0
+	o blam-1.8.12
 	o cairo-java-1.0.8
 	o calligra-2.6.4
 	o ccrypt-1.10
@@ -124,7 +125,7 @@ Suggested package updates
 	o xf86-video-geode-2.11.14
 	o xf86-video-nouveau-1.0.8
 	o xfs-1.1.3
-	o xombrero-1.6.0
+	o xombrero-1.6.1
 	o zapping-0.10cvs6
 
 Suggested ready to import packages
