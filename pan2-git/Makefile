@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2013/01/22 22:12:45 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.5 2013/06/29 00:35:22 thomasklausner Exp $
 
 DISTNAME=		pan2-git-2
 CATEGORIES=		news
@@ -55,7 +55,7 @@ CONFIGURE_ARGS+=	--with-gnutls
 .include "../../security/libgnome-keyring/buildlink3.mk"	# optional
 .include "../../sysutils/dbus/buildlink3.mk"			# optional
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
-.include "../../sysutils/libnotify/buildlink3.mk"		# optional
+.include "../../sysutils/libnotify07/buildlink3.mk"		# optional
 .include "../../textproc/gtkspell/buildlink3.mk"		# optional
 .include "../../x11/gtk2/buildlink3.mk"
 
