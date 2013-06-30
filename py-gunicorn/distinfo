@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/06/30 17:21:42 guigui2 Exp $
+
+SHA1 (gunicorn-0.17.4.tar.gz) = ca4c95a236fd90dcf46ffa35c150d9564336e150
+RMD160 (gunicorn-0.17.4.tar.gz) = 8db6c06f7068d87c7b8e880a92b0da7b44b3dd37
+Size (gunicorn-0.17.4.tar.gz) = 372737 bytes
