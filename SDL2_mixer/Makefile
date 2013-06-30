@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/06/12 12:12:09 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2013/06/30 23:06:41 othyro Exp $
 
 DISTNAME=	SDL2_mixer-2.0.0
 CATEGORIES=	audio
@@ -26,10 +26,6 @@ PKGCONFIG_OVERRIDE+=	external/libvorbis-1.3.3/vorbisfile.pc.in
 PKGCONFIG_OVERRIDE+=	external/libvorbisidec-1.2.1/vorbisidec.pc.in
 
 .include "options.mk"
-
-CONFIGURE_ARGS+=	--enable-music-mp3-smpeg=no --disable-smpegtest
-
-# XXX http://forums.libsdl.org/viewtopic.php?p=37449&sid=cb779c24fba69bff5ba36046daf82d78#37449
 
 .include "../../wip/SDL2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
