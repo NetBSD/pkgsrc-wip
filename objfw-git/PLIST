@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2013/05/07 22:52:22 midar Exp $
+@comment $NetBSD: PLIST,v 1.3 2013/06/30 20:18:37 midar Exp $
 bin/objfw-compile
 bin/objfw-config
 include/ObjFW/OFAcceptFailedException.h
@@ -9,12 +9,11 @@ include/ObjFW/OFApplication.h
 include/ObjFW/OFArray.h
 include/ObjFW/OFArray_subarray.h
 include/ObjFW/OFAutoreleasePool.h
-include/ObjFW/OFBinaryPackRepresentation.h
 include/ObjFW/OFBindFailedException.h
 include/ObjFW/OFBlock.h
-include/ObjFW/OFChangeDirectoryFailedException.h
-include/ObjFW/OFChangeFileModeFailedException.h
-include/ObjFW/OFChangeFileOwnerFailedException.h
+include/ObjFW/OFChangeCurrentDirectoryPathFailedException.h
+include/ObjFW/OFChangeOwnerFailedException.h
+include/ObjFW/OFChangePermissionsFailedException.h
 include/ObjFW/OFCollection.h
 include/ObjFW/OFCondition.h
 include/ObjFW/OFConditionBroadcastFailedException.h
@@ -26,12 +25,11 @@ include/ObjFW/OFConstantString.h
 include/ObjFW/OFCopyFileFailedException.h
 include/ObjFW/OFCountedSet.h
 include/ObjFW/OFCreateDirectoryFailedException.h
-include/ObjFW/OFDataArray+BinaryPackValue.h
+include/ObjFW/OFCreateSymbolicLinkFailedException.h
 include/ObjFW/OFDataArray+Hashing.h
+include/ObjFW/OFDataArray+MessagePackValue.h
 include/ObjFW/OFDataArray.h
 include/ObjFW/OFDate.h
-include/ObjFW/OFDeleteDirectoryFailedException.h
-include/ObjFW/OFDeleteFileFailedException.h
 include/ObjFW/OFDictionary.h
 include/ObjFW/OFEnumerationMutationException.h
 include/ObjFW/OFEnumerator.h
@@ -61,6 +59,8 @@ include/ObjFW/OFMD5Hash.h
 include/ObjFW/OFMalformedXMLException.h
 include/ObjFW/OFMapTable.h
 include/ObjFW/OFMemoryNotPartOfObjectException.h
+include/ObjFW/OFMessagePackExtension.h
+include/ObjFW/OFMessagePackRepresentation.h
 include/ObjFW/OFMutableArray.h
 include/ObjFW/OFMutableDictionary.h
 include/ObjFW/OFMutableSet.h
@@ -80,7 +80,8 @@ include/ObjFW/OFProcess.h
 include/ObjFW/OFReadFailedException.h
 include/ObjFW/OFReadOrWriteFailedException.h
 include/ObjFW/OFRecursiveMutex.h
-include/ObjFW/OFRenameFileFailedException.h
+include/ObjFW/OFRemoveItemFailedException.h
+include/ObjFW/OFRenameItemFailedException.h
 include/ObjFW/OFRunLoop.h
 include/ObjFW/OFSHA1Hash.h
 include/ObjFW/OFSeekFailedException.h
@@ -101,7 +102,6 @@ include/ObjFW/OFString+URLEncoding.h
 include/ObjFW/OFString+XMLEscaping.h
 include/ObjFW/OFString+XMLUnescaping.h
 include/ObjFW/OFString.h
-include/ObjFW/OFSymlinkFailedException.h
 include/ObjFW/OFSystemInfo.h
 include/ObjFW/OFTCPSocket.h
 include/ObjFW/OFTLSKey.h
@@ -115,6 +115,7 @@ include/ObjFW/OFTimer.h
 include/ObjFW/OFTruncatedDataException.h
 include/ObjFW/OFURL.h
 include/ObjFW/OFUnboundNamespaceException.h
+include/ObjFW/OFUnboundPrefixException.h
 include/ObjFW/OFUnlockFailedException.h
 include/ObjFW/OFUnsupportedProtocolException.h
 include/ObjFW/OFUnsupportedVersionException.h
