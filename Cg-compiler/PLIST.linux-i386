@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST.linux-i386,v 1.1 2012/09/06 13:06:37 othyro Exp $
-${EMULSUBDIRSLASH}lib/libCg.so
-${EMULSUBDIRSLASH}lib/libCgGL.so

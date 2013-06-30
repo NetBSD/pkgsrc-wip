@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5348 2013/06/27 07:05:49 ahp-nils Exp $
+# $Id: Makefile,v 1.5349 2013/06/30 03:20:26 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -6,7 +6,6 @@ COMMENT=	WIP pkgsrc packages
 SUBDIR+=	389-ds-base
 SUBDIR+=	BitchX
 SUBDIR+=	Box2D
-SUBDIR+=	Cg-compiler
 SUBDIR+=	Chinput
 SUBDIR+=	ETL
 SUBDIR+=	Eina
