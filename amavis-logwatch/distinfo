@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/07/01 11:44:42 noud4 Exp $
+
+SHA1 (amavis-logwatch-1.51.02.tgz) = 77eb360dabb501087edb82fa3737e2ce9317d6a5
+RMD160 (amavis-logwatch-1.51.02.tgz) = 8f2e4e6d180e186895cd5d63787cdd1dc7fa0d4b
+Size (amavis-logwatch-1.51.02.tgz) = 86314 bytes
