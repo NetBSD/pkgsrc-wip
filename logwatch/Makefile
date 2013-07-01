@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/07/01 11:37:51 noud4 Exp $
+# $NetBSD: Makefile,v 1.2 2013/07/01 12:25:16 noud4 Exp $
 #
 
 DISTNAME=	logwatch-7.4.0
@@ -54,8 +54,10 @@ INSTALLATION_DIRS+=	${EGDIR:S|${PREFIX}/||}/conf ${EGDIR:S|${PREFIX}/||}/conf/se
 
 post-extract:
 	${CP} -r ${FILESDIR}/host ${WRKSRC}
+	${RM} -r ${WRKSRC}/host/CVS ${WRKSRC}/host/*/CVS ${WRKSRC}/host/*/*/CVS
 .if exists(${FILESDIR}/dist.conf/${OPSYS})
 	${CP} -r ${FILESDIR}/dist.conf/${OPSYS} ${WRKSRC}/dist.conf
+	${RM} -r ${WRKSRC}/dist.conf/CVS ${WRKSRC}/dist.conf/*/CVS
 .else
 	${MKDIR} ${WRKSRC}/dist.conf
 .endif
