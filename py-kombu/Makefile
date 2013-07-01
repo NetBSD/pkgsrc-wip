@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2013/06/07 23:25:35 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2013/07/01 12:30:11 othyro Exp $
 #
 
-DISTNAME=	kombu-2.5.10
+DISTNAME=	kombu-2.5.12
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	net
 MASTER_SITES=	http://pypi.python.org/packages/source/k/kombu/
