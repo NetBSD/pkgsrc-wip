@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/06/09 11:20:53 othyro Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/07/01 02:35:15 othyro Exp $
 bin/blink
 ${PYSITELIB}/${EGG_FILE}
 ${PYSITELIB}/blink/__init__.py
@@ -161,8 +161,8 @@ share/blink/icons/audio-auto-rejected.png
 share/blink/icons/audio-rejected.png
 share/blink/icons/audio.png
 share/blink/icons/avatar.png
-share/blink/icons/bell-off.png
-share/blink/icons/bell-on.png
+share/blink/icons/bell-off.svg
+share/blink/icons/bell-on.svg
 share/blink/icons/bell.png
 share/blink/icons/blink-logo.png
 share/blink/icons/blink.ico
