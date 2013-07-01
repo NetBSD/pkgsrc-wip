@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2013/06/07 23:40:56 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2013/07/01 12:25:30 othyro Exp $
 #
 
-DISTNAME=	billiard-2.7.3.28
+DISTNAME=	billiard-2.7.3.30
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	parallel
 MASTER_SITES=	http://pypi.python.org/packages/source/b/billiard/
