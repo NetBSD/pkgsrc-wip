@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5354 2013/07/01 11:40:09 noud4 Exp $
+# $Id: Makefile,v 1.5355 2013/07/01 11:43:24 noud4 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2259,6 +2259,7 @@ SUBDIR+=	pop3.proxy
 SUBDIR+=	popup-el-current
 SUBDIR+=	portaudio
 SUBDIR+=	postal2-mpdemo-bin
+SUBDIR+=	postfix-logwatch
 SUBDIR+=	postoffice
 SUBDIR+=	postr
 SUBDIR+=	pound

@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST.logwatch,v 1.1 2013/07/01 11:41:44 noud4 Exp $
+share/examples/logwatch/conf/services/${FILTER}.conf
+share/examples/logwatch/scripts/services/${FILTER}
