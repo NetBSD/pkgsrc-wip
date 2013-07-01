@@ -1,0 +1,17 @@
+$NetBSD: patch-scripts_services_ftpd-messages,v 1.1 2013/07/01 11:37:52 noud4 Exp $
+
+NetBSD anonymous ftp message.
+
+--- scripts/services/ftpd-messages.orig	2010-05-01 02:34:09.000000000 +0000
++++ scripts/services/ftpd-messages
+@@ -57,7 +57,9 @@ while (defined($ThisLine = <STDIN>)) {
+          ( $ThisLine =~ /^User .* timed out after .* seconds at .*$/ )   ) {
+ 
+             # We don't care about any of these
+-
++   } elsif ( ($Host,$IP,$Email) = ( $ThisLine =~ /^ANONYMOUS FTP LOGIN FROM ([^ ]+)\((.*)\), (.*) \(class: guest, type: GUEST\)$/ ) ) {
++      $Temp = "   " . $Host . " (" . $IP . "): " . $Email . " - ";
++      $AnonLogins{$Temp}++;
+    } elsif ( ($Host,$IP,$Email) = ( $ThisLine =~ /^ANONYMOUS FTP LOGIN FROM ([^ ]+) \[(.*)\], (.*)$/ ) ) {
+       $Temp = "   " . $Host . " (" . $IP . "): " . $Email . " - ";
+       $AnonLogins{$Temp}++;

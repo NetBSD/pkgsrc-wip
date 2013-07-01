@@ -1,0 +1,15 @@
+$NetBSD: patch-scripts_services_cron,v 1.1 2013/07/01 11:37:52 noud4 Exp $
+
+NetBSD turnover message.
+
+--- scripts/services/cron.orig	2010-05-01 02:34:09.000000000 +0000
++++ scripts/services/cron
+@@ -129,7 +129,7 @@ while (defined($ThisLine = <STDIN>)) {
+       ($ThisLine =~ /INFO \(not boot nor reboot\)/) or
+       ($ThisLine =~ /INFO \(running with inotify support\)/) or
+       ($ThisLine =~ /INFO \(\@reboot jobs will be run at computer's startup.\)/) or
+-      ($ThisLine =~ /logfile turned over/) or
++      ($ThisLine =~ /log(| )file turned over/) or
+       ($ThisLine =~ /ready to process filesystem events/) or # newsyslog on OpenBSD
+       ($ThisLine =~ /loading (system|user) tables/) or
+       ($ThisLine =~ /loading table .*/) or
