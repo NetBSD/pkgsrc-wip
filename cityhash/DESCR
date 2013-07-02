@@ -1,2 +1,0 @@
-CityHash provides hash functions for strings. The functions mix the input bits
-thoroughly but are not suitable for cryptography.
