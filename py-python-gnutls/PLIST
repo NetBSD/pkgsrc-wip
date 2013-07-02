@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/06/08 00:14:52 othyro Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/07/02 10:28:49 othyro Exp $
 ${PYSITELIB}/gnutls/__init__.py
 ${PYSITELIB}/gnutls/__init__.pyc
 ${PYSITELIB}/gnutls/__init__.pyo
@@ -39,4 +39,4 @@ ${PYSITELIB}/gnutls/library/types.pyo
 ${PYSITELIB}/gnutls/validators.py
 ${PYSITELIB}/gnutls/validators.pyc
 ${PYSITELIB}/gnutls/validators.pyo
-${PYSITELIB}/python_gnutls-${PKGVERSION}-py2.7.egg-info
+${PYSITELIB}/${EGG_FILE}
