@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/06/07 21:17:15 othyro Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/07/02 10:26:44 othyro Exp $
 ${PYSITELIB}/application/__init__.py
 ${PYSITELIB}/application/__init__.pyc
 ${PYSITELIB}/application/__init__.pyo
@@ -62,4 +62,4 @@ ${PYSITELIB}/application/system.pyo
 ${PYSITELIB}/application/version.py
 ${PYSITELIB}/application/version.pyc
 ${PYSITELIB}/application/version.pyo
-${PYSITELIB}/python_application-${PKGVERSION}-py2.7.egg-info
+${PYSITELIB}/${EGG_FILE}
