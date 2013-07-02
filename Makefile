@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5358 2013/07/02 11:27:18 othyro Exp $
+# $Id: Makefile,v 1.5359 2013/07/02 11:40:44 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1397,7 +1397,6 @@ SUBDIR+=	libfm
 SUBDIR+=	libfplll
 SUBDIR+=	libfs
 SUBDIR+=	libgadu
-SUBDIR+=	libgcal
 SUBDIR+=	libgda-bdb
 SUBDIR+=	libgda-ldap
 SUBDIR+=	libgda-mdb
