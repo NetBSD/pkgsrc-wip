@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2012/09/28 18:50:22 othyro Exp $
+# $NetBSD: options.mk,v 1.2 2013/07/02 12:06:51 othyro Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.djplay
 PKG_SUPPORTED_OPTIONS=	audiofile cdparanoia id3 ladspa libxml2 mad mpeg3 nls
@@ -50,5 +50,5 @@ CONFIGURE_ARGS+=	--disable-nls
 .endif
 
 .if !empty(PKG_OPTIONS:Mtap)
-.include "../../wip/tap-plugins/buildlink3.mk"
+.include "../../audio/tap-plugins/buildlink3.mk"
 .endif
