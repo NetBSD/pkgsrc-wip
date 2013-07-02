@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5356 2013/07/01 11:45:56 noud4 Exp $
+# $Id: Makefile,v 1.5357 2013/07/02 11:19:38 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2324,7 +2324,6 @@ SUBDIR+=	py-altgraph
 SUBDIR+=	py-amqplib
 SUBDIR+=	py-anfft
 SUBDIR+=	py-antlr3
-SUBDIR+=	py-anyjson
 SUBDIR+=	py-aopython
 SUBDIR+=	py-arabic
 SUBDIR+=	py-arxiv2bib
@@ -2340,7 +2339,6 @@ SUBDIR+=	py-atpy
 SUBDIR+=	py-behaviour
 SUBDIR+=	py-bidict
 SUBDIR+=	py-bigfloat
-SUBDIR+=	py-billiard
 SUBDIR+=	py-bip
 SUBDIR+=	py-biskit
 SUBDIR+=	py-bitarray
@@ -2504,7 +2502,6 @@ SUBDIR+=	py-keyring
 SUBDIR+=	py-khayyam
 SUBDIR+=	py-kivy
 SUBDIR+=	py-knockknock
-SUBDIR+=	py-kombu
 SUBDIR+=	py-kyra
 SUBDIR+=	py-lapack
 SUBDIR+=	py-larry
