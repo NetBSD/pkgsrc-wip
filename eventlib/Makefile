@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2013/07/01 02:27:16 othyro Exp $
+# $NetBSD: Makefile,v 1.4 2013/07/02 01:29:36 othyro Exp $
 #
 
-DISTNAME=	eventlib-0.1.2
+DISTNAME=	eventlib-0.1.3
 CATEGORIES=	net
 MASTER_SITES=	http://pypi.python.org/packages/source/e/eventlib/
 
