@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2013/05/05 21:14:30 othyro Exp $
+# $NetBSD: Makefile,v 1.8 2013/07/02 01:33:27 othyro Exp $
 #
 
 DISTNAME=	pcsx2-1.0.0r5412
@@ -38,7 +38,7 @@ BUILDLINK_DEPMETHOD.gtk2=	build
 .include "../../wip/libSoundTouch/buildlink3.mk"
 .include "../../audio/portaudio/buildlink3.mk"
 .include "../../graphics/glew/buildlink3.mk"
-.include "../../wip/Cg-compiler/buildlink3.mk"
+.include "../../lang/Cg-compiler/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../x11/wxGTK28/buildlink3.mk"
 .include "../../devel/subversion-base/buildlink3.mk"

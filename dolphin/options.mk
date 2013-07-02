@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2013/05/29 03:05:39 othyro Exp $
+# $NetBSD: options.mk,v 1.6 2013/07/02 01:33:27 othyro Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.dolphin
 PKG_SUPPORTED_OPTIONS=	alsa bluez cg debug ffmpeg glew gtk2 libao openal opengl
@@ -20,7 +20,7 @@ PKG_SUGGESTED_OPTIONS+=	pulseaudio sdl sdl2 sfml+ soil threads xrandr x11 zlib
 .endif
 
 .if !empty(PKG_OPTIONS:Mcg)
-.include "../../wip/Cg-compiler/buildlink3.mk"
+.include "../../lang/Cg-compiler/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mdebug)
