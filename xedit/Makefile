@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/05/19 01:27:00 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2013/07/02 10:33:24 othyro Exp $
 #
 
 DISTNAME=	xedit-1.2.1
@@ -13,6 +13,8 @@ COMMENT=	Simple text editor for X
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config
+
+MAKE_FLAGS+=	appdefaultdir=${PREFIX}/lib/X11/app-defaults
 
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/libXmu/buildlink3.mk"
