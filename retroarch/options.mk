@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2012/10/03 23:23:23 othyro Exp $
+# $NetBSD: options.mk,v 1.2 2013/07/02 11:02:45 othyro Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.retroarch
 PKG_SUPPORTED_OPTIONS=	alsa cg ffmpeg freetype jack libxml2 openal opengl oss
@@ -18,7 +18,7 @@ CONFIGURE_ARGS+=		--disable-alsa
 .endif
 
 .if !empty(PKG_OPTIONS:Mcg)
-.include "../../wip/Cg-compiler/buildlink3.mk"
+.include "../../lang/Cg-compiler/buildlink3.mk"
 CONFIGURE_ARGS+=		--enable-cg
 # Need to work out where to tell configure to find Cg's libs
 .else
