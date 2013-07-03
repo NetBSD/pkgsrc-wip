@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.2 2013/06/20 07:25:59 yvs4sf Exp $
+$NetBSD: distinfo,v 1.3 2013/07/03 14:12:42 yvs4sf Exp $
 
-SHA1 (mtr-16c6a85.tar.gz) = fa0d7fa9088ee57204d1d27e3752200f580a2027
-RMD160 (mtr-16c6a85.tar.gz) = 5858478aec7dd9618fcddba280349a3976dfb38e
-Size (mtr-16c6a85.tar.gz) = 81464 bytes
+SHA1 (mtr-6c94317.tar.gz) = 0e506739f65f1265112148010cc638aa0f7651cf
+RMD160 (mtr-6c94317.tar.gz) = 4b76b59b4011e76b208132490a1da760b9c56e2c
+Size (mtr-6c94317.tar.gz) = 81763 bytes
 SHA1 (patch-bootstrap_fails_wo_installed_gtk__configure.ac) = ba8a448e8d35ccfa8a421334e882afd0a062f4c9
 SHA1 (patch-extended_ipinfo_support__asn.c) = ee0529d22e16a922cb5b9c92a451bf68bec52e63
 SHA1 (patch-extended_ipinfo_support__asn.h) = 568fcb840cf64abb41f983bcd881df88a0aa320a
