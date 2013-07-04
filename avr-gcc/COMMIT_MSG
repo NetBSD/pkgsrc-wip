@@ -1,0 +1,9 @@
+Bump 4.4.1 to 4.5.3
+For the changes from 4.4.1 to 4.5, see following page.
+  http://gcc.gnu.org/gcc-4.5/changes.html
+
+(pkgsrc)
+Not to install libiberty.a to avoid conflict to others, 
+and besides natively compiled libiberty.a is not usefull for
+cross tool-chain.
+

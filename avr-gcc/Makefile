@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/09/24 16:56:40 asau Exp $
+# $NetBSD: Makefile,v 1.4 2013/07/04 03:45:34 makoto Exp $
 
 DISTNAME=		gcc-4.5.3
 PKGNAME=		avr-gcc-4.5.3
@@ -17,20 +17,21 @@ DEPENDS+=		avr-binutils-[0-9]*:../../wip/avr-binutils
 .include "../../mk/bsd.prefs.mk"
 
 GNU_CONFIGURE=		yes
+
 USE_TOOLS+=		bison gmake lex perl tar msgfmt autoconf pod2man
 USE_PKGLOCALEDIR=	yes
 USE_GNU_CONFIGURE_HOST=	no
-USE_CROSSBASE=		yes
 
-CONFIGURE_ARGS+=	--target=avr --disable-nls
+CONFIGURE_ARGS+=	--target=avr
+CONFIGURE_ARGS+=	--disable-nls
 CONFIGURE_ARGS+=	--enable-multilib
 
 MAKE_ENV+=		MACHINE_ARCH=avr
 MAKE_ENV+=		SHELL=${CONFIG_SHELL}
 CFLAGS_FOR_BUILD:=	${CFLAGS}
-MAVE_ENV+=		CFLAGS_FOR_BUILD=${CFLAGS_FOR_BUILD:Q}
+MAKE_ENV+=		CFLAGS_FOR_BUILD=${CFLAGS_FOR_BUILD:Q}
 CXXFLAGS_FOR_BUILD:=	${CXXFLAGS}
-MAVE_ENV+=		CXXFLAGS_FOR_BUILD=${CXXFLAGS_FOR_BUILD:Q}
+MAKE_ENV+=		CXXFLAGS_FOR_BUILD=${CXXFLAGS_FOR_BUILD:Q}
 CFLAGS=			# empty
 CXXFLAGS=		# empty
 
@@ -41,11 +42,6 @@ SUBST_STAGE.sed=	post-patch
 
 pre-configure:
 	${MKDIR} ${WRKDIR}/obj
-
-# remove info file, to avoid conflict to native or other cross compilers
-#post-install:
-#	${RM}	${DESTDIR}${PREFIX}/share/info/dir
-#	${RM}	${DESTDIR}${PREFIX}/share/info/libquadmath.info
 
 CONFIGURE_DIRS=		${WRKDIR}/obj
 CONFIGURE_SCRIPT=	${WRKSRC}/configure
