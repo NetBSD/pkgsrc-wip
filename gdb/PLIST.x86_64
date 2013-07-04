@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST.x86_64,v 1.1 2013/07/04 15:01:26 makoto Exp $
-lib/x86_64/libiberty.a

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2013/07/04 00:25:02 makoto Exp $
+# $NetBSD: Makefile,v 1.7 2013/07/04 15:51:10 makoto Exp $
 #
 
 DISTNAME=	gdb-7.6
@@ -56,16 +56,25 @@ TEST_ENV=		DEJAGNU=${WRKDIR}/../files/dragonfly-default.exp
 post-patch:
 	${RM}	${WRKSRC}/etc/standards.info
 
-.if ${OPSYS} == "DragonFly"
 post-install:
+.if ${OPSYS} == "DragonFly"
 # Following are installed by binutils
 #. for f in ansidecl.h bfdlink.h dis-asm.h symcat.h
 #	(cd ${WRKSRC}/include; ${INSTALL_DATA} ${f}  ${DESTDIR}${PREFIX}/include)
 #. endfor
 	(cd ${DESTDIR}${PREFIX}/bin;               ${LN} ${TARGET_STR}-gdb gdb)
 	(cd ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1; ${LN} ${TARGET_STR}-gdb.1 gdb.1)
-
 .endif
+#
+# PATH of libiberty.a differs between clang and gcc: (and conflicts to other toolchain)
+	for d in ${MACHINE_ARCH}/libiberty.a libiberty.a; do \
+		if [ -f ${DESTDIR}${PREFIX}/lib/$$d ]; then \
+			${MV} ${DESTDIR}${PREFIX}/lib/$$d \
+			      ${DESTDIR}${PREFIX}/lib/libiberty_gdb.a; \
+		break; \
+		fi; \
+	done
+
 
 .include "../../mk/termcap.buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
