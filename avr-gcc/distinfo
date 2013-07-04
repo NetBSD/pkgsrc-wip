@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2013/07/04 03:45:34 makoto Exp $
+$NetBSD: distinfo,v 1.3 2013/07/04 12:10:40 makoto Exp $
 
 SHA1 (gcc-core-4.5.3.tar.bz2) = 5edd2a4ae5a265df716550079995c0a0bc7be564
 RMD160 (gcc-core-4.5.3.tar.bz2) = ef6b9cddc3bcd9884766645659d03f460aab443d
@@ -7,4 +7,5 @@ SHA1 (gcc-g++-4.5.3.tar.bz2) = fde6d16c2d4a2ab21abeaa7dc8e73e22557e8a2d
 RMD160 (gcc-g++-4.5.3.tar.bz2) = 5ef37a35671b475c1f86962dfa796133c80e6549
 Size (gcc-g++-4.5.3.tar.bz2) = 6475820 bytes
 SHA1 (patch-ab) = 4396719b8398cf9eb1f939c447dede250ceb4e26
+SHA1 (patch-gcc_config_avr_driver-avr_c) = 882b1ef0f9bb12338e1b0de2941d2d4164039082
 SHA1 (patch-libiberty_Makefile.in) = f871b64a07d2ac2bc1c0908ce5aa7246cdfc8135

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2013/01/26 23:48:13 makoto Exp $
+# $NetBSD: Makefile,v 1.4 2013/07/04 12:10:40 makoto Exp $
 
 DISTNAME=		binutils-2.23.1
 PKGNAME=		${DISTNAME:S/^/avr-/}
@@ -14,7 +14,6 @@ USE_TOOLS+=		gmake makeinfo
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
 USE_GNU_CONFIGURE_HOST=	no
-USE_CROSSBASE=		yes
 
 CONFIGURE_ARGS+=	--disable-werror --target=avr --disable-nls
 
