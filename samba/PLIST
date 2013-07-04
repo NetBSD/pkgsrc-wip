@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2013/06/07 14:49:20 makoto Exp $
+@comment $NetBSD: PLIST,v 1.10 2013/07/04 15:05:46 thomasklausner Exp $
 bin/cifsdd
 bin/dbwrap_tool
 bin/eventlogadm
@@ -37,6 +37,7 @@ bin/smbpasswd
 bin/smbspool
 bin/smbstatus
 bin/smbta-util
+bin/smbtar
 bin/smbtorture
 bin/smbtree
 bin/tdbbackup
@@ -672,7 +673,7 @@ lib/samba/libkrb5-samba4.so.26.0.0
 lib/samba/libkrb5samba.so
 lib/samba/libldb-cmdline.so
 lib/samba/libldb.so.1
-lib/samba/libldb.so.1.1.15
+lib/samba/libldb.so.1.1.16
 lib/samba/libldbsamba.so
 lib/samba/liblibcli_lsa3.so
 lib/samba/liblibcli_netlogon3.so
@@ -691,7 +692,7 @@ lib/samba/libposix_eadb.so
 lib/samba/libprinting_migrate.so
 lib/samba/libprocess_model.so
 lib/samba/libpyldb-util.so.1
-lib/samba/libpyldb-util.so.1.1.15
+lib/samba/libpyldb-util.so.1.1.16
 lib/samba/libpytalloc-util.so.2
 lib/samba/libpytalloc-util.so.2.0.7
 lib/samba/libreplace.so
