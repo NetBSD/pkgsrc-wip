@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.3 2013/07/04 00:25:02 makoto Exp $
+@comment $NetBSD: PLIST.common,v 1.4 2013/07/04 15:00:48 makoto Exp $
 bin/gdb
 include/gdb/jit-reader.h
 info/annotate.info
@@ -8,7 +8,6 @@ info/gdb.info
 info/gdbint.info
 info/stabs.info
 lib/charset.alias
-lib/libiberty.a
 man/man1/gdb.1
 share/gdb/python/gdb/__init__.py
 share/gdb/python/gdb/command/__init__.py

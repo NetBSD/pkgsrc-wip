@@ -1,0 +1,72 @@
+$NetBSD: patch-opcodes_i386-dis_c,v 1.1 2013/07/04 15:00:48 makoto Exp $
+
+(clang 3.2 says:)
+i386-dis.c:12614:23: error: adding 'char' to 
+a stringchecking for suffix of object files...  does not append to the string [-Werror,-Wstring-plus-int]
+      oappend ("%ds:" + intel_syntax);
+               ~~~~~~~^~~~~~~~~~~~~~
+i386-dis.c:12614:23: note: use array indexing to silence this warning
+      oappend ("%ds:" + intel_syntax);
+
+See also:
+ http://lists.freebsd.org/pipermail/freebsd-ports-bugs/2012-December/246279.html
+
+--- opcodes/i386-dis.c.orig	2013-02-20 04:10:30.000000000 +0900
++++ opcodes/i386-dis.c	2013-07-04 23:40:32.000000000 +0900
+@@ -12075,7 +12075,7 @@ dofloat (int sizeflag)
+ static void
+ OP_ST (int bytemode ATTRIBUTE_UNUSED, int sizeflag ATTRIBUTE_UNUSED)
+ {
+-  oappend ("%st" + intel_syntax);
++  oappend (&"%st"[(short)intel_syntax]);
+ }
+ 
+ static void
+@@ -12606,32 +12606,32 @@ append_seg (void)
+   if (prefixes & PREFIX_CS)
+     {
+       used_prefixes |= PREFIX_CS;
+-      oappend ("%cs:" + intel_syntax);
++      oappend (&"%cs:"[(short)intel_syntax]);
+     }
+   if (prefixes & PREFIX_DS)
+     {
+       used_prefixes |= PREFIX_DS;
+-      oappend ("%ds:" + intel_syntax);
++      oappend (&"%ds:"[(short)intel_syntax]);
+     }
+   if (prefixes & PREFIX_SS)
+     {
+       used_prefixes |= PREFIX_SS;
+-      oappend ("%ss:" + intel_syntax);
++      oappend (&"%ss:"[(short)intel_syntax]);
+     }
+   if (prefixes & PREFIX_ES)
+     {
+       used_prefixes |= PREFIX_ES;
+-      oappend ("%es:" + intel_syntax);
++      oappend (&"%es:"[(short)intel_syntax]);
+     }
+   if (prefixes & PREFIX_FS)
+     {
+       used_prefixes |= PREFIX_FS;
+-      oappend ("%fs:" + intel_syntax);
++      oappend (&"%fs:"[(short)intel_syntax]);
+     }
+   if (prefixes & PREFIX_GS)
+     {
+       used_prefixes |= PREFIX_GS;
+-      oappend ("%gs:" + intel_syntax);
++      oappend (&"%gs:"[(short)intel_syntax]);
+     }
+ }
+ 
+@@ -13970,7 +13970,7 @@ OP_ESreg (int code, int sizeflag)
+ 	  intel_operand_size (b_mode, sizeflag);
+ 	}
+     }
+-  oappend ("%es:" + intel_syntax);
++  oappend (&"%es:"[(short)intel_syntax]);
+   ptr_reg (code, sizeflag);
+ }
+ 

@@ -1,0 +1,40 @@
+$NetBSD: patch-bfd_bfd-in2_h,v 1.1 2013/07/04 15:00:48 makoto Exp $
+
+Avoid following problem by clang-3.2
+----------------
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I. -I. -I./../include -DHAVE_bfd_elf32_avr_vec -DHAVE_bfd_elf32_little_generic_vec -DHAVE_bfd_elf32_big_generic_vec -I./../intl -DBINDIR=\"/usr/pkg/bin\" -I/usr/include -W -Wall -Wstrict-prototypes -Wmissing-prototypes -Wshadow -Werror -O2 -I/usr/include -MT opncls.lo -MD -MP -MF .deps/opncls.Tpo -c opncls.c -o opncls.o
+opncls.c:263:5: error: expression result unused [-Werror,-Wunused-value]
+    bfd_set_cacheable (nbfd, TRUE);
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./bfd.h:529:67: note: expanded from macro 'bfd_set_cacheable'
+#define bfd_set_cacheable(abfd,bool) (((abfd)->cacheable = bool), TRUE)
+                                                                  ^~~~
+./bfd.h:134:14: note: expanded from macro 'TRUE'
+#define TRUE 1
+             ^
+1 error generated.
+
+--- bfd/bfd-in2.h.orig	2013-02-28 06:39:18.000000000 +0900
++++ bfd/bfd-in2.h	2013-07-04 22:58:42.000000000 +0900
+@@ -301,9 +301,9 @@ typedef struct bfd_section *sec_ptr;
+ 
+ #define bfd_is_com_section(ptr) (((ptr)->flags & SEC_IS_COMMON) != 0)
+ 
+-#define bfd_set_section_vma(bfd, ptr, val) (((ptr)->vma = (ptr)->lma = (val)), ((ptr)->user_set_vma = TRUE), TRUE)
+-#define bfd_set_section_alignment(bfd, ptr, val) (((ptr)->alignment_power = (val)),TRUE)
+-#define bfd_set_section_userdata(bfd, ptr, val) (((ptr)->userdata = (val)),TRUE)
++#define bfd_set_section_vma(bfd, ptr, val) (((ptr)->vma = (ptr)->lma = (val)), ((ptr)->user_set_vma = TRUE))
++#define bfd_set_section_alignment(bfd, ptr, val) (((ptr)->alignment_power = (val)))
++#define bfd_set_section_userdata(bfd, ptr, val) (((ptr)->userdata = (val)))
+ /* Find the address one past the end of SEC.  */
+ #define bfd_get_section_limit(bfd, sec) \
+   (((bfd)->direction != write_direction && (sec)->rawsize != 0	\
+@@ -526,7 +526,7 @@ extern void warn_deprecated (const char 
+ 
+ #define bfd_get_symbol_leading_char(abfd) ((abfd)->xvec->symbol_leading_char)
+ 
+-#define bfd_set_cacheable(abfd,bool) (((abfd)->cacheable = bool), TRUE)
++#define bfd_set_cacheable(abfd,bool) ((abfd)->cacheable = bool)
+ 
+ extern bfd_boolean bfd_cache_close
+   (bfd *abfd);

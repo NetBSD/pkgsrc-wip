@@ -1,11 +1,13 @@
-$NetBSD: distinfo,v 1.7 2013/07/04 00:25:02 makoto Exp $
+$NetBSD: distinfo,v 1.8 2013/07/04 15:00:48 makoto Exp $
 
 SHA1 (gdb-7.6.tar.gz) = 026f4c9e1c8152a2773354551c523acd32d7f00e
 RMD160 (gdb-7.6.tar.gz) = 986e1f92130c818d9bdac548259a5c63ddeefef8
 Size (gdb-7.6.tar.gz) = 31437633 bytes
 SHA1 (patch-ao) = 0738d5c2aae9a04af75432073706ca2ba183f750
+SHA1 (patch-bfd_bfd-in2_h) = 92dba21e0c63e3732b7df5f26fed66bae896a117
 SHA1 (patch-etc_Makefile.in) = 9c01dc625f01cb6a057e3cad61a4d20386490c92
 SHA1 (patch-gdb_bsd-kvm.c) = 7cc3df403864d3197404e9b78c2a868f51c7cba6
 SHA1 (patch-gdb_ppcnbsd-nat.c) = 97f33fd635e59f589d2f5a9be41df1c36a7bef75
 SHA1 (patch-opcodes_configure) = 8c0b82710653c93320230c25ace0dbb6360cf656
+SHA1 (patch-opcodes_i386-dis_c) = 58e6f5deb9b66dc70c43f6af05a1add34802baaa
 SHA1 (patch-sim_ppc_emul_netbsd.c) = 42e716a2e13837d2a567af89c465d137af4c2b53
