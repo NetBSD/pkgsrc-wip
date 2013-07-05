@@ -1,4 +1,3 @@
-Fix CROSSBASE issue
-  This one installs under CROSSBASE,
-  while cross/avr-binutils does not use CROSSBASE.
-  I personally can't tell which is good for the time being.
+- Handling of following file is not verified yet.
+   libexec/gcc/avr/${PKGVERSION}/lto1
+  See PLIST.x86_64
