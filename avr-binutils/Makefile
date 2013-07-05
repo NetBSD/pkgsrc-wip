@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2013/07/04 12:10:40 makoto Exp $
+# $NetBSD: Makefile,v 1.5 2013/07/05 15:43:33 makoto Exp $
 
-DISTNAME=		binutils-2.23.1
+DISTNAME=		binutils-2.23.2
 PKGNAME=		${DISTNAME:S/^/avr-/}
 CATEGORIES=		cross
 MASTER_SITES=		${MASTER_SITE_GNU:=binutils/}
