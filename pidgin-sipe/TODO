@@ -1,0 +1,8 @@
+debug, kerberos, valgrind, nls(gettext,libintl), static PKG_OPTIONS
+
+checking for GMIME... no
+checking for GMIME... no
+checking for TELEPATHY_GLIB... no
+Not building telepathy plugin
+
+purple needs to be optional
