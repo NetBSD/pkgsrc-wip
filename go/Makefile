@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2013/06/17 09:29:15 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2013/07/06 11:59:40 bsiegert Exp $
 #
 
 DISTNAME=	go1.1.1.src
@@ -15,8 +15,11 @@ FETCH_USING=	curl
 WRKSRC=		${WRKDIR}/go
 USE_TOOLS+=	bash:run perl:run pax
 
+# uses ulimit -T
+BUILD_DEPENDS+=	bash>=4.2nb3:../../shells/bash
+
 # TODO: other arm platforms?
-ONLY_FOR_PLATFORM= *-*-i386 *-*-x86_64
+ONLY_FOR_PLATFORM= *-*-i386 *-*-x86_64 *-*-evbarm
 .if ${MACHINE_ARCH} == "i386"
 GOARCH=		386
 .elif ${MACHINE_ARCH} == "x86_64"
@@ -54,6 +57,7 @@ REPLACE_BASH+=	src/pkg/syscall/mkerrors.sh
 REPLACE_BASH+=	src/pkg/syscall/mkerrors_windows.sh
 REPLACE_BASH+=	src/race.bash
 REPLACE_BASH+=	src/run.bash
+REPLACE_BASH+=	src/run.bash.orig
 REPLACE_BASH+=	src/sudo.bash
 REPLACE_BASH+=	test/bench/shootout/timing.sh
 REPLACE_BASH+=	test/run

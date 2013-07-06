@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2013/06/17 09:29:15 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.7 2013/07/06 11:59:40 bsiegert Exp $
 bin/go
 bin/godoc
 bin/gofmt
@@ -2875,6 +2875,7 @@ go/src/pkg/unsafe/unsafe.go
 go/src/race.bash
 go/src/race.bat
 go/src/run.bash
+go/src/run.bash.orig
 go/src/run.bat
 go/src/run.rc
 go/src/sudo.bash
