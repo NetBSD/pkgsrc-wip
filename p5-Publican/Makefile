@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/03/28 21:06:04 othyro Exp $
+# $NetBSD: Makefile,v 1.3 2013/07/06 16:40:25 othyro Exp $
 #
 
 DISTNAME=	Publican-v3.1.1
@@ -30,14 +30,14 @@ DEPENDS+=	p5-Syntax-Highlight-Engine-Kate-[0-9]*:../../textproc/p5-Syntax-Highli
 DEPENDS+=	p5-String-Similarity-[0-9]*:../../wip/p5-String-Similarity
 DEPENDS+=	p5-Sort-Versions-[0-9]*:../../devel/p5-Sort-Versions
 DEPENDS+=	p5-Locale-PO-[0-9]*:../../devel/p5-Locale-PO
-DEPENDS+=	p5-Locale-Maketext-Gettext-[0-9]*:../../wip/p5-Locale-Maketext-Gettext
+DEPENDS+=	p5-Locale-Maketext-Gettext-[0-9]*:../../textproc/p5-Locale-Maketext-Gettext
 DEPENDS+=	p5-IO-String-[0-9]*:../../devel/p5-IO-String
 DEPENDS+=	p5-HTML-Tree-[0-9]*:../../www/p5-HTML-Tree
-DEPENDS+=	p5-HTML-FormatText-WithLinks-AndTables-[0-9]*:../../wip/p5-HTML-FormatText-WithLinks-AndTables
-DEPENDS+=	p5-HTML-FormatText-WithLinks-[0-9]*:../../wip/p5-HTML-FormatText-WithLinks
+DEPENDS+=	p5-HTML-FormatText-WithLinks-AndTables-[0-9]*:../../textproc/p5-HTML-FormatText-WithLinks-AndTables
+DEPENDS+=	p5-HTML-FormatText-WithLinks-[0-9]*:../../textproc/p5-HTML-FormatText-WithLinks
 DEPENDS+=	p5-HTML-Format-[0-9]*:../../www/p5-HTML-Format
 DEPENDS+=	p5-File-Which-[0-9]*:../../devel/p5-File-Which
-DEPENDS+=	p5-File-Inplace-[0-9]*:../../wip/p5-File-Inplace
+DEPENDS+=	p5-File-Inplace-[0-9]*:../../sysutils/p5-File-Inplace
 DEPENDS+=	p5-File-HomeDir-[0-9]*:../../devel/p5-File-HomeDir
 DEPENDS+=	p5-DateTime-Format-DateParse-[0-9]*:../../time/p5-DateTime-Format-DateParse
 DEPENDS+=	p5-DateTime-[0-9]*:../../time/p5-DateTime
