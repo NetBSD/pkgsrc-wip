@@ -1,0 +1,4 @@
+- libiberty.a and libbfd.a by avr-binutils-2.32.2 are natively compiled
+
+- current situation:
+/usr/pkgsrc/wip/simulavr/work/.buildlink/avr/include/bfd.h:44:22: fatal error: ansidecl.h: No such file or directory
