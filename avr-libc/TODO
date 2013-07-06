@@ -1,4 +1,3 @@
-- DESCR is a little bit outdated (2003), needs update probably.
 - Please note also "wip/avr-gcc" path is at following line
    .include "../../wip/avr-gcc/buildlink3.mk"
   in Makefile, just for testing in wip.
