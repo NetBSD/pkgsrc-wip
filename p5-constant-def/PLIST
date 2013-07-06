@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2012/12/03 19:17:57 othyro Exp $
-${PERL5_SUB_INSTALLVENDORLIB}/constant/abs.pm
-${PERL5_SUB_INSTALLVENDORLIB}/constant/def.pm
-${PERL5_SUB_INSTALLVENDORARCH}/auto/constant/def/.packlist
-${PERL5_SUB_INSTALLVENDORMAN3DIR}/constant::abs.3
-${PERL5_SUB_INSTALLVENDORMAN3DIR}/constant::def.3

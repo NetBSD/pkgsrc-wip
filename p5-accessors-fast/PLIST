@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2012/12/03 19:32:28 othyro Exp $
-${PERL5_SUB_INSTALLVENDORLIB}/accessors/cpants.pl
-${PERL5_SUB_INSTALLVENDORLIB}/accessors/fast.pm
-${PERL5_SUB_INSTALLVENDORLIB}/accessors/fast/tie.pm
-${PERL5_SUB_INSTALLVENDORARCH}/auto/accessors/fast/.packlist
-${PERL5_SUB_INSTALLVENDORMAN3DIR}/accessors::fast.3

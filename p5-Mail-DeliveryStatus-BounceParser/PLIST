@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2012/12/03 18:54:29 othyro Exp $
-${PERL5_SUB_INSTALLVENDORLIB}/Mail/DeliveryStatus/BounceParser.pm
-${PERL5_SUB_INSTALLVENDORLIB}/Mail/DeliveryStatus/Report.pm
-${PERL5_SUB_INSTALLVENDORARCH}/auto/Mail/DeliveryStatus/BounceParser/.packlist
-${PERL5_SUB_INSTALLVENDORMAN3DIR}/Mail::DeliveryStatus::BounceParser.3

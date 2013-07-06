@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2012/12/03 16:53:36 othyro Exp $
-${PERL5_SUB_INSTALLVENDORLIB}/Python/Serialise/Marshal.pm
-${PERL5_SUB_INSTALLVENDORARCH}/auto/Python/Serialise/Marshal/.packlist
-${PERL5_SUB_INSTALLVENDORMAN3DIR}/Python::Serialise::Marshal.3
