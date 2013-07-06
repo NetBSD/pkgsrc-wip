@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2012/09/29 00:50:34 asau Exp $
-#
+# $NetBSD: Makefile,v 1.5 2013/07/06 14:17:50 shattered Exp $
 
-DISTNAME=	get_iplayer-2.80
-PKGREVISION=	1
+DISTNAME=	get_iplayer-2.82
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.infradead.org/pub/get_iplayer/
 
