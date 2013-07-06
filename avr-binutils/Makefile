@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2013/07/06 14:24:21 makoto Exp $
+# $NetBSD: Makefile,v 1.7 2013/07/06 15:07:48 makoto Exp $
 
 DISTNAME=		binutils-2.23.2
 PKGNAME=		${DISTNAME:S/^/avr-/}
@@ -43,5 +43,8 @@ post-install:
 	${LIBTOOL} --mode install ${INSTALL_DATA} libbfd.la ${DESTDIR}${PREFIX}/avr/lib;	\
 	${INSTALL_DATA} bfd.h ${DESTDIR}${PREFIX}/avr/include;	\
 	)
-
+	(cd ${WRKSRC}/libiberty;				\
+	${MV} ${DESTDIR}${PREFIX}/lib/libiberty.a		\
+	      ${DESTDIR}${PREFIX}/avr/lib/libiberty.a		\
+	)
 .include "../../mk/bsd.pkg.mk"
