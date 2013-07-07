@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/07/07 03:42:12 makoto Exp $
+# $NetBSD: Makefile,v 1.3 2013/07/07 05:08:56 makoto Exp $
 #
 DISTNAME=		simulavr-1.0.0
 CATEGORIES=		emulators
@@ -16,7 +16,7 @@ CONFIGURE_ARGS+=	--disable-tests
 CONFIGURE_ARGS+=	--enable-python=python2.7
 CONFIGURE_ARGS+=	--with-bfd=${PREFIX}/avr
 #CONFIGURE_ENV+=		ac_cv_prog_has_texi2dvi=yes ac_cv_prog_has_texi2html=yes
-USE_TOOLS+=		makeinfo
+USE_TOOLS+=		makeinfo gmake
 USE_LANGUAGES+=		c c++
 
 USE_PKGLOCALEDIR=	yes
