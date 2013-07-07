@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/12/27 05:41:58 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2013/07/07 14:05:47 othyro Exp $
 #
 
 DISTNAME=	gtksourceviewmm-3.2.0
@@ -19,12 +19,12 @@ USE_LIBTOOL=	yes
 
 PKGCONFIG_OVERRIDE+=	gtksourceview/gtksourceviewmm.pc.in
 
-BUILD_DEPENDS+=	atkmm-[0-9]*:../../devel/atkmm
-BUILD_DEPENDS+=	cairomm-[0-9]*:../../graphics/cairomm
-BUILD_DEPENDS+= glibmm-[0-9]*:../../devel/glibmm
-BUILD_DEPENDS+=	glib2-[0-9]*:../../devel/glib2
-BUILD_DEPENDS+=	pangomm-[0-9]*:../../devel/pangomm
-BUILD_DEPENDS+=	libsigc++-[0-9]*:../../devel/libsigc++
-.include "../../wip/gtkmm3/buildlink3.mk"
+.include "../../devel/atkmm/buildlink3.mk"
+.include "../../graphics/cairomm/buildlink3.mk"
+.include "../../devel/glibmm/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../devel/pangomm/buildlink3.mk"
+.include "../../devel/libsigc++/buildlink3.mk"
+.include "../../x11/gtkmm3/buildlink3.mk"
 .include "../../x11/gtksourceview3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
