@@ -1,4 +1,31 @@
 - libiberty.a and libbfd.a by avr-binutils-2.32.2 are natively compiled
-
+- In configuration, seeing following message:
+  build verilog modul avr.vpi = no
 - current situation:
-/usr/pkgsrc/wip/simulavr/work/.buildlink/avr/include/bfd.h:44:22: fatal error: ansidecl.h: No such file or directory
+
+libtool: link: c++ -I/usr/pkg/avr/include -g -O2 -Icmd -Iui
+-Ihwtimer -Wl,-R/usr/pkg/lib -Wl,-R/usr/lib -o simulavr main.o
+dumpargs.o .libs/adcpin.o .libs/application.o .libs/at4433.o
+.libs/at8515.o .libs/atmega668base.o .libs/atmega128.o
+.libs/at90canbase.o .libs/atmega8.o .libs/atmega1284abase.o
+.libs/atmega16_32.o .libs/attiny2313.o .libs/externalirq.o
+.libs/avrdevice.o .libs/avrerror.o .libs/avrfactory.o
+.libs/avrmalloc.o .libs/decoder.o .libs/decoder_trace.o
+.libs/flash.o .libs/flashprog.o .libs/hardware.o
+.libs/helper.o .libs/gdbserver.o .libs/hwacomp.o .libs/hwad.o
+.libs/hweeprom.o .libs/timerprescaler.o .libs/prescalermux.o
+.libs/timerirq.o .libs/hwpinchange.o .libs/hwport.o
+.libs/hwspi.o .libs/hwsreg.o .libs/icapturesrc.o
+.libs/hwstack.o .libs/hwtimer.o .libs/hwuart.o .libs/hwwado.o
+.libs/ioregs.o .libs/irqsystem.o .libs/keyboard.o .libs/lcd.o
+.libs/memory.o .libs/mysocket.o .libs/net.o .libs/pin.o
+.libs/extpin.o .libs/pinatport.o .libs/pinmon.o .libs/rwmem.o
+.libs/scope.o .libs/serialrx.o .libs/serialtx.o .libs/spisrc.o
+.libs/spisink.o .libs/specialmem.o .libs/string2.o
+.libs/systemclock.o .libs/traceval.o .libs/ui.o -L/usr/pkg/lib
+-L/usr/lib -L/usr/pkg/avr/lib /usr/pkg/avr/lib/libbfd.a -lz
+-liberty 
+
+ld: cannot find -liberty *** Error code 1
+
+(Is this asking for natively compiled one ?)
