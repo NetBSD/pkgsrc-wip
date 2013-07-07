@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2013/07/06 15:07:48 makoto Exp $
+# $NetBSD: Makefile,v 1.8 2013/07/07 01:24:47 makoto Exp $
 
 DISTNAME=		binutils-2.23.2
 PKGNAME=		${DISTNAME:S/^/avr-/}
@@ -38,13 +38,22 @@ post-build:
 	(cd ${WRKSRC}/bfd; ${GMAKE} all libbfd.a);
 
 post-install:
+	# Emulator/simulvar needs library files
 	(cd ${WRKSRC}/bfd; 					\
 	${GMAKE} install-exec install-data; 			\
 	${LIBTOOL} --mode install ${INSTALL_DATA} libbfd.la ${DESTDIR}${PREFIX}/avr/lib;	\
 	${INSTALL_DATA} bfd.h ${DESTDIR}${PREFIX}/avr/include;	\
 	)
+	# Rename to avoid conflict to native and other cross assemble.
+	# But this file is compiled natively, not usefull, but mark as necessary at least
 	(cd ${WRKSRC}/libiberty;				\
 	${MV} ${DESTDIR}${PREFIX}/lib/libiberty.a		\
 	      ${DESTDIR}${PREFIX}/avr/lib/libiberty.a		\
+	)
+	# emulator/simulavr wants following header files
+	(cd ${WRKSRC}/include; 					\
+	for f in ansidecl.h symcat.h; do  \
+	${INSTALL_DATA} $$f ${DESTDIR}${PREFIX}/avr/include;	\
+	done;	\
 	)
 .include "../../mk/bsd.pkg.mk"

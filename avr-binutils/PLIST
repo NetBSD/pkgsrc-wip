@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2013/07/06 15:07:48 makoto Exp $
+@comment $NetBSD: PLIST,v 1.4 2013/07/07 01:24:47 makoto Exp $
 avr/bin/ar
 avr/bin/as
 avr/bin/ld
@@ -9,6 +9,8 @@ avr/bin/objdump
 avr/bin/ranlib
 avr/bin/strip
 avr/include/bfd.h
+avr/include/ansidecl.h
+avr/include/symcat.h
 avr/lib/ldscripts/avr1.x
 avr/lib/ldscripts/avr1.xbn
 avr/lib/ldscripts/avr1.xn
