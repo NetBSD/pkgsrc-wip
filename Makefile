@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5365 2013/07/07 11:48:11 thomasklausner Exp $
+# $Id: Makefile,v 1.5366 2013/07/07 12:49:25 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1702,6 +1702,7 @@ SUBDIR+=	mupen64-plugin-input
 SUBDIR+=	mupen64-plugin-rsp
 SUBDIR+=	mupen64-plugin-sound
 SUBDIR+=	mupen64-plugin-video
+SUBDIR+=	mupen64plus-extraplugins
 SUBDIR+=	mupen64plus
 SUBDIR+=	muscle-cflexplugin
 SUBDIR+=	muscle-mcardplugin
