@@ -1,13 +1,15 @@
-$NetBSD: patch-BuildTools_SCons_Tools_qt4.py,v 1.1.1.1 2011/07/31 22:28:23 schnoebe Exp $
+$NetBSD: patch-BuildTools_SCons_Tools_qt4.py,v 1.2 2013/07/07 11:42:58 thomasklausner Exp $
 
---- BuildTools/SCons/Tools/qt4.py.orig	2011-04-22 21:07:47.000000000 +0000
+Handle NetBSD like Linux.
+
+--- BuildTools/SCons/Tools/qt4.py.orig	2012-12-22 12:23:58.000000000 +0000
 +++ BuildTools/SCons/Tools/qt4.py
-@@ -445,7 +445,7 @@ def enable_modules(self, modules, debug=
+@@ -448,7 +448,7 @@ def enable_modules(self, modules, debug=
  		except: pass
  	debugSuffix = ''
  
--	if sys.platform in ["linux2"] and not crosscompiling :
-+	if sys.platform in ["linux2", "netbsd5", "netbsd6" ] and not crosscompiling :
+-	if sys.platform.startswith("linux") and not crosscompiling :
++	if (sys.platform.startswith("linux") or sys.platform.startswith("netbsd")) and not crosscompiling :
  		if debug : debugSuffix = '_debug'
  		self.AppendUnique(CPPPATH=[os.path.join("$QTDIR","include", "phonon")])
  		for module in modules :

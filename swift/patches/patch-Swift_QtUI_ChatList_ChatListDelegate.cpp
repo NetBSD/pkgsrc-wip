@@ -1,4 +1,6 @@
-$NetBSD: patch-Swift_QtUI_ChatList_ChatListDelegate.cpp,v 1.1.1.1 2011/07/31 22:28:23 schnoebe Exp $
+$NetBSD: patch-Swift_QtUI_ChatList_ChatListDelegate.cpp,v 1.2 2013/07/07 11:42:58 thomasklausner Exp $
+
+Fix include paths to qt header files.
 
 --- Swift/QtUI/ChatList/ChatListDelegate.cpp.orig	2011-04-22 21:07:47.000000000 +0000
 +++ Swift/QtUI/ChatList/ChatListDelegate.cpp
