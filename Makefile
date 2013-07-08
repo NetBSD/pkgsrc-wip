@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5367 2013/07/07 15:10:36 othyro Exp $
+# $Id: Makefile,v 1.5368 2013/07/08 06:50:42 makoto Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -192,6 +192,7 @@ SUBDIR+=	avida2
 SUBDIR+=	avifile-devel
 SUBDIR+=	avr-binutils
 SUBDIR+=	avr-gcc
+SUBDIR+=	avr-gdb
 SUBDIR+=	avr-libc
 SUBDIR+=	awflwm
 SUBDIR+=	axe
@@ -1656,8 +1657,8 @@ SUBDIR+=	mozldap
 SUBDIR+=	mozplugger
 SUBDIR+=	mp3chop
 SUBDIR+=	mpb
-SUBDIR+=	mpc-el
 SUBDIR+=	mpb-openmpi
+SUBDIR+=	mpc-el
 SUBDIR+=	mpg123-0.65
 SUBDIR+=	mpg123-nightly
 SUBDIR+=	mpgedit
@@ -1701,8 +1702,8 @@ SUBDIR+=	mupen64-plugin-input
 SUBDIR+=	mupen64-plugin-rsp
 SUBDIR+=	mupen64-plugin-sound
 SUBDIR+=	mupen64-plugin-video
-SUBDIR+=	mupen64plus-extraplugins
 SUBDIR+=	mupen64plus
+SUBDIR+=	mupen64plus-extraplugins
 SUBDIR+=	muscle-cflexplugin
 SUBDIR+=	muscle-mcardplugin
 SUBDIR+=	muscle-pam
