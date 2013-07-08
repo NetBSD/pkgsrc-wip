@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2012/09/24 18:26:51 asau Exp $
+# $NetBSD: Makefile,v 1.10 2013/07/08 05:10:00 makoto Exp $
 
 DISTNAME=	callweaver-1.2.1
 PKGREVISION=	2
@@ -135,6 +135,6 @@ PKGCONFIG_OVERRIDE+=    sqlite3-embedded/sqlite.pc.in
 .include "../../audio/speex/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
-.include "../../wip/spandsp/buildlink3.mk"
+.include "../../comms/spandsp/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
