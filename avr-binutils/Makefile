@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2013/07/07 01:24:47 makoto Exp $
+# $NetBSD: Makefile,v 1.9 2013/07/09 04:42:29 makoto Exp $
 
 DISTNAME=		binutils-2.23.2
 PKGNAME=		${DISTNAME:S/^/avr-/}
@@ -44,16 +44,19 @@ post-install:
 	${LIBTOOL} --mode install ${INSTALL_DATA} libbfd.la ${DESTDIR}${PREFIX}/avr/lib;	\
 	${INSTALL_DATA} bfd.h ${DESTDIR}${PREFIX}/avr/include;	\
 	)
-	# Rename to avoid conflict to native and other cross assemble.
-	# But this file is compiled natively, not usefull, but mark as necessary at least
-	(cd ${WRKSRC}/libiberty;				\
-	${MV} ${DESTDIR}${PREFIX}/lib/libiberty.a		\
-	      ${DESTDIR}${PREFIX}/avr/lib/libiberty.a		\
-	)
+	# Rename to avoid conflict to native and other cross assembler.
+	# and clang differs its path so, (the same as h8300-elf-binutils).
+	(cd ${DESTDIR}${PREFIX};				\
+	for d in ${MACHINE_ARCH}/libiberty.a libiberty.a;	\
+	  do if [ -f lib/$$d ]; then				\
+		${MV}	lib/$$d	 avr/lib/libiberty.a;		\
+		break;						\
+	     fi;						\
+	  done;	)
 	# emulator/simulavr wants following header files
-	(cd ${WRKSRC}/include; 					\
-	for f in ansidecl.h symcat.h; do  \
-	${INSTALL_DATA} $$f ${DESTDIR}${PREFIX}/avr/include;	\
+	(cd ${WRKSRC}/include;					\
+	for f in ansidecl.h symcat.h; do			\
+	  ${INSTALL_DATA} $$f ${DESTDIR}${PREFIX}/avr/include;	\
 	done;	\
 	)
 .include "../../mk/bsd.pkg.mk"
