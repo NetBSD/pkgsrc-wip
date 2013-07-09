@@ -1,0 +1,24 @@
+$NetBSD: patch-html_Makefile.in,v 1.1 2013/07/09 14:10:19 noud4 Exp $
+
+stear html creation.
+
+--- html/Makefile.in.orig	2013-07-05 18:52:29.000000000 +0000
++++ html/Makefile.in
+@@ -247,7 +247,7 @@ top_build_prefix = @top_build_prefix@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+ HelpHtmlrootdir = $(docdir)
+-HelpHtmldir = $(htmldir)
++HelpHtmldir = $(htmldir)/html
+ HelpHtmlimgdir = $(HelpHtmldir)/img
+ HelpHtmldivdir = $(HelpHtmldir)/div
+ HelpHtmlimagesdir = $(HelpHtmldir)/images
+@@ -801,7 +801,7 @@ uninstall-am: uninstall-HelpHtmlDATA uni
+ install-data-hook:
+ 	if test ! -L $(DESTDIR)$(prefix)/share/httrack/html ; then \
+ 		( cd $(DESTDIR)$(prefix)/share/httrack \
+-			&& $(LN_S) $(htmldir) html \
++			&& $(LN_S) $(htmldir)/html html \
+ 		) \
+ 	fi
+ 

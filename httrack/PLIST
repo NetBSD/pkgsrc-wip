@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2013/05/10 07:57:09 ahp-nils Exp $
+@comment $NetBSD: PLIST,v 1.12 2013/07/09 14:10:19 noud4 Exp $
 bin/htsserver
 bin/httrack
 bin/proxytrack
@@ -144,6 +144,7 @@ share/doc/httrack/html/step9_opt7.html
 share/doc/httrack/html/step9_opt8.html
 share/doc/httrack/html/step9_opt9.html
 share/doc/httrack/httrack-doc.html
+share/httrack/html
 share/httrack/lang.def
 share/httrack/lang.indexes
 share/httrack/lang/Bulgarian.txt
