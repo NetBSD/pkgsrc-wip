@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.10 2013/07/09 14:10:19 noud4 Exp $
+$NetBSD: distinfo,v 1.11 2013/07/09 14:18:12 noud4 Exp $
 
 SHA1 (httrack-3.47.21.tar.gz) = 2ba3da7784bcd67ff98ff09c419cfb700c97ba5b
 RMD160 (httrack-3.47.21.tar.gz) = 50438d75c1b9e52c2ec282f7381d3d00cec319e8
 Size (httrack-3.47.21.tar.gz) = 1777738 bytes
 SHA1 (patch-html_Makefile.in) = 6c332ff784b40e50f3de432f5df6e43fcaa37650
-SHA1 (patch-src_webhttrack) = a9ba839da59c7b6320c54f3ca6e4bd80328ad287
+SHA1 (patch-src_webhttrack) = e9b19c122b710f36004432fae8ba810843526c36
