@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2013/06/01 09:48:45 makoto Exp $
+# $NetBSD: Makefile,v 1.21 2013/07/10 13:09:20 makoto Exp $
 
 DISTNAME=		tqsl-114-1
 # 1.14 instead of 114 may be better (?)
@@ -31,11 +31,11 @@ SUBST_SED.x11r7=	-e 's,:/usr/X11R7/lib,,'
 ##                     v
 ## /usr/pkg/lib:/usr/pkgsrc/wip/trustedQSL/work/tqsl-114/src
 
-#SUBST_CLASSES+=		swaprpath
-#SUBST_STAGE.swaprpath=	post-build
-#SUBST_FILES.swaprpath=	apps/cmake_install.cmake
-#SUBST_MESSAGE.swaprpath= Swap SRC and LIB of OLD_RPATH in RPATH_CHANGE
-#SUBST_SED.swaprpath=	-e '/OLD_RPATH/s,${PREFIX}/lib:${WRKSRC}/src,${WRKSRC}/src${PREFIX}/lib',
+SUBST_CLASSES+=		swaprpath
+SUBST_STAGE.swaprpath=	post-build
+SUBST_FILES.swaprpath=	apps/cmake_install.cmake
+SUBST_MESSAGE.swaprpath= Swap SRC and LIB of OLD_RPATH in RPATH_CHANGE
+SUBST_SED.swaprpath=	-e '/OLD_RPATH/s,${WRKSRC}/src:${PREFIX}/lib:',${PREFIX}/lib:${WRKSRC}/src,
 
 
 SUBST_CLASSES+=		rpath-link
@@ -45,11 +45,11 @@ SUBST_MESSAGE.rpath-link=	Truely experimental and interim fix for RPATH-LINK
 SUBST_SED.rpath-link=	-e '/OLD_RPATH/s,::::::::::::,,'
 SUBST_SED.rpath-link+=	-e '/NEW_RPATH/s,:${PREFIX}/lib,,'
 
-SUBST_CLASSES+=		lastcolon
-SUBST_STAGE.lastcolon=	post-build
-SUBST_FILES.lastcolon=	apps/cmake_install.cmake
-SUBST_MESSAGE.lastcolon=	Removing the very last colon from OLD_RPATH in RPATH_CHANGE
-SUBST_SED.lastcolon=	-e '/OLD_RPATH/s,${WRKSRC}/src:,${WRKSRC}/src,'
+#SUBST_CLASSES+=		lastcolon
+#SUBST_STAGE.lastcolon=	post-build
+#SUBST_FILES.lastcolon=	apps/cmake_install.cmake
+#SUBST_MESSAGE.lastcolon=	Removing the very last colon from OLD_RPATH in RPATH_CHANGE
+#SUBST_SED.lastcolon=	-e '/OLD_RPATH/s,${WRKSRC}/src:,${WRKSRC}/src,'
 
 # There is an unresolved build failure, where -R for /usr/pkg/lib does
 # not precede /usr/X11R7/lib, and on a netbsd-5 system with base xorg,
