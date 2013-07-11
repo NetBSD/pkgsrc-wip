@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5368 2013/07/08 06:50:42 makoto Exp $
+# $Id: Makefile,v 1.5369 2013/07/11 19:35:35 christtrekker Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -3239,6 +3239,7 @@ SUBDIR+=	ukncbtl
 SUBDIR+=	umix
 SUBDIR+=	umurmur
 SUBDIR+=	unagi
+SUBDIR+=	unarchiver-clt
 SUBDIR+=	undo-tree
 SUBDIR+=	unix2tcp
 SUBDIR+=	unmo3
