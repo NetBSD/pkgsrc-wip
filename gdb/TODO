@@ -9,9 +9,6 @@ TODO
   as done by the gdb 7.3 in NetBSD src ?
 - patch-opcodes_configure
   (This reverts to 7.5.1, why this is necessary is unknown now)
-- (1) A PATH of libiberty.a differs clang to gcc
-  (2) libiberty.a may conflict to other toolchain
-  (3) Currently not installed (why ?)
 
 DONE
 - NetBSD/amd64 6.1_RC1 and 6.99.19 OK Tested with gcc/gfortran 4.8.0

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2013/07/04 15:51:10 makoto Exp $
+# $NetBSD: Makefile,v 1.8 2013/07/11 05:55:37 makoto Exp $
 #
 
 DISTNAME=	gdb-7.6
@@ -23,6 +23,8 @@ TEST_TARGET=		check
 INFO_FILES=		yes
 CONFIGURE_ENV+=		CONFIG_LDFLAGS=${LDFLAGS:M*:Q}
 
+AUTO_MKDIRS=		yes
+
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "SunOS"
@@ -38,7 +40,6 @@ MAKE_ENV+= gdb_cv_struct_lwp=yes
 
 .elif ${OPSYS} == "Linux"
 USE_TOOLS+=		aclocal autoheader autoconf
-
 pre-configure:
 	${RUN} cd ${WRKSRC}/gdb/gdbserver &&				\
 	aclocal && autoheader && autoconf
@@ -67,14 +68,16 @@ post-install:
 .endif
 #
 # PATH of libiberty.a differs between clang and gcc: (and conflicts to other toolchain)
-	for d in ${MACHINE_ARCH}/libiberty.a libiberty.a; do \
-		if [ -f ${DESTDIR}${PREFIX}/lib/$$d ]; then \
-			${MV} ${DESTDIR}${PREFIX}/lib/$$d \
-			      ${DESTDIR}${PREFIX}/lib/libiberty_gdb.a; \
-		break; \
-		fi; \
-	done
+# Rename to avoid conflict to native and other toolchain
+# and clang differs its path so, (the same as avr-binutils).
 
+	(cd ${DESTDIR}${PREFIX};				\
+	for d in ${MACHINE_ARCH}/libiberty.a libiberty.a;	\
+	  do if [ -f lib/$$d ]; then				\
+		${MV}	lib/$$d	 lib/gdb/libiberty.a;		\
+		break;						\
+	     fi;						\
+	  done;	)
 
 .include "../../mk/termcap.buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
