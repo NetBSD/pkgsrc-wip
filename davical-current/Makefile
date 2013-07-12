@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2012/11/22 12:13:19 hfath Exp $
+# $NetBSD: Makefile,v 1.2 2013/07/12 20:18:10 hfath Exp $
 #
 
 DISTNAME=	davical-${DAVICAL_VERSION}
@@ -39,7 +39,7 @@ INSTALLATION_DIRS=	${DOCDIR} ${EGDIR}/config
 DEPENDS+=	${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}>=5.2:../../www/ap-php
 DEPENDS+=	${PHP_PKG_PREFIX}-pgsql>=4.3.1:../../databases/php-pgsql
 DEPENDS+=	${PHP_PKG_PREFIX}-pdo_pgsql>=${PHP_BASE_VERS}:../../databases/php-pdo_pgsql
-DEPENDS+=	${PHP_PKG_PREFIX}-libawl>=0.53:../../devel/php-libawl
+DEPENDS+=	${PHP_PKG_PREFIX}-libawl>=0.53:../../wip/php-libawl-git
 DEPENDS+=	${PHP_PKG_PREFIX}-calendar>=5.3.18:../../time/php-calendar
 DEPENDS+=	${PHP_PKG_PREFIX}-curl>=5.3.18:../../www/php-curl
 DEPENDS+=	p5-YAML>=0.71:../../textproc/p5-YAML
@@ -68,7 +68,8 @@ REPLACE_PERL=		dba/update-davical-database
 REPLACE_INTERPRETER+=	php
 REPLACE.php.old=	.*php
 REPLACE.php.new=	${PREFIX}/bin/php
-REPLACE_FILES.php=	scripts/cron-sync-ldap.php
+REPLACE_FILES.php=	scripts/archive-old-events.php
+REPLACE_FILES.php+=	scripts/cron-sync-ldap.php
 REPLACE_FILES.php+=	scripts/export_calendar.php
 REPLACE_FILES.php+=	scripts/load_calendar.php
 REPLACE_FILES.php+=	scripts/refresh-alarms.php
@@ -135,6 +136,6 @@ do-install:
 
 .include "../../wip/mk/git-package.mk"
 .include "../../mk/pgsql.buildlink3.mk"
-.include "../../devel/php-libawl/Makefile.common"
+.include "../../wip/php-libawl-git/Makefile.common"
 .include "../../mk/apache.mk"
 .include "../../mk/bsd.pkg.mk"

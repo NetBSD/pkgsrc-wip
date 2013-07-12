@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2012/11/22 12:13:19 hfath Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/07/12 20:18:10 hfath Exp $
 share/davical/dba/appuser_permissions.txt
 share/davical/dba/base-data.sql
 share/davical/dba/better_perms.sql
@@ -172,6 +172,7 @@ share/davical/po/ru.po
 share/davical/po/ru.values
 share/davical/po/sv.po
 share/davical/po/sv.values
+share/davical/scripts/archive-old-events.php
 share/davical/scripts/build-always.sh
 share/davical/scripts/cron-sync-ldap.php
 share/davical/scripts/export_calendar.php
