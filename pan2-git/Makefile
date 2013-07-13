@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2013/07/04 19:52:11 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2013/07/13 10:27:20 rhialto Exp $
 
 DISTNAME=		pan2-git-2
 CATEGORIES=		news
@@ -45,7 +45,7 @@ CONFIGURE_ARGS+=		--with-gtk3
 LIBS+=			-lcompat
 .endif
 
-BUILD_DEPENDS+=		gnome-common>=3.6nb2:../../devel/gnome-common
+BUILD_DEPENDS+=		gnome-common>=3.6.0nb1:../../devel/gnome-common
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
