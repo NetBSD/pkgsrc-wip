@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2013/07/13 12:59:23 genolopolis Exp $
+# $NetBSD: Makefile,v 1.5 2013/07/13 17:27:01 genolopolis Exp $
 #
 
 DISTNAME=	stone_soup-0.12.2-nodeps
@@ -36,14 +36,16 @@ REPLACE_PERL+=	util/checkwhite
 #SUBST_FILES.fix-paths=	source/Makefile
 #SUBST_SED.fix-paths=	-e 's,"/usr/local,"${PREFIX},g'
 
-PKGCONFIG_OVERRIDE+=	source/contrib/pcre/libpcre.pc.in
-PKGCONFIG_OVERRIDE+=	source/contrib/pcre/libpcreposix.pc.in
-PKGCONFIG_OVERRIDE+=	source/contrib/pcre/libpcrecpp.pc.in
-PKGCONFIG_OVERRIDE+=	source/contrib/libpng/libpng.pc.in
-PKGCONFIG_OVERRIDE+=	source/contrib/libpng/scripts/libpng.pc.in
-PKGCONFIG_OVERRIDE+=	source/contrib/sdl/sdl.pc.in
-PKGCONFIG_OVERRIDE+=	source/contrib/sdl-image/SDL_image.pc.in
+#PKGCONFIG_OVERRIDE+=	source/contrib/pcre/libpcre.pc.in
+#PKGCONFIG_OVERRIDE+=	source/contrib/pcre/libpcreposix.pc.in
+#PKGCONFIG_OVERRIDE+=	source/contrib/pcre/libpcrecpp.pc.in
+#PKGCONFIG_OVERRIDE+=	source/contrib/libpng/libpng.pc.in
+#PKGCONFIG_OVERRIDE+=	source/contrib/libpng/scripts/libpng.pc.in
+#PKGCONFIG_OVERRIDE+=	source/contrib/sdl/sdl.pc.in
+#PKGCONFIG_OVERRIDE+=	source/contrib/sdl-image/SDL_image.pc.in
 
 .include "../../lang/lua/buildlink3.mk"
+.include "../../databases/sqlite3/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../devel/ncursesw/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
