@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2013/06/11 11:11:47 thomasklausner Exp $
-include/jansson.h
-include/jansson_config.h
-lib/libjansson.la
-lib/pkgconfig/jansson.pc
