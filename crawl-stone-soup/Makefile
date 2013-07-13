@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2013/01/24 01:19:54 othyro Exp $
+# $NetBSD: Makefile,v 1.4 2013/07/13 12:59:23 genolopolis Exp $
 #
 
-DISTNAME=	stone_soup-0.11.1
+DISTNAME=	stone_soup-0.12.2-nodeps
+PKGNAME=	dungeon-crawl-stone-soup
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=crawl-ref/}
 EXTRACT_SUFX=	.tar.xz
-WRKSRC=		${WRKDIR}/${DISTNAME}/source
+WRKSRC=		${WRKDIR}/${DISTNAME:S/-nodeps//}/source
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://crawl.develz.org/wordpress/
@@ -17,11 +18,11 @@ USE_TOOLS+=	gmake
 USE_TOOLS+=	perl
 USE_LANGUAGES=	c c++
 BUILD_MAKE_FLAGS+=	prefix=${PREFIX}
-BUILD_MAKE_FLAGS+=	savedir='~'
+BUILD_MAKE_FLAGS+=	SAVEDIR='~/.crawl'
 BUILD_MAKE_FLAGS+=	V=y
 BUILD_MAKE_FLAGS+=	DATADIR=${PREFIX}/share/${PKGNAME}
 INSTALL_MAKE_FLAGS+=	prefix=${PREFIX}
-INSTALL_MAKE_FLAGS+=	savedir='~'
+INSTALL_MAKE_FLAGS+=	SAVEDIR='~/.crawl'
 INSTALL_MAKE_FLAGS+=	V=y
 INSTALL_MAKE_FLAGS+=	DATADIR=${PREFIX}/share/${PKGNAME}
 
