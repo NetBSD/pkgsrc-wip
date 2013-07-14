@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/07/14 12:15:55 noud4 Exp $
+
+SHA1 (pear/PHP_TokenStream-1.1.5.tgz) = f53a806078fb20e453103dfcbc1160e780e331e4
+RMD160 (pear/PHP_TokenStream-1.1.5.tgz) = f33d72d3aa16b922892b48b0c83f9cea617f4c3a
+Size (pear/PHP_TokenStream-1.1.5.tgz) = 9859 bytes
