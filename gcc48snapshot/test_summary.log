@@ -1,5 +1,5 @@
 cat <<'EOF' |
-LAST_UPDATED: Obtained from SVN: branches/gcc-4_8-branch revision 200079
+LAST_UPDATED: Obtained from SVN: branches/gcc-4_8-branch revision 200914
 
 Native configuration is x86_64--netbsd
 
@@ -12,8 +12,6 @@ UNRESOLVED: g++.dg/cdce3.C -std=gnu++98 compilation failed to produce executable
 FAIL: g++.dg/cdce3.C -std=gnu++11 (test for excess errors)
 UNRESOLVED: g++.dg/cdce3.C -std=gnu++11 compilation failed to produce executable
 FAIL: g++.dg/cpp0x/udlit-general.C execution test
-FAIL: g++.dg/ext/utf8-1.C (test for excess errors)
-UNRESOLVED: g++.dg/ext/utf8-1.C compilation failed to produce executable
 FAIL: g++.old-deja/g++.eh/badalloc1.C -std=c++98 execution test
 FAIL: g++.old-deja/g++.eh/badalloc1.C -std=c++11 execution test
 FAIL: g++.old-deja/g++.law/profile1.C -std=gnu++98 (test for excess errors)
@@ -21,12 +19,12 @@ FAIL: g++.old-deja/g++.law/profile1.C -std=gnu++11 (test for excess errors)
 
 		=== g++ Summary ===
 
-# of expected passes		51708
-# of unexpected failures	8
+# of expected passes		51818
+# of unexpected failures	7
 # of expected failures		290
-# of unresolved testcases	3
-# of unsupported tests		855
-/usr/pkgsrc/wip/gcc48snapshot/work/build/gcc/testsuite/g++/../../xg++  version 4.8.2 20130613 (prerelease) (GCC) 
+# of unresolved testcases	2
+# of unsupported tests		876
+/usr/pkgsrc/wip/gcc48snapshot/work/build/gcc/testsuite/g++/../../xg++  version 4.8.2 20130711 (prerelease) (GCC) 
 
 		=== gcc tests ===
 
@@ -54,13 +52,99 @@ FAIL: gcc.dg/nest.c (test for excess errors)
 FAIL: gcc.dg/nested-func-4.c (test for excess errors)
 FAIL: gcc.dg/pr32450.c (test for excess errors)
 FAIL: gcc.dg/pr43643.c (test for excess errors)
-FAIL: gcc.dg/ucnid-9.c (test for excess errors)
-UNRESOLVED: gcc.dg/ucnid-9.c compilation failed to produce executable
 FAIL: gcc.dg/utf-array-short-wchar.c  (test for errors, line 39)
 FAIL: gcc.dg/utf-array-short-wchar.c  (test for errors, line 41)
 FAIL: gcc.dg/utf-array-short-wchar.c (test for excess errors)
-FAIL: gcc.dg/utf8-1.c (test for excess errors)
-UNRESOLVED: gcc.dg/utf8-1.c compilation failed to produce executable
+XPASS: gcc.dg/guality/example.c  -O0  execution test
+XPASS: gcc.dg/guality/example.c  -O2  execution test
+XPASS: gcc.dg/guality/example.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+XPASS: gcc.dg/guality/guality.c  -O0  execution test
+XPASS: gcc.dg/guality/guality.c  -O1  execution test
+XPASS: gcc.dg/guality/guality.c  -O2  execution test
+XPASS: gcc.dg/guality/guality.c  -O3 -fomit-frame-pointer  execution test
+XPASS: gcc.dg/guality/guality.c  -O3 -g  execution test
+XPASS: gcc.dg/guality/guality.c  -Os  execution test
+XPASS: gcc.dg/guality/guality.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+XPASS: gcc.dg/guality/guality.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+FAIL: gcc.dg/guality/inline-params.c  -O1  execution test
+XPASS: gcc.dg/guality/inline-params.c  -O2  execution test
+XPASS: gcc.dg/guality/inline-params.c  -O3 -fomit-frame-pointer  execution test
+XPASS: gcc.dg/guality/inline-params.c  -O3 -g  execution test
+XPASS: gcc.dg/guality/inline-params.c  -Os  execution test
+XPASS: gcc.dg/guality/inline-params.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+XPASS: gcc.dg/guality/pr41353-1.c  -O0  line 28 j == 28 + 37
+XPASS: gcc.dg/guality/pr41353-1.c  -O1  line 28 j == 28 + 37
+XPASS: gcc.dg/guality/pr41353-1.c  -O2  line 28 j == 28 + 37
+XPASS: gcc.dg/guality/pr41353-1.c  -O3 -fomit-frame-pointer  line 28 j == 28 + 37
+XPASS: gcc.dg/guality/pr41353-1.c  -O3 -g  line 28 j == 28 + 37
+XPASS: gcc.dg/guality/pr41353-1.c  -Os  line 28 j == 28 + 37
+XPASS: gcc.dg/guality/pr41353-1.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 28 j == 28 + 37
+XPASS: gcc.dg/guality/pr41353-1.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 28 j == 28 + 37
+XPASS: gcc.dg/guality/pr41447-1.c  -O0  execution test
+XPASS: gcc.dg/guality/pr41447-1.c  -O1  execution test
+XPASS: gcc.dg/guality/pr41447-1.c  -O2  execution test
+XPASS: gcc.dg/guality/pr41447-1.c  -O3 -fomit-frame-pointer  execution test
+XPASS: gcc.dg/guality/pr41447-1.c  -O3 -g  execution test
+XPASS: gcc.dg/guality/pr41447-1.c  -Os  execution test
+XPASS: gcc.dg/guality/pr41447-1.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+XPASS: gcc.dg/guality/pr41447-1.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
+XPASS: gcc.dg/guality/pr41616-1.c  -O0  execution test
+XPASS: gcc.dg/guality/pr41616-1.c  -O1  execution test
+XPASS: gcc.dg/guality/pr41616-1.c  -O2  execution test
+XPASS: gcc.dg/guality/pr41616-1.c  -O3 -fomit-frame-pointer  execution test
+XPASS: gcc.dg/guality/pr41616-1.c  -O3 -g  execution test
+XPASS: gcc.dg/guality/pr41616-1.c  -Os  execution test
+XPASS: gcc.dg/guality/pr41616-1.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
+FAIL: gcc.dg/guality/pr43051-1.c  -O3 -fomit-frame-pointer -funroll-loops  line 39 c == &a[0]
+FAIL: gcc.dg/guality/pr43051-1.c  -O3 -fomit-frame-pointer -funroll-all-loops -finline-functions  line 39 c == &a[0]
+FAIL: gcc.dg/guality/pr54200.c  -Os  line 20 z == 3
+FAIL: gcc.dg/guality/pr54519-1.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 20 y == 25
+FAIL: gcc.dg/guality/pr54519-1.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 20 z == 6
+FAIL: gcc.dg/guality/pr54519-1.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 23 y == 117
+FAIL: gcc.dg/guality/pr54519-1.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 23 z == 8
+FAIL: gcc.dg/guality/pr54519-1.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 20 y == 25
+FAIL: gcc.dg/guality/pr54519-1.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 20 z == 6
+FAIL: gcc.dg/guality/pr54519-2.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 17 y == 25
+FAIL: gcc.dg/guality/pr54519-2.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 17 y == 25
+FAIL: gcc.dg/guality/pr54519-3.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 20 z == 6
+FAIL: gcc.dg/guality/pr54519-3.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 23 z == 8
+FAIL: gcc.dg/guality/pr54519-4.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 17 y == 25
+FAIL: gcc.dg/guality/pr54519-5.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 17 y == 25
+FAIL: gcc.dg/guality/pr54519-5.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 17 y == 25
+FAIL: gcc.dg/guality/pr54693-2.c  -Os  line 21 x == 10 - i
+FAIL: gcc.dg/guality/pr54693-2.c  -Os  line 21 y == 20 - 2 * i
+FAIL: gcc.dg/guality/vla-1.c  -O0  line 17 sizeof (a) == 6
+FAIL: gcc.dg/guality/vla-1.c  -O0  line 24 sizeof (a) == 17 * sizeof (short)
+FAIL: gcc.dg/guality/vla-1.c  -O1  line 17 sizeof (a) == 6
+FAIL: gcc.dg/guality/vla-1.c  -O1  line 24 sizeof (a) == 17 * sizeof (short)
+FAIL: gcc.dg/guality/vla-1.c  -O2  line 17 sizeof (a) == 6
+FAIL: gcc.dg/guality/vla-1.c  -O2  line 24 sizeof (a) == 17 * sizeof (short)
+FAIL: gcc.dg/guality/vla-1.c  -O3 -fomit-frame-pointer  line 17 sizeof (a) == 6
+FAIL: gcc.dg/guality/vla-1.c  -O3 -fomit-frame-pointer  line 24 sizeof (a) == 17 * sizeof (short)
+FAIL: gcc.dg/guality/vla-1.c  -O3 -g  line 17 sizeof (a) == 6
+FAIL: gcc.dg/guality/vla-1.c  -O3 -g  line 24 sizeof (a) == 17 * sizeof (short)
+FAIL: gcc.dg/guality/vla-1.c  -Os  line 17 sizeof (a) == 6
+FAIL: gcc.dg/guality/vla-1.c  -Os  line 24 sizeof (a) == 17 * sizeof (short)
+FAIL: gcc.dg/guality/vla-1.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 17 sizeof (a) == 6
+FAIL: gcc.dg/guality/vla-1.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 24 sizeof (a) == 17 * sizeof (short)
+FAIL: gcc.dg/guality/vla-1.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 17 sizeof (a) == 6
+FAIL: gcc.dg/guality/vla-1.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 24 sizeof (a) == 17 * sizeof (short)
+FAIL: gcc.dg/guality/vla-2.c  -O0  line 16 sizeof (a) == 5 * sizeof (int)
+FAIL: gcc.dg/guality/vla-2.c  -O0  line 25 sizeof (a) == 6 * sizeof (int)
+FAIL: gcc.dg/guality/vla-2.c  -O1  line 16 sizeof (a) == 5 * sizeof (int)
+FAIL: gcc.dg/guality/vla-2.c  -O1  line 25 sizeof (a) == 6 * sizeof (int)
+FAIL: gcc.dg/guality/vla-2.c  -O2  line 16 sizeof (a) == 5 * sizeof (int)
+FAIL: gcc.dg/guality/vla-2.c  -O2  line 25 sizeof (a) == 6 * sizeof (int)
+FAIL: gcc.dg/guality/vla-2.c  -O3 -fomit-frame-pointer  line 16 sizeof (a) == 5 * sizeof (int)
+FAIL: gcc.dg/guality/vla-2.c  -O3 -fomit-frame-pointer  line 25 sizeof (a) == 6 * sizeof (int)
+FAIL: gcc.dg/guality/vla-2.c  -O3 -g  line 16 sizeof (a) == 5 * sizeof (int)
+FAIL: gcc.dg/guality/vla-2.c  -O3 -g  line 25 sizeof (a) == 6 * sizeof (int)
+FAIL: gcc.dg/guality/vla-2.c  -Os  line 16 sizeof (a) == 5 * sizeof (int)
+FAIL: gcc.dg/guality/vla-2.c  -Os  line 25 sizeof (a) == 6 * sizeof (int)
+FAIL: gcc.dg/guality/vla-2.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 16 sizeof (a) == 5 * sizeof (int)
+FAIL: gcc.dg/guality/vla-2.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  line 25 sizeof (a) == 6 * sizeof (int)
+FAIL: gcc.dg/guality/vla-2.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 16 sizeof (a) == 5 * sizeof (int)
+FAIL: gcc.dg/guality/vla-2.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  line 25 sizeof (a) == 6 * sizeof (int)
 FAIL: gcc.dg/torture/builtin-convert-1.c  -O1  (test for excess errors)
 FAIL: gcc.dg/torture/builtin-convert-1.c  -O2  (test for excess errors)
 FAIL: gcc.dg/torture/builtin-convert-1.c  -O3 -fomit-frame-pointer  (test for excess errors)
@@ -168,12 +252,13 @@ FAIL: gcc.target/i386/vcvtps2ph-3.c execution test
 
 		=== gcc Summary ===
 
-# of expected passes		91204
-# of unexpected failures	113
-# of expected failures		265
-# of unresolved testcases	20
-# of unsupported tests		1676
-/usr/pkgsrc/wip/gcc48snapshot/work/build/gcc/xgcc  version 4.8.2 20130613 (prerelease) (GCC) 
+# of expected passes		94171
+# of unexpected failures	162
+# of unexpected successes	39
+# of expected failures		274
+# of unresolved testcases	18
+# of unsupported tests		1707
+/usr/pkgsrc/wip/gcc48snapshot/work/build/gcc/xgcc  version 4.8.2 20130711 (prerelease) (GCC) 
 
 		=== gfortran tests ===
 
@@ -183,11 +268,11 @@ FAIL: gfortran.dg/nint_2.f90  -O0  execution test
 
 		=== gfortran Summary ===
 
-# of expected passes		43255
+# of expected passes		43266
 # of unexpected failures	1
 # of expected failures		56
-# of unsupported tests		251
-/usr/pkgsrc/wip/gcc48snapshot/work/build/gcc/testsuite/gfortran/../../gfortran  version 4.8.2 20130613 (prerelease) (GCC) 
+# of unsupported tests		242
+/usr/pkgsrc/wip/gcc48snapshot/work/build/gcc/testsuite/gfortran/../../gfortran  version 4.8.2 20130711 (prerelease) (GCC) 
 
 		=== obj-c++ tests ===
 
@@ -199,7 +284,7 @@ Running target unix
 # of expected passes		1442
 # of expected failures		10
 # of unsupported tests		86
-/usr/pkgsrc/wip/gcc48snapshot/work/build/gcc/testsuite/obj-c++/../../xg++  version 4.8.2 20130613 (prerelease) (GCC) 
+/usr/pkgsrc/wip/gcc48snapshot/work/build/gcc/testsuite/obj-c++/../../xg++  version 4.8.2 20130711 (prerelease) (GCC) 
 
 		=== objc tests ===
 
@@ -215,7 +300,7 @@ FAIL: objc.dg/proto-lossage-4.m -fgnu-runtime (test for excess errors)
 # of unexpected failures	3
 # of expected failures		6
 # of unsupported tests		74
-/usr/pkgsrc/wip/gcc48snapshot/work/build/gcc/xgcc  version 4.8.2 20130613 (prerelease) (GCC) 
+/usr/pkgsrc/wip/gcc48snapshot/work/build/gcc/xgcc  version 4.8.2 20130711 (prerelease) (GCC) 
 
 		=== boehm-gc tests ===
 
@@ -254,7 +339,7 @@ Running target unix
 
 Running target unix
 WARNING: program timed out.
-FAIL: libgomp.graphite/force-parallel-6.c execution test
+FAIL: libgomp.fortran/lib1.f90  -O3 -g  execution test
 
 		=== libgomp Summary ===
 
@@ -1145,17 +1230,17 @@ UNRESOLVED: tr1/8_c_compatibility/complex/50880.cc compilation failed to produce
 
 		=== libstdc++ Summary ===
 
-# of expected passes		8134
+# of expected passes		8150
 # of unexpected failures	6
 # of expected failures		44
 # of unresolved testcases	2
-# of unsupported tests		665
+# of unsupported tests		657
 
-Compiler version: 4.8.2 20130613 (prerelease) (GCC) 
+Compiler version: 4.8.2 20130711 (prerelease) (GCC) 
 Platform: x86_64--netbsd
 configure flags: --enable-languages='c obj-c++ objc java fortran c++' --enable-shared --enable-long-long --with-local-prefix=/usr/pkg/gcc48snapshot --enable-libssp --enable-threads=posix --with-boot-ldflags='-static-libstdc++ -static-libgcc -Wl,-R/usr/pkg/lib ' --with-gnu-ld --with-ld=/usr/bin/ld --with-gnu-as --with-as=/usr/bin/as --enable-nls --with-libiconv-prefix=/usr --with-gmp=/usr/pkg --with-mpc=/usr/pkg --with-mpfr=/usr/pkg --with-cloog=/usr/pkg --enable-cloog-backend=isl --with-ecj-jar=/usr/pkgsrc/distfiles/ecj-4.5.jar --enable-java-home --with-os-directory=netbsd --with-arch-directory=amd64 --with-jvm-root-dir=/usr/pkg/java/gcc48snapshot --with-java-home=/usr/pkg/java/gcc48snapshot --with-system-zlib --enable-__cxa_atexit --with-gxx-include-dir=/usr/pkg/gcc48snapshot/include/c++/ --prefix=/usr/pkg/gcc48snapshot --build=x86_64--netbsd --host=x86_64--netbsd --infodir=/usr/pkg/gcc48snapshot/info --mandir=/usr/pkg/gcc48snapshot/man
 EOF
-Mail -s "Results for 4.8.2 20130613 (prerelease) (GCC) testsuite on x86_64--netbsd" gcc-testresults@gcc.gnu.org &&
+Mail -s "Results for 4.8.2 20130711 (prerelease) (GCC) testsuite on x86_64--netbsd" gcc-testresults@gcc.gnu.org &&
 mv /usr/pkgsrc/wip/gcc48snapshot/work/build/./gcc/testsuite/g++/g++.sum /usr/pkgsrc/wip/gcc48snapshot/work/build/./gcc/testsuite/g++/g++.sum.sent &&
 mv /usr/pkgsrc/wip/gcc48snapshot/work/build/./gcc/testsuite/gcc/gcc.sum /usr/pkgsrc/wip/gcc48snapshot/work/build/./gcc/testsuite/gcc/gcc.sum.sent &&
 mv /usr/pkgsrc/wip/gcc48snapshot/work/build/./gcc/testsuite/gfortran/gfortran.sum /usr/pkgsrc/wip/gcc48snapshot/work/build/./gcc/testsuite/gfortran/gfortran.sum.sent &&
