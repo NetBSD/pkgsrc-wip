@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/07/14 12:36:14 noud4 Exp $
+
+SHA1 (pear/phpcpd-1.4.1.tgz) = 5f15f1cacff22d34201156aaebc19fa2c55518bf
+RMD160 (pear/phpcpd-1.4.1.tgz) = a81c9112b2aa5568a518f553ae99b22046f2cfd4
+Size (pear/phpcpd-1.4.1.tgz) = 10262 bytes
