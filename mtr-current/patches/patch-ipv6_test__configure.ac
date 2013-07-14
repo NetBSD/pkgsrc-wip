@@ -1,0 +1,35 @@
+$NetBSD: patch-ipv6_test__configure.ac,v 1.1 2013/07/14 15:54:58 yvs4sf Exp $
+
+check if system supports ipv6
+
+--- configure.ac.orig	2013-07-14 18:10:29.916475500 +0300
++++ configure.ac	2013-07-14 18:23:08.489475003 +0300
+@@ -135,8 +135,26 @@
+ USES_IPV6=
+ AC_CHECK_FUNC(getaddrinfo,
+ [if test "$WANTS_IPV6" = "yes"; then
+-	AC_DEFINE([ENABLE_IPV6], [], [Define to enable IPv6])
+-	USES_IPV6=yes
++	AC_MSG_CHECKING([for IPv6 support])
++	AC_CACHE_VAL(ac_cv_ipv6,
++		AC_TRY_RUN([
++#include <sys/types.h>
++#include <sys/socket.h>
++/* we can actually allocate an IPv6 socket */
++main() {
++	int resfd6 = socket(AF_INET6, SOCK_DGRAM, 0);
++	return (resfd6 != -1 ? 0 : 1);
++}			],
++			ac_cv_ipv6=yes,
++			ac_cv_ipv6=no,
++			ac_cv_ipv6=no
++		)
++	)
++	AC_MSG_RESULT($ac_cv_ipv6)
++	if test $ac_cv_ipv6 = yes ; then
++		AC_DEFINE([ENABLE_IPV6], [], [Define if system supports IPV6])
++		USES_IPV6=yes
++	fi
+ fi])
+ 
+ AC_DEFUN([NEED_RES_STATE_EXT_TEST_SRC], [

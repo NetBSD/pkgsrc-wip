@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.4 2013/07/06 16:28:36 yvs4sf Exp $
+$NetBSD: distinfo,v 1.5 2013/07/14 15:54:58 yvs4sf Exp $
 
 SHA1 (mtr-1aa1097.tar.gz) = cb458f20fe97e4b07321340401ddf72ec813fb01
 RMD160 (mtr-1aa1097.tar.gz) = 5b071d26069f11c053d0e18b5cfd46ed3686392f
@@ -8,4 +8,5 @@ SHA1 (patch-extended_ipinfo_support__asn.h) = 97dfea0d0790b8452c93c52a4beba6b139
 SHA1 (patch-extended_ipinfo_support__mtr.c) = 3cec057c1f93fea6e83518f725d0c7bb09dead84
 SHA1 (patch-extended_ipinfo_support__report.c) = b1df760f5efb19e271e3c9a2085ac20de977a8e0
 SHA1 (patch-extended_ipinfo_support__select.c) = 5322047934752f82b8d04aac1f29ea08f4ab9567
+SHA1 (patch-ipv6_test__configure.ac) = d62580137b0244daae6faad76acd49e9ec6a6f76
 SHA1 (patch-missed_short_options__mtr.c) = c3e2c42218ce21a36bad78edda776809af6b70b0
