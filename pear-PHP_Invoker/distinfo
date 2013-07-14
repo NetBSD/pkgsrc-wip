@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/07/14 12:18:56 noud4 Exp $
+
+SHA1 (pear/PHP_Invoker-1.1.2.tgz) = f0c49776c4d83e3fa5fe3c38f5a6ef5e80c649b3
+RMD160 (pear/PHP_Invoker-1.1.2.tgz) = 25e3ea61109782dd468ac6ce3b9bd32735cfd2b9
+Size (pear/PHP_Invoker-1.1.2.tgz) = 3705 bytes

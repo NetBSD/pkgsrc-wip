@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5385 2013/07/14 12:17:12 noud4 Exp $
+# $Id: Makefile,v 1.5386 2013/07/14 12:20:06 noud4 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2154,6 +2154,7 @@ SUBDIR+=	pear-Math_BigInteger
 SUBDIR+=	pear-Net_URL2
 SUBDIR+=	pear-PHP_CodeSniffer
 SUBDIR+=	pear-PHP_Depend
+SUBDIR+=	pear-PHP_Invoker
 SUBDIR+=	pear-PHP_PMD
 SUBDIR+=	pear-PHP_Timer
 SUBDIR+=	pear-PHP_TokenStream
