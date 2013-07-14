@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5391 2013/07/14 12:37:26 noud4 Exp $
+# $Id: Makefile,v 1.5392 2013/07/14 12:41:39 noud4 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2176,6 +2176,7 @@ SUBDIR+=	pear-channel-symfony
 SUBDIR+=	pear-channel-theseer
 SUBDIR+=	pear-fDOMDocument
 SUBDIR+=	pear-phpcpd
+SUBDIR+=	pear-phpdcd
 SUBDIR+=	pelican
 SUBDIR+=	pessulus
 SUBDIR+=	petsc
