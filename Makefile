@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5386 2013/07/14 12:20:06 noud4 Exp $
+# $Id: Makefile,v 1.5387 2013/07/14 12:22:46 noud4 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2117,6 +2117,7 @@ SUBDIR+=	pdsh
 SUBDIR+=	pear-Base
 SUBDIR+=	pear-ConsoleTools
 SUBDIR+=	pear-DB_DataObject
+SUBDIR+=	pear-File_Iterator
 SUBDIR+=	pear-Finder
 SUBDIR+=	pear-HTML_Table
 SUBDIR+=	pear-HTTP_Client
