@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.3 2012/01/03 12:42:51 othyro Exp $
+$NetBSD: patch-aa,v 1.4 2013/07/14 15:54:37 othyro Exp $
 
 Defines INADDR_NONE, which is needed on Solaris.
 
---- src/eXutils.c.orig	2011-01-18 22:45:03.000000000 +0100
-+++ src/eXutils.c	2011-01-18 22:45:45.000000000 +0100
-@@ -536,6 +536,10 @@
+--- src/eXutils.c.orig	2012-11-26 10:04:37.000000000 +0000
++++ src/eXutils.c
+@@ -542,6 +542,10 @@ _eXosip_guess_ip_for_via (struct eXosip_
  
  #include <stdio.h>
  
@@ -12,6 +12,6 @@ Defines INADDR_NONE, which is needed on Solaris.
 +#define INADDR_NONE	((unsigned long) -1)	/* needed on Solaris */
 +#endif
 +
- static int _eXosip_default_gateway_ipv4(char *address, int size);
+ static int _eXosip_default_gateway_ipv4 (struct eXosip_t *excontext, char *address, int size);
  
- static int _eXosip_default_gateway_ipv6(char *address, int size);
+ static int _eXosip_default_gateway_ipv6 (struct eXosip_t *excontext, char *address, int size);

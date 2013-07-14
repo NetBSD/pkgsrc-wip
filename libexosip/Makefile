@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2012/10/03 09:10:38 asau Exp $
+# $NetBSD: Makefile,v 1.12 2013/07/14 15:54:36 othyro Exp $
 
-DISTNAME=	libeXosip2-3.6.0
+DISTNAME=	libeXosip2-4.0.0
 CATEGORIES=	devel net
 MASTER_SITES=	http://download.savannah.nongnu.org/releases/exosip/
 
@@ -12,9 +12,12 @@ LICENSE=	gnu-gpl-v2
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 USE_FEATURES+=		getopt_long
+USE_TOOLS+=	pkg-config
 
 LIBS.SunOS+=		-lsocket -lnsl
 
 .include "../../devel/libosip/buildlink3.mk"
+.include "../../net/libcares/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
