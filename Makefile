@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5370 2013/07/13 10:39:27 thomasklausner Exp $
+# $Id: Makefile,v 1.5371 2013/07/14 10:22:58 kristerw Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2958,6 +2958,7 @@ SUBDIR+=	sim-qt
 SUBDIR+=	simpa
 SUBDIR+=	simple-scan
 SUBDIR+=	simplec
+SUBDIR+=	simulavr
 SUBDIR+=	singular
 SUBDIR+=	sipbomber
 SUBDIR+=	sipp
