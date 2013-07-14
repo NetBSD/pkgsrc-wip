@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5371 2013/07/14 10:22:58 kristerw Exp $
+# $Id: Makefile,v 1.5372 2013/07/14 11:17:34 noud4 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2150,8 +2150,14 @@ SUBDIR+=	pear-Horde_Util
 SUBDIR+=	pear-Math_BigInteger
 SUBDIR+=	pear-Net_URL2
 SUBDIR+=	pear-XML_Parser
+SUBDIR+=	pear-channel-cake
+SUBDIR+=	pear-channel-ezc
 SUBDIR+=	pear-channel-horde
+SUBDIR+=	pear-channel-pdepend
+SUBDIR+=	pear-channel-phpmd
 SUBDIR+=	pear-channel-phpunit
+SUBDIR+=	pear-channel-symfony
+SUBDIR+=	pear-channel-theseer
 SUBDIR+=	pelican
 SUBDIR+=	pessulus
 SUBDIR+=	petsc
