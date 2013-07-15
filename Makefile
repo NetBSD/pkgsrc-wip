@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5395 2013/07/15 20:15:42 thomasklausner Exp $
+# $Id: Makefile,v 1.5396 2013/07/15 20:27:49 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -267,6 +267,7 @@ SUBDIR+=	cacti-plugin-tools
 SUBDIR+=	cacti-plugin-weathermap
 SUBDIR+=	cacti-spine
 SUBDIR+=	cairo-dock
+SUBDIR+=	cairo-dock-plugins
 SUBDIR+=	cairo-java
 SUBDIR+=	calcurse
 SUBDIR+=	calligra
@@ -1419,6 +1420,7 @@ SUBDIR+=	libgzstream
 SUBDIR+=	libharu
 SUBDIR+=	libhttpd
 SUBDIR+=	libifstat
+SUBDIR+=	libindicator
 SUBDIR+=	libinotify
 SUBDIR+=	libinstpatch
 SUBDIR+=	libipctdata
