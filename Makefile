@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5394 2013/07/14 12:48:32 noud4 Exp $
+# $Id: Makefile,v 1.5395 2013/07/15 20:15:42 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -15,7 +15,6 @@ SUBDIR+=	GSCommander
 SUBDIR+=	GoogleEarth
 SUBDIR+=	InfoNES
 SUBDIR+=	LabPlot
-SUBDIR+=	LuaJIT
 SUBDIR+=	Mesa
 SUBDIR+=	MesaLib
 SUBDIR+=	MoleInvasion
@@ -267,6 +266,7 @@ SUBDIR+=	cacti-plugin-thold
 SUBDIR+=	cacti-plugin-tools
 SUBDIR+=	cacti-plugin-weathermap
 SUBDIR+=	cacti-spine
+SUBDIR+=	cairo-dock
 SUBDIR+=	cairo-java
 SUBDIR+=	calcurse
 SUBDIR+=	calligra
@@ -2167,7 +2167,7 @@ SUBDIR+=	pear-Text_Template
 SUBDIR+=	pear-Version
 SUBDIR+=	pear-XML_Parser
 SUBDIR+=	pear-Yaml
-SUBDIR+=	pear-channel-cake
+SUBDIR+=	pear-channel-cakephp
 SUBDIR+=	pear-channel-ezc
 SUBDIR+=	pear-channel-horde
 SUBDIR+=	pear-channel-pdepend
