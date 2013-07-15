@@ -1,2 +1,1 @@
 switchview from the QT version dumps core upon execution.
-configure can't detect avahi and patching ${WRKSRC}/configure does nothing.

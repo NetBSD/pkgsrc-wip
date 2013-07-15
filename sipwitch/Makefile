@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2013/05/01 20:22:44 kristerw Exp $
+# $NetBSD: Makefile,v 1.5 2013/07/15 02:22:55 othyro Exp $
 #
 
-DISTNAME=	sipwitch-1.2.4
+DISTNAME=	sipwitch-1.6.1
 CATEGORIES=	net
 MASTER_SITES=	http://ftp.gnu.org/gnu/sipwitch/
 
@@ -16,17 +16,20 @@ USE_LANGUAGES=	c c++
 
 PKGCONFIG_OVERRIDE+=	libsipwitch.pc.in
 
-PLIST_VARS=		qt
-
 .include "options.mk"
 
-SUBST_CLASSES+=		libdir
-SUBST_STAGE.libdir=	post-configure
-SUBST_MESSAGE.libdir=	Fixing libdir path.
-SUBST_FILES.libdir=	cmake_install.cmake
-SUBST_SED.libdir=	-e 's,lib64,lib,g'
+SUBST_CLASSES+=		files
+SUBST_STAGE.files=	post-configure
+SUBST_MESSAGE.files=	Fixing paths and permissions.
+SUBST_FILES.files=	cmake_install.cmake server/cmake_install.cmake
+SUBST_SED.files=	-e 's,lib64,lib,g'
+SUBST_SED.files+=	-e 's|SETUID|SETUID OWNER_READ OWNER_EXECUTE GROUP_READ GROUP_EXECUTE WORLD_READ WORLD_EXECUTE|1'
 
-.include "../../sysutils/libnotify/buildlink3.mk"
+SPECIAL_PERMS+=		bin/sippasswd ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 4555
+
+.include "../../wip/libexosip/buildlink3.mk"
+.include "../../sysutils/libnotify07/buildlink3.mk"
 .include "../../net/avahi/buildlink3.mk"
+BUILDLINK_ABI_DEPENDS.ucommon+=	ucommon>=6.0.0
 .include "../../devel/ucommon/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
