@@ -1,0 +1,17 @@
+@comment $NetBSD: PLIST,v 1.1 2013/07/15 20:26:25 thomasklausner Exp $
+include/libindicator3-0.4/libindicator/indicator-desktop-shortcuts.h
+include/libindicator3-0.4/libindicator/indicator-image-helper.h
+include/libindicator3-0.4/libindicator/indicator-object.h
+include/libindicator3-0.4/libindicator/indicator-service-manager.h
+include/libindicator3-0.4/libindicator/indicator-service.h
+include/libindicator3-0.4/libindicator/indicator.h
+lib/libdummy-indicator-blank.la
+lib/libdummy-indicator-entry-func.la
+lib/libdummy-indicator-null.la
+lib/libdummy-indicator-signaler.la
+lib/libdummy-indicator-simple.la
+lib/libdummy-indicator-visible.la
+lib/libindicator3.la
+lib/pkgconfig/indicator3-0.4.pc
+libexec/indicator-loader3
+share/libindicator/80indicator-debugging
