@@ -1,12 +1,11 @@
-$NetBSD: distinfo,v 1.6 2013/07/14 18:29:03 yvs4sf Exp $
+$NetBSD: distinfo,v 1.7 2013/07/16 14:27:29 yvs4sf Exp $
 
-SHA1 (mtr-6d75a95.tar.gz) = 50f34dcdc7853c1bd95bc835f4b40131bbd99db4
-RMD160 (mtr-6d75a95.tar.gz) = 7e80063ba53ce049bf970c11bbcf6ac7b14ace7b
-Size (mtr-6d75a95.tar.gz) = 82042 bytes
+SHA1 (mtr-cd19508.tar.gz) = 9afb592d1b35d5cc12f475525b67d2e1935c3d07
+RMD160 (mtr-cd19508.tar.gz) = 447b808b796604170f38c57dd467a365bc648bd5
+Size (mtr-cd19508.tar.gz) = 82262 bytes
 SHA1 (patch-extended_ipinfo_support__asn.c) = ee0529d22e16a922cb5b9c92a451bf68bec52e63
 SHA1 (patch-extended_ipinfo_support__asn.h) = 97dfea0d0790b8452c93c52a4beba6b139c8389d
 SHA1 (patch-extended_ipinfo_support__mtr.c) = 3cec057c1f93fea6e83518f725d0c7bb09dead84
 SHA1 (patch-extended_ipinfo_support__report.c) = b1df760f5efb19e271e3c9a2085ac20de977a8e0
 SHA1 (patch-extended_ipinfo_support__select.c) = 5322047934752f82b8d04aac1f29ea08f4ab9567
-SHA1 (patch-ipv6_test__configure.ac) = d62580137b0244daae6faad76acd49e9ec6a6f76
 SHA1 (patch-missed_short_options__mtr.c) = c3e2c42218ce21a36bad78edda776809af6b70b0
