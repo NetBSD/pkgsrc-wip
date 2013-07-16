@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2013/07/15 02:22:55 othyro Exp $
+# $NetBSD: Makefile,v 1.6 2013/07/16 02:17:22 othyro Exp $
 #
 
 DISTNAME=	sipwitch-1.6.1
@@ -27,7 +27,7 @@ SUBST_SED.files+=	-e 's|SETUID|SETUID OWNER_READ OWNER_EXECUTE GROUP_READ GROUP_
 
 SPECIAL_PERMS+=		bin/sippasswd ${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 4555
 
-.include "../../wip/libexosip/buildlink3.mk"
+.include "../../net/libexosip/buildlink3.mk"
 .include "../../sysutils/libnotify07/buildlink3.mk"
 .include "../../net/avahi/buildlink3.mk"
 BUILDLINK_ABI_DEPENDS.ucommon+=	ucommon>=6.0.0

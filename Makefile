@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5396 2013/07/15 20:27:49 thomasklausner Exp $
+# $Id: Makefile,v 1.5397 2013/07/16 02:17:21 othyro Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1390,7 +1390,6 @@ SUBDIR+=	libecc
 SUBDIR+=	libee
 SUBDIR+=	libepc
 SUBDIR+=	libestr
-SUBDIR+=	libexosip
 SUBDIR+=	libfm
 SUBDIR+=	libfplll
 SUBDIR+=	libfs
