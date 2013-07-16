@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2012/09/29 00:50:35 asau Exp $
+# $NetBSD: Makefile,v 1.3 2013/07/16 21:26:31 shattered Exp $
 #
 
-DISTNAME=	gitg-0.0.8
+DISTNAME=	gitg-0.2.6
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gitg/0.0/}
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gitg/0.2/}
+EXTRACT_SUFX=	.tar.xz
 
 MAINTAINER=	shattered@NetBSD.org
 HOMEPAGE=	http://trac.novowork.com/gitg/
@@ -19,9 +19,10 @@ GCONF_SCHEMAS+=		data/gitg.schemas
 PKGCONFIG_OVERRIDE+=	libgitg-1.0.pc.in
 USE_PKGLOCALEDIR=	yes
 
-.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../devel/GConf/schemas.mk"
 .include "../../graphics/gnome-icon-theme/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
-.include "../../x11/gtksourceview2/buildlink3.mk"
+#include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../sysutils/gsettings-desktop-schemas/buildlink3.mk"
+.include "../../x11/gtk3/buildlink3.mk"
+.include "../../x11/gtksourceview3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
