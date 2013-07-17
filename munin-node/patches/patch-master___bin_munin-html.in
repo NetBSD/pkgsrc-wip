@@ -1,0 +1,12 @@
+$NetBSD: patch-master___bin_munin-html.in,v 1.1 2013/07/17 12:04:04 fhajny Exp $
+
+Set encoding to keep pod2man happy.
+--- master/_bin/munin-html.in.orig	Tue Oct  2 22:46:50 2012
++++ master/_bin/munin-html.in	Wed Jul 17 11:55:44 2013
+@@ -1,5 +1,6 @@
+ #!@@PERL@@
+ # -*- cperl -*-
++=encoding utf8
+ 
+ =begin comment
+ 
