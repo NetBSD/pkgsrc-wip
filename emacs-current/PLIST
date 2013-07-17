@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.128 2013/06/24 15:11:00 makoto Exp $
+@comment $NetBSD: PLIST,v 1.129 2013/07/17 13:12:27 makoto Exp $
 bin/ctags
 bin/ebrowse
 bin/emacs
@@ -2028,6 +2028,8 @@ share/emacs/${PKGVERSION}/lisp/ffap.el.gz
 share/emacs/${PKGVERSION}/lisp/ffap.elc
 share/emacs/${PKGVERSION}/lisp/filecache.el.gz
 share/emacs/${PKGVERSION}/lisp/filecache.elc
+share/emacs/${PKGVERSION}/lisp/filenotify.el.gz
+share/emacs/${PKGVERSION}/lisp/filenotify.elc
 share/emacs/${PKGVERSION}/lisp/files-x.el.gz
 share/emacs/${PKGVERSION}/lisp/files-x.elc
 share/emacs/${PKGVERSION}/lisp/files.el.gz
