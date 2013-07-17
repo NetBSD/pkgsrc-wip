@@ -1,0 +1,13 @@
+$NetBSD: patch-configure,v 1.1 2013/07/17 12:52:44 obache Exp $
+
+--- configure.orig	2008-02-12 05:57:04.000000000 +0000
++++ configure
+@@ -5402,7 +5402,7 @@ sed 's/^/| /' conftest.$ac_ext >&5
+ 
+ fi
+ rm -f conftest.err conftest.$ac_objext conftest.$ac_ext
+-  if test ${has_upad128_t} == "y"; then
++  if test ${has_upad128_t} = "y"; then
+     echo "$as_me:$LINENO: result: yes" >&5
+ echo "${ECHO_T}yes" >&6
+     cat >>confdefs.h <<\_ACEOF
