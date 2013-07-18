@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2012/10/03 09:10:43 asau Exp $
+# $NetBSD: Makefile,v 1.3 2013/07/18 12:40:15 slitvinov Exp $
 #
 
-DISTNAME=	lsyncd-2.0.5
+DISTNAME=	lsyncd-2.1.5
 CATEGORIES=	net
 MASTER_SITES=	http://lsyncd.googlecode.com/files/
 
