@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2013/04/09 11:21:51 fhajny Exp $
+# $NetBSD: Makefile,v 1.18 2013/07/19 10:38:56 fhajny Exp $
 #
 
-DISTNAME=		riak-1.3.1
+DISTNAME=		riak-1.4.0
 CATEGORIES=		databases
-MASTER_SITES=		http://s3.amazonaws.com/downloads.basho.com/riak/1.3/${PKGVERSION}/
+MASTER_SITES=		http://s3.amazonaws.com/downloads.basho.com/riak/1.4/${PKGVERSION}/
 
 MAINTAINER=		filip@joyent.com
 HOMEPAGE=		http://www.basho.com/products_riak_overview.php
@@ -29,7 +29,7 @@ EXTRACT_ONLY+=		${INNOSTORE}
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
 
-.include "../../lang/erlang/Makefile.versions"
+.include "../../wip/erlang15/Makefile.versions"
 .include "Makefile.versions"
 
 BUILD_DEFS+=		VARBASE RIAK_USER RIAK_GROUP
@@ -61,10 +61,10 @@ PLIST.dtrace=		yes
 .endif
 
 SUBST_CLASSES+=		pkgsrc
-SUBST_STAGE.pkgsrc=	post-patch
+SUBST_STAGE.pkgsrc=	pre-build
 SUBST_MESSAGE.pkgsrc=	Fixing pkgsrc locations and tools
 SUBST_FILES.pkgsrc=	rel/vars.config
-SUBST_VARS.pkgsrc=	PREFIX PKG_SYSCONFDIR
+SUBST_VARS.pkgsrc=	PREFIX PKG_SYSCONFDIR PKGVERSION_NOREV
 SUBST_VARS.pkgsrc+=	RIAK_USER RIAK_DATA RIAK_LOG
 
 REPLACE_INTERPRETER+=	escript
@@ -75,6 +75,7 @@ REPLACE_FILES.escript+=	${WRKDIR}/innostore-${INNOVER}/priv/innodump
 REPLACE_FILES.escript+=	${WRKDIR}/innostore-${INNOVER}/priv/innoload
 
 CHECK_INTERPRETER_SKIP=	riak/lib/bitcask-${VERSION.bitcask}/priv/Run-eunit-loop.expect
+CHECK_INTERPRETER_SKIP+=riak/erts-${VERSION.erts}/bin/nodetool
 CHECK_INTERPRETER_SKIP+=riak/lib/riaknostic/riaknostic
 
 CHECK_PORTABILITY_SKIP+=	tests/riak_search/run_all.sh	\
@@ -100,10 +101,14 @@ post-extract:
 	  ${WRKSRC}/deps/eleveldb/c_src/
 
 do-install:
-	${MKDIR} ${WRKSRC}/package/pkgsrc
-	${INSTALL_DATA} ${FILESDIR}/Makefile ${WRKSRC}/package/pkgsrc
-	cd ${WRKSRC}/package && ${SETENV} ${INSTALL_ENV} ${MAKE_ENV}    \
-           ${MAKE_PROGRAM} ${MAKE_FLAGS} ${INSTALL_MAKE_FLAGS} package
+	${MKDIR} ${WRKSRC}/deps/node_package/priv/templates/pkgsrc
+	${INSTALL_DATA} ${FILESDIR}/Makefile \
+	  ${WRKSRC}/deps/node_package/priv/templates/pkgsrc
+	cd ${WRKSRC}/deps/node_package/priv/templates/pkgsrc && \
+	   ${SETENV} ${INSTALL_ENV} ${MAKE_ENV} \
+	   RIAK_PATH=${WRKSRC} VERSION_STRING=${PKGVERSION_NOREV} \
+           ${MAKE_PROGRAM} ${MAKE_FLAGS} ${INSTALL_MAKE_FLAGS}
 
-.include "../../lang/erlang/buildlink3.mk"
+BUILDLINK_DEPMETHOD.erlang=	build
+.include "../../wip/erlang15/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
