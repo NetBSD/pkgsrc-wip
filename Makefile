@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5397 2013/07/16 02:17:21 othyro Exp $
+# $Id: Makefile,v 1.5398 2013/07/20 17:38:26 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -582,6 +582,7 @@ SUBDIR+=	epeg
 SUBDIR+=	epsilon
 SUBDIR+=	erc
 SUBDIR+=	eric4
+SUBDIR+=	erlang15
 SUBDIR+=	es40
 SUBDIR+=	es40-firmware
 SUBDIR+=	esdl
@@ -883,6 +884,7 @@ SUBDIR+=	gwyddion
 SUBDIR+=	gxconsole
 SUBDIR+=	gxmms2
 SUBDIR+=	gyp
+SUBDIR+=	h323plus
 SUBDIR+=	h8300-elf-binutils
 SUBDIR+=	habak
 SUBDIR+=	haddock
@@ -1746,6 +1748,7 @@ SUBDIR+=	ncp
 #SUBDIR+=	ncurses-devel	# missing Makefile.common
 SUBDIR+=	neb-cd512
 SUBDIR+=	neb-hdtoolbox
+SUBDIR+=	necpp-git
 SUBDIR+=	nehe-opengl-tutorials
 SUBDIR+=	nemo
 SUBDIR+=	nestopia
