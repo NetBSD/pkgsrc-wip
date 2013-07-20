@@ -1,0 +1,4 @@
+This is a free (GPL) NEC-2 compatable electromagnetic code. It can
+both read nec2 antenna description files (like the original) and
+also be incorporated into other projects like GUI tools and automatic
+antenna optimization systems.

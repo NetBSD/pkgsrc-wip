@@ -1,0 +1,15 @@
+$NetBSD: patch-configure.in,v 1.1 2013/07/20 17:34:15 thomasklausner Exp $
+
+Fix unportable test(1) construct.
+
+--- configure.in.orig	2013-07-20 17:22:09.000000000 +0000
++++ configure.in
+@@ -21,7 +21,7 @@ AS_IF([test "x$with_bounds" != xno],
+ 		AC_SUBST([AM_CPPFLAGS], ["-DNEC_ERROR_CHECK=1"])
+ 		AC_SUBST([CXXFLAGS], ["-g3 -O0"])
+ ])
+-AS_IF([test "x$with_bounds" == xno],
++AS_IF([test "x$with_bounds" = xno],
+ [
+ 		AC_SUBST([AM_CPPFLAGS], ["-DEIGEN_NO_DEBUG"])
+ ]
