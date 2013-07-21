@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5398 2013/07/20 17:38:26 thomasklausner Exp $
+# $Id: Makefile,v 1.5399 2013/07/21 15:39:15 shattered Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -13,7 +13,6 @@ SUBDIR+=	FontManager
 SUBDIR+=	GNUMail-pgp
 SUBDIR+=	GSCommander
 SUBDIR+=	GoogleEarth
-SUBDIR+=	InfoNES
 SUBDIR+=	LabPlot
 SUBDIR+=	Mesa
 SUBDIR+=	MesaLib
