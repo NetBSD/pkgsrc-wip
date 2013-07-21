@@ -1,9 +1,0 @@
-Radiator is a highly configurable and flexible Radius server that supports
-authentication by a huge range of methods. This package provides some
-useful Perl modules to assist Radiator.
-
-This package does not contain anything by itself -- it is a
-"meta-package" that depends on other packages.  Its sole purpose is
-to require dependencies so users can install this package only and
-have all the other packages pulled in by the package dependency
-mechanism.

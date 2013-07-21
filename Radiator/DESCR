@@ -1,7 +1,0 @@
-Radiator is a highly configurable and flexible Radius server that
-supports authentication by a huge range of authentication methods such
-as Flat files, DBM files, Unix password files, SQL databases, remote
-Radius servers (proxying), external programs, NT User Manager, Active
-Directory, LDAP, PAM, iPASS, GRIC, NIS+, Tacacs+, a wide range of ISP
-billing packages such as Emerald, Platypus, Rodopi, Hawk-i,
-Interbiller98, Freeside, your legacy user database, etc.
