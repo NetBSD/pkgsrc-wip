@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2013/07/19 10:38:56 fhajny Exp $
+# $NetBSD: Makefile,v 1.19 2013/07/22 10:53:00 fhajny Exp $
 #
 
 DISTNAME=		riak-1.4.0
@@ -109,6 +109,7 @@ do-install:
 	   RIAK_PATH=${WRKSRC} VERSION_STRING=${PKGVERSION_NOREV} \
            ${MAKE_PROGRAM} ${MAKE_FLAGS} ${INSTALL_MAKE_FLAGS}
 
+.include "../../devel/ncurses/buildlink3.mk"
 BUILDLINK_DEPMETHOD.erlang=	build
 .include "../../wip/erlang15/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
