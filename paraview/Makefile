@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.9 2013/03/24 22:06:07 slitvinov Exp $
+# $NetBSD: Makefile,v 1.10 2013/07/22 12:19:55 slitvinov Exp $
 #
 
-VER=3.98.0
+VER=4.0.1
 PKGNAME=	paraview-${VER}
-#DISTNAME=	ParaView-${VER}-source
-DISTNAME=	ParaView-${VER}-src
+DISTNAME=	ParaView-v${VER}-source
 EXTRACT_SUFX=	.tgz
 CATEGORIES=	graphics
-MASTER_SITES=	http://www.paraview.org/files/v3.98/
+MASTER_SITES=	http://paraview.org/files/v4.0/
 
 MAINTAINER=	pouya@san-serriffe.org
 HOMEPAGE=	http://www.paraview.org/
@@ -45,7 +44,6 @@ CMAKE_ARGS+=			-DVTK_USE_SYSTEM_PNG=ON \
 						-DVTK_USE_SYSTEM_LIBXML2=ON \
 						-DVTK_USE_X=ON
 
-
 CMAKE_ARG_PATH= 		..
 CONFIGURE_DIRS= 		_ParaView_build
 
@@ -68,6 +66,8 @@ MAKE_ENV+=			LD_LIBRARY_PATH=${WRKSRC}/_ParaView_build/bin:${WRKSRC}/_ParaView_b
 pre-configure:
 	${MKDIR} ${WRKSRC}/_ParaView_build
 
+do-test:
+	${RUN} cd ${WRKSRC}/_ParaView_build ; ${SETENV} ${MAKE_ENV} ${MAKE} test
 
 #.include "../../mk/mpi.buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
