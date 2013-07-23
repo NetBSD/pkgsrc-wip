@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2013/07/23 16:37:56 ahp-nils Exp $
+share/cacti/plugins/aggregate/LICENSE
+share/cacti/plugins/aggregate/README
+share/cacti/plugins/aggregate/aggregate.php
+share/cacti/plugins/aggregate/aggregate_functions.php
+share/cacti/plugins/aggregate/aggregate_manual.pdf
+share/cacti/plugins/aggregate/color_html.php
+share/cacti/plugins/aggregate/color_templates.php
+share/cacti/plugins/aggregate/color_templates_items.php
+share/cacti/plugins/aggregate/setup.php
