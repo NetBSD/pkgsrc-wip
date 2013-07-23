@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5400 2013/07/21 15:41:19 shattered Exp $
+# $Id: Makefile,v 1.5401 2013/07/23 09:50:21 fhajny Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -3315,6 +3315,7 @@ SUBDIR+=	vpnc-script
 SUBDIR+=	vpnc-svn
 SUBDIR+=	vpr
 SUBDIR+=	vreng
+SUBDIR+=	wackamole
 SUBDIR+=	wang-ttf
 SUBDIR+=	wbox
 SUBDIR+=	webcleaner
