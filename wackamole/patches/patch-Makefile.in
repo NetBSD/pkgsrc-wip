@@ -1,0 +1,27 @@
+$NetBSD: patch-Makefile.in,v 1.1 2013/07/23 09:45:05 fhajny Exp $
+
+Install example config file.
+--- Makefile.in.orig	Tue Feb  6 14:48:07 2007
++++ Makefile.in	Mon Jul 22 15:17:04 2013
+@@ -8,6 +8,7 @@
+ mandir=@mandir@
+ mansubdir=@mansubdir@
+ sysconfdir=@sysconfdir@
++egdir=@prefix@/share/examples/wackamole
+ piddir=@piddir@
+ srcdir=@srcdir@
+ top_srcdir=@top_srcdir@
+@@ -136,10 +137,10 @@
+ 	$(INSTALL) -m 0644 wackamole.8 $(DESTDIR)$(mandir)/$(mansubdir)8/wackamole.8
+ 	$(INSTALL) -m 0644 wackatrl.8 $(DESTDIR)$(mandir)/$(mansubdir)8/wackatrl.8
+ 	$(INSTALL) -m 0644 wackamole.conf.5 $(DESTDIR)$(mandir)/$(mansubdir)5/wackamole.conf.5
+-	if [ ! -d $(DESTDIR)$(sysconfdir) ]; then \
+-		$(srcdir)/mkinstalldirs $(DESTDIR)$(sysconfdir); \
++	if [ ! -d $(DESTDIR)$(egdir) ]; then \
++		$(srcdir)/mkinstalldirs $(DESTDIR)$(egdir); \
+ 	fi
+-	$(INSTALL) -m 644 wackamole.conf $(DESTDIR)$(sysconfdir)/wackamole.conf.sample
++	$(INSTALL) -m 644 wackamole.conf $(DESTDIR)$(egdir)/wackamole.conf
+ 
+ uninstallall:	uninstall
+ 	-rm -f $(DESTDIR)$(sysconfdir)/wackamole.conf.sample
