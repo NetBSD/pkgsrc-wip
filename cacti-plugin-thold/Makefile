@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2013/02/20 08:25:09 ahp-nils Exp $
+# $NetBSD: Makefile,v 1.10 2013/07/23 08:09:52 ahp-nils Exp $
 #
 
 DISTNAME=		thold-v${VERSION}
@@ -11,7 +11,7 @@ HOMEPAGE=		http://docs.cacti.net/
 COMMENT=		Treshold plugin to cacti
 LICENSE=		gnu-gpl-v2
 
-VERSION=		0.4.9-3
+VERSION=		0.5.0
 EXTRACT_SUFX=		.tgz
 
 USE_LANGUAGES=		# none

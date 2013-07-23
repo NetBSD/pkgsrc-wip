@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2013/02/18 09:47:16 ahp-nils Exp $
+@comment $NetBSD: PLIST,v 1.5 2013/07/23 08:09:52 ahp-nils Exp $
 share/cacti/plugins/thold/LICENSE
 share/cacti/plugins/thold/README
 share/cacti/plugins/thold/cli_thresholds.php
@@ -8,13 +8,13 @@ share/cacti/plugins/thold/general_header.php
 share/cacti/plugins/thold/images/disable_thold.png
 share/cacti/plugins/thold/images/edit_object.png
 share/cacti/plugins/thold/images/enable_thold.png
+share/cacti/plugins/thold/images/graph_create_thold.png
 share/cacti/plugins/thold/images/index.php
 share/cacti/plugins/thold/images/reddot.png
 share/cacti/plugins/thold/images/tab_thold.gif
 share/cacti/plugins/thold/images/tab_thold_down.gif
 share/cacti/plugins/thold/images/view_graphs.gif
 share/cacti/plugins/thold/images/view_log.gif
-share/cacti/plugins/thold/includes/.settings.php.swp
 share/cacti/plugins/thold/includes/database.php
 share/cacti/plugins/thold/includes/index.php
 share/cacti/plugins/thold/includes/polling.php
