@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5402 2013/07/23 16:40:15 ahp-nils Exp $
+# $Id: Makefile,v 1.5403 2013/07/23 17:15:52 fhajny Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -365,6 +365,7 @@ SUBDIR+=	cream
 SUBDIR+=	crm114
 SUBDIR+=	crossroads-io
 SUBDIR+=	crrcsim
+SUBDIR+=	crush-tools
 SUBDIR+=	cryptcat
 SUBDIR+=	csmith
 SUBDIR+=	csoap
