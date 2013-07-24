@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5403 2013/07/23 17:15:52 fhajny Exp $
+# $Id: Makefile,v 1.5404 2013/07/24 12:47:54 ahp-nils Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2644,6 +2644,7 @@ SUBDIR+=	py-pysal
 SUBDIR+=	py-pysb
 SUBDIR+=	py-pyslha
 SUBDIR+=	py-pysph
+SUBDIR+=	py-pysphere
 SUBDIR+=	py-pyswisseph
 SUBDIR+=	py-pythia
 SUBDIR+=	py-pythics
