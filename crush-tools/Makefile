@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/07/23 17:13:57 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2013/07/26 12:06:56 fhajny Exp $
 #
 
 DISTNAME=	crush-tools-2013-04
@@ -17,7 +17,7 @@ DEPENDS+=	p5-Getopt-Long-[0-9]*:../../devel/p5-Getopt-Long
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	gmake perl
+USE_TOOLS+=	gm4 gmake perl
 
 CFLAGS.SunOS+=	-Du_int32_t=uint32_t
 
