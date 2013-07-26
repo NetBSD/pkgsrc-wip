@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2013/01/05 12:35:24 bubuchka Exp $
+# $NetBSD: Makefile,v 1.11 2013/07/26 14:10:27 bubuchka Exp $
 
-DISTNAME=	leveldb-1.8.0
+DISTNAME=	leveldb-1.12.0
 CATEGORIES=	databases
 MASTER_SITES=	http://leveldb.googlecode.com/files/
 
@@ -16,10 +16,6 @@ BUILD_TARGET=	all leveldbutil db_bench
 
 INSTALLATION_DIRS+=	bin include/leveldb lib share/doc/leveldb
 
-# usually corresponds to leveldb version
-MAJOR=		1
-MINOR=		8
-
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == "Darwin"
@@ -27,6 +23,9 @@ SS=		dylib
 .else
 SS=		so
 .endif
+
+MAJOR=		${PKGVERSION_NOREV:R:R}
+MINOR=		${PKGVERSION_NOREV:R:E}
 
 # N.B.: leveldb Darwin support follows popular Unix .so naming convention
 SS.M=		${SS}.${MAJOR}
