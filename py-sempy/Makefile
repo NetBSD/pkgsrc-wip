@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2012/10/07 13:57:30 asau Exp $
+# $NetBSD: Makefile,v 1.3 2013/07/26 21:25:58 jihbed Exp $
 #
 
 DISTNAME=	sempy-0.0.18
@@ -9,6 +9,7 @@ MASTER_SITES=	http://pypi.python.org/packages/source/s/sempy/
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://pypi.python.org/packages/source/s/sempy/
 COMMENT=	Python implementation of the spectral element method
+LICENSE=	gnu-gpl-v2
 
 WRKSRC=		${WRKDIR}/sempy-0.0.18
 
