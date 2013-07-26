@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2013/07/26 20:30:45 jihbed Exp $
+${PYSITELIB}/mdp.py
+${PYSITELIB}/mdp.pyc
+${PYSITELIB}/mdp.pyo
