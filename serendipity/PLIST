@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2010/06/08 08:48:25 tonnerre Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/07/26 00:30:13 tonnerre Exp $
 share/doc/serendipity/CHANGED_FILES
 share/doc/serendipity/INSTALL
 share/doc/serendipity/INSTALL_EMBEDED
@@ -9,6 +9,7 @@ share/doc/serendipity/NEWS_OLD
 share/doc/serendipity/README
 share/doc/serendipity/RELEASE
 share/doc/serendipity/UPGRADE
+share/serendipity/README.markdown
 share/serendipity/bundled-libs/.current_version
 share/serendipity/bundled-libs/Cache/BUNDLE_NOTICE
 share/serendipity/bundled-libs/Cache/Lite.php
@@ -340,7 +341,6 @@ share/serendipity/htmlarea/examples/files/Extended.html
 share/serendipity/htmlarea/examples/files/custom.css
 share/serendipity/htmlarea/examples/files/dynamic.css
 share/serendipity/htmlarea/examples/files/ext_example-body.html
-share/serendipity/htmlarea/examples/files/ext_example-dest.php
 share/serendipity/htmlarea/examples/files/ext_example-menu.php
 share/serendipity/htmlarea/examples/files/full_example.css
 share/serendipity/htmlarea/examples/files/stylist.css
@@ -1331,9 +1331,11 @@ share/serendipity/include/tpl/config_personal.inc.php
 share/serendipity/include/tpl/htaccess_cgi_errordocs.tpl
 share/serendipity/include/tpl/htaccess_cgi_normal.tpl
 share/serendipity/include/tpl/htaccess_cgi_rewrite.tpl
+share/serendipity/include/tpl/htaccess_cgi_rewrite2.tpl
 share/serendipity/include/tpl/htaccess_errordocs.tpl
 share/serendipity/include/tpl/htaccess_normal.tpl
 share/serendipity/include/tpl/htaccess_rewrite.tpl
+share/serendipity/include/tpl/htaccess_rewrite2.tpl
 share/serendipity/index.php
 share/serendipity/lang/UTF-8/plugin_lang.php
 share/serendipity/lang/UTF-8/recode.php
@@ -1431,35 +1433,6 @@ share/serendipity/plugins/serendipity_event_bbcode/lang_pt_PT.inc.php
 share/serendipity/plugins/serendipity_event_bbcode/lang_tn.inc.php
 share/serendipity/plugins/serendipity_event_bbcode/lang_zh.inc.php
 share/serendipity/plugins/serendipity_event_bbcode/serendipity_event_bbcode.php
-share/serendipity/plugins/serendipity_event_browsercompatibility/UTF-8/lang_bg.inc.php
-share/serendipity/plugins/serendipity_event_browsercompatibility/UTF-8/lang_cn.inc.php
-share/serendipity/plugins/serendipity_event_browsercompatibility/UTF-8/lang_cs.inc.php
-share/serendipity/plugins/serendipity_event_browsercompatibility/UTF-8/lang_cz.inc.php
-share/serendipity/plugins/serendipity_event_browsercompatibility/UTF-8/lang_de.inc.php
-share/serendipity/plugins/serendipity_event_browsercompatibility/UTF-8/lang_es.inc.php
-share/serendipity/plugins/serendipity_event_browsercompatibility/UTF-8/lang_fr.inc.php
-share/serendipity/plugins/serendipity_event_browsercompatibility/UTF-8/lang_ja.inc.php
-share/serendipity/plugins/serendipity_event_browsercompatibility/UTF-8/lang_ko.inc.php
-share/serendipity/plugins/serendipity_event_browsercompatibility/UTF-8/lang_pl.inc.php
-share/serendipity/plugins/serendipity_event_browsercompatibility/UTF-8/lang_pt_PT.inc.php
-share/serendipity/plugins/serendipity_event_browsercompatibility/UTF-8/lang_tn.inc.php
-share/serendipity/plugins/serendipity_event_browsercompatibility/UTF-8/lang_zh.inc.php
-share/serendipity/plugins/serendipity_event_browsercompatibility/lang_bg.inc.php
-share/serendipity/plugins/serendipity_event_browsercompatibility/lang_cn.inc.php
-share/serendipity/plugins/serendipity_event_browsercompatibility/lang_cs.inc.php
-share/serendipity/plugins/serendipity_event_browsercompatibility/lang_cz.inc.php
-share/serendipity/plugins/serendipity_event_browsercompatibility/lang_de.inc.php
-share/serendipity/plugins/serendipity_event_browsercompatibility/lang_en.inc.php
-share/serendipity/plugins/serendipity_event_browsercompatibility/lang_es.inc.php
-share/serendipity/plugins/serendipity_event_browsercompatibility/lang_fr.inc.php
-share/serendipity/plugins/serendipity_event_browsercompatibility/lang_ja.inc.php
-share/serendipity/plugins/serendipity_event_browsercompatibility/lang_ko.inc.php
-share/serendipity/plugins/serendipity_event_browsercompatibility/lang_pl.inc.php
-share/serendipity/plugins/serendipity_event_browsercompatibility/lang_pt_PT.inc.php
-share/serendipity/plugins/serendipity_event_browsercompatibility/lang_tn.inc.php
-share/serendipity/plugins/serendipity_event_browsercompatibility/lang_zh.inc.php
-share/serendipity/plugins/serendipity_event_browsercompatibility/pngbehavior.htc
-share/serendipity/plugins/serendipity_event_browsercompatibility/serendipity_event_browsercompatibility.php
 share/serendipity/plugins/serendipity_event_contentrewrite/UTF-8/lang_bg.inc.php
 share/serendipity/plugins/serendipity_event_contentrewrite/UTF-8/lang_cn.inc.php
 share/serendipity/plugins/serendipity_event_contentrewrite/UTF-8/lang_cs.inc.php
@@ -1487,6 +1460,8 @@ share/serendipity/plugins/serendipity_event_contentrewrite/lang_tn.inc.php
 share/serendipity/plugins/serendipity_event_contentrewrite/lang_zh.inc.php
 share/serendipity/plugins/serendipity_event_contentrewrite/serendipity_event_contentrewrite.php
 share/serendipity/plugins/serendipity_event_creativecommons/ChangeLog
+share/serendipity/plugins/serendipity_event_creativecommons/UTF-8/documentation_cs.html
+share/serendipity/plugins/serendipity_event_creativecommons/UTF-8/documentation_cz.html
 share/serendipity/plugins/serendipity_event_creativecommons/UTF-8/lang_cn.inc.php
 share/serendipity/plugins/serendipity_event_creativecommons/UTF-8/lang_cs.inc.php
 share/serendipity/plugins/serendipity_event_creativecommons/UTF-8/lang_cz.inc.php
@@ -1499,6 +1474,8 @@ share/serendipity/plugins/serendipity_event_creativecommons/UTF-8/lang_pl.inc.ph
 share/serendipity/plugins/serendipity_event_creativecommons/UTF-8/lang_pt_PT.inc.php
 share/serendipity/plugins/serendipity_event_creativecommons/UTF-8/lang_tn.inc.php
 share/serendipity/plugins/serendipity_event_creativecommons/UTF-8/lang_zh.inc.php
+share/serendipity/plugins/serendipity_event_creativecommons/documentation_cs.html
+share/serendipity/plugins/serendipity_event_creativecommons/documentation_cz.html
 share/serendipity/plugins/serendipity_event_creativecommons/lang_cn.inc.php
 share/serendipity/plugins/serendipity_event_creativecommons/lang_cs.inc.php
 share/serendipity/plugins/serendipity_event_creativecommons/lang_cz.inc.php
@@ -1578,6 +1555,8 @@ share/serendipity/plugins/serendipity_event_entryproperties/lang_tr.inc.php
 share/serendipity/plugins/serendipity_event_entryproperties/lang_zh.inc.php
 share/serendipity/plugins/serendipity_event_entryproperties/serendipity_event_entryproperties.php
 share/serendipity/plugins/serendipity_event_karma/ChangeLog
+share/serendipity/plugins/serendipity_event_karma/UTF-8/documentation_cs.html
+share/serendipity/plugins/serendipity_event_karma/UTF-8/documentation_cz.html
 share/serendipity/plugins/serendipity_event_karma/UTF-8/lang_bg.inc.php
 share/serendipity/plugins/serendipity_event_karma/UTF-8/lang_cn.inc.php
 share/serendipity/plugins/serendipity_event_karma/UTF-8/lang_cs.inc.php
@@ -1592,6 +1571,8 @@ share/serendipity/plugins/serendipity_event_karma/UTF-8/lang_pt_PT.inc.php
 share/serendipity/plugins/serendipity_event_karma/UTF-8/lang_ru.inc.php
 share/serendipity/plugins/serendipity_event_karma/UTF-8/lang_tn.inc.php
 share/serendipity/plugins/serendipity_event_karma/UTF-8/lang_zh.inc.php
+share/serendipity/plugins/serendipity_event_karma/documentation_cs.html
+share/serendipity/plugins/serendipity_event_karma/documentation_cz.html
 share/serendipity/plugins/serendipity_event_karma/img/diamonds-yellow-green-lg.png
 share/serendipity/plugins/serendipity_event_karma/img/diamonds-yellow-green-md.png
 share/serendipity/plugins/serendipity_event_karma/img/diamonds-yellow-green-sm.png
@@ -1745,6 +1726,9 @@ share/serendipity/plugins/serendipity_event_s9ymarkup/lang_se.inc.php
 share/serendipity/plugins/serendipity_event_s9ymarkup/lang_tn.inc.php
 share/serendipity/plugins/serendipity_event_s9ymarkup/lang_zh.inc.php
 share/serendipity/plugins/serendipity_event_s9ymarkup/serendipity_event_s9ymarkup.php
+share/serendipity/plugins/serendipity_event_searchhighlight/ChangeLog
+share/serendipity/plugins/serendipity_event_searchhighlight/UTF-8/documentation_cs.html
+share/serendipity/plugins/serendipity_event_searchhighlight/UTF-8/documentation_cz.html
 share/serendipity/plugins/serendipity_event_searchhighlight/UTF-8/lang_bg.inc.php
 share/serendipity/plugins/serendipity_event_searchhighlight/UTF-8/lang_cn.inc.php
 share/serendipity/plugins/serendipity_event_searchhighlight/UTF-8/lang_cs.inc.php
@@ -1757,6 +1741,8 @@ share/serendipity/plugins/serendipity_event_searchhighlight/UTF-8/lang_ko.inc.ph
 share/serendipity/plugins/serendipity_event_searchhighlight/UTF-8/lang_pl.inc.php
 share/serendipity/plugins/serendipity_event_searchhighlight/UTF-8/lang_tn.inc.php
 share/serendipity/plugins/serendipity_event_searchhighlight/UTF-8/lang_zh.inc.php
+share/serendipity/plugins/serendipity_event_searchhighlight/documentation_cs.html
+share/serendipity/plugins/serendipity_event_searchhighlight/documentation_cz.html
 share/serendipity/plugins/serendipity_event_searchhighlight/lang_bg.inc.php
 share/serendipity/plugins/serendipity_event_searchhighlight/lang_cn.inc.php
 share/serendipity/plugins/serendipity_event_searchhighlight/lang_cs.inc.php
@@ -1866,6 +1852,8 @@ share/serendipity/plugins/serendipity_event_spartacus/lang_tn.inc.php
 share/serendipity/plugins/serendipity_event_spartacus/lang_zh.inc.php
 share/serendipity/plugins/serendipity_event_spartacus/serendipity_event_spartacus.php
 share/serendipity/plugins/serendipity_event_statistics/ChangeLog
+share/serendipity/plugins/serendipity_event_statistics/UTF-8/documentation_cs.html
+share/serendipity/plugins/serendipity_event_statistics/UTF-8/documentation_cz.html
 share/serendipity/plugins/serendipity_event_statistics/UTF-8/lang_bg.inc.php
 share/serendipity/plugins/serendipity_event_statistics/UTF-8/lang_cn.inc.php
 share/serendipity/plugins/serendipity_event_statistics/UTF-8/lang_cs.inc.php
@@ -1881,6 +1869,8 @@ share/serendipity/plugins/serendipity_event_statistics/UTF-8/lang_pl.inc.php
 share/serendipity/plugins/serendipity_event_statistics/UTF-8/lang_pt_PT.inc.php
 share/serendipity/plugins/serendipity_event_statistics/UTF-8/lang_tn.inc.php
 share/serendipity/plugins/serendipity_event_statistics/UTF-8/lang_zh.inc.php
+share/serendipity/plugins/serendipity_event_statistics/documentation_cs.html
+share/serendipity/plugins/serendipity_event_statistics/documentation_cz.html
 share/serendipity/plugins/serendipity_event_statistics/green.png
 share/serendipity/plugins/serendipity_event_statistics/lang_bg.inc.php
 share/serendipity/plugins/serendipity_event_statistics/lang_cn.inc.php
@@ -2423,6 +2413,42 @@ share/serendipity/sql/db_update_1.2-alpha3_1.2_alpha4_sqlite.sql
 share/serendipity/sql/db_update_1.5-alpha1_1.5-alpha2_mysql.sql
 share/serendipity/sql/db_update_1.5-alpha1_1.5-alpha2_postgres.sql
 share/serendipity/sql/db_update_1.5-alpha1_1.5-alpha2_sqlite.sql
+share/serendipity/templates/2k11/UTF-8/lang_cs.inc.php
+share/serendipity/templates/2k11/UTF-8/lang_cz.inc.php
+share/serendipity/templates/2k11/UTF-8/lang_de.inc.php
+share/serendipity/templates/2k11/UTF-8/lang_en.inc.php
+share/serendipity/templates/2k11/commentform.tpl
+share/serendipity/templates/2k11/comments.tpl
+share/serendipity/templates/2k11/config.inc.php
+share/serendipity/templates/2k11/content.tpl
+share/serendipity/templates/2k11/entries.tpl
+share/serendipity/templates/2k11/entries_archives.tpl
+share/serendipity/templates/2k11/entries_summary.tpl
+share/serendipity/templates/2k11/img/gradient-dblue.png
+share/serendipity/templates/2k11/img/gradient-lblue.png
+share/serendipity/templates/2k11/img/xml.gif
+share/serendipity/templates/2k11/index.tpl
+share/serendipity/templates/2k11/info.txt
+share/serendipity/templates/2k11/js/2k11.min.js
+share/serendipity/templates/2k11/js/modernizr-2.5.3.min.js
+share/serendipity/templates/2k11/lang_cs.inc.php
+share/serendipity/templates/2k11/lang_cz.inc.php
+share/serendipity/templates/2k11/lang_de.inc.php
+share/serendipity/templates/2k11/lang_en.inc.php
+share/serendipity/templates/2k11/plugin_calendar.tpl
+share/serendipity/templates/2k11/plugin_categories.tpl
+share/serendipity/templates/2k11/plugin_commentsearch_searchresults.tpl
+share/serendipity/templates/2k11/plugin_contactform.tpl
+share/serendipity/templates/2k11/plugin_findmore.tpl
+share/serendipity/templates/2k11/plugin_staticpage.tpl
+share/serendipity/templates/2k11/plugin_staticpage_searchresults.tpl
+share/serendipity/templates/2k11/plugin_staticpage_sidebar.tpl
+share/serendipity/templates/2k11/preview.png
+share/serendipity/templates/2k11/preview_fullsize.jpg
+share/serendipity/templates/2k11/preview_iframe.tpl
+share/serendipity/templates/2k11/sidebar.tpl
+share/serendipity/templates/2k11/style.css
+share/serendipity/templates/2k11/trackbacks.tpl
 share/serendipity/templates/HOWTO
 share/serendipity/templates/blue/htmlarea.css
 share/serendipity/templates/blue/info.txt
@@ -2782,6 +2808,7 @@ share/serendipity/templates/idea/info.txt
 share/serendipity/templates/idea/preview.png
 share/serendipity/templates/idea/preview_fullsize.jpg
 share/serendipity/templates/idea/style.css
+share/serendipity/templates/jquery.js
 share/serendipity/templates/kubrick/UTF-8/lang_cs.inc.php
 share/serendipity/templates/kubrick/UTF-8/lang_cz.inc.php
 share/serendipity/templates/kubrick/comments.tpl
@@ -2886,11 +2913,3 @@ share/serendipity/templates/wp/wp-layout.css
 share/serendipity/templates_c/.empty
 share/serendipity/uploads/.empty
 share/serendipity/wfwcomment.php
-@pkgdir share/serendipity/templates/mt3-chalkboard/img
-@pkgdir share/serendipity/templates/mt-rusty/img
-@pkgdir share/serendipity/templates/mt-gettysburg/img
-@pkgdir share/serendipity/templates/kubrick/img
-@pkgdir share/serendipity/templates/blue/img
-@pkgdir share/serendipity/htmlarea/plugins/SpellChecker/personal_dicts
-@pkgdir share/serendipity/htmlarea/plugins/InsertSmiley/smileys
-@pkgdir share/serendipity/htmlarea/plugins/HorizontalRule/img

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2012/10/07 16:22:56 asau Exp $
+# $NetBSD: Makefile,v 1.3 2013/07/26 00:30:13 tonnerre Exp $
 
 DISTNAME=		serendipity-${VERSION}
-VERSION=		1.5.3
+VERSION=		1.6.2
 CATEGORIES=		www
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=php-blog/}
 
