@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/07/23 09:45:05 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2013/07/26 11:58:45 fhajny Exp $
 
 DISTNAME=	wackamole-2.1.4
 CATEGORIES=	net
@@ -10,7 +10,7 @@ COMMENT=	Peer-to-peer high availability cluster
 #LICENSE=	# TODO: (see mk/license.mk)
 
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		yacc
+USE_TOOLS+=		flex yacc
 
 .include "../../mk/bsd.fast.prefs.mk"
 
