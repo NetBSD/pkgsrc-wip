@@ -1,8 +1,19 @@
-$NetBSD: patch-aa,v 1.1.1.1 2007/10/20 13:03:04 noud4 Exp $
+$NetBSD: patch-aa,v 1.2 2013/07/27 18:32:50 khorben Exp $
 
---- configure.ac.orig	2007-10-08 03:26:48.000000000 +0200
-+++ configure.ac	2007-10-20 15:15:19.000000000 +0200
-@@ -15,13 +15,6 @@
+Fix build on MacOS X (Lion)
+
+--- configure.ac.orig	2008-01-14 20:36:23.000000000 +0000
++++ configure.ac
+@@ -6,7 +6,7 @@ AC_INIT([dfu-util],[0.1])
+ AC_CONFIG_AUX_DIR(m4)
+ AM_INIT_AUTOMAKE(AC_PACKAGE_NAME, AC_PACKAGE_VERSION)
+ #AC_CONFIG_SRCDIR([src/atmel.c])
+-AM_CONFIG_HEADER([config.h])
++AC_CONFIG_HEADER([config.h])
+ AC_C_BIGENDIAN
+ 
+ AM_MAINTAINER_MODE
+@@ -16,13 +16,6 @@ AC_PROG_CC
  
  # Checks for libraries.
  
