@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.129 2013/07/17 13:12:27 makoto Exp $
+@comment $NetBSD: PLIST,v 1.130 2013/07/28 13:06:11 makoto Exp $
 bin/ctags
 bin/ebrowse
 bin/emacs
@@ -36,6 +36,7 @@ info/forms.info.gz
 info/gnus.info.gz
 info/htmlfontify.info.gz
 info/idlwave.info.gz
+info/ido.info.gz
 info/info.info.gz
 info/mairix-el.info.gz
 info/message.info.gz
