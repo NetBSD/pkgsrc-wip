@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5404 2013/07/24 12:47:54 ahp-nils Exp $
+# $Id: Makefile,v 1.5405 2013/07/29 20:15:38 szptvlfn Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -971,6 +971,7 @@ SUBDIR+=	hs-cgi
 SUBDIR+=	hs-chalkboard
 SUBDIR+=	hs-chalkboard-viewer
 SUBDIR+=	hs-chunks
+SUBDIR+=	hs-cmdargs
 SUBDIR+=	hs-collections-api
 SUBDIR+=	hs-collections-base-instances
 SUBDIR+=	hs-colorize-haskell
