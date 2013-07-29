@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2013/02/21 20:17:40 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.3 2013/07/29 19:12:52 szptvlfn Exp $
 #
 
-DISTNAME=	unordered-containers-0.2.3.0
+DISTNAME=	unordered-containers-0.2.3.1
 CATEGORIES=	devel
 LICENSE=	modified-bsd
 
