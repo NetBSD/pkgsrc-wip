@@ -1,14 +1,6 @@
-MongoDB wasn't designed in a lab. We built MongoDB from our own experiences
-building large scale, high availability, robust systems. We didn't start
-from scratch, we really tried to figure out what was broken, and tackle that.
-So the way I think about MongoDB is that if you take MySql, and change the
-data model from relational to document based, you get a lot of great features:
-embedded docs for speed, manageability, agile development with schema-less
-databases, easier horizontal scalability because joins aren't as important.
-There are lots of things that work great in relational databases: indexes,
-dynamic queries and updates to name a few, and we haven't changed much there.
-For example, the way you design your indexes in MongoDB should be exactly
-the way you do it in MySql or Oracle, you just have the option of indexing
-an embedded field.
-
--- Eliot Horowitz, 10gen CTO and Co-founder
+Mongo (from "humongous") is a high-performance, open source, schema-free,
+document-oriented database. It features: document data model with dynamic
+schemas; full, flexible index support and rich queries; auto-Sharding for
+horizontal scalability; built-in replication for high availability; text
+search; advanced security; aggregation Framework and MapReduce; large media
+storage with GridFS.
