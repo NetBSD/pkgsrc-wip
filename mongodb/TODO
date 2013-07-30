@@ -1,6 +1,2 @@
 Proper support for system v8 should be implemented,
 as soon as wip/v8 stops being a total mess.
-
-When updating the package, please consider the
-following security issues:
-- http://secunia.com/advisories/54170/
