@@ -1,0 +1,23 @@
+$NetBSD: patch-configure,v 1.1 2013/07/30 10:32:10 fhajny Exp $
+
+Make sure we pass the right location for Python.
+--- configure.orig	Fri Jul 26 19:26:05 2013
++++ configure	Fri Jul 26 19:39:15 2013
+@@ -21384,11 +21384,16 @@
+ 
+ PATH="$with_python_path"
+ 
++if test "x$PYTHON" = "x"
++then
++	PYTHON=python
++fi
++
+ if test "x$with_python" = "xyes" && test "x$with_python_prog" = "x"
+ then
+ 	{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for python" >&5
+ $as_echo_n "checking for python... " >&6; }
+-	with_python_prog="`which python 2>/dev/null`"
++	with_python_prog="`which $PYTHON 2>/dev/null`"
+ 	if test "x$with_python_prog" = "x"
+ 	then
+ 		{ $as_echo "$as_me:${as_lineno-$LINENO}: result: not found" >&5

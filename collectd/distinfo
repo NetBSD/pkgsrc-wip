@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.7 2013/06/12 13:38:54 fhajny Exp $
+$NetBSD: distinfo,v 1.8 2013/07/30 10:32:10 fhajny Exp $
 
 SHA1 (collectd-4.10.9.tar.bz2) = 0642b34a3025162e86214ce931c237a1d820a96f
 RMD160 (collectd-4.10.9.tar.bz2) = 84932b955096290673896502d875cda41b2811dc
 Size (collectd-4.10.9.tar.bz2) = 1287153 bytes
+SHA1 (patch-configure) = 237de5e6b1308ae7ebb98b13ef656574320a5980

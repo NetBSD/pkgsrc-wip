@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2013/06/12 13:38:54 fhajny Exp $
+# $NetBSD: options.mk,v 1.6 2013/07/30 10:32:10 fhajny Exp $
 #
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.collectd
@@ -284,7 +284,7 @@ CONFIGURE_ARGS+=	--disable-multimeter
 .endif
 
 .if !empty(PKG_OPTIONS:Mmysql)
-.include "../../databases/mysql5-client/buildlink3.mk"
+.include "../../mk/mysql.buildlink3.mk"
 #CONFIGURE_ARGS+=       --with-libmysql=${BUILDLINK_PREFIX.mysql-client}
 CONFIGURE_ARGS+=	--enable-mysql
 PLIST.mysql=	yes
@@ -353,7 +353,7 @@ CONFIGURE_ARGS+=	--disable-perl
 .endif
 
 .if !empty(PKG_OPTIONS:Mpostgresql)
-.include "../../databases/postgresql84-client/buildlink3.mk"
+.include "../../mk/pgsql.buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-postgresql
 PLIST.postgresql=	yes
 .else
@@ -370,6 +370,7 @@ CONFIGURE_ARGS+=	--disable-powerdns
 .if !empty(PKG_OPTIONS:Mpython)
 .include "../../lang/python/pyversion.mk"
 CONFIGURE_ARGS+=	--enable-python
+CONFIGURE_ENV+=		PYTHON=${PYTHONBIN}
 PLIST.python=	yes
 .else
 CONFIGURE_ARGS+=	--disable-python
