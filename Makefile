@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5405 2013/07/29 20:15:38 szptvlfn Exp $
+# $Id: Makefile,v 1.5406 2013/07/30 21:28:00 szptvlfn Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -897,6 +897,7 @@ SUBDIR+=	hawk
 SUBDIR+=	hawknl
 SUBDIR+=	haydar-fonts
 SUBDIR+=	haze
+SUBDIR+=	hdevtools
 SUBDIR+=	hdhomerun_config
 SUBDIR+=	hdparm
 SUBDIR+=	heimdall
