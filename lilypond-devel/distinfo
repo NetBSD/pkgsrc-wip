@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.10 2013/07/21 18:33:35 thomasklausner Exp $
+$NetBSD: distinfo,v 1.11 2013/07/31 14:44:08 thomasklausner Exp $
 
 SHA1 (lilypond-2.17.22.tar.gz) = c5433cf6ce202685fd841c97161607b9ee03229e
 RMD160 (lilypond-2.17.22.tar.gz) = 1b46e1b1b2379a847f58ec3ccbbd8a8a97843dc6
@@ -10,4 +10,5 @@ SHA1 (patch-Documentation_topdocs_INSTALL.texi) = 801ab4f9656cd551084119ec185a0e
 SHA1 (patch-Documentation_usage_lilypond-book.itely) = 51aca1efa69ff8db29989bcaa4b40ca7dbeb357a
 SHA1 (patch-ab) = a1d327ab900cca18b9306846f137e1bbcfdca945
 SHA1 (patch-configure) = b0c73d828f26fb8db895ace55a678a6d7b09db0e
+SHA1 (patch-lily_parser.yy) = 3314a19713680f4e0b1449c86d2b60c58931a49a
 SHA1 (patch-scripts_auxiliar_cg-section.sh) = c6838a358ae1ea2f8ddd0791e72eb3c25ac2019b
