@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2013/07/31 19:54:12 shattered Exp $
+
+SHA1 (spectrwm-2.3.0.tgz) = 38a4ec1f11e469e1a8bddeb2e478fe2ff6bc3fdc
+RMD160 (spectrwm-2.3.0.tgz) = e27c47765d818ffbcc5363b32bae44df68e9a872
+Size (spectrwm-2.3.0.tgz) = 109384 bytes
+SHA1 (patch-aa) = af8175417e93fca32cfe595238e45441fdfe23f2
+SHA1 (patch-ab) = ad3bed093408ff5f2e335f64ebb11ca5ae9a4bcf
+SHA1 (patch-ac) = 23faac4f7f15706be2b6c10a877782bd62ab5aea

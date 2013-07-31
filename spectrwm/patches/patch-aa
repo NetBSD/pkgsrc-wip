@@ -1,0 +1,11 @@
+$NetBSD: patch-aa,v 1.1 2013/07/31 19:54:12 shattered Exp $
+
+--- Makefile.orig	2013-05-14 16:42:15.000000000 +0600
++++ Makefile
+@@ -38,5 +38,5 @@
+ 
+ analyze: all
+ clang: all
++.include <bsd.subdir.mk>
+ .include <bsd.prog.mk>
+-.include <bsd.xorg.mk>

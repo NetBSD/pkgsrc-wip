@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2013/07/31 19:54:12 shattered Exp $
+
+--- lib/Makefile.orig	2010-01-11 21:02:08.000000000 +0000
++++ lib/Makefile
+@@ -1,5 +1,3 @@
+-.include <bsd.xconf.mk>
+-
+ PREFIX?=/usr/local
+ 
+ LIB=    swmhack
+@@ -21,1 +19,1 @@ ${DESTDIR}${PREFIX}/lib/
+ .include <bsd.lib.mk>
+-.include <bsd.xorg.mk>
