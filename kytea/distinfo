@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.3 2012/09/09 08:29:50 obache Exp $
+$NetBSD: distinfo,v 1.4 2013/08/01 01:51:25 othyro Exp $
 
-SHA1 (kytea-0.4.2.tar.gz) = d43c9712819f112e5b2077eba16926c506cf6387
-RMD160 (kytea-0.4.2.tar.gz) = 83183f3419bc4c59594acdc3846c9a48d7091b23
-Size (kytea-0.4.2.tar.gz) = 19073003 bytes
+SHA1 (kytea-0.4.6.tar.gz) = 2fb22c64a7babff26d95874877d83a9ef1f09617
+RMD160 (kytea-0.4.6.tar.gz) = c353eb5143cfaf0a3b3f310a3211adc5f4aa548a
+Size (kytea-0.4.6.tar.gz) = 19083501 bytes
 SHA1 (patch-configure) = 4c5b2ad4e794a0d4bf59db2c0cba5a8204112221
 SHA1 (patch-configure.ac) = 1a1ab825ae7623c1141621982f0750f7811bcde2
