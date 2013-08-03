@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5408 2013/08/03 07:30:49 thomasklausner Exp $
+# $Id: Makefile,v 1.5409 2013/08/03 20:45:39 kristerw Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1555,6 +1555,7 @@ SUBDIR+=	lzs-lkm
 SUBDIR+=	m4ri
 SUBDIR+=	mac-robber
 SUBDIR+=	macaulay2
+SUBDIR+=	macro11
 SUBDIR+=	magit-git
 SUBDIR+=	mago
 SUBDIR+=	mailfilter
@@ -2405,6 +2406,7 @@ SUBDIR+=	py-datarray
 SUBDIR+=	py-datatree
 SUBDIR+=	py-dbglog
 SUBDIR+=	py-dbutils
+SUBDIR+=	py-decimalpy
 SUBDIR+=	py-decoratortools
 SUBDIR+=	py-delny
 SUBDIR+=	py-descartes
@@ -2544,6 +2546,7 @@ SUBDIR+=	py-mcint
 SUBDIR+=	py-mcview
 SUBDIR+=	py-mdanalysis
 SUBDIR+=	py-mdp
+SUBDIR+=	py-mdptoolbox
 SUBDIR+=	py-memcached
 SUBDIR+=	py-metrics
 SUBDIR+=	py-mlstats
@@ -2579,6 +2582,7 @@ SUBDIR+=	py-omniORBpy
 SUBDIR+=	py-ontopy
 SUBDIR+=	py-openastro
 SUBDIR+=	py-openopt
+SUBDIR+=	py-openpyxl
 SUBDIR+=	py-opentmm
 SUBDIR+=	py-openxmllib
 SUBDIR+=	py-operators
@@ -2738,6 +2742,7 @@ SUBDIR+=	py-storm
 SUBDIR+=	py-sumatra
 SUBDIR+=	py-swarmsdk
 SUBDIR+=	py-swiginac
+SUBDIR+=	py-symath
 SUBDIR+=	py-symboltype
 SUBDIR+=	py-symeig
 SUBDIR+=	py-sympycore
