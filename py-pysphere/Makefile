@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/07/24 12:45:50 ahp-nils Exp $
+# $NetBSD: Makefile,v 1.2 2013/08/03 21:13:42 kristerw Exp $
 
 DISTNAME=	pysphere-0.1.7
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,7 +11,7 @@ HOMEPAGE=	http://pysphere.googlecode.com/
 COMMENT=	Python API for interacting with the vSphere Web Services SDK
 LICENSE=	modified-bsd
 
-PYTHON_VERSIONS_ACCEPTED=	27 26 25
+PYTHON_VERSIONS_ACCEPTED=	27 26
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"

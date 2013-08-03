@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/12/15 08:27:24 asau Exp $
+# $NetBSD: Makefile,v 1.4 2013/08/03 21:13:42 kristerw Exp $
 #
 
 DISTNAME=	AGILe-1.4.0
@@ -24,7 +24,7 @@ PKG_SUPPORTED_OPTIONS=          pyext
 .include "../../mk/bsd.options.mk"
 
 .if !empty (PKG_OPTIONS:Mpyext)
-PYTHON_VERSIONS_ACCEPTED= 32 31 27 26 25
+PYTHON_VERSIONS_ACCEPTED= 32 31 27 26
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .include "../../devel/swig/buildlink3.mk"
