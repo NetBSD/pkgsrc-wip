@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5407 2013/07/31 19:58:32 shattered Exp $
+# $Id: Makefile,v 1.5408 2013/08/03 07:30:49 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -3440,7 +3440,6 @@ SUBDIR+=	xfce48
 SUBDIR+=	xfconf
 SUBDIR+=	xfs
 SUBDIR+=	xfsinfo
-SUBDIR+=	xfwp
 SUBDIR+=	xgfe
 SUBDIR+=	xgobi
 SUBDIR+=	xhkeys1
