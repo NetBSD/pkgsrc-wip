@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5409 2013/08/03 20:45:39 kristerw Exp $
+# $Id: Makefile,v 1.5410 2013/08/03 20:46:42 kristerw Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2596,7 +2596,6 @@ SUBDIR+=	py-papy
 SUBDIR+=	py-papyon
 SUBDIR+=	py-papyros
 SUBDIR+=	py-paragram
-SUBDIR+=	py-parsing
 SUBDIR+=	py-pcapy
 SUBDIR+=	py-peak-rules
 SUBDIR+=	py-pebl
