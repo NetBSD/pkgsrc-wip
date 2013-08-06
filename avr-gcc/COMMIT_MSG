@@ -1,9 +1,24 @@
+(pkgsrc)
+Removing:
+ patches/patch-aa
+   (was not to install: install-subdir at libiberty)
+ patches/patch-ac
+   (was not to install tree-inline.o cppdefault.o for Mac OS X,
+    equivalent target does not have these files for now)
+ patches/patch-gcc_toplev.h
+   Upstream corrected the problem as:
+   -extern inline int
+   +static inline int
+
+Adding:
+ patch-gcc_config_avr_driver-avr_c
+   To fix the problem like:
+   error: non-void function 'avr_device_to_arch' should return a value [-Wreturn-type]
+ patch-libiberty_Makefile.in
+   Not install libiberty.a
+   to avoid duplication (conflict) with other cross tool-chain (mef@).
+ 
+(upstream)
 Bump 4.4.1 to 4.5.3
 For the changes from 4.4.1 to 4.5, see following page.
   http://gcc.gnu.org/gcc-4.5/changes.html
-
-(pkgsrc)
-Not to install libiberty.a to avoid conflict to others, 
-and besides natively compiled libiberty.a is not usefull for
-cross tool-chain.
-

@@ -1,8 +1,7 @@
-$NetBSD: patch-libiberty_Makefile.in,v 1.1 2013/07/04 03:45:34 makoto Exp $
+$NetBSD: patch-libiberty_Makefile.in,v 1.2 2013/08/06 06:44:51 makoto Exp $
 
-To avoid duplication (conflict) with other cross tool-chain,
-just not install libiberty.a
-(libiberty.a compiled natively may not be useful anyway (?) mef@).
+Not install libiberty.a
+to avoid duplication (conflict) with other cross tool-chain (mef@).
 
 --- libiberty/Makefile.in.orig	2010-03-02 15:09:56.000000000 +0900
 +++ libiberty/Makefile.in	2013-07-04 12:01:10.000000000 +0900
