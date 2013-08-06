@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.1 2013/06/27 06:58:49 ahp-nils Exp $
+# $NetBSD: Makefile,v 1.2 2013/08/06 06:44:01 ahp-nils Exp $
 #
 
 DISTNAME=		six-1.3.0
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=		devel
-MASTER_SITES=	http://pypi.python.org/packages/source/s/six/
+MASTER_SITES=	https://pypi.python.org/packages/source/s/six/
+FETCH_USING=	curl
 
 MAINTAINER=		ahp-nils@users.sourceforge.net
 HOMEPAGE=		http://pypi.python.org/pypi/six/
