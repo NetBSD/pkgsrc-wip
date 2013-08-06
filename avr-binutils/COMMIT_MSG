@@ -1,3 +1,14 @@
+(pkgsrc)
+patches/patch-aa
+ (was not to install libiberty) .. removed
+patches/patch-ac
+ (was not to install-recursive under opcodes) .. removed
+Makefile
+ Added installing libbfd.so libbfd.a bfd.h for simulavr
+ Install libiberty.a as avr/lib/libiberty.a
+ Install ansidecl.h and symcat.h for simulavr
+
+(upstream)
 Bump Version 2.19.1 to 2.23.2
 (From binutils-2.23.2/binutils/NEWS)
 ---------------------------
