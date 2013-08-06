@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2013/06/27 07:01:39 ahp-nils Exp $
+$NetBSD: distinfo,v 1.2 2013/08/06 14:39:51 ahp-nils Exp $
 
-SHA1 (pelican-3.2.2.tar.gz) = 8e240e9862ec5bc7c6cb6e51f9de4fc934425063
-RMD160 (pelican-3.2.2.tar.gz) = 6d543cfd8b2c14fdea42e3887e8d0dd02707622c
-Size (pelican-3.2.2.tar.gz) = 164313 bytes
+SHA1 (3.2.2.zip) = 784b00f436ad6cf71ab09924a256d6704a460605
+RMD160 (3.2.2.zip) = e81d49bffcd5d8d195d46f6e3746a4fd968b3af0
+Size (3.2.2.zip) = 744507 bytes
