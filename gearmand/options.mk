@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2013/02/21 22:25:04 jonperkin Exp $
+# $NetBSD: options.mk,v 1.3 2013/08/07 11:45:33 fhajny Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gearmand
 PKG_SUPPORTED_OPTIONS+=	dtrace memcached mysql pgsql sqlite tokyocabinet
@@ -18,7 +18,7 @@ CONFIGURE_ARGS+=	--disable-dtrace
 ### MySQL support
 ###
 .if !empty(PKG_OPTIONS:Mmysql)
-CONFIGURE_ARGS+=	--with-mysql=${MYSQL_PREFIX}/bin/mysql_config
+CONFIGURE_ARGS+=	--with-mysql=${BUILDLINK_PREFIX.mysql-client}/bin/mysql_config
 .include "../../mk/mysql.buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--with-mysql=no
