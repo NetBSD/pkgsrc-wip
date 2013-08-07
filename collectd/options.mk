@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2013/07/30 10:32:10 fhajny Exp $
+# $NetBSD: options.mk,v 1.7 2013/08/07 09:57:56 fhajny Exp $
 #
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.collectd
@@ -347,6 +347,7 @@ CONFIGURE_ARGS+=	--disable-openvpn
 .if !empty(PKG_OPTIONS:Mperl)
 .include "../../lang/perl5/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-perl
+BUILDLINK_TRANSFORM+=	rm:-fstack-protector
 PLIST.perl=	yes
 .else
 CONFIGURE_ARGS+=	--disable-perl
