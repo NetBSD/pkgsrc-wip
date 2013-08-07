@@ -1,8 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2011/06/18 11:29:24 obache Exp $
+# $NetBSD: Makefile,v 1.7 2013/08/07 08:13:31 makoto Exp $
 
 .include "../../wip/ja-freewnn-lib/Makefile.common"
 
 PKGNAME=	ja-FreeWnn-lib-1.11alpha22
+# DISTFILE now includes all patches, the same PKGNAME, almost the same binary
+# but build is different, and binary may not be exactly the same
+PKGREVISION=	1
 
 COMMENT+=	(Japanese client library)
 
