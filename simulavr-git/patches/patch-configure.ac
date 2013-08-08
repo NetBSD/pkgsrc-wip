@@ -1,0 +1,16 @@
+$NetBSD: patch-configure.ac,v 1.1 2013/08/08 05:41:39 makoto Exp $
+
+=> Checking for portability problems in extracted files
+ERROR: [check-portability.awk] => Found test ... == ...:
+
+--- configure.ac.orig	2013-08-08 09:29:35.000000000 +0900
++++ configure.ac	2013-08-08 09:29:38.000000000 +0900
+@@ -86,7 +86,7 @@ fi
+ ## this directory.
+ AC_MSG_CHECKING([XML part description files in src/fab/atmel-xml/])
+ AM_CONDITIONAL([USE_FAB], [test -f "${srcdir}/src/fab/atmel-xml/ATmega8.xml"])
+-if test X"${USE_FAB_FALSE}" == X"" ; then
++if test X"${USE_FAB_FALSE}" = X"" ; then
+    AC_MSG_RESULT([NOT available])
+ else
+    AC_MSG_RESULT([available])

@@ -1,0 +1,38 @@
+- libiberty.a and libbfd.a by avr-binutils-2.32.2 are natively compiled
+- In configuration, seeing following message with result ... no
+
+checking for gcc option to accept ISO C89... none needed
+checking for dlopen in -ldl... no
+checking whether the shell understands "+="... no
+checking for x86_64--netbsd-objdump... no
+checking for x86_64--netbsd-ar... no
+checking for x86_64--netbsd-strip... no
+checking for x86_64--netbsd-ranlib... no
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for /usr/lib/tclConfig.sh... no
+configure: WARNING: tclConfig.sh not found .. guessing
+configure: WARNING: prefered version wish not found
+configure: WARNING: prefered version tclsh not found
+
+checking bfd search- /usr/pkg/avr/x86_64--netbsd/avr in "include" and "lib"... no
+checking bfd search- /usr/pkg/avr/avr in "include" and "lib"... no
+checking bfd search- /usr/pkg/avr in "" and ""... no
+checking bfd search- /usr/pkg/avr in "bfd" and "bfd"... no
+checking bfd search- /usr/pkg/avr in "include" and "lib64"... no
+checking libiberty search- /usr/pkg/avr/x86_64--netbsd/avr in "lib"... no
+checking libiberty search- /usr/pkg/avr/avr in "lib"... no
+checking libiberty search- /usr/pkg/avr in ""... no
+checking libiberty search- /usr/pkg/avr in "lib64"... no
+ (above should be OK, before reaching correct one)
+
+checking vpi_user.h usability... no
+checking vpi_user.h presence... no
+checking for vpi_user.h... no
+checking iverilog/vpi_user.h usability... no
+checking iverilog/vpi_user.h presence... no
+checking for iverilog/vpi_user.h... no
+checking for gtkwave... no
+checking for iverilog... no
+checking for vvp... no
+build verilog modul avr.vpi = no
+
