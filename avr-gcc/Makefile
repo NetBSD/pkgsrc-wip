@@ -1,18 +1,16 @@
-# $NetBSD: Makefile,v 1.5 2013/08/08 02:42:37 makoto Exp $
+# $NetBSD: Makefile,v 1.6 2013/08/08 02:55:01 makoto Exp $
 
 DISTNAME=		gcc-4.7.3
 PKGNAME=                ${DISTNAME:S/^/avr-/}
 CATEGORIES=		cross
 MASTER_SITES=   	${MASTER_SITE_GNU:=gcc/gcc-${PKGVERSION}/}
 EXTRACT_SUFX=		.tar.bz2
-#DISTFILES=		${DISTNAME:S/-/-core-/}${EXTRACT_SUFX} \
-#			${DISTNAME:S/-/-g++-/}${EXTRACT_SUFX}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		GNU gcc-4.5 for Atmel AVR 8-bit RISC microcontrollers
 LICENSE=		gnu-gpl-v3
 
-DEPENDS+=		avr-binutils-[0-9]*:../../wip/avr-binutils
+DEPENDS+=		avr-binutils-[0-9]*:../../cross/avr-binutils
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -29,10 +27,6 @@ CONFIGURE_ARGS+=	--enable-languages=c,c++
 
 MAKE_ENV+=		MACHINE_ARCH=avr
 MAKE_ENV+=		SHELL=${CONFIG_SHELL}
-# CFLAGS_FOR_BUILD:=	${CFLAGS}
-# MAKE_ENV+=		CFLAGS_FOR_BUILD=${CFLAGS_FOR_BUILD:Q}
-# CXXFLAGS_FOR_BUILD:=	${CXXFLAGS}
-# MAKE_ENV+=		CXXFLAGS_FOR_BUILD=${CXXFLAGS_FOR_BUILD:Q}
 CFLAGS=			# empty
 CXXFLAGS=		# empty
 
