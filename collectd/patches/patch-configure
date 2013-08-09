@@ -1,9 +1,78 @@
-$NetBSD: patch-configure,v 1.1 2013/07/30 10:32:10 fhajny Exp $
+$NetBSD: patch-configure,v 1.2 2013/08/09 09:19:14 fhajny Exp $
 
 Make sure we pass the right location for Python.
---- configure.orig	Fri Jul 26 19:26:05 2013
-+++ configure	Fri Jul 26 19:39:15 2013
-@@ -21384,11 +21384,16 @@
+Remove stray m4 macro brackets.
+--- configure.orig	2013-04-08 06:26:46.000000000 +0000
++++ configure	2013-08-09 09:12:03.643497987 +0000
+@@ -16732,19 +16732,15 @@
+     cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+ 
+-       [
+ #include <sys/types.h>
+ #include <netinet/in.h>
+ #if HAVE_INTTYPES_H
+ # include <inttypes.h>
+ #endif
+-       ]
+ int
+ main ()
+ {
+-[
+           return htonll(0);
+-       ]
+   ;
+   return 0;
+ }
+@@ -19757,21 +19753,17 @@
+ 
+         cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+-[
+                             #include <stdio.h>
+                             #include <sys/types.h>
+                             #include <asm/types.h>
+                             #include <sys/socket.h>
+                             #include <linux/netlink.h>
+                             #include <linux/rtnetlink.h>
+-                            ]
+ int
+ main ()
+ {
+-[
+                                 int retval = TCA_STATS2;
+                                 return (retval);
+-                                ]
+ 
+   ;
+   return 0;
+@@ -19786,22 +19778,21 @@
+ 
+ 	cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+ /* end confdefs.h.  */
+-[#include <stdio.h>
++#include <stdio.h>
+ #include <sys/types.h>
+ #include <asm/types.h>
+ #include <sys/socket.h>
+ #include <linux/netlink.h>
+ #include <linux/rtnetlink.h>
+-]
++
+ int
+ main ()
+ {
+-[
+ int main (void)
+ {
+ 	int retval = TCA_STATS;
+ 	return (retval);
+-}]
++}
+   ;
+   return 0;
+ }
+@@ -21384,11 +21375,16 @@
  
  PATH="$with_python_path"
  
@@ -21,3 +90,12 @@ Make sure we pass the right location for Python.
  	if test "x$with_python_prog" = "x"
  	then
  		{ $as_echo "$as_me:${as_lineno-$LINENO}: result: not found" >&5
+@@ -30865,6 +30861,8 @@
+   case $ac_option in
+   # Handling of the options.
+   -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
++	: Avoid regenerating within pkgsrc
++	exit 0
+     ac_cs_recheck=: ;;
+   --version | --versio | --versi | --vers | --ver | --ve | --v | -V )
+     $as_echo "$ac_cs_version"; exit ;;
