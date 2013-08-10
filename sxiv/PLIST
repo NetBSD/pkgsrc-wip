@@ -1,3 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2012/06/10 12:38:33 leot1990 Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/08/10 14:56:23 leot1990 Exp $
 bin/sxiv
 man/man1/sxiv.1
+share/sxiv/exec/image-info
