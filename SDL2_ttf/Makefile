@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2013/06/13 11:29:08 othyro Exp $
+# $NetBSD: Makefile,v 1.2 2013/08/12 01:26:33 othyro Exp $
 
 DISTNAME=	SDL2_ttf-2.0.12
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://www.libsdl.org/tmp/SDL_ttf/release/
 EXTRACT_SUFX=	.zip
