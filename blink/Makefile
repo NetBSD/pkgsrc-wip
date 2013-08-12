@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2013/07/01 02:35:15 othyro Exp $
+# $NetBSD: Makefile,v 1.3 2013/08/12 04:08:40 othyro Exp $
 #
 
-DISTNAME=	blink-0.4.0
+DISTNAME=	blink-0.5.0
 CATEGORIES=	net
 MASTER_SITES=	http://download.ag-projects.com/BlinkQt/
 
