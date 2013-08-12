@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2013/06/10 21:47:42 othyro Exp $
+# $NetBSD: Makefile,v 1.3 2013/08/12 02:51:45 othyro Exp $
 
-DISTNAME=	yate-4.2.0-2
-PKGNAME=	${DISTNAME:S/-/client-/1:S/-2/.2/1}
-PKGREVISION=	1
+DISTNAME=	yate-4.3.0-1
+PKGNAME=	${DISTNAME:S/-/client-/1:S/-1/.1/1}
 CATEGORIES=	net
 MASTER_SITES=	http://yate.null.ro/tarballs/yate4/
 
@@ -37,6 +36,8 @@ SUBST_STAGE.moc=	post-configure
 EGDIR=			share/examples/yate
 CONF_FILES+=		${EGDIR}/accfile.conf \
 				${PKG_SYSCONFDIR}/yate/accfile.conf
+CONF_FILES+=		${EGDIR}/amrnbcodec.conf \
+				${PKG_SYSCONFDIR}/yate/amrnbcodec.conf
 CONF_FILES+=		${EGDIR}/analog.conf ${PKG_SYSCONFDIR}/yate/analog.conf
 CONF_FILES+=		${EGDIR}/cache.conf ${PKG_SYSCONFDIR}/yate/cache.conf
 CONF_FILES+=		${EGDIR}/callcounters.conf \

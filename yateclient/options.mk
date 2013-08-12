@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2013/06/10 21:47:42 othyro Exp $
+# $NetBSD: options.mk,v 1.2 2013/08/12 02:51:45 othyro Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.yateclient
 PKG_SUPPORTED_OPTIONS=	alsa doc gsm ilbc spandsp speex
@@ -16,6 +16,8 @@ PLIST_VARS+=		doc gsm spandsp speex
 BUILD_DEPENDS+=		doxygen-[0-9]*:../../devel/doxygen
 CONFIGURE_ARGS+=	--with-doxygen=yes
 PLIST.doc=		yes
+.else
+CONFIGURE_ARGS+=	--with-doxygen=no
 .endif
 
 .if !empty(PKG_OPTIONS:Mgsm)
