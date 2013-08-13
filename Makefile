@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5413 2013/08/13 23:03:41 outpaddling Exp $
+# $Id: Makefile,v 1.5414 2013/08/13 23:08:18 outpaddling Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -3260,6 +3260,7 @@ SUBDIR+=	tuxtype2
 SUBDIR+=	tvmet
 SUBDIR+=	tw_cli
 SUBDIR+=	twinkle
+SUBDIR+=	twintk
 SUBDIR+=	twitim
 SUBDIR+=	twitmail
 SUBDIR+=	twittering-mode
