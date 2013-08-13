@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5411 2013/08/08 05:42:33 makoto Exp $
+# $Id: Makefile,v 1.5412 2013/08/13 22:59:22 outpaddling Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1358,6 +1358,7 @@ SUBDIR+=	libanimal
 SUBDIR+=	libargp
 SUBDIR+=	libassa
 SUBDIR+=	libavc1394
+SUBDIR+=	libbacon
 SUBDIR+=	libbfio
 SUBDIR+=	libbrahe
 SUBDIR+=	libbs2b
