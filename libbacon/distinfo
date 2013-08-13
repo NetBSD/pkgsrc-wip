@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/08/13 22:50:21 outpaddling Exp $
+
+SHA1 (libbacon-1.2.1.tar.gz) = 23e33fb42ae0278447e7970707f1121e04c5e30e
+RMD160 (libbacon-1.2.1.tar.gz) = f7b2fdececbac505ac7ad08e79fab442d241bb62
+Size (libbacon-1.2.1.tar.gz) = 323343 bytes
