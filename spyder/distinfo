@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2013/03/05 00:02:17 jihbed Exp $
+$NetBSD: distinfo,v 1.4 2013/08/13 00:22:30 jihbed Exp $
 
-SHA1 (spyder-2.1.13.zip) = 15c66a0abce6c94d57d5cc21cbcf32cceb037bd7
-RMD160 (spyder-2.1.13.zip) = 1609f0ff6a4f0e2c4b5ae53722ca935233565adc
-Size (spyder-2.1.13.zip) = 2182796 bytes
+SHA1 (spyder-2.2.1.zip) = 4cb5901e530af84082db900b83c15fbd82641b07
+RMD160 (spyder-2.2.1.zip) = a0905ddc429aa0c245dc20e35a3f176953445aed
+Size (spyder-2.2.1.zip) = 3495448 bytes
