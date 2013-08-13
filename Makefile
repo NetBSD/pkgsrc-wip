@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5412 2013/08/13 22:59:22 outpaddling Exp $
+# $Id: Makefile,v 1.5413 2013/08/13 23:03:41 outpaddling Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1454,6 +1454,7 @@ SUBDIR+=	libowl-av
 SUBDIR+=	libpafe
 SUBDIR+=	libpano12
 SUBDIR+=	libpar2
+SUBDIR+=	libpare
 SUBDIR+=	libparsifal
 SUBDIR+=	libpcap-latest
 SUBDIR+=	libpsurface
