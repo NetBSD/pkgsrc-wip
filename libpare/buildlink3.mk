@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2013/08/13 23:02:30 outpaddling Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2013/08/14 01:33:35 outpaddling Exp $
 # XXX
 # XXX This file was created automatically using createbuildlink-3.16.
 # XXX After this file has been verified as correct, the comment lines
@@ -16,7 +16,7 @@ BUILDLINK_TREE+=	libpare
 LIBPARE_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libpare+=	libpare>=1.1.1
-BUILDLINK_PKGSRCDIR.libpare?=	../../jb-wip/libpare
+BUILDLINK_PKGSRCDIR.libpare?=	../../wip/libpare
 .endif	# LIBPARE_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-libpare

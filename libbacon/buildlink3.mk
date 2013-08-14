@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2013/08/13 22:50:21 outpaddling Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2013/08/14 01:33:35 outpaddling Exp $
 # XXX
 # XXX This file was created automatically using createbuildlink-3.16.
 # XXX After this file has been verified as correct, the comment lines
@@ -16,7 +16,7 @@ BUILDLINK_TREE+=	libbacon
 LIBBACON_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libbacon+=	libbacon>=1.2.1
-BUILDLINK_PKGSRCDIR.libbacon?=	../../jb-wip/libbacon
+BUILDLINK_PKGSRCDIR.libbacon?=	../../wip/libbacon
 .endif	# LIBBACON_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-libbacon

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2013/08/13 23:07:15 outpaddling Exp $
+# $NetBSD: Makefile,v 1.2 2013/08/14 01:33:35 outpaddling Exp $
 #
 
 DISTNAME=	twintk-0.9.3
-CATEGORIES=	jb-wip
+CATEGORIES=	devel
 MASTER_SITES=	http://personalpages.tds.net/~jwbacon/Ports/distfiles/
 
 MAINTAINER=	jwbacon@tds.net
@@ -14,5 +14,5 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 INSTALL_MAKE_FLAGS+=	PREFIX=${DESTDIR}${PREFIX}
 
-.include "../../jb-wip/libbacon/buildlink3.mk"
+.include "../../wip/libbacon/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2013/08/13 22:50:21 outpaddling Exp $
+# $NetBSD: Makefile,v 1.2 2013/08/14 01:33:35 outpaddling Exp $
 #
 
 DISTNAME=	libbacon-1.2.1
-CATEGORIES=	jb-wip
+CATEGORIES=	devel
 MASTER_SITES=	http://personalpages.tds.net/~jwbacon/Ports/distfiles/
 
 MAINTAINER=	jwbacon@tds.net

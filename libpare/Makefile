@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1 2013/08/13 23:02:30 outpaddling Exp $
+# $NetBSD: Makefile,v 1.2 2013/08/14 01:33:35 outpaddling Exp $
 #
 
 DISTNAME=	libpare-1.1.1
-CATEGORIES=	jb-wip
+CATEGORIES=	devel
 MASTER_SITES=	http://personalpages.tds.net/~jwbacon/Ports/distfiles/ \
 		http://acadix.biz/Ports/distfiles/
 
