@@ -1,12 +1,2 @@
-- libiberty.a and libbfd.a by avr-binutils-2.32.2 are natively compiled
 - In configuration, seeing following message:
   build verilog modul avr.vpi = no
-- current situation:
-
-avr-gcc -g -Os -mmcu=atmega128 -DF_CPU=4000000 -c -o main.o main.c
-main.c:8:5: error: attempt to use poisoned "SIG_OUTPUT_COMPARE2"
-gmake[2]: *** [main.o] Error 1
-gmake[2]: Leaving directory `/export/CHROOT/usr/pkgsrc/wip/simulavr/work/simulavr-1.0.0/examples/atmega128_timer'
-
-See:
-  http://savannah.nongnu.org/bugs/?35737
