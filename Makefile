@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5414 2013/08/13 23:08:18 outpaddling Exp $
+# $Id: Makefile,v 1.5415 2013/08/14 01:24:36 outpaddling Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -3333,6 +3333,7 @@ SUBDIR+=	vreng
 SUBDIR+=	wackamole
 SUBDIR+=	wang-ttf
 SUBDIR+=	wbox
+SUBDIR+=	webbrowser
 SUBDIR+=	webcleaner
 SUBDIR+=	webkit-sharp
 SUBDIR+=	weland
