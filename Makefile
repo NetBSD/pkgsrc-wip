@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5416 2013/08/14 01:27:23 outpaddling Exp $
+# $Id: Makefile,v 1.5417 2013/08/14 08:37:17 obache Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1169,7 +1169,6 @@ SUBDIR+=	i3lock
 SUBDIR+=	i3status
 SUBDIR+=	iText
 SUBDIR+=	iTextXML
-SUBDIR+=	ibus-sogoupycc
 SUBDIR+=	icecast
 SUBDIR+=	icecat
 SUBDIR+=	ices
