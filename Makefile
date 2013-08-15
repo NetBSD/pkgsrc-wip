@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5418 2013/08/14 12:51:10 leot1990 Exp $
+# $Id: Makefile,v 1.5419 2013/08/15 09:18:56 noud4 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2126,6 +2126,7 @@ SUBDIR+=	pdsh
 SUBDIR+=	pear-Base
 SUBDIR+=	pear-CakePHP_CodeSniffer
 SUBDIR+=	pear-ConsoleTools
+SUBDIR+=	pear-Crypt_Blowfish
 SUBDIR+=	pear-DB_DataObject
 SUBDIR+=	pear-File_Iterator
 SUBDIR+=	pear-Finder
