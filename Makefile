@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5421 2013/08/15 09:26:33 noud4 Exp $
+# $Id: Makefile,v 1.5422 2013/08/16 03:23:08 szptvlfn Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1074,6 +1074,7 @@ SUBDIR+=	hs-numeric-prelude
 SUBDIR+=	hs-numeric-quest
 SUBDIR+=	hs-pango
 SUBDIR+=	hs-parallel
+SUBDIR+=	hs-parallel-io
 SUBDIR+=	hs-parseargs
 SUBDIR+=	hs-parsec
 SUBDIR+=	hs-pathtype
