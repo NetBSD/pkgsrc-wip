@@ -1,17 +1,8 @@
-$NetBSD: distinfo,v 1.25 2011/11/11 03:35:50 makoto Exp $
+$NetBSD: distinfo,v 1.26 2013/08/16 11:47:35 makoto Exp $
 
-SHA1 (xorg-server-1.11.2.tar.bz2) = b4de5c599c90bd08d3122866ba68152cd59a880e
-RMD160 (xorg-server-1.11.2.tar.bz2) = cc69cfd86a5a870d1433262dd1445a8603a9266a
-Size (xorg-server-1.11.2.tar.bz2) = 4945939 bytes
-SHA1 (patch-ab) = c65457bf58b7504375b31512c743c9f1a5dcdde0
-SHA1 (patch-ac) = ab74f292949196e878458afa2e354c73f4d9fd3f
-SHA1 (patch-af) = 722d4679d3386c9a02e1c45a1aa355658ccc2908
-SHA1 (patch-ak) = df6d3b2172254e1f9d44eb40144cad5ed29a7d1d
-SHA1 (patch-al) = e1c4afc83eb7673c5208e30c9d0fc70de7aa8606
-SHA1 (patch-ba) = b758aab64fcba81ba33b7c425db6430757b2fd4b
-SHA1 (patch-bc) = f1ab56e8876ddc6bc0fe941a45ab2c7726c5cbf4
-SHA1 (patch-bi) = 52012af9c4bd2dab0e9d96cb1692a5e342737748
-SHA1 (patch-bj) = 3bea92151311028e9eeeacd441b1855a0d5f6867
-SHA1 (patch-sb) = 0129bb411da37208cafca0bf145e8e4b388dc380
-SHA1 (patch-sd) = 78fa38529b63f31b9c3e25a62c0914f8268b629d
-SHA1 (patch-se) = 22b20c734b7fcf59d75227aeb1fa703465582568
+SHA1 (xorg-server-1.12.4.tar.bz2) = 6d616874f9c7677bda08dc073c03f83e78fbc585
+RMD160 (xorg-server-1.12.4.tar.bz2) = 4907b5dc42efd6b3fb6bf9d64f1441080a6a6983
+Size (xorg-server-1.12.4.tar.bz2) = 5444761 bytes
+SHA1 (patch-configure) = 031bc0accf1dd71ed687e7aac3fcc9498cb06784
+SHA1 (patch-hw_xfree86_common_compiler.h) = 88de747715b80b22f448869ab32dce1641bcb6db
+SHA1 (patch-hw_xfree86_os-support_xf86__OSlib.h) = 7c2760509610b44915da077b22899bef9c338cc1

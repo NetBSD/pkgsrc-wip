@@ -1,6 +1,0 @@
--- Following's are to be imported
-  wip/dri
-  wip/gl 
--- Following PR to be applied
-  o x11/xproto-7.0.22 [pkg/45465]
--- Deal with http://secunia.com/advisories/47566/

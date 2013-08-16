@@ -1,12 +1,12 @@
-# $NetBSD: buildlink3.mk,v 1.8 2011/12/31 13:22:29 makoto Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2013/08/16 11:47:35 makoto Exp $
 
 BUILDLINK_TREE+=	modular-xorg-server
 
 .if !defined(MODULAR_XORG_SERVER_BUILDLINK3_MK)
 MODULAR_XORG_SERVER_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.modular-xorg-server+=	modular-xorg-server>=1.6.0
-BUILDLINK_ABI_DEPENDS.modular-xorg-server+=	modular-xorg-server>=1.6.5nb8
+BUILDLINK_API_DEPENDS.modular-xorg-server+=	modular-xorg-server>=1.12.0
+BUILDLINK_ABI_DEPENDS.modular-xorg-server+=	modular-xorg-server>=1.12.4
 BUILDLINK_PKGSRCDIR.modular-xorg-server?=	../../wip/modular-xorg-server
 
 .include "../../sysutils/libpciaccess/buildlink3.mk"
@@ -22,6 +22,7 @@ BUILDLINK_PKGSRCDIR.modular-xorg-server?=	../../wip/modular-xorg-server
 .include "../../x11/xextproto/buildlink3.mk"
 .include "../../x11/xf86driproto/buildlink3.mk"
 .include "../../x11/xproto/buildlink3.mk"
+.include "../../x11/xineramaproto/buildlink3.mk"
 .endif # MODULAR_XORG_SERVER_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-modular-xorg-server

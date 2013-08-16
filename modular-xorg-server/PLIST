@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2011/10/13 15:30:18 makoto Exp $
+@comment $NetBSD: PLIST,v 1.13 2013/08/16 11:47:35 makoto Exp $
 bin/X
 bin/Xnest
 bin/Xorg
@@ -32,8 +32,9 @@ include/xorg/dixfont.h
 include/xorg/dixfontstr.h
 include/xorg/dixgrabs.h
 include/xorg/dixstruct.h
-include/xorg/dri.h
-include/xorg/dristruct.h
+${PLIST.dri}include/xorg/dri.h
+include/xorg/dri2.h
+${PLIST.dri}include/xorg/dristruct.h
 include/xorg/edid.h
 include/xorg/events.h
 include/xorg/exa.h
@@ -81,6 +82,7 @@ include/xorg/miwideline.h
 include/xorg/mizerarc.h
 include/xorg/msp3430.h
 include/xorg/opaque.h
+include/xorg/optionstr.h
 include/xorg/os.h
 include/xorg/panoramiX.h
 include/xorg/panoramiXsrv.h
@@ -99,7 +101,7 @@ include/xorg/registry.h
 include/xorg/resource.h
 include/xorg/rgb.h
 include/xorg/rrtransform.h
-include/xorg/sarea.h
+${PLIST.dri}include/xorg/sarea.h
 include/xorg/screenint.h
 include/xorg/scrnintstr.h
 include/xorg/selection.h
@@ -108,6 +110,7 @@ include/xorg/shadow.h
 include/xorg/shadowfb.h
 include/xorg/shmint.h
 include/xorg/site.h
+${PLIST.sunos}include/xorg/solaris-${SUNOS_ARCH}.il
 include/xorg/swaprep.h
 include/xorg/swapreq.h
 include/xorg/syncsdk.h
@@ -123,9 +126,9 @@ include/xorg/vidmodeproc.h
 include/xorg/wfbrename.h
 include/xorg/window.h
 include/xorg/windowstr.h
+include/xorg/xaarop.h
 include/xorg/xaa.h
 include/xorg/xaalocal.h
-include/xorg/xaarop.h
 include/xorg/xace.h
 include/xorg/xacestr.h
 include/xorg/xf86.h
@@ -135,6 +138,7 @@ include/xorg/xf86DDC.h
 include/xorg/xf86Modes.h
 include/xorg/xf86Module.h
 include/xorg/xf86Opt.h
+include/xorg/xf86Optionstr.h
 include/xorg/xf86Optrec.h
 include/xorg/xf86Parser.h
 include/xorg/xf86Pci.h
@@ -169,11 +173,12 @@ include/xorg/xserver-properties.h
 include/xorg/xvdix.h
 include/xorg/xvmcext.h
 lib/pkgconfig/xorg-server.pc
-lib/xorg/modules/extensions/libdbe.la
-lib/xorg/modules/extensions/libdri.la
-lib/xorg/modules/extensions/libextmod.la
-lib/xorg/modules/extensions/libglx.la
-lib/xorg/modules/extensions/librecord.la
+${PLIST.dri}lib/xorg/modules/extensions/libdbe.la
+${PLIST.dri}lib/xorg/modules/extensions/libdri.la
+${PLIST.dri}lib/xorg/modules/extensions/libdri2.la
+${PLIST.dri}lib/xorg/modules/extensions/libextmod.la
+${PLIST.dri}lib/xorg/modules/extensions/libglx.la
+${PLIST.dri}lib/xorg/modules/extensions/librecord.la
 lib/xorg/modules/libexa.la
 lib/xorg/modules/libfb.la
 lib/xorg/modules/libfbdevhw.la
@@ -203,5 +208,6 @@ man/man4/fbdevhw.4
 man/man5/xorg.conf.5
 man/man5/xorg.conf.d.5
 share/aclocal/xorg-server.m4
+${PLIST.dtrace}share/doc/xorg-server/Xserver-DTrace.xml
 @pkgdir lib/xorg/modules/input
 @pkgdir lib/xorg/modules/drivers
