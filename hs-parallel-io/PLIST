@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1 2013/08/16 03:19:26 szptvlfn Exp $
+lib/parallel-io-${PKGVERSION}/${HASKELL_VERSION}/Control/Concurrent/ParallelIO.hi
+lib/parallel-io-${PKGVERSION}/${HASKELL_VERSION}/Control/Concurrent/ParallelIO.p_hi
+lib/parallel-io-${PKGVERSION}/${HASKELL_VERSION}/Control/Concurrent/ParallelIO/Compat.hi
+lib/parallel-io-${PKGVERSION}/${HASKELL_VERSION}/Control/Concurrent/ParallelIO/Compat.p_hi
+lib/parallel-io-${PKGVERSION}/${HASKELL_VERSION}/Control/Concurrent/ParallelIO/Global.hi
+lib/parallel-io-${PKGVERSION}/${HASKELL_VERSION}/Control/Concurrent/ParallelIO/Global.p_hi
+lib/parallel-io-${PKGVERSION}/${HASKELL_VERSION}/Control/Concurrent/ParallelIO/Local.hi
+lib/parallel-io-${PKGVERSION}/${HASKELL_VERSION}/Control/Concurrent/ParallelIO/Local.p_hi
+lib/parallel-io-${PKGVERSION}/${HASKELL_VERSION}/HSparallel-io-${PKGVERSION}.o
+lib/parallel-io-${PKGVERSION}/${HASKELL_VERSION}/libHSparallel-io-${PKGVERSION}.a
+lib/parallel-io-${PKGVERSION}/${HASKELL_VERSION}/libHSparallel-io-${PKGVERSION}_p.a
+lib/parallel-io-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/parallel-io-${PKGVERSION}/LICENSE

@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/08/16 03:19:26 szptvlfn Exp $
+
+SHA1 (parallel-io-0.3.3.tar.gz) = a453c5090dc8b2ae2c106a1d81d379631b3c6b3e
+RMD160 (parallel-io-0.3.3.tar.gz) = f2891903d059eb6ef12957143e86a36840f0fddd
+Size (parallel-io-0.3.3.tar.gz) = 9435 bytes
