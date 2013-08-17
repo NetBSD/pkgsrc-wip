@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5423 2013/08/17 08:03:03 szptvlfn Exp $
+# $Id: Makefile,v 1.5424 2013/08/17 08:15:09 szptvlfn Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1112,6 +1112,7 @@ SUBDIR+=	hs-strict-io
 SUBDIR+=	hs-stringsearch
 SUBDIR+=	hs-stringtable-atom
 SUBDIR+=	hs-syb
+SUBDIR+=	hs-system-filepath
 SUBDIR+=	hs-tagged
 SUBDIR+=	hs-tagsoup
 SUBDIR+=	hs-tar
