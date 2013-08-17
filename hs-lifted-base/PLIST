@@ -1,0 +1,24 @@
+@comment $NetBSD: PLIST,v 1.1 2013/08/17 08:00:20 szptvlfn Exp $
+lib/lifted-base-${PKGVERSION}/${HASKELL_VERSION}/Control/Concurrent/Chan/Lifted.hi
+lib/lifted-base-${PKGVERSION}/${HASKELL_VERSION}/Control/Concurrent/Chan/Lifted.p_hi
+lib/lifted-base-${PKGVERSION}/${HASKELL_VERSION}/Control/Concurrent/Lifted.hi
+lib/lifted-base-${PKGVERSION}/${HASKELL_VERSION}/Control/Concurrent/Lifted.p_hi
+lib/lifted-base-${PKGVERSION}/${HASKELL_VERSION}/Control/Concurrent/MVar/Lifted.hi
+lib/lifted-base-${PKGVERSION}/${HASKELL_VERSION}/Control/Concurrent/MVar/Lifted.p_hi
+lib/lifted-base-${PKGVERSION}/${HASKELL_VERSION}/Control/Concurrent/QSem/Lifted.hi
+lib/lifted-base-${PKGVERSION}/${HASKELL_VERSION}/Control/Concurrent/QSem/Lifted.p_hi
+lib/lifted-base-${PKGVERSION}/${HASKELL_VERSION}/Control/Concurrent/QSemN/Lifted.hi
+lib/lifted-base-${PKGVERSION}/${HASKELL_VERSION}/Control/Concurrent/QSemN/Lifted.p_hi
+lib/lifted-base-${PKGVERSION}/${HASKELL_VERSION}/Control/Concurrent/SampleVar/Lifted.hi
+lib/lifted-base-${PKGVERSION}/${HASKELL_VERSION}/Control/Concurrent/SampleVar/Lifted.p_hi
+lib/lifted-base-${PKGVERSION}/${HASKELL_VERSION}/Control/Exception/Lifted.hi
+lib/lifted-base-${PKGVERSION}/${HASKELL_VERSION}/Control/Exception/Lifted.p_hi
+lib/lifted-base-${PKGVERSION}/${HASKELL_VERSION}/Data/IORef/Lifted.hi
+lib/lifted-base-${PKGVERSION}/${HASKELL_VERSION}/Data/IORef/Lifted.p_hi
+lib/lifted-base-${PKGVERSION}/${HASKELL_VERSION}/HSlifted-base-${PKGVERSION}.o
+lib/lifted-base-${PKGVERSION}/${HASKELL_VERSION}/System/Timeout/Lifted.hi
+lib/lifted-base-${PKGVERSION}/${HASKELL_VERSION}/System/Timeout/Lifted.p_hi
+lib/lifted-base-${PKGVERSION}/${HASKELL_VERSION}/libHSlifted-base-${PKGVERSION}.a
+lib/lifted-base-${PKGVERSION}/${HASKELL_VERSION}/libHSlifted-base-${PKGVERSION}_p.a
+lib/lifted-base-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/lifted-base-${PKGVERSION}/LICENSE
