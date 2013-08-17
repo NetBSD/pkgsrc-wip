@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5422 2013/08/16 03:23:08 szptvlfn Exp $
+# $Id: Makefile,v 1.5423 2013/08/17 08:03:03 szptvlfn Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1054,6 +1054,7 @@ SUBDIR+=	hs-io-storage
 SUBDIR+=	hs-irc
 SUBDIR+=	hs-largeword
 SUBDIR+=	hs-lazy-io
+SUBDIR+=	hs-lifted-base
 SUBDIR+=	hs-magic
 SUBDIR+=	hs-markov-chain
 SUBDIR+=	hs-midi
