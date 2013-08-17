@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5425 2013/08/17 09:05:53 szptvlfn Exp $
+# $Id: Makefile,v 1.5426 2013/08/17 09:11:54 szptvlfn Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -955,6 +955,7 @@ SUBDIR+=	hs-attempt
 SUBDIR+=	hs-attoparsec
 SUBDIR+=	hs-base-unicode-symbols
 SUBDIR+=	hs-base64-bytestring
+SUBDIR+=	hs-basic-prelude
 SUBDIR+=	hs-bifunctors
 SUBDIR+=	hs-binary-strict
 SUBDIR+=	hs-bindings-DSL
