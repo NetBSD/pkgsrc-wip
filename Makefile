@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5424 2013/08/17 08:15:09 szptvlfn Exp $
+# $Id: Makefile,v 1.5425 2013/08/17 09:05:53 szptvlfn Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -943,6 +943,7 @@ SUBDIR+=	hs-OpenGLRaw
 SUBDIR+=	hs-QIO
 SUBDIR+=	hs-QuickCheck
 SUBDIR+=	hs-QuickCheck1
+SUBDIR+=	hs-ReadArgs
 SUBDIR+=	hs-SHA
 SUBDIR+=	hs-StateVar
 SUBDIR+=	hs-Tensor
