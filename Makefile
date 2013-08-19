@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5426 2013/08/17 09:11:54 szptvlfn Exp $
+# $Id: Makefile,v 1.5427 2013/08/19 19:34:02 airhead Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -3529,6 +3529,7 @@ SUBDIR+=	yafray
 SUBDIR+=	yajl
 SUBDIR+=	yakuake
 SUBDIR+=	yaml-mode
+SUBDIR+=	yaml-cpp
 SUBDIR+=	yateclient
 SUBDIR+=	yauap
 SUBDIR+=	yaupspe
