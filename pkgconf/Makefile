@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2012/10/05 11:31:52 asau Exp $
+# $NetBSD: Makefile,v 1.3 2013/08/19 09:18:06 nthauvin Exp $
 #
 
-DISTNAME=	pkgconf-0.8.9
+DISTNAME=	pkgconf-0.9.2
 CATEGORIES=	devel
 MASTER_SITES=	http://tortois.es/~nenolod/distfiles/
 EXTRACT_SUFX=	.tar.bz2
