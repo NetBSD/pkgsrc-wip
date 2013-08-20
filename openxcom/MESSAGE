@@ -1,0 +1,7 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2013/08/20 19:38:30 airhead Exp $
+
+Place the datafiles of your original UFO: Enemy Unknown/X-Com: UFO Defense
+in ${OPENXCOM_DATA} or in ~/.local/share/openxcom/data
+
+===========================================================================
