@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2013/06/17 12:45:12 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2013/08/20 11:11:53 thomasklausner Exp $
 #
 
 DISTNAME=	pdfmod-0.9.1
@@ -16,6 +16,7 @@ GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		pkg-config intltool msgfmt gmake
 USE_LANGUAGES=		c c++
+REPLACE_SH=		icon-theme-installer
 
 INSTALLATION_DIRS+=	lib/pdfmod
 
