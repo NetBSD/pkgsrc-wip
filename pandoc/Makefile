@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/10/04 19:44:06 asau Exp $
+# $NetBSD: Makefile,v 1.5 2013/08/21 12:32:41 obache Exp $
 
 DISTNAME=					pandoc-1.2
 PKGREVISION=				1
@@ -27,6 +27,5 @@ SUBST_SED.makefile+=			-e 's,^MANPATH.*,MANPATH\ :=\ $$(DESTPATH)/man,g'
 .include "../../wip/hs-digest/buildlink3.mk"
 .include "../../wip/hs-utf8-string/buildlink3.mk"
 .include "../../wip/hs-zlib/buildlink3.mk"
-.include "../../wip/hs-binary/buildlink3.mk"
 .include "../../lang/ghc/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
