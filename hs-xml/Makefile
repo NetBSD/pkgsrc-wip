@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/12/04 13:04:14 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2013/08/21 17:12:22 szptvlfn Exp $
 #
 
-DISTNAME=	xml-1.3.10
+DISTNAME=	xml-1.3.13
 CATEGORIES=	textproc
 
 MAINTAINER=	pho@cielonegro.org
