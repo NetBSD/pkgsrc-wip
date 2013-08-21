@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.3 2012/10/08 14:00:39 asau Exp $
-#
-DISTNAME=				zip-archive-0.1.1.3
-PKGNAME=				hs-zip-archive-0.1.1.3
-CATEGORIES=			lang
-MASTER_SITES=		http://hackage.haskell.org/packages/archive/zip-archive/0.1.1.3/
+# $NetBSD: Makefile,v 1.4 2013/08/21 20:42:22 szptvlfn Exp $
 
-MAINTAINER=			zecrazytux@zecrazytux.net
-HOMEPAGE=				http://hackage.haskell.org/cgi-bin/hackage-scripts/package/zip-archive
-COMMENT=				Haskell library providing functions for manipulating zip archives
+DISTNAME=	zip-archive-0.1.3.4
+CATEGORIES=	lang
+
+MAINTAINER=	zecrazytux@zecrazytux.net
+COMMENT=	Haskell library providing functions for manipulating zip archives
+LICENSE=	modified-bsd
+
 
 .include "../../wip/mk/haskell.mk"
-USE_LANGUAGES= c
-
+.include "../../wip/hs-digest/buildlink3.mk"
+.include "../../wip/hs-mtl/buildlink3.mk"
+.include "../../wip/hs-utf8-string/buildlink3.mk"
+.include "../../wip/hs-zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
