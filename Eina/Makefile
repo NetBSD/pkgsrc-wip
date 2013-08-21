@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/04/21 03:34:57 othyro Exp $
+# $NetBSD: Makefile,v 1.3 2013/08/21 11:44:14 thomasklausner Exp $
 #
 
 DISTNAME=	eina-0.14.0
@@ -31,8 +31,7 @@ REPLACE_PYTHON=		eina/lastfm/lastfmsubmitd/lastfmsubmitd
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
-BUILDLINK_API_DEPENDS.libnotify+=	libnotify>=0.7.0
-.include "../../sysutils/libnotify07/buildlink3.mk"
+.include "../../sysutils/libnotify/buildlink3.mk"
 # XXX Needs clutter-gtk-1.0
 # XXX which needs a new version of clutter
 # XXX which needs cogl which is currently broken
