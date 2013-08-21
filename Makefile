@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5429 2013/08/21 16:47:34 szptvlfn Exp $
+# $Id: Makefile,v 1.5430 2013/08/21 22:17:18 airhead Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1863,6 +1863,7 @@ SUBDIR+=	openttd-opengfx
 SUBDIR+=	openttd-openmsx
 SUBDIR+=	openttd-opensfx
 SUBDIR+=	openvrml
+SUBDIR+=	openxcom
 SUBDIR+=	oqtplayer
 SUBDIR+=	or1ksim
 SUBDIR+=	orbifolder
