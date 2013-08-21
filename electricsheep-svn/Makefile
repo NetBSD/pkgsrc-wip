@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2013/07/04 15:58:16 rhialto Exp $
+# $NetBSD: Makefile,v 1.6 2013/08/21 09:37:53 rhialto Exp $
 
 PKGNAME=		electricsheep-2.7
 DISTNAME=		electricsheep
@@ -22,7 +22,7 @@ GNU_CONFIGURE=		YES
 USE_TOOLS+=		pkg-config gmake
 
 SVN_REPOSITORIES=	client
-SVN_ROOT.client=	http://electricsheep.svn.sourceforge.net/svnroot/electricsheep/trunk/client
+SVN_ROOT.client=	http://svn.code.sf.net/p/electricsheep/code/trunk/client
 			# OLD! Should now be 
 			# Our SVN is now hosted by Google: http://code.google.com/p/electricsheep/source/checkout
 WRKSRC=			${WRKDIR}/client

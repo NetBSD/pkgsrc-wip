@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/09/28 23:21:48 asau Exp $
+# $NetBSD: Makefile,v 1.5 2013/08/21 09:37:53 rhialto Exp $
 
 PKGNAME=		flam3-2.7
 DISTNAME=		flam3
@@ -15,7 +15,7 @@ GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 
 SVN_REPOSITORIES=	flam3
-SVN_ROOT.flam3=		http://electricsheep.svn.sourceforge.net/svnroot/flam3/trunk
+SVN_ROOT.flam3=		http://svn.code.sf.net/p/flam3/code/trunk
 WRKSRC=			${WRKDIR}/flam3/src
 
 .include "../../mk/jpeg.buildlink3.mk"
