@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5428 2013/08/21 11:39:07 kristerw Exp $
+# $Id: Makefile,v 1.5429 2013/08/21 16:47:34 szptvlfn Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1054,6 +1054,7 @@ SUBDIR+=	hs-hxt-xpath
 SUBDIR+=	hs-iconv
 SUBDIR+=	hs-io-storage
 SUBDIR+=	hs-irc
+SUBDIR+=	hs-json
 SUBDIR+=	hs-largeword
 SUBDIR+=	hs-lazy-io
 SUBDIR+=	hs-lifted-base
