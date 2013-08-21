@@ -1,5 +1,5 @@
 cat <<'EOF' |
-LAST_UPDATED: Obtained from SVN: trunk revision 201654
+LAST_UPDATED: Obtained from SVN: trunk revision 201829
 
 Native configuration is x86_64--netbsd
 
@@ -25,12 +25,12 @@ FAIL: g++.old-deja/g++.law/profile1.C -std=gnu++11 (test for excess errors)
 
 		=== g++ Summary ===
 
-# of expected passes		54121
+# of expected passes		54095
 # of unexpected failures	10
 # of expected failures		293
 # of unresolved testcases	5
-# of unsupported tests		945
-/usr/pkgsrc/wip/gcc49snapshot/work/build/gcc/testsuite/g++/../../xg++  version 4.9.0 20130811 (experimental) (GCC) 
+# of unsupported tests		988
+/usr/pkgsrc/wip/gcc49snapshot/work/build/gcc/testsuite/g++/../../xg++  version 4.9.0 20130818 (experimental) (GCC) 
 
 		=== gcc tests ===
 
@@ -193,12 +193,12 @@ FAIL: gcc.target/i386/vcvtps2ph-3.c execution test
 
 		=== gcc Summary ===
 
-# of expected passes		95224
+# of expected passes		95185
 # of unexpected failures	126
 # of expected failures		255
 # of unresolved testcases	28
-# of unsupported tests		1714
-/usr/pkgsrc/wip/gcc49snapshot/work/build/gcc/xgcc  version 4.9.0 20130811 (experimental) (GCC) 
+# of unsupported tests		1768
+/usr/pkgsrc/wip/gcc49snapshot/work/build/gcc/xgcc  version 4.9.0 20130818 (experimental) (GCC) 
 
 		=== gfortran tests ===
 
@@ -228,12 +228,12 @@ UNRESOLVED: gfortran.dg/lto/pr45586 f_lto_pr45586_0.o-f_lto_pr45586_0.o execute 
 
 		=== gfortran Summary ===
 
-# of expected passes		44523
+# of expected passes		44524
 # of unexpected failures	15
 # of expected failures		52
 # of unresolved testcases	6
 # of unsupported tests		272
-/usr/pkgsrc/wip/gcc49snapshot/work/build/gcc/testsuite/gfortran/../../gfortran  version 4.9.0 20130811 (experimental) (GCC) 
+/usr/pkgsrc/wip/gcc49snapshot/work/build/gcc/testsuite/gfortran/../../gfortran  version 4.9.0 20130818 (experimental) (GCC) 
 
 		=== obj-c++ tests ===
 
@@ -245,7 +245,7 @@ Running target unix
 # of expected passes		1441
 # of expected failures		10
 # of unsupported tests		86
-/usr/pkgsrc/wip/gcc49snapshot/work/build/gcc/testsuite/obj-c++/../../xg++  version 4.9.0 20130811 (experimental) (GCC) 
+/usr/pkgsrc/wip/gcc49snapshot/work/build/gcc/testsuite/obj-c++/../../xg++  version 4.9.0 20130818 (experimental) (GCC) 
 
 		=== objc tests ===
 
@@ -261,7 +261,7 @@ FAIL: objc.dg/proto-lossage-4.m -fgnu-runtime (test for excess errors)
 # of unexpected failures	3
 # of expected failures		6
 # of unsupported tests		74
-/usr/pkgsrc/wip/gcc49snapshot/work/build/gcc/xgcc  version 4.9.0 20130811 (experimental) (GCC) 
+/usr/pkgsrc/wip/gcc49snapshot/work/build/gcc/xgcc  version 4.9.0 20130818 (experimental) (GCC) 
 
 		=== boehm-gc tests ===
 
@@ -300,7 +300,7 @@ Running target unix
 
 Running target unix
 WARNING: program timed out.
-FAIL: libgomp.fortran/lib2.f  -Os  execution test
+FAIL: libgomp.fortran/vla4.f90  -O2  execution test
 FAIL: libgomp.graphite/bounds.c scan-tree-dump-times graphite "0 loops carried no dependency" 1
 FAIL: libgomp.graphite/force-parallel-4.c execution test
 FAIL: libgomp.graphite/force-parallel-4.c scan-tree-dump-times graphite "2 loops carried no dependency" 1
@@ -1195,17 +1195,17 @@ UNRESOLVED: tr1/8_c_compatibility/complex/50880.cc compilation failed to produce
 
 		=== libstdc++ Summary ===
 
-# of expected passes		8361
+# of expected passes		8367
 # of unexpected failures	5
 # of expected failures		42
 # of unresolved testcases	2
-# of unsupported tests		665
+# of unsupported tests		667
 
-Compiler version: 4.9.0 20130811 (experimental) (GCC) 
+Compiler version: 4.9.0 20130818 (experimental) (GCC) 
 Platform: x86_64--netbsd
 configure flags: --enable-languages='c obj-c++ objc java fortran c++' --enable-shared --enable-long-long --with-local-prefix=/usr/pkg/gcc49snapshot --enable-libssp --enable-threads=posix --with-boot-ldflags='-static-libstdc++ -static-libgcc -Wl,-R/usr/pkg/lib ' --with-gnu-ld --with-ld=/usr/bin/ld --with-gnu-as --with-as=/usr/bin/as --enable-nls --with-libiconv-prefix=/usr --with-gmp=/usr/pkg --with-mpc=/usr/pkg --with-mpfr=/usr/pkg --with-cloog=/usr/pkg --enable-cloog-backend=isl --with-ecj-jar=/usr/pkgsrc/distfiles/ecj-4.5.jar --enable-java-home --with-os-directory=netbsd --with-arch-directory=amd64 --with-jvm-root-dir=/usr/pkg/java/gcc49snapshot --with-java-home=/usr/pkg/java/gcc49snapshot --with-system-zlib --enable-__cxa_atexit --with-gxx-include-dir=/usr/pkg/gcc49snapshot/include/c++/ --prefix=/usr/pkg/gcc49snapshot --build=x86_64--netbsd --host=x86_64--netbsd --infodir=/usr/pkg/gcc49snapshot/info --mandir=/usr/pkg/gcc49snapshot/man
 EOF
-Mail -s "Results for 4.9.0 20130811 (experimental) (GCC) testsuite on x86_64--netbsd" gcc-testresults@gcc.gnu.org &&
+Mail -s "Results for 4.9.0 20130818 (experimental) (GCC) testsuite on x86_64--netbsd" gcc-testresults@gcc.gnu.org &&
 mv /usr/pkgsrc/wip/gcc49snapshot/work/build/./gcc/testsuite/g++/g++.sum /usr/pkgsrc/wip/gcc49snapshot/work/build/./gcc/testsuite/g++/g++.sum.sent &&
 mv /usr/pkgsrc/wip/gcc49snapshot/work/build/./gcc/testsuite/gcc/gcc.sum /usr/pkgsrc/wip/gcc49snapshot/work/build/./gcc/testsuite/gcc/gcc.sum.sent &&
 mv /usr/pkgsrc/wip/gcc49snapshot/work/build/./gcc/testsuite/gfortran/gfortran.sum /usr/pkgsrc/wip/gcc49snapshot/work/build/./gcc/testsuite/gfortran/gfortran.sum.sent &&
