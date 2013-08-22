@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1 2013/08/22 19:46:23 szptvlfn Exp $
+lib/blaze-markup-${PKGVERSION}/${HASKELL_VERSION}/HSblaze-markup-${PKGVERSION}.o
+lib/blaze-markup-${PKGVERSION}/${HASKELL_VERSION}/Text/Blaze.hi
+lib/blaze-markup-${PKGVERSION}/${HASKELL_VERSION}/Text/Blaze.p_hi
+lib/blaze-markup-${PKGVERSION}/${HASKELL_VERSION}/Text/Blaze/Internal.hi
+lib/blaze-markup-${PKGVERSION}/${HASKELL_VERSION}/Text/Blaze/Internal.p_hi
+lib/blaze-markup-${PKGVERSION}/${HASKELL_VERSION}/Text/Blaze/Renderer/Pretty.hi
+lib/blaze-markup-${PKGVERSION}/${HASKELL_VERSION}/Text/Blaze/Renderer/Pretty.p_hi
+lib/blaze-markup-${PKGVERSION}/${HASKELL_VERSION}/Text/Blaze/Renderer/String.hi
+lib/blaze-markup-${PKGVERSION}/${HASKELL_VERSION}/Text/Blaze/Renderer/String.p_hi
+lib/blaze-markup-${PKGVERSION}/${HASKELL_VERSION}/Text/Blaze/Renderer/Text.hi
+lib/blaze-markup-${PKGVERSION}/${HASKELL_VERSION}/Text/Blaze/Renderer/Text.p_hi
+lib/blaze-markup-${PKGVERSION}/${HASKELL_VERSION}/Text/Blaze/Renderer/Utf8.hi
+lib/blaze-markup-${PKGVERSION}/${HASKELL_VERSION}/Text/Blaze/Renderer/Utf8.p_hi
+lib/blaze-markup-${PKGVERSION}/${HASKELL_VERSION}/libHSblaze-markup-${PKGVERSION}.a
+lib/blaze-markup-${PKGVERSION}/${HASKELL_VERSION}/libHSblaze-markup-${PKGVERSION}_p.a
+lib/blaze-markup-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/blaze-markup-${PKGVERSION}/LICENSE
