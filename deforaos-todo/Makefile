@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2012/09/28 21:24:35 asau Exp $
+# $NetBSD: Makefile,v 1.6 2013/08/22 08:50:06 obache Exp $
 
 DISTNAME=	Todo-0.1.2
 PKGNAME=	deforaos-todo-0.1.2
@@ -18,6 +18,7 @@ MAKE_FLAGS+=	DESTDIR=${DESTDIR}
 
 .include "options.mk"
 
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../wip/deforaos-libsystem/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../wip/deforaos-libdesktop/buildlink3.mk"
