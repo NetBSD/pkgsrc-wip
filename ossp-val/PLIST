@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2013/08/22 11:14:08 obache Exp $
+bin/val-config
+include/val.h
+lib/libval.la
+man/man1/val-config.1
+man/man3/val.3
