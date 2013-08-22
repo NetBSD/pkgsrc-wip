@@ -1,0 +1,18 @@
+OSSP l2 is a C library providing a very flexible and sophisticated Unix logging
+facility. It is based on the model of arbitrary number of channels, stacked
+together in a top-down data flow tree structure with filtering channels in
+internal nodes and output channels on the leave nodes.
+
+Channel trees can be either constructed manually through lower-level API
+functions or all at once with a single API function controlled by a compact
+syntactical description of the channel tree. For generating log messages a
+printf-style formatting engine is provided which can be extended through
+callback functions. The data flow inside the channel tree is controlled by
+(eight fixed and nine custom) logging message severity levels which are assigned
+to each individual channel.
+
+Channels are implemented by channel handlers which can be even customer supplied
+for creating own channels which seamlessly integrate into the framework. For
+convenience reasons, OSSP l2 already ships with pre-implemented filtering (noop,
+filter, prefix, buffer) and output (null, fd, file, pipe, socket, syslog, smtp)
+channels which already cover mostly all use cases of logging.

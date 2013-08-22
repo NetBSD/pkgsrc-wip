@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2013/08/22 11:12:34 obache Exp $
+bin/l2-config
+bin/l2tool
+include/l2.h
+lib/libl2.la
+man/man1/l2-config.1
+man/man1/l2tool.1
+man/man3/l2.3
