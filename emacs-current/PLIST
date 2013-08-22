@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.130 2013/07/28 13:06:11 makoto Exp $
+@comment $NetBSD: PLIST,v 1.131 2013/08/22 13:31:14 makoto Exp $
 bin/ctags
 bin/ebrowse
 bin/emacs
@@ -57,6 +57,7 @@ info/sieve.info.gz
 info/smtpmail.info.gz
 info/speedbar.info.gz
 info/srecode.info.gz
+info/todo-mode.info.gz
 info/tramp.info.gz
 info/url.info.gz
 info/vip.info.gz
@@ -841,42 +842,26 @@ share/emacs/${PKGVERSION}/etc/ps-prin1.ps
 share/emacs/${PKGVERSION}/etc/publicsuffix.txt
 share/emacs/${PKGVERSION}/etc/refcards/Makefile
 share/emacs/${PKGVERSION}/etc/refcards/README
-share/emacs/${PKGVERSION}/etc/refcards/calccard.pdf
 share/emacs/${PKGVERSION}/etc/refcards/calccard.tex
-share/emacs/${PKGVERSION}/etc/refcards/cs-dired-ref.pdf
 share/emacs/${PKGVERSION}/etc/refcards/cs-dired-ref.tex
-share/emacs/${PKGVERSION}/etc/refcards/cs-refcard.pdf
 share/emacs/${PKGVERSION}/etc/refcards/cs-refcard.tex
 share/emacs/${PKGVERSION}/etc/refcards/cs-survival.tex
-share/emacs/${PKGVERSION}/etc/refcards/de-refcard.pdf
 share/emacs/${PKGVERSION}/etc/refcards/de-refcard.tex
-share/emacs/${PKGVERSION}/etc/refcards/dired-ref.pdf
 share/emacs/${PKGVERSION}/etc/refcards/dired-ref.tex
 share/emacs/${PKGVERSION}/etc/refcards/emacsver.tex
-share/emacs/${PKGVERSION}/etc/refcards/fr-dired-ref.pdf
 share/emacs/${PKGVERSION}/etc/refcards/fr-dired-ref.tex
-share/emacs/${PKGVERSION}/etc/refcards/fr-refcard.pdf
 share/emacs/${PKGVERSION}/etc/refcards/fr-refcard.tex
 share/emacs/${PKGVERSION}/etc/refcards/fr-survival.tex
-share/emacs/${PKGVERSION}/etc/refcards/gnus-booklet.pdf
 share/emacs/${PKGVERSION}/etc/refcards/gnus-logo.eps
 share/emacs/${PKGVERSION}/etc/refcards/gnus-logo.pdf
-share/emacs/${PKGVERSION}/etc/refcards/gnus-refcard.pdf
 share/emacs/${PKGVERSION}/etc/refcards/gnus-refcard.tex
-share/emacs/${PKGVERSION}/etc/refcards/orgcard.pdf
 share/emacs/${PKGVERSION}/etc/refcards/orgcard.tex
 share/emacs/${PKGVERSION}/etc/refcards/pdflayout.sty
-share/emacs/${PKGVERSION}/etc/refcards/pl-refcard.pdf
 share/emacs/${PKGVERSION}/etc/refcards/pl-refcard.tex
-share/emacs/${PKGVERSION}/etc/refcards/pt-br-refcard.pdf
 share/emacs/${PKGVERSION}/etc/refcards/pt-br-refcard.tex
-share/emacs/${PKGVERSION}/etc/refcards/refcard.pdf
 share/emacs/${PKGVERSION}/etc/refcards/refcard.tex
-share/emacs/${PKGVERSION}/etc/refcards/ru-refcard.pdf
 share/emacs/${PKGVERSION}/etc/refcards/ru-refcard.tex
-share/emacs/${PKGVERSION}/etc/refcards/sk-dired-ref.pdf
 share/emacs/${PKGVERSION}/etc/refcards/sk-dired-ref.tex
-share/emacs/${PKGVERSION}/etc/refcards/sk-refcard.pdf
 share/emacs/${PKGVERSION}/etc/refcards/sk-refcard.tex
 share/emacs/${PKGVERSION}/etc/refcards/sk-survival.tex
 share/emacs/${PKGVERSION}/etc/refcards/survival.tex
@@ -2066,6 +2051,8 @@ share/emacs/${PKGVERSION}/lisp/forms.el.gz
 share/emacs/${PKGVERSION}/lisp/forms.elc
 share/emacs/${PKGVERSION}/lisp/frame.el.gz
 share/emacs/${PKGVERSION}/lisp/frame.elc
+share/emacs/${PKGVERSION}/lisp/frameset.el.gz
+share/emacs/${PKGVERSION}/lisp/frameset.elc
 share/emacs/${PKGVERSION}/lisp/fringe.el.gz
 share/emacs/${PKGVERSION}/lisp/fringe.elc
 share/emacs/${PKGVERSION}/lisp/generic-x.el.gz
@@ -2125,6 +2112,8 @@ share/emacs/${PKGVERSION}/lisp/gnus/gnus-group.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-group.elc
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-html.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-html.elc
+share/emacs/${PKGVERSION}/lisp/gnus/gnus-icalendar.el.gz
+share/emacs/${PKGVERSION}/lisp/gnus/gnus-icalendar.elc
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-int.el.gz
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-int.elc
 share/emacs/${PKGVERSION}/lisp/gnus/gnus-kill.el.gz
@@ -3302,6 +3291,8 @@ share/emacs/${PKGVERSION}/lisp/progmodes/asm-mode.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/asm-mode.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/autoconf.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/autoconf.elc
+share/emacs/${PKGVERSION}/lisp/progmodes/bat-mode.el.gz
+share/emacs/${PKGVERSION}/lisp/progmodes/bat-mode.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/bug-reference.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/bug-reference.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/cap-words.el.gz
