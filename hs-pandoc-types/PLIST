@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2013/08/22 20:37:40 szptvlfn Exp $
+lib/pandoc-types-${PKGVERSION}/${HASKELL_VERSION}/HSpandoc-types-${PKGVERSION}.o
+lib/pandoc-types-${PKGVERSION}/${HASKELL_VERSION}/Text/Pandoc/Builder.hi
+lib/pandoc-types-${PKGVERSION}/${HASKELL_VERSION}/Text/Pandoc/Builder.p_hi
+lib/pandoc-types-${PKGVERSION}/${HASKELL_VERSION}/Text/Pandoc/Definition.hi
+lib/pandoc-types-${PKGVERSION}/${HASKELL_VERSION}/Text/Pandoc/Definition.p_hi
+lib/pandoc-types-${PKGVERSION}/${HASKELL_VERSION}/Text/Pandoc/Generic.hi
+lib/pandoc-types-${PKGVERSION}/${HASKELL_VERSION}/Text/Pandoc/Generic.p_hi
+lib/pandoc-types-${PKGVERSION}/${HASKELL_VERSION}/libHSpandoc-types-${PKGVERSION}.a
+lib/pandoc-types-${PKGVERSION}/${HASKELL_VERSION}/libHSpandoc-types-${PKGVERSION}_p.a
+lib/pandoc-types-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/pandoc-types-${PKGVERSION}/COPYING
