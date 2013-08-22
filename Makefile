@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5431 2013/08/22 19:50:23 szptvlfn Exp $
+# $Id: Makefile,v 1.5432 2013/08/22 20:14:42 szptvlfn Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1037,6 +1037,7 @@ SUBDIR+=	hs-haskelldb
 SUBDIR+=	hs-haskelldb-hdbc
 SUBDIR+=	hs-haskelldb-hdbc-sqlite3
 SUBDIR+=	hs-haskore
+SUBDIR+=	hs-highlighting-kate
 SUBDIR+=	hs-hinstaller
 SUBDIR+=	hs-hint
 SUBDIR+=	hs-hopenssl
