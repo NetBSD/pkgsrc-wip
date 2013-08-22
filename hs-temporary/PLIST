@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2013/08/22 23:11:16 szptvlfn Exp $
+lib/temporary-${PKGVERSION}/${HASKELL_VERSION}/Distribution/Compat/Exception.hi
+lib/temporary-${PKGVERSION}/${HASKELL_VERSION}/Distribution/Compat/Exception.p_hi
+lib/temporary-${PKGVERSION}/${HASKELL_VERSION}/Distribution/Compat/TempFile.hi
+lib/temporary-${PKGVERSION}/${HASKELL_VERSION}/Distribution/Compat/TempFile.p_hi
+lib/temporary-${PKGVERSION}/${HASKELL_VERSION}/HStemporary-${PKGVERSION}.o
+lib/temporary-${PKGVERSION}/${HASKELL_VERSION}/System/IO/Temp.hi
+lib/temporary-${PKGVERSION}/${HASKELL_VERSION}/System/IO/Temp.p_hi
+lib/temporary-${PKGVERSION}/${HASKELL_VERSION}/libHStemporary-${PKGVERSION}.a
+lib/temporary-${PKGVERSION}/${HASKELL_VERSION}/libHStemporary-${PKGVERSION}_p.a
+lib/temporary-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/temporary-${PKGVERSION}/LICENSE
