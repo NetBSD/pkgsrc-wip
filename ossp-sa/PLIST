@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2013/08/22 11:13:22 obache Exp $
+bin/sa-config
+include/sa.h
+lib/libsa.la
+lib/pkgconfig/sa.pc
+man/man3/sa.3
