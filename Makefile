@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5434 2013/08/22 22:04:08 szptvlfn Exp $
+# $Id: Makefile,v 1.5435 2013/08/22 22:41:04 szptvlfn Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1127,6 +1127,7 @@ SUBDIR+=	hs-terminfo
 SUBDIR+=	hs-test-framework
 SUBDIR+=	hs-test-framework-hunit
 SUBDIR+=	hs-test-framework-quickcheck2
+SUBDIR+=	hs-texmath
 SUBDIR+=	hs-text
 SUBDIR+=	hs-text-icu
 SUBDIR+=	hs-tfp
