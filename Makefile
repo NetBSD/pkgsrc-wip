@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5433 2013/08/22 20:39:41 szptvlfn Exp $
+# $Id: Makefile,v 1.5434 2013/08/22 22:04:08 szptvlfn Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -976,6 +976,7 @@ SUBDIR+=	hs-cgi
 SUBDIR+=	hs-chalkboard
 SUBDIR+=	hs-chalkboard-viewer
 SUBDIR+=	hs-chunks
+SUBDIR+=	hs-citeproc-hs
 SUBDIR+=	hs-cmdargs
 SUBDIR+=	hs-collections-api
 SUBDIR+=	hs-collections-base-instances
