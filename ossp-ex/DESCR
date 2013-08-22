@@ -1,0 +1,17 @@
+OSSP ex is a small ISO-C++ style exception handling library for use in the ISO-C
+language. It allows you to use the paradigm of throwing and catching exceptions
+in order to reduce the amount of error handling code without making your program
+less robust.
+
+This is achieved by directly transferring exceptional return codes (and the
+program control flow) from the location where the exception is raised (throw
+point) to the location where it is handled (catch point) -- usually from a
+deeply nested sub-routine to a parent routine. All intermediate routines no
+longer have to make sure that the exceptional return codes from sub-routines are
+correctly passed back to the parent.
+
+The OSSP ex facility also provides advanced exception handling features like
+shielded and deferred exceptions. Additionally, OSSP ex allows you to choose the
+used underlying machine context switching facility and optionally support multi-
+threading environments by allowing you to store the exception catching stack in
+a thread-safe way.
