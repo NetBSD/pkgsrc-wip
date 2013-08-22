@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5430 2013/08/21 22:17:18 airhead Exp $
+# $Id: Makefile,v 1.5431 2013/08/22 19:50:23 szptvlfn Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -964,6 +964,7 @@ SUBDIR+=	hs-bindings-audiofile
 SUBDIR+=	hs-bindings-librrd
 SUBDIR+=	hs-blaze-builder
 SUBDIR+=	hs-blaze-html
+SUBDIR+=	hs-blaze-markup
 SUBDIR+=	hs-blaze-textual
 SUBDIR+=	hs-bytestring-trie
 SUBDIR+=	hs-cabal-query
