@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/08/22 11:14:58 obache Exp $
+
+SHA1 (var-1.1.3.tar.gz) = ebc8cab3431cacc7897b2d9d804e05cdb3ec48ee
+RMD160 (var-1.1.3.tar.gz) = e810dd1e232f460cba9a6fcc3f9caf7bff683d75
+Size (var-1.1.3.tar.gz) = 343590 bytes

@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2013/08/22 11:14:58 obache Exp $
+bin/var-config
+include/var.h
+lib/libvar.la
+man/man1/var-config.1
+man/man3/var.3

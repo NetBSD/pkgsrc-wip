@@ -1,0 +1,13 @@
+OSSP var is a flexible, full-featured and fast variable construct expansion
+library. It supports a configurable variable construct syntax very similar to
+the style found in many scripting languages (like @name, ${name}, , etc.) and
+provides both simple scalar (${name}) and array (${name[index]}) expansion, plus
+optionally one or more post-operations on the expanded value (${name:op:op...}).
+
+The supported post-operations are length determination, case conversion,
+defaults, postive and negative alternatives, sub-strings, regular expression
+based substitutions, character translations, and padding. Additionally, a meta-
+onstruct plus arithmetic expressions for index and range calculations allow
+(even nested) iterations over array variable expansions
+(..[..${name[#+1]}..]..). The actual variable value lookup is performed through
+a callback function, so OSSP var can expand arbitrary values.
