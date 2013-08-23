@@ -1,15 +1,13 @@
-# $NetBSD: Makefile,v 1.6 2012/12/15 16:31:52 slitvinov Exp $
-#
+# $NetBSD: Makefile,v 1.7 2013/08/23 11:20:27 thomasklausner Exp $
 
-DISTNAME=	ncdu-1.9
+DISTNAME=	ncdu-1.10
 CATEGORIES=	filesystems
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ncdu/}
 
 COMMENT=	Disk usage visualization tool
-LICENSE=	modified-bsd
-
 MAINTAINER=	slitvinov@gmail.com
 HOMEPAGE=	http://dev.yorhel.nl/ncdu
+LICENSE=	modified-bsd
 
 GNU_CONFIGURE=	yes
 
