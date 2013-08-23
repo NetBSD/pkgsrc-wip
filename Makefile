@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5437 2013/08/23 11:32:50 thomasklausner Exp $
+# $Id: Makefile,v 1.5438 2013/08/23 20:58:17 wongk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2836,6 +2836,7 @@ SUBDIR+=	py-yaml
 SUBDIR+=	py-yapgvb
 SUBDIR+=	py-yapps2
 SUBDIR+=	py-yellowhiggs
+SUBDIR+=	py-yenc
 SUBDIR+=	py-yt
 SUBDIR+=	py-zeitgeist
 SUBDIR+=	py-zipline
