@@ -1,31 +1,42 @@
-# $NetBSD: Makefile,v 1.5 2013/08/21 12:32:41 obache Exp $
+# $NetBSD: Makefile,v 1.6 2013/08/23 01:09:34 szptvlfn Exp $
 
-DISTNAME=					pandoc-1.2
-PKGREVISION=				1
-CATEGORIES=				textproc
-MASTER_SITES=			http://pandoc.googlecode.com/files/
+DISTNAME=	pandoc-1.11.1
+CATEGORIES=	textproc
 
-MAINTAINER=				zecrazytux@zecrazytux.net
-HOMEPAGE=					http://johnmacfarlane.net/pandoc/
-COMMENT=					Pandoc is a Haskell library to convert markups
+MAINTAINER=	zecrazytux@zecrazytux.net
+COMMENT=	Conversion between markup formats
+LICENSE=	gnu-gpl-v2
 
-USE_TOOLS+=				gmake sed
+INSTALLATION_DIRS+=	${PKGMANDIR}/man1 ${PKGMANDIR}/man5
 
-WRKSRC=						${WRKDIR}/pandoc-1.2
-USE_LANGUAGES=		c
+post-install:
+	${INSTALL_MAN} ${WRKSRC}/man/man1/pandoc.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/man/man5/pandoc_markdown.5 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
 
-SUBST_CLASSES+=		makefile
-
-SUBST_MESSAGE.makefile=		Fixing the Makefile.
-SUBST_STAGE.makefile=			pre-configure
-SUBST_FILES.makefile=			Makefile
-SUBST_SED.makefile=				-e 's,+a=x,-a=x,g'
-SUBST_SED.makefile+=			-e 's,$$(STRIP)\ $$(EXECS),$$(STRIP)\ $$(MAIN),g'
-SUBST_SED.makefile+=			-e 's,^MANPATH.*,MANPATH\ :=\ $$(DESTPATH)/man,g'
-
-.include "../../wip/hs-zip-archive/buildlink3.mk"
+.include "../../devel/pcre/buildlink3.mk"
+.include "../../wip/mk/haskell.mk"
+.include "../../wip/hs-base64-bytestring/buildlink3.mk"
+.include "../../wip/hs-blaze-html/buildlink3.mk"
+.include "../../wip/hs-blaze-markup/buildlink3.mk"
+.include "../../wip/hs-citeproc-hs/buildlink3.mk"
+.include "../../wip/hs-data-default/buildlink3.mk"
 .include "../../wip/hs-digest/buildlink3.mk"
+.include "../../wip/hs-highlighting-kate/buildlink3.mk"
+.include "../../wip/hs-HTTP/buildlink3.mk"
+.include "../../wip/hs-json/buildlink3.mk"
+.include "../../wip/hs-mtl/buildlink3.mk"
+.include "../../wip/hs-network/buildlink3.mk"
+.include "../../wip/hs-pandoc-types/buildlink3.mk"
+.include "../../wip/hs-parsec/buildlink3.mk"
+.include "../../wip/hs-pcre-light/buildlink3.mk"
+.include "../../wip/hs-random//buildlink3.mk"
+.include "../../wip/hs-syb/buildlink3.mk"
+.include "../../wip/hs-tagsoup/buildlink3.mk"
+.include "../../wip/hs-temporary/buildlink3.mk"
+.include "../../wip/hs-texmath/buildlink3.mk"
+.include "../../wip/hs-text/buildlink3.mk"
 .include "../../wip/hs-utf8-string/buildlink3.mk"
+.include "../../wip/hs-xml/buildlink3.mk"
+.include "../../wip/hs-zip-archive/buildlink3.mk"
 .include "../../wip/hs-zlib/buildlink3.mk"
-.include "../../lang/ghc/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
