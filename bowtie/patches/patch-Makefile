@@ -1,0 +1,65 @@
+$NetBSD: patch-Makefile,v 1.1 2013/08/24 13:48:36 outpaddling Exp $
+
+--- Makefile.orig	2013-04-18 19:33:39.000000000 +0000
++++ Makefile
+@@ -5,9 +5,9 @@
+ SEQAN_DIR = SeqAn-1.1
+ SEQAN_INC = -I $(SEQAN_DIR)
+ INC = $(SEQAN_INC)
+-CPP = g++
+-CXX = $(CPP)
+-CC = gcc
++# CPP = g++
++# CXX = $(CPP)
++# CC = gcc
+ HEADERS = $(wildcard *.h)
+ BOWTIE_MM = 1
+ BOWTIE_SHARED_MEM = 1
+@@ -47,6 +47,7 @@ ifneq (,$(findstring Linux,$(shell uname
+     LINUX = 1
+     EXTRA_FLAGS += -Wl,--hash-style=both
+ endif
++LINUX = 1
+ 
+ MM_DEF = 
+ ifeq (1,$(BOWTIE_MM))
+@@ -107,22 +108,22 @@ ifeq (1,$(MINGW))
+ endif
+ 
+ ifeq (1,$(LINUX))
+-    ifeq (x86_64, $(shell uname -p))
++    ifeq (amd64, $(shell uname -p))
+         BITS=64
+     endif
+ endif
+ 
+ # Convert BITS=?? to a -m flag
+ BITS_FLAG =
+-ifeq (32,$(BITS))
+-    BITS_FLAG = -m32
+-endif
+-ifeq (64,$(BITS))
+-    BITS_FLAG = -m64
+-endif
++#ifeq (32,$(BITS))
++    #BITS_FLAG = -m32
++#endif
++#ifeq (64,$(BITS))
++    #BITS_FLAG = -m64
++#endif
+ 
+ DEBUG_FLAGS = -O0 -g3 $(BITS_FLAG)
+-RELEASE_FLAGS = -O3 $(BITS_FLAG)
++RELEASE_FLAGS = # -O3 $(BITS_FLAG)
+ NOASSERT_FLAGS = -DNDEBUG
+ FILE_FLAGS = -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE
+ 
+@@ -179,7 +180,7 @@ DEFS=-fno-strict-aliasing \
+      $(MM_DEF) \
+      $(SHMEM_DEF)
+ 
+-ALL_FLAGS = $(EXTRA_FLAGS) $(CFLAGS) $(CXXFLAGS)
++ALL_FLAGS = $(EXTRA_FLAGS) $(CXXFLAGS)
+ DEBUG_DEFS = -DCOMPILER_OPTIONS="\"$(DEBUG_FLAGS) $(ALL_FLAGS)\""
+ RELEASE_DEFS = -DCOMPILER_OPTIONS="\"$(RELEASE_FLAGS) $(ALL_FLAGS)\""
+ 
