@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1 2013/08/24 13:48:36 outpaddling Exp $
+$NetBSD: distinfo,v 1.2 2013/08/24 15:10:37 outpaddling Exp $
 
 SHA1 (v1.0.0.tar.gz) = 33e854d71be55542ce9039f96ae0771739d3ec73
 RMD160 (v1.0.0.tar.gz) = 405702fc2767aae81e0812aaf31ae9a7196e3c4b
 Size (v1.0.0.tar.gz) = 7814011 bytes
+SHA1 (patch-Makefile) = 14299987b2a6e2896742e8736e2047b16b43d3c8
