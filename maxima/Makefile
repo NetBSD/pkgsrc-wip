@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2012/10/03 15:09:52 asau Exp $
+# $NetBSD: Makefile,v 1.35 2013/08/24 17:09:13 asau Exp $
 
 DISTNAME=		maxima-5.27.0
 # On updates, please make sure editors/TeXmacs knows about the new
@@ -26,7 +26,7 @@ TEST_TARGET=		check
 
 # Section for VCS-based package:
 
-PKGNAME=		maxima-5.27.99
+PKGNAME=		maxima-5.99
 
 GIT_REPOSITORIES=	maxima
 GIT_REPO.maxima=	git://maxima.git.sourceforge.net/gitroot/maxima/maxima
