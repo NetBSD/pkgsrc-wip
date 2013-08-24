@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2012/10/03 21:32:46 asau Exp $
+# $NetBSD: Makefile,v 1.21 2013/08/24 19:42:36 asau Exp $
 #
 
 DISTNAME=		open-axiom-1.4.1
@@ -15,6 +15,7 @@ COMMENT=		Platform for symbolic, algebraic, and numerical computations
 MAKE_JOBS_SAFE=		no
 
 USE_LANGUAGES=		c c++
+GCC_REQD=		4.7	# C++11 is needed
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake makeinfo awk:run
