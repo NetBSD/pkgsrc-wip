@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2013/08/25 08:16:03 obache Exp $
+bin/str-config
+include/str.h
+lib/libstr.la
+man/man1/str-config.1
+man/man3/str.3
