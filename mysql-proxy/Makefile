@@ -1,22 +1,22 @@
-# $NetBSD: Makefile,v 1.2 2013/05/16 09:25:39 fhajny Exp $
+# $NetBSD: Makefile,v 1.3 2013/08/26 10:03:48 fhajny Exp $
 #
 
 DISTNAME=	mysql-proxy-0.8.3
 PKGNAME=	${DISTNAME:S/mysql/mysql${_MYSQL_VERSION:S/50/5/}/}
+PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	${MASTER_SITE_MYSQL:=MySQL-Proxy/}
 
 MAINTAINER=	filip@joyent.com
 HOMEPAGE=	http://dev.mysql.com/downloads/mysql-proxy/
 COMMENT=	Monitor, analyze, or transform the communication of MySQL
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 MYSQL_VERSIONS_ACCEPTED=	56 55 51 50
 
 GNU_CONFIGURE=	yes
-USE_CMAKE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	flex pkg-config
 
