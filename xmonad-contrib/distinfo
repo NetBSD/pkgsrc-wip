@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.6 2013/02/28 15:27:50 szptvlfn Exp $
+$NetBSD: distinfo,v 1.7 2013/08/27 13:44:48 szptvlfn Exp $
 
-SHA1 (xmonad-contrib-0.11.tar.gz) = 0d961101834d5c6f97cbb8282810db791ab1cc94
-RMD160 (xmonad-contrib-0.11.tar.gz) = 3d183c062b7f38e34b6effd35c4ed60f6f3d23bc
-Size (xmonad-contrib-0.11.tar.gz) = 402567 bytes
-SHA1 (files/no_use_xft) = e81f81e6e4f79369a33839590e547581d0186e5a
-RMD160 (files/no_use_xft) = 4ce6ec2ee155b0c18c056d3b1802e26c43cb0766
-SHA1 (patch-XMonad_Hooks_DebugEvents.hs) = 2bbfe5ded0da9f27b3ec3fee4cfe75a3ee1bc18b
+SHA1 (xmonad-contrib-0.11.2.tar.gz) = b913c852dc7e189216a10b4fc0cc46fae79ddc1a
+RMD160 (xmonad-contrib-0.11.2.tar.gz) = fe14103dd108626572f952228f4ef8057ac54e70
+Size (xmonad-contrib-0.11.2.tar.gz) = 401758 bytes
+SHA1 (files/no_use_xft) = 011526f6ed3ad35e2d2c5563c369cb84160c3d57

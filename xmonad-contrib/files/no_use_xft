@@ -1,6 +1,8 @@
---- xmonad-contrib.cabal.orig	2013-01-01 10:32:44.000000000 +0900
-+++ xmonad-contrib.cabal	2013-01-02 16:47:51.000000000 +0900
-@@ -49,6 +49,7 @@
+$NetBSD: no_use_xft,v 1.2 2013/08/27 13:44:48 szptvlfn Exp $
+
+--- xmonad-contrib.cabal.orig	2013-07-16 02:52:11.000000000 +0000
++++ xmonad-contrib.cabal
+@@ -46,6 +46,7 @@ flag small_base
  
  flag use_xft
    description: Use Xft to render text
