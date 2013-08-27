@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2013/05/04 13:35:44 makoto Exp $
+# $NetBSD: Makefile,v 1.67 2013/08/27 04:54:02 makoto Exp $
 #
 
 .include	"version.mk"
@@ -14,7 +14,7 @@ LICENSE=	gnu-gpl-v3
 
 USE_TOOLS+=	gmake makeinfo gzip autoconf automake
 # for example, Mac OS X 10.6.1 has 2.61 which fails
-AUTOCONF_REQUIRED=	2.65
+AUTOCONF_REQD=	2.65
 
 CONFLICTS+=	emacs-nox11-[0-9]*
 
@@ -35,6 +35,8 @@ WRKSRC=		${WRKDIR}/emacs
 CONFIGURE_ARGS+=	--srcdir=${WRKSRC:Q}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
 CONFIGURE_ENV+=		GAMEOWN=${GAMEOWN:Q}
+# For wip special, following gives symbol names when back trace is shown.
+CFLAGS+=		-g
 
 BUILD_DEFS+=		VARBASE
 BUILD_DEFS+=		GAMEDATAMODE
@@ -67,13 +69,15 @@ GL_VERSION!=	\
 post-extract:
 	# set auto-load for send-pr library
 	cp ${FILESDIR}/site-init.el ${WRKSRC}/lisp
-# Comment out for debug.
+# Uncomment for debug.
 #.if ${MESALIB_VERSION:R} >= 7.8
 #	@echo '  ** MesaLib version 7.8.2 or later installed.'
 #.endif
 
+# LANG other than C may give (false) automake missing due to Language 
+# related warning.
 pre-configure:
-	(cd ${WRKSRC}; ./autogen.sh)
+	(cd ${WRKSRC}; env LANG=C ./autogen.sh)
 
 .include "../../wip/mk/git-package.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
