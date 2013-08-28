@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2012/12/05 12:22:40 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.9 2013/08/28 06:47:25 thomasklausner Exp $
 
-DISTNAME=	calypso-0.5
+DISTNAME=	calypso-1.1
 CATEGORIES=	net
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
