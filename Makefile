@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5440 2013/08/28 09:04:16 fhajny Exp $
+# $Id: Makefile,v 1.5441 2013/08/28 20:21:06 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -784,6 +784,7 @@ SUBDIR+=	gmm
 SUBDIR+=	gmp-ecm
 SUBDIR+=	gmpc-lyricsplugin
 SUBDIR+=	gmpc-wikipedia
+SUBDIR+=	gmrender-resurrect-git
 SUBDIR+=	gmrun
 SUBDIR+=	gnocchi
 SUBDIR+=	gnochm
@@ -1878,6 +1879,12 @@ SUBDIR+=	orion
 SUBDIR+=	oslc
 SUBDIR+=	osmo
 SUBDIR+=	osmose
+SUBDIR+=	ossp-ex
+SUBDIR+=	ossp-l2
+SUBDIR+=	ossp-sa
+SUBDIR+=	ossp-str
+SUBDIR+=	ossp-val
+SUBDIR+=	ossp-var
 SUBDIR+=	othman
 SUBDIR+=	outguess
 SUBDIR+=	overgod
@@ -2419,6 +2426,7 @@ SUBDIR+=	py-cscope
 SUBDIR+=	py-csp
 SUBDIR+=	py-cvf
 SUBDIR+=	py-cvxopt
+SUBDIR+=	py-cxnet
 SUBDIR+=	py-cythongsl
 SUBDIR+=	py-dana
 SUBDIR+=	py-datarray
