@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1 2013/08/28 20:03:17 thomasklausner Exp $
+bin/gmediarender
+share/examples/gmrender-resurrect/gmediarenderer
+share/gmediarender/grender-128x128.png
+share/gmediarender/grender-64x64.png

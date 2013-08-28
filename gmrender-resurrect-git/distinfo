@@ -1,0 +1,3 @@
+$NetBSD: distinfo,v 1.1 2013/08/28 20:03:17 thomasklausner Exp $
+
+SHA1 (patch-src_webserver.c) = 5f6221408201a4236c8806a8616ba5bfbe6d29ac
