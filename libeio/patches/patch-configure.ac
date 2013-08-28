@@ -1,0 +1,17 @@
+$NetBSD: patch-configure.ac,v 1.1 2013/08/28 09:02:29 fhajny Exp $
+
+Remove optimization.
+
+--- configure.ac.orig	2012-10-16 20:30:08.000000000 +0000
++++ configure.ac
+@@ -12,8 +12,8 @@ AC_PROG_LIBTOOL
+ 
+ AC_PROG_CC
+ 
+-if test "x$GCC" = xyes ; then
+-  CFLAGS="-O3 $CFLAGS"
++if test "x$CC" = xyes ; then
++  CFLAGS="$CFLAGS"
+ fi
+ 
+ m4_include([libeio.m4])
