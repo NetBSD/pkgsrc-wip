@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/08/22 22:39:20 szptvlfn Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/08/28 08:55:11 szptvlfn Exp $
 lib/texmath-${PKGVERSION}/${HASKELL_VERSION}/HStexmath-${PKGVERSION}.o
 lib/texmath-${PKGVERSION}/${HASKELL_VERSION}/Text/TeXMath.hi
 lib/texmath-${PKGVERSION}/${HASKELL_VERSION}/Text/TeXMath.p_hi
@@ -8,6 +8,8 @@ lib/texmath-${PKGVERSION}/${HASKELL_VERSION}/Text/TeXMath/MathML.hi
 lib/texmath-${PKGVERSION}/${HASKELL_VERSION}/Text/TeXMath/MathML.p_hi
 lib/texmath-${PKGVERSION}/${HASKELL_VERSION}/Text/TeXMath/OMML.hi
 lib/texmath-${PKGVERSION}/${HASKELL_VERSION}/Text/TeXMath/OMML.p_hi
+lib/texmath-${PKGVERSION}/${HASKELL_VERSION}/Text/TeXMath/Pandoc.hi
+lib/texmath-${PKGVERSION}/${HASKELL_VERSION}/Text/TeXMath/Pandoc.p_hi
 lib/texmath-${PKGVERSION}/${HASKELL_VERSION}/Text/TeXMath/Parser.hi
 lib/texmath-${PKGVERSION}/${HASKELL_VERSION}/Text/TeXMath/Parser.p_hi
 lib/texmath-${PKGVERSION}/${HASKELL_VERSION}/Text/TeXMath/ToUnicode.hi
