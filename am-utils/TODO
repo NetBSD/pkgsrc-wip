@@ -1,1 +1,1 @@
-Add OPTIONs for --with-{ldap,hesiod,nmbd}
+Add OPTIONs for --with-{ldap,hesiod,ndbm}

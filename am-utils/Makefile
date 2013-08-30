@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2012/09/24 16:56:33 asau Exp $
+# $NetBSD: Makefile,v 1.12 2013/08/30 14:56:45 hfath Exp $
 #
 
-DISTNAME=	am-utils-6.1.5
-PKGREVISION=	1
+DISTNAME=	${PKGNAME}-rc1
+PKGNAME=	am-utils-6.2
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://ftp.am-utils.org/pub/am-utils/ \
                 ftp://ftp.cs.umn.edu/pub/am-utils \

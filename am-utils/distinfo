@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.3 2008/04/16 20:07:33 cheusov Exp $
+$NetBSD: distinfo,v 1.4 2013/08/30 14:56:45 hfath Exp $
 
-SHA1 (am-utils-6.1.5.tar.gz) = 21185e86a3de1c6fb8bfe922899391b1f46ed899
-RMD160 (am-utils-6.1.5.tar.gz) = ab1485aaa65c522cc5db7c7917ec59d3b47e0803
-Size (am-utils-6.1.5.tar.gz) = 1922684 bytes
+SHA1 (am-utils-6.2-rc1.tar.gz) = b3afe9e4f4d4c20cc4e431af28b381f66b511114
+RMD160 (am-utils-6.2-rc1.tar.gz) = d7b4437cb69b7067a562ba3a14ae63dc2a75dda1
+Size (am-utils-6.2-rc1.tar.gz) = 1730021 bytes
 SHA1 (patch-aa) = 181e045b7bd049eddac9248c6eb4cd2209aaf325
 SHA1 (patch-ab) = 3502892407ecf89f47f3683defdf9c1dfada9f45
