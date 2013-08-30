@@ -1,0 +1,32 @@
+$NetBSD: patch-ylwrap,v 1.1 2013/08/30 15:03:43 hfath Exp $
+
+Yanked from 'bootstrap' script, so we can apply it earlier.
+
+--- ylwrap.orig	2013-08-30 10:25:30.000000000 +0000
++++ ylwrap
+@@ -199,8 +199,24 @@ if test $ret -eq 0; then
+       # include guards too.
+       FROM=`guard "$from"`
+       TARGET=`guard "$to"`
++
++      prefix=`echo $input | sed \
++		-e 's,^.*/,,g' \
++		-e 's/_parse.[yl]$/_/g' \
++		-e 's/_tok.[yl]$/_/g'`
++
++      case $prefix in
++      *.y)
++	      code_prefix="$(basename $prefix _gram.y)_yy";;
++      *.l)
++	      code_prefix="$(basename $prefix _lex.l)_yy";;
++      *)
++	      code_prefix="$prefix";;
++      esac
++
+       sed -e "/^#/!b" -e "s|$input_rx|$input_sub_rx|" -e "$rename_sed" \
+-          -e "s|$FROM|$TARGET|" "$from" >"$target" || ret=$?
++          -e "s|$FROM|$TARGET|" "$from" | sed -e "s|yy|$code_prefix|g" > \
++	  "$target" || ret=$?
+ 
+       # Check whether files must be updated.
+       if test "$from" != "$parser"; then
