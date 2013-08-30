@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5442 2013/08/29 02:20:12 outpaddling Exp $
+# $Id: Makefile,v 1.5443 2013/08/30 15:05:04 hfath Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -90,6 +90,7 @@ SUBDIR+=	alsa-plugins
 SUBDIR+=	alsa-utils
 SUBDIR+=	alt-ergo
 SUBDIR+=	am-utils
+SUBDIR+=	am-utils-git
 SUBDIR+=	amavis-logwatch
 SUBDIR+=	amaya
 SUBDIR+=	analizo
