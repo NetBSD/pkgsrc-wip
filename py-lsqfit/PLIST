@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1 2013/08/31 20:23:39 jihbed Exp $
+${PYSITELIB}/gvar/__init__.py
+${PYSITELIB}/gvar/__init__.pyc
+${PYSITELIB}/gvar/__init__.pyo
+${PYSITELIB}/gvar/_bufferdict.so
+${PYSITELIB}/gvar/_gvarcore.so
+${PYSITELIB}/gvar/_svec_smat.so
+${PYSITELIB}/gvar/_utilities.so
+${PYSITELIB}/gvar/dataset.so
+${PYSITELIB}/lsqfit/__init__.py
+${PYSITELIB}/lsqfit/__init__.pyc
+${PYSITELIB}/lsqfit/__init__.pyo
+${PYSITELIB}/lsqfit/_extras.py
+${PYSITELIB}/lsqfit/_extras.pyc
+${PYSITELIB}/lsqfit/_extras.pyo
+${PYSITELIB}/lsqfit/_utilities.so
+${PYSITELIB}/lsqfit/_version.py
+${PYSITELIB}/lsqfit/_version.pyc
+${PYSITELIB}/lsqfit/_version.pyo

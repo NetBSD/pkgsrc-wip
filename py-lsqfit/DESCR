@@ -1,0 +1,11 @@
+These packages facilitate least-squares fitting of noisy data by
+multi-dimensional, nonlinear functions of arbitrarily many
+parameters. The central package is :mod:`lsqfit` which provides
+the fitting capability. :mod:`lsqfit` makes heavy use of package
+:mod:`gvar`, which provides tools for the analysis of error
+propagation, and also for the creation of complicated
+multi-dimensional gaussian distributions. :mod:`lsqfit` supports
+Bayesian priors for the fit parameters, with arbitrarily
+complicated multidimensional gaussian distributions. It uses
+automatic differentiation to compute gradients, greatly simplifying
+the design of fit functions.
