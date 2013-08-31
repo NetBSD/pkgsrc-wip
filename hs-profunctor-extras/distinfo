@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/08/31 08:33:03 szptvlfn Exp $
+
+SHA1 (profunctor-extras-3.3.3.1.tar.gz) = 0aacfa3b9e9f0ccc2a5cf23a5796fab6cfe0a713
+RMD160 (profunctor-extras-3.3.3.1.tar.gz) = 6088a8a2e1ce37dabae7e3d7e9e2b56b260f256d
+Size (profunctor-extras-3.3.3.1.tar.gz) = 6493 bytes
