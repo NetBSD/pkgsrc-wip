@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/08/31 21:59:04 jihbed Exp $
+
+SHA1 (txdbus-1.0.5.tar.gz) = 730e26c70815f2dab4135de572a49179ec8f9977
+RMD160 (txdbus-1.0.5.tar.gz) = f7a081553063937bdf4a85b399e0b60a5d4709fa
+Size (txdbus-1.0.5.tar.gz) = 72082 bytes
