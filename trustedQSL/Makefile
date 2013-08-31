@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2013/07/17 14:20:26 makoto Exp $
+# $NetBSD: Makefile,v 1.23 2013/08/31 15:50:22 makoto Exp $
 
-DISTNAME=		tqsl-1.14.3
+DISTNAME=		tqsl-2.0
 # 1.14 instead of 114 may be better (?)
 #PKGNAME=		${DISTNAME:C/[0-9]/&./}
 CATEGORIES=		ham
