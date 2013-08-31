@@ -1,10 +1,12 @@
-@comment $NetBSD: PLIST,v 1.1 2013/04/12 20:24:15 szptvlfn Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/08/31 04:51:52 szptvlfn Exp $
 lib/generic-deriving-${PKGVERSION}/${HASKELL_VERSION}/Generics/Deriving.hi
 lib/generic-deriving-${PKGVERSION}/${HASKELL_VERSION}/Generics/Deriving.p_hi
 lib/generic-deriving-${PKGVERSION}/${HASKELL_VERSION}/Generics/Deriving/Base.hi
 lib/generic-deriving-${PKGVERSION}/${HASKELL_VERSION}/Generics/Deriving/Base.p_hi
 lib/generic-deriving-${PKGVERSION}/${HASKELL_VERSION}/Generics/Deriving/ConNames.hi
 lib/generic-deriving-${PKGVERSION}/${HASKELL_VERSION}/Generics/Deriving/ConNames.p_hi
+lib/generic-deriving-${PKGVERSION}/${HASKELL_VERSION}/Generics/Deriving/Copoint.hi
+lib/generic-deriving-${PKGVERSION}/${HASKELL_VERSION}/Generics/Deriving/Copoint.p_hi
 lib/generic-deriving-${PKGVERSION}/${HASKELL_VERSION}/Generics/Deriving/Enum.hi
 lib/generic-deriving-${PKGVERSION}/${HASKELL_VERSION}/Generics/Deriving/Enum.p_hi
 lib/generic-deriving-${PKGVERSION}/${HASKELL_VERSION}/Generics/Deriving/Eq.hi

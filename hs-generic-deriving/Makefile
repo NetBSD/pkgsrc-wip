@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2013/04/12 20:24:15 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.2 2013/08/31 04:51:52 szptvlfn Exp $
 #
 
-DISTNAME=	generic-deriving-1.5.0
+DISTNAME=	generic-deriving-1.6.1
 CATEGORIES=	devel
 
 MAINTAINER=	szptvlfn@a-net.email.ne.jp
