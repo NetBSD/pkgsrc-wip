@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2012/02/01 16:38:18 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2013/08/31 06:56:55 szptvlfn Exp $
 #
 
-DISTNAME=	comonad-transformers-2.0.2
+DISTNAME=	comonad-transformers-3.1
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
