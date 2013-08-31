@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5447 2013/08/31 08:29:08 szptvlfn Exp $
+# $Id: Makefile,v 1.5448 2013/08/31 08:37:07 szptvlfn Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1096,6 +1096,7 @@ SUBDIR+=	hs-pointed
 SUBDIR+=	hs-pointedlist
 SUBDIR+=	hs-pointedlist03
 SUBDIR+=	hs-primitive
+SUBDIR+=	hs-profunctor-extras
 SUBDIR+=	hs-profunctors
 SUBDIR+=	hs-punycode
 SUBDIR+=	hs-pureMD5
