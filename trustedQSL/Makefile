@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.23 2013/08/31 15:50:22 makoto Exp $
+# $NetBSD: Makefile,v 1.24 2013/08/31 16:56:14 makoto Exp $
 
 DISTNAME=		tqsl-2.0
-# 1.14 instead of 114 may be better (?)
-#PKGNAME=		${DISTNAME:C/[0-9]/&./}
+# It is Release Candidate, so 2.0 is too big for that.
+PKGNAME=		tqsl-1.99.1
 CATEGORIES=		ham
 MASTER_SITES=		http://www.arrl.org/files/file/LoTW%20Instructions/
 MASTER_SITES=		http://www.arrl.org/files/file/TrustedQSL-Beta/
