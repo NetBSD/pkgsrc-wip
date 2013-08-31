@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2013/04/20 04:35:40 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.3 2013/08/31 05:26:28 szptvlfn Exp $
 #
 
-DISTNAME=	contravariant-0.4
+DISTNAME=	contravariant-0.4.4
 CATEGORIES=	math
 
 MAINTAINER=	pho@cielonegro.org
-COMMENT=	Haskell 98 contravariant functors
+COMMENT=	Contravariant functors
 LICENSE=	modified-bsd
 
 .include "../../wip/mk/haskell.mk"
