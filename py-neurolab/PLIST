@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/04/27 22:16:55 jihbed Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/08/31 21:33:51 jihbed Exp $
 ${PYSITELIB}/neurolab/__init__.py
 ${PYSITELIB}/neurolab/__init__.pyc
 ${PYSITELIB}/neurolab/__init__.pyo
@@ -20,12 +20,27 @@ ${PYSITELIB}/neurolab/net.pyo
 ${PYSITELIB}/neurolab/tool.py
 ${PYSITELIB}/neurolab/tool.pyc
 ${PYSITELIB}/neurolab/tool.pyo
-${PYSITELIB}/neurolab/train.py
-${PYSITELIB}/neurolab/train.pyc
-${PYSITELIB}/neurolab/train.pyo
+${PYSITELIB}/neurolab/train/__init__.py
+${PYSITELIB}/neurolab/train/__init__.pyc
+${PYSITELIB}/neurolab/train/__init__.pyo
+${PYSITELIB}/neurolab/train/delta.py
+${PYSITELIB}/neurolab/train/delta.pyc
+${PYSITELIB}/neurolab/train/delta.pyo
+${PYSITELIB}/neurolab/train/gd.py
+${PYSITELIB}/neurolab/train/gd.pyc
+${PYSITELIB}/neurolab/train/gd.pyo
+${PYSITELIB}/neurolab/train/lvq.py
+${PYSITELIB}/neurolab/train/lvq.pyc
+${PYSITELIB}/neurolab/train/lvq.pyo
+${PYSITELIB}/neurolab/train/spo.py
+${PYSITELIB}/neurolab/train/spo.pyc
+${PYSITELIB}/neurolab/train/spo.pyo
+${PYSITELIB}/neurolab/train/train.py
+${PYSITELIB}/neurolab/train/train.pyc
+${PYSITELIB}/neurolab/train/train.pyo
+${PYSITELIB}/neurolab/train/wta.py
+${PYSITELIB}/neurolab/train/wta.pyc
+${PYSITELIB}/neurolab/train/wta.pyo
 ${PYSITELIB}/neurolab/trans.py
 ${PYSITELIB}/neurolab/trans.pyc
 ${PYSITELIB}/neurolab/trans.pyo
-${PYSITELIB}/neurolab/version.py
-${PYSITELIB}/neurolab/version.pyc
-${PYSITELIB}/neurolab/version.pyo
