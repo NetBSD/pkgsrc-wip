@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.4 2012/10/06 17:13:30 asau Exp $
-#
+# $NetBSD: Makefile,v 1.5 2013/08/31 22:13:21 jihbed Exp $
 
-DISTNAME=	algopy-0.3.1
+DISTNAME=	algopy-0.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
-MASTER_SITES=	http://pypi.python.org/packages/source/a/algopy/
+MASTER_SITES=	https://pypi.python.org/packages/source/a/algopy/
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://packages.python.org/algopy
 COMMENT=	Taylor Arithmetic Computation and Algorithmic Differentiation
 LICENSE=	modified-bsd
+
+WRKSRC=		${WRKDIR}/algopy-0.5.0
 
 USE_LANGUAGES=	# none
 
