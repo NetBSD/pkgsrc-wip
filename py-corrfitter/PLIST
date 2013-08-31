@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2013/08/31 20:27:22 jihbed Exp $
+${PYSITELIB}/corrfitter.py
+${PYSITELIB}/corrfitter.pyc
+${PYSITELIB}/corrfitter.pyo
