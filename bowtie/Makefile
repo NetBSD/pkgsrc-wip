@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2013/09/01 15:52:29 asau Exp $
+# $NetBSD: Makefile,v 1.4 2013/09/01 16:02:54 asau Exp $
 
 DISTNAME=	v${PORTVERSION}
 DIST_SUBDIR=	bowtie
@@ -19,12 +19,9 @@ USE_TOOLS+=	gmake
 # FETCH_ARGS+=	-F
 FETCH_USING=	curl
 
-# Doesn't work unless PLIST is correct.  Comment out until pkg is finished.
-AUTO_MKDIRS=	yes
+INSTALLATION_DIRS=	bin share/bowtie
 
 do-install:
-	# ${MKDIR} ${DESTDIR}${PREFIX}/bin \
-		# ${DESTDIR}${PREFIX}/share/bowtie
 	${INSTALL_PROGRAM} \
 		${WRKSRC}/bowtie \
 		${WRKSRC}/bowtie-build \
