@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2013/09/01 16:08:58 asau Exp $
+# $NetBSD: Makefile,v 1.6 2013/09/01 16:15:44 asau Exp $
 
 DISTNAME=	v${PORTVERSION}
 DIST_SUBDIR=	bowtie
@@ -11,7 +11,7 @@ HOMEPAGE=	http://bowtie-bio.sourceforge.net/index.shtml
 COMMENT=	Ultrafast, memory-efficient short read aligner
 
 PORTVERSION=	1.0.0
-WRKSRC=		${WRKDIR}/${PKGBASE}-${PORTVERSION}
+WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
 USE_LANGUAGES=	c++
 USE_TOOLS+=	gmake perl:run
