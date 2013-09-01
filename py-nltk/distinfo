@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2011/08/22 12:37:34 thomasklausner Exp $
+$NetBSD: distinfo,v 1.2 2013/09/01 18:16:31 jihbed Exp $
 
-SHA1 (nltk-2.0.1rc1.tar.gz) = 4cd2b834875db6df2662a86a35f90d1e9bb8c1ce
-RMD160 (nltk-2.0.1rc1.tar.gz) = 2ae4a490b73a7d0dc49412a621ed8223761619ec
-Size (nltk-2.0.1rc1.tar.gz) = 961720 bytes
+SHA1 (nltk-3.0a2.tar.gz) = 3ee3cbf32bba9e2d79abd49c107e61a50267e7bd
+RMD160 (nltk-3.0a2.tar.gz) = 58ce0652741e6b3691a9cf3a8977fcaf99dfd9d9
+Size (nltk-3.0a2.tar.gz) = 933452 bytes
