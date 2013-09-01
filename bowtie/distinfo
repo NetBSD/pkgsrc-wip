@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2013/09/01 15:48:08 asau Exp $
+$NetBSD: distinfo,v 1.4 2013/09/01 15:56:45 asau Exp $
 
 SHA1 (bowtie/v1.0.0.tar.gz) = 33e854d71be55542ce9039f96ae0771739d3ec73
 RMD160 (bowtie/v1.0.0.tar.gz) = 405702fc2767aae81e0812aaf31ae9a7196e3c4b
 Size (bowtie/v1.0.0.tar.gz) = 7814011 bytes
 SHA1 (patch-Makefile) = 14299987b2a6e2896742e8736e2047b16b43d3c8
+SHA1 (patch-scripts_random__bowtie__tests.sh) = 999abd0f6f092b24957c343a4bdac9d3d7cc4003
