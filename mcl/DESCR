@@ -1,0 +1,7 @@
+The MCL package is an implementation of the MCL algorithm, and offers
+utilities for manipulating sparse matrices (the essential data structure in the
+MCL algorithm) and conducting cluster experiments.
+
+MCL is currently being used in sciences like biology (protein family detection,
+genomics), computer science (node clustering in Peer-to-Peer networks),
+and linguistics (text analysis)
