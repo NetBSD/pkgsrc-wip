@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2013/08/24 13:48:36 outpaddling Exp $
+# $NetBSD: Makefile,v 1.2 2013/09/01 15:48:08 asau Exp $
 
 DISTNAME=	v${PORTVERSION}
+DIST_SUBDIR=	bowtie
 PKGNAME=	bowtie-${PORTVERSION}
 CATEGORIES=	biology
 MASTER_SITES=	https://github.com/BenLangmead/bowtie/archive/
