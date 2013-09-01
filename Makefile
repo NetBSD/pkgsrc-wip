@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5449 2013/08/31 08:49:51 szptvlfn Exp $
+# $Id: Makefile,v 1.5450 2013/09/01 22:21:40 asau Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -112,7 +112,6 @@ SUBDIR+=	ap-bunzip2
 SUBDIR+=	ap-choke
 SUBDIR+=	ap-chxj
 SUBDIR+=	ap-evasive
-SUBDIR+=	ap-lisp
 SUBDIR+=	ap-macro
 SUBDIR+=	ap-ometer
 SUBDIR+=	ap2-auth-imap
