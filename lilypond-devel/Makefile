@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2013/08/05 11:36:21 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.12 2013/09/01 09:55:03 thomasklausner Exp $
 
-DISTNAME=	lilypond-2.17.23
+DISTNAME=	lilypond-2.17.25
 CATEGORIES=	print
 MASTER_SITES=	http://download.linuxaudio.org/lilypond/sources/v2.17/
 
@@ -61,6 +61,11 @@ CONFIGURE_ENV+= LEX="${PREFIX}/bin/flex"
 .else
 USE_TOOLS+= flex
 .endif
+
+# files were created with bison<3 and regeneration rules
+# aren't correct
+post-extract:
+	rm ${WRKSRC}/lily/out/parser.*
 
 .include "../../devel/pango/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
