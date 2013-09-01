@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2013/09/01 16:02:54 asau Exp $
+# $NetBSD: Makefile,v 1.5 2013/09/01 16:08:58 asau Exp $
 
 DISTNAME=	v${PORTVERSION}
 DIST_SUBDIR=	bowtie
@@ -14,12 +14,14 @@ PORTVERSION=	1.0.0
 WRKSRC=		${WRKDIR}/${PKGBASE}-${PORTVERSION}
 
 USE_LANGUAGES=	c++
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake perl:run
 
 # FETCH_ARGS+=	-F
 FETCH_USING=	curl
 
 INSTALLATION_DIRS=	bin share/bowtie
+
+REPLACE_PERL=	scripts/*.pl scripts/test/*.pl doc/*.pl
 
 do-install:
 	${INSTALL_PROGRAM} \
