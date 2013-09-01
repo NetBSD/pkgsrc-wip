@@ -1,4 +1,0 @@
-mod_lisp talks from Apache to lisp processes by sockets with a very
-straightforward protocol to handle a request. It now reuses the Apache to Lisp
-sockets for improved performance. Future versions will probably be more Lisp
-specific, but for now it can be used by any other language.

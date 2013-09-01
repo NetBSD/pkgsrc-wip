@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5450 2013/09/01 22:21:40 asau Exp $
+# $Id: Makefile,v 1.5451 2013/09/01 22:22:33 asau Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -121,7 +121,6 @@ SUBDIR+=	ap2-evasive
 SUBDIR+=	ap2-jk2
 SUBDIR+=	ap2-layout
 SUBDIR+=	ap2-limitipconn
-SUBDIR+=	ap2-lisp
 SUBDIR+=	ap2-macro
 SUBDIR+=	ap2-passenger
 SUBDIR+=	ap2-xsendfile
