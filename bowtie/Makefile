@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/09/01 15:48:08 asau Exp $
+# $NetBSD: Makefile,v 1.3 2013/09/01 15:52:29 asau Exp $
 
 DISTNAME=	v${PORTVERSION}
 DIST_SUBDIR=	bowtie
@@ -41,4 +41,5 @@ do-install:
 		${WRKSRC}/reads \
 		${DESTDIR}${PREFIX}/share/bowtie
 
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
