@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/06/23 18:33:44 outpaddling Exp $
+# $NetBSD: Makefile,v 1.2 2013/09/01 17:10:37 asau Exp $
 #
 
 DISTNAME=	mpb-1.4.2
@@ -21,6 +21,8 @@ CONFIGURE_ARGS+=--with-libctl=${PREFIX}/share/libctl \
 		--with-mpi \
 		--prefix=${MPI_PREFIX:Q} \
 		--mandir=${MPI_PREFIX:Q}/man
+# Prevent picking up wrong sh:
+CONFIGURE_ENV+=	SH_JOB=$(TOOLS_PATH.sh)
 
 CFLAGS+=	-DH5_USE_16_API=1
 

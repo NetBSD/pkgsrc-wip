@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2013/02/22 22:50:40 kristerw Exp $
+# $NetBSD: Makefile,v 1.10 2013/09/01 17:10:37 asau Exp $
 #
 
 DISTNAME=	mpb-1.4.2
@@ -16,6 +16,8 @@ USE_LANGUAGES=	c fortran77
 USE_TOOLS+=	gsed
 
 CONFIGURE_ARGS+=--with-libctl=${BUILDLINK_PREFIX.libctl}/share/libctl
+# Prevent picking up wrong sh:
+CONFIGURE_ENV+=	SH_JOB=$(TOOLS_PATH.sh)
 CFLAGS+=	-DH5_USE_16_API=1
 
 .include "../../math/blas/buildlink3.mk"
