@@ -1,18 +1,17 @@
-# $NetBSD: Makefile,v 1.25 2013/09/01 05:22:54 makoto Exp $
+# $NetBSD: Makefile,v 1.26 2013/09/02 12:29:20 makoto Exp $
 
 DISTNAME=		tqsl-2.0
-# It is Release Candidate, so 2.0 is too big for that, it is really 2.0-rc2
-PKGNAME=		tqsl-1.99rc2
+PKGNAME=		${DISTNAME}rc2
 CATEGORIES=		ham
 MASTER_SITES=		http://www.arrl.org/files/file/LoTW%20Instructions/
 MASTER_SITES=		http://downloads.sourceforge.net/project/trustedqsl/TrustedQSL/v2.0-rc2/
-DIST_SUBDIR=		tqsl-2.0rc2
 
 MAINTAINER=		makoto@ki.nu
 HOMEPAGE=		http://sourceforge.net/projects/trustedqsl/
 COMMENT=		TrustedQSL, uploading QSL Data to LoTW of ARRL
 #LICENSE=		See LICENSE file (ARRL)
 
+DIST_SUBDIR=		${PKGNAME_NOREV}
 USE_TOOLS+=		perl gmake cmake
 USE_LANGUAGES+=		c c++
 USE_LIBTOOL=		yes
