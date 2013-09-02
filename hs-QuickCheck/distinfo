@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2013/01/15 09:24:49 phonohawk Exp $
+$NetBSD: distinfo,v 1.7 2013/09/02 12:07:48 szptvlfn Exp $
 
-SHA1 (QuickCheck-2.5.1.1.tar.gz) = 2aef2eadecd63527fb9dc6ed5d85ad4d82bccece
-RMD160 (QuickCheck-2.5.1.1.tar.gz) = e543e2c5f9c7257a01c31abd0a0f4787fd3c372d
-Size (QuickCheck-2.5.1.1.tar.gz) = 26156 bytes
+SHA1 (QuickCheck-2.6.tar.gz) = a7a0a1f11e6be16c4559c03eedf3d3b35411b3a5
+RMD160 (QuickCheck-2.6.tar.gz) = 94bab2dcefdd7a6eddd5af7211db1babf39e0df8
+Size (QuickCheck-2.6.tar.gz) = 26466 bytes
