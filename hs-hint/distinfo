@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2013/03/12 20:41:28 szptvlfn Exp $
+$NetBSD: distinfo,v 1.4 2013/09/02 21:55:42 szptvlfn Exp $
 
-SHA1 (hint-0.3.3.6.tar.gz) = 55245af33fbbe50fa6b9722bd2cafb7dcbce8112
-RMD160 (hint-0.3.3.6.tar.gz) = e5642224ef4a06e54464f57c34d7d52da2b91cf5
-Size (hint-0.3.3.6.tar.gz) = 28600 bytes
+SHA1 (hint-0.3.3.7.tar.gz) = 6ac757e6a3316b2a859e33052d67336592d2b5c6
+RMD160 (hint-0.3.3.7.tar.gz) = 7f0038a0e5230164343c3eddbcdadab1a7970e44
+Size (hint-0.3.3.7.tar.gz) = 29201 bytes

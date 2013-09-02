@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2011/07/12 04:15:47 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/09/02 21:55:42 szptvlfn Exp $
 lib/hint-${PKGVERSION}/${HASKELL_VERSION}/HShint-${PKGVERSION}.o
 lib/hint-${PKGVERSION}/${HASKELL_VERSION}/Hint/Annotations.hi
 lib/hint-${PKGVERSION}/${HASKELL_VERSION}/Hint/Annotations.p_hi
@@ -6,6 +6,8 @@ lib/hint-${PKGVERSION}/${HASKELL_VERSION}/Hint/Base.hi
 lib/hint-${PKGVERSION}/${HASKELL_VERSION}/Hint/Base.p_hi
 lib/hint-${PKGVERSION}/${HASKELL_VERSION}/Hint/Compat.hi
 lib/hint-${PKGVERSION}/${HASKELL_VERSION}/Hint/Compat.p_hi
+lib/hint-${PKGVERSION}/${HASKELL_VERSION}/Hint/CompatPlatform.hi
+lib/hint-${PKGVERSION}/${HASKELL_VERSION}/Hint/CompatPlatform.p_hi
 lib/hint-${PKGVERSION}/${HASKELL_VERSION}/Hint/Configuration.hi
 lib/hint-${PKGVERSION}/${HASKELL_VERSION}/Hint/Configuration.p_hi
 lib/hint-${PKGVERSION}/${HASKELL_VERSION}/Hint/Context.hi

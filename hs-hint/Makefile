@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2013/03/12 20:41:27 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.4 2013/09/02 21:55:42 szptvlfn Exp $
 #
 
-DISTNAME=	hint-0.3.3.6
+DISTNAME=	hint-0.3.3.7
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
