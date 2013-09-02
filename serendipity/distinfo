@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2013/07/26 00:30:13 tonnerre Exp $
+$NetBSD: distinfo,v 1.3 2013/09/02 19:48:42 schnoebe Exp $
 
-SHA1 (serendipity-1.6.2.tar.gz) = 31011aa1818781c5628550cb9f853f247b2820c2
-RMD160 (serendipity-1.6.2.tar.gz) = 46a9577928582113784788d00c450959cdec03e6
-Size (serendipity-1.6.2.tar.gz) = 5453050 bytes
+SHA1 (serendipity-1.7.2.tar.gz) = 44bdbce029da5837601c66d16a4ed30fefd2ec9a
+RMD160 (serendipity-1.7.2.tar.gz) = 178e37f310f996d8d40b8267db0242a301796f8d
+Size (serendipity-1.7.2.tar.gz) = 5685683 bytes
