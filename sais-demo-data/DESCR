@@ -1,0 +1,22 @@
+This package contains the free data files from the demo version
+of the game "Strange Adventures in Infinite Space" (SAIS).
+
+The demo is a considerably scaled-down version of the full game
+and is designed to help players become familiar with the SAIS game
+system.
+
+The demo version of SAIS features:
+
+  # 8 different ship types
+  # 29 different weapons, drives, shields, gadgets and artifacts
+  # 6 alien lifeforms
+  # 17 different planet and star types
+  # 2 unique alien races
+
+The star map does not randomize for each game, instead, one fixed
+star map with fewer stars to explore is provided for easy, normal
+and hard difficulty settings.
+
+No exotic weapons, usable artifacts or advanced ship systems are
+included in this version of the game. It does, however, include
+the combat simulator so players can prepare for the real thing.
