@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5451 2013/09/01 22:22:33 asau Exp $
+# $Id: Makefile,v 1.5452 2013/09/02 12:10:33 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1319,6 +1319,7 @@ SUBDIR+=	katapult
 SUBDIR+=	kawa
 SUBDIR+=	kgrab
 SUBDIR+=	kgraphviewer
+SUBDIR+=	khal-git
 SUBDIR+=	kicad
 SUBDIR+=	kile
 SUBDIR+=	kino
