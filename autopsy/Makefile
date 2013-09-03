@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2012/09/24 16:56:40 asau Exp $
+# $NetBSD: Makefile,v 1.5 2013/09/03 17:40:00 shattered Exp $
 #
 
 VERSION=2.21
@@ -14,16 +14,17 @@ LICENSE=		gnu-gpl-v2
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake perl
 INSTALLATION_DIRS+=	share/autopsy/lib share/autopsy/pict
+INSTALLATION_DIRS+=	bin man/man1
 
 do-build:
-	cd ${WRKSRC} && sh build ${PREFIX}
+	cd ${WRKSRC} && sh build ${DESTDIR}${PREFIX}
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/autopsy ${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/lib/* ${PREFIX}/share/autopsy/lib
-	${INSTALL_DATA} ${WRKSRC}/conf.pl ${WRKSRC}/global.css ${PREFIX}/share/autopsy/
-	${INSTALL_DATA} ${WRKSRC}/pict/* ${PREFIX}/share/autopsy/pict
-	${INSTALL_MAN} ${WRKSRC}/man/man1/* ${PREFIX}/${PKGMANDIR}/man1/
+	${INSTALL_SCRIPT} ${WRKSRC}/autopsy ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/lib/* ${DESTDIR}${PREFIX}/share/autopsy/lib
+	${INSTALL_DATA} ${WRKSRC}/conf.pl ${WRKSRC}/global.css ${DESTDIR}${PREFIX}/share/autopsy/
+	${INSTALL_DATA} ${WRKSRC}/pict/* ${DESTDIR}${PREFIX}/share/autopsy/pict
+	${INSTALL_MAN} ${WRKSRC}/man/man1/* ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
 
 .include "../../sysutils/file/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
