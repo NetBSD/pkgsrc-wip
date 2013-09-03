@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2013/08/31 15:50:22 makoto Exp $
+@comment $NetBSD: PLIST,v 1.4 2013/09/03 03:37:58 makoto Exp $
 bin/tqsl
 include/adif.h
 include/cabrillo.h
@@ -102,4 +102,4 @@ share/TrustedQSL/help/tqslapp/unlock.htm
 share/TrustedQSL/help/tqslapp/update.htm
 share/TrustedQSL/help/tqslapp/update1.bmp
 share/TrustedQSL/help/tqslapp/update2.bmp
-share/man/man5/trustedqsl.5
+share/man/man5/tqsl.5
