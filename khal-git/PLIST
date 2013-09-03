@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1 2013/09/02 12:09:14 thomasklausner Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/09/03 18:43:10 thomasklausner Exp $
 bin/ikhal
 bin/khal
-${PYSITELIB}/${EGG_FILE}/PKG-INFO
-${PYSITELIB}/${EGG_FILE}/SOURCES.txt
-${PYSITELIB}/${EGG_FILE}/dependency_links.txt
-${PYSITELIB}/${EGG_FILE}/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/khal/__init__.py
 ${PYSITELIB}/khal/__init__.pyc
 ${PYSITELIB}/khal/__init__.pyo
