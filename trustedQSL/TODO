@@ -1,5 +1,8 @@
 - Set LICENSE= line
-- Following SUBST_CLASSES is to be applied
+- Checked with X11_TYPE=modular only for now
+- Following SUBST_CLASSES are all to be applied
   post-build stage, probably cmake related problem.
   Should be eliminated: 
+   SUBST_CLASSES+=		x11r7	   (X11_TYPE= modular only)
+   SUBST_CLASSES+=		rpath-link
    SUBST_CLASSES+=		lastcolon
