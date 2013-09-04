@@ -6,3 +6,4 @@
    SUBST_CLASSES+=		x11r7	   (X11_TYPE= modular only)
    SUBST_CLASSES+=		rpath-link
    SUBST_CLASSES+=		lastcolon
+- WARN: PLIST:105: Man pages should be installed into man/, not share/man/.
