@@ -1,0 +1,11 @@
+@comment $NetBSD: PLIST,v 1.1 2013/09/05 00:51:14 jihbed Exp $
+${PYSITELIB}/modargs/__init__.py
+${PYSITELIB}/modargs/__init__.pyc
+${PYSITELIB}/modargs/__init__.pyo
+${PYSITELIB}/modargs/args.py
+${PYSITELIB}/modargs/args.pyc
+${PYSITELIB}/modargs/args.pyo
+${PYSITELIB}/python_modargs-${PKGVERSION}-py2.7.egg-info/PKG-INFO
+${PYSITELIB}/python_modargs-${PKGVERSION}-py2.7.egg-info/SOURCES.txt
+${PYSITELIB}/python_modargs-${PKGVERSION}-py2.7.egg-info/dependency_links.txt
+${PYSITELIB}/python_modargs-${PKGVERSION}-py2.7.egg-info/top_level.txt
