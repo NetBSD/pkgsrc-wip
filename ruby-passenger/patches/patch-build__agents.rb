@@ -1,21 +1,19 @@
-$NetBSD: patch-build__agents.rb,v 1.1.1.1 2012/05/16 14:08:19 fhajny Exp $
+$NetBSD: patch-build__agents.rb,v 1.2 2013/09/05 10:55:51 fhajny Exp $
 
-Add a Rake target for the agents only.
---- build/agents.rb.orig	2012-04-13 08:09:57.000000000 +0000
+Add a simple target to skip the Apache/Nginx binaries.
+--- build/agents.rb.orig	2013-08-27 13:09:37.803991263 +0000
 +++ build/agents.rb
-@@ -77,4 +77,13 @@ end
- 
+@@ -179,3 +179,13 @@ end
  task 'common:clean' do
- 	sh "rm -f #{AGENT_OUTPUT_DIR}PassengerWatchdog #{AGENT_OUTPUT_DIR}PassengerLoggingAgent"
--end
-\ No newline at end of file
-+end
+ 	sh "rm -rf #{AGENT_OUTPUT_DIR}"
+ end
 +
 +desc "Build just the agents"
 +task :agents => [
-+	AGENT_OUTPUT_DIR + 'apache2/PassengerHelperAgent',
-+	AGENT_OUTPUT_DIR + 'nginx/PassengerHelperAgent',
-+	AGENT_OUTPUT_DIR + 'PassengerWatchdog',
++	AGENT_OUTPUT_DIR + 'PassengerHelperAgent',
 +	AGENT_OUTPUT_DIR + 'PassengerLoggingAgent',
++	AGENT_OUTPUT_DIR + 'PassengerWatchdog',
++	AGENT_OUTPUT_DIR + 'SpawnPreparer',
++	AGENT_OUTPUT_DIR + 'EnvPrinter',
 +	:native_support
 +]
