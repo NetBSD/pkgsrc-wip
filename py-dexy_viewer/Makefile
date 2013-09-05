@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/09/05 01:19:29 jihbed Exp $
+# $NetBSD: Makefile,v 1.2 2013/09/05 01:20:36 jihbed Exp $
 
 DISTNAME=	dexy_viewer-0.0.4
 PKGNAME=        ${PYPKGPREFIX}-${DISTNAME}
@@ -7,7 +7,7 @@ MASTER_SITES=	https://pypi.python.org/packages/source/d/dexy_viewer/
 
 MAINTAINER=	jihbed.research@gmail.com
 HOMEPAGE=	http://dexy.it/
-COMMENT=	Document Automation
+COMMENT=	Document Automation viewer
 LICENSE=	mit
 
 DEPENDS+=    ${PYPKGPREFIX}-yaml>=3.10:../../textproc/py-yaml
