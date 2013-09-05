@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5453 2013/09/02 19:09:29 thomasklausner Exp $
+# $Id: Makefile,v 1.5454 2013/09/05 19:33:14 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2045,7 +2045,6 @@ SUBDIR+=	p5-Module-Starter-Plugin-CGIApp
 SUBDIR+=	p5-MongoDB
 SUBDIR+=	p5-NNTPClient
 SUBDIR+=	p5-Net-DBus-GLib
-SUBDIR+=	p5-Net-DNS
 SUBDIR+=	p5-Net-Delicious
 SUBDIR+=	p5-Net-IP-Match-Regexp
 SUBDIR+=	p5-Net-PcapUtils
