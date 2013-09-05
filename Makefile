@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5454 2013/09/05 19:33:14 thomasklausner Exp $
+# $Id: Makefile,v 1.5455 2013/09/05 20:48:36 szptvlfn Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -971,6 +971,7 @@ SUBDIR+=	hs-bytestring-trie
 SUBDIR+=	hs-cabal-query
 SUBDIR+=	hs-cairo
 SUBDIR+=	hs-case-insensitive
+SUBDIR+=	hs-categories
 SUBDIR+=	hs-cautious-file
 SUBDIR+=	hs-cereal
 SUBDIR+=	hs-cgi
