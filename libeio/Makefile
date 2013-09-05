@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2013/08/28 13:00:51 fhajny Exp $
+# $NetBSD: Makefile,v 1.3 2013/09/05 10:42:33 fhajny Exp $
 #
 
 DISTNAME=	libeio-4.18
+PKGNAME=	${DISTNAME:S/-/-1.0pre/}
 CATEGORIES=	devel
 MASTER_SITES=	https://github.com/scunningham/libeio/archive/
 
