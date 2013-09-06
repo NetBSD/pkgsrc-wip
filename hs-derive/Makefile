@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2013/08/21 13:14:20 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.6 2013/09/06 20:29:06 szptvlfn Exp $
 #
 
-DISTNAME=	derive-2.5.12
+DISTNAME=	derive-2.5.13
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
