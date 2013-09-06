@@ -1,0 +1,5 @@
+Mystic is written in python, and relies on numpy for several of it's
+data structures. The plotting package matplotlib is not required by mystic,
+however several of mystic's tutorial examples do require it to be installed.
+Note that although the tutorial examples are bundled with the distribution, they
+are not installed as a package.
