@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2013/03/13 21:33:00 tnn2 Exp $
+@comment $NetBSD: PLIST,v 1.5 2013/09/06 15:11:01 tnn2 Exp $
 lib/dbmail/libauth_ldap.la
 lib/dbmail/libauth_sql.la
 lib/dbmail/libdbmail.la
@@ -32,6 +32,7 @@ share/dbmail/sql/mysql/2_3_0-2_3_2.mysql
 share/dbmail/sql/mysql/2_3_4-2_3_5.mysql
 share/dbmail/sql/mysql/2_3_5-2_3_6.mysql
 share/dbmail/sql/mysql/2_3_6-3_0_0.mysql
+share/dbmail/sql/mysql/3_0_2-3_1_0.mysql
 share/dbmail/sql/mysql/create_tables.mysql
 share/dbmail/sql/mysql/fix_foreign_keys.mysql
 share/dbmail/sql/mysql/migrate_from_1.x_to_2.0_innodb.mysql
@@ -43,6 +44,7 @@ share/dbmail/sql/postgresql/2_2_5-2_3_0.pgsql
 share/dbmail/sql/postgresql/2_3_4-2_3_5.pgsql
 share/dbmail/sql/postgresql/2_3_5-2_3_6.pgsql
 share/dbmail/sql/postgresql/2_3_6-3_0_0.pgsql
+share/dbmail/sql/postgresql/3_0_2-3_1_0.psql
 share/dbmail/sql/postgresql/create_tables.pgsql
 share/dbmail/sql/postgresql/migrate_from_1.x_to_2.0.pgsql
 share/dbmail/sql/postgresql/migrate_from_2.0_to_2.2.pgsql
@@ -52,6 +54,7 @@ share/dbmail/sql/sqlite/2_2_5-2_3_0.sqlite
 share/dbmail/sql/sqlite/2_3_4-2_3_5.sqlite
 share/dbmail/sql/sqlite/2_3_5-2_3_6.sqlite
 share/dbmail/sql/sqlite/2_3_6-3_0_0.sqlite
+share/dbmail/sql/sqlite/3_0_2-3_1_0.sqlite
 share/dbmail/sql/sqlite/create_tables.sqlite
 share/dbmail/sql/sqlite/trigger.tmpl.sql
 share/doc/dbmail/AUTHORS

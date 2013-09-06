@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2013/03/13 21:33:00 tnn2 Exp $
+# $NetBSD: Makefile,v 1.6 2013/09/06 15:11:01 tnn2 Exp $
 
-DISTNAME=	dbmail-3.0.2
+DISTNAME=	dbmail-3.1.5
 CATEGORIES=	mail
-MASTER_SITES=	http://www.dbmail.org/download/3.0/
+MASTER_SITES=	http://www.dbmail.org/download/3.1/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.dbmail.org/
@@ -22,6 +22,7 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}/run
 CONFIGURE_ARGS+=	--enable-manpages
 CONFIGURE_ARGS+=	--with-ldap=${BUILDLINK_PREFIX.openldap-client}
+CONFIGURE_ARGS+=	--with-zdb=${BUILDLINK_PREFIX.libzdb}
 
 BUILD_DEFS+=		VARBASE
 
