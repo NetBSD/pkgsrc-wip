@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5455 2013/09/05 20:48:36 szptvlfn Exp $
+# $Id: Makefile,v 1.5456 2013/09/06 08:16:59 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -3423,7 +3423,6 @@ SUBDIR+=	xbmc
 SUBDIR+=	xbnbt
 SUBDIR+=	xbsql
 SUBDIR+=	xchat2-tcl
-SUBDIR+=	xclipboard
 SUBDIR+=	xcmsdb
 SUBDIR+=	xcursor-themes
 SUBDIR+=	xdbedizzy
