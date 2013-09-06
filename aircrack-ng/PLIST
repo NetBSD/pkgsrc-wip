@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.8 2013/06/12 17:45:49 moubctez Exp $
+@comment $NetBSD: PLIST,v 1.9 2013/09/06 14:34:01 tnn2 Exp $
 bin/aircrack-ng
 bin/airdecap-ng
 bin/airdecloak-ng
+bin/besside-ng-crawler
 bin/ivstools
 bin/kstats
 bin/makeivs-ng
