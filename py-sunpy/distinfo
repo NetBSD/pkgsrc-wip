@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/09/06 18:35:09 jihbed Exp $
+
+SHA1 (sunpy-0.3.0.tar.gz) = 5c4dca3e276d21d7ff07005e2331e8143c9e52d3
+RMD160 (sunpy-0.3.0.tar.gz) = 8e06fb3bb0bcfb2b22913ac44d08af298ba81999
+Size (sunpy-0.3.0.tar.gz) = 17530135 bytes
