@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5456 2013/09/06 08:16:59 thomasklausner Exp $
+# $Id: Makefile,v 1.5457 2013/09/06 17:36:52 kristerw Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -734,6 +734,7 @@ SUBDIR+=	gemrb
 SUBDIR+=	genus2reduction
 SUBDIR+=	gerris
 SUBDIR+=	get_iplayer
+SUBDIR+=	getdp
 SUBDIR+=	gf2x
 SUBDIR+=	gfa
 SUBDIR+=	gfan
@@ -1610,6 +1611,7 @@ SUBDIR+=	mcabber
 SUBDIR+=	mcats
 SUBDIR+=	mcats-iodbc
 SUBDIR+=	mce
+SUBDIR+=	mcl
 SUBDIR+=	mcpp
 SUBDIR+=	mcwm
 SUBDIR+=	mdadm
@@ -3561,6 +3563,7 @@ SUBDIR+=	yaupspe
 SUBDIR+=	yelp-tools
 SUBDIR+=	yersinia
 SUBDIR+=	yi
+SUBDIR+=	yoda
 SUBDIR+=	yp-tools
 SUBDIR+=	ypbind-mt
 SUBDIR+=	ypserv
