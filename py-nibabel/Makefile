@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2013/09/07 21:06:17 jihbed Exp $
+# $NetBSD: Makefile,v 1.6 2013/09/07 21:12:26 jihbed Exp $
 
 DISTNAME=	nibabel-1.3.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -20,4 +20,5 @@ DEPENDS+=	${PYPKGPREFIX}-dicom>=0.9.8:../../wip/py-dicom
 
 .include "../../lang/python/distutils.mk"
 .include "../../math/py-numpy/buildlink3.mk"
+.include "../../filesystems/py-fuse-bindings/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
