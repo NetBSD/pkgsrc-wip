@@ -1,0 +1,4 @@
+pydicom is a pure python package for parsing DICOM files.
+DICOM is a standard (http://medical.nema.org) for communicating
+medical images and related information such as reports
+and radiotherapy objects.
