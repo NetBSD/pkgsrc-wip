@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2012/10/07 13:57:29 asau Exp $
+# $NetBSD: Makefile,v 1.3 2013/09/07 21:30:30 jihbed Exp $
 #
 
 DISTNAME=	pyreport-0.3.4c
-PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/py//}
 CATEGORIES=	devel
 MASTER_SITES=	http://pypi.python.org/packages/source/p/pyreport/
 
