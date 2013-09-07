@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1 2013/09/07 19:53:40 jihbed Exp $
+
+SHA1 (epigrass-2.3.1.tar.gz) = 41156cd4839cd2f25bb51fbb1b741d3e1a5cfd8b
+RMD160 (epigrass-2.3.1.tar.gz) = 16531502b82f12cb6060df1c6329a0b6a189e7da
+Size (epigrass-2.3.1.tar.gz) = 2114583 bytes
+SHA1 (patch-setup.py) = dc9faa20d8339db50f057320e6d033c1bb01d109
