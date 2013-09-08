@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2011/07/12 07:21:00 phonohawk Exp $
+# $NetBSD: Makefile,v 1.2 2013/09/08 08:50:58 szptvlfn Exp $
 #
 
-DISTNAME=	entropy-0.2.1
+DISTNAME=	entropy-0.2.2.2
 CATEGORIES=	security
 
 MAINTAINER=	pho@cielonegro.org
