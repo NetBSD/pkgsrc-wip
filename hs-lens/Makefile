@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2013/08/31 08:47:43 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.2 2013/09/08 18:31:22 szptvlfn Exp $
 
-DISTNAME=	lens-3.9.0.3
+DISTNAME=	lens-3.9.1
 CATEGORIES=	devel
 
 MAINTAINER=	szptvlfn@a-net.email.ne.jp
