@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2012/10/05 11:12:56 asau Exp $
+# $NetBSD: Makefile,v 1.3 2013/09/09 14:36:30 fhajny Exp $
 #
 
 MODNAME=		ssh2
-PECL_VERSION=		0.11.3
+PECL_VERSION=		0.12
 CATEGORIES+=		security
 
 MAINTAINER=		filip@joyent.com
@@ -17,5 +17,4 @@ WRKSRC=			${WRKDIR}/${MODNAME}-${PECL_VERSION}
 
 .include "../../security/libssh2/buildlink3.mk"
 .include "../../lang/php/ext.mk"
-#.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
