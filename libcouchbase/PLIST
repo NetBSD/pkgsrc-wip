@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2013/02/07 17:04:30 jonperkin Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/09/09 13:06:11 fhajny Exp $
 bin/cbc
 bin/cbc-admin
 bin/cbc-bucket-create
@@ -9,6 +9,7 @@ bin/cbc-create
 bin/cbc-flush
 bin/cbc-hash
 bin/cbc-lock
+bin/cbc-pillowfight
 bin/cbc-rm
 bin/cbc-stats
 bin/cbc-unlock
@@ -17,20 +18,27 @@ bin/cbc-verify
 bin/cbc-version
 bin/cbc-view
 include/libcouchbase/arguments.h
+include/libcouchbase/assert.h
 include/libcouchbase/behavior.h
 include/libcouchbase/callbacks.h
+include/libcouchbase/cntl.h
 include/libcouchbase/compat.h
 include/libcouchbase/configuration.h
 include/libcouchbase/couchbase.h
+include/libcouchbase/durability.h
 include/libcouchbase/error.h
 include/libcouchbase/http.h
+include/libcouchbase/iocp_iops.h
 include/libcouchbase/libev_io_opts.h
 include/libcouchbase/libevent_io_opts.h
+include/libcouchbase/libuv_io_opts.h
+include/libcouchbase/plugins/io/libuv/plugin-internal.h
+include/libcouchbase/plugins/io/libuv/plugin-libuv.c
 include/libcouchbase/sanitycheck.h
+include/libcouchbase/select_io_opts.h
 include/libcouchbase/timings.h
 include/libcouchbase/types.h
 include/libcouchbase/visibility.h
-include/libcouchbase/winsock_io_opts.h
 lib/libcouchbase.la
 lib/libcouchbase_libevent.la
 man/man1/cbc-admin.1
@@ -50,7 +58,6 @@ man/man1/cbc-verify.1
 man/man1/cbc-version.1
 man/man1/cbc-view.1
 man/man1/cbc.1
-man/man3/couchbase.3
 man/man3/lcb_arithmetic.3
 man/man3/lcb_behavior_get_config_errors_threshold.3
 man/man3/lcb_behavior_get_ipv6.3
@@ -60,6 +67,7 @@ man/man3/lcb_behavior_set_ipv6.3
 man/man3/lcb_behavior_set_syncmode.3
 man/man3/lcb_breakout.3
 man/man3/lcb_cancel_http_request.3
+man/man3/lcb_cntl.3
 man/man3/lcb_connect.3
 man/man3/lcb_create.3
 man/man3/lcb_create_compat.3
@@ -67,6 +75,7 @@ man/man3/lcb_create_io_ops.3
 man/man3/lcb_destroy.3
 man/man3/lcb_destroy_io_ops.3
 man/man3/lcb_disable_timings.3
+man/man3/lcb_durability_poll.3
 man/man3/lcb_enable_timings.3
 man/man3/lcb_flush.3
 man/man3/lcb_flush_buffers.3
@@ -91,6 +100,7 @@ man/man3/lcb_server_versions.3
 man/man3/lcb_set_arithmetic_callback.3
 man/man3/lcb_set_configuration_callback.3
 man/man3/lcb_set_cookie.3
+man/man3/lcb_set_durability_callback.3
 man/man3/lcb_set_error_callback.3
 man/man3/lcb_set_flush_callback.3
 man/man3/lcb_set_get_callback.3
@@ -115,5 +125,6 @@ man/man3/lcb_unlock.3
 man/man3/lcb_verify_compiler_setup.3
 man/man3/lcb_verify_struct_size.3
 man/man3/lcb_wait.3
+man/man3/libcouchbase.3
 man/man5/cbcrc.5
 man/man5/lcb_attributes.5

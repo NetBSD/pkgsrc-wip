@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2013/02/18 00:31:27 asau Exp $
+# $NetBSD: Makefile,v 1.3 2013/09/09 13:06:10 fhajny Exp $
 
-DISTNAME=	libcouchbase-2.0.3
+DISTNAME=	libcouchbase-2.1.2
 CATEGORIES=	devel
 MASTER_SITES=	http://packages.couchbase.com/clients/c/
 
