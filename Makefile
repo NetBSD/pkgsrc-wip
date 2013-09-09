@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5459 2013/09/09 08:51:41 thomasklausner Exp $
+# $Id: Makefile,v 1.5460 2013/09/09 19:25:00 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -3448,7 +3448,6 @@ SUBDIR+=	xf86-input-hyperpen
 SUBDIR+=	xf86-input-joystick
 SUBDIR+=	xf86-input-mutouch
 SUBDIR+=	xf86-input-synaptics
-SUBDIR+=	xf86-video-dummy
 SUBDIR+=	xf86-video-geode
 SUBDIR+=	xf86-video-intel-old
 SUBDIR+=	xf86-video-modesetting
