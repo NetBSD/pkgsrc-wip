@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2013/05/31 20:25:29 fhajny Exp $
+$NetBSD: distinfo,v 1.3 2013/09/09 14:09:55 fhajny Exp $
 
-SHA1 (innotop-1.9.0.tar.gz) = 4f8cbf6d01a1723a5c450d66e192610c5b28c4d7
-RMD160 (innotop-1.9.0.tar.gz) = 0ccd3623c19016a5ae89e92a49e27fd675494cd9
-Size (innotop-1.9.0.tar.gz) = 143179 bytes
+SHA1 (innotop-1.9.1.tar.gz) = 6b0b5f492e7188152727f6c157043be180ba516a
+RMD160 (innotop-1.9.1.tar.gz) = bc39ee3dbffdf81606af4ea30405404d0aa9ce3c
+Size (innotop-1.9.1.tar.gz) = 147677 bytes
