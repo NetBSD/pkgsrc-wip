@@ -1,5 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2012/09/29 00:50:34 asau Exp $
-#
+# $NetBSD: Makefile,v 1.14 2013/09/09 14:05:30 thomasklausner Exp $
 
 DISTNAME=	giggle-0.5
 PKGREVISION=	1
@@ -12,7 +11,7 @@ HOMEPAGE=	http://live.gnome.org/giggle
 COMMENT=	GTK2 graphical frontend to git SCM tool
 LICENSE=	gnu-gpl-v2
 
-DEPENDS+=	scmgit-base-[0-9]*:../../devel/scmgit-base
+DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake pkg-config intltool

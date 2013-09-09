@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2013/06/14 13:50:15 makoto Exp $
+# $NetBSD: Makefile,v 1.9 2013/09/09 14:05:32 thomasklausner Exp $
 
 # M-x twittering-mode-version shows twittering-mode-vHEAD,
 # but just for convenience:
@@ -25,7 +25,7 @@ USE_LANGUAGES=	# none
 INSTALLATION_DIRS=	${EMACS_LISPPREFIX}/a-files
 
 TEST_TARGET=	check
-BUILD_DEPENDS+=	scmgit-base-[0-9]*:../../devel/scmgit-base
+BUILD_DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 
 do-install:
 	${INSTALL_DATA}   ${WRKSRC}/twittering-mode.el  ${DESTDIR}${INSTALLATION_DIRS}

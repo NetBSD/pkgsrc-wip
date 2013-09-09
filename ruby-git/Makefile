@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2012/10/07 14:53:44 asau Exp $
+# $NetBSD: Makefile,v 1.4 2013/09/09 14:05:31 thomasklausner Exp $
 
 DISTNAME=	git-1.2.5
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
@@ -9,7 +9,7 @@ HOMEPAGE=	http://github.com/schacon/ruby-git
 COMMENT=	Manipulate Git repositories by wrapping around the git binary
 LICENSE=	mit
 
-DEPENDS+=	scmgit-base>=1.6:../../devel/scmgit-base
+DEPENDS+=	git-base>=1.6:../../devel/git-base
 
 .include "../../lang/ruby/gem.mk"
 .include "../../mk/bsd.pkg.mk"

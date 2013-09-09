@@ -22,7 +22,7 @@
 .if !defined(_PKG_MK_GIT_PACKAGE_MK)
 _PKG_MK_GIT_PACKAGE_MK=	# defined
 
-BUILD_DEPENDS+=		scmgit-base>=1.6.4:../../devel/scmgit-base
+BUILD_DEPENDS+=		git-base>=1.6.4:../../devel/git-base
 
 #
 # defaults for user-visible input variables

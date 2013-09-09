@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2013/08/28 06:47:25 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.10 2013/09/09 14:05:30 thomasklausner Exp $
 
 DISTNAME=	calypso-1.1
 CATEGORIES=	net
@@ -9,7 +9,7 @@ COMMENT=	CardDAV/CalDAV server
 LICENSE=	gnu-gpl-v3
 
 DEPENDS+=	${PYPKGPREFIX}-vobject>=0.8.1c:../../textproc/py-vobject
-DEPENDS+=	scmgit-base-[0-9]*:../../devel/scmgit-base
+DEPENDS+=	git-base-[0-9]*:../../devel/git-base
 
 GIT_REPOSITORIES=	calypso
 GIT_REPO.calypso=	git://keithp.com/git/calypso.git
