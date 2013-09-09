@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2013/09/08 22:31:24 makoto Exp $
+# $NetBSD: Makefile,v 1.31 2013/09/09 02:15:51 makoto Exp $
 
 DISTNAME=		tqsl-2.0
 PKGNAME=		${DISTNAME}rc3
@@ -18,20 +18,6 @@ USE_LIBTOOL=		yes
 USE_CMAKE=		yes
 WRKSRC=			${WRKDIR}/${DISTNAME}
 
-SUBST_CLASSES+=		rpathapp
-SUBST_STAGE.rpathapp=	post-build
-SUBST_FILES.rpathapp=	apps/cmake_install.cmake
-SUBST_MESSAGE.rpathapp=	(modular only) Fix RPATH for apps/cmake_install.cmake
-SUBST_SED.rpathapp=	-e '/OLD_RPATH/s,:::::::::::::::::::::::::::::::::::::::,,'
-SUBST_SED.rpathapp+=	-e '/NEW_RPATH/s,:${PREFIX}/lib,,'
-
-SUBST_CLASSES+=		rpathsrc
-SUBST_STAGE.rpathsrc=	post-build
-SUBST_FILES.rpathsrc=	src/cmake_install.cmake
-SUBST_MESSAGE.rpathsrc=	(modular only) Fix RPATH for src/cmake_install.cmake
-SUBST_SED.rpathsrc=	-e '/OLD_RPATH/s,::::::::::::,,'
-SUBST_SED.rpathsrc+=	-e '/NEW_RPATH/s,:${PREFIX}/lib,,'
-
 # There is an unresolved build failure, where -R for /usr/pkg/lib does
 # not precede /usr/X11R7/lib, and on a netbsd-5 system with base xorg,
 # an old version of pixman is found by the pkgsrc cairo.  The root
@@ -41,10 +27,11 @@ SUBST_SED.rpathsrc+=	-e '/NEW_RPATH/s,:${PREFIX}/lib,,'
 do-configure:
 	(cd $(WRKSRC) ; \
 	cmake \
-	-DCMAKE_INSTALL_PREFIX=${PREFIX} \
 	-DBDB_PREFIX=${PREFIX} \
+	-DCMAKE_BUILD_WITH_INSTALL_RPATH=TRUE \
+	-DCMAKE_INSTALL_PREFIX=${PREFIX} \
 	-DCMAKE_INSTALL_RPATH=${PREFIX}/lib \
-	-DCMAKE_INSTALL_RPATH_USE_LINK_PATH=yes \
+	-DCMAKE_INSTALL_RPATH_USE_LINK_PATH=FALSE \
 	.)
 
 .include "../../textproc/expat/buildlink3.mk"

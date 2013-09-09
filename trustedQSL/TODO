@@ -1,6 +1,0 @@
-- Set LICENSE= line
-- Following SUBST_CLASSES are all to be applied
-  post-build stage, probably cmake related problem.
-  Should be eliminated: 
-   SUBST_CLASSES+=		rpathapp (modular only)
-   SUBST_CLASSES+=		rpathsrc (modular only)
