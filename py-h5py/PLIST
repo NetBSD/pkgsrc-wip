@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2012/04/08 20:22:11 thomasklausner Exp $
-${PYSITELIB}/${EGG_FILE}
+@comment $NetBSD: PLIST,v 1.3 2013/09/10 23:13:30 jihbed Exp $
 ${PYSITELIB}/h5py/__init__.py
 ${PYSITELIB}/h5py/__init__.pyc
 ${PYSITELIB}/h5py/__init__.pyo
@@ -22,6 +21,9 @@ ${PYSITELIB}/h5py/_hl/dataset.pyo
 ${PYSITELIB}/h5py/_hl/datatype.py
 ${PYSITELIB}/h5py/_hl/datatype.pyc
 ${PYSITELIB}/h5py/_hl/datatype.pyo
+${PYSITELIB}/h5py/_hl/dims.py
+${PYSITELIB}/h5py/_hl/dims.pyc
+${PYSITELIB}/h5py/_hl/dims.pyo
 ${PYSITELIB}/h5py/_hl/files.py
 ${PYSITELIB}/h5py/_hl/files.pyc
 ${PYSITELIB}/h5py/_hl/files.pyo
@@ -58,12 +60,18 @@ ${PYSITELIB}/h5py/_hl/tests/test_dataset.pyo
 ${PYSITELIB}/h5py/_hl/tests/test_datatype.py
 ${PYSITELIB}/h5py/_hl/tests/test_datatype.pyc
 ${PYSITELIB}/h5py/_hl/tests/test_datatype.pyo
+${PYSITELIB}/h5py/_hl/tests/test_dimension_scales.py
+${PYSITELIB}/h5py/_hl/tests/test_dimension_scales.pyc
+${PYSITELIB}/h5py/_hl/tests/test_dimension_scales.pyo
 ${PYSITELIB}/h5py/_hl/tests/test_file.py
 ${PYSITELIB}/h5py/_hl/tests/test_file.pyc
 ${PYSITELIB}/h5py/_hl/tests/test_file.pyo
 ${PYSITELIB}/h5py/_hl/tests/test_group.py
 ${PYSITELIB}/h5py/_hl/tests/test_group.pyc
 ${PYSITELIB}/h5py/_hl/tests/test_group.pyo
+${PYSITELIB}/h5py/_hl/tests/test_selections.py
+${PYSITELIB}/h5py/_hl/tests/test_selections.pyc
+${PYSITELIB}/h5py/_hl/tests/test_selections.pyo
 ${PYSITELIB}/h5py/_hl/tests/test_slicing.py
 ${PYSITELIB}/h5py/_hl/tests/test_slicing.pyc
 ${PYSITELIB}/h5py/_hl/tests/test_slicing.pyo
@@ -71,17 +79,18 @@ ${PYSITELIB}/h5py/_objects.pyx
 ${PYSITELIB}/h5py/_objects.so
 ${PYSITELIB}/h5py/_proxy.pyx
 ${PYSITELIB}/h5py/_proxy.so
-${PYSITELIB}/h5py/api_gen.py
-${PYSITELIB}/h5py/api_gen.pyc
-${PYSITELIB}/h5py/api_gen.pyo
 ${PYSITELIB}/h5py/defs.pyx
 ${PYSITELIB}/h5py/defs.so
 ${PYSITELIB}/h5py/h5.pyx
 ${PYSITELIB}/h5py/h5.so
 ${PYSITELIB}/h5py/h5a.pyx
 ${PYSITELIB}/h5py/h5a.so
+${PYSITELIB}/h5py/h5ac.pyx
+${PYSITELIB}/h5py/h5ac.so
 ${PYSITELIB}/h5py/h5d.pyx
 ${PYSITELIB}/h5py/h5d.so
+${PYSITELIB}/h5py/h5ds.pyx
+${PYSITELIB}/h5py/h5ds.so
 ${PYSITELIB}/h5py/h5f.pyx
 ${PYSITELIB}/h5py/h5f.so
 ${PYSITELIB}/h5py/h5fd.pyx
@@ -116,6 +125,9 @@ ${PYSITELIB}/h5py/lowtest/__init__.pyo
 ${PYSITELIB}/h5py/lowtest/test_h5.py
 ${PYSITELIB}/h5py/lowtest/test_h5.pyc
 ${PYSITELIB}/h5py/lowtest/test_h5.pyo
+${PYSITELIB}/h5py/lowtest/test_h5f.py
+${PYSITELIB}/h5py/lowtest/test_h5f.pyc
+${PYSITELIB}/h5py/lowtest/test_h5f.pyo
 ${PYSITELIB}/h5py/lowtest/test_h5p.py
 ${PYSITELIB}/h5py/lowtest/test_h5p.pyc
 ${PYSITELIB}/h5py/lowtest/test_h5p.pyo
