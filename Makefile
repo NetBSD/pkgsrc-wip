@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5460 2013/09/09 19:25:00 thomasklausner Exp $
+# $Id: Makefile,v 1.5461 2013/09/11 03:37:53 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2678,6 +2678,7 @@ SUBDIR+=	py-pygraphviz
 SUBDIR+=	py-pylith
 SUBDIR+=	py-pylons
 SUBDIR+=	py-pymc
+SUBDIR+=	py-pymigemo
 SUBDIR+=	py-pymvpa
 SUBDIR+=	py-pypedal
 SUBDIR+=	py-pyphant
