@@ -1,0 +1,10 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2013/09/11 05:10:05 phonohawk Exp $
+
+This package installs a default configuration file to:
+     ${PREFIX}/${PYSITELIB}/percol/rc.py
+
+If you want to customize the configuration, copy the above file to
+~/.percol.d/rc.py and edit it.
+
+===========================================================================
