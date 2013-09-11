@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2012/10/03 09:10:38 asau Exp $
+# $NetBSD: Makefile,v 1.4 2013/09/11 09:58:26 fhajny Exp $
 #
 
-DISTNAME=		libestr-0.1.2
+DISTNAME=		libestr-0.1.5
 CATEGORIES=		sysutils
 MASTER_SITES=		http://libestr.adiscon.com/files/download/
 
