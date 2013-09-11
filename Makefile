@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5462 2013/09/11 05:11:19 phonohawk Exp $
+# $Id: Makefile,v 1.5463 2013/09/11 10:06:24 fhajny Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2959,6 +2959,7 @@ SUBDIR+=	rstart
 SUBDIR+=	rstudio
 SUBDIR+=	rsyslog5
 SUBDIR+=	rsyslog6
+SUBDIR+=	rsyslog7
 SUBDIR+=	rte
 SUBDIR+=	rthread
 SUBDIR+=	rtpbreak
