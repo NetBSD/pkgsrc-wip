@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2013/09/09 02:15:51 makoto Exp $
+# $NetBSD: Makefile,v 1.32 2013/09/12 02:21:47 makoto Exp $
 
 DISTNAME=		tqsl-2.0
 PKGNAME=		${DISTNAME}rc3
@@ -9,7 +9,7 @@ MASTER_SITES=		http://downloads.sourceforge.net/project/trustedqsl/TrustedQSL/v2
 MAINTAINER=		makoto@ki.nu
 HOMEPAGE=		http://sourceforge.net/projects/trustedqsl/
 COMMENT=		TrustedQSL, uploading QSL Data to LoTW of ARRL
-#LICENSE=		See LICENSE file (ARRL)
+#LICENSE=		modified-bsd but see LICENSE.txt (ARRL)
 
 DIST_SUBDIR=		${PKGNAME_NOREV}
 USE_TOOLS+=		perl gmake cmake
@@ -34,6 +34,10 @@ do-configure:
 	-DCMAKE_INSTALL_RPATH_USE_LINK_PATH=FALSE \
 	.)
 
+post-install:
+	(cd ${WRKSRC} ;\
+	${INSTALL_DATA} LICENSE.txt ${DESTDIR}${PREFIX}/share/TrustedQSL/ \
+	)
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../databases/db5/buildlink3.mk"
 .include "../../x11/wxGTK28/buildlink3.mk"
