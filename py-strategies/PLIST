@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1 2013/09/12 19:33:16 jihbed Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/strategies/__init__.py
+${PYSITELIB}/strategies/__init__.pyc
+${PYSITELIB}/strategies/__init__.pyo
+${PYSITELIB}/strategies/branch/__init__.py
+${PYSITELIB}/strategies/branch/__init__.pyc
+${PYSITELIB}/strategies/branch/__init__.pyo
+${PYSITELIB}/strategies/branch/core.py
+${PYSITELIB}/strategies/branch/core.pyc
+${PYSITELIB}/strategies/branch/core.pyo
+${PYSITELIB}/strategies/core.py
+${PYSITELIB}/strategies/core.pyc
+${PYSITELIB}/strategies/core.pyo
+${PYSITELIB}/strategies/examples.py
+${PYSITELIB}/strategies/examples.pyc
+${PYSITELIB}/strategies/examples.pyo
+${PYSITELIB}/strategies/tree.py
+${PYSITELIB}/strategies/tree.pyc
+${PYSITELIB}/strategies/tree.pyo
+${PYSITELIB}/strategies/util.py
+${PYSITELIB}/strategies/util.pyc
+${PYSITELIB}/strategies/util.pyo
