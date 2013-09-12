@@ -1,0 +1,28 @@
+@comment $NetBSD: PLIST,v 1.1 2013/09/12 20:26:38 jihbed Exp $
+${PYSITELIB}/Hamilton/Interface/Examples/GUI-ArmSlider-P(I)D control.py
+${PYSITELIB}/Hamilton/Interface/Examples/GUI-ArmSlider-P(I)D control.pyc
+${PYSITELIB}/Hamilton/Interface/Examples/GUI-ArmSlider-P(I)D control.pyo
+${PYSITELIB}/Hamilton/Interface/Examples/GUI-Crosslides-P(I)D control.py
+${PYSITELIB}/Hamilton/Interface/Examples/GUI-Crosslides-P(I)D control.pyc
+${PYSITELIB}/Hamilton/Interface/Examples/GUI-Crosslides-P(I)D control.pyo
+${PYSITELIB}/Hamilton/Interface/Examples/GUI-NewtonsCradle.py
+${PYSITELIB}/Hamilton/Interface/Examples/GUI-NewtonsCradle.pyc
+${PYSITELIB}/Hamilton/Interface/Examples/GUI-NewtonsCradle.pyo
+${PYSITELIB}/Hamilton/Interface/Examples/GUI-PULLEY.py
+${PYSITELIB}/Hamilton/Interface/Examples/GUI-PULLEY.pyc
+${PYSITELIB}/Hamilton/Interface/Examples/GUI-PULLEY.pyo
+${PYSITELIB}/Hamilton/Interface/Examples/GUI-TOP (TOL).py
+${PYSITELIB}/Hamilton/Interface/Examples/GUI-TOP (TOL).pyc
+${PYSITELIB}/Hamilton/Interface/Examples/GUI-TOP (TOL).pyo
+${PYSITELIB}/Hamilton/Interface/Examples/__init__.py
+${PYSITELIB}/Hamilton/Interface/Examples/__init__.pyc
+${PYSITELIB}/Hamilton/Interface/Examples/__init__.pyo
+${PYSITELIB}/Hamilton/Interface/GUI-Hamilton.py
+${PYSITELIB}/Hamilton/Interface/GUI-Hamilton.pyc
+${PYSITELIB}/Hamilton/Interface/GUI-Hamilton.pyo
+${PYSITELIB}/Hamilton/Interface/__init__.py
+${PYSITELIB}/Hamilton/Interface/__init__.pyc
+${PYSITELIB}/Hamilton/Interface/__init__.pyo
+${PYSITELIB}/Hamilton/__init__.py
+${PYSITELIB}/Hamilton/__init__.pyc
+${PYSITELIB}/Hamilton/__init__.pyo
