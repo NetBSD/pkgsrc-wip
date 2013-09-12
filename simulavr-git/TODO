@@ -36,3 +36,11 @@ checking for iverilog... no
 checking for vvp... no
 build verilog modul avr.vpi = no
 
+- automake 1.11 is OK, but with automake 1.14, make stops at
+
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating regress/regress.py
+config.status: creating Makefile
+config.status: error: cannot find input file: `src/Makefile.in'
+*** Error code 1
