@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1 2013/09/12 18:01:46 thomasklausner Exp $
+share/doc/org-caldav/README.md
+${EMACS_LISPPREFIX}/org-caldav/org-caldav-testsuite.el
+${EMACS_LISPPREFIX}/org-caldav/org-caldav-testsuite.elc
+${EMACS_LISPPREFIX}/org-caldav/org-caldav.el
+${EMACS_LISPPREFIX}/org-caldav/org-caldav.elc

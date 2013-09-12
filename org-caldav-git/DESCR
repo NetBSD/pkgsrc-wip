@@ -1,0 +1,5 @@
+Caldav sync for Emacs Orgmode
+
+Tested CalDAV servers: Owncloud, Google Calendar.
+
+Also reported to be working: SOGo.
