@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2013/08/25 14:51:23 makoto Exp $
+# $NetBSD: Makefile,v 1.6 2013/09/12 04:56:07 makoto Exp $
 #
 DISTNAME=		simulavr-1.0.0
 CATEGORIES=		emulators
@@ -10,10 +10,14 @@ COMMENT=		Simulator for Atmel AVR microcontrollers
 LICENSE=		gnu-gpl-v2
 
 BUILD_DEPENDS+=		doxygen-[0-9]*:../../devel/doxygen
+BUILD_DEPENDS+=		avr-libc-[0-9]*:../../wip/avr-libc
 
 CONFIGURE_ARGS+=	--disable-tests
 CONFIGURE_ARGS+=	--enable-python=python${PYVERSSUFFIX}
 CONFIGURE_ARGS+=	--with-bfd=${PREFIX}/avr
+# Following line does not work yet (examples/python directory)
+#CONFIGURE_ENV+=	az_python_use=true
+#MAKE_ENV+=		az_python_use=true
 
 USE_TOOLS+=		makeinfo gmake
 USE_LIBTOOL=		yes
@@ -65,18 +69,20 @@ SUBST_SED.intrpt0=	-e 's/SIG_INTERRUPT0/INT0_vect/g'
 # Following case, see patches
 # regress/timertest/timer_16bit.c:ISR(SIG_OUTPUT_COMPARE3B) {
 
-SUBST_CLASSES+=         makeinfo
-SUBST_STAGE.makeinfo=   post-configure
+SUBST_CLASSES+=		makeinfo
+SUBST_STAGE.makeinfo=	post-configure
 SUBST_MESSAGE.makeinfo= set MAKEINFO path (to avoid work-directory references included)
-SUBST_FILES.makeinfo=   examples/anacomp/Makefile.in
-SUBST_FILES.makeinfo+=  examples/python/Makefile.in
-SUBST_SED.makeinfo=     -e 's,@MAKEINFO@,${PREFIX}/bin/makeinfo,g'
+SUBST_FILES.makeinfo=	examples/anacomp/Makefile.in
+SUBST_FILES.makeinfo+=	examples/python/Makefile.in
+SUBST_SED.makeinfo=	-e 's,@MAKEINFO@,${PREFIX}/bin/makeinfo,g'
 
 # gcc 2.95 gives warnings that it cannot inline all functions.
 BUILDLINK_TRANSFORM+=	rm:-Werror
 
 .include "../../cross/avr-binutils/buildlink3.mk"
 .include "../../cross/avr-gcc/buildlink3.mk"
+#.include "../../wip/avr-libc/buildlink3.mk"
+.include "../../devel/swig/buildlink3.mk"
 .include "../../mk/curses.buildlink3.mk"
 .include "../../lang/python/pyversion.mk"
 .include "../../lang/${PYPACKAGE}/buildlink3.mk"

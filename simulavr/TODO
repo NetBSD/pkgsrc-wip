@@ -1,5 +1,4 @@
 - In configuration, seeing following message:
   build verilog modul avr.vpi = no
-- Followng line in Makefile may not be portable
-  CONFIGURE_ARGS+=	--enable-python=python2.7
-  .include "../../lang/python27/buildlink3.mk"
+- examples/python is not activated.
+  az_python_use=true seems to do that, but not.
