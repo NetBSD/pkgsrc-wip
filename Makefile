@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5463 2013/09/11 10:06:24 fhajny Exp $
+# $Id: Makefile,v 1.5464 2013/09/12 18:02:43 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1883,6 +1883,7 @@ SUBDIR+=	openxcom
 SUBDIR+=	oqtplayer
 SUBDIR+=	or1ksim
 SUBDIR+=	orbifolder
+SUBDIR+=	org-caldav-git
 SUBDIR+=	orion
 SUBDIR+=	oslc
 SUBDIR+=	osmo
