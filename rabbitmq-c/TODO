@@ -1,3 +1,0 @@
-After switchin to the (now default) cmake build system, xmlto support is not
-safely detected and man pages cannot be built. More cmake experience needed
-to crack this one.

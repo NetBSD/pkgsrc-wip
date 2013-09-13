@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2013/02/25 15:26:07 fhajny Exp $
+# $NetBSD: Makefile,v 1.5 2013/09/13 10:54:03 fhajny Exp $
 #
 
-DISTNAME=	rabbitmq-c-v0.3.0
-PKGNAME=	${DISTNAME:S/c-v/c-/}
+DISTNAME=	rabbitmq-c-0.4.1
 CATEGORIES=	net
-MASTER_SITES=	https://github.com/alanxz/rabbitmq-c/archive/
+MASTER_SITES=	https://github.com/alanxz/rabbitmq-c/releases/download/v${PKGVERSION_NOREV}/
 FETCH_USING=	curl
 
 MAINTAINER=	filip@joyent.com
@@ -12,19 +11,23 @@ HOMEPAGE=	https://github.com/alanxz/rabbitmq-c
 COMMENT=	C-language AMQP client library for use with AMQP servers
 LICENSE=	mit
 
-WRKSRC=			${WRKDIR}/${PKGBASE}-${DISTNAME}
+BUILD_DEPENDS+=		xmlto-[0-9]*:../../textproc/xmlto
 
 USE_CMAKE=		yes
 USE_LANGUAGES+=		c99
 USE_TOOLS+=		pkg-config
 
-# Needed for docs and man pages - doesn't work now
-# BUILD_DEPENDS+=	xmlto-[0-9]*:../../textproc/xmlto
-# CMAKE_ARGS+=		-DBUILD_TOOLS_DOC=on
+SUBST_CLASSES+=		man
+SUBST_STAGE.man=	pre-build
+SUBST_MESSAGE.man=	Fix man installation path
+SUBST_FILES.man=	tools/CMakeLists.txt
+SUBST_SED.man=		-e 's,share/man,${PKGMANDIR},'
 
 CMAKE_ARGS+=		-DBUILD_TOOLS=ON
-
-CFLAGS.SunOS+=		-DHAVE_HTONLL=1
+CMAKE_ARGS+=		-DBUILD_TOOLS_DOCS=ON
+CMAKE_ARGS+=		-DENABLE_SSL_SUPPORT=ON
 
 .include "../../devel/popt/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
