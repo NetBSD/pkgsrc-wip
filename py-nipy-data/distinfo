@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/09/13 18:56:59 jihbed Exp $
+
+SHA1 (nipy-data-0.2.tar.gz) = b5fe801843a9fa94930c565e531cfc72c490b8b2
+RMD160 (nipy-data-0.2.tar.gz) = 83b242a906546b18c28fc2e82848ae3644e007a6
+Size (nipy-data-0.2.tar.gz) = 81515168 bytes
