@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2013/09/13 01:20:33 makoto Exp $
+# $NetBSD: Makefile,v 1.27 2013/09/13 02:26:14 makoto Exp $
 #
 
 DISTNAME=	fldigi-3.21.76
@@ -48,6 +48,11 @@ CHECK_WRKREF_SKIP+=	bin/fldigi
 
 .if ${LOWER_OPSYS} == "netbsd"
 CONFIGURE_ENV+=		ac_cv_header_execinfo_h=no
+.endif
+
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mclang)
+CXXFLAGS+=	-std=c++11 -Wno-error=c++11-narrowing
 .endif
 
 .include "../../audio/libsamplerate/buildlink3.mk"
