@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2013/01/15 12:03:31 phonohawk Exp $
+$NetBSD: distinfo,v 1.8 2013/09/14 00:27:20 szptvlfn Exp $
 
-SHA1 (text-0.11.2.3.tar.gz) = 123e7a69bcb12e6fd0c1b08e28216d3150668d8c
-RMD160 (text-0.11.2.3.tar.gz) = 903c347739e0f81c87d1c5eb164da525a8764d1a
-Size (text-0.11.2.3.tar.gz) = 122938 bytes
+SHA1 (text-0.11.3.1.tar.gz) = f985198d0b8caad8e523af73d3fc2b1f87a80ac7
+RMD160 (text-0.11.3.1.tar.gz) = 544b6be80db9432dd4c149f81a2c0603e2e67205
+Size (text-0.11.3.1.tar.gz) = 126477 bytes

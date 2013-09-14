@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2012/01/17 13:06:45 phonohawk Exp $
+@comment $NetBSD: PLIST,v 1.5 2013/09/14 00:27:20 szptvlfn Exp $
 lib/text-${PKGVERSION}/${HASKELL_VERSION}/Data/Text.hi
 lib/text-${PKGVERSION}/${HASKELL_VERSION}/Data/Text.p_hi
 lib/text-${PKGVERSION}/${HASKELL_VERSION}/Data/Text/Array.hi
@@ -43,6 +43,10 @@ lib/text-${PKGVERSION}/${HASKELL_VERSION}/Data/Text/Lazy/Builder/Functions.hi
 lib/text-${PKGVERSION}/${HASKELL_VERSION}/Data/Text/Lazy/Builder/Functions.p_hi
 lib/text-${PKGVERSION}/${HASKELL_VERSION}/Data/Text/Lazy/Builder/Int.hi
 lib/text-${PKGVERSION}/${HASKELL_VERSION}/Data/Text/Lazy/Builder/Int.p_hi
+lib/text-${PKGVERSION}/${HASKELL_VERSION}/Data/Text/Lazy/Builder/Int/Digits.hi
+lib/text-${PKGVERSION}/${HASKELL_VERSION}/Data/Text/Lazy/Builder/Int/Digits.p_hi
+lib/text-${PKGVERSION}/${HASKELL_VERSION}/Data/Text/Lazy/Builder/Internal.hi
+lib/text-${PKGVERSION}/${HASKELL_VERSION}/Data/Text/Lazy/Builder/Internal.p_hi
 lib/text-${PKGVERSION}/${HASKELL_VERSION}/Data/Text/Lazy/Builder/RealFloat.hi
 lib/text-${PKGVERSION}/${HASKELL_VERSION}/Data/Text/Lazy/Builder/RealFloat.p_hi
 lib/text-${PKGVERSION}/${HASKELL_VERSION}/Data/Text/Lazy/Builder/RealFloat/Functions.hi
