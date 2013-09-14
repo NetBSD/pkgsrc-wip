@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5466 2013/09/13 18:45:37 kristerw Exp $
+# $Id: Makefile,v 1.5467 2013/09/14 10:39:13 ryo-on Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1561,7 +1561,6 @@ SUBDIR+=	ltrace
 SUBDIR+=	lua-BitOp
 SUBDIR+=	lua-lbn
 SUBDIR+=	lua-pgsql
-SUBDIR+=	luaposix
 SUBDIR+=	luasocket
 SUBDIR+=	lucene
 SUBDIR+=	lwc
