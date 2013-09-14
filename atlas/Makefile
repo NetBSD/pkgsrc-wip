@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2012/09/24 16:56:39 asau Exp $
+# $NetBSD: Makefile,v 1.12 2013/09/14 23:46:50 asau Exp $
 
-ATLAS_VERSION=	3.9.25
+ATLAS_VERSION=	3.11.11
 
 DISTNAME=	atlas${ATLAS_VERSION}
 PKGNAME=	atlas-${ATLAS_VERSION}
