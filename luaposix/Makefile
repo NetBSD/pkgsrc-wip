@@ -1,17 +1,17 @@
-# $NetBSD: Makefile,v 1.12 2012/12/30 16:01:57 ryo-on Exp $
+# $NetBSD: Makefile,v 1.13 2013/09/14 07:56:18 ryo-on Exp $
 #
 
-DISTNAME=	luaposix-5.1.23
-PKGNAME=	${DISTNAME:S/lua/${LUA_PKGPREFIX}-/}
+DISTNAME=	luaposix-release-v31
+PKGNAME=	${DISTNAME:S/lua/${LUA_PKGPREFIX}-/:S/release-v//}
 CATEGORIES=	devel
-MASTER_SITES=	https://github.com/downloads/luaposix/luaposix/
+MASTER_SITES=	-https://github.com/luaposix/luaposix/archive/release-v31.tar.gz
 
 MAINTAINER=	ryoon@NetBSD.org
-HOMEPAGE=	http://luaforge.net/projects/luaposix/
+HOMEPAGE=	https://github.com/luaposix/luaposix
 COMMENT=	POSIX library (including curses) for lua
 LICENSE=	mit
 
-DEPENDS+=	${LUA_PKGPREFIX}-BitOp-[0-9]*:../../wip/lua-BitOp
+FETCH_USING=	curl
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
@@ -19,6 +19,11 @@ USE_LIBTOOL=	yes
 CONFIGURE_ARGS+=	--libdir=${PREFIX}/${LUA_CDIR}
 CONFIGURE_ARGS+=	--docdir=${PREFIX}/share/doc/${PKGNAME_NOREV}
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/${PKGNAME_NOREV}
+
+post-install:
+	cd ${DESTDIR}${PREFIX}/${LUA_CDIR} && \
+	${LN} -fs ../../../share/${PKGNAME}/posix.lua && \
+	${LN} -fs ../../../share/${PKGNAME}/curses.lua
 
 .include "../../lang/lua/module.mk"
 .include "../../mk/curses.buildlink3.mk"
