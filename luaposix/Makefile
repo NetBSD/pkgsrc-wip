@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2013/09/14 07:56:18 ryo-on Exp $
+# $NetBSD: Makefile,v 1.14 2013/09/14 09:01:12 ryo-on Exp $
 #
 
 DISTNAME=	luaposix-release-v31
@@ -14,6 +14,7 @@ LICENSE=	mit
 FETCH_USING=	curl
 
 GNU_CONFIGURE=	yes
+USE_TOOLS+=	perl:build
 USE_LIBTOOL=	yes
 
 CONFIGURE_ARGS+=	--libdir=${PREFIX}/${LUA_CDIR}

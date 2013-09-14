@@ -1,6 +1,6 @@
-$NetBSD: patch-configure,v 1.1 2013/09/14 07:56:18 ryo-on Exp $
+$NetBSD: patch-configure,v 1.2 2013/09/14 09:01:13 ryo-on Exp $
 
---- configure.orig	2013-09-14 06:54:28.000000000 +0000
+--- configure.orig	2013-09-09 07:15:14.000000000 +0000
 +++ configure
 @@ -1899,6 +1899,52 @@ $as_echo "$ac_res" >&6; }
    eval $as_lineno_stack; ${as_lineno_stack:+:} unset as_lineno
@@ -55,6 +55,15 @@ $NetBSD: patch-configure,v 1.1 2013/09/14 07:56:18 ryo-on Exp $
  cat >config.log <<_ACEOF
  This file contains any messages produced by compilers while
  running configure, to aid debugging if configure makes a mistake.
+@@ -12865,7 +12911,7 @@ $as_echo "#define HAVE_CRYPT /**/" >>con
+ fi
+ 
+ 
+-for ac_func in strlcpy statvfs
++for ac_func in strlcpy statvfs, mkdtemp
+ do :
+   as_ac_var=`$as_echo "ac_cv_func_$ac_func" | $as_tr_sh`
+ ac_fn_c_check_func "$LINENO" "$ac_func" "$as_ac_var"
 @@ -12878,6 +12924,28 @@ fi
  done
  
