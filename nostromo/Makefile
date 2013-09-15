@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2012/10/03 18:15:33 asau Exp $
+# $NetBSD: Makefile,v 1.7 2013/09/15 08:36:06 astforge Exp $
 #
 
 DISTNAME=	nostromo-1.9.5
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://www.nazgul.ch/dev/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
@@ -13,7 +13,7 @@ COMMENT=	Fast, secure HTTP/1.1 CGI/1.1 SSL IPv4/IPv6 webserver
 LICENSE=	modified-bsd
 
 USE_LANGUAGES=	c
-USE_TOOLS=	sed
+USE_TOOLS+=	sed
 # gcc version 4.5.3 (NetBSD nb2 20110806) -O2 causes index out of bounds
 CFLAGS+= -O
 

@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.3 2013/03/30 07:04:34 shattered Exp $
-sbin/crypt
-sbin/nhttpd
+@comment $NetBSD: PLIST,v 1.4 2013/09/15 08:36:06 astforge Exp $
 man/man8/nhttpd.8
 nostromo/conf/mimes
 nostromo/conf/nhttpd.conf-dist
+nostromo/htdocs/cgi-bin/printenv
 nostromo/htdocs/index.html
 nostromo/htdocs/nostromo.gif
-nostromo/htdocs/cgi-bin/printenv
 nostromo/icons/dir.gif
 nostromo/icons/file.gif
+sbin/crypt
+sbin/nhttpd
 share/examples/rc.d/nostromo

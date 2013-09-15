@@ -1,5 +1,9 @@
-$NetBSD: distinfo,v 1.2 2011/11/27 13:16:41 astforge Exp $
+$NetBSD: distinfo,v 1.3 2013/09/15 08:36:06 astforge Exp $
 
 SHA1 (nostromo-1.9.5.tar.gz) = fae4a2655749d7ca04c5b87bead55578ec6705cc
 RMD160 (nostromo-1.9.5.tar.gz) = 8b9c17c854f7ed5c721d188c3cd3bd0510fb841f
 Size (nostromo-1.9.5.tar.gz) = 47798 bytes
+SHA1 (patch-src-http_path-extern) = 73cbbc5dc9c4d9cd1c5afeef39048de41ef9f471
+SHA1 (patch-src-http_path-http) = 23b5bcfc73ba55897b444bbf8e08ec6def97a1f5
+SHA1 (patch-src-http_path-main) = f3060eef5c01fb348f5eed02d7b1bfb77ea4d712
+SHA1 (patch-src-libmy-strb64d) = d313538e060790fa9593733a969fbb5c1185fa46
