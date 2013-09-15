@@ -1,10 +1,10 @@
-$NetBSD: patch-data_etc_Makefile.in,v 1.1 2012/12/30 20:08:52 roelants Exp $
+$NetBSD: patch-data_etc_Makefile.in,v 1.2 2013/09/15 17:31:16 roelants Exp $
 
 Config file handling.
 
 --- data/etc/Makefile.in.orig	2012-09-18 13:55:53.000000000 +0000
 +++ data/etc/Makefile.in
-@@ -380,9 +380,9 @@ top_builddir = @top_builddir@
+@@ -437,9 +437,9 @@ top_builddir = @top_builddir@
  top_srcdir = @top_srcdir@
  version_info = @version_info@
  MAINTAINERCLEANFILES = Makefile.in
