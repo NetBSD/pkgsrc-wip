@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.14 2013/02/17 13:07:53 roelants Exp $
+$NetBSD: distinfo,v 1.15 2013/09/15 17:22:37 roelants Exp $
 
-SHA1 (evas-1.7.5.tar.bz2) = 87db3057ff07c350478b7c62d87e347af1671bd4
-RMD160 (evas-1.7.5.tar.bz2) = 1427123029667c4ad7b95d902915e665ff4d63b5
-Size (evas-1.7.5.tar.bz2) = 9412064 bytes
+SHA1 (evas-1.7.8.tar.bz2) = a3d447a5cb38833601ffd4f7042de0bb03498c40
+RMD160 (evas-1.7.8.tar.bz2) = 1c0504aae02039412defe3bb7a700397447134da
+Size (evas-1.7.8.tar.bz2) = 9453923 bytes

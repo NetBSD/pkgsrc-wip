@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2013/02/17 13:05:51 roelants Exp $
+$NetBSD: distinfo,v 1.8 2013/09/15 17:22:36 roelants Exp $
 
-SHA1 (eina-1.7.5.tar.bz2) = ba03f6ee0cc28401ac4a0e0e2efd45317fc47064
-RMD160 (eina-1.7.5.tar.bz2) = cd8c1383bb79107be300ffa0e421132f74a532ee
-Size (eina-1.7.5.tar.bz2) = 9807863 bytes
+SHA1 (eina-1.7.8.tar.bz2) = 98e3afad143ba632141527cce4673d0034698b6e
+RMD160 (eina-1.7.8.tar.bz2) = 81dfba846733859d40ae2267c3d5ca1f335607c9
+Size (eina-1.7.8.tar.bz2) = 9704783 bytes

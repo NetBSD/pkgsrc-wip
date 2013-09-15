@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2013/02/17 13:09:00 roelants Exp $
+@comment $NetBSD: PLIST,v 1.14 2013/09/15 17:22:35 roelants Exp $
 @comment bin/ecore_test
 include/ecore-1/Ecore.h
 include/ecore-1/Ecore_Con.h
@@ -39,6 +39,7 @@ share/doc/ecore/COPYING
 share/locale/cs/LC_MESSAGES/ecore.mo
 share/locale/de/LC_MESSAGES/ecore.mo
 share/locale/el/LC_MESSAGES/ecore.mo
+share/locale/eo/LC_MESSAGES/ecore.mo
 share/locale/fr/LC_MESSAGES/ecore.mo
 share/locale/it/LC_MESSAGES/ecore.mo
 share/locale/nl/LC_MESSAGES/ecore.mo

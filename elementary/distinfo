@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2013/02/17 13:15:26 roelants Exp $
+$NetBSD: distinfo,v 1.5 2013/09/15 17:22:37 roelants Exp $
 
-SHA1 (elementary-1.7.5.tar.bz2) = fa51b18c262efc944f3f5824b0e432e26667831d
-RMD160 (elementary-1.7.5.tar.bz2) = 623724aefc17860f295e964bf932e75f210d1123
-Size (elementary-1.7.5.tar.bz2) = 9368228 bytes
+SHA1 (elementary-1.7.8.tar.bz2) = 0271a14cd164927dae7605efffee05dcbcf7ef7b
+RMD160 (elementary-1.7.8.tar.bz2) = ade04da28525327f14e62ca0975da0c91b3bed04
+Size (elementary-1.7.8.tar.bz2) = 9390559 bytes
 SHA1 (patch-configure.ac) = 3ad7253cb706cd282b806b718761dc801ebc11bf

@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2013/02/17 13:12:30 roelants Exp $
+# $NetBSD: Makefile,v 1.37 2013/09/15 17:22:35 roelants Exp $
 #
 
-DISTNAME=	edje-1.7.5
+DISTNAME=	edje-1.7.8
 CATEGORIES=	graphics
 MASTER_SITES=	http://download.enlightenment.org/releases/
 EXTRACT_SUFX=	.tar.bz2

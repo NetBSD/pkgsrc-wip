@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.12 2013/02/17 13:11:47 roelants Exp $
+$NetBSD: distinfo,v 1.13 2013/09/15 17:22:37 roelants Exp $
 
-SHA1 (embryo-1.7.5.tar.bz2) = ad25a7a1c6a4a07fed8297262bebb628c3ea2331
-RMD160 (embryo-1.7.5.tar.bz2) = 0bfc9f1c8e2353c99d29f9bd7f8576dd2c5cead2
-Size (embryo-1.7.5.tar.bz2) = 449362 bytes
+SHA1 (embryo-1.7.8.tar.bz2) = 184aebaf0b93a814ff055b7f11e7f8a0ca07143a
+RMD160 (embryo-1.7.8.tar.bz2) = 63a1a56a07371805c457d33615e443eb65622704
+Size (embryo-1.7.8.tar.bz2) = 456623 bytes

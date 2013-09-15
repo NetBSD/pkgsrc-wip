@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2013/02/17 13:05:51 roelants Exp $
+# $NetBSD: Makefile,v 1.12 2013/09/15 17:22:36 roelants Exp $
 #
 
-DISTNAME=	eina-1.7.5
+DISTNAME=	eina-1.7.8
 CATEGORIES=	devel
 MASTER_SITES=	http://download.enlightenment.org/releases/
 EXTRACT_SUFX=	.tar.bz2

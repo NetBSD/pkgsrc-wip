@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2013/02/17 13:15:26 roelants Exp $
+# $NetBSD: Makefile,v 1.9 2013/09/15 17:22:36 roelants Exp $
 #
 
-DISTNAME=	elementary-1.7.5
+DISTNAME=	elementary-1.7.8
 CATEGORIES=	x11
 MASTER_SITES=	http://download.enlightenment.org/releases/
 EXTRACT_SUFX=	.tar.bz2
