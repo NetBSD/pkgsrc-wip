@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5469 2013/09/16 21:18:40 szptvlfn Exp $
+# $Id: Makefile,v 1.5470 2013/09/16 21:27:28 szptvlfn Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -950,6 +950,7 @@ SUBDIR+=	hs-ReadArgs
 SUBDIR+=	hs-SHA
 SUBDIR+=	hs-StateVar
 SUBDIR+=	hs-Tensor
+SUBDIR+=	hs-aeson
 SUBDIR+=	hs-ansi-terminal
 SUBDIR+=	hs-ansi-wl-pprint
 SUBDIR+=	hs-arrow-list
