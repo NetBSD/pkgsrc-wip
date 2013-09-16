@@ -1,0 +1,2 @@
+Data.Stringable provides a type class with a set of functions for
+converting to and from the most often used string-linke types in Haskell.

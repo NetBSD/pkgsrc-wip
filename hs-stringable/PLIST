@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2013/09/16 21:17:11 szptvlfn Exp $
+lib/stringable-${PKGVERSION}/${HASKELL_VERSION}/Data/Stringable.hi
+lib/stringable-${PKGVERSION}/${HASKELL_VERSION}/Data/Stringable.p_hi
+lib/stringable-${PKGVERSION}/${HASKELL_VERSION}/HSstringable-${PKGVERSION}.o
+lib/stringable-${PKGVERSION}/${HASKELL_VERSION}/libHSstringable-${PKGVERSION}.a
+lib/stringable-${PKGVERSION}/${HASKELL_VERSION}/libHSstringable-${PKGVERSION}_p.a
+lib/stringable-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/stringable-${PKGVERSION}/LICENSE
