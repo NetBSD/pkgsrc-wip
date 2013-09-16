@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2013/09/16 23:03:58 szptvlfn Exp $
+lib/mmorph-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Morph.hi
+lib/mmorph-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Morph.p_hi
+lib/mmorph-${PKGVERSION}/${HASKELL_VERSION}/HSmmorph-${PKGVERSION}.o
+lib/mmorph-${PKGVERSION}/${HASKELL_VERSION}/libHSmmorph-${PKGVERSION}.a
+lib/mmorph-${PKGVERSION}/${HASKELL_VERSION}/libHSmmorph-${PKGVERSION}_p.a
+lib/mmorph-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/mmorph-${PKGVERSION}/LICENSE
