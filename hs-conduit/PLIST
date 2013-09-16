@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1 2013/09/16 23:20:29 szptvlfn Exp $
+lib/conduit-${PKGVERSION}/${HASKELL_VERSION}/Data/Conduit.hi
+lib/conduit-${PKGVERSION}/${HASKELL_VERSION}/Data/Conduit.p_hi
+lib/conduit-${PKGVERSION}/${HASKELL_VERSION}/Data/Conduit/Binary.hi
+lib/conduit-${PKGVERSION}/${HASKELL_VERSION}/Data/Conduit/Binary.p_hi
+lib/conduit-${PKGVERSION}/${HASKELL_VERSION}/Data/Conduit/Internal.hi
+lib/conduit-${PKGVERSION}/${HASKELL_VERSION}/Data/Conduit/Internal.p_hi
+lib/conduit-${PKGVERSION}/${HASKELL_VERSION}/Data/Conduit/Lazy.hi
+lib/conduit-${PKGVERSION}/${HASKELL_VERSION}/Data/Conduit/Lazy.p_hi
+lib/conduit-${PKGVERSION}/${HASKELL_VERSION}/Data/Conduit/List.hi
+lib/conduit-${PKGVERSION}/${HASKELL_VERSION}/Data/Conduit/List.p_hi
+lib/conduit-${PKGVERSION}/${HASKELL_VERSION}/Data/Conduit/Text.hi
+lib/conduit-${PKGVERSION}/${HASKELL_VERSION}/Data/Conduit/Text.p_hi
+lib/conduit-${PKGVERSION}/${HASKELL_VERSION}/Data/Conduit/Util.hi
+lib/conduit-${PKGVERSION}/${HASKELL_VERSION}/Data/Conduit/Util.p_hi
+lib/conduit-${PKGVERSION}/${HASKELL_VERSION}/HSconduit-${PKGVERSION}.o
+lib/conduit-${PKGVERSION}/${HASKELL_VERSION}/System/PosixFile.hi
+lib/conduit-${PKGVERSION}/${HASKELL_VERSION}/System/PosixFile.p_hi
+lib/conduit-${PKGVERSION}/${HASKELL_VERSION}/libHSconduit-${PKGVERSION}.a
+lib/conduit-${PKGVERSION}/${HASKELL_VERSION}/libHSconduit-${PKGVERSION}_p.a
+lib/conduit-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/conduit-${PKGVERSION}/LICENSE
