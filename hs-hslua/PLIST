@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2013/09/16 21:06:34 szptvlfn Exp $
+lib/hslua-${PKGVERSION}/${HASKELL_VERSION}/HShslua-${PKGVERSION}.o
+lib/hslua-${PKGVERSION}/${HASKELL_VERSION}/Scripting/Lua.hi
+lib/hslua-${PKGVERSION}/${HASKELL_VERSION}/Scripting/Lua.p_hi
+lib/hslua-${PKGVERSION}/${HASKELL_VERSION}/Scripting/Lua/ConfigFile.hi
+lib/hslua-${PKGVERSION}/${HASKELL_VERSION}/Scripting/Lua/ConfigFile.p_hi
+lib/hslua-${PKGVERSION}/${HASKELL_VERSION}/libHShslua-${PKGVERSION}.a
+lib/hslua-${PKGVERSION}/${HASKELL_VERSION}/libHShslua-${PKGVERSION}_p.a
+lib/hslua-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/hslua-${PKGVERSION}/COPYRIGHT
