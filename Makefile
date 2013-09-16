@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5468 2013/09/16 21:08:38 szptvlfn Exp $
+# $Id: Makefile,v 1.5469 2013/09/16 21:18:40 szptvlfn Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1126,6 +1126,7 @@ SUBDIR+=	hs-storablevector
 SUBDIR+=	hs-stream-fusion
 SUBDIR+=	hs-strict
 SUBDIR+=	hs-strict-io
+SUBDIR+=	hs-stringable
 SUBDIR+=	hs-stringsearch
 SUBDIR+=	hs-stringtable-atom
 SUBDIR+=	hs-syb
