@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5467 2013/09/14 10:39:13 ryo-on Exp $
+# $Id: Makefile,v 1.5468 2013/09/16 21:08:38 szptvlfn Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1053,6 +1053,7 @@ SUBDIR+=	hs-hothasktags
 SUBDIR+=	hs-hscolour
 SUBDIR+=	hs-hslogger
 SUBDIR+=	hs-hslogger-template
+SUBDIR+=	hs-hslua
 SUBDIR+=	hs-html
 SUBDIR+=	hs-hxt
 SUBDIR+=	hs-hxt-charproperties
