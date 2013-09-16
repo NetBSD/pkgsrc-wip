@@ -1,0 +1,10 @@
+@comment $NetBSD: PLIST,v 1.1 2013/09/16 23:12:49 szptvlfn Exp $
+lib/resourcet-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Trans/Resource.hi
+lib/resourcet-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Trans/Resource.p_hi
+lib/resourcet-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Trans/Resource/Internal.hi
+lib/resourcet-${PKGVERSION}/${HASKELL_VERSION}/Control/Monad/Trans/Resource/Internal.p_hi
+lib/resourcet-${PKGVERSION}/${HASKELL_VERSION}/HSresourcet-${PKGVERSION}.o
+lib/resourcet-${PKGVERSION}/${HASKELL_VERSION}/libHSresourcet-${PKGVERSION}.a
+lib/resourcet-${PKGVERSION}/${HASKELL_VERSION}/libHSresourcet-${PKGVERSION}_p.a
+lib/resourcet-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/resourcet-${PKGVERSION}/LICENSE
