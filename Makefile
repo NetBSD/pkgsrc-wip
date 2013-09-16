@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5472 2013/09/16 23:14:04 szptvlfn Exp $
+# $Id: Makefile,v 1.5473 2013/09/16 23:21:39 szptvlfn Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -990,6 +990,7 @@ SUBDIR+=	hs-comonad
 SUBDIR+=	hs-comonad-transformers
 SUBDIR+=	hs-comonads-fd
 SUBDIR+=	hs-concrete-typerep
+SUBDIR+=	hs-conduit
 SUBDIR+=	hs-containers-unicode-symbols
 SUBDIR+=	hs-contravariant
 SUBDIR+=	hs-control-monad-failure
