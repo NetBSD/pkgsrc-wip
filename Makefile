@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5474 2013/09/17 14:54:20 thomasklausner Exp $
+# $Id: Makefile,v 1.5475 2013/09/17 15:27:33 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2957,6 +2957,7 @@ SUBDIR+=	resid-builder
 SUBDIR+=	residualvm
 SUBDIR+=	resin
 SUBDIR+=	retroarch
+SUBDIR+=	revelation
 SUBDIR+=	rhapsody
 SUBDIR+=	riak
 SUBDIR+=	ripe-rpsl-objectlibrary
