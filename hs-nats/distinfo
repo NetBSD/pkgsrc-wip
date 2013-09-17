@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2013/02/23 15:15:20 phonohawk Exp $
+$NetBSD: distinfo,v 1.2 2013/09/17 20:09:32 szptvlfn Exp $
 
-SHA1 (nats-0.1.tar.gz) = a0ff5e6d5ada0d09e1adb59353928457bf04121f
-RMD160 (nats-0.1.tar.gz) = deff1e1fc08230c3233e50a14e2c999ce174e416
-Size (nats-0.1.tar.gz) = 3734 bytes
+SHA1 (nats-0.1.2.tar.gz) = 93a2ef1e088b001b0b95134e2eec05897be79692
+RMD160 (nats-0.1.2.tar.gz) = cb751c09ffb89cc6feeaf8246bb03d6d36e963f1
+Size (nats-0.1.2.tar.gz) = 3954 bytes
