@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5473 2013/09/16 23:21:39 szptvlfn Exp $
+# $Id: Makefile,v 1.5474 2013/09/17 14:54:20 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2439,6 +2439,7 @@ SUBDIR+=	py-corrfitter
 SUBDIR+=	py-cosmolopy
 SUBDIR+=	py-couchdb
 SUBDIR+=	py-country
+SUBDIR+=	py-cracklib
 SUBDIR+=	py-cryptoidlib
 SUBDIR+=	py-csa
 SUBDIR+=	py-cscope
