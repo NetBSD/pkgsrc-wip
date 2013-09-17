@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5475 2013/09/17 15:27:33 thomasklausner Exp $
+# $Id: Makefile,v 1.5476 2013/09/17 23:59:45 szptvlfn Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1007,6 +1007,11 @@ SUBDIR+=	hs-data-accessor-monads-fd
 SUBDIR+=	hs-data-accessor-mtl
 SUBDIR+=	hs-data-accessor-template
 SUBDIR+=	hs-data-default
+SUBDIR+=	hs-data-default-class
+SUBDIR+=	hs-data-default-instances-base
+SUBDIR+=	hs-data-default-instances-containers
+SUBDIR+=	hs-data-default-instances-dlist
+SUBDIR+=	hs-data-default-instances-old-locale
 SUBDIR+=	hs-dataenc
 SUBDIR+=	hs-dependent-sum
 SUBDIR+=	hs-derive
