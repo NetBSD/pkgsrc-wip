@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1 2013/09/17 23:37:03 szptvlfn Exp $
+lib/data-default-class-${PKGVERSION}/${HASKELL_VERSION}/Data/Default/Class.hi
+lib/data-default-class-${PKGVERSION}/${HASKELL_VERSION}/Data/Default/Class.p_hi
+lib/data-default-class-${PKGVERSION}/${HASKELL_VERSION}/HSdata-default-class-${PKGVERSION}.o
+lib/data-default-class-${PKGVERSION}/${HASKELL_VERSION}/libHSdata-default-class-${PKGVERSION}.a
+lib/data-default-class-${PKGVERSION}/${HASKELL_VERSION}/libHSdata-default-class-${PKGVERSION}_p.a
+lib/data-default-class-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/data-default-class-${PKGVERSION}/LICENSE
