@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2013/08/21 15:44:27 szptvlfn Exp $
+$NetBSD: distinfo,v 1.4 2013/09/19 10:29:19 szptvlfn Exp $
 
-SHA1 (tagsoup-0.12.8.tar.gz) = b588803b0878897eef40de9b3cb6aa190ef02c06
-RMD160 (tagsoup-0.12.8.tar.gz) = 70064ae8062411471981c746792c270571fe1ebe
-Size (tagsoup-0.12.8.tar.gz) = 30647 bytes
+SHA1 (tagsoup-0.13.tar.gz) = 0c127690f80828cf425cc5e04f21f9ae0e46b597
+RMD160 (tagsoup-0.13.tar.gz) = b94f75cc39784199e51a8d62816308a7c8944a5a
+Size (tagsoup-0.13.tar.gz) = 42110 bytes
