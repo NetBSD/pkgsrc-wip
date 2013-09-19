@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2013/08/23 07:33:32 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.8 2013/09/19 10:48:04 szptvlfn Exp $
 
-DISTNAME=	pandoc-1.11.1
+DISTNAME=	pandoc-1.12
 PKGNAME=	${DISTNAME}
 CATEGORIES=	textproc
 
@@ -14,30 +14,34 @@ post-install:
 	${INSTALL_MAN} ${WRKSRC}/man/man1/pandoc.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_MAN} ${WRKSRC}/man/man5/pandoc_markdown.5 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
 
-.include "../../devel/pcre/buildlink3.mk"
 .include "../../wip/mk/haskell.mk"
+.include "../../wip/hs-aeson/buildlink3.mk"
+.include "../../wip/hs-attoparsec/buildlink3.mk"
 .include "../../wip/hs-base64-bytestring/buildlink3.mk"
 .include "../../wip/hs-blaze-html/buildlink3.mk"
 .include "../../wip/hs-blaze-markup/buildlink3.mk"
-.include "../../wip/hs-citeproc-hs/buildlink3.mk"
 .include "../../wip/hs-data-default/buildlink3.mk"
 .include "../../wip/hs-digest/buildlink3.mk"
 .include "../../wip/hs-highlighting-kate/buildlink3.mk"
+.include "../../wip/hs-hslua/buildlink3.mk"
 .include "../../wip/hs-HTTP/buildlink3.mk"
-.include "../../wip/hs-json/buildlink3.mk"
 .include "../../wip/hs-mtl/buildlink3.mk"
 .include "../../wip/hs-network/buildlink3.mk"
 .include "../../wip/hs-pandoc-types/buildlink3.mk"
 .include "../../wip/hs-parsec/buildlink3.mk"
 .include "../../wip/hs-pcre-light/buildlink3.mk"
-.include "../../wip/hs-random//buildlink3.mk"
+.include "../../wip/hs-random/buildlink3.mk"
+.include "../../wip/hs-stringable/buildlink3.mk"
 .include "../../wip/hs-syb/buildlink3.mk"
 .include "../../wip/hs-tagsoup/buildlink3.mk"
 .include "../../wip/hs-temporary/buildlink3.mk"
 .include "../../wip/hs-texmath/buildlink3.mk"
 .include "../../wip/hs-text/buildlink3.mk"
+.include "../../wip/hs-unordered-containers/buildlink3.mk"
 .include "../../wip/hs-utf8-string/buildlink3.mk"
+.include "../../wip/hs-vector/buildlink3.mk"
 .include "../../wip/hs-xml/buildlink3.mk"
+.include "../../wip/hs-yaml/buildlink3.mk"
 .include "../../wip/hs-zip-archive/buildlink3.mk"
 .include "../../wip/hs-zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

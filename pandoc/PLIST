@@ -1,12 +1,16 @@
-@comment $NetBSD: PLIST,v 1.4 2013/08/23 07:33:32 szptvlfn Exp $
+@comment $NetBSD: PLIST,v 1.5 2013/09/19 10:48:04 szptvlfn Exp $
 bin/pandoc
 lib/${PKGNAME}/${HASKELL_VERSION}/HS${PKGNAME}.o
 lib/${PKGNAME}/${HASKELL_VERSION}/Paths_pandoc.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Paths_pandoc.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Text/Pandoc.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Text/Pandoc.p_hi
-lib/${PKGNAME}/${HASKELL_VERSION}/Text/Pandoc/Biblio.hi
-lib/${PKGNAME}/${HASKELL_VERSION}/Text/Pandoc/Biblio.p_hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Text/Pandoc/Asciify.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Text/Pandoc/Asciify.p_hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Text/Pandoc/Compat/Monoid.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Text/Pandoc/Compat/Monoid.p_hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Text/Pandoc/Compat/TagSoupEntity.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Text/Pandoc/Compat/TagSoupEntity.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Text/Pandoc/Highlighting.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Text/Pandoc/Highlighting.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Text/Pandoc/ImageSize.hi
@@ -21,10 +25,18 @@ lib/${PKGNAME}/${HASKELL_VERSION}/Text/Pandoc/Parsing.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Text/Pandoc/Parsing.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Text/Pandoc/Pretty.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Text/Pandoc/Pretty.p_hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Text/Pandoc/Process.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Text/Pandoc/Process.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Text/Pandoc/Readers/DocBook.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Text/Pandoc/Readers/DocBook.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Text/Pandoc/Readers/HTML.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Text/Pandoc/Readers/HTML.p_hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Text/Pandoc/Readers/Haddock.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Text/Pandoc/Readers/Haddock.p_hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Text/Pandoc/Readers/Haddock/Lex.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Text/Pandoc/Readers/Haddock/Lex.p_hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Text/Pandoc/Readers/Haddock/Parse.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Text/Pandoc/Readers/Haddock/Parse.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Text/Pandoc/Readers/LaTeX.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Text/Pandoc/Readers/LaTeX.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Text/Pandoc/Readers/Markdown.hi
@@ -33,6 +45,8 @@ lib/${PKGNAME}/${HASKELL_VERSION}/Text/Pandoc/Readers/MediaWiki.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Text/Pandoc/Readers/MediaWiki.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Text/Pandoc/Readers/Native.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Text/Pandoc/Readers/Native.p_hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Text/Pandoc/Readers/OPML.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Text/Pandoc/Readers/OPML.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Text/Pandoc/Readers/RST.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Text/Pandoc/Readers/RST.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Text/Pandoc/Readers/TeXMath.hi
@@ -55,6 +69,8 @@ lib/${PKGNAME}/${HASKELL_VERSION}/Text/Pandoc/Writers/AsciiDoc.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Text/Pandoc/Writers/AsciiDoc.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Text/Pandoc/Writers/ConTeXt.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Text/Pandoc/Writers/ConTeXt.p_hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Text/Pandoc/Writers/Custom.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Text/Pandoc/Writers/Custom.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Text/Pandoc/Writers/Docbook.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Text/Pandoc/Writers/Docbook.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Text/Pandoc/Writers/Docx.hi
@@ -77,6 +93,8 @@ lib/${PKGNAME}/${HASKELL_VERSION}/Text/Pandoc/Writers/Native.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Text/Pandoc/Writers/Native.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Text/Pandoc/Writers/ODT.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Text/Pandoc/Writers/ODT.p_hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Text/Pandoc/Writers/OPML.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Text/Pandoc/Writers/OPML.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Text/Pandoc/Writers/OpenDocument.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Text/Pandoc/Writers/OpenDocument.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Text/Pandoc/Writers/Org.hi
@@ -85,6 +103,8 @@ lib/${PKGNAME}/${HASKELL_VERSION}/Text/Pandoc/Writers/RST.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Text/Pandoc/Writers/RST.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Text/Pandoc/Writers/RTF.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Text/Pandoc/Writers/RTF.p_hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Text/Pandoc/Writers/Shared.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/Text/Pandoc/Writers/Shared.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Text/Pandoc/Writers/Texinfo.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Text/Pandoc/Writers/Texinfo.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Text/Pandoc/Writers/Textile.hi
@@ -98,13 +118,13 @@ man/man1/pandoc.1
 man/man5/pandoc_markdown.5
 share/doc/${PKGNAME}/COPYING
 share/${PKGNAME}/BUGS
+share/${PKGNAME}/CONTRIBUTING.md
 share/${PKGNAME}/COPYRIGHT
 share/${PKGNAME}/INSTALL
 share/${PKGNAME}/README
 share/${PKGNAME}/changelog
 share/${PKGNAME}/data/LaTeXMathML.js
 share/${PKGNAME}/data/MathMLinHTML.js
-share/${PKGNAME}/data/default.csl
 share/${PKGNAME}/data/dzslides/template.html
 share/${PKGNAME}/data/epub.css
 share/${PKGNAME}/data/reference.docx
@@ -120,6 +140,7 @@ share/${PKGNAME}/data/s5/default/print.css
 share/${PKGNAME}/data/s5/default/s5-core.css
 share/${PKGNAME}/data/s5/default/slides.css
 share/${PKGNAME}/data/s5/default/slides.js
+share/${PKGNAME}/data/sample.lua
 share/${PKGNAME}/data/slideous/slideous.css
 share/${PKGNAME}/data/slideous/slideous.js
 share/${PKGNAME}/data/slidy/graphics/fold-dim.gif
@@ -127,7 +148,7 @@ share/${PKGNAME}/data/slidy/graphics/fold.gif
 share/${PKGNAME}/data/slidy/graphics/nofold-dim.gif
 share/${PKGNAME}/data/slidy/graphics/unfold-dim.gif
 share/${PKGNAME}/data/slidy/graphics/unfold.gif
-share/${PKGNAME}/data/slidy/scripts/slidy.js.gz
+share/${PKGNAME}/data/slidy/scripts/slidy.js
 share/${PKGNAME}/data/slidy/styles/slidy.css
 share/${PKGNAME}/data/templates/default.asciidoc
 share/${PKGNAME}/data/templates/default.beamer
@@ -143,8 +164,10 @@ share/${PKGNAME}/data/templates/default.man
 share/${PKGNAME}/data/templates/default.markdown
 share/${PKGNAME}/data/templates/default.mediawiki
 share/${PKGNAME}/data/templates/default.opendocument
+share/${PKGNAME}/data/templates/default.opml
 share/${PKGNAME}/data/templates/default.org
 share/${PKGNAME}/data/templates/default.plain
+share/${PKGNAME}/data/templates/default.revealjs
 share/${PKGNAME}/data/templates/default.rst
 share/${PKGNAME}/data/templates/default.rtf
 share/${PKGNAME}/data/templates/default.s5
