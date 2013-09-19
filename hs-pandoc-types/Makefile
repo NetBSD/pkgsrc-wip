@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1 2013/08/22 20:37:40 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.2 2013/09/19 10:37:33 szptvlfn Exp $
 
-DISTNAME=	pandoc-types-1.10
+DISTNAME=	pandoc-types-1.12.1
 CATEGORIES=	textproc
 
 MAINTAINER=	szptvlfn@a-net.email.ne.jp
@@ -9,5 +9,6 @@ LICENSE=	gnu-gpl-v2
 
 
 .include "../../wip/mk/haskell.mk"
+.include "../../wip/hs-aeson/buildlink3.mk"
 .include "../../wip/hs-syb/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
