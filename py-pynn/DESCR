@@ -1,0 +1,19 @@
+In other words, you can write the code for a model once, using the PyNN API
+and the Python programming language, and then run it without modification on
+any simulator that PyNN supports (currently NEURON, NEST, PCSIM and Brian).
+
+The API has two parts, a low-level, procedural API (functions ``create()``,
+``connect()``, ``set()``, ``record()``, ``record_v()``), and a high-level,
+object-oriented API (classes ``Population`` and ``Projection``, which have
+methods like ``set()``, ``record()``, ``setWeights()``, etc.).
+
+The low-level API is good for small networks, and perhaps gives more flexibility
+The high-level API is good for hiding the details and the book-keeping, allowing
+you to concentrate on the overall structure of your model.
+
+The other thing that is required to write a model once and run it on multiple
+simulators is standard cell and synapse models. PyNN translates standard
+cell-model names and parameter names into simulator-specific names, e.g.
+standard model ``IF_curr_alpha`` is ``iaf_neuron`` in NEST and ``StandardIF``
+in NEURON, while ``SpikeSourcePoisson`` is a ``poisson_generator`` in NEST
+and a ``NetStim`` in NEURON.
