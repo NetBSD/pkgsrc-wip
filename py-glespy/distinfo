@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/09/20 10:05:36 jihbed Exp $
+
+SHA1 (glespy-0.1.5.tar.gz) = 53093c6cd3dfcddd6a22e6180dce8ed72f17a8a1
+RMD160 (glespy-0.1.5.tar.gz) = 43062f3ea4d7d1b5c62545ff9f6bef462459146a
+Size (glespy-0.1.5.tar.gz) = 11632 bytes
