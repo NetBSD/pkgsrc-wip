@@ -1,0 +1,34 @@
+$NetBSD: patch-src_Makefile.am,v 1.1 2013/09/20 06:57:02 makoto Exp $
+
+/usr/pkg/bin/swig -c++ -python -Ipython -o pysim ...
+...
+pysimulavr_wrap.cpp:146:20: fatal error: Python.h: No such file or directory
+
+--- src/Makefile.am.orig	2013-09-20 09:02:07.000000000 +0900
++++ src/Makefile.am	2013-09-20 15:16:25.000000000 +0900
+@@ -3,6 +3,7 @@
+ #
+ 
+ SUBDIRS = hwtimer cmd ui python
++AUTOMAKE_OPTIONS= subdir-objects
+ 
+ AVR_LIBBFD_LIB=@AVR_LIBBFD_LIB@
+ AVR_LIBBFD_INC=@AVR_LIBBFD_INC@
+@@ -10,7 +11,7 @@ SWIG=@SWIG@
+ PYTHON_CPPFLAGS=@PYTHON_CPPFLAGS@
+ 
+ AM_CXXFLAGS=-I$(AVR_LIBBFD_INC)
+-CXXFLAGS=-g -O2 -Icmd -Iui -Ihwtimer
++AM_CXXFLAGS+=-g -O2 -Icmd -Iui -Ihwtimer
+ 
+ bin_PROGRAMS    = simulavr
+ @MAINT@ noinst_PROGRAMS = kbdgentables
+@@ -29,7 +30,7 @@ endif
+ 
+ if PYTHON_USE
+ PYTHON_MODUL_LIB=_pysimulavr@PYTHON_MODULE_EXTENSION@
+-PYTHON_XTRA_INC=-Ipython
++PYTHON_XTRA_INC=-I@PREFIX@/include/python2.7 -Ipython
+ PYTHON_MODUL_INTERFACE=$(srcdir)/python/pysimulavr.i
+ noinst_LTLIBRARIES += lib_pysimulavr.la
+ nodist_lib_pysimulavr_la_SOURCES=pysimulavr_wrap.cpp

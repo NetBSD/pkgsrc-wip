@@ -1,0 +1,10 @@
+--- Makefile.am.orig	2013-09-13 09:44:09.000000000 +0900
++++ Makefile.am	2013-09-13 09:42:42.000000000 +0900
+@@ -2,6 +2,7 @@
+ # $Id: patch-Makefile.am,v 1.1 2013/09/20 06:57:02 makoto Exp $
+ #
+ 
++AUTOMAKE_OPTIONS = subdir-objects
+ ACLOCAL_AMFLAGS = -I m4
+ 
+ if USE_AVR_CROSS

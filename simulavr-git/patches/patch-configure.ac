@@ -1,11 +1,34 @@
-$NetBSD: patch-configure.ac,v 1.1 2013/08/08 05:41:39 makoto Exp $
+$NetBSD: patch-configure.ac,v 1.2 2013/09/20 06:57:02 makoto Exp $
 
+(1)
+config.status: creating Makefile
+config.status: error: cannot find input file: `src/Makefile.in'
+Stop.
+make: stopped in /export/CHROOT/usr/pkgsrc/wip/simulavr-git
+
+(2)
 => Checking for portability problems in extracted files
 ERROR: [check-portability.awk] => Found test ... == ...:
 
---- configure.ac.orig	2013-08-08 09:29:35.000000000 +0900
-+++ configure.ac	2013-08-08 09:29:38.000000000 +0900
-@@ -86,7 +86,7 @@ fi
+--- configure.ac.orig	2013-09-20 09:02:07.000000000 +0900
++++ configure.ac	2013-09-20 15:33:33.000000000 +0900
+@@ -6,7 +6,14 @@
+ # common initialisation of autotools
+ ####
+ AC_INIT([SimulAVR], [1.1dev], [simulavr-devel@nongnu.org])
+-AM_INIT_AUTOMAKE([1.10 -Wall -Werror foreign])
++AM_INIT_AUTOMAKE([1.10 -Wall foreign subdir-objects])
++#
++# See ChangeLog of automake,
++# 2012-07-02  Stefano Lattarini  <stefano.lattarini@gmail.com>
++AM_EXTRA_RECURSIVE_TARGETS([src])
++AUTOMAKE_OPTIONS= subdir-objects
++AM_PROG_AR= /bin/ar
++#
+ AC_PREREQ([2.61])
+ AC_CONFIG_MACRO_DIR([m4])
+ AM_MAINTAINER_MODE
+@@ -107,7 +114,7 @@ fi
  ## this directory.
  AC_MSG_CHECKING([XML part description files in src/fab/atmel-xml/])
  AM_CONDITIONAL([USE_FAB], [test -f "${srcdir}/src/fab/atmel-xml/ATmega8.xml"])

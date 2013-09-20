@@ -1,0 +1,23 @@
+$NetBSD: patch-bootstrap,v 1.1 2013/09/20 06:57:02 makoto Exp $
+
+
+--- bootstrap.orig	2013-09-20 09:02:07.000000000 +0900
++++ bootstrap	2013-09-20 15:43:13.000000000 +0900
+@@ -53,7 +53,7 @@ usage()
+   exit 1;
+ }
+ 
+-verbose=""
++verbose=""
+ quiet="false"
+ mode="generate"
+ 
+@@ -82,7 +82,7 @@ case ${mode} in 
+     aclocal ${verbose} -I m4
+     autoheader ${verbose}
+     libtoolize ${verbose} --copy --force
+-    automake ${verbose} --add-missing --copy
++    automake ${verbose} --add-missing --copy --warning=none
+     autoconf ${verbose}
+     echo
+     echo "Now type './configure' to configure $PROJECT."
