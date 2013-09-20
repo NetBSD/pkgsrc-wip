@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2013/09/20 09:55:29 jihbed Exp $
+
+SHA1 (pymbolic-2013.3.5.tar.gz) = 4fa593ac37cf12d6a34e8273f06508bc2a050ed6
+RMD160 (pymbolic-2013.3.5.tar.gz) = 5ebc7b9b1540d05536fcd197cc8bc660ce2acf87
+Size (pymbolic-2013.3.5.tar.gz) = 58071 bytes
