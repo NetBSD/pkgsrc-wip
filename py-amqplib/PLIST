@@ -1,4 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2012/01/30 05:53:23 noud4 Exp $
+@comment $NetBSD: PLIST,v 1.3 2013/09/21 12:13:58 othyro Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/amqplib/__init__.py
 ${PYSITELIB}/amqplib/__init__.pyc
 ${PYSITELIB}/amqplib/__init__.pyo
