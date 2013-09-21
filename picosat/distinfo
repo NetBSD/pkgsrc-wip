@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2010/06/11 11:45:49 jihbed Exp $
+$NetBSD: distinfo,v 1.2 2013/09/21 15:51:50 jihbed Exp $
 
-SHA1 (picosat-913.tar.gz) = 9cef6cbbab5863a076f22e7785a778e1730ea25e
-RMD160 (picosat-913.tar.gz) = 9d0390ba2ae946c82330166c0237ec17147d2bb2
-Size (picosat-913.tar.gz) = 44863 bytes
+SHA1 (picosat-957.tar.gz) = 8d99711eb7864cd0292702aa70be7dbf530a1b3d
+RMD160 (picosat-957.tar.gz) = 0f0c5cb7960b3f0d1719fd5194349dc96ac72f99
+Size (picosat-957.tar.gz) = 63329 bytes
