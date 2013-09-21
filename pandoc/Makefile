@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2013/09/19 10:48:04 szptvlfn Exp $
+# $NetBSD: Makefile,v 1.9 2013/09/21 08:06:22 szptvlfn Exp $
 
-DISTNAME=	pandoc-1.12
+DISTNAME=	pandoc-1.12.0.2
 PKGNAME=	${DISTNAME}
 CATEGORIES=	textproc
 
@@ -31,7 +31,6 @@ post-install:
 .include "../../wip/hs-parsec/buildlink3.mk"
 .include "../../wip/hs-pcre-light/buildlink3.mk"
 .include "../../wip/hs-random/buildlink3.mk"
-.include "../../wip/hs-stringable/buildlink3.mk"
 .include "../../wip/hs-syb/buildlink3.mk"
 .include "../../wip/hs-tagsoup/buildlink3.mk"
 .include "../../wip/hs-temporary/buildlink3.mk"
