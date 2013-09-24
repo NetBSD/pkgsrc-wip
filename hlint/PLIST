@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2013/04/21 21:02:50 szptvlfn Exp $
+@comment $NetBSD: PLIST,v 1.7 2013/09/24 23:58:39 szptvlfn Exp $
 bin/hlint
 lib/${PKGNAME}/${HASKELL_VERSION}/Apply.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/Apply.p_hi
@@ -12,6 +12,8 @@ lib/${PKGNAME}/${HASKELL_VERSION}/HSE/Bracket.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/HSE/Bracket.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/HSE/Evaluate.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/HSE/Evaluate.p_hi
+lib/${PKGNAME}/${HASKELL_VERSION}/HSE/FreeVars.hi
+lib/${PKGNAME}/${HASKELL_VERSION}/HSE/FreeVars.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/HSE/Match.hi
 lib/${PKGNAME}/${HASKELL_VERSION}/HSE/Match.p_hi
 lib/${PKGNAME}/${HASKELL_VERSION}/HSE/NameMatch.hi
