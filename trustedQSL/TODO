@@ -1,0 +1,2 @@
+- SunOS 5.11/x86_64 is saying,
+  Could NOT find BDB (missing: BDB_INCLUDE_DIR)
