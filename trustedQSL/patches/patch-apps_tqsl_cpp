@@ -1,4 +1,4 @@
-$NetBSD: patch-apps_tqsl_cpp,v 1.1 2013/08/31 15:50:22 makoto Exp $
+$NetBSD: patch-apps_tqsl_cpp,v 1.2 2013/09/24 11:35:37 makoto Exp $
 
 Avoid following error (interim, only valid with db5)
 /usr/pkgsrc/wip/trustedQSL/work/tqsl-2.0/apps/tqsl.cpp:1133:36: error: 'DB_VERSION_STRING' was not declared in this scope
