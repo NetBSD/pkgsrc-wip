@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/09/24 10:40:19 fhajny Exp $
+# $NetBSD: Makefile,v 1.2 2013/09/25 08:52:33 fhajny Exp $
 
 DISTNAME=	sphinxbase-0.8
 CATEGORIES=	audio
@@ -11,7 +11,7 @@ LICENSE=	2-clause-bsd
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	perl:run pkg-config
+USE_TOOLS+=	bison perl:run pkg-config
 USE_LANGUAGES=	c c++
 
 PKGCONFIG_OVERRIDE+=	sphinxbase.pc.in
@@ -23,4 +23,5 @@ CONFIGURE_ARGS+=	--without-python
 
 .include "options.mk"
 
+.include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
