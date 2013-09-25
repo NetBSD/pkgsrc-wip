@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/09/24 12:51:49 ryo-on Exp $
+# $NetBSD: Makefile,v 1.2 2013/09/25 22:22:20 ryo-on Exp $
 
 VER=		4.1.1.2
 DISTNAME=	libreoffice-${VER}
@@ -37,7 +37,6 @@ MORE_DISTFILES= \
 	0279a21fab6f245e85a6f85fea54f511-source-code-font-1.009.tar.gz \
 	0be45d54cc5e1c2e3102e32b8c190346-liberation-fonts-ttf-1.07.1.tar.gz \
 	5c781723a0d9ed6188960defba8e91cf-liberation-fonts-ttf-2.00.1.tar.gz \
-	17410483b5b5f267aa18b7e00b65e6e0-hsqldb_1_8_0.zip \
 	1756c4fa6c616ae15973c104cd8cb256-Adobe-Core35_AFMs-314.tar.gz \
 	1e9ddfe25ac9577da709d7b2ea36f939-source-sans-font-1.036.tar.gz \
 	1f24ab1d39f4a51faf22244c94a6203f-xmlsec1-1.2.14.tar.gz \
@@ -79,7 +78,9 @@ MORE_DISTFILES= \
 	b63e6340a02ff1cacfeadb2c42286161-JLanguageTool-1.7.0.tar.bz2 \
 	05f84c95b610c21c5fd510d10debcabf-mariadb-native-client-1.0.0.tar.bz2 \
 	08c85a6d6d793daee14e10e22eefdc4b-mdds_0.8.1.tar.bz2 \
-	ea91f2fb4212a21d708aced277e6e85a-vigra1.4.0.tar.gz
+	ea91f2fb4212a21d708aced277e6e85a-vigra1.4.0.tar.gz \
+	185d60944ea767075d27247c3162b3bc-unowinreg.dll
+#	17410483b5b5f267aa18b7e00b65e6e0-hsqldb_1_8_0.zip
 #	ac4781e01619be13461bb2d562b94a7b-cppunit-1.13.1.tar.gz
 #	ea2acaf140ae40a87a952caa75184f4d-liborcus-0.5.1.tar.bz2
 #	26b3e95ddf3d9c077c480ea45874b3b8-lp_solve_5.5.tar.gz
@@ -94,6 +95,9 @@ SITES.${md}=		http://dev-www.libreoffice.org/src/
 
 DISTFILES+=e7a384790b13c29113e22e596ade9687-LinLibertineG-20120116.zip
 SITES.e7a384790b13c29113e22e596ade9687-LinLibertineG-20120116.zip=http://www.numbertext.org/linux/
+
+DISTFILES+=185d60944ea767075d27247c3162b3bc-unowinreg.dll
+SITES.185d60944ea767075d27247c3162b3bc-unowinreg.dll=http://download.go-oo.org/extern/
 
 .include "options.mk"
 
@@ -182,7 +186,6 @@ CONFIGURE_ARGS+=	--with-system-libvisio
 CONFIGURE_ARGS+=	--with-system-libwpd
 CONFIGURE_ARGS+=	--with-system-libxml
 CONFIGURE_ARGS+=	--with-system-lpsolve
-#CONFIGURE_ARGS+=	--with-system-mdds
 CONFIGURE_ARGS+=	--with-system-mesa-headers
 CONFIGURE_ARGS+=	--with-system-nss
 CONFIGURE_ARGS+=	--with-system-openldap
@@ -193,39 +196,22 @@ CONFIGURE_ARGS+=	--with-system-postgresql
 CONFIGURE_ARGS+=	--with-system-redland
 CONFIGURE_ARGS+=	--with-system-neon
 CONFIGURE_ARGS+=	--with-system-zlib
+CONFIGURE_ARGS+=	--without-system-beanshell
+# internal vigra should be used for effective developement.
 CONFIGURE_ARGS+=	--without-system-vigra
 CONFIGURE_ARGS+=	--with-vendor="pkgsrc"
+CONFIGURE_ARGS+=	--without-doxygen
 CONFIGURE_ARGS+=	--without-junit
 CONFIGURE_ARGS+=	--without-krb5
 CONFIGURE_ARGS+=	--without-gssapi
 CONFIGURE_ARGS+=	--without-system-apache-commons
-CONFIGURE_ARGS+=	--without-system-beanshell
 CONFIGURE_ARGS+=	--with-system-cppunit
-CONFIGURE_ARGS+=	--without-system-hsqldb
 CONFIGURE_ARGS+=	--without-system-jfreereport
+# internal sane should be used for effective developement.
 CONFIGURE_ARGS+=	--without-system-sane
 CONFIGURE_ARGS+=	--without-system-servlet-api
 
-# Some LibreOffice build scripts do strange things with library paths
-# and fail with the pkgsrc environment
-# Preset LD_LIBRARY_PATH to sane defaults and avoid complicating them
-# further
-#LIBPATH=	${BUILDLINK_DIR}/lib:${X11BASE}/lib
-#LIBPATH:=	${LIBPATH}:${WRKSRC}/desktop/unxdfly.pro/lib:${WRKSRC}/solver/unxdfly.pro/lib
-#LIBPATH:=	${LIBPATH}:${WRKSRC}/desktop/unxnbsd.pro/lib:${WRKSRC}/solver/unxnbsd.pro/lib
-
-SUBST_CLASSES+=			libpath
-SUBST_STAGE.libpath=	pre-configure
-SUBST_FILES.libpath=	set_soenv.in
-SUBST_SED.libpath=		-e 's,@LIBPATH@,${LIBPATH},g'
-SUBST_MESSAGE.libpath=	Fixing library path for dmake scripts
-
-SUBST_CLASSES+=			localbase
-SUBST_STAGE.localbase=		pre-configure
-SUBST_FILES.localbase=		configure.in
-SUBST_SED.localbase=		-e 's,@LOCALBASE@,${PREFIX},'
-SUBST_MESSAGE.localbase=	Fixing executable path for configure script
-
+# more REPLACE_PERL are needed.
 REPLACE_PERL=	sd/res/webview/editpic.pl
 REPLACE_PERL+=	sd/res/webview/poll.pl
 REPLACE_PERL+=	sd/res/webview/savepic.pl
@@ -280,7 +266,6 @@ post-install:
 .include "../../devel/cppunit/buildlink3.mk"
 .include "../../devel/gperf/buildlink3.mk"
 .include "../../devel/libexecinfo/buildlink3.mk"
-#.include "../../devel/mdds/buildlink3.mk"
 .include "../../devel/nss/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"

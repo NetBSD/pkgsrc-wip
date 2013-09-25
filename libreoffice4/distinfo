@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1 2013/09/24 12:51:50 ryo-on Exp $
+$NetBSD: distinfo,v 1.2 2013/09/25 22:22:21 ryo-on Exp $
 
 SHA1 (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = 452eba922e4f41603539c9dc39947d2271e47093
 RMD160 (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = dbeb7a7f8c89961ca2e544b810345d025561866b
@@ -21,6 +21,9 @@ Size (libreoffice/17410483b5b5f267aa18b7e00b65e6e0-hsqldb_1_8_0.zip) = 3519470 b
 SHA1 (libreoffice/1756c4fa6c616ae15973c104cd8cb256-Adobe-Core35_AFMs-314.tar.gz) = 28d4ec24dfda4eb41b6ceaa0cfcfca41b578f3b3
 RMD160 (libreoffice/1756c4fa6c616ae15973c104cd8cb256-Adobe-Core35_AFMs-314.tar.gz) = e99bb5017c29657c3303d8810e21bf02d737c345
 Size (libreoffice/1756c4fa6c616ae15973c104cd8cb256-Adobe-Core35_AFMs-314.tar.gz) = 315122 bytes
+SHA1 (libreoffice/185d60944ea767075d27247c3162b3bc-unowinreg.dll) = 5ac3c475e604f34e1b7b490048652e09787a0341
+RMD160 (libreoffice/185d60944ea767075d27247c3162b3bc-unowinreg.dll) = 3b24b4b2c93ac634a867fa64f50e90d700bcb867
+Size (libreoffice/185d60944ea767075d27247c3162b3bc-unowinreg.dll) = 502 bytes
 SHA1 (libreoffice/1e9ddfe25ac9577da709d7b2ea36f939-source-sans-font-1.036.tar.gz) = 78f9b7027e7774fecea51108bf5608435cc36c6c
 RMD160 (libreoffice/1e9ddfe25ac9577da709d7b2ea36f939-source-sans-font-1.036.tar.gz) = 818731b83b8de9de814a36bb90adbcc216aadbec
 Size (libreoffice/1e9ddfe25ac9577da709d7b2ea36f939-source-sans-font-1.036.tar.gz) = 229286 bytes
@@ -90,9 +93,6 @@ Size (libreoffice/a2f6010987e1c601274ab5d63b72c944-hyphen-2.8.4.tar.gz) = 636667
 SHA1 (libreoffice/a7983f859eafb2677d7ff386a023bc40-xsltml_2.1.2.zip) = 2d49e11b0b711970f494294dc3698f05eb294853
 RMD160 (libreoffice/a7983f859eafb2677d7ff386a023bc40-xsltml_2.1.2.zip) = 923870cf88023713a492e0a5c5d5707ec21d8739
 Size (libreoffice/a7983f859eafb2677d7ff386a023bc40-xsltml_2.1.2.zip) = 23150 bytes
-SHA1 (libreoffice/ac4781e01619be13461bb2d562b94a7b-cppunit-1.13.1.tar.gz) = d2f85147b4a3c40aa8352e7c7437ea64249bf4bb
-RMD160 (libreoffice/ac4781e01619be13461bb2d562b94a7b-cppunit-1.13.1.tar.gz) = 45c133346261fd2ec97f4c66a7ea08cd494c452a
-Size (libreoffice/ac4781e01619be13461bb2d562b94a7b-cppunit-1.13.1.tar.gz) = 855746 bytes
 SHA1 (libreoffice/ace6ab49184e329db254e454a010f56d-libxml-1.1.7.zip) = b19ad429273abb116432eae3af955ecaf1ab5b17
 RMD160 (libreoffice/ace6ab49184e329db254e454a010f56d-libxml-1.1.7.zip) = a2d9dfc67448b7ae43ff23873c3191494a3d73bc
 Size (libreoffice/ace6ab49184e329db254e454a010f56d-libxml-1.1.7.zip) = 2929311 bytes
@@ -120,9 +120,6 @@ Size (libreoffice/db60e4fde8dd6d6807523deb71ee34dc-liblayout-0.2.10.zip) = 13960
 SHA1 (libreoffice/e7a384790b13c29113e22e596ade9687-LinLibertineG-20120116.zip) = 9ab6ee07f70fa8143b5c9cc48a52602b368cc976
 RMD160 (libreoffice/e7a384790b13c29113e22e596ade9687-LinLibertineG-20120116.zip) = 061ce85689f99eb670229c4c52a27adcf48282f4
 Size (libreoffice/e7a384790b13c29113e22e596ade9687-LinLibertineG-20120116.zip) = 6651982 bytes
-SHA1 (libreoffice/ea2acaf140ae40a87a952caa75184f4d-liborcus-0.5.1.tar.bz2) = 9303d513e4b63a1d6e4bce7cfeb13635e568b466
-RMD160 (libreoffice/ea2acaf140ae40a87a952caa75184f4d-liborcus-0.5.1.tar.bz2) = 53c0cc12a3264b970f81ebb5b5c43208cee70688
-Size (libreoffice/ea2acaf140ae40a87a952caa75184f4d-liborcus-0.5.1.tar.bz2) = 1445106 bytes
 SHA1 (libreoffice/ea570af93c284aa9e5621cd563f54f4d-bsh-2.0b1-src.tar.gz) = 51537a09aa546336b0477c70077f3e21d857caa7
 RMD160 (libreoffice/ea570af93c284aa9e5621cd563f54f4d-bsh-2.0b1-src.tar.gz) = 03c1abf40f5950062ff8802829b8fa718c146512
 Size (libreoffice/ea570af93c284aa9e5621cd563f54f4d-bsh-2.0b1-src.tar.gz) = 726942 bytes
@@ -160,7 +157,7 @@ SHA1 (libreoffice/libreoffice-translations-4.1.1.2.tar.xz) = 8e19fe4d612464a6c2f
 RMD160 (libreoffice/libreoffice-translations-4.1.1.2.tar.xz) = f0fc6f910b89be7081edc72a7a854ab7ee60fffe
 Size (libreoffice/libreoffice-translations-4.1.1.2.tar.xz) = 130017392 bytes
 SHA1 (patch-configure) = 3f5fad63f56b6bd794e4880700dec4a1cc98655d
-SHA1 (patch-configure.ac) = 2e6fd5a2c3090418eb7652efaa2094bb8440285b
+SHA1 (patch-configure.ac) = 215344e6f18c6df3a7cb94d6b683973f877d5006
 SHA1 (patch-solenv_gbuild_AllLangResTarget.mk) = c6fa51c74e3be0e9d4f18e1481039d44d6c3db98
 SHA1 (patch-solenv_gbuild_Module.mk) = 92afd851c67642268653eb90997f8a47f34d04c4
 SHA1 (patch-sysui_CustomTarget__slackware.mk) = 7caac8785ee86f005d9e4b2acbecc45036478f02
