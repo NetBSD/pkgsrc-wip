@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5478 2013/09/24 12:53:31 ryo-on Exp $
+# $Id: Makefile,v 1.5479 2013/09/25 06:21:44 noud4 Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -2171,6 +2171,7 @@ SUBDIR+=	pear-CakePHP_CodeSniffer
 SUBDIR+=	pear-ConsoleTools
 SUBDIR+=	pear-Crypt_Blowfish
 SUBDIR+=	pear-DB_DataObject
+SUBDIR+=	pear-FPDF
 SUBDIR+=	pear-File_Iterator
 SUBDIR+=	pear-Finder
 SUBDIR+=	pear-FinderFacade
@@ -2225,6 +2226,7 @@ SUBDIR+=	pear-channel-cakephp
 SUBDIR+=	pear-channel-ezc
 SUBDIR+=	pear-channel-horde
 SUBDIR+=	pear-channel-pdepend
+SUBDIR+=	pear-channel-pearhub
 SUBDIR+=	pear-channel-phpmd
 SUBDIR+=	pear-channel-phpunit
 SUBDIR+=	pear-channel-swiftmailer
