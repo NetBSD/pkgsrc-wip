@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2013/09/25 22:22:20 ryo-on Exp $
+# $NetBSD: Makefile,v 1.3 2013/09/26 22:02:21 ryo-on Exp $
 
 VER=		4.1.1.2
 DISTNAME=	libreoffice-${VER}
 PKGNAME=	libreoffice4-${VER}
+PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/4.1.1/
 EXTRACT_SUFX=	.tar.xz
@@ -163,7 +164,7 @@ CONFIGURE_ARGS+=	--with-alloc=system
 CONFIGURE_ARGS+=	--with-compat-oowrappers
 CONFIGURE_ARGS+=	--with-external-tar=${DISTDIR}/${DIST_SUBDIR}
 CONFIGURE_ARGS+=	--with-fonts
-CONFIGURE_ARGS+=	--with-lang=""
+CONFIGURE_ARGS+=	--with-lang="ALL"
 CONFIGURE_ARGS+=	--with-myspell-dicts
 CONFIGURE_ARGS+=	--with-parallelism=${MAKE_JOBS}
 CONFIGURE_ARGS+=	--with-system-clucene
