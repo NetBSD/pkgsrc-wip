@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2013/09/26 08:55:58 thomasklausner Exp $
+# $NetBSD: options.mk,v 1.4 2013/09/26 10:08:06 ryo-on Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.libreoffice4
 PKG_SUPPORTED_OPTIONS=	java
@@ -13,7 +13,7 @@ USE_JAVA=		yes
 USE_JAVA2=		yes
 BUILD_DEPENDS+=	apache-ant-[0-9]*:../../devel/apache-ant
 FIND_PREFIX:=		ANTDIR=apache-ant
-BUILD_DEPENDS+=	hsqldb18-[0-9]*:../../wip/hsqldb18
+DEPENDS+=	hsqldb18-[0-9]*:../../wip/hsqldb18
 FIND_PREFIX:=		HSQLDB_SYSDIR=hsqldb18
 .include "../../mk/find-prefix.mk"
 CONFIGURE_ARGS+=	--enable-ext-wiki-publisher \
