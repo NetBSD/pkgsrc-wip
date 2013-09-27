@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2013/09/06 23:28:26 szptvlfn Exp $
+$NetBSD: distinfo,v 1.5 2013/09/27 13:51:00 szptvlfn Exp $
 
-SHA1 (unordered-containers-0.2.3.2.tar.gz) = b61ed8715fe109fc42a83de66a213aca37de7a6c
-RMD160 (unordered-containers-0.2.3.2.tar.gz) = 97430008486f96a5b889f5fd339a2e192a51bcdb
-Size (unordered-containers-0.2.3.2.tar.gz) = 25666 bytes
+SHA1 (unordered-containers-0.2.3.3.tar.gz) = 74eb7fe5e750b369c4ebd9349fc3af2dd263b23a
+RMD160 (unordered-containers-0.2.3.3.tar.gz) = 27534dfe2d8fd522887e48346afb8f3031348776
+Size (unordered-containers-0.2.3.3.tar.gz) = 25782 bytes
