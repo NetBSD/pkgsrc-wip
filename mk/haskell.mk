@@ -1,4 +1,4 @@
-# $NetBSD: haskell.mk,v 1.20 2013/09/27 12:10:32 szptvlfn Exp $
+# $NetBSD: haskell.mk,v 1.21 2013/09/27 12:59:19 szptvlfn Exp $
 #
 # This Makefile fragment handles Haskell Cabal packages.
 # See: http://www.haskell.org/cabal/
@@ -130,8 +130,8 @@ _PKG_VARS.haskell= \
 PKGNAME?=	hs-${DISTNAME}
 
 # Default value of MASTER_SITES.
-#_DISTBASE?=	${DISTNAME:C/-[^-]*$//}
-#_DISTVERSION?=	${DISTNAME:C/^.*-//}
+_DISTBASE?=	${DISTNAME:C/-[^-]*$//}
+_DISTVERSION?=	${DISTNAME:C/^.*-//}
 MASTER_SITES?=	${MASTER_SITE_HASKELL_HACKAGE}${DISTNAME}/
 
 # Default value of HOMEPAGE.
