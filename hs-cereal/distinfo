@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2012/03/04 07:59:16 phonohawk Exp $
+$NetBSD: distinfo,v 1.3 2013/09/28 01:02:27 szptvlfn Exp $
 
-SHA1 (cereal-0.3.5.1.tar.gz) = 321057107ff90dc92b891cefa7a2e80adfb87377
-RMD160 (cereal-0.3.5.1.tar.gz) = 532456766029997a3dc469c652c73d6cf964c136
-Size (cereal-0.3.5.1.tar.gz) = 22084 bytes
+SHA1 (cereal-0.4.0.0.tar.gz) = 14653b97237c03daacfae6f0ee51b38f2175536b
+RMD160 (cereal-0.4.0.0.tar.gz) = 967c107fbd08304b3e14172d8ee518cb991b7873
+Size (cereal-0.4.0.0.tar.gz) = 22310 bytes
