@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2013/03/02 11:18:57 phonohawk Exp $
+# $NetBSD: Makefile,v 1.8 2013/09/30 22:57:11 phonohawk Exp $
 #
 
-DISTNAME=	HUnit-1.2.5.1
+DISTNAME=	HUnit-1.2.5.2
 CATEGORIES=	devel
 
 MAINTAINER=	pho@cielonegro.org
