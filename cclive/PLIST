@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2013/09/30 21:07:38 thomasklausner Exp $
-bin/ccl
-bin/cclive
-man/man1/cclive.1

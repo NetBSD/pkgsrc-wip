@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5481 2013/09/27 15:48:15 thomasklausner Exp $
+# $Id: Makefile,v 1.5482 2013/09/30 21:11:10 thomasklausner Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -282,7 +282,6 @@ SUBDIR+=	carnival
 SUBDIR+=	cartago
 SUBDIR+=	castget
 SUBDIR+=	cb2bib
-SUBDIR+=	cclive
 SUBDIR+=	ccrypt
 SUBDIR+=	cddlib
 SUBDIR+=	cde
