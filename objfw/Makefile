@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2013/03/18 13:06:10 midar Exp $
+# $NetBSD: Makefile,v 1.3 2013/09/30 20:40:15 midar Exp $
 #
 
 DISTNAME=	objfw-0.7.1
@@ -11,9 +11,10 @@ LICENSE=	qpl-v1.0 OR gnu-gpl-v2 OR gnu-gpl-v3
 HOMEPAGE=	https://webkeks.org/objfw/
 MAINTAINER=	js@webkeks.org
 
-FETCH_USING=	wget	# required for https
+FETCH_USING=		wget	# required for https
 
-GNU_CONFIGURE=	yes
-USE_LANGUAGES=	objc
+GNU_CONFIGURE=		yes
+USE_LANGUAGES=		objc
+CONFIGURE_ARGS+=	--enable-static
 
 .include "../../mk/bsd.pkg.mk"

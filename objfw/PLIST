@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2012/11/23 22:24:33 midar Exp $
+@comment $NetBSD: PLIST,v 1.2 2013/09/30 20:40:15 midar Exp $
 bin/objfw-compile
 bin/objfw-config
 include/ObjFW/OFAcceptFailedException.h
@@ -134,6 +134,7 @@ include/ObjFW/of_strptime.h
 include/ObjFW/runtime.h
 include/ObjFW/threading.h
 include/ObjFW/unicode.h
+lib/libobjfw.a
 lib/libobjfw.so
 lib/libobjfw.so.6
 lib/libobjfw.so.6.0.0
