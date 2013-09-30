@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2011/07/28 09:40:07 phonohawk Exp $
+$NetBSD: distinfo,v 1.5 2013/09/30 16:34:37 phonohawk Exp $
 
-SHA1 (HsSVN-0.4.3.2.tar.gz) = a0d79d2e6edf0f83078e07cdbf962855d43f35a2
-RMD160 (HsSVN-0.4.3.2.tar.gz) = 28c79cc68eedc2b5e3d946496913b1643e864fb0
-Size (HsSVN-0.4.3.2.tar.gz) = 58929 bytes
+SHA1 (HsSVN-0.4.3.3.tar.gz) = 4dc160dc31b81714b7693d1d7de760622e75f173
+RMD160 (HsSVN-0.4.3.3.tar.gz) = 44ef7648e4522adcd1aa67912d7e615c787ecb4a
+Size (HsSVN-0.4.3.3.tar.gz) = 61718 bytes
