@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2013/03/18 13:32:22 midar Exp $
+# $NetBSD: Makefile,v 1.2 2013/09/30 20:34:58 midar Exp $
 #
 
 DISTNAME=	objfw-git
@@ -17,6 +17,7 @@ WRKSRC=			${WRKDIR}/objfw
 USE_TOOLS=		aclocal automake
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		objc
+CONFIGURE_ARGS+=	--enable-static
 
 pre-configure:
 	cd ${WRKSRC} && ./autogen.sh
