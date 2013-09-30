@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2012/02/11 03:45:46 phonohawk Exp $
+# $NetBSD: Makefile,v 1.3 2013/09/30 23:01:22 phonohawk Exp $
 #
 
-DISTNAME=	hxt-charproperties-9.1.1
+DISTNAME=	hxt-charproperties-9.1.1.1
 CATEGORIES=	textproc
 
 MAINTAINER=	pho@cielonegro.org
