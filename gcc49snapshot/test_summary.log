@@ -1,5 +1,5 @@
 cat <<'EOF' |
-LAST_UPDATED: Obtained from SVN: trunk revision 201980
+LAST_UPDATED: Obtained from SVN: trunk revision 203020
 
 Native configuration is x86_64--netbsd
 
@@ -25,12 +25,12 @@ FAIL: g++.old-deja/g++.law/profile1.C -std=gnu++11 (test for excess errors)
 
 		=== g++ Summary ===
 
-# of expected passes		54161
+# of expected passes		54400
 # of unexpected failures	10
 # of expected failures		293
 # of unresolved testcases	5
-# of unsupported tests		988
-/usr/pkgsrc/wip/gcc49snapshot/work/build/gcc/testsuite/g++/../../xg++  version 4.9.0 20130825 (experimental) (GCC) 
+# of unsupported tests		995
+/usr/pkgsrc/wip/gcc49snapshot/work/build/gcc/testsuite/g++/../../xg++  version 4.9.0 20130929 (experimental) (GCC) 
 
 		=== gcc tests ===
 
@@ -61,8 +61,6 @@ FAIL: gcc.dg/pr43643.c (test for excess errors)
 FAIL: gcc.dg/utf-array-short-wchar.c  (test for errors, line 39)
 FAIL: gcc.dg/utf-array-short-wchar.c  (test for errors, line 41)
 FAIL: gcc.dg/utf-array-short-wchar.c (test for excess errors)
-FAIL: gcc.dg/lto/pr56297 c_lto_pr56297_0.o-c_lto_pr56297_1.o link,  -flto -fno-common  (internal compiler error)
-UNRESOLVED: gcc.dg/lto/pr56297 c_lto_pr56297_0.o-c_lto_pr56297_1.o execute  -flto -fno-common 
 FAIL: gcc.dg/torture/builtin-convert-1.c  -O1  (test for excess errors)
 FAIL: gcc.dg/torture/builtin-convert-1.c  -O2  (test for excess errors)
 FAIL: gcc.dg/torture/builtin-convert-1.c  -O3 -fomit-frame-pointer  (test for excess errors)
@@ -167,13 +165,8 @@ FAIL: gcc.dg/torture/fp-int-convert-timode.c  -O3 -g  execution test
 FAIL: gcc.dg/torture/fp-int-convert-timode.c  -Os  execution test
 FAIL: gcc.dg/torture/fp-int-convert-timode.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  execution test
 FAIL: gcc.dg/torture/fp-int-convert-timode.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  execution test
-FAIL: gcc.dg/torture/pr8081.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  (internal compiler error)
-FAIL: gcc.dg/torture/pr8081.c  -O2 -flto -fno-use-linker-plugin -flto-partition=none  (test for excess errors)
-FAIL: gcc.dg/torture/pr8081.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (internal compiler error)
-FAIL: gcc.dg/torture/pr8081.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  (test for excess errors)
-UNRESOLVED: gcc.dg/torture/pr8081.c  -O2 -flto -fuse-linker-plugin -fno-fat-lto-objects  compilation failed to produce executable
-FAIL: gcc.dg/tree-ssa/attr-alias.c scan-tree-dump-times optimized "  test4 " 1
 FAIL: gcc.dg/tree-ssa/foldaddr-1.c scan-tree-dump-times original "return 0" 1
+FAIL: gcc.dg/tree-ssa/slsr-39.c scan-tree-dump-times slsr "MEM" 4
 FAIL: gcc.target/i386/conversion.c (test for excess errors)
 FAIL: gcc.target/i386/excess-precision-1.c execution test
 FAIL: gcc.target/i386/excess-precision-3.c execution test
@@ -193,26 +186,18 @@ FAIL: gcc.target/i386/vcvtps2ph-3.c execution test
 
 		=== gcc Summary ===
 
-# of expected passes		95262
-# of unexpected failures	126
+# of expected passes		95838
+# of unexpected failures	121
 # of expected failures		255
-# of unresolved testcases	28
+# of unresolved testcases	26
 # of unsupported tests		1768
-/usr/pkgsrc/wip/gcc49snapshot/work/build/gcc/xgcc  version 4.9.0 20130825 (experimental) (GCC) 
+/usr/pkgsrc/wip/gcc49snapshot/work/build/gcc/xgcc  version 4.9.0 20130929 (experimental) (GCC) 
 
 		=== gfortran tests ===
 
 
 Running target unix
 FAIL: gfortran.dg/nint_2.f90  -O0  execution test
-FAIL: gfortran.dg/round_4.f90  -O0  execution test
-FAIL: gfortran.dg/round_4.f90  -O1  execution test
-FAIL: gfortran.dg/round_4.f90  -O2  execution test
-FAIL: gfortran.dg/round_4.f90  -O3 -fomit-frame-pointer  execution test
-FAIL: gfortran.dg/round_4.f90  -O3 -fomit-frame-pointer -funroll-loops  execution test
-FAIL: gfortran.dg/round_4.f90  -O3 -fomit-frame-pointer -funroll-all-loops -finline-functions  execution test
-FAIL: gfortran.dg/round_4.f90  -O3 -g  execution test
-FAIL: gfortran.dg/round_4.f90  -Os  execution test
 FAIL: gfortran.dg/lto/pr45586-2 f_lto_pr45586-2_0.o-f_lto_pr45586-2_0.o link, -O0 -flto -flto-partition=none -fuse-linker-plugin (internal compiler error)
 UNRESOLVED: gfortran.dg/lto/pr45586-2 f_lto_pr45586-2_0.o-f_lto_pr45586-2_0.o execute -O0 -flto -flto-partition=none -fuse-linker-plugin
 FAIL: gfortran.dg/lto/pr45586-2 f_lto_pr45586-2_0.o-f_lto_pr45586-2_0.o link, -O0 -flto -flto-partition=1to1 -fno-use-linker-plugin  (internal compiler error)
@@ -228,12 +213,12 @@ UNRESOLVED: gfortran.dg/lto/pr45586 f_lto_pr45586_0.o-f_lto_pr45586_0.o execute 
 
 		=== gfortran Summary ===
 
-# of expected passes		44560
-# of unexpected failures	15
+# of expected passes		44636
+# of unexpected failures	7
 # of expected failures		52
 # of unresolved testcases	6
 # of unsupported tests		272
-/usr/pkgsrc/wip/gcc49snapshot/work/build/gcc/testsuite/gfortran/../../gfortran  version 4.9.0 20130825 (experimental) (GCC) 
+/usr/pkgsrc/wip/gcc49snapshot/work/build/gcc/testsuite/gfortran/../../gfortran  version 4.9.0 20130929 (experimental) (GCC) 
 
 		=== obj-c++ tests ===
 
@@ -245,7 +230,7 @@ Running target unix
 # of expected passes		1441
 # of expected failures		10
 # of unsupported tests		86
-/usr/pkgsrc/wip/gcc49snapshot/work/build/gcc/testsuite/obj-c++/../../xg++  version 4.9.0 20130825 (experimental) (GCC) 
+/usr/pkgsrc/wip/gcc49snapshot/work/build/gcc/testsuite/obj-c++/../../xg++  version 4.9.0 20130929 (experimental) (GCC) 
 
 		=== objc tests ===
 
@@ -261,7 +246,7 @@ FAIL: objc.dg/proto-lossage-4.m -fgnu-runtime (test for excess errors)
 # of unexpected failures	3
 # of expected failures		6
 # of unsupported tests		74
-/usr/pkgsrc/wip/gcc49snapshot/work/build/gcc/xgcc  version 4.9.0 20130825 (experimental) (GCC) 
+/usr/pkgsrc/wip/gcc49snapshot/work/build/gcc/xgcc  version 4.9.0 20130929 (experimental) (GCC) 
 
 		=== boehm-gc tests ===
 
@@ -299,8 +284,6 @@ Running target unix
 
 
 Running target unix
-WARNING: program timed out.
-FAIL: libgomp.c/shared-1.c execution test
 FAIL: libgomp.graphite/bounds.c scan-tree-dump-times graphite "0 loops carried no dependency" 1
 FAIL: libgomp.graphite/force-parallel-4.c execution test
 FAIL: libgomp.graphite/force-parallel-4.c scan-tree-dump-times graphite "2 loops carried no dependency" 1
@@ -309,8 +292,8 @@ FAIL: libgomp.graphite/pr41118.c scan-tree-dump-times optimized "loopfn" 0
 
 		=== libgomp Summary ===
 
-# of expected passes		2186
-# of unexpected failures	6
+# of expected passes		2189
+# of unexpected failures	5
 # of unsupported tests		3
 		=== libitm tests ===
 
@@ -1195,17 +1178,17 @@ UNRESOLVED: tr1/8_c_compatibility/complex/50880.cc compilation failed to produce
 
 		=== libstdc++ Summary ===
 
-# of expected passes		8369
+# of expected passes		8426
 # of unexpected failures	5
-# of expected failures		42
+# of expected failures		36
 # of unresolved testcases	2
-# of unsupported tests		667
+# of unsupported tests		672
 
-Compiler version: 4.9.0 20130825 (experimental) (GCC) 
+Compiler version: 4.9.0 20130929 (experimental) (GCC) 
 Platform: x86_64--netbsd
 configure flags: --enable-languages='c obj-c++ objc java fortran c++' --enable-shared --enable-long-long --with-local-prefix=/usr/pkg/gcc49snapshot --enable-libssp --enable-threads=posix --with-boot-ldflags='-static-libstdc++ -static-libgcc -Wl,-R/usr/pkg/lib ' --with-gnu-ld --with-ld=/usr/bin/ld --with-gnu-as --with-as=/usr/bin/as --enable-nls --with-libiconv-prefix=/usr --with-gmp=/usr/pkg --with-mpc=/usr/pkg --with-mpfr=/usr/pkg --with-cloog=/usr/pkg --enable-cloog-backend=isl --with-ecj-jar=/usr/pkgsrc/distfiles/ecj-4.5.jar --enable-java-home --with-os-directory=netbsd --with-arch-directory=amd64 --with-jvm-root-dir=/usr/pkg/java/gcc49snapshot --with-java-home=/usr/pkg/java/gcc49snapshot --with-system-zlib --enable-__cxa_atexit --with-gxx-include-dir=/usr/pkg/gcc49snapshot/include/c++/ --prefix=/usr/pkg/gcc49snapshot --build=x86_64--netbsd --host=x86_64--netbsd --infodir=/usr/pkg/gcc49snapshot/info --mandir=/usr/pkg/gcc49snapshot/man
 EOF
-Mail -s "Results for 4.9.0 20130825 (experimental) (GCC) testsuite on x86_64--netbsd" gcc-testresults@gcc.gnu.org &&
+Mail -s "Results for 4.9.0 20130929 (experimental) (GCC) testsuite on x86_64--netbsd" gcc-testresults@gcc.gnu.org &&
 mv /usr/pkgsrc/wip/gcc49snapshot/work/build/./gcc/testsuite/g++/g++.sum /usr/pkgsrc/wip/gcc49snapshot/work/build/./gcc/testsuite/g++/g++.sum.sent &&
 mv /usr/pkgsrc/wip/gcc49snapshot/work/build/./gcc/testsuite/gcc/gcc.sum /usr/pkgsrc/wip/gcc49snapshot/work/build/./gcc/testsuite/gcc/gcc.sum.sent &&
 mv /usr/pkgsrc/wip/gcc49snapshot/work/build/./gcc/testsuite/gfortran/gfortran.sum /usr/pkgsrc/wip/gcc49snapshot/work/build/./gcc/testsuite/gfortran/gfortran.sum.sent &&
