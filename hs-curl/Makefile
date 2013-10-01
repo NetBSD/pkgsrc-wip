@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2010/01/17 12:03:26 thomasklausner Exp $
+# $NetBSD: Makefile,v 1.8 2013/10/01 01:41:18 phonohawk Exp $
 #
 
-DISTNAME=	curl-1.3.5
-PKGREVISION=	1
+DISTNAME=	curl-1.3.8
 CATEGORIES=	www
 
 MAINTAINER=	pho@cielonegro.org
