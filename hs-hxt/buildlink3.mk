@@ -1,11 +1,11 @@
-# $NetBSD: buildlink3.mk,v 1.6 2012/03/04 05:47:33 phonohawk Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2013/10/01 01:34:26 phonohawk Exp $
 
 BUILDLINK_TREE+=	hs-hxt
 
 .if !defined(HS_HXT_BUILDLINK3_MK)
 HS_HXT_BUILDLINK3_MK:=
 
-BUILDLINK_API_DEPENDS.hs-hxt+=	hs-hxt>=9.2.2
+BUILDLINK_API_DEPENDS.hs-hxt+=	hs-hxt>=9.3.1
 BUILDLINK_PKGSRCDIR.hs-hxt?=	../../wip/hs-hxt
 
 .include "../../wip/hs-hxt-charproperties/buildlink3.mk"
