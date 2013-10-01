@@ -1,0 +1,16 @@
+$NetBSD: patch-hxt-tagsoup.cabal,v 1.1 2013/10/01 03:14:28 phonohawk Exp $
+
+We want hxt-tagsoup to work with tagsoup 0.13. pkgsrc isn't good at
+handling multiple package versions.
+
+--- hxt-tagsoup.cabal.orig	2012-01-05 12:28:52.000000000 +0000
++++ hxt-tagsoup.cabal
+@@ -33,7 +33,7 @@ library
+  extensions: MultiParamTypeClasses DeriveDataTypeable FunctionalDependencies FlexibleInstances
+ 
+  build-depends: base               >= 4    && < 5,
+-                tagsoup            >= 0.10 && < 0.13,
++                tagsoup            >= 0.13 && < 0.14,
+                 hxt-charproperties >= 9    && < 10,
+                 hxt-unicode        >= 9    && < 10,
+                 hxt                >= 9.1  && < 10

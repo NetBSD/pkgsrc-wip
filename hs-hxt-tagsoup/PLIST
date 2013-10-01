@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1 2013/10/01 03:14:27 phonohawk Exp $
+lib/hxt-tagsoup-${PKGVERSION}/${HASKELL_VERSION}/HShxt-tagsoup-${PKGVERSION}.o
+lib/hxt-tagsoup-${PKGVERSION}/${HASKELL_VERSION}/Text/XML/HXT/Arrow/TagSoupInterface.hi
+lib/hxt-tagsoup-${PKGVERSION}/${HASKELL_VERSION}/Text/XML/HXT/Arrow/TagSoupInterface.p_hi
+lib/hxt-tagsoup-${PKGVERSION}/${HASKELL_VERSION}/Text/XML/HXT/Parser/TagSoup.hi
+lib/hxt-tagsoup-${PKGVERSION}/${HASKELL_VERSION}/Text/XML/HXT/Parser/TagSoup.p_hi
+lib/hxt-tagsoup-${PKGVERSION}/${HASKELL_VERSION}/Text/XML/HXT/TagSoup.hi
+lib/hxt-tagsoup-${PKGVERSION}/${HASKELL_VERSION}/Text/XML/HXT/TagSoup.p_hi
+lib/hxt-tagsoup-${PKGVERSION}/${HASKELL_VERSION}/libHShxt-tagsoup-${PKGVERSION}.a
+lib/hxt-tagsoup-${PKGVERSION}/${HASKELL_VERSION}/libHShxt-tagsoup-${PKGVERSION}_p.a
+lib/hxt-tagsoup-${PKGVERSION}/${HASKELL_VERSION}/package-description
+share/doc/hxt-tagsoup-${PKGVERSION}/LICENSE
