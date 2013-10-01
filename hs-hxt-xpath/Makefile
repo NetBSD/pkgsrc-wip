@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2012/02/11 04:40:42 phonohawk Exp $
+# $NetBSD: Makefile,v 1.4 2013/10/01 09:33:21 phonohawk Exp $
 #
 
-DISTNAME=	hxt-xpath-9.1.2
+DISTNAME=	hxt-xpath-9.1.2.1
 CATEGORIES=	textproc
 
 MAINTAINER=	pho@cielonegro.org
