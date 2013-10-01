@@ -129,6 +129,18 @@ DONE
    # of unresolved testcases       359
    # of unsupported tests          151
 
+- NetBSD/amd64 6.99.23 (clang-3.3 gdb-7.6.1)
+                === gdb Summary ===
+   # of expected passes            2896
+   # of unexpected failures        3284
+   # of expected failures          14
+   # of known failures             4
+   # of untested testcases         222
+   # of unresolved testcases       361
+   # of unsupported tests          151
+   
+   runtest completed at Wed Oct  2 01:10:18 2013
+
 - NetBSD/amd64 6.99.22 (gcc-4.5.4)  (with gdb-7.6)
    -----
                 === gdb Summary ===
