@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5485 2013/10/01 09:48:55 phonohawk Exp $
+# $Id: Makefile,v 1.5486 2013/10/01 20:27:34 wongk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -3017,6 +3017,7 @@ SUBDIR+=	runit
 SUBDIR+=	rygel
 SUBDIR+=	s3cmd
 SUBDIR+=	s3funnel
+SUBDIR+=	sabnzbdplus
 SUBDIR+=	safekeep
 SUBDIR+=	sais
 SUBDIR+=	sais-demo-data
