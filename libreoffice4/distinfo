@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2013/09/27 23:36:06 ryo-on Exp $
+$NetBSD: distinfo,v 1.4 2013/10/01 13:35:27 ryo-on Exp $
 
 SHA1 (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = 452eba922e4f41603539c9dc39947d2271e47093
 RMD160 (libreoffice/0168229624cfac409e766913506961a8-ucpp-1.3.2.tar.gz) = dbeb7a7f8c89961ca2e544b810345d025561866b
@@ -156,9 +156,9 @@ Size (libreoffice/libreoffice-help-4.1.1.2.tar.xz) = 1847556 bytes
 SHA1 (libreoffice/libreoffice-translations-4.1.1.2.tar.xz) = 8e19fe4d612464a6c2f9452e6d1ff83e609c7174
 RMD160 (libreoffice/libreoffice-translations-4.1.1.2.tar.xz) = f0fc6f910b89be7081edc72a7a854ab7ee60fffe
 Size (libreoffice/libreoffice-translations-4.1.1.2.tar.xz) = 130017392 bytes
-SHA1 (patch-configure) = 3f5fad63f56b6bd794e4880700dec4a1cc98655d
-SHA1 (patch-configure.ac) = 215344e6f18c6df3a7cb94d6b683973f877d5006
-SHA1 (patch-odk_CustomTarget__classes.mk) = 32ac3066f8db67a5c962aa78d27ec8dd27dbcf6c
+SHA1 (patch-configure) = 884cbd21af8479f487ca9b781f86b870d9a346fb
+SHA1 (patch-configure.ac) = 521e402256b6a874f0a3f470c7042a0a2e1874eb
+SHA1 (patch-odk_CustomTarget__classes.mk) = be85f00d88e60139bcf0440947349d4078c7d54f
 SHA1 (patch-solenv_gbuild_AllLangResTarget.mk) = c6fa51c74e3be0e9d4f18e1481039d44d6c3db98
-SHA1 (patch-solenv_gbuild_Module.mk) = 92afd851c67642268653eb90997f8a47f34d04c4
+SHA1 (patch-solenv_gbuild_Module.mk) = c31494a266b998e43d6e27f1e93cfd6a0ee0c6a5
 SHA1 (patch-sysui_CustomTarget__slackware.mk) = 7caac8785ee86f005d9e4b2acbecc45036478f02

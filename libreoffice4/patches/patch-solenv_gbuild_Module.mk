@@ -1,4 +1,6 @@
-$NetBSD: patch-solenv_gbuild_Module.mk,v 1.1 2013/09/24 12:51:50 ryo-on Exp $
+$NetBSD: patch-solenv_gbuild_Module.mk,v 1.2 2013/10/01 13:35:27 ryo-on Exp $
+
+* Disable never-ending test
 
 --- solenv/gbuild/Module.mk.orig	2013-08-21 11:40:03.000000000 +0000
 +++ solenv/gbuild/Module.mk

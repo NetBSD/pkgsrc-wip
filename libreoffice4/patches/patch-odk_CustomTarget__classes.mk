@@ -1,4 +1,6 @@
-$NetBSD: patch-odk_CustomTarget__classes.mk,v 1.1 2013/09/27 23:36:06 ryo-on Exp $
+$NetBSD: patch-odk_CustomTarget__classes.mk,v 1.2 2013/10/01 13:35:27 ryo-on Exp $
+
+* cp(1) of NetBSD 5.2 has no -a option
 
 --- odk/CustomTarget_classes.mk.orig	2013-08-21 11:40:03.000000000 +0000
 +++ odk/CustomTarget_classes.mk
