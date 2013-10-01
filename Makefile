@@ -1,4 +1,4 @@
-# $Id: Makefile,v 1.5482 2013/09/30 21:11:10 thomasklausner Exp $
+# $Id: Makefile,v 1.5483 2013/10/01 01:49:49 phonohawk Exp $
 #
 
 COMMENT=	WIP pkgsrc packages
@@ -1063,6 +1063,7 @@ SUBDIR+=	hs-hslua
 SUBDIR+=	hs-html
 SUBDIR+=	hs-hxt
 SUBDIR+=	hs-hxt-charproperties
+SUBDIR+=	hs-hxt-curl
 SUBDIR+=	hs-hxt-regex-xmlschema
 SUBDIR+=	hs-hxt-relaxng
 SUBDIR+=	hs-hxt-unicode
